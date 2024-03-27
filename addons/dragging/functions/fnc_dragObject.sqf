@@ -66,7 +66,7 @@ if (!GVAR(dragAndFire)) then {
 };
 
 // Add anim changed EH
-[_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
+[_unit, "AnimChanged", LINKFUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
 
 // Prevent UAVs from firing
 private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
@@ -80,7 +80,7 @@ if (_UAVCrew isNotEqualTo []) then {
 };
 
 // Check everything
-[FUNC(dragObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(dragObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 
 // Fixes not being able to move when in combat pace
 [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
