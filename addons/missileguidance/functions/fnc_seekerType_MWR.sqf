@@ -11,16 +11,16 @@
  * Seeker Pos <ARRAY>
  *
  * Example:
- * [] call call ace_missileguidance_fnc_seekerType_ARH;
+ * [] call call ace_missileguidance_fnc_seekerType_MWR;
  *
  * Public: No
  */
-params ["", "_args", "_seekerStateParams"];
-_args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams"];
+params ["", "_args", "_seekerStateParams", "", "_timestep"];
+_args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams", "_targetData"];
 _firedEH params ["_shooter","","","","","","_projectile"];
 _launchParams params ["_target","","","",""];
 _seekerParams params ["_seekerAngle", "", "_seekerMaxRange"];
-_seekerStateParams params ["_isActive", "_activeRadarEngageDistance", "_timeWhenActive", "_expectedTargetPos", "_lastTargetPollTime", "_shooterHasRadar", "_wasActive", "_lastKnownVelocity", "_lastTimeSeen", "_doesntHaveTarget"];
+_seekerStateParams params ["_isActive", "_activeRadarEngageDistance", "_timeWhenActive", "_expectedTargetPos", "_lastTargetPollTime", "_shooterHasRadar", "_wasActive", "_lastKnownVelocity", "_lastTimeSeen", "_doesntHaveTarget", "_lockTypes"];
 
 if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     if !(_isActive) then {
@@ -60,8 +60,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
             _seekerBaseRadiusAdjusted = _seekerBaseRadiusAtGround;
         };
         // Look in front of seeker for any targets
-        private _nearestObjects = nearestObjects [ASLtoAGL _searchPos, ["Air", "LandVehicle", "Ship"], _seekerBaseRadiusAdjusted, false];
-
+        private _nearestObjects = nearestObjects [ASLtoAGL _searchPos, _lockTypes, _seekerBaseRadiusAdjusted, false];
         _nearestObjects = _nearestObjects apply {
             // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
             if ([_projectile, getPosASL _x, _seekerAngle] call FUNC(checkSeekerAngle) && { ([_projectile, _x, true] call FUNC(checkLOS)) || { ([_projectile, _x, false] call FUNC(checkLOS)) } }) then {
@@ -74,6 +73,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
         // Select closest object to the expected position to be the current radar target
         if ((count _nearestObjects) <= 0) exitWith {
             _projectile setMissileTarget objNull;
+            _seekerStateParams set [3, _searchPos];
             _searchPos
         };
         private _closestDistance = _seekerBaseRadiusAtGround;
@@ -89,9 +89,9 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
 
     _projectile setMissileTarget _target;
 } else {
-    #ifdef DRAW_GUIDANCE_INFO
-    _seekerTypeName = "AHR - EXT";
-    #endif
+    if (GVAR(debug_drawGuidanceInfo)) then {
+        _seekerTypeName = "MWR - EXT";
+    };
     // External radar homing
     // if the target is in the remote targets for the side, whoever the donor is will "datalink" the target for the hellfire.
     private _remoteTargets = listRemoteTargets side _shooter;
@@ -104,17 +104,31 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     };
 };
 
+if (GVAR(debug_drawGuidanceInfo)) then {
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _expectedTargetPos, 0.75, 0.75, 0, "expected target pos", 1, 0.025, "TahomaB"];
+};
+
 if !(isNull _target) then {
     private _centerOfObject = getCenterOfMass _target;
-    private _targetAdjustedPos = _target modelToWorldWorld _centerOfObject;
+    private _targetAdjustedPos = _target modelToWorldVisualWorld _centerOfObject;
     _expectedTargetPos = _targetAdjustedPos;
 
-    _seekerStateParams set [3, _expectedTargetPos];
     _seekerStateParams set [7, velocity _target];
     _seekerStateParams set [8, CBA_missionTime];
     _seekerStateParams set [9, false];
+
+    _targetData set [2, _projectile distance _target];
+    _targetData set [3, velocity _target];
+
+    if (_timestep != 0) then {
+        private _acceleration = ((velocity _target) vectorDiff _lastKnownVelocity) vectorMultiply (1 / _timestep);
+        _targetData set [4, _acceleration];
+    };
 };
 
+_targetData set [0, (getPosASLVisual _projectile) vectorFromTo _expectedTargetPos];
+
+_seekerStateParams set [3, _expectedTargetPos];
 _launchParams set [0, _target];
 _expectedTargetPos
 

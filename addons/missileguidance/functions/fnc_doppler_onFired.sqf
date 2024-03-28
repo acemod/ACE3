@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Sets up Active Radar state arrays (called from missileGuidance's onFired).
+ * Sets up doppler radar state arrays (called from missileGuidance's onFired).
  *
  * Arguments:
  * Guidance Arg Array <ARRAY>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_missileguidance_fnc_ahr_onFired
+ * [] call ace_missileguidance_fnc_mwr_onFired
  *
  * Public: No
  */
@@ -20,11 +20,11 @@ _stateParams params ["", "_seekerStateParams"];
 _launchParams params ["","_targetLaunchParams"];
 _targetLaunchParams params ["_target"];
 
-_target = missileTarget _projectile;
 if (isNull _target && isVehicleRadarOn vehicle _shooter) then {
     _target = cursorTarget;
 };
-if !(_target isKindOf "AllVehicles") then {
+// always allow tracking of projectiles
+if !(_target isKindOf "AllVehicles" || { (typeOf _target) isKindOf ["Default", configFile >> "CfgAmmo"] }) then {
     _target = nil;
 };
 _launchParams set [0, _target];
@@ -37,6 +37,12 @@ private _isActive = false;
 private _activeRadarDistance = [_config >> "activeRadarEngageDistance", "NUMBER", 500] call CBA_fnc_getConfigEntry;
 private _projectileThrust = [_projectileConfig >> "thrust", "NUMBER", 0] call CBA_fnc_getConfigEntry;
 private _projectileThrustTime = [_projectileConfig >> "thrustTime", "NUMBER", 0] call CBA_fnc_getConfigEntry;
+
+private _lockTypes = [_config >> "lockableTypes", "ARRAY", ["Air", "LandVehicle", "Ship"]] call CBA_fnc_getConfigEntry;
+
+private _minimumFilterSpeed = [_config >> "minimumSpeedFilter", "NUMBER", 30] call CBA_fnc_getConfigEntry;
+private _minimumFilterTime = [_config >> "minimumTimeFilter", "NUMBER", 1e-4] call CBA_fnc_getConfigEntry;
+private _maxTerrainCheck = [_config >> "maxTerrainCheck", "NUMBER", 16000] call CBA_fnc_getConfigEntry;
 
 private _velocityAtImpact = _projectileThrust * _projectileThrustTime;
 private _timeToActive = 0;
@@ -70,4 +76,8 @@ _seekerStateParams set [6, false];
 _seekerStateParams set [7, [0, 0, 0]];
 _seekerStateParams set [8, CBA_missionTime];
 _seekerStateParams set [9, isNull _target];
+_seekerStateParams set [10, _lockTypes];
+_seekerStateParams set [11, _minimumFilterSpeed];
+_seekerStateParams set [12, _minimumFilterTime];
+_seekerStateParams set [13, _maxTerrainCheck];
 

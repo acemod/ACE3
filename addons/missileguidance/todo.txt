@@ -1,0 +1,97 @@
+Weapon Configs:
+    X Hellfire - Laser/Millimeter Wave Radar
+    X AGM-65 - Laser
+    X DAGR - Laser
+    X GBU-12 - Laser
+
+    X Dragon - SACLOS
+    X Metis - SACLOS
+    X HOT - SACLOS
+
+    X Javelin - Optical
+    X NLAW - PLOS
+
+    X Vikhr - Beam Rider SACLOS
+
+    X R-73 - Infrared
+    X AIM-9 - Infrared
+    X AIM-132 - Infrared
+
+    X R-77 - Doppler Radar
+    X AIM-120 - Doppler Radar
+
+    X AGM-65 - Optical
+
+    X GBU-SDB - GPS/INS
+
+    AGM-88 - Passive Radar Homing
+    KH-58 - Passive Radar Homing
+
+    X Titan MRPL - Infrared
+    X AWC Nyx SAAMI - Infrared
+    X IFV-6a Cheetah AA - Infrared
+    X ZSU-39 Tigris AA - Infrared
+    X Mk49 Spartan - Infrared
+
+    X Mk21 Centurion - Doppler Radar
+    X MIM-145 - Doppler Radar
+    X S-750 - Doppler Radar
+
+Seeker Types:
+    X Laser
+    X Optical
+    X Infrared
+    X GPS/INS - I want a UI to select Pre-Briefed or TOO modes with coordinate boxes for current target. As well as angle of attack
+    Passive-Radar Homing
+
+Navigation Types:
+    X GBU-12 - LOS Guidance
+    X NLAW - LOS Guidance
+
+    X Dragon - NA
+
+    X Metis - Wire/Beam Guidance
+    X HOT - Wire/Beam Guidance
+    X Vikhr - Wire/Beam Guidance
+
+    X DAGR - APN
+    X AGM-65 - APN
+    X KH-25 - APN
+    X R-73 - APN
+    AGM-88 - APN
+    KH-58 - APN
+    X AIM-9 - APN
+    X Titan MRPL - APN
+    X AWC Nyx SAAMI - APN
+    X IFV-6a Cheetah AA - APN
+    X ZSU-39 Tigris AA - APN
+
+    X Javelin - ZEM
+    X Hellfire - ZEM
+    X R-77 - ZEM
+    X AIM-120 - ZEM
+    X AIM-132 - ZEM
+    X GBU-SDB - ZEM
+    X MIM-145 - ZEM
+    X S-750 - ZEM
+    X Mk49 Spartan - ZEM
+    X Mk21 Centurion - ZEM
+
+Navigation State Machine:
+    Todo: Will allow for changing of navigation type in flight to get a more realistic flight profile
+
+Navigation Types:
+    X Augmented Pro-Nav
+    X Zero Effort Miss
+    X Wire/Beam Guided
+    X Predicted Line of Sight
+
+General To-Do:
+    X Add more weapons
+    X Fix GBU drag
+    X Make sure all applicable pylons can hold all applicable weapons
+    X NLAW is busted: figure out PLOS navigation system
+    Add 9m14 textures
+    Add 9m14 animation state where missile doesn't exist
+    Add 9m14 joystick view rotation (+- 5 deg vertical as well)
+    Add 9m14 proxy
