@@ -107,7 +107,7 @@ if (_smokeDelayEnabled) then {
             _vehicle setVariable [QGVAR(nextFlame), _time + (MIN_TIME_BETWEEN_FLAMES max random MAX_TIME_BETWEEN_FLAMES)];
 
             {
-                [QEGVAR(fire,burn), [_x, _intensity * 1.5, _instigator]] call CBA_fnc_globalEvent;
+                [QEGVAR(fire,burn), [_x, _intensity * 1.5, _instigator], _x] call CBA_fnc_targetEvent;
             } forEach crew _vehicle
         };
 

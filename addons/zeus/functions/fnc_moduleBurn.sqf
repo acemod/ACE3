@@ -36,7 +36,6 @@ switch (false) do {
         [LSTRING(RequiresAddon)] call FUNC(showMessage);
     };
     default {
-        [QEGVAR(fire,burn), [_unit, 5]] call CBA_fnc_globalEvent;
+        [QEGVAR(fire,burn), [_unit, 5], _unit] call CBA_fnc_targetEvent;
     };
 };
-

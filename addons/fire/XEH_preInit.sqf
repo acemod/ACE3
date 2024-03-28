@@ -8,6 +8,4 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
-GVAR(burningPlants) = [];
-
 ADDON = true;

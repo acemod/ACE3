@@ -1,43 +1,47 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Handles various fire objects and determines if local units deserves to get burned.
- * Used to handle external burning objects, not used internally because internal methods are more performant.
+ * Handles various objects on fire and determines if units close to objects deserve to get burned.
  *
  * Arguments:
- * 0: Unit on fire <OBJECT>
- * 1: PFH Handle <NUMBER>
+ * 0: Args (not used) <ARRAY>
+ * 1: PFH Handle (not used) <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [ace_fire_fnc_fireManagerPFH, 0.25, [_unit]] call CBA_fnc_addPerFrameHandler
+ * [[], -1] call CBA_fnc_addPerFrameHandler
  *
  * Public: No
  */
 
-params ["_args", "_handle"];
+private _distancePercent = 0;
+private _adjustedIntensity = 0;
 
-[GVAR(fireSources), {
-    _value params ["", "", "", "_condition", "_conditionArgs"];
-    _conditionArgs call _condition;
-}] call CBA_fnc_hashFilter;
+{
+    _y params ["_fireLogic", "_radius", "_intensity", "_condition", "_conditionArgs"];
 
-[GVAR(fireSources), {
-    _value params ["_source", "_radius", "_intensity"];
-    private _attachedObject = attachedTo _source;
-    private _sourcePos = getPosATL _source;
-    if (_attachedObject isNotEqualTo objNull) then {
-        _sourcePos = getPosATL _attachedObject;
+    // Remove when condition is no longer valid
+    if !(_conditionArgs call _condition) then {
+        (GVAR(fireSources) deleteAt _x) params [["_fireLogic", objNull]];
+
+        detach _fireLogic;
+        deleteVehicle _fireLogic;
+
+        continue;
     };
 
-    private _nearEntities = _sourcePos nearEntities ["Man", _radius];
+    // Burn units (alive or dead) close to the fire
     {
-        private _burning = [_x] call FUNC(isBurning);
-        if !(_burning) then {
-            private _distancePercent = 1 - ((_sourcePos distance _x) / _radius);
-            [QGVAR(burn), [_x, _intensity * _distancePercent]] call CBA_fnc_globalEvent;
+        _distancePercent = 1 - ((_fireLogic distance _x) / _radius);
+        _adjustedIntensity = _intensity * _distancePercent;
+
+        // Don't burn if intensity is too low
+        if (BURN_MIN_INTENSITY > _adjustedIntensity) then {
+            continue;
         };
-    } forEach _nearEntities;
-}] call CBA_fnc_hashEachPair;
+
+        [QGVAR(burn), [_x, _adjustedIntensity], _x] call CBA_fnc_targetEvent;
+    } forEach nearestObjects [_fireLogic, ["CAManBase"], _radius];
+} forEach GVAR(fireSources);

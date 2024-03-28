@@ -18,4 +18,4 @@
 
 params ["", "_patient"];
 
-[_patient] call FUNC(isBurning)
+_patient call FUNC(isBurning)

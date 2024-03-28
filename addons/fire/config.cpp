@@ -24,6 +24,7 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgSounds.hpp"
+#include "CfgVehicles.hpp"
 #include "ACE_Medical_Treatment_Actions.hpp"
 #include "RscTitles.hpp"
 

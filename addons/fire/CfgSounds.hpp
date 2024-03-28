@@ -1,10 +1,10 @@
 // weird ass concatenation syntax. PBO Project complains otherwise...
 #define CONCAT(a,b) a####b
 #define CREATE_SCREAM(no)\
-class GVAR(DOUBLES(scream,no)) { \
-    name = QUOTE(GVAR(CONCAT(scream,no)));\
-    sound[] = {QUOTE(PATHTOF(CONCAT(sounds\scream,no).ogg)), QUOTE(db+8), 1};\
-    titles[] = {}; \
+class GVAR(DOUBLES(scream,no)) {\
+    name = QGVAR(CONCAT(scream,no));\
+    sound[] = {QPATHTOF(CONCAT(sounds\scream,no).ogg), QUOTE(db+8), 1};\
+    titles[] = {};\
 }
 
 class CfgSounds {
