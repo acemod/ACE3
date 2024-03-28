@@ -1,4 +1,3 @@
-
 class CfgCloudlets {
     class GVAR(CookOff) {
         interval = 0.004;

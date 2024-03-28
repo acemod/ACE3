@@ -6,7 +6,6 @@
  * Arguments:
  * 0: The vehicle <OBJECT>
  * 1: Person who caused detonation <OBJECT> (default: objNull)
- * 2: An array of vehicle ammo in vehicle <ARRAY> (default: [])
  *
  * Return Value:
  * None
@@ -17,15 +16,9 @@
  * Public: No
  */
 
-params ["_vehicle", ["_injurer", objNull], ["_vehicleAmmo", []]];
+params ["_vehicle", ["_injurer", objNull]];
 
-if (_vehicleAmmo isEqualTo []) then {
-    _vehicleAmmo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);
-};
-
-([_vehicle] + _vehicleAmmo) call EFUNC(cookoff,detonateAmmunition);
-
-if ((_vehicleAmmo select 1) > 0) then {
+if (((_vehicle call EFUNC(cookoff,getVehicleAmmo)) select 1) > 0) then {
     {
         // random amount of injuries
         for "_i" from 0 to random 5 do {
@@ -33,3 +26,5 @@ if ((_vehicleAmmo select 1) > 0) then {
         };
     } forEach crew _vehicle;
 };
+
+[QEGVAR(cookoff,detonateAmmunition), [_vehicle, false, _injurer, _injurer]] call CBA_fnc_serverEvent;
