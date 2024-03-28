@@ -10,6 +10,14 @@
             };
             // Add disconnect EH
             addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
+
+            [QGVAR(transferGroupsToOwner), {
+                params ["_groups", "_owner"];
+
+                {
+                    _x setGroupOwner _owner;
+                } forEach _groups;
+            }] call CBA_fnc_addEventHandler;
         } else {
             // Register HC (this part happens on HC only)
             [QXGVAR(headlessClientJoined), [player]] call CBA_fnc_globalEvent; // Global event for API purposes
