@@ -46,6 +46,8 @@ GVAR(animations) setVariable [QUNCON_ANIM(faceDown), [QUNCON_ANIM(1),QUNCON_ANIM
 GVAR(animations) setVariable [QUNCON_ANIM(faceLeft), [QUNCON_ANIM(7),QUNCON_ANIM(8),QUNCON_ANIM(1_1),QUNCON_ANIM(7_1),QUNCON_ANIM(8_1)]];
 GVAR(animations) setVariable [QUNCON_ANIM(faceRight), [QUNCON_ANIM(5),QUNCON_ANIM(6),QUNCON_ANIM(10),QUNCON_ANIM(5_1),QUNCON_ANIM(6_1)]];
 
+GVAR(customHitpoints) = ["hitleftarm", "hitrightarm", "hitleftleg", "hitrightleg"];
+
 private _fnc_fixStatic = {
     params ["_vehicle"];
     private _type = typeOf _vehicle;
