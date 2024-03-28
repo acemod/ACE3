@@ -1,40 +1,58 @@
-private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
+private _category = format ["ACE %1", LLSTRING(Module_DisplayName)];
 
 [
-    QGVAR(enabled), "CHECKBOX",
+    QGVAR(enabled),
+    "CHECKBOX",
     [LSTRING(EnableFrag), LSTRING(EnableFrag_Desc)],
-    _category,
+    [_category, LSTRING(Frag)],
     true,
     1
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(spallEnabled), "CHECKBOX",
+    QGVAR(spallEnabled),
+    "CHECKBOX",
     [LSTRING(EnableSpall), LSTRING(EnableSpall_Desc)],
-    _category,
+    [_category, LSTRING(Spall)],
     false,
     1
 ] call CBA_fnc_addSetting;
+
 [
-    QGVAR(reflectionsEnabled), "CHECKBOX",
+    QGVAR(reflectionsEnabled),
+    "CHECKBOX",
     [LSTRING(EnableReflections), LSTRING(EnableReflections_Desc)],
-    _category,
+    [_category, LSTRING(Reflections)],
     false,
     1
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(maxTrack), "SLIDER",
-    [LSTRING(MaxTrack), LSTRING(MaxTrack_Desc)],
-    _category,
-    [0, 50, 10, -1],
+    QGVAR(fragSimComplexity),
+    "LIST",
+    [LSTRING(FragMode), LSTRING(FragMode_Desc)],
+    [_category, LSTRING(Frag)],
+    [[2, 1, 0], [LSTRING(FragMode_Opt2),LSTRING(FragMode_Opt1),LSTRING(FragMode_Opt0)], 2],
     1
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(maxTrackPerFrame), "SLIDER",
-    [LSTRING(MaxTrackPerFrame), LSTRING(MaxTrackPerFrame_Desc)],
-    _category,
-    [0, 50, 10, -1],
+    QGVAR(atLeastOne),
+    "CHECKBOX",
+    [LSTRING(MinFrag), LSTRING(MinFrag_Desc)],
+    [_category, LSTRING(Frag)],
+    false,
     1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(spallIntensity),
+    "SLIDER",
+    [LSTRING(SpallIntensity), LSTRING(SpallIntensity_Desc)],
+    [_category, LSTRING(Spall)],
+    [0.1, 2, 1, 1],
+    1,
+    {
+        GVAR(shouldSpallCache) = createHashMap;
+    }
 ] call CBA_fnc_addSetting;
