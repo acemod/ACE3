@@ -19,9 +19,8 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
     ["ace_infoDisplayChanged", {
         // Selective UI Advanced
         // Defaults must be set in this EH to make sure controls are activated and advanced settings can be modified
-        private _force = [true, false] select (GVAR(allowSelectiveUI));
         {
-            [_x, missionNamespace getVariable (format [QGVAR(%1), _x]), false, _force] call FUNC(setAdvancedElement);
+            [_x, missionNamespace getVariable (format [QGVAR(%1), _x]), false, !GVAR(allowSelectiveUI)] call FUNC(setAdvancedElement);
         } forEach (allVariables GVAR(configCache));
 
         // Execute local event for when it's safe to modify UI through this API
