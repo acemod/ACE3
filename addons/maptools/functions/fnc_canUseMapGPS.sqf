@@ -15,14 +15,6 @@
  * Public: No
  */
 
-if (!visibleMap || {!alive ACE_player}) exitWith {false};
-
-private _playerTerminal = ACE_player getSlotItemName 612;
-[
-    "ItemGPS",
-    "B_UavTerminal",
-    "O_UavTerminal",
-    "I_UavTerminal",
-    "C_UavTerminal",
-    "I_E_UavTerminal"
-] findIf { _x == _playerTerminal } != -1;
+visibleMap &&
+{alive ACE_player} &&
+{(ACE_player getSlotItemName 612) != ""}
