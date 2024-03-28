@@ -77,14 +77,14 @@ if (isNil "_target") then {
     if (!isPlayer _shooter) then {
         // This was an AI shot, lets still guide it on the AI target
         _target = _shooter getVariable [QGVAR(vanilla_target), nil];
-        TRACE_1("Detected AI Shooter!", _target);
+        TRACE_1("Detected AI Shooter!",_target);
     } else {
         private _canUseLock = getNumber (_config >> "canVanillaLock");
         // @TODO: Get vanilla target
         if (_canUseLock > 0 || difficulty < 1) then {
             private _vanillaTarget = missileTarget _projectile;
 
-            TRACE_1("Using Vanilla Locking", _vanillaTarget);
+            TRACE_1("Using Vanilla Locking",_vanillaTarget);
             if (!isNil "_vanillaTarget") then {
                 _target = _vanillaTarget;
             };

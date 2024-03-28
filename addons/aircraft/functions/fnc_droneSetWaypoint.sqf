@@ -29,7 +29,10 @@ private _currentLoiterRadius = waypointLoiterRadius _waypoint;
 private _currentLoiterType = waypointLoiterType _waypoint;
 
 // Set pos to ATL
-_pos set [2, if (_currentHeight >= 50) then { _currentHeight } else { 0 }];
+_pos set [
+    2,
+    [0, _currentHeight] select (_currentHeight >= 50)
+];
 
 // [_group] call CBA_fnc_clearWaypoints;
 _waypoint = _group addWaypoint [_pos, 0];

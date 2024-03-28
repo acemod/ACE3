@@ -18,7 +18,7 @@
 params ["_unit"];
 TRACE_1("params",_unit);
 
-if (isNil (format ["%1", _unit getVariable "ACE_airTemperatureBias"])) then {
+if (isNil {_unit getVariable "ACE_airTemperatureBias"}) then {
     _unit setVariable ["ACE_airTemperatureBias", [-(random(3) + 1), random(3) + 1]];
 };
 

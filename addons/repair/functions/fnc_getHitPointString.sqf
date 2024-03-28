@@ -40,7 +40,7 @@ private _text = LSTRING(Hit);
 if ((_hitpoint select [0, 1]) == "#") then { _hitPoint = _hitPoint select [1] };
 
 // Remove "Hit" from hitpoint name if one exists
-private _toFind = if ((toLower _hitPoint) find "hit" == 0) then {
+private _toFind = if ((toLowerANSI _hitPoint) find "hit" == 0) then {
     [_hitPoint, 3] call CBA_fnc_substr
 } else {
     _hitPoint
@@ -86,7 +86,7 @@ for "_i" from 0 to (count _hitPoint) do {
 
 // Don't display part name if no string is found in stringtable
 if (_text == LSTRING(Hit)) then {
-    if (_hitPoint != "") then { LOG_1("Hitpoint [%1] - could not be localized", _hitPoint); };
+    if (_hitPoint != "") then { LOG_1("Hitpoint [%1] - could not be localized",_hitPoint); };
     _text = _textDefault;
 };
 

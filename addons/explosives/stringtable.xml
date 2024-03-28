@@ -46,7 +46,7 @@
             <Hungarian>Robbantás</Hungarian>
             <Portuguese>Detonar</Portuguese>
             <Russian>Подрыв</Russian>
-            <Japanese>点火</Japanese>
+            <Japanese>起爆</Japanese>
             <Korean>폭파</Korean>
             <Chinesesimp>引爆</Chinesesimp>
             <Chinese>引爆</Chinese>
@@ -62,11 +62,43 @@
             <Italian>Detona Tutti</Italian>
             <French>Tout détoner</French>
             <Portuguese>Detonar Tudo</Portuguese>
-            <Japanese>すべて点火</Japanese>
+            <Japanese>全て起爆</Japanese>
             <Korean>모두 폭파</Korean>
             <Chinesesimp>引爆全部</Chinesesimp>
             <Chinese>引爆全部</Chinese>
             <Turkish>Hepsini Patlat</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Explosives_DetonateAllOnActive">
+            <English>Detonate All on Active Clacker</English>
+            <German>Alle auf Standardzünder zünden</German>
+            <Italian>Detona Tutti sul Detonatore Attivo</Italian>
+            <Russian>Подрыв всех на активном детонаторе</Russian>
+            <Japanese>選択した点火装置を全て起爆</Japanese>
+            <Korean>활성화된 격발기의 모든 것을 폭파</Korean>
+        </Key>
+        <Key ID="STR_ACE_Explosives_SetActiveTrigger">
+            <English>Set Active Clacker</English>
+            <German>Als Standardzünder wählen</German>
+            <Italian>Imposta Detonatore Attivo</Italian>
+            <Russian>Установить активный детонатор</Russian>
+            <Japanese>この点火装置を選択</Japanese>
+            <Korean>격발기 활성 설정</Korean>
+        </Key>
+        <Key ID="STR_ACE_Explosives_CycleActiveTrigger">
+            <English>Cycle Active Clacker</English>
+            <German>Standardzünder wechseln</German>
+            <Italian>Cambia Detonatore Attivo</Italian>
+            <Russian>Цикл активного детонатора</Russian>
+            <Japanese>点火装置を切り替え</Japanese>
+            <Korean>격발기 활성 전환</Korean>
+        </Key>
+        <Key ID="STR_ACE_Explosives_ActiveTrigger">
+            <English>Active Clacker</English>
+            <German>Standardzünder</German>
+            <Italian>Detonatore Attivo</Italian>
+            <Russian>Активный детонатор</Russian>
+            <Japanese>選択中の点火装置</Japanese>
+            <Korean>격발기 활성</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>

@@ -22,7 +22,7 @@ params ["_unit"];
 if !(_unit call FUNC(isBleeding)) exitWith {};
 
 // Don't bleed on the ground if in a vehicle
-if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")}) exitWith {};
+if (!isNull objectParent _unit && {!(vehicle _unit isKindOf "StaticWeapon")}) exitWith {};
 
 if (CBA_missionTime > (_unit getVariable [QGVAR(nextTime), -10])) then {
     private _bloodLoss = (if (GVAR(useAceMedical)) then {GET_BLOOD_LOSS(_unit) * 2.5} else {getDammage _unit * 2}) min 6;

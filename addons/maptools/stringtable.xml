@@ -12,7 +12,7 @@
             <Portuguese>Ferramentas de Mapa</Portuguese>
             <Hungarian>Térképészeti eszközök</Hungarian>
             <Russian>Инструменты карты</Russian>
-            <Japanese>マップ ツール</Japanese>
+            <Japanese>マップツール</Japanese>
             <Korean>독도용 도구</Korean>
             <Chinesesimp>地图工具</Chinesesimp>
             <Chinese>地圖工具</Chinese>
@@ -29,11 +29,25 @@
             <Portuguese>As Ferramentas de Mapa permitem que você meça distâncias e ângulos no mapa.</Portuguese>
             <Hungarian>A térképészeti eszközökkel távolságokat és szögeket tudsz mérni a térképen.</Hungarian>
             <Russian>Картографические инструменты позволяют измерять расстояния и углы на карте.</Russian>
-            <Japanese>マップ ツールは地図上で距離や角度を測れます。</Japanese>
+            <Japanese>マップツールは地図上で距離や角度を測れます。</Japanese>
             <Korean>독도용 도구는 지도상에서 거리나 각도를 잴 수 있게 해줍니다.</Korean>
             <Chinesesimp>地图工具能够让你在地图上测量距离与角度</Chinesesimp>
             <Chinese>地圖工具能夠讓你在地圖上測量距離與角度</Chinese>
             <Turkish>Harita Araçları, haritadaki mesafeleri ve açıları ölçmenize olanak tanır.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_MapTools_PlottingBoard_Name">
+            <English>Plotting Board</English>
+            <Korean>플로팅 보드</Korean>
+            <Japanese>標定盤</Japanese>
+            <Italian>Tavola di calcolo</Italian>
+            <Russian>Графическая доска</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_PlottingBoard_Description">
+            <English>The Plotting Board is a map tool designed for use in the directing of short range indirect fires.</English>
+            <Korean>플로팅 보드는 단거리 간접 사격을 지시하는 데 사용하도록 설계된 독도용 도구입니다.</Korean>
+            <Japanese>標定盤(プロッティング・ボード)は、短距離の間接射撃の指示に使用するために設計されたマップツールです。</Japanese>
+            <Italian>La tavola di calcolo è uno strumento utilizzato per dirigere fuoco di artiglieria a corto raggio.</Italian>
+            <Russian>Графическая доска - это картографический инструмент, предназначенный для использования при ведении непрямого огня с малой дистанции.</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapTools_Menu">
             <English>Map Tools</English>
@@ -46,7 +60,7 @@
             <Portuguese>Ferramentas de Mapa</Portuguese>
             <Hungarian>Térképészeti eszközök</Hungarian>
             <Russian>Инструменты карты</Russian>
-            <Japanese>マップ ツール</Japanese>
+            <Japanese>マップツール</Japanese>
             <Korean>독도용 도구</Korean>
             <Chinesesimp>地图工具</Chinesesimp>
             <Chinese>地圖工具</Chinese>
@@ -192,7 +206,7 @@
             <English>Rotate Map Tools Key</English>
             <French>Touche de rotation des outils de navigation</French>
             <Russian>Клавиша поворота инструментов карты</Russian>
-            <Japanese>マップ ツールの回転キー</Japanese>
+            <Japanese>マップツールの回転キー</Japanese>
             <Polish>Klawisz obrotu narzędzi nawigacyjnych</Polish>
             <German>Taste zum Drehen des Kartenwerkzeugs</German>
             <Korean>독도용 도구 돌리기 키</Korean>
@@ -208,7 +222,7 @@
             <English>Modifier key to allow rotating map tools</English>
             <French>Touche modificatrice permettant la rotation des outils de navigation.</French>
             <Russian>Клавиша-модификатор, позволяющая поворачивать инструменты карты</Russian>
-            <Japanese>マップ ツールを回転させるキーを編集できます。</Japanese>
+            <Japanese>マップツールを回転させるキーを編集できます。</Japanese>
             <Polish>Modyfikator pozwalający na obracanie narzędzi nawigacyjnych</Polish>
             <German>Steuerungstaste, um Drehung des Kartenwerkzeugs zu ermöglichen.</German>
             <Korean>독도용 도구를 돌리기 위한 키를 변경할 수 있습니다.</Korean>
@@ -222,7 +236,7 @@
         </Key>
         <Key ID="STR_ACE_MapTools_drawStraightLines_displayName">
             <English>Draw straight lines with maptools</English>
-            <Japanese>マップ ツールを使って直線を書く</Japanese>
+            <Japanese>マップツールを使って直線を書く</Japanese>
             <German>Zeichne gerade Linien mit dem Kartenwerkzeug</German>
             <Korean>독도용 도구로 직선 그리기</Korean>
             <Polish>Rysuj proste linie przy użyciu narzędzi nawigacyjnych</Polish>
@@ -251,6 +265,160 @@
             <Czech>Povolit kreslení rovných čar při kreslení na okraji pomůcky k mapě. Poznámka: Pro smazání musíte mít kurzor nad středem čáry.</Czech>
             <Turkish>Düz çizgiler çizmek için maptools'un kenarına çizin. Not: Silmek için orta noktada fareyle üzerine gelmeniz gerekir.</Turkish>
             <Spanish>Dibujar sobre el borde de las herramientas de mapa para dibujar líneas rectas. Nota: Debe situarse en el punto intermedio para eliminarla.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_MapTools_allowChannelDrawing_displayName">
+            <English>Allow Plotting Board Drawing channels</English>
+            <Japanese>標定盤への書き込みを許可するチャンネル</Japanese>
+            <Korean>플로팅 보드 그리기 채널 허용</Korean>
+            <Italian>Canali ammessi su tavola di calcolo</Italian>
+            <Russian>Разрешить создание каналов на миллиметровой доске.</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_allowChannelDrawing_description">
+            <English>Channels in which plotting board drawing is enabled.</English>
+            <Japanese>どのチャンネルで標定盤の書き込みを有効化するか。</Japanese>
+            <Korean>플로팅 보드 그리기가 활성화된 채널입니다.</Korean>
+            <Italian>Canali in cui si può disegnare sulla tavola di calcolo.</Italian>
+            <Russian>Каналы, в которых включено рисование на миллиметровой доске.</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_allowDirectCommsOnly">
+            <English>Allow Direct Comms Only (Polylines Only)</English>
+            <Japanese>直接チャンネルのみ許可 (線のみ)</Japanese>
+            <Korean>직접교신만 허용 (선 긋기만)</Korean>
+            <Italian>Comunicazioni Dirette (solo linee)</Italian>
+            <Russian>Разрешать только прямую связь (только полилинии)</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_allowDirectGroupComms">
+            <English>Allow Direct/Group Comms (Polylines and Group Markers)</English>
+            <Japanese>直接/グループチャンネルを許可 (線とグループマーカー)</Japanese>
+            <Korean>직접교신/그룹무전망 허용 (선 긋기와 그룹 마커)</Korean>
+            <Italian>Comunicazioni dirette/gruppo (linee e marker)</Italian>
+            <Russian>Разрешить прямую/групповую связь (полилинии и групповые маркеры)</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_PlottingBoardLabel">
+            <English>Plotting Board</English>
+            <Japanese>標定盤</Japanese>
+            <Korean>플로팅 보드</Korean>
+            <Italian>Tavola di calcolo</Italian>
+            <Russian>Миллиметровая доска</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_PlottingBoardAcrylicLabel">
+            <English>Plotting Board Acrylic</English>
+            <Japanese>標定盤の アクリル板</Japanese>
+            <Korean>플로팅 보드 (아크릴)</Korean>
+            <Italian>Acrilico tavola di calcolo</Italian>
+            <Russian>Миллиметровая доска акрилловая</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_PlottingBoardRulerLabel">
+            <English>Plotting Board Ruler</English>
+            <Japanese>標定盤の 定規</Japanese>
+            <Korean>플로팅 보드 (자)</Korean>
+            <Italian>Righello tavola di calcolo</Italian>
+            <Russian>Линейка для миллиметровой доски</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ToPlottingBoardLabel">
+            <English>To Plotting Board</English>
+            <Japanese>標定盤に</Japanese>
+            <Korean>플로팅 보드에</Korean>
+            <Italian>Su tavola di calcolo</Italian>
+            <Russian>К миллиметровой доске.</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ToPlottingBoardAcrylicLabel">
+            <English>To Plotting Board Acrylic</English>
+            <Japanese>標定盤の アクリル板に</Japanese>
+            <Korean>플로팅 보드 (아크릴)에</Korean>
+            <Italian>Su acrilico tavola di calcolo</Italian>
+            <Russian>К миллиметровой доске акрилловой</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ToPlottingBoardRulerLabel">
+            <English>To Plotting Board Ruler</English>
+            <Japanese>標定盤の 定規に</Japanese>
+            <Korean>플로팅 보드 (자)에</Korean>
+            <Italian>Su righello tavola di calcolo</Italian>
+            <Russian>К линейке миллиметровой доски.</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_WipeBoard">
+            <English>Wipe all markers off Plotting Board</English>
+            <Japanese>標定盤の 全マーカーを 拭き消す</Japanese>
+            <Korean>플로팅 보드에 있는 모든 마커 지우기</Korean>
+            <Italian>Cancella tutti i disegni dalla tavola</Italian>
+            <Russian>Сотрите все маркеры с миллиметровой доски.</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ShowPlottingBoard">
+            <English>Show Plotting Board</English>
+            <Japanese>標定盤を 表示</Japanese>
+            <Korean>플로팅 보드 보이기</Korean>
+            <Italian>Mostra tavola di calcolo</Italian>
+            <Russian>Показать миллиметровую доску.</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_HidePlottingBoard">
+            <English>Hide Plotting Board</English>
+            <Japanese>標定盤を 隠す</Japanese>
+            <Korean>플로팅 보드 숨기기</Korean>
+            <Italian>Nascondi tavola di calcolo</Italian>
+            <Russian>Скрыть миллиметровую доску.</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_TogglePlottingBoardRuler">
+            <English>Toggle Plotting Board Ruler</English>
+            <Japanese>標定盤の 定規を 表示切替</Japanese>
+            <Korean>플로팅 보드 (자) 토글</Korean>
+            <Italian>Mostra/Nascondi Righello</Italian>
+            <Russian>Переключить линейку миллиметровой доски.</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_AlignTo">
+            <English>Align</English>
+            <German>Ausrichten</German>
+            <Spanish>Alinear</Spanish>
+            <French>Aligner</French>
+            <Italian>Allinea</Italian>
+            <Portuguese>Alinhar</Portuguese>
+            <Hungarian>Állítása</Hungarian>
+            <Polish>Wyrównaj</Polish>
+            <Czech>Srovnat</Czech>
+            <Russian>Выровнять</Russian>
+            <Korean>맞춤 기준:</Korean>
+            <Japanese>向きを合わせる</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ToNorthLabel">
+            <English>To North</English>
+            <German>Nach Norden</German>
+            <Spanish>Al norte</Spanish>
+            <French>Sur le nord</French>
+            <Italian>Con il Nord</Italian>
+            <Portuguese>Com o Norte</Portuguese>
+            <Hungarian>Északhoz</Hungarian>
+            <Polish>Do północy</Polish>
+            <Czech>Na sever</Czech>
+            <Russian>На север</Russian>
+            <Korean>북쪽으로</Korean>
+            <Japanese>北に</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ToCompassLabel">
+            <English>To Compass</English>
+            <German>Am Kompass</German>
+            <Spanish>A la brújula</Spanish>
+            <French>Sur la boussole</French>
+            <Italian>Con la bussola</Italian>
+            <Portuguese>Com a Bússola</Portuguese>
+            <Hungarian>Iránytűhöz</Hungarian>
+            <Polish>Do kompasu</Polish>
+            <Czech>Ke kompasu</Czech>
+            <Russian>По компасу</Russian>
+            <Japanese>方位磁石に</Japanese>
+            <Korean>나침반으로</Korean>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ToUpLabel">
+            <English>Up</English>
+            <Japanese>上に</Japanese>
+            <Korean>위로</Korean>
+            <Italian>Su</Italian>
+            <Russian>Вверх</Russian>
+        </Key>
+        <Key ID="STR_ACE_MapTools_ToMapToolLabel">
+            <English>To Maptool</English>
+            <Japanese>マップツールに</Japanese>
+            <Korean>독도용 도구로</Korean>
+            <Italian>Su strumento cartografico</Italian>
+            <Russian>К инструментам карты</Russian>
         </Key>
     </Package>
 </Project>

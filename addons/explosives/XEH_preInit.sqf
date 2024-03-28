@@ -10,6 +10,8 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
+GVAR(activeTrigger) = "";
+
 GVAR(detonationHandlers) = [];
 GVAR(excludedMines) = [];
 

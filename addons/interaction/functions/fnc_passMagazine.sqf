@@ -7,6 +7,7 @@
  * 0: Unit that passes the magazine <OBJECT>
  * 1: Unit to pass the magazine to <OBJECT>
  * 2: Weapon classname <STRING>
+ * 3: Play passing animation <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -16,7 +17,7 @@
  *
  * Public: No
  */
-params ["_player", "_target", "_weapon"];
+params ["_player", "_target", "_weapon", ["_animate", true, [true]]];
 
 private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
 private _filteredMags = magazinesAmmoFull _player select {
@@ -35,18 +36,12 @@ private _magToPassIndex = 0;
     };
 } foreach _filteredMags;
 
-//remove all magazines and add them again, except the one to be passed
-//needed because of missing commands, see http://feedback.arma3.com/view.php?id=12782
+//remove the magazine from _player and add it to _target
 _magToPass params ["_magToPassClassName", "_magToPassAmmoCount"];
-_player removeMagazines _magToPassClassName;
-{
-    _x params ["_className", "_ammoCount"];
-    if ((_className == _magToPassClassName) && (_forEachIndex != _magToPassIndex)) then {
-        _player addMagazine [_className, _ammoCount];
-    };
-} foreach _filteredMags;
+// Exit if failed to remove specific magazine
+if !([_player, _magToPassClassName, _magToPassAmmoCount] call EFUNC(common,removeSpecificMagazine)) exitWith {};
 
-[_player, "PutDown"] call EFUNC(common,doGesture);
+if (_animate) then {[_player, "PutDown"] call EFUNC(common,doGesture)};
 
 _target addMagazine [_magToPassClassName, _magToPassAmmoCount];
 

@@ -74,7 +74,7 @@ GVAR(disarmTarget) = _target;
         private _rankPicture = _display displayCtrl 1203;
 
         //Show rank and name (just like BIS's inventory)
-        private _icon = format [DEFUALTPATH, toLower (rank _target)];
+        private _icon = format [DEFUALTPATH, toLowerANSI (rank _target)];
         if (_icon isEqualTo DEFUALTPATH) then {_icon = ""};
         _rankPicture ctrlSetText _icon;
         _playerName ctrlSetText ([GVAR(disarmTarget), false, true] call EFUNC(common,getName));

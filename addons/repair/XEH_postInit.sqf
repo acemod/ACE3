@@ -2,10 +2,10 @@
 
 ["CBA_settingsInitialized", {
 
-    if !GVAR(enabled) exitWith {};
+    if (!GVAR(enabled)) exitWith {};
 
-    [QGVAR(setVehicleDamage), {_this call FUNC(setDamage)}] call CBA_fnc_addEventHandler;
-    [QGVAR(setVehicleHitPointDamage), {_this call FUNC(setHitPointDamage)}] call CBA_fnc_addEventHandler;
+    [QGVAR(setVehicleDamage), LINKFUNC(setDamage)] call CBA_fnc_addEventHandler;
+    [QGVAR(setVehicleHitPointDamage), LINKFUNC(setHitPointDamage)] call CBA_fnc_addEventHandler;
     [QGVAR(setWheelHitPointDamage), {
         params ["_object", "_hitPoint", "_damage"];
         private _damageDisabled = !isDamageAllowed _object;

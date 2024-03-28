@@ -40,7 +40,7 @@ if ([_cbaRequiredAr, _cbaVersionAr] call cba_versioning_fnc_version_compare) the
 };
 
 //private _addons = activatedAddons; // broken with High-Command module, see #2134
-private _addons = (cba_common_addons select {(_x select [0,4]) == "ace_"}) apply {toLower _x};
+private _addons = (cba_common_addons select {(_x select [0,4]) == "ace_"}) apply {toLowerANSI _x};
 private _oldAddons = [];
 private _oldSources = [];
 private _oldCompats = [];
@@ -80,14 +80,14 @@ if (_oldCompats isNotEqualTo []) then {
     _oldCompats = _oldCompats apply {format ["%1 (%2)", _x select 0, _x select 1]};
     [{
         // Lasts for ~10 seconds
-        ERROR_WITH_TITLE_3("The following ACE compatiblity PBOs are outdated", "%1. ACE Main version is %2 from %3.",_this select 0,_this select 1,_this select 2);
+        ERROR_WITH_TITLE_3("The following ACE compatiblity PBOs are outdated","%1. ACE Main version is %2 from %3.",_this select 0,_this select 1,_this select 2);
     }, [_oldCompats, _mainVersion, _mainSource], 1] call CBA_fnc_waitAndExecute;
 };
 
 ///////////////
 // check extensions
 ///////////////
-private _platform = toLower (productVersion select 6);
+private _platform = toLowerANSI (productVersion select 6);
 if (!isServer && {_platform in ["linux", "osx"]}) then {
     // Linux and OSX client ports do not support extensions at all
     INFO("Operating system does not support extensions");

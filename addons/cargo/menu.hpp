@@ -17,7 +17,7 @@ class GVAR(menu) {
         };
         class CenterBackground: HeaderBackground {
             y = "2.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-            h = "13.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            h = "14.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             text = "#(argb,8,8,3)color(0,0,0,0.8)";
             colorText[] = {0, 0, 0, "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             colorBackground[] = {0, 0, 0, "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
@@ -72,7 +72,7 @@ class GVAR(menu) {
             idc = 11;
             x = "13.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             y = "14.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-            w = "5 * (((safezoneW / safezoneH) min 1.2) / 40)";
+            w = "6 * (((safezoneW / safezoneH) min 1.2) / 40)";
             h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
             size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
             SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
@@ -96,8 +96,15 @@ class GVAR(menu) {
         class btnUnload: btnCancel {
             text = CSTRING(unloadObject);
             idc = 12;
-            x = "20.9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
+            x = "19.9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
             action = QUOTE(ACE_player call FUNC(startUnload));
+        };
+        class btnPlace: btnUnload {
+            text = CSTRING(deployObject);
+            idc = 13;
+            y = "15.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+            action = QUOTE(ACE_player call FUNC(startDeploy));
+            colorDisabled[] = {0.25, 0.25, 0.25, 1};
         };
     };
 };

@@ -541,7 +541,7 @@ GVAR(menuRun) = true;
         };
         case "options": {
             (__dsp displayCtrl __Option0) ctrlSetText "Signal Delay";
-            (__dsp displayCtrl __Option1) ctrlSetText (if (GVAR(useDegrees)) then { "Direction: Deg" } else { "Direction: MIL" });
+            (__dsp displayCtrl __Option1) ctrlSetText (["Direction: MIL", "Direction: Deg"] select GVAR(useDegrees));
             (__dsp displayCtrl (__Selection0 + GVAR(selection))) ctrlSetText QPATHTOF(UI\DAGR_Selection.paa);
             if (GVAR(SEL)) then {
                 GVAR(vectorConnected) = false;

@@ -34,7 +34,7 @@ private _distanceShooterToTarget = _shooterPos vectorDistance _seekerTargetPos;
 
 private _ttgo = _distanceToTarget / (vectorMagnitude velocity _projectile);
 
-TRACE_2("", _distanceToTarget, _distanceToShooter);
+TRACE_2("",_distanceToTarget,_distanceToShooter);
 
 // Add height depending on distance for compensate
 private _addHeight = [0,0,0];

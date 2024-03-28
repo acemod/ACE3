@@ -112,5 +112,5 @@ switch (_attackStage) do {
 //IGNORE_PRIVATE_WARNING ["_attackProfileName"];
 _attackProfileName = ["na", "hellfire - LAUNCH", "hellfire - SEEK CRUISE", "hellfire - ATTACK CRUISE", "hellfire - TERMINAL"] select _attackStage;
 
-TRACE_1("Adjusted target position", _returnTargetPos);
+TRACE_1("Adjusted target position",_returnTargetPos);
 _returnTargetPos;

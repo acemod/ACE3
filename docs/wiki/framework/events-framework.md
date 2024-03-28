@@ -42,6 +42,7 @@ The vehicle events will also have the following local variables available `_gunn
 |`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action is completed (local on the _caller)
 |`ace_treatmentFailed` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has been interrupted (local on the _caller)
 |`ace_medical_handleUnitVitals` | [_unit, _deltaT] | Local | Listen | Vitals update ran for unit, _deltaT is the time elapsed since the previous vitals update (local to _unit)
+|`ace_medical_treatment_bandaged` | [_medic, _patient, _bodyPart, _className, _bandageEffectiveness] | Local | Listen | _medic has bandaged _patient, the array can be modified to change treatment parameters (local to _medic)
 
 ### 2.3 Interaction Menu (`ace_interact_menu`)
 MenuType: 0 = Interaction, 1 = Self Interaction
@@ -128,6 +129,22 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |---------- |------------|----------|------|-------------|
 | `ace_trenches_placed` | [_unit, _trench] | Global | Listen | After trench object is placed by unit.
 | `ace_trenches_finished` | [_unit, _trench] | Global | Listen | After trench object is fully dug up by unit (100% progress).
+
+### 2.13 Medical GUI (`ace_medical_gui`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_medical_gui_updateBodyImage` | [_ctrlGroup, _target, _selectionN] | Local | Listen | Allows mods to update any modifications they have made to the body image
+| `ace_medical_gui_updateInjuryListGeneral` | [_ctrl, _target, _selectionN, _entries] | Local | Listen | Allows mods to update the general injury list by pushing to the _entries array
+| `ace_medical_gui_updateInjuryListPart` | [_ctrl, _target, _selectionN, _entries, _bodyPartName] | Local | Listen | Allows mods to update the part injury list by pushing to the _entries array
+| `ace_medical_gui_updateInjuryListWounds` | [_ctrl, _target, _selectionN, _woundEntries, _bodyPartName] | Local | Listen | Allows mods to update the wounds injury list by pushing to the _woundEntries array
+| `ace_medical_gui_logListAppended` | [_ctrl, _row, _message, _unlocalizedMessage, _timeStamp, _arguments] | Local | Listen | After an entry is appended to the log list
+
+### 2.14 Medical Treatment (`ace_medical_treatment`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_medical_treatment_fullHealLocalMod` | [_patient] | Local | Listen | Called before a local unit is fully healed, mods can listen and apply their own healing logic
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
