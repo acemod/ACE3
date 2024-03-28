@@ -21,9 +21,6 @@ class CfgAmmo {
     class M_Vorona_HEAT;
     class M_SPG9_HEAT;
     class R_MRAAWS_HEAT_F;
-    class B_338_Ball;
-
-    class ACE_G_40mm_HE;
 
     CREATE_INCENDIARY_AMMO(BulletBase,                      BulletCore,             0.1);
     CREATE_INCENDIARY_AMMO(ShellBase,                       ShellCore,              1.0);
