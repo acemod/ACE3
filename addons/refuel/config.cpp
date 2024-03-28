@@ -14,6 +14,7 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Refuel_Positions.hpp"
 #include "ACE_Settings.hpp"
 #include "Cfg3DEN.hpp"
 #include "CfgEventHandlers.hpp"

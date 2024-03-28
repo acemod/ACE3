@@ -1,6 +1,16 @@
 private _category = [ELSTRING(main,Category_Logistics), "str_state_refuel"];
 
 [
+    QGVAR(enabled), "CHECKBOX",
+    ELSTRING(common,Enabled),
+    _category,
+    true,
+    1,
+    {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(rate), "SLIDER",
     [LSTRING(RefuelSettings_speed_DisplayName), LSTRING(RefuelSettings_speed_Description)],
     _category,
