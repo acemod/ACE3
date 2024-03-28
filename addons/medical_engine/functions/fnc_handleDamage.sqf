@@ -1,9 +1,9 @@
 #include "..\script_component.hpp"
 /*
- * Author: commy2, kymckay
+ * Author: commy2, kymckay, LinkIsGrim
  * HandleDamage EH where wound events are raised based on incoming damage.
  * Be aware that for each source of damage, the EH can fire multiple times (once for each hitpoint).
- * We store these incoming damages and compare them on our final hitpoint: "ace_hdbracket".
+ * We store these incoming damages and compare them on last iteration of the event (_context == 2).
  *
  * Arguments:
  * Handle damage EH
