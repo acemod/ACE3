@@ -27,11 +27,33 @@ GVAR(isUsingMagnification) = false;
     TRACE_4("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogScaling),GVAR(noiseScaling),GVAR(effectScaling));
 
     ["visionMode", LINKFUNC(onVisionModeChanged), false] call CBA_fnc_addPlayerEventHandler;
-    ["loadout", LINKFUNC(onLoadoutChanged), true] call CBA_fnc_addPlayerEventHandler;
     ["cameraView", LINKFUNC(onCameraViewChanged), true] call CBA_fnc_addPlayerEventHandler;
     ["vehicle", LINKFUNC(refreshGoggleType), false] call CBA_fnc_addPlayerEventHandler;
     ["turret", LINKFUNC(refreshGoggleType), true] call CBA_fnc_addPlayerEventHandler;
     ["ACE_controlledUAV", LINKFUNC(refreshGoggleType)] call CBA_fnc_addEventHandler;
+
+    ["unit", {
+        params ["_newPlayer", "_oldPlayer"];
+
+        private _ehID = _oldPlayer getVariable QGVAR(ehID);
+
+        if (!isNil "_ehID") then {
+            _oldPlayer removeEventHandler ["SlotItemChanged", _ehID];
+
+            _oldPlayer setVariable [QGVAR(ehID), nil];
+        };
+
+        _ehID = _newPlayer getVariable QGVAR(ehID);
+
+        if (isNil "_ehID") then {
+            // Call manually to update existing value
+            [] call FUNC(refreshGoggleType);
+
+            _ehID = _newPlayer addEventHandler ["SlotItemChanged", LINKFUNC(onSlotItemChanged)];
+
+            _newPlayer setVariable [QGVAR(ehID), _ehID];
+        };
+    }, true] call CBA_fnc_addPlayerEventHandler;
 
     // handle only brightness if effects are disabled
     GVAR(ppEffectNVGBrightness) = ppEffectCreate ["ColorCorrections", 1236];
@@ -94,4 +116,3 @@ WARNING("Debug mouse wheel action enabled, this should NOT be in a final release
     };
 }] call CBA_fnc_addDisplayHandler;
 #endif
-
