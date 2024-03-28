@@ -1829,14 +1829,14 @@
             <Turkish>Alt</Turkish>
         </Key>
         <Key ID="STR_ACE_Common_subcategory_sway">
-            <English>Sway</English>
+            <English>Weapon Sway</English>
             <Japanese>手ぶれ</Japanese>
             <Korean>무기 흔들림</Korean>
         </Key>
         <Key ID="STR_ACE_Common_EnableSway">
-            <English>Enable ACE Sway</English>
-            <Japanese>ACE 手ぶれを有効化</Japanese>
-            <Korean>ACE 무기 흔들림 추가</Korean>
+            <English>Enable Weapon Sway</English>
+            <Japanese>手ぶれを有効化</Japanese>
+            <Korean>무기 흔들림 추가</Korean>
         </Key>
         <Key ID="STR_ACE_Common_EnableSway_Description">
             <English>Enables weapon sway influenced by sway factors, such as stance, fatigue and medical condition.\nDisabling this setting will defer sway to vanilla or other mods.</English>
