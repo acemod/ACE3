@@ -1,46 +1,63 @@
 #include "..\script_component.hpp"
+#include "\a3\ui_f\hpp\defineResincl.inc"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
- * Author: commy2, based on BIS_fnc_errorMsg and BIS_fnc_guiMessage by Karel Moricky (BI)
- * Stops simulation and opens a textbox with error message.
+ * Author: commy2, johnb43, based on BIS_fnc_errorMsg and BIS_fnc_guiMessage by Karel Moricky (BI)
+ * Opens a textbox with an error message, used for PBO checking.
+ * This function is sent by the server to the client, client runs the function.
+ * CBA isn't guaranteed to be loaded, so use vanilla functionality only!
  *
  * Arguments:
- * ?
+ * 0: Header <STRING>
+ * 1: Text <STRING, TEXT>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_common_fnc_errorMessage
+ * ["[ACE] ERROR", "Test"] spawn ace_common_fnc_errorMessage
  *
  * Public: No
  */
 
-disableSerialization;
+// Force stop any loading screens
 endLoadingScreen;
 
-// no message without player possible
+// No message without player possible
 if (!hasInterface) exitWith {};
 
-// wait for display
-if (isNull (call BIS_fnc_displayMission)) exitWith {
-    [{
-        if (isNull (call BIS_fnc_displayMission)) exitWith {};
+params ["_textHeader", "_textMessage"];
 
-        (_this select 0) call FUNC(errorMessage);
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+disableSerialization;
 
-    }, 1, _this] call CBA_fnc_addPerFrameHandler;
+private _mainDisplay = call BIS_fnc_displayMission;
+
+// Wait for display
+if (isNull _mainDisplay) then {
+    waitUntil {
+        uiSleep 0.25;
+
+        _mainDisplay = call BIS_fnc_displayMission;
+
+        !isNull _mainDisplay
+    };
 };
 
-params ["_textHeader", "_textMessage", ["_onOK", {}], ["_onCancel", {}]];
+// Use curator display if present
+private _curatorDisplay = findDisplay 312;
+
+if (!isNull _curatorDisplay) then {
+    _mainDisplay = _curatorDisplay;
+};
 
 if (_textMessage isEqualType "") then {
     _textMessage = parseText _textMessage;
 };
 
-ARR_SELECT(_this,4,call BIS_fnc_displayMission) createDisplay "RscDisplayCommonMessagePause";
+private _display = _mainDisplay createDisplay "RscDisplayCommonMessagePause";
 
-private _display = uiNamespace getVariable "RscDisplayCommonMessage_display";
+if (isNull _display) exitWith {};
+
 private _ctrlRscMessageBox =          _display displayCtrl 2351;
 private _ctrlBcgCommonTop =           _display displayCtrl 235100;
 private _ctrlBcgCommon =              _display displayCtrl 235101;
@@ -109,39 +126,25 @@ _ctrlRscMessageBox ctrlSetPosition [
 _ctrlRscMessageBox ctrlEnable true;
 _ctrlRscMessageBox ctrlCommit 0;
 
-if (_onOK isEqualTo {}) then {
-    _ctrlButtonOK ctrlEnable false;
-    _ctrlButtonOK ctrlSetFade 0;
-    _ctrlButtonOK ctrlSetText "";
-    _ctrlButtonOK ctrlCommit 0;
-} else {
-    _ctrlButtonOK ctrlEnable true;
-    _ctrlButtonOK ctrlSetFade 0;
-    _ctrlButtonOK ctrlSetText localize "STR_DISP_OK";
-    _ctrlButtonOK ctrlCommit 0;
+// Enable ok button
+_ctrlButtonOK ctrlEnable true;
+_ctrlButtonOK ctrlSetFade 0;
+_ctrlButtonOK ctrlSetText localize "STR_DISP_OK";
+_ctrlButtonOK ctrlCommit 0;
 
-    ctrlSetFocus _ctrlButtonOK;
-};
+ctrlSetFocus _ctrlButtonOK;
 
-if (_onCancel isEqualTo {}) then {
-    _ctrlButtonCancel ctrlEnable false;
-    _ctrlButtonCancel ctrlSetFade 0;
-    _ctrlButtonCancel ctrlSetText "";
-    _ctrlButtonCancel ctrlCommit 0;
-} else {
-    _ctrlButtonCancel ctrlEnable true;
-    _ctrlButtonCancel ctrlSetFade 0;
-    _ctrlButtonCancel ctrlSetText localize "STR_DISP_CANCEL";
-    _ctrlButtonCancel ctrlCommit 0;
+// Disable cancel button
+_ctrlButtonCancel ctrlEnable false;
+_ctrlButtonCancel ctrlSetFade 0;
+_ctrlButtonCancel ctrlSetText "";
+_ctrlButtonCancel ctrlCommit 0;
 
-    ctrlSetFocus _ctrlButtonCancel;
-};
+_ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {(ctrlParent (_this select 0)) closeDisplay IDC_OK; true}];
 
-_ctrlButtonOK ctrlAddEventHandler ["buttonClick", {(ctrlParent (_this select 0)) closeDisplay 1; true}];
-_ctrlButtonCancel ctrlAddEventHandler ["buttonClick", {(ctrlParent (_this select 0)) closeDisplay 2; true}];
+// Intercept all keystrokes except the enter keys
+_display displayAddEventHandler ["KeyDown", {!((_this select 1) in [DIK_RETURN, DIK_NUMPADENTER])}];
 
-GVAR(errorOnOK) = _onOK;
-GVAR(errorOnCancel) = _onCancel;
-
-_display displayAddEventHandler ["unload", {call ([{}, GVAR(errorOnOK), GVAR(errorOnCancel)] select (_this select 1))}];
-_display displayAddEventHandler ["keyDown", {_this select 1 == 1}];
+// Close curator and mission displays (because of the message display, it doesn't quit the mission yet)
+findDisplay 312 closeDisplay 0;
+findDisplay 46 closeDisplay 0;
