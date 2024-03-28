@@ -1364,6 +1364,7 @@
             <Italian>Mostra stato di sanguinamento</Italian>
             <Portuguese>Mostrar estado de sangramento</Portuguese>
             <Japanese>出血状態の表示</Japanese>
+            <Korean>출혈 상태 표시</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showBleeding_Description">
             <English>Display if the patient is bleeding, optionally with rate</English>
@@ -1372,6 +1373,7 @@
             <Italian>Mostra se il paziente sta sanguinando, opzionalmente con rateo</Italian>
             <Portuguese>Mostrar se o paciente está sangrando, opcionalmente com taxa</Portuguese>
             <Japanese>患者が出血しているかどうかを表示します。オプションで出血速度も表示します</Japanese>
+            <Korean>환자가 출혈 중인지 여부를 표시합니다(선택적으로 출혈 속도 포함)</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ShowBleeding_Rate">
             <English>Show Bleeding Rate</English>
@@ -1380,6 +1382,7 @@
             <Italian>Mostra rateo di sanguinamento</Italian>
             <Portuguese>Mostrar taxa de sangramento</Portuguese>
             <Japanese>出血速度の表示</Japanese>
+            <Korean>출혈 속도 표시</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_DisplayName">
             <English>Peek Medical Info on Hit</English>
