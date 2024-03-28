@@ -29,16 +29,16 @@ private _addedToUnit = false;
 
 switch (_container) do {
     case "vest": {
-        _canAdd = [_unit, _classname, 1, false, true, false] call CBA_fnc_canAddItem;
+        _canAdd = (vestContainer _unit) canAdd _classname;
     };
     case "backpack": {
-        _canAdd = [_unit, _classname, 1, false, false, true] call CBA_fnc_canAddItem;
+        _canAdd = (backpackContainer _unit) canAdd _classname;
     };
     case "uniform": {
-        _canAdd = [_unit, _classname, 1, true, false, false] call CBA_fnc_canAddItem;
+        _canAdd = (uniformContainer _unit) canAdd _classname;
     };
     default {
-        _canAdd = [_unit, _classname] call CBA_fnc_canAddItem;
+        _canAdd = [_unit, _classname] call CBA_fnc_canAddItem; // replace with canAdd with ignoreMaxSoldierLoad in 2.18
         if (_canAdd) then {
             switch (_type select 1) do {
                 case "primary": {
@@ -78,16 +78,10 @@ switch (_type select 0) do {
                         _unit addWeaponGlobal _classname;
                     } else {
                         {
-                            _x params ["_parameters", "_container"];
-
-                            if (_parameters call CBA_fnc_canAddItem) exitWith {
-                                _container addWeaponCargoGlobal [_classname, 1]; // addWeaponGlobal will replace the weapon currently in a slot
+                            if (_x canAdd _classname) exitWith {
+                                _x addWeaponCargoGlobal [_classname, 1]; // addWeaponGlobal will replace the weapon currently in a slot
                             };
-                        } forEach [
-                            [[_unit, _classname, 1, false, false, true], backpackContainer _unit],
-                            [[_unit, _classname, 1, false, true, false], vestContainer _unit],
-                            [[_unit, _classname, 1, true, false, false], uniformContainer _unit]
-                        ];
+                        } forEach [backpackContainer _unit, vestContainer _unit, uniformContainer _unit];
                     };
                 };
             };
