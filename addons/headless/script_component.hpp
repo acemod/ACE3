@@ -17,4 +17,3 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define DELAY_DEFAULT 15
-#define BLACKLIST_UAV "UAV", "UAV_AI_base_F", "B_UAV_AI", "O_UAV_AI", "I_UAV_AI"
