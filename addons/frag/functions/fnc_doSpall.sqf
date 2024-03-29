@@ -55,7 +55,7 @@ private _speedChange = 0 max (vectorMagnitude _lastVelocity - vectorMagnitude _v
 private _spallPower = (ACE_FRAG_SPALL_CALIBER_COEF * _caliber * sqrt _speedChange + _explosive * _indirectHit) * GVAR(spallIntensity);
 TRACE_3("found speed",_speedChange,_caliber,_spallPower);
 
-if (_spallPower < 2) exitWith {
+if (_spallPower < ACE_FRAG_SPALL_POWER_MIN) exitWith {
     TRACE_1("lowImpulse",_ammo);
 };
 
@@ -107,10 +107,10 @@ if GVAR(dbgSphere) then {
 
 private _spawnSize = switch (true) do
 {
-    case (_spallPower < 3): {"_spall_tiny"};
-    case (_spallPower < 5): {"_spall_small"};
-    case (_spallPower < 8): {"_spall_medium"};
-    case (_spallPower < 12): {"_spall_large"} ;
+    case (_spallPower < ACE_FRAG_SPALL_POWER_TINY_MAX): {"_spall_tiny"};
+    case (_spallPower < ACE_FRAG_SPALL_POWER_SMALL_MAX): {"_spall_small"};
+    case (_spallPower < ACE_FRAG_SPALL_POWER_MEDIUM_MAX): {"_spall_medium"};
+    case (_spallPower < ACE_FRAG_SPALL_POWER_LARGE_MAX): {"_spall_large"};
     default {"_spall_huge"};
 };
 
