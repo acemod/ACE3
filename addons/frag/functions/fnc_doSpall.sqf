@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [BIS_HITPART_EH_ARGS] call ace_frag_fnc_doSpall;
+ * [BIS_HITPART_EH_ARGS] call ace_frag_fnc_doSpall
  *
  * Public: No
  */

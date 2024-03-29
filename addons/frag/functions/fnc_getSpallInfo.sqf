@@ -13,7 +13,7 @@
  *  2: Indirect hit damage <NUMBER>
  *
  * Example:
- * ["B_556x45_Ball"] call ace_frag_fnc_getSpallInfo;
+ * "B_556x45_Ball" call ace_frag_fnc_getSpallInfo
  *
  * Public: No
  */

@@ -16,7 +16,7 @@
  * Number of fragments created <NUMBER>
  *
  * Example:
- * [getPosASL _proj, velocity _proj, 50, 50, [], 1, [player, player]] call ace_frag_fnc_doFragTargeted;
+ * [getPosASL _projectile, velocity _projectile, 50, 50, [], 1, [player, player]] call ace_frag_fnc_doFragTargeted
  *
  * Public: No
  */

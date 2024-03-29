@@ -15,7 +15,7 @@
  * Nothing Useful
  *
  * Example:
- * [_projectile, false, false] call ace_frag_dev_addRound;
+ * [_projectile, false, false] call ace_frag_dev_addRound
  *
  * Public: No
  */

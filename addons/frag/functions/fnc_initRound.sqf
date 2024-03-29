@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [_projectile] call ace_frag_fnc_initRound;
+ * _projectile call ace_frag_fnc_initRound
  *
  * Public: No
  */

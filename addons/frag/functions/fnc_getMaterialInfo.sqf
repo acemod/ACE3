@@ -10,7 +10,7 @@
  * Material categories as expanded on in line 44 below <STRING>
  *
  * Example:
- * _surfaceType call ace_frag_fnc_getMaterialInfo
+ * "a3\data_f\penetration\concrete.bisurf" call ace_frag_fnc_getMaterialInfo
  *
  * Public: No
  */

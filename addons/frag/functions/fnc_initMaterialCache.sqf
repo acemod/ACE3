@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ace_frag_fnc_initMaterialCache;
+ * call ace_frag_fnc_initMaterialCache
  *
  * Public: No
  */

@@ -11,7 +11,7 @@
  * The created sphere object <OBJECT>
  *
  * Example:
- * [getPosASL player, "red"] call ace_frag_fnc_dev_sphereDraw;
+ * [getPosASL player, "red"] call ace_frag_fnc_dev_sphereDraw
  *
  * Public: No
  */

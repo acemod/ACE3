@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player] call ace_frag_fnc_dev_trackObj;
+ * player call ace_frag_fnc_dev_trackObj
  *
  * Public: No
  */

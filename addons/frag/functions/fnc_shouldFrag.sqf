@@ -10,7 +10,7 @@
  * Should the specific round fragment <BOOL>
  *
  * Example:
- * ["B_556x45_Ball"] call ace_frag_fnc_shouldFrag;
+ * "B_556x45_Ball" call ace_frag_fnc_shouldFrag
  *
  * Public: No
  */

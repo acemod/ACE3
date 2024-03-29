@@ -14,7 +14,7 @@
  *  3: Modified frag count under assumptions of spherical fragmentation <NUMBER>
  *
  * Example:
- * ["B_556x45_Ball"] call ace_frag_fnc_getFragInfo;
+ * "B_556x45_Ball" call ace_frag_fnc_getFragInfo
  *
  * Public: No
  */

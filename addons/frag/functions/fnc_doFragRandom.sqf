@@ -15,7 +15,7 @@
  * None
  *
  * Example:
- * [getPosASL _proj, 800, 50, 50, [], 1, [player, player]] call ace_frag_fnc_doFragRandom;
+ * [getPosASL _projectile, 800, 50, 50, [], 1, [player, player]] call ace_frag_fnc_doFragRandom
  *
  * Public: No
  */

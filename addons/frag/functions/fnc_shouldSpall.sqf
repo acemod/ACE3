@@ -10,7 +10,7 @@
  * Whether the round type would spall when hitting an object <BOOL>
  *
  * Example:
- * ["B_556x45_Ball"] call ace_frag_fnc_shouldSpall;
+ * "B_556x45_Ball" call ace_frag_fnc_shouldSpall
  *
  * Public: No
  */

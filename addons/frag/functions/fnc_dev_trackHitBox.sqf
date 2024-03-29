@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player] call ace_frag_fnc_dev_trackHitBox;
+ * player call ace_frag_fnc_dev_trackHitBox
  *
  * Public: No
  */
