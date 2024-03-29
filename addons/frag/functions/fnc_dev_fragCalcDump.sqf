@@ -31,9 +31,9 @@ diag_log text "//****************** fragCalcDump Beg ******************//";
         continue;
     };
 
-    private _shouldFrag = [_ammo] call FUNC(shouldFrag);
+    private _shouldFrag = _ammo call FUNC(shouldFrag);
     if (_shouldFrag || _logAll) then {
-        private _fragInfo = [_ammo] call FUNC(getFragInfo);
+        private _fragInfo = _ammo call FUNC(getFragInfo);
         _fragInfo params ["_fragRange", "_fragMaxVelocity", "", "_modifiedFragCount"];
         private _fragCount = 4 * pi * _modifiedFragCount;
         private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;

@@ -38,7 +38,7 @@ TRACE_3("willFrag",_timeSinceLastFrag,CBA_missionTime,_maxFragCount);
 _shotParentVehicle setVariable [QGVAR(obj_nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF_VEHICLE];
 private _maxFragCount = round linearConversion [ACE_FRAG_COUNT_MIN_TIME, ACE_FRAG_COUNT_MAX_TIME, _timeSinceLastFrag, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
 
-[_ammo] call FUNC(getFragInfo) params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];
+_ammo call FUNC(getFragInfo) params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];
 // For low frag rounds limit the # of frags created
 if (_modFragCount < ACE_FRAG_LOW_FRAG_MOD_COUNT) then {
     _maxFragCount = _modFragCount * ACE_FRAG_LOW_FRAG_COEFF;

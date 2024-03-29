@@ -29,7 +29,7 @@ if (_ammo == "" || {_objectHit isKindOf "CAManBase"}) exitWith {
     TRACE_4("invalid round or hit",CBA_missionTime,GVAR(nextSpallAllowTime),_objectHit,_lastPosASL);
 };
 
-private _material = [_surfaceType] call FUNC(getMaterialInfo);
+private _material = _surfaceType call FUNC(getMaterialInfo);
 if (_material == "ground") exitWith {
     #ifdef DEBUG_MODE_FULL
     systemChat "ground spall";
@@ -37,7 +37,7 @@ if (_material == "ground") exitWith {
 };
 
 // Find spall speed / fragment info
-[_ammo] call FUNC(getSpallInfo) params ["_caliber", "_explosive", "_indirectHit"];
+_ammo call FUNC(getSpallInfo) params ["_caliber", "_explosive", "_indirectHit"];
 private _vel = if (alive _projectile) then {
     _explosive = 0; // didn't explode since it's alive a frame later
     velocity _projectile
@@ -132,8 +132,8 @@ systemChat ("spd: " + str speed _spallSpawner + ", spawner: " + _fragSpawnType +
 _spallSpawner addEventHandler [
     "SubmunitionCreated",
     {
-        params ["", "_subProj"];
-        [_subProj] call FUNC(dev_addRound);
+        params ["", "_submunitionProjectile"];
+        _submunitionProjectile call FUNC(dev_addRound);
     }
 ];
 #endif

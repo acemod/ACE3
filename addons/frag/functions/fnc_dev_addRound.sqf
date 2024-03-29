@@ -39,13 +39,13 @@ if (_isTraceBlue) then {
         params ["_projectile", "_handle"];
 
         if (!alive _projectile) exitWith {
-            [_handle] call CBA_fnc_removePerFrameHandler;
+            _handle call CBA_fnc_removePerFrameHandler;
         };
 
         private _projectileArray = GVAR(dev_trackLines) get (getObjectID _projectile);
 
         if (isNil "_projectileArray") exitWith {
-            [_handle] call CBA_fnc_removePerFrameHandler;
+            _handle call CBA_fnc_removePerFrameHandler;
         };
 
         (_projectileArray#0) pushBack getPosATL _projectile;
