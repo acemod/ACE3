@@ -15,6 +15,10 @@
  * Public: No
  */
 
-visibleMap &&
-{alive ACE_player} &&
-{(ACE_player getSlotItemName 612) != ""}
+if (!visibleMap || {!alive ACE_player}) exitWith {false};
+
+private _gpsOpened = visibleGPS;
+private _gpsAvailable = openGPS true;
+if (!_gpsOpened) then {openGPS false};
+
+_gpsAvailable;
