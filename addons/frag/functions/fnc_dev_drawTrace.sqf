@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ace_frag_fnc_dev_drawTrace;
+ * call ace_frag_fnc_dev_drawTrace
  *
  * Public: No
  */
