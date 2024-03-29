@@ -25,20 +25,6 @@ if (!hasInterface) exitWith {};
         };
     }, QUOTE(ADDON)] call EFUNC(common,addSwayFactor);
 
-    ["multiplier", {
-        switch (true) do {
-            case (isWeaponRested ACE_player): {
-                GVAR(swayFactor) * GVAR(restedSwayFactor)
-            };
-            case (isWeaponDeployed ACE_player): {
-                GVAR(swayFactor) * GVAR(deployedSwayFactor)
-            };
-            default {
-                GVAR(swayFactor)
-            };
-        };
-    }, QUOTE(ADDON)] call EFUNC(common,addSwayFactor);
-
     // - Post process effect ------------------------------------------------------
     GVAR(ppeBlackout) = ppEffectCreate ["ColorCorrections", 4220];
     GVAR(ppeBlackout) ppEffectEnable true;
