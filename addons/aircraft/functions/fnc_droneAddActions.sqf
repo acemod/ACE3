@@ -37,6 +37,20 @@ private _action = [QGVAR(droneSetWaypointMove), localize "$STR_AC_MOVE",
     "\a3\3DEN\Data\CfgWaypoints\Move_ca.paa", _statement, _condition] call EFUNC(interact_menu,createAction);
 [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
 
+// follow unit/vehicle at turret location
+private _condition = {
+    params ["_vehicle"];
+    (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]} && {cursorTarget isKindOf "CAManBase" || (cursorTarget isKindOf "LandVehicle")}
+};
+private _statement = {
+    params ["_vehicle"];
+    private _group = group driver _vehicle;
+    private _pos = ([_vehicle, [0]] call FUNC(droneGetTurretTargetPos)) select 0;
+    [QGVAR(droneSetWaypoint), [_vehicle, _group, _pos, "FOLLOW", cursorTarget], _group] call CBA_fnc_targetEvent;
+};
+private _action = [QGVAR(droneSetWaypointFollow), localize "$STR_AC_FOLLOW", "\a3\3DEN\Data\CfgWaypoints\Follow_ca.paa", _statement, _condition] call EFUNC(interact_menu,createAction);
+[_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
+
 
 if (_vehicle isKindOf "Air") then {
     // loiter at location

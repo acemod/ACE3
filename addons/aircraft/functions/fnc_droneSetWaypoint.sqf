@@ -18,7 +18,7 @@
  * Public: No
  */
 
-params ["_vehicle", "_group", "_pos", "_type"];
+params ["_vehicle", "_group", "_pos", "_type", "_target"];
 TRACE_4("droneSetWaypoint",_vehicle,_group,_pos,_type);
 
 private _index = (currentWaypoint _group) min count waypoints _group;
@@ -37,6 +37,9 @@ _pos set [
 // [_group] call CBA_fnc_clearWaypoints;
 _waypoint = _group addWaypoint [_pos, 0];
 _waypoint setWaypointType _type;
+if (_type == "FOLLOW" && {_target isKindOf "CAManBase" || (_target isKindOf "LandVehicle")}) then {
+    _waypoint waypointAttachVehicle _target;
+};
 
 TRACE_3("",_currentHeight,_currentLoiterRadius,_currentLoiterType);
 if (_currentHeight > 1) then { _vehicle flyInHeight _currentHeight; };
