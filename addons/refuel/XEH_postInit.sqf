@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 if (isServer) then {
-    addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleDisconnect)}];
+    addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
 };
 
 [QGVAR(initSource), LINKFUNC(initSource)] call CBA_fnc_addEventHandler;

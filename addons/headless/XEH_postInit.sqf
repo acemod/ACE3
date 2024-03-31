@@ -9,7 +9,7 @@
                 ["AllVehicles", "initPost", LINKFUNC(handleSpawn), nil, nil, true] call CBA_fnc_addClassEventHandler;
             };
             // Add disconnect EH
-            addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleDisconnect)}];
+            addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
         } else {
             // Register HC (this part happens on HC only)
             [QXGVAR(headlessClientJoined), [player]] call CBA_fnc_globalEvent; // Global event for API purposes

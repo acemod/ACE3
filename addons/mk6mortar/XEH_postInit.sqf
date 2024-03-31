@@ -2,7 +2,6 @@
 
 if (hasInterface) then {
     #include "initKeybinds.inc.sqf"
-
     ["ace_infoDisplayChanged", LINKFUNC(turretDisplayLoaded)] call CBA_fnc_addEventHandler;
 };
 
