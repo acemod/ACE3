@@ -21,7 +21,7 @@ if (isServer) then {
 
         // Start the cleanup loop
         if (_index == 0) then {
-            [FUNC(cleanupLoop), [], GVAR(bloodLifetime)] call CBA_fnc_waitAndExecute;
+            [LINKFUNC(cleanupLoop), [], GVAR(bloodLifetime)] call CBA_fnc_waitAndExecute;
         };
     }] call CBA_fnc_addEventHandler;
 };

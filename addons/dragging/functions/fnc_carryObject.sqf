@@ -53,7 +53,7 @@ _unit setVariable [QGVAR(releaseActionID), [
 ] call EFUNC(common,addActionEventHandler)];
 
 // Add anim changed EH
-[_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
+[_unit, "AnimChanged", LINKFUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
 
 // Prevent UAVs from firing
 private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);

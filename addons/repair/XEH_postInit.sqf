@@ -2,7 +2,7 @@
 
 ["CBA_settingsInitialized", {
 
-    if !GVAR(enabled) exitWith {};
+    if (!GVAR(enabled)) exitWith {};
 
     [QGVAR(setVehicleDamage), LINKFUNC(setDamage)] call CBA_fnc_addEventHandler;
     [QGVAR(setVehicleHitPointDamage), LINKFUNC(setHitPointDamage)] call CBA_fnc_addEventHandler;
