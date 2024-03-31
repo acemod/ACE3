@@ -31,7 +31,7 @@ private _children = [];
         if !(_x in _detonators) exitWith {
             _hasRequiredItems = false;
         };
-    } count _required;
+    } forEach _required;
     if (_hasRequiredItems && {(!_isAttached) || {(getNumber (_x >> "isAttachable")) == 1}}) then {
         _children pushBack
             [

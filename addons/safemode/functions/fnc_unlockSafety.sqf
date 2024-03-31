@@ -56,8 +56,7 @@ if (inputAction "nextWeapon" > 0) then {
         if (_x == "this") then {
             _modes pushBack _weapon;
         };
-        nil
-    } count getArray (configFile >> "CfgWeapons" >> _weapon >> "modes");
+    } forEach getArray (configFile >> "CfgWeapons" >> _weapon >> "modes");
 
     // select last mode
     private _mode = _modes select (count _modes - 1);
