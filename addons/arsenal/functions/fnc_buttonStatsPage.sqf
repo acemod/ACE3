@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
@@ -17,11 +17,11 @@
 
 params ["_display", "_control", "_nextPage"];
 
-TRACE_1("control enabled", ctrlEnabled _control);
+TRACE_1("control enabled",ctrlEnabled _control);
 if !(ctrlEnabled _control) exitWith {};
 
-GVAR(currentStatPage) = [GVAR(currentStatPage) - 1, GVAR(currentStatPage) + 1] select _nextPage;
+GVAR(currentStatPage) = GVAR(currentStatPage) + ([-1, 1] select _nextPage);
 
-GVAR(statsInfo) params ["_isLeftPanel", "_panelControl", "_curSel", "_itemCfg"];
+GVAR(statsInfo) params ["", "_panelControl", "_curSel", "_itemCfg"];
 
 [QGVAR(displayStats), [_display, _panelControl, _curSel, _itemCfg]] call CBA_fnc_localEvent;

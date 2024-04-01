@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
  * Removes a loadout from the "Default Loadouts" list.
@@ -17,8 +17,10 @@
 */
 params [["_name", "", [""]], ["_global", false, [false]]];
 
-if (_global) then {
-    [QGVAR(removeDefaultLoadout), [_name]] call CBA_fnc_remoteEvent;
+if (_global) exitWith {
+    private _eventID = format [QGVAR(loadouts_%1), _name];
+    [_eventID] call CBA_fnc_removeGlobalEventJIP;
+    [QGVAR(removeDefaultLoadout), [_name]] call CBA_fnc_globalEvent;
 };
 
 GVAR(defaultLoadoutsList) deleteAt (GVAR(defaultLoadoutsList) findIf {(_x select 0) == _name});

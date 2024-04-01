@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function to open a full arsenal on a unit
@@ -29,11 +29,11 @@ if (_activated && local _logic) then {
         case (isnull _unit): {_error = localize "str_a3_BIS_fnc_showCuratorFeedbackMessage_506";};
         case !(alive _unit): {_error = localize "str_a3_BIS_fnc_moduleArsenal_errorDead";};
         case (isnull group _unit || !(side group _unit in [east,west,resistance,civilian])): {_error = localize "str_a3_BIS_fnc_moduleArsenal_errorBrain";};
-        case (vehicle _unit != _unit || effectivecommander _unit != _unit): {_error = localize "str_a3_BIS_fnc_moduleArsenal_errorVehicle";};
+        case (!isNull objectParent _unit || effectivecommander _unit != _unit): {_error = localize "str_a3_BIS_fnc_moduleArsenal_errorVehicle";};
     };
 
     if (_error == "") then {
-        if (["ACE_Arsenal"] call EFUNC(common,isModLoaded)) then {
+        if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
             if (!isPlayer _unit || {player == _unit}) then {
 
                 [{

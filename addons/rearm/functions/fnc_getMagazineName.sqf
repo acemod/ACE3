@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Gets a non-ambigious display name for a magazine using displayNameShort (AP/HE)

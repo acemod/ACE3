@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, modified by Grim
  * Handles AI reloading
@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+
 params ["_staticWeapon", "_gunner", "_weapon", ["_magazine", ""]];
 
 private _turretPath = [_gunner] call EFUNC(common,getTurretIndex);

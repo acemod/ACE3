@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Sets the volume of the game, including third party radio modifications such as TFAR and ACRE.

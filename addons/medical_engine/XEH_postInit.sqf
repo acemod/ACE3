@@ -13,12 +13,11 @@
     // Check if last hit point is our dummy.
     private _allHitPoints = getAllHitPointsDamage _unit param [0, []];
     reverse _allHitPoints;
-    while {(_allHitPoints param [0, ""]) select [0,1] == "#"} do { WARNING_1("Ignoring Reflector hitpoint %1", _allHitPoints deleteAt 0); };
+    while {(_allHitPoints param [0, ""]) select [0,1] == "#"} do { WARNING_1("Ignoring Reflector hitpoint %1",_allHitPoints deleteAt 0); };
 
     if (_allHitPoints param [0, ""] != "ACE_HDBracket") then {
-        private _config = configOf _unit;
-        if (getText (_config >> "simulation") == "UAVPilot") exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
-        if (getNumber (_config >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit)};
+        if (unitIsUAV _unit) exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
+        if (getNumber ((configOf _unit) >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit)};
         ERROR_1("Bad hitpoints for unit type ""%1""",typeOf _unit);
     } else {
         // Calling this function inside curly brackets allows the usage of
@@ -33,7 +32,7 @@
 #ifdef DEBUG_MODE_FULL
 [QEGVAR(medical,woundReceived), {
     params ["_unit", "_damages", "_shooter", "_ammo"];
-    TRACE_4("wound",_unit,_damages, _shooter, _ammo);
+    TRACE_4("wound",_unit,_damages,_shooter,_ammo);
     //systemChat str _this;
 }] call CBA_fnc_addEventHandler;
 #endif
@@ -61,20 +60,6 @@
     };
 }] call CBA_fnc_addClassEventHandler;
 
-// Guarantee aircraft crashes are more lethal
-["Air", "Killed", {
-    params ["_vehicle", "_killer"];
-    TRACE_3("air killed",_vehicle,typeOf _vehicle,velocity _vehicle);
-    if ((getText (configOf _vehicle >> "destrType")) == "") exitWith {};
-    if (unitIsUAV _vehicle) exitWith {};
-
-    private _lethality = linearConversion [0, 25, (vectorMagnitude velocity _vehicle), 0.5, 1];
-    TRACE_2("air crash",_lethality,crew _vehicle);
-    {
-        [QEGVAR(medical,woundReceived), [_x, [[_lethality, "Head", _lethality]], _killer, "#vehiclecrash"], _x] call CBA_fnc_targetEvent;
-    } forEach (crew _vehicle);
-}, true, ["ParachuteBase"]] call CBA_fnc_addClassEventHandler;
-
 // Fixes units being stuck in unconscious animation when being knocked over by a PhysX object
 ["CAManBase", "AnimDone", {
     params ["_unit", "_anim"];
@@ -100,6 +85,12 @@
     TRACE_3("unit Killed",_unit,objectParent _unit,local _unit);
     if (!isNull objectParent _unit && {local objectParent _unit}) exitWith {
         [_unit] call FUNC(lockUnconsciousSeat);
+    };
+
+    // Prevent second ragdoll of uncon units when they're killed
+    if (IS_UNCONSCIOUS(_unit) && !isAwake _unit) then {
+        _unit enableSimulation false;
+        [{_this enableSimulation true}, _unit, 2] call CBA_fnc_waitAndExecute;
     };
 }] call CBA_fnc_addEventHandler;
 

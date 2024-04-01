@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 #include "\a3\ui_f\hpp\defineResincl.inc"
 /*
@@ -23,8 +23,9 @@ private _display = ctrlParent _control;
 private _item = [_control lbData _curSel, _control lnbData [_curSel, 0]] select (ctrlType _control == CT_LISTNBOX);
 
 // When having chosen a new category, see if the current right panel can be kept open, otherwise take default
-private _selectCorrectPanelWeapon = [_display displayCtrl IDC_buttonOptic, _display displayCtrl GVAR(currentRightPanel)] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS, IDC_buttonCurrentMag, IDC_buttonCurrentMag2]});
-private _selectCorrectPanelContainer = [_display displayCtrl IDC_buttonMisc, _display displayCtrl GVAR(currentRightPanel)] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]});
+private _currentRightPanel = _display displayCtrl GVAR(currentRightPanel);
+private _selectCorrectPanelWeapon = [_display displayCtrl IDC_buttonOptic, _currentRightPanel] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ACC_IDCS, IDC_buttonCurrentMag, IDC_buttonCurrentMag2]});
+private _selectCorrectPanelContainer = [_display displayCtrl IDC_buttonMisc, _currentRightPanel] select (!isNil QGVAR(currentRightPanel) && {GVAR(currentRightPanel) in [RIGHT_PANEL_ITEMS_IDCS]});
 
 // Remove all magazines from the current weapon that aren't compatible with the new weapon
 private _fnc_clearCurrentWeaponMags = {
@@ -115,7 +116,7 @@ switch (GVAR(currentLeftPanel)) do {
 
             TOGGLE_RIGHT_PANEL_WEAPON
 
-            [_display, _selectCorrectPanelWeapon] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelWeapon, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelWeapon}] call FUNC(fillRightPanel);
         };
 
         // Make unit switch to new item
@@ -191,7 +192,7 @@ switch (GVAR(currentLeftPanel)) do {
 
             TOGGLE_RIGHT_PANEL_WEAPON
 
-            [_display, _selectCorrectPanelWeapon] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelWeapon, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelWeapon}] call FUNC(fillRightPanel);
         };
 
         // Make unit switch to new item
@@ -273,7 +274,7 @@ switch (GVAR(currentLeftPanel)) do {
                     _this call FUNC(fillRightPanel);
                 }, [_display, _selectCorrectPanelWeapon]] call CBA_fnc_execNextFrame;
             } else {
-                [_display, _selectCorrectPanelWeapon] call FUNC(fillRightPanel);
+                [_display, _selectCorrectPanelWeapon, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelWeapon}] call FUNC(fillRightPanel);
             };
         };
 
@@ -347,7 +348,7 @@ switch (GVAR(currentLeftPanel)) do {
 
             TOGGLE_RIGHT_PANEL_CONTAINER
 
-            [_display, _selectCorrectPanelContainer] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelContainer, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelContainer}] call FUNC(fillRightPanel);
         };
 
         // Make unit switch to new item
@@ -385,7 +386,7 @@ switch (GVAR(currentLeftPanel)) do {
 
             TOGGLE_RIGHT_PANEL_CONTAINER
 
-            [_display, _selectCorrectPanelContainer] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelContainer, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelContainer}] call FUNC(fillRightPanel);
         };
 
         // Make unit switch to new item
@@ -423,7 +424,7 @@ switch (GVAR(currentLeftPanel)) do {
 
             TOGGLE_RIGHT_PANEL_CONTAINER
 
-            [_display, _selectCorrectPanelContainer] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelContainer, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelContainer}] call FUNC(fillRightPanel);
         };
 
         // Make unit switch to new item
@@ -538,7 +539,7 @@ switch (GVAR(currentLeftPanel)) do {
 
             TOGGLE_RIGHT_PANEL_WEAPON
 
-            [_display, _selectCorrectPanelWeapon] call FUNC(fillRightPanel);
+            [_display, _selectCorrectPanelWeapon, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelWeapon}] call FUNC(fillRightPanel);
         };
 
         // Make unit switch to new item
@@ -682,14 +683,19 @@ switch (GVAR(currentLeftPanel)) do {
 
         TOGGLE_RIGHT_PANEL_HIDE
 
-        private _unitInsigniaConfig = configFile >> "CfgUnitInsignia" >> _item;
+        // Check for correct config: First mission, then campaign and finally regular config
+        private _itemCfg = missionConfigFile >> "CfgUnitInsignia" >> _item;
+
+        if (isNull _itemCfg) then {
+            _itemCfg = campaignConfigFile >> "CfgUnitInsignia" >> _item;
+        };
+
+        if (isNull _itemCfg) then {
+            _itemCfg = configFile >> "CfgUnitInsignia" >> _item;
+        };
 
         // Display new items's info on the bottom right
-        if (isNull _unitInsigniaConfig) then {
-            [_display, _control, _curSel, missionConfigFile >> "CfgUnitInsignia" >> _item] call FUNC(itemInfo);
-        } else {
-            [_display, _control, _curSel, _unitInsigniaConfig] call FUNC(itemInfo);
-        };
+        [_display, _control, _curSel, _itemCfg] call FUNC(itemInfo);
     };
 };
 

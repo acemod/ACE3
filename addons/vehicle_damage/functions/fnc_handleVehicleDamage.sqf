@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: tcvm
  * Process vehicle hit.
@@ -18,7 +18,7 @@
  * Whether or not to continue handling last frame's damage
  *
  * Example:
- * [ace_vehicle_damage_fnc_handleTankDamage, tank1, "Hit_Engine", 12]] call CBA_fnc_execNextFrame
+ * [ace_vehicle_damage_fnc_handleVehicleDamage, tank1, "Hit_Engine", 12]] call CBA_fnc_execNextFrame
  *
  * Public: No
  */
@@ -34,7 +34,7 @@ if !(alive _vehicle) exitWith {
     true
 };
 
-_hitPoint = toLower _hitPoint;
+_hitPoint = toLowerANSI _hitPoint;
 private _hitpointHash = _vehicle getVariable [QGVAR(hitpointHash), []];
 private _type = if (_hitpointHash isEqualTo []) then {
     "exit"

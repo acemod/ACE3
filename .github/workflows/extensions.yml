@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
     - name: Build
       shell: cmd
       run: |
@@ -23,7 +23,7 @@ jobs:
         cd build
         cmake .. && cmake --build .
     - name: Upload Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ace3_extensions-${{ matrix.os }}-debug
         path: extensions/build

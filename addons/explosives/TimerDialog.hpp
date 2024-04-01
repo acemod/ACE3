@@ -2,7 +2,7 @@ class GVAR(timerUI) {
     idd = -1;
     movingEnable = 1;
     enableSimulation = 1;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(timerDisplay), _this select 0)]);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(timerDisplay),_this select 0)]);
     class controlsBackground {
         class Header: RscText {
             idc = -1;

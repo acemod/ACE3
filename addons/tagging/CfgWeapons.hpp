@@ -34,4 +34,16 @@ class CfgWeapons {
         hiddenSelectionsTextures[] = {QPATHTOF(data\spraycanBlue_co.paa)};
         GVAR(textColor) = "0000FFFE";
     };
+    class ACE_SpraypaintYellow: ACE_SpraypaintBlack {
+        displayname = CSTRING(spraypaintYellow);
+        picture = QPATHTOF(UI\items\itemSpraypaintYellow.paa);
+        hiddenSelectionsTextures[] = {QPATHTOF(data\spraycanYellow_co.paa)};
+        GVAR(textColor) = "FFFF00FE";
+    };
+    class ACE_SpraypaintWhite: ACE_SpraypaintBlack {
+        displayname = CSTRING(spraypaintWhite);
+        picture = QPATHTOF(UI\items\itemSpraypaintWhite.paa);
+        hiddenSelectionsTextures[] = {QPATHTOF(data\spraycanWhite_co.paa)};
+        GVAR(textColor) = "FFFFFFFE";
+    };
 };

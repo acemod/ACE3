@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: tcvm
  * Condition for whether or not this object is a simulation type which can be a tow parent (TankX or CarX)
@@ -19,8 +19,7 @@ params ["_target"];
 
 // need toLower since apparently this isn't case sensitive
 private _simulationType = getText ((configOf _target) >> "simulation");
-TRACE_1("sim type",_simulationType);
+// TRACE_1("sim type",_simulationType);
 
 // Biki lies, you can both tow and tow as either TankX or CarX
-(toLower _simulationType) in ["tankx", "carx"]
-
+(toLowerANSI _simulationType) in ["tankx", "carx", "shipx"]

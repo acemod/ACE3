@@ -19,9 +19,9 @@ GVAR(flashlights) = [] call CBA_fnc_createNamespace;
 
             setCurrentChannel GVAR(DefaultChannel);
             if (currentChannel == GVAR(DefaultChannel)) then {
-                // INFO_1("Channel Set - %1", currentChannel);
+                // INFO_1("Channel Set - %1",currentChannel);
             } else {
-                ERROR_2("Failed To Set Channel %1 (is %2)", GVAR(DefaultChannel), currentChannel);
+                ERROR_2("Failed To Set Channel %1 (is %2)",GVAR(DefaultChannel),currentChannel);
             };
         }, 0, []] call CBA_fnc_addPerFrameHandler;
     };
@@ -93,7 +93,7 @@ GVAR(vehicleLightColor) = [1,1,1,0];
     // Handle vehicles with toggleable interior lights:
     private _vehicleLightCondition = getText (_cfg >> QGVAR(vehicleLightCondition));
     if (_vehicleLightCondition == "") then {
-        private _userAction = toLower getText (_cfg >> "UserActions" >> "ToggleLight" >> "statement");
+        private _userAction = toLowerANSI getText (_cfg >> "UserActions" >> "ToggleLight" >> "statement");
         if (
             false // isClass (_cfg >> "compartmentsLights")
             || {_userAction find "cabinlights_hide" > 0}

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Removes an action from a class
@@ -35,7 +35,7 @@ if (isNil {_parentNode}) exitWith {};
 private _found = false;
 {
     if (((_x select 0) select 0) == _actionName) exitWith {
-        TRACE_2("Deleting Action", _forEachIndex, _x);
+        TRACE_2("Deleting Action",_forEachIndex,_x);
         _found = true;
         (_parentNode select 1) deleteAt _forEachIndex;
     };

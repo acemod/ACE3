@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: tcvm
  * Start rope attach PFH
@@ -28,8 +28,10 @@ if (_ropeLength == 0) then {
 
 _unit removeItem _ropeClass;
 
+GVAR(isSwimming) = _unit call EFUNC(common,isSwimming);
+GVAR(putWeaponAwayNextFrame) = false;
 GVAR(cancel) = false;
 GVAR(canAttach) = false;
+GVAR(onMouseButtonDownEHID) = ["MouseButtonDown", LINKFUNC(onMouseButtonDown)] call CBA_fnc_addDisplayHandler;
 [LINKFUNC(towStateMachinePFH), 0, [TOW_STATE_ATTACH_PARENT, _unit, _target, objNull, _ropeLength, _ropeClass]] call CBA_fnc_addPerFrameHandler;
 [QGVAR(ropeDeployed), [_unit, _target, _ropeClass]] call CBA_fnc_localEvent;
-

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Open door.
@@ -71,7 +71,7 @@ GVAR(usedScrollWheel) = false;
 
         // didn't use incremental opening. Just do animation normally.
         if !(GVAR(usedScrollWheel)) then {
-            private _phase = [0, 1] select (_house animationPhase (_animations select 0) < 0.5);
+            private _phase = parseNumber (_house animationPhase (_animations select 0) < 0.5);
 
             {_house animate [_x, _phase]; false} count _animations;
         };

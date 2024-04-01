@@ -2,10 +2,10 @@
 
 ["CBA_settingsInitialized", {
 
-    if !GVAR(enabled) exitWith {};
+    if (!GVAR(enabled)) exitWith {};
 
-    [QGVAR(setVehicleDamage), {_this call FUNC(setDamage)}] call CBA_fnc_addEventHandler;
-    [QGVAR(setVehicleHitPointDamage), {_this call FUNC(setHitPointDamage)}] call CBA_fnc_addEventHandler;
+    [QGVAR(setVehicleDamage), LINKFUNC(setDamage)] call CBA_fnc_addEventHandler;
+    [QGVAR(setVehicleHitPointDamage), LINKFUNC(setHitPointDamage)] call CBA_fnc_addEventHandler;
     [QGVAR(setWheelHitPointDamage), {
         params ["_object", "_hitPoint", "_damage"];
         private _damageDisabled = !isDamageAllowed _object;
@@ -64,7 +64,8 @@
 
             private _spareTracks = _vehicle getVariable QGVAR(editorLoadedTracks);
             if (isNil "_spareTracks") then {
-                _spareTracks = parseNumber (_vehicle isKindOf "Tank"); // must match eden attribute default
+                private _defaultCount = parseNumber (_vehicle isKindOf "Tank"); // must match eden attribute default
+                _spareTracks = [configOf _vehicle >> QGVAR(spareTracks), "NUMBER", _defaultCount] call CBA_fnc_getConfigEntry;
             };
             if (_spareTracks > 0) then {
                 [_vehicle, _spareTracks, "ACE_Track"] call FUNC(addSpareParts);
@@ -72,7 +73,8 @@
 
             private _spareWheels = _vehicle getVariable QGVAR(editorLoadedWheels);
             if (isNil "_spareWheels") then {
-                _spareWheels = parseNumber (_vehicle isKindOf "Car"); // must match eden attribute default
+                private _defaultCount = parseNumber (_vehicle isKindOf "Car"); // must match eden attribute default
+                _spareWheels = [configOf _vehicle >> QGVAR(spareWheels), "NUMBER", _defaultCount] call CBA_fnc_getConfigEntry;
             };
             if (_spareWheels > 0) then {
                 [_vehicle, _spareWheels, "ACE_Wheel"] call FUNC(addSpareParts);

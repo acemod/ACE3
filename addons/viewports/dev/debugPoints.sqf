@@ -1,4 +1,4 @@
-#include "\z\ace\addons\viewports\script_component.hpp"
+#include "..\script_component.hpp"
 /*
     [] call compileScript ["\z\ace\addons\viewports\dev\debugPoints.sqf"];
 
@@ -22,14 +22,14 @@
 #define IDD_3DEN 313
 
 [] spawn {
-    INFO_2("Pre-Init [is3den %1][3den display: %2]", is3den, !isNull findDisplay IDD_3DEN);
+    INFO_2("Pre-Init [is3den %1][3den display: %2]",is3den,!isNull findDisplay IDD_3DEN);
     if (!is3den) exitWith {};
 
     GVAR(3denIndex) = 0;
     GVAR(3denViewports) = [];
 
     disableSerialization;
-    private _3den = findDisplay IDD_3DEN;    
+    private _3den = findDisplay IDD_3DEN;
     if (_3den getVariable [QGVAR(setup), false]) exitWith {};
     _3den setVariable [QGVAR(setup), true];
 
@@ -64,23 +64,23 @@
             };
 
             private _out = [];
-            _out pushBack format ["    class %1: %2 {", configName _config, configName inheritsFrom _config]; 
-            _out pushBack format ["        class ace_viewports {"]; 
+            _out pushBack format ["    class %1: %2 {", configName _config, configName inheritsFrom _config];
+            _out pushBack format ["        class ace_viewports {"];
             {
                 _x params ["_name", "", "_camLocation", "_camAttach"];
-                _out pushBack format ['            class %1 {', _name]; 
-                _out pushBack format ['                camLocation[] = {%1, %2, %3};', _camLocation # 0, _camLocation # 1, _camLocation # 2]; 
-                _out pushBack format ['                camAttach = %1;', _camAttach]; 
-                // _out pushBack format ['                type = "%1";', _type]; 
-                // _out pushBack format ['                screenLocation[] = {};']; 
-                // _out pushBack format ['                maxDistance = 99;']; 
-                // _out pushBack format ['                compartments[]={};']; 
+                _out pushBack format ['            class %1 {', _name];
+                _out pushBack format ['                camLocation[] = {%1, %2, %3};', _camLocation # 0, _camLocation # 1, _camLocation # 2];
+                _out pushBack format ['                camAttach = %1;', _camAttach];
+                // _out pushBack format ['                type = "%1";', _type];
+                // _out pushBack format ['                screenLocation[] = {};'];
+                // _out pushBack format ['                maxDistance = 99;'];
+                // _out pushBack format ['                compartments[]={};'];
                 // _out pushBack format ['                roles[]={};'];
-               _out pushBack format ['            };']; 
+               _out pushBack format ['            };'];
             } forEach GVAR(3denViewports);
 
-            _out pushBack format ['        };']; 
-            _out pushBack format ['    };']; 
+            _out pushBack format ['        };'];
+            _out pushBack format ['    };'];
 
             // Some inherited configs might use a different model which uses a different offset - yuck
             private _inherited = '((configName _x) isKindOf (configName _config)) && {_model != getText (_x >> "model")}' configClasses (configFile >> "CfgVehicles");

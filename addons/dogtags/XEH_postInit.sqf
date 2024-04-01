@@ -1,13 +1,13 @@
 #include "script_component.hpp"
 
-[QGVAR(showDogtag), DFUNC(showDogtag)] call CBA_fnc_addEventHandler;
-[QGVAR(sendDogtagData), DFUNC(sendDogtagData)] call CBA_fnc_addEventHandler;
-[QGVAR(getDogtagItem), DFUNC(getDogtagItem)] call CBA_fnc_addEventHandler;
-[QGVAR(addDogtagItem), DFUNC(addDogtagItem)] call CBA_fnc_addEventHandler;
+[QGVAR(showDogtag), LINKFUNC(showDogtag)] call CBA_fnc_addEventHandler;
+[QGVAR(sendDogtagData), LINKFUNC(sendDogtagData)] call CBA_fnc_addEventHandler;
+[QGVAR(getDogtagItem), LINKFUNC(getDogtagItem)] call CBA_fnc_addEventHandler;
+[QGVAR(addDogtagItem), LINKFUNC(addDogtagItem)] call CBA_fnc_addEventHandler;
 
 // Add actions and event handlers only if ace_medical is loaded
 // - Adding actions via config would create a dependency
-if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
     if (hasInterface) then {
         private _checkTagAction = [
             "ACE_CheckDogtag",
@@ -17,7 +17,7 @@ if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
             {!isNil {_target getVariable QGVAR(dogtagData)}}
         ] call EFUNC(interact_menu,createAction);
 
-        ["ACE_bodyBagObject", 0, ["ACE_MainActions"], _checkTagAction] call EFUNC(interact_menu,addActionToClass);
+        ["ACE_bodyBagObject", 0, ["ACE_MainActions"], _checkTagAction, true] call EFUNC(interact_menu,addActionToClass);
 
         private _takeTagAction = [
             "ACE_TakeDogtag",
@@ -27,12 +27,13 @@ if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
             {(!isNil {_target getVariable QGVAR(dogtagData)}) && {((_target getVariable [QGVAR(dogtagTaken), objNull]) != _target)}}
         ] call EFUNC(interact_menu,createAction);
 
-        ["ACE_bodyBagObject", 0, ["ACE_MainActions"], _takeTagAction] call EFUNC(interact_menu,addActionToClass);
+        ["ACE_bodyBagObject", 0, ["ACE_MainActions"], _takeTagAction, true] call EFUNC(interact_menu,addActionToClass);
     };
 
     if (isServer) then {
         ["ace_placedInBodyBag", {
-            params ["_target", "_bodyBag"];
+            params ["_target", "_bodyBag", "_isGrave"];
+            if (_isGrave) exitWith {};
             TRACE_2("ace_placedInBodyBag eh",_target,_bodyBag);
 
             private _dogTagData = [_target] call FUNC(getDogtagData);
@@ -46,7 +47,7 @@ if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
 };
 
 // If the arsenal is loaded, show the custom names for dog tags when in the arsenal
-if (["ACE_Arsenal"] call EFUNC(common,isModLoaded)) then {
+if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
     [QEGVAR(arsenal,rightPanelFilled), {
         params ["_display", "_leftPanelIDC", "_rightPanelIDC"];
 

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: L-H, edited by commy2, rewritten by joko // Jonas, re-rewritten by mharis001
  * Returns the weight of the given object.
@@ -18,6 +18,9 @@
 
 params ["_object"];
 
+// Skip weight checking if it will be 0
+if (GVAR(weightCoefficient) == 0) exitWith {0};
+
 private _weight = loadAbs _object;
 
 if !(GVAR(skipContainerWeight)) then {
@@ -36,4 +39,4 @@ if !(GVAR(skipContainerWeight)) then {
 
 // Mass in Arma isn't an exact amount but rather a volume/weight value
 // This attempts to work around that by making it a usable value (sort of)
-_weight * 0.5 // return
+GVAR(weightCoefficient) * _weight * 0.5 // return

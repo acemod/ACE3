@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * PFEH to handle refreshing effects.
@@ -25,8 +25,8 @@ if (currentVisionMode _unit != 1) exitWith {
     GVAR(PFID) = -1;
     (missionNamespace getVariable [QGVAR(firedEHs), []]) params [["_firedPlayerID", -1], ["_firedPlayerVehicleID", -1]];
     TRACE_2("removing fired EHs",_firedPlayerID,_firedPlayerVehicleID);
-    ["ace_firedPlayer", _firedPlayerID] call CBA_fnc_removeEventHandler,
-    ["ace_firedPlayerVehicle", _firedPlayerVehicleID] call CBA_fnc_removeEventHandler,
+    ["ace_firedPlayer", _firedPlayerID] call CBA_fnc_removeEventHandler;
+    ["ace_firedPlayerVehicle", _firedPlayerVehicleID] call CBA_fnc_removeEventHandler;
 };
 if (EGVAR(common,OldIsCamera)) exitWith {
     if (GVAR(running)) then {
@@ -36,7 +36,7 @@ if (EGVAR(common,OldIsCamera)) exitWith {
     };
 };
 if (!GVAR(running)) then {
-    TRACE_1("Un-Pausing", GVAR(paused));
+    TRACE_1("Un-Pausing",GVAR(paused));
     GVAR(running) = true;
     [true] call FUNC(setupDisplayEffects);
     [] call FUNC(refreshGoggleType);

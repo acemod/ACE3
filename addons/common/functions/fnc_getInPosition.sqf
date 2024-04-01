@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Move unit into given vehicle position or switch to that position if the unit is already inside the vehicle.
@@ -23,7 +23,7 @@
 
 params ["_unit", "_vehicle", "_position", ["_index", -1]];
 
-_position = toLower _position;
+_position = toLowerANSI _position;
 
 // general
 if (!alive _vehicle || {locked _vehicle > 1}) exitWith {false};

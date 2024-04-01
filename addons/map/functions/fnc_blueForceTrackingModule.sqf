@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Initializes the blue force tracking module.
@@ -22,4 +22,4 @@ params ["_logic"];
 [_logic, QGVAR(BFT_HideAiGroups), "HideAiGroups"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(BFT_ShowPlayerNames), "ShowPlayerNames"] call EFUNC(common,readSettingFromModule);
 
-INFO_3("Blue Force Tracking Module Initialized:", GVAR(BFT_Enabled), GVAR(BFT_Interval), GVAR(BFT_HideAiGroups));
+INFO_3("Blue Force Tracking Module Initialized:",GVAR(BFT_Enabled),GVAR(BFT_Interval),GVAR(BFT_HideAiGroups));

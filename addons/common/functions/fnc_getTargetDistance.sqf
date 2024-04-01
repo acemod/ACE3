@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: VKing
  * Get the distance to the next object the player is looking at. Used for laser distance measurements.

@@ -1,24 +1,9 @@
 // by PabstMirror, commy2
 #include "script_component.hpp"
 
-// Release object on disconnection. Function is identical to killed
 if (isServer) then {
-    // 'HandleDisconnect' EH triggers too late
-    addMissionEventHandler ["PlayerDisconnected", {
-        private _unit = (getUserInfo (_this select 5)) select 10;
-
-        _unit call FUNC(handleKilled);
-    }];
-
-    // Handle surrending and handcuffing
-    ["ace_captiveStatusChanged", {
-        params ["_unit", "_state"];
-
-        // If surrended or handcuffed, drop dragged/carried object
-        if (_state) then {
-            _unit call FUNC(handleKilled);
-        };
-    }] call CBA_fnc_addEventHandler;
+    // Release object on disconnection. Function is identical to killed
+    addMissionEventHandler ["HandleDisconnect", LINKFUNC(handleKilled)];
 };
 
 if (!hasInterface) exitWith {};
@@ -43,11 +28,47 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
 ["vehicle", {[ACE_player, objNull] call FUNC(handlePlayerChanged)}] call CBA_fnc_addPlayerEventHandler;
 ["weapon", LINKFUNC(handlePlayerWeaponChanged)] call CBA_fnc_addPlayerEventHandler;
 
+// When changing cameras, drop carried and dragged objects
+["featureCamera", {
+    params ["_unit", "_camera"];
+
+    // Unit can either drag or carry, functions themselves handle which ones are executed
+    switch (_camera) do {
+        // Default camera
+        case "": {
+            _unit call FUNC(resumeDrag);
+            _unit call FUNC(resumeCarry);
+        };
+        // Arsenals make the unit change animations, which makes the unit drop dragged/carried objects regardless
+        case "arsenal";
+        case "ace_arsenal": {
+            _unit call FUNC(handleKilled);
+        };
+        default {
+            _unit call FUNC(pauseDrag);
+            _unit call FUNC(pauseCarry);
+        };
+    };
+}] call CBA_fnc_addPlayerEventHandler;
+
 // Handle waking up dragged unit and falling unconscious while dragging
 ["ace_unconscious", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
 
 // Display event handler
 ["MouseZChanged", {(_this select 1) call FUNC(handleScrollWheel)}] call CBA_fnc_addDisplayHandler;
+
+// Handle surrendering and handcuffing
+["ace_captiveStatusChanged", {
+    params ["_unit", "_state"];
+
+    // If surrended or handcuffed, drop dragged/carried object
+    if (_state && {local _unit}) then {
+        _unit call FUNC(handleKilled);
+    };
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(startCarry), LINKFUNC(startCarryLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(startDrag), LINKFUNC(startDragLocal)] call CBA_fnc_addEventHandler;
 
 [QGVAR(carryingContainerClosed), {
     params ["_container", "_owner"];
@@ -86,4 +107,4 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     };
 }] call CBA_fnc_addEventHandler;
 
-#include "initKeybinds.sqf"
+#include "initKeybinds.inc.sqf"

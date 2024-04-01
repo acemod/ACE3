@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Local callback for applying a tourniquet to a patient.
@@ -19,7 +19,7 @@
 params ["_patient", "_bodyPart"];
 TRACE_2("tourniquetLocal",_patient,_bodyPart);
 
-private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
+private _partIndex = ALL_BODY_PARTS find tolowerANSI _bodyPart;
 
 private _tourniquets = GET_TOURNIQUETS(_patient);
 _tourniquets set [_partIndex, CBA_missionTime];

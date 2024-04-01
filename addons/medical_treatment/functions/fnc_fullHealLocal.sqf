@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Local callback for fully healing a patient.
@@ -24,6 +24,9 @@ if (!alive _patient) exitWith {};
 if ((["ace_fire"] call EFUNC(common,isModLoaded)) && {[_patient] call EFUNC(fire,isBurning)}) then {
     _patient setVariable [QEGVAR(fire,intensity), 0, true];
 };
+
+// Allow mods to heal
+[QGVAR(fullHealLocalMod), [_patient]] call CBA_fnc_localEvent;
 
 private _state = GET_SM_STATE(_patient);
 TRACE_1("start",_state);
@@ -63,6 +66,8 @@ _patient setVariable [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES, true];
 _patient setVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE, true];
 _patient setVariable [VAR_BLOOD_PRESS, [80, 120], true];
 _patient setVariable [VAR_PERIPH_RES, DEFAULT_PERIPH_RES, true];
+_patient setVariable [VAR_SPO2, DEFAULT_SPO2, true];
+_patient setVariable [VAR_OXYGEN_DEMAND, 0, true];
 
 // IVs
 _patient setVariable [QEGVAR(medical,ivBags), nil, true];

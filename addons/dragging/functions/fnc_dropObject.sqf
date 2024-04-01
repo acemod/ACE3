@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, Malbryn
  * Drops a dragged object.
@@ -20,10 +20,13 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 // Remove drop action
-[GVAR(releaseActionID), "keydown"] call CBA_fnc_removeKeyHandler;
+if (!isNil QGVAR(releaseActionID)) then {
+    [GVAR(releaseActionID), "keydown"] call CBA_fnc_removeKeyHandler;
+    GVAR(releaseActionID) = nil;
+};
 
 // Stop blocking
-if !(GVAR(dragAndFire)) then {
+if (!GVAR(dragAndFire)) then {
     [_unit, "DefaultAction", _unit getVariable [QGVAR(blockFire), -1]] call EFUNC(common,removeActionEventHandler);
 };
 
@@ -77,9 +80,16 @@ if (_unit getVariable ["ACE_isUnconscious", false]) then {
     [_unit, "unconscious", 2] call EFUNC(common,doAnimation);
 };
 
-// Recreate UAV crew
+// Recreate UAV crew (add a frame delay or this may cause the vehicle to be moved to [0,0,0])
 if (_target getVariable [QGVAR(isUAV), false]) then {
-    createVehicleCrew _target;
+    _target setVariable [QGVAR(isUAV), nil, true];
+
+    [{
+        params ["_target"];
+        if (!alive _target) exitWith {};
+        TRACE_2("restoring uav crew",_target,getPosASL _target);
+        createVehicleCrew _target;
+    }, [_target]] call CBA_fnc_execNextFrame;
 };
 
 // Fixes not being able to move when in combat pace
