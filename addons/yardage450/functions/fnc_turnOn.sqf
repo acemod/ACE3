@@ -38,7 +38,6 @@ GVAR(active) = true;
     };
 
     if (currentWeapon ACE_player == "ACE_Yardage450" && cameraView == "GUNNER") then {
-        if (isNil {__dsp} || {isNull __dsp} || {ctrlIDD __dsp != -1}) then {
         if (isNil {DISPLAY_YARDAGE} || {isNull DISPLAY_YARDAGE} || {ctrlIDD DISPLAY_YARDAGE != -1}) then {
             TRACE_1("making display",DISPLAY_YARDAGE);
             QUOTE(ADDON) cutRsc ["ACE_RscYardage450", "PLAIN", 1, false];
