@@ -26,6 +26,10 @@ if !(_entity call EFUNC(common,isAwake)) exitWith {};
 
 if ((currentWeapon _entity) in GVAR(undroppableWeapons)) exitWith {};
 
-if !(random 1 < GVAR(weaponDropChanceArmHit) && {_selections findAny GVAR(armSelections) != -1}) exitWith {};
+private _chance = GVAR(weaponDropChanceArmHitAI);
+
+if (isPlayer _entity) then {_chance = GVAR(weaponDropChanceArmHitPlayer)};
+
+if !(random 1 < _chance && {_selections findAny GVAR(armSelections) != -1}) exitWith {};
 
 [QGVAR(dropWeapon), _entity, _entity] call CBA_fnc_targetEvent;
