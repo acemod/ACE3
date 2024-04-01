@@ -2,7 +2,7 @@
 
 // Fired XEH
 GVAR(ammoEventHandlers) = createHashMap;
-[QGVAR(throwFiredXEH), FUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
+[QGVAR(throwFiredXEH), LINKFUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
 
 // Exit on HC
 if (!hasInterface) exitWith {};
