@@ -26,6 +26,7 @@ private _type = _classname call FUNC(getItemType);
 private _canAdd = false;
 private _canFitWeaponSlot = false;
 private _addedToUnit = false;
+private _weaponHolder = _unit;
 
 switch (_container) do {
     case "vest": {
@@ -94,7 +95,7 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private _weaponHolder = nearestObject [_unit, "WeaponHolder"];
+            _weaponHolder = nearestObject [_unit, "WeaponHolder"];
 
             if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
                 _weaponHolder = createVehicle ["GroundWeaponHolder", _unit, [], 0, "CAN_COLLIDE"];
@@ -129,7 +130,7 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private _weaponHolder = nearestObject [_unit, "WeaponHolder"];
+            _weaponHolder = nearestObject [_unit, "WeaponHolder"];
 
             if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
                 _weaponHolder = createVehicle ["GroundWeaponHolder", _unit, [], 0, "CAN_COLLIDE"];
@@ -160,7 +161,7 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private _weaponHolder = nearestObject [_unit, "WeaponHolder"];
+            _weaponHolder = nearestObject [_unit, "WeaponHolder"];
 
             if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
                 _weaponHolder = createVehicle ["GroundWeaponHolder", _unit, [], 0, "CAN_COLLIDE"];
@@ -176,4 +177,4 @@ switch (_type select 0) do {
     };
 };
 
-[_addedToUnit, _unit]
+[_addedToUnit, _weaponHolder]
