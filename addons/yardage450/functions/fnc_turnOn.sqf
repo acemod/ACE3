@@ -33,12 +33,15 @@ GVAR(active) = true;
 [{
     if (CBA_missionTime - GVAR(powerOnTime) > 30) exitWith {
         GVAR(active) = false;
-        74210 cutText ["", "PLAIN"];
+        QUOTE(ADDON) cutText ["", "PLAIN"];
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
     if (currentWeapon ACE_player == "ACE_Yardage450" && cameraView == "GUNNER") then {
-        74210 cutRsc ["ACE_RscYardage450", "PLAIN", 1, false];
+        if (isNil {__dsp} || {isNull __dsp} || {ctrlIDD __dsp != -1}) then {
+            TRACE_1("making display",__dsp);
+            QUOTE(ADDON) cutRsc ["ACE_RscYardage450", "PLAIN", 1, false];
+        };
 
         __ctrlLaser ctrlShow GVAR(lasing);
         if (GVAR(targetAcquired)) then {
@@ -51,7 +54,7 @@ GVAR(active) = true;
         __ctrlMeters ctrlShow !GVAR(useYards);
         __ctrlYards ctrlShow GVAR(useYards);
     } else {
-        74210 cutText ["", "PLAIN"];
+        QUOTE(ADDON) cutText ["", "PLAIN"];
     };
 
 }, 0, []] call CBA_fnc_addPerFrameHandler;

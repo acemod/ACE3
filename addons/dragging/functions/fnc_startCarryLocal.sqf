@@ -49,7 +49,7 @@ if (_target isKindOf "CAManBase") then {
         _primaryWeapon = "ACE_FakePrimaryWeapon";
     };
 
-    // Select primary, otherwise the drag animation actions don't work
+    // Select primary, otherwise the carry animation actions don't work
     _unit selectWeapon _primaryWeapon;
 
     // Move a bit closer and adjust direction when trying to pick up a person
@@ -84,7 +84,7 @@ _unit setVariable [QGVAR(isCarrying), true, true];
 // Required for aborting animation
 _unit setVariable [QGVAR(carriedObject), _target, true];
 
-[FUNC(startCarryPFH), 0.2, [_unit, _target, _timer]] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(startCarryPFH), 0.2, [_unit, _target, _timer]] call CBA_fnc_addPerFrameHandler;
 
 // Disable collisions by setting the PhysX mass to almost zero
 private _mass = getMass _target;

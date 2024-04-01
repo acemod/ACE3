@@ -7,6 +7,7 @@
             <Czech>ACE Kill Tracker</Czech>
             <Russian>ACE Отслеживание убийств</Russian>
             <Japanese>ACE キルトラッカー</Japanese>
+            <Korean>ACE 킬트래커</Korean>
         </Key>
         <Key ID="STR_ACE_KillTracker_Title">
             <English>ACE Killed Events</English>
@@ -99,6 +100,7 @@
             <Czech>Sledovat AI zabité hráči</Czech>
             <Russian>Отслеживание юнитов ИИ, убитых игроком</Russian>
             <Japanese>プレイヤーに殺害されたAIユニットを追跡</Japanese>
+            <Korean>플레이어가 죽인 AI 트래킹</Korean>
         </Key>
         <Key ID="STR_ACE_KillTracker_TrackAI_Description">
             <English>Defines if killed AIs will be shown in the kill tracker during mission debriefing.</English>
@@ -106,6 +108,7 @@
             <Czech>Udává zdali se zabité AI budou ukazovat v kill trackeru v průběhu debriefingu po misi.</Czech>
             <Russian>Определяет, будут ли убитые ИИ отображаться в трекере убийств во время дебрифинга миссии.</Russian>
             <Japanese>ミッションデブリーフィングのキルトラッカーに殺害されたAIが表示されるかどうかを定義します。</Japanese>
+            <Korean>사후강평 중 살해된 AI가 킬트래킹에 표시되는지 여부를 정의합니다.</Korean>
         </Key>
     </Package>
 </Project>
