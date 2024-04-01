@@ -45,7 +45,7 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
     private _newVelocity = (_p1 vectorFromTo _p2) vectorMultiply _velocity;
 
     // Adjust for throwing from inside vehicles, where we have a vehicle-based velocity that can't be compensated for by a human
-    if (vehicle _unit != _unit) then {
+    if (!isNull objectParent _unit) then {
         _newVelocity = _newVelocity vectorAdd (velocity (vehicle _unit));
     };
 

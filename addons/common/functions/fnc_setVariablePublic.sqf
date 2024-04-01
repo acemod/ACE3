@@ -34,7 +34,7 @@ if (_object isEqualTo (_object getVariable [format ["ACE_onEmbargo_%1", _varName
 _object setVariable [_varName, _value, true];
 _object setVariable [format ["ACE_onEmbargo_%1", _varName], _object];
 
-TRACE_2("Starting Embargo", _varName, _delay);
+TRACE_2("Starting Embargo",_varName,_delay);
 
 [{
     params ["_object", "_varName", "_value"];
@@ -43,7 +43,7 @@ TRACE_2("Starting Embargo", _varName, _delay);
     _object setVariable [format ["ACE_onEmbargo_%1", _varName], nil]; //Remove Embargo
     private _curValue = _object getVariable _varName;
 
-    TRACE_4("End of embargo", _object, _varName, _value, _curValue);
+    TRACE_4("End of embargo",_object,_varName,_value,_curValue);
 
     //If value at start of embargo doesn't equal current, then broadcast and start new embargo
     if (_value isNotEqualTo _curValue) then {

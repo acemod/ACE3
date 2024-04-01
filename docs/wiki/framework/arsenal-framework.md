@@ -136,8 +136,9 @@ Examples:
 
 ACE Arsenal uses 2 existing config entries to sort and display items.
 
-- `baseWeapon`: Class name that is used to display an item in the arsenal. This property can be applied to any weapon or weapon attachment in `CfgWeapons`.
+- `baseWeapon`: Class name that is used to display an item in the arsenal, used for weapon/attachment variants that are not normally shown to the player (AI variants, PIP optics, and so on). This property can be applied to any weapon or weapon attachment in `CfgWeapons`. Items using CBA or RHS' Scripted Optics systems, or CBA Switchable Attachments do not need this property explictly set, and will automatically use their player-accessible class.
 - `ACE_isUnique`: Classes in `CfgMagazines` with this property set to `1` will be treated and shown by the Arsenal as Misc. Items. Used for items with attached data that needs to be kept track of, such as Notepads or Spare Barrels.
+- `ACE_asItem`: Classes in `CfgMagazines` with this property set to `1` will be treated and shown by the Arsenal as Items. Used for magazines that are not meant to be used in a weapon, such as Painkillers.
 
 ### 3.2 New config entries
 
@@ -159,7 +160,7 @@ ACE Medical Treatment and ACE Field Rations also add their own sub-categories, i
 - `ACE_isMedicalItem`: Items with this property set to `1` will be sorted to the ACE Medical Tab.
 - `ACE_isFieldRationItem`: Items with this property set to `1` will be sorted to the ACE Field Rations Tab.
 
-Only Misc. Items will be checked for these properties. Magazines must have ACE_isUnique property.
+Only Misc. Items will be checked for these properties. Magazines must have `ACE_isUnique` or `ACE_asItem` property.
 
 ## 4. Default loadouts
 
@@ -402,6 +403,8 @@ For actions involving frame delays or timers, a second call of the `ace_arsenal_
 
 Since CBA frame functions are deactivated during preInit as of Oct 24th 2023, the refresh function is executed immediatelly after the action code is executed. Take note of this information and the comment below if you'd like your actions to be usable in 3DEN.
 
+By default actions are updated whenever the arsenal is refreshed (`ace_arsenal_fnc_refresh`) and whenever item info (the bottom right GUI element that shows item name and author) is updated. If any action with the `updateOnCargoChanged` property is added, then actions will also be updated on container inventory changes.
+
 ### 7.1 Adding actions via config
 
 ```cpp
@@ -410,6 +413,7 @@ class ace_arsenal_actions {
         displayName = "My Actions";
         condition = QUOTE(true);
         scopeEditor = 2; // Only actions with scopeEditor = 2 are shown in 3DEN. Actions working with variables should take object variables being reset between editor view and mission start into account.
+        updateOnCargoChanged = 1; // See comment above.
         tabs[] = {0,5};
         class text {
             // A simple text label
@@ -417,6 +421,7 @@ class ace_arsenal_actions {
         };
         class statement {
             // Statement output as text
+            // Return can be string or array of strings: for array each entry is automatically displayed on a separate line
             textStatement = QUOTE([_this select 0] call tag_fnc_myTextStatement);
         };
         class button {
@@ -441,6 +446,7 @@ The focused unit object is passed to the condition and statement functions.
 3   | Actions | Array of arrays | Required
 4   | Condition | Code | Optional (default: `{true}`)
 5   | Scope editor | Number | Optional (default: `2`)
+6   | Update on cargo change | Boolean | Optional (default: `false`)
 
 Return Value:
 - Array of action IDs
@@ -506,6 +512,7 @@ All are local.
 | ace_arsenal_loadoutsDisplayClosed | None | 3.12.3 |
 | ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
 | ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
+| ace_arsenal_loadoutVerified | loadout data (ARRAY), loadout CBA extended data (HASHMAP), null items (ARRAY), unavailable items (ARRAY), unavailable extended data (ARRAY) | 3.17.0 |
 | ace_arsenal_weaponItemChanged | weapon classname (STRING), item classname (STRING), item index (NUMBER, 0-5: muzzle, side, optic, bipod, magazine, underbarrel) | 3.16.0 |
 
 ## 9. Custom sub item categories

@@ -68,3 +68,13 @@ The average amount of time in seconds, after `explosionTime` has passed, between
 ### 2.4 ace_grenades_flashbangIntervalMaxDeviation
 
 The amount of randomness in the fuse time.
+
+## 3. Events
+
+### 3.1 Listenable
+
+Event Name | Description | Passed Parameter(s) | Locality
+---------- | ----------- | ------------------- | --------
+`ace_flashbangExploded` | A flashbang exploded | `[_grenadePosASL]` | Global
+`ace_grenades_flashbangedAI` | A local AI was affected by a flashbang | `[_unit, _strength, _grenadePosASL]` | Local
+`ace_grenades_flashbangedPlayer` | The local player was affected by a flashbang | `[_strength, _grenadePosASL]` | Local

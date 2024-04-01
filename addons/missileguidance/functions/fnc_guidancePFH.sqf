@@ -37,7 +37,7 @@ private _adjustTime = 1;
 if (accTime > 0) then {
     _adjustTime = 1/accTime;
     _adjustTime = _adjustTime *  (_runtimeDelta / TIMESTEP_FACTOR);
-    TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta, (_runtimeDelta / TIMESTEP_FACTOR) );
+    TRACE_4("Adjust timing",1/accTime,_adjustTime,_runtimeDelta,(_runtimeDelta / TIMESTEP_FACTOR));
 } else {
     _adjustTime = 0;
 };
@@ -89,8 +89,8 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
     };
     private _finalAdjustVector = [_yaw, _roll, _pitch];
 
-    TRACE_3("", _pitch, _yaw, _roll);
-    TRACE_3("", _targetVector, _adjustVector, _finalAdjustVector);
+    TRACE_3("",_pitch,_yaw,_roll);
+    TRACE_3("",_targetVector,_adjustVector,_finalAdjustVector);
 
     if (accTime > 0) then {
         private _changeVector = (vectorDir _projectile) vectorAdd _finalAdjustVector;

@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * call ace_interaction_fnc_onRemoteControl
+ * call ace_interaction_fnc_doRemoteControl
  *
  * Public: No
  */

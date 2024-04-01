@@ -23,7 +23,7 @@ params ["_logic", "_settingName", "_moduleVariable"];
 
 // Check if the variable is already defined
 if (isNil _settingName) exitWith {
-    ERROR_1("readSettingFromModule - param [%1] is not an ace_setting", _settingName);
+    ERROR_1("readSettingFromModule - param [%1] is not an ace_setting",_settingName);
 };
 
 // Check if the parameter is defined in the module

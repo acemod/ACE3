@@ -15,13 +15,13 @@
  * Public: No
  */
 
-params ["_unit"];
-TRACE_2("params",_unit,typeOf _unit);
-
 // only run this after the settings are initialized
 if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addEarPlugs), _this];
 };
+
+params ["_unit"];
+TRACE_2("params",_unit,typeOf _unit);
 
 // Exit if hearing is disabled OR autoAdd is disabled OR soldier has earplugs already in (persistence scenarios)
 if (!GVAR(enableCombatDeafness) || {!GVAR(autoAddEarplugsToUnits)} || {[_unit] call FUNC(hasEarPlugsIn)}) exitWith {};
@@ -38,17 +38,21 @@ if ((primaryWeapon _unit) == "") exitWith {};
 (primaryWeaponMagazine _unit) params [["_magazine", ""]];
 if (_magazine == "") exitWith {};
 
-private _initSpeed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
-private _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
-private _count = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
+private _cfgMagazine = configFile >> "CfgMagazines" >> _magazine;
 
-private _caliber = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_caliber");
+private _initSpeed = getNumber (_cfgMagazine >> "initSpeed");
+private _ammo = getText (_cfgMagazine >> "ammo");
+private _count = getNumber (_cfgMagazine >> "count");
+
+private _cfgAmmo = configFile >> "CfgAmmo";
+
+private _caliber = getNumber (_cfgAmmo >> _ammo >> "ACE_caliber");
 _caliber = call {
-    if (_ammo isKindOf ["ShellBase", (configFile >> "CfgAmmo")]) exitWith { 80 };
-    if (_ammo isKindOf ["RocketBase", (configFile >> "CfgAmmo")]) exitWith { 200 };
-    if (_ammo isKindOf ["MissileBase", (configFile >> "CfgAmmo")]) exitWith { 600 };
-    if (_ammo isKindOf ["SubmunitionBase", (configFile >> "CfgAmmo")]) exitWith { 80 };
-    if (_caliber <= 0) then { 6.5 } else { _caliber };
+    if (_ammo isKindOf ["ShellBase", _cfgAmmo]) exitWith { 80 };
+    if (_ammo isKindOf ["RocketBase", _cfgAmmo]) exitWith { 200 };
+    if (_ammo isKindOf ["MissileBase", _cfgAmmo]) exitWith { 600 };
+    if (_ammo isKindOf ["SubmunitionBase", _cfgAmmo]) exitWith { 80 };
+    [_caliber, 6.5] select (_caliber <= 0);
 };
 private _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;
 

@@ -31,7 +31,7 @@ private _tabToChange = [];
     _stringCount = count _currentID;
 
     // Make sure to keep at least 1 sort per category, so make default sort not deletable
-    if ("ace_alphabetically" in toLower (_currentID select [0, _stringCount - 3])) then {
+    if ("ace_alphabetically" in toLowerANSI (_currentID select [0, _stringCount - 3])) then {
         continue;
     };
 

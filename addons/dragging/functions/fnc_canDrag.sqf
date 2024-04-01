@@ -24,12 +24,12 @@ if !([_unit, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)) exi
 
 // Static weapons need to be empty for dragging (ignore UAV AI)
 if (_target isKindOf "StaticWeapon") exitWith {
-    (crew _target) findIf {getText (configOf _x >> "simulation") != "UAVPilot"} == -1
+    (crew _target) findIf {!unitIsUAV _x} == -1
 };
 
 // Units need to be unconscious or limping; Units also need to not be in ragdoll, as that causes desync issues
 if (_target isKindOf "CAManBase") exitWith {
-    !(alive _target != isAwake _target) &&
+    isAwake _target && // not ragdolled
     {lifeState _target == "INCAPACITATED" ||
     {_target getHitPointDamage "HitLegs" >= 0.5}}
 };

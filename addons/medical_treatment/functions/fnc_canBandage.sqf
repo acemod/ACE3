@@ -20,7 +20,7 @@
  */
 
 params ["_medic", "_patient", "_bodyPart", "_bandage"];
-_bodyPart = toLower _bodyPart;
+_bodyPart = toLowerANSI _bodyPart;
 
 // If patient is swimming, don't allow bandage actions.
 if (_patient call EFUNC(common,isSwimming)) exitWith {false};

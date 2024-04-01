@@ -43,11 +43,7 @@ private _loadoutIndex = _data findIf {(_x select 0) == _loadoutName};
 (_data select _loadoutIndex) set [0, _editBoxContent];
 
 if (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts) then {
-    if (is3DEN) then {
-        set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
-    } else {
-        [QGVAR(renameDefaultLoadout), [_loadoutName, _editBoxContent]] call CBA_fnc_remoteEvent;
-    };
+    set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
 };
 
 private _currentLoadoutsTab = str GVAR(currentLoadoutsTab);

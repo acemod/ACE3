@@ -7,6 +7,7 @@
  * 0: Patient <OBJECT>
  * 1: Body Part <STRING>
  * 2: Treatment <STRING>
+ * 3: Bandage effectiveness coefficient <NUMBER> (default: 1)
  *
  * Return Value:
  * None
@@ -17,16 +18,16 @@
  * Public: No
  */
 
-params ["_patient", "_bodyPart", "_bandage"];
-TRACE_3("bandageLocal",_patient,_bodyPart,_bandage);
-_bodyPart = toLower _bodyPart;
+params ["_patient", "_bodyPart", "_bandage", ["_bandageEffectiveness", 1]];
+TRACE_4("bandageLocal",_patient,_bodyPart,_bandage,_bandageEffectiveness);
+_bodyPart = toLowerANSI _bodyPart;
 
 private _openWounds = GET_OPEN_WOUNDS(_patient);
 private _woundsOnPart = _openWounds getOrDefault [_bodyPart, []];
 if (_woundsOnPart isEqualTo []) exitWith {};
 
 // Figure out which injuries for this bodypart are the best choice to bandage
-private _targetWounds = [_patient, _bandage, _bodyPart, GVAR(bandageEffectiveness)] call FUNC(findMostEffectiveWounds);
+private _targetWounds = [_patient, _bandage, _bodyPart, _bandageEffectiveness * GVAR(bandageEffectiveness)] call FUNC(findMostEffectiveWounds);
 
 // Everything is patched up on this body part already
 if (count _targetWounds == 0) exitWith {};

@@ -61,9 +61,9 @@ if (isNil "_viewports") then {
             _maxDistance = 0.8;
         };
         // compartments [ARRAY] - Optional
-        private _compartments = (getArray (_x >> "compartments")) apply {toLower _x};
+        private _compartments = (getArray (_x >> "compartments")) apply {toLowerANSI _x};
         // roles [ARRAY] - Optional
-        private _roles = (getArray (_x >> "roles")) apply {toLower _x};
+        private _roles = (getArray (_x >> "roles")) apply {toLowerANSI _x};
 
         [_name, _type, _camLocation, _camAttach, _screenLocation, _maxDistance, _compartments, _roles]
     };

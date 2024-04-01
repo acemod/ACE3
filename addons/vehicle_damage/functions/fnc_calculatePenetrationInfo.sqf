@@ -83,7 +83,7 @@ _projectileData params ["_projectileType", "_projectileConfig"];
 private _enabled = ([_hitpointConfig >> QGVAR(enabled), "NUMBER", 0] call CBA_fnc_getConfigEntry) == 1;
 #define MATERIAL_ARRAY ([[0, 0, 0, 0, 0, 0], "steel", [7850, 500, 1.104, 9874, 0.3598, -0.2342], "tungsten", [19300, 0, 0.994, 134.5, -0.148], "depleted_uranium", [18600, 0, 0.825, 90, -0.0849]])
 private _rodMaterialStr = [_projectileConfig >> QGVAR(material), "STRING", "tungsten"] call CBA_fnc_getConfigEntry;
-private _rodMaterialParams = MATERIAL_ARRAY select (1 + MATERIAL_ARRAY find toLower _rodMaterial);
+private _rodMaterialParams = MATERIAL_ARRAY select (1 + MATERIAL_ARRAY find toLowerANSI _rodMaterial);
 
 if !(_enabled) exitWith { [false, 0, 0, 0, 0] };
 if (_rodMaterialParams isEqualTo [0, 0, 0, 0, 0, 0]) exitWith { [] };

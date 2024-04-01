@@ -20,8 +20,8 @@ missionNamespace setVariable [QGVAR(currentOvercast), overcast, true];
 [] call FUNC(updateTemperature);
 [] call FUNC(updateHumidity);
 
-// Wind simulation
-if (GVAR(windSimulation) && CBA_missionTime > GVAR(next_wind_udpate)) then {
+// Wind simulation, take API for temporarily disabling into account along with setting
+if (GVAR(windSimulation) && {!(missionNamespace getVariable [QGVAR(disableWindSimulation), false])} && {CBA_missionTime > GVAR(next_wind_udpate)}) then {
 
     GVAR(current_wind_direction) = GVAR(next_wind_direction);
     GVAR(current_wind_speed) = GVAR(next_wind_speed);
