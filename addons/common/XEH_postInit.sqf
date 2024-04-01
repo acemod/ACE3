@@ -122,11 +122,6 @@
     _object setMass _mass;
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(awake), {
-    params ["_object", "_awake"];
-    _object awake _awake;
-}] call CBA_fnc_addEventHandler;
-
 [QGVAR(disableWeaponAssembly), {
     params ["_object", "_set"];
     _object enableWeaponDisassembly (_set < 1);

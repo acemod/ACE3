@@ -67,6 +67,18 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     _clone setMimic "unconscious";
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(syncCorpse),{
+    params ["_corpse"];
+
+    [{
+        _this awake true;
+
+        [{
+            _this awake false;
+        }, _this] call CBA_fnc_execNextFrame;
+    }, _corpse] call CBA_fnc_execNextFrame;
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(moveCorpse), {
     params ["_corpse", "_dir", "_pos"];
 
@@ -76,10 +88,8 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     // Bring corpse back to clone's position
     _corpse setPosATL _pos;
 
-    // Sync the corpse
-    [QEGVAR(common,awake), [_corpse, true]] call CBA_fnc_globalEvent;
-    [QEGVAR(common,awake), [_corpse, false]] call CBA_fnc_globalEvent;
-    [QEGVAR(common,awake), [_corpse, true]] call CBA_fnc_globalEvent;
+    // Sync the corpse with its position
+    [QGVAR(syncCorpse), _corpse] call CBA_fnc_globalEvent;
 }] call CBA_fnc_addEventHandler;
 
 // Display event handler

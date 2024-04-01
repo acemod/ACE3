@@ -54,17 +54,11 @@ if (_isInRemainsCollector) then {
 };
 
 // Make sure clone has the same wound textures as the corpse
-private _targetDamage = damage _target;
-
-if (_targetDamage != 0) then {
-    _clone setDamage (_targetDamage min 0.99); // don't kill the clone
-};
-
-private _relevantHitpoints = ["HitHead", "HitBody", "HitHands", "HitLegs"];
+_clone setDamage ((damage _target) min 0.99); // don't kill the clone
 
 {
     _clone setHitPointDamage [_x, (_target getHitPointDamage _x) min 0.99];
-} forEach _relevantHitpoints;
+} forEach ["HitHead", "HitBody", "HitHands", "HitLegs"]; // relevant hitpoints
 
 // Disable all damage
 _clone allowDamage false;
