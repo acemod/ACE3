@@ -25,13 +25,13 @@ class CfgVehicles {
         GVAR(model) = "A3\Weapons_F_Mark\Ammo\cartridge_338_LM.p3d";
     };
     class FxCartridge_338_NM_Ball: FxCartridge {
-        GVAR(model) ="A3\Weapons_F_Mark\Ammo\cartridge_338_NM.p3d"
+        GVAR(model) ="A3\Weapons_F_Mark\Ammo\cartridge_338_NM.p3d";
     };
     class FxCartridge_127: FxCartridge {
         GVAR(model) = "A3\weapons_f\ammo\cartridge_127.p3d";
     };
     class FxCartridge_127x54_APDS: FxCartridge {
-        GVAR(model) = "A3\Weapons_F_Mark\Ammo\cartridge_127x54.p3d"
+        GVAR(model) = "A3\Weapons_F_Mark\Ammo\cartridge_127x54.p3d";
     };
     class FxCartridge_slug: FxCartridge {
         GVAR(model) = "A3\weapons_f\ammo\cartridge_slug.p3d";
