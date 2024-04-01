@@ -92,7 +92,7 @@ private _numTransferredHC3 = 0;
             private _vehicle = objectParent _x;
 
             // No transfer if vehicle unit is in or crew in that vehicle is blacklisted
-            if (_vehicle != _x && {_vehicle getVariable [QXGVAR(blacklist), false] || {unitIsUAV _vehicle}}) exitWith {
+            if ((_vehicle getVariable [QXGVAR(blacklist), false]) || {unitIsUAV _vehicle}) exitWith {
                 _transfer = false;
             };
 
