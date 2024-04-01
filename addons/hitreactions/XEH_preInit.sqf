@@ -10,7 +10,7 @@ PREP_RECOMPILE_END;
 
 ADDON = true;
 
-GVAR(armComponents) = [
+GVAR(armSelections) = [
     "leftshoulder",
     "rightshoulder",
     "lefthand",
@@ -23,4 +23,4 @@ GVAR(armComponents) = [
 ];
 
 if (isNil QGVAR(safePickupDistance)) then {GVAR(safePickupDistance) = DEFAULT_PICKUP_DISTANCE};
-if (isNil QGVAR(undroppableGuns)) then {GVAR(undroppableGuns) = DEFAULT_UNDROPPABLE_GUNS};
+if (isNil QGVAR(undroppableWeapons)) then {GVAR(undroppableWeapons) = DEFAULT_UNDROPPABLE_WEAPONS};

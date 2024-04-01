@@ -1,39 +1,31 @@
 #include "..\script_component.hpp"
 /*
  * Author: KJW
- * Checks if the unit should drop their weapon based on projectile hit info.
+ * Checks if an entity should drop their weapon based on projectile hit info.
  *
  * Arguments:
- * 0: Surface type <STRING>
- * 1: Components <ARRAY>
- * 2: Position <ARRAY>
+ * 0: Entity that was hit <OBJECT>
+ * 1: Selection names that were hit <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["", [], [1, 1, 1], player] call ace_hitreactions_fnc_checkWeaponDrop
+ * [player, []] call ace_hitreactions_fnc_checkWeaponDrop
  *
  * Public: No
  */
 
-params ["_surfaceType", "_components", "_position", "_hitEntity"];
+params ["_entity", "_selections"];
 
-private _roll = random 1;
-private _passedArm = _roll < GVAR(weaponDropChanceArmHit);
-private _passedGun = _roll < GVAR(weaponDropChanceGunHit);
+// Make sure entity is a unit
+if !(_entity isKindOf "CAManBase") exitWith {};
 
-private _didHitArm = _components findAny GVAR(armComponents) != -1;
-private _didHitGun = _surfaceType isEqualTo "" && _components isEqualTo [];  // for potential edge cases
+// Don't throw weapon if unit is unconscious
+if !(_entity call EFUNC(common,isAwake)) exitWith {};
 
-if !((_didHitArm && _passedArm) || (_didHitGun && _passedGun)) exitWith {};
+if ((currentWeapon _entity) in GVAR(undroppableWeapons)) exitWith {};
 
-if (isNull _hitEntity) then {
-    _hitEntity = nearestObject [_position, "CAManBase"];
-};
+if !(random 1 < GVAR(weaponDropChanceArmHit) && {_selections findAny GVAR(armSelections) != -1}) exitWith {};
 
-private _weapon = currentWeapon _hitEntity;
-
-if (_weapon in GVAR(undroppableGuns)) exitWith {};
-
-[QGVAR(dropGun), _hitEntity, _hitEntity] call CBA_fnc_targetEvent;
+[QGVAR(dropWeapon), _entity, _entity] call CBA_fnc_targetEvent;

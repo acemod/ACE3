@@ -1,7 +1,8 @@
 private _category = [LELSTRING(common,categoryUncategorized), QUOTE(COMPONENT_BEAUTIFIED)];
 
 [
-    QGVAR(minDamageToTrigger), "SLIDER",
+    QGVAR(minDamageToTrigger),
+    "SLIDER",
     LSTRING(minDamageToTrigger_displayName),
     _category,
     [-1, 1, 0.1, 1],
@@ -9,15 +10,8 @@ private _category = [LELSTRING(common,categoryUncategorized), QUOTE(COMPONENT_BE
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(weaponDropChanceGunHit), "SLIDER",
-    LSTRING(weaponDropChanceGunHit_displayName),
-    _category,
-    [0, 1, 0, 2, true],
-    1
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(weaponDropChanceArmHit), "SLIDER",
+    QGVAR(weaponDropChanceArmHit),
+    "SLIDER",
     LSTRING(weaponDropChanceArmHit_displayName),
     _category,
     [0, 1, 0, 2, true],
