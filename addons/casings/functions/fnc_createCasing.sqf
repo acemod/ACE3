@@ -40,6 +40,7 @@ if (isNil "_modelPath") then {
         case "FxCartridge_12Gauge_Slug_lxWS":   { "lxWS\weapons_1_f_lxws\Ammo\cartridge_slug_lxws.p3d" };
         case "FxCartridge_12Gauge_Smoke_lxWS":  { "lxWS\weapons_1_f_lxws\Ammo\cartridge_smoke_lxws.p3d" };
         case "FxCartridge_12Gauge_Pellet_lxWS": { "lxWS\weapons_1_f_lxws\Ammo\cartridge_pellet_lxws.p3d" };
+		case "FxCartridge_40mm":                { "A3\Weapons_F\MagazineProxies\mag_40x36_HE_1rnd.p3d" };
         case "":                                { "" };
         default { "A3\Weapons_f\ammo\cartridge.p3d" };
     };
