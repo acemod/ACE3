@@ -86,14 +86,7 @@ private _fnc_check = {
     } forEach _serverFiles;
 
     // Find client files which the server doesn't have
-    private _additionalAddonsClient = [];
-
-    {
-        if ((_serverFiles find _x) == -1) then {
-            _additionalAddonsClient pushBack _x;
-        };
-    } forEach _files;
-
+    private _additionalAddonsClient = _files select {!(_x in _serverFiles)};
 
     // Check for client missing addons, server missing addons, client outdated addons and server outdated addons
     private _clientErrors = [];
@@ -102,6 +95,7 @@ private _fnc_check = {
     private _count = 0;
 
     #define DISPLAY_NUMBER_ADDONS (10 + 1) // +1 to account for header
+
     {
         _x params ["_items", "_string"];
 

@@ -17,7 +17,7 @@
 
 // Only run once
 if (missionNameSpace getVariable [QGVAR(checkFiles_diagnoseACE), false]) exitWith {
-    createHashMap
+    createHashMap // return
 };
 
 GVAR(checkFiles_diagnoseACE) = true;
@@ -71,4 +71,4 @@ private _getLoadedModsInfo = getLoadedModsInfo;
     };
 } forEach _allMods;
 
-_allMods
+_allMods // return

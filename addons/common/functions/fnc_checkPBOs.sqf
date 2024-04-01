@@ -78,10 +78,7 @@ if (!isServer) then {
                 private _rscLayer = "ACE_RscErrorHint" call BIS_fnc_rscLayer;
                 _rscLayer cutRsc ["ACE_RscErrorHint", "PLAIN", 0, true];
 
-                disableSerialization;
-
-                private _ctrlHint = uiNamespace getVariable "ACE_ctrlErrorHint";
-                _ctrlHint ctrlSetStructuredText _errorMsg;
+                (uiNamespace getVariable "ACE_ctrlErrorHint") ctrlSetStructuredText _errorMsg;
 
                 if (_mode == 0) then {
                     [{
@@ -94,7 +91,7 @@ if (!isServer) then {
                 [{alive player}, {
                     TRACE_2("Player is alive, showing msg and exiting",time,_this);
                     private _errorMsg = composeText [parseText format ["<t align='center'>%1</t>", _this]];
-                    ["[ACE] ERROR", _errorMsg] spawn FUNC(errorMessage);
+                    ["[ACE] ERROR", _errorMsg] call FUNC(errorMessage);
                 }, _errorMsg] call CBA_fnc_waitUntilAndExecute;
             };
         };
