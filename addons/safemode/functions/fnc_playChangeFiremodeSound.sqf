@@ -34,7 +34,7 @@ if (_filename == "") exitWith {
 };
 
 // add file extension .wss as default
-if !(toLower (_filename select [count _filename - 4]) in [".wav", ".ogg", ".wss"]) then {
+if !(toLowerANSI (_filename select [count _filename - 4]) in [".wav", ".ogg", ".wss"]) then {
     _filename = format ["%1.wss", _filename];
 };
 

@@ -23,7 +23,11 @@ _args params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_us
 
 // Return used item to user (if used)
 if (!isNull _itemUser) then {
-    [_itemUser, _usedItem] call EFUNC(common,addToInventory);
+    if (isClass (configFile >> "CfgMagazines" >> _usedItem)) then {
+        [_itemUser, _usedItem, 1] call EFUNC(common,adjustMagazineAmmo);
+    } else {
+        [_itemUser, _usedItem] call EFUNC(common,addToInventory);
+    };
 };
 
 // Switch medic to end animation immediately

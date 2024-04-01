@@ -30,7 +30,7 @@ GVAR(bloodTickCounter) = 0;
 
 [false] call FUNC(initEffects);
 [true] call FUNC(handleEffects);
-[FUNC(handleEffects), 1, false] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(handleEffects), 1, false] call CBA_fnc_addPerFrameHandler;
 
 ["ace_unconscious", {
     params ["_unit", "_unconscious"];
@@ -104,7 +104,7 @@ GVAR(bloodTickCounter) = 0;
 
     if (ACE_player distance _unit > _distance) exitWith {};
 
-    if (vehicle _unit == _unit) then {
+    if (isNull objectParent _unit) then {
         // say3D waits for the previous sound to finish, so use a dummy instead
         private _dummy = "#dynamicsound" createVehicleLocal [0, 0, 0];
         _dummy attachTo [_unit, [0, 0, 0], "camera"];

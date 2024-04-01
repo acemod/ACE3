@@ -70,7 +70,7 @@
             <French>Activé &amp; Diagnostic du décès/de l'arrêt cardiaque</French>
             <Polish>Włączone i pozwala zdiagnozować Śmierć/Zatrzymanie Akcji Serca</Polish>
             <Japanese>有効 &amp; 死亡/心停止状態を診断可能</Japanese>
-            <Russian>Включено &amp; Может диагностировать смерть/остановку сердца</Russian>
+            <Russian>Включено и может диагностировать смерть/остановку сердца</Russian>
             <German>Aktiviert &amp; kann Tod/Herzstillstand diagnostizieren</German>
             <Chinesesimp>已启用 &amp; 可以诊断死亡/心搏骤停</Chinesesimp>
             <Korean>활성화 및 사망/심정지 진찰가능</Korean>
@@ -775,7 +775,7 @@
             <Czech>Samo-zašívání</Czech>
             <Polish>Zszywanie własnych ran</Polish>
             <German>Selbstnähen</German>
-            <Russian>Зашивание своей раны</Russian>
+            <Russian>Зашитие своей раны</Russian>
             <Spanish>Auto cosido</Spanish>
             <Korean>봉합키트 자가 사용</Korean>
         </Key>
@@ -957,7 +957,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_DisplayName">
             <English>Locations IV Transfusion</English>
-            <Japanese>IV 輸液の場所制限</Japanese>
+            <Japanese>IV輸液の可能な場所</Japanese>
             <Spanish>Ubicación para transfusiones IV</Spanish>
             <French>Lieux perfusions IV</French>
             <Russian>Места введения пакетов внутривенного переливания</Russian>
@@ -3570,21 +3570,53 @@
             <Chinese>軍用止血帶</Chinese>
             <Turkish>Turnike [CAT]</Turkish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_receivingIvVolume">
-            <English>Receiving IV [%1ml]</English>
-            <German>Erhalte IV [%1ml]</German>
-            <Spanish>Recibiendo IV [%1ml]</Spanish>
-            <Russian>Принимается переливание [%1 мл]</Russian>
-            <Polish>Otrzymywanie IV [pozostało %1ml]</Polish>
-            <French>Transfusion : [%1 ml]</French>
-            <Czech>Přijímání transfúze [%1ml]</Czech>
-            <Hungarian>Infúzióra kötve [%1ml]</Hungarian>
-            <Italian>Ricevendo EV [%1ml]</Italian>
-            <Portuguese>Recebendo IV [%1ml]</Portuguese>
-            <Japanese>IV [%1ml] を投与中</Japanese>
-            <Korean>IV로 [%1ml] 수혈중</Korean>
-            <Chinesesimp>正在接受静脉注射 [%1毫升]</Chinesesimp>
-            <Chinese>接收靜脈注射液中 [%1毫升]</Chinese>
+        <Key ID="STR_ACE_Medical_Treatment_receivingSalineIvVolume">
+            <English>Receiving Saline IV [%1ml]</English>
+            <German>Erhalte Saline IV [%1ml]</German>
+            <Spanish>Recibiendo Salina IV [%1ml]</Spanish>
+            <Russian>Принимается солевой раствор IV [%1 мл]</Russian>
+            <Polish>Otrzymywanie soli IV [%1ml]</Polish>
+            <French>Transfusion de sérum salé : [%1 ml]</French>
+            <Czech>Přijímání soli IV [%1ml]</Czech>
+            <Hungarian>Saline Infúzióra kötve [%1ml]</Hungarian>
+            <Italian>Ricevendo Salina EV [%1ml]</Italian>
+            <Portuguese>Recebendo Salina IV [%1ml]</Portuguese>
+            <Japanese>生理食塩水 IV [%1ml] を投与中</Japanese>
+            <Korean>생리식염수 IV로 [%1ml] 수혈중</Korean>
+            <Chinesesimp>正在接受生理盐水静脉注射 [%1毫升]</Chinesesimp>
+            <Chinese>接收生理鹽水靜脈注射液中 [%1毫升]</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_receivingBloodIvVolume">
+            <English>Receiving Blood IV [%1ml]</English>
+            <German>Erhalte Blut IV [%1ml]</German>
+            <Spanish>Recibiendo Sangre IV [%1ml]</Spanish>
+            <Russian>Принимается кровь IV [%1 мл]</Russian>
+            <Polish>Otrzymywanie krwi IV [%1ml]</Polish>
+            <French>Transfusion de sang : [%1 ml]</French>
+            <Czech>Přijímání krve IV [%1ml]</Czech>
+            <Hungarian>Vér Infúzióra kötve [%1ml]</Hungarian>
+            <Italian>Ricevendo Sangue EV [%1ml]</Italian>
+            <Portuguese>Recebendo Sangue IV [%1ml]</Portuguese>
+            <Japanese>血液 IV [%1ml] を投与中</Japanese>
+            <Korean>혈액 IV로 [%1ml] 수혈중</Korean>
+            <Chinesesimp>正在接受血液静脉注射 [%1毫升]</Chinesesimp>
+            <Chinese>接收血液靜脈注射液中 [%1毫升]</Chinese>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_receivingPlasmaIvVolume">
+            <English>Receiving Plasma IV [%1ml]</English>
+            <German>Erhalte Plasma IV [%1ml]</German>
+            <Spanish>Recibiendo Plasma IV [%1ml]</Spanish>
+            <Russian>Принимается плазма IV [%1 мл]</Russian>
+            <Polish>Otrzymywanie plazmy IV [%1ml]</Polish>
+            <French>Transfusion de plasma : [%1 ml]</French>
+            <Czech>Přijímání plazmy IV [%1ml]</Czech>
+            <Hungarian>Plazma Infúzióra kötve [%1ml]</Hungarian>
+            <Italian>Ricevendo Plasma EV [%1ml]</Italian>
+            <Portuguese>Recebendo Plasma IV [%1ml]</Portuguese>
+            <Japanese>プラズマ IV [%1ml] を投与中</Japanese>
+            <Korean>혈장 IV로 [%1ml] 수혈중</Korean>
+            <Chinesesimp>正在接受血浆静脉注射 [%1毫升]</Chinesesimp>
+            <Chinese>接收血漿靜脈注射液中 [%1毫升]</Chinese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_NoIv">
             <English>No IV</English>
@@ -4571,7 +4603,7 @@
             <Turkish>Vücudu siyah ceset torbasına yerleştir</Turkish>
             <Japanese>遺体袋 (黒) に入れる</Japanese>
             <Korean>시체를 검은 시체가방에 놓기</Korean>
-            <Russian>Положите тело в черный мешок для тела</Russian>
+            <Russian>Положить тело в черный мешок для тела</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagBlue">
             <English>Place body in blue bodybag</English>
@@ -4584,7 +4616,7 @@
             <Turkish>Vücudu mavi ceset torbasına yerleştir</Turkish>
             <Japanese>遺体袋 (青) に入れる</Japanese>
             <Korean>시체를 파란 시체가방에 놓기</Korean>
-            <Russian>Положите тело в синий мешок для тела</Russian>
+            <Russian>Положить тело в синий мешок для тела</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagWhite">
             <English>Place body in white bodybag</English>
@@ -4597,7 +4629,7 @@
             <Turkish>Vücudu beyaz ceset torbasına yerleştir</Turkish>
             <Japanese>遺体袋 (白) に入れる</Japanese>
             <Korean>시체를 흰 시체가방에 놓기</Korean>
-            <Russian>Положите тело в белый мешок для тела</Russian>
+            <Russian>Положить тело в белый мешок для тела</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlacingInBodyBag">
             <English>Placing body in bodybag...</English>
@@ -4634,7 +4666,7 @@
             <German>Grab für Leichnam ausheben ...</German>
             <Italian>Scavando tomba per cadavere...</Italian>
             <Japanese>墓を掘っています</Japanese>
-            <Russian>Рою могилу для тела...</Russian>
+            <Russian>Рытьё могилы для тела...</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -4805,7 +4837,7 @@
             <English>Heal fully bandaged hitpoints</English>
             <Polish>Lecz w pełni zabandażowane hitpointy</Polish>
             <Spanish>Curar miembros totalmente vendados</Spanish>
-            <Russian>Исцелять полностью перебинтованные части тела</Russian>
+            <Russian>Исцелить полностью перебинтованные части тела</Russian>
             <Portuguese>Curar membros totalmente enfaixados</Portuguese>
             <Czech>Heal fully bandaged hitpoints</Czech>
             <Italian>Cura hitpoints completamente bendati</Italian>
@@ -4896,7 +4928,7 @@
             <French>Pansement de plaies multiples</French>
             <Italian>Srotolamento Bendaggi</Italian>
             <Japanese>包帯の繰り越し</Japanese>
-            <Russian>Переворачивание бинта</Russian>
+            <Russian>Перевязка множественных ран</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_Description">
             <English>If enabled, bandages can close different types of wounds on the same body part.\nBandaging multiple injuries will scale bandaging time accordingly.</English>
@@ -4906,7 +4938,7 @@
             <French>Si activé, les bandages peuvent fermer plusieurs types de blessures sur la même partie du corps.\nPanser de multiples blessures modifiera la durée d'application en conséquence.</French>
             <Italian>Se attivo, un singolo bendaggio potrà chiudere più ferite sulla stessa parte del corpo.\nBendare più ferite di conseguenza richiederà più tempo.</Italian>
             <Japanese>有効にすると、体の同じ部分にある別の種類の傷を一つの包帯で閉じることができます。\n複数の傷に包帯を巻くと、それに応じて包帯時間が変動します。</Japanese>
-            <Russian>Если эта функция включена, бинты могут закрывать различные типы ран на одной и той же части тела.n\При перевязке нескольких повреждений время перевязки будет увеличено соответствующим образом.</Russian>
+            <Russian>Если эта функция включена, бинты могут закрывать различные типы ран на одной и той же части тела.\nПри перевязке нескольких повреждений время перевязки будет увеличено соответствующим образом.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_DisplayName">
             <English>Bandage Effectiveness Coefficient</English>
@@ -4976,23 +5008,31 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administer_Painkillers">
             <English>Administer Painkillers</English>
-            <Russian>Вводите обезболивающие</Russian>
+            <Italian>Somministra Antidolorifici</Italian>
+            <Russian>Испол-ть обезболивающие</Russian>
             <Japanese>鎮痛剤を投与</Japanese>
+            <Korean>진통제 투여</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administering_Painkillers">
             <English>Administering Painkillers...</English>
-            <Russian>Ввод обезболивающего...</Russian>
+            <Italian>Somministrando Antidolorifici...</Italian>
+            <Russian>Использование обезболивающего...</Russian>
             <Japanese>鎮痛剤を投与しています・・・</Japanese>
+            <Korean>진통제 투여 중...</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Short">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
+            <Italian>Antidolorifici senza prescrizione, usati per alleviare dolore leggero o moderato.</Italian>
             <Russian>Безрецептурный анальгетик, используемый для борьбы с легкими и умеренными болевыми ощущениями.</Russian>
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
+            <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Use">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
+            <Italian>Antidolorifici senza prescrizione, usati per alleviare dolore leggero o moderato.</Italian>
             <Russian>Безрецептурный анальгетик, используемый для борьбы с легкими и умеренными болевыми ощущениями.</Russian>
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
+            <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
         </Key>
     </Package>
 </Project>

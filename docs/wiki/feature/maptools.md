@@ -49,6 +49,7 @@ If you are equipped with a vanilla GPS it will be shown on the map. (You don't n
 - Press the self interaction key <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Self Interaction Key`).
 - Select `Show Plotting Board`.
 - Note that you can drag the Plotting Board around with <kbd>LMB</kbd> and rotate the different parts of the Plotting Board, each independently from each other, with <kbd>Ctrl</kbd> + <kbd>LMB</kbd>.
+- When a new marker (Local or Group Channel) is created on the inner circle of the Plotting board, the marker will move accordingly when the Plotting Board gets moved or rotated.
 
 ### 2.4 Drawing lines
 - You can draw lines on the plotting board.

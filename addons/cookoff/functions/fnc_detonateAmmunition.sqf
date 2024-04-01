@@ -77,7 +77,7 @@ private _spawnProjectile = {
 };
 
 private _speed = random (_speedOfAmmo / 10) max 1;
-_simType = toLower _simType;
+_simType = toLowerANSI _simType;
 switch (_simType) do {
     case ("shotbullet"): {
         [QGVAR(playCookoffSound), [_vehicle, _simType]] call CBA_fnc_globalEvent;

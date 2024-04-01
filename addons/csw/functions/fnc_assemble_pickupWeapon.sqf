@@ -38,14 +38,14 @@
         private _weaponDir = getDir _staticWeapon;
 
         private _carryWeaponMag = "";
-        private _carryWeaponMags = getArray (configFile >> "CfgWeapons" >> _carryWeaponClassname >> "magazines") apply {toLower _x};
+        private _carryWeaponMags = getArray (configFile >> "CfgWeapons" >> _carryWeaponClassname >> "magazines") apply {toLowerANSI _x};
         LOG("remove ammo");
         {
             _x params ["_xMag", "", "_xAmmo"];
             if (_xAmmo == 0) then {continue};
 
             private _carryMag = _xMag call FUNC(getCarryMagazine);
-            if (_carryWeaponMag isEqualTo "" && {toLower _carryMag in _carryWeaponMags}) then {
+            if (_carryWeaponMag isEqualTo "" && {toLowerANSI _carryMag in _carryWeaponMags}) then {
                 TRACE_3("Adding mag to secondary weapon",_xMag,_xAmmo,_carryMag);
                 _carryWeaponMag = _carryMag;
                 DEC(_xAmmo);
