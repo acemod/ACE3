@@ -244,7 +244,7 @@ if (_isBurning) exitWith {};
 
         private _burnIndicatorPFH = _unit getVariable [QGVAR(burnUIPFH), -1];
         if (_unit isEqualTo ace_player && { _isThisUnitAlive } && { _burnIndicatorPFH < 0 }) then {
-            _burnIndicatorPFH = [FUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
+            _burnIndicatorPFH = [LINKFUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
             _unit setVariable [QGVAR(burnUIPFH), _burnIndicatorPFH];
         };
     };
@@ -296,7 +296,7 @@ if (_isBurning) exitWith {};
 
     if (local _unit) then {
         if (_unit isEqualTo ace_player) then {
-            private _burnIndicatorPFH = [FUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
+            private _burnIndicatorPFH = [LINKFUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
             _unit setVariable [QGVAR(burnUIPFH), _burnIndicatorPFH];
         };
 
