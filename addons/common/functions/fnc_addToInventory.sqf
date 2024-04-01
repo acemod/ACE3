@@ -94,11 +94,13 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private _pos = _unit modelToWorldVisual [0,1,0.05];
+            private _weaponHolder = nearestObject [_unit, "WeaponHolder"];
 
-            _unit = createVehicle ["WeaponHolder_Single_F", _pos, [], 0, "NONE"];
-            _unit addWeaponCargoGlobal [_classname, 1];
-            _unit setPosATL _pos;
+            if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
+                _weaponHolder = createVehicle ["GroundWeaponHolder", _unit, [], 0, "CAN_COLLIDE"];
+            };
+
+            _weaponHolder addWeaponCargoGlobal [_classname, 1];
         };
     };
 
@@ -127,11 +129,13 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private _pos = _unit modelToWorldVisual [0,1,0.05];
+            private _weaponHolder = nearestObject [_unit, "WeaponHolder"];
 
-            _unit = createVehicle ["WeaponHolder_Single_F", _pos, [], 0, "NONE"];
-            _unit addMagazineAmmoCargo [_classname, 1, _ammoCount];
-            _unit setPosATL _pos;
+            if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
+                _weaponHolder = createVehicle ["GroundWeaponHolder", _unit, [], 0, "CAN_COLLIDE"];
+            };
+
+            _weaponHolder addMagazineAmmoCargo [_classname, 1, _ammoCount];
         };
     };
 
@@ -156,11 +160,13 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private _pos = _unit modelToWorldVisual [0,1,0.05];
+            private _weaponHolder = nearestObject [_unit, "WeaponHolder"];
 
-            _unit = createVehicle ["WeaponHolder_Single_F", _pos, [], 0, "NONE"];
-            _unit addItemCargoGlobal [_classname, 1];
-            _unit setPosATL _pos;
+            if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
+                _weaponHolder = createVehicle ["GroundWeaponHolder", _unit, [], 0, "CAN_COLLIDE"];
+            };
+
+            _weaponHolder addItemCargoGlobal [_classname, 1];
         };
     };
 
