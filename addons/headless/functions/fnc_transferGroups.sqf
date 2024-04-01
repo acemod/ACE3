@@ -91,14 +91,14 @@ private _numTransferredHC3 = 0;
 
             private _vehicle = objectParent _x;
 
-            // No transfer if vehicle unit is in or crew in that vehicle is blacklisted
+            // No transfer if the vehicle the unit is in or if the crew in that vehicle is blacklisted
             if ((_vehicle getVariable [QXGVAR(blacklist), false]) || {unitIsUAV _vehicle}) exitWith {
                 _transfer = false;
             };
 
             // Save gear if unit about to be transferred with current loadout (naked unit work-around)
             if (XGVAR(transferLoadout) == 1) then {
-                _x setVariable [QGVAR(loadout), [_x] call CBA_fnc_getLoadout, true];
+                _x setVariable [QGVAR(loadout), _x call CBA_fnc_getLoadout, true];
             };
         } forEach (units _x);
     };
