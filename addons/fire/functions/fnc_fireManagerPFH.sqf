@@ -4,14 +4,13 @@
  * Handles various objects on fire and determines if units close to objects deserve to get burned.
  *
  * Arguments:
- * 0: Args (not used) <ARRAY>
- * 1: PFH Handle (not used) <NUMBER>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * [[], -1] call CBA_fnc_addPerFrameHandler
+ * ace_fire_fnc_fireManagerPFH call CBA_fnc_addPerFrameHandler
  *
  * Public: No
  */
@@ -37,8 +36,8 @@ private _adjustedIntensity = 0;
         _distancePercent = 1 - ((_fireLogic distance _x) / _radius);
         _adjustedIntensity = _intensity * _distancePercent;
 
-        // Don't burn if intensity is too low
-        if (BURN_MIN_INTENSITY > _adjustedIntensity) then {
+        // Don't burn if intensity is too low or already burning with higher intensity
+        if (BURN_MIN_INTENSITY > _adjustedIntensity || {(_x getVariable [QGVAR(intensity), 0]) > _adjustedIntensity}) then {
             continue;
         };
 

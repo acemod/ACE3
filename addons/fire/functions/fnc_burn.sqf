@@ -18,7 +18,7 @@
  */
 
 if (!EGVAR(common,settingsInitFinished)) exitWith {
-    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(burn), _this];
+    EGVAR(common,runAtSettingsInitialized) pushBack [LINKFUNC(burn), _this];
 };
 
 if (!GVAR(enabled)) exitWith {};
@@ -49,11 +49,10 @@ if (_unit call FUNC(isBurning)) exitWith {
 _unit setVariable [QGVAR(intensity), _intensity, true];
 
 // Fire simulation (objects are handled differently)
-private _burnSimulationJipID = [QGVAR(burnSimulation), [_unit, _instigator]] call CBA_fnc_globalEventJIP;
-[_burnSimulationJipID, _unit] call CBA_fnc_removeGlobalEventJIP;
+[QGVAR(burnSimulation), [_unit, _instigator], _unit] call CBA_fnc_targetEvent;
 
 // Spawn effects for unit
 private _burnEffectsJipID = [QGVAR(burnEffects), _unit] call CBA_fnc_globalEventJIP;
 [_burnEffectsJipID, _unit] call CBA_fnc_removeGlobalEventJIP;
 
-_unit setVariable [QGVAR(jipIDs), [_burnSimulationJipID, _burnEffectsJipID], true];
+_unit setVariable [QGVAR(jipID), _burnEffectsJipID, true];

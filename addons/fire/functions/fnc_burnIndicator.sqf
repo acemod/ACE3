@@ -16,14 +16,15 @@
  * Public: No
  */
 
-params ["_unit", "_pfhHandle"];
+params ["_unit", "_pfhID"];
 
 if (!alive _unit || {!(_unit call FUNC(isBurning))}) exitWith {
-    _pfhHandle call CBA_fnc_removePerFrameHandler;
+    _pfhID call CBA_fnc_removePerFrameHandler;
 
     _unit setVariable [QGVAR(burnUIPFH), nil];
 };
 
+// Don't show burn overlay if unconscious or dead
 if !(_unit call EFUNC(common,isAwake)) exitWith {};
 
 private _iteration = _unit getVariable [QGVAR(indicatorIteration), 0];

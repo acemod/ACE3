@@ -12,29 +12,27 @@
  * None
  *
  * Example:
- * player call ace_fire_fnc_burnSimulation
+ * [player, player] call ace_fire_fnc_burnSimulation
  *
  * Public: No
  */
 
 params ["_unit", "_instigator"];
 
-// Reset variables
-_unit setVariable [QGVAR(stopDropRoll), nil];
-_unit setVariable [QGVAR(burnCounter), nil];
-
 [{
     params ["_args", "_pfhID"];
     _args params ["_unit", "_instigator"];
 
-    private _remote = !local _unit;
-
-    // If unit is local and the fire has died out, the effects need to be cleaned up -> do not stop PFH here
-    if (isNull _unit || {_remote && {!(_unit call FUNC(isBurning))}}) exitWith {
+    if (isNull _unit) exitWith {
         _pfhID call CBA_fnc_removePerFrameHandler;
     };
 
-    if (_remote) exitWith {};
+    // Locality has changed
+    if (!local _unit) exitWith {
+        _pfhID call CBA_fnc_removePerFrameHandler;
+
+        [QGVAR(burnSimulation), [_unit, _instigator], _unit] call CBA_fnc_targetEvent;
+    };
 
     // If unit is invulnerable or in water or if the fire has died out, stop burning unit
     if (
@@ -42,21 +40,18 @@ _unit setVariable [QGVAR(burnCounter), nil];
         {!(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]})} ||
         {private _eyePos = eyePos _unit; surfaceIsWater _eyePos && {(_eyePos select 2) < 0.1}}
     ) exitWith {
-        // Remove global effects and simulation
-        {
-            _x call CBA_fnc_removeGlobalEventJIP;
-        } forEach (_unit getVariable [QGVAR(jipIDs), []]);
+        // Remove global effects
+        (_unit getVariable [QGVAR(jipID), ""]) call CBA_fnc_removeGlobalEventJIP;
 
         // Update globally that the unit isn't burning anymore
         _unit setVariable [QGVAR(intensity), nil, true];
 
         _pfhID call CBA_fnc_removePerFrameHandler;
 
-        _unit setVariable [QGVAR(stopDropRoll), nil];
-        _unit setVariable [QGVAR(burnCounter), nil];
-
-        if (!isPlayer _unit) then {
+        if (!isNil {_unit getVariable QGVAR(stopDropRoll)} && {!isPlayer _unit}) then {
             _unit setUnitPos "AUTO";
+
+            _unit setVariable [QGVAR(stopDropRoll), nil, true];
         };
     };
 
@@ -94,7 +89,7 @@ _unit setVariable [QGVAR(burnCounter), nil];
                 private _vehicle = objectParent _unit;
 
                 if (isNull _vehicle && {_sdr || {0.05 > random 1}}) then {
-                    _unit setVariable [QGVAR(stopDropRoll), true];
+                    _unit setVariable [QGVAR(stopDropRoll), true, true];
 
                     if (!_sdr) then {
                         TRACE_1("stop, drop, roll!",_unit);

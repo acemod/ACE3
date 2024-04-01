@@ -17,20 +17,17 @@
 
 params ["_logic"];
 
-if !(local _logic) exitWith {};
+if (!local _logic) exitWith {};
 
 private _unit = attachedTo _logic;
 deleteVehicle _logic;
 
 switch (false) do {
-    case !(isNull _unit): {
+    case (!isNull _unit): {
         [LSTRING(NothingSelected)] call FUNC(showMessage);
     };
-    case (_unit isKindOf "CAManBase"): {
+    case (_unit isKindOf "CAManBase" && {getNumber (configOf _unit >> "isPlayableLogic") == 0}): {
         [LSTRING(OnlyInfantry)] call FUNC(showMessage);
-    };
-    case (alive _unit): {
-        [LSTRING(OnlyAlive)] call FUNC(showMessage);
     };
     case (["ace_fire"] call EFUNC(common,isModLoaded)): {
         [LSTRING(RequiresAddon)] call FUNC(showMessage);
