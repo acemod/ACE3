@@ -17,20 +17,8 @@
 
 params ["_ammo"];
 
-private _shouldSpall = GVAR(shouldSpallCache) get _ammo;
+GVAR(shouldSpallCache) getOrDefaultCall [_ammo, {
+    (_ammo call FUNC(getSpallInfo)) params ["_caliber", "_explosive", "_indirectHit"];
 
-if (!isNil "_shouldSpall") exitWith {_shouldSpall};
-
-private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
-private _caliber = getNumber (_ammoConfig >> "caliber");
-private _explosive = 1 min getNumber (_ammoConfig >> "explosive");
-private _indirectHit = getNumber (_ammoConfig >> "indirectHitRange");
-
-// We need get this for fnc_getSpallInfo, so might as well cache it since we have it
-GVAR(spallInfoCache) set [_ammo, [_caliber, _explosive, _indirectHit]];
-
-_shouldSpall = _caliber * GVAR(spallIntensity) >= 1.25 * ACE_FRAG_SPALL_POWER_MIN || (_explosive >= 0.5 && {_indirectHit * GVAR(spallIntensity) >= 2 * ACE_FRAG_SPALL_POWER_MIN});
-
-GVAR(shouldSpallCache) set [_ammo, _shouldSpall];
-
-_shouldSpall
+    (_caliber * GVAR(spallIntensity) >= 1.25 * ACE_FRAG_SPALL_POWER_MIN) || {_explosive >= 0.5 && {_indirectHit * GVAR(spallIntensity) >= 2 * ACE_FRAG_SPALL_POWER_MIN}}
+}, true]
