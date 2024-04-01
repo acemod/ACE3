@@ -46,7 +46,9 @@ if (_postProcessTintAmount != 0 && {GVAR(UsePP)} && GVAR(effects) in [1, 2]) the
 private _imagePath = getText (_config >> ["ACE_Overlay", "ACE_OverlayCracked"] select GETBROKEN);
 private _angle = getNumber (_config >> "ACE_Overlay_Angle");
 
-if (_imagePath != "") then {
+private _drawOverlay = GVAR(effects) in [2, 3];
+
+if (_imagePath != "" && _drawOverlay) then {
     GVAR(GogglesLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false, false];
     private _overlay = (GLASSDISPLAY displayCtrl 10650);
     _overlay ctrlSetText _imagePath;
@@ -56,7 +58,7 @@ if (_imagePath != "") then {
     };
 };
 
-if (GVAR(effects) in [2, 3]) then {
+if (_drawOverlay) then {
     if (GETDIRT) then {
         call FUNC(applyDirtEffect);
     };
