@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
- * Adds an item, weapon, or magazine to the unit's inventory or places it in a weaponHolder if no space.
+ * Adds an item, weapon, or magazine to the unit's inventory or places it in a weapon holder if no space.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -11,10 +11,10 @@
  *
  * Return Value:
  * 0: Added to player <BOOL>
- * 1: weaponholder <OBJECT>
+ * 1: Weapon holder item was placed in <OBJECT>
  *
  * Example:
- * [bob, "classname", "", 5] call ace_common_fnc_addToInventory
+ * [player, "30Rnd_65x39_caseless_mag", "", 5] call ace_common_fnc_addToInventory
  *
  * Public: Yes
  */
