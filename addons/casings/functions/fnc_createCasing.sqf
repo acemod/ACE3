@@ -28,7 +28,7 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
     } else {
         getText (configFile >> "CfgVehicles" >> _cartridge >> QGVAR(model))
     };
-}];
+}, true];
 
 if (_modelPath isEqualTo "") exitWith {};
 
