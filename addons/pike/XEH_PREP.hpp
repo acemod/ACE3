@@ -1,2 +1,0 @@
-LOG("prep");
-PREP(ammoFired);

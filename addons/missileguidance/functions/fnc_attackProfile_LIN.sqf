@@ -21,9 +21,7 @@ params ["_seekerTargetPos", "_args"];
 _args params ["_firedEH"];
 _firedEH params ["_shooter","","","","","","_projectile"];
 
-if (_seekerTargetPos isEqualTo [0,0,0]) exitWith {
-    _projectilePos vectorAdd (_projectile vectorModelToWorld [0, 50, 0])
-};
+if (_seekerTargetPos isEqualTo [0,0,0]) exitWith {_seekerTargetPos};
 
 private _shooterPos = getPosASL _shooter;
 private _projectilePos = getPosASL _projectile;

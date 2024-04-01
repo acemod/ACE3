@@ -74,4 +74,4 @@ DFUNC(dev_trackShell) = {
             _submunitionProjectile call FUNC(dev_trackShell);
         }];
     }];
-} forEach vehicles;
+} forEach (vehicles + [player]);

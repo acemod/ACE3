@@ -35,14 +35,14 @@ _projectile addEventHandler ["SubmunitionCreated", LINKFUNC(submunition_submunit
 // Trigger ammo when conditions are met
 private _deployCondition = getText (_ammoCfg >> QGVAR(deployCondition));
 if (_deployCondition != "") then {
-    _deployCondition = missionNamespace getVariable [_deployCondition, {ERROR("bad func"); true}];
+    _deployCondition = missionNamespace getVariable [_deployCondition, { ERROR("bad func"); true} ];
     [{
         params ["_projectile", "", "_deployCondition"];
         if (isNull _projectile) exitWith { true };
         _this call _deployCondition
     }, {
         params ["_projectile"];
-        if (isNull _projectile) exitWith { WARNING_1("null at trigger condition %1",_projectile); }; // Just for testing
+        if (isNull _projectile) exitWith { TRACE_1("null at trigger condition %1",_projectile); };
         TRACE_1("triggerAmmo",_projectile);
         triggerAmmo _projectile;
     }, [_projectile, _guidanceArgs, _deployCondition]] call CBA_fnc_waitUntilAndExecute;
