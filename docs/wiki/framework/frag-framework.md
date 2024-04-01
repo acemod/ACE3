@@ -8,8 +8,8 @@ order: 7
 mod: ace
 version:
   major: 3
-  minor: 16
-  patch: 4
+  minor: 0
+  patch: 0
 ---
 
 ## 1. Overview
@@ -61,7 +61,7 @@ As long as the units match `ace_frag_charge`, the total mass of fragmenting meta
 
 `ace_frag_charge`
 
-The mass of explosive filler in the warhead. This may include any detonation/igntion charges, but usually such charges are relatively small.
+The mass of explosive filler in the warhead. This may include any detonation/ignition charges, but usually such charges are relatively small.
 
 As long as the units match `ace_frag_metal`, the total mass of explosive filler given in any unit of mass (i.e., both use `kg`, `g`, or `lbs`).
 
