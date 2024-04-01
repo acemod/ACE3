@@ -21,7 +21,7 @@
     [LSTRING(allowRunWithLightweight_DisplayName), LSTRING(allowRunWithLightweight_Description)],
     LLSTRING(SettingsName),
     true,
-    true
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -30,5 +30,5 @@
     [LSTRING(skipContainerWeight_DisplayName), LSTRING(skipContainerWeight_Description)],
     LLSTRING(SettingsName),
     false,
-    true
+    1
 ] call CBA_fnc_addSetting;

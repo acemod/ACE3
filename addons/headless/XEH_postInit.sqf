@@ -6,7 +6,7 @@
         if (isServer) then {
             // Request rebalance on any unit spawn (only if distribution enabled)
             if (XGVAR(enabled)) then {
-                ["AllVehicles", "initPost", FUNC(handleSpawn), nil, nil, true] call CBA_fnc_addClassEventHandler;
+                ["AllVehicles", "initPost", LINKFUNC(handleSpawn), nil, nil, true] call CBA_fnc_addClassEventHandler;
             };
             // Add disconnect EH
             addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];

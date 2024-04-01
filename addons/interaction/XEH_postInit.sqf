@@ -78,7 +78,7 @@ ACE_Modifier = 0;
 }] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    [QGVAR(replaceTerrainObject), FUNC(replaceTerrainObject)] call CBA_fnc_addEventHandler;
+    [QGVAR(replaceTerrainObject), LINKFUNC(replaceTerrainObject)] call CBA_fnc_addEventHandler;
 };
 
 if (!hasInterface) exitWith {};

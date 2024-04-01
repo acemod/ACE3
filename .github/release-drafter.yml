@@ -11,11 +11,10 @@ sort-direction: ascending
 categories:
   - title: '**ADDED:**'
     labels:
-      - 'kind/feature request'
-      - 'kind/added feature'
+      - 'kind/feature'
   - title: '**FIXED:**'
     labels:
-      - 'kind/bug fix'
+      - 'kind/bug-fix'
   - title: '**IMPROVED:**'
     labels:
       - 'kind/enhancement'
@@ -23,17 +22,16 @@ categories:
   - title: '**CHANGED:**'
     labels:
       - 'kind/cleanup'
-      - 'area/compatibility'
       - 'kind/change'
   - title: '**SETTINGS:**'
     labels:
       - 'kind/setting'
   - title: '**TRANSLATIONS:**'
     labels:
-      - 'area/translations'
+      - 'kind/translation'
 
 exclude-labels:
-  - 'ignore changelog'
+  - 'ignore-changelog'
   - 'dependencies'
 
 change-template: '- $TITLE (#$NUMBER)'

@@ -44,6 +44,9 @@ if (!(_dragModel in [1, 2, 5, 6, 7, 8])) then {
     _dragModel = 1;
 };
 private _ballisticCoefficients = getArray(_ammoConfig >> "ACE_ballisticCoefficients");
+if (_ballisticCoefficients isEqualTo []) then {
+    _ballisticCoefficients = [0.5];
+};
 private _velocityBoundaries = getArray(_ammoConfig >> "ACE_velocityBoundaries");
 private _atmosphereModel = getText(_ammoConfig >> "ACE_standardAtmosphere");
 if (_atmosphereModel isEqualTo "") then {
