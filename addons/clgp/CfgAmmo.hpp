@@ -132,8 +132,8 @@ class CfgAmmo {
 
         CraterEffects="ExploAmmoCrater";
         explosionEffects="ExploAmmoExplosion";
-        effectsMissileInit = "RocketBackEffectsRPG";
-        effectsMissile = "missile3";
+        effectsMissileInit = "";
+        effectsMissile = "missile2";
 
         SoundSetExplosion[] = {"GrenadeHe_Exp_SoundSet", "GrenadeHe_Tail_SoundSet", "Explosion_Debris_SoundSet"};
         soundHit1[] = { "A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01", 3.1622777, 1, 1500};
