@@ -69,7 +69,8 @@
     private _codeCheck = {
         params ["_args"];
         _args params ["_tripod"];
-        !isNull _tripod;
+
+        alive _tripod
     };
 
     [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, _onFailure, localize LSTRING(AssembleCSW_progressBar), _codeCheck] call EFUNC(common,progressBar);
