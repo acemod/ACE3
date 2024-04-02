@@ -104,8 +104,8 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                ace_csw_kordTripod = "CUP_I_KORD_AAF";
-                ace_csw_kordTripodLow = "CUP_I_KORD_high_AAF";
+                ace_csw_kordTripod = "CUP_I_KORD_high_AAF";
+                ace_csw_kordTripodLow = "CUP_I_KORD_AAF";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
