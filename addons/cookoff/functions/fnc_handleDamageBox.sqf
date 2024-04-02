@@ -48,13 +48,8 @@ if ((getNumber (_ammoConfig >> "explosive") >= 0.5) || {getNumber (_ammoConfig >
     private _configMagazine = configFile >> "CfgMagazines" >> _magazine;
 
     // Magazine could have changed during flight time (just ignore if so)
-    if (getText (_configMagazine >> "ammo") == _ammo) then {
-        // If magazine's tracer density is high enough then low chance for cook off
-        private _tracers = getNumber (_configMagazine >> "tracersEvery");
-
-        if (_tracers >= 1 && {_tracers <= 4}) then {
-            [QGVAR(cookOffBox), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
-        };
+    if (_ammo getShotInfo 4 && {getText (_configMagazine >> "ammo") == _ammo)} then { // 4 = shownTracer
+        [QGVAR(cookOffBox), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
     };
 };
 
