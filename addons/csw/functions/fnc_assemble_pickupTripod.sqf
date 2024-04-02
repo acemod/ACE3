@@ -37,7 +37,7 @@
         params ["_args"];
         _args params ["_tripod", "_player"];
 
-        (alive _tripod) && { (secondaryWeapon _player) isEqualTo "" }
+        !(isNull _tripod) && { (secondaryWeapon _player) isEqualTo "" }
 
     };
 
