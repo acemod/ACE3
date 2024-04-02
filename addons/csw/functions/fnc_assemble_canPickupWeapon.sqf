@@ -22,4 +22,4 @@ private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select (_
 private _notCrewed = (crew _staticWeapon) isEqualTo [];
 private _deadCrew = !(alive (gunner _staticWeapon)); // need to eject body???
 
-_assemblyMode && {_notCrewed || _deadCrew}
+_assemblyMode && {alive _staticWeapon} && {_notCrewed || _deadCrew}

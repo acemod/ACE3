@@ -27,7 +27,7 @@
  */
 
 if (!isServer) exitWith {};
-if (GVAR(enable) == 0 || {GVAR(cookoffDuration) == 0}) exitWith {};
+if (!GVAR(enableFire) || {GVAR(cookoffDuration) == 0}) exitWith {};
 
 params [
     "_vehicle",
@@ -48,14 +48,15 @@ if !(_vehicle isKindOf "AllVehicles") exitWith {};
 
 if (_vehicle isKindOf "CAManBase" || {_vehicle isKindOf "StaticWeapon"}) exitWith {};
 
-// Check if cook-off is disabled on vehicle specifically
-if !(_vehicle getVariable [QGVAR(enable), true]) exitWith {};
+// If under water, ignore
+// underwater is not very reliable, so use model center instead
+if (underwater _vehicle || {private _posASL = getPosWorld _vehicle; surfaceIsWater _posASL && {(_posASL select 2) < 0}}) exitWith {};
 
-// Exit if cook-off enabled only for players and no players in vehicle crew found
-if ((GVAR(enable) isEqualTo 1) && {(crew _vehicle) findIf {isPlayer _x} == -1}) exitWith {};
+// Check if cook-off is disabled on vehicle specifically
+if !(_vehicle getVariable [QGVAR(enable), true]) exitWith {}; // QGVAR(enable) is API
 
 TRACE_2("cooking off",_vehicle,_intensity);
-TRACE_8("",_instigator,_delayBetweenSmokeAndFire,_ammoDetonationChance,_detonateAfterCookoff,_fireSource,_canRing,_maxIntensity,_canJet);
+TRACE_9("",_source,_instigator,_delayBetweenSmokeAndFire,_ammoDetonationChance,_detonateAfterCookoff,_fireSource,_canRing,_canJet,_maxIntensity);
 
 if (_vehicle getVariable [QGVAR(isCookingOff), false]) exitWith {};
 
@@ -101,7 +102,15 @@ if (_delayBetweenSmokeAndFire) then {
 
         private _intensity = _vehicle getVariable [QGVAR(intensity), 0];
 
-        if (isNull _vehicle || {_intensity <= 1} || {GVAR(enable) == 0} || {GVAR(cookoffDuration) == 0}) exitWith {
+        if (
+            isNull _vehicle ||
+            !GVAR(enableFire) ||
+            {!(_vehicle getVariable [QGVAR(enable), true])} || // QGVAR(enable) is API
+            {_intensity <= 1} ||
+            {GVAR(cookoffDuration) == 0} ||
+            {underwater _vehicle} ||
+            {private _posASL = getPosWorld _vehicle; surfaceIsWater _posASL && {(_posASL select 2) < 0}}
+        ) exitWith {
             (_this select 1) call CBA_fnc_removePerFrameHandler;
 
             // Remove effects from JIP

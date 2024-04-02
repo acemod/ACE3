@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Spawn cook-off effects.
+ * Spawn cook-off fire effects.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>

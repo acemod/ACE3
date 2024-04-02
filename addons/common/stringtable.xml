@@ -1828,5 +1828,90 @@
             <Chinese>下方</Chinese>
             <Turkish>Alt</Turkish>
         </Key>
+        <Key ID="STR_ACE_Common_subcategory_sway">
+            <English>Weapon Sway</English>
+            <Japanese>手ぶれ</Japanese>
+            <Korean>무기 흔들림</Korean>
+        </Key>
+        <Key ID="STR_ACE_Common_EnableSway">
+            <English>Enable Weapon Sway</English>
+            <Japanese>手ぶれを有効化</Japanese>
+            <Korean>무기 흔들림 추가</Korean>
+        </Key>
+        <Key ID="STR_ACE_Common_EnableSway_Description">
+            <English>Enables weapon sway influenced by sway factors, such as stance, fatigue and medical condition.\nDisabling this setting will defer sway to vanilla or other mods.</English>
+            <Japanese>姿勢、疲労、負傷状態などの手ぶれ要因に影響を受ける武器照準の揺れを有効にします。\nこの設定を無効にすると、手ぶれの揺れはバニラまたは他のMODの処理に任されます。</Japanese>
+            <Korean>흔들림 계수, 자세, 피로도, 건강 상태 등의 요인에 영향을 받는 무기 흔들림을 활성화합니다.\n이 설정을 비활성화하면 바닐라 또는 다른 모드의 흔들림으로 대체됩니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Common_SwayFactor">
+            <English>Sway factor</English>
+            <Spanish>Factor de balanceo de mira</Spanish>
+            <German>Verwacklungsfaktor</German>
+            <Japanese>手ぶれ因数</Japanese>
+            <Chinesesimp>抖动系数</Chinesesimp>
+            <Chinese>抖動因素</Chinese>
+            <French>Facteur de tremblement</French>
+            <Italian>Fattore di Oscillazione</Italian>
+            <Polish>Czynnik kołysania</Polish>
+            <Russian>Фактор колебания прицела</Russian>
+            <Portuguese>Fator de Balanço de Mira</Portuguese>
+            <Czech>Faktor kývání</Czech>
+            <Korean>손떨림 정도</Korean>
+        </Key>
+        <Key ID="STR_ACE_Common_SwayFactor_Description">
+            <English>Influences the amount of weapon sway. Higher means more sway.</English>
+            <Spanish>Afecta al la estabilidad de la mira. Más alto significa más balanceo</Spanish>
+            <German>Beeinflusst, wie ruhig man eine Waffe halten kann. Ein höherer Wert bedeutet weniger Stabilisierung.</German>
+            <Japanese>武器の手ぶれの大きさに影響します。値が高いほど、手ぶれが強くなります。</Japanese>
+            <Chinesesimp>影响手持武器的晃动程度，数值越高，抖动的越厉害。</Chinesesimp>
+            <Chinese>影響手持武器晃動程度，數值越高抖動越厲害</Chinese>
+            <French>Influe sur l'amplitude du tremblement de l'arme. Une valeur plus élevée signifie plus de tremblement.</French>
+            <Italian>Influenza l'aumento di oscillazione dell'arma quando affaticato. Maggiore significa più oscillazione.</Italian>
+            <Polish>Wpływa na poziom kołysania broni. Większa ilość znaczy większe kołysanie.</Polish>
+            <Russian>Влияет на колебания прицела оружия. Чем выше - тем больше.</Russian>
+            <Portuguese>Influencia a quantidade de balanço da mira da arma. Quanto maior, mais balanço.</Portuguese>
+            <Czech>Ovlivňuje množství kývání zbraní. Vyšší znamená více kývání.</Czech>
+            <Korean>손떨림의 정도를 정합니다. 높을 수록 많이 휘적입니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Common_RestedSwayFactor">
+            <English>Rested sway factor</English>
+            <French>Facteur de balancement au repos</French>
+            <Korean>휴식 시 손떨림 정도</Korean>
+            <Portuguese>Fator de balanço de mira em repouso</Portuguese>
+            <German>Verwacklungsfaktor, wenn aufgelegt</German>
+            <Italian>Fattore di Oscillazione Appoggiato</Italian>
+            <Japanese>静止依託時の手ぶれ係数</Japanese>
+            <Russian>Коэффициент колебания прицела в состоянии покоя</Russian>
+        </Key>
+        <Key ID="STR_ACE_Common_RestedSwayFactor_Description">
+            <English>Influences the amount of weapon sway while weapon is rested.</English>
+            <French>Influence le degré de balancement de l'arme au repos.</French>
+            <Korean>무기가 아무런 행동도 하지 않는 동안 무기가 흔들리는 정도를 정합니다.</Korean>
+            <Portuguese>Influencia a quantidade de balanço de mira enquanto a arma está em repouso.</Portuguese>
+            <German>Beeinflusst, wie ruhig man die Waffe hält, während sie aufgelegt ist.</German>
+            <Italian>Determina la quantità di oscillazione dell'arma quando questa è appoggiata.</Italian>
+            <Japanese>静止し壁などに依託している時の武器の手ぶれの大きさに影響します。</Japanese>
+            <Russian>Влияет на величину колебания прицела оружия в состоянии покоя.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Common_DeployedSwayFactor">
+            <English>Deployed sway factor</English>
+            <French>Facteur de balancement déployé</French>
+            <Korean>거치 시 손떨림 정도</Korean>
+            <Portuguese>Fator de balanço de mira em posição de tiro</Portuguese>
+            <German>Verwacklungsfaktor, wenn Zweibein aufgestellt ist.</German>
+            <Italian>Fattore di Oscillazione su Bipode</Italian>
+            <Japanese>接地展開時の手ぶれ係数</Japanese>
+            <Russian>Коэффициент колебания прицела при развертывании</Russian>
+        </Key>
+        <Key ID="STR_ACE_Common_DeployedSwayFactor_Description">
+            <English>Influences the amount of weapon sway while weapon is deployed.</English>
+            <French>Influence le degré de balancement de l'arme déployée.</French>
+            <Korean>무기를 거치하는 동안 무기를 흔드는 정도를 정합니다.</Korean>
+            <Portuguese>Influencia a quantidade de balanço de mira enquanto a arma está em posição de tiro.</Portuguese>
+            <German>Beeinflusst, wie ruhig man die Waffen hält, während das Zweibein aufgestellt ist.</German>
+            <Italian>Determina la quantità di oscillazione dell'arma quando questa è stabilizzata usando il bipode.</Italian>
+            <Japanese>武器の接地展開時の武器の手ぶれの大きさに影響します。</Japanese>
+            <Russian>Влияет на величину колебания прицела оружия при его развертывании.</Russian>
+        </Key>
     </Package>
 </Project>

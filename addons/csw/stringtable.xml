@@ -179,7 +179,7 @@
             <Italian>Scorta di munizioni</Italian>
             <Korean>탄약 보관</Korean>
             <Polish>Magazyn amunicji</Polish>
-            <Japanese>弾薬の格納場所</Japanese>
+            <Japanese>弾薬保管位置</Japanese>
             <Chinesesimp>弹药存储</Chinesesimp>
             <Russian>Хранилище боеприпасов</Russian>
             <Spanish>Almacenamiento de munición</Spanish>
@@ -192,7 +192,7 @@
             <Italian>Determina se ulteriori caricatori verranno stoccati sul suolo o in una cassa di munizioni.</Italian>
             <Korean>여분의 탄약을 지면 또는 탄약 상자에 넣을 지 결정합니다.</Korean>
             <Polish>Decyduje, czy dodatkowe magazynki przechowywane są na ziemi, czy w skrzynce z amunicją.</Polish>
-            <Japanese>追加の弾倉を地面に配置するか、弾薬箱内に保管するかを設定します。</Japanese>
+            <Japanese>追加の弾倉を地面に直接配置するか、弾薬箱内に保管するかを設定します。</Japanese>
             <Chinesesimp>设置多余的弹夹是存放在地面上还是弹药箱内</Chinesesimp>
             <Russian>Определяет будут ли дополнительные магазины лежать на земле или внутри хранилища</Russian>
             <Spanish>Determina si los cargadores extra son almacenados en el suelo o en una caja de munición</Spanish>

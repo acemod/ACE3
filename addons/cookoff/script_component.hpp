@@ -16,10 +16,8 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define IS_EXPLOSIVE_AMMO(ammo) (getNumber (ammo call CBA_fnc_getObjectConfig >> "explosive") > 0.5)
-
 // Stages of cookoff in order (in seconds)
-// Should be no un-synced randomness in these as the effects must be ran on each client
+// Should be no un-synced randomness in these as the effects must be run on each client
 #define SMOKE_DELAY 10.5
 #define DETONATION_DELAY 3
 #define COOKOFF_TIME 14 // Cook off time should be 20s at most due to length of sound files

@@ -20,11 +20,13 @@ class CfgWeapons {
         ACE_barrelLength = 550;
         ACE_barrelTwist = 304.8;
         ACE_twistDirection = 1;
+        EGVAR(overheating,allowSwapBarrel) = 1;
     };
     class LMG_S77_Compact_base_lxWS: LMG_S77_base_lxWS {
         ACE_barrelLength = 500;
         ACE_barrelTwist = 304.8;
         ACE_twistDirection = 1;
+        EGVAR(overheating,allowSwapBarrel) = 1;
     };
 
     // SLR

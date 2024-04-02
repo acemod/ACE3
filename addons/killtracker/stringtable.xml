@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="KillTracker">
+        <Key ID="STR_ACE_KillTracker_Category">
+            <English>ACE Kill Tracker</English>
+            <Italian>ACE Tracciatore di Uccisioni</Italian>
+            <Czech>ACE Kill Tracker</Czech>
+            <Russian>ACE Отслеживание убийств</Russian>
+            <Japanese>ACE キルトラッカー</Japanese>
+            <Korean>ACE 킬트래커</Korean>
+        </Key>
         <Key ID="STR_ACE_KillTracker_Title">
             <English>ACE Killed Events</English>
-            <Japanese>ACE キルトラッカー</Japanese>
+            <Japanese>ACE キルイベント</Japanese>
             <German>ACE Abgeschossene Ereignisse</German>
             <Italian>ACE Eventi di Morte</Italian>
             <Polish>ACE Licznik Zabójstw</Polish>
@@ -85,6 +93,22 @@
             <Chinesesimp>友军误击</Chinesesimp>
             <Japanese>同士討ち</Japanese>
             <Turkish>Dost Atışı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_TrackAI_DisplayName">
+            <English>Track AI units killed by player</English>
+            <Italian>Traccia IA uccise da giocatori</Italian>
+            <Czech>Sledovat AI zabité hráči</Czech>
+            <Russian>Отслеживание юнитов ИИ, убитых игроком</Russian>
+            <Japanese>プレイヤーに殺害されたAIユニットを追跡</Japanese>
+            <Korean>플레이어가 죽인 AI 트래킹</Korean>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_TrackAI_Description">
+            <English>Defines if killed AIs will be shown in the kill tracker during mission debriefing.</English>
+            <Italian>Determina se IA uccise verranno visualizzate nel tracciatore durante il debriefing della missione.</Italian>
+            <Czech>Udává zdali se zabité AI budou ukazovat v kill trackeru v průběhu debriefingu po misi.</Czech>
+            <Russian>Определяет, будут ли убитые ИИ отображаться в трекере убийств во время дебрифинга миссии.</Russian>
+            <Japanese>ミッションデブリーフィングのキルトラッカーに殺害されたAIが表示されるかどうかを定義します。</Japanese>
+            <Korean>사후강평 중 살해된 AI가 킬트래킹에 표시되는지 여부를 정의합니다.</Korean>
         </Key>
     </Package>
 </Project>

@@ -34,7 +34,7 @@ private _category = getText (_config >> "category");
 
 private _cbaIsGlobal = (!_isClientSettable) || _isForced;
 private _warnIfChangedMidMission = _cbaIsGlobal && {(getNumber (_config >> "canBeChanged")) == 0};
-if (_isForced) then {GVAR(cbaSettings_forcedSettings) pushBack (toLower _varName);};
+if (_isForced) then {GVAR(cbaSettings_forcedSettings) pushBack (toLowerANSI _varName);};
 
 // Basic handling of setting types CBA doesn't support:
 if (_typeName == "ARRAY") exitWith {
@@ -103,4 +103,3 @@ private _return = [_varName, _cbaSettingType, [_localizedName, _localizedDescrip
 TRACE_1("returned",_return);
 if ((isNil "_return") || {!_return}) then {ERROR_1("Setting [%1] - CBA Error",_varName);};
 _return
-

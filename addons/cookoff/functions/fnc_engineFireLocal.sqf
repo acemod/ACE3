@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: KoffeinFlummi, commy2
+ * Author: KoffeinFlummi, commy2, johnb43
  * Start fire in engine block of a car.
  *
  * Arguments:
@@ -64,9 +64,10 @@ if (hasInterface) then {
 
         deleteVehicle _smoke;
 
-        if (isNull _vehicle || !isServer) exitWith {};
+        if (!isServer || {isNull _vehicle}) exitWith {};
 
-        _vehicle setVariable [QGVAR(isEngineSmoking), nil];
+        // Reset variable, so engine can smoke again in the future
+        _vehicle setVariable [QGVAR(isEngineSmoking), nil, true];
 
         private _jipID = _vehicle getVariable QGVAR(engineFireJipID);
 

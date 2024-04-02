@@ -1,7 +1,4 @@
 class ACE_Settings {
-    class GVAR(enable) {
-        movedToSqf = 1;
-    };
     class GVAR(enableAmmobox) {
         movedToSQF = 1;
     };

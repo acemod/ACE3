@@ -44,7 +44,7 @@ if (_tryLoad && {!(_target isKindOf "CAManBase")} && {["ace_cargo"] call EFUNC(c
 
 // Fix anim when aborting carrying persons
 if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
-    if (vehicle _unit == _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
+    if (isNull objectParent _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
         [_unit, "", 2] call EFUNC(common,doAnimation);
     };
 
@@ -88,6 +88,8 @@ if !(_target isKindOf "CAManBase") then {
 
 // Recreate UAV crew (add a frame delay or this may cause the vehicle to be moved to [0,0,0])
 if (_target getVariable [QGVAR(isUAV), false]) then {
+    _target setVariable [QGVAR(isUAV), nil, true];
+
     [{
         params ["_target"];
         if (!alive _target) exitWith {};

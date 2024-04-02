@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2, kymckay, johnb43
- * Start a cook-off in the given ammo box.
+ * Start an ammo cook-off in the given ammo box.
  *
  * Arguments:
  * 0: Ammo box <OBJECT>

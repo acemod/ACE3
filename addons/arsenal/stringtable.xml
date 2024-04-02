@@ -1191,7 +1191,7 @@
             <Chinesesimp>支持夜视仪</Chinesesimp>
             <Czech>Podpora nočního vidění</Czech>
             <Turkish>Gece Görüş Desteği</Turkish>
-            <Korean>야간투시 지원여부</Korean>
+            <Korean>야간투시 지원</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supPrim">
             <English>Primary supported</English>
@@ -1206,7 +1206,7 @@
             <Chinese>主武器支援</Chinese>
             <Chinesesimp>主镜支持</Chinesesimp>
             <Czech>Hlavní část hledí podporuje</Czech>
-            <Korean>주무기 지원여부</Korean>
+            <Korean>주무기 지원</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supSec">
             <English>Secondary supported</English>
@@ -1221,7 +1221,7 @@
             <Chinese>次要武器支援</Chinese>
             <Chinesesimp>副镜支持</Chinesesimp>
             <Czech>Vedlejší část hledí podporuje</Czech>
-            <Korean>보조무기 지원여부</Korean>
+            <Korean>보조무기 지원</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_intPrim">
             <English>Primary integrated</English>
@@ -1236,15 +1236,21 @@
             <Chinese>整合主武器</Chinese>
             <Chinesesimp>主镜内置</Chinesesimp>
             <Czech>Integrováno do hlavní části hledí</Czech>
-            <Korean>주무기 내장여부</Korean>
+            <Korean>주무기 내장</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_ti">
             <English>Thermal integrated</English>
+            <Italian>Termico integrato</Italian>
             <Japanese>熱画像装置内蔵</Japanese>
+            <Russian>Интегрирован тепловизор.</Russian>
+            <Korean>열화상 내장</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_intPrimTi">
             <English>Thermal &amp; Primary integrated</English>
+            <Italian>Termico e Primario integrato</Italian>
             <Japanese>熱画像装置内蔵・プライマリに内蔵</Japanese>
+            <Russian>Интегрирован тепловизор и осн.прицел.</Russian>
+            <Korean>열화상과 주무기 내장</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
             <English>Not Supported</English>
@@ -1600,6 +1606,7 @@
             <Korean>내림차순</Korean>
             <French>Décroissant</French>
             <Portuguese>Decrescente</Portuguese>
+            <Russian>Нисходящий</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortAscending">
             <English>Ascending</English>
@@ -1610,6 +1617,7 @@
             <Korean>오름차순</Korean>
             <French>Croissant</French>
             <Portuguese>Crescente</Portuguese>
+            <Russian>Восходящий</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_toolsTab">
             <English>Tools</English>
@@ -1636,6 +1644,7 @@
             <Korean>장탄 수</Korean>
             <French>Nombre de munitions</French>
             <Portuguese>Quantidade de munição</Portuguese>
+            <Russian>Количество боеприпасов</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_statIlluminators">
             <English>Illuminators</English>
@@ -1645,6 +1654,7 @@
             <Korean>조명</Korean>
             <Portuguese>Iluminadores</Portuguese>
             <Japanese>イルミネーター</Japanese>
+            <Russian>Осветители</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
             <English>Default to Favorites</English>
@@ -1655,6 +1665,7 @@
             <Korean>즐겨찾기 기본값</Korean>
             <French>Favoris par défaut</French>
             <Portuguese>Favoritos por padrão</Portuguese>
+            <Russian>По умолчанию - Избранное</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
             <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
@@ -1665,6 +1676,7 @@
             <Korean>ACE 아스널이 기본적으로 모든 아이템 또는 즐겨찾기를 표시할 지 여부를 조정합니다.</Korean>
             <French>Contrôle si l'arsenal ACE affiche par défaut tous les éléments ou les favoris.</French>
             <Portuguese>Controla se o Arsenal ACE exibe por padrão todos os itens ou favoritos.</Portuguese>
+            <Russian>Определяет, будет ли в арсенале ACE по умолчанию отображаться все предметы или избранное.</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
             <English>Favorites Color</English>
@@ -1675,6 +1687,7 @@
             <Korean>즐겨찾기 색상</Korean>
             <French>Couleurs favorites</French>
             <Portuguese>Cor dos favoritos</Portuguese>
+            <Russian>Избранный цвет</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorTooltip">
             <English>Highlight color for favorited items.</English>
@@ -1685,6 +1698,7 @@
             <Korean>즐겨찾기한 아이템을 색상으로 강조합니다.</Korean>
             <French>Met en surbrillance les éléments favoris.</French>
             <Portuguese>Cor de destaque para itens favoritados.</Portuguese>
+            <Russian>Выделите цветом любимые предметы.</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
             <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
@@ -1695,6 +1709,7 @@
             <Korean>모든 아이템을 표시하거나 즐겨찾기를 표시할 때 전환합니다\nShift 키를 누른 상태에서 두 번 클릭하여 아이템을 추가하거나 제거합니다.</Korean>
             <French>Change entre l'affichage de tous les éléments ou de vos favoris.\nDouble-cliquez en maintenant la touche Maj enfoncée pour ajouter ou supprimer un élément.</French>
             <Portuguese>Alterna entre a exibição de todos os itens ou seus favoritos.\nClique duas vezes enquanto mantém pressionada a tecla Shift para adicionar ou remover um item.</Portuguese>
+            <Russian>Переключайтесь между отображением всех элементов или ваших избранных.\nДважды щелкните, удерживая Shift, чтобы добавить или удалить элемент.</Russian>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSearchTooltip">
             <English>Search\nCTRL + Click to enable live results</English>
@@ -1702,6 +1717,7 @@
             <Italian>Cerca\nCTRL + Click per modificare i risultati mentre scrivi</Italian>
             <Japanese>検索\nCTRL + クリックで検索結果の即時表示を有効化</Japanese>
             <Korean>검색\nCtrl + 클릭으로 실시간 검색 결과를 활성화</Korean>
+            <Russian>Поиск\nCtrl + Click для включения результатов в реальном времени</Russian>
         </Key>
     </Package>
 </Project>
