@@ -625,4 +625,4 @@ GVAR(deviceKeyCurrentIndex) = -1;
     };
 }] call CBA_fnc_addEventHandler;
 
-GVAR(commonPostInited) = true;                                                                                                                                                                                                                                  call compileScript [QPATHTOF(icon.paa)];
+GVAR(commonPostInited) = true;
