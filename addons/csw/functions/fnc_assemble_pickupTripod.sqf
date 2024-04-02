@@ -37,7 +37,7 @@
         params ["_args"];
         _args params ["_tripod", "_player"];
 
-        (!isNull _tripod) && {(secondaryWeapon _player) == ""}
+        (alive _tripod) && {secondaryWeapon _player == ""}
     };
 
     TRACE_3("",_pickupTime,typeOf _tripod,_tripodClassname);
