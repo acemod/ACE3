@@ -63,7 +63,7 @@ GVAR(doorTargetPhase) = _house animationPhase (_animations select 0);
 GVAR(isOpeningDoor) = true;
 GVAR(usedScrollWheel) = false;
 
-// Rise local started opening event
+// Raise local started opening event
 [QGVAR(doorOpeningStarted)] call CBA_fnc_localEvent;
 
 [{
