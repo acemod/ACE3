@@ -35,30 +35,28 @@ if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
 
 TRACE_2("",local _vehicle,_vehicle turretLocal [0]);
 if (_configEnabled && {_vehicle turretLocal [0]}) then { // if turret is local to us, then handle mags/weapon
-    [{
-        params ["_vehicle"];
-        if (!alive _vehicle) exitWith { TRACE_1("dead/deleted",_vehicle); };
-        // Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
-        private _assemblyModeIndex = _vehicle getVariable [QGVAR(assemblyMode), 3];
-        private _emptyWeapon = _assemblyModeIndex isEqualTo 2;
-        private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select _assemblyModeIndex;
-        TRACE_2("turretLocal",_vehicle,_assemblyMode);
-        [_vehicle, [0], _assemblyMode, _emptyWeapon] call FUNC(proxyWeapon);
-        [_vehicle, _assemblyMode, _emptyWeapon] call FUNC(staticWeaponInit_unloadExtraMags);
-    }, [_vehicle]] call CBA_fnc_execNextFrame;  // need to wait a frame to allow setting object vars during assembly
+    TRACE_2("turretLocal",_vehicle,GVAR(defaultAssemblyMode));
+
+    // If the weapon was assembled by players, remove all magazines that spawn with the weapon
+    private _emptyWeapon = _csw getVariable [QGVAR(assembled), false];
+
+    [_vehicle, [0], GVAR(defaultAssemblyMode), _emptyWeapon] call FUNC(proxyWeapon);
+
+    // If magazine handling is disabled, do not unload magazines
+    if (GVAR(ammoHandling) == 0) exitWith {};
+
+    [_vehicle, _emptyWeapon] call FUNC(staticWeaponInit_unloadExtraMags);
 };
 
 if (_assemblyConfig) then {
-    [{
-        params ["_vehicle"];
-        if (!alive _vehicle) exitWith { TRACE_1("dead/deleted",_vehicle); };
-        private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select (_vehicle getVariable [QGVAR(assemblyMode), 3]);
-        TRACE_2("assemblyConfig present",_vehicle,_assemblyMode);
-        if (_assemblyMode) then { // Disable vanilla assembly if assemblyMode enabled
-            [_vehicle, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-        };
-    }, [_vehicle]] call CBA_fnc_execNextFrame;  // need to wait a frame to allow setting object vars during assembly
+    TRACE_2("assemblyConfig present",_vehicle,GVAR(defaultAssemblyMode));
+    if (GVAR(defaultAssemblyMode)) then { // Disable vanilla assembly if assemblyMode enabled
+        [_vehicle, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+    };
 };
+
+// If magazine handling is disabled, don't enable ammo handling
+if (GVAR(ammoHandling) == 0) exitWith {};
 
 // Add interactions for players
 if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
@@ -74,8 +72,6 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     private _ammoActionPath = [];
     private _magazineLocation = getText (_configOf >> QUOTE(ADDON) >> "magazineLocation");
     private _condition = { //IGNORE_PRIVATE_WARNING ["_target", "_player"];
-        // If magazine handling is enabled or weapon assembly/disassembly is enabled we enable ammo handling
-        if ((GVAR(ammoHandling) == 0) && {!([false, true, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 3]))}) exitWith { false };
         [_player, _target, ["isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith)
     };
     private _childenCode = {

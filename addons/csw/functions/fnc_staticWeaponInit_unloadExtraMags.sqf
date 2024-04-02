@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Weapon <OBJECT>
- * 1: Using advanced assembly <BOOL>
+ * 1: Empty the weapon? <BOOL>
  *
  * Return Value:
  * None
@@ -16,9 +16,8 @@
  * Public: No
  */
 
-params ["_staticWeapon", "_assemblyMode", "_emptyWeapon"];
-TRACE_3("staticWeaponInit_unloadExtraMags",_staticWeapon,_assemblyMode,_emptyWeapon);
-if (!_assemblyMode) exitWith {};
+params ["_staticWeapon", "_emptyWeapon"];
+TRACE_2("staticWeaponInit_unloadExtraMags",_staticWeapon,_emptyWeapon);
 
 private _desiredAmmo = getNumber (configOf _staticWeapon >> QUOTE(ADDON) >> "desiredAmmo");
 private _storeExtraMagazines = GVAR(handleExtraMagazines);
