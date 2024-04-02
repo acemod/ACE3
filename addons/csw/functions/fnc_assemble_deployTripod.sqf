@@ -23,16 +23,12 @@
     private _secondaryWeaponClassname = secondaryWeapon _player;
     // handle loaded launchers which can become csw like CUP Metis
     private _secondaryWeaponMagazine = secondaryWeaponMagazine _player param [0, ""];
+    _player removeWeaponGlobal _secondaryWeaponClassname;
 
     private _onFinish = {
         params ["_args"];
         _args params ["_player", "_secondaryWeaponClassname", "_secondaryWeaponMagazine"];
         TRACE_3("deployTripod finish",_player,_secondaryWeaponClassname,_secondaryWeaponMagazine);
-
-        // If the weapon was removed during the progressbar, quit
-        if (_secondaryWeaponClassname != secondaryWeapon _player) exitWith {};
-
-        _player removeWeaponGlobal _secondaryWeaponClassname;
 
         private _tripodClassname = getText(configFile >> "CfgWeapons" >> _secondaryWeaponClassname >> QUOTE(ADDON) >> "deploy");
 
@@ -67,6 +63,17 @@
         };
     };
 
+    private _onFailure = {
+        params ["_args"];
+        _args params ["_player", "_secondaryWeaponClassname", "_secondaryWeaponMagazine"];
+        TRACE_3("deployTripod failure",_player,_secondaryWeaponClassname,_secondaryWeaponMagazine);
+
+        _player addWeaponGlobal _secondaryWeaponClassname;
+        if (_secondaryWeaponMagazine isNotEqualTo "") then {
+            _player addWeaponItem [_secondaryWeaponClassname, _secondaryWeaponMagazine, true];
+        };
+    };
+
     private _deployTime = getNumber(configFile >> "CfgWeapons" >> _secondaryWeaponClassname >> QUOTE(ADDON) >> "deployTime");
-    [TIME_PROGRESSBAR(_deployTime), [_player, _secondaryWeaponClassname, _secondaryWeaponMagazine], _onFinish, {}, localize LSTRING(PlaceTripod_progressBar)] call EFUNC(common,progressBar);
+    [TIME_PROGRESSBAR(_deployTime), [_player, _secondaryWeaponClassname, _secondaryWeaponMagazine], _onFinish, _onFailure, LLSTRING(PlaceTripod_progressBar)] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;

@@ -25,9 +25,14 @@
     TRACE_3("assemble_deployWeapon_carryWeaponClassname",_tripod,_player,_carryWeaponClassname);
 
     private _tripodClassname = typeOf _tripod;
-    private _assembledClassname = getText(configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "assembleTo" >> _tripodClassname);
-    private _deployTime =  getNumber(configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "deployTime");
+    private _weaponConfig = configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON);
+    private _assembledClassname = getText (_weaponConfig >> "assembleTo" >> _tripodClassname);
+
     if (!isClass (configFile >> "CfgVehicles" >> _assembledClassname)) exitWith {ERROR_1("bad static classname [%1]",_assembledClassname);};
+
+    _player removeWeaponGlobal _carryWeaponClassname;
+
+    private _deployTime = getNumber (_weaponConfig >> "deployTime");
 
     TRACE_4("",_carryWeaponClassname,_tripodClassname,_assembledClassname,_deployTime);
 
@@ -35,11 +40,6 @@
         params ["_args"];
         _args params ["_tripod", "_player", "_assembledClassname", "_carryWeaponClassname"];
         TRACE_4("deployWeapon finish",_tripod,_player,_assembledClassname,_carryWeaponClassname);
-
-        // If the weapon was removed during the progressbar, quit
-        if (_secondaryWeaponClassname != secondaryWeapon _player) exitWith {};
-
-        _player removeWeaponGlobal _carryWeaponClassname;
 
         private _tripodPos = getPosATL _tripod;
         private _tripodDir = getDir _tripod;
@@ -65,11 +65,20 @@
         }, [_assembledClassname, _tripodDir, _tripodPos]] call CBA_fnc_execNextFrame;
     };
 
+    private _onFailure = {
+        params ["_args"];
+        _args params ["", "_player", "", "_carryWeaponClassname"];
+        TRACE_2("deployWeapon failure",_player,_carryWeaponClassname);
+
+        _player addWeaponGlobal _carryWeaponClassname;
+    };
+
     private _codeCheck = {
         params ["_args"];
         _args params ["_tripod"];
-        !isNull _tripod;
+
+        alive _tripod
     };
 
-    [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, {}, localize LSTRING(AssembleCSW_progressBar), _codeCheck] call EFUNC(common,progressBar);
+    [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, _onFailure, LLSTRING(AssembleCSW_progressBar), _codeCheck] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;
