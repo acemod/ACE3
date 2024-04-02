@@ -1718,6 +1718,7 @@
             <Japanese>検索\nCTRL + クリックで検索結果の即時表示を有効化</Japanese>
             <Korean>검색\nCtrl + 클릭으로 실시간 검색 결과를 활성화</Korean>
             <Russian>Поиск\nCtrl + Click для включения результатов в реальном времени</Russian>
+            <French>Recherche\nCTRL + clic pour modifier les résultats tout en écrivant</French>
         </Key>
     </Package>
 </Project>

@@ -27,6 +27,7 @@
             <German>Hunger</German>
             <Japanese>空腹</Japanese>
             <Russian>Голод</Russian>
+            <French>Faim</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_Description">
             <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating food.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up food.&lt;br/&gt;%2Use [%3%12%4] and select %3Survival%4.&lt;br/&gt;%2Choose an item to consume.</English>
@@ -67,6 +68,7 @@
             <Italian>Cure Mediche</Italian>
             <Japanese>治療</Japanese>
             <Russian>Медицинское лечение</Russian>
+            <French>Traitement médical</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_ShortName">
             <English>Decrease Heart Rate</English>
@@ -77,6 +79,7 @@
             <Italian>Rallenta ritmo cardiaco</Italian>
             <Japanese>心拍数を下げる</Japanese>
             <Russian>Уменьшить частоту сердечных сокращений</Russian>
+            <French>Diminution de la fréquence cardiaque</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_Description">
             <English>%3Adenosine%4 is used to decrease heart rate.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an appendage.&lt;br/&gt;%2Inject %3Adenosine%4.</English>
@@ -107,6 +110,7 @@
             <Italian>Chiudi ferite</Italian>
             <Japanese>傷口をふさぐ</Japanese>
             <Russian>Закрыть раны</Russian>
+            <French>Fermer les plaies</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_Description">
             <English>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%2%3Field Dressing:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Average&lt;/t&gt; In All Categories&lt;br/&gt;%2%3Packing Bandage:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Average&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Elastic Bandage:%4&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Higher&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#E60000'&gt;Shorter&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Quickclot:%4&lt;br/&gt;%11&lt;t color='#E60000'&gt;Lower&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Lower&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopening Delay&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</English>
