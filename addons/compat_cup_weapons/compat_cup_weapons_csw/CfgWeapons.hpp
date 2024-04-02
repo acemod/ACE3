@@ -168,7 +168,7 @@ class CfgWeapons {
             type = "mount";
             deployTime = 4;
             pickupTime = 4;
-            deploy = "CUP_O_Metis_RU";
+            deploy = "CUP_I_Metis_AAF";
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 300;
@@ -287,4 +287,3 @@ class CfgWeapons {
         magazineReloadTime = 0.5;
     };
 };
-
