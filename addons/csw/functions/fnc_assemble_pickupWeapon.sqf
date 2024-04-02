@@ -82,7 +82,7 @@
         [{
             params ["_player", "_weaponPos", "_carryWeaponClassname", "_carryWeaponMag"];
             if ((alive _player) && {(secondaryWeapon _player) == ""}) exitWith {
-                _player addWeapon _carryWeaponClassname;
+                _player addWeaponGlobal _carryWeaponClassname;
                 if (_carryWeaponMag isNotEqualTo "") then {
                     _player addWeaponItem [_carryWeaponClassname, _carryWeaponMag, true];
                 };
@@ -106,8 +106,9 @@
 
     private _condition = {
         params ["_args"];
-        _args params ["_staticWeapon"];
-        ((crew _staticWeapon) isEqualTo []) && (alive _staticWeapon)
+        _args params ["_staticWeapon", "_player"];
+
+        (alive _staticWeapon) && {(crew _staticWeapon) isEqualTo []} && {secondaryWeapon _player == ""}
     };
 
     [TIME_PROGRESSBAR(_pickupTime), [_staticWeapon, _player, _carryWeaponClassname, _turretClassname, _onDisassembleFunc], _onFinish, {}, LLSTRING(DisassembleCSW_progressBar), _condition] call EFUNC(common,progressBar);
