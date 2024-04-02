@@ -79,7 +79,7 @@ GVAR(usedScrollWheel) = false;
             {_house animate [_x, _phase]; false} count _animations;
         };
 
-        // Rise local stopped opening event
+        // Raise local stopped opening event
         [QGVAR(doorOpeningStopped)] call CBA_fnc_localEvent;
     };
 
