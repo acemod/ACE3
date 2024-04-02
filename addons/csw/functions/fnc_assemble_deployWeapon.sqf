@@ -4,25 +4,27 @@
  * Deploys the current CSW
  *
  * Arguments:
- * 0: Unit <OBJECT>
+ * 0: Target <OBJECT>
+ * 1: Unit <OBJECT>
+ * 2: Args <ANY>
+ * 3: Action Data <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player] call ace_csw_fnc_assemble_deployWeapon
+ * [cursorObject, player] call ace_csw_fnc_assemble_deployWeapon
  *
  * Public: No
  */
 
 [{
-    params ["_tripod", "_player", "", "_carryWeaponClassname"];
-    if (isNil "_carryWeaponClassname") then { _carryWeaponClassname = secondaryWeapon _player };
+    params ["_tripod", "_player"];
+
+    private _carryWeaponClassname = secondaryWeapon _player;
     TRACE_3("assemble_deployWeapon_carryWeaponClassname",_tripod,_player,_carryWeaponClassname);
 
     private _tripodClassname = typeOf _tripod;
-    _player removeWeaponGlobal _carryWeaponClassname;
-
     private _assembledClassname = getText(configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "assembleTo" >> _tripodClassname);
     private _deployTime =  getNumber(configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "deployTime");
     if (!isClass (configFile >> "CfgVehicles" >> _assembledClassname)) exitWith {ERROR_1("bad static classname [%1]",_assembledClassname);};
@@ -31,8 +33,13 @@
 
     private _onFinish = {
         params ["_args"];
-        _args params ["_tripod", "_player", "_assembledClassname"];
-        TRACE_3("deployWeapon finish",_tripod,_player,_assembledClassname);
+        _args params ["_tripod", "_player", "_assembledClassname", "_carryWeaponClassname"];
+        TRACE_4("deployWeapon finish",_tripod,_player,_assembledClassname,_carryWeaponClassname);
+
+        // If the weapon was removed during the progressbar, quit
+        if (_secondaryWeaponClassname != secondaryWeapon _player) exitWith {};
+
+        _player removeWeaponGlobal _carryWeaponClassname;
 
         private _tripodPos = getPosATL _tripod;
         private _tripodDir = getDir _tripod;
@@ -58,19 +65,11 @@
         }, [_assembledClassname, _tripodDir, _tripodPos]] call CBA_fnc_execNextFrame;
     };
 
-    private _onFailure = {
-        params ["_args"];
-        _args params ["", "_player", "", "_carryWeaponClassname"];
-        TRACE_2("deployWeapon failure",_player,_carryWeaponClassname);
-
-        _player addWeaponGlobal _carryWeaponClassname;
-    };
-
     private _codeCheck = {
         params ["_args"];
         _args params ["_tripod"];
         !isNull _tripod;
     };
 
-    [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, _onFailure, localize LSTRING(AssembleCSW_progressBar), _codeCheck] call EFUNC(common,progressBar);
+    [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, {}, localize LSTRING(AssembleCSW_progressBar), _codeCheck] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;
