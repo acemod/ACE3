@@ -48,7 +48,7 @@ if ((getNumber (_ammoConfig >> "explosive") >= 0.5) || {getNumber (_ammoConfig >
     private _configMagazine = configFile >> "CfgMagazines" >> _magazine;
 
     // Magazine could have changed during flight time (just ignore if so)
-    if (_ammo getShotInfo 4 && {getText (_configMagazine >> "ammo") == _ammo)} then { // 4 = shownTracer
+    if (_ammo getShotInfo 4 && {getText (_configMagazine >> "ammo") == _ammo}) then { // 4 = shownTracer
         [QGVAR(cookOffBox), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
     };
 };
