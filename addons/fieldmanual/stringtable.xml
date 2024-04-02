@@ -48,6 +48,7 @@
             <German>Durst</German>
             <Japanese>渇き</Japanese>
             <Russian>Жажда</Russian>
+            <French>Soif</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_Description">
             <English>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking liquids.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink.&lt;br/&gt;%2Use [%3%12%4] and select %3Survival%4.&lt;br/&gt;%2Choose an item to consume.</English>
