@@ -1,5 +1,3 @@
-version: "3.2"
-
 services:
   docs:
     container_name: ace3mod_jekyll
