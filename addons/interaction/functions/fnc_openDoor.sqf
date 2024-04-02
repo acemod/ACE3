@@ -63,6 +63,9 @@ GVAR(doorTargetPhase) = _house animationPhase (_animations select 0);
 GVAR(isOpeningDoor) = true;
 GVAR(usedScrollWheel) = false;
 
+// Rise local started opening event
+[QGVAR(doorOpeningStarted)] call CBA_fnc_localEvent;
+
 [{
     (_this select 0) params ["_house", "_animations", "_position", "_time", "_frame"];
 
@@ -75,6 +78,9 @@ GVAR(usedScrollWheel) = false;
 
             {_house animate [_x, _phase]; false} count _animations;
         };
+
+        // Rise local stopped opening event
+        [QGVAR(doorOpeningStopped)] call CBA_fnc_localEvent;
     };
 
     // check if player moved too far away
