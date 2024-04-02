@@ -44,9 +44,9 @@ private _actions = [];
     private _displayName = getText (_cfgMagazines >> _carryMag >> "displayName");
     private _picture = getText (_cfgMagazines >> _carryMag >> "picture");
     private _text = if (_isBeltLinking) then {
-        format [localize LSTRING(actionLink), _displayName];
+        format [LLSTRING(actionLink), _displayName];
     } else {
-        format [localize LSTRING(loadX), _displayName];
+        format [LLSTRING(loadX), _displayName];
     };
 
     private _action = [format ["load_%1", _forEachIndex], _text, _picture, _statement, _condition, {}, _x] call EFUNC(interact_menu,createAction);
