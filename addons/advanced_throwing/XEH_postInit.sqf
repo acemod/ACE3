@@ -2,10 +2,13 @@
 
 // Fired XEH
 GVAR(ammoEventHandlers) = createHashMap;
-[QGVAR(throwFiredXEH), FUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
+[QGVAR(throwFiredXEH), LINKFUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
 
 // Exit on HC
 if (!hasInterface) exitWith {};
+
+// Temporary Wind Info indication
+GVAR(tempWindInfo) = false;
 
 // Ammo/Magazines look-up hash for correctness of initSpeed
 GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;

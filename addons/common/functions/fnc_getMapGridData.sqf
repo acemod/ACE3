@@ -43,8 +43,8 @@ private _stepY = 1e10;
 
 private _letterGrid = false;
 
-if (toLower _formatX find "a" != -1) then {_letterGrid = true};
-if (toLower _formatY find "a" != -1) then {_letterGrid = true};
+if (toLowerANSI _formatX find "a" != -1) then {_letterGrid = true};
+if (toLowerANSI _formatY find "a" != -1) then {_letterGrid = true};
 
 if (_letterGrid) exitWith {
     WARNING_3("Map Grid Warning (%1) - Map uses letter grids [%2, %3]",worldName,_formatX,_formatY);

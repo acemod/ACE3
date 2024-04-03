@@ -1191,7 +1191,7 @@
             <Chinesesimp>支持夜视仪</Chinesesimp>
             <Czech>Podpora nočního vidění</Czech>
             <Turkish>Gece Görüş Desteği</Turkish>
-            <Korean>야간투시 지원여부</Korean>
+            <Korean>야간투시 지원</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supPrim">
             <English>Primary supported</English>
@@ -1206,7 +1206,7 @@
             <Chinese>主武器支援</Chinese>
             <Chinesesimp>主镜支持</Chinesesimp>
             <Czech>Hlavní část hledí podporuje</Czech>
-            <Korean>주무기 지원여부</Korean>
+            <Korean>주무기 지원</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supSec">
             <English>Secondary supported</English>
@@ -1221,7 +1221,7 @@
             <Chinese>次要武器支援</Chinese>
             <Chinesesimp>副镜支持</Chinesesimp>
             <Czech>Vedlejší část hledí podporuje</Czech>
-            <Korean>보조무기 지원여부</Korean>
+            <Korean>보조무기 지원</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_intPrim">
             <English>Primary integrated</English>
@@ -1236,17 +1236,21 @@
             <Chinese>整合主武器</Chinese>
             <Chinesesimp>主镜内置</Chinesesimp>
             <Czech>Integrováno do hlavní části hledí</Czech>
-            <Korean>주무기 내장여부</Korean>
+            <Korean>주무기 내장</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_ti">
             <English>Thermal integrated</English>
+            <Italian>Termico integrato</Italian>
             <Japanese>熱画像装置内蔵</Japanese>
-            <Russian>Интегрирован в тепловизор.</Russian>
+            <Russian>Интегрирован тепловизор.</Russian>
+            <Korean>열화상 내장</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_intPrimTi">
             <English>Thermal &amp; Primary integrated</English>
+            <Italian>Termico e Primario integrato</Italian>
             <Japanese>熱画像装置内蔵・プライマリに内蔵</Japanese>
-            <Russian>Интегрирован в тепловизор и осн.прицел.</Russian>
+            <Russian>Интегрирован тепловизор и осн.прицел.</Russian>
+            <Korean>열화상과 주무기 내장</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
             <English>Not Supported</English>
@@ -1714,6 +1718,7 @@
             <Japanese>検索\nCTRL + クリックで検索結果の即時表示を有効化</Japanese>
             <Korean>검색\nCtrl + 클릭으로 실시간 검색 결과를 활성화</Korean>
             <Russian>Поиск\nCtrl + Click для включения результатов в реальном времени</Russian>
+            <French>Recherche\nCTRL + clic pour modifier les résultats tout en écrivant</French>
         </Key>
     </Package>
 </Project>

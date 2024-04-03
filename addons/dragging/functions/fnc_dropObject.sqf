@@ -26,7 +26,7 @@ if (!isNil QGVAR(releaseActionID)) then {
 };
 
 // Stop blocking
-if !(GVAR(dragAndFire)) then {
+if (!GVAR(dragAndFire)) then {
     [_unit, "DefaultAction", _unit getVariable [QGVAR(blockFire), -1]] call EFUNC(common,removeActionEventHandler);
 };
 
@@ -82,7 +82,9 @@ if (_unit getVariable ["ACE_isUnconscious", false]) then {
 
 // Recreate UAV crew (add a frame delay or this may cause the vehicle to be moved to [0,0,0])
 if (_target getVariable [QGVAR(isUAV), false]) then {
-    [{  
+    _target setVariable [QGVAR(isUAV), nil, true];
+
+    [{
         params ["_target"];
         if (!alive _target) exitWith {};
         TRACE_2("restoring uav crew",_target,getPosASL _target);

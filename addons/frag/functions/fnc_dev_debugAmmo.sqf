@@ -28,7 +28,7 @@ private _allMagsConfigs = configProperties [configFile >> "CfgMagazines", "isCla
 private _processedCfgAmmos = [];
 
 {
-    private _ammo = toLower getText (_x >> "ammo");
+    private _ammo = toLowerANSI getText (_x >> "ammo");
     if (_ammo != "" && {!(_ammo in _processedCfgAmmos)}) then {
         _processedCfgAmmos pushBack _ammo;
 
