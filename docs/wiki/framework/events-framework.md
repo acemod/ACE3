@@ -152,7 +152,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |---------- |------------|----------|------|-------------|
 |---------- |------------|----------|------|-------------|
 | `ace_interaction_doorOpeningStarted` | [_house, _door, _animations] | Local | Listen | Called when local unit starts interacting with doors
-| `ace_interaction_doorOpeningStopped` | [] | Local | Listen | Called when local unit stopps interacting with doors
+| `ace_interaction_doorOpeningStopped` | [_house, _door, _animations] | Local | Listen | Called when local unit stopps interacting with doors
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
