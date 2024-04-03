@@ -26,7 +26,6 @@
             <Italian>AA12 (Serpe)</Italian>
             <Japanese>AA12 (ヘビ柄)</Japanese>
             <Russian>AA12 (Змея)</Russian>
-            <French>AA12 (Serpent)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Name">
             <English>Galil ARM</English>
@@ -62,7 +61,6 @@
             <Italian>GLX-160 (Serpe)</Italian>
             <Japanese>GLX 160 (ヘビ柄)</Japanese>
             <Russian>GLX 160 (Змея)</Russian>
-            <French>GLX 160 (Serpent)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Hex_Name">
             <English>GLX 160 (Hex)</English>
@@ -107,6 +105,7 @@
             <Italian>Mk14 Mod 1 EBR (Nero)</Italian>
             <Japanese>Mk14 Mod 1 EBR (ブラック)</Japanese>
             <Russian>Mk14 Mod 1 EBR (Черный)</Russian>
+            <French>Mk14 Mod 1 EBR (Noir)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Snake_Name">
             <English>Mk14 Mod 1 EBR (Snake)</English>
@@ -122,6 +121,7 @@
             <German>Vektor SS-77</German>
             <Japanese>ヴェクター SS-77</Japanese>
             <Russian>Vektor SS-77</Russian>
+            <French>Vektor SS-77</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_AAF_Name">
             <English>Vektor SS-77 (Camo)</English>
@@ -130,6 +130,7 @@
             <Italian>Vektor SS-77 (Mimetica)</Italian>
             <Japanese>ヴェクター SS-77 (迷彩)</Japanese>
             <Russian>Vektor SS-77 (Камуфляж)</Russian>
+            <French>Vektor SS-77 (Camo)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Hex_Name">
             <English>Vektor SS-77 (Hex)</English>
@@ -147,6 +148,7 @@
             <Italian>Vektor SS-77 (Hex Verde)</Italian>
             <Japanese>ヴェクター SS-77 (緑六角形迷彩)</Japanese>
             <Russian>Vektor SS-77 (зеленый гекс)</Russian>
+            <French>Vektor SS-77 (VertHex)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Desert_Name">
             <English>Vektor SS-77 (Desert)</English>
@@ -155,6 +157,7 @@
             <Italian>Vektor SS-77 (Deserto)</Italian>
             <Japanese>ヴェクター SS-77 (砂漠迷彩)</Japanese>
             <Russian>Vektor SS-77 (песочныйt)</Russian>
+            <French>Vektor SS-77 (Désert)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Name">
             <English>Vektor SS-77 Compact</English>
@@ -163,6 +166,7 @@
             <Italian>Vektor SS-77 Compatto</Italian>
             <Japanese>ヴェクター SS-77 コンパクト</Japanese>
             <Russian>Vektor SS-77 Compact</Russian>
+            <French>Vektor SS-77 Compacte</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Snake_Name">
             <English>Vektor SS-77 Compact (Snake)</English>
@@ -179,6 +183,7 @@
             <Italian>FN FAL 50.00 (Legno)</Italian>
             <Japanese>FN FAL 50.00 (森林迷彩)</Japanese>
             <Russian>FN FAL 50.00 (лесной)</Russian>
+            <French>FN FAL 50.00 (Bois)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Wood_Name">
             <English>FN FAL 50.00 GL (Wood)</English>
@@ -187,6 +192,7 @@
             <Italian>FN FAL 50.00 GL (Legno)</Italian>
             <Japanese>FN FAL 50.00 GL (森林迷彩)</Japanese>
             <Russian>FN FAL 50.00 GL (лесной)</Russian>
+            <French>FN FAL 50.00 GL (Bois)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Name">
             <English>FN FAL 50.00</English>
@@ -213,6 +219,7 @@
             <Italian>FN FAL 50.00 (Deserto)</Italian>
             <Japanese>FN FAL 50.00 (砂漠迷彩)</Japanese>
             <Russian>FN FAL 50.00 (песочный)</Russian>
+            <French>FN FAL 50.00 (Désert)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Camo_Name">
             <English>FN FAL 50.00 (Jungle)</English>
@@ -221,6 +228,7 @@
             <Italian>FN FAL 50,00 (Giungla)</Italian>
             <Japanese>FN FAL 50.00 (熱帯迷彩)</Japanese>
             <Russian>FN FAL 50.00 (джунгли)</Russian>
+            <French>FN FAL 50.00 (Jungle)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R4_Name">
             <English>Vektor R4</English>
