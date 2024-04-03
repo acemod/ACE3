@@ -38,6 +38,7 @@
             <Italian>%3Fame%4 aumenta linearmente con la velocità di movimento del soldato. Si rigenera consumando cibo.&lt;br/&gt;&lt;br/&gt;%3Usa:%4&lt;br/&gt;%2Raccogli cibo.&lt;br/&gt;%2Usa [%3%12%4] e scegli %3sopravvivenza%4.&lt;br /&gt;%2Scegli un articolo da mangiare.</Italian>
             <Japanese>%3空腹度%4は兵士の移動速度に比例して増加します。食べ物を食べることで回復します。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2食べ物を持つ。&lt;br/&gt;%2[%3%12%4] を使って%3サバイバル%4を選択。&lt;br/&gt;%2食べたいものを選ぶ。</Japanese>
             <Russian>%3Голод%4 линейно увеличивается со скоростью передвижения солдата. Восстанавливайтесь, употребляя пищу.&lt;br/&gt;&lt;br/&gt;%3 Использование:%4&lt;br/&gt;%2Возьмите еду.&lt;br/&gt;%2Используйте [%3%12%4] и выберите %3Выживание% 4.&lt;br/&gt;%2Выберите продукт для потребления.</Russian>
+            <French>%3La faim%4 augmente linéairement avec la vitesse de déplacement du soldat. Il se régénère en consommant de la nourriture.&lt;br/&gt;&lt;br/&gt;%3Utilisation:%4&lt;br/&gt;%2Ramasser la nourriture.&lt;br/&gt;%2Utilisez [%3%12%4] et sélectionnez %3Survie%4.&lt;br/&gt;%2Choisissez un article à consommer.</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_DisplayName">
             <English>Thirst</English>
@@ -59,6 +60,7 @@
             <Italian>%3Sete%4 aumenta linearmente con la velocità di movimento del soldato. Si rigenera bevendo liquidi.&lt;br/&gt;&lt;br/&gt;%3Usa:%4&lt;br/&gt;%2Raccogli bevanda.&lt;br/&gt;%2Usa [%3%12%4] e scegli %3sopravvivenza%4.&lt;br /&gt;%2Scegli un articolo da bere.</Italian>
             <Japanese>%3喉の渇き%4は兵士の移動速度に比例して増加します。飲み物を飲むことで回復します。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2飲み物を持つ。&lt;br/&gt;%2[%3%12%4] を使って%3サバイバル%4を選択。&lt;br/&gt;%2飲みたいものを選ぶ。</Japanese>
             <Russian>%3Жажда%4 линейно увеличивается со скоростью передвижения солдата. Восстанавливайтесь, употребляя напитки.&lt;br/&gt;&lt;br/&gt;%3 Использование:%4&lt;br/&gt;%2Возьмите напиток.&lt;br/&gt;%2Используйте [%3%12%4] и выберите %3Выживание% 4.&lt;br/&gt;%2Выберите напиток для потребления.</Russian>
+            <French>%3La soif%4 augmente linéairement avec la vitesse de déplacement du soldat. Elle se régénère en buvant des liquides.&lt;br/&gt;&lt;br/&gt;%3Utilisez [%3%12%4] et choisissez %3survival%4.&lt;br /&gt;%2Choisissez un article à boire.</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_DisplayName">
             <English>Medical Treatment</English>
@@ -539,6 +541,7 @@
             <Korean>위치를 삼각측량합니다</Korean>
             <Japanese>三角測量で位置を特定</Japanese>
             <Russian>Передавайте свое местоположение</Russian>
+            <French>Trianguler votre position</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_MapTools_Description">
             <English>The %3Map Tools%4 are a set of tools that allows a soldier to measure distances and angles. Useful for land, and calculating firing solutions for artillery.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Map Tools%4.&lt;br/&gt;%2 The Tool can be moved by dragging with [%3Left-Click%4] while holding [%3ALT%4].</English>
@@ -569,6 +572,7 @@
             <Korean>사거리표</Korean>
             <Japanese>射表</Japanese>
             <Russian>Таблицы диапазонов</Russian>
+            <French>Tables de tir</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_RangeTables_ShortName">
             <English>Get A Firing Solution</English>
@@ -577,6 +581,7 @@
             <Korean>사격 솔루션을 제공합니다</Korean>
             <Japanese>撃ち方の解を得る</Japanese>
             <Russian>Получите расчёт</Russian>
+            <French>Obtenir une solution de tir</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_RangeTables_Description">
             <English>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</English>
@@ -592,6 +597,7 @@
             <Korean>로프</Korean>
             <Japanese>ロープ</Japanese>
             <Russian>Канаты</Russian>
+            <French>Corde</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Ropes_ShortName">
             <English>Tow With Ease</English>
@@ -705,6 +711,7 @@
             <Korean>진입로를 만듭니다</Korean>
             <Japanese>堂々入場する</Japanese>
             <Russian>Создание собственного входа</Russian>
+            <French>Faire son entrée</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Wirecutter_Description">
             <English>%3Wirecutters%4 are a tool that allows a soldier to bypass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%12%4] and select %3Cut Fence%4.</English>
@@ -785,6 +792,7 @@
             <Korean>차량 열쇠</Korean>
             <Japanese>車両キー</Japanese>
             <Russian>Взлом и проникновение</Russian>
+            <French>Clés de véhicule</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_VehicleKey_ShortName">
             <English>Lock/Unlock Vehicles</English>
@@ -793,6 +801,7 @@
             <Korean>차량을 잠그거나 해제합니다</Korean>
             <Japanese>車両のロック/ロック解除</Japanese>
             <Russian>Взлом и проникновение</Russian>
+            <French>Verrouiller/déverrouiller un véhicule</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_VehicleKey_Description">
             <English>%3Vehicle Keys%4 are used to lock/unlock your vehicles. Vehicle keys can exist for the whole side, or keys can be created for a particular vehicle itself.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Vehicle Key%4.&lt;br/&gt;%2Approach the vehicle that the key belongs to.&lt;br/&gt;Use [%3%13%4] and select %3Lock/Unlock Vehicle%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Note:%4&lt;/t&gt; Lockpicks and keys are only available via scripting or ACE Vehicle Key modules.</English>
