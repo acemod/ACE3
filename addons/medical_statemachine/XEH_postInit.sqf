@@ -3,7 +3,7 @@
 ["ace_killed", { // global event
     params ["_unit"];
 
-     // Prevent second ragdoll of uncon units when they're killed
+    // Prevent second ragdoll of uncon units when they're killed
     if (
         IS_UNCONSCIOUS(_unit) && !isAwake _unit // uncon and not ragdolling
         && {isPlayer _unit || GVAR(AIUnconsciousness)}
