@@ -64,7 +64,7 @@ GVAR(isOpeningDoor) = true;
 GVAR(usedScrollWheel) = false;
 
 // Raise local started opening event
-[QGVAR(doorOpeningStarted)] call CBA_fnc_localEvent;
+[QGVAR(doorOpeningStarted), [_house, _door, _animations]] call CBA_fnc_localEvent;
 
 [{
     (_this select 0) params ["_house", "_animations", "_position", "_time", "_frame"];
