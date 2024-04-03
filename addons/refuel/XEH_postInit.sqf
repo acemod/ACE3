@@ -12,10 +12,6 @@
             _vehicle setFuelCargo 0;
             LOG("initPost setFuelCargo");
         };
-        if (_vehicle getVariable [QGVAR(HDEHID), -1] == -1) then {
-            _vehicle setVariable [QGVAR(HDEHID), _vehicle addEventHandler ["HandleDamage", LINKFUNC(handleDamage)]];
-            LOG("initPost add HDEH");
-        };
     }, true, ["Man"], true] call CBA_fnc_addClassEventHandler;
 
     if (isServer) then {
@@ -34,10 +30,6 @@
                     {
                         // terrain fuel pumps don't trigger init and must setFuelCargo on each client
                         _x setFuelCargo 0;
-                        if (isServer) then {
-                            _x addEventHandler ["HandleDamage", LINKFUNC(handleDamage)];
-                            _x setVariable [QGVAR(isTerrainPump), true];
-                        };
                     } forEach _objects;
                 };
             } forEach _positions;
@@ -46,13 +38,9 @@
         // placed in editor static objects don't trigger init but synchronize fuel cargo
         // placed in editor vehicles both trigger init and synchronize fuel cargo
         {
-            if (getFuelCargo _x > 0) then {
+            if (getFuelCargo _x > 0 && {local _x}) then {
                 TRACE_1("allMissionObjects",_x);
-                if (local _x) then {
-                    _x setFuelCargo 0;
-                    LOG("allMissionObjects setFuelCargo");
-                };
-                _x setVariable [QGVAR(HDEHID), _x addEventHandler ["HandleDamage", LINKFUNC(handleDamage)]];
+                _x setFuelCargo 0;
             };
         } forEach allMissionObjects "";
     } else {
@@ -67,19 +55,9 @@
         {
             {
                 _x setFuelCargo 0;
-                _x addEventHandler ["HandleDamage", LINKFUNC(handleDamage)];
-                if (isServer && {!(_x in _refuelMissionObjects)}) then {
-                    _x setVariable [QGVAR(isTerrainPump), true];
-                };
             } forEach (_worldCenter nearObjects [_x, _halfWorldSize]);
         } forEach _baseStaticClasses;
     };
-
-    [QGVAR(setFuelCargo), {
-        params ["_source", "_fuel"];
-        TRACE_2("setFuelCargo event",_fuel,_source);
-        _source setFuelCargo _fuel;
-    }] call CBA_fnc_addEventHandler;
 
     [QGVAR(initSource), LINKFUNC(initSource)] call CBA_fnc_addEventHandler;
 
