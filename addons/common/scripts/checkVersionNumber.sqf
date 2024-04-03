@@ -1,11 +1,11 @@
 // by commy2
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 
 private _aceWhitelist = missionNamespace getVariable ["ACE_Version_Whitelist", []];
 private _files = CBA_common_addons select {
     (_x select [0,3] != "a3_") &&
     {_x select [0,4] != "ace_"} &&
-    {!((toLower _x) in _aceWhitelist)}
+    {!((toLowerANSI _x) in _aceWhitelist)}
 };
 
 private _versions = [];
@@ -99,6 +99,7 @@ if (!isServer) then {
 
         diag_log text _error;
         [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
+        [QGVAR(serverLog), _error] call CBA_fnc_serverEvent;
     };
 
     private _missingAddonServer = false;
@@ -116,6 +117,7 @@ if (!isServer) then {
 
         diag_log text _error;
         [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
+        [QGVAR(serverLog), _error] call CBA_fnc_serverEvent;
     };
 
     private _oldVersionClient = false;
@@ -133,6 +135,7 @@ if (!isServer) then {
 
         diag_log text _error;
         [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
+        [QGVAR(serverLog), _error] call CBA_fnc_serverEvent;
     };
 
     private _oldVersionServer = false;
@@ -150,6 +153,7 @@ if (!isServer) then {
 
         diag_log text _error;
         [QGVAR(systemChatGlobal), _error] call CBA_fnc_globalEvent;
+        [QGVAR(serverLog), _error] call CBA_fnc_serverEvent;
     };
 
     ACE_Version_ClientErrors = [_missingAddon, _missingAddonServer, _oldVersionClient, _oldVersionServer];

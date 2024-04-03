@@ -11,6 +11,8 @@ class CfgPatches {
         authors[] = {"654wak654", "jonpas"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+        ACE_expectedModDir = "@ACE No Uniform Restrictions";
+        ACE_expectedSteamID = "2202413047";
     };
 };
 

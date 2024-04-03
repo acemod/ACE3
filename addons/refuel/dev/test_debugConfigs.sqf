@@ -1,7 +1,7 @@
 // ["vehicleTransportFuel"] call ace_common_fnc_runTests;
 // execVM "z\ace\addons\refuel\dev\test_debugConfigs.sqf";
 
-#include "\z\ace\addons\refuel\script_component.hpp"
+#include "..\script_component.hpp"
 
 private _testPass = true;
 

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Draw progress bar and execute given function if succesful.
@@ -15,7 +15,7 @@
  * None
  *
  * Example:
- * ["myID", true, QPATHTOF(data\icon_group.paa), [1,1,1,1], 0] call ace_gui_fnc_displayIcon;
+ * ["myID", true, QPATHTOF(data\icon_group.paa), [1,1,1,1], 0] call ace_common_fnc_displayIcon;
  *
  * Public: Yes
  */

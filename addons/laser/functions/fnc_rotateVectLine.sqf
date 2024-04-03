@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: ACE-Team
  *
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ace_laser_fnc_rotateVectline
+ * call ace_laser_fnc_rotateVectLine
  *
  * Public: No
  */

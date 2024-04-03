@@ -4,7 +4,7 @@
 
 private _cacheStaticModels = [];
 
-private _vehicleClasses = "isClass _x && (configName _x) isKindOf 'Static'" configClasses (configFile >> "CfgVehicles");
+private _vehicleClasses = "(configName _x) isKindOf 'Static'" configClasses (configFile >> "CfgVehicles");
 
 // Consider static everything vehicle that inherit from Static
 // This include houses (which we don't need), but also walls, that we do
@@ -12,11 +12,11 @@ private _vehicleClasses = "isClass _x && (configName _x) isKindOf 'Static'" conf
     private _model = getText (_x >> "model");
     if (_model != "") then {
         private _array = _model splitString "\";
-        _cacheStaticModels pushBackUnique toLower (_array select ((count _array) - 1));
+        _cacheStaticModels pushBackUnique toLowerANSI (_array select -1);
     };
 } forEach _vehicleClasses;
 
-private _nonAIVehicleClasses = "isClass _x" configClasses (configFile >> "CfgNonAIVehicles");
+private _nonAIVehicleClasses = "true" configClasses (configFile >> "CfgNonAIVehicles");
 
 // Also consider static all object inheriting from bridges
 private _cfgBase = configFile >> "CfgNonAIVehicles";
@@ -24,9 +24,13 @@ private _cfgBase = configFile >> "CfgNonAIVehicles";
     private _model = getText (_x >> "model");
     if (_model != "") then {
         private _array = _model splitString "\";
-        _cacheStaticModels pushBackUnique toLower (_array select ((count _array) - 1));
+        _cacheStaticModels pushBackUnique toLowerANSI (_array select -1);
     };
 } forEach (_nonaivehicleClasses select {(configName _x) isKindOf ["Bridge_base_F", _cfgBase]});
 
 uiNamespace setVariable [QGVAR(cacheStaticModels), compileFinal str _cacheStaticModels];
 TRACE_1("compiled",count _cacheStaticModels);
+
+// force preload of stencil texture to avoid error popup
+//  Warning Message: Cannot load mipmap z\ace\addons\fonts\sairastencilone\ace_stencil64-01.paa
+"Test" getTextWidth ["ACE_Stencil", 0.3];

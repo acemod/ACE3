@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Returns gunner using specified weapon type in vehicle. Only works if all turrets have different weapons.
@@ -19,7 +19,7 @@
 params [["_vehicle", objNull, [objNull]], ["_weapon", "", [""]]];
 
 // on foot
-if (gunner _vehicle == _vehicle && {_weapon in weapons _vehicle || {toLower _weapon in ["throw", "put"]}}) exitWith {gunner _vehicle};
+if (gunner _vehicle == _vehicle && {_weapon in weapons _vehicle || {toLowerANSI _weapon in ["throw", "put"]}}) exitWith {gunner _vehicle};
 
 // inside vehicle
 private _gunner = objNull;

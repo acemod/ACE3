@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg, esteldunedain
  * Get the weather data for the current map
@@ -15,7 +15,7 @@
  * Public: No
  */
 
-private _worldName = toLower worldName;
+private _worldName = toLowerANSI worldName;
 TRACE_1("getting map data",_worldName);
 
 // Set default values

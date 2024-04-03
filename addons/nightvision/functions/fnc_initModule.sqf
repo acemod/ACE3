@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Initializes the settings for the disable NVGs in sight module.

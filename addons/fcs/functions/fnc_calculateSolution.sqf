@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: VKing
  * Calculate FCS solution
@@ -23,7 +23,7 @@ TRACE_4("params",_vehicle,_turret,_distance,_angleTarget);
 private _FCSInitSpeed = [];
 private _FCSMagazines = [];
 private _FCSElevation = [];
-private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
+private _turretConfig = [configOf _vehicle, _turret] call EFUNC(common,getTurretConfigPath);
 
 {
     private _magazine = _x;
@@ -48,10 +48,10 @@ private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _turret
             } count _muzzles;
 
             // Fix the `in` operator being case sensitive and BI fucking up the spelling of their own classnames
-            private _weaponMagazinesCheck = _weaponMagazines apply {toLower _x};
+            private _weaponMagazinesCheck = _weaponMagazines apply {toLowerANSI _x};
 
             // Another BIS fix: ShotBullet simulation uses weapon initSpeed, others ignore it
-            if (toLower _magazine in _weaponMagazinesCheck && {_bulletSimulation == "shotBullet"}) exitWith {
+            if (toLowerANSI _magazine in _weaponMagazinesCheck && {_bulletSimulation == "shotBullet"}) exitWith {
                 private _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
 
                 if (_initSpeedCoef < 0) then {

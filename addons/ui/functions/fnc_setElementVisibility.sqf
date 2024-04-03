@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Setter for toggling advanced element visibility.
@@ -29,7 +29,7 @@ if (_source == "" || {_element == ""}) exitWith {
     WARNING("Source or Element may not be empty strings!");
 };
 
-_element = toLower _element;
+_element = toLowerANSI _element;
 
 // Verify element is bound
 private _cachedElement = GVAR(configCache) getVariable _element;

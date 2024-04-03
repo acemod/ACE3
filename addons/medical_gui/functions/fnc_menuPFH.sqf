@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Handles updating the Medical Menu UI for the current target.
@@ -16,10 +16,13 @@
  */
 
 // Check if menu should stay open for target
-if !([ACE_player, GVAR(target), ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith) && {[ACE_player, GVAR(target)] call FUNC(canOpenMenu)}) then {
+if !(
+    ([ACE_player, GVAR(target), ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith) || {!isNull findDisplay 312}) && // Allow player to look at himself when unconsious and in Zeus
+    {[ACE_player, GVAR(target)] call FUNC(canOpenMenu)}
+) then {
     closeDialog 0;
     // Show hint if distance condition failed
-    if (ACE_player distance GVAR(target) > GVAR(maxDistance)) then {
+    if ((ACE_player distance GVAR(target) > GVAR(maxDistance)) && {vehicle ACE_player != vehicle GVAR(target)}) then {
         [[ELSTRING(medical,DistanceToFar), GVAR(target) call EFUNC(common,getName)], 2] call EFUNC(common,displayTextStructured);
     };
 };
@@ -40,15 +43,15 @@ private _ctrlInjuries = _display displayCtrl IDC_INJURIES;
 
 // Update body image
 private _ctrlBodyImage = _display displayCtrl IDC_BODY_GROUP;
-[_ctrlBodyImage, GVAR(target)] call FUNC(updateBodyImage);
+[_ctrlBodyImage, GVAR(target), GVAR(selectedBodyPart)] call FUNC(updateBodyImage);
 
 // Update activity and quick view logs
 private _ctrlActivityLog = _display displayCtrl IDC_ACTIVITY;
-private _activityLog = GVAR(target) getVariable [QEGVAR(medical,logFile_activity_view), []];
+private _activityLog = GVAR(target) getVariable [MED_LOG_VARNAME("activity"), []];
 [_ctrlActivityLog, _activityLog] call FUNC(updateLogList);
 
 private _ctrlQuickView = _display displayCtrl IDC_QUICKVIEW;
-private _quickView = GVAR(target) getVariable [QEGVAR(medical,logFile_quick_view), []];
+private _quickView = GVAR(target) getVariable [MED_LOG_VARNAME("quick_view"), []];
 [_ctrlQuickView, _quickView] call FUNC(updateLogList);
 
 // Update triage status

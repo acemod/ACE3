@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth de Wet (LH)
  * Checks whether the passed unit is an explosive specialist.
@@ -13,11 +13,11 @@
  * is the unit an EOD <BOOL>
  *
  * Example:
- * isSpecialist = [player] call FUNC(isEOD);
+ * [player] call ace_common_fnc_isEOD
  *
  * Public: Yes
  */
 
 params ["_unit"];
 
-_unit getVariable ["ACE_isEOD", _unit getUnitTrait "explosiveSpecialist"] // return
+(_unit getVariable ["ACE_isEOD", _unit getUnitTrait "explosiveSpecialist"]) in [1, true]

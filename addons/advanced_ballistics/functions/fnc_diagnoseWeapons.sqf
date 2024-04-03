@@ -1,5 +1,5 @@
 #define DEBUG_MODE_FULL
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  *
@@ -68,7 +68,7 @@ for "_i" from 0 to (count _cfgWeapons)-1 do {
                 private _barrelVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _vanillaInitialSpeed] call FUNC(calculateBarrelLengthVelocityShift);
                 private _abInitialSpeed = _vanillaInitialSpeed + _barrelVelocityShift;
                 // --------------------------------------------------
-                
+
                 if (_weapon find "_base" == -1 && _weapon find "_Base" == -1) then {
 #ifdef DEBUG_INIT_SPEEDS
                     _data pushBack [-_forEachIndex, _abInitialSpeed, _magazine, _weapon];

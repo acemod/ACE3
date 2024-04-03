@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Shows or hides the electronic reticle.
@@ -15,6 +15,6 @@
  * Public: No
  */
 
-((GETUVAR(ACE_dlgVector,displayNull)) displayCtrl 1302) ctrlSetText (["", QPATHTOF(rsc\vector_crosshair.paa)] select (_this select 0));
+((GETUVAR(ACE_dlgVector,displayNull)) displayCtrl IDC_CROSSHAIR) ctrlSetText (["", QPATHTOF(rsc\vector_crosshair.paa)] select (_this select 0));
 
 [GVAR(illuminate)] call FUNC(illuminate);

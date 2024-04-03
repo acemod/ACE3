@@ -1,8 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Sets a unit in the unconscious state.
- * For Public Use
  *
  * Arguments:
  * 0: The unit that will be put in an unconscious state <OBJECT>
@@ -17,7 +16,7 @@
  * [bob, true] call ace_medical_fnc_setUnconscious;
  * [player, true, 5, true] call ace_medical_fnc_setUnconscious;
  *
- * Public: yes
+ * Public: Yes
  */
 
 // only run this after the settings are initialized
@@ -39,7 +38,7 @@ if (!local _unit) exitWith {
 };
 
 if (_knockOut isEqualTo IS_UNCONSCIOUS(_unit)) exitWith {
-    WARNING_2("setUnconscious called with no change [Unit %1] [State [%2]", _unit, _knockOut);
+    WARNING_2("setUnconscious called with no change [Unit %1] [State [%2]",_unit,_knockOut);
     false
 };
 
@@ -62,6 +61,7 @@ if (_knockOut) then {
             }, [_unit], _minWaitingTime] call CBA_fnc_waitAndExecute;
         };
         if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
+            TRACE_1("setting lastWakeUpCheck",_minWaitingTime);
             _unit setVariable [QEGVAR(medical,lastWakeUpCheck), CBA_missionTime + _minWaitingTime - SPONTANEOUS_WAKE_UP_INTERVAL];
         };
     };

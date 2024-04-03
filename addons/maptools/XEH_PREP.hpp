@@ -5,6 +5,10 @@ PREP(drawLinesOnRoamer);
 PREP(handleMouseButton);
 PREP(handleMouseMove);
 PREP(isInsideMapTool);
-PREP(openMapGps);
 PREP(openMapGpsUpdate);
 PREP(updateMapToolMarkers);
+
+PREP(canUsePlottingBoard);
+PREP(isInsidePlottingBoard);
+PREP(handlePlottingBoardMarkers);
+PREP(wipeMarkers);

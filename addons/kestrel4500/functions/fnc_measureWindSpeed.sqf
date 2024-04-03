@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Measures the wind speed, stores the information in GVAR(MeasuredWindSpeed) and updates GVAR(ImpellerState)
@@ -10,7 +10,7 @@
  * wind speed <NUMBER>
  *
  * Example:
- * call ace_kestrel4500_fnc_canShow
+ * call ace_kestrel4500_fnc_measureWindSpeed
  *
  * Public: No
  */

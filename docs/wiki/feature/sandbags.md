@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Sandbags
+component: sandbag
 description: Adds stackable sandbags.
 group: feature
 category: equipment
@@ -25,7 +26,3 @@ Note that those sandbags are affected by physics, a rocket will send them flying
 - Self interact <kbd>Ctrl</kbd>+<kbd>⊞&nbsp;Win</kbd> (ACE3 default).
 - Select `Deploy sandbag`.
 - Follow the instruction on screen.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="sandbag" %}

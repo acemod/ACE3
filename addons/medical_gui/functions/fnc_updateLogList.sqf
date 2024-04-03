@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Updates list control with given logs.
@@ -21,7 +21,9 @@ params ["_ctrl", "_logs"];
 lbClear _ctrl;
 
 {
-    _x params ["_message", "_moment", "", "_arguments"];
+    _x params ["_message", "_timeStamp", "_arguments"];
+
+    private _unlocalizedMessage = _message;
 
     // Localize message and arguments
     if (isLocalized _message) then {
@@ -33,5 +35,7 @@ lbClear _ctrl;
     // Format message with arguments
     _message = format ([_message] + _arguments);
 
-    _ctrl lbAdd format ["%1 %2", _moment, _message];
+    private _row = _ctrl lbAdd format ["%1 %2", _timeStamp, _message];
+
+    [QGVAR(logListAppended), [_ctrl, _row, _message, _unlocalizedMessage, _timeStamp, _arguments]] call CBA_fnc_localEvent;
 } forEach _logs;

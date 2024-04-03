@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Get the remaining ammunition amount.
@@ -51,7 +51,7 @@ if (GVAR(supply) == 1) then {
             private _numChars = count (localize LSTRING(Hint_RemainingAmmo));
             private _text = "";
             private _magazines = _truck getVariable QGVAR(magazineSupply);
-            if !(isNil "_magazines") then {
+            if (!isNil "_magazines") then {
                 {
                     _x params ["_magazineClass", "_rounds"];
                     private _line = format ["%1: %2", _magazineClass call FUNC(getMagazineName), _rounds];

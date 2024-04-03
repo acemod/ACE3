@@ -15,7 +15,7 @@ GVAR(canAdjustElevation) = [false, false, false];
 GVAR(canAdjustWindage) = [false, false, false];
 GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
 
     if (!GVAR(enabled)) exitWith {};
 
@@ -24,7 +24,7 @@ GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
     };
 
     // Check inventory when it changes
-    ["loadout", FUNC(inventoryCheck), true] call CBA_fnc_addPlayerEventHandler;
+    ["loadout", LINKFUNC(inventoryCheck), true] call CBA_fnc_addPlayerEventHandler;
 
     // Instantly hide knobs when scoping in
     ["cameraView", {
@@ -34,7 +34,7 @@ GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
             private _layer = [QGVAR(Zeroing)] call BIS_fnc_rscLayer;
             _layer cutText ["", "PLAIN", 0];
 
-            if !(isNil QGVAR(fadePFH)) then {
+            if (!isNil QGVAR(fadePFH)) then {
                 [GVAR(fadePFH)] call CBA_fnc_removePerFrameHandler;
                 GVAR(fadePFH) = nil;
             };
@@ -140,7 +140,7 @@ GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
 
 
     // Register fire event handler
-    ["ace_firedPlayer", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
-    ["ace_firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayer", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayerNonLocal", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
 
 }] call CBA_fnc_addEventHandler;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: joko // Jonas
  * Handles closing the Medical Menu. Called from onUnload event.
@@ -18,5 +18,6 @@
 if (EGVAR(interact_menu,menuBackground) == 1) then {[QGVAR(id), false] call EFUNC(common,blurScreen)};
 if (EGVAR(interact_menu,menuBackground) == 2) then {(uiNamespace getVariable [QEGVAR(interact_menu,menuBackground), displayNull]) closeDisplay 0};
 
+GVAR(pendingReopen) = false;
 GVAR(menuPFH) call CBA_fnc_removePerFrameHandler;
 GVAR(menuPFH) = -1;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Checks if unit can read supply counter. [Only for GVAR(supply) > 0]

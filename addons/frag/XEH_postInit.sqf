@@ -2,10 +2,10 @@
 
 if (isServer) then {
     GVAR(lastFragTime) = -1;
-    [QGVAR(frag_eh), {_this call FUNC(frago);}] call CBA_fnc_addEventHandler;
+    [QGVAR(frag_eh), LINKFUNC(frago)] call CBA_fnc_addEventHandler;
 };
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 
     // Register fire event handler

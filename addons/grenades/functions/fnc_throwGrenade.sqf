@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Adjust the grenades throwing direction and speed to the selected throwing mode. Called from the unified fired EH only for CAManBase
@@ -16,7 +16,7 @@
  */
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
-TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
+TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_vehicle,_gunner,_turret);
 
 if (_weapon != "Throw") exitWith {};
 
@@ -31,7 +31,7 @@ private _config = configFile >> "CfgAmmo" >> _ammo;
 if (local _unit) then {
     // handle priming sound, if present
     private _soundConfig = getArray (configFile >> "CfgAmmo" >> _ammo >> QGVAR(pullPinSound));
-    if !(_soundConfig isEqualTo []) then {
+    if (_soundConfig isNotEqualTo []) then {
         _soundConfig params ["_file", "_volume", "_pitch", "_distance"];
         playSound3D [_file, objNull, false, getPosASL _projectile, _volume, _pitch, _distance];
     };

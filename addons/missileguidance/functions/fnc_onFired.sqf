@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus / nou
  * Fired event handler, starts guidance if enabled for ammo
@@ -71,14 +71,14 @@ if (isNil "_target") then {
     if (!isPlayer _shooter) then {
         // This was an AI shot, lets still guide it on the AI target
         _target = _shooter getVariable [QGVAR(vanilla_target), nil];
-        TRACE_1("Detected AI Shooter!", _target);
+        TRACE_1("Detected AI Shooter!",_target);
     } else {
         private _canUseLock = getNumber (_config >> "canVanillaLock");
         // @TODO: Get vanilla target
         if (_canUseLock > 0 || difficulty < 1) then {
             private _vanillaTarget = cursorTarget;
 
-            TRACE_1("Using Vanilla Locking", _vanillaTarget);
+            TRACE_1("Using Vanilla Locking",_vanillaTarget);
             if (!isNil "_vanillaTarget") then {
                 _target = _vanillaTarget;
             };
@@ -112,47 +112,40 @@ private _args = [_this,
             [
                 getNumber ( _config >> "seekerAngle" ),
                 getNumber ( _config >> "seekerAccuracy" ),
-                getNumber ( _config >> "seekerMaxRange" )
+                getNumber ( _config >> "seekerMaxRange" ),
+                getNumber ( _config >> "seekerMinRange" )
             ],
             [ diag_tickTime, [], [], _lastKnownPosState]
         ];
 
-
-// Run the "onFired" function passing the full guidance args array
-private _onFiredFunc = getText (_config >> "onFired");
+private _onFiredFunc = getText (configFile >> QGVAR(SeekerTypes) >> _seekerType >> "onFired");
 TRACE_1("",_onFiredFunc);
 if (_onFiredFunc != "") then {
     _args call (missionNamespace getVariable _onFiredFunc);
 };
-        
-        
+
+_onFiredFunc = getText (configFile >> QGVAR(AttackProfiles) >> _attackProfile >> "onFired");
+TRACE_1("",_onFiredFunc);
+if (_onFiredFunc != "") then {
+    _args call (missionNamespace getVariable _onFiredFunc);
+};
+
+// Run the "onFired" function passing the full guidance args array
+_onFiredFunc = getText (_config >> "onFired");
+TRACE_1("",_onFiredFunc);
+if (_onFiredFunc != "") then {
+    _args call (missionNamespace getVariable _onFiredFunc);
+};
+
 // Reverse:
 //  _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams"];
 //      _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 //      _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo"];
 //          _targetLaunchParams params ["_target", "_targetPos", "_launchPos"];
 //      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
-//      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange"];
+//      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
 
-
-// Hand off to the guiding unit. We just use local player so local PFH fires for now
-// Laser code needs to give us a shooter for LOBL, or the seeker unit needs to be able to shift locality
-// Based on its homing laser
-// Lasers need to be handled in a special LOAL/LOBL case
-
-//if (isPlayer _shooter) then {
-//    private _guidingUnit = ACE_player;
-//
-//    if (local _guidingUnit) then {
-//        [FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
-//    } else {
-//        [QGVAR(handoff), [_guidingUnit, _args] ] call FUNC(doHandoff);
-//    };
-//} else {
-    // [FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
-//};
-
-[FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
 
 
 /* Clears locking settings

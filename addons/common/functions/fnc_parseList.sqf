@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, Jonpas
  * Makes a list from a string using comma as a delimiter, optionally trim or remove whitespace and check each for object existence.
@@ -43,7 +43,7 @@ if (_checkNil) then {
     private _nilCheckedList = [];
 
     {
-        if !(isNil _x) then {
+        if (!isNil _x) then {
             _nilCheckedList pushBack (missionNamespace getVariable _x);
         };
         false

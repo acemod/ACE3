@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Move unit into given vehicle position or switch to that position if the unit is already inside the vehicle.
@@ -23,12 +23,12 @@
 
 params ["_unit", "_vehicle", "_position", ["_index", -1]];
 
-_position = toLower _position;
+_position = toLowerANSI _position;
 
 // general
 if (!alive _vehicle || {locked _vehicle > 1}) exitWith {false};
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 private _turret = [];
 
 private _isInside = vehicle _unit == _vehicle;
@@ -206,7 +206,7 @@ switch (_position) do {
 // this will execute all config based event handlers. Not script based ones unfortunately, but atleast we don't use any.
 private _fnc_getInEH = {
     // config based getIn EHs are assigned to the soldier, not the vehicle. Why Bis? Why?
-    private _config = configFile >> "CfgVehicles" >> typeOf _unit >> "EventHandlers";
+    private _config = configOf _unit >> "EventHandlers";
 
     if (isClass _config) then {
         //getIn is local effects with global arguments. It doesn't trigger if the unit was already inside and only switched seats

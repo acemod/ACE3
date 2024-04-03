@@ -1,45 +1,61 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Glowbal
- * Use Equipment if any is available. Priority: 1) Medic, 2) Patient. If in vehicle: 3) Crew
+ * Author: Glowbal, mharis001
+ * Uses one of the treatment items. Respects the priority defined by the allowSharedEquipment setting.
+ * Can use items from vehicle inventory if either unit is in a vehicle.
  *
  * Arguments:
  * 0: Medic <OBJECT>
  * 1: Patient <OBJECT>
- * 2: Item <STRING>
+ * 2: Items <ARRAY>
  *
- * ReturnValue:
- * 0: success <BOOL>
- * 1: Unit <OBJECT>
+ * Return Value:
+ * User and Item <ARRAY>
+ *
+ * Example:
+ * [player, cursorObject, ["bandage"]] call ace_medical_treatment_fnc_useItem
  *
  * Public: No
  */
 
-params ["_medic", "_patient", "_item"];
+params ["_medic", "_patient", "_items"];
 
-if (isNil QEGVAR(medical,setting_allowSharedEquipment)) then {
-    EGVAR(medical,setting_allowSharedEquipment) = true;
+if (_medic isEqualTo player && {!isNull findDisplay 312}) exitWith {
+    [_medic, _items select 0]
 };
 
-if (EGVAR(medical,setting_allowSharedEquipment) && {[_patient, _item] call EFUNC(common,hasItem)}) exitWith {
-    ["ace_useItem", [_patient, _item], _patient] call CBA_fnc_targetEvent;
-    [true, _patient]
-};
+scopeName "Main";
 
-if ([_medic, _item] call EFUNC(common,hasItem)) exitWith {
-    ["ace_useItem", [_medic, _item], _medic] call CBA_fnc_targetEvent;
-    [true, _medic]
-};
+private _useOrder = [[_patient, _medic], [_medic, _patient], [_medic]] select GVAR(allowSharedEquipment);
 
-private _return = [false, objNull];
+{
+    private _unit = _x;
+    private _unitVehicle = objectParent _unit;
+    private _unitItems = [_x, 0] call EFUNC(common,uniqueItems);
+    private _unitMagazines = [_x, 2] call EFUNC(common,uniqueItems);
+    private _vehicleItems = itemCargo _unitVehicle; // [] for objNull
+    private _vehicleMagazines = magazineCargo _unitVehicle; // same
 
-if (vehicle _medic != _medic && {vehicle _medic call FUNC(isMedicalVehicle)}) then {
     {
-        if ([_medic, _x] call FUNC(canAccessMedicalEquipment) && {[_x, _item] call EFUNC(common,hasItem)}) exitWith {
-            ["ace_useItem", [_x, _item], _x] call CBA_fnc_targetEvent;
-            _return = [true, _x];
+        switch (true) do {
+            case (_x in _vehicleItems): {
+                _unitVehicle addItemCargoGlobal [_x, -1];
+                [_unit, _x] breakOut "Main";
+            };
+            case (_x in _vehicleMagazines): {
+                [_unitVehicle, _x] call EFUNC(common,adjustMagazineAmmo);
+                [_unit, _x] breakOut "Main";
+            };
+            case (_x in _unitItems): {
+                _unit removeItem _x;
+                [_unit, _x] breakOut "Main";
+            };
+            case (_x in _unitMagazines): {
+                [_unit, _x] call EFUNC(common,adjustMagazineAmmo);
+                [_unit, _x] breakOut "Main";
+            };
         };
-    } forEach crew vehicle _medic;
-};
+    } forEach _items;
+} forEach _useOrder;
 
-_return
+[objNull, ""]

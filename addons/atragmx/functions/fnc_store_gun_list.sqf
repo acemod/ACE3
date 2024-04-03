@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Saves the persistent gun list entries into profileNamespace
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ace_atragmx_fnc_store_user_data
+ * call ace_atragmx_fnc_store_gun_list
  *
  * Public: No
  */

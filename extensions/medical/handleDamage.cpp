@@ -34,7 +34,7 @@ namespace ace {
                 double painToAdd = 0;
                 wounds = GetInjuryInfoFor(typeOfDamage, amountOfDamage, selectionN, woundID);
 
-                stream << "_woundsCreated = [";
+                stream << "[[";
                 for (int i = 0; i < wounds.size(); ++i)
                 {
                     stream << wounds.at(i).AsString();
@@ -45,9 +45,9 @@ namespace ace {
 
                     painToAdd += wounds.at(i).pain;
                 }
-                stream << "];";
+                stream << "],";
 
-                stream << "_painToAdd = " << painToAdd << ";";
+                stream << painToAdd << "]";
 
                 return stream.str();
             }

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Read settins from paramsArray that have a ACE_setting = 1.
@@ -32,7 +32,7 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
 
         // Check if the variable is already defined
         if (isNil _settingName) exitWith {
-            ERROR_1("readSettingsFromParamsArray - param [%1] is not an ace_setting", _settingName);
+            ERROR_1("readSettingsFromParamsArray - param [%1] is not an ace_setting",_settingName);
         };
 
         // The setting is not forced, so update the value
@@ -47,12 +47,12 @@ TRACE_1("Reading missionConfigFile params",_paramsArray);
             case (_settingType == "CHECKBOX"): {
                 _settingValue = _settingValue > 0;
                 _validValue = [_settingName, _settingValue] call CBA_settings_fnc_check;
-            }; 
+            };
             // Will not Handle ARRAY,COLOR,STRING??? (bool/scalar covers most important settings)
         };
 
         if (!_validValue) exitWith {
-            WARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]", _settingName,_settingValue,_settingType);
+            WARNING_3("readSettingsFromParamsArray - param [%1] type not valid [%2] - expected type [%3]",_settingName,_settingValue,_settingType);
         };
 
         if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {

@@ -11,7 +11,7 @@ call FUNC(compileConfigUI);
 GVAR(elementsSet) = call CBA_fnc_createNamespace;
 
 // Attach all event handlers where UI has to be updated
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Initial settings
     [false] call FUNC(setElements);
 
@@ -19,9 +19,8 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
     ["ace_infoDisplayChanged", {
         // Selective UI Advanced
         // Defaults must be set in this EH to make sure controls are activated and advanced settings can be modified
-        private _force = [true, false] select (GVAR(allowSelectiveUI));
         {
-            [_x, missionNamespace getVariable (format [QGVAR(%1), _x]), false, _force] call FUNC(setAdvancedElement);
+            [_x, missionNamespace getVariable (format [QGVAR(%1), _x]), false, !GVAR(allowSelectiveUI)] call FUNC(setAdvancedElement);
         } forEach (allVariables GVAR(configCache));
 
         // Execute local event for when it's safe to modify UI through this API
@@ -33,17 +32,20 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
     }] call CBA_fnc_addEventHandler;
 
     // On changing settings
-    ["ace_settingChanged", {
-        params ["_name"];
+    ["CBA_SettingChanged", {
+        params ["_name", "_value"];
+        if (_name select [0, 7] != "ace_ui_") exitWith {};
 
         if (_name in ELEMENTS_BASIC) then {
             [true] call FUNC(setElements);
         } else {
-            private _nameNoPrefix = toLower (_name select [7]);
+            private _nameNoPrefix = toLowerANSI (_name select [7]);
             private _cachedElement = GVAR(configCache) getVariable _nameNoPrefix;
             if (!isNil "_cachedElement") then {
-                [_nameNoPrefix, missionNamespace getVariable _name, true] call FUNC(setAdvancedElement);
+                [_nameNoPrefix, _value, true] call FUNC(setAdvancedElement);
             };
         };
     }] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
+
+["unit", LINKFUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou
  * Starts tracking a round that will frag.
@@ -60,14 +60,14 @@ if (alive _round) then {
     private _spallTrackID = [];
 
     private _args = [
-        _round, getPosASL _round, velocity _round, _type, diag_frameno, _gun, _doSpall, _spallTrack, _spallTrackID,
+        _round, getPosASL _round, velocity _round, _type, diag_frameno, getPosASL _round, _doSpall, _spallTrack, _spallTrackID,
         getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(skip)),
         getNumber (configFile >> "CfgAmmo" >> _type >> "explosive"),
         getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange"),
         getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(force)),
         getNumber (configFile >> "CfgAmmo" >> _type >> "indirecthit") * (sqrt (getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange")))
     ];
-    TRACE_1("Initializing track", _round);
+    TRACE_1("Initializing track",_round);
     GVAR(objects) pushBack _round;
     GVAR(arguments) pushBack _args;
 

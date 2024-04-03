@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Called at pre-init: Loads all ace_settings and converts them to CBA Settings.
@@ -21,6 +21,9 @@ LOG("Adding ACE_Settings to CBA_settings");
 GVAR(cbaSettings_forcedSettings) = [];
 GVAR(cbaSettings_missionSettings) = [];
 GVAR(settings) = []; // will stay empty - for BWC?
+#ifdef DEBUG_MODE_FULL
+GVAR(settingsMovedToSQF) = [];
+#endif
 
 // Add Event Handlers:
 [QGVAR(setSetting), {
@@ -66,6 +69,13 @@ GVAR(settings) = []; // will stay empty - for BWC?
         false
     } count GVAR(runAtSettingsInitialized);
     GVAR(runAtSettingsInitialized) = nil; //cleanup
+
+    #ifdef DEBUG_MODE_FULL
+    INFO_1("checking settingsMovedToSQF [%1]",count GVAR(settingsMovedToSQF));
+    {
+        if (isNil _x) then { WARNING_1("setting [%1] NOT moved to sqf",_x); };
+    } forEach GVAR(settingsMovedToSQF);
+    #endif
 }] call CBA_fnc_addEventHandler;
 
 private _start = diag_tickTime;
@@ -81,6 +91,10 @@ for "_index" from 0 to (_countOptions - 1) do {
         } else {
             WARNING_1("Setting [%1] - Already defined from somewhere else??",_varName);
         };
+        #ifdef DEBUG_MODE_FULL
+    } else {
+        GVAR(settingsMovedToSQF) pushBack configName _optionEntry;
+        #endif
     };
 };
 
@@ -90,7 +104,7 @@ TRACE_1("Reading settings from missionConfigFile",_countOptions);
 for "_index" from 0 to (_countOptions - 1) do {
     private _optionEntry = _missionSettingsConfig select _index;
     private _settingName = configName _optionEntry;
-    if ((toLower _settingName) in GVAR(cbaSettings_forcedSettings)) then {
+    if ((toLowerANSI _settingName) in GVAR(cbaSettings_forcedSettings)) then {
         WARNING_1("Setting [%1] - Already Forced - ignoring missionConfig",_varName);
     } else {
         if ((isNil _settingName) && {(getNumber (_settingsConfig >> _settingName >> "movedToSQF")) == 0}) then {

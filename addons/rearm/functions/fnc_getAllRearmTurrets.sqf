@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Tuupertunut
  * Returns all turrets in a vehicle.

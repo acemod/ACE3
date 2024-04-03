@@ -1,7 +1,8 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Interface to allow external modules to affect the pain level
+ * Sets the new pain level to the max between the input and current level
  *
  * Arguments:
  * 0: The patient <OBJECT>

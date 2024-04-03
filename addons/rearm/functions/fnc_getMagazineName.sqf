@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Gets a non-ambigious display name for a magazine using displayNameShort (AP/HE)
@@ -25,6 +25,8 @@ if (isNil "_magName") then {
         _displayName = _className;
         WARNING_1("Magazine is missing display name [%1]",_className);
     };
+
+    if ((_displayName select [0,6]) == "[CSW] ") then { _displayName = _displayName select [6]; };
 
     GVAR(magazineNameCache) setVariable [_className, _displayName];
     GVAR(originalMagazineNames) pushBack _displayName;

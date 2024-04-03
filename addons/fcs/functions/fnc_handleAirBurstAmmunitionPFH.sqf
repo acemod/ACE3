@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Handle Air burst ammunition. Called from per frame handler.
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [[array]] call ace_fcs_fnc_handleAirBurstAummunitionPFH
+ * [[array]] call ace_fcs_fnc_handleAirBurstAmmunitionPFH
  *
  * Public: No
  */

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Gets attack profile parameters for first run of hellfire attack profile function
@@ -31,11 +31,10 @@ private _configLaunchHeightClear = getNumber (_attackConfig >> QGVAR(launchHeigh
 private _startingStage = if (_configLaunchHeightClear > 0) then {
     STAGE_LAUNCH; // LOAL-HI / LO
 } else {
-    if (_seekerTargetPos isEqualTo [0,0,0]) then {
-        STAGE_SEEK_CRUISE; // LOAL-DIR
-    } else {
-        STAGE_ATTACK_CRUISE // LOBL
-    };
+    [
+        STAGE_ATTACK_CRUISE,
+        STAGE_SEEK_CRUISE
+    ] select (_seekerTargetPos isEqualTo [0,0,0]);
 };
 
 // Set data in param array

@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-#include "initKeybinds.sqf"
-
 GVAR(currentbulletID) = -1;
 
 GVAR(Protractor) = false;
@@ -11,7 +9,9 @@ GVAR(currentGrid) = 0;
 
 if (!hasInterface) exitWith {};
 
-["ace_settingsInitialized", {
+#include "initKeybinds.inc.sqf"
+
+["CBA_settingsInitialized", {
     //If not enabled, dont't add PFEH
     if (!GVAR(enabled)) exitWith {};
 
@@ -19,13 +19,16 @@ if (!hasInterface) exitWith {};
     [] call FUNC(initializeTerrainExtension);
 
     // Register fire event handler
-    ["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
-    ["ace_firedPlayerNonLocal", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayer", LINKFUNC(handleFired)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayerNonLocal", LINKFUNC(handleFired)] call CBA_fnc_addEventHandler;
+
+    // Register Perframe Handler
+    [LINKFUNC(handleFirePFH), GVAR(simulationInterval)] call CBA_fnc_addPerFrameHandler;
 
     //Add warnings for missing compat PBOs (only if AB is on)
     {
         _x params ["_modPBO", "_compatPBO"];
-        if ((isClass (configFile >> "CfgPatches" >> _modPBO)) && {!isClass (configFile >> "CfgPatches" >> _compatPBO)}) then {
+        if ([_modPBO] call EFUNC(common,isModLoaded) && {!([_compatPBO] call EFUNC(common,isModLoaded))}) then {
             WARNING_2("Weapon Mod [%1] missing ace compat pbo [%2] (from @ace\optionals)",_modPBO,_compatPBO);
         };
     } forEach [
