@@ -63,8 +63,11 @@ GVAR(doorTargetPhase) = _house animationPhase (_animations select 0);
 GVAR(isOpeningDoor) = true;
 GVAR(usedScrollWheel) = false;
 
+// Raise local started opening event
+[QGVAR(doorOpeningStarted), [_house, _door, _animations]] call CBA_fnc_localEvent;
+
 [{
-    (_this select 0) params ["_house", "_animations", "_position", "_time", "_frame"];
+    (_this select 0) params ["_house", "_animations", "_position", "_time", "_frame", "_door"];
 
     if !(GVAR(isOpeningDoor)) exitWith {
         [_this select 1] call CBA_fnc_removePerFrameHandler;
@@ -75,6 +78,9 @@ GVAR(usedScrollWheel) = false;
 
             {_house animate [_x, _phase]; false} count _animations;
         };
+
+        // Raise local stopped opening event
+        [QGVAR(doorOpeningStopped), [_house, _door, _animations]] call CBA_fnc_localEvent;
     };
 
     // check if player moved too far away
@@ -88,4 +94,4 @@ GVAR(usedScrollWheel) = false;
     };
     // do incremental door opening
     {_house animate [_x, GVAR(doorTargetPhase)]; false} count _animations;
-}, 0.1, [_house, _animations, getPosASL ACE_player, CBA_missionTime + 0.2, diag_frameno + 2]] call CBA_fnc_addPerFrameHandler;
+}, 0.1, [_house, _animations, getPosASL ACE_player, CBA_missionTime + 0.2, diag_frameno + 2, _door]] call CBA_fnc_addPerFrameHandler;

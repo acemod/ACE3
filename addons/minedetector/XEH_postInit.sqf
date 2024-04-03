@@ -12,8 +12,8 @@ private _detectableClasses = call (uiNamespace getVariable [QGVAR(detectableClas
 } forEach _detectableClasses;
 TRACE_1("built cache",count allVariables GVAR(detectableClasses));
 
-[QGVAR(enableDetector), FUNC(enableDetector)] call CBA_fnc_addEventHandler;
-[QGVAR(disableDetector), FUNC(disableDetector)] call CBA_fnc_addEventHandler;
+[QGVAR(enableDetector), LINKFUNC(enableDetector)] call CBA_fnc_addEventHandler;
+[QGVAR(disableDetector), LINKFUNC(disableDetector)] call CBA_fnc_addEventHandler;
 
 // Shows detector and mine posistions in 3d when debug is on
 #ifdef DEBUG_MODE_FULL
