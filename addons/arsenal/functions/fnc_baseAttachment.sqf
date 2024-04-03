@@ -26,6 +26,14 @@ private _cfgWeapons = configfile >> "CfgWeapons";
 private _config = _cfgWeapons >> _item;
 _item = configName _config;
 
+// If the switch config entries are inherited, ignore
+if (
+    (inheritsFrom (_config >> "MRT_SwitchItemNextClass") isNotEqualTo (_config >> "MRT_SwitchItemNextClass")) ||
+    {inheritsFrom (_config >> "MRT_SwitchItemPrevClass") isNotEqualTo (_config >> "MRT_SwitchItemPrevClass")}
+) exitWith {
+    _item // return
+};
+
 while {
     _config = _cfgWeapons >> getText (_config >> "MRT_SwitchItemNextClass");
     isClass _config && {_switchableClasses pushBackUnique configName _config != -1}
