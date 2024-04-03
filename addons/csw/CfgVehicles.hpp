@@ -4,7 +4,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class GVAR(deploy) {
                 displayName = CSTRING(PlaceTripod_displayName);
-                condition = QUOTE(call FUNC(canDeployTripod));
+                condition = QUOTE(call FUNC(assemble_canDeployTripod));
                 statement = QUOTE(call FUNC(assemble_deployTripod));
                 exceptions[] = {};
             };
@@ -36,7 +36,7 @@ class CfgVehicles {
                 condition = "true";
                 class GVAR(pickUp) {
                     displayName = CSTRING(Pickup_displayName);
-                    condition = QUOTE(call FUNC(canPickupTripod));
+                    condition = QUOTE(call FUNC(assemble_canPickupTripod));
                     statement = QUOTE(call FUNC(assemble_pickupTripod));
                 };
                 class GVAR(mountWeapon) {

@@ -6,9 +6,9 @@ PREP(ai_handleFired);
 PREP(ai_handleGetIn);
 PREP(ai_reload);
 
-PREP(canDeployTripod);
+PREP(assemble_canDeployTripod);
 PREP(assemble_canDeployWeapon);
-PREP(canPickupTripod);
+PREP(assemble_canPickupTripod);
 PREP(assemble_canPickupWeapon);
 PREP(assemble_deployTripod);
 PREP(assemble_deployWeapon);

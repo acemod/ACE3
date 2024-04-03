@@ -69,12 +69,12 @@
         _player addWeaponGlobal _carryWeaponClassname;
     };
 
-    private _codeCheck = {
+    private _condition = {
         params ["_args"];
         _args params ["_tripod"];
 
         alive _tripod
     };
 
-    [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, _onFailure, LLSTRING(AssembleCSW_progressBar), _codeCheck] call EFUNC(common,progressBar);
+    [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, _onFailure, LLSTRING(AssembleCSW_progressBar), _condition] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;

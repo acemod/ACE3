@@ -5,17 +5,17 @@
  *
  * Arguments:
  * 0: Tripod <OBJECT>
- * 1: Unit <OBJECT>
+ * 1: Unit <OBJECT> (unused)
  *
  * Return Value:
  * Can pickup <BOOL>
  *
  * Example:
- * [cursorObject, player] call ace_csw_fnc_canPickupTripod
+ * [cursorObject, player] call ace_csw_fnc_assemble_canPickupTripod
  *
  * Public: No
  */
 
-params ["_tripod", "_unit"];
+params ["_tripod"];
 
-((secondaryWeapon _unit) == "") && {alive _tripod} // return
+alive _tripod // return
