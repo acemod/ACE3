@@ -3,7 +3,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
     class TransAnimBase;
     class AmovPpneMstpSrasWlnrDnon;
     class States {
-        //Prone Stopped Launcher
+        // Prone Stopped Launcher
         class ACE_LauncherProne: AmovPpneMstpSrasWlnrDnon {
             variantsAI[] = {};
             variantsPlayer[] = {};
@@ -49,7 +49,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
                 "Campaign_Base", 0.02
             };
         };
-        //Prone Stopped Launcher Turn Left
+        // Prone Stopped Launcher Turn Left
         class AmovPpneMstpSrasWlnrDnon_turnL: AmovPpneMstpSrasWlnrDnon {
             actions = "ACE_LauncherProneActions";
             aimPrecision = 5;
@@ -60,7 +60,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
                 "AmovPpneMstpSrasWlnrDnon", 0.02
             };
         };
-        //Prone Stopped Launcher Turn Right
+        // Prone Stopped Launcher Turn Right
         class AmovPpneMstpSrasWlnrDnon_turnR: AmovPpneMstpSrasWlnrDnon {
             actions = "ACE_LauncherProneActions";
             aimPrecision = 5;
@@ -71,7 +71,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
                 "AmovPpneMstpSrasWlnrDnon", 0.02
             };
         };
-        //Prone Stopped Launcher -> Standing Stopped Launcher
+        // Prone Stopped Launcher -> Standing Stopped Launcher
         //class AmovPpneMstpSrasWlnrDnon_AmovPercMstpSrasWlnrDnon: TransAnimBase {
         //    actions = "LauncherStandActions";
         //    duty = 2;
