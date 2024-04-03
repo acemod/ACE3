@@ -8,6 +8,7 @@
             <Italian>AA12</Italian>
             <Japanese>AA12</Japanese>
             <Russian>AA12</Russian>
+            <French>AA12</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Tan_Name">
             <English>AA12 (Sand)</English>
@@ -16,6 +17,7 @@
             <Italian>AA12 (Sabbia)</Italian>
             <Japanese>AA12 (サンド)</Japanese>
             <Russian>AA12 (Песочный)</Russian>
+            <French>AA12 (Sable)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Snake_Name">
             <English>AA12 (Snake)</English>
@@ -24,6 +26,7 @@
             <Italian>AA12 (Serpe)</Italian>
             <Japanese>AA12 (ヘビ柄)</Japanese>
             <Russian>AA12 (Змея)</Russian>
+            <French>AA12 (Serpent)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Name">
             <English>Galil ARM</English>
@@ -32,6 +35,7 @@
             <Italian>Galil ARM</Italian>
             <Japanese>ガリル ARM</Japanese>
             <Russian>Galil ARM</Russian>
+            <French>Galil ARM</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Old_Name">
             <English>Galil ARM (Old)</English>
@@ -40,6 +44,7 @@
             <Italian>Galil ARM (Vecchio)</Italian>
             <Japanese>ガリル ARM (使い古し)</Japanese>
             <Russian>Galil ARM (Старый)</Russian>
+            <French>Galil ARM (Ancien)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Name">
             <English>GLX 160</English>
@@ -48,6 +53,7 @@
             <Italian>GLX-160</Italian>
             <Japanese>GLX 160</Japanese>
             <Russian>GLX 160</Russian>
+            <French>GLX 160</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Snake_Name">
             <English>GLX 160 (Snake)</English>
@@ -56,6 +62,7 @@
             <Italian>GLX-160 (Serpe)</Italian>
             <Japanese>GLX 160 (ヘビ柄)</Japanese>
             <Russian>GLX 160 (Змея)</Russian>
+            <French>GLX 160 (Serpent)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Hex_Name">
             <English>GLX 160 (Hex)</English>
@@ -64,6 +71,7 @@
             <Italian>GLX-160 (Hex)</Italian>
             <Japanese>GLX 160 (六角形迷彩)</Japanese>
             <Russian>GLX 160 (Гекс)</Russian>
+            <French>GLX 160 (Hex)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_GreenHex_Name">
             <English>GLX 160 (Green Hex)</English>
@@ -72,6 +80,7 @@
             <Italian>GLX-160 (Hex Verde)</Italian>
             <Japanese>GLX 160 (緑六角形迷彩)</Japanese>
             <Russian>GLX 160 (Зеленый Гекс)</Russian>
+            <French>GLX 160 (Vert Hex)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Camo_Name">
             <English>GLX 160 (Camo)</English>
@@ -80,6 +89,7 @@
             <Italian>GLX-160 (Mimetica)</Italian>
             <Japanese>GLX 160 (迷彩)</Japanese>
             <Russian>GLX 160 (Камуфляж)</Russian>
+            <French>GLX 160 (Camo)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Tan_Name">
             <English>GLX 160 (Sand)</English>
@@ -88,6 +98,7 @@
             <Italian>GLX-160 (Sabbia)</Italian>
             <Japanese>GLX 160 (サンド)</Japanese>
             <Russian>GLX 160 (Песочный)</Russian>
+            <French>GLX 160 (Sable)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Black_Name">
             <English>Mk14 Mod 1 EBR (Black)</English>
@@ -127,6 +138,7 @@
             <Italian>Vektor SS-77 (Hex)</Italian>
             <Japanese>ヴェクター SS-77 (六角形迷彩)</Japanese>
             <Russian>Vektor SS-77 (гекс)</Russian>
+            <French>Vektor SS-77 (Hex)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_GreenHex_Name">
             <English>Vektor SS-77 (Green Hex)</English>
@@ -183,6 +195,7 @@
             <Italian>FN FAL 50.00</Italian>
             <Japanese>FN FAL 50.00</Japanese>
             <Russian>FN FAL 50.00</Russian>
+            <French>FN FAL 50.00</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Name">
             <English>FN FAL 50.00 GL</English>
@@ -191,6 +204,7 @@
             <Italian>FN FAL 50.00 GL</Italian>
             <Japanese>FN FAL 50.00 GL</Japanese>
             <Russian>FN FAL 50.00 GL</Russian>
+            <French>FN FAL 50.00 GL</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Desert_Name">
             <English>FN FAL 50.00 (Desert)</English>
@@ -215,6 +229,7 @@
             <Italian>Vektor R4</Italian>
             <Japanese>ヴェクター R5</Japanese>
             <Russian>Vektor R4</Russian>
+            <French>Vektor R4</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Name">
             <English>Vektor R5 Carbine</English>
@@ -223,6 +238,7 @@
             <Italian>Vektor R5 Carabina</Italian>
             <Japanese>ヴェクター R5 カービン</Japanese>
             <Russian>Vektor R5 Carbine</Russian>
+            <French>Vektor R5 Carbine</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Name">
             <English>Vektor R5 Carbine GL</English>
@@ -231,6 +247,7 @@
             <Italian>Vektor R5 Carabina GL</Italian>
             <Japanese>ヴェクター R5 カービン GL</Japanese>
             <Russian>Vektor R5 Carbine GL</Russian>
+            <French>Vektor R5 Carbine GL</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Snake_Name">
             <English>Vektor R5 Carbine (Snake)</English>
