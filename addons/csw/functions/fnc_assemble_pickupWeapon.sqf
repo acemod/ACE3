@@ -106,6 +106,7 @@
 
     private _condition = {
         params ["_args"];
+        _args params ["_staticWeapon"];
         ((crew _staticWeapon) isEqualTo []) && (alive _staticWeapon)
     };
 
