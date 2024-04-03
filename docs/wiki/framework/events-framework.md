@@ -146,6 +146,14 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |---------- |------------|----------|------|-------------|
 | `ace_medical_treatment_fullHealLocalMod` | [_patient] | Local | Listen | Called before a local unit is fully healed, mods can listen and apply their own healing logic
 
+### 2.15 Interaction (`ace_interaction`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+|---------- |------------|----------|------|-------------|
+| `ace_interaction_doorOpeningStarted` | [_house, _door, _animations] | Local | Listen | Called when local unit starts interacting with doors
+| `ace_interaction_doorOpeningStopped` | [] | Local | Listen | Called when local unit stopps interacting with doors
+
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
 
