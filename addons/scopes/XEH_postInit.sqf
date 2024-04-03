@@ -24,7 +24,7 @@ GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
     };
 
     // Check inventory when it changes
-    ["loadout", FUNC(inventoryCheck), true] call CBA_fnc_addPlayerEventHandler;
+    ["loadout", LINKFUNC(inventoryCheck), true] call CBA_fnc_addPlayerEventHandler;
 
     // Instantly hide knobs when scoping in
     ["cameraView", {
@@ -140,7 +140,7 @@ GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
 
 
     // Register fire event handler
-    ["ace_firedPlayer", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
-    ["ace_firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayer", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayerNonLocal", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
 
 }] call CBA_fnc_addEventHandler;

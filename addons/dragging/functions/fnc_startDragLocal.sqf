@@ -31,13 +31,16 @@ if !(_target getVariable [QGVAR(ignoreWeightDrag), false]) then {
 
 // Exit if object weight is over global var value
 if (_weight > GETMVAR(ACE_maxWeightDrag,1E11)) exitWith {
+    // Release claim on object
+    [objNull, _target, true] call EFUNC(common,claim);
+
     [LLSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
 private _primaryWeapon = primaryWeapon _unit;
 
 // Add a primary weapon if the unit has none
-if !(GVAR(dragAndFire)) then {
+if (!GVAR(dragAndFire)) then {
     if (_primaryWeapon == "") then {
         _unit addWeapon "ACE_FakePrimaryWeapon";
         _primaryWeapon = "ACE_FakePrimaryWeapon";
@@ -93,7 +96,7 @@ if (_target isKindOf "CAManBase") then {
 // Prevents dragging and carrying at the same time
 _unit setVariable [QGVAR(isDragging), true, true];
 
-[FUNC(startDragPFH), 0.2, [_unit, _target, CBA_missionTime + 5]] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(startDragPFH), 0.2, [_unit, _target, CBA_missionTime + 5]] call CBA_fnc_addPerFrameHandler;
 
 // Disable collisions by setting the physx mass to almost zero
 private _mass = getMass _target;

@@ -2,7 +2,7 @@
 
 [] call FUNC(initItemContextMenu);
 
-addUserActionEventHandler ["headlights", "Deactivate", FUNC(onLightToggled)];
+addUserActionEventHandler ["headlights", "Deactivate", LINKFUNC(onLightToggled)];
 
 ["ACE3 Equipment", QGVAR(hold), LLSTRING(MomentarySwitch), {
     ACE_player action ["GunLightOn", ACE_player];

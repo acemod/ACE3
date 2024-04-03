@@ -23,7 +23,7 @@
     private _secondaryWeaponClassname = secondaryWeapon _player;
     // handle loaded launchers which can become csw like CUP Metis
     private _secondaryWeaponMagazine = secondaryWeaponMagazine _player param [0, ""];
-    _player removeWeaponGlobal (secondaryWeapon _player);
+    _player removeWeaponGlobal _secondaryWeaponClassname;
 
     private _onFinish = {
         params ["_args"];
@@ -75,5 +75,5 @@
     };
 
     private _deployTime = getNumber(configFile >> "CfgWeapons" >> _secondaryWeaponClassname >> QUOTE(ADDON) >> "deployTime");
-    [TIME_PROGRESSBAR(_deployTime), [_player, _secondaryWeaponClassname, _secondaryWeaponMagazine], _onFinish, _onFailure, localize LSTRING(PlaceTripod_progressBar)] call EFUNC(common,progressBar);
+    [TIME_PROGRESSBAR(_deployTime), [_player, _secondaryWeaponClassname, _secondaryWeaponMagazine], _onFinish, _onFailure, LLSTRING(PlaceTripod_progressBar)] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;

@@ -128,8 +128,8 @@ class CfgVehicles {
         };
     };
 
-    class AT_01_base_F;
-    class CUP_Metis_Base: AT_01_base_F {
+    class StaticATWeapon;
+    class CUP_Metis_Base: StaticATWeapon {
         class ace_csw {
             enabled = 1;
             proxyWeapon = "CUP_proxy_AT13";
@@ -142,7 +142,6 @@ class CfgVehicles {
         };
     };
 
-    class StaticATWeapon;
     class CUP_TOW_TriPod_base: StaticATWeapon {
         class ace_csw {
             enabled = 1;
