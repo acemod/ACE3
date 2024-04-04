@@ -90,9 +90,11 @@ private _fnc_check = {
 
     // Check for client missing addons, server missing addons, client outdated addons and server outdated addons
     private _clientErrors = [];
+    private _isMissingItems = false;
     private _errorLog = [];
+    private _header = "";
     private _errorMsg = "";
-    private _count = 0;
+    private _count = -1;
 
     #define DISPLAY_NUMBER_ADDONS (10 + 1) // +1 to account for header
 
@@ -100,17 +102,16 @@ private _fnc_check = {
         _x params ["_items", "_string"];
 
         // Check if something is either missing or outdated
-        private _isMissingItems = _items isNotEqualTo [];
+        _isMissingItems = _items isNotEqualTo [];
 
         if (_isMissingItems) then {
             // Generate error message
-            _errorLog = [format ["[ACE] %1: ERROR %2 addon(s): ", _client, _string]];
-
-            _errorLog append _items;
+            _errorLog = +_items;
+            _header = format ["[ACE] %1: ERROR %2 addon(s): ", _client, _string];
 
             // Don't display all missing items, as they are logged
-            _errorMsg = (_errorLog select [0, DISPLAY_NUMBER_ADDONS]) joinString ", ";
-            _errorLog = _errorLog joinString ", ";
+            _errorMsg = _header + ((_errorLog select [0, DISPLAY_NUMBER_ADDONS]) joinString ", ");
+            _errorLog = _header + (_errorLog joinString ", ");
 
             _count = count _items;
 
@@ -118,10 +119,32 @@ private _fnc_check = {
                 _errorMsg = _errorMsg + format [", and %1 more.", _count - DISPLAY_NUMBER_ADDONS];
             };
 
-            // Log and display error messages
-            diag_log text _errorLog;
-            [QGVAR(serverLog), _errorLog] call CBA_fnc_serverEvent;
-            [QGVAR(systemChatGlobal), _errorMsg] call CBA_fnc_globalEvent;
+            // Wait until in briefing screen
+            [{
+                getClientStateNumber >= 9 // "BRIEFING SHOWN"
+            }, {
+                params ["_errorLog", "_errorMsg"];
+
+                // Log and display error messages
+                diag_log text _errorLog;
+                [QGVAR(serverLog), _errorLog] call CBA_fnc_serverEvent;
+                [QGVAR(systemChatGlobal), _errorMsg] call CBA_fnc_globalEvent;
+
+                // Wait until after map screen
+                [{
+                    !isNull (call BIS_fnc_displayMission)
+                }, {
+                    params ["_errorMsg", "_timeOut"];
+
+                    // If the briefing screen was shown for less than 5 seconds, display the error message again, but locally
+                    if (_timeOut < CBA_missionTime) exitWith {};
+
+                    // Make sure systemChat is ready by waiting a bit
+                    [{
+                        systemChat _this;
+                    }, _errorMsg, 1] call CBA_fnc_waitAndExecute;
+                }, [_errorMsg, CBA_missionTime + 5]] call CBA_fnc_waitUntilAndExecute;
+            }, [_errorLog, _errorMsg]] call CBA_fnc_waitUntilAndExecute;
         };
 
         _clientErrors pushBack _isMissingItems;

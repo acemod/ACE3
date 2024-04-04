@@ -71,14 +71,14 @@ if (!isServer) then {
 
             ERROR(_error);
 
+            _errorMsg = parseText format ["<t align='center'>%1</t>", _errorMsg];
+
             // Warn
             if (_mode < 2) then {
-                _errorMsg = composeText [lineBreak, parseText format ["<t align='center'>%1</t>", _errorMsg]];
-
                 private _rscLayer = "ACE_RscErrorHint" call BIS_fnc_rscLayer;
                 _rscLayer cutRsc ["ACE_RscErrorHint", "PLAIN", 0, true];
 
-                (uiNamespace getVariable "ACE_ctrlErrorHint") ctrlSetStructuredText _errorMsg;
+                (uiNamespace getVariable "ACE_ctrlErrorHint") ctrlSetStructuredText composeText [lineBreak, _errorMsg];
 
                 if (_mode == 0) then {
                     [{
@@ -88,11 +88,7 @@ if (!isServer) then {
                 };
             } else {
                 // Kick
-                [{alive player}, {
-                    TRACE_2("Player is alive, showing msg and exiting",time,_this);
-                    private _errorMsg = composeText [parseText format ["<t align='center'>%1</t>", _this]];
-                    ["[ACE] ERROR", _errorMsg] call FUNC(errorMessage);
-                }, _errorMsg] call CBA_fnc_waitUntilAndExecute;
+                ["[ACE] ERROR", composeText [_errorMsg]] call FUNC(errorMessage);
             };
         };
     }, [_mode]] call CBA_fnc_addEventHandlerArgs;
