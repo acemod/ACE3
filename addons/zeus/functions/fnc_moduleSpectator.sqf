@@ -32,7 +32,7 @@ TRACE_1("params",_this);
 [_visions, [-2, -1, 0, 1, 2, 3, 4, 5, 6, 7] - _visions] call EFUNC(spectator,updateVisionModes);
 
 // Make unit spectator (close Zeus camera if open)
-if !(isNull curatorCamera) then {
+if (!isNull curatorCamera) then {
     (findDisplay 312) closeDisplay 2;
 };
 

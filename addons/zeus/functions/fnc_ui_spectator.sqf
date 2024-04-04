@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Spectator" Zeus module display.
@@ -13,7 +14,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 #define SIDE_IDCs [92540, 92541, 92542, 92543]
 #define CAMERA_IDCs [92550, 92551, 92552]
@@ -182,7 +182,7 @@ private _fnc_onVisionSelection = {
     // Handle all checked/unchecked
     private _allCheckboxes = VISION_IDCs apply {cbChecked (_display displayCtrl _x)};
 
-    if (({_x isEqualTo _state} count _allCheckboxes) isEqualTo 4) then {
+    if (_allCheckboxes isEqualTo [_state, _state, _state, _state]) then {
         (_display displayCtrl 92557) cbSetChecked _state;
     };
 };
