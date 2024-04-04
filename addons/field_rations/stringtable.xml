@@ -31,6 +31,7 @@
             <Korean>ACE 전투식량 HUD</Korean>
             <Spanish>ACE HUD de Raciones de campo</Spanish>
             <Portuguese>ACE HUD de Rações de Campo</Portuguese>
+            <French>ACE Rations de terrain HUD</French>
         </Key>
         <Key ID="STR_ACE_Field_Rations_IGUI_Description">
             <English>Indicates current hunger and thirst status.</English>
@@ -78,6 +79,7 @@
             <Korean>먹기/마시기</Korean>
             <Spanish>Comer/Beber</Spanish>
             <Portuguese>Comer/Beber</Portuguese>
+            <French>Manger/Boire</French>
         </Key>
         <Key ID="STR_ACE_Field_Rations_Enabled_Description">
             <English>Enable/Disable Field Rations</English>
@@ -177,6 +179,7 @@
             <Korean>갈증 해소</Korean>
             <Spanish>Sed saciada</Spanish>
             <Portuguese>Sede saciada</Portuguese>
+            <French>Soif étanchée</French>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ThirstQuenched_Description">
             <English>Coefficient for the amount of thirst quenched from drinking.</English>
@@ -191,6 +194,7 @@
             <Korean>마심으로써 갈증이 얼마나 해소되는지를 정합니다</Korean>
             <Spanish>Coeficiente del saciamiento de sed por beber.</Spanish>
             <Portuguese>Coeficiente para a quantidade de sede saciada por beber.</Portuguese>
+            <French>Coefficient déterminant la quantité de soif étanchée par la boisson.</French>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HungerSatiated_DisplayName">
             <English>Hunger Satiated</English>
@@ -205,6 +209,7 @@
             <Korean>배부름</Korean>
             <Spanish>Hambre saciada</Spanish>
             <Portuguese>Fome saciada</Portuguese>
+            <French>Faim rassasiée</French>
         </Key>
         <Key ID="STR_ACE_Field_Rations_HungerSatiated_Description">
             <English>Coefficient for the amount of hunger satiated from eating.</English>
@@ -219,6 +224,7 @@
             <Korean>밥을 먹어서 배고픔이 얼마나 해결되는지를 정합니다</Korean>
             <Spanish>Coeficiente del saciamiento del hambre por comer.</Spanish>
             <Portuguese>Coeficiente para a quantidade de fome saciada por comer.</Portuguese>
+            <French>Coefficient déterminant la quantité de faim satisfaite en mangeant.</French>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSourceActions_DisplayName">
             <English>Water Source Actions</English>
@@ -232,6 +238,7 @@
             <Korean>물 근처 행동</Korean>
             <Spanish>Acciones para suministros de agua</Spanish>
             <Portuguese>Ações para suprimentos de água</Portuguese>
+            <French>Interactions sur les sources d'eau</French>
         </Key>
         <Key ID="STR_ACE_Field_Rations_WaterSourceActions_Description">
             <English>Controls what actions are available on water sources.</English>
@@ -245,6 +252,7 @@
             <Korean>물가에서 어떤 행동을 취할지 정합니다</Korean>
             <Spanish>Controla qué acciones están disponibles para los suministros de agua.</Spanish>
             <Portuguese>Controla quais ações estão disponíveis para os suprimentos de água.</Portuguese>
+            <French>Déterminer les stocks disponibles dans les sources d'eau.</French>
         </Key>
         <Key ID="STR_ACE_Field_Rations_RefillOnly">
             <English>Refill Only</English>
