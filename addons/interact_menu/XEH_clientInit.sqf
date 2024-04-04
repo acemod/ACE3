@@ -3,7 +3,7 @@
 if (!hasInterface) exitWith {};
 
 // Wait until player controls (man,vehicle or uav) a thing before compiling the menu
-GVAR(controllableSelfActionsAdded) = [] call CBA_fnc_createNamespace;;
+GVAR(controllableSelfActionsAdded) = [] call CBA_fnc_createNamespace;
 DFUNC(newControllableObject) = {
     params ["_object"];
     private _type = typeOf _object;
