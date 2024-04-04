@@ -23,7 +23,7 @@ params ["_control"];
 
 private _display = ctrlParent _control;
 private _ctrlButtonOK = _display displayCtrl 1; // IDC_OK
-private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+private _logic = missionNamespace getVariable ["BIS_fnc_initCuratorAttributes_target", objNull];
 TRACE_1("Logic Object",_logic);
 
 _control ctrlRemoveAllEventHandlers "SetFocus";
@@ -45,7 +45,7 @@ switch (false) do {
     case (["ace_spectator"] call EFUNC(common,isModLoaded)): {
         [LSTRING(RequiresAddon)] call _fnc_errorAndClose;
     };
-    case !(isNull _unit): {
+    case (!isNull _unit): {
         [LSTRING(NothingSelected)] call _fnc_errorAndClose;
     };
     case (_unit isKindOf "CAManBase"): {
@@ -77,10 +77,10 @@ private _fnc_onSideSelection = {
 
     // Add or remove from spectatable sides and update color and scale
     if (_selectedSide in _sides) then {
-        SETVAR(_display,spectateSides,_sides - [_selectedSide]);
+        _display setVariable [QGVAR(spectateSides), _sides - [_selectedSide]];
         _color set [3, 0.5];
     } else {
-        SETVAR(_display,spectateSides,_sides + [_selectedSide]);
+        _display setVariable [QGVAR(spectateSides), _sides + [_selectedSide]];
         _color set [3, 1];
         _scale = 1.2;
     };
@@ -94,7 +94,7 @@ private _activeSide = [east, west, independent, civilian] find _side;
 
 // Handle sides other than default four (sideEnemy)
 if (_activeSide != -1) then {
-    SETVAR(_display,spectateSides,[_activeSide]);
+    _display setVariable [QGVAR(spectateSides), [_activeSide]];
 };
 
 {
@@ -130,9 +130,9 @@ private _fnc_onModesSelection = {
 
     // Add or remove from camera modes and update color and scale
     if (_selectedMode in _modes) then {
-        SETVAR(_display,cameraModes,_modes - [_selectedMode]);
+        _display setVariable [QGVAR(cameraModes), _modes - [_selectedMode]];
     } else {
-        SETVAR(_display,cameraModes,_modes + [_selectedMode]);
+        _display setVariable [QGVAR(cameraModes), _modes + [_selectedMode]];
         _color set [3, 1];
         _scale = 1.2;
     };
@@ -142,8 +142,8 @@ private _fnc_onModesSelection = {
 };
 
 // Use setting as default since global variable will change
-private _availableModes = [[0,1,2], [1,2], [0], [1], [2]] select EGVAR(spectator,restrictModes);
-SETVAR(_display,cameraModes,_availableModes);
+private _availableModes = [[0, 1, 2], [1, 2], [0], [1], [2]] select EGVAR(spectator,restrictModes);
+_display setVariable [QGVAR(cameraModes), _availableModes];
 
 {
     private _ctrl = _display displayCtrl _x;
@@ -174,9 +174,9 @@ private _fnc_onVisionSelection = {
 
     // Add or remove from vision modes
     if (_state) then {
-        SETVAR(_display,visionModes,_visions + [_selectedVision]);
+        _display setVariable [QGVAR(visionModes), _visions + [_selectedVision]];
     } else {
-        SETVAR(_display,visionModes,_visions - [_selectedVision]);
+        _display setVariable [QGVAR(visionModes), _visions - [_selectedVision]];
     };
 
     // Handle all checked/unchecked
@@ -189,7 +189,7 @@ private _fnc_onVisionSelection = {
 
 // Use setting as default since global variable will change
 private _availableVisions = [[-2,-1,0,1], [-2,-1], [-2,0,1], [-2]] select EGVAR(spectator,restrictVisions);
-SETVAR(_display,visionModes,_availableVisions);
+_display setVariable [QGVAR(visionModes), _availableVisions];
 
 {
     private _ctrl = _display displayCtrl _x;
@@ -209,7 +209,7 @@ private _fnc_onVisionsAll = {
     if (isNull _display) exitWith {};
 
     // Convert to boolean since EH returns state as 0 or 1
-    private _state = [false, true] select _state;
+    _state = _state == 1;
 
     // Set state of all checkboxes
     {
@@ -218,7 +218,7 @@ private _fnc_onVisionsAll = {
 
     // Store new visions mode setting
     private _setting = [[], [-2, -1, 0, 1]] select _state;
-    SETVAR(_display,visionModes,_setting);
+    _display setVariable [QGVAR(visionModes), _setting];
 };
 
 private _allCheckbox = _display displayCtrl 92557;
