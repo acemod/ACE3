@@ -6,7 +6,7 @@
     // Prevent second ragdoll of uncon units when they're killed
     if (
         IS_UNCONSCIOUS(_unit) && !isAwake _unit // uncon and not ragdolling
-        && {isPlayer _unit || GVAR(AIUnconsciousness)}
+        && {isPlayer _unit || {_unit getVariable [QGVAR(AIUnconsciousness), GVAR(AIUnconsciousness)]}}
     ) then {
         _unit enableSimulation false;
         [{_this enableSimulation true}, _unit, 2] call CBA_fnc_waitAndExecute;
