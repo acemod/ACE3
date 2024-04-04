@@ -2,12 +2,12 @@
 
 #include "script_component.hpp"
 
-["ace_flashbangExploded", {_this call FUNC(flashbangExplosionEH)}] call CBA_fnc_addEventHandler;
+["ace_flashbangExploded", LINKFUNC(flashbangExplosionEH)] call CBA_fnc_addEventHandler;
 
 // Register fired event handlers
-["ace_firedPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
-["ace_firedPlayerNonLocal", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
-["ace_firedNonPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+["ace_firedPlayer", LINKFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+["ace_firedPlayerNonLocal", LINKFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+["ace_firedNonPlayer", LINKFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 

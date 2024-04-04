@@ -58,8 +58,7 @@ if (GVAR(supply) == 1) then {
                     _numChars = _numChars max (count _line);
                     _text = format ["%1<br/>%2", _text, _line];
                     _supply = _supply + 0.5;
-                    false
-                } count _magazines;
+                } forEach _magazines;
             };
             if (_supply > 1.5) then {
                 [[LSTRING(Hint_RemainingAmmo), _text], _supply, _unit, (_numChars/2.9)] call EFUNC(common,displayTextStructured);
