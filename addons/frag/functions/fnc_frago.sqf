@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou
  * Server func to create the fragmentation for a round.
@@ -95,7 +95,7 @@ private _fragArcs = [];
 _fragArcs set [360, 0];
 
 private _doRandom = true;
-if (!(_objects isEqualTo [])) then {
+if (_objects isNotEqualTo []) then {
     if (GVAR(reflectionsEnabled)) then {
         [_lastPos, _shellType] call FUNC(doReflections);
     };
@@ -144,7 +144,7 @@ if (!(_objects isEqualTo [])) then {
                     private _vel = _vec vectorMultiply _fp;
 
                     private _fragObj = (selectRandom _fragTypes) createVehicleLocal [0,0,10000];
-                    // TRACE_4("targeted",_fp, typeOf _fragObj,_lastPos vectorDistance _targetPos,typeOf _x);
+                    // TRACE_4("targeted",_fp,typeOf _fragObj,_lastPos vectorDistance _targetPos,typeOf _x);
                     _fragObj setPosASL _lastPos;
                     _fragObj setVectorDir _vec;
                     _fragObj setVelocity _vel;

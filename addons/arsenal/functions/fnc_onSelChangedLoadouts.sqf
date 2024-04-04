@@ -1,12 +1,13 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
  * Handles selection changes on loadouts panel.
  *
  * Arguments:
- * 0: Loadouts panel control <CONTROL>
- * 1: Loadouts panel selection <SCALAR>
+ * 0: Arsenal display <DISPLAY>
+ * 1: Loadouts panel control <CONTROL>
+ * 2: Currently selected loadout's index <NUMBER>
  *
  * Return Value:
  * None
@@ -23,74 +24,76 @@ private _deleteButtonCtrl = _display displayCtrl IDC_buttonDelete;
 private _renameButtonCtrl = _display displayCtrl IDC_buttonRename;
 private _textEditBoxCtrl= _display displayCtrl IDC_textEditBox;
 
+// If nothing selected, disable all buttons
 if (_curSel == -1) exitWith {
-
     if (GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts) then {
         _saveButtonCtrl ctrlEnable false;
         _saveButtonCtrl ctrlCommit 0;
     };
 
-    _shareButtonCtrl ctrlSetText (localize LSTRING(buttonSharePrivateText));
+    _shareButtonCtrl ctrlSetText LLSTRING(buttonSharePrivateText);
 
     {
         _x ctrlEnable false;
         _x ctrlCommit 0;
-    } foreach [_shareButtonCtrl, _loadButtonCtrl, _deleteButtonCtrl, _renameButtonCtrl];
+    } forEach [_shareButtonCtrl, _loadButtonCtrl, _renameButtonCtrl, _deleteButtonCtrl];
 };
 
 switch (GVAR(currentLoadoutsTab)) do {
-
+    // Local loadouts
     case IDC_buttonMyLoadouts: {
-
+        // Enable shared loadouts if option is enabled and MP
         _shareButtonCtrl ctrlEnable (GVAR(allowSharedLoadouts) && {isMultiplayer});
         _shareButtonCtrl ctrlCommit 0;
 
-        _loadButtonCtrl ctrlEnable true;
-        _loadButtonCtrl ctrlCommit 0;
-
-        _shareButtonCtrl ctrlSetText ( [
-            localize LSTRING(buttonSharePrivateText),
-            localize LSTRING(buttonSharePublicText)
+        // Rename share button, depending if it's already shared or not
+        _shareButtonCtrl ctrlSetText ([
+            LLSTRING(buttonSharePrivateText),
+            LLSTRING(buttonSharePublicText)
         ] select ((_control lnbValue [_curSel, 0]) == 1));
 
+        // Enable all other buttons
         {
             _x ctrlEnable true;
             _x ctrlCommit 0;
-        } foreach [_renameButtonCtrl, _deleteButtonCtrl];
+        } forEach [_loadButtonCtrl, _renameButtonCtrl, _deleteButtonCtrl];
 
         _textEditBoxCtrl ctrlSetText (_control lnbText [_curSel, 1]);
     };
-
+    // Default loadouts
     case IDC_buttonDefaultLoadouts: {
-
+        // Enable saving and loading for everyone
         {
             _x ctrlEnable true;
             _x ctrlCommit 0;
-        } foreach [_saveButtonCtrl, _loadButtonCtrl];
+        } forEach [_saveButtonCtrl, _loadButtonCtrl];
 
+        // Disable sharing button
         _shareButtonCtrl ctrlEnable false;
         _shareButtonCtrl ctrlCommit 0;
 
+        // Enable delete and renaming button if in 3DEN
         {
-            _x ctrlEnable (is3DEN);
+            _x ctrlEnable (call FUNC(canEditDefaultLoadout));
             _x ctrlCommit 0;
-        } foreach [_deleteButtonCtrl, _renameButtonCtrl];
+        } forEach [_renameButtonCtrl, _deleteButtonCtrl];
 
         _textEditBoxCtrl ctrlSetText (_control lnbText [_curSel, 1]);
     };
-
+    // Shared loadouts
     case IDC_buttonSharedLoadouts: {
-
+        // Enable saving and loading for everyone
         {
             _x ctrlEnable true;
             _x ctrlCommit 0;
-        } foreach [_saveButtonCtrl, _loadButtonCtrl];
+        } forEach [_saveButtonCtrl, _loadButtonCtrl];
 
+        // Disable sharing button
         _shareButtonCtrl ctrlEnable false;
         _shareButtonCtrl ctrlCommit 0;
 
+        // If admin or loadout author, enable button for shared loadout
         if ((serverCommandAvailable "#logout") || {(_control lnbText [_curSel, 0]) == profileName}) then {
-
             _deleteButtonCtrl ctrlEnable true;
             _deleteButtonCtrl ctrlCommit 0;
         } else {

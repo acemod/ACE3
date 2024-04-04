@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: VKing
  * Gets the current map's MGRS grid zone designator and 100km square.
@@ -26,7 +26,7 @@ private _lat = -1 * getNumber (configFile >> "CfgWorlds" >> _map >> "latitude");
 private _altitude =  getNumber (configFile >> "CfgWorlds" >> _map >> "elevationOffset");
 
 private _mapData = _map call FUNC(getMapData);
-if (!(_mapData isEqualTo [])) then {
+if (_mapData isNotEqualTo []) then {
     _lat = _mapData select 0;
     _altitude = _mapData select 1;
 };

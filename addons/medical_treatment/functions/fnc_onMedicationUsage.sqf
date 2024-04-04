@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Handles the medication given to a patient.
@@ -6,54 +6,48 @@
  * Arguments:
  * 0: The patient <OBJECT>
  * 1: Medication Treatment classname <STRING>
- * 2: Max dosage <NUMBER>
+ * 2: Max dose (0 to ignore) <NUMBER>
+ * 3: Max dose deviation <NUMBER>
  * 3: Incompatable medication <ARRAY<STRING>>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "morphine", 4, [["x", 1]]] call ace_medical_treatment_fnc_onMedicationUsage
+ * [player, "morphine", 4, 2, [["x", 1]]] call ace_medical_treatment_fnc_onMedicationUsage
  *
  * Public: No
  */
 
-params ["_target", "_className", "_maxDosage", "_incompatibleMedication"];
-TRACE_4("onMedicationUsage",_target,_className,_maxDosage,_incompatibleMedication);
-
-private _fnc_getMedicationCount = {
-    params ["_target", "_medication"];
-    private _return = 0;
-    {
-        _x params ["_xMed", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem"];
-        if (_xMed == _medication) then {
-            private _timeInSystem = CBA_missionTime - _timeAdded;
-            _return = _return + linearConversion [_timeTillMaxEffect, _maxTimeInSystem, _timeInSystem, 1, 0, true];
-        };
-    } forEach (_target getVariable [VAR_MEDICATIONS, []]);
-    TRACE_2("getMedicationCount",_medication,_return);
-    _return
-};
+params ["_target", "_className", "_maxDose", "_maxDoseDeviation", "_incompatibleMedication"];
+TRACE_5("onMedicationUsage",_target,_className,_maxDose,_maxDoseDeviation,_incompatibleMedication);
 
 private _overdosedMedications = [];
 
 // Check for overdose from current medication
-private _currentDose = [_target, _className] call _fnc_getMedicationCount;
-if (_currentDose >= floor (_maxDosage + round(random(2))) && {_maxDosage >= 1}) then {
-    TRACE_1("exceeded max dose",_currentDose);
-    _overdosedMedications pushBackUnique _className;
+if (_maxDose > 0) then {
+    private _currentDose = [_target, _className] call EFUNC(medical_status,getMedicationCount);
+    // Because both {floor random 0} and {floor random 1} return 0
+    if (_maxDoseDeviation > 0) then {
+        _maxDoseDeviation = _maxDoseDeviation + 1;
+    };
+
+    if (_currentDose > _maxDose + (floor random _maxDoseDeviation)) then {
+        TRACE_1("exceeded max dose",_currentDose);
+        _overdosedMedications pushBackUnique _className;
+    };
 };
 
 // Check incompatible medication (format [med,limit])
 {
     _x params ["_xMed", "_xLimit"];
-    private _inSystem = [_target, _xMed] call _fnc_getMedicationCount;
+    private _inSystem = [_target, _xMed] call EFUNC(medical_status,getMedicationCount);
     if (_inSystem> _xLimit) then {
         _overdosedMedications pushBackUnique _xMed;
     };
 } forEach _incompatibleMedication;
 
-if !(_overdosedMedications isEqualTo []) then {
+if (_overdosedMedications isNotEqualTo []) then {
     private _medicationConfig = (configFile >> "ace_medical_treatment" >> "Medication");
     private _onOverDose = getText (_medicationConfig >> "onOverDose");
     if (isClass (_medicationConfig >> _className)) then {

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Local callback for applying a splint to a patient.
@@ -20,7 +20,7 @@
 params ["_medic", "_patient", "_bodyPart"];
 TRACE_3("splintLocal",_medic,_patient,_bodyPart);
 
-private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
+private _partIndex = ALL_BODY_PARTS find tolowerANSI _bodyPart;
 
 private _fractures = GET_FRACTURES(_patient);
 _fractures set [_partIndex, -1];
@@ -29,4 +29,5 @@ _patient setVariable [VAR_FRACTURES, _fractures, true];
 // Check if we fixed limping from this treatment
 [_patient] call EFUNC(medical_engine,updateDamageEffects);
 
-// todo: add logging
+[_patient, "ACE_splint"] call FUNC(addToTriageCard);
+[_patient, "activity", LSTRING(Activity_appliedSplint), [[_medic, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);

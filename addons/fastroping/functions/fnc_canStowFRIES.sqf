@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if the unit can stow the helicopters FRIES.
@@ -16,7 +16,7 @@
  */
 params ["_vehicle"];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 
 (_vehicle getVariable [QGVAR(deploymentStage), 0]) == 2 &&
 {getText (_config >> QGVAR(onCut)) != ""}

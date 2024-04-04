@@ -24,6 +24,7 @@ PREP(ui_handleMouseButtonDblClick);
 PREP(ui_handleMouseButtonDown);
 PREP(ui_handleMouseMoving);
 PREP(ui_handleMouseZChanged);
+PREP(ui_handleUnload);
 PREP(ui_toggleMap);
 PREP(ui_toggleUI);
 PREP(ui_updateCamButtons);

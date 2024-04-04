@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike, mharis001
+ * Author: kymckay, mharis001
  * Initalizes the "Teleport Players" Zeus module display.
  *
  * Arguments:

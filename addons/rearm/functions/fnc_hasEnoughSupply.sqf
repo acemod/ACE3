@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Check whether enough supply is left to take the magazine.
@@ -44,7 +44,6 @@ if (GVAR(supply) == 2) exitWith {
     {
         _x params ["_magazine", "_rounds"];
         if ((_magazine isEqualTo _magazineClass) && (_rounds > 0)) exitWith {_magazinePresent = true; };
-        false
-    } count _magazineSupply;
+    } forEach _magazineSupply;
     _magazinePresent
 };

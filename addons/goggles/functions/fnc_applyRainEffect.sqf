@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Handles rain effects being created on glasses.
@@ -22,7 +22,7 @@ if (!alive _unit) exitWith {};
 private _fnc_underCover = {
     params ["_unit"];
 
-    if (vehicle _unit != _unit && {!isTurnedOut _unit}) exitWith {true};
+    if (!isNull objectParent _unit && {!isTurnedOut _unit}) exitWith {true};
 
     // looking up and no roof over head
     private _position = eyePos _unit;

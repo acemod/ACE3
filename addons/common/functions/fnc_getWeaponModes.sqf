@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Get the available firing modes of a weapon. Will ignore the AI helper modes.
@@ -29,7 +29,6 @@ private _modes = [];
     if (_x == "this") then {
         _modes pushBack _weapon;
     };
-    false
-} count getArray (_config >> "modes");
+} forEach getArray (_config >> "modes");
 
 _modes

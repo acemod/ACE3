@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Mount unit actions inside passenger submenu.
@@ -12,7 +12,7 @@
  * Children actions <ARRAY>
  *
  * Example:
- * array = [target, player, [params]] call ace_interaction_fnc_addPassengerAction
+ * array = [target, player, [params]] call ace_interaction_fnc_addPassengerActions
  *
  * Public: No
  */
@@ -33,7 +33,6 @@ private _actions = [];
     _x params ["_actionData", "_children"];
 
     _actions pushBack [_actionData, _children, _unit];
-    false
-} count (_actionTrees select 0 select 1);
+} forEach (_actionTrees select 0 select 1);
 
 _actions

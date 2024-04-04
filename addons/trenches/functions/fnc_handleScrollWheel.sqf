@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg
  * Handles sandbag rotation
@@ -10,7 +10,7 @@
  * handled <BOOL>
  *
  * Example:
- * [1.2] call ace_sandbag_fnc_handleScrollWheel
+ * [1.2] call ace_trenches_fnc_handleScrollWheel
  *
  * Public: No
  */

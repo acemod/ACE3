@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Associates a newly created laser target to it's owner
@@ -24,13 +24,13 @@ TRACE_1("params",_this);
 
     private _owners = allUnits select {(lasertarget _x) == _targetObject};
     if (count _owners == 1) exitWith {
-        TRACE_2("Laser target owner [allUnits]", _targetObject, _owners select 0);
+        TRACE_2("Laser target owner [allUnits]",_targetObject,_owners select 0);
         [_targetObject, _owners select 0] call FUNC(addLaserTarget);
     };
 
     _owners = vehicles select {(lasertarget _x) == _targetObject};
     if (count _owners == 1) exitWith {
-        TRACE_2("Laser target owner [vehicles]", _targetObject, _owners select 0);
+        TRACE_2("Laser target owner [vehicles]",_targetObject,_owners select 0);
         [_targetObject, _owners select 0] call FUNC(addLaserTarget);
     };
 
@@ -42,7 +42,7 @@ TRACE_1("params",_this);
     if ((alive ACE_player) && {_vehicle != ACE_player}) then {
         private _turretPath = if (ACE_player == (driver _vehicle)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
         TRACE_1("",_turretPath);
-        if (!(_turretPath isEqualTo [])) then {
+        if (_turretPath isNotEqualTo []) then {
             private _currentWeapon = _vehicle currentWeaponTurret _turretPath;
             TRACE_1("",_currentWeapon);
             if ((getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> "laser")) == 1) then {
@@ -58,7 +58,7 @@ TRACE_1("params",_this);
         };
     };
     if (!_foundSource) then {
-        WARNING_1("Laser target doesn't have owner", _targetObject);
+        WARNING_1("Laser target doesn't have owner",_targetObject);
     };
 
 }, _this] call CBA_fnc_execNextFrame;

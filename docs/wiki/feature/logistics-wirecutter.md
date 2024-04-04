@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Logistics - Wirecutter
+component: logistics_wirecutter
 description: Cutting fences, wirecutter.
 group: feature
 category: equipment
@@ -24,7 +25,3 @@ Adds an item `ACE_wirecutter` that allows cutting of fences in Arma 3 and AllInA
 - Approach the fence you want to cut.
 - Press the interaction key <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interaction Key`).
 - Find the interaction point and select `Cut Fence` (the only option).
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="logistics_wirecutter" %}

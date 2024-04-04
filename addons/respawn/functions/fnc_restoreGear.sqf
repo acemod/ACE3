@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: bux578, commy2
  * Restores previously saved gear.
@@ -17,17 +17,11 @@
  */
 
 params ["_unit", "_allGear", "_activeWeaponAndMuzzle"];
-TRACE_3("restoreGear",_unit, count _allGear, _activeWeaponAndMuzzle);
+TRACE_3("restoreGear",_unit,count _allGear,_activeWeaponAndMuzzle);
 
 // restore all gear
 if (!isNil "_allGear") then {
-    _allGear params ["_primaryWeaponArray"];
-    if ((_primaryWeaponArray param [0, ""]) == "ACE_FakePrimaryWeapon") then {
-        TRACE_1("Ignoring fake gun",_primaryWeaponArray);
-        _allGear set [0, []];
-        _activeWeaponAndMuzzle = nil;
-    };
-    _unit setUnitLoadout _allGear;
+    [_unit, _allGear] call CBA_fnc_setLoadout;
 };
 
 // restore the last active weapon, muzzle and weaponMode

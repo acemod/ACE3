@@ -1,4 +1,3 @@
-// Warning: do not remove without handling wheelRepairRequiredItems's _values config on line 32 [used in repair/canRepair]
 class ACE_Settings {
     class GVAR(displayTextOnRepair) {
         movedToSQF = 1;
@@ -29,7 +28,6 @@ class ACE_Settings {
     };
     class GVAR(wheelRepairRequiredItems) {
         movedToSQF = 1;
-        _values[] = {{}, {"ToolKit"}};
     };
     class GVAR(autoShutOffEngineWhenStartingRepair) {
         movedToSQF = 1;

@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: KoffeinFlummi, commy2, SilentSpike
+ * Author: KoffeinFlummi, commy2, kymckay
  * Start a cook-off in the given ammo box.
  *
  * Arguments:
@@ -21,7 +21,7 @@ if (_box getVariable [QGVAR(isCookingOff), false]) exitWith {};
 _box setVariable [QGVAR(isCookingOff), true];
 
 if (local _box) then {
-    [QGVAR(cookOffBox), _box] call CBA_fnc_remoteEvent;
+    [QGVAR(cookOffBox), _box] call CBA_fnc_globalEvent;
 };
 
 [{

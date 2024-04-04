@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles any audible, visual and physical effects of fatigue.
@@ -27,6 +27,7 @@ params ["_unit", "_fatigue", "_speed", "_overexhausted"];
 // - Audible effects ----------------------------------------------------------
 GVAR(lastBreath) = GVAR(lastBreath) + 1;
 if (_fatigue > 0.4 && {GVAR(lastBreath) > (_fatigue * -10 + 9)} && {!underwater _unit}) then {
+    if (!isGameFocused) exitWith {};
     switch (true) do {
         case (_fatigue < 0.6): {
             playSound (QGVAR(breathLow) + str(floor random 6));
@@ -93,6 +94,3 @@ if (_overexhausted) then {
 };
 
 _unit setVariable [QGVAR(aimFatigue), _fatigue];
-
-private _aimCoef = [missionNamespace, "ACE_setCustomAimCoef", "max"] call EFUNC(common,arithmeticGetResult);
-_unit setCustomAimCoef _aimCoef;

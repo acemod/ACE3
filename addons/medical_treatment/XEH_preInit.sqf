@@ -6,7 +6,9 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
+
+#define ARSENAL_CATEGORY_ICON (["\A3\ui_f\data\igui\cfg\actions\heal_ca.paa", QPATHTOEF(medical_gui,data\categories\bandage_fracture.paa)] select (["ace_medical_gui"] call EFUNC(common,isModLoaded)))
 
 // config to determine animation acceleration coefficient
 // adjusting these is trail and error
@@ -44,9 +46,9 @@ GVAR(facilityClasses) = [];
     } forEach getArray _x;
 } forEach configProperties [configFile >> QEGVAR(medical,facilities), "isArray _x"];
 
-// array of medical items to replace and their ACE equivalents
-GVAR(replacementItems) = configProperties [configFile >> QEGVAR(medical,replacementItems), "isArray _x"] apply {
-    [configName _x, getArray _x]
+// Custom Arsenal tab
+if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
+    [MEDICAL_TREATMENT_ITEMS, LLSTRING(medicalTab), ARSENAL_CATEGORY_ICON, -1, true] call EFUNC(arsenal,addRightPanelButton);
 };
 
 ADDON = true;

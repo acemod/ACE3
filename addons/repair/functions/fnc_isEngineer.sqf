@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi, commy2
  * Check if a unit is any engineer class.
@@ -22,7 +22,14 @@ private _class = _unit getVariable ["ACE_IsEngineer", _unit getUnitTrait "engine
 
 // This if statement is here for copmatability with the common variant of isEngineer, which requires a bool.
 // We cannot move this function to common because we require the GVAR(engineerSetting_Repair), which only makes sense to include in the repair module.
-if (_class isEqualType false) then {_class = [0, 1] select _class};
+if (_class isEqualType false) then {_class = parseNumber _class};
 
 TRACE_3("isEngineer",_unit,_engineerN,_class);
-_class >= _engineerN;
+if (_class >= _engineerN) exitWith {true};
+if (!GVAR(locationsBoostTraining)) exitWith {false};
+
+if ([_unit] call FUNC(isInRepairFacility) || {[_unit] call FUNC(isNearRepairVehicle)}) then {
+    _class = _class + 1; // Boost engineer training by one: untrained becomes engineer, engineer becomes advanced engineer
+};
+
+_class >= _engineerN

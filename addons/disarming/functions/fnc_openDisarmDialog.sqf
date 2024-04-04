@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  *
@@ -40,8 +40,15 @@ GVAR(disarmTarget) = _target;
 
     if (isNull GVAR(disarmTarget)) exitWith {ERROR("disarmTarget is null");};
 
+    private _textRight = "";
+    for "_i" from 0 to (lbSize _idc) - 1 do {
+        if (lbData [_idc, _i] isEqualTo _data) exitWith {
+            _textRight = lbTextRight [_idc, _i];
+        };
+    };
+
     TRACE_2("Debug: Droping %1 from %2",_data,GVAR(disarmTarget));
-    [QGVAR(dropItems), [ACE_player, GVAR(disarmTarget), [_data]], [GVAR(disarmTarget)]] call CBA_fnc_targetEvent;
+    [QGVAR(dropItems), [ACE_player, GVAR(disarmTarget), [_data], parseNumber _textRight], [GVAR(disarmTarget)]] call CBA_fnc_targetEvent;
 
     false //not sure what this does
 }];
@@ -67,7 +74,7 @@ GVAR(disarmTarget) = _target;
         private _rankPicture = _display displayCtrl 1203;
 
         //Show rank and name (just like BIS's inventory)
-        private _icon = format [DEFUALTPATH, toLower (rank _target)];
+        private _icon = format [DEFUALTPATH, toLowerANSI (rank _target)];
         if (_icon isEqualTo DEFUALTPATH) then {_icon = ""};
         _rankPicture ctrlSetText _icon;
         _playerName ctrlSetText ([GVAR(disarmTarget), false, true] call EFUNC(common,getName));
@@ -86,7 +93,7 @@ GVAR(disarmTarget) = _target;
             if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
                 _holder = _x;
             };
-        } count ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
+        } forEach ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
 
         //If a holder exists, show it's inventory
         if (!isNull _holder) then {

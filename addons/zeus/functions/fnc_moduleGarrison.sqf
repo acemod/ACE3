@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: alganthe
  * Module calling the garrison function.
@@ -51,7 +51,7 @@ switch (false) do {
 private _units = units _unit;
 // Make sure all units are disembarked
 {
-    if (vehicle _x != _x) then {
+    if (vehicle _x != _x && {!isPlayer _x}) then {
         moveOut _x;
     };
 } forEach _units;

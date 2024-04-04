@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Calculate the total blood loss of a unit.
@@ -23,4 +23,4 @@ if (_woundBleeding == 0) exitWith {0};
 private _cardiacOutput = [_unit] call FUNC(getCardiacOutput);
 
 // even if heart stops blood will still flow slowly (gravity)
-(_woundBleeding * (_cardiacOutput max 0.05) * EGVAR(medical,bleedingCoefficient))
+(_woundBleeding * (_cardiacOutput max CARDIAC_OUTPUT_MIN) * EGVAR(medical,bleedingCoefficient))

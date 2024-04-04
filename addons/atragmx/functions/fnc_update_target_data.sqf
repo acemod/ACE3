@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates all target column input fields
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ace_atragmx_fnc_update_target
+ * call ace_atragmx_fnc_update_target_data
  *
  * Public: No
  */

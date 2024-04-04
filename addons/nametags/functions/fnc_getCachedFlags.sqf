@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: <N/A>
  * Get's flags used for onDraw3D that can be cached
@@ -50,7 +50,13 @@ switch (GVAR(showPlayerNames)) do {
     };
 };
 
-private _ambientBrightness = ((([] call EFUNC(common,ambientBrightness)) + ([0, 0.4] select ((currentVisionMode ace_player) != 0))) min 1) max 0;
-private _maxDistance = _ambientBrightness * GVAR(PlayerNamesViewDistance);
+private _maxDistance = GVAR(playerNamesViewDistance);
+if (GVAR(ambientBrightnessAffectViewDist) != 0) then {
+    private _ambientBrightness = [] call EFUNC(common,ambientBrightness);
+    if (currentVisionMode ace_player != 0) then {
+        _ambientBrightness = _ambientBrightness + 0.4;
+    };
+    _maxDistance = _maxDistance * linearConversion [0, 1, _ambientBrightness, 1 - GVAR(ambientBrightnessAffectViewDist), 1, true];
+};
 
 [_drawName, GVAR(showPlayerRanks),_enabledTagsNearby,_enabledTagsCursor,_maxDistance]

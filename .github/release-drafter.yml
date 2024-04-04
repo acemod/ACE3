@@ -1,0 +1,48 @@
+branches:
+  - master
+  - release-drafter  # for testing edits to this configuration
+
+name-template: 'Version $NEXT_PATCH_VERSION'
+tag-template: 'v$NEXT_PATCH_VERSION'
+
+sort-by: title # sort alphabetically
+sort-direction: ascending
+
+categories:
+  - title: '**ADDED:**'
+    labels:
+      - 'kind/feature'
+  - title: '**FIXED:**'
+    labels:
+      - 'kind/bug-fix'
+  - title: '**IMPROVED:**'
+    labels:
+      - 'kind/enhancement'
+      - 'kind/optimization'
+  - title: '**CHANGED:**'
+    labels:
+      - 'kind/cleanup'
+      - 'kind/change'
+  - title: '**SETTINGS:**'
+    labels:
+      - 'kind/setting'
+  - title: '**TRANSLATIONS:**'
+    labels:
+      - 'kind/translation'
+
+exclude-labels:
+  - 'ignore-changelog'
+  - 'dependencies'
+
+change-template: '- $TITLE (#$NUMBER)'
+template: |
+  _Requires CBA version X.Y.Z or later and Arma 3 version X.Y or later._
+
+  ## Change Log Summary
+
+  $CHANGES
+
+replacers:
+  # Category titles
+  - search: '/\#\# (\*\*(ADDED|FIXED|IMPROVED|CHANGED|SETTINGS|TRANSLATIONS):\*\*)/g'
+    replace: '$1'

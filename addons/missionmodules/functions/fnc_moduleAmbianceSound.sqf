@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Plays synchronized ambiance sounds while the module is alive.
@@ -55,9 +55,7 @@ private _missionRoot = str missionConfigFile select [0, count str missionConfigF
             ERROR_1("Ambient Sounds: Sound ""%1"" not found.",_x);
         };
     };
-
-    false
-} count _splittedList;
+} forEach _splittedList;
 
 if (count _ambianceSounds == 0) exitWith {};
 {

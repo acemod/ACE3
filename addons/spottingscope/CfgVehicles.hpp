@@ -41,7 +41,7 @@ class CfgVehicles {
         EGVAR(dragging,dragPosition)[] = {0,1,0};
         EGVAR(dragging,dragDirection) = 0;
 
-        class ACE_Actions: ACE_Actions{
+        class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 selection = "main_turret_axis";
                 class ACE_Pickup {

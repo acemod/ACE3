@@ -1,20 +1,24 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
- * canUseMapGPS
+ * Returns if the GPS on the map can be used.
  *
  * Arguments:
  * None
  *
  * Return Value:
- * Boolean <BOOL>
+ * GPS can be used <BOOL>
  *
  * Example:
- * call ACE_maptools_fnc_canUseMapGPS
+ * call ace_maptools_fnc_canUseMapGPS
  *
  * Public: No
  */
 
-visibleMap &&
-{alive ACE_player} &&
-{"ItemGPS" in (assignedItems ACE_player)}
+if (!visibleMap || {!alive ACE_player}) exitWith {false};
+
+private _gpsOpened = visibleGPS;
+private _gpsAvailable = openGPS true;
+if (!_gpsOpened) then {openGPS false};
+
+_gpsAvailable // return

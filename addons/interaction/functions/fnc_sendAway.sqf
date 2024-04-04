@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Sends a near civilian crowd away with a chance of failure.
@@ -31,5 +31,4 @@ private _chance = [0.5, 0.8] select (count weapons _unit > 0);
 
         [QGVAR(sendAway), [_x, _position], [_x]] call CBA_fnc_targetEvent;
     };
-    false
-} count (_unit nearEntities ["Civilian", SEND_RADIUS]);
+} forEach (_unit nearEntities ["Civilian", SEND_RADIUS]);

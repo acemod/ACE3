@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Check if the mine detector is enabled
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * ["example"] call ace_minedetector_fnc_[functionName]
+ * ["example"] call ace_minedetector_fnc_isDetectorEnabled
  *
  * Public: No
  */

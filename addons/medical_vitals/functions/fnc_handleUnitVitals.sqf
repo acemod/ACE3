@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Updates the vitals. Called from the statemachine's onState functions.
@@ -7,20 +7,19 @@
  * 0: The Unit <OBJECT>
  *
  * Return Value:
- * None
+ * Update Ran (at least 1 second between runs) <BOOL>
  *
  * Example:
  * [player] call ace_medical_vitals_fnc_handleUnitVitals
  *
  * Public: No
  */
-// #define DEBUG_MODE_FULL
 
 params ["_unit"];
 
 private _lastTimeUpdated = _unit getVariable [QGVAR(lastTimeUpdated), 0];
 private _deltaT = (CBA_missionTime - _lastTimeUpdated) min 10;
-if (_deltaT < 1) exitWith {}; // state machines could be calling this very rapidly depending on number of local units
+if (_deltaT < 1) exitWith { false }; // state machines could be calling this very rapidly depending on number of local units
 
 BEGIN_COUNTER(Vitals);
 
@@ -31,6 +30,9 @@ private _syncValues = (CBA_missionTime - _lastTimeValuesSynced) >= (10 + floor(r
 if (_syncValues) then {
     _unit setVariable [QGVAR(lastMomentValuesSynced), CBA_missionTime];
 };
+
+// Update SPO2 intake and usage since last update
+[_unit, _deltaT, _syncValues] call FUNC(updateOxygen);
 
 private _bloodVolume = GET_BLOOD_VOLUME(_unit) + ([_unit, _deltaT, _syncValues] call EFUNC(medical_status,getBloodVolumeChange));
 _bloodVolume = 0 max _bloodVolume min DEFAULT_BLOOD_VOLUME;
@@ -54,7 +56,7 @@ if (_hemorrhage != GET_HEMORRHAGE(_unit)) then {
 private _woundBloodLoss = GET_WOUND_BLEEDING(_unit);
 
 private _inPain = GET_PAIN_PERCEIVED(_unit) > 0;
-if !(_inPain isEqualTo IS_IN_PAIN(_unit)) then {
+if (_inPain isNotEqualTo IS_IN_PAIN(_unit)) then {
     _unit setVariable [VAR_IN_PAIN, _inPain, true];
 };
 
@@ -76,7 +78,7 @@ private _painSupressAdjustment = 0;
 private _peripheralResistanceAdjustment = 0;
 private _adjustments = _unit getVariable [VAR_MEDICATIONS,[]];
 
-if !(_adjustments isEqualTo []) then {
+if (_adjustments isNotEqualTo []) then {
     private _deleted = false;
     {
         _x params ["_medication", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem", "_hrAdjust", "_painAdjust", "_flowAdjust"];
@@ -88,7 +90,7 @@ if !(_adjustments isEqualTo []) then {
             private _effectRatio = (((_timeInSystem / _timeTillMaxEffect) ^ 2) min 1) * (_maxTimeInSystem - _timeInSystem) / _maxTimeInSystem;
             if (_hrAdjust != 0) then { _hrTargetAdjustment = _hrTargetAdjustment + _hrAdjust * _effectRatio; };
             if (_painAdjust != 0) then { _painSupressAdjustment = _painSupressAdjustment + _painAdjust * _effectRatio; };
-            if (_hrAdjust != 0) then { _peripheralResistanceAdjustment = _peripheralResistanceAdjustment + _flowAdjust * _effectRatio; };
+            if (_flowAdjust != 0) then { _peripheralResistanceAdjustment = _peripheralResistanceAdjustment + _flowAdjust * _effectRatio; };
         };
     } forEach _adjustments;
 
@@ -165,3 +167,8 @@ if (!isPlayer _unit) then {
 #endif
 
 END_COUNTER(Vitals);
+
+//placed outside the counter as 3rd-party code may be called from this event
+[QEGVAR(medical,handleUnitVitals), [_unit, _deltaT]] call CBA_fnc_localEvent;
+
+true

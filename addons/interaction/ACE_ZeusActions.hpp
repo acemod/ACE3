@@ -3,7 +3,7 @@ class ACE_ZeusActions {
     class ZeusUnits {
         displayName = "$STR_A3_RscDisplayCurator_ModeUnits_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeUnits_ca.paa";
-        condition = QUOTE(!([] isEqualTo (curatorSelected select 0)));
+        condition = QUOTE([] isNotEqualTo (curatorSelected select 0));
 
         class stance {
             displayName = "$STR_A3_RscAttributeUnitPos_Title";
@@ -35,19 +35,7 @@ class ACE_ZeusActions {
             displayName = "$STR_A3_CfgVehicles_ModuleRemoteControl_F";
             icon = "\A3\Modules_F_Curator\Data\portraitRemoteControl_ca.paa";
             condition = QUOTE(ZEUS_ACTION_CONDITION && {-1 < (curatorSelected select 0) findIf {!isNull effectiveCommander _x}});
-            statement = QUOTE( \
-                private _units = curatorSelected select 0; \
-                private _unit = _units param [ARR_2( \
-                    _units findIf { \
-                        side _x in [ARR_4(east,west,resistance,civilian)] \
-                        && !(isPlayer _x) \
-                    }, \
-                    objNull \
-                )]; \
-                bis_fnc_curatorObjectPlaced_mouseOver = [ARR_2('OBJECT',_unit)]; \
-                private _rc = group _target createUnit [ARR_5('ModuleRemoteControl_F',[ARR_3(0,0,0)],[],0,'NONE')]; \
-                _rc setVariable [ARR_2('BIS_fnc_initModules_disableAutoActivation',false)]; \
-            );
+            statement = QUOTE(call FUNC(doRemoteControl));
         };
 
         class GVAR(repair) {
@@ -61,7 +49,7 @@ class ACE_ZeusActions {
     class ZeusGroups {
         displayName = "$STR_A3_RscDisplayCurator_ModeGroups_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeGroups_ca.paa";
-        condition = QUOTE(!([] isEqualTo (curatorSelected select 1)));
+        condition = QUOTE([] isNotEqualTo (curatorSelected select 1));
 
         class behaviour {
             displayName = "$STR_Combat_Mode";
@@ -169,7 +157,7 @@ class ACE_ZeusActions {
     class ZeusWaypoints {
         displayName = "Waypoints";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeRecent_ca.paa";
-        condition = QUOTE(!([] isEqualTo (curatorSelected select 2)));
+        condition = QUOTE([] isNotEqualTo (curatorSelected select 2));
 
         class behaviour {
             displayName = "$STR_Combat_Mode";
@@ -277,6 +265,6 @@ class ACE_ZeusActions {
     class ZeusMarkers {
         displayName = "$STR_A3_RscDisplayCurator_ModeMarkers_tooltip";
         icon = "\A3\UI_F_Curator\Data\Displays\RscDisplayCurator\modeMarkers_ca.paa";
-        condition = QUOTE(!([] isEqualTo (curatorSelected select 3)));
+        condition = QUOTE([] isNotEqualTo (curatorSelected select 3));
     };
 };

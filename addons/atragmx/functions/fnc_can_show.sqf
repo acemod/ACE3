@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Authors: Ruthberg
  * Tests if the ATragMX dialog can be shown
@@ -15,4 +15,5 @@
  * Public: No
  */
 
-(("ACE_ATragMX" in (uniformItems ACE_player)) || ("ACE_ATragMX" in (vestItems ACE_player))) && !(underwater ACE_player);
+!underwater ACE_player &&
+{"ACE_ATragMX" in ([ACE_player] call EFUNC(common,uniqueItems))}

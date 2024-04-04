@@ -27,17 +27,18 @@
         type = "ACE_SmokeBaseMedium"; \
     }; \
 }
+#define MERGE(var1,var2) var1####var2
 #define EFFECT_40MM(color) class ACE_40mmSmokeShell##color##Effect: ACE_40mmSmokeShellWhiteEffect { \
     class SmokeShellUW { \
         simulation = "particles"; \
-        type = QUOTE(SmokeShell##color##UW); \
+        type = QUOTE(MERGE(SmokeShell,MERGE(color,UW))); \
         position[] = {0, 0, 0}; \
         intensity = 1; \
         interval = 1; \
     }; \
     class SmokeShell2UW { \
         simulation = "particles"; \
-        type = QUOTE(SmokeShell##color##2UW); \
+        type = QUOTE(MERGE(SmokeShell,MERGE(color,2UW))); \
         position[] = {0, 0, 0}; \
         intensity = 1; \
         interval = 1; \
@@ -45,11 +46,11 @@
 }
 #define EFFECT_AFTER_WATER(color) class ACE_SmokeAfterWater##color: ACE_SmokeAfterWaterWhite { \
     class SmokeAfterWater: SmokeAfterWater { \
-        type = QUOTE(ACE_SmokeAfterWater##color); \
+        type = QUOTE(MERGE(ACE_SmokeAfterWater,color)); \
     }; \
 }
 
 #define CLOUDLET_UNDERWATER(color) class SmokeShell##color##UW; \
 class SmokeShell##color##2UW: SmokeShell##color##UW { \
-    postEffects = QUOTE(ACE_SmokeAfterWater##color); \
+    postEffects = QUOTE(MERGE(ACE_SmokeAfterWater,color)); \
 }

@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, SilentSpike
+ * Author: Nelson Duarte, kymckay
  * Updates spectator UI unit info widget
  *
  * Arguments:
@@ -32,7 +32,7 @@ private _unitTypePicture = "";
 private _vehicleTypePicture = "";
 private _vehiclePositionPicture = "";
 if (_focus != vehicle _focus) then {
-    _vehicleTypePicture = getText (configFile >> "CfgVehicles" >> typeOf vehicle _focus >> "Picture");
+    _vehicleTypePicture = getText (configOf vehicle _focus >> "Picture");
 
     _vehiclePositionPicture = switch (_focus) do {
         case (commander vehicle _focus): {IMG_COMMANDER};

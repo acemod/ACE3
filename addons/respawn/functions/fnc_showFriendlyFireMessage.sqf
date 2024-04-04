@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Shows a message in system chat of who killed whom.
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [ACE_Player, killer] call ace_module_fnc_functionName
+ * [ACE_Player, killer] call ace_respawn_fnc_showFriendlyFireMessage
  *
  * Public: No
  */
