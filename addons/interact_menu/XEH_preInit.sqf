@@ -17,7 +17,7 @@ GVAR(ActSelfNamespace) = createHashMap;
 
 // Compile actions for CAManBase now and use for all mans types
 ["CAManBase"] call FUNC(compileMenu);
-GVAR(cacheManActions) = +(GVAR(ActNamespace) getOrDefault ["CAManBase", []]); // copy
+GVAR(cacheManActions) = +(GVAR(ActNamespace) getOrDefault ["CAManBase" call EFUNC(common,getConfigName), []]); // copy
 
 // Event handlers for all interact menu controls
 DFUNC(handleMouseMovement) = {

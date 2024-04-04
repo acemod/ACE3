@@ -48,6 +48,8 @@ if (param [4, false, [false]]) exitwith {
     (_parentPath + [_action select 0])
 };
 
+_objectType = _objectType call EFUNC(common,getConfigName);
+
 // Ensure the config menu was compiled first
 if (_typeNum == 0) then {
     [_objectType] call FUNC(compileMenu);

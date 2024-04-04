@@ -19,6 +19,8 @@
 
 params ["_objectType", "_typeNum", "_fullPath"];
 
+_objectType = _objectType call EFUNC(common,getConfigName);
+
 private _res = _fullPath call FUNC(splitPath);
 _res params ["_parentPath", "_actionName"];
 
