@@ -15,7 +15,7 @@ class CfgWeapons {
             deployTime = 20;
             pickupTime = 25;
             class assembleTo {
-                ace_csw_mortarBaseplate = "CUP_O_2b14_82mm_RU";
+                ace_csw_mortarBaseplate = "CUP_I_2b14_82mm_AAF";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -31,7 +31,7 @@ class CfgWeapons {
         picture = "\CUP\Weapons\CUP_Weapons_StaticWeapons\M252\data\ui\icomap_mortar_m251_ca.paa";
         class ace_csw: ace_csw {
             class assembleTo {
-                ace_csw_mortarBaseplate = "CUP_B_M252_US";
+                ace_csw_mortarBaseplate = "CUP_I_M252_AAF";
             };
         };
     };
@@ -42,7 +42,7 @@ class CfgWeapons {
         picture = "\CUP\Weapons\CUP_Weapons_StaticWeapons\M252\data\ui\icomap_mortar_m251_ca.paa";
         class ace_csw: ace_csw {
             class assembleTo {
-                ace_csw_mortarBaseplate = "CUP_B_L16A2_BAF_MPT";
+                ace_csw_mortarBaseplate = "CUP_I_L16A2_AAF";
             };
         };
     };
@@ -58,8 +58,8 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                ace_csw_m3Tripod = "CUP_B_M2StaticMG_US";
-                ace_csw_m3TripodLow = "CUP_B_M2StaticMG_MiniTripod_US";
+                ace_csw_m3Tripod = "CUP_I_M2StaticMG_AAF";
+                ace_csw_m3TripodLow = "CUP_I_M2StaticMG_MiniTripod_AAF";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -81,8 +81,8 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                ace_csw_kordTripod = "CUP_O_DSHKM_ChDKZ";
-                ace_csw_kordTripodLow = "CUP_O_DSHkM_MiniTriPod_ChDKZ";
+                ace_csw_kordTripod = "CUP_I_DSHKM_AAF";
+                ace_csw_kordTripodLow = "CUP_I_DSHKM_MiniTriPod_AAF";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -104,8 +104,8 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                ace_csw_kordTripod = "CUP_O_KORD_high_RU";
-                ace_csw_kordTripodLow = "CUP_O_KORD_RU";
+                ace_csw_kordTripod = "CUP_I_KORD_high_AAF";
+                ace_csw_kordTripodLow = "CUP_I_KORD_AAF";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -127,7 +127,7 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                ace_csw_sag30Tripod = "CUP_O_AGS_RU";
+                ace_csw_sag30Tripod = "CUP_I_AGS_AAF";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -149,7 +149,7 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                ace_csw_m3TripodLow = "CUP_B_MK19_TriPod_US";
+                ace_csw_m3TripodLow = "CUP_I_MK19_TriPod_AAF";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -168,7 +168,7 @@ class CfgWeapons {
             type = "mount";
             deployTime = 4;
             pickupTime = 4;
-            deploy = "CUP_O_Metis_RU";
+            deploy = "CUP_I_Metis_AAF";
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 300;
@@ -186,7 +186,7 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                ace_csw_m220Tripod = "CUP_B_TOW_TriPod_US";
+                ace_csw_m220Tripod = "CUP_I_TOW_TriPod_AAF";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -200,7 +200,7 @@ class CfgWeapons {
     class CUP_TOW2_carry: CUP_TOW_carry {
         class ace_csw: ace_csw {
             class assembleTo {
-                ace_csw_m220Tripod = "CUP_B_TOW2_TriPod_US";
+                ace_csw_m220Tripod = "CUP_I_TOW2_TriPod_AAF";
             };
         };
     };
@@ -216,7 +216,7 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                ace_csw_spg9Tripod = "CUP_B_SPG9_CDF";
+                ace_csw_spg9Tripod = "CUP_I_SPG9_AAF";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
@@ -257,12 +257,12 @@ class CfgWeapons {
         magazineReloadTime = 0.5;
     };
 
-       class CUP_Vmlauncher_AT13_single_veh;
+    class CUP_Vmlauncher_AT13_single_veh;
     class CUP_proxy_AT13: CUP_Vmlauncher_AT13_single_veh {
         magazineReloadTime = 0.5;
     };
 
-       class CUP_Vmlauncher_TOW_single_veh;
+    class CUP_Vmlauncher_TOW_single_veh;
     class CUP_proxy_TOW: CUP_Vmlauncher_TOW_single_veh {
         magazineReloadTime = 0.5;
     };
@@ -272,7 +272,7 @@ class CfgWeapons {
         magazineReloadTime = 0.5;
     };
 
-      class CUP_Vcannon_M119_veh;
+    class CUP_Vcannon_M119_veh;
     class CUP_proxy_M119: CUP_Vcannon_M119_veh {
         magazineReloadTime = 0.5;
     };
@@ -287,4 +287,3 @@ class CfgWeapons {
         magazineReloadTime = 0.5;
     };
 };
-
