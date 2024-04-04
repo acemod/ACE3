@@ -1,3 +1,4 @@
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to make the local player an ACE Spectator.
@@ -17,7 +18,6 @@
  *
  * Public: No
  */
-#include "script_component.hpp"
 
 params ["_force", "_hide", "_sides", "_modes", "_visions"];
 TRACE_1("params",_this);
