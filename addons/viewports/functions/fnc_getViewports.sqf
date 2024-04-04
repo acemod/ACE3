@@ -1,19 +1,19 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
-* Author: PabstMirror
-* Gets viewports for a vehicle from config. Caches results to a setVar on the vic.
-*
-* Arguments:
-* 0: vehicle <OBJECT>
-*
-* Return Value:
-* ARRAY
-*
-* Example:
-* [vehicle player] call ace_viewports_fnc_getViewports
-*
-* Public: No
-*/
+ * Author: PabstMirror
+ * Gets viewports for a vehicle from config. Caches results to a setVar on the vic.
+ *
+ * Arguments:
+ * 0: vehicle <OBJECT>
+ *
+ * Return Value:
+ * ARRAY
+ *
+ * Example:
+ * [vehicle player] call ace_viewports_fnc_getViewports
+ *
+ * Public: No
+ */
 
 params ["_vehicle"];
 
@@ -46,12 +46,12 @@ if (isNil "_viewports") then {
         if (_screenLocation isEqualType "") then {
             // screens should be on the hull (IE non-animated) so we can do all the mem-point calculations here
             if (_screenLocation == "") exitWith { // use generic periscope drop height from cam
-                private _camLocArray = if (_camLocation isEqualType []) then { 
+                private _camLocArray = if (_camLocation isEqualType []) then {
                     _camLocation
                 } else {
                     _vehicle selectionPosition [_camLocation, "Memory"];
                 };
-                _screenLocation =_camLocArray vectorAdd [0,0,-0.175] 
+                _screenLocation =_camLocArray vectorAdd [0,0,-0.175]
             };
             _screenLocation = _vehicle selectionPosition [_screenLocation, "Memory"];
         };
@@ -61,9 +61,9 @@ if (isNil "_viewports") then {
             _maxDistance = 0.8;
         };
         // compartments [ARRAY] - Optional
-        private _compartments = (getArray (_x >> "compartments")) apply {toLower _x};
+        private _compartments = (getArray (_x >> "compartments")) apply {toLowerANSI _x};
         // roles [ARRAY] - Optional
-        private _roles = (getArray (_x >> "roles")) apply {toLower _x};
+        private _roles = (getArray (_x >> "roles")) apply {toLowerANSI _x};
 
         [_name, _type, _camLocation, _camAttach, _screenLocation, _maxDistance, _compartments, _roles]
     };

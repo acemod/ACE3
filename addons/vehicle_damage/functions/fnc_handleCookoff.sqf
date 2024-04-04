@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Checks hitpoint damage and determines if a vehicle should cookoff.
  *
  * Arguments:
@@ -9,7 +9,8 @@
  * 2: Intensity of cookoff <NUMBER>
  * 3: Person who instigated cookoff <OBJECT> (default: objNull)
  * 4: Part of vehicle which got hit <STRING> (default: "")
- * 5: Whether or not the vehicle can spawn ring-fire effect <BOO> (default: false)
+ * 5: Whether or not the vehicle can spawn ring-fire effect <BOOL> (default: false)
+ * 6: Can Jet <BOOL> (default: true)
  *
  * Return Value:
  * If cooked off
@@ -43,7 +44,7 @@ if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
     private _detonateAfterCookoff = (_fireDetonateChance / 4) > random 1;
 
     private _source = "";
-    if (toLower _hitPart isEqualTo "engine") then {
+    if (_hitPart == "engine") then {
         _source = ["hit_engine_point", "HitPoints"];
     };
 

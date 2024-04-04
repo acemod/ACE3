@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Makes object catch fire. Only call from events. Local effects only.
  * Arbitrary values to ignite people. Assumed maximum is "10".
  *
@@ -23,8 +23,6 @@
 #define BURN_PROPOGATE_UPDATE 1
 #define BURN_PROPOGATE_DISTANCE 2
 #define BURN_PROPOGATE_COUNTER_MAX 5
-#define MAX_INTENSITY 10
-#define MIN_INTENSITY 1
 
 params ["_unit", "_intensity", ["_instigator", objNull]];
 
@@ -44,7 +42,7 @@ if (_isBurning) exitWith {};
         _intensity = 0;
     };
 
-    _fireParticle setDropInterval (0.01 max linearConversion [MAX_INTENSITY, MIN_INTENSITY, _intensity, 0.03, 0.1, false]);
+    _fireParticle setDropInterval (0.01 max linearConversion [BURN_MAX_INTENSITY, BURN_MIN_INTENSITY, _intensity, 0.03, 0.1, false]);
     _fireParticle setParticleParams [
         ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 10, 32], // sprite sheet values
         "", // animation name
@@ -162,8 +160,8 @@ if (_isBurning) exitWith {};
                         [QGVAR(burn), [ace_player, _intensity * (7 / 8), _instigator]] call CBA_fnc_globalEvent;
                     };
                 } else {
-                    if ((ace_player isKindOf "Man") && {_unit isNotEqualTo ace_player}) then {
-                        private _burnCounter = ace_player getVariable [QGVAR(burnCounter), 0];
+                    if ((ace_player isKindOf "Man") && {_unit isNotEqualTo ace_player} && {isDamageAllowed ace_player && {ace_player getVariable [QEGVAR(medical,allowDamage), true]}}) then {
+                        private _burnCounter = _unit getVariable [QGVAR(burnCounter), 0];
                         if (_distanceToUnit < BURN_PROPOGATE_DISTANCE) then {
                             if (_burnCounter < BURN_PROPOGATE_COUNTER_MAX) then {
                                 _burnCounter = _burnCounter + 1;
@@ -173,7 +171,7 @@ if (_isBurning) exitWith {};
                         } else {
                             _burnCounter = 0;
                         };
-                        ace_player setVariable [QGVAR(burnCounter), _burnCounter];
+                        _unit setVariable [QGVAR(burnCounter), _burnCounter];
                     };
                 };
             };
@@ -191,7 +189,7 @@ if (_isBurning) exitWith {};
                             if ((_unit isEqualTo vehicle _unit) && (_sdr || ({ 0.05 > random 1 }))) then {
                                 _unit setVariable [QGVAR(stopDropRoll), true];
                                 if !(_sdr) then {
-                                    TRACE_1("stop, drop, roll!", _unit);
+                                    TRACE_1("stop,drop,roll!",_unit);
                                     _unit setUnitPos "DOWN";
                                     doStop _unit;
                                 };
@@ -205,7 +203,7 @@ if (_isBurning) exitWith {};
                                 private _vehicle = vehicle _unit;
 
                                 if (_vehicle != _unit) then {
-                                    TRACE_1("Ejecting", _unit);
+                                    TRACE_1("Ejecting",_unit);
                                     _unit leaveVehicle _vehicle;
                                     unassignVehicle _unit;
                                     _unit action ["eject",_vehicle];
@@ -235,7 +233,7 @@ if (_isBurning) exitWith {};
                     private _woundSelection = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] selectRandomWeighted [0.77, 0.5, 0.8, 0.8, 0.3, 0.3];
                     if (GET_PAIN_PERCEIVED(_unit) < (PAIN_UNCONSCIOUS + random 0.2)) then {
                         // keep pain around unconciousness limit to allow for more fun interactions
-                        [_unit, _intensity / MAX_INTENSITY, _woundSelection, "burn", _instigator] call EFUNC(medical,addDamageToUnit);
+                        [_unit, _intensity / BURN_MAX_INTENSITY, _woundSelection, "burn", _instigator] call EFUNC(medical,addDamageToUnit);
                     } else {
                         [_unit, 0.15, _woundSelection, "burn", _instigator] call EFUNC(medical,addDamageToUnit);
                     };
@@ -246,7 +244,7 @@ if (_isBurning) exitWith {};
 
         private _burnIndicatorPFH = _unit getVariable [QGVAR(burnUIPFH), -1];
         if (_unit isEqualTo ace_player && { _isThisUnitAlive } && { _burnIndicatorPFH < 0 }) then {
-            _burnIndicatorPFH = [FUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
+            _burnIndicatorPFH = [LINKFUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
             _unit setVariable [QGVAR(burnUIPFH), _burnIndicatorPFH];
         };
     };
@@ -298,7 +296,7 @@ if (_isBurning) exitWith {};
 
     if (local _unit) then {
         if (_unit isEqualTo ace_player) then {
-            private _burnIndicatorPFH = [FUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
+            private _burnIndicatorPFH = [LINKFUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
             _unit setVariable [QGVAR(burnUIPFH), _burnIndicatorPFH];
         };
 
@@ -326,6 +324,7 @@ if (_isBurning) exitWith {};
         };
     };
     _unit setVariable [QGVAR(burning), false];
+    _unit setVariable [QGVAR(burnCounter), 0];
 }, {
     // run condition
     true
@@ -336,5 +335,5 @@ if (_isBurning) exitWith {};
     private _unitAlive = (alive _unit) && { getNumber ((configOf _unit) >> "isPlayableLogic") != 1 };
     private _unitIsUnit = { (_unit != vehicle _unit) && { isNull vehicle _unit } };
 
-    !_unitAlive || _unitIsUnit || { _intensity <= MIN_INTENSITY } || { !([_unit] call FUNC(isBurning)) }
+    !_unitAlive || _unitIsUnit || { _intensity <= BURN_MIN_INTENSITY } || { !([_unit] call FUNC(isBurning)) }
 }, ["_intensity", "_fireParticle", "_smokeParticle", "_fireLight", "_fireSound", "_lightFlare", "_lastIntensityUpdate", "_lastPropogateUpdate", "_isThisUnitAlive"]] call CBA_fnc_createPerFrameHandlerObject;

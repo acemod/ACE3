@@ -18,16 +18,18 @@
 //////////////////////////////////////////////////
 
 //Status Effect EHs:
-[QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
-["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
-["blockSprint", false, ["ace_advanced_fatigue", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
+[QGVAR(setStatusEffect), LINKFUNC(statusEffect_set)] call CBA_fnc_addEventHandler;
+["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ace_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
+["blockSprint", false, ["ace_advanced_fatigue", "ace_dragging", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
 ["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
 ["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
 ["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
-["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
+["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ace_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
+["disableWeaponAssembly", false, ["ace_common", "ace_common_lockVehicle", "ace_csw"]] call FUNC(statusEffect_addType);
+["lockInventory", true, [], true] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -94,7 +96,7 @@
         _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
     };
     if (["task_force_radio"] call FUNC(isModLoaded)) then {
-        _object setVariable ["tf_voiceVolume", [1, 0] select (_set > 0), true];
+        _object setVariable ["tf_voiceVolume", parseNumber (_set == 0), true];
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -120,6 +122,17 @@
     _object setMass _mass;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(disableWeaponAssembly), {
+    params ["_object", "_set"];
+    _object enableWeaponDisassembly (_set < 1);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(lockInventory), {
+    params ["_object", "_set"];
+    TRACE_2("lockInventory EH",_object,_set);
+    _object lockInventory (_set > 0);
+}] call CBA_fnc_addEventHandler;
+
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
 //This variable is used for isPlayer checks
 if (isServer) then {
@@ -129,7 +142,7 @@ if (isServer) then {
         if ((!isNil "_zeusLogic") && {!isNull _zeusLogic}) then {
             {
                 if ((_x getvariable ["bis_fnc_moduleRemoteControl_owner", objnull]) isEqualTo _dcPlayer) exitWith {
-                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
+                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`",[_x] call FUNC(getName),_dcPlayer,_x);
                     _x setVariable ["bis_fnc_moduleRemoteControl_owner", nil, true];
                 };
                 nil
@@ -144,9 +157,9 @@ if (isServer) then {
     INFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(fixCollision), FUNC(fixCollision)] call CBA_fnc_addEventHandler;
-[QGVAR(fixFloating), FUNC(fixFloating)] call CBA_fnc_addEventHandler;
-[QGVAR(fixPosition), FUNC(fixPosition)] call CBA_fnc_addEventHandler;
+[QGVAR(fixCollision), LINKFUNC(fixCollision)] call CBA_fnc_addEventHandler;
+[QGVAR(fixFloating), LINKFUNC(fixFloating)] call CBA_fnc_addEventHandler;
+[QGVAR(fixPosition), LINKFUNC(fixPosition)] call CBA_fnc_addEventHandler;
 
 ["ace_loadPersonEvent", LINKFUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
 ["ace_unloadPersonEvent", LINKFUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
@@ -154,10 +167,16 @@ if (isServer) then {
 [QGVAR(lockVehicle), {
     _this setVariable [QGVAR(lockStatus), locked _this];
     _this lock 2;
+    if ([] isNotEqualTo getArray (configOf _this >> "assembleInfo" >> "dissasembleTo")) then {
+        [_this, "disableWeaponAssembly", QGVAR(lockVehicle), true] call FUNC(statusEffect_set);
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(unlockVehicle), {
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
+    if ([] isNotEqualTo getArray (configOf _target >> "assembleInfo" >> "dissasembleTo")) then {
+        [_this, "disableWeaponAssembly", QGVAR(lockVehicle), false] call FUNC(statusEffect_set);
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setDir), {(_this select 0) setDir (_this select 1)}] call CBA_fnc_addEventHandler;
@@ -190,8 +209,8 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 // Request framework
-[QGVAR(requestCallback), FUNC(requestCallback)] call CBA_fnc_addEventHandler;
-[QGVAR(receiveRequest), FUNC(receiveRequest)] call CBA_fnc_addEventHandler;
+[QGVAR(requestCallback), LINKFUNC(requestCallback)] call CBA_fnc_addEventHandler;
+[QGVAR(receiveRequest), LINKFUNC(receiveRequest)] call CBA_fnc_addEventHandler;
 
 [QGVAR(systemChatGlobal), {systemChat _this}] call CBA_fnc_addEventHandler;
 
@@ -200,7 +219,7 @@ if (isServer) then {
     [QGVAR(enableSimulationGlobal), {(_this select 0) enableSimulationGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
     [QGVAR(setShotParents), {(_this select 0) setShotParents [_this select 1, _this select 2]}] call CBA_fnc_addEventHandler;
     ["ace_setOwner", {(_this select 0) setOwner (_this select 1)}] call CBA_fnc_addEventHandler;
-    [QGVAR(serverLog), FUNC(serverLog)] call CBA_fnc_addEventHandler;
+    [QGVAR(serverLog), LINKFUNC(serverLog)] call CBA_fnc_addEventHandler;
     [QGVAR(claimSafe), LINKFUNC(claimSafeServer)] call CBA_fnc_addEventHandler;
 };
 
@@ -217,14 +236,14 @@ if (!isServer) then {
         ["ACEa", [player]] call CBA_fnc_serverEvent;
     }] call CBA_fnc_addEventHandler;
 } else {
-    ["ACEa", FUNC(_handleRequestAllSyncedEvents)] call CBA_fnc_addEventHandler;
+    ["ACEa", LINKFUNC(_handleRequestAllSyncedEvents)] call CBA_fnc_addEventHandler;
 };
 
-["ACEe", FUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
-["ACEs", FUNC(_handleRequestSyncedEvent)] call CBA_fnc_addEventHandler;
+["ACEe", LINKFUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
+["ACEs", LINKFUNC(_handleRequestSyncedEvent)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
 };
 
 
@@ -342,7 +361,7 @@ addMissionEventHandler ["PlayerViewChanged", {
         private _position = [player] call FUNC(getUavControlPosition);
         private _seatAI = objNull;
         private _turret = [];
-        switch (toLower _position) do {
+        switch (toLowerANSI _position) do {
             case (""): {
                 _UAV = objNull; // set to objNull if not actively controlling
             };
@@ -373,8 +392,8 @@ addMissionEventHandler ["PlayerViewChanged", {
 // Eventhandlers for player controlled machines
 //////////////////////////////////////////////////
 
-[QGVAR(displayTextStructured), {_this call FUNC(displayTextStructured)}] call CBA_fnc_addEventHandler;
-[QGVAR(displayTextPicture), {_this call FUNC(displayTextPicture)}] call CBA_fnc_addEventHandler;
+[QGVAR(displayTextStructured), LINKFUNC(displayTextStructured)] call CBA_fnc_addEventHandler;
+[QGVAR(displayTextPicture), LINKFUNC(displayTextPicture)] call CBA_fnc_addEventHandler;
 
 ["ace_unconscious", {
     params ["_unit", "_isUnconscious"];
@@ -384,7 +403,7 @@ addMissionEventHandler ["PlayerViewChanged", {
     };
 }] call CBA_fnc_addEventHandler;
 
-["ace_useItem", DFUNC(useItem)] call CBA_fnc_addEventHandler;
+["ace_useItem", LINKFUNC(useItem)] call CBA_fnc_addEventHandler;
 
 
 //////////////////////////////////////////////////
@@ -402,11 +421,11 @@ addMissionEventHandler ["PlayerViewChanged", {
     params ["_unit", "_target"];
 
     // Players can always interact with himself if not boarded
-    vehicle _unit == _unit ||
+    isNull objectParent _unit ||
     // Players can always interact with his vehicle
-    {vehicle _unit == _target} ||
+    {objectParent _unit isEqualTo _target} ||
     // Players can always interact with passengers of the same vehicle
-    {_unit != _target && {vehicle _unit == vehicle _target}} ||
+    {_unit isNotEqualTo _target && {!isNull objectParent _target} && {objectParent _unit isEqualTo objectParent _target}} ||
     // Players can always interact with connected UAV
     {!(isNull (ACE_controlledUAV select 0))}
 }] call FUNC(addCanInteractWithCondition);
@@ -415,7 +434,7 @@ addMissionEventHandler ["PlayerViewChanged", {
 
 ["isNotUnconscious", {
     params ["_unit"];
-    lifeState _unit != "INCAPACITATED"
+    lifeState _unit isNotEqualTo "INCAPACITATED"
 }] call FUNC(addCanInteractWithCondition);
 
 //////////////////////////////////////////////////
@@ -475,6 +494,37 @@ GVAR(reloadMutex_lastMagazines) = [];
     };
     GVAR(reloadMutex_lastMagazines) = _mags;
 }, true] call CBA_fnc_addPlayerEventHandler;
+
+//////////////////////////////////////////////////
+// Start the sway loop
+//////////////////////////////////////////////////
+["CBA_settingsInitialized", {
+    ["multiplier", {
+        switch (true) do {
+            case (isWeaponRested ACE_player): {
+                GVAR(swayFactor) * GVAR(restedSwayFactor)
+            };
+            case (isWeaponDeployed ACE_player): {
+                GVAR(swayFactor) * GVAR(deployedSwayFactor)
+            };
+            default {
+                GVAR(swayFactor)
+            };
+        };
+    }, QUOTE(ADDON)] call FUNC(addSwayFactor);
+
+    [{
+        // frame after settingsInitialized to ensure all other addons have added their factors
+        if (GVAR(enableSway)) then {
+            call FUNC(swayLoop);
+        };
+        // check for pre-3.16 sway factors being added
+        if (!isNil {missionNamespace getVariable "ACE_setCustomAimCoef"}) then {
+            WARNING("ACE_setCustomAimCoef no longer supported - use ace_common_fnc_addSwayFactor");
+            WARNING_1("source: %1",(missionNamespace getVariable "ACE_setCustomAimCoef") apply {_x});
+        };
+    }] call CBA_fnc_execNextFrame;
+}] call CBA_fnc_addEventHandler;
 
 //////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler
@@ -540,29 +590,35 @@ GVAR(deviceKeyCurrentIndex) = -1;
 [0xC7, [true, false, false]], false] call CBA_fnc_addKeybind;  //SHIFT + Home Key
 
 
-["ACE3 Weapons", QGVAR(unloadWeapon), localize LSTRING(unloadWeapon), {
-    // Conditions:
-    if !([ACE_player, objNull, ["isNotInside"]] call FUNC(canInteractWith)) exitWith {false};
+["ACE3 Weapons", QGVAR(unloadWeapon), LSTRING(unloadWeapon), {
+    private _unit = ACE_player;
 
-    private _currentWeapon = currentWeapon ACE_player;
-    if !(_currentWeapon != primaryWeapon _unit && {_currentWeapon != handgunWeapon _unit} && {_currentWeapon != secondaryWeapon _unit}) exitWith {false};
+    // Conditions
+    if !([_unit, objNull, ["isNotInside"]] call FUNC(canInteractWith)) exitWith {false};
 
-    private _currentMuzzle = currentMuzzle ACE_player;
-    private _currentAmmoCount = ACE_player ammo _currentMuzzle;
-    if (_currentAmmoCount < 1) exitWith {false};
+    if !(_unit call CBA_fnc_canUseWeapon) exitWith {false};
 
-    // Statement:
-    [ACE_player, _currentWeapon, _currentMuzzle, _currentAmmoCount, false] call FUNC(unloadUnitWeapon);
+    (weaponState _unit) params ["_weapon", "_muzzle", "", "_magazine", "_ammo"];
+
+    // Check if there is any ammo
+    if (_ammo < 1) exitWith {false};
+
+    // Check if the unit has a weapon
+    if (_weapon == "") exitWith {false};
+
+    // Check if the unit has a weapon selected
+    if !(_weapon in [primaryWeapon _unit, handgunWeapon _unit, secondaryWeapon _unit]) exitWith {false};
+
+    // Statement
+    [_unit, _weapon, _muzzle, _magazine, _ammo, false] call FUNC(unloadUnitWeapon);
+
     true
-}, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; //ALT + R Key
+}, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; // Alt + R
 
 ["CBA_loadoutSet", {
     params ["_unit", "_loadout"];
-    // remove if with https://github.com/CBATeam/CBA_A3/pull/1548
-    if (count _loadout == 2) then {
-        _loadout = _loadout select 0;
-    };
     _loadout params ["_primaryWeaponArray"];
+
     if ((_primaryWeaponArray param [0, ""]) == "ACE_FakePrimaryWeapon") then {
         TRACE_1("Ignoring fake gun",_primaryWeaponArray);
         _loadout set [0, []];

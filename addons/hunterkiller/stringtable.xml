@@ -3,18 +3,63 @@
     <Package name="HunterKiller">
         <Key ID="STR_ACE_HunterKiller_displayName">
             <English>Hunter Killer</English>
+            <Korean>헌터 킬러</Korean>
+            <Russian>Hunter Killer</Russian>
+            <Spanish>Hunter Killer</Spanish>
+            <Japanese>ハンターキラー</Japanese>
+            <Polish>Hunter Killer</Polish>
+            <German>Hunter Killer</German>
+            <Italian>Hunter Killer</Italian>
+            <French>Hunter Killer</French>
+            <Portuguese>Hunter Killer</Portuguese>
         </Key>
         <Key ID="STR_ACE_HunterKiller_override">
             <English>Override</English>
+            <Korean>오버라이드</Korean>
+            <Russian>Указать</Russian>
+            <Spanish>Anular</Spanish>
+            <Japanese>オーバーライド</Japanese>
+            <Polish>Nadpisanie</Polish>
+            <German>Überschreibe</German>
+            <Italian>Sovrascrivi</Italian>
+            <French>Surcharge</French>
+            <Portuguese>Sobrescrever</Portuguese>
         </Key>
         <Key ID="STR_ACE_HunterKiller_override_description">
             <English>Force other turret to slew onto your viewpoint</English>
+            <Korean>다른 포탑이 시야에 오도록 강제합니다.</Korean>
+            <Russian>Повернуть другую турель туда, куда смотрит твоя</Russian>
+            <Spanish>Forzar otra torreta a dirigirse hacia tu zona de apuntado.</Spanish>
+            <Japanese>他のタレットを強制的に自分の視点に旋回させる</Japanese>
+            <Polish>Obróć drugą wieżyczkę w kierunku, w którym zwrócona jest twoja wieżyczka.</Polish>
+            <German>Zwingt andere Türme, sich auf deine Blickrichtung zu drehen</German>
+            <Italian>Costringe altre torrette a puntare dove è puntata la tua.</Italian>
+            <French>Force une autre tourelle à s'aligner sur votre point de vue.</French>
+            <Portuguese>Força outra torreta a alinhar-se com o seu ponto de vista.</Portuguese>
         </Key>
         <Key ID="STR_ACE_HunterKiller_observe">
             <English>Observe</English>
+            <Korean>관측</Korean>
+            <Russian>Наблюдать</Russian>
+            <Spanish>Observar</Spanish>
+            <Japanese>オブザーブ</Japanese>
+            <Polish>Obserwowanie</Polish>
+            <German>Observiere</German>
+            <Italian>Osserva</Italian>
+            <French>Observation</French>
+            <Portuguese>Observar</Portuguese>
         </Key>
         <Key ID="STR_ACE_HunterKiller_observe_description">
             <English>Slew your turret onto other turret's viewpoint</English>
+            <Korean>포탑을 다른 포탑의 시야에 놓습니다.</Korean>
+            <Russian>Повернуть свою турель туда, куда смотрит другая</Russian>
+            <Spanish>Dirigir tu propia torreta hacia la zona de apuntado de otra torreta.</Spanish>
+            <Japanese>自分のタレットを相手のタレットの視点に旋回させる。</Japanese>
+            <Polish>Obróć swoją wieżyczkę tam, gdzie patrzy druga.</Polish>
+            <German>Richtet deinen Turm auf die Blickrichtung eines anderen Turms</German>
+            <Italian>Punta la tua torretta nella direzione di un'altra torretta.</Italian>
+            <French>Aligne votre tourelle sur le point de vue d'une autre tourelle.</French>
+            <Portuguese>Alinhe a sua torreta com o ponto de vista de outra torreta.</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -13,6 +13,6 @@ GVAR(locations) = [];
 // Custom deploy handlers
 GVAR(deployHandlers) = [];
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

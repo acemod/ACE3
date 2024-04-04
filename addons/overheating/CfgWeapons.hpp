@@ -99,14 +99,17 @@ class CfgWeapons {
     };
     class ACE_ItemCore;
     class CBA_MiscItem_ItemInfo;
+
+    // Deprecated, 3.16.0 Arsenal supports showing magazines as misc items
     class ACE_SpareBarrel_Item: ACE_ItemCore {
         displayName = CSTRING(SpareBarrelName);
         author = ECSTRING(common,ACETeam);
-        scope = 2;
+        scope = 1;
+        scopeArsenal = 0;
         descriptionshort = CSTRING(SpareBarrelDescription);
         picture = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 60;
+            mass = 25;
         };
     };
 };

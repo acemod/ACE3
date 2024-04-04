@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Compatibility With ACE_CSW (will be called by ace_csw, no dependency)
@@ -55,7 +55,7 @@ if (_proxyWeaponNeeded || GVAR(useAmmoHandling)) then {
                     };
                 };
             } else {
-                WARNING_1("unknown mag %1", _xMag);
+                WARNING_1("unknown mag %1",_xMag);
             };
         };
     } forEach (magazinesAllTurrets _mortar);

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, Jonpas
  * Prepares throwable or selects the next.
@@ -17,6 +17,15 @@
 
 params ["_unit"];
 TRACE_1("params",_unit);
+
+// Temporarily enable wind info, to aid in throwing smoke grenades effectively
+if (
+    GVAR(enableTempWindInfo) && 
+    {!(missionNamespace getVariable [QEGVAR(weather,WindInfo), false])}
+) then {
+    [] call EFUNC(weather,displayWindInfo);
+    GVAR(tempWindInfo) = true;
+};
 
 // Select next throwable if one already in hand
 if (_unit getVariable [QGVAR(inHand), false]) exitWith {

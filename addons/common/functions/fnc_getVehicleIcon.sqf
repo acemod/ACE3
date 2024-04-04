@@ -1,10 +1,10 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: AACO
  * Function used to get the vehicle icon for provided object (cached for repeat use)
  *
  * Arguments:
- * 0: Object to get icon of <OBJECT/STRING>
+ * 0: Object to get icon of <OBJECT, STRING>
  *
  * Return Value:
  * Icon of vehicle <STRING>
@@ -32,7 +32,7 @@ if (isNil "_cachedValue") then {
     private _vehicleIconValue = getText (configfile >> "CfgVehicleIcons" >> _vehicleValue);
 
     if (_vehicleIconValue == "") then {
-        if (_vehicleValue != "" && {((toLower _vehicleValue) find ".paa") > -1}) then {
+        if (_vehicleValue != "" && {((toLowerANSI _vehicleValue) find ".paa") > -1}) then {
             _cachedValue = _vehicleValue;
         } else {
             _cachedValue = DEFAULT_TEXTURE;

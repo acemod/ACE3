@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk, Jonpas
  * Returns the nozzle back to source vehicle.
@@ -43,6 +43,10 @@ if (isNull _nozzle || {_source != _nozzle getVariable QGVAR(source)}) exitWith {
             deleteVehicle _helper;
         };
         deleteVehicle _nozzle;
+        
+        // Restore ability to drag and carry this object
+        _source setVariable [QEGVAR(dragging,canCarry), _source getVariable [QGVAR(canCarryLast), false], true];
+        _source setVariable [QEGVAR(dragging,canDrag),  _source getVariable [QGVAR(canDragLast),  false], true];
 
         [_source, "blockEngine", "ACE_Refuel", false] call EFUNC(common,statusEffect_set);
     },

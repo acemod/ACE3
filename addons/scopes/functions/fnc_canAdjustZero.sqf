@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, Ruthberg
  * Checks if the unit can change the zero adjustment of the current scope
@@ -18,7 +18,7 @@
 params ["_unit"];
 
 if (cameraView == "GUNNER") exitWith {false};
-if (vehicle _unit != _unit) exitWith {false};
+if (!isNull objectParent _unit) exitWith {false};
 if (GVAR(simplifiedZeroing)) exitWith {false};
 if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) exitWith {false};
 

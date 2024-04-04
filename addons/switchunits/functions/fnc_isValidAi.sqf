@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: bux578
  * Checks if AI is a valid target for switching.
@@ -19,6 +19,6 @@ params ["_unit"];
 
 !([_unit] call EFUNC(common,isPlayer)
 || {_unit in playableUnits}
-|| {vehicle _unit != _unit}
+|| {!isNull objectParent _unit}
 || {_unit getVariable [QGVAR(IsPlayerUnit), false]}
 || {_unit getVariable [QGVAR(IsPlayerControlled), false]}) // return

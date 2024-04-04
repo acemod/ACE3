@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_Advanced_Ballistics_WindInfoKey">
             <English>Show Wind Info</English>
             <Polish>Pokaż inf. o wietrze</Polish>
-            <Italian>Mostra indicazioni del vento</Italian>
+            <Italian>Mostra indicazioni vento</Italian>
             <Russian>Показать информацию о ветре</Russian>
             <French>Afficher les infos sur le vent</French>
             <Spanish>Mostrar información del viento</Spanish>
@@ -46,7 +46,7 @@
             <Hungarian>Fejlett ballisztika</Hungarian>
             <Russian>Продвинутая баллистика</Russian>
             <Italian>Balistica Avanzata</Italian>
-            <Japanese>アドバンスド バリスティックス</Japanese>
+            <Japanese>アドバンスド弾道計算</Japanese>
             <Korean>고급 탄도학</Korean>
             <Chinese>先進彈道系統</Chinese>
             <Chinesesimp>进阶弹道系统</Chinesesimp>
@@ -63,7 +63,7 @@
             <Hungarian>Fejlett ballisztika</Hungarian>
             <Russian>Продвинутая баллистика</Russian>
             <Italian>Balistica Avanzata</Italian>
-            <Japanese>アドバンスド バリスティックスを有効化</Japanese>
+            <Japanese>アドバンスド弾道計算を有効化</Japanese>
             <Korean>고급 탄도학</Korean>
             <Chinese>先進彈道系統</Chinese>
             <Chinesesimp>进阶弹道系统</Chinesesimp>
@@ -80,7 +80,7 @@
             <Hungarian>Engedélyezi a fejlett ballisztikát</Hungarian>
             <Russian>Включает продвинутую баллистику</Russian>
             <Italian>Abilita Balistica Avanzata</Italian>
-            <Japanese>アドバンスド バリスティックスを有効化します。</Japanese>
+            <Japanese>アドバンスド弾道計算は高度な弾道計算処理を有効化します。</Japanese>
             <Korean>고급 탄도학을 적용합니다</Korean>
             <Chinese>啟用先進彈道系統</Chinese>
             <Chinesesimp>启用进阶弹道系统</Chinesesimp>
@@ -106,8 +106,8 @@
             <English>Simulates slight variations in muzzle velocity between each shot</English>
             <Spanish>Simula variaciones ligeras de velocidad entre cada disparo</Spanish>
             <German>Simuliert leichte Variationen der Mündungsgeschwindigkeit zwischen jedem Schuss.</German>
-            <Japanese>発射毎の銃口初速の変動をシミュレートします。</Japanese>
-            <Italian>Simula lievi variazioni della velocità della volata tra un colpo e l'altro</Italian>
+            <Japanese>各発射毎の銃口初速のわずかな変動をシミュレートします。</Japanese>
+            <Italian>Simula piccole variazioni della velocità alla volata tra ogni colpo.</Italian>
             <Korean>각 사격 사이에 총구속도 변화를 시뮬레이션 합니다.</Korean>
             <Chinese>模擬每發子彈的槍口初速都略有不同</Chinese>
             <Chinesesimp>模拟每发子弹的枪口初速都略有不同</Chinesesimp>
@@ -128,8 +128,8 @@
             <French>Activer la simulation de la température</French>
             <Hungarian>Lőszer-hő szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция температуры для боеприпасов</Russian>
-            <Italian>Abilita simulazione della temperatura delle munizioni</Italian>
-            <Japanese>弾薬温度のシミュレーションを有効化</Japanese>
+            <Italian>Abilita simulazione temperatura munizioni</Italian>
+            <Japanese>弾薬温度シミュレーションを有効化</Japanese>
             <Korean>탄약 온도 구현 적용</Korean>
             <Chinese>啟用彈藥溫度模擬系統</Chinese>
             <Chinesesimp>启用弹药温度模拟系统</Chinesesimp>
@@ -145,7 +145,7 @@
             <French>La vitesse initiale varie en fonction de la température des munitions.</French>
             <Hungarian>A kezdősebesség a lőszer hőmérsékletétől függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от температуры</Russian>
-            <Italian>La velocità dello sparo varia a seconda della temperatura delle munizioni</Italian>
+            <Italian>La velocità alla volata varia a seconda della temperatura delle munizioni.</Italian>
             <Japanese>弾薬の温度により銃口初速を変動させます。</Japanese>
             <Korean>탄약 온도에 비례해 총구 속도가 달라집니다</Korean>
             <Chinese>子彈初速將隨彈藥溫度而有所變化</Chinese>
@@ -162,8 +162,8 @@
             <French>Activer la simulation de la longueur de canon</French>
             <Hungarian>Csőhossz-szimuláció engedélyezése</Hungarian>
             <Russian>Симуляция длины ствола</Russian>
-            <Italian>Abilita simulazione della lunghezza della canna</Italian>
-            <Japanese>銃身長のシミュレーションを有効化</Japanese>
+            <Italian>Abilita simulazione lunghezza canna</Italian>
+            <Japanese>銃身長シミュレーションを有効化</Japanese>
             <Korean>총열 길이 구현 적용</Korean>
             <Chinese>啟用槍管長度模擬系統</Chinese>
             <Chinesesimp>启用枪管长度模拟系统</Chinesesimp>
@@ -179,7 +179,7 @@
             <French>La vitesse initiale varie en fonction de la longueur du canon.</French>
             <Hungarian>A kezdősebesség a cső hosszától függően változó</Hungarian>
             <Russian>Начальная скорость пули зависит от длины ствола</Russian>
-            <Italian>La velocità di sparo varia a seconda della lunghezza della canna</Italian>
+            <Italian>La velocità alla volata varia a seconda della lunghezza della canna.</Italian>
             <Japanese>銃身長により銃口初速を変動させます。</Japanese>
             <Korean>총구 속도가 총열에 비례해 달라집니다</Korean>
             <Chinese>子彈初速將隨槍管長度而有所變化</Chinese>
@@ -196,7 +196,7 @@
             <French>Activer l'effet de balle traçante</French>
             <Hungarian>Nyomkövető-effekt engedélyezése</Hungarian>
             <Russian>Следы пуль</Russian>
-            <Italian>Abilita effetto dei Proiettili Traccianti</Italian>
+            <Italian>Abilita effetto di traccia proiettile</Italian>
             <Japanese>弾丸の軌跡エフェクトを有効化</Japanese>
             <Korean>예광탄 효과 적용</Korean>
             <Chinese>啟用曳光彈效果</Chinese>
@@ -213,7 +213,7 @@
             <French>Active un effet de balle traçante pour les munitions de gros calibre (seulement visible en utilisant une optique à fort grossissement).</French>
             <Hungarian>Engedélyezi a nagy kaliberű lövedékek nyomának vizuális követését (csak nagy teljesítményű optikán keresztül látható)</Hungarian>
             <Russian>Включает эффект следов пуль для больших калибров (видны только через мощную оптику)</Russian>
-            <Italian>Abilita effetto dei proiettili traccianti di alto calibro (visibile solo attraverso ottiche ad alto potenziale)</Italian>
+            <Italian>Abilita effetto di traccia lasciata da proiettili di alto calibro (visibile solo attraverso ottiche ad alto ingrandimento)</Italian>
             <Japanese>大口径弾の軌跡エフェクトを有効化します。 (高性能光学機器を介してのみ見ることができます)</Japanese>
             <Korean>대구경 탄환에 예광탄 효과를 적용합니다(오직 고성능 조준경 사용시에만 보입니다)</Korean>
             <Chinese>啟用曳光彈效果給大口徑子彈 (只有透過高倍率光學瞄鏡才能看到)</Chinese>
@@ -230,7 +230,7 @@
             <French>Intervalle de simulation</French>
             <Hungarian>Szimuláció intervalluma</Hungarian>
             <Russian>Интервал симуляции</Russian>
-            <Italian>Intervallo Simulazione</Italian>
+            <Italian>Intervallo di Simulazione</Italian>
             <Japanese>シミュレーション間隔</Japanese>
             <Korean>구현 간격</Korean>
             <Chinese>模擬間隔</Chinese>
@@ -246,7 +246,7 @@
             <French>Définit l'intervalle entre chacune des étapes de calcul.</French>
             <Hungarian>Meghatározza a számítási lépések közötti időintervallumot</Hungarian>
             <Russian>Определяет временной интервал между вычислениями</Russian>
-            <Italian>Definisce l'intervallo tra ogni step di calcolo</Italian>
+            <Italian>Definisce l'intervallo tra ogni passo del calcolo</Italian>
             <Japanese>各シミュレーション毎の間隔を定義します。</Japanese>
             <Korean>각 계산 단위의 간격을 정의합니다</Korean>
             <Chinese>定義每個模擬計算之間的時間間隔</Chinese>
@@ -263,7 +263,7 @@
             <Hungarian>Szimuláció hatóköre</Hungarian>
             <Russian>Радиус симуляции</Russian>
             <Italian>Raggio Simulazione</Italian>
-            <Japanese>シミュレーションの範囲</Japanese>
+            <Japanese>シミュレーションの半径</Japanese>
             <Korean>구현 범위</Korean>
             <Chinese>模擬半徑</Chinese>
             <Chinesesimp>模拟半径</Chinesesimp>
@@ -279,8 +279,8 @@
             <French>Définit le rayon autour du joueur (en mètres), dans lequel la balistique avancée est appliquée aux projectiles.</French>
             <Hungarian>Meghatározza a játékos körüli hatókört (méterben), ahol a lövedékek fejlett ballisztikát használnak</Hungarian>
             <Russian>Определяет радиус вокруг игрока (в метрах), в котором продвинутая баллистика применяется к снарядам</Russian>
-            <Italian>Definisce il raggio attorno al giocatore (in metri) per cui la Balistica Avanzata è applicata ai proiettili</Italian>
-            <Japanese>アドバンスド バリスティックスの適用半径範囲 (プレイヤー中心、メートル単位) を定義します。</Japanese>
+            <Italian>Definisce il raggio attorno al giocatore (in metri) entro il quale la Balistica Avanzata è applicata ai proiettili</Italian>
+            <Japanese>アドバンスド弾道計算の適用半径範囲 (プレイヤー中心、メートル単位) を定義します。</Japanese>
             <Korean>플레이어 주위의 발사체를 고급 탄도학으로 정의하는 범위를 정합니다(미터)</Korean>
             <Chinese>以玩家的半徑距離(公尺)定義先進彈道系統啟用範圍</Chinese>
             <Chinesesimp>定义玩家周围的半径（米），在这个半径内，进阶弹道系统会被启用</Chinesesimp>
@@ -296,8 +296,8 @@
             <Hungarian>Ez a modul engedélyezi a fejlett ballisztikai szimulációt - a lövedékek röppályáját befolyásolni fogja a levegő hőmérséklete, légnyomás, páratartalom, gravitáció, a lövedék fajtája, valamint a fegyver, amiből kilőtték a lövedéket.</Hungarian>
             <Russian>Этот модуль включает симуляцию продвинутой баллистики - при этом на траекторию полета снаряда влияют различные параметры, такие как температура воздуха, атмосферное давление, влажность, гравитация, тип боеприпаса и оружия, из которого произвели выстрел.</Russian>
             <Spanish>Este módulo permite la simulación balística avanzada - es decir, la trayectoria de los proyectiles está influenciada por variables como la temperatura del aire, la presión atmosférica, la humedad, la gravedad, el tipo de municiones y el arma desde el que fue disparada.</Spanish>
-            <Italian>Questo modulo abilita la simulazione della Balistica Avanzata - cioè la traiettoria dei proiettili è influenzata da variabili come la temperatura dell'aria, pressione atmosferica, umidità, gravità, il tipo di munizione e l'arma da cui è sparata</Italian>
-            <Japanese>アドバンスド バリスティックスのシミュレーションを有効化します。 弾道は気温・気圧・湿度・重力・弾薬の種類・発射する武器などの変化による影響を受けるようになります。</Japanese>
+            <Italian>Questo modulo abilita la simulazione della Balistica Avanzata - essa comporta che la traiettoria dei proiettili è influenzata da variabili come la temperatura dell'aria, pressione atmosferica, umidità, gravità, il tipo di munizione e l'arma da cui è sparata.</Italian>
+            <Japanese>アドバンスド弾道計算のシミュレーションを有効化します。 弾道は気温・気圧・湿度・重力・弾薬の種類・発射する武器などの変化による影響を受けるようになります。</Japanese>
             <Korean>이 모듈은 고급 탄도학을 적용시킵니다 - 이는 발사체의 궤적이 기온, 대기압, 습도, 중력, 탄환의 종류와 어느 무기에서 발사되는지에 따라 영향을 받습니다.</Korean>
             <Chinese>該模塊實現先進的彈道仿真 - 這意味著子彈的軌跡是由空氣溫度、大氣壓力、濕度、重力、彈藥類型以及射擊的武器所影響</Chinese>
             <Chinesesimp>该模块实现增强的弹道模拟—子弹的轨迹由空气温度、大气压力、湿度、重力、弹药类型和射击的武器等变量所影响</Chinesesimp>

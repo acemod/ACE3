@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Updates the vitals. Called from the statemachine's onState functions.
@@ -30,6 +30,9 @@ private _syncValues = (CBA_missionTime - _lastTimeValuesSynced) >= (10 + floor(r
 if (_syncValues) then {
     _unit setVariable [QGVAR(lastMomentValuesSynced), CBA_missionTime];
 };
+
+// Update SPO2 intake and usage since last update
+[_unit, _deltaT, _syncValues] call FUNC(updateOxygen);
 
 private _bloodVolume = GET_BLOOD_VOLUME(_unit) + ([_unit, _deltaT, _syncValues] call EFUNC(medical_status,getBloodVolumeChange));
 _bloodVolume = 0 max _bloodVolume min DEFAULT_BLOOD_VOLUME;

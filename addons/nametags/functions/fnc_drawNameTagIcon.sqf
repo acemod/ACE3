@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, esteldunedain, Drift_91
  * Draw the nametag and rank icon.
@@ -21,7 +21,7 @@
  * Public: No
  */
 
-TRACE_1("drawName:", _this);
+TRACE_1("drawName:",_this);
 
 params ["", "_target", "", "_heightOffset"];
 

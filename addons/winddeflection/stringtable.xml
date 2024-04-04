@@ -61,7 +61,7 @@
             <French>Météo</French>
             <German>Wetterinformationen</German>
             <Hungarian>Időjárás-Információ</Hungarian>
-            <Italian>Meteo</Italian>
+            <Italian>Informazioni Meteo</Italian>
             <Portuguese>Informação Meteorológica</Portuguese>
             <Japanese>天候の情報</Japanese>
             <Korean>기상 정보</Korean>
@@ -79,7 +79,7 @@
             <German>Luftfeuchtigkeit: %1</German>
             <Hungarian>Páratartalom: %1%</Hungarian>
             <Italian>Umidità: %1%</Italian>
-            <Portuguese>Humidade: %1%</Portuguese>
+            <Portuguese>Umidade: %1%</Portuguese>
             <Japanese>湿度: %1%</Japanese>
             <Korean>습도: %1%</Korean>
             <Chinesesimp>湿度：%1%</Chinesesimp>

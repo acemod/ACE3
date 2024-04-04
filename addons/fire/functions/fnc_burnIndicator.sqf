@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Run once per second in a PFH. Update screen effects with burn indicator.
  *
  * Arguments:

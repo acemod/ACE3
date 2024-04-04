@@ -3,10 +3,6 @@
         class ACE_MainActions { \
             class GVAR(Repair) { \
                 displayName = CSTRING(Repair); \
-                condition = "true"; \
-                statement = ""; \
-                runOnHover = 1; \
-                showDisabled = 0; \
                 icon = "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"; \
                 distance = 4; \
                 exceptions[] = {"isNotSwimming", "isNotOnLadder"}; \
@@ -403,40 +399,19 @@ class CfgVehicles {
         };
 
         editorPreview = QPATHTOF(data\preview_wheel.jpg);
-    };
 
-    // disable vanilla repair
-    // "getNumber (_x >> ""transportRepair"") > 0" configClasses (configFile >> "CfgVehicles")
-    class ReammoBox_F;
-    class Land_RepairDepot_01_base_F: ReammoBox_F { // TanksDLC - Repair Depo Thing
-        GVAR(canRepair) = 1;
-        transportRepair = 0;
-    };
-    class Van_02_base_F;
-    class Van_02_service_base_F: Van_02_base_F { // OrangeDLC
-        GVAR(canRepair) = 1;
-        transportRepair = 0;
-    };
-
-    class Slingload_01_Base_F;
-    class B_Slingload_01_Repair_F: Slingload_01_Base_F {
-        GVAR(canRepair) = 1;
-        transportRepair = 0;
-    };
-
-    class Helicopter_Base_H;
-    class Heli_Transport_04_base_F: Helicopter_Base_H {
-        GVAR(hitpointGroups)[] = { {"HitEngine", {"HitEngine1", "HitEngine2"}} };
-    };
-    class O_Heli_Transport_04_repair_F: Heli_Transport_04_base_F {
-        GVAR(canRepair) = 1;
-        transportRepair = 0;
-    };
-
-    class Pod_Heli_Transport_04_base_F;
-    class Land_Pod_Heli_Transport_04_repair_F: Pod_Heli_Transport_04_base_F {
-        GVAR(canRepair) = 1;
-        transportRepair = 0;
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                class GVAR(Patch) {
+                    displayName = CSTRING(PatchWheel);
+                    distance = 4;
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canPatchRemovedWheel));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(patchRemovedWheel));
+                    exceptions[] = {"isNotDragging", "isNotCarrying", "isNotOnLadder", "isNotSwimming", "isNotSitting"};
+                    icon = QPATHTOF(ui\patch_ca.paa);
+                };
+            };
+        };
     };
 
     class Heli_Transport_02_base_F;
@@ -450,39 +425,8 @@ class CfgVehicles {
     };
 
     class B_APC_Tracked_01_base_F;
-    class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
-        GVAR(canRepair) = 1;
-        transportRepair = 0;
-    };
-
     class B_APC_Tracked_01_AA_F: B_APC_Tracked_01_base_F {
         GVAR(hitpointPositions)[] = {{"HitTurret", {0,-2,0}}};
-    };
-
-    class Offroad_01_base_F;
-    class Offroad_01_repair_base_F: Offroad_01_base_F {
-        GVAR(canRepair) = 1;
-        transportRepair = 0;
-    };
-
-    class B_Truck_01_mover_F;
-    class B_Truck_01_Repair_F: B_Truck_01_mover_F {
-        GVAR(canRepair) = 1;
-        transportRepair = 0;
-    };
-
-    class B_Truck_01_fuel_F: B_Truck_01_mover_F {  // the fuel hemet apparently can repair. GJ BI
-        transportRepair = 0;
-    };
-
-    class Truck_02_base_F;
-    class Truck_02_box_base_F: Truck_02_base_F {
-        GVAR(canRepair) = 1;
-        transportRepair = 0;
-    };
-
-    class Truck_02_medical_base_F: Truck_02_box_base_F {
-        GVAR(canRepair) = 0;
     };
 
     class Car_F: Car {
@@ -503,10 +447,6 @@ class CfgVehicles {
                 name = "wheel_2_4_steering";
             };
         };
-    };
-    class O_Truck_03_repair_F: Truck_03_base_F {
-        GVAR(canRepair) = 1;
-        transportRepair = 0;
     };
 
     class Quadbike_01_base_F: Car_F {

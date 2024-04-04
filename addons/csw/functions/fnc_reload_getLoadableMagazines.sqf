@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Gets magazines that the player is carrying that can be loaded into the static weapon
@@ -70,7 +70,7 @@ private _return = [];
                 ) exitWith {
                     _return pushBack [_carryMag, _turretPath, _loadInfo, _magSource];
                 };
-            } forEach ([_weapon] call CBA_fnc_compatibleMagazines);
+            } forEach (compatibleMagazines _weapon);
         } forEach _availableMagazines;
     } forEach (_vehicle weaponsTurret _turretPath);
 } forEach (allTurrets _vehicle);

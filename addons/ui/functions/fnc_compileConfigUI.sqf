@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Compiles and caches UI from ACE_UI config.
@@ -17,7 +17,7 @@
 
 {
     private _failure = false;
-    private _class = toLower (configName _x);
+    private _class = toLowerANSI (configName _x);
 
     private _idd = getNumber (_x >> "idd");
 

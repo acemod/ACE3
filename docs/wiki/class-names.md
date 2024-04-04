@@ -171,6 +171,18 @@ ACE_HuntIR_monitor | HuntIR monitor | ACE_ItemCore |
 ACE_HuntIR_M203 | HuntIR Round | Grenade shell |
 ACE_HuntIR_Box | HuntIR Transport Box | ammo box |
 
+### IR Lights
+`Added in 3.16.0`
+
+Class Name | In-Game Name | Type   |
+---------- | --------- | ---------
+ACE_DBAL_A3_Red | DBAL-A3 (red) | Weapon accessory |
+ACE_DBAL_A3_Red_LR | DBAL-A3 (red) | Weapon accessory |
+ACE_DBAL_A3_Green | DBAL-A3 (green) | Weapon accessory |
+ACE_DBAL_A3_Green_LR | DBAL-A3 (green) | Weapon accessory |
+ACE_SPIR | SPIR | Weapon accessory |
+ACE_SPIR_LR | SPIR | Weapon accessory |
+
 ### Kestrel
 `Added in 3.0.0`
 

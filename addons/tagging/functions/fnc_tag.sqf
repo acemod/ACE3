@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, esteldunedain
  * Creates a tag on a wall that is on the closest surface within 2m on front of the unit.
@@ -6,11 +6,11 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: The colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
- * 2: Material of the tag <STRING> (Optional)
- * 3: Tag Model <STRING> (optional)
+ * 2: Material of the tag <STRING> (default: "")
+ * 3: Tag Model <STRING> (default: "UserTexture1m_F")
  *
  * Return Value:
- * Sucess <BOOL>
+ * Success <BOOL>
  *
  * Example:
  * success = [player, "z\ace\addons\tagging\UI\tags\black\0.paa"] call ace_tagging_fnc_tag
@@ -45,7 +45,7 @@ if (_intersections isEqualTo []) exitWith {
 };
 
 (_intersections select 0) params ["_touchingPoint", "_surfaceNormal", "", "_object"];
-TRACE_3("",_touchingPoint, _surfaceNormal, _object);
+TRACE_3("",_touchingPoint,_surfaceNormal,_object);
 
 // Exit if trying to tag a non static object
 if ((!isNull _object) && {
@@ -93,7 +93,7 @@ private _vectorDirAndUp = if (abs (_v1 select 2) < 0.94) then {
     [_v1, _v3]
 };
 
-TRACE_3("Reference:", _v1, _v2, _v3);
+TRACE_3("Reference:",_v1,_v2,_v3);
 
 private _fnc_isOk = {
     params ["_rx", "_ry"];
