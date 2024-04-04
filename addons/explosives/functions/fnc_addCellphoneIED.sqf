@@ -29,7 +29,7 @@ private _hasRequired = true;
 private _detonators = [_unit] call FUNC(getDetonators);
 
 {
-    if !(_x in _detonators) exitWith{
+    if !(_x in _detonators) exitWith {
         _hasRequired = false;
     };
 } forEach _requiredItems;

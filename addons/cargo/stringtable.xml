@@ -39,6 +39,7 @@
             <Russian>Разместить</Russian>
             <Japanese>配置する</Japanese>
             <Korean>배치하기</Korean>
+            <French>Déployer</French>
         </Key>
         <Key ID="STR_ACE_Cargo_ScrollAction">
             <English>Raise/Lower | (Ctrl + Scroll) Rotate</English>
@@ -285,6 +286,7 @@
             <Japanese>%1 を %2 に積み込んでいます・・・</Japanese>
             <Russian>Загружаем %1 в %2...</Russian>
             <Korean>%1을(를) %2에 싣는 중...</Korean>
+            <French>Chargement %1 dans %2...</French>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading %1 from %2...</English>
@@ -293,6 +295,7 @@
             <Japanese>%1 を %2 から降ろしています・・・</Japanese>
             <Russian>Выгружаем %1 из %2...</Russian>
             <Korean>%1을(를) %2(으)로부터 내리는 중...</Korean>
+            <French>Déchargement %1 de %2...</French>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
@@ -580,6 +583,7 @@
             <Russian>Включить размещение</Russian>
             <Japanese>配置機能を有効化</Japanese>
             <Korean>배치 활성화</Korean>
+            <French>Permettre le placement</French>
         </Key>
         <Key ID="STR_ACE_Cargo_enableDeploy_description">
             <English>Controls whether cargo items can be unloaded via the deploy method.</English>
@@ -587,6 +591,7 @@
             <Russian>Определяет, можно ли выгружать грузы с помощью метода размещения.</Russian>
             <Japanese>配置機能を介して貨物アイテムを降ろすことが出来るかどうかを制御します。</Japanese>
             <Korean>배치 방법을 통해 화물 아이템을 내릴 수 있는지 여부를 제어합니다.</Korean>
+            <French>Contrôler si les éléments de cargaison peuvent être déchargés via la méthode de déploiement.</French>
         </Key>
     </Package>
 </Project>

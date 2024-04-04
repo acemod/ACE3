@@ -49,8 +49,7 @@ diag_log text format ["-------------------------------------------"];
             };
 
             _iter = _iter + 1;
-            false
-        } count _counterEntry;
+        } forEach _counterEntry;
 
         // results
         _averageResult = (_total / _count) * 1000;

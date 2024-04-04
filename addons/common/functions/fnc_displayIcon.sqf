@@ -79,7 +79,6 @@ private _refresh = {
             _ctrl ctrlSetTextColor _xcolor;
             _ctrl ctrlCommit 0;
             _allControls pushBack _ctrl;
-            false
         } forEach (missionNamespace getVariable [QGVAR(displayIconList),[]]);
     };
 

@@ -25,4 +25,3 @@ _respawnVariables pushBack "ACE_PersistentFunctions";
 {
     _unit setVariable [_x, _unit getVariable _x, true];
 } forEach _respawnVariables;
-nil
