@@ -88,7 +88,7 @@ if (
 // Receiving explosive damage inside a vehicle doesn't trigger for each hitpoint
 // This is the case for mines, explosives, artillery, and catasthrophic vehicle explosions
 if (
-    (_structuralDamage && !_environmentDamage && _inVehicle) &&
+    (!_environmentDamage && _inVehicle && _structuralDamage) &&
     {
         private _ammoCfg = configFile >> "CfgAmmo" >> _ammo;
         GET_NUMBER(_ammoCfg >> "explosive",0) > 0 ||
