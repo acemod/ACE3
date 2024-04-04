@@ -21,10 +21,8 @@ GVAR(GrenadesNonFrag) = [];
         private _explosive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosive");
 
         ([GVAR(GrenadesFrag), GVAR(GrenadesNonFrag)] select (_explosive == 0)) pushBack _x;
-        false
-    } count _magazines;
-    false
-} count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
+    } forEach _magazines;
+} forEach getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
 
 #include "initSettings.inc.sqf"
 

@@ -4981,6 +4981,7 @@
             <Japanese>Zeus治療時間係数</Japanese>
             <Korean>제우스 치료 시간 계수</Korean>
             <Russian>Коэффициент времени обработки Zeus</Russian>
+            <French>Coeff. de temps</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_Description">
             <English>Multiply all treatment times with this coefficient when in Zeus.</English>
@@ -4989,6 +4990,7 @@
             <Japanese>Zeus操作中は、すべての治療時間にこの係数を掛けます。</Japanese>
             <Korean>제우스일 때 모든 치료 시간에 이 계수를 곱합니다.</Korean>
             <Russian>Умножьте все время лечения на этот коэффициент, когда вы находитесь в Zeus.</Russian>
+            <French>Coefficient de temps de traitement Zeus</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Display">
             <English>Painkillers</English>
@@ -5012,6 +5014,7 @@
             <Russian>Испол-ть обезболивающие</Russian>
             <Japanese>鎮痛剤を投与</Japanese>
             <Korean>진통제 투여</Korean>
+            <French>Administrer des analgésiques</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administering_Painkillers">
             <English>Administering Painkillers...</English>
@@ -5019,6 +5022,7 @@
             <Russian>Использование обезболивающего...</Russian>
             <Japanese>鎮痛剤を投与しています・・・</Japanese>
             <Korean>진통제 투여 중...</Korean>
+            <French>Administration d'analgésiques...</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Short">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
@@ -5026,6 +5030,7 @@
             <Russian>Безрецептурный анальгетик, используемый для борьбы с легкими и умеренными болевыми ощущениями.</Russian>
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
+            <French>Analgésique sans ordonnance utilisé pour lutter contre les douleurs légères à modérées.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Use">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
@@ -5033,6 +5038,7 @@
             <Russian>Безрецептурный анальгетик, используемый для борьбы с легкими и умеренными болевыми ощущениями.</Russian>
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
+            <French>Analgésique sans ordonnance utilisé pour lutter contre les douleurs légères à modérées.</French>
         </Key>
     </Package>
 </Project>

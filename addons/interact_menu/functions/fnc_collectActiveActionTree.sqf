@@ -67,8 +67,7 @@ if (_insertChildrenCode isNotEqualTo {}) then {
         if ((count _action) > 0) then {
             _activeChildren pushBack _action;
         };
-        nil
-    } count _dynamicChildren;
+    } forEach _dynamicChildren;
 };
 
 // Collect children class actions
@@ -77,8 +76,7 @@ if (_insertChildrenCode isNotEqualTo {}) then {
     if ((count _action) > 0) then {
         _activeChildren pushBack _action;
     };
-    nil
-} count _origActionChildren;
+} forEach _origActionChildren;
 
 // Collect children object actions
 {
@@ -91,8 +89,7 @@ if (_insertChildrenCode isNotEqualTo {}) then {
             _activeChildren pushBack _action;
         };
     };
-    nil
-} count GVAR(objectActionList);
+} forEach GVAR(objectActionList);
 
 
 // If the original action has no statement, and no children, don't display it

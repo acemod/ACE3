@@ -67,9 +67,7 @@ if (GVAR(requireRopeItems) && {_ropeClass != ""}) then {
 
     //deployedRopes format: attachment point, top part of the rope, bottom part of the rope, attachTo helper object, occupied, broken
     _deployedRopes pushBack [_ropeOrigin, _ropeTop, _ropeBottom, _dummy, _hook, false, false];
-
-    false
-} count _ropeOrigins;
+} forEach _ropeOrigins;
 
 _vehicle setVariable [QGVAR(deployedRopes), _deployedRopes, true];
 _vehicle setVariable [QGVAR(deploymentStage), 3, true];
