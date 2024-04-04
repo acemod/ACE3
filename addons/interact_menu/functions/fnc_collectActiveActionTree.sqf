@@ -43,12 +43,14 @@ _origActionData params [
     "_distance"
 ];
 
+private _result = [_target, ACE_player, _customParams] call _conditionCode;
+
 // Return nothing if the action itself is not active
-if !([_target, ACE_player, _customParams] call _conditionCode) exitWith {
+if (isNil "_result" || {!_result}) exitWith {
     []
 };
 
-// Return nothing if the action is to far (including checking sub actions) [DISABLED FOR NOW ref #2196]
+// Return nothing if the action is too far (including checking sub actions) [DISABLED FOR NOW ref #2196]
 // if (_distanceToBasePoint > _distance) exitWith {
     // []
 // };
