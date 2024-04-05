@@ -44,9 +44,16 @@ _origActionData params [
 ];
 
 private _result = [_target, ACE_player, _customParams] call _conditionCode;
-if (isNil "_result") then { ERROR_1("Action [%1] bad condition return",_actionName); _result = false; };
+
+// Handle nil as false
+if (isNil "_result") then {
+    ERROR_1("Action [%1] bad condition return",_actionName);
+
+    _result = false;
+};
+
 // Return nothing if the action itself is not active
-if (isNil "_result" || {!_result}) exitWith {
+if (!_result) exitWith {
     []
 };
 
