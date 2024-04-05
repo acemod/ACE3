@@ -214,8 +214,8 @@ class CfgVehicles {
         EGVAR(vehicle_damage,slatHitpoints)[] = {};
     };
 
-    class CUP_M1A2_TUSK_base;
-    class CUP_B_M1A2_TUSK_MG_US_Army: CUP_M1A2_TUSK_base {
+    class CUP_M1_Abrams_base;
+    class CUP_M1A2_TUSK_base: CUP_M1_Abrams_base {
         EGVAR(vehicle_damage,eraHitpoints)[] = {
             "hitera_l1", "hitera_l2", "hitera_l3", "hitera_l4", "hitera_r1",
             "hitera_r2", "hitera_r3", "hitera_r4"
@@ -229,7 +229,7 @@ class CfgVehicles {
     class CUP_M1Abrams_TUSK_Base: CUP_M1Abrams_Base {
         EGVAR(vehicle_damage,eraHitpoints)[] = {
             "hitera_l01", "hitera_l02", "hitera_l03", "hitera_l04", "hitera_l05",
-            "hitera_l06", "hitera_l07", "hitera_l08", "hitera_l09", "hitera_l10"
+            "hitera_l06", "hitera_l07", "hitera_l08", "hitera_l09", "hitera_l10",
             "hitera_l11", "hitera_l12", "hitera_l13", "hitera_l14", "hitera_l15",
             "hitera_l16", "hitera_r01", "hitera_r02", "hitera_r03", "hitera_r04",
             "hitera_r05", "hitera_r06", "hitera_r07", "hitera_r08", "hitera_r09",
