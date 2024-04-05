@@ -150,7 +150,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
-| `ace_medical_status_getBloodLoss` | [_unit, _bloodLoss] | Local | Listen | Called when blood loss is calculated for a unit, mods can listen and modify the blood loss value
+| `ace_medical_status_getBloodLoss` | [_unit, _bloodLoss] | Local | Listen | Called when blood loss is calculated for a unit, mods can listen and modify the blood loss value by modifying the array
 
 ### 2.16 Interaction (`ace_interaction`)
 
