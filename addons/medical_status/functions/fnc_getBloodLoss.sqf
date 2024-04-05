@@ -23,6 +23,10 @@ if (_woundBleeding == 0) exitWith {0};
 private _cardiacOutput = [_unit] call FUNC(getCardiacOutput);
 
 // even if heart stops blood will still flow slowly (gravity)
-private _loss = (_woundBleeding * (_cardiacOutput max CARDIAC_OUTPUT_MIN) * EGVAR(medical,bleedingCoefficient));
-[QGVAR(getBloodLoss), [_unit, _loss]] call CBA_fnc_localEvent;
-_loss
+private _bloodLoss = (_woundBleeding * (_cardiacOutput max CARDIAC_OUTPUT_MIN) * EGVAR(medical,bleedingCoefficient));
+
+private _eventArgs = [_unit, _bloodLoss]; // Pass by reference
+
+[QGVAR(getBloodLoss), _eventArgs] call CBA_fnc_localEvent;
+
+_eventArgs select 1 // return
