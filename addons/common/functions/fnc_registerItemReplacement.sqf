@@ -28,10 +28,13 @@ if (isNil QGVAR(itemReplacements)) then {
     ["loadout", LINKFUNC(replaceRegisteredItems)] call CBA_fnc_addPlayerEventHandler;
 };
 
-private _configCase = _oldItem call FUNC(getConfigName);
+// Get config case
+if (_oldItem isEqualType "") then {
+    private _configCase = _oldItem call FUNC(getConfigName);
 
-if (_configCase != "") then {
-    _oldItem = _configCase;
+    if (_configCase != "") then {
+        _oldItem = _configCase;
+    };
 };
 
 // Save item replacement
