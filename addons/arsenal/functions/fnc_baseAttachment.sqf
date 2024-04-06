@@ -28,8 +28,8 @@ _item = configName _config;
 
 // If the switch config entries are inherited, ignore
 if (
-    (inheritsFrom (_config >> "MRT_SwitchItemNextClass") isNotEqualTo (_config >> "MRT_SwitchItemNextClass")) ||
-    {inheritsFrom (_config >> "MRT_SwitchItemPrevClass") isNotEqualTo (_config >> "MRT_SwitchItemPrevClass")}
+    (inheritsFrom (_config >> "MRT_SwitchItemNextClass") isNotEqualTo _config) ||
+    {inheritsFrom (_config >> "MRT_SwitchItemPrevClass") isNotEqualTo _config}
 ) exitWith {
     _item // return
 };
