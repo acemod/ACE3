@@ -68,7 +68,6 @@ jobs:
         xcopy /e /h /q z\ace\tools\pDummies\vn vn\
         xcopy /e /h /q z\ace\tools\pDummies\WW2 WW2\
         xcopy /e /h /q z\ace\tools\pDummies\CUP CUP\
-        xcopy /e /h /q z\ace\tools\pDummies\lxWS lxWS\
     - name: Build
       run: py P:\z\ace\tools\make.py ci
       env:
