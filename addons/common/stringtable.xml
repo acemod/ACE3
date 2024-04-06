@@ -1844,12 +1844,8 @@
             <English>Enables weapon sway influenced by sway factors, such as stance, fatigue and medical condition.\nDisabling this setting will defer sway to vanilla or other mods.</English>
             <Japanese>姿勢、疲労、負傷状態などの手ぶれ要因に影響を受ける武器照準の揺れを有効にします。\nこの設定を無効にすると、手ぶれの揺れはバニラまたは他のMODの処理に任されます。</Japanese>
             <Korean>흔들림 계수, 자세, 피로도, 건강 상태 등의 요인에 영향을 받는 무기 흔들림을 활성화합니다.\n이 설정을 비활성화하면 바닐라 또는 다른 모드의 흔들림으로 대체됩니다.</Korean>
-<<<<<<<<< Temporary merge branch 1
-            <French>Active l'oscillation de l'arme influencé par les facteurs d'oscillation, tels que la position, la fatigue et l'état de santé.\NLa désactivation de ce paramètre reportera l'oscillation à vanilla ou à d'autres mods.</French>
-=========
             <French>Active l'oscillation de l'arme influencé par les facteurs d'oscillation, tels que la position, la fatigue et l'état de santé.\nLa désactivation de ce paramètre reportera l'oscillation à vanilla ou à d'autres mods.</French>
->>>>>>>>> Temporary merge branch 2
-        </Key>
+            </Key>
         <Key ID="STR_ACE_Common_SwayFactor">
             <English>Sway factor</English>
             <Spanish>Factor de balanceo de mira</Spanish>
