@@ -10,21 +10,6 @@ if (!hasInterface) exitWith {};
 // Temporary Wind Info indication
 GVAR(tempWindInfo) = false;
 
-// Ammo/Magazines look-up hash for correctness of initSpeed
-private _cfgMagazines = configFile >> "CfgMagazines";
-private _cfgThrow = configFile >> "CfgWeapons" >> "Throw";
-
-GVAR(ammoMagLookup) = createHashMap;
-{
-    {
-        private _ammo = getText (_cfgMagazines >> _x >> "ammo");
-        if (_ammo != "") then {
-            GVAR(ammoMagLookup) set [_ammo, _x];
-        };
-    } forEach (getArray (_cfgThrow >> _x >> "magazines"));
-} forEach (getArray (_cfgThrow >> "muzzles"));
-
-
 // Add keybinds
 ["ACE3 Weapons", QGVAR(prepare), localize LSTRING(Prepare), {
     // Condition

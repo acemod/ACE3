@@ -40,8 +40,8 @@ private _distance = -1;
 {
     private _objectType = typeOf _x;
 
-    _isDetectable = GVAR(detectableClasses) get _objectType;
-    if (isNil "_isDetectable" || {(getModelInfo _x) select 0 == "empty.p3d"}) then {
+    _isDetectable = (uiNamespace getVariable QGVAR(detectableClasses)) getOrDefault [_objectType, false];
+    if ((getModelInfo _x) select 0 == "empty.p3d") then {
         _isDetectable = false;
     };
 
