@@ -286,11 +286,8 @@
             <Japanese>%1 を %2 に積み込んでいます・・・</Japanese>
             <Russian>Загружаем %1 в %2...</Russian>
             <Korean>%1을(를) %2에 싣는 중...</Korean>
-<<<<<<<<< Temporary merge branch 1
             <French>Chargement %1 into %2...</French>
-=========
-            <French>Chargement %1 dans %2...</French>
->>>>>>>>> Temporary merge branch 2
+
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading %1 from %2...</English>
@@ -299,11 +296,7 @@
             <Japanese>%1 を %2 から降ろしています・・・</Japanese>
             <Russian>Выгружаем %1 из %2...</Russian>
             <Korean>%1을(를) %2(으)로부터 내리는 중...</Korean>
-<<<<<<<<< Temporary merge branch 1
             <French>Déchargement %1 from %2...</French>
-=========
-            <French>Déchargement %1 de %2...</French>
->>>>>>>>> Temporary merge branch 2
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
