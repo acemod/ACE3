@@ -27,15 +27,14 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
         ""
     } else {
         private _cartridgeConfig = configFile >> "CfgVehicles" >> _cartridge;
-        private _model = getText (_cartridgeConfig >> QGVAR(model));
 
-        if (_model == "model") then {
-            _model = getText (_cartridgeConfig >> "model");
-
-            if ("a3\weapons_f\empty" in toLowerANSI _model) then {
-                _model = "";
-            };
+        // if explicty defined use ace's config
+        if (isText (_cartridgeConfig >> QGVAR(model))) exitWith {
+            getText (_cartridgeConfig >> QGVAR(model))
         };
+        // use casing's default model
+        private _model = getText (_cartridgeConfig >> "model");
+        if ("a3\weapons_f\empty" in toLowerANSI _model) exitWith { "" };
         
         // Add file extension if missing (fileExists needs file extension)
         if ((_model select [count _model - 4]) != ".p3d") then {
