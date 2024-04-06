@@ -20,7 +20,7 @@ params ["_target"];
 private _objectType = if (_target isEqualType objNull) then {
     typeOf _target
 } else {
-    _objectType call EFUNC(common,getConfigName)
+    _target call EFUNC(common,getConfigName)
 };
 
 // Exit if the action menu is already compiled for this class
