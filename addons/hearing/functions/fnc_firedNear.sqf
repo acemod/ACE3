@@ -53,7 +53,7 @@ if (isNil "_loudness") then {
             private _muzzleMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> _x >> "magazines");
             _weaponMagazines append _muzzleMagazines;
         };
-    } count _muzzles;
+    } forEach _muzzles;
     {
         private _ammoType = getText(configFile >> "CfgMagazines" >> _x >> "ammo");
         _weaponMagazines set [_forEachIndex, [_x, _ammoType]];
@@ -65,7 +65,7 @@ if (isNil "_loudness") then {
         if (_ammoType == _ammo) exitWith {
             _magazine = _magazineType;
         };
-    } count _weaponMagazines;
+    } forEach _weaponMagazines;
 
     if (_magazine == "") then {
         _loudness = 0;

@@ -28,18 +28,13 @@ if (_list isEqualType "") then {
 };
 
 {
-    if (!isNil "_x") then {
-        if (_x isEqualType objNull) then {
-            if (local _x) then {
-                if (_vehicle) then {
-                    (vehicle _x) setVariable [_variable, _setting, _global];
-                    TRACE_6("Set variable vehicle",_x,vehicle _x,typeOf (vehicle _x),_variable,_setting,_global);
-                } else {
-                    _x setVariable [_variable, _setting, _global];
-                    TRACE_5("Set variable",_x,typeOf _x,_variable,_setting,_global);
-                };
-            };
+    if (!isNil "_x" && {_x isEqualType objNull} && {local _x}) then {
+        if (_vehicle) then {
+            (vehicle _x) setVariable [_variable, _setting, _global];
+            TRACE_6("Set variable vehicle",_x,vehicle _x,typeOf (vehicle _x),_variable,_setting,_global);
+        } else {
+            _x setVariable [_variable, _setting, _global];
+            TRACE_5("Set variable",_x,typeOf _x,_variable,_setting,_global);
         };
     };
-    false
-} count _list;
+} forEach _list;
