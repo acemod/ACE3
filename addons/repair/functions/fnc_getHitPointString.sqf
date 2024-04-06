@@ -20,17 +20,9 @@
  */
 
 params ["_hitPoint", "_textLocalized", "_textDefault", ["_trackArray", []]];
+_trackArray params [["_trackNames", []], ["_trackStrings", []], ["_trackAmount", []]];
 
-private _track = (count _trackArray > 0);
-private _trackNames = [];
-private _trackStrings = [];
-private _trackAmount = [];
-
-if (_track) then {
-    _trackNames = _trackArray select 0;
-    _trackStrings = _trackArray select 1;
-    _trackAmount = _trackArray select 2;
-};
+private _track = _trackArray isNotEqualTo [];
 
 // Prepare first part of the string from stringtable
 //IGNORE_STRING_WARNING(str_ace_repair_hit);

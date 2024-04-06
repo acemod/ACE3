@@ -64,7 +64,7 @@ if (_insertChildrenCode isNotEqualTo {}) then {
     // Collect dynamic children class actions
     {
         private _action = [_x select 2, _x, _fullPath, _distanceToBasePoint] call FUNC(collectActiveActionTree);
-        if ((count _action) > 0) then {
+        if (_action isNotEqualTo []) then {
             _activeChildren pushBack _action;
         };
     } forEach _dynamicChildren;
@@ -73,7 +73,7 @@ if (_insertChildrenCode isNotEqualTo {}) then {
 // Collect children class actions
 {
     private _action = [_object, _x, _fullPath, _distanceToBasePoint] call FUNC(collectActiveActionTree);
-    if ((count _action) > 0) then {
+    if (_action isNotEqualTo []) then {
         _activeChildren pushBack _action;
     };
 } forEach _origActionChildren;
@@ -85,7 +85,7 @@ if (_insertChildrenCode isNotEqualTo {}) then {
     // Check if the action is children of the original action
     if (_pPath isEqualTo _fullPath) then {
         private _action = [_object, [_actionData,[]], _fullPath, _distanceToBasePoint] call FUNC(collectActiveActionTree);
-        if ((count _action) > 0) then {
+        if (_action isNotEqualTo []) then {
             _activeChildren pushBack _action;
         };
     };
