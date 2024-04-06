@@ -26,7 +26,23 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
     if (_cartridge == "") then { // return (note: can't use exitWith)
         ""
     } else {
-        getText (configFile >> "CfgVehicles" >> _cartridge >> QGVAR(model))
+        private _cartridgeConfig = configFile >> "CfgVehicles" >> _cartridge;
+        private _model = getText (_cartridgeConfig >> QGVAR(model));
+
+        if (_model == "model") then {
+            _model = getText (_cartridgeConfig >> "model");
+
+            if ("a3\weapons_f\empty" in toLowerANSI _model) then {
+                _model = "";
+            };
+        };
+        
+        // Add file extension if missing (fileExists needs file extension)
+        if ((_model select [count _model - 4]) != ".p3d") then {
+            _model = _model + ".p3d";
+        };
+
+        ["", _model] select (fileExists _model)
     };
 }, true];
 
