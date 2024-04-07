@@ -20,4 +20,4 @@ params ["_staticWeapon"];
 private _notCrewed = (crew _staticWeapon) isEqualTo [];
 private _deadCrew = !(alive (gunner _staticWeapon)); // need to eject body???
 
-GVAR(defaultAssemblyMode) && {_notCrewed || _deadCrew}
+GVAR(defaultAssemblyMode) && {alive _staticWeapon} && {_notCrewed || _deadCrew}
