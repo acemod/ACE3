@@ -19,7 +19,7 @@
 params ["_unit", "_actionName", "_isSelfTreatment"];
 TRACE_3("playTreatmentAnim",_unit,_actionName,_isSelfTreatment);
 
-if (vehicle _unit != _unit) exitWith {};
+if (!isNull objectParent _unit) exitWith {};
 
 private _configProperty = "animationMedic";
 if (_isSelfTreatment) then {

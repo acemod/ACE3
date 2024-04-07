@@ -1,9 +1,9 @@
 #include "script_component.hpp"
 
-[QGVAR(showDogtag), DFUNC(showDogtag)] call CBA_fnc_addEventHandler;
-[QGVAR(sendDogtagData), DFUNC(sendDogtagData)] call CBA_fnc_addEventHandler;
-[QGVAR(getDogtagItem), DFUNC(getDogtagItem)] call CBA_fnc_addEventHandler;
-[QGVAR(addDogtagItem), DFUNC(addDogtagItem)] call CBA_fnc_addEventHandler;
+[QGVAR(showDogtag), LINKFUNC(showDogtag)] call CBA_fnc_addEventHandler;
+[QGVAR(sendDogtagData), LINKFUNC(sendDogtagData)] call CBA_fnc_addEventHandler;
+[QGVAR(getDogtagItem), LINKFUNC(getDogtagItem)] call CBA_fnc_addEventHandler;
+[QGVAR(addDogtagItem), LINKFUNC(addDogtagItem)] call CBA_fnc_addEventHandler;
 
 // Add actions and event handlers only if ace_medical is loaded
 // - Adding actions via config would create a dependency

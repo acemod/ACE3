@@ -33,7 +33,7 @@ if (_startingPos isEqualTo [0,0,0]) exitWith {
     [LSTRING(GarrisonInvalidPosition)] call EFUNC(common,displayTextStructured);
 };
 
-if (count _unitsArray == 0 || {isNull (_unitsArray select 0)}) exitWith {
+if (_unitsArray isEqualTo [] || {isNull (_unitsArray select 0)}) exitWith {
     TRACE_1("fnc_garrison: Units error",_unitsArray);
     [LSTRING(GarrisonNoUnits)] call EFUNC(common,displayTextStructured);
 };
@@ -43,7 +43,7 @@ if (_fillingRadius >= 50) then {
     _buildings = [_buildings] call CBA_fnc_shuffle;
 };
 
-if (count _buildings == 0) exitWith {
+if (_buildings isEqualTo []) exitWith {
     TRACE_1("fnc_garrison: Building error",_buildings);
     [LSTRING(GarrisonNoBuilding)] call EFUNC(common,displayTextStructured);
 };

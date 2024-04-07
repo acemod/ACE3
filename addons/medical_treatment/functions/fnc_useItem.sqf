@@ -10,7 +10,7 @@
  * 2: Items <ARRAY>
  *
  * Return Value:
- * User and Item <ARRAY>
+ * User and Item and Litter Created<ARRAY>
  *
  * Example:
  * [player, cursorObject, ["bandage"]] call ace_medical_treatment_fnc_useItem
@@ -40,22 +40,24 @@ private _useOrder = [[_patient, _medic], [_medic, _patient], [_medic]] select GV
         switch (true) do {
             case (_x in _vehicleItems): {
                 _unitVehicle addItemCargoGlobal [_x, -1];
-                [_unit, _x] breakOut "Main";
+                [_unit, _x, false] breakOut "Main";
             };
             case (_x in _vehicleMagazines): {
                 [_unitVehicle, _x] call EFUNC(common,adjustMagazineAmmo);
-                [_unit, _x] breakOut "Main";
+                [_unit, _x, false] breakOut "Main";
             };
             case (_x in _unitItems): {
                 _unit removeItem _x;
-                [_unit, _x] breakOut "Main";
+                [_unit, _x, true] breakOut "Main";
             };
             case (_x in _unitMagazines): {
+                private _magsStart = count magazines _unit;
                 [_unit, _x] call EFUNC(common,adjustMagazineAmmo);
-                [_unit, _x] breakOut "Main";
+                private _magsEnd = count magazines _unit;
+                [_unit, _x, (_magsEnd < _magsStart)] breakOut "Main";
             };
         };
     } forEach _items;
 } forEach _useOrder;
 
-[objNull, ""]
+[objNull, "", false]
