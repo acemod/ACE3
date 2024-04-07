@@ -74,6 +74,8 @@
             <Italian>Detona Tutti sul Detonatore Attivo</Italian>
             <Russian>Подрыв всех на активном детонаторе</Russian>
             <Japanese>選択した点火装置を全て起爆</Japanese>
+            <Korean>활성화된 격발기의 모든 것을 폭파</Korean>
+            <French>Détoner tout sur le détonateur actif</French>
         </Key>
         <Key ID="STR_ACE_Explosives_SetActiveTrigger">
             <English>Set Active Clacker</English>
@@ -81,6 +83,8 @@
             <Italian>Imposta Detonatore Attivo</Italian>
             <Russian>Установить активный детонатор</Russian>
             <Japanese>この点火装置を選択</Japanese>
+            <Korean>격발기 활성 설정</Korean>
+            <French>Définir le détonateur actif</French>
         </Key>
         <Key ID="STR_ACE_Explosives_CycleActiveTrigger">
             <English>Cycle Active Clacker</English>
@@ -88,6 +92,8 @@
             <Italian>Cambia Detonatore Attivo</Italian>
             <Russian>Цикл активного детонатора</Russian>
             <Japanese>点火装置を切り替え</Japanese>
+            <Korean>격발기 활성 전환</Korean>
+            <French>Modifier le détonateur actif</French>
         </Key>
         <Key ID="STR_ACE_Explosives_ActiveTrigger">
             <English>Active Clacker</English>
@@ -95,6 +101,8 @@
             <Italian>Detonatore Attivo</Italian>
             <Russian>Активный детонатор</Russian>
             <Japanese>選択中の点火装置</Japanese>
+            <Korean>격발기 활성</Korean>
+            <French>Détonateur actif</French>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>

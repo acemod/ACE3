@@ -98,18 +98,20 @@ private _previousOwner = -1;
             _transfer = false;
         };
 
-        // No transfer if player in this group
-        if (isPlayer _x) exitWith {
-            _transfer = false;
-        };
-
         // No transfer if any unit in group is blacklisted
         if (_x getVariable [QXGVAR(blacklist), false]) exitWith {
             _transfer = false;
         };
 
-        // No transfer if vehicle unit is in or crew in that vehicle is blacklisted
-        if (vehicle _x != _x && {(vehicle _x) getVariable [QXGVAR(blacklist), false]}) exitWith {
+        // No transfer if player or UAV in this group
+        if (isPlayer _x || {unitIsUAV _x}) exitWith {
+            _transfer = false;
+        };
+
+        private _vehicle = objectParent _x;
+
+        // No transfer if the vehicle the unit is in or if the crew in that vehicle is blacklisted
+        if ((_vehicle getVariable [QXGVAR(blacklist), false]) || {unitIsUAV _vehicle}) exitWith {
             _transfer = false;
         };
 
