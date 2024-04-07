@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Pterolatypus
  * Handle woundReceived event and pass to individual wound handlers
@@ -33,7 +33,7 @@ if (_typeOfDamage in GVAR(damageTypeDetails)) then {
         TRACE_2("Wound handler returned",_damageData,_damageDataTemp);
 
         // If invalid return, skip
-        if (isNil "_damageData" || {!(_damageDataTemp isEqualType [])} || {(count _damageDataTemp) < 3}) then {
+        if (isNil "_damageDataTemp" || {!(_damageDataTemp isEqualType [])} || {(count _damageDataTemp) < 3}) then {
             TRACE_2("Return invalid, skipping wound handling",_damageData,_damageDataTemp);
         } else {
             _damageData = _damageDataTemp;

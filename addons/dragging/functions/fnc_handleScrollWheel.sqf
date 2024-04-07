@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: L-H, commy2
  * Handles raising and lowering the dragged weapon to be able to place it on top of objects.
@@ -27,7 +27,7 @@ private _carriedItem = _unit getVariable [QGVAR(carriedObject), objNull];
 // Disabled for persons
 if (_carriedItem isKindOf "CAManBase") exitWith {false};
 
-if !(CBA_events_control) then {
+if (!CBA_events_control) then {
     // Raise/lower
     // Move carried item 15 cm per scroll interval
     _scrollAmount = _scrollAmount * 0.15;

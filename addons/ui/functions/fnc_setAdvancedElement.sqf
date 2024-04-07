@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Sets advanced visible element of the UI using displays and controls.
@@ -68,7 +68,7 @@ if (!_force) then {
 };
 
 private _displays = ((uiNamespace getVariable "IGUI_displays") + [findDisplay IDD_MISSION]) select {_idd == ctrlIDD _x};
-private _fade = [1, 0] select _show;
+private _fade = parseNumber !_show;
 
 // Disable/Enable elements
 private _success = false;

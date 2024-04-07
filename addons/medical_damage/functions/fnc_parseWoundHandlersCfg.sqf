@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Pterolatypus
  * Read a list of wound handler entries from config, accounting for inheritance

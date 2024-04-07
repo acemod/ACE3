@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Compile the self action menu from config for an object's class
@@ -84,8 +84,7 @@ private _recurseFnc = {
                     ];
             _actions pushBack _entry;
         };
-        nil
-    } count (configProperties [_actionsCfg, "isClass _x", true]);
+    } forEach (configProperties [_actionsCfg, "isClass _x", true]);
     _actions
 };
 

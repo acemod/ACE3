@@ -9,10 +9,6 @@ class CfgPatches {
         authors[] = {"xrufix"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
-        ammo[] = {
-            QGVAR(L),
-            "ace_kh25ml"
-        };
         magazines[] = {
             QGVAR(L_magazine_x1),
             QGVAR(L_pylonmissile_x1),

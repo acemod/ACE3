@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles replacing unit's items with their registered replacements.
@@ -33,36 +33,49 @@ if (GVAR(blockItemReplacement)) exitWith {
 };
 
 private _cfgWeapons = configFile >> "CfgWeapons"; // Microoptimization
+private _containerItems = [uniformItems _unit, vestItems _unit, backpackItems _unit];
 
 for "_i" from 0 to count _newItems - 1 do {
     private _item = _newItems#_i;
 
-    // Get count of item in each container
-    private _containerCount = [];
-    {
-        _containerCount pushBack ({_x == _item} count _x)
-    } forEach [uniformItems _unit, vestItems _unit, backpackItems _unit];
+    private _doReplace = false;
+    private _replacements = [];
 
     // Determine replacement items: direct replacements, ...
-    private _replacements = GVAR(itemReplacements) getVariable [_item, []];
+    private _directReplacements = GVAR(itemReplacements) getVariable _item;
+    if (!isNil "_directReplacements") then {
+        _doReplace = true;
+        _replacements append _directReplacements;
+    };
 
     // ... item type replacements ...
     private _type = getNumber (_cfgWeapons >> _item >> "ItemInfo" >> "type");
-    private _typeReplacements = GVAR(itemReplacements) getVariable ["$" + str _type, []];
-    _replacements append _typeReplacements;
+    private _typeReplacements = GVAR(itemReplacements) getVariable ("$" + str _type);
+    if (!isNil "_typeReplacements") then {
+        _doReplace = true;
+        _replacements append _typeReplacements;
+    };
 
     // ... and inherited replacements
     {
         if (_item isKindOf [_x, _cfgWeapons]) then {
-            private _inheritedReplacements = GVAR(itemReplacements) getVariable [_x, []];
-            _replacements append _inheritedReplacements;
+            private _inheritedReplacements = GVAR(itemReplacements) getVariable _x;
+            if (!isNil "_inheritedReplacements") then {
+                _doReplace = true;
+                _replacements append _inheritedReplacements;
+            };
         };
     } forEach GVAR(inheritedReplacements);
 
     // Replace all items of current class in list
-    if (_replacements isNotEqualTo []) then {
-        TRACE_3("replace",_item,_count,_replacements);
+    if (_doReplace) then {
+        TRACE_2("replace",_item,_replacements);
         _unit removeItems _item;
+
+        if (_replacements isEqualTo []) exitWith {};
+        // Get count of item in each container
+        private _containerCount = _containerItems apply {{_x == _item} count _x};
+        TRACE_1("",_containerCount);
 
         {
             if (_x == 0) then {continue};

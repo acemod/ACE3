@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus
  * Updates fire mode on javelin display (top/dir)

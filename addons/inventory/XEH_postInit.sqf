@@ -2,40 +2,39 @@
 
 if (!hasInterface) exitWith {};
 
-// cache config
-// items in the inventory display can only be distinguished by their lb names and pictures
-// this can cause collisions (mainly weapons with attachments),
-// but if the item has the same name and picture it at least shouldn't change the filter anyway
-// luckily we don't need private items, so dummy and parent classes are out of the picture
+// If medical_treatment is loaded, get its items
+if (["ace_medical_treatment"] call EFUNC(common,isModLoaded)) then {
+    private _medicalList = +(uiNamespace getVariable [QGVAR(medicalItemList), createHashMap]);
 
-GVAR(ItemKeyNamespace) = [] call CBA_fnc_createNamespace;
-private _allItems = uiNamespace getVariable [QGVAR(ItemKeyCache), []]; //See XEH_preStart.sqf
+    _medicalList merge [uiNamespace getVariable [QEGVAR(medical_treatment,treatmentItems), createHashMap], true];
 
-// isEqualType is hacking protection as we cannot trust that the cache hasn't been manipulated
-{
-    if (_x isEqualType [] && {_x isEqualTypeArray ["", configNull]}) then {
-        GVAR(ItemKeyNamespace) setVariable _x;
-    };
-} forEach ([[], _allItems] select (_allItems isEqualType []));
+    GVAR(medicalItemList) = compileFinal _medicalList;
+} else {
+    GVAR(medicalItemList) = uiNamespace getVariable [QGVAR(medicalItemList), compileFinal createHashMap];
+};
 
 GVAR(customFilters) = [];
 GVAR(selectedFilterIndex) = -1;
 
-// add custom filters
+// Add custom filters
+[LLSTRING(Grenades), QFUNC(filterGrenades)] call FUNC(addCustomFilter);
+[LLSTRING(Backpacks), QFUNC(filterBackpacks)] call FUNC(addCustomFilter);
+[LLSTRING(Uniforms), QFUNC(filterUniforms)] call FUNC(addCustomFilter);
+[LLSTRING(Vests), QFUNC(filterVests)] call FUNC(addCustomFilter);
+[LLSTRING(Headgear), QFUNC(filterHeadgear)] call FUNC(addCustomFilter);
+[LLSTRING(Medical), QFUNC(filterMedical)] call FUNC(addCustomFilter);
 
-// get list of grenades
-GVAR(Grenades_ItemList) = uiNamespace getVariable [QGVAR(Grenades_ItemList), []];
-if (!(GVAR(Grenades_ItemList) isEqualType [])) then {GVAR(Grenades_ItemList) = []};
+// Used for displaying the correct name when opening a subordinate's inventory
+GVAR(unit) = ACE_player;
 
-[localize LSTRING(Grenades), QFUNC(filterGrenades)] call FUNC(addCustomFilter);
+["CAManBase", "InventoryOpened", {
+    params ["_unit", "_container"];
 
-[localize LSTRING(Backpacks), QFUNC(filterBackpacks)] call FUNC(addCustomFilter);
-[localize LSTRING(Uniforms), QFUNC(filterUniforms)] call FUNC(addCustomFilter);
-[localize LSTRING(Vests), QFUNC(filterVests)] call FUNC(addCustomFilter);
-[localize LSTRING(Headgear), QFUNC(filterHeadgear)] call FUNC(addCustomFilter);
+    // GVAR(unit) is ACE_player by default
+    if (_unit isEqualTo ACE_player) exitWith {};
 
-// get list of medical items
-GVAR(Medical_ItemList) = uiNamespace getVariable [QGVAR(Medical_ItemList), []];
-if (!(GVAR(Medical_ItemList) isEqualType [])) then {GVAR(Medical_ItemList) = []};
-
-[localize LSTRING(Medical), QFUNC(filterMedical)] call FUNC(addCustomFilter);
+    // If the player is a group leader and opens a subordinate's inventory or has a subordinate open the player's backpack, update name to correct unit
+    if (leader ACE_player == ACE_player && {(_unit in units ACE_player) || {(objectParent _container) isEqualTo ACE_player}}) then {
+        GVAR(unit) = _unit;
+    };
+}] call CBA_fnc_addClassEventHandler;

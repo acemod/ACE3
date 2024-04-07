@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Local callback for checking the pulse or heart rate of a patient.
@@ -21,8 +21,16 @@ params ["_medic", "_patient", "_bodyPart"];
 
 private _heartRate = 0;
 
-if (alive _patient && {!([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo))}) then {
-    _heartRate = GET_HEART_RATE(_patient);
+if (!([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo))) then {
+    _heartRate = switch (true) do {
+        case (alive _patient): {
+            GET_HEART_RATE(_patient)
+        };
+        case (alive (_patient getVariable [QEGVAR(medical,CPR_provider), objNull])): {
+            random [25, 30, 35] // fake heart rate because patient is dead and off state machine
+        };
+        default { 0 };
+    };
 };
 
 private _heartRateOutput = LSTRING(Check_Pulse_Output_5);
@@ -31,7 +39,7 @@ private _logOutput = LSTRING(Check_Pulse_None);
 if (_heartRate > 1) then {
     if (_medic call FUNC(isMedic)) then {
         _heartRateOutput = LSTRING(Check_Pulse_Output_1);
-        _logOutput = format ["%1", round _heartRate];
+        _logOutput = str round _heartRate;
     } else {
         _heartRateOutput = LSTRING(Check_Pulse_Output_2);
         _logOutput = LSTRING(Check_Pulse_Weak);

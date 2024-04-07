@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Transfers AI groups to Headess Client(s).
@@ -79,8 +79,8 @@ private _numTransferredHC3 = 0;
                 _transfer = false;
             };
 
-            // No transfer if player in this group
-            if (isPlayer _x) exitWith {
+            // No transfer if player or UAV in this group
+            if (isPlayer _x || {unitIsUAV _x}) exitWith {
                 _transfer = false;
             };
 
@@ -89,14 +89,16 @@ private _numTransferredHC3 = 0;
                 _transfer = false;
             };
 
-            // No transfer if vehicle unit is in or crew in that vehicle is blacklisted
-            if (vehicle _x != _x && {(vehicle _x) getVariable [QXGVAR(blacklist), false]}) exitWith {
+            private _vehicle = objectParent _x;
+
+            // No transfer if the vehicle the unit is in or if the crew in that vehicle is blacklisted
+            if ((_vehicle getVariable [QXGVAR(blacklist), false]) || {unitIsUAV _vehicle}) exitWith {
                 _transfer = false;
             };
 
             // Save gear if unit about to be transferred with current loadout (naked unit work-around)
             if (XGVAR(transferLoadout) == 1) then {
-                _x setVariable [QGVAR(loadout), [_x] call CBA_fnc_getLoadout, true];
+                _x setVariable [QGVAR(loadout), _x call CBA_fnc_getLoadout, true];
             };
         } forEach (units _x);
     };
@@ -132,7 +134,7 @@ private _numTransferredHC3 = 0;
                 };
             };
             default {
-                TRACE_1("No Valid HC to transfer to", _currentHC);
+                TRACE_1("No Valid HC to transfer to",_currentHC);
             };
         };
     };
@@ -140,7 +142,7 @@ private _numTransferredHC3 = 0;
 
 if (XGVAR(log)) then {
     private _numTransferredTotal = _numTransferredHC1 + _numTransferredHC2 + _numTransferredHC3;
-    INFO_4("Groups Transferred: Total: %1 - HC1: %2 - HC2: %3 - HC3: %4", _numTransferredTotal, _numTransferredHC1, _numTransferredHC2, _numTransferredHC3);
+    INFO_4("Groups Transferred: Total: %1 - HC1: %2 - HC2: %3 - HC3: %4",_numTransferredTotal,_numTransferredHC1,_numTransferredHC2,_numTransferredHC3);
 };
 
 // Allow rebalance flag

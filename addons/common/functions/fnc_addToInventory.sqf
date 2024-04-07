@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
- * Adds an item, weapon, or magazine to the unit's inventory or places it in a weaponHolder if no space.
+ * Adds an item, weapon, or magazine to the unit's inventory or places it in a weapon holder if no space.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -11,10 +11,10 @@
  *
  * Return Value:
  * 0: Added to player <BOOL>
- * 1: weaponholder <OBJECT>
+ * 1: Weapon holder item was placed in <OBJECT>
  *
  * Example:
- * [bob, "classname", "", 5] call ace_common_fnc_addToInventory
+ * [player, "30Rnd_65x39_caseless_mag", "", 5] call ace_common_fnc_addToInventory
  *
  * Public: Yes
  */
@@ -26,6 +26,7 @@ private _type = _classname call FUNC(getItemType);
 private _canAdd = false;
 private _canFitWeaponSlot = false;
 private _addedToUnit = false;
+private _weaponHolder = _unit;
 
 switch (_container) do {
     case "vest": {
@@ -94,11 +95,13 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private _pos = _unit modelToWorldVisual [0,1,0.05];
+            _weaponHolder = nearestObject [_unit, "WeaponHolder"];
 
-            _unit = createVehicle ["WeaponHolder_Single_F", _pos, [], 0, "NONE"];
-            _unit addWeaponCargoGlobal [_classname, 1];
-            _unit setPosATL _pos;
+            if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
+                _weaponHolder = createVehicle ["GroundWeaponHolder", _unit, [], 0, "CAN_COLLIDE"];
+            };
+
+            _weaponHolder addWeaponCargoGlobal [_classname, 1];
         };
     };
 
@@ -112,13 +115,13 @@ switch (_type select 0) do {
 
             switch (_container) do {
                 case "vest": {
-                    _unit addItemToVest _classname; //@todo Bug! A full magazine, ignoring ammo. No such command.
+                    (vestContainer _unit) addMagazineAmmoCargo [_classname, 1, _ammoCount];
                 };
                 case "backpack": {
-                    _unit addItemToBackpack _classname; //@todo Bug! A full magazine, ignoring ammo. No such command.
+                    (backpackContainer _unit) addMagazineAmmoCargo [_classname, 1, _ammoCount];
                 };
                 case "uniform": {
-                    _unit addItemToUniform _classname; //@todo Bug! A full magazine, ignoring ammo. No such command.
+                    (uniformContainer _unit) addMagazineAmmoCargo [_classname, 1, _ammoCount];
                 };
                 default {
                     _unit addMagazine [_classname, _ammoCount];
@@ -127,11 +130,13 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private _pos = _unit modelToWorldVisual [0,1,0.05];
+            _weaponHolder = nearestObject [_unit, "WeaponHolder"];
 
-            _unit = createVehicle ["WeaponHolder_Single_F", _pos, [], 0, "NONE"];
-            _unit addMagazineCargoGlobal [_classname, 1/*_ammoCount*/]; //@todo Bug! This isn't really the ammo, but magazine count. No such command.
-            _unit setPosATL _pos;
+            if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
+                _weaponHolder = createVehicle ["GroundWeaponHolder", _unit, [], 0, "CAN_COLLIDE"];
+            };
+
+            _weaponHolder addMagazineAmmoCargo [_classname, 1, _ammoCount];
         };
     };
 
@@ -156,11 +161,13 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private _pos = _unit modelToWorldVisual [0,1,0.05];
+            _weaponHolder = nearestObject [_unit, "WeaponHolder"];
 
-            _unit = createVehicle ["WeaponHolder_Single_F", _pos, [], 0, "NONE"];
-            _unit addItemCargoGlobal [_classname, 1];
-            _unit setPosATL _pos;
+            if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
+                _weaponHolder = createVehicle ["GroundWeaponHolder", _unit, [], 0, "CAN_COLLIDE"];
+            };
+
+            _weaponHolder addItemCargoGlobal [_classname, 1];
         };
     };
 
@@ -170,4 +177,4 @@ switch (_type select 0) do {
     };
 };
 
-[_addedToUnit, _unit]
+[_addedToUnit, _weaponHolder]

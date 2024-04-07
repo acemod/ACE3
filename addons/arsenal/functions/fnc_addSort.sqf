@@ -1,16 +1,16 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Brett Mayson, johnb43
  * Adds a custom sorting method.
  *
  * Arguments:
  * 0: Tabs to add sort to <ARRAY>
- *   0.0: Left Tab Indexes <ARRAY of NUMBERS>
- *   0.1: Right Tab Indexes <ARRAY of NUMBERS>
- * 1: Sort Class (a unique string for each algorithm) <STRING>
+ * - 0: Left Tab Indexes <ARRAY of NUMBERS>
+ * - 1: Right Tab Indexes <ARRAY of NUMBERS>
+ * 1: Sort class (a unique string for each algorithm) <STRING>
  * 2: Title <STRING>
  * 3: Algorithm <CODE>
- * 4: Condition <CODE> (default: true)
+ * 4: Condition <CODE> (default: {true})
  *
  * Return Value:
  * 0: Array of IDs <ARRAY of STRINGS>
@@ -27,7 +27,7 @@
  *
  *      _fireRate sort true;
  *      _fireRate param [0, 0]
- *  }] call ace_arsenal_fnc_addSort;
+ *  }] call ace_arsenal_fnc_addSort
  *
  * Public: Yes
  */
@@ -37,8 +37,7 @@ params [
     ["_class", "", [""]],
     ["_title", "", [""]],
     ["_statement", {}, [{}]],
-    ["_condition", {true}, [{}]],
-    ["_overwrite", false, [false]]
+    ["_condition", {true}, [{}]]
 ];
 
 _tabs params [
@@ -73,7 +72,7 @@ private _fnc_addToTabs = {
             _currentTab pushBack _sort;
             _return pushBack _sortName;
         } else {
-            TRACE_1("A sort with this ID already exists", _sortName);
+            TRACE_1("A sort with this ID already exists",_sortName);
         };
     } forEach _tabsToAddTo;
 };

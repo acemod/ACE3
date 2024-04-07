@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="KillTracker">
+        <Key ID="STR_ACE_KillTracker_Category">
+            <English>ACE Kill Tracker</English>
+            <Italian>ACE Tracciatore di Uccisioni</Italian>
+            <Czech>ACE Kill Tracker</Czech>
+            <Russian>ACE Отслеживание убийств</Russian>
+            <Japanese>ACE キルトラッカー</Japanese>
+            <Korean>ACE 킬트래커</Korean>
+            <French>ACE Suivi des morts</French>
+        </Key>
         <Key ID="STR_ACE_KillTracker_Title">
             <English>ACE Killed Events</English>
-            <Japanese>ACE キルトラッカー</Japanese>
+            <Japanese>ACE キルイベント</Japanese>
             <German>ACE Abgeschossene Ereignisse</German>
+            <Italian>ACE Eventi di Morte</Italian>
             <Polish>ACE Licznik Zabójstw</Polish>
             <Chinesesimp>ACE 击杀事件</Chinesesimp>
             <Korean>ACE 사살 이벤트</Korean>
             <Russian>ACE Счётчик убийств</Russian>
             <Spanish>ACE Eventos de Muertes</Spanish>
+            <French>ACE Evénements Morts</French>
+            <Portuguese>ACE Contagem de Abates</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_TotalKills">
             <English>Total Kills:</English>
@@ -18,9 +30,12 @@
             <Turkish>Toplam Öldürme:</Turkish>
             <Japanese>総キル:</Japanese>
             <German>Gesammte Abschüsse:</German>
+            <Italian>Uccisioni Totali:</Italian>
             <Chinesesimp>总击杀数：</Chinesesimp>
             <Korean>총 사살수:</Korean>
             <Spanish>Muertes totales:</Spanish>
+            <French>Total de morts :</French>
+            <Portuguese>Abates totais:</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_Kill">
             <English>Kill: %1 %2</English>
@@ -29,9 +44,12 @@
             <Turkish>Öldürülen: %1 %2</Turkish>
             <Japanese>キル: %1 %2</Japanese>
             <German>Abschuss: %1 %2</German>
+            <Italian>Uccisione: %1 %2</Italian>
             <Chinesesimp>击杀：%1 %2</Chinesesimp>
             <Korean>사살: %1 %2</Korean>
             <Spanish>Muertes: %1 %2</Spanish>
+            <French>Meurtre : %1 %2</French>
+            <Portuguese>Abate: %1 %2</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_Killer">
             <English>Killer: %1 %2</English>
@@ -40,9 +58,12 @@
             <Turkish>Öldüren: %1 %2</Turkish>
             <Japanese>キラー: %1 %2</Japanese>
             <German>Täter: %1 %2</German>
+            <Italian>Uccisore: %1 %2</Italian>
             <Chinesesimp>击杀者：%1 %2</Chinesesimp>
             <Korean>사살자: %1 %2</Korean>
             <Spanish>Asesino: %1 %2</Spanish>
+            <French>Tueur : %1 %2</French>
+            <Portuguese>Assassino: %1 %2</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_Vehicle">
             <English>Vehicle: %1</English>
@@ -50,10 +71,13 @@
             <Polish>Pojazd: %1</Polish>
             <Turkish>Araç :%1</Turkish>
             <Japanese>車両: %1</Japanese>
-            <German>Fahrzeuge %!</German>
+            <German>Fahrzeuge: %1</German>
+            <Italian>Veicoli: %1</Italian>
             <Chinesesimp>载具：%1</Chinesesimp>
             <Korean>차량: %1</Korean>
             <Spanish>Vehículo: %1</Spanish>
+            <French>Véhicule : %1</French>
+            <Portuguese>Veículo: %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_KillTracker_FriendlyFire">
             <English>Friendly Fire</English>
@@ -70,6 +94,24 @@
             <Chinesesimp>友军误击</Chinesesimp>
             <Japanese>同士討ち</Japanese>
             <Turkish>Dost Atışı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_TrackAI_DisplayName">
+            <English>Track AI units killed by player</English>
+            <Italian>Traccia IA uccise da giocatori</Italian>
+            <Czech>Sledovat AI zabité hráči</Czech>
+            <Russian>Отслеживание юнитов ИИ, убитых игроком</Russian>
+            <Japanese>プレイヤーに殺害されたAIユニットを追跡</Japanese>
+            <Korean>플레이어가 죽인 AI 트래킹</Korean>
+            <French>Suivi de l'IA tuée par les joueurs</French>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_TrackAI_Description">
+            <English>Defines if killed AIs will be shown in the kill tracker during mission debriefing.</English>
+            <Italian>Determina se IA uccise verranno visualizzate nel tracciatore durante il debriefing della missione.</Italian>
+            <Czech>Udává zdali se zabité AI budou ukazovat v kill trackeru v průběhu debriefingu po misi.</Czech>
+            <Russian>Определяет, будут ли убитые ИИ отображаться в трекере убийств во время дебрифинга миссии.</Russian>
+            <Japanese>ミッションデブリーフィングのキルトラッカーに殺害されたAIが表示されるかどうかを定義します。</Japanese>
+            <Korean>사후강평 중 살해된 AI가 킬트래킹에 표시되는지 여부를 정의합니다.</Korean>
+            <French>Définit si les IA tuées seront affichées dans le tracker pendant le débriefing de la mission.</French>
         </Key>
     </Package>
 </Project>

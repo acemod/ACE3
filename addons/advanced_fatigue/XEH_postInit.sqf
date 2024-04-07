@@ -2,23 +2,6 @@
 
 if (!hasInterface) exitWith {};
 
-[missionNamespace, "ACE_setCustomAimCoef", QUOTE(ADDON), {
-    private _unit = ACE_player;
-    private _fatigue = _unit getVariable [QGVAR(aimFatigue), 0];
-
-    switch (stance _unit) do {
-        case ("CROUCH"): {
-            (1.0 + _fatigue ^ 2 * 0.1) * GVAR(swayFactor)
-        };
-        case ("PRONE"): {
-            (1.0 + _fatigue ^ 2 * 2.0) * GVAR(swayFactor)
-        };
-        default {
-            (1.5 + _fatigue ^ 2 * 3.0) * GVAR(swayFactor)
-        };
-    };
-}] call EFUNC(common,arithmeticSetSource);
-
 // recheck weapon inertia after weapon swap, change of attachments or switching unit
 ["weapon", {[ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
 ["loadout", {[ACE_player] call FUNC(getWeaponInertia)}, true] call CBA_fnc_addPlayerEventHandler;
@@ -26,6 +9,21 @@ if (!hasInterface) exitWith {};
 
 ["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
+
+    ["baseline", {
+        private _fatigue = ACE_player getVariable [QGVAR(aimFatigue), 0];
+        switch (stance ACE_player) do {
+            case ("CROUCH"): {
+                (1.0 + _fatigue ^ 2 * 0.1)
+            };
+            case ("PRONE"): {
+                (1.0 + _fatigue ^ 2 * 2.0)
+            };
+            default {
+                (1.5 + _fatigue ^ 2 * 3.0)
+            };
+        };
+    }, QUOTE(ADDON)] call EFUNC(common,addSwayFactor);
 
     // - Post process effect ------------------------------------------------------
     GVAR(ppeBlackout) = ppEffectCreate ["ColorCorrections", 4220];
@@ -48,7 +46,7 @@ if (!hasInterface) exitWith {};
     }, true] call CBA_fnc_addPlayerEventHandler;
 
     // - Duty factors -------------------------------------------------------------
-    if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+    if (GVAR(medicalLoaded)) then {
         [QEGVAR(medical,pain), { // 0->1.0, 0.5->1.05, 1->1.1
             linearConversion [0, 1, (_this getVariable [QEGVAR(medical,pain), 0]), 1, 1.1, true];
         }] call FUNC(addDutyFactor);
@@ -56,7 +54,7 @@ if (!hasInterface) exitWith {};
             linearConversion [6, 0, (_this getVariable [QEGVAR(medical,bloodVolume), 6]), 1, 2, true];
         }] call FUNC(addDutyFactor);
     };
-    if (["ACE_Dragging"] call EFUNC(common,isModLoaded)) then {
+    if (["ace_dragging"] call EFUNC(common,isModLoaded)) then {
         [QEGVAR(dragging,isCarrying), {
             [1, 3] select (_this getVariable [QEGVAR(dragging,isCarrying), false]);
         }] call FUNC(addDutyFactor);

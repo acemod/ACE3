@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 ["CBA_settingsInitialized", {
-    TRACE_1("settingsInitialized", GVAR(enabledFor));
+    TRACE_1("settingsInitialized",GVAR(enabledFor));
     if (GVAR(enabledFor) == 0) exitWith {}; // 0: disabled
     if ((GVAR(enabledFor) == 1) && {!isServer} && {hasInterface}) exitWith {}; // 1: Don't Run on non-hc Clients
 
@@ -19,5 +19,6 @@
         _unit setVariable [QGVAR(lastSuppressed), CBA_missionTime];
     }] call CBA_fnc_addClassEventHandler;
 
-    #include "stateMachine.sqf"
+    #include "stateMachine.inc.sqf"
+
 }] call CBA_fnc_addEventHandler;

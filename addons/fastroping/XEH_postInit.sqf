@@ -1,11 +1,9 @@
 #include "script_component.hpp"
 
-[QGVAR(deployRopes), {
-    _this call FUNC(deployRopes);
-}] call CBA_fnc_addEventHandler;
+[QGVAR(deployRopes), LINKFUNC(deployRopes)] call CBA_fnc_addEventHandler;
 
 [QGVAR(startFastRope), {
-    [FUNC(fastRopeServerPFH), 0, _this] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(fastRopeServerPFH), 0, _this] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
 
 // Keybinds
@@ -30,6 +28,17 @@
         false
     };
 }, {false}] call CBA_fnc_addKeybind;
+
+
+if (isServer) then {
+    ["Helicopter", "init", {
+        if (!GVAR(autoAddFRIES)) exitWith {};
+        params ["_vehicle"];
+        if (isNumber (configOf _vehicle >> QGVAR(enabled)) && {isNil {_vehicle getVariable [QGVAR(FRIES), nil]}}) then {
+            [_vehicle] call FUNC(equipFRIES);
+        };
+    }, true, ["ACE_friesBase"], true] call CBA_fnc_addClassEventHandler;
+};
 
 
 #ifdef DRAW_FASTROPE_INFO

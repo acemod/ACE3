@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Creates the flashbang effect and knock out AI units.
@@ -63,6 +63,7 @@ _affected = _affected - [ACE_player];
         if (_flashReactionDebounce < CBA_missionTime) then {
             // Not used interally but could be useful for other mods
             _unit setVariable [QGVAR(flashStrength), _strength, true];
+            [QGVAR(flashbangedAI), [_unit, _strength, _grenadePosASL]] call CBA_fnc_localEvent;
             {
                 _unit setSkill [_x, (_unit skill _x) / 50];
             } forEach SUBSKILLS;
@@ -84,7 +85,7 @@ _affected = _affected - [ACE_player];
             }, [_unit]] call CBA_fnc_waitUntilAndExecute;
         };
     };
-} count _affected;
+} forEach _affected;
 
 // Affect local player, independently of distance
 if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
@@ -110,14 +111,14 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
     _strength = _strength * _losCoefficient;
 
     // Add ace_hearing ear ringing sound effect
-    if (["ACE_Hearing"] call EFUNC(common,isModLoaded) && {_strength > 0 && {EGVAR(hearing,damageCoefficent) > 0.25}}) then {
+    if (["ace_hearing"] call EFUNC(common,isModLoaded) && {_strength > 0 && {EGVAR(hearing,damageCoefficent) > 0.25}}) then {
         private _earringingStrength = 40 * _strength;
         [_earringingStrength] call EFUNC(hearing,earRinging);
         TRACE_1("Earringing Strength",_earringingStrength);
     };
 
     // add ace_medical pain effect:
-    if (["ACE_Medical"] call EFUNC(common,isModLoaded) && {_strength > 0.1}) then {
+    if (["ace_medical"] call EFUNC(common,isModLoaded) && {_strength > 0.1}) then {
         [ACE_player, _strength / 2] call EFUNC(medical,adjustPainLevel);
     };
 
@@ -144,11 +145,11 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
 
         //PARTIALRECOVERY - start decreasing effect over time
         [{
-            params ["_strength"];
+            params ["_strength", "_blend"];
 
-            GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,0,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
+            GVAR(flashbangPPEffectCC) ppEffectAdjust [1, 1, 0, _blend, [0,0,0,1], [0,0,0,0]];
             GVAR(flashbangPPEffectCC) ppEffectCommit (10 * _strength);
-        }, [_strength], 7 * _strength] call CBA_fnc_waitAndExecute;
+        }, [_strength, _blend], 7 * _strength] call CBA_fnc_waitAndExecute;
 
         //FULLRECOVERY - end effect
         [{
@@ -162,5 +163,7 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
     private _maxFlinch = linearConversion [0.2, 1, _strength, 0, 95, true];
     private _flinch    = (_minFlinch + random (_maxFlinch - _minFlinch)) * selectRandom [-1, 1];
     ACE_player setDir (getDir ACE_player + _flinch);
+
+    [QGVAR(flashbangedPlayer), [_strength, _grenadePosASL]] call CBA_fnc_localEvent;
 };
 true

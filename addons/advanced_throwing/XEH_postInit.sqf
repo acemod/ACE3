@@ -1,10 +1,14 @@
 #include "script_component.hpp"
 
 // Fired XEH
-[QGVAR(throwFiredXEH), FUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
+GVAR(ammoEventHandlers) = createHashMap;
+[QGVAR(throwFiredXEH), LINKFUNC(throwFiredXEH)] call CBA_fnc_addEventHandler;
 
 // Exit on HC
 if (!hasInterface) exitWith {};
+
+// Temporary Wind Info indication
+GVAR(tempWindInfo) = false;
 
 // Ammo/Magazines look-up hash for correctness of initSpeed
 GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
@@ -12,9 +16,8 @@ GVAR(ammoMagLookup) = call CBA_fnc_createNamespace;
     {
         private _ammo = getText (configFile >> "CfgMagazines" >> _x >> "ammo");
         if (_ammo != "") then { GVAR(ammoMagLookup) setVariable [_ammo, _x]; };
-    } count (getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines"));
-    nil
-} count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
+    } forEach (getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines"));
+} forEach getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
 
 
 // Add keybinds

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Norrin, Rocko, Ruthberg
  *
@@ -77,8 +77,7 @@ GVAR(no_cams) sort true;
         if (((getPosVisual _x) select 2) > 20 && {!(_x in GVAR(no_cams))} && {_x getHitPointDamage "HitCamera" < 0.25}) then {
             GVAR(no_cams) pushBack _x;
         };
-        true
-    } count GVAR(nearHuntIRs);
+    } forEach GVAR(nearHuntIRs);
     {
         if (((getPosVisual _x) select 2) <= 20 || {!(_x in GVAR(nearHuntIRs))} || {_x getHitPointDamage "HitCamera" >= 0.25}) then {
             GVAR(no_cams) deleteAt _forEachIndex;
@@ -145,7 +144,7 @@ GVAR(no_cams) sort true;
     GVAR(cam) camCommit 0;
 
     ctrlSetText [1, format["%1 m", round(GVAR(pos) select 2)]];
-    ctrlSetText [2, format["%1", GVAR(cur_cam) + 1]];
+    ctrlSetText [2, str (GVAR(cur_cam) + 1)];
     private _cam_time = CBA_missionTime - (GVAR(huntIR) getVariable [QGVAR(startTime), CBA_missionTime]);
     ctrlSetText [3, format["%1 s", round(_cam_time)]];
     private _cam_pos = getPosVisual GVAR(huntIR);

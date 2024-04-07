@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: KoffeinFlummi, commy2, SilentSpike
+ * Author: KoffeinFlummi, commy2, kymckay
  * Start a cook-off in the given ammo box.
  *
  * Arguments:

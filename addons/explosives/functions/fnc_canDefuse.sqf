@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Whether a unit can perform the defuse action
@@ -24,7 +24,7 @@ if (isNull _explosive) exitWith {
     deleteVehicle _target;
     false
 };
-if (vehicle _unit != _unit || {!("ACE_DefusalKit" in (_unit call EFUNC(common,uniqueItems)))}) exitWith {false};
+if (!isNull objectParent _unit || {(_unit call EFUNC(common,uniqueItems)) findAny GVAR(defusalKits) == -1}) exitWith {false};
 
 if (GVAR(RequireSpecialist) && {!([_unit] call EFUNC(Common,isEOD))}) exitWith {false};
 

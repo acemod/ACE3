@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ir0n1E and mjc4wilton
  * Swap primary weapon and weapon in gunbag.
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player, target] call ace_gunbag_fnc_swapGunbag
+ * [player, target] call ace_gunbag_fnc_swapGunbagCallback
  *
  * Public: No
  */

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Norrin, Rocko, Ruthberg
  *
@@ -16,12 +16,11 @@
  * Public: No
  */
 
-//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
-TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
+params ["_unit", "", "", "", "", "", "_projectile"];
+TRACE_2("handleFired",_unit,_projectile);
 
-if (_ammo != "F_HuntIR") exitWith {};
-
-if (!hasInterface) exitWith {};
+// Don't run for non players, as they are too dumb to launch huntirs anyway
+if (_unit != ACE_player) exitWith {};
 
 [{
     params ["_projectile"];
