@@ -52,7 +52,7 @@ private _magazine = if (_gunner == _firer) then {
 };
 
 if (_magazine == "") exitWith {
-    TRACE_5("No mag for weapon/ammo??",_weapon,_muzzle,_ammo_firer,_gunner);
+    TRACE_5("No mag for weapon/ammo??",_weapon,_muzzle,_ammo,_firer,_gunner);
 };
 
 private _audibleFireCoef = 1;
