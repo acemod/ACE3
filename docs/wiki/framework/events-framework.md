@@ -146,7 +146,13 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |---------- |------------|----------|------|-------------|
 | `ace_medical_treatment_fullHealLocalMod` | [_patient] | Local | Listen | Called before a local unit is fully healed, mods can listen and apply their own healing logic
 
-### 2.15 Interaction (`ace_interaction`)
+### 2.15 Medical Status (`ace_medical_status`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_medical_status_getBloodLoss` | [_unit, _bloodLoss] | Local | Listen | Called when blood loss is calculated for a unit, mods can listen and modify the blood loss value by modifying the array
+
+### 2.16 Interaction (`ace_interaction`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
