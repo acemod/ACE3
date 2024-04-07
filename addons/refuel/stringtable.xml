@@ -505,6 +505,7 @@
             <Japanese>燃料キャニスターを持つ</Japanese>
             <Korean>연료통 집어들기</Korean>
             <Russian>Взять канистру с топливом</Russian>
+            <French>Ramasser le réservoir de carburant</French>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeFuelCanisterAction">
             <English>Picking fuel canister up...</English>
@@ -513,6 +514,7 @@
             <Japanese>燃料キャニスターを持ち上げています・・・</Japanese>
             <Korean>연료통 집어드는 중...</Korean>
             <Russian>Поднимаю канистру с топливом...</Russian>
+            <French>Ramasser les bidons de carburant... </French>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectFuelCanister">
             <English>Connect fuel canister</English>
@@ -521,6 +523,7 @@
             <Japanese>燃料キャニスターを接続する</Japanese>
             <Korean>연료통 꽂기</Korean>
             <Russian>Подсоединить канистру с топливом</Russian>
+            <French>Raccorder le réservoir de carburant</French>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectFuelCanisterAction">
             <English>Connecting fuel canister...</English>
@@ -529,6 +532,7 @@
             <Japanese>燃料キャニスターを接続しています・・・</Japanese>
             <Korean>연료통 꽂는 중...</Korean>
             <Russian>Подсоединение топливной канистры...</Russian>
+            <French>Raccorder le réservoir de carburant...</French>
         </Key>
         <Key ID="STR_ACE_Refuel_DisconnectFuelCanister">
             <English>Disconnect fuel canister</English>
@@ -537,6 +541,7 @@
             <Japanese>燃料キャニスターを外します</Japanese>
             <Korean>연료통 빼기</Korean>
             <Russian>Отсоединить канистру с топливом</Russian>
+            <French>Débrancher le réservoir de carburant</French>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_hoseLength_DisplayName">
             <English>Refuel hose length</English>
