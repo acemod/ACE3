@@ -44,7 +44,6 @@ if (GVAR(supply) == 2) exitWith {
     {
         _x params ["_magazine", "_rounds"];
         if ((_magazine isEqualTo _magazineClass) && (_rounds > 0)) exitWith {_magazinePresent = true; };
-        false
-    } count _magazineSupply;
+    } forEach _magazineSupply;
     _magazinePresent
 };

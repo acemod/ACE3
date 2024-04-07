@@ -124,7 +124,7 @@ private _chanceOfDetonation = 0;
 private _explosiveAmmoCount = 0;
 private _nonExplosiveAmmoCount = 0;
 
-if ((_currentVehicleAmmo select 1) > 0) then {
+if ((_currentVehicleAmmo select 0) isNotEqualTo []) then {
     private _magConfig = configFile >> "CfgMagazines";
     private _ammoConfig = configFile >> "CfgAmmo";
     private _countOfExplodableAmmo = 0;

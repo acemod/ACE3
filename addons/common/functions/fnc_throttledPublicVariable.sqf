@@ -29,8 +29,7 @@ if (isNil QGVAR(publishSchedId)) then {
             {
                 _x params ["_unit", "_varName"];
                 _unit setVariable [_varName, _unit getVariable _varName, true];
-                false
-            } count GVAR(publishVarNames);
+            } forEach GVAR(publishVarNames);
 
             GVAR(publishVarNames) = [];
             GVAR(publishNextTime) = 1e7;
