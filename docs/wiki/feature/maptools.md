@@ -25,7 +25,7 @@ This adds map tools that can be used to measure distances between two points or 
 This adds a plotting board that can be used to aid in the rapid usage and adjustment of short-ranged indirect fires, as well as quick measurements of directions and distances between points, and general land-navigation.
 
 ### 1.4 GPS on map
-If you are equipped with a vanilla GPS it will be shown on the map. (You don't need the `Map Tools` item in your inventory for this.)
+If you have GPS capability, a GPS display will be shown on the map, indicating current grid position. (You don't need the `Map Tools` item in your inventory for this.)
 
 ## 2. Usage
 

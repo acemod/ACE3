@@ -29,7 +29,6 @@ private _doorTurrets = [];
     if (((getNumber (_config >> "isCopilot")) == 0) && {count getArray (_config >> "weapons") > 0}) then {
         _doorTurrets pushBack _x;
     };
-    false
-} count _turrets;
+} forEach _turrets;
 
 _doorTurrets

@@ -36,7 +36,6 @@ private _rotorWash = [false, 0];
             _rotorWash set [1, _distance];
         };
     };
-    false
-} count (position _unit nearEntities [["Helicopter"], _radius]);
+} forEach (position _unit nearEntities [["Helicopter"], _radius]);
 
 _rotorWash
