@@ -23,7 +23,7 @@ All good? Then proceed and fill out the items below.
 **Mods (complete and add to the following information):**
 - **Arma 3:** `x.xx` [e.g. 1.00 stable, rc,  dev]
 - **CBA:** `3.x.x` [e.g. 3.0.0 stable, commit hash]
-- **ACE3:** `3.x.x` [eg. 3.0.0 stable, commit hash]
+- **ACE3:** `3.x.x` [e.g. 3.0.0 stable, commit hash]
 <!-- Make sure to reproduce the issue with only CBA and ACE3 on a newly created mission! -->
 
 **Description:**
