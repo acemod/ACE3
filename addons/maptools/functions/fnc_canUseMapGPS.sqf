@@ -15,6 +15,10 @@
  * Public: No
  */
 
-visibleMap &&
-{alive ACE_player} &&
-{"ItemGPS" in (assignedItems ACE_player)}
+if (!visibleMap || {!alive ACE_player}) exitWith {false};
+
+private _gpsOpened = visibleGPS;
+private _gpsAvailable = openGPS true;
+if (!_gpsOpened) then {openGPS false};
+
+_gpsAvailable // return

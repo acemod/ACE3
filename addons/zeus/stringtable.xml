@@ -1321,6 +1321,7 @@
             <Japanese>貨物室から降ろす</Japanese>
             <Korean>화물 내리기</Korean>
             <Russian>Выгрузить из отсека</Russian>
+            <French>Décharger de la cargaison </French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
@@ -1966,6 +1967,7 @@
             <Japanese>医療メニューは無効になっています</Japanese>
             <Korean>의료 메뉴가 비활성화되었습니다</Korean>
             <Russian>Медицинское меню отключено</Russian>
+            <French>Le Menu médical est désactivé</French>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
             <English>Lay Trenchline</English>
