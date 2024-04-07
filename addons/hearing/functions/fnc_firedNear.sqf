@@ -33,7 +33,7 @@ private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (
 private _distance = 1 max _distance;
 
 private _magazine = if (_gunner == _firer) then {
-    // Units not in vehicles
+    // Unit that is firing is on foot
     private _weaponItems = weaponsItems [_firer, true];
     private _index = _weaponItems findIf {(_x select 0) == _weapon};
 
@@ -48,6 +48,7 @@ private _magazine = if (_gunner == _firer) then {
         _weaponItems select 4 param [0, ""]
     };
 } else {
+    // Unit that is firing is in a vehicle
     _firer currentMagazineTurret (_firer unitTurret _gunner)
 };
 
@@ -62,7 +63,7 @@ if (_suppressor != "") then {
     _audibleFireCoef = getNumber (configFile >> "CfgWeapons" >> _suppressor >> "ItemInfo" >> "AmmoCoef" >> "audibleFire");
 };
 
-private _loudness = GVAR(cacheAmmoLoudness) getOrDefaultCall [format ["%1$%2$%3", _weapon, _ammo, _magazine], {
+private _loudness = GVAR(cacheAmmoLoudness) getOrDefaultCall [_magazine, {
     private _cfgAmmo = configFile >> "CfgAmmo";
     private _initSpeed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
     private _ammoConfig = _cfgAmmo >> _ammo;
@@ -79,7 +80,7 @@ private _loudness = GVAR(cacheAmmoLoudness) getOrDefaultCall [format ["%1$%2$%3"
     };
 
     private _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;
-    TRACE_6("building cache",_weapon,_ammo,_magazine,_initSpeed,_caliber,_loudness);
+    TRACE_5("building cache",_ammo,_magazine,_initSpeed,_caliber,_loudness);
 
     _loudness
 }, true];

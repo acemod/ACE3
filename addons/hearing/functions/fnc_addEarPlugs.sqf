@@ -15,7 +15,7 @@
  * Public: No
  */
 
-// only run this after the settings are initialized
+// Only run this after the settings are initialized
 if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addEarPlugs), _this];
 };
@@ -24,44 +24,78 @@ params ["_unit"];
 TRACE_2("params",_unit,typeOf _unit);
 
 // Exit if hearing is disabled OR autoAdd is disabled OR soldier has earplugs already in (persistence scenarios)
-if (!GVAR(enableCombatDeafness) || {!GVAR(autoAddEarplugsToUnits)} || {[_unit] call FUNC(hasEarPlugsIn)}) exitWith {};
+if (
+    !GVAR(enableCombatDeafness) ||
+    {!GVAR(autoAddEarplugsToUnits)} ||
+    {[_unit] call FUNC(hasEarPlugsIn)} ||
+    {[_unit, "ACE_EarPlugs"] call EFUNC(common,hasItem)} // don't give earplugs if they already have them
+) exitWith {};
 
-// add earplugs if the soldier has a rocket launcher
+// Add earplugs if the soldier has a rocket launcher
 if ((secondaryWeapon _unit) != "") exitWith {
     TRACE_1("has launcher - adding",_unit);
     _unit addItem "ACE_EarPlugs";
 };
 
-// otherwise add earplugs if the soldier has a big rifle
-if ((primaryWeapon _unit) == "") exitWith {};
+private _weapon = primaryWeapon _unit;
 
-(primaryWeaponMagazine _unit) params [["_magazine", ""]];
-if (_magazine == "") exitWith {};
+// Otherwise add earplugs if the soldier has a big rifle
+if (_weapon == "") exitWith {};
 
-private _cfgMagazine = configFile >> "CfgMagazines" >> _magazine;
+// Cache maximum loadness for future calls
+private _maxLoudness = GVAR(cacheMaxAmmoLoudness) getOrDefaultCall [_weapon, {
+    private _cfgMagazines = configFile >> "CfgMagazines";
 
-private _initSpeed = getNumber (_cfgMagazine >> "initSpeed");
-private _ammo = getText (_cfgMagazine >> "ammo");
-private _count = getNumber (_cfgMagazine >> "count");
+    // Get the weapon's compatible magazines, so that all magazines are cached
+    private _maxLoudness = selectMax ((compatibleMagazines _weapon) apply {
+        private _magazine = _x;
+        private _cfgMagazine = _cfgMagazines >> _magazine;
+        private _ammo = getText (_cfgMagazine >> "ammo");
 
-private _cfgAmmo = configFile >> "CfgAmmo";
+        GVAR(cacheAmmoLoudness) getOrDefaultCall [_magazine, {
+            private _cfgAmmo = configFile >> "CfgAmmo";
+            private _initSpeed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
+            private _ammoConfig = _cfgAmmo >> _ammo;
+            private _caliber = getNumber (_ammoConfig >> "ACE_caliber");
 
-private _caliber = getNumber (_cfgAmmo >> _ammo >> "ACE_caliber");
-_caliber = call {
-    if (_ammo isKindOf ["ShellBase", _cfgAmmo]) exitWith { 80 };
-    if (_ammo isKindOf ["RocketBase", _cfgAmmo]) exitWith { 200 };
-    if (_ammo isKindOf ["MissileBase", _cfgAmmo]) exitWith { 600 };
-    if (_ammo isKindOf ["SubmunitionBase", _cfgAmmo]) exitWith { 80 };
-    [_caliber, 6.5] select (_caliber <= 0);
-};
-private _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;
+            _caliber = switch (true) do {
+                // If explicilty defined, use ACE_caliber
+                case (inheritsFrom (_ammoConfig >> "ACE_caliber") isEqualTo _ammoConfig): {_caliber};
+                case (_ammo isKindOf ["ShellBase", _cfgAmmo]): {80};
+                case (_ammo isKindOf ["RocketBase", _cfgAmmo]): {200};
+                case (_ammo isKindOf ["MissileBase", _cfgAmmo]): {600};
+                case (_ammo isKindOf ["SubmunitionBase", _cfgAmmo]): {80};
+                default {[_caliber, 6.5] select (_caliber <= 0)};
+            };
 
-//If unit has a machine gun boost effective loudness 50%
-if (_count >= 50) then {_loudness = _loudness * 1.5};
+            private _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;
+            TRACE_5("building cache",_ammo,_magazine,_initSpeed,_caliber,_loudness);
 
-TRACE_2("primaryWeapon",_unit,_loudness);
+            _loudness
+        }, true];
+    });
 
-if (_loudness > 0.2) then {
+    // ace_gunbag_fnc_isMachineGun
+    private _config = _weapon call CBA_fnc_getItemConfig;
+
+    // Definition of a machine gun by BIS_fnc_itemType
+    private _cursor = getText (_config >> "cursor");
+
+    if (toLowerANSI _cursor in ["", "emptycursor"]) then {
+        _cursor = getText (_config >> "cursorAim");
+    };
+
+    // If unit has a machine gun boost effective loudness 50%
+    if (_cursor == "MG") then {
+        _maxLoudness = _maxLoudness * 1.5;
+    };
+
+    _maxLoudness
+}, true];
+
+TRACE_3("primaryWeapon",_unit,_weapon,_maxLoudness);
+
+if (_maxLoudness > 0.2) then {
     TRACE_1("loud gun - adding",_unit);
     _unit addItem "ACE_EarPlugs";
 };
