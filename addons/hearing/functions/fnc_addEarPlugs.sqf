@@ -26,7 +26,7 @@ TRACE_2("params",_unit,typeOf _unit);
 // Exit if hearing is disabled OR autoAdd is disabled OR soldier has earplugs already in (persistence scenarios)
 if (
     !GVAR(enableCombatDeafness) ||
-    {!GVAR(autoAddEarplugsToUnits)} ||
+    !GVAR(autoAddEarplugsToUnits) ||
     {[_unit] call FUNC(hasEarPlugsIn)} ||
     {[_unit, "ACE_EarPlugs"] call EFUNC(common,hasItem)} // don't give earplugs if they already have them
 ) exitWith {};
