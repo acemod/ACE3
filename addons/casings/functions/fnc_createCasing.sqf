@@ -28,7 +28,7 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
     } else {
         private _cartridgeConfig = configFile >> "CfgVehicles" >> _cartridge;
 
-        // if explicty defined use ace's config
+        // if explicitly defined, use ACE's config
         if (isText (_cartridgeConfig >> QGVAR(model))) exitWith {
             getText (_cartridgeConfig >> QGVAR(model))
         };
