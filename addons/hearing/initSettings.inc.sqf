@@ -5,7 +5,9 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     [LSTRING(EnableCombatDeafness_DisplayName), LSTRING(EnableCombatDeafness_Description)],
     _category,
     true,
-    1
+    1,
+    {[QGVAR(enableCombatDeafness), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
