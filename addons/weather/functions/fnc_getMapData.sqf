@@ -52,27 +52,13 @@ private _cfgPath = (configFile >> "CfgWorlds" >> _worldName);
 private _nonInheritedArrays = configProperties [_cfgPath, "isArray _x", false];
 // And check if any custom non-inherited weather is defined through config and use that if so
 if ((_cfgPath >> "ACE_TempDay") in _nonInheritedArrays) exitWith {
-    if (isArray (_cfgPath >> "ACE_TempDay")) then {
-        GVAR(TempDay) = getArray (_cfgPath >> "ACE_TempDay");
-    };
-    if (isArray (_cfgPath >> "ACE_TempNight")) then {
-        GVAR(TempNight) = getArray (_cfgPath >> "ACE_TempNight");
-    };
-    if (isArray (_cfgPath >> "ACE_Humidity")) then {
-        GVAR(Humidity) = getArray (_cfgPath >> "ACE_Humidity");
-    };
-    if (isArray (_cfgPath >> "ACE_WindSpeedMin")) then {
-        GVAR(WindSpeedMin) = getArray (_cfgPath >> "ACE_WindSpeedMin");
-    };
-    if (isArray (_cfgPath >> "ACE_WindSpeedMean")) then {
-        GVAR(WindSpeedMean) = getArray (_cfgPath >> "ACE_WindSpeedMean");
-    };
-    if (isArray (_cfgPath >> "ACE_WindSpeedMax")) then {
-        GVAR(WindSpeedMax) = getArray (_cfgPath >> "ACE_WindSpeedMax");
-    };
-    if (isArray (_cfgPath >> "ACE_WindDirectionProbabilities")) then {
-        GVAR(WindDirectionProbabilities) = getArray (_cfgPath >> "ACE_WindDirectionProbabilities");
-    };
+    if (isArray (_cfgPath >> "ACE_TempDay"))                    then { GVAR(TempDay) = getArray (_cfgPath >> "ACE_TempDay");};
+    if (isArray (_cfgPath >> "ACE_TempNight"))                  then { GVAR(TempNight) = getArray (_cfgPath >> "ACE_TempNight");};
+    if (isArray (_cfgPath >> "ACE_Humidity"))                   then { GVAR(Humidity) = getArray (_cfgPath >> "ACE_Humidity");};
+    if (isArray (_cfgPath >> "ACE_WindSpeedMin"))               then { GVAR(WindSpeedMin) = getArray (_cfgPath >> "ACE_WindSpeedMin");};
+    if (isArray (_cfgPath >> "ACE_WindSpeedMax"))               then { GVAR(WindSpeedMax) = getArray (_cfgPath >> "ACE_WindSpeedMax");};
+    if (isArray (_cfgPath >> "ACE_WindSpeedMean"))              then { GVAR(WindSpeedMean) = getArray (_cfgPath >> "ACE_WindSpeedMean");};
+    if (isArray (_cfgPath >> "ACE_WindDirectionProbabilities")) then { GVAR(WindDirectionProbabilities) = getArray (_cfgPath >> "ACE_WindDirectionProbabilities");};
 };
 
 // Check if the map is among the most popular
