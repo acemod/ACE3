@@ -248,7 +248,7 @@ private _cfgPath = (_cfgPath >> "RainParticles");
 if (
     "winter" in _worldName || 
     {"snow" in getText (_cfgPath >> "rainDropTexture")} ||
-    {!isNull (_cfgPath >> "snow") && { getNumber (_cfgPath2 >> "snow") != 0 }}
+    {getNumber (_cfgPath >> "snow") != 0}
 ) exitWith {
     GVAR(TempDay) = [-10,-9,-8,-7,-6,-5,-6,-7,-8,-9,-10,-11];
     GVAR(TempNight) = [-15,-14,-13,-12,-11,-10,-9,-10,-11,-12,-13,-17];
