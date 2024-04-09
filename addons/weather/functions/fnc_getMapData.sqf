@@ -48,7 +48,7 @@ GVAR(currentHumidity) = 0;
 GVAR(currentOvercast) = 0;
 
 // Get all non inherited arrays to filter maps that inherit from Stratis/Altis/Tanoa
-private _cfgPath = (configFile >> "CfgWorlds" >> _worldName);
+private _cfgPath = configFile >> "CfgWorlds" >> _worldName;
 private _nonInheritedArrays = configProperties [_cfgPath, "isArray _x", false];
 // And check if any custom non-inherited weather is defined through config and use that if so
 if ((_cfgPath >> "ACE_TempDay") in _nonInheritedArrays) exitWith {
