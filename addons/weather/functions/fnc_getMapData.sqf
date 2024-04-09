@@ -246,7 +246,7 @@ if (_worldName in ["kunduz"]) exitWith {
 private _isWinter = if (isNull (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "snow")) then {
     "winter" in _worldName || { 0 < getNumber (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "snow") }
 } else {
-    "winter" in _worldName
+    "winter" in _worldName || {"snow" in getText (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "rainDropTexture")}
 };
 
 if (_isWinter) exitWith {
