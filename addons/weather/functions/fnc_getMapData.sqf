@@ -249,5 +249,5 @@ private _winterData = {
     GVAR(Humidity) = [82, 80, 81, 82, 83, 82, 81, 82, 83, 82, 83, 82];
 };
 if ("winter" in _worldName) exitWith _winterData;
-if (0 < getNumber (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "snow")) exitWith _winterData;
+if (isNull (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "snow") && {0 < getNumber (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "snow")}) exitWith _winterData;
 if ("snow" in getText (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "rainDropTexture")) exitWith _winterData;
