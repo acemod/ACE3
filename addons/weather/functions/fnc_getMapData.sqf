@@ -48,29 +48,30 @@ GVAR(currentHumidity) = 0;
 GVAR(currentOvercast) = 0;
 
 // Get all non inherited arrays to filter maps that inherit from Stratis/Altis/Tanoa
-private _nonInheritedArrays = configProperties [configFile >> "CfgWorlds" >> _worldName, "isArray _x", false];
+private _cfgPath = (configFile >> "CfgWorlds" >> _worldName);
+private _nonInheritedArrays = configProperties [_cfgPath, "isArray _x", false];
 // And check if any custom non-inherited weather is defined through config and use that if so
-if ((configFile >> "CfgWorlds" >> _worldName >> "ACE_TempDay") in _nonInheritedArrays) exitWith {
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_TempDay")) then {
-        GVAR(TempDay) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_TempDay");
+if ((_cfgPath >> "ACE_TempDay") in _nonInheritedArrays) exitWith {
+    if (isArray (_cfgPath >> "ACE_TempDay")) then {
+        GVAR(TempDay) = getArray (_cfgPath >> "ACE_TempDay");
     };
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_TempNight")) then {
-        GVAR(TempNight) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_TempNight");
+    if (isArray (_cfgPath >> "ACE_TempNight")) then {
+        GVAR(TempNight) = getArray (_cfgPath >> "ACE_TempNight");
     };
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_Humidity")) then {
-        GVAR(Humidity) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_Humidity");
+    if (isArray (_cfgPath >> "ACE_Humidity")) then {
+        GVAR(Humidity) = getArray (_cfgPath >> "ACE_Humidity");
     };
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMin")) then {
-        GVAR(WindSpeedMin) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMin");
+    if (isArray (_cfgPath >> "ACE_WindSpeedMin")) then {
+        GVAR(WindSpeedMin) = getArray (_cfgPath >> "ACE_WindSpeedMin");
     };
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMean")) then {
-        GVAR(WindSpeedMean) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMean");
+    if (isArray (_cfgPath >> "ACE_WindSpeedMean")) then {
+        GVAR(WindSpeedMean) = getArray (_cfgPath >> "ACE_WindSpeedMean");
     };
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMax")) then {
-        GVAR(WindSpeedMax) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindSpeedMax");
+    if (isArray (_cfgPath >> "ACE_WindSpeedMax")) then {
+        GVAR(WindSpeedMax) = getArray (_cfgPath >> "ACE_WindSpeedMax");
     };
-    if (isArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindDirectionProbabilities")) then {
-        GVAR(WindDirectionProbabilities) = getArray (configFile >> "CfgWorlds" >> _worldName >> "ACE_WindDirectionProbabilities");
+    if (isArray (_cfgPath >> "ACE_WindDirectionProbabilities")) then {
+        GVAR(WindDirectionProbabilities) = getArray (_cfgPath >> "ACE_WindDirectionProbabilities");
     };
 };
 
@@ -243,10 +244,11 @@ if (_worldName in ["kunduz"]) exitWith {
 
 // Catches any "Winter" Map that hasnt been defined otherwise
 // Values are not based on any RL reference since the snow terrain textures persists regardless the date
+private _cfgPath = (_cfgPath >> "RainParticles");
 if (
     "winter" in _worldName || 
-    {"snow" in getText (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "rainDropTexture")} ||
-    {!isNull (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "snow") && { getNumber (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "snow") != 0 }}
+    {"snow" in getText (_cfgPath >> "rainDropTexture")} ||
+    {!isNull (_cfgPath >> "snow") && { getNumber (_cfgPath2 >> "snow") != 0 }}
 ) exitWith {
     GVAR(TempDay) = [-10,-9,-8,-7,-6,-5,-6,-7,-8,-9,-10,-11];
     GVAR(TempNight) = [-15,-14,-13,-12,-11,-10,-9,-10,-11,-12,-13,-17];

@@ -14,3 +14,4 @@
     [LINKFUNC(updateWeather), GVAR(updateInterval)] call CBA_fnc_addPerFrameHandler;
 
 }] call CBA_fnc_addEventHandler;
+    
