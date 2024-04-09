@@ -76,7 +76,7 @@ if ((_cfgPath >> "ACE_TempDay") in _nonInheritedArrays) exitWith {
 };
 
 // Check if the map is among the most popular
-if (_worldName in ["chernarus", "bootcamp_acr", "woodland_acr", "utes"]) then {
+if (_worldName in ["chernarus", "bootcamp_acr", "woodland_acr", "utes"]) exitWith {
     // Source: http://www.iten-online.ch/klima/europa/tschechien/prag.htm
     GVAR(TempDay) = [1, 3, 9, 14, 19, 23, 25, 24, 21, 13, 7, 2];
     GVAR(TempNight) = [-4, -3, 0, 4, 9, 12, 14, 14, 10, 6, 2, -2];
