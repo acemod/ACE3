@@ -67,9 +67,30 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
     _clone setMimic "unconscious";
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(syncCorpse),{
-    params ["_corpse"];
+[QGVAR(moveCorpse), {
+    params ["_corpse", "_dir", "_pos"];
+    _pos params ["_xPos", "_yPos", "_zPos"];
 
+    private _currentPos = getPosATL _corpse;
+
+    // Check if the corpse is already close to the target
+    // If so, don't teleport
+    if !(
+        (_currentPos select 0 <= _xPos + 0.25) &&
+        {_currentPos select 0 >= _xPos - 0.25} &&
+        {_currentPos select 1 <= _yPos + 0.25} &&
+        {_currentPos select 1 >= _yPos - 0.25} &&
+        {_currentPos select 2 <= _zPos + 0.25} &&
+        {_currentPos select 2 >= _zPos - 0.25}
+    ) then {
+        // Set direction before position
+        _corpse setDir _dir;
+
+        // Bring corpse back to clone's position
+        _corpse setPosATL _pos;
+    };
+
+    // Sync the corpse with its position
     [{
         _this awake true;
 
@@ -77,19 +98,6 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
             _this awake false;
         }, _this] call CBA_fnc_execNextFrame;
     }, _corpse] call CBA_fnc_execNextFrame;
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(moveCorpse), {
-    params ["_corpse", "_dir", "_pos"];
-
-    // Set direction before position
-    _corpse setDir _dir;
-
-    // Bring corpse back to clone's position
-    _corpse setPosATL _pos;
-
-    // Sync the corpse with its position
-    [QGVAR(syncCorpse), _corpse] call CBA_fnc_globalEvent;
 }] call CBA_fnc_addEventHandler;
 
 // Display event handler

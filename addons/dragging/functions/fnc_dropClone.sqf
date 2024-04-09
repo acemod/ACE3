@@ -39,8 +39,8 @@ if (!isNull _target) then {
         _pos set [2, 0.05];
     };
 
-    // Move the unit where it is local
-    [QGVAR(moveCorpse), [_target, getDir _unit + 180, _pos], _target] call CBA_fnc_targetEvent;
+    // Move the unit globally (important, as it doesn't work otherwise)
+    [QGVAR(moveCorpse), [_target, getDir _unit + 180, _pos]] call CBA_fnc_globalEvent;
 
     // Unhide unit
     if (!_isObjectHidden) then {
