@@ -243,12 +243,11 @@ if (_worldName in ["kunduz"]) exitWith {
 
 // Catches any "Winter" Map that hasnt been defined otherwise
 // Values are not based on any RL reference since the snow terrain textures persists regardless the date
-_isWinter = (
+if (
     "winter" in _worldName || {
     isNull (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "snow") && {0 != getNumber (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "snow") || {
     "snow" in getText (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "rainDropTexture") }}}
-);
-if _isWinter exitWith {
+    ) exitWith {
     GVAR(TempDay) = [-10,-9,-8,-7,-6,-5,-6,-7,-8,-9,-10,-11];
     GVAR(TempNight) = [-15,-14,-13,-12,-11,-10,-9,-10,-11,-12,-13,-17];
     GVAR(Humidity) = [82, 80, 81, 82, 83, 82, 81, 82, 83, 82, 83, 82];
