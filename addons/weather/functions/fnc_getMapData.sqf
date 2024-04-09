@@ -241,11 +241,8 @@ if (_worldName in ["kunduz"]) exitWith {
 };
 
 
-
 // Catches any "Winter" Map that hasnt been defined otherwise
 // Values are not based on any RL reference since the snow terrain textures persists regardless the date
-
-
 private _isWinter = if (isNull (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "snow")) then {
     "winter" in _worldName || { 0 < getNumber (configFile >> "CfgWorlds" >> _worldName >> "RainParticles" >> "snow") }
 } else {
