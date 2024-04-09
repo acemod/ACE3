@@ -31,7 +31,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Bandage_Basic_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_packingBandage: ACE_ItemCore {
@@ -44,7 +44,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Packing_Bandage_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_elasticBandage: ACE_ItemCore {
@@ -57,7 +57,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(Bandage_Elastic_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_tourniquet: ACE_ItemCore {
@@ -241,7 +241,7 @@ class CfgWeapons {
         descriptionUse = CSTRING(QuikClot_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.6;
         };
     };
     class ACE_personalAidKit: ACE_ItemCore {
@@ -279,20 +279,35 @@ class CfgWeapons {
         descriptionUse = CSTRING(Suture_Desc_Use);
         ACE_isMedicalItem = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.1;
         };
     };
     class ACE_bodyBag: ACE_ItemCore {
         scope = 2;
         author = ECSTRING(common,ACETeam);
-        displayName= CSTRING(Bodybag_Display);
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_black_f0";
         model = QPATHTOF(data\bodybagItem.p3d);
         picture = QPATHTOF(ui\bodybag_ca.paa);
         descriptionShort = CSTRING(Bodybag_Desc_Short);
         descriptionUse = CSTRING(Bodybag_Desc_Use);
         ACE_isMedicalItem = 1;
+        GVAR(bodyBagObject) = "ACE_bodyBagObject";
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 7;
         };
+    };
+    class ACE_bodyBag_blue: ACE_bodyBag {
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_blue_f0";
+        picture = QPATHTOF(ui\bodybag_blue_ca.paa);
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\bodybagItem_blue_co.paa)};
+        GVAR(bodyBagObject) = "ACE_bodyBagObject_blue";
+    };
+    class ACE_bodyBag_white: ACE_bodyBag {
+        displayName = "$STR_a3_cfgvehicles_land_bodybag_01_white_f0";
+        picture = QPATHTOF(ui\bodybag_white_ca.paa);
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {QPATHTOF(data\bodybagItem_white_co.paa)};
+        GVAR(bodyBagObject) = "ACE_bodyBagObject_white";
     };
 };

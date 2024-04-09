@@ -2,7 +2,7 @@ class CfgMagazines {
     class CA_Magazine;
     class GVAR(base): CA_Magazine {
         count = 1;
-        mass = 1;
+        mass = 0.1;
         ACE_isUnique = 1;
         GVAR(intel) = 1;
         GVAR(control) = "";
@@ -18,6 +18,7 @@ class CfgMagazines {
         picture = QPATHTOF(ui\notepad_ca.paa);
         model = "\a3\structures_f\items\documents\notepad_f.p3d";
         GVAR(control) = QGVAR(RscNotepad);
+        ACE_isTool = 1;
     };
 
     class XGVAR(document): GVAR(base) {

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe, Brett Mayson
  * Statement to sort weapons by their rate of fire.
@@ -14,15 +14,15 @@
 
 params ["_config"];
 
-private _fireModes = getArray (_config >> "modes");
 private _fireRate = [];
 
 {
     _fireRate pushBackUnique getNumber (_config >> _x >> "reloadTime");
-} foreach _fireModes;
+} forEach (getArray (_config >> "modes"));
 
 _fireRate sort true;
 _fireRate = _fireRate param [0, 0];
 
 if (_fireRate == 0) exitWith {0};
+
 round (60 / _fireRate)

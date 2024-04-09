@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Finds a free cargo seat, searching non FFV first
@@ -16,7 +16,7 @@
  */
 
 params ["_vehicle"];
-TRACE_1("params", _vehicle);
+TRACE_1("params",_vehicle);
 
 scopeName "main";
 

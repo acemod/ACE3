@@ -10,7 +10,7 @@
             <Spanish>Iluminar objetivo / Medir distancia</Spanish>
             <Russian>Подсветить цель / Замерить расстояние</Russian>
             <Hungarian>Célpont lézerezése / Távolság Bemérése</Hungarian>
-            <Italian>Misura la distanza</Italian>
+            <Italian>Telemetra bersaglio / Rileva distanza</Italian>
             <Portuguese>Marcar com laser / Medir Distância</Portuguese>
             <Japanese>レーザー ターゲット / 計測距離</Japanese>
             <Korean>목표까지 거리를 레이저로 취득</Korean>
@@ -27,7 +27,7 @@
             <Russian>Выставлено на</Russian>
             <Hungarian>Nullázási táv</Hungarian>
             <Portuguese>Fixado em</Portuguese>
-            <Italian>Azzeramento a</Italian>
+            <Italian>Azzerato a</Italian>
             <Japanese>次にゼロイン</Japanese>
             <Korean>영점 조절</Korean>
             <Chinesesimp>已归零到</Chinesesimp>
@@ -42,9 +42,9 @@
             <French>SCT - Augmenter la portée</French>
             <Hungarian>FCS tartomány állítása (Fel)</Hungarian>
             <Portuguese>Ajustar distância do FCS (Acima)</Portuguese>
-            <Italian>Aumentare la distanza dell'FCS</Italian>
+            <Italian>Aumenta la portata dell'FCS</Italian>
             <Russian>Диапазон СУО (выше)</Russian>
-            <Japanese>FCS による距離を調節 (上げ)</Japanese>
+            <Japanese>FCS 距離を調節 (上げ)</Japanese>
             <Korean>사통장치 거리 조정 (위로)</Korean>
             <Chinesesimp>调整火控系统距离（上调）</Chinesesimp>
             <Chinese>調整火控系統距離 (上)</Chinese>
@@ -58,9 +58,9 @@
             <French>SCT - Réduire la portée</French>
             <Hungarian>FCS tartomány állítása (Le)</Hungarian>
             <Portuguese>Ajustar distância do FCS (Abaixo)</Portuguese>
-            <Italian>Ridurre la distanza dell'FCS</Italian>
+            <Italian>Riduci la portata dell'FCS</Italian>
             <Russian>Диапазон СУО (ниже)</Russian>
-            <Japanese>FCS による距離を調節 (下げ)</Japanese>
+            <Japanese>FCS 距離を調節 (下げ)</Japanese>
             <Korean>사통장치 거리 조정 (아래로)</Korean>
             <Chinesesimp>调整火控系统距离（下调）</Chinesesimp>
             <Chinese>調整火控系統距離 (下)</Chinese>

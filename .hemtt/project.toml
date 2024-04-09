@@ -18,21 +18,50 @@ include = [
 [version]
 git_hash = 0
 
+# Unused in HEMTT v1.11 or higher, kept for backwards compatibility
 [asc]
 enabled = true
 exclude = [
-    "/initsettings.sqf",
-    "/initkeybinds.sqf",
-    "/xeh_prep.sqf",
-    "dev",
-    "medical_ai/statemachine.sqf",
+    ".inc.sqf",
+    "/dev/",
     "common/functions/fnc_dummy.sqf",
+    "zeus/functions/fnc_zeusAttributes.sqf",
 ]
-
-[hemtt.config]
-preset = "Hemtt"
 
 [hemtt.launch]
 workshop = [
+    "450814997", # CBA_A3
+]
+
+[hemtt.launch.spe]
+workshop = [
+    "450814997", # CBA_A3
+]
+dlc = [
+    "spe"
+]
+
+[hemtt.launch.vn]
+workshop = [
     "450814997", # CBA_A3's Workshop ID
+]
+dlc = [
+    "S.O.G. Prairie Fire",
+]
+
+[hemtt.launch.ws]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+]
+dlc = [
+    "Western Sahara",
+]
+
+[hemtt.launch.rhs]
+workshop = [
+    "450814997", # CBA_A3's Workshop ID
+    "843425103", # RHS AFRF Workshop ID
+    "843577117", # RHS USAF Workshop ID
+    "843593391", # RHS GREF Workshop ID
+    "843632231", # RHS SAF  Workshop ID
 ]

@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * PV event handler to update the AI skill on all machines when set by zeus module
  *
  * Arguments:

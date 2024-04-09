@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, commy2
  * Handles the wounds received event by triggering any needed blood creation.
@@ -28,7 +28,7 @@ if (_damageType in GVAR(noBloodDamageTypes)) exitWith {};
 if (GVAR(enabledFor) == BLOOD_ONLY_PLAYERS && {!isPlayer _unit && {_unit != ACE_player}}) exitWith {};
 
 // Don't bleed on the ground if in a vehicle
-if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")}) exitWith {};
+if (!isNull objectParent _unit && {!(vehicle _unit isKindOf "StaticWeapon")}) exitWith {};
 
 private _bulletDir = if (isNull _shooter) then {
     random 360 // Cannot calculate the direction properly, pick a random direction

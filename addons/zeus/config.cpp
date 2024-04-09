@@ -32,7 +32,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common", "ace_ai"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"SilentSpike", "mharis001"};
+        authors[] = {"kymckay", "mharis001"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
@@ -49,12 +49,14 @@ class CfgPatches {
             QGVAR(moduleUnconscious),
             QGVAR(moduleSetMedic),
             QGVAR(moduleSetMedicalVehicle),
-            QGVAR(moduleSetMedicalFacility)
+            QGVAR(moduleSetMedicalFacility),
+            QGVAR(moduleMedicalMenu)
         };
     };
     class GVAR(cargo): ADDON {
         units[] = {
             QGVAR(moduleLoadIntoCargo),
+            QGVAR(moduleUnloadFromCargo),
             QGVAR(moduleCargoParadrop)
         };
     };
@@ -92,6 +94,11 @@ class CfgPatches {
             QGVAR(moduleBurn)
         };
     };
+    class GVAR(trenches): ADDON {
+        units[] = {
+            QGVAR(moduleLayTrench)
+        };
+    };
 };
 
 class ACE_Curator {
@@ -104,6 +111,7 @@ class ACE_Curator {
     GVAR(pylons) = "ace_pylons";
     GVAR(arsenal) = "ace_arsenal";
     GVAR(fire) = "ace_fire";
+    GVAR(trenches) = "ace_trenches";
 };
 
 #include "CfgFactionClasses.hpp"

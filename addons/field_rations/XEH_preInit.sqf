@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 #define ARSENAL_CATEGORY_ICON QPATHTOF(ui\icon_survival.paa)
 
@@ -22,7 +22,7 @@ GVAR(waterSourceOffsets) = _cache select 1;
 
 // Custom Arsenal Tab
 if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
-    [keys FIELD_RATIONS_ITEMS, LLSTRING(DisplayName), ARSENAL_CATEGORY_ICON] call EFUNC(arsenal,addRightPanelButton);
+    [keys FIELD_RATIONS_ITEMS, LLSTRING(DisplayName), ARSENAL_CATEGORY_ICON, -1, true] call EFUNC(arsenal,addRightPanelButton);
 };
 
 ADDON = true;

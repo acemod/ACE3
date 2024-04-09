@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Kingsley
  * Parses the given text and returns a side.
@@ -22,7 +22,7 @@ TRACE_1("parseSide",_side);
 
 if (_side isEqualType sideUnknown) exitWith {_side};
 
-private _char = toLower (_side select [0, 1]);
+private _char = toLowerANSI (_side select [0, 1]);
 
 private _return = switch (_char) do {
     case ("b");

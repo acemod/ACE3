@@ -3,7 +3,7 @@
 GVAR(useAceMedical) = ["ace_medical"] call EFUNC(common,isModLoaded);
 
 // To support public API regardless of component settings
-[QGVAR(spurt), FUNC(spurt)] call CBA_fnc_addEventHandler;
+[QGVAR(spurt), LINKFUNC(spurt)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
     GVAR(bloodDrops) = [];
@@ -21,7 +21,7 @@ if (isServer) then {
 
         // Start the cleanup loop
         if (_index == 0) then {
-            [FUNC(cleanupLoop), [], GVAR(bloodLifetime)] call CBA_fnc_waitAndExecute;
+            [LINKFUNC(cleanupLoop), [], GVAR(bloodLifetime)] call CBA_fnc_waitAndExecute;
         };
     }] call CBA_fnc_addEventHandler;
 };

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Compile the action menu from config for an object's class
@@ -45,7 +45,7 @@ private _recurseFnc = {
             private _displayName = getText (_entryCfg >> "displayName");
             private _distance = _parentDistance;
             if (isNumber (_entryCfg >> "distance")) then {_distance = getNumber (_entryCfg >> "distance");};
-            // if (_distance < _parentDistance) then {WARNING_3("[%1] distance %2 less than parent %3", configName _entryCfg, _distance, _parentDistance);};
+            // if (_distance < _parentDistance) then {WARNING_3("[%1] distance %2 less than parent %3",configName _entryCfg,_distance,_parentDistance);};
             private _icon = if (isArray (_entryCfg >> "icon")) then {
                 getArray (_entryCfg >> "icon");
             } else {
@@ -74,7 +74,7 @@ private _recurseFnc = {
                 if (_condition isEqualTo "") then {_condition = "true"};
             } else {
                 // Add canInteract (including exceptions) and canInteractWith to condition
-                private _canInteractCondition = format [QUOTE([ARR_3(ACE_player,_target,%1)] call EFUNC(common,canInteractWith)), getArray (_entryCfg >> "exceptions")];
+                private _canInteractCondition = format [QUOTE([ARR_3(ACE_player,_target,%1)] call EFUNC(common,canInteractWith)),getArray (_entryCfg >> "exceptions")];
                 private _conditionFormatPattern = ["%1 && {%2}", "%2"] select (_condition isEqualTo "" || {_condition == "true"});
                 _condition = format [_conditionFormatPattern, _condition, _canInteractCondition];
             };
@@ -114,8 +114,7 @@ private _recurseFnc = {
                     ];
             _actions pushBack _entry;
         };
-        nil
-    } count (configProperties [_actionsCfg, "isClass _x", true]);
+    } forEach (configProperties [_actionsCfg, "isClass _x", true]);
     _actions
 };
 

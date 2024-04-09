@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Handles toggling of Medical Menu between the player and previous target.
@@ -15,16 +15,18 @@
  * Public: No
  */
 
+ // If in Zeus, ignore
+ if (!isNull findDisplay 312) exitWith {};
+
 // Find new target to switch to
-private _target = if (
+private _target = [
+    ACE_player,
+    GVAR(previousTarget)
+] select (
     GVAR(target) == ACE_player
     && {[ACE_player, GVAR(previousTarget)] call EFUNC(common,canInteractWith)}
     && {[ACE_player, GVAR(previousTarget)] call FUNC(canOpenMenu)}
-) then {
-    GVAR(previousTarget);
-} else {
-    ACE_player;
-};
+);
 
 // Exit if new target is same as old
 if (GVAR(target) == _target) exitWith {};

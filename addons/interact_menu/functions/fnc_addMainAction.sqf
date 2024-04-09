@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas, PabstMirror
  * Makes sure there is a ACE_MainActions on the object type
@@ -27,7 +27,7 @@ if (isNil "_actionTrees") then {
 private _parentNode = [_actionTrees, ["ACE_MainActions"]] call FUNC(findActionNode);
 
 if (isNil {_parentNode}) then {
-    TRACE_2("No Main Action on object", _objectType, _typeNum);
+    TRACE_2("No Main Action on object",_objectType,_typeNum);
     private _mainAction = ["ACE_MainActions", localize ELSTRING(interaction,MainAction), "", {}, {true}] call FUNC(createAction);
     [_objectType, _typeNum, [], _mainAction] call EFUNC(interact_menu,addActionToClass);
 };

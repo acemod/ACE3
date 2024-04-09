@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou
  * Starts tracking a round that will frag.
@@ -67,7 +67,7 @@ if (alive _round) then {
         getNumber (configFile >> "CfgAmmo" >> _type >> QGVAR(force)),
         getNumber (configFile >> "CfgAmmo" >> _type >> "indirecthit") * (sqrt (getNumber (configFile >> "CfgAmmo" >> _type >> "indirectHitRange")))
     ];
-    TRACE_1("Initializing track", _round);
+    TRACE_1("Initializing track",_round);
     GVAR(objects) pushBack _round;
     GVAR(arguments) pushBack _args;
 

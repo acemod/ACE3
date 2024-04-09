@@ -1,8 +1,8 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: mharis001
- * Handles changing the category in 3DEN attribute.
+ * Handles changing the category in 3DEN's ace arsenal attribute.
  *
  * Arguments:
  * 0: Attribute controls group <CONTROL>
@@ -24,7 +24,7 @@ uiNamespace setVariable [QGVAR(attributeCategory), _category];
 
 // Show add compatible items button when category is attachments or magazines
 private _compatibleButton = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_ADD_COMPATIBLE;
-private _enable = _category in [4, 5, 6, 7, 8];
+private _enable = _category in [IDX_CAT_OPTICS_ATTACHMENTS, IDX_CAT_FLASHLIGHT_ATTACHMENTS, IDX_CAT_MUZZLE_ATTACHMENTS, IDX_CAT_BIPOD_ATTACHMENTS, IDX_CAT_ITEMS_ALL];
 _compatibleButton ctrlEnable _enable;
 _compatibleButton ctrlShow _enable;
 

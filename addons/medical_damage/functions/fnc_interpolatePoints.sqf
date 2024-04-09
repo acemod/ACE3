@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Pterolatypus
  * Returns the image of a value on a linear piecewise function defined by given points
@@ -19,7 +19,7 @@
  */
 params ["_input", "_points", ["_randomRound", false]];
 
-if (count _points < 1) exitWith {
+if (_points isEqualTo []) exitWith {
     //TODO: sensible default/error value
     0
 };

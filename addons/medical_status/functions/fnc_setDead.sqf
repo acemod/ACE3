@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Kills a local unit.
@@ -17,9 +17,13 @@
 params ["_unit", ["_reason", "#setDead"], ["_instigator", objNull]];
 TRACE_3("setDead",_unit,_reason,_instigator);
 
+
 // No heart rate or blood pressure to measure when dead
 _unit setVariable [VAR_HEART_RATE, 0, true];
 _unit setVariable [VAR_BLOOD_PRESS, [0, 0], true];
+
+// Clear uncon variable just to be safe
+_unit setVariable [VAR_UNCON, nil, true];
 
 _unit setVariable [QEGVAR(medical,causeOfDeath), _reason, true];
 

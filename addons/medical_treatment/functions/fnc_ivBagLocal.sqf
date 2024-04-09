@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, mharis001
  * Local callback for administering an IV bag to a patient.
@@ -23,7 +23,7 @@ params ["_patient", "_bodyPart", "_classname"];
 private _bloodVolume = GET_BLOOD_VOLUME(_patient);
 if (_bloodVolume >= DEFAULT_BLOOD_VOLUME) exitWith {};
 
-private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
+private _partIndex = ALL_BODY_PARTS find tolowerANSI _bodyPart;
 
 // Get attributes for the used IV
 private _defaultConfig = configFile >> QUOTE(ADDON) >> "IV";

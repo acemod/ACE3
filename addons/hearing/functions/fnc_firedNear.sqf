@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Handles deafness due to large-caliber weapons going off near the player.
@@ -27,7 +27,9 @@ params ["_object", "_firer", "_distance", "_weapon", "", "", "_ammo"];
 if (_weapon in ["Throw", "Put"]) exitWith {};
 if (_distance > 50) exitWith {};
 
-private _vehAttenuation = if ((ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}) then {1} else {GVAR(playerVehAttenuation)};
+private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (
+    (ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}
+);
 private _distance = 1 max _distance;
 
 private _silencer = switch (_weapon) do {
@@ -51,7 +53,7 @@ if (isNil "_loudness") then {
             private _muzzleMagazines = getArray (configFile >> "CfgWeapons" >> _weapon >> _x >> "magazines");
             _weaponMagazines append _muzzleMagazines;
         };
-    } count _muzzles;
+    } forEach _muzzles;
     {
         private _ammoType = getText(configFile >> "CfgMagazines" >> _x >> "ammo");
         _weaponMagazines set [_forEachIndex, [_x, _ammoType]];
@@ -63,7 +65,7 @@ if (isNil "_loudness") then {
         if (_ammoType == _ammo) exitWith {
             _magazine = _magazineType;
         };
-    } count _weaponMagazines;
+    } forEach _weaponMagazines;
 
     if (_magazine == "") then {
         _loudness = 0;
@@ -78,7 +80,7 @@ if (isNil "_loudness") then {
             if (_ammo isKindOf ["RocketBase", (configFile >> "CfgAmmo")]) exitWith { 200 };
             if (_ammo isKindOf ["MissileBase", (configFile >> "CfgAmmo")]) exitWith { 600 };
             if (_ammo isKindOf ["SubmunitionBase", (configFile >> "CfgAmmo")]) exitWith { 80 };
-            if (_caliber <= 0) then { 6.5 } else { _caliber };
+            [_caliber, 6.5] select (_caliber <= 0)
         };
 
         _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Waypoint function for the fast rope waypoint.
@@ -24,7 +24,7 @@ private _speedMode = speedMode _group;
 // - Approach -----------------------------------------------------------------
 if (_vehicle distance2D _position > 50) then {
     _group setSpeedMode "LIMITED";
-    _vehicle flyInHeight 20;
+    _vehicle flyInHeight [20, true];
     _commander doMove _position;
     waitUntil {_vehicle distance2D _position < 50};
     waitUntil {vectorMagnitude (velocity _vehicle) < 3};

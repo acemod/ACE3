@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Deserializes the medical state of a unit and applies it.
@@ -16,6 +16,11 @@
  * Public: Yes
  */
 params [["_unit", objNull, [objNull]], ["_json", "{}", [""]]];
+
+// Don't run in scheduled environment
+if (canSuspend) exitWith {
+    [FUNC(deserializeState), _this] call CBA_fnc_directCall
+};
 
 if (isNull _unit) exitWith {};
 if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit) };
@@ -55,6 +60,13 @@ private _state = [_json] call CBA_fnc_parseJSON;
 {
     _x params ["_var", "_default"];
     private _value = _state getVariable _x;
+
+    // Handle wound hashmaps deserialized as CBA_namespaces
+    if (typeName _value == "LOCATION") then {
+        private _keys = allVariables _value;
+        private _values = _keys apply {_value getVariable _x};
+        _value = _keys createHashMapFromArray _values;
+    };
 
     // Treat null as nil
     if (_value isEqualTo objNull) then {
