@@ -47,29 +47,29 @@ if (!isServer) then {
         // Display error message(s)
         if (_missingAddonClient || {_additionalAddonClient} || {_olderVersionClient} || {_newerVersionClient}) then {
             private _errorMsg = "[ACE] Version mismatch:<br/><br/>";
-            private _error = format ["[ACE] Version mismatch: %1: ", profileName];
+            private _error = [];
 
             if (_missingAddonClient) then {
                 _errorMsg = _errorMsg + "Detected missing addon on client<br/>";
-                _error = _error + "Missing file(s); ";
+                _error pushBack "Missing file(s)";
             };
 
             if (_additionalAddonClient) then {
                 _errorMsg = _errorMsg + "Detected additional addon on client<br/>";
-                _error = _error + "Additional file(s); ";
+                _error pushBack "Additional file(s)";
             };
 
             if (_olderVersionClient) then {
                 _errorMsg = _errorMsg + "Detected older client version<br/>";
-                _error = _error + "Older version; ";
+                _error pushBack "Older version";
             };
 
             if (_newerVersionClient) then {
                 _errorMsg = _errorMsg + "Detected newer client version<br/>";
-                _error = _error + "Newer version; ";
+                _error pushBack "Newer version";
             };
 
-            ERROR(_error);
+            ERROR_2("[ACE] Version mismatch: %1: %2",profileName,_error joinString ", ");
 
             _errorMsg = parseText format ["<t align='center'>%1</t>", _errorMsg];
 
