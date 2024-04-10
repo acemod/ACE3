@@ -2,6 +2,7 @@
 /*
  * Author: tcvm
  * Decreases burning intensity on successful medical action.
+ * The medical action is looped until the user stops the interaction or the unit is no longer burning.
  *
  * Arguments:
  * 0: Medic <OBJECT>
@@ -25,15 +26,16 @@ _intensity = _intensity * INTENSITY_DECREASE_MULT_PAT_DOWN;
 
 _patient setVariable [QGVAR(intensity), _intensity, true];
 
-if (_intensity > BURN_MIN_INTENSITY) then {
-    TRACE_1("patient still burning, looping",_this);
+// If the unit is still burning, loop the medical action
+if !(_patient call FUNC(isBurning)) exitWith {};
 
-    if (EGVAR(medical_gui,pendingReopen)) then {
-        TRACE_1("temporarily blocking medical menu reopen",_this);
+TRACE_1("patient still burning, looping",_this);
 
-        EGVAR(medical_gui,pendingReopen) = false;
-        [{EGVAR(medical_gui,pendingReopen) = true}] call CBA_fnc_execNextFrame;
-    };
+if (EGVAR(medical_gui,pendingReopen)) then {
+    TRACE_1("temporarily blocking medical menu reopen",_this);
 
-    [_medic, _patient, _bodyPart, _classname] call EFUNC(medical_treatment,treatment);
+    EGVAR(medical_gui,pendingReopen) = false;
+    [{EGVAR(medical_gui,pendingReopen) = true}] call CBA_fnc_execNextFrame;
 };
+
+[_medic, _patient, _bodyPart, _classname] call EFUNC(medical_treatment,treatment);

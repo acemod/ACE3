@@ -67,8 +67,8 @@ params ["_unit", "_instigator"];
             _distancePercent = 1 - ((_unit distance _x) / BURN_PROPAGATE_DISTANCE);
             _adjustedIntensity = _intensity * _distancePercent;
 
-            // Don't burn if intensity is too low
-            if (BURN_MIN_INTENSITY > _adjustedIntensity) then {
+            // Don't burn if intensity is too low or already burning with higher intensity
+            if (BURN_MIN_INTENSITY > _adjustedIntensity || {(_x getVariable [QGVAR(intensity), 0]) > _adjustedIntensity}) then {
                 continue;
             };
 
@@ -138,15 +138,19 @@ params ["_unit", "_instigator"];
             _unit call FUNC(burnReaction);
         };
 
-        // Common burn areas are the hands and face https://www.ncbi.nlm.nih.gov/pubmed/16899341/
-        private _woundSelection = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] selectRandomWeighted [0.77, 0.5, 0.8, 0.8, 0.3, 0.3];
-
-        if (GET_PAIN_PERCEIVED(_unit) < (PAIN_UNCONSCIOUS + random 0.2)) then {
-            // Keep pain around unconciousness limit to allow for more fun interactions
-            [_unit, _intensity / BURN_MAX_INTENSITY, _woundSelection, "burn", _instigator] call EFUNC(medical,addDamageToUnit);
-        } else {
-            [_unit, 0.15, _woundSelection, "burn", _instigator] call EFUNC(medical,addDamageToUnit);
+        if (!isNull _instigator) then {
+            _unit setVariable [QEGVAR(medical,lastDamageSource), _instigator];
+            _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
         };
+
+        // Common burn areas are the hands and face https://www.ncbi.nlm.nih.gov/pubmed/16899341/
+        private _bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] selectRandomWeighted [0.77, 0.5, 0.8, 0.8, 0.3, 0.3];
+
+        // Keep pain around unconciousness limit to allow for more fun interactions
+        private _damageToAdd = [0.15, _intensity / BURN_MAX_INTENSITY] select (!alive _unit || {GET_PAIN_PERCEIVED(_unit) < (PAIN_UNCONSCIOUS + random 0.2)});
+
+        // Use event directly, as ace_medical_fnc_addDamageToUnit requires unit to be alive
+        [QEGVAR(medical,woundReceived), [_unit, [[_damageToAdd, _bodyPart, _damageToAdd]], _instigator, "burn"]] call CBA_fnc_localEvent;
 
         _unit setVariable [QGVAR(intensity), _intensity, true]; // globally sync intensity across all clients to make sure simulation is deterministic
     };

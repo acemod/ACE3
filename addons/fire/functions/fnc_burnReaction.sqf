@@ -16,8 +16,9 @@ params ["_unit"];
 
 if (
     GVAR(dropWeapon) > 0 &&
-    {isNull objectParent _unit && {(currentWeapon _unit) != ""}} &&
-    {!isPlayer _unit || GVAR(dropWeapon) >= 2}
+    {isNull objectParent _unit} &&
+    {(currentWeapon _unit) != ""} &&
+    {!isPlayer _unit || GVAR(dropWeapon) == 2}
 ) then {
     _unit call EFUNC(common,throwWeapon);
 };
