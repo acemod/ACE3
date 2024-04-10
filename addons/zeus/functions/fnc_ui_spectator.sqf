@@ -72,7 +72,7 @@ private _fnc_onSideSelection = {
     private _color = _ctrl getVariable "color";
     private _scale = 1;
 
-    private _sides = GETVAR(_display,spectateSides,[]);
+    private _sides = _display getVariable [QGVAR(spectateSides), []];
     private _selectedSide = (ctrlIDC _ctrl) - 92540;
 
     // Add or remove from spectatable sides and update color and scale
@@ -125,7 +125,7 @@ private _fnc_onModesSelection = {
     private _color = [1, 1, 1, 0.5];
     private _scale = 1;
 
-    private _modes = GETVAR(_display,cameraModes,[]);
+    private _modes = _display getVariable [QGVAR(cameraModes), []];
     private _selectedMode = (ctrlIDC _ctrl) - 92550;
 
     // Add or remove from camera modes and update color and scale
@@ -169,7 +169,7 @@ private _fnc_onVisionSelection = {
     // Convert to boolean since EH returns state as 0 or 1
     private _state = [false, true] select _state;
 
-    private _visions = GETVAR(_display,visionModes,[]);
+    private _visions = _display getVariable [QGVAR(visionModes), []];
     private _selectedVision = (ctrlIDC _ctrl) - 92560;
 
     // Add or remove from vision modes
@@ -232,7 +232,7 @@ _allCheckbox ctrlAddEventHandler ["CheckedChanged", _fnc_onVisionsAll];
 
 // Confirm and Cancel
 private _fnc_onUnload = {
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+    private _logic = missionNamespace getVariable ["BIS_fnc_initCuratorAttributes_target", objNull];
     if (isNull _logic) exitWith {};
 
     deleteVehicle _logic;
@@ -244,7 +244,7 @@ private _fnc_onConfirm = {
     private _display = ctrlParent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
+    private _logic = missionNamespace getVariable ["BIS_fnc_initCuratorAttributes_target", objNull];
     if (isNull _logic) exitWith {};
 
     private _unit = attachedTo _logic;
@@ -252,9 +252,9 @@ private _fnc_onConfirm = {
 
     private _force = lbCurSel (_display displayCtrl 92531) > 0;
     private _hide = lbCurSel (_display displayCtrl 92532) > 0;
-    private _sides = GETVAR(_display,spectateSides,[]) apply {[_x] call BIS_fnc_sideType};
-    private _modes = GETVAR(_display,cameraModes,[]);
-    private _visions = GETVAR(_display,visionModes,[]);
+    private _sides = (_display getVariable [QGVAR(spectateSides), []]) apply {_x call BIS_fnc_sideType};
+    private _modes = _display getVariable [QGVAR(cameraModes), []];
+    private _visions = _display getVariable [QGVAR(visionModes), []];
 
     [QGVAR(moduleSpectator), [_force, _hide, _sides, _modes, _visions], _unit] call CBA_fnc_targetEvent;
 
