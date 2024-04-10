@@ -24,6 +24,9 @@ TRACE_3("dropNozzle",_unit,_nozzle,_disconnectOnly);
 detach _nozzle;
 _nozzle setVariable [QGVAR(isRefueling), false, true];
 
+// Remove claim on nozzle
+[objNull, _nozzle] call EFUNC(common,claim);
+
 if (_disconnectOnly) exitWith {};
 _nozzle setVelocity [0, 0, 0];
 

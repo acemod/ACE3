@@ -25,7 +25,7 @@ This adds map tools that can be used to measure distances between two points or 
 This adds a plotting board that can be used to aid in the rapid usage and adjustment of short-ranged indirect fires, as well as quick measurements of directions and distances between points, and general land-navigation.
 
 ### 1.4 GPS on map
-If you are equipped with a vanilla GPS it will be shown on the map. (You don't need the `Map Tools` item in your inventory for this.)
+If you have GPS capability, a GPS display will be shown on the map, indicating current grid position. (You don't need the `Map Tools` item in your inventory for this.)
 
 ## 2. Usage
 
@@ -49,6 +49,7 @@ If you are equipped with a vanilla GPS it will be shown on the map. (You don't n
 - Press the self interaction key <kbd>Ctrl</kbd> + <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Self Interaction Key`).
 - Select `Show Plotting Board`.
 - Note that you can drag the Plotting Board around with <kbd>LMB</kbd> and rotate the different parts of the Plotting Board, each independently from each other, with <kbd>Ctrl</kbd> + <kbd>LMB</kbd>.
+- When a new marker (Local or Group Channel) is created on the inner circle of the Plotting board, the marker will move accordingly when the Plotting Board gets moved or rotated.
 
 ### 2.4 Drawing lines
 - You can draw lines on the plotting board.

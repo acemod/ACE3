@@ -35,7 +35,7 @@ private _processedSelections = [];
 
 {
     private _selection = _x;
-    private _hitpoint = toLower (_hitPoints select _forEachIndex);
+    private _hitpoint = toLowerANSI (_hitPoints select _forEachIndex);
     private _isWheelOrTrack = _selection in _wheelHitSelections || {_hitpoint in _wheelHitPoints} || {_hitpoint in TRACK_HITPOINTS};
 
     if (_hitpoint isEqualTo "") then { // skip empty hitpoint

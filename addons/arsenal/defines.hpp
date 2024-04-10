@@ -270,6 +270,7 @@
 #define IDX_VIRT_UNIQUE_UNKNOWN_ITEMS 25
 
 // Indexes of current items array
+// Should match IDX_VIRT_X macros for any left panel tabs
 #define IDX_CURR_PRIMARY_WEAPON 0
 #define IDX_CURR_SECONDARY_WEAPON 1
 #define IDX_CURR_HANDGUN_WEAPON 2
@@ -489,3 +490,6 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
     _contentPanelCtrl lnbSetPicture [[_newRow, 7], getText (configFile >> "CfgVehicles" >> (_loadout select IDX_LOADOUT_BACKPACK) select 0 >> "picture")];\
     _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (_cfgWeapons >> _loadout select IDX_LOADOUT_HEADGEAR >> "picture")];\
     _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "CfgGlasses" >> _loadout select IDX_LOADOUT_GOGGLES >> "picture")];
+
+#define ACTION_TYPE_TEXT 0
+#define ACTION_TYPE_BUTTON 1

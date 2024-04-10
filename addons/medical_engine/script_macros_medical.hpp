@@ -53,7 +53,8 @@
 #define BLOOD_VOLUME_CLASS_2_HEMORRHAGE 5.100 // lost more than 15% blood, Class II Hemorrhage
 #define BLOOD_VOLUME_CLASS_3_HEMORRHAGE 4.200 // lost more than 30% blood, Class III Hemorrhage
 #define BLOOD_VOLUME_CLASS_4_HEMORRHAGE 3.600 // lost more than 40% blood, Class IV Hemorrhage
-#define BLOOD_VOLUME_FATAL 3.0 // Lost more than 50% blood, Unrecoverable
+// Lost more than 50% blood, Unrecoverable
+#define BLOOD_VOLUME_FATAL 3.0
 
 // Minimum blood volume, in liters, for a patient to have the chance to wake up
 #define MINIMUM_BLOOD_FOR_STABLE_VITALS EGVAR(medical,const_stableVitalsBloodThreshold)
@@ -106,6 +107,10 @@
 // Minimum limb damage required for fracture
 #define FRACTURE_DAMAGE_THRESHOLD EGVAR(medical,const_fractureDamageThreshold)
 #define FRACTURE_DAMAGE_THRESHOLD_DEFAULT 0.50
+
+// Minimum cardiac output
+#define CARDIAC_OUTPUT_MIN EGVAR(medical,const_minCardiacOutput)
+#define CARDIAC_OUTPUT_MIN_DEFAULT 0.05
 
 // Minimum body part damage required for blood effect on uniform
 #define VISUAL_BODY_DAMAGE_THRESHOLD 0.35

@@ -73,8 +73,7 @@ GVAR(hasWatch) = true;
     GVAR(hasWatch) = false;
     {
         if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
-        false
-    } count (assignedItems _unit);
+    } forEach (assignedItems _unit);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 
@@ -93,7 +92,7 @@ GVAR(vehicleLightColor) = [1,1,1,0];
     // Handle vehicles with toggleable interior lights:
     private _vehicleLightCondition = getText (_cfg >> QGVAR(vehicleLightCondition));
     if (_vehicleLightCondition == "") then {
-        private _userAction = toLower getText (_cfg >> "UserActions" >> "ToggleLight" >> "statement");
+        private _userAction = toLowerANSI getText (_cfg >> "UserActions" >> "ToggleLight" >> "statement");
         if (
             false // isClass (_cfg >> "compartmentsLights")
             || {_userAction find "cabinlights_hide" > 0}
