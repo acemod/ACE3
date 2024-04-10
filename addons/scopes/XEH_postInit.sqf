@@ -9,6 +9,9 @@
 
 if (!hasInterface) exitWith {};
 
+// Add keybinds
+#include "initKeybinds.inc.sqf"
+
 GVAR(Optics) = ["", "", ""];
 GVAR(Guns) = ["", "", ""];
 GVAR(canAdjustElevation) = [false, false, false];
@@ -40,9 +43,6 @@ GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
             };
         };
     }] call CBA_fnc_addPlayerEventHandler;
-
-    // Add keybinds
-    #include "initKeybinds.inc.sqf"
 
     // Register fire event handler
     ["ace_firedPlayer", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
