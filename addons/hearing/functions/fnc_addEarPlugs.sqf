@@ -46,31 +46,7 @@ private _maxLoudness = GVAR(cacheMaxAmmoLoudness) getOrDefaultCall [_weapon, {
 
     // Get the weapon's compatible magazines, so that all magazines are cached
     private _maxLoudness = selectMax ((compatibleMagazines _weapon) apply {
-        private _magazine = _x;
-        private _cfgMagazine = _cfgMagazines >> _magazine;
-        private _ammo = getText (_cfgMagazine >> "ammo");
-
-        GVAR(cacheAmmoLoudness) getOrDefaultCall [_magazine, {
-            private _cfgAmmo = configFile >> "CfgAmmo";
-            private _initSpeed = getNumber (_cfgMagazine >> "initSpeed");
-            private _ammoConfig = _cfgAmmo >> _ammo;
-            private _caliber = getNumber (_ammoConfig >> "ACE_caliber");
-
-            _caliber = switch (true) do {
-                // If explicilty defined, use ACE_caliber
-                case (inheritsFrom (_ammoConfig >> "ACE_caliber") isEqualTo _ammoConfig): {_caliber};
-                case (_ammo isKindOf ["ShellBase", _cfgAmmo]): {80};
-                case (_ammo isKindOf ["RocketBase", _cfgAmmo]): {200};
-                case (_ammo isKindOf ["MissileBase", _cfgAmmo]): {600};
-                case (_ammo isKindOf ["SubmunitionBase", _cfgAmmo]): {80};
-                default {[_caliber, 6.5] select (_caliber <= 0)};
-            };
-
-            private _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;
-            TRACE_5("building cache",_ammo,_magazine,_initSpeed,_caliber,_loudness);
-
-            _loudness
-        }, true];
+        [_magazine, getText (_cfgMagazines >> _x >> "ammo")] call FUNC(getAmmoLoudness)
     });
 
     // ace_gunbag_fnc_isMachineGun
