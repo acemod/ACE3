@@ -31,6 +31,7 @@ private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (
     (ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}
 );
 private _distance = 1 max _distance;
+private _audibleFireCoef = 1;
 
 private _magazine = if (_gunner == _firer) then {
     // Unit that is firing is on foot
@@ -40,6 +41,13 @@ private _magazine = if (_gunner == _firer) then {
     if (_index == -1) exitWith {""};
 
     _weaponItems = _weaponItems select _index;
+
+    // Check if the unit has a suppressor
+    private _suppressor = _weaponItems select 1;
+
+    if (_suppressor != "") then {
+        _audibleFireCoef = getNumber (configFile >> "CfgWeapons" >> _suppressor >> "ItemInfo" >> "AmmoCoef" >> "audibleFire");
+    };
 
     // Check if the secondary muzzle was fired; If not, assume it's the primary muzzle
     if (_weaponItems select 5 param [2, ""] == _muzzle) then {
@@ -54,13 +62,6 @@ private _magazine = if (_gunner == _firer) then {
 
 if (_magazine == "") exitWith {
     TRACE_5("No mag for weapon/ammo??",_weapon,_muzzle,_ammo,_firer,_gunner);
-};
-
-private _audibleFireCoef = 1;
-private _suppressor = _weaponItems select 1;
-
-if (_suppressor != "") then {
-    _audibleFireCoef = getNumber (configFile >> "CfgWeapons" >> _suppressor >> "ItemInfo" >> "AmmoCoef" >> "audibleFire");
 };
 
 private _loudness = GVAR(cacheAmmoLoudness) getOrDefaultCall [_magazine, {
