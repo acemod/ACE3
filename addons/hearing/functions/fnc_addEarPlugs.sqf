@@ -52,7 +52,7 @@ private _maxLoudness = GVAR(cacheMaxAmmoLoudness) getOrDefaultCall [_weapon, {
 
         GVAR(cacheAmmoLoudness) getOrDefaultCall [_magazine, {
             private _cfgAmmo = configFile >> "CfgAmmo";
-            private _initSpeed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
+            private _initSpeed = getNumber (_cfgMagazine >> "initSpeed");
             private _ammoConfig = _cfgAmmo >> _ammo;
             private _caliber = getNumber (_ammoConfig >> "ACE_caliber");
 
