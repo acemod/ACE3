@@ -369,6 +369,10 @@
             <Russian>Вставить/вынуть беруши</Russian>
             <Italian>Metti/Togli tappi</Italian>
             <Korean>귀마개 토글</Korean>
+            <French>Mettre/enlever les bouchons</French>
+        </Key>
+        <Key ID="STR_ACE_Hearing_heavyWeaponUnits">
+            <English>Only units with heavy weapons</English>
         </Key>
     </Package>
 </Project>

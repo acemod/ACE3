@@ -37,8 +37,7 @@ private _grenades = [];
     if (_x in _magazines) then {
         _grenades pushBack _x;
     };
-    false
-} count ([GVAR(GrenadesAll), GVAR(GrenadesFrag), GVAR(GrenadesNonFrag)] select _type);
+} forEach ([GVAR(GrenadesAll), GVAR(GrenadesFrag), GVAR(GrenadesNonFrag)] select _type);
 
 // abort if no grenades are available
 if (_grenades isEqualTo []) exitWith {false};

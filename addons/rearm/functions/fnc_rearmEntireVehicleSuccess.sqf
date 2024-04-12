@@ -28,8 +28,7 @@ if (isServer) then {
         } else {
             [QGVAR(rearmEntireVehicleSuccessLocalEH), [_truck, _vehicle, _x], _turretOwnerID] call CBA_fnc_ownerEvent;
         };
-        false
-    } count _turrets;
+    } forEach _turrets;
 } else {
     [QGVAR(rearmEntireVehicleSuccessEH), _this] call CBA_fnc_serverEvent;
 };
