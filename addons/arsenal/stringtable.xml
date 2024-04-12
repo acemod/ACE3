@@ -1244,6 +1244,7 @@
             <Japanese>熱画像装置内蔵</Japanese>
             <Russian>Интегрирован тепловизор.</Russian>
             <Korean>열화상 내장</Korean>
+            <French>Thermique intégrée</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_intPrimTi">
             <English>Thermal &amp; Primary integrated</English>
@@ -1251,6 +1252,7 @@
             <Japanese>熱画像装置内蔵・プライマリに内蔵</Japanese>
             <Russian>Интегрирован тепловизор и осн.прицел.</Russian>
             <Korean>열화상과 주무기 내장</Korean>
+            <French>Thermique et primaire intégrés</French>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
             <English>Not Supported</English>
@@ -1718,6 +1720,7 @@
             <Japanese>検索\nCTRL + クリックで検索結果の即時表示を有効化</Japanese>
             <Korean>검색\nCtrl + 클릭으로 실시간 검색 결과를 활성화</Korean>
             <Russian>Поиск\nCtrl + Click для включения результатов в реальном времени</Russian>
+            <French>Recherche\nCTRL + clic pour modifier les résultats tout en écrivant</French>
         </Key>
     </Package>
 </Project>

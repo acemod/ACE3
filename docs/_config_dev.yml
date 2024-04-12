@@ -8,9 +8,9 @@ ace:
   githubUrl: https://github.com/acemod/ACE3
   version:
     major: 3
-    minor: 16
-    patch: 3
-    build: 79
+    minor: 17
+    patch: 0
+    build: 82
 
 
 markdown: kramdown

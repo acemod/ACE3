@@ -5,7 +5,6 @@ class CfgVehicles {
     class StaticGrenadeLauncher;
 
     class rhs_SPG9_base: AT_01_base_F {
-        // ENABLE_CSW_ATTRIBUTE;
         class ACE_CSW {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_SPG9);
@@ -26,7 +25,6 @@ class CfgVehicles {
     };
 
     class rhs_Kornet_Base: AT_01_base_F {
-        // ENABLE_CSW_ATTRIBUTE;
         class ACE_CSW {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_9K133_launcher);
@@ -40,7 +38,6 @@ class CfgVehicles {
     };
 
     class rhs_Metis_Base: AT_01_base_F {
-        // ENABLE_CSW_ATTRIBUTE;
         class ACE_CSW {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_9K115_2_launcher);
@@ -54,7 +51,6 @@ class CfgVehicles {
     };
 
     class rhs_2b14_82mm_Base: StaticMortar {
-        // ENABLE_CSW_ATTRIBUTE;
         class ACE_CSW {
             enabled = 1;
             magazineLocation = "";
@@ -99,7 +95,6 @@ class CfgVehicles {
     };
 
     class RHS_AGS30_TriPod_base: StaticGrenadeLauncher {
-        // ENABLE_CSW_ATTRIBUTE;
         class ACE_CSW {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_AGS30);
