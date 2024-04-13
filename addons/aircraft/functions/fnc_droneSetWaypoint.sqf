@@ -36,9 +36,26 @@ _pos set [
 
 // [_group] call CBA_fnc_clearWaypoints;
 _waypoint = _group addWaypoint [_pos, 0];
-_waypoint setWaypointType _type;
 if (_type == "FOLLOW" && {_target isKindOf "CAManBase" || (_target isKindOf "LandVehicle")}) then {
-    _waypoint waypointAttachVehicle _target;
+    if (_vehicle isKindOf "UGV_01_base_F") then { // Vanilla follow waypoint is broken for UGVs, requiring a workaround.
+        _waypoint setWaypointType "HOLD";
+        [{
+            params ["_args", "_handle"];
+            _args params ["_vehicle", "_group", "_waypoint", "_target"];
+
+            if ( // Abort PFH if a new waypoint is created via UAV Terminal or ACE Interaction
+                _waypoint select 1 != currentWaypoint _group || 
+                {!alive _vehicle}
+            ) exitWith {
+                [_handle] call CBA_fnc_removePerFrameHandler;
+            };
+
+            _waypoint setWaypointPosition [(getPosASL _target), -1];
+        }, 3, [_vehicle, _group, _waypoint, _target]] call CBA_fnc_addPerFrameHandler;
+    } else {
+        _waypoint setWaypointType _type;
+        _waypoint waypointAttachVehicle _target;
+    };
 };
 
 TRACE_3("",_currentHeight,_currentLoiterRadius,_currentLoiterType);
