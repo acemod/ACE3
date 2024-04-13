@@ -373,6 +373,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_heavyWeaponUnits">
             <English>Only units with heavy weapons</English>
+            <French>Uniquement les unités dotées d'armes lourdes</French>
         </Key>
     </Package>
 </Project>
