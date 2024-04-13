@@ -373,6 +373,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_heavyWeaponUnits">
             <English>Only units with heavy weapons</English>
+            <Russian>Только юниты с тяжелым вооружением</Russian>
         </Key>
     </Package>
 </Project>
