@@ -7,6 +7,7 @@
  * 0: Units <OBJECT, GROUP, ARRAY>
  * 1: Add (true) or remove (false) from blacklist <BOOL> (default: true)
  * 2: Owner to transfer units to <NUMBER> (default: -1)
+ * 3: Rebalance <NUMBER> (default: 0)
  *
  * Return Value:
  * None
@@ -17,7 +18,7 @@
  * Public: Yes
  */
 
-params [["_units", objNull, [objNull, grpNull, []]], ["_blacklist", true, [false]], ["_newOwner", -1, [false]]];
+params [["_units", objNull, [objNull, grpNull, []]], ["_blacklist", true, [false]], ["_owner", -1, [false]], ["_rebalance", NO_REBALANCE, [0]]];
 
 if !(_units isEqualType []) then {
     _units = [_units];
@@ -29,7 +30,7 @@ _units = _units select {!isNull _x};
 
 if (_units isEqualTo []) exitWith {};
 
-private _transfer = _blacklist && {_newOwner > 1};
+private _transfer = _blacklist && {_owner > 1};
 private _groups = [];
 
 {
@@ -44,7 +45,7 @@ private _groups = [];
     };
 } forEach _units;
 
-// Try to move AI back to server
-if (_transfer) then {
-    [QGVAR(transferGroupsToOwner), [_groups arrayIntersect _groups, _newOwner]] call CBA_fnc_serverEvent;
+// Try to move AI to new owner; Also takes care of rebalancing groups
+if (_transfer || {_rebalance in [REBALANCE, FORCED_REBALANCE]}) then {
+    [QGVAR(transferGroupsRebalance), [_groups arrayIntersect _groups, _owner, _rebalance]] call CBA_fnc_serverEvent;
 };

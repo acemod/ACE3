@@ -11,12 +11,19 @@
             // Add disconnect EH
             addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
 
-            [QGVAR(transferGroupsToOwner), {
-                params ["_groups", "_owner"];
+            [QGVAR(transferGroupsRebalance), {
+                params ["_groups", "_owner", "_rebalance"];
 
-                {
-                    _x setGroupOwner _owner;
-                } forEach _groups;
+                if (_groups isNotEqualTo [] && {_owner > 1}) then {
+                    {
+                        _x setGroupOwner _owner;
+                    } forEach _groups;
+                };
+
+                // Rebalance units
+                if (_rebalance in [REBALANCE, FORCED_REBALANCE]) then {
+                    (_rebalance == FORCED_REBALANCE) call FUNC(rebalance);
+                };
             }] call CBA_fnc_addEventHandler;
         } else {
             // Register HC (this part happens on HC only)
