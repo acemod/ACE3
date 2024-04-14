@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Generic handler for firing a clgp submuntion ammo
+ * Generic handler for firing a clgp submuntion ammo. Called from the ammo's fired EH.
  *
  * Arguments:
  * FiredEH

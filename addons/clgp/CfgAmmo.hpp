@@ -6,7 +6,7 @@ class CfgAmmo {
         indirectHit = 200;
         indirectHitRange = 4;
 
-        GVAR(deployApplyDrag) = 1;
+        GVAR(artilleryDrag) = 1;
         GVAR(deployCondition) = QFUNC(copperhead_deployCondition);
         submunitionAmmo = "ace_155mm_m712_guidance";
         submunitionCount = 1;
@@ -99,7 +99,6 @@ class CfgAmmo {
         class Eventhandlers {
             fired = QUOTE(call FUNC(submunition_ammoFired));
         };
-        GVAR(deployApplyDrag) = -1;
     };
 
     class MissileBase;
