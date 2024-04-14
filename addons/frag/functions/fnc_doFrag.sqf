@@ -38,7 +38,7 @@ TRACE_3("willFrag",_timeSinceLastFrag,CBA_missionTime,_maxFragCount);
 _shotParentVehicle setVariable [QGVAR(obj_nextFragTime), CBA_missionTime + ACE_FRAG_HOLDOFF_VEHICLE];
 private _maxFragCount = round linearConversion [ACE_FRAG_COUNT_MIN_TIME, ACE_FRAG_COUNT_MAX_TIME, _timeSinceLastFrag, ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
 
-_ammo call FUNC(getFragInfo) params ["_fragRange", "_fragVel", "_fragTypes", "_modFragCount"];
+_ammo call FUNC(getFragInfo) params ["_fragRange", "_fragVelocity", "_fragTypes", "_modFragCount"];
 // For low frag rounds limit the # of frags created
 if (_modFragCount < ACE_FRAG_LOW_FRAG_MOD_COUNT) then {
     _maxFragCount = _modFragCount * ACE_FRAG_LOW_FRAG_COEFF;
@@ -49,7 +49,7 @@ if (_modFragCount < ACE_FRAG_LOW_FRAG_MOD_COUNT) then {
 
 TRACE_3("doFrag choices",_maxFragCount,_fragRange,GVAR(fragSimComplexity));
 if (GVAR(fragSimComplexity) != 1 && _fragRange > 3) then {
-    _maxFragCount = _maxFragCount - ([_posASL, _fragVel, _fragRange, _maxFragCount, _fragTypes, _modFragCount, _shotParents] call FUNC(doFragTargeted));
+    _maxFragCount = _maxFragCount - ([_posASL, _fragVelocity, _fragRange, _maxFragCount, _fragTypes, _modFragCount, _shotParents] call FUNC(doFragTargeted));
 };
 
 if (GVAR(fragSimComplexity) > 0 && _maxFragCount >= ACE_FRAG_MIN_FRAG_BUDGET_FOR_RANDOM) then {

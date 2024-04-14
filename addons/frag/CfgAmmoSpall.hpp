@@ -1,4 +1,5 @@
 class GVAR(spallBase): B_65x39_Caseless {
+    ACE_FRAG_RM_EH;
     submunitionAmmo[] = {QGVAR(small),4,QGVAR(medium),3,QGVAR(large),2,QGVAR(huge),1};
     submunitionConeType[] = {"random", 20};
     submunitionConeAngle = 40;
@@ -9,7 +10,6 @@ class GVAR(spallBase): B_65x39_Caseless {
     triggerSpeedCoef[] = {0.75,1.25};
     deleteParentWhenTriggered = 1;
     submunitionParentSpeedCoef = 1;
-    ACE_FRAG_RM_EH;
 };
 
 

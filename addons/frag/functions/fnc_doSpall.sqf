@@ -31,9 +31,7 @@ if (_ammo == "" || {_objectHit isKindOf "CAManBase"}) exitWith {
 
 private _material = _surfaceType call FUNC(getMaterialInfo);
 if (_material == "ground") exitWith {
-    #ifdef DEBUG_MODE_FULL
-    systemChat "ground spall";
-    #endif
+    TRACE_1("ground",_surfaceType);
 };
 
 // Find spall speed / fragment info
