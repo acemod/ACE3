@@ -47,6 +47,7 @@ class ShotgunBase: ShotgunCore {
 class SubmunitionCore;
 class SubmunitionBase: SubmunitionCore {
     ACE_FRAG_ADD_EH_BASE;
+    GVAR(skip) = 1;
 };
 
 class BoundingMineCore;
