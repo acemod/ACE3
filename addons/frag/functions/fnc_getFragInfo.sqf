@@ -95,7 +95,7 @@ if (_notifyMissingEntries) then {
  * 3: _fragCount - modified frag count used under assumptions of spherical fragmentation
  */
 _ammoInfo = [
-    ACE_FRAG_MAX_FRAG_RANGE max sqrt (_fragCount / (4 * pi * ACE_FRAG_MIN_FRAG_HIT_CHANCE)),
+    ACE_FRAG_MAX_FRAG_RANGE min sqrt (_fragCount / (4 * pi * ACE_FRAG_MIN_FRAG_HIT_CHANCE)),
     ACE_FRAG_IMPERIC_VELOCITY_CONSTANT * _gurneyConstant * sqrt (_chargeMass / (_metalMass + _chargeMass * _geometryCoefficient)),
     _fragTypes,
     _fragCount / 4 / pi
