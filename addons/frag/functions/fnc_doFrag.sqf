@@ -20,8 +20,8 @@
 
 #define ACE_FRAG_MIN_FRAG_BUDGET_FOR_RANDOM 3
 
-params ["_posASL", "_velocity", "_ammo", "_shotParents"];
-TRACE_4("doFrag",_posASL,_velocity,_ammo,_shotParents);
+params ["_posASL", "_projectileVelocity", "_ammo", "_shotParents"];
+TRACE_4("doFrag",_posASL,_projectileVelocity,_ammo,_shotParents);
 
 // Don't let a single object cause all fragmentation events
 _shotParents params ["_shotParentVehicle"];
@@ -53,5 +53,5 @@ if (GVAR(fragSimComplexity) != 1 && _fragRange > 3) then {
 };
 
 if (GVAR(fragSimComplexity) > 0 && _maxFragCount >= ACE_FRAG_MIN_FRAG_BUDGET_FOR_RANDOM) then {
-    [_posASL, _fragVelocity, _fragTypes, _maxFragCount, _shotParents] call FUNC(doFragRandom);
+    [_posASL, _fragVelocity, _projectileVelocity, _fragTypes, _maxFragCount, _shotParents] call FUNC(doFragRandom);
 };

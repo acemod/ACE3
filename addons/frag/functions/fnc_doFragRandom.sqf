@@ -6,10 +6,11 @@
  *
  * Arguments:
  * 0: Position (posASL) of fragmenting projectile <ARRAY>
- * 1: Velocity of the fragmenting projectile <ARRAY>
- * 2: Type of fragments to generate <ARRAY>
- * 3: Remaining fragment budget <NUMBER>
- * 4: Shot parents <ARRAY>
+ * 1: Initial fragment velocity from Gurney equation <NUMBER>
+ * 2: Velocity of the fragmenting projectile <ARRAY>
+ * 3: Type of fragments to generate <ARRAY>
+ * 4: Remaining fragment budget <NUMBER>
+ * 5: Shot parents <ARRAY>
  *
  * Return Value:
  * None
@@ -20,7 +21,7 @@
  * Public: No
  */
 
-params ["_posASL", "_fragVelocity", "_fragType", "_maxFragCount", "_shotParents"];
+params ["_posASL", "_fragVelocity", "_projectileVelocity", "_fragType", "_maxFragCount", "_shotParents"];
 TRACE_5("doFragRandom",_posASL,_fragVelocity,_fragType,_maxFragCount,_shotParents);
 
 // See CfgAmmoFragSpawner for different frag types
@@ -43,7 +44,7 @@ _maxFragCount = switch (true) do {
 private _fragSpawner = createVehicle [_type + _maxFragCount + _hMode, ASLToATL _posASL, [], 0, "CAN_COLLIDE"];
 private _randDir = random 360;
 _fragSpawner setVectorDirandUp [[0,0,-1], [cos _randDir, sin _randDir,0]];
-_fragSpawner setVelocity [0, 0, -0.5*_fragVelocity];
+_fragSpawner setVelocity (_projectileVelocity vectorAdd [0, 0, -0.5*_fragVelocity]);
 _fragSpawner setShotParents _shotParents;
 
 TRACE_2("spawnedRandomFragmenter",typeOf _fragSpawner,getObjectID _fragSpawner);
