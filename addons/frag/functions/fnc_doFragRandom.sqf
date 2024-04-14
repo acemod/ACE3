@@ -27,11 +27,11 @@ TRACE_5("doFragRandom",_posASL,_fragVelocity,_fragType,_maxFragCount,_shotParent
 private _heightATL = (ASLToATL _posASL)#2;
 private _hMode = switch (true) do {
     case (_heightATL > 10): {"_top"};
-    case (_heightATL > 5): {"_hi"};
+    case (_heightATL > 4): {"_high"};
     default {"_mid"};
 };
 
-private _type = [QGVAR(def_small_), QGVAR(def_tiny_)] select (_fragType isNotEqualTo [] && {"ace_frag_tiny" == (_fragType#0)});
+private _type = [QGVAR(random_small_), QGVAR(random_tiny_)] select (_fragType isNotEqualTo [] && {"ace_frag_tiny" == (_fragType#0)});
 
 _maxFragCount = switch (true) do {
     case (_maxFragCount <= 5): {"5"};
@@ -43,12 +43,10 @@ _maxFragCount = switch (true) do {
 private _fragSpawner = createVehicle [_type + _maxFragCount + _hMode, ASLToATL _posASL, [], 0, "CAN_COLLIDE"];
 private _randDir = random 360;
 _fragSpawner setVectorDirandUp [[0,0,-1], [cos _randDir, sin _randDir,0]];
-_fragSpawner setVelocity _fragVelocity;
+_fragSpawner setVelocity [0, 0, -0.5*_fragVelocity];
 _fragSpawner setShotParents _shotParents;
 
-#ifdef DEBUG_MODE_FULL
-systemChat ("frag random objectID: " + getObjectID _proj);
-#endif
+TRACE_2("spawnedRandomFragmenter",typeOf _fragSpawner,getObjectID _fragSpawner);
 #ifdef DEBUG_MODE_DRAW
 _fragSpawner addEventHandler [
     "SubmunitionCreated",
