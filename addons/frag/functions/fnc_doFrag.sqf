@@ -53,5 +53,5 @@ if (GVAR(fragSimComplexity) != 1 && _fragRange > 3) then {
 };
 
 if (GVAR(fragSimComplexity) > 0 && _maxFragCount >= ACE_FRAG_MIN_FRAG_BUDGET_FOR_RANDOM) then {
-    [_posASL, _velocity, _fragTypes, _maxFragCount, _shotParents] call FUNC(doFragRandom);
+    [_posASL, _fragVelocity, _fragTypes, _maxFragCount, _shotParents] call FUNC(doFragRandom);
 };
