@@ -529,7 +529,7 @@ class Rocket_04_AP_F: Rocket_04_HE_F {
 };
 
 class ammo_Missile_CannonLaunchedBase: MissileBase {
-    GVAR(skip) =1;
+    GVAR(skip) = 1;
 };
 
 class R_230mm_fly: RocketBase {
@@ -586,7 +586,9 @@ class M_Titan_AA: MissileBase {
     GVAR(gurney_k) = "1/2";
     GVAR(classes)[] = {QGVAR(tiny), QGVAR(tiny), QGVAR(small)};
 };
-class M_Titan_AT: MissileBase;
+class M_Titan_AT: MissileBase {
+    GVAR(skip) = 1;
+};
 class M_Titan_AP: M_Titan_AT {
     GVAR(skip) = 0;
     GVAR(fragCount) = 800; // guesstimate / provides ~80 m frag range
