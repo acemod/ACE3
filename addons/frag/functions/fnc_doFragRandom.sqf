@@ -22,7 +22,7 @@
  */
 
 params ["_posASL", "_fragVelocity", "_projectileVelocity", "_fragType", "_maxFragCount", "_shotParents"];
-TRACE_5("doFragRandom",_posASL,_fragVelocity,_fragType,_maxFragCount,_shotParents);
+TRACE_6("doFragRandom",_posASL,_fragVelocity,_projectileVelocity,_fragType,_maxFragCount,_shotParents);
 
 // See CfgAmmoFragSpawner for different frag types
 private _heightATL = (ASLToATL _posASL)#2;
