@@ -40,6 +40,10 @@ class CfgVehicles {
                 exceptions[] = {};
                 statement = "_player switchMove 'TestDance'";
                 icon = "\z\dance.paa";
+            };
+        };
+    };
+};
 ```
 
 Config Name | Type | Description
@@ -62,7 +66,10 @@ Actions can be inserted anywhere on the config tree, e.g. hearing's earplugs is 
 class CAManBase: Man {
     class ACE_SelfActions {
         class ACE_Equipment {
-            class ACE_PutInEarplugs {
+            class ACE_PutInEarplugs {};
+        };
+    };
+};
 ```
 
 ## 3. Adding actions via scripts
@@ -233,7 +240,7 @@ This is the ideal way to add self interaction actions, as adding them via `addAc
     params ["_type"]; // string of the object's classname
     if (!(_type isKindOf "Car")) exitWith {};
     if ((getNumber (configFile >> "CfgVehicles" >> _type >> "side")) != 3) exitWith {};
-    
+
     private _action = ["playRadio","Play Radio","",{playMusic "NeverGonnaGiveYouUp"},{true}] call ace_interact_menu_fnc_createAction;
     [_type, 1, ["ACE_SelfActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 }] call CBA_fnc_addEventHandler;
