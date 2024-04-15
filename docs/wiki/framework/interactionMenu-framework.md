@@ -46,19 +46,19 @@ class CfgVehicles {
 };
 ```
 
-Config Name | Type | Description
----------- | ----------- | -------------------
-`displayName` | String | Text shown to user
-`condition` | String (of code) | Condition to show the action
-`statement` | String (of code) | Statement run when selected
-`icon` | String (file path) | Icon shown (OPTIONAL)
-`exceptions` | Array (of strings) | Exceptions to `canInteractWith` conditions (e.g. `"notOnMap"`) (OPTIONAL)
-`insertChildren` | String (of code) | Code to return sub actions (OPTIONAL)
-`modifierFunction` | String (of code) | Code to modify this action (OPTIONAL)
-`runOnHover` | Number or String | (1=true) OR Condition code - Will run the statement on hover (OPTIONAL)
-`distance` | Number | External Base Actions Only, Max distance player can be from action point
-`position` | String (of code) | External Base Actions Only, Code to return a position in model cords (priority over `selection`)
-`selection` | String | External Base Actions Only, A memory point for `selectionPosition`
+| Config Name | Type | Description |
+| ---------- | ----------- | ------------------- |
+| `displayName` | String | Text shown to user |
+| `condition` | String (of code) | Condition to show the action |
+| `statement` | String (of code) | Statement run when selected |
+| `icon` | String (file path) | Icon shown (OPTIONAL) |
+| `exceptions` | Array (of strings) | Exceptions to `canInteractWith` conditions (e.g. `"notOnMap"`) (OPTIONAL) |
+| `insertChildren` | String (of code) | Code to return sub actions (OPTIONAL) |
+| `modifierFunction` | String (of code) | Code to modify this action (OPTIONAL) |
+| `runOnHover` | Number or String | (1=true) OR Condition code - Will run the statement on hover (OPTIONAL) |
+| `distance` | Number | External Base Actions Only, Max distance player can be from action point |
+| `position` | String (of code) | External Base Actions Only, Code to return a position in model cords (priority over `selection`) |
+| `selection` | String | External Base Actions Only, A memory point for `selectionPosition` |
 
 Actions can be inserted anywhere on the config tree, e.g. hearing's earplugs is a sub action of `ACE_Equipment`:
 
