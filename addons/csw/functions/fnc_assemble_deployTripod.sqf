@@ -88,7 +88,7 @@
         TRACE_3("deployTripod failure",_player,_secondaryWeaponClassname,_secondaryWeaponInfo);
 
         // Add tripod back
-        _player addWeaponGlobal _secondaryWeaponClassname;
+        [_player, _secondaryWeaponClassname] call CBA_fnc_addWeaponWithoutItems;
 
         // Add all attachments back
         {

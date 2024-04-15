@@ -95,7 +95,7 @@
         TRACE_2("deployWeapon failure",_player,_carryWeaponClassname);
 
         // Add weapon back
-        _player addWeaponGlobal _carryWeaponClassname;
+        [_player, _carryWeaponClassname] call CBA_fnc_addWeaponWithoutItems;
 
         // Add all attachments back
         {
