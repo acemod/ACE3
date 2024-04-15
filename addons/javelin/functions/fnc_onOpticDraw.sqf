@@ -31,24 +31,31 @@ params ["_lastRunFrame", "_currentTarget", "_lockStartTime", "_soundNextPlayTime
 // Get shooter info
 private _currentShooter = if (ACE_player call CBA_fnc_canUseWeapon) then {ACE_player} else {vehicle ACE_player};
 private _currentWeapon = currentWeapon _currentShooter;
-private _currentMagazine = currentMagazine _currentShooter;
+
+// check enabled for the weapon explicitly
+private _weaponEnabled = getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(enabled)) == 1;
+// check retextured titan
+if (!_weaponEnabled) then {
+    private _model = getText (configFile >> "CfgWeapons" >> _currentWeapon >> "model");
+    if (_model == "\A3\Weapons_F_Beta\Launchers\Titan\Titan_short.p3d") then {
+        _weaponEnabled = getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(baseEnabled)) == 1;
+    };
+};
+
+if (!_weaponEnabled) exitWith {};
 
 // Get weapon / ammo configs
+private _currentMagazine = currentMagazine _currentShooter;
 private _ammoCount = _currentShooter ammo _currentWeapon;
-private _weaponConfig = configProperties [configFile >> "CfgWeapons" >> _currentWeapon, QUOTE(configName _x == QUOTE(QGVAR(enabled))), false];
-private _ammoConfig = if (_currentMagazine != "") then {
+private _ammoEnabled = if (_currentMagazine != "") then {
     private _ammoType = getText (configFile >> "CfgMagazines" >> _currentMagazine >> "ammo");
-    configProperties [(configFile >> "CfgAmmo" >> _ammoType), "(configName _x) == 'ace_missileguidance'", false];
+    getNumber (configFile >> "CfgAmmo" >> _ammoType >> "ace_missileguidance" >> "enabled") == 1
 } else {
-    []
+    false
 };
 
 // Check if loaded and javelin enabled for wepaon and missile guidance enabled for loaded ammo
-if ((_ammoCount == 0) || // No ammo loaded
-        {(count _weaponConfig) < 1} || {(getNumber (_weaponConfig select 0)) != 1} || // Not enabled for weapon
-        {(count _ammoConfig) < 1} || {(getNumber ((_ammoConfig select 0) >> "enabled")) != 1} // Not enabled for ammo
-        ) exitWith {
-
+if (_ammoCount == 0 || !_ammoEnabled) exitWith {
     __JavelinIGUITargeting ctrlShow false;
     __JavelinIGUISeek ctrlSetTextColor __ColorGray;
 
