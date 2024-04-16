@@ -49,8 +49,35 @@ private _statement = {
     [QGVAR(droneSetWaypoint), [_vehicle, _group, _pos, "FOLLOW", cursorTarget], _group] call CBA_fnc_targetEvent;
 };
 private _action = [QGVAR(droneSetWaypointFollow), localize "$STR_AC_FOLLOW", "\a3\3DEN\Data\CfgWaypoints\Follow_ca.paa", _statement, _condition] call EFUNC(interact_menu,createAction);
-[_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
+private _base = [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
 
+// Set drone follow distance
+_condition = {
+    params ["_vehicle"];
+    (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
+};
+_statement = {
+    params ["_vehicle", "", "_value"];
+    _vehicle setVariable [QGVAR(wpFollowDistance), _value];
+};
+private _followDistances = [];
+if (_vehicle isKindOf "UGV_01_base_F") then {
+    _followDistances = [0, 25, 50, 100, 200];
+} else {
+    _followDistances = [0, 100, 200, 300, 400, 500];
+};
+{
+    _action = [
+        str _x,
+        str _x,
+        "",
+        _statement,
+        {true},
+        {},
+        _x
+    ] call EFUNC(interact_menu,createAction);
+    [_vehicle, 1, _base, _action] call EFUNC(interact_menu,addActionToObject);
+} forEach _followDistances;
 
 if (_vehicle isKindOf "Air") then {
     // loiter at location
@@ -58,7 +85,7 @@ if (_vehicle isKindOf "Air") then {
         params ["_vehicle"];
         (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
     };
-    _statement = {        
+    _statement = {
         params ["_vehicle"];
         private _group = group driver _vehicle;
         private _pos = ([_vehicle, [0]] call FUNC(droneGetTurretTargetPos)) select 0;

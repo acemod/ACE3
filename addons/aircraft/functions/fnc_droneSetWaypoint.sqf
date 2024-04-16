@@ -38,7 +38,7 @@ _pos set [
 _waypoint = _group addWaypoint [_pos, 0];
 if (_type == "FOLLOW" && {_target isKindOf "CAManBase" || (_target isKindOf "LandVehicle")}) then {
     _waypoint setWaypointType "HOLD";
-    _waypoint waypointAttachVehicle _target;
+    //_waypoint waypointAttachVehicle _target;
     [{
         params ["_args", "_handle"];
         _args params ["_vehicle", "_group", "_waypoint", "_target"];
@@ -50,7 +50,14 @@ if (_type == "FOLLOW" && {_target isKindOf "CAManBase" || (_target isKindOf "Lan
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 
-        _waypoint setWaypointPosition [(getPosASL _target), -1];
+        private _followDistance = _vehicle getVariable [QGVAR(wpFollowDistance), 0];
+        if ((_vehicle distance2D _target) < _followDistance) then {
+            _waypoint setWaypointPosition [(getPosASL _vehicle), -1];
+            systemChat "waypoint updated, waiting.";
+        } else {
+            _waypoint setWaypointPosition [(getPosASL _target), -1];
+            systemChat "waypoint updated, following.";
+        };
     }, 3, [_vehicle, _group, _waypoint, _target]] call CBA_fnc_addPerFrameHandler;
 };
 
