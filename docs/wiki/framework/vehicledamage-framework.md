@@ -69,19 +69,25 @@ Whether or not this vehicle can spawn `ring-of-fire` effect (Boolean value: 0 or
 
 Default: 0
 
-#### 1.1.9 `ace_vehicle_damage_slatHitpoints`
+#### 1.1.9 `ace_vehicle_damage_canHaveFinale`
+
+Whether or not this vehicle can spawn a final explosion, after the flame-out stages have completed. This final explosion destroys the vehicle (Boolean value: 0 or 1)
+
+Default: 0
+
+#### 1.1.10 `ace_vehicle_damage_slatHitpoints`
 
 An array of all hitpoints that are defined to be SLAT. String array
 
 Default: {}
 
-#### 1.1.10 `ace_vehicle_damage_eraHitpoints`
+#### 1.1.11 `ace_vehicle_damage_eraHitpoints`
 
 An array of all hitpoints that are defined to be ERA. String array
 
 Default: {}
 
-#### 1.1.11 `ace_vehicle_damage_turret`
+#### 1.1.12 `ace_vehicle_damage_turret`
 
 String for turret classname to spawn when catastrophically destroyed. Turret will pop-off and this is the class spawned
 
