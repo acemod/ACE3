@@ -54,12 +54,17 @@ private _base = [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_
 // Set drone follow distance
 _condition = {
     params ["_vehicle"];
-    (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
+    private _group = group driver _vehicle;
+    private _index = (currentWaypoint _group) min count waypoints _group;
+    private _waypoint = [_group, _index];
+    (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]} && {(waypointType _waypoint) == "HOLD"}
 };
 _statement = {
     params ["_vehicle", "", "_value"];
     _vehicle setVariable [QGVAR(wpFollowDistance), _value];
 };
+_action = [QGVAR(droneSetFollowDistance), "Follow Distance", "", {}, _condition] call EFUNC(interact_menu,createAction);
+_base = [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
 private _followDistances = [];
 if (_vehicle isKindOf "UGV_01_base_F") then {
     _followDistances = [0, 25, 50, 100, 200];
