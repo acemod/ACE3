@@ -19,11 +19,13 @@ GVAR(canAdjustWindage) = [false, false, false];
 GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
 
 ["CBA_settingsInitialized", {
-
     if (!GVAR(enabled)) exitWith {};
 
-    if (GVAR(deduceBarometricPressureFromTerrainAltitude)) then {
-        GVAR(zeroReferenceBarometricPressure) = 1013.25 * (1 - (0.0065 * EGVAR(common,mapAltitude)) / 288.15) ^ 5.255754495;
+    // Overwrite setting if automatic pressure deduction is wanted
+    if (isServer && GVAR(deduceBarometricPressureFromTerrainAltitude)) then {
+        private _referencePressure = 1013.25 * (1 - (0.0065 * EGVAR(common,mapAltitude)) / 288.15) ^ 5.255754495;
+
+        [QGVAR(zeroReferenceBarometricPressure), _referencePressure, 2, "server"] call CBA_settings_fnc_set;
     };
 
     // Check inventory when it changes
@@ -47,5 +49,4 @@ GVAR(scopeAdjust) = [[[0,0],0,[0,0],0], [[0,0],0,[0,0],0], [[0,0],0,[0,0],0]];
     // Register fire event handler
     ["ace_firedPlayer", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
     ["ace_firedPlayerNonLocal", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
-
 }] call CBA_fnc_addEventHandler;
