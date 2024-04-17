@@ -13,7 +13,7 @@
     "SLIDER",
     [LSTRING(cookoffDuration_name), LSTRING(cookoffDuration_tooltip)],
     LSTRING(category_displayName),
-    [0, 5, 1, 1],
+    [0, 10, 1, 2],
     1,
     {[QGVAR(cookoffDuration), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
@@ -23,7 +23,7 @@
     "SLIDER",
     [LSTRING(probabilityCoef_name), LSTRING(probabilityCoef_tooltip)],
     LSTRING(category_displayName),
-    [0, 5, 1, 1],
+    [0, 10, 1, 2],
     1,
     {[QGVAR(probabilityCoef), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
@@ -63,7 +63,7 @@
     "SLIDER",
     [LSTRING(ammoCookoffDuration_name), LSTRING(ammoCookoffDuration_tooltip)],
     LSTRING(category_displayName),
-    [0, 5, 1, 1],
+    [0, 10, 1, 2],
     1,
     {[QGVAR(ammoCookoffDuration), _this] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
