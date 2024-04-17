@@ -133,7 +133,7 @@ if (_smokeDelayEnabled) then {
             if (_stage == COOKOFF_FINALE_STAGE && {(CBA_missionTime - _lastFlameTime) >= _nextFlameTime}) then {
 
                 // Random chance of full destruction
-                if (GVAR(finaleChance) >= random 1) then {
+                if (GVAR(finaleChance) > random 1) then {
                     if (_fireSource isEqualTo "") then {
                         _fireSource = selectRandom _positions;
                     };
