@@ -36,7 +36,7 @@ _pos set [
 
 // [_group] call CBA_fnc_clearWaypoints;
 _waypoint = _group addWaypoint [_pos, 0];
-if (_type == "FOLLOW" && {_target isKindOf "CAManBase" || (_target isKindOf "LandVehicle")}) then {
+if (_type == "FOLLOW" && {["CAManBase", "LandVehicle"] findIf {_target isKindOf _x} != -1}) then {
     _waypoint setWaypointType "HOLD";
     //_waypoint waypointAttachVehicle _target;
     [{

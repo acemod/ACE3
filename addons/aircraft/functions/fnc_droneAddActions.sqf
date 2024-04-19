@@ -41,7 +41,7 @@ private _action = [QGVAR(droneSetWaypointMove), localize "$STR_AC_MOVE",
 private _condition = {
     params ["_vehicle"];
     private _target = cursorTarget;
-    (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]} && {!isNull _target} && {_target isKindOf "CAManBase" || (_target isKindOf "LandVehicle")}
+    (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]} && {!isNull _target} && {["CAManBase", "LandVehicle"] findIf {_target isKindOf _x} != -1}
 };
 private _statement = {
     params ["_vehicle"];
