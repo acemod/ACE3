@@ -3,20 +3,32 @@ class CfgVehicles {
     class CUP_MTVR_Reammo_Base: CUP_MTVR_Base {
         EGVAR(rearm,defaultSupply) = 1200;
     };
+    class CUP_MTVR_Repair_Base: CUP_MTVR_Base {
+        EGVAR(repair,canRepair) = 1;
+    };
 
     class CUP_V3S_Open_Base;
     class CUP_V3S_Rearm_Base: CUP_V3S_Open_Base {
         EGVAR(rearm,defaultSupply) = 1200;
+    };
+    class CUP_V3S_Repair_Base: CUP_V3S_Open_Base {
+        EGVAR(repair,canRepair) = 1;
     };
 
     class CUP_Kamaz_5350_Base;
     class CUP_Kamaz_5350_ReAmmo_Base: CUP_Kamaz_5350_Base {
         EGVAR(rearm,defaultSupply) = 1200;
     };
+    class CUP_Kamaz_5350_Repair_Base: CUP_Kamaz_5350_Base {
+        EGVAR(repair,canRepair) = 1;
+    };
 
     class CUP_T810_Unarmed_Base;
     class CUP_T810_Reammo_Base: CUP_T810_Unarmed_Base {
         EGVAR(rearm,defaultSupply) = 1200;
+    };
+    class CUP_T810_Repair_Base: CUP_T810_Unarmed_Base {
+        EGVAR(repair,canRepair) = 1;
     };
 
     class Wheeled_APC_F;
