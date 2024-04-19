@@ -177,5 +177,10 @@
             <Russian>30мм СБ 5:1</Russian>
             <Korean>30mm CM 5:1</Korean>
         </Key>
+        <Key ID="STR_ACE_Aircraft_DroneFollowDistance">
+            <English>Follow Distance</English>
+            <Italian>Distanza di seguimento</Italian>
+            <German>Folge-Entfernung</German>
+        </Key>
     </Package>
 </Project>

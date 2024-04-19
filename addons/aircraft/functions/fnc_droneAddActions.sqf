@@ -63,7 +63,7 @@ _statement = {
     params ["_vehicle", "", "_value"];
     _vehicle setVariable [QGVAR(wpFollowDistance), _value];
 };
-_action = [QGVAR(droneSetFollowDistance), "Follow Distance", "", {}, _condition] call EFUNC(interact_menu,createAction);
+_action = [QGVAR(droneSetFollowDistance), LLSTRING(DroneFollowDistance), "", {}, _condition] call EFUNC(interact_menu,createAction);
 _base = [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
 private _followDistances = [];
 if (_vehicle isKindOf "UGV_01_base_F") then {
