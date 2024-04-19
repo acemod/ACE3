@@ -18,7 +18,7 @@
  */
 
 private _respawn = getMissionConfigValue ["respawn",0];
-if (_respawn isEqualType "") then { _respawn = ["","bird","","","group","side"] find (toLower _respawn); };
+if (_respawn isEqualType "") then { _respawn = ["","bird","","","group","side"] find (toLowerANSI _respawn); };
 if !(_respawn in [1,4,5]) exitWith {};
 
 // Remember to check for side specific templates

@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ACE_interact_menu_fnc_setupTextColor
+ * call ace_interact_menu_fnc_setupTextColors
  *
  * Public: No
  */

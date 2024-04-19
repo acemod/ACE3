@@ -51,15 +51,15 @@ class CfgVehicles {
                     displayName = CSTRING(LoadPatient);
                     condition = QUOTE(_target getVariable [ARR_2('ACE_isUnconscious',false)] && {alive _target} && {isNull objectParent _target} && {(_target call EFUNC(common,nearestVehiclesFreeSeat)) isNotEqualTo []});
                     exceptions[] = {"isNotDragging", "isNotCarrying"};
-                    statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,loadUnit));
+                    statement = QUOTE([ARR_2(_player,_target)] call EFUNC(medical_treatment,loadUnit));
                     icon = QPATHTOF(ui\cross.paa);
                     insertChildren = QUOTE(call DEFUNC(medical_treatment,addLoadPatientActions));
                 };
                 class ACE_UnloadPatient {
                     displayName = CSTRING(UnloadPatient);
-                    condition = QUOTE((_target getVariable [ARR_2('ACE_isUnconscious',false)] || {!alive _target}) && {!isNull objectParent _target} && {isNull objectParent _player});
+                    condition = QUOTE([ARR_2(_player,_target)] call EFUNC(medical_treatment,canUnloadUnit));
                     exceptions[] = {"isNotDragging", "isNotCarrying", "isNotInside"};
-                    statement = QUOTE([ARR_2(_player, _target)] call EFUNC(medical_treatment,unloadUnit));
+                    statement = QUOTE([ARR_2(_player,_target)] call EFUNC(medical_treatment,unloadUnit));
                     icon = QPATHTOF(ui\cross.paa);
                 };
             };

@@ -5,6 +5,7 @@
             <English>Overpressure</English>
             <Chinesesimp>超压</Chinesesimp>
             <German>Überdruck</German>
+            <Italian>Sovrapressione</Italian>
             <Korean>과중압력</Korean>
             <Polish>Nadciśnienie</Polish>
             <Japanese>過圧</Japanese>
@@ -31,7 +32,7 @@
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_toolTip">
             <English>Scales the overpressure effect [Default: 1]</English>
             <German>Stellt den Koeffizient für die Überdruckentfernung ein [Standard: 1]</German>
-            <Japanese>過圧効果の範囲 [標準: 1]</Japanese>
+            <Japanese>過圧効果の範囲 [デフォルト: 1]</Japanese>
             <Korean>과중압력의 효과 크기 [기본설정: 1]</Korean>
             <Polish>Skaluje efekt nadciśnienia [Domyślne: 1]</Polish>
             <French>Ajuste l'effet de surpression. Valeur par défaut : 1.</French>

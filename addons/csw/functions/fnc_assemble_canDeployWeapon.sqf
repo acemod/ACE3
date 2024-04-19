@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm
+ * Author: tcvm
  * Checks if you can deploy a weapon on the tripod
  *
  * Arguments:
@@ -22,4 +22,3 @@ if (isNil "_carryWeaponClassname") then { _carryWeaponClassname = secondaryWeapo
 // If the current launcher has a config-value that defines the tripod, it is a CSW
 (alive _target) &&
 {(getText(configFile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "assembleTo" >> (typeOf _target))) != ""}
-

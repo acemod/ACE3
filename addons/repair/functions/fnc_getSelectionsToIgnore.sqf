@@ -35,7 +35,7 @@ private _processedSelections = [];
 
 {
     private _selection = _x;
-    private _hitpoint = toLower (_hitPoints select _forEachIndex);
+    private _hitpoint = toLowerANSI (_hitPoints select _forEachIndex);
     private _isWheelOrTrack = _selection in _wheelHitSelections || {_hitpoint in _wheelHitPoints} || {_hitpoint in TRACK_HITPOINTS};
 
     if (_hitpoint isEqualTo "") then { // skip empty hitpoint
@@ -134,7 +134,7 @@ private _processedSelections = [];
         continue
     };
 
-    if (ANY_OF(_hitpointGroups, ANY_OF(_x select 1, _x == _hitpoint))) then { // skip child hitpoints
+    if (ANY_OF(_hitpointGroups,ANY_OF(_x select 1,_x == _hitpoint))) then { // skip child hitpoints
         TRACE_3("Skipping child hitpoint",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping child hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];

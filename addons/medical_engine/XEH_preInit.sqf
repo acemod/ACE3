@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 // Define "Constants" variables (both are macros defined in script_macros_medical.hpp, look there for actual variable names)
 if (isNil QUOTE(SPONTANEOUS_WAKE_UP_INTERVAL)) then {SPONTANEOUS_WAKE_UP_INTERVAL = SPONTANEOUS_WAKE_UP_INTERVAL_DEFAULT};
@@ -19,6 +19,7 @@ if (isNil QUOTE(BLOOD_LOSS_KNOCK_OUT_THRESHOLD)) then {BLOOD_LOSS_KNOCK_OUT_THRE
 if (isNil QUOTE(PAIN_FADE_TIME)) then {PAIN_FADE_TIME = PAIN_FADE_TIME_DEFAULT};
 if (isNil QUOTE(LIMPING_DAMAGE_THRESHOLD)) then {LIMPING_DAMAGE_THRESHOLD = LIMPING_DAMAGE_THRESHOLD_DEFAULT};
 if (isNil QUOTE(FRACTURE_DAMAGE_THRESHOLD)) then {FRACTURE_DAMAGE_THRESHOLD = FRACTURE_DAMAGE_THRESHOLD_DEFAULT};
+if (isNil QUOTE(CARDIAC_OUTPUT_MIN)) then {CARDIAC_OUTPUT_MIN = CARDIAC_OUTPUT_MIN_DEFAULT};
 // Derive the alternate fatal damage coefficents
 if (isNil QUOTE(FATAL_SUM_DAMAGE_WEIBULL_K) || isNil QUOTE(FATAL_SUM_DAMAGE_WEIBULL_L)) then {
     private _x1 = 0.5;

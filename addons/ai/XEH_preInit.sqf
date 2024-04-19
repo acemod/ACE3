@@ -11,6 +11,6 @@ if (isServer) then {
     GVAR(assignNVGstate) = false;
 };
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

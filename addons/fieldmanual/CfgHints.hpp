@@ -10,11 +10,11 @@
 // SELF INTERACT KEYBIND - %12
 // INTERACT KEYBIND - %13
 #define BASE_ARGUMENTS "'    '", \
-QUOTE([ARR_2('ACE3 Common', QQEGVAR(interact_menu,selfInteractKey))] call FUNC(getKeybindName)), \
-QUOTE([ARR_2('ACE3 Common', QQEGVAR(interact_menu,interactKey))] call FUNC(getKeybindName))
+QUOTE([ARR_2('ACE3 Common',QQEGVAR(interact_menu,selfInteractKey))] call FUNC(getKeybindName)), \
+QUOTE([ARR_2('ACE3 Common',QQEGVAR(interact_menu,interactKey))] call FUNC(getKeybindName))
 
 // MEDCIAL MENU KEYBIND - %14
-#define MEDICAL_MENU_KEYBIND QUOTE([ARR_2('ACE3 Common', QQEGVAR(medical_gui,openMedicalMenuKey))] call FUNC(getKeybindName))
+#define MEDICAL_MENU_KEYBIND QUOTE([ARR_2('ACE3 Common',QQEGVAR(medical_gui,openMedicalMenuKey))] call FUNC(getKeybindName))
 
 
 class CfgHints {
@@ -37,7 +37,7 @@ class CfgHints {
         };
         class ACE_BodyBag: ACE_FieldManual_Base {
             logicalOrder = 2;
-            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_BodyBag' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_BodyBag' call FUNC(getItemName)), MEDICAL_MENU_KEYBIND};
             displayName = "%14";
             displayNameShort = CSTRING(Items_BodyBag_ShortName);
             description = CSTRING(Items_BodyBag_Description);
@@ -122,7 +122,7 @@ class CfgHints {
         };
         class ACE_FortifyTool: ACE_FieldManual_Base {
             logicalOrder = 13;
-            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_FortifyTool' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_Fortify' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_FortifyTool_ShortName);
             description = CSTRING(Items_FortifyTool_Description);

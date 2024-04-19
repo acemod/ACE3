@@ -38,16 +38,31 @@ if (ACE_player != GVAR(target)) then {
 // Vehicle
 private _medicVehicle = objectParent ACE_player;
 private _patientVehicle = objectParent GVAR(target);
-private _vehicle = if (!isNull _medicVehicle) then {_medicVehicle} else {_patientVehicle};
+private _vehicle = [_patientVehicle, _medicVehicle] select (!isNull _medicVehicle);
 
 if (!isNull _vehicle) then {
     _vehicleCount = 0;
-    (getItemCargo _vehicle) params ["_itemTypes", "_itemCounts"];
+    private _magazineItems = [];
+    private _itemItems = [];
     {
-        private _item = _x;
-        private _index = _itemTypes find _item;
-        _vehicleCount = _vehicleCount + (_itemCounts param [_index, 0]);
+        if (isClass (configFile >> "CfgMagazines" >> _x)) then {
+            _magazineItems pushBack _x;
+        } else {
+            _itemItems pushBack _x;
+        };
     } forEach _items;
+    if (_magazineItems isNotEqualTo []) then {
+        (getMagazineCargo _vehicle) params ["_itemTypes", "_itemCounts"];
+        {
+            _vehicleCount = _vehicleCount + (_itemCounts param [_itemTypes find _x, 0]);
+        } forEach _magazineItems;
+    };
+    if (_itemItems isNotEqualTo []) then {
+        (getItemCargo _vehicle) params ["_itemTypes", "_itemCounts"];
+        {
+            _vehicleCount = _vehicleCount + (_itemCounts param [_itemTypes find _x, 0]);
+        } forEach _itemItems;
+    };
 };
 
 [_medicCount, _patientCount, _vehicleCount]

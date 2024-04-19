@@ -22,7 +22,7 @@ private _startTime = diag_tickTime;
 private _fails = [];
 private _total = 0;
 
-INFO_1("ace_common_fnc_runTests starting for [%1]", _specificTest);
+INFO_1("ace_common_fnc_runTests starting for [%1]",_specificTest);
 
 {
     private _testName = configName _x;
@@ -41,8 +41,8 @@ INFO_1("ace_common_fnc_runTests starting for [%1]", _specificTest);
     };
 } forEach (configProperties [configFile >> "ACE_Tests"]);
 
-INFO_1("ace_common_fnc_runTests finished in %1 ms", (1000 * (diag_tickTime - _startTime)) toFixed 1);
-INFO_2("[%1 / %2] Tests Passed", (_total - (count _fails)), _total);
+INFO_1("ace_common_fnc_runTests finished in %1 ms",(1000 * (diag_tickTime - _startTime)) toFixed 1);
+INFO_2("[%1 / %2] Tests Passed",(_total - (count _fails)),_total);
 if (_fails isNotEqualTo []) then {
-    INFO_1("Failed: %1", _fails);
+    INFO_1("Failed: %1",_fails);
 };

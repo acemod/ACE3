@@ -24,7 +24,6 @@ private _key = format ["weaponInfoCache-%1-%2-%3",_weaponClass,_magazineClass,_a
 private _weaponInfo = GVAR(data) getOrDefault [_key, []];
 if ((_weaponInfo isEqualTo []) && {_magazineClass != ""}) then {
     TRACE_3("new weapon/mag",_weaponClass,_magazineClass,_ammoClass);
-    private _useABConfig = (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]);
 
     private _zeroRange = 100;
     private _boreHeight = [_unit, 0] call EFUNC(scopes,getBoreHeight);
@@ -35,8 +34,14 @@ if ((_weaponInfo isEqualTo []) && {_magazineClass != ""}) then {
     _weaponConfig params ["_barrelTwist", "_twistDirection", "_barrelLength"];
     private _bc = if (_ballisticCoefficients isEqualTo []) then { 0 } else { _ballisticCoefficients # 0 };
 
+    private _useAB = (
+        missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false] &&
+        {missionNamespace getVariable [QEGVAR(advanced_ballistics,barrelLengthInfluenceEnabled), false]} &&
+        {_bc != 0}
+    );
+
     // Get Muzzle Velocity
-    private _muzzleVelocity = if (_barrelLength > 0 && _useABConfig && {_bc != 0}) then {
+    private _muzzleVelocity = if (_barrelLength > 0 && _useAB) then {
         [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, 0] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift)
     } else {
         private _initSpeed = getNumber (configFile >> "CfgMagazines" >> _magazineClass >> "initSpeed");

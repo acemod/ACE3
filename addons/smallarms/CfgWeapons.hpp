@@ -191,6 +191,9 @@ class CfgWeapons {
     class LMG_03_F: LMG_03_Base_F {
         magazineReloadTime = 0; // Fix for reloading every time weapon is equipped
     };
+    class LMG_03_Vehicle_F: LMG_03_F {
+        magazineReloadTime = 5.8; // Should be same as LMG_03_Base_F
+    };
 
     // Sniper and anti-materiel rifles /////////////////////////////////
 

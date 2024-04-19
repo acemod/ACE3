@@ -163,8 +163,8 @@
             <Russian>Меню взаимодействия</Russian>
             <Hungarian>Cselekvő menü</Hungarian>
             <Portuguese>Menu de Interação</Portuguese>
-            <Italian>Menù interazione</Italian>
-            <Japanese>インタラクション メニュー</Japanese>
+            <Italian>Menù Interazioni</Italian>
+            <Japanese>インタラクションメニュー</Japanese>
             <Korean>상호작용 메뉴</Korean>
             <Chinesesimp>互动菜单</Chinesesimp>
             <Chinese>互動選單</Chinese>
@@ -180,8 +180,8 @@
             <Russian>Меню взаимодействия (с собой)</Russian>
             <Hungarian>Cselekvő menü (saját) </Hungarian>
             <Portuguese>Menu de Interação (Individual)</Portuguese>
-            <Italian>Menù interazione (individuale)</Italian>
-            <Japanese>インタラクション メニュー (セルフ)</Japanese>
+            <Italian>Menù Interazioni (su se stesso)</Italian>
+            <Japanese>インタラクションメニュー (セルフ)</Japanese>
             <Korean>상호작용 메뉴(자신)</Korean>
             <Chinesesimp>互动菜单（自我）</Chinesesimp>
             <Chinese>互動選單 (自我)</Chinese>
@@ -215,7 +215,7 @@
             <Hungarian>Ajtó bezárása</Hungarian>
             <Polish>Zablokuj drzwi</Polish>
             <Czech>Zamknout dveře</Czech>
-            <Japanese>ドアの鍵をしめる</Japanese>
+            <Japanese>ドアを施錠</Japanese>
             <Korean>문 잠그기</Korean>
             <Chinesesimp>锁门</Chinesesimp>
             <Chinese>鎖門</Chinese>
@@ -232,7 +232,7 @@
             <Hungarian>Zár kinyitása</Hungarian>
             <Polish>Odblokuj drzwi</Polish>
             <Czech>Odemknout dveře</Czech>
-            <Japanese>ドアの鍵をあける</Japanese>
+            <Japanese>ドアを解錠</Japanese>
             <Korean>잠긴 문 열기</Korean>
             <Chinesesimp>解锁门</Chinesesimp>
             <Chinese>解鎖門</Chinese>
@@ -249,7 +249,7 @@
             <Hungarian>Zárt ajtó</Hungarian>
             <Polish>Zablokowano drzwi</Polish>
             <Czech>Zamčené dveře</Czech>
-            <Japanese>ドアの鍵をしめました</Japanese>
+            <Japanese>ドアを施錠しました</Japanese>
             <Korean>잠긴 문</Korean>
             <Chinesesimp>门已上锁</Chinesesimp>
             <Chinese>門已上鎖</Chinese>
@@ -266,7 +266,7 @@
             <Hungarian>Nyitott ajtó</Hungarian>
             <Polish>Odblokowano drzwi</Polish>
             <Czech>Odemčené dveře</Czech>
-            <Japanese>ドアの鍵をあけました</Japanese>
+            <Japanese>ドアを解錠しました</Japanese>
             <Korean>열린 문</Korean>
             <Chinesesimp>门未上锁</Chinesesimp>
             <Chinese>門未上鎖</Chinese>
@@ -327,34 +327,40 @@
             <English>Rename Group</English>
             <Japanese>グループ名変更</Japanese>
             <French>Renommer le groupe</French>
+            <Italian>Rinomina il gruppo</Italian>
             <Russian>Переименовать группу</Russian>
             <German>Gruppe umbenennen</German>
             <Polish>Zmień nazwę grupy</Polish>
             <Chinesesimp>小队重命名</Chinesesimp>
             <Korean>그룹 명칭 다시 짓기</Korean>
             <Spanish>Renombrar grupo</Spanish>
+            <Portuguese>Renomear Grupo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupAlreadyExists">
             <English>This group name is already in use.</English>
             <Japanese>このグループ名は既に使われています。</Japanese>
             <French>Ce nom de groupe est déjà attribué.</French>
+            <Italian>C'è già un gruppo con questo nome.</Italian>
             <Russian>Данное имя группы уже используется.</Russian>
             <German>Dieser Gruppenname ist bereits in Verwendung.</German>
             <Polish>Ta nazwa grupy jest już w użyciu.</Polish>
             <Chinesesimp>该小队名称已被使用</Chinesesimp>
             <Korean>그 명칭은 이미 사용 중 입니다.</Korean>
             <Spanish>Este nombre de grupo ya está siendo usado.</Spanish>
+            <Portuguese>Este nome de grupo já está em uso.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_RenameGroupInput">
             <English>NEW GROUP NAME:</English>
             <Japanese>新しいグループ名:</Japanese>
             <French>NOUVEAU NOM DE GROUPE :</French>
+            <Italian>NUOVO NOME GRUPPO:</Italian>
             <Russian>НОВОЕ ИМЯ ГРУППЫ</Russian>
             <German>NEUER GRUPPENNAME:</German>
             <Polish>NOWA NAZWA GRUPY:</Polish>
             <Chinesesimp>新的小队名：</Chinesesimp>
             <Korean>새 그룹 명칭:</Korean>
             <Spanish>NUEVO NOMBRE DE GRUPO:</Spanish>
+            <Portuguese>NOVO NOME DE GRUPO:</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
@@ -655,7 +661,7 @@
             <Russian>Назначить в Красную группу</Russian>
             <French>Assigner à rouge</French>
             <Italian>Assegna al team rosso</Italian>
-            <Japanese>レッドにする</Japanese>
+            <Japanese>レッドに割り当て</Japanese>
             <Korean>빨강에 등록</Korean>
             <Chinesesimp>指派为红组</Chinesesimp>
             <Chinese>指派為紅組</Chinese>
@@ -672,7 +678,7 @@
             <Russian>Назначить в Зеленую группу</Russian>
             <French>Assigner à vert</French>
             <Italian>Assegna al team verde</Italian>
-            <Japanese>グリーンにする</Japanese>
+            <Japanese>グリーンに割り当て</Japanese>
             <Korean>초록에 등록</Korean>
             <Chinesesimp>指派为绿组</Chinesesimp>
             <Chinese>指派為綠組</Chinese>
@@ -689,7 +695,7 @@
             <Russian>Назначить в Синюю группу</Russian>
             <French>Assigner à bleu</French>
             <Italian>Assegna al team blu</Italian>
-            <Japanese>ブルーにする</Japanese>
+            <Japanese>ブルーに割り当て</Japanese>
             <Korean>파랑에 등록</Korean>
             <Chinesesimp>指派为蓝组</Chinesesimp>
             <Chinese>指派為藍組</Chinese>
@@ -706,7 +712,7 @@
             <Russian>Назначить в Желтую группу</Russian>
             <French>Assigner à jaune</French>
             <Italian>Assegna al team giallo</Italian>
-            <Japanese>イエローにする</Japanese>
+            <Japanese>イエローに割り当て</Japanese>
             <Korean>노랑에 등록</Korean>
             <Chinesesimp>指派为黄组</Chinesesimp>
             <Chinese>指派為黃組</Chinese>
@@ -873,7 +879,7 @@
             <Spanish>Tecla modificadora</Spanish>
             <Russian>Клавиша-модификатор</Russian>
             <Portuguese>Tecla Modificadora</Portuguese>
-            <Italian>Tasto modifica</Italian>
+            <Italian>Tasto modificatore</Italian>
             <Hungarian>Módosító billentyű</Hungarian>
             <Czech>Modifikátor</Czech>
             <Japanese>キーを割り当て</Japanese>
@@ -892,7 +898,7 @@
             <Hungarian>Hatótávolságon kívül</Hungarian>
             <Polish>Poza zasięgiem</Polish>
             <Czech>Mimo dosah</Czech>
-            <Italian>Fuori limite</Italian>
+            <Italian>Fuori portata</Italian>
             <Japanese>範囲内にありません</Japanese>
             <Korean>범위 내에 없습니다</Korean>
             <Chinesesimp>不在范围内</Chinesesimp>
@@ -940,7 +946,7 @@
             <Japanese>ひっくり返す</Japanese>
             <Chinese>拋</Chinese>
             <Chinesesimp>翻动</Chinesesimp>
-            <Italian>Gira</Italian>
+            <Italian>Capovolgi</Italian>
             <Polish>Przewróć</Polish>
             <Portuguese>Virar</Portuguese>
             <French>Tourner</French>
@@ -958,7 +964,7 @@
             <Polish>Interakcja</Polish>
             <Spanish>Interactuar</Spanish>
             <Hungarian>Cselekvés</Hungarian>
-            <Italian>Interagire</Italian>
+            <Italian>Interagisci</Italian>
             <Portuguese>Interagir</Portuguese>
             <Japanese>インタラクト</Japanese>
             <Korean>상호작용</Korean>
@@ -1027,7 +1033,7 @@
             <French>Activer la gestion d'équipe</French>
             <Hungarian>Csapatkezelés engedélyezése</Hungarian>
             <Portuguese>Habilitar gestão de equipes</Portuguese>
-            <Italian>Abilità Management Squadra</Italian>
+            <Italian>Abilita Gestione Squadra</Italian>
             <Japanese>チーム管理の有効化</Japanese>
             <Korean>팀 설정 활성화</Korean>
             <Chinesesimp>启用小队管理</Chinesesimp>
@@ -1044,8 +1050,8 @@
             <French>Permet aux joueurs d'utiliser la gestion d'équipe. Valeur par défaut : activé.</French>
             <Hungarian>A játékosoknak engedélyezve legyen a csapatkezelő menü? Alapértelmezett: Igen</Hungarian>
             <Portuguese>Devem os jogadores ter permissão de usar o menu de gestão de equipes? Padrão: Sim</Portuguese>
-            <Italian>Possono i giocatori usare il Menù Managment Squadra? Default: Si</Italian>
-            <Japanese>プレイヤーがチーム管理メニューを使えるかどうかを設定します。標準: 有効化</Japanese>
+            <Italian>I giocatori possono usare il Menù di Gestione Squadra? Predefinito: Si</Italian>
+            <Japanese>プレイヤーがチーム管理メニューを使えるかどうかを設定します。 デフォルト: 有効化</Japanese>
             <Korean>플레이어들이 팀 설정하는 것을 허락합니까? 기본설정: 예</Korean>
             <Chinesesimp>允许玩家使用小队管理菜单？ 预设：是</Chinesesimp>
             <Chinese>允許玩家使用小隊管理選單? 預設: 是</Chinese>
@@ -1055,7 +1061,7 @@
             <English>Disable negative rating</English>
             <German>Negative Bewertung deaktivieren</German>
             <Japanese>否定評価を無効化</Japanese>
-            <Italian>Disabilita valutazione negativa</Italian>
+            <Italian>Impedisci Valutazione Negativa</Italian>
             <Chinese>關閉負面評價</Chinese>
             <Chinesesimp>关闭负面评价</Chinesesimp>
             <Korean>부정행위 가중치 사용 안함</Korean>
@@ -1070,7 +1076,7 @@
             <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
             <German>Sollen Spieler negative Bewertungen erhalten dürfen? Wenn diese Option aktiviert ist, erhalten Spieler nur positive Bewertungen, was Freundbeschuss durch KI verhindert, wenn befreundete Ausrüstung zerstört oder befreundete Einheiten von Spielern des selben Teams getötet werden.</German>
             <Japanese>否定評価を受けますか?有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしてもAIからの攻撃を防ぎます。</Japanese>
-            <Italian>I giocatori dovrebbero ricevere delle valutazioni negative ? Quando è abilitato i giocatori ricevono esclusivamente valutazioni positive che prevengono il fuoco delle AI alleate quando distruggono equipaggiamenti o uccidono membri della squadra.</Italian>
+            <Italian>I giocatori possono ricevere valutazioni negative? Se abilitato i giocatori riceveranno esclusivamente valutazioni positive, impedendo l'ingaggio da parte di IA alleate quando distruggono equipaggiamenti o uccidono alleati/civili.</Italian>
             <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價</Chinese>
             <Chinesesimp>玩家是否会收到负面评价？ 当本功能开启时玩家只会接收到正面评价，所以当玩家做出击杀友军 AI、毁坏友军装备或杀害小队伙伴都不会收到负面评价。</Chinesesimp>
             <Korean>플레이어의 부정행위 가중치를 계산합니까? 활성화된 플레이어는 낮은 부정행위 가중치를 가질 때, 아군의 장비나 병력을 사격해도 아군 AI의 사격을 받지 않습니다.</Korean>
@@ -1091,7 +1097,7 @@
             <Hungarian>A csapatkezelés engedélyezi a tagok színének meghatározását, a vezetés átvételét, és csapatoknál be-és kilépést.</Hungarian>
             <Portuguese>O módulo de gestão de equipe é composto por: a atribuição de cores para os membros da equipe, comando das equipes, juntando-se / deixando equipes.</Portuguese>
             <Russian>Управление группами позволяет назначать цвета членам групп, брать командование, вступать в группы или покидать их.</Russian>
-            <Italian>Management Squadra permette l'assegnazione di colori per membri della squadra, prendere il comando ed entrare/uscire dalle squadre.</Italian>
+            <Italian>Gestione Squadra permette l'assegnazione di colori per membri della squadra, prendere il comando ed entrare/uscire dalle squadre.</Italian>
             <Japanese>チーム管理はチーム メンバーへ色の割り当てや指揮権を取ったり、チームの出入りを許可します。</Japanese>
             <Korean>팀 설정은 팀 멤버에게 색을 부여하거나  팀에 참여 혹은 나가게 할 수 있게 합니다.</Korean>
             <Chinesesimp>队伍管理系统允许将指定颜色分配到队伍成员上，接管队长职位或加入/离开队伍</Chinesesimp>
@@ -1184,10 +1190,10 @@
             <Russian>%1 передал вам магазин %2.</Russian>
             <Portuguese>%1 passou a você um carregador %2.</Portuguese>
             <Czech>%1 ti podal zásobník %2.</Czech>
-            <Italian>%1 ti ha passato un caricatore %2 .</Italian>
+            <Italian>%1 ti ha passato un caricatore %2.</Italian>
             <Spanish>%1 te pasó un cargador %2.</Spanish>
             <French>%1 vous a passé un chargeur de %2.</French>
-            <Japanese>%1 はあなたに %2 弾倉を渡した</Japanese>
+            <Japanese>%1 は あなたに弾倉 %2 を渡した。</Japanese>
             <Korean>%1에게서 %2탄창을 받았다</Korean>
             <Chinesesimp>%1给你%2弹匣</Chinesesimp>
             <Chinese>%1給你%2彈匣</Chinese>
@@ -1199,7 +1205,7 @@
             <Russian>Показывать действие "передать магазин"</Russian>
             <Portuguese>Mostrar a interação "Passar carregador"</Portuguese>
             <Czech>Zobrazit "interakci "podat zásobník"</Czech>
-            <Italian>Mostra interazione "passa caricatore"</Italian>
+            <Italian>Mostra l'interazione "passa caricatore"</Italian>
             <Spanish>Mostrar "Pasar cargador" en el menú de interacción</Spanish>
             <French>Montrer l'interaction "Passer un chargeur"</French>
             <Japanese>"弾倉を渡す"をインタラクションに表示</Japanese>
@@ -1248,8 +1254,10 @@
             <French>Fixer %1</French>
             <Polish>Przyczep %1</Polish>
             <German>Befestige %1</German>
+            <Italian>Attacca %1</Italian>
             <Chinesesimp>附加 %1</Chinesesimp>
             <Korean>%1 붙이기</Korean>
+            <Portuguese>Fixar %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsDetach">
             <English>Detach %1</English>
@@ -1259,8 +1267,10 @@
             <French>Retirer %1</French>
             <Polish>Odczep %1</Polish>
             <German>Löse %1</German>
+            <Italian>Stacca %1</Italian>
             <Chinesesimp>拆卸 %1</Chinesesimp>
             <Korean>%1 떼내기</Korean>
+            <Portuguese>Desfixar %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachments_Description">
             <English>Enables attach/detach weapon attachment actions for current weapon.</English>
@@ -1268,10 +1278,12 @@
             <Japanese>インタラクションから使用中の武器に対してのアタッチメント取り外しを可能にします。</Japanese>
             <Spanish>Activar acciones de acoplar/desacoplar accesorios para el arma actual.</Spanish>
             <French>Cette option permet de fixer/retirer des accessoires d'arme à partir du menu d'interaction personnel.</French>
+            <Italian>Abilita le interazioni di attacco/stacco degli accessori sull'arma usata.</Italian>
             <Polish>Włącza akcje przyczepienia/odczepienia dodatków dla obecnej broni</Polish>
             <German>Aktiviert das Befestigen/Lösen von Waffenausätzen an der aktuellen Waffe.</German>
             <Chinesesimp>启用当前武器的附加/拆卸武器配件的动作。</Chinesesimp>
             <Korean>현재 사용하고 있는 무기에서 부착물을 붙이거나 떼냅니다.</Korean>
+            <Portuguese>Ativa as ações de fixar/desfixar acessórios para a arma atual.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_DisplayName">
             <English>Allow group rename</English>
@@ -1279,10 +1291,12 @@
             <French>Permettre le renommage de groupe</French>
             <Russian>Разрешить переименование группы</Russian>
             <German>Erlaube das Umbenennen der Gruppe</German>
+            <Italian>Permetti la rinomina del gruppo</Italian>
             <Polish>Zezwól na zmianę nazwy grupy</Polish>
             <Chinesesimp>允许小队重命名</Chinesesimp>
             <Korean>그룹 이름 재설정 허가</Korean>
             <Spanish>Permitir renombrar grupo</Spanish>
+            <Portuguese>Permitir renomear grupo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_enableRenameGroup_Description">
             <English>Allows a group leader to rename their group if the name is not already taken.</English>
@@ -1290,10 +1304,12 @@
             <French>Cette option permet aux chefs de groupe de modifier le nom de leur groupe.</French>
             <Russian>Разрешить лидеру группы её переименование, если имя не занято.</Russian>
             <German>Erlaube Gruppenführer das Umbenennen Ihrer Gruppe, wenn der Name nicht bereits vergeben ist.</German>
+            <Italian>Permetti ad un capogruppo di rinominare il proprio gruppo se quel nome non è già assegnato.</Italian>
             <Polish>Pozwala liderowi grupy na zmianę jej nazwy, jeżeli ta nazwa nie jest już w użyciu.</Polish>
             <Chinesesimp>允许队长在队名未被占用的情况下重命名。</Chinesesimp>
             <Korean>그룹 리더가 그룹 이름을 재설정하는 것을 허가합니다.</Korean>
             <Spanish>Permite al lider de un grupo renombrar a su grupo si el nombre no está siendo actualmente usado.</Spanish>
+            <Portuguese>Permite que o líder renomeie seu grupo se o nome não estiver sendo usado.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
             <English>Warning: can cause some objects to collide with others.</English>
@@ -1301,10 +1317,12 @@
             <French>Attention : certains objets peuvent entrer en collision avec d'autres.</French>
             <Japanese>警告: 一部のオブジェクトが干渉する可能性があります。</Japanese>
             <German>Achtung: einige Objekte könnten mit anderen Kollidieren.</German>
+            <Italian>Attenzione: può causare collisioni tra oggetti.</Italian>
             <Polish>Uwaga: niektóre obiekty mogą kolidować z innymi.</Polish>
             <Chinesesimp>警告：会导致一些物体与其他物体发生碰撞。</Chinesesimp>
             <Korean>주의: 물체끼리 충돌하는 현상이 있을 수 있음.</Korean>
             <Spanish>Advertencia: puede provocar que algunos objetos choquen con otros.</Spanish>
+            <Portuguese>Aviso: pode causar que alguns objetos colidam com outros.</Portuguese>
         </Key>
     </Package>
 </Project>
