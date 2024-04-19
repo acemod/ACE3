@@ -3574,7 +3574,7 @@
             <English>Receiving Saline IV [%1ml]</English>
             <German>Erhalte Saline IV [%1ml]</German>
             <Spanish>Recibiendo Salina IV [%1ml]</Spanish>
-            <Russian>Принимается солевой раствор IV [%1 мл]</Russian>
+            <Russian>Принимается физраствор [%1 мл]</Russian>
             <Polish>Otrzymywanie soli IV [%1ml]</Polish>
             <French>Transfusion de sérum salé : [%1 ml]</French>
             <Czech>Přijímání soli IV [%1ml]</Czech>
@@ -3590,7 +3590,7 @@
             <English>Receiving Blood IV [%1ml]</English>
             <German>Erhalte Blut IV [%1ml]</German>
             <Spanish>Recibiendo Sangre IV [%1ml]</Spanish>
-            <Russian>Принимается кровь IV [%1 мл]</Russian>
+            <Russian>Принимается кровь [%1 мл]</Russian>
             <Polish>Otrzymywanie krwi IV [%1ml]</Polish>
             <French>Transfusion de sang : [%1 ml]</French>
             <Czech>Přijímání krve IV [%1ml]</Czech>
@@ -3606,7 +3606,7 @@
             <English>Receiving Plasma IV [%1ml]</English>
             <German>Erhalte Plasma IV [%1ml]</German>
             <Spanish>Recibiendo Plasma IV [%1ml]</Spanish>
-            <Russian>Принимается плазма IV [%1 мл]</Russian>
+            <Russian>Принимается плазма [%1 мл]</Russian>
             <Polish>Otrzymywanie plazmy IV [%1ml]</Polish>
             <French>Transfusion de plasma : [%1 ml]</French>
             <Czech>Přijímání plazmy IV [%1ml]</Czech>

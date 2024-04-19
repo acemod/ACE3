@@ -20,7 +20,7 @@ params ["_wire"];
 
 {
     _wire animate [_x, 1];
-} count WIRE_FAST;
+} forEach WIRE_FAST;
 
 [{
     params ["_args", "_idPFH"];

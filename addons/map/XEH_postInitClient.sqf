@@ -73,8 +73,7 @@ GVAR(hasWatch) = true;
     GVAR(hasWatch) = false;
     {
         if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
-        false
-    } count (assignedItems _unit);
+    } forEach (assignedItems _unit);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 
