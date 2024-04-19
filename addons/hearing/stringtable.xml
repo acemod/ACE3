@@ -371,5 +371,10 @@
             <Korean>귀마개 토글</Korean>
             <French>Mettre/enlever les bouchons</French>
         </Key>
+        <Key ID="STR_ACE_Hearing_heavyWeaponUnits">
+            <English>Only units with heavy weapons</English>
+            <French>Uniquement les unités dotées d'armes lourdes</French>
+            <Russian>Только юниты с тяжелым вооружением</Russian>
+        </Key>
     </Package>
 </Project>
