@@ -47,6 +47,8 @@ private _statement = {
     private _group = group driver _vehicle;
     private _pos = ([_vehicle, [0]] call FUNC(droneGetTurretTargetPos)) select 0;
     [QGVAR(droneSetWaypoint), [_vehicle, _group, _pos, "FOLLOW", cursorTarget], _group] call CBA_fnc_targetEvent;
+    private _followDistance = _vehicle getVariable [QGVAR(wpFollowDistance), 0];
+    [[LLSTRING(DroneFollowHint), _followDistance], 3] call EFUNC(common,displayTextStructured);
 };
 private _action = [QGVAR(droneSetWaypointFollow), localize "$STR_AC_FOLLOW", "\a3\3DEN\Data\CfgWaypoints\Follow_ca.paa", _statement, _condition] call EFUNC(interact_menu,createAction);
 private _base = [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
@@ -62,6 +64,7 @@ _condition = {
 _statement = {
     params ["_vehicle", "", "_value"];
     _vehicle setVariable [QGVAR(wpFollowDistance), _value];
+    [[LLSTRING(DroneFollowHint), _value], 3] call EFUNC(common,displayTextStructured);
 };
 _action = [QGVAR(droneSetFollowDistance), LLSTRING(DroneFollowDistance), "", {}, _condition] call EFUNC(interact_menu,createAction);
 _base = [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
