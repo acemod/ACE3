@@ -22,7 +22,7 @@
  * Public: No
  */
 
-this set [7, _this param [7, 1]]; // set bandage effectiveness coefficient
+_this set [7, _this param [7, 1]]; // set bandage effectiveness coefficient
 [QGVAR(bandaged), _this] call CBA_fnc_localEvent; // Raise event with reference so mods can modify this
 
 params ["_medic", "_patient", "_bodyPart", "_classname", "", "", "", "_bandageEffectiveness"];
