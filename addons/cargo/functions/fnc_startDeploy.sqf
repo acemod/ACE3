@@ -5,12 +5,13 @@
  *
  * Arguments:
  * 0: Unit deploying <OBJECT>
+ * 1: Index of Unloading Item <NUMBER> (default: -1)
  *
  * Return Value:
  * None
  *
  * Example:
- * player call ace_cargo_fnc_startDeploy
+ * [player, 1] call ace_cargo_fnc_startDeploy
  *
  * Public: No
  */
@@ -18,13 +19,13 @@
 // Deny creating preview item as it will destroy player vehicle instantly by collision
 if (GVAR(interactionParadrop)) exitWith {};
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]], ["_selected", -1, [0]]];
 
 // Don't allow deploying if already deploying
 if (_unit getVariable [QGVAR(isDeploying), false]) exitWith {};
 
 // This can be an object or a classname string
-private _item = call FUNC(getSelectedItem);
+private _item = _selected call FUNC(getSelectedItem);
 
 if (isNil "_item") exitWith {};
 

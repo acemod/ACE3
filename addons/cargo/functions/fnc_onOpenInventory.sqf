@@ -87,7 +87,7 @@ GVAR(interactionParadrop) = _container isKindOf "Air" && {
     uiNamespace setVariable [QGVAR(CargoListBox), _list];
 
     private _unloadBtn = _display ctrlCreate ["RscButton", -1, _group];
-    _unloadBtn ctrlSetPosition [0.5 * _gX, 20 * _gY, 5.5 * _gX, 1 * _gY];
+    _unloadBtn ctrlSetPosition [0.5 * _gX, 20 * _gY, 5.25 * _gX, 1 * _gY];
     _unloadBtn ctrlSetText localize ([LSTRING(unloadObject), LSTRING(paradropButton)] select GVAR(interactionParadrop));
     _unloadBtn ctrlAddEventHandler ["ButtonClick", {
         private _index = lbCurSel (uiNamespace getVariable QGVAR(CargoListBox));
@@ -96,6 +96,20 @@ GVAR(interactionParadrop) = _container isKindOf "Air" && {
         [ACE_Player, _index] call FUNC(startUnload);
     }];
     _unloadBtn ctrlCommit 0;
+
+    if ((GVAR(enableDeploy) && !GVAR(interactionParadrop) && {isNull curatorCamera})) then {
+        private _depolyBtn = _display ctrlCreate ["RscButton", -1, _group];
+        _depolyBtn ctrlSetPosition [6.25 * _gX, 20 * _gY, 5.25 * _gX, 1 * _gY];
+        _depolyBtn ctrlSetText localize LSTRING(deployObject);
+        _depolyBtn ctrlAddEventHandler ["ButtonClick", {
+            private _index = lbCurSel (uiNamespace getVariable QGVAR(CargoListBox));
+            if (_index == -1) exitWith {};
+            closeDialog 602;
+            [ACE_Player, _index] call FUNC(startDeploy);
+        }];
+        _depolyBtn ctrlCommit 0;
+    };
+    
 
     private _loadBarFrame = _display ctrlCreate ["RscFrame", -1, _group];
     _loadBarFrame ctrlSetPosition [0.5 * _gX, 21.5 * _gY, 11 * _gX, 0.5 * _gY];
