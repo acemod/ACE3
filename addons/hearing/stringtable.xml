@@ -363,5 +363,18 @@
             <Spanish>Volumen durante la inconsciencia.</Spanish>
             <Korean>기절 시 볼륨입니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Hearing_PutOrRemoveEarplugs">
+            <English>Put/take out earplugs</English>
+            <Japanese>耳栓を着け外す</Japanese>
+            <Russian>Вставить/вынуть беруши</Russian>
+            <Italian>Metti/Togli tappi</Italian>
+            <Korean>귀마개 토글</Korean>
+            <French>Mettre/enlever les bouchons</French>
+        </Key>
+        <Key ID="STR_ACE_Hearing_heavyWeaponUnits">
+            <English>Only units with heavy weapons</English>
+            <French>Uniquement les unités dotées d'armes lourdes</French>
+            <Russian>Только юниты с тяжелым вооружением</Russian>
+        </Key>
     </Package>
 </Project>

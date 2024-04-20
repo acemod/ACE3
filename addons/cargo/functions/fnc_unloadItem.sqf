@@ -7,6 +7,9 @@
  * 0: Item to be unloaded <STRING> or <OBJECT> (default: "")
  * 1: Holder object (vehicle) <OBJECT> (default: objNull)
  * 2: Unloader <OBJECT> (default: objNull)
+ * 3: Deploy parameters <ARRAY> (default: [])
+ * - 0: Position AGL <ARRAY>
+ * - 1: Direction <NUMBER>
  *
  * Return Value:
  * Object unloaded <BOOL>
@@ -17,8 +20,10 @@
  * Public: Yes
  */
 
-params [["_item", "", [objNull, ""]], ["_vehicle", objNull, [objNull]], ["_unloader", objNull, [objNull]]];
-TRACE_3("params",_item,_vehicle,_unloader);
+params [["_item", "", [objNull, ""]], ["_vehicle", objNull, [objNull]], ["_unloader", objNull, [objNull]], ["_deploy", []]];
+_deploy params ["_emptyPosAGL", "_direction"];
+
+TRACE_4("params",_item,_vehicle,_unloader,_deploy);
 
 // Get config sensitive case name
 if (_item isEqualType "") then {
@@ -41,9 +46,18 @@ if (_itemSize < 0) exitWith {
     false // return
 };
 
-// This covers testing vehicle stability and finding a safe position
-private _emptyPosAGL = [_vehicle, _item, _unloader] call EFUNC(common,findUnloadPosition);
-TRACE_1("findUnloadPosition",_emptyPosAGL);
+private _deployed = _deploy isNotEqualTo [];
+
+if (!_deployed) then {
+    // This covers testing vehicle stability and finding a safe position
+    for "_i" from 1 to 3 do {
+        _emptyPosAGL = [_vehicle, _item, _unloader] call EFUNC(common,findUnloadPosition);
+
+        if (_emptyPosAGL isNotEqualTo []) exitWith {};
+    };
+
+    TRACE_1("findUnloadPosition",_emptyPosAGL);
+};
 
 if (_emptyPosAGL isEqualTo []) exitWith {
     // Display text saying there are no safe places to exit the vehicle
@@ -67,9 +81,12 @@ private _object = _item;
 if (_object isEqualType objNull) then {
     detach _object;
 
-    // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
-    // Do both on server to ensure they are executed in the correct order
-    [QGVAR(serverUnload), [_object, _emptyPosAGL]] call CBA_fnc_serverEvent;
+    // If player unloads via deployment, set direction first, then unload
+    if (_deployed) then {
+        [QGVAR(setDirAndUnload), [_object, _emptyPosAGL, _direction], _object] call CBA_fnc_targetEvent;
+    } else {
+        [QGVAR(serverUnload), [_object, _emptyPosAGL]] call CBA_fnc_serverEvent;
+    };
 
     if (["ace_zeus"] call EFUNC(common,isModLoaded)) then {
         // Get which curators had this object as editable
@@ -81,6 +98,12 @@ if (_object isEqualType objNull) then {
     };
 } else {
     _object = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
+
+    // If player unloads via deployment, set direction. Must happen before setPosASL command according to wiki
+    if (_deployed) then {
+        _object setDir _direction;
+    };
+
     _object setPosASL (AGLtoASL _emptyPosAGL);
 
     [QEGVAR(common,fixCollision), _object] call CBA_fnc_localEvent;
@@ -88,7 +111,9 @@ if (_object isEqualType objNull) then {
 };
 
 // Dragging integration
-[_unloader, _object] call FUNC(unloadCarryItem);
+if (!_deployed) then {
+    [_unloader, _object] call FUNC(unloadCarryItem);
+};
 
 // Invoke listenable event
 ["ace_cargoUnloaded", [_object, _vehicle, "unload"]] call CBA_fnc_globalEvent;

@@ -32,7 +32,7 @@ if (isNil "_cachedValue") then {
     private _vehicleIconValue = getText (configfile >> "CfgVehicleIcons" >> _vehicleValue);
 
     if (_vehicleIconValue == "") then {
-        if (_vehicleValue != "" && {((toLower _vehicleValue) find ".paa") > -1}) then {
+        if (_vehicleValue != "" && {((toLowerANSI _vehicleValue) find ".paa") > -1}) then {
             _cachedValue = _vehicleValue;
         } else {
             _cachedValue = DEFAULT_TEXTURE;

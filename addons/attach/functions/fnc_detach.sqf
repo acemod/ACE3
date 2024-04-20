@@ -57,7 +57,7 @@ if (!_isChemlight) then {
     _unit addItem _itemName;
 };
 
-if (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) then {
+if (toLowerANSI _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) then {
     // Hack for dealing with X_IR_Grenade effect not dissapearing on deleteVehicle
     detach _attachedObject;
     _attachedObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);

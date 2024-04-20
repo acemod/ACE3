@@ -80,30 +80,3 @@
     [0, 5, 1, 1],
     true
 ] call CBA_fnc_addSetting;
-
-[
-    QGVAR(swayFactor),
-    "SLIDER",
-    [LSTRING(SwayFactor), LSTRING(SwayFactor_Description)],
-    LSTRING(DisplayName),
-    [0, 5, 1, 1],
-    true
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(restedSwayFactor),
-    "SLIDER",
-    [LSTRING(RestedSwayFactor), LSTRING(RestedSwayFactor_Description)],
-    LSTRING(DisplayName),
-    [0, 5, 1, 2],
-    true
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(deployedSwayFactor),
-    "SLIDER",
-    [LSTRING(DeployedSwayFactor), LSTRING(DeployedSwayFactor_Description)],
-    LSTRING(DisplayName),
-    [0, 5, 1, 2],
-    true
-] call CBA_fnc_addSetting;

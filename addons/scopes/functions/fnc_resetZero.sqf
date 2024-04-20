@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-if (vehicle _unit != _unit) exitWith {false};
+if (!isNull objectParent _unit) exitWith {false};
 
 private _weaponClass = currentWeapon _unit;
 private _weaponIndex = [_unit, _weaponClass] call EFUNC(common,getWeaponIndex);

@@ -16,7 +16,7 @@
  */
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
-TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
+TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_vehicle,_gunner,_turret);
 
 private _FCSMagazines = _vehicle getVariable [format ["%1_%2", QGVAR(Magazines), _turret], []];
 
@@ -50,7 +50,7 @@ if (_zeroDistance > 0) then {
     private _antiOffset = _gunner getVariable QGVAR(lastAntiOffset);
 
     _offset = _offset - _antiOffset;
-    TRACE_4("fired",_gunner, currentZeroing _gunner, _antiOffset, _offset);
+    TRACE_4("fired",_gunner,currentZeroing _gunner,_antiOffset,_offset);
 };
 
 [_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, 0] call EFUNC(common,changeProjectileDirection);
@@ -72,5 +72,5 @@ if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(Airburst)) == 1) then {
     if (_zeroing < 50) exitWith {};
     if (_zeroing > 1500) exitWith {};
 
-    [FUNC(handleAirBurstAmmunitionPFH), 0, [_vehicle, _projectile, _zeroing]] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(handleAirBurstAmmunitionPFH), 0, [_vehicle, _projectile, _zeroing]] call CBA_fnc_addPerFrameHandler;
 };

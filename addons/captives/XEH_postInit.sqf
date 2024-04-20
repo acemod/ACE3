@@ -25,14 +25,14 @@ if (isServer) then {
 };
 
 ["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
-[QGVAR(moveInCaptive), FUNC(vehicleCaptiveMoveIn)] call CBA_fnc_addEventHandler;
-[QGVAR(moveOutCaptive), FUNC(vehicleCaptiveMoveOut)] call CBA_fnc_addEventHandler;
+[QGVAR(moveInCaptive), LINKFUNC(vehicleCaptiveMoveIn)] call CBA_fnc_addEventHandler;
+[QGVAR(moveOutCaptive), LINKFUNC(vehicleCaptiveMoveOut)] call CBA_fnc_addEventHandler;
 
-[QGVAR(setHandcuffed), FUNC(setHandcuffed)] call CBA_fnc_addEventHandler;
-[QGVAR(setSurrendered), FUNC(setSurrendered)] call CBA_fnc_addEventHandler;
+[QGVAR(setHandcuffed), LINKFUNC(setHandcuffed)] call CBA_fnc_addEventHandler;
+[QGVAR(setSurrendered), LINKFUNC(setSurrendered)] call CBA_fnc_addEventHandler;
 
 //Medical Integration Events
-["ace_unconscious", FUNC(handleOnUnconscious)] call CBA_fnc_addEventHandler;
+["ace_unconscious", LINKFUNC(handleOnUnconscious)] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 

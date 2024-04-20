@@ -125,4 +125,6 @@ ace_medical_treatment_graveRotation = 0; // rotation angle (will depend on model
 ### 3.2 Zeus Medical Menu Module
 
 If a mission maker wishes to disable Zeus access to the medical menu, they can set the variable below:
+```sqf
 ace_medical_gui_enableZeusModule = false; // default is true
+```

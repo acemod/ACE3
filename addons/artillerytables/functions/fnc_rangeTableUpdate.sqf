@@ -22,10 +22,10 @@ private _ctrlElevationHigh = _dialog displayCtrl IDC_BUTTON_ELEV_HIGH;
 private _ctrlElevationLow = _dialog displayCtrl IDC_BUTTON_ELEV_LOW;
 
 GVAR(lastElevationMode) = param [0, GVAR(lastElevationMode)]; // update if passed a new value
-GVAR(lastCharge) = lbCurSel _ctrlChargeList;
+GVAR(lastTablePage) = lbCurSel _ctrlChargeList;
 
 // get data for currently selected mag/mode combo:
-(GVAR(magModeData) select GVAR(lastCharge)) params [["_muzzleVelocity", -1], ["_airFriction", 0]];
+(GVAR(magModeData) select GVAR(lastTablePage)) params [["_muzzleVelocity", -1], ["_airFriction", 0]];
 private _elevMin = _dialog getVariable [QGVAR(elevMin), 0];
 private _elevMax = _dialog getVariable [QGVAR(elevMax), 0];
 _ctrlElevationHigh ctrlSetTextColor ([[0.25,0.25,0.25,1],[1,1,1,1]] select GVAR(lastElevationMode));

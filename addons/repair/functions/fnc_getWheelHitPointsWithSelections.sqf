@@ -50,7 +50,7 @@ private _wheelHitPointSelections = [];
         if ((_wheelBoneNameResized != "") && {_x find _wheelBoneNameResized == 0}) exitWith {  // same as above. Requirement for physx.
             _wheelHitPoint = _hitPoints select _forEachIndex;
             _wheelHitPointSelection = _hitPointSelections select _forEachIndex;
-            TRACE_2("wheel found [Orginal]", _wheelName, _wheelHitPoint);
+            TRACE_2("wheel found [Orginal]",_wheelName,_wheelHitPoint);
         };
     } forEach _hitPointSelections;
 
@@ -68,7 +68,7 @@ private _wheelHitPointSelections = [];
             {
                 if (_x != "") then {
                      //Filter out things that definitly aren't wheeels (#3759)
-                    if ((toLower (_hitPoints select _forEachIndex)) in ["hitengine", "hitfuel", "hitbody"]) exitWith {TRACE_1("filter",_x)};
+                    if ((toLowerANSI (_hitPoints select _forEachIndex)) in ["hitengine", "hitfuel", "hitbody"]) exitWith {TRACE_1("filter",_x)};
                     private _xPos = _vehicle selectionPosition _x;
                     if (_xPos isEqualTo [0,0,0]) exitWith {};
                     private _xDist = _wheelCenterPos distance _xPos;
@@ -83,7 +83,7 @@ private _wheelHitPointSelections = [];
             if (_bestIndex != -1) then {
                 _wheelHitPoint = _hitPoints select _bestIndex;
                 _wheelHitPointSelection = _hitPointSelections select _bestIndex;
-                TRACE_2("wheel found [Backup]", _wheelName, _wheelHitPoint);
+                TRACE_2("wheel found [Backup]",_wheelName,_wheelHitPoint);
             };
         };
     };

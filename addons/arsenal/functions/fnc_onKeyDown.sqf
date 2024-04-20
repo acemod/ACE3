@@ -147,7 +147,7 @@ if (!isNull _loadoutsDisplay) then {
             // Right panel lnb + and - buttons
             case (_keyPressed in [DIK_LEFT, DIK_RIGHT]): {
                 if (GVAR(rightTabLnBFocus)) then {
-                    [_display, [1, 0] select (_keyPressed == DIK_LEFT)] call FUNC(buttonCargo);
+                    [_display, parseNumber (_keyPressed != DIK_LEFT)] call FUNC(buttonCargo);
                 };
             };
         };

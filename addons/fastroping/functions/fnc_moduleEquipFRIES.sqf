@@ -22,5 +22,4 @@ private _synchedUnits = synchronizedObjects _module;
         _x = vehicle _x;
     };
     [_x] call FUNC(equipFRIES);
-    false
-} count _synchedUnits;
+} forEach _synchedUnits;
