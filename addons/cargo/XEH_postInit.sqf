@@ -30,7 +30,7 @@
     [[_hint, _itemName, _vehicleName], 3] call EFUNC(common,displayTextStructured);
 
     if (_unloaded && {GVAR(openAfterUnload) in [1, 3]}) then {
-        _unloader action ["Gear", _vehicle];
+        [{(_this select 0) action ["Gear", _this select 1];}, [_unloader, _vehicle], 0.1] call CBA_fnc_waitAndExecute;
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -61,7 +61,7 @@
     private _unloaded = [_item, _vehicle, _showHint] call FUNC(paradropItem);
 
     if (_unloaded && {GVAR(openAfterUnload) in [2, 3]}) then {
-        ACE_Player action ["Gear", _vehicle];
+        [{(_this select 0) action ["Gear", _this select 1];}, [ACE_Player, _vehicle], 0.1] call CBA_fnc_waitAndExecute;
     };
 }] call CBA_fnc_addEventHandler;
 
