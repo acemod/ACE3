@@ -17,14 +17,14 @@
 
 private _baseline = 1;
 if (GVAR(swayFactorsBaseline) isNotEqualTo []) then {
-    _baseline = 1 max ([missionNamespace, "ACE_setCustomAimCoef_baseline", "max"] call EFUNC(common,arithmeticGetResult));
+    _baseline = 1 max ([missionNamespace, "ACE_setCustomAimCoef_baseline", "max"] call FUNC(arithmeticGetResult));
 };
 
 private _multiplier = 1;
 if (GVAR(swayFactorsMultiplier) isNotEqualTo []) then {
-    _multiplier = [missionNamespace, "ACE_setCustomAimCoef_multiplier", "product"] call EFUNC(common,arithmeticGetResult);
+    _multiplier = [missionNamespace, "ACE_setCustomAimCoef_multiplier", "product"] call FUNC(arithmeticGetResult);
 };
 
 ACE_player setCustomAimCoef (_baseline * _multiplier);
 
-[FUNC(swayLoop), [], 1] call CBA_fnc_waitAndExecute
+[FUNC(swayLoop), [], 0.5] call CBA_fnc_waitAndExecute

@@ -26,7 +26,7 @@ if (!alive _round) exitWith {
         if (_skip == 0) then {
             if ((_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}) || {_force == 1}) then {
                 // shotbullet, shotShell don't seem to explode when touching water, so don't create frags
-                if ((surfaceIsWater _lastPos) && {(toLower getText (configFile >> "CfgAmmo" >> _shellType >> "simulation")) in ["shotbullet", "shotshell"]}) exitWith {};
+                if ((surfaceIsWater _lastPos) && {(toLowerANSI getText (configFile >> "CfgAmmo" >> _shellType >> "simulation")) in ["shotbullet", "shotshell"]}) exitWith {};
                 private _fuseDist = getNumber(configFile >> "CfgAmmo" >> _shellType >> "fuseDistance");
                 private _isArmed =  _firedPos vectorDistance _lastPos >= _fuseDist; // rounds explode at exactly fuseDistance, so check inclusive
                 TRACE_2("",_fuseDist,_isArmed);

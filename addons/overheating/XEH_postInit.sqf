@@ -20,7 +20,7 @@ if (hasInterface) then {
 };
 
 ["CBA_settingsInitialized", {
-    TRACE_1("SettingsInitialized eh", GVAR(enabled));
+    TRACE_1("SettingsInitialized eh",GVAR(enabled));
     if (!GVAR(enabled)) exitWith {};
 
     if (isServer) then {
@@ -35,8 +35,8 @@ if (hasInterface) then {
         GVAR(storedSpareBarrels) = createHashMap;
 
         // Install event handlers for spare barrels
-        [QGVAR(sendSpareBarrelTemperatureHint), FUNC(sendSpareBarrelsTemperaturesHint)] call CBA_fnc_addEventHandler;
-        [QGVAR(loadCoolestSpareBarrel), FUNC(loadCoolestSpareBarrel)] call CBA_fnc_addEventHandler;
+        [QGVAR(sendSpareBarrelTemperatureHint), LINKFUNC(sendSpareBarrelsTemperaturesHint)] call CBA_fnc_addEventHandler;
+        [QGVAR(loadCoolestSpareBarrel), LINKFUNC(loadCoolestSpareBarrel)] call CBA_fnc_addEventHandler;
 
         // Schedule cool down calculation of stored spare barrels
         [] call FUNC(updateSpareBarrelsTemperaturesThread);
@@ -50,14 +50,14 @@ if (hasInterface) then {
 
     //Add Take EH if required
     if (GVAR(unJamOnReload) || {GVAR(cookoffCoef) > 0}) then {
-        ["CAManBase", "Take", {_this call FUNC(handleTakeEH);}] call CBA_fnc_addClassEventHandler;
+        ["CAManBase", "Take", LINKFUNC(handleTakeEH)] call CBA_fnc_addClassEventHandler;
     };
 
     // Register fire event handler
-    ["ace_firedPlayer", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
+    ["ace_firedPlayer", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
     // Only add eh to non local players if dispersion is enabled
     if (GVAR(overheatingDispersion) || {GVAR(showParticleEffectsForEveryone)}) then {
-        ["ace_firedPlayerNonLocal", DFUNC(firedEH)] call CBA_fnc_addEventHandler;
+        ["ace_firedPlayerNonLocal", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
     };
 
     // Schedule cool down calculation of player weapons at (infrequent) regular intervals
@@ -86,10 +86,10 @@ if (hasInterface) then {
     }] call CBA_fnc_addClassEventHandler;
 
     // Install event handler to display temp when a barrel was swapped
-    [QGVAR(showWeaponTemperature), DFUNC(displayTemperature)] call CBA_fnc_addEventHandler;
+    [QGVAR(showWeaponTemperature), LINKFUNC(displayTemperature)] call CBA_fnc_addEventHandler;
 
     // Install event handler to initiate an assisted barrel swap
-    [QGVAR(initiateSwapBarrelAssisted), DFUNC(swapBarrel)] call CBA_fnc_addEventHandler;
+    [QGVAR(initiateSwapBarrelAssisted), LINKFUNC(swapBarrel)] call CBA_fnc_addEventHandler;
 
     // Add an action to allow hot weapons to be cooled off in AceX Field Rations water sources
     if (["acex_field_rations"] call EFUNC(common,isModLoaded)) then {

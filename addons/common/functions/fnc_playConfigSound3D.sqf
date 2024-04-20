@@ -22,7 +22,7 @@ params ["_soundClass", "_posASL", "_volume", "_distance"];
 
 private _sound = getArray (configFile >> "CfgSounds" >> _soundClass >> "sound");
 if (_sound isEqualTo []) exitWith {
-    ERROR_1("CfgSounds class [%1] does not exist or contains empty sound array", _soundClass);
+    ERROR_1("CfgSounds class [%1] does not exist or contains empty sound array",_soundClass);
 };
 TRACE_2("sound",_soundClass,_sound);
 
@@ -35,7 +35,7 @@ ISNILS(_distance,_cfgDistance);
 _fileName = _fileName select [1];
 
 // add file extension .wss as default
-if !(toLower (_fileName select [count _fileName - 4]) in [".wav", ".ogg", ".wss"]) then {
+if !(toLowerANSI (_fileName select [count _fileName - 4]) in [".wav", ".ogg", ".wss"]) then {
     ADD(_fileName,".wss");
 };
 TRACE_5("vars",_fileName,_posASL,_volume,_pitch,_distance);

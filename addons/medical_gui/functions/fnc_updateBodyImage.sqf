@@ -91,7 +91,7 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
                 _damageThreshold = _damageThreshold * 1.5
             };
         };
-        _damage = (_damage / _damageThreshold) min 1;
+        _damage = (_damage / (0.01 max _damageThreshold)) min 1;
         [_damage] call FUNC(damageToRGBA);
     };
 
@@ -105,3 +105,5 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
     [IDC_BODY_LEGLEFT, IDC_BODY_LEGLEFT_S,  IDC_BODY_LEGLEFT_T,  IDC_BODY_LEGLEFT_B],
     [IDC_BODY_LEGRIGHT, IDC_BODY_LEGRIGHT_S, IDC_BODY_LEGRIGHT_T, IDC_BODY_LEGRIGHT_B]
 ];
+
+[QGVAR(updateBodyImage), [_ctrlGroup, _target, _selectionN]] call CBA_fnc_localEvent;

@@ -6,16 +6,20 @@
         - Size = '9'
 */
 
+// INDENT - %11
+// SELF INTERACT KEYBIND - %12
+// INTERACT KEYBIND - %13
+#define BASE_ARGUMENTS "'    '", \
+QUOTE([ARR_2('ACE3 Common',QQEGVAR(interact_menu,selfInteractKey))] call FUNC(getKeybindName)), \
+QUOTE([ARR_2('ACE3 Common',QQEGVAR(interact_menu,interactKey))] call FUNC(getKeybindName))
+
+// MEDCIAL MENU KEYBIND - %14
+#define MEDICAL_MENU_KEYBIND QUOTE([ARR_2('ACE3 Common',QQEGVAR(medical_gui,openMedicalMenuKey))] call FUNC(getKeybindName))
+
+
 class CfgHints {
     class ACE_FieldManual_Base {
-        arguments[] = {
-            // INDENT - %11
-            "'    '",
-            // SELF INTERACT KEYBIND - %12
-            QUOTE([ARR_2('ACE3 Common', QQEGVAR(interact_menu,selfInteractKey))] call FUNC(getKeybindName)),
-            // INTERACT KEYBIND - %13
-            QUOTE([ARR_2('ACE3 Common', QQEGVAR(interact_menu,interactKey))] call FUNC(getKeybindName))
-        };
+        arguments[] = {BASE_ARGUMENTS};
         image = "\z\ace\addons\common\data\logo_ace3_ca.paa";
         tip = "<a href='https://ace3.acemod.org/'>ACE Wiki</a>";
     };
@@ -25,7 +29,7 @@ class CfgHints {
 
         class ACE_ATragMX: ACE_FieldManual_Base {
             logicalOrder = 1;
-            arguments[] += {QUOTE('ACE_ATragMX' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_ATragMX' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_ATragMX_ShortName);
             description = CSTRING(Items_ATragMX_Description);
@@ -33,14 +37,14 @@ class CfgHints {
         };
         class ACE_BodyBag: ACE_FieldManual_Base {
             logicalOrder = 2;
-            arguments[] += {QUOTE('ACE_BodyBag' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_BodyBag' call FUNC(getItemName)), MEDICAL_MENU_KEYBIND};
             displayName = "%14";
             displayNameShort = CSTRING(Items_BodyBag_ShortName);
             description = CSTRING(Items_BodyBag_Description);
         };
         class ACE_CableTie: ACE_FieldManual_Base {
             logicalOrder = 3;
-            arguments[] += {QUOTE('ACE_CableTie' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_CableTie' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_CableTie_ShortName);
             description = CSTRING(Items_CableTie_Description);
@@ -48,7 +52,7 @@ class CfgHints {
         };
         class ACE_Cellphone: ACE_FieldManual_Base {
             logicalOrder = 4;
-            arguments[] += {QUOTE('ACE_Cellphone' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_Cellphone' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_Cellphone_ShortName);
             description = CSTRING(Items_Cellphone_Description);
@@ -56,7 +60,7 @@ class CfgHints {
         };
         class ACE_Chemlight_Shield: ACE_FieldManual_Base {
             logicalOrder = 5;
-            arguments[] += {QUOTE('ACE_Chemlight_Shield' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_Chemlight_Shield' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_Chemlight_Shield_ShortName);
             description = CSTRING(Items_Chemlight_Shield_Description);
@@ -64,7 +68,7 @@ class CfgHints {
         };
         class ACE_Clackers: ACE_FieldManual_Base {
             logicalOrder = 6;
-            arguments[] += {QUOTE('ACE_Clacker' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_Clacker' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_Clackers_ShortName);
             description = CSTRING(Items_Clackers_Description);
@@ -72,7 +76,7 @@ class CfgHints {
         };
         class ACE_DAGR: ACE_FieldManual_Base {
             logicalOrder = 7;
-            arguments[] += {QUOTE('ACE_DAGR' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_DAGR' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_DAGR_ShortName);
             description = CSTRING(Items_DAGR_Description);
@@ -80,7 +84,7 @@ class CfgHints {
         };
         class ACE_DeadManSwitch: ACE_FieldManual_Base {
             logicalOrder = 8;
-            arguments[] += {QUOTE('ACE_DeadManSwitch' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_DeadManSwitch' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_DeadManSwitch_ShortName);
             description = CSTRING(Items_DeadManSwitch_Description);
@@ -88,7 +92,7 @@ class CfgHints {
         };
         class ACE_DefusalKit: ACE_FieldManual_Base {
             logicalOrder = 9;
-            arguments[] += {QUOTE('ACE_DefusalKit' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_DefusalKit' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_DefusalKit_ShortName);
             description = CSTRING(Items_DefusalKit_Description);
@@ -96,7 +100,7 @@ class CfgHints {
         };
         class ACE_EarPlugs: ACE_FieldManual_Base {
             logicalOrder = 10;
-            arguments[] += {QUOTE('ACE_EarPlugs' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_EarPlugs' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_EarPlugs_ShortName);
             description = CSTRING(Items_EarPlugs_Description);
@@ -104,7 +108,7 @@ class CfgHints {
         };
         class ACE_EntrenchingTool: ACE_FieldManual_Base {
             logicalOrder = 11;
-            arguments[] += {QUOTE('ACE_EntrenchingTool' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_EntrenchingTool' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_EntrenchingTool_ShortName);
             description = CSTRING(Items_EntrenchingTool_Description);
@@ -118,7 +122,7 @@ class CfgHints {
         };
         class ACE_FortifyTool: ACE_FieldManual_Base {
             logicalOrder = 13;
-            arguments[] += {QUOTE('ACE_HuntIR_Monitor' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_Fortify' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_FortifyTool_ShortName);
             description = CSTRING(Items_FortifyTool_Description);
@@ -126,7 +130,7 @@ class CfgHints {
         };
         class ACE_HuntIR_Monitor: ACE_FieldManual_Base {
             logicalOrder = 14;
-            arguments[] += {QUOTE('ACE_CableTie' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_HuntIR_monitor' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_HuntIR_Monitor_ShortName);
             description = CSTRING(Items_HuntIR_Monitor_Description);
@@ -134,14 +138,14 @@ class CfgHints {
         };
         class ACE_IR_Strobe: ACE_FieldManual_Base {
             logicalOrder = 15;
-            arguments[] += {QUOTE('ACE_IR_Strobe_Item' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_IR_Strobe_Item' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_IR_Strobe_ShortName);
             description = CSTRING(Items_IR_Strobe_Description);
         };
         class ACE_Kestrel4500: ACE_FieldManual_Base {
             logicalOrder = 16;
-            arguments[] += {QUOTE('ACE_Kestrel4500' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_Kestrel4500' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_Kestrel4500_ShortName);
             description = CSTRING(Items_Kestrel4500_Description);
@@ -149,7 +153,7 @@ class CfgHints {
         };
         class ACE_Lockpick: ACE_FieldManual_Base {
             logicalOrder = 17;
-            arguments[] += {QUOTE('ACE_key_lockpick' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_key_lockpick' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_Lockpick_ShortName);
             description = CSTRING(Items_Lockpick_Description);
@@ -157,14 +161,14 @@ class CfgHints {
         };
         class ACE_MapTools: ACE_FieldManual_Base {
             logicalOrder = 18;
-            arguments[] += {QUOTE('ACE_MapTools' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_MapTools' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_MapTools_ShortName);
             description = CSTRING(Items_MapTools_Description);
         };
         class ACE_MicroDAGR: ACE_FieldManual_Base {
             logicalOrder = 19;
-            arguments[] += {QUOTE('ACE_microDAGR' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_microDAGR' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_MicroDAGR_ShortName);
             description = CSTRING(Items_MicroDAGR_Description);
@@ -186,7 +190,7 @@ class CfgHints {
         };
         class ACE_Sandbag: ACE_FieldManual_Base {
             logicalOrder = 22;
-            arguments[] += {QUOTE('ACE_Sandbag_empty' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_Sandbag_empty' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_Sandbag_ShortName);
             description = CSTRING(Items_Sandbag_Description);
@@ -194,7 +198,7 @@ class CfgHints {
         };
         class ACE_SpareBarrels: ACE_FieldManual_Base {
             logicalOrder = 23;
-            arguments[] += {QUOTE('ACE_SpareBarrel_Item' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_SpareBarrel_Item' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_SpareBarrels_ShortName);
             description = CSTRING(Items_SpareBarrels_Description);
@@ -209,7 +213,7 @@ class CfgHints {
         };
         class ACE_Tripod: ACE_FieldManual_Base {
             logicalOrder = 25;
-            arguments[] += {QUOTE('ACE_Tripod' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_Tripod' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_Tripod_ShortName);
             description = CSTRING(Items_Tripod_Description);
@@ -217,7 +221,7 @@ class CfgHints {
         };
         class ACE_UAVBattery: ACE_FieldManual_Base {
             logicalOrder = 26;
-            arguments[] += {QUOTE('ACE_UAVBattery' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_UAVBattery' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_UAVBattery_ShortName);
             description = CSTRING(Items_UAVBattery_Description);
@@ -232,7 +236,7 @@ class CfgHints {
         };
         class ACE_Wirecutter: ACE_FieldManual_Base {
             logicalOrder = 28;
-            arguments[] += {QUOTE('ACE_wirecutter' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_wirecutter' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_Wirecutter_ShortName);
             description = CSTRING(Items_Wirecutter_Description);
@@ -265,10 +269,7 @@ class CfgHints {
         category = "ACE_FieldManual";
 
         class ACE_Medical_Treatment_Base: ACE_FieldManual_Base {
-            arguments[] += {
-                // MEDICAL MENU KEYBIND - %14
-                QUOTE([ARR_2('ACE3 Common', QQEGVAR(medical_gui,openMedicalMenuKey))] call FUNC(getKeybindName))
-            };
+            arguments[] = {BASE_ARGUMENTS, MEDICAL_MENU_KEYBIND};
             tip = "<a href='https://ace3.acemod.org/wiki/feature/medical-system'>Medical Wiki</a>";
         };
 
@@ -280,7 +281,7 @@ class CfgHints {
         };
         class ACE_Adenosine: ACE_Medical_Treatment_Base {
             logicalOrder = 2;
-            arguments[] += {QUOTE('ACE_adenosine' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, MEDICAL_MENU_KEYBIND, QUOTE('ACE_adenosine' call FUNC(getItemName))};
             displayName = "%15";
             displayNameShort = CSTRING(Medical_Treatment_Adenosine_ShortName);
             description = CSTRING(Medical_Treatment_Adenosine_Description);
@@ -299,35 +300,35 @@ class CfgHints {
         };
         class ACE_Epinephrine: ACE_Medical_Treatment_Base {
             logicalOrder = 5;
-            arguments[] += {QUOTE('ACE_epinephrine' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, MEDICAL_MENU_KEYBIND, QUOTE('ACE_epinephrine' call FUNC(getItemName))};
             displayName = "%15";
             displayNameShort = CSTRING(Medical_Treatment_Epinephrine_ShortName);
             description = CSTRING(Medical_Treatment_Epinephrine_Description);
         };
         class ACE_PAK: ACE_Medical_Treatment_Base {
             logicalOrder = 6;
-            arguments[] += {QUOTE('ACE_personalAidKit' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, MEDICAL_MENU_KEYBIND, QUOTE('ACE_personalAidKit' call FUNC(getItemName))};
             displayName = "%15";
             displayNameShort = CSTRING(Medical_Treatment_PAK_ShortName);
             description = CSTRING(Medical_Treatment_PAK_Description);
         };
         class ACE_Splint: ACE_Medical_Treatment_Base {
             logicalOrder = 7;
-            arguments[] += {QUOTE('ACE_splint' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, MEDICAL_MENU_KEYBIND, QUOTE('ACE_splint' call FUNC(getItemName))};
             displayName = "%15";
             displayNameShort = CSTRING(Medical_Treatment_Splint_ShortName);
             description = CSTRING(Medical_Treatment_Splint_Description);
         };
         class ACE_SurgicalKit: ACE_Medical_Treatment_Base {
             logicalOrder = 8;
-            arguments[] += {QUOTE('ACE_surgicalKit' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, MEDICAL_MENU_KEYBIND, QUOTE('ACE_surgicalKit' call FUNC(getItemName))};
             displayName = "%15";
             displayNameShort = CSTRING(Medical_Treatment_SurgicalKit_ShortName);
             description = CSTRING(Medical_Treatment_SurgicalKit_Description);
         };
         class ACE_Tourniquet: ACE_Medical_Treatment_Base {
             logicalOrder = 9;
-            arguments[] += {QUOTE('ACE_tourniquet' call FUNC(getItemName))};
+            arguments[] = {BASE_ARGUMENTS, MEDICAL_MENU_KEYBIND, QUOTE('ACE_tourniquet' call FUNC(getItemName))};
             displayName = "%15";
             displayNameShort = CSTRING(Medical_Treatment_CAT_ShortName);
             description = CSTRING(Medical_Treatment_CAT_Description);

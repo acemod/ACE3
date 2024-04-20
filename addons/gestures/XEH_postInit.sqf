@@ -31,9 +31,7 @@ if (!hasInterface) exitWith {};
         [_key,  [false, (_key != -1), false]],
         false
     ] call CBA_fnc_addKeybind;
-
-    false
-} count [
+} forEach [
     ["Freeze", 80], // Numpad 2
     ["Cover", 81], // Numpad 3
     ["Forward", 75], // Numpad 4

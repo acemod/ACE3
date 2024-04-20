@@ -15,4 +15,4 @@ class CfgPatches {
     };
 };
 
-//#include "CfgWeapons.hpp"
+#include "CfgWeapons.hpp"

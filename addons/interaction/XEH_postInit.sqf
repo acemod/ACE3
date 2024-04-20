@@ -78,7 +78,7 @@ ACE_Modifier = 0;
 }] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    [QGVAR(replaceTerrainObject), FUNC(replaceTerrainObject)] call CBA_fnc_addEventHandler;
+    [QGVAR(replaceTerrainObject), LINKFUNC(replaceTerrainObject)] call CBA_fnc_addEventHandler;
 };
 
 if (!hasInterface) exitWith {};
@@ -136,7 +136,7 @@ GVAR(isOpeningDoor) = false;
     if !([ACE_player, cursorTarget] call FUNC(canTapShoulder)) exitWith {false};
 
     //Tap whichever shoulder is closest
-    private _shoulderNum = [0, 1] select (([cursorTarget, ACE_player] call BIS_fnc_relativeDirTo) > 180);
+    private _shoulderNum = parseNumber (([cursorTarget, ACE_player] call BIS_fnc_relativeDirTo) > 180);
 
     // Statement
     [ACE_player, cursorTarget, _shoulderNum] call FUNC(tapShoulder);
@@ -168,7 +168,7 @@ private _action = [
     // action display name will be overwritten in modifier function
     QGVAR(takeWeapon), "take", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa",
     {_player action ["TakeWeapon", _target, weaponCargo _target select 0]},
-    {count weaponCargo _target == 1},
+    {(count weaponCargo _target == 1) && {[_player, objNull, []] call EFUNC(common,canInteractWith)}}, // Not checking if container is claimed
     nil, nil, nil, nil, nil,
     {
         params ["_target", "", "", "_actionData"];

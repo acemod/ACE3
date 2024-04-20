@@ -10,7 +10,7 @@
  * Item should appear in this list? <BOOL>
  *
  * Example:
- * [CONFIG] call ACE_inventory_fnc_filterBackpacks
+ * [CONFIG] call ace_inventory_fnc_filterBackpacks
  *
  * Public: No
  */

@@ -14,6 +14,6 @@
 */
 
 params ["", "_config"];
-TRACE_1("statTextStatement_magCount",_config)
+TRACE_1("statTextStatement_magCount",_config);
 
 getNumber (_config >> "count");

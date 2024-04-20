@@ -2,7 +2,7 @@
 
 if (isServer) then {
     GVAR(lastFragTime) = -1;
-    [QGVAR(frag_eh), {_this call FUNC(frago);}] call CBA_fnc_addEventHandler;
+    [QGVAR(frag_eh), LINKFUNC(frago)] call CBA_fnc_addEventHandler;
 };
 
 ["CBA_settingsInitialized", {

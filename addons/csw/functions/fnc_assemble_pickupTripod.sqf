@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm
+ * Author: tcvm
  * Picks up the tripod and adds it to the player launcher slot
  *
  * Arguments:
@@ -20,8 +20,8 @@
     params ["_tripod", "_player"];
     TRACE_2("assemble_pickupTripod",_tripod,_player);
 
-    private _tripodClassname = getText(configOf _tripod >> QUOTE(ADDON) >> "disassembleTo");
-    private _pickupTime = getNumber(configFile >> "CfgWeapons" >> _tripodClassname >> QUOTE(ADDON) >> "pickupTime");
+    private _tripodClassname = getText (configOf _tripod >> QUOTE(ADDON) >> "disassembleTo");
+    private _pickupTime = getNumber (configFile >> "CfgWeapons" >> _tripodClassname >> QUOTE(ADDON) >> "pickupTime");
 
     private _onFinish = {
         params ["_args"];
@@ -37,11 +37,9 @@
         params ["_args"];
         _args params ["_tripod", "_player"];
 
-        !(isNull _tripod) && { (secondaryWeapon _player) isEqualTo "" }
-
+        (alive _tripod) && {secondaryWeapon _player == ""}
     };
 
     TRACE_3("",_pickupTime,typeOf _tripod,_tripodClassname);
-    [TIME_PROGRESSBAR(_pickupTime), [_tripod, _player, _tripodClassname], _onFinish, {}, localize LSTRING(PickupTripod_progressBar), _condition] call EFUNC(common,progressBar);
+    [TIME_PROGRESSBAR(_pickupTime), [_tripod, _player, _tripodClassname], _onFinish, {}, LLSTRING(PickupTripod_progressBar), _condition] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;
-

@@ -114,7 +114,7 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
 class GVAR(TriageToggle): RscButton {
     idc = -1;
     onButtonClick = QUOTE([ctrlParent (_this select 0)] call FUNC(toggleTriageSelect));
-    x = QUOTE(POS_X(13.33));
+    x = QUOTE(POS_X(13.83));
     y = QUOTE(POS_Y(15.5));
     w = QUOTE(POS_W(12.33));
     h = QUOTE(POS_H(1.1));
@@ -125,7 +125,7 @@ class GVAR(TriageToggle): RscButton {
 
 class GVAR(TriageSelect): RscControlsGroupNoScrollbars {
     idc = IDC_TRIAGE_SELECT;
-    x = QUOTE(POS_X(13.33));
+    x = QUOTE(POS_X(13.83));
     y = QUOTE(POS_Y(16.6));
     w = QUOTE(POS_W(12.33));
     h = QUOTE(POS_H(5.5));
@@ -189,7 +189,7 @@ class ACE_Medical_Menu_ActionButton: RscButtonMenu {
     style = ST_LEFT;
     x = 0;
     y = 0;
-    w = QUOTE(POS_W(11.833));
+    w = QUOTE(POS_W(12.33));
     h = QUOTE(POS_H(1));
     size = QUOTE(POS_H(0.9));
     class Attributes {
@@ -206,10 +206,11 @@ class ACE_Medical_Menu {
     enableSimulation = 1;
     onLoad = QUOTE(_this call FUNC(onMenuOpen));
     onUnload = QUOTE(_this call FUNC(onMenuClose));
-    onKeyDown = QUOTE([ARR_3('onKeyDown', _this, QQGVAR(display))] call FUNC(onKeyDown));
+    onKeyDown = QUOTE([ARR_3('onKeyDown',_this,QQGVAR(display))] call FUNC(onKeyDown));
     class controlsBackground {
         class Title: RscText {
             idc = IDC_TITLE;
+            text = CSTRING(MedicalMenu);
             x = QUOTE(POS_X(1));
             y = QUOTE(POS_Y(0));
             w = QUOTE(POS_W(38));
@@ -242,8 +243,8 @@ class ACE_Medical_Menu {
             sizeEx = QUOTE(POS_H(1.2));
             colorText[] = {1, 1, 1, 0.9};
         };
-        class StatusHeader: TreatmentHeader {
-            text = CSTRING(STATUS);
+        class NameHeader: TreatmentHeader {
+            idc = IDC_NAME;
             x = QUOTE(POS_X(13.83));
         };
         class OverviewHeader: TreatmentHeader {
@@ -265,7 +266,7 @@ class ACE_Medical_Menu {
             text = QPATHTOF(data\categories\triage_card.paa);
             tooltip = CSTRING(ViewTriageCard);
             x = QUOTE(POS_X(1.75));
-            y = QUOTE(POS_Y(2.73));
+            y = QUOTE(POS_Y(2.75));
             w = QUOTE(POS_W(1.5));
             h = QUOTE(POS_H(1.5));
             color[] = {1, 1, 1, 1};
@@ -323,12 +324,23 @@ class ACE_Medical_Menu {
             text = QPATHTOF(data\categories\toggle_to_other.paa);
             x = QUOTE(POS_X(12));
         };
+        class TriageDivider: HeaderLine {
+            idc = IDC_TRIAGE_DIVIDER;
+            x = QUOTE(POS_X(3.265));
+            y = QUOTE(POS_Y(3.0));
+            w = QUOTE(POS_W(0.03));
+            h = QUOTE(POS_H(1.0));
+        };
+        class ToggleDivider: TriageDivider {
+            idc = IDC_TOGGLE_DIVIDER;
+            x = QUOTE(POS_X(3.265));
+        };
         class TriageCard: RscListBox {
             idc = IDC_TRIAGE_CARD;
             x = QUOTE(POS_X(1.5));
             y = QUOTE(POS_Y(4.4));
             w = QUOTE(POS_W(12.33));
-            h = QUOTE(POS_H(10));
+            h = QUOTE(POS_H(12.2));
             sizeEx = QUOTE(POS_H(0.7));
             colorSelect[] = {1, 1, 1, 1};
             colorSelect2[] = {1, 1, 1, 1};
@@ -342,7 +354,7 @@ class ACE_Medical_Menu {
             x = QUOTE(POS_X(1.5));
             y = QUOTE(POS_Y(4.4));
             w = QUOTE(POS_W(12.33));
-            h = QUOTE(POS_H(10));
+            h = QUOTE(POS_H(12.2));
         };
         class BodyImage: GVAR(BodyImage) {};
         class SelectHead: RscButton {
@@ -394,7 +406,9 @@ class ACE_Medical_Menu {
         class Injuries: TriageCard {
             idc = IDC_INJURIES;
             x = QUOTE(POS_X(26.17));
+            y = QUOTE(POS_Y(3.3));
             w = QUOTE(POS_W(12.33));
+            h = QUOTE(POS_Y(13.3));
         };
         class ActivityHeader: TreatmentHeader {
             text = CSTRING(ACTIVITY_LOG);
@@ -462,7 +476,7 @@ class ACE_Medical_Menu {
 class GVAR(RscTriageCard) {
     idd = -1;
     movingEnable = 1;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscTriageCard), _this select 0)]);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscTriageCard),_this select 0)]);
     class controls {
         class Background: RscText {
             idc = -1;
@@ -559,7 +573,7 @@ class RscTitles {
         fadeOut = 0.3;
         duration = 999999;
         movingEnable = 0;
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscPatientInfo), _this select 0)]);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(RscPatientInfo),_this select 0)]);
         class controls {
             class PatientInfoContainer: RscControlsGroupNoScrollbars {
                 idc = -1;

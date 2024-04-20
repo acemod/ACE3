@@ -10,11 +10,11 @@
  * Item should appear in this list? <BOOL>
  *
  * Example:
- * [CONFIG] call ACE_inventory_fnc_filterGrenades
+ * [CONFIG] call ace_inventory_fnc_filterGrenades
  *
  * Public: No
  */
 
 params ["_config"];
 
-toLower configName _config in GVAR(Grenades_ItemList)
+(configName _config) in (uiNamespace getVariable QGVAR(grenadesItemList))

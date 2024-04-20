@@ -66,7 +66,8 @@ _items = _items select {
     _x isKindOf ["CBA_MiscItem", _cfgWeapons] && {getNumber (_configItemInfo >> "type") in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD]} ||
     {getNumber (_configItemInfo >> "type") in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
     {getText (_cfgWeapons >> _x >> "simulation") == "ItemMineDetector"} ||
-    {getNumber (_cfgMagazines >> _x >> "ACE_isUnique") == 1}
+    {getNumber (_cfgMagazines >> _x >> "ACE_isUnique") == 1} ||
+    {getNumber (_cfgMagazines >> _x >> "ACE_asItem") == 1}
 };
 
 GVAR(customRightPanelButtons) set [_position, [_items apply {_x call EFUNC(common,getConfigName)}, _picture, _tooltip, _moveOnOverwrite]];

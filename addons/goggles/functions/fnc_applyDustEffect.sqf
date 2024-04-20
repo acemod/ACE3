@@ -20,7 +20,7 @@ if (call FUNC(ExternalCamera)) exitWith {};
 private _unit = ACE_player;
 
 if ([_unit] call FUNC(isGogglesVisible)) exitWith {
-    GVAR(GogglesEffectsLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 2, false];
+    GVAR(GogglesEffectsLayer) cutRsc ["RscACE_GogglesEffects", "PLAIN", 2, false, false];
 
     ((GETUVAR(GVAR(DisplayEffects),displayNull)) displayCtrl 10662) ctrlSetText format [getText (configFile >> "CfgGlasses" >> goggles _unit >> "ACE_DustPath"), GETDUSTT(DAMOUNT) + 1];
 
