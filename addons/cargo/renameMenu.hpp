@@ -3,8 +3,8 @@
 class GVAR(renameMenu) {
     idd = 314615;
     movingEnable = 0;
-    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(menuDisplay),_this select 0)]);
-    onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(menuDisplay),nil)]);
+    onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(renameMenu),_this select 0)]);
+    onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(renameMenu),nil)]);
     class controlsBackground {
         class HeaderBackground: ACE_gui_backgroundBase {
             idc = -1;

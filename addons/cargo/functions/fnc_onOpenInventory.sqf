@@ -93,7 +93,7 @@ GVAR(interactionParadrop) = _container isKindOf "Air" && {
         private _index = lbCurSel (uiNamespace getVariable QGVAR(CargoListBox));
         if (_index == -1) exitWith {};
         closeDialog 602;
-        [_index] call FUNC(startUnload);
+        [ACE_Player, _index] call FUNC(startUnload);
     }];
     _unloadBtn ctrlCommit 0;
 
@@ -118,19 +118,42 @@ GVAR(interactionParadrop) = _container isKindOf "Air" && {
         _args params ["_loadBar", "_list"];
         private _cargoItems = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
         lbClear _list;
+
+        // Display item names
+        private _displayName = "";
+        private _itemSize = 0;
+        private _index = -1;
+        private _damageStr = "0%";
+        private _damage = 0;
+
         {
-            private _displayName = [_x, true] call FUNC(getNameItem);
-            
-            if (GVAR(interactionParadrop)) then {
-                _displayName = format ["%1 (%2s)", _displayName, GVAR(paradropTimeCoefficent) * ([_x] call FUNC(getSizeItem))];
+            _displayName = [_x, true] call FUNC(getNameItem);
+            _itemSize = _x call FUNC(getSizeItem);
+            _damage = if (_x isEqualType "") then {0} else {damage _x};
+            _damageStr = ((_damage * 100) toFixed 0) + "%";
+
+            if (_itemSize >= 0) then {
+                _index = if (GVAR(interactionParadrop)) then {
+                    _list lbAdd format ["%1. %2 (%3s)", _forEachIndex + 1, _displayName, GVAR(paradropTimeCoefficent) * _itemSize]
+                } else {
+                    _list lbAdd format ["%1. %2", _forEachIndex + 1, _displayName]
+                };
+
+                private _tooltip = format ["%1\n%2", format [LLSTRING(sizeMenu), _itemSize], format ["%1: %2", localize "str_a3_normaldamage1", _damageStr]];
+                _list lbSetTooltip [_index, _tooltip];
+            } else {
+                // If item has a size < 0, it means it's not loadable
+                _index = _list lbAdd _displayName;
+
+                _list lbSetTooltip [_index, LLSTRING(unloadingImpossible)];
+                _list lbSetColor [_index, [1, 0, 0, 1]]; // set text to red
+                _list lbSetSelectColor [_index, [1, 0, 0, 1]];
             };
-            _list lbAdd _displayName;
         } forEach _cargoItems;
 
         private _cargoCapacity = GVAR(interactionVehicle) getVariable [QGVAR(spaceMax), getNumber (configOf GVAR(interactionVehicle) >> QGVAR(space))];
         private _usedCargoCapacity = _cargoCapacity - ([GVAR(interactionVehicle)] call FUNC(getCargoSpaceLeft));
 
         _loadBar progressSetPosition (_usedCargoCapacity / _cargoCapacity);
-
     }, 1, [_loadBar, _list]] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_waitUntilAndExecute;

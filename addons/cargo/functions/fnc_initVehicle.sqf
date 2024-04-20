@@ -125,7 +125,7 @@ if (_vehicle isKindOf "Air") then {
         //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         GVAR(interactionVehicle) = _target;
         GVAR(interactionParadrop) = true;
-        createDialog QGVAR(menu);
+        ACE_Player action ["Gear", _target];
     };
 
     private _text = LLSTRING(openMenu);

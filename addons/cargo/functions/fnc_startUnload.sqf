@@ -4,35 +4,23 @@
  * Starts unloading item selected in the cargo menu.
  *
  * Arguments:
- * 0: Index of Unloading Item <NUMBER> (default: -1)
- * 1: Unit doing the unloading <OBJECT>
+ * 0: Unit doing the unloading <OBJECT>
+ * 1: Index of Unloading Item <NUMBER> (default: -1)
  *
  * Return Value:
  * None
  *
  * Example:
- * player call ace_cargo_fnc_startUnload
+ * [player, 1] call ace_cargo_fnc_startUnload
  *
  * Public: No
  */
 
 disableSerialization;
 
-params [["_selected", -1, [0]], ["_unit", objNull, [objNull]]];
+params [["_unit", objNull, [objNull]], ["_selected", -1, [0]]];
 
-if (_selected == -1) then {
-    private _display = uiNamespace getVariable QGVAR(menuDisplay);
-    if (isNil "_display") exitWith {};
-
-    private _ctrl = _display displayCtrl 100;
-
-    _selected = (lbCurSel _ctrl) max 0;
-};
-
-if (_selected == -1) exitWith {};
-
-private _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
-if (_loaded isEqualTo []) exitWith {};
+_item = _selected call FUNC(getSelectedItem);
 
 if (isNil "_item") exitWith {};
 

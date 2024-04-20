@@ -15,7 +15,7 @@
  * Public: No
  */
 
-private _display = uiNamespace getVariable QGVAR(menuDisplay);
+private _display = uiNamespace getVariable QGVAR(renameMenu);
 
 if (isNil "_display") exitWith {};
 
