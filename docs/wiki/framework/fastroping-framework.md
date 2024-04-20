@@ -18,7 +18,7 @@ If you want to prepare a helicopter from your addon for fastroping, there's a fe
 
 By using simple rope origin points you will only need two config entries:
 
-```
+```cpp
 ace_fastroping_enabled = 1;
 ace_fastroping_ropeOrigins[] = {
     {x, y, z},
@@ -28,7 +28,7 @@ ace_fastroping_ropeOrigins[] = {
 
 This will create the ropes at the two given points. If you have defined memory points for the rope origins, you can use them too:
 
-```
+```cpp
 ace_fastroping_enabled = 1;
 ace_fastroping_ropeOrigins[] = {"ropeOriginLeft", "ropeOriginRight"};
 ```
@@ -41,7 +41,7 @@ If your helicopter is not fastroping capable by default, you can make it take a 
 
 To make your helicopter FRIES capable, you need to add the following config entries:
 
-```
+```cpp
 ace_fastroping_enabled = 2;
 ace_fastroping_friesType = "yourFRIESType";
 ace_fastroping_friesAttachmentPoint[] = {x, y, z};
@@ -87,16 +87,16 @@ ACE3 provides two functions that are compatible with most helicopters and all AC
 
 `ace_fastroping_fnc_equipFRIES`
 
-|   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Helicopter | Object | Required
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Helicopter | Object | Required |
+| **R** | None | None | Return value |
 
 ### 4.2. Remove FRIES from helicopter
 
 `ace_fastroping_fnc_unequipFRIES`
 
-|   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Helicopter | Object | Required
-**R** | None | None | Return value
+|   | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Helicopter | Object | Required |
+| **R** | None | None | Return value |
