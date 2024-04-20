@@ -9,7 +9,7 @@
  * 2: Namespace to store the cache on <NAMESPACE>
  * 3: Cache uid <STRING>
  * 4: Max duration of the cache <NUMBER>
- * 5: Event that clears the cache (default: nil) <STRING>
+ * 5: Events that clear the cache (default: nil) <STRING or ARRAY of STRING>
  *
  * Return Value:
  * Result of the function <ANY>
@@ -20,41 +20,46 @@
  * Public: No
  */
 
-params ["_params", "_function", "_namespace", "_uid", "_duration", "_event"];
+params ["_params", "_function", "_namespace", "_uid", "_duration", "_events"];
 
 if ((_namespace getVariable [_uid, [-99999]]) select 0 < diag_tickTime) then {
     _namespace setVariable [_uid, [diag_tickTime + _duration, _params call _function]];
 
     // Does the cache need to be cleared on an event?
-    if (!isNil "_event") then {
-        private _varName = format [QGVAR(clearCache_%1), _event];
-        private _cacheList = missionNamespace getVariable _varName;
-
-        // If there was no EH to clear these caches, add one
-        if (isNil "_cacheList") then {
-            _cacheList = [];
-            missionNamespace setVariable [_varName, _cacheList];
-
-            [_event, {
-                #ifdef DEBUG_MODE_FULL
-                    INFO_1("Clear cached variables on event: %1",_eventName);
-                #endif
-                // Get the list of caches to clear
-                //IGNORE_PRIVATE_WARNING ["_eventName"];
-                // _eventName is defined on the function that calls the event
-                private _varName = format [QGVAR(clearCache_%1), _eventName];
-                private _cacheList = missionNamespace getVariable [_varName, []];
-                // Erase all the cached results
-                {
-                    _x call FUNC(eraseCache);
-                } forEach _cacheList;
-                // Empty the list
-                missionNamespace setVariable [_varName, []];
-            }] call CBA_fnc_addEventHandler;
+    if (!isNil "_events") then {
+        if (_events isEqualType "") then {
+            _events = [_events];
         };
+        {
+            private _event = _x;
+            private _varName = format [QGVAR(clearCache_%1), _event];
+            private _cacheList = missionNamespace getVariable _varName;
 
-        // Add this cache to the list of the event
-        _cacheList pushBack [_namespace, _uid];
+            // If there was no EH to clear these caches, add one
+            if (isNil "_cacheList") then {
+                _cacheList = [];
+                missionNamespace setVariable [_varName, _cacheList];
+
+                [_event, {
+                    #ifdef DEBUG_MODE_FULL
+                        INFO_1("Clear cached variables on event: %1",_eventName);
+                    #endif
+                    // Get the list of caches to clear
+                    //IGNORE_PRIVATE_WARNING ["_eventName"];
+                    // _eventName is defined on the function that calls the event
+                    private _varName = format [QGVAR(clearCache_%1), _eventName];
+                    private _cacheList = missionNamespace getVariable [_varName, []];
+                    // Erase all the cached results
+                    {
+                        _x call FUNC(eraseCache);
+                    } forEach _cacheList;
+                    // Empty the list
+                    missionNamespace setVariable [_varName, []];
+                }] call CBA_fnc_addEventHandler;
+            };
+            // Add this cache to the list of the event
+            _cacheList pushBack [_namespace, _uid];
+        } forEach _events;
     };
 
 #ifdef DEBUG_MODE_FULL

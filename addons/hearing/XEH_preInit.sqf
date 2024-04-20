@@ -6,13 +6,14 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ["CBA_loadoutSet", {
     params ["_unit", "_loadout", "_extendedInfo"];
     if (_extendedInfo getOrDefault ["ace_earplugs", false]) then {
         _unit setVariable ["ACE_hasEarPlugsIn", true, true];
-        [[true]] remoteExec [QFUNC(updateVolume), _unit];
+
+        [QGVAR(updateVolume), [[true]], _unit] call CBA_fnc_targetEvent;
     };
 }] call CBA_fnc_addEventHandler;
 

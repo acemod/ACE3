@@ -80,7 +80,7 @@ GVAR(selfInteractionActions) = [];
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
-    [ACE_player, 0] call FUNC(displayPatientInformation);
+    [ACE_player, -1] call FUNC(displayPatientInformation);
     false
 }, {
     if (CBA_missionTime - GVAR(peekLastOpenedOn) > GVAR(peekMedicalInfoReleaseDelay)) then {
@@ -102,7 +102,7 @@ GVAR(selfInteractionActions) = [];
     params ["_unit", "_allDamages", ""];
     if !(GVAR(peekMedicalOnHit) && {_unit == ACE_player}) exitWith {};
 
-    private _bodypart = toLower (_allDamages select 0 select 1);
+    private _bodypart = toLowerANSI (_allDamages select 0 select 1);
     private _bodypartIndex = ALL_BODY_PARTS find _bodypart;
 
     [ACE_player, _bodypartIndex] call FUNC(displayPatientInformation);

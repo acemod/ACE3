@@ -43,7 +43,7 @@ class CfgVehicles {
                     condition = QUOTE(call DFUNC(canShowFreeSeats)); \
                     statement = QUOTE(call DFUNC(getInNearest)); \
                     exceptions[] = {"isNotSwimming"}; \
-                    insertChildren = QUOTE((_this select 2) param [ARR_2(0, [])]); \
+                    insertChildren = QUOTE((_this select 2) param [ARR_2(0,[])]); \
                 }; \
             }; \
         }; \

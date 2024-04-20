@@ -48,7 +48,7 @@ waitUntil {
 };
 TRACE_2("Finished primary movement",_vehicle distance2D _wpPos,_closeEnoughTicks);
 
-if ((!alive _vehicle) || {!alive _commander}) exitWith {TRACE_2("died",alive _vehicle, alive _commander); true};
+if ((!alive _vehicle) || {!alive _commander}) exitWith {TRACE_2("died",alive _vehicle,alive _commander); true};
 if (((getPos _vehicle) select 2) < 25) exitWith {TRACE_1("too low",getPos _vehicle); true};
 
 // Fly level and straight

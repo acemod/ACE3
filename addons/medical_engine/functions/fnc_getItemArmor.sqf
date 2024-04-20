@@ -32,8 +32,10 @@ if (isNil "_return") then {
     };
 
     private _itemInfo = configFile >> "CfgWeapons" >> _item >> "ItemInfo";
+    private _itemType = getNumber (_itemInfo >> "type");
+    private _passThroughEffect = [1, 0.6] select (_itemType == TYPE_VEST);
 
-    if (getNumber (_itemInfo >> "type") == TYPE_UNIFORM) then {
+    if (_itemType == TYPE_UNIFORM) then {
         private _unitCfg = configFile >> "CfgVehicles" >> getText (_itemInfo >> "uniformClass");
         if (_hitpoint == "#structural") then {
             // TODO: I'm not sure if this should be multiplied by the base armor value or not
@@ -53,9 +55,13 @@ if (isNil "_return") then {
     };
 
     // Scale armor using passthrough to fix explosive-resistant armor (#9063)
-    // Skip scaling for items that don't cover the hitpoint to prevent infinite armor
-    if (_armor isNotEqualTo 0) then {
-        _armorScaled = (log (_armor / _passThrough)) * 10;
+    // Skip scaling for uniforms and items that don't cover the hitpoint to prevent infinite armor
+    if (_armor > 0) then {
+        if (_itemType == TYPE_UNIFORM) then {
+            _armorScaled = _armor;
+        } else {
+            _armorScaled = (log (_armor / (_passThrough ^ _passThroughEffect))) * 10;
+        };
     };
     _return = [_armor, _armorScaled];
     GVAR(armorCache) set [_key, _return];

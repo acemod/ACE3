@@ -23,11 +23,12 @@ params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit"];
 TRACE_5("loadMagazine",_vehicle,_turret,_carryMag,_magSource,_unit);
 
 private _timeToLoad = 1;
-if (!isNull(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime")) then {
-    _timeToLoad = getNumber(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime");
+private _config = configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime";
+if (!isNull _config) then {
+    _timeToLoad = getNumber _config;
 };
 
-private _displayName = format [localize LSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
+private _displayName = format [LLSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
 
 private _onFinish = {
     (_this select 0) params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit"];
@@ -51,7 +52,7 @@ private _onFinish = {
     [_magSource, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
     if (_bestAmmoToSend == 0) exitWith {};
 
-    TRACE_6("calling addTurretMag event",_vehicle,_turret,_magSource,_carryMag,_bestAmmoToSend, _unit);
+    TRACE_6("calling addTurretMag event",_vehicle,_turret,_magSource,_carryMag,_bestAmmoToSend,_unit);
     [QGVAR(addTurretMag), [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend, _unit]] call CBA_fnc_globalEvent;
 };
 

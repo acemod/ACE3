@@ -2,6 +2,8 @@
 
 if (!hasInterface) exitWith {};
 
+#include "initKeybinds.inc.sqf"
+
 GVAR(cacheAmmoLoudness) = call CBA_fnc_createNamespace;
 
 GVAR(deafnessDV) = 0;
@@ -20,6 +22,8 @@ GVAR(lastPlayerVehicle) = objNull;
 
     // Spawn volume updating process
     [LINKFUNC(updateVolume), 1, [false]] call CBA_fnc_addPerFrameHandler;
+
+    [QGVAR(updateVolume), LINKFUNC(updateVolume)] call CBA_fnc_addEventHandler;
 
     // Update veh attunation when player veh changes
     ["vehicle", {

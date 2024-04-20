@@ -106,7 +106,7 @@ class RscACE_SelectAnItem {
             y = 0.605;
             style = 2;
             text = CSTRING(Back);
-            action = QUOTE(call DFUNC(hideMenu););   //'Default' call DFUNC(openMenu);    'Default' call DFUNC(openMenuSelf);
+            action = QUOTE(call DFUNC(hideMenu));   //'Default' call DFUNC(openMenu);    'Default' call DFUNC(openMenuSelf);
             colorBackground[] = {0,0,0,0};
             colorBackgroundDisabled[] = {0,0,0,0};
             colorBackgroundActive[] = {1,1,1,0.2};
@@ -120,7 +120,7 @@ class RscACE_SelectAnItem {
             w = 0.15;
             style = 2;
             text = CSTRING(MakeSelection);
-            action = QUOTE(call DFUNC(hideMenu););
+            action = QUOTE(call DFUNC(hideMenu));
             colorBackground[] = {0,0,0,0};
             colorBackgroundDisabled[] = {0,0,0,0};
             colorBackgroundActive[] = {1,1,1,0.2};

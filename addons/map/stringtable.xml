@@ -29,7 +29,7 @@
             <Hungarian>Térkép megvilágítása</Hungarian>
             <Russian>Освещение карты</Russian>
             <Italian>Illuminazione Mappa</Italian>
-            <Japanese>地図に照明</Japanese>
+            <Japanese>地図の照明</Japanese>
             <Korean>지도에 조명</Korean>
             <Chinesesimp>地图照明</Chinesesimp>
             <Chinese>地圖照明</Chinese>
@@ -45,7 +45,7 @@
             <Spanish>Simular iluminación de mapa basada en la iluminación ambiente y los elementos de los jugadores?</Spanish>
             <Czech>Simulovat nasvícení mapy v závisloti na okolí a předmětů hráče?</Czech>
             <Italian>Simula illuminazione della mappa in base alla luce ambientale e agli oggetti del giocatore?</Italian>
-            <Japanese>地図へ環境光やプレイヤーのアイテムに基づいた光のシミュレーションを行うかどうかを設定できます。</Japanese>
+            <Japanese>環境光やプレイヤーのアイテムに基づいた地図の照明をシミュレートしますか?</Japanese>
             <Korean>주변 환경 및 플레이어 조명에 의한 빛 변화를 지도에 반영할까요?</Korean>
             <Chinesesimp>透过环境光与玩家的手电筒来决定地图亮度。</Chinesesimp>
             <Chinese>透過環境光與玩家的物品來決定地圖亮度?</Chinese>
@@ -58,9 +58,9 @@
             <Portuguese>Brilho de lanterna no mapa</Portuguese>
             <Spanish>Resplandor de linterna en el mapa</Spanish>
             <Czech>Nasvícení mapy pomocí baterky</Czech>
-            <Italian>Luce della torcia in mappa</Italian>
+            <Italian>Effetto luminoso sul giocatore</Italian>
             <French>Lueur lampe carte</French>
-            <Japanese>地図をライトで照らす</Japanese>
+            <Japanese>地図用ライトの光放射</Japanese>
             <Korean>지도 조명 발광</Korean>
             <Chinesesimp>增加地图亮度</Chinesesimp>
             <Chinese>增加地圖亮度</Chinese>
@@ -74,8 +74,8 @@
             <Portuguese>Adicionar brilho externo para jogadores que usam lanterna no mapa?</Portuguese>
             <Spanish>Añadir resplandor externo a los jugadores que utilizan la linterna en el mapa?</Spanish>
             <Czech>Přidat externí záři hráči který používá baterku v mapě?</Czech>
-            <Italian>Aggiungi luce esterna a giocatori che usano la torcia in mappa?</Italian>
-            <Japanese>プレイヤーが地図をフラッシュライトで照らせられるように設定します。</Japanese>
+            <Italian>Aggiungi un effetto di luce sul giocatore che sta usando la torcia in mappa, questo è visibile ad altri giocatori.</Italian>
+            <Japanese>マップ上で懐中電灯を使用しているプレイヤーから辺りへの光放射を追加しますか?</Japanese>
             <Korean>지도에 조명을 사용하는 플레이어에 외부 불빛을 추가합니까?</Korean>
             <Chinesesimp>当玩家打开手电筒时，增加地图亮度。</Chinesesimp>
             <Chinese>當玩家擁有手電筒時，增加地圖亮度?</Chinese>
@@ -90,8 +90,8 @@
             <French>Tremblement de la carte</French>
             <Hungarian>Térkép-rázkódás</Hungarian>
             <Russian>Тряска карты</Russian>
-            <Italian>Scuoti la mappa</Italian>
-            <Japanese>地図を揺らす</Japanese>
+            <Italian>Scuotimento della mappa</Italian>
+            <Japanese>地図の揺れ</Japanese>
             <Korean>지도 흔들림</Korean>
             <Chinesesimp>地图震动</Chinesesimp>
             <Chinese>地圖震動</Chinese>
@@ -108,7 +108,7 @@
             <Hungarian>Rázkódjon-e a térkép mozgáskor?</Hungarian>
             <Russian>Заставлять карту трястись при ходьбе?</Russian>
             <Italian>Far scuotere la mappa mentre cammini?</Italian>
-            <Japanese>歩いているときは地図を揺らすかかどうかを設定できます。</Japanese>
+            <Japanese>歩いているときに地図を揺らしますか?</Japanese>
             <Korean>걸을 때 지도를 보면 흔들리게 합니까?</Korean>
             <Chinesesimp>走路时打开地图会产生晃动。</Chinesesimp>
             <Chinese>走路時讓地圖有震動的感覺?</Chinese>
@@ -139,8 +139,8 @@
             <French>Limite le niveau de zoom sur la carte.</French>
             <Hungarian>Korlátozva legyen-e a nagyítás mennyisége a térképnél?</Hungarian>
             <Russian>Ограничить максимальное приближение, доступное на карте?</Russian>
-            <Italian>Limita l'ammontare di zoom disponibile per la mappa?</Italian>
-            <Japanese>地図上で利用できる拡大倍率を制限できます。</Japanese>
+            <Italian>Limita i livelli di zoom disponibili sulla mappa?</Italian>
+            <Japanese>地図上で利用できる拡大倍率を制限しますか?</Japanese>
             <Korean>지도 확대에 제한을 둡니까?</Korean>
             <Chinesesimp>限制地图上可允许缩放的倍率？</Chinesesimp>
             <Chinese>限制地圖上可允許縮放的倍率?</Chinese>
@@ -156,7 +156,7 @@
             <Hungarian>Kurzor-koordináták mutatása</Hungarian>
             <Russian>Показывать координаты курсора</Russian>
             <Italian>Mostra coordinate sul cursore</Italian>
-            <Japanese>カーソル先で座標を表示</Japanese>
+            <Japanese>カーソル先の座標を表示</Japanese>
             <Korean>커서에 좌표를 보이기</Korean>
             <Chinesesimp>显示光标的座标</Chinesesimp>
             <Chinese>顯示游標的座標</Chinese>
@@ -171,8 +171,8 @@
             <French>Affiche les coordonnées de la grille sur le pointeur de souris.</French>
             <Hungarian>Mutatva legyen-e a kurzornál található rész rácskoordinátája?</Hungarian>
             <Russian>Показывать координаты около курсора мыши?</Russian>
-            <Italian>Mostra la griglia coordinate sul cursore mouse?</Italian>
-            <Japanese>カーソルで合わせた先を地図座標で表示するかどうかを設定できます。</Japanese>
+            <Italian>Mostra il numero della coordinata-griglia sul cursore del mouse in mappa?</Italian>
+            <Japanese>カーソルで合わせた先の地図グリッド座標を表示しますか?</Japanese>
             <Korean>지도에서 커서 옆에 좌표가 뜨게 합니까?</Korean>
             <Chinesesimp>显示鼠标光标所在的网格座标？</Chinesesimp>
             <Chinese>顯示滑鼠游標所在的網格座標?</Chinese>
@@ -187,7 +187,7 @@
             <Hungarian>Ez a modul lehetővé teszi a térképnézet testreszabását.</Hungarian>
             <Russian>Этот модуль позволяет настроить отображение карты.</Russian>
             <Spanish>Este módulo permite personalizar la pantalla del mapa.</Spanish>
-            <Italian>Questo modulo ti permette di customizzare lo schermo della mappa.</Italian>
+            <Italian>Questo modulo ti permette di personalizzare lo schermo della mappa.</Italian>
             <Japanese>このモジュールは地図画面を変更できます。</Japanese>
             <Korean>이 모듈은 지도 화면을 임의로 설정할 수 있게 해줍니다.</Korean>
             <Chinesesimp>此模块允许自定地图的相关效果。</Chinesesimp>
@@ -204,7 +204,7 @@
             <Hungarian>Blue Force követés</Hungarian>
             <Russian>Система слежения Blue Force Tracking</Russian>
             <Italian>Blue Force Tracking</Italian>
-            <Japanese>ブルー フォース トラッキング</Japanese>
+            <Japanese>ブルー フォース トラッキング (BFT)</Japanese>
             <Korean>GPS 피아식별기</Korean>
             <Chinesesimp>显示蓝方追踪</Chinesesimp>
             <Chinese>顯示藍方蹤跡</Chinese>
@@ -235,8 +235,8 @@
             <French>Active le SFA. Valeur par défaut : désactivé.</French>
             <Hungarian>Blue Force követés engedélyezése. Alapértelmezett: Nem</Hungarian>
             <Russian>Включает систему служения BFT. По умолчанию: Нет</Russian>
-            <Italian>Abilita Blue Force Tracking. Default: No</Italian>
-            <Japanese>ブルー フォース トラッキングを有効化します。標準: 無効</Japanese>
+            <Italian>Abilita Blue Force Tracking. Predefinito: No</Italian>
+            <Japanese>ブルー フォース トラッキングを有効化します。 デフォルト: 無効</Japanese>
             <Korean>GPS 피아식별기 켭니다. 기본설정: 아니요</Korean>
             <Chinesesimp>启用显示蓝方追踪。预设：否</Chinesesimp>
             <Chinese>啟用顯示藍方蹤跡. 預設: 否</Chinese>
@@ -283,7 +283,7 @@
             <French>Cacher les groupes IA</French>
             <Hungarian>AI csoportok elrejtése</Hungarian>
             <Russian>Скрыть группы ботов</Russian>
-            <Italian>Nascondere gruppi IA</Italian>
+            <Italian>Nascondi gruppi IA</Italian>
             <Japanese>AIグループを非表示</Japanese>
             <Korean>인공지능 그룹 숨기기</Korean>
             <Chinesesimp>隐藏 AI 小队</Chinesesimp>
@@ -299,8 +299,8 @@
             <French>Cache les marqueurs pour les groupes composés exclusivement d'unités IA.</French>
             <Hungarian>Jelölők elrejtése "csak AI" csoportoknál?</Hungarian>
             <Russian>Скрыть маркеры групп, которые состоят полностью из ботов?</Russian>
-            <Italian>Nascondi markers per gruppi di sole IA?</Italian>
-            <Japanese>'AIのみ'グループのマーカー表示有無を設定できます。</Japanese>
+            <Italian>Nascondi marker per gruppi di sole IA?</Italian>
+            <Japanese>'AIのみ'のグループのマーカー表示有無を設定できます。</Japanese>
             <Korean>인공지능만 있는 그룹의 마커를 숨깁니까?</Korean>
             <Chinesesimp>隐藏'AI 小队'的追踪？</Chinesesimp>
             <Chinese>隱藏'AI小隊'的蹤跡?</Chinese>
@@ -331,7 +331,7 @@
             <French>Affiche les noms de tous les joueurs individuellement.</French>
             <Hungarian>Itt található az adott játékos neveket?</Hungarian>
             <Russian>Показать отдельные имена игроков?</Russian>
-            <Italian>Mostra i nomi dei giocatori singoli?</Italian>
+            <Italian>Mostra i nomi di singoli giocatori?</Italian>
             <Japanese>プレイヤーの名前の表示有無を設定できます。</Japanese>
             <Korean>각 플레이어의 이름을 표시합니까?</Korean>
             <Chinesesimp>显示玩家的个别名称？</Chinesesimp>
@@ -347,7 +347,7 @@
             <Hungarian>Ez a modul lehetővé teszi a szövetséges egységek követését BFT térképjelzőjkkel.</Hungarian>
             <Russian>Этот модуль позволяет отслеживать перемещение союзных войск по карте при помощи маркеров BFT.</Russian>
             <Spanish>Este módulo permite el seguimiento de las unidades aliadas con marcadores de mapa BFT.</Spanish>
-            <Italian>Questo modulo permette il tracciamento di unità alleate con i marker BFT in mappa</Italian>
+            <Italian>Questo modulo permette il tracciamento di unità alleate mediante marker BFT in mappa.</Italian>
             <Japanese>モジュールは BFT マップ マーカとともに、同勢力ユニットの追跡を許可します。</Japanese>
             <Korean>이 모듈은 아군을 지도상에서 추적할 수 있게 해줍니다.</Korean>
             <Chinesesimp>此模块将使你能在地图上看见友方单位的追踪</Chinesesimp>
@@ -362,7 +362,7 @@
             <Russian>Фонари</Russian>
             <Czech>Svítilny</Czech>
             <Spanish>Linternas</Spanish>
-            <Italian>Torcia</Italian>
+            <Italian>Torce</Italian>
             <Japanese>フラッシュライト</Japanese>
             <Korean>손전등</Korean>
             <Chinesesimp>手电筒</Chinesesimp>
@@ -379,7 +379,7 @@
             <Czech>NVG</Czech>
             <Spanish>NVG</Spanish>
             <Italian>NVG</Italian>
-            <Japanese>夜間暗視装置</Japanese>
+            <Japanese>暗視装置</Japanese>
             <Korean>야간투시경</Korean>
             <Chinesesimp>夜视仪</Chinesesimp>
             <Chinese>夜視鏡</Chinese>
@@ -491,7 +491,7 @@
             <Italian>Imposta Canale all'Avvio</Italian>
             <Spanish>Setear canal al comenzar</Spanish>
             <French>Définir un canal par défaut</French>
-            <Japanese>開始時のチャンネルを決定</Japanese>
+            <Japanese>開始時のチャンネルを指定</Japanese>
             <Korean>시작시 채널</Korean>
             <Chinesesimp>设定游戏开始时的聊天频道</Chinesesimp>
             <Chinese>設定遊戲開始時的聊天頻道</Chinese>
@@ -503,10 +503,10 @@
             <Portuguese>Muda o canal do marcador no início da missão</Portuguese>
             <Russian>Изменить начальный канал для установки маркеров при запуске миссии</Russian>
             <Czech>Nastavit kanál po startu mise</Czech>
-            <Italian>Cambia il canale marker iniziale all'avvio di missione</Italian>
+            <Italian>Cambia il canale marker iniziale all'avvio della missione</Italian>
             <Spanish>Cambiar el canal de marcadores inicial al comenzar la misión</Spanish>
             <French>Change le canal de communication par défaut au début de la mission.</French>
-            <Japanese>ミッション開始時にあらかじめ設定されているマーカ チャンネルを変更します</Japanese>
+            <Japanese>ミッション開始時に使用されるマーカーチャンネルの指定を変更します</Japanese>
             <Korean>미션 시작시 마커채널을 변경합니다</Korean>
             <Chinesesimp>更改任务启动时的聊天频道</Chinesesimp>
             <Chinese>更改任務啟動時的聊天頻道</Chinese>

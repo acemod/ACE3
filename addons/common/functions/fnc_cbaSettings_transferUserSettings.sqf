@@ -34,7 +34,7 @@ private _aceSettings = configProperties [configFile >> "ACE_Settings", "isClass 
         if (_isClientSettable && {_currentValue isNotEqualTo _profileVar}) then {
             // CBA_settings_fnc_set will do type checking for the old profile var
             private _ret = [_settingName, _profileVar, 0, "client", true] call CBA_settings_fnc_set;
-            INFO_3("Transfering setting [%1: %2] returned %3", _settingName, _profileVar, _ret);
+            INFO_3("Transfering setting [%1: %2] returned %3",_settingName,_profileVar,_ret);
         };
     };
 } forEach _aceSettings;

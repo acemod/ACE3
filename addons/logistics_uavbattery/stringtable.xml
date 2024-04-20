@@ -10,7 +10,7 @@
             <Hungarian>A drón fel van töltve</Hungarian>
             <Czech>Dron je nabitý</Czech>
             <Portuguese>O VANT está cheio</Portuguese>
-            <Italian>Il drone è pieno</Italian>
+            <Italian>Il drone è carico</Italian>
             <Russian>БПЛА полностью заряжен</Russian>
             <Japanese>ドローンは充電完了</Japanese>
             <Korean>무인기 충전 완료</Korean>
@@ -27,9 +27,9 @@
             <Hungarian>Szükséged van egy UAV akkumulátorra</Hungarian>
             <Czech>Potřebuješ UAV baterii</Czech>
             <Portuguese>Você precisa de uma bateria para VANTs</Portuguese>
-            <Italian>Hai bisogno di una Batteria UAV</Italian>
+            <Italian>Ti serve una Batteria UAV</Italian>
             <Russian>Требуется аккумулятор для БПЛА</Russian>
-            <Japanese>UAV バッテリが必要です</Japanese>
+            <Japanese>UAV バッテリーが必要です</Japanese>
             <Korean>무인기 배터리가 필요합니다</Korean>
             <Chinesesimp>你需要一个无人机电池</Chinesesimp>
             <Chinese>你需要一個無人載具電池</Chinese>
@@ -63,7 +63,7 @@
             <Portuguese>Bateria para VANT</Portuguese>
             <Italian>Batteria UAV</Italian>
             <Russian>Аккумулятор БПЛА</Russian>
-            <Japanese>UAV バッテリ</Japanese>
+            <Japanese>UAV バッテリー</Japanese>
             <Korean>무인기 배터리</Korean>
             <Chinesesimp>无人机电池</Chinesesimp>
             <Chinese>無人載具電池</Chinese>
@@ -78,7 +78,7 @@
             <Hungarian>Hordozható UAV-k feltöltéséhez való akkumulátor</Hungarian>
             <Czech>Používané k dobíjení UAV</Czech>
             <Portuguese>Usada para reabastecer o VANT</Portuguese>
-            <Italian>Usata per ricaricare la Batteria dell'UAV</Italian>
+            <Italian>Usata per ricaricare le batterie di UAV portabili</Italian>
             <Russian>Используется для зарядки переносных БПЛА</Russian>
             <Japanese>運んでいる UAV を充電に使う</Japanese>
             <Korean>무인기를 재충전 할 때 씁니다.</Korean>
@@ -95,7 +95,7 @@
             <Hungarian>Akku feltöltése...</Hungarian>
             <Czech>Dobíjení...</Czech>
             <Portuguese>Recarregando...</Portuguese>
-            <Italian>In ricarica...</Italian>
+            <Italian>Ricaricando...</Italian>
             <Russian>Заряжается...</Russian>
             <Japanese>充電しています・・・</Japanese>
             <Chinesesimp>正在充电...</Chinesesimp>

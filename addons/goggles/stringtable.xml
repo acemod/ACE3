@@ -45,7 +45,7 @@
             <Portuguese>Mostrar efeitos de óculos em Terceira Pessoa</Portuguese>
             <Italian>Attiva l'effetto degli occhiali in terza persona</Italian>
             <Japanese>三人称視点でもゴーグルによる効果を表示</Japanese>
-            <Korean>3인칭 시에도 고글 효과를 보이게 합니다</Korean>
+            <Korean>3인칭 시에도 고글 효과를 보이게 하기</Korean>
             <Chinesesimp>在第三人称视角显示护目镜效果</Chinesesimp>
             <Chinese>在第三人稱視角顯示護目鏡效果</Chinese>
             <Turkish>Gözlük efektlerini 3. şahıs görünümün de göster</Turkish>
@@ -101,8 +101,8 @@
         </Key>
         <Key ID="STR_ACE_Goggles_effects_effectsOnly">
             <English>Effects</English>
-            <Russian>эффекты</Russian>
-            <Japanese>効果</Japanese>
+            <Russian>Эффекты</Russian>
+            <Japanese>エフェクト</Japanese>
             <Polish>Efekty</Polish>
             <German>Effekte</German>
             <Korean>효과</Korean>
@@ -118,7 +118,7 @@
         <Key ID="STR_ACE_Goggles_enabled_tintAndEffects">
             <English>Tint + Effects</English>
             <Russian>Тонировка + эффекты</Russian>
-            <Japanese>色彩 + 効果</Japanese>
+            <Japanese>色彩 + エフェクト</Japanese>
             <Polish>Winieta + Efekty</Polish>
             <German>Tönung + Effekte</German>
             <Korean>색조+효과</Korean>

@@ -32,15 +32,15 @@ if !(_unit getVariable [QGVAR(isDragging), false]) exitWith {
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-// Same as dragObjectPFH, checks if object is deleted, dead or target moved away from carrier (e.g. weapon disassembled)
-if (!alive _target || {_unit distance _target > 10}) then {
+// Drop if the target is destroyed or if the target moved away from carrier (e.g. weapon disassembled)
+if (!alive _target || {_unit distance _target > 10}) exitWith {
     TRACE_4("dead/distance",_unit,_target,_timeOut,CBA_missionTime);
     [_unit, _target] call FUNC(dropObject);
 
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-// Timeout: Do nothing, quit. CBA_missionTime, because anim length is linked to ingame time
+// Timeout: Drop target. CBA_missionTime, because anim length is linked to ingame time
 if (CBA_missionTime > _timeOut) exitWith {
     TRACE_4("timeout",_unit,_target,_timeOut,CBA_missionTime);
     _idPFH call CBA_fnc_removePerFrameHandler;

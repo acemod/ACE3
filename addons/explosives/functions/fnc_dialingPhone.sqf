@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [FUNC(dialingPhone), 0.25, [_unit,4,_arr,_code]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
+ * [ace_explosives_fnc_dialingPhone, 0.25, [_unit,4,_arr,_code]] call CBA_fnc_addPerFrameHandler;
  *
  * Public: No
  */

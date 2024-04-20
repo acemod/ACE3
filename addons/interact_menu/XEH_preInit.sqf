@@ -6,11 +6,11 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 if (!hasInterface) exitWith { ADDON = true; };
 
-["All", "init", {_this call FUNC(compileMenu)}] call CBA_fnc_addClassEventHandler;
+["All", "init", LINKFUNC(compileMenu)] call CBA_fnc_addClassEventHandler;
 
 GVAR(ActNamespace) = [] call CBA_fnc_createNamespace;
 GVAR(ActSelfNamespace) = [] call CBA_fnc_createNamespace;

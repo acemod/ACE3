@@ -19,7 +19,7 @@
 
 params ["_unit", "_target", ["_exceptions", []]];
 
-_exceptions = _exceptions apply {toLower _x};
+_exceptions = _exceptions apply {toLowerANSI _x};
 
 private _owner = _target getVariable [QGVAR(owner), objNull];
 

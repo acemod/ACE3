@@ -57,7 +57,7 @@ $ace-primary-color: #ba2619;
 // $rem-base: 16px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
-@import "foundation/functions";
+@import "./vendor/foundation/settings";
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -120,10 +120,12 @@ $font-weight-bold: 700;
 // $jet         : #222222;
 // $black       : #000000;
 
+$transition-default: all .15s ease;
+
 // We use these as default colors throughout
 // $primary-color: #008CBA;
 $primary-color: $ace-primary-color;
-
+$primary-color-lighter: lighten($primary-color, 28%);
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
