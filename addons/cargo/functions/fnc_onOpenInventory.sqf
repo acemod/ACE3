@@ -115,8 +115,11 @@ GVAR(interactionParadrop) = _container isKindOf "Air" && {
         if (isNull (findDisplay 602)) exitWith {
             [_id] call CBA_fnc_removePerFrameHandler;
         };
+
         _args params ["_loadBar", "_list"];
+        
         private _cargoItems = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
+        
         lbClear _list;
 
         // Display item names
@@ -155,5 +158,5 @@ GVAR(interactionParadrop) = _container isKindOf "Air" && {
         private _usedCargoCapacity = _cargoCapacity - ([GVAR(interactionVehicle)] call FUNC(getCargoSpaceLeft));
 
         _loadBar progressSetPosition (_usedCargoCapacity / _cargoCapacity);
-    }, 1, [_loadBar, _list]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_loadBar, _list]] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_waitUntilAndExecute;
