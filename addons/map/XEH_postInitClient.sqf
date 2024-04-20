@@ -65,15 +65,36 @@ GVAR(flashlights) = [] call CBA_fnc_createNamespace;
 // hide clock on map if player has no watch
 GVAR(hasWatch) = true;
 
-["loadout", {
-    params ["_unit"];
-    if (isNull _unit) exitWith {
+["unit", {
+    params ["_newPlayer", "_oldPlayer"];
+
+    private _ehID = _oldPlayer getVariable QGVAR(ehID);
+
+    if (!isNil "_ehID") then {
+        _oldPlayer removeEventHandler ["SlotItemChanged", _ehID];
+
+        _oldPlayer setVariable [QGVAR(ehID), nil];
+    };
+
+    if (isNull _newPlayer) exitWith {
         GVAR(hasWatch) = true;
     };
-    GVAR(hasWatch) = false;
-    {
-        if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
-    } forEach (assignedItems _unit);
+
+    _ehID = _newPlayer getVariable QGVAR(ehID);
+
+    if (isNil "_ehID") then {
+        _ehID = _newPlayer addEventHandler ["SlotItemChanged", {
+            params ["", "_item", "_slot", "_assign"];
+
+            if (_slot != TYPE_WATCH) exitWith {};
+
+            GVAR(hasWatch) = _assign && {_item isKindOf ["ItemWatch", configFile >> "CfgWeapons"]};
+        }];
+
+        _newPlayer setVariable [QGVAR(ehID), _ehID];
+
+        GVAR(hasWatch) = (_newPlayer getSlotItemName TYPE_WATCH) isKindOf ["ItemWatch", configFile >> "CfgWeapons"];
+    };
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 
