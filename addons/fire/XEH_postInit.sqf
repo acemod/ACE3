@@ -14,12 +14,28 @@
     };
 }] call CBA_fnc_addEventHandler;
 
-if (!isServer) exitWith {};
-
 ["CBA_settingsInitialized", {
     TRACE_1("settingsInit",GVAR(enabled));
 
     if (!GVAR(enabled)) exitWith {};
+
+    // Make burning wrecks into fire sources
+    ["AllVehicles", "Killed", {
+        params ["_vehicle", "", "", "_useEffects"];
+
+        if (_useEffects) then {
+            [QGVAR(addFireSource), [
+                _vehicle,
+                (boundingBoxReal [_vehicle, "FireGeometry"]) select 2,
+                BURN_MAX_INTENSITY,
+                QGVAR(wreck) + hashValue _vehicle,
+                {!isNull _this && {_this getEntityInfo 13}},
+                _vehicle
+            ]] call CBA_fnc_serverEvent;
+        };
+    }, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
+
+    if (!isServer) exitWith {};
 
     GVAR(fireSources) = createHashMap;
 
