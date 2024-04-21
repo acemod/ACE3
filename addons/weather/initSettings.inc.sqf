@@ -28,7 +28,6 @@ private _category = [format ["ACE %1", LLSTRING(Module_DisplayName)]];
     true, // isGlobal
     {
         [QGVAR(windSimulation), _this] call EFUNC(common,cbaSettings_settingChanged);
-        // uses recently implemented to stop wind Simulation when setting is disabled mid-mission.
         if (isServer) then {GVAR(disableWindSimulation) = !_this;};
     },
     false // Doesnt needs mission restart anymore
