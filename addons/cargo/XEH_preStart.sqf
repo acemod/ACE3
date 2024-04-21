@@ -44,7 +44,6 @@ private _class = "";
 
 uiNamespace setVariable [QGVAR(vehicleClasses_classEH), compileFinal str _vehicleClasses_addClassEH];
 uiNamespace setVariable [QGVAR(objectClasses_classEH), compileFinal str _objectClasses_addClassEH];
-uiNamespace setVariable [QGVAR(initializedVehicleClasses), compileFinal str _vehicleClasses_addAction];
 uiNamespace setVariable [QGVAR(initializedItemClasses), compileFinal str _itemClasses_addAction];
 
 TRACE_4("compiled",count _vehicleClasses_addClassEH,count _objectClasses_addClassEH,count _vehicleClasses_addAction,count _itemClasses_addAction);
