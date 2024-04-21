@@ -24,10 +24,10 @@ params ["_unit"];
 TRACE_2("params",_unit,typeOf _unit);
 
 // Exit if hearing is disabled OR autoAdd is disabled OR soldier has earplugs already in (persistence scenarios)
-if (!GVAR(enableCombatDeafness) || {!GVAR(autoAddEarplugsToUnits)} || {[_unit] call FUNC(hasEarPlugsIn)}) exitWith {};
+if (!GVAR(enableCombatDeafness) || {GVAR(autoAddEarplugsToUnits) == 0} || {[_unit] call FUNC(hasEarPlugsIn)}) exitWith {};
 
-// add earplugs if the soldier has a rocket launcher
-if ((secondaryWeapon _unit) != "") exitWith {
+// Add earplugs if enabled for everyone or if the soldier has a rocket launcher
+if (GVAR(autoAddEarplugsToUnits) == 2 || {(secondaryWeapon _unit) != ""}) exitWith {
     TRACE_1("has launcher - adding",_unit);
     _unit addItem "ACE_EarPlugs";
 };
