@@ -15,7 +15,7 @@ PREP(initObject);
 PREP(initVehicle);
 PREP(loadItem);
 PREP(moduleSettings);
-PREP(onMenuOpen);
+PREP(onOpenInventory);
 PREP(paradropItem);
 PREP(removeCargoItem);
 PREP(renameObject);

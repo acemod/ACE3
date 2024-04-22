@@ -38,6 +38,8 @@ private _cargoSpace = _space;
 if (_cargoSpace == (_vehicle call FUNC(getCargoSpaceLeft))) exitwith {};
 
 // Apply new space globally
+// Set Maximal Space required for Inventory UI
+_vehicle setVariable [QGVAR(spaceMax), _space, true];
 // Necessary to update value, even if no space, as API could be used again
 _vehicle setVariable [QGVAR(hasCargo), _space > 0, true];
 _vehicle setVariable [QGVAR(space), _cargoSpace, true];

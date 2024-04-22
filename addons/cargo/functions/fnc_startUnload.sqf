@@ -5,22 +5,25 @@
  *
  * Arguments:
  * 0: Unit doing the unloading <OBJECT>
+ * 1: Index of Unloading Item <NUMBER> (default: -1)
  *
  * Return Value:
  * None
  *
  * Example:
- * player call ace_cargo_fnc_startUnload
+ * [player, 1] call ace_cargo_fnc_startUnload
  *
  * Public: No
  */
 
-// This can be an object or a classname string
-private _item = call FUNC(getSelectedItem);
+disableSerialization;
+
+params [["_unit", objNull, [objNull]], ["_selected", -1, [0]]];
+
+_item = _selected call FUNC(getSelectedItem);
 
 if (isNil "_item") exitWith {};
 
-params ["_unit"];
 
 if (GVAR(interactionParadrop)) exitWith {
     // Close the cargo menu

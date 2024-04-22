@@ -15,15 +15,11 @@
  * Public: No
  */
 
-disableSerialization;
-
-private _display = uiNamespace getVariable QGVAR(menuDisplay);
-
-if (isNil "_display") exitWith {};
+params [["_index", -1, [0]]];
 
 private _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
 
 if (_loaded isEqualTo []) exitWith {};
 
 // This can be an object or a classname string
-_loaded param [lbCurSel (_display displayCtrl 100), nil]
+_loaded param [_index, nil]

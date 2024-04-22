@@ -66,55 +66,23 @@ if (isServer) then {
 // Servers and HCs do not require action menus (beyond this point)
 if (!hasInterface) exitWith {};
 
-// Unnecessary to add actions to a vehicle class that's already got them
-if (_type in GVAR(initializedVehicleClasses)) exitWith {};
+if (_vehicle getVariable [QGVAR(initVehicle),false]) exitWith {};
+private _tb = getNumber (_config >> "transportmaxbackpacks");
+private _tm = getNumber (_config >> "transportmaxmagazines");
+private _tw = getNumber (_config >> "transportmaxweapons");
+private _hasInventory = (_tb > 0 || _tm > 0 || _tw > 0);
+_vehicle setVariable [QGVAR(hasInventory), _hasInventory];
 
-// Vehicles given cargo via eden have their actions added to the object
-// So this function may run for multiple of the same class in that case
-if (_hasCargoConfig) then {
-    GVAR(initializedVehicleClasses) pushBack _type;
-
-    TRACE_1("Adding unload cargo action to class",_type);
-
-    [_type, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToClass);
-} else {
-    _vehicle setVariable [QGVAR(initVehicle), true];
-
-    TRACE_1("Adding unload cargo action to object",_vehicle);
-
-    [_vehicle, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToObject);
-};
-
-// Add the paradrop self interaction for planes and helicopters
-if (_vehicle isKindOf "Air") then {
-    private _condition = {
-        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
-        GVAR(enable) &&
-        {[_player, _target, []] call EFUNC(common,canInteractWith)} && {
-            private _turretPath = _target unitTurret _player;
-
-            (_player == currentPilot _target) || // Pilot/Co-pilot
-            {(getNumber ([_target, _turretPath] call CBA_fnc_getTurret >> "isCopilot")) == 1} || // Co-pilot
-            {_turretPath in (getArray (configOf _target >> QGVAR(loadmasterTurrets)))}
-        }
-    };
-
-    private _statement = {
-        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
-        GVAR(interactionVehicle) = _target;
-        GVAR(interactionParadrop) = true;
-        createDialog QGVAR(menu);
-    };
-
-    private _text = LLSTRING(openMenu);
-    private _icon = "";
-
-    private _action = [QGVAR(openMenu), _text, _icon, _statement, _condition] call EFUNC(interact_menu,createAction);
-
-    // Self action on the vehicle
-    if (_hasCargoConfig) then {
-        [_type, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToClass);
-    } else {
-        [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
-    };
+// This is a Hack to add the Gear Action and thus the Cargo UI to vehicles/Objects that dont naturally have a Gear Action
+if (!_hasInventory) then {
+    private _cfgAction = configFile >> "CfgActions" >> "Gear";
+    private _title = getText (_cfgAction >> "text");
+    private _hideOnUse = getNumber (_cfgAction >> "hideOnUse") == 1;
+    private _showWindow = getNumber (_cfgAction >> "showWindow") == 1;
+    private _textDefault = getText (_cfgAction >> "textDefault");
+    private _shortcut = getText (_cfgAction >> "shortcut");
+    private _id = _vehicle addAction [_title, {
+        ACE_Player action ["Gear", objNull];
+    }, nil, 5.1, _showWindow, _hideOnUse, _shortcut, "!(lockedInventory _target)"];
+    _vehicle setUserActionText [_id, _title, _textDefault];
 };

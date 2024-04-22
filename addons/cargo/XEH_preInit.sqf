@@ -9,7 +9,6 @@ PREP_RECOMPILE_END;
 #include "initSettings.inc.sqf"
 
 GVAR(initializedItemClasses) = [];
-GVAR(initializedVehicleClasses) = [];
 GVAR(cargoHolderTypes) = ["Car", "Air", "Tank", "Ship", "Cargo_base_F", "Land_PaperBox_closed_F"] apply {_x call EFUNC(common,getConfigName)}; // make sure they are config case
 GVAR(disableParadropEffectsClasstypes) = ["Car_F"] apply {_x call EFUNC(common,getConfigName)};
 
