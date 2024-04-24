@@ -42,12 +42,9 @@ if (_weapon == "") exitWith {};
 
 // Cache maximum loadness for future calls
 private _maxLoudness = GVAR(cacheMaxAmmoLoudness) getOrDefaultCall [_weapon, {
-    private _cfgMagazines = configFile >> "CfgMagazines";
-
     // Get the weapon's compatible magazines, so that all magazines are cached
-    private _maxLoudness = selectMax ((compatibleMagazines _weapon) apply {
-        [_magazine, getText (_cfgMagazines >> _x >> "ammo")] call FUNC(getAmmoLoudness)
-    });
+    // From all the loudness factors, take the max
+    private _maxLoudness = selectMax ((compatibleMagazines _weapon) apply {_x call FUNC(getAmmoLoudness)});
 
     // ace_gunbag_fnc_isMachineGun
     private _config = _weapon call CBA_fnc_getItemConfig;

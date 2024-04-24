@@ -9,7 +9,7 @@
  * 2: Distance in meters between the unit and firer <NUMBER>
  * 3: Weapon <STRING>
  * 4: Muzzle <STRING>
- * 5: Current mode of the fired weapon <STRING> (unused)
+ * 5: Current mode of the fired weapon <STRING>
  * 6: Ammo <STRING>
  * 7: Unit that fired the weapon <STRING>
  *
@@ -22,7 +22,7 @@
  * Public: No
  */
 
-params ["", "_firer", "_distance", "_weapon", "_muzzle", "", "_ammo", "_gunner"];
+params ["", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gunner"];
 
 if (_weapon in ["Throw", "Put"]) exitWith {};
 if (_distance > 50) exitWith {};
@@ -30,41 +30,31 @@ if (_distance > 50) exitWith {};
 private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (
     (ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}
 );
-private _distance = 1 max _distance;
+_distance = 1 max _distance;
 private _audibleFireCoef = 1;
 
+// Unit that fired is on foot
 private _magazine = if (_gunner == _firer) then {
-    // Unit that is firing is on foot
-    private _weaponItems = weaponsItems [_firer, true];
-    private _index = _weaponItems findIf {(_x select 0) == _weapon};
-
-    if (_index == -1) exitWith {""};
-
-    _weaponItems = _weaponItems select _index;
-
     // Check if the unit has a suppressor
-    private _suppressor = _weaponItems select 1;
+    private _suppressor = (_firer weaponAccessories _weapon) select 0;
 
     if (_suppressor != "") then {
         _audibleFireCoef = getNumber (configFile >> "CfgWeapons" >> _suppressor >> "ItemInfo" >> "AmmoCoef" >> "audibleFire");
     };
 
-    // Check if the secondary muzzle was fired; If not, assume it's the primary muzzle
-    if (_weaponItems select 5 param [2, ""] == _muzzle) then {
-        _weaponItems select 5 param [0, ""]
-    } else {
-        _weaponItems select 4 param [0, ""]
-    };
+    (_firer weaponState _muzzle) select 3
 } else {
-    // Unit that is firing is in a vehicle
-    _firer currentMagazineTurret (_firer unitTurret _gunner)
+    // Unit that fired is in a vehicle
+    (weaponState [_firer, _firer unitTurret _gunner, _weapon, _muzzle, _mode]) select 3
 };
 
 if (_magazine == "") exitWith {
     TRACE_5("No mag for weapon/ammo??",_weapon,_muzzle,_ammo,_firer,_gunner);
 };
 
-private _loudness = [_magazine, _ammo] call FUNC(getAmmoLoudness);
+TRACE_6("mag",_magazine,_weapon,_muzzle,_ammo,_firer,_gunner);
+
+private _loudness = _magazine call FUNC(getAmmoLoudness);
 
 _loudness = _loudness * _audibleFireCoef;
 private _strength = _vehAttenuation * (_loudness - (_loudness / 50 * _distance)); // linear drop off

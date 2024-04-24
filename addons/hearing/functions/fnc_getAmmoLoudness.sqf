@@ -2,26 +2,28 @@
 /*
  * Author: KoffeinFlummi, commy2, johnb43
  * Get the loudness of ammo.
- * Because `initSpeed` is a magazine attribute however, the magazine name is used instead of the ammo.
+ * However, because `initSpeed` is a magazine attribute, the magazine name needs to be used instead of the ammo.
  *
  * Arguments:
  * 0: Magazine <STRING>
- * 1: Ammo <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["30Rnd_65x39_caseless_mag", "B_65x39_Caseless"] call ace_hearing_fnc_getAmmoLoudness
+ * "30Rnd_65x39_caseless_mag" call ace_hearing_fnc_getAmmoLoudness
  *
  * Public: No
  */
 
-params ["_magazine", "_ammo"];
+params ["_magazine"];
 
 GVAR(cacheAmmoLoudness) getOrDefaultCall [_magazine, {
+    private _magazineConfig = configFile >> "CfgMagazines" >> _magazine;
+    private _ammo = getText (_magazineConfig >> "ammo");
+    private _initSpeed = getNumber (_magazineConfig >> "initSpeed");
+
     private _cfgAmmo = configFile >> "CfgAmmo";
-    private _initSpeed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
     private _ammoConfig = _cfgAmmo >> _ammo;
     private _caliber = getNumber (_ammoConfig >> "ACE_caliber");
 
@@ -39,4 +41,4 @@ GVAR(cacheAmmoLoudness) getOrDefaultCall [_magazine, {
     TRACE_5("building cache",_ammo,_magazine,_initSpeed,_caliber,_loudness);
 
     _loudness
-}, true];
+}, true]
