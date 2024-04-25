@@ -510,7 +510,7 @@ class CfgVehicles {
         };
 
         GVAR(space) = 2;
-        GVAR(hasCargo) = 2;
+        GVAR(hasCargo) = 1;
         GVAR(size) = 3;
         GVAR(canLoad) = 1;
 
@@ -524,7 +524,7 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
         GVAR(space) = 3;
-        GVAR(hasCargo) = 3;
+        GVAR(hasCargo) = 1;
         GVAR(size) = 3;
         GVAR(canLoad) = 1;
 
