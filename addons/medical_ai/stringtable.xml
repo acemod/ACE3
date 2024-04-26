@@ -20,7 +20,7 @@
         <Key ID="STR_ACE_Medical_AI_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
             <German>KI reagiert auf Verletzungen und Bewusstlosigkeit</German>
-            <Japanese>AIが負傷者と気絶している人に対して行動するようになります。</Japanese>
+            <Japanese>AIが負傷者と無意識状態の人に対して行動するようになります。</Japanese>
             <Russian>ИИ будет реагировать на травмы и потерю сознания</Russian>
             <French>Les unités IA seront sensibles aux blessures, ainsi qu'à la perte de connaissance.</French>
             <Portuguese>A IA irá responder a ferimentos e perdas de consciência</Portuguese>
