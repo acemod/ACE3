@@ -155,9 +155,9 @@ if (_callbackProgress isEqualTo {}) then {
     _callbackProgress = {true};
 };
 
-[_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem] call _callbackStart;
+[_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem, _createLitter] call _callbackStart;
 
-["ace_treatmentStarted", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem]] call CBA_fnc_localEvent;
+["ace_treatmentStarted", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem, _createLitter]] call CBA_fnc_localEvent;
 
 [
     _treatmentTime,
