@@ -578,7 +578,7 @@
             <Russian>Время в секундах, которое занимает взаимодействие со шлангом.</Russian>
             <Spanish>Cuanto tiempo en segundos tardan las interacciones de repostado.</Spanish>
             <Italian>Durata delle interazioni in secondi.</Italian>
-            <Japanese>燃料補給に掛かる時間 (秒)</Japanese>
+            <Japanese>燃料補給に掛かる時間。 (秒単位)</Japanese>
             <Polish>Jak długo powinna trwać interakcja tankowania w sekundach.</Polish>
             <German>Wie lange Auftank-Interaktionen in Sekunden dauern.</German>
             <French>Durée des interactions de ravitaillement en secondes.</French>
