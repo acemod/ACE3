@@ -1834,7 +1834,7 @@
             <Korean>무기 흔들림</Korean>
             <French>Oscillation de l'arme</French>
             <Russian>Колебание оружия</Russian>
-            <German>Waffen Wackeln</German>
+            <German>Waffen schwanken</German>
         </Key>
         <Key ID="STR_ACE_Common_EnableSway">
             <English>Enable Weapon Sway</English>
@@ -1842,7 +1842,7 @@
             <Korean>무기 흔들림 추가</Korean>
             <French>Activer l'oscillation de l'arme</French>
             <Russian>Включить колебание оружия</Russian>
-            <German>Aktiviere Waffen Wackeln</German>
+            <German>Aktiviere Waffen schwanken</German>
         </Key>
         <Key ID="STR_ACE_Common_EnableSway_Description">
             <English>Enables weapon sway influenced by sway factors, such as stance, fatigue and medical condition.\nDisabling this setting will defer sway to vanilla or other mods.</English>
@@ -1850,7 +1850,7 @@
             <Korean>흔들림 계수, 자세, 피로도, 건강 상태 등의 요인에 영향을 받는 무기 흔들림을 활성화합니다.\n이 설정을 비활성화하면 바닐라 또는 다른 모드의 흔들림으로 대체됩니다.</Korean>
             <French>Active l'oscillation de l'arme influencé par les facteurs d'oscillation, tels que la position, la fatigue et l'état de santé.\nLa désactivation de ce paramètre reportera l'oscillation à vanilla ou à d'autres mods.</French>
             <Russian>Активируйте колебание оружия в зависимости от таких факторов, как стойка, усталость и состояние здоровья.\nОтключение этого параметра приведет к переносу раскачивания на vanilla или другие моды.</Russian>
-            <German>Ermöglicht die Beeinflussung des Waffen wackeln durch Beeinflussungsfaktoren wie Haltung, Müdigkeit und Gesundheitszustand.\nDie Deaktivierung dieser Einstellung erlaubt die Beeinflussung durch Vanilla oder andere Mods.</German>
+            <German>Ermöglicht die Beeinflussung des Waffen-Schwankens durch Beeinflussungsfaktoren wie Haltung, Müdigkeit und Gesundheitszustand.\nDie Deaktivierung dieser Einstellung erlaubt die Beeinflussung durch Vanilla oder andere Mods.</German>
         </Key>
         <Key ID="STR_ACE_Common_SwayFactor">
             <English>Sway factor</English>
