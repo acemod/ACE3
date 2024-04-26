@@ -226,6 +226,7 @@
             <Japanese>傷口が開くのを防ぐ</Japanese>
             <Russian>Предотвратить повторное открытие ран</Russian>
             <French>Empêcher la réouverture des plaies</French>
+            <German>Verhindert, dass sich Wunden wieder öffnen</German>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_Description">
             <English>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma and may require additional %3Sutures%4 to close wounds. Sutures are consumable, much like bandages, and are not a replacement for the Surgical Kit.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</English>
@@ -234,6 +235,7 @@
             <Portuguese>O %3Kit Cirúrgico%4 é utilizado para prevenir a reabertura de feridas após a aplicação de bandagens. A depender das configurações, ele também pode remover traumas e pode requerir %3Suturas%4 adicionais para fechar feridas. Suturas são consumíveis, tal como as bandagens, e não são substituem o Kit Cirúrgico.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Utilize [%3%13%4] ou [%3%14%4] e selecione %3Tratamento Avançado%4.&lt;br/&gt;%2Selecione %3Usar Kit Cirúrgico%4.</Portuguese>
             <Italian>Un %3Kit Chirurgico%4 è usato per impedire che ferite bendate si riaprano. A seconda delle impostazioni, può anche azzerare danni o potrebbe richiedere %3Suture%4 aggiuntive per chiudere ferite. Suture sono consumabili proprio come bende, non sono un sostituto per un Kit Chirurgico.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%13%4] o [%3%14%4] e seleziona %3Trattamenti Avanzati%4.&lt;br/&gt;%2Seleziona %3Usa Kit Chirurgico%4.</Italian>
             <Japanese>%3手術キット%4は包帯を巻いた傷口が再度開いて出血するのを防ぎます。設定によっては、負傷を取り除いたり、傷口を閉じるのに%3糸付縫合針%4を必要としたりします。糸付縫合針は消耗品で包帯のように使用され、手術キットを代替するものではありません。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って%3高度な治療%4を選択する。&lt;br/&gt;%2%3手術キット%4を選択して使用します。</Japanese>
+            <German>Ein %3Chirurgisches Kit%4 wird verwendet, um zu verhindern, dass sich Wunden nach dem Verbinden wieder öffnen. Abhängig von den Einstellungen kann es auch Traumata beseitigen und erfordert möglicherweise zusätzliche %3Nähte%4, um Wunden zu schließen. Nahtmaterial ist, ähnlich wie Bandagen, Verbrauchsmaterial und kein Ersatz für das Chirurgie-Set.&lt;br/&gt;&lt;br/&gt;%3Verwendung:%4&lt;br/&gt;%2Verwenden Sie [%3%13%4] oder [%3% 14%4] und wählen Sie %3Erweiterte Behandlung%4.&lt;br/&gt;%2Wählen Sie %3Chirurgisches Kit verwenden%4.</German>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_ShortName">
             <English>Stop Bleeding</English>
@@ -244,6 +246,7 @@
             <Japanese>出血を止める</Japanese>
             <Russian>Остановить кровотечение</Russian>
             <French>Arrêter les saignements</French>
+            <German>Stoppt Blutung</German>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_Description">
             <English>A %3Tourniquet%4 stops bleeding temporarily so that a wound(s) can be bandaged. Can only be used on limbs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Tourniquet%4.</English>
@@ -252,6 +255,7 @@
             <Portuguese>O %3Torniquete%4 interrompe o sangramento temporariamente, para que feridas possam ser enfaixadas. Seu uso é restrito aos membros.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Utilize [%3%13%4] ou [%3%14%4] e selecione um membro afetado.&lt;br/&gt;%2Selecione %3Aplicar Torniquete%4.</Portuguese>
             <Italian>Un %3Laccio Emostatico%4 ferma emorragie temporaneamente in modo da poter bendare ferite con calma. Utilizzabile su arti.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%13%4] o [%3%14%4] e seleziona un arto afflitto.&lt;br/&gt;%2Seleziona %3Applica Laccio Emostatico%4.</Italian>
             <Japanese>%3止血帯%4は一時的に出血を止め、その間に傷に包帯を巻くことができます。四肢にのみ使用できます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って使用したい四肢を選択します。&lt;br/&gt;%2%3止血帯を巻く%4を選択して使用します。</Japanese>
+            <German>Ein %3Tourniquet%4 stoppt die Blutung vorübergehend, sodass eine oder mehrere Wunden verbunden werden können. Kann nur an Gliedmaßen verwendet werden.&lt;br/&gt;&lt;br/&gt;%3Verwendung:%4&lt;br/&gt;%2Verwenden Sie [%3%13%4] oder [%3%14%4] und wählen Sie ein betroffenes Glied aus.&lt; br/&gt;%2Wählen Sie %3Tourniquet anwenden%4.</German>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_MedicalMenu_DisplayName">
             <English>Medical Menu</English>

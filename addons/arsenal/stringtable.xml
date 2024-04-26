@@ -1245,6 +1245,7 @@
             <Russian>Интегрирован тепловизор.</Russian>
             <Korean>열화상 내장</Korean>
             <French>Thermique intégrée</French>
+            <German>Thermal integriert</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_intPrimTi">
             <English>Thermal &amp; Primary integrated</English>
@@ -1253,6 +1254,7 @@
             <Russian>Интегрирован тепловизор и осн.прицел.</Russian>
             <Korean>열화상과 주무기 내장</Korean>
             <French>Thermique et primaire intégrés</French>
+            <German>Thermal &amp; Primär integriert</German>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
             <English>Not Supported</English>
