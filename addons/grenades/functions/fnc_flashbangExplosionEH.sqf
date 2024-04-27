@@ -46,7 +46,7 @@ if (hasInterface) then {
 private _affected = (ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20];
 _affected = _affected - [ACE_player];
 {
-    if (local _x && {alive _x} && {!(_x call EFUNC(common,isPlayer))}) then {
+    if (local _x && {_x call EFUNC(common,isAwake)} && {!(_x call EFUNC(common,isPlayer))}) then {
         private _unit = _x;
         private _strength = 1 - (((eyePos _unit) vectorDistance _grenadePosASL) min 20) / 20;
 
