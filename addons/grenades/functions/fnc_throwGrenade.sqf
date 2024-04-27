@@ -27,40 +27,26 @@ if (isNull _projectile) then {
 
 private _config = configFile >> "CfgAmmo" >> _ammo;
 
-// handle special grenades and sounds
+// Handle special grenades and sounds
 if (local _unit) then {
-    // handle priming sound, if present
-    private _soundConfig = getArray (configFile >> "CfgAmmo" >> _ammo >> QGVAR(pullPinSound));
+    // Handle priming sound, if present
+    private _soundConfig = getArray (_config >> QGVAR(pullPinSound));
+
     if (_soundConfig isNotEqualTo []) then {
         _soundConfig params ["_file", "_volume", "_pitch", "_distance"];
-        playSound3D [_file, objNull, false, getPosASL _projectile, _volume, _pitch, _distance];
+        playSound3D [_file, objNull, insideBuilding _unit >= 0.5, getPosASL _projectile, _volume, _pitch, _distance];
     };
 
     if (getNumber (_config >> QGVAR(flashbang)) == 1) then {
-        private _bangs = 1;
-        private _entry = _config >> QGVAR(flashbangBangs);
-        if (isNumber _entry || isText _entry) then {
-            _bangs = getNumber _entry;
-        };
-
         private _fuzeTimeBase = getNumber (_config >> "explosionTime");
-
-        private _interval = 0.5;
-        _entry = _config >> QGVAR(flashbangInterval);
-        if (isNumber _entry || isText _entry) then {
-            _interval = getNumber _entry;
-        };
-
-        private _maxDeviation = 0.1;
-        _entry = _config >> QGVAR(flashbangIntervalMaxDeviation);
-        if (isNumber _entry || isText _entry) then {
-            _maxDeviation = getNumber _entry;
-        };
+        private _bangs = [_config >> QGVAR(flashbangBangs), "NUMBER", 1] call CBA_fnc_getConfigEntry;
+        private _interval = [_config >> QGVAR(flashbangInterval), "NUMBER", 0.5] call CBA_fnc_getConfigEntry;
+        private _maxDeviation = [_config >> QGVAR(flashbangIntervalMaxDeviation), "NUMBER", 0.1] call CBA_fnc_getConfigEntry;
 
         for "_i" from 0 to (_bangs - 1) do {
-            private _fuzeTime = _fuzeTimeBase + _i*_interval + random [- _maxDeviation, 0, _maxDeviation];
+            private _fuzeTime = _fuzeTimeBase + _i * _interval + random [-_maxDeviation, 0, _maxDeviation];
 
-            [FUNC(flashbangThrownFuze), [_projectile], _fuzeTime] call CBA_fnc_waitAndExecute;
+            [LINKFUNC(flashbangThrownFuze), _projectile, _fuzeTime] call CBA_fnc_waitAndExecute;
         };
     };
 };
@@ -71,17 +57,17 @@ if (getNumber (_config >> QGVAR(flare)) == 1) then {
     private _color = getArray (_config >> QGVAR(color));
     private _intensity = _color deleteAt 3;
 
-    [FUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime] call CBA_fnc_waitAndExecute;
+    [LINKFUNC(flare), [_projectile, _color, _intensity, _timeToLive], _fuzeTime] call CBA_fnc_waitAndExecute;
 };
 
 if (getNumber (_config >> QGVAR(incendiary)) == 1) then {
     private _fuzeTime = getNumber (_config >> "explosionTime");
     private _timeToLive = getNumber (_config >> "timeToLive");
 
-    [FUNC(incendiary), [_projectile, _timeToLive, side _unit], _fuzeTime] call CBA_fnc_waitAndExecute; // WE WANT THE OBJECTS SIDE HERE!
+    [LINKFUNC(incendiary), [_projectile, _timeToLive, side group _unit], _fuzeTime] call CBA_fnc_waitAndExecute; // get the unit's real side (will return civilian if unconscious)
 };
 
-// handle throw modes
+// Handle throw modes
 if (_unit != ACE_player) exitWith {};
 if (_unit getVariable [QEGVAR(advanced_throwing,primed), false]) exitWith {LOG("advanced_throwing throw");};
 
@@ -91,24 +77,22 @@ if (_mode != 0) then {
     private _velocity = velocity _projectile;
 
     switch (_mode) do {
-        //high throw
-        case 1 : {
-            _velocity = [
-            0.5 * (_velocity select 0),
-            0.5 * (_velocity select 1),
-            [0, 0, 0] distance (_velocity vectorMultiply 0.5)
-            ];
+        // High throw
+        case 1: {
+            _velocity = _velocity vectorMultiply 0.5;
+
+            _velocity set [2, vectorMagnitude _velocity];
         };
-        //precise throw
-        case 2 : {
+        // Precise throw
+        case 2: {
             _velocity = (_unit weaponDirection _weapon) vectorMultiply (vectorMagnitude _velocity);
         };
-        //roll grande
-        case 3 : {
+        // Roll grande
+        case 3: {
             //@todo
         };
-        //drop grenade
-        case 4 : {
+        // Drop grenade
+        case 4: {
             _velocity = [0, 0, 0];
         };
     };

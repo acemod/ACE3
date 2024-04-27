@@ -16,12 +16,7 @@
  */
 
 private _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
-
-if (_mode == 4) then {
-    _mode = 0;
-} else {
-    _mode = _mode + 1;
-};
+_mode = (_mode + 1) % 5;
 
 // ROLL GRENADE DOESN'T WORK RIGHT NOW
 if (_mode == 3) then {

@@ -4,7 +4,7 @@
  * Makes incendiary burn.
  *
  * Arguments:
- * 0: The grenade <OBJECT>
+ * 0: Incendiary grenade <OBJECT>
  * 1: Incendiary lifetime <OBJECT>
  *
  * Return Value:
@@ -47,11 +47,11 @@ private _nearLocalEnemies = [];
 
 {
     {
-        if (local _x && {[_center, side _x] call BIS_fnc_sideIsEnemy}) then { // WE WANT THE OBJECTS SIDE HERE!
+        if (local _x && {[_center, side group _x] call BIS_fnc_sideIsEnemy}) then { // WE WANT THE OBJECTS SIDE HERE!
             _nearLocalEnemies pushBackUnique _x;
         };
     } forEach crew _x;
-} forEach (_position nearObjects ALERT_NEAR_ENEMY_RANGE);
+} forEach (_position nearObjects ALERT_NEAR_ENEMY_RANGE); // replace with nearEntities in 2.18
 
 {
     if (behaviour _x in ["SAFE", "AWARE"]) then {
@@ -157,6 +157,7 @@ if (isServer) then {
     _sound = createSoundSource ["Sound_Fire", _position, [], 0];
     private _radius = 1.5 * getNumber (configOf _projectile >> "indirectHitRange");
     private _intensity = getNumber (configOf _projectile >> "hit");
+
     [QEGVAR(fire,addFireSource), [_projectile, _radius, _intensity, _projectile, {CBA_missionTime < _this}, CBA_missionTime + _timeToLive]] call CBA_fnc_serverEvent;
 };
 
@@ -166,40 +167,36 @@ if (isServer) then {
 
 // --- damage
 {
-    if (local _x) then {
-        //systemChat format ["burn: %1", _x];
+    // --- inflame fireplace, barrels etc.
+    _x inflame true;
 
-        // --- destroy nearby static weapons and ammo boxes
-        if (_x isKindOf "StaticWeapon" || {_x isKindOf "ACE_RepairItem_Base"}) then {
+    // --- destroy nearby static weapons and ammo boxes
+    if (_x isKindOf "StaticWeapon" || {_x isKindOf "ACE_RepairItem_Base"}) then {
+        _x setDamage 1;
+
+        continue;
+    };
+
+    if (_x isKindOf "ReammoBox_F") then {
+        if (
+            ["ace_cookoff"] call EFUNC(common,isModLoaded) &&
+            {GETVAR(_x,EGVAR(cookoff,enableAmmoCookoff),EGVAR(cookoff,enableAmmobox))}
+        ) then {
+            _x call EFUNC(cookoff,cookOffBox);
+        } else {
             _x setDamage 1;
         };
-        if (_x isKindOf "ReammoBox_F") then {
-            if (
-                "ace_cookoff" call EFUNC(common,isModLoaded) &&
-                {GETVAR(_x,EGVAR(cookoff,enableAmmoCookoff),EGVAR(cookoff,enableAmmobox))}
-            ) then {
-                _x call EFUNC(cookoff,cookOffBox);
-            } else {
-                _x setDamage 1;
-            };
-        };
 
-        // --- delete nearby ground weapon holders
-        if (_x isKindOf "WeaponHolder" || {_x isKindOf "WeaponHolderSimulated"}) then {
-            deleteVehicle _x;
-        };
-
-        // --- inflame fireplace, barrels etc.
-        _x inflame true;
+        continue;
     };
-} forEach (_position nearObjects DESTRUCTION_RADIUS);
 
-// --- damage local vehicle
-private _vehicle = _position nearestObject "Car";
+    // --- delete nearby ground weapon holders
+    if (_x isKindOf "WeaponHolder" || {_x isKindOf "WeaponHolderSimulated"}) then {
+        deleteVehicle _x;
 
-if (!local _vehicle) exitWith {};
-
-private _config = configOf _vehicle;
+        continue;
+    };
+} forEach ((_position nearObjects DESTRUCTION_RADIUS) select {local _x && {isDamageAllowed _x}});
 
 // --- burn tyres
 private _fnc_isWheelHitPoint = {
@@ -212,30 +209,38 @@ private _fnc_isWheelHitPoint = {
 };
 
 {
-    private _wheelSelection = getText (_config >> "HitPoints" >> _x >> "name");
+    // --- damage local vehicles
+    private _vehicle = _x;
+    private _config = configOf _vehicle >> "HitPoints";
 
-    if (_wheelSelection call _fnc_isWheelHitPoint) then {
-        private _wheelPosition = _vehicle modelToWorld (_vehicle selectionPosition _wheelSelection);
+    {
+        private _wheelSelection = getText (_config >> _x >> "name");
 
-        if (_position distance _wheelPosition < EFFECT_SIZE * 2) then {
-            _vehicle setHit [_wheelSelection, 1];
+        if (_wheelSelection call _fnc_isWheelHitPoint) then {
+            private _wheelPosition = _vehicle modelToWorld (_vehicle selectionPosition _wheelSelection);
+
+            if (_position distance _wheelPosition < EFFECT_SIZE * 2) then {
+                _vehicle setHit [_wheelSelection, 1];
+            };
+        };
+    } forEach (getAllHitPointsDamage _vehicle param [0, []]);
+
+    // --- burn car engine
+    if (_vehicle isKindOf "Wheeled_APC_F") then {
+        continue;
+    };
+
+    private _engineSelection = getText (_config >> "HitEngine" >> "name");
+    private _enginePosition = _vehicle modelToWorld (_vehicle selectionPosition _engineSelection);
+
+    if (_position distance _enginePosition < EFFECT_SIZE * 2) then {
+        _vehicle setHit [_engineSelection, 1];
+
+        if (["ace_cookoff"] call EFUNC(common,isModLoaded)) then {
+            private _enabled = _vehicle getVariable [QEGVAR(cookoff,enable), EGVAR(cookoff,enable)];
+            if (_enabled in [2, true] || {_enabled isEqualTo 1 && {fullCrew [_vehicle, "", false] findIf {isPlayer (_x select 0)} != -1}}) then {
+                _vehicle call EFUNC(cookoff,engineFire);
+            };
         };
     };
-} forEach (getAllHitPointsDamage _vehicle param [0, []]);
-
-// --- burn car engine
-if (_vehicle isKindOf "Wheeled_APC_F") exitWith {};
-
-private _engineSelection = getText (_config >> "HitPoints" >> "HitEngine" >> "name");
-private _enginePosition = _vehicle modelToWorld (_vehicle selectionPosition _engineSelection);
-
-if (_position distance _enginePosition < EFFECT_SIZE * 2) then {
-    _vehicle setHit [_engineSelection, 1];
-
-    if ("ace_cookoff" call EFUNC(common,isModLoaded)) then {
-        private _enabled = _vehicle getVariable [QEGVAR(cookoff,enable), EGVAR(cookoff,enable)];
-        if (_enabled in [2, true] || {_enabled isEqualTo 1 && {fullCrew [_vehicle, "", false] findIf {isPlayer (_x select 0)} != -1}}) then {
-            _vehicle call EFUNC(cookoff,engineFire);
-        };
-    };
-};
+} forEach ((_position nearEntities ["Car", 10]) select {local _x && {isDamageAllowed _x}});

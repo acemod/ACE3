@@ -1,6 +1,7 @@
 // by commy2
 
 #include "script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 ["ace_flashbangExploded", LINKFUNC(flashbangExplosionEH)] call CBA_fnc_addEventHandler;
 
@@ -15,7 +16,7 @@ GVAR(flashbangPPEffectCC) = ppEffectCreate ["ColorCorrections", 4265];
 GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
 
 // Add keybinds
-["ACE3 Weapons", QGVAR(switchGrenadeMode), localize LSTRING(SwitchGrenadeMode), {
+["ACE3 Weapons", QGVAR(switchGrenadeMode), LLSTRING(SwitchGrenadeMode), {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
@@ -24,11 +25,11 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
     if (ACE_player getVariable [QEGVAR(advanced_throwing,inHand), false]) exitWith {false};
 
     // Statement
-    [] call FUNC(nextMode);
-}, {false}, [9, [false, false, false]], false] call CBA_fnc_addKeybind; //8 Key
+    call FUNC(nextMode) // return
+}, {}, [DIK_8, [false, false, false]], false] call CBA_fnc_addKeybind; // 8 Key
 
 ["CBA_settingsInitialized", {
     if (GVAR(convertExplosives)) then {
-        [] call FUNC(addChangeFuseItemContextMenuOptions);
+        call FUNC(addChangeFuseItemContextMenuOptions);
     };
 }] call CBA_fnc_addEventHandler;
