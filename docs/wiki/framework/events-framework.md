@@ -38,9 +38,9 @@ The vehicle events will also have the following local variables available `_gunn
 |`ace_unconscious` | [_unit, _state(BOOL)] | Global | Listen | Unit's unconscious state changed |
 |`ace_placedInBodyBag` | [_target, _bodyBag, _isGrave] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted, target could be a bodybag) |
 |`ace_placedInGrave` | [_target, _grave] | Global | Listen | Target placed into a grave, _grave will be objNull if `Create Grave Markers` is disabled Note: (Target will soon be deleted) |
-|`ace_treatmentStarted` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has started (local on the _caller) |
-|`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action is completed (local on the _caller) |
-|`ace_treatmentFailed` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has been interrupted (local on the _caller) |
+|`ace_treatmentStarted` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem, _createLitter] | Local | Listen | Treatment action has started (local on the _caller) |
+|`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem, _createLitter] | Local | Listen | Treatment action is completed (local on the _caller) |
+|`ace_treatmentFailed` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem, _createLitter] | Local | Listen | Treatment action has been interrupted (local on the _caller) |
 |`ace_medical_handleUnitVitals` | [_unit, _deltaT] | Local | Listen | Vitals update ran for unit, _deltaT is the time elapsed since the previous vitals update (local to _unit) |
 |`ace_medical_treatment_bandaged` | [_medic, _patient, _bodyPart, _className, _itemUser, _usedItem, _createLitter, _bandageEffectiveness] | Local | Listen | _medic has bandaged _patient, the array can be modified to change treatment parameters (local to _medic) |
 

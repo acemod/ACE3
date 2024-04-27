@@ -498,7 +498,7 @@
             <Chinesesimp>设定当玩家有错误的 PBO 时要如何处理。</Chinesesimp>
             <Czech>Nastavuje jakou akci provést pokud hráč nemá správné PBO.</Czech>
             <Polish>Określa akcję, która ma być podjęta, jeśli gracz nie ma właściwych PBO.</Polish>
-            <Japanese>プレイヤーが不正規のPBOを所持している場合の動作を決定します。</Japanese>
+            <Japanese>プレイヤーが不正規のPBOを所持している場合の動作を定義します。</Japanese>
             <Spanish>Define la accion a tomar si un jugador no tiene el PBO correcto</Spanish>
             <Italian>Definisce l'azione che verrà presa se il giocatore non ha gli stessi PBO.</Italian>
             <Russian>Определяет, какое действие будет предпринято, если игрок не имеет корректные PBO.</Russian>
@@ -1582,7 +1582,7 @@
         </Key>
         <Key ID="STR_ACE_Common_progressBarInfoDesc">
             <English>Controls extra information shown in progress bar.</English>
-            <Japanese>プログレス バーへ表示される情報量を決定します。</Japanese>
+            <Japanese>プログレス バーへ表示される情報量を制御します。</Japanese>
             <French>Définit quelles informations supplémentaires sont affichées dans la barre de progression.</French>
             <Russian>Устанавливает дополнительную информацию в индикаторе процесса.</Russian>
             <German>Kontrolliert zusätzliche Informationen beim Fortschrittsbalkens.</German>
