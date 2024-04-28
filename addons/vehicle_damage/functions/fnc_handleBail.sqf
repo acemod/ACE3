@@ -29,8 +29,6 @@ private _rand = random 1;
 
 if (_isCar) then {
     if (!_canMove) then {
-        if (_vehicle getVariable [QGVAR(allowCrewInImmobile), false]) exitWith {}; // check for API
-
         _vehicle call FUNC(abandon);
 
         TRACE_3("car immobile - bailing",_vehicle,_canMove,_isCar);
@@ -38,8 +36,6 @@ if (_isCar) then {
 } else {
     // If you can't move and you can't shoot, you better GTFO
     if (!_canMove && !_canShoot) exitWith {
-        if (_vehicle getVariable [QGVAR(allowCrewInImmobile), false]) exitWith {}; // check for API
-
         _vehicle call FUNC(abandon);
 
         TRACE_3("immobile and can't shoot - bailing",_vehicle,_canMove,_canShoot);
@@ -47,7 +43,7 @@ if (_isCar) then {
 
     if (!_canShoot) then {
         // 50% chance of bailing out if turret/gun is disabled
-        if (BAILOUT_CHANCE_SHOOT > _rand && {!(_vehicle getVariable [QGVAR(allowCrewInImmobile), false])}) then { // check for API
+        if (BAILOUT_CHANCE_SHOOT > _rand) then {
             _vehicle call FUNC(abandon);
 
             TRACE_4("can't shoot - bailing",_vehicle,_rand,_canMove,_canShoot);
@@ -60,7 +56,7 @@ if (_isCar) then {
 
     if (!_canMove) then {
         // 80% Chance of bailing out if engine is disabled
-        if (BAILOUT_CHANCE_MOVE > _rand && {!(_vehicle getVariable [QGVAR(allowCrewInImmobile), false])}) then { // check for API
+        if (BAILOUT_CHANCE_MOVE > _rand) then {
             _vehicle call FUNC(abandon);
 
             TRACE_4("immobile - bailing",_vehicle,_rand,_canMove,_canShoot);

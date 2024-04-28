@@ -17,6 +17,8 @@
 
 params ["_vehicle"];
 
+if (_vehicle getVariable [QGVAR(allowCrewInImmobile), false]) exitWith {}; // check for API
+
 TRACE_2("abandon",_vehicle,crew _vehicle);
 
 [{

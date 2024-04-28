@@ -140,5 +140,3 @@ Crew bailing when their vehicle is disabled (immobile or can't shoot) can be dis
 ```
 _vehicle setVariable ["ace_vehicle_damage_allowCrewInImmobile", true, true];
 ```
-
-If the vehicle is about to or is cooking off, the crew will ignore the value above.
