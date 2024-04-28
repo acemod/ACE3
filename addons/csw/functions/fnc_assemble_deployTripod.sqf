@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm
+ * Author: tcvm
  * Deploys the tripod
  *
  * Arguments:
@@ -23,7 +23,7 @@
     private _secondaryWeaponClassname = secondaryWeapon _player;
     // handle loaded launchers which can become csw like CUP Metis
     private _secondaryWeaponMagazine = secondaryWeaponMagazine _player param [0, ""];
-    _player removeWeaponGlobal (secondaryWeapon _player);
+    _player removeWeaponGlobal _secondaryWeaponClassname;
 
     private _onFinish = {
         params ["_args"];
@@ -40,7 +40,7 @@
             _cswTripod setVariable [QGVAR(secondaryWeaponMagazine), _secondaryWeaponMagazine];
         };
         if (!GVAR(defaultAssemblyMode)) then {
-            [_cswTripod, "disableWeaponAssembly", "ace_csw", true] call EFUNC(common,statusEffect_set);
+            [_cswTripod, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
         };
 
         private _posATL = _player getRelPos [2, 0];
@@ -75,5 +75,5 @@
     };
 
     private _deployTime = getNumber(configFile >> "CfgWeapons" >> _secondaryWeaponClassname >> QUOTE(ADDON) >> "deployTime");
-    [TIME_PROGRESSBAR(_deployTime), [_player, _secondaryWeaponClassname, _secondaryWeaponMagazine], _onFinish, _onFailure, localize LSTRING(PlaceTripod_progressBar)] call EFUNC(common,progressBar);
+    [TIME_PROGRESSBAR(_deployTime), [_player, _secondaryWeaponClassname, _secondaryWeaponMagazine], _onFinish, _onFailure, LLSTRING(PlaceTripod_progressBar)] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;

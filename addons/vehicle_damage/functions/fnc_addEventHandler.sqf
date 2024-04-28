@@ -35,7 +35,7 @@ private _slatHitpoints = [_vehicleConfig >> QGVAR(slatHitpoints), "ARRAY", []] c
 {
     _x params ["_hitpoints", "_type"];
     {
-        [_hitpointHash, toLower _x, [_type, _hitpointsConfig >> _x, _x]] call CBA_fnc_hashSet;
+        [_hitpointHash, toLowerANSI _x, [_type, _hitpointsConfig >> _x, toLowerANSI _x]] call CBA_fnc_hashSet;
     } forEach _hitpoints;
 } forEach ALL_HITPOINTS;
 
@@ -45,7 +45,7 @@ _vehicle setVariable [QGVAR(hitpointHash), _hitpointHash];
 private _iterateThroughConfig = {
     params ["_vehicle", "_config", "_iterateThroughConfig", "_hitpointAliases"];
     TRACE_1("checking config",_config);
-    private _configName = configName _config;
+    private _configName = toLowerANSI configName _config;
     private _isGun = ([_config >> "isGun", "NUMBER", 0] call CBA_fnc_getConfigEntry) == 1;
     private _isTurret = ([_config >> "isTurret", "NUMBER", 0] call CBA_fnc_getConfigEntry) == 1;
     private _isEra = _configName in _eraHitpoints;
@@ -53,18 +53,18 @@ private _iterateThroughConfig = {
     private _isMisc = false;
 
     // prevent incompatibilites with old mods
-    if ((toLower _configName) isEqualTo "hitturret") then {
+    if (_configName isEqualTo "hitturret") then {
         _isTurret = true;
     };
-    if ((toLower _configName) isEqualTo "hitgun") then {
+    if (_configName isEqualTo "hitgun") then {
         _isGun = true;
     };
 
     private _hash = _vehicle getVariable QGVAR(hitpointHash);
     {
         _x params ["_hitType", "_hitPoints"];
-        if ((toLower _configName) in _hitPoints) then {
-            [_hash, toLower _configName, [_hitType, _config, _configName]] call CBA_fnc_hashSet;
+        if (_configName in _hitPoints) then {
+            [_hash, _configName, [_hitType, _config, _configName]] call CBA_fnc_hashSet;
             _isMisc = true;
         };
     } forEach _hitpointAliases;
@@ -72,16 +72,16 @@ private _iterateThroughConfig = {
     if (_isGun || _isTurret || _isEra || _isSlat || _isMisc) then {
         TRACE_6("found gun/turret/era/slat/misc",_isGun,_isTurret,_isEra,_isSlat,_isMisc,_hash);
         if (_isGun) then {
-            [_hash, toLower _configName, ["gun", _config, _configName]] call CBA_fnc_hashSet;
+            [_hash, _configName, ["gun", _config, _configName]] call CBA_fnc_hashSet;
         };
         if (_isTurret) then {
-            [_hash, toLower _configName, ["turret", _config, _configName]] call CBA_fnc_hashSet;
+            [_hash, _configName, ["turret", _config, _configName]] call CBA_fnc_hashSet;
         };
         if (_isEra) then {
-            [_hash, toLower _configName, ["era", _config, _configName]] call CBA_fnc_hashSet;
+            [_hash, _configName, ["era", _config, _configName]] call CBA_fnc_hashSet;
         };
         if (_isSlat) then {
-            [_hash, toLower _configName, ["slat", _config, _configName]] call CBA_fnc_hashSet;
+            [_hash, _configName, ["slat", _config, _configName]] call CBA_fnc_hashSet;
         };
         _vehicle setVariable [QGVAR(hitpointHash), _hash];
     } else {
@@ -103,7 +103,7 @@ if (isNil "_eh") then {
     // Maybe its overridden somewhere else, but this makes sure it is the last one
     [{
         params ["_vehicle"];
-        TRACE_1("EH not added yet - added eh now", _vehicle);
+        TRACE_1("EH not added yet - added eh now",_vehicle);
         private _hd = _vehicle addEventHandler ["HandleDamage", { _this call FUNC(handleDamage) }];
         _vehicle setVariable [QGVAR(handleDamage), _hd];
     }, [_vehicle]] call CBA_fnc_execNextFrame;

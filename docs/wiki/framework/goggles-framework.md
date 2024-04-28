@@ -34,7 +34,7 @@ class CfgGlasses {
 
 ### 2.1 Listenable
 
-Event Name | Description | Passed Parameter(s) | Locality
----------- | ----------- | ------------------- | --------
-`ace_glassesChanged` | Glasses Changed | `[_unit, _glassesClass]` | Local
-`ace_glassesCracked` | Glasses Cracked | `[_unit]` | Local
+| Event Name | Description | Passed Parameter(s) | Locality |
+| ---------- | ----------- | ------------------- | -------- |
+| `ace_glassesChanged` | Glasses Changed | `[_unit, _glassesClass]` | Local |
+| `ace_glassesCracked` | Glasses Cracked | `[_unit]` | Local |

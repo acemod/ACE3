@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+
 params ["_staticWeapon", "_gunner", "_weapon", ["_magazine", ""]];
 
 private _turretPath = [_gunner] call EFUNC(common,getTurretIndex);
@@ -39,7 +40,7 @@ private _nearSupplies = [_gunner] + ((_staticWeapon nearSupplies 10) select {
     } forEach ((magazineCargo _xSource) select {isClass (_cfgMagGroups >> _x)});
     TRACE_2("",_xSource,_cswMagazines);
 
-    private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
+    private _compatibleMags = compatibleMagazines _weapon;
     if (_magazine != "") then {
         _compatibleMags insert [0, [_magazine]];
     };

@@ -67,18 +67,19 @@ jobs:
         xcopy /e /h /q z\ace\tools\pDummies\gm gm\
         xcopy /e /h /q z\ace\tools\pDummies\vn vn\
         xcopy /e /h /q z\ace\tools\pDummies\WW2 WW2\
+        xcopy /e /h /q z\ace\tools\pDummies\CUP CUP\
     - name: Build
       run: py P:\z\ace\tools\make.py ci
       env:
         PYTHONUNBUFFERED: 1
     - name: Archive logs
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: ${{ always() }}
       with:
         name: logs
         path: temp/*.log
     - name: Archive @ace
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: '@ace3-${{ github.sha }}'
         path: z\ace\release\@ace

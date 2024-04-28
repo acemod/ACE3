@@ -47,7 +47,7 @@ GVAR(ParsedTextCached) = [];
 }] call CBA_fnc_addEventHandler;
 
 //Add Actions to Houses:
-["ace_interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call CBA_fnc_addEventHandler;
+["ace_interactMenuOpened", LINKFUNC(userActions_addHouseActions)] call CBA_fnc_addEventHandler;
 
 ["ACE3 Common", QGVAR(InteractKey), (localize LSTRING(InteractKey)),
 {

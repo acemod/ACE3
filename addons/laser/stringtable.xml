@@ -128,6 +128,7 @@
             <Korean>레이저 스팟 추적기: 켬</Korean>
             <French>Traqueur laser : activé</French>
             <Portuguese>Rastreador a Laser: Ligado</Portuguese>
+            <Russian>Лазерный точечный трекер: Включен</Russian>
         </Key>
         <Key ID="STR_ACE_Laser_LSTOff">
             <English>Laser Spot Tracker: Off</English>
@@ -138,6 +139,7 @@
             <Korean>레이저 스팟 추적기: 끔</Korean>
             <French>Traqueur laser : désactivé</French>
             <Portuguese>Rastreador a Laser: Desligado</Portuguese>
+            <Russian>Лазерный точечный трекер: выключен</Russian>
         </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap">
             <English>Draw Laser on Map</English>

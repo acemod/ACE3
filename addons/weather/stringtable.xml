@@ -130,7 +130,7 @@
             <Hungarian>Megadja az intervallumot (másodpercben) az időjárás-frissítések között</Hungarian>
             <Russian>Определяет интервал (в секундах) между обновлениями погоды</Russian>
             <Italian>Definisce l'intervallo (in secondi) tra aggiornamenti del meteo</Italian>
-            <Japanese>天候を更新する間隔を定義します。(秒)</Japanese>
+            <Japanese>天候を更新する間隔 (秒) を定義します</Japanese>
             <Korean>기후를 갱신하는 간격을 초 단위로 정합니다.</Korean>
             <Chinesesimp>设定天气更新的时间间隔（秒）</Chinesesimp>
             <Chinese>設定天氣更新的時間間隔(秒)</Chinese>

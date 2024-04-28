@@ -29,7 +29,7 @@ private _direction = getDir _object;
 
 // Marker name unique to this object
 private _markerNameStr = format [QGVAR(marker_%1), hashValue _object];
-private _channel = if (GVAR(markObjectsOnMap) == 2) then { 0 } else { 1 };
+private _channel = parseNumber (GVAR(markObjectsOnMap) != 2);
 
 private _marker = createMarkerLocal [_markerNameStr, _object, _channel, _unit];
 TRACE_2("created",_marker,_channel);

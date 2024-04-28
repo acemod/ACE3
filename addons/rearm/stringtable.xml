@@ -651,7 +651,7 @@
         <Key ID="STR_ACE_Rearm_rearmCargo_edenName">
             <English>Rearm Cargo</English>
             <German>Munitionsvorrat</German>
-            <Japanese>再武装用カーゴ</Japanese>
+            <Japanese>再武装用資源積載量</Japanese>
             <Polish>Ładunek Dozbrajający</Polish>
             <Italian>Munizioni Caricate</Italian>
             <Russian>Боеприпасы для перевооружения</Russian>
@@ -666,7 +666,7 @@
         <Key ID="STR_ACE_Rearm_rearmCargo_edenDesc">
             <English>The cargo for rearming (-1 disable)</English>
             <German>Der Munitionsvorrat, zum Aufmunitionieren von Fahrzeugen (-1 deaktiviert)</German>
-            <Japanese>カーゴからの再武装 (-1 で無効化)</Japanese>
+            <Japanese>再武装に使用する資源の積載量 (-1 で補給無効)</Japanese>
             <Polish>Ładunek do dozbrajania (-1 wyłączy)</Polish>
             <Italian>Il carico di munizioni per poter riarmare (-1 per disabilitarlo)</Italian>
             <Russian>Объем боеприпасов для перевооружения (-1 для отмены)</Russian>
@@ -698,7 +698,7 @@
             <French>Distance maximale à laquelle un véhicule peut être réarmé.</French>
             <German>Die maximale Distanz, über die ein Fahrzeug Aufmunitioniert werden kann</German>
             <Portuguese>A distância máxima que um veículo pode ser rearmado/municiado.</Portuguese>
-            <Japanese>車両から再武装できる範囲を決定します。</Japanese>
+            <Japanese>車両から再武装できる最大距離</Japanese>
             <Chinese>與載具之最大可整裝距離</Chinese>
             <Chinesesimp>车辆可重新整装的最大距离</Chinesesimp>
             <Italian>La distanza massima da cui un veicolo può essere riarmato</Italian>

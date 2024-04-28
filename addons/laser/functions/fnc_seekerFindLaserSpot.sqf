@@ -101,9 +101,9 @@ private _finalOwner = objNull;
     };
 } forEach (values GVAR(laserEmitters)); // Go through all values in hash
 
-TRACE_2("",count _spots, _spots);
+TRACE_2("",count _spots,_spots);
 
-if ((count _spots) > 0) then {
+if (_spots isNotEqualTo []) then {
     private _bucketList = nil;
     private _bucketPos = nil;
     private _c = 0;

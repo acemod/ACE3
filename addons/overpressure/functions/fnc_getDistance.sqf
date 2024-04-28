@@ -19,7 +19,7 @@
  */
 
 params ["_posASL", "_direction", "_maxDistance", "_shooter"];
-TRACE_4("params",_posASL,_direction,_maxDistance, _shooter);
+TRACE_4("params",_posASL,_direction,_maxDistance,_shooter);
 
 private _intersections = lineIntersectsSurfaces [_posASL, _posASL vectorAdd (_direction vectorMultiply _maxDistance), _shooter, objNull, true, 99];
 

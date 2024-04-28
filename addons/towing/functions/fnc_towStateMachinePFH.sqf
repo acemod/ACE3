@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Called per frame. Handles current unit state for attaching a rope to two vehicles
+ * Called per frame. Handles current unit state for attaching a rope to two vehicles.
  *
  * Arguments:
  * 0: PFEH Args <ARRAY>
@@ -51,7 +51,7 @@ private _exitCondition = !(
         || {getPosASLW _unit select 2 < -1.5} // walking-to-swimming animation in wetsuit lasts for 3 seconds
     } &&
     { [_unit, objNull, [INTERACTION_EXCEPTIONS]] call EFUNC(common,canInteractWith) } &&
-    { "unconscious" isNotEqualTo toLower animationState _unit } &&
+    { "unconscious" isNotEqualTo toLowerANSI animationState _unit } &&
     { !(_unit getVariable ["ACE_isUnconscious", false]) } &&
     { ACE_player == _unit }
 );
@@ -62,14 +62,16 @@ if (_exitCondition && {_state < TOW_STATE_CANCEL}) then {
 
 switch (_state) do {
     case TOW_STATE_ATTACH_PARENT: {
-        TRACE_2("state attach parent",_unit,_parent);
+        // TRACE_2("state attach parent",_unit,_parent);
         [_unit, _parent, objNull, objNull, [0, 0, 0], _length] call FUNC(attachRopePFH);
 
         if (GVAR(canAttach) && { GVAR(mouseLeft) }) then {
             _args set [0, TOW_STATE_ATTACH_CHILD];
-            _rope = ropeCreate [_parent, _parent worldToModelVisual ASLtoAGL getPosASLVisual GVAR(attachHelper), _length];
-            [GVAR(attachHelper), [0, 0, 0]] ropeAttachTo _rope;
-
+            // can't use unit hand because rope doesn't change position when hand moving
+            // can't use createVehicleLocal because rope can be non-local (like parent) and it must be attached to global vehicle
+            GVAR(helper) = createVehicle [QGVAR(helper), [0, 0, 0], [], 0, "CAN_COLLIDE"];
+            GVAR(helper) attachTo [_unit, [0, 0, 0], "LeftHand", true];
+            _rope = ropeCreate [_parent, _parent worldToModelVisual ASLtoAGL getPosASLVisual GVAR(attachHelper), GVAR(helper), [0, 0, 0], _length];
             _args set [3, _rope];
         };
 
@@ -79,7 +81,7 @@ switch (_state) do {
         };
     };
     case TOW_STATE_ATTACH_CHILD: {
-        TRACE_3("state attach child",_unit,_parent,_rope);
+        // TRACE_3("state attach child",_unit,_parent,_rope);
         [_unit, objNull, _parent, _rope, getPosASLVisual _rope, _length] call FUNC(attachRopePFH);
 
         if (GVAR(canAttach) && { GVAR(mouseLeft) }) then {
@@ -108,60 +110,42 @@ switch (_state) do {
             GVAR(cancel) = false;
         };
 
-        [QGVAR(setTowParent), [_parent, _child], _parent] call CBA_fnc_targetEvent;
+        detach GVAR(helper);
+        // can't delete GVAR(helper) without ropeDetach which requires local rope (==parent), so pass it to owner
+        if (isNull (_child getVariable [QGVAR(parent), objNull])) then {
+            [QGVAR(attachVehicles), [_parent, _child, _relativeAttachPos, _rope, GVAR(helper)]] call CBA_fnc_globalEvent;
+        } else {
+            [QGVAR(ropeAttachTo), [_child, _relativeAttachPos, _rope, GVAR(helper)], _parent] call CBA_fnc_targetEvent;
+        };
 
-        GVAR(attachHelper) ropeDetach _rope;
-        [_child, _relativeAttachPos] ropeAttachTo _rope;
+        private _hookParent = createVehicle [QGVAR(hook), [0, 0, 0], [], 0, "CAN_COLLIDE"];
+        _hookParent attachTo [_parent, _parent worldToModelVisual ASLtoAGL getPosASLVisual _rope];
 
-        private _hook = createVehicle [QGVAR(hook), [0, 0, 0], [], 0, "NONE"];
+        private _hook = createVehicle [QGVAR(hook), [0, 0, 0], [], 0, "CAN_COLLIDE"];
         _hook attachTo [_child, _relativeAttachPos];
 
-        _hook setVariable [QGVAR(parent), _parent, true];
-        _hook setVariable [QGVAR(child), _child, true];
-        _child setVariable [QGVAR(rope), _rope, true];
-        _child setVariable [QGVAR(hook), _hook, true];
+        // use array to decrease public setVar count
+        private _hookVars = [_parent, _child, _rope, _ropeClass, _hookParent];
+        _hook setVariable [QGVAR(vars), _hookVars, true];
 
-        _parent setVariable [QGVAR(hook), _hook, true];
+        _hookParent setVariable [QGVAR(hook), _hook, true];
+        _rope setVariable [QGVAR(hook), _hook, true];
 
-        _hook setVariable [QGVAR(ropeClass), _ropeClass, true];
+        private _childParentHooks = _child getVariable [QGVAR(parentHooks), []];
+        _childParentHooks pushBack _hook;
+        _child setVariable [QGVAR(parentHooks), _childParentHooks, true];
 
-        _child setVariable [QGVAR(towing), true, true];
-        _parent setVariable [QGVAR(towing), true, true];
-
-        _hook setVariable [QGVAR(parentDeleteEventHandler), _parent addEventHandler ["Deleted", {
-            params ["_entity"];
-
-            private _hook = _entity getVariable [QGVAR(hook), objNull];
-            private _child = _hook getVariable [QGVAR(child), objNull];
-            private _parent = _hook getVariable [QGVAR(parent), objNull];
-
-            [objNull, _parent, _child] call FUNC(detach);
-        }], true];
-
-        _hook setVariable [QGVAR(childDeleteEventHandler), _child addEventHandler ["Deleted", {
-            params ["_entity"];
-
-            private _hook = _entity getVariable [QGVAR(hook), objNull];
-            private _child = _hook getVariable [QGVAR(child), objNull];
-            private _parent = _hook getVariable [QGVAR(parent), objNull];
-
-            [objNull, _parent, _child] call FUNC(detach);
-        }], true];
-
-        _parent setVariable [QGVAR(ropeBreakEventHandler), _parent addEventHandler ["RopeBreak", {
-            params ["_parent", "_rope", "_child"];
-
-            [objNull, _parent, _child] call FUNC(detach);
-
-            _parent removeEventHandler ["RopeBreak", _parent getVariable QGVAR(ropeBreakEventHandler)];
-            _parent setVariable [QGVAR(ropeBreakEventHandler), -1];
-        }], true];
+        private _parentChildHooks = _parent getVariable [QGVAR(childHooks), []];
+        _parentChildHooks pushBack _hook;
+        _parent setVariable [QGVAR(childHooks), _parentChildHooks, true];
 
         _args set [0, TOW_STATE_CLEANUP];
     };
     case TOW_STATE_CANCEL: {
         TRACE_1("state cancel",_rope);
         if !(isNull _rope) then {
+            detach GVAR(helper);
+            deleteVehicle GVAR(helper);
             ropeDestroy _rope;
         };
         [_unit, _ropeClass, true] call CBA_fnc_addItem;
@@ -174,6 +158,7 @@ switch (_state) do {
         TRACE_2("state cleanup",GVAR(attachHelper),_handle);
         deleteVehicle GVAR(attachHelper);
         [_handle] call CBA_fnc_removePerFrameHandler;
+        ["MouseButtonDown", GVAR(onMouseButtonDownEHID)] call CBA_fnc_removeDisplayHandler;
         _unit setVariable [QGVAR(hint), []];
         call EFUNC(interaction,hideMouseHint);
         if (GVAR(blockFireEHID) != -1) then {
