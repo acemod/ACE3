@@ -16,7 +16,7 @@
  */
 
 // Delayed so the object is spawned after the model changes to a wreck
-// The sudden change in the model would cause nearby physx objects to get stuck
+// The sudden change in the model would cause nearby PhysX objects to get stuck
 [{
     params ["_vehicle"];
 
