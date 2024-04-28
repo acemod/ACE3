@@ -41,7 +41,7 @@
             <Japanese>標定盤</Japanese>
             <Italian>Tavola di calcolo</Italian>
             <Russian>Графическая доска</Russian>
-            <French>Tableau de calcul</French>
+            <French>Planche traçante</French>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoard_Description">
             <English>The Plotting Board is a map tool designed for use in the directing of short range indirect fires.</English>
@@ -49,7 +49,7 @@
             <Japanese>標定盤(プロッティング・ボード)は、短距離の間接射撃の指示に使用するために設計されたマップツールです。</Japanese>
             <Italian>La tavola di calcolo è uno strumento utilizzato per dirigere fuoco di artiglieria a corto raggio.</Italian>
             <Russian>Графическая доска - это картографический инструмент, предназначенный для использования при ведении непрямого огня с малой дистанции.</Russian>
-            <French>La table de calcul est un instrument utilisé pour diriger les tirs d'artillerie à courte portée.</French>
+            <French>Une planche traçante est un outil cartographique conçu pour diriger des tirs indirects à courte distance.</French>
         </Key>
         <Key ID="STR_ACE_MapTools_MapTools_Menu">
             <English>Map Tools</English>
@@ -274,7 +274,7 @@
             <Korean>플로팅 보드 그리기 채널 허용</Korean>
             <Italian>Canali ammessi su tavola di calcolo</Italian>
             <Russian>Разрешить создание каналов на миллиметровой доске.</Russian>
-            <French>Canaux autorisés sur la table de calcul</French>
+            <French>Canaux autorisés sur la planche traçante</French>
         </Key>
         <Key ID="STR_ACE_MapTools_allowChannelDrawing_description">
             <English>Channels in which plotting board drawing is enabled.</English>
@@ -282,7 +282,7 @@
             <Korean>플로팅 보드 그리기가 활성화된 채널입니다.</Korean>
             <Italian>Canali in cui si può disegnare sulla tavola di calcolo.</Italian>
             <Russian>Каналы, в которых включено рисование на миллиметровой доске.</Russian>
-            <French>Canaux dans lesquels vous pouvez dessiner sur le tableau.</French>
+            <French>Canaux dans lesquels vous pouvez dessiner sur le planche traçante</French>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectCommsOnly">
             <English>Allow Direct Comms Only (Polylines Only)</English>
@@ -306,7 +306,7 @@
             <Korean>플로팅 보드</Korean>
             <Italian>Tavola di calcolo</Italian>
             <Russian>Миллиметровая доска</Russian>
-            <French>Table de calcul</French>
+            <French>Planche traçante</French>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardAcrylicLabel">
             <English>Plotting Board Acrylic</English>
@@ -314,7 +314,7 @@
             <Korean>플로팅 보드 (아크릴)</Korean>
             <Italian>Acrilico tavola di calcolo</Italian>
             <Russian>Миллиметровая доска акрилловая</Russian>
-            <French>Table de calcul Acrylique</French>
+            <French>Planche traçante Acrylique</French>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardRulerLabel">
             <English>Plotting Board Ruler</English>
@@ -322,7 +322,7 @@
             <Korean>플로팅 보드 (자)</Korean>
             <Italian>Righello tavola di calcolo</Italian>
             <Russian>Линейка для миллиметровой доски</Russian>
-            <French>Règle de la table de calcul</French>
+            <French>Règle de la planche traçante</French>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardLabel">
             <English>To Plotting Board</English>
@@ -330,7 +330,7 @@
             <Korean>플로팅 보드에</Korean>
             <Italian>Su tavola di calcolo</Italian>
             <Russian>К миллиметровой доске.</Russian>
-            <French>Sur la table de calcul</French>
+            <French>Sur la planche traçante</French>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardAcrylicLabel">
             <English>To Plotting Board Acrylic</English>
@@ -338,7 +338,7 @@
             <Korean>플로팅 보드 (아크릴)에</Korean>
             <Italian>Su acrilico tavola di calcolo</Italian>
             <Russian>К миллиметровой доске акрилловой</Russian>
-            <French>Sur la table de calcul Acrylique</French>
+            <French>Sur la planche traçante Acrylique</French>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardRulerLabel">
             <English>To Plotting Board Ruler</English>
@@ -346,7 +346,7 @@
             <Korean>플로팅 보드 (자)에</Korean>
             <Italian>Su righello tavola di calcolo</Italian>
             <Russian>К линейке миллиметровой доски.</Russian>
-            <French>Sur la règle de la table à calcul</French>
+            <French>Sur la règle de la planche traçante</French>
         </Key>
         <Key ID="STR_ACE_MapTools_WipeBoard">
             <English>Wipe all markers off Plotting Board</English>
@@ -354,7 +354,7 @@
             <Korean>플로팅 보드에 있는 모든 마커 지우기</Korean>
             <Italian>Cancella tutti i disegni dalla tavola</Italian>
             <Russian>Сотрите все маркеры с миллиметровой доски.</Russian>
-            <French>Effacer tous les dessins de la planche</French>
+            <French>Effacer tous les dessins de la planche traçante</French>
         </Key>
         <Key ID="STR_ACE_MapTools_ShowPlottingBoard">
             <English>Show Plotting Board</English>
@@ -362,7 +362,7 @@
             <Korean>플로팅 보드 보이기</Korean>
             <Italian>Mostra tavola di calcolo</Italian>
             <Russian>Показать миллиметровую доску.</Russian>
-            <French>Afficher la table de calcul</French>
+            <French>Afficher la planche traçante</French>
         </Key>
         <Key ID="STR_ACE_MapTools_HidePlottingBoard">
             <English>Hide Plotting Board</English>
@@ -370,7 +370,7 @@
             <Korean>플로팅 보드 숨기기</Korean>
             <Italian>Nascondi tavola di calcolo</Italian>
             <Russian>Скрыть миллиметровую доску.</Russian>
-            <French>Masquer la table de calcul</French>
+            <French>Masquer la planche traçante</French>
         </Key>
         <Key ID="STR_ACE_MapTools_TogglePlottingBoardRuler">
             <English>Toggle Plotting Board Ruler</English>

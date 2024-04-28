@@ -43,12 +43,21 @@ _origActionData params [
     "_distance"
 ];
 
+private _result = [_target, ACE_player, _customParams] call _conditionCode;
+
+// Handle nil as false
+if (isNil "_result") then {
+    ERROR_1("Action [%1] bad condition return",_actionName);
+
+    _result = false;
+};
+
 // Return nothing if the action itself is not active
-if !([_target, ACE_player, _customParams] call _conditionCode) exitWith {
+if (!_result) exitWith {
     []
 };
 
-// Return nothing if the action is to far (including checking sub actions) [DISABLED FOR NOW ref #2196]
+// Return nothing if the action is too far (including checking sub actions) [DISABLED FOR NOW ref #2196]
 // if (_distanceToBasePoint > _distance) exitWith {
     // []
 // };
@@ -64,7 +73,7 @@ if (_insertChildrenCode isNotEqualTo {}) then {
     // Collect dynamic children class actions
     {
         private _action = [_x select 2, _x, _fullPath, _distanceToBasePoint] call FUNC(collectActiveActionTree);
-        if ((count _action) > 0) then {
+        if (_action isNotEqualTo []) then {
             _activeChildren pushBack _action;
         };
     } forEach _dynamicChildren;
@@ -73,7 +82,7 @@ if (_insertChildrenCode isNotEqualTo {}) then {
 // Collect children class actions
 {
     private _action = [_object, _x, _fullPath, _distanceToBasePoint] call FUNC(collectActiveActionTree);
-    if ((count _action) > 0) then {
+    if (_action isNotEqualTo []) then {
         _activeChildren pushBack _action;
     };
 } forEach _origActionChildren;
@@ -85,7 +94,7 @@ if (_insertChildrenCode isNotEqualTo {}) then {
     // Check if the action is children of the original action
     if (_pPath isEqualTo _fullPath) then {
         private _action = [_object, [_actionData,[]], _fullPath, _distanceToBasePoint] call FUNC(collectActiveActionTree);
-        if ((count _action) > 0) then {
+        if (_action isNotEqualTo []) then {
             _activeChildren pushBack _action;
         };
     };
@@ -100,14 +109,14 @@ if ((_activeChildren isEqualTo []) && {_statementCode isEqualTo {}}) exitWith {
 
 if (GVAR(consolidateSingleChild) && {count _activeChildren == 1} && {_statementCode isEqualTo {}}) then {
     _activeChildren select 0 params ["_childActionData", "_childChildren", "_childObject"];
-    _childActionData params ["", "_displayNameChild", "_iconChild", "_statementChild", "", "", "_customParamsChild", "", "", "_paramsChild"];
+    _childActionData params ["", "_displayNameChild", "_iconChild", "_statementChild", "_conditionChild", "_insertChildrenChild", "_customParamsChild", "", "", "_paramsChild"];
     _origActionData = [
         _actionName,
         format ["%1 > %2", _displayName, _displayNameChild],
         _iconChild,
         _statementChild,
-        _conditionCode,
-        _insertChildrenCode,
+        _conditionChild,
+        _insertChildrenChild,
         _customParamsChild,
         _position,
         _distance,

@@ -52,7 +52,7 @@ private _userAndItem = if (GET_NUMBER_ENTRY(_config >> "consumeItem") == 1) then
     [objNull, ""]; // Treatment does not require items to be consumed
 };
 
-_userAndItem params ["_itemUser", "_usedItem"];
+_userAndItem params ["_itemUser", "_usedItem", "_createLitter"];
 
 private _isInZeus = !isNull findDisplay 312;
 
@@ -155,13 +155,13 @@ if (_callbackProgress isEqualTo {}) then {
     _callbackProgress = {true};
 };
 
-[_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem] call _callbackStart;
+[_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem, _createLitter] call _callbackStart;
 
-["ace_treatmentStarted", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem]] call CBA_fnc_localEvent;
+["ace_treatmentStarted", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem, _createLitter]] call CBA_fnc_localEvent;
 
 [
     _treatmentTime,
-    [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem],
+    [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem, _createLitter],
     FUNC(treatmentSuccess),
     FUNC(treatmentFailure),
     getText (_config >> "displayNameProgress"),
