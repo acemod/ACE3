@@ -35,7 +35,7 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
         // use casing's default model
         private _model = getText (_cartridgeConfig >> "model");
         if ("a3\weapons_f\empty" in toLowerANSI _model) exitWith { "" };
-        
+
         // Add file extension if missing (fileExists needs file extension)
         if ((_model select [count _model - 4]) != ".p3d") then {
             _model = _model + ".p3d";
@@ -68,7 +68,7 @@ private _pos = _unitPos
         };
         private _casing = createSimpleObject [_modelPath, _casingPos, true];
         _casing setDir (random 360);
-        _casing setVectorUp _lisPos select 1;
+        _casing setVectorUp (_lisPos select 1);
         private _idx = GVAR(casings) pushBack _casing;
 
         for "_" from 0 to (_idx - GVAR(maxCasings)) do {
