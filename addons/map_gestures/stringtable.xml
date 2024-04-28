@@ -228,7 +228,7 @@
             <German>Farbwert für Gruppenführer, die mit diesem Modul synchronisiert werden.</German>
             <Spanish>Color para los líderes de los grupos sincronizados al módulo.</Spanish>
             <French>Couleur pour les chefs des groupes synchronisés avec ce module.</French>
-            <Japanese>モジュールで同期されたグループの隊長に設定される色の値を決定します。</Japanese>
+            <Japanese>モジュールで同期されたグループの隊長に設定される色の値。</Japanese>
             <Korean>그룹이 이 모듈에 동기화 됐을 때의 리더 색상입니다.</Korean>
             <Chinesesimp>改变与此同步小队队长的指示颜色。</Chinesesimp>
             <Chinese>改變與此同步小隊隊長的指示器顏色</Chinese>
@@ -259,7 +259,7 @@
             <German>Farbwert für Gruppenmitglieder, die mit diesem Modul synchronisiert werden.</German>
             <Spanish>Color para los miembros de los grupos sincronizados al módulo.</Spanish>
             <French>Couleur pour les membres des groupes synchronisés avec ce module.</French>
-            <Japanese>モジュールで同期されたグループの隊員に設定される色の値を決定します。</Japanese>
+            <Japanese>モジュールで同期されたグループの隊員に設定される色の値。</Japanese>
             <Korean>그룹이 이 모듈에 동기화 됐을 때의 멤버 색상입니다.</Korean>
             <Chinesesimp>改变与此同步小队队员的指示颜色</Chinesesimp>
             <Chinese>改變與此同步小隊隊員的指示器顏色</Chinese>
@@ -386,7 +386,7 @@
             <English>What player can see what</English>
             <Russian>Определяет, какая группа игроков может видеть жесты на карте во время брифинга</Russian>
             <French>Définit quels pointages les joueurs peuvent voir lors du briefing.</French>
-            <Japanese>プレイヤーが見ることができる対象を決定します。</Japanese>
+            <Japanese>プレイヤーが見ることができる対象</Japanese>
             <Spanish>Qué puede ver cada jugador</Spanish>
             <Italian>Quali giocatori possono vedere gesti sulla mappa in fase di briefing.</Italian>
             <Polish>Co mogą widzieć gracze</Polish>

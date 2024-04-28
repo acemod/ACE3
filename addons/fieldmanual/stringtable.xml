@@ -155,6 +155,7 @@
             <German>%3IV-Flüssigkeiten%4 stellen das verlorene Blutvolumen wieder her. Blut, Plasma und Kochsalzlösung sind funktionell gleich.&lt;br/&gt;&lt;br/&gt;%3Verwende:%4&lt;br/&gt;%2Verwende [%3%13%4] oder [%3%14%4] und wählen ein Körperteil aus..&lt;br/&gt;%2Stelle das Blutvolumen wieder her, indem der gewünschte %3IV Flüssigkeitstyp%4 ausgewählt wird.</German>
             <Italian>%3Fluidi EV%4 ristorano volume di sangue perso. Sangue, Plasma, e Salina sono funzionalmente identiche.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%13%4] o [%3%14%4] e seleziona un arto.&lt;br/&gt;%2Ristora il volume di sangue selezionando il tipo di %3Fluido EV%4 desiderato.</Italian>
             <Japanese>%3IV 輸液%4は失われた血液を回復します。血液、血漿、生理食塩水は機能的には同じです。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って四肢を選択します。&lt;br/&gt;%2希望の%3IV 輸液%4の種類を選択して、血液量を復元します。</Japanese>
+            <Russian>%%3Внутривенные жидкости%4восстанавливают потерянный объем крови. Кровь, плазма и физраствор функционально идентичны.&lt;br/&gt;&lt;br/&gt;%3 Использование:%4&lt;br/&gt;%2 Используйте [%3%13%4] или [%3%14%4] и выберите добавку.&lt;br/&gt;%2 Восстановите объем крови выбрав желаемый %4тип %3жидкости</Russian>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_ShortName">
             <English>Increase Heart Rate | Wake Up Faster</English>

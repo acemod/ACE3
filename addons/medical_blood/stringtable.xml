@@ -99,7 +99,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_Description">
             <English>Controls the lifetime of blood drop objects.</English>
-            <Japanese>血痕オブジェクトの寿命を決定します。</Japanese>
+            <Japanese>血痕オブジェクトの寿命を制御します。</Japanese>
             <French>Définit la durée d'affichage des traces de sang.</French>
             <Russian>Управляет временем жизни объектов капель крови.</Russian>
             <Portuguese>Controla o tempo de vida que um objeto de gota de sangue tem.</Portuguese>

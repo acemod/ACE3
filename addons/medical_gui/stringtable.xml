@@ -198,7 +198,7 @@
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_Description">
             <English>Maximum distance from which the Medical Menu can be opened.</English>
             <German>Maximale Entfernung, um das Sanitätsmenü zu öffnen.</German>
-            <Japanese>医療メニューを開いたままにできる最大距離を決定します。</Japanese>
+            <Japanese>医療メニューを開いたままにできる最大距離。</Japanese>
             <Russian>Максимальное расстояние, с которого можно открыть Медицинское меню.</Russian>
             <French>Définit la distance (en mètres) à partir de laquelle il n'est plus possible d'activer le menu médical pour traiter un patient.</French>
             <Portuguese>A Distância máxima do paciente para que o Menu Médico possa ser aberto.</Portuguese>
@@ -1366,6 +1366,7 @@
             <Japanese>出血状態の表示</Japanese>
             <Korean>출혈 상태 표시</Korean>
             <French>Afficher l'état des saignements</French>
+            <Russian>Показать состояние кровотечения</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showBleeding_Description">
             <English>Display if the patient is bleeding, optionally with rate</English>
@@ -1376,6 +1377,7 @@
             <Japanese>患者が出血しているかどうかを表示します。オプションで出血速度も表示します</Japanese>
             <Korean>환자가 출혈 중인지 여부를 표시합니다(선택적으로 출혈 속도 포함)</Korean>
             <French>Indique si le patient saigne, éventuellement avec le taux de saignement</French>
+            <Russian>Показывает, есть ли у пациента кровотечение, опционально с указанием частоты</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ShowBleeding_Rate">
             <English>Show Bleeding Rate</English>
@@ -1386,6 +1388,7 @@
             <Japanese>出血速度の表示</Japanese>
             <Korean>출혈 속도 표시</Korean>
             <French>Afficher le taux de saignement</French>
+            <Russian>Показать частоту кровотечения</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_DisplayName">
             <English>Peek Medical Info on Hit</English>
