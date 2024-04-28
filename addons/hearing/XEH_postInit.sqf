@@ -1,8 +1,6 @@
 #include "script_component.hpp"
 
 if (isServer) then {
-    GVAR(cacheMaxAmmoLoudness) = createHashMap;
-
     ["CBA_settingsInitialized", {
         TRACE_1("settingInit - server",GVAR(EnableCombatDeafness));
         // Only install event handler if combat deafness is enabled

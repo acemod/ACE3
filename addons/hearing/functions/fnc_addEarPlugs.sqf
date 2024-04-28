@@ -17,7 +17,7 @@
 
 // Only run this after the settings are initialized
 if (!EGVAR(common,settingsInitFinished)) exitWith {
-    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addEarPlugs), _this];
+    EGVAR(common,runAtSettingsInitialized) pushBack [LINKFUNC(addEarPlugs), _this];
 };
 
 // Exit if hearing is disabled or if autoAdd is disabled
@@ -39,6 +39,10 @@ if (GVAR(autoAddEarplugsToUnits) == 2 || {(secondaryWeapon _unit) != ""}) exitWi
 private _weapon = primaryWeapon _unit;
 
 if (_weapon == "") exitWith {};
+
+if (isNil QGVAR(cacheMaxAmmoLoudness)) then {
+    GVAR(cacheMaxAmmoLoudness) = createHashMap;
+};
 
 // Cache maximum loadness for future calls
 private _maxLoudness = GVAR(cacheMaxAmmoLoudness) getOrDefaultCall [_weapon, {
