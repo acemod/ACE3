@@ -59,6 +59,18 @@ switch (_container) do {
     };
 };
 
+if (_type select 0 == "magazine") then {
+    if (_ammoCount == -1) then {
+        _ammoCount = getNumber (configFile >> "CfgMagazines" >> _classname >> "count");
+    };
+
+    // https://feedback.bistudio.com/T74244
+    // When adding throwables with the addXXXCargo(Global) commands, they don't show up in the throwables list
+    if (_ammoCount == 1 && {_classname call BIS_fnc_isThrowable}) then {
+        _type set [0, "item"];
+    };
+};
+
 switch (_type select 0) do {
     case "weapon": {
         if (_canAdd || {_canFitWeaponSlot}) then {
@@ -106,10 +118,6 @@ switch (_type select 0) do {
     };
 
     case "magazine": {
-        if (_ammoCount == -1) then {
-            _ammoCount = getNumber (configFile >> "CfgMagazines" >> _classname >> "count");
-        };
-
         if (_canAdd) then {
             _addedToUnit = true;
 
