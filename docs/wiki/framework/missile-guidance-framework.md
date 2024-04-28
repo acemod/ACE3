@@ -117,6 +117,6 @@ class ace_missileguidance_attackProfiles {
 
 ### 5.1 Listenable
 
-Event Name | Description | Passed Parameter(s) | Locality
----------- | ----------- | ------------------- | --------
-`ace_missileguidance_handoff` | Missile handed off | `[_target, _args]` | Global
+| Event Name | Description | Passed Parameter(s) | Locality |
+| ---------- | ----------- | ------------------- | -------- |
+| `ace_missileguidance_handoff` | Missile handed off | `[_target, _args]` | Global |

@@ -43,9 +43,9 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(autoAddEarplugsToUnits), "CHECKBOX",
+    QGVAR(autoAddEarplugsToUnits), "LIST",
     [LSTRING(autoAddEarplugsToUnits_DisplayName), LSTRING(autoAddEarplugsToUnits_Description)],
     _category,
-    true,
+    [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(heavyWeaponUnits), ELSTRING(common,Enabled)], 1],
     1
 ] call CBA_fnc_addSetting;
