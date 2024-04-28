@@ -289,7 +289,7 @@
         </Key>
         <Key ID="STR_ACE_Pylons_TimePerPylon_description">
             <English>The time it takes to replace each pylon (in seconds).</English>
-            <Japanese>各パイロンの置き換えに掛かる時間を設定します。(秒)</Japanese>
+            <Japanese>各パイロンの置き換えに掛かる時間。 (秒単位)</Japanese>
             <Italian>Il tempo che impiega ogni pilone ad essere sostituito (in secondi).</Italian>
             <Chinese>每個派龍架需花多久時間進行整補(單位為秒)</Chinese>
             <Chinesesimp>每个挂架需花多久时间进行整装（单位为秒）。</Chinesesimp>
