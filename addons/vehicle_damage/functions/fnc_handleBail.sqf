@@ -29,6 +29,8 @@ private _rand = random 1;
 
 if (_isCar) then {
     if (!_canMove) then {
+        if (_vehicle getVariable [QGVAR(allowCrewInImmobile), false]) exitWith {}; // check for API
+
         _vehicle call FUNC(abandon);
 
         TRACE_3("car immobile - bailing",_vehicle,_canMove,_isCar);
