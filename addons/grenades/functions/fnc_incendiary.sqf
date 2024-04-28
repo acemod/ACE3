@@ -47,7 +47,7 @@ private _nearLocalEnemies = [];
 
 {
     {
-        if (local _x && {[_center, side group _x] call BIS_fnc_sideIsEnemy}) then { // WE WANT THE OBJECTS SIDE HERE!
+        if (local _x && {[_center, side group _x] call BIS_fnc_sideIsEnemy}) then { // WE WANT THE OBJECT'S SIDE HERE!
             _nearLocalEnemies pushBackUnique _x;
         };
     } forEach crew _x;
