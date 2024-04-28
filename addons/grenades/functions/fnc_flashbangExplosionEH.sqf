@@ -18,7 +18,7 @@
 params ["_grenadePosASL"];
 TRACE_1("params",_grenadePosASL);
 
-// Affect local AI
+// Affect local AI (players are not local, except for ACE_player)
 // @todo: Affect units in static weapons, turned out, etc
 {
       private _unit = _x;
@@ -62,7 +62,7 @@ TRACE_1("params",_grenadePosASL);
               } forEach SUBSKILLS;
           }, _unit] call CBA_fnc_waitUntilAndExecute;
       };
-} forEach (((ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20]) select {local _x && {_x call EFUNC(common,isAwake)} && {!(_x call EFUNC(common,isPlayer))}});
+} forEach ((((ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20]) - [ACE_player]) select {local _x && {_x call EFUNC(common,isAwake)}});
 
 if (!hasInterface) exitWith {};
 
