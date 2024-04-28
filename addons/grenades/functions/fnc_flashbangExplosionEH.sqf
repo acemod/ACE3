@@ -36,7 +36,7 @@ TRACE_1("params",_grenadePosASL);
       _unit setVariable [QGVAR(flashReactionDebounce), _flashReactionDebounce max (CBA_missionTime + (7 * _strength))];
 
       if (_flashReactionDebounce < CBA_missionTime) then {
-          // Not used interally but could be useful for other mods
+          // Not used internally but could be useful for other mods
           _unit setVariable [QGVAR(flashStrength), _strength, true];
 
           [QGVAR(flashbangedAI), [_unit, _strength, _grenadePosASL]] call CBA_fnc_localEvent;
