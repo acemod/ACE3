@@ -76,16 +76,6 @@ The amount of randomness in the fuse time.
 
 The sound used when the flashbang detonates. If not defined, `["A3\Sounds_F\arsenal\explosives\grenades\Explosion_HE_grenade_01.wss", 5, 1.2, 400]` is used as a default instead.
 
-### 2.2 Incendiary Config Values
-
-```cpp
-class CfgAmmo {
-    class ACE_G_M14 {
-        ace_grenades_incendiary = 1;
-    };
-};
-```
-
 ## 3. Events
 
 ### 3.1 Listenable
