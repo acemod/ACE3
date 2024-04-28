@@ -38,7 +38,7 @@ if (isServer) then {
     };
 
     if (_ring) then {
-        private _intensity = 6;
+        private _intensity = 20;
         private _radius = 1.5 * ((boundingBoxReal _obj) select 2);
         [QEGVAR(fire,addFireSource), [_obj, _radius, _intensity, format [QGVAR(%1), hashValue _obj]]] call CBA_fnc_localEvent;
     };
