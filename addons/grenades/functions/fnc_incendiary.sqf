@@ -51,7 +51,7 @@ private _nearLocalEnemies = [];
             _nearLocalEnemies pushBackUnique _x;
         };
     } forEach crew _x;
-} forEach (_position nearObjects ALERT_NEAR_ENEMY_RANGE); // replace with nearEntities in 2.18
+} forEach (_position nearObjects ALERT_NEAR_ENEMY_RANGE); //@todo replace with nearEntities in 2.18
 
 {
     if (behaviour _x in ["SAFE", "AWARE"]) then {
