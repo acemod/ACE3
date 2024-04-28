@@ -29,26 +29,12 @@
             ["Car", "init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
         };
 
-        // blow off turret effect
-        /*
-        Disabled temporarily due to issues with being able to repair tanks after death. Needs work
-        */
-        /*["Tank", "killed", {
+        // Blow off turret effect
+        ["Tank", "Killed", {
             if (random 1 < 0.15) then {
                 (_this select 0) call FUNC(blowOffTurret);
             };
-        }, true, [], true] call CBA_fnc_addClassEventHandler;*/
-
-        // event to add a turret to a curator if the vehicle already belonged to that curator
-        if (isServer) then {
-            [QGVAR(addTurretToEditable), {
-                params ["_vehicle", "_turret"];
-
-                {
-                    _x addCuratorEditableObjects [[_turret], false];
-                } forEach (objectCurators _vehicle);
-            }] call CBA_fnc_addEventHandler;
-        };
+        }, true, [], true] call CBA_fnc_addClassEventHandler;
     };
 
     // init eject from destroyed vehicle
