@@ -2145,7 +2145,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_miscRepairTime_description">
             <English>Time in seconds to complete a repair.</English>
-            <Japanese>修理完了までの所要時間</Japanese>
+            <Japanese>修理完了までの所要時間 (秒単位)</Japanese>
             <Polish>Czas w sekundach do przeprowadzenia naprawy</Polish>
             <Italian>Tempo in secondi richiesto per completare una riparazione.</Italian>
             <German>Zeit in Sekunden, um eine Reparatur abzuschließen.</German>
@@ -2165,7 +2165,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_wheelChangeTime_description">
             <English>Time in seconds to remove or change a wheel.</English>
-            <Japanese>タイヤの取り外しまたは交換に掛かる時間。</Japanese>
+            <Japanese>タイヤの取り外しまたは交換に掛かる時間。 (秒単位)</Japanese>
             <Polish>Czas w sekundach do zdjęcia lub zmienienia koła.</Polish>
             <Italian>Tempo in secondi richiesto per rimuovere o sostituire una ruota.</Italian>
             <German>Zeit in Sekunden, um ein Rad zu entfernen oder zu wechseln.</German>

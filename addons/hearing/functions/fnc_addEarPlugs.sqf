@@ -4,7 +4,7 @@
  * Called on unit initialization. Adds earplugs if the unit is equipped with either a really loud primary weapon or a rocket launcher.
  *
  * Arguments:
- * 0: A Soldier <Object>
+ * 0: Unit <Object>
  *
  * Return Value:
  * None
@@ -26,16 +26,16 @@ if (!GVAR(enableCombatDeafness) || {GVAR(autoAddEarplugsToUnits) == 0}) exitWith
 params ["_unit"];
 TRACE_2("params",_unit,typeOf _unit);
 
-// Exit if soldier already has earplugs (in ears (persistence scenarios) or inventory)
+// Exit if the unit already has earplugs (in ears (persistence scenarios) or inventory)
 if (_unit call FUNC(hasEarPlugsIn) || {[_unit, "ACE_EarPlugs"] call EFUNC(common,hasItem)}) exitWith {};
 
-// Add earplugs if enabled for everyone or if the soldier has a rocket launcher
+// Add earplugs if enabled for everyone or if the unit has a rocket launcher
 if (GVAR(autoAddEarplugsToUnits) == 2 || {(secondaryWeapon _unit) != ""}) exitWith {
     TRACE_1("has launcher - adding",_unit);
     _unit addItem "ACE_EarPlugs";
 };
 
-// Otherwise add earplugs if the soldier has a big rifle
+// Otherwise add earplugs if the unit has a big rifle
 private _weapon = primaryWeapon _unit;
 
 if (_weapon == "") exitWith {};

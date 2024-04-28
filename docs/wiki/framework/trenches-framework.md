@@ -30,7 +30,7 @@ class CfgSurfaces {
 ```cpp
 class CfgWeapons { // same config also works on backpacks (CfgVehicles)
     class yourBaseClass;
-    class yourEntrenchingToolClass: yourBaseClass
+    class yourEntrenchingToolClass: yourBaseClass {
         ace_trenches_entrenchingTool = 1;
     };
 };

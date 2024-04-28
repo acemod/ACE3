@@ -196,7 +196,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_Description">
             <English>Controls when hitpoint damage from wounds is healed.</English>
-            <Japanese>治療後に負傷箇所にある外傷の状態を決定できます。</Japanese>
+            <Japanese>治療後に負傷箇所にある外傷の状態を制御できます。</Japanese>
             <French>Définit à quel moment les blessures sont entièrement soignées.</French>
             <Russian>Определяет, когда исцеляется урон от ран.</Russian>
             <German>Steuert, wann Trefferpunktschaden von Wunden geheilt wird.</German>
@@ -264,7 +264,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_Description">
             <English>Controls whether medical equipment can be shared between the patient and the medic.</English>
-            <Japanese>患者と救護者との間で医療品の共有をするかどうかを決定します。</Japanese>
+            <Japanese>患者と救護者との間で医療品の共有をするかどうかを制御します。</Japanese>
             <French>Définit si l'équipement médical du médecin et du patient sont mis en commun, et quel matériel est à utiliser en priorité, le cas échéant.</French>
             <Russian>Контролирует, можно ли разделить медикаменты между пациентом и врачом.</Russian>
             <Portuguese>Controla se um item médico pode ser compartilhado entre médico e paciente.</Portuguese>
@@ -325,7 +325,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_Description">
             <English>Time, in seconds, required to administer medication using an autoinjector.</English>
             <French>Définit le temps nécessaire à l'administration d'une substance auto-injectable (en secondes).</French>
-            <Japanese>自動注射器の使用に掛かる時間 (秒) を決定します。</Japanese>
+            <Japanese>自動注射器の使用に掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para administrar medicación utilizando un autoinyectador.</Spanish>
             <Russian>Время, необходимое для введения медикаментов автоинъектором (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny do aplikacji medykamentów za pomocą autostrzykawki.</Polish>
@@ -351,7 +351,7 @@
             <French>Définit le temps nécessaire à l'application ou au retrait d'un garrot (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um ein Tourniquet anzuwenden.</German>
             <Italian>Tempo in secondi richiesto per mettere/rimuovere un laccio emostatico.</Italian>
-            <Japanese>止血帯の使用/取り外しに掛かる時間 (秒) を決定します。</Japanese>
+            <Japanese>止血帯の使用/取り外しに掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para aplicar/quitar un torniquete.</Spanish>
             <Russian>Время, необходимое для наложения/снятия жгута (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny do założenia/zdjęcia stazy.</Polish>
@@ -375,7 +375,7 @@
             <French>Définit le temps nécessaire à la pose d'une perfusion IV (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Infusionsbeutel aufzutragen.</German>
             <Italian>Tempo in secondi richiesto per applicare una Flebo Endovenosa.</Italian>
-            <Japanese>点滴の投与に掛かる時間 (秒) を決定します。</Japanese>
+            <Japanese>点滴の投与に掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para administrar una bolsa de IV.</Spanish>
             <Russian>Время, необходимое для применения пакета внутривенного переливания (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny na aplikację transfuzji IV.</Polish>
@@ -399,7 +399,7 @@
             <French>Définit le temps nécessaire à l'application d'une attelle (en secondes).</French>
             <German>Zeit in Sekunden, die zum Anbringen einer Schiene benötigt wird.</German>
             <Italian>Tempo in secondi richiesto per applicare una gessatura.</Italian>
-            <Japanese>添え木の使用に掛かる時間 (秒) を決定します。</Japanese>
+            <Japanese>添え木の使用に掛かる時間。 (秒単位)</Japanese>
             <Spanish>TIempo, en segundos, requerido para aplicar una férula.</Spanish>
             <Russian>Время, необходимое для наложения шины (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny na aplikację szyny.</Polish>
@@ -423,7 +423,7 @@
             <French>Définit le temps nécessaire à la mise en housse d'un corps (en secondes).</French>
             <German>Zeit in Sekunden, die benötigt wird, um einen Leichensack aufzutragen.</German>
             <Italian>Tempo in secondi richiesto per mettere un deceduto in una sacca per corpi.</Italian>
-            <Japanese>遺体袋の使用に掛かる時間 (秒) を決定します。</Japanese>
+            <Japanese>遺体袋の使用に掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para poner a un paciente en una bolsa para cuerpos.</Spanish>
             <Russian>Время, необходимое для того чтобы упаковать труп в мешок (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny na spakowanie ciała do worka na ciało.</Polish>
@@ -447,7 +447,7 @@
             <French>Durée, en secondes, requise pour creuser une tombe pour un corps.</French>
             <German>Zeit (in Sekunden), die benötigt wird, um ein Grab für einen Leichnam auszuheben.</German>
             <Italian>Tempo in secondi richiesto per seppellire un morto.</Italian>
-            <Japanese>遺体の墓を掘るのに掛かる時間 (秒) を決定します。</Japanese>
+            <Japanese>遺体の墓を掘るのに掛かる時間。 (秒単位)</Japanese>
             <Russian>Время в секундах, необходимое для того, чтобы выкопать могилу для тела.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
@@ -500,7 +500,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
             <English>Controls where epinephrine can be used.</English>
-            <Japanese>アドレナリンが使える場所を決定します。</Japanese>
+            <Japanese>アドレナリンが使える場所を制御します。</Japanese>
             <French>Définit les lieux où l'usage d'épinéphrine est autorisé.</French>
             <Russian>Контролирует, где можно использовать Адреналин.</Russian>
             <Portuguese>Controla onde Epinefrina pode ser utilizada.</Portuguese>
@@ -566,7 +566,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
-            <Japanese>PAKが使える場所を決定します。</Japanese>
+            <Japanese>PAKが使える場所を制御します。</Japanese>
             <French>Définit les lieux où l'usage de la trousse sanitaire est autorisé.</French>
             <Russian>Контролирует, где можно использовать Аптечку.</Russian>
             <Portuguese>Controla onde o KPS pode ser utilizado.</Portuguese>
@@ -598,7 +598,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumePAK_Description">
             <English>Controls whether a PAK should be consumed after use.</English>
-            <Japanese>PAKの使用後に消費するかどうかを決定します。</Japanese>
+            <Japanese>PAKの使用後に消費するかどうかを制御します。</Japanese>
             <French>Définit si la trousse sanitaire doit être à usage unique.</French>
             <Russian>Контролирует, следует ли израсходовать Аптечку после использования.</Russian>
             <Portuguese>Controla se o KPS deve ser descartado/consumido após o uso.</Portuguese>
@@ -724,7 +724,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a surgical kit can be used.</English>
-            <Japanese>手術キットが使える場所を決定します。</Japanese>
+            <Japanese>手術キットが使える場所を制御します。</Japanese>
             <French>Définit les lieux où l'usage de la trousse chirurgicale est autorisé.</French>
             <Russian>Контролирует, где можно использовать Хирургический набор</Russian>
             <Portuguese>Controle onde o Kit Cirúrgico pode ser utilizado.</Portuguese>
@@ -809,7 +809,7 @@
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_Description">
             <English>Time, in seconds, required to stitch a single wound.</English>
             <French>Définit le temps nécessaire à la suture d'une plaie (en secondes).</French>
-            <Japanese>縫合に掛かる時間 (秒) を決定します。</Japanese>
+            <Japanese>縫合に掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para suturar una única herida.</Spanish>
             <Russian>Время, необходимое для зашивания одной раны (в секундах).</Russian>
             <Polish>Czas w sekundach potrzebny na zaszycie pojedyńczej rany.</Polish>
@@ -851,7 +851,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_DisplayName">
             <English>Allow Unconscious Body Bag</English>
             <French>Housse mortuaire - Autoriser patients inconscients</French>
-            <Japanese>気絶者を遺体袋に</Japanese>
+            <Japanese>無意識者の遺体袋への収容許可</Japanese>
             <Spanish>Permitir bolsa para cuerpos inconsciente</Spanish>
             <Russian>Разрешить упаковывать пациентов без сознания в мешки для трупов</Russian>
             <Polish>Nieprzytomni w worku na ciało</Polish>
@@ -863,7 +863,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_Description">
             <English>Enables placing an unconscious patient in a body bag.</English>
             <French>Active la possibilité de placer des patients inconscients dans les housses mortuaires.\nAttention : le cas échéant cela provoquera la mort du patient.</French>
-            <Japanese>無意識状態のプレイヤーを遺体袋へ入れられるかどうかを決定します。</Japanese>
+            <Japanese>無意識状態のプレイヤーを遺体袋へ入れることが出来る様にします。</Japanese>
             <Spanish>Permitir colocar a un paciente inconsciente en una bolsa para cuerpos.</Spanish>
             <Russian>Разрешает упаковывать пациентов без сознания в мешки для трупов.</Russian>
             <Polish>Zezwalaj na pakowanie nieprzytomnych osób do worka na ciało.</Polish>
@@ -969,7 +969,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_Description">
             <English>Controls where IV transfusions can be performed.</English>
-            <Japanese>IV 輸液を行える場所を決定できます。</Japanese>
+            <Japanese>IV 輸液を行える場所を制御します。</Japanese>
             <Spanish>Controla dónde pueden ser realizadas las transfusiones IV.</Spanish>
             <French>Définit les lieux où la pose de perfusions est autorisée.</French>
             <Russian>Определяет к каким частям тела разрешено применять пакеты внутренного переливания.</Russian>
@@ -997,7 +997,7 @@
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_Description">
             <English>Controls whether vanilla medical items are converted to ACE Medical items, removed only, or ignored.</English>
             <German>Legt fest, ob Standard Medic-Equipment in ACE-Equipment umgewandelt oder entfernt wird</German>
-            <Japanese>ゲーム標準の医療アイテムをACE医療アイテムへ変換するか、削除するか、そのままにするかを決定します。</Japanese>
+            <Japanese>ゲーム標準の医療アイテムをACE医療アイテムへ変換するか、削除するか、そのままにするかを制御します。</Japanese>
             <French>Détermine si les objets médicaux vanilla sont convertis en objets médicaux ACE, s'ils sont simplement retirés, ou s'ils sont ignorés.</French>
             <Russian>Определяет, что делать с ванильными медикаментами: преобразовать в медикаменты ACE, удалить или проигнорировать.</Russian>
             <Portuguese>Controla se itens médicos vanilla serão convertidos para itens do ACE, removidos ou ignorados.</Portuguese>
@@ -1105,7 +1105,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LitterCleanupDelay_Description">
             <English>Controls the lifetime of litter objects, in seconds. -1 is forever.</English>
-            <Japanese>廃棄物の寿命を秒で決定できます。-1 にすると恒久的になります。</Japanese>
+            <Japanese>廃棄物の寿命を秒単位で制御します。-1 にすると恒久的になります。</Japanese>
             <French>Définit la durée d'affichage des détritus, en secondes. Durée illimitée : -1.</French>
             <Russian>Управляет временем жизни объектов мусора в секундах. -1 означает Навсегда.</Russian>
             <Portuguese>Controla o tempo de vida de objetos de lixo criados em segundos. -1 é para sempre.</Portuguese>
@@ -1263,7 +1263,7 @@
             <English>Time, in seconds, required to perform CPR on a patient.</English>
             <French>Définit le temps nécessaire à la mise en œuvre d'une RCP (en secondes).</French>
             <Italian>Tempo in secondi richiesto per effettuare RCP su un paziente.</Italian>
-            <Japanese>心肺蘇生(CPR)に掛かる時間 (秒) を決定します。</Japanese>
+            <Japanese>心肺蘇生(CPR)に掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para realizar RCP en un paciente.</Spanish>
             <Russian>Время, необходимое для проведения сердечно-лёгочной реанимации (СЛР) (в секундах).</Russian>
             <Polish>Czas w sekundach jaki jest potrzebny do wykonania CPR na pacjencie.</Polish>
@@ -3574,7 +3574,7 @@
             <English>Receiving Saline IV [%1ml]</English>
             <German>Erhalte Saline IV [%1ml]</German>
             <Spanish>Recibiendo Salina IV [%1ml]</Spanish>
-            <Russian>Принимается солевой раствор IV [%1 мл]</Russian>
+            <Russian>Принимается физраствор [%1 мл]</Russian>
             <Polish>Otrzymywanie soli IV [%1ml]</Polish>
             <French>Transfusion de sérum salé : [%1 ml]</French>
             <Czech>Přijímání soli IV [%1ml]</Czech>
@@ -3590,7 +3590,7 @@
             <English>Receiving Blood IV [%1ml]</English>
             <German>Erhalte Blut IV [%1ml]</German>
             <Spanish>Recibiendo Sangre IV [%1ml]</Spanish>
-            <Russian>Принимается кровь IV [%1 мл]</Russian>
+            <Russian>Принимается кровь [%1 мл]</Russian>
             <Polish>Otrzymywanie krwi IV [%1ml]</Polish>
             <French>Transfusion de sang : [%1 ml]</French>
             <Czech>Přijímání krve IV [%1ml]</Czech>
@@ -3606,7 +3606,7 @@
             <English>Receiving Plasma IV [%1ml]</English>
             <German>Erhalte Plasma IV [%1ml]</German>
             <Spanish>Recibiendo Plasma IV [%1ml]</Spanish>
-            <Russian>Принимается плазма IV [%1 мл]</Russian>
+            <Russian>Принимается плазма [%1 мл]</Russian>
             <Polish>Otrzymywanie plazmy IV [%1ml]</Polish>
             <French>Transfusion de plasma : [%1 ml]</French>
             <Czech>Přijímání plazmy IV [%1ml]</Czech>
@@ -4957,7 +4957,7 @@
             <Korean>붕대가 상처를 치료하는 데 얼마나 효과적으로 지속되는지 결정합니다.</Korean>
             <French>Défini l'efficacité des bandages à refermer des plaies.</French>
             <Italian>Determina quanto i bendaggi sono efficaci nel chiudere le ferite.</Italian>
-            <Japanese>包帯が傷をふさぐのにどれだけ効果的かを決定します。</Japanese>
+            <Japanese>包帯が傷をふさぐのにどれだけ効果的かを定義します。</Japanese>
             <Russian>Определяет, насколько эффективны бинты при закрытии ран.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalTab">

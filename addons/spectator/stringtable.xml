@@ -224,7 +224,7 @@
             <English>Maximum distance the follow camera can be from the target</English>
             <German>Maximale Distanz in welcher die Kamera dem Ziel folgen kann.</German>
             <Russian>Максимальная дистанция от камеры слежения до цели</Russian>
-            <Japanese>カメラが目標へ追随できる最大距離を決定できます。</Japanese>
+            <Japanese>カメラが目標へ追随できる最大距離</Japanese>
             <Portuguese>A distância máxima que a câmera de acompanhamento pode estar do alvo.</Portuguese>
             <Chinese>攝影機能追隨目標的最大距離</Chinese>
             <Chinesesimp>摄影机能追随目标的最大距离</Chinesesimp>

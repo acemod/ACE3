@@ -455,7 +455,7 @@
             <Chinese>控制顏色化圖示的透明度。設定為動態使其界面透明度與飲食需求一樣，越透明越需要。</Chinese>
             <Chinesesimp>控制彩色图标 HUD 的透明度。动态设置使 HUD 的透明度随着口渴或饥饿的增加而减弱。</Chinesesimp>
             <Polish>Kontroluje transparentność kolorowych ikon HUD. Dynamiczne ustawienie zmniejsza przejrzystość wraz z zwiększeniem głodu czy pragnienia.</Polish>
-            <Japanese>色付きアイコンの透明度を決定できます。動的に設定されると、空腹度や喉の渇きが増すにつれて、アイコンの透明度を下げます。</Japanese>
+            <Japanese>色付きアイコンの透明度を制御できます。動的に設定されると、空腹度や喉の渇きが増すにつれて、アイコンの透明度を下げます。</Japanese>
             <Russian>Настраивает прозрачность цветных иконок. «Динамическая» делает иконки менее прозрачными при увеличении жажды и голода.</Russian>
             <Turkish>Renkli Simgeler Gösterge Paneli'nin şeffaflığını kontrol eder. Dinamik ayar, susuzluk veya açlık arttıkça HUD'yi daha az şeffaf hale getirir.</Turkish>
             <Korean>색깔 아이콘의 투명도를 조절합니다. 동적 설정의 경우 배고픔이나 목마름이 해결되면 덜 투명하게 바뀝니다.</Korean>

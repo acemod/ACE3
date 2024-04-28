@@ -45,7 +45,7 @@
             <Hungarian>Füldugó berakva</Hungarian>
             <Portuguese>Protetores colocados</Portuguese>
             <Italian>Indossa i tappi auricolari</Italian>
-            <Japanese>耳栓を着ける</Japanese>
+            <Japanese>耳栓を装着</Japanese>
             <Korean>귀마개 착용</Korean>
             <Chinesesimp>塞入耳塞</Chinesesimp>
             <Chinese>塞入耳塞</Chinese>
@@ -79,7 +79,7 @@
             <Hungarian>Füldugó berakva</Hungarian>
             <Portuguese>Protetores colocados</Portuguese>
             <Italian>Tappi auricolari indossati</Italian>
-            <Japanese>耳栓を着けました</Japanese>
+            <Japanese>耳栓を装着しました</Japanese>
             <Korean>귀마개 착용</Korean>
             <Chinesesimp>耳塞已塞入</Chinesesimp>
             <Chinese>耳塞已塞入</Chinese>
@@ -144,7 +144,7 @@
             <Italian>Quando il giocatore riceve danni all'udito, non far sentire il fischio nelle orecchie</Italian>
             <Portuguese>Remove o efeito de zunido quando o jogador recebe dano na audição</Portuguese>
             <Russian>Убирает эффект звона в ушах, когда игрок получает повреждение слуха</Russian>
-            <Japanese>プレイヤーの聴覚が損傷したときの耳鳴り効果を削除します</Japanese>
+            <Japanese>プレイヤーが聴覚にダメージを受けた際の耳鳴り効果音を無効化します</Japanese>
             <Korean>플레이어가 청력손실을 입을 때 생기는 이명현상을 제거합니다.</Korean>
             <Chinesesimp>关闭耳鸣效果时，就算玩家受到相当程度的听力伤害，也不会造成耳鸣效果</Chinesesimp>
             <Chinese>關閉耳鳴效果時，就算玩家受到相當程度的聽力傷害, 也不會造成耳鳴效果</Chinese>
@@ -192,7 +192,7 @@
             <Russian>Уменьшает возможность игрока слышать звуки при повреждении органов слуха</Russian>
             <Italian>Assorda il giocatore quando riceve danni all'udito</Italian>
             <French>Réduit la capacité auditive du joueur lorsqu'il subit des dommages auditifs.</French>
-            <Japanese>プレイヤーが聴覚ダメージを受けると聴力が低下します</Japanese>
+            <Japanese>プレイヤーが聴覚にダメージを受けると聴力が低下します</Japanese>
             <Korean>청력에 손상을 입으면 듣는 소리가 감소합니다.</Korean>
             <Chinesesimp>当玩家听力受损时降低听力能力？</Chinesesimp>
             <Chinese>當玩家聽力受損時降低聽力能力?</Chinese>
@@ -268,7 +268,7 @@
             <Italian>Aggiungi l'oggetto 'ACE_EarPlugs' a tutte le unità che hanno armi/lanciatori rumorosi. Può essere disabilitato se vengono usati loadout personalizzati.</Italian>
             <Spanish>Agregar el item `ACE_EarPlugs`  a todas las unidades equipadas con armas muy ruidosas. Desactivar si quieren utilizarse equipamientos personalizados.</Spanish>
             <French>Ajoute l'objet `Ace_EarPlugs` à toutes les unités ayant des armes bruyantes. Peut être désactivé si de l'équipement personnalisé est utilisé.</French>
-            <Japanese>全ユニットへ`ACE_EarPlugs`アイテムを持たせます。これはロードアウトの編集で無効化できます。</Japanese>
+            <Japanese>全てのユニットに`ACE_EarPlugs`アイテムを所持させます。これはロードアウトの編集で無効化できます。</Japanese>
             <Korean>무기를 가지고 있는 모든 인원에게 'ACE_EarPlugs'를 지급합니다. 임의의 장비를 사용시 비활성화할 수 있습니다.</Korean>
             <Chinesesimp>增加`ACE_EarPlugs`物品给拥有巨大噪音武器的单位。当你想自定装备时，此功能可被关闭。</Chinesesimp>
             <Chinese>增加`ACE_EarPlugs`物品給擁有巨大噪音武器的單位。當你想自定裝備時，此功能可被關閉。</Chinese>
@@ -292,7 +292,7 @@
             <English>Volume muffling</English>
             <German>Lautstärkedämpfung</German>
             <French>Atténuation du volume</French>
-            <Japanese>音量低下</Japanese>
+            <Japanese>音量の抑制</Japanese>
             <Chinesesimp>降低音量</Chinesesimp>
             <Chinese>進低音量</Chinese>
             <Italian>Attenuazione del volume</Italian>
@@ -306,7 +306,7 @@
         <Key ID="STR_ACE_Hearing_earplugsVolume_DisplayName">
             <English>Earplugs Volume</English>
             <German>Lautstärke Ohrenstöpsel</German>
-            <Japanese>耳栓時の音量</Japanese>
+            <Japanese>耳栓装着時音量</Japanese>
             <Chinesesimp>耳塞时音量</Chinesesimp>
             <Chinese>耳塞時音量</Chinese>
             <Italian>Volume con i Tappi</Italian>
@@ -321,7 +321,7 @@
         <Key ID="STR_ACE_Hearing_earplugsVolume_Description">
             <English>Volume when using earplugs.</English>
             <German>Lautstärke wenn man Ohrenstöpsel benutzt</German>
-            <Japanese>耳栓使用時の音量を決定します。</Japanese>
+            <Japanese>耳栓を使用した時の音量。</Japanese>
             <Chinesesimp>决定带上耳塞时的音量</Chinesesimp>
             <Chinese>使用耳塞時音量</Chinese>
             <Italian>Volume audio quandi si indossano i tappi per le orecchie.</Italian>
@@ -336,7 +336,7 @@
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
             <English>Unconscious Volume</English>
             <German>Lautstärke Bewusstlosigkeit</German>
-            <Japanese>気絶時の音量</Japanese>
+            <Japanese>無意識状態時音量</Japanese>
             <Chinesesimp>无意识时音量</Chinesesimp>
             <Chinese>昏迷時音量</Chinese>
             <Italian>Volume quando incoscente</Italian>
@@ -351,7 +351,7 @@
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>
             <German>Lautstärke während man Bewusstlos ist</German>
-            <Japanese>無意識状態時の音量を決定します。</Japanese>
+            <Japanese>無意識状態になった時の音量。</Japanese>
             <Chinesesimp>决定处于无意识时的音量</Chinesesimp>
             <Chinese>昏迷時使用耳塞的音量</Chinese>
             <Italian>Volume quando incoscente.</Italian>
@@ -365,7 +365,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_PutOrRemoveEarplugs">
             <English>Put/take out earplugs</English>
-            <Japanese>耳栓を着け外す</Japanese>
+            <Japanese>耳栓の着脱</Japanese>
             <Russian>Вставить/вынуть беруши</Russian>
             <Italian>Metti/Togli tappi</Italian>
             <Korean>귀마개 토글</Korean>
@@ -373,6 +373,9 @@
         </Key>
         <Key ID="STR_ACE_Hearing_heavyWeaponUnits">
             <English>Only units with heavy weapons</English>
+            <French>Uniquement les unités dotées d'armes lourdes</French>
+            <Russian>Только юниты с тяжелым вооружением</Russian>
+            <Japanese>重火器を装備したユニットのみ</Japanese>
         </Key>
     </Package>
 </Project>
