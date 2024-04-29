@@ -41,12 +41,12 @@ if (hasInterface) then {
     }, [_light], 0.1] call CBA_fnc_waitAndExecute;
 };
 
-// Affect local AI
+// Affect local AI (players are not local, except for ACE_player)
 // @todo: Affect units in static weapons, turned out, etc
 private _affected = (ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20];
 _affected = _affected - [ACE_player];
 {
-    if (local _x && {alive _x}) then {
+    if (local _x && {_x call EFUNC(common,isAwake)}) then {
         private _unit = _x;
         private _strength = 1 - (((eyePos _unit) vectorDistance _grenadePosASL) min 20) / 20;
 
