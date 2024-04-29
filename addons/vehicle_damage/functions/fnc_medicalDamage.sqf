@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [cursorObject, player, player] call grenades_hatches_main_fnc_medicalDamage;
+ * [cursorObject, player, player] call ace_vehicle_damage_main_fnc_medicalDamage;
  *
  * Public: No
  */
