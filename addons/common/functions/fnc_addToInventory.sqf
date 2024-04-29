@@ -67,7 +67,7 @@ if (_type select 0 == "magazine") then {
     // https://feedback.bistudio.com/T74244
     // When adding throwables with the addXXXCargo(Global) commands, they don't show up in the throwables list
     // If a throwable has more than 1 ammo count, adding it with addItem(XXX) commands also renders the throwable unusable
-    if (_ammoCount == 1 && {_classname call BIS_fnc_isThrowable}) then {
+    if (_ammoCount == 1 && {_classname call BIS_fnc_isThrowable}) then { // TODO: replace with https://community.bistudio.com/wiki/isThrowable in 2.18
         _type set [0, "item"];
     };
 };
