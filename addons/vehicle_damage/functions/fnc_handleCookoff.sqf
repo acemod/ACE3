@@ -31,10 +31,10 @@ _chanceOfFire = _chanceOfFire * EGVAR(cookoff,probabilityCoef);
 
 if (_chanceOfFire >= random 1) exitWith {
     private _configOf = configOf _vehicle;
-    private _fireDetonateChance = [_configOf >> QGVAR(detonationDuringFireProb), "NUMBER", 0] call CBA_fnc_getConfigEntry;
+    private _fireDetonateChance = getNumber (_configOf >> QGVAR(detonationDuringFireProb));
 
     if (_canRing) then {
-        _canRing = ([_configOf >> QGVAR(canHaveFireRing), "NUMBER", 0] call CBA_fnc_getConfigEntry) == 1;
+        _canRing = getNumber (_configOf >> QGVAR(canHaveFireRing)) == 1;
     };
 
     if (_canJet) then {

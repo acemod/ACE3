@@ -56,7 +56,7 @@ private _hitPointsConfig = _vehicleConfig >> "HitPoints";
     _x params ["_hitPoints", "_hitArea"];
 
     {
-        _hitPointHash set [toLowerANSI _x, [_hitArea, abs ([_hitPointsConfig >> _x >> "minimalHit", "NUMBER", 0] call CBA_fnc_getConfigEntry)]];
+        _hitPointHash set [toLowerANSI _x, [_hitArea, abs getNumber (_hitPointsConfig >> _x >> "minimalHit")]];
     } forEach _hitPoints;
 } forEach ALL_HITPOINTS;
 
@@ -66,8 +66,8 @@ private _fnc_iterateThroughConfig = {
     TRACE_1("checking config",_config);
 
     private _configName = toLowerANSI configName _config;
-    private _isGun = ([_config >> "isGun", "NUMBER", 0] call CBA_fnc_getConfigEntry) == 1;
-    private _isTurret = ([_config >> "isTurret", "NUMBER", 0] call CBA_fnc_getConfigEntry) == 1;
+    private _isGun = getNumber (_config >> "isGun") == 1;
+    private _isTurret = getNumber (_config >> "isTurret") == 1;
     private _isEra = _configName in _eraHitpoints;
     private _isSlat = _configName in _slatHitpoints;
     private _isMisc = false;
@@ -85,23 +85,23 @@ private _fnc_iterateThroughConfig = {
         _x params ["_hitArea", "_hitPoints"];
 
         if (_configName in _hitPoints) then {
-            _hitPointHash set [_configName, [_hitArea, abs ([_config >> "minimalHit", "NUMBER", 0] call CBA_fnc_getConfigEntry)]];
+            _hitPointHash set [_configName, [_hitArea, abs getNumber (_config >> "minimalHit")]];
             _isMisc = true;
         };
     } forEach _hitPointAliases;
 
     if (_isGun || _isTurret || _isEra || _isSlat || _isMisc) then {
         if (_isGun) then {
-            _hitPointHash set [_configName, ["gun", abs ([_config >> "minimalHit", "NUMBER", 0] call CBA_fnc_getConfigEntry)]];
+            _hitPointHash set [_configName, ["gun", abs getNumber (_config >> "minimalHit")]];
         };
         if (_isTurret) then {
-            _hitPointHash set [_configName, ["turret", abs ([_config >> "minimalHit", "NUMBER", 0] call CBA_fnc_getConfigEntry)]];
+            _hitPointHash set [_configName, ["turret", abs getNumber (_config >> "minimalHit")]];
         };
         if (_isEra) then {
-            _hitPointHash set [_configName, ["era", abs ([_config >> "minimalHit", "NUMBER", 0] call CBA_fnc_getConfigEntry)]];
+            _hitPointHash set [_configName, ["era", abs getNumber (_config >> "minimalHit")]];
         };
         if (_isSlat) then {
-            _hitPointHash set [_configName, ["slat", abs ([_config >> "minimalHit", "NUMBER", 0] call CBA_fnc_getConfigEntry)]];
+            _hitPointHash set [_configName, ["slat", abs getNumber (_config >> "minimalHit")]];
         };
 
         TRACE_6("found gun/turret/era/slat/misc",_isGun,_isTurret,_isEra,_isSlat,_isMisc,_hash);
@@ -113,9 +113,9 @@ private _fnc_iterateThroughConfig = {
 };
 
 private _turretConfig = _vehicleConfig >> "Turrets";
-private _eraHitpoints = [_vehicleConfig >> QGVAR(eraHitpoints), "ARRAY", []] call CBA_fnc_getConfigEntry;
-private _slatHitpoints = [_vehicleConfig >> QGVAR(slatHitpoints), "ARRAY", []] call CBA_fnc_getConfigEntry;
-private _hitPointAliases = [_vehicleConfig >> QGVAR(hitpointAlias), "ARRAY", []] call CBA_fnc_getConfigEntry;
+private _eraHitpoints = getArray (_vehicleConfig >> QGVAR(eraHitpoints));
+private _slatHitpoints = getArray (_vehicleConfig >> QGVAR(slatHitpoints));
+private _hitPointAliases = getArray (_vehicleConfig >> QGVAR(hitpointAlias));
 
 _eraHitpoints = _eraHitpoints apply {toLowerANSI _x};
 _slatHitpoints = _slatHitpoints apply {toLowerANSI _x};

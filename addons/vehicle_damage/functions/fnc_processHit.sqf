@@ -55,13 +55,13 @@ private _incendiary = [_projectileConfig >> QGVAR(incendiary), "NUMBER", [0.3, 0
 private _hitPointHash = GVAR(vehicleClassesHitPointHash) getOrDefault [typeOf _vehicle, createHashMap];
 (_hitPointHash getOrDefault [_hitPoint, []]) params ["_hitArea", "_minDamage"];
 
-private _projectileExplosive = [_projectileConfig >> "explosive", "NUMBER", 0] call CBA_fnc_getConfigEntry;
-private _indirectHit = [_projectileConfig >> "indirectHit", "NUMBER", 0] call CBA_fnc_getConfigEntry;
+private _projectileExplosive = getNumber (_projectileConfig >> "explosive");
+private _indirectHit = getNumber (_projectileConfig >> "indirectHit");
 
 if (_warheadType == WARHEAD_TYPE_AP) then {
     // Change damage based on projectile speed (doesn't do this in vanilla Arma believe it or not)
     if (!isNull _source) then {
-        private _airFriction = [_projectileConfig >> "airFriction", "NUMBER", 0] call CBA_fnc_getConfigEntry;
+        private _airFriction = getNumber (_projectileConfig >> "airFriction");
         private _distance = _source distance _vehicle;
         _newDamage = (1 - _projectileExplosive) * _newDamage * exp (_airFriction * _distance);
     };
@@ -155,7 +155,7 @@ switch (_hitArea) do {
     case "engine": {
         private _vehicleConfig = configOf _vehicle;
         private _currentFuel = fuel _vehicle;
-        private _chanceToDetonate = ([_vehicleConfig >> QGVAR(engineDetonationProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _currentFuel * _penChance;
+        private _chanceToDetonate = getNumber (_vehicleConfig >> QGVAR(engineDetonationProb)) * _incendiary * _currentFuel * _penChance;
 
         TRACE_4("hit engine",_chanceToDetonate,_incendiary,_chanceOfDetonation,_currentFuel);
 
@@ -178,7 +178,7 @@ switch (_hitArea) do {
         // No cookoff for cars
         if (_isCar) exitWith {};
 
-        private _chanceOfFire = ([_vehicleConfig >> QGVAR(engineFireProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _currentFuel * _penChance;
+        private _chanceOfFire = getNumber (_vehicleConfig >> QGVAR(engineFireProb)) * _incendiary * _currentFuel * _penChance;
         private _cookoffIntensity = 4 * _currentFuel;
 
         [_vehicle, _chanceOfFire, _cookoffIntensity, _source, _instigator, "engine", false, false] call FUNC(handleCookoff);
@@ -186,7 +186,7 @@ switch (_hitArea) do {
     case "hull": {
         private _vehicleConfig = configOf _vehicle;
         private _currentFuel = fuel _vehicle;
-        private _chanceToDetonate = ([_vehicleConfig >> QGVAR(hullDetonationProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * ((_chanceOfDetonation + _currentFuel) / 2) * _penChance;
+        private _chanceToDetonate = getNumber (_vehicleConfig >> QGVAR(hullDetonationProb)) * _incendiary * ((_chanceOfDetonation + _currentFuel) / 2) * _penChance;
 
         TRACE_4("hit hull",_chanceToDetonate,_incendiary,_chanceOfDetonation,_currentFuel);
 
@@ -263,14 +263,14 @@ switch (_hitArea) do {
         // No cookoff for cars
         if (_isCar) exitWith {};
 
-        private _chanceOfFire = ([_vehicleConfig >> QGVAR(hullFireProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * ((_chanceOfDetonation + _currentFuel) / 2) * _penChance;
+        private _chanceOfFire = getNumber (_vehicleConfig >> QGVAR(hullFireProb)) * _incendiary * ((_chanceOfDetonation + _currentFuel) / 2) * _penChance;
         private _cookoffIntensity = 1.5 + (_explosiveAmmoCount * _chanceOfFire);
 
         [_vehicle, _chanceOfFire, _cookoffIntensity, _source, _instigator] call FUNC(handleCookoff);
     };
     case "turret": {
         private _vehicleConfig = configOf _vehicle;
-        private _chanceToDetonate = ([_vehicleConfig >> QGVAR(turretDetonationProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _chanceOfDetonation * _penChance;
+        private _chanceToDetonate = getNumber (_vehicleConfig >> QGVAR(turretDetonationProb)) * _incendiary * _chanceOfDetonation * _penChance;
 
         TRACE_3("hit turret",_chanceToDetonate,_incendiary,_chanceOfDetonation);
 
@@ -289,7 +289,7 @@ switch (_hitArea) do {
         // No cookoff for cars
         if (_isCar) exitWith {};
 
-        private _chanceOfFire = ([_vehicleConfig >> QGVAR(turretFireProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _chanceOfDetonation * _penChance;
+        private _chanceOfFire = getNumber (_vehicleConfig >> QGVAR(turretFireProb)) * _incendiary * _chanceOfDetonation * _penChance;
         private _cookoffIntensity = _explosiveAmmoCount * _chanceOfFire;
 
         [_vehicle, _chanceOfFire, _cookoffIntensity, _source, _instigator] call FUNC(handleCookoff);
