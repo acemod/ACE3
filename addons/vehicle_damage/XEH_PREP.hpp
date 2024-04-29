@@ -1,6 +1,6 @@
 PREP(abandon);
-PREP(addEventHandler);
 PREP(addDamage);
+PREP(addEventHandler);
 PREP(blowOffTurret);
 PREP(handleBail);
 PREP(handleCookoff);

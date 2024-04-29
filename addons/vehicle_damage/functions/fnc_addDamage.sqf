@@ -5,25 +5,26 @@
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Hit Index <NUMBER>
- * 2: Hit Point <STRING>
+ * 1: Hit index <NUMBER>
+ * 2: Hit point <STRING>
  * 3: Damage <NUMBER>
- * 4: Whether or not to cap the damage to maximum part damage <BOOL> (default: true)
+ * 4: Source of damage <OBJECT>
+ * 5: Person who caused damage <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [vehicle player, 234, "HitHull"] call ace_vehicle_damage_fnc_addDamage
+ * [cursorObject, 12, "Hit_Engine", 1, player, player] call ace_vehicle_damage_fnc_addDamage
  *
  * Public: No
  */
 
-params ["_vehicle", "_hitIndex", "_hitPoint", "_damage", ["_capDamageAtCurret", true]];
+params ["_vehicle", "_hitIndex", "_hitPoint", "_damage", "_source", "_instigator"];
 
 private _currentDamage = _vehicle getHitPointDamage _hitPoint;
 
-if (_capDamageAtCurret && {_damage < _currentDamage}) exitWith {
+if (_damage < _currentDamage) exitWith {
     TRACE_4("capping damage at current",_capDamageAtCurret,_damage,_currentDamage,_hitPoint);
 };
 
@@ -35,9 +36,9 @@ if (_hitPoint == "#structural") then {
 };
 
 if (_hitIndex >= 0) then {
-    _vehicle setHitIndex [_hitIndex, _damage, true];
+    _vehicle setHitIndex [_hitIndex, _damage, true, _source, _instigator];
 } else {
-    _vehicle setHitPointDamage [_hitPoint, _damage, true];
+    _vehicle setHitPointDamage [_hitPoint, _damage, true, _source, _instigator];
 };
 
 if (_hitPoint == "HitEngine" && {_damage >= 0.9}) then {

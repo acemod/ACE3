@@ -4,20 +4,20 @@
  * Checks hitpoint damage and determines if a vehicle should cook off.
  *
  * Arguments:
- * 0: The vehicle <OBJECT>
+ * 0: Vehicle <OBJECT>
  * 1: Chance of fire <NUMBER>
  * 2: Intensity of cookoff <NUMBER>
  * 3: Source of damage <OBJECT>
- * 4: Person who instigated cook-off <OBJECT>
+ * 4: Person who caused damage <OBJECT>
  * 5: Part of vehicle which got hit <STRING> (default: "")
  * 6: Whether or not the vehicle can spawn ring-fire effect <BOOL> (default: false)
- * 7: Can Jet <BOOL> (default: true)
+ * 7: Whether or not the vehicle can spawn jet-fire effect <BOOL> (default: true)
  *
  * Return Value:
- * If cooked off <BOOL>
+ * If vehicle started or already cooking off <BOOL>
  *
  * Example:
- * [cursorObject, 0.1, 5] call ace_vehicle_damage_fnc_handleCookoff;
+ * [cursorObject, 0.1, 5, player, player] call ace_vehicle_damage_fnc_handleCookoff
  *
  * Public: No
  */

@@ -9,15 +9,15 @@
  * 2: Damage taken <NUMBER>
  * 3: Source of damage <OBJECT>
  * 4: Projectile that caused damage <STRING>
- * 5: Hit part index of hit point <NUMBER>
- * 6: Instigator of damage <OBJECT>
- * 7: Hit point config name <STRING>
+ * 5: Hit index <NUMBER>
+ * 6: Person who caused damage <OBJECT>
+ * 7: Hit point <STRING>
  *
  * Return Value:
- * Current or maximum damage of part
+ * Current or maximum damage of part <NUMBER>
  *
  * Example:
- * [cursorObject, projectile, 5, 0.663] call ace_vehicle_damage_fnc_handleDamage;
+ * [cursorObject, "", 0.5, player, projectile, 12, player, "Hit_Engine"] call ace_vehicle_damage_fnc_handleDamage
  *
  * Public: No
  */
@@ -64,7 +64,9 @@ if !(_projectile in ["ace_ammoExplosion", "ACE_ammoExplosionLarge"]) then {
 
                 private _newDamage = _damage - _returnHit;
 
-                if !([_vehicle, _hitPoint, _hitIndex, _source, _instigator, _returnHit, _newDamage, _projectile, _selection] call FUNC(handleVehicleDamage)) exitWith {
+                TRACE_1("handleDamage",_returnHit);
+
+                if !([_vehicle, _hitPoint, _hitIndex, _selection, _newDamage, _projectile, _source, _instigator] call FUNC(handleVehicleDamage)) exitWith {
                     TRACE_2("cancelling rest of vehicle damage queue ( [%1] items left out of [%2] )",(count (_hitArray#1)) - _forEachIndex,count (_hitArray#1))
                 };
             } forEachReversed _hitArray;

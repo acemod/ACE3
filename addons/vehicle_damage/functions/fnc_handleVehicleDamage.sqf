@@ -5,27 +5,25 @@
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: The hitpoint which got hit <STRING>
- * 2: The index of what got hit <NUMBER>
- * 3: The damage that the new part took <NUMBER>
- * 4: Source of damage <OBJECT>
- * 5: Instigator <OBJECT>
- * 6: Damage before hit <NUMBER>
- * 7: Damage after hit <NUMBER>
- * 8: Projectile <OBJECT>
- * 9: Selection that was hit <STIRNG>
+ * 1: Hit point <STRING>
+ * 2: Hit index <NUMBER>
+ * 3: Selection that was hit <STIRNG>
+ * 4: Damage after hit <NUMBER>
+ * 5: Projectile <OBJECT>
+ * 6: Source of damage <OBJECT>
+ * 7: Person who caused damage <OBJECT>
  *
  * Return Value:
  * Whether or not to continue handling last frame's damage <BOOL>
  *
  * Example:
- * [ace_vehicle_damage_fnc_handleVehicleDamage, tank1, "Hit_Engine", 12]] call CBA_fnc_execNextFrame
+ * [ace_vehicle_damage_fnc_handleVehicleDamage, [cursorObject, "Hit_Engine", 12, ]] call CBA_fnc_execNextFrame
  *
  * Public: No
  */
 
-params ["_vehicle", "_hitPoint", "_hitIndex", "_source", "_instigator", "_oldDamage", "_newDamage", "_projectile", "_selection"];
-TRACE_6("handleVehicleDamage",_vehicle,_hitPoint,_hitIndex,_source,_oldDamage,_newDamage);
+params ["_vehicle", "_hitPoint", "_hitIndex", "_selection", "_newDamage", "_projectile", "_source", "_instigator"];
+TRACE_8("handleVehicleDamage",_vehicle,_hitPoint,_hitIndex,_selection,_newDamage,_projectile,_source,_instigator);
 
 if (!alive _vehicle) exitWith {
     private _eventHandler = _vehicle getVariable [QGVAR(handleDamage), nil];

@@ -1,55 +1,57 @@
 #include "script_component.hpp"
 
+// Init eject from destroyed vehicles
+// See https://github.com/acemod/ACE3/pull/6330
+// Still valid for Arma 2.16
+{
+    [_x, "Init", {
+        params ["_vehicle"];
+
+        if (!alive _vehicle) exitWith {};
+
+        TRACE_2("ejectIfDestroyed init",_vehicle,typeOf _vehicle);
+
+        _vehicle addEventHandler ["HandleDamage", {call FUNC(handleDamageEjectIfDestroyed)}];
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach EJECT_IF_DESTROYED_VEHICLES;
+
 ["CBA_settingsInitialized", {
     TRACE_1("settings init",GVAR(enabled));
 
-    if (GVAR(enabled)) then {
-        [QGVAR(medicalDamage), LINKFUNC(medicalDamage)] call CBA_fnc_addEventHandler;
+    if (!GVAR(enabled)) exitWith {};
 
-        [QGVAR(bailOut), {
-            params ["_vehicle", "_unit"];
+    [QGVAR(medicalDamage), LINKFUNC(medicalDamage)] call CBA_fnc_addEventHandler;
 
-            TRACE_2("bailOut",_vehicle,_unit);
+    [QGVAR(bailOut), {
+        params ["_vehicle", "_unit"];
 
-            if (isPlayer _unit || {!(_unit call EFUNC(common,isAwake))}) exitWith {};
+        TRACE_2("bailOut",_vehicle,_unit);
 
-            unassignVehicle _unit;
-            _unit leaveVehicle _vehicle;
-            doGetOut _unit;
+        if (isPlayer _unit || {!(_unit call EFUNC(common,isAwake))}) exitWith {};
 
-            private _angle = floor (random 360);
-            private _dist = 30 + (random 10);
-            private _escape = _vehicle getPos [_dist, _angle];
+        unassignVehicle _unit;
+        _unit leaveVehicle _vehicle;
+        doGetOut _unit;
 
-            _unit doMove _escape;
-            _unit setSpeedMode "FULL";
-        }] call CBA_fnc_addEventHandler;
+        private _angle = floor (random 360);
+        private _dist = 30 + (random 10);
+        private _escape = _vehicle getPos [_dist, _angle];
 
-        GVAR(vehicleClassesHitPointHash) = createHashMap;
+        _unit doMove _escape;
+        _unit setSpeedMode "FULL";
+    }] call CBA_fnc_addEventHandler;
 
-        ["Tank", "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
+    GVAR(vehicleClassesHitPointHash) = createHashMap;
 
-        // Wheeled_APC_F inherits from Car
-        [["Wheeled_Apc_F", "Car"] select GVAR(enableCarDamage), "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
+    ["Tank", "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
 
-        // Blow off turret effect
-        ["Tank", "Killed", {
-            if (random 1 < 0.15) then {
-                (_this select 0) call FUNC(blowOffTurret);
-            };
-        }, true, [], true] call CBA_fnc_addClassEventHandler;
-    };
+    // Wheeled_APC_F inherits from Car
+    [["Wheeled_Apc_F", "Car"] select GVAR(enableCarDamage), "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
 
-    // Init eject from destroyed vehicle
-    {
-        [_x, "Init", {
-            params ["_vehicle"];
-
-            if (!alive _vehicle) exitWith {};
-
-            TRACE_2("ejectIfDestroyed init",_vehicle,typeOf _vehicle);
-
-            _vehicle addEventHandler ["HandleDamage", {call FUNC(handleDamageEjectIfDestroyed)}];
-        }, true, [], true] call CBA_fnc_addClassEventHandler;
-    } forEach EJECT_IF_DESTROYED_VEHICLES;
+    // Blow off turret effect
+    ["Tank", "Killed", {
+        if (random 1 < 0.15) then {
+            (_this select 0) call FUNC(blowOffTurret);
+        };
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
 }] call CBA_fnc_addEventHandler;

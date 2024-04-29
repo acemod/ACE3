@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * (vehicle player) call ace_vehicle_damage_fnc_blowOffTurret
+ * cursorObject call ace_vehicle_damage_fnc_blowOffTurret
  *
  * Public: No
  */

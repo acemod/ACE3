@@ -16,7 +16,7 @@
  * None
  *
  * Example:
- * [cursorObject, projectile, 5, 0.663] call ace_vehicle_damage_fnc_processHit;
+ * [cursorObject, projectile, 5, 0.5, "HitHull", player, player] call ace_vehicle_damage_fnc_processHit
  *
  * Public: No
  */
@@ -32,7 +32,7 @@ private _nextPartDamage = _currentPartDamage + _newDamage;
 if (_newDamage >= 15) exitWith {
     TRACE_2("immediate destruction - high damage",_newDamage,_currentPartDamage);
 
-    _vehicle call FUNC(knockOut);
+    [_vehicle, _source, _instigator] call FUNC(knockOut);
     [_vehicle, 1, true, _source, _instigator] call FUNC(handleDetonation);
 
     // Kill everyone inside for very insane damage
@@ -137,7 +137,7 @@ if ((_currentVehicleAmmo select 0) isNotEqualTo []) then {
         private _explosive = getNumber (_ammoConfig >> _ammoClassname >> "explosive");
         private _hit = getNumber (_ammoConfig >> _ammoClassname >> "hit");
 
-        if (_explosive > 0.5 || _hit > 50) then {
+        if (_explosive > 0.5 || {_hit > 50}) then {
             _explosiveAmmoCount = _explosiveAmmoCount + 1;
         } else {
             _nonExplosiveAmmoCount = _nonExplosiveAmmoCount + 1;
@@ -160,7 +160,7 @@ switch (_hitArea) do {
         TRACE_4("hit engine",_chanceToDetonate,_incendiary,_chanceOfDetonation,_currentFuel);
 
         if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount > 0, _source, _instigator] call FUNC(handleDetonation)) exitWith {
-            _vehicle call FUNC(knockOut)
+            [_vehicle, _source, _instigator] call FUNC(knockOut);
         };
 
         // Cap damage at 0.9 to avoid hard coded blow up
@@ -168,11 +168,11 @@ switch (_hitArea) do {
 
         // Fatal engine/drive system damage
         if (_nextPartDamage == 0.9 || {0.8 * _ammoEffectiveness > random 1}) then {
-            [_vehicle, _hitIndex, _hitPoint, 0.9 * _penChance] call FUNC(addDamage);
+            [_vehicle, _hitIndex, _hitPoint, 0.9 * _penChance, _source, _instigator] call FUNC(addDamage);
 
             _vehicle setVariable [QGVAR(canMove), false];
         } else {
-            [_vehicle, _hitIndex, _hitPoint, _nextPartDamage * _penChance] call FUNC(addDamage);
+            [_vehicle, _hitIndex, _hitPoint, _nextPartDamage * _penChance, _source, _instigator] call FUNC(addDamage);
         };
 
         // No cookoff for cars
@@ -191,9 +191,9 @@ switch (_hitArea) do {
         TRACE_4("hit hull",_chanceToDetonate,_incendiary,_chanceOfDetonation,_currentFuel);
 
         if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount > 0, _source, _instigator] call FUNC(handleDetonation)) exitWith {
-            [_vehicle, _hitIndex, _hitPoint, 0.89 * _penChance] call FUNC(addDamage);
+            [_vehicle, _hitIndex, _hitPoint, 0.89 * _penChance, _source, _instigator] call FUNC(addDamage);
 
-            _vehicle call FUNC(knockOut)
+            [_vehicle, _source, _instigator] call FUNC(knockOut);
         };
 
         // 25% chance of jamming turret - 25% of mobility kill - 25% of both - 75% chance of critical hull damage
@@ -210,7 +210,7 @@ switch (_hitArea) do {
 
             switch (true) do {
                 case (_rand < 0.25): {
-                    [_vehicle, _hitIndex, _hitPoint, 0.89 * _penChance] call FUNC(addDamage);
+                    [_vehicle, _hitIndex, _hitPoint, 0.89 * _penChance, _source, _instigator] call FUNC(addDamage);
 
                     // Iterate through all keys and find appropriate turret
                     {
@@ -222,7 +222,7 @@ switch (_hitArea) do {
                     _vehicle setVariable [QGVAR(canShoot), false];
                 };
                 case (_rand < 0.5): {
-                    [_vehicle, _hitIndex, _hitPoint, 0.89 * _penChance] call FUNC(addDamage);
+                    [_vehicle, _hitIndex, _hitPoint, 0.89 * _penChance, _source, _instigator] call FUNC(addDamage);
 
                     _partKill pushBack (ENGINE_HITPOINTS select 0);
 
@@ -233,7 +233,7 @@ switch (_hitArea) do {
                     _vehicle setVariable [QGVAR(canMove), false];
                 };
                 case (_rand < 0.75): {
-                    [_vehicle, _hitIndex, _hitPoint, 0.89 * _penChance] call FUNC(addDamage);
+                    [_vehicle, _hitIndex, _hitPoint, 0.89 * _penChance, _source, _instigator] call FUNC(addDamage);
 
                     _partKill pushBack (ENGINE_HITPOINTS select 0);
 
@@ -255,7 +255,7 @@ switch (_hitArea) do {
         };
 
         {
-            [_vehicle, -1, _x, _penChance] call FUNC(addDamage);
+            [_vehicle, -1, _x, _penChance, _source, _instigator] call FUNC(addDamage);
 
             TRACE_1("doing damage to hitpoint",_x);
         } forEach _partKill;
@@ -275,13 +275,13 @@ switch (_hitArea) do {
         TRACE_3("hit turret",_chanceToDetonate,_incendiary,_chanceOfDetonation);
 
         if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount > 0, _source, _instigator] call FUNC(handleDetonation)) exitWith {
-            _vehicle call FUNC(knockOut)
+            [_vehicle, _source, _instigator] call FUNC(knockOut);
         };
 
         if (0.8 * _ammoEffectiveness > random 1) then {
             TRACE_1("damaged turret",_ammoEffectiveness * 0.8);
 
-            [_vehicle, _hitIndex, _hitPoint, 1 * _penChance] call FUNC(addDamage);
+            [_vehicle, _hitIndex, _hitPoint, _penChance, _source, _instigator] call FUNC(addDamage);
 
             _vehicle setVariable [QGVAR(canShoot), false];
         };
@@ -300,7 +300,7 @@ switch (_hitArea) do {
         if (0.8 * _ammoEffectiveness > random 1) then {
             TRACE_1("damaged gun",_ammoEffectiveness * 0.8);
 
-            [_vehicle, _hitIndex, _hitPoint, 1 * _penChance] call FUNC(addDamage);
+            [_vehicle, _hitIndex, _hitPoint, _penChance, _source, _instigator] call FUNC(addDamage);
 
             _vehicle setVariable [QGVAR(canShoot), false];
         };
@@ -317,13 +317,13 @@ switch (_hitArea) do {
         };
     };
     case "wheel": {
-        [_vehicle, _hitIndex, _hitPoint, (_currentPartDamage + _newDamage) * _penChance] call FUNC(addDamage);
+        [_vehicle, _hitIndex, _hitPoint, (_currentPartDamage + _newDamage) * _penChance, _source, _instigator] call FUNC(addDamage);
 
         TRACE_1("damaged wheel",_newDamage);
     };
     case "fuel": {
         private _damage = (0.1 max (0.1 * _newDamage / _minDamage)) min 1;
-        [_vehicle, _hitIndex, _hitPoint, (_currentPartDamage + _damage) * _penChance] call FUNC(addDamage);
+        [_vehicle, _hitIndex, _hitPoint, (_currentPartDamage + _damage) * _penChance, _source, _instigator] call FUNC(addDamage);
 
         // No cookoff for cars
         if (_isCar) exitWith {};
@@ -346,9 +346,9 @@ switch (_hitArea) do {
             TRACE_3("damaged slat",_warheadType,_warheadTypeStr,_currentDamage);
 
             if (_warheadType == WARHEAD_TYPE_HEAT || {_warheadType == WARHEAD_TYPE_TANDEM}) then {
-                [_vehicle, _hitIndex, _hitPoint, 1] call FUNC(addDamage);
+                [_vehicle, _hitIndex, _hitPoint, 1, _source, _instigator] call FUNC(addDamage);
             } else {
-                [_vehicle, _hitIndex, _hitPoint, _currentDamage + (0.5 max random 1)] call FUNC(addDamage);
+                [_vehicle, _hitIndex, _hitPoint, _currentDamage + (0.5 max random 1), _source, _instigator] call FUNC(addDamage);
             };
 
             if (_currentDamage < 1 && _warheadType isEqualTo WARHEAD_TYPE_HEAT) then {
@@ -364,7 +364,7 @@ switch (_hitArea) do {
 
             TRACE_3("damaged era",_warheadType,_warheadTypeStr,_currentDamage);
 
-            [_vehicle, _hitIndex, _hitPoint, 1] call FUNC(addDamage);
+            [_vehicle, _hitIndex, _hitPoint, 1, _source, _instigator] call FUNC(addDamage);
 
             // Don't process anymore damage if this is HEAT - shouldn't happen anyway but Arma says it does so you know
             if (_currentDamage < 1 && _warheadType == WARHEAD_TYPE_HEAT) then {

@@ -4,16 +4,16 @@
  * Applies medical damage to a unit.
  *
  * Arguments:
- * 0: Target <OBJECT>
- * 1: Source <OBJECT>
- * 2: Instigator <OBJECT>
+ * 0: Unit <OBJECT>
+ * 1: Source of damage <OBJECT>
+ * 2: Person who caused damage <OBJECT>
  * 3: Guarantee death? <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [cursorObject, player, player] call grenades_hatches_main_fnc_medicalDamage;
+ * [cursorObject, player, player] call ace_vehicle_damage_fnc_medicalDamage
  *
  * Public: No
  */

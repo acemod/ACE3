@@ -8,13 +8,13 @@
  * 1: Chance of detonation <NUMBER>
  * 2: If the vehicle has been knocked out <BOOL>
  * 3: Source of damage <OBJECT>
- * 4: Person who instigated damage <OBJECT>
+ * 4: Person who caused damage <OBJECT>
  *
  * Return Value:
  * Detonated <BOOL>
  *
  * Example:
- * [cursorObject, 0.5, true] call ace_vehicle_damage_fnc_handleDetonation;
+ * [cursorObject, 0.5, true, player, player] call ace_vehicle_damage_fnc_handleDetonation;
  *
  * Public: No
  */
