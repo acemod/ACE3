@@ -19,6 +19,7 @@
  */
 
 params ["_unit", "_source", "_instigator", ["_guaranteeDeath", false]];
+TRACE_4("medicalDamage",_unit,_source,_instigator,_guaranteeDeath);
 
 // Check if unit is invulnerable
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {};

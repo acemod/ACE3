@@ -10,13 +10,12 @@
  * None
  *
  * Example:
- * cursorObject call ace_vehicle_damage_fnc_addEventHandler;
+ * cursorObject call ace_vehicle_damage_fnc_addEventHandler
  *
  * Public: No
  */
 
 params ["_vehicle"];
-
 TRACE_2("addEventHandler",_vehicle,GVAR(enabled));
 
 if (!GVAR(enabled)) exitWith {

@@ -18,19 +18,20 @@
  */
 
 params ["_vehicle", "_source", "_instigator"];
+TRACE_3("knockOut",_vehicle,_source,_instigator);
 
 {
     private _hitArea = _y select 0;
 
     if (_hitArea == "hull") then {
-        [_vehicle, -1, _x, 0.89, _source, _instigator] call FUNC(addDamage);
+        [_vehicle, _x, -1, 0.89, _source, _instigator] call FUNC(setDamage);
     } else {
         if (_hitArea in ["fuel", "turret", "gun", "engine"]) then {
             if ((0.3 > random 1) || {_hitArea == "engine"}) then {
-                [_vehicle, -1, _x, 1, _source, _instigator] call FUNC(addDamage);
+                [_vehicle, _x, -1, 1, _source, _instigator] call FUNC(setDamage);
             } else {
                 private _currentDamage = _vehicle getHitpointDamage _x;
-                [_vehicle, -1, _x, (_currentDamage + (0.3 max random 1)) min 1, _source, _instigator] call FUNC(addDamage);
+                [_vehicle, _x, -1, (_currentDamage + (0.3 max random 1)) min 1, _source, _instigator] call FUNC(setDamage);
             };
         };
     };

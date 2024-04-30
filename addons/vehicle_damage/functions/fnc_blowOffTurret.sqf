@@ -19,6 +19,7 @@
 // The sudden change in the model would cause nearby physx objects to get stuck
 [{
     params ["_vehicle"];
+    TRACE_1("blowOffTurret",_vehicle);
 
     private _config = configOf _vehicle;
     (getArray (_config >> QGVAR(turret))) params [["_model", "", [""]], ["_offset", [0, 0, 0], [[]], 3]];

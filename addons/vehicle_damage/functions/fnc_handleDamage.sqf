@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Selection <STRING>
- * 2: Damage taken <NUMBER>
+ * 2: New level of damage <NUMBER>
  * 3: Source of damage <OBJECT>
  * 4: Projectile that caused damage <STRING>
  * 5: Hit index <NUMBER>
@@ -17,17 +17,17 @@
  * Current or maximum damage of part <NUMBER>
  *
  * Example:
- * [cursorObject, "", 0.5, player, projectile, 12, player, "Hit_Engine"] call ace_vehicle_damage_fnc_handleDamage
+ * [cursorObject, "hit_engine_point", 0.5, player, projectile, 1, player, "HitEngine"] call ace_vehicle_damage_fnc_handleDamage
  *
  * Public: No
  */
 
-params ["_vehicle", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
-TRACE_6("HandleDamage event inputs",_vehicle,_selection,_damage,_projectile,_hitIndex,_hitPoint);
+params ["_vehicle", "_selection", "_newDamage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
+TRACE_8("handleDamage",_vehicle,_selection,_newDamage,_source,_projectile,_hitIndex,_instigator,_hitPoint);
 
 if (!local _vehicle) exitWith {};
 
-private _returnHit = if (_selection isNotEqualTo "") then {
+private _currentDamage = if (_selection != "") then {
     _vehicle getHitIndex _hitIndex
 } else {
     damage _vehicle
@@ -35,7 +35,7 @@ private _returnHit = if (_selection isNotEqualTo "") then {
 
 if !(_projectile in ["ace_ammoExplosion", "ACE_ammoExplosionLarge"]) then {
     // If an invalid hit, don't process it
-    if (_damage <= 0 || {"#light" in _hitPoint}) exitWith {};
+    if (_newDamage <= 0 || {"#light" in _hitPoint}) exitWith {};
 
     // Set up hit array so we can execute all damage next frame. Always in order of hit done.
     private _hitHash = _vehicle getVariable QGVAR(hitHash);
@@ -54,20 +54,20 @@ if !(_projectile in ["ace_ammoExplosion", "ACE_ammoExplosionLarge"]) then {
 
             // Start from newest damage and work backwards
             {
-                _x params ["_vehicle", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
+                _x params ["_vehicle", "_selection", "_newDamage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
 
-                private _returnHit = if (_selection != "") then {
+                private _currentDamage = if (_selection != "") then {
                     _vehicle getHitIndex _hitIndex
                 } else {
                     damage _vehicle
                 };
 
-                private _newDamage = _damage - _returnHit;
+                private _addedDamage = _newDamage - _currentDamage;
 
-                TRACE_1("handleDamage",_returnHit);
+                TRACE_1("handleDamage",_currentDamage);
 
-                if !([_vehicle, _hitPoint, _hitIndex, _selection, _newDamage, _projectile, _source, _instigator] call FUNC(handleVehicleDamage)) exitWith {
-                    TRACE_2("cancelling rest of vehicle damage queue ( [%1] items left out of [%2] )",(count (_hitArray#1)) - _forEachIndex,count (_hitArray#1))
+                if !([_vehicle, _hitPoint, _hitIndex, _selection, _addedDamage, _projectile, _source, _instigator] call FUNC(handleVehicleDamage)) exitWith {
+                    TRACE_2("cancelling rest of vehicle damage queue",(count (_hitArray#1)) - _forEachIndex,count (_hitArray#1))
                 };
             } forEachReversed _hitArray;
         }, [_vehicle, diag_frameNo]] call CBA_fnc_execNextFrame;
@@ -81,11 +81,11 @@ if !(_projectile in ["ace_ammoExplosion", "ACE_ammoExplosionLarge"]) then {
 private _criticalDamageIndex = CRITICAL_HITPOINTS findIf {_x == _hitPoint};
 
 if (_criticalDamageIndex != -1) then {
-    _returnHit = _returnHit min (CRITICAL_HITPOINTS_THESHOLDS select _criticalDamageIndex);
+    _currentDamage = _currentDamage min (CRITICAL_HITPOINTS_THESHOLDS select _criticalDamageIndex);
 };
 
 if (_hitPoint == "" && {_hitIndex < 0}) then {
-    _returnHit = _returnHit min 0.89;
+    _currentDamage = _currentDamage min 0.89;
 };
 
-_returnHit
+_currentDamage

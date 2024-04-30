@@ -1,5 +1,4 @@
 PREP(abandon);
-PREP(addDamage);
 PREP(addEventHandler);
 PREP(blowOffTurret);
 PREP(handleBail);
@@ -11,3 +10,4 @@ PREP(handleVehicleDamage);
 PREP(knockOut);
 PREP(medicalDamage);
 PREP(processHit);
+PREP(setDamage);

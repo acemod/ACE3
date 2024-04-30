@@ -14,12 +14,13 @@
  * Detonated <BOOL>
  *
  * Example:
- * [cursorObject, 0.5, true, player, player] call ace_vehicle_damage_fnc_handleDetonation;
+ * [cursorObject, 0.5, true, player, player] call ace_vehicle_damage_fnc_handleDetonation
  *
  * Public: No
  */
 
 params ["_vehicle", "_chanceOfDetonation", "_isKnockedOut", "_source", "_instigator"];
+TRACE_5("handleDetonation",_vehicle,_chanceOfDetonation,_isKnockedOut,_source,_instigator);
 
 // Ignore if the vehicle is already detonating ammo
 if (_vehicle getVariable [QEGVAR(cookoff,isAmmoDetonating), false]) exitWith {_isKnockedOut};

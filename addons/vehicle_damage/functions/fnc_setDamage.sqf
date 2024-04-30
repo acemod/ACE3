@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Hit index <NUMBER>
- * 2: Hit point <STRING>
+ * 1: Hit point <STRING>
+ * 2: Hit index <NUMBER>
  * 3: Damage <NUMBER>
  * 4: Source of damage <OBJECT>
  * 5: Person who caused damage <OBJECT>
@@ -15,20 +15,19 @@
  * None
  *
  * Example:
- * [cursorObject, 12, "Hit_Engine", 1, player, player] call ace_vehicle_damage_fnc_addDamage
+ * [cursorObject, "HitEngine", 1, 0.25, player, player] call ace_vehicle_damage_fnc_setDamage
  *
  * Public: No
  */
 
-params ["_vehicle", "_hitIndex", "_hitPoint", "_damage", "_source", "_instigator"];
+params ["_vehicle", "_hitPoint", "_hitIndex", "_damage", "_source", "_instigator"];
+TRACE_6("setDamage",_vehicle,_hitPoint,_hitIndex,_damage,_source,_instigator);
 
 private _currentDamage = _vehicle getHitPointDamage _hitPoint;
 
 if (_damage < _currentDamage) exitWith {
-    TRACE_4("capping damage at current",_capDamageAtCurret,_damage,_currentDamage,_hitPoint);
+    TRACE_3("capping damage at current",_damage,_currentDamage,_hitPoint);
 };
-
-TRACE_4("adding damage to vehicle",_vehicle,_hitIndex,_hitPoint,_damage);
 
 if (_hitPoint == "#structural") then {
     _hitPoint = "hithull";

@@ -7,8 +7,8 @@
  * 0: Vehicle <OBJECT>
  * 1: Hit point <STRING>
  * 2: Hit index <NUMBER>
- * 3: Selection that was hit <STIRNG>
- * 4: Damage after hit <NUMBER>
+ * 3: Selection <STIRNG>
+ * 4: Added damage to part <NUMBER>
  * 5: Projectile <OBJECT>
  * 6: Source of damage <OBJECT>
  * 7: Person who caused damage <OBJECT>
@@ -17,24 +17,24 @@
  * Whether or not to continue handling last frame's damage <BOOL>
  *
  * Example:
- * [ace_vehicle_damage_fnc_handleVehicleDamage, [cursorObject, "Hit_Engine", 12, ]] call CBA_fnc_execNextFrame
+ * [ace_vehicle_damage_fnc_handleVehicleDamage, [cursorObject, "HitEngine", 12, "hit_engine_point", 0.25, projectile, player, player]] call CBA_fnc_execNextFrame
  *
  * Public: No
  */
 
-params ["_vehicle", "_hitPoint", "_hitIndex", "_selection", "_newDamage", "_projectile", "_source", "_instigator"];
-TRACE_8("handleVehicleDamage",_vehicle,_hitPoint,_hitIndex,_selection,_newDamage,_projectile,_source,_instigator);
+params ["_vehicle", "_hitPoint", "_hitIndex", "_selection", "_addedDamage", "_projectile", "_source", "_instigator"];
+TRACE_8("handleVehicleDamage",_vehicle,_hitPoint,_hitIndex,_selection,_addedDamage,_projectile,_source,_instigator);
 
 if (!alive _vehicle) exitWith {
-    private _eventHandler = _vehicle getVariable [QGVAR(handleDamage), nil];
+    private _handleDamageEH = _vehicle getVariable [QGVAR(handleDamage), nil];
 
-    if (!isNil "_eventHandler") then {
-        _vehicle removeEventHandler ["handleDamage", _eventHandler];
+    if (!isNil "_handleDamageEH") then {
+        _vehicle removeEventHandler ["HandleDamage", _handleDamageEH];
     };
 
-    TRACE_1("Vehicle [%1] no longer alive",_vehicle);
+    TRACE_1("vehicle no longer alive",_vehicle);
 
-    true
+    false
 };
 
 _hitPoint = toLowerANSI _hitPoint;
@@ -51,11 +51,11 @@ if (_selection == "") then {
 
     TRACE_1("structural damage",_selection);
 
-    _newDamage = abs _newDamage;
+    _addedDamage = abs _addedDamage;
 };
 
 if (isNil "_type") exitWith {
-    TRACE_1("No relevant hitpoints hit [%1]. Exiting",_hitPoint);
+    TRACE_1("no relevant hitpoints hit, exiting",_hitPoint);
 
     true
 };
@@ -88,14 +88,14 @@ if (isNil "_multHit") then {
 };
 
 if (_ignoreHit && !_structural) exitWith {
-    TRACE_3("Ignoring multiple hits done to vehicle [%1] by [%2] -- hitpoint [%3].",_vehicle,_source,_hitPoint);
+    TRACE_3("ignoring multiple hits done to vehicle",_vehicle,_source,_hitPoint);
 
     true
 };
 
-TRACE_3("Processing hit done to vehicle [%1] by [%2] at time [%3].",_vehicle,_source,CBA_missionTime);
+TRACE_3("processing hit done to vehicle",_vehicle,_source,CBA_missionTime);
 
-if !([_vehicle, _projectile, _hitIndex, _newDamage, _hitPoint, _source, _instigator] call FUNC(processHit)) exitWith {false};
+if !([_vehicle, _hitPoint, _hitIndex, _addedDamage, _projectile, _source, _instigator] call FUNC(processHit)) exitWith {false};
 
 if (!_ignoreBailCheck) then {
     _vehicle call FUNC(handleBail);

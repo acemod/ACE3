@@ -16,6 +16,7 @@
  */
 
 params ["_vehicle"];
+TRACE_1("handleBail",_vehicle);
 
 private _isCar = _vehicle isKindOf "Car" && {!(_vehicle isKindOf "Wheeled_APC_F")};
 
