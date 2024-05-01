@@ -34,6 +34,5 @@ _light setLightFlareMaxDistance 1000;
 _light setLightDayLight true;
 
 _light lightAttachObject [_projectile, [0,0,0]];
-//_light attachTo [_projectile, [0,0,0]];
 
 [{deleteVehicle _this}, _light, _timeToLive] call CBA_fnc_waitAndExecute;

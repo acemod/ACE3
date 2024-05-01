@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Incendiary grenade <OBJECT>
  * 1: Incendiary lifetime <OBJECT>
+ * 2: Instigator's side <SIDE>
  *
  * Return Value:
  * None
@@ -42,7 +43,7 @@ if (isNull _projectile) exitWith {TRACE_1("null",_projectile);};
 
 private _position = position _projectile;
 
-// --- AI
+// Alert nearby hostile AI
 private _nearLocalEnemies = [];
 
 {
@@ -59,7 +60,7 @@ private _nearLocalEnemies = [];
     };
 } forEach _nearLocalEnemies;
 
-// --- fire
+// Fire particles
 private _fire = "#particlesource" createVehicleLocal _position;
 
 _fire setParticleParams [
@@ -99,7 +100,7 @@ _fire setParticleRandom [PARTICLE_LIFE_TIME / 4, [0.15 * EFFECT_SIZE, 0.15 * EFF
 _fire setParticleFire [1.2,1.0,0.1];
 _fire setDropInterval (1 / PARTICLE_DENSITY);
 
-// --- smoke
+// Smoke particles
 private _smoke = "#particlesource" createVehicleLocal _position;
 
 _smoke setParticleParams [
@@ -137,7 +138,7 @@ _smoke setParticleParams [
 _smoke setParticleRandom [PARTICLE_SMOKE_LIFE_TIME / 2, [0.5 * EFFECT_SIZE, 0.5 * EFFECT_SIZE, 0.2 * EFFECT_SIZE], [0.3,0.3,0.5], 1, 0, [0,0,0,0.06], 0, 0];
 _smoke setDropInterval (1 / PARTICLE_SMOKE_DENSITY);
 
-// --- light
+// Light
 private _light = "#lightpoint" createVehicleLocal (_position vectorAdd [0,0,0.5]);
 
 _light setLightBrightness 1.0;
@@ -150,7 +151,7 @@ _light setLightDayLight false;
 
 _light lightAttachObject [_projectile, [0,0,0]];
 
-// --- sound
+// Sound
 private _sound = objNull;
 
 if (isServer) then {
@@ -165,12 +166,12 @@ if (isServer) then {
     {deleteVehicle _x} forEach _this;
 }, [_fire, _smoke, _light, _sound], _timeToLive] call CBA_fnc_waitAndExecute;
 
-// --- damage
+// Damage
 {
-    // --- inflame fireplace, barrels etc.
+    // Inflame fireplace, barrels etc.
     _x inflame true;
 
-    // --- destroy nearby static weapons and ammo boxes
+    // Destroy nearby static weapons and ammo boxes
     if (_x isKindOf "StaticWeapon" || {_x isKindOf "ACE_RepairItem_Base"}) then {
         _x setDamage 1;
 
@@ -190,7 +191,7 @@ if (isServer) then {
         continue;
     };
 
-    // --- delete nearby ground weapon holders
+    // Delete nearby ground weapon holders
     if (_x isKindOf "WeaponHolder" || {_x isKindOf "WeaponHolderSimulated"}) then {
         deleteVehicle _x;
 
@@ -198,18 +199,18 @@ if (isServer) then {
     };
 } forEach ((_position nearObjects DESTRUCTION_RADIUS) select {local _x && {isDamageAllowed _x}});
 
-// --- burn tyres
+// Burn tyres
 private _fnc_isWheelHitPoint = {
     params ["_selectionName"];
 
-    // wheels must use a selection named "wheel_X_Y_steering" for PhysX to work
+    // Wheels must use a selection named "wheel_X_Y_steering" for PhysX to work
     _selectionName select [0, 6] == "wheel_" && {
         _selectionName select [count _selectionName - 9] == "_steering"
     } // return
 };
 
 {
-    // --- damage local vehicles
+    // Damage local vehicles
     private _vehicle = _x;
     private _config = configOf _vehicle >> "HitPoints";
 
@@ -225,7 +226,7 @@ private _fnc_isWheelHitPoint = {
         };
     } forEach (getAllHitPointsDamage _vehicle param [0, []]);
 
-    // --- burn car engine
+    // Burn car engine
     if (_vehicle isKindOf "Wheeled_APC_F") then {
         continue;
     };
