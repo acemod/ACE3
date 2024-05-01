@@ -20,49 +20,51 @@ TRACE_1("params",_grenadePosASL);
 
 // Affect local AI (players are not local, except for ACE_player)
 // @todo: Affect units in static weapons, turned out, etc
+private _affected = ((ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20]) - [ACE_player];
+
 {
-      private _unit = _x;
-      private _strength = 1 - (((eyePos _unit) vectorDistance _grenadePosASL) min 20) / 20;
+    private _unit = _x;
+    private _strength = 1 - (((eyePos _unit) vectorDistance _grenadePosASL) min 20) / 20;
 
-      TRACE_3("FlashBangEffect Start",_unit,((getPosASL _unit) vectorDistance _grenadePosASL),_strength);
+    TRACE_3("FlashBangEffect Start",_unit,((getPosASL _unit) vectorDistance _grenadePosASL),_strength);
 
-      [_unit, true] call EFUNC(common,disableAI);
+    [_unit, true] call EFUNC(common,disableAI);
 
-      // Make AI try to look away
-      private _dirToFlash = _unit getDir _grenadePosASL;
-      _unit setDir (_dirToFlash + linearConversion [0.2, 1, _strength, 40, 135] * selectRandom [-1, 1]);
+    // Make AI try to look away
+    private _dirToFlash = _unit getDir _grenadePosASL;
+    _unit setDir (_dirToFlash + linearConversion [0.2, 1, _strength, 40, 135] * selectRandom [-1, 1]);
 
-      private _flashReactionDebounce = _unit getVariable [QGVAR(flashReactionDebounce), 0];
-      _unit setVariable [QGVAR(flashReactionDebounce), _flashReactionDebounce max (CBA_missionTime + (7 * _strength))];
+    private _flashReactionDebounce = _unit getVariable [QGVAR(flashReactionDebounce), 0];
+    _unit setVariable [QGVAR(flashReactionDebounce), _flashReactionDebounce max (CBA_missionTime + (7 * _strength))];
 
-      if (_flashReactionDebounce < CBA_missionTime) then {
-          // Not used internally but could be useful for other mods
-          _unit setVariable [QGVAR(flashStrength), _strength, true];
+    if (_flashReactionDebounce < CBA_missionTime) then {
+        // Not used internally but could be useful for other mods
+        _unit setVariable [QGVAR(flashStrength), _strength, true];
 
-          [QGVAR(flashbangedAI), [_unit, _strength, _grenadePosASL]] call CBA_fnc_localEvent;
+        [QGVAR(flashbangedAI), [_unit, _strength, _grenadePosASL]] call CBA_fnc_localEvent;
 
-          {
-              _unit setSkill [_x, (_unit skill _x) / 50];
-          } forEach SUBSKILLS;
+        {
+            _unit setSkill [_x, (_unit skill _x) / 50];
+        } forEach SUBSKILLS;
 
-          [{
-              CBA_missiontime >= _this getVariable [QGVAR(flashReactionDebounce), 0]
-          }, {
-              params ["_unit"];
+        [{
+            CBA_missiontime >= _this getVariable [QGVAR(flashReactionDebounce), 0]
+        }, {
+            params ["_unit"];
 
-              _unit setVariable [QGVAR(flashStrength), 0, true];
+            _unit setVariable [QGVAR(flashStrength), 0, true];
 
-              // Make sure we don't enable AI for unconscious units
-              if (_unit call EFUNC(common,isAwake)) then {
-                  [_unit, false] call EFUNC(common,disableAI);
-              };
+            // Make sure we don't enable AI for unconscious units
+            if (_unit call EFUNC(common,isAwake)) then {
+                [_unit, false] call EFUNC(common,disableAI);
+            };
 
-              {
-                  _unit setSkill [_x, (_unit skill _x) * 50];
-              } forEach SUBSKILLS;
-          }, _unit] call CBA_fnc_waitUntilAndExecute;
-      };
-} forEach ((((ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20]) - [ACE_player]) select {local _x && {_x call EFUNC(common,isAwake)}});
+            {
+                _unit setSkill [_x, (_unit skill _x) * 50];
+            } forEach SUBSKILLS;
+        }, _unit] call CBA_fnc_waitUntilAndExecute;
+    };
+} forEach (_affected select {local _x && {_x call EFUNC(common,isAwake)}});
 
 if (!hasInterface) exitWith {};
 
