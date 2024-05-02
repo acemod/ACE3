@@ -53,21 +53,21 @@ Adding new elements through scripting is currently not possible.
 
 `ace_ui_fnc_setElementVisibility`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Source | String | Required
-1  | Set/Unset | Boolean | Required
-2  | Element Name | String | Required
-3  | Show/Hide | Boolean | Optional (default: `false`)
-**R** | Successfully Modified | Boolean | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Source | String | Required |
+| 1  | Set/Unset | Boolean | Required |
+| 2  | Element Name | String | Required |
+| 3  | Show/Hide | Boolean | Optional (default: `false`) |
+| **R** | Successfully Modified | Boolean | Return value |
 
 #### 2.1.1 Example
 
 `["ace_reload", true, "ammoCount", false] call ace_ui_fnc_setElementVisibility;`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  | `"ace_reload"` | Source displayed in hint when trying to edit this element from in-game settings or in RPT when some other source tries to edit it
-1  | `true` | Set element, preventing others to change it (except config, which always has priority)
-2  | `"ammoCount"` | Element name to modify
-3  | `false` | Hide the element
+|    | Arguments | Explanation |
+|----| --------- | ----------- |
+| 0  | `"ace_reload"` | Source displayed in hint when trying to edit this element from in-game settings or in RPT when some other source tries to edit it |
+| 1  | `true` | Set element, preventing others to change it (except config, which always has priority) |
+| 2  | `"ammoCount"` | Element name to modify |
+| 3  | `false` | Hide the element |

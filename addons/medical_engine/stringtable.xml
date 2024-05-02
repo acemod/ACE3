@@ -20,7 +20,7 @@
             <Spanish>Controla si la tripulación recibe daño debido a colisiones en vehículo.</Spanish>
             <French>Définit si les passagers à bord des véhicules peuvent être blessés en cas d'accident.</French>
             <Polish>Kontroluje czy załoga pojazdu otrzyma obrażenia podczas kolizji pojazdu.</Polish>
-            <Japanese>車両が衝突をすると乗員がダメージを受けるかどうかを決定します。</Japanese>
+            <Japanese>車両が衝突をすると乗員がダメージを受けるかどうかを制御します。</Japanese>
             <German>Kontrolliert, ob Besatzung eines Fahrzeugs Schaden durch Unfälle erleiden soll</German>
             <Italian>Determina se i passeggeri di un veicolo subiranno danni da schianti o incidenti.</Italian>
             <Chinesesimp>控制乘员是否受到车辆碰撞的伤害。</Chinesesimp>
