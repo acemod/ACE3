@@ -1,5 +1,15 @@
 #include "script_component.hpp"
 
+if (isServer) then {
+    ["CBA_settingsInitialized", {
+        TRACE_1("settingInit - server",GVAR(EnableCombatDeafness));
+        // Only install event handler if combat deafness is enabled
+        if (!GVAR(EnableCombatDeafness)) exitWith {};
+
+        ["CAManBase", "Init", LINKFUNC(addEarPlugs), true, [], true] call CBA_fnc_addClassEventHandler;
+    }] call CBA_fnc_addEventHandler;
+};
+
 if (!hasInterface) exitWith {};
 
 #include "initKeybinds.inc.sqf"

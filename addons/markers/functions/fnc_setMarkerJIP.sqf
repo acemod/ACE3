@@ -49,5 +49,4 @@ TRACE_2("params",_allMapMarkers,_allMapMarkersProperties);
         _x setMarkerDirLocal _dir;
         _x setMarkerSizeLocal [_scale, _scale];
     };
-    false
-} count allMapMarkers;
+} forEach allMapMarkers;

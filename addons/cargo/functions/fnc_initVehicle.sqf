@@ -22,11 +22,11 @@ private _type = typeOf _vehicle;
 private _config = configOf _vehicle;
 
 // If vehicle had space given to it via eden/public, then override config hasCargo setting
-private _hasCargoPublic = _item getVariable QGVAR(hasCargo);
-private _hasCargoPublicDefined = !isNil "_canLoadPublic";
+private _hasCargoPublic = _vehicle getVariable QGVAR(hasCargo);
+private _hasCargoPublicDefined = !isNil "_hasCargoPublic";
 
 if (_hasCargoPublicDefined && {!(_hasCargoPublic isEqualType false)}) then {
-    WARNING_4("%1[%2] - Variable %3 is %4 - Should be bool",_item,_type,QGVAR(hasCargo),_hasCargoPublic);
+    WARNING_4("%1[%2] - Variable %3 is %4 - Should be bool",_vehicle,_type,QGVAR(hasCargo),_hasCargoPublic);
 };
 
 private _hasCargoConfig = getNumber (_config >> QGVAR(hasCargo)) == 1;

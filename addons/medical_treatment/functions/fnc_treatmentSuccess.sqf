@@ -11,6 +11,7 @@
  *   3: Treatment <STRING>
  *   4: Item User <OBJECT>
  *   5: Used Item <STRING>
+ *   6: Create Litter <BOOL>
  *
  * Return Value:
  * None
@@ -19,7 +20,8 @@
  */
 
 params ["_args"];
-_args params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem"];
+_args params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem", "_createLitter"];
+TRACE_7("",_medic,_patient,_bodyPart,_classname,_itemUser,_usedItem,_createLitter);
 
 // Switch medic to end animation immediately
 private _endInAnim = _medic getVariable QGVAR(endInAnim);
@@ -45,7 +47,7 @@ GET_FUNCTION(_callbackSuccess,configFile >> QGVAR(actions) >> _classname >> "cal
 _args call _callbackSuccess;
 
 // Call litter creation handler
-_args call FUNC(createLitter);
+if (_createLitter) then { _args call FUNC(createLitter); };
 
 // Emit local event for medical API
-["ace_treatmentSucceded", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem]] call CBA_fnc_localEvent;
+["ace_treatmentSucceded", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem, _createLitter]] call CBA_fnc_localEvent;
