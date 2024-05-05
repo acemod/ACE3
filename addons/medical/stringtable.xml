@@ -37,7 +37,7 @@
         <Key ID="STR_ACE_Medical_SpontaneousWakeUpChance_DisplayName">
             <English>Unconscious Wake Up Chance</English>
             <German>Wahrscheinlichkeit um aufzuwachen</German>
-            <Japanese>気絶時の覚醒確率</Japanese>
+            <Japanese>無意識状態時の覚醒確率</Japanese>
             <Russian>Шанс очнуться при потере сознания</Russian>
             <French>Chance de reprendre connaissance</French>
             <Portuguese>Chance de recuperar consciência</Portuguese>
@@ -84,7 +84,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_spontaneousWakeUpEpinephrineBoost_Description">
             <English>When an unconscious patient has Epinephrine in their system, the time between spontaneous wake up checks is divided by this value.</English>
-            <Japanese>気絶した患者の体内に投与されたアドレナリンがある場合、 覚醒確率計算の実施間隔が値で除算されます。</Japanese>
+            <Japanese>無意識状態の患者の体内に投与されたアドレナリンがある場合、 覚醒確率計算の実施間隔が値で除算されます。</Japanese>
             <Chinese>增加因病患的循環系統裡面的腎上腺素自我甦醒的機率。</Chinese>
             <Chinesesimp>增加因病患的循环系统里面的肾上腺素自我苏醒的机率。</Chinesesimp>
             <French>Augmente la fréquence des tests de réveil lorsque le patient a de l'épinéphrine dans son système sanguin.\n(L'épinéphrine n'accélère pas la reprise de conscience si la valeur est définie sur 1.)</French>

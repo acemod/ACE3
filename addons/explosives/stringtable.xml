@@ -1170,7 +1170,7 @@
             <English>Minimum time value (in seconds) for the explosive timer.</English>
             <Russian>Минимальное время до взрыва в секундах</Russian>
             <French>Définit la durée minimale paramétrable sur le minuteur.</French>
-            <Japanese>起爆タイマーの最低時間 (秒) を設定します。</Japanese>
+            <Japanese>起爆タイマーの最短時間 (秒単位) を設定します。</Japanese>
             <Spanish>Tiempo mínimo (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Minimalna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Minimale Zeit (in Sekunden) für den Zeitzünder.</German>
@@ -1183,7 +1183,7 @@
             <English>Maximum time value (in seconds) for the explosive timer.</English>
             <Russian>Макисмальное время до взрыва в секундах</Russian>
             <French>Définit la durée maximale paramétrable sur le minuteur.</French>
-            <Japanese>起爆タイマーの最長時間 (秒) を設定します。</Japanese>
+            <Japanese>起爆タイマーの最長時間 (秒単位) を設定します。</Japanese>
             <Spanish>Tiempo máximo (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Maksymalna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Maximale Zeit (in Sekunden) für den Zeitzünder.</German>
@@ -1196,7 +1196,7 @@
             <English>Default time value (in seconds) for the explosive timer.</English>
             <Russian>Стандартное время до взрыва в секундах</Russian>
             <French>Définit la durée paramétrée par défaut sur le minuteur.</French>
-            <Japanese>起爆タイマーの標準時間 (秒) を設定します。</Japanese>
+            <Japanese>起爆タイマーの標準時間 (秒単位) を設定します。</Japanese>
             <Spanish>Tiempo por defecto (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Domyślna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Standardmäßige Zeit (in Sekunden) für den Zeitzünder.</German>

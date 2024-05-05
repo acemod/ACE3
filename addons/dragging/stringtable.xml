@@ -192,7 +192,7 @@
         </Key>
         <Key ID="STR_ACE_Dragging_skipContainerWeight_Description">
             <English>Determines whether object's weight is added onto weight calculations.</English>
-            <Japanese>重量計算にオブジェクトの重量を追加するかどうかを決定します。</Japanese>
+            <Japanese>重量計算にオブジェクトの重量を追加するかどうかを定義します。</Japanese>
             <Italian>Determina se la massa del contenitore è sommata alla massa del contenuto per i calcoli di peso.</Italian>
             <Polish>Określa, czy waga obiektu jest dodawana do obliczeń ciężaru.</Polish>
             <German>Legt fest, ob das Gewicht des Objekts zu den Gewichtsberechnungen hinzugefügt wird.</German>
