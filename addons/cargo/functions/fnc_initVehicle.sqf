@@ -52,14 +52,21 @@ if (isServer) then {
 
     private _cargoClassname = "";
     private _cargoCount = 0;
+    private _loaded = 0;
 
     {
         _cargoClassname = getText (_x >> "type");
         _cargoCount = getNumber (_x >> "amount");
 
-        TRACE_3("adding ACE_Cargo",configName _x,_cargoClassname,_cargoCount);
+        TRACE_3("adding ace_cargo",configName _x,_cargoClassname,_cargoCount);
 
-        ["ace_addCargo", [_cargoClassname, _vehicle, _cargoCount]] call CBA_fnc_localEvent;
+        // Ignore stability check (distance check is also ignored with this, but it's ignored by default if item is a string)
+        _loaded = [_cargoClassname, _vehicle, _cargoCount, true] call FUNC(addCargoItem);
+
+        // Even though we know nothing else can fit, let loop continue until the end, so that it prints everything into the rpt
+        if (_loaded != _cargoCount) then {
+            WARNING_5("%1 (%2) could not fit %3 %4 inside its cargo, only %5 were loaded.",_vehicle,_type,_cargoCount,_cargoClassname,_loaded);
+        };
     } forEach ("true" configClasses (_config >> QUOTE(ADDON) >> "cargo"));
 };
 
