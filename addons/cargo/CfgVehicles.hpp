@@ -64,6 +64,7 @@ class CfgVehicles {
     class Truck_F: Car_F {
         GVAR(space) = 8;
         GVAR(hasCargo) = 1;
+        class ADDON {};
     };
 
     // HEMTTs - Default at 30, some variants are altered based on model size and/or expected level of free space inside.
