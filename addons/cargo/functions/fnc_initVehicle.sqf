@@ -63,7 +63,7 @@ if (isServer) then {
         // Ignore stability check (distance check is also ignored with this, but it's ignored by default if item is a string)
         _loaded = [_cargoClassname, _vehicle, _cargoCount, true] call FUNC(addCargoItem);
 
-        // Even though we know nothing else can fit, let loop continue until the end, so that it prints everything into the rpt
+        // Let loop continue until the end, so that it prints everything into the rpt (there might be smaller items that could still fit in cargo)
         if (_loaded != _cargoCount) then {
             WARNING_5("%1 (%2) could not fit %3 %4 inside its cargo, only %5 were loaded.",_vehicle,_type,_cargoCount,_cargoClassname,_loaded);
         };
