@@ -86,7 +86,7 @@ GVAR(lastPlayerVehicle) = objNull;
     }, true] call CBA_fnc_addPlayerEventHandler;
 
     addMissionEventHandler ["ProjectileCreated", {
-    	params ["_projectile"];
+        params ["_projectile"];
 
         _projectile addEventHandler ["Explode", {call FUNC(explosion)}];
     }];
