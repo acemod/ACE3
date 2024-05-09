@@ -10,7 +10,8 @@
  * 3: Treatment <STRING>
  * 4: Item User <OBJECT>
  * 5: Used Item <STRING>
- * 6: Bandage effectiveness coefficient <NUMBER> (default: 1)
+ * 6: Create litter <BOOLEAN>
+ * 7: Bandage effectiveness coefficient <NUMBER> (default: 1)
  *
  * Return Value:
  * None
@@ -21,10 +22,10 @@
  * Public: No
  */
 
-_this set [6, _this param [6, 1]]; // set default Bandage effectiveness coefficient
+_this set [7, _this param [7, 1]]; // set bandage effectiveness coefficient
 [QGVAR(bandaged), _this] call CBA_fnc_localEvent; // Raise event with reference so mods can modify this
 
-params ["_medic", "_patient", "_bodyPart", "_classname", "", "", "_bandageEffectiveness"];
+params ["_medic", "_patient", "_bodyPart", "_classname", "", "", "", "_bandageEffectiveness"];
 
 [_patient, "activity", LSTRING(Activity_bandagedPatient), [[_medic, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 
