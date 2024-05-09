@@ -439,6 +439,7 @@
             <Italian>Tempo di scavo tomba</Italian>
             <Japanese>墓掘りの所要時間</Japanese>
             <Russian>Время рытья могилы</Russian>
+            <Spanish>Tiempo de Cavado de Tumba</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_Description">
             <English>Time, in seconds, required to dig a grave for a body.</English>
@@ -449,6 +450,7 @@
             <Italian>Tempo in secondi richiesto per seppellire un morto.</Italian>
             <Japanese>遺体の墓を掘るのに掛かる時間。 (秒単位)</Japanese>
             <Russian>Время в секундах, необходимое для того, чтобы выкопать могилу для тела.</Russian>
+            <Spanish>Tiempo, en segundos, requerido para cavar una tumba para un cuerpo.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -3506,6 +3508,7 @@
             <German>Kein Schmerz</German>
             <Japanese>痛みはない</Japanese>
             <Russian>Нет боли</Russian>
+            <Spanish>Sin dolor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_MildPain">
             <English>In mild pain</English>
@@ -3627,6 +3630,7 @@
             <German>Kein IV</German>
             <Japanese>IV なし</Japanese>
             <Russian>Нет капельницы</Russian>
+            <Spanish>Sin IV</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Bloodpressure">
             <English>Blood Pressure</English>
@@ -4657,6 +4661,7 @@
             <Italian>Scava tomba per cadavere</Italian>
             <Japanese>墓を掘る</Japanese>
             <Russian>Выкопать могилу для тела</Russian>
+            <Spanish>Cavar tumba para cuerpo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_DiggingGrave">
             <English>Digging grave for body...</English>
@@ -4667,6 +4672,7 @@
             <Italian>Scavando tomba per cadavere...</Italian>
             <Japanese>墓を掘っています</Japanese>
             <Russian>Рытьё могилы для тела...</Russian>
+            <Spanish>Cavando tumba para cuerpo...</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -4919,6 +4925,7 @@
             <Italian>Controlla nome sulla lapide</Italian>
             <Japanese>墓石の名前を確認</Japanese>
             <Russian>Проверьте имя на надгробии</Russian>
+            <Spanish>Comprobar nombre en la lápida</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_DisplayName">
             <English>Bandage Rollover</English>
@@ -4929,6 +4936,7 @@
             <Italian>Srotolamento Bendaggi</Italian>
             <Japanese>包帯の繰り越し</Japanese>
             <Russian>Перевязка множественных ран</Russian>
+            <Spanish>Vendaje múltiple</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_Description">
             <English>If enabled, bandages can close different types of wounds on the same body part.\nBandaging multiple injuries will scale bandaging time accordingly.</English>
@@ -4939,6 +4947,7 @@
             <Italian>Se attivo, un singolo bendaggio potrà chiudere più ferite sulla stessa parte del corpo.\nBendare più ferite di conseguenza richiederà più tempo.</Italian>
             <Japanese>有効にすると、体の同じ部分にある別の種類の傷を一つの包帯で閉じることができます。\n複数の傷に包帯を巻くと、それに応じて包帯時間が変動します。</Japanese>
             <Russian>Если эта функция включена, бинты могут закрывать различные типы ран на одной и той же части тела.\nПри перевязке нескольких повреждений время перевязки будет увеличено соответствующим образом.</Russian>
+            <Spanish>Si se habilita, las vendas pueden cerrar diferentes tipos de heridas en la misma parte del cuerpo.n\Vendar múltiples heridas escala el tiempo de vendado acorde.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_DisplayName">
             <English>Bandage Effectiveness Coefficient</English>
@@ -4949,6 +4958,7 @@
             <Italian>Coefficiente di efficacia bendaggi</Italian>
             <Japanese>包帯有効性係数</Japanese>
             <Russian>Коэффициент эффективности повязки</Russian>
+            <Spanish>Coeficiente de Efectividad de Vendado</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_Description">
             <English>Determines how effective bandages are at closing wounds.</English>
@@ -4959,6 +4969,7 @@
             <Italian>Determina quanto i bendaggi sono efficaci nel chiudere le ferite.</Italian>
             <Japanese>包帯が傷をふさぐのにどれだけ効果的かを定義します。</Japanese>
             <Russian>Определяет, насколько эффективны бинты при закрытии ран.</Russian>
+            <Spanish>Determina como de efectivos son los vendajes cerrando heridas.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalTab">
             <English>Medical Items</English>
@@ -4982,6 +4993,7 @@
             <Korean>제우스 치료 시간 계수</Korean>
             <Russian>Коэффициент времени обработки Zeus</Russian>
             <French>Coeff. de temps</French>
+            <Spanish>Coeficiente de Tiempo del Tratamiento de Zeus</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_Description">
             <English>Multiply all treatment times with this coefficient when in Zeus.</English>
@@ -4991,6 +5003,7 @@
             <Korean>제우스일 때 모든 치료 시간에 이 계수를 곱합니다.</Korean>
             <Russian>Умножьте все время лечения на этот коэффициент, когда вы находитесь в Zeus.</Russian>
             <French>Coefficient de temps de traitement Zeus</French>
+            <Spanish>Multiplica los tiempos de tratamientos por este coeficiente cuando se está en Zeus</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Display">
             <English>Painkillers</English>
@@ -5015,6 +5028,7 @@
             <Japanese>鎮痛剤を投与</Japanese>
             <Korean>진통제 투여</Korean>
             <French>Administrer des analgésiques</French>
+            <Spanish>Administrar Analgésicos</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administering_Painkillers">
             <English>Administering Painkillers...</English>
@@ -5023,6 +5037,7 @@
             <Japanese>鎮痛剤を投与しています・・・</Japanese>
             <Korean>진통제 투여 중...</Korean>
             <French>Administration d'analgésiques...</French>
+            <Spanish>Administrando Analgésicos...</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Short">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
@@ -5031,6 +5046,7 @@
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
             <French>Analgésique sans ordonnance utilisé pour lutter contre les douleurs légères à modérées.</French>
+            <Spanish>Analgésico sin receta médica  usado para aplacar dolores de ligeros a moderados.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Use">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
@@ -5039,6 +5055,7 @@
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
             <French>Analgésique sans ordonnance utilisé pour lutter contre les douleurs légères à modérées.</French>
+            <Spanish>Analgésico sin receta médica  usado para aplacar dolores de ligeros a moderados.</Spanish>
         </Key>
     </Package>
 </Project>
