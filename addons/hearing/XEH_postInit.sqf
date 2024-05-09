@@ -67,10 +67,7 @@ GVAR(lastPlayerVehicle) = objNull;
             private _firedEH = _oldPlayer getVariable [QGVAR(firedEH), -1];
             _oldPlayer removeEventHandler ["FiredNear", _firedEH];
             _oldPlayer setVariable [QGVAR(firedEH), nil];
-            private _explosionEH = _oldPlayer getVariable [QGVAR(explosionEH), -1];
-            _oldPlayer removeEventHandler ["Explosion", _explosionEH];
-            _oldPlayer setVariable [QGVAR(explosionEH), nil];
-            TRACE_3("removed unit eh",_oldPlayer,_firedEH,_explosionEH);
+            TRACE_2("removed unit eh",_oldPlayer,_firedEH);
         };
         // Don't add a new EH if the unit respawned
         if ((_player getVariable [QGVAR(firedEH), -1]) == -1) then {
@@ -79,9 +76,7 @@ GVAR(lastPlayerVehicle) = objNull;
             };
             private _firedEH = _player addEventHandler ["FiredNear", {call FUNC(firedNear)}];
             _player setVariable [QGVAR(firedEH), _firedEH];
-            private _explosionEH = _player addEventHandler ["Explosion", {call FUNC(explosionNear)}];
-            _player setVariable [QGVAR(explosionEH), _explosionEH];
-            TRACE_3("added unit eh",_player,_firedEH,_explosionEH);
+            TRACE_2("added unit eh",_player,_firedEH);
         };
 
         GVAR(deafnessDV) = 0;
@@ -89,6 +84,12 @@ GVAR(lastPlayerVehicle) = objNull;
         GVAR(time3) = 0;
         [] call FUNC(updateHearingProtection);
     }, true] call CBA_fnc_addPlayerEventHandler;
+
+    addMissionEventHandler ["ProjectileCreated", {
+    	params ["_projectile"];
+
+        _projectile addEventHandler ["Explode", {call FUNC(explosion)}];
+    }];
 
     // Update protection on possible helmet change
     ["loadout", LINKFUNC(updateHearingProtection), false] call CBA_fnc_addPlayerEventHandler;
