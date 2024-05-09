@@ -59,7 +59,5 @@ private _strength = _vehAttenuation * (_loudness - (_loudness / 50 * _distance))
 
 TRACE_1("result",_strength);
 
-if (_strength < 0.01) exitWith {};
-
 // Call inmediately, as it will get pick up later anyway by the update thread
 [_strength] call FUNC(earRinging);
