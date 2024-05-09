@@ -29,7 +29,7 @@ private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (isNull objectP
 
 TRACE_5("",typeOf _projectile,_distance,_explosive,_audibleFire,_vehAttenuation);
 
-// Handles grenades differently from shells and other
+// Handle grenades differently from shells and other
 _distance = if (_projectile isKindOf "Grenade") then {
     _distance / 4
 } else {
