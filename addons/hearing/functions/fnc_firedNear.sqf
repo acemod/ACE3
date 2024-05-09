@@ -27,9 +27,6 @@ params ["", "_firer", "_distance", "_weapon", "_muzzle", "_mode", "_ammo", "_gun
 if (_weapon in ["Throw", "Put"]) exitWith {};
 if (_distance > 50) exitWith {};
 
-private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (
-    (ACE_player == (vehicle ACE_player)) || {isTurnedOut ACE_player}
-);
 _distance = 1 max _distance;
 private _audibleFireCoef = 1;
 
@@ -54,6 +51,7 @@ if (_magazine == "") exitWith {
 
 TRACE_6("mag",_magazine,_weapon,_muzzle,_ammo,_firer,_gunner);
 
+private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
 private _loudness = _magazine call FUNC(getAmmoLoudness);
 
 _loudness = _loudness * _audibleFireCoef;
