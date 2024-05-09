@@ -198,7 +198,7 @@
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_Description">
             <English>Maximum distance from which the Medical Menu can be opened.</English>
             <German>Maximale Entfernung, um das Sanitätsmenü zu öffnen.</German>
-            <Japanese>医療メニューを開いたままにできる最大距離を決定します。</Japanese>
+            <Japanese>医療メニューを開いたままにできる最大距離。</Japanese>
             <Russian>Максимальное расстояние, с которого можно открыть Медицинское меню.</Russian>
             <French>Définit la distance (en mètres) à partir de laquelle il n'est plus possible d'activer le menu médical pour traiter un patient.</French>
             <Portuguese>A Distância máxima do paciente para que o Menu Médico possa ser aberto.</Portuguese>
