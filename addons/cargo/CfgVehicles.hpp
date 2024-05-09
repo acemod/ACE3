@@ -516,7 +516,7 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
-        GVAR(space) = 2;
+        GVAR(space) = 3;
         GVAR(hasCargo) = 1;
         GVAR(size) = 3;
         GVAR(canLoad) = 1;
@@ -530,7 +530,7 @@ class CfgVehicles {
     class Cargo_base_F: ThingX {
         GVAR(space) = 4;
         GVAR(hasCargo) = 1;
-        GVAR(size) = 5;
+        GVAR(size) = 4;
         GVAR(canLoad) = 1;
 
         class ACE_Actions {
@@ -779,7 +779,7 @@ class CfgVehicles {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
 
-        GVAR(space) = 6;
+        GVAR(space) = 7;
         GVAR(hasCargo) = 1;
         GVAR(size) = 7;
 
