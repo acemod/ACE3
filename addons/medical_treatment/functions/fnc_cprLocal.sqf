@@ -25,7 +25,9 @@ private _bloodVolume = GET_BLOOD_VOLUME(_patient);
 private _successChance = linearConversion [BLOOD_VOLUME_CLASS_4_HEMORRHAGE, BLOOD_VOLUME_CLASS_2_HEMORRHAGE, _bloodVolume, GVAR(cprSuccessChanceMin), GVAR(cprSuccessChanceMax), true];
 if ((random 1) < _successChance) then {
     // If SpO2 is too low, it will make HR skyrocket to the point where patient goes back into CA
-    _patient setVariable [VAR_SPO2, DEFAULT_SPO2 / 2, true];
+    if (GET_SPO2(_patient) < DEFAULT_SPO2 / 2) then {
+        _patient setVariable [VAR_SPO2, DEFAULT_SPO2 / 2, true];
+    };
 
     TRACE_2("CPR random success",_bloodVolume,_successChance);
     [QEGVAR(medical,CPRSucceeded), _patient] call CBA_fnc_localEvent;
