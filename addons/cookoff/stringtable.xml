@@ -189,6 +189,7 @@
             <French>Contrôle si les véhicules seront toujours détruits après l'auto-inflammation.</French>
             <Portuguese>Define se os veículos serão sempre destruídos após cozinhamento.</Portuguese>
             <Russian>Определяет, всегда ли транспортные средства будут уничтожаться после детонации.</Russian>
+            <Spanish>Controla si los vehículos siempre será destruidos despues de la detonación inducida por calor.</Spanish>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_name">
             <English>Enable Cook-Off Vehicle Fire</English>
