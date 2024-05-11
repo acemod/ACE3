@@ -376,6 +376,7 @@
             <French>Uniquement les unités dotées d'armes lourdes</French>
             <Russian>Только юниты с тяжелым вооружением</Russian>
             <Japanese>重火器を装備したユニットのみ</Japanese>
+            <Italian>Solo a unità con armi pesanti</Italian>
         </Key>
     </Package>
 </Project>
