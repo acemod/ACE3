@@ -23,11 +23,6 @@ if (_mode == 4) then {
     _mode = _mode + 1;
 };
 
-// ROLL GRENADE DOESN'T WORK RIGHT NOW
-if (_mode == 3) then {
-    _mode = 4;
-};
-
 private _hint = localize ([
     LSTRING(NormalThrow),
     LSTRING(HighThrow),
