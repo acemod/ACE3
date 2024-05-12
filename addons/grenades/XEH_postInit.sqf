@@ -32,3 +32,26 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
         [] call FUNC(addChangeFuseItemContextMenuOptions);
     };
 }] call CBA_fnc_addEventHandler;
+
+GVAR(currentThrowable) = [];
+
+{
+    private _currentThrowable = currentThrowable ACE_player;
+
+    if (GVAR(currentThrowable) isEqualTo _currentThrowable) exitWith {};
+
+    GVAR(currentThrowable) = _currentThrowable;
+
+    // Make sure grenade can be rolled if in roll mode (detonation time has to be >= 1 second)
+    if !(
+        GVAR(currentThrowMode) == 3 &&
+        {_currentThrowable select 0 != ""} &&
+        {getNumber (configFile >> "CfgAmmo" >> getText (configFile >> "CfgMagazines" >> _currentThrowable select 0 >> "ammo") >> "explosionTime") < MIN_EXPLOSION_TIME_FOR_ROLL}
+    ) exitWith {};
+
+    // Force the user into the normal throw mode
+    // Next throw mode after roll would be drop, which isn't ideal if the user tries to throw unknowingly...
+    [format [LLSTRING(RollGrenadeDisabled), LLSTRING(NormalThrow)], 2.5] call EFUNC(common,displayTextStructured);
+
+    GVAR(currentThrowMode) = 0;
+} call CBA_fnc_addPerFrameHandler;
