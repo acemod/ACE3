@@ -221,7 +221,7 @@ class CfgAmmo {
 
     class SmokeShell;
     class rhs_ammo_rdg2_white: SmokeShell {
-        EGVAR(grenades,rotation) = 0;
+        EGVAR(grenades,rollVectorDirAndUp)[] = {{0, 1, 0}, {0, 0, 1}};
     };
 
     class Sh_125mm_APFSDS;

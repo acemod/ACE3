@@ -44,7 +44,7 @@ GVAR(currentThrowable) = [];
 
     // Make sure grenade can be rolled if in roll mode (detonation time has to be >= 1 second)
     if !(
-        GVAR(currentThrowMode) == 3 &&
+        (missionNamespace getVariable [QGVAR(currentThrowMode), 0]) == 3 &&
         {_currentThrowable select 0 != ""} &&
         {getNumber (configFile >> "CfgAmmo" >> getText (configFile >> "CfgMagazines" >> _currentThrowable select 0 >> "ammo") >> "explosionTime") < MIN_EXPLOSION_TIME_FOR_ROLL}
     ) exitWith {};

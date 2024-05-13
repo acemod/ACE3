@@ -103,6 +103,12 @@ If set to zero or left undefined, the grenade is not treated as a flare. If it i
 
 Sets the color of the emitted light. The first 3 values of the array of the color, the last is the light intensity.
 
+### 2.4 Grenade Rolling
+
+#### 2.4.1 ace_grenades_rollVectorDirAndUp
+
+Sets the `setVectorDirAndUp` of the grenade when the grenade is rolled.
+
 ## 3. Events
 
 ### 3.1 Listenable

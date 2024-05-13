@@ -112,7 +112,11 @@ if (_mode != 0) then {
             _projectile setPosASL ((_lisPos select 0) vectorAdd [0, 0, 0.2]);
 
             // Rotate throwables by 90° to the side by default, so cylindrical throwables can be rolled
-            [_projectile, [direction _projectile, 0, [_config >> QGVAR(rotation), "NUMBER", 90] call CBA_fnc_getConfigEntry]] call BIS_fnc_setObjectRotation;
+            private _vectorDirAndUp = getArray (_config >> QGVAR(rollVectorDirAndUp));
+            _vectorDirAndUp params [["_vectorDir", [0, 1, 0], [[]], 3], ["_vectorUp", [1, 0, 0], [[]], 3]];
+
+            // Do as if object were facing north
+            _projectile setVectorDirAndUp ([[_vectorDir, _vectorUp], -(direction _projectile), 0, 0] call BIS_fnc_transformVectorDirAndUp);
 
             _velocity = (vectorDir _unit) vectorMultiply 10;
         };
