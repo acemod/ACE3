@@ -86,7 +86,7 @@ if (_smokeDelayEnabled) then {
 
                     if (isNull _vehicle) exitWith {};
 
-                    [QGVAR(cleanupEffects), [_vehicle, _vehicle getVariable [QGVAR(effects), []]]] call CBA_fnc_globalEvent;
+                    [QGVAR(cleanupEffects), _vehicle] call CBA_fnc_globalEvent;
                     _vehicle setVariable [QGVAR(isCookingOff), false, true];
 
                     createVehicle ["ACE_ammoExplosionLarge", (_vehicle modelToWorld (_vehicle selectionPosition _fireSource)), [], 0 , "CAN_COLLIDE"];
@@ -95,7 +95,7 @@ if (_smokeDelayEnabled) then {
                 }, [_vehicle, _fireSource], _nextFlameTime] call CBA_fnc_waitAndExecute;
             };
 
-            [QGVAR(cleanupEffects), [_vehicle, _vehicle getVariable [QGVAR(effects), []]]] call CBA_fnc_globalEvent;
+            [QGVAR(cleanupEffects), _vehicle] call CBA_fnc_globalEvent;
             _vehicle setVariable [QGVAR(isCookingOff), false, true];
         };
 
