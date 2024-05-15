@@ -74,7 +74,7 @@ switch (_currentItemsIndex) do {
                 if (CBA_disposable_loadedLaunchers isEqualType createHashMap) then { // after CBA 3.18
                     (secondaryWeapon GVAR(center)) in CBA_disposable_loadedLaunchers
                 } else {
-                    (secondaryWeapon GVAR(center)) in allVariables CBA_disposable_loadedLaunchers
+                    !isNil {CBA_disposable_loadedLaunchers getVariable (secondaryWeapon player)}
                 }
             };
 
