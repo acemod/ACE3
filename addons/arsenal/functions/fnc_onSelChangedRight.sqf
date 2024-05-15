@@ -71,7 +71,7 @@ switch (_currentItemsIndex) do {
         private _currentItemInSlot = (GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS) select _itemIndex;
         private _isDisposable = CBA_disposable_replaceDisposableLauncher && {!isNil "CBA_disposable_loadedLaunchers"} &&
             {
-                if (typeName CBA_disposable_loadedLaunchers == "HASHMAP") then { // after cba 3.18
+                if (CBA_disposable_loadedLaunchers isEqualType createHashMap) then { // after CBA 3.18
                     (secondaryWeapon GVAR(center)) in CBA_disposable_loadedLaunchers
                 } else {
                     (secondaryWeapon GVAR(center)) in allVariables CBA_disposable_loadedLaunchers
