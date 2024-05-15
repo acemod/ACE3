@@ -10,6 +10,7 @@
             <Korean>ACE 킬트래커</Korean>
             <French>ACE Suivi des morts</French>
             <German>ACE Abschüsse</German>
+            <Spanish>ACE Contador de Muertes</Spanish>
         </Key>
         <Key ID="STR_ACE_KillTracker_Title">
             <English>ACE Killed Events</English>
@@ -105,6 +106,7 @@
             <Korean>플레이어가 죽인 AI 트래킹</Korean>
             <French>Suivi de l'IA tuée par les joueurs</French>
             <German>Zähle vom Spieler getöteten KI-Einheiten</German>
+            <Spanish>Cuenta las unidades de IA matadas por el jugador</Spanish>
         </Key>
         <Key ID="STR_ACE_KillTracker_TrackAI_Description">
             <English>Defines if killed AIs will be shown in the kill tracker during mission debriefing.</English>
@@ -115,6 +117,7 @@
             <Korean>사후강평 중 살해된 AI가 킬트래킹에 표시되는지 여부를 정의합니다.</Korean>
             <French>Définit si les IA tuées seront affichées dans le tracker pendant le débriefing de la mission.</French>
             <German>Legt fest, ob getötete KIs während des Endbildschirms der Mission in den Abschüssen angezeigt werden.</German>
+            <Spanish>Define si las IAs matadas se mostrarán en el contador de muertes en el debiefring de la misión.</Spanish>
         </Key>
     </Package>
 </Project>
