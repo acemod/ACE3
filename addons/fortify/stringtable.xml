@@ -145,7 +145,7 @@
             <Italian>Mostra aggiornamenti di budget</Italian>
             <Chinese>顯示預算更新</Chinese>
             <Chinesesimp>显示预算更新</Chinesesimp>
-            <Japanese>予算の更新を表示</Japanese>
+            <Japanese>予算更新を表示</Japanese>
             <Polish>Pokaż aktualizacje budżetu</Polish>
             <Russian>Показывать обновления бюджета</Russian>
             <Turkish>Bütçe güncellenmelerini göster</Turkish>
@@ -160,7 +160,7 @@
             <Chinese>決定預算變更時是否會顯示提示</Chinese>
             <Chinesesimp>决定预算变更时是否会显示提示</Chinesesimp>
             <Italian>Controlla se vengono mostrati avvisi di aggiornamento del budget</Italian>
-            <Japanese>予算が更新されヒント表示時の操作を決定します</Japanese>
+            <Japanese>予算更新のヒントが表示される場面を制御します</Japanese>
             <Polish>Kontroluje kiedy aktualizacje budżetu są wyświetlane</Polish>
             <Russian>Настраивает сообщения об обновлении бюджета</Russian>
             <Turkish>Bütçe güncellenince bilgi verilip verilmeyeceğini kontrol eder.</Turkish>
@@ -190,7 +190,7 @@
             <Italian>Ha l'attrezzo di fortificazione</Italian>
             <Chinese>有要塞工具</Chinese>
             <Chinesesimp>有设防工具</Chinesesimp>
-            <Japanese>要塞ツール所持の時</Japanese>
+            <Japanese>要塞ツール所持時</Japanese>
             <Polish>Posiada narzędzie do fortyfikowania</Polish>
             <Russian>Если имеется инструмент</Russian>
             <Turkish>Insa Etme Aleti Olanlara Göster</Turkish>
@@ -233,7 +233,7 @@
             <Korean>건축물을 지을 때 걸리는 시간을 계수를 적용하여 계산합니다.</Korean>
             <German>Koeffizient zur Bestimmung der Bauzeit \nA in Ax + b, wobei x die Kosten des Objekts sind.</German>
             <Italian>Il coefficiente 'C' che determina il tempo di costruzione.\nTempo Totale = Costo * C + Tempo Minimo</Italian>
-            <Japanese>建造する時間を決定するために使用される係数。\n計算式はAx + bです。この係数はAであり、xは建造物のコストです。</Japanese>
+            <Japanese>建造する時間を定義するために使用される係数。\n計算式はAx + bです。この係数はAであり、xは建造物のコストです。</Japanese>
             <Polish>Współczynnik używany do określenia czasu budowy konstrukcji.\nA w Ax + b gdzie x jest kosztem obiektu</Polish>
             <Russian>Коэффициент используемый для указания времени необходимого для возведения постройки.\nA в формуле Ax + b, где x - это цена объекта</Russian>
             <Spanish>Coeficiente usado para determinar el tiempo de construcción de una estructura.\nA en Ax + b donde x es el coste del objeto</Spanish>
