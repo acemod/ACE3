@@ -17,8 +17,10 @@
 
 if (!visibleMap || {!alive ACE_player}) exitWith {false};
 
-private _gpsOpened = visibleGPS;
-private _gpsAvailable = openGPS true;
-if (!_gpsOpened) then {openGPS false};
+private _assignedGPS = ACE_player getSlotItemName TYPE_GPS;
+if (_assignedGPS == "") exitwith { false };
 
-_gpsAvailable // return
+GVAR(gpsDevicesCache) getOrDefaultCall [_assignedGPS, {
+    (_assignedGPS call BIS_fnc_itemType) params ["", "_type"];
+    _type in ["GPS", "UAVTerminal"]
+}, true]
