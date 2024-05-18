@@ -1,3 +1,4 @@
+PREP(addBlackList);
 PREP(dev_addRound);
 PREP(dev_clearTraces);
 PREP(dev_debugAmmo);
