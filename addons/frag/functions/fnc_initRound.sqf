@@ -26,8 +26,6 @@ if (_ammo isEqualTo "" || {isNull _projectile} ||
     TRACE_2("bad ammo or projectile, or blackList",_ammo,_projectile);
 };
 
-if () exitWith {};
-
 if (GVAR(enabled) && {_ammo call FUNC(shouldFrag)}) then {
     _projectile addEventHandler [
         "Explode",
