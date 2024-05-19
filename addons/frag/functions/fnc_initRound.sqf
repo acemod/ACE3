@@ -21,11 +21,12 @@ if (!isServer) exitWith {};
 params ["_projectile"];
 
 private _ammo = typeOf _projectile;
-if (_ammo isEqualTo "" || {isNull _projectile}) exitWith {
-    TRACE_2("bad ammo or projectile",_ammo,_projectile);
+if (_ammo isEqualTo "" || {isNull _projectile} ||
+    {_projectile getVariable [QGVAR(blacklisted), false]}) exitWith {
+    TRACE_2("bad ammo or projectile, or blackList",_ammo,_projectile);
 };
 
-if (_projectile getVariable [QGVAR(blacklisted), false]) exitWith {};
+if () exitWith {};
 
 if (GVAR(enabled) && {_ammo call FUNC(shouldFrag)}) then {
     _projectile addEventHandler [
@@ -33,7 +34,9 @@ if (GVAR(enabled) && {_ammo call FUNC(shouldFrag)}) then {
         {
             params ["_projectile", "_posASL", "_velocity"];
 
-            if (_projectile getVariable [QGVAR(blacklisted), false]) exitWith {};
+            if (_projectile getVariable [QGVAR(blacklisted), false]) exitWith {
+                TRACE_2("projectile blackisted",typeOf _projectile,_projectile);
+            };
 
             private _shotParents = _projectile getVariable [QGVAR(shotParent), getShotParents _projectile];
             private _ammo = typeOf _projectile;
@@ -55,7 +58,9 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
         {
             params ["_projectile", "_hitObject", "", "_posASL", "_velocity", "_surfNorm", "", "", "_surfType"];
 
-            if (_projectile getVariable [QGVAR(blacklisted), false]) exitWith {};
+            if (_projectile getVariable [QGVAR(blacklisted), false]) exitWith {
+                TRACE_2("projectile blackisted",typeOf _projectile,_projectile);
+            };
 
             // starting v2.18 it may be faster to use the instigator parameter, the same as the second entry shotParents, to recreate _shotParent
             // The "explode" EH does not get the same parameter
