@@ -59,4 +59,11 @@ class CfgMineTriggers {
         mineMagnetic = 1;
         mineTriggerRange = 1;
     };
+
+    class TankTriggerMagnetic;
+    class ACE_TankTriggerLight: TankTriggerMagnetic {
+        // Reduce mass needed to trigger vanilla AT Mine to realistic levels (https://en.wikipedia.org/wiki/M15_mine#Specifications).
+        // Will now trigger for any vehicle heavier than the Vanilla ATV (280kg)
+        mineTriggerMass = 300; // Default: 7000
+    };
 };
