@@ -13,7 +13,6 @@ class CfgAmmo {
     class MineCore: TimeBombCore;
     class MineBase: MineCore;
     class APERSMine_Range_Ammo: MineBase;
-    class ATMine_Range_Ammo: MineBase;
 
     class DirectionalBombCore: TimeBombCore;
     class DirectionalBombBase: DirectionalBombCore;
@@ -63,6 +62,12 @@ class CfgAmmo {
     class ACE_TripFlare_FlareEffect: F_20mm_Red {
         triggerTime = 0.1;
         GVAR(size) = 0;
+    };
+
+    // More sensitive pressure-fuze for the Vanilla AT Mine.
+    class MineBase;
+    class ATMine_Range_Ammo: MineBase {
+        mineTrigger = "ACE_TankTriggerLight";
     };
 
     // "The SLAM has an anti-tamper feature that is only active in the bottom- and side-attack modes."
