@@ -41,7 +41,7 @@ _maxFragCount = switch (true) do {
 };
 
 // Spawn the fragment spawner
-private _fragSpawner = createVehicle [_type + _maxFragCount + _hMode, ASLToATL _posASL, [], 0, "CAN_COLLIDE"];
+private _fragSpawner = createVehicle [_type + _maxFragCount + _hMode, ASLToAGL _posASL, [], 0, "CAN_COLLIDE"];
 private _randDir = random 360;
 _fragSpawner setVectorDirandUp [[0,0,-1], [cos _randDir, sin _randDir,0]];
 _fragSpawner setVelocity (_projectileVelocity vectorAdd [0, 0, -0.5*_fragVelocity]);

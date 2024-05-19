@@ -38,9 +38,10 @@ if (_fragTypes isEqualTo []) then {
     ];
 };
 
+private _posAGL = ASLToAGL _posASL;
 // Post 2.18 change - uncomment line 41, and remove lines 43, 50-55, 64-66
 // private _targets = [ASLToAGL _posASL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
-private _objects = (ASLToAGL _posASL) nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
+private _objects = _posAGL nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
 if (_objects isEqualTo []) exitWith {
     TRACE_2("No nearby targets",_posASL,_fragRange);
     0
@@ -152,7 +153,7 @@ private _totalFragCount = 0;
 
     // Create fragment
     private _vectorDir = _posASL vectorFromTo _targetPos;
-    private _fragObj = createVehicle [_fragSpawner, ASLtoATL _posASL, [], 0, "CAN_COLLIDE"];
+    private _fragObj = createVehicle [_fragSpawner, _posAGL, [], 0, "CAN_COLLIDE"];
     _fragObj setVectorDir _vectorDir;
     _fragObj setVelocity (_vectorDir vectorMultiply _locFragVel);
     _fragObj setShotParents _shotParents;
