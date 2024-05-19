@@ -17,10 +17,7 @@
 
 if (!visibleMap || {!alive ACE_player}) exitWith {false};
 
-private _assignedGPS = ACE_player getSlotItemName TYPE_GPS;
-if (_assignedGPS == "") exitwith { false };
+private _panels = flatten (ACE_player infoPanelComponents "left");
+private _index = _panels find "MinimapDisplayComponent";
 
-GVAR(gpsDevicesCache) getOrDefaultCall [_assignedGPS, {
-    (_assignedGPS call BIS_fnc_itemType) params ["", "_type"];
-    _type in ["GPS", "UAVTerminal"]
-}, true]
+_index != -1 && {_panels select (_index + 1)}

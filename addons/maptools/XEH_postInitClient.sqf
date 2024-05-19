@@ -5,7 +5,6 @@
 if (!hasInterface) exitWith {};
 
 // Init variables
-GVAR(gpsDevicesCache) = createHashMap;
 GVAR(mapGpsShow) = true;
 GVAR(mapGpsNextUpdate) = -1;
 
