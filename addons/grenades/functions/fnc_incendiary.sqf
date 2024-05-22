@@ -194,8 +194,6 @@ if (isServer) then {
     // Delete nearby ground weapon holders
     if (_x isKindOf "WeaponHolder" || {_x isKindOf "WeaponHolderSimulated"}) then {
         deleteVehicle _x;
-
-        continue;
     };
 } forEach ((_position nearObjects DESTRUCTION_RADIUS) select {local _x && {isDamageAllowed _x}});
 
