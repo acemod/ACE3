@@ -19,9 +19,8 @@ params ["_projectile"];
 TRACE_1("params",_projectile);
 
 if (alive _projectile) then {
-    private _posASL = getPosASL _projectile;
-
-    playSound3D [format ["A3\Sounds_F\arsenal\explosives\grenades\Explosion_HE_grenade_0%1.wss", floor (random 4) + 1], objNull, false, _posASL, 5, 1.2, 400];
+    private _soundFile = format ["A3\Sounds_F\arsenal\explosives\grenades\Explosion_HE_grenade_0%1.wss", floor (random 4) + 1];
+    playSound3D [_soundFile, _projectile, false, getPosASL _projectile, 5, 1.2, 400];
 
     ["ace_flashbangExploded", [_posASL]] call CBA_fnc_globalEvent;
 };

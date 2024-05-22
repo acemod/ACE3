@@ -40,6 +40,7 @@
             <Japanese>配置する</Japanese>
             <Korean>배치하기</Korean>
             <French>Déployer</French>
+            <Spanish>Desplegar</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_ScrollAction">
             <English>Raise/Lower | (Ctrl + Scroll) Rotate</English>
@@ -337,6 +338,7 @@
             <Japanese>荷降ろし不可能です</Japanese>
             <Korean>하역할 수가 없습니다</Korean>
             <Russian>Не может быть выгружен</Russian>
+            <Spanish>No puede ser descargado</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_SizeMenu">
             <English>Cargo Size: %1</English>
@@ -346,6 +348,7 @@
             <Japanese>貨物のサイズ: %1</Japanese>
             <Korean>화물 크기: %1</Korean>
             <Russian>Размер груза: %1</Russian>
+            <Spanish>Tamaño de carga: %1</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenName">
             <English>Custom Name</English>
@@ -584,6 +587,7 @@
             <Japanese>配置機能を有効化</Japanese>
             <Korean>배치 활성화</Korean>
             <French>Permettre le placement</French>
+            <Spanish>Habilitar despliegue</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_enableDeploy_description">
             <English>Controls whether cargo items can be unloaded via the deploy method.</English>
@@ -592,6 +596,7 @@
             <Japanese>配置機能を介して貨物アイテムを降ろすことが出来るかどうかを制御します。</Japanese>
             <Korean>배치 방법을 통해 화물 아이템을 내릴 수 있는지 여부를 제어합니다.</Korean>
             <French>Contrôler si les éléments de cargaison peuvent être déchargés via la méthode de déploiement.</French>
+            <Spanish>Controla si los objetos de la carga pueden ser descargados mediante el método de despliegue.</Spanish>
         </Key>
     </Package>
 </Project>

@@ -1834,6 +1834,8 @@
             <Korean>무기 흔들림</Korean>
             <French>Oscillation de l'arme</French>
             <Russian>Колебание оружия</Russian>
+            <Spanish>Oscilación del arma</Spanish>
+            <Italian>Oscillazione arma</Italian>
         </Key>
         <Key ID="STR_ACE_Common_EnableSway">
             <English>Enable Weapon Sway</English>
@@ -1841,6 +1843,8 @@
             <Korean>무기 흔들림 추가</Korean>
             <French>Activer l'oscillation de l'arme</French>
             <Russian>Включить колебание оружия</Russian>
+            <Spanish>Habilitar oscilación del arma</Spanish>
+            <Italian>Abilita oscillazione arma</Italian>
         </Key>
         <Key ID="STR_ACE_Common_EnableSway_Description">
             <English>Enables weapon sway influenced by sway factors, such as stance, fatigue and medical condition.\nDisabling this setting will defer sway to vanilla or other mods.</English>
@@ -1848,6 +1852,8 @@
             <Korean>흔들림 계수, 자세, 피로도, 건강 상태 등의 요인에 영향을 받는 무기 흔들림을 활성화합니다.\n이 설정을 비활성화하면 바닐라 또는 다른 모드의 흔들림으로 대체됩니다.</Korean>
             <French>Active l'oscillation de l'arme influencé par les facteurs d'oscillation, tels que la position, la fatigue et l'état de santé.\nLa désactivation de ce paramètre reportera l'oscillation à vanilla ou à d'autres mods.</French>
             <Russian>Активируйте колебание оружия в зависимости от таких факторов, как стойка, усталость и состояние здоровья.\nОтключение этого параметра приведет к переносу раскачивания на vanilla или другие моды.</Russian>
+            <Spanish>Habilita la oscilación del arma afectado por factores como la postura, la fatiga y la condición médica.\nDeshabilitar esta opción hará que el comportamiento de la oscilación venga definido por Vanilla o por otros mods.</Spanish>
+            <Italian>Abilita l'oscillazione ACE, influenzata da fattori come postura, fatica e condizione medica.\nDisabilitare questa impostazione farà controllare l'oscillazione al gioco vanilla o altre mod.</Italian>
         </Key>
         <Key ID="STR_ACE_Common_SwayFactor">
             <English>Sway factor</English>
@@ -1888,6 +1894,7 @@
             <Italian>Fattore di Oscillazione Appoggiato</Italian>
             <Japanese>静止依託時の手ぶれ係数</Japanese>
             <Russian>Коэффициент колебания прицела в состоянии покоя</Russian>
+            <Spanish>Factor de oscilación apoyado</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_RestedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is rested.</English>
@@ -1898,6 +1905,7 @@
             <Italian>Determina la quantità di oscillazione dell'arma quando questa è appoggiata.</Italian>
             <Japanese>静止し壁などに依託している時の武器の手ぶれの大きさに影響します。</Japanese>
             <Russian>Влияет на величину колебания прицела оружия в состоянии покоя.</Russian>
+            <Spanish>Afecta la cantidad de oscilación del arma cuando se está apoyado.</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_DeployedSwayFactor">
             <English>Deployed sway factor</English>
@@ -1908,6 +1916,7 @@
             <Italian>Fattore di Oscillazione su Bipode</Italian>
             <Japanese>接地展開時の手ぶれ係数</Japanese>
             <Russian>Коэффициент колебания прицела при развертывании</Russian>
+            <Spanish>Factor de oscilación desplegado</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_DeployedSwayFactor_Description">
             <English>Influences the amount of weapon sway while weapon is deployed.</English>
@@ -1918,6 +1927,7 @@
             <Italian>Determina la quantità di oscillazione dell'arma quando questa è stabilizzata usando il bipode.</Italian>
             <Japanese>武器の接地展開時の武器の手ぶれの大きさに影響します。</Japanese>
             <Russian>Влияет на величину колебания прицела оружия при его развертывании.</Russian>
+            <Spanish>Afecta la cantidad de oscilación del arma cuando se está desplegado.</Spanish>
         </Key>
     </Package>
 </Project>
