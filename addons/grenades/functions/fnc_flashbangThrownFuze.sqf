@@ -19,6 +19,7 @@ params ["_projectile"];
 TRACE_1("params",_projectile);
 
 if (alive _projectile) then {
+    private _posASL = getPosASL _projectile;
     private _sounds = getArray (_projectile call CBA_fnc_getObjectConfig >> QGVAR(flashbangExplodeSound));
 
     (if (_sounds isEqualTo []) then {
@@ -27,7 +28,7 @@ if (alive _projectile) then {
         selectRandom _sounds
     }) params ["_file", "_volume", "_pitch", "_distance"];
 
-    playSound3D [_file, _projectile, false, getPosASL _projectile, _volume, _pitch, _distance];
+    playSound3D [_file, _projectile, false, _posASL, _volume, _pitch, _distance];
 
     ["ace_flashbangExploded", [_posASL]] call CBA_fnc_globalEvent;
 };
