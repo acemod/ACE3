@@ -181,7 +181,7 @@ if (isServer) then {
     if (_x isKindOf "ReammoBox_F") then {
         if (
             ["ace_cookoff"] call EFUNC(common,isModLoaded) &&
-            {GETVAR(_x,EGVAR(cookoff,enableAmmoCookoff),EGVAR(cookoff,enableAmmobox))}
+            {_x getVariable [QEGVAR(cookoff,enableAmmoCookoff), EGVAR(cookoff,enableAmmobox)]}
         ) then {
             _x call EFUNC(cookoff,cookOffBox);
         } else {
