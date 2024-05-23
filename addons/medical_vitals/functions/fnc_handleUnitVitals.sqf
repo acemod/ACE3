@@ -31,6 +31,9 @@ if (_syncValues) then {
     _unit setVariable [QGVAR(lastMomentValuesSynced), CBA_missionTime];
 };
 
+// Update SPO2 intake and usage since last update
+[_unit, _deltaT, _syncValues] call FUNC(updateOxygen);
+
 private _bloodVolume = GET_BLOOD_VOLUME(_unit) + ([_unit, _deltaT, _syncValues] call EFUNC(medical_status,getBloodVolumeChange));
 _bloodVolume = 0 max _bloodVolume min DEFAULT_BLOOD_VOLUME;
 

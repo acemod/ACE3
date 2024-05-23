@@ -17,6 +17,11 @@
  */
 params [["_unit", objNull, [objNull]], ["_json", "{}", [""]]];
 
+// Don't run in scheduled environment
+if (canSuspend) exitWith {
+    [FUNC(deserializeState), _this] call CBA_fnc_directCall
+};
+
 if (isNull _unit) exitWith {};
 if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit) };
 

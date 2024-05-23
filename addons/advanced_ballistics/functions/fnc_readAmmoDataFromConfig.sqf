@@ -44,6 +44,9 @@ if (!(_dragModel in [1, 2, 5, 6, 7, 8])) then {
     _dragModel = 1;
 };
 private _ballisticCoefficients = getArray(_ammoConfig >> "ACE_ballisticCoefficients");
+if (_ballisticCoefficients isEqualTo []) then {
+    _ballisticCoefficients = [0.5];
+};
 private _velocityBoundaries = getArray(_ammoConfig >> "ACE_velocityBoundaries");
 private _atmosphereModel = getText(_ammoConfig >> "ACE_standardAtmosphere");
 if (_atmosphereModel isEqualTo "") then {
@@ -66,7 +69,7 @@ if ((_typicalSpeed > 0) && {_typicalSpeed < 360}) then {
     if (_inheritedBarrelConfig || _inheritedTempConfig) then {
         private _parentConfig = inheritsFrom _ammoConfig;
         private _parentSpeed = getNumber (_parentConfig >> "typicalSpeed");
-        WARNING_4("Subsonic Ammo %1 (%2 m/s) missing `ACE_muzzleVelocities` or `ACE_ammoTempMuzzleVelocityShifts` configs, attempting to use parent %3 (%4m/s)",_this,_typicalSpeed,configName _parentConfig, _parentSpeed);
+        WARNING_4("Subsonic Ammo %1 (%2 m/s) missing `ACE_muzzleVelocities` or `ACE_ammoTempMuzzleVelocityShifts` configs, attempting to use parent %3 (%4m/s)",_this,_typicalSpeed,configName _parentConfig,_parentSpeed);
         if (_parentSpeed <= 0) exitWith {//Handle weird or null parent
             _muzzleVelocityTable = [];
             _ammoTempMuzzleVelocityShifts = [];

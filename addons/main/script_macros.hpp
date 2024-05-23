@@ -99,7 +99,11 @@
 #define TYPE_SCUBA 604 // not implemented
 #define TYPE_HEADGEAR 605
 #define TYPE_FACTOR 607
+#define TYPE_MAP 608
+#define TYPE_COMPASS 609
+#define TYPE_WATCH 610
 #define TYPE_RADIO 611
+#define TYPE_GPS 612
 #define TYPE_HMD 616
 #define TYPE_BINOCULAR 617
 #define TYPE_MEDIKIT 619

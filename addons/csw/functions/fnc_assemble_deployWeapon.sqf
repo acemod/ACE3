@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author:tcvm
+ * Author: tcvm
  * Deploys the current CSW
  *
  * Arguments:
@@ -23,9 +23,12 @@
     private _tripodClassname = typeOf _tripod;
     _player removeWeaponGlobal _carryWeaponClassname;
 
-    private _assembledClassname = getText(configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "assembleTo" >> _tripodClassname);
-    private _deployTime =  getNumber(configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "deployTime");
+    private _weaponConfig = configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON);
+    private _assembledClassname = getText (_weaponConfig >> "assembleTo" >> _tripodClassname);
+
     if (!isClass (configFile >> "CfgVehicles" >> _assembledClassname)) exitWith {ERROR_1("bad static classname [%1]",_assembledClassname);};
+
+    private _deployTime = getNumber (_weaponConfig >> "deployTime");
 
     TRACE_4("",_carryWeaponClassname,_tripodClassname,_assembledClassname,_deployTime);
 
@@ -46,8 +49,7 @@
             // Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
             _csw setVariable [QGVAR(assemblyMode), 2, true]; // Explicitly set advanced assembly mode + unload, and broadcast
             if (!GVAR(defaultAssemblyMode)) then {
-                TRACE_1("global disableVanillaAssembly event",_csw); // handles it being assembled when setting is disabled
-                [QGVAR(disableVanillaAssembly), [_csw]] call CBA_fnc_globalEvent;
+                [_csw, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
             };
             _csw setDir _tripodDir;
             _csw setPosATL _tripodPos;
@@ -70,9 +72,9 @@
     private _codeCheck = {
         params ["_args"];
         _args params ["_tripod"];
-        !isNull _tripod;
+
+        alive _tripod
     };
 
-    [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, _onFailure, localize LSTRING(AssembleCSW_progressBar), _codeCheck] call EFUNC(common,progressBar);
+    [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _carryWeaponClassname], _onFinish, _onFailure, LLSTRING(AssembleCSW_progressBar), _codeCheck] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;
-

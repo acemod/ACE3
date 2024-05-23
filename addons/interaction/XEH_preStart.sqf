@@ -11,7 +11,7 @@ private _replaceTerrainClasses = QUOTE(
 
 private _cacheReplaceTerrainModels = createHashMap;
 {
-    private _model = toLower getText (_x >> "model");
+    private _model = toLowerANSI getText (_x >> "model");
     if (_model select [0, 1] == "\") then {
         _model = _model select [1];
     };

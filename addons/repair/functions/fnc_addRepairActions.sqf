@@ -23,7 +23,7 @@ if !(hasInterface && {GVAR(enabled)}) exitWith {};
 
 params ["_vehicle"];
 private _type = typeOf _vehicle;
-TRACE_2("addRepairActions", _vehicle,_type);
+TRACE_2("addRepairActions",_vehicle,_type);
 
 // do nothing if the class is already initialized
 private _initializedClasses = GETMVAR(GVAR(initializedClasses),[]);
@@ -52,7 +52,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 
 {
     private _selection = _x;
-    private _hitpoint = toLower (_hitPoints select _forEachIndex);
+    private _hitpoint = toLowerANSI (_hitPoints select _forEachIndex);
 
     // Skip ignored selections
     if (_forEachIndex in _selectionsToIgnore) then {

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Medical_Vitals">
+        <Key ID="STR_ACE_Medical_Vitals_SubCategory">
+            <English>Vitals</English>
+            <Portuguese>Vitais</Portuguese>
+            <Italian>Parametri Vitali</Italian>
+            <Russian>Жизненно-важные органы</Russian>
+            <Japanese>バイタル</Japanese>
+            <Korean>생명</Korean>
+            <French>Paramètres vitaux</French>
+            <Spanish>Vitales</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_simulateSpO2_DisplayName">
+            <English>Enable SpO2 Simulation</English>
+            <Italian>Abilita simulazione SpO2</Italian>
+            <Russian>Включить имитацию SpO2</Russian>
+            <Japanese>SpO2シミュレーションを有効化</Japanese>
+            <Korean>산소포화도 시뮬레이션 활성화</Korean>
+            <French>Activer la simulation de la SpO2</French>
+            <Spanish>Habilitar Simulación SpO2</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Vitals_simulateSpO2_Description">
+            <English>Enables oxygen saturation simulation, providing variable heart rate and oxygen demand based on physical activity and altitude. Required for Airway Management.</English>
+            <Italian>Abilita la simulazione della saturazione di ossigeno, alterando la frequenza cardiaca e consumo di ossigeno in funzione dell'attività fisica e l'altitudine. Richiesto per la gestione delle vie aeree.</Italian>
+            <Russian>Позволяет имитировать насыщение кислородом, обеспечивая переменную частоту сердечных сокращений и потребность в кислороде в зависимости от физической активности и высоты над уровнем моря. Требуется для управления дыхательными путями.</Russian>
+            <Japanese>酸素飽和度シミュレーションを有効にし、身体活動や標高に基づいて変動する心拍数と酸素要求量の機能を提供します。 気道管理に必要です。</Japanese>
+            <Korean>산소포화도 시뮬레이션을 활성화하여 신체 활동과 고도에 따라 다양한 심박수와 산소 요구량을 제공합니다. 기도 관리에 필요합니다.</Korean>
+            <French>Permet de simuler la saturation en oxygène, de modifier la fréquence cardiaque et la consommation d'oxygène en fonction de l'activité physique et de l'altitude. Nécessaire pour la gestion des voies respiratoires.</French>
+            <Spanish>Habilita la saturación de oxígeno, utilizando la demanda de oxígeno y ritmo cardíaco basado en la actividad física y la altitud. Requerido para el Manejo de las Vías Aéreas.</Spanish>
+        </Key>
+    </Package>
+</Project>

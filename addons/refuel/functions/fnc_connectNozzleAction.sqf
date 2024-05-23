@@ -116,6 +116,9 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
         // Reset fuel counter
         _source setVariable [QGVAR(fuelCounter), 0, true];
 
+        // Let other players access nozzle
+        [objNull, _nozzle] call EFUNC(common,claim);
+
         [_unit, _sink, _nozzle, _endPosTestOffset] call FUNC(refuel);
 
         private _canReceive = getNumber ((configOf _sink) >> QGVAR(canReceive)) == 1;

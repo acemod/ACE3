@@ -15,7 +15,7 @@
  * Public: No
  */
 
-LOG_2("Trying to load gunlist from profile [Version: %1][Count: %2]", profileNamespace getVariable [ARR_2(QGVAR(profileNamespaceVersion), 'none')], count (profileNamespace getVariable [ARR_2(QGVAR(gunList), [])]));
+LOG_2("Trying to load gunlist from profile [Version: %1][Count: %2]",profileNamespace getVariable [ARR_2(QGVAR(profileNamespaceVersion),'none')],count (profileNamespace getVariable [ARR_2(QGVAR(gunList),[])]));
 
 private _resetGunList = true;
 if ((profileNamespace getVariable ["ACE_ATragMX_profileNamespaceVersion", 0]) == ATRAGMX_PROFILE_NAMESPACE_VERSION && {count (profileNamespace getVariable ["ACE_ATragMX_gunList", []]) > 0}) then {

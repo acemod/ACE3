@@ -10,11 +10,11 @@
  * Item should appear in this list? <BOOL>
  *
  * Example:
- * [CONFIG] call ACE_inventory_fnc_filterMedical
+ * [CONFIG] call ace_inventory_fnc_filterMedical
  *
  * Public: No
  */
 
 params ["_config"];
 
-toLower configName _config in GVAR(Medical_ItemList)
+(configName _config) in GVAR(medicalItemList)

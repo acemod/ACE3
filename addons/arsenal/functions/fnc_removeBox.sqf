@@ -42,8 +42,14 @@ if (_global && {isMultiplayer} && {!isNil "_id"}) then {
 };
 
 // If the arsenal is already open and not ignoring content (see FUNC(openBox)), close arsenal display
-if (!isNil QGVAR(currentBox) && {GVAR(currentBox) isEqualTo _object} && {isNil QGVAR(ignoredVirtualItems)}) then {
-    [LLSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
-    // Delay a frame in case this is running on display open
-    [{(findDisplay IDD_ace_arsenal) closeDisplay 0}] call CBA_fnc_execNextFrame;
+// Deliberate == check, fail on objNull
+if (!isNil QGVAR(currentBox) && {GVAR(currentBox) == _object} && {isNil QGVAR(ignoredVirtualItems)}) then {
+    // Delay a frame in case this is running on display open/close
+    [{
+        private _display = findDisplay IDD_ace_arsenal;
+        if (isNull _display) exitWith {};
+
+        [LLSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
+        _display closeDisplay 0;
+    }] call CBA_fnc_execNextFrame;
 };

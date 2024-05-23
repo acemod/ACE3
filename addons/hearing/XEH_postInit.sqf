@@ -1,6 +1,18 @@
 #include "script_component.hpp"
 
+if (isServer) then {
+    ["CBA_settingsInitialized", {
+        TRACE_1("settingInit - server",GVAR(EnableCombatDeafness));
+        // Only install event handler if combat deafness is enabled
+        if (!GVAR(EnableCombatDeafness)) exitWith {};
+
+        ["CAManBase", "Init", LINKFUNC(addEarPlugs), true, [], true] call CBA_fnc_addClassEventHandler;
+    }] call CBA_fnc_addEventHandler;
+};
+
 if (!hasInterface) exitWith {};
+
+#include "initKeybinds.inc.sqf"
 
 GVAR(cacheAmmoLoudness) = call CBA_fnc_createNamespace;
 
@@ -20,6 +32,8 @@ GVAR(lastPlayerVehicle) = objNull;
 
     // Spawn volume updating process
     [LINKFUNC(updateVolume), 1, [false]] call CBA_fnc_addPerFrameHandler;
+
+    [QGVAR(updateVolume), LINKFUNC(updateVolume)] call CBA_fnc_addEventHandler;
 
     // Update veh attunation when player veh changes
     ["vehicle", {

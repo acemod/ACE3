@@ -5,187 +5,304 @@
             <English>AA12</English>
             <Korean>AA-12</Korean>
             <German>AA12</German>
+            <Italian>AA12</Italian>
             <Japanese>AA12</Japanese>
+            <Russian>AA12</Russian>
+            <French>AA12</French>
+            <Spanish>AA12</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Tan_Name">
             <English>AA12 (Sand)</English>
             <Korean>AA-12 (모래)</Korean>
             <German>AA12 (Sand)</German>
+            <Italian>AA12 (Sabbia)</Italian>
             <Japanese>AA12 (サンド)</Japanese>
+            <Russian>AA12 (Песочный)</Russian>
+            <French>AA12 (Sable)</French>
+            <Spanish>AA12 (Arena)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Snake_Name">
             <English>AA12 (Snake)</English>
             <Korean>AA-12 (뱀 위장)</Korean>
             <German>AA12 (Schlange)</German>
+            <Italian>AA12 (Serpe)</Italian>
             <Japanese>AA12 (ヘビ柄)</Japanese>
+            <Russian>AA12 (Змея)</Russian>
+            <Spanish>AA12 (Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Name">
             <English>Galil ARM</English>
             <Korean>갈릴 ARM</Korean>
             <German>Galil ARM</German>
+            <Italian>Galil ARM</Italian>
             <Japanese>ガリル ARM</Japanese>
+            <Russian>Galil ARM</Russian>
+            <French>Galil ARM</French>
+            <Spanish>Galil ARM</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Old_Name">
             <English>Galil ARM (Old)</English>
             <Korean>갈릴 ARM (낡음)</Korean>
             <German>Galil ARM (Alt)</German>
+            <Italian>Galil ARM (Vecchio)</Italian>
             <Japanese>ガリル ARM (使い古し)</Japanese>
+            <Russian>Galil ARM (Старый)</Russian>
+            <French>Galil ARM (Ancien)</French>
+            <Spanish>Galil ARM (Vieja)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Name">
             <English>GLX 160</English>
             <Korean>GLX-160</Korean>
             <German>GLX 160</German>
+            <Italian>GLX-160</Italian>
             <Japanese>GLX 160</Japanese>
+            <Russian>GLX 160</Russian>
+            <French>GLX 160</French>
+            <Spanish>GLX 160</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Snake_Name">
             <English>GLX 160 (Snake)</English>
             <Korean>GLX-160 (뱀 위장)</Korean>
             <German>GLX 160 (Schlange)</German>
+            <Italian>GLX-160 (Serpe)</Italian>
             <Japanese>GLX 160 (ヘビ柄)</Japanese>
+            <Russian>GLX 160 (Змея)</Russian>
+            <Spanish>GLX 160 (Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Hex_Name">
             <English>GLX 160 (Hex)</English>
             <Korean>GLX-160 (육각)</Korean>
             <German>GLX 160 (Hex)</German>
-            <Japanese>GLX 160 (ヘックス)</Japanese>
+            <Italian>GLX-160 (Hex)</Italian>
+            <Japanese>GLX 160 (六角形迷彩)</Japanese>
+            <Russian>GLX 160 (Гекс)</Russian>
+            <French>GLX 160 (Hex)</French>
+            <Spanish>GLX 160 (Hex)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_GreenHex_Name">
             <English>GLX 160 (Green Hex)</English>
             <Korean>GLX-160 (초록육각)</Korean>
             <German>GLX 160 (Grün Hex)</German>
-            <Japanese>GLX 160 (緑ヘックス)</Japanese>
+            <Italian>GLX-160 (Hex Verde)</Italian>
+            <Japanese>GLX 160 (緑六角形迷彩)</Japanese>
+            <Russian>GLX 160 (Зеленый Гекс)</Russian>
+            <French>GLX 160 (Vert Hex)</French>
+            <Spanish>GLX 160 (Hex Verde)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Camo_Name">
             <English>GLX 160 (Camo)</English>
             <Korean>GLX-160 (위장)</Korean>
             <German>GLX 160 (Tarn)</German>
+            <Italian>GLX-160 (Mimetica)</Italian>
             <Japanese>GLX 160 (迷彩)</Japanese>
+            <Russian>GLX 160 (Камуфляж)</Russian>
+            <French>GLX 160 (Camo)</French>
+            <Spanish>GLX 160 (Camo)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Tan_Name">
             <English>GLX 160 (Sand)</English>
             <Korean>GLX-160 (모래)</Korean>
             <German>GLX 160 (Sand)</German>
+            <Italian>GLX-160 (Sabbia)</Italian>
             <Japanese>GLX 160 (サンド)</Japanese>
+            <Russian>GLX 160 (Песочный)</Russian>
+            <French>GLX 160 (Sable)</French>
+            <Spanish>GLX 160 (Arena)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Black_Name">
             <English>Mk14 Mod 1 EBR (Black)</English>
             <Korean>Mk.14 Mod 1 EBR (검정)</Korean>
             <German>Mk14 Mod 1 EBR (Schwarz)</German>
+            <Italian>Mk14 Mod 1 EBR (Nero)</Italian>
             <Japanese>Mk14 Mod 1 EBR (ブラック)</Japanese>
+            <Russian>Mk14 Mod 1 EBR (Черный)</Russian>
+            <French>Mk14 Mod 1 EBR (Noir)</French>
+            <Spanish>Mk14 Mod 1 EBR (Negra)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Snake_Name">
             <English>Mk14 Mod 1 EBR (Snake)</English>
             <Korean>Mk.14 Mod 1 EBR (뱀 위장)</Korean>
             <German>Mk14 Mod 1 EBR (Schlange)</German>
+            <Italian>Mk14 Mod 1 EBR (Serpe)</Italian>
             <Japanese>Mk14 Mod 1 EBR (ヘビ柄)</Japanese>
+            <Russian>Mk14 Mod 1 EBR (Змея)</Russian>
+            <Spanish>Mk14 Mod 1 EBR (Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Name">
             <English>Vektor SS-77</English>
             <Korean>벡터 SS-77</Korean>
             <German>Vektor SS-77</German>
             <Japanese>ヴェクター SS-77</Japanese>
+            <Russian>Vektor SS-77</Russian>
+            <French>Vektor SS-77</French>
+            <Spanish>Vektor SS-77</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_AAF_Name">
             <English>Vektor SS-77 (Camo)</English>
             <Korean>벡터 SS-77 (위장)</Korean>
             <German>Vektor SS-77 (Tarn)</German>
+            <Italian>Vektor SS-77 (Mimetica)</Italian>
             <Japanese>ヴェクター SS-77 (迷彩)</Japanese>
+            <Russian>Vektor SS-77 (Камуфляж)</Russian>
+            <French>Vektor SS-77 (Camo)</French>
+            <Spanish>Vektor SS-77 (Camo)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Hex_Name">
             <English>Vektor SS-77 (Hex)</English>
             <Korean>벡터 SS-77 (육각)</Korean>
             <German>Vektor SS-77 (Hex)</German>
-            <Japanese>ヴェクター SS-77 (ヘックス)</Japanese>
+            <Italian>Vektor SS-77 (Hex)</Italian>
+            <Japanese>ヴェクター SS-77 (六角形迷彩)</Japanese>
+            <Russian>Vektor SS-77 (гекс)</Russian>
+            <French>Vektor SS-77 (Hex)</French>
+            <Spanish>Vektor SS-77 (Hex)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_GreenHex_Name">
             <English>Vektor SS-77 (Green Hex)</English>
             <Korean>벡터 SS-77 (초록육각)</Korean>
             <German>Vektor SS-77 (Grün Hex)</German>
-            <Japanese>ヴェクター SS-77 (緑ヘックス)</Japanese>
+            <Italian>Vektor SS-77 (Hex Verde)</Italian>
+            <Japanese>ヴェクター SS-77 (緑六角形迷彩)</Japanese>
+            <Russian>Vektor SS-77 (зеленый гекс)</Russian>
+            <French>Vektor SS-77 (VertHex)</French>
+            <Spanish>Vektor SS-77 (Hex Verde)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Desert_Name">
             <English>Vektor SS-77 (Desert)</English>
             <Korean>벡터 SS-77 (사막)</Korean>
-            <German>Vektor SS-77 (Wüstet)</German>
+            <German>Vektor SS-77 (Wüste)</German>
+            <Italian>Vektor SS-77 (Deserto)</Italian>
             <Japanese>ヴェクター SS-77 (砂漠迷彩)</Japanese>
+            <Russian>Vektor SS-77 (песочныйt)</Russian>
+            <French>Vektor SS-77 (Désert)</French>
+            <Spanish>Vektor SS-77 (Desierto)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Name">
             <English>Vektor SS-77 Compact</English>
             <Korean>벡터 SS-77 단축형</Korean>
             <German>Vektor SS-77 Kompakt</German>
+            <Italian>Vektor SS-77 Compatto</Italian>
             <Japanese>ヴェクター SS-77 コンパクト</Japanese>
+            <Russian>Vektor SS-77 Compact</Russian>
+            <French>Vektor SS-77 Compacte</French>
+            <Spanish>Vektor SS-77 Compacta</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Snake_Name">
             <English>Vektor SS-77 Compact (Snake)</English>
             <Korean>벡터 SS-77 단축형 (뱀 위장)</Korean>
             <German>Vektor SS-77 Compact (Schlange)</German>
+            <Italian>Vektor SS-77 Compatto (Serpe)</Italian>
             <Japanese>ヴェクター SS-77 コンパクト (ヘビ柄)</Japanese>
+            <Russian>Vektor SS-77 Compact (змея)</Russian>
+            <Spanish>Vektor SS-77 Compacta (Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Wood_Name">
             <English>FN FAL 50.00 (Wood)</English>
             <Korean>FN FAL 50.00 (목재)</Korean>
             <German>FN FAL 50.00 (Holz)</German>
+            <Italian>FN FAL 50.00 (Legno)</Italian>
             <Japanese>FN FAL 50.00 (森林迷彩)</Japanese>
+            <Russian>FN FAL 50.00 (лесной)</Russian>
+            <French>FN FAL 50.00 (Bois)</French>
+            <Spanish>FN FAL 50.00 (Madera)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Wood_Name">
             <English>FN FAL 50.00 GL (Wood)</English>
             <Korean>FN FAL 50.00 GL (목재)</Korean>
             <German>FN FAL 50.00 GL (Holz)</German>
+            <Italian>FN FAL 50.00 GL (Legno)</Italian>
             <Japanese>FN FAL 50.00 GL (森林迷彩)</Japanese>
+            <Russian>FN FAL 50.00 GL (лесной)</Russian>
+            <French>FN FAL 50.00 GL (Bois)</French>
+            <Spanish>FN FAL 50.00 GL (Madera)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Name">
             <English>FN FAL 50.00</English>
             <Korean>FN FAL 50.00</Korean>
             <German>FN FAL 50.00</German>
+            <Italian>FN FAL 50.00</Italian>
             <Japanese>FN FAL 50.00</Japanese>
+            <Russian>FN FAL 50.00</Russian>
+            <French>FN FAL 50.00</French>
+            <Spanish>FN FAL 50.00</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Name">
             <English>FN FAL 50.00 GL</English>
             <Korean>FN FAL 50.00 GL</Korean>
             <German>FN FAL 50.00 GL</German>
+            <Italian>FN FAL 50.00 GL</Italian>
             <Japanese>FN FAL 50.00 GL</Japanese>
+            <Russian>FN FAL 50.00 GL</Russian>
+            <French>FN FAL 50.00 GL</French>
+            <Spanish>FN FAL 50.00 GL</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Desert_Name">
             <English>FN FAL 50.00 (Desert)</English>
             <Korean>FN FAL 50.00 (사막)</Korean>
             <German>FN FAL 50.00 (Wüstet)</German>
+            <Italian>FN FAL 50.00 (Deserto)</Italian>
             <Japanese>FN FAL 50.00 (砂漠迷彩)</Japanese>
+            <Russian>FN FAL 50.00 (песочный)</Russian>
+            <French>FN FAL 50.00 (Désert)</French>
+            <Spanish>FN FAL 50.00 (Desierto)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Camo_Name">
             <English>FN FAL 50.00 (Jungle)</English>
             <Korean>FN FAL 50.00 (정글)</Korean>
             <German>FN FAL 50,00 (Dschungel)</German>
+            <Italian>FN FAL 50,00 (Giungla)</Italian>
             <Japanese>FN FAL 50.00 (熱帯迷彩)</Japanese>
+            <Russian>FN FAL 50.00 (джунгли)</Russian>
+            <French>FN FAL 50.00 (Jungle)</French>
+            <Spanish>FN FAL 50.00 (Jungla)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R4_Name">
             <English>Vektor R4</English>
             <Korean>벡터 R4</Korean>
             <German>Vektor R4</German>
+            <Italian>Vektor R4</Italian>
             <Japanese>ヴェクター R5</Japanese>
+            <Russian>Vektor R4</Russian>
+            <French>Vektor R4</French>
+            <Spanish>Vektor R4</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Name">
             <English>Vektor R5 Carbine</English>
             <Korean>벡터 R5 카빈</Korean>
             <German>Vektor R5 Carbine</German>
+            <Italian>Vektor R5 Carabina</Italian>
             <Japanese>ヴェクター R5 カービン</Japanese>
+            <Russian>Vektor R5 Carbine</Russian>
+            <French>Vektor R5 Carbine</French>
+            <Spanish>Vektor R5 Carabina</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Name">
             <English>Vektor R5 Carbine GL</English>
             <Korean>벡터 R5 카빈 GL</Korean>
             <German>Vektor R5 Carbine GL</German>
+            <Italian>Vektor R5 Carabina GL</Italian>
             <Japanese>ヴェクター R5 カービン GL</Japanese>
+            <Russian>Vektor R5 Carbine GL</Russian>
+            <French>Vektor R5 Carbine GL</French>
+            <Spanish>Vektor R5 Carabina GL</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Snake_Name">
             <English>Vektor R5 Carbine (Snake)</English>
             <Korean>벡터 R5 카빈 (뱀 위장)</Korean>
             <German>Vektor R5 Carbine (Schlange)</German>
+            <Italian>Vektor R5 Carabina (Serpe)</Italian>
             <Japanese>ヴェクター R5 カービン (ヘビ柄)</Japanese>
+            <Russian>Vektor R5 Carbine (Змея)</Russian>
+            <Spanish>Vektor R5 Carabina (Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Snake_Name">
             <English>Vektor R5 Carbine GL (Snake)</English>
             <Korean>벡터 R5 카빈 GL (뱀 위장)</Korean>
             <German>Vektor R5 Carbine GL (Schlange)</German>
+            <Italian>Vektor R5 Carabina GL (Serpe)</Italian>
             <Japanese>ヴェクター R5 カービン GL (ヘビ柄)</Japanese>
+            <Russian>Vektor R5 Carbine GL (Змея)</Russian>
+            <Spanish>Vektor R5 Carabina GL (Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Name">
             <English>XMS</English>
@@ -203,7 +320,7 @@
             <English>XMS (Khaki)</English>
             <French>XMS (kaki)</French>
             <German>XMS (khaki)</German>
-            <Italian>XMS (kaki)</Italian>
+            <Italian>XMS (Cachi)</Italian>
             <Portuguese>XMS (Cáqui)</Portuguese>
             <Spanish>XMS (caqui)</Spanish>
             <Chinesesimp>XMS（卡其色）</Chinesesimp>
@@ -215,7 +332,7 @@
             <English>XMS (Sand)</English>
             <French>XMS (sable)</French>
             <German>XMS (Sand)</German>
-            <Italian>XMS (sabbia)</Italian>
+            <Italian>XMS (Sabbia)</Italian>
             <Portuguese>XMS (Areia)</Portuguese>
             <Spanish>XMS (arena)</Spanish>
             <Chinesesimp>XMS（沙色）</Chinesesimp>
@@ -239,7 +356,7 @@
             <English>XMS GL (Khaki)</English>
             <French>XMS GL (kaki)</French>
             <German>XMS GL (khaki)</German>
-            <Italian>XMS GL (kaki)</Italian>
+            <Italian>XMS GL (Cachi)</Italian>
             <Portuguese>XMS GL (Cáqui)</Portuguese>
             <Spanish>XMS GL (caqui)</Spanish>
             <Chinesesimp>XMS GL（卡其色）</Chinesesimp>
@@ -251,7 +368,7 @@
             <English>XMS GL (Sand)</English>
             <French>XMS GL (sable)</French>
             <German>XMS GL (Sand)</German>
-            <Italian>XMS GL (sabbia)</Italian>
+            <Italian>XMS GL (Sabbia)</Italian>
             <Portuguese>XMS GL (Areia)</Portuguese>
             <Spanish>XMS GL (arena)</Spanish>
             <Chinesesimp>XMS GL（沙色）</Chinesesimp>
@@ -275,7 +392,7 @@
             <English>XMS SG (Khaki)</English>
             <French>XMS SG (kaki)</French>
             <German>XMS SG (khaki)</German>
-            <Italian>XMS SG (kaki)</Italian>
+            <Italian>XMS SG (Cachi)</Italian>
             <Portuguese>XMS SG (Cáqui)</Portuguese>
             <Spanish>XMS SG (caqui)</Spanish>
             <Chinesesimp>XMS SG（卡其色）</Chinesesimp>
@@ -287,7 +404,7 @@
             <English>XMS SG (Sand)</English>
             <French>XMS SG (sable)</French>
             <German>XMS SG (Sand)</German>
-            <Italian>XMS SG (sabbia)</Italian>
+            <Italian>XMS SG (Sabbia)</Italian>
             <Portuguese>XMS SG (Areia)</Portuguese>
             <Spanish>XMS SG (arena)</Spanish>
             <Chinesesimp>XMS SG（沙色）</Chinesesimp>
@@ -311,7 +428,7 @@
             <English>XMS SW (Khaki)</English>
             <French>XMS SW (kaki)</French>
             <German>XMS SW (khaki)</German>
-            <Italian>XMS SW (kaki)</Italian>
+            <Italian>XMS SW (Cachi)</Italian>
             <Portuguese>XMS SW (Cáqui)</Portuguese>
             <Spanish>XMS SW (caqui)</Spanish>
             <Chinesesimp>XMS SW（卡其色）</Chinesesimp>
@@ -323,7 +440,7 @@
             <English>XMS SW (Sand)</English>
             <French>XMS SW (sable)</French>
             <German>XMS SW (Sand)</German>
-            <Italian>XMS SW (sabbia)</Italian>
+            <Italian>XMS SW (Sabbia)</Italian>
             <Portuguese>XMS SW (Areia)</Portuguese>
             <Spanish>XMS SW (arena)</Spanish>
             <Chinesesimp>XMS SW（沙色）</Chinesesimp>

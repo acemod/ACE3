@@ -94,10 +94,10 @@
             <Spanish>Dejar de portar</Spanish>
             <French>Arrêter de porter</French>
             <Czech>Položit</Czech>
-            <Italian>Fine Trasporto</Italian>
+            <Italian>Termina Trasporto</Italian>
             <Hungarian>Cipelés abbahagyása</Hungarian>
             <Portuguese>Parar de carregar</Portuguese>
-            <Japanese>下ろす</Japanese>
+            <Japanese>降ろす</Japanese>
             <Korean>그만 옮기기</Korean>
             <Chinesesimp>停止搬运</Chinesesimp>
             <Chinese>停止搬運</Chinese>
@@ -179,7 +179,7 @@
             <Spanish>Caja de sacos de arena</Spanish>
             <French>Caisse de sacs de sable</French>
             <Czech>Bedna na pytle s pískem</Czech>
-            <Italian>Contenitore Sacchi di Sabbia</Italian>
+            <Italian>Scatola Sacchi di Sabbia</Italian>
             <Hungarian>Homokzsákos láda</Hungarian>
             <Portuguese>Caixa de saco de areia</Portuguese>
             <Japanese>土のう入れ</Japanese>
@@ -196,7 +196,7 @@
             <Spanish>Aqui no hay arena</Spanish>
             <French>Il n'y a pas de sable ici.</French>
             <Czech>Tady není písek</Czech>
-            <Italian>Qui non cè Sabbia</Italian>
+            <Italian>Qui non c'è Sabbia</Italian>
             <Hungarian>Itt nincs homok</Hungarian>
             <Portuguese>Aqui não tem areia</Portuguese>
             <Japanese>ここに土はありません</Japanese>

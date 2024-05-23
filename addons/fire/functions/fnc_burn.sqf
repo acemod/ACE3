@@ -189,7 +189,7 @@ if (_isBurning) exitWith {};
                             if ((_unit isEqualTo vehicle _unit) && (_sdr || ({ 0.05 > random 1 }))) then {
                                 _unit setVariable [QGVAR(stopDropRoll), true];
                                 if !(_sdr) then {
-                                    TRACE_1("stop, drop, roll!", _unit);
+                                    TRACE_1("stop,drop,roll!",_unit);
                                     _unit setUnitPos "DOWN";
                                     doStop _unit;
                                 };
@@ -203,7 +203,7 @@ if (_isBurning) exitWith {};
                                 private _vehicle = vehicle _unit;
 
                                 if (_vehicle != _unit) then {
-                                    TRACE_1("Ejecting", _unit);
+                                    TRACE_1("Ejecting",_unit);
                                     _unit leaveVehicle _vehicle;
                                     unassignVehicle _unit;
                                     _unit action ["eject",_vehicle];
@@ -244,7 +244,7 @@ if (_isBurning) exitWith {};
 
         private _burnIndicatorPFH = _unit getVariable [QGVAR(burnUIPFH), -1];
         if (_unit isEqualTo ace_player && { _isThisUnitAlive } && { _burnIndicatorPFH < 0 }) then {
-            _burnIndicatorPFH = [FUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
+            _burnIndicatorPFH = [LINKFUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
             _unit setVariable [QGVAR(burnUIPFH), _burnIndicatorPFH];
         };
     };
@@ -296,7 +296,7 @@ if (_isBurning) exitWith {};
 
     if (local _unit) then {
         if (_unit isEqualTo ace_player) then {
-            private _burnIndicatorPFH = [FUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
+            private _burnIndicatorPFH = [LINKFUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
             _unit setVariable [QGVAR(burnUIPFH), _burnIndicatorPFH];
         };
 
