@@ -44,7 +44,7 @@ if (isNil QGVAR(cacheMaxAmmoLoudness)) then {
     GVAR(cacheMaxAmmoLoudness) = createHashMap;
 };
 
-// Cache maximum loadness for future calls
+// Cache maximum loudness for future calls
 private _maxLoudness = GVAR(cacheMaxAmmoLoudness) getOrDefaultCall [_weapon, {
     // Get the weapon's compatible magazines, so that all magazines are cached
     // From all the loudness factors, take the max
