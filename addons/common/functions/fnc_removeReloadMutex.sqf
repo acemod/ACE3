@@ -24,11 +24,13 @@ if (_unit isNil QGVAR(reloadMutex_gestureEH)) exitWith {
 _unit removeEventHandler [
     "GestureChanged",
     _unit getVariable QGVAR(reloadMutex_gestureEH)
-]
-_unit setVariable [QGVAR(reloadMutex_gestureEH), nil].
+];
+_unit setVariable [QGVAR(reloadMutex_gestureEH), nil];
 
 _unit removeEventHandler [
     "AnimChanged",
     _unit getVariable QGVAR(reloadMutex_animEH)
-]
-_unit setVariable [QGVAR(reloadMutex_animEH), nil].
+];
+_unit setVariable [QGVAR(reloadMutex_animEH), nil];
+
+nil // return

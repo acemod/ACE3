@@ -69,3 +69,5 @@ _unit setVariable [
         }, _unit, (_unitMovesInfo select 2) - (_unitMovesInfo select 1)] call CBA_fnc_waitAndExecute;
     }]
 ];
+
+nil // return
