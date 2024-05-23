@@ -4,7 +4,7 @@
  * Creates the flashbang effect and knock out AI units.
  *
  * Arguments:
- * 0: FlashBang position ASL <ARRAY>
+ * 0: Flashbang position ASL <ARRAY>
  *
  * Return Value:
  * None
