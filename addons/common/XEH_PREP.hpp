@@ -150,6 +150,7 @@ PREP(readSettingFromModule);
 PREP(receiveRequest);
 PREP(registerItemReplacement);
 PREP(removeCanInteractWithCondition);
+PREP(removeReloadMutex);
 PREP(removeSpecificMagazine);
 PREP(replaceRegisteredItems);
 PREP(requestCallback);
