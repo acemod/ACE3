@@ -10,6 +10,7 @@ PREP(readSettingsFromParamsArray);
 PREP(actionKeysNamesConverted);
 PREP(addCanInteractWithCondition);
 PREP(addLineToDebugDraw);
+PREP(addReloadMutex);
 PREP(addSwayFactor);
 PREP(addToInventory);
 PREP(addWeapon);
