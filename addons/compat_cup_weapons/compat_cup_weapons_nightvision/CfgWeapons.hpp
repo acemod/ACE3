@@ -107,12 +107,12 @@ class CfgWeapons {
         displayName = SUBCSTRING(CUP_NVG_GPNVG_tan_WP);
         NVG_WP_PRESET;
     };
-    class CUP_GPNVG_green_WP: CUP_NVG_GPNVG_green {
-        displayName = SUBCSTRING(CUP_GPNVG_green_WP);
+    class CUP_NVG_GPNVG_green_WP: CUP_NVG_GPNVG_green {
+        displayName = SUBCSTRING(CUP_NVG_GPNVG_green_WP);
         NVG_WP_PRESET;
     };
-    class CUP_GPNVG_winter_WP: CUP_NVG_GPNVG_winter {
-        displayName = SUBCSTRING(CUP_GPNVG_winter_WP);
+    class CUP_NVG_GPNVG_winter_WP: CUP_NVG_GPNVG_winter {
+        displayName = SUBCSTRING(CUP_NVG_GPNVG_winter_WP);
         NVG_WP_PRESET;
     };
 };

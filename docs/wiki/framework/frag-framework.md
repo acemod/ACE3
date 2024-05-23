@@ -60,22 +60,22 @@ Dimensionless value, as long as same unit as `ace_frag_metal` (for example `kg/k
 
 Gurney constant for explosive force. You can find a list of common explosive types below. If you can not find it here, or want more accurate numbers, just google the type of explosive and Gurney constant and you can find substantial information. This is **not** the detonation velocity of the explosive, do not confuse them!
 
-Type            | Speed
---------------- | --------
-Composition B   | 2700 m/s
-Composition C-3 | 2680 m/s
-Cyclotol 75/25  | 2790 m/s
-HMX             | 2800 m/s
-LX-14           | 2970 m/s
-Octol 75/25     | 2800 m/s
-PBX 9404        | 2900 m/s
-PBX 9502        | 2377 m/s
-Pentolite       | 2750 m/s
-PETN            | 2930 m/s
-RDX             | 2830 m/s
-Tetryl          | 2500 m/s
-TNT             | 2440 m/s
-Tritonal        | 2320 m/s
+| Type            | Speed    |
+| --------------- | -------- |
+| Composition B   | 2700 m/s |
+| Composition C-3 | 2680 m/s |
+| Cyclotol 75/25  | 2790 m/s |
+| HMX             | 2800 m/s |
+| LX-14           | 2970 m/s |
+| Octol 75/25     | 2800 m/s |
+| PBX 9404        | 2900 m/s |
+| PBX 9502        | 2377 m/s |
+| Pentolite       | 2750 m/s |
+| PETN            | 2930 m/s |
+| RDX             | 2830 m/s |
+| Tetryl          | 2500 m/s |
+| TNT             | 2440 m/s |
+| Tritonal        | 2320 m/s |
 
 ### 1.4 Gurney shape factor
 
@@ -83,11 +83,11 @@ Tritonal        | 2320 m/s
 
 Shape factor for the explosive configuration. You should choose it based on the general configuration of explosives/metal in the warhead. Most grenades for example are a sphere. Artillery and aircraft bombs are a cylinder. Mines generally a flat plate. Below is a list of the three common shapes and their factors.
 
-Shape    | Factor
--------- | ------
-Sphere   | 3/5
-Cylinder | 1/2
-Plate    | 3/5
+| Shape    | Factor |
+| -------- | ------ |
+| Sphere   | 3/5    |
+| Cylinder | 1/2    |
+| Plate    | 3/5    |
 
 There are other configurations but these are the most common. If you are interested in others check out the wikipedia link given above. Most of these will not correctly function in ACE3 though due to additional variables for the equation.
 
@@ -97,18 +97,18 @@ There are other configurations but these are the most common. If you are interes
 
 There are different types of fragmentation fragments to choose from, and they can be defined in this config value.
 
-| Type
-| ----
-| ACE_frag_tiny
-| ACE_frag_tiny_HD
-| ACE_frag_small
-| ACE_frag_small_HD
-| ACE_frag_medium
-| ACE_frag_medium_HD
-| ACE_frag_large
-| ACE_frag_large_HD
-| ACE_frag_huge
-| ACE_frag_huge_HD
+| Type               |
+| ------------------ |
+| ACE_frag_tiny      |
+| ACE_frag_tiny_HD   |
+| ACE_frag_small     |
+| ACE_frag_small_HD  |
+| ACE_frag_medium    |
+| ACE_frag_medium_HD |
+| ACE_frag_large     |
+| ACE_frag_large_HD  |
+| ACE_frag_huge      |
+| ACE_frag_huge_HD   |
 
 The tinier the piece of fragmentation the shorter the distance of travel. The `_HD` variants are all even higher drag versions. Grenades generally should use the `_HD` variants. Experimentation here is important.
 

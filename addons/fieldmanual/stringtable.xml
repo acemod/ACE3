@@ -27,6 +27,8 @@
             <German>Hunger</German>
             <Japanese>空腹</Japanese>
             <Russian>Голод</Russian>
+            <French>Faim</French>
+            <Spanish>Hambre</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Hunger_Description">
             <English>%3Hunger%4 increases linearly with soldier's movement speed. Restore by eating food.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up food.&lt;br/&gt;%2Use [%3%12%4] and select %3Survival%4.&lt;br/&gt;%2Choose an item to consume.</English>
@@ -37,6 +39,8 @@
             <Italian>%3Fame%4 aumenta linearmente con la velocità di movimento del soldato. Si rigenera consumando cibo.&lt;br/&gt;&lt;br/&gt;%3Usa:%4&lt;br/&gt;%2Raccogli cibo.&lt;br/&gt;%2Usa [%3%12%4] e scegli %3sopravvivenza%4.&lt;br /&gt;%2Scegli un articolo da mangiare.</Italian>
             <Japanese>%3空腹度%4は兵士の移動速度に比例して増加します。食べ物を食べることで回復します。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2食べ物を持つ。&lt;br/&gt;%2[%3%12%4] を使って%3サバイバル%4を選択。&lt;br/&gt;%2食べたいものを選ぶ。</Japanese>
             <Russian>%3Голод%4 линейно увеличивается со скоростью передвижения солдата. Восстанавливайтесь, употребляя пищу.&lt;br/&gt;&lt;br/&gt;%3 Использование:%4&lt;br/&gt;%2Возьмите еду.&lt;br/&gt;%2Используйте [%3%12%4] и выберите %3Выживание% 4.&lt;br/&gt;%2Выберите продукт для потребления.</Russian>
+            <French>%3La faim%4 augmente linéairement avec la vitesse de déplacement du soldat. Il se régénère en consommant de la nourriture.&lt;br/&gt;&lt;br/&gt;%3Utilisation:%4&lt;br/&gt;%2Ramasser la nourriture.&lt;br/&gt;%2Utilisez [%3%12%4] et sélectionnez %3Survie%4.&lt;br/&gt;%2Choisissez un article à consommer.</French>
+            <Spanish>El %3Hambre%4 aumenta linealmente con los movimientos del soldado. Se reestablece comiendo comida.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Coger comida.&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Sobrevivir%4.&lt;br/&gt;%2Elegir un objeto para consumir.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_DisplayName">
             <English>Thirst</English>
@@ -47,6 +51,8 @@
             <German>Durst</German>
             <Japanese>渇き</Japanese>
             <Russian>Жажда</Russian>
+            <French>Soif</French>
+            <Spanish>Sed</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Field_Rations_Thirst_Description">
             <English>%3Thirst%4 increases linearly with soldier's movement speed. Restore by drinking liquids.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a drink.&lt;br/&gt;%2Use [%3%12%4] and select %3Survival%4.&lt;br/&gt;%2Choose an item to consume.</English>
@@ -57,6 +63,8 @@
             <Italian>%3Sete%4 aumenta linearmente con la velocità di movimento del soldato. Si rigenera bevendo liquidi.&lt;br/&gt;&lt;br/&gt;%3Usa:%4&lt;br/&gt;%2Raccogli bevanda.&lt;br/&gt;%2Usa [%3%12%4] e scegli %3sopravvivenza%4.&lt;br /&gt;%2Scegli un articolo da bere.</Italian>
             <Japanese>%3喉の渇き%4は兵士の移動速度に比例して増加します。飲み物を飲むことで回復します。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2飲み物を持つ。&lt;br/&gt;%2[%3%12%4] を使って%3サバイバル%4を選択。&lt;br/&gt;%2飲みたいものを選ぶ。</Japanese>
             <Russian>%3Жажда%4 линейно увеличивается со скоростью передвижения солдата. Восстанавливайтесь, употребляя напитки.&lt;br/&gt;&lt;br/&gt;%3 Использование:%4&lt;br/&gt;%2Возьмите напиток.&lt;br/&gt;%2Используйте [%3%12%4] и выберите %3Выживание% 4.&lt;br/&gt;%2Выберите напиток для потребления.</Russian>
+            <French>%3La soif%4 augmente linéairement avec la vitesse de déplacement du soldat. Elle se régénère en buvant des liquides.&lt;br/&gt;&lt;br/&gt;%3Utilisez [%3%12%4] et choisissez %3survival%4.&lt;br /&gt;%2Choisissez un article à boire.</French>
+            <Spanish>La %3Sed%4 aumenta linealmente con la velocidad de movimiento del soldado. Se restaura bebiendo líquidos.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Selecciona una bebida.&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Sobrevivir%4.&lt;br/&gt;%2Elegir un objeto para consumir.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_DisplayName">
             <English>Medical Treatment</English>
@@ -67,6 +75,8 @@
             <Italian>Cure Mediche</Italian>
             <Japanese>治療</Japanese>
             <Russian>Медицинское лечение</Russian>
+            <French>Traitement médical</French>
+            <Spanish>Tratamiento Médico</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_ShortName">
             <English>Decrease Heart Rate</English>
@@ -77,6 +87,8 @@
             <Italian>Rallenta ritmo cardiaco</Italian>
             <Japanese>心拍数を下げる</Japanese>
             <Russian>Уменьшить частоту сердечных сокращений</Russian>
+            <French>Diminution de la fréquence cardiaque</French>
+            <Spanish>Disminuir Ritmo Cardíaco</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Adenosine_Description">
             <English>%3Adenosine%4 is used to decrease heart rate.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an appendage.&lt;br/&gt;%2Inject %3Adenosine%4.</English>
@@ -87,6 +99,8 @@
             <Italian>%3Adenosina%4 è usata per rallentare il ritmo cardiaco.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%13%4] o [%3%14%4] e seleziona un arto.&lt;br/&gt;%2Inject %3Adenosina%4.</Italian>
             <Japanese>%3アデノシン%4は心拍数を下げるのに使われます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って四肢を選択します。&lt;br/&gt;%2そして%3アデノシン%4を注射します。</Japanese>
             <Russian>%3Аденозин%4 используется для снижения частоты сердечных сокращений.&lt;br/&gt;&lt;br/&gt;%3Применение:%4&lt;br/&gt;%2Используйте [%3%13%4] или [%3%14%4] и выберите конечность.&lt;br/&gt;%2Введите %3Аденозин%4.</Russian>
+            <French>L'%3adénosine%4 est utilisée pour réduire la fréquence cardiaque.&lt;br/&gt;&lt;br/&gt;%3Utilisation:%4&lt;br/&gt;%2Utilisez [%3%13%4] ou [%3%14%4] et sélectionnez un membre.&lt;br/&gt;%2Injectez l'%3Adénosine%4.</French>
+            <Spanish>La %3Adenosina%4 se usa para disminuir el ritmo cardíaco.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Uso [%3%13%4] o [%3%14%4] y selecciona una extremidad.&lt;br/&gt;%2Inyectar %3Adenosina%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_DisplayName">
             <English>Bandages</English>
@@ -97,6 +111,8 @@
             <Italian>Bende</Italian>
             <Japanese>包帯</Japanese>
             <Russian>Бинты</Russian>
+            <French>Pansements</French>
+            <Spanish>Vendas</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_ShortName">
             <English>Close Wounds</English>
@@ -107,6 +123,8 @@
             <Italian>Chiudi ferite</Italian>
             <Japanese>傷口をふさぐ</Japanese>
             <Russian>Закрыть раны</Russian>
+            <French>Fermer les plaies</French>
+            <Spanish>Cerrar Heridas</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Bandages_Description">
             <English>%3Bandages%4 stop bleeding and close wounds. Depending on your settings, bandages may reopen if surgery is not performed.&lt;br/&gt;&lt;br/&gt;%2%3Field Dressing:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Average&lt;/t&gt; In All Categories&lt;br/&gt;%2%3Packing Bandage:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Average&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Elastic Bandage:%4&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Higher&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#E60000'&gt;Higher&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#E60000'&gt;Shorter&lt;/t&gt; Reopen Delay&lt;br/&gt;%2%3Quickclot:%4&lt;br/&gt;%11&lt;t color='#E60000'&gt;Lower&lt;/t&gt; Treatment&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Lower&lt;/t&gt; Reopen Chance&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Longer&lt;/t&gt; Reopening Delay&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select a injured body part.&lt;br/&gt;%2Bandage body part by selecting desired %3Bandage%4 type.</English>
@@ -116,6 +134,7 @@
             <German>%3Verbände%4 stoppen Blutungen und schließen Wunden. Abhängig von Ihren Einstellungen können sich Verbände wieder öffnen, wenn keine Operation durchgeführt wird.&lt;br/&gt;&lt;br/&gt;%2%3Einfache Bandage:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Durchschnittlich&lt;/t&gt; In allen Kategorien&lt;br/&gt;%2%3Mullbinde:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Durchschnittliche&lt;/t&gt; Behandlung&lt;br/&gt;%11&lt;t color='#E60000' &gt;Höhere&lt;/t&gt; Wiedereröffnungswahrscheinlichkeit&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Längere&lt;/t&gt; Wiedereröffnungsverzögerung&lt;br/&gt;%2%3Elastischer Verband:%4&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Längere&lt;/t&gt; Behandlung&lt;br/&gt;%11&lt;t color='#E60000'&gt;Höhere&lt;/t&gt; Chance auf Wiedereröffnung&lt;br/&gt;%11&lt;t color='#E60000'&gt; Kürzere&lt;/t&gt; Wiedereröffnungsverzögerung&lt;br/&gt;%2%3Quickclot:%4&lt;br/&gt;%11&lt;t color='#E60000'&gt;Kürzere&lt;/t&gt; Behandlung&lt;br/&gt;%11&lt;t color=' #00CC00'&gt;Geringere&lt;/t&gt; Wiedereröffnungswahrscheinlichkeit&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Längere&lt;/t&gt; Wiedereröffnungsverzögerung&lt;br/&gt;&lt;br/&gt;%3Verwende:%4&lt;br/&gt; %2Verwenden Sie [%3%13%4] oder [%3%14%4] und wähle ein verletztes Körperteil aus.&lt;br/&gt;%2Verbinde ein Körperteil, indem der gewünschte %3Bandagen%4-Typ ausgewählt wurde.</German>
             <Italian>%3Bende%4 fermano emorragie e chiudono ferite. A seconda delle tue impostazioni, ferite bendate potrebbero riaprirsi se non suturate.&lt;br/&gt;&lt;br/&gt;%2%3Bendaggio Basico:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Media&lt;/t&gt; In tutte le categorie&lt;br/&gt;%2%3Bendaggio Compressivo:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Media&lt;/t&gt; Trattamenti&lt;br/&gt;%11&lt;t color='#E60000'&gt;Alta&lt;/t&gt; Probabilità di riapertura&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Lungo&lt;/t&gt; Tempo di riapertura&lt;br/&gt;%2%3Bendaggio Elastico:%4&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Alto&lt;/t&gt; Trattamento&lt;br/&gt;%11&lt;t color='#E60000'&gt;Alto&lt;/t&gt; Probabilità di riapertura&lt;br/&gt;%11&lt;t color='#E60000'&gt;Breve&lt;/t&gt; Tempo di riapertura&lt;br/&gt;%2%3Quickclot:%4&lt;br/&gt;%11&lt;t color='#E60000'&gt;Basso&lt;/t&gt; Trattamento&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Basso&lt;/t&gt; Probabilità di riapertura&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Lungo&lt;/t&gt; Tempo di riapertura&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%13%4] o [%3%14%4] seleziona una parte del corpo ferita.&lt;br/&gt;%2Benda la parte del corpo ferita selezionando la %3Benda%4 desiderato.</Italian>
             <Japanese>%3包帯%4は傷口をとじて出血を止めます。設定によっては、手術を行わないと包帯が解けて傷が再開放し出血が再開する場合があります。&lt;br/&gt;&lt;br/&gt;%2%3緊急圧迫包帯:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;平均的な&lt;/t&gt; 全体性能を持っています&lt;br/&gt;%2%3弾性包帯:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;平均的な&lt;/t&gt; 治療効果&lt;br/&gt;%11&lt;t color='#E60000'&gt;高い&lt;/t&gt; 再解放の可能性&lt;br/&gt;%11&lt;t color='#00CC00'&gt;長い&lt;/t&gt; 再解放の再計算間隔&lt;br/&gt;%2%3伸縮包帯:%4&lt;br/&gt;%11&lt;t color='#00CC00'&gt;高い&lt;/t&gt; 治療効果&lt;br/&gt;%11&lt;t color='#E60000'&gt;高い&lt;/t&gt; 再解放の可能性&lt;br/&gt;%11&lt;t color='#E60000'&gt;短い&lt;/t&gt; 再解放の再計算間隔&lt;br/&gt;%2%クイッククロット:%4&lt;br/&gt;%11&lt;t color='#E60000'&gt;低い&lt;/t&gt; 治療効果&lt;br/&gt;%11&lt;t color='#00CC00'&gt;低い&lt;/t&gt; 再解放の可能性&lt;br/&gt;%11&lt;t color='#00CC00'&gt;長い&lt;/t&gt; 再解放の再計算間隔&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って身体の負傷個所を選択します。&lt;br/&gt;%2希望の%3包帯%4の種類を選択して部位に包帯を巻きます。</Japanese>
+            <Spanish>Las %3Vendas%4 paran el sangrado y cierran las heridas. Dependiendo de las opciones configuradas, las heridas pueden reabrirse si no se realiza cirugía.&lt;br/&gt;&lt;br/&gt;%2%3Vendaje de campaña:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Medio&lt;/t&gt; en todas las categorias&lt;br/&gt;%2%3Vendaje compresivo:%4&lt;br/&gt;%11&lt;t color='#D9D900'&gt;Medio&lt;/t&gt; Tratamiento&lt;br/&gt;%11&lt;t color='#E60000'&gt;Alto&lt;/t&gt; Probabilidad de Reapertura&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Larga&lt;/t&gt; Retardo en reapertura&lt;br/&gt;%2%3Vendaje elástico:%4&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Alto&lt;/t&gt; Tratamiento&lt;br/&gt;%11&lt;t color='#E60000'&gt;Alto&lt;/t&gt; Probabilidad de reapertura&lt;br/&gt;%11&lt;t color='#E60000'&gt;Corto&lt;/t&gt; Retardo en reapertura&lt;br/&gt;%2%3Quickclot:%4&lt;br/&gt;%11&lt;t color='#E60000'&gt;Bajo&lt;/t&gt; Tratamiento&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Bajo&lt;/t&gt; Probabilidad de Reapertura&lt;br/&gt;%11&lt;t color='#00CC00'&gt;Larga&lt;/t&gt; Retardo en reapertura&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Uso [%3%13%4] o [%3%14%4] y selecciona una parte del cuerpo herida.&lt;br/&gt;%2Venda la parte del cuerpo seleccionada eligiendo el tipo de %3Venda%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_DisplayName">
             <English>IV Fluids</English>
@@ -125,6 +144,8 @@
             <German>IV-Flüssigkeiten</German>
             <Italian>Fluidi EV</Italian>
             <Japanese>IV 輸液</Japanese>
+            <French>IV Fluides</French>
+            <Spanish>Fluidos IV</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_ShortName">
             <English>Restore Blood Volume</English>
@@ -135,6 +156,8 @@
             <Italian>Ristorano Volume di Sangue</Italian>
             <Japanese>血液量を回復する</Japanese>
             <Russian>Внутривенные жидкости</Russian>
+            <French>Restaurer le volume sanguin</French>
+            <Spanish>Reestablece el volumen de sangre</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_IVFluids_Description">
             <English>%3IV fluids%4 restore lost blood volume. Blood, Plasma, and Saline are functionally the same.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an appendage.&lt;br/&gt;%2Restore blood volume by selecting desired %3IV Fluid%4 type.</English>
@@ -144,6 +167,8 @@
             <German>%3IV-Flüssigkeiten%4 stellen das verlorene Blutvolumen wieder her. Blut, Plasma und Kochsalzlösung sind funktionell gleich.&lt;br/&gt;&lt;br/&gt;%3Verwende:%4&lt;br/&gt;%2Verwende [%3%13%4] oder [%3%14%4] und wählen ein Körperteil aus..&lt;br/&gt;%2Stelle das Blutvolumen wieder her, indem der gewünschte %3IV Flüssigkeitstyp%4 ausgewählt wird.</German>
             <Italian>%3Fluidi EV%4 ristorano volume di sangue perso. Sangue, Plasma, e Salina sono funzionalmente identiche.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%13%4] o [%3%14%4] e seleziona un arto.&lt;br/&gt;%2Ristora il volume di sangue selezionando il tipo di %3Fluido EV%4 desiderato.</Italian>
             <Japanese>%3IV 輸液%4は失われた血液を回復します。血液、血漿、生理食塩水は機能的には同じです。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って四肢を選択します。&lt;br/&gt;%2希望の%3IV 輸液%4の種類を選択して、血液量を復元します。</Japanese>
+            <Russian>%%3Внутривенные жидкости%4восстанавливают потерянный объем крови. Кровь, плазма и физраствор функционально идентичны.&lt;br/&gt;&lt;br/&gt;%3 Использование:%4&lt;br/&gt;%2 Используйте [%3%13%4] или [%3%14%4] и выберите добавку.&lt;br/&gt;%2 Восстановите объем крови выбрав желаемый %4тип %3жидкости</Russian>
+            <Spanish>Los %3Fluidos IV%4 restauran el volumen de sangre. Sangre, Plasma, y Salino funcionan de manera similar.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Uso [%3%13%4] o [%3%14%4] y seleccionar una extremidad.&lt;br/&gt;%2Restaura el volumen de sangre seleccionando el tipo de %3Fluido IV%4 elegido.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_ShortName">
             <English>Increase Heart Rate | Wake Up Faster</English>
@@ -154,6 +179,8 @@
             <Italian>Aumenta ritmo cardiaco | Accelera rinvenimento </Italian>
             <Japanese>心拍数を上げる | はやく起こす</Japanese>
             <Russian>Увеличьте частоту сердечных сокращений | просыпайтесь быстрее</Russian>
+            <French>Augmentation de la fréquence cardiaque - Réveil plus rapide</French>
+            <Spanish>Incrementa el ritmo cardíaco | Despierta más rápido</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_Description">
             <English>%3Epinephrine%4 increases a patient's pulse as well as potentially decreasing the time between consciousnesss checks (effectively reducing the time needed for the patient to wake up).&lt;br/&gt;&lt;br/&gt;%3Usage%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an appendage.&lt;br/&gt;%2Inject %3Epinephrine%4.</English>
@@ -163,6 +190,7 @@
             <German>%3Epinephrine%4 erhöht den Puls eines Patienten und verkürzt möglicherweise die Zeit zwischen Bewusstseinskontrollen (wodurch die Zeit, die der Patient zum Aufwachen benötigt, effektiv verkürzt wird).&lt;br/&gt;&lt;br/&gt;%3Verwendung%4&lt;br/&gt;%2Verwende [%3%13%4] oder [%3%14%4] und wählen ein Körperteil aus.&lt;br/&gt;%2Injiziere %3Epinephrine%4.</German>
             <Italian>%3Epinefrina%4 aumenta il ritmo cardiaco di un paziente e riduce potenzialmente gli intervalli tra verifiche di coscienza (effettivamente riducendo il tempo necessario che questo paziente si svegli).&lt;br/&gt;&lt;br/&gt;%3Utilizzo%4&lt;br/&gt;%2Usa [%3%13%4] o [%3%14%4] e seleziona un arto.&lt;br/&gt;%2Inietta %3Epinefrina%4.</Italian>
             <Japanese>%3アドレナリン%4は、患者の脈拍を増加させるだけでなく、意識チェックの間隔を短縮する可能性があります。 (患者が目覚めるまでに必要な時間を効果的に短縮します)&lt;br/&gt;&lt;br/&gt;%3使用方法%4&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って四肢を選択します。&lt;br/&gt;%2%3アドレナリン%4を注射します。</Japanese>
+            <Spanish>La %3Epinefrina%4 aumenta el pulso del paciente así como potencialmente disminuye el tiempo entre las comprobaciones sobre consciencia (reduciendo de manera efectiva el tiempo de despertar del paciente).&lt;br/&gt;&lt;br/&gt;%3Uso%4&lt;br/&gt;%2Usa [%3%13%4] o [%3%14%4] y selecciona una extremidad.&lt;br/&gt;%2Inyecta %3Epinefrina%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_ShortName">
             <English>Restore Like New</English>
@@ -173,6 +201,8 @@
             <Italian>Cura completa</Italian>
             <Japanese>生まれたてのように回復する</Japanese>
             <Russian>Лечение тела</Russian>
+            <French>Remettre comme neuf</French>
+            <Spanish>Restaurar como nuevo</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_PAK_Description">
             <English>The %3Personal Aid Kit%4 is an item that allows a soldier to be fully healed. Independent of %3ACE Settings%4, it requires that the patient is in %3Stable Condition%4 before use.&lt;br/&gt;&lt;br/&gt;%3Stable Condition%4 qualifies as:&lt;br/&gt;%2Unit is %3Alive%4.&lt;br/&gt;%2Unit is %3Conscious%4.&lt;br/&gt;%2Unit has no active %3Bleeding%4.&lt;br/&gt;%2Heart Rate &gt;= 40.&lt;br/&gt;%2Systolic BP &gt;= 60.&lt;br/&gt;%2Diastolic BP &gt;= 50.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move to appropriate location depending on %3ACE Settings%4.&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Advanced Treatments%4&lt;br/&gt;%2Select %3Use Personal Aid Kit%4.</English>
@@ -182,6 +212,7 @@
             <German>Das %3Persönliche Erste Hilfe Kit%4 ist ein Gegenstand, der es einem Soldaten ermöglicht, vollständig geheilt zu werden. Unabhängig von den %3ACE-Einstellungen%4 ist es erforderlich, dass sich der Patient vor der Verwendung in einem %3stabilen Zustand%4 befindet.&lt;br/&gt;&lt;br/&gt;%3Stabiler Zustand%4 gilt wenn:&lt;br/&gt;%2Einheit ist %3am Leben%4 .&lt;br/&gt;%2Einheit ist %3Bei Bewusstsein%4.&lt;br/&gt;%2Einheit hat keine aktive %3Blutung%4.&lt;br/&gt;%2Herzfrequenz &gt;= 40.&lt;br/&gt;%2Systolischer Blutdruck &gt;= 60.&lt; br/&gt;%2Diastolischer Blutdruck &gt;= 50.&lt;br/&gt;&lt;br/&gt;%3Verwende:%4&lt;br/&gt;%2Bewege den Patienten je nach %3ACE-Einstellungen%4 an den entsprechenden Ort.&lt;br/&gt;%2Verwende [%3% 13%4] oder [%3%14%4] und wähle %3Erweiterte Behandlungen%4&lt;br/&gt;%2Wähle %3Persönliche Erste Hilfe Kit verwenden%4.</German>
             <Italian>Il %3Kit di Pronto Soccorso%4 è un oggetto che permette di curare completamente un soldato, indipendentemente da %3impostazioni ACE%4, richiede che il paziente sia in %3condizione stabile%4 prima dell'utilizzo.&lt;br/&gt;&lt;br/&gt;%3Condizione stabile%4 significa:&lt;br/&gt;%2Paziente è %3Vivo%4.&lt;br/&gt;%2Paziente è %3Conscio%4.&lt;br/&gt;%2Paziente non sta %3Sanguinando%4.&lt;br/&gt;%2Ritmo cardiaco &gt;= 40.&lt;br/&gt;%2Sistolico BC &gt;= 60.&lt;br/&gt;%2Diastolico BC &gt;= 50.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Sposta in luogo specifico a seconda delle %3impostazioni ACE%4.&lt;br/&gt;%2Usa [%3%13%4] o [%3%14%4] e seleziona %3Trattamenti avanzati%4&lt;br/&gt;%2Seleziona %3Usa Kit di Pronto Soccorso%4.</Italian>
             <Japanese>%3個人用治療キット%4は、兵士を完全に回復できるアイテムです。使用時には%3ACE 設定%4と関係なく、対象の患者が%3安定状態%4である必要があります。&lt;br/&gt;&lt;br/&gt;%3安定状態%4とは次の状態です:&lt;br/&gt;%2ユニットが %3生存%4している。&lt;br/&gt;%2ユニットが %3覚醒状態%4である。&lt;br/&gt;%2ユニットが %3出血状態%4ではない。&lt;br/&gt;%2心拍数が40以上。&lt;br/&gt;%2収縮期血圧が60以上。&lt;br/&gt;%2拡張期血圧が50以上。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3ACE 設定%4で使用が許可された場所へ移動する。&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って%3高度な治療%4を選択する。&lt;br/&gt;%2%3個人用治療キットを使う%4を選択して使用します。</Japanese>
+            <Spanish>El %3Kit de Primeros Auxilios%4 es un objeto que permite al soldado ser curado totalmente. Independientemente de las %3Opciones de ACE%4, requiere que el paciente esté en %3Condición Estable%4 antes de usarse.&lt;br/&gt;&lt;br/&gt;%3Condición Estable%4 significa que:&lt;br/&gt;%2La unidad está %3Viva%4.&lt;br/&gt;%2La unidad está %3Consciente%4.&lt;br/&gt;%2La unidad no está %3Sangrando%4.&lt;br/&gt;%2Ritmo Cardíaco &gt;= 40.&lt;br/&gt;%2Presión Sistólica &gt;= 60.&lt;br/&gt;%2Presión Diastólica &gt;= 50.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Mover al lugar adecuado dependiendo de las%3Opciones de ACE%4.&lt;br/&gt;%2Uso [%3%13%4] o [%3%14%4] y seleccionar %3Tratamientos Avanzados%4&lt;br/&gt;%2Seleccionar %3Usar Kit de Primeros Auxilios%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_ShortName">
             <English>Fix Fractures</English>
@@ -192,6 +223,8 @@
             <Italian>Risolvi frattura</Italian>
             <Japanese>骨折を治す</Japanese>
             <Russian>Исправлять переломы</Russian>
+            <French>Réparation des fractures</French>
+            <Spanish>Curar Fracturas</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Splint_Description">
             <English>A %3Splint%4 is used to fix fractures. The %3Splint%4 is consumed when used.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Splint%4.</English>
@@ -201,6 +234,7 @@
             <German>Ein %3Splint%4 wird zur Fixierung von Frakturen verwendet. Der %3Splint%4 wird bei Verwendung verbraucht.&lt;br/&gt;&lt;br/&gt;%3Verwendung:%4&lt;br/&gt;%2Verwende [%3%13%4] oder [%3%14%4] und wählen ein Körperteil aus.&lt;br/&gt;%2Wähle %3Schiene verwenden%4.</German>
             <Italian>Una %3Gessatura%4 è usata per risolvere fratture. La %3Gessatura%4 è consumata quando usata.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%13%4] o [%3%14%4] e seleziona un arto afflitto.&lt;br/&gt;%2Seleziona %3Applica Gessatura%4.</Italian>
             <Japanese>%3添え木%4は骨折の治療に使います。%3添え木%4は使用時に消費します。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って使用したい四肢を選択します。&lt;br/&gt;%2%3添え木を当てる%4を選択して使用します。</Japanese>
+            <Spanish>La %3Férula%4 se utiliza para curar fracturas. La %3Férula%4 se consume cuando es usada.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Usar [%3%13%4] o [%3%14%4] y seleccionar la extremidad adecuada.&lt;br/&gt;%2Seleccionar %3Aaplicar Férula%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_ShortName">
             <English>Prevent Wounds From Reopening</English>
@@ -210,6 +244,8 @@
             <Italian>Impedisce la riapertura di ferite</Italian>
             <Japanese>傷口が開くのを防ぐ</Japanese>
             <Russian>Предотвратить повторное открытие ран</Russian>
+            <French>Empêcher la réouverture des plaies</French>
+            <Spanish>Prevenir la reapertura de heridas</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_SurgicalKit_Description">
             <English>A %3Surgical Kit%4 is used to prevent wounds from reopening after being bandaged. Depending on settings, it can also clear trauma and may require additional %3Sutures%4 to close wounds. Sutures are consumable, much like bandages, and are not a replacement for the Surgical Kit.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select %3Advanced Treatment%4.&lt;br/&gt;%2Select %3Use Surgical Kit%4.</English>
@@ -218,6 +254,7 @@
             <Portuguese>O %3Kit Cirúrgico%4 é utilizado para prevenir a reabertura de feridas após a aplicação de bandagens. A depender das configurações, ele também pode remover traumas e pode requerir %3Suturas%4 adicionais para fechar feridas. Suturas são consumíveis, tal como as bandagens, e não são substituem o Kit Cirúrgico.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Utilize [%3%13%4] ou [%3%14%4] e selecione %3Tratamento Avançado%4.&lt;br/&gt;%2Selecione %3Usar Kit Cirúrgico%4.</Portuguese>
             <Italian>Un %3Kit Chirurgico%4 è usato per impedire che ferite bendate si riaprano. A seconda delle impostazioni, può anche azzerare danni o potrebbe richiedere %3Suture%4 aggiuntive per chiudere ferite. Suture sono consumabili proprio come bende, non sono un sostituto per un Kit Chirurgico.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%13%4] o [%3%14%4] e seleziona %3Trattamenti Avanzati%4.&lt;br/&gt;%2Seleziona %3Usa Kit Chirurgico%4.</Italian>
             <Japanese>%3手術キット%4は包帯を巻いた傷口が再度開いて出血するのを防ぎます。設定によっては、負傷を取り除いたり、傷口を閉じるのに%3糸付縫合針%4を必要としたりします。糸付縫合針は消耗品で包帯のように使用され、手術キットを代替するものではありません。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って%3高度な治療%4を選択する。&lt;br/&gt;%2%3手術キット%4を選択して使用します。</Japanese>
+            <Spanish>El %3Kit Quirúrgico%4 se usa para prevenir la reapertura de heridas despues de ser vendadas. Dependiendo de las opciones, tambien puede curar traumatismos y puede requerir %3Sutura%4 adicional para cerrar las heridas. Las Suturas son consumibles, al igual que las vendas, y no son un reemplazo para el Kit Quirúgico.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Usar [%3%13%4] o [%3%14%4] y seleccionar %3Tratamientos Avanzados%4.&lt;br/&gt;%2Seleccionar %3Usar Kit Quirúgico%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_ShortName">
             <English>Stop Bleeding</English>
@@ -227,6 +264,8 @@
             <Italian>Ferma emorragia</Italian>
             <Japanese>出血を止める</Japanese>
             <Russian>Остановить кровотечение</Russian>
+            <French>Arrêter les saignements</French>
+            <Spanish>Parar Sangrado</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_CAT_Description">
             <English>A %3Tourniquet%4 stops bleeding temporarily so that a wound(s) can be bandaged. Can only be used on limbs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%13%4] or [%3%14%4] and select an affected appendage.&lt;br/&gt;%2Select %3Apply Tourniquet%4.</English>
@@ -235,6 +274,7 @@
             <Portuguese>O %3Torniquete%4 interrompe o sangramento temporariamente, para que feridas possam ser enfaixadas. Seu uso é restrito aos membros.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Utilize [%3%13%4] ou [%3%14%4] e selecione um membro afetado.&lt;br/&gt;%2Selecione %3Aplicar Torniquete%4.</Portuguese>
             <Italian>Un %3Laccio Emostatico%4 ferma emorragie temporaneamente in modo da poter bendare ferite con calma. Utilizzabile su arti.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%13%4] o [%3%14%4] e seleziona un arto afflitto.&lt;br/&gt;%2Seleziona %3Applica Laccio Emostatico%4.</Italian>
             <Japanese>%3止血帯%4は一時的に出血を止め、その間に傷に包帯を巻くことができます。四肢にのみ使用できます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って使用したい四肢を選択します。&lt;br/&gt;%2%3止血帯を巻く%4を選択して使用します。</Japanese>
+            <Spanish>El %3Torniquete%4 para temporalmente el sangrado hasta que la herida sea vendada. Sólo puede ser usado en extremidades.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Usar [%3%13%4] o [%3%14%4] y seleccionar la extremidad afectada.&lt;br/&gt;%2Seleccionar %3Aplicar Torniquete%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_MedicalMenu_DisplayName">
             <English>Medical Menu</English>
@@ -259,6 +299,8 @@
             <Italian>Cure, Semplificato</Italian>
             <Portuguese>Tratamento, Simplificado</Portuguese>
             <Japanese>治療を簡略化する</Japanese>
+            <French>Traitement, simplifié</French>
+            <Spanish>Tratamiento, Simplificado</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_MedicalMenu_Description">
             <English>The %3Medical Menu%4 is a dedicated %3interface%4 to facilitate %3medical treatment%4. The %3R%4 and %3L%4 letters indicate the side of the patient's body being treated.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%14%4] while looking at a patient to open the Medical Menu. Opening the menu without a patient allows for self-treatment.&lt;br/&gt;%2Alternatively, use [%3%12%4] or [%3%13%4] and select %3Medical Menu%4.&lt;br/&gt;&lt;br/&gt;%3Keybinds:%4&lt;br/&gt;%2Use [%3W, A, S, D, X, and Z%4] to select body parts.&lt;br/&gt;%2Use your %3number keys%4 to select treatment categories.</English>
@@ -267,6 +309,7 @@
             <Portuguese>O %3Menu Médico%4 é uma %3interface%4 dedicada a facilitar o %3tratamento médico%4. As letras %3R%4 e %3L%4 indicam o lado do corpo do paciente que está recebendo o tratamento.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Utilize [%3%14%4] enquanto olha o paciente para abrir o Menu Médico. Se não houver paciente, o menu será de auto-tratamento.&lt;br/&gt;%2Alternativamente, utilize [%3%12%4] ou [%3%13%4] e selecione %3Menu Médico%4.&lt;br/&gt;&lt;br/&gt;%3Atalhos de teclado:%4&lt;br/&gt;%2Utilize [%3W, A, S, D, X, e Z%4] para selecionar partes do corpo.&lt;br/&gt;%2Utilize as %3teclas numéricas%4 para selecionar as categorias de tratamento.</Portuguese>
             <Italian>Il %3Menù Medico%4 è un'%3interfaccia%4 dedicata a facilitare %3trattamenti medici%4. Le lettere %3Dx%4 e %3Sx%4 contrassegnano i lati del corpo del paziente che si stanno medicando.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%14%4] guardando il paziente per aprire il Menù Medico. Aprire il menù senza paziente di fronte permette l'automedicazione.&lt;br/&gt;%2In alternativa, usa [%3%12%4] o [%3%13%4] e seleziona %3Menù Medico%4.&lt;br/&gt;&lt;br/&gt;%3Comandi:%4&lt;br/&gt;%2Usa [%3W, A, S, D, X, and Z%4] per selezionare parti del corpo.&lt;br/&gt;%2Usa %3tasti numerici%4 per selezionare categorie di cure.</Italian>
             <Japanese>%3医療メニュー%4は%3治療%4をしやすくするための専用%3インターフェース%4です。%3右%4と%3左%4の文字は治療を受ける患者の向きを表しています。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%14%4] を患者に視点を合わせながら押すことで患者の医療メニューを開けます。視点を合わせないで押すと、自分の医療メニューを開くことが出来ます。&lt;br/&gt;%2もしくは [%3%12%4] または [%3%13%4] を使って%3医療メニュー%4を選択します。&lt;br/&gt;&lt;br/&gt;%3キーバインド:%4&lt;br/&gt;%2[%3W, A, S, D, X, と Zキー%4] を使って身体の部位を選択できます。&lt;br/&gt;%2%3数字キー%4を使って治療項目を選択できます。</Japanese>
+            <Spanish>El %3Menú Médico%4 es una %3interfaz%4 dedicada para facilitar el %3tratamiento médico%4. Las letras %3R%4 and %3L%4 indican el lado del paciente siendo tratado.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Usar [%3%14%4] mientras se mira al paciente para abrir el Menú Médico. Abrir el menú sin mirar a un paciente permite el tratamiento a uno mismo. &lt;br/&gt;%2Alternativamente, usar [%3%12%4] o [%3%13%4] y seleccionar %3Menú Médico%4.&lt;br/&gt;&lt;br/&gt;%3Teclas asociadas:%4&lt;br/&gt;%2Usar [%3W, A, S, D, X, and Z%4] para seleccionar las partes del cuerpo.&lt;br/&gt;%2Usar las %3teclas numéricas%4 para seleccionar las categorías de tratamiento.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_ATragMX_ShortName">
             <English>Portable, Precise, Rugged</English>
@@ -275,6 +318,8 @@
             <Portuguese>Portátil, Preciso e Robusto</Portuguese>
             <Italian>Leggero, Preciso, Robusto</Italian>
             <Japanese>高機動、高精度、高耐久</Japanese>
+            <French>Portable, précis, robuste</French>
+            <Spanish>Portable, Preciso, Robusto</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_ATragMX_Description">
             <English>The %3Horus ATragMX%4 considers atmospheric conditions, gun data, ammunition, range, speed, and muzzle velocity to calculate precise aiming solutions with %3Come-Up%4 results - and even accounts for %3Coriolis%4 and %3Spin Drift%4 effects. %3ATragMX%4, loaded on a handheld computer made by %3TDS Recon%4, is easy to use and lightning fast. The %3Recon%4 meets the rigorous %3MIL-STD-810F%4 military standard for drops, vibration, humidity, altitude and extreme temperatures.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;Please visit the wiki page for more information.</English>
@@ -283,6 +328,7 @@
             <Portuguese>O %3Horus ATragMX%4 considera condições atmosféricas, dados de armas, munição, alcance, e velocidade do projétil - e até os efeitos Coriolis e Spin - para calcular as configurações necessárias da mira. O %3ATragMX%4, carregado em um computador portátil feito pela %3TDS Recon%4, é rápido e fácil de usar. O %3Recon%4 satisfaz os rigorosos padrões militares %3MIL-STD-810F%4 para quedas, vibrações, umidade, altitude e temperaturas extremas.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;Por favor, visite a wiki para mais informações.</Portuguese>
             <Italian>L'%3Horus ATragMX%4 tiene conto di condizioni atmosferiche, caratteristiche del fucile, munizioni, portata e velocità alla volata per calcolare precise impostazioni di mira con risultati %3Come-Up%4 - considerando anche effetti %3Coriolis%4 e %3Magnus%4. L'%3ATragMX%4, caricato su un computer portabile %3TDS Recon%4, è facile da usare e molto rapido nei calcoli. Il %3Recon%4 soddisfa i rigorosi standard militari %3MIL-STD-810F%4 per cadute, vibrazioni, umidità, altitudine e temperature estreme.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;Visitate la pagina wiki per ulteriori informazioni.</Italian>
             <Japanese>%3ホルス ATragMX%4は、大気条件、銃のデータ、弾薬、射程、速度、および初速を考慮した%3最適な結果が得られる%4正確な照準のための計算とその解法を提供します。さらに、%3コリオリ効果%4および%3スピン ドリフト効果%4も考慮します。%3ATragMX%4は%3TDS Recon製%4の携帯コンピュータに読み込まれており、使いやすく、超高速です。%3Recon%4はは、落下、振動、湿度、高度、極端な温度に関する厳格な%3MIL-STD-810F%4軍事規格を満たしています。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;詳細については、Wiki ページを参照してください。</Japanese>
+            <Spanish>El %3Horus ATragMX%4 tiene en cuenta las condiciones atmosféricas, datos del arma, munición, distancia, velocidad y velocidad en boca para calcular con precisión soluciones de tiro precisas con %3Resultados%4 - e incluso tiene en cuenta los efectos %3Coriolis%4 y %3Movimiento Giroscópico%4. %3ATragMX%4, cargado en un ordenador portátil fabricado por %3TDS Recon%4, es facil de usar y muy rápido. El %3Recon%4 cumple con los rigurosos estándares militares %3MIL-STD-810F%4 en cuanto a caidas, vibraciones, humedad, altitud y temperaturas extremas.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;Por favor, visita la página de la Wiki para más información.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_BodyBag_ShortName">
             <English>Bring Out Your Dead</English>
@@ -291,6 +337,8 @@
             <Portuguese>Retorne os Abatidos</Portuguese>
             <Italian>Recupera i tuoi morti</Italian>
             <Japanese>死者を連れ出す</Japanese>
+            <French>Récupérez vos morts</French>
+            <Spanish>Trae de vuelta a los muertos</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_BodyBag_Description">
             <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%13%4] or [%3%15%4] and select %3Place Body In Bodybag%4.</English>
@@ -299,6 +347,7 @@
             <Portuguese>OS %3Sacos de Cadáver%4 são utilizados para transportar cadáveres. Eles podem ser arrastados e embarcados em veículos.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Aproxime-se de um cadáver.&lt;br/&gt;%2Utilize [%3%13%4] ou [%3%15%4] e selecione %3Colocar cadáver dentro do saco%4.</Portuguese>
             <Italian>%3Sacche per cadaveri%4 sono usate per trasportare i morti. Possono essere trascinate e caricate su veicoli.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Avvicinati ad un morto.&lt;br/&gt;%2Usa [%3%13%4] o [%3%15%4] e seleziona %3Metti il corpo nella sacca per cadaveri%4.</Italian>
             <Japanese>%3遺体袋%4は、遺体の輸送に使用されます。引きずって車両に積み込むことができます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2遺体に近寄る。&lt;br/&gt;%2[%3%13%4] または [%3%15%4] を使って%3遺体袋に入れる%4を選択して使用します。</Japanese>
+            <Spanish>Las %3Bolsas para Cadáveres%4 se usan para transportar cadáveres. Pueden ser arrastradas y cargadas en vehículos. &lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Acercarse a un cadáver.&lt;br/&gt;%2Usar [%3%13%4] o [%3%15%4] y seleccionar %3Colocar cuerpo en la Bolsa para Cadáveres%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_CableTie_ShortName">
             <English>Take Prisoners</English>
@@ -307,6 +356,8 @@
             <Portuguese>Faça Prisioneiros</Portuguese>
             <Italian>Prendi prigionieri</Italian>
             <Japanese>捕虜の捕り方</Japanese>
+            <French>Faire des prisonniers</French>
+            <Spanish>Tomar prisioneros</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_CableTie_Description">
             <English>%3Cable Ties%4 enable a soldier to capture and detain another soldier. Once apprehended, the captor gains the ability to inspect the prisoner's belongings, set them free, or accompany them to an alternate area. Transporting escorted prisoners is also possible, including loading them into vehicles if needed. Depending on your settings, units may need to surrender before being taken captive.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach the unit and use the [%3%13%4].&lt;br/&gt;%2The interaction is located around the hands in the form of a handcuffs icon.&lt;br/&gt;%2Repeat to release.</English>
@@ -315,6 +366,7 @@
             <Portuguese>As %3Algema Plásticas%4 permitem a captura e detenção de soldados. Quando apreendidos, o captor se torna capaz de inspecionar os pertences do prisioneiro, liberá-los, ou acompanhá-los a outro local. Transportes mais longos também são possíveis, podendo colocá-los em veículos, se necessário. A depender das configurações, pode ser necessário que as unidades estejam rendidas antes de serem detidas.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Aproxime-se da unidade e use [%3%13%4].&lt;br/&gt;%2A interação encontra-se próxima às mãos simbolizada por uma algema.&lt;br/&gt;%2Faça o mesmo para liberar.</Portuguese>
             <Italian>%3Fascette%4 permettono a soldati di catturare e ammanettare altri soldati. Una volta catturati è possibile ispezionare il loro inventario, liberarli o scortarli altrove. È inoltre possibile caricarli su veicoli se necessario. A seconda delle impostazioni, potrebbe essere necessaria la resa di unità prima di poterle ammanettare.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Avvicinati all'unità e usa [%3%13%4].&lt;br/&gt;%2L'interazione è localizzata intorno alle mani con l'icona di manette.&lt;br/&gt;%2Ripeti per liberare.</Italian>
             <Japanese>%3ケーブル タイ%4は兵士が他の兵士を拘束できるようにします。一度拘束すれば、拘束者は捕虜の所持品を検査したり、釈放したり、別の場所に移送することができるようになります。必要に応じて車両に積み込むなどして捕虜の輸送や護送も可能です。設定によっては、ユニットは捕虜になる前に降伏する必要がある場合があります。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2対象に近づいて [%3%13%4] を使います。&lt;br/&gt;%2インタラクションは、手錠アイコンの形で手のあたりに表示されます。&lt;br/&gt;%2同様の方法で解放できます。</Japanese>
+            <Spanish>Las %3Bridas%4 permiten a un soldado capturar y detener a otro soldado. Una vez atado, el capturador tiene la habilidad de inspeccionar las pertenencias del prisionero, liberarles de nuevo o transportarles a otro área diferente. Transportar prisioneros escoltados tambien es posible, incluído montarles en vehículos si es necesario. Dependiendo de las opciones, puede requerirse que las unidades se rindan antes de ser capturados.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Acercarse a la unidad y usar el [%3%13%4].&lt;br/&gt;%2El punto de interacción se situa sobre las manos en forma de un icono de unas esposas.&lt;br/&gt;%2Repetir el paso para liberar.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Cellphone_ShortName">
             <English>Phone In An Explosion</English>
@@ -323,6 +375,8 @@
             <Portuguese>Celular Explosivo</Portuguese>
             <Italian>Cellulare per esplosivi</Italian>
             <Japanese>電話でドカン</Japanese>
+            <French>Explosifs téléphone portable</French>
+            <Spanish>Teléfono explosivo</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Cellphone_Description">
             <English>The %3Cellphone%4 is functionally a %3Clacker%4. Use it to connect and detonate an explosive device. Multiple devices can be linked to the cellphone and called within the phonebook.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%13%4], select %3Explosives%4, and select %3Cellphone%4.&lt;br/&gt;%2Open the cellphone interface with [%3%12%4].&lt;br/&gt;%2Navigate the phone book with the arrows and select your calling number.&lt;br/&gt;%2Call the number to detonate.</English>
@@ -331,6 +385,7 @@
             <Portuguese>O %3Celular%4 serve como dispositivo de detonação ao explosivo. Utilize-o para conectar e detonar dispositivos explosivos. Múltiplos dispositivos podem estar conectados ao celular e aparecerão na lista telefônica.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Plante o explosivo.&lt;br/&gt;%2Utilize [%3%13%4], selecione %3Explosivos%4, e selecione %3Celular%4.&lt;br/&gt;%2Abra a interface do celular com [%3%12%4].&lt;br/&gt;%2Navegue pela lista telefônica utilizando as setas e selecione o número desejado.&lt;br/&gt;%2Ligue para o número para detonar.</Portuguese>
             <Italian>Il %3Cellulare%4 è essenzialmente una %3spoletta%4. Usalo per collegare e detonare esplosivi. Molteplici esplosivi possono essere collegati ad un cellulare e detonati chiamando numeri nella rubrica.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Piazza un esplosivo.&lt;br/&gt;%2Usa [%3%13%4], seleziona %3Esplosivi%4, seleziona %3Cellulare%4.&lt;br/&gt;%2Apri l'interfaccia del telefono con [%3%12%4].&lt;br/&gt;%2Naviga la rubrica con le freccette e seleziona il numero da chiamare.&lt;br/&gt;%2Chiama il numero del dispositivo da detonare.</Italian>
             <Japanese>%3携帯電話%4は%3点火装置%4として機能します。爆破装置を接続して起爆するために使用します。複数のデバイスを携帯電話に繋ぎ、電話帳から呼び出すことができます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2爆発物を設置。&lt;br/&gt;%2[%3%13%4] を使い、%3爆発物%4を選択して、%3携帯電話%4を選択します。&lt;br/&gt;%2[%3%12%4] を使って携帯電話インターフェースを開きます。&lt;br/&gt;%2矢印ボタンで電話帳に移動し、発信番号を選択します。&lt;br/&gt;%2電話を掛けることで起爆します。</Japanese>
+            <Spanish>El %3Teléfono%4 es funcionalmente un %3Detonador%4. Úsalo para conectarlo y detonar un dispositivo explosivo. Múltiples dispositivos pueden ser conectados al teléfono y llamados desde la agenda de contactos.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Colocar un explosivo.&lt;br/&gt;%2Usar [%3%13%4], seleccionar %3Explosivos%4, y seleccionar %3Teléfono%4.&lt;br/&gt;%2Abrir la interfaz del teléfono con [%3%12%4].&lt;br/&gt;%2Navegar por la agenda de contactos con las flechas y selecciona el número a llamar.&lt;br/&gt;%2Llamar al número para detonarlo.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_ShortName">
             <English>Portable Reading Lights</English>
@@ -339,6 +394,8 @@
             <Portuguese>Luzes de Leitura Portáteis</Portuguese>
             <Italian>Luci da Lettura Portabili</Italian>
             <Japanese>携帯読書灯</Japanese>
+            <French>Lampes de lecture portables</French>
+            <Spanish>Luces de Lectura Portátiles</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Chemlight_Shield_Description">
             <English>%3Chemlight Shields%4 give you the ability to read your map, even in dark environments. However, when using %3Chemlight Shields%4, you will have a slight glow around you.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2elect %3Chemlights%4 and %3Prepare Chemlight Shield (Color)%4.&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Flashlights%4 where you will find your chemlight shield.</English>
@@ -347,6 +404,7 @@
             <Portuguese>Os %3Protetores de Bastão de Luz%4 possibilitam a leitura de mapas em ambientes escuros. Todavia, quando utilizados, eles iluminam parcialmente os seus arredores.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Utilize [%3%12%4] e selecione %3Equipamento%4.&lt;br/&gt;%2Selecione %3Bastões de Luz%4 e %Preparar Protetor de Bastão de Luz (Cor)%4.&lt;br/&gt;%2Abrir %3Mapa%4.&lt;br/&gt;%2Utilize [%3%12%4] e selecione %3Lanternas%4 onde você encontrará o seu bastão de luz.</Portuguese>
             <Italian>%3Scudi per Luci Chimiche%4 permettono di leggere la mappa anche in ambienti bui. Il loro utilizzo comporta però un leggero effetto di luminosità intorno alla testa del giocatore.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Eqipaggiamenti%4.&lt;br/&gt;%2Seleziona %3Luce Chimica%4 e %3Prepara Scudo Luce Chimica (Colore)%4.&lt;br/&gt;%2Apri %3Mappa%4.&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Torcia%4 dove troverai il tuo scudo per luce chimica.</Italian>
             <Japanese>%3ケミライト シールド%4を使用すると、暗い環境でも地図を読み取ることができます。ただし、%3ケミライト シールド%4を使用すると、周囲がわずかに光ります。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%12%4] を使って%3装備%4を選択します。&lt;br/&gt;%2%3ケミライト%4を選択し%3ケミライト シールドを使う (色)%4を選択します。&lt;br/&gt;%2%3マップ%4を開きます。&lt;br/&gt;%2[%3%12%4] を使って%3フラッシュライト%4を選択し、ケミライト シールドを選択します。</Japanese>
+            <Spanish>Los %3Protectores de Luz Química%4 proveen la habilidad de poder leer mapas en entornos oscuros. No obstante, cuando se usan los, %3Protectores de Luz Química%4, tendrás un ligero brillo alrededor tuyo.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Equipamiento%4.&lt;br/&gt;%2Seleccionar %3Luces químicas%4 y %3Preparar Protector de Luz Química (Color)%4.&lt;br/&gt;%2Abrir %3Mapa%4.&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Linternas%4 donde encontrarás el protector de luz química.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Clackers_ShortName">
             <English>Remote Detonation</English>
@@ -355,6 +413,8 @@
             <Portuguese>Detonação Remota</Portuguese>
             <Italian>Detonazione da remoto</Italian>
             <Japanese>リモコン爆弾</Japanese>
+            <French>Détonation à distance</French>
+            <Spanish>Detonación Remota</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Clackers_Description">
             <English>Use %3Clackers%4 to connect and detonate an explosive device. Multiple devices can be linked to a clacker and detonated on different channels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Place an explosive.&lt;br/&gt;%2Use [%3%13%4], select %3Explosives%4, and select the %3Clacker%4 you wish to link to.&lt;br/&gt;%2Open the ACE interface with [%3%12%4].&lt;br/&gt;%2Select %3Explosives%4 and select a %3Clacker%4.&lt;br/&gt;%2Select the %3Explosive%4 you wish to detonate.</English>
@@ -362,6 +422,7 @@
             <Korean>%3격발기%4를 사용하여 폭발물을 연결하고 폭발시킬 수 있습니다. 여러 폭발물을 다른 채널에 연결하여 폭발시킬 수도 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2폭발물을 설치합니다.&lt;br/&gt;%2[%3%13%4]를 사용하여 %3폭발물%4을 선택하고 연결할 %3격발기%4를 선택하십시오.&lt;br/&gt;%2[%3%12%4] 키로 ACE 인터페이스를 여십시오.&lt;br/&gt;%2%3폭발물%4을 선택하고 %3격발기%4를 선택하십시오.&lt;br/&gt;%2%3폭발물%4을 선택하면 폭발합니다.</Korean>
             <Italian>Usa %3Spolette%4 per collegare e detonare dispositivi esplosivi. Molteplici dispositivi possono essere collagati a una spoletta e detonati individualmente come vari canali.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Piazza esplosivo.&lt;br/&gt;%2Usa [%3%13%4], seleziona %3Esplosivo%4, seleziona la %3Spoletta%4 a cui intendi collegarlo.&lt;br/&gt;%2Apri l'interfaccia ACE con [%3%12%4].&lt;br/&gt;%2Seleziona %3Esplosivi%4 e scegli una %3Spoletta%4.&lt;br/&gt;%2Seleziona un %3Explosivo%4 da detonare.</Italian>
             <Japanese>%3点火装置%4を爆破装置に接続し使用することで起爆することが出来ます。複数の爆破装置を接続しそれぞれ違うチャンネルから起爆することもできます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2爆発物を設置。&lt;br/&gt;%2[%3%13%4] を使い、%3爆発物%4を選択して、接続したい%3点火装置%4を選択します。&lt;br/&gt;%2ACEインターフェースを [%3%12%4] で開きます。&lt;br/&gt;%2%3爆発物%4を選択し、%3点火装置%4を選びます。&lt;br/&gt;%2起爆したい%3爆破装置%4を選択します。</Japanese>
+            <Spanish>Utiliza los %3Detonadores%4 para conectar y detonar un explosivo. Múltiple dispositivos pueden ser conectados a un detonador y detonados en diferentes canales.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2 Coloca un explosivo.&lt;br/&gt;%2Usar [%3%13%4], seleccionar %3Explosivos%4, y selecciona el %3Detonador%4 al que quieres conectarlo.&lt;br/&gt;%2Abre la interfaz de ACE con [%3%12%4].&lt;br/&gt;%2Selecciona %3Explosivos%4 y selecciona un %3Detonador%4.&lt;br/&gt;%2Selecciona el %3Explosivo%4 que quieres detonar.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DAGR_ShortName">
             <English>Navigate</English>
@@ -370,6 +431,8 @@
             <Italian>Naviga</Italian>
             <Japanese>測位</Japanese>
             <Russian>Навигация</Russian>
+            <French>Naviguer</French>
+            <Spanish>Navegar</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DAGR_Description">
             <English>The %3DAGR%4 is a simpler version of the %3MicroDAGR GPS%4. It has similar features but lacks the topographic and satellite imaging functions of the %3MicroDAGR GPS%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3DAGR%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Configure%4 or %3Toggle%4.&lt;br/&gt;&lt;br/&gt;The following menus are available when configuring your %3DAGR:%4&lt;br/&gt;%11%2Data View: WIP&lt;br/&gt;%11%2GoTo WP: Select a waypoint to track.&lt;br/&gt;%11%2WP List: Add/Edit/Remove waypoints.&lt;br/&gt;%11%2Connect To: Connect %3DAGR%4 to the %3Vector 21 Rangefinder%4.&lt;br/&gt;%11%2Options</English>
@@ -377,6 +440,7 @@
             <Korean>%3DAGR%4은 %3마이크로DAGR GPS%4의 단순화 버전입니다. 유사한 기능을 가지고 있지만 %3마이크로DAGR GPS%4의 지형 및 위성 이미지 기능이 없습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2%3DAGR%4를 장착하십시오.&lt;br/&gt;%2[%3%12%4를 사용하고 %3DAGR 설정%4 또는 %3DAGR 토글%4을 선택하십시오.&lt;br/&gt;&lt;br/&gt;%3DAGR%4을 구성할 때 다음 메뉴를 사용할 수 있습니다:&lt;br/&gt;%11%2Data View: 제작 중&lt;br/&gt;%11%2GoTo WP: 추적할 웨이포인트를 선택합니다.&lt;br/&gt;%11%2WP List: 경유지를 추가/편집/제거합니다.&lt;br/&gt;%11%2Connect To: %3DAGR%4을 %3벡터 21%4 거리계에 연동시킵니다.&lt;br/&gt;%11%2옵션입니다</Korean>
             <Italian>Il %3DAGR%4 è una versione più semplice del %3GPS MicroDAGR%4. Ha funzioni simili, gli manca però la capacità di visualizzare informazioni topografiche e satellitari come il %3GPS MicroDAGR%4.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Equipaggia il %3DAGR%4.&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Configura%4 o %3Apri%4.&lt;br/&gt;&lt;br/&gt;I seguenti Menù sono disponibili durante la configurazione del tuo %3DAGR:%4&lt;br/&gt;%11%2Pagina Dati: WIP&lt;br/&gt;%11%2VaiA WP: Seleziona un waypoint da tracciare.&lt;br/&gt;%11%2Lista WP: Aggiungi/Modifica/Rimuovi waypoint.&lt;br/&gt;%11%2Collega A: Collega il %3DAGR%4 al %3Telemetro Vector 21%4.&lt;br/&gt;%11%2Opzioni</Italian>
             <Japanese>%3DAGR%4はシンプルなバージョンの%3MicroDAGR GPS%4です。同様の機能を備えていますが、%3MicroDAGR GPS%4のような地形および衛星画像機能はありません。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3DAGR%4を装備する。&lt;br/&gt;%2[%3%12%4] を使って%3設定%4 もしくは %3表示切替%4を選択します。&lt;br/&gt;&lt;br/&gt;%3DAGR%4の設定には次のメニューを使用できます:&lt;br/&gt;%11%2Data View: WIP&lt;br/&gt;%11%2GoTo WP: 追跡するウェイポイントを選択します。&lt;br/&gt;%11%2WP List: ウェイポイントを追加/編集/削除します。&lt;br/&gt;%11%2Connect To: %3DAGR%4を%3ベクター 21 レンジファインダー%4に接続できます。&lt;br/&gt;%11%2Options</Japanese>
+            <Spanish>El %3DAGR%4 es una versión simplificada del %3MicroDAGR GPS%4. Tiene unas funcionalidades similares pero le faltan las funciones de los mapas topográficos e imágenes satelitales del %3MicroDAGR GPS%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3DAGR%4.&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Configurar%4 o %3Activar%4.&lt;br/&gt;&lt;br/&gt;Los siguientes menús están disponibles cuando configuras el %3DAGR:%4&lt;br/&gt;%11%2Vista de Datos: WIP&lt;br/&gt;%11%2Ir a WP: Selecciona un Punto de Ruta para seguir.&lt;br/&gt;%11%2Lista de WP: Añadir/Editar/Suprimir puntos de ruta.&lt;br/&gt;%11%2Conectar A: Conectar %3DAGR%4 a %3Telémetro Vector 21%4.&lt;br/&gt;%11%2Opciones</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_ShortName">
             <English>Explosive Revenge</English>
@@ -385,6 +449,8 @@
             <Italian>Vendetta Esplosiva</Italian>
             <Japanese>爆発的な復讐</Japanese>
             <Russian>Взрывная месть</Russian>
+            <French>Homme mort</French>
+            <Spanish>Venganza Explosiva</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DeadManSwitch_Description">
             <English>The %3Dead Man's Switch%4 is a device that allows a soldier to detonate an %3Explosive%4 when the soldier dies.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Explosives%4.&lt;br/&gt;%2Select %3Dead Man's Switch%4 and connect the desired %3Explosive%4.&lt;br/&gt;%2Repeat the process and disconnect to reverse.</English>
@@ -392,6 +458,7 @@
             <Korean>%3자폭 장치%4는 병사가 사망했을 때 병사가 %3폭발물%4을 폭발시킬 수 있는 장치입니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2[%3%12%4]를 사용하고 %3폭발물%4을 선택하십시오.&lt;br/&gt;%2%3자폭 장치%4를 선택하고 원하는 %3폭발물%4에 연결하십시오.&lt;br/&gt;%2반대로 해제하고 싶다면 같은 행동을 반복하십시오.</Korean>
             <Italian>Il %3Detonatore a rilascio%4 è un dispositivo che permette a soldati di detonare un %3Esplosivo%4 quando perdono i sensi.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Esplosivi%4.&lt;br/&gt;%2Seleziona %3Detonatore a rilascio%4 e collega l'%3Esplosivo%4 desiderato.&lt;br/&gt;%2Ripeti il processo e scollega per disarmare il detonatore.</Italian>
             <Japanese>%3自爆装置%4は、兵士の死亡時に%3爆発物%4を起爆させることができる装置です。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%12%4] を使って%3爆発物%4を選択します。&lt;br/&gt;%2%3自爆装置%4を選択し、接続したい%3爆発物%4を選びます。&lt;br/&gt;%2同様の手順を逆に行うことで接続を解除できます。</Japanese>
+            <Spanish>El %3Detonador de Hombre Muerto%4 es un dispositivo que permite a un soldado detonar un %3Explosivo%4 cuando el soldado muere.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Explosivos%4.&lt;br/&gt;%2Seleccionar %3Detonador de Hombre Muerto%4 y conectar el %3Explosivo%4.&lt;br/&gt; deseado%2Repetir el proceso y desconectar para revertirlo.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DefusalKit_Description">
             <English>The %3Defusal Kit%4 allows defusal of explosives.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Defusal Kit%4.&lt;br/&gt;%2Safely approach an %3Explosive%4.&lt;br/&gt;%2Use [%3%13%4] and select %3Defuse%4.</English>
@@ -399,6 +466,7 @@
             <Korean>%3해체 장비%4를 사용하면 폭발물을 제거할 수 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2%3해체 장비%4를 장착하십시오.&lt;br/&gt;%2%3폭발물%4에 안전하게 접근하십시오.&lt;br/&gt;%2[%3%13%4]를 사용하고 %3해체%4를 선택하십시오.</Korean>
             <Italian>The %3Kit E.O.D.%4 permette il disinnesco di esplosivi.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Equipaggia un %3Kit E.O.D.%4.&lt;br/&gt;%2Avvicinati in modo sicuro ad un %3Esplosivo%4.&lt;br/&gt;%2Usa [%3%13%4] e seleziona %3Disinnesca%4.</Italian>
             <Japanese>%3解除キット%4は爆発物の無力化を行うことができます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3解除キット%4を装備。&lt;br/&gt;%2慎重に%3爆発物%4に接近します。&lt;br/&gt;%2[%3%13%4] を使って%3無力化%4を選択します。</Japanese>
+            <Spanish>El %3Kit de Desactivación%4 permite la desactivación de explosivos.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Equipa un %3Kit de Desactivación%4.&lt;br/&gt;%2Aproxímate al %3Explosivo%4&lt;br/&gt; de forma segura.%2Usa [%3%13%4] y selecciona %3Desactivar%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DefusalKit_ShortName">
             <English>Defuse Explosives</English>
@@ -407,6 +475,8 @@
             <Italian>Disinnesca Esplosivi</Italian>
             <Japanese>爆発物の解除</Japanese>
             <Russian>Обезвреживание взрывчатки</Russian>
+            <French>Désamorcer les explosifs</French>
+            <Spanish>Desactivar Explosivos</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EarPlugs_ShortName">
             <English>Protect Your Hearing</English>
@@ -415,6 +485,8 @@
             <Italian>Proteggi il tuo Udito</Italian>
             <Japanese>聴覚の保護</Japanese>
             <Russian>Защитите свой слух</Russian>
+            <French>Protéger votre audition</French>
+            <Spanish>Protege tus oídos</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EarPlugs_Description">
             <English>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4.</English>
@@ -422,6 +494,7 @@
             <Italian>%3Tappi auricolari%4 aiutano a prevenire danni all'udito da ripetuti rumori forti in prossimità del soldato. Inserisci %3Tappi auricolari%4 per ridurre il volume dell'ambiente per il soldato e impedire %3Assordamento%4.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Equipaggiamento%4.&lt;br/&gt;%2Indossa %3Tappi Auricolari%4.</Italian>
             <Korean>%3귀마개%4는 병사 주변에서 반복되는 시끄러운 소리로 인한 청력 손상을 방지하는 데 도움이 됩니다. %3귀마개%4를 끼워서 병사가 있는 환경의 소리 크기를 낮추고 %3전투로 인한 청력손상%4을 방지하십시오.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2[%3%12%4]를 사용하여 %3장비%4를 선택하십시오.&lt;br/&gt;%2%3귀마개%4를 삽입하십시오.</Korean>
             <Japanese>%3耳栓%4は、兵士の近くで繰り返される大きな騒音による聴覚障害を防ぐのに役立ちます。%3耳栓%4を耳に挿入することで兵士の環境の音量を下げ、%3戦闘難聴%4を防ぎます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%12%4] を使って%3装備%4を選択します。&lt;br/&gt;%2%3耳栓を着ける%4ことで使用できます。</Japanese>
+            <Spanish>Los %3Tapones de oídos%4 ayudan a prevenir el daño auditivo de ruidos altos repetidos cerca de un soldado. Inserta los %3Tapones de oídos%4 para reducir el volumen del entorno del soldado y prevenir la %3Sordera de Combate%4.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Equipamiento%4.&lt;br/&gt;%2Insertar %3Tapones de oídos%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_ShortName">
             <English>Get To Cover</English>
@@ -430,6 +503,8 @@
             <Italian>Mettiti in Copertura</Italian>
             <Japanese>遮蔽を造り出す</Japanese>
             <Russian>Добраться до укрытия</Russian>
+            <French>Se mettre à couvert</French>
+            <Spanish>Ponerse A Cubierto</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_Description">
             <English>The %3Entrenching Tool%4 allows soldiers to dig trenches to help defend their position. The soldier must be on soil in order to dig a trench.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip an %3Entrenching Tool%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select the type of trench you wish to build.</English>
@@ -437,6 +512,7 @@
             <Italian>La %3Pala da Trincea%4 permette a soldati di scavare trincee per difendere meglio la loro posizione. Il soldato deve trovarsi su suolo scavabile per poter creare trincee.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Equipaggia una %3Pala da Trincea%4.&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Equipaggiamento%4.&lt;br/&gt;%2Seleziona il tipo di trincea che vuoi costruire.</Italian>
             <Korean>%3야전삽%4을 사용하면 병사들의 진지 방어를 위한 참호를 팔 수 있습니다. 병사가 참호를 파려면 흙 위에 있어야 합니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2%3야전삽%4을 장비하십시오.&lt;br/&gt;%2[%3%12%4]를 사용하여 %3장비%4를 선택하십시오.&lt;br/&gt;%2짓고 싶은 종류의 참호를 선택하십시오.</Korean>
             <Japanese>%3塹壕ツール%4を使用すると、兵士は自分の陣地を守るために塹壕を掘ることができます。塹壕を掘るには、兵士は土の上にいる必要があります。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3塹壕ツール%4を装備します。&lt;br/&gt;%2[%3%12%4] を使って%3装備%4を選択します。&lt;br/&gt;%2構築する塹壕の種類を選択します。</Japanese>
+            <Spanish>La %3Pala de Trincheras%4 permite a los soldados excavar trincheras para ayudarles a defender su posición. El soldado debe estar sobre tierra para poder excavar una trinchera.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Equipar la %3Pala de Trincheras%4.&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Equipamiento%4.&lt;br/&gt;%2Seleccionar el tipo de trinchera que quieres construir.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Flashlights_DisplayName">
             <English>Flashlights</English>
@@ -445,6 +521,8 @@
             <Korean>손전등</Korean>
             <Japanese>フラッシュライト</Japanese>
             <Russian>Фонари</Russian>
+            <French>Lampes de poche</French>
+            <Spanish>Linternas</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Flashlights_ShortName">
             <English>Illuminate Your Map</English>
@@ -453,6 +531,8 @@
             <Korean>지도를 밝혀줍니다</Korean>
             <Japanese>地図に光あれ</Japanese>
             <Russian>Осветите свою карту</Russian>
+            <French>Éclairer votre carte</French>
+            <Spanish>Ilumina Tu Mapa</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Flashlights_Description">
             <English>%3Flashlights%4 give you the ability to read your map, even in dark environments. However, when using %3Flashlights%4, you will have a slight glow around you.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2On the map screen, use [%3%12%4] and select %3Flashlights%4.&lt;br/&gt;%2Select the %3Flashlight%4 you want to use and select %3On%4.&lt;br/&gt;&lt;br/&gt;%3Available Flashlight Items%4:&lt;br/&gt;%2 Fulton MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 Maglite XL50&lt;br/&gt;&lt;br/&gt;%3NOTE:%4&lt;br/&gt;Flashlight states are persistent.</English>
@@ -460,6 +540,7 @@
             <Italian>%3Torce%4 permettono di leggere la tua mappa anche in ambienti bui. Però quando le utilizzi avrai un leggero effetto luminoso intorno a te.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Sulla mappa usa [%3%12%4] e seleziona %3Torcia%4.&lt;br/&gt;%2Seleziona la %3Torcia%4 che vuoi usare e seleziona %3Accendi%4.&lt;br/&gt;&lt;br/&gt;%3Oggetti Torcia Disponibili%4:&lt;br/&gt;%2 Fulton MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 Maglite XL50&lt;br/&gt;&lt;br/&gt;%3NOTE:%4&lt;br/&gt;Lo stato di una torcia è persistente.</Italian>
             <Korean>%3손전등%4은 어두운 환경에서도 지도를 읽을 수 있는 기능을 제공합니다. 단, %3손전등%4을 사용할 때 주변에 약간 빛이 납니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2지도 화면에서 [%3%12%4]를 사용하고 %3손전등%4을 선택하십시오.&lt;br/&gt;%2사용할 %3손전등%4을 선택하고 %3켜기%4를 선택하십시오.&lt;br/&gt;&lt;br/&gt;%3사용 가능한 손전등 아이템%4:&lt;br/&gt;%2풀턴 MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 매그라이트 XL50&lt;br/&gt;&lt;br/&gt;%3참고:%4&lt;br/&gt;손전등 상태는 영구적입니다.</Korean>
             <Japanese>%3フラッシュライト%4を使用すると、暗い環境でも地図を読むことができます。ただし、%3フラッシュライト%4を使用すると、周囲がわずかに光ります。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2マップ画面で [%3%12%4] を使用し、%3フラッシュライト%4を選択します。&lt;br/&gt;%2%3フラッシュライト%4を選択し、使用したいライトを%3点ける%4。&lt;br/&gt;&lt;br/&gt;%3使用可能なフラッシュライトのアイテム%4:&lt;br/&gt;%2 フルトン MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 マグライト XL50&lt;br/&gt;&lt;br/&gt;%3備考:%4&lt;br/&gt;フラッシュライトの状態は継続します。</Japanese>
+            <Spanish>Las %3Linternas%4 proveen la habilidad para leer tu mapa, incluso en entornos oscuros. No obstante, cuando se usen las %3Linternas%4, aparecerá un ligero brillo alrededor tuya.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2En la pantalla del mapa, utilizar [%3%12%4] y seleccionar %3Linternas%4.&lt;br/&gt;%2Seleccionar la %3Linterna%4 Que quieres utilizar y selecciona %3On%4.&lt;br/&gt;&lt;br/&gt;%3Objetos de Linternas disponibles%4:&lt;br/&gt;%2 Fulton MX-991&lt;br/&gt;%2 KSF-1&lt;br/&gt;%2 Maglite XL50&lt;br/&gt;&lt;br/&gt;%3NOTA:%4&lt;br/&gt;Los estados de las Linternas son persistentes.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_ShortName">
             <English>Observe From The Skies</English>
@@ -468,6 +549,8 @@
             <Korean>하늘에서 관측합니다</Korean>
             <Japanese>空から戦場を見てみよう</Japanese>
             <Russian>Наблюдайте с Небес</Russian>
+            <French>Observer depuis le ciel</French>
+            <Spanish>Observar Desde El Cielo</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_HuntIR_Monitor_Description">
             <English>The %3High-Altitude Unit Navigated Tactical Imaging Round (HuntIR)%4 is designed to be fired from a grenade launcher. After being fired in the air, the built-in parachute will be deployed and the IR CMOS camera will activate, providing a video stream until it touches the ground or is shot down.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3HuntIR Monitor%4 and compatible ammunition.&lt;br/&gt;%2Fire the %3HuntIR Round%4 as high as possible over the area you want to observe.&lt;br/&gt;%2Open the %3HuntIR Monitor%4.&lt;br/&gt;%2Use [%3%12%4], select %3Equipment%4.&lt;br/&gt;%2Select %3Activate HuntIR Monitor%4.</English>
@@ -475,6 +558,7 @@
             <Italian>Il %3High-Altitude Unit Navigated Tactical Imaging Round (HuntIR)%4 è progettato per essere sparato da un lanciagranate. Dopo essere stato sparato verso l'alto, verrà aperto un paracadute incorporato e attivata una videocamera IR CMOS, inviando una diretta video finché toccherà terra o verrà abbattuto.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Equipaggia un %3Monitor HuntIR%4 e munizioni compatibili.&lt;br/&gt;%2Spara un %3Colpo HuntIR%4 il più alto possibile sopra l'area che vuoi osservare.&lt;br/&gt;%2Apri il %3Monitor HuntIR%4.&lt;br/&gt;%2Usa [%3%12%4], seleziona %3Equipaggiamento%4.&lt;br/&gt;%2Seleziona %3Attiva Monitor HuntIR%4.</Italian>
             <Korean>%3고고도 유닛 탐색용 전술 영상화 탄약 (HuntIR)%4은 유탄발사기에서 발사될 수 있도록 설계되었습니다.공주에서 발사된 후 내장된 낙하산이 전개되고 적외선 CMOS 카메라가 작동하여 지상에 닿거나 격추될 때까지 비디오 스트림이 제공됩니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2%3헌트IR 모니터%4와 호환 탄약을 장착하십시오.&lt;br/&gt;%2%3헌트IR 유탄%4을 발사하려는 구역에서 가능한 한 높게 발사하십시오.&lt;br/&gt;%2%3헌트IR 모니터%4를 여십시오.&lt;br/&gt;%2[%3%12%4]를 사용하여 %3장비%4를 선택하십시오.&lt;br/&gt;%2%3헌트IR 모니터 활성화%4를 선택하십시오.</Korean>
             <Japanese>%3High-Altitude Unit Navigated Tactical Imaging Round (HuntIR)%4はグレネードランチャーから発射されるように設計されています。空中で発射された後、内蔵のパラシュートが展開され、IR CMOS カメラが起動し、地面に着くか撃墜されるまでビデオ ストリームを提供します。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3HuntIR モニター%4と互換性のある弾薬を装備します。&lt;br/&gt;%2観測したいエリアに向けてできるだけ高く%3HuntIR 弾頭%4を発射します。&lt;br/&gt;%2%3HuntIR モニター%4を開きます。&lt;br/&gt;%2[%3%12%4] を使って%3装備%4を選択します。&lt;br/&gt;%2%3HuntIRを起動する%4からモニターを起動します。</Japanese>
+            <Spanish>El %3High-Altitude Unit Navigated Tactical Imaging Round (HuntIR)%4 está diseñado para ser disparado desde un lanzagranadas. Despues de ser disparada al aire, desplegará su paracaídas integrado y activará su cámara IR CMOS integrada, proveyendo de un flujo de video hasta que toque el suelo o sea derribado.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Equipa un %3Monitor HuntIR%4 y la munición compatible.&lt;br/&gt;%2Dispara la %3Munición HuntIR%4 tan alto como sea posible sobre el área que quieres observar.&lt;br/&gt;%2Abre el %3Monitor HuntIR%4.&lt;br/&gt;%2Usar [%3%12%4], seleccionar %3Equipamiento%4.&lt;br/&gt;%2Seleccionar %3Activar Monitor HuntIR%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_IR_Strobe_ShortName">
             <English>Track Your Team With Stealth</English>
@@ -483,6 +567,8 @@
             <Korean>은신하여 팀을 찾아냅니다</Korean>
             <Japanese>自分の部隊を追う</Japanese>
             <Russian>Следите за своей командой незаметно</Russian>
+            <French>Suivez votre équipe en toute discrétion</French>
+            <Spanish>Sigue A Tu Equipo Con Sigilo</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_IR_Strobe_Description">
             <English>The %3IR Strobe%4 is a throwable that emits an IR light pulse intermittently. The %3IR Strobe%4 can also be attached to a soldier, making it useful for tracking teammates under night vision devices.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Attach%4 and select the %3IR Strobe%4.</English>
@@ -490,6 +576,7 @@
             <Italian>La %3Strobo IR%4 è un lanciabile che emette un impulso intermittente di luce IR. La %3Strobo IR%4 può anche essere attaccata ad un soldato, facilitando l'identificazione di alleati con visori notturni.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Equipaggiamento%4.&lt;br/&gt;%2Seleziona %3Attacca%4 e scegli la %3Strobo IR%4.</Italian>
             <Korean>%3적외선 스트로브%4는 던질 수 있는 적외선 광펄스를 간헐적으로 방출하는 투척형 아이템입니다. %3적외선 스트로브%4는 병사에게도 부착 가능하기 때문에 야간투시장치로 팀원을 추적할 때 유용합니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2[%3%12%4]를 사용하여 %3장비%4를 선택하십시오.&lt;br/&gt;%2%3아이템 부착%4을 선택하고 %3적외선 스트로브%4를 선택하십시오.</Korean>
             <Japanese>%3赤外線ストロボ%4は、赤外線光パルスを断続的に放射します。投擲可能です。%3赤外線ストロボ%4は兵士に取り付けることもできるため、暗視装置の下でチームメイトを追跡するのに役立ちます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%12%4] を使って%3装備%4を選択します。&lt;br/&gt;%2%3アイテムを取り付ける%4を選択して%3赤外線ストロボ%4を選び使用します。</Japanese>
+            <Spanish>El %3Estroboscópico IR%4 es un objeto lanzable que emite un pulso intermitente de luz IR. El %3Estroboscópico IR%4 tambien puede ser sujeto a un soldado, haciéndolo útil para el seguimiento de los compañeros utilizando gafas de visión nocturna.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Equipamiento%4.&lt;br/&gt;%2Seleccionar %3Sujetar%4 y seleccionar el %3Estroboscópico IR%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_ShortName">
             <English>Pocket Weatherstation</English>
@@ -498,6 +585,8 @@
             <Korean>휴대용 기상 관측 장비입니다</Korean>
             <Japanese>携帯気象予報所</Japanese>
             <Russian>Карманная метеостанция</Russian>
+            <French>Station météo de poche</French>
+            <Spanish>Estación Climática de Bolsillo</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Kestrel4500_Description">
             <English>The %3Kestrel 4500 Pocket Weather Tracker%4 is a mini weather station useful for collecting the the following weather data:&lt;br/&gt;%2Heading and wind direction&lt;br/&gt;%2Crosswind and headwind&lt;br/&gt;%2Altitude and barometric pressure&lt;br/&gt;%2Wet bulb temperature&lt;br/&gt;%2Humidity and dewpoint&lt;br/&gt;%2Density altitude&lt;br/&gt;%2Wind chill and temperature&lt;br/&gt;%2Time and date&lt;br/&gt;%2Minimum, maximum, and average values&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Kestrel%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Open%4.</English>
@@ -505,6 +594,7 @@
             <Italian>Il %3Kestrel 4500 Indicatore Meteorologico Tascabile%4 è una mini-stazione meteo utile per ricavare le seguenti informazioni meteorologiche:&lt;br/&gt;%2Prua e direzione del vento&lt;br/&gt;%2Vento di traverso e frontale&lt;br/&gt;%2Altitudine and pressione barometrica&lt;br/&gt;%2Temperatura di bulbo umido&lt;br/&gt;%2Umidità e punto di rugiada&lt;br/&gt;%2Density altitude&lt;br/&gt;%2Temperatura e gelo del vento&lt;br/&gt;%2Data e Ora&lt;br/&gt;%2Valori minimi, massimi, e medi&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Equipaggia %3Kestrel%4.&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Equipaggiamento%4.&lt;br/&gt;%2Seleziona %3Apri%4.</Italian>
             <Korean>%3케스트렐 4500 휴대용 기상 추적 장비%4는 다음 날씨 데이터들을 수집하는 데 유용한 소형 기상 관측 장비입니다:&lt;br/&gt;%2바람이 오는 방향과 가는 방향&lt;br/&gt;%2옆바람과 맞바람&lt;br/&gt;%2고도 및 기압&lt;br/&gt;%2습구온도&lt;br/&gt;%2습도 및 이슬점&lt;br/&gt;%2밀도고도&lt;br/&gt;%2체감온도&lt;br/&gt;%2시간 및 날짜&lt;br/&gt;%2최소, 최대, 평균값&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2%3케스트렐 4500NV%4를 장착하십시오.&lt;br/&gt;%2[%3%12%4]를 사용하고 %3장비%4를 선택하십시오.&lt;br/&gt;%2%3열기%4를 선택하십시오.</Korean>
             <Japanese>%3ケストレル 4500 携帯気象計%4は、次の気象データの収集に役立つミニ気象ステーションです:&lt;br/&gt;%2方位と風向&lt;br/&gt;%2横風と向かい風&lt;br/&gt;%2高度と気圧&lt;br/&gt;%2湿球温度&lt;br/&gt;%2湿度と露点&lt;br/&gt;%2密度高度&lt;br/&gt;%2ウィンドチルと温度&lt;br/&gt;%2日付と時刻&lt;br/&gt;%2最小値、最大値、平均値&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3ケストレル%4を装備します。&lt;br/&gt;%2[%3%12%4] を使って%3装備%4を選択します。&lt;br/&gt;%2%3ケストレルを開く%4で使用できます。</Japanese>
+            <Spanish>La %3Estación Climática de Bolsillo Kestrel 4500%4 es una pequeña estación climática portátil para recolectar la siguiente información del tiempo:&lt;br/&gt;%2Dirección y Sentido del Viento&lt;br/&gt;%2VIento cruzado y Viento en cola&lt;br/&gt;%2Altitud y presión barométrica&lt;br/&gt;%2Temperatura húmeda&lt;br/&gt;%2Humedad y punto de condensación&lt;br/&gt;%2Densidad de altitud&lt;br/&gt;%2Sensación térmica y temperatura&lt;br/&gt;%2Hora y fecha&lt;br/&gt;%2Valores mínimos, máximos y medios&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Equipa un %3Kestrel%4.&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Equipamiento%4.&lt;br/&gt;%2Seleccionar %3Abrir%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_MapTools_ShortName">
             <English>Triangulate Your Position</English>
@@ -513,6 +603,8 @@
             <Korean>위치를 삼각측량합니다</Korean>
             <Japanese>三角測量で位置を特定</Japanese>
             <Russian>Передавайте свое местоположение</Russian>
+            <French>Trianguler votre position</French>
+            <Spanish>Triangular Tu Posición</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_MapTools_Description">
             <English>The %3Map Tools%4 are a set of tools that allows a soldier to measure distances and angles. Useful for land, and calculating firing solutions for artillery.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Open %3Map%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Map Tools%4.&lt;br/&gt;%2 The Tool can be moved by dragging with [%3Left-Click%4] while holding [%3ALT%4].</English>
@@ -520,6 +612,8 @@
             <Italian>Gli %3Strumenti Cartografici%4 permettono al soldato di misurare distanze e angoli sulla mappa. Utile a terra e per calculare direzioni di tiro per artiglieria.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Apri %3Mappa%4.&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Strumenti Cartografici%4.&lt;br/&gt;%2 Lo strumento può essere spostato trascinandolo con [%3Click-Sinistro%4] premendo [%3ALT%4].</Italian>
             <Korean>%3독도용 도구%4는 병사가 거리와 각도를 측정할 수 있는 도구 세트입니다. 지상에서 유용하며 포병 사격 솔루션 계산에 유용합니다,&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2%3지도%4를 여십시오.&lt;br/&gt;%2[%3%12%4]를 사용하여 %3독도용 도구%4를 선택하십시오.&lt;br/&gt;%2도구는 [%3Alt 키%4]를 누른 상태에서 [%3마우스 왼쪽 클릭%4]으로 드래그하여 이동할 수 있습니다.</Korean>
             <Japanese>%3マップ ツール%4は、兵士が距離と角度を測定できるようにするツールのセットです。陸上や大砲の射撃工程の計算を解くのに役立ちます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3マップ%4を開きます。&lt;br/&gt;%2[%3%12%4] を使って%3マップ ツール%4を選択します。&lt;br/&gt;%2 [%3ALT%4] を押しながら [%3左クリック%4] でドラッグするとツールを移動できます。</Japanese>
+            <French>Les %3Outils cartographiques%4 sont un ensemble d'outils permettant au soldat de mesurer des distances et des angles. Utile pour la terre et le calcul des solutions de tir pour l'artillerie.&lt;br/&gt;&lt;br/&gt;%3Utilisation:%4&lt;br/&gt;%2Ouvrir la%3Carte%4.&lt;br/&gt;%2Utiliser [%3%12%4] et sélectionner %3Outils cartographiques%4.&lt;br/&gt;%2 L'outil peut être déplacé en le faisant glisser avec [%3Clic gauche%4] tout en maintenant [%3ALT%4].</French>
+            <Spanish>Las %3Herramientas de mapa%4 son un conjunto de herramientas que permiten a un soldado medir distancias y ángulos. Util para terrenos, y para calcular soluciones de tiro para artillería.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Abrir %3Mapa%4.&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Herramientas de Mapa%4.&lt;br/&gt;%2 La herramienta puede ser movida siendo arrastrada con [%3CLick-Izquierdo%4] mientras se pulsa [%3ALT%4].</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_ShortName">
             <English>Advanced DAGR</English>
@@ -528,6 +622,8 @@
             <Korean>고급형 DAGR입니다</Korean>
             <Japanese>より高度なDAGR</Japanese>
             <Russian>Продвинутый DAGR</Russian>
+            <French>DAGR avancé</French>
+            <Spanish>DAGR Avanzado</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_MicroDAGR_Description">
             <English>The %3MicroDAGR GPS%4 is an advanced version of the %3DAGR%4. It provides position, navigation, and timing (PNT) data to include:&lt;br/&gt;%2Compass and heading&lt;br/&gt;%2Date and hour synced to the mission&lt;br/&gt;%2Elevation (relative to sea level)&lt;br/&gt;%2Current speed&lt;br/&gt;%2GPS with topographic and satellite view&lt;br/&gt;%2Creating, naming, and deleting waypoints&lt;br/&gt;%2Friendly identification (Requires ACE BLUFOR Tracker Setting)&lt;br/&gt;Connection to the Vector-21 Rangefinder for data import (waypoint creation and grid reference of ranged targets)&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2For usage instructions, please visit the dedicated %3MicroDAGR%4 wiki.</English>
@@ -535,6 +631,7 @@
             <Italian>Il %3GPS MicroDAGR%4 è una versione avanzata del %3DAGR%4. Esso mostra dati su posizione, navigazione e tempismo (PNT), includendo:&lt;br/&gt;%2Bussola e azimut&lt;br/&gt;%2Data e ora sincronizzate con la missione&lt;br/&gt;%2Elevazione (dal livello del mare)&lt;br/&gt;%2Velocità attuale&lt;br/&gt;%2GPS con visuale topografica e satellitare&lt;br/&gt;%2Creazione, rinomina e rimozione di waypoint&lt;br/&gt;%2Identificazione di alleati (Richiede Impostazioni ACE BLUFOR Tracker)&lt;br/&gt;Connessione al Telemetro Vector-21 per importazione di dati (creazione waypoint e indicazione di griglia su bersagli puntati)&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Per informazioni sull'utilizzo sei pregato di visitare la pagina wiki dedicata al %3MicroDAGR%4.</Italian>
             <Korean>%3마이크로DAGR GPS%4는 %3DAGR%4의 고급 버전입니다. 다음과 같이 위치, 내비게이션 및 타이밍(PNT) 데이터를 제공합니다:&lt;br/&gt;%2나침반 및 방향&lt;br/&gt;%2임무와 동기화된 날짜 및 시간&lt;br/&gt;%2고도 (해수면 기준)&lt;br/&gt;%2현재 속도&lt;br/&gt;%2지형 및 위성 시점 기능이 있는 GPS&lt;br/&gt;%2웨이포인트 생성, 작명 및 삭제&lt;br/&gt;%2아군 식별 (ACE의 GPS 피아식별기 켜기 체크 필요)&lt;br/&gt;%2데이터를 가져오기 위한 벡터-21 거리계에 연결(원거리 대상의 웨이포인트 생성 및 좌표 참조)&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2사용 방법을 보려면 전용 %3마이크로DAGR%4의 위키를 방문하십시오.</Korean>
             <Japanese>%3MicroDAGR GPS%4は%3DAGR%4のより高度なバージョンです。測位、航法、計時(PNT)データが提供されます。これには以下の情報を含みます:&lt;br/&gt;%2コンパスと方位&lt;br/&gt;%2ミッションに同期された日付と時間&lt;br/&gt;%2標高 (海面に対する相対値)&lt;br/&gt;%2現在の速度&lt;br/&gt;%2地形図と衛星ビューを備えたGPS&lt;br/&gt;%2ウェイポイントの作成、名前付け、および削除&lt;br/&gt;%2友軍の識別 (ACE ブルーフォーストラッキング設定が必要)&lt;br/&gt;ベクター21レンジファインダーへの接続とデータのインポート (ウェイポイントの作成と遠距離ターゲットのグリッド参照)&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2使用手順については、専用の %3MicroDAGR%4 wiki を参照してください。</Japanese>
+            <Spanish>El %3GPS MicroDAGR%4 es una versión avanzada del %3DAGR%4. Provee de posicionamiento, navegación y datos de temporización (PNT) que incluye:&lt;br/&gt;%2Brújula y dirección&lt;br/&gt;%2Fecha y hora sincronizada con la misión&lt;br/&gt;%2Elevación (relativa al nivel del mar)&lt;br/&gt;%2Velocidad actual&lt;br/&gt;%2GPS con vista topográfica y satelital&lt;br/&gt;%2Creación, nombrado y borrado de puntos de ruta&lt;br/&gt;%2Identificación de aliados (Requiere la opción de ACE BLUFOR Tracker)&lt;br/&gt;Conexión con el telémetro Vector-21 para importación de datos (creación de puntos de ruta y referenciado en eje de coordenada para objetivos a distancia)&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Para instrucciones de uso, por favor visita la Wiki dedicada de %3MicroDAGR%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_RangeTables_DisplayName">
             <English>Range Tables</English>
@@ -543,6 +640,8 @@
             <Korean>사거리표</Korean>
             <Japanese>射表</Japanese>
             <Russian>Таблицы диапазонов</Russian>
+            <French>Tables de tir</French>
+            <Spanish>Tablas de Distancia</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_RangeTables_ShortName">
             <English>Get A Firing Solution</English>
@@ -551,6 +650,8 @@
             <Korean>사격 솔루션을 제공합니다</Korean>
             <Japanese>撃ち方の解を得る</Japanese>
             <Russian>Получите расчёт</Russian>
+            <French>Obtenir une solution de tir</French>
+            <Spanish>Obtener Una Solución de Tiro</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_RangeTables_Description">
             <English>%3Range Tables%4 allow for a soldier to estimate accurate shot placement on direct or indirect targets (depending on asset). The %3Range Table%4 will automatically fill depending on the soldiers selected weapon/vehicle.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select the desired %3Range Table%4.</English>
@@ -558,6 +659,7 @@
             <Italian>%3Tavole di tiro%4 permettono al soldato di stimare piazzamenti accurati di colpi mediante fuoco diretto o indiretto (a seconda dell'arma). La %3Tavola di tiro%4 si modificherà in automatico a seconda dell'arma/veicolo del soldato.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%12%4] and seleziona %3Equipaggiamento%4.&lt;br/&gt;%2Seleziona la portata desiderata sulla %3Tavola di tiro%4.</Italian>
             <Korean>%3사거리표%4를 사용하면 병사가 직접 또는 간접 표적(자산에 따라 다름)에 대한 정확한 사격 배치를 추정할 수 있습니다. %3사거리표%4는 선택한 병사의 무기/차량에 따라 자동으로 작성됩니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2[%3%12%4]를 사용하고 %3장비%4를 선택하십시오.&lt;br/&gt;%2원하는 %3사거리표%4를 선택하십시오.</Korean>
             <Japanese>%3射表%4 を使用すると、兵士は (手段に応じて) 直接的または間接的なターゲットへの正確な射撃位置を推定できます。%3射表%4は、兵士が選択した武器/車両に応じて自動的に入力されます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%12%4] を使って%3装備%4を選択します。&lt;br/&gt;%2目的の%3射表%4を選択します。</Japanese>
+            <Spanish>La %3Tabla de distancias%4 permite a un soldado estimar con precisión el posicionamiento de un disparo sobre un objetivo de manera directa o indirecta (dependiendo del dispositivo). La %3Tabla de distancias%4 se autorellena dependiendo del arma o vehículo seleccionado por el soldado.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Equipamiento%4.&lt;br/&gt;%2Selecciona la %3Tabla de distancias%4 deseada.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Ropes_DisplayName">
             <English>Ropes</English>
@@ -566,6 +668,8 @@
             <Korean>로프</Korean>
             <Japanese>ロープ</Japanese>
             <Russian>Канаты</Russian>
+            <French>Corde</French>
+            <Spanish>Cuerdas</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Ropes_ShortName">
             <English>Tow With Ease</English>
@@ -574,6 +678,8 @@
             <Korean>쉽게 견인을 할 수 있습니다</Korean>
             <Japanese>楽々けん引</Japanese>
             <Russian>Буксируйте с легкостью</Russian>
+            <French>Remorquer avec facilité</French>
+            <Spanish>Remolcar Con Facilidad</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Ropes_Description">
             <English>%3Ropes%4 have multiple uses including %3Towing%4 vehicles and %3Fast Roping%4 from helicopters.&lt;br/&gt;&lt;br/&gt;%3Towing:%4&lt;br/&gt;%2Approach a vehicle.&lt;br/&gt;%2Use [%3%13%4] and select %3Towing%4.&lt;br/&gt;%2Select rope length.&lt;br/&gt;%2Select attachment point on towing vehicle.&lt;br/&gt;%2Select attachment on towed vehicle.&lt;br/&gt;&lt;br/&gt;%3Available Rope Lengths:%4&lt;br/&gt;%2 3.2 meters&lt;br/&gt;%2 6.2 meters&lt;br/&gt;%2 12.2 meters&lt;br/&gt;%2 15.2 meters&lt;br/&gt;%2 18.3 meters&lt;br/&gt;%2 27.4 meters&lt;br/&gt;%2 36.6 meters</English>
@@ -581,6 +687,7 @@
             <Italian>%3Corde%4 hanno molteplici utilizzi, come %3Trainare%4 veicoli e %3Fast Roping%4 da elicotteri.&lt;br/&gt;&lt;br/&gt;%3Traino:%4&lt;br/&gt;%2Avvicinati a un veicolo.&lt;br/&gt;%2Usa [%3%13%4] e seleziona %3Traina%4.&lt;br/&gt;%2Seleziona lunghezza corda.&lt;br/&gt;%2Seleziona punto di attacco su veicolo trainante.&lt;br/&gt;%2Seleziona attacco su veicolo trainato.&lt;br/&gt;&lt;br/&gt;%3Lunghezze corde a disposizione:%4&lt;br/&gt;%2 3.2 metri&lt;br/&gt;%2 6.2 metri&lt;br/&gt;%2 12.2 metri&lt;br/&gt;%2 15.2 metri&lt;br/&gt;%2 18.3 metri&lt;br/&gt;%2 27.4 metri&lt;br/&gt;%2 36.6 metri</Italian>
             <Korean>%3로프%4는 차량 %3견인%4 및 헬기의 %3패스트로프%4 등 여러 용도로 사용됩니다.&lt;br/&gt;&lt;br/&gt;%3견인 방법:%4&lt;br/&gt;%2차량에 접근하십시오.&lt;br/&gt;%2[%3%13%4]를 사용하고 %3견인%4을 선택하십시오.&lt;br/&gt;%2로프 길이를 선택하십시오.&lt;br/&gt;%2견인할 차량의 부착 지점을 선택하십시오.&lt;br/&gt;%2견인될 차량의 부착 지점을 선택하십시오.&lt;br/&gt;&lt;br/&gt;%3사용 가능한 로프 길이:%4&lt;br/&gt;%2 3.2m&lt;br/&gt;%2 6.2m&lt;br/&gt;%2 12.2m&lt;br/&gt;%2 15.2m&lt;br/&gt;%2 18.3m&lt;br/&gt;%2 27.4m&lt;br/&gt;%2 36.6m</Korean>
             <Japanese>%3ロープ%4には、車両の%3けん引%4やヘリコプターからの%3ファストロープ%4など、複数の用途があります。&lt;br/&gt;&lt;br/&gt;%3けん引方法:%4&lt;br/&gt;%2車両に近づきます。&lt;br/&gt;%2[%3%13%4] を使って%3けん引%4を選択します。&lt;br/&gt;%2ロープの長さを選択します。&lt;br/&gt;%2けん引する車両のロープ取付位置を選択します。&lt;br/&gt;%2けん引される車両のロープ取付位置を選択します。&lt;br/&gt;&lt;br/&gt;%3利用可能なロープの長さ:%4&lt;br/&gt;%2 3.2 メートル&lt;br/&gt;%2 6.2 メートル&lt;br/&gt;%2 12.2 メートル&lt;br/&gt;%2 15.2 メートル&lt;br/&gt;%2 18.3 メートル&lt;br/&gt;%2 27.4 メートル&lt;br/&gt;%2 36.6 メートル</Japanese>
+            <Spanish>Las %3Cuerdas%4 tienen múltiples usos incluyendo el %3Remolcado%4 de vehículos y el %3Descenso con Cuerda%4 desde helicópteros.&lt;br/&gt;&lt;br/&gt;%3Remolcado:%4&lt;br/&gt;%2Acércate a un vehículo.&lt;br/&gt;%2Usar [%3%13%4] y seleccionar %3Remolcado%4.&lt;br/&gt;%2Selecciona la longitud de la cuerda.&lt;br/&gt;%2Selecciona un punto de anclaje en el vehículo de remolcado.&lt;br/&gt;%2Selecciona una sujección en el vehículo remolcado.&lt;br/&gt;&lt;br/&gt;%3Longitudes de Cuerda Disponibles:%4&lt;br/&gt;%2 3.2 metros&lt;br/&gt;%2 6.2 metros&lt;br/&gt;%2 12.2 metros&lt;br/&gt;%2 15.2 metros&lt;br/&gt;%2 18.3 metros&lt;br/&gt;%2 27.4 metros&lt;br/&gt;%2 36.6 metros</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Sandbag_ShortName">
             <English>Expand Your Fortifications</English>
@@ -589,6 +696,8 @@
             <Korean>당신의 요새를 확장합니다</Korean>
             <Japanese>要塞を拡張する</Japanese>
             <Russian>Расширить свои укрепления</Russian>
+            <French>Élargissez vos fortifications</French>
+            <Spanish>Expande Tus Fortificaciones</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Sandbag_Description">
             <English>%3Sandbags%4 are sacks made of sturdy material, filled with sand, used for a variety of purposes such as creating barriers or providing stability in construction projects. Useful in expanding larger placed fortifications.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Sandbag (Empty)%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Deploy Sandbag%4.&lt;br/&gt;%2Follow on-screen instructions for placement.</English>
@@ -596,6 +705,7 @@
             <Italian>%3Sacchi di Sabbia%4 sono sacchi di un materiale robusto, riempiti di sabbia, usati per una varietà di utilizzi come creare barriere o aumentare la stabilità di fortificazioni.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Equipaggia una %3Sacco di Sabbia (Vuoto)%4.&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Posiziona Sacco di Sabbia%4.&lt;br/&gt;%2Segui le istruzioni sullo schermo per il piazzamento.</Italian>
             <Korean>%3모래주머니%4는 튼튼한 재료로 만든 주머니로 모래를 채워 장벽을 만들거나 건설 작업에서 안정성을 제공하는 등 다양한 용도로 사용되며, 더 큰 요새를 확장하는 데 유용합니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2%3모래주머니(비어있음)%4을 장착하십시오.&lt;br/&gt;%2[%3%12%4]를 사용하고 %3모래주머니 배치%4를 선택하십시오.&lt;br/&gt;%2화면의 지시에 따라 배치하십시오.</Korean>
             <Japanese>%3土のう%4は、砂が詰められた頑丈な素材で作られた袋で、建設プロジェクトでの障壁の作成や安定性の提供など、さまざまな目的に使用されます。より大きな配置の要塞を拡張するのに役立ちます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3土のう (空)%4を装備します。&lt;br/&gt;%2[%3%12%4] を使って%3土のうを作る%4を選択します。&lt;br/&gt;%2画面上の指示に従って配置します。</Japanese>
+            <Spanish>Los %3Sacos de tierra%4 son sacos hechos de un material resistente, rellenados de tierra, usados para una diversa variedad de propósitos como la construcción de barreras o proveer estabilidad en los proyectos de construcción. Son útiles en la expansión de proyectos de construcción más grandes.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Equipa un %3Saco de tierra (Vacío)%4.&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Desplegar Saco de tierra%4.&lt;br/&gt;%2Seguir las instrucciones en pantalla para su colocación.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_ShortName">
             <English>Lower Firearm Temperature</English>
@@ -604,6 +714,8 @@
             <Korean>총기의 온도를 낮춥니다</Korean>
             <Japanese>銃の熱を冷ます</Japanese>
             <Russian>Понизьте температуру оружия</Russian>
+            <French>Refroidir l'arme</French>
+            <Spanish>Bajar la Temperatura del Arma</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_SpareBarrels_Description">
             <English>%3Spare Barrels%4 allow a soldier to reduce their weapon's heat significantly. After a short delay, the weapon's barrel will be swapped and its heat reduced. A soldier may also check the temperature of any barrels within their inventory. Not all weapons support swapping barrels.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3Swap Barrel%4.&lt;br/&gt;%2Resume operation after barrel swap is complete.</English>
@@ -611,6 +723,7 @@
             <Italian>%3Canne di Ricambio%4 permettono ai soldati di raffreddare la loro arma notevolmente. Dopo una breve attesa, la canna dell'arma verrà sostituita e la temperatura ridotta. Un soldato può anche controllare la temperatura di canne di ricambio presenti nel proprio inventario. Non tutte le armi consentono lo scambio canna.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Equipaggiamento%4.&lt;br/&gt;%2Seleziona %3Sostituisci Canna%4.&lt;br/&gt;%2Continua l'ingaggio dopo sostituzione avvenuta.</Italian>
             <Korean>%3예비 총열%4을 사용하면 병사의 무기의 발열을 크게 줄일 수 있습니다. 잠시 뒤에 무기의 총신이 교체되고 발열이 감소합니다. 군인은 소지품에 있는 총열의 온도도 확인할 수 있습니다. 모든 무기가 총열 교환을 지원하는 것은 아닙니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2[%3%12%4]를 사용하고 %3장비%4를 선택하십시오.&lt;br/&gt;%2%3총열 교체%4를 선택하십시오.&lt;br/&gt;%2총열 교체가 완료된 후 작전을 계속하십시오.</Korean>
             <Japanese>%3予備銃身%4を使用すると、兵士は武器の熱を大幅に下げることができます。少し経つと、武器の銃身が交換され熱が下がります。兵士はインベントリ内の銃身の温度を確認することもできます。すべての武器が銃身の交換をサポートしているわけではありません。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%12%4] を使って%3装備%4を選択します。&lt;br/&gt;%2%3銃身を交換%4を選択します。&lt;br/&gt;%2銃身交換が完了すると、再度射撃することが出来ます。</Japanese>
+            <Spanish>El %3Cañón de Repuesto%4 permite a un soldado reducir el calor del arma significativamente. Tras un pequeño periodo, el cañón del arma habrá sido sustituido y el calor reducido. Un soldado puede tambien comprobar la temperatura de cualquier cañón en su inventario. No todas las armas soportan el cambio de cañón.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Equipamiento%4.&lt;br/&gt;%2Seleccionar %3Cambiar Cañón%4.&lt;br/&gt;%2Continuar con la operación una vez se haya cambiado el cañón.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_SprayPaint_DisplayName">
             <English>Spray Paint</English>
@@ -619,6 +732,8 @@
             <Korean>스프레이 페인트</Korean>
             <Japanese>ペイントスプレー</Japanese>
             <Russian>Аэрозольная краска</Russian>
+            <French>Bombe de peinture</French>
+            <Spanish>Pintura En Spray</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_SprayPaint_ShortName">
             <English>Tag Your Territory</English>
@@ -627,6 +742,8 @@
             <Korean>당신의 영역을 지정합니다</Korean>
             <Japanese>自分のテリトリーをマーキング</Japanese>
             <Russian>Пометьте свою территорию</Russian>
+            <French>Marquez votre territoire</French>
+            <Spanish>Marca Tu Territorio</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_SprayPaint_Description">
             <English>%3Spray Paint%4 is used to tag surfaces with various symbols.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a surface (wall, vehicle, ground, etc).&lt;br/&gt;%2Use [%3%12%4] and select %3Tag%4.&lt;br/&gt;%2Choose a symbol.&lt;br/&gt;&lt;br/&gt;%3Available Colors:%4&lt;br/&gt;%2Black&lt;br/&gt;%2Blue&lt;br/&gt;%2Green&lt;br/&gt;%2Red</English>
@@ -634,6 +751,7 @@
             <Italian>%3Bombolette Spray%4 vengono usate per marcare superfici con vari simboli.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Muoviti vicino a una superfice (muro, veicolo, suolo, etc).&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Marca%4.&lt;br/&gt;%2Seleziona un simbolo.&lt;br/&gt;&lt;br/&gt;%3Colori disponibili:%4&lt;br/&gt;%2Nero&lt;br/&gt;%2Blu&lt;br/&gt;%2Verde&lt;br/&gt;%2Rosso</Italian>
             <Korean>%3스프레이 페인트%4다양한 기호로 표면에 태그를 지정하는 데 사용됩니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2표면(벽, 차량, 지면 등)에 가까이 가십시오.&lt;br/&gt;%2[%3%12%4]를 사용하고 %3태그%4를 선택하십시오.&lt;br/&gt;%2모양을 고르십시오.&lt;br/&gt;&lt;br/&gt;%3사용 가능 색상:%4&lt;br/&gt;%2검정&lt;br/&gt;%2파랑&lt;br/&gt;%2초록&lt;br/&gt;%2빨강</Korean>
             <Japanese>%3ペイントスプレー%4は、地面や壁、車両の表面などに様々な図形のタグを付けるために使えます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2塗りたい面に近づきます。(壁、車両、地面など)&lt;br/&gt;%2[%3%12%4] を使って%3タグ (スプレーペイント)%4を選択します。&lt;br/&gt;%2図形を選びます。&lt;br/&gt;&lt;br/&gt;%3利用可能な色:%4&lt;br/&gt;%2黒&lt;br/&gt;%2白&lt;br/&gt;%2赤&lt;br/&gt;%2青&lt;br/&gt;%2緑&lt;br/&gt;%2黄</Japanese>
+            <Spanish>La %3Pintura en Spray%4 se usa para marcar superficies con varios símbolos.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Acércate a una superficie (pared, vehículo, suelo, etc).&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Tag%4.&lt;br/&gt;%2Elige un símbolo.&lt;br/&gt;&lt;br/&gt;%3Colores disponibles:%4&lt;br/&gt;%2Negro&lt;br/&gt;%2Azul&lt;br/&gt;%2Verde&lt;br/&gt;%2Rojo</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Tripod_ShortName">
             <English>Brace From Anywhere</English>
@@ -642,6 +760,8 @@
             <Korean>어느 곳에나 지지대를 배치할 수 있습니다</Korean>
             <Japanese>どこでも支持器</Japanese>
             <Russian>Опора может быть установлена в любом месте</Russian>
+            <French>Stabilisé partout</French>
+            <Spanish>Apoyarte En Cualquier Lugar</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Tripod_Description">
             <English>The %3SSWT Kit%4 is a deployable tripod that allows a soldier to brace their aim when deployed. Use it when you need an elevated shooting position and there are no other objects around.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select %3SSWT Kit%4 and follow the on screen prompts to place.</English>
@@ -649,6 +769,7 @@
             <Italian>Il %3Kit SSWT%4 è un treppiede piazzabile che permette al soldato di appoggiare la sua arma. Usalo quando ti serve una posizione di tiro rialzata e non ci sono altri oggetti utili nelle vicinanze.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Equipaggiamento%4.&lt;br/&gt;%2Seleziona %3Kit SSWT%4 e segui le indicazioni di piazzamento.</Italian>
             <Korean>%3SSWT 키트%4는 병사가 배치 시 조준력을 상승시킬 수 있는 배치 가능한 삼각대입니다. 높이 조절이 된 사격 위치가 필요하고 주위에 다른 물체가 없을 때 사용하십시오.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2[%3%12%4] 를 사용하고 %3장비%4를 선택하십시오.&lt;br/&gt;%2%3SSWT 키트%4를 선택하고 화면의 지시에 따라 배치하십시오.</Korean>
             <Japanese>%3SSWT キット%4は展開可能な三脚で、展開時に兵士が狙いを定めることができます。高い射撃位置が必要で、周囲に他の物体がない場合に使用してください。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%12%4] を使って%3装備%4を選択します。&lt;br/&gt;%2%3SSWT キット%4を選択し、画面上の指示に従って配置します。</Japanese>
+            <Spanish>El %3Kit SSWT%4 es un trípode desplegable que permite a un soldado apoyarse para apuntar cuando está desplegado. Úsalo cuando necesites una posición de tiro elevada y no hay ningún otro objeto alrededor.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Equipamiento%4.&lt;br/&gt;%2Seleccionar %3Kit SSWT%4 y sigue las indicaciones en pantalla para colocarlo.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_UAVBattery_ShortName">
             <English>Keep Eyes In The Sky</English>
@@ -657,6 +778,9 @@
             <Korean>하늘에서 계속 내려다봅니다</Korean>
             <Japanese>空の目を維持する</Japanese>
             <Russian>Не Отрывай Глаз От Неба</Russian>
+            <Hungarian>Gardez les yeux au ciel</Hungarian>
+            <French>Gardez les yeux au ciel</French>
+            <Spanish>Manten Tus Ojos En El Cielo</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_UAVBattery_Description">
             <English>%3UAV Batteries%4 are used to recharge a UAV's energy storage. Especially useful for small UAVs.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3UAV Battery%4&lt;br/&gt;%2Approach a %3UAV%4 with its %3Engine Off%4.&lt;br/&gt;%2Use [%3%13%4] and select %3Recharge%4.</English>
@@ -664,6 +788,7 @@
             <Italian>%3Batteria UAV%4 vengono usate per ricaricare gli UAV. Molto utile per piccoli UAV.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Equipaggia una %3Batteria UAV%4&lt;br/&gt;%2Avvicinati al %3UAV%4 con il %3Motore Spento%4.&lt;br/&gt;%2Usa [%3%13%4] e seleziona %3Ricarica%4.</Italian>
             <Korean>%3무인기 배터리%4는 무인기의 에너지 저장소를 재충전하는 데 사용됩니다. 소형 무인기에 특히 유용합니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2%3무인기 배터리%4를 장착하십시오.&lt;br/&gt;%2%3엔진을 끄고%4 %3무인기%4에 접근하십시오.&lt;br/&gt;%2[%3%13%4]를 사용하고 %3재충전%4을 선택하십시오.</Korean>
             <Japanese>%3UAVバッテリー%4は、UAVの電源容量を充電するために使用されます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3UAV バッテリー%4を装備します。&lt;br/&gt;%2%3エンジンをオフ%4にした%3UAV%4に近づきます。&lt;br/&gt;%2[%3%13%4] を使って%3充電%4を選択します。</Japanese>
+            <Spanish>La %3Batería de VANT%4 se utilizan para recargar el almacenamiento de energía de un VANT. Especialmente útiles para pequeños VANTs.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Equipa una %3Batería de VANT%4&lt;br/&gt;%2Acércate a un %3VANT%4 con su %3Motor Apagado%4.&lt;br/&gt;%2Usa [%3%13%4] y selecciona %3Recargar%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Wirecutter_ShortName">
             <English>Making An Entrance</English>
@@ -672,6 +797,8 @@
             <Korean>진입로를 만듭니다</Korean>
             <Japanese>堂々入場する</Japanese>
             <Russian>Создание собственного входа</Russian>
+            <French>Faire son entrée</French>
+            <Spanish>Abriendo Una Entrada</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Wirecutter_Description">
             <English>%3Wirecutters%4 are a tool that allows a soldier to bypass wired fencing. Useful for creating backdoor entrances into secure areas.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Move close to a fence.&lt;br/&gt;%2Use [%3%12%4] and select %3Cut Fence%4.</English>
@@ -679,6 +806,7 @@
             <Italian>La %3Trancia%4 è un utensile che permette ai soldati di sorpassare filo spinato e recinzioni. Utile per creare punti di accesso nel retro di zone protette.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Avvicinati a una barriera.&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Taglia%4.</Italian>
             <Korean>%3절단기%4는 병사가 철조망을 통과할 수 있게 해주는 도구입니다. 보안 구역에 뒷입구를 만드는 데 유용합니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2철조망에 가까이 가십시오.&lt;br/&gt;%2[%3%13%4]를 사용하고 %3철조망 자르기%4를 선택하십시오.</Korean>
             <Japanese>%3ワイヤーカッター%4は、兵士が有線フェンスを回避できるようにするツールです。安全にエリアへの裏口を作成するのに役立ちます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2フェンスの近くに移動します。&lt;br/&gt;%2[%3%12%4] を使って%3フェンスを切断する%4を選択します。</Japanese>
+            <Spanish>La %3Cizalla%4 es una herramienta que permite a un soldado atravesar una valla de alambre. Es útil para crear entradas traseras en áreas seguras.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Acércate a una valla.&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Cortar Valla%4.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_DisplayName">
             <English>Items</English>
@@ -703,6 +831,15 @@
             <Korean>ACE3</Korean>
             <Japanese>ACE 3</Japanese>
             <Russian>ACE3</Russian>
+            <Chinese>ACE3</Chinese>
+            <Chinesesimp>ACE3</Chinesesimp>
+            <Czech>ACE3</Czech>
+            <French>ACE3</French>
+            <German>ACE3</German>
+            <Hungarian>ACE3</Hungarian>
+            <Portuguese>ACE3</Portuguese>
+            <Spanish>ACE3</Spanish>
+            <Turkish>ACE3</Turkish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_FortifyTool_ShortName">
             <English>Build Fortifications</English>
@@ -711,6 +848,8 @@
             <Korean>요새를 건설합니다</Korean>
             <Japanese>要塞を構築する</Japanese>
             <Russian>Стройте укрепления</Russian>
+            <French>Construire des fortifications</French>
+            <Spanish>Construir Fortificaciones</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_FortifyTool_Description">
             <English>The %3Fortify Tool%4 allows soldiers to build fortifications provided by their mission creator.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Pick up a %3Fortify Tool%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Fortify%4.&lt;br/&gt;%2Select an available fortification and follow the on screen prompts for placement.</English>
@@ -718,6 +857,7 @@
             <Italian>L'%3Attrezzo di Fortificazione%4 permette ai soldati di costruire fortificazioni permesse dal creatore della missione.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Raccogli un %3Attrezzo di Fortificazione%4.&lt;br/&gt;%2Usa [%3%12%4] e seleziona %3Fortifica%4.&lt;br/&gt;%2Seleziona una fortificazione disponibile e segui le indicazioni di piazzamento sullo schermo.</Italian>
             <Korean>%3요새화 도구%4를 사용하면 병사들이 임무 생성자가 제공한 요새를 구축할 수 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2%3요새화 도구%4를 가지십시오.&lt;br/&gt;%2[%3%12%4]를 사용하고 %3요새화%4를 선택하십시오.&lt;br/&gt;%2사용 가능한 요새를 선택하고 화면의 지시에 따라 배치하십시오.</Korean>
             <Japanese>%3要塞ツール%4を使用すると、兵士はミッション作成者が提供した要塞を構築できます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3要塞ツール%4を持つ。&lt;br/&gt;%2[%3%12%4] を使って%3要塞%4を選択します。&lt;br/&gt;%2利用可能な構造物を選択し、画面上の指示に従って配置します。</Japanese>
+            <Spanish>La %3Herramienta de Fortificación%4 permite a los soldados construir fortificaciones provistas por su creador de mision.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Coge una %3Herramienta de Fortificación%4.&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Fortificar%4.&lt;br/&gt;%2Selecciona una fortificación disponible y sigue las instrucciones en pantalla para su colocación.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Lockpick_ShortName">
             <English>Breaking and Entering</English>
@@ -726,6 +866,8 @@
             <Korean>침입용 도구입니다</Korean>
             <Japanese>破壊して乗り込む</Japanese>
             <Russian>Взлом и проникновение</Russian>
+            <French>Entrée par effraction</French>
+            <Spanish>Romper y Entrar</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_Lockpick_Description">
             <English>%3Lockpicks%4 are used to gain access to locked vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Lockpick%4.&lt;br/&gt;%2Approach a %3Locked%4 vehicle.&lt;br/&gt;Use [%3%13%4] and select %3Lockpick Vehicle%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Note:%4&lt;/t&gt; Lockpicks and keys are only available via scripting or ACE Vehicle Key modules.</English>
@@ -733,6 +875,7 @@
             <Italian>I %3Grimaldelli%4 sono usati per forzare l'accesso a veicoli bloccati.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Equipaggia un %3Grimaldello%4.&lt;br/&gt;%2Avvicinati a un veicolo %3Bloccato%4 vehicle.&lt;br/&gt;Usa [%3%13%4] e seleziona %3Scassina Veicolo%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Note:%4&lt;/t&gt; Grimaldelli e chiavi sono solo reperibili mediante scripting o moduli ACE di assegnazione Chiavi Veicoli.</Italian>
             <Korean>%3해정도구%4는 잠긴 차량에 들어가는 데 사용됩니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2%3해정도구%4를 장착하십시오.&lt;br/&gt;%2%3잠긴%4 차량에 접근하십시오.&lt;br/&gt;[%3%13%4]를 사용하고 %3차량 잠금해제%4를 선택하십시오.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3참고:%4&lt;/t&gt; 해정도구와 열쇠는 스크립팅 또는 ACE 차량 열쇠 모듈에서만 사용할 수 있습니다.</Korean>
             <Japanese>%3Lockpick%4は、ロックされた車両にアクセスするために使用されます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3Lockpick%4を装備します。&lt;br/&gt;%2%3鍵の掛かった%4車両に近づきます。&lt;br/&gt;[%3%13%4] を使って%3鍵をこじ開ける%4を選択します。&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3備考:%4&lt;/t&gt; ロックピックとキーは、スクリプトまたは ACE Vehicle Key モジュールを介してのみ使用できます。</Japanese>
+            <Spanish>La %3Ganzúa%4 es usada para lograr acceso a vehículos bloqueados.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Equipar %3Ganzúa%4.&lt;br/&gt;%2Acércate a un vehículo %3Bloqueado%4.&lt;br/&gt;Usar [%3%13%4] y seleccionar %3Ganzuar Vehículo%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Nota:%4&lt;/t&gt;Ganzúas y Llaves sólo están disponibles mediante scripting o módulos de Llaves de Vehículos ACE.</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_VehicleKey_DisplayName">
             <English>Vehicle Keys</English>
@@ -741,6 +884,8 @@
             <Korean>차량 열쇠</Korean>
             <Japanese>車両キー</Japanese>
             <Russian>Взлом и проникновение</Russian>
+            <French>Clés de véhicule</French>
+            <Spanish>Llaves de Vehículos</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_VehicleKey_ShortName">
             <English>Lock/Unlock Vehicles</English>
@@ -749,6 +894,8 @@
             <Korean>차량을 잠그거나 해제합니다</Korean>
             <Japanese>車両のロック/ロック解除</Japanese>
             <Russian>Взлом и проникновение</Russian>
+            <French>Verrouiller/déverrouiller un véhicule</French>
+            <Spanish>Bloquear/Desbloquear vehículos</Spanish>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_VehicleKey_Description">
             <English>%3Vehicle Keys%4 are used to lock/unlock your vehicles. Vehicle keys can exist for the whole side, or keys can be created for a particular vehicle itself.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip a %3Vehicle Key%4.&lt;br/&gt;%2Approach the vehicle that the key belongs to.&lt;br/&gt;Use [%3%13%4] and select %3Lock/Unlock Vehicle%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Note:%4&lt;/t&gt; Lockpicks and keys are only available via scripting or ACE Vehicle Key modules.</English>
@@ -756,6 +903,7 @@
             <Italian>Le %3Chiavi di Veicoli%4 vengono usate per bloccare/sbloccare i propri veicoli. Chiavi di veicoli possono esistere per un'intera fazione, oppure per un veicolo particolare.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Equipaggia una %3Chiave di Veicolo%4.&lt;br/&gt;%2Avvicinati al veicolo a cui appartiene la chiave.&lt;br/&gt;Usa [%3%13%4] e seleziona %3Blocca/Sblocca Veicolo%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Note:%4&lt;/t&gt; Grimaldelli e chiavi sono solo disponibili mediante scripting o moduli ACE Chiavi Veicoli.</Italian>
             <Korean>%3차량 열쇠%4는 차량을 잠그거나 잠금해제하는 데 사용됩니다. 차량 열쇠는 모든 세력에게 존재할 수도 있고, 특정 차량 자체에 대해 열쇠를 생성할 수도 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2%3차량 열쇠%4를 장착하십시오.&lt;br/&gt;%2해당 열쇠에 속한 차량에 접근하십시오.&lt;br/&gt;[%3%13%4]를 사용하고 %3차량 잠금/잠금해제%4를 선택하십시오.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3참고:%4&lt;/t&gt; 해정도구와 열쇠는 스크립팅 또는 ACE 차량 열쇠 모듈에서만 사용할 수 있습니다.</Korean>
             <Japanese>%3Vehicle Key%4は、車両のロック/ロック解除に使用されます。車両キーは陣営全体に存在することも、特定の車両だけに対してキーを作成することもできます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2%3Vehicle Key%4を装備します。&lt;br/&gt;%2鍵の対応している車両に近づきます。&lt;br/&gt;[%3%13%4] を使って%3鍵を解錠/施錠%4します。&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3備考:%4&lt;/t&gt; ロックピックとキーは、スクリプトまたは ACE Vehicle Key モジュールを介してのみ使用できます。</Japanese>
+            <Spanish>Las %3Llaves de Vehículos%4 son usadas para bloquear/desbloquear tus vehículos. Las Llaves de Vehículos existen para un bando entero o para un vehículo concreto.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Equipa una %3Llave de Vehículo%4.&lt;br/&gt;%2Acércate a un vehículo cuya llave corresponda.&lt;br/&gt;Usar [%3%13%4] y selecciona %3Bloquear/Desbloquear Vehículo%4.&lt;br/&gt;&lt;br/&gt;&lt;t underline='1'&gt;%3Nota:%4&lt;/t&gt; Ganzúas y Llaves sólo están disponibles mediante scripting o módulos de Llaves de Vehículos ACE</Spanish>
         </Key>
     </Package>
 </Project>

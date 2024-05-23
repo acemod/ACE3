@@ -148,5 +148,141 @@ class CfgVehicles {
                 roles[]={"cargo"};
             };
         };
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
+            "hitera_l1", "hitera_l2", "hitera_l3", "hitera_l4", "hitera_l5",
+            "hitera_l6", "hitera_l7", "hitera_l8", "hitera_r1", "hitera_r2",
+            "hitera_r3", "hitera_r4", "hitera_r5", "hitera_r6", "hitera_r7",
+            "hitera_r8", "hitera_t1", "hitera_t2", "hitera_t3", "hitera_t4",
+            "hitera_t5", "hitera_t6", "hitera_t7", "hitera_t8", "hitera_fr1",
+            "hitera_fr2", "hitera_fr3", "hitera_fr4", "hitera_fr5", "hitera_fr6",
+            "hitera_fr7", "hitera_fr8", "hitera_fr9", "hitera_fl1", "hitera_fl2",
+            "hitera_fl3", "hitera_fl4", "hitera_fl5"
+        };
+        EGVAR(vehicle_damage,slatHitpoints)[] = {};
+    };
+    class CUP_T90_Base: Tank_F {
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
+            "hitera_l1", "hitera_l2", "hitera_l3", "hitera_r1", "hitera_r2",
+            "hitera_r3", "hitera_1_t_l", "hitera_1_t_r", "hitera_2_t_l",
+            "hitera_2_t_r"
+        };
+        EGVAR(vehicle_damage,slatHitpoints)[] = {};
+    };
+    class CUP_T90M_Base: Tank_F {
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
+            "hitera_t1", "hitera_t2", "hitera_t3", "hitera_t4", "hitera_t5",
+            "hitera_t6", "hitera_t7", "hitera_t8", "hitera_t9", "hitera_t10",
+            "hitera_t11", "hitera_t12", "hitera_t13", "hitera_t14", "hitera_t15",
+            "hitera_t16", "hitera_t17", "hitera_t18", "hitera_t19", "hitera_t20",
+            "hitera_t21", "hitera_f1", "hitera_f2", "hitera_f3", "hitera_f4",
+            "hitera_f5", "hitera_f6", "hitera_f7", "hitera_s1", "hitera_s2",
+            "hitera_s3", "hitera_s4", "hitera_s5", "hitera_s6", "hitera_s7",
+            "hitera_s8", "hitera_s9", "hitera_s10", "hitera_s11", "hitera_s12",
+            "hitera_t22", "hitera_t23", "hitera_t24", "hitera_t25", "hitera_t26",
+            "hitera_t27", "hitera_t28", "hitera_t29", "hitera_t30", "hitera_t31",
+            "hitera_t32", "hitera_t33"
+        };
+        EGVAR(vehicle_damage,slatHitpoints)[] = {
+            "hitslat_left", "hitslat_right", "hitslat_turret_rear",
+            "hitslat_turret_left", "hitslat_rear"
+        };
+    };
+
+    class CUP_T72_ACR_Base;
+    class CUP_B_T72_CZ: CUP_T72_ACR_Base {
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
+            "hitera_top_l1", "hitera_top_l2", "hitera_top_l3", "hitera_top_l4",
+            "hitera_top_r1", "hitera_top_r2", "hitera_top_r3", "hitera_top_r4",
+            "hitera_front_r1", "hitera_front_r2", "hitera_front_l1",
+            "hitera_front_l2", "hitera_top_rear"
+        };
+        EGVAR(vehicle_damage,slatHitpoints)[] = {};
+    };
+
+    class CUP_Leopard2_Base;
+    class CUP_Leopard2_ERA_Base: CUP_Leopard2_Base {
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
+            "hitera_1", "hitera_2", "hitera_3", "hitera_4", "hitera_5", "hitera_6",
+            "hitera_7", "hitera_8", "hitera_9", "hitera_10", "hitera_11", "hitera_12",
+            "hitera_13", "hitera_14", "hitera_15", "hitera_16", "hitera_17", "hitera_18",
+            "hitera_19", "hitera_20", "hitera_21", "hitera_22", "hitera_23", "hitera_24",
+            "hitera_25", "hitera_26", "hitera_27", "hitera_28", "hitera_29", "hitera_30",
+            "hitera_31", "hitera_32", "hitera_33", "hitera_34", "hitera_35", "hitera_36",
+            "hitera_37", "hitera_38", "hitera_39", "hitera_40", "hitera_41", "hitera_42",
+            "hitera_43", "hitera_44", "hitera_45", "hitera_46", "hitera_47"
+        };
+        EGVAR(vehicle_damage,slatHitpoints)[] = {};
+    };
+
+    class CUP_M1_Abrams_base;
+    class CUP_M1A2_TUSK_base: CUP_M1_Abrams_base {
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
+            "hitera_l1", "hitera_l2", "hitera_l3", "hitera_l4", "hitera_r1",
+            "hitera_r2", "hitera_r3", "hitera_r4"
+        };
+        EGVAR(vehicle_damage,slatHitpoints)[] = {
+            "hitslat_rear"
+        };
+    };
+
+    class CUP_M1Abrams_Base;
+    class CUP_M1Abrams_TUSK_Base: CUP_M1Abrams_Base {
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
+            "hitera_l01", "hitera_l02", "hitera_l03", "hitera_l04", "hitera_l05",
+            "hitera_l06", "hitera_l07", "hitera_l08", "hitera_l09", "hitera_l10",
+            "hitera_l11", "hitera_l12", "hitera_l13", "hitera_l14", "hitera_l15",
+            "hitera_l16", "hitera_r01", "hitera_r02", "hitera_r03", "hitera_r04",
+            "hitera_r05", "hitera_r06", "hitera_r07", "hitera_r08", "hitera_r09",
+            "hitera_r10", "hitera_r11", "hitera_r12", "hitera_r13", "hitera_r14",
+            "hitera_r15", "hitera_r16"
+        };
+        EGVAR(vehicle_damage,slatHitpoints)[] = {
+            "hitslat_rear"
+        };
+    };
+
+    class CUP_M1Abrams_A2_Base;
+    class CUP_M1Abrams_A2_TUSK_Base: CUP_M1Abrams_A2_Base {
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
+            "hitera_l01", "hitera_l02", "hitera_l03", "hitera_l04", "hitera_l05",
+            "hitera_l06", "hitera_l07", "hitera_l08", "hitera_l09", "hitera_l10",
+            "hitera_l11", "hitera_l12", "hitera_l13", "hitera_l14", "hitera_l15",
+            "hitera_l16", "hitera_l17", "hitera_l18", "hitera_l19", "hitera_l20",
+            "hitera_r01", "hitera_r02", "hitera_r03", "hitera_r04", "hitera_r05",
+            "hitera_r06", "hitera_r07", "hitera_r08", "hitera_r09", "hitera_r10",
+            "hitera_r11", "hitera_r12", "hitera_r13", "hitera_r14", "hitera_r15",
+            "hitera_r16", "hitera_r17", "hitera_r18", "hitera_r19", "hitera_r20"
+        };
+        EGVAR(vehicle_damage,slatHitpoints)[] = {
+            "hitslat_rear"
+        };
+    };
+
+    class CUP_M1A2Abrams_Base;
+    class CUP_M1A2Abrams_TUSK_Base: CUP_M1A2Abrams_Base {
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
+            "hitera_l01", "hitera_l02", "hitera_l03", "hitera_l04", "hitera_l05",
+            "hitera_l06", "hitera_l07", "hitera_l08", "hitera_l09", "hitera_l10",
+            "hitera_l11", "hitera_l12", "hitera_l13", "hitera_l14", "hitera_l15",
+            "hitera_l16", "hitera_r01", "hitera_r02", "hitera_r03", "hitera_r04",
+            "hitera_r05", "hitera_r06", "hitera_r07", "hitera_r08", "hitera_r09",
+            "hitera_r10", "hitera_r11", "hitera_r12", "hitera_r13", "hitera_r14",
+            "hitera_r15", "hitera_r16"
+        };
+        EGVAR(vehicle_damage,slatHitpoints)[] = {
+            "hitslat_rear"
+        };
+    };
+    class CUP_M1A2Abrams_TUSK_II_Base: CUP_M1A2Abrams_TUSK_Base {
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
+            "hitera_l01", "hitera_l02", "hitera_l03", "hitera_l04", "hitera_l05",
+            "hitera_l06", "hitera_l07", "hitera_l08", "hitera_l09", "hitera_l10",
+            "hitera_l11", "hitera_l12", "hitera_l13", "hitera_l14", "hitera_l15",
+            "hitera_l16", "hitera_l17", "hitera_l18", "hitera_l19", "hitera_l20",
+            "hitera_r01", "hitera_r02", "hitera_r03", "hitera_r04", "hitera_r05",
+            "hitera_r06", "hitera_r07", "hitera_r08", "hitera_r09", "hitera_r10",
+            "hitera_r11", "hitera_r12", "hitera_r13", "hitera_r14", "hitera_r15",
+            "hitera_r16", "hitera_r17", "hitera_r18", "hitera_r19", "hitera_r20"
+        };
     };
 };

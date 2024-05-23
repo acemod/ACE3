@@ -1,15 +1,15 @@
 #include "script_component.hpp"
 
-[QGVAR(engineFire), FUNC(engineFire)] call CBA_fnc_addEventHandler;
+[QGVAR(engineFire), LINKFUNC(engineFire)] call CBA_fnc_addEventHandler;
 [QGVAR(cookOff), {
     params ["_vehicle"];
     if (local _vehicle) then {
         _this call FUNC(cookOff);
     };
 }] call CBA_fnc_addEventHandler;
-[QGVAR(cookOffEffect), FUNC(cookOffEffect)] call CBA_fnc_addEventHandler;
-[QGVAR(smoke), FUNC(smoke)] call CBA_fnc_addEventHandler;
-[QGVAR(cookOffBox), FUNC(cookOffBox)] call CBA_fnc_addEventHandler;
+[QGVAR(cookOffEffect), LINKFUNC(cookOffEffect)] call CBA_fnc_addEventHandler;
+[QGVAR(smoke), LINKFUNC(smoke)] call CBA_fnc_addEventHandler;
+[QGVAR(cookOffBox), LINKFUNC(cookOffBox)] call CBA_fnc_addEventHandler;
 
 // handle cleaning up effects when vehicle is deleted mid-cookoff
 [QGVAR(addCleanupHandlers), {

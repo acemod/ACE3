@@ -40,8 +40,10 @@ private _TimeText = _display displayCtrl 1001;
         _pfhID call CBA_fnc_removePerFrameHandler;
     };
 
-    private _hour = floor daytime;
-    private _minute = floor ((daytime - _hour) * 60);
+    private _daytime = dayTime;
+    private _hour = floor _daytime;
+    private _minute = floor ((_daytime - _hour) * 60);
+    private _seconds = floor ((((_daytime - _hour) * 60) - _minute) * 60);
     private _curTime = CBA_missionTime;
     private _timeDiff = _curTime - _prevTime;
 
@@ -52,7 +54,7 @@ private _TimeText = _display displayCtrl 1001;
         0
     };
 
-    _TimeText ctrlSetText (format ["%1:%2", [_hour, 2] call CBA_fnc_formatNumber, [_minute, 2] call CBA_fnc_formatNumber]);
+    _TimeText ctrlSetText (format ["%1:%2:%3", [_hour, 2] call CBA_fnc_formatNumber, [_minute, 2] call CBA_fnc_formatNumber, [_seconds, 2] call CBA_fnc_formatNumber]);
     _HeightText ctrlSetText str floor _height;
     _DecendRate ctrlSetText str (_descentRate max 0);
 

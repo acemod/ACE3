@@ -41,12 +41,12 @@ if (hasInterface) then {
     }, [_light], 0.1] call CBA_fnc_waitAndExecute;
 };
 
-// Affect local AI
+// Affect local AI (players are not local, except for ACE_player)
 // @todo: Affect units in static weapons, turned out, etc
 private _affected = (ASLtoAGL _grenadePosASL) nearEntities ["CAManBase", 20];
 _affected = _affected - [ACE_player];
 {
-    if (local _x && {alive _x}) then {
+    if (local _x && {_x call EFUNC(common,isAwake)}) then {
         private _unit = _x;
         private _strength = 1 - (((eyePos _unit) vectorDistance _grenadePosASL) min 20) / 20;
 
@@ -85,7 +85,7 @@ _affected = _affected - [ACE_player];
             }, [_unit]] call CBA_fnc_waitUntilAndExecute;
         };
     };
-} count _affected;
+} forEach _affected;
 
 // Affect local player, independently of distance
 if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
@@ -118,7 +118,7 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
     };
 
     // add ace_medical pain effect:
-    if (["ace_medical"] call EFUNC(common,isModLoaded) && {_strength > 0.1}) then {
+    if (["ace_medical"] call EFUNC(common,isModLoaded) && {_strength > 0.1} && {isDamageAllowed _unit} && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) then {
         [ACE_player, _strength / 2] call EFUNC(medical,adjustPainLevel);
     };
 
@@ -145,11 +145,11 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
 
         //PARTIALRECOVERY - start decreasing effect over time
         [{
-            params ["_strength"];
+            params ["_strength", "_blend"];
 
-            GVAR(flashbangPPEffectCC) ppEffectAdjust [1,1,0,[1,1,1,0],[0,0,0,1],[0,0,0,0]];
+            GVAR(flashbangPPEffectCC) ppEffectAdjust [1, 1, 0, _blend, [0,0,0,1], [0,0,0,0]];
             GVAR(flashbangPPEffectCC) ppEffectCommit (10 * _strength);
-        }, [_strength], 7 * _strength] call CBA_fnc_waitAndExecute;
+        }, [_strength, _blend], 7 * _strength] call CBA_fnc_waitAndExecute;
 
         //FULLRECOVERY - end effect
         [{

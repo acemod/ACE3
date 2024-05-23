@@ -50,7 +50,7 @@ if (!_doNotDropAmmo) then {
         if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
             _holder = _x;
         };
-    } count ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
+    } forEach ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
 };
 
 //Create a new weapon holder
