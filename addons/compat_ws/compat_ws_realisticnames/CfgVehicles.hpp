@@ -26,8 +26,6 @@ class CfgVehicles {
     class Truck_02_Ammo_base_lxWS: Truck_02_base_F {
         displayName = SUBCSTRING(truck_02_ammo_Name);
     };
-
-    class Truck_02_cargo_base_lxWS;
     class Truck_02_flatbed_base_lxWS: Truck_02_cargo_base_lxWS {
         displayName = SUBCSTRING(truck_02_flatbed_Name);
     };
