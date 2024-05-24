@@ -19,15 +19,15 @@
 params ["_unit", "", "", "", "_oldMagazine"];
 TRACE_2("createMagazine",_unit,_oldMagazine);
 
-if (_unit != ACE_player) exitWith {};
 if (isNil "_oldMagazine") exitWith {};
 _oldMagazine params ["_mag", "_ammo"];
 if (_ammo != 0) exitWith {};
 
 private _modelPath = GVAR(cachedMagazines) getOrDefaultCall [_mag, {
     switch (true) do {
-        case (_mag in compatibleMagazines ["arifle_Mk20_GL_F", "EGLM"]): { "A3\Weapons_F\MagazineProxies\mag_40x36_HE_1rnd.p3d" }; // Should cover most 40x36
-        default { getText (configFile >> "CfgMagazines" >> _mag >> QGVAR(dropModel)) }
+         // Should cover most 40x36
+        case (_mag in compatibleMagazines ["arifle_Mk20_GL_F", "EGLM"]): { "A3\Weapons_F\MagazineProxies\mag_40x36_HE_1rnd.p3d" };
+        default { getText (configFile >> "CfgMagazines" >> _mag >> QGVAR(model)) };
     };
 }, true];
 
