@@ -325,6 +325,7 @@
             <French>Equipement automatique FRIES</French>
             <Portuguese>Auto-equipar FRIES</Portuguese>
             <Russian>Авто-подготовка канатов</Russian>
+            <Spanish>Auto-Equipar FRIES</Spanish>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_autoAddFRIES_description">
             <English>Automatically add FRIES to helicopters that support them.</English>
@@ -336,6 +337,7 @@
             <French>Ajoute automatiquement des FRIES aux hélicoptères qui les supportent.</French>
             <Portuguese>Adiciona automaticamente FRIES a helicópteros que os suportam.</Portuguese>
             <Russian>Автоматически добавляйте канаты в вертолеты, которые их поддерживают.</Russian>
+            <Spanish>Añadir automáticamente el FRIES a los helicópteros que lo soporten.</Spanish>
         </Key>
     </Package>
 </Project>

@@ -11,6 +11,7 @@ PREP(disconnect);
 PREP(dropNozzle);
 PREP(getCapacity);
 PREP(getFuel);
+PREP(getFuelCargo);
 PREP(handleDisconnect);
 PREP(handleRespawn);
 PREP(initSource);
