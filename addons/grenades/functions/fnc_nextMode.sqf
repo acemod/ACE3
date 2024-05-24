@@ -45,6 +45,34 @@ private _hint = localize ([
 
 [_hint] call EFUNC(common,displayTextStructured);
 
+GVAR(thowModePFEH) call CBA_fnc_removePerFrameHandler;
 GVAR(currentThrowMode) = _mode;
+
+if (GVAR(currentThrowMode) == 3) then {
+    GVAR(thowModePFEH) = {
+        private _currentThrowable = currentThrowable ACE_player;
+
+        if (GVAR(currentThrowable) isEqualTo _currentThrowable) exitWith {};
+
+        GVAR(currentThrowable) = _currentThrowable;
+
+        // Make sure grenade can be rolled if in roll mode (detonation time has to be >= 1 second and player isn't in a vehicle)
+        if !(
+            GVAR(currentThrowMode) == 3 &&
+            {_currentThrowable isNotEqualTo []} &&
+            {
+                !isNull objectParent ACE_player ||
+                {getNumber (configFile >> "CfgAmmo" >> getText (configFile >> "CfgMagazines" >> _currentThrowable select 0 >> "ammo") >> "explosionTime") < MIN_EXPLOSION_TIME_FOR_ROLL}
+            }
+        ) exitWith {};
+
+        // Force the user into the normal throw mode
+        // Next throw mode after roll would be drop, which isn't ideal if the user tries to throw unknowingly...
+        [format [LLSTRING(RollGrenadeDisabled), LLSTRING(NormalThrow)], 2.5] call EFUNC(common,displayTextStructured);
+
+        GVAR(thowModePFEH) call CBA_fnc_removePerFrameHandler;
+        GVAR(currentThrowMode) = 0;
+    } call CBA_fnc_addPerFrameHandler;
+};
 
 true
