@@ -220,7 +220,7 @@ if (isServer) then {
     // Formula is designed to have the temperature ramp up quickly and then level out
     _vehicle setVehicleTIPars [
         (_tiEngine + _intensity * 0.01) / 1.005,
-        (_tiWheels + _intensity * 0.004) / 1.002, // wheels//tracks are further away from burning parts
+        (_tiWheels + _intensity * 0.004) / 1.002, // wheels/tracks are further away from burning parts
         (_tiWeapon + _intensity * 0.01) / 1.005
     ];
 }, 0, [_vehicle, _jet, _ring, _startTime, _duration, _light, _fireSelection, _sound, _intensity, _fireKey]] call CBA_fnc_addPerFrameHandler;
