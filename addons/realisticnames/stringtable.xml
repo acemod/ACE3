@@ -700,6 +700,7 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_water_Name">
             <English>KamAZ Water</English>
+            <Portuguese>KamAZ Água</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_MRL_Name">
             <English>KamAZ MRL</English>
@@ -1660,9 +1661,11 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_01_Name">
             <English>CZ 581</English>
+            <Portuguese>CZ 581</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_sawedoff_01_Name">
             <English>CZ 581 (Sawed-Off)</English>
+            <Portuguese>CZ 581 (Cano serrado)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_green_Name">
             <English>FNX-45 Tactical (Green)</English>
@@ -3067,12 +3070,15 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_blk_Name">
             <English>Type 115 (Black)</English>
+            <Portuguese>Type 115 (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_ghex_Name">
             <English>Type 115 (Green Hex)</English>
+            <Portuguese>Type 115 (Verde Hex)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_hex_Name">
             <English>Type 115 (Hex)</English>
+            <Portuguese>Type 115 (Hex)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_blk">
             <English>QBZ-95-1 (Black)</English>
@@ -3860,12 +3866,15 @@
         </Key>
         <Key ID="STR_ACE_RealisticNames_flashlight_Name">
             <English>UTG Defender 126</English>
+            <Portuguese>UTG Defender 126</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_Name">
             <English>EOTech MRDS</English>
+            <Portuguese>EOTech MRDS</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_black_Name">
             <English>EOTech MRDS (Black)</English>
+            <Portuguese>EOTech MRDS (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>
