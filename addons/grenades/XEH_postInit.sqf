@@ -17,7 +17,7 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
 // Add keybinds
 ["ACE3 Weapons", QGVAR(switchGrenadeMode), localize LSTRING(SwitchGrenadeMode), {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotEscorting"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if (!([ACE_player] call CBA_fnc_canUseWeapon)) exitWith {false};
     // Don't change mode or show hint if advanced throwing is active
