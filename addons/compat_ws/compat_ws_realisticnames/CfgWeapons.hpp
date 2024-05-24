@@ -1,4 +1,6 @@
 class CfgWeapons {
+    #include "Attachments.hpp"
+
     // AA12
     class sgun_aa40_base_lxWS;
     class sgun_aa40_lxWS: sgun_aa40_base_lxWS {

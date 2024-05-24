@@ -448,5 +448,107 @@
             <Korean>XMS SW (모래)</Korean>
             <Japanese>XMS SW (サンド)</Japanese>
         </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_arco_hex_Name">
+            <English>ELCAN SpecterOS (Hex)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_holosight_snake_Name">
+            <English>EOTech XPS3 (Snake)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_holosight_snake_smg_Name">
+            <English>EOTech XPS3 SMG (Snake)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_arid_Name">
+            <English>Leupold Mark 4 HAMR (Arid)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_lush_Name">
+            <English>Leupold Mark 4 HAMR (Lush)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_sand_Name">
+            <English>Leupold Mark 4 HAMR (Sand)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_snake_Name">
+            <English>Leupold Mark 4 HAMR (Snake)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_black_Name">
+            <English>Aimpoint Micro R-1 (High, Black)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_khaki_Name">
+            <English>Aimpoint Micro R-1 (High, Khaki)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_sand_Name">
+            <English>Aimpoint Micro R-1 (High, Sand)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_snake_Name">
+            <English>Aimpoint Micro R-1 (High, Snake)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_arid_Name">
+            <English>Aimpoint Micro R-1 (High, Arid)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_lush_Name">
+            <English>Aimpoint Micro R-1 (High, Lush)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_black_Name">
+            <English>Aimpoint Micro R-1 (Low, Black)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_khaki_Name">
+            <English>Aimpoint Micro R-1 (Low, Khaki)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_sand_Name">
+            <English>Aimpoint Micro R-1 (Low, Sand)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_snake_Name">
+            <English>Aimpoint Micro R-1 (Low, Snake)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_arid_Name">
+            <English>Aimpoint Micro R-1 (Low, Arid)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_lush_Name">
+            <English>Aimpoint Micro R-1 (Low, Lush)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_atgm_Name">
+            <English>Badger IFV (ATGM)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_command_Name">
+            <English>Badger IFV (Command)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_mortar_Name">
+            <English>Badger IFV (Mortar)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_aa_Name">
+            <English>KamAZ (Zu-23-2)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_cargo_Name">
+            <English>KamAZ Cargo</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_repair_Name">
+            <English>KamAZ Repair</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_racing_Name">
+            <English>KamAZ Racing</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_ammo_Name">
+            <English>KamAZ Ammo</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_flatbed_Name">
+            <English>KamAZ Flatbed</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_transport_02_Name">
+            <English>AW101 Merlin</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_tracked_02_Name">
+            <English>BM-2T Stalker (Bumerang-BM)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_02_hmg_Name">
+            <English>Otokar ARMA (HMG)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_02_unarmed_Name">
+            <English>Otokar ARMA (Unarmed)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_light_02_armed_Name">
+            <English>Ka-60 Kasatka (UP)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_light_02_unarmed_Name">
+            <English>Ka-60 Kasatka (UP, Unarmed)</English>
+        </Key>
     </Package>
 </Project>
