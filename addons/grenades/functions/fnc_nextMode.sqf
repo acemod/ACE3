@@ -15,7 +15,7 @@
  * Public: No
  */
 
-private _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
+private _mode = GVAR(currentThrowMode);
 
 if (_mode == 4) then {
     _mode = 0;
@@ -23,11 +23,14 @@ if (_mode == 4) then {
     _mode = _mode + 1;
 };
 
-// Skip rolling if throwable can't be rolled (detonation time has to be >= 1 second)
+// Make sure grenade can be rolled if in roll mode (detonation time has to be >= 1 second and player isn't in a vehicle)
 if (
     _mode == 3 &&
-    {GVAR(currentThrowable) select 0 != ""} &&
-    {getNumber (configFile >> "CfgAmmo" >> getText (configFile >> "CfgMagazines" >> GVAR(currentThrowable) select 0 >> "ammo") >> "explosionTime") < MIN_EXPLOSION_TIME_FOR_ROLL}
+    {GVAR(currentThrowable) isNotEqualTo []} &&
+    {
+        !isNull objectParent ACE_player ||
+        {getNumber (configFile >> "CfgAmmo" >> getText (configFile >> "CfgMagazines" >> GVAR(currentThrowable) select 0 >> "ammo") >> "explosionTime") < MIN_EXPLOSION_TIME_FOR_ROLL}
+    }
 ) then {
     _mode = _mode + 1;
 };

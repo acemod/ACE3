@@ -85,7 +85,7 @@ if (getNumber (_config >> QGVAR(incendiary)) == 1) then {
 if (_unit != ACE_player) exitWith {};
 if (_unit getVariable [QEGVAR(advanced_throwing,primed), false]) exitWith {LOG("advanced_throwing throw");};
 
-private _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
+private _mode = GVAR(currentThrowMode);
 
 if (_mode != 0) then {
     private _velocity = velocity _projectile;
