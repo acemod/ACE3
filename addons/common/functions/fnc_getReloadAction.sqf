@@ -18,13 +18,8 @@
 
 params ["_weapon", "_muzzle"];
 
-private _return = GVAR(reloadActionsCache) get [_weapon, _muzzle];
-
-if (isNil "_return") then {
+GVAR(reloadActionsCache) getOrDefaultCall [[_weapon, _muzzle], {
     private _wpnMuzzleCfg = configFile >> "CfgWeapons" >> _weapon;
     if (_muzzle isNotEqualTo _weapon) then { _wpnMuzzleCfg = _wpnMuzzleCfg >> _muzzle};
-    _return = toLower getText (_wpnMuzzleCfg >> "reloadAction");
-    GVAR(reloadMutex_reloadActionsCache) set [[_weapon, _muzzle], _return];
-};
-
-_return
+    toLowerANSI getText (_wpnMuzzleCfg >> "reloadAction") // return
+}, true];
