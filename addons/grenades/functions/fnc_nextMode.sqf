@@ -23,13 +23,15 @@ if (_mode == 4) then {
     _mode = _mode + 1;
 };
 
+private _currentThrowable = currentThrowable ACE_player;
+
 // Make sure grenade can be rolled if in roll mode (detonation time has to be >= 1 second and player isn't in a vehicle)
 if (
     _mode == 3 &&
-    {GVAR(currentThrowable) isNotEqualTo []} &&
+    {_currentThrowable isNotEqualTo []} &&
     {
         !isNull objectParent ACE_player ||
-        {getNumber (configFile >> "CfgAmmo" >> getText (configFile >> "CfgMagazines" >> GVAR(currentThrowable) select 0 >> "ammo") >> "explosionTime") < MIN_EXPLOSION_TIME_FOR_ROLL}
+        {getNumber (configFile >> "CfgAmmo" >> getText (configFile >> "CfgMagazines" >> _currentThrowable select 0 >> "ammo") >> "explosionTime") < MIN_EXPLOSION_TIME_FOR_ROLL}
     }
 ) then {
     _mode = _mode + 1;
@@ -45,11 +47,14 @@ private _hint = localize ([
 
 [_hint] call EFUNC(common,displayTextStructured);
 
-GVAR(thowModePFEH) call CBA_fnc_removePerFrameHandler;
+GVAR(throwModePFEH) call CBA_fnc_removePerFrameHandler;
 GVAR(currentThrowMode) = _mode;
 
+// If in rolling mode, check every frame if current throwable is rollable
 if (GVAR(currentThrowMode) == 3) then {
-    GVAR(thowModePFEH) = {
+    GVAR(currentThrowable) = _currentThrowable;
+
+    GVAR(throwModePFEH) = {
         private _currentThrowable = currentThrowable ACE_player;
 
         if (GVAR(currentThrowable) isEqualTo _currentThrowable) exitWith {};
@@ -70,7 +75,7 @@ if (GVAR(currentThrowMode) == 3) then {
         // Next throw mode after roll would be drop, which isn't ideal if the user tries to throw unknowingly...
         [format [LLSTRING(RollGrenadeDisabled), LLSTRING(NormalThrow)], 2.5] call EFUNC(common,displayTextStructured);
 
-        GVAR(thowModePFEH) call CBA_fnc_removePerFrameHandler;
+        GVAR(throwModePFEH) call CBA_fnc_removePerFrameHandler;
         GVAR(currentThrowMode) = 0;
     } call CBA_fnc_addPerFrameHandler;
 };

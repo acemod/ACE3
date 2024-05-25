@@ -13,7 +13,6 @@ if (!hasInterface) exitWith {};
 
 GVAR(flashbangPPEffectCC) = ppEffectCreate ["ColorCorrections", 4265];
 GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
-GVAR(thowModePFEH) = -1;
 
 // Add keybinds
 ["ACE3 Weapons", QGVAR(switchGrenadeMode), localize LSTRING(SwitchGrenadeMode), {
@@ -34,15 +33,16 @@ GVAR(thowModePFEH) = -1;
     };
 }] call CBA_fnc_addEventHandler;
 
-
 ["vehicle", {
+    private _currentThrowable = currentThrowable ACE_player;
+
     // Make sure grenade can be rolled if in roll mode (detonation time has to be >= 1 second and player isn't in a vehicle)
     if !(
         GVAR(currentThrowMode) == 3 &&
-        {GVAR(currentThrowable) isNotEqualTo []} &&
+        {_currentThrowable isNotEqualTo []} &&
         {
             !isNull objectParent ACE_player ||
-            {getNumber (configFile >> "CfgAmmo" >> getText (configFile >> "CfgMagazines" >> GVAR(currentThrowable) select 0 >> "ammo") >> "explosionTime") < MIN_EXPLOSION_TIME_FOR_ROLL}
+            {getNumber (configFile >> "CfgAmmo" >> getText (configFile >> "CfgMagazines" >> _currentThrowable select 0 >> "ammo") >> "explosionTime") < MIN_EXPLOSION_TIME_FOR_ROLL}
         }
     ) exitWith {};
 
@@ -51,5 +51,5 @@ GVAR(thowModePFEH) = -1;
     [format [LLSTRING(RollGrenadeDisabled), LLSTRING(NormalThrow)], 2.5] call EFUNC(common,displayTextStructured);
 
     GVAR(currentThrowMode) = 0;
-    GVAR(thowModePFEH) call CBA_fnc_removePerFrameHandler;
+    GVAR(throwModePFEH) call CBA_fnc_removePerFrameHandler;
 }, true] call CBA_fnc_addPlayerEventHandler;
