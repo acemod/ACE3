@@ -153,7 +153,7 @@ class CfgAmmo {
     class ACE_G_M14: SmokeShell {
         GVAR(incendiary) = 1;
         model = QPATHTOF(models\ace_anm14th3_armed.p3d);
-        hit = 5;
+        hit = 10;
         indirectHit = 4;
         indirectHitRange = 1.1;
         dangerRadiusHit = 50;

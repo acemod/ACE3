@@ -48,15 +48,7 @@ class CfgVehicles {
     class Car: LandVehicle {
         GVAR(space) = 4;
         GVAR(hasCargo) = 1;
-        class ACE_Cargo {
-            /*
-            class Cargo {
-                class ACE_medicalSupplyCrate {
-                    type = "ACE_medicalSupplyCrate";
-                    amount = 1;
-                };
-            };*/
-        };
+        class ADDON {};
     };
 
     class Tank: LandVehicle {
@@ -75,7 +67,7 @@ class CfgVehicles {
         GVAR(hasCargo) = 1;
     };
 
-    // HEMTTs - Default at 10, some variants are altered based on model size and/or expected level of free space inside.
+    // HEMTTs - Default at 30, some variants are altered based on model size and/or expected level of free space inside.
     class Truck_01_base_F: Truck_F {
         GVAR(space) = 30;
     };
@@ -523,6 +515,7 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
+
         GVAR(space) = 3;
         GVAR(hasCargo) = 1;
         GVAR(size) = 3;

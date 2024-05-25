@@ -101,6 +101,7 @@ if (_delayBetweenSmokeAndFire) then {
         (_this select 0) params ["_vehicle", "_positions", "_ammoDetonationChance", "_detonateAfterCookoff", "_source", "_instigator", "_fireSource", "_canRing", "_canJet", "_smokeJipID", "_fireJipID"];
 
         private _intensity = _vehicle getVariable [QGVAR(intensity), 0];
+        private _nextFlameTime = _vehicle getVariable [QGVAR(nextFlame), 0];
 
         if (
             isNull _vehicle ||
@@ -120,19 +121,42 @@ if (_delayBetweenSmokeAndFire) then {
             // Effects are deleted when vehicle is deleted
             if (isNull _vehicle) exitWith {};
 
+            if (GVAR(destroyVehicleAfterCookoff) || _detonateAfterCookoff) exitWith {
+                if (_fireSource isEqualTo "") then {
+                    _fireSource = selectRandom _positions;
+                };
+
+                if (_nextFlameTime <= 0) then {
+                    _nextFlameTime = MIN_TIME_BETWEEN_FLAMES max random MAX_TIME_BETWEEN_FLAMES;
+                };
+
+                [{
+                    params ["_vehicle", "_source", "_instigator", "_fireSource"];
+
+                    // Effects are deleted when vehicle is deleted
+                    if (isNull _vehicle) exitWith {};
+
+                    // Remove effects
+                    [QGVAR(cleanupEffects), _vehicle] call CBA_fnc_globalEvent;
+
+                    // Reset variable, so it can cook-off again
+                    _vehicle setVariable [QGVAR(isCookingOff), nil, true];
+
+                    createVehicle ["ACE_ammoExplosionLarge", (_vehicle modelToWorld (_vehicle selectionPosition _fireSource)), [], 0 , "CAN_COLLIDE"];
+
+                    _vehicle setDamage [1, true, _source, _instigator]; // because it's running on the server, killer and instigator can be set
+                }, [_vehicle, _source, _instigator, _fireSource], _nextFlameTime] call CBA_fnc_waitAndExecute;
+            };
+
             // Remove effects
             [QGVAR(cleanupEffects), _vehicle] call CBA_fnc_globalEvent;
 
             // Reset variable, so it can cook-off again
             _vehicle setVariable [QGVAR(isCookingOff), nil, true];
-
-            if (GVAR(destroyVehicleAfterCookoff) || _detonateAfterCookoff) then {
-                _vehicle setDamage [1, true, _source, _instigator]; // because it's running on the server, killer and instigator can be set
-            };
         };
 
         // Wait until we are ready for the next flame
-        if (_vehicle getVariable [QGVAR(nextFlame), 0] <= CBA_missionTime) then {
+        if (_nextFlameTime <= CBA_missionTime) then {
             private _ring = false;
 
             if (_canRing) then {
