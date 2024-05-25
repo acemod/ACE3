@@ -46,6 +46,9 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
         }
     ) exitWith {};
 
+    // If the player can't use throwables, don't change it
+    if !(ACE_player call CBA_fnc_canUseWeapon) exitWith {};
+
     // Force the user into the normal throw mode
     // Next throw mode after roll would be drop, which isn't ideal if the user tries to throw unknowingly...
     [format [LLSTRING(RollGrenadeDisabled), LLSTRING(NormalThrow)], 2.5] call EFUNC(common,displayTextStructured);
