@@ -7,7 +7,7 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 GVAR(currentThrowMode) = 0;
-GVAR(currentThrowable) = [];
+GVAR(throwModePFEH) = -1;
 
 #include "initSettings.inc.sqf"
 
