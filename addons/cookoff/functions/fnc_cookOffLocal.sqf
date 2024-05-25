@@ -16,7 +16,7 @@
  * None
  *
  * Example:
- * [vehicle player, true, false, "commander_turret", 6, CBA_missionTime, 15] call ace_cookoff_fnc_cookOffEffect
+ * [cursorObject, true, false, "commander_turret", 6, CBA_missionTime, 15] call ace_cookoff_fnc_cookOffLocal
  *
  * Public: No
  */
@@ -25,6 +25,9 @@
 #define FIRE_INTENSITY 6
 
 params ["_vehicle", "_jet", "_ring", "_fireSelection", "_intensity", "_startTime", "_duration"];
+
+// Check if still valid for JIP players
+if (isNull _vehicle || {CBA_missionTime - _startTime >= _duration}) exitWith {};
 
 // Spawn light
 private _light = objNull;

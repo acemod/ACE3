@@ -27,4 +27,4 @@ if (((_vehicle call EFUNC(cookoff,getVehicleAmmo)) select 1) > 0) then {
     } forEach crew _vehicle;
 };
 
-[QEGVAR(cookoff,detonateAmmunition), [_vehicle, false, _injurer, _injurer]] call CBA_fnc_serverEvent;
+[QEGVAR(cookoff,detonateAmmunitionServer), [_vehicle, false, _injurer, _injurer]] call CBA_fnc_serverEvent;

@@ -7,7 +7,7 @@
  * 0: Magazine <STRING>
  *
  * Return Value:
- * 0: If magazine is type of flare <BOOL>
+ * If magazine is type of flare <BOOL>
  *
  * Example:
  * "3Rnd_UGL_FlareWhite_F" call ace_cookoff_fnc_isMagazineFlare

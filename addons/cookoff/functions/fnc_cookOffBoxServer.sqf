@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * cursorObject call ace_cookoff_fnc_cookOffBox
+ * cursorObject call ace_cookoff_fnc_cookOffBoxServer
  *
  * Public: No
  */
@@ -32,15 +32,17 @@ if (_box getVariable [QGVAR(isCookingOff), false]) exitWith {};
 
 _box setVariable [QGVAR(isCookingOff), true, true];
 
-// Spawn cook-off effects on all connected machines
+// Spawn cook-off effects on all connected machines and JIP
 private _jipID = [QGVAR(cookOffBoxLocal), [
     _box,
     _source,
     _instigator,
-    CBA_missionTime,
-    random [SMOKE_DELAY / 2, SMOKE_DELAY, SMOKE_DELAY / 2 * 3] // generate random timer that is global synced
+    CBA_missionTime + random [SMOKE_DELAY / 2, SMOKE_DELAY, SMOKE_DELAY / 2 * 3] // generate random timer that is globally synced
 ]] call CBA_fnc_globalEventJIP;
 
 [_jipID, _box] call CBA_fnc_removeGlobalEventJIP;
 
 _box setVariable [QGVAR(jipIDs), [_jipID]];
+
+// API
+[QGVAR(cookOffBox), [_box, _source, _instigator]] call CBA_fnc_globalEvent;

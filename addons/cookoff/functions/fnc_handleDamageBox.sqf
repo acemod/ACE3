@@ -53,7 +53,7 @@ if ((getNumber (_ammoConfig >> "explosive") >= 0.5) || {getNumber (_ammoConfig >
         private _tracers = getNumber (_configMagazine >> "tracersEvery");
 
         if (_tracers >= 1 && {_tracers <= 4}) then {
-            [QGVAR(cookOffBox), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
+            [QGVAR(cookOffBoxServer), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
         };
     };
 };

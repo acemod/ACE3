@@ -5,12 +5,13 @@
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
+ * 1: End time <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * cursorObject call ace_cookoff_fnc_engineFireLocal
+ * [cursorObject, CBA_missionTime + 10] call ace_cookoff_fnc_engineFireLocal
  *
  * Public: No
  */
