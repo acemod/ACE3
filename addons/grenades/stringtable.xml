@@ -104,7 +104,7 @@
             <Turkish>Bombayı Yere Bırak</Turkish>
         </Key>
         <Key ID="STR_ACE_Grenades_RollGrenadeDisabled">
-            <English>This grenade can't be rolled, switched to %1</English>
+            <English>Can't roll this grenade, switched to %1</English>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_Name">
             <English>M84 Stun Grenade</English>

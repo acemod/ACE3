@@ -73,7 +73,7 @@ if (GVAR(currentThrowMode) == 3) then {
 
         // Force the user into the normal throw mode
         // Next throw mode after roll would be drop, which isn't ideal if the user tries to throw unknowingly...
-        [format [LLSTRING(RollGrenadeDisabled), LLSTRING(NormalThrow)], 2.5] call EFUNC(common,displayTextStructured);
+        [format [LLSTRING(RollGrenadeDisabled), LLSTRING(NormalThrow)], 2] call EFUNC(common,displayTextStructured);
 
         GVAR(throwModePFEH) call CBA_fnc_removePerFrameHandler;
         GVAR(currentThrowMode) = 0;
