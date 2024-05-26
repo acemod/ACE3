@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_RF_RealisticNames">
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_mrd_khk_Name">
+            <English>EOTech MRDS (Khaki)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_mrd_tan_Name">
+            <English>EOTech MRDS (Tan)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_desert_Name">
+            <English>C-More Railway (Green, Desert)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_wood_Name">
+            <English>C-More Railway (Green, Woodland)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_desert_Name">
+            <English>C-More Railway (Red, Desert)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_wood_Name">
+            <English>C-More Railway (Red, Woodland)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_rds_Name">
+            <English>Aimpoint Micro R-1 Reflex</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_Name">
+            <English>Vortex Spitfire Prism</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_tan_Name">
+            <English>Vortex Spitfire Prism (Tan)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_khk_Name">
+            <English>Vortex Spitfire Prism (Khaki)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_Name">
+            <English>Glock 19X</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_khk_Name">
+            <English>Glock 19X (Khaki)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_tan_Name">
+            <English>Glock 19X (Tan)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_Name">
+            <English>Glock 19X Auto</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_khk_Name">
+            <English>Glock 19X Auto (Khaki)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_tan_Name">
+            <English>Glock 19X Auto (Tan)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_Name">
+            <English>Desert Eagle Mark XIX</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_classic_Name">
+            <English>Desert Eagle Mark XIX (Classic)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_bronze_Name">
+            <English>Desert Eagle Mark XIX (Bronze)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_copper_Name">
+            <English>Desert Eagle Mark XIX (Copper)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_gold_Name">
+            <English>Desert Eagle Mark XIX (Gold)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_tan_Name">
+            <English>Hera H6 (Tan)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_oli_Name">
+            <English>Hera H6 (Olive)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_blk_Name">
+            <English>Hera H6 (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_digi_Name">
+            <English>Hera H6 (Digital)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_gold_Name">
+            <English>Hera H6 (Gold)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_dmr_01_black_Name">
+            <English>VS-121 (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_dmr_01_tan_Name">
+            <English>VS-121 (Tan)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_smg_01_black_Name">
+            <English>Vector SMG (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_blk_Name">
+            <English>ASh-12 (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_desert_Name">
+            <English>ASh-12 (Desert)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_urban_Name">
+            <English>ASh-12 (Urban)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_wood_Name">
+            <English>ASh-12 (Woodland)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_blk_Name">
+            <English>ASh-12 GL (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_desert_Name">
+            <English>ASh-12 GL (Desert)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_urban_Name">
+            <English>ASh-12 GL (Urban)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_wood_Name">
+            <English>ASh-12 GL (Woodland)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_blk_Name">
+            <English>ASh-12 LR (Black)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_desert_Name">
+            <English>ASh-12 LR (Desert)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_urban_Name">
+            <English>ASh-12 LR (Urban)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_wood_Name">
+            <English>ASh-12 LR (Woodland)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_Name">
+            <English>AW159 Wildcat</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_unarmed_Name">
+            <English>AW159 Wildcat (Unarmed)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_military_Name">
+            <English>H225M Super Cougar HADR</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_base_Name">
+            <English>H225M Super Cougar Transport</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_Name">
+            <English>H225 Super Puma Transport</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_Name">
+            <English>H225 Super Puma VIP</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_Name">
+            <English>H225M Super Cougar SOCAT</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_03_Name">
+            <English>H225M Super Cougar CSAR</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_Name">
+            <English>H225 Super Puma SAR</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_water_Name">
+            <English>Typhoon Water</English>
+        </Key>
+    </Package>
+</Project>
