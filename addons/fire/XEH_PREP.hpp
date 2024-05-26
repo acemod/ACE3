@@ -5,6 +5,6 @@ PREP(burnReaction);
 PREP(burnSimulation);
 PREP(fireManagerPFH);
 PREP(isBurning);
+PREP(medical_canPatDown);
 PREP(medical_progress);
 PREP(medical_success);
-PREP(medical_canPatDown);
