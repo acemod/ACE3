@@ -212,6 +212,6 @@ if (isServer) then {
 } forEach (_position nearObjects DESTRUCTION_RADIUS);
 
 {
-    // --- damage vehicles (locality is checked in FUNC(damageEngineAndWheels))
+    // Damage vehicles (locality is checked in FUNC(damageEngineAndWheels))
     [_x, _position] call FUNC(damageEngineAndWheels);
 } forEach (_position nearEntities ["Car", SEARCH_RADIUS]);
