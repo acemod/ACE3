@@ -4,7 +4,7 @@
  * Makes flare shine.
  *
  * Arguments:
- * 0: The flare <OBJECT>
+ * 0: Flare <OBJECT>
  * 1: Color of flare <ARRAY>
  * 2: Intensity of flare <NUMBER>
  * 3: Flare lifetime <OBJECT>

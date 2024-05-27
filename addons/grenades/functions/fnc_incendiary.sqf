@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Makes incendiary burn.
+ * Makes an incendiary grenade burn.
  *
  * Arguments:
  * 0: Incendiary grenade <OBJECT>

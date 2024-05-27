@@ -77,6 +77,9 @@
             <Spanish>Habilitado y poder diagnosticar Muerte/Parada cardíaca</Spanish>
             <Italian>Abilitato e può diagnosticare Morte/Arresto Cardiaco</Italian>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrestDirect">
+            <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest [Directly]</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
             <German>Erweiterte Medikation</German>
@@ -4153,6 +4156,9 @@
             <Chinese>%1 沒有反應</Chinese>
             <Turkish>%1 tepki vermiyor</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Check_Response_UnresponsiveDirect">
+            <English>%1 is unconscious</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrest">
             <English>%1 is not responsive, taking shallow gasps and convulsing</English>
             <French>%1 est inconscient, respire par intermittence et convulse.</French>
@@ -4165,6 +4171,9 @@
             <Russian>%1 не реагирует на раздражители, поверхностно дышит, в конвульсиях</Russian>
             <Spanish>%1 no responde, dando pequeñas bocanadas y convulsionando</Spanish>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrestDirect">
+            <English>%1 is in cardiac arrest</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
             <French>%1 est inconscient, inanimé et froid.</French>
@@ -4176,6 +4185,9 @@
             <Korean>%1 은 반응이 없고, 움직임이 없으며 차갑습니다</Korean>
             <Russian>%1 не реагирует на раздражители, не шевелится и холодный</Russian>
             <Spanish>%1 no responde, sin movimiento y frío</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Check_Response_DeadDirect">
+            <English>%1 is dead</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
