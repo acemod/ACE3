@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+#include "script_component.hpp"
 /*
- * Author: tcvm
+ * Author: Dani (TCVM)
  * Attaches the sighting unit to the Dragon missile.
  *
  * Arguments:

@@ -38,8 +38,9 @@ class CfgAmmo {
         EGVAR(vehicle_damage,incendiary) = 1.0;
 
         class ace_missileguidance {
-            pitchRate = 0;
-            yawRate = 0;
+            minDeflection = 0;
+            maxDeflection = 0;
+            incDeflection = 0;
 
             canVanillaLock = 0;
 
@@ -49,9 +50,6 @@ class CfgAmmo {
 
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
-
-            defaultNavigationType = "LineOfSight";
-            navigationTypes[] = { "LineOfSight" };
 
             seekLastTargetPos = 0;
             seekerAngle = 30;
@@ -83,9 +81,6 @@ class CfgAmmo {
 
         class ace_missileguidance {
             enabled = 1;
-
-            pitchRate = 0;
-            yawRate = 0;
 
             // Guidance type for munitions
             defaultSeekerType = "SACLOS";
