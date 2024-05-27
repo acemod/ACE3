@@ -29,14 +29,18 @@ if (_loaded isNotEqualTo []) then {
     // Delete all cargo
     {
         if (_x isEqualType objNull) then {
+            private _delete = true;
+
             if (_killed && {random 100 < GVAR(unloadOnKilled)}) then {
-                [_x, _object] call ace_cargo_fnc_unloadItem;
-            } else {
+                _delete = !([_x, _object] call ace_cargo_fnc_unloadItem); // If a safe position to unload cannot be found fnc_unloadItem returns false, delete cargo instead
+            };
+
+            if (_delete) then {
                 detach _x;
                 deleteVehicle _x;
             };
         };
-    } forEach _loaded;
+    } forEachReversed _loaded;
 
     // In case vehicle is killed, but not deleted, reset loaded list
     _object setVariable [QGVAR(loaded), [], true];
