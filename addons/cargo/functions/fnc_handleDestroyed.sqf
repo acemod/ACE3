@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: mharis001, Glowbal
+ * Author: mharis001, Glowbal, drofseh
  * Handles an object being destroyed/deleted.
  * If object contained loaded cargo, the cargo is deleted.
  * If object was loaded cargo, it's removed from loaded cargo list.
@@ -19,14 +19,22 @@
 
 params ["_object"];
 
+private _killed = false;
+
+if (count _this > 1) then {_killed = true}; // The Killed event has 4 params. The Deleted event only has 1 param.
+
 private _loaded = _object getVariable [QGVAR(loaded), []];
 
 if (_loaded isNotEqualTo []) then {
     // Delete all cargo
     {
         if (_x isEqualType objNull) then {
-            detach _x;
-            deleteVehicle _x;
+            if (_killed && {random 100 < GVAR(unloadOnKilled)}) then {
+                [_x, _object] call ace_cargo_fnc_unloadItem;
+            } else {
+                detach _x;
+                deleteVehicle _x;
+            };
         };
     } forEach _loaded;
 

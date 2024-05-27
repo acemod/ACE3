@@ -498,6 +498,12 @@
             <Czech>Upravuje jak dlouho výsadek trvá pro náklad.</Czech>
             <Spanish>Modificador de tiempo de lanzamiento en paracaídas de un objeto cargado</Spanish>
         </Key>
+        <Key ID="STR_ACE_Cargo_unloadOnKilled">
+            <English>Unload Cargo On Killed</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_unloadOnKilled_description">
+            <English>The chance for each cargo loaded into a vehicle to be unloaded if the vehicle is killed.</English>
+        </Key>
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient">
             <English>Load Time Coefficient</English>
             <German>Ladezeitmultiplikator</German>

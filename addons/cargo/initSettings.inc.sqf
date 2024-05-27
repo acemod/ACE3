@@ -31,6 +31,16 @@ private _category = [ELSTRING(main,Category_Logistics), LSTRING(openMenu)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(unloadOnKilled),
+    "SLIDER",
+    [LSTRING(unloadOnKilled), LSTRING(unloadOnKilled_description)],
+    _category,
+    [0, 100, 1, 0],
+    1,
+    {[QGVAR(unloadOnKilled), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(openAfterUnload),
     "LIST",
     [LSTRING(openAfterUnload), LSTRING(openAfterUnload_description)],
