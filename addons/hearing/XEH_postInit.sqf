@@ -14,7 +14,7 @@ if (!hasInterface) exitWith {};
 
 #include "initKeybinds.inc.sqf"
 
-GVAR(cacheAmmoLoudness) = call CBA_fnc_createNamespace;
+GVAR(cacheAmmoLoudness) = createHashMap;
 
 GVAR(deafnessDV) = 0;
 GVAR(deafnessPrior) = 0;

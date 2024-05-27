@@ -103,6 +103,9 @@
             <Chinese>下丟投擲</Chinese>
             <Turkish>Bombayı Yere Bırak</Turkish>
         </Key>
+        <Key ID="STR_ACE_Grenades_RollGrenadeDisabled">
+            <English>Can't roll this grenade, switched to %1</English>
+        </Key>
         <Key ID="STR_ACE_Grenades_M84_Name">
             <English>M84 Stun Grenade</English>
             <German>M84 Blendgranate</German>
