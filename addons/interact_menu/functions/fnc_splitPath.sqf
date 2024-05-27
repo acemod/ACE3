@@ -17,11 +17,13 @@
  */
 
 private _parentPath = [];
-for [{private _i = 0},{_i < (count _this) - 1},{_i = _i + 1}] do {
-    _parentPath pushBack (_this select _i);
-};
-private _actionName = if (count _this > 0) then {
-    _this select ((count _this) - 1);
+
+_parentPath append _this;
+
+private _count = count _this;
+
+private _actionName = if (_count > 0) then {
+    _parentPath deleteAt (_count - 1) // TODO: replace with _parentPath deleteAt [-1] and drop _count in 2.18
 } else {
     ""
 };
