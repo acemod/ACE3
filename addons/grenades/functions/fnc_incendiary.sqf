@@ -195,7 +195,7 @@ if (isServer) then {
     if (_x isKindOf "WeaponHolder" || {_x isKindOf "WeaponHolderSimulated"}) then {
         deleteVehicle _x;
     };
-} forEach ((_position nearObjects DESTRUCTION_RADIUS) select {local _x && {isDamageAllowed _x}});
+} forEach ((_position nearObjects DESTRUCTION_RADIUS) select {local _x});
 
 // --- damage local vehicle
 private _vehicle = _position nearestObject "Car";
