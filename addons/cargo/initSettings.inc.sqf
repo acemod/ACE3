@@ -35,7 +35,7 @@ private _category = [ELSTRING(main,Category_Logistics), LSTRING(openMenu)];
     "SLIDER",
     [LSTRING(unloadOnKilled), LSTRING(unloadOnKilled_description)],
     _category,
-    [0, 100, 1, 0],
+    [0, 1, 0, 1, true], // [_min, _max, _default, _trailingDecimals, _isPercentage]
     1,
     {[QGVAR(unloadOnKilled), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
 ] call CBA_fnc_addSetting;
