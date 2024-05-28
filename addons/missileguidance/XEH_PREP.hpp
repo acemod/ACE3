@@ -25,7 +25,6 @@ PREP(attackProfile_LIN);
 PREP(attackProfile_LOFT);
 PREP(attackProfile_WIRE);
 PREP(attackProfile_BEAM);
-PREP(attackProfile_JDAM);
 
 // Javelin profiles
 PREP(attackProfile_JAV_DIR);
@@ -51,6 +50,10 @@ PREP(wire_onFired);
 
 // Seeker OnFired
 PREP(SACLOS_onFired);
+<<<<<<< HEAD
+=======
+PREP(doppler_onFired);
+>>>>>>> 79f28b99e (Isolate doppler)
 PREP(mwr_onFired);
 
 // Navigation OnFired
