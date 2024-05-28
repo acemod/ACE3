@@ -80,14 +80,6 @@ class GVAR(SeekerTypes) {
         functionName = QFUNC(seekerType_SACLOS);
         onFired = QFUNC(SACLOS_onFired);
     };
-    class MCLOS {
-        name = "";
-        visualName = "";
-        description = "";
-
-        functionName = QFUNC(seekerType_MCLOS);
-        onFired = QFUNC(MCLOS_onFired);
-    };
     class MillimeterWaveRadar {
         name = "";
         visualName = "";
