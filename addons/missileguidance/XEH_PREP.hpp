@@ -51,7 +51,6 @@ PREP(wire_onFired);
 
 // Seeker OnFired
 PREP(SACLOS_onFired);
-PREP(doppler_onFired);
 PREP(mwr_onFired);
 
 // Navigation OnFired
