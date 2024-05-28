@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * NLAW missile guidance attack profile.
@@ -56,5 +56,5 @@ if ((count _test) > 0) then {
 };
 #endif
 
-// TRACE_1("Adjusted target position", _returnTargetPos);
+// TRACE_1("Adjusted target position",_returnTargetPos);
 _returnTargetPos;
