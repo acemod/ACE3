@@ -35,4 +35,4 @@ if (_displayHint) then {
 // No Earplugs in inventory, telling user
 //[localize LSTRING(NoPlugs)] call EFUNC(common,displayTextStructured);
 
-[] call FUNC(updateHearingProtection);
+UPDATE_HEARING_EARPLUGS call FUNC(updateHearingProtection);

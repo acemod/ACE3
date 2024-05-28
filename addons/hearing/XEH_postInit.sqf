@@ -67,10 +67,16 @@ GVAR(lastPlayerVehicle) = objNull;
             private _firedEH = _oldPlayer getVariable [QGVAR(firedEH), -1];
             _oldPlayer removeEventHandler ["FiredNear", _firedEH];
             _oldPlayer setVariable [QGVAR(firedEH), nil];
+
             private _explosionEH = _oldPlayer getVariable [QGVAR(explosionEH), -1];
             _oldPlayer removeEventHandler ["Explosion", _explosionEH];
             _oldPlayer setVariable [QGVAR(explosionEH), nil];
-            TRACE_3("removed unit eh",_oldPlayer,_firedEH,_explosionEH);
+
+            private _slotItemChangedEH = _oldPlayer getVariable [QGVAR(slotItemChangedEH), -1];
+            _oldPlayer removeEventHandler ["SlotItemChanged", _slotItemChangedEH];
+            _oldPlayer setVariable [QGVAR(slotItemChangedEH), nil];
+
+            TRACE_4("removed unit eh",_oldPlayer,_firedEH,_explosionEH,_slotItemChangedEH);
         };
         // Don't add a new EH if the unit respawned
         if ((_player getVariable [QGVAR(firedEH), -1]) == -1) then {
@@ -79,17 +85,20 @@ GVAR(lastPlayerVehicle) = objNull;
             };
             private _firedEH = _player addEventHandler ["FiredNear", {call FUNC(firedNear)}];
             _player setVariable [QGVAR(firedEH), _firedEH];
+
             private _explosionEH = _player addEventHandler ["Explosion", {call FUNC(explosionNear)}];
             _player setVariable [QGVAR(explosionEH), _explosionEH];
-            TRACE_3("added unit eh",_player,_firedEH,_explosionEH);
+
+            // Update protection on possible helmet change
+            private _slotItemChangedEH = _player addEventHandler ["SlotItemChanged", {(_this select 2) call FUNC(updateHearingProtection)}];
+            _player setVariable [QGVAR(slotItemChangedEH), _slotItemChangedEH];
+
+            TRACE_4("added unit eh",_player,_firedEH,_explosionEH,_slotItemChangedEH);
         };
 
         GVAR(deafnessDV) = 0;
         GVAR(deafnessPrior) = 0;
         GVAR(time3) = 0;
-        [] call FUNC(updateHearingProtection);
+        UPDATE_HEARING_EARPLUGS call FUNC(updateHearingProtection);
     }, true] call CBA_fnc_addPlayerEventHandler;
-
-    // Update protection on possible helmet change
-    ["loadout", LINKFUNC(updateHearingProtection), false] call CBA_fnc_addPlayerEventHandler;
 }] call CBA_fnc_addEventHandler;
