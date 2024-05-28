@@ -54,11 +54,7 @@ PREP(gps_attackOnFired);
 // Seeker OnFired
 PREP(SACLOS_onFired);
 PREP(mwr_onFired);
-<<<<<<< HEAD
-=======
-PREP(IR_onFired);
 PREP(gps_seekerOnFired);
->>>>>>> parent of 744cd45ee (remove gps definitions)
 
 // Navigation OnFired
 PREP(proNav_onFired);
