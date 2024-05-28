@@ -17,12 +17,17 @@
  * Public: No
  */
 
+// Ignore spectators, curators and alike
+if ((getNumber (configOf ACE_player>> "isPlayableLogic")) == 1) exitWith {};
+
 params ["_projectile", "_pos"];
 
 // Don't allow for distances under 1
 private _distance = ((eyePos ACE_player) vectorDistance _pos) max 1;
-if (_distance > 100) exitWith {}; // fast exit if explosion far away
-if ((getNumber (configOf ACE_player>> "isPlayableLogic")) == 1) exitWith {};  
+
+// Fast exit if explosion far away
+if (_distance > 100) exitWith {};
+
 private _ammoConfig = configOf _projectile;
 private _audibleFire = getNumber (_ammoConfig >> "audibleFire");
 private _explosive = getNumber (_ammoConfig >> "explosive") * 300;
@@ -42,5 +47,5 @@ private _strength = _vehAttenuation * _audibleFire / _distance * _explosive;
 
 TRACE_2("adjusted distance",_distance,_strength);
 
-// Call inmediately, as it will get pick up later anyway by the update thread
-[_strength] call FUNC(earRinging);
+// Call immediately, as it will get pick up later anyway by the update thread
+_strength call FUNC(earRinging);
