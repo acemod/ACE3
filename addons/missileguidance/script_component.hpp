@@ -29,7 +29,3 @@
 #define DEFAULT_LEAD_DISTANCE 5
 #define ACTIVE_RADAR_POLL_FREQUENCY (1 / 7)
 #define ACTIVE_RADAR_MINIMUM_SCAN_AREA 30
-<<<<<<< HEAD
-=======
-
->>>>>>> 79f28b99e (Isolate doppler)
