@@ -16,6 +16,8 @@
  * Public: No
  */
 
+if (isGamePaused) exitWith {};
+
 if (!alive ACE_player) exitWith {
     if (missionNameSpace getVariable [QGVAR(disableVolumeUpdate), false]) exitWith {};
     TRACE_1("dead - removing hearing effects",ACE_player);
@@ -36,7 +38,6 @@ if (!_justUpdateVolume) then {
         if (CBA_missionTime - GVAR(time3) < 3) exitWith {};
         GVAR(time3) = CBA_missionTime;
 
-        if (!isGameFocused) exitWith {};
         if (GVAR(deafnessDV) > 19.75) then {
             playSound (["ACE_Combat_Deafness_Heavy", "ACE_Combat_Deafness_Heavy_NoRing"] select GVAR(DisableEarRinging));
         } else {
