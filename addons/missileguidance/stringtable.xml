@@ -205,5 +205,17 @@
             <Chinese>循環切換開火模式</Chinese>
             <Turkish>Ateşleme Modunu Değiştir</Turkish>
         </Key>
+        <Key ID="STR_ACE_MissileGuidance_mclosUp">
+            <English>MCLOS Up</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_mclosDown">
+            <English>MCLOS Down</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_mclosRight">
+            <English>MCLOS Right</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_mclosLeft">
+            <English>MCLOS Left</English>
+        </Key>
     </Package>
 </Project>
