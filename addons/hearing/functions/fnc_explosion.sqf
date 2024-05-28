@@ -21,6 +21,8 @@ params ["_projectile", "_pos"];
 
 // Don't allow for distances under 1
 private _distance = ((eyePos ACE_player) vectorDistance _pos) max 1;
+if (_distance > 100) exitWith {}; // fast exit if explosion far away
+if ((getNumber (configOf ACE_player>> "isPlayableLogic")) == 1) exitWith {};  
 private _ammoConfig = configOf _projectile;
 private _audibleFire = getNumber (_ammoConfig >> "audibleFire");
 private _explosive = getNumber (_ammoConfig >> "explosive") * 300;
