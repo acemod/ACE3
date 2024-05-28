@@ -7,7 +7,7 @@
  * Guidance Arg Array <ARRAY>
  *
  * Return Value:
- * None
+ * Navigation Parameters <ARRAY>
  *
  * Example:
  * [] call ace_nlaw_fnc_onFired
@@ -19,7 +19,7 @@ params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_statePa
 _firedEH params ["_shooter","","","","","","_projectile"];
 _launchParams params ["","_targetLaunchParams","","_attackProfile"];
 _targetLaunchParams params ["_target"];
-_stateParams params ["", "_seekerStateParams", "_attackProfileStateParams"];
+_stateParams params ["", "", "", "", "_navigationParams"];
 
 // Reset _launchPos origin as projectile's height instead of player's foot
 _targetLaunchParams set [2, getPosASL _projectile];
@@ -27,7 +27,7 @@ _targetLaunchParams set [2, getPosASL _projectile];
 // Get state params:
 TRACE_3("start of attack profile",_attackProfile,_shooter,vectorDir _projectile);
 
-private _firedLOS = vectorDir _projectile;
+private _firedLOS = _shooter weaponDirection (currentWeapon _shooter);
 private _yawChange = 0;
 private _pitchChange = 0;
 
@@ -52,15 +52,19 @@ if (_shooter == ACE_player) then {
 };
 
 // Limit Max Deflection
-_yawChange = -10 max _yawChange min 10;
-_pitchChange = -10 max _pitchChange min 10;
+//_yawChange = -10 max _yawChange min 10;
+//_pitchChange = -10 max _pitchChange min 10;
 
-_seekerStateParams set [2, _yawChange];
-_seekerStateParams set [3, _pitchChange];
-_seekerStateParams set [4, CBA_missionTime]
+((velocity _projectile) call CBA_fnc_vect2polar) params ["", "_currentYaw", "_currentPitch"];
+((ACE_player weaponDirection (currentWeapon ACE_player)) call CBA_fnc_vect2Polar) params ["", "_yaw", "_pitch"];
 
-TRACE_3("attackProfileStateParams",_firedLOS,_yawChange,_pitchChange);
-_attackProfileStateParams set [0, CBA_missionTime];
-_attackProfileStateParams set [1, _firedLOS];
-_attackProfileStateParams set [2, _yawChange];
-_attackProfileStateParams set [3, _pitchChange];
+TRACE_5("attackProfileStateParams",_firedLOS,_yawChange,_pitchChange,_currentPitch,_currentYaw);
+_navigationParams set [0, _yawChange];
+_navigationParams set [1, _pitchChange];
+_navigationParams set [2, _currentPitch]; // last pitch
+_navigationParams set [3, _currentYaw]; // last yaw
+_navigationParams set [4, _pitch]; // initial pitch
+_navigationParams set [5, 0]; // whether or not to zero out the pitch
+_navigationParams set [6, 0];
+_navigationParams
+
