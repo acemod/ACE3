@@ -48,7 +48,6 @@ PREP(seekerType_SACLOS);
 PREP(seekerType_MCLOS);
 PREP(seekerType_Doppler);
 PREP(seekerType_MWR);
-PREP(seekerType_IR);
 
 // Attack Profiles OnFired
 PREP(wire_onFired);
@@ -58,7 +57,6 @@ PREP(SACLOS_onFired);
 PREP(MCLOS_onFired);
 PREP(doppler_onFired);
 PREP(mwr_onFired);
-PREP(IR_onFired);
 
 // Navigation OnFired
 PREP(proNav_onFired);
