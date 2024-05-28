@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+#include "script_component.hpp"
 /*
- * Author: tcvm
+ * Author: Dani (TCVM)
  * Determines if you can pick-up the Dragon missile. If the missile was fired you will not be able to pick up the tripod.
  *
  * Arguments:
@@ -21,4 +21,5 @@ params ["_target", "_unit"];
 && {!alive (gunner _target)}
 && {!(_target getVariable [QGVAR(fired), false])}
 && {!(_target getVariable [QGVAR(sightAttached), ((typeOf _target) == QGVAR(staticAssembled))])}
-&& EFUNC(csw,canPickupTripod)
+&& EFUNC(csw,assemble_canPickupTripod)
+

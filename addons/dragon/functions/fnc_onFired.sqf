@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+#include "script_component.hpp"
 /*
- * Author: tcvm
+ * Author: Dani (TCVM)
  * Runs when Dragon is fired
  *
  * Arguments:

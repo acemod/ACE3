@@ -1,4 +1,4 @@
-#include "..\script_component.hpp"
+#include "script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the track key being held down.
@@ -74,7 +74,7 @@ playSound "ACE_Sound_Click";
     _args set [1, _yaw];
     _args set [2, _pitch];
 
-    #ifdef DRAW_NLAW_INFO
+    #ifdef DEBUG_MODE_FULL
     hintSilent format ["Instantaneous\nYaw: %1\n Pitch: %2\nGVAR\nYaw: %3\nPitch: %4", _yawChange, _pitchChange, GVAR(yawChange), GVAR(pitchChange)];
     #endif
 }, .25, [CBA_missionTime, _yaw, _pitch, true]] call CBA_fnc_addPerFrameHandler;

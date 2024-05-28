@@ -12,9 +12,3 @@ class EGVAR(missileguidance,SeekerTypes) {
         functionName = QFUNC(seeker);
     };
 };
-class EGVAR(missileguidance,NavigationTypes) {
-    class GVAR(PLOS) {
-        functionName = QFUNC(navigation);
-        onFired = QFUNC(navigation_onFired);
-    };
-};

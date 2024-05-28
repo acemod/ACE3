@@ -1,6 +1,6 @@
-#include "..\script_component.hpp"
+#include "script_component.hpp"
 /*
- * Author: tcvm (Code inspired by NouberNou's Dragon Guidance)
+ * Author: Dani (TCVM) (Code inspired by NouberNou's Dragon Guidance)
  * Attack profile: Dragon Guidance
  *
  * Arguments:

@@ -3,4 +3,4 @@
 
 if (!hasInterface) exitWith {};
 
-#include "initKeybinds.inc.sqf"
+#include "initKeybinds.sqf"

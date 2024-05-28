@@ -20,20 +20,18 @@ class CfgAmmo {
         class ADDON {
             enabled = 1;
 
-            pitchRate = 40; // degrees per second
-            yawRate = 40;
+            minDeflection = 0.0005;      // Minium flap deflection for guidance
+            maxDeflection = 0.0025;       // Maximum flap deflection for guidance
+            incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
             // Guidance type for munitions
             defaultSeekerType = "SALH";
-            seekerTypes[] = { "SALH" };
+            seekerTypes[] = { "SALH", "LIDAR", "SARH", "Optic", "Thermal", "GPS", "SACLOS", "MCLOS" };
 
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
-
-            defaultNavigationType = "AugmentedProportionalNavigation";
-            navigationTypes[] = { "AugmentedProportionalNavigation" };
 
             seekerAngle = 90;           // Angle in front of the missile which can be searched
             seekerAccuracy = 1;         // seeker accuracy multiplier
@@ -71,10 +69,9 @@ class CfgAmmo {
         class ADDON {
             enabled = 1;
 
-            pitchRate = 100; // degrees per second
-            yawRate = 100;
-            stabilityCoefficient = 0.2;
-            bangBangGuidance = 0;
+            minDeflection = 0.00005;      // Minium flap deflection for guidance
+            maxDeflection = 0.025;       // Maximum flap deflection for guidance
+            incDeflection = 0.00005;      // The incrmeent in which deflection adjusts.
 
             canVanillaLock = 0;
 
@@ -84,11 +81,6 @@ class CfgAmmo {
 
             defaultSeekerLockMode = "LOBL";
             seekerLockModes[] = { "LOBL" };
-            
-            defaultNavigationType = "Direct";
-            navigationTypes[] = { "Direct", "ZeroEffortMiss" };
-
-            navigationGain = 3;
 
             seekerAngle = 180;           // Angle in front of the missile which can be searched
             seekerAccuracy = 1;         // seeker accuracy multiplier
@@ -102,19 +94,6 @@ class CfgAmmo {
             defaultAttackProfile = "JAV_TOP";
             attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
             useModeForAttackProfile = 1;
-
-            class navigationStates {
-                class initial {
-                    transitionCondition = QFUNC(javelin_midCourseTransition);
-                    navigationType = "Direct";
-                };
-                class terminal {
-                    transitionCondition = "";
-                    navigationType = "ZeroEffortMiss";
-                };
-                // transitions from initial -> termimal
-                states[] = {"initial", "terminal"};
-            };
         };
     };
     class ACE_Javelin_FGM148_static: ACE_Javelin_FGM148 {
