@@ -45,15 +45,33 @@ PREP(seekerType_Optic);
 PREP(seekerType_SACLOS);
 PREP(seekerType_Doppler);
 PREP(seekerType_MWR);
+PREP(seekerType_GPS);
 
 // Attack Profiles OnFired
 PREP(wire_onFired);
+PREP(gps_attackOnFired);
 
 // Seeker OnFired
 PREP(SACLOS_onFired);
 PREP(mwr_onFired);
+<<<<<<< HEAD
+=======
+PREP(IR_onFired);
+PREP(gps_seekerOnFired);
+>>>>>>> parent of 744cd45ee (remove gps definitions)
 
 // Navigation OnFired
 PREP(proNav_onFired);
 PREP(line_onFired);
+
+// GPS ui
+PREP(gps_onLoad);
+PREP(gps_onUnload);
+PREP(gps_pbModeCycle);
+PREP(gps_confirm);
+PREP(gps_modeSelect);
+PREP(gps_saveAttackSettings);
+PREP(gps_loadAttackSettings);
+PREP(gps_getAttackData);
+PREP(gps_setupVehicle);
 
