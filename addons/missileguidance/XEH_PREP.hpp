@@ -57,6 +57,3 @@ PREP(mwr_onFired);
 PREP(proNav_onFired);
 PREP(line_onFired);
 
-// State transitions
-PREP(javelin_midCourseTransition);
-

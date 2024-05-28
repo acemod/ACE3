@@ -12,4 +12,3 @@
 
 GVAR(dev_fnc_projectileCamera) = compile preprocessFileLineNumbers QPATHTOF(dev\projectileCamera.sqf);
 
-if (!hasInterface) exitWith {};

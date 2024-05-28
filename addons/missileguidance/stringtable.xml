@@ -205,14 +205,5 @@
             <Chinese>循環切換開火模式</Chinese>
             <Turkish>Ateşleme Modunu Değiştir</Turkish>
         </Key>
-        <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_6x">
-            <English>6x DAGR [ACE]</English>
-        </Key>
-        <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_12x">
-            <English>12x DAGR [ACE]</English>
-        </Key>
-        <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_24x">
-            <English>24x DAGR [ACE]</English>
-        </Key>
     </Package>
 </Project>
