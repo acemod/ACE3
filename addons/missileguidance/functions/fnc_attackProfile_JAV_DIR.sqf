@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus / nou
  * Attack profile: Javelin Dir
@@ -39,7 +39,7 @@ private _distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;
 private _distanceToShooter = _projectilePos vectorDistance _shooterPos;
 private _distanceShooterToTarget = _shooterPos vectorDistance _seekerTargetPos;
 
-TRACE_2("", _distanceToTarget, _distanceToShooter);
+TRACE_2("",_distanceToTarget,_distanceToShooter);
 
 // Add height depending on distance for compensate
 private _returnTargetPos = _seekerTargetPos;
@@ -47,7 +47,7 @@ private _returnTargetPos = _seekerTargetPos;
 switch (_attackProfileStateParams select 0) do {
     case STAGE_LAUNCH: {
         TRACE_1("STAGE_LAUNCH","");
-        if (_distanceToShooter < 10) then {
+        if (_distanceToShooter < 6) then {
             _returnTargetPos = _seekerTargetPos vectorAdd [0,0,_distanceToTarget*2];
         } else {
             _attackProfileStateParams set [0, STAGE_CLIMB];
@@ -55,7 +55,8 @@ switch (_attackProfileStateParams select 0) do {
     };
     case STAGE_CLIMB: {
         TRACE_1("STAGE_CLIMB","");
-       private _cruisAlt = 60 * (_distanceShooterToTarget/2000);
+        // 65 is min range
+       private _cruisAlt = 60 * ((0 max (_distanceShooterToTarget - 65))/2000);
 
         if ( ((ASLToAGL _projectilePos) select 2) - ((ASLToAGL _seekerTargetPos) select 2) >= _cruisAlt) then {
             _attackProfileStateParams set [0, STAGE_TERMINAL];
@@ -69,5 +70,5 @@ switch (_attackProfileStateParams select 0) do {
     };
 };
 
-TRACE_1("Adjusted target position", _returnTargetPos);
+TRACE_1("Adjusted target position",_returnTargetPos);
 _returnTargetPos;
