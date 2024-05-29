@@ -15,6 +15,8 @@
  * Public: No
  */
 
+LOG("updateHearingProtection");
+
 if (isNull ACE_player) exitWith {
     GVAR(damageCoefficent) = 0;
     GVAR(volumeAttenuation) = 1;
