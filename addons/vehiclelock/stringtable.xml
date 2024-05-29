@@ -365,7 +365,7 @@
             <Hungarian>Alapértelmezett idő a zárfeltöréshez (másodpercben). Alapértelmezett: 10</Hungarian>
             <Russian>Время для взлома замка отмычкой (в секундах). По умолчанию: 10</Russian>
             <Italian>Tempo Default richiesto per forzare serrature (in secondi). Predefinito: 10</Italian>
-            <Japanese>Lockpickを使った作業の所要時間の標準設定。(秒) デフォルト: 10</Japanese>
+            <Japanese>Lockpickを使った作業の所要時間の標準設定。 (秒単位) デフォルト: 10</Japanese>
             <Korean>해정을 위해 들이는 기본시간입니다(초 단위). 기본설정: 10</Korean>
             <Chinesesimp>开锁时间（秒）。预设：10</Chinesesimp>
             <Chinese>開鎖時間(秒)。預設:10</Chinese>

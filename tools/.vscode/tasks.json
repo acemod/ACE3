@@ -64,6 +64,16 @@
             ]
         },
         {
+            "label": "HEMTT check",
+            "command": "hemtt.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "args": [
+                "check"
+            ],
+        },
+        {
             "label": "Test All",
             "dependsOn": [
                 "Validate SQF",
@@ -71,7 +81,8 @@
                 "Validate Stringtables",
                 "Validate headers",
                 "Check Strings",
-                "SQFVM Checker"
+                "SQFVM Checker",
+                "HEMTT check"
             ],
             "group": {
                 "kind": "test",
@@ -89,8 +100,7 @@
                 "ci"
             ],
             "group": {
-                "kind": "build",
-                "isDefault": true
+                "kind": "build"
             }
         },
         {
@@ -103,7 +113,10 @@
                 "build",
                 "-v"
             ],
-            "group": "build"
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
