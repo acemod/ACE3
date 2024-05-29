@@ -15,7 +15,7 @@ PREP_RECOMPILE_END;
 
         // Only force update volume if unit is a player (including remote controlled)
         if (_unit call EFUNC(common,isPlayer)) then {
-            [QGVAR(updateVolume), true, _unit] call CBA_fnc_targetEvent;
+            [QGVAR(updateVolume), [[true]], _unit] call CBA_fnc_targetEvent;
         };
     };
 }] call CBA_fnc_addEventHandler;
