@@ -869,7 +869,7 @@ class CfgWeapons {
         displayName = CSTRING(sgun_huntershotgun_01_Name);
     };
     class sgun_HunterShotgun_01_sawedoff_base_F;
-    class sgun_HunterShotgun_01_sawedoff_F: sgun_HunterShotgun_01_base_F {
+    class sgun_HunterShotgun_01_sawedoff_F: sgun_HunterShotgun_01_sawedoff_base_F {
         displayName = CSTRING(sgun_huntershotgun_sawedoff_01_Name);
     };
 
