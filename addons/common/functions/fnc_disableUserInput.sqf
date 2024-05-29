@@ -143,7 +143,7 @@ if (_state) then {
                 _ctrl ctrlSetEventHandler ["ButtonClick", toString {
                     closeDialog 0;
 
-                    [player, "respawn_button"] call EFUNC(common,setDead);
+                    [player, "respawn_button"] call FUNC(setDead);
 
                     [false] call FUNC(disableUserInput);
                 }];
