@@ -33,7 +33,7 @@ GVAR(lastPlayerVehicle) = objNull;
     if (!GVAR(enableCombatDeafness)) exitWith {};
 
     // Spawn volume updating process
-    [LINKFUNC(updateVolume), 1] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(updateVolume), 1, false] call CBA_fnc_addPerFrameHandler;
 
     [QGVAR(updateVolume), LINKFUNC(updateVolume)] call CBA_fnc_addEventHandler;
 

@@ -19,6 +19,7 @@ if (!alive ACE_player) exitWith {
     if (missionNamespace getVariable [QGVAR(disableVolumeUpdate), false]) exitWith {};
 
     TRACE_1("dead - removing hearing effects",ACE_player);
+
     [QUOTE(ADDON), 1, true] call EFUNC(common,setHearingCapability);
 };
 
