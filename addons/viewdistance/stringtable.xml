@@ -96,7 +96,7 @@
             <Hungarian>Korlátozza, mekkora látótávolságot állíthatnak be a kliensek (maximum 10000-ig)</Hungarian>
             <Russian>Устанавливает предел дальности, насколько клиенты могут увеличить свою дальность видимости (до 10000)</Russian>
             <Italian>Imposta il limite massimo a cui i client possono alzare la propria distanza visiva (massimo 10000)</Italian>
-            <Japanese>各クライアントが設定できる視界距離の上限を設定します。(最大 10000)</Japanese>
+            <Japanese>各クライアントが設定できる視界距離の上限 (最大 10000)</Japanese>
             <Korean>클라이언트가 최대 얼마나 멀리 볼 수 있는지 제한을 둡니다 (10000 까지 가능)</Korean>
             <Chinesesimp>设定客户端最高可显示的视距（最高至10000）</Chinesesimp>
             <Chinese>設定客戶端最高可顯示的視野距離 (最高至10000)</Chinese>
@@ -128,6 +128,7 @@
             <Japanese>0に設定すると、デフォルトのビデオ設定が使用されます</Japanese>
             <Russian>Значение 0 будет использовать настройки видео по умолчанию</Russian>
             <Spanish>Establecer a 0 utiliza las opciones de video por defecto</Spanish>
+            <French>La valeur 0 permet d'utiliser les paramètres vidéo par défaut</French>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>

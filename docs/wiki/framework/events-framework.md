@@ -23,32 +23,32 @@ E.G.: If you only need to do action when player's weapon fires, this will be fas
 The vehicle events will also have the following local variables available `_gunner (OBJECT), _turret (ARRAY)`.
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|---------|
-|`ace_firedPlayer` | [_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | ACE_player fires
-|`ace_firedPlayerNonLocal` | [_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | Any other player fires
-|`ace_firedNonPlayer` | [_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | AI fires
-|`ace_firedPlayerVehicle` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | ACE_player turret fires
-|`ace_firedPlayerVehicleNonLocal` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | Any other player turret fires
-|`ace_firedNonPlayerVehicle` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | AI turret fires
+|----------|---------|---------|---------|---------|
+|`ace_firedPlayer` | [_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | ACE_player fires |
+|`ace_firedPlayerNonLocal` | [_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | Any other player fires |
+|`ace_firedNonPlayer` | [_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | AI fires |
+|`ace_firedPlayerVehicle` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | ACE_player turret fires |
+|`ace_firedPlayerVehicleNonLocal` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | Any other player turret fires |
+|`ace_firedNonPlayerVehicle` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | AI turret fires |
 
 ### 2.2 Medical (`ace_medical`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|---------|
-|`ace_unconscious` | [_unit, _state(BOOL)] | Global | Listen | Unit's unconscious state changed
-|`ace_placedInBodyBag` | [_target, _bodyBag, _isGrave] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted, target could be a bodybag)
-|`ace_placedInGrave` | [_target, _grave] | Global | Listen | Target placed into a grave, _grave will be objNull if `Create Grave Markers` is disabled Note: (Target will soon be deleted)
-|`ace_treatmentStarted` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has started (local on the _caller)
-|`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action is completed (local on the _caller)
-|`ace_treatmentFailed` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem] | Local | Listen | Treatment action has been interrupted (local on the _caller)
-|`ace_medical_handleUnitVitals` | [_unit, _deltaT] | Local | Listen | Vitals update ran for unit, _deltaT is the time elapsed since the previous vitals update (local to _unit)
-|`ace_medical_treatment_bandaged` | [_medic, _patient, _bodyPart, _className, _bandageEffectiveness] | Local | Listen | _medic has bandaged _patient, the array can be modified to change treatment parameters (local to _medic)
+|----------|---------|---------|---------|---------|
+|`ace_unconscious` | [_unit, _state(BOOL)] | Global | Listen | Unit's unconscious state changed |
+|`ace_placedInBodyBag` | [_target, _bodyBag, _isGrave] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted, target could be a bodybag) |
+|`ace_placedInGrave` | [_target, _grave] | Global | Listen | Target placed into a grave, _grave will be objNull if `Create Grave Markers` is disabled Note: (Target will soon be deleted) |
+|`ace_treatmentStarted` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem, _createLitter] | Local | Listen | Treatment action has started (local on the _caller) |
+|`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem, _createLitter] | Local | Listen | Treatment action is completed (local on the _caller) |
+|`ace_treatmentFailed` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem, _createLitter] | Local | Listen | Treatment action has been interrupted (local on the _caller) |
+|`ace_medical_handleUnitVitals` | [_unit, _deltaT] | Local | Listen | Vitals update ran for unit, _deltaT is the time elapsed since the previous vitals update (local to _unit) |
+|`ace_medical_treatment_bandaged` | [_medic, _patient, _bodyPart, _className, _itemUser, _usedItem, _createLitter, _bandageEffectiveness] | Local | Listen | _medic has bandaged _patient, the array can be modified to change treatment parameters (local to _medic) |
 
 ### 2.3 Interaction Menu (`ace_interact_menu`)
 MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|---------|
+|----------|---------|---------|---------|---------|
 |`ace_interactMenuOpened` | [_menuType] | Local | Listen | Interaction Menu Opened
 |`ace_interactMenuClosed` | [_menuType] | Local | Listen | Interaction Menu Closed
 |`ace_interact_menu_newControllableObject` | [_typeOf] | Local | Listen | New controlable object, only fires once per type (add self interactions)
@@ -56,79 +56,79 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 ### 2.4 Cargo (`ace_cargo`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|---------|
-|`ace_addCargo` | [_item (CLASSNAME or OBJECT), _vehicle, _cargoCount] | Target | Callable | Scripted way to add cargo to vehicle
-|`ace_cargoLoaded` | [_item, _vehicle] | Global | Listen | Cargo has been Loaded into vehicle
-|`ace_cargoUnloaded` | [_item, _vehicle, _unloadType] | Global | Listen | Cargo has been Unloaded from vehicle
+|----------|---------|---------|---------|---------|
+|`ace_addCargo` | [_item (CLASSNAME or OBJECT), _vehicle, _cargoCount] | Target | Callable | Scripted way to add cargo to vehicle |
+|`ace_cargoLoaded` | [_item, _vehicle] | Global | Listen | Cargo has been Loaded into vehicle |
+|`ace_cargoUnloaded` | [_item, _vehicle, _unloadType] | Global | Listen | Cargo has been Unloaded from vehicle |
 
 ### 2.5 Captives (`ace_captives`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|---------|
-|`ace_captiveStatusChanged` | [_unit, _state(BOOL), _reason ("SetHandcuffed" or "SetSurrendered"), _caller] | Global | Listen | Unit's captivity state changed
-|`ace_captives_setSurrendered` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop surrendering
-|`ace_captives_setHandcuffed` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop being handcuffed
-|`ace_captives_escortingCaptive` | [_unit, _state(BOOL), _caller] | Local | Listen | Caller starting or stopping escort of unit
+|----------|---------|---------|---------|---------|
+|`ace_captiveStatusChanged` | [_unit, _state(BOOL), _reason ("SetHandcuffed" or "SetSurrendered"), _caller] | Global | Listen | Unit's captivity state changed |
+|`ace_captives_setSurrendered` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop surrendering |
+|`ace_captives_setHandcuffed` | [_unit, _state(BOOL)] | Target | Callable | Sets a unit to either start or stop being handcuffed |
+|`ace_captives_escortingCaptive` | [_unit, _state(BOOL), _caller] | Local | Listen | Caller starting or stopping escort of unit |
 
 ### 2.6 Settings (`ace_common`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|---------|
-|`ace_settingsInitialized` | [] | Local | Listen | All modules are read and settings are ready
-|`ace_settingChanged` | [_name,_value] | Local | Listen | A setting has been changed
+|----------|---------|---------|---------|---------|
+|`ace_settingsInitialized` | [] | Local | Listen | All modules are read and settings are ready |
+|`ace_settingChanged` | [_name,_value] | Local | Listen | A setting has been changed |
 
 ### 2.7 Tagging (`ace_tagging`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|---------|
-|`ace_tagCreated` | [_tagObject, _texture, _tagAttachedTo (can be null), _unitThatCreated] | Global | Listen | Tag is created
+|----------|---------|---------|---------|---------|
+|`ace_tagCreated` | [_tagObject, _texture, _tagAttachedTo (can be null), _unitThatCreated] | Global | Listen | Tag is created |
 
 ### 2.8 Explosives (`ace_explosives`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|---------|
-|`ace_allowDefuse` | [_mine, _allow] | Global or Target | Callable | Set allowance of the dynamic defusal action on a mine
-|`ace_tripflareTriggered` | [_flareObject, [_posX, _posY, _posZ]] | Global | Listen | Tripflare triggered
-|`ace_explosives_clackerAdded` | [_unit, _explosive, _id] | Local | Listen | Clacker added to explosive
-|`ace_explosives_place` | [_explosive, _dir, _pitch, _unit] | Global | Listen | Explosive is armed
-|`ace_explosives_setup` | [_explosiveVehicle, _magClassname, _unit] | Global | Listen | Explosive is placed in the world
+|----------|---------|---------|---------|---------|
+|`ace_allowDefuse` | [_mine, _allow] | Global or Target | Callable | Set allowance of the dynamic defusal action on a mine |
+|`ace_tripflareTriggered` | [_flareObject, [_posX, _posY, _posZ]] | Global | Listen | Tripflare triggered |
+|`ace_explosives_clackerAdded` | [_unit, _explosive, _id] | Local | Listen | Clacker added to explosive |
+|`ace_explosives_place` | [_explosive, _dir, _pitch, _unit] | Global | Listen | Explosive is armed |
+|`ace_explosives_setup` | [_explosiveVehicle, _magClassname, _unit] | Global | Listen | Explosive is placed in the world |
 
 ### 2.9 Logistics Wirecutter (`ace_logistics`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|---------|
-|`ace_wireCuttingStarted` | [_unit, _fence] | Global | Listen | Fence cutting started
+|----------|---------|---------|---------|---------|
+|`ace_wireCuttingStarted` | [_unit, _fence] | Global | Listen | Fence cutting started |
 
 ### 2.9 Refuel (`ace_refuel`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|---------|
-|`ace_refuel_started` | [_source, _target] | Local | Listen | Refueling has started
-|`ace_refuel_tick` | [_source, _target, _amount] | Local | Listen | Amount of fuel transferred in a tick
-|`ace_refuel_stopped` | [_source, _target] | Local | Listen | Refueling has stopped
+|----------|---------|---------|---------|---------|
+|`ace_refuel_started` | [_source, _target] | Local | Listen | Refueling has started |
+|`ace_refuel_tick` | [_source, _target, _amount] | Local | Listen | Amount of fuel transferred in a tick |
+|`ace_refuel_stopped` | [_source, _target] | Local | Listen | Refueling has stopped |
 
 ### 2.10 Cook Off (`ace_cookoff`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|---------|
+|----------|---------|---------|---------|---------|
 |`ace_cookoff_cookOff` | _vehicle | Global | Listen | Vehicle cook off has started
-|`ace_cookoff_cookOffBox` | _box | Global | Listen | Ammo box cook off has started
-|`ace_cookoff_engineFire` | _vehicle | Global | Listen | Engine fire has started
+|`ace_cookoff_cookOffBox` | _box | Global | Listen | Ammo box cook off has started |
+|`ace_cookoff_engineFire` | _vehicle | Global | Listen | Engine fire has started |
 
 
 ### 2.11 Attach (`ace_attach`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|---------|
-|`ace_attach_attached` | [_attachedObject, _itemClassname, _temporary] | Local | Listen | After an item was attached to a unit/vehicle. _temporary flag means a item is being re-attached after the player exits a vehicle
-|`ace_attach_detaching` | [_attachedObject, _itemName, _temporary] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle. _temporary flag means its detached because the player unit entered a vehicle.
+|----------|---------|---------|---------|---------|
+|`ace_attach_attached` | [_attachedObject, _itemClassname, _temporary] | Local | Listen | After an item was attached to a unit/vehicle. _temporary flag means a item is being re-attached after the player exits a vehicle |
+|`ace_attach_detaching` | [_attachedObject, _itemName, _temporary] | Local | Listen | Just before an item gets detached/removed from a unit/vehicle. _temporary flag means its detached because the player unit entered a vehicle. |
 
 ### 2.12 Trenches (`ace_trenches`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
-| `ace_trenches_placed` | [_unit, _trench] | Global | Listen | After trench object is placed by unit.
-| `ace_trenches_finished` | [_unit, _trench] | Global | Listen | After trench object is fully dug up by unit (100% progress).
+| `ace_trenches_placed` | [_unit, _trench] | Global | Listen | After trench object is placed by unit. |
+| `ace_trenches_finished` | [_unit, _trench] | Global | Listen | After trench object is fully dug up by unit (100% progress). |
 
 ### 2.13 Medical GUI (`ace_medical_gui`)
 
@@ -146,6 +146,26 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |---------- |------------|----------|------|-------------|
 | `ace_medical_treatment_fullHealLocalMod` | [_patient] | Local | Listen | Called before a local unit is fully healed, mods can listen and apply their own healing logic
 
+### 2.15 Medical Status (`ace_medical_status`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_medical_status_getBloodLoss` | [_unit, _bloodLoss] | Local | Listen | Called when blood loss is calculated for a unit, mods can listen and modify the blood loss value by modifying the array
+
+### 2.16 Interaction (`ace_interaction`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_interaction_doorOpeningStarted` | [_house, _door, _animations] | Local | Listen | Called when local unit starts interacting with doors
+| `ace_interaction_doorOpeningStopped` | [_house, _door, _animations] | Local | Listen | Called when local unit stops interacting with doors
+
+### 2.17 Headless (`ace_headless`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_headless_groupTransferPre` | [_group, _HC (OBJECT), _previousOwner, _idHC] | Target | Listen | Called just before a group is transferred from any machine to a HC. Called where group currently is local and on the HC, where group is going to be local.
+| `ace_headless_groupTransferPost` | [_group, _HC (OBJECT), _previousOwner, _idHC, _transferredSuccessfully] | Target | Listen | Called just after a group is transferred from a machine to a HC. Called where group was local and on the HC, where group is now local. `_transferredSuccessfully` is passed so mods can actually check if the locality was properly transferred, as ownership transfer is not guaranteed.
+
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
 
@@ -155,21 +175,21 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_addEventHandler` - Adds an event handler with the event name and returns the event handler ID.
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Event name | String | Required
-1  | Code block | Code | Required
-**R** | Event ID | Number | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Event name | String | Required |
+| 1  | Code block | Code | Required |
+| **R** | Event ID | Number | Return value |
 
 #### 3.1.2 Remove Event
 
 `CBA_fnc_removeEventHandler` - Removes a specific event handler of the given event name, using the ID returned from `CBA_fnc_addEventHandler`.
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Event name | String | Required
-1  | Event ID | Number | Required
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Event name | String | Required |
+| 1  | Event ID | Number | Required |
+| **R** | None | None | Return value |
 
 ### 3.2 Calling Events
 
@@ -177,42 +197,42 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_localEvent` - Calls an event only on the local machine, useful for inter-module events.
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Event name | String | Required
-1  | Arguments | Any | Required
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Event name | String | Required |
+| 1  | Arguments | Any | Required |
+| **R** | None | None | Return value |
 
 #### 3.2.2 Target Event
 
 `CBA_fnc_targetEvent` - Calls an event only on the target machine or list of target machines.
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Event name | String | Required
-1  | Arguments | Any | Required
-2  | Target(s) | Object OR Number OR Array | Required
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Event name | String | Required |
+| 1  | Arguments | Any | Required |
+| 2  | Target(s) | Object OR Number OR Array | Required |
+| **R** | None | None | Return value |
 
 #### 3.2.3 Server Event
 
 `CBA_fnc_serverEvent` - Calls an event only on the server machine (dedicated or self-hosted).
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Event name | String | Required
-1  | Arguments | Any | Required
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Event name | String | Required |
+| 1  | Arguments | Any | Required |
+| **R** | None | None | Return value |
 
 #### 3.2.4 Global Event
 
 `CBA_fnc_globalEvent` - Calls an event on all machines - the local machine, and the server machine.
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Event name | String | Required
-1  | Arguments | Any | Required
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Event name | String | Required |
+| 1  | Arguments | Any | Required |
+| **R** | None | None | Return value |
 
 
 ### 3.3 Synchronized Events
@@ -223,12 +243,12 @@ Adds a globally synchronized event handler which will expire events after the pr
 
 `ace_common_fnc_addSyncedEventHandler`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Event name | String | Required
-1  | Code block | Code | Required
-2  | Time to live | Number OR Code | Optional (default: `0`)
-**R** | Event ID | Number | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Event name | String | Required |
+| 1  | Code block | Code | Required |
+| 2  | Time to live | Number OR Code | Optional (default: `0`) |
+| **R** | Event ID | Number | Return value |
 
 #### 3.3.2 Remove Synchronized Event
 
@@ -236,10 +256,10 @@ Removes a specific event handler of the given event name, using the ID returned 
 
 `ace_common_fnc_removeSyncedEventHandler`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Event name | String | Required
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Event name | String | Required |
+| **R** | None | None | Return value |
 
 #### 3.3.3 Call Synchronized Event
 
@@ -247,12 +267,12 @@ Calls a globally synchronized event, which will also be run on JIP players unles
 
 `ace_common_fnc_syncedEvent`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Event name | String | Required
-1  | Arguments | Any | Required
-2  | Time to live for this call | Number OR Code | Optional (default: `0`)
-**R** | Event ID | Number | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Event name | String | Required |
+| 1  | Arguments | Any | Required |
+| 2  | Time to live for this call | Number OR Code | Optional (default: `0`) |
+| **R** | Event ID | Number | Return value |
 
 
 ### 3.4 Example

@@ -26,6 +26,6 @@ class CfgWeapons {
 
 ### 2.1 Listenable
 
-Event Name | Description | Passed Parameter(s) | Locality
----------- | ----------- | ------------------- | --------
-`ace_reloadlaunchers_reloadLauncher` | Launcher reloaded | `[_unit, _target, _weapon, _magazine]` | Target
+| Event Name | Description | Passed Parameter(s) | Locality |
+| ---------- | ----------- | ------------------- | -------- |
+| `ace_reloadlaunchers_reloadLauncher` | Launcher reloaded | `[_unit, _target, _weapon, _magazine]` | Target |

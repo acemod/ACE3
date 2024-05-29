@@ -1,15 +1,30 @@
 #include "script_component.hpp"
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Register and remove HCs if not client that is not server and distribution or end mission enabled
     if ((!hasInterface || isServer) && {XGVAR(enabled) || XGVAR(endMission) != 0}) then {
         if (isServer) then {
             // Request rebalance on any unit spawn (only if distribution enabled)
             if (XGVAR(enabled)) then {
-                ["AllVehicles", "initPost", FUNC(handleSpawn), nil, nil, true] call CBA_fnc_addClassEventHandler;
+                ["CAManBase", "initPost", LINKFUNC(handleSpawn), nil, nil, true] call CBA_fnc_addClassEventHandler;
             };
             // Add disconnect EH
             addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
+
+            [QGVAR(transferGroupsRebalance), {
+                params ["_groups", "_owner", "_rebalance"];
+
+                if (_groups isNotEqualTo [] && {_owner > 1}) then {
+                    {
+                        _x setGroupOwner _owner;
+                    } forEach _groups;
+                };
+
+                // Rebalance units
+                if (_rebalance in [REBALANCE, FORCED_REBALANCE]) then {
+                    (_rebalance == FORCED_REBALANCE) call FUNC(rebalance);
+                };
+            }] call CBA_fnc_addEventHandler;
         } else {
             // Register HC (this part happens on HC only)
             [QXGVAR(headlessClientJoined), [player]] call CBA_fnc_globalEvent; // Global event for API purposes

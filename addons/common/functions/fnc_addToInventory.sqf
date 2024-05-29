@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
- * Adds an item, weapon, or magazine to the unit's inventory or places it in a weaponHolder if no space.
+ * Adds an item, weapon, or magazine to the unit's inventory or places it in a weapon holder if no space.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -11,10 +11,10 @@
  *
  * Return Value:
  * 0: Added to player <BOOL>
- * 1: weaponholder <OBJECT>
+ * 1: Weapon holder item was placed in <OBJECT>
  *
  * Example:
- * [bob, "classname", "", 5] call ace_common_fnc_addToInventory
+ * [player, "30Rnd_65x39_caseless_mag", "", 5] call ace_common_fnc_addToInventory
  *
  * Public: Yes
  */
@@ -26,6 +26,7 @@ private _type = _classname call FUNC(getItemType);
 private _canAdd = false;
 private _canFitWeaponSlot = false;
 private _addedToUnit = false;
+private _weaponHolder = _unit;
 
 switch (_container) do {
     case "vest": {
@@ -55,6 +56,21 @@ switch (_container) do {
                 };
             };
         };
+    };
+};
+
+if (_type select 0 == "magazine") then {
+    private _configAmmoCount = getNumber (configFile >> "CfgMagazines" >> _classname >> "count");
+
+    // https://feedback.bistudio.com/T74244
+    // When adding throwables with the addXXXCargo(Global) commands, they don't show up in the throwables list
+    // If a throwable has more than 1 ammo count, adding it with addItem(XXX) commands also renders the throwable unusable
+    if (_configAmmoCount == 1 && {_ammoCount in [-1, 1]} && {_classname call BIS_fnc_isThrowable}) then { // TODO: replace with https://community.bistudio.com/wiki/isThrowable in 2.18
+        _type set [0, "item"];
+    };
+
+    if (_ammoCount == -1) then {
+        _ammoCount = _configAmmoCount;
     };
 };
 
@@ -94,19 +110,17 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private _pos = _unit modelToWorldVisual [0,1,0.05];
+            _weaponHolder = nearestObject [_unit, "WeaponHolder"];
 
-            _unit = createVehicle ["WeaponHolder_Single_F", _pos, [], 0, "NONE"];
-            _unit addWeaponCargoGlobal [_classname, 1];
-            _unit setPosATL _pos;
+            if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
+                _weaponHolder = createVehicle ["GroundWeaponHolder", _unit, [], 0, "CAN_COLLIDE"];
+            };
+
+            _weaponHolder addWeaponCargoGlobal [_classname, 1];
         };
     };
 
     case "magazine": {
-        if (_ammoCount == -1) then {
-            _ammoCount = getNumber (configFile >> "CfgMagazines" >> _classname >> "count");
-        };
-
         if (_canAdd) then {
             _addedToUnit = true;
 
@@ -127,11 +141,13 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private _pos = _unit modelToWorldVisual [0,1,0.05];
+            _weaponHolder = nearestObject [_unit, "WeaponHolder"];
 
-            _unit = createVehicle ["WeaponHolder_Single_F", _pos, [], 0, "NONE"];
-            _unit addMagazineAmmoCargo [_classname, 1, _ammoCount];
-            _unit setPosATL _pos;
+            if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
+                _weaponHolder = createVehicle ["GroundWeaponHolder", _unit, [], 0, "CAN_COLLIDE"];
+            };
+
+            _weaponHolder addMagazineAmmoCargo [_classname, 1, _ammoCount];
         };
     };
 
@@ -156,11 +172,13 @@ switch (_type select 0) do {
         } else {
             _addedToUnit = false;
 
-            private _pos = _unit modelToWorldVisual [0,1,0.05];
+            _weaponHolder = nearestObject [_unit, "WeaponHolder"];
 
-            _unit = createVehicle ["WeaponHolder_Single_F", _pos, [], 0, "NONE"];
-            _unit addItemCargoGlobal [_classname, 1];
-            _unit setPosATL _pos;
+            if (isNull _weaponHolder || {_unit distance _weaponHolder > 2}) then {
+                _weaponHolder = createVehicle ["GroundWeaponHolder", _unit, [], 0, "CAN_COLLIDE"];
+            };
+
+            _weaponHolder addItemCargoGlobal [_classname, 1];
         };
     };
 
@@ -170,4 +188,4 @@ switch (_type select 0) do {
     };
 };
 
-[_addedToUnit, _unit]
+[_addedToUnit, _weaponHolder]

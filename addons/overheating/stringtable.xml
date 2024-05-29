@@ -881,6 +881,8 @@
             <Japanese>遊底(ボルト)形式</Japanese>
             <Korean>노리쇠 방식</Korean>
             <Russian>Тип болта</Russian>
+            <French>Type d'obturateur</French>
+            <Spanish>Tipo de Cerrojo</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_openBolt">
             <English>Open Bolt</English>
@@ -888,6 +890,8 @@
             <Japanese>オープンボルト</Japanese>
             <Korean>오픈 볼트</Korean>
             <Russian>Открыть болт</Russian>
+            <French>Obturateur ouvert</French>
+            <Spanish>Cerrojo Abierto</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_closedBolt">
             <English>Closed Bolt</English>
@@ -895,6 +899,8 @@
             <Japanese>クローズドボルト</Japanese>
             <Korean>클로즈드 볼트</Korean>
             <Russian>Закрыть болт</Russian>
+            <French>Obturateur fermé</French>
+            <Spanish>Cerrojo Cerrado</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType">
             <English>Barrel Type</English>
@@ -902,6 +908,8 @@
             <Japanese>銃身形式</Japanese>
             <Korean>총열 방식</Korean>
             <Russian>Тип ствола</Russian>
+            <French>Type de canon</French>
+            <Spanish>Tipo de Cañón</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_nonRemoveable">
             <English>Non-Removeable</English>
@@ -909,6 +917,8 @@
             <Japanese>取り外し不可</Japanese>
             <Korean>제거 불가</Korean>
             <Russian>Несъемный</Russian>
+            <French>Inamovible</French>
+            <Spanish>No-Desmontable</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_removeable">
             <English>Quick Change</English>
@@ -916,6 +926,8 @@
             <Japanese>即時交換可</Japanese>
             <Korean>신속 교체</Korean>
             <Russian>Быстросъемный</Russian>
+            <French>Changement rapide</French>
+            <Spanish>Cambiado Rápido</Spanish>
         </Key>
     </Package>
 </Project>
