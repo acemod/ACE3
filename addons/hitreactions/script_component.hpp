@@ -17,4 +17,3 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define DEFAULT_PICKUP_DISTANCE 8
-#define DEFAULT_UNDROPPABLE_WEAPONS []
