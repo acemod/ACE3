@@ -13,7 +13,10 @@ PREP_RECOMPILE_END;
     if (_extendedInfo getOrDefault ["ace_earplugs", false]) then {
         _unit setVariable ["ACE_hasEarPlugsIn", true, true];
 
-        [QGVAR(updateVolume), [[true]], _unit] call CBA_fnc_targetEvent;
+        // Only force update volume if unit is a player (including remote controlled)
+        if (_unit call EFUNC(common,isPlayer)) then {
+            [QGVAR(updateVolume), true, _unit] call CBA_fnc_targetEvent;
+        };
     };
 }] call CBA_fnc_addEventHandler;
 
