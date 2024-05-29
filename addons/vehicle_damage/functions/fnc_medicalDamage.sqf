@@ -35,10 +35,5 @@ if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
 
 // If guaranteed death is wished
 if (_guaranteeDeath && {alive _unit}) then {
-    // From 'ace_medical_status_fnc_setDead': Kill the unit without changing visual appearance
-    private _currentDamage = _unit getHitPointDamage "HitHead";
-
-    _unit setHitPointDamage ["HitHead", 1, true, _source, _instigator];
-
-    _unit setHitPointDamage ["HitHead", _currentDamage, true, _source, _instigator];
+    [_unit, "", _source, _instigator] call EFUNC(common,setDead);
 };
