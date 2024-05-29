@@ -33,14 +33,16 @@ if (isNil "_magName") then {
     TRACE_2("Adding to cache",_className,_displayName);
 
     // go through all existing cache entries and update if there now are duplicates
+    private _xMagName = "";
+
     {
-        private _xMagName = GVAR(magazineNameCache) get _x;
+        _xMagName = _y;
         if ((_xMagName == _displayName) && {({_xMagName == _x} count GVAR(originalMagazineNames)) > 1}) then {
-            private _xMagName = format ["%1: %2", _displayName, getText(configFile >> "CfgMagazines" >> _x >> "displayNameShort")];
+            _xMagName = format ["%1: %2", _displayName, getText(configFile >> "CfgMagazines" >> _x >> "displayNameShort")];
             GVAR(magazineNameCache) set [_x, _xMagName];
             TRACE_2("Using unique name",_x,_xMagName);
         };
-    } forEach (keys GVAR(magazineNameCache));
+    } forEach GVAR(magazineNameCache);
 
     _magName = GVAR(magazineNameCache) get _className;
 };
