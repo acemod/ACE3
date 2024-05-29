@@ -49,8 +49,50 @@ class CfgVehicles {
         displayName = SUBCSTRING(ec_04_Name);
     };
 
+    // Typhoon
     class O_Truck_03_fuel_F;
     class C_Truck_03_water_rf: O_Truck_03_fuel_F {
         displayName = SUBCSTRING(truck_03_water_Name);
+    };
+
+    // RAM 1500 (Pickup)
+    class Offroad_01_unarmed_base_F;
+    class Pickup_01_base_rf: Offroad_01_unarmed_base_F {
+        displayName = SUBCSTRING(pickup_01_Name);
+    };
+    class Pickup_fuel_base_rf: Pickup_01_base_rf {
+        displayName = SUBCSTRING(pickup_01_fuel_Name);
+    };
+    class Pickup_service_base_rf: Pickup_01_base_rf {
+        displayName = SUBCSTRING(pickup_01_service_Name);
+    };
+    class Pickup_repair_base_rf: Pickup_service_base_rf {
+        displayName = SUBCSTRING(pickup_01_repair_Name);
+    };
+    class Pickup_comms_base_rf: Pickup_service_base_rf {
+        displayName = SUBCSTRING(pickup_01_comms_Name);
+    };
+    class Pickup_repair_ig_base_rf: Pickup_repair_base_rf {
+        displayName = SUBCSTRING(pickup_01_repair_Name);
+    };
+    class Pickup_01_hmg_base_rf: Pickup_01_base_rf {
+        displayName = SUBCSTRING(pickup_01_hmg_Name);
+    };
+    class Pickup_01_mmg_base_rf: Pickup_01_base_rf {
+        displayName = SUBCSTRING(pickup_01_mmg_Name);
+    };
+    class Pickup_01_mrl_base_rf: Pickup_01_base_rf {
+        displayName = SUBCSTRING(pickup_01_mrl_Name);
+    };
+    class Pickup_01_aat_base_rf: Pickup_01_base_rf {
+        displayName = SUBCSTRING(pickup_01_aa_Name);
+    };
+    class Pickup_covered_base_rf: Pickup_service_base_rf {
+        displayName = SUBCSTRING(pickup_01_covered_Name);
+    };
+
+    class C_IDAP_Pickup_rf;
+    class C_IDAP_Pickup_water_rf: C_IDAP_Pickup_rf {
+        displayName = SUBCSTRING(pickup_01_water_Name);
     };
 };

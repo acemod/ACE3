@@ -50,19 +50,19 @@
             <English>Glock 19X Auto (Tan)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_Name">
-            <English>Desert Eagle Mark XIX</English>
+            <English>Desert Eagle Mark XIX L5</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_classic_Name">
-            <English>Desert Eagle Mark XIX (Classic)</English>
+            <English>Desert Eagle Mark XIX L5 (Classic)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_bronze_Name">
-            <English>Desert Eagle Mark XIX (Bronze)</English>
+            <English>Desert Eagle Mark XIX L5 (Bronze)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_copper_Name">
-            <English>Desert Eagle Mark XIX (Copper)</English>
+            <English>Desert Eagle Mark XIX L5 (Copper)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_gold_Name">
-            <English>Desert Eagle Mark XIX (Gold)</English>
+            <English>Desert Eagle Mark XIX L5 (Gold)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_tan_Name">
             <English>Hera H6 (Tan)</English>
@@ -153,6 +153,39 @@
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_water_Name">
             <English>Typhoon Water</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_Name">
+            <English>RAM 1500</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_Fuel_Name">
+            <English>RAM 1500 (Fuel)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_service_Name">
+            <English>RAM 1500 (Services)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_repair_Name">
+            <English>RAM 1500 (Repair)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_comms_Name">
+            <English>RAM 1500 (Comms)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_hmg_Name">
+            <English>RAM 1500 (HMG)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mmg_Name">
+            <English>RAM 1500 (MMG)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mrl_Name">
+            <English>RAM 1500 (MRL)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_aa_Name">
+            <English>RAM 1500 (AA)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_covered_Name">
+            <English>RAM 1500 (Covered)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_water_Name">
+            <English>RAM 1500 (Water)</English>
         </Key>
     </Package>
 </Project>

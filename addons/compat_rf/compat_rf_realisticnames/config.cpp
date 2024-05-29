@@ -12,7 +12,7 @@ class CfgPatches {
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Mike"};
+        authors[] = {"Mike", "Marc"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };

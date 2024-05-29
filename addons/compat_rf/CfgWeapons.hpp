@@ -9,7 +9,7 @@ class CfgWeapons {
 
     class hgun_DEagle_RF: Pistol_Base_F {
         ace_barrelTwist = 482;
-        ace_barrelLength = 150;
+        ace_barrelLength = 127;
         ace_twistDirection = 1;
     };
 
