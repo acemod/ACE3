@@ -48,4 +48,4 @@ private _prevDamage = _unit getHitPointDamage "HitHead";
 
 _unit setHitPointDamage ["HitHead", 1, true, _source, _instigator];
 
-_unit setHitPointDamage ["HitHead", _currentDamage, true, _source, _instigator];
+_unit setHitPointDamage ["HitHead", _prevDamage, true, _source, _instigator];
