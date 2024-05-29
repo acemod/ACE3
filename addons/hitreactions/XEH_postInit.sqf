@@ -70,6 +70,14 @@
             (_this select 1) call CBA_fnc_removePerFrameHandler;
 
             _unit action ["TakeWeapon", _thrownWeapon, _weapon];
+
+            // "TakeWeapon" action bugs out unit where they don't switch weapons
+            // Resetting loadout fixes bugged state
+            [{
+                (_this select 0) hasWeapon (_this select 1)
+            }, {
+            	(_this select 0) setUnitLoadout getUnitLoadout (_this select 0);
+            }, [_unit, _weapon], 5] call CBA_fnc_waitUntilAndExecute;
         }, 5, _this] call CBA_fnc_addPerFrameHandler;
     }, [_unit, _weapon, _thrownWeapon, CBA_missionTime + 300], random [2, 3, 4]] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
