@@ -64,7 +64,7 @@
 
             // If the unit is too far away, make them move closer
             if (_unit distance _thrownWeapon >= 4) exitWith {
-                [QGVAR(doMove), [_unit, getPosATL _thrownWeapon]] call CBA_fnc_targetEvent;
+                [QGVAR(doMove), [_unit, getPosATL _thrownWeapon], _unit] call CBA_fnc_targetEvent;
             };
 
             (_this select 1) call CBA_fnc_removePerFrameHandler;
