@@ -34,7 +34,7 @@ if (_displayHint) then {
     [LLSTRING(EarPlugs_Are_Off)] call EFUNC(common,displayTextStructured);
 };
 
-// Force an immediate fast volume update
+// Force an immediate volume update
 true call FUNC(updateVolume);
 
 call FUNC(updateHearingProtection);
