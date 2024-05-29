@@ -41,6 +41,15 @@ if (
 
         // Reset variable, so the box can cook-off again
         _object setVariable [QGVAR(isCookingOff), nil, true];
+
+        // Remove cook-off effects from box
+        private _jipID = _object getVariable QGVAR(cookoffBoxJipID);
+
+        if (isNil "_jipID") exitWith {};
+
+        _jipID call CBA_fnc_removeGlobalEventJIP;
+
+        _object setVariable [QGVAR(cookoffBoxJipID), nil];
     };
 
     // Reset variables, so the object can detonate its ammo again

@@ -112,7 +112,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
 |`ace_cookoff_cookOff` | [_vehicle, _intensity, _instigator, _smokeDelayEnabled, _ammoDetonationChance, _detonateAfterCookoff, _fireSource, _canRing, _maxIntensity, _canJet] | Global | Listen | Vehicle cook-off has started |
-|`ace_cookoff_cookOffBox` | [_box, _source, _instigator] | Global | Listen | Ammo box cook-off has started |
+|`ace_cookoff_cookOffBox` | [_box, _source, _instigator, _delay] | Global | Listen | Ammo box cook-off has started |
 |`ace_cookoff_engineFire` | [_vehicle] | Global | Listen | Engine fire has started |
 
 ### 2.11 Attach (`ace_attach`)

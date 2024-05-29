@@ -60,22 +60,22 @@ if (hasInterface) then {
 [{
     (_this select 0) params ["_vehicle", "_smoke", "_endTime"];
 
-    if (!alive _vehicle || {_vehicle getHitPointDamage "HitEngine" < 0.9} || {CBA_missionTime >= _endTime}) exitWith {
-        (_this select 1) call CBA_fnc_removePerFrameHandler;
+    if (alive _vehicle && {_vehicle getHitPointDamage "HitEngine" >= 0.9} && {CBA_missionTime < _endTime}) exitWith {};
 
-        deleteVehicle _smoke;
+    (_this select 1) call CBA_fnc_removePerFrameHandler;
 
-        if (!isServer || {isNull _vehicle}) exitWith {};
+    deleteVehicle _smoke;
 
-        // Reset variable, so engine can smoke again in the future
-        _vehicle setVariable [QGVAR(isEngineSmoking), nil, true];
+    if (!isServer || {isNull _vehicle}) exitWith {};
 
-        private _jipID = _vehicle getVariable QGVAR(engineFireJipID);
+    // Reset variable, so engine can smoke again in the future
+    _vehicle setVariable [QGVAR(isEngineSmoking), nil, true];
 
-        if (isNil "_jipID") exitWith {};
+    private _jipID = _vehicle getVariable QGVAR(engineFireJipID);
 
-        _jipID call CBA_fnc_removeGlobalEventJIP;
+    if (isNil "_jipID") exitWith {};
 
-        _vehicle setVariable [QGVAR(engineFireJipID), nil];
-    };
+    _jipID call CBA_fnc_removeGlobalEventJIP;
+
+    _vehicle setVariable [QGVAR(engineFireJipID), nil];
 }, 5, [_vehicle, _smoke, _endTime]] call CBA_fnc_addPerFrameHandler;

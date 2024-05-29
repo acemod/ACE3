@@ -32,17 +32,19 @@ if (_box getVariable [QGVAR(isCookingOff), false]) exitWith {};
 
 _box setVariable [QGVAR(isCookingOff), true, true];
 
+private _delay = random [SMOKE_DELAY / 2, SMOKE_DELAY, SMOKE_DELAY / 2 * 3];
+
 // Spawn cook-off effects on all connected machines and JIP
 private _jipID = [QGVAR(cookOffBoxLocal), [
     _box,
     _source,
     _instigator,
-    CBA_missionTime + random [SMOKE_DELAY / 2, SMOKE_DELAY, SMOKE_DELAY / 2 * 3] // generate random timer that is globally synced
+    CBA_missionTime + _delay // generate a globally synced timestamp
 ]] call CBA_fnc_globalEventJIP;
 
 [_jipID, _box] call CBA_fnc_removeGlobalEventJIP;
 
-_box setVariable [QGVAR(jipIDs), [_jipID]];
+_box setVariable [QGVAR(cookoffBoxJipID), _jipID];
 
 // API
-[QGVAR(cookOffBox), [_box, _source, _instigator]] call CBA_fnc_globalEvent;
+[QGVAR(cookOffBox), [_box, _source, _instigator, _delay]] call CBA_fnc_globalEvent;
