@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [cursorObject, player, player] call ace_common_fnc_setDead;
+ * [cursorObject, "", player, player] call ace_common_fnc_setDead;
  *
  * Public: Yes
  */
