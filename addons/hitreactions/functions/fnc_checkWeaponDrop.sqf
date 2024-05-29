@@ -26,8 +26,8 @@ if !(lifeState _entity in ["HEALTHY", "INJURED"]) exitWith {};
 
 if (random 1 >= ([GVAR(weaponDropChanceArmHitAI), GVAR(weaponDropChanceArmHitPlayer)] select (isPlayer _entity))) exitWith {};
 
-if (getNumber ((currentWeapon _entity) call CBA_fnc_getItemConfig >> QGVAR(undroppable)) == 1) exitWith {};
-
 if (_selections findAny GVAR(armSelections) == -1) exitWith {};
+
+if (getNumber ((currentWeapon _entity) call CBA_fnc_getItemConfig >> QGVAR(undroppable)) == 1) exitWith {};
 
 [QGVAR(dropWeapon), _entity, _entity] call CBA_fnc_targetEvent;
