@@ -32,23 +32,12 @@ if !(_hitPoint == "" && {_damage > 0.5}) exitWith {}; // "" means structural dam
 private _ammoConfig = _ammo call CBA_fnc_getObjectConfig;
 
 // Catch fire when hit by an explosive or incendiary round
-if ((getNumber (_ammoConfig >> "explosive") >= 0.5) || {getNumber (_ammoConfig >> QEGVAR(vehicle_damage,incendiary)) > random 1}) then {
+if (
+    (getNumber (_ammoConfig >> "explosive") >= 0.5) ||
+    {getNumber (_ammoConfig >> QEGVAR(vehicle_damage,incendiary)) > random 1} ||
+    {random 1 < _damage * 0.05 && {_ammo getShotInfo 4}} // there is a small chance of cooking a box off if it's shot by tracer ammo
+) then {
     [QGVAR(cookOffBox), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
-} else {
-    // There is a small chance of cooking a box off if it's shot by tracer ammo
-    if (random 1 >= _damage * 0.05) exitWith {};
-
-    // Need magazine to check for tracers
-    private _magazine = if (_source == _instigator) then {
-        currentMagazine _source
-    } else {
-        _source currentMagazineTurret (_source unitTurret _instigator)
-    };
-
-    // Magazine could have changed during flight time (just ignore if so)
-    if (_ammo getShotInfo 4 && {getText (configFile >> "CfgMagazines" >> _magazine >> "ammo") == _ammo}) then { // 4 = shownTracer
-        [QGVAR(cookOffBox), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
-    };
 };
 
 // Prevent destruction, let cook-off handle it if necessary
