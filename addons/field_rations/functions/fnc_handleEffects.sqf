@@ -21,11 +21,7 @@ params ["_player", "_thirst", "_hunger"];
 
 // Kill unit with max thirst or hunger
 if ((_thirst > 99.9 || {_hunger > 99.9}) && {random 1 < 0.5}) exitWith {
-    if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
-        [_player, "Hunger/Thirst empty"] call EFUNC(medical_status,setDead);
-    } else {
-        _player setDamage 1;
-    };
+    [_player, "Hunger/Thirst empty"] call EFUNC(common,setDead);
 };
 
 // Exit if unit is not awake, below are animation based consequences
