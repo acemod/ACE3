@@ -46,6 +46,9 @@ class optic_r1_high_arid_lxWS: optic_r1_high_lxWS {
 class optic_r1_high_lush_lxWS: optic_r1_high_lxWS {
     displayName = SUBCSTRING(r1_high_lush_Name);
 };
+class optic_r1_high_black_sand_lxWS: optic_r1_high_lxWS {
+    displayName = SUBCSTRING(r1_high_black_sand_Name);
+};
 
 class optic_r1_low_lxWS: optic_r1_high_lxWS {
     displayName = SUBCSTRING(r1_low_black_Name);
@@ -64,4 +67,9 @@ class optic_r1_low_arid_lxWS: optic_r1_high_lxWS {
 };
 class optic_r1_low_lush_lxWS: optic_r1_high_lxWS {
     displayName = SUBCSTRING(r1_low_lush_Name);
+};
+
+class optic_DMS;
+class optic_DMS_snake_lxWS: optic_DMS {
+    displayName = SUBCSTRING(dms_snake_Name);
 };

@@ -101,6 +101,12 @@ class CfgWeapons {
     class arifle_SLR_V_camo_lxWS: arifle_SLR_V_lxWS {
         displayName = SUBCSTRING(SLR_Camo_Name);
     };
+    class arifle_SLR_Para_lxWS: arifle_SLR_V_lxWS {
+        displayName = SUBCSTRING(SLR_Para_Name);
+    };
+    class arifle_SLR_Para_snake_lxWS: arifle_SLR_Para_lxWS {
+        displayName = SUBCSTRING(SLR_Para_Snake_Name);
+    };
 
     // Vektor R4/R5
     class arifle_Velko_base_lxWS;
@@ -157,5 +163,11 @@ class CfgWeapons {
     };
     class arifle_XMS_M_Sand_lxWS: arifle_XMS_M_lxWS {
         displayName = SUBCSTRING(XMS_SW_Sand_Name);
+    };
+
+    // GM6 Lynx
+    class srifle_GM6_F;
+    class srifle_GM6_snake_lxWS: srifle_GM6_F {
+        displayName = SUBCSTRING(gm6_snake_Name);
     };
 };

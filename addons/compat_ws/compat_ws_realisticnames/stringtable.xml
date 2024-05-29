@@ -256,6 +256,12 @@
             <French>FN FAL 50.00 (Jungle)</French>
             <Spanish>FN FAL 50.00 (Jungla)</Spanish>
         </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Para_Name">
+            <English>FN FAL 50.00 Para</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Para_Snake_Name">
+            <English>FN FAL 50.00 Para (Snake)</English>
+        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R4_Name">
             <English>Vektor R4</English>
             <Korean>벡터 R4</Korean>
@@ -448,6 +454,9 @@
             <Korean>XMS SW (모래)</Korean>
             <Japanese>XMS SW (サンド)</Japanese>
         </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_gm6_snake_Name">
+            <English>GM6 Lynx (Snake)</English>
+        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_arco_hex_Name">
             <English>ELCAN SpecterOS (Hex)</English>
         </Key>
@@ -487,6 +496,9 @@
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_lush_Name">
             <English>Aimpoint Micro R-1 (High, Lush)</English>
         </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_black_sand_Name">
+            <English>Aimpoint Micro R-1 (High, Black/Sand)</English>
+        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_black_Name">
             <English>Aimpoint Micro R-1 (Low, Black)</English>
         </Key>
@@ -504,6 +516,9 @@
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_lush_Name">
             <English>Aimpoint Micro R-1 (Low, Lush)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_dms_snake_Name">
+            <English>Burris XTR II (Snake)</English>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_atgm_Name">
             <English>Badger IFV (ATGM)</English>
