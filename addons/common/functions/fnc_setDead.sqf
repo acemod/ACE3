@@ -20,7 +20,9 @@
 
 params [["_unit", objNull, [objNull]], ["_reason", "", [""]], ["_source", objNull, [objNull]], ["_instigator", objNull, [objNull]]];
 
-if (!local _unit) exitWith {};
+if (!local _unit) exitWith {
+    WARNING_1("setDead executed on non-local unit - %1",_this);
+};
 
 if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
     [_unit, _reason, _source, _instigator] call EFUNC(medical_status,setDead);
