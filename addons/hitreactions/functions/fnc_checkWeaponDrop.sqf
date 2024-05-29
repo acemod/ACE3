@@ -26,7 +26,7 @@ if !(lifeState _entity in ["HEALTHY", "INJURED"]) exitWith {};
 
 if (random 1 >= ([GVAR(weaponDropChanceArmHitAI), GVAR(weaponDropChanceArmHitPlayer)] select (isPlayer _entity))) exitWith {};
 
-if ((currentWeapon _entity) in GVAR(undroppableWeapons)) exitWith {};
+if ((currentWeapon _entity) in (missionNamespace getVariable [QGVAR(undroppableWeapons), DEFAULT_UNDROPPABLE_WEAPONS])) exitWith {};
 
 if (_selections findAny GVAR(armSelections) == -1) exitWith {};
 

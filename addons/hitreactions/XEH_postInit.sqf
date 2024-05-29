@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 ["ace_firedNonPlayer", {
-    if (GVAR(weaponDropChanceArmHit) == 0) exitWith {};
+    if (GVAR(weaponDropChanceArmHitPlayer) + GVAR(weaponDropChanceArmHitAI) == 0) exitWith {};
 
     (_this select 6) addEventHandler ["HitPart", {
         params ["", "_entity", "", "", "", "", "_selections"];
@@ -11,7 +11,7 @@
 }] call CBA_fnc_addEventHandler;
 
 ["ace_firedPlayer", {
-    if (GVAR(weaponDropChanceArmHit) == 0) exitWith {};
+    if (GVAR(weaponDropChanceArmHitPlayer) + GVAR(weaponDropChanceArmHitAI) == 0) exitWith {};
 
     (_this select 6) addEventHandler ["HitPart", {
         params ["", "_entity", "", "", "", "", "_selections"];
@@ -44,7 +44,7 @@
         _unit setVariable [QGVAR(canDropWeapon), nil];
     }, _unit, 0.5] call CBA_fnc_waitAndExecute;
 
-    if (isPlayer _unit) exitWith {}; // Don't make the player pick its own weapon up
+    if (isPlayer _unit) exitWith {}; // Don't make players pick their own weapons up
 
     // Wait before executing, as otherwise the unit would pick up the weapon immediately
     [{
@@ -60,7 +60,10 @@
             if (lifeState _unit == "INCAPACITATED") exitWith {};
 
             // If the unit has no essential weapons, force them to get their weapon, otherwise wait until no enemies are present
-            if !((primaryWeapon _unit == "" && {handgunWeapon _unit == ""}) || {(_unit distance (_unit findNearestEnemy _unit)) > GVAR(safePickupDistance)}) exitWith {};
+            if !(
+                (primaryWeapon _unit == "" && {handgunWeapon _unit == ""}) ||
+                {(_unit distance (_unit findNearestEnemy _unit)) > missionNamespace getVariable [QGVAR(safePickupDistance), DEFAULT_PICKUP_DISTANCE]}
+            ) exitWith {};
 
             // If the unit is too far away, make them move closer
             if (_unit distance _thrownWeapon >= 4) exitWith {
@@ -76,7 +79,7 @@
             [{
                 (_this select 0) hasWeapon (_this select 1)
             }, {
-            	(_this select 0) setUnitLoadout getUnitLoadout (_this select 0);
+                (_this select 0) setUnitLoadout getUnitLoadout (_this select 0);
             }, [_unit, _weapon], 5] call CBA_fnc_waitUntilAndExecute;
         }, 5, _this] call CBA_fnc_addPerFrameHandler;
     }, [_unit, _weapon, _thrownWeapon, CBA_missionTime + 300], random [2, 3, 4]] call CBA_fnc_waitAndExecute;

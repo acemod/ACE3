@@ -21,6 +21,3 @@ GVAR(armSelections) = [
     "righthand",
     "rightarm"
 ];
-
-if (isNil QGVAR(safePickupDistance)) then {GVAR(safePickupDistance) = DEFAULT_PICKUP_DISTANCE};
-if (isNil QGVAR(undroppableWeapons)) then {GVAR(undroppableWeapons) = DEFAULT_UNDROPPABLE_WEAPONS};
