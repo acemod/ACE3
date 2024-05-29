@@ -155,37 +155,67 @@
             <English>Typhoon Water</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_Name">
-            <English>RAM 1500</English>
+            <English>Ram 1500</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_Fuel_Name">
-            <English>RAM 1500 (Fuel)</English>
+            <English>Ram 1500 (Fuel)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_service_Name">
-            <English>RAM 1500 (Services)</English>
+            <English>Ram 1500 (Services)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_repair_Name">
-            <English>RAM 1500 (Repair)</English>
+            <English>Ram 1500 (Repair)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_comms_Name">
-            <English>RAM 1500 (Comms)</English>
+            <English>Ram 1500 (Comms)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_hmg_Name">
-            <English>RAM 1500 (HMG)</English>
+            <English>Ram 1500 (HMG)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mmg_Name">
-            <English>RAM 1500 (MMG)</English>
+            <English>Ram 1500 (MMG)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mrl_Name">
-            <English>RAM 1500 (MRL)</English>
+            <English>Ram 1500 (MRL)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_aa_Name">
-            <English>RAM 1500 (AA)</English>
+            <English>Ram 1500 (AA)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_covered_Name">
-            <English>RAM 1500 (Covered)</English>
+            <English>Ram 1500 (Covered)</English>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_water_Name">
-            <English>RAM 1500 (Water)</English>
+            <English>Ram 1500 (Water)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_commando_Name">
+            <English>RSG60</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_twinmortar_Name">
+            <English>AMOS</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_base_Name">
+            <English>Drone40</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_Name">
+            <English>Drone40 Scout</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_he_Name">
+            <English>Drone40 HE</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_white_Name">
+            <English>Drone40 Smoke (White)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_blue_Name">
+            <English>Drone40 Smoke (Blue)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_red_Name">
+            <English>Drone40 Smoke (Red)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_green_Name">
+            <English>Drone40 Smoke (Green)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_orange_Name">
+            <English>Drone40 Smoke (Orange)</English>
         </Key>
     </Package>
 </Project>

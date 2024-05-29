@@ -95,4 +95,40 @@ class CfgVehicles {
     class C_IDAP_Pickup_water_rf: C_IDAP_Pickup_rf {
         displayName = SUBCSTRING(pickup_01_water_Name);
     };
+
+    class StaticMortar;
+    class CommandoMortar_base_RF: StaticMortar {
+        displayName = SUBCSTRING(commando_Name);
+    };
+
+    class StaticMGWeapon;
+    class TwinMortar_base_RF: StaticMGWeapon {
+        displayName = SUBCSTRING(twinmortar_Name);
+    };
+
+    class Helicopter_Base_F;
+    class UAV_RC40_Base_RF: Helicopter_Base_F {
+        displayName = SUBCSTRING(rc40_base_Name);
+    };
+    class UAV_RC40_Base_Sensor_RF: UAV_RC40_Base_RF {
+        displayName = SUBCSTRING(rc40_Name);
+    };
+    class UAV_RC40_Base_HE_RF: UAV_RC40_Base_RF {
+        displayName = SUBCSTRING(rc40_he_Name);
+    };
+    class UAV_RC40_Base_SmokeWhite_RF: UAV_RC40_Base_HE_RF {
+        displayName = SUBCSTRING(rc40_white_Name);
+    };
+    class UAV_RC40_Base_SmokeBlue_RF: UAV_RC40_Base_HE_RF {
+        displayName = SUBCSTRING(rc40_blue_Name);
+    };
+    class UAV_RC40_Base_SmokeRed_RF: UAV_RC40_Base_HE_RF {
+        displayName = SUBCSTRING(rc40_red_Name);
+    };
+    class UAV_RC40_Base_SmokeGreen_RF: UAV_RC40_Base_HE_RF {
+        displayName = SUBCSTRING(rc40_green_Name);
+    };
+    class UAV_RC40_Base_SmokeOrange_RF: UAV_RC40_Base_HE_RF {
+        displayName = SUBCSTRING(rc40_orange_Name);
+    };
 };
