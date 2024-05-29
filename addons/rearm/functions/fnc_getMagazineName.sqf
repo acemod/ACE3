@@ -33,10 +33,8 @@ if (isNil "_magName") then {
     TRACE_2("Adding to cache",_className,_displayName);
 
     // go through all existing cache entries and update if there now are duplicates
-    private _xMagName = "";
-
     {
-        _xMagName = _y;
+        private _xMagName = _y;
         if ((_xMagName == _displayName) && {({_xMagName == _x} count GVAR(originalMagazineNames)) > 1}) then {
             _xMagName = format ["%1: %2", _displayName, getText(configFile >> "CfgMagazines" >> _x >> "displayNameShort")];
             GVAR(magazineNameCache) set [_x, _xMagName];
