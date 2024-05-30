@@ -21,6 +21,6 @@ params ["_player", "_target"];
 if (isNull _target) exitWith {false};
 
 // check if disabled for faction
-if (GVAR(disabledFactions) getOrDefault [toLowerANSI faction _target, false]) exitWith {false};
+if ((toLowerANSI faction _target) in GVAR(disabledFactions)) exitWith {false};
 
 (!alive _target) || {_target getVariable ["ACE_isUnconscious", false]}
