@@ -1,6 +1,6 @@
 #include "\z\ace\addons\missileguidance\script_component.hpp"
 
-private _configs = configProperties [configFile >> "CfgAmmo", QUOTE((isClass _x) && { isClass (_x >> QUOTE(QUOTE(ADDON)))} )];
+private _configs = configProperties [configFile >> "CfgAmmo", QUOTE((isClass _x) && { isClass (_x >> QUOTE(QUOTE(ADDON)))})];
 
 private _seekerTypes = createHashMap;
 private _navigationTypes = createHashMap;
