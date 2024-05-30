@@ -1099,6 +1099,19 @@
         </Key>
         <Key ID="STR_ACE_Zeus_OnlyPlayers">
             <English>Only Players</English>
+            <Japanese>プレイヤーのみ</Japanese>
+            <German>Nur Spieler</German>
+            <Korean>오직 플레이어만</Korean>
+            <Polish>Tylko gracze</Polish>
+            <French>Joueurs seulement</French>
+            <Italian>Solo Giocatori</Italian>
+            <Chinesesimp>仅玩家</Chinesesimp>
+            <Chinese>只有玩家</Chinese>
+            <Russian>Только игроки</Russian>
+            <Portuguese>Apenas Jogadores</Portuguese>
+            <Czech>Pouze hráči</Czech>
+            <Spanish>Solo jugadores</Spanish>
+            <Turkish>Sadece Oyuncular</Turkish>
         </Key>
         <Key ID="STR_ACE_Zeus_None">
             <English>None</English>
