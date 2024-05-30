@@ -38,6 +38,7 @@ if (!_updateVolumeOnly) then {
         GVAR(deafnessDV) > 10) then {
 
         if (CBA_missionTime - GVAR(time3) < 3) exitWith {};
+        if (!isGameFocused) exitWith {}; // prevent audio from stacking when tabbed out
 
         GVAR(time3) = CBA_missionTime;
 
