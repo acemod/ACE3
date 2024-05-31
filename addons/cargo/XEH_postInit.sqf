@@ -36,6 +36,15 @@
     };
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(unloadedCargoOnKilled), {
+    params ["_item", "_vehicle"];
+    private _velocity = velocity _vehicle apply {_x / CARGO_TUMBLE_VELOCITY_DIVISOR};
+    private _torque = _vehicle vectorModelToWorld [random CARGO_TUMBLE_TORQUE,0,0];
+
+    _item setVelocity _velocity;
+    _item addTorque _torque;
+}] call CBA_fnc_addEventHandler;
+
 // Direction must be set before setting position according to wiki
 [QGVAR(setDirAndUnload), {
     params ["_item", "_emptyPosAGL", "_direction"];

@@ -32,12 +32,14 @@ if (_loaded isNotEqualTo []) then {
             private _delete = true;
 
             if (_killed && {random 1 < GVAR(unloadOnKilled)}) then {
-                _delete = !([_x, _object] call ace_cargo_fnc_unloadItem); // If a safe position to unload cannot be found fnc_unloadItem returns false, delete cargo instead
+                _delete = !([_x, _object, objNull, [], false] call FUNC(unloadItem)); // If a safe position to unload cannot be found FUNC(unloadItem) returns false, delete cargo instead
             };
 
             if (_delete) then {
                 detach _x;
                 deleteVehicle _x;
+            } else {
+                [QGVAR(unloadedCargoOnKilled), [_x, _object], _x] call CBA_fnc_targetEvent;
             };
         };
     } forEachReversed _loaded;
