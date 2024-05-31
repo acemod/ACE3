@@ -19,9 +19,7 @@
 
 params ["_object"];
 
-private _killed = false;
-
-if (count _this > 1) then {_killed = true}; // The Killed event has 4 params. The Deleted event only has 1 param.
+private _killed = count _this > 1; // The Killed event has 4 params. The Deleted event only has 1 param.
 
 private _loaded = _object getVariable [QGVAR(loaded), []];
 

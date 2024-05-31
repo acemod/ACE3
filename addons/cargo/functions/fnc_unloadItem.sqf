@@ -10,7 +10,7 @@
  * 3: Deploy parameters <ARRAY> (default: [])
  * - 0: Position AGL <ARRAY>
  * - 1: Direction <NUMBER>
- * 4: Unload only if stable <BOOL> (default: true) (Applies only if arguemnt 3 is default)
+ * 4: Unload only if stable <BOOL> (default: true) (Applies only if argument 3 is [])
  *
  * Return Value:
  * Object unloaded <BOOL>
