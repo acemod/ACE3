@@ -36,8 +36,7 @@ private _category = [ELSTRING(main,Category_Logistics), LSTRING(openMenu)];
     [LSTRING(unloadOnKilled), LSTRING(unloadOnKilled_description)],
     _category,
     [0, 1, 0, 1, true], // [_min, _max, _default, _trailingDecimals, _isPercentage]
-    1,
-    {[QGVAR(unloadOnKilled), _this, true] call EFUNC(common,cbaSettings_settingChanged)}
+    1
 ] call CBA_fnc_addSetting;
 
 [
