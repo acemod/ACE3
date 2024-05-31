@@ -10,7 +10,7 @@
  * 3: Deploy parameters <ARRAY> (default: [])
  * - 0: Position AGL <ARRAY>
  * - 1: Direction <NUMBER>
- * 4: Unload only if stable <BOOL> (default: true) (Applies only of arguemnt 3 is default)
+ * 4: Unload only if stable <BOOL> (default: true) (Applies only if arguemnt 3 is default)
  *
  * Return Value:
  * Object unloaded <BOOL>
@@ -21,7 +21,7 @@
  * Public: Yes
  */
 
-params [["_item", "", [objNull, ""]],["_vehicle", objNull, [objNull]],["_unloader", objNull, [objNull]],["_deploy", []],["_checkVehicleIsStable", true [true]]];
+params [["_item", "", [objNull, ""]],["_vehicle", objNull, [objNull]],["_unloader", objNull, [objNull]],["_deploy", []],["_checkVehicleIsStable", true, [true]]];
 _deploy params ["_emptyPosAGL", "_direction"];
 
 TRACE_5("params",_item,_vehicle,_unloader,_deploy,_checkVehicleIsStable);
