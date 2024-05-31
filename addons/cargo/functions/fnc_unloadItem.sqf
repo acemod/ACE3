@@ -21,7 +21,13 @@
  * Public: Yes
  */
 
-params [["_item", "", [objNull, ""]],["_vehicle", objNull, [objNull]],["_unloader", objNull, [objNull]],["_deploy", []],["_checkVehicleIsStable", true, [true]]];
+params [
+    ["_item", "", [objNull, ""]],
+    ["_vehicle", objNull, [objNull]],
+    ["_unloader", objNull, [objNull]],
+    ["_deploy", []],
+    ["_checkVehicleIsStable", true, [true]]
+];
 _deploy params ["_emptyPosAGL", "_direction"];
 
 TRACE_5("params",_item,_vehicle,_unloader,_deploy,_checkVehicleIsStable);
