@@ -457,6 +457,9 @@
         <Key ID="STR_ACE_Compat_WS_RealisticNames_gm6_snake_Name">
             <English>GM6 Lynx (Snake)</English>
         </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_rpg32_tan_Name">
+            <English>RPG-32 (Sand)</English>
+        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_arco_hex_Name">
             <English>ELCAN SpecterOS (Hex)</English>
         </Key>

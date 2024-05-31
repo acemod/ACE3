@@ -170,4 +170,10 @@ class CfgWeapons {
     class srifle_GM6_snake_lxWS: srifle_GM6_F {
         displayName = SUBCSTRING(gm6_snake_Name);
     };
+
+    // RPG-32
+    class launch_RPG32_F;
+    class launch_RPG32_tan_lxWS: launch_RPG32_F {
+        displayName = SUBCSTRING(rpg32_tan_Name);
+    };
 };
