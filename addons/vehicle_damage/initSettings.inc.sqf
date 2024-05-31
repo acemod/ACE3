@@ -13,9 +13,7 @@
     [LSTRING(removeAmmoAfterCookoff_setting_enable), LSTRING(removeAmmoAfterCookoff_setting_description)],
     LSTRING(category_displayName),
     true, // default value
-    true, // isGlobal
-    {[QGVAR(removeAmmoDuringCookoff), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    false // Needs mission restart
+    true // isGlobal
 ] call CBA_settings_fnc_init;
 
 [

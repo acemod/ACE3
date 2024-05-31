@@ -20,7 +20,7 @@
     false,
     true,
     {[QGVAR(disableNegativeRating), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
