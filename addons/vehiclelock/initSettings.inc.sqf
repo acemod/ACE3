@@ -3,8 +3,7 @@
     [LSTRING(DefaultLockpickStrength_DisplayName), LSTRING(DefaultLockpickStrength_Description)],
     LSTRING(DisplayName),
     [-1,60,10,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
-    true, // isGlobal
-    {[QGVAR(defaultLockpickStrength), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
