@@ -35,5 +35,5 @@ if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
 
 // If guaranteed death is wished
 if (_guaranteeDeath && {alive _unit}) then {
-    [_unit, "", _source, _instigator] call EFUNC(common,setDead);
+    [_unit, QGVAR(medicalDamage), _source, _instigator] call EFUNC(common,setDead);
 };
