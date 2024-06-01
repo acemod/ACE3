@@ -222,6 +222,9 @@ if (isServer) then {
     [QGVAR(claimSafe), LINKFUNC(claimSafeServer)] call CBA_fnc_addEventHandler;
 };
 
+["CBA_SettingChanged", {
+    ["ace_settingChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
 
 //////////////////////////////////////////////////
 // Set up remote execution
