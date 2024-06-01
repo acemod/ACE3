@@ -68,47 +68,16 @@
 
             _unit action ["TakeWeapon", _thrownWeapon, _weapon];
 
-            // "TakeWeapon" action bugs out unit where they don't switch weapons
-            // Resetting loadout fixes bugged state
+            // Make the unit switch weapons
             [{
                 (_this select 0) hasWeapon (_this select 1)
             }, {
                 params ["_unit", "_weapon"];
 
-                if (!alive _unit || {!local _unit}) exitWith {};
-
-                private _index = [primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit, binocular _unit] find _weapon;
-
-                // If the weapon can't be found, stop
-                if (_index == -1) exitWith {};
-
-                // Binoculars
-                if (_index == 3) then {
-                    _index = 8;
-                };
-
-                // Save the current weapon's items including magazines and ammo count
-                private _currentWeaponsItems = (getUnitLoadout _unit) select _index;
-
-                // Get the weapon's magazines
-                private _magazines = _currentWeaponsItems select [4, 2];
-
-                // Remove weapon classname and magazines
-                _currentWeaponsItems deleteRange [4, 2];
-                _currentWeaponsItems deleteAt 0;
-
-                // Replace the weapon with the same type of weapon and add the magazines directly, so AI don't reload
-                [_unit, _weapon, true, _magazines] call EFUNC(common,addWeapon);
-
-                // Add the previous attachments back to the weapon
-                {
-                    _unit addWeaponItem [_weapon, _x, true];
-                } forEach (_currentWeaponsItems select {_x != ""});
+                if (!alive _unit || {!local _unit} || {primaryWeapon _unit != _weapon}) exitWith {};
 
                 // Switch to the primary weapon, if it was picked up
-                if (_index == 0) then {
-                    _unit selectWeapon ((_unit weaponState _weapon) select 1);
-                };
+                _unit selectWeapon _weapon;
             }, [_unit, _weapon], 5] call CBA_fnc_waitUntilAndExecute;
         }, 5, _this] call CBA_fnc_addPerFrameHandler;
     }, [_unit, _weapon, _thrownWeapon, CBA_missionTime + 300], random [2, 3, 4]] call CBA_fnc_waitAndExecute;
