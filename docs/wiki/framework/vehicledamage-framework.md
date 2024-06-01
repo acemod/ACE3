@@ -126,3 +126,11 @@ Default ARMA config value. We assume that the warheads are vanilla strings, so o
 - `TandemHEAT`
 
 If no `ace_vehicle_damage_incendiary` defined, this value will be used to assume a default based on above table of common values (excluding `Incendiary Bullet` which is 0).
+
+## 3. Disabling crew bailing for individual vehicles
+
+Crew bailing when their vehicle is disabled (immobile or can't shoot) can be disabled for a specific vehicle:
+
+```
+_vehicle setVariable ["ace_vehicle_damage_allowCrewInImmobile", true, true];
+```
