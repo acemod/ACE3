@@ -98,7 +98,7 @@
                 _currentWeaponsItems deleteAt 0;
 
                 // Replace the weapon with the same type of weapon and add the magazines directly, so AI don't reload
-                [_unit, _weapon, true, true, _magazines] call EFUNC(common,addWeapon);
+                [_unit, _weapon, true, _magazines] call EFUNC(common,addWeapon);
 
                 // Add the previous attachments back to the weapon
                 {
