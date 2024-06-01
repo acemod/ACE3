@@ -58,7 +58,7 @@ private _deployed = _deploy isNotEqualTo [];
 if (!_deployed) then {
     // This covers testing vehicle stability and finding a safe position
     for "_i" from 1 to 3 do {
-        _emptyPosAGL = [_vehicle, _item, _unloader, _checkVehicleIsStable] call EFUNC(common,findUnloadPosition);
+        _emptyPosAGL = [_vehicle, _item, _unloader, nil, _checkVehicleIsStable] call EFUNC(common,findUnloadPosition);
 
         if (_emptyPosAGL isNotEqualTo []) exitWith {};
     };
