@@ -60,6 +60,8 @@
 
             // If the unit is too far away, make them move closer
             if (_unit distance _thrownWeapon >= 4) exitWith {
+                private _pos = getPosATL _thrownWeapon;
+
                 _unit setDestination [_pos, "LEADER PLANNED", true];
                 _unit doMove _pos;
             };
