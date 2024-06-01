@@ -24,7 +24,7 @@ if !(_entity isKindOf "CAManBase") exitWith {};
 // Don't throw weapon if unit is unconscious or dead
 if !(lifeState _entity in ["HEALTHY", "INJURED"]) exitWith {};
 
-if (random 1 >= ([GVAR(weaponDropChanceArmHitAI), GVAR(weaponDropChanceArmHitPlayer)] select (isPlayer _entity))) exitWith {};
+if (random 1 >= ([GVAR(weaponDropChanceArmHitAI), GVAR(weaponDropChanceArmHitPlayer)] select (_entity call EFUNC(common,isPlayer)))) exitWith {};
 
 if (_selections findAny GVAR(armSelections) == -1) exitWith {};
 
