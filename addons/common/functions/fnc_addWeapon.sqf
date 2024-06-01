@@ -2,22 +2,37 @@
 /*
  * Author: commy2, johnb43
  * Adds weapon to unit without taking a magazine.
- * Same as CBA_fnc_addWeaponWithoutItems, but doesn't remove linked items.
+ * Same as CBA_fnc_addWeaponWithoutItems, but doesn't automatically remove linked items.
  *
  * Arguments:
- * 0: Unit to add the weapon to <OBEJCT>
+ * 0: Unit to add the weapon to <OBJECT>
  * 1: Weapon to add <STRING>
+ * 2: If linked items should be removed or not <BOOL> (default: false)
+ * 3: If linked magazines should be removed or not <BOOL> (default: false)
+ * 4: Magazines that should be added to the weapon <ARRAY> (default: [])
+ * - 0: Magazine classname <STRING>
+ * - 1: Ammo count <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "arifle_AK12_F"] call ace_common_fnc_addWeapon
+ * [player, "arifle_MX_GL_F", true, true, [["30Rnd_65x39_caseless_mag", 30], ["1Rnd_HE_Grenade_shell", 1]]] call ace_common_fnc_addWeapon
  *
  * Public: Yes
 */
 
-params ["_unit", "_weapon"];
+params [
+    ["_unit", objNull, [objNull]],
+    ["_weapon", "", [""]],
+    ["_removeLinkedItems", false, [false]],
+    ["_removeLinkedMagazines", false, [false]],
+    ["_magazines", [], [[]]]
+];
+
+if (isNull _unit || {"" in [_weapon, _magazine]}) exitWith {};
+
+_weapon = _weapon call FUNC(getConfigName);
 
 // Config case
 private _compatibleMagazines = compatibleMagazines _weapon;
@@ -44,6 +59,60 @@ private _backpackMagazines = (magazinesAmmoCargo _backpack) select {
 
 // Add weapon
 _unit addWeapon _weapon;
+
+// This doesn't remove magazines
+if (_removeLinkedItems) then {
+    switch (_weapon) do {
+        case (primaryWeapon _unit): {
+            removeAllPrimaryWeaponItems _unit;
+        };
+        case (secondaryWeapon _unit): {
+            removeAllSecondaryWeaponItems _unit;
+        };
+        case (handgunWeapon _unit): {
+            removeAllHandgunItems _unit;
+        };
+        case (binocular _unit): {
+            removeAllBinocularItems _unit;
+        };
+    };
+};
+
+if (_removeLinkedMagazines) then {
+    switch (_weapon) do {
+        case (primaryWeapon _unit): {
+            {
+                _unit removePrimaryWeaponItem _x;
+            } forEach (primaryWeaponMagazine _unit);
+        };
+        case (secondaryWeapon _unit): {
+            {
+                _unit removesecondaryWeaponItem _x;
+            } forEach (secondaryWeaponMagazine _unit);
+        };
+        case (handgunWeapon _unit): {
+            {
+                _unit removeHandgunItem _x;
+            } forEach (handgunMagazine _unit);
+        };
+        case (binocular _unit): {
+            {
+                _unit removeBinocularItem _x;
+            } forEach (binocularMagazine _unit);
+        };
+    };
+};
+
+// Add magazines directly now, so that AI don't reload
+if (_magazines isNotEqualTo []) then {
+    {
+        _x params [["_magazine", "", [""]], ["_ammoCount", -1, [0]]];
+
+        if (_magazine != "" && {_ammoCount > -1}) then {
+            _unit addWeaponItem [_weapon, [_magazine, _ammoCount], true];
+        };
+    } forEach _magazines;
+};
 
 // Add all magazines back
 {

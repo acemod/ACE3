@@ -79,6 +79,9 @@
 
                 private _index = [primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit, binocular _unit] find _weapon;
 
+                // If the weapon can't be found, stop
+                if (_index == -1) exitWith {};
+
                 // Binoculars
                 if (_index == 3) then {
                     _index = 8;
@@ -87,85 +90,22 @@
                 // Save the current weapon's items including magazines and ammo count
                 private _currentWeaponsItems = (getUnitLoadout _unit) select _index;
 
-                // Remove weapon classname
+                // Get the weapon's magazines
+                private _magazines = _currentWeaponsItems select [4, 2];
+
+                // Remove weapon classname and magazines
+                _currentWeaponsItems deleteRange [4, 2];
                 _currentWeaponsItems deleteAt 0;
 
-                // Using CBA_fnc_addWeaponWithoutItems makes the unit reload, which we don't want
-                _unit addWeaponGlobal _weapon;
-
-                // Save the magazines that were automatically added to the gun when using addWeapon
-                private _magazines = ((getUnitLoadout _unit) select _index) select [4, 2];
-
-                // Doesn't remove magazines
-                switch (_index) do {
-                    case 0: {
-                        removeAllPrimaryWeaponItems _unit;
-                    };
-                    case 1: {
-                        removeAllSecondaryWeaponItems _unit;
-                    };
-                    case 2: {
-                        removeAllHandgunItems _unit;
-                    };
-                    case 8: {
-                        removeAllBinocularItems _unit;
-                    };
-                };
-
-                // Re-add magazines that were automatically added to weapon back into inventory
-                {
-                    if (_x isEqualTo []) then {
-                        continue;
-                    };
-
-                    if ([_unit, _x select 0, 1, true, true, true] call CBA_fnc_canAddItem) then {
-                        _unit addMagazine _x;
-                    } else {
-                        // If there is no space, it means the unit was overloaded, so insert it anywhere possible
-                        private _magazine = _x;
-                        private _added = false;
-
-                        {
-                            if (!isNull _x) exitWith {
-                                _x addMagazineAmmoCargo [_magazine select 0, 1, _magazine select 1];
-
-                                _added = true;
-                            };
-                        } forEach [backpackContainer _unit, vestContainer _unit, uniformContainer _unit];
-
-                        // If the magazine couldn't be added, then drop it on the ground
-                        if (!_added) then {
-                            [_unit, _x select 0, _x select 1, true] call CBA_fnc_addMagazine;
-                        };
-                    };
-                } forEach _magazines;
+                // Replace the weapon with the same type of weapon and add the magazines directly, so AI don't reload
+                [_unit, _weapon, true, true, _magazines] call EFUNC(common,addWeapon);
 
                 // Add the previous attachments back to the weapon
                 {
-                    // If no magazine was previously loaded, remove it
-                    if (_forEachIndex in [3, 4] && {_x isEqualTo []}) then {
-                        switch (_index) do {
-                            case 0: {
-                                _unit removePrimaryWeaponItem ((_magazines select (_forEachIndex - 3)) param [0, ""]);
-                            };
-                            case 1: {
-                                _unit removeSecondaryWeaponItem ((_magazines select (_forEachIndex - 3)) param [0, ""]);
-                            };
-                            case 2: {
-                                _unit removeHandgunItem ((_magazines select (_forEachIndex - 3)) param [0, ""]);
-                            };
-                            case 8: {
-                                _unit removeBinocularItem ((_magazines select (_forEachIndex - 3)) param [0, ""]);
-                            };
-                        };
-                    } else {
-                        if (_x isNotEqualTo "") then {
-                            _unit addWeaponItem [_weapon, _x, true];
-                        };
-                    };
-                } forEach _currentWeaponsItems;
+                    _unit addWeaponItem [_weapon, _x, true];
+                } forEach (_currentWeaponsItems select {_x != ""});
 
-                // Switch to the primary weapon
+                // Switch to the primary weapon, if it was picked up
                 if (_index == 0) then {
                     _unit selectWeapon ((_unit weaponState _weapon) select 1);
                 };
