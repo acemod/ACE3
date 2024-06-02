@@ -27,7 +27,9 @@ _intensity = _intensity * INTENSITY_DECREASE_MULT_PAT_DOWN;
 _patient setVariable [QGVAR(intensity), _intensity, true];
 
 // If the unit is still burning, loop the medical action
-if !(_patient call FUNC(isBurning)) exitWith {};
+if !(_patient call FUNC(isBurning)) exitWith {
+    TRACE_1("patient no longer burning, quitting",_this);
+};
 
 TRACE_1("patient still burning, looping",_this);
 

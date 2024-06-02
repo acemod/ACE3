@@ -24,27 +24,42 @@ if (!EGVAR(common,settingsInitFinished)) exitWith {
 if (!GVAR(enabled)) exitWith {};
 
 params ["_unit", "_intensity", ["_instigator", objNull]];
+TRACE_3("burn",_unit,_intensity,_instigator);
 
-if (BURN_MIN_INTENSITY > _intensity) exitWith {};
+if (BURN_MIN_INTENSITY > _intensity) exitWith {
+    TRACE_3("intensity is too low",_unit,_intensity,BURN_MIN_INTENSITY);
+};
 
 // Check if unit is remote (objNull is remote)
-if (!local _unit) exitWith {};
+if (!local _unit) exitWith {
+    TRACE_1("unit is null or not local",_unit);
+};
 
 // Check if the unit can burn (takes care of spectators and curators)
-if (getNumber (configOf _unit >> "isPlayableLogic") == 1 || {!(_unit isKindOf "CAManBase")}) exitWith {};
+if (getNumber (configOf _unit >> "isPlayableLogic") == 1 || {!(_unit isKindOf "CAManBase")}) exitWith {
+    TRACE_1("unit is virtual or not a man",_unit);
+};
 
 // If unit is invulnerable, don't burn the unit
-if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {};
+if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {
+    TRACE_1("unit is invulnerable",_unit);
+};
 
 private _eyePos = eyePos _unit;
 
 // Check if unit is mostly submerged in water
-if (surfaceIsWater _eyePos && {(_eyePos select 2) < 0.1}) exitWith {};
+if (surfaceIsWater _eyePos && {(_eyePos select 2) < 0.1}) exitWith {
+    TRACE_1("unit is in water",_unit);
+};
 
 // If unit is already burning, update intensity, but don't add another PFH
 if (_unit call FUNC(isBurning)) exitWith {
+    TRACE_2("unit already burning, updating intensity",_unit,_intensity);
+
     _unit setVariable [QGVAR(intensity), _intensity, true];
 };
+
+TRACE_2("setting unit ablaze",_unit,_intensity);
 
 _unit setVariable [QGVAR(intensity), _intensity, true];
 

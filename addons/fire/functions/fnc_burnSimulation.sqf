@@ -24,11 +24,15 @@ params ["_unit", "_instigator"];
     _args params ["_unit", "_instigator"];
 
     if (isNull _unit) exitWith {
+        TRACE_1("unit is null",_unit);
+
         _pfhID call CBA_fnc_removePerFrameHandler;
     };
 
     // Locality has changed
     if (!local _unit) exitWith {
+        TRACE_1("unit is no longer local",_unit);
+
         _pfhID call CBA_fnc_removePerFrameHandler;
 
         [QGVAR(burnSimulation), [_unit, _instigator], _unit] call CBA_fnc_targetEvent;
@@ -40,6 +44,8 @@ params ["_unit", "_instigator"];
         {!(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]})} ||
         {private _eyePos = eyePos _unit; surfaceIsWater _eyePos && {(_eyePos select 2) < 0.1}}
     ) exitWith {
+        TRACE_3("unit is no longer burning, invulnerable or in water",_unit,_unit call FUNC(isBurning),isDamageAllowed _unit && {_unit getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]});
+
         // Remove global effects
         (_unit getVariable [QGVAR(jipID), ""]) call CBA_fnc_removeGlobalEventJIP;
 
@@ -61,6 +67,8 @@ params ["_unit", "_instigator"];
 
     // Propagate fire to other units (alive or dead) if it's intense
     if (_intensity >= BURN_THRESHOLD_INTENSE) then {
+        TRACE_2("check for other units",_unit,_intensity);
+
         private _adjustedIntensity = 0;
 
         {
@@ -73,11 +81,15 @@ params ["_unit", "_instigator"];
             };
 
             [QGVAR(burn), [_x, _adjustedIntensity, _instigator], _x] call CBA_fnc_targetEvent;
+
+            TRACE_3("propagate fire",_x,_intensity,_adjustedIntensity);
         } forEach nearestObjects [_unit, ["CAManBase"], BURN_PROPAGATE_DISTANCE];
     };
 
     // Update intensity/fire reactions
     if (CBA_missionTime >= _unit getVariable [QGVAR(intensityUpdate), 0]) then {
+        TRACE_2("update intensity",_unit,_intensity);
+
         _unit setVariable [QGVAR(intensityUpdate), CBA_missionTime + INTENSITY_UPDATE];
 
         _intensity = _intensity - INTENSITY_LOSS - (rain / 10);
