@@ -13,9 +13,7 @@
     [LSTRING(enableFire_name), LSTRING(enableFire_tooltip)],
     LSTRING(category_displayName),
     true, // default value
-    true, // isGlobal
-    {[QGVAR(enableFire), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    false // Needs mission restart
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -23,9 +21,7 @@
     [LSTRING(destroyVehicleAfterCookoff_name), LSTRING(destroyVehicleAfterCookoff_tooltip)],
     LSTRING(category_displayName),
     false, // default value
-    true, // isGlobal
-    {[QGVAR(destroyVehicleAfterCookoff), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    false // Needs mission restart
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -33,9 +29,7 @@
     [LSTRING(enableAmmoCookoff_name), LSTRING(enableAmmoCookoff_tooltip)],
     LSTRING(category_displayName),
     true, // default value
-    true, // isGlobal
-    {[QGVAR(enableAmmoCookoff), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    false // Needs mission restart
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
