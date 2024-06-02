@@ -4,8 +4,7 @@
     [LSTRING(enableFire_name), LSTRING(enableFire_tooltip)],
     LSTRING(category_displayName),
     true,
-    1,
-    {[QGVAR(enableFire), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -14,8 +13,7 @@
     [LSTRING(cookoffDuration_name), LSTRING(cookoffDuration_tooltip)],
     LSTRING(category_displayName),
     [0, 10, 1, 2],
-    1,
-    {[QGVAR(cookoffDuration), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -24,8 +22,7 @@
     [LSTRING(probabilityCoef_name), LSTRING(probabilityCoef_tooltip)],
     LSTRING(category_displayName),
     [0, 10, 1, 2],
-    1,
-    {[QGVAR(probabilityCoef), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -34,8 +31,7 @@
     [LSTRING(destroyVehicleAfterCookoff_name), LSTRING(destroyVehicleAfterCookoff_tooltip)],
     LSTRING(category_displayName),
     false,
-    1,
-    {[QGVAR(destroyVehicleAfterCookoff), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -44,8 +40,7 @@
     [LSTRING(enableAmmoCookoff_name), LSTRING(enableAmmoCookoff_tooltip)],
     LSTRING(category_displayName),
     true,
-    1,
-    {[QGVAR(enableAmmoCookoff), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -54,8 +49,7 @@
     [LSTRING(enableBoxCookoff_name), LSTRING(enableBoxCookoff_tooltip)],
     LSTRING(category_displayName),
     true,
-    1,
-    {[QGVAR(enableAmmobox), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -64,8 +58,7 @@
     [LSTRING(ammoCookoffDuration_name), LSTRING(ammoCookoffDuration_tooltip)],
     LSTRING(category_displayName),
     [0, 10, 1, 2],
-    1,
-    {[QGVAR(ammoCookoffDuration), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -74,6 +67,5 @@
     [LSTRING(removeAmmoDuringCookoff_name), LSTRING(removeAmmoDuringCookoff_tooltip)],
     LSTRING(category_displayName),
     true,
-    1,
-    {[QGVAR(removeAmmoDuringCookoff), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    1
 ] call CBA_fnc_addSetting;
