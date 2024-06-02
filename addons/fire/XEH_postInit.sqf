@@ -42,6 +42,13 @@ if (!isServer) exitWith {};
         if (_radius == 0 || _intensity == 0) exitWith {};
         if (_key isEqualTo "") exitWith {}; // key can be many types
 
+        // hashValue supports more types than hashmaps do by default, but not all (e.g. locations)
+        private _hashedKey = hashValue _key;
+
+        if (isNil "_hashedKey") exitWith {
+            ERROR_2("Unsupported key type used: %1 - %2",_key,typeName _key);
+        };
+
         // If a position is passed, create a static object at said position
         private _sourcePos = if (_isObject) then {
             getPosATL _source
@@ -54,13 +61,6 @@ if (!isServer) exitWith {};
         // If an object was passed, attach logic to the object
         if (_isObject) then {
             _fireLogic attachTo [_source];
-        };
-
-        // hashValue supports more types than hashmaps do by default, but not all (e.g. locations)
-        private _hashedKey = hashValue _key;
-
-        if (isNil "_hashedKey") exitWith {
-            ERROR_2("Unsupported key type used: %1 - %2",_key,typeName _key);
         };
 
         // To avoid issues, remove existing entries first before overwriting
