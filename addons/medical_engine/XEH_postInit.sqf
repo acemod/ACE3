@@ -13,7 +13,7 @@
     if (getNumber (configOf _unit >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit);};
 
     private _allHitPoints = getAllHitPointsDamage _unit param [0, []];
-    if ((_allHitPoints arrayIntersect GVAR(customHitpoints)) isNotEqualTo GVAR(customHitpoints)) exitWith {
+    if ((GVAR(customHitpoints) arrayIntersect _allHitPoints) isNotEqualTo GVAR(customHitpoints)) exitWith {
         ERROR_1("Bad hitpoints for unit type ""%1""",typeOf _unit);
     };
 
