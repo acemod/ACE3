@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-// ToDo: move refuel to subconfig
 #include "\z\ace\addons\refuel\defines.hpp"
 #include "\z\ace\addons\hearing\script_macros_hearingProtection.hpp"
 
