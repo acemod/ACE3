@@ -27,7 +27,9 @@ GVAR(magazineNameCache) getOrDefaultCall [_className, {
         WARNING_1("Magazine is missing display name [%1]",_className);
     };
 
-    if ((_displayName select [0, 6]) == "[CSW] ") then { _displayName = _displayName select [6]; };
+    if (["ace_csw"] call EFUNC(common,isModLoaded)) then {
+        _displayName = trim (_displayName regexReplace [LELSTRING(csw,regex), ""]);
+    };
 
     // If the display name exists already, add displayNameShort to the existing entry
     private _existingClassname = GVAR(usedMagazineNames) get _displayName;
