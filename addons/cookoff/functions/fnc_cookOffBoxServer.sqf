@@ -39,7 +39,7 @@ private _jipID = [QGVAR(cookOffBoxLocal), [
     _box,
     _source,
     _instigator,
-    CBA_missionTime + _delay // generate a globally synced timestamp
+    CBA_missionTime + _delay // Generate a globally synced timestamp
 ]] call CBA_fnc_globalEventJIP;
 
 [_jipID, _box] call CBA_fnc_removeGlobalEventJIP;

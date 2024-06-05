@@ -49,4 +49,4 @@ params ["", "", "", "_startTime"];
     };
 
     _box setVariable [QGVAR(effects), _effects];
-}, _this, (_startTime - CBA_missionTime) max 0] call CBA_fnc_waitAndExecute; // this delay allows for synchronisation for JIP players
+}, _this, (_startTime - CBA_missionTime) max 0] call CBA_fnc_waitAndExecute; // This delay allows for synchronisation for JIP players

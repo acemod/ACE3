@@ -91,7 +91,7 @@ if (isServer) then {
     if (_jet && !isGamePaused && {local _vehicle} && {_vehicle getVariable [QGVAR(nextForceTime), 0] <= CBA_missionTime}) then {
         private _force = [0, 0, _factor * -(0.5 min random 1.5) * (0.3 min random 1)] vectorMultiply getMass _vehicle;
         _vehicle addForce [_force, vectorUpVisual _vehicle];
-        _vehicle setVariable [QGVAR(nextForceTime), CBA_missionTime + 0.01]; // this prevents bad behaviour when setAccTime is small
+        _vehicle setVariable [QGVAR(nextForceTime), CBA_missionTime + 0.01]; // This prevents bad behaviour when setAccTime is small
     };
 
     // Don't spawn visual effects on machines without interfaces
@@ -223,7 +223,7 @@ if (isServer) then {
     // Formula is designed to have the temperature ramp up quickly and then level out
     _vehicle setVehicleTIPars [
         (_tiEngine + _intensity * 0.01) / 1.005,
-        (_tiWheels + _intensity * 0.004) / 1.002, // wheels/tracks are further away from burning parts
+        (_tiWheels + _intensity * 0.004) / 1.002, // Wheels/tracks are further away from burning parts
         (_tiWeapon + _intensity * 0.01) / 1.005
     ];
 }, 0, [_vehicle, _jet, _ring, _startTime, _duration, _light, _fireSelection, _sound, _intensity, _fireKey]] call CBA_fnc_addPerFrameHandler;

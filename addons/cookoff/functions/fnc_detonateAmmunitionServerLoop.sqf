@@ -30,7 +30,7 @@ private _hasFinished = _totalAmmo <= 0 || {_magazines isEqualTo []};
 if (
     _hasFinished ||
     {underwater _object} ||
-    {private _posASL = getPosWorld _object; surfaceIsWater _posASL && {(_posASL select 2) < 0}} || // underwater is not very reliable, so use model center instead
+    {private _posASL = getPosWorld _object; surfaceIsWater _posASL && {(_posASL select 2) < 0}} || // Underwater is not very reliable, so use model center instead
     {GVAR(ammoCookoffDuration) == 0} ||
     {!([GVAR(enableAmmoCookoff), GVAR(enableAmmobox)] select (_object isKindOf "ReammoBox_F"))} ||
     {!(_object getVariable [QGVAR(enableAmmoCookoff), true])}
