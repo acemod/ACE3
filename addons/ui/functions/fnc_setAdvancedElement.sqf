@@ -20,6 +20,8 @@
 
 params ["_element", "_show", ["_showHint", false, [true]], ["_force", false, [true]]];
 
+_element = toLowerANSI _element;
+
 private _cachedElement = GVAR(configCache) get _element;
 if (isNil "_cachedElement") exitWith {TRACE_1("nil element",_this)};
 

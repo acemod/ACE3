@@ -49,7 +49,7 @@ GVAR(showNamesTime) = -10;
 if (missionNamespace getVariable [QGVAR(useFactionIcons), true]) then {
     {
         if (isArray (_x >> QGVAR(rankIcons))) then {
-            private _faction = toLowerANSI configName _x;
+            private _faction = configName _x;
             if (_faction in GVAR(factionRanks)) exitWith {}; // don't overwrite if already set
             private _icons = getArray (_x >> QGVAR(rankIcons));
             [_faction, _icons] call FUNC(setFactionRankIcons);
