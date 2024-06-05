@@ -59,5 +59,5 @@ private _strength = _vehAttenuation * (_loudness - (_loudness / 50 * _distance))
 
 TRACE_1("result",_strength);
 
-// Call inmediately, as it will get pick up later anyway by the update thread
-[_strength] call FUNC(earRinging);
+// Call immediately, as it will get picked up later by the update thread anyway
+_strength call FUNC(earRinging);

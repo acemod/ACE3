@@ -192,10 +192,12 @@ if (isServer) then {
         };
         if (_x isKindOf "ReammoBox_F") then {
             if (
-                "ace_cookoff" call EFUNC(common,isModLoaded) &&
-                {GETVAR(_x,EGVAR(cookoff,enableAmmoCookoff),EGVAR(cookoff,enableAmmobox))}
+                (["ace_cookoff"] call EFUNC(common,isModLoaded)) &&
+                {EGVAR(cookoff,enableAmmobox)} &&
+                {EGVAR(cookoff,ammoCookoffDuration) != 0} &&
+                {_x getVariable [QEGVAR(cookoff,enableAmmoCookoff), true]}
             ) then {
-                _x call EFUNC(cookoff,cookOffBox);
+                [QEGVAR(cookOff,cookOffBoxServer), _box] call CBA_fnc_serverEvent;
             } else {
                 _x setDamage 1;
             };
