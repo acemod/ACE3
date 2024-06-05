@@ -103,18 +103,17 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|
-|`ace_refuel_started` | [_source, _target] | Local | Listen | Refueling has started |
+|`ace_refuel_started` | [_source, _target] | Local | Listen | Refuelling has started |
 |`ace_refuel_tick` | [_source, _target, _amount] | Local | Listen | Amount of fuel transferred in a tick |
-|`ace_refuel_stopped` | [_source, _target] | Local | Listen | Refueling has stopped |
+|`ace_refuel_stopped` | [_source, _target] | Local | Listen | Refuelling has stopped |
 
 ### 2.10 Cook Off (`ace_cookoff`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|
-|`ace_cookoff_cookOff` | _vehicle | Global | Listen | Vehicle cook off has started
-|`ace_cookoff_cookOffBox` | _box | Global | Listen | Ammo box cook off has started |
-|`ace_cookoff_engineFire` | _vehicle | Global | Listen | Engine fire has started |
-
+|----------|---------|---------|---------|---------|---------|
+|`ace_cookoff_cookOff` | [_vehicle, _intensity, _instigator, _smokeDelayEnabled, _ammoDetonationChance, _detonateAfterCookoff, _fireSource, _canRing, _maxIntensity, _canJet] | Global | Listen | Vehicle cook-off has started |
+|`ace_cookoff_cookOffBox` | [_box, _source, _instigator, _delay] | Global | Listen | Ammo box cook-off has started |
+|`ace_cookoff_engineFire` | [_vehicle] | Global | Listen | Engine fire has started |
 
 ### 2.11 Attach (`ace_attach`)
 

@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1. Selections for smoke to come out of <ARRAY> (default: [])
+ * 1: Selections for smoke to come out of <ARRAY>
  *
  * Return Value:
  * None
@@ -16,12 +16,11 @@
  * Public: No
  */
 
-params ["_vehicle", ["_positions", []]];
+params ["_vehicle", "_selections"];
 
-private _turretConfig = [_vehicle, [0]] call CBA_fnc_getTurret;
-private _positionBarrelEnd = getText (_turretConfig >> "gunBeg");
+private _positionBarrelEnd = getText ([_vehicle, [0]] call CBA_fnc_getTurret >> "gunBeg");
 
-// smoke out of cannon and hatches
+// Smoke out of cannon and hatches
 private _smokeBarrel = "#particlesource" createVehicleLocal [0, 0, 0];
 _smokeBarrel setParticleClass "MediumDestructionSmoke";
 _smokeBarrel attachTo [_vehicle, [0, 0, 0], _positionBarrelEnd];
@@ -29,10 +28,10 @@ _smokeBarrel attachTo [_vehicle, [0, 0, 0], _positionBarrelEnd];
 private _effects = [_smokeBarrel];
 
 {
-    private _position = [0, -2, 0];
-
-    if (_x isNotEqualTo "#noselection") then {
-        _position = _vehicle selectionPosition _x;
+    private _position = if (_x != "#noselection") then {
+        _vehicle selectionPosition _x
+    } else {
+        [0, -2, 0]
     };
 
     private _smoke = "#particlesource" createVehicleLocal [0, 0, 0];
@@ -40,6 +39,6 @@ private _effects = [_smokeBarrel];
     _smoke attachTo [_vehicle, _position];
 
     _effects pushBack _smoke;
-} forEach _positions;
+} forEach _selections;
 
 _vehicle setVariable [QGVAR(effects), _effects];
