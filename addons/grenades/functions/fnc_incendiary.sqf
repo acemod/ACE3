@@ -180,10 +180,12 @@ if (isServer) then {
 
     if (_x isKindOf "ReammoBox_F") then {
         if (
-            ["ace_cookoff"] call EFUNC(common,isModLoaded) &&
-            {_x getVariable [QEGVAR(cookoff,enableAmmoCookoff), EGVAR(cookoff,enableAmmobox)]}
+            (["ace_cookoff"] call EFUNC(common,isModLoaded)) &&
+            {EGVAR(cookoff,enableAmmobox)} &&
+            {EGVAR(cookoff,ammoCookoffDuration) != 0} &&
+            {_x getVariable [QEGVAR(cookoff,enableAmmoCookoff), true]}
         ) then {
-            _x call EFUNC(cookoff,cookOffBox);
+            [QEGVAR(cookOff,cookOffBoxServer), _box] call CBA_fnc_serverEvent;
         } else {
             _x setDamage 1;
         };
@@ -235,10 +237,7 @@ private _enginePosition = _vehicle modelToWorld (_vehicle selectionPosition _eng
 if (_position distance _enginePosition < EFFECT_SIZE * 2) then {
     _vehicle setHit [_engineSelection, 1];
 
-    if ("ace_cookoff" call EFUNC(common,isModLoaded)) then {
-        private _enabled = _vehicle getVariable [QEGVAR(cookoff,enable), EGVAR(cookoff,enable)];
-        if (_enabled in [2, true] || {_enabled isEqualTo 1 && {fullCrew [_vehicle, "", false] findIf {isPlayer (_x select 0)} != -1}}) then {
-            _vehicle call EFUNC(cookoff,engineFire);
-        };
+    if (["ace_cookoff"] call EFUNC(common,isModLoaded)) then {
+        [QEGVAR(cookoff,engineFireServer), _vehicle] call CBA_fnc_serverEvent;
     };
 };
