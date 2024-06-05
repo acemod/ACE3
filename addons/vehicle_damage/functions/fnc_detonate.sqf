@@ -20,11 +20,8 @@ params ["_vehicle", ["_injurer", objNull]];
 
 if (((_vehicle call EFUNC(cookoff,getVehicleAmmo)) select 1) > 0) then {
     {
-        // random amount of injuries
-        for "_i" from 0 to random 5 do {
-            [_x, random 1 , selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], selectRandom ["bullet", "shell", "explosive"], _injurer] call EFUNC(medical,addDamageToUnit);
-        };
-    } forEach crew _vehicle;
+        [QGVAR(medicalDamage), [_x, _injurer, _injurer], _x] call CBA_fnc_targetEvent;
+    } forEach (crew _vehicle);
 };
 
-[QEGVAR(cookoff,detonateAmmunition), [_vehicle, false, _injurer, _injurer]] call CBA_fnc_serverEvent;
+[QEGVAR(cookoff,detonateAmmunitionServer), [_vehicle, false, _injurer, _injurer]] call CBA_fnc_serverEvent;

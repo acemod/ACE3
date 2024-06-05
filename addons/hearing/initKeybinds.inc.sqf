@@ -2,14 +2,17 @@
     // Conditions: specific
     if !([ACE_player, objNull, ["isNotSwimming", "isNotInside", "isNotSitting"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
-    if (GVAR(EnableCombatDeafness) && {!([ACE_player] call FUNC(hasEarPlugsIn))} && {[ACE_player, "ACE_EarPlugs"] call EFUNC(common,hasItem)}) exitWith {
+    if (GVAR(enableCombatDeafness) && {!(ACE_player call FUNC(hasEarPlugsIn))} && {[ACE_player, "ACE_EarPlugs"] call EFUNC(common,hasItem)}) exitWith {
         [ACE_player, true] call FUNC(putInEarPlugs);
-        true
+
+        true // return
     };
-    if (GVAR(EnableCombatDeafness) && {[ACE_player] call FUNC(hasEarPlugsIn)}) exitWith {
+
+    if (GVAR(enableCombatDeafness) && {ACE_player call FUNC(hasEarPlugsIn)}) exitWith {
         [ACE_player, true] call FUNC(removeEarPlugs);
-        true
+
+        true // return
     };
-    
-    false
+
+    false // return
 }] call CBA_fnc_addKeybind; // UNBOUND

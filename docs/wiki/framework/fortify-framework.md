@@ -114,11 +114,11 @@ The Fortify budget can be updated for any side using the function.
 
 ### 2.1 Listenable
 
-Event Name | Passed Parameter(s) | Locality | Description
----------- | ----------- | ------------------- | --------
-`acex_fortify_objectPlaced` | [player, side, objectPlaced] | Global | Fortify object placed
-`acex_fortify_objectDeleted` | [player, side, objectDeleted] | Global | Fortify object deleted
-`acex_fortify_onDeployStart` | [player, object, cost] | Local | Player starts placing object
-`ace_fortify_onDeployStop` | [player, object, cost] | Local | Player stops placing object. Raised only if stopped before trying to place (= before progress bar appears). If it's during progress bar, only `ace_fortify_deployCanceled` is raised.
-`ace_fortify_deployFinished` | [[player, side, configName, posASL, vectorDir, vectorUp, cost], elapsedTime, totalTime, errorCode] | Local | Player successfully finishes building object
-`ace_fortify_deployCanceled` | [[player, side, configName, posASL, vectorDir, vectorUp, cost], elapsedTime, totalTime, errorCode] | Local | Player cancels building object
+| Event Name | Passed Parameter(s) | Locality | Description |
+| ---------- | ----------- | ------------------- | -------- |
+| `acex_fortify_objectPlaced` | [player, side, objectPlaced] | Global | Fortify object placed |
+| `acex_fortify_objectDeleted` | [player, side, objectDeleted] | Global | Fortify object deleted |
+| `acex_fortify_onDeployStart` | [player, object, cost] | Local | Player starts placing object |
+| `ace_fortify_onDeployStop` | [player, object, cost] | Local | Player stops placing object. Raised only if stopped before trying to place (= before progress bar appears). If it's during progress bar, only `ace_fortify_deployCanceled` is raised. |
+| `ace_fortify_deployFinished` | [[player, side, configName, posASL, vectorDir, vectorUp, cost], elapsedTime, totalTime, errorCode] | Local | Player successfully finishes building object |
+| `ace_fortify_deployCanceled` | [[player, side, configName, posASL, vectorDir, vectorUp, cost], elapsedTime, totalTime, errorCode] | Local | Player cancels building object |

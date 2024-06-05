@@ -281,6 +281,7 @@
             <Korean>전체 수리 시간 계수</Korean>
             <French>Coefficient du temps de réparation complète</French>
             <Russian>Коэффициент времени полного ремонта</Russian>
+            <Spanish>Coeficiente de Tiempo de Reparación Completa</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_timeCoefficientFullRepair_description">
             <English>Modifies how long it takes to perform a Full Repair.\nThe repair time is based on the amount of repairs needed for each part, including those normally inaccessible.</English>
@@ -291,6 +292,7 @@
             <Korean>전체적인 수리를 수행하는 데 걸리는 시간을 수정합니다.\n수리 시간은 일반적으로 접근할 수 없는 부품을 포함하여 각 부품에 필요한 수리 시간을 기준으로 합니다.</Korean>
             <French>Modifie la durée que prend une réparation complète.\nLe temps de réparation est basé sur la quantité de réparations requises pour chaque partie, incluant celles qui sont normalement inaccessibles.</French>
             <Russian>Изменяет время, необходимое для выполнения полного ремонта.\nВремя ремонта зависит от объема ремонтных работ, необходимых для каждой детали, включая те, которые обычно недоступны.</Russian>
+            <Spanish>Modifica cuánto tiempo lleva realizar una Reparación Completa.\nEl tiempo de reparación está basado en la cantidad de reparaciones necesarias para cada parte, incluyendo aquellas que normalmente no son accesibles.</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_LocationsBoostTraining_Description">
             <English>Boost engineer training when in repair vehicles or facilities. Untrained becomes engineer, engineer becomes advanced engineer.</English>
@@ -1262,6 +1264,7 @@
             <Japanese>タイヤ交換の許可</Japanese>
             <Korean>바퀴 교체 허용</Korean>
             <French>Autoriser le remplacement des roues</French>
+            <Spanish>Permitir Recambio de Rueda</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Wheel_description">
             <English>Who can remove and replace wheels?</English>
@@ -1287,6 +1290,7 @@
             <Korean>바퀴 수리 허용</Korean>
             <French>Autoriser le rafistolage des roues</French>
             <Russian>Разрешить починить  колесо</Russian>
+            <Spanish>Permitir Parcheo de Rueda</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelEnabled_description">
             <English>Who can patch wheels?</English>
@@ -1297,6 +1301,7 @@
             <Korean>누가 바퀴를 수리할 수 있습니까?</Korean>
             <French>Qui peut rafistoler les roues ?</French>
             <Russian>Кто может починить колеса?</Russian>
+            <Spanish>Quién puede parchear ruedas?</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_Repair_name">
             <English>Allow Repair</English>
@@ -1957,6 +1962,7 @@
             <Korean>바퀴 수리 아이템 필요</Korean>
             <French>Exigences pour rafistoler une roue</French>
             <Russian>Требования для починки колеса</Russian>
+            <Spanish>Requerimientos de Parcheo de Ruedas</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelRequiredItems_Description">
             <English>Items required to patch a wheel.</English>
@@ -1967,6 +1973,7 @@
             <Korean>바퀴를 수리하기 위해 아이템이 필요합니다.</Korean>
             <French>Equipements requis pour rafistoler une roue.</French>
             <Russian>Предметы, необходимые для починки колеса.</Russian>
+            <Spanish>Objetos requeridos para parchear una rueda.</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_MiscRepairRequiredItems_DisplayName">
             <English>Misc Repair Requirements</English>
@@ -2142,16 +2149,18 @@
             <Korean>부품 수리 시간</Korean>
             <French>Temps de réparation des pièces</French>
             <Russian>Время ремонта детали</Russian>
+            <Spanish>Tiempo de Reparación de Pieza</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_miscRepairTime_description">
             <English>Time in seconds to complete a repair.</English>
-            <Japanese>修理完了までの所要時間</Japanese>
+            <Japanese>修理完了までの所要時間 (秒単位)</Japanese>
             <Polish>Czas w sekundach do przeprowadzenia naprawy</Polish>
             <Italian>Tempo in secondi richiesto per completare una riparazione.</Italian>
             <German>Zeit in Sekunden, um eine Reparatur abzuschließen.</German>
             <Korean>수리를 완료하는 시간(초 단위)</Korean>
             <French>Durée en secondes pour terminer une réparation.</French>
             <Russian>Время завершения ремонта в секундах.</Russian>
+            <Spanish>Tiempo en segundos para completar una reparación.</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_wheelChangeTime_name">
             <English>Wheel Change Time</English>
@@ -2162,16 +2171,18 @@
             <Korean>바퀴 교체 시간</Korean>
             <French>Temps de changement d'une roue</French>
             <Russian>Время замены колеса</Russian>
+            <Spanish>Tiempo de Cambio de Rueda</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_wheelChangeTime_description">
             <English>Time in seconds to remove or change a wheel.</English>
-            <Japanese>タイヤの取り外しまたは交換に掛かる時間。</Japanese>
+            <Japanese>タイヤの取り外しまたは交換に掛かる時間。 (秒単位)</Japanese>
             <Polish>Czas w sekundach do zdjęcia lub zmienienia koła.</Polish>
             <Italian>Tempo in secondi richiesto per rimuovere o sostituire una ruota.</Italian>
             <German>Zeit in Sekunden, um ein Rad zu entfernen oder zu wechseln.</German>
             <Korean>바퀴를 제거하거나 교체하는 데 걸리는 시간(초 단위)</Korean>
             <French>Durée en seconde pour enlever ou changer une roue.</French>
             <Russian>Время в секундах на снятие или замену колеса.</Russian>
+            <Spanish>Tiempo en segundos para quitar o cambiar una rueda.</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_PatchWheel">
             <English>Patch Wheel</English>
@@ -2182,6 +2193,7 @@
             <Korean>바퀴 수리</Korean>
             <French>Rafistoler la roue</French>
             <Russian>Чинить колесо</Russian>
+            <Spanish>Parchear Rueda</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_PatchingWheel">
             <English>Patching Wheel...</English>
@@ -2192,6 +2204,7 @@
             <Korean>바퀴 수리 중...</Korean>
             <French>Rafistolage de la roue...</French>
             <Russian>Починка колеса...</Russian>
+            <Spanish>Parcheando Rueda...</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelTime_DisplayName">
             <English>Wheel Patch Time</English>
@@ -2202,6 +2215,7 @@
             <Korean>바퀴 수리 시간</Korean>
             <French>Temps de rafistolage d'une roue</French>
             <Russian>Время починки полеса</Russian>
+            <Spanish>Tiempo de Parcheo de Rueda</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelTime_Description">
             <English>Time it takes to patch a wheel by 5%.</English>
@@ -2212,6 +2226,7 @@
             <Korean>바퀴를 5% 수리하는 데 걸리는 시간(초 단위)</Korean>
             <French>Durée pour rafistoler une roue de 5%.</French>
             <Russian>Время, необходимое для починки  колеса, сокращается на 5%.</Russian>
+            <Spanish>Tiempo que lleva parchear una rueda por cada 5%.</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_DisplayName">
             <English>Patch Wheel Threshold</English>
@@ -2222,6 +2237,7 @@
             <Korean>바퀴 수리 한계점</Korean>
             <French>Seuil de rafistolage d'une roue</French>
             <Russian>Порог починки колеса</Russian>
+            <Spanish>Umbral de Parcheo de Rueda</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_Description">
             <English>Maximum damage to which a wheel can be patched.\n0% means all damage can be repaired.</English>
@@ -2232,6 +2248,7 @@
             <Korean>바퀴를 수리할 수 있는 최대 레벨입니다.</Korean>
             <French>Niveau maximum de dégâts jusqu'à laquelle une roue peut être réparée.\n0% signifie que la roue peut être reparée entièrement.</French>
             <Russian>Максимальный уровень, до которого колесо может быть починено.</Russian>
+            <Spanish>Máximo daño que permite a una rueda ser parcheada.\n0% significa que todo el daño puede ser reparado.</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelLocation_DisplayName">
             <English>Wheel Patch Location</English>
@@ -2242,6 +2259,7 @@
             <Korean>바퀴 수리 장소</Korean>
             <French>Lieu de rafistolage des roues</French>
             <Russian>Место починки колеса</Russian>
+            <Spanish>Localización para el Parcheo de Rueda</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelLocation_Description">
             <English>Where the wheel can be patched.</English>
@@ -2252,6 +2270,7 @@
             <Korean>바퀴를 수리할 수 있는 곳입니다.</Korean>
             <French>Lieu où les roues peuvent être rafistolées.</French>
             <Russian>Где колесо можно починить.</Russian>
+            <Spanish>Dónde puede ser parcheada la rueda.</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelOnGround">
             <English>On the ground</English>
@@ -2262,6 +2281,7 @@
             <Korean>지면 위</Korean>
             <French>Sur le terrain</French>
             <Russian>На земле</Russian>
+            <Spanish>En el suelo</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelOnVehicle">
             <English>On a vehicle</English>
@@ -2272,6 +2292,7 @@
             <Korean>차량</Korean>
             <French>Sur un véhicule</French>
             <Russian>На транспорте</Russian>
+            <Spanish>En un vehículo</Spanish>
         </Key>
     </Package>
 </Project>
