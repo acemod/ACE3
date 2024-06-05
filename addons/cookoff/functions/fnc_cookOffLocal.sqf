@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: tcvm
+ * Author: tcvm, johnb43
  * Spawn cook-off fire effects.
  *
  * Arguments:
