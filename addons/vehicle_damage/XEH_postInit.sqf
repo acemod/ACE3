@@ -49,9 +49,11 @@
     [["Wheeled_Apc_F", "Car"] select GVAR(enableCarDamage), "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
 
     // Blow off turret effect
+    /*
     ["Tank", "Killed", {
         if (random 1 < 0.15) then {
             (_this select 0) call FUNC(blowOffTurret);
         };
     }, true, [], true] call CBA_fnc_addClassEventHandler;
+    */
 }] call CBA_fnc_addEventHandler;

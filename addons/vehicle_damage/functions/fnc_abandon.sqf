@@ -21,8 +21,6 @@ if (_vehicle getVariable [QGVAR(allowCrewInImmobile), false]) exitWith {}; // ch
 
 TRACE_1("abandon",_vehicle);
 
-if (_vehicle getVariable [QGVAR(allowCrewInImmobile), false]) exitWith {}; // check for API
-
 [{
     params ["_vehicle"];
 

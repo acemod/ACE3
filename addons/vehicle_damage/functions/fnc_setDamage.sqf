@@ -41,5 +41,5 @@ if (_hitIndex >= 0) then {
 };
 
 if (_hitPoint == "HitEngine" && {_damage >= 0.9}) then {
-    [QEGVAR(cookoff,engineFire), _vehicle] call CBA_fnc_serverEvent;
+    [QEGVAR(cookoff,engineFireServer), _vehicle] call CBA_fnc_serverEvent;
 };
