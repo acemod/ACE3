@@ -22,7 +22,7 @@
  */
 
 #define FLAME_SIZE 1.5
-#define FIRE_INTENSITY 6
+#define FIRE_INTENSITY 20
 
 params ["_vehicle", "_jet", "_ring", "_fireSelection", "_intensity", "_startTime", "_duration"];
 
