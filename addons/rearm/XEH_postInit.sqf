@@ -2,7 +2,7 @@
 
 GVAR(configTypesAdded) = [];
 GVAR(magazineNameCache) = createHashMap;
-GVAR(originalMagazineNames) = [];
+GVAR(usedMagazineNames) = createHashMap;
 
 [QGVAR(initSupplyVehicle), {
     TRACE_1("initSupplyVehicle EH",_this);   // Warning: this can run before settings are init
