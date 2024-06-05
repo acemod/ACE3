@@ -27,6 +27,7 @@ GVAR(magazineNameCache) getOrDefaultCall [_className, {
         WARNING_1("Magazine is missing display name [%1]",_className);
     };
 
+    // [CSW] prefix is localised
     if (["ace_csw"] call EFUNC(common,isModLoaded)) then {
         _displayName = trim (_displayName regexReplace [LELSTRING(csw,regex), ""]);
     };

@@ -1120,6 +1120,7 @@
             <Russian>[CSW] Сумка с СПГ-9М орудием</Russian>
             <Korean>[CSW] SPG-9M 발사기 가방</Korean>
         </Key>
+        <!-- Used in rearm to remove the [CSW] prefix from magazine names, so adjust when necessary -->
         <Key ID="STR_ACE_CSW_regex">
             <English>^\[CSW\]</English>
             <Spanish>^\[CSW\]</Spanish>
