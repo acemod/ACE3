@@ -1,63 +1,71 @@
 [
-    QGVAR(enable), "LIST",
-    [LSTRING(enable_hd_name), LSTRING(enable_hd_tooltip)],
-    LSTRING(category_displayName),
-    [[0, 1, 2], ["STR_A3_OPTIONS_DISABLED", ELSTRING(common,playerOnly), ELSTRING(common,playersAndAI)], 2],
-    true, // isGlobal
-    {[QGVAR(enable), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(enableFire), "CHECKBOX",
+    QGVAR(enableFire),
+    "CHECKBOX",
     [LSTRING(enableFire_name), LSTRING(enableFire_tooltip)],
     LSTRING(category_displayName),
-    true, // default value
-    true // isGlobal
+    true,
+    1
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(destroyVehicleAfterCookoff), "CHECKBOX",
-    [LSTRING(destroyVehicleAfterCookoff_name), LSTRING(destroyVehicleAfterCookoff_tooltip)],
+    QGVAR(cookoffDuration),
+    "SLIDER",
+    [LSTRING(cookoffDuration_name), LSTRING(cookoffDuration_tooltip)],
     LSTRING(category_displayName),
-    false, // default value
-    true // isGlobal
+    [0, 10, 1, 2],
+    1
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(enableAmmoCookoff), "CHECKBOX",
-    [LSTRING(enableAmmoCookoff_name), LSTRING(enableAmmoCookoff_tooltip)],
-    LSTRING(category_displayName),
-    true, // default value
-    true // isGlobal
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(enableAmmobox), "CHECKBOX",
-    [LSTRING(enableBoxCookoff_name), LSTRING(enableBoxCookoff_tooltip)],
-    LSTRING(category_displayName),
-    true, // default value
-    true, // isGlobal
-    {[QGVAR(enableAmmobox), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(ammoCookoffDuration), "SLIDER",
-    [LSTRING(ammoCookoffDuration_name), LSTRING(ammoCookoffDuration_tooltip)],
-    LSTRING(category_displayName),
-    [0,5,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
-    true, // isGlobal
-    {[QGVAR(ammoCookoffDuration), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(probabilityCoef), "SLIDER",
+    QGVAR(probabilityCoef),
+    "SLIDER",
     [LSTRING(probabilityCoef_name), LSTRING(probabilityCoef_tooltip)],
     LSTRING(category_displayName),
-    [0,5,1,1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
-    true, // isGlobal
-    {[QGVAR(probabilityCoef), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    [0, 10, 1, 2],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(destroyVehicleAfterCookoff),
+    "CHECKBOX",
+    [LSTRING(destroyVehicleAfterCookoff_name), LSTRING(destroyVehicleAfterCookoff_tooltip)],
+    LSTRING(category_displayName),
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableAmmoCookoff),
+    "CHECKBOX",
+    [LSTRING(enableAmmoCookoff_name), LSTRING(enableAmmoCookoff_tooltip)],
+    LSTRING(category_displayName),
+    true,
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableAmmobox),
+    "CHECKBOX",
+    [LSTRING(enableBoxCookoff_name), LSTRING(enableBoxCookoff_tooltip)],
+    LSTRING(category_displayName),
+    true,
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(ammoCookoffDuration),
+    "SLIDER",
+    [LSTRING(ammoCookoffDuration_name), LSTRING(ammoCookoffDuration_tooltip)],
+    LSTRING(category_displayName),
+    [0, 10, 1, 2],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(removeAmmoDuringCookoff),
+    "CHECKBOX",
+    [LSTRING(removeAmmoDuringCookoff_name), LSTRING(removeAmmoDuringCookoff_tooltip)],
+    LSTRING(category_displayName),
+    true,
+    1
 ] call CBA_fnc_addSetting;

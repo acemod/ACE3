@@ -47,7 +47,7 @@ Default: 0.5
 
 #### 1.1.5 `ace_vehicle_damage_turretFireProb`
 
-The probabilitiy for the vehicle to catch on fire upon its turret being penetrated
+The probability for the vehicle to catch on fire upon its turret being penetrated
 
 Default: 0.2
 

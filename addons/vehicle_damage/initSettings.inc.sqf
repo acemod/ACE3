@@ -9,14 +9,6 @@
 ] call CBA_settings_fnc_init;
 
 [
-    QGVAR(removeAmmoDuringCookoff), "CHECKBOX",
-    [LSTRING(removeAmmoAfterCookoff_setting_enable), LSTRING(removeAmmoAfterCookoff_setting_description)],
-    LSTRING(category_displayName),
-    true, // default value
-    true // isGlobal
-] call CBA_settings_fnc_init;
-
-[
     QGVAR(enableCarDamage), "CHECKBOX",
     [LSTRING(carDamage_setting_enable), LSTRING(carDamage_setting_description)],
     LSTRING(category_displayName),
