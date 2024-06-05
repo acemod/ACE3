@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [player] call ACE_hearing_fnc_moduleHearing
+ * player call ace_hearing_fnc_moduleHearing
  *
  * Public: No
  */
@@ -23,6 +23,8 @@ params ["_logic"];
 if ((_logic getVariable "DisableEarRinging") != -1) then {
     [_logic, QGVAR(DisableEarRinging), "DisableEarRinging"] call EFUNC(common,readSettingFromModule);
 };
+
 [_logic, QGVAR(enabledForZeusUnits), "enabledForZeusUnits"] call EFUNC(common,readSettingFromModule);
 [_logic, QGVAR(autoAddEarplugsToUnits), "autoAddEarplugsToUnits"] call EFUNC(common,readSettingFromModule);
+
 INFO("Hearing Module Initialized.");
