@@ -15,15 +15,15 @@
  * Public: No
  */
 
+// If cookoff for boxes is disabled, exit
+if (!GVAR(enableAmmobox) || {GVAR(ammoCookoffDuration) == 0}) exitWith {};
+
 params ["_box", "", "_damage", "_source", "_ammo", "", "_instigator", "_hitPoint"];
 
 if (!local _box) exitWith {};
 
 // If it's already dead, ignore
 if (!alive _box) exitWith {};
-
-// If cookoff for boxes is disabled, exit
-if (!GVAR(enableAmmobox) || {GVAR(ammoCookoffDuration) == 0}) exitWith {};
 
 if !(_box getVariable [QGVAR(enableAmmoCookoff), true]) exitWith {};
 
@@ -33,7 +33,7 @@ private _ammoConfig = _ammo call CBA_fnc_getObjectConfig;
 
 // Catch fire when hit by an explosive or incendiary round
 if ((getNumber (_ammoConfig >> "explosive") >= 0.5) || {getNumber (_ammoConfig >> QEGVAR(vehicle_damage,incendiary)) > random 1}) then {
-    [QGVAR(cookOffBox), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
+    [QGVAR(cookOffBoxServer), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
 } else {
     // There is a small chance of cooking a box off if it's shot by tracer ammo
     if (random 1 >= _damage * 0.05) exitWith {};
@@ -53,7 +53,7 @@ if ((getNumber (_ammoConfig >> "explosive") >= 0.5) || {getNumber (_ammoConfig >
         private _tracers = getNumber (_configMagazine >> "tracersEvery");
 
         if (_tracers >= 1 && {_tracers <= 4}) then {
-            [QGVAR(cookOffBox), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
+            [QGVAR(cookOffBoxServer), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
         };
     };
 };

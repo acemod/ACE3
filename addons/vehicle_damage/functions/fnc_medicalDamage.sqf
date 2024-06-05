@@ -4,22 +4,21 @@
  * Applies medical damage to a unit.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Source of damage <OBJECT>
- * 2: Person who caused damage <OBJECT>
+ * 0: Target <OBJECT>
+ * 1: Source <OBJECT>
+ * 2: Instigator <OBJECT>
  * 3: Guarantee death? <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [cursorObject, player, player] call ace_vehicle_damage_fnc_medicalDamage
+ * [cursorObject, player, player] call ace_vehicle_damage_fnc_medicalDamage;
  *
  * Public: No
  */
 
 params ["_unit", "_source", "_instigator", ["_guaranteeDeath", false]];
-TRACE_4("medicalDamage",_unit,_source,_instigator,_guaranteeDeath);
 
 // Check if unit is invulnerable
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {};
@@ -36,10 +35,5 @@ if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
 
 // If guaranteed death is wished
 if (_guaranteeDeath && {alive _unit}) then {
-    // From 'ace_medical_status_fnc_setDead': Kill the unit without changing visual appearance
-    private _currentDamage = _unit getHitPointDamage "HitHead";
-
-    _unit setHitPointDamage ["HitHead", 1, true, _source, _instigator];
-
-    _unit setHitPointDamage ["HitHead", _currentDamage, true, _source, _instigator];
+    [_unit, QGVAR(medicalDamage), _source, _instigator] call EFUNC(common,setDead);
 };

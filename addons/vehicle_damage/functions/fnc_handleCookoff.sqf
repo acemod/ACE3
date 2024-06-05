@@ -51,7 +51,7 @@ if (_chanceOfFire >= random 1) exitWith {
         _source = ["hit_engine_point", "HitPoints"];
     };
 
-    [QEGVAR(cookOff,cookOff), [_vehicle, _intensity, _source, _instigator, _delaySmoke, _fireDetonateChance, _detonateAfterCookoff, _source, _canRing, _canJet]] call CBA_fnc_serverEvent;
+    [QEGVAR(cookOff,cookOffServer), [_vehicle, _intensity, _injurer, _injurer, _delayWithSmoke, _fireDetonateChance, _detonateAfterCookoff, _source, _canRing, _canJet]] call CBA_fnc_serverEvent;
     TRACE_4("cooking-off",_vehicle,_chanceOfFire,_delaySmoke,_detonateAfterCookoff);
 
     // Abandon vehicle

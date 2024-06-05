@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: tcvm
+ * Author: tcvm, johnb43
  * Spawn cook-off fire effects.
  *
  * Arguments:
@@ -16,15 +16,18 @@
  * None
  *
  * Example:
- * [vehicle player, true, false, "commander_turret", 6, CBA_missionTime, 15] call ace_cookoff_fnc_cookOffEffect
+ * [cursorObject, true, false, "commander_turret", 6, CBA_missionTime, 15] call ace_cookoff_fnc_cookOffLocal
  *
  * Public: No
  */
 
 #define FLAME_SIZE 1.5
-#define FIRE_INTENSITY 6
+#define FIRE_INTENSITY 20
 
 params ["_vehicle", "_jet", "_ring", "_fireSelection", "_intensity", "_startTime", "_duration"];
+
+// Check if still valid for JIP players
+if (isNull _vehicle || {CBA_missionTime - _startTime >= _duration}) exitWith {};
 
 // Spawn light
 private _light = objNull;
@@ -88,7 +91,7 @@ if (isServer) then {
     if (_jet && !isGamePaused && {local _vehicle} && {_vehicle getVariable [QGVAR(nextForceTime), 0] <= CBA_missionTime}) then {
         private _force = [0, 0, _factor * -(0.5 min random 1.5) * (0.3 min random 1)] vectorMultiply getMass _vehicle;
         _vehicle addForce [_force, vectorUpVisual _vehicle];
-        _vehicle setVariable [QGVAR(nextForceTime), CBA_missionTime + 0.01]; // this prevents bad behaviour when setAccTime is small
+        _vehicle setVariable [QGVAR(nextForceTime), CBA_missionTime + 0.01]; // This prevents bad behaviour when setAccTime is small
     };
 
     // Don't spawn visual effects on machines without interfaces
@@ -220,7 +223,7 @@ if (isServer) then {
     // Formula is designed to have the temperature ramp up quickly and then level out
     _vehicle setVehicleTIPars [
         (_tiEngine + _intensity * 0.01) / 1.005,
-        (_tiWheels + _intensity * 0.004) / 1.002, // wheels//tracks are further away from burning parts
+        (_tiWheels + _intensity * 0.004) / 1.002, // Wheels/tracks are further away from burning parts
         (_tiWeapon + _intensity * 0.01) / 1.005
     ];
 }, 0, [_vehicle, _jet, _ring, _startTime, _duration, _light, _fireSelection, _sound, _intensity, _fireKey]] call CBA_fnc_addPerFrameHandler;

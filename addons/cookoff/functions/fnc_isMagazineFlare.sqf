@@ -7,7 +7,7 @@
  * 0: Magazine <STRING>
  *
  * Return Value:
- * 0: If magazine is type of flare <BOOL>
+ * If magazine is type of flare <BOOL>
  *
  * Example:
  * "3Rnd_UGL_FlareWhite_F" call ace_cookoff_fnc_isMagazineFlare
@@ -18,7 +18,5 @@
 params ["_magazine"];
 
 private _configAmmo = configFile >> "CfgAmmo" >> getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
-private _intensity = getNumber (_configAmmo >> "intensity");
-private _flare = getNumber (_configAmmo >> QEGVAR(grenades,flare));
 
-_intensity != 0 || _flare == 1
+getNumber (_configAmmo >> "intensity") != 0 || {getNumber (_configAmmo >> QEGVAR(grenades,flare)) == 1}

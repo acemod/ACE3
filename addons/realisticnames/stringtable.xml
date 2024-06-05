@@ -698,6 +698,10 @@
             <Chinesesimp>"卡玛兹"（医疗）</Chinesesimp>
             <Turkish>KamAZ Medikal</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_Truck_02_water_Name">
+            <English>KamAZ Water</English>
+            <Portuguese>KamAZ Água</Portuguese>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_MRL_Name">
             <English>KamAZ MRL</English>
             <German>KamAS MRL</German>
@@ -1654,6 +1658,14 @@
             <Korean>FNX-45 택티컬</Korean>
             <Chinese>FNX-45戰術型手槍</Chinese>
             <Chinesesimp>FNX-45 战术型</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_01_Name">
+            <English>CZ 581</English>
+            <Portuguese>CZ 581</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_sawedoff_01_Name">
+            <English>CZ 581 (Sawed-Off)</English>
+            <Portuguese>CZ 581 (Cano serrado)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_green_Name">
             <English>FNX-45 Tactical (Green)</English>
@@ -3056,6 +3068,18 @@
             <Chinesesimp>"柏拉格" 战斗无人机</Chinesesimp>
             <Turkish>Burraq UCAV</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_arx_blk_Name">
+            <English>Type 115 (Black)</English>
+            <Portuguese>Type 115 (Preto)</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_arx_ghex_Name">
+            <English>Type 115 (Green Hex)</English>
+            <Portuguese>Type 115 (Verde Hex)</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_arx_hex_Name">
+            <English>Type 115 (Hex)</English>
+            <Portuguese>Type 115 (Hex)</Portuguese>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_blk">
             <English>QBZ-95-1 (Black)</English>
             <Czech>QBZ-95-1 (Černá)</Czech>
@@ -3077,7 +3101,7 @@
             <English>QBZ-95-1 (Green Hex)</English>
             <German>QBZ-95-1 (Hex Grün)</German>
             <Spanish>QBZ-95-1 (Hex Verde)</Spanish>
-            <Polish>QBZ-95-1 (zielony hex)</Polish>
+            <Polish>QBZ-95-1 (Zielony hex)</Polish>
             <Czech>QBZ-95-1 (Zelený Hex)</Czech>
             <French>QBZ-95-1 (Hex Vert)</French>
             <Russian>QBZ-95-1 (зелёный гекс)</Russian>
@@ -3128,7 +3152,7 @@
             <English>QBZ-95-1 GL (Green Hex)</English>
             <German>QBZ-95-1 GL (Hex Grün)</German>
             <Spanish>QBZ-95-1 GL (Hex Verde)</Spanish>
-            <Polish>QBZ-95-1 GL (zielony hex)</Polish>
+            <Polish>QBZ-95-1 GL (Zielony hex)</Polish>
             <Czech>QBZ-95-1 GL (Zelený Hex)</Czech>
             <French>QBZ-95-1 GL (Hex Vert)</French>
             <Russian>QBZ-95-1 GL (зелёный гекс)</Russian>
@@ -3179,7 +3203,7 @@
             <English>QBZ-95-1 LSW (Green Hex)</English>
             <German>QBZ-95-1 LSW (Hex Grün)</German>
             <Spanish>QBZ-95-1 LSW (Hex Verde)</Spanish>
-            <Polish>QBZ-95-1 LSW (zielony hex)</Polish>
+            <Polish>QBZ-95-1 LSW (Zielony hex)</Polish>
             <Czech>QBZ-95-1 LSW (Zelený Hex)</Czech>
             <French>QBZ-95-1 LSW (Hex Vert)</French>
             <Russian>QBZ-95-1 LSW (зелёный гекс)</Russian>
@@ -3230,7 +3254,7 @@
             <English>QBU-88 (Green Hex)</English>
             <German>QBU-88 (Hex Grün)</German>
             <Spanish>QBU-88 (Hex Verde)</Spanish>
-            <Polish>QBU-88 (zielony hex)</Polish>
+            <Polish>QBU-88 (Zielony hex)</Polish>
             <Czech>QBU-88 (Zelený Hex)</Czech>
             <French>QBU-88 (Hex Vert)</French>
             <Russian>QBU-88 (зелёный гекс)</Russian>
@@ -3536,7 +3560,7 @@
             <English>RPG-32 (Green Hex)</English>
             <German>RPG-32 (Hex Grün)</German>
             <Spanish>RPG-32 (Hex Verde)</Spanish>
-            <Polish>RPG-32 (zielony hex)</Polish>
+            <Polish>RPG-32 (Zielony hex)</Polish>
             <Czech>RPG-32 (Zelený Hex)</Czech>
             <French>RPG-32 (Hex Vert)</French>
             <Russian>RPG-32 (зелёный гекс)</Russian>
@@ -3839,6 +3863,18 @@
             <Turkish>Wiesel 2 RFCV (Radar)</Turkish>
             <Spanish>Wiesel 2 RFCV (Radar)</Spanish>
             <Korean>비젤 2 RFCV (레이더)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_flashlight_Name">
+            <English>UTG Defender 126</English>
+            <Portuguese>UTG Defender 126</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_mrd_Name">
+            <English>EOTech MRDS</English>
+            <Portuguese>EOTech MRDS</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_mrd_black_Name">
+            <English>EOTech MRDS (Black)</English>
+            <Portuguese>EOTech MRDS (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>

@@ -20,7 +20,7 @@
             <English>Enable vehicle cook-off fire</English>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_tooltip">
-            <English>Enables vehicle cook-off fire effects.\nThis does NOT include ammunition detonations.</English>
+            <English>Enables vehicle cook-off fire effects.\nThis doesn't include ammunition detonations.</English>
         </Key>
         <Key ID="STR_ACE_CookOff_cookoffDuration_name">
             <English>Vehicle cook-off fire duration multiplier</English>
@@ -57,12 +57,13 @@
             <French>Contrôle si les véhicules seront toujours détruits après l'auto-inflammation.</French>
             <Portuguese>Define se os veículos serão sempre destruídos após cozinhamento.</Portuguese>
             <Russian>Определяет, всегда ли транспортные средства будут уничтожаться после детонации.</Russian>
+            <Spanish>Controla si los vehículos siempre será destruidos despues de la detonación inducida por calor.</Spanish>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
             <English>Enable vehicle ammo cook-off</English>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
-            <English>Enables cooking off of vehicle ammunition. Fires ammunition projectiles while vehicle has ammunition remaining.\nThis does NOT include fire effects.</English>
+            <English>Enables cooking off of vehicle ammunition. Fires ammunition projectiles while vehicle has ammunition remaining.\nThis doesn't include fire effects.</English>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
             <English>Enable ammo box cook-off</English>
@@ -80,7 +81,7 @@
             <Czech>Povolit vynícení munice v krabicích</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
-            <English>Enables cooking off of ammo boxes.\nThis does NOT include fire effects.</English>
+            <English>Enables cooking off of ammo boxes.\nThis doesn't include fire effects.</English>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
             <English>Ammo cook-off duration multiplier</English>

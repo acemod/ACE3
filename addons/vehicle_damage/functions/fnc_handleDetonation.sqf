@@ -33,7 +33,7 @@ if (_chanceOfDetonation >= random 1) exitWith {
         } forEach (crew _vehicle);
     };
 
-    [QEGVAR(cookoff,detonateAmmunition), [_vehicle, false, _source, _instigator]] call CBA_fnc_serverEvent;
+    [QEGVAR(cookoff,detonateAmmunitionServer), [_vehicle, false, _source, _instigator]] call CBA_fnc_serverEvent;
 
     TRACE_2("detonation",_vehicle,_chanceOfDetonation);
 
