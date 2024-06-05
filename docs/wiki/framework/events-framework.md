@@ -103,18 +103,17 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|
-|`ace_refuel_started` | [_source, _target] | Local | Listen | Refueling has started |
+|`ace_refuel_started` | [_source, _target] | Local | Listen | Refuelling has started |
 |`ace_refuel_tick` | [_source, _target, _amount] | Local | Listen | Amount of fuel transferred in a tick |
-|`ace_refuel_stopped` | [_source, _target] | Local | Listen | Refueling has stopped |
+|`ace_refuel_stopped` | [_source, _target] | Local | Listen | Refuelling has stopped |
 
 ### 2.10 Cook Off (`ace_cookoff`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|---------|
-|`ace_cookoff_cookOff` | [_vehicle, _intensity, _instigator, _smokeDelayEnabled, _ammoDetonationChance, _detonateAfterCookoff, _fireSource, _canRing, _maxIntensity, _canJet] | Server | Callable | Start vehicle cook-off |
-|`ace_cookoff_cookOffBox` | [_box, _killer, _instigator] | Server | Callable | Start ammo box cook-off |
-|`ace_cookoff_detonateAmmunition` | [_object, _destroyWhenFinished, _killer, _instigator, _initialDelay"] | Server | Callable | Start ammo detonation |
-|`ace_cookoff_engineFire` | _vehicle | Server | Callable | Start engine fire |
+|`ace_cookoff_cookOff` | [_vehicle, _intensity, _instigator, _smokeDelayEnabled, _ammoDetonationChance, _detonateAfterCookoff, _fireSource, _canRing, _maxIntensity, _canJet] | Global | Listen | Vehicle cook-off has started |
+|`ace_cookoff_cookOffBox` | [_box, _source, _instigator, _delay] | Global | Listen | Ammo box cook-off has started |
+|`ace_cookoff_engineFire` | [_vehicle] | Global | Listen | Engine fire has started |
 
 ### 2.11 Attach (`ace_attach`)
 
@@ -156,9 +155,15 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|
-|---------- |------------|----------|------|-------------|
 | `ace_interaction_doorOpeningStarted` | [_house, _door, _animations] | Local | Listen | Called when local unit starts interacting with doors
-| `ace_interaction_doorOpeningStopped` | [_house, _door, _animations] | Local | Listen | Called when local unit stopps interacting with doors
+| `ace_interaction_doorOpeningStopped` | [_house, _door, _animations] | Local | Listen | Called when local unit stops interacting with doors
+
+### 2.17 Headless (`ace_headless`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_headless_groupTransferPre` | [_group, _HC (OBJECT), _previousOwner, _idHC] | Target | Listen | Called just before a group is transferred from any machine to a HC. Called where group currently is local and on the HC, where group is going to be local.
+| `ace_headless_groupTransferPost` | [_group, _HC (OBJECT), _previousOwner, _idHC, _transferredSuccessfully] | Target | Listen | Called just after a group is transferred from a machine to a HC. Called where group was local and on the HC, where group is now local. `_transferredSuccessfully` is passed so mods can actually check if the locality was properly transferred, as ownership transfer is not guaranteed.
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.

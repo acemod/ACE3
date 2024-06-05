@@ -128,3 +128,10 @@ If a mission maker wishes to disable Zeus access to the medical menu, they can s
 ```sqf
 ace_medical_gui_enableZeusModule = false; // default is true
 ```
+
+### 3.3 SpO2 Configuration
+
+If 3rd party mods want to disable SpO2 being set to a minimum upon successful CPR, they can set the variable below:
+```sqf
+ace_medical_treatment_setSpO2UponCPRSuccess = false; // default is true
+```

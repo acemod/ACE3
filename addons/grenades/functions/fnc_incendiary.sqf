@@ -180,7 +180,7 @@ if (isServer) then {
                 {EGVAR(cookoff,ammoCookoffDuration) != 0} &&
                 {_x getVariable [QEGVAR(cookoff,enableAmmoCookoff), true]}
             ) then {
-                [QEGVAR(cookOff,cookOffBox), _box] call CBA_fnc_serverEvent;
+                [QEGVAR(cookOff,cookOffBoxServer), _box] call CBA_fnc_serverEvent;
             } else {
                 _x setDamage 1;
             };
@@ -235,6 +235,6 @@ if (_position distance _enginePosition < EFFECT_SIZE * 2) then {
     _vehicle setHit [_engineSelection, 1];
 
     if (["ace_cookoff"] call EFUNC(common,isModLoaded)) then {
-        [QEGVAR(cookoff,engineFire), _vehicle] call CBA_fnc_serverEvent;
+        [QEGVAR(cookoff,engineFireServer), _vehicle] call CBA_fnc_serverEvent;
     };
 };

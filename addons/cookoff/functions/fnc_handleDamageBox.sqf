@@ -15,15 +15,15 @@
  * Public: No
  */
 
+// If cookoff for boxes is disabled, exit
+if (!GVAR(enableAmmobox) || {GVAR(ammoCookoffDuration) == 0}) exitWith {};
+
 params ["_box", "", "_damage", "_source", "_ammo", "", "_instigator", "_hitPoint"];
 
 if (!local _box) exitWith {};
 
 // If it's already dead, ignore
 if (!alive _box) exitWith {};
-
-// If cookoff for boxes is disabled, exit
-if (!GVAR(enableAmmobox) || {GVAR(ammoCookoffDuration) == 0}) exitWith {};
 
 if !(_box getVariable [QGVAR(enableAmmoCookoff), true]) exitWith {};
 

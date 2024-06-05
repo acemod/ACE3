@@ -1,15 +1,15 @@
 #include "script_component.hpp"
 
 [QGVAR(cookOffBoxLocal), LINKFUNC(cookOffBoxLocal)] call CBA_fnc_addEventHandler;
-[QGVAR(cookOffEffect), LINKFUNC(cookOffEffect)] call CBA_fnc_addEventHandler;
+[QGVAR(cookOffLocal), LINKFUNC(cookOffLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(engineFireLocal), LINKFUNC(engineFireLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(smoke), LINKFUNC(smoke)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    [QGVAR(cookOff), LINKFUNC(cookOff)] call CBA_fnc_addEventHandler;
-    [QGVAR(cookOffBox), LINKFUNC(cookOffBox)] call CBA_fnc_addEventHandler;
-    [QGVAR(engineFire), LINKFUNC(engineFire)] call CBA_fnc_addEventHandler;
-    [QGVAR(detonateAmmunition), LINKFUNC(detonateAmmunition)] call CBA_fnc_addEventHandler;
+    [QGVAR(cookOffBoxServer), LINKFUNC(cookOffBoxServer)] call CBA_fnc_addEventHandler;
+    [QGVAR(cookOffServer), LINKFUNC(cookOffServer)] call CBA_fnc_addEventHandler;
+    [QGVAR(detonateAmmunitionServer), LINKFUNC(detonateAmmunitionServer)] call CBA_fnc_addEventHandler;
+    [QGVAR(engineFireServer), LINKFUNC(engineFire)] call CBA_fnc_addEventHandler;
 };
 
 // Handle cleaning up effects when objects are deleted mid cook-off
@@ -50,7 +50,7 @@ if (isServer) then {
 
     if (_useEffects && {_vehicle getVariable [QGVAR(enableAmmoCookoff), true]}) then {
         // We don't need to pass source and instigator, as vehicle is already dead
-        [QGVAR(detonateAmmunition), [
+        [QGVAR(detonateAmmunitionServer), [
             _vehicle,
             false,
             objNull,
@@ -95,6 +95,6 @@ if (hasInterface) then {
         if (!fileExists _sound) exitWith {};
 
         // Obeys speed of sound and takes doppler effects into account
-        playSound3D [_sound, objNull, insideBuilding _object >= 0.5, getPosASL _object, _volume, _pitch + (random 0.2) - 0.1, _maxDistance, 0, true];
+        playSound3D [_sound, objNull, false, getPosASL _object, _volume, _pitch + (random 0.2) - 0.1, _maxDistance, 0, true];
     }] call CBA_fnc_addEventHandler;
 };

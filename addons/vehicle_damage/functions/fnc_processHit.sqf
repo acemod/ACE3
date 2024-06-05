@@ -37,12 +37,10 @@ if (_newDamage >= 15) exitWith {
     TRACE_2("immediate destruction - high damage",_newDamage,_currentPartDamage);
     [_vehicle] call FUNC(knockOut);
     [_vehicle, 1] call FUNC(handleDetonation);
-    // kill everyone inside for very insane damage
+    // Kill everyone inside for very insane damage
     {
-        _x setDamage 1;
-        _x setVariable [QEGVAR(medical,lastDamageSource), _injurer];
-        _x setVariable [QEGVAR(medical,lastInstigator), _injurer];
-    } forEach crew _vehicle;
+        [QGVAR(medicalDamage), [_x, _injurer, _injurer, true], _x] call CBA_fnc_targetEvent;
+    } forEach (crew _vehicle);
     _vehicle setDamage 1;
     _return = false;
     _return

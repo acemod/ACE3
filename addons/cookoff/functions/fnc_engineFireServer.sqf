@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * cursorObject call ace_cookoff_fnc_engineFire
+ * cursorObject call ace_cookoff_fnc_engineFireServer
  *
  * Public: No
  */
@@ -29,3 +29,6 @@ private _jipID = [QGVAR(engineFireLocal), [_vehicle, CBA_missionTime + random [E
 [_jipID, _vehicle] call CBA_fnc_removeGlobalEventJIP;
 
 _vehicle setVariable [QGVAR(engineFireJipID), _jipID];
+
+// API
+[QGVAR(engineFire), [_vehicle]] call CBA_fnc_globalEvent;
