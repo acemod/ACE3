@@ -164,6 +164,6 @@ params ["_unit", "_instigator"];
         // Use event directly, as ace_medical_fnc_addDamageToUnit requires unit to be alive
         [QEGVAR(medical,woundReceived), [_unit, [[_damageToAdd, _bodyPart, _damageToAdd]], _instigator, "burn"]] call CBA_fnc_localEvent;
 
-        _unit setVariable [QGVAR(intensity), _intensity, true]; // globally sync intensity across all clients to make sure simulation is deterministic
+        _unit setVariable [QGVAR(intensity), _intensity, true]; // Globally sync intensity across all clients to make sure simulation is deterministic
     };
 }, BURN_PROPAGATE_UPDATE, [_unit, _instigator]] call CBA_fnc_addPerFrameHandler;

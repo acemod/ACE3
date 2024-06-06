@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Intensity of fire <NUMBER>
- * 2: Instigator of fire <OBJECT> (default: objNull)
+ * 1: Fire intensity <NUMBER>
+ * 2: Fire instigator <OBJECT> (default: objNull)
  *
  * Return Value:
  * None
@@ -54,6 +54,11 @@ if (surfaceIsWater _eyePos && {(_eyePos select 2) < 0.1}) exitWith {
 
 // If unit is already burning, update intensity, but don't add another PFH
 if (_unit call FUNC(isBurning)) exitWith {
+    // Only allow intensity to be increased
+    if (_intensity <= (_unit getVariable [QGVAR(intensity), 0])) exitWith {
+        TRACE_2("unit already burning, no intensity update",_unit,_intensity);
+    };
+
     TRACE_2("unit already burning, updating intensity",_unit,_intensity);
 
     _unit setVariable [QGVAR(intensity), _intensity, true];
@@ -63,7 +68,7 @@ TRACE_2("setting unit ablaze",_unit,_intensity);
 
 _unit setVariable [QGVAR(intensity), _intensity, true];
 
-// Fire simulation (objects are handled differently)
+// Fire simulation (fire sources are handled differently)
 [QGVAR(burnSimulation), [_unit, _instigator], _unit] call CBA_fnc_targetEvent;
 
 // Spawn effects for unit

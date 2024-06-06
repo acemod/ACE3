@@ -76,7 +76,7 @@ if (isServer) then {
     };
 
     // Display burn indicators
-    if (_unit == ACE_player && {alive _unit} && {isNil {_unit getVariable QGVAR(burnUIPFH)}}) then { // this accounts for player remote controlled a new unit
+    if (_unit == ACE_player && {alive _unit} && {isNil {_unit getVariable QGVAR(burnUIPFH)}}) then { // This accounts for player remote controlled a new unit
         private _burnIndicatorPFH = [LINKFUNC(burnIndicator), 1, _unit] call CBA_fnc_addPerFrameHandler;
         _unit setVariable [QGVAR(burnUIPFH), _burnIndicatorPFH];
     };
@@ -120,7 +120,7 @@ if (isServer) then {
     _fireParticle setParticleRandom [
         0.04 * _intensity, // life time
         [0.05, 0.05, 2], // position
-        [0.05 * _intensity, 0.05 * _intensity, 0.05 * _intensity], // move velocity
+        [0.05, 0.05, 0.05] vectorMultiply _intensity, // move velocity
         0, // rotation velocity
         0.06 * _intensity, // size
         [0, 0, 0, 0], // color
