@@ -126,6 +126,7 @@
             <French>Risque de perte d'arme</French>
             <Japanese>武器を落とす確率</Japanese>
             <Russian>Шанс выпадения оружия</Russian>
+            <Spanish>Probabilidad de Soltar Arma</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_Description">
             <English>Chance for a player to drop their weapon when going unconscious.\nHas no effect on AI.</English>
@@ -136,6 +137,7 @@
             <French>Pourcentage de chances pour un joueur de lâcher son arme lorsqu'il perd connaissance.\nAucun effet sur les IA.</French>
             <Japanese>プレーヤーが意識を失ったときに武器を落とす可能性。\nAI には影響しません。</Japanese>
             <Russian>Шанс для игрока выронить свое оружие, когда он теряет сознание.\nНе влияет на ИИ</Russian>
+            <Spanish>Probabilidad del jugador de soltar su arma cuando quedan inconscientes.\nNo tiene efecto sobre la IA.</Spanish>
         </Key>
     </Package>
 </Project>
