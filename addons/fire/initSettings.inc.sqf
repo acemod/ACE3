@@ -6,7 +6,7 @@
     true,
     1,
     {[QGVAR(fireEnabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // needs mission restart
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -15,8 +15,7 @@
     [LSTRING(Setting_FlareEnable), LSTRING(Setting_FlareDescription)],
     LSTRING(Category_DisplayName),
     false,
-    1,
-    {[QGVAR(flareEnabled), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    1
 ] call CBA_fnc_addSetting;
 
 [

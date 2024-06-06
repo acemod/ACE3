@@ -20,13 +20,16 @@ private _adjustedIntensity = 0;
 
 {
     _y params ["_fireLogic", "_radius", "_intensity", "_condition", "_conditionArgs"];
+    TRACE_2("fireManagerPFH loop",_x,_y);
 
     // Remove when condition is no longer valid
     if !(_conditionArgs call _condition) then {
-        (GVAR(fireSources) deleteAt _x) params [["_fireLogic", objNull]];
+        TRACE_2("condition no longer valid, deleting",_x,_y);
 
         detach _fireLogic;
         deleteVehicle _fireLogic;
+
+        GVAR(fireSources) deleteAt _x;
 
         continue;
     };
@@ -42,5 +45,7 @@ private _adjustedIntensity = 0;
         };
 
         [QGVAR(burn), [_x, _adjustedIntensity], _x] call CBA_fnc_targetEvent;
+
+        TRACE_3("propagate fire",_x,_intensity,_adjustedIntensity);
     } forEach nearestObjects [_fireLogic, ["CAManBase"], _radius];
 } forEach GVAR(fireSources);

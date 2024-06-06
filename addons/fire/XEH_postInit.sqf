@@ -2,7 +2,6 @@
 
 [QGVAR(burn), LINKFUNC(burn)] call CBA_fnc_addEventHandler;
 [QGVAR(burnEffects), LINKFUNC(burnEffects)] call CBA_fnc_addEventHandler;
-[QGVAR(burnObjectEffects), LINKFUNC(burnObjectEffects)] call CBA_fnc_addEventHandler;
 [QGVAR(burnSimulation), LINKFUNC(burnSimulation)] call CBA_fnc_addEventHandler;
 
 [QGVAR(playScream), {
@@ -58,6 +57,13 @@
         if (_radius == 0 || _intensity == 0) exitWith {};
         if (_key isEqualTo "") exitWith {}; // key can be many types
 
+        // hashValue supports more types than hashmaps do by default, but not all (e.g. locations)
+        private _hashedKey = hashValue _key;
+
+        if (isNil "_hashedKey") exitWith {
+            ERROR_2("Unsupported key type used: %1 - %2",_key,typeName _key);
+        };
+
         // If a position is passed, create a static object at said position
         private _sourcePos = if (_isObject) then {
             getPosATL _source
@@ -70,13 +76,6 @@
         // If an object was passed, attach logic to the object
         if (_isObject) then {
             _fireLogic attachTo [_source];
-        };
-
-        // hashValue supports more types than hashmaps do by default, but not all (e.g. locations)
-        private _hashedKey = hashValue _key;
-
-        if (isNil "_hashedKey") exitWith {
-            ERROR_2("Unsupported key type used: %1 - %2",_key,typeName _key);
         };
 
         // To avoid issues, remove existing entries first before overwriting
