@@ -85,7 +85,7 @@ if (getNumber (_config >> QGVAR(incendiary)) == 1) then {
 if (_unit != ACE_player) exitWith {};
 if (_unit getVariable [QEGVAR(advanced_throwing,primed), false]) exitWith {LOG("advanced_throwing throw");};
 
-private _mode = missionNamespace getVariable [QGVAR(currentThrowMode), 0];
+private _mode = GVAR(currentThrowMode);
 
 if (_mode != 0) then {
     private _velocity = velocity _projectile;
@@ -103,9 +103,22 @@ if (_mode != 0) then {
         case 2 : {
             _velocity = (_unit weaponDirection _weapon) vectorMultiply (vectorMagnitude _velocity);
         };
-        //roll grande
+        //roll grenade
         case 3 : {
-            //@todo
+            private _posASL = getPosASL _projectile;
+
+            // getPos is unreliable, as surfaces in some ruins are not recognised as surfaces
+            private _lisPos = (lineIntersectsSurfaces [_posASL, _posASL vectorAdd [0, 0, -1e11], ACE_player, objNull, true, 1, "ROADWAY", "FIRE"]) select 0;
+            _projectile setPosASL ((_lisPos select 0) vectorAdd [0, 0, 0.2]);
+
+            // Rotate throwables by 90° to the side by default, so cylindrical throwables can be rolled
+            private _vectorDirAndUp = getArray (_config >> QGVAR(rollVectorDirAndUp));
+            _vectorDirAndUp params [["_vectorDir", [0, 1, 0], [[]], 3], ["_vectorUp", [1, 0, 0], [[]], 3]];
+
+            // Do as if object were facing north
+            _projectile setVectorDirAndUp ([[_vectorDir, _vectorUp], -(direction _projectile), 0, 0] call BIS_fnc_transformVectorDirAndUp);
+
+            _velocity = (vectorDir _unit) vectorMultiply 10;
         };
         //drop grenade
         case 4 : {
