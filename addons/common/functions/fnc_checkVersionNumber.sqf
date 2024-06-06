@@ -29,12 +29,11 @@ private _files = CBA_common_addons select {
 };
 
 private _cfgPatches = configFile >> "CfgPatches";
-private _version = -1;
 private _versions = [];
 
 {
     (getText (_cfgPatches >> _x >> "version") splitString ".") params [["_major", "0"], ["_minor", "0"]];
-    _version = parseNumber _major + parseNumber _minor / 100;
+    private _version = parseNumber _major + parseNumber _minor / 100;
     _versions pushBack _version;
 } forEach _files;
 
@@ -59,21 +58,17 @@ private _fnc_check = {
     private _olderVersionsClient = [];
     private _newerVersionsClient = [];
 
-    private _clientVersion = -1;
-    private _serverVersion = -1;
-    private _index = -1;
-
     {
-        _serverVersion = _serverVersions select _forEachIndex;
+        private _serverVersion = _serverVersions select _forEachIndex;
 
-        _index = _files find _x;
+        private _index = _files find _x;
 
         if (_index == -1) then {
             if (_x != "ace_server") then {
                 _missingAddonsClient pushBack _x;
             };
         } else {
-            _clientVersion = _versions select _index;
+            private _clientVersion = _versions select _index;
 
             if (_clientVersion < _serverVersion) then {
                 _olderVersionsClient pushBack [_x, _clientVersion, _serverVersion];
@@ -90,11 +85,6 @@ private _fnc_check = {
 
     // Check for client missing addons, server missing addons, client outdated addons and server outdated addons
     private _clientErrors = [];
-    private _isMissingItems = false;
-    private _errorLog = [];
-    private _header = "";
-    private _errorMsg = "";
-    private _count = -1;
 
     #define DISPLAY_NUMBER_ADDONS (10 + 1) // +1 to account for header
 
@@ -102,18 +92,18 @@ private _fnc_check = {
         _x params ["_items", "_string"];
 
         // Check if something is either missing or outdated
-        _isMissingItems = _items isNotEqualTo [];
+        private _isMissingItems = _items isNotEqualTo [];
 
         if (_isMissingItems) then {
             // Generate error message
-            _errorLog = +_items;
-            _header = format ["[ACE] %1: ERROR %2 addon(s): ", _client, _string];
+            private _errorLog = +_items;
+            private _header = format ["[ACE] %1: ERROR %2 addon(s): ", _client, _string];
 
             // Don't display all missing items, as they are logged
-            _errorMsg = _header + ((_errorLog select [0, DISPLAY_NUMBER_ADDONS]) joinString ", ");
+            private _errorMsg = _header + ((_errorLog select [0, DISPLAY_NUMBER_ADDONS]) joinString ", ");
             _errorLog = _header + (_errorLog joinString ", ");
 
-            _count = count _items;
+            private _count = count _items;
 
             if (_count > DISPLAY_NUMBER_ADDONS) then {
                 _errorMsg = _errorMsg + format [", and %1 more.", _count - DISPLAY_NUMBER_ADDONS];

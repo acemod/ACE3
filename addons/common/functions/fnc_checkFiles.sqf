@@ -48,20 +48,16 @@ if ([_cbaRequiredAr, _cbaVersionAr] call CBA_versioning_fnc_version_compare) the
 //private _addons = activatedAddons; // Broken with High-Command module, see #2134
 private _addons = (CBA_common_addons select {(_x select [0, 4]) == "ace_"}) apply {toLowerANSI _x};
 
-private _addonCfg = configNull;
-private _addonVersion = "";
-private _addonSource = "";
-
 private _oldAddons = [];
 private _oldSources = [];
 private _oldCompats = [];
 
 {
-    _addonCfg = configFile >> "CfgPatches" >> _x;
-    _addonVersion = getText (_addonCfg >> "versionStr");
+    private _addonCfg = configFile >> "CfgPatches" >> _x;
+    private _addonVersion = getText (_addonCfg >> "versionStr");
 
     if (_addonVersion != _mainVersion) then {
-        _addonSource = configSourceMod _addonCfg;
+        private _addonSource = configSourceMod _addonCfg;
 
         _oldSources pushBackUnique _addonSource;
 
@@ -111,18 +107,12 @@ if (!isServer && {_platform in ["linux", "osx"]}) then {
     // Linux and OSX client ports do not support extensions at all
     INFO("Operating system does not support extensions");
 } else {
-    private _extension = "";
-    private _isWindows = false;
-    private _isLinux = false;
-    private _isClient = false;
-    private _isServer = false;
-
     {
-        _extension = configName _x;
-        _isWindows = _platform == "windows" && {getNumber (_x >> "windows") == 1};
-        _isLinux = _platform == "linux" && {getNumber (_x >> "linux") == 1};
-        _isClient = hasInterface && {getNumber (_x >> "client") == 1};
-        _isServer = !hasInterface && {getNumber (_x >> "server") == 1};
+        private _extension = configName _x;
+        private _isWindows = _platform == "windows" && {getNumber (_x >> "windows") == 1};
+        private _isLinux = _platform == "linux" && {getNumber (_x >> "linux") == 1};
+        private _isClient = hasInterface && {getNumber (_x >> "client") == 1};
+        private _isServer = !hasInterface && {getNumber (_x >> "server") == 1};
 
         if ((_isWindows || _isLinux) && {_isClient || _isServer}) then {
             private _versionEx = _extension callExtension "version";
