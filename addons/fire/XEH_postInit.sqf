@@ -2,7 +2,6 @@
 
 [QGVAR(burn), LINKFUNC(burn)] call CBA_fnc_addEventHandler;
 [QGVAR(burnEffects), LINKFUNC(burnEffects)] call CBA_fnc_addEventHandler;
-[QGVAR(burnObjectEffects), LINKFUNC(burnObjectEffects)] call CBA_fnc_addEventHandler;
 [QGVAR(burnSimulation), LINKFUNC(burnSimulation)] call CBA_fnc_addEventHandler;
 
 [QGVAR(playScream), {
