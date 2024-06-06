@@ -8,8 +8,6 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
-ADDON = true;
-
 GVAR(armSelections) = [
     "leftshoulder",
     "rightshoulder",
@@ -21,3 +19,5 @@ GVAR(armSelections) = [
     "righthand",
     "rightarm"
 ];
+
+ADDON = true;

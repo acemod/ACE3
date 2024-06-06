@@ -1,27 +1,35 @@
 #include "script_component.hpp"
 
-["ace_firedNonPlayer", {
-    if (GVAR(weaponDropChanceArmHitPlayer) + GVAR(weaponDropChanceArmHitAI) == 0) exitWith {};
 
-    (_this select 6) addEventHandler ["HitPart", {
-        params ["", "_entity", "", "", "", "", "_selections"];
-
-        [_entity, _selections] call FUNC(checkWeaponDrop);
-    }];
-}] call CBA_fnc_addEventHandler;
-
-["ace_firedPlayer", {
-    if (GVAR(weaponDropChanceArmHitPlayer) + GVAR(weaponDropChanceArmHitAI) == 0) exitWith {};
-
-    (_this select 6) addEventHandler ["HitPart", {
-        params ["", "_entity", "", "", "", "", "_selections"];
-
-        [_entity, _selections] call FUNC(checkWeaponDrop);
-    }];
+[QGVAR(updateFiredEHs), {
+    TRACE_2("updateFiredEH",GVAR(weaponDropChanceArmHitPlayer),GVAR(weaponDropChanceArmHitAI));
+    if (GVAR(weaponDropChanceArmHitPlayer) + GVAR(weaponDropChanceArmHitAI) == 0) then {
+        if (isNil QGVAR(firedEHs)) exitWith {};
+        {
+            _x call CBA_fnc_removeEventHandler;
+        } forEach GVAR(firedEHs);
+        GVAR(firedEHs) = nil;
+        TRACE_1("removed EHs",GVAR(firedEHs));
+    } else {
+        if (!isNil QGVAR(firedEHs)) exitWith {};
+        private _firedEH = {
+            if (!local (_this select 0)) exitWith {};
+            (_this select 6) addEventHandler ["HitPart", {
+                params ["", "_entity", "", "", "", "", "_selections"];
+                [_entity, _selections] call FUNC(checkWeaponDrop);
+            }];
+        };
+        GVAR(firedEHs) = [];
+        { 
+            GVAR(firedEHs) pushBack [_x, [_x, _firedEH] call CBA_fnc_addEventHandler];
+        } forEach ["ace_firedNonPlayer", "ace_firedPlayer"];
+        TRACE_1("added EHs",GVAR(firedEHs));
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(dropWeapon), {
     params ["_unit"];
+    TRACE_1("dropWeaponEH",_unit);
 
     if !(_unit getVariable [QGVAR(canDropWeapon), true]) exitWith {};
 
