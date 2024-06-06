@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Adds event handler just to ace_player
+ * Adds event handler just to ACE_player
  *
  * Arguments:
  * 0: Key <STRING>
@@ -32,8 +32,10 @@ if (isNil QGVAR(playerEventsHash)) then { // first-run init
             _y params ["_type", "_code", "_ignoreVirtual"];
 
             private _oldEH = _oldPlayer getVariable [_x, -1];
-            if (_oldEH != -1) then { _oldPlayer removeEventHandler [_type, _oldEH]; };
-            _oldPlayer setVariable [_x, nil];
+            if (_oldEH != -1) then { 
+                _oldPlayer removeEventHandler [_type, _oldEH]; 
+                _oldPlayer setVariable [_x, nil];
+            };
 
             _oldEH = _newPlayer getVariable [_x, -1];
             if (_oldEH != -1) then { continue }; // if respawned then var and EH already exists
