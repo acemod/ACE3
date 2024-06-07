@@ -21,7 +21,7 @@ INFO_1("Checking uniforms for correct medical hitpoints [%1 units]",count _units
 private _testPass = true;
 {
     private _typeOf = configName _x;
-    private _hitpoints = (configProperties [_x >> "HitPoints", "isClass _x", true]) apply {toLowerANSI _x};
+    private _hitpoints = (configProperties [_x >> "HitPoints", "isClass _x", true]) apply {toLowerANSI configName _x};
     private _expectedHitPoints = ["hitleftarm","hitrightarm","hitleftleg","hitrightleg","hithead","hitbody"];
     private _missingHitPoints = _expectedHitPoints select {!(_x in _hitpoints)};
     if (_missingHitPoints isNotEqualTo []) then {
