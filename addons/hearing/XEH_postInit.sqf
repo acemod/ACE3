@@ -35,6 +35,7 @@ GVAR(lastPlayerVehicle) = objNull;
     // Spawn volume updating process
     [LINKFUNC(updateVolume), 1, false] call CBA_fnc_addPerFrameHandler;
 
+    [QGVAR(explosion), LINKFUNC(explosion)] call CBA_fnc_addEventHandler;
     [QGVAR(updateVolume), LINKFUNC(updateVolume)] call CBA_fnc_addEventHandler;
 
     // Update veh attunation when player veh changes
@@ -94,7 +95,12 @@ GVAR(lastPlayerVehicle) = objNull;
     addMissionEventHandler ["ProjectileCreated", {
         params ["_projectile"];
 
-        _projectile addEventHandler ["Explode", {call FUNC(explosion)}];
+        if (!local _projectile) exitWith {};
+
+        // Rockets only explode on local clients
+        _projectile addEventHandler ["Explode", {
+            [QGVAR(explosion), _this] call CBA_fnc_globalEvent;
+        }];
     }];
 
     // Update protection on possible helmet change
