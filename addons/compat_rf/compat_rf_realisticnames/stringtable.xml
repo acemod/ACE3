@@ -41,6 +41,10 @@
             <English>Vortex Spitfire Prism (Khaki)</English>
             <Japanese>Vortex スピットファイア プリズム (カーキ)</Japanese>
         </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_pistol_Name">
+            <English>Vortex Spitfire Prism (Pistol)</English>
+            <Japanese>Vortex スピットファイア プリズム (ピストル用)</Japanese>
+        </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_Name">
             <English>Glock 19X</English>
             <Japanese>グロック 19X</Japanese>
