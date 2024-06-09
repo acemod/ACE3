@@ -15,7 +15,8 @@ private _category = [LELSTRING(common,categoryUncategorized), QUOTE(COMPONENT_BE
     LSTRING(weaponDropChanceArmHitPlayer_displayName),
     _category,
     [0, 1, 0, 2, true],
-    1
+    1,
+    {[QGVAR(updateFiredEHs)] call CBA_fnc_localEvent}
 ] call CBA_fnc_addSetting;
 
 [
@@ -24,5 +25,6 @@ private _category = [LELSTRING(common,categoryUncategorized), QUOTE(COMPONENT_BE
     LSTRING(weaponDropChanceArmHitAI_displayName),
     _category,
     [0, 1, 0, 2, true],
-    1
+    1,
+    {[QGVAR(updateFiredEHs)] call CBA_fnc_localEvent}
 ] call CBA_fnc_addSetting;
