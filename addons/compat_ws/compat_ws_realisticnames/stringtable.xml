@@ -257,12 +257,12 @@
             <Spanish>FN FAL 50.00 (Jungla)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Para_Name">
-            <English>FN FAL 50.00 Para</English>
-            <Japanese>FN FAL 50.00 パラ</Japanese>
+            <English>FN FAL OSW Para</English>
+            <Japanese>FN FAL OSW パラ</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Para_Snake_Name">
-            <English>FN FAL 50.00 Para (Snake)</English>
-            <Japanese>FN FAL 50.00 パラ (ヘビ柄迷彩)</Japanese>
+            <English>FN FAL OSW Para (Snake)</English>
+            <Japanese>FN FAL OSW パラ (ヘビ柄迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R4_Name">
             <English>Vektor R4</English>
