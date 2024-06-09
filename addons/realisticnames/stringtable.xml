@@ -46,7 +46,7 @@
             <Portuguese>XM312 (Alta)</Portuguese>
             <Hungarian>XM312 (Magasított)</Hungarian>
             <Italian>XM312 (Alto)</Italian>
-            <Japanese>XM312 (高)</Japanese>
+            <Japanese>XM312 (ハイマウント)</Japanese>
             <Korean>XM312 (높음)</Korean>
             <Chinese>XM312重機槍 (高射腳架)</Chinese>
             <Chinesesimp>XM312（高）</Chinesesimp>
@@ -97,7 +97,7 @@
             <Portuguese>XM307 (Alta)</Portuguese>
             <Hungarian>XM307 (Magasított)</Hungarian>
             <Italian>XM307 (Alto)</Italian>
-            <Japanese>XM307 (高)</Japanese>
+            <Japanese>XM307 (ハイマウント)</Japanese>
             <Korean>XM307 (높음)</Korean>
             <Chinese>XM307榴彈機槍 (高射腳架)</Chinese>
             <Chinesesimp>XM307（高）</Chinesesimp>
@@ -556,7 +556,7 @@
             <Portuguese>Leopard 2SG</Portuguese>
             <Hungarian>Leopard 2SG</Hungarian>
             <Italian>Leopard 2SG</Italian>
-            <Japanese>レオパルト 2SG</Japanese>
+            <Japanese>レオパルト2 SG</Japanese>
             <Korean>레오파르트 2SG</Korean>
             <Chinese>"豹2型新加坡版"主戰坦克</Chinese>
             <Chinesesimp>"豹"2 新加坡版</Chinesesimp>
@@ -701,6 +701,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_02_water_Name">
             <English>KamAZ Water</English>
             <Portuguese>KamAZ Água</Portuguese>
+            <Japanese>KamAZ 給水</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_MRL_Name">
             <English>KamAZ MRL</English>
@@ -1662,10 +1663,12 @@
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_01_Name">
             <English>CZ 581</English>
             <Portuguese>CZ 581</Portuguese>
+            <Japanese>CZ 581</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_sawedoff_01_Name">
             <English>CZ 581 (Sawed-Off)</English>
             <Portuguese>CZ 581 (Cano serrado)</Portuguese>
+            <Japanese>CZ 581 (ソードオフ)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_green_Name">
             <English>FNX-45 Tactical (Green)</English>
@@ -2333,7 +2336,7 @@
             <Russian>Scorpion Evo 3 A1</Russian>
             <Portuguese>Scorpion Evo 3 A1</Portuguese>
             <Italian>Scorpion Evo 3 A1</Italian>
-            <Japanese>スコーピオン エボ 3 A1</Japanese>
+            <Japanese>スコーピオン Evo 3 A1</Japanese>
             <Korean>스콜피온 에보 3 A1</Korean>
             <Chinese>"蠍式"Evo 3 A1衝鋒槍</Chinese>
             <Chinesesimp>Evo 3 A1 "蝎"</Chinesesimp>
@@ -2384,7 +2387,7 @@
             <Russian>Stoner 99 LMG</Russian>
             <Portuguese>Stoner 99 LMG</Portuguese>
             <Italian>Stoner 99 LMG</Italian>
-            <Japanese>ストーナー 99 LMG</Japanese>
+            <Japanese>ストーナー99 LMG</Japanese>
             <Korean>스토너 99 LMG</Korean>
             <Chinese>斯通納99輕機槍</Chinese>
             <Chinesesimp>斯通纳 99</Chinesesimp>
@@ -3071,14 +3074,17 @@
         <Key ID="STR_ACE_RealisticNames_arifle_arx_blk_Name">
             <English>Type 115 (Black)</English>
             <Portuguese>Type 115 (Preto)</Portuguese>
+            <Japanese>Type 115 (ブラック)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_ghex_Name">
             <English>Type 115 (Green Hex)</English>
             <Portuguese>Type 115 (Verde Hex)</Portuguese>
+            <Japanese>Type 115 (緑六角形迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_hex_Name">
             <English>Type 115 (Hex)</English>
             <Portuguese>Type 115 (Hex)</Portuguese>
+            <Japanese>Type 115 (六角形迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_blk">
             <English>QBZ-95-1 (Black)</English>
@@ -3675,7 +3681,7 @@
         <Key ID="STR_ACE_RealisticNames_lsv_01_light">
             <English>Polaris DAGOR (light)</English>
             <German>Polaris DAGOR (leicht)</German>
-            <Japanese>ポラリス DAGOR (軽)</Japanese>
+            <Japanese>ポラリス DAGOR (軽装)</Japanese>
             <Chinese>"北極星"先進佈署越野車 (輕型)</Chinese>
             <Chinesesimp>"北极星"（轻型）</Chinesesimp>
             <Italian>Polaris DAGOR (leggero)</Italian>
@@ -3867,14 +3873,17 @@
         <Key ID="STR_ACE_RealisticNames_flashlight_Name">
             <English>UTG Defender 126</English>
             <Portuguese>UTG Defender 126</Portuguese>
+            <Japanese>UTG ディフェンダー 126</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_Name">
             <English>EOTech MRDS</English>
             <Portuguese>EOTech MRDS</Portuguese>
+            <Japanese>EOTech MRDS</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_black_Name">
             <English>EOTech MRDS (Black)</English>
             <Portuguese>EOTech MRDS (Preto)</Portuguese>
+            <Japanese>EOTech MRDS (ブラック)</Japanese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>
@@ -4308,7 +4317,7 @@
             <English>KAHLES Helia (Tan)</English>
             <Chinese>KAHLES Helia (Tan)</Chinese>
             <Chinesesimp>KAHLES Helia（沙色）</Chinesesimp>
-            <Japanese>KAHLES Helia (タン)</Japanese>
+            <Japanese>KAHLES ヘリア (タン)</Japanese>
             <Polish>KAHLES Helia (Tan)</Polish>
             <Italian>KAHLES Helia (Marroncino)</Italian>
             <Russian>KAHLES Helia (пустынный)</Russian>
