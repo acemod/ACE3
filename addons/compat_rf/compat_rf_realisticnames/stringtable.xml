@@ -26,8 +26,8 @@
             <Japanese>C-More レイルウェイ (グリーン、森林迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_rds_Name">
-            <English>Aimpoint Micro R-1 Reflex</English>
-            <Japanese>Aimpoint マイクロ R-1 リフレックス</Japanese>
+            <English>Aimpoint Micro R-1</English>
+            <Japanese>Aimpoint マイクロ R-1</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_Name">
             <English>Vortex Spitfire Prism</English>
@@ -99,7 +99,7 @@
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_digi_Name">
             <English>Hera H6 (Digital)</English>
-            <Japanese>ヘラ H6 (デジタル迷彩)</Japanese>
+            <Japanese>ヘラ H6 (AAF迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_gold_Name">
             <English>Hera H6 (Gold)</English>
