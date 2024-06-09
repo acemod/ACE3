@@ -37,5 +37,5 @@ class optic_VRCO_khk_RF: optic_VRCO_RF {
     displayName = SUBCSTRING(optic_vrco_khk_Name);
 };
 class optic_VRCO_pistol_RF: optic_VRCO_RF {
-    displayName = SUBCSTRING(optic_vrco_Name);
+    displayName = SUBCSTRING(optic_vrco_pistol_Name);
 };
