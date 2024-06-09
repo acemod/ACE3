@@ -48,4 +48,4 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
     }] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
 
-["unit", LINKFUNC(handlePlayerChanged), true] call CBA_fnc_addPlayerEventHandler;
+[QUOTE(ADDON), "AnimChanged", LINKFUNC(onAnimChanged)] call EFUNC(common,addPlayerEH);
