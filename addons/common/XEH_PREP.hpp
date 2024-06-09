@@ -161,6 +161,7 @@ PREP(sendRequest);
 PREP(serverLog);
 PREP(setAimCoef);
 PREP(setApproximateVariablePublic);
+PREP(setDead);
 PREP(setDefinedVariable);
 PREP(setDisableUserInputStatus);
 PREP(setHearingCapability);

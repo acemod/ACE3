@@ -2,8 +2,8 @@
 
 GVAR(hardpointGroupsCache) = [] call CBA_fnc_createNamespace;
 GVAR(configTypesAdded) = [];
-GVAR(magazineNameCache) = [] call CBA_fnc_createNamespace;
-GVAR(originalMagazineNames) = [];
+GVAR(magazineNameCache) = createHashMap;
+GVAR(usedMagazineNames) = createHashMap;
 
 [QGVAR(initSupplyVehicle), {
     TRACE_1("initSupplyVehicle EH",_this);   // Warning: this can run before settings are init

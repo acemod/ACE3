@@ -1097,6 +1097,22 @@
             <Chinese>需要一個不存在的插件</Chinese>
             <Korean>현재 없는 애드온을 필요로 합니다</Korean>
         </Key>
+        <Key ID="STR_ACE_Zeus_OnlyPlayers">
+            <English>Only Players</English>
+            <Japanese>プレイヤーのみ</Japanese>
+            <German>Nur Spieler</German>
+            <Korean>오직 플레이어만</Korean>
+            <Polish>Tylko gracze</Polish>
+            <French>Joueurs seulement</French>
+            <Italian>Solo Giocatori</Italian>
+            <Chinesesimp>仅玩家</Chinesesimp>
+            <Chinese>只有玩家</Chinese>
+            <Russian>Только игроки</Russian>
+            <Portuguese>Apenas Jogadores</Portuguese>
+            <Czech>Pouze hráči</Czech>
+            <Spanish>Solo jugadores</Spanish>
+            <Turkish>Sadece Oyuncular</Turkish>
+        </Key>
         <Key ID="STR_ACE_Zeus_None">
             <English>None</English>
             <German>Keiner</German>
@@ -1484,7 +1500,7 @@
             <English>Fill from top to bottom</English>
             <German>Von oben nach unten befüllen</German>
             <French>Remplir de haut en bas</French>
-            <Japanese>上から下まで占拠</Japanese>
+            <Japanese>上から下へと占拠</Japanese>
             <Italian>Riempi dall'alto al basso</Italian>
             <Chinese>由上而下進行填滿</Chinese>
             <Chinesesimp>由上而下进行填满</Chinesesimp>
@@ -1989,9 +2005,37 @@
             <French>+MAJ pour forcer (Disponible uniquement sur les alignements N/S ou E/O)</French>
             <German>+SHIFT zum Erzwingen (Kann nur nach N/S oder E/W legen)</German>
             <Italian>+SHIFT per forzare (Può piazzare solo N/S o E/O</Italian>
-            <Japanese>+SHIFTキー で強制的に敷設 (北/南または東/西方向にのみ配置可能)</Japanese>
+            <Japanese>=+SHIFTキー で強制的に敷設 (北/南または東/西方向にのみ配置可能)</Japanese>
             <Russian>+SHIFT на принудительное (может укладываться только на Север/Юг или Восток/Запад)</Russian>
             <Spanish>+SHIFT para forzar (Puede solo colocar en N/S or E/O)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_ForceInterface_Tooltip">
+            <English>Forces the spectator interface preventing the player from closing it with the Escape key</English>
+            <Japanese>観戦インターフェイスを強制し、ユーザーがEscキーでも閉じられないようにします。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer">
+            <English>Hide player</English>
+            <Japanese>プレイヤーを隠す</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer_Tooltip">
+            <English>Hides the player by making them invisible, invulnerable, muted, and removing them from their group</English>
+            <Japanese>透明化、無敵化、ミュート、グループからの除外を行いプレーヤーを隠します</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_SpectableSides_Tooltip">
+            <English>Sets the sides that are available to spectate</English>
+            <Japanese>指定の陣営を観戦可能に設定します</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_WhiteHot">
+            <English>White Hot</English>
+            <Japanese>白=熱源</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_BlackHot">
+            <English>Black Hot</English>
+            <Japanese>黒=熱源</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ToggleAll">
+            <English>Toggle All</English>
+            <Japanese>全てを切り替え</Japanese>
         </Key>
     </Package>
 </Project>
