@@ -5044,6 +5044,7 @@
             <Japanese>鎮痛剤を投与</Japanese>
             <Korean>진통제 투여</Korean>
             <French>Administrer des analgésiques</French>
+            <German>Verabreiche Schmerztabletten</German>
             <Spanish>Administrar Analgésicos</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administering_Painkillers">
@@ -5053,6 +5054,7 @@
             <Japanese>鎮痛剤を投与しています・・・</Japanese>
             <Korean>진통제 투여 중...</Korean>
             <French>Administration d'analgésiques...</French>
+            <German>Verabreiche Schmerztablette...</German>
             <Spanish>Administrando Analgésicos...</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Short">
@@ -5062,6 +5064,7 @@
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
             <French>Analgésique sans ordonnance utilisé pour lutter contre les douleurs légères à modérées.</French>
+            <German>Rezeptfreies Analgetikum zur Bekämpfung leichter bis mittelschwerer Schmerzen.</German>
             <Spanish>Analgésico sin receta médica  usado para aplacar dolores de ligeros a moderados.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Use">
@@ -5071,6 +5074,7 @@
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
             <French>Analgésique sans ordonnance utilisé pour lutter contre les douleurs légères à modérées.</French>
+            <German>Rezeptfreies Analgetikum zur Bekämpfung leichter bis mittelschwerer Schmerzen.</German>
             <Spanish>Analgésico sin receta médica  usado para aplacar dolores de ligeros a moderados.</Spanish>
         </Key>
     </Package>
