@@ -35,7 +35,7 @@ if (isNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(airFriction))) 
     _airFriction = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(airFriction));
 };
 TRACE_1("",_airFriction);
-if (_airFriction >= 0) exitWith {}; // 0 disables everything, >0 makes no sense
+if (_airFriction == 0) exitWith {}; // 0 disables everything
 
 BEGIN_COUNTER(adjustmentsCalc);
 
@@ -60,6 +60,7 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     _projectile setVelocity _bulletVelocity;
 };
 
+if (_airFriction > 0) exitWith {}; // postive value indicates it has vanilla airFriction, so we can just exit
 
 [{
     params ["_projectile", "_kFactor", "_time"];
