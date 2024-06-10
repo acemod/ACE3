@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_RF_RealisticNames">
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_mrd_khk_Name">
+            <English>EOTech MRDS (Khaki)</English>
+            <Japanese>EOTech MRDS (カーキ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_mrd_tan_Name">
+            <English>EOTech MRDS (Tan)</English>
+            <Japanese>EOTech MRDS (タン)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_desert_Name">
+            <English>C-More Railway (Green, Desert)</English>
+            <Japanese>C-More レイルウェイ (グリーン、砂漠迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_wood_Name">
+            <English>C-More Railway (Green, Woodland)</English>
+            <Japanese>C-More レイルウェイ (グリーン、森林迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_desert_Name">
+            <English>C-More Railway (Red, Desert)</English>
+            <Japanese>C-More レイルウェイ (グリーン、砂漠迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_wood_Name">
+            <English>C-More Railway (Red, Woodland)</English>
+            <Japanese>C-More レイルウェイ (グリーン、森林迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_rds_Name">
+            <English>Aimpoint Micro R-1</English>
+            <Japanese>Aimpoint マイクロ R-1</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_Name">
+            <English>Vortex Spitfire Prism</English>
+            <Japanese>Vortex スピットファイア プリズム</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_tan_Name">
+            <English>Vortex Spitfire Prism (Tan)</English>
+            <Japanese>Vortex スピットファイア プリズム (タン)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_khk_Name">
+            <English>Vortex Spitfire Prism (Khaki)</English>
+            <Japanese>Vortex スピットファイア プリズム (カーキ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_pistol_Name">
+            <English>Vortex Spitfire Prism (Pistol)</English>
+            <Japanese>Vortex スピットファイア プリズム (ピストル用)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_Name">
+            <English>Glock 19X</English>
+            <Japanese>グロック 19X</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_khk_Name">
+            <English>Glock 19X (Khaki)</English>
+            <Japanese>グロック 19X (カーキ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_tan_Name">
+            <English>Glock 19X (Tan)</English>
+            <Japanese>グロック 19X (タン)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_Name">
+            <English>Glock 19X Auto</English>
+            <Japanese>グロック 19X オート</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_khk_Name">
+            <English>Glock 19X Auto (Khaki)</English>
+            <Japanese>グロック 19X オート (カーキ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_tan_Name">
+            <English>Glock 19X Auto (Tan)</English>
+            <Japanese>グロック 19X オート (タン)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_Name">
+            <English>Desert Eagle Mark XIX L5</English>
+            <Japanese>デザートイーグル Mark XIX L5</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_classic_Name">
+            <English>Desert Eagle Mark XIX L5 (Classic)</English>
+            <Japanese>デザートイーグル Mark XIX L5 (クラシック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_bronze_Name">
+            <English>Desert Eagle Mark XIX L5 (Bronze)</English>
+            <Japanese>デザートイーグル Mark XIX L5 (ブロンズ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_copper_Name">
+            <English>Desert Eagle Mark XIX L5 (Copper)</English>
+            <Japanese>デザートイーグル Mark XIX L5 (カッパー)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_gold_Name">
+            <English>Desert Eagle Mark XIX L5 (Gold)</English>
+            <Japanese>デザートイーグル Mark XIX L5 (ゴールド)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_tan_Name">
+            <English>Hera H6 (Tan)</English>
+            <Japanese>ヘラ H6 (タン)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_oli_Name">
+            <English>Hera H6 (Olive)</English>
+            <Japanese>ヘラ H6 (オリーブ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_blk_Name">
+            <English>Hera H6 (Black)</English>
+            <Japanese>ヘラ H6 (ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_digi_Name">
+            <English>Hera H6 (Digital)</English>
+            <Japanese>ヘラ H6 (AAF迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_gold_Name">
+            <English>Hera H6 (Gold)</English>
+            <Japanese>ヘラ H6 (ゴールド)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_dmr_01_black_Name">
+            <English>VS-121 (Black)</English>
+            <Japanese>VS-121 (ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_dmr_01_tan_Name">
+            <English>VS-121 (Tan)</English>
+            <Japanese>VS-121 (タン)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_smg_01_black_Name">
+            <English>Vector SMG (Black)</English>
+            <Japanese>ベクター SMG (ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_blk_Name">
+            <English>ASh-12 (Black)</English>
+            <Japanese>ASh-12 (ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_desert_Name">
+            <English>ASh-12 (Desert)</English>
+            <Japanese>ASh-12 (砂漠迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_urban_Name">
+            <English>ASh-12 (Urban)</English>
+            <Japanese>ASh-12 (市街地迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_wood_Name">
+            <English>ASh-12 (Woodland)</English>
+            <Japanese>ASh-12 (森林迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_blk_Name">
+            <English>ASh-12 GL (Black)</English>
+            <Japanese>ASh-12 GL (ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_desert_Name">
+            <English>ASh-12 GL (Desert)</English>
+            <Japanese>ASh-12 GL (砂漠迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_urban_Name">
+            <English>ASh-12 GL (Urban)</English>
+            <Japanese>ASh-12 GL (市街地迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_wood_Name">
+            <English>ASh-12 GL (Woodland)</English>
+            <Japanese>ASh-12 GL (森林迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_blk_Name">
+            <English>ASh-12 LR (Black)</English>
+            <Japanese>ASh-12 LR (ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_desert_Name">
+            <English>ASh-12 LR (Desert)</English>
+            <Japanese>ASh-12 LR (砂漠迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_urban_Name">
+            <English>ASh-12 LR (Urban)</English>
+            <Japanese>ASh-12 LR (市街地迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_wood_Name">
+            <English>ASh-12 LR (Woodland)</English>
+            <Japanese>ASh-12 LR (森林迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_Name">
+            <English>AW159 Wildcat</English>
+            <Japanese>AW159 ワイルドキャット</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_unarmed_Name">
+            <English>AW159 Wildcat (Unarmed)</English>
+            <Japanese>AW159 ワイルドキャット (非武装)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_military_Name">
+            <English>H225M Super Cougar HADR</English>
+            <Japanese>H225M シュペル クーガー HADR</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_base_Name">
+            <English>H225M Super Cougar Transport</English>
+            <Japanese>H225M シュペル クーガー 輸送</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_Name">
+            <English>H225 Super Puma Transport</English>
+            <Japanese>H225 シュペル ピューマ 輸送</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_Name">
+            <English>H225 Super Puma VIP</English>
+            <Japanese>H225 シュペル ピューマ VIP</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_Name">
+            <English>H225M Super Cougar SOCAT</English>
+            <Japanese>H225M シュペル クーガー SOCAT</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_03_Name">
+            <English>H225M Super Cougar CSAR</English>
+            <Japanese>H225M シュペル クーガー CSAR</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_Name">
+            <English>H225 Super Puma SAR</English>
+            <Japanese>H225 シュペル ピューマ SAR</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_water_Name">
+            <English>Typhoon Water</English>
+            <Japanese>タイフーン 給水</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_Name">
+            <English>Ram 1500</English>
+            <Japanese>ラム 1500</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_Fuel_Name">
+            <English>Ram 1500 (Fuel)</English>
+            <Japanese>ラム 1500 (燃料)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_service_Name">
+            <English>Ram 1500 (Services)</English>
+            <Japanese>ラム 1500 (サービス)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_repair_Name">
+            <English>Ram 1500 (Repair)</English>
+            <Japanese>ラム 1500 (修理)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_comms_Name">
+            <English>Ram 1500 (Comms)</English>
+            <Japanese>ラム 1500 (通信)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_hmg_Name">
+            <English>Ram 1500 (HMG)</English>
+            <Japanese>ラム 1500 (HMG)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mmg_Name">
+            <English>Ram 1500 (MMG)</English>
+            <Japanese>ラム 1500 (MMG)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mrl_Name">
+            <English>Ram 1500 (MRL)</English>
+            <Japanese>ラム 1500 (MRL)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_aa_Name">
+            <English>Ram 1500 (AA)</English>
+            <Japanese>ラム 1500 (対空)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_covered_Name">
+            <English>Ram 1500 (Covered)</English>
+            <Japanese>ラム 1500 (カバー)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_water_Name">
+            <English>Ram 1500 (Water)</English>
+            <Japanese>ラム 1500 (給水)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_commando_Name">
+            <English>RSG60</English>
+            <Japanese>RSG60</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_twinmortar_Name">
+            <English>AMOS</English>
+            <Japanese>AMOS</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_base_Name">
+            <English>Drone40</English>
+            <Japanese>ドローン40</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_Name">
+            <English>Drone40 Scout</English>
+            <Japanese>ドローン40 偵察</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_he_Name">
+            <English>Drone40 HE</English>
+            <Japanese>ドローン40 榴弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_white_Name">
+            <English>Drone40 Smoke (White)</English>
+            <Japanese>ドローン40 発煙 (白)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_blue_Name">
+            <English>Drone40 Smoke (Blue)</English>
+            <Japanese>ドローン40 発煙 (青)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_red_Name">
+            <English>Drone40 Smoke (Red)</English>
+            <Japanese>ドローン40 発煙 (赤)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_green_Name">
+            <English>Drone40 Smoke (Green)</English>
+            <Japanese>ドローン40 発煙 (緑)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_orange_Name">
+            <English>Drone40 Smoke (Orange)</English>
+            <Japanese>ドローン40 発煙 (橙)</Japanese>
+        </Key>
+    </Package>
+</Project>
