@@ -19,26 +19,32 @@
         <Key ID="STR_ACE_CookOff_enableFire_name">
             <English>Enable vehicle cook-off fire</English>
             <Japanese>車両の誘爆火災を有効化</Japanese>
+            <Russian>Вкл. возгорание техники</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_tooltip">
             <English>Enables vehicle cook-off fire effects.\nThis doesn't include ammunition detonations.</English>
             <Japanese>車両の誘爆火災エフェクトを有効化します。\nこれには弾薬の爆発は含まれません。</Japanese>
+            <Russian>Вкл. эффект горения техники. \nНе включает детонацию боекомплекта</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_cookoffDuration_name">
             <English>Vehicle cook-off fire duration multiplier</English>
             <Japanese>車両の誘爆火災の持続時間倍率</Japanese>
+            <Russian>Увел. продолжительности горения техники</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_cookoffDuration_tooltip">
             <English>Multiplier for how long vehicle cook-off fire lasts.\nSetting to 0 will disable vehicle cook-off fire.</English>
             <Japanese>車両の誘爆火災の持続時間をどのくらいの長さにするかの倍率。\n0に設定すると車両の誘爆火災が無効化されます。</Japanese>
+            <Russian>Увел. продолжительности горения техники. \nУстановка значения на 0 выключает возгорание техники.</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_name">
             <English>Vehicle cook-off fire probability multiplier</English>
             <Japanese>車両の誘爆火災の可能性倍率</Japanese>
+            <Russian>Возможность усиления пожара при детонации техники</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
             <English>Multiplier for vehicle cook-off fire probability. Higher value results in higher cook-off probability.\nSetting to 0 will disable vehicle cook-off fire.</English>
             <Japanese>車両の誘爆火災がどのくらいの可能性で発生するかの倍率。高い数値は高い誘爆の可能性につながります。\n0に設定すると車両の誘爆火災が無効化されます。</Japanese>
+            <Russian>Увел. вероятности возникновения возгорания техники. Большое значение указывает на высокую вероятность детонации. \nУстановка значения 0 предотвращает возгорание техники.</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_name">
             <English>Destroy vehicles after cook-off</English>
@@ -68,10 +74,12 @@
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
             <English>Enable vehicle ammo cook-off</English>
             <Japanese>車両弾薬の誘爆を有効化</Japanese>
+            <Russian>Вкл. детонацию боеприпасов в технике.</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
             <English>Enables cooking off of vehicle ammunition. Fires ammunition projectiles while vehicle has ammunition remaining.\nThis doesn't include fire effects.</English>
             <Japanese>車両弾薬の誘爆を有効化します。車両に積載されたままの弾薬と弾頭が発射されます。\nこれには火災エフェクトは含まれません。</Japanese>
+            <Russian>Вкл. детонацию боеприпасов на технике. Боеприпасы и боеголовки, которые остаются заряженными на транспортном средстве, будут приведены в действие. \nЭто не включает эффекты пожара.</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
             <English>Enable ammo box cook-off</English>
@@ -91,14 +99,17 @@
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
             <English>Enables cooking off of ammo boxes.\nThis doesn't include fire effects.</English>
             <Japanese>弾薬箱の誘爆を有効化します。\nこれには火災エフェクトは含まれません。</Japanese>
+            <Russian>Вкл. детонацию ящика с боеприпасами. \nЭто не включает эффекты огня.</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
             <English>Ammo cook-off duration multiplier</English>
             <Japanese>弾薬の誘爆の持続時間倍率</Japanese>
+            <Russian>Увеличение продолжительности детонации боеприпасов.</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
             <English>Multiplier for how long ammunition cook-off lasts, for both vehicles and ammo boxes.\nSetting to 0 will disable ammo cook-off for both vehicles and ammo boxes.</English>
             <Japanese>弾薬の誘爆の持続時間をどのくらいの長さにするかの倍率。車両弾薬と弾薬箱どちらにも影響します。\n0に設定すると弾薬の誘爆が無効化されます。</Japanese>
+            <Russian>Увеличение продолжительности детонации боеприпасов. Это влияет как на боеприпасы в технике, так и на ящики с боеприпасами. \nУстановка значения 0 отключает детонацию боеприпасов.</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_removeAmmoDuringCookoff_name">
             <English>Enable ammo removal during cook-off</English>
@@ -109,7 +120,7 @@
             <Polish>Włącz/Wyłącz usuwanie amunicji podczas samozapłonu</Polish>
             <Chinesesimp>启用/禁用殉爆过程中的弹药移除功能</Chinesesimp>
             <Korean>쿡오프시 탄약 제거 활성화/비활성화</Korean>
-            <Russian>Удалять боеприпасы из-за детонации</Russian>
+            <Russian>Вкл. удаление боеприпасов из-за детонации</Russian>
             <Spanish>Habilita/Deshabilita ka eliminación de munición durante la detonación inducida por calor</Spanish>
         </Key>
         <Key ID="STR_ACE_CookOff_removeAmmoDuringCookoff_tooltip">
@@ -117,6 +128,7 @@
             <French>Retire des munitions des véhicules durant une auto-inflammation.</French>
             <German>Entfernt Munition während dem Durchzünden der Munition eines Fahrzeuges.</German>
             <Japanese>誘爆によって全ての弾薬を除去します。</Japanese>
+            <Russian>Все боеприпасы уничтожаются путем подрыва.</Russian>
         </Key>
     </Package>
 </Project>
