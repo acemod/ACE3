@@ -62,45 +62,12 @@ GVAR(lastPlayerVehicle) = objNull;
 
     ["turret", LINKFUNC(updatePlayerVehAttenuation), false] call CBA_fnc_addPlayerEventHandler;
 
+    [QGVAR(firedNear), "FiredNear", LINKFUNC(firedNear), true] call EFUNC(common,addPlayerEH);
+    [QGVAR(explosion), "Explosion", LINKFUNC(explosionNear), true] call EFUNC(common,addPlayerEH);
+    [QGVAR(slotItemChanged), "SlotItemChanged", {(_this select 2) call FUNC(updateHearingProtection)}, true] call EFUNC(common,addPlayerEH);
+
     // Reset deafness on respawn (or remote control player switch)
     ["unit", {
-        params ["_player", "_oldPlayer"];
-        TRACE_2("unit change",_player,_oldPlayer);
-
-        if (!isNull _oldPlayer) then {
-            private _firedEH = _oldPlayer getVariable [QGVAR(firedEH), -1];
-            _oldPlayer removeEventHandler ["FiredNear", _firedEH];
-            _oldPlayer setVariable [QGVAR(firedEH), nil];
-
-            private _explosionEH = _oldPlayer getVariable [QGVAR(explosionEH), -1];
-            _oldPlayer removeEventHandler ["Explosion", _explosionEH];
-            _oldPlayer setVariable [QGVAR(explosionEH), nil];
-
-            private _slotItemChangedEH = _oldPlayer getVariable [QGVAR(slotItemChangedEH), -1];
-            _oldPlayer removeEventHandler ["SlotItemChanged", _slotItemChangedEH];
-            _oldPlayer setVariable [QGVAR(slotItemChangedEH), nil];
-
-            TRACE_4("removed unit eh",_oldPlayer,_firedEH,_explosionEH,_slotItemChangedEH);
-        };
-        // Don't add a new EH if the unit respawned
-        if ((_player getVariable [QGVAR(firedEH), -1]) == -1) then {
-            if ((getNumber (configOf _player >> "isPlayableLogic")) == 1) exitWith {
-                TRACE_1("skipping playable logic",typeOf _player); // VirtualMan_F (placeable logic zeus / spectator)
-            };
-
-            private _firedEH = _player addEventHandler ["FiredNear", {call FUNC(firedNear)}];
-            _player setVariable [QGVAR(firedEH), _firedEH];
-
-            private _explosionEH = _player addEventHandler ["Explosion", {call FUNC(explosionNear)}];
-            _player setVariable [QGVAR(explosionEH), _explosionEH];
-
-            // Update protection on possible helmet change
-            private _slotItemChangedEH = _player addEventHandler ["SlotItemChanged", {(_this select 2) call FUNC(updateHearingProtection)}];
-            _player setVariable [QGVAR(slotItemChangedEH), _slotItemChangedEH];
-
-            TRACE_4("added unit eh",_player,_firedEH,_explosionEH,_slotItemChangedEH);
-        };
-
         GVAR(deafnessDV) = 0;
         GVAR(deafnessPrior) = 0;
         GVAR(time3) = 0;
