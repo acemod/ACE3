@@ -53,7 +53,7 @@ GVAR(lastPlayerVehicle) = objNull;
         };
 
         if ((!isNull _vehicle) && {_player != _vehicle}) then {
-            private _firedEH = _vehicle addEventHandler ["FiredNear", {call FUNC(firedNear)}];
+            private _firedEH = _vehicle addEventHandler ["FiredNear", LINKFUNC(firedNear)];
             _vehicle setVariable [QGVAR(firedEH), _firedEH];
             GVAR(lastPlayerVehicle) = _vehicle;
             TRACE_2("added veh eh",_firedEH,GVAR(lastPlayerVehicle));
