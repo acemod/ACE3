@@ -702,6 +702,7 @@
             <English>KamAZ Water</English>
             <Portuguese>KamAZ Água</Portuguese>
             <Japanese>KamAZ 給水</Japanese>
+            <Russian>КамАЗ (водоноситель)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_MRL_Name">
             <English>KamAZ MRL</English>
@@ -1664,11 +1665,13 @@
             <English>CZ 581</English>
             <Portuguese>CZ 581</Portuguese>
             <Japanese>CZ 581</Japanese>
+            <Russian>CZ 581</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_sawedoff_01_Name">
             <English>CZ 581 (Sawed-Off)</English>
             <Portuguese>CZ 581 (Cano serrado)</Portuguese>
             <Japanese>CZ 581 (ソードオフ)</Japanese>
+            <Russian>CZ 581 (Sawed-Off)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_green_Name">
             <English>FNX-45 Tactical (Green)</English>
@@ -3075,16 +3078,19 @@
             <English>Type 115 (Black)</English>
             <Portuguese>Type 115 (Preto)</Portuguese>
             <Japanese>Type 115 (ブラック)</Japanese>
+            <Russian>Type 115 (чёрный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_ghex_Name">
             <English>Type 115 (Green Hex)</English>
             <Portuguese>Type 115 (Verde Hex)</Portuguese>
             <Japanese>Type 115 (緑六角形迷彩)</Japanese>
+            <Russian>Type 115 (зелёный гекс)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_hex_Name">
             <English>Type 115 (Hex)</English>
             <Portuguese>Type 115 (Hex)</Portuguese>
             <Japanese>Type 115 (六角形迷彩)</Japanese>
+            <Russian>Type 115 (гекс)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_blk">
             <English>QBZ-95-1 (Black)</English>
@@ -3874,16 +3880,19 @@
             <English>UTG Defender 126</English>
             <Portuguese>UTG Defender 126</Portuguese>
             <Japanese>UTG ディフェンダー 126</Japanese>
+            <Russian>UTG Defender 126</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_Name">
             <English>EOTech MRDS</English>
             <Portuguese>EOTech MRDS</Portuguese>
             <Japanese>EOTech MRDS</Japanese>
+            <Russian>EOTech MRDS</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_black_Name">
             <English>EOTech MRDS (Black)</English>
             <Portuguese>EOTech MRDS (Preto)</Portuguese>
             <Japanese>EOTech MRDS (ブラック)</Japanese>
+            <Russian>EOTech MRDS (чёрный)</Russian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>

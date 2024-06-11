@@ -4160,6 +4160,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_UnresponsiveDirect">
             <English>%1 is unconscious</English>
             <Japanese>%1 は意識がない</Japanese>
+            <Russian>%1 находится без сознания</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrest">
             <English>%1 is not responsive, taking shallow gasps and convulsing</English>
@@ -4176,6 +4177,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrestDirect">
             <English>%1 is in cardiac arrest</English>
             <Japanese>%1 は心停止している</Japanese>
+            <Russian>У %1 произошла остановка сердца</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
@@ -4192,6 +4194,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_DeadDirect">
             <English>%1 is dead</English>
             <Japanese>%1 は死亡している</Japanese>
+            <Russian>%1 мертв</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
