@@ -43,7 +43,7 @@ if (isNil "_keyTable") then {
     };
 };
 
-private _keyCache = uiNamespace getVariable QGVAR(keyNameCache);
+private _keyCache = uiNamespace getVariable QGVAR(keyNameCache); // @TODO: Move cache creation to preStart/somewhere else
 
 if (isNil "_keyCache") then {
     _keyCache = createHashMap;
