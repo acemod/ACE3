@@ -53,7 +53,7 @@ if (!_structuralDamage) then {
 };
 TRACE_6("Received hit",_hitpoint,_ammo,_newDamage,_realDamage,_directHit,_context);
 
-// Drowning doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
+// Drowning doesn't fire the EH for each hitpoint and never triggers _context=2 (LastHitPoint)
 // Damage occurs in consistent increments
 if (
     _structuralDamage &&
@@ -71,7 +71,7 @@ private _vehicle = objectParent _unit;
 private _inVehicle = !isNull _vehicle;
 private _environmentDamage = _ammo == "";
 
-// Crashing a vehicle doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
+// Crashing a vehicle doesn't fire the EH for each hitpoint and never triggers _context=2 (LastHitPoint)
 // It does fire the EH multiple times, but this seems to scale with the intensity of the crash
 if (
     EGVAR(medical,enableVehicleCrashes) &&
