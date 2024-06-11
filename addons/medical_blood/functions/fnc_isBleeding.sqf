@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-if (GVAR(useAceMedical)) exitWith {
+if (GETMVAR(QEGVAR(medical,enabled),false)) exitWith {
     IS_BLEEDING(_unit);
 };
 

@@ -19,7 +19,7 @@
 if ((getText (missionconfigfile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QXGVAR(outputText)) exitWith {
     TRACE_1("no mission debriefing config",_this);
 };
-if (!(["ace_medical"] call EFUNC(common,isModLoaded))) exitWith {
+if (!(GETMVAR(QEGVAR(medical,enabled),false))) exitWith {
     WARNING("No ACE-Medical");
     XGVAR(outputText) = "No ACE-Medical";
 };

@@ -19,7 +19,7 @@
 params ["_body", "_unit"];
 
 // Defer to ACE Medical's unload patient if present
-if (["ace_medical"] call EFUNC(common,isModLoaded)) exitWith {false};
+if (GETMVAR(QEGVAR(medical,enabled),false)) exitWith {false};
 
 private _vehicle = objectParent _body;
 
