@@ -60,7 +60,7 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     _projectile setVelocity _bulletVelocity;
 };
 
-if (_airFriction > 0) exitWith {}; // postive value indicates it has vanilla airFriction, so we can just exit
+if (_airFriction > 0) exitWith {}; // positive value indicates it has vanilla airFriction, so we can just exit
 
 [{
     params ["_projectile", "_kFactor", "_time"];
