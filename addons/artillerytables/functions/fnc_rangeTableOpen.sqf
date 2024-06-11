@@ -47,7 +47,7 @@ _mags = _mags apply {
             _airFriction = if (isNumber (_magCfg >> _x >> QGVAR(airFriction))) then { _magAirFriction } else { DEFAULT_AIR_FRICTION };
         };
     } else {
-        // postive value, use ammo's airFriction (regardless of setting)
+        // positive value, use ammo's airFriction (regardless of setting)
         private _ammo = getText (_magCfg >> _x >> "ammo");
         _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
     };
