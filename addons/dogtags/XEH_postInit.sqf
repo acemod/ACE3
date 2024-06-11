@@ -5,9 +5,11 @@
 [QGVAR(getDogtagItem), LINKFUNC(getDogtagItem)] call CBA_fnc_addEventHandler;
 [QGVAR(addDogtagItem), LINKFUNC(addDogtagItem)] call CBA_fnc_addEventHandler;
 
-// Add actions and event handlers only if ace_medical is loaded
+// Add actions and event handlers only if ace_medical is enabled
 // - Adding actions via config would create a dependency
-if (GETEGVAR(medical,enabled,false)) then {
+["CBA_settingsInitialized", {
+    if (!GETEGVAR(medical,enabled,false)) exitWith {};
+
     if (hasInterface) then {
         private _checkTagAction = [
             "ACE_CheckDogtag",
@@ -44,7 +46,7 @@ if (GETEGVAR(medical,enabled,false)) then {
             };
         }] call CBA_fnc_addEventHandler;
     };
-};
+}] call CBA_fnc_addEventHandler;
 
 // If the arsenal is loaded, show the custom names for dog tags when in the arsenal
 if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
