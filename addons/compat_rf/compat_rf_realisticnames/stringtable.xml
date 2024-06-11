@@ -267,7 +267,7 @@
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_Name">
             <English>Drone40 Scout</English>
-            <Japanese>ドローン40 偵察</Japanese>
+            <Japanese>ドローン40 偵察型</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_he_Name">
             <English>Drone40 HE</English>
@@ -275,23 +275,23 @@
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_white_Name">
             <English>Drone40 Smoke (White)</English>
-            <Japanese>ドローン40 発煙 (白)</Japanese>
+            <Japanese>ドローン40 発煙弾 (白)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_blue_Name">
             <English>Drone40 Smoke (Blue)</English>
-            <Japanese>ドローン40 発煙 (青)</Japanese>
+            <Japanese>ドローン40 発煙弾 (青)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_red_Name">
             <English>Drone40 Smoke (Red)</English>
-            <Japanese>ドローン40 発煙 (赤)</Japanese>
+            <Japanese>ドローン40 発煙弾 (赤)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_green_Name">
             <English>Drone40 Smoke (Green)</English>
-            <Japanese>ドローン40 発煙 (緑)</Japanese>
+            <Japanese>ドローン40 発煙弾 (緑)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_orange_Name">
             <English>Drone40 Smoke (Orange)</English>
-            <Japanese>ドローン40 発煙 (橙)</Japanese>
+            <Japanese>ドローン40 発煙弾 (橙)</Japanese>
         </Key>
     </Package>
 </Project>
