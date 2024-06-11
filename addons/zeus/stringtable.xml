@@ -2005,7 +2005,7 @@
             <French>+MAJ pour forcer (Disponible uniquement sur les alignements N/S ou E/O)</French>
             <German>+SHIFT zum Erzwingen (Kann nur nach N/S oder E/W legen)</German>
             <Italian>+SHIFT per forzare (Può piazzare solo N/S o E/O</Italian>
-            <Japanese>=+SHIFTキー で強制的に敷設 (北/南または東/西方向にのみ配置可能)</Japanese>
+            <Japanese>+SHIFTキー で強制的に敷設 (北/南または東/西方向にのみ配置可能)</Japanese>
             <Russian>+SHIFT на принудительное (может укладываться только на Север/Юг или Восток/Запад)</Russian>
             <Spanish>+SHIFT para forzar (Puede solo colocar en N/S or E/O)</Spanish>
         </Key>
