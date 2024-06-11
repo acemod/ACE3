@@ -86,4 +86,7 @@ addMissionEventHandler ["Loaded", {
 
 [] call FUNC(disableThirdParty);
 
+// Future-proofing
+EGVAR(medical,enabled) = true; // TODO: remove when medical enable setting is implemented
+
 ADDON = true;
