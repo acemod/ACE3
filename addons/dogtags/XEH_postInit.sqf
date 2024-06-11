@@ -7,7 +7,7 @@
 
 // Add actions and event handlers only if ace_medical is loaded
 // - Adding actions via config would create a dependency
-if (GETMVAR(QEGVAR(medical,enabled),false)) then {
+if (GETEGVAR(medical,enabled,false)) then {
     if (hasInterface) then {
         private _checkTagAction = [
             "ACE_CheckDogtag",

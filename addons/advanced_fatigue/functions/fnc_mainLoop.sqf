@@ -25,7 +25,7 @@ if (!alive ACE_player) exitWith {
 
 
 private _oxygen = 0.9; // Default AF oxygen saturation
-if (GETMVAR(QEGVAR(medical,enabled),false) && {EGVAR(medical_vitals,simulateSpo2)}) then {
+if (GETEGVAR(medical,enabled,false) && {EGVAR(medical_vitals,simulateSpo2)}) then {
     _oxygen = (ACE_player getVariable [QEGVAR(medical,spo2), 97]) / 100;
 };
 

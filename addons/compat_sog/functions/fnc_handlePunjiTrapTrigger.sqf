@@ -15,7 +15,7 @@
  * Public: No
  */
 params ["_trap"];
-if (!(GETMVAR(QEGVAR(medical,enabled),false))) exitWith {};
+if (!(GETEGVAR(medical,enabled,false))) exitWith {};
 
 private _radius = getNumber (configOf _trap >> "indirectHitRange");
 private _affectedUnits = _trap nearEntities ["CAManBase", _radius];
