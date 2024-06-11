@@ -69,11 +69,9 @@ params ["_unit", "_instigator"];
     if (_intensity >= BURN_THRESHOLD_INTENSE) then {
         TRACE_2("check for other units",_unit,_intensity);
 
-        private _adjustedIntensity = 0;
-
         {
-            _distancePercent = 1 - ((_unit distance _x) / BURN_PROPAGATE_DISTANCE);
-            _adjustedIntensity = _intensity * _distancePercent;
+            private _distancePercent = 1 - ((_unit distance _x) / BURN_PROPAGATE_DISTANCE);
+            private _adjustedIntensity = _intensity * _distancePercent;
 
             // Don't burn if intensity is too low or already burning with higher intensity
             if (BURN_MIN_INTENSITY > _adjustedIntensity || {(_x getVariable [QGVAR(intensity), 0]) > _adjustedIntensity}) then {
@@ -95,7 +93,12 @@ params ["_unit", "_instigator"];
         _intensity = _intensity - INTENSITY_LOSS - (rain / 10);
 
         if (_unit call EFUNC(common,isAwake)) then {
-            if (!isPlayer _unit) then {
+            if (_unit call EFUNC(common,isPlayer)) then {
+                // Decrease intensity of burn if rolling around
+                if ((animationState _unit) in PRONE_ROLLING_ANIMS) then {
+                    _intensity = _intensity * INTENSITY_DECREASE_MULT_ROLLING;
+                };
+            } else {
                 private _sdr = _unit getVariable [QGVAR(stopDropRoll), false];
 
                 private _vehicle = objectParent _unit;
@@ -138,11 +141,6 @@ params ["_unit", "_instigator"];
                     _unit doMove ((getPosATL _unit) getPos [20 + random 35, floor (random 360)]);
                     _unit setSpeedMode "FULL";
                     _unit setSuppression 1;
-                };
-            } else {
-                // Decrease intensity of burn if rolling around
-                if ((animationState _unit) in PRONE_ROLLING_ANIMS) then {
-                    _intensity = _intensity * INTENSITY_DECREASE_MULT_ROLLING;
                 };
             };
 
