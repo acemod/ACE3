@@ -22,7 +22,7 @@ TRACE_1("damageWheelsAndEngine",_vehicle);
 // Vehicle needs to be local and vulnerable
 if !(local _vehicle && {isDamageAllowed _vehicle}) exitWith {};
 
-// Burn tyres
+// Burn tires
 private _fnc_isWheelHitPoint = {
     params ["_selectionName"];
     // Wheels must use a selection named "wheel_X_Y_steering" for PhysX to work
