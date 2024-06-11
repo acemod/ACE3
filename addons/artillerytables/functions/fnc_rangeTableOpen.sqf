@@ -44,7 +44,7 @@ _mags = _mags apply {
     private _magAirFriction = getNumber (_magCfg >> _x >> QGVAR(airFriction));
     if (_magAirFriction <= 0) then {
         if (_advCorrection) then {
-            _airFriction = if (isNumber (_magCfg >> _x >> QGVAR(airFriction))) then { _magAirFriction } else { DEFAULT_AIR_FRICTION };
+            _airFriction = [DEFAULT_AIR_FRICTION, _magAirFriction] select (isNumber (_magCfg >> _x >> QGVAR(airFriction)));
         };
     } else {
         // positive value, use ammo's airFriction (regardless of setting)
