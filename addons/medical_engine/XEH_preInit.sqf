@@ -40,11 +40,12 @@ GVAR(armorCache) = createHashMap;
 // with handle damage not returning full results.
 GVAR(fixedStatics) = [];
 
-GVAR(animations) = [] call CBA_fnc_createNamespace;
-GVAR(animations) setVariable [QUNCON_ANIM(faceUp), [QUNCON_ANIM(2),QUNCON_ANIM(2_1),QUNCON_ANIM(7_1),QUNCON_ANIM(8_1),QUNCON_ANIM(5_1),QUNCON_ANIM(6_1)]];
-GVAR(animations) setVariable [QUNCON_ANIM(faceDown), [QUNCON_ANIM(1),QUNCON_ANIM(3),QUNCON_ANIM(4),"unconscious",QUNCON_ANIM(9),QUNCON_ANIM(3_1),QUNCON_ANIM(4_1)]];
-GVAR(animations) setVariable [QUNCON_ANIM(faceLeft), [QUNCON_ANIM(7),QUNCON_ANIM(8),QUNCON_ANIM(1_1),QUNCON_ANIM(7_1),QUNCON_ANIM(8_1)]];
-GVAR(animations) setVariable [QUNCON_ANIM(faceRight), [QUNCON_ANIM(5),QUNCON_ANIM(6),QUNCON_ANIM(10),QUNCON_ANIM(5_1),QUNCON_ANIM(6_1)]];
+GVAR(animations) = createHashMapFromArray [
+    [QUNCON_ANIM(faceUp), [QUNCON_ANIM(2),QUNCON_ANIM(2_1),QUNCON_ANIM(7_1),QUNCON_ANIM(8_1),QUNCON_ANIM(5_1),QUNCON_ANIM(6_1)]],
+    [QUNCON_ANIM(faceDown), [QUNCON_ANIM(1),QUNCON_ANIM(3),QUNCON_ANIM(4),"unconscious",QUNCON_ANIM(9),QUNCON_ANIM(3_1),QUNCON_ANIM(4_1)]],
+    [QUNCON_ANIM(faceLeft), [QUNCON_ANIM(7),QUNCON_ANIM(8),QUNCON_ANIM(1_1),QUNCON_ANIM(7_1),QUNCON_ANIM(8_1)]],
+    [QUNCON_ANIM(faceRight), [QUNCON_ANIM(5),QUNCON_ANIM(6),QUNCON_ANIM(10),QUNCON_ANIM(5_1),QUNCON_ANIM(6_1)]]
+];
 
 GVAR(customHitpoints) = ["hitleftarm", "hitrightarm", "hitleftleg", "hitrightleg"];
 
