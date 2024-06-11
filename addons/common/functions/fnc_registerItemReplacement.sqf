@@ -28,13 +28,13 @@ if (isNil QGVAR(itemReplacements)) then {
     ["loadout", LINKFUNC(replaceRegisteredItems)] call CBA_fnc_addPlayerEventHandler;
 };
 
-// Get config case
+// Get config case - if item doesn't exist, "" is returned
 if (_oldItem isEqualType "") then {
-    private _configCase = _oldItem call FUNC(getConfigName);
+    _oldItem = _oldItem call FUNC(getConfigName);
+};
 
-    if (_configCase != "") then {
-        _oldItem = _configCase;
-    };
+if (_oldItem isEqualTo "") exitWith {
+    ERROR("Item doesn't exist");
 };
 
 // Save item replacement
