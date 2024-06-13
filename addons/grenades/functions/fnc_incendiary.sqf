@@ -183,7 +183,7 @@ if (isServer) then {
 
 // --- damage
 {
-    if (local _x) then {
+    if (local _x && {isDamageAllowed _x}) then {
         //systemChat format ["burn: %1", _x];
 
         // --- destroy nearby static weapons and ammo boxes
