@@ -49,8 +49,30 @@ params ["_unit"];
     // "detach" actions
     {
         if (_x isEqualTo "") then {continue};
+        private _originalAttachment = _x;
 
-        private _config = _cfgWeapons >> _x;
+        private _switchableAttachments = [_originalAttachment] call CBA_fnc_switchableAttachments;
+        private _convertToActions = [];
+        {
+            if (_x == _originalAttachment) then {continue};
+            private _config = _cfgWeapons >> _x;
+            private _modeName = getText (_config >> "MRT_SwitchItemHintText");
+            if (_modeName == "") then { _modeName = getText (_config >> "displayName"); };
+            private _name = format ["%1: %2", localize "str_sensortype_switch", _modeName];
+            private _picture = getText (_config >> "picture");
+
+            private _action = [
+                _x, _name, _picture,
+                LINKFUNC(switchWeaponAttachment),
+                {true},
+                {},
+                [_currentWeapon, _x, ""]
+            ] call EFUNC(interact_menu,createAction);
+            _convertToActions pushBack [_action, [], _unit];
+        } forEach _switchableAttachments;
+
+
+        private _config = _cfgWeapons >> _originalAttachment;
         private _name = format [LLSTRING(weaponAttachmentsDetach), getText (_config >> "displayName")];
         private _picture = getText (_config >> "picture");
 
@@ -59,9 +81,9 @@ params ["_unit"];
             LINKFUNC(switchWeaponAttachment),
             {true},
             {},
-            [_currentWeapon, "", _x]
+            [_currentWeapon, "", _originalAttachment]
         ] call EFUNC(interact_menu,createAction);
-        _actions pushBack [_action, [], _unit];
+        _actions pushBack [_action, _convertToActions, _unit];
     } forEach _weaponItems;
 
     _actions
