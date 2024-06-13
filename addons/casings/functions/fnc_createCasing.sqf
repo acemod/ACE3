@@ -35,7 +35,7 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
         // use casing's default model
         private _model = getText (_cartridgeConfig >> "model");
         if ("a3\weapons_f\empty" in toLowerANSI _model) exitWith { "" };
-        
+
         // Add file extension if missing (fileExists needs file extension)
         if ((_model select [count _model - 4]) != ".p3d") then {
             _model = _model + ".p3d";
@@ -47,7 +47,7 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
 
 if (_modelPath isEqualTo "") exitWith {};
 
-private _unitPos = getposASL _unit;
+private _unitPos = getPosASL _unit;
 // Distant shooters don't produce as many cases
 if ((AGLToASL positionCameraToWorld [0,0,0]) vectorDistance _unitPos > 100 && {random 1 < 0.9}) exitWith {};
 
@@ -59,18 +59,22 @@ private _pos = _unitPos
 
 [
     {
-        params ["_modelPath", "_pos"];
+        params ["_modelPath", "_pos", "_unitPos"];
 
-        private _lisPos = (lineIntersectsSurfaces [_pos, _pos vectorAdd [0,0,-1e11], objNull, objNull, true, 1, "ROADWAY", "FIRE"]) #0;
-        private _casing = createSimpleObject [_modelPath, (_lisPos #0 vectorAdd [0,0,0.005]), true];
+        private _lisPos = (lineIntersectsSurfaces [_pos, _pos vectorAdd [0,0,-1e11], objNull, objNull, true, 1, "ROADWAY", "FIRE"]) select 0;
+        private _casingPos = (_lisPos select 0) vectorAdd [0,0,0.005];
+        if (((ASLtoATL _casingPos) select 2) < 0) then { // prevent casings sinking into the terrain
+            _casingPos set [2, _unitPos select 2];
+        };
+        private _casing = createSimpleObject [_modelPath, _casingPos, true];
         _casing setDir (random 360);
-        _casing setVectorUp _lisPos #1;
+        _casing setVectorUp (_lisPos select 1);
         private _idx = GVAR(casings) pushBack _casing;
 
         for "_" from 0 to (_idx - GVAR(maxCasings)) do {
             deleteVehicle (GVAR(casings) deleteAt 0);
         };
     },
-    [_modelPath,_pos],
+    [_modelPath, _pos, _unitPos],
     0.4
 ] call CBA_fnc_waitAndExecute;
