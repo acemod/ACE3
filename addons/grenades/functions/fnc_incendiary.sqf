@@ -214,7 +214,7 @@ if (isServer) then {
     if (_x isKindOf "WeaponHolder" || {_x isKindOf "WeaponHolderSimulated"}) then {
         deleteVehicle _x;
     };
-} forEach ((_position nearObjects DESTRUCTION_RADIUS) select {local _x});
+} forEach ((_position nearObjects DESTRUCTION_RADIUS) select {local _x && {isDamageAllowed _x}});
 
 {
     // Damage vehicles (locality is checked in FUNC(damageEngineAndWheels))
