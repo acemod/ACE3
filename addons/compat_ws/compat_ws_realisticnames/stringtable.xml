@@ -26,7 +26,7 @@
             <Korean>AA-12 (뱀 위장)</Korean>
             <German>AA12 (Schlange)</German>
             <Italian>AA12 (Serpe)</Italian>
-            <Japanese>AA12 (ヘビ柄)</Japanese>
+            <Japanese>AA12 (ヘビ柄迷彩)</Japanese>
             <Russian>AA12 (Змея)</Russian>
             <Spanish>AA12 (Serpiente)</Spanish>
         </Key>
@@ -45,7 +45,7 @@
             <Korean>갈릴 ARM (낡음)</Korean>
             <German>Galil ARM (Alt)</German>
             <Italian>Galil ARM (Vecchio)</Italian>
-            <Japanese>ガリル ARM (使い古し)</Japanese>
+            <Japanese>ガリル ARM (古びた)</Japanese>
             <Russian>Galil ARM (Старый)</Russian>
             <French>Galil ARM (Ancien)</French>
             <Spanish>Galil ARM (Vieja)</Spanish>
@@ -65,7 +65,7 @@
             <Korean>GLX-160 (뱀 위장)</Korean>
             <German>GLX 160 (Schlange)</German>
             <Italian>GLX-160 (Serpe)</Italian>
-            <Japanese>GLX 160 (ヘビ柄)</Japanese>
+            <Japanese>GLX 160 (ヘビ柄迷彩)</Japanese>
             <Russian>GLX 160 (Змея)</Russian>
             <Spanish>GLX 160 (Serpiente)</Spanish>
         </Key>
@@ -94,7 +94,7 @@
             <Korean>GLX-160 (위장)</Korean>
             <German>GLX 160 (Tarn)</German>
             <Italian>GLX-160 (Mimetica)</Italian>
-            <Japanese>GLX 160 (迷彩)</Japanese>
+            <Japanese>GLX 160 (AAF迷彩)</Japanese>
             <Russian>GLX 160 (Камуфляж)</Russian>
             <French>GLX 160 (Camo)</French>
             <Spanish>GLX 160 (Camo)</Spanish>
@@ -124,7 +124,7 @@
             <Korean>Mk.14 Mod 1 EBR (뱀 위장)</Korean>
             <German>Mk14 Mod 1 EBR (Schlange)</German>
             <Italian>Mk14 Mod 1 EBR (Serpe)</Italian>
-            <Japanese>Mk14 Mod 1 EBR (ヘビ柄)</Japanese>
+            <Japanese>Mk14 Mod 1 EBR (ヘビ柄迷彩)</Japanese>
             <Russian>Mk14 Mod 1 EBR (Змея)</Russian>
             <Spanish>Mk14 Mod 1 EBR (Serpiente)</Spanish>
         </Key>
@@ -142,7 +142,7 @@
             <Korean>벡터 SS-77 (위장)</Korean>
             <German>Vektor SS-77 (Tarn)</German>
             <Italian>Vektor SS-77 (Mimetica)</Italian>
-            <Japanese>ヴェクター SS-77 (迷彩)</Japanese>
+            <Japanese>ヴェクター SS-77 (AAF迷彩)</Japanese>
             <Russian>Vektor SS-77 (Камуфляж)</Russian>
             <French>Vektor SS-77 (Camo)</French>
             <Spanish>Vektor SS-77 (Camo)</Spanish>
@@ -192,7 +192,7 @@
             <Korean>벡터 SS-77 단축형 (뱀 위장)</Korean>
             <German>Vektor SS-77 Compact (Schlange)</German>
             <Italian>Vektor SS-77 Compatto (Serpe)</Italian>
-            <Japanese>ヴェクター SS-77 コンパクト (ヘビ柄)</Japanese>
+            <Japanese>ヴェクター SS-77 コンパクト (ヘビ柄迷彩)</Japanese>
             <Russian>Vektor SS-77 Compact (змея)</Russian>
             <Spanish>Vektor SS-77 Compacta (Serpiente)</Spanish>
         </Key>
@@ -201,7 +201,7 @@
             <Korean>FN FAL 50.00 (목재)</Korean>
             <German>FN FAL 50.00 (Holz)</German>
             <Italian>FN FAL 50.00 (Legno)</Italian>
-            <Japanese>FN FAL 50.00 (森林迷彩)</Japanese>
+            <Japanese>FN FAL 50.00 (木製)</Japanese>
             <Russian>FN FAL 50.00 (лесной)</Russian>
             <French>FN FAL 50.00 (Bois)</French>
             <Spanish>FN FAL 50.00 (Madera)</Spanish>
@@ -211,7 +211,7 @@
             <Korean>FN FAL 50.00 GL (목재)</Korean>
             <German>FN FAL 50.00 GL (Holz)</German>
             <Italian>FN FAL 50.00 GL (Legno)</Italian>
-            <Japanese>FN FAL 50.00 GL (森林迷彩)</Japanese>
+            <Japanese>FN FAL 50.00 GL (木製)</Japanese>
             <Russian>FN FAL 50.00 GL (лесной)</Russian>
             <French>FN FAL 50.00 GL (Bois)</French>
             <Spanish>FN FAL 50.00 GL (Madera)</Spanish>
@@ -257,17 +257,19 @@
             <Spanish>FN FAL 50.00 (Jungla)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Para_Name">
-            <English>FN FAL 50.00 Para</English>
+            <English>FN FAL OSW Para</English>
+            <Japanese>FN FAL OSW パラ</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Para_Snake_Name">
-            <English>FN FAL 50.00 Para (Snake)</English>
+            <English>FN FAL OSW Para (Snake)</English>
+            <Japanese>FN FAL OSW パラ (ヘビ柄迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R4_Name">
             <English>Vektor R4</English>
             <Korean>벡터 R4</Korean>
             <German>Vektor R4</German>
             <Italian>Vektor R4</Italian>
-            <Japanese>ヴェクター R5</Japanese>
+            <Japanese>ヴェクター R4</Japanese>
             <Russian>Vektor R4</Russian>
             <French>Vektor R4</French>
             <Spanish>Vektor R4</Spanish>
@@ -297,7 +299,7 @@
             <Korean>벡터 R5 카빈 (뱀 위장)</Korean>
             <German>Vektor R5 Carbine (Schlange)</German>
             <Italian>Vektor R5 Carabina (Serpe)</Italian>
-            <Japanese>ヴェクター R5 カービン (ヘビ柄)</Japanese>
+            <Japanese>ヴェクター R5 カービン (ヘビ柄迷彩)</Japanese>
             <Russian>Vektor R5 Carbine (Змея)</Russian>
             <Spanish>Vektor R5 Carabina (Serpiente)</Spanish>
         </Key>
@@ -306,7 +308,7 @@
             <Korean>벡터 R5 카빈 GL (뱀 위장)</Korean>
             <German>Vektor R5 Carbine GL (Schlange)</German>
             <Italian>Vektor R5 Carabina GL (Serpe)</Italian>
-            <Japanese>ヴェクター R5 カービン GL (ヘビ柄)</Japanese>
+            <Japanese>ヴェクター R5 カービン GL (ヘビ柄迷彩)</Japanese>
             <Russian>Vektor R5 Carbine GL (Змея)</Russian>
             <Spanish>Vektor R5 Carabina GL (Serpiente)</Spanish>
         </Key>
@@ -456,117 +458,155 @@
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_gm6_snake_Name">
             <English>GM6 Lynx (Snake)</English>
+            <Japanese>GM6 リンクス (ヘビ柄迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_rpg32_tan_Name">
             <English>RPG-32 (Sand)</English>
+            <Japanese>RPG-32 (サンド)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_arco_hex_Name">
             <English>ELCAN SpecterOS (Hex)</English>
+            <Japanese>ELCAN SpecterOS (六角形迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_holosight_snake_Name">
             <English>EOTech XPS3 (Snake)</English>
+            <Japanese>EOTech XPS3 (ヘビ柄迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_holosight_snake_smg_Name">
             <English>EOTech XPS3 SMG (Snake)</English>
+            <Japanese>EOTech XPS3 SMG (ヘビ柄迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_arid_Name">
             <English>Leupold Mark 4 HAMR (Arid)</English>
+            <Japanese>Leupold Mark 4 HAMR (乾燥地帯迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_lush_Name">
             <English>Leupold Mark 4 HAMR (Lush)</English>
+            <Japanese>Leupold Mark 4 HAMR (緑地迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_sand_Name">
             <English>Leupold Mark 4 HAMR (Sand)</English>
+            <Japanese>Leupold Mark 4 HAMR (サンド)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_snake_Name">
             <English>Leupold Mark 4 HAMR (Snake)</English>
+            <Japanese>Leupold Mark 4 HAMR (ヘビ柄迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_black_Name">
             <English>Aimpoint Micro R-1 (High, Black)</English>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、ブラック)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_khaki_Name">
             <English>Aimpoint Micro R-1 (High, Khaki)</English>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、カーキ)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_sand_Name">
             <English>Aimpoint Micro R-1 (High, Sand)</English>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、サンド)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_snake_Name">
             <English>Aimpoint Micro R-1 (High, Snake)</English>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、ヘビ柄迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_arid_Name">
             <English>Aimpoint Micro R-1 (High, Arid)</English>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、乾燥地帯迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_lush_Name">
             <English>Aimpoint Micro R-1 (High, Lush)</English>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、緑地迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_black_sand_Name">
             <English>Aimpoint Micro R-1 (High, Black/Sand)</English>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、ブラック/サンド)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_black_Name">
             <English>Aimpoint Micro R-1 (Low, Black)</English>
+            <Japanese>Aimpoint マイクロ R-1 (ローマウント、ブラック)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_khaki_Name">
             <English>Aimpoint Micro R-1 (Low, Khaki)</English>
+            <Japanese>Aimpoint マイクロ R-1 (ローマウント、カーキ)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_sand_Name">
             <English>Aimpoint Micro R-1 (Low, Sand)</English>
+            <Japanese>Aimpoint マイクロ R-1 (ローマウント、サンド)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_snake_Name">
             <English>Aimpoint Micro R-1 (Low, Snake)</English>
+            <Japanese>Aimpoint マイクロ R-1 (ローマウント、ヘビ柄迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_arid_Name">
             <English>Aimpoint Micro R-1 (Low, Arid)</English>
+            <Japanese>Aimpoint マイクロ R-1 (ローマウント、乾燥地帯迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_lush_Name">
             <English>Aimpoint Micro R-1 (Low, Lush)</English>
+            <Japanese>Aimpoint マイクロ R-1 (ローマウント、緑地迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_dms_snake_Name">
             <English>Burris XTR II (Snake)</English>
+            <Japanese>Burris XTR II (ヘビ柄迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_atgm_Name">
             <English>Badger IFV (ATGM)</English>
+            <Japanese>バジャー IFV (ATGM)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_command_Name">
             <English>Badger IFV (Command)</English>
+            <Japanese>バジャー IFV (指揮)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_mortar_Name">
             <English>Badger IFV (Mortar)</English>
+            <Japanese>バジャー IFV (迫撃砲)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_aa_Name">
             <English>KamAZ (Zu-23-2)</English>
+            <Japanese>KamAZ (Zu-23-2)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_cargo_Name">
             <English>KamAZ Cargo</English>
+            <Japanese>KamAZ 貨物</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_repair_Name">
             <English>KamAZ Repair</English>
+            <Japanese>KamAZ 修理</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_racing_Name">
             <English>KamAZ Racing</English>
+            <Japanese>KamAZ レース仕様</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_ammo_Name">
             <English>KamAZ Ammo</English>
+            <Japanese>KamAZ 弾薬</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_flatbed_Name">
             <English>KamAZ Flatbed</English>
+            <Japanese>KamAZ フラットベッド</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_transport_02_Name">
             <English>AW101 Merlin</English>
+            <Japanese>AW101 マーリン</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_tracked_02_Name">
             <English>BM-2T Stalker (Bumerang-BM)</English>
+            <Japanese>BM-2T ストーカー (ブーメランク-BM)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_02_hmg_Name">
             <English>Otokar ARMA (HMG)</English>
+            <Japanese>オトカ アルマ (HMG)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_02_unarmed_Name">
             <English>Otokar ARMA (Unarmed)</English>
+            <Japanese>オトカ アルマ (非武装)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_light_02_armed_Name">
             <English>Ka-60 Kasatka (UP)</English>
+            <Japanese>Ka-60 カサートカ (UP)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_light_02_unarmed_Name">
             <English>Ka-60 Kasatka (UP, Unarmed)</English>
+            <Japanese>Ka-60 カサートカ (UP、非武装)</Japanese>
         </Key>
     </Package>
 </Project>

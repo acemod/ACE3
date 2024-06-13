@@ -16,4 +16,6 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
+#define EFFECT_SIZE 1
+
 #define MIN_EXPLOSION_TIME_FOR_ROLL 1

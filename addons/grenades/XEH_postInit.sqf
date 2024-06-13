@@ -4,6 +4,7 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 ["ace_flashbangExploded", LINKFUNC(flashbangExplosionEH)] call CBA_fnc_addEventHandler;
+[QGVAR(damageEngineAndWheels), LINKFUNC(damageEngineAndWheels)] call CBA_fnc_addEventHandler;
 
 // Register fired event handlers
 ["ace_firedPlayer", LINKFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
