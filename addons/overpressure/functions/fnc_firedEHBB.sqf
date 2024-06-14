@@ -21,7 +21,10 @@ TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_veh
 // Retrieve backblast values
 private _bbValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
 
-_bbValues params ["_backblastAngle", "_backblastRange", "_backblastDamage", "_offset"];
+_bbValues params ["_backblastAngle", "_backblastDamage", "_offset"];
+
+private _backblastRange = (getNumber (_config >> QGVAR(range))) * GVAR(backblastDistanceCoefficient);
+
 TRACE_4("cache",_backblastAngle,_backblastRange,_backblastDamage,_offset);
 
 if (_backblastDamage <= 0) exitWith {};
