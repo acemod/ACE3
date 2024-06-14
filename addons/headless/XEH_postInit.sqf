@@ -13,6 +13,21 @@ if (!isMultiplayer) exitWith {};
             // Add disconnect EH
             addMissionEventHandler ["HandleDisconnect", {call FUNC(handleDisconnect)}];
 
+            [QGVAR(transferGroupsRebalance), {
+                params ["_groups", "_owner", "_rebalance"];
+
+                if (_groups isNotEqualTo [] && {_owner > 1}) then {
+                    {
+                        _x setGroupOwner _owner;
+                    } forEach _groups;
+                };
+
+                // Rebalance units
+                if (_rebalance in [REBALANCE, FORCED_REBALANCE]) then {
+                    (_rebalance == FORCED_REBALANCE) call FUNC(rebalance);
+                };
+            }] call CBA_fnc_addEventHandler;
+
             // If CBA's loadout validation is enabled, warn users
             if (XGVAR(transferLoadout) > 0 && {(missionNamespace getVariable ["CBA_network_loadoutValidation", 0]) isEqualTo 2}) then {
                 WARNING("CBA_network_loadoutValidation is enabled - acex_headless_transferLoadout should therefore be disabled");

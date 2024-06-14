@@ -23,7 +23,7 @@ private _ctrlButtonOK = _display displayCtrl 1; // IDC_OK
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 TRACE_1("logicObject",_logic);
 
-_control ctrlRemoveAllEventHandlers "setFocus";
+_control ctrlRemoveAllEventHandlers "SetFocus";
 
 // Validate module target
 private _unit = attachedTo _logic;

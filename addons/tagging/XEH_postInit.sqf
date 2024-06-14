@@ -1,14 +1,6 @@
 // by esteldunedain
 #include "script_component.hpp"
 
-
-// Cache for static objects
-GVAR(cacheStaticModels) = [false] call CBA_fnc_createNamespace;
-private _cacheStaticModels = call (uiNamespace getVariable [QGVAR(cacheStaticModels), {[]}]);
-{
-    GVAR(cacheStaticModels) setVariable [_x, true];
-} forEach _cacheStaticModels;
-
 if (hasInterface) then {
     // Compile and cache config tags
     call FUNC(compileConfigTags);

@@ -17,12 +17,13 @@
  * Public: No
  */
 
+if (!GVAR(enabled)) exitWith {false};
+
 params ["_unit", "_turretAndDirection", "_majorStep"];
 TRACE_3("adjustScope",_unit,_turretAndDirection,_majorStep);
 
 if (!(_unit isKindOf "Man")) exitWith {false};
 if (currentMuzzle _unit != currentWeapon _unit) exitWith {false};
-if (!GVAR(enabled)) exitWith {false};
 
 private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {false};

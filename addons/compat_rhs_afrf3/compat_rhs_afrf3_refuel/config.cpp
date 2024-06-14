@@ -18,4 +18,4 @@ class CfgPatches {
     };
 };
 
-#include "CfgVehicles.hpp"
+// ADDON kept for backward compatiblity

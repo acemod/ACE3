@@ -46,9 +46,7 @@ private _categoryColors = [_category, format ["| %1 |", LELSTRING(common,subcate
     QGVAR(textSize), "LIST",
     LSTRING(textSize),
     _category,
-    [[0, 1, 2, 3, 4], ["str_very_small", "str_small", "str_medium", "str_large", "str_very_large"], 2],
-    0,
-    {[QGVAR(textSize), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    [[0, 1, 2, 3, 4], ["str_very_small", "str_small", "str_medium", "str_large", "str_very_large"], 2]
 ] call CBA_fnc_addSetting;
 
 [

@@ -268,7 +268,7 @@
             <Hungarian>Milyen gyakran frissüljenek a jelölők (másodpercben)</Hungarian>
             <Russian>Как часто должны обновляться маркеры (в секундах)</Russian>
             <Italian>Quanto spesso vengono aggiornati i marker (in secondi)</Italian>
-            <Japanese>マーカが再描画される間隔を設定できます (秒)</Japanese>
+            <Japanese>マーカが再描画される間隔 (秒単位)</Japanese>
             <Korean>몇 초마다 마커를 새로 갱신합니까?</Korean>
             <Chinesesimp>设定每多少时间重新标示出单位位置（秒）</Chinesesimp>
             <Chinese>設定每多少時間重新標示出單位位置 (秒)</Chinese>
