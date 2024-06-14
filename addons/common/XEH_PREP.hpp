@@ -266,6 +266,7 @@ PREP(_handleRequestAllSyncedEvents);
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
 PREP(addMapMarkerCreatedEventHandler);
+PREP(addPlayerEH);
 
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);

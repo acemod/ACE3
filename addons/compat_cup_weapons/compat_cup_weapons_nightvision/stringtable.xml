@@ -51,6 +51,7 @@
             <Korean>AN/PVS-15 (설상, 백색광)</Korean>
             <Russian>AN/PVS-15 (Белый, БФ)</Russian>
             <French>AN/PVS-15 (Blanc, WP)</French>
+            <German>AN/PVS-15 (Winter, WP)</German>
             <Spanish>AN/PVS-15 (Blancas, WP)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_nightvision_CUP_NVG_GPNVG_black_WP">
@@ -92,6 +93,7 @@
             <Korean>GPNVG (설상, 백색광)</Korean>
             <Russian>AN/PVS-15 (Белый, БФ)</Russian>
             <French>GPNVG (Blanc, WP)</French>
+            <German>GPNVG (Winter, WP)</German>
             <Spanish>GPNVG (Blancas, WP)</Spanish>
         </Key>
     </Package>
