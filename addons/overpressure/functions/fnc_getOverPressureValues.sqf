@@ -12,9 +12,8 @@
  * Return Value:
  * Shot Config <ARRAY>:
  *  0: Angle <Number>
- *  1:   <Number>
- *  2: Damage <Number>
- *  3: Offset <Number>
+ *  1: Damage <Number>
+ *  2: Offset <Number>
  *
  * Example:
  * ["cannon_125mm","Sh_125mm_APFSDS_T_Green","24Rnd_125mm_APFSDS_T_Green"] call ace_overpressure_fnc_getOverPressureValues
