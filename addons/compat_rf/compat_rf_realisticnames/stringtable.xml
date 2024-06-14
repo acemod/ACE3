@@ -177,33 +177,49 @@
             <English>AW159 Wildcat (Unarmed)</English>
             <Japanese>AW159 ワイルドキャット (非武装)</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_military_Name">
-            <English>H225M Super Cougar HADR</English>
-            <Japanese>H225M シュペル クーガー HADR</Japanese>
-        </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_base_Name">
-            <English>H225M Super Cougar Transport</English>
-            <Japanese>H225M シュペル クーガー 輸送</Japanese>
+            <English>H225 Super Puma (Transport)</English>
+            <Japanese>H225 シュペル ピューマ (輸送型)</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_Name">
-            <English>H225 Super Puma Transport</English>
-            <Japanese>H225 シュペル ピューマ 輸送</Japanese>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_civ_base_Name">
+            <English>H225 Super Puma (Civilian)</English>
+            <Japanese>H225 シュペル ピューマ (民生型)</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_Name">
-            <English>H225 Super Puma VIP</English>
-            <Japanese>H225 シュペル ピューマ VIP</Japanese>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_base_Name">
+            <English>H215 Super Puma (Transport)</English>
+            <Japanese>H215 シュペル ピューマ (輸送型)</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_Name">
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_civ_base_Name">
+            <English>H215 Super Puma (Civilian)</English>
+            <Japanese>H215 シュペル ピューマ (民生型)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_military_base_Name">
+            <English>H215 Super Puma (Unarmed)</English>
+            <Japanese>H225M シュペル ピューマ (非武装)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_base_Name">
             <English>H225M Super Cougar SOCAT</English>
             <Japanese>H225M シュペル クーガー SOCAT</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_03_Name">
-            <English>H225M Super Cougar CSAR</English>
-            <Japanese>H225M シュペル クーガー CSAR</Japanese>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_nato_Name">
+            <English>H225M Super Cougar SOCAT</English>
+            <Japanese>H225M シュペル クーガー SOCAT</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_Name">
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_03_base_Name">
+            <English>H225M Super Cougar</English>
+            <Japanese>H225M シュペル クーガー</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_base_Name">
             <English>H225 Super Puma SAR</English>
-            <Japanese>H225 シュペル ピューマ SAR</Japanese>
+            <Japanese>H225 シュペル ピューマ 捜索救難型</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_military_base_Name">
+            <English>H225M Super Cougar (Unarmed)</English>
+            <Japanese>H225M シュペル クーガー (非武装)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_01_water_Name">
+            <English>HEMTT Fire Truck</English>
+            <Japanese>HEMTT 消防車</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_water_Name">
             <English>Typhoon Water</English>
