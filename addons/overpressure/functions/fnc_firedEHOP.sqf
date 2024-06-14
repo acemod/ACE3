@@ -25,7 +25,7 @@ _opValues params ["_dangerZoneAngle", "_dangerZoneDamage"];
 
 private _dangerZoneRange = (getNumber (_config >> QGVAR(range))) * GVAR(overpressureDistanceCoefficient);
 
-TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange, _dangerZoneDamage);
+TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
 
 
 if (_dangerZoneDamage <= 0) exitWith {};
