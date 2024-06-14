@@ -7,13 +7,13 @@
  *
  * Arguments:
  * 0: Header <STRING>
- * 1: Text <STRING, TEXT>
+ * 1: Text <STRING|TEXT>
  *
  * Return Value:
  * None
  *
  * Example:
- * ["[ACE] ERROR", "Test"] spawn ace_common_fnc_errorMessage
+ * ["[ACE] ERROR", "Test"] call ace_common_fnc_errorMessage
  *
  * Public: No
  */
