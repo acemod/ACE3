@@ -50,7 +50,7 @@ ctrlMapAnimCommit _map;
 
 // add drawEH to draw markers next update (they will get drawn 3 times total)
 _map setVariable ["markers", _markers];
-_map ctrlAddEventHandler ["draw", {
+_map ctrlAddEventHandler ["Draw", {
     params ["_map"];
     private _markers = _map getVariable ["markers", []];
     TRACE_2("drawing markers",_map,count _markers);

@@ -8,7 +8,7 @@ LOG(MSG_INIT);
 // Calculate the maximum zoom allowed for this map
 call FUNC(determineZoom);
 
-GVAR(flashlights) = [] call CBA_fnc_createNamespace;
+GVAR(flashlights) = createHashMap;
 
 ["CBA_settingsInitialized", {
     if (isMultiplayer && {GVAR(DefaultChannel) != -1}) then {

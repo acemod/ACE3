@@ -68,7 +68,7 @@
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_Description">
             <English>Controls when AI can receive fatal injuries. A fatal injury is caused by significant damage to the head or troso.\nWhen set to "Always", this effectively produces "AI Instant Death" behaviour as AI will immediately die from any fatal injury.\nNOTE: Any mode other than "Always" requires AI Unconsciousness to be enabled.</English>
             <Portuguese>Controla quando a IA pode receber lesões fatais. Uma lesão fatal é causada por um dano significante na cabeça ou tronco.\nQuando definido para "Sempre", isso efetivamente causa a "Morte Instantânea da IA", pois a IA irá imediatamente morrer para qualquer lesão fatal.\nNOTA: Qualquer opção além de "Sempre" requer que Inconsciência de IA esteja ativada.</Portuguese>
-            <Japanese>AIが致命傷を受けた時の挙動を管理できます。頭部や胸部に受ける大きなダメージは致命傷になります。\n"常に"に設定されていると、いかなる致命傷でも"AIの即死"効果が生まれます。\n注: "常に"以外のモードでは"AIの気絶"を有効化させる必要があります。</Japanese>
+            <Japanese>AIが致命傷を受けた時の挙動を管理できます。頭部や胸部に受ける大きなダメージは致命傷になります。\n"常に"に設定されていると、いかなる致命傷でも"AIの即死"効果が生まれます。\n注: "常に"以外のモードでは"AIの無意識状態化"を有効化させる必要があります。</Japanese>
             <Chinese>控制當AI受致命傷時是否能救起。致命傷是指對頭部或身體造成可觀傷害所造成的。\n當設置為"總是"時，這會使其與"AI 瞬間死亡"同一個效果，在AI受到致命傷時瞬間死亡。\n備註：選了"總是"以外的選項的話必須開啟「AI無意識」的選項。</Chinese>
             <Chinesesimp>控制当 AI 受致命伤时是否能救起。致命伤是指对头部或躯干遭受重大伤害。\n当设置为"总是"时，这将有效地产生"AI 即时死亡"行为，因为 AI 将立即死于任何致命伤。\n注意："总是"以外的任何模式都需要启用 AI 无意识。</Chinesesimp>
             <French>Détermine si les unités IA décèdent en cas de blessure mortelle. Une blessure mortelle est définie par des dommages importants à la tête ou au cœur.\nSi réglé sur "Toujours", cela produit effectivement un comportement de "Mort instantanée" car les unités IA mourront immédiatement de toute blessure mortelle.\nNOTE : Tout mode autre que "Toujours" nécessite l'activation de l'option "Inconscience IA".</French>
@@ -92,7 +92,7 @@
             <French>Inconscience IA</French>
             <Hungarian>AI eszméletlenség</Hungarian>
             <Italian>Incoscienza IA</Italian>
-            <Japanese>AIの気絶</Japanese>
+            <Japanese>AIの無意識状態化</Japanese>
             <Korean>인공지능 기절</Korean>
             <Chinesesimp>AI 无意识</Chinesesimp>
             <Chinese>AI無意識</Chinese>
@@ -101,7 +101,7 @@
         <Key ID="STR_ACE_Medical_Statemachine_AIUnconsciousness_Description">
             <English>Controls whether AI can go unconscious instead of immediately dying.\nThis setting works together with the "AI Fatal Injuries" setting since, going into cardiac arrest requires that the unit is able to go unconscious.\nHowever, these settings are separated because units can go unconscious from critical vitals resulting from non-fatal injuries.\nIn essence, this means that in order to enable cardiac arrest for AI units, this setting must be enabled.</English>
             <Portuguese>Controla se a IA pode ficar inconsciente ao invés de morrer imediatamente.\nEssa configuração funciona com "Lesões Fatais de IA", pois para uma unidade ter uma parada cardíaca é necessário que a IA possa fica inconsciente.\nContudo, essas configurações são separadas pois unidades podem ficar inconscientes por vitais críticos causados por ferimentos não-fatais.\nEssencialmente, isso significa que para ativar uma parada cardíaca em IA, essa configuração precisa estar ativa.</Portuguese>
-            <Japanese>AIが即死する代わりに気絶するかどうかを決定できます。\nこれは "AIの致命傷" 設定と連動します。これは心停止を起こすにはユニットが気絶する必要がある為です。\nしかしながら、これらの設定はユニットが非致死性の負傷により重体となって気絶できるよう分離されています。\n本質的にはこの設定はAIユニットの心停止を可能にするものであり、有効化されておくべきです。</Japanese>
+            <Japanese>AIが即死する代わりに無意識状態化するかどうかを制御します。\nこれは "AIの致命傷" 設定と連動します。何故ならば、ユニットを心停止させるためには無意識状態に陥る必要がある為です。\nしかし、これらの設定は、致命的ではない負傷の経過による重症状態化でユニットが無意識状態に陥ることが出来るようにするため、分割されています。\n要するに、AIユニットの心停止を有効にするには、この設定を有効にする必要があるということです。</Japanese>
             <Chinese>控制AI是否能進入無意識狀態而非立刻原地死亡。\n這個選項會與「AI致命傷」的選項聯動，使單位心搏停止的話必須先讓其無意識。\n然而，兩個設定分開之原因是使單位能因從非致命傷的攻擊情況下進入生命危險的狀態。\n簡單來說，你想要讓AI單位有心搏停止可能的話，該選項必須啟用。</Chinese>
             <Chinesesimp>控制 AI 是否可以进入昏迷状态而不是立即死亡。\n这个设置与"AI 致命伤"设置一起工作，因为进入心脏骤停需要单位能够昏迷。\n然而，这些设置是分开的，因为单位可能会因非致命伤害导致的关键生命体征而昏迷过去。\n从本质上讲，这意味着为了使 AI 单位的心脏骤停，必须启用此设置。</Chinesesimp>
             <French>Définit si les unités IA peuvent perdre connaissance au lieu de mourir immédiatement.\nCe paramètre fonctionne conjointement avec l'option "Décès si blessure mortelle (IA)" car, pour qu'une unité IA subisse un arrêt cardiaque, elle doit également pouvoir perdre connaissance.\nCependant, ces paramètres sont séparés car les unités peuvent s'évanouir suite à des signes vitaux critiques résultant de blessures non mortelles.\nEn résumé, cela signifie que ce paramètre doit absolument être activé pour qu'une unité IA puisse entrer en état d'arrêt cardiaque.</French>
@@ -132,7 +132,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestTime_Description">
             <English>Controls how long it takes to die from cardiac arrest.</English>
-            <Japanese>どのくらいの時間、心停止すると死亡するかを決定します。</Japanese>
+            <Japanese>どのくらいの時間、心停止すると死亡するかを制御します。</Japanese>
             <French>Définit le temps qu'il faut pour mourir d'un arrêt cardiaque.</French>
             <Russian>Контролирует, сколько времени требуется, чтобы умереть от остановки сердца.</Russian>
             <Portuguese>Controla o tempo necessário para morrer para uma parada cardíaca.</Portuguese>
