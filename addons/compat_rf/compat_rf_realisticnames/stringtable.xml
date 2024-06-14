@@ -219,6 +219,13 @@
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_01_water_Name">
             <English>HEMTT Fire Truck</English>
+            <French>HEMTT anti-incendie</French>
+            <Polish>HEMTT (wersja pożarnicza)</Polish>
+            <German>HEMTT-Löschfahrzeug</German>
+            <Spanish>HEMTT (camión de bomberos)</Spanish>
+            <Russian>Пожарная машина HEMTT</Russian>
+            <Chinesesimp>HEMTT 消防卡车</Chinesesimp>
+            <Portuguese>HEMTT contra incêndio</Portuguese>
             <Japanese>HEMTT 消防車</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_water_Name">
@@ -274,8 +281,8 @@
             <Japanese>RSG60</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_twinmortar_Name">
-            <English>AMOS</English>
-            <Japanese>AMOS</Japanese>
+            <English>AMOS Container</English>
+            <Japanese>AMOS コンテナ</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_base_Name">
             <English>Drone40</English>
