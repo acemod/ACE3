@@ -170,12 +170,12 @@
             <Japanese>ASh-12 LR (森林迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_Name">
-            <English>AW159 Wildcat</English>
-            <Japanese>AW159 ワイルドキャット</Japanese>
+            <English>AW159 Wildcat ASW</English>
+            <Japanese>AW159 ワイルドキャット ASW</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_unarmed_Name">
-            <English>AW159 Wildcat (Unarmed)</English>
-            <Japanese>AW159 ワイルドキャット (非武装)</Japanese>
+            <English>AW159 Wildcat ASW (Unarmed)</English>
+            <Japanese>AW159 ワイルドキャット ASW (非武装)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_base_Name">
             <English>H225 Super Puma (Transport)</English>
