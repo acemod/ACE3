@@ -15,3 +15,5 @@ uiNamespace setVariable [QGVAR(addonCache), createHashMap];
 
 // Cache for FUNC(getConfigName)
 uiNamespace setVariable [QGVAR(configNames), createHashMap];
+
+uiNamespace setVariable [QGVAR(wheelSelections), createHashMap];
