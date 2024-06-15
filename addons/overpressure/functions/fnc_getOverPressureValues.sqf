@@ -6,14 +6,15 @@
  *
  * Arguments:
  * 0: Weapon <STRING>
- * 1: Magazine <STRING>
- * 2: Ammo <STRING>
+ * 2: Magazine <STRING>
+ * 3: Ammo <STRING>
  *
  * Return Value:
  * Shot Config <ARRAY>:
- *  0: Angle <Number>
- *  1: Damage <Number>
- *  2: Offset <Number>
+ *  0: Angle  <Number>
+ *  1: Range  <Number>
+ *  2: Damage <Number>
+ *  3: Offset <Number>
  *
  * Example:
  * ["cannon_125mm","Sh_125mm_APFSDS_T_Green","24Rnd_125mm_APFSDS_T_Green"] call ace_overpressure_fnc_getOverPressureValues
@@ -54,6 +55,7 @@ TRACE_1("ConfigPath",_config);
 
 _return = [
     (getNumber (_config >> QGVAR(angle))),
+    (getNumber (_config >> QGVAR(range))),
     (getNumber (_config >> QGVAR(damage))),
     (getNumber (_config >> QGVAR(offset)))
 ];
