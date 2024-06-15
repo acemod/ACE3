@@ -7,7 +7,10 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"rhsusf_main_loadorder"};
+        requiredAddons[] = {
+            "rhsusf_main_loadorder",
+            "ace_hellfire"
+        };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"Ruthberg", "GitHawk", "BaerMitUmlaut", "Fyuran"};
