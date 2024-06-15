@@ -21,9 +21,8 @@ TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_veh
 // Retrieve overpressure values
 private _opValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
 
-_opValues params ["_dangerZoneAngle", "_dangerZoneDamage"];
-
-private _dangerZoneRange = (getNumber (_config >> QGVAR(range))) * GVAR(overpressureDistanceCoefficient);
+_opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
+_dangerZoneRange = _dangerZoneRange * GVAR(overpressureDistanceCoefficient);
 
 TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
 
