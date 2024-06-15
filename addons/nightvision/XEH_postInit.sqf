@@ -61,7 +61,7 @@ if (!isNil QGVAR(serverPriorFog)) then {[] call FUNC(nonDedicatedFix);}; // If v
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting", "isNotRefueling"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((currentVisionMode ACE_player != 1)) exitWith {false};
-    if (!(missionNamespace getVariable [QGVAR(allowBrightnessControl), true])) exitWith {false}; // just a mission setVar (not ace_setting)
+    if !(missionNamespace getVariable [QGVAR(allowBrightnessControl), true]) exitWith {false}; // just a mission setVar (not ace_setting)
 
     // Statement
     [ACE_player, 1] call FUNC(changeNVGBrightness);
@@ -73,7 +73,7 @@ if (!isNil QGVAR(serverPriorFog)) then {[] call FUNC(nonDedicatedFix);}; // If v
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting", "isNotRefueling"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((currentVisionMode ACE_player != 1)) exitWith {false};
-    if (!(missionNamespace getVariable [QGVAR(allowBrightnessControl), true])) exitWith {false}; // just a mission setVar (not ace_setting)
+    if !(missionNamespace getVariable [QGVAR(allowBrightnessControl), true]) exitWith {false}; // just a mission setVar (not ace_setting)
 
     // Statement
     [ACE_player, -1] call FUNC(changeNVGBrightness);

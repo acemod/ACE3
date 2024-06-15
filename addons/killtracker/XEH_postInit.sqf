@@ -19,7 +19,7 @@
 if ((getText (missionconfigfile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QXGVAR(outputText)) exitWith {
     TRACE_1("no mission debriefing config",_this);
 };
-if (!(["ace_medical"] call EFUNC(common,isModLoaded))) exitWith {
+if !(["ace_medical"] call EFUNC(common,isModLoaded)) exitWith {
     WARNING("No ACE-Medical");
     XGVAR(outputText) = "No ACE-Medical";
 };
@@ -64,7 +64,7 @@ GVAR(killCount) = 0;
     private _killInfo = [];
 
     if (!isNull _killer) then {
-        if (!(_killer isKindof "CAManBase")) then { // If killer is a vehicle log the vehicle type
+        if !(_killer isKindof "CAManBase") then { // If killer is a vehicle log the vehicle type
             _killInfo pushBack format [LLSTRING(Vehicle), getText ((configOf _killer) >> "displayName")];
         };
         if (isNull _instigator) then {
@@ -77,7 +77,7 @@ GVAR(killCount) = 0;
     TRACE_2("",_unitIsPlayer,_killerIsPlayer);
 
     // Don't do anything if neither are players
-    if (!(_unitIsPlayer || _killerIsPlayer)) exitWith {};
+    if !(_unitIsPlayer || _killerIsPlayer) exitWith {};
 
     // Log firendly fire
     private _fnc_getSideFromConfig = {

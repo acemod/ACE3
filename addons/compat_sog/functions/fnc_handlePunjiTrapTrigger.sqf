@@ -14,8 +14,9 @@
  *
  * Public: No
  */
+
 params ["_trap"];
-if (!(["ace_medical"] call EFUNC(common,isModLoaded))) exitWith {};
+if !(["ace_medical"] call EFUNC(common,isModLoaded)) exitWith {};
 
 private _radius = getNumber (configOf _trap >> "indirectHitRange");
 private _affectedUnits = _trap nearEntities ["CAManBase", _radius];
