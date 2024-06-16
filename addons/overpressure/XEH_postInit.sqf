@@ -1,9 +1,13 @@
 #include "script_component.hpp"
 
 ["CBA_settingsInitialized", {
-    TRACE_1("settingsInit eh",GVAR(distanceCoefficient));
-    if (GVAR(distanceCoefficient) <= 0) exitWith {};
 
+    TRACE_1("settingsInit eh",GVAR(backblastDistanceCoefficient));
+    TRACE_1("settingsInit eh",GVAR(overpressureDistanceCoefficient));
+
+    // Both settings disabled, no need to initialize overpressure.
+    if (GVAR(backblastDistanceCoefficient) <= 0 && GVAR(overpressureDistanceCoefficient) <= 0) exitWith {};
+    
     ["ace_overpressure", LINKFUNC(overpressureDamage)] call CBA_fnc_addEventHandler;
 
     // Register fire event handler
