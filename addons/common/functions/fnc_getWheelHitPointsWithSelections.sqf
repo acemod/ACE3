@@ -20,7 +20,7 @@ params ["_vehicle"];
 TRACE_1("params",_vehicle);
 
 // TODO: Fix for GM vehicles
-(uiNamespace getVariable QGVAR(wheelSelections)) getOrDefaultCall [typeOf _vehicle, {
+GVAR(wheelSelections) getOrDefaultCall [typeOf _vehicle, {
     // Get the vehicles wheel config
     private _wheels = configOf _vehicle >> "Wheels";
 
