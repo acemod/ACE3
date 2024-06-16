@@ -6,13 +6,13 @@
  *
  * Arguments:
  * 0: Weapon <STRING>
- * 2: Magazine <STRING>
- * 3: Ammo <STRING>
+ * 1: Magazine <STRING>
+ * 2: Ammo <STRING>
  *
  * Return Value:
  * Shot Config <ARRAY>:
- *  0: Angle  <Number>
- *  1: Range  <Number>
+ *  0: Angle <Number>
+ *  1: Range <Number>
  *  2: Damage <Number>
  *  3: Offset <Number>
  *
