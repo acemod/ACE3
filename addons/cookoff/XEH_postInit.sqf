@@ -9,7 +9,7 @@ if (isServer) then {
     [QGVAR(cookOffBoxServer), LINKFUNC(cookOffBoxServer)] call CBA_fnc_addEventHandler;
     [QGVAR(cookOffServer), LINKFUNC(cookOffServer)] call CBA_fnc_addEventHandler;
     [QGVAR(detonateAmmunitionServer), LINKFUNC(detonateAmmunitionServer)] call CBA_fnc_addEventHandler;
-    [QGVAR(engineFireServer), LINKFUNC(engineFire)] call CBA_fnc_addEventHandler;
+    [QGVAR(engineFireServer), LINKFUNC(engineFireServer)] call CBA_fnc_addEventHandler;
 };
 
 // Handle cleaning up effects when objects are deleted mid cook-off
