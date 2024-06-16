@@ -11,7 +11,7 @@
  * Can pickup <BOOL>
  *
  * Example:
- * [cursorObject, player] call ace_csw_fnc_assemble_canPickupTripod
+ * [cursorObject, player] call ace_csw_fnc_canPickupTripod
  *
  * Public: No
  */
