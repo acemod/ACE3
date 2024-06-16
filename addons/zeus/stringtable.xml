@@ -2013,36 +2013,43 @@
             <English>Forces the spectator interface preventing the player from closing it with the Escape key</English>
             <Japanese>観戦インターフェイスを強制し、ユーザーがEscキーでも閉じられないようにします。</Japanese>
             <Russian>Активирует интерфейс spectator, не позволяя игроку закрыть его с помощью клавиши Escape.</Russian>
+            <Korean>플레이어가 Esc 키로 관전자 인터페이스를 닫지 못하도록 강제로 관전자 인터페이스를 설정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer">
             <English>Hide player</English>
             <Japanese>プレイヤーを隠す</Japanese>
             <Russian>Скрыть игрока</Russian>
+            <Korean>플레이어 숨기기</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer_Tooltip">
             <English>Hides the player by making them invisible, invulnerable, muted, and removing them from their group</English>
             <Japanese>透明化、無敵化、ミュート、グループからの除外を行いプレーヤーを隠します</Japanese>
             <Russian>Скрывает игрока, делая его невидимым, неуязвимым, отключая звук и удаляя из группы.</Russian>
+            <Korean>플레이어를 투명, 무적, 음소거화하고 그룹에서 제거하여 숨깁니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_SpectableSides_Tooltip">
             <English>Sets the sides that are available to spectate</English>
             <Japanese>指定の陣営を観戦可能に設定します</Japanese>
             <Russian>Устанавливает стороны, доступные для режима spectator</Russian>
+            <Korean>관전 가능한 진영을 설정합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_WhiteHot">
             <English>White Hot</English>
             <Japanese>白=熱源</Japanese>
             <Russian>Белый</Russian>
+            <Korean>백색 열원</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_BlackHot">
             <English>Black Hot</English>
             <Japanese>黒=熱源</Japanese>
             <Russian>Чёрный</Russian>
+            <Korean>흑색 열원</Korean>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleAll">
             <English>Toggle All</English>
             <Japanese>全てを切り替え</Japanese>
             <Russian>Выключить все</Russian>
+            <Korean>전부 토글</Korean>
         </Key>
     </Package>
 </Project>

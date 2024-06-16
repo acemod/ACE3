@@ -21,11 +21,13 @@
             <English>Player Weapon Drop Chance (Arm Hit)</English>
             <Japanese>プレイヤーが武器を落とす確率 (腕部への被弾)</Japanese>
             <Russian>Шанс выпадения оружия у игрока (попадание в руку)</Russian>
+            <Korean>플레이어가 무기를 떨굴 확률 (팔 피격)</Korean>
         </Key>
         <Key ID="STR_ACE_HitReactions_weaponDropChanceArmHitAI_displayName">
             <English>AI Weapon Drop Chance (Arm Hit)</English>
             <Japanese>AIが武器を落とす確率 (腕部への被弾)</Japanese>
             <Russian>Шанс выпадения оружия у ИИ (попадание в руку)</Russian>
+            <Korean>인공지능이 무기를 떨굴 확률 (팔 피격)</Korean>
         </Key>
     </Package>
 </Project>
