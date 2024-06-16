@@ -389,10 +389,4 @@ class CfgAmmo {
     class rhs_ammo_smaw_SR: RocketBase {
         ACE_caliber = 9;
     };
-
-    class M_Scalpel_AT;
-    class ACE_Hellfire_AGM114K: M_Scalpel_AT {
-        model = "\rhsusf\addons\rhsusf_airweapons\proxyammo\rhsusf_m_AGM114K_fly";
-        proxyShape = "\rhsusf\addons\rhsusf_airweapons\proxyammo\rhsusf_m_AGM114K";
-    };
 };
