@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Tripod <OBJECT>
- * 1: Unit <OBJECT> (unused)
+ * 1: Unit (not used) <OBJECT>
  *
  * Return Value:
  * Can pickup <BOOL>
