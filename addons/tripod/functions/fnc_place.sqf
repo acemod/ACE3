@@ -34,7 +34,7 @@ if (stance _unit == "STAND") then {
 
     {
         _tripod animate [_x, 0.5];
-    } count ["slide_down_tripod", "retract_leg_1", "retract_leg_2", "retract_leg_3"];
+    } forEach ["slide_down_tripod", "retract_leg_1", "retract_leg_2", "retract_leg_3"];
 
     [{
         (_this select 0) params ["_tripod", "_direction", "_position"];

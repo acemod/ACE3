@@ -101,4 +101,36 @@ class CfgVehicles {
     class B_Soldier_05_f; class B_Pilot_F: B_Soldier_05_f {backpack = "ACE_NonSteerableParachute";};
     class I_Soldier_04_F; class I_pilot_F: I_Soldier_04_F {backpack = "ACE_NonSteerableParachute";};
     class O_helipilot_F; class O_Pilot_F: O_helipilot_F {backpack = "ACE_NonSteerableParachute";};
+
+    class Plane_Base_F;
+    class Plane_CAS_01_base_F: Plane_Base_F {
+        class EjectionSystem {
+            EjectionParachute = "NonSteerable_Parachute_F";
+        };
+    };
+    class Plane_CAS_02_base_F: Plane_Base_F {
+        class EjectionSystem {
+            EjectionParachute = "NonSteerable_Parachute_F";
+        };
+    };
+    class Plane_Fighter_01_base_F: Plane_Base_F {
+        class EjectionSystem {
+            EjectionParachute = "NonSteerable_Parachute_F";
+        };
+    };
+    class Plane_Fighter_02_base_F: Plane_Base_F {
+        class EjectionSystem {
+            EjectionParachute = "NonSteerable_Parachute_F";
+        };
+    };
+    class Plane_Fighter_03_base_F: Plane_Base_F {
+        class EjectionSystem {
+            EjectionParachute = "NonSteerable_Parachute_F";
+        };
+    };
+    class Plane_Fighter_04_base_F: Plane_Base_F {
+        class EjectionSystem {
+            EjectionParachute = "NonSteerable_Parachute_F";
+        };
+    };
 };

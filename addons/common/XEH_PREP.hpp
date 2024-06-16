@@ -161,6 +161,7 @@ PREP(sendRequest);
 PREP(serverLog);
 PREP(setAimCoef);
 PREP(setApproximateVariablePublic);
+PREP(setDead);
 PREP(setDefinedVariable);
 PREP(setDisableUserInputStatus);
 PREP(setHearingCapability);
@@ -264,6 +265,7 @@ PREP(_handleRequestAllSyncedEvents);
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
 PREP(addMapMarkerCreatedEventHandler);
+PREP(addPlayerEH);
 
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);

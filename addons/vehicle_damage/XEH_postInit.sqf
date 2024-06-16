@@ -3,6 +3,8 @@
 ["ace_settingsInitialized", {
     TRACE_1("settings init",GVAR(enabled));
     if (GVAR(enabled)) then {
+        [QGVAR(medicalDamage), LINKFUNC(medicalDamage)] call CBA_fnc_addEventHandler;
+
         [QGVAR(bailOut), {
             params ["_center", "_crewman", "_vehicle"];
             TRACE_3("bailOut",_center,_crewman,_vehicle);

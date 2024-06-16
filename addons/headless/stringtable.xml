@@ -62,7 +62,7 @@
             <German>Minimale Verzögerung zwischen Transfers in Sekunden. (Standard: 15)</German>
             <Polish>Minimalny odstęp pomiędzy transferami w sekundach. (Domyślnie: 15)</Polish>
             <Korean>전송 간 최소 지연 시간, 초당. (기본값: 15)</Korean>
-            <Japanese>移行する際の最低遅延を秒数で設定します。 (デフォルト: 15)</Japanese>
+            <Japanese>移行する際の最低遅延を秒単位で設定します。 (デフォルト: 15)</Japanese>
             <French>Délai minimum entres les transferts, en secondes. (Défaut: 15)</French>
             <Chinesesimp>设定每次转换间隔多少秒。（预设：15秒）</Chinesesimp>
             <Chinese>設定每次轉換間隔多少秒。(預設:15秒)</Chinese>

@@ -17,4 +17,9 @@
 
 params [["_faction", "", [""]]];
 
-GVAR(disabledFactions) setVariable [_faction, true];
+_faction = configName (configFile >> "CfgFactionClasses" >> _faction);
+
+// Faction doesn't exist
+if (_faction == "") exitWith {};
+
+GVAR(disabledFactions) set [_faction, true];

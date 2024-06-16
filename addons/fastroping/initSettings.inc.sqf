@@ -5,9 +5,7 @@ private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(setting_c
     [LSTRING(setting_requireRopeItems_displayName)],
     _category,
     false, // default value
-    true, // isGlobal
-    {[QGVAR(requireRopeItems), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    false // needRestart
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [

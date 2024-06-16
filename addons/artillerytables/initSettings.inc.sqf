@@ -15,7 +15,5 @@ private _categoryName = [format ["ACE %1", localize "str_a3_cfgmarkers_nato_art"
     [LSTRING(disableArtilleryComputer_displayName), LSTRING(disableArtilleryComputer_description)],
     _categoryName,
     false, // default value
-    true, // isGlobal
-    {[QGVAR(disableArtilleryComputer), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    false // Needs mission restart
+    true // isGlobal
 ] call CBA_fnc_addSetting;
