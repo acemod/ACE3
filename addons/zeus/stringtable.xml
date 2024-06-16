@@ -1500,7 +1500,7 @@
             <English>Fill from top to bottom</English>
             <German>Von oben nach unten befüllen</German>
             <French>Remplir de haut en bas</French>
-            <Japanese>上から下まで占拠</Japanese>
+            <Japanese>上から下へと占拠</Japanese>
             <Italian>Riempi dall'alto al basso</Italian>
             <Chinese>由上而下進行填滿</Chinese>
             <Chinesesimp>由上而下进行填满</Chinesesimp>
@@ -2011,24 +2011,38 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_ForceInterface_Tooltip">
             <English>Forces the spectator interface preventing the player from closing it with the Escape key</English>
+            <Japanese>観戦インターフェイスを強制し、ユーザーがEscキーでも閉じられないようにします。</Japanese>
+            <Russian>Активирует интерфейс spectator, не позволяя игроку закрыть его с помощью клавиши Escape.</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer">
             <English>Hide player</English>
+            <Japanese>プレイヤーを隠す</Japanese>
+            <Russian>Скрыть игрока</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer_Tooltip">
             <English>Hides the player by making them invisible, invulnerable, muted, and removing them from their group</English>
+            <Japanese>透明化、無敵化、ミュート、グループからの除外を行いプレーヤーを隠します</Japanese>
+            <Russian>Скрывает игрока, делая его невидимым, неуязвимым, отключая звук и удаляя из группы.</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_SpectableSides_Tooltip">
             <English>Sets the sides that are available to spectate</English>
+            <Japanese>指定の陣営を観戦可能に設定します</Japanese>
+            <Russian>Устанавливает стороны, доступные для режима spectator</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_WhiteHot">
             <English>White Hot</English>
+            <Japanese>白=熱源</Japanese>
+            <Russian>Белый</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_BlackHot">
             <English>Black Hot</English>
+            <Japanese>黒=熱源</Japanese>
+            <Russian>Чёрный</Russian>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleAll">
             <English>Toggle All</English>
+            <Japanese>全てを切り替え</Japanese>
+            <Russian>Выключить все</Russian>
         </Key>
     </Package>
 </Project>

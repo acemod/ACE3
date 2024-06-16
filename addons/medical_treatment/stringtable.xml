@@ -79,6 +79,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrestDirect">
             <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest [Directly]</English>
+            <Japanese>有効 &amp; 死亡/心停止状態を診断可能 [直接的に]</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -4158,6 +4159,8 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_UnresponsiveDirect">
             <English>%1 is unconscious</English>
+            <Japanese>%1 は意識がない</Japanese>
+            <Russian>%1 находится без сознания</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrest">
             <English>%1 is not responsive, taking shallow gasps and convulsing</English>
@@ -4173,6 +4176,8 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrestDirect">
             <English>%1 is in cardiac arrest</English>
+            <Japanese>%1 は心停止している</Japanese>
+            <Russian>У %1 произошла остановка сердца</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
@@ -4188,6 +4193,8 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_DeadDirect">
             <English>%1 is dead</English>
+            <Japanese>%1 は死亡している</Japanese>
+            <Russian>%1 мертв</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
@@ -5040,6 +5047,7 @@
             <Japanese>鎮痛剤を投与</Japanese>
             <Korean>진통제 투여</Korean>
             <French>Administrer des analgésiques</French>
+            <German>Verabreiche Schmerztabletten</German>
             <Spanish>Administrar Analgésicos</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administering_Painkillers">
@@ -5049,6 +5057,7 @@
             <Japanese>鎮痛剤を投与しています・・・</Japanese>
             <Korean>진통제 투여 중...</Korean>
             <French>Administration d'analgésiques...</French>
+            <German>Verabreiche Schmerztablette...</German>
             <Spanish>Administrando Analgésicos...</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Short">
@@ -5058,6 +5067,7 @@
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
             <French>Analgésique sans ordonnance utilisé pour lutter contre les douleurs légères à modérées.</French>
+            <German>Rezeptfreies Analgetikum zur Bekämpfung leichter bis mittelschwerer Schmerzen.</German>
             <Spanish>Analgésico sin receta médica  usado para aplacar dolores de ligeros a moderados.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Use">
@@ -5067,6 +5077,7 @@
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
             <French>Analgésique sans ordonnance utilisé pour lutter contre les douleurs légères à modérées.</French>
+            <German>Rezeptfreies Analgetikum zur Bekämpfung leichter bis mittelschwerer Schmerzen.</German>
             <Spanish>Analgésico sin receta médica  usado para aplacar dolores de ligeros a moderados.</Spanish>
         </Key>
     </Package>
