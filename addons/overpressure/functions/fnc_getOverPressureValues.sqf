@@ -52,7 +52,6 @@ private _config = [
 TRACE_1("ConfigPath",_config);
 
 // get the Variables out of the Configs and populate return array with them
-
 _return = [
     (getNumber (_config >> QGVAR(angle))),
     (getNumber (_config >> QGVAR(range))),
