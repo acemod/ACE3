@@ -139,7 +139,7 @@ GVAR(killCount) = 0;
         TRACE_3("send kill event",_instigator,_unitName,_killInfo);
         [QGVAR(kill), [_unitName, _killInfo], _instigator] call CBA_fnc_targetEvent;
 
-        if (GVAR(showCrewKills) && {!(_killer isKindof "CAManBase")}) then {
+        if (GVAR(showCrewKills) && {!(_killer isKindOf "CAManBase")}) then {
             private _crew = [driver _killer, gunner _killer, commander _killer] - [_instigator];
             _crew = _crew select {[_x] call EFUNC(common,isPlayer)};
             _crew = _crew arrayIntersect _crew;
