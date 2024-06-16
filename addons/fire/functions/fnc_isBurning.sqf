@@ -17,7 +17,4 @@
 
 params [["_unit", objNull, [objNull]]];
 
-_unit getVariable [QGVAR(burning), false] || {
-    GVAR(burningPlants) = GVAR(burningPlants) select {!isNull _x};
-    _unit in GVAR(burningPlants)
-}
+_unit getVariable [QGVAR(burning), false]

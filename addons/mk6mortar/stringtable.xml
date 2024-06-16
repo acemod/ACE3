@@ -163,7 +163,7 @@
             <Hungarian>A távmérő és számítógép megjelenítése (ezeket el KELL távolítani ha a légellenállás engedélyezve van)</Hungarian>
             <Russian>Показывает компьютер и дальномер (это НУЖНО отключить, если вы включаете сопротивление воздуха)</Russian>
             <Italian>Consenti l'utilizzo del Computer Balistico e del Telemetro (questi DEVONO essere disabilitati se vuoi abilitare la resistenza dell'aria)</Italian>
-            <Japanese>砲撃コンピュータと距離計を表示します (空気抵抗を仕様する場合は必ず無効化する必要があります)</Japanese>
+            <Japanese>砲撃コンピュータと距離計を表示します (空気抵抗を有効化する場合はこれらを取り除く必要があります)</Japanese>
             <Korean>탄도계산컴퓨터와 거리측정기를 보여줍니다(공기저항을 활성화했을 경우 이 항목은 비활성화 되어야 합니다)</Korean>
             <Chinesesimp>显示弹道计算机和测距仪（如果有启用空气阻力功能时，须停用此项功能）</Chinesesimp>
             <Chinese>顯示射控電腦和測距儀 (如果有啟用空氣阻力功能時，須停用此項功能)</Chinese>
@@ -241,7 +241,7 @@
             <Italian>Rimuove i caricatori di colpi dal mortaio. Un operatore dovrà caricare proiettili singoli prima di poter fare fuoco. Non viene applicato su operatori IA.</Italian>
             <Portuguese>Elimina os carregadores do morteiro, requerendo que o atirador ou carregador utilize de forma individual a munição. Não afeta os morteiros controlados pela IA.</Portuguese>
             <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжающим. Не влияет на артиллерию ИИ.</Russian>
-            <Japanese>迫撃砲から弾薬を除去します。射手か装填手により予め装填されている必要があります。AI迫撃砲へ影響を与えません。</Japanese>
+            <Japanese>迫撃砲から弾倉を除去します。一発ずつ射手か装填手によって装填される必要があります。AIの迫撃砲には影響を与えません。</Japanese>
             <Korean>박격포 탄창을 제거합니다, 사수나 장전수가 개별적으로 탄환을 넣어줘야 합니다. 인공지능은 영향을 받지 않습니다.</Korean>
             <Chinesesimp>开启此功能时。迫击炮的弹药需由炮手与装填手共同合作来进行装填。此功能并不影响由 AI 射击的迫击炮</Chinesesimp>
             <Chinese>開啟此功能時。迫擊砲的彈藥需由砲手與裝填手共同合作來進行裝填。此功能並不影響由AI射擊的迫擊砲</Chinese>
@@ -257,7 +257,7 @@
             <Czech>Odstranit náboj</Czech>
             <Portuguese>Remover munição</Portuguese>
             <Russian>Извлечь снаряд</Russian>
-            <Japanese>弾薬を除去</Japanese>
+            <Japanese>砲弾を取り除く</Japanese>
             <Korean>탄약 제거</Korean>
             <Chinesesimp>卸除弹头</Chinesesimp>
             <Chinese>卸除彈頭</Chinese>
@@ -273,7 +273,7 @@
             <Czech>Nabít minomet</Czech>
             <Portuguese>Carregar morteiro</Portuguese>
             <Russian>Зарядить миномет</Russian>
-            <Japanese>弾薬を装填</Japanese>
+            <Japanese>砲弾を装填</Japanese>
             <Korean>탄약 장전</Korean>
             <Chinesesimp>装载弹头</Chinesesimp>
             <Chinese>裝載彈頭</Chinese>
@@ -288,7 +288,7 @@
             <Italian>Togliendo Proiettile</Italian>
             <Portuguese>Descarregar munição</Portuguese>
             <Russian>Извлечение снаряда</Russian>
-            <Japanese>弾薬を除去しています</Japanese>
+            <Japanese>砲弾を取り除いています</Japanese>
             <Korean>탄약 제거 중</Korean>
             <Chinesesimp>正在卸除弹头</Chinesesimp>
             <Chinese>卸除彈頭中</Chinese>
@@ -305,7 +305,7 @@
             <Czech>Připavuji náboj</Czech>
             <Portuguese>Preparar munição</Portuguese>
             <Russian>Подготовка снаряда</Russian>
-            <Japanese>砲弾を事前装填</Japanese>
+            <Japanese>砲弾を準備</Japanese>
             <Korean>탄약 준비 중</Korean>
             <Chinesesimp>正在准备弹头</Chinesesimp>
             <Chinese>準備彈頭中</Chinese>
@@ -544,7 +544,7 @@
             <Czech>[ACE] Bedna se standardní 82mm municí</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Padrão</Portuguese>
             <Russian>[ACE] Ящик снарядов 82мм (стандартный)</Russian>
-            <Japanese>[ACE] 82mm 保管箱</Japanese>
+            <Japanese>[ACE] 82mm 標準砲弾セット入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 기본 장비 상자</Korean>
             <Chinesesimp>[ACE] 82 mm 预设弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米預設彈藥箱</Chinese>

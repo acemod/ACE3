@@ -191,6 +191,9 @@
             <Italian>Mostra informazioni sul vento temporaneamente</Italian>
             <Japanese>一時的に風の情報を表示</Japanese>
             <Korean>바람 정보 임시로 표시</Korean>
+            <French>Afficher temporairement les informations sur le vent</French>
+            <Russian>Временно показать информацию о ветре</Russian>
+            <Spanish>Mostrar información del viento temporalmente</Spanish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_EnableTempWindInfo_Description">
             <English>Temporarily display Wind Info while throwing, to aid in placing smoke grenades effectively.</English>
@@ -198,6 +201,9 @@
             <Italian>Mostra le informazioni sul vento durante il lancio di granate, facilitando il piazzamento ottimale di fumogeni.</Italian>
             <Japanese>投擲行動中に風向きの情報を一時的に表示し、発煙手榴弾の煙幕を効果的に展開しやすくします。</Japanese>
             <Korean>연막탄을 효과적으로 배치하는 데 도움이 되도록 투척하는 동안 일시적으로 바람 정보를 표시합니다.</Korean>
+            <French>Affiche les informations sur le vent pendant le lancement pour placer les grenades fumigènes plus efficacement.</French>
+            <Russian>Временно отображайте информацию о ветре во время броска, чтобы помочь эффективно разместить дымовые шашки.</Russian>
+            <Spanish>Mostrar información del viento temporalmente mientras se lanza, para ayudar a lanzar las granadas de humo de forma efectiva.</Spanish>
         </Key>
         <Key ID="STR_ACE_Advanced_Throwing_Prepare">
             <English>Prepare/Change Throwable</English>
