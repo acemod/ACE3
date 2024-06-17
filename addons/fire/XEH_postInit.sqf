@@ -28,7 +28,7 @@ if (!isServer) exitWith {};
             ["_radius", 0, [0]],
             ["_intensity", 0, [0]],
             ["_key", ""],
-            ["_condition", {true}],
+            ["_condition", {true}, [{}]],
             ["_conditionArgs", []]
         ];
 
