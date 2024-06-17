@@ -1,3 +1,0 @@
-
-PREP(canRefuelUAV);
-PREP(refuelUAV);

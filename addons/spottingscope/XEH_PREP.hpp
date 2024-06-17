@@ -1,2 +1,0 @@
-PREP(pickup);
-PREP(place);
