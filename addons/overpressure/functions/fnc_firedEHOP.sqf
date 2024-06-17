@@ -25,6 +25,7 @@ _opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
 _dangerZoneRange = _dangerZoneRange * GVAR(overpressureDistanceCoefficient);
 
 TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
+
 if (_dangerZoneDamage <= 0) exitWith {};
 
 // The weapon produces overpressure, calculate
