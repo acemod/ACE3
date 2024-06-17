@@ -2,11 +2,10 @@
 
 ["CBA_settingsInitialized", {
 
-    TRACE_1("settingsInit eh",GVAR(backblastDistanceCoefficient));
-    TRACE_1("settingsInit eh",GVAR(overpressureDistanceCoefficient));
+    TRACE_2("settingsInit eh",GVAR(backblastDistanceCoefficient),GVAR(overpressureDistanceCoefficient));
 
     // Both settings disabled, no need to initialize overpressure.
-    if (GVAR(backblastDistanceCoefficient) <= 0 && GVAR(overpressureDistanceCoefficient) <= 0) exitWith {};
+    if (GVAR(backblastDistanceCoefficient) == 0 && GVAR(overpressureDistanceCoefficient) == 0) exitWith {};
     
     ["ace_overpressure", LINKFUNC(overpressureDamage)] call CBA_fnc_addEventHandler;
 
