@@ -1,7 +1,8 @@
 private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(DisplayName)];
 
 [
-    QGVAR(backblastDistanceCoefficient), "SLIDER",
+    QGVAR(backblastDistanceCoefficient),
+    "SLIDER",
     [ELSTRING(statBackblastRange,Overpressure), LSTRING(distanceCoefficient_toolTip)],
     _category,
     [0, 10, 1, 1],
