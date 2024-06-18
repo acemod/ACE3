@@ -18,8 +18,6 @@
  * Public: No
  */
 
-#define BURN_THRESHOLD 1
-
 params ["_unit", "_damages"];
 TRACE_2("woundsHandlerIncendiary",_unit,_damages);
 
@@ -32,9 +30,7 @@ private _fireDamage = 0;
 private _intensity = linearConversion [0, 20, _fireDamage, 0, 10, true];
 TRACE_2("",_intensity,_fireDamage);
 
-if (_intensity > BURN_THRESHOLD) then {
-    TRACE_2("Setting unit ablaze",_intensity,BURN_THRESHOLD);
-    ["ace_fire_burn", [_unit, _intensity]] call CBA_fnc_globalEvent;
-};
+// Let fire handle if unit is set ablaze or not
+[QEGVAR(fire,burn), [_unit, _intensity]] call CBA_fnc_localEvent;
 
 _this // return
