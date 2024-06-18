@@ -27,7 +27,7 @@ private _newIndex = -1;
 if (cba_events_control) then {
     if (cameraView != "INTERNAL") exitWith {};
     if (isTurnedOut _player) exitWith {};
-    if (!([_player, _vehicle, []] call EFUNC(common,canInteractWith))) exitWith {};
+    if !([_player, _vehicle, []] call EFUNC(common,canInteractWith)) exitWith {};
 
     BEGIN_COUNTER(newIndex);
     if ((_shownIndex > -1) && {currentVisionMode _player != _lastVisionMode}) then {

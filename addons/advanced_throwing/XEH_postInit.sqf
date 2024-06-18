@@ -13,7 +13,7 @@ GVAR(tempWindInfo) = false;
 // Add keybinds
 ["ACE3 Weapons", QGVAR(prepare), localize LSTRING(Prepare), {
     // Condition
-    if (!([ACE_player] call FUNC(canPrepare))) exitWith {false};
+    if !([ACE_player] call FUNC(canPrepare)) exitWith {false};
     if (EGVAR(common,isReloading)) exitWith {true};
 
     // Statement

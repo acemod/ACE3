@@ -14,7 +14,9 @@
  *
  * Public: No
  */
+
 params ["_trap"];
+
 if !(GETEGVAR(medical,enabled,false)) exitWith {};
 
 private _radius = getNumber (configOf _trap >> "indirectHitRange");

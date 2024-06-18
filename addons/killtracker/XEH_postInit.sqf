@@ -19,6 +19,7 @@
 if ((getText (missionconfigfile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QXGVAR(outputText)) exitWith {
     TRACE_1("no mission debriefing config",_this);
 };
+
 if !(GETEGVAR(medical,enabled,false)) exitWith {
     WARNING("No ACE-Medical");
     XGVAR(outputText) = "No ACE-Medical";
@@ -64,7 +65,7 @@ GVAR(killCount) = 0;
     private _killInfo = [];
 
     if (!isNull _killer) then {
-        if (!(_killer isKindof "CAManBase")) then { // If killer is a vehicle log the vehicle type
+        if !(_killer isKindof "CAManBase") then { // If killer is a vehicle log the vehicle type
             _killInfo pushBack format [LLSTRING(Vehicle), getText ((configOf _killer) >> "displayName")];
         };
         if (isNull _instigator) then {
@@ -77,7 +78,7 @@ GVAR(killCount) = 0;
     TRACE_2("",_unitIsPlayer,_instigatorIsPlayer);
 
     // Don't do anything if neither are players
-    if (!(_unitIsPlayer || _instigatorIsPlayer)) exitWith {};
+    if !(_unitIsPlayer || _instigatorIsPlayer) exitWith {};
 
     // Log firendly fire
     private _fnc_getSideFromConfig = {
@@ -89,7 +90,7 @@ GVAR(killCount) = 0;
             default {civilian};
         };
     };
-    if ((!isNull _instigator) && {_unit != _instigator} && {_instigator isKindOf "CAManBase"}) then {
+    if (!isNull _instigator && {_unit != _instigator} && {_instigator isKindOf "CAManBase"}) then {
         // Because of unconscious group switching/captives it's probably best to just use unit's config side
         private _unitSide = [_unit] call _fnc_getSideFromConfig;
         private _killerSide = [_instigator] call _fnc_getSideFromConfig;

@@ -22,6 +22,7 @@ GVAR(flashbangPPEffectCC) ppEffectForceInNVG true;
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if !(ACE_player call CBA_fnc_canUseWeapon) exitWith {false};
+
     // Don't change mode or show hint if advanced throwing is active
     if (ACE_player getVariable [QEGVAR(advanced_throwing,inHand), false]) exitWith {false};
 
