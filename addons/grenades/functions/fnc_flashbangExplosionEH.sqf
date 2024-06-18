@@ -99,7 +99,7 @@ private _strength = 1 - ((_eyePos vectorDistance _grenadePosASL) min 20) / 20;
 // Check for line of sight (check 4 points in case grenade is stuck in an object or underground)
 private _losCount = {
     !lineIntersects [_grenadePosASL vectorAdd _x, _eyePos, ACE_player]
-} count [[0,0,0], [0,0,0.2], [0.1, 0.1, 0.1], [-0.1, -0.1, 0.1]];
+} count [[0, 0, 0], [0, 0, 0.2], [0.1, 0.1, 0.1], [-0.1, -0.1, 0.1]];
 TRACE_1("Line of sight count (out of 4)",_losCount);
 
 private _losCoefficient = [1, 0.1] select (_losCount <= 1);
@@ -113,7 +113,7 @@ if (["ace_hearing"] call EFUNC(common,isModLoaded) && {_strength > 0} && {EGVAR(
 };
 
 // Add ace_medical pain effect
-if (["ace_medical"] call EFUNC(common,isModLoaded) && {_strength > 0.1} && {isDamageAllowed _unit} && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) then {
+if (GETEGVAR(medical,enabled,false) && {_strength > 0.1} && {isDamageAllowed _unit} && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) then {
     [ACE_player, _strength / 2] call EFUNC(medical,adjustPainLevel);
 };
 

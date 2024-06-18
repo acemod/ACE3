@@ -164,7 +164,7 @@ if (isServer) then {
 
         // If incendiary no longer exists, exit
         if (isNull _projectile) exitWith {
-            false
+            false // return
         };
 
         // Need to get the position every time, as grenade might have been moved

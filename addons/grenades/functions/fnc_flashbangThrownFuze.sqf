@@ -18,17 +18,17 @@
 params ["_projectile"];
 TRACE_1("params",_projectile);
 
-if (alive _projectile) then {
-    private _posASL = getPosASL _projectile;
-    private _sounds = getArray (_projectile call CBA_fnc_getObjectConfig >> QGVAR(flashbangExplodeSound));
+if (!alive _projectile) exitWith {};
 
-    (if (_sounds isEqualTo []) then {
-        [format ["A3\Sounds_F\arsenal\explosives\grenades\Explosion_HE_grenade_0%1.wss", floor (random 4) + 1], 5, 1.2, 400]
-    } else {
-        selectRandom _sounds
-    }) params ["_file", "_volume", "_pitch", "_distance"];
+private _posASL = getPosASL _projectile;
+private _sounds = getArray (_projectile call CBA_fnc_getObjectConfig >> QGVAR(flashbangExplodeSound));
 
-    playSound3D [_file, _projectile, false, _posASL, _volume, _pitch, _distance];
+(if (_sounds isEqualTo []) then {
+    [format ["A3\Sounds_F\arsenal\explosives\grenades\Explosion_HE_grenade_0%1.wss", floor (random 4) + 1], 5, 1.2, 400]
+} else {
+    selectRandom _sounds
+}) params ["_file", "_volume", "_pitch", "_distance"];
 
-    ["ace_flashbangExploded", [_posASL]] call CBA_fnc_globalEvent;
-};
+playSound3D [_file, _projectile, false, _posASL, _volume, _pitch, _distance];
+
+["ace_flashbangExploded", [_posASL]] call CBA_fnc_globalEvent;
