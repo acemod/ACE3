@@ -55,7 +55,7 @@ if (_distance < _backblastRange) then {
 
         [_damage * 100] call BIS_fnc_bloodEffect;
 
-        if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+        if (GETEGVAR(medical,enabled,false)) then {
             [_unit, _damage, "body", "backblast", _unit] call EFUNC(medical,addDamageToUnit);
         } else {
             _unit setDamage (damage _unit + _damage);
