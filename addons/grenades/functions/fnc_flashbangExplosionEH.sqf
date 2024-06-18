@@ -118,7 +118,7 @@ if (hasInterface && {!isNull ACE_player} && {alive ACE_player}) then {
     };
 
     // add ace_medical pain effect:
-    if (["ace_medical"] call EFUNC(common,isModLoaded) && {_strength > 0.1} && {isDamageAllowed _unit} && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) then {
+    if (GETEGVAR(medical,enabled,false) && {_strength > 0.1} && {isDamageAllowed _unit} && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) then {
         [ACE_player, _strength / 2] call EFUNC(medical,adjustPainLevel);
     };
 
