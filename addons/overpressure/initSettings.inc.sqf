@@ -3,16 +3,16 @@ private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(DisplayNa
 [
     QGVAR(backblastDistanceCoefficient),
     "SLIDER",
-    [LSTRING(statBackblastRange), LSTRING(backblastDistanceCoefficient_toolTip)],
+    [LSTRING(backblastDistanceCoefficient_displayName), LSTRING(backblastDistanceCoefficient_toolTip)],
     _category,
     [0, 10, 1, 1],
     1
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(overpressureDistanceCoefficient), 
+    QGVAR(overpressureDistanceCoefficient),
     "SLIDER",
-    [LSTRING(statOverpressureRange), LSTRING(overpressureDistanceCoefficient_toolTip)],
+    [LSTRING(distanceCoefficient_displayName), LSTRING(distanceCoefficient_toolTip)],
     _category,
     [0, 10, 1, 1],
     1

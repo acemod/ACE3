@@ -29,23 +29,7 @@
             <Czech>Koeficient vzdálenosti přetlaku</Czech>
             <Spanish>Coeficiente de distancia de sobrepresión</Spanish>
         </Key>
-        <Key ID="STR_ACE_Backblast_distanceCoefficient_displayName">
-            <English>Backblast Distance Coefficient</English>
-            <German>Überdruckentfernungskoeffizient</German>
-            <Japanese>過圧の距離係数</Japanese>
-            <Korean>과중압력 거리 계수</Korean>
-            <Polish>Mnożnik dystansu nadciśnienia</Polish>
-            <French>Coefficient de distance pour la surpression</French>
-            <Italian>Coefficente Distanza Sovrapressione</Italian>
-            <Chinesesimp>超压影响距离系数</Chinesesimp>
-            <Chinese>高壓影響距離係數</Chinese>
-            <Russian>Коэф. избыточного давления</Russian>
-            <Portuguese>Coeficiente de Distância de Sobrepressão</Portuguese>
-            <Hungarian>Túlnyomás-távolság együtthatója</Hungarian>
-            <Czech>Koeficient vzdálenosti přetlaku</Czech>
-            <Spanish>Coeficiente de distancia de sobrepresión</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overpressure_overpressureDistanceCoefficient_toolTip">
+        <Key ID="STR_ACE_Overpressure_distanceCoefficient_toolTip">
             <English>Scales the overpressure effect</English>
             <German>Stellt den Koeffizient für die Überdruckentfernung ein</German>
             <Japanese>過圧効果の範囲</Japanese>
@@ -61,11 +45,11 @@
             <Czech>Nastavuje jak velký je efekt přetlaku</Czech>
             <Spanish>Escala el efecto de sobrepresión</Spanish>
         </Key>
-        <Key ID="STR_ACE_Backblast_backblastDistanceCoefficient_toolTip">
-            <English>Scales the backblast effect</English>
+        <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_displayName">
+            <English>Backblast Distance Coefficient</English>
         </Key>
-        <Key ID="STR_ACE_Overpressure_statBackblastRange">
-            <English>Overpressure range</English>
+        <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_toolTip">
+            <English>Scales the backblast effect</English>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastRange">
             <English>Backblast range</English>
