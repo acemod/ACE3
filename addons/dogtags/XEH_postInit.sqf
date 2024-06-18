@@ -8,7 +8,7 @@
 // Add actions and event handlers only if ace_medical is enabled
 // - Adding actions via config would create a dependency
 ["CBA_settingsInitialized", {
-    if (!GETEGVAR(medical,enabled,false)) exitWith {};
+    if !(GETEGVAR(medical,enabled,false)) exitWith {};
 
     if (hasInterface) then {
         private _checkTagAction = [
