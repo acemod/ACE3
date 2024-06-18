@@ -31,6 +31,15 @@
         // Save tripod position before it's deleted
         private _tripodPos = getPosATL _tripod;
 
+        // Eject dead units (all crew are dead at this point, otherwise condition would have failed), but ignore UAV units
+        {
+            if (!unitIsUAV _x) then {
+                moveOut _x;
+            } else {
+                _tripod deleteVehicleCrew _x;
+            };
+        } forEach (crew _tripod);
+
         deleteVehicle _tripod;
 
         [_player, "PutDown"] call EFUNC(common,doGesture);
@@ -57,7 +66,7 @@
         params ["_args"];
         _args params ["_tripod"];
 
-        alive _tripod
+        _tripod call FUNC(canPickupTripod)
     };
 
     TRACE_3("",_pickupTime,typeOf _tripod,_tripodClassname);

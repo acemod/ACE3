@@ -104,6 +104,16 @@
         }, [_player, _weaponPos, _carryWeaponClassname, _carryWeaponMag, _turretClassname]] call CBA_fnc_execNextFrame;
 
         LOG("delete weapon");
+
+        // Eject dead units (all crew are dead or UAV at this point, otherwise condition would have failed), but ignore UAV units
+        {
+            if (!unitIsUAV _x) then {
+                moveOut _x;
+            } else {
+                _staticWeapon deleteVehicleCrew _x;
+            };
+        } forEach (crew _staticWeapon);
+
         deleteVehicle _staticWeapon;
 
         LOG("end");
@@ -112,7 +122,8 @@
     private _condition = {
         params ["_args"];
         _args params ["_staticWeapon"];
-        ((crew _staticWeapon) isEqualTo []) && (alive _staticWeapon)
+
+        _staticWeapon call FUNC(assemble_canPickupWeapon)
     };
 
     [TIME_PROGRESSBAR(_pickupTime), [_staticWeapon, _player, _carryWeaponClassname, _turretClassname, _onDisassembleFunc], _onFinish, {}, LLSTRING(DisassembleCSW_progressBar), _condition] call EFUNC(common,progressBar);

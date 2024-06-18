@@ -18,4 +18,4 @@
 
 params ["_tripod"];
 
-alive _tripod // return
+alive _tripod && {((crew _tripod) findIf {alive _x && {!unitIsUAV _x}}) == -1} // return
