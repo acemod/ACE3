@@ -107,10 +107,10 @@
 
         // Eject dead units (all crew are dead or UAV at this point, otherwise condition would have failed), but ignore UAV units
         {
-            if (!unitIsUAV _x) then {
-                moveOut _x;
-            } else {
+            if (unitIsUAV _x) then {
                 _staticWeapon deleteVehicleCrew _x;
+            } else {
+                moveOut _x;
             };
         } forEach (crew _staticWeapon);
 
