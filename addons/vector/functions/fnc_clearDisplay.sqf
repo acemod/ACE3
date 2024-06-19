@@ -34,4 +34,15 @@ switch (_this select 0) do {
         (_dlgVector displayCtrl IDC_DIGIT_3) ctrlSetText "";
         (_dlgVector displayCtrl IDC_DIGIT_4) ctrlSetText "";
     };
+
+    case ("time"): {
+        (_dlgVector displayCtrl IDC_DIGIT_TH1) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_TH2) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_TD1) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_TM1) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_TM2) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_TD2) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_TS1) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_TS2) ctrlSetText "";
+    };
 };

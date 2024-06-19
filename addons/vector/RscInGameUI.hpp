@@ -71,15 +71,15 @@ class RscInGameUI {
                     y = "0.5 - (0.7 / 9 * safezoneH)/2 - safezoneY";
                     w = "0.7 / 16 * safezoneW";
                     h = "0.7 / 9 * safezoneH";
-                };
+                };                
 
                 class Digit0: Center {
                     idc = IDC_DIGIT_0;
                     x = "(0.54 + 0 * 0.02) * safezoneW";
-                    y = "0.54 * safezoneH";
+                    y = "0.1 * safezoneH";
                     w = "0.5 / 16 * safezoneW";
                     h = "0.5 / 9 * safezoneH";
-                };
+                }; 
                 class Digit1: Digit0 {
                     idc = IDC_DIGIT_1;
                     x = "(0.54 + 1 * 0.02) * safezoneW";
@@ -98,23 +98,67 @@ class RscInGameUI {
                 };
                 class Digit5: Digit0 {
                     idc = IDC_DIGIT_5;
-                    x = "(0.35 + 0 * 0.02) * safezoneW";
+                    x = "(0.58 + 0 * 0.02) * safezoneW";
+                    y = "0.2 * safezoneH";
                 };
                 class Digit6: Digit0 {
                     idc = IDC_DIGIT_6;
-                    x = "(0.35 + 1 * 0.02) * safezoneW";
+                    x = "(0.58 + 1 * 0.02) * safezoneW";
+                    y = "0.2 * safezoneH";
                 };
                 class Digit7: Digit0 {
                     idc = IDC_DIGIT_7;
-                    x = "(0.35 + 2 * 0.02) * safezoneW";
+                    x = "(0.58 + 2 * 0.02) * safezoneW";
+                    y = "0.2 * safezoneH";
                 };
                 class Digit8: Digit0 {
                     idc = IDC_DIGIT_8;
-                    x = "(0.35 + 3 * 0.02) * safezoneW";
+                    x = "(0.58 + 3 * 0.02) * safezoneW";
+                    y = "0.2 * safezoneH";
                 };
                 class Digit9: Digit0 {
                     idc = IDC_DIGIT_9;
-                    x = "(0.35 + 4 * 0.02) * safezoneW";
+                    x = "(0.58 + 4 * 0.02) * safezoneW";
+                    y = "0.2 * safezoneH";
+                };
+
+                // Game time digits
+                class DigitTime: Digit0 {
+                    y = "0.93 * safezoneH";
+                    w = "0.56 / 48 * safezoneW";
+                    h = "0.56 / 27 * safezoneH";
+                };
+                class DigitTH1: DigitTime {
+                    idc = IDC_DIGIT_TH1;
+                    x = "(0.58 + 0 * 0.008) * safezoneW";
+                };
+                class DigitTH2: DigitTime {
+                    idc = IDC_DIGIT_TH2;
+                    x = "(0.58 + 1 * 0.008) * safezoneW";
+                };
+                class DigitTD1: DigitTime {
+                    idc = IDC_DIGIT_TD1;
+                    x = "(0.58 + 1 * 0.008 + 0.004) * safezoneW";
+                };
+                class DigitTM1: DigitTime {
+                    idc = IDC_DIGIT_TM1;
+                    x = "(0.58 + 2 * 0.008) * safezoneW";
+                };
+                class DigitTM2: DigitTime {
+                    idc = IDC_DIGIT_TM2;
+                    x = "(0.58 + 3 * 0.008) * safezoneW";
+                };
+                class DigitTD2: DigitTime {
+                    idc = IDC_DIGIT_TD2;
+                    x = "(0.58 + 3 * 0.008 + 0.004) * safezoneW";
+                };
+                class DigitTS1: DigitTime {
+                    idc = IDC_DIGIT_TS1;
+                    x = "(0.58 + 4 * 0.008) * safezoneW";
+                };
+                class DigitTS2: DigitTime {
+                    idc = IDC_DIGIT_TS2;
+                    x = "(0.58 + 5 * 0.008) * safezoneW";
                 };
 
                 class DigitE1: Digit0 {
