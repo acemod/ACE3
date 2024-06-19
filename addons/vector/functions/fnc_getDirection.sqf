@@ -33,7 +33,9 @@ private _direction = ATLToASL positionCameraToWorld [0,0,1];
 private _azimuth = ((_direction select 0) - (_position select 0)) atan2 ((_direction select 1) - (_position select 1));
 private _inclination = asin ((_direction select 2) - (_position select 2));
 
+private _inclinationRaw = _inclination;
+
 if (_azimuth < 0) then {_azimuth = _azimuth + 360};
 if (abs _inclination > MAX_ABSINCLINATION) then {_inclination = -1000};
 
-[_azimuth, _inclination]
+[_azimuth, _inclination, _inclinationRaw]

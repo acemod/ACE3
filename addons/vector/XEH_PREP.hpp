@@ -1,5 +1,6 @@
 PREP(clearDisplay);
 PREP(convertToTexturesDegree);
+PREP(convertToTexturesDegreeBelow90);
 PREP(convertToTexturesDistance);
 PREP(convertToTexturesFOS);
 PREP(dataTransfer);
@@ -16,6 +17,7 @@ PREP(getRelativeDistance);
 PREP(getRelativeHeightLength);
 PREP(getFallOfShot);
 PREP(showAzimuth);
+PREP(showInclination);
 PREP(showAzimuthInclination);
 PREP(showHeightDistance);
 PREP(showDistance);

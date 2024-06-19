@@ -35,6 +35,7 @@ switch (_this select 0) do {
 
         if (_isReady) then {
             call FUNC(showAzimuth);
+            call FUNC(showInclination);
         };
 
         if (!GVAR(isKeyDownAzimuth)) then {
@@ -71,6 +72,7 @@ switch (_this select 0) do {
     case ("azimuth+distance"): {
 
         call FUNC(showAzimuth);
+        call FUNC(showInclination);
 
         private _isReady = diag_tickTime > GVAR(keyDownTimeDistance) + 0.5;
 

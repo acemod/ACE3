@@ -45,4 +45,11 @@ switch (_this select 0) do {
         (_dlgVector displayCtrl IDC_DIGIT_TS1) ctrlSetText "";
         (_dlgVector displayCtrl IDC_DIGIT_TS2) ctrlSetText "";
     };
+
+    case ("targetAngle"): {
+        (_dlgVector displayCtrl IDC_DIGIT_TGA1) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_TGA2) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_TGA3) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_TGA4) ctrlSetText "";
+    };
 };

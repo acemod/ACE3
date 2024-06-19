@@ -122,6 +122,28 @@ class RscInGameUI {
                     y = "0.2 * safezoneH";
                 };
 
+                // Target Elevation Angle
+                class DigitTGA1: Digit0 {
+                    idc = IDC_DIGIT_TGA1;
+                    x = "(0.58 + 0 * 0.02) * safezoneW";
+                    y = "0.5 * safezoneH";
+                };
+                class DigitTGA2: Digit0 {
+                    idc = IDC_DIGIT_TGA2;
+                    x = "(0.58 + 1 * 0.02) * safezoneW";
+                    y = "0.5 * safezoneH";
+                };
+                class DigitTGA3: Digit0 {
+                    idc = IDC_DIGIT_TGA3;
+                    x = "(0.58 + 2 * 0.02) * safezoneW";
+                    y = "0.5 * safezoneH";
+                };
+                class DigitTGA4: Digit0 {
+                    idc = IDC_DIGIT_TGA4;
+                    x = "(0.58 + 3 * 0.02) * safezoneW";
+                    y = "0.5 * safezoneH";
+                };
+
                 // Game time digits
                 class DigitTime: Digit0 {
                     y = "0.93 * safezoneH";
