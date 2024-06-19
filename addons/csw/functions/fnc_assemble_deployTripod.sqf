@@ -34,12 +34,11 @@
 
         // Create a tripod
         private _cswTripod = createVehicle [_tripodClassname, [0, 0, 0], [], 0, "NONE"];
-        // Because the tripod can be a "full weapon" we disable any data that will allow it to be loaded
-        _cswTripod setVariable [QGVAR(assemblyMode), 2, true]; // Explicitly set enabled&unload assembly mode and broadcast
+        _cswTripod setVariable [QGVAR(assembled), true, true];
         if (_secondaryWeaponMagazine isNotEqualTo "") then {
             _cswTripod setVariable [QGVAR(secondaryWeaponMagazine), _secondaryWeaponMagazine];
         };
-        if (!GVAR(defaultAssemblyMode)) then {
+        if (GVAR(defaultAssemblyMode)) then {
             [_cswTripod, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
         };
 
