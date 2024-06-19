@@ -121,6 +121,28 @@ class RscInGameUI {
                     x = "(0.58 + 4 * 0.02) * safezoneW";
                     y = "0.2 * safezoneH";
                 };
+                class Digit10: Digit0 {
+                    idc = IDC_DIGIT_D2_0;
+                    y = "0.3 * safezoneH";
+                    w = "0.5 / 16 * safezoneW";
+                    h = "0.5 / 9 * safezoneH";
+                };
+                class Digit11: Digit10 {
+                    idc = IDC_DIGIT_D2_1;
+                    x = "(0.54 + 1 * 0.02) * safezoneW";
+                };
+                class Digit12: Digit10 {
+                    idc = IDC_DIGIT_D2_2;
+                    x = "(0.54 + 2 * 0.02) * safezoneW";
+                };
+                class Digit13: Digit10 {
+                    idc = IDC_DIGIT_D2_3;
+                    x = "(0.54 + 3 * 0.02) * safezoneW";
+                };
+                class Digit14: Digit10 {
+                    idc = IDC_DIGIT_D2_4;
+                    x = "(0.54 + 4 * 0.02) * safezoneW";
+                };
 
                 // Game time digits
                 class DigitTime: Digit0 {
