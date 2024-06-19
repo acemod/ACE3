@@ -68,6 +68,27 @@ switch (_this select 0) do {
 
     };
 
+    case ("distance2"): {
+
+        private _isReady = diag_tickTime > GVAR(keyDownTimeDistance2) + 0.5;
+
+        [_isReady] call FUNC(showCenter);
+
+        if (!GVAR(isKeyDownDistance2)) then {
+            if (_isReady) then {
+                call FUNC(showDistance2);
+                [false] call FUNC(showCenter);
+            };
+
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+            if (GVAR(holdKeyHandler) > -1) then {
+                GVAR(holdKeyHandler) = -1;
+            };
+        };
+
+    };
+
     case ("azimuth+distance"): {
 
         call FUNC(showAzimuth);
@@ -79,6 +100,30 @@ switch (_this select 0) do {
         if (!GVAR(isKeyDownAzimuth) && {!GVAR(isKeyDownDistance)}) then {
             if (_isReady) then {
                 call FUNC(showDistance);
+                [false] call FUNC(showCenter);
+                [] call FUNC(dataTransfer);
+            };
+
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+            if (GVAR(holdKeyHandler) > -1) then {
+                GVAR(holdKeyHandler) = -1;
+            };
+        };
+
+    };
+
+    case ("azimuth+distance2"): {
+
+        call FUNC(showAzimuth);
+
+        private _isReady = diag_tickTime > GVAR(keyDownTimeDistance2) + 0.5;
+
+        [_isReady] call FUNC(showCenter);
+
+        if (!GVAR(isKeyDownAzimuth) && {!GVAR(isKeyDownDistance2)}) then {
+            if (_isReady) then {
+                call FUNC(showDistance2);
                 [false] call FUNC(showCenter);
                 [] call FUNC(dataTransfer);
             };
@@ -119,6 +164,27 @@ switch (_this select 0) do {
         [_isReady] call FUNC(showCenter);
 
         if (!GVAR(isKeyDownDistance)) then {
+            if (_isReady) then {
+                call FUNC(showHeightDistance);
+                [false] call FUNC(showCenter);
+            };
+
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+            if (GVAR(holdKeyHandler) > -1) then {
+                GVAR(holdKeyHandler) = -1;
+            };
+        };
+
+    };
+
+    case ("height+distance2"): {
+
+        private _isReady = diag_tickTime > GVAR(keyDownTimeDistance2) + 0.5;
+
+        [_isReady] call FUNC(showCenter);
+
+        if (!GVAR(isKeyDownDistance2)) then {
             if (_isReady) then {
                 call FUNC(showHeightDistance);
                 [false] call FUNC(showCenter);
@@ -184,6 +250,28 @@ switch (_this select 0) do {
         [_isReady] call FUNC(showCenter);
 
         if (!GVAR(isKeyDownAzimuth) && {!GVAR(isKeyDownDistance)}) then {
+            if (_isReady) then {
+                call FUNC(showRelativeAzimuthDistance);
+            };
+            [false] call FUNC(showCenter);
+            [false] call FUNC(showP1);
+
+            [_this select 1] call CBA_fnc_removePerFrameHandler;
+
+            if (GVAR(holdKeyHandler) > -1) then {
+                GVAR(holdKeyHandler) = -1;
+            };
+        };
+
+    };
+
+    case ("relative_azimuth+distance2"): {
+
+        private _isReady = diag_tickTime > GVAR(keyDownTimeDistance2) + 0.5;
+
+        [_isReady] call FUNC(showCenter);
+
+        if (!GVAR(isKeyDownAzimuth) && {!GVAR(isKeyDownDistance2)}) then {
             if (_isReady) then {
                 call FUNC(showRelativeAzimuthDistance);
             };
