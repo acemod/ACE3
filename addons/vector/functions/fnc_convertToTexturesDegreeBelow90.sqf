@@ -13,13 +13,13 @@ if (_digit2 > 0) then {
         { QPATHTOF(rsc\vector_minus.paa) },
         { QPATHTOF(rsc\vector_blank.paa) }
     ];
-    _digit2 = format [QPATHTOF(rsc\vector_%1.paa), _digit2],
+    _digit2 = format [QPATHTOF(rsc\vector_%1.paa), _digit2];
 } else {
     _digit2 = if (_number < 0) then [
         { QPATHTOF(rsc\vector_minus.paa) },
         { QPATHTOF(rsc\vector_blank.paa) }
     ];
-}
+};
 
 _digit3 = format [QPATHTOF(rsc\vector_%1.paa), _digit3];
 
