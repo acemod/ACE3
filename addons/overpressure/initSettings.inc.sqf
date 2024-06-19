@@ -7,8 +7,8 @@ private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(DisplayNa
     _category,
     [0, 10, 1, 1],
     1,
-    {},
-    true
+    {[QGVAR(overpressureDistanceCoefficient), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -18,6 +18,6 @@ private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(DisplayNa
     _category,
     [0, 10, 1, 1],
     1,
-    {},
-    true
+    {[QGVAR(backblastDistanceCoefficient), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
