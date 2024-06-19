@@ -21,6 +21,7 @@ PREP(showInclination);
 PREP(showAzimuthInclination);
 PREP(showHeightDistance);
 PREP(showDistance);
+PREP(showDistance2);
 PREP(showRelativeAzimuthDistance);
 PREP(showRelativeDistance);
 PREP(showRelativeHeightLength);

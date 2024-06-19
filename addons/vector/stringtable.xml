@@ -86,5 +86,13 @@
             <Chinese>Vector - 距離按鍵</Chinese>
             <Turkish>Vector - Mesafe Tuşu</Turkish>
         </Key>
+        <Key ID="STR_ACE_Vector_Distance2Key">
+            <English>Vector - Distance2 Key</English>
+            <Russian>Vector – Расстояние2</Russian>
+        </Key>
+        <Key ID="STR_ACE_Vector_GameTimeKey">
+            <English>Vector - Game Time Key</English>
+            <Russian>Vector – Игровое время</Russian>
+        </Key>
     </Package>
 </Project>

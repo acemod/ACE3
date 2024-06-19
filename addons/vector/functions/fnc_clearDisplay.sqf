@@ -35,6 +35,14 @@ switch (_this select 0) do {
         (_dlgVector displayCtrl IDC_DIGIT_4) ctrlSetText "";
     };
 
+    case ("distance2"): {
+        (_dlgVector displayCtrl IDC_DIGIT_D2_0) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_D2_1) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_D2_2) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_D2_3) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_D2_4) ctrlSetText "";
+    };
+
     case ("time"): {
         (_dlgVector displayCtrl IDC_DIGIT_TH1) ctrlSetText "";
         (_dlgVector displayCtrl IDC_DIGIT_TH2) ctrlSetText "";
