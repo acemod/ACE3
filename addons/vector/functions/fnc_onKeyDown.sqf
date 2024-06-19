@@ -69,6 +69,7 @@ switch (_this select 0) do {
         if (GETGVAR(isKeyDownDistance,false) && GETGVAR(isKeyDownDistance2,false) && {GETGVAR(currentMode,"") in ["relative_distance", "relative_height+length"]}) exitWith {};
 
         ["azimuth"] call FUNC(clearDisplay);
+        ["targetAngle"] call FUNC(clearDisplay);
 
         GVAR(isKeyDownAzimuth) = true;
         [false] call FUNC(showP1);
@@ -175,6 +176,7 @@ switch (_this select 0) do {
         if (diag_tickTime > GVAR(keyDownTimeAzimuth) + 0.5) then {
             if !(GETGVAR(isKeyDownAzimuth,false)) then {
                 //["azimuth"] call FUNC(clearDisplay);
+                ["targetAngle"] call FUNC(clearDisplay);
                 "distance" call _fnc_setPFH;
             };
         } else {
@@ -182,6 +184,7 @@ switch (_this select 0) do {
                 "azimuth+distance" call _fnc_setPFH;
             } else {
                 //["azimuth"] call FUNC(clearDisplay);
+                ["targetAngle"] call FUNC(clearDisplay);
                 "distance" call _fnc_setPFH;
             };
         };

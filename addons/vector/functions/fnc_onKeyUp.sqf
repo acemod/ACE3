@@ -35,6 +35,7 @@ switch (_this select 0) do {
             switch (GVAR(currentMode)) do {
                 case ("distance"): {
                     ["azimuth"] call FUNC(clearDisplay);
+                    ["targetAngle"] call FUNC(clearDisplay);
                     [true] call FUNC(showP1);
                     GVAR(pData) = [call FUNC(getDistance), call FUNC(getDirection)];
                     "relative_distance" call _fnc_setPFH;
@@ -42,6 +43,7 @@ switch (_this select 0) do {
 
                 case ("height+distance"): {
                     ["azimuth"] call FUNC(clearDisplay);
+                    ["targetAngle"] call FUNC(clearDisplay);
                     [true] call FUNC(showP1);
                     GVAR(pData) = [call FUNC(getDistance), call FUNC(getDirection)];
                     "relative_height+length" call _fnc_setPFH;
@@ -62,6 +64,7 @@ switch (_this select 0) do {
                 case ("azimuth"): {
                     ["azimuth"] call FUNC(clearDisplay);
                     ["distance"] call FUNC(clearDisplay);
+                    ["targetAngle"] call FUNC(clearDisplay);
                     ["distance2"] call FUNC(clearDisplay);
                     [true] call FUNC(showP1);
                     GVAR(pData) = [call FUNC(getDistance), call FUNC(getDirection)];
@@ -71,6 +74,7 @@ switch (_this select 0) do {
                 case ("azimuth+inclination"): {
                     ["azimuth"] call FUNC(clearDisplay);
                     ["distance"] call FUNC(clearDisplay);
+                    ["targetAngle"] call FUNC(clearDisplay);
                     ["distance2"] call FUNC(clearDisplay);
                     [true] call FUNC(showP1);
                     GVAR(pData) = [call FUNC(getDistance), call FUNC(getDirection)];
