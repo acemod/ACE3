@@ -28,7 +28,7 @@ TRACE_6("handleVehicleDamage",_vehicle,_hitPoint,_hitIndex,_injurer,_oldDamage,_
 if !(alive _vehicle) exitWith {
     private _eventHandler = _vehicle getVariable[QGVAR(handleDamage), nil];
     if !(isNil "_eventHandler") then {
-        _vehicle removeEventHandler ["handleDamage", _eventHandler];
+        _vehicle removeEventHandler ["HandleDamage", _eventHandler];
     };
     LOG_1("Vehicle [%1] no longer alive",_vehicle);
     true

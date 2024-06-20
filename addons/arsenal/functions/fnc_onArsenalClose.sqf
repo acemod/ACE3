@@ -18,7 +18,7 @@
 (_this select 1) params ["", "_exitCode"];
 
 [QGVAR(displayClosed), []] call CBA_fnc_localEvent;
-removeMissionEventHandler ["draw3D", GVAR(camPosUpdateHandle)];
+removeMissionEventHandler ["Draw3D", GVAR(camPosUpdateHandle)];
 
 if (is3DEN) then {
     private _centerOriginParent = objectParent GVAR(centerOrigin);

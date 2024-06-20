@@ -50,6 +50,10 @@ class CfgAmmo {
         ace_grenades_flashbangBangs = 6;                    // 6 bangs
         ace_grenades_flashbangInterval = 0.25;              // 0.25 seconds between each subsequent bang
         ace_grenades_flashbangIntervalMaxDeviation = 0.05;  // Deviation of up to ± 0.05 seconds on each fuse
+        ace_grenades_flashbangExplodeSound[] = {            // Sound that is played upon detonation
+            {"A3\Sounds_F\arsenal\explosives\grenades\Explosion_HE_grenade_01.wss", 5, 1.2, 400}, // file path, volume, pitch, max distance
+            {"A3\Sounds_F\arsenal\explosives\grenades\Explosion_HE_grenade_02.wss", 5, 1.2, 400}
+        };
     };
 };
 ```
@@ -69,6 +73,11 @@ The average amount of time in seconds, after `explosionTime` has passed, between
 #### 2.1.4 ace_grenades_flashbangIntervalMaxDeviation
 
 The amount of randomness in the fuse time.
+
+### 2.1.5 ace_grenades_flashbangExplodeSound
+
+The sounds that can be used when the flashbang detonates. It randomly selects an entry from this array (equal chances, there are no weights involved).
+If not defined, `[format ["A3\Sounds_F\arsenal\explosives\grenades\Explosion_HE_grenade_0%1.wss", floor (random 4) + 1], 5, 1.2, 400]` is used as a default instead (4 sounds total).
 
 ### 2.2 Incendiary Config Values
 
@@ -102,6 +111,12 @@ If set to zero or left undefined, the grenade is not treated as a flare. If it i
 #### 2.3.1 ace_grenades_color
 
 Sets the color of the emitted light. The first 3 values of the array of the color, the last is the light intensity.
+
+### 2.4 Grenade Rolling
+
+#### 2.4.1 ace_grenades_rollVectorDirAndUp
+
+Sets the `setVectorDirAndUp` of the grenade when the grenade is rolled.
 
 ## 3. Events
 

@@ -78,7 +78,7 @@ if (_seatsClaimed isEqualTo []) then {
 _seat setVariable [QGVAR(seatsClaimed), _seatsClaimed, true];
 
 // Also prevent dragging/carrying
-if (!([_seat] call EFUNC(common,owned))) then {
+if !([_seat] call EFUNC(common,owned)) then {
     [_player, _seat] call EFUNC(common,claim);
 };
 

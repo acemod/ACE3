@@ -24,7 +24,7 @@ if (isServer) then {
     }];
 };
 
-["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+["unit", LINKFUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
 [QGVAR(moveInCaptive), LINKFUNC(vehicleCaptiveMoveIn)] call CBA_fnc_addEventHandler;
 [QGVAR(moveOutCaptive), LINKFUNC(vehicleCaptiveMoveOut)] call CBA_fnc_addEventHandler;
 
