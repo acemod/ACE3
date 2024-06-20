@@ -25,7 +25,7 @@ fn command_calculate_table(
     high_arc: bool,
 ) -> (f64, u32) {
     let mut min_elev = ((PI / 180.0) * min_elev).max(2.0 * (PI / 180.0)); // cap min to 2 degrees (negative elev might get messy)
-    let mut max_elev = ((PI / 180.0) * max_elev).max(88.0 * (PI / 180.0)); // cap max to 88 degrees (mk6)
+    let mut max_elev = ((PI / 180.0) * max_elev).min(88.0 * (PI / 180.0)); // cap max to 88 degrees (mk6)
     let (best_angle, best_distance) = find_max_angle(muzzle_velocity, air_friction);
     if high_arc {
         min_elev = min_elev.max(best_angle);
