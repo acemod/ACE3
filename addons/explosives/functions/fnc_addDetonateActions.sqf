@@ -53,7 +53,7 @@ private _explosivesList = [];
 // If the detonator is not active, is a clacker and has assigned explosives, generate an interaction to make it the active detonator for use with the "trigger all" keybind
 if (
     _detonator != GVAR(activeTrigger) &&
-    {_detonator != "Cellphone"} && 
+    {_detonator != "Cellphone"} &&
     {
         _explosivesList isNotEqualTo [] ||
         {_detonator == "ACE_DeadManSwitch" && {_unit getVariable [QGVAR(deadmanInvExplosive), ""] != ""}}
@@ -144,7 +144,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
         private _procressedMags = [];
         {
             private _mag = _x;
-            if (!(_mag in _procressedMags)) then {
+            if !(_mag in _procressedMags) then {
                 _procressedMags pushBack _x;
                 private _magConfig = configFile >> "CfgMagazines" >> _mag;
                 private _supportedTriggers = getArray (_magConfig >> "ACE_Triggers" >> "SupportedTriggers");

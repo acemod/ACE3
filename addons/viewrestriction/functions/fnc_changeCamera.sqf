@@ -18,7 +18,7 @@
 
 params ["_newCameraView", "_cameraOn"];
 
-if (! ([_newCameraView, _cameraOn] call FUNC(canChangeCamera))) exitWith {};
+if !([_newCameraView, _cameraOn] call FUNC(canChangeCamera)) exitWith {};
 
 TRACE_1("View Restricted",XGVAR(mode));
 
