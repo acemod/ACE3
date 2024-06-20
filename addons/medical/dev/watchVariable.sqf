@@ -10,10 +10,10 @@ GVAR(dev_watchVariableRunning) = true;
     if (!isNull _display) exitWith {"Paused"};
 
     private _unit = cursorTarget;
-    if (!(_unit isKindOf "CAManBase")) then {_unit = cursorObject};
-    if (!(_unit isKindOf "CAManBase")) then {_unit = ACE_player};
+    if !(_unit isKindOf "CAManBase") then {_unit = cursorObject};
+    if !(_unit isKindOf "CAManBase") then {_unit = ACE_player};
     if ((_unit != ACE_player) && {IS_UNCONSCIOUS(ACE_player)}) then {_unit = ACE_player};
-    if (!(_unit isKindOf "CAManBase")) exitWith {"No Unit?"};
+    if !(_unit isKindOf "CAManBase") exitWith {"No Unit?"};
 
     private _return = [];
 

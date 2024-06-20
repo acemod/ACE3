@@ -137,11 +137,11 @@ if (_onCancel isEqualTo {}) then {
     ctrlSetFocus _ctrlButtonCancel;
 };
 
-_ctrlButtonOK ctrlAddEventHandler ["buttonClick", {(ctrlParent (_this select 0)) closeDisplay 1; true}];
-_ctrlButtonCancel ctrlAddEventHandler ["buttonClick", {(ctrlParent (_this select 0)) closeDisplay 2; true}];
+_ctrlButtonOK ctrlAddEventHandler ["ButtonClick", {(ctrlParent (_this select 0)) closeDisplay 1; true}];
+_ctrlButtonCancel ctrlAddEventHandler ["ButtonClick", {(ctrlParent (_this select 0)) closeDisplay 2; true}];
 
 GVAR(errorOnOK) = _onOK;
 GVAR(errorOnCancel) = _onCancel;
 
-_display displayAddEventHandler ["unload", {call ([{}, GVAR(errorOnOK), GVAR(errorOnCancel)] select (_this select 1))}];
-_display displayAddEventHandler ["keyDown", {_this select 1 == 1}];
+_display displayAddEventHandler ["Unload", {call ([{}, GVAR(errorOnOK), GVAR(errorOnCancel)] select (_this select 1))}];
+_display displayAddEventHandler ["KeyDown", {_this select 1 == 1}];

@@ -278,4 +278,4 @@ showCinemaBorder false;
 
 //--------------- Reset camera pos
 [nil, [controlNull, 0, 0]] call FUNC(handleMouse);
-GVAR(camPosUpdateHandle) = addMissionEventHandler ["draw3D", {call FUNC(updateCamPos)}];
+GVAR(camPosUpdateHandle) = addMissionEventHandler ["Draw3D", {call FUNC(updateCamPos)}];
