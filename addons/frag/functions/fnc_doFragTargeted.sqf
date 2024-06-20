@@ -4,7 +4,7 @@
  * This function creates fragments targeted at specific entities, up to _maxFrags.
  *
  * Arguments:
- * 0: Position of fragmenting projectile ASL <ARRAY>
+ * 0: Position of fragmenting projectile AGL <ARRAY>
  * 1: Velocity of the fragmenting projectile <ARRAY>
  * 2: Maximum range of fragments to calculate <NUMBER>
  * 3: Maximum number of fragments to produce <NUMBER>
@@ -16,7 +16,7 @@
  * Number of fragments created <NUMBER>
  *
  * Example:
- * [getPosASL _projectile, velocity _projectile, 50, 50, [], 1, [player, player]] call ace_frag_fnc_doFragTargeted
+ * [ASLtoAGL (getPosASL _projectile), velocity _projectile, 50, 50, [], 1, [player, player]] call ace_frag_fnc_doFragTargeted
  *
  * Public: No
  */
@@ -25,8 +25,8 @@
 #define ACE_FRAG_DEFAULT_CROSS_AREA 0.75
 #define ACE_FRAG_MIN_TARGET_AREA 0.5
 
-params [ "_posASL", "_fragVelocity", "_fragRange", "_maxFrags", "_fragTypes", "_modFragCount", "_shotParents"];
-TRACE_5("fnc_doFragTargeted",_posASL,_fragRange,_maxFrags,_fragTypes,_modFragCount);
+params [ "_posAGL", "_fragVelocity", "_fragRange", "_maxFrags", "_fragTypes", "_modFragCount", "_shotParents"];
+TRACE_5("fnc_doFragTargeted",_posAGL,_fragRange,_maxFrags,_fragTypes,_modFragCount);
 
 if (_fragTypes isEqualTo []) then {
     _fragTypes = [
@@ -38,12 +38,11 @@ if (_fragTypes isEqualTo []) then {
     ];
 };
 
-private _posAGL = ASLToAGL _posASL;
 // Post 2.18 change - uncomment line 41, and remove lines 43, 50-55, 64-66
-// private _targets = [ASLToAGL _posASL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
+// private _targets = [_posAGL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
 private _objects = _posAGL nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
 if (_objects isEqualTo []) exitWith {
-    TRACE_2("No nearby targets",_posASL,_fragRange);
+    TRACE_2("No nearby targets",_posAGL,_fragRange);
     0
 };
 
@@ -55,7 +54,7 @@ private _targets = [];
     _targets append _crew;
 } forEach _objects;
 
-TRACE_3("Targets found",_posASL,_fragRange,count _targets);
+TRACE_3("Targets found",_posAGL,_fragRange,count _targets);
 
 // limit number of fragments per direction (2D) to _fragsPerFragArc using _fragArcs
 private _fragArcs = createHashMap;
@@ -99,7 +98,7 @@ private _totalFragCount = 0;
         _height = _dims#2;
     };
 
-    private _distance = _target distance _posASL;
+    private _distance = _target distance _posAGL;
 
     // calculate chance to be hit by a fragment
     private _fragChance = _crossSectionArea * _modFragCount / _distance^2;
@@ -114,7 +113,7 @@ private _totalFragCount = 0;
     };
 
     // handle limiting fragments per degree arc
-    private _dir = floor (_posASL getDir _target);
+    private _dir = floor (_posAGL getDir _target);
     private _fragPerArc = _fragArcs getOrDefault [_dir, 0];
     if (_fragPerArc > _fragsPerFragArc) then {
         continue;
@@ -131,13 +130,13 @@ private _totalFragCount = 0;
     _targetPos = if (_isPerson) then {
         private _hitPoint = selectRandom ACE_FRAG_HITPOINTS;
         private _hitPointPos = _target selectionPosition [_hitPoint, "HitPoints", "AveragePoint"];
-        _target modelToWorldWorld _hitPointPos vectorAdd _targetPos;
+        _target modelToWorld _hitPointPos vectorAdd _targetPos;
     } else {
-        _targetPos vectorAdd getPosASL _target vectorAdd [
+        ASLtoAGL (_targetPos vectorAdd getPosASL _target vectorAdd [
             -0.5 + random 1,
             -0.5 + random 1,
             (0.1 + random 0.4) * _height
-        ];
+        ]);
     };
 
     // select a fragment / submunition frag spawner
@@ -152,15 +151,22 @@ private _totalFragCount = 0;
     TRACE_4("fragments",_fragSpawner,_fragChance,_distance,_locFragVel);
 
     // Create fragment
-    private _vectorDir = _posASL vectorFromTo _targetPos;
+    private _vectorDir = _posAGL vectorFromTo _targetPos;
     private _fragObj = createVehicle [_fragSpawner, _posAGL, [], 0, "CAN_COLLIDE"];
-    _fragObj setVectorDir _vectorDir;
+    _fragObj setVectorDirAndUp [_vectorDir, _vectorDir vectorAdd [0, -1, 0]] ;
     _fragObj setVelocity (_vectorDir vectorMultiply _locFragVel);
     _fragObj setShotParents _shotParents;
     #ifdef DEBUG_MODE_DRAW
     [_fragObj, "purple", true] call FUNC(dev_trackObj);
+    _fragObj addEventHandler [
+        "SubmunitionCreated",
+        {
+            params ["","_subProj"];
+            [_subProj, "purple", true] call FUNC(dev_trackObj);
+        }
+    ];
     if (GVAR(dbgSphere)) then {
-        [_targetPos, "orange"] call FUNC(dev_sphereDraw);
+        [AGLtoASL _targetPos, "orange"] call FUNC(dev_sphereDraw);
     };
     #endif
 

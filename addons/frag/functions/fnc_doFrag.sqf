@@ -19,6 +19,7 @@
  */
 
 #define ACE_FRAG_MIN_FRAG_BUDGET_FOR_RANDOM 3
+#define ACE_FRAG_NEGATIVE_AGL_OFFSET 0.1
 
 params ["_posASL", "_projectileVelocity", "_ammo", "_shotParents"];
 TRACE_4("doFrag",_posASL,_projectileVelocity,_ammo,_shotParents);
@@ -47,11 +48,18 @@ if (_modFragCount < ACE_FRAG_LOW_FRAG_MOD_COUNT) then {
     GVAR(lastFragTime) = CBA_missionTime;
 };
 
+// Double check if round is below, or too close to terrain for
+private _posAGL = ASLToAGL _posASL;
+if (_posAGL#2 < ACE_FRAG_NEGATIVE_AGL_OFFSET) then {
+    TRACE_1("below 0 AGL",_posAGL);
+    _posAGL set [2, ACE_FRAG_NEGATIVE_AGL_OFFSET];
+};
+
 TRACE_3("doFrag choices",_maxFragCount,_fragRange,GVAR(fragSimComplexity));
 if (GVAR(fragSimComplexity) != 1 && _fragRange > 3) then {
-    _maxFragCount = _maxFragCount - ([_posASL, _fragVelocity, _fragRange, _maxFragCount, _fragTypes, _modFragCount, _shotParents] call FUNC(doFragTargeted));
+    _maxFragCount = _maxFragCount - ([_posAGL, _fragVelocity, _fragRange, _maxFragCount, _fragTypes, _modFragCount, _shotParents] call FUNC(doFragTargeted));
 };
 
 if (GVAR(fragSimComplexity) > 0 && _maxFragCount >= ACE_FRAG_MIN_FRAG_BUDGET_FOR_RANDOM) then {
-    [_posASL, _fragVelocity, _projectileVelocity, _fragTypes, _maxFragCount, _shotParents] call FUNC(doFragRandom);
+    [_posAGL, _fragVelocity, _projectileVelocity, _fragTypes, _maxFragCount, _shotParents] call FUNC(doFragRandom);
 };

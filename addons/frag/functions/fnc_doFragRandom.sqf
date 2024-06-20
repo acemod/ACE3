@@ -5,7 +5,7 @@
  * This function will spawn 5, 10, or 15 fragments.
  *
  * Arguments:
- * 0: Position (posASL) of fragmenting projectile <ARRAY>
+ * 0: Position (posAGL) of fragmenting projectile <ARRAY>
  * 1: Initial fragment velocity from Gurney equation <NUMBER>
  * 2: Velocity of the fragmenting projectile <ARRAY>
  * 3: Type of fragments to generate <ARRAY>
@@ -16,19 +16,19 @@
  * None
  *
  * Example:
- * [getPosASL _projectile, 800, 50, 50, [], 1, [player, player]] call ace_frag_fnc_doFragRandom
+ * [ASLtoAGL (getPosASL _projectile), 800, 50, 50, [], 1, [player, player]] call ace_frag_fnc_doFragRandom
  *
  * Public: No
  */
 
-params ["_posASL", "_fragVelocity", "_projectileVelocity", "_fragType", "_maxFragCount", "_shotParents"];
-TRACE_6("doFragRandom",_posASL,_fragVelocity,_projectileVelocity,_fragType,_maxFragCount,_shotParents);
+params ["_posAGL", "_fragVelocity", "_projectileVelocity", "_fragType", "_maxFragCount", "_shotParents"];
+TRACE_6("doFragRandom",_posAGL,_fragVelocity,_projectileVelocity,_fragType,_maxFragCount,_shotParents);
 
 // See CfgAmmoFragSpawner for different frag types
-private _heightATL = (ASLToATL _posASL)#2;
+private _heightAGL = _posAGL#2;
 private _hMode = switch (true) do {
-    case (_heightATL > 10): {"_top"};
-    case (_heightATL > 4): {"_high"};
+    case (_heightAGL > 10): {"_top"};
+    case (_heightAGL > 4): {"_high"};
     default {"_mid"};
 };
 
@@ -41,10 +41,10 @@ _maxFragCount = switch (true) do {
 };
 
 // Spawn the fragment spawner
-private _fragSpawner = createVehicle [_type + _maxFragCount + _hMode, ASLToAGL _posASL, [], 0, "CAN_COLLIDE"];
+private _fragSpawner = createVehicle [_type + _maxFragCount + _hMode, _posAGL, [], 0, "CAN_COLLIDE"];
 private _randDir = random 360;
-_fragSpawner setVectorDirandUp [[0,0,-1], [cos _randDir, sin _randDir,0]];
-_fragSpawner setVelocity (_projectileVelocity vectorAdd [0, 0, -0.5*_fragVelocity]);
+_fragSpawner setVectorDirandUp [[0,0,-1], [cos _randDir, sin _randDir, 0]];
+_fragSpawner setVelocity (_projectileVelocity vectorAdd [0, 0, -_fragVelocity]);
 _fragSpawner setShotParents _shotParents;
 
 TRACE_2("spawnedRandomFragmenter",typeOf _fragSpawner,getObjectID _fragSpawner);
@@ -57,6 +57,6 @@ _fragSpawner addEventHandler [
     }
 ];
 if (GVAR(dbgSphere)) then {
-    [_posASL] call FUNC(dev_sphereDraw);
+    [AGLtoASL _posAGL] call FUNC(dev_sphereDraw);
 };
 #endif
