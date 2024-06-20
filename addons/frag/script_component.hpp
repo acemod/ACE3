@@ -27,7 +27,7 @@
 #define ACE_FRAG_COUNT_MAX_TIME 1
 #define ACE_FRAG_COUNT_MAX 50
 // Default hitpoint targets
-#define ACE_FRAG_HITPOINTS ["spine1", "spine1", "spine1", "spine2", "spine2", "spine2", "spine3", "spine3", "spine3", "pelvis", "pelvis", "pelvis", "head", "leftarm", "leftarmroll", "leftforearm", "rightarm", "rightarmroll", "rightforearm", "leftupleg", "leftuplegroll", "leftlegroll", "leftfoot", "rightupleg", "rightuplegroll", "rightleg", "rightlegroll", "rightfoot", "neck"]
+#define ACE_FRAG_HITPOINTS ["spine1", "spine1", "spine1", "spine2", "spine2", "spine2", "spine3", "spine3", "spine3", "pelvis", "pelvis", "pelvis", "head", "leftarm", "leftarmroll", "leftforearm", "rightarm", "rightarmroll", "rightforearm", "leftupleg", "leftuplegroll", "leftlegroll", "rightupleg", "rightuplegroll", "rightleg", "rightlegroll", "neck"]
 // half of gravity approx 9.81/2
 #define ACE_FRAG_HALF_GRAVITY_APPROX 4.905
 // Lowest chance to hit of 0.5%
