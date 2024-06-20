@@ -38,7 +38,7 @@ params ["_unit", "_instigator"];
         [QGVAR(burnSimulation), [_unit, _instigator], _unit] call CBA_fnc_targetEvent;
     };
 
-    // If unit is invulnerable or in water or if the fire has died out, stop burning the unit
+    // If the unit is invulnerable, in water or if the fire has died out, stop burning the unit
     if (
         !(_unit call FUNC(isBurning)) ||
         {!(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]})} ||
