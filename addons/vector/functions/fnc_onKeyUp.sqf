@@ -113,9 +113,4 @@ switch (_this select 0) do {
         };
 
     };
-
-    case ("time"): {
-        GVAR(isShowGameTime) = false;
-        ["time"] call FUNC(clearDisplay);
-    };
 };

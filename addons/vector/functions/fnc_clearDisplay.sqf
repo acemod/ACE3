@@ -20,6 +20,10 @@ private _dlgVector = GETUVAR(ACE_dlgVector,displayNull);
 
 switch (_this select 0) do {
     case ("azimuth"): {
+        (_dlgVector displayCtrl IDC_DIGIT_AZ_HEADER1) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_AZ_HEADER2) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_AZ_HEADER3) ctrlSetText "";
+
         (_dlgVector displayCtrl IDC_DIGIT_5) ctrlSetText "";
         (_dlgVector displayCtrl IDC_DIGIT_6) ctrlSetText "";
         (_dlgVector displayCtrl IDC_DIGIT_7) ctrlSetText "";
@@ -28,6 +32,10 @@ switch (_this select 0) do {
     };
 
     case ("distance"): {
+        (_dlgVector displayCtrl IDC_DIGIT_D1_HEADER1) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_D1_HEADER2) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_D1_HEADER3) ctrlSetText "";
+
         (_dlgVector displayCtrl IDC_DIGIT_0) ctrlSetText "";
         (_dlgVector displayCtrl IDC_DIGIT_1) ctrlSetText "";
         (_dlgVector displayCtrl IDC_DIGIT_2) ctrlSetText "";
@@ -36,6 +44,10 @@ switch (_this select 0) do {
     };
 
     case ("distance2"): {
+        (_dlgVector displayCtrl IDC_DIGIT_D2_HEADER1) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_D2_HEADER2) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_D2_HEADER3) ctrlSetText "";
+
         (_dlgVector displayCtrl IDC_DIGIT_D2_0) ctrlSetText "";
         (_dlgVector displayCtrl IDC_DIGIT_D2_1) ctrlSetText "";
         (_dlgVector displayCtrl IDC_DIGIT_D2_2) ctrlSetText "";
@@ -54,7 +66,16 @@ switch (_this select 0) do {
         (_dlgVector displayCtrl IDC_DIGIT_TS2) ctrlSetText "";
     };
 
+    case ("strobe"): {
+        (_dlgVector displayCtrl IDC_DIGIT_STR_HEADER) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_STR1) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_STR2) ctrlSetText "";
+    };
+
     case ("targetAngle"): {
+        (_dlgVector displayCtrl IDC_DIGIT_TGA_HEADER1) ctrlSetText "";
+        (_dlgVector displayCtrl IDC_DIGIT_TGA_HEADER2) ctrlSetText "";
+
         (_dlgVector displayCtrl IDC_DIGIT_TGA1) ctrlSetText "";
         (_dlgVector displayCtrl IDC_DIGIT_TGA2) ctrlSetText "";
         (_dlgVector displayCtrl IDC_DIGIT_TGA3) ctrlSetText "";

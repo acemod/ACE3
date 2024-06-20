@@ -22,6 +22,10 @@ private _direction = call FUNC(getDirection);
 
 private _digits = _direction call FUNC(convertToTexturesDegree);
 
+(_dlgVector displayCtrl IDC_DIGIT_AZ_HEADER1) ctrlSetText QPATHTOF(rsc\vector_a_rus.paa);
+(_dlgVector displayCtrl IDC_DIGIT_AZ_HEADER2) ctrlSetText QPATHTOF(rsc\vector_z_rus.paa);
+(_dlgVector displayCtrl IDC_DIGIT_AZ_HEADER3) ctrlSetText QPATHTOF(rsc\vector_m_rus.paa);
+
 (_dlgVector displayCtrl IDC_DIGIT_5) ctrlSetText (_digits select 0);
 (_dlgVector displayCtrl IDC_DIGIT_6) ctrlSetText (_digits select 1);
 (_dlgVector displayCtrl IDC_DIGIT_7) ctrlSetText (_digits select 2);

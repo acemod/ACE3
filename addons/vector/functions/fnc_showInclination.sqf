@@ -8,6 +8,9 @@ private _inclination = _result select 2;
 
 private _digits = [_inclination] call FUNC(convertToTexturesDegreeBelow90);
 
+(_dlgVector displayCtrl IDC_DIGIT_TGA_HEADER1) ctrlSetText QPATHTOF(rsc\vector_u_rus.paa);
+(_dlgVector displayCtrl IDC_DIGIT_TGA_HEADER2) ctrlSetText QPATHTOF(rsc\vector_m_rus.paa);
+
 (_dlgVector displayCtrl IDC_DIGIT_TGA1) ctrlSetText (_digits select 0);
 (_dlgVector displayCtrl IDC_DIGIT_TGA2) ctrlSetText (_digits select 1);
 (_dlgVector displayCtrl IDC_DIGIT_TGA3) ctrlSetText (_digits select 2);

@@ -90,9 +90,13 @@
             <English>Vector - Distance2 Key</English>
             <Russian>Vector – Расстояние2</Russian>
         </Key>
-        <Key ID="STR_ACE_Vector_GameTimeKey">
-            <English>Vector - Game Time Key</English>
-            <Russian>Vector – Игровое время</Russian>
+        <Key ID="STR_ACE_Vector_EnlargeStrobeKey">
+            <English>Vector - Enlarge Strobe Key</English>
+            <Russian>Vector – Увеличить строб</Russian>
+        </Key>
+        <Key ID="STR_ACE_Vector_DecreaseStrobeKey">
+            <English>Vector - Decrease Strobe Key</English>
+            <Russian>Vector – Уменьшить строб</Russian>
         </Key>
     </Package>
 </Project>

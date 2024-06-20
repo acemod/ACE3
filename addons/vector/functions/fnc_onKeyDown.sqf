@@ -265,28 +265,4 @@ switch (_this select 0) do {
         };
 
     };
-
-    case ("time"): {
-        if (!GVAR(isShowGameTime)) then {
-            GVAR(isShowGameTime) = true;
-            call FUNC(showGameTime);
-            0 spawn {
-                waitUntil {
-                    _until = diag_tickTime + 1;
-                    waitUntil {
-                        sleep 0.1;
-                        diag_tickTime > _until;
-                    };
-
-                    if (!GVAR(isShowGameTime)) then {
-                        ["time"] call FUNC(clearDisplay);
-                        true;
-                    } else {
-                        call FUNC(showGameTime);
-                        false;
-                    }
-                };
-            };
-        }
-    };
 };

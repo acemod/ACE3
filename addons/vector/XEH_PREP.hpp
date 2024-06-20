@@ -4,6 +4,7 @@ PREP(convertToTexturesDegreeBelow90);
 PREP(convertToTexturesDistance);
 PREP(convertToTexturesFOS);
 PREP(dataTransfer);
+PREP(showStrobe);
 PREP(showCenter);
 PREP(showP1);
 PREP(onKeyDown);

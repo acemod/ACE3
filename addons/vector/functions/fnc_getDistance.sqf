@@ -15,7 +15,6 @@
  * Public: No
  */
 
-#define MIN_DISTANCE 10
 #define MAX_DISTANCE [6000, 9000] select GVAR(useFeet)
 
 disableSerialization;
@@ -32,6 +31,6 @@ if (GVAR(useFeet)) then {
 };
 
 if (_distance > MAX_DISTANCE) exitWith {-1000};
-if (_distance < MIN_DISTANCE) exitWith {-1000};
+if (_distance < GVAR(minDistance)) exitWith {-1000};
 
 _distance

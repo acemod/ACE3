@@ -71,99 +71,174 @@ class RscInGameUI {
                     y = "0.5 - (0.7 / 9 * safezoneH)/2 - safezoneY";
                     w = "0.7 / 16 * safezoneW";
                     h = "0.7 / 9 * safezoneH";
-                };                
-
+                };
+       
+                // Distance 1
+                // Header
+                class DigitD1Header1: Center {
+                    idc = IDC_DIGIT_D1_HEADER1;
+                    x = "(0.58 + 1 * 0.01 + 0.033) * safezoneW";
+                    y = "0.09 * safezoneH";
+                    w = "0.5 / 16 / 2 * safezoneW";
+                    h = "0.5 / 9 / 2 * safezoneH";
+                };
+                class DigitD1Header2: DigitD1Header1 {
+                    idc = IDC_DIGIT_D1_HEADER2;
+                    x = "(0.58 + 2 * 0.01 + 0.035) * safezoneW";
+                };
+                class DigitD1Header3: DigitD1Header1 {
+                    idc = IDC_DIGIT_D1_HEADER3;
+                    x = "(0.58 + 3 * 0.01 + 0.037) * safezoneW";
+                };
+                // Number
                 class Digit0: Center {
                     idc = IDC_DIGIT_0;
-                    x = "(0.54 + 0 * 0.02) * safezoneW";
-                    y = "0.1 * safezoneH";
-                    w = "0.5 / 16 * safezoneW";
-                    h = "0.5 / 9 * safezoneH";
-                }; 
+                    x = "(0.58 + 0 * 0.01 + 0.03) * safezoneW";
+                    y = "0.13 * safezoneH";
+                    w = "0.5 / 16 / 2 * safezoneW";
+                    h = "0.5 / 9 / 2 * safezoneH";
+                };   
                 class Digit1: Digit0 {
                     idc = IDC_DIGIT_1;
-                    x = "(0.54 + 1 * 0.02) * safezoneW";
+                    x = "(0.58 + 1 * 0.01 + 0.03) * safezoneW";
                 };
                 class Digit2: Digit0 {
                     idc = IDC_DIGIT_2;
-                    x = "(0.54 + 2 * 0.02) * safezoneW";
+                    x = "(0.58 + 2 * 0.01 + 0.03) * safezoneW";
                 };
                 class Digit3: Digit0 {
                     idc = IDC_DIGIT_3;
-                    x = "(0.54 + 3 * 0.02) * safezoneW";
+                    x = "(0.58 + 3 * 0.01 + 0.03) * safezoneW";
                 };
                 class Digit4: Digit0 {
                     idc = IDC_DIGIT_4;
-                    x = "(0.54 + 4 * 0.02) * safezoneW";
+                    x = "(0.58 + 4 * 0.01 + 0.03) * safezoneW";
                 };
-                class Digit5: Digit0 {
-                    idc = IDC_DIGIT_5;
-                    x = "(0.58 + 0 * 0.02) * safezoneW";
+
+                // Distance 2
+                // Header
+                class DigitD2Header1: Digit0 {
+                    idc = IDC_DIGIT_D2_HEADER1;
+                    x = "(0.58 + 1 * 0.01 + 0.073) * safezoneW";
                     y = "0.2 * safezoneH";
                 };
-                class Digit6: Digit0 {
-                    idc = IDC_DIGIT_6;
-                    x = "(0.58 + 1 * 0.02) * safezoneW";
-                    y = "0.2 * safezoneH";
+                class DigitD2Header2: DigitD2Header1 {
+                    idc = IDC_DIGIT_D2_HEADER2;
+                    x = "(0.58 + 2 * 0.01 + 0.075) * safezoneW";
                 };
-                class Digit7: Digit0 {
-                    idc = IDC_DIGIT_7;
-                    x = "(0.58 + 2 * 0.02) * safezoneW";
-                    y = "0.2 * safezoneH";
+                class DigitD2Header3: DigitD2Header1 {
+                    idc = IDC_DIGIT_D2_HEADER3;
+                    x = "(0.58 + 3 * 0.01 + 0.077) * safezoneW";
                 };
-                class Digit8: Digit0 {
-                    idc = IDC_DIGIT_8;
-                    x = "(0.58 + 3 * 0.02) * safezoneW";
-                    y = "0.2 * safezoneH";
-                };
-                class Digit9: Digit0 {
-                    idc = IDC_DIGIT_9;
-                    x = "(0.58 + 4 * 0.02) * safezoneW";
-                    y = "0.2 * safezoneH";
-                };
+                // Number
                 class Digit10: Digit0 {
                     idc = IDC_DIGIT_D2_0;
-                    y = "0.3 * safezoneH";
-                    w = "0.5 / 16 * safezoneW";
-                    h = "0.5 / 9 * safezoneH";
+                    x = "(0.58 + 0 * 0.01 + 0.07) * safezoneW";
+                    y = "0.24 * safezoneH";
                 };
                 class Digit11: Digit10 {
                     idc = IDC_DIGIT_D2_1;
-                    x = "(0.54 + 1 * 0.02) * safezoneW";
+                    x = "(0.58 + 1 * 0.01 + 0.07) * safezoneW";
                 };
                 class Digit12: Digit10 {
                     idc = IDC_DIGIT_D2_2;
-                    x = "(0.54 + 2 * 0.02) * safezoneW";
+                    x = "(0.58 + 2 * 0.01 + 0.07) * safezoneW";
                 };
                 class Digit13: Digit10 {
                     idc = IDC_DIGIT_D2_3;
-                    x = "(0.54 + 3 * 0.02) * safezoneW";
+                    x = "(0.58 + 3 * 0.01 + 0.07) * safezoneW";
                 };
                 class Digit14: Digit10 {
                     idc = IDC_DIGIT_D2_4;
-                    x = "(0.54 + 4 * 0.02) * safezoneW";
+                    x = "(0.58 + 4 * 0.01 + 0.07) * safezoneW";
+                };
+
+                // Strobe
+                // Header
+                class DigitSTRHeader1: Center {
+                    idc = IDC_DIGIT_STR_HEADER;
+                    x = "0.67 * safezoneW";
+                    y = "0.27 * safezoneH";
+                    w = "0.5 / 16 * 2 * safezoneW";
+                    h = "0.5 / 9 * 2 * safezoneH";
+                };
+                // Number
+                class DigitSTR1: Digit0 {
+                    idc = IDC_DIGIT_STR1;
+                    x = "(0.58 + 0.108) * safezoneW";
+                    y = "0.35 * safezoneH";
+                };
+                class DigitSTR2: DigitSTR1 {
+                    idc = IDC_DIGIT_STR2;
+                    x = "(0.58 + 0.118) * safezoneW";
+                };
+
+                // Azimuth
+                // Header
+                class DigitAZHeader1: Digit0 {
+                    idc = IDC_DIGIT_AZ_HEADER1;
+                    x = "(0.58 + 0 * 0.01 + 0.113) * safezoneW";
+                    y = "0.5 * safezoneH";
+                };
+                class DigitAZHeader2: DigitAZHeader1 {
+                    idc = IDC_DIGIT_AZ_HEADER2;
+                    x = "(0.58 + 1 * 0.01 + 0.115) * safezoneW";
+                };
+                class DigitAZHeader3: DigitAZHeader1 {
+                    idc = IDC_DIGIT_AZ_HEADER3;
+                    x = "(0.58 + 2 * 0.01 + 0.118) * safezoneW";
+                };
+                // Number
+                class Digit5: Digit0 {
+                    idc = IDC_DIGIT_5;
+                    x = "(0.58 + 0 * 0.01 + 0.11) * safezoneW";
+                    y = "0.54 * safezoneH";
+                };
+                class Digit6: Digit5 {
+                    idc = IDC_DIGIT_6;
+                    x = "(0.58 + 1 * 0.01 + 0.11) * safezoneW";
+                };
+                class Digit7: Digit5 {
+                    idc = IDC_DIGIT_7;
+                    x = "(0.58 + 2 * 0.01 + 0.11) * safezoneW";
+                };
+                class Digit8: Digit5 {
+                    idc = IDC_DIGIT_8;
+                    x = "(0.58 + 3 * 0.01 + 0.11) * safezoneW";
+                };
+                class Digit9: Digit5 {
+                    idc = IDC_DIGIT_9;
+                    x = "(0.58 + 4 * 0.01 + 0.11) * safezoneW";
                 };
 
                 // Target Elevation Angle
+                // Header
+                class DigitTGAHeader1: Digit0 {
+                    idc = IDC_DIGIT_TGA_HEADER1;
+                    x = "(0.58 + 0 * 0.01 + 0.108) * safezoneW";
+                    y = "0.61 * safezoneH";
+                };
+                class DigitTGAHeader2: DigitTGAHeader1 {
+                    idc = IDC_DIGIT_TGA_HEADER2;
+                    x = "(0.58 + 1 * 0.01 + 0.112) * safezoneW";
+                };
+                // Number
                 class DigitTGA1: Digit0 {
                     idc = IDC_DIGIT_TGA1;
-                    x = "(0.58 + 0 * 0.02) * safezoneW";
-                    y = "0.5 * safezoneH";
+                    x = "(0.58 + 0 * 0.01 + 0.097) * safezoneW";
+                    y = "0.65 * safezoneH";
                 };
-                class DigitTGA2: Digit0 {
+                class DigitTGA2: DigitTGA1 {
                     idc = IDC_DIGIT_TGA2;
-                    x = "(0.58 + 1 * 0.02) * safezoneW";
-                    y = "0.5 * safezoneH";
+                    x = "(0.58 + 1 * 0.01 + 0.097) * safezoneW";
                 };
-                class DigitTGA3: Digit0 {
+                class DigitTGA3: DigitTGA1 {
                     idc = IDC_DIGIT_TGA3;
-                    x = "(0.58 + 2 * 0.02) * safezoneW";
-                    y = "0.5 * safezoneH";
+                    x = "(0.58 + 2 * 0.01 + 0.097) * safezoneW";
                 };
-                class DigitTGA4: Digit0 {
+                class DigitTGA4: DigitTGA1 {
                     idc = IDC_DIGIT_TGA4;
-                    x = "(0.58 + 3 * 0.02) * safezoneW";
-                    y = "0.5 * safezoneH";
+                    x = "(0.58 + 3 * 0.01 + 0.097) * safezoneW";
                 };
 
                 // Game time digits
@@ -207,20 +282,20 @@ class RscInGameUI {
 
                 class DigitE1: Digit0 {
                     idc = IDC_DIGIT_E1;
-                    x = "(0.39 + 0 * 0.02) * safezoneW";
+                    x = "(0.39 + 0 * 0.01) * safezoneW";
                     y = "0.42 * safezoneH";
                 };
                 class DigitE2: DigitE1 {
                     idc = IDC_DIGIT_E2;
-                    x = "(0.39 + 1 * 0.02) * safezoneW";
+                    x = "(0.39 + 1 * 0.01) * safezoneW";
                 };
                 class DigitE3: DigitE1 {
                     idc = IDC_DIGIT_E3;
-                    x = "(0.39 + 2 * 0.02) * safezoneW";
+                    x = "(0.39 + 2 * 0.01) * safezoneW";
                 };
                 class DigitE4: DigitE1 {
                     idc = IDC_DIGIT_E4;
-                    x = "(0.39 + 3 * 0.02) * safezoneW";
+                    x = "(0.39 + 3 * 0.01) * safezoneW";
                 };
             };
         };
