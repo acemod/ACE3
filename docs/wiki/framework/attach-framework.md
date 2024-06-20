@@ -15,7 +15,7 @@ version:
 ## 1. Config Values
 ### 1.1 Make item attachable
 
-An item can be added to the ACE Attach framework by adding the ``ACE_attachable`` property to a class in ``CfgWeapons`` or ``CfgMagazines``. The value must be the classname of a valid class in ``CfgVehicles``:
+An item can be added to the ACE Attach framework by adding the `ACE_attachable` property to a class in `CfgWeapons` or `CfgMagazines`. The value must be the classname of a valid class in `CfgVehicles`:
 ```cpp
 class CfgWeapons {
     class attach_item: CBA_MiscItem {
@@ -29,14 +29,14 @@ class CfgVehicles {
         scope = 1; // Should be 1 (private) or 2 (public), scope 0 will cause errors on object creation
         displayName = "New ACE attachable item";
         model = "\path\to\my\model.p3d";
-		vehicleClass = "";
+        vehicleClass = "";
     };
 };
 ```
 
 ### 1.2 Define attach orientation for non-symmetric items
-In the case the item needs to have a particular orientation when attached, add the config value: ``ace_attach_orientation`` which is an array describing the ``roll`` and ``yaw`` orientation of the object.
-The default value is: ``[0,0]``.
+In the case the item needs to have a particular orientation when attached, add the config value: `ace_attach_orientation` which is an array describing the `roll` and `yaw` orientation of the object.
+The default value is: `[0,0]`.
 
 Example:
 ```cpp

@@ -35,7 +35,7 @@ if (!GVAR(atmosphereModeTBH)) then {
     _relativeHumidity = 0.5;
 };
 
-private _scopeBaseAngle = if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) then {
+private _scopeBaseAngle = if !(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     parseNumber (("ace" callExtension ["ballistics:zero_vanilla", [
         _zeroRange,
         _muzzleVelocity,

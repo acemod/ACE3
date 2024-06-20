@@ -11,6 +11,7 @@
  *   3: Treatment <STRING>
  *   4: Item User <OBJECT>
  *   5: Used Item <STRING>
+ *   6: Create Litter <BOOL>
  *
  * Return Value:
  * None
@@ -19,7 +20,7 @@
  */
 
 params ["_args"];
-_args params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem"];
+_args params ["_medic", "_patient", "_bodyPart", "_classname", "_itemUser", "_usedItem", "_createLitter"];
 
 // Return used item to user (if used)
 if (!isNull _itemUser) then {
@@ -53,4 +54,4 @@ GET_FUNCTION(_callbackFailure,configFile >> QGVAR(actions) >> _classname >> "cal
 
 _args call _callbackFailure;
 
-["ace_treatmentFailed", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem]] call CBA_fnc_localEvent;
+["ace_treatmentFailed", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem, _createLitter]] call CBA_fnc_localEvent;

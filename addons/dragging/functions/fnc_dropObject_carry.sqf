@@ -116,7 +116,7 @@ if (_loadCargo) then {
         private _vehicles = [_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat);
 
         if ([_cursorObject] isEqualTo _vehicles) then {
-            if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+            if (GETEGVAR(medical,enabled,false)) then {
                 [_unit, _target, _cursorObject] call EFUNC(medical_treatment,loadUnit);
             } else {
                 [_unit, _target, _cursorObject] call EFUNC(common,loadPerson);

@@ -86,7 +86,7 @@ GVAR(vehicleAction) = [
         GVAR(enable) &&
         {alive _target} &&
         {locked _target < 2} &&
-        {(_target getVariable [QGVAR(hasCargo), getNumber (configOf _target >> QGVAR(hasCargo)) == 1])} &&
+        {_target getVariable [QGVAR(hasCargo), getNumber (configOf _target >> QGVAR(hasCargo)) == 1]} &&
         {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
         {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
         {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}

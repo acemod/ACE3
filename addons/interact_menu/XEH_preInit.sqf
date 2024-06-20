@@ -12,12 +12,12 @@ if (!hasInterface) exitWith { ADDON = true; };
 
 ["All", "init", LINKFUNC(compileMenu)] call CBA_fnc_addClassEventHandler;
 
-GVAR(ActNamespace) = [] call CBA_fnc_createNamespace;
-GVAR(ActSelfNamespace) = [] call CBA_fnc_createNamespace;
+GVAR(ActNamespace) = createHashMap;
+GVAR(ActSelfNamespace) = createHashMap;
 
 // Compile actions for CAManBase now and use for all mans types
 ["CAManBase"] call FUNC(compileMenu);
-GVAR(cacheManActions) = +(GVAR(ActNamespace) getVariable ["CAManBase", []]); // copy
+GVAR(cacheManActions) = +(GVAR(ActNamespace) getOrDefault ["CAManBase" call EFUNC(common,getConfigName), []]); // copy
 
 // Event handlers for all interact menu controls
 DFUNC(handleMouseMovement) = {

@@ -16,6 +16,13 @@
  * Public: Yes
  */
 
+// Only run this after the settings are initialized
+if !(EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(makeJerryCan), _this];
+};
+
+if (!GVAR(enabled)) exitWith {};
+
 params [["_target", objNull, [objNull]], ["_fuelAmount", 20, [0]]];
 
 if (isNull _target ||

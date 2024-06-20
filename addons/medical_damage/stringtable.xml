@@ -18,7 +18,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
             <English>Sets the amount of damage a player can receive before going unconscious (and dying if "Sum of Trauma" is enabled).</English>
-            <Japanese>プレイヤーが気絶するまでに受けられるダメージ量を設定します。\n("外傷の合計"が有効な場合は死亡するまでに受けられるダメージ量)</Japanese>
+            <Japanese>プレイヤーが無意識状態に陥るまでに受けられるダメージ量を設定します。\n("外傷の合計"が有効な場合は死亡するまでに受けられるダメージ量)</Japanese>
             <French>Définit la quantité de dégâts qu'un joueur peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).</French>
             <Russian>Устанавливает количество урона, которое может получить игрок, прежде чем потеряет сознание (и умирает, если включена функция "Сумма травм").</Russian>
             <Portuguese>Define a quantidade de dano que um jogador pode receber antes de ficar inconsciente.</Portuguese>
@@ -49,7 +49,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_Description">
             <English>Sets the amount of damage an AI unit can receive before going unconscious (or dying when "Sum of Trauma" is enabled).</English>
-            <Japanese>AIが気絶するまでに受けられるダメージ量を設定します。\n("外傷の合計"が有効な場合は死亡するまでに受けられるダメージ量)</Japanese>
+            <Japanese>AIが無意識状態に陥るまでに受けられるダメージ量を設定します。\n("外傷の合計"が有効な場合は死亡するまでに受けられるダメージ量)</Japanese>
             <French>Définit la quantité de dégâts qu'une unité IA peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).</French>
             <Russian>Устанавливает количество урона, которое может получить ИИ, прежде чем потеряет сознание (или умирает, когда включена функция "Сумма травм")..</Russian>
             <Portuguese>Define a quantidade de dano que uma IA pode receber antes de ficar inconsciente.</Portuguese>
@@ -625,7 +625,7 @@
         <Key ID="STR_ACE_Medical_Damage_fatalDamageSource_Description">
             <English>Determines what damage can be fatal</English>
             <Russian>Определяет какой урон будет смертельным</Russian>
-            <Japanese>致命となるダメージの種類を決定します。</Japanese>
+            <Japanese>致命となるダメージの種類を定義します。</Japanese>
             <Chinese>決定何種傷害為致命</Chinese>
             <Chinesesimp>确定哪些伤害可能是致命的</Chinesesimp>
             <Italian>Determina quali danni possono essere letali</Italian>
@@ -757,7 +757,7 @@
             <German>Legt die Höhe des Schadens fest, den eine Einheit erhalten kann, bevor diese ohnmächtig wird. (0 für Misionsnormalwert)</German>
             <Italian>Determina il livello di danni sopportabili da un'unità senza svenire. (0 per il valore predefinito dalla missione)</Italian>
             <French>Définit la quantité de dégâts que l'unité peut subir avant de perdre connaissance (ou mourir, si l'option "Somme des traumatismes" est sélectionnée).\n(0 utilise la valeur définie dans la mission.)</French>
-            <Japanese>このユニットが気絶するまでに受けられるダメージ量を設定します。 (ミッション標準は0)</Japanese>
+            <Japanese>このユニットが無意識状態に陥るまでに受けられるダメージ量を設定します。 (ミッション標準は0)</Japanese>
             <Czech>Určuje kolik poškození může jednotka utrpět než upadne do bezvědomí. (pro použití standardní hodnoty mise zadejte 0)</Czech>
             <Russian>Устанавливает количество урона, которое может получить юнит перед тем, как потерять сознание. (0 для значения миссии)</Russian>
             <Polish>Ustawia próg obrażeń jakie może otrzymać jednostka przed utratą przytomności. (0 jako ustawienie domyślne misji)</Polish>
@@ -772,7 +772,7 @@
             <Russian>Шанс потерять сознание от боли</Russian>
             <Polish>Szansa na nieprzytomność przez ból</Polish>
             <Italian>Probabilità Svenimento da Dolore</Italian>
-            <Japanese>痛みによる気絶確率</Japanese>
+            <Japanese>痛みによる無意識化確率</Japanese>
             <Spanish>Probabilidad de inconsciencia por dolor</Spanish>
             <French>Douleur - Chance d'évanouissement</French>
             <German>Chance für Bewusslosigkeit durch Schmerz</German>
@@ -785,7 +785,7 @@
             <Russian>Шанс, что человек потеряет сознание, когда его боль выше допустимого порога при получении травмы.</Russian>
             <Italian>La probabilità che un'unità perda i sensi quando il suo dolore è sopra la soglia critica ricevendo danni.</Italian>
             <Polish>Szansa że osoba straci przytomność gdy jej ból jest powyżej tolerowalnego progu podczas otrzymywania obrażeń.</Polish>
-            <Japanese>ユニットがダメージを受けた時の痛みが許容しきい値を超えていた場合に気絶する確率を設定します。</Japanese>
+            <Japanese>ユニットがダメージを受けた時の痛みが許容しきい値を超えていた場合に無意識状態に陥る確率を設定します。</Japanese>
             <Spanish>La probabilidad de que una persona caiga inconsciente cuando su dolor está por encima del umbral al haber recibido daño.</Spanish>
             <French>La probabilité pour qu'une personne perde connaissance lorsque la douleur ressentie est supérieure à son seuil de tolérance.</French>
             <German>Die Wahrscheinlichkeit, dass eine Person bewusstlos wird, wenn ihre Schmerzen bei einer Verwundung über der Toleranzschwelle liegen.</German>
@@ -798,11 +798,12 @@
             <Russian>Порог боли для потери сознания</Russian>
             <Italian>Soglia Critica di Dolore</Italian>
             <French>Seuil d'inconscience par la douleur.</French>
-            <Japanese>気絶する痛みのしきい値</Japanese>
+            <Japanese>無意識状態に陥る痛みのしきい値</Japanese>
             <Polish>Próg Nieprzytomności od Bólu</Polish>
             <German>Schmerz-Bewusstlosigkeit-Grenze</German>
             <Korean>고통 기절 한계점</Korean>
             <Portuguese>Limite de Dor Antes da Inconsciência</Portuguese>
+            <Spanish>Umbral de Dolor de Inconsciencia</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_Description">
             <English>Sets the threshold for severe pain, above which a person can fall unconscious upon receiving damage.</English>
@@ -814,6 +815,7 @@
             <German>Legt die Grenze für starke Schmerzen fest, oberhalb derer eine Person bei erlittenem Schaden bewusstlos werden kann.</German>
             <Korean>사람이 데미지를 입었을 때 의식불명 상태가 될 수 있는 심각한 고통의 한계점을 설정합니다.</Korean>
             <Portuguese>Define o limite para dor severa, acima do qual uma pessoa pode ficar inconsciente ao receber dano.</Portuguese>
+            <Spanish>Establece el umbral para dolor severo, sobre el cual una persona puede caer inconsciente una vez reciba daño.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_DeathChance_DisplayName">
             <English>Fatal Injury Death Chance</English>
