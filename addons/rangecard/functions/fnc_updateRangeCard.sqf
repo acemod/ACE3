@@ -160,7 +160,7 @@ if (_isABenabled) then {
 
 private _cacheEntry = missionNamespace getVariable format [QGVAR(%1_%2_%3_%4_%5_%6_%7), _zeroRange, _boreHeight, _ammoClass, _weaponClass, _isABenabled, _useBarrelLengthInfluence, _useAmmoTemperatureInfluence];
 if (isNil "_cacheEntry") then {
-    private _scopeBaseAngle = if (!_useABConfig) then {
+    private _scopeBaseAngle = if (!_isABenabled) then {
         parseNumber (("ace" callExtension  ["ballistics:zero_vanilla", [_zeroRange, _muzzleVelocity, _airFriction, _boreHeight]]) select 0)
     } else {
         parseNumber (("ace" callExtension  ["ballistics:zero_advanced", [_zeroRange, _muzzleVelocity, _boreHeight, EGVAR(scopes,zeroReferenceTemperature), EGVAR(scopes,zeroReferenceBarometricPressure), EGVAR(scopes,zeroReferenceHumidity), _bc, _dragModel, _atmosphereModel]]) select 0)
