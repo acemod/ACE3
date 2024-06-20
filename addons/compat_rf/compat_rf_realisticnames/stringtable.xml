@@ -112,28 +112,28 @@
             <Korean>데저트 이글 마크 XIX L5 (금색)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_tan_Name">
-            <English>Hera H6 (Tan)</English>
-            <Japanese>ヘラ H6 (タン)</Japanese>
+            <English>HERA H6 (Tan)</English>
+            <Japanese>HERA H6 (タン)</Japanese>
             <Korean>헤라 H6 (황갈)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_oli_Name">
-            <English>Hera H6 (Olive)</English>
-            <Japanese>ヘラ H6 (オリーブ)</Japanese>
+            <English>HERA H6 (Olive)</English>
+            <Japanese>HERA H6 (オリーブ)</Japanese>
             <Korean>헤라 H6 (올리브)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_blk_Name">
-            <English>Hera H6 (Black)</English>
-            <Japanese>ヘラ H6 (ブラック)</Japanese>
+            <English>HERA H6 (Black)</English>
+            <Japanese>HERA H6 (ブラック)</Japanese>
             <Korean>헤라 H6 (검정)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_digi_Name">
-            <English>Hera H6 (Digital)</English>
-            <Japanese>ヘラ H6 (AAF迷彩)</Japanese>
+            <English>HERA H6 (Digital)</English>
+            <Japanese>HERA H6 (AAF迷彩)</Japanese>
             <Korean>헤라 H6 (AAF 디지털)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_gold_Name">
-            <English>Hera H6 (Gold)</English>
-            <Japanese>ヘラ H6 (ゴールド)</Japanese>
+            <English>HERA H6 (Gold)</English>
+            <Japanese>HERA H6 (ゴールド)</Japanese>
             <Korean>헤라 H6 (금색)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_dmr_01_black_Name">
@@ -212,49 +212,74 @@
             <Korean>ASh-12 LR (수풀)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_Name">
-            <English>AW159 Wildcat</English>
-            <Japanese>AW159 ワイルドキャット</Japanese>
-            <Korean>AW159 와일드캣</Korean>
+            <English>AW159 Wildcat ASW</English>
+            <Japanese>AW159 ワイルドキャット ASW</Japanese>
+            <Korean>AW159 와일드캣 ASW</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_unarmed_Name">
-            <English>AW159 Wildcat (Unarmed)</English>
-            <Japanese>AW159 ワイルドキャット (非武装)</Japanese>
-            <Korean>AW159 와일드캣 (비무장)</Korean>
-        </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_military_Name">
-            <English>H225M Super Cougar HADR</English>
-            <Japanese>H225M シュペル クーガー HADR</Japanese>
-            <Korean>H225M 슈퍼 쿠거 재난 구호</Korean>
+            <English>AW159 Wildcat ASW (Unarmed)</English>
+            <Japanese>AW159 ワイルドキャット ASW (非武装)</Japanese>
+            <Korean>AW159 와일드캣 ASW (비무장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_base_Name">
-            <English>H225M Super Cougar Transport</English>
-            <Japanese>H225M シュペル クーガー 輸送</Japanese>
-            <Korean>H225M 슈퍼 쿠거 수송</Korean>
+            <English>H225 Super Puma (Transport)</English>
+            <Japanese>H225 シュペル ピューマ (輸送型)</Japanese>
+            <Korean>H225 슈퍼 퓨마 (비무장)</Korean>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_Name">
-            <English>H225 Super Puma Transport</English>
-            <Japanese>H225 シュペル ピューマ 輸送</Japanese>
-            <Korean>H225 슈퍼 퓨마 수송</Korean>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_civ_base_Name">
+            <English>H225 Super Puma (Civilian)</English>
+            <Japanese>H225 シュペル ピューマ (民生型)</Japanese>
+            <Korean>H225 슈퍼 퓨마 (비무장)</Korean>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_Name">
-            <English>H225 Super Puma VIP</English>
-            <Japanese>H225 シュペル ピューマ VIP</Japanese>
-            <Korean>H225 슈퍼 퓨마 VIP</Korean>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_base_Name">
+            <English>H215 Super Puma (Transport)</English>
+            <Japanese>H215 シュペル ピューマ (輸送型)</Japanese>
+            <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_Name">
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_civ_base_Name">
+            <English>H215 Super Puma (Civilian)</English>
+            <Japanese>H215 シュペル ピューマ (民生型)</Japanese>
+            <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_military_base_Name">
+            <English>H215 Super Puma (Unarmed)</English>
+            <Japanese>H215 シュペル ピューマ (非武装)</Japanese>
+            <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_base_Name">
             <English>H225M Super Cougar SOCAT</English>
             <Japanese>H225M シュペル クーガー SOCAT</Japanese>
             <Korean>H225M 슈퍼 쿠거 SOCAT</Korean>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_03_Name">
-            <English>H225M Super Cougar CSAR</English>
-            <Japanese>H225M シュペル クーガー CSAR</Japanese>
-            <Korean>H225M 슈퍼 쿠거 CSAR</Korean>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_nato_Name">
+            <English>H225M Super Cougar SOCAT</English>
+            <Japanese>H225M シュペル クーガー SOCAT</Japanese>
+            <Korean>H225M 슈퍼 쿠거 SOCAT</Korean>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_Name">
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_03_base_Name">
+            <English>H225M Super Cougar</English>
+            <Japanese>H225M シュペル クーガー</Japanese>
+            <Korean>H225M 슈퍼 쿠거</Korean>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_base_Name">
             <English>H225 Super Puma SAR</English>
-            <Japanese>H225 シュペル ピューマ SAR</Japanese>
+            <Japanese>H225 シュペル ピューマ 捜索救難型</Japanese>
             <Korean>H225 슈퍼 퓨마 SAR</Korean>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_military_base_Name">
+            <English>H225M Super Cougar (Unarmed)</English>
+            <Japanese>H225M シュペル クーガー (非武装)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_01_water_Name">
+            <English>HEMTT Fire Truck</English>
+            <French>HEMTT anti-incendie</French>
+            <Polish>HEMTT (wersja pożarnicza)</Polish>
+            <German>HEMTT-Löschfahrzeug</German>
+            <Spanish>HEMTT (camión de bomberos)</Spanish>
+            <Russian>Пожарная машина HEMTT</Russian>
+            <Chinesesimp>HEMTT 消防卡车</Chinesesimp>
+            <Portuguese>HEMTT contra incêndio</Portuguese>
+            <Japanese>HEMTT 消防車</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_water_Name">
             <English>Typhoon Water</English>
@@ -322,9 +347,9 @@
             <Korean>RSG60</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_twinmortar_Name">
-            <English>AMOS</English>
-            <Japanese>AMOS</Japanese>
-            <Korean>AMOS</Korean>
+            <English>AMOS Container</English>
+            <Japanese>AMOS コンテナ</Japanese>
+            <Korean>AMOS 컨테이너</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_base_Name">
             <English>Drone40</English>

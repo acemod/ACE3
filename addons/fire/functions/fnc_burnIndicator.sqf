@@ -30,7 +30,7 @@ if !(IS_UNCONSCIOUS(_unit)) then {
     _unit setVariable [QGVAR(indicatorIteration), _iteration];
 };
 
-if (!([_unit] call FUNC(isBurning)) || { !alive _unit }) then {
+if (!([_unit] call FUNC(isBurning)) || {!alive _unit}) then {
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;
     _unit setVariable [QGVAR(burnUIPFH), -1];
 };

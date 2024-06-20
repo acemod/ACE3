@@ -381,11 +381,19 @@ However the following is allowed:
 _value = (_array select 0) select 1;
 ```
 
-Any conditions in statements shall always be wrapped around brackets.
+Any conditions in statements shall always be wrapped around brackets. Both uses of the `!` operator below are allowed.
 
 ```sqf
-if (!_value) then {};
 if (_value) then {};
+if (!_value) then {};
+if !(_value) then {};
+```
+
+Use of the `!` operator on the lefthand-side of brackets can be more readable, particularly for more complex conditions or macros:
+
+```sqf
+if !(_value && _otherValue && {_thirdValue call _something}) then {};
+if !(GETEGVAR(addon,globalVariableName,defaultValue)) then {};
 ```
 
 ### 5.6 Magic Numbers

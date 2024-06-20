@@ -24,7 +24,7 @@ if (!local _unit) exitWith {
     WARNING_1("setDead executed on non-local unit - %1",_this);
 };
 
-if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+if (GETEGVAR(medical,enabled,false)) then {
     [_unit, _reason, _source, _instigator] call EFUNC(medical_status,setDead);
 } else {
     // From 'ace_medical_status_fnc_setDead': Kill the unit without changing visual appearance

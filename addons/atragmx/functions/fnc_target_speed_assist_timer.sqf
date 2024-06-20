@@ -26,7 +26,7 @@ if !(ctrlVisible 9000) then {
         params ["_args"];
         _args params ["_startTime"];
 
-        if (!(GVAR(speedAssistTimer))) exitWith {
+        if !(GVAR(speedAssistTimer)) exitWith {
             GVAR(speedAssistTimer) = true;
 
             ctrlSetText [8006, Str(Round((CBA_missionTime - _startTime) * 10) / 10)];
