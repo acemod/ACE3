@@ -6,5 +6,5 @@
     true,
     true,
     {[QGVAR(enable), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;

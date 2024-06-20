@@ -3,12 +3,14 @@
 ["ace_settingsInitialized", {
     TRACE_1("settings init",GVAR(enabled));
     if (GVAR(enabled)) then {
+        [QGVAR(medicalDamage), LINKFUNC(medicalDamage)] call CBA_fnc_addEventHandler;
+
         [QGVAR(bailOut), {
             params ["_center", "_crewman", "_vehicle"];
             TRACE_3("bailOut",_center,_crewman,_vehicle);
 
             if (isPlayer _crewman) exitWith {};
-            if (!alive _crewman || { !( [_crewman] call EFUNC(common,isAwake))} ) exitWith {};
+            if (!alive _crewman || {!([_crewman] call EFUNC(common,isAwake))}) exitWith {};
 
             unassignVehicle _crewman;
             _crewman leaveVehicle _vehicle;

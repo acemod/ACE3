@@ -20,7 +20,7 @@ TRACE_1("params",_unit);
 
 // Prime the throwable if it hasn't been cooking already
 // Next to proper simulation this also has to happen before delay for orientation of the throwable to be set
-if (!(_unit getVariable [QGVAR(primed), false])) then {
+if !(_unit getVariable [QGVAR(primed), false]) then {
     [_unit] call FUNC(prime);
 };
 

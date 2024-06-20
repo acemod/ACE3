@@ -882,6 +882,7 @@
             <Korean>노리쇠 방식</Korean>
             <Russian>Тип болта</Russian>
             <French>Type d'obturateur</French>
+            <German>Art des Verschlusses</German>
             <Spanish>Tipo de Cerrojo</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_openBolt">
@@ -891,6 +892,7 @@
             <Korean>오픈 볼트</Korean>
             <Russian>Открыть болт</Russian>
             <French>Obturateur ouvert</French>
+            <German>Offener Verschluss</German>
             <Spanish>Cerrojo Abierto</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_closedBolt">
@@ -900,6 +902,7 @@
             <Korean>클로즈드 볼트</Korean>
             <Russian>Закрыть болт</Russian>
             <French>Obturateur fermé</French>
+            <German>Geschlossener Verschluss</German>
             <Spanish>Cerrojo Cerrado</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType">
@@ -909,6 +912,7 @@
             <Korean>총열 방식</Korean>
             <Russian>Тип ствола</Russian>
             <French>Type de canon</French>
+            <German>Lauftyp</German>
             <Spanish>Tipo de Cañón</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_nonRemoveable">
@@ -918,6 +922,7 @@
             <Korean>제거 불가</Korean>
             <Russian>Несъемный</Russian>
             <French>Inamovible</French>
+            <German>Nicht entfernbar</German>
             <Spanish>No-Desmontable</Spanish>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_removeable">
@@ -927,6 +932,7 @@
             <Korean>신속 교체</Korean>
             <Russian>Быстросъемный</Russian>
             <French>Changement rapide</French>
+            <German>Schnellwechsel</German>
             <Spanish>Cambiado Rápido</Spanish>
         </Key>
     </Package>
