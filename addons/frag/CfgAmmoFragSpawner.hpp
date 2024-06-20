@@ -5,7 +5,7 @@ class GVAR(DOUBLES(size,spawner_2_mid)): GVAR(DOUBLES(size,spawner_2_short)) {\
     submunitionConeAngle = 2;\
 };\
 class GVAR(DOUBLES(size,spawner_2_far)): GVAR(DOUBLES(size,spawner_2_short)) {\
-    submunitionConeAngle = 0.7;\
+    submunitionConeAngle = 0.9;\
 };\
 class GVAR(DOUBLES(size,spawner_3_short)): GVAR(DOUBLES(size,spawner_2_short)) {\
     submunitionConeType[] = {"random", 3};\
@@ -14,26 +14,26 @@ class GVAR(DOUBLES(size,spawner_3_mid)): GVAR(DOUBLES(size,spawner_3_short)) {\
     submunitionConeAngle = 2;\
 };\
 class GVAR(DOUBLES(size,spawner_3_far)): GVAR(DOUBLES(size,spawner_3_short)) {\
-    submunitionConeAngle = 0.7;\
+    submunitionConeAngle = 0.9;\
 }
 
 #define RANDOM_SPAWNER_PROTOTYPE(size,count) class GVAR(DOUBLES(TRIPLES(random,size,count),mid)): GVAR(spawnbase) {\
     submunitionConeType[] = {"random", count};\
     submunitionAmmo = QGVAR(size);\
     submunitionConeAngle = 85;\
-    triggerSpeedCoef[] = {-1.25, 1.25};\
+    triggerSpeedCoef[] = {-1.5, 1.5};\
 };\
 class GVAR(DOUBLES(TRIPLES(random,size,count),high)): GVAR(spawnbase) {\
     submunitionConeType[] = {"random", count};\
     submunitionAmmo = QGVAR(size);\
     submunitionConeAngle = 80;\
-    triggerSpeedCoef[] = {0.75, 1.25};\
+    triggerSpeedCoef[] = {0.75, 1.5};\
 };\
 class GVAR(DOUBLES(TRIPLES(random,size,count),top)): GVAR(spawnbase) {\
     submunitionConeType[] = {"random", count};\
     submunitionAmmo = QGVAR(size);\
     submunitionConeAngle = 60;\
-    triggerSpeedCoef[] = {0.75, 1.25};\
+    triggerSpeedCoef[] = {0.75, 1.5};\
 }
 
 class GVAR(spawnbase): B_65x39_Caseless {
@@ -48,7 +48,7 @@ class GVAR(spawnbase): B_65x39_Caseless {
     submunitionInitialOffset[] = {0,0,0};
     submunitionInitSpeed = 0;
     submunitionParentSpeedCoef = 1;
-    triggerSpeedCoef[] = {0.75, 1.25};
+    triggerSpeedCoef[] = {0.75, 1.5};
     triggerTime = 0;
 };
 
@@ -65,7 +65,7 @@ class GVAR(spawnbase): B_65x39_Caseless {
 class GVAR(spawnbase_targeted): GVAR(spawnbase) {
     submunitionConeType[] = {"random", 2};
     submunitionConeAngle = 4.5;
-    triggerSpeedCoef[] = {0.625, 1};
+    triggerSpeedCoef[] = {0.5, 1};
 };
 
 

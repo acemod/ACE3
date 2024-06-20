@@ -46,7 +46,7 @@ if (!hasInterface) exitWith {};
     }, true] call CBA_fnc_addPlayerEventHandler;
 
     // - Duty factors -------------------------------------------------------------
-    if (GVAR(medicalLoaded)) then {
+    if (GETEGVAR(medical,enabled,false)) then {
         [QEGVAR(medical,pain), { // 0->1.0, 0.5->1.05, 1->1.1
             linearConversion [0, 1, (_this getVariable [QEGVAR(medical,pain), 0]), 1, 1.1, true];
         }] call FUNC(addDutyFactor);

@@ -44,7 +44,7 @@ if (_state) then {
             };
         };
 
-        if (!(_unit getVariable [QGVAR(isEscorting), false])) then {
+        if !(_unit getVariable [QGVAR(isEscorting), false]) then {
             [(_this select 1)] call CBA_fnc_removePerFrameHandler;
             [objNull, _target, false] call EFUNC(common,claim);
             detach _target;

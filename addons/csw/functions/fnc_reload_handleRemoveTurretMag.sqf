@@ -24,7 +24,7 @@ params ["_vehicle", "_turretPath", "_carryMag", "_vehMag", "_unloadTo"];
 TRACE_5("removeTurretMag EH",_vehicle,_turretPath,_carryMag,_vehMag,_unloadTo);
 
 TRACE_3("",local _vehicle,_vehicle turretLocal _turretPath,local _unloadTo);
-if (!(_vehicle turretLocal _turretPath)) exitWith {};
+if !(_vehicle turretLocal _turretPath) exitWith {};
 
 private _magsInWeapon = [];  // Check how much ammo it has now:
 {
