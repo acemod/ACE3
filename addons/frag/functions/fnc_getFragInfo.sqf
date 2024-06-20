@@ -80,7 +80,9 @@ if (_gurneyConstant == 0) then {
 
 private _fragCount = getNumber (_ammoConfig >> QGVAR(fragCount));
 if (_fragCount == 0) then {
-    _fragCount = 250;
+    private _indirectHitRange = getNumber (_ammoConfig >> "indirectHitRange");
+    _fragCount = 4 * pi * ACE_FRAG_MIN_FRAG_HIT_CHANCE * (20 *_indirectHitRange)^2;
+    _fragCount = _fragCount max 250;
     _notifyMissingEntries = true;
 };
 
