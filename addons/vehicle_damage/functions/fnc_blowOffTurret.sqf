@@ -20,8 +20,7 @@
 [{
     params ["_vehicle"];
 
-    private _config = configOf _vehicle;
-    (getArray (_config >> QGVAR(turret))) params [["_model", "", [""]], ["_offset", [0, 0, 0], [[]], 3]];
+    (getArray (configOf _vehicle >> QGVAR(turret))) params [["_model", "", [""]], ["_offset", [0, 0, 0], [[]], 3]];
 
     if (_model isEqualTo "") exitWith {};
 
