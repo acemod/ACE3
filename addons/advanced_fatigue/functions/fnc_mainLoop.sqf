@@ -74,12 +74,11 @@ if (isNull objectParent ACE_player && {_currentSpeed > 0.1} && {isTouchingGround
 };
 
 // Oxygen calculation
-private _oxygen = 1 - 0.131 * GVAR(respiratoryRate) ^ 2; // Default AF oxygen saturation
-
-if (GVAR(medicalLoaded) && {EGVAR(medical_vitals,simulateSpo2)}) then {
-    _oxygen = (ACE_player getVariable [QEGVAR(medical,spo2), 97]) / 100;
+private _oxygen =  if (GVAR(medicalLoaded) && {EGVAR(medical_vitals,simulateSpo2)}) then { // Defer to medical
+    (ACE_player getVariable [QEGVAR(medical,spo2), 97]) / 100
+} else {
+    1 - 0.131 * GVAR(respiratoryRate) ^ 2 // Default AF oxygen saturation
 };
-
 // Calculate muscle damage increase
 GVAR(muscleDamage) = GVAR(muscleDamage) + (_currentWork / GVAR(peakPower)) ^ 3.2 * MUSCLE_TEAR_RATE;
 
