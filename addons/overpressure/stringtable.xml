@@ -30,20 +30,26 @@
             <Spanish>Coeficiente de distancia de sobrepresión</Spanish>
         </Key>
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_toolTip">
-            <English>Scales the overpressure effect [Default: 1]</English>
-            <German>Stellt den Koeffizient für die Überdruckentfernung ein [Standard: 1]</German>
-            <Japanese>過圧効果の範囲 [デフォルト: 1]</Japanese>
-            <Korean>과중압력의 효과 크기 [기본설정: 1]</Korean>
-            <Polish>Skaluje efekt nadciśnienia [Domyślne: 1]</Polish>
-            <French>Ajuste l'effet de surpression. Valeur par défaut : 1.</French>
-            <Italian>Scala l'effetto di sovrapressione [Predefinito: 1]</Italian>
-            <Chinesesimp>超压影响的范围 [预设：1]</Chinesesimp>
-            <Chinese>高壓影響的範圍 [預設: 1]</Chinese>
-            <Russian>Степень зависимости избыточного давления от расстояния [По умолчанию: 1]</Russian>
-            <Portuguese>Escala o efeito de sobrepressão [Padrão: 1]</Portuguese>
-            <Hungarian>Állítja a túlnyomás hatását [Alapértelmezett: 1]</Hungarian>
-            <Czech>Nastavuje jak velký je efekt přetlaku [Standard: 1]</Czech>
-            <Spanish>Escala el efecto de sobrepresión [Predeterminado: 1]</Spanish>
+            <English>Scales the overpressure effect</English>
+            <German>Stellt den Koeffizient für die Überdruckentfernung ein</German>
+            <Japanese>過圧効果の範囲</Japanese>
+            <Korean>과중압력의 효과 크기</Korean>
+            <Polish>Skaluje efekt nadciśnienia</Polish>
+            <French>Ajuste l'effet de surpression</French>
+            <Italian>Scala l'effetto di sovrapressione</Italian>
+            <Chinesesimp>超压影响的范围</Chinesesimp>
+            <Chinese>高壓影響的範圍</Chinese>
+            <Russian>Степень зависимости избыточного давления от расстояния</Russian>
+            <Portuguese>Escala o efeito de sobrepressão</Portuguese>
+            <Hungarian>Állítja a túlnyomás hatását</Hungarian>
+            <Czech>Nastavuje jak velký je efekt přetlaku</Czech>
+            <Spanish>Escala el efecto de sobrepresión</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_displayName">
+            <English>Backblast Distance Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_toolTip">
+            <English>Scales the backblast effect</English>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastRange">
             <English>Backblast range</English>

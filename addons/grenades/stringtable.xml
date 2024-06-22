@@ -105,6 +105,8 @@
         </Key>
         <Key ID="STR_ACE_Grenades_RollGrenadeDisabled">
             <English>Can't roll this grenade, switched to %1</English>
+            <Japanese>この手榴弾は転がせません、 %1 に切り替えます</Japanese>
+            <Russian>Эта граната не может быть брошена, переключитесь на %1</Russian>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_Name">
             <English>M84 Stun Grenade</English>

@@ -23,7 +23,7 @@ if ((profileNamespace getVariable ["ACE_ATragMX_profileNamespaceVersion", 0]) ==
     _resetGunList = false;
     {
         // Verify each gun has correct param type
-        if (!(_x isEqualTypeArray ["", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "", [], [], false])) exitWith {
+        if !(_x isEqualTypeArray ["", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "", [], [], false]) exitWith {
             _resetGunList = true;
         };
     } forEach GVAR(gunList);

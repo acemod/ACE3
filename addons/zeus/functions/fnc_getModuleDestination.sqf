@@ -113,9 +113,9 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay 312) displayCtrl 50), "draw",
     } else {
         TRACE_4("cleaning up",_this select 1,GVAR(moduleDestination_displayEHMouse),GVAR(moduleDestination_displayEHKeyboard),GVAR(moduleDestination_mapDrawEH));
         (_this select 1) call CBA_fnc_removePerFrameHandler;
-        (findDisplay 312) displayRemoveEventHandler ["mouseButtonDown", GVAR(moduleDestination_displayEHMouse)];
+        (findDisplay 312) displayRemoveEventHandler ["MouseButtonDown", GVAR(moduleDestination_displayEHMouse)];
         (findDisplay 312) displayRemoveEventHandler ["KeyDown", GVAR(moduleDestination_displayEHKeyboard)];
-        ((findDisplay 312) displayCtrl 50) ctrlRemoveEventHandler ["draw", GVAR(moduleDestination_mapDrawEH)];
+        ((findDisplay 312) displayCtrl 50) ctrlRemoveEventHandler ["Draw", GVAR(moduleDestination_mapDrawEH)];
         GVAR(moduleDestination_displayEHMouse) = nil;
         GVAR(moduleDestination_displayEHKeyboard) = nil;
         GVAR(moduleDestination_mapDrawEH) = nil;

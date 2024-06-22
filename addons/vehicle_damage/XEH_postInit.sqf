@@ -27,7 +27,8 @@
 
         TRACE_2("bailOut",_vehicle,_unit);
 
-        if (isPlayer _unit || {!(_unit call EFUNC(common,isAwake))}) exitWith {};
+        // Ignore players and the dead
+        if (_unit call EFUNC(common,isPlayer) || {!(_unit call EFUNC(common,isAwake))}) exitWith {};
 
         unassignVehicle _unit;
         _unit leaveVehicle _vehicle;

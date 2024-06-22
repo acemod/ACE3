@@ -37,7 +37,7 @@ private _selectionsToIgnore = _vehicle call FUNC(getSelectionsToIgnore);
 (getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];  // Since 1.82 these are all lower case
 
 // get hitpoints of wheels with their selections
-([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
+([_vehicle] call EFUNC(common,getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
 
 private _hitPointsAddedNames = [];
 private _hitPointsAddedStrings = [];
