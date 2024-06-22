@@ -24,8 +24,14 @@ private _entries = [];
     private _entryResult = getText _x;
 
     if (_entryResult != "") then {
-        // In case function doesn't exist yet, wrap in extra layer
-        _entries pushBack (compile format ["call %1", _entryResult]);
+        if (ADDON) then {
+            // Runs in postInit
+            _entries pushBack (call compile _entryResult);
+        } else {
+            // Runs in preInit
+            // In case function doesn't exist yet, wrap in extra layer
+            _entries pushBack (compile format ["call %1", _entryResult]);
+        };
     };
 } forEach configProperties [_config, "isText _x", false];
 
