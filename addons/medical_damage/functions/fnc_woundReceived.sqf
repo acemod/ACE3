@@ -26,17 +26,14 @@ if (_typeOfDamage in GVAR(damageTypeDetails)) then {
     (GVAR(damageTypeDetails) get _typeOfDamage) params ["", "", "_woundHandlers"];
 
     private _damageData = [_unit, _allDamages, _typeOfDamage];
-    private _damageDataTemp = [];
 
     {
-        _damageDataTemp = _damageData call _x;
-        TRACE_2("Wound handler returned",_damageData,_damageDataTemp);
+        _damageData = _damageData call _x;
+        TRACE_1("Wound handler returned",_damageData);
 
-        // If invalid return, skip
-        if (isNil "_damageDataTemp" || {!(_damageDataTemp isEqualType [])} || {(count _damageDataTemp) < 3}) then {
-            TRACE_2("Return invalid, skipping wound handling",_damageData,_damageDataTemp);
-        } else {
-            _damageData = _damageDataTemp;
+        // If invalid return, exit
+        if (isNil "_damageData" || {!(_damageData isEqualType [])} || {(count _damageData) < 3}) exitWith {
+            TRACE_1("Return invalid, skipping wound handling",_damageData);
         };
     } forEach _woundHandlers;
 };
