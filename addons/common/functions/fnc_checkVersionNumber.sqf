@@ -4,7 +4,7 @@
  * Compares version numbers from loaded addons.
  *
  * Arguments:
- * None
+ * 0: Lowercase addon whitelist <ARRAY> (default: missionNamespace getVariable ["ACE_Version_Whitelist", []])
  *
  * Return Value:
  * None

@@ -9,8 +9,8 @@
  *   0 = Warn once
  *   1 = Warn permanently
  *   2 = Kick
- * 1: Check all PBOs? (default: false) <BOOL>
- * 2: Whitelist (default: "") <STRING>
+ * 1: Check all PBOs? <BOOL> (default: false)
+ * 2: Whitelist <STRING> (default: "")
  *
  * Return Value:
  * None
