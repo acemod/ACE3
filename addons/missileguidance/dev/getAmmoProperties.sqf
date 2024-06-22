@@ -24,4 +24,3 @@ private _attackProfiles = createHashMap;
 } forEach _configs;
 
 [_seekerTypes, _navigationTypes, _attackProfiles]
-

@@ -1,4 +1,4 @@
-#include "\z\ace\addons\missileguidance\script_component.hpp"
+#include "..\script_component.hpp"
 // tracks a projectile until it explodes
 params ["_projectile"];
 
