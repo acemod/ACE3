@@ -26,9 +26,8 @@ class CfgAmmo {
         class ace_missileguidance {
             enabled = 1;
 
-            minDeflection = 0.0005;      // Minium flap deflection for guidance
-            maxDeflection = 0.01;       // Maximum flap deflection for guidance
-            incDeflection = 0.0005;      // The incrmeent in which deflection adjusts.
+            pitchRate = 30; // degrees per second
+            yawRate = 30;
 
             canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -38,6 +37,9 @@ class CfgAmmo {
 
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL", "LOBL" };
+
+            defaultNavigationType = "Direct";
+            navigationTypes[] = { "Direct", "ZeroEffortMiss" };
 
             seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
             seekerAngle = 70;           // Angle in front of the missile which can be searched
@@ -49,6 +51,19 @@ class CfgAmmo {
             // Attack profile type selection
             defaultAttackProfile = "hellfire";
             attackProfiles[] = {"hellfire", "hellfire_hi", "hellfire_lo"};
+
+            class navigationStates {
+                class initial {
+                    transitionCondition = QFUNC(midCourseTransition);
+                    navigationType = "Direct";
+                };
+                class terminal {
+                    transitionCondition = "";
+                    navigationType = "ZeroEffortMiss";
+                };
+                // transitions from initial -> termimal
+                states[] = {"initial", "terminal"};
+            };
         };
     };
     class ACE_Hellfire_AGM114N: ACE_Hellfire_AGM114K {
@@ -75,8 +90,8 @@ class CfgAmmo {
             canVanillaLock = 1;
             enabled = 1; // Missile Guidance must be explicitly enabled
             seekLastTargetPos = 0;
-            defaultSeekerType = "ARH";
-            seekerTypes[] = { "ARH" };
+            defaultSeekerType = "MillimeterWaveRadar";
+            seekerTypes[] = { "MillimeterWaveRadar" };
             defaultSeekerLockMode = "LOBL";
             seekerLockModes[] = { "LOBL" };
 
