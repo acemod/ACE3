@@ -30,6 +30,7 @@ PREP(changeProjectileDirection);
 PREP(checkFiles);
 PREP(checkFiles_diagnoseACE);
 PREP(checkPBOs);
+PREP(checkVersionNumber);
 PREP(claim);
 PREP(claimSafeServer);
 PREP(codeToString);

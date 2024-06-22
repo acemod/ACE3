@@ -90,24 +90,24 @@
             <Japanese>デザートイーグル Mark XIX L5 (ゴールド)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_tan_Name">
-            <English>Hera H6 (Tan)</English>
-            <Japanese>ヘラ H6 (タン)</Japanese>
+            <English>HERA H6 (Tan)</English>
+            <Japanese>HERA H6 (タン)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_oli_Name">
-            <English>Hera H6 (Olive)</English>
-            <Japanese>ヘラ H6 (オリーブ)</Japanese>
+            <English>HERA H6 (Olive)</English>
+            <Japanese>HERA H6 (オリーブ)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_blk_Name">
-            <English>Hera H6 (Black)</English>
-            <Japanese>ヘラ H6 (ブラック)</Japanese>
+            <English>HERA H6 (Black)</English>
+            <Japanese>HERA H6 (ブラック)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_digi_Name">
-            <English>Hera H6 (Digital)</English>
-            <Japanese>ヘラ H6 (AAF迷彩)</Japanese>
+            <English>HERA H6 (Digital)</English>
+            <Japanese>HERA H6 (AAF迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_gold_Name">
-            <English>Hera H6 (Gold)</English>
-            <Japanese>ヘラ H6 (ゴールド)</Japanese>
+            <English>HERA H6 (Gold)</English>
+            <Japanese>HERA H6 (ゴールド)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_dmr_01_black_Name">
             <English>VS-121 (Black)</English>
@@ -170,40 +170,63 @@
             <Japanese>ASh-12 LR (森林迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_Name">
-            <English>AW159 Wildcat</English>
-            <Japanese>AW159 ワイルドキャット</Japanese>
+            <English>AW159 Wildcat ASW</English>
+            <Japanese>AW159 ワイルドキャット ASW</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_unarmed_Name">
-            <English>AW159 Wildcat (Unarmed)</English>
-            <Japanese>AW159 ワイルドキャット (非武装)</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_military_Name">
-            <English>H225M Super Cougar HADR</English>
-            <Japanese>H225M シュペル クーガー HADR</Japanese>
+            <English>AW159 Wildcat ASW (Unarmed)</English>
+            <Japanese>AW159 ワイルドキャット ASW (非武装)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_base_Name">
-            <English>H225M Super Cougar Transport</English>
-            <Japanese>H225M シュペル クーガー 輸送</Japanese>
+            <English>H225 Super Puma (Transport)</English>
+            <Japanese>H225 シュペル ピューマ (輸送型)</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_Name">
-            <English>H225 Super Puma Transport</English>
-            <Japanese>H225 シュペル ピューマ 輸送</Japanese>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_civ_base_Name">
+            <English>H225 Super Puma (Civilian)</English>
+            <Japanese>H225 シュペル ピューマ (民生型)</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_Name">
-            <English>H225 Super Puma VIP</English>
-            <Japanese>H225 シュペル ピューマ VIP</Japanese>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_base_Name">
+            <English>H215 Super Puma (Transport)</English>
+            <Japanese>H215 シュペル ピューマ (輸送型)</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_Name">
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_civ_base_Name">
+            <English>H215 Super Puma (Civilian)</English>
+            <Japanese>H215 シュペル ピューマ (民生型)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_military_base_Name">
+            <English>H215 Super Puma (Unarmed)</English>
+            <Japanese>H215 シュペル ピューマ (非武装)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_base_Name">
             <English>H225M Super Cougar SOCAT</English>
             <Japanese>H225M シュペル クーガー SOCAT</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_03_Name">
-            <English>H225M Super Cougar CSAR</English>
-            <Japanese>H225M シュペル クーガー CSAR</Japanese>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_nato_Name">
+            <English>H225M Super Cougar SOCAT</English>
+            <Japanese>H225M シュペル クーガー SOCAT</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_Name">
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_03_base_Name">
+            <English>H225M Super Cougar</English>
+            <Japanese>H225M シュペル クーガー</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_base_Name">
             <English>H225 Super Puma SAR</English>
-            <Japanese>H225 シュペル ピューマ SAR</Japanese>
+            <Japanese>H225 シュペル ピューマ 捜索救難型</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_military_base_Name">
+            <English>H225M Super Cougar (Unarmed)</English>
+            <Japanese>H225M シュペル クーガー (非武装)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_01_water_Name">
+            <English>HEMTT Fire Truck</English>
+            <French>HEMTT anti-incendie</French>
+            <Polish>HEMTT (wersja pożarnicza)</Polish>
+            <German>HEMTT-Löschfahrzeug</German>
+            <Spanish>HEMTT (camión de bomberos)</Spanish>
+            <Russian>Пожарная машина HEMTT</Russian>
+            <Chinesesimp>HEMTT 消防卡车</Chinesesimp>
+            <Portuguese>HEMTT contra incêndio</Portuguese>
+            <Japanese>HEMTT 消防車</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_water_Name">
             <English>Typhoon Water</English>
@@ -258,8 +281,8 @@
             <Japanese>RSG60</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_twinmortar_Name">
-            <English>AMOS</English>
-            <Japanese>AMOS</Japanese>
+            <English>AMOS Container</English>
+            <Japanese>AMOS コンテナ</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_base_Name">
             <English>Drone40</English>
