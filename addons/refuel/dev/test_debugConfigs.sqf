@@ -5,14 +5,14 @@
 
 private _testPass = true;
 
-diag_log text format ["[ACE-refuel] Showing CfgVehicles with vanilla transportFuel"];
-private _fuelTrucks = configProperties [configFile >> "CfgVehicles", "(isClass _x) && {(getNumber (_x >> 'transportFuel')) > 0}", true];
+INFO("Showing CfgVehicles with transportFuel and without XEH");
+private _badCfgVehicles = '
+        2 == getNumber (_x >> "scope")
+        && {0 < getNumber (_x >> "transportFuel")}
+        && {!isText (_x >> "EventHandlers" >> "CBA_Extended_EventHandlers" >> "init")}
+' configClasses (configFile >> "CfgVehicles");
 {
-    if ((configName _x) isKindOf "Car") then {
-        diag_log text format ["Car [%1] needs config [transportFuel: %2]", configName _x, getNumber (_x >> 'transportFuel')];
-    } else {
-        diag_log text format ["Non-car? [%1] needs config [transportFuel: %2]", configName _x, getNumber (_x >> 'transportFuel')];
-    };
-} forEach _fuelTrucks;
+    diag_log text format ["Class %1: %2 [%3] needs XEH", configName _x, configName inheritsFrom _x, configSourceMod _x];
+} forEach _badCfgVehicles;
 
 _testPass

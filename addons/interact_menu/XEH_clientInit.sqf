@@ -3,16 +3,16 @@
 if (!hasInterface) exitWith {};
 
 // Wait until player controls (man,vehicle or uav) a thing before compiling the menu
-GVAR(controllableSelfActionsAdded) = [] call CBA_fnc_createNamespace;
+GVAR(controllableSelfActionsAdded) = createHashMap;
 DFUNC(newControllableObject) = {
     params ["_object"];
     private _type = typeOf _object;
     TRACE_2("newControllableObject",_object,_type);
     if (_type == "") exitWith {};
 
-    if (!(GVAR(controllableSelfActionsAdded) getVariable [_type, false])) then {
+    if !(_type in GVAR(controllableSelfActionsAdded)) then {
         [_type] call FUNC(compileMenuSelfAction);
-        GVAR(controllableSelfActionsAdded) setVariable [_type, true];
+        GVAR(controllableSelfActionsAdded) set [_type, nil];
         [{
             TRACE_1("sending newControllableObject event",_this);
             // event for other systems to add self actions, running addActionToClass before this will cause compiling
@@ -27,8 +27,7 @@ DFUNC(newControllableObject) = {
 
 GVAR(blockDefaultActions) = [];
 
-GVAR(cachedBuildingTypes) = [];
-GVAR(cachedBuildingActionPairs) = [];
+GVAR(cachedBuildingTypes) = createHashMap;
 
 GVAR(ParsedTextCached) = [];
 

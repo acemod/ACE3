@@ -31,11 +31,11 @@ To quickly add a full ACE Arsenal to a box for all clients use the following cod
 
 `ace_arsenal_fnc_initBox`
 
-|  | Argument | Type | Optional (default value)
----| -------- | ---- | ------------------------
-0  | Box | Object | Required
-1  | Items | Array of strings or boolean | Required
-2  | Initialize globally | Boolean | Optional (default: `false`)
+|    | Argument | Type | Optional (default value) |
+|----| -------- | ---- | ------------------------ |
+| 0  | Box | Object | Required |
+| 1  | Items | Array of strings or boolean | Required |
+| 2  | Initialize globally | Boolean | Optional (default: `false`) |
 
 This will add the virtual items passed as arguments and add an ACE interaction to open ACE Arsenal.
 
@@ -51,11 +51,11 @@ Please note that at least one virtual item needs to be added otherwise ACE Arsen
 
 `ace_arsenal_fnc_openBox`
 
-|  | Argument | Type | Optional (default value)
----| -------- | ---- | ------------------------
-0  | Box | Object | Required
-1  | Unit to open ACE Arsenal on | Object | Required
-2  | Ignore virtual items and fill ACE Arsenal | Boolean | Optional (default: `false`)
+|    | Argument | Type | Optional (default value) |
+|----| -------- | ---- | ------------------------ |
+| 0  | Box | Object | Required |
+| 1  | Unit to open ACE Arsenal on | Object | Required |
+| 2  | Ignore virtual items and fill ACE Arsenal | Boolean | Optional (default: `false`) |
 
 Examples:
 - `[_box, player] call ace_arsenal_fnc_openBox`
@@ -67,10 +67,10 @@ In the second example a full ACE Arsenal will be opened on the player.
 
 `ace_arsenal_fnc_removeBox`
 
-|  | Argument | Type | Optional (default value)
----| -------- | ---- | ------------------------
-0  | Box | Object | Required
-2  | Remove globally | Boolean | Optional (default: `false`)
+|    | Argument | Type | Optional (default value) |
+|----| -------- | ---- | ------------------------ |
+| 0  | Box | Object | Required |
+| 2  | Remove globally | Boolean | Optional (default: `false`) |
 
 Example:
 `[_box, true] call ace_arsenal_fnc_removeBox`
@@ -81,11 +81,11 @@ Example:
 
 `ace_arsenal_fnc_addVirtualItems`
 
-|  | Argument | Type | Optional (default value)
----| -------- | ---- | ------------------------
-0  | Box | Object | Required
-1  | Items | Array of strings or boolean | Required
-2  | Add globally | Boolean | Optional (default: `false`)
+|    | Argument | Type | Optional (default value) |
+|----| -------- | ---- | ------------------------ |
+| 0  | Box | Object | Required |
+| 1  | Items | Array of strings or boolean | Required |
+| 2  | Add globally | Boolean | Optional (default: `false`) |
 
 Passing an array of strings (class names) will add each one of those items to the specified box, passing true will add ALL items that are compatible with ACE Arsenal (the sorting is done on game startup). Faces, voices and insignia can't be added via this function.
 
@@ -97,11 +97,11 @@ Examples:
 
 `ace_arsenal_fnc_removeVirtualItems`
 
-|  | Argument | Type | Optional (default value)
----| -------- | ---- | ------------------------
-0  | Box | Object | Required
-1  | Items | Array of strings or boolean | Required
-2  | Remove globally | Boolean | Optional (default: `false`)
+|    | Argument | Type | Optional (default value) |
+|----| -------- | ---- | ------------------------ |
+| 0  | Box | Object | Required |
+| 1  | Items | Array of strings or boolean | Required |
+| 2  | Remove globally | Boolean | Optional (default: `false`) |
 
 Like adding virtual items, passing an array of string (class names) will remove each ones of those items, however passing true will remove all virtual items and also remove the interaction to access ACE Arsenal. Faces, voices and insignia can't be removed via this function.
 
@@ -185,11 +185,11 @@ Players with Zeus access can save default loadouts ingame, doing so will make th
 
 `ace_arsenal_fnc_addDefaultLoadout`
 
-|  | Argument | Type | Optional (default value)
----| -------- | ---- | ------------------------
-0  | Name of loadout | String | Required
-1  | getUnitLoadout array or CBA extended loadout array | Array | Required
-2  | Add loadout globally | Boolean | Optional (default: `false`)
+|    | Argument | Type | Optional (default value) |
+|----| -------- | ---- | ------------------------ |
+| 0  | Name of loadout | String | Required |
+| 1  | getUnitLoadout array or CBA extended loadout array | Array | Required |
+| 2  | Add loadout globally | Boolean | Optional (default: `false`) |
 
 Example:
 `["Squad Leader", getUnitLoadout sql1, true] call ace_arsenal_fnc_addDefaultLoadout`
@@ -229,22 +229,22 @@ The arguments passed to the bar, text and condition statements are:
 
 `ace_arsenal_fnc_addStat`
 
-|   | Argument | Type | Optional (default value)
---- | -------- | ---- | ------------------------
-0   | Tabs to add the stat to | Array of arrays | Required
-0.1 | Left tab indexes | Array of numbers | Required
-0.2 | Right tab indexes | Array of numbers | Required
-1   | Stat class ID | String | Required
-2   | Config entries to pass | Array of strings | Required
-3   | Title | String | Required
-4   | Show bar / show text bools | Array of booleans | Required
-4.1 | Show bar | Boolean | Required
-4.2 | Show text | Boolean | Required
-5   | Array of statements | Array of code | Required
-5.1 | Bar code | Code | Required
-5.2 | Text code | Code | Required
-5.3 | Condition | Code | Required
-6   | Priority | Number | Optional (default: `0`)
+|     | Argument | Type | Optional (default value) |
+| --- | -------- | ---- | ------------------------ |
+| 0   | Tabs to add the stat to | Array of arrays | Required |
+| 0.1 | Left tab indexes | Array of numbers | Required |
+| 0.2 | Right tab indexes | Array of numbers | Required |
+| 1   | Stat class ID | String | Required |
+| 2   | Config entries to pass | Array of strings | Required |
+| 3   | Title | String | Required |
+| 4   | Show bar / show text bools | Array of booleans | Required |
+| 4.1 | Show bar | Boolean | Required |
+| 4.2 | Show text | Boolean | Required |
+| 5   | Array of statements | Array of code | Required |
+| 5.1 | Bar code | Code | Required |
+| 5.2 | Text code | Code | Required |
+| 5.3 | Condition | Code | Required |
+| 6   | Priority | Number | Optional (default: `0`) |
 
 Return Value:
 - Array of stat IDs
@@ -263,9 +263,9 @@ If a stat already exists (so same class ID and tab), it will ignore the new addi
 
 `ace_arsenal_fnc_removeStat`
 
-|  | Argument | Type | Optional (default value)
----| -------- | ---- | ------------------------
-0  | Array of IDs | Array | Required
+|    | Argument | Type | Optional (default value) |
+|----| -------- | ---- | ------------------------ |
+| 0  | Array of IDs | Array | Required |
 
 Stats IDs are unique, IDs are generated as follows:
 
@@ -345,15 +345,15 @@ The argument passed to the condition is:
 
 `ace_arsenal_fnc_addSort`
 
-|   | Argument | Type | Optional (default value)
---- | -------- | ---- | ------------------------
-0   | Tabs to add the sort to | Array of arrays | Required
-0.1 | Left tab indexes | Array of numbers | Required
-0.2 | Right tab indexes | Array of numbers | Required
-1   | Stat class ID | String | Required
-2   | Title | String | Required
-3   | Algorithm | Code | Required
-4   | Condition | Code | Optional (default: `{true}`)
+|     | Argument | Type | Optional (default value) |
+| --- | -------- | ---- | ------------------------ |
+| 0   | Tabs to add the sort to | Array of arrays | Required |
+| 0.1 | Left tab indexes | Array of numbers | Required |
+| 0.2 | Right tab indexes | Array of numbers | Required |
+| 1   | Stat class ID | String | Required |
+| 2   | Title | String | Required |
+| 3   | Algorithm | Code | Required |
+| 4   | Condition | Code | Optional (default: `{true}`) |
 
 Return Value:
 - Array of sort IDs
@@ -382,9 +382,9 @@ If a sorting method already exists (so same class ID and tab), it will ignore th
 
 `ace_arsenal_fnc_removeSort`
 
-|  | Argument | Type | Optional (default value)
----| -------- | ---- | ------------------------
-0  | Array of IDs | Array | Required
+|    | Argument | Type | Optional (default value) |
+|----| -------- | ---- | ------------------------ |
+| 0  | Array of IDs | Array | Required |
 
 Sorting method IDs are unique and are generated in the same fashion as the stat IDs (see `5.3 Removing stats via a function`).
 
@@ -438,15 +438,15 @@ The focused unit object is passed to the condition and statement functions.
 
 `ace_arsenal_fnc_addAction`
 
-|   | Argument | Type | Optional (default value)
---- | -------- | ---- | ------------------------
-0   | Tabs to add the sort to | Array of numbers | Required
-1   | Action class ID | String | Required
-2   | Title | String | Required
-3   | Actions | Array of arrays | Required
-4   | Condition | Code | Optional (default: `{true}`)
-5   | Scope editor | Number | Optional (default: `2`)
-6   | Update on cargo change | Boolean | Optional (default: `false`)
+|     | Argument | Type | Optional (default value) |
+| --- | -------- | ---- | ------------------------ |
+| 0   | Tabs to add the sort to | Array of numbers | Required |
+| 1   | Action class ID | String | Required |
+| 2   | Title | String | Required |
+| 3   | Actions | Array of arrays | Required |
+| 4   | Condition | Code | Optional (default: `{true}`) |
+| 5   | Scope editor | Number | Optional (default: `2`) |
+| 6   | Update on cargo change | Boolean | Optional (default: `false`) |
 
 Return Value:
 - Array of action IDs
@@ -474,9 +474,9 @@ If an action already exists (so same class ID and tab within an action), it will
 
 `ace_arsenal_fnc_removeAction`
 
-|  | Argument | Type | Optional (default value)
----| -------- | ---- | ------------------------
-0  | Array of IDs | Array | Required
+|    | Argument | Type | Optional (default value) |
+|----| -------- | ---- | ------------------------ |
+| 0  | Array of IDs | Array | Required |
 
 Action IDs are unique and their generation is explained in `7.2 Adding sorting methods via a function`.
 
@@ -492,28 +492,28 @@ All are local.
 
 | Name  | Arguments | Added in |
 | ------------- | ------------- | ------------- |
-| ace_arsenal_boxInitialized | Arsenal box (OBJECT), items (BOOL or ARRAY) |
-| ace_arsenal_boxRemoved | Arsenal box (OBJECT) |
-| ace_arsenal_displayOpened | Arsenal display (DISPLAY) |
-| ace_arsenal_displayClosed | None |
-| ace_arsenal_leftPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
-| ace_arsenal_rightPanelFilled | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
-| ace_arsenal_onLoadoutSave | Loadout index (SCALAR), [loadout name (STRING), loadout data (ARRAY)] |
-| ace_arsenal_onLoadoutSaveExtended | Loadout index (SCALAR), [loadout name (STRING), CBA extended loadout data (ARRAY)] | 3.15.1
-| ace_arsenal_onLoadoutLoad | loadout data (ARRAY), loadout name (STRING) |
-| ace_arsenal_onLoadoutLoadExtended | CBA extended loadout data (ARRAY), loadout name (STRING) | 3.15.1
-| ace_arsenal_onLoadoutDelete | loadout name (STRING) |
-| ace_arsenal_loadoutShared | Loadouts list listnBox control (CONTROL), loadout author (STRING), loadout name (STRING), loadout data (ARRAY) |
-| ace_arsenal_loadoutUnshared | Loadouts list listnBox control (CONTROL), loadout author (STRING), loadout name (STRING) |
-| ace_arsenal_cargoChanged | Arsenal display (DISPLAY), item (STRING), add or remove (NUMBER), shiftState (BOOL) |
-| ace_arsenal_loadoutImported | Arsenal display (DISPLAY), import list (BOOL) |
-| ace_arsenal_loadoutExported | Arsenal display (DISPLAY), export list (BOOL) |
-| ace_arsenal_loadoutsDisplayOpened | loadouts screen display (DISPLAY) | 3.12.3 |
-| ace_arsenal_loadoutsDisplayClosed | None | 3.12.3 |
-| ace_arsenal_loadoutsTabChanged | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
-| ace_arsenal_loadoutsListFilled | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
-| ace_arsenal_loadoutVerified | loadout data (ARRAY), loadout CBA extended data (HASHMAP), null items (ARRAY), unavailable items (ARRAY), unavailable extended data (ARRAY) | 3.17.0 |
-| ace_arsenal_weaponItemChanged | weapon classname (STRING), item classname (STRING), item index (NUMBER, 0-5: muzzle, side, optic, bipod, magazine, underbarrel) | 3.16.0 |
+| `ace_arsenal_boxInitialized` | Arsenal box (OBJECT), items (BOOL or ARRAY) |
+| `ace_arsenal_boxRemoved` | Arsenal box (OBJECT) |
+| `ace_arsenal_displayOpened` | Arsenal display (DISPLAY) |
+| `ace_arsenal_displayClosed` | None |
+| `ace_arsenal_leftPanelFilled` | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
+| `ace_arsenal_rightPanelFilled` | Arsenal display (DISPLAY), current left panel IDC (SCALAR), current right panel IDC (SCALAR) |
+| `ace_arsenal_onLoadoutSave` | Loadout index (SCALAR), [loadout name (STRING), loadout data (ARRAY)] |
+| `ace_arsenal_onLoadoutSaveExtended` | Loadout index (SCALAR), [loadout name (STRING), CBA extended loadout data (ARRAY)] | 3.15.1
+| `ace_arsenal_onLoadoutLoad` | loadout data (ARRAY), loadout name (STRING) |
+| `ace_arsenal_onLoadoutLoadExtended` | CBA extended loadout data (ARRAY), loadout name (STRING) | 3.15.1
+| `ace_arsenal_onLoadoutDelete` | loadout name (STRING) |
+| `ace_arsenal_loadoutShared` | Loadouts list listnBox control (CONTROL), loadout author (STRING), loadout name (STRING), loadout data (ARRAY) |
+| `ace_arsenal_loadoutUnshared` | Loadouts list listnBox control (CONTROL), loadout author (STRING), loadout name (STRING) |
+| `ace_arsenal_cargoChanged` | Arsenal display (DISPLAY), item (STRING), add or remove (NUMBER), shiftState (BOOL) |
+| `ace_arsenal_loadoutImported` | Arsenal display (DISPLAY), import list (BOOL) |
+| `ace_arsenal_loadoutExported` | Arsenal display (DISPLAY), export list (BOOL) |
+| `ace_arsenal_loadoutsDisplayOpened` | loadouts screen display (DISPLAY) | 3.12.3 |
+| `ace_arsenal_loadoutsDisplayClosed` | None | 3.12.3 |
+| `ace_arsenal_loadoutsTabChanged` | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
+| `ace_arsenal_loadoutsListFilled` | loadouts screen display (DISPLAY), tab control (CONTROL) | 3.12.3 |
+| `ace_arsenal_loadoutVerified` | loadout data (ARRAY), loadout CBA extended data (HASHMAP), null items (ARRAY), unavailable items (ARRAY), unavailable extended data (ARRAY) | 3.17.0 |
+| `ace_arsenal_weaponItemChanged` | weapon classname (STRING), item classname (STRING), item index (NUMBER, 0-5: muzzle, side, optic, bipod, magazine, underbarrel) | 3.16.0 |
 
 ## 9. Custom sub item categories
 
@@ -521,13 +521,13 @@ All are local.
 
 `ace_arsenal_fnc_addRightPanelButton`
 
-|  | Argument | Type | Optional (default value)
----| -------- | ---- | ------------------------
-0  | Misc. items | Array of strings | Required
-1  | Tooltip | String | Optional (default: `""`)
-2  | Picture path | String | Optional (default: `"\z\ace\addons\arsenal\data\iconCustom.paa"`)
-3  | Override a specific button | Number | Optional (default: `-1`)
-4  | Move button on overwrite | Bool | Optional (default: `false`)
+|    | Argument | Type | Optional (default value) |
+|----| -------- | ---- | ------------------------ |
+| 0  | Misc. items | Array of strings | Required |
+| 1  | Tooltip | String | Optional (default: `""`) |
+| 2  | Picture path | String | Optional (default: `"\z\ace\addons\arsenal\data\iconCustom.paa"`) |
+| 3  | Override a specific button | Number | Optional (default: `-1`) |
+| 4  | Move button on overwrite | Bool | Optional (default: `false`) |
 
 Return Value:
 - Successful: Number of the slot (0-9)
