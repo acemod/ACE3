@@ -37,6 +37,6 @@ if (_hitIndex >= 0) then {
     _vehicle setHitPointDamage [_hitPoint, _damage, true];
 };
 
-if (_hitPoint isEqualTo "hitengine" && { _damage > 0.9 }) then {
-    _vehicle call EFUNC(cookoff,engineFire);
+if (_hitPoint == "hitengine" && {_damage > 0.9}) then {
+    [QEGVAR(cookoff,engineFireServer), _vehicle] call CBA_fnc_serverEvent;
 };

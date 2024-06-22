@@ -74,7 +74,7 @@ if (isNull objectParent ACE_player && {_currentSpeed > 0.1} && {isTouchingGround
 };
 
 // Oxygen calculation
-private _oxygen =  if (GVAR(medicalLoaded) && {EGVAR(medical_vitals,simulateSpo2)}) then { // Defer to medical
+private _oxygen =  if (GETEGVAR(medical,enabled,false) && {EGVAR(medical_vitals,simulateSpo2)}) then { // Defer to medical
     (ACE_player getVariable [QEGVAR(medical,spo2), 97]) / 100
 } else {
     1 - 0.131 * GVAR(respiratoryRate) ^ 2 // Default AF oxygen saturation

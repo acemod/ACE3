@@ -47,6 +47,24 @@ class CfgVehicles {
     <p>ace_cargo_hasCargo and ace_cargo_canLoad are only needed if you aren't inheriting from any of BI base classes or if you are trying to disable loading for a specific vehicle / object.</p>
 </div>
 
+### 1.3 Adding predefined cargo via config
+
+```cpp
+class CfgVehicles {
+    class yourVehicleClass {
+        ace_cargo_space = 4;  // Add if necessary
+        ace_cargo_hasCargo = 1;  // Add if necessary
+        class ace_cargo {
+            class cargo {
+                class ACE_medicalSupplyCrate { // Doesn't have to have the same name as the item you're adding
+                    type = "ACE_medicalSupplyCrate";
+                    amount = 1;
+                };
+            };
+        };
+    };
+};
+```
 
 ## 2. Events
 

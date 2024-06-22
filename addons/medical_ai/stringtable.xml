@@ -20,7 +20,7 @@
         <Key ID="STR_ACE_Medical_AI_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
             <German>KI reagiert auf Verletzungen und Bewusstlosigkeit</German>
-            <Japanese>AIが負傷者と気絶している人に対して行動するようになります。</Japanese>
+            <Japanese>AIが負傷者と無意識状態の人に対して行動するようになります。</Japanese>
             <Russian>ИИ будет реагировать на травмы и потерю сознания</Russian>
             <French>Les unités IA seront sensibles aux blessures, ainsi qu'à la perte de connaissance.</French>
             <Portuguese>A IA irá responder a ferimentos e perdas de consciência</Portuguese>
@@ -58,6 +58,7 @@
             <Portuguese>Exigir Itens</Portuguese>
             <Japanese>アイテムを要求</Japanese>
             <Russian>Требуемые предметы</Russian>
+            <Spanish>Requerir Objetos</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_desc">
             <English>AI will only perform medical treatment if they have the necessary items in their inventory.</English>
@@ -69,6 +70,7 @@
             <Portuguese>A IA só irá realizar tratamento médico se tiver os itens necessários em seu inventário.</Portuguese>
             <Japanese>AIのインベントリに必要なアイテムがある場合にのみ治療を実行します。</Japanese>
             <Russian>Искусственный интеллект будет оказывать медицинскую помощь только в том случае, если в его инвентаре есть необходимые предметы.</Russian>
+            <Spanish>La IA sólo realizará el tratamiento médico en caso de que dispongan de los objetos necesarios en su inventario.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_autoReplaceItems">
             <English>Auto Convert Items for AI</English>
@@ -80,6 +82,7 @@
             <Portuguese>Conversão automática de itens para IA</Portuguese>
             <Japanese>AIのアイテムを自動変換</Japanese>
             <Russian>Автоматическое преобразование элементов для ИИ</Russian>
+            <Spanish>Auto Convertir Objetos para la IA</Spanish>
         </Key>
     </Package>
 </Project>

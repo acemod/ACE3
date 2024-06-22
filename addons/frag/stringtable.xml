@@ -105,7 +105,7 @@
             <French>Active la simulation de la réflexion des explosions ACE.</French>
             <Portuguese>Ativa a simulação de reflexo de explosão do ACE</Portuguese>
             <Russian>Включить симуляцию отражения взрывов ACE</Russian>
-            <Japanese>ACE爆発反射シミュレーションを有効化</Japanese>
+            <Japanese>ACE 爆発反射シミュレーションを有効化</Japanese>
             <Korean>ACE 폭발 반사 시뮬레이션을 적용합니다.</Korean>
             <Chinesesimp>启用 ACE 模拟爆炸反射</Chinesesimp>
             <Chinese>啟用ACE模擬爆炸反射</Chinese>
@@ -138,7 +138,7 @@
             <Hungarian>Ez a beállítás szabályozza a repeszeződés és pattogzás által kilőtt objektumok követett számát. Ha több ez a szám, ezek az objektumok nem lesznek követve. Csökkentsd ezt a beállítást, ha nem akarsz lassulásokat magas-törmelékmennyiségű helyzetekben (200+ repesz a levegőben egyszerre)</Hungarian>
             <Russian>Эта настройка контролирует максимальное количество снарядов, которок отслеживает система осколков и обломков в каждый момент времени. /nСнаряды, выстреленные сверх этого числа, отслеживаться не будут. Уменьшите это значение, если вы не хотите падения FPS при большом количестве снарядов в одной перестрелке (&gt; 200 одновременно летящих снарядов)</Russian>
             <Italian>Questo parametro controlla il numero massimo di proiettili che la frammentazione e il sistema di spalling tracciano in ogni momento. Se vengono sparati ulteriori proiettili, non verranno tracciati. Abbassa questo parametro se non vuoi cali di FPS in scenari con molti proiettili (&gt;200 proiettili in aria contemporaneamente)</Italian>
-            <Japanese>この設定では、断片化および剥離システムが常に追跡する飛翔体の最大量を制御します。 さらに多くの飛翔体が発射された場合、それらは追跡されません。 弾数が多いシナリオでFPSを低下させたくない場合は、この設定を下げてください。 (一度に200発以上が空中に発射されます)</Japanese>
+            <Japanese>この設定では、断片化および剥離システムが常に追跡する飛翔体の最大量を制御します。 この値より多くの飛翔体が発射された場合、それらは追跡されません。 弾数が多いシナリオでFPSを低下させたくない場合は、この設定を下げてください。 (一度に200発以上が空中に発射されます)</Japanese>
             <Korean>이 설정은 탄환파편 및 파편 시스템으로 인해 생긴 발사체의 수를 결정합니다. 만약 더 많은 발사체가 나올 경우 정해진 수 이외에는 추적하지 않습니다. 이 설정을 낮춤으로써 파편이 많은 시나리오를 실행할때 더욱 원활히 진행할 수 있습니다 (한 번에 200개 이하)</Korean>
             <Chinesesimp>设定在指定时间内，系统最大可追踪的破片粒子数量。如有更多的碎片在这之后产生，这些粒子将不会被追踪。如果你想要维持好的帧数，此设定勿调的过高。（ &gt;一次200颗粒子）</Chinesesimp>
             <Chinese>設定在指定時間內，系統最大可追蹤的碎片/剝落粒子數量。如有更多的碎片在這之後產生，這些粒子將不會被追蹤。如果你想要維持好的幀數，此設定勿調的過高。( &gt;一次200顆粒子)</Chinese>
@@ -170,7 +170,7 @@
             <Hungarian>A lepattogzási útvonalak számításának darabjai képkockánként. Ez eloszlatja az FPS-megszakadást több képkockára, ezzel csökkentve a súlyosságát.</Hungarian>
             <Russian>Число обрабатываемых осколков за кадр. Это позволяет распределить нагрузку по отслеживанию осколков между несколькими кадрами, чтобы предотвратить падение FPS.</Russian>
             <Italian>Il numero di calcoli per tracciamento di spalling ad ogni frame. Questo aiuta a distribuire l'impatto del tracciamento dello spalling su più frame, riducendolo ulteriormente.</Italian>
-            <Japanese>与えられたフレームごとに追跡する剥離飛翔体の数を決定します。FPS に影響をあたえないよう、剥離飛翔体を複数のフレームで追跡し、分散させています。</Japanese>
+            <Japanese>任意のフレームごとに追跡される剥離飛翔体の数。剥離による飛翔体を追跡することによるFPSへの影響を複数フレームに分散させ抑えることが出来ます。</Japanese>
             <Korean>가능한 프레임마다 파편을 추적 및 계산합니다. 여러 프레임에 걸쳐 파편난 발사체를 추적하여 FPS에 도움을 줍니다. 이를 제한함으로써 더욱 큰 효과를 볼 수 있습니다.</Korean>
             <Chinesesimp>设定在每一帧数内，系统最大可追踪的破片粒子数量。此设定可有效帮助系统减低计算压力。</Chinesesimp>
             <Chinese>設定在每一幀數內，系統最大可追蹤的碎片/剝落粒子數量。此設定可有效幫助系統減低計算壓力</Chinese>

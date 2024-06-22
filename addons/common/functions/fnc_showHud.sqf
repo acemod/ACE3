@@ -56,7 +56,7 @@ private _resultMask = [];
 for "_index" from 0 to 9 do {
     private _set = true; //Default to true
     {
-        if (!(_x select _index)) exitWith {
+        if !(_x select _index) exitWith {
             _set = false; //Any false will make it false
         };
     } forEach _masks;

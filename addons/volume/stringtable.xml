@@ -168,7 +168,7 @@
         <Key ID="STR_ACE_Volume_FadeDelayDescription">
             <English>Time it takes (in seconds) for the sound to fade in/out.</English>
             <German>Zeit, die es benötigt (in Sekunden), für das Geräusch, ein- bzw. auszublenden.</German>
-            <Japanese>音がフェードイン/アウトするまでの時間 (秒) を決定します。</Japanese>
+            <Japanese>音がフェードイン/アウトするまでの時間。 (秒単位)</Japanese>
             <French>Temps nécessaire (en secondes) aux sons pour être réduits/rétablis.</French>
             <Korean>페이드 인/아웃 되는데 걸리는 시간(초)</Korean>
             <Chinesesimp>设定音量淡出/入时所需的秒数。</Chinesesimp>

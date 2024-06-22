@@ -103,7 +103,7 @@ private _finalOwner = objNull;
 
 TRACE_2("",count _spots,_spots);
 
-if ((count _spots) > 0) then {
+if (_spots isNotEqualTo []) then {
     private _bucketList = nil;
     private _bucketPos = nil;
     private _c = 0;
@@ -115,7 +115,7 @@ if ((count _spots) > 0) then {
     while { count(_spots) != count(_excludes) && _c < (count _spots) } do {
         scopeName "mainSearch";
         {
-            if (!(_forEachIndex in _excludes)) then {
+            if !(_forEachIndex in _excludes) then {
                 private _index = _buckets pushBack [_x, [_x]];
                 _excludes pushBack _forEachIndex;
                 _bucketPos = _x select 0;
@@ -124,7 +124,7 @@ if ((count _spots) > 0) then {
             };
         } forEach _spots;
         {
-            if (!(_forEachIndex in _excludes)) then {
+            if !(_forEachIndex in _excludes) then {
                 private _testPos = (_x select 0);
                 if ((_testPos vectorDistanceSqr _bucketPos) <= 100) then {
                     _bucketList pushBack _x;

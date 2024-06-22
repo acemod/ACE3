@@ -198,7 +198,7 @@
         <Key ID="STR_ACE_Medical_GUI_MaxDistance_Description">
             <English>Maximum distance from which the Medical Menu can be opened.</English>
             <German>Maximale Entfernung, um das Sanitätsmenü zu öffnen.</German>
-            <Japanese>医療メニューを開いたままにできる最大距離を決定します。</Japanese>
+            <Japanese>医療メニューを開いたままにできる最大距離。</Japanese>
             <Russian>Максимальное расстояние, с которого можно открыть Медицинское меню.</Russian>
             <French>Définit la distance (en mètres) à partir de laquelle il n'est plus possible d'activer le menu médical pour traiter un patient.</French>
             <Portuguese>A Distância máxima do paciente para que o Menu Médico possa ser aberto.</Portuguese>
@@ -293,6 +293,7 @@
             <German>Medizinische Info anzeigen</German>
             <Japanese>医療情報一時表示</Japanese>
             <Russian>Просмотр медицинской информации</Russian>
+            <Spanish>Ojear Información Médica</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_DisplayName">
             <English>Medical Peek Duration</English>
@@ -303,6 +304,7 @@
             <German>Dauer zum Anzeigen der medizinischen Info</German>
             <Japanese>医療情報一時表示の表示時間</Japanese>
             <Russian>Продолжительность медицинского осмотра</Russian>
+            <Spanish>Duración del Ojear Información Médica</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_Description">
             <English>How long the medical info peek remains open after releasing the key.</English>
@@ -313,6 +315,7 @@
             <Italian>Durata di visualizzazione delle Info Mediche dopo aver rilasciato il tasto.</Italian>
             <Japanese>医療情報一時表示キーを放してからどれだけ長く情報表示するか。</Japanese>
             <Russian>Как долго окно просмотра медицинской информации остается открытым после отпускания клавиши.</Russian>
+            <Spanish>Durante cuánto tiempo la información médica ojeada permanece abierta una ves se deje de apretar la tecla.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_LoadPatient">
             <English>Load Patient</English>
@@ -566,6 +569,7 @@
             <Italian>Passa a te stesso</Italian>
             <Japanese>自分に切り替え</Japanese>
             <Russian>Переключиться на себя </Russian>
+            <Spanish>Cambiar a uno mismo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ToggleToOther">
             <English>Switch to target</English>
@@ -576,6 +580,7 @@
             <Italian>Passa al paziente</Italian>
             <Japanese>相手に切り替え</Japanese>
             <Russian>Переключиться на цель</Russian>
+            <Spanish>Cambiar al objetivo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Head">
             <English>Head</English>
@@ -1002,6 +1007,7 @@
             <Italian>Nessuna emorragia</Italian>
             <Japanese>出血はしていない</Japanese>
             <Russian>Кровотечения нет</Russian>
+            <Spanish>Sin sangrado</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate1">
             <English>Slow bleeding</English>
@@ -1012,6 +1018,7 @@
             <Italian>Debole emorragia</Italian>
             <Japanese>出血は穏やか</Japanese>
             <Russian>Медленное кровотечение</Russian>
+            <Spanish>Sangrado lento</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate2">
             <English>Moderate bleeding</English>
@@ -1022,6 +1029,7 @@
             <Italian>Emorraggia moderata</Italian>
             <Japanese>出血はそこそこ速い</Japanese>
             <Russian>Умеренное кровотечение</Russian>
+            <Spanish>Sangrado moderado</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate3">
             <English>Severe bleeding</English>
@@ -1032,6 +1040,7 @@
             <Italian>Forte emorragia</Italian>
             <Japanese>出血は激しい</Japanese>
             <Russian>Сильное кровотечение</Russian>
+            <Spanish>Sangrado severo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate4">
             <English>Massive bleeding</English>
@@ -1042,6 +1051,7 @@
             <Italian>Gravissima emorragia</Italian>
             <Japanese>出血は酷く多い</Japanese>
             <Russian>Огромное кровотечение</Russian>
+            <Spanish>Sangrado masivo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_PAIN">
             <English>in Pain</English>
@@ -1116,6 +1126,7 @@
             <Italian>Nessuna perdita di sangue</Italian>
             <Japanese>失血なし</Japanese>
             <Russian>Потери крови нет</Russian>
+            <Spanish>Sin pérdida de sangre</Spanish>
         </Key>
         <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
@@ -1365,6 +1376,8 @@
             <Portuguese>Mostrar estado de sangramento</Portuguese>
             <Japanese>出血状態の表示</Japanese>
             <Korean>출혈 상태 표시</Korean>
+            <French>Afficher l'état des saignements</French>
+            <Russian>Показать состояние кровотечения</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showBleeding_Description">
             <English>Display if the patient is bleeding, optionally with rate</English>
@@ -1374,6 +1387,8 @@
             <Portuguese>Mostrar se o paciente está sangrando, opcionalmente com taxa</Portuguese>
             <Japanese>患者が出血しているかどうかを表示します。オプションで出血速度も表示します</Japanese>
             <Korean>환자가 출혈 중인지 여부를 표시합니다(선택적으로 출혈 속도 포함)</Korean>
+            <French>Indique si le patient saigne, éventuellement avec le taux de saignement</French>
+            <Russian>Показывает, есть ли у пациента кровотечение, опционально с указанием частоты</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ShowBleeding_Rate">
             <English>Show Bleeding Rate</English>
@@ -1383,6 +1398,8 @@
             <Portuguese>Mostrar taxa de sangramento</Portuguese>
             <Japanese>出血速度の表示</Japanese>
             <Korean>출혈 속도 표시</Korean>
+            <French>Afficher le taux de saignement</French>
+            <Russian>Показать частоту кровотечения</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_DisplayName">
             <English>Peek Medical Info on Hit</English>
@@ -1394,6 +1411,7 @@
             <German>Zeige medizinische Info beim Treffer an</German>
             <Japanese>被弾時の医療情報一時表示</Japanese>
             <Russian>Показать медицинскую информацию о попадании</Russian>
+            <Spanish>Ojear Información Médica en Impacto</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_Description">
             <English>Temporarily show medical info when injured.</English>
@@ -1405,6 +1423,7 @@
             <German>Bei Verletzungen vorübergehend medizinische Info anzeigen.</German>
             <Japanese>被弾時に医療情報を一時的に表示します。</Japanese>
             <Russian>Временно показывать медицинскую информацию при травме.</Russian>
+            <Spanish>Temporalmente muestra la información médica cuando es herido.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_DisplayName">
             <English>Medical Peek Duration on Hit</English>
@@ -1416,6 +1435,7 @@
             <German>Dauer der Anzeige bei einem Treffer.</German>
             <Japanese>被弾時の医療情報一時表示の表示時間</Japanese>
             <Russian>Продолжительность медицинского осмотра при попадании</Russian>
+            <Spanish>Duración de Ojear la Información Médica cuando hay Impacto</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_Description">
             <English>How long the medical info peek remains open after being injured.</English>
@@ -1427,6 +1447,7 @@
             <German>Wie lange die medizinische Info nach einer Verletzung angezeigt wird.</German>
             <Japanese>被弾時の医療情報の一時表示をどれだけ長く表示するか。</Japanese>
             <Russian>Как долго окно просмотра медицинской информации остается открытым после получения травмы.</Russian>
+            <Spanish>Durante cuánto tiempo la información médica ojeada permanece abierta una tras haber sido herido.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_DisplayName">
             <English>Show Trauma Sustained</English>
@@ -1439,6 +1460,7 @@
             <Chinesesimp>显示遭受的创伤</Chinesesimp>
             <French>Afficher les traumatismes subis</French>
             <Russian>Показать полученную травму</Russian>
+            <Spanish>Mostrar Trauma Sostenido</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_Description">
             <English>Show trauma sustained in the injury list.</English>
@@ -1451,6 +1473,7 @@
             <Chinesesimp>在伤情表上显示创伤</Chinesesimp>
             <French>Afficher les traumatismes subis dans la liste des blessures.</French>
             <Russian>Показать полученную травму в списке травм.</Russian>
+            <Spanish>Mostrar trauma sostenido en la lista de heridas</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_bodyPartOutlineColor_DisplayName">
             <English>Body Part Outline Color</English>
@@ -1462,6 +1485,7 @@
             <German>Umrissfarbe des Körperteils</German>
             <Japanese>身体部位の輪郭表示の色</Japanese>
             <Russian>Цвет контура части тела</Russian>
+            <Spanish>Color de Contorno de las Partes del Cuerpo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_bodyPartOutlineColor_Description">
             <English>Color of outline around selected body part.</English>
@@ -1473,6 +1497,7 @@
             <German>Farbe des Umrisses um das ausgewählten Körperteil.</German>
             <Japanese>選択した身体部位の輪郭表示の色。</Japanese>
             <Russian>Цвет контура вокруг выбранной части тела.</Russian>
+            <Spanish>Color del contorno alrededor de la parte del cuerpo seleccionada.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained1">
             <English>Minor Trauma</English>
@@ -1485,6 +1510,7 @@
             <Chinesesimp>轻微创伤</Chinesesimp>
             <French>Traumatisme mineur</French>
             <Russian>Незначительная травма</Russian>
+            <Spanish>Trauma Menor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained2">
             <English>Major Trauma</English>
@@ -1497,6 +1523,7 @@
             <Chinesesimp>中度创伤</Chinesesimp>
             <French>Traumatisme majeur</French>
             <Russian>Серьезная травма</Russian>
+            <Spanish>Trauma mayor</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained3">
             <English>Severe Trauma</English>
@@ -1509,6 +1536,7 @@
             <Chinesesimp>重度创伤</Chinesesimp>
             <French>Traumatisme grave</French>
             <Russian>Тяжелая травма</Russian>
+            <Spanish>Trauma Severo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained4">
             <English>Chronic Trauma</English>
@@ -1521,6 +1549,7 @@
             <Chinesesimp>慢性创伤</Chinesesimp>
             <French>Traumatisme chronique</French>
             <Russian>Хроническая травма</Russian>
+            <Spanish>Trauma Crónico</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BodyLabelLeft">
             <English>L</English>
@@ -1532,6 +1561,7 @@
             <German>L</German>
             <Japanese>左</Japanese>
             <Russian>Лево</Russian>
+            <Spanish>I</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BodyLabelRight">
             <English>R</English>
@@ -1543,6 +1573,7 @@
             <German>R</German>
             <Japanese>右</Japanese>
             <Russian>Право</Russian>
+            <Spanish>D</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Medic">
             <English>in your inventory</English>
@@ -1554,6 +1585,7 @@
             <German>im Inventar</German>
             <Japanese>個あなたが保有</Japanese>
             <Russian>в вашем инвентаре</Russian>
+            <Spanish>en tu inventario</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Patient">
             <English>in patient's inventory</English>
@@ -1565,6 +1597,7 @@
             <German>im Inventar des Patienten</German>
             <Japanese>個患者が保有</Japanese>
             <Russian>в инвентаре пациента</Russian>
+            <Spanish>en el inventario del paciente</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Vehicle">
             <English>in vehicle's inventory</English>
@@ -1576,6 +1609,7 @@
             <Italian>Nell'inventario del veicolo</Italian>
             <Japanese>個車両内に保有</Japanese>
             <Russian>в инвентаре транспорта</Russian>
+            <Spanish>en el inventario del vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning">
             <English>No effect until tourniquet removed</English>
@@ -1586,6 +1620,7 @@
             <Italian>Nessun effetto fino alla rimozione del laccio emostatico</Italian>
             <Japanese>止血帯を外すまで効果を発揮しません</Japanese>
             <Russian>Никакого эффекта до тех пор, пока жгут не будет снят</Russian>
+            <Spanish>Sin efecto hasta que se quita el torniquete</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_DisplayName">
             <English>Show Tourniquet Warning</English>
@@ -1596,6 +1631,7 @@
             <Italian>Mostra avviso di laccio emostatico</Italian>
             <Japanese>止血帯の警告を表示</Japanese>
             <Russian>Показать предупреждение о наложении жгута</Russian>
+            <Spanish>Mostrar Advertencia de Torniquete</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_Description">
             <English>Show a warning tooltip when a tourniquet will interfere with a medical action.</English>
@@ -1606,6 +1642,7 @@
             <Italian>Mostra un avviso se un laccio emostatico impedisce un trattamento medico.</Italian>
             <Japanese>止血帯が医療行為を妨げる場合には、警告ツールチップを表示します。</Japanese>
             <Russian>Показать всплывающую подсказку с предупреждением, когда жгут помешает медицинскому вмешательству.</Russian>
+            <Spanish>Muestra un mensaje de advertencia cuando un torniquete interfiera con una acción médica.</Spanish>
         </Key>
     </Package>
 </Project>

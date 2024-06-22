@@ -1,7 +1,6 @@
 class CfgVehicles {
     class StaticMGWeapon;
     class rhs_DSHKM_base: StaticMGWeapon {
-        // ENABLE_CSW_ATTRIBUTE;
         class ACE_CSW {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_DSHKM);

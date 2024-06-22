@@ -3540,6 +3540,7 @@
             <French>Utilisation de l'IA</French>
             <Portuguese>Utilização por IA</Portuguese>
             <Russian>Использование ИИ</Russian>
+            <Spanish>Uso de la IA</Spanish>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_illumination">
             <English>Illum</English>
@@ -3551,6 +3552,7 @@
             <French>Fusées éclairantes</French>
             <Portuguese>Sinalizadoras</Portuguese>
             <Russian>Осветители</Russian>
+            <Spanish>Iluminación</Spanish>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_concealment">
             <English>Smoke</English>
@@ -3562,6 +3564,7 @@
             <French>Fumigènes</French>
             <Portuguese>Fumígenas</Portuguese>
             <Russian>Дым</Russian>
+            <Spanish>Humo</Spanish>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_infantry">
             <English>Inf</English>
@@ -3573,6 +3576,7 @@
             <French>Infanterie</French>
             <Portuguese>Infantaria</Portuguese>
             <Russian>Пехота</Russian>
+            <Spanish>Infantería</Spanish>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_lightVehicle">
             <English>Veh</English>
@@ -3584,6 +3588,7 @@
             <French>Véhicule</French>
             <Portuguese>Veículo</Portuguese>
             <Russian>Техника</Russian>
+            <Spanish>Vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_armor">
             <English>Armor</English>
@@ -3595,6 +3600,7 @@
             <French>Blindage</French>
             <Portuguese>Blindagem</Portuguese>
             <Russian>Бронетехника</Russian>
+            <Spanish>Blindados</Spanish>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_aircraft">
             <English>Air</English>
@@ -3606,6 +3612,7 @@
             <French>Aviation</French>
             <Portuguese>Aeronaves</Portuguese>
             <Russian>Авиация</Russian>
+            <Spanish>Aeronaves</Spanish>
         </Key>
     </Package>
 </Project>
