@@ -45,7 +45,7 @@ class CfgSounds {
     class GVAR(shotsubmunitions_close_3): GVAR(shotbullet_close_3) {
         sound[] = {QPATHTOF(sounds\shotbullet\close_3.wss), VOLUME, PITCH, 1600};
     };
-    class GVAR(shotsubmunitions_mid_1): GVAR(shotbullet_far_1) {
+    class GVAR(shotsubmunitions_mid_1): GVAR(shotbullet_mid_1) {
         sound[] = {QPATHTOF(sounds\shotbullet\mid_1.wss), VOLUME, PITCH, 1600};
     };
     class GVAR(shotsubmunitions_mid_2): GVAR(shotbullet_mid_2) {

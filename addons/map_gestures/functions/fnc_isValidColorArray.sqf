@@ -20,7 +20,7 @@ scopeName "main";
 params ["_colorArray"];
 
 if (isNil "_colorArray") exitWith {false};
-if (!(_colorArray isEqualType [])) exitWith {false};
+if !(_colorArray isEqualType []) exitWith {false};
 if (count _colorArray != 4) exitWith {false};
 
 {

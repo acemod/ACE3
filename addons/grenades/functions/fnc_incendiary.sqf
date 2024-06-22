@@ -1,11 +1,12 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Makes incendiary burn.
+ * Makes an incendiary grenade burn.
  *
  * Arguments:
- * 0: The grenade <OBJECT>
+ * 0: Incendiary grenade <OBJECT>
  * 1: Incendiary lifetime <OBJECT>
+ * 2: Instigator's side <SIDE>
  *
  * Return Value:
  * None
@@ -42,16 +43,16 @@ if (isNull _projectile) exitWith {TRACE_1("null",_projectile);};
 
 private _position = position _projectile;
 
-// --- AI
+// Alert nearby hostile AI
 private _nearLocalEnemies = [];
 
 {
     {
-        if (local _x && {[_center, side _x] call BIS_fnc_sideIsEnemy}) then { // WE WANT THE OBJECTS SIDE HERE!
+        if (local _x && {[_center, side group _x] call BIS_fnc_sideIsEnemy}) then { // WE WANT THE OBJECT'S SIDE HERE!
             _nearLocalEnemies pushBackUnique _x;
         };
     } forEach crew _x;
-} forEach (_position nearObjects ALERT_NEAR_ENEMY_RANGE);
+} forEach (_position nearObjects ALERT_NEAR_ENEMY_RANGE); //@todo replace with nearEntities in 2.18
 
 {
     if (behaviour _x in ["SAFE", "AWARE"]) then {
@@ -59,7 +60,7 @@ private _nearLocalEnemies = [];
     };
 } forEach _nearLocalEnemies;
 
-// --- fire
+// Fire particles
 private _fire = "#particlesource" createVehicleLocal _position;
 
 _fire setParticleParams [
@@ -99,7 +100,7 @@ _fire setParticleRandom [PARTICLE_LIFE_TIME / 4, [0.15 * EFFECT_SIZE, 0.15 * EFF
 _fire setParticleFire [1.2,1.0,0.1];
 _fire setDropInterval (1 / PARTICLE_DENSITY);
 
-// --- smoke
+// Smoke particles
 private _smoke = "#particlesource" createVehicleLocal _position;
 
 _smoke setParticleParams [
@@ -137,7 +138,7 @@ _smoke setParticleParams [
 _smoke setParticleRandom [PARTICLE_SMOKE_LIFE_TIME / 2, [0.5 * EFFECT_SIZE, 0.5 * EFFECT_SIZE, 0.2 * EFFECT_SIZE], [0.3,0.3,0.5], 1, 0, [0,0,0,0.06], 0, 0];
 _smoke setDropInterval (1 / PARTICLE_SMOKE_DENSITY);
 
-// --- light
+// Light
 private _light = "#lightpoint" createVehicleLocal (_position vectorAdd [0,0,0.5]);
 
 _light setLightBrightness 1.0;
@@ -150,19 +151,20 @@ _light setLightDayLight false;
 
 _light lightAttachObject [_projectile, [0,0,0]];
 
-// --- sound
+// Sound
 private _sound = objNull;
 
 if (isServer) then {
     _sound = createSoundSource ["Sound_Fire", _position, [], 0];
     private _radius = 1.5 * getNumber (configOf _projectile >> "indirectHitRange");
     private _intensity = getNumber (configOf _projectile >> "hit");
+
     [QEGVAR(fire,addFireSource), [_projectile, _radius, _intensity, _projectile, {
         params ["_endTime", "_projectile"];
 
         // If incendiary no longer exists, exit
         if (isNull _projectile) exitWith {
-            false
+            false // return
         };
 
         // Need to get the position every time, as grenade might have been moved
@@ -181,37 +183,38 @@ if (isServer) then {
     {deleteVehicle _x} forEach _this;
 }, [_fire, _smoke, _light, _sound], _timeToLive] call CBA_fnc_waitAndExecute;
 
-// --- damage
+// Damage
 {
-    if (local _x && {isDamageAllowed _x}) then {
-        //systemChat format ["burn: %1", _x];
+    // Inflame fireplace, barrels etc.
+    _x inflame true;
 
-        // --- destroy nearby static weapons and ammo boxes
-        if (_x isKindOf "StaticWeapon" || {_x isKindOf "ACE_RepairItem_Base"}) then {
+    // Destroy nearby static weapons and ammo boxes
+    if (_x isKindOf "StaticWeapon" || {_x isKindOf "ACE_RepairItem_Base"}) then {
+        _x setDamage 1;
+
+        continue;
+    };
+
+    if (_x isKindOf "ReammoBox_F") then {
+        if (
+            (["ace_cookoff"] call EFUNC(common,isModLoaded)) &&
+            {EGVAR(cookoff,enableAmmobox)} &&
+            {EGVAR(cookoff,ammoCookoffDuration) != 0} &&
+            {_x getVariable [QEGVAR(cookoff,enableAmmoCookoff), true]}
+        ) then {
+            [QEGVAR(cookOff,cookOffBoxServer), _box] call CBA_fnc_serverEvent;
+        } else {
             _x setDamage 1;
         };
-        if (_x isKindOf "ReammoBox_F") then {
-            if (
-                (["ace_cookoff"] call EFUNC(common,isModLoaded)) &&
-                {EGVAR(cookoff,enableAmmobox)} &&
-                {EGVAR(cookoff,ammoCookoffDuration) != 0} &&
-                {_x getVariable [QEGVAR(cookoff,enableAmmoCookoff), true]}
-            ) then {
-                [QEGVAR(cookOff,cookOffBoxServer), _box] call CBA_fnc_serverEvent;
-            } else {
-                _x setDamage 1;
-            };
-        };
 
-        // --- delete nearby ground weapon holders
-        if (_x isKindOf "WeaponHolder" || {_x isKindOf "WeaponHolderSimulated"}) then {
-            deleteVehicle _x;
-        };
-
-        // --- inflame fireplace, barrels etc.
-        _x inflame true;
+        continue;
     };
-} forEach (_position nearObjects DESTRUCTION_RADIUS);
+
+    // Delete nearby ground weapon holders
+    if (_x isKindOf "WeaponHolder" || {_x isKindOf "WeaponHolderSimulated"}) then {
+        deleteVehicle _x;
+    };
+} forEach ((_position nearObjects DESTRUCTION_RADIUS) select {local _x && {isDamageAllowed _x}});
 
 {
     // Damage vehicles (locality is checked in FUNC(damageEngineAndWheels))
