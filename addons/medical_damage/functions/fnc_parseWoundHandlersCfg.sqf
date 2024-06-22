@@ -19,21 +19,13 @@ params ["_config"];
 
 // Read all valid entries from config and store
 private _entries = [];
-private _entryResult = "";
-private _function = "";
 
 {
-    _entryResult = getText _x;
+    private _entryResult = getText _x;
 
     if (_entryResult != "") then {
-        _function = call compile _entryResult;
-
-        // If function doesn't exist yet, wrap in extra layer
-        if (isNil "_function") then {
-            _function = compile format ["call %1", _entryResult];
-        };
-
-        _entries pushBack _function;
+        // In case function doesn't exist yet, wrap in extra layer
+        _entries pushBack (compile format ["call %1", _entryResult]);
     };
 } forEach configProperties [_config, "isText _x", false];
 
@@ -43,4 +35,4 @@ if (isNull _parent) exitWith {_entries};
 
 // Recursive call for parent
 // Can't use configProperties for inheritance since it returns entries in the wrong order
-([_parent] call FUNC(parseWoundHandlersCfg)) + _entries;
+([_parent] call FUNC(parseWoundHandlersCfg)) + _entries // return
