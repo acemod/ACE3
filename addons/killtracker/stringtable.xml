@@ -121,9 +121,11 @@
         </Key>
         <Key ID="STR_ACE_KillTracker_showCrewKills_DisplayName">
             <English>Show vehicle kills to other crew members</English>
+            <Russian>Показать уничтоженные машины другим членам экипажа</Russian>
         </Key>
         <Key ID="STR_ACE_KillTracker_showCrewKills_Description">
             <English>Show kills from a vehicle to driver, gunner and commander</English>
+            <Russian>Показать уничтоженную технику водителю, стрелку и командиру</Russian>
         </Key>
     </Package>
 </Project>

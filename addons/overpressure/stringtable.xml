@@ -47,9 +47,11 @@
         </Key>
         <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_displayName">
             <English>Backblast Distance Coefficient</English>
+            <Russian>Коэффициент расстояния рекативной струи</Russian>
         </Key>
         <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_toolTip">
             <English>Scales the backblast effect</English>
+            <Russian>Масштабирует эффект реактивной струи</Russian>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastRange">
             <English>Backblast range</English>
