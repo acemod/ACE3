@@ -47,4 +47,4 @@ GVAR(elementsSet) = createHashMap;
     }] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
 
-[QUOTE(ADDON), "AnimChanged", LINKFUNC(onAnimChanged)] call EFUNC(common,addPlayerEH);
+[QUOTE(ADDON), "AnimChanged", LINKFUNC(onAnimChanged), true] call EFUNC(common,addPlayerEH);
