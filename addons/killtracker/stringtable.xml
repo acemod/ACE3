@@ -122,10 +122,14 @@
         <Key ID="STR_ACE_KillTracker_showCrewKills_DisplayName">
             <English>Show vehicle kills to other crew members</English>
             <Russian>Показать уничтоженные машины другим членам экипажа</Russian>
+            <German>Zeige der Fahrzeugbesatzung die Abschüsse des Fahrzeugs</German>
+            <Italian>Mostra uccisioni del veicolo a membri dell'equipaggio</Italian>
         </Key>
         <Key ID="STR_ACE_KillTracker_showCrewKills_Description">
             <English>Show kills from a vehicle to driver, gunner and commander</English>
             <Russian>Показать уничтоженную технику водителю, стрелку и командиру</Russian>
+            <German>Zeige Abschüsse des Fahrzeugs dem Fahrer, Richtschützen und Kommandanten an</German>
+            <Italian>Mostra uccisioni del veicolo al pilota, artigliere e comandante</Italian>
         </Key>
     </Package>
 </Project>
