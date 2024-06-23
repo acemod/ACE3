@@ -55,7 +55,7 @@
             <English>Scales the backblast effect</English>
             <Russian>Масштабирует эффект реактивной струи</Russian>
             <German>Skaliert den Rückstrahl-Effekt</German>
-            <Italian>Scala la distanza della svampata di lanciarazzi</Italian>
+            <Italian>Scala l'effetto delle svampate dei lanciarazzi</Italian>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastRange">
             <English>Backblast range</English>
