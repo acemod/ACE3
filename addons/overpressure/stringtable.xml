@@ -20,7 +20,7 @@
             <Korean>과중압력 거리 계수</Korean>
             <Polish>Mnożnik dystansu nadciśnienia</Polish>
             <French>Coefficient de distance pour la surpression</French>
-            <Italian>Coefficente Distanza Sovrapressione</Italian>
+            <Italian>Coefficiente Distanza Sovrapressione</Italian>
             <Chinesesimp>超压影响距离系数</Chinesesimp>
             <Chinese>高壓影響距離係數</Chinese>
             <Russian>Коэф. избыточного давления</Russian>
@@ -48,10 +48,14 @@
         <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_displayName">
             <English>Backblast Distance Coefficient</English>
             <Russian>Коэффициент расстояния рекативной струи</Russian>
+            <German>Rückstrahl-Entfernung Multiplikator</German>
+            <Italian>Coefficiente distanza di svampata</Italian>
         </Key>
         <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_toolTip">
             <English>Scales the backblast effect</English>
             <Russian>Масштабирует эффект реактивной струи</Russian>
+            <German>Skaliert den Rückstrahl-Effekt</German>
+            <Italian>Scala l'effetto delle svampate dei lanciarazzi</Italian>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastRange">
             <English>Backblast range</English>
