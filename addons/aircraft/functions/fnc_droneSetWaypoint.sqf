@@ -35,6 +35,11 @@ _pos set [
 ];
 
 _waypoint = _group addWaypoint [_pos, 0];
+// The Vanilla "FOLLOW"-type waypoint is not used directly, due to 2 main issues (as of v2.16):
+// - It does not work at all for UGVs, which is a known issue https://feedback.bistudio.com/T126283;
+// - No clear scripting way was found to mimic the UAV Terminal's "Follow Distance" functionality;
+// Instead, the solution for both UAV and UGV following consists of a CBA PFH that moves a "HOLD"-type Waypoint every 3 seconds.
+// Either on the target itself, or on the Drone's current position if the target is within the desired follow distance.
 if (_type == "FOLLOW" && {["CAManBase", "LandVehicle", "Ship"] findIf {_target isKindOf _x} != -1}) then {
     _waypoint setWaypointType "HOLD";
     [{
