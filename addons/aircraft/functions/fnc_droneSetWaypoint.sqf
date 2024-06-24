@@ -34,11 +34,9 @@ _pos set [
     [0, _currentHeight] select (_currentHeight >= 50)
 ];
 
-// [_group] call CBA_fnc_clearWaypoints;
 _waypoint = _group addWaypoint [_pos, 0];
 if (_type == "FOLLOW" && {["CAManBase", "LandVehicle", "Ship"] findIf {_target isKindOf _x} != -1}) then {
     _waypoint setWaypointType "HOLD";
-    //_waypoint waypointAttachVehicle _target;
     [{
         params ["_args", "_handle"];
         _args params ["_vehicle", "_group", "_waypoint", "_target"];
@@ -53,10 +51,8 @@ if (_type == "FOLLOW" && {["CAManBase", "LandVehicle", "Ship"] findIf {_target i
         private _followDistance = _vehicle getVariable [QGVAR(wpFollowDistance), 0];
         if ((_vehicle distance2D _target) < _followDistance) then {
             _waypoint setWaypointPosition [(getPosASL _vehicle), -1];
-            systemChat "waypoint updated, waiting.";
         } else {
             _waypoint setWaypointPosition [(getPosASL _target), -1];
-            systemChat "waypoint updated, following.";
         };
     }, 3, [_vehicle, _group, _waypoint, _target]] call CBA_fnc_addPerFrameHandler;
 };
