@@ -55,9 +55,9 @@ if (_type == "FOLLOW" && {["CAManBase", "LandVehicle", "Ship"] findIf {_target i
 
         private _followDistance = _vehicle getVariable [QGVAR(wpFollowDistance), 0];
         if ((_vehicle distance2D _target) < _followDistance) then {
-            _waypoint setWaypointPosition [(getPosASL _vehicle), -1];
+            _waypoint setWaypointPosition [getPosASL _vehicle, -1];
         } else {
-            _waypoint setWaypointPosition [(getPosASL _target), -1];
+            _waypoint setWaypointPosition [getPosASL _target, -1];
         };
     }, 3, [_vehicle, _group, _waypoint, _target]] call CBA_fnc_addPerFrameHandler;
 };
