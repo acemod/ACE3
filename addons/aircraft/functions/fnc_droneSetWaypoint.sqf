@@ -48,7 +48,7 @@ if (_type == "FOLLOW" && {["CAManBase", "LandVehicle", "Ship"] findIf {_target i
 
         if ( // Abort PFH if a new waypoint is created via UAV Terminal or ACE Interaction
             _waypoint select 1 != currentWaypoint _group || 
-            {!alive _vehicle}
+            {!alive _vehicle} || {isNull _target}
         ) exitWith {
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
