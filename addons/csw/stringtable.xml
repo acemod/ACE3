@@ -263,7 +263,7 @@
             <Japanese>インタラクションの所要時間係数</Japanese>
             <Chinese>互動時間係數</Chinese>
             <Chinesesimp>交互时间系数</Chinesesimp>
-            <Italian>Coefficente per il tempo di interazione</Italian>
+            <Italian>Coefficiente per il tempo di interazione</Italian>
             <Czech>Koeficient času interakce</Czech>
             <Polish>Współczynnik czasu interakcji</Polish>
             <Spanish>Coeficiente de tiempo de interacción</Spanish>
@@ -1119,6 +1119,23 @@
             <Polish>[CSW] Torba na SPG-9M</Polish>
             <Russian>[CSW] Сумка с СПГ-9М орудием</Russian>
             <Korean>[CSW] SPG-9M 발사기 가방</Korean>
+        </Key>
+        <!-- Used in rearm to remove the [CSW] prefix from magazine names, so adjust when necessary -->
+        <Key ID="STR_ACE_CSW_regex">
+            <English>^\[CSW\]</English>
+            <Spanish>^\[CSW\]</Spanish>
+            <German>^\[CSW\]</German>
+            <Portuguese>^\[CSW\]</Portuguese>
+            <French>^\[CSW\]</French>
+            <Japanese>^\[CSW\]</Japanese>
+            <Chinese>^\[CSW\]</Chinese>
+            <Chinesesimp>^\[班组\]</Chinesesimp>
+            <Italian>^\[CSW\]</Italian>
+            <Czech>^\[CSW\]</Czech>
+            <Turkish>^\[CSW\]</Turkish>
+            <Polish>^\[CSW\]</Polish>
+            <Russian>^\[CSW\]</Russian>
+            <Korean>^\[CSW\]</Korean>
         </Key>
     </Package>
 </Project>

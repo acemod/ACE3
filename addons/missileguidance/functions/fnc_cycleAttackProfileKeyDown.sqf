@@ -18,7 +18,7 @@
 TRACE_1("cycle fire mode",_this);
 
 if (!alive ACE_player) exitWith {};
-if (!([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {};
+if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {};
 
 
 private _currentShooter = objNull;
