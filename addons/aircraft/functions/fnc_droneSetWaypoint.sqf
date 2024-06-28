@@ -50,6 +50,7 @@ if (_type == "FOLLOW" && {["CAManBase", "LandVehicle", "Ship"] findIf {_target i
             _waypoint select 1 != currentWaypoint _group || 
             {!alive _vehicle} || {isNull _target}
         ) exitWith {
+            deleteWaypoint _waypoint;
             [_handle] call CBA_fnc_removePerFrameHandler;
         };
 
