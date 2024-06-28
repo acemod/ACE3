@@ -73,13 +73,17 @@
             <Russian>Включено и может диагностировать смерть/остановку сердца</Russian>
             <German>Aktiviert &amp; kann Tod/Herzstillstand diagnostizieren</German>
             <Chinesesimp>已启用 &amp; 可以诊断死亡/心搏骤停</Chinesesimp>
-            <Korean>활성화 및 사망/심정지 진찰가능</Korean>
+            <Korean>활성화 및 사망/심정지 진찰 가능</Korean>
             <Spanish>Habilitado y poder diagnosticar Muerte/Parada cardíaca</Spanish>
             <Italian>Abilitato e può diagnosticare Morte/Arresto Cardiaco</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrestDirect">
             <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest [Directly]</English>
             <Japanese>有効 &amp; 死亡/心停止状態を診断可能 [直接的に]</Japanese>
+            <Russian>Включено и может диагностировать смерть/остановку сердца [Напрямую]</Russian>
+            <Korean>활성화 및 사망/심정지 진찰 가능 [직접]</Korean>
+            <German>Aktiviert &amp; kann Tod/Herzstillstand diagnostizieren [Direkt]</German>
+            <Italian>Abilitato e può diagnosticare Morte/Arresto Cardiaco [Esplicito]</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -3682,7 +3686,7 @@
             <Czech>%1 zkontroloval krevní tlak: %2</Czech>
             <Portuguese>%1 verificou pressão arterial: %2</Portuguese>
             <Japanese>%1 が血圧を確認: %2</Japanese>
-            <Korean>%1 (이)가 혈압을 측정했습니다: %2</Korean>
+            <Korean>%1(이)가 혈압을 측정했습니다: %2</Korean>
             <Chinesesimp>%1 测得血压为 %2</Chinesesimp>
             <Chinese>已由%1確認血壓: %2</Chinese>
         </Key>
@@ -3935,7 +3939,7 @@
             <Czech>%1 zkontroloval srdeční tep: %2</Czech>
             <Portuguese>%1 verificou a frequência cardíaca: %2</Portuguese>
             <Japanese>%1 が心拍を確認: %2</Japanese>
-            <Korean>%1 (이)가 맥박을 측정했습니다: %2</Korean>
+            <Korean>%1(이)가 맥박을 측정했습니다: %2</Korean>
             <Chinesesimp>%1 测得心率为 %2</Chinesesimp>
             <Chinese>已由%1確認心跳: %2</Chinese>
         </Key>
@@ -4019,7 +4023,7 @@
             <Portuguese>A Frequência Cardíaca é de %2</Portuguese>
             <Czech>Nahmatal jsi srdeční tep u %2</Czech>
             <Japanese>計測した心拍数は %2 でした</Japanese>
-            <Korean>맥박이 %2 입니다</Korean>
+            <Korean>맥박은 %2 입니다</Korean>
             <Chinesesimp>心率为 %2</Chinesesimp>
             <Chinese>心跳為%2</Chinese>
         </Key>
@@ -4135,7 +4139,7 @@
             <Portuguese>%1 está respondendo</Portuguese>
             <Czech>%1 odpovídá</Czech>
             <Japanese>%1 は反応している</Japanese>
-            <Korean>%1 은 반응이 있습니다</Korean>
+            <Korean>%1은(는) 반응이 있습니다</Korean>
             <Chinesesimp>%1 有反应</Chinesesimp>
             <Chinese>%1 有反應</Chinese>
             <Turkish>%1 tepki veriyor</Turkish>
@@ -4152,7 +4156,7 @@
             <Portuguese>%1 não está respondendo</Portuguese>
             <Czech>%1 neodpovídá</Czech>
             <Japanese>%1 は反応していない</Japanese>
-            <Korean>%1 은 반응이 없습니다</Korean>
+            <Korean>%1은(는) 반응이 없습니다</Korean>
             <Chinesesimp>%1 没有反应</Chinesesimp>
             <Chinese>%1 沒有反應</Chinese>
             <Turkish>%1 tepki vermiyor</Turkish>
@@ -4161,6 +4165,9 @@
             <English>%1 is unconscious</English>
             <Japanese>%1 は意識がない</Japanese>
             <Russian>%1 находится без сознания</Russian>
+            <Korean>%1은(는) 의식불명입니다</Korean>
+            <German>%1 ist bewusstlos</German>
+            <Italian>%1 è privo di sensi</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrest">
             <English>%1 is not responsive, taking shallow gasps and convulsing</English>
@@ -4178,6 +4185,9 @@
             <English>%1 is in cardiac arrest</English>
             <Japanese>%1 は心停止している</Japanese>
             <Russian>У %1 произошла остановка сердца</Russian>
+            <Korean>%1은(는) 심정지 상태입니다</Korean>
+            <German>%1 ist im Herzstillstand</German>
+            <Italian>%1 è in arresto cardiaco</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
@@ -4195,6 +4205,9 @@
             <English>%1 is dead</English>
             <Japanese>%1 は死亡している</Japanese>
             <Russian>%1 мертв</Russian>
+            <Korean>%1은(는) 사망했습니다</Korean>
+            <German>%1 ist tod</German>
+            <Italian>%1 è morto</Italian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>

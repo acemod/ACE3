@@ -2,12 +2,14 @@
 /*
  * Author: PabstMirror
  * Adds event handler just to ACE_player
+ * Can be removed after cba 3.18 is released for CBA_fnc_addBISPlayerEventHandler
+ * This never was public in a release
  *
  * Arguments:
  * 0: Key <STRING>
  * 1: Event Type <STRING>
  * 2: Event Code <CODE>
- * 3: Ignore Virtual Units (spectators, virtual zeus, uav RC) <BOOL> (default: false)
+ * 3: Ignore Virtual Units (spectators, virtual zeus, uav RC) <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -15,9 +17,9 @@
  * Example:
  * ["example", "FiredNear", {systemChat str _this}] call ace_common_fnc_addPlayerEH
  *
- * Public: Yes
+ * Public: No
 */
-params [["_key", "", [""]], ["_type", "", [""]], ["_code", {}, [{}]], ["_ignoreVirtual", false, [false]]];
+params [["_key", "", [""]], ["_type", "", [""]], ["_code", {}, [{}]], ["_ignoreVirtual", true, [true]]];
 TRACE_3("addPlayerEH",_key,_type,_ignoreVirtual);
 
 if (isNil QGVAR(playerEventsHash)) then { // first-run init

@@ -703,6 +703,9 @@
             <Portuguese>KamAZ Água</Portuguese>
             <Japanese>KamAZ 給水</Japanese>
             <Russian>КамАЗ (водоноситель)</Russian>
+            <Korean>카마즈 급수</Korean>
+            <German>KamAS Wasser</German>
+            <Italian>KamAZ Acqua</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_MRL_Name">
             <English>KamAZ MRL</English>
@@ -1666,12 +1669,18 @@
             <Portuguese>CZ 581</Portuguese>
             <Japanese>CZ 581</Japanese>
             <Russian>CZ 581</Russian>
+            <Korean>CZ 581</Korean>
+            <German>CZ 581</German>
+            <Italian>CZ 581</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_sawedoff_01_Name">
             <English>CZ 581 (Sawed-Off)</English>
             <Portuguese>CZ 581 (Cano serrado)</Portuguese>
             <Japanese>CZ 581 (ソードオフ)</Japanese>
             <Russian>CZ 581 (Sawed-Off)</Russian>
+            <Korean>CZ 581 (소드오프)</Korean>
+            <German>CZ 581 (Abgesägt)</German>
+            <Italian>CZ 581 (Canne mozze)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_green_Name">
             <English>FNX-45 Tactical (Green)</English>
@@ -3079,18 +3088,27 @@
             <Portuguese>Type 115 (Preto)</Portuguese>
             <Japanese>Type 115 (ブラック)</Japanese>
             <Russian>Type 115 (чёрный)</Russian>
+            <Korean>115식 보총 (검정)</Korean>
+            <German>Type 115 (Schwarz)</German>
+            <Italian>Type 115 (Nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_ghex_Name">
             <English>Type 115 (Green Hex)</English>
             <Portuguese>Type 115 (Verde Hex)</Portuguese>
             <Japanese>Type 115 (緑六角形迷彩)</Japanese>
             <Russian>Type 115 (зелёный гекс)</Russian>
+            <Korean>115식 보총 (초록육각)</Korean>
+            <German>Type 115 (Hex Grün)</German>
+            <Italian>Type 115 (Hex Verde)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_hex_Name">
             <English>Type 115 (Hex)</English>
             <Portuguese>Type 115 (Hex)</Portuguese>
             <Japanese>Type 115 (六角形迷彩)</Japanese>
             <Russian>Type 115 (гекс)</Russian>
+            <Korean>115식 보총 (육각)</Korean>
+            <German>Type 115 (Hex)</German>
+            <Italian>Type 115 (Hex)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_blk">
             <English>QBZ-95-1 (Black)</English>
@@ -3881,18 +3899,27 @@
             <Portuguese>UTG Defender 126</Portuguese>
             <Japanese>UTG ディフェンダー 126</Japanese>
             <Russian>UTG Defender 126</Russian>
+            <Korean>UTG 디펜더 126</Korean>
+            <German>UTG Defender 126</German>
+            <Italian>UTG Defender 126</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_Name">
             <English>EOTech MRDS</English>
             <Portuguese>EOTech MRDS</Portuguese>
             <Japanese>EOTech MRDS</Japanese>
             <Russian>EOTech MRDS</Russian>
+            <Korean>이오텍 MRDS</Korean>
+            <German>EOTech MRDS</German>
+            <Italian>EOTech MRDS</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_black_Name">
             <English>EOTech MRDS (Black)</English>
             <Portuguese>EOTech MRDS (Preto)</Portuguese>
             <Japanese>EOTech MRDS (ブラック)</Japanese>
             <Russian>EOTech MRDS (чёрный)</Russian>
+            <Korean>이오텍 MRDS (검정)</Korean>
+            <German>EOTech MRDS (Schwarz)</German>
+            <Italian>EOTech MRDS (Nero)</Italian>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>

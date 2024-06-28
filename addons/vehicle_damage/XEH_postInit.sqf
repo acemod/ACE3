@@ -50,11 +50,11 @@
     [["Wheeled_Apc_F", "Car"] select GVAR(enableCarDamage), "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
 
     // Blow off turret effect
-    /*
+    // TODO: Add blowing-off-turret effect to vehicles that cook-off but aren't destroyed (no catastrophic explosion)
+    // The problem is that vehicles are repairable if they haven't been destroyed. So if the turret is gone and vehicle is repaired, how do we handle that?
     ["Tank", "Killed", {
-        if (random 1 < 0.15) then {
+        if (_this select 3 && random 1 < 0.15) then {
             (_this select 0) call FUNC(blowOffTurret);
         };
     }, true, [], true] call CBA_fnc_addClassEventHandler;
-    */
 }] call CBA_fnc_addEventHandler;
