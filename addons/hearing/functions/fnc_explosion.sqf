@@ -17,8 +17,6 @@
  * Public: No
  */
 
-#define STRENGTH_MULTIPLIER 300
-
 // Ignore spectators, curators and alike
 if ((getNumber (configOf ACE_player >> "isPlayableLogic")) == 1) exitWith {};
 
@@ -33,23 +31,25 @@ if (_distance > 100) exitWith {
 };
 
 private _ammoConfig = configOf _projectile;
-private _audibleFire = getNumber (_ammoConfig >> "audibleFire");
 private _explosive = getNumber (_ammoConfig >> "explosive");
 
 private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
 
 TRACE_5("",typeOf _projectile,_distance,_explosive,_audibleFire,_vehAttenuation);
 
-// Handle grenades differently from shells and other
-_distance = if (_projectile isKindOf "Grenade" || {_projectile isKindOf "GrenadeCore"}) then {
-    _distance / 4
+(if (isArray (_ammoConfig >> "soundHit1")) then {
+    getArray (_ammoConfig >> "soundHit1")
 } else {
-    _distance ^ linearConversion [1, 30, _distance, 1, 2.5, true]
+    getArray (_ammoConfig >> "soundHit")
+}) params ["", ["_volume", 1], "", ["_maxDistance", 1500]];
+
+if (_distance > _maxDistance) exitWith {
+    TRACE_2("too far away",_distance,_maxDistance);
 };
 
-private _strength = _vehAttenuation * _audibleFire / _distance * _explosive * STRENGTH_MULTIPLIER;
+private _strength = _vehAttenuation * _explosive * _volume * _maxDistance / _distance^2;
 
-TRACE_2("adjusted distance",_distance,_strength);
+TRACE_2("strength",_volume,_strength);
 
 // Call immediately, as it will get picked up later by the update thread anyway
 _strength call FUNC(earRinging);
