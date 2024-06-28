@@ -20,7 +20,5 @@
 
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
 
-#define CARGO_TUMBLE_VELOCITY_DIVISOR (random [1, 2, 3])
-
 #define CARGO_TUMBLE_RANDOM_MUL 8
 #define CARGO_TUMBLE_TORQUE 500
