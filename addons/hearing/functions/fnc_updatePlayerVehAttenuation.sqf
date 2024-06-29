@@ -7,10 +7,10 @@
  * None
  *
  * Return Value:
- * Ammount that unit can hear outside <NUMBER>
+ * Amount that unit can hear outside <NUMBER>
  *
  * Example:
- * [] call ace_hearing_fnc_updatePlayerVehAttenuation
+ * call ace_hearing_fnc_updatePlayerVehAttenuation
  *
  * Public: No
  */
@@ -20,12 +20,14 @@ private _vehicle = vehicle ACE_player;
 if (isNull _vehicle) exitWith {};
 
 private _newAttenuation = 1;
+
 if (ACE_player != _vehicle) then {
-    private _turretPath = [ACE_player] call EFUNC(common,getTurretIndex);
-    private _effectType = getText (configOf _vehicle >> "attenuationEffectType");
+    private _vehicleConfig = configOf _vehicle;
+    private _turretPath = _vehicle unitTurret ACE_player;
+    private _effectType = getText (_vehicleConfig >> "attenuationEffectType");
 
     if (_turretPath isNotEqualTo []) then {
-        private _turretConfig = [(configOf _vehicle), _turretPath] call EFUNC(common,getTurretConfigPath);
+        private _turretConfig = [_vehicleConfig, _turretPath] call EFUNC(common,getTurretConfigPath);
 
         if ((getNumber (_turretConfig >> "disableSoundAttenuation")) == 1) then {
             _effectType = "";
@@ -40,7 +42,7 @@ if (ACE_player != _vehicle) then {
         case (_effectType == ""): {1};
         case (_effectType == "CarAttenuation");
         case (_effectType == "RHS_CarAttenuation"): { // Increase protection for armored cars
-            private _armor = getNumber (configOf _vehicle >> "HitPoints" >> "HitBody" >> "armor");
+            private _armor = getNumber (_vehicleConfig >> "HitPoints" >> "HitBody" >> "armor");
             linearConversion [2, 8, _armor, 0.5, 0.3, true];};
         case (_effectType == "OpenCarAttenuation"): {1};
         case (_effectType == "TankAttenuation"): {0.1};
