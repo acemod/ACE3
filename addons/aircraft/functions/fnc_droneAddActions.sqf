@@ -69,11 +69,10 @@ _statement = {
 };
 _action = [QGVAR(droneSetFollowDistance), LLSTRING(DroneFollowDistance), "", {}, _condition] call EFUNC(interact_menu,createAction);
 _base = [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
-private _followDistances = [];
-if (_vehicle isKindOf "Car_F") then {
-    _followDistances = [0, 25, 50, 100, 200];
+private _followDistances = if (_vehicle isKindOf "Car_F") then {
+    [0, 25, 50, 100, 200]
 } else {
-    _followDistances = [0, 100, 200, 300, 400, 500];
+    [0, 100, 200, 300, 400, 500]
 };
 {
     _action = [
