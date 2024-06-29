@@ -33,7 +33,8 @@ private _item = format ["ACE_dogtag_%1", _nextID];
 _allDogtags pushBack _item;
 _allDogtagDatas pushBack _dogTagData;
 
-missionNamespace setVariable [QGVAR(allDogtags), _allDogtags];
-missionNamespace setVariable [QGVAR(allDogtagDatas), _allDogtagDatas];
+// Broadcast data, so that the arsenal can use it client side
+missionNamespace setVariable [QGVAR(allDogtags), _allDogtags, true];
+missionNamespace setVariable [QGVAR(allDogtagDatas), _allDogtagDatas, true];
 
 [QGVAR(addDogtagItem), [_item, _dogTagData], [_player]] call CBA_fnc_targetEvent;
