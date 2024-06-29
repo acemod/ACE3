@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Checks unit dogtag.
+ * Checks the unit's dogtag.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -18,10 +18,10 @@
 
 params ["_player", "_target"];
 
-// animation
+// Animation
 _player call EFUNC(common,goKneeling);
 
-// sound
+// Sound
 private _position = _target modelToWorldWorld (_target selectionPosition "neck");
 
 playSound3D [
@@ -34,9 +34,9 @@ playSound3D [
     50
 ];
 
-// display dogtag
+// Display dogtag
 private _doubleTags = (_target getVariable [QGVAR(dogtagTaken), objNull]) != _target;
-private _dogTagData = [_target] call FUNC(getDogTagData);
+private _dogTagData = _target call FUNC(getDogTagData);
 
 [{
     [QGVAR(showDogtag), _this] call CBA_fnc_localEvent;

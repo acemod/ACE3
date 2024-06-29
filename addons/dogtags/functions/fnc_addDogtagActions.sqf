@@ -27,7 +27,7 @@ private _fnc_getActions = {
             private _displayName = getText (_config >> "displayName");
             private _picture = getText (_config >> "picture");
 
-            private _action = [_x, _displayName, _picture, FUNC(checkDogtagItem), {true}, {}, _x] call EFUNC(interact_menu,createAction);
+            private _action = [_x, _displayName, _picture, LINKFUNC(checkDogtagItem), {true}, {}, _x] call EFUNC(interact_menu,createAction);
             _actions pushBack [_action, [], _player];
         };
     } forEach (_player call EFUNC(common,uniqueItems));

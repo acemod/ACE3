@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Disable this faction from using dogtags.
+ * Disables this faction from using dogtags.
  *
  * Arguments:
  * 0: Faction <STRING>

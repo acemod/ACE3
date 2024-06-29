@@ -1,9 +1,8 @@
 #include "script_component.hpp"
 
-[QGVAR(showDogtag), LINKFUNC(showDogtag)] call CBA_fnc_addEventHandler;
-[QGVAR(sendDogtagData), LINKFUNC(sendDogtagData)] call CBA_fnc_addEventHandler;
 [QGVAR(getDogtagItem), LINKFUNC(getDogtagItem)] call CBA_fnc_addEventHandler;
-[QGVAR(addDogtagItem), LINKFUNC(addDogtagItem)] call CBA_fnc_addEventHandler;
+[QGVAR(sendDogtagData), LINKFUNC(sendDogtagData)] call CBA_fnc_addEventHandler;
+[QGVAR(showDogtag), LINKFUNC(showDogtag)] call CBA_fnc_addEventHandler;
 
 // Add actions and event handlers only if ace_medical is enabled
 // - Adding actions via config would create a dependency
@@ -13,9 +12,9 @@
     if (hasInterface) then {
         private _checkTagAction = [
             "ACE_CheckDogtag",
-            format ["%1: %2", localize LSTRING(itemName), localize LSTRING(checkDogtag)],
+            format ["%1: %2", LLSTRING(itemName), LLSTRING(checkDogtag)],
             QPATHTOF(data\dogtag_icon_ca.paa),
-            {[_player,_target] call FUNC(checkDogtag)},
+            {[_player, _target] call FUNC(checkDogtag)},
             {!isNil {_target getVariable QGVAR(dogtagData)}}
         ] call EFUNC(interact_menu,createAction);
 
@@ -23,9 +22,9 @@
 
         private _takeTagAction = [
             "ACE_TakeDogtag",
-            format ["%1: %2", localize LSTRING(itemName), localize LSTRING(takeDogtag)],
+            format ["%1: %2", LLSTRING(itemName), LLSTRING(takeDogtag)],
             QPATHTOF(data\dogtag_icon_ca.paa),
-            {[_player,_target] call FUNC(takeDogtag)},
+            {[_player, _target] call FUNC(takeDogtag)},
             {(!isNil {_target getVariable QGVAR(dogtagData)}) && {((_target getVariable [QGVAR(dogtagTaken), objNull]) != _target)}}
         ] call EFUNC(interact_menu,createAction);
 
@@ -35,10 +34,11 @@
     if (isServer) then {
         ["ace_placedInBodyBag", {
             params ["_target", "_bodyBag", "_isGrave"];
+
             if (_isGrave) exitWith {};
             TRACE_2("ace_placedInBodyBag eh",_target,_bodyBag);
 
-            private _dogTagData = [_target] call FUNC(getDogtagData);
+            private _dogTagData = _target call FUNC(getDogtagData);
             _bodyBag setVariable [QGVAR(dogtagData), _dogTagData, true];
 
             if ((_target getVariable [QGVAR(dogtagTaken), objNull]) == _target) then {
@@ -53,24 +53,25 @@ if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
     [QEGVAR(arsenal,rightPanelFilled), {
         params ["_display", "_leftPanelIDC", "_rightPanelIDC"];
 
-        if (_leftPanelIDC in [2010, 2012, 2014] && {_rightPanelIDC == 38}) then {
-            LOG("passed");
-            private _rightPanel = _display displayCtrl 15;
-            private _allDogtags = missionNamespace getVariable [QGVAR(allDogtags), []];
-            private _allDogtagsData = missionNamespace getVariable [QGVAR(allDogtagDatas), []];
-            private _cfgWeapons = configFile >> "CfgWeapons";
-            private _item = "";
-            private _dogtagData = [];
+        if !(_leftPanelIDC in [2010, 2012, 2014] && {_rightPanelIDC == 38}) exitWith {};
 
-            for "_i" from 0 to (lnbSize _rightPanel select 0) - 1 do {
-                _item = _rightPanel lnbData [_i, 0];
+        private _rightPanel = _display displayCtrl 15;
 
-                if (_item isKindOf ["ACE_dogtag", _cfgWeapons]) then {
-                    _dogtagData = _allDogtagsData param [_allDogtags find _item, []];
+        TRACE_1("passed",_rightPanel);
 
-                    // If data doesn't exist, put name as "unknown"
-                    _rightPanel lnbSetText [[_i, 1], [LLSTRING(itemName), ": ", _dogtagData param [0, LELSTRING(common,unknown)]] joinString ""];
+        for "_i" from 0 to (lnbSize _rightPanel select 0) - 1 do {
+            private _item = _rightPanel lnbData [_i, 0];
+
+            // Check if item classname starts with "ACE_dogtag" (faster than isKindOf)
+            if (_item find "ACE_dogtag_" == 0) then {
+                private _name = (GVAR(dogtagsData) getOrDefault [_item, []]) param [0, ""];
+
+                // If data doesn't exist or body has no name, set name as "unknown"
+                if (_name == "") then {
+                    _name = LELSTRING(common,unknown);
                 };
+
+                _rightPanel lnbSetText [[_i, 1], [LLSTRING(itemName), ": ", _name] joinString ""];
             };
         };
     }] call CBA_fnc_addEventHandler;
