@@ -10,6 +10,7 @@
  * 2: Parent path of the new action <ARRAY>
  * 3: Action <ARRAY>
  * 4: Use Inheritance <BOOL> (default: false)
+ * 5: Classes excluded from inheritance (children included) <ARRAY> (default: [])
  *
  * Return Value:
  * The entry full path, which can be used to remove the entry, or add children entries <ARRAY>.
@@ -25,22 +26,27 @@ if (!params [["_objectType", "", [""]], ["_typeNum", 0, [0]], ["_parentPath", []
     ERROR("Bad Params");
     []
 };
-TRACE_4("addActionToClass",_objectType,_typeNum,_parentPath,_action);
+private _useInheritance = _this param [4, false, [false]];
+private _excludedClasses = _this param [5, [], [[]]];
+TRACE_6("addActionToClass",_objectType,_typeNum,_parentPath,_action,_useInheritance,_excludedClasses);
 
-if (param [4, false, [false]]) exitwith {
+if (_useInheritance) exitwith {
     BEGIN_COUNTER(addAction);
+    private _cfgVehicles = configFile >> "CfgVehicles"; // store this so we don't resolve for every element
+    _excludedClasses = _excludedClasses apply {configName (_cfgVehicles >> _x)}; // ends up being faster than toLower'ing everything else
     if (_objectType == "CAManBase") then {
-        GVAR(inheritedActionsMan) pushBack [_typeNum, _parentPath, _action];
+        GVAR(inheritedActionsMan) pushBack [_typeNum, _parentPath, _action, _excludedClasses];
         {
             [_x, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
-        } forEach GVAR(inheritedClassesMan);
+        } forEach (GVAR(inheritedClassesMan) - _excludedClasses);
     } else {
-        GVAR(inheritedActionsAll) pushBack [_objectType, _typeNum, _parentPath, _action];
+        GVAR(inheritedActionsAll) pushBack [_objectType, _typeNum, _parentPath, _action, _excludedClasses];
         {
-            if (_x isKindOf _objectType) then {
-                [_x, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+            private _type = _x;
+            if (_type isKindOf _objectType && {_excludedClasses findIf {_type isKindOf _x} == -1}) then {
+                [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
             };
-        } forEach GVAR(inheritedClassesAll);
+        } forEach (GVAR(inheritedClassesAll) - _excludedClasses);
     };
     END_COUNTER(addAction);
 
