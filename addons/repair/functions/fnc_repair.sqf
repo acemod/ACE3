@@ -44,7 +44,7 @@ if ((isEngineOn _target) && {!GVAR(autoShutOffEngineWhenStartingRepair)}) exitWi
 };
 
 private _items = _config call FUNC(getRepairItems);
-if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
+if (_items isNotEqualTo [] && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
 
 private _return = true;
 if (getText (_config >> "condition") != "") then {
@@ -70,7 +70,7 @@ if (!_return) exitWith {false};
 // if (_vehicleStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitWith {false};
 
 private _repairLocations = getArray (_config >> "repairLocations");
-if (!("All" in _repairLocations)) then {
+if !("All" in _repairLocations) then {
     private _repairFacility = {([_caller] call FUNC(isInRepairFacility)) || ([_target] call FUNC(isInRepairFacility))};
     private _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC(isNearRepairVehicle))};
     {
@@ -95,7 +95,7 @@ if (!("All" in _repairLocations)) then {
 private _requiredObjects = getArray (_config >> "claimObjects");
 private _claimObjectsAvailable = [];
 if (_requiredObjects isNotEqualTo []) then {
-    _claimObjectsAvailable = [_caller, 5, _requiredObjects] call FUNC(getClaimObjects);
+    _claimObjectsAvailable = [_caller, 5, _requiredObjects, true] call FUNC(getClaimObjects);
     if (_claimObjectsAvailable isEqualTo []) then {
         TRACE_2("Missing Required Objects",_requiredObjects,_claimObjectsAvailable);
         _return = false
@@ -107,7 +107,7 @@ if !(_return && alive _target) exitWith {false};
 
 //Claim required objects
 {
-    TRACE_2("Claiming", _x, (typeOf _x));
+    TRACE_2("Claiming",_x,(typeOf _x));
     [_caller, _x, false] call EFUNC(common,claim);
 } forEach _claimObjectsAvailable;
 
@@ -172,7 +172,7 @@ if (vehicle _caller == _caller && {_callerAnim != ""}) then {
         } else {
             _caller setVariable [QGVAR(repairPrevAnimCaller), animationState _caller];
         };
-        _caller setVariable [QGVAR(repairCurrentAnimCaller), toLower _callerAnim];
+        _caller setVariable [QGVAR(repairCurrentAnimCaller), toLowerANSI _callerAnim];
         [_caller, _callerAnim] call EFUNC(common,doAnimation);
     };
 };

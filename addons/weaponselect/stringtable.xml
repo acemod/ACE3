@@ -12,7 +12,7 @@
             <Hungarian>Szöveg mutatása gránát eldobásakor</Hungarian>
             <Italian>Mostra indicazioni nel lancio granate</Italian>
             <Portuguese>Mostrar texto ao lançar granada</Portuguese>
-            <Japanese>手榴弾を投げるときに通知</Japanese>
+            <Japanese>手榴弾投擲時に通知</Japanese>
             <Korean>수류탄 투척 시 화면에 문자 표시</Korean>
             <Chinesesimp>投掷手榴弹时显示提示信息</Chinesesimp>
             <Chinese>投擲手榴彈時顯示提示訊息</Chinese>
@@ -178,7 +178,7 @@
             <Hungarian>Elsődleges Fegyver Kiválasztása</Hungarian>
             <Czech>Zvolit Hlavní Zbraň</Czech>
             <Portuguese>Selecionar Arma Principal</Portuguese>
-            <Italian>Seleziona Arma Primaria</Italian>
+            <Italian>Seleziona Cannone Primario</Italian>
             <Russian>Выбрать основное оружие</Russian>
             <Japanese>主砲を選択</Japanese>
             <Korean>주포 선택</Korean>
@@ -197,7 +197,7 @@
             <Portuguese>Selecionar Metralhadora</Portuguese>
             <Italian>Seleziona Mitragliatrice</Italian>
             <Russian>Выбрать пулемёт</Russian>
-            <Japanese>機関砲を選択</Japanese>
+            <Japanese>機銃を選択</Japanese>
             <Korean>기관총 선택</Korean>
             <Chinesesimp>选择机枪</Chinesesimp>
             <Chinese>選擇機槍</Chinese>
@@ -246,9 +246,9 @@
             <Hungarian>Gránát előkészítése</Hungarian>
             <Russian>Подготовить гранату</Russian>
             <French>Grenade prête</French>
-            <Italian>Granata pronta</Italian>
+            <Italian>Prepara Granata</Italian>
             <Portuguese>Granada pronta</Portuguese>
-            <Japanese>投てきよし</Japanese>
+            <Japanese>手榴弾を準備</Japanese>
             <Korean>투척물 준비</Korean>
             <Chinesesimp>准备手榴弹</Chinesesimp>
             <Chinese>準備手榴彈</Chinese>
@@ -299,7 +299,7 @@
             <Portuguese>Lançar Granada Selecionada</Portuguese>
             <Italian>Lancia la Granata Selezionata</Italian>
             <Russian>Бросить выбранную гранату</Russian>
-            <Japanese>選択された手榴弾を投げる</Japanese>
+            <Japanese>選択された手榴弾を投擲</Japanese>
             <Korean>선택된 투척물 투척</Korean>
             <Chinesesimp>投掷选择的手榴弹</Chinesesimp>
             <Chinese>投擲選擇的手榴彈</Chinese>
@@ -316,7 +316,7 @@
             <Russian>Гранат не осталось</Russian>
             <Italian>Granate esaurite</Italian>
             <Portuguese>Sem mais granadas</Portuguese>
-            <Japanese>もう手榴弾は無い</Japanese>
+            <Japanese>手榴弾は残っていない</Japanese>
             <Korean>투척물 없음</Korean>
             <Chinesesimp>已无手榴弹</Chinesesimp>
             <Chinese>已無手榴彈</Chinese>
@@ -333,7 +333,7 @@
             <Portuguese>Não há granadas de fragmentação restantes</Portuguese>
             <Italian>Nessuna granata a frammentazione rimanente</Italian>
             <Russian>Осколочных гранат нет</Russian>
-            <Japanese>もう破片手榴弾は無い</Japanese>
+            <Japanese>破片手榴弾は残っていない</Japanese>
             <Korean>세열 수류탄 없음</Korean>
             <Chinesesimp>已无破片手榴弹</Chinesesimp>
             <Chinese>已無破片手榴彈</Chinese>
@@ -349,7 +349,7 @@
             <Portuguese>Não há outras granadas restantes</Portuguese>
             <Italian>Nessun'altra granata rimanente.</Italian>
             <Russian>Нелетальные гранаты закончились</Russian>
-            <Japanese>もうその他の手榴弾は無い</Japanese>
+            <Japanese>その他の手榴弾は残っていない</Japanese>
             <Korean>기타 투척물 없음</Korean>
             <Chinesesimp>已无其他手榴弹</Chinesesimp>
             <Chinese>已無其他手榴彈</Chinese>
@@ -365,7 +365,7 @@
             <Portuguese>Nenhuma granada selecionada</Portuguese>
             <Italian>Nessuna granata selezionata</Italian>
             <Russian>Нет выбранной гранаты</Russian>
-            <Japanese>手榴弾は選択されていない</Japanese>
+            <Japanese>手榴弾は未選択</Japanese>
             <Korean>선택된 수류탄 없음</Korean>
             <Chinesesimp>未选择手榴弹</Chinesesimp>
             <Chinese>未選擇手榴彈</Chinese>
@@ -380,9 +380,9 @@
             <Polish>Wystrzel granat dymny</Polish>
             <Hungarian>Füstvető eltüzelése</Hungarian>
             <Russian>Пустить дымовую завесу</Russian>
-            <Italian>Lancia fumogeno</Italian>
+            <Italian>Lancia Cortina Fumogena</Italian>
             <Portuguese>Lançador de fumaça</Portuguese>
-            <Japanese>発煙弾発射機を発射</Japanese>
+            <Japanese>発煙弾を発射</Japanese>
             <Korean>연막발사기 박사</Korean>
             <Chinesesimp>发射烟雾发射器</Chinesesimp>
             <Chinese>發射煙霧發射器</Chinese>

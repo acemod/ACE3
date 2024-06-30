@@ -17,4 +17,4 @@
 
 params ["_player"];
 
-_player call CBA_fnc_canUseWeapon && {!((vehicle _player) isKindOf "StaticWeapon")}
+_player call CBA_fnc_canUseWeapon && {currentWeapon _player != ""} && {!((vehicle _player) isKindOf "StaticWeapon")}

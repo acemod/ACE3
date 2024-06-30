@@ -35,9 +35,10 @@ if (_addItem && {_itemIndex == -1}) exitWith {
     _attributeItems pushBack _itemClassname;
 
     // Change symbol and increase alpha
-    _listbox lnbSetText [[_currentRow, 2], [SYMBOL_ITEM_VIRTUAL, SYMBOL_ITEM_REMOVE] select _attributeMode];
+    _listbox lnbSetText [[_currentRow, 3], [SYMBOL_ITEM_VIRTUAL, SYMBOL_ITEM_REMOVE] select _attributeMode];
     _listbox lnbSetColor [[_currentRow, 1], [1, 1, 1, 1]];
-    _listbox lnbSetColor [[_currentRow, 2], [1, 1, 1, 1]];
+    _listbox lnbSetPictureColor [[_currentRow, 2], [1, 1, 1, 1]]; // mod icon is in column 2
+    _listbox lnbSetColor [[_currentRow, 3], [1, 1, 1, 1]];
 };
 
 // Remove item if in list
@@ -45,7 +46,8 @@ if (!_addItem && {_itemIndex != -1}) exitWith {
     _attributeItems deleteAt _itemIndex;
 
     // Change symbol and reduce alpha
-    _listbox lnbSetText [[_currentRow, 2], SYMBOL_ITEM_NONE];
+    _listbox lnbSetText [[_currentRow, 3], SYMBOL_ITEM_NONE];
     _listbox lnbSetColor [[_currentRow, 1], [1, 1, 1, 0.5]];
-    _listbox lnbSetColor [[_currentRow, 2], [1, 1, 1, 0.5]];
+    _listbox lnbSetPictureColor [[_currentRow, 2], [1, 1, 1, 0.5]]; // mod icon is in column 2
+    _listbox lnbSetColor [[_currentRow, 3], [1, 1, 1, 0.5]];
 };

@@ -47,7 +47,7 @@ if (_weaponSelect != "") then {
 
 //Unclaim repair objects:
 {
-    TRACE_2("Releasing", _x, (typeOf _x));
+    TRACE_2("Releasing",_x,(typeOf _x));
     [objNull, _x, false] call EFUNC(common,claim);
 } forEach _claimedObjects;
 
@@ -60,7 +60,7 @@ if (isNil _callback) then {
 } else {
     _callback = missionNamespace getVariable _callback;
 };
-if (!(_callback isEqualType {})) then {_callback = {TRACE_1("callback was NOT code",_callback)};};
+if !(_callback isEqualType {}) then {_callback = {TRACE_1("callback was NOT code",_callback)};};
 
 _args call _callback;
 

@@ -26,7 +26,7 @@ TRACE_4("params",_unit,_vehicle,_hitPoint,_claimedObjects);
 
 _claimedObjects params [["_wheel", objNull]];
 if ((isNull _wheel) || {!([_unit, _wheel, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith))}) exitWith {
-    WARNING_1("Bad Claimed Wheel", _claimedObjects);
+    WARNING_1("Bad Claimed Wheel",_claimedObjects);
 };
 
 // get current hitpoint damage

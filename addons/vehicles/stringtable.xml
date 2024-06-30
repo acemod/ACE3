@@ -25,6 +25,7 @@
             <Polish>Tempomat włączony</Polish>
             <Japanese>クルーズコントロールを有効化</Japanese>
             <Chinesesimp>开启巡航模式</Chinesesimp>
+            <Italian>Controllo di Velocità Attivo</Italian>
             <Russian>Круиз-контроль включён</Russian>
             <Spanish>Control de crucero encendido</Spanish>
             <French>Régulateur de vitesse activé</French>
@@ -53,6 +54,7 @@
             <Polish>Tempomat wyłączony</Polish>
             <Japanese>クルーズコントロールを無効化</Japanese>
             <Chinesesimp>关闭巡航模式</Chinesesimp>
+            <Italian>Controllo di Velocità Non Attivo</Italian>
             <Russian>Круиз-контроль выключен</Russian>
             <Spanish>Control de crucero apagado</Spanish>
             <French>Régulateur de vitesse désactivé</French>
@@ -97,6 +99,7 @@
             <Polish>Tempomat</Polish>
             <Japanese>クルーズコントロール</Japanese>
             <Chinesesimp>巡航模式</Chinesesimp>
+            <Italian>Controllo di Velocità</Italian>
             <Russian>Круиз-контроль</Russian>
             <Spanish>Contro de crucero</Spanish>
             <French>Régulateur de vitesse</French>
@@ -145,7 +148,7 @@
             <Chinesesimp>关闭引擎自动熄火</Chinesesimp>
             <French>Désactiver l'arrêt automatique du moteur</French>
             <Polish>Wyłącz automatyczne wyłączanie silnika</Polish>
-            <Italian>Disattivare lo spegnimento automatico del motore</Italian>
+            <Italian>Disattiva lo spegnimento automatico del motore</Italian>
             <Turkish>Otomatik motor durdurmayı devre dışı bırak</Turkish>
             <Korean>자동으로 엔진 끄기 비활성화</Korean>
         </Key>
@@ -159,7 +162,7 @@
             <Czech>Zabraň automatickému vypnutí motoru při opuštění vozidla.</Czech>
             <Chinese>避免離開載具時自動熄火。</Chinese>
             <Chinesesimp>避免离开载具时自动熄火。</Chinesesimp>
-            <Italian>Impedire lo spegnimento automatico del motore quando si esce dai veicoli.</Italian>
+            <Italian>Impedisce lo spegnimento automatico del motore quando si esce dai veicoli.</Italian>
             <French>Empêche l'arrêt automatique du moteur à la sortie des véhicules.</French>
             <Turkish>Araçtan inerken motorun otomatik kapatılmasını engelleyin.</Turkish>
             <Polish>Zapobiegaj automatycznemu wyłączaniu silnika podczas wychodzenia z pojazdu.</Polish>
@@ -185,7 +188,7 @@
             <German>Versteckt den Abspringen-Eintrag aus dem Aktionsmenü. Benötigt Neustart des Spiels.</German>
             <Polish>Usuwa akcję Wyskocz z menu akcji. Wymaga restartu gry.</Polish>
             <Russian>Убирает действие 'Выпрыгнуть' из меню. (Требует перезагрузки)</Russian>
-            <Japanese>アクション メニューから脱出アクションを消します。ゲームの再起動が必要です。</Japanese>
+            <Japanese>アクションメニューから脱出アクションを消します。ゲームの再起動が必要です。</Japanese>
             <Portuguese>Oculta a opção de interação para ejetar. Requer que o jogo seja reiniciado.</Portuguese>
             <Spanish>Oculta la entrada Expulsar del menú de acciones. Requiere un reinicio del juego.</Spanish>
             <Chinese>隱藏在動作選單中逃脫動作的選項。要求遊戲重新啟動。</Chinese>
@@ -200,6 +203,7 @@
             <German>Schrittgröße des Geschwindigkeitsbegrenzers</German>
             <Polish>Przeskok limitera prędkości</Polish>
             <French>Pas du limiteur de vitesse</French>
+            <Italian>Intervalli del Limitatore di Velocità</Italian>
             <Japanese>制限速度の増減量</Japanese>
             <Czech>Krokování omezovače rychlosti</Czech>
             <Russian>Шаг ограничителя скорости</Russian>

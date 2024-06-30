@@ -24,7 +24,7 @@ private _ctrlButtonOK = _display displayCtrl 1; //IDC_OK
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 TRACE_1("logicObject",_logic);
 
-_control ctrlRemoveAllEventHandlers "setFocus";
+_control ctrlRemoveAllEventHandlers "SetFocus";
 
 //Validate the module target:
 private _unit = effectiveCommander (attachedTo _logic);
@@ -101,7 +101,7 @@ private _fnc_onSelection = {
 
     _ctrl ctrlSetTextColor _color;
 
-    _ctrl ctrlAddEventHandler ["buttonclick", _fnc_onSelection];
+    _ctrl ctrlAddEventHandler ["ButtonClick", _fnc_onSelection];
 } forEach IDCs;
 
 private _fnc_onUnload = {
@@ -129,5 +129,5 @@ private _fnc_onConfirm = {
     deleteVehicle _logic;
 };
 
-_display displayAddEventHandler ["unload", _fnc_onUnload];
-_ctrlButtonOK ctrlAddEventHandler ["buttonClick", _fnc_onConfirm];
+_display displayAddEventHandler ["Unload", _fnc_onUnload];
+_ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

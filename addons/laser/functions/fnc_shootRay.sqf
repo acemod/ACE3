@@ -21,7 +21,7 @@
 BEGIN_COUNTER(shootRay);
 
 params ["_posASL", "_dir", ["_ignoreVehicle1", objNull], ["_ignoreVehicle2", objNull]];
-// TRACE_2("ray origin:", _posASL, _dir);
+// TRACE_2("ray origin:",_posASL,_dir);
 
 private _distance = 0;
 private _resultPos = nil;
@@ -43,7 +43,7 @@ if (_intersects isNotEqualTo []) then {
     _resultPos = _posASL vectorAdd (_dir vectorMultiply _distance);
 };
 
-TRACE_3("", _resultPos, _distance, _intersects);
+TRACE_3("",_resultPos,_distance,_intersects);
 
 #ifdef DRAW_LASER_INFO
 if (!isNil "_resultPos") then {

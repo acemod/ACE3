@@ -30,12 +30,21 @@ private _inBuilding = _unit call FUNC(isObjectOnObject);
 [QEGVAR(common,fixCollision), _unit] call CBA_fnc_localEvent;
 [QEGVAR(common,fixCollision), _target, _target] call CBA_fnc_targetEvent;
 
-// Release object
-detach _target;
+private _cursorObject = cursorObject;
+_tryLoad = _tryLoad && {!isNull _cursorObject} && {[_unit, _cursorObject, ["isNotCarrying"]] call EFUNC(common,canInteractWith)};
+private _loadCargo = false;
+
+// Don't release object if loading into vehicle (object might be released into vehicle)
+if (_tryLoad && {!(_target isKindOf "CAManBase")} && {["ace_cargo"] call EFUNC(common,isModLoaded)} && {[_target, _cursorObject] call EFUNC(cargo,canLoadItemIn)}) then {
+    _loadCargo = true;
+} else {
+    // Release object
+    detach _target;
+};
 
 // Fix anim when aborting carrying persons
 if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
-    if (vehicle _unit == _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
+    if (isNull objectParent _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
         [_unit, "", 2] call EFUNC(common,doAnimation);
     };
 
@@ -79,6 +88,8 @@ if !(_target isKindOf "CAManBase") then {
 
 // Recreate UAV crew (add a frame delay or this may cause the vehicle to be moved to [0,0,0])
 if (_target getVariable [QGVAR(isUAV), false]) then {
+    _target setVariable [QGVAR(isUAV), nil, true];
+
     [{
         params ["_target"];
         if (!alive _target) exitWith {};
@@ -97,29 +108,19 @@ if (_mass != 0) then {
 // Reset temp direction
 _target setVariable [QGVAR(carryDirection_temp), nil];
 
-getCursorObjectParams params ["_cursorObject", "", "_distance"];
-
-// Try loading into vehicle
-if (_tryLoad && {!isNull _cursorObject} && {[_unit, _cursorObject, ["isNotCarrying"]] call EFUNC(common,canInteractWith)}) then {
-    if (_target isKindOf "CAManBase") then {
-        if (_distance > MAX_LOAD_DISTANCE_MAN) exitWith {};
-
+// (Try) loading into vehicle
+if (_loadCargo) then {
+    [_unit, _target, _cursorObject] call EFUNC(cargo,startLoadIn);
+} else {
+    if (_tryLoad && {_unit distance _cursorObject <= MAX_LOAD_DISTANCE_MAN} && {_target isKindOf "CAManBase"}) then {
         private _vehicles = [_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat);
 
         if ([_cursorObject] isEqualTo _vehicles) then {
-            if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+            if (GETEGVAR(medical,enabled,false)) then {
                 [_unit, _target, _cursorObject] call EFUNC(medical_treatment,loadUnit);
             } else {
                 [_unit, _target, _cursorObject] call EFUNC(common,loadPerson);
             };
-        };
-    } else {
-        if (
-            ["ace_cargo"] call EFUNC(common,isModLoaded) &&
-            {EGVAR(cargo,enable)} &&
-            {[_target, _cursorObject] call EFUNC(cargo,canLoadItemIn)}
-        ) then {
-            [_unit, _target, _cursorObject] call EFUNC(cargo,startLoadIn);
         };
     };
 };

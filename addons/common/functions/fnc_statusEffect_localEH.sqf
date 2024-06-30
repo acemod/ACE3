@@ -22,12 +22,12 @@ TRACE_2("params",_object,_isLocal);
 //Only run this after the settings are initialized
 //Need to wait for all EH to be installed (local event will happen between pre and post init)
 if !(GVAR(settingsInitFinished)) exitWith {
-    TRACE_1("pushing to runAtSettingsInitialized", _this);
+    TRACE_1("pushing to runAtSettingsInitialized",_this);
     GVAR(runAtSettingsInitialized) pushBack [FUNC(statusEffect_localEH), _this];
 };
 
-if (!_isLocal) exitWith {TRACE_1("object no longer local", _this)};
-if (isNull _object) exitWith {TRACE_1("object null", _this)};
+if (!_isLocal) exitWith {TRACE_1("object no longer local",_this)};
+if (isNull _object) exitWith {TRACE_1("object null",_this)};
 
  //Reset any variables because of respawn
 [_object, false] call FUNC(statusEffect_resetVariables);

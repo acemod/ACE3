@@ -17,7 +17,7 @@
 
 params ["_object"];
 
-if (!(_object getVariable [QGVAR(addObject), GVAR(autoAddObjects)])) exitWith {};
+if !(_object getVariable [QGVAR(addObject), GVAR(autoAddObjects)]) exitWith {};
 
 [{
     TRACE_1("Delayed addCuratorEditableObjects",_this);

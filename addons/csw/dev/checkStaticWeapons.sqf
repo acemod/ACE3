@@ -7,14 +7,14 @@ INFO("Checking static weapons");
 
 private _staticWeaponConfigs = configProperties [configFile >> "CfgVehicles", "(isClass _x) && {(configName _x) isKindOf 'StaticWeapon'}", true];
 private _staticPublic = _staticWeaponConfigs select {(getNumber (_x >> "scope")) == 2};
-INFO_2("Static Weapons [%1] - CSW Enabled [%2]",count _staticPublic, {(getNumber (_x >> "ace_csw" >> "enabled")) == 1} count _staticPublic);
+INFO_2("Static Weapons [%1] - CSW Enabled [%2]",count _staticPublic,{(getNumber (_x >> QUOTE(ADDON) >> "enabled")) == 1} count _staticPublic);
 
 INFO("------ Checking static weapons inheritance ------");
 private _explicitBases = [];
 private _inherited = [];
 {
     private _config = _x;
-    private _configEnabled = (getNumber (_config >> "ace_csw" >> "enabled")) == 1;
+    private _configEnabled = (getNumber (_config >> QUOTE(ADDON) >> "enabled")) == 1;
     if (_configEnabled) then {
         private _configExplicit = (count configProperties [_config, "configName _x == 'ace_csw'", false]) == 1;
         if (_configExplicit) then {
@@ -69,7 +69,7 @@ private _logAll = false;
 
 {
     //IGNORE_PRIVATE_WARNING ["_x", "_y"];
-    INFO_2("[%1] has no carry varient - Used in %2",_x,_y);
+    INFO_2("[%1] has no carry variant - Used in %2",_x,_y);
 } forEach _hash;
 
 INFO("------ End -------");

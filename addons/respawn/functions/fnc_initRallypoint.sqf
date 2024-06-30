@@ -53,7 +53,7 @@ if (hasInterface) then {
         private _type = ["selector_selectedFriendly", "selector_selectedEnemy"] select (_respawnMarker == "");
 
         _marker setMarkerTypeLocal _type;
-        _marker setMarkerAlphaLocal ([0,1] select (_side == playerSide)); // playerSide to guarantee init
+        _marker setMarkerAlphaLocal (parseNumber (_side == playerSide)); // playerSide to guarantee init
 
         private _date = _rallypoint getVariable [QGVAR(markerDate), ""];
 
