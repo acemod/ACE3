@@ -12,7 +12,6 @@ if (isServer) then {
     GVAR(headlessClients) = [];
     GVAR(inRebalance) = false;
     GVAR(endMissionCheckDelayed) = false;
-    GVAR(blacklistType) = [BLACKLIST_UAV];
     [QXGVAR(headlessClientJoined), LINKFUNC(handleConnectHC)] call CBA_fnc_addEventHandler;
 };
 

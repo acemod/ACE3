@@ -44,7 +44,7 @@ if ((isEngineOn _target) && {!GVAR(autoShutOffEngineWhenStartingRepair)}) exitWi
 };
 
 private _items = _config call FUNC(getRepairItems);
-if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
+if (_items isNotEqualTo [] && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
 
 private _return = true;
 if (getText (_config >> "condition") != "") then {
@@ -70,7 +70,7 @@ if (!_return) exitWith {false};
 // if (_vehicleStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitWith {false};
 
 private _repairLocations = getArray (_config >> "repairLocations");
-if (!("All" in _repairLocations)) then {
+if !("All" in _repairLocations) then {
     private _repairFacility = {([_caller] call FUNC(isInRepairFacility)) || ([_target] call FUNC(isInRepairFacility))};
     private _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC(isNearRepairVehicle))};
     {

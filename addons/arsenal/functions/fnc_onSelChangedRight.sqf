@@ -69,7 +69,14 @@ switch (_currentItemsIndex) do {
     // Secondary weapon
     case IDX_CURR_SECONDARY_WEAPON_ITEMS: {
         private _currentItemInSlot = (GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS) select _itemIndex;
-        private _isDisposable = CBA_disposable_replaceDisposableLauncher && {!isNil {CBA_disposable_loadedLaunchers getVariable (secondaryWeapon GVAR(center))}};
+        private _isDisposable = CBA_disposable_replaceDisposableLauncher && {!isNil "CBA_disposable_loadedLaunchers"} &&
+            {
+                if (CBA_disposable_loadedLaunchers isEqualType createHashMap) then { // after CBA 3.18
+                    (secondaryWeapon GVAR(center)) in CBA_disposable_loadedLaunchers
+                } else {
+                    !isNil {CBA_disposable_loadedLaunchers getVariable (secondaryWeapon player)}
+                }
+            };
 
         // If removal
         if (_item == "") then {
