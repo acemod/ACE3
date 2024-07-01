@@ -7,6 +7,7 @@ PREP(canTakeDogtag);
 PREP(checkDogtag);
 PREP(getDogtagData);
 PREP(getDogtagItem);
+PREP(inventoryDisplayLoad);
 PREP(showDogtag);
 PREP(ssn);
 PREP(takeDogtag);
