@@ -10,24 +10,35 @@
  * None
  *
  * Example:
- * [configFile >> "ace_medical_injuries" >> "damageTypes"] call ace_medical_damage_fnc_parseWoundHandlersCfg
+ * [configFile >> "ace_medical_injuries" >> "damageTypes" >> "woundHandlers"] call ace_medical_damage_fnc_parseWoundHandlersCfg
  *
  * Public: No
  */
+
 params ["_config"];
 
-// read all valid entries from config and store
+// Read all valid entries from config and store
 private _entries = [];
+
 {
-    private _entryResult = call compile getText _x;
-    if !(isNil "_entryResult") then {
-        _entries pushBack _entryResult;
-    }
+    private _entryResult = getText _x;
+
+    if (_entryResult != "") then {
+        if (ADDON) then {
+            // Runs in postInit
+            _entries pushBack (call compile _entryResult);
+        } else {
+            // Runs in preInit
+            // In case function doesn't exist yet, wrap in extra layer
+            _entries pushBack (compile format ["call %1", _entryResult]);
+        };
+    };
 } forEach configProperties [_config, "isText _x", false];
 
 private _parent = inheritsFrom _config;
+
 if (isNull _parent) exitWith {_entries};
 
-// recursive call for parent
-// can't use configProperties for inheritance since it returns entries in the wrong order
-([_parent] call FUNC(parseWoundHandlersCfg)) + _entries;
+// Recursive call for parent
+// Can't use configProperties for inheritance since it returns entries in the wrong order
+([_parent] call FUNC(parseWoundHandlersCfg)) + _entries // return
