@@ -3,17 +3,12 @@
 
 [QGVAR(moveCorpse), {
     params ["_corpse", "_dir", "_posATL"];
-    _posATL params ["_xPos", "_yPos", "_zPos"];
 
     if (isNull _corpse) exitWith {};
 
-    private _currentPos = getPosATL _corpse;
-
     // Check if the corpse is already close to the target
     // If so, don't teleport
-    if !(
-        _currentPos distance _posATL > 0.25
-    ) then {
+    if ((getPosATL _corpse) distance _posATL > 0.25) then {
         // Set direction before position
         _corpse setDir _dir;
 
