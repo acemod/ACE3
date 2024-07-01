@@ -80,6 +80,9 @@ class ACE_Medical_Injuries {
             // bullets only create multiple wounds when the damage is very high
             thresholds[] = {{20, 10}, {4.5, 2}, {3, 1}, {0, 1}};
             selectionSpecific = 1;
+            class woundHandlers: woundHandlers {
+                GVAR(armorPenetration) = QFUNC(woundsHandlerArmorPenetration);
+            };
 
             class Avulsion {
                 // at damage, weight. between points, weight is interpolated then wound is chosen by weighted random.
