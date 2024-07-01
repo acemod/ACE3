@@ -86,8 +86,7 @@ if (_state) then {
         };
     };
 
-    if (!alive _unit) exitWith {};
-    if (_unit getVariable ["ACE_isUnconscious", false]) exitWith {};  //don't touch animations if unconscious
+    if !(_unit call EFUNC(common,isAwake)) exitWith {};  //don't touch animations if unconscious
 
     //if we are in "hands up" animationState, crack it now
     if (((vehicle _unit) == _unit) && {(animationState _unit) == "ACE_AmovPercMstpSsurWnonDnon"}) then {
@@ -99,7 +98,7 @@ if (_state) then {
             params ["_args", "_pfID"];
             _args params ["_unit", "_maxTime"];
             //If waited long enough or they re-surrendered or they are unconscious, exit loop
-            if ((CBA_missionTime > _maxTime) || {_unit getVariable [QGVAR(isSurrendering), false]} || {_unit getVariable ["ACE_isUnconscious", false]}) exitWith {
+            if ((CBA_missionTime > _maxTime) || {_unit getVariable [QGVAR(isSurrendering), false]} || {!(_unit call EFUNC(common,isAwake))}) exitWith {
                 [_pfID] call CBA_fnc_removePerFrameHandler;
             };
             //Only break animation if they are actualy the "hands up" animation (because we are using switchmove there won't be an transition)

@@ -44,7 +44,7 @@ if (_tryLoad && {!(_target isKindOf "CAManBase")} && {["ace_cargo"] call EFUNC(c
 
 // Fix anim when aborting carrying persons
 if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
-    if (isNull objectParent _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
+    if (isNull objectParent _unit && {_unit call EFUNC(common,isAwake)}) then {
         [_unit, "", 2] call EFUNC(common,doAnimation);
     };
 

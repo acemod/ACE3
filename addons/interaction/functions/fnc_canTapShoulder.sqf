@@ -19,6 +19,5 @@
 params ["_unit", "_target"];
 
 _target isKindOf "CAManBase" &&
-{alive _target} &&
-{_unit distance _target < 4} &&
-{!(_target getVariable ["ACE_isUnconscious", false])} // return
+{_target call EFUNC(common,isAwake)} &&
+{_unit distance _target < 4} // return
