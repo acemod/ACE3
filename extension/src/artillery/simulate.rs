@@ -126,7 +126,7 @@ pub fn find_solution(
 
 #[cfg(test)]
 mod tests {
-    use std::f64::{consts::FRAC_PI_4, EPSILON};
+    use std::f64::consts::FRAC_PI_4;
 
     use crate::common::{Height, MuzzleVelocity, Temperature};
 
@@ -144,9 +144,9 @@ mod tests {
             Temperature::new_15c(),
             1.0,
         );
-        assert!(x < EPSILON);
-        assert!(y - 10_331.039_038_212_19 < EPSILON); // old ace: 10330.2
-        assert!(result_time - 50.316_666_666_665_09 < EPSILON); // old ace: 50.3167
+        assert!(x < f64::EPSILON);
+        assert!((y - 10_331.039_038_212_19).abs() < f64::EPSILON); // old ace: 10330.2
+        assert!((result_time - 50.316_666_666_665_09).abs() < f64::EPSILON); // old ace: 50.3167
     }
 
     #[test]
@@ -162,8 +162,8 @@ mod tests {
             Temperature::new_15c(),
             1.0,
         );
-        assert!(result_distance - 999.628_737_358_452_9 < EPSILON); // old ace: 999.773
-        assert!(current_elevation - 1.522_375_345_230_102_5 < EPSILON); // old ace: 1.52238
-        assert!(result_time - 69.699_999_999_997_33 < EPSILON); // old ace: 69.7
+        assert!((result_distance - 999.628_737_358_452_9).abs() < f64::EPSILON); // old ace: 999.773
+        assert!((current_elevation - 1.522_375_345_230_102_5).abs() < f64::EPSILON); // old ace: 1.52238
+        assert!((result_time - 69.699_999_999_997_33).abs() < f64::EPSILON); // old ace: 69.7
     }
 }

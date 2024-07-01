@@ -399,7 +399,6 @@ fn calc_range_table_line(
 #[cfg(test)]
 mod tests {
     use std::{
-        f64::EPSILON,
         sync::atomic::{AtomicI8, Ordering},
         time::Duration,
     };
@@ -413,8 +412,8 @@ mod tests {
     #[test]
     fn test_find_max_angle() {
         let (best_angle, best_distance) = find_max_angle(MuzzleVelocity::new(400.0), -0.00005);
-        assert!(best_angle - 0.730_420_291_959_627_2 < EPSILON); // old ace: 0.722566
-        assert!(best_distance - 10_393.560_433_295_957 < EPSILON); // old ace: 10391.8
+        assert!((best_angle - 0.730_420_291_959_627_2).abs() < f64::EPSILON); // old ace: 0.722566
+        assert!((best_distance - 10_393.560_433_295_957).abs() < f64::EPSILON); // old ace: 10391.8
     }
 
     #[test]
@@ -435,7 +434,7 @@ mod tests {
         );
         println!("{output:?}");
         let (best, lines): (f64, i8) = FromArma::from_arma(output).unwrap();
-        assert!(best - 10_393.560_433_295_957 < EPSILON);
+        assert!((best - 10_393.560_433_295_957).abs() < f64::EPSILON);
         assert_eq!(lines, 103);
         let recv: AtomicI8 = AtomicI8::new(0);
         assert_eq!(code, 0);

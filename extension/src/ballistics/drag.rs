@@ -177,8 +177,6 @@ pub fn calculate_retard(
 
 #[cfg(test)]
 mod tests {
-    use std::f64::EPSILON;
-
     use crate::ballistics::{atmosphere::speed_of_sound, Temperature};
 
     use super::DragFunction;
@@ -186,13 +184,14 @@ mod tests {
     #[test]
     fn retard() {
         assert!(
-            super::calculate_retard(
+            (super::calculate_retard(
                 DragFunction::G1,
                 0.583,
                 89.0,
                 speed_of_sound(Temperature::new_15c())
-            ) - 2.103_812_727_313_926
-                < EPSILON // old ace: 2.10381
+            ) - 2.103_812_727_313_926)
+                .abs()
+                < f64::EPSILON // old ace: 2.10381
         );
     }
 }

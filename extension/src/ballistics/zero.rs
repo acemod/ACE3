@@ -106,8 +106,6 @@ pub fn calculate(
 
 #[cfg(test)]
 mod tests {
-    use std::f64::EPSILON;
-
     use crate::{
         ballistics::{
             AdvancedBallistics, AtmosphereModel, BallisticModel, DragFunction, Temperature,
@@ -118,29 +116,31 @@ mod tests {
     #[test]
     fn replicate_vanilla_zero() {
         assert!(
-            super::replicate_vanilla(200.0, MuzzleVelocity::new(89.0), 0.3)
-                - 0.164_673_237_568_344_37
-                < EPSILON // old ace: 0.164672
+            (super::replicate_vanilla(200.0, MuzzleVelocity::new(89.0), 0.3)
+                - 0.164_673_237_568_344_37)
+                .abs()
+                < f64::EPSILON // old ace: 0.164672
         );
     }
 
     #[test]
     fn calc_zero_vanilla() {
         assert!(
-            super::calculate(
+            (super::calculate(
                 200.0,
                 MuzzleVelocity::new(89.0),
                 1.5,
                 BallisticModel::Vanilla(0.3)
-            ) - 0.132_818_571_102_032_27
-                < EPSILON // old ace: 0.132818
+            ) - 0.132_818_571_102_032_27)
+                .abs()
+                < f64::EPSILON // old ace: 0.132818
         );
     }
 
     #[test]
     fn calc_zero_advanced() {
         assert!(
-            super::calculate(
+            (super::calculate(
                 200.0,
                 MuzzleVelocity::new(89.0),
                 1.5,
@@ -152,8 +152,9 @@ mod tests {
                     atmosphere_model: AtmosphereModel::Icao,
                     drag_function: DragFunction::G1,
                 })
-            ) - 7.509_855_403_805_35
-                < EPSILON // old ace: 7.51363
+            ) - 7.509_855_403_805_35)
+                .abs()
+                < f64::EPSILON // old ace: 7.51363
         );
     }
 }

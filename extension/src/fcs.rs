@@ -70,12 +70,10 @@ pub fn get_solution(init_speed: f64, air_friction: f64, angle_target: f64, dista
 
 #[cfg(test)]
 mod tests {
-    use std::f64::EPSILON;
-
     use super::get_solution;
 
     #[test]
     fn test_get_solution() {
-        assert!(get_solution(400.0, 0.0, 28.0, 950.0) - -8.0 < EPSILON);
+        assert!((get_solution(400.0, 0.0, 28.0, 950.0) - -8.0).abs() < f64::EPSILON);
     }
 }

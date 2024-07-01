@@ -93,41 +93,46 @@ pub fn speed_of_sound(temperature: Temperature) -> f64 {
 
 #[cfg(test)]
 mod tests {
-    use std::f64::EPSILON;
-
     use crate::common::Temperature;
 
     #[test]
     fn atmospheric_correction() {
         assert!(
-            super::calculate_atmospheric_correction(
+            (super::calculate_atmospheric_correction(
                 0.583,
                 Temperature::new_15c(),
                 1005.0,
                 0.0,
                 crate::ballistics::AtmosphereModel::Icao
-            ) - 0.587_784_746_752_856_4
-                < EPSILON // previous ace: 0.580047
+            ) - 0.587_784_746_752_856_4)
+                .abs()
+                < f64::EPSILON // previous ace: 0.580047
         );
         assert!(
-            super::calculate_atmospheric_correction(
+            (super::calculate_atmospheric_correction(
                 0.263,
                 Temperature::new_celsius(25.3642),
                 1009.61,
                 0.603173,
                 crate::ballistics::AtmosphereModel::Icao
-            ) - 0.275_454_853_636_429_13
-                < EPSILON // previous ace: 0.275444
+            ) - 0.275_454_853_636_429_13)
+                .abs()
+                < f64::EPSILON // previous ace: 0.275444
         );
     }
 
     #[test]
     fn speed_of_sound() {
         assert!(
-            super::speed_of_sound(Temperature::new_celsius(-15.0)) - 322.074_912_997_965_27
-                < EPSILON
+            (super::speed_of_sound(Temperature::new_celsius(-15.0)) - 322.074_912_997_965_27).abs()
+                < f64::EPSILON
         );
-        assert!(super::speed_of_sound(Temperature::new_celsius(0.0)) - 331.3 < EPSILON);
-        assert!(super::speed_of_sound(Temperature::new_15c()) - 340.275_080_511_860_5 < EPSILON);
+        assert!(
+            (super::speed_of_sound(Temperature::new_celsius(0.0)) - 331.3).abs() < f64::EPSILON
+        );
+        assert!(
+            (super::speed_of_sound(Temperature::new_15c()) - 340.275_080_511_860_5).abs()
+                < f64::EPSILON
+        );
     }
 }
