@@ -43,7 +43,7 @@ GVAR(vehicleMagCache) = createHashMap;
         "CUP_M151_M2_Base",
         "WOG_M923a1om2",
 
-        // BAF	
+        // BAF
         "UK3CB_BAF_LandRover_Base",
         "UK3CB_BAF_Jackal_Base",
         "UK3CB_BAF_FV432_Mk3_Base",
@@ -51,26 +51,26 @@ GVAR(vehicleMagCache) = createHashMap;
         "UK3CB_BAF_Husky_Base",
         "UK3CB_BAF_Panther_Base",
         "rksla3_foxhound_lppv_base",
-		
-		 // BW
+        
+         // BW
         // "rnt_lkw_10t_mil_gl_kat_i_base",
         // "rnt_lkw_5t_mil_gl_kat_i_base",
         // "rnt_lkw_7t_mil_gl_kat_i_base",
         // "Redd_Tank_Fuchs_1A4_Base",
-	
-		
-		//UK3CB Factions
-		"UK3CB_Hilux_Base", 
-		"UK3CB_Datsun_Base",	
-		"UK3CB_LandRover_Base",	
-		"UK3CB_MTLB_Zu23",	
-		"UK3CB_Fishing_Boat_ZU23",	
-		
-		//Vanilla
-		"Offroad_01_AT_base_F",
-		"Offroad_01_armed_base_F",
-		"Offroad_02_LMG_base_F",
-		"Offroad_02_AT_base_F"
+    
+        
+        //UK3CB Factions
+        "UK3CB_Hilux_Base", 
+        "UK3CB_Datsun_Base",
+        "UK3CB_LandRover_Base",
+        "UK3CB_MTLB_Zu23",
+        "UK3CB_Fishing_Boat_ZU23",
+        
+        //Vanilla
+        "Offroad_01_AT_base_F",
+        "Offroad_01_armed_base_F",
+        "Offroad_02_LMG_base_F",
+        "Offroad_02_AT_base_F"
     ];
 
     {
