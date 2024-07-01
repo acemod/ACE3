@@ -20,4 +20,3 @@ CHANGELOG.md
 sqfvm.exe
 ArmaScriptCompiler.exe
 *.sqfc
-!extras/**/*.zip
