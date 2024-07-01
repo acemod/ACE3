@@ -22,8 +22,14 @@ if (_item == "") exitWith {};
 
 [ace_player, _item] call CBA_fnc_addItem;
 
-_dogtagData params ["_nickName"];
-private _displayText = format [localize LSTRING(takeDogtagSuccess), _nickName];
+_dogtagData params ["_name"];
+
+// If data doesn't exist or body has no name, set name as "unknown"
+if (_name == "") then {
+    _name = LELSTRING(common,unknown);
+};
+
+private _displayText = format [localize LSTRING(takeDogtagSuccess), _name];
 
 // display message
 [{
