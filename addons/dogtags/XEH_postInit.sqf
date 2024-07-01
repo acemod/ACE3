@@ -1,9 +1,25 @@
 #include "script_component.hpp"
 
 [QGVAR(showDogtag), LINKFUNC(showDogtag)] call CBA_fnc_addEventHandler;
-[QGVAR(sendDogtagData), LINKFUNC(sendDogtagData)] call CBA_fnc_addEventHandler;
 [QGVAR(getDogtagItem), LINKFUNC(getDogtagItem)] call CBA_fnc_addEventHandler;
 [QGVAR(addDogtagItem), LINKFUNC(addDogtagItem)] call CBA_fnc_addEventHandler;
+
+[QGVAR(broadcastDogtagInfo), {
+    GVAR(dogtagsData) set _this;
+}] call CBA_fnc_addEventHandler;
+
+if (isServer) then {
+    // Sync dogtag data from server to client
+    [QGVAR(requestSyncDogtagDataJIP), {
+        params ["_clientOwner"];
+
+        {
+            [QGVAR(broadcastDogtagInfo), [_x, _y], _clientOwner] call CBA_fnc_ownerEvent;
+        } forEach GVAR(dogtagsData);
+    }] call CBA_fnc_addEventHandler;
+} else {
+    [QGVAR(requestSyncDogtagDataJIP), clientOwner] call CBA_fnc_serverEvent;
+};
 
 // Add actions and event handlers only if ace_medical is enabled
 // - Adding actions via config would create a dependency
@@ -56,8 +72,6 @@ if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
         if (_leftPanelIDC in [2010, 2012, 2014] && {_rightPanelIDC == 38}) then {
             LOG("passed");
             private _rightPanel = _display displayCtrl 15;
-            private _allDogtags = missionNamespace getVariable [QGVAR(allDogtags), []];
-            private _allDogtagsData = missionNamespace getVariable [QGVAR(allDogtagDatas), []];
             private _cfgWeapons = configFile >> "CfgWeapons";
             private _item = "";
             private _dogtagData = [];
@@ -66,7 +80,7 @@ if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
                 _item = _rightPanel lnbData [_i, 0];
 
                 if (_item isKindOf ["ACE_dogtag", _cfgWeapons]) then {
-                    _dogtagData = _allDogtagsData param [_allDogtags find _item, []];
+                    _dogtagData = GVAR(dogtagsData) getOrDefault [_item, []];
 
                     // If data doesn't exist, put name as "unknown"
                     _rightPanel lnbSetText [[_i, 1], [LLSTRING(itemName), ": ", _dogtagData param [0, LELSTRING(common,unknown)]] joinString ""];
