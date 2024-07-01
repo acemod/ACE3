@@ -23,4 +23,4 @@ if (isNull _target) exitWith {false};
 // check if disabled for faction
 if ((faction _target) in GVAR(disabledFactions)) exitWith {false};
 
-(!alive _target) || {_target getVariable ["ACE_isUnconscious", false]}
+((!alive _target) || {_target getVariable ["ACE_isUnconscious", false]}) && {_player canAdd ["ACE_dogtag", 1/*, true*/]} // Todo: Uncomment in 2.18
