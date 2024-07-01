@@ -76,7 +76,7 @@ private _nextFireMode = _attackProfiles select _index;
 TRACE_4("",_currentFireMode,_nextFireMode,_index,_attackProfiles);
 
 
-private _currentFireMode = if (_useModeForAttackProfile) then {
+if (_useModeForAttackProfile) then {
     TRACE_2("setting fire mode",_weaponStateToken,_nextFireMode);
     {
         _x params ["_xIndex", "", "_xWeapon", "", "_xMode"];

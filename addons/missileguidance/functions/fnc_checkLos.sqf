@@ -43,4 +43,3 @@ if (!((terrainIntersectASL [_seekerPos, _targetPos]) && {terrainIntersectASL [_s
 };
 
 _return
-

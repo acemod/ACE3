@@ -2,12 +2,13 @@
 
 [QGVAR(handoff), LINKFUNC(handleHandoff)] call CBA_fnc_addEventHandler;
 
-["ACE3 Weapons", QGVAR(cycleFireMode), localize LSTRING(CycleFireMode),
-{
+["ACE3 Weapons", QGVAR(cycleFireMode), localize LSTRING(CycleFireMode), {
     [] call FUNC(cycleAttackProfileKeyDown);
     false
-},
-{
+}, {
     false
 },
 [15, [false, true, false]], false] call CBA_fnc_addKeybind;  //Ctrl+Tab Key
+
+GVAR(dev_fnc_projectileCamera) = compile preprocessFileLineNumbers QPATHTOF(dev\projectileCamera.sqf);
+
