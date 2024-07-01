@@ -31,6 +31,17 @@
     TRACE_3("assemble_deployWeapon_carryWeaponClassname",_tripod,_player,_carryWeaponClassname);
 
     private _tripodClassname = typeOf _tripod;
+
+    //Metis trick
+    if (_carryWeaponClassname == "CUP_launch_Metis" and count(secondaryWeaponMagazine _player) != 0) then {
+        private _relPos = _tripod getRelPos [1.5,200];
+        private _holder = createVehicle ["groundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
+        _holder setDir random [0, 180, 360];
+        _holder setPosATL _relPos;
+        _holder addItemCargoGlobal [(secondaryWeaponMagazine _player) select 0, 1];
+        _holder setVectorUp (surfaceNormal _relPos);
+    };
+    
     private _weaponConfig = configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON);
     private _assembledClassname = getText (_weaponConfig >> "assembleTo" >> _tripodClassname);
 
@@ -80,6 +91,7 @@
                 [_csw, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
             };
             _csw setDir _tripodDir;
+            _csw setCenterOfMass ((getCenterOfMass _csw) vectorAdd [0,0,-0.3]);
             _csw setPosATL _tripodPos;
             if ((_tripodPos select 2) < 0.5) then {
                 _csw setVectorUp (surfaceNormal _tripodPos);
