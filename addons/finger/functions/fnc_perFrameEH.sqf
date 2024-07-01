@@ -44,7 +44,7 @@ private _iconBaseSize = GVAR(sizeCoef) * BASE_SIZE * 0.10713 * (call EFUNC(commo
 } forEach GVAR(fingersHash);
 
 if (GVAR(fingersHash) isEqualTo createHashMap) then {
-    TRACE_1("Ending PFEH", GVAR(pfeh_id));
+    TRACE_1("Ending PFEH",GVAR(pfeh_id));
     [GVAR(pfeh_id)] call CBA_fnc_removePerFrameHandler;
     GVAR(pfeh_id) = -1;
 };

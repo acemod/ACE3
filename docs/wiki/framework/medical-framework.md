@@ -219,23 +219,23 @@ Custom wound handlers should follow the same spec as the built-in handler:
 
 `ace_medical_damage_fnc_woundsHandlerBase`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Unit that was hit | Object | Required
-1  | Array of damage dealt to each body part | Array | Required
-2  | Type of damage | String | Required
-**R** | Parameters to be passed to the next handler in the list, e.g. `_this` or a modified copy of it. Return `[]` to prevent further handling. | Array | Required
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Unit that was hit | Object | Required |
+| 1  | Array of damage dealt to each body part | Array | Required |
+| 2  | Type of damage | String | Required |
+| **R** | Parameters to be passed to the next handler in the list, e.g. `_this` or a modified copy of it. Return `[]` to prevent further handling. | Array | Required |
 
 The damage elements are sorted in descending order according to how much damage was dealt to each body part _before armor was taken into account_, but the actual damage values are _after armor_.
 
 ### Example
 `[player, [[0.5, "Body", 1], [0.3, "Head", 0.6]], "grenade"] ace_medical_damage_fnc_woundsHandlerBase`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  | `player` | Unit that was hit
-1  | `[[0.5, "Body", 1], [0.3, "Head", 0.6]]` | 0.5 damage to body (was 1 before armor), 0.3 damage to head (was 0.6 before armor)
-2  | `"grenade"` | type grenade (non-selection-specific)
+|    | Arguments | Explanation |
+| ---| --------- | ----------- |
+| 0  | `player` | Unit that was hit |
+| 1  | `[[0.5, "Body", 1], [0.3, "Head", 0.6]]` | 0.5 damage to body (was 1 before armor), 0.3 damage to head (was 0.6 before armor) |
+| 2  | `"grenade"` | type grenade (non-selection-specific) |
 
 ## 5. Tweaking internal variables
 Some of ACE Medical's underlying behavior, primarily related to damage handling and the vitals loop, can be fine-tuned by editing `ace_medical_const_` variables, found in [script_macros_medical.hpp](https://github.com/acemod/ACE3/blob/master/addons/medical_engine/script_macros_medical.hpp).

@@ -43,8 +43,8 @@ private _index = 1;
 private _keepCheckingDigits = true;
 private _validTimestamp = true;
 while {_keepCheckingDigits} do {
-    if (!(_string select [_index, 1] in DIGITS)) exitWith { _validTimestamp = false; };
-    if (!(_string select [_index+1, 1] in DIGITS)) exitWith { _validTimestamp = false; };
+    if !(_string select [_index, 1] in DIGITS) exitWith { _validTimestamp = false; };
+    if !(_string select [_index+1, 1] in DIGITS) exitWith { _validTimestamp = false; };
     switch (_string select [_index+2, 1]) do {
         case (":"): {
             _index = _index + 3;
@@ -54,7 +54,7 @@ while {_keepCheckingDigits} do {
         };
         case (" "): {
             _keepCheckingDigits = false;
-            if (!(_string select [_index+3, 3] in ["am]", "pm]"])) then {_validTimestamp = false; };
+            if !(_string select [_index+3, 3] in ["am]", "pm]"]) then {_validTimestamp = false; };
         };
         default {
             _keepCheckingDigits = false;

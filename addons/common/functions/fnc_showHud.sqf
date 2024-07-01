@@ -41,11 +41,11 @@ if (isArray (missionConfigFile >> "showHUD")) then {
 if (_reason != "") then {
     _reason = toLower _reason;
     if (_mask isEqualTo []) then {
-        TRACE_2("Removing", _reason, _mask);
+        TRACE_2("Removing",_reason,_mask);
         GVAR(showHudHash) deleteAt _reason;
     } else {
         while {(count _mask) < 10} do { _mask pushBack true; };
-        TRACE_2("Setting", _reason, _mask);
+        TRACE_2("Setting",_reason,_mask);
         GVAR(showHudHash) set [_reason, _mask];
     };
 };
@@ -56,14 +56,14 @@ private _resultMask = [];
 for "_index" from 0 to 9 do {
     private _set = true; //Default to true
     {
-        if (!(_x select _index)) exitWith {
+        if !(_x select _index) exitWith {
             _set = false; //Any false will make it false
         };
     } forEach _masks;
     _resultMask pushBack _set;
 };
 
-TRACE_2("showHud", _resultMask, keys GVAR(showHudHash));
+TRACE_2("showHud",_resultMask,keys GVAR(showHudHash));
 showHud _resultMask;
 
 _resultMask

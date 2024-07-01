@@ -18,13 +18,13 @@
  */
 
 params [["_player", objNull, [objNull]], ["_item", QGVAR(white), [""]]];
-TRACE_2("Placing flag", _player, _item);
+TRACE_2("Placing flag",_player,_item);
 
 (GVAR(flagCache) get _item) params ["_vehicleClass"];
 
 private _flag = _vehicleClass createVehicle [0, 0, 0];
 
-TRACE_1("Created flag", _flag);
+TRACE_1("Created flag",_flag);
 
 // Set flag start height
 GVAR(objectHeight) = MAX_HEIGHT;

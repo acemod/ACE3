@@ -20,7 +20,7 @@
 params ["_shooter","_weapon","","_mode","_ammo","","_projectile"];
 
 // Bail on not missile
-if (!(_ammo isKindOf "MissileBase")) exitWith {};
+if !(_ammo isKindOf "MissileBase") exitWith {};
 
 // Bail if guidance is disabled for this ammo
 if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
@@ -71,14 +71,14 @@ if (isNil "_target") then {
     if (!isPlayer _shooter) then {
         // This was an AI shot, lets still guide it on the AI target
         _target = _shooter getVariable [QGVAR(vanilla_target), nil];
-        TRACE_1("Detected AI Shooter!", _target);
+        TRACE_1("Detected AI Shooter!",_target);
     } else {
         private _canUseLock = getNumber (_config >> "canVanillaLock");
         // @TODO: Get vanilla target
         if (_canUseLock > 0 || difficulty < 1) then {
             private _vanillaTarget = cursorTarget;
 
-            TRACE_1("Using Vanilla Locking", _vanillaTarget);
+            TRACE_1("Using Vanilla Locking",_vanillaTarget);
             if (!isNil "_vanillaTarget") then {
                 _target = _vanillaTarget;
             };
@@ -145,7 +145,7 @@ if (_onFiredFunc != "") then {
 //      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
 //      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
 
-[FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
 
 
 /* Clears locking settings

@@ -16,17 +16,23 @@
  */
 
 params ["_vehicle"];
-TRACE_1("params", _vehicle);
+TRACE_1("params",_vehicle);
 
 private _type = typeOf _vehicle;
 private _config = configOf _vehicle;
 
 // If vehicle had space given to it via eden/public, then override config hasCargo setting
-private _hasCargoPublic = _vehicle getVariable [QGVAR(hasCargo), false];
+private _hasCargoPublic = _vehicle getVariable QGVAR(hasCargo);
+private _hasCargoPublicDefined = !isNil "_hasCargoPublic";
+
+if (_hasCargoPublicDefined && {!(_hasCargoPublic isEqualType false)}) then {
+    WARNING_4("%1[%2] - Variable %3 is %4 - Should be bool",_vehicle,_type,QGVAR(hasCargo),_hasCargoPublic);
+};
+
 private _hasCargoConfig = getNumber (_config >> QGVAR(hasCargo)) == 1;
 
 // Nothing to do here if vehicle has no cargo space
-if !(_hasCargoConfig || _hasCargoPublic) exitWith {};
+if !((_hasCargoPublicDefined && {_hasCargoPublic in [true, 1]}) || {!_hasCargoPublicDefined && {_hasCargoConfig}}) exitWith {};
 
 // Check if cargo is in cargo holder types (checked when trying to search for loadable objects)
 private _addCargoType = GVAR(cargoHolderTypes) findIf {_type isKindOf _x} == -1;
@@ -46,14 +52,21 @@ if (isServer) then {
 
     private _cargoClassname = "";
     private _cargoCount = 0;
+    private _loaded = 0;
 
     {
         _cargoClassname = getText (_x >> "type");
         _cargoCount = getNumber (_x >> "amount");
 
-        TRACE_3("adding ACE_Cargo",configName _x,_cargoClassname,_cargoCount);
+        TRACE_3("adding ace_cargo",configName _x,_cargoClassname,_cargoCount);
 
-        ["ace_addCargo", [_cargoClassname, _vehicle, _cargoCount]] call CBA_fnc_localEvent;
+        // Ignore stability check (distance check is also ignored with this, but it's ignored by default if item is a string)
+        _loaded = [_cargoClassname, _vehicle, _cargoCount, true] call FUNC(addCargoItem);
+
+        // Let loop continue until the end, so that it prints everything into the rpt (there might be smaller items that could still fit in cargo)
+        if (_loaded != _cargoCount) then {
+            WARNING_5("%1 (%2) could not fit %3 %4 inside its cargo, only %5 were loaded.",_vehicle,_type,_cargoCount,_cargoClassname,_loaded);
+        };
     } forEach ("true" configClasses (_config >> QUOTE(ADDON) >> "cargo"));
 };
 
@@ -68,13 +81,13 @@ if (_type in GVAR(initializedVehicleClasses)) exitWith {};
 if (_hasCargoConfig) then {
     GVAR(initializedVehicleClasses) pushBack _type;
 
-    TRACE_1("Adding unload cargo action to class", _type);
+    TRACE_1("Adding unload cargo action to class",_type);
 
     [_type, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToClass);
 } else {
     _vehicle setVariable [QGVAR(initVehicle), true];
 
-    TRACE_1("Adding unload cargo action to object", _vehicle);
+    TRACE_1("Adding unload cargo action to object",_vehicle);
 
     [_vehicle, 0, ["ACE_MainActions"], GVAR(vehicleAction)] call EFUNC(interact_menu,addActionToObject);
 };

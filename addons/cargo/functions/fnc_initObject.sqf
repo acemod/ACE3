@@ -44,7 +44,7 @@ if (_item getVariable [QGVAR(initObject),false]) exitWith {};
 if (_canLoadConfig) then {
     GVAR(initializedItemClasses) pushBack _type;
 
-    TRACE_1("Adding load cargo action to class", _type);
+    TRACE_1("Adding load cargo action to class",_type);
 
     {
         [_type, 0, ["ACE_MainActions"], _x] call EFUNC(interact_menu,addActionToClass);
@@ -52,7 +52,7 @@ if (_canLoadConfig) then {
 } else {
     _item setVariable [QGVAR(initObject), true];
 
-    TRACE_1("Adding load cargo action to object", _item);
+    TRACE_1("Adding load cargo action to object",_item);
 
     {
         [_item, 0, ["ACE_MainActions"], _x] call EFUNC(interact_menu,addActionToObject);

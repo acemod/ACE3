@@ -23,7 +23,7 @@
             <Italian>Durata per proiettile</Italian>
             <Chinese>每發所需時間</Chinese>
             <Chinesesimp>每发所需时间</Chinesesimp>
-            <Japanese>弾頭毎の所有時間</Japanese>
+            <Japanese>弾薬毎の所要時間</Japanese>
             <Korean>탄알 당 시간</Korean>
             <Polish>Czas na nabój</Polish>
             <Russian>Время на патрон</Russian>
@@ -39,7 +39,7 @@
             <Italian>Durata per caricatore</Italian>
             <Chinese>每匣所需時間</Chinese>
             <Chinesesimp>每匣所需时间</Chinesesimp>
-            <Japanese>弾倉毎の所有時間</Japanese>
+            <Japanese>弾倉毎の所要時間</Japanese>
             <Korean>탄창 당 시간</Korean>
             <Polish>Czas na magazynek</Polish>
             <Russian>Время на магазин</Russian>
@@ -55,7 +55,7 @@
             <Italian>Durata per caricatore a nastro</Italian>
             <Chinese>每彈鍊所需時間</Chinese>
             <Chinesesimp>每弹炼所需时间</Chinesesimp>
-            <Japanese>ベルトリンク毎の所有時間</Japanese>
+            <Japanese>ベルトリンク毎の所要時間</Japanese>
             <Korean>탄띠 당 시간</Korean>
             <Polish>Czas na taśmę</Polish>
             <Russian>Время на звено ленты</Russian>
@@ -72,7 +72,7 @@
             <Polish>Przepakuj magazynki</Polish>
             <Czech>Přepáskovat zásobníky</Czech>
             <Italian>Riempi Caricatori</Italian>
-            <Portuguese>Reorganizar Carregadores</Portuguese>
+            <Portuguese>Preencher Carregadores</Portuguese>
             <Hungarian>Újratárazás </Hungarian>
             <Russian>Перепаковать магазины</Russian>
             <Japanese>弾倉を詰め替え</Japanese>
@@ -89,7 +89,7 @@
             <Polish>Przepakowywanie magazynków...</Polish>
             <Czech>Přepáskovávám zásobník...</Czech>
             <Italian>Riempendo i caricatori...</Italian>
-            <Portuguese>Reorganizando Carregadores...</Portuguese>
+            <Portuguese>Preenchendo Carregadores...</Portuguese>
             <Hungarian>Újratárazás...</Hungarian>
             <Russian>Перепаковка магазинов...</Russian>
             <Japanese>弾倉を詰め替えしています・・・</Japanese>
@@ -109,7 +109,7 @@
             <Portuguese>%1 carregador(es) cheio(s) e %2 disparo(s) a mais</Portuguese>
             <Hungarian>%1 teljes tár és %2 extra lőszer</Hungarian>
             <Russian>%1 полных магазина(ов) и %2 патрона(ов)</Russian>
-            <Japanese>%1 個の満杯の弾倉とあふれた %2 発の弾薬</Japanese>
+            <Japanese>満装填した弾倉 %1 個と&lt;br/&gt;残 %2 発装填の弾倉</Japanese>
             <Korean>%1개의 꽉찬 탄창과 %2발의 총알이 남았다</Korean>
             <Chinesesimp>%1个满的弹匣与%2发额外子弹</Chinesesimp>
             <Chinese>%1個滿的彈匣與%2發額外子彈</Chinese>
@@ -125,8 +125,8 @@
             <Polish>Przepakowywanie zakończone</Polish>
             <Hungarian>Újratárazás befejezve</Hungarian>
             <Italian>Caricatori Riempiti</Italian>
-            <Portuguese>Reorganização Terminada</Portuguese>
-            <Japanese>詰め替えが完了しました</Japanese>
+            <Portuguese>Preenchimento Completo</Portuguese>
+            <Japanese>詰め替えが完了しました。</Japanese>
             <Korean>탄창 채우기 끝남</Korean>
             <Chinesesimp>整理完成</Chinesesimp>
             <Chinese>重整完成</Chinese>
@@ -142,8 +142,8 @@
             <Polish>Przepakowywanie przerwane</Polish>
             <Hungarian>Újratárazás megszakítva</Hungarian>
             <Italian>Riempimento Interrotto</Italian>
-            <Portuguese>Reorganização Interrompida</Portuguese>
-            <Japanese>詰め替えを中断しました</Japanese>
+            <Portuguese>Preenchimento Interrompido</Portuguese>
+            <Japanese>詰め替えが中断されました。</Japanese>
             <Korean>탄창을 채우는 중 방해받음</Korean>
             <Chinesesimp>弹匣整理被打断</Chinesesimp>
             <Chinese>重整被中斷</Chinese>
@@ -160,37 +160,42 @@
             <Hungarian>%1 teljes és %2 részleges</Hungarian>
             <Italian>%1 Pieno(i) e %2 Parziale(i)</Italian>
             <Portuguese>%1 Total e %2 Parcial </Portuguese>
-            <Japanese>%1 個の満杯と %2 個の弾薬入り弾倉</Japanese>
-            <Korean>%1 꽉 찼고 %2 부분적으로 참</Korean>
+            <Japanese>満装填した弾倉 %1 個と&lt;br/&gt;部分装填の弾倉 %2 個</Japanese>
+            <Korean>꽉 찬 탄창:%1&lt;br/&gt;부분적으로 찬 탄창: %2</Korean>
             <Chinesesimp>%1个满的与%2个部分的</Chinesesimp>
             <Chinese>%1個滿的與%2個部分的</Chinese>
             <Turkish>%1 Dolu ve %2 Partial</Turkish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazines">
             <English>Repack Loaded Magazines</English>
-            <Japanese>装填済み弾倉を詰め替え</Japanese>
+            <Japanese>装填済みの弾倉も詰め替える</Japanese>
             <French>Remplir le chargeur engagé</French>
             <Russian>Перепаковать загруженные магазины</Russian>
             <German>Geladene Magazine umpacken</German>
+            <Italian>Riempi caricatori pieni</Italian>
             <Polish>Przepakuj załadowane magazynki</Polish>
             <Chinesesimp>重新整理已上膛的弹匣</Chinesesimp>
             <Korean>장전된 탄창에 총알 채우는 중</Korean>
             <Spanish>Reorganizar cargadores llenos</Spanish>
+            <Portuguese>Preencher Carregadores Engajados</Portuguese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazinesHint">
             <English>Repacking magazines, weapon unloaded</English>
-            <Japanese>弾倉を詰め替えし、&lt;br /&gt;非装填状態です</Japanese>
+            <Japanese>弾倉の詰め替えのため 武器から弾薬を抜きました</Japanese>
             <French>Remplissage des chargeurs, arme déchargée.</French>
             <Russian>Перепаковка магазинов, оружие разряжено</Russian>
             <German>Magazin umgepackt, Waffe entladen</German>
+            <Italian>Riempendo i caricatori, arma scarica</Italian>
             <Polish>Przepakowywanie magazynków, broń rozładowana</Polish>
             <Chinesesimp>重新整理弹匣，武器未上膛</Chinesesimp>
             <Korean>탄창 다시 채우는 중, 무기에서 탄창 뺌</Korean>
             <Spanish>Reorganizando cargadores, arma descargada</Spanish>
+            <Portuguese>Preenchendo carregadores, arma descarregada</Portuguese>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackAnimation">
             <English>Repack Animation</English>
             <German>Animation für Umpacken</German>
+            <Italian>Animazione per il riempimento</Italian>
             <Polish>Animacja przepakowywania</Polish>
             <Korean>탄약 합치기 애니메이션</Korean>
             <Japanese>詰め替え時のアニメーション</Japanese>
@@ -198,6 +203,7 @@
             <Russian>Анимация перепаковки</Russian>
             <Spanish>Animación de reorganizar</Spanish>
             <French>Animation de remplissage des chargeurs</French>
+            <Portuguese>Animação de Preenchimento</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -161,7 +161,7 @@ GVAR(TweakedAngle) = 0;
             private _placeAngle = 0;
             private _expSetupVehicle = _setupObjectClass createVehicle (_virtualPosASL call EFUNC(common,ASLToPosition));
 
-            TRACE_1("Planting Mass", (getMass _expSetupVehicle));
+            TRACE_1("Planting Mass",(getMass _expSetupVehicle));
             //If the object is too heavy, it can kill a player if it colides
             if ((getMass _expSetupVehicle) > 5) then {_expSetupVehicle setMass 5;};
 
