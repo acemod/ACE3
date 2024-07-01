@@ -8,4 +8,10 @@ PREP_RECOMPILE_END;
 
 GVAR(disabledFactions) = createHashMap;
 
+GVAR(dogtagsData) = createHashMap;
+
+if (isServer) then {
+    GVAR(idCounter) = 0;
+};
+
 ADDON = true;
