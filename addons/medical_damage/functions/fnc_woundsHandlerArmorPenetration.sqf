@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
  * Custom wounds handler for armor penetration. Calculates damage based on round material penetration and unit armor
