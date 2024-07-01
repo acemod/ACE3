@@ -1,24 +1,17 @@
-use arma_rs::Group;
+use arma_rs::{loadout::Loadout, FromArma, Group};
 
-#[cfg(feature = "clipboard")]
 use clipboard::{ClipboardContext, ClipboardProvider};
 
-#[cfg(feature = "clipboard")]
 pub fn group() -> Group {
     Group::new()
         .command("clear", clear)
         .command("append", append)
         .command("complete", complete)
-}
-
-#[cfg(not(feature = "clipboard"))]
-pub fn group() -> Group {
-    Group::new()
+        .command("loadout", loadout)
 }
 
 static mut BUFFER: String = String::new();
 
-#[cfg(feature = "clipboard")]
 pub fn clear() {
     // Safety: this is all single threaded, so no need to lock
     unsafe {
@@ -26,7 +19,6 @@ pub fn clear() {
     }
 }
 
-#[cfg(feature = "clipboard")]
 pub fn append(text: String) {
     // Safety: this is all single threaded, so no need to lock
     unsafe {
@@ -34,7 +26,6 @@ pub fn append(text: String) {
     }
 }
 
-#[cfg(feature = "clipboard")]
 pub fn complete() -> Result<(), String> {
     // Safety: this is all single threaded, so no need to lock
     let mut ctx = ClipboardContext::new().map_err(|e| e.to_string())?;
@@ -44,4 +35,14 @@ pub fn complete() -> Result<(), String> {
         BUFFER = String::new();
     }
     Ok(())
+}
+
+pub fn loadout() -> Option<String> {
+    let mut ctx = ClipboardContext::new().ok()?;
+    let content = ctx.get_contents().ok()?;
+    match Loadout::from_arma(content.clone()) {
+        Ok(_) => return Some(content),
+        Err(e) => eprintln!("Loadout parsing error: {}", e),
+    }
+    None
 }

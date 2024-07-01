@@ -45,8 +45,6 @@ if (GVAR(shiftState)) then {
 } else {
     // Export singular loadout
     private _export = str (GVAR(center) call CBA_fnc_getLoadout);
-
-    private _export = str ([GVAR(center)] call FUNC(getLoadout));
     "ace" callExtension ["clipboard:append", [_export]];
     "ace" callExtension ["clipboard:complete", []];
 
