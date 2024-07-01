@@ -12,12 +12,7 @@
     // Check if the corpse is already close to the target
     // If so, don't teleport
     if !(
-        (_currentPos select 0 <= _xPos + 0.25) &&
-        {_currentPos select 0 >= _xPos - 0.25} &&
-        {_currentPos select 1 <= _yPos + 0.25} &&
-        {_currentPos select 1 >= _yPos - 0.25} &&
-        {_currentPos select 2 <= _zPos + 0.25} &&
-        {_currentPos select 2 >= _zPos - 0.25}
+        _currentPos distance _posATL > 0.25
     ) then {
         // Set direction before position
         _corpse setDir _dir;
