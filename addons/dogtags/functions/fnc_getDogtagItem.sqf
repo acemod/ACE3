@@ -32,10 +32,10 @@ if (GVAR(idCounter) > 999) exitWith {
     ERROR("Ran out of IDs");
 };
 
-private _dogTagData = _target call FUNC(getDogTagData);
+private _dogtagData = _target call FUNC(getDogtagData);
 private _item = format ["ACE_dogtag_%1", GVAR(idCounter)];
 
-GVAR(dogtagsData) set [_item, _dogTagData];
+GVAR(dogtagsData) set [_item, _dogtagData];
 publicVariable QGVAR(dogtagsData); // Broadcast data, so that the arsenal can use it client side
 
 // Dogtags have no mass, so no need to check if it can fit in container, but check if unit has an inventory at all

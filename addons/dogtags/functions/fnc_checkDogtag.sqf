@@ -36,8 +36,8 @@ playSound3D [
 
 // Display dogtag
 private _doubleTags = (_target getVariable [QGVAR(dogtagTaken), objNull]) != _target;
-private _dogTagData = _target call FUNC(getDogTagData);
+private _dogtagData = _target call FUNC(getDogtagData);
 
 [{
     [QGVAR(showDogtag), _this] call CBA_fnc_localEvent;
-}, [_dogTagData, _doubleTags], DOGTAG_SHOW_DELAY] call CBA_fnc_waitAndExecute;
+}, [_dogtagData, _doubleTags], DOGTAG_SHOW_DELAY] call CBA_fnc_waitAndExecute;

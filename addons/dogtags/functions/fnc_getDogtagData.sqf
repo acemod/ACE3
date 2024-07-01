@@ -21,20 +21,20 @@
 params ["_target"];
 
 // Check if the data was already created
-private _dogTagData = _target getVariable QGVAR(dogtagData);
+private _dogtagData = _target getVariable QGVAR(dogtagData);
 
-if (!isNil "_dogTagData") exitWith {_dogTagData};
+if (!isNil "_dogtagData") exitWith {_dogtagData};
 
 // Create dog tag data once for the unit: nickname, code (eg. 135-13-900) and blood type
 private _targetName = [_target, false, true] call EFUNC(common,getName);
 
-private _dogTagData = [
+private _dogtagData = [
     _targetName,
     _targetName call FUNC(ssn),
     _targetName call FUNC(bloodType)
 ];
 
 // Store it
-_target setVariable [QGVAR(dogtagData), _dogTagData, true];
+_target setVariable [QGVAR(dogtagData), _dogtagData, true];
 
-_dogTagData
+_dogtagData

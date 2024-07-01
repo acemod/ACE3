@@ -38,8 +38,8 @@
             if (_isGrave) exitWith {};
             TRACE_2("ace_placedInBodyBag eh",_target,_bodyBag);
 
-            private _dogTagData = _target call FUNC(getDogtagData);
-            _bodyBag setVariable [QGVAR(dogtagData), _dogTagData, true];
+            private _dogtagData = _target call FUNC(getDogtagData);
+            _bodyBag setVariable [QGVAR(dogtagData), _dogtagData, true];
 
             if ((_target getVariable [QGVAR(dogtagTaken), objNull]) == _target) then {
                 _bodyBag setVariable [QGVAR(dogtagTaken), _bodyBag, true];
