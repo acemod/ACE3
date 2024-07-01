@@ -1,4 +1,3 @@
-
 class CfgMovesBasic;
 class CfgMovesMaleSdr: CfgMovesBasic {
     class States {
@@ -10,6 +9,11 @@ class CfgMovesMaleSdr: CfgMovesBasic {
 
         class DeadState;
         class UNCON_ANIM(1): DeadState {
+            // Prevents AI from moving torso and head when unconscious
+            aiming = "aimingNo";
+            aimingBody = "aimingUpNo";
+            head = "headNo";
+
             file = QPATHTO_T(data\ace_unconscious_1.rtm);
         };
 

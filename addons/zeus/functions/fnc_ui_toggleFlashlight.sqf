@@ -53,7 +53,7 @@ if !(isNull _unit) then {
 if (isNull _unit) then {
     (_display displayCtrl 56220) lbDelete 0;
 } else {
-    (_display displayCtrl 56218) lbSetCurSel ([0, 1] select (_unit isFlashlightOn currentWeapon _unit));
+    (_display displayCtrl 56218) lbSetCurSel (parseNumber (_unit isFlashlightOn currentWeapon _unit));
 };
 
 private _fnc_onUnload = {

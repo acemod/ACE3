@@ -11,3 +11,4 @@ PREP(knockOut);
 PREP(addDamage);
 PREP(handleDamageEjectIfDestroyed);
 PREP(blowOffTurret);
+PREP(medicalDamage);

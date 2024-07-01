@@ -23,7 +23,7 @@ if (!alive _unit) exitWith {};
 GVAR(FrameEvent) set [0, !(GVAR(FrameEvent) select 0)];
 
 if (GVAR(FrameEvent) select 0) exitWith {
-    if (vehicle _unit != _unit && {!isTurnedOut _unit}) exitWith {
+    if (!isNull objectParent _unit && {!isTurnedOut _unit}) exitWith {
         (GVAR(FrameEvent) select 1) set [0, false];
     };
 

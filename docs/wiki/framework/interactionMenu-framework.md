@@ -40,21 +40,25 @@ class CfgVehicles {
                 exceptions[] = {};
                 statement = "_player switchMove 'TestDance'";
                 icon = "\z\dance.paa";
+            };
+        };
+    };
+};
 ```
 
-Config Name | Type | Description
----------- | ----------- | -------------------
-`displayName` | String | Text shown to user
-`condition` | String (of code) | Condition to show the action
-`statement` | String (of code) | Statement run when selected
-`icon` | String (file path) | Icon shown (OPTIONAL)
-`exceptions` | Array (of strings) | Exceptions to `canInteractWith` conditions (e.g. `"notOnMap"`) (OPTIONAL)
-`insertChildren` | String (of code) | Code to return sub actions (OPTIONAL)
-`modifierFunction` | String (of code) | Code to modify this action (OPTIONAL)
-`runOnHover` | Number or String | (1=true) OR Condition code - Will run the statement on hover (OPTIONAL)
-`distance` | Number | External Base Actions Only, Max distance player can be from action point
-`position` | String (of code) | External Base Actions Only, Code to return a position in model cords (priority over `selection`)
-`selection` | String | External Base Actions Only, A memory point for `selectionPosition`
+| Config Name | Type | Description |
+| ---------- | ----------- | ------------------- |
+| `displayName` | String | Text shown to user |
+| `condition` | String (of code) | Condition to show the action |
+| `statement` | String (of code) | Statement run when selected |
+| `icon` | String (file path) | Icon shown (OPTIONAL) |
+| `exceptions` | Array (of strings) | Exceptions to `canInteractWith` conditions (e.g. `"notOnMap"`) (OPTIONAL) |
+| `insertChildren` | String (of code) | Code to return sub actions (OPTIONAL) |
+| `modifierFunction` | String (of code) | Code to modify this action (OPTIONAL) |
+| `runOnHover` | Number or String | (1=true) OR Condition code - Will run the statement on hover (OPTIONAL) |
+| `distance` | Number | External Base Actions Only, Max distance player can be from action point |
+| `position` | String (of code) | External Base Actions Only, Code to return a position in model cords (priority over `selection`) |
+| `selection` | String | External Base Actions Only, A memory point for `selectionPosition` |
 
 Actions can be inserted anywhere on the config tree, e.g. hearing's earplugs is a sub action of `ACE_Equipment`:
 
@@ -62,7 +66,10 @@ Actions can be inserted anywhere on the config tree, e.g. hearing's earplugs is 
 class CAManBase: Man {
     class ACE_SelfActions {
         class ACE_Equipment {
-            class ACE_PutInEarplugs {
+            class ACE_PutInEarplugs {};
+        };
+    };
+};
 ```
 
 ## 3. Adding actions via scripts
@@ -233,7 +240,7 @@ This is the ideal way to add self interaction actions, as adding them via `addAc
     params ["_type"]; // string of the object's classname
     if (!(_type isKindOf "Car")) exitWith {};
     if ((getNumber (configFile >> "CfgVehicles" >> _type >> "side")) != 3) exitWith {};
-    
+
     private _action = ["playRadio","Play Radio","",{playMusic "NeverGonnaGiveYouUp"},{true}] call ace_interact_menu_fnc_createAction;
     [_type, 1, ["ACE_SelfActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 }] call CBA_fnc_addEventHandler;

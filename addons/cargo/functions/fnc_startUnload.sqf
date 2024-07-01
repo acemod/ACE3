@@ -15,18 +15,8 @@
  * Public: No
  */
 
-disableSerialization;
-
-private _display = uiNamespace getVariable QGVAR(menuDisplay);
-
-if (isNil "_display") exitWith {};
-
-private _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
-
-if (_loaded isEqualTo []) exitWith {};
-
 // This can be an object or a classname string
-private _item = _loaded param [lbCurSel (_display displayCtrl 100), nil];
+private _item = call FUNC(getSelectedItem);
 
 if (isNil "_item") exitWith {};
 
@@ -58,19 +48,32 @@ if (GVAR(interactionParadrop)) exitWith {
                 [LSTRING(unlevelFlightWarning)] call EFUNC(common,displayTextStructured);
             };
         },
-        LLSTRING(unloadingItem),
+        format [LLSTRING(unloadingItem), [_item, true] call FUNC(getNameItem), getText (configOf GVAR(interactionVehicle) >> "displayName")],
         {
-            (_this select 0) params ["", "_target"];
+            (_this select 0) params ["", "_vehicle"];
 
-            if ((acos ((vectorUp _target) select 2)) > 30) exitWith {false}; // check flight level
-            if (((getPos _target) select 2) < 25) exitWith {false}; // check height
-            if ((speed _target) < -5) exitWith {false}; // check reverse
+            if ((acos ((vectorUp _vehicle) select 2)) > 30) exitWith {false}; // check flight level
+            if (((getPos _vehicle) select 2) < 25) exitWith {false}; // check height
+            if ((speed _vehicle) < -5) exitWith {false}; // check reverse
 
             true
         },
         ["isNotSwimming", "isNotInside"],
         false
     ]] call CBA_fnc_execNextFrame;
+};
+
+// If in zeus
+if (!isNull curatorCamera) exitWith {
+    // Do not check distance to unit, but do check for valid position
+    if !([_item, GVAR(interactionVehicle), objNull, true] call FUNC(canUnloadItem)) exitWith {
+        [[LSTRING(unloadingFailed), [_item, true] call FUNC(getNameItem)], 3] call EFUNC(common,displayTextStructured);
+    };
+
+    // Close the cargo menu
+    closeDialog 1;
+
+    ["ace_unloadCargo", [_item, GVAR(interactionVehicle)]] call CBA_fnc_localEvent;
 };
 
 // Start progress bar - normal ground unload
@@ -96,7 +99,7 @@ if ([_item, GVAR(interactionVehicle), _unit] call FUNC(canUnloadItem)) then {
         {
             TRACE_1("unload fail",_this);
         },
-        LLSTRING(unloadingItem),
+        format [LLSTRING(unloadingItem), [_item, true] call FUNC(getNameItem), getText (configOf GVAR(interactionVehicle) >> "displayName")],
         {
             (_this select 0) params ["_item", "_vehicle", "_unit"];
 

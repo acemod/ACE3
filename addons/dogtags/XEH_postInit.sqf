@@ -1,13 +1,15 @@
 #include "script_component.hpp"
 
-[QGVAR(showDogtag), DFUNC(showDogtag)] call CBA_fnc_addEventHandler;
-[QGVAR(sendDogtagData), DFUNC(sendDogtagData)] call CBA_fnc_addEventHandler;
-[QGVAR(getDogtagItem), DFUNC(getDogtagItem)] call CBA_fnc_addEventHandler;
-[QGVAR(addDogtagItem), DFUNC(addDogtagItem)] call CBA_fnc_addEventHandler;
+[QGVAR(showDogtag), LINKFUNC(showDogtag)] call CBA_fnc_addEventHandler;
+[QGVAR(sendDogtagData), LINKFUNC(sendDogtagData)] call CBA_fnc_addEventHandler;
+[QGVAR(getDogtagItem), LINKFUNC(getDogtagItem)] call CBA_fnc_addEventHandler;
+[QGVAR(addDogtagItem), LINKFUNC(addDogtagItem)] call CBA_fnc_addEventHandler;
 
-// Add actions and event handlers only if ace_medical is loaded
+// Add actions and event handlers only if ace_medical is enabled
 // - Adding actions via config would create a dependency
-if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+["CBA_settingsInitialized", {
+    if !(GETEGVAR(medical,enabled,false)) exitWith {};
+
     if (hasInterface) then {
         private _checkTagAction = [
             "ACE_CheckDogtag",
@@ -44,10 +46,10 @@ if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
             };
         }] call CBA_fnc_addEventHandler;
     };
-};
+}] call CBA_fnc_addEventHandler;
 
 // If the arsenal is loaded, show the custom names for dog tags when in the arsenal
-if (["ACE_Arsenal"] call EFUNC(common,isModLoaded)) then {
+if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
     [QEGVAR(arsenal,rightPanelFilled), {
         params ["_display", "_leftPanelIDC", "_rightPanelIDC"];
 

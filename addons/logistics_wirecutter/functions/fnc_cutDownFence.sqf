@@ -22,7 +22,10 @@ TRACE_2("Fence cutting started",_unit,_fence);
 if (_unit != ACE_player) exitWith {};
 
 // Get cut time based on if unit is a engineer
-private _cutTime = if (_unit call EFUNC(common,isEngineer)) then {CUT_TIME_ENGINEER} else {CUT_TIME_DEFAULT};
+private _cutTime = [
+    CUT_TIME_DEFAULT,
+    CUT_TIME_ENGINEER
+] select (_unit call EFUNC(common,isEngineer));
 
 if !(_unit call EFUNC(common,isSwimming)) then {
     [_unit, "AinvPknlMstpSnonWnonDr_medic5", 0] call EFUNC(common,doAnimation);

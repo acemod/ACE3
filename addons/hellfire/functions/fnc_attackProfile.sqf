@@ -93,5 +93,5 @@ if (_attackStage >= 3 && { _seekerType isEqualTo "ARH" }) then {
     };
 };
 
-// TRACE_1("Adjusted target position", _returnTargetPos);
+// TRACE_1("Adjusted target position",_returnTargetPos);
 _returnTargetPos;

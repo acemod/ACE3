@@ -43,14 +43,14 @@
         if (_object isKindOf "Static") exitWith {false};
 
         // Taggable vehicle, do not exit
-        if (((_object getVariable [QGVAR(canTag), getNumber (configOf _object >> QGVAR(canTag))]) in [1, true]) 
+        if (((_object getVariable [QGVAR(canTag), getNumber (configOf _object >> QGVAR(canTag))]) in [1, true])
         && {getText (configOf _object >> "selectionClan") in selectionNames _object}) exitWith {
             false
         };
 
         // If the class is not categorized correctly search the cache
-        private _modelName = (getModelInfo _object) select 0;
-        private _isStatic = GVAR(cacheStaticModels) getVariable [_modelName, false];
+        private _modelName = toLowerANSI ((getModelInfo _object) select 0);
+        private _isStatic = _modelName in (uiNamespace getVariable QGVAR(cacheStaticModels));
         TRACE_2("Object:",_modelName,_isStatic);
         // If the class in not on the cache, exit
         (!_isStatic)

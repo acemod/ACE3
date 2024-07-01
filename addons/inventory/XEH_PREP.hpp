@@ -1,10 +1,6 @@
-
 PREP(addCustomFilter);
 PREP(currentItemListBox);
-PREP(forceItemListUpdate);
-PREP(inventoryDisplayLoad);
-PREP(onLBSelChanged);
-
+PREP(displayNameWeight);
 PREP(filterWeapons);
 PREP(filterMagazines);
 PREP(filterItems);
@@ -14,3 +10,6 @@ PREP(filterVests);
 PREP(filterBackpacks);
 PREP(filterGrenades);
 PREP(filterMedical);
+PREP(forceItemListUpdate);
+PREP(inventoryDisplayLoad);
+PREP(onLBSelChanged);
