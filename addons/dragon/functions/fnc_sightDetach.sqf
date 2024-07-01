@@ -31,9 +31,9 @@ if (_event isEqualTo true) then { // this is actually needed as 3rd arg may not 
     TRACE_2("removed sight",_target weaponsTurret [0],_target animationPhase "optic_hide");
 } else {
     if ((binocular _unit) == "") then {
-        _unit addWeapon QGVAR(sight);
+        _unit addWeapon "ACE_M47_Daysight";
     } else {
-        [_unit, QGVAR(sight)] call EFUNC(common,addToInventory);
+        [_unit, "ACE_M47_Daysight"] call EFUNC(common,addToInventory);
     };
     [QGVAR(detachSight), [_target, _unit, true]] call CBA_fnc_globalEvent;
 };
