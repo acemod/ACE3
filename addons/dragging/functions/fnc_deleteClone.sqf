@@ -12,7 +12,7 @@
  * Original unit <OBJECT>
  *
  * Example:
- * [player, cursorObject, false] call ace_dragging_fnc_dropClone;
+ * [player, cursorObject, false] call ace_dragging_fnc_deleteClone;
  *
  * Public: No
  */
@@ -26,21 +26,24 @@ params ["_unit", "_clone", "_inBuilding"];
     ["_simulationEnabled", true]
 ];
 
+// API
+[QGVAR(cloneDeleted), [_clone, _target]] call CBA_fnc_localEvent;
+
 // Check if unit was deleted
 if (!isNull _target) then {
-    private _pos = getPosATL _clone;
+    private _posATL = getPosATL _clone;
 
     if (_inBuilding) then {
-        _pos = _pos vectorAdd [0, 0, 0.05];
+        _posATL = _posATL vectorAdd [0, 0, 0.05];
     };
 
-    // Make sure position is not underground
-    if (_pos select 2 < 0.05) then {
-        _pos set [2, 0.05];
+    // Make sure position isn't underground
+    if (_posATL select 2 < 0.05) then {
+        _posATL set [2, 0.05];
     };
 
-    // Move the unit globally (important, as it doesn't work otherwise)
-    [QGVAR(moveCorpse), [_target, getDir _unit + 180, _pos]] call CBA_fnc_globalEvent;
+    // Move the unit globally (important, as it desyncs the corpse position otherwise)
+    [QGVAR(moveCorpse), [_target, getDir _unit + 180, _posATL]] call CBA_fnc_globalEvent;
 
     // Unhide unit
     if (!_isObjectHidden) then {

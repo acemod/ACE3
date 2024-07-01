@@ -35,7 +35,7 @@ private _isClone = _target isKindOf QGVAR(clone);
 
 // Drop cloned dead units
 if (_isClone) then {
-    _target = [_unit, _target, _inBuilding] call FUNC(dropClone);
+    _target = [_unit, _target, _inBuilding] call FUNC(deleteClone);
 };
 
 // Play release animation

@@ -167,6 +167,13 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_headless_groupTransferPre` | [_group, _HC (OBJECT), _previousOwner, _idHC] | Target | Listen | Called just before a group is transferred from any machine to a HC. Called where group currently is local and on the HC, where group is going to be local.
 | `ace_headless_groupTransferPost` | [_group, _HC (OBJECT), _previousOwner, _idHC, _transferredSuccessfully] | Target | Listen | Called just after a group is transferred from a machine to a HC. Called where group was local and on the HC, where group is now local. `_transferredSuccessfully` is passed so mods can actually check if the locality was properly transferred, as ownership transfer is not guaranteed.
 
+### 2.18 Interaction (`ace_dragging`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_dragging_cloneCreated` | [_clone, _corpse] | Local | Listen | Called when a clone used for dragging/carrying corpses is created
+| `ace_dragging_cloneDeleted` | [_clone, _corpse] | Local | Listen | Called when a clone used for dragging/carrying corpses is deleted
+
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
 

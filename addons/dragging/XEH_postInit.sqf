@@ -1,9 +1,72 @@
 // by PabstMirror, commy2
 #include "script_component.hpp"
 
+[QGVAR(moveCorpse), {
+    params ["_corpse", "_dir", "_posATL"];
+    _posATL params ["_xPos", "_yPos", "_zPos"];
+
+    if (isNull _corpse) exitWith {};
+
+    private _currentPos = getPosATL _corpse;
+
+    // Check if the corpse is already close to the target
+    // If so, don't teleport
+    if !(
+        (_currentPos select 0 <= _xPos + 0.25) &&
+        {_currentPos select 0 >= _xPos - 0.25} &&
+        {_currentPos select 1 <= _yPos + 0.25} &&
+        {_currentPos select 1 >= _yPos - 0.25} &&
+        {_currentPos select 2 <= _zPos + 0.25} &&
+        {_currentPos select 2 >= _zPos - 0.25}
+    ) then {
+        // Set direction before position
+        _corpse setDir _dir;
+
+        // Bring corpse back to clone's position
+        _corpse setPosATL _posATL;
+    };
+
+    // Sync the corpse with its position
+    [{
+        _this awake true;
+
+        [{
+            _this awake false;
+        }, _this] call CBA_fnc_execNextFrame;
+    }, _corpse] call CBA_fnc_execNextFrame;
+
+    // Allow the corpse to be synced for JIP players
+    if (isServer) exitWith {
+        GVAR(movedCorpses) pushBackUnique _corpse;
+    };
+}] call CBA_fnc_addEventHandler;
+
 if (isServer) then {
     // Release object on disconnection. Function is identical to killed
     addMissionEventHandler ["HandleDisconnect", LINKFUNC(handleKilled)];
+
+    GVAR(movedCorpses) = [];
+
+    ["CAManBase", "Deleted", {
+        GVAR(movedCorpses) deleteAt (GVAR(movedCorpses) find (_this select 0));
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+
+    [QGVAR(disableSyncMovedCorpseOnJIP), {
+        params ["_corpse"];
+
+        GVAR(movedCorpses) deleteAt (GVAR(movedCorpses) find _corpse);
+    }] call CBA_fnc_addEventHandler;
+
+    // Sync position of dead corpse for JIP unit (prevents weird invisible hitboxes on corpses)
+    [QGVAR(requestSyncMovedCorpsesJIP), {
+        params ["_clientOwner"];
+
+        {
+            [QGVAR(moveCorpse), [_x, getDir _x, getPosATL _x], _clientOwner] call CBA_fnc_ownerEvent;
+        } forEach GVAR(movedCorpses);
+    }] call CBA_fnc_addEventHandler;
+} else {
+    [QGVAR(requestSyncMovedCorpsesJIP), clientOwner] call CBA_fnc_serverEvent;
 };
 
 if (!hasInterface) exitWith {};
@@ -59,49 +122,16 @@ if (isNil QGVAR(maxWeightCarryRun)) then {
 // Handle waking up dragged unit and falling unconscious while dragging
 ["ace_unconscious", LINKFUNC(handleUnconscious)] call CBA_fnc_addEventHandler;
 
-// Handle local effect commands for clones
-[QGVAR(cloneCreated), {
-    params ["_unit", "_clone"];
-
-    _clone setFace face _unit;
-    _clone setMimic "unconscious";
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(moveCorpse), {
-    params ["_corpse", "_dir", "_pos"];
-    _pos params ["_xPos", "_yPos", "_zPos"];
-
-    private _currentPos = getPosATL _corpse;
-
-    // Check if the corpse is already close to the target
-    // If so, don't teleport
-    if !(
-        (_currentPos select 0 <= _xPos + 0.25) &&
-        {_currentPos select 0 >= _xPos - 0.25} &&
-        {_currentPos select 1 <= _yPos + 0.25} &&
-        {_currentPos select 1 >= _yPos - 0.25} &&
-        {_currentPos select 2 <= _zPos + 0.25} &&
-        {_currentPos select 2 >= _zPos - 0.25}
-    ) then {
-        // Set direction before position
-        _corpse setDir _dir;
-
-        // Bring corpse back to clone's position
-        _corpse setPosATL _pos;
-    };
-
-    // Sync the corpse with its position
-    [{
-        _this awake true;
-
-        [{
-            _this awake false;
-        }, _this] call CBA_fnc_execNextFrame;
-    }, _corpse] call CBA_fnc_execNextFrame;
-}] call CBA_fnc_addEventHandler;
-
 // Display event handler
 ["MouseZChanged", {(_this select 1) call FUNC(handleScrollWheel)}] call CBA_fnc_addDisplayHandler;
+
+// Handle local effect commands for clones
+[QGVAR(setCloneFace), {
+    params ["_clone", "_corpse"];
+
+    _clone setFace face _corpse;
+    _clone setMimic "unconscious";
+}] call CBA_fnc_addEventHandler;
 
 // Handle surrendering and handcuffing
 ["ace_captiveStatusChanged", {

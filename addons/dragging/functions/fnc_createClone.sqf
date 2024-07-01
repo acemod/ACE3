@@ -11,12 +11,15 @@
  * Cloned unit <OBJECT>
  *
  * Example:
- * [player] call ace_dragging_fnc_createClone;
+ * [player, cursorObject] call ace_dragging_fnc_createClone;
  *
  * Public: No
  */
 
 params ["_unit", "_target"];
+
+// Don't sync corpse when a player joins in progress until the corpse is in its proper position
+[QGVAR(disableSyncMovedCorpseOnJIP), _target] call CBA_fnc_serverEvent;
 
 private _posATL = getPosATL _target;
 
@@ -54,11 +57,11 @@ if (_isInRemainsCollector) then {
 };
 
 // Make sure clone has the same wound textures as the corpse
-_clone setDamage ((damage _target) min 0.99); // don't kill the clone
+_clone setDamage ((damage _target) min 0.99); // Don't kill the clone
 
 {
     _clone setHitPointDamage [_x, (_target getHitPointDamage _x) min 0.99];
-} forEach ["HitHead", "HitBody", "HitHands", "HitLegs"]; // relevant hitpoints
+} forEach ["HitHead", "HitBody", "HitHands", "HitLegs"]; // Relevant hitpoints
 
 // Disable all damage
 _clone allowDamage false;
@@ -67,7 +70,10 @@ _clone setVariable [QGVAR(original), [_target, _isInRemainsCollector, _isObjectH
 [_clone, _target call CBA_fnc_getLoadout] call CBA_fnc_setLoadout;
 
 // Sets the facial expression
-[[QGVAR(cloneCreated), [_target, _clone]] call CBA_fnc_globalEventJIP, _clone] call CBA_fnc_removeGlobalEventJIP;
+[[QGVAR(setCloneFace), [_clone, _target]] call CBA_fnc_globalEventJIP, _clone] call CBA_fnc_removeGlobalEventJIP;
+
+// API
+[QGVAR(cloneCreated), [_clone, _target]] call CBA_fnc_localEvent;
 
 [{
     params ["_clone", "_target"];
