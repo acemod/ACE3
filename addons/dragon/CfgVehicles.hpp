@@ -17,7 +17,7 @@ class CfgVehicles {
         side = 1;
         faction = "BLU_F";
         crew = "B_soldier_f";
-        class Newturret{};		
+        class Newturret {};
         model = QPATHTOF(models\ace_m47_static.p3d);
         editorPreview = QPATHTOF(data\ace_dragon_staticAssembled.jpg);
         picture = "\A3\Static_F_Gamma\data\UI\gear_StaticTurret_AT_CA.paa";
@@ -47,7 +47,7 @@ class CfgVehicles {
                 optics = 1;
                 turretInfoType = "RscWeaponEmpty";
                 gunnerOpticsModel = QPATHTOF(models\wog_optics_m47.p3d);
-                gunnerOpticsEffect[] = {"OpticsBlur2","OpticsCHAbera2"};				
+                gunnerOpticsEffect[] = {"OpticsBlur2","OpticsCHAbera2"};
                 minElev = -30;
                 maxElev = 20;
                 weapons[] = { QGVAR(dummyStatic) };
@@ -124,7 +124,7 @@ class CfgVehicles {
                 class GVAR(pickUp) {
                     displayName = ECSTRING(csw,Pickup_displayName);
                     condition = QUOTE(call FUNC(canPickupTripod));
-                    distance = 0.5;					
+                    distance = 0.5;
                     statement = QUOTE(call EFUNC(csw,assemble_pickupTripod));
                 };
                 class GVAR(attachSight) {
@@ -156,7 +156,7 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 weapons[] = { QGVAR(superStatic) };
-                class HitPoints	{};			
+                class HitPoints {};
             };
         };
     };

@@ -19,7 +19,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(dragonDescription);
         scope = 2;
         shotPos = "muzzlePos2";
-		shotEnd = "muzzleEnd2";
+        shotEnd = "muzzleEnd2";
         class ACE_CSW {
             type = "mount";
             deployTime = 2;

@@ -35,17 +35,17 @@ class CfgAmmo {
         maxControlRange = 1500;
 
         trackOversteer = 0.95;
-		trackLead = 0.9;
+        trackLead = 0.9;
         maneuvrability = 10;
         manualControl = 0;
         deflecting = 0;
 
         soundHit[] = {"A3\Sounds_F\arsenal\weapons\Launchers\NLAW\NLAW_Hit", 1.77828, 1, 1500};
-		soundSetExplosion[] = {"RocketsMedium_Exp_SoundSet", "RocketsMedium_Tail_SoundSet", "Explosion_Debris_SoundSet"};
-		soundFly[] = {QPATHTOF(sounds\rocket_fly.wss), 1, 1, 600};	
-		CraterEffects = "ATRocketCrater";
-		explosionEffects = "ATRocketExplosion";
-		effectsMissileInit = "RocketBackEffectsNLAW";
+        soundSetExplosion[] = {"RocketsMedium_Exp_SoundSet", "RocketsMedium_Tail_SoundSet", "Explosion_Debris_SoundSet"};
+        soundFly[] = {QPATHTOF(sounds\rocket_fly.wss), 1, 1, 600};
+        CraterEffects = "ATRocketCrater";
+        explosionEffects = "ATRocketExplosion";
+        effectsMissileInit = "RocketBackEffectsNLAW";
 
         EGVAR(vehicle_damage,incendiary) = 1.0;
 
