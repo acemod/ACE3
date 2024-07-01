@@ -35,7 +35,7 @@ if (_emptyPos isEqualTo []) then {
 };
 
 if (count _emptyPos != 3) exitwith {
-    WARNING_4("Could not find unload pos %1-ASL: %2 isTouchingGround: %3 Speed: %4",_vehicle, getPosASL _vehicle, isTouchingGround _vehicle, speed _vehicle);
+    WARNING_4("Could not find unload pos %1-ASL: %2 isTouchingGround: %3 Speed: %4",_vehicle,getPosASL _vehicle,isTouchingGround _vehicle,speed _vehicle);
     if ((!isNull _unloader) && {[_unloader] call FUNC(isPlayer)}) then {
         //display text saying there are no safe places to exit the vehicle
         [QGVAR(displayTextStructured), [localize LSTRING(NoRoomToUnload)], [_unloader]] call CBA_fnc_targetEvent;

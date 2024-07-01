@@ -59,8 +59,8 @@ private _fnc_condition = {
         };
 
         //Cool the weapon down
-        private _barrelMass = ([_weapon] call FUNC(getWeaponData)) select 7;
-        _temperature = [_temperature, _barrelMass, 20] call FUNC(calculateCooling);
+        private _weaponData = [_weapon] call FUNC(getWeaponData);
+        _temperature = [_temperature, _weaponData select 7, 20, _weaponData select 6] call FUNC(calculateCooling);
         [_player, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
 
 /* // to be added when licence compatible audio can be found or recorded

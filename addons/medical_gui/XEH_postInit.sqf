@@ -21,7 +21,7 @@ GVAR(selfInteractionActions) = [];
 
 [QEGVAR(interact_menu,newControllableObject), {
     params ["_type"]; // string of the object's classname
-    if (!(_type isKindOf "CAManBase")) exitWith {};
+    if !(_type isKindOf "CAManBase") exitWith {};
     {
         _x set [0, _type];
         _x call EFUNC(interact_menu,addActionToClass);
@@ -102,7 +102,7 @@ GVAR(selfInteractionActions) = [];
     params ["_unit", "_allDamages", ""];
     if !(GVAR(peekMedicalOnHit) && {_unit == ACE_player}) exitWith {};
 
-    private _bodypart = toLower (_allDamages select 0 select 1);
+    private _bodypart = toLowerANSI (_allDamages select 0 select 1);
     private _bodypartIndex = ALL_BODY_PARTS find _bodypart;
 
     [ACE_player, _bodypartIndex] call FUNC(displayPatientInformation);

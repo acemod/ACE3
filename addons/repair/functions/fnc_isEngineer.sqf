@@ -22,7 +22,7 @@ private _class = _unit getVariable ["ACE_IsEngineer", _unit getUnitTrait "engine
 
 // This if statement is here for copmatability with the common variant of isEngineer, which requires a bool.
 // We cannot move this function to common because we require the GVAR(engineerSetting_Repair), which only makes sense to include in the repair module.
-if (_class isEqualType false) then {_class = [0, 1] select _class};
+if (_class isEqualType false) then {_class = parseNumber _class};
 
 TRACE_3("isEngineer",_unit,_engineerN,_class);
 if (_class >= _engineerN) exitWith {true};

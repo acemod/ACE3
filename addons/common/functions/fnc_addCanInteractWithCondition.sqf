@@ -18,7 +18,7 @@
 
 params ["_conditionName", "_conditionFunc"];
 
-_conditionName = toLower _conditionName;
+_conditionName = toLowerANSI _conditionName;
 
 private _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
 _conditions params ["_conditionNames", "_conditionFuncs"];

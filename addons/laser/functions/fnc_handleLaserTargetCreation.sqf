@@ -24,13 +24,13 @@ TRACE_1("params",_this);
 
     private _owners = allUnits select {(lasertarget _x) == _targetObject};
     if (count _owners == 1) exitWith {
-        TRACE_2("Laser target owner [allUnits]", _targetObject, _owners select 0);
+        TRACE_2("Laser target owner [allUnits]",_targetObject,_owners select 0);
         [_targetObject, _owners select 0] call FUNC(addLaserTarget);
     };
 
     _owners = vehicles select {(lasertarget _x) == _targetObject};
     if (count _owners == 1) exitWith {
-        TRACE_2("Laser target owner [vehicles]", _targetObject, _owners select 0);
+        TRACE_2("Laser target owner [vehicles]",_targetObject,_owners select 0);
         [_targetObject, _owners select 0] call FUNC(addLaserTarget);
     };
 
@@ -58,7 +58,7 @@ TRACE_1("params",_this);
         };
     };
     if (!_foundSource) then {
-        WARNING_1("Laser target doesn't have owner", _targetObject);
+        WARNING_1("Laser target doesn't have owner",_targetObject);
     };
 
 }, _this] call CBA_fnc_execNextFrame;

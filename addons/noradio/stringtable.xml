@@ -5,9 +5,10 @@
             <English>No Radio</English>
             <Chinesesimp>去无线电</Chinesesimp>
             <German>Kein Funkgerät</German>
+            <Italian>Nessuna Radio</Italian>
             <Korean>음소거</Korean>
             <Polish>Brak Radia</Polish>
-            <Japanese>無線無し</Japanese>
+            <Japanese>無線無効化</Japanese>
             <Russian>Нет рации</Russian>
             <Spanish>No Radio</Spanish>
             <French>Pas de radio</French>
@@ -34,7 +35,7 @@
             <Italian>Muta l'avatar del giocatore controllato.</Italian>
             <Chinese>靜音玩家所控制的角色</Chinese>
             <Chinesesimp>静音玩家所控制的角色。</Chinesesimp>
-            <Japanese>プレイヤーに操作されているこのキャラをミュートします。</Japanese>
+            <Japanese>プレイヤーに操作されているキャラをミュートします。</Japanese>
             <Polish>Wycisza awatar kontrolowany przez gracza</Polish>
             <Russian>Заглушить контролируемого игрока</Russian>
             <Portuguese>Silencia o avatar do Jogador controlado</Portuguese>

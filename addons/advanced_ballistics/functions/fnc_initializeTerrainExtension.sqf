@@ -22,7 +22,7 @@ private _initStartTime = diag_tickTime;
 private _mapSize = worldSize;
 
 if (("ace_advanced_ballistics" callExtension format["init:%1:%2", worldName, _mapSize]) == "Terrain already initialized") exitWith {
-    INFO_1("Terrain already initialized [world: %1]", worldName);
+    INFO_1("Terrain already initialized [world: %1]",worldName);
     #ifdef DEBUG_MODE_FULL
         systemChat "AdvancedBallistics: Terrain already initialized";
     #endif
@@ -33,14 +33,14 @@ private _gridCells = _mapGrids * _mapGrids;
 
 GVAR(currentGrid) = 0;
 
-INFO_2("Starting Terrain Extension [cells: %1] [world: %2]", _gridCells, worldName);
+INFO_2("Starting Terrain Extension [cells: %1] [world: %2]",_gridCells,worldName);
 
 [{
     params ["_args","_idPFH"];
     _args params ["_mapGrids", "_gridCells", "_initStartTime"];
 
     if (GVAR(currentGrid) >= _gridCells) exitWith {
-        INFO_2("Finished terrain initialization in %1 seconds [world: %2]", (diag_tickTime - _initStartTime) toFixed 2, worldName);
+        INFO_2("Finished terrain initialization in %1 seconds [world: %2]",(diag_tickTime - _initStartTime) toFixed 2,worldName);
         #ifdef DEBUG_MODE_FULL
             systemChat format["AdvancedBallistics: Finished terrain initialization in %1 seconds", (diag_tickTime - _initStartTime) toFixed 2];
         #endif
@@ -53,7 +53,7 @@ INFO_2("Starting Terrain Extension [cells: %1] [world: %2]", _gridCells, worldNa
         private _gridCenter = [_x + 25, _y + 25];
         private _gridHeight = round(getTerrainHeightASL _gridCenter);
         private _gridNumObjects = count (_gridCenter nearObjects ["Building", 50]);
-        private _gridSurfaceIsWater = if (surfaceIsWater _gridCenter) then {1} else {0};
+        private _gridSurfaceIsWater = parseNumber (surfaceIsWater _gridCenter);
         "ace_advanced_ballistics" callExtension format["set:%1:%2:%3", _gridHeight, _gridNumObjects, _gridSurfaceIsWater];
         GVAR(currentGrid) = GVAR(currentGrid) + 1;
         if (GVAR(currentGrid) >= _gridCells) exitWith {};

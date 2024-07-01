@@ -4,7 +4,7 @@ class CfgVehicles {
         class ACE_SelfActions {
             class GVAR(deploy) {
                 displayName = CSTRING(PlaceTripod_displayName);
-                condition = QUOTE(call FUNC(assemble_canDeployTripod));
+                condition = QUOTE(call FUNC(canDeployTripod));
                 statement = QUOTE(call FUNC(assemble_deployTripod));
                 exceptions[] = {};
             };
@@ -36,7 +36,7 @@ class CfgVehicles {
                 condition = "true";
                 class GVAR(pickUp) {
                     displayName = CSTRING(Pickup_displayName);
-                    condition = QUOTE(call FUNC(assemble_canPickupTripod));
+                    condition = QUOTE(call FUNC(canPickupTripod));
                     statement = QUOTE(call FUNC(assemble_pickupTripod));
                 };
                 class GVAR(mountWeapon) {
@@ -131,10 +131,11 @@ class CfgVehicles {
     class StaticWeapon: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
+                // Workaround for static weapons' Get In memory point being at the front of the gun
                 class GVAR(getIn) {
                     displayName = CSTRING(GetIn_displayName);
                     condition = QUOTE(call FUNC(canGetIn));
-                    statement = QUOTE(call FUNC(getIn));
+                    statement = QUOTE(_player moveInTurret [ARR_2(_target,[0])]);
                 };
             };
         };
@@ -143,7 +144,6 @@ class CfgVehicles {
     class StaticMGWeapon: StaticWeapon {};
 
     class HMG_01_base_F: StaticMGWeapon {
-        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(HMG_Static);
@@ -203,7 +203,6 @@ class CfgVehicles {
 
     class GMG_TriPod;
     class GMG_01_base_F: GMG_TriPod {
-        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(GMG_20mm); // Weapon Proxy (Shorter Reload Time) [CfgWeapons]
@@ -237,7 +236,6 @@ class CfgVehicles {
 
 
     class AT_01_base_F: StaticMGWeapon {
-        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(Titan_AT_Static);
@@ -251,7 +249,6 @@ class CfgVehicles {
     };
 
     class AA_01_base_F: StaticMGWeapon {
-        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(Titan_AA_Static); // Weapon Proxy (Shorter Reload Time) [CfgWeapons]
@@ -267,7 +264,6 @@ class CfgVehicles {
 
     class StaticMortar: StaticWeapon {};
     class Mortar_01_base_F: StaticMortar {
-        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             magazineLocation = "";

@@ -37,8 +37,7 @@ private _selection = _logic getVariable ["Selection", 0];
 // Objects synced to the module
 {
     _objects pushBack _x;
-    nil
-} count (synchronizedObjects _logic);
+} forEach (synchronizedObjects _logic);
 
 // Prepare with actions
 [_objects, _controllers, _images, _names, _duration, _setName, _selection] call FUNC(createSlideshow);

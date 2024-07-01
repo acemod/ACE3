@@ -191,6 +191,13 @@ class CfgVehicles {
         function = QFUNC(moduleLoadIntoCargo);
         icon = "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa";
     };
+    class GVAR(moduleUnloadFromCargo): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Utility);
+        displayName = CSTRING(ModuleUnloadFromCargo_DisplayName);
+        function = QFUNC(moduleUnloadFromCargo);
+        icon = "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa";
+    };
     class GVAR(moduleCargoParadrop): GVAR(moduleBase) {
         curatorCanAttach = 1;
         category = QGVAR(AI);
@@ -248,6 +255,12 @@ class CfgVehicles {
         category = QGVAR(Utility);
         displayName = CSTRING(ModuleSimulation_DisplayName);
         function = QFUNC(moduleSimulation);
+    };
+    class GVAR(moduleSpectator): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Utility);
+        displayName = ECSTRING(spectator,Module_DisplayName);
+        curatorInfoType = QGVAR(RscSpectator);
     };
     class GVAR(moduleSuicideBomber): GVAR(moduleBase) {
         curatorCanAttach = 1;
@@ -335,6 +348,13 @@ class CfgVehicles {
         displayName = CSTRING(ModuleBurn_DisplayName);
         function = QFUNC(moduleBurn);
         icon = QPATHTOF(ui\Icon_Module_Zeus_Burn_ca.paa);
+    };
+    class GVAR(moduleMedicalMenu): GVAR(moduleBase) {
+        curatorCanAttach = 1;
+        category = QGVAR(Medical);
+        displayName = CSTRING(ModuleMedicalMenu_DisplayName);
+        function = QFUNC(moduleMedicalMenu);
+        icon = QPATHTOF(UI\Icon_Module_Zeus_Medic_ca.paa);
     };
 
     class Man;

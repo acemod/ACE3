@@ -32,13 +32,15 @@ if (damage _unit > 0) then {
 if (_isRespawn) then {
     TRACE_1("reseting all vars on respawn",_isRespawn); // note: state is handled by ace_medical_statemachine_fnc_resetStateDefault
 
-    // - Blood and heart ----------------------------------------------------------
+    // - Vitals ------------------------------------------------------------------
     _unit setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
     _unit setVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE, true];
     _unit setVariable [VAR_BLOOD_PRESS, [80, 120], true];
     _unit setVariable [VAR_PERIPH_RES, DEFAULT_PERIPH_RES, true];
     _unit setVariable [VAR_CRDC_ARRST, false, true];
     _unit setVariable [VAR_HEMORRHAGE, 0, true];
+    _unit setVariable [VAR_SPO2, DEFAULT_SPO2, true];
+    _unit setVariable [VAR_OXYGEN_DEMAND, 0, true];
 
     // - Pain ---------------------------------------------------------------------
     _unit setVariable [VAR_PAIN, 0, true];

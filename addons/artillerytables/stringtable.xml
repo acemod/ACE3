@@ -6,9 +6,9 @@
             <German>Artillerieschusstafel</German>
             <Chinese>火炮射程表</Chinese>
             <Chinesesimp>火炮射表</Chinesesimp>
-            <Italian>Tavola balistica per artigliria </Italian>
+            <Italian>Tavola balistica per artiglieria </Italian>
             <Czech>Dělostřelecké tabulky střelby</Czech>
-            <Japanese>火砲射表</Japanese>
+            <Japanese>火砲用 射表</Japanese>
             <Polish>Tabela Strzelnicza</Polish>
             <French>Table de tir d'artillerie</French>
             <Portuguese>Tabela de Artilharia</Portuguese>
@@ -24,7 +24,7 @@
             <Chinesesimp>通用火炮射表</Chinesesimp>
             <Italian>Tavola balistica universale per artiglieria</Italian>
             <Czech>Univerzální dělostřelecká tabulka střelby</Czech>
-            <Japanese>汎用の火砲用射程表</Japanese>
+            <Japanese>砲兵火砲用の汎用射撃表</Japanese>
             <Polish>Uniwersalna Tabela Strzelnicza</Polish>
             <French>Table de tir universelle pour l'artillerie.</French>
             <Portuguese>Tabela de Artilharia Universal</Portuguese>
@@ -61,7 +61,7 @@
             <Hungarian>Játékos általi lövésekhez, legyen-e számított légellenállás és szélhatás</Hungarian>
             <Russian>Для выстрелов игрока. Моделирует сопротивление воздуха и эффект ветра</Russian>
             <Italian>Per Proiettili dei Giocatori, simula la Resistenza dell'Aria e gli Effetti del Vento</Italian>
-            <Japanese>プレイヤが射撃すると、空気抵抗モデルと風による影響を与えます。</Japanese>
+            <Japanese>プレイヤーが射撃すると、空気抵抗モデルと風による影響を与えます。</Japanese>
             <Korean>플레이어가 사격 시 공기저항과 바람에 영향을 받습니다</Korean>
             <Chinesesimp>设定由玩家射击的炮弹是否受到空气阻力与风力的影响</Chinesesimp>
             <Chinese>設定由玩家射擊的迫擊砲，將會受到空氣阻力與風力的影響</Chinese>
@@ -72,9 +72,9 @@
             <German>Artilleriecomputer ausgeschaltet</German>
             <Chinese>停用火炮電腦</Chinese>
             <Chinesesimp>停用弹道计算机</Chinesesimp>
-            <Italian>Computer artiglieria disattivato</Italian>
+            <Italian>Computer balistico disattivato</Italian>
             <Czech>Zakázat používání dělostřeleckého počítače</Czech>
-            <Japanese>砲撃コンピュータ無効化</Japanese>
+            <Japanese>砲撃コンピュータの無効化</Japanese>
             <Polish>Wyłączony Komputer Artyleryjski</Polish>
             <French>Désactiver l'ordinateur de tir</French>
             <Portuguese>Computador de Artilharia Desabilitado</Portuguese>
@@ -88,7 +88,7 @@
             <German>Deaktiviert die Vanilla-Artilleriecomputer</German>
             <Chinese>停用原本的火炮控制電腦</Chinese>
             <Chinesesimp>禁用游戏自带的弹道计算机</Chinesesimp>
-            <Italian>Disattiva il computer artiglieria vanilla</Italian>
+            <Italian>Disattiva il computer balistico vanilla</Italian>
             <Czech>Zakázat používání dělostřeleckého počítače základní hry</Czech>
             <Japanese>ゲームの砲撃コンピュータを無効化します。</Japanese>
             <Polish>Wyłącza komputer artyleryjski wprowadzony w vanili</Polish>
