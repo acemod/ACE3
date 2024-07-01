@@ -66,7 +66,7 @@
             <Turkish>Al</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtagSuccess">
-            <English>Dogtag taken from %1...</English>
+            <English>Dog Tag taken from %1...</English>
             <Polish>Zabrałeś nieśmiertelnik %1...</Polish>
             <Russian>Жетон снят с %1...</Russian>
             <Czech>Sebral jsem známku od %1...</Czech>
@@ -82,7 +82,7 @@
             <Turkish>Künye %1 kişisinden alındı</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_dogtagAlreadyTaken">
-            <English>Somebody else has already taken the dogtag...</English>
+            <English>Somebody else has already taken the Dog Tag...</English>
             <Polish>Ktoś już zabrał ten nieśmiertelnik...</Polish>
             <Russian>Кто-то уже забрал жетон...</Russian>
             <Czech>Někdo jiný už vzal identifikační známku...</Czech>
@@ -98,7 +98,7 @@
             <Turkish>Başka biri zaten künyeyi almış</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_IGUI_Description">
-            <English>Onscreen display for checking dogtags</English>
+            <English>Onscreen display for checking Dog Tags</English>
             <German>Anzeige um Erkennungsmarke zu überprüfen</German>
             <Chinese>在畫面中顯示檢查兵籍牌</Chinese>
             <Chinesesimp>在画面中显示检查兵籍牌</Chinesesimp>
