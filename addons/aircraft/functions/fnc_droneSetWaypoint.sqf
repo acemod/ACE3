@@ -8,6 +8,7 @@
  * 1: Group <GROUP>
  * 2: Pos 2D <ARRAY>
  * 3: Type <STRING>
+ * 4: Target to follow <OBJECT> (default: objNull)
  *
  * Return Value:
  * None
@@ -47,7 +48,7 @@ if (_type == "FOLLOW" && {["CAManBase", "LandVehicle", "Ship"] findIf {_target i
         _args params ["_vehicle", "_group", "_waypoint", "_target"];
 
         if ( // Abort PFH if a new waypoint is created via UAV Terminal or ACE Interaction
-            _waypoint select 1 != currentWaypoint _group || 
+            _waypoint select 1 != currentWaypoint _group ||
             {!alive _vehicle} || {isNull _target}
         ) exitWith {
             deleteWaypoint _waypoint;
