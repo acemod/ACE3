@@ -36,7 +36,6 @@ class CfgMovesMaleSdr: CfgMovesBasic {
                 "AmovPpneMstpSrasWlnrDnon_turnL", 0.02,
                 "AmovPpneMstpSrasWlnrDnon_turnR", 0.02,
                 "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon", 0.02,
-                "AmovPpneMstpSrasWlnrDnon_AmovPercMstpSrasWlnrDnon", 0.02,
                 "AmovPpneMrunSrasWlnrDf", 0.02,
                 "AmovPpneMrunSrasWlnrDfl", 0.02,
                 "AmovPpneMrunSrasWlnrDl", 0.02,
@@ -194,7 +193,10 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         class AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon: TransAnimBase {
             blockMobileSwitching = 0;
             ConnectTo[] = {};
-            InterpolateTo[] += {"AmovPknlMstpSrasWlnrDnon", 0.02};
+            InterpolateTo[] += {
+                "AmovPknlMstpSrasWlnrDnon", 0.02,
+                "AmovPercMstpSrasWlnrDnon", 0.02
+            };
         };
         class LauncherProne_Reload_Start: AmovPpneMrunSrasWlnrDl {
             actions = "ACE_LauncherProneActions";
