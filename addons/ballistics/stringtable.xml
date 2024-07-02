@@ -1505,7 +1505,7 @@
             <Portuguese>Carregador de 10 cartuchos 9.3 mm traçantes IR-DIM</Portuguese>
             <Hungarian>9,3 mm 10-lövedékes infravörös nyomkövető tár</Hungarian>
             <Japanese>9.3mm 10Rnd IR-DIM トレーサー マガジン</Japanese>
-            <Korean>10발들이 9.3mm IR-DIM 예광탄 탄창</Korean>
+            <Korean>10발 들이 9.3mm IR-DIM 예광탄 탄창</Korean>
             <Chinese>9.3毫米 10發 低視度紅外線曳光彈 彈匣</Chinese>
             <Chinesesimp>9.3 mm 10发 弹匣（红外曳光）</Chinesesimp>
             <Turkish>9.3 mm 10Rnd Tracer IR-DIM Mag</Turkish>
@@ -1608,7 +1608,7 @@
             <Portuguese>Cinto de munição traçante 9.3 mm IR-DIM com 150 cartuchos</Portuguese>
             <Hungarian>9,3 mm 150-lövedékes infravörös nyomkövető heveder</Hungarian>
             <Japanese>9.3mm 150Rnd IR-DIM トレーサー ベルト</Japanese>
-            <Korean>150발들이 9.3mm IR-DIM 예광탄 벨트</Korean>
+            <Korean>150발 들이 9.3mm IR-DIM 예광탄 벨트</Korean>
             <Chinese>9.3毫米 150發 低視度紅外線曳光彈 彈鏈</Chinese>
             <Chinesesimp>9.3 mm 150发 弹链（红外曳光）</Chinesesimp>
             <Turkish>9.3 mm 150Rnd Tracer IR-DIM Belt</Turkish>
@@ -1659,7 +1659,7 @@
             <Portuguese>Cinto de munição 9.3 mm AP com 150 cartuchos</Portuguese>
             <Hungarian>9,3 mm 150-lövedékes páncéltörő heveder</Hungarian>
             <Japanese>9.3mm 150Rnd 徹甲弾 ベルト</Japanese>
-            <Korean>150발들이 9.3mm 철갑탄 벨트</Korean>
+            <Korean>150발 들이 9.3mm 철갑탄 벨트</Korean>
             <Chinese>9.3毫米 150發 穿甲彈 彈鏈</Chinese>
             <Chinesesimp>9.3 mm 150发 弹链（穿甲）</Chinesesimp>
             <Turkish>9.3 mm 150Rnd AP Belt</Turkish>
@@ -1710,7 +1710,7 @@
             <Portuguese>Carregador de 16 cartuchos 9x19 mm</Portuguese>
             <Hungarian>9x19 mm 16-lövedékes tár</Hungarian>
             <Japanese>9x19 mm 16Rnd マガジン</Japanese>
-            <Korean>17발들이 9x19mm 탄창</Korean>
+            <Korean>16발 들이 9x19mm 탄창</Korean>
             <Chinese>9x19毫米 16發 彈匣</Chinese>
             <Chinesesimp>9x19 mm 16发 弹匣</Chinesesimp>
             <Turkish>9x19 mm 16Rnd Mag</Turkish>
@@ -2016,7 +2016,7 @@
             <Portuguese>Carregador 5.56 mm com 30 cartuchos (Mk318)</Portuguese>
             <Hungarian>5,56 mm 30-lövedékes tár (Mk318)</Hungarian>
             <Japanese>5.56mm 30Rnd マガジン (Mk318)</Japanese>
-            <Korean>30발들이 5.56mm 탄창 (Mk.318)</Korean>
+            <Korean>30발 들이 5.56mm 탄창 (Mk.318)</Korean>
             <Chinese>5.56毫米 30發 彈匣 (Mk318 特戰專用彈)</Chinese>
             <Chinesesimp>5.56 mm 30发 弹匣（Mk318）</Chinesesimp>
             <Turkish>5.56 mm 30Rnd Mag (Mk318)</Turkish>
@@ -2322,7 +2322,7 @@
             <Portuguese>Carregador 7.62 mm com 10 cartuchos (Mk319 Mod 0)</Portuguese>
             <Hungarian>7,62 mm 10-lövedékes tár (Mk319 Mod 0)</Hungarian>
             <Japanese>7.62mm 10Rnd マガジン (Mk319 Mod 0)</Japanese>
-            <Korean>10발들이 7.62mm 탄창 (Mk.319 Mod 0)</Korean>
+            <Korean>10발 들이 7.62mm 탄창 (Mk.319 Mod 0)</Korean>
             <Chinese>7.62毫米 10發 彈匣 (Mk319 Mod 0 特戰專用彈)</Chinese>
             <Chinesesimp>7.62 mm 10发 弹匣（Mk319 Mod 0）</Chinesesimp>
             <Turkish>7.62 mm 10Rnd Mag (Mk319 Mod 0)</Turkish>
@@ -3344,7 +3344,7 @@
             <Portuguese>Carregador 12.7x99 mm (AMAX) com 5 cartuchos </Portuguese>
             <Hungarian>12,7x99 mm 5-lövedékes tár (AMAX)</Hungarian>
             <Japanese>12.7x99mm 5Rnd マガジン (AMAX)</Japanese>
-            <Korean>5발들이 12.7x99mm 탄창 (AMAX)</Korean>
+            <Korean>5발 들이 12.7x99mm 탄창 (AMAX)</Korean>
             <Chinese>12.7x99毫米 5發 彈匣 (AMAX 比賽專用彈)</Chinese>
             <Chinesesimp>12.7x99 mm 5发 弹匣（AMAX）</Chinesesimp>
             <Turkish>12.7x99 mm 5Rnd Şarjör (AMAX)</Turkish>
@@ -3378,7 +3378,7 @@
             <Portuguese>Carregador 12.7x99 mm (AMAX) com 10 cartuchos </Portuguese>
             <Hungarian>12,7x99 mm 10-lövedékes tár (AMAX)</Hungarian>
             <Japanese>12.7x99mm 10Rnd マガジン (AMAX)</Japanese>
-            <Korean>10발들이 12.7x99mm 탄창 (AMAX)</Korean>
+            <Korean>10발 들이 12.7x99mm 탄창 (AMAX)</Korean>
             <Chinese>12.7x99毫米 10發 彈匣 (AMAX 比賽專用彈)</Chinese>
             <Chinesesimp>12.7x99 mm 10发 弹匣（AMAX）</Chinesesimp>
             <Turkish>12.7x99 mm 10Rnd Şarjör (AMAX)</Turkish>
