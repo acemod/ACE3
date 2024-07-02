@@ -26,3 +26,9 @@
     "a3\sounds_f\characters\ingame\AinvPpneMstpSlayWpstDnon_medic.wss",\
     "a3\sounds_f\characters\ingame\AinvPpneMstpSlayWrflDnon_medic.wss"\
 ]
+
+#define IDC_ITEMLIST_GROUND 632
+#define IDC_ITEMLIST_SOLDIER 640
+#define IDC_ITEMLIST_UNIFORM 633
+#define IDC_ITEMLIST_VEST 638
+#define IDC_ITEMLIST_BACKPACK 619
