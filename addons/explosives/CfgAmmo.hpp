@@ -168,7 +168,6 @@ class CfgAmmo {
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0, 0, 0.15};
     };
-    class MineBase;
     class UnderwaterMine_Range_Ammo: MineBase {
         GVAR(size) = 1;
     };
