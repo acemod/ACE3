@@ -23,4 +23,4 @@ if (isNull _target) exitWith {false};
 // check if disabled for faction
 if ((faction _target) in GVAR(disabledFactions)) exitWith {false};
 
-!(_target call EFUNC(common,isAwake))
+!(_target call EFUNC(common,isAwake)) && {_player canAdd ["ACE_dogtag_1", 1/*, true*/]} // Todo: Uncomment in 2.18
