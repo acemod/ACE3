@@ -40,7 +40,7 @@ _dummyControl ctrlAddEventHandler ["Draw", {
             private _item = _itemList lbData _i;
 
             if (_item find "ACE_dogtag_" == 0) then {
-                _dogtagData = GVAR(dogtagsData) getOrDefault [_item, []];
+                private _dogtagData = GVAR(dogtagsData) getOrDefault [_item, []];
 
                 // If data doesn't exist, put name as "unknown"
                 _itemList lbSetText [_i, [LLSTRING(itemName), ": ", _dogtagData param [0, LELSTRING(common,unknown)]] joinString ""];
