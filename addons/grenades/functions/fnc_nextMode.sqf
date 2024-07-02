@@ -7,21 +7,16 @@
  * None
  *
  * Return Value:
- * Handeled <BOOL>
+ * Handled <BOOL>
  *
  * Example:
- * [] call ace_grenades_fnc_nextMode
+ * call ace_grenades_fnc_nextMode
  *
  * Public: No
  */
 
-private _mode = GVAR(currentThrowMode);
-
-if (_mode == 4) then {
-    _mode = 0;
-} else {
-    _mode = _mode + 1;
-};
+// _mode is 0-4, don't overflow
+private _mode = (GVAR(currentThrowMode) + 1) % 5;
 
 private _currentThrowable = currentThrowable ACE_player;
 
