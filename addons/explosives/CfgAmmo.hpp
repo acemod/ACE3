@@ -55,6 +55,7 @@ class CfgAmmo {
     // "The SLAM has an anti-tamper feature that is only active in the bottom- and side-attack modes."
     class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase {
         indirectHitRange = 20;
+        explosionAngle = 60;
         GVAR(explodeOnDefuseChance) = 1;
         GVAR(magazine) = "SLAMDirectionalMine_Wire_Mag";
         GVAR(size) = 0;
@@ -70,7 +71,7 @@ class CfgAmmo {
     class ACE_SLAMDirectionalMine_Magnetic_Ammo: SLAMDirectionalMine_Wire_Ammo {
         mineTrigger = "ACE_MagneticTrigger";
         GVAR(explodeOnDefuseChance) = 1;
-        explosionAngle = 360;
+        explosionAngle = 60;
         indirectHitRange = 1;
         mineInconspicuousness = 25;
         icon = "iconExplosiveGP";
