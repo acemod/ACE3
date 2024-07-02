@@ -43,6 +43,7 @@ PREP(deviceKeyFindValidIndex);
 PREP(deviceKeyRegisterNew);
 PREP(deprecateComponent);
 PREP(disableAI);
+PREP(disableAiUAV);
 PREP(disableUserInput);
 PREP(displayIcon);
 PREP(displayText);

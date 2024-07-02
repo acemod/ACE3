@@ -96,6 +96,18 @@ if (_object isEqualType objNull) then {
 
         [QEGVAR(zeus,addObjects), [[_object], _objectCurators]] call CBA_fnc_serverEvent;
     };
+
+    // Reenable UAV crew
+    private _UAVCrew = _object getVariable [QGVAR(isUAV), []];
+
+    if (_UAVCrew isNotEqualTo []) then {
+        // Reenable AI
+        {
+            [_x, false] call EFUNC(common,disableAiUAV);
+        } forEach _UAVCrew;
+
+        _object setVariable [QGVAR(isUAV), nil, true];
+    };
 } else {
     _object = createVehicle [_item, _emptyPosAGL, [], 0, "NONE"];
 

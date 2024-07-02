@@ -73,10 +73,10 @@ private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
 
 if (_UAVCrew isNotEqualTo []) then {
     {
-        _target deleteVehicleCrew _x;
+        [_x, true] call EFUNC(common,disableAiUAV);
     } forEach _UAVCrew;
 
-    _target setVariable [QGVAR(isUAV), true, true];
+    _target setVariable [QGVAR(isUAV), _UAVCrew, true];
 };
 
 // Check everything
