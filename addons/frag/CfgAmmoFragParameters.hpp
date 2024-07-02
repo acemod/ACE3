@@ -386,8 +386,14 @@ class UXO_deploy_base_f: SubmunitionBase {
 };
 
 class ClaymoreDirectionalMine_Remote_Ammo: DirectionalBombBase {
-    ACE_FRAG_RM_EH;
-    GVAR(skip) = 1;
+    GVAR(skip) = 0;
+    GVAR(force) = 0;
+    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small)};
+    GVAR(fragCount) = 700;
+    GVAR(metal) = 700;
+    GVAR(charge) = 680;
+    GVAR(gurney_c) = 2700;
+    GVAR(gurney_k) = "3/5";
 };
 
 class SatchelCharge_Remote_Ammo: PipeBombBase {
