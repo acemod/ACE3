@@ -13,7 +13,6 @@ class CfgAmmo {
     class MineCore: TimeBombCore;
     class MineBase: MineCore;
     class APERSMine_Range_Ammo: MineBase;
-    class ATMine_Range_Ammo: MineBase;
 
     class DirectionalBombCore: TimeBombCore;
     class DirectionalBombBase: DirectionalBombCore;
@@ -33,6 +32,10 @@ class CfgAmmo {
         GVAR(defuseObjectPosition)[] = {0, 0, 0.038};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
+
+        // Reduce vanilla damage, so that it doesn't destroy buildings
+        hit = 20;
+        indirectHit = 20;
     };
     // class ClaymoreDirectionalMine_Remote_Ammo_Scripted: ClaymoreDirectionalMine_Remote_Ammo {};
 
@@ -65,9 +68,16 @@ class CfgAmmo {
         GVAR(size) = 0;
     };
 
+    // More sensitive pressure-fuze for the Vanilla AT Mine.
+    class MineBase;
+    class ATMine_Range_Ammo: MineBase {
+        mineTrigger = "ACE_TankTriggerLight";
+    };
+
     // "The SLAM has an anti-tamper feature that is only active in the bottom- and side-attack modes."
     class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase {
         indirectHitRange = 20;
+        explosionAngle = 60;
         GVAR(explodeOnDefuseChance) = 1;
         GVAR(magazine) = "SLAMDirectionalMine_Wire_Mag";
         GVAR(size) = 0;
@@ -83,7 +93,7 @@ class CfgAmmo {
     class ACE_SLAMDirectionalMine_Magnetic_Ammo: SLAMDirectionalMine_Wire_Ammo {
         mineTrigger = "ACE_MagneticTrigger";
         GVAR(explodeOnDefuseChance) = 1;
-        explosionAngle = 360;
+        explosionAngle = 60;
         indirectHitRange = 1;
         mineInconspicuousness = 25;
         icon = "iconExplosiveGP";
@@ -181,7 +191,6 @@ class CfgAmmo {
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0, 0, 0.15};
     };
-    class MineBase;
     class UnderwaterMine_Range_Ammo: MineBase {
         GVAR(size) = 1;
     };
