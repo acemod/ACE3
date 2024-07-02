@@ -39,11 +39,12 @@ if (_object getVariable [QGVAR(isAmmoDetonating), false]) exitWith {};
 
 _object setVariable [QGVAR(isAmmoDetonating), true, true];
 
-_object setVariable [QGVAR(cookoffMagazines), _object call FUNC(getVehicleAmmo)];
+// Make sure that virtual magazines have been reset
+_object setVariable [QGVAR(virtualMagazines), nil];
 
 // Save the vehicle's ammo, so it won't be removed during cook-off
 if (!GVAR(removeAmmoDuringCookoff)) then {
-    _object setVariable [QGVAR(cookoffMagazines), _object call FUNC(getVehicleAmmo)];
+    _object setVariable [QGVAR(cookoffMagazines), [_object, true] call FUNC(getVehicleAmmo)];
 };
 
 [LINKFUNC(detonateAmmunitionServerLoop), [_object, _destroyWhenFinished, _source, _instigator], _initialDelay] call CBA_fnc_waitAndExecute;

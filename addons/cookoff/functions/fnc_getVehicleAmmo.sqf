@@ -5,6 +5,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
+ * 1: If the virtual magazine count should be set <BOOL> (default: false)
  *
  * Return Value:
  * 0: Ammo array <ARRAY>
@@ -20,7 +21,7 @@
  * Public: No
  */
 
-params ["_object"];
+params ["_object", ["_setVirtualAmmoCount", false]];
 TRACE_1("getVehicleAmmo",_object);
 
 private _ammoToDetonate = [];
@@ -80,7 +81,9 @@ if (isNil "_virtualAmmo") then {
         _totalAmmo = _totalAmmo + 10;
     };
 
-    _object setVariable [QGVAR(virtualMagazines), _virtualAmmo];
+    if (_setVirtualAmmoCount) then {
+        _object setVariable [QGVAR(virtualMagazines), _virtualAmmo];
+    };
 } else {
     {
         _totalAmmo = _totalAmmo + (_x select 1);

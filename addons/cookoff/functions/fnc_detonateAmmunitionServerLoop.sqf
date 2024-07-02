@@ -27,7 +27,7 @@ private _objectAmmo = _object getVariable QGVAR(cookoffMagazines);
 private _removeAmmoDuringCookoff = isNil "_objectAmmo";
 
 if (_removeAmmoDuringCookoff) then {
-    _objectAmmo = _object call FUNC(getVehicleAmmo);
+    _objectAmmo = [_object, true] call FUNC(getVehicleAmmo);
 };
 
 _objectAmmo params ["_magazines", "_totalAmmo"];
