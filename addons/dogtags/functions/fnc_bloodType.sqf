@@ -10,7 +10,7 @@
  * A random blood type <STRING>
  *
  * Example:
- * _bloodType = ["name"] call ace_dogtags_fnc_bloodType
+ * ["name"] call ace_dogtags_fnc_bloodType
  *
  * Public: No
  */
