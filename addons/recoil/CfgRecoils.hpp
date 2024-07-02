@@ -333,16 +333,17 @@ class CfgRecoils {
 
     class recoil_rpg: recoil_default {
         muzzleOuter[] = {
-            QUOTE(2*MUZZLERIGHT_POS),
-            QUOTE(3*MUZZLECLIMB_POS),
-            QUOTE(1*MUZZLERIGHT_MAG),
+            QUOTE(0.0*MUZZLERIGHT_POS),
+            QUOTE(0.1*MUZZLECLIMB_POS),
+            QUOTE(0.3*MUZZLERIGHT_MAG),
             QUOTE(0.5*MUZZLECLIMB_MAG)
         };
         kickBack[] = {
-            QUOTE(0.08*KICKBACK),
-            QUOTE(0.1*KICKBACK)
+            QUOTE(0.0*KICKBACK),
+            QUOTE(0.08*KICKBACK)
         };
-        temporary = QUOTE(0.1*MUZZLETEMP);
+        permanent = QUOTE(1.0*MUZZLEPERM);
+        temporary = QUOTE(0.05*MUZZLETEMP);
     };
 
     class recoil_nlaw: recoil_default {
