@@ -3,6 +3,9 @@
 class CBA_Extended_EventHandlers;
 
 class CfgVehicles {
+    class C_man_1;
+    class GVAR(clone): C_man_1 {};
+
     // Static weapons
     class LandVehicle;
     class StaticWeapon: LandVehicle {
