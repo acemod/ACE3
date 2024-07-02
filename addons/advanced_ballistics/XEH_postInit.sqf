@@ -1,10 +1,10 @@
 #include "script_component.hpp"
 
-GVAR(currentbulletID) = -1;
+#include "initKeybinds.inc.sqf"
 
 GVAR(Protractor) = false;
 GVAR(ProtractorStart) = CBA_missionTime;
-GVAR(allBullets) = [];
+GVAR(allBullets) = createHashMap;
 GVAR(currentGrid) = 0;
 
 if (!hasInterface) exitWith {};
