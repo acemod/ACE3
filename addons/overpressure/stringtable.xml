@@ -51,6 +51,7 @@
             <German>Rückstrahl-Entfernung Multiplikator</German>
             <Italian>Coefficiente distanza di svampata</Italian>
             <Japanese>後方噴射の距離係数</Japanese>
+            <Korean>후폭풍 거리 계수</Korean>
         </Key>
         <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_toolTip">
             <English>Scales the backblast effect</English>
@@ -58,6 +59,7 @@
             <German>Skaliert den Rückstrahl-Effekt</German>
             <Italian>Scala l'effetto delle svampate dei lanciarazzi</Italian>
             <Japanese>無反動砲による後方噴射の影響範囲の大きさ</Japanese>
+            <Korean>후폭풍 효과의 스케일을 조정합니다</Korean>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastRange">
             <English>Backblast range</English>
