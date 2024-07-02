@@ -33,13 +33,9 @@ private _newPartDamage = _currentPartDamage + _addedDamage;
 if (_addedDamage >= 15) exitWith {
     TRACE_2("immediate destruction - high damage",_addedDamage,_currentPartDamage);
 
-    [_vehicle, _source, _instigator] call FUNC(knockOut);
-    [_vehicle, 1, true, _source, _instigator] call FUNC(handleDetonation);
-
     // Kill everyone inside for very insane damage
-    {
-        [QGVAR(medicalDamage), [_x, _source, _instigator, true], _x] call CBA_fnc_targetEvent;
-    } forEach (crew _vehicle);
+    [_vehicle, 1, true, _source, _instigator, true] call FUNC(handleDetonation);
+    [_vehicle, _source, _instigator] call FUNC(knockOut);
 
     _vehicle setDamage 1;
 
@@ -117,12 +113,11 @@ if (_isCar) then {
     _ammoEffectiveness = (_ammoEffectiveness * 1.5) min 1;
 };
 
-private _currentVehicleAmmo = _vehicle call EFUNC(cookoff,getVehicleAmmo);
+(_vehicle call EFUNC(cookoff,getVehicleAmmo)) params ["_magazines", "_totalAmmo"];
 private _chanceOfDetonation = 0;
 private _explosiveAmmoCount = 0;
-private _nonExplosiveAmmoCount = 0;
 
-if ((_currentVehicleAmmo select 0) isNotEqualTo []) then {
+if (_magazines isNotEqualTo []) then {
     private _magConfig = configFile >> "CfgMagazines";
     private _ammoConfig = configFile >> "CfgAmmo";
     private _countOfExplodableAmmo = 0;
@@ -140,10 +135,8 @@ if ((_currentVehicleAmmo select 0) isNotEqualTo []) then {
 
         if (_explosive > 0.5 || {_hit > 50}) then {
             _explosiveAmmoCount = _explosiveAmmoCount + 1;
-        } else {
-            _nonExplosiveAmmoCount = _nonExplosiveAmmoCount + 1;
         };
-    } forEach (_currentVehicleAmmo select 0);
+    } forEach _magazines;
 
     if (_countOfExplodableAmmo != 0) then {
         _chanceOfDetonation = _chanceOfDetonation / _countOfExplodableAmmo;
@@ -160,7 +153,9 @@ switch (_hitArea) do {
 
         TRACE_4("hit engine",_chanceToDetonate,_incendiary,_chanceOfDetonation,_currentFuel);
 
-        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount > 0, _source, _instigator] call FUNC(handleDetonation)) exitWith {
+        [_vehicle, _chanceToDetonate, _totalAmmo > 0, _source, _instigator] call FUNC(handleDetonation);
+
+        if (_explosiveAmmoCount > 0) exitWith {
             [_vehicle, _source, _instigator] call FUNC(knockOut);
         };
 
@@ -191,7 +186,9 @@ switch (_hitArea) do {
 
         TRACE_4("hit hull",_chanceToDetonate,_incendiary,_chanceOfDetonation,_currentFuel);
 
-        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount > 0, _source, _instigator] call FUNC(handleDetonation)) exitWith {
+        [_vehicle, _chanceToDetonate, _totalAmmo > 0, _source, _instigator] call FUNC(handleDetonation);
+
+        if (_explosiveAmmoCount > 0) exitWith {
             [_vehicle, _hitPoint, _hitIndex, 0.89 * _penChance, _source, _instigator] call FUNC(setDamage);
 
             [_vehicle, _source, _instigator] call FUNC(knockOut);
@@ -275,7 +272,9 @@ switch (_hitArea) do {
 
         TRACE_3("hit turret",_chanceToDetonate,_incendiary,_chanceOfDetonation);
 
-        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount > 0, _source, _instigator] call FUNC(handleDetonation)) exitWith {
+        [_vehicle, _chanceToDetonate, _totalAmmo > 0, _source, _instigator] call FUNC(handleDetonation);
+
+        if (_explosiveAmmoCount > 0) exitWith {
             [_vehicle, _source, _instigator] call FUNC(knockOut);
         };
 
@@ -341,18 +340,18 @@ switch (_hitArea) do {
         TRACE_2("hit slat",_warheadType,_warheadTypeStr);
 
         // Incredibly small chance of AP destroying SLAT
-        if (_warheadType == WARHEAD_TYPE_HEAT || {_warheadType == WARHEAD_TYPE_TANDEM} || {_warheadType == WARHEAD_TYPE_HE} || {0.01 > random 1}) then {
+        if (_warheadType in [WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM, WARHEAD_TYPE_HE] || {0.01 > random 1}) then {
             private _currentDamage = _vehicle getHitIndex _hitIndex;
 
             TRACE_3("damaged slat",_warheadType,_warheadTypeStr,_currentDamage);
 
-            if (_warheadType == WARHEAD_TYPE_HEAT || {_warheadType == WARHEAD_TYPE_TANDEM}) then {
+            if (_warheadType in [WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM]) then {
                 [_vehicle, _hitPoint, _hitIndex, 1, _source, _instigator] call FUNC(setDamage);
             } else {
                 [_vehicle, _hitPoint, _hitIndex, _currentDamage + (0.5 max random 1), _source, _instigator] call FUNC(setDamage);
             };
 
-            if (_currentDamage < 1 && _warheadType isEqualTo WARHEAD_TYPE_HEAT) then {
+            if (_currentDamage < 1 && {_warheadType == WARHEAD_TYPE_HEAT}) then {
                 _return = false;
             };
         };
@@ -360,7 +359,7 @@ switch (_hitArea) do {
     case "era": {
         TRACE_2("hit era",_warheadType,_warheadTypeStr);
 
-        if (_warheadType == WARHEAD_TYPE_HEAT || {_warheadType == WARHEAD_TYPE_TANDEM} || {0.05 > random 1}) then {
+        if (_warheadType in [WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM] || {0.05 > random 1}) then {
             private _currentDamage = _vehicle getHitIndex _hitIndex;
 
             TRACE_3("damaged era",_warheadType,_warheadTypeStr,_currentDamage);
@@ -368,7 +367,7 @@ switch (_hitArea) do {
             [_vehicle, _hitPoint, _hitIndex, 1, _source, _instigator] call FUNC(setDamage);
 
             // Don't process anymore damage if this is HEAT - shouldn't happen anyway but Arma says it does so you know
-            if (_currentDamage < 1 && _warheadType == WARHEAD_TYPE_HEAT) then {
+            if (_currentDamage < 1 && {_warheadType == WARHEAD_TYPE_HEAT}) then {
                 _return = false;
             };
         };

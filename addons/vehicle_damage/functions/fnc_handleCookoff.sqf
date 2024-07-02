@@ -39,7 +39,7 @@ if (_chanceOfFire >= random 1) exitWith {
     };
 
     if (_canJet) then {
-        _canJet = ([_configOf >> QEGVAR(cookoff,canHaveFireJet), "NUMBER", 1] call CBA_fnc_getConfigEntry) == 1;
+        _canJet = getNumber (_configOf >> QEGVAR(cookoff,canHaveFireJet)) == 1;
     };
 
     private _delaySmoke = _chanceOfFire < random 1;
