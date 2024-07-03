@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Handles updating the Medical Menu UI for the current target.
@@ -16,7 +16,10 @@
  */
 
 // Check if menu should stay open for target
-if !([ACE_player, GVAR(target), ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith) && {[ACE_player, GVAR(target)] call FUNC(canOpenMenu)}) then {
+if !(
+    ([ACE_player, GVAR(target), ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith) || {!isNull findDisplay 312}) && // Allow player to look at himself when unconsious and in Zeus
+    {[ACE_player, GVAR(target)] call FUNC(canOpenMenu)}
+) then {
     closeDialog 0;
     // Show hint if distance condition failed
     if ((ACE_player distance GVAR(target) > GVAR(maxDistance)) && {vehicle ACE_player != vehicle GVAR(target)}) then {
@@ -40,7 +43,7 @@ private _ctrlInjuries = _display displayCtrl IDC_INJURIES;
 
 // Update body image
 private _ctrlBodyImage = _display displayCtrl IDC_BODY_GROUP;
-[_ctrlBodyImage, GVAR(target)] call FUNC(updateBodyImage);
+[_ctrlBodyImage, GVAR(target), GVAR(selectedBodyPart)] call FUNC(updateBodyImage);
 
 // Update activity and quick view logs
 private _ctrlActivityLog = _display displayCtrl IDC_ACTIVITY;

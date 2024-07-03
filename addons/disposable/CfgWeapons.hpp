@@ -1,19 +1,54 @@
 class CfgWeapons {
-    class Launcher_Base_F;
-    class launch_NLAW_F: Launcher_Base_F {
-        ACE_UsedTube = "ACE_launch_NLAW_Used_F";      // The class name of the used tube.
-        magazines[] = {"ACE_PreloadedMissileDummy"};  // The dummy magazine
+    class Launcher;
+    class Launcher_Base_F: Launcher {
+        class WeaponSlotsInfo;
     };
-    class ACE_launch_NLAW_Used_F: launch_NLAW_F {   // the used tube should be a sub class of the disposable launcher
-        EGVAR(nlaw,enabled) = 0; // disable guidance for the disposabled tube
-        scope = 1;
-        ACE_isUsedLauncher = 1;
+
+    class launch_NLAW_F: Launcher_Base_F {
+        scope = 2;
+        scopeArsenal = 2;
+        baseWeapon = "launch_NLAW_F";
+
+        magazineWell[] = {}; // remove magwell, so only the fakeMag can be loaded (inherited by used)
+        magazines[] = {"CBA_FakeLauncherMagazine"};
+        magazineReloadTime = 0.1;
+        reloadMagazineSound[] = {"",1,1};
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 180; // launcher 100, magazine 80
+        };
+    };
+
+    class ACE_launch_NLAW_ready_F: launch_NLAW_F {
         author = ECSTRING(common,ACETeam);
+        scope = 1;
+        scopeArsenal = 1;
+        baseWeapon = "launch_NLAW_F";
+
+        magazines[] = {"NLAW_F"};
+        magazineWell[] = {"NLAW"}; // restore magwell
+
+        class EventHandlers {
+            fired = "_this call CBA_fnc_firedDisposable"; // this weapon eventhandler is required!
+        };
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 100;
+        };
+    };
+
+    class ACE_launch_NLAW_used_F: launch_NLAW_F {
+        author = ECSTRING(common,ACETeam);
+        scope = 1;
+        scopeArsenal = 1;
+        baseWeapon = "ACE_launch_NLAW_used_F";
+
         displayName = CSTRING(UsedTube);
         descriptionShort = CSTRING(UsedTubeDescription);
-        magazines[] = {"ACE_FiredMissileDummy"};  // This will disable the used launcher class from being fired again.
-        //picture = "";              @todo
-        //model = "";                @todo
         weaponPoolAvailable = 0;
+
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 100;
+        };
     };
 };

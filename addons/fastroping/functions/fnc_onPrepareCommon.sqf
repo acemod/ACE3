@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Function for opening doors and extending the hook for most vanilla and older Arma helos.
@@ -10,7 +10,7 @@
  * Amount of time to wait before deploying ropes <NUMBER>
  *
  * Example:
- * [_vehicle] call ace_fastroping_fnc_onDeployRopesCommon
+ * [_vehicle] call ace_fastroping_fnc_onPrepareCommon
  *
  * Public: No
  */

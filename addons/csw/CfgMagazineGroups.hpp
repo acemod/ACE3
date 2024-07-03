@@ -74,7 +74,7 @@ class GVAR(groups) {
         ACE_1Rnd_82mm_Mo_HE_LaserGuided = 1;
         8Rnd_82mm_Mo_LG = 1;
     };
-    
+
     // A3 Titans (Spike) - just use handheld magazines
     class Titan_AT {
         1Rnd_GAT_missiles = 1;
@@ -83,4 +83,3 @@ class GVAR(groups) {
         1Rnd_GAA_missiles = 1;
     };
 };
-

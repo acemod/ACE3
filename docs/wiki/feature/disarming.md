@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Disarming
+component: disarming
 description: Ability to make units drop items/weapons/magazines.
 group: feature
 category: interaction
@@ -23,7 +24,3 @@ You can search the inventory and disarm captured or unconscious units.
 - Interact with the captured or unconscious unit <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interaction Key`).
 - Select `Open inventory`.
 - Drag & Drop the items you wish to remove from the unit.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="disarming" %}

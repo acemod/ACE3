@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, mharis001
  * Creates a litter object and handles its cleanup. Only execute on server.
@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * ["Litter_1", [100, 100, 0], 90] call ace_medical_fnc_createLitterServer
+ * ["Litter_1", [100, 100, 0], 90] call ace_medical_treatment_fnc_createLitterServer
  *
  * Public: No
  */

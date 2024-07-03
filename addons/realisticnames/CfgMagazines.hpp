@@ -390,6 +390,12 @@ class CfgMagazines {
     class DemoCharge_Remote_Mag: SatchelCharge_Remote_Mag {
         displayName = CSTRING(DemoCharge_Name);
     };
+    class ACE_SatchelCharge_Remote_Mag_Throwable: CA_Magazine {
+        displayName = CSTRING(SatchelChargeThrowable_Name);
+    };
+    class ACE_DemoCharge_Remote_Mag_Throwable: ACE_SatchelCharge_Remote_Mag_Throwable {
+        displayName = CSTRING(DemoChargeThrowable_Name);
+    };
 
     // hand grenades
     class HandGrenade: CA_Magazine {
@@ -447,19 +453,19 @@ class CfgMagazines {
     class PylonRack_3Rnd_Missile_AGM_02_F: PylonRack_1Rnd_Missile_AGM_02_F {
         displayName = "AGM-65 Maverick G 3x"; // [vanilla: Macer 3x - Missile_AGM_02_Plane_CAS_01_F]
     };
-    class magazine_Missile_AGM_02_x1 : VehicleMagazine {
+    class magazine_Missile_AGM_02_x1: VehicleMagazine {
         displayName = "AGM-65 Maverick G"; // [vanilla: Macer - Missile_AGM_02_Plane_CAS_01_F]
     };
-    class PylonMissile_Missile_AGM_02_x1 : magazine_Missile_AGM_02_x1 {
+    class PylonMissile_Missile_AGM_02_x1: magazine_Missile_AGM_02_x1 {
         displayName = "AGM-65 Maverick G"; // [vanilla: Macer - Missile_AGM_02_Plane_CAS_01_F]
     };
-    class PylonMissile_Missile_AGM_02_x2 : magazine_Missile_AGM_02_x1 {
+    class PylonMissile_Missile_AGM_02_x2: magazine_Missile_AGM_02_x1 {
         displayName = "AGM-65 Maverick G 2x"; // [vanilla: Macer 2x - Missile_AGM_02_Plane_CAS_01_F]
     };
-    class PylonRack_Missile_AGM_02_x1 : magazine_Missile_AGM_02_x1 {
+    class PylonRack_Missile_AGM_02_x1: magazine_Missile_AGM_02_x1 {
         displayName = "AGM-65 Maverick G"; // [vanilla: Macer - Missile_AGM_02_Plane_CAS_01_F]
     };
-    class PylonRack_Missile_AGM_02_x2 : magazine_Missile_AGM_02_x1 {
+    class PylonRack_Missile_AGM_02_x2: magazine_Missile_AGM_02_x1 {
         displayName = "AGM-65 Maverick G 2x"; // [vanilla: Macer 2x - Missile_AGM_02_Plane_CAS_01_F]
     };
     class 2Rnd_LG_scalpel;
@@ -474,7 +480,7 @@ class CfgMagazines {
     };
     class PylonRack_7Rnd_Rocket_04_HE_F: 7Rnd_Rocket_04_HE_F {
         displayName = "Hydra 70 7x HE"; // [vanilla: Shrieker 7x HE - Rocket_04_HE_Plane_CAS_01_F]
-    }; 
+    };
     class PylonRack_7Rnd_Rocket_04_AP_F: 7Rnd_Rocket_04_AP_F {
         displayName = "Hydra 70 7x AP"; // [vanilla: Shrieker 7x AP - Rocket_04_AP_Plane_CAS_01_F]
     };

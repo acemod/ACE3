@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Map
+component: map
 description: Map improvements.
 group: feature
 category: realism
@@ -33,7 +34,3 @@ The Blufor tracker marks the position of your faction's group leaders on the map
 ## 2. Usage
 
 - IMPORTANT NOTICE: The (optional) features above CAN be restricted by the mission maker / server owner. User experience may vary.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="map" %}

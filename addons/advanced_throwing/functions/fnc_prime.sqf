@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, Jonpas
  * Primes the throwable, creates global throwable vehicle and throws Fired XEH.

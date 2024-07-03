@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Rocko, Ruthberg
  *
@@ -22,7 +22,7 @@ params ["_wirecoil", "_unit"];
 private _wireNoGeo = "ACE_ConcertinaWireNoGeo" createVehicle [0,0,0];
 {
     _wireNoGeo animate [_x, 1];
-} count WIRE_FAST;
+} forEach WIRE_FAST;
 
 GVAR(placer) = _unit;
 private _dir = getDir _unit;
@@ -51,7 +51,7 @@ GVAR(deployPFH) = [{
         private _wire = "ACE_ConcertinaWire" createvehicle [0, 0, 0];
         {
             _wire animate [_x, _anim];
-        } count WIRE_FAST;
+        } forEach WIRE_FAST;
 
         [{
             params ["_args", "_idPFH"];
@@ -74,10 +74,10 @@ GVAR(deployPFH) = [{
     _wireNoGeo setDir _dir;
     {
         _wireNoGeo animate [_x, _anim];
-    } count WIRE_FAST;
+    } forEach WIRE_FAST;
 }, 0, [_wireNoGeo, _wireNoGeoPos, _unit]] call CBA_fnc_addPerFrameHandler;
 
-[localize "STR_ACE_ROLLWIRE", "", ""] call EFUNC(interaction,showMouseHint);
+[LLSTRING(RollWire), "", ""] call EFUNC(interaction,showMouseHint);
 
 [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 

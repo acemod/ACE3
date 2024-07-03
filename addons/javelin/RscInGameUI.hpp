@@ -14,20 +14,20 @@ class RscInGameUI {
         onLoad = QUOTE(with uiNamespace do {ACE_RscOptics_javelin = _this select 0;};);
 
         class GVAR(mapHelper): RscMapControl {
-            onDraw = QUOTE(_this call FUNC(mapHelperDraw););
+            onDraw = QUOTE(_this call FUNC(mapHelperDraw));
             x = -10;
             y = -10;
             w = 0;
             h = 0;
-        };    
-        
+        };
+
         class GVAR(elements_group): RscControlsGroupNoScrollbars {
             x = "safeZoneX";
             y = "safeZoneY";
             w = "safeZoneW";
             h = "safeZoneH";
             idc = 170;
-            class Controls {    
+            class Controls {
                 class CA_Distance: RscOpticsValue {
                     idc = 151;
                     sizeEx = "0";
@@ -238,7 +238,7 @@ class RscInGameUI {
             y = "safeZoneY";
             w = "safeZoneW";
             h = "safeZoneH";
-            enabled = 0;         
+            enabled = 0;
             show = 0;
             class Controls {
                 class ACE_TargetingConstrains: RscControlsGroupNoScrollbars {

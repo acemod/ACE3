@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Loads an unconscious or dead patient in the given or nearest vehicle.
@@ -18,6 +18,7 @@
  */
 
 params ["_medic", "_patient", ["_vehicle", objNull]];
+TRACE_3("loadUnit",_medic,_patient,_vehicle);
 
 if (_patient call EFUNC(common,isAwake)) exitWith {
     [[LSTRING(CanNotLoad), _patient call EFUNC(common,getName)]] call EFUNC(common,displayTextStructured);
@@ -31,10 +32,26 @@ if (_patient call EFUNC(medical_status,isBeingDragged)) then {
     [_medic, _patient] call EFUNC(dragging,dropObject);
 };
 
-private _vehicle = [_medic, _patient, _vehicle] call EFUNC(common,loadPerson);
+private _vehicle = [
+    _medic,
+    _patient,
+    _vehicle,
+    getArray (configOf _vehicle >> QGVAR(patientSeats)),
+    ([configOf _vehicle >> QGVAR(patientReverseFill), "NUMBER", 1] call CBA_fnc_getConfigEntry) > 0
+] call EFUNC(common,loadPerson);
 
-if (!isNull _vehicle) then {
-    private _patientName = [_patient, false, true] call EFUNC(common,getName);
-    private _vehicleName = getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "displayName");
+if (isNull _vehicle) exitWith { TRACE_1("no vehicle found",_vehicle); };
+
+[{
+    params ["_unit", "_vehicle"];
+    (alive _unit) && {alive _vehicle} && {(vehicle _unit) == _vehicle}
+}, {
+    params ["_unit", "_vehicle"];
+    TRACE_2("success",_unit,_vehicle);
+    private _patientName = [_unit, false, true] call EFUNC(common,getName);
+    private _vehicleName = getText (configOf _vehicle >> "displayName");
     [[LSTRING(LoadedInto), _patientName, _vehicleName], 3] call EFUNC(common,displayTextStructured);
-};
+}, [_patient, _vehicle], 3, {
+    params ["_unit", "_vehicle"];
+    WARNING_3("loadPerson failed to load %1[local %2] -> %3 ",_unit,local _unit,_vehicle);
+}] call CBA_fnc_waitUntilAndExecute;

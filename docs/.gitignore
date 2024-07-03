@@ -20,3 +20,8 @@ CNAME
 tools/temp
 
 Gemfile.lock
+
+# Generated
+_includes/dependencies_list.md
+wiki/functions/*.md
+!wiki/functions/index.md

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL
  * Checks if dogtag can be taken.
@@ -21,6 +21,6 @@ params ["_player", "_target"];
 if (isNull _target) exitWith {false};
 
 // check if disabled for faction
-if ([GVAR(disabledFactions) getVariable faction _target] param [0, false]) exitWith {false};
+if ((faction _target) in GVAR(disabledFactions)) exitWith {false};
 
 (!alive _target) || {_target getVariable ["ACE_isUnconscious", false]}

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Laser Pointer
+component: laserpointer
 description: Switching laser modes, daylight lasers.
 group: feature
 category: equipment
@@ -23,7 +24,3 @@ ACE3 adds a visible laser attachment for weapons. This feature is compatible wit
 - For this feature you need to have a compatible side attachment.
 - Press <kbd>Ctrl</kbd> + <kbd>L</kbd> (ACE3 default key bind `Switch Laser / IR Laser`).
 - A hint indicating the mode switch will appear in the top right corner.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="laserpointer" %}

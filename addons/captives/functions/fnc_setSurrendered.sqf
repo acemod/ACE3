@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2 PabstMirror
  * Lets a unit surrender
@@ -45,6 +45,7 @@ if (_state) then {
     _unit setVariable [QGVAR(isSurrendering), true, true];
 
     [_unit, "setCaptive", QGVAR(Surrendered), true] call EFUNC(common,statusEffect_set);
+    [_unit, "blockRadio", QGVAR(Surrendered), true] call EFUNC(common,statusEffect_set);
 
     if (_unit == ACE_player) then {
         ["captive", [false, false, false, false, false, false, false, false, false, true]] call EFUNC(common,showHud);
@@ -71,6 +72,7 @@ if (_state) then {
 } else {
     _unit setVariable [QGVAR(isSurrendering), false, true];
     [_unit, "setCaptive", QGVAR(Surrendered), false] call EFUNC(common,statusEffect_set);
+    [_unit, "blockRadio", QGVAR(Surrendered), false] call EFUNC(common,statusEffect_set);
 
     //remove AnimChanged EH
     private _animChangedEHID = _unit getVariable [QGVAR(surrenderAnimEHID), -1];
@@ -79,7 +81,7 @@ if (_state) then {
 
     if (_unit == ACE_player) then {
         //only re-enable HUD if not handcuffed
-        if (!(_unit getVariable [QGVAR(isHandcuffed), false])) then {
+        if !(_unit getVariable [QGVAR(isHandcuffed), false]) then {
             ["captive", []] call EFUNC(common,showHud); //same as showHud true;
         };
     };

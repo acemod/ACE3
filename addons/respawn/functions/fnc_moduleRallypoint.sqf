@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Initializes the Rallypoint module.
@@ -23,7 +23,6 @@ if !(_activated) exitWith {};
 
 {
     _x setVariable ["ACE_canMoveRallypoint", true];
-    false
-} count _units;
+} forEach _units;
 
 INFO("Rallypoint Module Initialized.");

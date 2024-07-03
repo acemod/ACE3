@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: AACO, SilentSpike
+ * Author: AACO, kymckay
  * Function used to set the camera focus
  *
  * Arguments:

@@ -3,16 +3,16 @@
 if (!hasInterface) exitWith {};
 
 // Wait until player controls (man,vehicle or uav) a thing before compiling the menu
-GVAR(controllableSelfActionsAdded) = [] call CBA_fnc_createNamespace;
+GVAR(controllableSelfActionsAdded) = createHashMap;
 DFUNC(newControllableObject) = {
     params ["_object"];
     private _type = typeOf _object;
     TRACE_2("newControllableObject",_object,_type);
     if (_type == "") exitWith {};
 
-    if (!(GVAR(controllableSelfActionsAdded) getVariable [_type, false])) then {
+    if !(_type in GVAR(controllableSelfActionsAdded)) then {
         [_type] call FUNC(compileMenuSelfAction);
-        GVAR(controllableSelfActionsAdded) setVariable [_type, true];
+        GVAR(controllableSelfActionsAdded) set [_type, nil];
         [{
             TRACE_1("sending newControllableObject event",_this);
             // event for other systems to add self actions, running addActionToClass before this will cause compiling
@@ -27,16 +27,15 @@ DFUNC(newControllableObject) = {
 
 GVAR(blockDefaultActions) = [];
 
-GVAR(cachedBuildingTypes) = [];
-GVAR(cachedBuildingActionPairs) = [];
+GVAR(cachedBuildingTypes) = createHashMap;
 
 GVAR(ParsedTextCached) = [];
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Setup text/shadow/size/color settings matrix
     [] call FUNC(setupTextColors);
     // Setting changed added here so color setup happens once at init
-    ["ace_settingChanged", {
+    ["CBA_SettingChanged", {
         params ["_name"];
         if (_name in [QGVAR(colorTextMax), QGVAR(colorTextMin), QGVAR(colorShadowMax), QGVAR(colorShadowMin), QGVAR(textSize), QGVAR(shadowSetting)]) then {
             [] call FUNC(setupTextColors);
@@ -47,7 +46,7 @@ GVAR(ParsedTextCached) = [];
 }] call CBA_fnc_addEventHandler;
 
 //Add Actions to Houses:
-["ace_interactMenuOpened", {_this call FUNC(userActions_addHouseActions)}] call CBA_fnc_addEventHandler;
+["ace_interactMenuOpened", LINKFUNC(userActions_addHouseActions)] call CBA_fnc_addEventHandler;
 
 ["ACE3 Common", QGVAR(InteractKey), (localize LSTRING(InteractKey)),
 {
@@ -100,10 +99,23 @@ format ["%1 (%2)", (localize LSTRING(SelfInteractKey)), localize ELSTRING(common
 
 // background options
 ["ace_interactMenuOpened", {
-    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), true] call EFUNC(common,blurScreen);};
-    if (GVAR(menuBackground)==2) then {0 cutRsc[QGVAR(menuBackground), "PLAIN", 1, false];};
+    params ["_menuType"];
+    private _menuBackgroundSetting = [GVAR(menuBackground), GVAR(menuBackgroundSelf)] select _menuType;
+    if (_menuBackgroundSetting == 1) exitWith {[QGVAR(menuBackground), true] call EFUNC(common,blurScreen);};
+    if (_menuBackgroundSetting == 2) exitWith {0 cutRsc [QGVAR(menuBackground), "PLAIN", 1, false];};
 }] call CBA_fnc_addEventHandler;
+
 ["ace_interactMenuClosed", {
-    if (GVAR(menuBackground)==1) then {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
-    if (GVAR(menuBackground)==2) then {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
+    params ["_menuType"];
+    private _menuBackgroundSetting = [GVAR(menuBackground), GVAR(menuBackgroundSelf)] select _menuType;
+    if (_menuBackgroundSetting == 1) exitWith {[QGVAR(menuBackground), false] call EFUNC(common,blurScreen);};
+    if (_menuBackgroundSetting == 2) exitWith {(uiNamespace getVariable [QGVAR(menuBackground), displayNull]) closeDisplay 0;};
+}] call CBA_fnc_addEventHandler;
+
+
+// init menu reordering
+[QGVAR(newControllableObject), {
+    params ["_class"];
+    if !(_class isKindOf "CAManBase") exitWith {};
+    _class call FUNC(initMenuReorder);
 }] call CBA_fnc_addEventHandler;

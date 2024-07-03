@@ -12,7 +12,8 @@ sitemap:
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
-    {% for curPage in site.pages | sort: "group" %}
+    {% assign pages_by_group = site.pages | sort: "group" %}
+    {% for curPage in pages_by_group %}
     {% unless curPage.sitemap.exclude == "yes" %}
     <url>
         <loc>{{ site.productionUrl}}{{ curPage.url }}</loc>

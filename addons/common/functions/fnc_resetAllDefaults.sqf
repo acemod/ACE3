@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * reset all variables that have been defined
@@ -23,12 +23,11 @@ _unit setVariable ["ACE_isUnconscious", nil, true];
 if (isPlayer _unit) then {
     [true] call FUNC(setVolume);
 
-    if !(isNil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {
+    if (!isNil QGVAR(DISABLE_USER_INPUT_COLLECTION)) then {
         // clear all disable user input
         {
             [_x, false] call FUNC(setDisableUserInputStatus);
-            false
-        } count GVAR(DISABLE_USER_INPUT_COLLECTION);
+        } forEach GVAR(DISABLE_USER_INPUT_COLLECTION);
     };
 };
 
@@ -36,5 +35,4 @@ if (isPlayer _unit) then {
     if !(_x select 4) then {
         _unit setVariable [_x select 0, nil, _x select 3];
     };
-    false
-} count ([_unit] call FUNC(getAllDefinedSetVariables));
+} forEach ([_unit] call FUNC(getAllDefinedSetVariables));

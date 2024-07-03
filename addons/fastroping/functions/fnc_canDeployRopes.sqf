@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if the unit can deploy ropes from the helicopter.
@@ -19,7 +19,7 @@
  */
 params ["_vehicle", "_player", "_ropeClass", ["_defaultOption", false]];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 
 (driver _vehicle != _player) &&
 {getPos _vehicle select 2 > 2} && {

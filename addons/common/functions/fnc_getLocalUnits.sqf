@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: dedmen
  * Gets localUnits array filtering out nullObjects.
@@ -6,7 +6,7 @@
  * Should be equivalent to `allUnits select {local _x}`
  *
  * Arguments:
- * Nothing
+ * None
  *
  * Return Value:
  * Array of local Units <ARRAY>

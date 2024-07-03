@@ -8,15 +8,18 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"alganthe", "mharis001"};
+        authors[] = {"alganthe", "mharis001", "Brett Mayson", "johnb43"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "ui\RscAttributes.hpp"
+#include "ui\RscCustomArsenalButton.hpp"
 #include "Display3DEN.hpp"
 #include "Cfg3DEN.hpp"
 #include "CfgEventHandlers.hpp"
+#include "CfgWeapons.hpp"
 #include "RscDisplayMain.hpp"
+#include "ACE_Arsenal_Sorts.hpp"
 #include "ACE_Arsenal_Stats.hpp"

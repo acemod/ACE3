@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, Ruthberg
  * Module for adjusting the wind deflection settings
@@ -12,7 +12,7 @@
  * None <NIL>
  *
  * Example:
- * [LOGIC, [bob, kevin], true] call ace_winddeflection_fnc_initModuelSettings
+ * [LOGIC, [bob, kevin], true] call ace_winddeflection_fnc_initModuleSettings
  *
  * Public: No
  */

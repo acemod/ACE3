@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: commy2, Timi007
+ * Author: commy2, Timi007, LinkIsGrim
  * Return enabled channels.
  *
  * Arguments:
@@ -17,33 +17,19 @@
 
 params [["_localize", false, [false]]];
 
-private _currentChannel = currentChannel;
 private _enabledChannels = [];
+private _currentChannel = currentChannel;
 
-if (_localize) then {
-    if (setCurrentChannel 0) then {
-        _enabledChannels pushBack localize "str_channel_global";
-    };
+// Micro-optimization so we don't rebuild the array and localize in each iteration
+private _engineChannels = CHANNEL_NAMES;
 
-    if (setCurrentChannel 1) then {
-        _enabledChannels pushBack localize "str_channel_side";
-    };
-
-    if (setCurrentChannel 2) then {
-        _enabledChannels pushBack localize "str_channel_command";
-    };
-
-    if (setCurrentChannel 3) then {
-        _enabledChannels pushBack localize "str_channel_group";
-    };
-
-    if (setCurrentChannel 4) then {
-        _enabledChannels pushBack localize "str_channel_vehicle";
-    };
-} else {
-    for "_i" from 0 to 4 do {
-        if (setCurrentChannel _i) then {
-            _enabledChannels pushBack _i;
+for "_channelId" from 0 to 15 do {
+    if (_channelId == 5) then {continue}; // Direct channel, ignore
+    if (setCurrentChannel _channelId) then {
+        if (_localize) then {
+            _enabledChannels pushBack (_engineChannels param [_channelId, (radioChannelInfo (_channelId - 5)) select 1]); // radioChannelInfo works off custom IDs only, offset engine channels
+        } else {
+            _enabledChannels pushBack _channelId;
         };
     };
 };

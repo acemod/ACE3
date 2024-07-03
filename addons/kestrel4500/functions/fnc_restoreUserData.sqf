@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Reads user data from profileNamespace
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ace_kestrel4500_fnc_restore_user_data
+ * call ace_kestrel4500_fnc_restoreUserData
  *
  * Public: No
  */

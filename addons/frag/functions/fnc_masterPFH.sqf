@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus
  * Master single PFH abstraction for all rounds being tracked by frag/spall.
@@ -34,7 +34,7 @@ while {_objectCount > 0 && {_iter < (GVAR(maxTrackPerFrame) min _objectCount)}} 
     if (!isNil "_object") then {
         private _args = GVAR(arguments) select GVAR(lastIterationIndex);
 
-        if (!(_args call FUNC(pfhRound))) then {
+        if !(_args call FUNC(pfhRound)) then {
             _gcIndex pushBack GVAR(lastIterationIndex); // Add it to the GC if it returns false
         };
     };
@@ -45,7 +45,7 @@ while {_objectCount > 0 && {_iter < (GVAR(maxTrackPerFrame) min _objectCount)}} 
 // Clean up dead object references
 private _deletionCount = 0;
 {
-    TRACE_1("GC Projectile", _x);
+    TRACE_1("GC Projectile",_x);
     private _deleteIndex = _x - _deletionCount;
     GVAR(objects) deleteAt _deleteIndex;
     GVAR(arguments) deleteAt _deleteIndex;

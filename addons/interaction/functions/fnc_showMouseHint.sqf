@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth de Wet (LH), mharis001
  * Shows an interaction hint for mouse buttons.
@@ -8,7 +8,7 @@
  * 0: Left click text <STRING>
  * 1: Right click text <STRING>
  * 2: Scroll text <STRING> (default: "")
- * 2: Extra icon/text pairs <ARRAY> (default: [])
+ * 3: Extra icon/text pairs <ARRAY> (default: [])
  *
  * Return Value:
  * None
@@ -71,7 +71,7 @@ if (_textMMB == "") then {
     // Only create extra key if both name and text are valid
     if (_keyName != "" && {_keyText != ""}) then {
         // Localize Ctrl, Shift, or Alt keys
-        switch (toLower _keyName) do {
+        switch (toLowerANSI _keyName) do {
             case "ctrl";
             case "control": {_keyName = format ["<%1>", toUpper localize "STR_dik_control"]};
             case "shift": {_keyName = format ["<%1>", toUpper localize "STR_dik_shift"]};

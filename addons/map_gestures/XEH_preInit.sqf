@@ -6,6 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-GVAR(GroupColorCfgMappingNew) = call CBA_fnc_createNamespace;
+#include "initSettings.inc.sqf"
+
+GVAR(GroupColorCfgMappingNew) = createHashMap;
 
 ADDON = true;

@@ -18,6 +18,5 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgSounds.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgAmmo.hpp"
 #include "ACE_Settings.hpp"
 #include "ACE_Arsenal_Stats.hpp"

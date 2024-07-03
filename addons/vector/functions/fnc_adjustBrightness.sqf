@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  *
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [5] call ace_vector_fnc_adjustBrigthness
+ * [5] call ace_vector_fnc_adjustBrightness
  *
  * Public: No
  */

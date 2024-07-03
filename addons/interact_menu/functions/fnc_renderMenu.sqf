@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Render an interaction menu and it's children recursively
@@ -36,7 +36,7 @@ private _menuInSelectedPath = true;
     if (_forEachIndex >= (count GVAR(menuDepthPath))) exitWith {
         _menuInSelectedPath = false;
     };
-    if !(_x isEqualTo (GVAR(menuDepthPath) select _forEachIndex)) exitWith {
+    if (_x isNotEqualTo (GVAR(menuDepthPath) select _forEachIndex)) exitWith {
         _menuInSelectedPath = false;
     };
 } forEach _path;
@@ -89,13 +89,13 @@ if (_numChildren == 1) then {
 // Scale menu based on the amount of children
 private _scaleX = 1;
 private _scaleY = 1;
-
-if (GVAR(UseListMenu)) then {
+private _useListMenu = [GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAction);
+if (_useListMenu) then {
     private _textSize = [0.75, 0.875, 1, 1.2, 1.4] select GVAR(textSize);
     _scaleX = _textSize * 0.17 * 1.1;
     _scaleY = 0.17 * 0.30 * 4/3;
 } else {
-    private _textSize = if (GVAR(textSize) > 2) then {1.3} else {1};
+    private _textSIze = [1, 1.3] select (GVAR(textSize) > 2);
     _scaleX = _textSize * 0.17 * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.1) max 0.5);
     _scaleY = _textSize * 0.17 * 4/3 * (((0.8 * (0.46 / sin (0.5 * _angleInterval))) min 1.1) max 0.5);
 };
@@ -112,7 +112,7 @@ private _player = ACE_player;
 //END_COUNTER(children);
 private _angle = _centerAngle - _angleSpan / 2;
 {
-    private _newPos =  if (GVAR(UseListMenu)) then {
+    private _newPos = if (_useListMenu) then {
         [(_sPos select 0) + _scaleX,
          (_sPos select 1) + _scaleY * (_forEachIndex - _numChildren/2 + 0.5)];
     } else {

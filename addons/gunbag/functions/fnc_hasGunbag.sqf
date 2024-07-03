@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ir0n1E
  * Check if unit has a gunbag.
@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-getNumber (configFile >> "CfgVehicles" >> (backpack _unit) >> QUOTE(ADDON)) == 1
+getNumber ((configOf (backpackContainer _unit)) >> QUOTE(ADDON)) == 1
