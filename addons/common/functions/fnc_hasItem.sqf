@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Check if given unit has an item of given classname. Note: case-sensitive.
+ * Check if given unit has an item of given classname. Note: Case sensitive.
  *
  * Arguments:
  * 0: Unit <OBJECT>
