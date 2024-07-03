@@ -107,7 +107,7 @@ if (_removeAmmoDuringCookoff) then {
         // Virtual magazines
         case (_magazineInfo isEqualTo true): {
             // Find the virtual magazines and update its count
-            private _virtualAmmo = _object getVariable QGVAR(virtualMagazines);
+            private _virtualAmmo = _object getVariable [QGVAR(virtualMagazines), []];
             _magazineIndex = _virtualAmmo findIf {(_x select 0) == _magazineClassname};
 
             if (_magazineIndex == -1) exitWith {
@@ -117,7 +117,7 @@ if (_removeAmmoDuringCookoff) then {
             if (_newAmmoCount <= 0) then {
                 _virtualAmmo deleteAt _magazineIndex;
             } else {
-                (_virtualAmmo select _magazineIndex) set [1, _newAmmoCount]; // remove ammo that was detonated
+                (_virtualAmmo select _magazineIndex) set [1, _newAmmoCount]; // Remove ammo that was detonated
             };
         };
     };
@@ -125,7 +125,7 @@ if (_removeAmmoDuringCookoff) then {
     if (_newAmmoCount <= 0) then {
         _magazines deleteAt _magazineIndex;
     } else {
-        _magazine set [1, _newAmmoCount]; // remove ammo that was detonated
+        _magazine set [1, _newAmmoCount]; // Remove ammo that was detonated
     };
 };
 
