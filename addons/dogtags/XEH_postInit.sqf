@@ -56,6 +56,7 @@ if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
         if !(_leftPanelIDC in [2010, 2012, 2014] && {_rightPanelIDC == 38}) exitWith {};
 
         private _rightPanel = _display displayCtrl 15;
+        private _cfgWeapons = configFile >> "CfgWeapons";
 
         TRACE_1("passed",_rightPanel);
 
@@ -63,7 +64,7 @@ if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
             private _item = _rightPanel lnbData [_i, 0];
 
             // Check if item classname starts with "ACE_dogtag" (faster than isKindOf)
-            if (_item find "ACE_dogtag_" == 0) then {
+            if (_item isKindOf ["ACE_dogtag", _cfgWeapons]) then {
                 private _name = (GVAR(dogtagsData) getOrDefault [_item, []]) param [0, ""];
 
                 // If data doesn't exist or body has no name, set name as "unknown"
