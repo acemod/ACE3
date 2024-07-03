@@ -377,6 +377,7 @@
             <Japanese>H225M シュペル クーガー (非武装)</Japanese>
             <German>H225M Super Cougar (Unbewaffnet)</German>
             <Italian>H225M Super Cougar (Disarmato)</Italian>
+            <Korean>H225M 슈퍼 쿠거 (비무장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_01_water_Name">
             <English>HEMTT Fire Truck</English>
@@ -389,6 +390,7 @@
             <Portuguese>HEMTT contra incêndio</Portuguese>
             <Japanese>HEMTT 消防車</Japanese>
             <Italian>HEMTT Autobotte</Italian>
+            <Korean>HEMTT 소방트럭</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_water_Name">
             <English>Typhoon Water</English>
