@@ -91,7 +91,7 @@ if (_state) then {
     _unit removeEventHandler ["AnimChanged", _animChangedEHID];
     _unit setVariable [QGVAR(handcuffAnimEHID), -1];
 
-    if (((vehicle _unit) == _unit) && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
+    if (((vehicle _unit) == _unit) && {_unit call EFUNC(common,isAwake)}) then {
         //Break out of hands up animation loop
         [_unit, "ACE_AmovPercMstpScapWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
     };
