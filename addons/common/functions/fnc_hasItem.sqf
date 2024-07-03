@@ -18,4 +18,4 @@
 
 params [["_unit", objNull, [objNull]], ["_item", "", [""]]];
 
-_item in (_unit call EFUNC(common,uniqueItems)) // return
+_item in (_unit call FUNC(uniqueItems)) // return

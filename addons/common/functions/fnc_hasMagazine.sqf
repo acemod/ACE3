@@ -18,4 +18,4 @@
 
 params [["_unit", objNull, [objNull]], ["_magazine", "", [""]]];
 
-_magazine in ([_unit, 2] call EFUNC(common,uniqueItems)) // return
+_magazine in ([_unit, 2] call FUNC(uniqueItems)) // return
