@@ -66,10 +66,14 @@ if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
                 _item = _rightPanel lnbData [_i, 0];
 
                 if (_item isKindOf ["ACE_dogtag", _cfgWeapons]) then {
-                    _dogtagData = _allDogtagsData param [_allDogtags find _item, []];
+                    private _name = (_allDogtagsData param [_allDogtags find _item, []]) param [0, ""];
 
-                    // If data doesn't exist, put name as "unknown"
-                    _rightPanel lnbSetText [[_i, 1], [LLSTRING(itemName), ": ", _dogtagData param [0, LELSTRING(common,unknown)]] joinString ""];
+                    // If data doesn't exist or body has no name, set name as "unknown"
+                    if (_name == "") then {
+                        _name = LELSTRING(common,unknown);
+                    };
+
+                    _rightPanel lnbSetText [[_i, 1], [LLSTRING(itemName), ": ", _name] joinString ""];
                 };
             };
         };
