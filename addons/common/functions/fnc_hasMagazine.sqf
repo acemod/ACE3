@@ -1,23 +1,21 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Check if given unit has a magazine of given classname
+ * Check if given unit has a magazine of given classname. Note: Case sensitive.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Magazine Classname <STRING>
+ * 1: Magazine classname <STRING>
  *
  * Return Value:
- * has Magazine <BOOL>
+ * Unit has magazine <BOOL>
  *
  * Example:
- * [bob, "magazine"] call ace_common_fnc_hasMagazine
+ * [player, "30Rnd_65x39_caseless_mag"] call ace_common_fnc_hasMagazine
  *
  * Public: yes
- *
- * Note: Case sensitive
  */
 
 params [["_unit", objNull, [objNull]], ["_magazine", "", [""]]];
 
-_magazine in magazines _unit // return
+_magazine in ([_unit, 2] call FUNC(uniqueItems)) // return
