@@ -27,6 +27,7 @@ _dummyControl ctrlCommit 0;
 
 _dummyControl ctrlAddEventHandler ["Draw", {
     private _display = ctrlParent (_this select 0);
+    private _cfgWeapons = configFile >> "CfgWeapons";
 
     {
         private _itemList = _display displayCtrl _x;
@@ -39,7 +40,7 @@ _dummyControl ctrlAddEventHandler ["Draw", {
         for "_i" from (lbSize _itemList) to 0 step -1 do {
             private _item = _itemList lbData _i;
 
-            if (_item find "ACE_dogtag_" == 0) then {
+            if (_item isKindOf ["ACE_dogtag", _cfgWeapons]) then {
                 private _dogtagData = GVAR(dogtagsData) getOrDefault [_item, []];
 
                 // If data doesn't exist, put name as "unknown"
