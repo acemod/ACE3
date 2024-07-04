@@ -97,5 +97,23 @@ if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
     }] call CBA_fnc_addEventHandler;
 };
 
+// Add context menu option
+[
+    "ACE_dogtag",
+    ["GROUND", "CARGO", "CONTAINER"],
+    LLSTRING(checkItem),
+    nil,
+    QPATHTOF(data\dogtag_icon_ca.paa),
+    [
+        {true},
+        {true}
+    ],
+    {
+        [GVAR(dogtagsData) getOrDefault [_this select 2, []]] call FUNC(showDogtag);
+
+        false
+    }
+] call CBA_fnc_addItemContextMenuOption;
+
 // Disable dogtags for civilians
 "CIV_F" call FUNC(disableFactionDogtags);
