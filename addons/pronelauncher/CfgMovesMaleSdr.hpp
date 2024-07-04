@@ -13,8 +13,8 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             disableWeaponsLong = 0;
             enableMissile = 1;
             canPullTrigger = 1;
-            aimPrecision = 0.30000001;
-            speed = 1e+010;
+            aimPrecision = 0.3;
+            speed = 1e10;
             actions = "ACE_LauncherProneActions";
             file = QPATHTOF(anim\ACE_Launcher_Lying.rtm);
             interpolateFrom[] = {
@@ -82,7 +82,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         //    };
         //};
         class AmovPpneMrunSrasWlnrDf: AmovPpneMstpSrasWlnrDnon {
-            speed = 0.600541;
+            speed = 0.6;
             duty = 0.6;
             disableWeapons = 1;
             disableWeaponsLong = 1;
@@ -91,7 +91,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             actions = "ACE_LauncherProneActions";
         };
         class AmovPpneMrunSrasWlnrDfl: AmovPpneMrunSrasWlnrDf {
-            speed = 0.833333;
+            speed = 0.83;
             duty = 0.6;
             actions = "ACE_LauncherProneActions";
         };
@@ -101,22 +101,22 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             actions = "ACE_LauncherProneActions";
         };
         class AmovPpneMrunSrasWlnrDbl: AmovPpneMrunSrasWlnrDf {
-            speed = 0.702524;
+            speed = 0.7;
             duty = 0.6;
             actions = "ACE_LauncherProneActions";
         };
         class AmovPpneMrunSrasWlnrDb: AmovPpneMrunSrasWlnrDf {
-            speed = 0.702524;
+            speed = 0.7;
             duty = 0.6;
             actions = "ACE_LauncherProneActions";
         };
         class AmovPpneMrunSrasWlnrDbr: AmovPpneMrunSrasWlnrDf {
-            speed = 0.702524;
+            speed = 0.7;
             duty = 0.6;
             actions = "ACE_LauncherProneActions";
         };
         class AmovPpneMrunSrasWlnrDr: AmovPpneMrunSrasWlnrDf {
-            speed = 0.859341;
+            speed = 0.86;
             duty = 0.6;
             actions = "ACE_LauncherProneActions";
         };
@@ -200,7 +200,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         };
         class LauncherProne_Reload_Start: AmovPpneMrunSrasWlnrDl {
             actions = "ACE_LauncherProneActions";
-            speed = 0.7375;
+            speed = 0.5;
             duty = 0.6;
             disableWeapons = 1;
             disableWeaponsLong = 1;
@@ -215,7 +215,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         };
         class LauncherProne_Reload_Mid: AmovPpneMrunSrasWlnrDr {
             actions = "ACE_LauncherProneActions";
-            speed = 0.7375;
+            speed = 0.5;
             duty = 0.6;
             disableWeapons = 1;
             disableWeaponsLong = 1;
@@ -227,7 +227,7 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         };
         class LauncherProne_Reload_End: AmovPpneMrunSrasWlnrDf {
             actions = "ACE_LauncherProneActions";
-            speed = 0.7375;
+            speed = 0.5;
             duty = 0.6;
             disableWeapons = 1;
             disableWeaponsLong = 1;

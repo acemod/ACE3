@@ -1,38 +1,41 @@
 #include "script_component.hpp"
 
-addUserActionEventHandler ["Stand", "Activate", { // Stand (toggle)
-    if ((!alive ACE_player) || {!(isNull objectParent ACE_player)}) exitWith {};
+// Stand (toggle)
+addUserActionEventHandler ["Stand", "Activate", {
+    if (!alive ACE_player || {!isNull objectParent ACE_player} || {!isNull curatorCamera}) exitWith {};
 
     private _launcherWeapon = secondaryWeapon ACE_player;
 
-    if ((_launcherWeapon == "") || {currentWeapon ACE_player != _launcherWeapon}) exitwith {};
+    if (_launcherWeapon == "" || {currentWeapon ACE_player != _launcherWeapon}) exitwith {};
 
-    if ((stance ACE_player) == "PRONE") then {
-        TRACE_1("stand toggle",stance ACE_player);
+    if (stance ACE_player == "PRONE") then {
+        LOG("stand toggle");
         ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon";
         ACE_player playMove "AmovPknlMstpSrasWlnrDnon_AmovPercMstpSrasWlnrDnon";
     };
 }];
 
-addUserActionEventHandler ["Crouch", "Activate", { // Crouch (toggle)
-    if ((!alive ACE_player) || {!(isNull objectParent ACE_player)}) exitWith {};
+// Crouch (toggle)
+addUserActionEventHandler ["Crouch", "Activate", {
+    if (!alive ACE_player || {!isNull objectParent ACE_player} || {!isNull curatorCamera}) exitWith {};
 
     private _launcherWeapon = secondaryWeapon ACE_player;
 
-    if ((_launcherWeapon == "") || {currentWeapon ACE_player != _launcherWeapon}) exitwith {};
+    if (_launcherWeapon == "" || {currentWeapon ACE_player != _launcherWeapon}) exitwith {};
 
-    if ((stance ACE_player) == "PRONE") then {
-        TRACE_1("crouch toggle",stance ACE_player);
+    if (stance ACE_player == "PRONE") then {
+        LOG("crouch toggle");
         ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon";
     };
 }];
 
-addUserActionEventHandler ["Prone", "Activate", { // Prone (toggle)
-    if ((!alive ACE_player) || {!(isNull objectParent ACE_player)}) exitWith {};
+// Prone (toggle)
+addUserActionEventHandler ["Prone", "Activate", {
+    if (!alive ACE_player || {!isNull objectParent ACE_player} || {!isNull curatorCamera}) exitWith {};
 
     private _launcherWeapon = secondaryWeapon ACE_player;
 
-    if ((_launcherWeapon == "") || {currentWeapon ACE_player != _launcherWeapon}) exitwith {};
+    if (_launcherWeapon == "" || {currentWeapon ACE_player != _launcherWeapon}) exitwith {};
 
     TRACE_1("prone toggle",stance ACE_player);
 
@@ -40,28 +43,30 @@ addUserActionEventHandler ["Prone", "Activate", { // Prone (toggle)
     ACE_player playMoveNow "ACE_LauncherProne";
 }];
 
-addUserActionEventHandler ["MoveUp", "Activate", { // (X) Crouch / Stand Up
-    if ((!alive ACE_player) || {!(isNull objectParent ACE_player)}) exitWith {};
+// (X) Crouch / Stand Up
+addUserActionEventHandler ["MoveUp", "Activate", {
+    if (!alive ACE_player || {!isNull objectParent ACE_player} || {!isNull curatorCamera}) exitWith {};
 
     private _launcherWeapon = secondaryWeapon ACE_player;
 
-    if ((_launcherWeapon == "") || {currentWeapon ACE_player != _launcherWeapon}) exitwith {};
+    if (_launcherWeapon == "" || {currentWeapon ACE_player != _launcherWeapon}) exitwith {};
 
-    if ((stance ACE_player) == "PRONE") then {
-        TRACE_1("moveUp from prone",stance ACE_player);
+    if (stance ACE_player == "PRONE") then {
+        LOG("moveUp from prone");
         ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon";
     };
 }];
 
-addUserActionEventHandler ["MoveDown", "Activate", { // (Z) Go Prone / Stand Up
-    if ((!alive ACE_player) || {!(isNull objectParent ACE_player)}) exitWith {};
+// (Z) Go Prone / Stand Up
+addUserActionEventHandler ["MoveDown", "Activate", {
+    if (!alive ACE_player || {!isNull objectParent ACE_player} || {!isNull curatorCamera}) exitWith {};
 
     private _launcherWeapon = secondaryWeapon ACE_player;
 
-    if ((_launcherWeapon == "") || {currentWeapon ACE_player != _launcherWeapon}) exitwith {};
+    if (_launcherWeapon == "" || {currentWeapon ACE_player != _launcherWeapon}) exitwith {};
 
-    if ((stance ACE_player) == "PRONE") then {
-        TRACE_1("moveDown from prone",stance ACE_player);
+    if (stance ACE_player == "PRONE") then {
+        LOG("moveDown from prone");
         ACE_player playMoveNow "AmovPpneMstpSrasWlnrDnon_AmovPknlMstpSrasWlnrDnon";
         ACE_player playMove "AmovPknlMstpSrasWlnrDnon_AmovPercMstpSrasWlnrDnon";
     } else {
