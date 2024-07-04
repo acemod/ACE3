@@ -4,22 +4,24 @@
 [QGVAR(getDogtagItem), LINKFUNC(getDogtagItem)] call CBA_fnc_addEventHandler;
 [QGVAR(addDogtagItem), LINKFUNC(addDogtagItem)] call CBA_fnc_addEventHandler;
 
-[QGVAR(broadcastDogtagInfo), {
-    GVAR(dogtagsData) set _this;
-}] call CBA_fnc_addEventHandler;
-
-if (isServer) then {
-    // Sync dogtag data from server to client
-    [QGVAR(requestSyncDogtagDataJIP), {
-        params ["_clientOwner"];
-
-        {
-            [QGVAR(broadcastDogtagInfo), [_x, _y], _clientOwner] call CBA_fnc_ownerEvent;
-        } forEach GVAR(dogtagsData);
+if (hasInterface || isServer) then {
+    [QGVAR(broadcastDogtagInfo), {
+        GVAR(dogtagsData) set _this;
     }] call CBA_fnc_addEventHandler;
-} else {
-    if (!hasInterface) exitWith {}:
-    [QGVAR(requestSyncDogtagDataJIP), clientOwner] call CBA_fnc_serverEvent;
+
+    if (isServer) then {
+        // Sync dogtag data from server to client
+        [QGVAR(requestSyncDogtagDataJIP), {
+            params ["_clientOwner"];
+
+            {
+                [QGVAR(broadcastDogtagInfo), [_x, _y], _clientOwner] call CBA_fnc_ownerEvent;
+            } forEach GVAR(dogtagsData);
+        }] call CBA_fnc_addEventHandler;
+    } else {
+        // To be here, hasInterface must be true
+        [QGVAR(requestSyncDogtagDataJIP), clientOwner] call CBA_fnc_serverEvent;
+    };
 };
 
 // Add actions and event handlers only if ace_medical is enabled

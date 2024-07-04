@@ -8,9 +8,11 @@ PREP_RECOMPILE_END;
 
 GVAR(disabledFactions) = createHashMap;
 
-GVAR(dogtagsData) = createHashMap;
+if (hasInterface || isServer) then {
+    GVAR(dogtagsData) = createHashMap;
 
-if (isServer) then {
+    if (!isServer) exitWith {};
+
     GVAR(idCounter) = 0;
 };
 
