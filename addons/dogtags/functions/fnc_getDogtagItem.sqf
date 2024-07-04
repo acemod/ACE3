@@ -21,19 +21,15 @@ if(!isServer) exitWith {};
 params ["_player", "_target"];
 TRACE_2("getDogtagItem",_player,_target);
 
-private _allDogtags = missionNamespace getVariable [QGVAR(allDogtags), []];
-private _allDogtagDatas = missionNamespace getVariable [QGVAR(allDogtagDatas), []];
+GVAR(idCounter) = GVAR(idCounter) + 1;
 
-private _nextID = count _allDogtags + 1;
-
-if (_nextID > 999) exitWith {ERROR("Ran out of IDs");};
+if (GVAR(idCounter) > 999) exitWith {ERROR("Ran out of IDs");};
 
 private _dogTagData = [_target] call FUNC(getDogTagData);
-private _item = format ["ACE_dogtag_%1", _nextID];
-_allDogtags pushBack _item;
-_allDogtagDatas pushBack _dogTagData;
+private _item = format ["ACE_dogtag_%1", GVAR(idCounter)];
 
-missionNamespace setVariable [QGVAR(allDogtags), _allDogtags];
-missionNamespace setVariable [QGVAR(allDogtagDatas), _allDogtagDatas];
 
 [QGVAR(addDogtagItem), [_item, _dogTagData], [_player]] call CBA_fnc_targetEvent;
+
+// Broadcast data globally, so that clients can use it where needed
+[QGVAR(broadcastDogtagInfo), [_item, _dogTagData]] call CBA_fnc_globalEvent;
