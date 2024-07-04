@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Reports a blood type depending on the units name.
+ * Reports a blood type depending on the unit's name.
  *
  * Arguments:
  * 0: Name of a unit <STRING>

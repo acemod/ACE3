@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
  * Author: esteldunedain
- * Get unit dogtag data.
+ * Gets unit's dog tag data.
  *
  * Arguments:
  * 0: Target <OBJECT>
  *
  * Return Value:
- * Dogtag Data <ARRAY>
+ * Dog tag Data <ARRAY>
  * 0: Name <STRING>
  * 1: SSN <STRING>
  * 2: Blood Type <STRING>

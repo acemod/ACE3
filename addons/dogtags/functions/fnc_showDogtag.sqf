@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Shows dogtag.
+ * Shows dog tag.
  *
  * Arguments:
- * 0: Dogtag data <ARRAY>
+ * 0: Dog tag data <ARRAY>
  * 1: Display as double tag <BOOLEAN>
  *
  * Return Value:

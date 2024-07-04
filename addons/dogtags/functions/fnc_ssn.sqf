@@ -1,16 +1,16 @@
 #include "..\script_component.hpp"
 /*
  * Author: kymckay
- * Reports a social security number generated from the units name.
+ * Reports a social security number generated from the unit's name.
  *
  * Arguments:
- * 0: Name of a unit <STRING>
+ * 0: Unit name <STRING>
  *
  * Return Value:
  * A random three/two/four format social security number <STRING>
  *
  * Example:
- * _ssn = ["AAA"] call ace_dogtags_fnc_ssn
+ * ["name"] call ace_dogtags_fnc_ssn
  *
  * Public: No
  */

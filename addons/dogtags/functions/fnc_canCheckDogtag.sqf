@@ -1,14 +1,14 @@
 #include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Checks if the target's dogtag can be checked by the unit.
+ * Checks if the target's dog tag can be checked by the unit.
  *
  * Arguments:
  * 0: Player (not used) <OBJECT>
  * 1: Target <OBJECT>
  *
  * Return Value:
- * If dogtag can be checked <BOOL>
+ * If dog tag can be checked <BOOL>
  *
  * Example:
  * [player, cursorObject] call ace_dogtags_fnc_canCheckDogtag

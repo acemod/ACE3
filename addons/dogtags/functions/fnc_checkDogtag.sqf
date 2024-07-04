@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Checks the unit's dogtag.
+ * Checks the unit's dog tag.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player, unit] call ace_dogtags_fnc_checkDogtag
+ * [player, cursorObject] call ace_dogtags_fnc_checkDogtag
  *
  * Public: No
  */
@@ -34,10 +34,8 @@ playSound3D [
     50
 ];
 
-// Display dogtag
+// Display dog tag
 private _doubleTags = (_target getVariable [QGVAR(dogtagTaken), objNull]) != _target;
 private _dogtagData = _target call FUNC(getDogtagData);
 
-[{
-    [QGVAR(showDogtag), _this] call CBA_fnc_localEvent;
-}, [_dogtagData, _doubleTags], DOGTAG_SHOW_DELAY] call CBA_fnc_waitAndExecute;
+[LINKFUNC(showDogtag), [_dogtagData, _doubleTags], DOGTAG_SHOW_DELAY] call CBA_fnc_waitAndExecute;

@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL
- * If the dogtag isn't already taken, it triggers an event on the server.
- * If the dogtag is already taken, it displays info about it.
+ * If the dog tag hasn't already been taken, it triggers an event on the server.
+ * If the dog tag has already been taken, it displays info about it.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player, unit] call ace_dogtags_fnc_takeDogtag
+ * [player, cursorObject] call ace_dogtags_fnc_takeDogtag
  *
  * Public: No
  */

@@ -1,7 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Server: Creates new dogtag item and sends it to client.
+ * Server: Creates a new dog tag item and sends it to client.
+ * It broacasts the dog tag info to all machines with interfaces.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -11,7 +12,7 @@
  * None
  *
  * Example:
- * [player, cursorTarget] call ace_dogtags_fnc_getDogtagItem
+ * [player, cursorObject] call ace_dogtags_fnc_getDogtagItem
  *
  * Public: No
  */
@@ -31,7 +32,7 @@ private _item = format ["ACE_dogtag_%1", GVAR(idCounter)];
 // Broadcast data globally, so that clients can use it where needed
 [QGVAR(broadcastDogtagInfo), [_item, _dogTagData]] call CBA_fnc_globalEvent;
 
-// Dogtags have no mass, so no need to check if it can fit in container, but check if unit has an inventory at all
+// Dog tags have no mass, so no need to check if it can fit in container, but check if unit has an inventory at all
 [_player, _item, true] call CBA_fnc_addItem;
 
 _name = _dogtagData param [0, ""];
