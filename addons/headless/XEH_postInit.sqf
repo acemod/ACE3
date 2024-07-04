@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+if (!isMultiplayer) exitWith {};
+
 ["CBA_settingsInitialized", {
     // Register and remove HCs if not client that is not server and distribution or end mission enabled
     if ((!hasInterface || isServer) && {XGVAR(enabled) || XGVAR(endMission) != 0}) then {
@@ -23,6 +25,23 @@
                 // Rebalance units
                 if (_rebalance in [REBALANCE, FORCED_REBALANCE]) then {
                     (_rebalance == FORCED_REBALANCE) call FUNC(rebalance);
+                };
+            }] call CBA_fnc_addEventHandler;
+
+            // If CBA's loadout validation is enabled, warn users
+            if (XGVAR(transferLoadout) > 0 && {(missionNamespace getVariable ["CBA_network_loadoutValidation", 0]) isEqualTo 2}) then {
+                WARNING("CBA_network_loadoutValidation is enabled - acex_headless_transferLoadout should therefore be disabled");
+                [QEGVAR(common,displayTextStructured), ["CBA_network_loadoutValidation is enabled - acex_headless_transferLoadout should therefore be disabled", 3]] call CBA_fnc_globalEvent;
+            };
+
+            ["CBA_SettingChanged", {
+                params ["_setting", "_value"];
+
+                if (_setting != "CBA_network_loadoutValidation") exitWith {};
+
+                if (XGVAR(transferLoadout) > 0 && {_value isEqualTo 2}) then {
+                    WARNING("CBA_network_loadoutValidation is enabled - acex_headless_transferLoadout should therefore be disabled");
+                    [QEGVAR(common,displayTextStructured), ["CBA_network_loadoutValidation is enabled - acex_headless_transferLoadout should therefore be disabled", 3]] call CBA_fnc_globalEvent;
                 };
             }] call CBA_fnc_addEventHandler;
         } else {

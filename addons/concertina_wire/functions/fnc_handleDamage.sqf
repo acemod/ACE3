@@ -22,7 +22,7 @@
 params ["_wire", "", "_damage", "_source", ""];
 if (_damage < 0.5) exitWith { 0 };
 
-if (!(isNull _source)) then {
+if (!isNull _source) then {
     _wire setVariable [QGVAR(lastDamager), _source];
 };
 
