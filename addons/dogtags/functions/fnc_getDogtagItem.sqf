@@ -28,7 +28,6 @@ if (GVAR(idCounter) > 999) exitWith {ERROR("Ran out of IDs");};
 private _dogTagData = [_target] call FUNC(getDogTagData);
 private _item = format ["ACE_dogtag_%1", GVAR(idCounter)];
 
-GVAR(dogtagsData) set [_item, _dogTagData];
 
 [QGVAR(addDogtagItem), [_item, _dogTagData], [_player]] call CBA_fnc_targetEvent;
 
