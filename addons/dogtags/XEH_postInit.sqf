@@ -18,6 +18,7 @@ if (isServer) then {
         } forEach GVAR(dogtagsData);
     }] call CBA_fnc_addEventHandler;
 } else {
+    if (!hasInterface) exitWith {}:
     [QGVAR(requestSyncDogtagDataJIP), clientOwner] call CBA_fnc_serverEvent;
 };
 
