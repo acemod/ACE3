@@ -23,11 +23,15 @@ private _fnc_getActions = {
 
     {
         private _config = _cfgWeapons >> _x;
+
         if (getNumber (_config >> QGVAR(tagID)) > 0) then {
             private _displayName = getText (_config >> "displayName");
             private _picture = getText (_config >> "picture");
 
-            private _action = [_x, _displayName, _picture, LINKFUNC(checkDogtagItem), {true}, {}, _x] call EFUNC(interact_menu,createAction);
+            private _action = [_x, _displayName, _picture, {
+                [GVAR(dogtagsData) getOrDefault [_this select 2, []]] call FUNC(showDogtag);
+            }, {true}, {}, _x] call EFUNC(interact_menu,createAction);
+
             _actions pushBack [_action, [], _player];
         };
     } forEach (_player call EFUNC(common,uniqueItems));
