@@ -37,7 +37,7 @@ private _selectionsToIgnore = _vehicle call FUNC(getSelectionsToIgnore);
 (getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];  // Since 1.82 these are all lower case
 
 // get hitpoints of wheels with their selections
-([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
+([_vehicle] call EFUNC(common,getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
 
 private _hitPointsAddedNames = [];
 private _hitPointsAddedStrings = [];
@@ -52,7 +52,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 
 {
     private _selection = _x;
-    private _hitpoint = toLower (_hitPoints select _forEachIndex);
+    private _hitpoint = toLowerANSI (_hitPoints select _forEachIndex);
 
     // Skip ignored selections
     if (_forEachIndex in _selectionsToIgnore) then {

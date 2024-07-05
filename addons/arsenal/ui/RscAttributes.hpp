@@ -467,7 +467,6 @@ class GVAR(display) {
                 };
                 class actionsText1: RscTextMulti {
                     idc = IDC_actionsText1;
-                    fade = 1;
                     x = QUOTE(0 * GRID_W);
                     y = QUOTE(5 * GRID_H);
                     w = QUOTE(45 * GRID_W);
@@ -479,8 +478,6 @@ class GVAR(display) {
                 };
                 class actionsButton1: ctrlButton {
                     idc = IDC_actionsButton1;
-                    onMouseEnter = QUOTE(ctrlSetFocus (_this select 0));
-                    fade = 1;
                     text = "";
                     x = QUOTE(1 * GRID_W);
                     y = QUOTE(6 * GRID_H);
@@ -567,6 +564,7 @@ class GVAR(display) {
             colorSelect[] = {1,1,1,1};
             colorSelect2[] = {1,1,1,1};
             colorPictureRightSelected[] = {1,1,1,1};
+            colorTextRight[] = {0.5, 0.5, 0.5, 0};
             onLBSelChanged = QUOTE(_this call FUNC(onSelChangedLeft));
             onLBDblClick = QUOTE(_this call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(leftTabFocus) = true);
@@ -597,6 +595,7 @@ class GVAR(display) {
             colorSelect[] = {1,1,1,1};
             colorSelect2[] = {1,1,1,1};
             colorPictureRightSelected[] = {1,1,1,1};
+            colorTextRight[] = {0.5, 0.5, 0.5, 0};
             columns[] = {0.07, 0.15, 0.75};
             idcLeft = IDC_arrowMinus;
             idcRIght = IDC_arrowPlus;

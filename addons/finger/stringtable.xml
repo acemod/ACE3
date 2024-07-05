@@ -79,7 +79,7 @@
             <Spanish>Distancia máxima entre los jugadores para mostrar el indicador que señala [por defecto: 4 metros]</Spanish>
             <Czech>Maximální vzdálenost mezi hráči pro ukázání směru [výchozí: 4 metry]</Czech>
             <Italian>Distanza massima tra giocatori per mostrare l'indicatore di puntamento [Predefinito: 4 metri]</Italian>
-            <Japanese>指差しのマーカー表示が他のプレイヤーに表示される最大範囲を決定できます。 [デフォルト: 4メートル]</Japanese>
+            <Japanese>指差しのマーカー表示が他のプレイヤーに表示される最大範囲 [デフォルト: 4メートル]</Japanese>
             <Korean>플레이어 사이에서 가리키기 표시를  보이게 하는 최대거리를 설정합니다[기본설정: 4 미터]</Korean>
             <Chinesesimp>设定指向标记最大显示距离。[预设：4米]</Chinesesimp>
             <Chinese>設定指向指示器最大顯示距離。[預設: 4公尺]</Chinese>

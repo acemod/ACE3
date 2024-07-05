@@ -54,6 +54,8 @@ if (_useInheritance) exitwith {
     (_parentPath + [_action select 0])
 };
 
+_objectType = _objectType call EFUNC(common,getConfigName);
+
 // Ensure the config menu was compiled first
 if (_typeNum == 0) then {
     [_objectType] call FUNC(compileMenu);
@@ -62,18 +64,14 @@ if (_typeNum == 0) then {
 };
 
 private _namespace = [GVAR(ActNamespace), GVAR(ActSelfNamespace)] select _typeNum;
-private _actionTrees = _namespace getVariable _objectType;
-if (isNil "_actionTrees") then {
-    _actionTrees = [];
-    _namespace setVariable [_objectType, _actionTrees];
-};
+private _actionTrees = _namespace getOrDefault [_objectType, [], true];
 
 if (_parentPath isEqualTo ["ACE_MainActions"]) then {
     [_objectType, _typeNum] call FUNC(addMainAction);
 };
 
 private _parentNode = [_actionTrees, _parentPath] call FUNC(findActionNode);
-if (isNil {_parentNode}) exitWith {
+if (isNil "_parentNode") exitWith {
     ERROR_4("Failed to add action - action (%1) to parent %2 on object %3 [%4]",(_action select 0),_parentPath,_objectType,_typeNum);
     []
 };

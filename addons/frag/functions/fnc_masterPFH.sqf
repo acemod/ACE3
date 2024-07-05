@@ -34,7 +34,7 @@ while {_objectCount > 0 && {_iter < (GVAR(maxTrackPerFrame) min _objectCount)}} 
     if (!isNil "_object") then {
         private _args = GVAR(arguments) select GVAR(lastIterationIndex);
 
-        if (!(_args call FUNC(pfhRound))) then {
+        if !(_args call FUNC(pfhRound)) then {
             _gcIndex pushBack GVAR(lastIterationIndex); // Add it to the GC if it returns false
         };
     };

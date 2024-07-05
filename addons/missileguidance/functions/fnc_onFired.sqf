@@ -20,7 +20,7 @@
 params ["_shooter","_weapon","","_mode","_ammo","","_projectile"];
 
 // Bail on not missile
-if (!(_ammo isKindOf "MissileBase")) exitWith {};
+if !(_ammo isKindOf "MissileBase") exitWith {};
 
 // Bail if guidance is disabled for this ammo
 if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "enabled")) != 1) exitWith {};
@@ -145,7 +145,7 @@ if (_onFiredFunc != "") then {
 //      _stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];
 //      _seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
 
-[FUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(guidancePFH), 0, _args ] call CBA_fnc_addPerFrameHandler;
 
 
 /* Clears locking settings

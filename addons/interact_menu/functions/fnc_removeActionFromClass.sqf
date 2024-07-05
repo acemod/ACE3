@@ -20,6 +20,8 @@
 
 params ["_objectType", "_typeNum", "_fullPath", ["_inherit", false, [false]]];
 
+_objectType = _objectType call EFUNC(common,getConfigName);
+
 private _res = _fullPath call FUNC(splitPath);
 _res params ["_parentPath", "_actionName"];
 
@@ -48,13 +50,10 @@ if (_inherit) exitWith {
 };
 
 private _namespace = [GVAR(ActNamespace), GVAR(ActSelfNamespace)] select _typeNum;
-private _actionTrees = _namespace getVariable _objectType;
-if (isNil "_actionTrees") then {
-    _actionTrees = [];
-};
+private _actionTrees = _namespace getOrDefault [_objectType, []];
 
 private _parentNode = [_actionTrees, _parentPath] call FUNC(findActionNode);
-if (isNil {_parentNode}) exitWith {};
+if (isNil "_parentNode") exitWith {};
 
 // Iterate through children of the father
 private _found = false;

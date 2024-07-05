@@ -95,7 +95,7 @@ if (_state) then {
                     // Check if the necessary keys were pressed for a keybind
                     _return = _comboDikPressed &&
                         {_mainDevice == "KEYBOARD"} &&
-                        {((GVAR(keyboardInputMain) getOrDefault [_mainDik, [false, 0]]) select 1) > ([0, 1] select _isDoubleTap)}; // check how many times the main key was pressed
+                        {((GVAR(keyboardInputMain) getOrDefault [_mainDik, [false, 0]]) select 1) > (parseNumber _isDoubleTap)}; // check how many times the main key was pressed
 
                     // Keybind was detected
                     if (_return) exitWith {
@@ -143,11 +143,7 @@ if (_state) then {
                 _ctrl ctrlSetEventHandler ["ButtonClick", toString {
                     closeDialog 0;
 
-                    if (["ace_medical"] call FUNC(isModLoaded)) then {
-                        [player, "respawn_button"] call EFUNC(medical_status,setDead);
-                    } else {
-                        player setDamage 1;
-                    };
+                    [player, "respawn_button"] call FUNC(setDead);
 
                     [false] call FUNC(disableUserInput);
                 }];

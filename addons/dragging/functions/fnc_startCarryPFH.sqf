@@ -32,9 +32,9 @@ if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-// Same as dragObjectPFH, checks if object is deleted or dead OR (target moved away from carrier (weapon disasembled))
-if (!alive _target || {_unit distance _target > 10}) then {
-    TRACE_4("dead/distance",_unit,_target,_timeOut,CBA_missionTime);
+// Drop if the target is destroyed, if the target moved away from carrier (e.g. weapon disassembled) or if the carrier starts limping
+if !(alive _target && {_unit distance _target <= 10} && {_unit getHitPointDamage "HitLegs" < 0.5}) exitWith {
+    TRACE_4("dead/distance/limping",_unit,_target,_timeOut,CBA_missionTime);
     [_unit, _target] call FUNC(dropObject_carry);
 
     _idPFH call CBA_fnc_removePerFrameHandler;
@@ -42,7 +42,7 @@ if (!alive _target || {_unit distance _target > 10}) then {
 
 // Handle persons vs. objects
 if (_target isKindOf "CAManBase") then {
-    // Drop if in timeout
+    // Carry person after timeout (animation takes a long time to finish)
     if (CBA_missionTime > _timeOut) exitWith {
         TRACE_4("Start carry person",_unit,_target,_timeOut,CBA_missionTime);
         [_unit, _target] call FUNC(carryObject);
@@ -50,13 +50,13 @@ if (_target isKindOf "CAManBase") then {
         _idPFH call CBA_fnc_removePerFrameHandler;
     };
 } else {
-    // Drop if in timeout
+    // Timeout: Drop target. CBA_missionTime, because anim length is linked to ingame time
     if (CBA_missionTime > _timeOut) exitWith {
         TRACE_4("timeout",_unit,_target,_timeOut,CBA_missionTime);
         _idPFH call CBA_fnc_removePerFrameHandler;
 
-        private _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
-        [_unit, _draggedObject] call FUNC(dropObject_carry);
+        private _carriedObject = _unit getVariable [QGVAR(carriedObject), objNull];
+        [_unit, _carriedObject] call FUNC(dropObject_carry);
     };
 
     // Wait for the unit to stand up
