@@ -37,7 +37,10 @@ if (_useInheritance) exitwith {
     if (_objectType == "CAManBase") then {
         GVAR(inheritedActionsMan) pushBack [_typeNum, _parentPath, _action, _excludedClasses];
         {
-            [_x, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+            private _type = _x;
+            if (_excludedClasses findIf {_type isKindOf _x} == -1) then { // skip excluded classes and children
+                [_x, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+            };
         } forEach (GVAR(inheritedClassesMan) - _excludedClasses);
     } else {
         GVAR(inheritedActionsAll) pushBack [_objectType, _typeNum, _parentPath, _action, _excludedClasses];

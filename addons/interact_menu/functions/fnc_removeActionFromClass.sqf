@@ -18,33 +18,42 @@
  * Public: No
  */
 
-params ["_objectType", "_typeNum", "_fullPath", ["_inherit", false, [false]]];
+params ["_objectType", "_typeNum", "_fullPath", ["_useInheritance", false, [false]]];
 
 _objectType = _objectType call EFUNC(common,getConfigName);
 
 private _res = _fullPath call FUNC(splitPath);
 _res params ["_parentPath", "_actionName"];
 
-if (_inherit) exitWith {
-    private _children = ("_x isKindOf _objectType" configClasses (configFile >> "CfgVehicles")) apply {configName _x};
+if (_useInheritance) exitWith {
+    // Only need to run for classes that have already been initialized
     {
         [_x, _typeNum, _fullPath] call FUNC(removeActionFromClass);
-    } forEach (_children arrayIntersect GVAR(inheritedClassesAll)); // only need to run for classes that have already been initialized
+    } forEach (GVAR(inheritedClassesAll) select {_x isKindOf _objectType});
 
-    private _index = GVAR(inheritedActionsAll) findIf { // find same path and actionName, and check if it's a parent class, needs to be checked for all classes
+    // Find same path and actionName, and check if it's a parent class, needs to be checked for all classes
+    private _index = GVAR(inheritedActionsAll) findIf {
         params ["_currentType", "", "_currentParentPath", "_currentAction"];
+
         [_objectType isKindOf _currentType, _currentParentPath, _currentAction select 0] isEqualTo [true, _parentPath, _actionName]
     };
+
+     // Add to exclude classes
     if (_index != -1) then {
-        (GVAR(inheritedActionsAll) select _index select 4) pushBack _objectType; // add to exclude classes
+        (GVAR(inheritedActionsAll) select _index select 4) pushBackUnique _objectType;
     };
-    if (_objectType isKindOf "CAManBase") then { // children of CAManBase need special treatment because of inheritedActionsMan array
+
+    // Children of CAManBase need special treatment because of inheritedActionsMan array
+    if (_objectType isKindOf "CAManBase") then {
         private _index = GVAR(inheritedActionsMan) findIf {
             params ["", "_currentParentPath", "_currentAction"];
+
             [_currentParentPath, _currentAction select 0] isEqualTo [_parentPath, _actionName]
         };
+
+        // Different index because array doesn't include _objectType
         if (_index != -1) then {
-            (GVAR(inheritedActionsMan) select _index select 3) pushBack _objectType; // different index because array doesn't include _objectType
+            (GVAR(inheritedActionsMan) select _index select 3) pushBackUnique _objectType;
         };
     };
 };
