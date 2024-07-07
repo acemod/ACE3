@@ -20,7 +20,7 @@ class CfgPatches {
     };
 };
 
-#include "CfgMagazines.hpp"
+// #include "CfgMagazines.hpp"
 #include "CfgMagazineGroups.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgWeapons.hpp"
+// #include "CfgVehicles.hpp"
+// #include "CfgWeapons.hpp"

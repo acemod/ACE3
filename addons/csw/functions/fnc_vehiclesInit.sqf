@@ -1,7 +1,7 @@
-#include "../script_component.hpp"
- /*
+#include "..\script_component.hpp"
+/*
  * Author: [KND]Liquid, Brandon (TCVM)
- * Describe your function
+ * Initializes CSW systems on vehicle
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -10,27 +10,33 @@
  * None
  *
  * Example:
- * [vehicle] call ace_csw_fnc_vehiclesInit;
+ * cursorObject call ace_csw_fnc_vehiclesInit;
  *
  * Public: No
  */
 
 params ["_vehicle"];
-if (isNull _vehicle) exitWith { WARNING_1("%1 became null",_vehicle) };
+if (!alive _vehicle) exitWith { WARNING_1("%1 not alive",_vehicle); };
+if (!simulationEnabled _vehicle) exitWith {
+    [{simulationEnabled _this}, FUNC(vehiclesInit), _vehicle] call CBA_fnc_waitUntilAndExecute;
+};
+
 private _typeOf = typeOf _vehicle;
 private _configOf = configOf _vehicle;
-private _configEnabled = (getNumber (_configOf >> "ace_csw" >> "enabled")) == 1;
-private _proxyWeapon = getText(_configOf >> "ace_csw" >> "proxyWeapon");
-private _turretsAffected = parseSimpleArray ((_configOf >> "ace_csw" >> "turrets") call BIS_fnc_getCfgData);
+private _configEnabled = (getNumber (_configOf >> QUOTE(ADDON) >> "enabled")) == 1;
+private _assemblyConfig = _configEnabled && {(getText (_configOf >> QUOTE(ADDON) >> "disassembleWeapon")) != ""};
+TRACE_4("initVehicle",_vehicle,_typeOf,_configEnabled,_assemblyConfig);
 
+private _turretsAffected = parseSimpleArray ((_configOf >> QUOTE(ADDON) >> "turrets") call BIS_fnc_getCfgData);
 
 if (isNil "_turretsAffected") then {
     _turretsAffected = [[0]];
 };
 
-TRACE_1("",_turretsAffected);
+TRACE_2("vehicleInit turretsAffected",local _vehicle,_turretsAffected);
+
 private _enableAmmoHandling = GVAR(ammoHandling) > 0 || GVAR(defaultAssemblyMode);
-TRACE_5("vehicleInit",_vehicle,_typeOf,_configEnabled,_proxyWeapon,_enableAmmoHandling);
+TRACE_4("vehicleInit",_vehicle,_typeOf,_configEnabled,_enableAmmoHandling);
 
 if (_configEnabled && {local _vehicle}) then { // need to wait a frame to allow setting object vars during assembly
     {
@@ -38,11 +44,17 @@ if (_configEnabled && {local _vehicle}) then { // need to wait a frame to allow 
     } forEach _turretsAffected;
 };
 
+// Add interactions for players
 if (hasInterface && {!(_typeOf in GVAR(initializedVehicleTypes))}) then {
     GVAR(initializedVehicleTypes) pushBack _typeOf;
     TRACE_1("Adding Actions",_typeOf);
 
-    private _condition = {[_player, _target, []] call EFUNC(common,canInteractWith) && {[_player] call CBA_fnc_vehicleRole == "gunner" || [_player] call CBA_fnc_vehicleRole == "commander"}};
+
+    private _ammoActionPath = [];
+    private _magazineLocation = getText (_configOf >> QUOTE(ADDON) >> "magazineLocation");
+    private _condition = {[_player, _target, []] call EFUNC(common,canInteractWith)
+        && {[_player] call CBA_fnc_vehicleRole == "gunner"
+        || [_player] call CBA_fnc_vehicleRole == "commander"}};
     private _childenCode = {
         params ["_vehicle", "_player", "_params"];
         _params params ["_turretsAffected"];
@@ -50,21 +62,12 @@ if (hasInterface && {!(_typeOf in GVAR(initializedVehicleTypes))}) then {
         TRACE_3("=======================",_player,_vehicle,_turretsAffected);
         BEGIN_COUNTER(getActions); // can remove for final release
         //private _ret = ([_vehicle,_player,_turretsAffected] call FUNC(reload_actionsLoad)) + ([_vehicle,_player,_turretsAffected] call FUNC(reload_actionsUnload));
-        private _ret = (call FUNC(reload_actionsLoad)) + (call FUNC(reload_actionsUnload));
+        private _ret = (call FUNC(getLoadActions)) + (call FUNC(getUnloadActions));
         END_COUNTER(getActions);
         _ret
     };
-
-    private _ammoActionPath = [];
-    // If magazine handling is enabled or weapon assembly/disassembly is enabled we enable ammo handling
     if (_enableAmmoHandling) then {
-        //if (_configEnabled) then {
-            private _ammoAction = [QGVAR(magazine), localize LSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode,[_turretsAffected]] call EFUNC(interact_menu,createAction);
-            _ammoActionPath = [_typeOf, 1, ["ACE_SelfActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
-        //};
-    };
-    if (["ACE_reload"] call EFUNC(common,isModLoaded)) then {
-        private _checkAmmoAction = [QGVAR(checkAmmo), localize ELSTRING(reload,checkAmmo), "", {[_player, _target] call EFUNC(reload,checkAmmo)}, {[_player, _target] call EFUNC(reload,canCheckAmmo)}] call EFUNC(interact_menu,createAction);
-        [_typeOf, 1, _ammoActionPath, _checkAmmoAction] call EFUNC(interact_menu,addActionToClass);
+        private _ammoAction = [QGVAR(magazine), LLSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode,[_turretsAffected]] call EFUNC(interact_menu,createAction);
+        _ammoActionPath = [_typeOf, 1, ["ACE_SelfActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
     };
 };
