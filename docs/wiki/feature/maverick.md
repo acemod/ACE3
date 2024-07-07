@@ -2,7 +2,7 @@
 layout: wiki
 title: Maverick
 component: maverick
-description: Adds pylon magazines with laser guided AGM-65 Maverick L and KH25ML.
+description: Adds pylon magazines with laser-guided AGM-65 Maverick L and KH25ML.
 group: feature
 category: equipment
 parent: wiki
@@ -14,4 +14,4 @@ version:
 ---
 
 ## 1. Overview
-Adds pylon magazines with laser guided AGM-65 Maverick L and KH25ML. 
+Adds pylon magazines with laser-guided AGM-65 Maverick L and KH25ML. 
