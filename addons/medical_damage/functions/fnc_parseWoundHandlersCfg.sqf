@@ -26,7 +26,11 @@ private _entries = [];
     if (_entryResult != "") then {
         if (ADDON) then {
             // Runs in postInit
-            _entries pushBack (call compile _entryResult);
+            _entryResult = call compile _entryResult;
+
+            if (!isNil "_entryResult") then {
+                _entries pushBack _entryResult;
+            };
         } else {
             // Runs in preInit
             // In case function doesn't exist yet, wrap in extra layer
