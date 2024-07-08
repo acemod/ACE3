@@ -4,18 +4,25 @@
 
 if (!hasInterface) exitWith {};
 
-["ACE3 Weapons", QGVAR(safeMode), localize LSTRING(SafeMode), {
+["ACE3 Weapons", QGVAR(safeMode), LLSTRING(SafeMode), {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
+
+    (weaponState ACE_player) params ["_currentWeapon", "_currentMuzzle"];
+
     // Conditions: specific
-    if !([ACE_player] call CBA_fnc_canUseWeapon && {currentWeapon ACE_player != binocular ACE_player} && {currentWeapon ACE_player != ""}) exitWith {false};
+    if !(ACE_player call CBA_fnc_canUseWeapon && {_currentWeapon != ""} && {_currentWeapon != binocular ACE_player}) exitWith {false};
 
     // Statement
-    [ACE_player, currentWeapon ACE_player, currentMuzzle ACE_player] call FUNC(lockSafety);
+    [ACE_player, _currentWeapon, _currentMuzzle] call FUNC(lockSafety);
+
     true
 }, {false}, [DIK_GRAVE, [false, true, false]], false] call CBA_fnc_addKeybind;
 
 ["unit", {
-    private _weaponSafe = currentWeapon ACE_player in (ACE_player getVariable [QGVAR(safedWeapons), []]);
-    [!_weaponSafe] call FUNC(setSafeModeVisual);
+    (weaponState ACE_player) params ["_currentWeapon", "_currentMuzzle"];
+
+    private _weaponSafe = (((ACE_player getVariable [QGVAR(safedWeapons), createHashMap]) getOrDefault [_currentWeapon, []]) findIf {_x select 0 == _currentMuzzle} != -1);
+
+    !_weaponSafe call FUNC(setSafeModeVisual);
 }] call CBA_fnc_addPlayerEventHandler;

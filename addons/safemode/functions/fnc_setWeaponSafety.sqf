@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
- * Author: Brostrom.A
- * Safe or unsafe the given weapon based on weapon state; locked or unlocked.
+ * Author: Brostrom.A, johnb43
+ * Lock or unlock the given weapon based on weapon state.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -27,12 +27,12 @@ params [
 
 if (_weapon == "") exitWith {};
 
-private _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
+private _currentMuzzle = (_unit weaponState _weapon) select 1;
 
-_weapon = configName (configFile >> "CfgWeapons" >> _weapon);
+// Weapon is not available
+if (_currentMuzzle == "") exitWith {};
 
-private _muzzle = currentMuzzle _unit;
+// If the weapon is already in the desired state, don't do anything
+if (_state == (((_unit getVariable [QGVAR(safedWeapons), createHashMap]) getOrDefault [_weapon, []]) findIf {_x select 0 == _currentMuzzle} != -1)) exitWith {};
 
-if (_state isNotEqualTo (_weapon in _safedWeapons)) then {
-    [_unit, _weapon, _muzzle, _hint] call FUNC(lockSafety);
-};
+[_unit, _weapon, _currentMuzzle, _hint] call FUNC(lockSafety);
