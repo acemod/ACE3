@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Pterolatypus
- * Read a list of wound handler entries from config, accounting for inheritance
+ * Read a list of wound handler entries from config, accounting for inheritance.
  *
  * Arguments:
  * 0: The config class containing the entries <CONFIG>
@@ -29,7 +29,11 @@ private _entries = [];
             _entryResult = call compile _entryResult;
 
             if (!isNil "_entryResult") then {
-                _entries pushBack _entryResult;
+                if (_entryResult isEqualType {}) then {
+                    _entries pushBack _entryResult;
+                } else {
+                    ERROR_2("Wound handler '%1' needs to be a function, but is of type %2.",configName _x,toLowerANSI typeName _entryResult);
+                };
             };
         } else {
             // Runs in preInit
