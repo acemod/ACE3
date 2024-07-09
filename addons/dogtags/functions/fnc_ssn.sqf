@@ -10,7 +10,7 @@
  * A random three/two/four format social security number <STRING>
  *
  * Example:
- * ["name"] call ace_dogtags_fnc_ssn
+ * "name" call ace_dogtags_fnc_ssn
  *
  * Public: No
  */

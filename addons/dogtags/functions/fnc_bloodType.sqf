@@ -4,13 +4,13 @@
  * Reports a blood type depending on the unit's name.
  *
  * Arguments:
- * 0: Name of a unit <STRING>
+ * 0: Unit name <STRING>
  *
  * Return Value:
  * A random blood type <STRING>
  *
  * Example:
- * ["name"] call ace_dogtags_fnc_bloodType
+ * "name" call ace_dogtags_fnc_bloodType
  *
  * Public: No
  */
