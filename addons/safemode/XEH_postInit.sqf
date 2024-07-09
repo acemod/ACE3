@@ -22,7 +22,7 @@ if (!hasInterface) exitWith {};
 ["unit", {
     (weaponState ACE_player) params ["_currentWeapon", "_currentMuzzle"];
 
-    private _weaponSafe = (((ACE_player getVariable [QGVAR(safedWeapons), createHashMap]) getOrDefault [_currentWeapon, []]) findIf {_x select 0 == _currentMuzzle} != -1);
+    private _weaponSafe = _currentMuzzle in ((ACE_player getVariable [QGVAR(safedWeapons), createHashMap]) getOrDefault [_currentWeapon, createHashMap]);
 
     !_weaponSafe call FUNC(setSafeModeVisual);
 }] call CBA_fnc_addPlayerEventHandler;
