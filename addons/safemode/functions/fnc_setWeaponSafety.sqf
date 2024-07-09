@@ -31,6 +31,9 @@ private _isMuzzleDefined = !isNil "_muzzle";
 
 if (_weapon == "" || {_isMuzzleDefined && {_muzzle == ""}}) exitWith {};
 
+// Check if weapon is a binocular
+if ((_weapon call EFUNC(common,getItemType)) select 1 == "binocular") exitWith {};
+
 // Invalid muzzle
 if (_isMuzzleDefined && {
     private _configWeapon = configFile >> "CfgWeapons" >> _weapon;

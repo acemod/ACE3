@@ -28,7 +28,7 @@ if (isNil "_safedWeapons") then {
     _unit setVariable [QGVAR(safedWeapons), _safedWeapons];
 };
 
-// See if the current weapon has locked muzzled
+// See if the current weapon has locked muzzles
 private _safedWeaponMuzzles = _safedWeapons getOrDefault [_weapon, createHashMap, true];
 
 // If muzzle is locked, unlock it (toggle)
@@ -54,7 +54,7 @@ if (isNil {_unit getVariable QGVAR(actionID)}) then {
                 _unit call CBA_fnc_canUseWeapon && {
                     (weaponState _unit) params ["_currentWeapon", "_currentMuzzle"];
 
-                    // Block firing the muizzle in safe mode
+                    // Block firing the muzzle in safe mode
                     if (_currentMuzzle in ((_unit getVariable [QGVAR(safedWeapons), createHashMap]) getOrDefault [_currentWeapon, createHashMap])) then {
                         if (inputAction "nextWeapon" > 0 || {inputAction "prevWeapon" > 0}) exitWith {
                             [_unit, _currentWeapon, _currentMuzzle] call FUNC(unlockSafety);
@@ -68,12 +68,12 @@ if (isNil {_unit getVariable QGVAR(actionID)}) then {
                     }
                 }
             ) then {
-                // Player hud
+                // Player HUD
                 false call FUNC(setSafeModeVisual);
 
                 true
             } else {
-                // Player hud
+                // Player HUD
                 true call FUNC(setSafeModeVisual);
 
                 false

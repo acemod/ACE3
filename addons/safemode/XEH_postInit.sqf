@@ -24,5 +24,6 @@ if (!hasInterface) exitWith {};
 
     private _weaponSafe = _currentMuzzle in ((ACE_player getVariable [QGVAR(safedWeapons), createHashMap]) getOrDefault [_currentWeapon, createHashMap]);
 
+    // Player HUD
     !_weaponSafe call FUNC(setSafeModeVisual);
 }] call CBA_fnc_addPlayerEventHandler;

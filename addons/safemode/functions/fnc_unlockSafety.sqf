@@ -45,7 +45,7 @@ if (inputAction "nextWeapon" == 0 && {inputAction "prevWeapon" == 0}) then {
     [_unit, _weapon, _muzzle] call FUNC(playChangeFiremodeSound);
 };
 
-// Player hud
+// Player HUD
 true call FUNC(setSafeModeVisual);
 
 // Show info box unless disabled
