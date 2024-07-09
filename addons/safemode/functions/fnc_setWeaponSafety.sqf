@@ -8,6 +8,7 @@
  * 1: Weapon <STRING>
  * 2: State <BOOL>
  * 3: Show hint <BOOL> (default: true)
+ * 4: Muzzle <STRING> (default: current muzzle of weapon)
  *
  * Return Value:
  * None
@@ -22,17 +23,48 @@ params [
     ["_unit", objNull, [objNull]],
     ["_weapon", "", [""]],
     ["_state", true, [true]],
-    ["_hint", true, [true]]
+    ["_hint", true, [true]],
+    ["_muzzle", nil, [""]]
 ];
 
-if (_weapon == "") exitWith {};
+private _isMuzzleDefined = !isNil "_muzzle";
 
-private _currentMuzzle = (_unit weaponState _weapon) select 1;
+if (_weapon == "" || {_isMuzzleDefined && {_muzzle == ""}}) exitWith {};
+
+// Invalid muzzle
+if (_isMuzzleDefined && {
+    private _configWeapon = configFile >> "CfgWeapons" >> _weapon;
+
+    // Get config case muzzle names
+    private _muzzles = (getArray (_configWeapon >> "muzzles")) apply {
+        if (_x == "this") then {
+            configName _configWeapon
+        } else {
+            configName (_configWeapon >> _x)
+        };
+    };
+
+    private _index = _muzzles findIf {_x == _muzzle};
+
+    if (_index == -1) exitWith {
+        true
+    };
+
+    // Make sure that muzzle is in the proper case
+    _muzzle = _muzzles select _index;
+
+    false
+}) exitWith {};
+
+// Get current weapon muzzle if not defined
+if (!_isMuzzleDefined) then {
+    _muzzle = (_unit weaponState _weapon) select 1;
+};
 
 // Weapon is not available
-if (_currentMuzzle == "") exitWith {};
+if (_muzzle == "") exitWith {};
 
 // If the weapon is already in the desired state, don't do anything
-if (_state == (((_unit getVariable [QGVAR(safedWeapons), createHashMap]) getOrDefault [_weapon, []]) findIf {_x select 0 == _currentMuzzle} != -1)) exitWith {};
+if (_state == (_muzzle in ((_unit getVariable [QGVAR(safedWeapons), createHashMap]) getOrDefault [_weapon, createHashMap]))) exitWith {};
 
-[_unit, _weapon, _currentMuzzle, _hint] call FUNC(lockSafety);
+[_unit, _weapon, _muzzle, _hint] call FUNC(lockSafety);

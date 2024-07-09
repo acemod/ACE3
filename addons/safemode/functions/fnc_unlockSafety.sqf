@@ -21,45 +21,27 @@
 params ["_unit", "_weapon", "_muzzle", ["_hint", true]];
 
 private _safedWeaponMuzzles = (_unit getVariable QGVAR(safedWeapons)) get _weapon;
-(_safedWeaponMuzzles deleteAt (_safedWeaponMuzzles findIf {_x select 0 == _muzzle})) params ["", "_firemode"];
+private _firemode = _safedWeaponMuzzles deleteAt _muzzle;
 
-private _ehID = _unit getVariable QGVAR(actionID);
-
-// Remove action if all weapons have put their safety on
-if (_safedWeaponMuzzles isEqualTo []) then {
+// Remove action if all weapons have removed their safeties
+if (_safedWeaponMuzzles isEqualTo createHashMap) then {
     (_unit getVariable QGVAR(safedWeapons)) deleteAt _weapon;
 
-    if (!isNil "_ehID") then {
+    private _ehID = _unit getVariable QGVAR(actionID);
+
+    if (!isNil "_ehID" && {(_unit getVariable QGVAR(safedWeapons)) isEqualTo createHashMap}) then {
         [_unit, "DefaultAction", _ehID] call EFUNC(common,removeActionEventHandler);
 
         _unit setVariable [QGVAR(actionID), nil];
     };
 };
 
-private _nextMode = inputAction "nextWeapon" > 0;
-
-(_unit weaponState _muzzle) params ["_currentWeapon", "_currentMuzzle"];
-
-// If selection is a different weapon or muzzle, take the first firemode available for new weapon/muzzle
-if (_currentWeapon != _weapon || {_currentMuzzle != _muzzle} || _nextMode) then {
-    private _config = configFile >> "CfgWeapons" >> _weapon;
-
-    if (_weapon != _muzzle) then {
-        _config = _config >> _muzzle;
-    };
-
-    if (_nextMode) then {
-        private _modes = (getArray (_config >> "modes")) select {getNumber (_config >> _x >> "showToPlayer") == 1};
-
-        _firemode = _modes param [(_modes find _firemode) + 1, ""];
-    };
-
-    // The alt syntax of selectWeapon doesn't mess with gun lights and lasers
+// Let engine handle switching to next firemode/muzzle
+if (inputAction "nextWeapon" == 0 && {inputAction "prevWeapon" == 0}) then {
+    // This syntax of selectWeapon doesn't mess with gun lights and lasers
     _unit selectWeapon [_weapon, _muzzle, _firemode];
-};
 
-// Play fire mode selector sound
-if (!_nextMode) then {
+    // Play fire mode selector sound
     [_unit, _weapon, _muzzle] call FUNC(playChangeFiremodeSound);
 };
 
