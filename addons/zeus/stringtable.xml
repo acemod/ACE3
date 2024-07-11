@@ -2011,7 +2011,7 @@
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_ForceInterface_Tooltip">
             <English>Forces the spectator interface preventing the player from closing it with the Escape key</English>
-            <Japanese>観戦インターフェイスを強制し、ユーザーがEscキーでも閉じられないようにします。</Japanese>
+            <Japanese>観戦インターフェイスを強制し、ユーザがEscキーでも閉じられないようにします。</Japanese>
             <Russian>Активирует интерфейс spectator, не позволяя игроку закрыть его с помощью клавиши Escape.</Russian>
             <Korean>플레이어가 Esc 키로 관전자 인터페이스를 닫지 못하도록 강제로 관전자 인터페이스를 설정합니다.</Korean>
             <German>Erzwingt die Zuschauer-Ansicht und verhindert dass der Spieler sie mit der Esc-Taste schließen kann</German>

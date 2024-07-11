@@ -12,7 +12,7 @@
             <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
             <Italian>Mostra sempre il cursore per le autointerazioni</Italian>
             <Portuguese>Sempre mostrar cursor para interação pessoal</Portuguese>
-            <Japanese>セルフ インタラクションへ常にカーソルを表示</Japanese>
+            <Japanese>カーソルを常に表示</Japanese>
             <Korean>자기상호작용 시 항상 커서를 보이기</Korean>
             <Chinesesimp>自我互动时永远显示光标</Chinesesimp>
             <Chinese>自我互動時永遠顯示游標</Chinese>
@@ -29,7 +29,7 @@
             <German>Immer den Mauszeiger für Fremd-Interaktionen anzeigen</German>
             <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
             <Portuguese>Sempre mostrar cursor para interação</Portuguese>
-            <Japanese>インタラクションへ常にカーソルを表示</Japanese>
+            <Japanese>カーソルを常に表示</Japanese>
             <Korean>상호작용 시 항상 커서를 보이기</Korean>
             <Chinesesimp>互动时永远显示光标</Chinesesimp>
             <Chinese>互動時永遠顯示游標</Chinese>
@@ -46,7 +46,7 @@
             <German>Interaktionsmenü in Listen anzeigen</German>
             <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
             <Portuguese>Mostrar menu de interação como listas</Portuguese>
-            <Japanese>インタラクションメニューを一覧表示</Japanese>
+            <Japanese>メニューをリストで表示</Japanese>
             <Korean>상호작용메뉴를 리스트화 해서 보이기</Korean>
             <Chinesesimp>以列表方式显示互动表单</Chinesesimp>
             <Chinese>以列表方式顯示互動表單</Chinese>
@@ -80,7 +80,7 @@
             <Hungarian>Saját cselekvő gomb</Hungarian>
             <Italian>Tasto autointerazioni</Italian>
             <Portuguese>Tecla de Interação Pessoal</Portuguese>
-            <Japanese>セルフ インタラクション キー</Japanese>
+            <Japanese>セルフ・インタラクション キー</Japanese>
             <Korean>자기상호작용 키</Korean>
             <Chinesesimp>自我互动键</Chinesesimp>
             <Chinese>自我互動鍵</Chinese>
@@ -131,7 +131,7 @@
             <Portuguese>Ações do Zeus</Portuguese>
             <Russian>Действия Зевса</Russian>
             <Italian>Interazioni Zeus</Italian>
-            <Japanese>Zeusでのアクション</Japanese>
+            <Japanese>Zeusのアクション</Japanese>
             <Korean>제우스 동작</Korean>
             <Chinesesimp>宙斯操作</Chinesesimp>
             <Chinese>宙斯操作</Chinese>
@@ -216,7 +216,7 @@
             <Czech>Udržuj kurzor na středu</Czech>
             <Portuguese>Manter o cursor centralizado</Portuguese>
             <Italian>Mantieni il cursore centrato</Italian>
-            <Japanese>常にカーソルを中央にする</Japanese>
+            <Japanese>カーソルを常に中心にする</Japanese>
             <Korean>커서를 항상 가운데에 둡니다</Korean>
             <Chinesesimp>保持光标在中心点</Chinesesimp>
             <Chinese>保持游標在中心點</Chinese>
@@ -233,7 +233,7 @@
             <Spanish>Mantiene el cursor centrado y despliega los menús alrededor. Útil si el tamaño de la pantalla es limitado.</Spanish>
             <Portuguese>Manter o cursor centralizado e mover o menu de opções. Útil caso o tamanho da tela seja limitado.</Portuguese>
             <Italian>Mantieni il cursore centrato e sposta il menù intorno. Utile se lo schermo è piccolo.</Italian>
-            <Japanese>常にカーソルを中央へ表示させ、オプション メニューが移動します。画面の大きさが制限されている時に使いやすくなります。</Japanese>
+            <Japanese>カーソルを常に中心に表示し、オプション メニューを移動させます。画面の大きさが制限されている時に便利です。</Japanese>
             <Korean>커서를 항상 가운데에 두고 메뉴를 움직입니다. 화면의 크기가 제한되있을 때 유용합니다.</Korean>
             <Chinesesimp>保持光标在中心点并平移周遭的选项菜单。这对在屏幕尺寸有限的玩家很有用！</Chinesesimp>
             <Chinese>保持游標在中心點並平移周遭的選項選單。這對在螢幕尺寸有限的玩家很有用!</Chinese>
@@ -250,7 +250,7 @@
             <Portuguese>Execute a ação quando soltar a tecla de menu</Portuguese>
             <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
             <Italian>Esegui l'azione quando rilasci il tasto menu</Italian>
-            <Japanese>メニュー キーを離した時にアクションを実行</Japanese>
+            <Japanese>キーを離した時にアクションを実行</Japanese>
             <Korean>메뉴 키를 놓을 때 행동하기</Korean>
             <Chinesesimp>当放开菜单键后就执行动作</Chinesesimp>
             <Chinese>當放開選單鍵後就執行動作</Chinese>
@@ -267,7 +267,7 @@
             <Portuguese>Tamanho do texto de interação</Portuguese>
             <Hungarian>Cselekvő szöveg mérete</Hungarian>
             <Italian>Dimensione del testo d'interazione</Italian>
-            <Japanese>インタラクション文字の大きさ</Japanese>
+            <Japanese>テキストの大きさ</Japanese>
             <Korean>상호작용 - 문자크기</Korean>
             <Chinesesimp>互动菜单文字大小</Chinesesimp>
             <Chinese>互動選單文字大小</Chinese>
@@ -284,7 +284,7 @@
             <Portuguese>Sombra do texto de interação</Portuguese>
             <Hungarian>Cselekvő szöveg árnyéka</Hungarian>
             <Italian>Ombra del testo d'interazione</Italian>
-            <Japanese>インタラクション文字へ影</Japanese>
+            <Japanese>テキストに影を表示</Japanese>
             <Korean>상호작용 - 문자그림자</Korean>
             <Chinesesimp>互动菜单文字阴影</Chinesesimp>
             <Chinese>互動選單文字陰影</Chinese>
@@ -335,7 +335,7 @@
             <Hungarian>Cselekvő menü háttere</Hungarian>
             <Russian>Фон меню взаимодействия</Russian>
             <Italian>Sfondo Menù Interazioni</Italian>
-            <Japanese>インタラクションメニューの背景</Japanese>
+            <Japanese>メニューの背景</Japanese>
             <Korean>상호작용 메뉴 배경</Korean>
             <Chinesesimp>互动菜单背景</Chinesesimp>
             <Chinese>互動選單背景</Chinese>
@@ -352,7 +352,7 @@
             <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
             <Russian>Размыть фон, пока открыто меню взаимодействия.</Russian>
             <Italian>Sfoca lo sfondo mentre il Menù Interazioni è aperto.</Italian>
-            <Japanese>インタラクションメニューを開いたとき、背景をぼかします。</Japanese>
+            <Japanese>インタラクション メニューを開いたとき、背景をぼかします。</Japanese>
             <Korean>상호작용 메뉴가 열릴 시 배경을 흐릿하게 처리합니다.</Korean>
             <Chinesesimp>当互动菜单开启时，模糊背景画面。</Chinesesimp>
             <Chinese>當互動選單開啟時，模糊背景畫面</Chinese>
@@ -386,7 +386,7 @@
             <Hungarian>Fekete</Hungarian>
             <Russian>Черный</Russian>
             <Italian>Nero</Italian>
-            <Japanese>背景を黒くする</Japanese>
+            <Japanese>背景を暗くする</Japanese>
             <Korean>까맣게</Korean>
             <Chinesesimp>黑色</Chinesesimp>
             <Chinese>黑色</Chinese>
@@ -436,7 +436,7 @@
             <Spanish>Menú de interacción</Spanish>
             <Italian>Menù Interazioni</Italian>
             <French>Menu d'interaction</French>
-            <Japanese>インタラクションメニュー</Japanese>
+            <Japanese>インタラクション メニュー</Japanese>
             <Korean>상호작용 메뉴</Korean>
             <Chinesesimp>互动菜单</Chinesesimp>
             <Chinese>互動選單</Chinese>
@@ -452,7 +452,7 @@
             <Italian>Velocità di Animazione delle Interazioni</Italian>
             <Spanish>Velocidad de animación del menú de interacción</Spanish>
             <French>Vitesse de l'animation d'interaction</French>
-            <Japanese>インタラクションのアニメーション速度</Japanese>
+            <Japanese>アニメーション速度</Japanese>
             <Korean>상호작용 움직임 속도</Korean>
             <Chinesesimp>互动菜单动画速度</Chinesesimp>
             <Chinese>互動選單動畫速度</Chinese>
