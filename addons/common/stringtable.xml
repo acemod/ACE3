@@ -1360,7 +1360,7 @@
             <Italian>Non hai più spazio</Italian>
             <Hungarian>Nincs több hely</Hungarian>
             <Russian>В инвентаре нет места</Russian>
-            <Japanese>インベントリに空きがない</Japanese>
+            <Japanese>インベントリに空きがありません</Japanese>
             <Korean>넣을 공간이 없습니다</Korean>
             <Chinese>無可用空間</Chinese>
             <Chinesesimp>无可用空间</Chinesesimp>
@@ -1406,7 +1406,7 @@
             <Korean>음악 끄기 허용</Korean>
             <Chinese>允許調低音樂音量</Chinese>
             <Chinesesimp>允许调低音乐音量</Chinesesimp>
-            <Japanese>音楽の音量低下を許可</Japanese>
+            <Japanese>音楽音量の低減を許可</Japanese>
             <Italian>Permesso di abbassare la musica</Italian>
             <Polish>Zezwól na przyciszanie muzyki</Polish>
             <Russian>Разрешить приглушение музыки</Russian>
@@ -1422,7 +1422,7 @@
             <Korean>ACE 스크립트가 음악을 끌 수 있습니다.</Korean>
             <Chinese>允許ACE腳本去控制音樂的音量</Chinese>
             <Chinesesimp>允许 ACE 脚本去控制音乐的音量。</Chinesesimp>
-            <Japanese>ACEのスクリプトに音量低下を許可します。</Japanese>
+            <Japanese>ACEのスクリプトに音楽音量の低減を許可します。</Japanese>
             <Italian>Permetti agli script di ACEdi abbassare la musica.</Italian>
             <Polish>Zezwól skrypty ACE na przyciszanie muzyki.</Polish>
             <Russian>Позволить скриптам ACE приглушать музыку</Russian>
@@ -1435,7 +1435,7 @@
         <Key ID="STR_ACE_Common_EpilepsyFriendlyMode">
             <English>Epilepsy friendly mode</English>
             <German>Epilepsiefreundlicher Modus</German>
-            <Japanese>けいれん回避モード</Japanese>
+            <Japanese>てんかん対応モード</Japanese>
             <Polish>Tryb dla epileptyków</Polish>
             <French>Mode adapté à l'épilepsie</French>
             <Italian>Modalità per Epilettici</Italian>
@@ -1448,7 +1448,7 @@
         <Key ID="STR_ACE_Common_EpilepsyFriendlyModeTooltip">
             <English>Disables some flashing light effects to reduce seizure risk.</English>
             <German>Deaktiviert einige Lichtflackereffekte um das Risiko von Epilepsieanfällen zu reduzieren.</German>
-            <Japanese>いくつかの光点滅エフェクトを無効化し、けいれんの恐れを低下させます。</Japanese>
+            <Japanese>てんかん発作のリスクを軽減するために、一部の点滅する光の効果を無効にします。</Japanese>
             <Polish>Wyłącz część migających efektów w celu zredukowania ryzyka napadu epilepsji</Polish>
             <French>Désactive certains effets de lumière clignotante afin de réduire les risques de crise d'épilepsie.</French>
             <Italian>Disattiva alcuni effetti di luci intermittenti per ridurre il rischio di crisi epilettiche.</Italian>
@@ -1464,7 +1464,7 @@
             <Chinesesimp>旗帜（ACE-黑色）：</Chinesesimp>
             <Chinese>旗幟(ACE-黑色)</Chinese>
             <Italian>Bandiera (ACE - Nera)</Italian>
-            <Japanese>旗 (ACE - 黒)</Japanese>
+            <Japanese>旗 (ACE - 黒色)</Japanese>
             <Polish>Flaga (ACE - Czarna)</Polish>
             <Russian>Флаг (ACE - Черный)</Russian>
             <Portuguese>Bandeira (ACE - Preto)</Portuguese>
@@ -1480,7 +1480,7 @@
             <Chinesesimp>旗帜（ACE-白色）：</Chinesesimp>
             <Chinese>旗幟(ACE-白色)</Chinese>
             <Italian>Bandiera (ACE - Bianca)</Italian>
-            <Japanese>旗 (ACE - 白)</Japanese>
+            <Japanese>旗 (ACE - 白色)</Japanese>
             <Polish>Flaga (ACE - Biała)</Polish>
             <Russian>Флаг (ACE - Белый)</Russian>
             <Portuguese>Bandeira (ACE - Branco)</Portuguese>
@@ -1544,7 +1544,7 @@
             <Chinesesimp>在自我互动菜单内显示动作</Chinesesimp>
             <Polish>Pokaż akcje w menu interakcji własnej</Polish>
             <Portuguese>Mostra a ação no menu de auto-interação</Portuguese>
-            <Japanese>セルフ・インタラクションにアクションを表示</Japanese>
+            <Japanese>セルフ・インタラクションにアクションを表示します</Japanese>
             <Italian>Mostra le azioni nel menu di interazione con se stessi</Italian>
             <Spanish>Mostrar la acción en el menú de interacción propio</Spanish>
             <Czech>Zobrazit akci v menu vlastních interakcí</Czech>
