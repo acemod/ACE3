@@ -36,7 +36,9 @@ private _modes = [];
         if (_x == "this") then {
             _modes pushBack _weapon;
         } else {
-            _modes pushBack (configName (_config >> _x));
+            if (!isNull (_config >> _x)) then {
+                _modes pushBack (configName (_config >> _x));
+            };
         };
     };
 } forEach getArray (_config >> "modes");
