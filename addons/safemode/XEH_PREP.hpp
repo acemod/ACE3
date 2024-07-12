@@ -1,3 +1,4 @@
+PREP(getWeaponSafety);
 PREP(lockSafety);
 PREP(playChangeFiremodeSound);
 PREP(setSafeModeVisual);

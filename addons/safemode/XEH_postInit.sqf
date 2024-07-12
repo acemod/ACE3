@@ -13,7 +13,7 @@ if (!hasInterface) exitWith {};
     // Conditions: specific
     if !(ACE_player call CBA_fnc_canUseWeapon && {_currentWeapon != ""} && {_currentWeapon != binocular ACE_player}) exitWith {false};
 
-    // Statement
+    // Statement: Toggle weapon safety
     [ACE_player, _currentWeapon, _currentMuzzle] call FUNC(lockSafety);
 
     true
@@ -22,7 +22,7 @@ if (!hasInterface) exitWith {};
 ["unit", {
     (weaponState ACE_player) params ["_currentWeapon", "_currentMuzzle"];
 
-    private _weaponSafe = _currentMuzzle in ((ACE_player getVariable [QGVAR(safedWeapons), createHashMap]) getOrDefault [_currentWeapon, createHashMap]);
+    private _weaponSafe = [ACE_player, _currentWeapon, _currentMuzzle] call FUNC(getWeaponSafety);
 
     // Player HUD
     !_weaponSafe call FUNC(setSafeModeVisual);

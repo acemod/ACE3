@@ -24,9 +24,9 @@ if (currentWeapon _unit != _weapon) exitWith {
     _unit selectWeapon _weapon;
 };
 
-// unlock safety
-if (_weapon in (_unit getVariable [QEGVAR(safemode,safedWeapons), []])) exitWith {
-    [_unit, _weapon, _weapon] call EFUNC(safemode,unlockSafety);
+// Unlock safety
+if ([_unit, _weapon] call EFUNC(safemode,getWeaponSafety)) exitWith {
+    [_unit, _weapon, false] call EFUNC(safemode,setWeaponSafety);
 };
 
 private _muzzles = [_weapon] call EFUNC(common,getWeaponMuzzles);

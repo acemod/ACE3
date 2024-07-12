@@ -27,41 +27,21 @@ params [
     ["_muzzle", nil, [""]]
 ];
 
-private _isMuzzleDefined = !isNil "_muzzle";
-
-if (_weapon == "" || {_isMuzzleDefined && {_muzzle == ""}}) exitWith {};
+// Don't allow to set weapon safety if unit doesn't have one (but allow removing safety, in case unit doesn't have weapon anymore)
+if (_weapon == "" || {_state && {!(_unit hasWeapon _weapon)}}) exitWith {};
 
 // Check if weapon is a binocular
 if ((_weapon call EFUNC(common,getItemType)) select 1 == "binocular") exitWith {};
 
-// Invalid muzzle
-if (_isMuzzleDefined && {
-    private _configWeapon = configFile >> "CfgWeapons" >> _weapon;
-
+// Check for invalid muzzles
+_muzzle = if (isNil "_muzzle") then {
+    // Get current weapon muzzle if not defined
+    (_unit weaponState _weapon) select 1
+} else {
     // Get config case muzzle names
-    private _muzzles = (getArray (_configWeapon >> "muzzles")) apply {
-        if (_x == "this") then {
-            configName _configWeapon
-        } else {
-            configName (_configWeapon >> _x)
-        };
-    };
+    private _muzzles = _weapon call EFUNC(common,getWeaponMuzzles);
 
-    private _index = _muzzles findIf {_x == _muzzle};
-
-    if (_index == -1) exitWith {
-        true
-    };
-
-    // Make sure that muzzle is in the proper case
-    _muzzle = _muzzles select _index;
-
-    false
-}) exitWith {};
-
-// Get current weapon muzzle if not defined
-if (!_isMuzzleDefined) then {
-    _muzzle = (_unit weaponState _weapon) select 1;
+    _muzzles param [_muzzles findIf {_x == _muzzle}, ""]
 };
 
 // Weapon is not available
