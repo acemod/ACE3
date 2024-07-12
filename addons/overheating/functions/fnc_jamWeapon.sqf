@@ -80,7 +80,7 @@ if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
 
     private _condition = {
         private _unit = _this select 1;
-        (weaponState _unit) params ["_currentWeapon", "_currentMuzzle"]
+        (weaponState _unit) params ["_currentWeapon", "_currentMuzzle"];
 
         _unit call CBA_fnc_canUseWeapon
         && {_currentMuzzle in (_unit getVariable [QGVAR(jammedWeapons), []])}
