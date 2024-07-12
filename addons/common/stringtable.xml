@@ -402,7 +402,7 @@
             <Portuguese>[ACE] Itens diversos</Portuguese>
             <Hungarian>[ACE] Egyéb tárgyak</Hungarian>
             <Italian>[ACE] Oggetti vari</Italian>
-            <Japanese>[ACE] その他アイテム</Japanese>
+            <Japanese>[ACE] その他のアイテム</Japanese>
             <Korean>[ACE] 기타 물품.</Korean>
             <Chinese>[ACE] 雜項</Chinese>
             <Chinesesimp>[ACE] 杂项</Chinesesimp>
@@ -726,7 +726,7 @@
         <Key ID="STR_ACE_Common_SettingPersistentLaserDesc">
             <English>Enable gunlight after weapon switch or vehicle enter/exit if it was previously enabled.</English>
             <Russian>Включать ЛЦУ/тактический фонарь после смены оружия или входа/выхода из машины, если он был до этого включен.</Russian>
-            <Japanese>銃のライト等を点けていると武器を切り替えた後や車両を乗り降りしても、ライト等を点けたままにします。</Japanese>
+            <Japanese>銃のライトをつけていた場合、武器の切り替え後または車両の出入り後にライトを再度点灯します。</Japanese>
             <Italian>Abilita la torcia/laser dopo il cambio dell'arma o l'entrata/uscita del veicolo se precedentemente attiva.</Italian>
             <Korean>이전에 무기의 손전등/레이저를 켠 경우 무기 전환이나 차량 승하차시 켠 상태를 유지합니다.</Korean>
             <German>Aktiviert Laserpointer/Taktisches Licht nach einem Waffenwechsel oder dem Auf-/Absitzen, falls es zuvor aktiv war.</German>
