@@ -18,11 +18,16 @@
 
 params [["_unit", objNull, [objNull]], ["_disable", true, [false]]];
 
-if (!alive _unit || {_unit call FUNC(isPlayer)} || {!unitIsUAV _unit}) exitWith {};
+// Allow disabling of Zeus remote controlled units
+if (!alive _unit || {isPlayer _unit} || {!unitIsUAV _unit}) exitWith {};
 
 if (_disable) then {
-    // Disable shooting and targetting on every machine
-    private _jipID = [QGVAR(disableAiUAV), [_unit, _disable]] call CBA_fnc_globalEventJIP;
+    // Ignore if already disabled
+    if (!isNil "_jipID") exitWith {};
+
+    // Disable shooting and targeting on every machine
+    // Give predefined JIP ID, in case of simultaneous executions on different machines
+    private _jipID = [QGVAR(disableAiUAV), [_unit, _disable], QGVAR(disableAiUAV_) + hashValue _unit] call CBA_fnc_globalEventJIP;
     [_jipID, _unit] call CBA_fnc_removeGlobalEventJIP;
 
     _unit setVariable [QGVAR(disableAiUavJipID), _jipID, true];
@@ -30,11 +35,11 @@ if (_disable) then {
     // Restore shooting and targeting to each client's individual state prior to disabling
     private _jipID = _unit getVariable QGVAR(disableAiUavJipID);
 
-    if (!isNil "_jipID") then {
-        _jipID call CBA_fnc_removeGlobalEventJIP;
+    if (isNil "_jipID") exitWith {};
 
-        _unit setVariable [QGVAR(disableAiUavJipID), nil, true];
-    };
+    _jipID call CBA_fnc_removeGlobalEventJIP;
+
+    _unit setVariable [QGVAR(disableAiUavJipID), nil, true];
 
     [QGVAR(disableAiUAV), [_unit, _disable]] call CBA_fnc_globalEvent;
 };

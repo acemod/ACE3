@@ -73,8 +73,8 @@ if (_unit getHitPointDamage "HitLegs" >= 0.5) exitWith {
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-// Drop static if crew is in it (ignore UAVs)
-if (_target isKindOf "StaticWeapon" && {isNil {_target getVariable QGVAR(isUAV)}} && {(crew _target) isNotEqualTo []}) exitWith {
+// Drop static if either non-UAV crew or new UAV crew is in it (ignore saved UAV crew)
+if (_target isKindOf "StaticWeapon" && {((crew _target) - (_target getVariable [QGVAR(isUAV), []])) isNotEqualTo []}) exitWith {
     TRACE_2("static weapon crewed",_unit,_target);
 
     [_unit, _target] call FUNC(dropObject_carry);
