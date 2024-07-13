@@ -125,7 +125,7 @@
         </Key>
         <Key ID="STR_ACE_KillTracker_showCrewKills_Description">
             <English>Show kills from a vehicle to driver, gunner and commander</English>
-            <Russian>Показыать уничтоженную технику водителю, стрелку и командиру</Russian>
+            <Russian>Показывать уничтоженную технику водителю, стрелку и командиру</Russian>
         </Key>
     </Package>
 </Project>
