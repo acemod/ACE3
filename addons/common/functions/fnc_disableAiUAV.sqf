@@ -27,7 +27,7 @@ if (_disable) then {
 
     _unit setVariable [QGVAR(disableAiUavJipID), _jipID, true];
 } else {
-    // Restore shooting and targetting to each client's individual state prior to disabling
+    // Restore shooting and targeting to each client's individual state prior to disabling
     private _jipID = _unit getVariable QGVAR(disableAiUavJipID);
 
     if (!isNil "_jipID") then {
