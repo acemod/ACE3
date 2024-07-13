@@ -21,7 +21,7 @@
             <English>Enable Medical Actions</English>
             <German>Aktiviere Sanitätsaktionen</German>
             <Japanese>医療インタラクションの有効化</Japanese>
-            <Russian>Разрешить Медицинские действия</Russian>
+            <Russian>Вкл. медицинские действия</Russian>
             <French>Activer les actions médicales</French>
             <Portuguese>Ativar Ações Médicas</Portuguese>
             <Chinese>啟用醫療行為</Chinese>
@@ -87,7 +87,7 @@
             <English>Enable Medical Self Actions</English>
             <German>Medizinische Selbst-Interaktionen anzeigen</German>
             <Japanese>医療セルフインタラクションの有効化</Japanese>
-            <Russian>Разрешить Медицинские действия на себе</Russian>
+            <Russian>Вкл. медицинские действия на себе</Russian>
             <French>Activer les actions médicales sur soi-même</French>
             <Portuguese>Ativar ações médicas em si mesmo</Portuguese>
             <Chinese>啟用自我醫療行為</Chinese>
@@ -119,7 +119,7 @@
             <English>Enable Medical Menu</English>
             <German>Aktiviere das Sanitätsmenü</German>
             <Japanese>医療メニューを有効化</Japanese>
-            <Russian>Разрешить Медицинское меню</Russian>
+            <Russian>Вкл. медицинское меню</Russian>
             <French>Activer le menu médical</French>
             <Portuguese>Ativar Menu Médico</Portuguese>
             <Chinese>啟用醫療選單</Chinese>
@@ -135,7 +135,7 @@
             <English>Enables the use of the Medical Menu through the keybind or interaction menu.</English>
             <German>Aktiviere die Nutzung des Sanitätsmenüs durch eine Tastenkombination oder durch das Interaktionsmenü</German>
             <Japanese>割り当てられたキーかインタラクションメニューから医療メニューを使えるようになります。</Japanese>
-            <Russian>Позволяет использовать Медицинское меню через связку клавиш или меню взаимодействия.</Russian>
+            <Russian>Позволяет использовать Медицинское меню через горячие клавиши или меню взаимодействия.</Russian>
             <French>Permet l'utilisation du menu médical via le menu d'interaction ou l'appui d'une touche.</French>
             <Portuguese>Ativa o uso do Menu Médico através da Tecla ou Menu de Interação.</Portuguese>
             <Chinese>啟用以互動選單或者按鍵綁定所呼出的高效醫療選單</Chinese>
@@ -151,7 +151,7 @@
             <English>Reopen Medical Menu</English>
             <German>Sanitätsmenü wieder öffnen</German>
             <Japanese>医療メニューの再表示</Japanese>
-            <Russian>Открывать меню после лечения</Russian>
+            <Russian>Медицинское меню после лечения</Russian>
             <French>Rouvrir le menu médical</French>
             <Portuguese>Reabrir Menu Médico</Portuguese>
             <Chinese>醫療選單二度開啟</Chinese>
@@ -167,7 +167,7 @@
             <English>Reopen the Medical Menu after successful treatment.</English>
             <German>Öffne das Sanitätsmenü nach einer Behandlung</German>
             <Japanese>治療の完了後に、再度医療メニューを開きます。</Japanese>
-            <Russian>Открывает Медицинское меню после успешного лечения</Russian>
+            <Russian>Открывает медицинское меню после успешного лечения</Russian>
             <French>Réouvre le menu médical suite à l'application d'un soin.</French>
             <Portuguese>Reabrir Menu Médico após um tratamento com sucesso</Portuguese>
             <Chinese>當治療完成後二度打開醫療選單</Chinese>
@@ -217,7 +217,7 @@
             <Italian>Mostra livello di Triage nel Menù d'Interazione</Italian>
             <Japanese>インタラクションにトリアージ レベルを表示</Japanese>
             <Spanish>Mostrar nivel de triado en menú de interacción</Spanish>
-            <Russian>Показать уровень триажа в меню взаимодействия</Russian>
+            <Russian>Уровень триажа в меню взаимодействия</Russian>
             <Polish>Pokaż poziom Triażu w menu interakcji</Polish>
             <German>Zeige Triage-Einstufung im Interaktionsmenü</German>
             <Chinesesimp>在交互式菜单中显示分诊级别</Chinesesimp>

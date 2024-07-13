@@ -371,7 +371,7 @@
             <Italian>Tempo di inserimento EV</Italian>
             <Japanese>点滴の所要時間</Japanese>
             <Spanish>Tiempo de tratamiento de bolsa de IV</Spanish>
-            <Russian>Время применения пакета внутривенного переливания</Russian>
+            <Russian>Время внутривенного переливания</Russian>
             <Polish>Czas aplikacji IV</Polish>
             <Chinesesimp>静脉输液袋治疗时间</Chinesesimp>
             <Korean>수액용기 사용 시간</Korean>
@@ -467,7 +467,7 @@
             <Italian>Permetti Epinefrina</Italian>
             <Czech>Povolit epinefrin</Czech>
             <Portuguese>Permitir Epinefrina</Portuguese>
-            <Russian>Разрешить Адреналин</Russian>
+            <Russian>Доступ к Адреналину</Russian>
             <Japanese>アドレナリンの許可</Japanese>
             <Korean>에피네프린 사용 허가</Korean>
             <Chinesesimp>允许使用肾上腺素</Chinesesimp>
@@ -524,7 +524,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_DisplayName">
             <English>Allow PAK</English>
-            <Russian>Использование Аптечки</Russian>
+            <Russian>Доступ к Аптечке</Russian>
             <Polish>Ograniczenia użycia apteczek osobistych</Polish>
             <Spanish>Permitir EPA</Spanish>
             <German>Erlaube Erste-Hilfe-Set</German>
@@ -686,7 +686,7 @@
             <English>Allow Surgical Kit</English>
             <Japanese>手術キットを許可</Japanese>
             <French>Trousse chirurgicale autorisée pour</French>
-            <Russian>Разрешить Хирургический набор</Russian>
+            <Russian>Доступ к Хирургическому набору</Russian>
             <Portuguese>Permitir Kit Cirúrgico</Portuguese>
             <Chinese>允許使用手術包</Chinese>
             <Chinesesimp>允许使用手术包</Chinesesimp>
@@ -770,7 +770,7 @@
             <Polish>Co powinno zostać zużyte po zastosowaniu.</Polish>
             <Korean>봉합키트를 1회성 소모품으로 설정할 지 여부를 결정합니다.</Korean>
             <French>Ce qui doit être consommé après l'utilisation.</French>
-            <Russian>Решите, следует ли использовать набор для наложения швов в качестве одноразового расходного материала.</Russian>
+            <Russian>Контролирует, следует ли израсходовать Хирургический набор или нить после использования</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfStitch_DisplayName">
             <English>Self Stitching</English>
@@ -861,7 +861,7 @@
             <French>Housse mortuaire - Autoriser patients inconscients</French>
             <Japanese>無意識者の遺体袋への収容許可</Japanese>
             <Spanish>Permitir bolsa para cuerpos inconsciente</Spanish>
-            <Russian>Разрешить упаковывать пациентов без сознания в мешки для трупов</Russian>
+            <Russian>Упаковка без сознания в мешки для трупов</Russian>
             <Polish>Nieprzytomni w worku na ciało</Polish>
             <German>Erlaube Benutzung des Leichensackes mit bewusstlosen Personen</German>
             <Italian>Permetti di insaccare un paziente svenuto</Italian>
@@ -889,7 +889,7 @@
             <Spanish>Permitir cavar tumbas</Spanish>
             <French>Autoriser le creusement de tombes</French>
             <Japanese>墓掘りを許可</Japanese>
-            <Russian>Разрешить рытье могил</Russian>
+            <Russian>Рытье могил</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_Description">
             <English>Enables digging graves to dispose of corpses.</English>
@@ -922,7 +922,7 @@
             <Korean>무덤 마커 생성</Korean>
             <French>Créer des pierres tombales</French>
             <Japanese>墓標を作成</Japanese>
-            <Russian>Создайте надгробные знаки</Russian>
+            <Russian>Надгробные знаки</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_GraveDiggingMarker_Description">
             <English>Enables the creation of grave markers when digging graves.</English>
@@ -945,7 +945,7 @@
             <Chinesesimp>允许静脉输液</Chinesesimp>
             <Japanese>IV 輸液の制限</Japanese>
             <Czech>Povolit IV transfuzi</Czech>
-            <Russian>Разрешить внутривенное переливание</Russian>
+            <Russian>Доступ к внутривенному переливанию</Russian>
             <Spanish>Permitir transfusión de IV</Spanish>
             <Korean>수액용기 사용 허가</Korean>
         </Key>
@@ -968,7 +968,7 @@
             <Japanese>IV輸液の可能な場所</Japanese>
             <Spanish>Ubicación para transfusiones IV</Spanish>
             <French>Lieux perfusions IV</French>
-            <Russian>Места введения пакетов внутривенного переливания</Russian>
+            <Russian>Места внутривенного переливания</Russian>
             <Polish>Miejsca do transfuzji IV</Polish>
             <German>Orte an denen IV-Transfusionen angelegt werden können</German>
             <Italian>Luoghi Fleboclisi EV</Italian>
@@ -980,7 +980,7 @@
             <Japanese>IV 輸液を行える場所を制御します。</Japanese>
             <Spanish>Controla dónde pueden ser realizadas las transfusiones IV.</Spanish>
             <French>Définit les lieux où la pose de perfusions est autorisée.</French>
-            <Russian>Определяет к каким частям тела разрешено применять пакеты внутренного переливания.</Russian>
+            <Russian>Контролирует, где можно использовать внутревенное переливание.</Russian>
             <Polish>Kontroluje w jakich miejscach można robić transfuzje IV.</Polish>
             <German>Kontrolliert, wo IV-Transfusionen durchgeführt werden können.</German>
             <Italian>Luoghi in cui è possibile applicare Fleboclisi Endovenose.</Italian>
@@ -4981,7 +4981,7 @@
             <French>Coefficient d'efficacité des bandages</French>
             <Italian>Coefficiente di efficacia bendaggi</Italian>
             <Japanese>包帯有効性係数</Japanese>
-            <Russian>Коэффициент эффективности повязки</Russian>
+            <Russian>Коэф. эффективности повязки</Russian>
             <Spanish>Coeficiente de Efectividad de Vendado</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_Description">
@@ -5015,7 +5015,7 @@
             <German>Zeit-Koeffizient für Zeus Behandlungen</German>
             <Japanese>Zeus治療時間係数</Japanese>
             <Korean>제우스 치료 시간 계수</Korean>
-            <Russian>Коэффициент времени обработки Zeus</Russian>
+            <Russian>Коэф. времени обработки Zeus</Russian>
             <French>Coeff. de temps</French>
             <Spanish>Coeficiente de Tiempo del Tratamiento de Zeus</Spanish>
         </Key>
@@ -5048,7 +5048,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Administer_Painkillers">
             <English>Administer Painkillers</English>
             <Italian>Somministra Antidolorifici</Italian>
-            <Russian>Испол-ть обезболивающие</Russian>
+            <Russian>Ввести обезболивающие</Russian>
             <Japanese>鎮痛剤を投与</Japanese>
             <Korean>진통제 투여</Korean>
             <French>Administrer des analgésiques</French>
