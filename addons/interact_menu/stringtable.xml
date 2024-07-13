@@ -148,7 +148,7 @@
             <Spanish>Interacción - Texto al max.</Spanish>
             <Hungarian>Cselekvés - Szöveg max.</Hungarian>
             <Portuguese>Interação - Max. de Texto</Portuguese>
-            <Japanese>インタラクション - 文字の色</Japanese>
+            <Japanese>インタラクション - 文字の表示色の最大値</Japanese>
             <Korean>상호작용 - 문자색깔</Korean>
             <Chinesesimp>互动—文字颜色最大值</Chinesesimp>
             <Chinese>互動 - 文字最大化</Chinese>
@@ -165,7 +165,7 @@
             <Spanish>Interacción - Texto al min.</Spanish>
             <Hungarian>Cselekvés - Szöveg min.</Hungarian>
             <Portuguese>Interação - Min. de Texto</Portuguese>
-            <Japanese>インタラクション - 文字の背景色</Japanese>
+            <Japanese>インタラクション - 文字の表示色の最低値</Japanese>
             <Korean>상호작용 - 문자배경색</Korean>
             <Chinesesimp>互动—文字颜色最小值</Chinesesimp>
             <Chinese>互動 - 文字最小化</Chinese>
@@ -182,7 +182,7 @@
             <Spanish>Interacción - Sombras al max.</Spanish>
             <Hungarian>Cselekvés - Árnyék max.</Hungarian>
             <Portuguese>Interação - Max. de Sombra</Portuguese>
-            <Japanese>インタラクション - 文字への影の色</Japanese>
+            <Japanese>インタラクション - 文字の影色の最大値</Japanese>
             <Korean>상호작용 - 문자그림자색</Korean>
             <Chinesesimp>互动—阴影最大值</Chinesesimp>
             <Chinese>互動 - 陰影最大化</Chinese>
@@ -199,7 +199,7 @@
             <Spanish>Interacción - Sombras al min.</Spanish>
             <Hungarian>Cselekvés - Árnyék min.</Hungarian>
             <Portuguese>Interação - Min. de Sombra</Portuguese>
-            <Japanese>インタラクション - 文字への影の最低色</Japanese>
+            <Japanese>インタラクション - 文字の影色の最低値</Japanese>
             <Korean>상호작용 - 문자그림자배경색</Korean>
             <Chinesesimp>互动—阴影最小值</Chinesesimp>
             <Chinese>互動 - 陰影最小化</Chinese>
@@ -267,7 +267,7 @@
             <Portuguese>Tamanho do texto de interação</Portuguese>
             <Hungarian>Cselekvő szöveg mérete</Hungarian>
             <Italian>Dimensione del testo d'interazione</Italian>
-            <Japanese>テキストの大きさ</Japanese>
+            <Japanese>文字の大きさ</Japanese>
             <Korean>상호작용 - 문자크기</Korean>
             <Chinesesimp>互动菜单文字大小</Chinesesimp>
             <Chinese>互動選單文字大小</Chinese>
@@ -284,7 +284,7 @@
             <Portuguese>Sombra do texto de interação</Portuguese>
             <Hungarian>Cselekvő szöveg árnyéka</Hungarian>
             <Italian>Ombra del testo d'interazione</Italian>
-            <Japanese>テキストに影を表示</Japanese>
+            <Japanese>文字の影表示</Japanese>
             <Korean>상호작용 - 문자그림자</Korean>
             <Chinesesimp>互动菜单文字阴影</Chinesesimp>
             <Chinese>互動選單文字陰影</Chinese>
@@ -301,7 +301,7 @@
             <Portuguese>Permite controlar a sombra do texto. Contorno ignora sombras com cores customizadas.</Portuguese>
             <Hungarian>Hozzáférést biztosít a szöveg árnyékának kezeléséhez. A körvonal nem veszi figyelembe az egyedi árnyékszíneket.</Hungarian>
             <Italian>Permette di controllare l'ombra del testo. L'impostazione "Contorno" ignora il colore dell'ombra.</Italian>
-            <Japanese>文字への影を設定します。縁取りは設定された影の色を無視します。</Japanese>
+            <Japanese>文字に影を表示します。縁取りは設定された影の色を無視します。</Japanese>
             <Korean>문자의 그림자를 조절하는 것을 가능케 합니다. 외곽선은 임의의 그림자색을 무시합니다.</Korean>
             <Chinesesimp>允许控制文字阴影。轮廓部分则会忽略自定义的阴影颜色。</Chinesesimp>
             <Chinese>允許控制文字陰影。輪廓部分則會忽略自定義的陰影顏色</Chinese>
@@ -352,7 +352,7 @@
             <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
             <Russian>Размыть фон, пока открыто меню взаимодействия.</Russian>
             <Italian>Sfoca lo sfondo mentre il Menù Interazioni è aperto.</Italian>
-            <Japanese>インタラクション メニューを開いたとき、背景をぼかします。</Japanese>
+            <Japanese>インタラクション メニューを開いたときに背景をぼかします。</Japanese>
             <Korean>상호작용 메뉴가 열릴 시 배경을 흐릿하게 처리합니다.</Korean>
             <Chinesesimp>当互动菜单开启时，模糊背景画面。</Chinesesimp>
             <Chinese>當互動選單開啟時，模糊背景畫面</Chinese>
@@ -493,7 +493,7 @@
         <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild">
             <English>Consolidate single child actions</English>
             <Russian>Объединять ед. дочерные действия</Russian>
-            <Japanese>子アクションを統合</Japanese>
+            <Japanese>1個のみの子アクションを統合</Japanese>
             <Spanish>Consolidar acciones hijo únicas</Spanish>
             <French>Combiner les sous-actions uniques</French>
             <German>Untergeordnete Aktionen zusammenfassen</German>
@@ -506,7 +506,7 @@
         <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild_Description">
             <English>Combines parent action with only one child action together.</English>
             <Russian>Объединять родительское действие с единственным дочерним действием в одно.</Russian>
-            <Japanese>親アクションと子アクションの一つを統合して表示します。</Japanese>
+            <Japanese>アクションが1個のみの子アクションを親アクションと結合し表示を整理します。</Japanese>
             <Spanish>Combina acciones padre con una única accion hijo de forma conjunta</Spanish>
             <French>Lorsqu'un menu ne contient qu'une seule sous-action, elle est combinée avec son menu parent.</French>
             <Italian>Combina interazioni con una sola sotto-azione in una singola interazione.</Italian>
