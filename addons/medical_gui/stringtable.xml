@@ -36,7 +36,7 @@
         <Key ID="STR_ACE_Medical_GUI_EnableActions_Description">
             <English>Enables medical actions for the Interaction Menu and selects their style.</English>
             <German>Aktiviert die Sanitätsaktionen für das Interaktionsmenü und legt das Aussehen fest</German>
-            <Japanese>インタラクションメニューから選択した表示方式で医療行為をできるようになります。</Japanese>
+            <Japanese>インタラクション メニューから選択した表示方式で医療行為をできるようになります。</Japanese>
             <Russian>Включает медицинские действия для меню взаимодействия и выбирает их стиль.</Russian>
             <French>Permet d'afficher les actions médicales dans le menu d'interaction, et de définir leur style visuel.</French>
             <Portuguese>Ativa as ações médicas para o menu de interação e seleciona seus estilos.</Portuguese>
@@ -86,8 +86,8 @@
         <Key ID="STR_ACE_Medical_GUI_EnableSelfActions_DisplayName">
             <English>Enable Medical Self Actions</English>
             <German>Medizinische Selbst-Interaktionen anzeigen</German>
-            <Japanese>医療セルフインタラクションの有効化</Japanese>
-            <Russian>Вкл. медицинские действия на себе</Russian>
+            <Japanese>医療セルフ・インタラクションの有効化</Japanese>
+            <Russian>Разрешить Медицинские действия на себе</Russian>
             <French>Activer les actions médicales sur soi-même</French>
             <Portuguese>Ativar ações médicas em si mesmo</Portuguese>
             <Chinese>啟用自我醫療行為</Chinese>
@@ -102,7 +102,7 @@
         <Key ID="STR_ACE_Medical_GUI_EnableSelfActions_Description">
             <English>Enables medical actions for the Self Interaction Menu.</English>
             <German>Medizinische Interaktionen bei Selbst-Interaktionen anzeigen</German>
-            <Japanese>セルフインタラクションメニューで医療行為をできるようになります。</Japanese>
+            <Japanese>セルフ・インタラクション メニューで医療行為をできるようになります。</Japanese>
             <Russian>Включает медицинские действия для меню взаимодействия с собой.</Russian>
             <French>Active les actions médicales du menu d'interaction personnel.</French>
             <Portuguese>Ativa as ações médicas do menu de interação pessoal.</Portuguese>
@@ -134,8 +134,8 @@
         <Key ID="STR_ACE_Medical_GUI_EnableMedicalMenu_Description">
             <English>Enables the use of the Medical Menu through the keybind or interaction menu.</English>
             <German>Aktiviere die Nutzung des Sanitätsmenüs durch eine Tastenkombination oder durch das Interaktionsmenü</German>
-            <Japanese>割り当てられたキーかインタラクションメニューから医療メニューを使えるようになります。</Japanese>
-            <Russian>Позволяет использовать Медицинское меню через горячие клавиши или меню взаимодействия.</Russian>
+            <Japanese>割り当てられたキーかインタラクション メニューから医療メニューを使えるようになります。</Japanese>
+            <Russian>Позволяет использовать Медицинское меню через связку клавиш или меню взаимодействия.</Russian>
             <French>Permet l'utilisation du menu médical via le menu d'interaction ou l'appui d'une touche.</French>
             <Portuguese>Ativa o uso do Menu Médico através da Tecla ou Menu de Interação.</Portuguese>
             <Chinese>啟用以互動選單或者按鍵綁定所呼出的高效醫療選單</Chinese>
