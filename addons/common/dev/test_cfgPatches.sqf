@@ -50,7 +50,7 @@ private _allWeapons = [];
 private _vics = "(configName _x) select [0,3] == 'ace'" configClasses (configFile >> "CfgVehicles");
 {
     if (((getNumber (_x >> "scope")) == 2) || {((getNumber (_x >> "scopeCurator")) == 2)}) then {
-        if (!((toLowerANSI configName _x) in _allUnits)) then {
+        if !((toLowerANSI configName _x) in _allUnits) then {
             WARNING_2("Not in any units[] - %1 from %2",configName _x,configSourceMod _x);
             _testPass = false;
         };
@@ -62,7 +62,7 @@ private _weapons = "(configName _x) select [0,3] == 'ace'" configClasses (config
 {
     private _type = toLowerANSI configName _x;
     if (((getNumber (_x >> "scope")) == 2) || {((getNumber (_x >> "scopeCurator")) == 2)}) then {
-        if (!((toLowerANSI configName _x) in _allWeapons)) then {
+        if !((toLowerANSI configName _x) in _allWeapons) then {
             WARNING_2("Not in any weapons[] - %1 from %2",configName _x,configSourceMod _x);
             _testPass = false;
         };

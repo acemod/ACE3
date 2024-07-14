@@ -9,23 +9,20 @@
 ["CAManBase", "init", {
     params ["_unit"];
 
-    // Check if last hit point is our dummy.
-    private _allHitPoints = getAllHitPointsDamage _unit param [0, []];
-    reverse _allHitPoints;
-    while {(_allHitPoints param [0, ""]) select [0,1] == "#"} do { WARNING_1("Ignoring Reflector hitpoint %1",_allHitPoints deleteAt 0); };
+    if (unitIsUAV _unit) exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
+    if (getNumber (configOf _unit >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit);};
 
-    if (_allHitPoints param [0, ""] != "ACE_HDBracket") then {
-        if (unitIsUAV _unit) exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
-        if (getNumber ((configOf _unit) >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit)};
+    private _allHitPoints = getAllHitPointsDamage _unit param [0, []];
+    if ((GVAR(customHitpoints) arrayIntersect _allHitPoints) isNotEqualTo GVAR(customHitpoints)) exitWith {
         ERROR_1("Bad hitpoints for unit type ""%1""",typeOf _unit);
-    } else {
-        // Calling this function inside curly brackets allows the usage of
-        // "exitWith", which would be broken with "HandleDamage" otherwise.
-        _unit setVariable [
-            QEGVAR(medical,HandleDamageEHID),
-            _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
-        ];
     };
+
+    // Calling this function inside curly brackets allows the usage of
+    // "exitWith", which would be broken with "HandleDamage" otherwise.
+    _unit setVariable [
+        QEGVAR(medical,HandleDamageEHID),
+        _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
+    ];
 }, nil, [IGNORE_BASE_UAVPILOTS], true] call CBA_fnc_addClassEventHandler;
 
 if !("ace_medical_treatment" call EFUNC(common,isModLoaded)) then {
@@ -91,7 +88,7 @@ if !("ace_medical_treatment" call EFUNC(common,isModLoaded)) then {
     };
 }] call CBA_fnc_addEventHandler;
 
-["CAManBase", "deleted", {
+["CAManBase", "Deleted", {
     params ["_unit"];
     TRACE_3("unit deleted",_unit,objectParent _unit,local _unit);
     if ((!isNull objectParent _unit) && {local objectParent _unit}) then {

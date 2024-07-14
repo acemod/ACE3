@@ -1,4 +1,3 @@
-
 class CfgSFX {
     class GVAR(CookOff_low) {
         name = QGVAR(cookoff_low);

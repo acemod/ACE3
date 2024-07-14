@@ -21,7 +21,7 @@ params ["_target", "_unit", ["_event", false]];
 TRACE_3("sightAttach",_target,_unit,_event);
 
 if (_event isEqualTo true) then { // this is actually needed as 3rd arg may not be bool
-    if (!(_target turretLocal [0])) exitWith {};
+    if !(_target turretLocal [0]) exitWith {};
     _target setVariable [QGVAR(sightAttached), true, true];
     _target animate ["optic_hide", 0];
     _target addWeapon QGVAR(superStatic);

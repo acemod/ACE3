@@ -282,7 +282,7 @@
             <English>Time, in seconds, required to dig a small trench.</English>
             <Russian>Время в секундах, необходимое для рытья малого окопа</Russian>
             <French>Définit le temps nécessaire au déploiement des petites tranchées (en secondes).</French>
-            <Japanese>小型塹壕の造成が完了するまで掛かる時間 (秒) を設定できます。</Japanese>
+            <Japanese>小型塹壕の造成が完了するまで掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para cavar una trinchera pequeña.</Spanish>
             <Polish>Czas, w sekundach wymagany do wykopania małego okopu</Polish>
             <German>Zeit in Sekunden, um einen kleinen Graben auszuheben.</German>
@@ -306,7 +306,7 @@
             <English>Time, in seconds, required to remove a small trench.</English>
             <Russian>Время в секундах, необходимое для удаления малого окопа</Russian>
             <French>Définit le temps nécessaire pour le retrait des petites tranchées (en secondes).</French>
-            <Japanese>小型塹壕の撤去が完了するまで掛かる時間 (秒) を設定できます。</Japanese>
+            <Japanese>小型塹壕の撤去が完了するまで掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para eliminar una trinchera pequeña.</Spanish>
             <Polish>Czas, w sekundach wymagany do usunięcia małego okopu</Polish>
             <German>Zeit in Sekunden, um einen kleinen Graben aufzuschütten.</German>
@@ -330,7 +330,7 @@
             <English>Time, in seconds, required to dig a big trench.</English>
             <Russian>Время в секундах, необходимое для рытья большого окопа</Russian>
             <French>Définit le temps nécessaire au déploiement des grandes tranchées (en secondes).</French>
-            <Japanese>大型塹壕の造成が完了するまで掛かる時間 (秒) を設定できます。</Japanese>
+            <Japanese>大型塹壕の造成が完了するまで掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para cavar una trinchera grande</Spanish>
             <Polish>Czas, w sekundach wymagany do wykopania dużego okopu</Polish>
             <German>Zeit in Sekunden, um einen großen Graben auszuheben.</German>
@@ -354,7 +354,7 @@
             <English>Time, in seconds, required to remove a big trench.</English>
             <Russian>Время в секундах, необходимое для удаления большого окопа</Russian>
             <French>Définit le temps nécessaire pour le retrait des grandes tranchées (en secondes).</French>
-            <Japanese>大型塹壕の撤去が完了するまで掛かる時間 (秒) を設定できます。</Japanese>
+            <Japanese>大型塹壕の撤去が完了するまで掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para eliminar una trinchera grande</Spanish>
             <Polish>Czas, w sekundach wymagany do usunięcia dużego okopu</Polish>
             <German>Zeit in Sekunden, um einen großen Graben aufzuschütten.</German>
