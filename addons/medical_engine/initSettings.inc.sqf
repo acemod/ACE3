@@ -4,9 +4,8 @@
     [LSTRING(Enabled_DisplayName), LSTRING(Enabled_Description)],
     ELSTRING(medical,Category),
     true,
-    true, {
-        [QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)
-    },
+    true,
+    {[QEGVAR(medical,enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
 ] call CBA_fnc_addSetting;
 

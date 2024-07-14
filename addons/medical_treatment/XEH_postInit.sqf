@@ -35,7 +35,7 @@ if (isServer) then {
 
 // replace medical items with their ACE equivalents
 ["CBA_settingsInitialized", {
-    TRACE_1("CBA_settingsInitialized EH",GVAR(convertItems)); // 0: Enabled 1: RemoveOnly 2:Disabled
+    TRACE_1("CBA_settingsInitialized EH",GVAR(convertItems)); // 0: Enabled 1: RemoveOnly
     {
         // turn [["stuff", 2], ...] into ["stuff", "stuff", ...]
         private _replacements = [];
