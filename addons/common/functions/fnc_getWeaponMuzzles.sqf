@@ -19,7 +19,7 @@ params [["_weapon", "", [""]]];
 
 private _config = configFile >> "CfgWeapons" >> _weapon;
 
-if (isNull _config) exitWith {
+if (!isClass _config) exitWith {
     [] // return
 };
 
@@ -30,7 +30,7 @@ private _muzzles = [];
     if (_x == "this") then {
         _muzzles pushBack (configName _config);
     } else {
-        if (!isNull (_config >> _x)) then {
+        if (isClass (_config >> _x)) then {
             _muzzles pushBack (configName (_config >> _x));
         };
     };

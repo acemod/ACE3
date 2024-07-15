@@ -9,7 +9,7 @@
  * 2: Muzzle <STRING> (default: current muzzle of weapon)
  *
  * Return Value:
- * None
+ * Safety status <BOOL>
  *
  * Example:
  * [ACE_player, currentWeapon ACE_player] call ace_safemode_fnc_getWeaponSafety
