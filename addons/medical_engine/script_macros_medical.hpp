@@ -108,9 +108,6 @@
 #define FRACTURE_DAMAGE_THRESHOLD EGVAR(medical,const_fractureDamageThreshold)
 #define FRACTURE_DAMAGE_THRESHOLD_DEFAULT 0.50
 
-// Overridden commands for group healing
-#define OVERRIDDEN_COMMANDS EGVAR(medical,overriddenCommands)
-
 // Minimum cardiac output
 #define CARDIAC_OUTPUT_MIN EGVAR(medical,const_minCardiacOutput)
 #define CARDIAC_OUTPUT_MIN_DEFAULT 0.05
