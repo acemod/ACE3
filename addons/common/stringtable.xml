@@ -1896,7 +1896,7 @@
             <German>Verwacklungsfaktor, wenn aufgelegt</German>
             <Italian>Fattore di Oscillazione Appoggiato</Italian>
             <Japanese>静止依託時の手ぶれ係数</Japanese>
-            <Russian>Коэффициент колебания прицела в состоянии покоя</Russian>
+            <Russian>Коэф. колебания прицела в состоянии покоя</Russian>
             <Spanish>Factor de oscilación apoyado</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_RestedSwayFactor_Description">
@@ -1918,7 +1918,7 @@
             <German>Verwacklungsfaktor, wenn Zweibein aufgestellt ist.</German>
             <Italian>Fattore di Oscillazione su Bipode</Italian>
             <Japanese>接地展開時の手ぶれ係数</Japanese>
-            <Russian>Коэффициент колебания прицела при развертывании</Russian>
+            <Russian>Коэф. колебания прицела при развертывании</Russian>
             <Spanish>Factor de oscilación desplegado</Spanish>
         </Key>
         <Key ID="STR_ACE_Common_DeployedSwayFactor_Description">
