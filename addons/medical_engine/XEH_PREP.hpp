@@ -1,5 +1,4 @@
 PREP(applyAnimAfterRagdoll);
-PREP(commandChanged);
 PREP(damageBodyPart);
 PREP(disableThirdParty);
 PREP(getHitpointArmor);

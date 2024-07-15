@@ -1,6 +1,7 @@
 #include "script_component.hpp"
 
 [QGVAR(updateDamageEffects), LINKFUNC(updateDamageEffects)] call CBA_fnc_addEventHandler;
+
 ["unit", {
     params ["_new"];
     [_new] call FUNC(updateDamageEffects); // Run on new controlled unit to update QGVAR(aimFracture)
@@ -23,9 +24,23 @@
         QEGVAR(medical,HandleDamageEHID),
         _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
     ];
+
+    _unit addEventHandler ["HandleHeal", {
+        params ["_injured", "_healer"];
+
+        // Replace the items so that the unit can't heal
+        _healer call EFUNC(common,replaceRegisteredItems);
+
+        AISFinishHeal [_injured, _healer, true];
+
+        // Set animation to what it was before starting the healing animation
+        [{"dnon_medic" in animationState (_this select 0)}, {
+            [_this select 0, _this select 1, 2] call EFUNC(common,doAnimation);
+        }, [_healer, _healer call EFUNC(common,getDefaultAnim)], 5] call CBA_fnc_waitUntilAndExecute;
+    }];
 }, nil, [IGNORE_BASE_UAVPILOTS], true] call CBA_fnc_addClassEventHandler;
 
-if !("ace_medical_treatment" call EFUNC(common,isModLoaded)) then {
+if !(["ace_medical_treatment"] call EFUNC(common,isModLoaded)) then {
     [TYPE_FIRST_AID_KIT, ""] call EFUNC(common,registerItemReplacement);
     [TYPE_MEDIKIT, ""] call EFUNC(common,registerItemReplacement);
 };
@@ -95,13 +110,3 @@ if !("ace_medical_treatment" call EFUNC(common,isModLoaded)) then {
         [_unit] call FUNC(unlockUnconsciousSeat);
     };
 }, true, []] call CBA_fnc_addClassEventHandler;
-
-// Used for preventing vanilla heal by replacing items
-addMissionEventHandler ["GroupCreated", {
-    params ["_group"];
-    _group addEventHandler ["CommandChanged", {_this call FUNC(commandChanged)}];
-}];
-
-{
-    _x addEventHandler ["CommandChanged", {_this call FUNC(commandChanged)}];
-} forEach allGroups;
