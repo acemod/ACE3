@@ -50,9 +50,7 @@ if (_target isKindOf "CAManBase") then {
     };
 
     // Select primary, otherwise the carry animation actions don't work
-    if (currentWeapon _unit != _primaryWeapon) then {
-        _unit selectWeapon _primaryWeapon;
-    };
+    _unit selectWeapon _primaryWeapon; // This turns off lasers/lights
 
     // Move a bit closer and adjust direction when trying to pick up a person
     [QEGVAR(common,setDir), [_target, getDir _unit + 180], _target] call CBA_fnc_targetEvent;

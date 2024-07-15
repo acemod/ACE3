@@ -46,6 +46,7 @@ if (!GVAR(dragAndFire)) then {
         _primaryWeapon = "ACE_FakePrimaryWeapon";
     };
 
+    // Keep the laser/light on if the weapon is already selected
     if (currentWeapon _unit != _primaryWeapon) then {
         _unit selectWeapon _primaryWeapon;
     };

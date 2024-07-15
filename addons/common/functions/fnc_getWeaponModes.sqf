@@ -19,13 +19,12 @@
 params [["_weapon", "", [""]], ["_muzzle", nil, [""]]];
 
 private _config = configFile >> "CfgWeapons" >> _weapon;
-_weapon = configName _weapon; // Make it config-case
 
 if (!isNil "_muzzle") then {
     _config = _config >> _muzzle
 };
 
-if (isNull _config) exitWith {
+if (!isClass _config) exitWith {
     [] // return
 };
 
@@ -34,9 +33,9 @@ private _modes = [];
 {
     if (getNumber (_config >> _x >> "showToPlayer") == 1) then {
         if (_x == "this") then {
-            _modes pushBack _weapon;
+            _modes pushBack (configName _config);
         } else {
-            if (!isNull (_config >> _x)) then {
+            if (isClass (_config >> _x)) then {
                 _modes pushBack (configName (_config >> _x));
             };
         };

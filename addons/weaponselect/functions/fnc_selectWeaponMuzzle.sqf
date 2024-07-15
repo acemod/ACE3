@@ -35,3 +35,5 @@ private _index = if (currentWeapon _unit == _weapon) then {
 private _muzzle = _muzzles select _index;
 
 _unit selectWeapon [_weapon, _muzzle, ([_weapon, _muzzle] call EFUNC(common,getWeaponModes)) select 0];
+
+nil // return
