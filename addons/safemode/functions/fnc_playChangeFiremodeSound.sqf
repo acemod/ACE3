@@ -39,3 +39,5 @@ if !(toLowerANSI (_filename select [count _filename - 4]) in [".wav", ".ogg", ".
 private _position = _unit modelToWorldVisualWorld (_unit selectionPosition "RightHand");
 
 playSound3D [_filename, objNull, insideBuilding _unit >= 0.5, _position, _volume, _soundPitch, _distance];
+
+nil // return
