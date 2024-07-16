@@ -43,10 +43,7 @@ if (_abort) then {
     };
     if (ACE_player distance _unit > _maxRange && {ACE_player distance ((getPosASL _unit) vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply _maxRange)) > _maxRange}) exitWith {};
 
-    private _ammoCount = (_unit ammo _muzzle) + 1;
-    private _tracersEvery = getNumber(configFile >> "CfgMagazines" >> _magazine >> "tracersEvery");
-    private _lastRoundsTracer = getNumber(configFile >> "CfgMagazines" >> _magazine >> "lastRoundsTracer");
-    if (_ammoCount <= _lastRoundsTracer || {_tracersEvery > 0 && {(_ammoCount - _lastRoundsTracer) % _tracersEvery == 0}}) exitWith { _abort = false };
+    if (_projectile getShotInfo 4) exitWith { _abort = false }; // 4=shownTracer
 
     if (GVAR(bulletTraceEnabled) && {_muzzleVelocity > BULLET_TRACE_MIN_VELOCITY} && {cameraView == "GUNNER"}) then {
         if (currentWeapon ACE_player == binocular ACE_player) exitWith { _abort = false };
