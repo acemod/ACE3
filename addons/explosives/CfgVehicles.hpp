@@ -11,7 +11,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                 showDisabled = 1;
                 icon = QPATHTOF(UI\Explosives_Menu_ca.paa);
-                insertChildren = QUOTE([_player] call FUNC(addTransmitterActions););
+                insertChildren = QUOTE([_player] call FUNC(addTransmitterActions));
                 class ACE_Place {
                     displayName = CSTRING(Place);
                     statement = "";
@@ -49,7 +49,7 @@ class CfgVehicles {
                 distance = 1;
                 displayName = CSTRING(Defuse);
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDefuse));
-                statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse););
+                statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse));
                 exceptions[] = {"isNotSwimming"};
                 icon = QPATHTOF(UI\Defuse_ca.paa);
             };
@@ -87,7 +87,7 @@ class CfgVehicles {
                     displayName = CSTRING(TriggerMenu);
                     condition = "true";
                     statement = "";
-                    insertChildren = QUOTE([ARR_3(_target getVariable QUOTE(QGVAR(class)),_target,_player)] call FUNC(addTriggerActions););
+                    insertChildren = QUOTE([ARR_3(_target getVariable QUOTE(QGVAR(class)),_target,_player)] call FUNC(addTriggerActions));
                     showDisabled = 0;
                     exceptions[] = {"isNotSwimming"};
                     icon = QPATHTOF(UI\Explosives_Menu_ca.paa);

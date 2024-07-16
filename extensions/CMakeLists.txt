@@ -157,7 +157,7 @@ endif()
 option(ENABLE_GTEST "ENABLE_GTEST" ON)
 if (ENABLE_GTEST)
     include(FetchContent)
-    FetchContent_Declare(googletest GIT_REPOSITORY https://github.com/google/googletest.git)
+    FetchContent_Declare(googletest GIT_REPOSITORY https://github.com/google/googletest.git GIT_TAG main)
     # For Windows: Prevent overriding the parent project's compiler/linker settings
     set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
     FetchContent_MakeAvailable(googletest)

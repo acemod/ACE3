@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Attack profile: Beam guided. Exact same as wire-guided, except no wire cutting
  *
  * Arguments:

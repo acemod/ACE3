@@ -1,21 +1,21 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
-* Author: PabstMirror
-* Creates a viewport display and camera
-*
-* Arguments:
-* 0: Vehicle <OBJECT>
-* 1: Viewport <ARRAY>
-* 2: Player's vision mode <NUMBER>
-*
-* Return Value:
-* None
-*
-* Example:
-* [...] call ace_viewports_fnc_viewCreate
-*
-* Public: No
-*/
+ * Author: PabstMirror
+ * Creates a viewport display and camera
+ *
+ * Arguments:
+ * 0: Vehicle <OBJECT>
+ * 1: Viewport <ARRAY>
+ * 2: Player's vision mode <NUMBER>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [...] call ace_viewports_fnc_viewCreate
+ *
+ * Public: No
+ */
 
 params ["_vehicle", "_viewport", "_visionMode"];
 _viewport params ["_name", "_type", "_camLocation", "_camAttach"];
@@ -79,7 +79,7 @@ switch (true) do {
         if (_usingGoggles) then {
             // Screen will be out of focus, too bright and not in IR; should be almost impossible to see anything useful
             _camEffect = [3,1,1,0.1,0,[0,0,0,0],[1,1,1,0],[1,1,1,1]];
-            
+
             private _ctrlNVG = _display ctrlCreate ["RscPicture", -1];
             _ctrlNVG ctrlSetText "#(argb,8,8,3)color(1,1,0.6,0.9)";
             _ctrlNVG ctrlSetPosition [safezoneX + 0.5 * safezoneW - 0.5 * _viewWidth, safezoneY + 0.5 * safeZoneH - 0.5 * _viewHeight, _viewWidth, _viewHeight];
@@ -97,10 +97,10 @@ switch (true) do {
 
         if (_usingGoggles) then {
             _camEffect = [_visionMode]; // pass-thru
-            // _camEffect = [3, true, 0.747773,0.791092,0,[0,0,0,0],[1.3,1.2,0,0.9],[6,1,1,0]]; 
+            // _camEffect = [3, true, 0.747773,0.791092,0,[0,0,0,0],[1.3,1.2,0,0.9],[6,1,1,0]];
             // Some periscope glass is IR Laser Safe (~1064nm) which is close to same wavelength as NVGs
             // And cannot apply nvg and ace_nightvision effects to pip at same time, so just make it small and shitty...
-            _viewHeight = 0.45 * _viewHeight; 
+            _viewHeight = 0.45 * _viewHeight;
         };
         private _viewWidth = _stretch * _viewHeight * _screenAR / 1.3333333333333;
 

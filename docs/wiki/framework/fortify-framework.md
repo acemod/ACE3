@@ -37,7 +37,7 @@ To add a preset via code you use the function `call ace_fortify_fnc_registerObje
 ```sqf
 * Registers the given objects in the given side's player interaction menu.
 * Players on that side must have the `Fortify Tool` item in their inventory to access the menu.
-* Classnames must be in the format [<classname>, <cost>]
+* Classnames must be in the format [<classname>, <cost>, <category(optional)>]
 * MUST BE CALLED ON SERVER!
 *
 * Arguments:
@@ -50,6 +50,7 @@ To add a preset via code you use the function `call ace_fortify_fnc_registerObje
 *
 * Example:
 * [west, 5000, [["Land_BagFence_Long_F", 5], ["Land_BagBunker_Small_F", 50]]] call ace_fortify_fnc_registerObjects
+* [west, 5000, [["Land_BagFence_Long_F", 5, "tan"], ["Land_BagFence_01_long_green_F", 5, "green"]]] call ace_fortify_fnc_registerObjects
 ```
 
 Adding it through `description.ext` or config you use:
@@ -61,6 +62,13 @@ class ACEX_Fortify_Presets {
         objects[] = {
             {"Sandbag", 5},
             {"Bunker", 50}
+        };
+    };
+    class TAG_categories {
+        displayName = "My Categories";
+        objects[] = {
+            {"Sandbag", 5, "A Category"},
+            {"Bunker", 50, "TAG_MyPreset"} // will use the localized displayName of that preset ("My Preset")
         };
     };
 };
@@ -106,10 +114,11 @@ The Fortify budget can be updated for any side using the function.
 
 ### 2.1 Listenable
 
-Event Name | Passed Parameter(s) | Locality | Description
----------- | ----------- | ------------------- | --------
-`acex_fortify_objectPlaced` | [player, side, objectPlaced] | Global | Foritfy object placed
-`acex_fortify_objectDeleted` | [player, side, objectDeleted] | Global | Foritfy object deleted
-`acex_fortify_onDeployStart` | [player, object, cost] | Local | Player starts placing object
-`ace_fortify_deployFinished` | [player, side, configName, posASL, vectorDir, vectorUp] | Local | Player successfully finishes building object
-`ace_fortify_deployCanceled` | [player, side, configName, posASL, vectorDir, vectorUp] | Local | Player cancels building object
+| Event Name | Passed Parameter(s) | Locality | Description |
+| ---------- | ----------- | ------------------- | -------- |
+| `acex_fortify_objectPlaced` | [player, side, objectPlaced] | Global | Fortify object placed |
+| `acex_fortify_objectDeleted` | [player, side, objectDeleted] | Global | Fortify object deleted |
+| `acex_fortify_onDeployStart` | [player, object, cost] | Local | Player starts placing object |
+| `ace_fortify_onDeployStop` | [player, object, cost] | Local | Player stops placing object. Raised only if stopped before trying to place (= before progress bar appears). If it's during progress bar, only `ace_fortify_deployCanceled` is raised. |
+| `ace_fortify_deployFinished` | [[player, side, configName, posASL, vectorDir, vectorUp, cost], elapsedTime, totalTime, errorCode] | Local | Player successfully finishes building object |
+| `ace_fortify_deployCanceled` | [[player, side, configName, posASL, vectorDir, vectorUp, cost], elapsedTime, totalTime, errorCode] | Local | Player cancels building object |

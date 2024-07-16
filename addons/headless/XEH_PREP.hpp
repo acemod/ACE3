@@ -1,3 +1,4 @@
+ACEX_PREP(blacklist);
 ACEX_PREP(endMissionNoPlayers);
 ACEX_PREP(handleConnectHC);
 ACEX_PREP(handleDisconnect);

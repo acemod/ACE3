@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL, mharis001
  * Returns children actions for checking dogtags in player's inventory.
@@ -27,7 +27,9 @@ private _fnc_getActions = {
             private _displayName = getText (_config >> "displayName");
             private _picture = getText (_config >> "picture");
 
-            private _action = [_x, _displayName, _picture, FUNC(checkDogtagItem), {true}, {}, _x] call EFUNC(interact_menu,createAction);
+            private _action = [_x, _displayName, _picture, {
+                [GVAR(dogtagsData) getOrDefault [_this select 2, []]] call FUNC(showDogtag);
+            }, {true}, {}, _x] call EFUNC(interact_menu,createAction);
             _actions pushBack [_action, [], _player];
         };
     } forEach (_player call EFUNC(common,uniqueItems));

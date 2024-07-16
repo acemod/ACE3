@@ -6,8 +6,8 @@ class CfgVehicles {
                 displayName = CSTRING(SetCaptive);
                 selection = "righthand";
                 distance = HANDCUFFS_DISTANCE;
-                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canApplyHandcuffs));
-                statement = QUOTE([ARR_2(_player, _target)] call FUNC(doApplyHandcuffs));
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canApplyHandcuffs));
+                statement = QUOTE([ARR_2(_player,_target)] call FUNC(doApplyHandcuffs));
                 exceptions[] = {"isNotSwimming", "isNotInside"};
                 icon = QPATHTOF(UI\handcuff_ca.paa);
             };
@@ -17,16 +17,16 @@ class CfgVehicles {
                     displayName = CSTRING(ReleaseCaptive);
                     selection = "righthand";
                     distance = HANDCUFFS_DISTANCE;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canRemoveHandcuffs));
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doRemoveHandcuffs));
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canRemoveHandcuffs));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(doRemoveHandcuffs));
                     exceptions[] = {"isNotSwimming", "isNotInside"};
                     icon = QPATHTOF(UI\handcuff_ca.paa);
                 };
                 class ACE_EscortCaptive {
                     displayName = CSTRING(EscortCaptive);
                     distance = 4;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canEscortCaptive));
-                    statement = QUOTE([ARR_3(_player, _target, true)] call FUNC(doEscortCaptive));
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canEscortCaptive));
+                    statement = QUOTE([ARR_3(_player,_target,true)] call FUNC(doEscortCaptive));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
                     icon = QPATHTOF(UI\captive_ca.paa);
@@ -34,8 +34,8 @@ class CfgVehicles {
                 class ACE_StopEscorting {
                     displayName = CSTRING(StopEscorting);
                     distance = 4;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canStopEscorting));
-                    statement = QUOTE([ARR_3(_player,_target, false)] call FUNC(doEscortCaptive));
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canStopEscorting));
+                    statement = QUOTE([ARR_3(_player,_target,false)] call FUNC(doEscortCaptive));
                     exceptions[] = {"isNotEscorting", "isNotSwimming"};
                     showDisabled = 0;
                     icon = QPATHTOF(UI\captive_ca.paa);
@@ -43,8 +43,8 @@ class CfgVehicles {
                 class ACE_LoadCaptive {
                     displayName = CSTRING(LoadCaptive);
                     distance = 4;
-                    condition = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(canLoadCaptive));
-                    statement = QUOTE([ARR_3(_player, _target, objNull)] call FUNC(doLoadCaptive));
+                    condition = QUOTE([ARR_3(_player,_target,objNull)] call FUNC(canLoadCaptive));
+                    statement = QUOTE([ARR_3(_player,_target,objNull)] call FUNC(doLoadCaptive));
                     exceptions[] = {"isNotEscorting", "isNotSwimming"};
                     showDisabled = 0;
                     icon = QPATHTOF(UI\captive_ca.paa);
@@ -53,9 +53,25 @@ class CfgVehicles {
                 class GVAR(UnloadCaptive) {
                     displayName = CSTRING(UnloadCaptive);
                     distance = 4;
-                    condition = QUOTE([ARR_2(_player, _target)] call FUNC(canUnloadCaptive));
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(doUnloadCaptive));
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canUnloadCaptive));
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(doUnloadCaptive));
                     exceptions[] = {"isNotSwimming"};
+                };
+                class GVAR(BlindfoldCaptive) {
+                    displayName = CSTRING(BlindfoldCaptive);
+                    distance = 4;
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canBlindfoldCaptive));
+                    statement = QUOTE([ARR_3(_player,_target,true)] call FUNC(doBlindfoldCaptive));
+                    exceptions[] = {"isNotSwimming"};
+                    showDisabled = 0;
+                };
+                class GVAR(RemoveBlindfoldCaptive) {
+                    displayName = CSTRING(RemoveBlindfoldCaptive);
+                    distance = 4;
+                    condition = QUOTE([ARR_2(_player,_target)] call FUNC(canRemoveBlindfoldCaptive));
+                    statement = QUOTE([ARR_3(_player,_target,false)] call FUNC(doBlindfoldCaptive));
+                    exceptions[] = {"isNotSwimming"};
+                    showDisabled = 0;
                 };
             };
         };
@@ -63,23 +79,23 @@ class CfgVehicles {
         class ACE_SelfActions {
             class ACE_StopEscortingSelf {
                 displayName = CSTRING(StopEscorting);
-                condition = QUOTE([ARR_2(_player, objNull)] call FUNC(canStopEscorting));
-                statement = QUOTE([ARR_3(_player,objNull, false)] call FUNC(doEscortCaptive));
+                condition = QUOTE([ARR_2(_player,objNull)] call FUNC(canStopEscorting));
+                statement = QUOTE([ARR_3(_player,objNull,false)] call FUNC(doEscortCaptive));
                 exceptions[] = {"isNotEscorting", "isNotSwimming"};
                 showDisabled = 0;
             };
             class ACE_StartSurrenderingSelf {
                 displayName = CSTRING(StartSurrendering);
-                condition = QUOTE([ARR_2(_player, true)] call FUNC(canSurrender));
-                statement = QUOTE([ARR_2(_player, true)] call FUNC(setSurrendered));
+                condition = QUOTE([ARR_2(_player,true)] call FUNC(canSurrender));
+                statement = QUOTE([ARR_2(_player,true)] call FUNC(setSurrendered));
                 exceptions[] = {"isNotSwimming"};
                 showDisabled = 0;
                 icon = QPATHTOF(UI\Surrender_ca.paa);
             };
             class ACE_StopSurrenderingSelf {
                 displayName = CSTRING(StopSurrendering);
-                condition = QUOTE([ARR_2(_player, false)] call FUNC(canSurrender));
-                statement = QUOTE([ARR_2(_player, false)] call FUNC(setSurrendered));
+                condition = QUOTE([ARR_2(_player,false)] call FUNC(canSurrender));
+                statement = QUOTE([ARR_2(_player,false)] call FUNC(setSurrendered));
                 exceptions[] = {"isNotSurrendering", "isNotSwimming"};
                 showDisabled = 0;
                 icon = QPATHTOF(UI\Surrender_ca.paa);
@@ -93,8 +109,8 @@ class CfgVehicles {
                 class GVAR(LoadCaptive) { \
                     displayName = CSTRING(LoadCaptive); \
                     distance = 4; \
-                    condition = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(canLoadCaptive)); \
-                    statement = QUOTE([ARR_3(_player, objNull, _target)] call FUNC(doLoadCaptive)); \
+                    condition = QUOTE([ARR_3(_player,objNull,_target)] call FUNC(canLoadCaptive)); \
+                    statement = QUOTE([ARR_3(_player,objNull,_target)] call FUNC(doLoadCaptive)); \
                     exceptions[] = {"isNotEscorting", "isNotSwimming"}; \
                 }; \
             }; \

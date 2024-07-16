@@ -1,12 +1,13 @@
-#include "script_component.hpp"
-#include "..\defines.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe
  * Handle the mouse wheel.
  *
  * Arguments:
  * 0: Not used
- * 1: Mousewheel Z position <SCALAR>
+ * 1: onMouseZChanged EH return <ARRAY>
+ * - 0: Not used
+ * - 1: Mousewheel Z position <NUMBER>
  *
  * Return Value:
  * None
@@ -17,7 +18,8 @@
 params ["", "_args"];
 _args params ["", "_zPos"];
 
-private _distanceMax = ((boundingboxreal GVAR(center) select 0) vectordistance (boundingboxreal GVAR(center) select 1)) * 1.5;
+private _boundingBoxReal = boundingBoxReal GVAR(center);
+private _distanceMax = ((_boundingBoxReal select 0) vectorDistance (_boundingBoxReal select 1)) * 1.5;
 private _distanceMin = _distanceMax * 0.15;
 private _distance = GVAR(cameraPosition) select 0;
 

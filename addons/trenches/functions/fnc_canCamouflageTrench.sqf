@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Cyruz
  * Checks if a unit can camouflage a trench.

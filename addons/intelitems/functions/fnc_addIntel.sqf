@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Adds the given intel item (magazine) to the given unit.
@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Item <STRING>
- * 3: Data <STRING>
+ * 2: Data <STRING>
  *
  * Return Value:
  * Successful <BOOL>

@@ -4,48 +4,45 @@
 //@import "foundation";
 
 // Or selectively include components
-//@import "foundation/components/accordion";
+//@import "./vendor/foundation/components/accordion";
 //   "foundation/components/alert-boxes",
-@import "foundation/components/block-grid";
+@import "./vendor/foundation/components/block-grid";
 //   "foundation/components/breadcrumbs",
 //   "foundation/components/button-groups",
-@import "foundation/components/buttons";
-@import "foundation/components/clearing";
+@import "./vendor/foundation/components/buttons";
+@import "./vendor/foundation/components/clearing";
 //   "foundation/components/dropdown",
 //   "foundation/components/dropdown-buttons",
 //   "foundation/components/flex-video",
-@import "foundation/components/forms";
-@import "foundation/components/grid";
-@import "foundation/components/inline-lists";
+@import "./vendor/foundation/components/forms";
+@import "./vendor/foundation/components/grid";
+@import "./vendor/foundation/components/inline-lists";
 //   "foundation/components/joyride",
 //   "foundation/components/keystrokes",
 //   "foundation/components/labels",
 //   "foundation/components/magellan",
 //   "foundation/components/orbit",
 //   "foundation/components/pagination",
-@import "foundation/components/panels";
+@import "./vendor/foundation/components/panels";
 //   "foundation/components/pricing-tables",
 //   "foundation/components/progress-bars",
 //   "foundation/components/reveal",
-@import "foundation/components/side-nav";
+@import "./vendor/foundation/components/side-nav";
 //   "foundation/components/split-buttons",
 //   "foundation/components/sub-nav",
 //   "foundation/components/switches",
-@import "foundation/components/tables";
+@import "./vendor/foundation/components/tables";
 //   "foundation/components/tabs",
-@import "foundation/components/thumbs";
+@import "./vendor/foundation/components/thumbs";
 //   "foundation/components/tooltips",
-@import "foundation/components/top-bar";
-@import "foundation/components/type";
+@import "./vendor/foundation/components/top-bar";
+@import "./vendor/foundation/components/type";
 //   "foundation/components/offcanvas",
-@import "foundation/components/visibility";
+@import "./vendor/foundation/components/visibility";
 
 
 @import "vendor/slick";
 @import "vendor/slick-theme";
-
-@import "vendor/fontawesome/font-awesome";
-
 
 /*
 *   Custom Stylesheets
@@ -57,7 +54,7 @@
 @import "footer";
 
 @import "ui/syntax";
-@import "ui/links";
+@import "ui/buttons";
 @import "ui/social";
 @import "ui/slider";
 @import "ui/video";

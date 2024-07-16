@@ -29,7 +29,7 @@ class ACE_Extensions {
 
 // Common UI Stuff:
 class RscText;
-class RscListbox;
+class RscListBox;
 class RscListNBox;
 class RscPicture;
 class RscControlsGroup;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Rebalance AI groups accross HCs.
@@ -23,7 +23,7 @@ TRACE_3("Rebalance",GVAR(inRebalance),GVAR(headlessClients),_force);
 if (GVAR(inRebalance) || {GVAR(headlessClients) isEqualTo []}) exitWith {};
 
 // Transfer after rebalance delay
-[FUNC(transferGroups), [_force], XGVAR(Delay)] call CBA_fnc_waitAndExecute;
+[LINKFUNC(transferGroups), _force, XGVAR(delay)] call CBA_fnc_waitAndExecute;
 
 // Currently in rebalance flag
 GVAR(inRebalance) = true;

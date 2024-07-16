@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Toggles the truing drop screen on/off
@@ -15,7 +15,7 @@
  * Public: No
  */
 
-if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) exitWith {};
+if !(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) exitWith {};
 
 if (ctrlVisible 18000) then {
     false call FUNC(show_truing_drop);

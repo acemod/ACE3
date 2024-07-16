@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles player getting into new vehicle.  Loads PFEG for mortar display if it is a mortar.
@@ -19,7 +19,7 @@
 params ["_player", "_newVehicle"];
 
 if (isNull _newVehicle) exitWith {};
-if (!(_newVehicle isKindOf "Mortar_01_base_F")) exitWith {};
+if !(_newVehicle isKindOf "Mortar_01_base_F") exitWith {};
 
 private _tubeWeaponName = (weapons _newVehicle) select 0;
 private _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");

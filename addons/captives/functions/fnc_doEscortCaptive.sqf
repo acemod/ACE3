@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Nic547
  * Attaches a Captive to the _unit
@@ -39,20 +39,25 @@ if (_state) then {
         _args params ["_unit", "_target", "_actionID"];
 
         if (_unit getVariable [QGVAR(isEscorting), false]) then {
-            if (!alive _target || {!alive _unit} || {!canStand _target} || {!canStand _unit} || {_target getVariable ["ACE_isUnconscious", false]} || {_unit getVariable ["ACE_isUnconscious", false]} || {!isNull (attachedTo _unit)}) then {
+            if (!canStand _target || {!canStand _unit} || {!(_target call EFUNC(common,isAwake))} || {!(_unit call EFUNC(common,isAwake))} || {!isNull (attachedTo _unit)}) then {
                 _unit setVariable [QGVAR(isEscorting), false, true];
             };
         };
 
-        if (!(_unit getVariable [QGVAR(isEscorting), false])) then {
+        if !(_unit getVariable [QGVAR(isEscorting), false]) then {
             [(_this select 1)] call CBA_fnc_removePerFrameHandler;
             [objNull, _target, false] call EFUNC(common,claim);
             detach _target;
             _unit removeAction _actionID;
             _unit setVariable [QGVAR(escortedUnit), objNull, true];
+
+            // Public event
+            [QGVAR(escortingCaptive), [_target, false, _unit]] call CBA_fnc_localEvent;
         };
     }, 0, [_unit, _target, _actionID]] call CBA_fnc_addPerFrameHandler;
 
+    // Public event
+    [QGVAR(escortingCaptive), [_target, true, _unit]] call CBA_fnc_localEvent;
 } else {
     _unit setVariable [QGVAR(isEscorting), false, true];
     _unit setVariable [QGVAR(escortedUnit), objNull, true];

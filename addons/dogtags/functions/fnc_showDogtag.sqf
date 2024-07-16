@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL
  * Shows dogtag.
@@ -31,5 +31,11 @@ private _display = uiNamespace getvariable [QGVAR(tag), displayNull];
 if(isNull _display) exitWith {};
 
 private _control = _display displayCtrl 1001;
-_dogtagData params ["_nickName", "_code", "_bloodType"];
-_control ctrlSetStructuredText parseText format ["%1<br/>%2<br/>%3", toUpper _nickName, _code, _bloodType];
+_dogtagData params ["_name", "_code", "_bloodType"];
+
+// If data doesn't exist or body has no name, set name as "unknown"
+if (_name == "") then {
+    _name = LELSTRING(common,unknown);
+};
+
+_control ctrlSetStructuredText parseText format ["%1<br/>%2<br/>%3", toUpper _name, _code, _bloodType];

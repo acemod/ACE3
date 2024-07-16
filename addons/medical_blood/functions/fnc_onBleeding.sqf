@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Handles periodically creating blood for a bleeding unit.
@@ -22,10 +22,10 @@ params ["_unit"];
 if !(_unit call FUNC(isBleeding)) exitWith {};
 
 // Don't bleed on the ground if in a vehicle
-if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")}) exitWith {};
+if (!isNull objectParent _unit && {!(vehicle _unit isKindOf "StaticWeapon")}) exitWith {};
 
 if (CBA_missionTime > (_unit getVariable [QGVAR(nextTime), -10])) then {
-    private _bloodLoss = (if (GVAR(useAceMedical)) then {GET_BLOOD_LOSS(_unit) * 2.5} else {getDammage _unit * 2}) min 6;
+    private _bloodLoss = ([damage _unit * 2, GET_BLOOD_LOSS(_unit) * 2.5] select GETEGVAR(medical,enabled,false)) min 6;
     _unit setVariable [QGVAR(nextTime), CBA_missionTime + 8 + random 2 - _bloodLoss];
 
     TRACE_2("Creating blood drop for bleeding unit",_unit,_bloodLoss);
