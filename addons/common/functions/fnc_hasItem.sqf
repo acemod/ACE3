@@ -1,21 +1,21 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Check if unit has item. Note: case-sensitive.
+ * Check if given unit has an item of given classname. Note: Case sensitive.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Item Classname <STRING>
+ * 1: Item classname <STRING>
  *
  * Return Value:
- * Unit has Item <BOOL>
+ * Unit has item <BOOL>
  *
  * Example:
- * [bob, "item"] call ace_common_fnc_hasItem
+ * [player, "ACE_Banana"] call ace_common_fnc_hasItem
  *
  * Public: Yes
  */
 
 params [["_unit", objNull, [objNull]], ["_item", "", [""]]];
 
-_item in (_unit call EFUNC(common,uniqueItems))
+_item in (_unit call FUNC(uniqueItems)) // return

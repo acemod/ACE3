@@ -39,7 +39,7 @@ if (_isClone) then {
 };
 
 // Play release animation
-if !(_unit getVariable ["ACE_isUnconscious", false]) then {
+if (_unit call EFUNC(common,isAwake)) then {
     [_unit, "released"] call EFUNC(common,doGesture);
 };
 
