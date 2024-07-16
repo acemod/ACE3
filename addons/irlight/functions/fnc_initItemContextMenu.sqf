@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_irlight_fnc_initItemContextMenu
+ * call ace_irlight_fnc_initItemContextMenu
  *
  * Public: No
  */
@@ -25,23 +25,30 @@
             private _baseClass = getText (configFile >> "CfgWeapons" >> _item >> "baseWeapon");
             _item != _baseClass + _variant
         }, {
-            params ["", "", "_item", "", "_variant"];
+            params ["_unit", "", "_item", "_slot", "_variant"];
 
             private _baseClass = getText (configFile >> "CfgWeapons" >> _item >> "baseWeapon");
 
-            ACE_player removePrimaryWeaponItem _item;
-            ACE_player addPrimaryWeaponItem (_baseClass + _variant);
-            playSound "click";
-
-            if (_turnedOn) then {
-                // Force update of flashlight
-                ACE_player action ["GunLightOff", ACE_player];
-
-                {
-                    ACE_player action ["GunLightOn", ACE_player];
-                    ACE_player action ["IRLaserOn", ACE_player];
-                } call CBA_fnc_execNextFrame;
+            switch (_slot) do {
+                case "RIFLE_POINTER": {
+                    _unit removePrimaryWeaponItem _item;
+                    _unit addPrimaryWeaponItem (_baseClass + _variant);
+                };
+                case "LAUNCHER_POINTER": {
+                    _unit removeSecondaryWeaponItem _item;
+                    _unit addSecondaryWeaponItem (_baseClass + _variant);
+                };
+                case "PISTOL_POINTER": {
+                    _unit removeHandgunItem _item;
+                    _unit addHandgunItem (_baseClass + _variant);
+                };
+                case "BINOCULAR_POINTER": {
+                    _unit removeBinocularItem _item;
+                    _unit addBinocularItem (_baseClass + _variant);
+                };
             };
+
+            playSound "click";
         }, false, _variant
     ] call CBA_fnc_addItemContextMenuOption;
 } forEach [
