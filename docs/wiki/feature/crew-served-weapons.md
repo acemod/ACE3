@@ -66,10 +66,10 @@ Static weapons are assembled when a tripod is placed down, and the weapon mounte
 
 ### 3.2 handleExtraMagazines
 
-- Enables/Disables the magazines in the CSW will appear next to the gun on weapon initialization when using defaultAssemblyMode and you have a pre-placed static weapon
+- Controls whether magazines in pre-placed or vanilla assembled CSWs will be unloaded next to the weapon, or just deleted. Has no effect for CSW assembled through the ACE gunbags.
 - Default: On
 
 ### 3.3 ammoHandling
 
-- Whether or not you want to handle ammo using the CSW way. Does nothing if using defaultAssemblyMode
+- Whether or not AI can reload a CSW.
 - Default: On
