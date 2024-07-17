@@ -20,5 +20,6 @@ PREP(getMaterialInfo);
 PREP(getSpallInfo);
 PREP(getFragInfo);
 PREP(initMaterialCache);
+PREP(roundInitFrag);
 PREP(shouldFrag);
 PREP(shouldSpall);

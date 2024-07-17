@@ -129,6 +129,6 @@ systemChat ("spd: " + str (_speedChange * ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF)
 
 TRACE_5("Calling event:",QUOTE(GLUE(ADDON,_)) + _material + _spawnSize,_lastVelocityNorm,_vectorUp,_speedChange,_shotParents);
 [
-    FUNC(doSpallServer),
+    QGVAR(spallEvent),
     [QUOTE(GLUE(ADDON,_)) + _material + _spawnSize, _lastVelocityNorm, _vectorUp, _speedChange, _shotParents]
 ] call CBA_fnc_serverEvent;

@@ -12,7 +12,7 @@
 
         if (!hasInterface) exitWith {};
         ["ace_firedPlayerVehicleNonLocal", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
-        ["ace_firedNonPlayerVehicle", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
+        ["ace_firedPlayerNonLocal", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
         GVAR(dev_drawPFEH) = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
         [
             "ace_interact_menu_newControllableObject",

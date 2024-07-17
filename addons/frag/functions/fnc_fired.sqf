@@ -57,9 +57,9 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
     ];
 };
 if !(GVAR(reflectionsEnabled) || GVAR(enabled)) exitWith {
-    TRACE_1("initExit No frag/reflections",_ammo);
+    TRACE_1("firedExit No frag/reflections",_ammo);
 };
 
-[_projectile, _ammo] call FUNC(roundInitFrag);
+[_ammo, _projectile] call FUNC(roundInitFrag);
 
-TRACE_1("initExit",_ammo);
+TRACE_1("firedExit",_ammo);
