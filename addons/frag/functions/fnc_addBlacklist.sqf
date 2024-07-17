@@ -18,4 +18,4 @@
 params ["_projectile"];
 TRACE_2("addBlackList",_projectile,typeOf projectile);
 
-_projectile setVariable [QGVAR(blacklisted), true, 2];
+_projectile setVariable [QGVAR(blacklisted)];
