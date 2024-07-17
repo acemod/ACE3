@@ -372,7 +372,7 @@ class APERSMineDispenser_Mine_Ammo: APERSMine_Range_Ammo {
     GVAR(skip) = 1;
 };
 
-class UXO_deploy_base_f: SubmunitionBase;
+class UXO_deploy_base_f: SubmunitionBase {};
 
 class ClaymoreDirectionalMine_Remote_Ammo: DirectionalBombBase {
     GVAR(skip) = 1;
