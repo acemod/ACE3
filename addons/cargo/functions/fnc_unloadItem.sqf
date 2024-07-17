@@ -8,8 +8,8 @@
  * 1: Holder object (vehicle) <OBJECT> (default: objNull)
  * 2: Unloader <OBJECT> (default: objNull)
  * 3: Deploy parameters <ARRAY> (default: [])
- * - 0: Position AGL <ARRAY>
- * - 1: Direction <NUMBER>
+ * - 0: Position AGL <ARRAY> (default: [])
+ * - 1: Direction <NUMBER> (default: 0)
  *
  * Return Value:
  * Object unloaded <BOOL>
@@ -20,8 +20,8 @@
  * Public: Yes
  */
 
-params [["_item", "", [objNull, ""]], ["_vehicle", objNull, [objNull]], ["_unloader", objNull, [objNull]], ["_deploy", []]];
-_deploy params ["_emptyPosAGL", "_direction"];
+params [["_item", "", [objNull, ""]], ["_vehicle", objNull, [objNull]], ["_unloader", objNull, [objNull]], ["_deploy", [], [[]]]];
+_deploy params [["_emptyPosAGL", [], [[]], 3], ["_direction", 0, [0]]];
 
 TRACE_4("params",_item,_vehicle,_unloader,_deploy);
 
@@ -68,7 +68,7 @@ if (_emptyPosAGL isEqualTo []) exitWith {
     false // return
 };
 
-private _object = [_item, _vehicle, _emptyPosAGL, _deployed] call FUNC(unload);
+private _object = [_item, _vehicle, _emptyPosAGL, _deployed, _direction] call FUNC(unload);
 
 // Dragging integration
 if (!_deployed) then {

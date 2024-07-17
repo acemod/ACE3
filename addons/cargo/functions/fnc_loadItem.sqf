@@ -47,18 +47,30 @@ _vehicle setVariable [QGVAR(space), _cargoSpace - _itemSize, true];
 if (_item isEqualType objNull) then {
     detach _item;
 
+    // If the object couldn't be loaded as ViV, try to compact the existing ViV cargo
     if !(_vehicle setVehicleCargo _item) then {
-        private _itemsCargo = _loaded arrayIntersect getVehicleCargo _vehicle;
+        private _itemsViVCargo = _loaded arrayIntersect (getVehicleCargo _vehicle);
         private _cargoNet = createVehicle [GVAR(cargoNetType), [0, 0, 0], [], 0, "CAN_COLLIDE"];
-        if ([_vehicle, _cargoNet, _itemsCargo] call FUNC(canItemCargo)) then {
-            while {!(_vehicle setVehicleCargo _cargoNet)} do { // Move ViV cargo to ACE Cargo
-                if (_itemsCargo isEqualTo []) exitWith {deleteVehicle _cargoNet; /*Should not happen*/};
-                private _itemViV = _itemsCargo deleteAt 0;
 
-                if !(objNull setVehicleCargo _itemViV) exitWith {deleteVehicle _cargoNet;};
+        if ([_cargoNet, _vehicle, _itemsViVCargo] call FUNC(canItemCargo)) then {
+            // Move ViV cargo to ACE Cargo
+            while {!(_vehicle setVehicleCargo _cargoNet)} do {
+                if (_itemsViVCargo isEqualTo []) exitWith {
+                    // Should not happen
+                    deleteVehicle _cargoNet;
+                };
 
+                private _itemViV = _itemsViVCargo deleteAt 0;
+
+                // If the ViV object couldn't be unloaded, quit
+                if !(objNull setVehicleCargo _itemViV) exitWith {
+                    deleteVehicle _cargoNet;
+                };
+
+                // If the ViV object was unloaded, store it as regular cargo
                 _itemViV setVariable [QGVAR(cargoNet), _cargoNet, true];
-                _itemViV attachTo [_vehicle, [0,0,-100]];
+                _itemViV attachTo [_vehicle, [0, 0, -100]];
+
                 [QEGVAR(common,hideObjectGlobal), [_itemViV, true]] call CBA_fnc_serverEvent;
 
                 // Some objects below water will take damage over time and eventualy become "water logged" and unfixable (because of negative z attach)
@@ -67,7 +79,8 @@ if (_item isEqualType objNull) then {
         } else {
             deleteVehicle _cargoNet;
         };
-        if !(isNull _cargoNet) then {
+
+        if (!isNull _cargoNet) then {
             _cargoNet setVariable [QGVAR(isCargoNet), true, true];
             _item setVariable [QGVAR(cargoNet), _cargoNet, true];
         };
@@ -85,7 +98,7 @@ if (_item isEqualType objNull) then {
 
             [QEGVAR(zeus,removeObjects), [[_item], _objectCurators]] call CBA_fnc_serverEvent;
         };
-    
+
         // Some objects below water will take damage over time, eventually becoming "water logged" and unfixable (because of negative z attach)
         [_item, "blockDamage", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
     };

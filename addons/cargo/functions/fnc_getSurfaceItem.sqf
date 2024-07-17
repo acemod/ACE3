@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Vdauphin
- * Get surface of an item.
+ * Gets surface of an item.
  *
  * Arguments:
  * 0: Object <OBJECT>
@@ -10,7 +10,7 @@
  * Surface in m² <NUMBER>
  *
  * Example:
- * [player] call ace_cargo_fnc_getSurfaceItem
+ * cursorObject call ace_cargo_fnc_getSurfaceItem
  *
  * Public: No
  */
