@@ -1,38 +1,25 @@
 // We need this since autocannons generally inherit from BulletBase
 class BulletCore;
-class BulletBase: BulletCore {
-    ACE_FRAG_ADD_EH_BASE;
-};
+class BulletBase: BulletCore;
 
 class GrenadeCore;
-class GrenadeBase: GrenadeCore {
-    ACE_FRAG_ADD_EH_BASE;
-};
+class GrenadeBase: GrenadeCore;
 
 class LaserBombCore;
-class ammo_Bomb_LaserGuidedBase: LaserBombCore {
-    ACE_FRAG_ADD_EH_BASE;
-};
+class ammo_Bomb_LaserGuidedBase: LaserBombCore;
 
 class MissileCore;
-class MissileBase: MissileCore {
-    ACE_FRAG_ADD_EH_BASE;
-};
+class MissileBase: MissileCore;
 
 class RocketCore;
 class RocketBase: RocketCore {
-    ACE_FRAG_ADD_EH_BASE;
     GVAR(skip) = 1;
 };
 
-class ArtilleryRocketCore: RocketCore {
-    ACE_FRAG_ADD_EH_BASE;
-};
+class ArtilleryRocketCore: RocketCore;
 
 class ShellCore;
-class ShellBase: ShellCore {
-    ACE_FRAG_ADD_EH_BASE;
-};
+class ShellBase: ShellCore;
 
 class ShotDeployCore;
 class ShotDeployBase: ShotDeployCore {
@@ -40,32 +27,21 @@ class ShotDeployBase: ShotDeployCore {
 };
 
 class ShotgunCore;
-class ShotgunBase: ShotgunCore {
-    ACE_FRAG_ADD_EH_BASE;
-};
+class ShotgunBase: ShotgunCore;
 
 class SubmunitionCore;
 class SubmunitionBase: SubmunitionCore {
-    ACE_FRAG_ADD_EH_BASE;
     GVAR(skip) = 1;
 };
 
 class BoundingMineCore;
-class BoundingMineBase: BoundingMineCore {
-    ACE_FRAG_ADD_EH_BASE;
-};
+class BoundingMineBase: BoundingMineCore;
 
 class PipeBombCore;
-class PipeBombBase: PipeBombCore {
-    ACE_FRAG_ADD_EH_BASE;
-};
+class PipeBombBase: PipeBombCore;
 
 class DirectionalBombCore;
-class DirectionalBombBase: DirectionalBombCore {
-    ACE_FRAG_ADD_EH_BASE;
-};
+class DirectionalBombBase: DirectionalBombCore;
 
 class MineCore;
-class MineBase: MineCore {
-    ACE_FRAG_ADD_EH_BASE;
-};
+class MineBase: MineCore;

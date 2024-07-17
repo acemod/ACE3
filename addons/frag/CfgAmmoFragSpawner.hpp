@@ -37,7 +37,7 @@ class GVAR(DOUBLES(TRIPLES(random,size,count),top)): GVAR(spawnbase) {\
 }
 
 class GVAR(spawnbase): B_65x39_Caseless {
-    ACE_FRAG_RM_EH;
+    GVAR(skip) = 1;
     deleteParentWhenTriggered = 1;
     explosionEffects = "";
     submunitionConeType[] = {"random", 25};

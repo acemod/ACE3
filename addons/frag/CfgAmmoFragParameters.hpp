@@ -111,7 +111,6 @@ class B_40mm_GPR: B_30mm_HE {
     GVAR(gurney_k) = "1/2";
 };
 class UnderwaterMine_Range_Ammo: MineBase {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 
@@ -158,7 +157,6 @@ class ammo_Bomb_SmallDiameterBase: ammo_Bomb_LaserGuidedBase {
 
 class BombCore;
 class Bo_Mk82: BombCore {
-    ACE_FRAG_ADD_EH_BASE;
     GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
     GVAR(fragCount) = 17500;
     GVAR(metal) = 140000;
@@ -198,7 +196,6 @@ class Mo_cluster_Bomb_03_F: Mo_cluster_Bomb_01_F { // idk, @lambda.tiger on the 
 // ~~~~ Grenades:
 class Grenade;
 class GrenadeHand: Grenade {
-    ACE_FRAG_ADD_EH_BASE;
     GVAR(skip) = 0;
     GVAR(force) = 1;
     /*
@@ -219,11 +216,9 @@ class mini_Grenade:  GrenadeHand {
     GVAR(charge) = 36;
 };
 class GrenadeHand_stone: GrenadeHand {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 class SmokeShell: GrenadeHand {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 class G_40mm_HE: GrenadeBase {
@@ -264,7 +259,6 @@ class ACE_G_40mm_HE: G_40mm_HE {
     class EventHandlers: EventHandlers {};
 };
 class ACE_G_40mm_Practice: ACE_G_40mm_HE {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
     GVAR(force) = 0;
     EGVAR(vehicle_damage,incendiary) = 0;
@@ -272,7 +266,6 @@ class ACE_G_40mm_Practice: ACE_G_40mm_HE {
 
 // ~~~~ Mines & UXO
 class ATMine_Range_Ammo: MineBase {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 
@@ -304,7 +297,6 @@ class TrainingMine_Ammo: APERSMine_Range_Ammo {
 };
 
 class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 
@@ -377,26 +369,20 @@ class UXO2_Ammo_Base_F: UXO1_Ammo_Base_F {
 };
 
 class APERSMineDispenser_Mine_Ammo: APERSMine_Range_Ammo {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 
-class UXO_deploy_base_f: SubmunitionBase {
-    ACE_FRAG_RM_EH;
-};
+class UXO_deploy_base_f: SubmunitionBase;
 
 class ClaymoreDirectionalMine_Remote_Ammo: DirectionalBombBase {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 
 class SatchelCharge_Remote_Ammo: PipeBombBase {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 
 class DemoCharge_Remote_Ammo: PipeBombBase {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 
@@ -409,7 +395,6 @@ class BombDemine_01_Ammo_F: BombCore {
 };
 
 class BombDemine_01_SubAmmo_F: ShellBase {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 
@@ -426,11 +411,9 @@ class R_PG7_F: RocketBase {
 };
 
 class R_PG32V_F: RocketBase {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 class R_TBG32V_F: R_PG32V_F { // Thermobaric
-    ACE_FRAG_ADD_EH;
     GVAR(skip) = 0;
     GVAR(fragCount) = 200;
     GVAR(metal) = 400;
@@ -635,7 +618,6 @@ class ammo_missile_cruise_01: ammo_Missile_CruiseBase {
     GVAR(gurney_k) = "3/5";
 };
 class ammo_Missile_Cruise_01_Cluster: ammo_missile_cruise_01 {
-    ACE_FRAG_RM_EH;
 };
 
 class ammo_Missile_AntiRadiationBase: MissileBase {
@@ -777,7 +759,6 @@ class M_127mm_Firefist_AT: RocketBase { // HOT missile
 };
 
 class M_NLAW_AT_F: MissileBase {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 
@@ -873,7 +854,6 @@ class ammo_Penetrator_Base: ShellBase {
 
 // ~~~~ Special
 class ProbingBeam_01_F: BulletBase {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 
@@ -894,16 +874,13 @@ class FuelExplosion: Default {
 };
 
 class HelicopterExploSmall: ShellBase {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 
 class LightningBolt: ShellBase {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
 
 class M_Mo_82mm_AT: MissileBase {
-    ACE_FRAG_RM_EH;
     GVAR(skip) = 1;
 };
