@@ -16,11 +16,10 @@
  */
 
 params [["_object", objNull, [objNull]]];
-// Original function had no parameters, so add default for BWC
 
 private _animations = [];
-if !(isNull configOf _object) then {
-    // configOf objNull returns CONFIG-NULL
+
+if (!isNull _object) then {
     _animations = getArray (configOf _object >> QGVAR(animations));
 };
 
