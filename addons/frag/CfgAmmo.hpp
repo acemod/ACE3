@@ -87,6 +87,5 @@ class CfgAmmo {
     };
 
     #include "CfgAmmoSpall.hpp"
-    #include "CfgAmmoFragSpawner.hpp"
     #include "CfgAmmoFragParameters.hpp"
 };

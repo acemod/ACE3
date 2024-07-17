@@ -1,45 +1,66 @@
 #include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger,
- * This function creates the requested spalling submunition spawner at a speed and direction.
- * The function is intended to create the spalling on a server via an event call by
- * ace_frag_fnc_doSpallLocal. The "local" version determines whether an event has occured
- * and triggers this event if it has.
+ * This function creates the requested spall on the server given a location, direction, and velocity.
  *
  * Arguments:
- * 0: Class name of the spall spawner <STRING>
- * 1: Normalized 3D vector direction of the spall spawner <ARRAY>
- * 2: "Up" vector for the projectile, required for the spawner to aim out of the 2D plane <ARRAY>
- * 3: The change in velocity that spalling projectile experienced <NUMBER>
- * 4: Shot parents array for the projectile that creates spall <ARRAY>
+ * 0: A spherical coordinate vector of spall velocity <ARRAY>
+ * 1: You're going to have to ask Nouber what this means <NUMBER>
+ * 2: The position (ASL) of the spalling point <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [QGVAR(rock_spall_tiny), [1,0,0], [0,0,1], 300, [objNull, ace_player]] call ace_frag_fnc_doSpallServer
+ * [[1000, 45, 60], 0.8, getPosASL ace_player] call ace_frag_fnc_doSpallServer
  *
  * Public: No
  */
-params ["_spallSpawnerName", "_lastVelocityNorm", "_vectorUp", "_speedChange", "_shotParents"];
+#define WEIGHTED_SIZE [QGVAR(spall_small), 4, QGVAR(spall_medium), 3, QGVAR(spall_large), 2, QGVAR(spall_huge), 1]
+params ["_spallVelocity", "_vm", "_spallPos"];
 
-private _spallSpawner = createVehicle [
-    _spallSpawnerName,
-    ASLToATL _spallPosASL,
-    [],
-    0,
-    "CAN_COLLIDE"
-];
-_spallSpawner setVectorDirandUp [_lastVelocityNorm, _vectorUp];
-_spallSpawner setVelocityModelSpace [0, _speedChange * ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF, 0];
-_spallSpawner setShotParents _shotParents;
+// diag_log text format ["SPALL POWER: %1", _spallVelocity select 0];
+private _spread = 15 + (random 25);
+private _spallCount = 5 + (random 10);
+TRACE_1("",_spallCount);
+for "_i" from 1 to _spallCount do {
+    private _elev = ((_spallVelocity select 2) - _spread) + (random (_spread * 2));
+    private _dir = ((_spallVelocity select 1) - _spread) + (random (_spread * 2));
+    if (abs _elev > 90) then {
+        ADD(_dir,180);
+    };
+    _dir = _dir % 360;
+    private _vel = (_spallVelocity select 0) * 0.33 * _vm;
+    _vel = (_vel - (_vel * 0.25)) + (random (_vel * 0.5));
 
-#ifdef DEBUG_MODE_DRAW
-_spallSpawner addEventHandler [
-    "SubmunitionCreated",
-    {
-        params ["", "_submunitionProjectile"];
-        _submunitionProjectile call FUNC(dev_addRound);
-    }
-];
-#endif
+    private _spallFragVect = [_vel, _dir, _elev] call CBA_fnc_polar2vect;
+    private _fragment = (selectRandomWeighted WEIGHTED_SIZE) createVehicle [0,0,10000];
+    _fragment setPosASL _spallPos;
+    _fragment setVelocity _spallFragVect;
+
+    #ifdef DRAW_FRAG_INFO
+        [_fragment, "orange", true] call FUNC(dev_trackObj);
+    #endif
+};
+
+_spread = 5 + (random 5);
+_spallCount = 3 + (random 5);
+for "_i" from 1 to _spallCount do {
+    private _elev = ((_spallVelocity select 2) - _spread) + (random (_spread * 2));
+    private _dir = ((_spallVelocity select 1) - _spread) + (random (_spread * 2));
+    if (abs _elev > 90) then {
+        ADD(_dir,180);
+    };
+    _dir = _dir % 360;
+    private _vel = (_spallVelocity select 0) * 0.55 * _vm;
+    _vel = (_vel - (_vel * 0.25)) + (random (_vel * 0.5));
+
+    private _spallFragVect = [_vel, _dir, _elev] call CBA_fnc_polar2vect;
+    private _fragment = (selectRandomWeighted WEIGHTED_SIZE) createVehicle [0, 0, 10000];
+    _fragment setPosASL _spallPos;
+    _fragment setVelocity _spallFragVect;
+
+    #ifdef DRAW_FRAG_INFO
+        [_fragment, "orange", true] call FUNC(dev_trackObj);
+    #endif
+};

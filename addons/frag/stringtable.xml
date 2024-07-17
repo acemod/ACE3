@@ -123,33 +123,6 @@
             <Chinese>啟用ACE模擬爆炸反射</Chinese>
             <Czech>Povolit ACE simulaci odrazu exploze</Czech>
         </Key>
-        <Key ID="STR_ACE_Frag_FragMode">
-            <English>Simulation Mode</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_FragMode_Desc">
-            <English>Sets the fragmentation simulation mode, which can be targeted, random or both.</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_FragMode_Opt0">
-            <English>Unit targeted fragmentation</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_FragMode_Opt1">
-            <English>Random fragmentation</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_FragMode_Opt2">
-            <English>Random and targeted fragmentation</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_MinFrag">
-            <English>Disable Fragment Misses</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_MinFrag_Desc">
-            <English>Create a fragment for each unit that a fragment could be shot towards. This setting has no effect when "Random fragmentation" is selected.</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_SpallIntensity">
-            <English>Spalling Intensity</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_SpallIntensity_Desc">
-            <English>Modifier to increase or decrease the number and intensity of spalling events. Increasing this value may cause performance degradation.</English>
-        </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>Frag/Spall Debug Tracing</English>
             <German>Splitter-/Explosions-Debug-Verfolgung</German>

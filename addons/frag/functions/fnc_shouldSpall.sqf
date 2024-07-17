@@ -20,5 +20,5 @@ params ["_ammo"];
 GVAR(shouldSpallCache) getOrDefaultCall [_ammo, {
     (_ammo call FUNC(getSpallInfo)) params ["_caliber", "_explosive", "_indirectHit"];
 
-    (_caliber * GVAR(spallIntensity) >= 1.25 * ACE_FRAG_SPALL_POWER_MIN) || {_explosive >= 0.5 && {_indirectHit * GVAR(spallIntensity) >= 2 * ACE_FRAG_SPALL_POWER_MIN}}
+    _caliber >= 2.5 || (_explosive > 0 && _indirectHit >= 1)
 }, true]
