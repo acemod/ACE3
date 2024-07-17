@@ -16,6 +16,8 @@
  * Public: No
  */
 
+if !(GETEGVAR(medical,enabled,false)) exitWith {false};
+
 params ["_player", "_target"];
 
 // If in Zeus

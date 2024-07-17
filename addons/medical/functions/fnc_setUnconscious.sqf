@@ -6,8 +6,8 @@
  * Arguments:
  * 0: The unit that will be put in an unconscious state <OBJECT>
  * 1: Set unconsciouns <BOOL> (default: true)
- * 2: Minimum unconscious time (set to 0 to ignore) <NUMBER><OPTIONAL> (default: 0)
- * 3: Force wakeup at given time if vitals are stable <BOOL><OPTIONAL> (default: false)
+ * 2: Minimum unconscious time (set to 0 to ignore) <NUMBER> (default: 0)
+ * 3: Force wakeup at given time if vitals are stable <BOOL> (default: false)
  *
  * Return Value:
  * Success? <BOOLEAN>
@@ -19,10 +19,11 @@
  * Public: Yes
  */
 
-// only run this after the settings are initialized
-if !(EGVAR(common,settingsInitFinished)) exitWith {
-    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(setUnconscious), _this];
+if (!EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [LINKFUNC(setUnconscious), _this];
 };
+
+if !(GETEGVAR(medical,enabled,false)) exitWith {};
 
 params [["_unit", objNull, [objNull]], ["_knockOut", true, [false]], ["_minWaitingTime", 0, [0]], ["_forcedWakup", false, [false]]];
 TRACE_4("setUnconscious",_unit,_knockOut,_minWaitingTime,_forcedWakup);
