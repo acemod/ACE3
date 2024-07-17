@@ -1,20 +1,18 @@
 #include "script_component.hpp"
 
-#ifdef DEBUG_MODE_DRAW
 [
     "CBA_settingsInitialized",
     {
+        ["ace_firedPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+        ["ace_firedNonPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+        ["ace_firedPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+        ["ace_firedNonPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+#ifdef DEBUG_MODE_DRAW
         [QGVAR(dev_clearTraces), LINKFUNC(dev_clearTraces)] call CBA_fnc_addEventHandler;
 
         if (!hasInterface) exitWith {};
-        if (!isServer) then {
-            ["ace_firedPlayer", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
-            ["ace_firedPlayerNonLocal", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
-            ["ace_firedNonPlayer", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
-            ["ace_firedPlayerVehicle", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
-            ["ace_firedPlayerVehicleNonLocal", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
-            ["ace_firedNonPlayerVehicle", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
-        };
+        ["ace_firedPlayerVehicleNonLocal", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
+        ["ace_firedNonPlayerVehicle", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
         GVAR(dev_drawPFEH) = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
         [
             "ace_interact_menu_newControllableObject",
@@ -39,9 +37,9 @@
                 ] call EFUNC(interact_menu,addActionToClass);
             }
         ] call CBA_fnc_addEventHandler;
+#endif
     }
 ] call CBA_fnc_addEventHandler;
-#endif
 
 #ifdef LOG_FRAG_INFO
 [true, true, 30] call FUNC(dev_debugAmmo);

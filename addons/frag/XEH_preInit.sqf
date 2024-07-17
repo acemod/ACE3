@@ -28,7 +28,15 @@ GVAR(dev_drawPFEH) = -1;
 #endif
 
 if (isServer) then {
-    [QEGVAR(common,setShotParents), {(_this#0) setVariable [QGVAR(shotParent), [_this#1, _this#2]]}] call CBA_fnc_addEventHandler;
+    [
+        QGVAR(explosionEvent),
+        {
+            params ["_posASL", "_velocity", "_ammo", "_shotParents"];
+            [_posASL, _velocity, _ammo, _shotParents] call FUNC(doFrag);
+        }
+    ] call CBA_fnc_addEventHandler;
+
+    [QGVAR(spallEvent), LINKFUNC(doSpallServer)] call CBA_fnc_addEventHandler;
 };
 
 ADDON = true;

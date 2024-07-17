@@ -1,17 +1,28 @@
 #include "..\script_component.hpp"
 /*
- * Author: Jaynus, NouberNou, Lambda.Tiger,
- * This function creates spalling if the hit slowed the projectile speed down enough.
+ * Author: Jaynus, NouberNou, Lambda.Tiger
+ * This function runs on every client and determines if a spall event happened.
+ * It is intended to be called a frame after the projectile has triggered a hit event,
+ * where information such as the object hit, the projectiles velocity and position on impact
+ * should be kept and passed to this function.If a spall event should happen, this function
+ * calculates the spalling parameters and then calls a server event to create the desired spall effect.
  *
  * Arguments:
- * Arguments are the same as BI's "HitPart" EH:
- * https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#HitPart
+ * 0: The projectile that may be creating spall <OBJECT>
+ * 1: The object the projectile hit <OBJECT>
+ * 2: The 3D position (ASL) of the projectile when it hit the object <ARRAY>
+ * 3: The velocity of the projectile when it hit the object <ARRAY>
+ * 4: The normal of the surface of the object hit <ARRAY>
+ * 5: The class name of the surface, or the bisurf path of the surface hit <STRING>
+ * 6: The class name of the projectile that may be spalling <STRING>
+ * 7: The spalling projectile's shot parents <ARRAY>
+ * 8: The "up" vector of the projectile when it hit the object <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [BIS_HITPART_EH_ARGS] call ace_frag_fnc_doSpall
+ * [_projectile, _hitObject, _lastPosASLProjectile, _lastVelocityProjectile, _surfaceNorm, "a3\data_f\penetration\armour_plate.bisurf", "Sh_125mm_APFSDS", [0, 0, 1]] call ace_frag_fnc_doSpallLocal
  *
  * Public: No
  */
@@ -112,26 +123,12 @@ private _spawnSize = switch (true) do
     default {"_spall_huge"};
 };
 
-private _spallSpawner = createVehicle [
-    QUOTE(GLUE(ADDON,_)) + _material + _spawnSize,
-    ASLToATL _spallPosASL,
-    [],
-    0,
-    "CAN_COLLIDE"
-];
-_spallSpawner setVectorDirandUp [_lastVelocityNorm, _vectorUp];
-_spallSpawner setVelocityModelSpace [0, _speedChange * ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF, 0];
-_spallSpawner setShotParents _shotParents;
-
 #ifdef DEBUG_MODE_FULL
-systemChat ("spd: " + str speed _spallSpawner + ", spawner: " + _fragSpawnType + ", spallPow: " + str _spallPower);
+systemChat ("spd: " + str (_speedChange * ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF) + ", spallPow: " + str _spallPower);
 #endif
-#ifdef DEBUG_MODE_DRAW
-_spallSpawner addEventHandler [
-    "SubmunitionCreated",
-    {
-        params ["", "_submunitionProjectile"];
-        _submunitionProjectile call FUNC(dev_addRound);
-    }
-];
-#endif
+
+TRACE_5("Calling event:",QUOTE(GLUE(ADDON,_)) + _material + _spawnSize,_lastVelocityNorm,_vectorUp,_speedChange,_shotParents);
+[
+    FUNC(doSpallServer),
+    [QUOTE(GLUE(ADDON,_)) + _material + _spawnSize, _lastVelocityNorm, _vectorUp, _speedChange, _shotParents]
+] call CBA_fnc_serverEvent;
