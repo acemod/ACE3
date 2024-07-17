@@ -36,3 +36,5 @@
         [_unit, false, true] call FUNC(setStatusEffects);
     };
 }] call CBA_fnc_addPlayerEventHandler;
+
+["isNotDazed", {!IS_DAZED(_this select 0)}] call EFUNC(common,addCanInteractWithCondition);

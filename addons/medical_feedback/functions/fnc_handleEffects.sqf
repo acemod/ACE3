@@ -31,6 +31,7 @@ BEGIN_COUNTER(handleEffects);
 private _bleedingStrength = GET_BLOOD_LOSS(ACE_player);
 private _bloodVolume      = GET_BLOOD_VOLUME(ACE_player);
 private _unconscious      = IS_UNCONSCIOUS(ACE_player);
+private _dazed            = IS_DAZED(ACE_player);
 private _heartRate        = GET_HEART_RATE(ACE_player);
 private _pain             = GET_PAIN_PERCEIVED(ACE_player);
 
@@ -42,6 +43,7 @@ if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) 
 
 // - Visual effects -----------------------------------------------------------
 [_unconscious, 2] call FUNC(effectUnconscious);
+[_dazed] call FUNC(effectDazed);
 [
     true,
     linearConversion [BLOOD_VOLUME_CLASS_2_HEMORRHAGE, BLOOD_VOLUME_CLASS_4_HEMORRHAGE, _bloodVolume, 0, 1, true]

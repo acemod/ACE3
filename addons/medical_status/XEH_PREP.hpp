@@ -1,6 +1,7 @@
 PREP(addInventoryActions);
 PREP(addMedicationAdjustment);
 PREP(adjustPainLevel);
+PREP(canBecomeDazed);
 PREP(getAllMedicationCount);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
@@ -12,6 +13,7 @@ PREP(hasStableVitals);
 PREP(initUnit);
 PREP(isInStableCondition);
 PREP(setCardiacArrestState);
+PREP(setDazedState);
 PREP(setDead);
 PREP(setStatusEffects);
 PREP(setUnconsciousState);

@@ -24,3 +24,5 @@ if (isNull _unit || {!isNil {_unit getVariable QEGVAR(medical,causeOfDeath)}}) e
 TRACE_4("enteredStateUnconscious",_this,_thisOrigin,_thisTransition,CBA_missionTime);
 
 [_unit, true] call EFUNC(medical_status,setUnconsciousState);
+
+_unit setVariable [QEGVAR(medical,lastDazedCheck), nil];
