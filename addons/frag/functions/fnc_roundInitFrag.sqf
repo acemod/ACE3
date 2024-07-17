@@ -34,11 +34,11 @@ if (_shouldFrag) then {
 
             private _shotParents = getShotParents _projectile;
             private _ammo = typeOf _projectile;
-            // Call server event for fragment generation
+            // Wait a frame to make sure it doesn't
             [
-                QGVAR(explosionEvent),
+                { [QGVAR(explosionEvent), _this] call CBA_fnc_serverEvent; },
                 [_posASL, _velocity, _ammo, _shotParents]
-            ] call CBA_fnc_serverEvent;
+            ] call CBA_fnc_execNextFrame;
         }
     ];
 };
