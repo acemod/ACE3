@@ -164,7 +164,7 @@
             <Hungarian>Cselekvő menü</Hungarian>
             <Portuguese>Menu de Interação</Portuguese>
             <Italian>Menù Interazioni</Italian>
-            <Japanese>インタラクションメニュー</Japanese>
+            <Japanese>インタラクション メニュー</Japanese>
             <Korean>상호작용 메뉴</Korean>
             <Chinesesimp>互动菜单</Chinesesimp>
             <Chinese>互動選單</Chinese>
@@ -181,7 +181,7 @@
             <Hungarian>Cselekvő menü (saját) </Hungarian>
             <Portuguese>Menu de Interação (Individual)</Portuguese>
             <Italian>Menù Interazioni (su se stesso)</Italian>
-            <Japanese>インタラクションメニュー (セルフ)</Japanese>
+            <Japanese>インタラクション メニュー (セルフ)</Japanese>
             <Korean>상호작용 메뉴(자신)</Korean>
             <Chinesesimp>互动菜单（自我）</Chinesesimp>
             <Chinese>互動選單 (自我)</Chinese>
@@ -458,7 +458,7 @@
             <Russian>Вас похлопали по ПРАВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla destra</Italian>
-            <Japanese>右肩を叩かれました</Japanese>
+            <Japanese>右肩を叩かれた</Japanese>
             <Korean>누군가 오른쪽 어깨를 쳤다</Korean>
             <Chinesesimp>你的右肩膀被轻拍了一下</Chinesesimp>
             <Chinese>你的右肩膀被輕拍了一下</Chinese>
@@ -475,7 +475,7 @@
             <Russian>Вас похлопали по ЛЕВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro.</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla sinistra</Italian>
-            <Japanese>左肩を叩かれました</Japanese>
+            <Japanese>左肩を叩かれた</Japanese>
             <Korean>누군가 왼쪽 어깨를 쳤다</Korean>
             <Chinesesimp>你的左肩膀被轻拍了一下</Chinesesimp>
             <Chinese>你的左肩膀被輕拍了一下</Chinese>
@@ -848,7 +848,7 @@
             <Portuguese>Perdão</Portuguese>
             <Italian>Perdona</Italian>
             <Hungarian>Megbocsátás</Hungarian>
-            <Japanese>許す</Japanese>
+            <Japanese>赦免する</Japanese>
             <Korean>허용</Korean>
             <Chinesesimp>原谅</Chinesesimp>
             <Chinese>原諒</Chinese>

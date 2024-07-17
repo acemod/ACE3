@@ -381,6 +381,7 @@
             <Japanese>重火器を装備したユニットのみ</Japanese>
             <Spanish>Sólo unidades con armas pesadas</Spanish>
             <Italian>Solo a unità con armi pesanti</Italian>
+            <Korean>중화기를 가진 유닛만 해당</Korean>
         </Key>
     </Package>
 </Project>
