@@ -4,7 +4,7 @@
  * Gets a random animations from the list.
  *
  * Arguments:
- * None
+ * 0: Object to get animation pool from (optional, default: objNull) <OBJECT>
  *
  * Return Value:
  * Random Animation <STRING>
