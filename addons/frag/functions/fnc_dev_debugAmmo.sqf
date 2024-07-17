@@ -75,7 +75,7 @@ private _printCount = 0;
         _processedCfgAmmos pushBack _ammo;
 
         private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
-        private _shouldFrag = _ammo call FUNC(shouldFrag);
+        _ammo call FUNC(shouldFrag) params ["_shouldFrag"];
 
         if (_shouldFrag || _logAll) then {
 
