@@ -41,17 +41,17 @@ private _fnc_getLightLaserState = {
     // Ignore in vehicle except FFV
     if !(ACE_player call CBA_fnc_canUseWeapon) exitWith {};
 
+    private _weaponIndex = [ACE_player, _currentWeapon] call FUNC(getWeaponIndex);
+
+    if (_weaponIndex == -1) exitWith {};
+
     // Light/laser state only changes in the next frame
     [{
-        private _weaponIndex = [ACE_player, _this] call FUNC(getWeaponIndex);
-        
-        if (_index == -1) exitWith {};
-        
         ACE_player setVariable [
-            QGVAR(laserEnabled_) + str _weaponIndex,
-            ACE_player isIRLaserOn _this || {ACE_player isFlashlightOn _this}
+            QGVAR(laserEnabled_) + str (_this select 1),
+            ACE_player isIRLaserOn (_this select 0) || {ACE_player isFlashlightOn (_this select 0)}
         ];
-    }, _currentWeapon] call CBA_fnc_execNextFrame;
+    }, [_currentWeapon, _weaponIndex]] call CBA_fnc_execNextFrame;
 };
 
 // Get current weapon light/laser state
@@ -60,56 +60,22 @@ call _fnc_getLightLaserState;
 // Update state every time it's changed
 GVAR(laserKeyDownEH) = addUserActionEventHandler ["headlights", "Activate", _fnc_getLightLaserState];
 
-private _fnc_lightLaserEH = {
+// Dropping weapons turns off lights/lasers
+GVAR(lastWeapons) = [primaryWeapon ACE_player, handgunWeapon ACE_player, secondaryWeapon ACE_player];
+
+// Monitor weapon addition/removal here
+GVAR(laserLoadoutEH) = ["loadout", {
     params ["_unit"];
 
-    if !(_unit call CBA_fnc_canUseWeapon) exitWith {};
+    private _weapons = [primaryWeapon _unit, handgunWeapon _unit, secondaryWeapon _unit];
 
-    // Save current weapon state to reapply later
-    private _weaponState = (weaponState _unit) select [0, 3];
+    if (_weapons isEqualTo GVAR(lastWeapons)) exitWith {};
 
-    if (_weaponState select 0 == "") exitWith {};
+    GVAR(lastWeapons) = _weapons;
 
-    // Turn off old light/laser
-    action ["GunLightOff", _unit];
-    action ["IRLaserOff", _unit];
+    _unit call FUNC(switchPersistentLaserEH);
+}] call CBA_fnc_addPlayerEventHandler;
 
-    // Light/laser is off
-    if !(_unit getVariable ["ace_common_laserEnabled_" + str ([_unit, _weaponState select 0] call EFUNC(common,getWeaponIndex)), false]) exitWith {
-        _unit selectWeapon _weaponState;
-    };
-
-    private _fnc_turnOnLightLaser = {
-        params ["_unit", "_weaponState"];
-
-        if (currentWeapon _unit != _weaponState select 0) exitWith {};
-
-        action ["GunLightOn", _unit];
-        action ["IRLaserOn", _unit];
-
-        _unit selectWeapon _weaponState;
-    };
-
-    [
-        // Wait for weapon in "ready to fire" direction
-        // If the unit changes weapons during the transition, let weapon EH handle it
-        {
-            params ["_unit", "_weaponState"];
-
-            private _currentWeapon = currentWeapon _unit;
-
-            _currentWeapon != _weaponState select 0 ||
-            {0.01 > (getCameraViewDirection _unit) vectorDistance (_unit weaponDirection _currentWeapon)}
-        },
-        _fnc_turnOnLightLaser,
-        [_unit, _weaponState],
-        3,
-        _fnc_turnOnLightLaser
-    ] call CBA_fnc_waitUntilAndExecute;
-};
-
-// Dropping weapons turns off lights/lasers
-GVAR(laserLoadoutEH) = ["loadout", _fnc_lightLaserEH] call CBA_fnc_addPlayerEventHandler;
-GVAR(laserTurretEH) = ["turret", _fnc_lightLaserEH] call CBA_fnc_addPlayerEventHandler;
-GVAR(laserVehicleEH) = ["vehicle", _fnc_lightLaserEH] call CBA_fnc_addPlayerEventHandler;
-GVAR(laserWeaponEH) = ["weapon", _fnc_lightLaserEH] call CBA_fnc_addPlayerEventHandler;
+GVAR(laserTurretEH) = ["turret", LINKFUNC(switchPersistentLaserEH)] call CBA_fnc_addPlayerEventHandler;
+GVAR(laserVehicleEH) = ["vehicle", LINKFUNC(switchPersistentLaserEH)] call CBA_fnc_addPlayerEventHandler;
+GVAR(laserWeaponEH) = ["weapon", LINKFUNC(switchPersistentLaserEH)] call CBA_fnc_addPlayerEventHandler;

@@ -190,6 +190,7 @@ PREP(stringCompare);
 PREP(stringToColoredText);
 PREP(swayLoop);
 PREP(switchPersistentLaser);
+PREP(switchPersistentLaserEH);
 PREP(switchToGroupSide);
 PREP(throttledPublicVariable);
 PREP(toBin);
