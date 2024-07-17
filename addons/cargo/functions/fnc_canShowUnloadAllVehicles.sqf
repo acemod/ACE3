@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Vdauphin
  * Checks if unload all vehicles interaction can be show.

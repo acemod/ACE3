@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Vdauphin
  * Unload all vehicles but not ACE Cargo.
