@@ -42,10 +42,6 @@
                     _unit removeHandgunItem _item;
                     _unit addHandgunItem (_baseClass + _variant);
                 };
-                case "BINOCULAR_POINTER": {
-                    _unit removeBinocularItem _item;
-                    _unit addBinocularItem (_baseClass + _variant);
-                };
             };
 
             playSound "click";
