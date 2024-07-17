@@ -41,7 +41,7 @@ if (!alive _round) exitWith {
         TRACE_1("doSpall",_foundObjectHPIds);
         {
             if (!isNil "_x") then {
-                _x removeEventHandler ["hitPart", _foundObjectHPIds select _forEachIndex];
+                _x removeEventHandler ["HitPart", _foundObjectHPIds select _forEachIndex];
             };
         } forEach _spallTrack;
     };
