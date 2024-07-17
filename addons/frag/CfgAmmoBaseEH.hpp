@@ -16,10 +16,10 @@ class RocketBase: RocketCore {
     GVAR(skip) = 1;
 };
 
-class ArtilleryRocketCore: RocketCore;
+class ArtilleryRocketCore: RocketCore {};
 
 class ShellCore;
-class ShellBase: ShellCore;
+class ShellBase: ShellCore {};
 
 class ShotDeployCore;
 class ShotDeployBase: ShotDeployCore {
@@ -27,7 +27,7 @@ class ShotDeployBase: ShotDeployCore {
 };
 
 class ShotgunCore;
-class ShotgunBase: ShotgunCore;
+class ShotgunBase: ShotgunCore {};
 
 class SubmunitionCore;
 class SubmunitionBase: SubmunitionCore {
@@ -35,13 +35,13 @@ class SubmunitionBase: SubmunitionCore {
 };
 
 class BoundingMineCore;
-class BoundingMineBase: BoundingMineCore;
+class BoundingMineBase: BoundingMineCore {};
 
 class PipeBombCore;
-class PipeBombBase: PipeBombCore;
+class PipeBombBase: PipeBombCore {};
 
 class DirectionalBombCore;
-class DirectionalBombBase: DirectionalBombCore;
+class DirectionalBombBase: DirectionalBombCore {};
 
 class MineCore;
-class MineBase: MineCore;
+class MineBase: MineCore {};
