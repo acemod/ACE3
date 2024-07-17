@@ -19,6 +19,11 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
+// If in ViV cargo, unload it first
+if (!isNull isVehicleCargo _target) then {
+    objNull setVehicleCargo _target;
+};
+
 // Get attachTo offset and direction
 private _position = _target getVariable [QGVAR(carryPosition), [0, 0, 0]];
 private _direction = _target getVariable [QGVAR(carryDirection), 0];
