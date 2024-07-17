@@ -48,15 +48,17 @@ if (_shouldFrag#0 && _force == 0) then {
     };
 };
 
-private _ammoSubmunitionConfigPath = _ammoConfig >> "submunitionAmmo ";
+private _ammoSubmunitionConfigPath = _ammoConfig >> "submunitionAmmo";
 if (isText _ammoSubmunitionConfigPath) then {
     private _submunitionAmmo = getText _ammoSubmunitionConfigPath;
+    TRACE_1("Submunition ammo text: ",_submunitionAmmo);
     if (_submunitionAmmo isNotEqualTo "") then {
         private _shouldSubmunitionFrag = _submunitionAmmo call FUNC(shouldFrag);
         _shouldFrag set [1, _shouldSubmunitionFrag#0 || _shouldSubmunitionFrag#1];
     };
 } else {
     private _submunitionArray = getArray _ammoSubmunitionConfigPath;
+    TRACE_1("Submunition ammo array: ",_submunitionArray);
     for "_i" from 0 to count _submunitionArray - 1 step 2 do {
         private _submunitionAmmo = _submunitionArray#_i;
         if (_submunitionAmmo isNotEqualTo "") then {
