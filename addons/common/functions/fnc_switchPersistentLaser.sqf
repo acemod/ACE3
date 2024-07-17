@@ -43,8 +43,12 @@ private _fnc_getLightLaserState = {
 
     // Light/laser state only changes in the next frame
     [{
+        private _weaponIndex = [ACE_player, _this] call FUNC(getWeaponIndex);
+        
+        if (_index == -1) exitWith {};
+        
         ACE_player setVariable [
-            QGVAR(laserEnabled_) + str ([ACE_player, _this] call FUNC(getWeaponIndex)),
+            QGVAR(laserEnabled_) + str _weaponIndex,
             ACE_player isIRLaserOn _this || {ACE_player isFlashlightOn _this}
         ];
     }, _currentWeapon] call CBA_fnc_execNextFrame;
