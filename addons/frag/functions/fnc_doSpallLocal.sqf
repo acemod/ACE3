@@ -114,8 +114,7 @@ if GVAR(dbgSphere) then {
 };
 #endif
 
-private _spawnSize = switch (true) do
-{
+private _spawnSize = switch (true) do {
     case (_spallPower < ACE_FRAG_SPALL_POWER_TINY_MAX): {"_spall_tiny"};
     case (_spallPower < ACE_FRAG_SPALL_POWER_SMALL_MAX): {"_spall_small"};
     case (_spallPower < ACE_FRAG_SPALL_POWER_MEDIUM_MAX): {"_spall_medium"};
