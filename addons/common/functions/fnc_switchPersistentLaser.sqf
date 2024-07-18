@@ -33,6 +33,12 @@ if (!_enabled) exitWith {
     ["turret", GVAR(laserTurretEH)] call CBA_fnc_removePlayerEventHandler;
     ["vehicle", GVAR(laserVehicleEH)] call CBA_fnc_removePlayerEventHandler;
     ["weapon", GVAR(laserWeaponEH)] call CBA_fnc_removePlayerEventHandler;
+
+    GVAR(laserKeyDownEH) = nil;
+    GVAR(laserLoadoutEH) = nil;
+    GVAR(laserTurretEH) = nil;
+    GVAR(laserVehicleEH) = nil;
+    GVAR(laserWeaponEH) = nil;
 };
 
 private _fnc_getLightLaserState = {
@@ -75,9 +81,21 @@ GVAR(laserLoadoutEH) = ["loadout", {
 
     GVAR(lastWeapons) = _weapons;
 
-    _unit call FUNC(switchPersistentLaserEH);
+    [
+        _unit,
+        _unit getVariable [QGVAR(laserEnabled_) + str ([_unit, _currentWeapon] call FUNC(getWeaponIndex)), false]
+    ] call FUNC(setWeaponLightLaserState);
 }] call CBA_fnc_addPlayerEventHandler;
 
-GVAR(laserTurretEH) = ["turret", LINKFUNC(switchPersistentLaserEH)] call CBA_fnc_addPlayerEventHandler;
-GVAR(laserVehicleEH) = ["vehicle", LINKFUNC(switchPersistentLaserEH)] call CBA_fnc_addPlayerEventHandler;
-GVAR(laserWeaponEH) = ["weapon", LINKFUNC(switchPersistentLaserEH)] call CBA_fnc_addPlayerEventHandler;
+private _fnc_switchPersistentLaserEH = {
+    params ["_unit"];
+
+    [
+        _unit,
+        _unit getVariable [QGVAR(laserEnabled_) + str ([_unit, _currentWeapon] call FUNC(getWeaponIndex)), false]
+    ] call FUNC(setWeaponLightLaserState);
+};
+
+GVAR(laserTurretEH) = ["turret", _fnc_switchPersistentLaserEH] call CBA_fnc_addPlayerEventHandler;
+GVAR(laserVehicleEH) = ["vehicle", _fnc_switchPersistentLaserEH] call CBA_fnc_addPlayerEventHandler;
+GVAR(laserWeaponEH) = ["weapon", _fnc_switchPersistentLaserEH] call CBA_fnc_addPlayerEventHandler;
