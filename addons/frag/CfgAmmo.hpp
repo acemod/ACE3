@@ -4,7 +4,7 @@
 
 class CfgAmmo {
 
-    #include "CfgAmmoBaseEH.hpp"
+    #include "CfgAmmoBaseClasses.hpp"
 
     class B_65x39_Caseless: BulletBase {
         class EventHandlers: EventHandlers {};
