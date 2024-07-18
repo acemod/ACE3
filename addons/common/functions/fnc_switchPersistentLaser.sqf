@@ -17,6 +17,8 @@
 
 params ["_enabled"];
 
+if (!hasInterface) exitwith {};
+
 // Reset state
 {
     ACE_player setVariable [QGVAR(laserEnabled_) + str _x, nil];
