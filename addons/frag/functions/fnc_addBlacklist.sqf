@@ -19,3 +19,11 @@ params ["_projectile"];
 TRACE_2("addBlackList",_projectile,typeOf projectile);
 
 _projectile setVariable [QGVAR(blacklisted)];
+_projectile removeEventHandler [
+    "HitPart",
+    _projectile getVariable [QGVAR(hitPartEventHandler), -1]
+];
+_projectile removeEventHandler [
+    "Explode",
+    _projectile getVariable [QGVAR(explodeEventHandler), -1]
+];

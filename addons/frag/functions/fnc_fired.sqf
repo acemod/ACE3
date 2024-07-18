@@ -24,14 +24,10 @@ if (_ammo isEqualTo "" || {isNull _projectile} ||
 };
 
 if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
-    _projectile addEventHandler [
+    private _hitPartEventHandler = _projectile addEventHandler [
         "HitPart",
         {
             params ["_projectile", "_hitObject", "", "_posASL", "_velocity", "_surfNorm", "", "", "_surfType"];
-
-            if (_projectile getVariable [QGVAR(blacklisted), false]) exitWith {
-                TRACE_2("projectile blackisted",typeOf _projectile,_projectile);
-            };
 
             // starting v2.18 it may be faster to use the instigator parameter, the same as the second entry shotParents, to recreate _shotParent
             // The "explode" EH does not get the same parameter
@@ -53,19 +49,17 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
             ] call CBA_fnc_execNextFrame;
         }
     ];
+    _projectile setVariable [QGVAR(hitPartEventHandler), _hitPartEventHandler];
 };
 
 if (GVAR(reflectionsEnabled) || GVAR(enabled) && _ammo call FUNC(shouldFrag)) then {
-    _projectile addEventHandler [
+    private _explodeEventHandler = _projectile addEventHandler [
         "Explode",
         {
             params ["_projectile", "_posASL", "_velocity"];
 
             if (GVAR(reflectionsEnabled)) then {
                 [_posASL, _ammo] call FUNC(doReflections);
-            };
-            if (_projectile getVariable [QGVAR(blacklisted), false]) exitWith {
-                TRACE_2("projectile blackisted",typeOf _projectile,_projectile);
             };
 
             private _shotParents = getShotParents _projectile;
@@ -83,6 +77,7 @@ if (GVAR(reflectionsEnabled) || GVAR(enabled) && _ammo call FUNC(shouldFrag)) th
             ] call CBA_fnc_execNextFrame;
         }
     ];
+    _projectile setVariable [QGVAR(explodeEventHandler), _explodeEventHandler];
 };
 
 #ifdef DEBUG_MODE_DRAW
