@@ -1,32 +1,22 @@
 // We need this since autocannons generally inherit from BulletBase
 class BulletCore;
-class BulletBase: BulletCore {
-    class EventHandlers;
-};
+class BulletBase: BulletCore {};
 
 class GrenadeCore;
-class GrenadeBase: GrenadeCore {
-    class EventHandlers;
-};
+class GrenadeBase: GrenadeCore {};
 
 class LaserBombCore;
-class ammo_Bomb_LaserGuidedBase: LaserBombCore {
-    class EventHandlers;
-};
+class ammo_Bomb_LaserGuidedBase: LaserBombCore {};
 
 class MissileCore;
-class MissileBase: MissileCore {
-    class EventHandlers;
-};
+class MissileBase: MissileCore {};
 
 class RocketCore;
 class RocketBase: RocketCore {
     GVAR(skip) = 1;
 };
 
-class ArtilleryRocketCore: RocketCore {
-    class EventHandlers;
-};
+class ArtilleryRocketCore: RocketCore {};
 
 class ShellCore;
 class ShellBase: ShellCore {};
@@ -45,21 +35,13 @@ class SubmunitionBase: SubmunitionCore {
 };
 
 class BoundingMineCore;
-class BoundingMineBase: BoundingMineCore {
-    class EventHandlers;
-};
+class BoundingMineBase: BoundingMineCore {};
 
 class PipeBombCore;
-class PipeBombBase: PipeBombCore {
-    class EventHandlers;
-};
+class PipeBombBase: PipeBombCore {};
 
 class DirectionalBombCore;
-class DirectionalBombBase: DirectionalBombCore {
-    class EventHandlers;
-};
+class DirectionalBombBase: DirectionalBombCore {};
 
 class MineCore;
-class MineBase: MineCore {
-    class EventHandlers;
-};
+class MineBase: MineCore {};

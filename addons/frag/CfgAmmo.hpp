@@ -6,9 +6,7 @@ class CfgAmmo {
 
     #include "CfgAmmoBaseEH.hpp"
 
-    class B_65x39_Caseless: BulletBase {
-        class EventHandlers: EventHandlers {};
-    };
+    class B_65x39_Caseless: BulletBase {};
     class GVAR(base): B_65x39_Caseless {
         ACE_damageType = "grenade"; // compatibility with medical_damage, shrapnel should produce grenade wounds
         timeToLive = 4;
