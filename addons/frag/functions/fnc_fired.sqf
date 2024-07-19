@@ -27,13 +27,12 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
     private _hitPartEventHandler = _projectile addEventHandler [
         "HitPart",
         {
-            params ["_projectile", "_hitObject", "", "_posASL", "_velocity", "_surfNorm", "", "", "_surfType"];
+            params ["_projectile", "_hitObject", "", "_posASL", "_velocity"];
 
-            // starting v2.18 it may be faster to use the instigator parameter, the same as the second entry shotParents, to recreate _shotParent
+            // starting v2.18 it may be faster to use the instigator EH parameter, the same as the second entry shotParents, to recreate _shotParent
             // The "explode" EH does not get the same parameter
             private _shotParents = getShotParents _projectile;
             private _ammo = typeOf _projectile;
-
 
             /*
              * Wait a frame to see what happens to the round, may result in
