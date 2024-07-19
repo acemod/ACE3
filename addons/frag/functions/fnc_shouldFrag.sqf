@@ -33,7 +33,7 @@ if (_skip == 1) then {
 };
 
 private _force = getNumber (_ammoConfig >> QGVAR(force));
-if (_shouldFrag && !_force) then {
+if (_shouldFrag && _force == 0) then {
     private _explosive = getNumber (_ammoConfig >> "explosive");
     if (_explosive < 0.5) exitWith {
         _shouldFrag = false;

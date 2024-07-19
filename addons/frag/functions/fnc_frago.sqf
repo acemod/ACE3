@@ -23,29 +23,28 @@
 
 BEGIN_COUNTER(frago);
 
-params ["_lastPos", "_lastVel", "_shellType", "_shotParents"];
-TRACE_4("frago",_lastPos,_lastVel,_shellType,_shotParents);
+params ["_fragPosASL", "_lastVel", "_shellType", "_shotParents"];
+TRACE_4("frago",_fragPosASL,_lastVel,_shellType,_shotParents);
 
 // Limit max frag count if there was a recent frag
 private _maxFrags = round (MAX_FRAG_COUNT * linearConversion [ACE_FRAG_COUNT_MIN_TIME, ACE_FRAG_COUNT_MAX_TIME, (CBA_missionTime - GVAR(lastFragTime)), 0.1, 1, true]);
 TRACE_2("",_maxFrags,CBA_missionTime - GVAR(lastFragTime));
 GVAR(lastFragTime) = CBA_missionTime;
 
-_shellType call ace_frag_fnc_getFragInfo params ["_fragRange", "_fragVelocity", "_fragTypes"];
-
-private _atlPos = ASLtoATL _lastPos;
+_shellType call ace_frag_fnc_getFragInfo params ["_fragRange", "_fragVelocity", "_fragTypes", "_metalMassModifier"];
 
 private _fragVelocityRandom = _fragVelocity * 0.5;
-
+private _fragPosAGL = ASLtoAGL _fragPosASL;
 // Post 2.18 change - uncomment line 41, and remove lines 43, 50-55, 64-66
-// private _targets = [_posAGL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
-private _objects = _posAGL nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
+// private _targets = [ASLtoAGL _fragPosAGL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
+private _objects = _fragPosAGL nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
 if (_objects isEqualTo []) exitWith {
-    TRACE_2("No nearby targets",_posAGL,_fragRange);
+    TRACE_2("No nearby targets",_fragPosAGL,_fragRange);
     0
 };
 
 // grab crews and add them in so that targets stay approx. sorted by distance
+TRACE_1("",_objects);
 private _targets = [];
 {
     private _crew = crew _x;
@@ -61,7 +60,7 @@ _fragArcs set [360, 0];
 
 if (_targets isNotEqualTo []) then {
     if (GVAR(reflectionsEnabled)) then {
-        [_lastPos, _shellType] call FUNC(doReflections);
+        [_fragPosASL, _shellType] call FUNC(doReflections);
     };
     {
         private _target = _x;
@@ -70,32 +69,33 @@ if (_targets isNotEqualTo []) then {
 
             private _cubic = ((abs (_boundingBoxA select 0)) + (_boundingBoxB select 0)) * ((abs (_boundingBoxA select 1)) + (_boundingBoxB select 1)) * ((abs (_boundingBoxA select 2)) + (_boundingBoxB select 2));
 
-            if (_cubic <= 1) then {continue};
+            if (_cubic <= 1) exitWith {};
 
             private _targetVel = velocity _target;
             private _targetPos = getPosASL _target;
-            private _distance = _targetPos vectorDistance _lastPos;
+            private _distance = _target distance _fragPosAGL;
             private _add = ((_boundingBoxB select 2) / 2) + ((((_distance - (_fragVelocity / 8)) max 0) / _fragVelocity) * 10);
 
             _targetPos = _targetPos vectorAdd [
-            (_targetVel select 0) * (_distance / _fragVelocity),
-            (_targetVel select 1) * (_distance / _fragVelocity),
-            _add
+                (_targetVel select 0) * (_distance / _fragVelocity),
+                (_targetVel select 1) * (_distance / _fragVelocity),
+                _add
             ];
 
-            private _baseVec = _lastPos vectorFromTo _targetPos;
+            private _baseVec = _fragPosASL vectorFromTo _targetPos;
 
             private _dir = floor (_baseVec call CBA_fnc_vectDir);
             private _currentCount = RETDEF(_fragArcs select _dir,0);
             if (_currentCount < 10) then {
-                private _count = ceil (random (sqrt (_m / 1000)));
+                private _count = ceil (random _metalMassModifier);
                 private _vecVar = FRAG_VEC_VAR;
-                if !(_target isKindOf "Man") then {
+                if !(_target isKindOf "CAManBase") then {
                     ADD(_vecVar,(sqrt _cubic) / 2000);
                     if ((crew _target) isEqualTo [] && {_count > 0}) then {
                         _count = 0 max (_count / 2);
                     };
                 };
+
                 for "_i" from 1 to _count do {
                     private _vec = _baseVec vectorDiff [
                     (_vecVar / 2) + (random _vecVar),
@@ -106,14 +106,13 @@ if (_targets isNotEqualTo []) then {
                     private _fp = _fragVelocity - (random (_fragVelocityRandom));
                     private _vel = _vec vectorMultiply _fp;
 
-                    private _fragObj = (selectRandom _fragTypes) createVehicleLocal [0,0,10000];
-                    // TRACE_4("targeted",_fp,typeOf _fragObj,_lastPos vectorDistance _targetPos,typeOf _x);
-                    _fragObj setPosASL _lastPos;
+                    private _fragObj = createVehicleLocal [(selectRandom _fragTypes), _fragPosAGL, [], 0, "CAN_COLLIDE"];
+
                     _fragObj setVectorDir _vec;
                     _fragObj setVelocity _vel;
                     _fragObj setShotParents _shotParents;
                     #ifdef DEBUG_MODE_DRAW
-                    [ACE_player, _fragObj, [1,0,0,1]] call FUNC(dev_addTrack);
+                    [_fragObj, "green", true] call FUNC(dev_trackObj);
                     #endif
                     INC(_fragCount);
                     INC(_currentCount);
@@ -140,14 +139,14 @@ if (_targets isNotEqualTo []) then {
 
         _vel = _vec vectorMultiply _fp;
 
-        _fragObj = (selectRandom _fragTypes) createVehicleLocal [0, 0, 10000];
-        _fragObj setPosASL _lastPos;
+        private _fragObj = createVehicleLocal [(selectRandom _fragTypes), _fragPosAGL, [], 0, "CAN_COLLIDE"];
+        _fragObj setPosASL _fragPosASL;
         _fragObj setVectorDir _vec;
         _fragObj setVelocity _vel;
         _fragObj setShotParents _shotParents;
 
         #ifdef DEBUG_MODE_DRAW
-        [ACE_player, _fragObj, [1,0.5,0,1]] call FUNC(dev_addTrack);
+        [_fragObj, "blue", true] call FUNC(dev_trackObj);
         #endif
         INC(_fragCount);
     };
