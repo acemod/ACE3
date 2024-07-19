@@ -30,14 +30,6 @@ if (!GVAR(skipContainerWeight)) then {
     _weight = _weight + (_object getVariable [QGVAR(originalMass), getMass _object]);
 };
 
-// Fixed in https://feedback.bistudio.com/T167469 on 2.16 profiling branch and for 2.18 stable
-if ((productVersion select 3) < 152017) then {
-    {
-        _x params ["", "_container"];
-        _weight = _weight - (loadAbs _container);
-    } forEach (everyContainer _object);
-};
-
 // Mass in Arma isn't an exact amount but rather a volume/weight value
 // This attempts to work around that by making it a usable value (sort of)
 GVAR(weightCoefficient) * _weight * 0.5 // return
