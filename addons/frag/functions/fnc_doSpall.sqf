@@ -1,8 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger,
- * This function check whether a spall event has occured and generates a spall event
- * request for the server if one is needed.
+ * This function check whether a spall event has occured and generates spall.
  *
  * Arguments:
  * 0: The object a projectile hit <OBJECT>
@@ -15,7 +14,7 @@
  * None
  *
  * Example:
- * [[1000, 45, 60], 0.8, getPosASL ace_player] call ace_frag_fnc_doSpallServer
+ * [[1000, 45, 60], 0.8, getPosASL ace_player] call ace_frag_fnc_doSpall
  *
  * Public: No
  */
@@ -30,7 +29,6 @@ private _idh = getNumber (configFile >> "CfgAmmo" >> _roundType >> "indirectHitR
 
 _roundType call FUNC(getSpallInfo) params ["_caliber", "_explosive"];
 
-// ACE_player sideChat format ["BBBB"];
 private _exit = false;
 private _vm = 1;
 
@@ -41,10 +39,9 @@ private _curSpeed = vectorMagnitude _curVelocity;
 if (alive _round) then {
     private _diff = _oldVelocity vectorDiff _curVelocity;
     private _polar = _diff call CBA_fnc_vect2polar;
-    // ACE_player sideChat format ["polar: %1", _polar];
+
     if (abs (_polar select 1) > 45 || {abs (_polar select 2) > 45}) then {
         if (_caliber < 2.5) then {
-            // ACE_player sideChat format ["exit!"];
             _exit = true;
         } else {
             SUB(_vm,_curSpeed / _oldSpeed);
@@ -60,11 +57,8 @@ if ((isNil "_oldPos") || {!(_oldPos isEqualTypeArray [0,0,0])}) exitWith {WARNIN
 for "_i" from 0 to 100 do {
     private _pos1 = _oldPos vectorAdd (_unitDir vectorMultiply (0.01 * _i));
     private _pos2 = _oldPos vectorAdd (_unitDir vectorMultiply (0.01 * (_i + 1)));
-    // _data = [nil, nil, nil, 1, [[ASLtoATL _pos1, 1], [ASLtoATL _pos2, 1]]];
-    // NOU_TRACES pushBack _data;
 
     if (!lineIntersects [_pos1, _pos2]) exitWith {
-        // ACE_player sideChat format ["FOUND!"];
         _spallPos = _pos2;
     };
 };
@@ -76,7 +70,6 @@ if (_explosive > 0) then {
     _spallPolar set [0, _fragVelocity * 0.66];
 };
 
-// diag_log text format ["SPALL POWER: %1", _spallVelocity select 0];
 private _spread = 15 + (random 25);
 private _spallCount = 5 + (random 10);
 TRACE_1("",_spallCount);
@@ -91,7 +84,7 @@ for "_i" from 1 to _spallCount do {
     _vel = (_vel - (_vel * 0.25)) + (random (_vel * 0.5));
 
     private _spallFragVect = [_vel, _dir, _elev] call CBA_fnc_polar2vect;
-    private _fragment = (selectRandomWeighted WEIGHTED_SIZE) createVehicle [0,0,10000];
+    private _fragment = (selectRandomWeighted WEIGHTED_SIZE) createVehicle [0, 0, 10000];
     _fragment setPosASL _spallPos;
     _fragment setVelocity _spallFragVect;
 
