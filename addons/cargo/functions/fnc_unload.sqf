@@ -33,38 +33,22 @@ _vehicle setVariable [QGVAR(space), _cargoSpace + (_item call FUNC(getSizeItem))
 private _object = _item;
 
 if (_object isEqualType objNull) then {
-    if (isNull isVehicleCargo _object) then {
-        detach _object;
+    detach _object;
 
-        // If player unloads via deployment, set direction first, then unload
-        if (_deployed) then {
-            [QGVAR(setDirAndUnload), [_object, _posAGL, _direction], _object] call CBA_fnc_targetEvent;
-        } else {
-            [QGVAR(serverUnload), [_object, _posAGL]] call CBA_fnc_serverEvent;
-        };
-
-        if (["ace_zeus"] call EFUNC(common,isModLoaded)) then {
-            // Get which curators had this object as editable
-            private _objectCurators = _object getVariable [QGVAR(objectCurators), []];
-
-            if (_objectCurators isEqualTo []) exitWith {};
-
-            [QEGVAR(zeus,addObjects), [[_object], _objectCurators]] call CBA_fnc_serverEvent;
-        };
-
-        private _cargoNet = _object getVariable [QGVAR(cargoNet), objNull];
-
-        // Delete cargo net if no items remain on it
-        if (
-            !isNull _cargoNet &&
-            {(_loaded findIf {_x isEqualType objNull && {_x getVariable [QGVAR(cargoNet), objNull] == _cargoNet}}) == -1}
-        ) then {
-            objNull setVehicleCargo _cargoNet;
-            deleteVehicle _cargoNet;
-        };
+    // If player unloads via deployment, set direction first, then unload
+    if (_deployed) then {
+        [QGVAR(setDirAndUnload), [_object, _posAGL, _direction], _object] call CBA_fnc_targetEvent;
     } else {
-        objNull setVehicleCargo _object;
-        _object setPosASL (AGLtoASL _posAGL);
+        [QGVAR(serverUnload), [_object, _posAGL]] call CBA_fnc_serverEvent;
+    };
+
+    if (["ace_zeus"] call EFUNC(common,isModLoaded)) then {
+        // Get which curators had this object as editable
+        private _objectCurators = _object getVariable [QGVAR(objectCurators), []];
+
+        if (_objectCurators isEqualTo []) exitWith {};
+
+        [QEGVAR(zeus,addObjects), [[_object], _objectCurators]] call CBA_fnc_serverEvent;
     };
 } else {
     _object = createVehicle [_item, _posAGL, [], 0, "NONE"];

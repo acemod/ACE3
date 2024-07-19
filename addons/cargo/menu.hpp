@@ -5,6 +5,7 @@ class GVAR(menu) {
     movingEnable = 1;
     onLoad = QUOTE([_this select 0] call FUNC(onMenuOpen));
     onUnload = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(menuDisplay),nil)]);
+
     class controlsBackground {
         class HeaderBackground: ACE_gui_backgroundBase {
             idc = -1;
@@ -104,6 +105,13 @@ class GVAR(menu) {
             idc = 13;
             y = "15.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
             action = QUOTE(ACE_player call FUNC(startDeploy));
+            colorDisabled[] = {0.25, 0.25, 0.25, 1};
+        };
+        class btnViv: btnCancel {
+            text = CSTRING(vehicleInVehicle);
+            idc = 14;
+            y = "15.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+            action = QUOTE(GVAR(isViv) = !GVAR(isViv));
             colorDisabled[] = {0.25, 0.25, 0.25, 1};
         };
     };

@@ -7,6 +7,7 @@
  * 0: Unit doing the loading <OBJECT>
  * 1: Item to be loaded <OBJECT>
  * 2: Holder object (vehicle) <OBJECT> (default: objNull)
+ * 3: Is item to be loaded as ViV? <BOOL> (default: false)
  *
  * Return Value:
  * Load ProgressBar Started <BOOL>
@@ -17,12 +18,12 @@
  * Public: No
  */
 
-params ["_loader", "_item", ["_vehicle", objNull]];
+params ["_loader", "_item", ["_vehicle", objNull], ["_isViv", false]];
 TRACE_3("params",_loader,_item,_vehicle);
 
 if (isNull _vehicle) then {
     {
-        if ([_item, _x] call FUNC(canLoadItemIn)) exitWith {
+        if ([_item, _x, false, _isViv] call FUNC(canLoadItemIn)) exitWith {
             _vehicle = _x;
         };
     } forEach (nearestObjects [_loader, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE + 10]);
@@ -35,12 +36,16 @@ if (isNull _vehicle) exitWith {
 };
 
 // Start progress bar
-if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
+if ([_item, _vehicle, false, _isViv] call FUNC(canLoadItemIn)) then {
     private _duration = GVAR(loadTimeCoefficient) * (_item call FUNC(getSizeItem));
 
     // If load time is 0, don't show a progress bar
     if (_duration <= 0) exitWith {
-        ["ace_loadCargo", [_item, _vehicle]] call CBA_fnc_localEvent;
+        if (_isViv) then {
+            _vehicle setVehicleCargo _item;
+        } else {
+            ["ace_loadCargo", [_item, _vehicle]] call CBA_fnc_localEvent;
+        };
 
         true // return
     };
@@ -50,13 +55,20 @@ if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
 
     [
         _duration,
-        [_item, _vehicle],
+        [_item, _vehicle, _isViv],
         {
             TRACE_1("load finish",_this);
+            (_this select 0) params ["_item", "_vehicle"];
 
-            [objNull, _this select 0 select 0, true] call EFUNC(common,claim);
+            [objNull, _item, true] call EFUNC(common,claim);
 
-            ["ace_loadCargo", _this select 0] call CBA_fnc_localEvent;
+            // Is ViV
+            // Don't want to pass the isViv parameter to the ace_unloadCargo EH
+            if ((_this select 0) deleteAt 2) then {
+                _vehicle setVehicleCargo _item;
+            } else {
+                ["ace_loadCargo", _this select 0] call CBA_fnc_localEvent;
+            };
         },
         {
             TRACE_1("load fail",_this);
@@ -80,7 +92,9 @@ if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
         },
         format [LLSTRING(loadingItem), [_item, true] call FUNC(getNameItem), getText (configOf _vehicle >> "displayName")],
         {
-            (_this select 0) call FUNC(canLoadItemIn)
+            (_this select 0) params ["_item", "_vehicle", "_isViv"];
+
+            [_item, _vehicle, false, _isViv] call FUNC(canLoadItemIn)
         },
         ["isNotSwimming"]
     ] call EFUNC(common,progressBar);

@@ -603,17 +603,11 @@
             <German>Steuert, ob Frachtgegenstände über die Aufbaumethode entladen werden können.</German>
             <Spanish>Controla si los objetos de la carga pueden ser descargados mediante el método de despliegue.</Spanish>
         </Key>
-        <Key ID="STR_ACE_Cargo_cargoNetType">
-            <English>Type of cargo</English>
+        <Key ID="STR_ACE_Cargo_vehicleInVehicle">
+            <English>ViV</English>
         </Key>
-        <Key ID="STR_ACE_Cargo_cargoNetType_description">
-            <English>Choose which cargo type will fit the period of history you are playing.</English>
-        </Key>
-        <Key ID="STR_ACE_Cargo_cargoNetType_modernStyle">
-            <English>Modern style</English>
-        </Key>
-        <Key ID="STR_ACE_Cargo_cargoNetType_ww2">
-            <English>World War 2</English>
+        <Key ID="STR_ACE_Cargo_loadObjectViv">
+            <English>Load to ViV</English>
         </Key>
     </Package>
 </Project>

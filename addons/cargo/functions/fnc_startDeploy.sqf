@@ -24,7 +24,7 @@ params ["_unit"];
 if (_unit getVariable [QGVAR(isDeploying), false]) exitWith {};
 
 // This can be an object or a classname string
-private _item = call FUNC(getSelectedItem);
+private _item = GVAR(isViv) call FUNC(getSelectedItem);
 
 if (isNil "_item") exitWith {};
 
@@ -64,15 +64,15 @@ _itemPreviewObject attachTo [_unit, [0, 1.5 * _itemPreviewObjectRadius, _offset]
 
 // PFH that runs while the deployment is in progress
 GVAR(deployPFH) = [{
-    (_this select 0) params ["_unit", "_vehicle", "_item", "_itemPreviewObject"];
+    (_this select 0) params ["_unit", "_vehicle", "_item", "_itemPreviewObject", "_isViv"];
 
     if !(
         !isNull _itemPreviewObject &&
-        {[_item, _vehicle, _unit, false, true] call FUNC(canUnloadItem)} // don't check for a suitable unloading position when deploying
+        {[_item, _vehicle, _unit, false, true, _isViv] call FUNC(canUnloadItem)} // Don't check for a suitable unloading position when deploying
     ) exitWith {
         _unit call FUNC(deployCancel);
     };
-}, 0.5, [_unit, GVAR(interactionVehicle), _item, _itemPreviewObject]] call CBA_fnc_addPerFrameHandler;
+}, 0.5, [_unit, GVAR(interactionVehicle), _item, _itemPreviewObject, GVAR(isViv)]] call CBA_fnc_addPerFrameHandler;
 
 // Add mouse button action and hint
 [LLSTRING(unloadObject), localize "STR_DISP_CANCEL", LLSTRING(scrollAction)] call EFUNC(interaction,showMouseHint);

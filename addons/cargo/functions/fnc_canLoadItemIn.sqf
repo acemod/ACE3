@@ -7,6 +7,7 @@
  * 0: Item to be loaded <STRING> or <OBJECT>
  * 1: Holder object (vehicle) <OBJECT>
  * 2: Ignore interaction distance and stability checks <BOOL> (default: false)
+ * 3: Is item to be loaded as ViV? <BOOL> (default: false)
  *
  * Return Value:
  * Can be loaded <BOOL>
@@ -17,7 +18,7 @@
  * Public: No
  */
 
-params ["_item", "_vehicle", ["_ignoreInteraction", false]];
+params ["_item", "_vehicle", ["_ignoreInteraction", false], ["_isViv", false]];
 
 // Check if vehicle is stable
 if (!_ignoreInteraction && {speed _vehicle > 1 || {((getPos _vehicle) select 2) > 3}}) exitWith {
@@ -52,6 +53,12 @@ private _validItem = if (_item isEqualType "") then {
 _validItem &&
 {alive _vehicle} &&
 {locked _vehicle < 2} &&
-{_vehicle getVariable [QGVAR(hasCargo), getNumber (configOf _vehicle >> QGVAR(hasCargo)) == 1]} &&
+{
+    if (_isViv) then {
+        (_vehicle canVehicleCargo _item) select 0
+    } else {
+        _vehicle getVariable [QGVAR(hasCargo), getNumber (configOf _vehicle >> QGVAR(hasCargo)) == 1]
+    }
+} &&
 {_itemSize >= 0} &&
-{_itemSize <= (_vehicle call FUNC(getCargoSpaceLeft)) max 0}
+{_isViv || {_itemSize <= (_vehicle call FUNC(getCargoSpaceLeft)) max 0}}

@@ -9,6 +9,7 @@
  * 2: Unit doing the unloading <OBJECT> (default: objNull)
  * 3: Ignore interaction distance and stability checks <BOOL> (default: false)
  * 4: Ignore finding a suitable position <BOOL> (default: false)
+ * 5: Is item loaded as ViV? <BOOL> (default: false)
  *
  * Return Value:
  * Can be unloaded <BOOL>
@@ -19,7 +20,7 @@
  * Public: No
  */
 
-params ["_item", "_vehicle", ["_unloader", objNull], ["_ignoreInteraction", false], ["_ignoreFindPosition", false]];
+params ["_item", "_vehicle", ["_unloader", objNull], ["_ignoreInteraction", false], ["_ignoreFindPosition", false], ["_isViv", false]];
 TRACE_2("params",_item,_vehicle);
 
 // Get config sensitive case name
@@ -27,7 +28,8 @@ if (_item isEqualType "") then {
     _item = _item call EFUNC(common,getConfigName);
 };
 
-if !(_item in (_vehicle getVariable [QGVAR(loaded), []])) exitWith {false};
+if (_isViv && {_vehicle != isVehicleCargo _item}) exitWith {false};
+if !(_isViv || {_item in (_vehicle getVariable [QGVAR(loaded), []])}) exitWith {false};
 
 private _validItem = if (_item isEqualType objNull) then {
     alive _item
@@ -38,7 +40,7 @@ private _validItem = if (_item isEqualType objNull) then {
 _validItem &&
 {alive _vehicle} &&
 {locked _vehicle < 2} &&
-{_vehicle getVariable [QGVAR(hasCargo), getNumber (configOf _vehicle >> QGVAR(hasCargo)) == 1]} &&
+{_isViv || {_vehicle getVariable [QGVAR(hasCargo), getNumber (configOf _vehicle >> QGVAR(hasCargo)) == 1]}} &&
 {_item call FUNC(getSizeItem) >= 0} &&
 {_ignoreInteraction || {([_unloader, _vehicle] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}} &&
 {_ignoreFindPosition || {([_vehicle, _item, _unloader, MAX_LOAD_DISTANCE, !_ignoreInteraction] call EFUNC(common,findUnloadPosition)) isNotEqualTo []}}

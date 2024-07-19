@@ -86,7 +86,13 @@ GVAR(vehicleAction) = [
         GVAR(enable) &&
         {alive _target} &&
         {locked _target < 2} &&
-        {_target getVariable [QGVAR(hasCargo), getNumber (configOf _target >> QGVAR(hasCargo)) == 1]} &&
+        {
+            private _config = configOf _target;
+
+            // https://feedback.bistudio.com/T182949
+            (vehicleCargoEnabled _target && {isClass (_config >> "VehicleTransport" >> "Carrier")}) ||
+            {_target getVariable [QGVAR(hasCargo), getNumber (_config >> QGVAR(hasCargo)) == 1]}
+        } &&
         {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
         {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
         {([_player, _target] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
@@ -121,6 +127,7 @@ GVAR(objectActions) = [
             GVAR(enable) &&
             {alive _target} &&
             {locked _target < 2} &&
+            {isNull isVehicleCargo _target} &&
             {_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad)) == 1]} &&
             {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
             {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
@@ -132,28 +139,33 @@ GVAR(objectActions) = [
                 {([_target, _x] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
             }) != -1}
         },
-        LINKFUNC(addCargoVehiclesActions)
+        {_target call FUNC(addCargoVehiclesActions)}
+    ] call EFUNC(interact_menu,createAction),
+    [QGVAR(loadViv), LLSTRING(loadObjectViv), "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",
+        {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+            [_player, _target, objNull, true] call FUNC(startLoadIn);
+        },
+        {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+            GVAR(enable) &&
+            {alive _target} &&
+            {locked _target < 2} &&
+            {isNull isVehicleCargo _target} &&
+            {_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad)) == 1]} &&
+            {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+            {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)} &&
+            {((nearestObjects [_target, GVAR(cargoHolderTypes), MAX_LOAD_DISTANCE + 10]) findIf {
+                _x != _target &&
+                {alive _x} &&
+                {locked _x < 2} &&
+                {(_x canVehicleCargo _target) select 0} &&
+                {([_target, _x] call EFUNC(interaction,getInteractionDistance)) < MAX_LOAD_DISTANCE}
+            }) != -1}
+        },
+        {[_target, true] call FUNC(addCargoVehiclesActions)}
     ] call EFUNC(interact_menu,createAction)
 ];
-
-{
-    [_x, "InitPost", {
-        params ["_vehicle"];
-
-        private _actionID = _vehicle addAction [
-            "",
-            FUNC(unloadAllVehicles),
-            nil,
-            3,
-            false,
-            true,
-            "",
-            '[_target, _this] call FUNC(canShowUnloadAllVehicles)'
-        ];
-        _vehicle setUserActionText [_actionID, localize "STR_A3_ACTION_UNLOAD_ALL_VEHICLES", "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\unloadAllVehicles_ca.paa' size='1.8' shadow=2 />"];
-        _vehicle setVariable [QGVAR(unloadAllVehiclesAction), _actionID];
-    }, nil, nil, true] call CBA_fnc_addClassEventHandler;
-} forEach ["LandVehicle", "Ship", "Air"];
 
 // Find all remaining configured classes and init them, see XEH_preStart.sqf
 private _vehicleClassesAddAction = call (uiNamespace getVariable [QGVAR(initializedVehicleClasses), {[]}]);
@@ -202,10 +214,7 @@ if (isServer) then {
 GVAR(selectedItem) = objNull;
 GVAR(itemPreviewObject) = objNull;
 GVAR(deployPFH) = -1;
-GVAR(deployDistance) = -1;
-GVAR(deployDirection) = 0;
-GVAR(deployHeight) = 0;
-GVAR(canDeploy) = false;
+GVAR(isViv) = false;
 
 if (!hasInterface) exitWith {};
 

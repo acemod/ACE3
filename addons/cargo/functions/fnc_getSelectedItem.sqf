@@ -15,13 +15,19 @@
  * Public: No
  */
 
+params [["_isViv", false]];
+
 disableSerialization;
 
 private _display = uiNamespace getVariable QGVAR(menuDisplay);
 
 if (isNil "_display") exitWith {};
 
-private _loaded = GVAR(interactionVehicle) getVariable [QGVAR(loaded), []];
+private _loaded = if (_isViv) then {
+    getVehicleCargo GVAR(interactionVehicle)
+} else {
+    GVAR(interactionVehicle) getVariable [QGVAR(loaded), []]
+};
 
 if (_loaded isEqualTo []) exitWith {};
 

@@ -68,7 +68,7 @@ private _object = [_item, _vehicle, _posBehindVehicleAGL, false] call FUNC(unloa
 
         // Prevent collision damage
         [QEGVAR(common,fixCollision), _parachute] call CBA_fnc_localEvent;
-        [QEGVAR(common,fixCollision), _object] call CBA_fnc_localEvent;
+        [QEGVAR(common,fixCollision), _object, _object] call CBA_fnc_targetEvent;
 
         // Cannot use setPos on parachutes without them closing down
         _parachute attachTo [_object, [0, 0, 0]];

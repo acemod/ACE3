@@ -59,12 +59,3 @@ private _category = [ELSTRING(main,Category_Logistics), LSTRING(openMenu)];
     _category,
     true
 ] call CBA_fnc_addSetting;
-
-[
-    QGVAR(cargoNetType),
-    "LIST",
-    [LSTRING(cargoNetType), LSTRING(cargoNetType_description)],
-    _category,
-    [["CargoNet_01_box_F", "Land_WoodenBox_02_F"], [LSTRING(cargoNetType_modernStyle), LSTRING(cargoNetType_ww2)], 0],
-    1
-] call CBA_fnc_addSetting;
