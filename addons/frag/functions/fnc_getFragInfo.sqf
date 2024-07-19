@@ -90,7 +90,7 @@ if (_notifyMissingEntries) then {
 private _indirectHitRange = getNumber(configFile >> "CfgAmmo" >> _shellType >> "indirecthitrange");
 
 /********************** _ammoInfo format *************************//*
- * 0: _fragRange - search range for fragments, calculated with the minimum chance to hit as defined
+ * 0: _fragRange - search range for fragments
  * 1: _fragVelocity - gurney equation calculated velocity
  * 2: _fragTypes - array of fragment types
  */

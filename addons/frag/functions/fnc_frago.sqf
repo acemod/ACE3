@@ -27,7 +27,7 @@ params ["_lastPos", "_lastVel", "_shellType", "_shotParents"];
 TRACE_4("frago",_lastPos,_lastVel,_shellType,_shotParents);
 
 // Limit max frag count if there was a recent frag
-private _maxFrags = round (MAX_FRAG_COUNT * linearConversion [0.1, 1.5, (CBA_missionTime - GVAR(lastFragTime)), 0.1, 1, true]);
+private _maxFrags = round (MAX_FRAG_COUNT * linearConversion [ACE_FRAG_COUNT_MIN_TIME, ACE_FRAG_COUNT_MAX_TIME (CBA_missionTime - GVAR(lastFragTime)), 0.1, 1, true]);
 TRACE_2("",_maxFrags,CBA_missionTime - GVAR(lastFragTime));
 GVAR(lastFragTime) = CBA_missionTime;
 
@@ -36,9 +36,6 @@ _shellType call ace_frag_fnc_getFragInfo params ["_fragRange", "_fragVelocity", 
 private _atlPos = ASLtoATL _lastPos;
 
 private _fragVelocityRandom = _fragVelocity * 0.5;
-if ((_atlPos select 2) < 0.5) then {
-    _lastPos vectorAdd [0, 0, 0.5];
-};
 
 // Post 2.18 change - uncomment line 41, and remove lines 43, 50-55, 64-66
 // private _targets = [_posAGL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
@@ -62,7 +59,6 @@ private _fragCount = 0;
 private _fragArcs = [];
 _fragArcs set [360, 0];
 
-private _doRandom = true;
 if (_targets isNotEqualTo []) then {
     if (GVAR(reflectionsEnabled)) then {
         [_lastPos, _shellType] call FUNC(doReflections);
@@ -74,8 +70,7 @@ if (_targets isNotEqualTo []) then {
 
             private _cubic = ((abs (_boundingBoxA select 0)) + (_boundingBoxB select 0)) * ((abs (_boundingBoxA select 1)) + (_boundingBoxB select 1)) * ((abs (_boundingBoxA select 2)) + (_boundingBoxB select 2));
 
-            if (_cubic <= 1) exitWith {};
-            // _doRandom = true;
+            if (_cubic <= 1) then {continue};
 
             private _targetVel = velocity _target;
             private _targetPos = getPosASL _target;
@@ -134,28 +129,27 @@ if (_targets isNotEqualTo []) then {
     TRACE_1("",_randomCount);
     private _sectorSize = 360 / (_randomCount max 1);
 
-    if (_doRandom) then {
-        for "_i" from 1 to _randomCount do {
-            // Distribute evenly
-            private _sectorOffset = 360 * (_i - 1) / (_randomCount max 1);
-            private _randomDir = random (_sectorSize);
-            _vec = [cos (_sectorOffset + _randomDir), sin (_sectorOffset + _randomDir), sin (30 - (random 45))];
 
-            _fp = (_fragVelocity - (random (_fragVelocityRandom)));
+    for "_i" from 1 to _randomCount do {
+        // Distribute evenly
+        private _sectorOffset = 360 * (_i - 1) / (_randomCount max 1);
+        private _randomDir = random (_sectorSize);
+        _vec = [cos (_sectorOffset + _randomDir), sin (_sectorOffset + _randomDir), sin (30 - (random 45))];
 
-            _vel = _vec vectorMultiply _fp;
+        _fp = (_fragVelocity - (random (_fragVelocityRandom)));
 
-            _fragObj = (selectRandom _fragTypes) createVehicleLocal [0, 0, 10000];
-            _fragObj setPosASL _lastPos;
-            _fragObj setVectorDir _vec;
-            _fragObj setVelocity _vel;
-            _fragObj setShotParents _shotParents;
+        _vel = _vec vectorMultiply _fp;
 
-            #ifdef DRAW_FRAG_INFO
-            [ACE_player, _fragObj, [1,0.5,0,1]] call FUNC(dev_addTrack);
-            #endif
-            INC(_fragCount);
-        };
+        _fragObj = (selectRandom _fragTypes) createVehicleLocal [0, 0, 10000];
+        _fragObj setPosASL _lastPos;
+        _fragObj setVectorDir _vec;
+        _fragObj setVelocity _vel;
+        _fragObj setShotParents _shotParents;
+
+        #ifdef DRAW_FRAG_INFO
+        [ACE_player, _fragObj, [1,0.5,0,1]] call FUNC(dev_addTrack);
+        #endif
+        INC(_fragCount);
     };
 };
 
