@@ -157,13 +157,11 @@ private _fnc_handleStats = {
             _statsTextCtrl ctrlSetFade 0;
 
             _height = _height + (ctrlTextHeight _statsTextCtrl);
-            systemChat format ["_showText: %1", _height];
         } else {
             _statsTextCtrl ctrlSetFade 1;
         };
 
         _height = _height + 10;
-        systemChat format ["main loop: %1", _height];
 
         {
             _x ctrlCommit 0;
