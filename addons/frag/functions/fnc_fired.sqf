@@ -31,21 +31,22 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
 
             // starting v2.18 it may be faster to use the instigator parameter, the same as the second entry shotParents, to recreate _shotParent
             // The "explode" EH does not get the same parameter
-            private _shotParent = getShotParents _projectile;
+            private _shotParents = getShotParents _projectile;
             private _ammo = typeOf _projectile;
-            private _vectorUp = vectorUp _projectile;
 
-            // only let a unit make a frag event once per second
-            private _instigator = _shotParents#1;
-            if (CBA_missionTime < (_instigator getVariable [QGVAR(nextSpallEvent), -1])) exitWith {};
-            _instigator setVariable [QGVAR(nextSpallEvent), CBA_missionTime + ACE_FRAG_SPALL_EVENT_HOLDOFF];
+
             /*
              * Wait a frame to see what happens to the round, may result in
              * multiple hits / slowdowns getting shunted to the first hit
              */
             [
-                FUNC(doSpallLocal),
-                [_projectile, _hitObject, _posASL, _velocity, _surfNorm, _surfType, _ammo, _shotParent, _vectorUp]
+                // only let a unit make a frag event once per ACE_FRAG_SPALL_EVENT_HOLDOFF
+                {
+                    private _shotParents = _this#5;
+                    if (CBA_missionTime < _shotParents#1 getVariable [QGVAR(nextSpallEvent), -1]) exitWith {};
+                    _this call FUNC(doSpall);
+                },
+                [_hitObject, _ammo, _projectile, _posASL, _velocity, _shotParents]
             ] call CBA_fnc_execNextFrame;
         }
     ];
