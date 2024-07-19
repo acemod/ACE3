@@ -60,15 +60,16 @@ private _unitDir = vectorNormalized _oldVelocity;
 
 private _spallPosAGL = [];
 if ((isNil "_oldPosASL") || {!(_oldPosASL isEqualTypeArray [0,0,0])}) exitWith {WARNING_1("Problem with hitPart data - bad pos [%1]",_oldPosASL);};
-for "_i" from 0 to 100 do {
-    private _pos1 = _oldPosASL vectorAdd (_unitDir vectorMultiply (0.01 * _i));
-    private _pos2 = _oldPosASL vectorAdd (_unitDir vectorMultiply (0.01 * (_i + 1)));
-
-    if (!lineIntersects [_pos1, _pos2]) exitWith {
+private _pos1 = _oldPosASL;
+private _searchStepSize = unitDir vectorMultiply 0.05;
+for "_i" from 1 to 20 do {
+    _spallPosAGL = _pos1 vectorAdd _searchStepSize;
+    if (!lineIntersects [_pos1, _spallPosAGL]) exitWith {
         _spallPosAGL = ASLtoAGL _pos2;
     };
+    _pos1 = _spallPosAGL;
 };
-if (_spallPosAGL isEqualTo []) exitWith {
+if (_spallPosAGL isEqualTo _pos1) exitWith {
     TRACE_1("can't find other side",_oldPosASL);
 };
 (_shotParents#1) setVariable [QGVAR(nextSpallEvent), CBA_missionTime + ACE_FRAG_SPALL_UNIT_HOLDOFF];
