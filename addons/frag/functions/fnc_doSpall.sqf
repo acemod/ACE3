@@ -91,7 +91,7 @@ for "_i" from 1 to _spallCount do {
     _fragment setVelocity _spallFragVect;
 
     #ifdef DEBUG_MODE_DRAW
-        [_fragment, "orange", true] call FUNC(dev_trackObj);
+    [_fragment, "orange", true] call FUNC(dev_trackObj);
     #endif
 };
 
@@ -113,6 +113,6 @@ for "_i" from 1 to _spallCount do {
     _fragment setVelocity _spallFragVect;
 
     #ifdef DEBUG_MODE_DRAW
-        [_fragment, "orange", true] call FUNC(dev_trackObj);
+    [_fragment, "orange", true] call FUNC(dev_trackObj);
     #endif
 };
