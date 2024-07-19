@@ -38,7 +38,7 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
             // only let a unit make a frag event once per second
             private _instigator = _shotParents#1;
             if (CBA_missionTime < (_instigator getVariable [QGVAR(nextSpallEvent), -1])) exitWith {};
-            _instigator setVariable [QGVAR(nextSpallEvent), CBA_missionTime + 1];
+            _instigator setVariable [QGVAR(nextSpallEvent), CBA_missionTime + ACE_FRAG_SPALL_EVENT_HOLDOFF];
             /*
              * Wait a frame to see what happens to the round, may result in
              * multiple hits / slowdowns getting shunted to the first hit
@@ -68,7 +68,7 @@ if (GVAR(reflectionsEnabled) || GVAR(enabled) && _ammo call FUNC(shouldFrag)) th
             // only let a unit make a frag event once per second
             private _instigator = _shotParents#1;
             if (CBA_missionTime < (_instigator getVariable [QGVAR(nextFragEvent), -1])) exitWith {};
-            _instigator setVariable [QGVAR(nextFragEvent), CBA_missionTime + 1];
+            _instigator setVariable [QGVAR(nextFragEvent), CBA_missionTime + ACE_FRAG_FRAG_EVENT_HOLDOFF];
 
             // Wait a frame to make sure it doesn't target the dead
             [
