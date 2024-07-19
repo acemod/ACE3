@@ -19,8 +19,8 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 // Mimimum hold-off time between frag events per unit
-#define ACE_FRAG_FRAG_EVENT_HOLDOFF 0.5
-#define ACE_FRAG_SPALL_EVENT_HOLDOFF 0.5
+#define ACE_FRAG_FRAG_UNIT_HOLDOFF 0.5
+#define ACE_FRAG_SPALL_UNIT_HOLDOFF 0.5
 // Scaling for the min/max # of fragments since last frag event
 #define ACE_FRAG_COUNT_MIN_TIME 0.1
 #define ACE_FRAG_COUNT_MIN 5

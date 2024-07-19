@@ -19,7 +19,6 @@
  */
 
 #define FRAG_VEC_VAR 0.004
-#define MAX_FRAG_COUNT 50
 
 BEGIN_COUNTER(frago);
 
@@ -27,7 +26,7 @@ params ["_fragPosASL", "_lastVel", "_shellType", "_shotParents"];
 TRACE_4("frago",_fragPosASL,_lastVel,_shellType,_shotParents);
 
 // Limit max frag count if there was a recent frag
-private _maxFrags = round (MAX_FRAG_COUNT * linearConversion [ACE_FRAG_COUNT_MIN_TIME, ACE_FRAG_COUNT_MAX_TIME, (CBA_missionTime - GVAR(lastFragTime)), 0.1, 1, true]);
+private _maxFrags = round linearConversion [ACE_FRAG_COUNT_MIN_TIME, ACE_FRAG_COUNT_MAX_TIME, (CBA_missionTime - GVAR(lastFragTime)), ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
 TRACE_2("",_maxFrags,CBA_missionTime - GVAR(lastFragTime));
 GVAR(lastFragTime) = CBA_missionTime;
 

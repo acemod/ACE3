@@ -71,7 +71,7 @@ for "_i" from 0 to 100 do {
 if (_spallPosAGL isEqualTo []) exitWith {
     TRACE_1("can't find other side",_oldPosASL);
 };
-(_shotParents#1) setVariable [QGVAR(nextSpallEvent), CBA_missionTime + ACE_FRAG_SPALL_EVENT_HOLDOFF];
+(_shotParents#1) setVariable [QGVAR(nextSpallEvent), CBA_missionTime + ACE_FRAG_SPALL_UNIT_HOLDOFF];
 private _spallVelocitySpherical = _oldVelocity call CBA_fnc_vect2polar;
 
 if (_explosive > 0) then {
