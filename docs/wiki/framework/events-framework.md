@@ -30,6 +30,8 @@ The vehicle events will also have the following local variables available `_gunn
 |`ace_firedPlayerVehicle` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | ACE_player turret fires |
 |`ace_firedPlayerVehicleNonLocal` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | Any other player turret fires |
 |`ace_firedNonPlayerVehicle` | [_vehicle, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile] | Local | Listen | AI turret fires |
+|`ace_versioning_clientCheckDone` | [[_missingAddonsClient, _additionalAddonsClient, _olderVersionsClient, _newerVersionsClient]] | Local | Listen | When PBO checking has finished on a client |
+|`ace_versioning_serverCheckDone` | [[_serverFiles, _serverVersions]] | Local | Listen | When PBO checking has finished on the server |
 
 ### 2.2 Medical (`ace_medical`)
 

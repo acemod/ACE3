@@ -44,7 +44,7 @@ if (_tryLoad && {!(_target isKindOf "CAManBase")} && {["ace_cargo"] call EFUNC(c
 
 // Fix anim when aborting carrying persons
 if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
-    if (isNull objectParent _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
+    if (isNull objectParent _unit && {_unit call EFUNC(common,isAwake)}) then {
         [_unit, "", 2] call EFUNC(common,doAnimation);
     };
 
@@ -116,7 +116,7 @@ if (_loadCargo) then {
         private _vehicles = [_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat);
 
         if ([_cursorObject] isEqualTo _vehicles) then {
-            if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+            if (GETEGVAR(medical,enabled,false)) then {
                 [_unit, _target, _cursorObject] call EFUNC(medical_treatment,loadUnit);
             } else {
                 [_unit, _target, _cursorObject] call EFUNC(common,loadPerson);
