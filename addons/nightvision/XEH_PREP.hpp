@@ -4,7 +4,7 @@ PREP(initModule);
 PREP(nonDedicatedFix);
 PREP(onCameraViewChanged);
 PREP(onFiredPlayer);
-PREP(onLoadoutChanged);
+PREP(onSlotItemChanged);
 PREP(onVisionModeChanged);
 PREP(pfeh);
 PREP(refreshGoggleType);
