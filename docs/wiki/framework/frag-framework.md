@@ -27,7 +27,6 @@ The system for the end-developer is easy to use, and only requires minimal resea
 class CfgAmmo {
     class MyGrenade {
         ace_frag_enabled = 1;  // Deprecated
-        ace_frag_fragCount = 1200; // Approximate number of fragments the explosive makes - information below
         ace_frag_metal = 210;  // Amount of metal being fragmented (grams) - information below
         ace_frag_charge = 185;  // Amount of explosive filler (grams) - information below
         ace_frag_gurney_c = 2843;  // Gurney velocity constant for explosive type - information below
@@ -39,17 +38,7 @@ class CfgAmmo {
 };
 ```
 
-### 2.1 Fragment count
-
-`ace_frag_fragCount`
-
-The maximum number of fragments that the real munition would create. Frag count affects the chance of being hit by a fragment and the maximum range in which a fragment may hit a unit. Frag count may be found online, inferred from similar munitions, or derived based on desired hit distance. For a desired distance, the frag count ($$N_{frag}$$) is given by,
-$$N_{frag} = 4\pi\cdot P_{hit,min}\cdot distance_{max}^2 = 0.02\pi\cdot distance_{max}^2$$
-where $$P_{hit,min}$$ is 0.5%, the minimum chance to hit that is considered when generating fragments. Therefore, calculating the frag count for a frag grenade with a wounding radius of 15 meters, calculating for a distance of 80 meters may be desired instead.
-
-Dimensionless value, count of number of fragments.
-
-### 2.2 Metal amount
+### 2.1 Metal amount
 
 `ace_frag_metal`
 
@@ -57,7 +46,7 @@ The amount of metal being fragmented. Generally taken as the entire weight of th
 
 As long as the units match `ace_frag_charge`, the total mass of fragmenting metal given in any unit of mass (i.e., both use `kg`, `g`, or `lbs`).
 
-### 2.3 Explosives filler amount
+### 2.2 Explosives filler amount
 
 `ace_frag_charge`
 
@@ -65,7 +54,7 @@ The mass of explosive filler in the warhead. This may include any detonation/ign
 
 As long as the units match `ace_frag_metal`, the total mass of explosive filler given in any unit of mass (i.e., both use `kg`, `g`, or `lbs`).
 
-### 2.4 Gurney velocity constant
+### 2.3 Gurney velocity constant
 
 `ace_frag_gurney_c`
 
@@ -90,7 +79,7 @@ The Gurney constant for explosive force. You can find a list of common explosive
 
 †A rule of thumb from literature is that the Gurney constant is given as 0.338 times the detonation velocity.
 
-### 2.5 Gurney shape factor
+### 2.4 Gurney shape factor
 
 `ace_frag_gurney_k`
 
@@ -104,7 +93,7 @@ The shape factor for the explosive configuration. You should choose it based on 
 
 There are other configurations but these are the most common. If you are interested in others check out the wikipedia link given above. Most of these will not correctly function in ACE3 though due to additional variables for the equation.
 
-### 2.6 Fragments type
+### 2.5 Fragments type
 
 `ace_frag_classes[]`
 
@@ -125,13 +114,13 @@ There are different types of fragmentation fragments to choose from, and they ca
 
 Tinier fragments do less damage, and generally correlate to lower mass fragments. The `_HD` variants are all higher drag versions. Higher drag version are useful for fragments that are irregular or would not fly very far. Experimentation here is important.
 
-### 2.7 Ignore fragmentation
+### 2.6 Ignore fragmentation
 
 `ace_frag_skip`
 
 When `1`, the ammunition type will not produce fragments. `ace_frag_skip` does not stop submunitions of the ammo type from producing fragments. `ace_frag_skip` may be helpful for ammunition types that might cause high network load or for explosives that do not produce fragments. Experimentation under network conditions may be required. `ace_frag_skip` takes a higher priority than `ace_frag_force`.
 
-### 2.8 Force fragmentation
+### 2.7 Force fragmentation
 
 `ace_frag_force`
 
