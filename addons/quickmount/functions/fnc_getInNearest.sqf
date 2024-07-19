@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Kingsley, johnb43
+ * Author: Kingsley
  * Mounts the player in the vehicle they are directly looking at based on their distance.
  *
  * Arguments:
