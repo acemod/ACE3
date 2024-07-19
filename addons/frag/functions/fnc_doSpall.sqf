@@ -58,39 +58,40 @@ if (_exit) exitWith {
 
 private _unitDir = vectorNormalized _oldVelocity;
 
-private _spallPosAGL = [];
 if ((isNil "_oldPosASL") || {!(_oldPosASL isEqualTypeArray [0,0,0])}) exitWith {WARNING_1("Problem with hitPart data - bad pos [%1]",_oldPosASL);};
 private _pos1 = _oldPosASL;
-private _searchStepSize = unitDir vectorMultiply 0.05;
-for "_i" from 1 to 20 do {
+private _spallPosAGL = _pos1;
+private _searchStepSize = _unitDir vectorMultiply 0.05;
+for "_i" from 0 to 20 do {
     _spallPosAGL = _pos1 vectorAdd _searchStepSize;
-    if (!lineIntersects [_pos1, _spallPosAGL]) exitWith {
-        _spallPosAGL = ASLtoAGL _pos2;
-    };
+    if (!lineIntersects [_pos1, _spallPosAGL]) exitWith {};
     _pos1 = _spallPosAGL;
 };
 if (_spallPosAGL isEqualTo _pos1) exitWith {
     TRACE_1("can't find other side",_oldPosASL);
 };
+_spallPosAGL = ASLtoAGL _spallPosAGL;
+
 (_shotParents#1) setVariable [QGVAR(nextSpallEvent), CBA_missionTime + ACE_FRAG_SPALL_UNIT_HOLDOFF];
-private _spallVelocitySpherical = _oldVelocity call CBA_fnc_vect2polar;
+private _oldVelocitySpherical = _oldVelocity call CBA_fnc_vect2polar;
 
 if (_explosive > 0) then {
-    _shellType call FUNC(getFragInfo) params ["", "_fragVelocity"];
-    _spallVelocitySpherical set [0, _fragVelocity * 0.66];
+    _roundType call FUNC(getFragInfo) params ["", "_fragVelocity"];
+    _oldVelocitySpherical set [0, _fragVelocity * 0.66];
 };
+TRACE_2("spallPosandVel",_spallPosAGL,_oldVelocitySpherical);
 
 private _spread = 15 + (random 25);
 private _spallCount = 5 + (random 10);
 TRACE_1("",_spallCount);
 for "_i" from 1 to _spallCount do {
-    private _fragmentElevation = ((_spallVelocitySpherical select 2) - _spread) + (random (_spread * 2));
-    private _fragmentAzimuth = ((_spallVelocitySpherical select 1) - _spread) + (random (_spread * 2));
+    private _fragmentElevation = ((_oldVelocitySpherical select 2) - _spread) + (random (_spread * 2));
+    private _fragmentAzimuth = ((_oldVelocitySpherical select 1) - _spread) + (random (_spread * 2));
     if (abs _fragmentElevation > 90) then {
         ADD(_fragmentAzimuth,180);
     };
     _fragmentAzimuth = _fragmentAzimuth % 360;
-    private _fragmentSpeed = (_spallVelocitySpherical select 0) * 0.33 * _velocityModifier;
+    private _fragmentSpeed = (_oldVelocitySpherical select 0) * 0.33 * _velocityModifier;
     _fragmentSpeed = _fragmentSpeed * (0.75 + random 0.5);
 
     private _spallFragVect = [_fragmentSpeed, _fragmentAzimuth, _fragmentElevation] call CBA_fnc_polar2vect;
@@ -106,13 +107,13 @@ for "_i" from 1 to _spallCount do {
 _spread = 5 + (random 5);
 _spallCount = 3 + (random 5);
 for "_i" from 1 to _spallCount do {
-    private _fragmentElevation = ((_spallVelocitySpherical select 2) - _spread) + (random (_spread * 2));
-    private _fragmentAzimuth = ((_spallVelocitySpherical select 1) - _spread) + (random (_spread * 2));
+    private _fragmentElevation = ((_oldVelocitySpherical select 2) - _spread) + (random (_spread * 2));
+    private _fragmentAzimuth = ((_oldVelocitySpherical select 1) - _spread) + (random (_spread * 2));
     if (abs _fragmentElevation > 90) then {
         ADD(_fragmentAzimuth,180);
     };
     _fragmentAzimuth = _fragmentAzimuth % 360;
-    private _fragmentSpeed = (_spallVelocitySpherical select 0) * 0.55 * _velocityModifier;
+    private _fragmentSpeed = (_oldVelocitySpherical select 0) * 0.55 * _velocityModifier;
     _fragmentSpeed = _fragmentSpeed * (0.75 + random 0.5);
 
     private _spallFragVect = [_fragmentSpeed, _fragmentAzimuth, _fragmentElevation] call CBA_fnc_polar2vect;

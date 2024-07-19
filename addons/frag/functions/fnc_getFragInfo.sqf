@@ -88,7 +88,7 @@ if (_notifyMissingEntries) then {
     INFO_1("Ammo class %1 lacks proper explosive properties definitions for frag!",_ammo);
 };
 
-private _indirectHitRange = getNumber(configFile >> "CfgAmmo" >> _shellType >> "indirecthitrange");
+private _indirectHitRange = getNumber (_ammoConfig >> "indirecthitrange");
 
 /********************** _ammoInfo format *************************//*
  * 0: _fragRange - search range for fragments

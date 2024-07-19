@@ -10,7 +10,7 @@
  * 3: Shot parents <ARRAY>
  *
  * Return Value:
- * None
+ * The number of fragments created <NUMBER>
  *
  * Example:
  * [[], [], "handGrenade"] call ace_frag_fnc_frago
@@ -30,9 +30,10 @@ private _maxFrags = round linearConversion [ACE_FRAG_COUNT_MIN_TIME, ACE_FRAG_CO
 TRACE_2("",_maxFrags,CBA_missionTime - GVAR(lastFragTime));
 GVAR(lastFragTime) = CBA_missionTime;
 
-_shellType call ace_frag_fnc_getFragInfo params ["_fragRange", "_fragVelocity", "_fragTypes", "_metalMassModifier"];
+_shellType call FUNC(getFragInfo) params ["_fragRange", "_fragVelocity", "_fragTypes", "_metalMassModifier"];
 
 private _fragPosAGL = ASLtoAGL _fragPosASL;
+TRACE_5("fragValues",_fragPosASL,_fragPosAGL,_fragRange,_fragVelocity,_metalMassModifier);
 // Post 2.18 change - uncomment line 41, and remove lines 43, 50-55, 64-66
 // private _targets = [ASLtoAGL _fragPosAGL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
 private _objects = _fragPosAGL nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
@@ -104,7 +105,7 @@ if (_targets isNotEqualTo []) then {
                     private _fragObjSpeed = _fragVelocity * (1 - random 0.5);
                     private _fragObjVelocity = _vectorDir vectorMultiply _fragObjSpeed;
 
-                    private _fragObj = createVehicleLocal [(selectRandom _fragTypes), _fragPosAGL, [], 0, "CAN_COLLIDE"];
+                    private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
 
                     _fragObj setVectorDir _vectorDir;
                     _fragObj setVelocity _fragObjVelocity;
@@ -137,7 +138,7 @@ if (_targets isNotEqualTo []) then {
 
         _fragObjVelocity = _vectorDir vectorMultiply _fragObjSpeed;
 
-        private _fragObj = createVehicleLocal [(selectRandom _fragTypes), _fragPosAGL, [], 0, "CAN_COLLIDE"];
+        private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
         _fragObj setPosASL _fragPosASL;
         _fragObj setVectorDir _vectorDir;
         _fragObj setVelocity _fragObjVelocity;
