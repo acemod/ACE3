@@ -32,7 +32,6 @@ GVAR(lastFragTime) = CBA_missionTime;
 
 _shellType call ace_frag_fnc_getFragInfo params ["_fragRange", "_fragVelocity", "_fragTypes", "_metalMassModifier"];
 
-private _fragVelocityRandom = _fragVelocity * 0.5;
 private _fragPosAGL = ASLtoAGL _fragPosASL;
 // Post 2.18 change - uncomment line 41, and remove lines 43, 50-55, 64-66
 // private _targets = [ASLtoAGL _fragPosAGL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
@@ -96,19 +95,19 @@ if (_targets isNotEqualTo []) then {
                 };
 
                 for "_i" from 1 to _count do {
-                    private _vec = _baseVec vectorDiff [
+                    private _vectorDir = _baseVec vectorDiff [
                     (_vecVar / 2) + (random _vecVar),
                     (_vecVar / 2) + (random _vecVar),
                     (_vecVar / 2) + (random _vecVar)
                     ];
 
-                    private _fp = _fragVelocity - (random (_fragVelocityRandom));
-                    private _vel = _vec vectorMultiply _fp;
+                    private _fragObjSpeed = _fragVelocity * (1 - random 0.5);
+                    private _fragObjVelocity = _vectorDir vectorMultiply _fragObjSpeed;
 
                     private _fragObj = createVehicleLocal [(selectRandom _fragTypes), _fragPosAGL, [], 0, "CAN_COLLIDE"];
 
-                    _fragObj setVectorDir _vec;
-                    _fragObj setVelocity _vel;
+                    _fragObj setVectorDir _vectorDir;
+                    _fragObj setVelocity _fragObjVelocity;
                     _fragObj setShotParents _shotParents;
                     #ifdef DEBUG_MODE_DRAW
                     [_fragObj, "green", true] call FUNC(dev_trackObj);
@@ -132,16 +131,16 @@ if (_targets isNotEqualTo []) then {
         // Distribute evenly
         private _sectorOffset = 360 * (_i - 1) / (_randomCount max 1);
         private _randomDir = random (_sectorSize);
-        _vec = [cos (_sectorOffset + _randomDir), sin (_sectorOffset + _randomDir), sin (30 - (random 45))];
+        private _vectorDir = [cos (_sectorOffset + _randomDir), sin (_sectorOffset + _randomDir), sin (30 - (random 45))];
 
-        _fp = (_fragVelocity - (random (_fragVelocityRandom)));
+        private _fragObjSpeed = _fragVelocity * (1 - random 0.5);
 
-        _vel = _vec vectorMultiply _fp;
+        _fragObjVelocity = _vectorDir vectorMultiply _fragObjSpeed;
 
         private _fragObj = createVehicleLocal [(selectRandom _fragTypes), _fragPosAGL, [], 0, "CAN_COLLIDE"];
         _fragObj setPosASL _fragPosASL;
-        _fragObj setVectorDir _vec;
-        _fragObj setVelocity _vel;
+        _fragObj setVectorDir _vectorDir;
+        _fragObj setVelocity _fragObjVelocity;
         _fragObj setShotParents _shotParents;
 
         #ifdef DEBUG_MODE_DRAW

@@ -34,7 +34,7 @@ private _idh = getNumber (configFile >> "CfgAmmo" >> _roundType >> "indirectHitR
 _roundType call FUNC(getSpallInfo) params ["_caliber", "_explosive"];
 
 private _exit = false;
-private _vm = 1;
+private _velocityModifier = 1;
 
 private _curVelocity = velocity _round;
 private _oldSpeed = vectorMagnitude _oldVelocity;
@@ -48,7 +48,7 @@ if (alive _round) then {
         if (_caliber < 2.5) then {
             _exit = true;
         } else {
-            SUB(_vm,_curSpeed / _oldSpeed);
+            SUB(_velocityModifier,_curSpeed / _oldSpeed);
         };
     };
 };
@@ -83,16 +83,16 @@ private _spread = 15 + (random 25);
 private _spallCount = 5 + (random 10);
 TRACE_1("",_spallCount);
 for "_i" from 1 to _spallCount do {
-    private _elev = ((_spallVelocitySpherical select 2) - _spread) + (random (_spread * 2));
-    private _dir = ((_spallVelocitySpherical select 1) - _spread) + (random (_spread * 2));
-    if (abs _elev > 90) then {
-        ADD(_dir,180);
+    private _fragmentElevation = ((_spallVelocitySpherical select 2) - _spread) + (random (_spread * 2));
+    private _fragmentAzimuth = ((_spallVelocitySpherical select 1) - _spread) + (random (_spread * 2));
+    if (abs _fragmentElevation > 90) then {
+        ADD(_fragmentAzimuth,180);
     };
-    _dir = _dir % 360;
-    private _vel = (_spallVelocitySpherical select 0) * 0.33 * _vm;
-    _vel = (_vel - (_vel * 0.25)) + (random (_vel * 0.5));
+    _fragmentAzimuth = _fragmentAzimuth % 360;
+    private _fragmentSpeed = (_spallVelocitySpherical select 0) * 0.33 * _velocityModifier;
+    _fragmentSpeed = _fragmentSpeed * (0.75 + random 0.5);
 
-    private _spallFragVect = [_vel, _dir, _elev] call CBA_fnc_polar2vect;
+    private _spallFragVect = [_fragmentSpeed, _fragmentAzimuth, _fragmentElevation] call CBA_fnc_polar2vect;
     private _fragment = createVehicleLocal [selectRandomWeighted WEIGHTED_SIZE, _spallPosAGL, [], 0, "CAN_COLLIDE"];
     _fragment setVelocity _spallFragVect;
     _fragment setShotParents _shotParents;
@@ -105,16 +105,16 @@ for "_i" from 1 to _spallCount do {
 _spread = 5 + (random 5);
 _spallCount = 3 + (random 5);
 for "_i" from 1 to _spallCount do {
-    private _elev = ((_spallVelocitySpherical select 2) - _spread) + (random (_spread * 2));
-    private _dir = ((_spallVelocitySpherical select 1) - _spread) + (random (_spread * 2));
-    if (abs _elev > 90) then {
-        ADD(_dir,180);
+    private _fragmentElevation = ((_spallVelocitySpherical select 2) - _spread) + (random (_spread * 2));
+    private _fragmentAzimuth = ((_spallVelocitySpherical select 1) - _spread) + (random (_spread * 2));
+    if (abs _fragmentElevation > 90) then {
+        ADD(_fragmentAzimuth,180);
     };
-    _dir = _dir % 360;
-    private _vel = (_spallVelocitySpherical select 0) * 0.55 * _vm;
-    _vel = (_vel - (_vel * 0.25)) + (random (_vel * 0.5));
+    _fragmentAzimuth = _fragmentAzimuth % 360;
+    private _fragmentSpeed = (_spallVelocitySpherical select 0) * 0.55 * _velocityModifier;
+    _fragmentSpeed = _fragmentSpeed * (0.75 + random 0.5);
 
-    private _spallFragVect = [_vel, _dir, _elev] call CBA_fnc_polar2vect;
+    private _spallFragVect = [_fragmentSpeed, _fragmentAzimuth, _fragmentElevation] call CBA_fnc_polar2vect;
     private _fragment = createVehicleLocal [selectRandomWeighted WEIGHTED_SIZE, _spallPosAGL, [], 0, "CAN_COLLIDE"];
     _fragment setVelocity _spallFragVect;
     _fragment setShotParents _shotParents;
