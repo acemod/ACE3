@@ -40,14 +40,22 @@ if ((_atlPos select 2) < 0.5) then {
     _lastPos vectorAdd [0, 0, 0.5];
 };
 
-private _objects = _atlPos nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
-// Add unique crews in faster way
+// Post 2.18 change - uncomment line 41, and remove lines 43, 50-55, 64-66
+// private _targets = [_posAGL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
+private _objects = _posAGL nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
+if (_objects isEqualTo []) exitWith {
+    TRACE_2("No nearby targets",_posAGL,_fragRange);
+    0
+};
+
+// grab crews and add them in so that targets stay approx. sorted by distance
+private _targets = [];
 {
-    {
-        _objects pushBackUnique _x;
-    } forEach (crew _x);
+    private _crew = crew _x;
+    _crew pushBackUnique _x;
+    _targets append _crew;
 } forEach _objects;
-TRACE_2("",_fragRange,count _objects);
+TRACE_2("",_fragRange,count _targets);
 
 private _fragCount = 0;
 
@@ -55,7 +63,7 @@ private _fragArcs = [];
 _fragArcs set [360, 0];
 
 private _doRandom = true;
-if (_objects isNotEqualTo []) then {
+if (_targets isNotEqualTo []) then {
     if (GVAR(reflectionsEnabled)) then {
         [_lastPos, _shellType] call FUNC(doReflections);
     };
@@ -119,7 +127,7 @@ if (_objects isNotEqualTo []) then {
             };
         };
         if (_fragCount > _maxFrags) exitWith {};
-    } forEach _objects;
+    } forEach _targets;
     TRACE_1("targeted",_fragCount);
     if (_fragCount > _maxFrags) exitWith {};
     private _randomCount = ceil ((_maxFrags - _fragCount) * 0.35);
