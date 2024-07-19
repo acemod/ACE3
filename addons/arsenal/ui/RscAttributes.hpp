@@ -283,7 +283,7 @@ class GVAR(display) {
             h = QUOTE(55 * GRID_H);
             class controls {
                 class statsStaticBackground1: ctrlStaticBackground {
-                    idc = -1;
+                    idc = IDC_statsStaticBackground1;
                     x = QUOTE(0);
                     y = QUOTE(0);
                     w = QUOTE(47 * GRID_W);
@@ -291,7 +291,7 @@ class GVAR(display) {
                     colorBackground[] = {0.1,0.1,0.1,0.5};
                 };
                 class statsStaticBackground2: ctrlStaticBackground {
-                    idc = -1;
+                    idc = IDC_statsStaticBackground2;
                     x = QUOTE(0);
                     y = QUOTE(0);
                     w = QUOTE(47 * GRID_W);

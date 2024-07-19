@@ -214,7 +214,7 @@ class ace_arsenal_stats {
         showBar = 1; // 0 disabled; 1 enabled;
         showText = 1; // 0 disabled; 1 enabled;
         barStatement = "1"; // Statement evaluated to set the bar progress, needs to return a NUMBER.
-        textStatement = "test entry"; // statement evaluated to set the text entry, can return anything.
+        textStatement = "test entry"; // statement evaluated to set the text entry, can return anything. Arrays will have a linebreak added after each element.
         condition = "true"; // Condition for the stats to be displayed, default is true if not defined, needs to return a BOOL.
         tabs[] = { {0,1,2}, { } }; // Arrays of tabs, left array is left tabs, right array is right tabs.
     };
