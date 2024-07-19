@@ -24,14 +24,10 @@
 // Scaling for the min/max # of fragments since last frag event
 #define ACE_FRAG_COUNT_MIN_TIME 0.1
 #define ACE_FRAG_COUNT_MIN 5
-#define ACE_FRAG_COUNT_MAX_TIME 1
+#define ACE_FRAG_COUNT_MAX_TIME 1.5
 #define ACE_FRAG_COUNT_MAX 50
-// Default hitpoint targets
-#define ACE_FRAG_HITPOINTS ["spine1", "spine1", "spine1", "spine2", "spine2", "spine2", "spine3", "spine3", "spine3", "pelvis", "pelvis", "pelvis", "head", "leftarm", "leftarmroll", "leftforearm", "rightarm", "rightarmroll", "rightforearm", "leftupleg", "leftuplegroll", "leftlegroll", "leftfoot", "rightupleg", "rightuplegroll", "rightleg", "rightlegroll", "rightfoot", "neck"]
 // half of gravity approx 9.81/2
 #define ACE_FRAG_HALF_GRAVITY_APPROX 4.905
-// Lowest chance to hit of 0.5%
-#define ACE_FRAG_MIN_FRAG_HIT_CHANCE 0.005
 #define ACE_FRAG_IMPERIC_VELOCITY_CONSTANT 0.8
 // Make frag hold-off time shortger for low frag
 // value of 150/4/pi ~= 11.93662
