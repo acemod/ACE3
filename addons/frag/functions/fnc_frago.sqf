@@ -112,7 +112,7 @@ if (_targets isNotEqualTo []) then {
                     _fragObj setVectorDir _vec;
                     _fragObj setVelocity _vel;
                     _fragObj setShotParents _shotParents;
-                    #ifdef DRAW_FRAG_INFO
+                    #ifdef DEBUG_MODE_DRAW
                     [ACE_player, _fragObj, [1,0,0,1]] call FUNC(dev_addTrack);
                     #endif
                     INC(_fragCount);
@@ -146,7 +146,7 @@ if (_targets isNotEqualTo []) then {
         _fragObj setVelocity _vel;
         _fragObj setShotParents _shotParents;
 
-        #ifdef DRAW_FRAG_INFO
+        #ifdef DEBUG_MODE_DRAW
         [ACE_player, _fragObj, [1,0.5,0,1]] call FUNC(dev_addTrack);
         #endif
         INC(_fragCount);

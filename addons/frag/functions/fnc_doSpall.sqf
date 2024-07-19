@@ -18,10 +18,12 @@
  *
  * Public: No
  */
-params ["_objectHit", "_roundType", "_round", "_oldPos", "_oldVelocity",];
+params ["_objectHit", "_roundType", "_round", "_oldPos", "_oldVelocity"];
 
 TRACE_1("",_objectHit);
-if ((isNil "_objectHit") || {isNull _objectHit}) exitWith {WARNING_1("Problem with hitPart data - bad object [%1]",_objectHit);};
+if ((isNil "_objectHit") || {isNull _objectHit}) exitWith {
+    WARNING_1("Problem with hitPart data - bad object [%1]",_objectHit);
+};
 
 private _caliber = getNumber (configFile >> "CfgAmmo" >> _roundType >> "caliber");
 private _explosive = getNumber (configFile >> "CfgAmmo" >> _roundType >> "explosive");
@@ -88,7 +90,7 @@ for "_i" from 1 to _spallCount do {
     _fragment setPosASL _spallPos;
     _fragment setVelocity _spallFragVect;
 
-    #ifdef DRAW_FRAG_INFO
+    #ifdef DEBUG_MODE_DRAW
         [_fragment, "orange", true] call FUNC(dev_trackObj);
     #endif
 };
@@ -110,7 +112,7 @@ for "_i" from 1 to _spallCount do {
     _fragment setPosASL _spallPos;
     _fragment setVelocity _spallFragVect;
 
-    #ifdef DRAW_FRAG_INFO
+    #ifdef DEBUG_MODE_DRAW
         [_fragment, "orange", true] call FUNC(dev_trackObj);
     #endif
 };
