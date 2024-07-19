@@ -19,6 +19,7 @@
 params ["_display", "_control", "_curSel", ["_itemCfg", configNull]];
 
 private _statsBoxCtrl = _display displayCtrl IDC_statsBox;
+private _statsStaticBackground = _display displayCtrl IDC_statsStaticBackground1;
 private _statsPreviousPageCtrl = _display displayCtrl IDC_statsPreviousPage;
 private _statsNextPageCtrl = _display displayCtrl IDC_statsNextPage;
 private _statsCurrentPageCtrl = _display displayCtrl IDC_statsCurrentPage;
@@ -111,6 +112,7 @@ private _fnc_handleStats = {
     private _statsBarCtrl = controlNull;
     private _statsTextCtrl = controlNull;
     private _textStatementResult = "";
+    private _height = 5;
 
     {
         _x params ["", "_configEntry", "_title", "_bools", "_statements"];
@@ -151,10 +153,17 @@ private _fnc_handleStats = {
 
             _statsTextCtrl ctrlSetText _textStatementResult;
             _statsTextCtrl ctrlSetTextColor ([[1, 1, 1, 1], [0, 0, 0, 1]] select (_showBar));
+            _statsTextCtrl ctrlSetPositionH (ctrlTextHeight _statsTextCtrl);
             _statsTextCtrl ctrlSetFade 0;
+
+            _height = _height + (ctrlTextHeight _statsTextCtrl);
+            systemChat format ["_showText: %1", _height];
         } else {
             _statsTextCtrl ctrlSetFade 1;
         };
+
+        _height = _height + 10;
+        systemChat format ["main loop: %1", _height];
 
         {
             _x ctrlCommit 0;
@@ -169,13 +178,14 @@ private _fnc_handleStats = {
 
     // Resize the window
     (5 - _statsCount) call _fnc_hideUnused;
-    private _height = 10 * _statsCount + 5;
     _statsBoxCtrl ctrlSetPosition [
         (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
         safezoneY + 1.8 * GRID_H,
         47 * GRID_W,
         _height * GRID_H
     ];
+    _statsStaticBackground ctrlSetPositionH (_height * GRID_H);
+    _statsStaticBackground ctrlCommit 0;
     _statsBoxCtrl ctrlCommit 0;
 
     // Move the actions box
