@@ -214,6 +214,7 @@ class G_40mm_HE: GrenadeBase {
     GVAR(gurney_k) = "3/5"; // interior fragmenter/charge is a sphere
 };
 class G_20mm_HE: G_40mm_HE {
+    GVAR(skip) = 1;
     GVAR(classes)[] = {QGVAR(tiny)};
     GVAR(metal) = 50;
     GVAR(charge) = 8;
@@ -259,7 +260,7 @@ class APERSMine_Range_Ammo: MineBase { // VS-50
 };
 
 class APERSBoundingMine_Range_Ammo: MineBase {
-    GVAR(skip) = 0;
+    GVAR(skip) = 1;
     GVAR(force) = 0;
     GVAR(classes)[] = {QGVAR(tiny)};
     GVAR(metal) = 80;
@@ -460,8 +461,8 @@ class Rocket_04_HE_F: MissileBase { // Shrieker (Hydra 70)
     GVAR(gurney_k) = "1/2";
 };
 class Rocket_03_HE_F: Rocket_04_HE_F { // S-8DM makes the most sense
-    GVAR(metal) = 1;
-    GVAR(charge) = 2;
+    GVAR(metal) = 1800;
+    GVAR(charge) = 2000;
     GVAR(gurney_c) = 2300;
 };
 class Rocket_04_AP_F: Rocket_04_HE_F {
@@ -618,22 +619,22 @@ class ammo_Missile_ShortRangeAABase: MissileBase {
 };
 class ammo_Missile_rim116: ammo_Missile_ShortRangeAABase {
     GVAR(skip) = 0;
-    GVAR(charge) = 40; // dg
-    GVAR(metal) = 73; // dg
+    GVAR(charge) = 400;
+    GVAR(metal) = 730;
     GVAR(gurney_c) = 2400;
     GVAR(classes)[] = {QGVAR(tiny), QGVAR(small)};
 };
 class ammo_Missile_BIM9X: ammo_Missile_ShortRangeAABase {
     GVAR(skip) = 0;
-    GVAR(charge) = 44; // dg
-    GVAR(metal) = 50; // dg
+    GVAR(charge) = 440;
+    GVAR(metal) = 500;
     GVAR(gurney_c) = 2900;
     GVAR(classes)[] = {QGVAR(small), QGVAR(tiny)};
 };
 class ammo_Missile_AA_R73: ammo_Missile_ShortRangeAABase {
     GVAR(skip) = 0;
-    GVAR(charge) = 245; // cg
-    GVAR(metal) = 495; // cg
+    GVAR(charge) = 2450;
+    GVAR(metal) = 4950;
     GVAR(gurney_c) = 2700;
     GVAR(classes)[] = {QGVAR(small), QGVAR(small), QGVAR(tiny)};
 };

@@ -11,6 +11,7 @@
  *  0: Search range for fragments in meters <NUMBER>
  *  1: Gurney equation calculated speed <NUMBER>
  *  2: Array of fragment types <ARRAY>
+ *  3: Mass of fragmenting metal modified for frag count <NUMBER>
  *
  * Example:
  * "B_556x45_Ball" call ace_frag_fnc_getFragInfo
@@ -93,11 +94,13 @@ private _indirectHitRange = getNumber(configFile >> "CfgAmmo" >> _shellType >> "
  * 0: _fragRange - search range for fragments
  * 1: _fragVelocity - gurney equation calculated velocity
  * 2: _fragTypes - array of fragment types
+ * 3: _metalMassModified - mass of fragmenting metal modified for frag count
  */
 _ammoInfo = [
     80 * _indirectHitRange,
     ACE_FRAG_IMPERIC_VELOCITY_CONSTANT * _gurneyConstant * sqrt (_chargeMass / (_metalMass + _chargeMass * _geometryCoefficient)),
-    _fragTypes
+    _fragTypes,
+    sqrt (_metalMass / 1000)
 ];
 
 GVAR(fragInfoCache) set [_ammo, _ammoInfo];
