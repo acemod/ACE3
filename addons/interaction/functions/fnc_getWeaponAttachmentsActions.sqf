@@ -89,8 +89,14 @@ params ["_unit"];
                         _unit
                     ];
 
+                    private _CBA_PIPItems = configFile >> "CBA_PIPItems";
+
                     // "switch" action
                     {
+                        if (getText (_CBA_PIPItems >> _x) == _attachment) then {
+                            continue;
+                        };
+
                         private _config = _cfgWeapons >> _x;
                         private _modeName = getText (_config >> "MRT_SwitchItemHintText");
 
