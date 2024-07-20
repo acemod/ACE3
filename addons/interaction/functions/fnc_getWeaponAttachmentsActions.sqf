@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: mharis001, Dystopian
+ * Author: mharis001, Dystopian, PabstMirror, johnb43
  * Returns children actions for weapon attachment switching.
  *
  * Arguments:
@@ -21,70 +21,104 @@ params ["_unit"];
     params ["_unit"];
 
     private _currentWeapon = currentWeapon _unit;
-    if (_currentWeapon isEqualTo "") exitWith {[]};
-    private _weaponItems = _unit weaponAccessories _currentWeapon;
+
+    if (_currentWeapon == "") exitWith {[]};
+
     private _cfgWeapons = configFile >> "CfgWeapons";
-    private _actions = [];
+    private _weaponItems = _unit weaponAccessories _currentWeapon;
 
-    // "attach" actions
-    private _items = _unit call EFUNC(common,uniqueItems);
-    private _compatibleItems = _currentWeapon call CBA_fnc_compatibleItems;
-    {
+    // Get current weapon attachments, as well as compatible attachments in inventory
+    private _allAttachments = (+_weaponItems) - [""];
+    _allAttachments append ((_unit call EFUNC(common,uniqueItems)) arrayIntersect (compatibleItems _currentWeapon));
+
+    (_allAttachments arrayIntersect _allAttachments) apply {
         private _config = _cfgWeapons >> _x;
-        private _name = format [LLSTRING(weaponAttachmentsAttach), getText (_config >> "displayName")];
+        private _name = getText (_config >> "displayName");
         private _picture = getText (_config >> "picture");
-        private _type = getNumber (_config >> "itemInfo" >> "type");
-        private _oldAttachment = _weaponItems select ([TYPE_MUZZLE, TYPE_FLASHLIGHT, TYPE_OPTICS, TYPE_BIPOD] find _type);
 
-        private _action = [
-            _x, _name, _picture,
-            LINKFUNC(switchWeaponAttachment),
-            {true},
-            {},
-            [_currentWeapon, _x, _oldAttachment]
-        ] call EFUNC(interact_menu,createAction);
-        _actions pushBack [_action, [], _unit];
-    } forEach ((_items arrayIntersect _compatibleItems) - _weaponItems);
-
-    // "detach" actions
-    {
-        if (_x isEqualTo "") then {continue};
-        private _originalAttachment = _x;
-
-        private _switchableAttachments = [_originalAttachment] call CBA_fnc_switchableAttachments;
-        private _convertToActions = [];
-        {
-            if (_x == _originalAttachment) then {continue};
-            private _config = _cfgWeapons >> _x;
-            private _modeName = getText (_config >> "MRT_SwitchItemHintText");
-            if (_modeName == "") then { _modeName = getText (_config >> "displayName"); };
-            private _name = format ["%1: %2", localize "str_sensortype_switch", _modeName];
-            private _picture = getText (_config >> "picture");
-
-            private _action = [
-                _x, _name, _picture,
-                LINKFUNC(switchWeaponAttachment),
-                {true},
+        [
+            [
+                _x,
+                _name,
+                _picture,
                 {},
-                [_currentWeapon, _x, ""]
-            ] call EFUNC(interact_menu,createAction);
-            _convertToActions pushBack [_action, [], _unit];
-        } forEach _switchableAttachments;
+                {true},
+                {
+                    params ["_unit", "", "_args"];
+                    _args params ["_attachment", "_name", "_picture", "_weaponItems", "_currentWeapon"];
 
+                    private _cfgWeapons = configFile >> "CfgWeapons";
+                    private _attachementNotOnGun = !(_attachment in _weaponItems);
+                    private _actions = [];
 
-        private _config = _cfgWeapons >> _originalAttachment;
-        private _name = format [LLSTRING(weaponAttachmentsDetach), getText (_config >> "displayName")];
-        private _picture = getText (_config >> "picture");
+                    // "attach" action
+                    if (_attachementNotOnGun && {[_unit, _attachment] call EFUNC(common,hasItem)}) then {
+                        private _type = getNumber (_cfgWeapons >> _attachment >> "itemInfo" >> "type");
+                        private _currentAttachment = _weaponItems select ([TYPE_MUZZLE, TYPE_FLASHLIGHT, TYPE_OPTICS, TYPE_BIPOD] find _type);
 
-        private _action = [
-            _x, _name, _picture,
-            LINKFUNC(switchWeaponAttachment),
-            {true},
-            {},
-            [_currentWeapon, "", _originalAttachment]
-        ] call EFUNC(interact_menu,createAction);
-        _actions pushBack [_action, _convertToActions, _unit];
-    } forEach _weaponItems;
+                        _actions pushBack [
+                            [
+                                QGVAR(attach_) + _attachment,
+                                format [LLSTRING(weaponAttachmentsAttach), _name],
+                                _picture,
+                                LINKFUNC(switchWeaponAttachment),
+                                {true},
+                                {},
+                                [_currentWeapon, _attachment, _currentAttachment]
+                            ] call EFUNC(interact_menu,createAction),
+                            [],
+                            _unit
+                        ];
+                    };
 
-    _actions
+                    // Don't show interaction with attachments that aren't on the current weapon
+                    if (_attachementNotOnGun) exitWith {_actions};
+
+                    // "detach" action
+                    _actions pushBack [
+                        [
+                            QGVAR(detach_) + _attachment,
+                            format [LLSTRING(weaponAttachmentsDetach), _name],
+                            _picture,
+                            LINKFUNC(switchWeaponAttachment),
+                            {true},
+                            {},
+                            [_currentWeapon, "", _attachment]
+                        ] call EFUNC(interact_menu,createAction),
+                        [],
+                        _unit
+                    ];
+
+                    // "switch" action
+                    {
+                        private _config = _cfgWeapons >> _x;
+                        private _modeName = getText (_config >> "MRT_SwitchItemHintText");
+
+                        if (_modeName == "") then {
+                            _modeName = getText (_config >> "displayName");
+                        };
+
+                        _actions pushBack [
+                            [
+                                QGVAR(switch_) + _x,
+                                format ["%1: %2", localize "str_sensortype_switch", _modeName],
+                                getText (_config >> "picture"),
+                                LINKFUNC(switchWeaponAttachment),
+                                {true},
+                                {},
+                                [_currentWeapon, _x, ""]
+                            ] call EFUNC(interact_menu,createAction),
+                            [],
+                            _unit
+                        ];
+                    } forEach ((_attachment call CBA_fnc_switchableAttachments) - [_attachment]); // Don't allow switching to current mode
+
+                    _actions
+                },
+                [_x, _name, _picture, _weaponItems, _currentWeapon]
+            ] call EFUNC(interact_menu,createAction),
+            [],
+            _unit
+        ]
+    } // return
 }, _unit, QGVAR(weaponAttachmentsActions), 5, QGVAR(clearWeaponAttachmentsActionsCache)] call EFUNC(common,cachedCall);
