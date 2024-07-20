@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Play weapon firemode change sound.
@@ -34,7 +34,7 @@ if (_filename == "") exitWith {
 };
 
 // add file extension .wss as default
-if !(toLower (_filename select [count _filename - 4]) in [".wav", ".ogg", ".wss"]) then {
+if !(toLowerANSI (_filename select [count _filename - 4]) in [".wav", ".ogg", ".wss"]) then {
     _filename = format ["%1.wss", _filename];
 };
 

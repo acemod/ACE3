@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Sets vehicle damage based on HitIndex. Failing that it falls back to HitPoint name.
  *
  * Arguments:
@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [vehicle player, 234, "HitHull"] call ace_vehicle_damage_fnc_knockOut
+ * [vehicle player, 234, "HitHull"] call ace_vehicle_damage_fnc_addDamage
  *
  * Public: No
  */
@@ -37,6 +37,6 @@ if (_hitIndex >= 0) then {
     _vehicle setHitPointDamage [_hitPoint, _damage, true];
 };
 
-if (_hitPoint isEqualTo "hitengine" && { _damage > 0.9 }) then {
-    _vehicle call EFUNC(cookoff,engineFire);
+if (_hitPoint == "hitengine" && {_damage > 0.9}) then {
+    [QEGVAR(cookoff,engineFireServer), _vehicle] call CBA_fnc_serverEvent;
 };

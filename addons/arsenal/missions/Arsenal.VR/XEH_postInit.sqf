@@ -8,30 +8,33 @@ cba_diagnostic_projectileMaxLines = 10;
 [QGVAR(displayOpened), {
     private _player = player;
 
-    // player pose
+    // Player pose
     [{
-        switch (true) do {
-            case (primaryWeapon _this != ""): {
-                _this switchMove "amovpercmstpslowwrfldnon";
-            };
-            case (handgunWeapon _this != ""): {
-                _this switchMove "amovpercmstpslowwpstdnon";
-            };
-            default {
+        switch (currentWeapon _this) do {
+            case (""): {
                 _this switchMove "amovpercmstpsnonwnondnon";
             };
+            case (primaryWeapon _this): {
+                _this switchMove "amovpercmstpslowwrfldnon";
+            };
+            case (handgunWeapon _this): {
+                _this switchMove "amovpercmstpslowwpstdnon";
+            };
+            case (binocular _this);
+            case (secondaryWeapon _this): {}; // deliberately nothing
         };
     }, _player] call CBA_fnc_execNextFrame;
 
-    // hide everything except the player
+    // Hide everything except the player
     {
         _x enableSimulation false;
         _x hideObject true;
     } forEach (allMissionObjects "" - [_player] - attachedObjects _player);
 
-    if ((_player getVariable ["cba_projectile_firedEhId", -1]) != -1) then {
+    if ((_player getVariable ["CBA_projectile_firedEhId", -1]) != -1) then {
         _player call CBA_fnc_removeUnitTrackProjectiles;
     };
+
     _player setFatigue 0;
 
     // Esc to close mission
@@ -44,6 +47,7 @@ cba_diagnostic_projectileMaxLines = 10;
             if (_key isEqualTo DIK_ESCAPE && {!_shift}) then {
                 [_display] spawn {
                     disableSerialization;
+
                     params ["_display"];
 
                     private _return = [
@@ -54,58 +58,63 @@ cba_diagnostic_projectileMaxLines = 10;
                     ] call BIS_fnc_GUImessage;
 
                     if (_return) then {
+                        // Save loadout for next time arsenal mission is played
                         profileNamespace setVariable [QGVAR(missionLastLoadout), [player] call CBA_fnc_getLoadout];
-                        _display closeDisplay 2;
-                        findDisplay 46 closeDisplay 0;
+
+                        // Quit mission
+                        _display closeDisplay IDC_CANCEL;
+                        findDisplay IDD_MISSION closeDisplay 0;
                     };
                 };
+
                 true
             };
         }];
 
-        private _buttonClose = _display displayCtrl IDC_menuBarClose;
-        _buttonClose ctrlSetText localize "str_a3_rscdisplayarsenal_buttonok";
+        (_display displayCtrl IDC_menuBarClose) ctrlSetText localize "str_a3_rscdisplayarsenal_buttonok";
     } call CBA_fnc_execNextFrame;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(displayClosed), {
     private _player = player;
 
-    // unhide everthing
+    // Unhide everthing
     {
         _x enableSimulation true;
         _x hideObject false;
     } forEach allMissionObjects "";
 
-    // update VR unit gear
+    private _unit = objNull;
+
+    // Update VR unit gear
     {
-        private _unit = _x;
+        _unit = _x;
 
         removeVest _unit;
-        _unit addVest vest _player;
+        if (vest _player != "") then { _unit addVest vest _player; };
 
         removeBackpack _unit;
-        _unit addBackpack backpack _player;
-
+        if (backpack _player != "") then { _unit addBackpack backpack _player; };
         removeHeadgear _unit;
-        _unit addHeadgear headgear _player;
-
+        if (headgear _player != "") then { _unit addHeadgear headgear _player; };
         removeGoggles _unit;
-        _unit addGoggles goggles _player;
+        if (goggles _player != "") then { _unit addGoggles goggles _player; };
 
         removeAllWeapons _unit;
-        _unit addWeapon primaryWeapon _player;
+        if (primaryWeapon _player != "") then { _unit addWeapon primaryWeapon _player; };
+
         {
             _unit addPrimaryWeaponItem _x;
         } forEach primaryWeaponItems _player;
 
-        _unit addWeapon secondaryWeapon _player;
+        if (secondaryWeapon _player != "") then { _unit addWeapon secondaryWeapon _player; };
 
         {
             _unit addSecondaryWeaponItem _x;
         } forEach secondaryWeaponItems _player;
 
-        _unit addWeapon handgunWeapon _player;
+        if (handgunWeapon _player != "") then { _unit addWeapon handgunWeapon _player; };
+
         {
             _unit addHandgunItem _x;
         } forEach handgunItems _player;

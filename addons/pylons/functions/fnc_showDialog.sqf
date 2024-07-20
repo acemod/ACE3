@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: 654wak654
  * Shows the aircraft loadout dialog for given aircraft.
@@ -107,7 +107,7 @@ GVAR(comboBoxes) = [];
     private _mirroredIndex = getNumber (_x >> "mirroredMissilePos");
 
     private _button = controlNull;
-    if (count allTurrets [_aircraft, false] > 0) then {
+    if ((allTurrets [_aircraft, false]) isNotEqualTo []) then {
         _button = _display ctrlCreate ["ctrlButtonPictureKeepAspect", -1];
         private _turret = [_aircraft, _forEachIndex] call EFUNC(common,getPylonTurret);
         [_button, false, _turret] call FUNC(onButtonTurret);

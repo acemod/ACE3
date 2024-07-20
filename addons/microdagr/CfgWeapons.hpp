@@ -9,6 +9,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(itemDescription);
         model = QPATHTOF(data\MicroDAGR.p3d);
         picture = QPATHTOF(images\microDAGR_item.paa);
+        ACE_isTool = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 2;
         };

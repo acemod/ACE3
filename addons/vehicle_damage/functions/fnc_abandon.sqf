@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Forces the AI currently in a vehicle to bail out.
  *
  * Arguments:
@@ -17,6 +17,8 @@
 
 params ["_vehicle"];
 TRACE_2("abandon",_vehicle,(crew _vehicle) select {alive _x});
+
+if (_vehicle getVariable [QGVAR(allowCrewInImmobile), false]) exitWith {}; // check for API
 
 [{
     params ["_vehicle"];

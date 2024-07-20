@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the scope base angle based on the zero range input
@@ -35,7 +35,7 @@ if (!GVAR(atmosphereModeTBH)) then {
     _relativeHumidity = 0.5;
 };
 
-private _scopeBaseAngle = if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) then {
+private _scopeBaseAngle = if !(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
     private _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZero:%1:%2:%3:%4", _zeroRange, _muzzleVelocity, _airFriction, _boreHeight];
     (parseNumber _zeroAngle)
 } else {

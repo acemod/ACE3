@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Fire Vehicle Smoke Launcher.
@@ -22,7 +22,7 @@ private _weapons = _vehicle weaponsTurret _turret;
 
 if (
     count _weapons > 1
-    || {count _weapons > 0 && {!(_weapons select 0 in ["SmokeLauncher", "BWA3_SmokeLauncher"])}}  // @todo somebody might use custom smoke launcher weapons aswell, maybe ...
+    || {_weapons isNotEqualTo [] && {!(_weapons select 0 in ["SmokeLauncher", "BWA3_SmokeLauncher"])}}  // @todo somebody might use custom smoke launcher weapons aswell, maybe ...
 ) then {
     //This doesn't work reliably for vehilces with additional weapons for the commander. Select smoke launcher instead.
 

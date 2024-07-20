@@ -13,7 +13,7 @@
             class GVAR(DetachVehicle) { \
                 displayName = CSTRING(Detach); \
                 condition = QUOTE(_this call FUNC(canDetach)); \
-                statement = QUOTE(_this call FUNC(detach) ); \
+                statement = QUOTE(_this call FUNC(detach)); \
                 exceptions[] = {"isNotSwimming"}; \
                 showDisabled = 0; \
                 icon = QPATHTOF(UI\detach_ca.paa); \

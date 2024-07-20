@@ -6,9 +6,9 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common", "ace_medical_engine"};
+        requiredAddons[] = {"ace_common"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"commy2", "Dani (TCVM)"};
+        authors[] = {"commy2", "tcvm"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
@@ -16,5 +16,5 @@ class CfgPatches {
 
 #include "CfgEventHandlers.hpp"
 #include "CfgSounds.hpp"
-#include "ACE_Medical_Treatment_Actions.hpp"
+#include "CfgVehicles.hpp"
 #include "RscTitles.hpp"

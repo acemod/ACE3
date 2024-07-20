@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: diwako
  * Apply a fitting unconscious animation to a knocked out unit
@@ -23,7 +23,7 @@ if !(IS_UNCONSCIOUS(_unit) &&                   // do not run if unit is conscio
     {alive _unit &&                             // do not run if unit is dead
     {isNull objectParent _unit}}) exitWith {};  // do not run if unit in any vehicle
 
-private _animsArray = GVAR(animations) getVariable [_anim, [""]];
+private _animsArray = GVAR(animations) getOrDefault [toLowerANSI _anim, [""]];
 private _random = (toArray (hashValue _unit)) param [0, 0];
 private _index = _random % (count _animsArray);
 private _unconsciousAnimation = _animsArray select _index;

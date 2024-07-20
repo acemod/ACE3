@@ -1,12 +1,13 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
+#include "..\defines.hpp"
 /*
- * Author: Alganthe
+ * Author: Alganthe, johnb43
  * Remove virtual items to the provided target.
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Items <ARRAY of strings> <BOOL>
- * 2: Add globally <BOOL>
+ * 1: Items <ARRAY of STRINGS> <BOOL>
+ * 2: Remove globally <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -18,65 +19,93 @@
  * Public: Yes
 */
 
-params [ ["_object", objNull, [objNull]], ["_items", [], [true, [""]]], ["_global", false, [false]] ];
+params [["_object", objNull, [objNull]], ["_items", [], [true, [""]]], ["_global", false, [false]]];
 
-if (_object == objNull) exitWith {};
-if (_items isEqualType [] && {count _items == 0}) exitWith {};
-
-private _cargo = _object getVariable [QGVAR(virtualItems), [
-    [[], [], []], // Weapons 0, primary, handgun, secondary
-    [[], [], [], []], // WeaponAccessories 1, optic,side,muzzle,bipod
-    [ ], // Magazines 2
-    [ ], // Headgear 3
-    [ ], // Uniform 4
-    [ ], // Vest 5
-    [ ], // Backpacks 6
-    [ ], // Goggles 7
-    [ ], // NVGs 8
-    [ ], // Binoculars 9
-    [ ], // Map 10
-    [ ], // Compass 11
-    [ ], // Radio slot 12
-    [ ], // Watch slot  13
-    [ ], // Comms slot 14
-    [ ], // WeaponThrow 15
-    [ ], // WeaponPut 16
-    [ ] // InventoryItems 17
-]];
+if (isNull _object || {_items isEqualTo []}) exitWith {};
 
 if (_items isEqualType true) then {
     if (_items) then {
         [_object, _global] call FUNC(removeBox);
-        _object setVariable [QGVAR(virtualItems), nil, _global];
     };
 } else {
+    private _cargo = _object getVariable QGVAR(virtualItems);
 
-    // Make sure all items are in string form
-    _items = _items select {_x isEqualType "" && {_x != ""}};
+    if (isNil "_cargo") exitWith {
+        [_object, _global] call FUNC(removeBox);
+    };
 
+    // Make sure all items are in string form, then convert to config case (non-existent items return "")
+    _items = (_items select {_x isEqualType ""}) apply {_x call EFUNC(common,getConfigName)};
+
+    // Remove any invalid/non-existing items
+    _items = _items - [""];
+
+    private _configItemsFlat = uiNamespace getVariable QGVAR(configItemsFlat);
+
+    // Convert all items to their baseWeapon
+    _items = _items apply {if (_x in _configItemsFlat) then {_x} else {_x call FUNC(baseWeapon)}};
+
+    // Remove items from lists
     {
-        if (_forEachIndex isEqualTo 0) then {
-            _cargo set [_forEachIndex, [(_x select 0) - _items, (_x select 1) - _items, (_x select 2) - _items]];
-        } else {
-            if (_forEachIndex isEqualTo 1) then {
-                _cargo set [_forEachIndex, [(_x select 0) - _items, (_x select 1) - _items, (_x select 2) - _items, (_x select 3) - _items]];
-            } else {
-                _cargo set [_cargo find _x, _x - _items];
+        switch (true) do {
+            // Weapons
+            case (_x in ((_cargo get IDX_VIRT_WEAPONS) get IDX_VIRT_PRIMARY_WEAPONS)): {
+                ((_cargo get IDX_VIRT_WEAPONS) get IDX_VIRT_PRIMARY_WEAPONS) deleteAt _x;
+            };
+            case (_x in ((_cargo get IDX_VIRT_WEAPONS) get IDX_VIRT_HANDGUN_WEAPONS)): {
+                ((_cargo get IDX_VIRT_WEAPONS) get IDX_VIRT_HANDGUN_WEAPONS) deleteAt _x;
+            };
+            case (_x in ((_cargo get IDX_VIRT_WEAPONS) get IDX_VIRT_SECONDARY_WEAPONS)): {
+                ((_cargo get IDX_VIRT_WEAPONS) get IDX_VIRT_SECONDARY_WEAPONS) deleteAt _x;
+            };
+
+            // Weapon attachments
+            case (_x in ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_OPTICS_ATTACHMENTS)): {
+                ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_OPTICS_ATTACHMENTS) deleteAt _x;
+            };
+            case (_x in ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_FLASHLIGHT_ATTACHMENTS)): {
+                ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_FLASHLIGHT_ATTACHMENTS) deleteAt _x;
+            };
+            case (_x in ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_MUZZLE_ATTACHMENTS)): {
+                ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_MUZZLE_ATTACHMENTS) deleteAt _x;
+            };
+            case (_x in ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_BIPOD_ATTACHMENTS)): {
+                ((_cargo get IDX_VIRT_ATTACHMENTS) get IDX_VIRT_BIPOD_ATTACHMENTS) deleteAt _x;
+            };
+
+            // Other
+            default {
+                for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+                    if (_x in (_cargo get _index)) exitWith {
+                        (_cargo get _index) deleteAt _x;
+                    };
+                };
             };
         };
-    } foreach _cargo;
+    } forEach _items;
 
-    private _itemCount = {
-        if (_x isEqualTo (_cargo select 0) || {_x isEqualTo (_cargo select 1)}) then {
-            (_x isNotEqualTo [[],[],[]] || {_x isEqualTo [[],[],[],[]]})
-        } else {
-            (_x isNotEqualTo [])
-        };
-    } count _cargo;
+    private _empty = [
+        [IDX_VIRT_WEAPONS, createHashMapFromArray [[IDX_VIRT_PRIMARY_WEAPONS, createHashMap], [IDX_VIRT_SECONDARY_WEAPONS, createHashMap], [IDX_VIRT_HANDGUN_WEAPONS, createHashMap]]],
+        [IDX_VIRT_ATTACHMENTS, createHashMapFromArray [[IDX_VIRT_OPTICS_ATTACHMENTS, createHashMap], [IDX_VIRT_FLASHLIGHT_ATTACHMENTS, createHashMap], [IDX_VIRT_MUZZLE_ATTACHMENTS, createHashMap], [IDX_VIRT_BIPOD_ATTACHMENTS, createHashMap]]]
+    ];
 
-    if (_itemCount == 0) then {
+    _empty = createHashMapFromArray _empty;
+
+    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
+        _empty set [_index, createHashMap];
+    };
+
+    // If nothing is left, remove arsenal from object
+    if (_cargo isEqualTo _empty) then {
         [_object, _global] call FUNC(removeBox);
     } else {
         _object setVariable [QGVAR(virtualItems), _cargo, _global];
+
+        // If the arsenal is already open, refresh arsenal display
+        if (_global) then {
+            [QGVAR(refresh), _object] call CBA_fnc_globalEvent;
+        } else {
+            [QGVAR(refresh), _object] call CBA_fnc_localEvent;
+        };
     };
 };

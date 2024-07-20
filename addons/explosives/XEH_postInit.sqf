@@ -27,7 +27,7 @@
         };
     };
 }] call CBA_fnc_addEventHandler;
-[QGVAR(startDefuse), FUNC(startDefuse)] call CBA_fnc_addEventHandler;
+[QGVAR(startDefuse), LINKFUNC(startDefuse)] call CBA_fnc_addEventHandler;
 
 //When getting knocked out in medical, trigger deadman explosives:
 //Event is global, only run on server (ref: ace_medical_fnc_setUnconscious)
@@ -50,12 +50,14 @@ if (isServer) then {
     ["ace_unconscious", {
         params ["_unit", "_isUnconscious"];
         if (!_isUnconscious) exitWith {};
-        TRACE_1("Knocked Out, Doing Deadman", _unit);
+        TRACE_1("Knocked Out, Doing Deadman",_unit);
         [_unit] call FUNC(onIncapacitated);
     }] call CBA_fnc_addEventHandler;
 };
 
 if (!hasInterface) exitWith {};
+
+#include "initKeybinds.inc.sqf"
 
 GVAR(PlacedCount) = 0;
 GVAR(Setup) = objNull;

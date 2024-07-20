@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author:Dani (TCVM)
+ * Author: tcvm
  * If the CSW is mounted or in use this will not allow you to dismount the weapon
  *
  * Arguments:
@@ -19,8 +19,5 @@ params ["_staticWeapon"];
 
 // Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
 private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select (_staticWeapon getVariable [QGVAR(assemblyMode), 3]);
-private _notCrewed = (crew _staticWeapon) isEqualTo [];
-private _deadCrew = !(alive (gunner _staticWeapon)); // need to eject body???
 
-_assemblyMode && {_notCrewed || _deadCrew}
-
+_assemblyMode && {alive _staticWeapon} && {((crew _staticWeapon) findIf {alive _x && {!unitIsUAV _x}}) == -1} // return

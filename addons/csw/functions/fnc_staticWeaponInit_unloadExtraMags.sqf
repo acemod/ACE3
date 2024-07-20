@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM), PabstMirror
+ * Author: tcvm, PabstMirror
  * Dumps ammo to container
  *
  * Arguments:
@@ -68,14 +68,38 @@ TRACE_1("Remove all loaded magazines",_magsToRemove);
     };
 } forEach _magsToRemove;
 
-if (_staticWeapon getVariable [QGVAR(secondaryWeaponMagazine), ""] isNotEqualTo "") then {
-    private _secondaryWeaponMagazine = _staticWeapon getVariable QGVAR(secondaryWeaponMagazine);
-    private _turret = allTurrets _staticWeapon param [0, []];
-    private _vehicleMag = [_staticWeapon, _turret, _secondaryWeaponMagazine] call FUNC(reload_getVehicleMagazine);
-    TRACE_3("Re-add previous mag",_secondaryWeaponMagazine,_turret,_vehicleMag);
-    if (!isClass (configFile >> "CfgMagazines" >> _vehicleMag)) exitWith {};
-    _staticWeapon addMagazineTurret [_vehicleMag, _turret, 1];
-    _staticWeapon setVariable [QGVAR(secondaryWeaponMagazine), nil];
+private _secondaryWeaponMagazines = _staticWeapon getVariable [QGVAR(secondaryWeaponMagazines), []];
+
+if (_secondaryWeaponMagazines isNotEqualTo []) then {
+    // Check if the static weapon can take magazines
+    private _turret = (allTurrets _staticWeapon) param [0, []];
+    private _compatibleMagazinesTurret = flatten ((_staticWeapon weaponsTurret _turret) apply {compatibleMagazines _x});
+    private _container = objNull;
+
+    {
+        private _vehicleMag = [_staticWeapon, _turret, _x select 0] call FUNC(reload_getVehicleMagazine);
+        TRACE_3("Re-add previous mag",_x select 0,_turret,_vehicleMag);
+
+        // If the magazine can be added to the static weapon, do it now
+        if (_vehicleMag in _compatibleMagazinesTurret) then {
+            _staticWeapon addMagazineTurret [_vehicleMag, _turret, _x select 1];
+        } else {
+            // Find a suitable container to place items in if necessary
+            if (isNull _container) then {
+                _container = (nearestObjects [_staticWeapon, ["GroundWeaponHolder"], 10]) param [0, objNull];
+
+                // Create ammo storage container
+                if (isNull _container) then {
+                    _container = createVehicle ["GroundWeaponHolder", getPosATL _staticWeapon, [], 0, "NONE"];
+                };
+            };
+
+            // If the mag can't be added to the static weapon, add it to the ground holder
+            _container addMagazineAmmoCargo [_x select 0, 1, _x select 1];
+        };
+    } forEach _secondaryWeaponMagazines;
+
+    _staticWeapon setVariable [QGVAR(secondaryWeaponMagazines), nil, true];
 };
 
 if (_storeExtraMagazines) then {

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Authors: Brett Mayson
  * Checks if a flag can be placed by a unit.

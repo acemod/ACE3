@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Local PerFrameHandler during fast roping.
@@ -20,7 +20,7 @@ _arguments params ["_unit", "", "_rope", "", "_timeToPlayRopeSound"];
 _rope params ["", "", "", "_dummy", "_hook"];
 
 //Wait until the unit is actually outside of the helicopter
-if (vehicle _unit != _unit) exitWith {};
+if (!isNull objectParent _unit) exitWith {};
 
 // dummy lost hook
 if (isNull _hook) exitWith {

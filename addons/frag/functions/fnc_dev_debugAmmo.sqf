@@ -1,5 +1,5 @@
 #define DEBUG_MODE_FULL
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: ACE-Team
  *
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * call ace_frag_fnc_debugAmmo
+ * call ace_frag_fnc_dev_debugAmmo
  *
  * Public: No
  */
@@ -28,7 +28,7 @@ private _allMagsConfigs = configProperties [configFile >> "CfgMagazines", "isCla
 private _processedCfgAmmos = [];
 
 {
-    private _ammo = toLower getText (_x >> "ammo");
+    private _ammo = toLowerANSI getText (_x >> "ammo");
     if (_ammo != "" && {!(_ammo in _processedCfgAmmos)}) then {
         _processedCfgAmmos pushBack _ammo;
 

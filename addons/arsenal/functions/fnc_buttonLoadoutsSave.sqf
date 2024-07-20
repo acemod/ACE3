@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe
+ * Author: Alganthe, johnb43
  * Save selected loadout.
  *
  * Arguments:
@@ -21,280 +21,161 @@ if !(ctrlEnabled _control) exitWith {};
 private _editBoxCtrl = _display displayCtrl IDC_textEditBox;
 private _editBoxContent = ctrlText _editBoxCtrl;
 
+// If no name given, throw error
 if (_editBoxContent == "") exitWith {
-    [(findDisplay IDD_ace_arsenal), localize LSTRING(saveEmptyNameBox)] call FUNC(message);
+    [findDisplay IDD_ace_arsenal, LLSTRING(saveEmptyNameBox)] call FUNC(message);
 };
 
-private _data = [+(profileNamespace getVariable [QGVAR(saved_loadouts),[]]), +(GVAR(defaultLoadoutsList))] select (GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts && {is3DEN});
-private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
-private _cursSelRow = lnbCurSelRow _contentPanelCtrl;
-
-private _loadoutName = _contentPanelCtrl lnbText [_cursSelRow, 1];
-private _curSelLoadout = (_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) select 0;
-private _extendedLoadout = GVAR(center) call FUNC(getLoadout);
-private _loadout = _extendedLoadout select 0;
-
-private _loadoutIndex = _data findIf {(_x select 0) == _editBoxContent};
-private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable QGVAR(sharedLoadoutsVars);
+// Get shared loadouts
+private _sharedLoadoutsVars = GVAR(sharedLoadoutsNamespace) getVariable [QGVAR(sharedLoadoutsVars), []];
 
 // Make sure the loadout isn't yours (public tab) or being shared (my loadouts tab)
-private _similarSharedLoadout = (profileName + _editBoxContent) in _sharedLoadoutsVars;
-if ((_contentPanelCtrl lnbText [_cursSelRow, 0]) == profileName) exitWith {
-    [(findDisplay IDD_ace_arsenal), localize LSTRING(saveAuthorError)] call FUNC(message);
+if ((profileName + _editBoxContent) in _sharedLoadoutsVars) exitWith {
+    [findDisplay IDD_ace_arsenal, LLSTRING(saveSharedError)] call FUNC(message);
 };
 
-if (_similarSharedLoadout) exitWith {
-    [(findDisplay IDD_ace_arsenal), localize LSTRING(saveSharedError)] call FUNC(message);
+private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
+private _curSelRow = lnbCurSelRow _contentPanelCtrl;
+
+if ((_contentPanelCtrl lnbText [_curSelRow, 0]) == profileName) exitWith {
+    [findDisplay IDD_ace_arsenal, LLSTRING(saveAuthorError)] call FUNC(message);
 };
 
-switch (GVAR(currentLoadoutsTab)) do {
-    case IDC_buttonMyLoadouts:{
+// Get currently selected loadout name & loadout
+private _loadoutName = _contentPanelCtrl lnbText [_curSelRow, 1];
+private _curSelLoadout = (_contentPanelCtrl getVariable (_loadoutName + str GVAR(currentLoadoutsTab))) select 0;
 
-        for "_dataIndex" from 0 to 10 do {
-            switch (_dataIndex) do {
+// Get unit's current loadout
+private _extendedLoadout = GVAR(center) call CBA_fnc_getLoadout;
+_extendedLoadout params ["_loadout"];
 
-                case 0;
-                case 1;
-                case 2;
-                case 8: {
-                    if (count (_loadout select _dataIndex) > 0) then {
+private _loadouts = [profileNamespace getVariable [QGVAR(saved_loadouts), []], GVAR(defaultLoadoutsList)] select ((call FUNC(canEditDefaultLoadout)) && {GVAR(currentLoadoutsTab) == IDC_buttonDefaultLoadouts});
+private _loadoutIndex = _loadouts findIf {(_x select 0) == _editBoxContent};
 
-                        private _weapon = (_loadout select _dataIndex) select 0;
-                        if (_weapon != "") then {
-
-                            private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
-                            if (_weapon != _baseWeapon) then {
-                                (_loadout select _dataIndex) set [0, _baseWeapon];
-                            };
-                        };
-                    };
-                };
-
-                case 3;
-                case 4;
-                case 5: {
-                    if (count (_loadout select _dataIndex) > 0) then {
-                        private _containerContents = (_loadout select _dataIndex) select 1;
-
-                        if (count _containerContents > 0) then {
-
-                            {
-                                if (count _x == 2) then {
-
-                                        if ((_x select 0) isEqualType "") then {
-
-                                            private _item = (_x select 0);
-                                            if (_item != "") then {
-
-                                                private _uniqueBaseCfgText = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
-                                                if (_uniqueBaseCfgText != "") then {
-
-                                                    _x set [0, _uniqueBaseCfgText];
-                                                };
-                                            };
-                                        } else {
-                                            private _weapon = (_x select 0) select 0;
-                                            if (_weapon != "") then {
-
-                                                private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
-                                                if (_weapon != _baseWeapon) then {
-                                                    (_x select 0)set [0, _baseWeapon];
-                                                };
-                                            };
-                                        };
-                                    };
-                            } foreach _containerContents;
-                        };
-                    };
-                };
-
-                case 9: {
-                    for "_subIndex" from 0 to 4 do {
-                        private _item = (_loadout select _dataIndex) select _subIndex;
-
-                        if (_item != "") then {
-
-                            private _uniqueBaseCfgText = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
-                            if (_uniqueBaseCfgText != "") then {
-
-                                (_loadout select _dataIndex) set [_subIndex, _uniqueBaseCfgText];
-                            };
-                        };
-                    };
-                };
-            };
-        };
-
-        if (GVAR(shiftState) && {is3DEN} && {_loadoutName isNotEqualTo ""} && {_cursSelRow != -1} && {_loadoutIndex isNotEqualTo -1}) exitwith {
+// Return what loadout was saved
+private _savedLoadout = switch (GVAR(currentLoadoutsTab)) do {
+    // Local loadouts tab
+    case IDC_buttonMyLoadouts: {
+        // If saved to default loadout
+        if (GVAR(shiftState) && FUNC(canEditDefaultLoadout) && {_loadoutName != ""} && {_curSelRow != -1} && {_loadoutIndex != -1}) then {
             private _defaultLoadoutsSearch = GVAR(defaultLoadoutsList) findIf {(_x select 0) == _loadoutName};
-            if (_defaultLoadoutsSearch isEqualto -1) then {
-                GVAR(defaultLoadoutsList) pushBack [_loadoutName, _curSelLoadout];
-            } else {
-                GVAR(defaultLoadoutsList) set [_defaultLoadoutsSearch , [ _loadoutName, _curSelLoadout]];
+
+            [_loadoutName, _curSelLoadout, !is3DEN] call FUNC(addDefaultLoadout);
+
+            if (_defaultLoadoutsSearch == -1) then {
+                _loadoutIndex = (count GVAR(defaultLoadoutsList)) - 1;
             };
-            set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
-        };
 
-        if (_loadoutIndex isEqualto -1) then {
-            _data pushBack [_editBoxContent, _extendedLoadout];
+            _curSelLoadout
         } else {
-            _data set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _extendedLoadout]];
-        };
+            // Replace unique items with their bases and replace weapons with their base weapons
+            _loadout = [_loadout] call FUNC(replaceUniqueItemsLoadout);
 
-        // Delete "old" loadout row
-        for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
-            if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbDeleteRow _i};
-        };
+            private _data = profileNamespace getVariable [QGVAR(saved_loadouts), []];
 
-        private _newRow = _contentPanelCtrl lnbAddRow ["",_editBoxContent];
+            // Add or overwrite loadout in loadout storage
+            if (_loadoutIndex == -1) then {
+                _loadoutIndex = _data pushBack [_editBoxContent, _extendedLoadout];
+            } else {
+                _data set [_loadoutIndex, [_editBoxContent, _extendedLoadout]];
+            };
 
-        ADD_LOADOUTS_LIST_PICTURES
-
-        _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_extendedLoadout] call FUNC(verifyLoadout)];
-
-        _contentPanelCtrl lnbSort [1, false];
-
-        // Select newly saved loadout
-        for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
-            if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbSetCurSelRow _i};
-        };
-
-        profileNamespace setVariable [QGVAR(saved_loadouts), _data];
-    };
-
-    case IDC_buttonDefaultLoadouts:{
-
-        if (is3DEN) then {
-
-            private _loadoutIndex = _data findIf {(_x select 0) == _editBoxContent};
-
-            for "_dataIndex" from 0 to 10 do {
-                switch (_dataIndex) do {
-
-                    case 0;
-                    case 1;
-                    case 2;
-                    case 8: {
-                        if (count (_loadout select _dataIndex) > 0) then {
-
-                            private _weapon = (_loadout select _dataIndex) select 0;
-                            if (_weapon != "") then {
-
-                                private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
-                                if (_weapon != _baseWeapon) then {
-                                    (_loadout select _dataIndex) set [0, _baseWeapon];
-                                };
-                            };
-                        };
-                    };
-
-                    case 3;
-                    case 4;
-                    case 5: {
-                        if (count (_loadout select _dataIndex) > 0) then {
-                            private _containerContents = (_loadout select _dataIndex) select 1;
-
-                            if (count _containerContents > 0) then {
-
-                                {
-                                    if (count _x == 2) then {
-
-                                        if ((_x select 0) isEqualType "") then {
-
-                                            private _item = (_x select 0);
-                                            if (_item != "") then {
-
-                                                private _uniqueBaseCfgText = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
-                                                if (_uniqueBaseCfgText != "") then {
-
-                                                    _x set [0, _uniqueBaseCfgText];
-                                                };
-                                            };
-                                        } else {
-                                            private _weapon = (_x select 0) select 0;
-                                            if (_weapon != "") then {
-
-                                                private _baseWeapon = _weapon call BIS_fnc_baseWeapon;
-                                                if (_weapon != _baseWeapon) then {
-                                                    (_x select 0)set [0, _baseWeapon];
-                                                };
-                                            };
-                                        };
-                                    };
-                                } foreach _containerContents;
-                            };
-                        };
-                    };
-
-                    case 9: {
-                        for "_subIndex" from 0 to 4 do {
-                            private _item = (_loadout select _dataIndex) select _subIndex;
-
-                            if (_item != "") then {
-
-                                private _uniqueBaseCfgText = getText (configFile >> "CfgWeapons" >> _item >> "ace_arsenal_uniqueBase");
-                                if (_uniqueBaseCfgText != "") then {
-
-                                    (_loadout select _dataIndex) set [_subIndex, _uniqueBaseCfgText];
-                                };
-                            };
-                        };
-                    };
+            // Refresh loadout list; Delete previous loadout row
+            for "_lbIndex" from 0 to (lnbSize _contentPanelCtrl select 0) - 1 do {
+                if ((_contentPanelCtrl lnbText [_lbIndex, 1]) == _editBoxContent) exitWith {
+                    _contentPanelCtrl lnbDeleteRow _lbIndex;
                 };
             };
 
-            if (_loadoutIndex == -1) then {
-                GVAR(defaultLoadoutsList) pushBack [_editBoxContent, _extendedLoadout];
-            } else {
-                GVAR(defaultLoadoutsList) set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _extendedLoadout]];
-            };
-
-            for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
-                if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbDeleteRow _i};
-            };
-
-            private _newRow = _contentPanelCtrl lnbAddRow ["",_editBoxContent];
+            private _newRow = _contentPanelCtrl lnbAddRow ["", _editBoxContent];
+            private _cfgWeapons = configFile >> "CfgWeapons";
 
             ADD_LOADOUTS_LIST_PICTURES
 
             _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_extendedLoadout] call FUNC(verifyLoadout)];
 
+            // Sort loadouts alphabetically
             _contentPanelCtrl lnbSort [1, false];
 
             // Select newly saved loadout
-            for '_i' from 0 to (((lnbsize _contentPanelCtrl) select 0) - 1) do {
-                if ((_contentPanelCtrl lnbText [_i, 1]) == _editBoxContent) exitwith {_contentPanelCtrl lnbSetCurSelRow _i};
+            for "_lbIndex" from 0 to (lnbSize _contentPanelCtrl select 0) - 1 do {
+                if ((_contentPanelCtrl lnbText [_lbIndex, 1]) == _editBoxContent) exitWith {
+                    _contentPanelCtrl lnbSetCurSelRow _lbIndex;
+                };
             };
 
-            set3DENMissionAttributes [[QGVAR(DummyCategory), QGVAR(DefaultLoadoutsListAttribute), GVAR(defaultLoadoutsList)]];
-        } else {
+            _extendedLoadout
+        };
+    };
+    // Default loadouts tab
+    case IDC_buttonDefaultLoadouts: {
+        if (call FUNC(canEditDefaultLoadout)) then {
 
+            [_editBoxContent, _extendedLoadout, !is3DEN] call FUNC(addDefaultLoadout);
+
+            // Get loadout index
             if (_loadoutIndex == -1) then {
-                _data pushBack [_editBoxContent, _curSelLoadout];
+                _loadoutIndex = (count GVAR(defaultLoadoutsList)) - 1;
+            };
+
+            // Refresh loadout list; Delete previous loadout row
+            for "_lbIndex" from 0 to (lnbSize _contentPanelCtrl select 0) - 1 do {
+                if ((_contentPanelCtrl lnbText [_lbIndex, 1]) == _editBoxContent) exitWith {
+                    _contentPanelCtrl lnbDeleteRow _lbIndex;
+                };
+            };
+
+            private _newRow = _contentPanelCtrl lnbAddRow ["", _editBoxContent];
+            private _cfgWeapons = configFile >> "CfgWeapons";
+
+            ADD_LOADOUTS_LIST_PICTURES
+
+            _contentPanelCtrl setVariable [_editBoxContent + str GVAR(currentLoadoutsTab), [_extendedLoadout] call FUNC(verifyLoadout)];
+
+            // Sort loadouts alphabetically
+            _contentPanelCtrl lnbSort [1, false];
+
+            // Select newly saved loadout
+            for "_lbIndex" from 0 to (lnbSize _contentPanelCtrl select 0) - 1 do {
+                if ((_contentPanelCtrl lnbText [_lbIndex, 1]) == _editBoxContent) exitWith {
+                    _contentPanelCtrl lnbSetCurSelRow _lbIndex;
+                };
+            };
+
+            _extendedLoadout
+        } else {
+            private _data = profileNamespace getVariable [QGVAR(saved_loadouts), []];
+
+            // Add or overwrite loadout in loadout storage
+            if (_loadoutIndex == -1) then {
+                _loadoutIndex = _data pushBack [_editBoxContent, _curSelLoadout];
             } else {
-                _data set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _curSelLoadout]];
+                _data set [_loadoutIndex, [_editBoxContent, _curSelLoadout]];
                 _contentPanelCtrl setVariable [_editBoxContent + str IDC_buttonMyLoadouts, [_curSelLoadout] call FUNC(verifyLoadout)];
             };
 
-            profileNamespace setVariable [QGVAR(saved_loadouts), _data];
+            _curSelLoadout
         };
     };
+    // Shared loadouts tab
+    case IDC_buttonSharedLoadouts: {
+        _loadout = (GVAR(sharedLoadoutsNamespace) getVariable ((_contentPanelCtrl lnbText [_curSelRow, 0]) + (_contentPanelCtrl lnbText [_curSelRow, 1]))) select 2;
 
-    case IDC_buttonSharedLoadouts :{
+        private _data = profileNamespace getVariable [QGVAR(saved_loadouts), []];
 
-        _loadout = (GVAR(sharedLoadoutsNamespace) getVariable ((_contentPanelCtrl lnbText [_cursSelRow, 0]) + (_contentPanelCtrl lnbText [_cursSelRow, 1]))) select 2;
-
+        // Add or overwrite loadout in loadout storage
         if (_loadoutIndex == -1) then {
-            _data pushBack [_editBoxContent, _loadout];
+            _loadoutIndex = _data pushBack [_editBoxContent, _loadout];
         } else {
-            _data set [_loadoutIndex, [[_editBoxContent, _loadoutName] select (_loadoutName isEqualTo _editBoxContent), _loadout]];
+            _data set [_loadoutIndex, [_editBoxContent, _loadout]];
             _contentPanelCtrl setVariable [_editBoxContent + str IDC_buttonMyLoadouts, [_loadout] call FUNC(verifyLoadout)];
         };
 
-        profileNamespace setVariable [QGVAR(saved_loadouts), _data];
+        _loadout
     };
 };
-[(findDisplay IDD_ace_arsenal), [localize LSTRING(loadoutSaved), _editBoxContent] joinString " "] call FUNC(message);
-private _savedLoadout = (_data select {_x select 0 == _editBoxContent}) select 0;
-[QGVAR(onLoadoutSave), [_data find _savedLoadout, _savedLoadout#0]] call CBA_fnc_localEvent;
-[QGVAR(onLoadoutSaveExtended), [_data find _savedLoadout, _savedLoadout]] call CBA_fnc_localEvent;
+
+[findDisplay IDD_ace_arsenal, [LLSTRING(loadoutSaved), _editBoxContent] joinString " "] call FUNC(message);
+
+[QGVAR(onLoadoutSave), [_loadoutIndex, _savedLoadout select 0]] call CBA_fnc_localEvent;
+[QGVAR(onLoadoutSaveExtended), [_loadoutIndex, _savedLoadout]] call CBA_fnc_localEvent;

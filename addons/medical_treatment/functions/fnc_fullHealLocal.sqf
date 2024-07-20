@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Local callback for fully healing a patient.
@@ -25,6 +25,9 @@ if ((["ace_fire"] call EFUNC(common,isModLoaded)) && {[_patient] call EFUNC(fire
     _patient setVariable [QEGVAR(fire,intensity), 0, true];
 };
 
+// Allow mods to heal
+[QGVAR(fullHealLocalMod), [_patient]] call CBA_fnc_localEvent;
+
 private _state = GET_SM_STATE(_patient);
 TRACE_1("start",_state);
 
@@ -50,9 +53,9 @@ _patient setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
 _patient setVariable [QGVAR(occludedMedications), nil, true];
 
 // Wounds and Injuries
-_patient setVariable [VAR_OPEN_WOUNDS, [], true];
-_patient setVariable [VAR_BANDAGED_WOUNDS, [], true];
-_patient setVariable [VAR_STITCHED_WOUNDS, [], true];
+_patient setVariable [VAR_OPEN_WOUNDS, createHashMap, true];
+_patient setVariable [VAR_BANDAGED_WOUNDS, createHashMap, true];
+_patient setVariable [VAR_STITCHED_WOUNDS, createHashMap, true];
 _patient setVariable [QEGVAR(medical,isLimping), false, true];
 _patient setVariable [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES, true];
 
@@ -63,6 +66,8 @@ _patient setVariable [VAR_FRACTURES, DEFAULT_FRACTURE_VALUES, true];
 _patient setVariable [VAR_HEART_RATE, DEFAULT_HEART_RATE, true];
 _patient setVariable [VAR_BLOOD_PRESS, [80, 120], true];
 _patient setVariable [VAR_PERIPH_RES, DEFAULT_PERIPH_RES, true];
+_patient setVariable [VAR_SPO2, DEFAULT_SPO2, true];
+_patient setVariable [VAR_OXYGEN_DEMAND, 0, true];
 
 // IVs
 _patient setVariable [QEGVAR(medical,ivBags), nil, true];
@@ -72,12 +77,12 @@ _patient setVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0], true];
 
 // wakeup needs to be done after achieving stable vitals, but before manually reseting unconc var
 if IS_UNCONSCIOUS(_patient) then {
-    if (!([_patient] call EFUNC(medical_status,hasStableVitals))) then { ERROR_2("fullheal [unit %1][state %2] did not restore stable vitals",_patient,_state); };
+    if !([_patient] call EFUNC(medical_status,hasStableVitals)) then {ERROR_2("fullheal [unit %1][state %2] did not restore stable vitals",_patient,_state);};
     TRACE_1("Waking up",_patient);
     [QEGVAR(medical,WakeUp), _patient] call CBA_fnc_localEvent;
     _state = GET_SM_STATE(_patient);
     TRACE_1("after WakeUp",_state);
-    if IS_UNCONSCIOUS(_patient) then { ERROR_2("fullheal [unit %1][state %2] failed to wake up patient",_patient,_state); };
+    if IS_UNCONSCIOUS(_patient) then {ERROR_2("fullheal [unit %1][state %2] failed to wake up patient",_patient,_state);};
 };
 
 // Generic medical admin
