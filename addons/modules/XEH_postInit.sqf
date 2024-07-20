@@ -12,7 +12,7 @@
             _logic hideObject true;
 
             if (_logic getVariable [QGVAR(initalized), false]) exitWith {};
-            private _config = (configFile >> "CfgVehicles" >> _logicType);
+            private _config = configOf _logic;
             if !(isClass _config) exitWith {};
 
             private _isGlobal = getNumber (_config >> "isGlobal") > 0;
@@ -26,7 +26,7 @@
                 _function = missionNamespace getVariable _function;
             };
             if (_isSingular && {_logicType in _uniqueModulesHandled}) then { //ToDo: should this be an exit?
-                WARNING_1("Module [%1] - More than 1 singular module placed", _logicType);
+                WARNING_1("Module [%1] - More than 1 singular module placed",_logicType);
             };
             if (_isSingular) then {_uniqueModulesHandled pushBack _logicType;};
 

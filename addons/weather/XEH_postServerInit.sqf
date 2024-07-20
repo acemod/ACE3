@@ -9,8 +9,8 @@
 
     if (GVAR(windSimulation)) then {
         call FUNC(initWind);
-        [FUNC(updateWind), 1] call CBA_fnc_addPerFrameHandler;
+        [LINKFUNC(updateWind), 1] call CBA_fnc_addPerFrameHandler;
     };
-    [FUNC(updateWeather), GVAR(updateInterval)] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(updateWeather), GVAR(updateInterval)] call CBA_fnc_addPerFrameHandler;
 
 }] call CBA_fnc_addEventHandler;

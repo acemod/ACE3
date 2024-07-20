@@ -202,7 +202,7 @@ class CfgWeapons {
     // - Stoner LMG -----------------------------------------------------------
     class LMG_Mk200_F: Rifle_Long_Base_F {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 100;
+            mass = 114;
         };
     };
 

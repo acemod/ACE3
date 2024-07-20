@@ -3,13 +3,16 @@ class CfgMovesBasic {
         ACE_dragWithPistol = "ace_dragging";
         ACE_dragWithRifle = "AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_2";
     };
-    
+
     class Actions {
         class MoveWithInjuredManDragger;
         class MoveWithInjuredManDraggerRfl: MoveWithInjuredManDragger {
+            LimpB = "ace_dragging_rifle_limpB";
+            LimpLB = "ace_dragging_rifle_limpB";
+            LimpRB = "ace_dragging_rifle_limpB";
             Up = "amovpercmstpsraswrfldnon";
         };
-        
+
         class MoveWithInjuredManDraggerPst;
         class ACE_MoveWithInjuredManDraggerPst: MoveWithInjuredManDraggerPst {
             Default = "ace_dragging_static";
@@ -19,6 +22,9 @@ class CfgMovesBasic {
             grabDrag = "ace_dragging_static";
             grabCarry = "Helper_SwitchToCarrynon_pst";
             HandGunOn = "ace_dragging_static";
+            LimpB = "ace_dragging_limpB";
+            LimpLB = "ace_dragging_limpB";
+            LimpRB = "ace_dragging_limpB";
             PlayerSlowB = "ace_dragging";
             PlayerSlowLB = "ace_dragging";
             PlayerSlowRB = "ace_dragging";

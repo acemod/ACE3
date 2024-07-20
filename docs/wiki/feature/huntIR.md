@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: HuntIR
+component: huntir
 description: High-altitude Unit Navigated Tactical Imaging Round
 group: feature
 category: equipment
@@ -43,7 +44,3 @@ Shortcut | Action
 <kbd>↑</kbd> | Raise camera
 <kbd>↓</kbd> | Lower camera
 <kbd>R</kbd> | Reset camera
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="huntir" %}

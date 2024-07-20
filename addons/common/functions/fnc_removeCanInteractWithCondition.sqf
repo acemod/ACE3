@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Remove a condition that gets checked by ace_common_fnc_canInteractWith.
@@ -17,7 +17,7 @@
 
 params ["_conditionName"];
 
-_conditionName = toLower _conditionName;
+_conditionName = toLowerANSI _conditionName;
 
 private _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
 

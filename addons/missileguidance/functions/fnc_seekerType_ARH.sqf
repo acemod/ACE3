@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: tcvm
  * Active Radar Homing seeker
  *
  * Arguments:
@@ -30,7 +30,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
         _seekerStateParams set [6, true];
         TRACE_1("Missile Pitbull",_seekerStateParams);
     };
-    
+
     // Internal radar homing
     // For performance reasons only poll for target every so often instead of each frame
     if ((_lastTargetPollTime + ACTIVE_RADAR_POLL_FREQUENCY) - CBA_missionTime < 0) then {
@@ -72,7 +72,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
         };
         _nearestObjects = _nearestObjects select { !isNull _x };
         // Select closest object to the expected position to be the current radar target
-        if ((count _nearestObjects) <= 0) exitWith {
+        if (_nearestObjects isEqualTo []) exitWith {
             _projectile setMissileTarget objNull;
             _searchPos
         };
@@ -83,7 +83,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
                 _target = _x;
             };
         } forEach _nearestObjects;
-        
+
         _expectedTargetPos = _searchPos;
     };
 
@@ -117,4 +117,3 @@ if !(isNull _target) then {
 
 _launchParams set [0, _target];
 _expectedTargetPos
-

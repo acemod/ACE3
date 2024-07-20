@@ -14,7 +14,7 @@ class ctrlStaticTitle;
 class GVAR(groupNameDisplay) {
     idd = -1;
     enableSimulation = 1;
-    
+
     class ControlsBackground {
         class Title: ctrlStaticTitle {
             x = QUOTE(safeZoneX + (safeZoneW / 2) - TOTAL_W/2);

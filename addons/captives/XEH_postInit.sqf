@@ -24,15 +24,15 @@ if (isServer) then {
     }];
 };
 
-["unit", FUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
-[QGVAR(moveInCaptive), FUNC(vehicleCaptiveMoveIn)] call CBA_fnc_addEventHandler;
-[QGVAR(moveOutCaptive), FUNC(vehicleCaptiveMoveOut)] call CBA_fnc_addEventHandler;
+["unit", LINKFUNC(handlePlayerChanged)] call CBA_fnc_addPlayerEventHandler;
+[QGVAR(moveInCaptive), LINKFUNC(vehicleCaptiveMoveIn)] call CBA_fnc_addEventHandler;
+[QGVAR(moveOutCaptive), LINKFUNC(vehicleCaptiveMoveOut)] call CBA_fnc_addEventHandler;
 
-[QGVAR(setHandcuffed), FUNC(setHandcuffed)] call CBA_fnc_addEventHandler;
-[QGVAR(setSurrendered), FUNC(setSurrendered)] call CBA_fnc_addEventHandler;
+[QGVAR(setHandcuffed), LINKFUNC(setHandcuffed)] call CBA_fnc_addEventHandler;
+[QGVAR(setSurrendered), LINKFUNC(setSurrendered)] call CBA_fnc_addEventHandler;
 
 //Medical Integration Events
-["ace_unconscious", FUNC(handleOnUnconscious)] call CBA_fnc_addEventHandler;
+["ace_unconscious", LINKFUNC(handleOnUnconscious)] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
 
@@ -41,7 +41,7 @@ if (!hasInterface) exitWith {};
     private _target = cursorObject;
     if !([ACE_player, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
     if !(_target isKindOf "CAManBase") exitWith {false};
-    if ((_target distance ACE_player) > getNumber (configFile >> "CfgVehicles" >> "CAManBase" >> "ACE_Actions" >> "ACE_ApplyHandcuffs" >> "distance")) exitWith {false};
+    if ((_target distance ACE_player) > getNumber (configOf ACE_player >> "ACE_Actions" >> "ACE_ApplyHandcuffs" >> "distance")) exitWith {false};
 
     if ([ACE_player, _target] call FUNC(canApplyHandcuffs)) exitWith {
         [ACE_player, _target] call FUNC(doApplyHandcuffs);

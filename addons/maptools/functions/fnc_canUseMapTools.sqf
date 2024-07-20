@@ -1,29 +1,23 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
- * canUseMapTools
+ * Returns if the map tools can be used.
  *
  * Arguments:
  * None
  *
  * Return Value:
- * Boolean <BOOL>
+ * Map tools can be used <BOOL>
  *
  * Example:
- * call ACE_maptools_fnc_canUseMapTools
+ * call ace_maptools_fnc_canUseMapTools
  *
  * Public: No
  */
 
 visibleMap &&
 {alive ACE_player} &&
-{
-    scopeName "hasMap";
-    {
-        if (_x isKindOf ["ItemMap", configFile >> "CfgWeapons"]) exitWith {true breakOut "hasMap"};
-    } forEach (assignedItems ACE_player);
-    false
-} &&
-{"ACE_MapTools" in (ACE_player call EFUNC(common,uniqueItems))} &&
 {!GVAR(mapTool_isDragging)} &&
-{!GVAR(mapTool_isRotating)}
+{!GVAR(mapTool_isRotating)} &&
+{ACE_player getSlotItemName TYPE_MAP != ""} &&
+{[ACE_player, "ACE_MapTools"] call EFUNC(common,hasItem)}

@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Sets the spectator camera attributes as desired. Local effect.
  * All values are optional and default to no change.
  *

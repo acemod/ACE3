@@ -246,7 +246,7 @@ class CfgWeapons {
         EGVAR(javelin,enabled) = 1; // needs to be explicitly enabled
         magazineReloadTime = 0.5;
     };
-    class GVAR(Titan_AA_Static) : missiles_titan_static {
+    class GVAR(Titan_AA_Static): missiles_titan_static {
         magazineReloadTime = 0.5;
     };
 

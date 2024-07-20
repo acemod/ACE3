@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: TCVM
+ * Author: tcvm
  * Handles removing ammo from a turret
  * Called from a global event but only runs where turret is local
  *
@@ -9,7 +9,7 @@
  * 1: Turret Path <ARRAY>
  * 2: Magainze Unit Can Carry <STRING>
  * 3: Magazine To Remove From Static <STRING>
- * 4: Unit to unload to <OBJECT>
+ * 4: Unit or container to unload to <OBJECT>
  *
  * Return Value:
  * None
@@ -20,11 +20,11 @@
  * Public: No
  */
 
-params ["_vehicle", "_turretPath", "_carryMag", "_vehMag", "_unit"];
-TRACE_5("removeTurretMag EH",_vehicle,_turretPath,_carryMag,_vehMag,_unit);
+params ["_vehicle", "_turretPath", "_carryMag", "_vehMag", "_unloadTo"];
+TRACE_5("removeTurretMag EH",_vehicle,_turretPath,_carryMag,_vehMag,_unloadTo);
 
-TRACE_3("",local _vehicle, _vehicle turretLocal _turretPath,local _unit);
-if (!(_vehicle turretLocal _turretPath)) exitWith {};
+TRACE_3("",local _vehicle,_vehicle turretLocal _turretPath,local _unloadTo);
+if !(_vehicle turretLocal _turretPath) exitWith {};
 
 private _magsInWeapon = [];  // Check how much ammo it has now:
 {
@@ -55,10 +55,10 @@ if ((_magsInWeapon isEqualTo []) && {_ammoInFirstMag > _ammoRemoved}) then {
 
     // setMagazineTurretAmmo is broken on split locality, use setAmmo for now
     private _weapon = (_vehicle weaponsTurret _turretPath) param [0, ""];
-    TRACE_3("setAmmo",_vehicle,_weapon, _ammoLeft);
+    TRACE_3("setAmmo",_vehicle,_weapon,_ammoLeft);
     _vehicle setAmmo [_weapon, _ammoLeft];
     private _currentAmmo = _vehicle magazineTurretAmmo [_vehMag, _turretPath];
-    if ((_weapon == "") || {_currentAmmo != _ammoLeft}) then { ERROR_1("failed to setAmmo - %1", _this); };
+    if ((_weapon == "") || {_currentAmmo != _ammoLeft}) then { ERROR_1("failed to setAmmo - %1",_this); };
 
 
 } else {
@@ -75,5 +75,5 @@ if ((_magsInWeapon isEqualTo []) && {_ammoInFirstMag > _ammoRemoved}) then {
     } forEach _magsInWeapon;
 };
 
-TRACE_3("Returning ammo",_unit,_carryMag,_ammoRemoved);
-[QGVAR(returnAmmo), [_unit, _carryMag, _ammoRemoved], _unit] call CBA_fnc_targetEvent;
+TRACE_3("Returning ammo",_unloadTo,_carryMag,_ammoRemoved);
+[QGVAR(returnAmmo), [_unloadTo, _carryMag, _ammoRemoved], _unloadTo] call CBA_fnc_targetEvent;

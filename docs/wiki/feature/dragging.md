@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Dragging
+component: dragging
 description: Adds the option to drag and carry units and objects.
 group: feature
 category: interaction
@@ -23,7 +24,3 @@ This adds the option to drag or carry units or objects.
 - Interact with the unit or object <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
 - Select `Drag` or `Carry`.
 - To release, use the mouse wheel and select `Release` or use Self Interaction <kbd>Ctrl</kbd>+<kbd>⊞&nbsp;Win</kbd> and select `Release`.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="dragging" %}

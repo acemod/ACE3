@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: <N/A>
  * Draws names and icons.
@@ -138,8 +138,7 @@ if (_enabledTagsNearby) then {
                 [ACE_player, _target, _alpha, _distance * 0.026, _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
             };
         };
-        nil
-    } count _targets;
+    } forEach _targets;
 };
 
 END_COUNTER(GVAR(onDraw3d));

@@ -15,7 +15,6 @@ GVAR(showNamesTime) = -10;
 
     // Statement
     GVAR(showNamesTime) = CBA_missionTime;
-    // if (call FUNC(canShow)) then{ call FUNC(doShow); }; // This code doesn't work (canShow has a nil / has never worked??)
     // Return false so it doesn't block other actions
     false
 },
@@ -51,7 +50,7 @@ if (missionNamespace getVariable [QGVAR(useFactionIcons), true]) then {
     {
         if (isArray (_x >> QGVAR(rankIcons))) then {
             private _faction = configName _x;
-            if (!isNil {GVAR(factionRanks) getVariable _faction}) exitWith {}; // don't overwrite if already set
+            if (_faction in GVAR(factionRanks)) exitWith {}; // don't overwrite if already set
             private _icons = getArray (_x >> QGVAR(rankIcons));
             [_faction, _icons] call FUNC(setFactionRankIcons);
         };

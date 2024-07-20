@@ -1,2 +1,0 @@
-PREP(disableCookoff);
-PREP(handlePunjiTrapDamage);

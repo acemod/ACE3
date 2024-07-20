@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Function for sync module.  Assigns keys for all synced vehicles to any players that are synced.
@@ -22,7 +22,7 @@ if (!isServer) exitWith {};
 params ["_logic", "_syncedObjects", "_activated"];
 TRACE_3("params",_logic,_syncedObjects,_activated);
 
-if !(_activated) exitWith {WARNING("Vehicle Lock Sync Module - placed but not active");};
+if (!_activated) exitWith {WARNING("Vehicle Lock Sync Module - placed but not active");};
 
 [{
     params ["_syncedObjects"];

@@ -12,6 +12,9 @@ class CfgMagazines {
     class 150Rnd_93x64_Mag: CA_Magazine { // Mag for HK121 (MMG_01) [DLC Opfor Heavy Gunner]
         ACE_isBelt = 1;
     };
+    class 10Rnd_93x64_DMR_05_Mag: 150Rnd_93x64_Mag { // Mag for Cyrus (DMR_05) [DLC Opfor Sharpshooter]
+        ACE_isBelt = 0;
+    };
     class 130Rnd_338_Mag: CA_Magazine { // Mag for LWMMG (MMG_02) [DLC Blufor Heavy Gunner]
         ACE_isBelt = 1;
     };

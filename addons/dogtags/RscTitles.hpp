@@ -13,23 +13,23 @@ class RscTitles {
         class controls {
             class background: RscPicture {
                 idc = 1000;
-                x = profileNamespace getVariable ['TRIPLES(IGUI,GVAR(grid),X)', (safeZoneX + safeZoneW) - 12.9 * GUI_GRID_W];
-                y = profileNamespace getVariable ['TRIPLES(IGUI,GVAR(grid),Y)', safeZoneY + 0.175 * safeZoneH];
-                w = 8 * GUI_GRID_W;
-                h = 8 * GUI_GRID_H;
+                x = QUOTE(profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(grid),X)',(safeZoneX + safeZoneW) - 12.9 * GUI_GRID_W)]);
+                y = QUOTE(profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(grid),Y)',safeZoneY + 0.175 * safeZoneH)]);
+                w = QUOTE(8 * GUI_GRID_W);
+                h = QUOTE(8 * GUI_GRID_H);
                 text = QPATHTOF(data\dogtagSingle.paa);
                 colorText[] = {1, 1, 1, 1};
             };
             class nickname: RscStructuredText {
                 idc = 1001;
                 text = "";
-                sizeEx = GUI_GRID_H;
+                sizeEx = QUOTE(GUI_GRID_H);
                 colorText[] = {1, 1, 1, 1};
                 colorBackground[] = {0, 0, 0, 0};
-                x = 1.6 * GUI_GRID_W + (profileNamespace getVariable ['TRIPLES(IGUI,GVAR(grid),X)', (safeZoneX + safeZoneW) - 12.9 * GUI_GRID_W]);
-                y = 0.065 * safeZoneH + (profileNamespace getVariable ['TRIPLES(IGUI,GVAR(grid),Y)', safeZoneY + 0.175 * safeZoneH]);
-                w = 5.9 * GUI_GRID_W;
-                h = 3 * GUI_GRID_H;
+                x = QUOTE(1.6 * GUI_GRID_W + (profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(grid),X)',(safeZoneX + safeZoneW) - 12.9 * GUI_GRID_W)]));
+                y = QUOTE(0.065 * safeZoneH + (profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(grid),Y)',safeZoneY + 0.175 * safeZoneH)]));
+                w = QUOTE(5.9 * GUI_GRID_W);
+                h = QUOTE(3 * GUI_GRID_H);
                 font = "RobotoCondensed";
                 class Attributes {
                     font = "RobotoCondensed";

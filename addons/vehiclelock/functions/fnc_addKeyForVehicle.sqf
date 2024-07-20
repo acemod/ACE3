@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Adds a key to a unit that will open a vehicle
@@ -23,14 +23,18 @@ if (!params [["_unit", objNull, [objNull]], ["_veh", objNull, [objNull]], ["_use
 };
 TRACE_3("params",_unit,_veh,_useCustom);
 
-if (isNull _unit) exitWith {ERROR("null unit");};
-if (isNull _veh) exitWith {ERROR("null vehicle");};
+if (isNull _unit) exitWith {
+    ERROR("null unit");
+};
+if (isNull _veh) exitWith {
+    ERROR("null vehicle");
+};
 
 if (_useCustom) then {
     private _previousMags = magazinesDetail _unit;
     _unit addMagazine ["ACE_key_customKeyMagazine", 1]; //addMagazine array has global effects
     private _newMags = (magazinesDetail _unit) - _previousMags;
-    if ((count _newMags) == 0) exitWith {ERROR("failed to add magazine (inventory full?)");};
+    if (_newMags isEqualTo []) exitWith {ERROR("failed to add magazine (inventory full?)");};
     private _keyMagazine = _newMags select 0;
     TRACE_2("setting up key on server",_veh,_keyMagazine);
     //Have the server run add the key to the vehicle's key array:

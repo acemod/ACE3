@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Nou
  * Searches for a laser spot given a seekers params.
@@ -9,22 +9,24 @@
  * 1: Direction vector (will be normalized) <ARRAY>
  * 2: Seeker FOV in degrees <NUMBER>
  * 3: Seeker max distance in meters <NUMBER>
- * 4: Seeker wavelength sensitivity range, [1550,1550] is common eye safe <ARRAY>
+ * 4: Seeker wavelength sensitivity range, [1550,1550] is common <ARRAY>
  * 5: Seeker laser code. <NUMBER>
  * 6: Ignore 1 (e.g. Player's vehicle) <OBJECT> (default: objNull)
+ * 7: Ignore 2 (e.g. Attached object) <OBJECT> (default: objNull)
+ * 8: Owners to ignore (e.g. Player's vehicle) <ARRAY of OBJECT> (default: [])
  *
  * Return Value:
  * [Strongest compatible laser spot ASL pos, owner object] Nil array values if nothing found <ARRAY>
  *
  * Example:
- * [getPosASL player, [0,1,0], 90, [1500, 1500], 1111, player] call ace_laser_fnc_seekerFindLaserSpot
+ * [getPosASL player, [0,1,0], 90, [1550, 1550], 1111, player] call ace_laser_fnc_seekerFindLaserSpot
  *
  * Public: No
  */
 
 BEGIN_COUNTER(seekerFindLaserSpot);
 
-params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistance", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull]];
+params ["_posASL", "_dir", "_seekerFov", "_seekerMaxDistance", "_seekerWavelengths", "_seekerCode", ["_ignoreObj1", objNull], ["_ignoreObj2", objNull], ["_ignoreOwners", []]];
 
 _dir = vectorNormalized _dir;
 _seekerWavelengths params ["_seekerWavelengthMin", "_seekerWavelengthMax"];
@@ -42,6 +44,8 @@ private _finalOwner = objNull;
 {
     _x params ["_obj", "_owner", "_laserMethod", "_emitterWavelength", "_laserCode", "_divergence"];
     TRACE_6("laser",_obj,_owner,_laserMethod,_emitterWavelength,_laserCode,_divergence);
+
+    if (_owner in _ignoreOwners) then {continue};
 
     if (alive _obj && {_emitterWavelength >= _seekerWavelengthMin} && {_emitterWavelength <= _seekerWavelengthMax} && {_laserCode == _seekerCode}) then {
 
@@ -95,11 +99,11 @@ private _finalOwner = objNull;
             };
         };
     };
-} forEach (GVAR(laserEmitters) select 2); // Go through all values in hash
+} forEach (values GVAR(laserEmitters)); // Go through all values in hash
 
-TRACE_2("",count _spots, _spots);
+TRACE_2("",count _spots,_spots);
 
-if ((count _spots) > 0) then {
+if (_spots isNotEqualTo []) then {
     private _bucketList = nil;
     private _bucketPos = nil;
     private _c = 0;
@@ -111,7 +115,7 @@ if ((count _spots) > 0) then {
     while { count(_spots) != count(_excludes) && _c < (count _spots) } do {
         scopeName "mainSearch";
         {
-            if (!(_forEachIndex in _excludes)) then {
+            if !(_forEachIndex in _excludes) then {
                 private _index = _buckets pushBack [_x, [_x]];
                 _excludes pushBack _forEachIndex;
                 _bucketPos = _x select 0;
@@ -120,7 +124,7 @@ if ((count _spots) > 0) then {
             };
         } forEach _spots;
         {
-            if (!(_forEachIndex in _excludes)) then {
+            if !(_forEachIndex in _excludes) then {
                 private _testPos = (_x select 0);
                 if ((_testPos vectorDistanceSqr _bucketPos) <= 100) then {
                     _bucketList pushBack _x;
@@ -142,7 +146,7 @@ if ((count _spots) > 0) then {
         _bucketList = _finalBuckets select _index;
         {
             private _testPos = (_x select 0) vectorAdd [0,0,0.05];
-            private _testIntersections = lineIntersectsSurfaces [_posASL, _testPos, _ignoreObj1];
+            private _testIntersections = lineIntersectsSurfaces [_posASL, _testPos, _ignoreObj1, _ignoreObj2];
             if ([] isEqualTo _testIntersections) then {
                 _bucketList pushBack _x;
             };
@@ -164,8 +168,9 @@ if ((count _spots) > 0) then {
         {
             _x params ["_xPos", "_owner"];
             _finalPos = _finalPos vectorAdd _xPos;
-            private _count = _ownersHash getOrDefault [_owner, 0];
-            _ownersHash set [_owner, _count + 1];
+            private _value = _ownersHash getOrDefault [hashValue _owner, [0, _owner]];
+            _value set [0, 1 + _value#0];
+            _ownersHash set [hashValue _owner, _value];
         } forEach _finalBucket;
 
         _finalPos = _finalPos vectorMultiply (1 / (count _finalBucket));
@@ -174,8 +179,10 @@ if ((count _spots) > 0) then {
 
         {
             //IGNORE_PRIVATE_WARNING ["_x", "_y"];
-            if (_y > _maxOwnerCount) then {
-                _finalOwner = _x;
+            _y params ["_count", "_owner"];
+            if (_count > _maxOwnerCount) then {
+                _maxOwnerCount = _count;
+                _finalOwner = _owner;
             };
         } forEach _ownersHash;
     };

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Advanced Fatigue
+component: advanced_fatigue
 description: Human fatigue simulation based on scientific formulas.
 group: feature
 category: realism
@@ -91,9 +92,3 @@ At any time the body consumes a certain amount of ATP - even when not moving. Si
 ### 2.4 ATP Pathway Fatigue
 
 Another factor that comes into play here is pathway fatigue - the pathways themselves can fatigue too! That means, the more ATP the pathways have to provide, the slower they will will be able to, limiting how much ATP can overall be provided by each pathway. If we take into account that the aerobic pathways have provide their ATP first for any consumption, that means that the anaerobic pathway will have to provide more ATP if the aerobic ones are fatigued. This is how the long term fatigue effect is created.
-
-
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="advanced_fatigue" %}

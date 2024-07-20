@@ -2,36 +2,38 @@
 
 #include "XEH_PREP.hpp"
 
-
-//See XEH_postInit.sqf
+// See XEH_postInit.sqf
 private _vehicleClasses_addClassEH = ["ThingX", "LandVehicle", "Air", "Ship_F"];
 private _objectClasses_addClassEH = ["ThingX", "StaticWeapon"];
 private _vehicleClasses_addAction = [];
 private _itemClasses_addAction = [];
+private _class = "";
 
-// find all remaining configured classes and init them
+// Find all remaining configured classes and init them
 {
-    private _class = configName _x;
-    // init vehicle
+    _class = configName _x;
+
+    // Init vehicle
     if (
-        1 == getNumber (_x >> QGVAR(hasCargo))
-        && {-1 == _vehicleClasses_addClassEH findIf {_class isKindOf _x}}
+        getNumber (_x >> QGVAR(hasCargo)) == 1 &&
+        {_vehicleClasses_addClassEH findIf {_class isKindOf _x} == -1}
     ) then {
         if (_class isKindOf "Static") then {
-            if (2 == getNumber (_x >> "scope")) then {
+            if (getNumber (_x >> "scope") == 2) then {
                 _vehicleClasses_addAction pushBackUnique _class;
             };
         } else {
             _vehicleClasses_addClassEH pushBackUnique _class;
         };
     };
-    // init object
+
+    // Init object
     if (
-        1 == getNumber (_x >> QGVAR(canLoad))
-        && {-1 == _objectClasses_addClassEH findIf {_class isKindOf _x}}
+        getNumber (_x >> QGVAR(canLoad)) == 1 &&
+        {_objectClasses_addClassEH findIf {_class isKindOf _x} == -1}
     ) then {
         if (_class isKindOf "Static") then {
-            if (2 == getNumber (_x >> "scope")) then {
+            if (getNumber (_x >> "scope") == 2) then {
                 _itemClasses_addAction pushBackUnique _class;
             };
         } else {
@@ -39,7 +41,6 @@ private _itemClasses_addAction = [];
         };
     };
 } forEach ("true" configClasses (configFile >> "CfgVehicles"));
-
 
 uiNamespace setVariable [QGVAR(vehicleClasses_classEH), compileFinal str _vehicleClasses_addClassEH];
 uiNamespace setVariable [QGVAR(objectClasses_classEH), compileFinal str _objectClasses_addClassEH];

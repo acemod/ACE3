@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Refuel
+component: refuel
 description: Adds the option to refuel vehicles.
 group: feature
 category: interaction
@@ -61,10 +62,6 @@ Please check the framework description for more details.
 
 ### How do I increase the length of the hose?
 There is a global setting that will effect all vehicles and static pumps. To only effect a specific vehicle put the following in it's init box:
-```cpp
+```sqf
 this setVariable ["ace_refuel_hoseLength", 30];
 ```
-
-## 4. Dependencies
-
-{% include dependencies_list.md component="refuel" %}

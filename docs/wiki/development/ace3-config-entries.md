@@ -49,6 +49,8 @@ ace_recoil_shakemultiplier
 ace_overpressure_angle
 ace_overpressure_range
 ace_overpressure_damage
+ace_overpressure_offset
+ace_overheating_closedbolt
 ace_overheating_dispersion
 ace_overheating_slowdownfactor
 ace_overheating_jamchance
@@ -74,7 +76,6 @@ ace_detonator
 ace_barrelTwist
 ace_twistDirection
 ace_barrelLength
-ace_laserpointer
 ace_nextmodeclass
 ace_modedescription
 ace_hearing_protection

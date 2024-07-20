@@ -14,6 +14,7 @@ PREP(hideMouseHint);
 
 // interaction with units
 PREP(canInteractWithCivilian);
+PREP(canInteractWithVehicleCrew);
 PREP(getDown);
 PREP(sendAway);
 PREP(canJoinGroup);

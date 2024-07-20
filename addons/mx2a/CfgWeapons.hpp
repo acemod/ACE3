@@ -15,7 +15,7 @@ class CfgWeapons {
         opticsZoomInit = 0.1;
         visionMode[] = {"Ti"};
         thermalMode[] = {0,1};
-        discretefov[] = {0.33333/1, 0.33333/2}; // 1x/2x -- http://www.drs.com/Products/RSTA/PDF/MX2A.pdf
+        discretefov[] = {"0.33333/1", "0.33333/2"}; // 1x/2x -- http://www.drs.com/Products/RSTA/PDF/MX2A.pdf
         discreteInitIndex = 0;
         discreteDistance[] = {120,400};
         discreteDistanceInitIndex = 1;

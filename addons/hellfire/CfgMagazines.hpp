@@ -1,6 +1,6 @@
 class CfgMagazines {
     class 12Rnd_PG_missiles;
-    
+
     // Kilo - tandem shaped charge HEAT (anti-tank)
     class 6Rnd_ACE_Hellfire_AGM114K: 12Rnd_PG_missiles { // Old style vehicle magazine
         count = 6;
@@ -16,7 +16,7 @@ class CfgMagazines {
         count = 1;
         mass = 70;
         pylonWeapon = QGVAR(launcher);
-        hardpoints[] = {"SCALPEL_1RND"};
+        hardpoints[] = {"SCALPEL_1RND", "HellfireRail_MELB"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonMissile_1x_Bomb_04_F.p3d";
     };
     class PylonRack_1Rnd_ACE_Hellfire_AGM114K: 6Rnd_ACE_Hellfire_AGM114K { // 1x Launcher Support Rack
@@ -32,7 +32,7 @@ class CfgMagazines {
         count = 3;
         mass = 250;
         pylonWeapon = QGVAR(launcher);
-        hardpoints[] = {"B_MISSILE_PYLON", "UNI_SCALPEL", "CUP_NATO_HELO_LARGE", "RHS_HP_LONGBOW_RACK"};
+        hardpoints[] = {"B_MISSILE_PYLON", "UNI_SCALPEL", "CUP_NATO_HELO_LARGE"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_3x_Missile_LG_scalpel_F.p3d";
         mirrorMissilesIndexes[] = {2, 1, 3};
     };
@@ -41,7 +41,7 @@ class CfgMagazines {
         count = 4;
         mass = 340;
         pylonWeapon = QGVAR(launcher);
-        hardpoints[] = {"UNI_SCALPEL", "CUP_NATO_HELO_LARGE", "RHS_HP_HELLFIRE_RACK", "RHS_HP_LONGBOW_RACK"};
+        hardpoints[] = {"UNI_SCALPEL", "CUP_NATO_HELO_LARGE"};
         model = "\A3\Weapons_F\DynamicLoadout\PylonPod_4x_Missile_LG_scalpel_F.p3d";
         mirrorMissilesIndexes[] = {2, 1, 4, 3};
     };
@@ -84,7 +84,7 @@ class CfgMagazines {
         ammo = "ACE_Hellfire_AGM114N";
         pylonWeapon = QGVAR(launcher_N);
     };
-    
+
     // Lima - tandem shaped charge HEAT (anti-tank) Fire and Forget Active Radar Homing
     class 6Rnd_ACE_Hellfire_AGM114L: 6Rnd_ACE_Hellfire_AGM114K { // Old style vehicle magazine
         count = 6;

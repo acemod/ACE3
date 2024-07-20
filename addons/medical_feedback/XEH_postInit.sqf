@@ -30,7 +30,7 @@ GVAR(bloodTickCounter) = 0;
 
 [false] call FUNC(initEffects);
 [true] call FUNC(handleEffects);
-[FUNC(handleEffects), 1, false] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(handleEffects), 1, false] call CBA_fnc_addPerFrameHandler;
 
 ["ace_unconscious", {
     params ["_unit", "_unconscious"];
@@ -89,13 +89,12 @@ GVAR(bloodTickCounter) = 0;
     if (_newCamera == "") then { // switched back to player view
         private _status = IS_UNCONSCIOUS(_unit);
         [!_status, _unit] call EFUNC(common,setVolume);
-
         [QUOTE(ADDON), _volume, _status] call EFUNC(common,setHearingCapability);
-
         ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
     } else { // camera view
         [true, _unit] call EFUNC(common,setVolume);
         [QUOTE(ADDON), 1, false] call EFUNC(common,setHearingCapability);
+        ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
     };
 }] call CBA_fnc_addPlayerEventHandler;
 
@@ -105,7 +104,7 @@ GVAR(bloodTickCounter) = 0;
 
     if (ACE_player distance _unit > _distance) exitWith {};
 
-    if (vehicle _unit == _unit) then {
+    if (isNull objectParent _unit) then {
         // say3D waits for the previous sound to finish, so use a dummy instead
         private _dummy = "#dynamicsound" createVehicleLocal [0, 0, 0];
         _dummy attachTo [_unit, [0, 0, 0], "camera"];

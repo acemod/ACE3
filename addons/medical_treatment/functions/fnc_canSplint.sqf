@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Checks if a splint can be applied to the patient.
@@ -19,6 +19,6 @@
 
 params ["", "_patient", "_bodyPart"];
 
-private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
+private _partIndex = ALL_BODY_PARTS find toLowerANSI _bodyPart;
 
 (GET_FRACTURES(_patient) select _partIndex) == 1

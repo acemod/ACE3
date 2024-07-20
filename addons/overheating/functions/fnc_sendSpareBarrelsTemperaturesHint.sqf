@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Collect the temperature of all the spare barrels a unit has and send a hint
@@ -27,12 +27,12 @@ private _weapon = currentWeapon _player;
 //Get the classname of the spare barrel of that weapon
 private _weaponBarrelClass = getText (configFile >> 'CfgWeapons' >> _weapon >> QGVAR(barrelClassname));
 //If the weapon has no defined classname then use the ACE one
-if(_weaponBarrelClass == "") then {
+if (_weaponBarrelClass == "") then {
     _weaponBarrelClass = "ACE_SpareBarrel";
 };
 private _allBarrels = [_unit, _weaponBarrelClass] call CBA_fnc_getMagazineIndex;
 TRACE_1("_allBarrels",_allBarrels);
-if ((count _allBarrels) < 1) exitWith {};
+if (_allBarrels isEqualTo []) exitWith {};
 
 // Determine the temp of each barrel
 private _temps = [];
