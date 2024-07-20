@@ -18,10 +18,13 @@
 
 params ["_unit", "_weapon"];
 
-if (_weapon == "") exitWith {};
+if (_weapon == "" || {!(_unit hasWeapon _weapon)}) exitWith {};
+
+private _currentWeaponMode = (_unit weaponState _weapon) select 2;
+private _muzzle = (_weapon call EFUNC(common,getWeaponMuzzles)) select 0;
 
 if (currentWeapon _unit != _weapon) exitWith {
-    _unit selectWeapon _weapon;
+    _unit selectWeapon [_weapon, _muzzle, _currentWeaponMode];
 };
 
 // Unlock safety
@@ -29,24 +32,9 @@ if ([_unit, _weapon] call EFUNC(safemode,getWeaponSafety)) exitWith {
     [_unit, _weapon, false] call EFUNC(safemode,setWeaponSafety);
 };
 
-private _muzzles = [_weapon] call EFUNC(common,getWeaponMuzzles);
-private _modes = [_weapon] call EFUNC(common,getWeaponModes);
+private _modes = _weapon call EFUNC(common,getWeaponModes);
 
-private _index = (_modes find currentWeaponMode _unit) + 1;
+_unit selectWeapon [_weapon, _muzzle, _modes select (((_modes find _currentWeaponMode) + 1) % (count _modes))];
 
-if (_index > count _modes - 1) then {_index = 0};
-
-private _muzzle = _muzzles select 0;
-private _mode = _modes select _index;
-
-_index = 0;
-
-while {
-    _index < 299 && {currentMuzzle _unit != _muzzle || {currentWeaponMode _unit != _mode}}
-} do {
-    _unit action ["SwitchWeapon", _unit, _unit, _index];
-    _index = _index + 1;
-};
-
-// play fire mode selector sound
+// Play fire mode selector sound
 [_unit, _weapon] call FUNC(playChangeFiremodeSound);
