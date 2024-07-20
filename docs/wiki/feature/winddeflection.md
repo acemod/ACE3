@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Wind Deflection
+component: winddeflection
 description: The wind deflection module simulates wind deflection of projectiles.
 group: feature
 category: realism
@@ -21,8 +22,3 @@ Wind Deflection simulates the wind deflection of projectiles fired by players an
     <h5>Note:</h5>
     <p>The only affected projectiles are bullets and grenades. Mortar shells, tank shells, missiles and rockets are <b>not</b> affected.</p>
 </div>
-
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="winddeflection" %}

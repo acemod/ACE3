@@ -1,11 +1,11 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Disables being able to rearm a vehicle's turrets. [Global Effects]
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
- * 1: Disable <BOOL>(optional)
+ * 1: Disable <BOOL> (default: true)
  *
  * Return Value:
  * None

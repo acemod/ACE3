@@ -13,4 +13,4 @@ GVAR(useFeet) = false;
 GVAR(modeReticle) = 0;
 GVAR(illuminate) = false;
 
-#include "initKeybinds.sqf"
+#include "initKeybinds.inc.sqf"

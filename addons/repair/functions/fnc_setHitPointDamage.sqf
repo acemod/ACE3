@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Set the hitpoint damage and change the structural damage acordingly, requires local vehicle.
@@ -8,7 +8,7 @@
  * 0: Local Vehicle to Damage <OBJECT>
  * 1: Selected hitpoint INDEX <NUMBER>
  * 2: Total Damage <NUMBER>
- * 3: Skip destruction effects <BOOL>
+ * 3: Use destruction effects <BOOL>
  *
  * Return Value:
  * None
@@ -19,17 +19,17 @@
  * Public: No
  */
 
-params ["_vehicle", "_hitPointIndex", "_hitPointDamage", ["_useEffects", true]];
+params ["_vehicle", "_hitPointIndex", "_hitPointDamage", ["_useEffects", false]];
 TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);
 
 // can't execute all commands if the vehicle isn't local. exit here.
-if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
+if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1",_vehicle);};
 
 // get all hitpoints and selections and damages
 (getAllHitPointsDamage _vehicle) params [["_allHitPoints", []], ["_allHitPointsSelections", []], ["_allHitPointDamages", []]];
 
 // exit if the hitpoint is not valid
-if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _allHitPoints)}) exitWith {ERROR_2("NOT A VALID HITPOINT: %1-%2", _hitPointIndex,_vehicle);};
+if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _allHitPoints)}) exitWith {ERROR_2("NOT A VALID HITPOINT: %1-%2",_hitPointIndex,_vehicle);};
 
 // save structural damage and sum of hitpoint damages
 
@@ -44,7 +44,7 @@ private _hitPointDamageRepaired = 0; //positive for repairs : newSum = (oldSum -
     if ((!isNil {_vehicle getHit _selectionName}) && {_x != ""}) then {
         _realHitpointCount = _realHitpointCount + 1;
 
-        if ((((toLower _x) find "glass") == -1) && {(getText (configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> _x >> "depends")) in ["", "0"]}) then {
+        if (!("glass" in (toLowerANSI _x)) && {(getText (configOf _vehicle >> "HitPoints" >> _x >> "depends")) in ["", "0"]}) then {
             _hitPointDamageSumOld = _hitPointDamageSumOld + (_allHitPointDamages select _forEachIndex);
             if (_forEachIndex == _hitPointIndex) then {
                 _hitPointDamageRepaired = (_allHitPointDamages select _forEachIndex) - _hitPointDamage;

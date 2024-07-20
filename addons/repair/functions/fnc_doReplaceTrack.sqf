@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Replaces a track.
@@ -26,7 +26,7 @@ TRACE_4("params",_unit,_vehicle,_hitPoint,_claimedObjects);
 
 _claimedObjects params [["_track", objNull]];
 if ((isNull _track) || {!([_unit, _track, ["isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith))}) exitWith {
-    ERROR_1("Bad Track", _claimedObjects);
+    ERROR_1("Bad Track",_claimedObjects);
 };
 
 // get current hitpoint damage

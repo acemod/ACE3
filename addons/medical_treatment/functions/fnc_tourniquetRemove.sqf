@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, mharis001
  * Removes the tourniquet from the patient on the given body part.
@@ -22,7 +22,7 @@ params ["_medic", "_patient", "_bodyPart"];
 TRACE_3("tourniquetRemove",_medic,_patient,_bodyPart);
 
 // Remove tourniquet from body part, exit if no tourniquet applied
-private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
+private _partIndex = ALL_BODY_PARTS find tolowerANSI _bodyPart;
 private _tourniquets = GET_TOURNIQUETS(_patient);
 
 if (_tourniquets select _partIndex == 0) exitWith {
@@ -38,9 +38,9 @@ private _nearPlayers = (_patient nearEntities ["CAManBase", 6]) select {_x call 
 TRACE_1("clearConditionCaches: tourniquetRemove",_nearPlayers);
 [QEGVAR(interact_menu,clearConditionCaches), [], _nearPlayers] call CBA_fnc_targetEvent;
 
-// Add tourniquet item to medic's inventory
-// todo: should there be a setting to select who receives the removed tourniquet?
-[_medic, "ACE_tourniquet", true] call EFUNC(common,addToInventory);
+// Add tourniquet item to medic or patient
+private _receiver = [_patient, _medic, _medic] select GVAR(allowSharedEquipment);
+[_receiver, "ACE_tourniquet"] call EFUNC(common,addToInventory);
 
 // Handle occluded medications that were blocked due to tourniquet
 private _occludedMedications = _patient getVariable [QEGVAR(medical,occludedMedications), []];

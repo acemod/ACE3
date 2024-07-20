@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Reads the fuel counter.
@@ -18,12 +18,6 @@
 
 params [["_unit", objNull, [objNull]], ["_source", objNull, [objNull]]];
 
-private _currentFuel = [_source] call FUNC(getFuel);
-private _fuelCounter = if (_currentFuel == REFUEL_INFINITE_FUEL) then {
-    _source getVariable [QGVAR(fuelCounter), 0]
-} else {
-    (_source getVariable [QGVAR(fuelCounter), _currentFuel]) - _currentFuel
-};
-
-private _fuelCounter = 0.01 * round (100 * _fuelCounter);
+private _fuelCounter = _source getVariable [QGVAR(fuelCounter), 0];
+_fuelCounter = 0.01 * round (100 * _fuelCounter);
 [[LSTRING(Hint_FuelCounter), _fuelCounter], 1.5, _unit] call EFUNC(common,displayTextStructured);

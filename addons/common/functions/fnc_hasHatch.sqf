@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Check if unit is in a vehicle position where it can turn in or out.
@@ -21,7 +21,7 @@ private _vehicle = vehicle _unit;
 
 if (_unit == _vehicle) exitWith {false};
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 
 if (getNumber (_config >> "hideProxyInCombat") != 1) exitWith {false};
 

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Nightvision
+component: nightvision
 description: Adds realistic effects to NVGs.
 group: feature
 category: equipment
@@ -36,7 +37,3 @@ Enables the user to manually adjust NVG brightness.
 
 ### 2.1 Adjusting brightness
 - Use <kbd>ALT</kbd> + <kbd>PageUP</kbd> and <kbd>ALT</kbd> + <kbd>PageDOWN</kbd> to adjust NVG brightness (ACE3 default key bind `Increase/Decrease NVG Brightness`).
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="nightvision" %}

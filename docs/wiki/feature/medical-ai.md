@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Medical AI
+component: medical_ai
 description: Makes AI heal themselves and each other with the ACE Medical system.
 group: feature
 category: realism
@@ -31,8 +32,3 @@ The Medical AI will only become active if the AI units use the basic medical sys
 ### 2.2 Singleplayer
 
 AI units will also heal themselves in singleplayer. If the player is in control of an AI group and uses basic medical, Medical AI is also enabled and will run for the players group as well. The AI subordinates will automatically start healing themselves and do not need to be told to do so manually through the command menu, additionally the groups medic will also start healing other units (including the player).
-
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="medical_ai" %}

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Hellfire attack profile. Handles all 4 modes LOBL, LOAL-DIR, LOAL-HI, LOAL-LO
@@ -56,7 +56,7 @@ switch (_attackStage) do {
         _returnTargetPos = _projectilePos getPos [100, getDir _projectile];
         _returnTargetPos set [2, (_projectilePos select 2) + _cruiseHeight];
 
-        if (!(_seekerTargetPos isEqualTo [0,0,0])) then {
+        if (_seekerTargetPos isNotEqualTo [0,0,0]) then {
             _attackProfileStateParams set [0, STAGE_ATTACK_CRUISE];
             TRACE_1("New Stage: STAGE_ATTACK_CRUISE",_distanceFromLaunch2d);
         };
@@ -67,7 +67,7 @@ switch (_attackStage) do {
         private _distToGoRatio = _distanceToTarget2d / (_launchPos distance2d _seekerTargetPos);
 
         // arcing up at 7 degrees to start until 50% left, then smooth curve to a downward attack
-        private _gainSlope = linearConversion [0.5, 0.1, _distToGoRatio, 7, -7, true]; 
+        private _gainSlope = linearConversion [0.5, 0.1, _distToGoRatio, 7, -7, true];
         _returnTargetPos = +_seekerTargetPos;
         _returnTargetPos set [2, ((_projectilePos select 2) + (_distanceToTarget2d * sin _gainSlope)) max (_seekerTargetPos select 2)];
 
@@ -93,5 +93,5 @@ if (_attackStage >= 3 && { _seekerType isEqualTo "ARH" }) then {
     };
 };
 
-// TRACE_1("Adjusted target position", _returnTargetPos);
+// TRACE_1("Adjusted target position",_returnTargetPos);
 _returnTargetPos;

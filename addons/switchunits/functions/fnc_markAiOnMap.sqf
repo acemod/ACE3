@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: bux578
  * Creates markers for AI units for given sides.
@@ -27,7 +27,7 @@ GVAR(AllMarkerNames) = [];
     // delete markers
     {
         deleteMarkerLocal _x;
-    } count GVAR(AllMarkerNames);
+    } forEach GVAR(AllMarkerNames);
 
     // reset the array
     GVAR(AllMarkerNames) = [];
@@ -54,12 +54,11 @@ GVAR(AllMarkerNames) = [];
                     _markerName setMarkerTextLocal (_x getVariable [QGVAR(PlayerControlledName), ""]);
                 } else {
                     _markerName setMarkerColorLocal _markerColor;
-                    _markerName setMarkerTextLocal (getText (configFile >> "CfgVehicles" >> typeOf _x >> "displayName"));
+                    _markerName setMarkerTextLocal (getText (configOf _x >> "displayName"));
                 };
 
                 GVAR(AllMarkerNames) pushBack _markerName;
-                nil
             };
-        } count allUnits;
+        } forEach allUnits;
     };
 }, 1.5, [_sidesToShow]] call CBA_fnc_addPerFrameHandler;

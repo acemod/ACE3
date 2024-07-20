@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dystopian
  * Check whether local player is currently allowed to create a Zeus Module
@@ -14,6 +14,9 @@
  *
  * Public: No
  */
+
+// Don't allow if we already are a zeus, intentionally using player instead of ace_player
+ if (!isNull getAssignedCuratorLogic player) exitWith { false };
 
 (isNil QGVAR(zeus)) && {
     switch (GVAR(canCreateZeus)) do {

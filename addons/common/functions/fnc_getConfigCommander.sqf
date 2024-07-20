@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Get the commander config of a vehicles turret.
@@ -17,7 +17,7 @@
 
 params ["_vehicle"];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle;
+private _config = configOf _vehicle;
 private _turret = _vehicle call FUNC(getTurretCommander);
 
 [_config, _turret] call FUNC(getTurretConfigPath) // return

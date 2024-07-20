@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Removes a magazine from the supply.
@@ -57,7 +57,7 @@ if (GVAR(supply) == 2) then {
     private _magazineIdx = -1;
     {
         _x params ["_magazine"];
-        if ((_magazine isEqualTo _magazineClass)) exitWith {
+        if (_magazine isEqualTo _magazineClass) exitWith {
             _magazineIdx = _forEachIndex;
         };
     } forEach _magazineSupply;

@@ -61,6 +61,7 @@ class CfgAmmo {
         indirectHitRange = 12;
         submunitionAmmo = "";
         explosionEffects = "BombExplosion";
+        EGVAR(vehicle_damage,incendiary) = 0.3;
         class ace_missileguidance: ace_missileguidance {
             enabled = 1; // Missile Guidance must be explicitly enabled
         };

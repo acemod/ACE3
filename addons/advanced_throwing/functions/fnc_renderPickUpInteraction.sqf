@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, Jonpas
  * When interact_menu starts rendering (from "interact_keyDown" event).
@@ -31,7 +31,7 @@
             _nearThrowables append (ACE_player nearObjects ["ACE_Chemlight_IR_Dummy", PICK_UP_DISTANCE]);
 
             {
-                if (!(_x in _throwablesHelped) &&
+                if (!(_x in _throwablesHelped) && {!((attachedTo _x) getVariable [QGVAR(disablePickUp), false])} &&
                     {!(_x isKindOf "SmokeShellArty")} && {!(_x isKindOf "G_40mm_Smoke")} && // All smokes inherit from "GrenadeHand" >> "SmokeShell"
                     {GVAR(enablePickUpAttached) || {!GVAR(enablePickUpAttached) && {isNull (attachedTo _x)}}}
                 ) then {
@@ -44,8 +44,7 @@
                     _addedPickUpHelpers pushBack _pickUpHelper;
                     _throwablesHelped pushBack _x;
                 };
-                nil
-            } count _nearThrowables;
+            } forEach _nearThrowables;
 
             _args set [0, getPosASL ACE_player];
             _args set [3, _nearThrowables];
@@ -56,11 +55,10 @@
         {
             // Only handling with attachTo works nicely
             _x attachTo [_x getVariable [QGVAR(throwable), objNull], [0, 0, 0]];
-            nil
-        } count _addedPickUpHelpers;
+        } forEach _addedPickUpHelpers;
     } else {
         TRACE_1("Cleaning Pick Up Helpers",count _addedPickUpHelpers);
-        {deleteVehicle _x} count _addedPickUpHelpers;
+        {deleteVehicle _x} forEach _addedPickUpHelpers;
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 }, 0, [(getPosASL ACE_player) vectorAdd [-100, 0, 0], [], [], []]] call CBA_fnc_addPerFrameHandler;

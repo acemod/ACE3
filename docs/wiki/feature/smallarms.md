@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Small Arms
+component: smallarms
 description: Various improvements to small arms.
 group: feature
 category: realism
@@ -22,7 +23,3 @@ Assault rifles no longer have tracer rounds in their non-tracer magazines. This 
 
 ### 1.3 Real magazine round counts
 All pistol and sub machine gun magazines now have adjusted capacities to match their real life counterparts.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="smallarms" %}

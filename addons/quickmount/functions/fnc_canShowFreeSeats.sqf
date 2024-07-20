@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dystopian
  * Checks if Free Seats menu can be shown.
@@ -19,7 +19,6 @@
 
 params ["_vehicle", "_unit", "_args"];
 
-_args set [0, []];
 private _isInVehicle = _unit in _vehicle;
 
 GVAR(enabled)
@@ -30,16 +29,22 @@ GVAR(enabled)
 }
 && {alive _vehicle}
 && {2 > locked _vehicle}
+&& {isNull getConnectedUAVUnit _unit}
+&& {simulationEnabled _vehicle}
 && {
-    -1 == crew _vehicle findIf {alive _x}
-    || {0.6 <= side group _unit getFriend side group _vehicle}
+    [_unit, _vehicle] call EFUNC(interaction,canInteractWithVehicleCrew)
 }
 && {
     0.3 < vectorUp _vehicle select 2 // moveIn* and GetIn* don't work for flipped vehicles
     || {_vehicle isKindOf "Air"} // except Air
 }
 && {
-    private _subActions = _this call FUNC(addFreeSeatsActions);
-    _args set [0, _subActions];
-    !([] isEqualTo _subActions)
+    _isInVehicle
+    || {
+        // because Get In action has its own statement
+        // we have to cache subactions in args and reuse them in insertChildren code
+        private _subActions = _this call FUNC(addFreeSeatsActions);
+        _args set [0, _subActions];
+        [] isNotEqualTo _subActions
+    }
 }

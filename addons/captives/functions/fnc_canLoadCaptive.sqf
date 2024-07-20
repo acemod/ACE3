@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Check if the unit can load the target object into a vehicle.
@@ -20,7 +20,7 @@
 params ["_unit", "_target", "_vehicle"];
 
 // Don't show "Load Captive" if unit is unconscious (already has "Load Patient")
-if (_target getVariable ["ACE_isUnconscious", false]) exitWith {false};
+if !(_target call EFUNC(common,isAwake)) exitWith {false};
 
 if ((isNull _target) && {_unit getVariable [QGVAR(isEscorting), false]}) then {
     //Looking at a vehicle while escorting, get target from attached objects:
@@ -34,7 +34,7 @@ if (isNull _target || {(vehicle _target) != _target} || {!(_target getVariable [
 
 if (isNull _vehicle) then {
     // Looking at a captive unit, get nearest vehicle with valid seat:
-    _vehicle = (_target call EFUNC(common,nearestVehiclesFreeSeat)) param [0, objNull];
+    _vehicle = ([_target, nil, true] call EFUNC(common,nearestVehiclesFreeSeat)) param [0, objNull];
 } else {
     // We have a vehicle picked, make sure it has empty seats:
     if (_vehicle emptyPositions "cargo" == 0 && {_vehicle emptyPositions "gunner" == 0}) then {

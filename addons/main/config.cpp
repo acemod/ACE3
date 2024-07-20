@@ -11,6 +11,11 @@ class CfgPatches {
         url = CSTRING(URL);
         VERSION_CONFIG;
     };
+
+    class XADDON: ADDON { // just in-case anything requires "acex_main"
+        units[] = {};
+        weapons[] = {};
+    };
 };
 
 class CfgMods {

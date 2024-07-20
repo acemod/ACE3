@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: <N/A>
  * Draws names and icons.
@@ -113,7 +113,7 @@ if (_enabledTagsNearby) then {
             private _centerOffsetFactor = 1;
             if (GVAR(showPlayerNames) == 5) then {
                 private _screenPos = worldToScreen (_target modelToWorld (_target selectionPosition "head"));
-                if !(_screenPos isEqualTo []) then {
+                if (_screenPos isNotEqualTo []) then {
                     // Distance from center / half of screen width
                     _centerOffsetFactor = 1 - ((_screenPos distance2D [0.5, 0.5]) / (safezoneW / 3));
                 } else {
@@ -138,8 +138,7 @@ if (_enabledTagsNearby) then {
                 [ACE_player, _target, _alpha, _distance * 0.026, _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
             };
         };
-        nil
-    } count _targets;
+    } forEach _targets;
 };
 
 END_COUNTER(GVAR(onDraw3d));

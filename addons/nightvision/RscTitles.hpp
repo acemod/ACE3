@@ -22,7 +22,7 @@ class RscTitles {
             class Mask: RscPicture {
                 idc = 1001;
             };
-            
+
             // Add blinders for side monitors for tripple monitors (mask won't cover them)
             class trippleHeadLeft: RscPicture {
                 idc = 1002;

@@ -70,20 +70,6 @@ class MuzzleSlot_762: MuzzleSlot {
 };
 
 class CfgWeapons {
-    class Rifle_Base_F;
-    class Rifle_Long_Base_F: Rifle_Base_F {
-        class WeaponSlotsInfo;
-    };
-    /* Other */
-    class LMG_Mk200_F: Rifle_Long_Base_F {
-        class WeaponSlotsInfo: WeaponSlotsInfo {
-            class MuzzleSlot: MuzzleSlot_65 {
-                compatibleItems[] += {"ACE_muzzle_mzls_H"};  // uses array instead of inherited class
-            };
-        };
-    };
-
-
     /* Flashsuppressors */
 
     class ItemCore;

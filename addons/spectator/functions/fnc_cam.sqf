@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, SilentSpike
+ * Author: Nelson Duarte, kymckay
  * Handles camera initialisation and destruction
  *
  * Arguments:
@@ -132,6 +132,9 @@ if (_init) then {
     GVAR(camDummy) = nil;
 
     // Stop tracking everything
+    { deleteVehicle _x; } forEach GVAR(camLights);
+    GVAR(camLights)             = nil;
+
     GVAR(camMode)               = nil;
     GVAR(camVision)             = nil;
     GVAR(camFocus)              = nil;
@@ -144,6 +147,5 @@ if (_init) then {
     GVAR(camYaw)                = nil;
     GVAR(camPitch)              = nil;
     GVAR(camSlow)               = nil;
-    GVAR(camLights)             = nil;
     GVAR(camLight)              = nil;
 };
