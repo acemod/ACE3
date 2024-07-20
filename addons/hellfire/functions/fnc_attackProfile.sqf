@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Hellfire attack profile. Handles all 4 modes LOBL, LOAL-DIR, LOAL-HI, LOAL-LO
@@ -93,5 +93,5 @@ if (_attackStage >= 3 && { _seekerType isEqualTo "ARH" }) then {
     };
 };
 
-// TRACE_1("Adjusted target position", _returnTargetPos);
+// TRACE_1("Adjusted target position",_returnTargetPos);
 _returnTargetPos;

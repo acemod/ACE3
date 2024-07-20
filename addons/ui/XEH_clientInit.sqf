@@ -4,14 +4,14 @@
 if (!hasInterface) exitWith {};
 
 // Compile and cache config UI
-GVAR(configCache) = call CBA_fnc_createNamespace;
+GVAR(configCache) = createHashMap;
 call FUNC(compileConfigUI);
 
 // Scripted API namespace
-GVAR(elementsSet) = call CBA_fnc_createNamespace;
+GVAR(elementsSet) = createHashMap;
 
 // Attach all event handlers where UI has to be updated
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Initial settings
     [false] call FUNC(setElements);
 
@@ -19,10 +19,9 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
     ["ace_infoDisplayChanged", {
         // Selective UI Advanced
         // Defaults must be set in this EH to make sure controls are activated and advanced settings can be modified
-        private _force = [true, false] select (GVAR(allowSelectiveUI));
         {
-            [_x, missionNamespace getVariable (format [QGVAR(%1), _x]), false, _force] call FUNC(setAdvancedElement);
-        } forEach (allVariables GVAR(configCache));
+            [_x, missionNamespace getVariable (format [QGVAR(%1), _x]), false, !GVAR(allowSelectiveUI)] call FUNC(setAdvancedElement);
+        } forEach (keys GVAR(configCache));
 
         // Execute local event for when it's safe to modify UI through this API
         // infoDisplayChanged can execute multiple times, make sure it only happens once
@@ -35,18 +34,17 @@ GVAR(elementsSet) = call CBA_fnc_createNamespace;
     // On changing settings
     ["CBA_SettingChanged", {
         params ["_name", "_value"];
-
-        private _delimPos = count QUOTE(DOUBLES(ADDON,));
-        if (_name select [0, _delimPos] != QUOTE(DOUBLES(ADDON,))) exitWith {};
+        if (_name select [0, 7] != "ace_ui_") exitWith {};
 
         if (_name in ELEMENTS_BASIC) then {
             [true] call FUNC(setElements);
         } else {
-            private _nameNoPrefix = toLower (_name select [_delimPos]);
-            private _cachedElement = GVAR(configCache) getVariable _nameNoPrefix;
-            if (!isNil "_cachedElement") then {
+            private _nameNoPrefix = toLowerANSI (_name select [7]);
+            if (_nameNoPrefix in GVAR(configCache)) then {
                 [_nameNoPrefix, _value, true] call FUNC(setAdvancedElement);
             };
         };
     }] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
+
+[QUOTE(ADDON), "AnimChanged", LINKFUNC(onAnimChanged), true] call EFUNC(common,addPlayerEH);

@@ -10,7 +10,7 @@ class ACE_Settings {
     };
     */
     class GVAR(enableVehicleCrashes) {
-        movedToSQF = 1; 
+        movedToSQF = 1;
     };
     class GVAR(spontaneousWakeUpChance) {
         movedToSQF = 1;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Check if a unit can store ammo in an ammo truck.
@@ -17,7 +17,7 @@
  */
 
 params ["_truck", "_unit"];
-   
+
 (alive _unit)
 && {!isNull (_unit getVariable [QGVAR(dummy), objNull])}
 && {alive _truck}

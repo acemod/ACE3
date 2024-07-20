@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles any visual effects of medical.
@@ -57,5 +57,10 @@ if ((!GVAR(heartBeatEffectRunning)) && {_heartRate != 0} && {(_heartRate > 160) 
 
 [!_unconscious, _pain] call FUNC(effectPain);
 [!_unconscious, _bleedingStrength, _manualUpdate] call FUNC(effectBleeding);
+
+// - Tourniquets, fractures and splints indication ---------------------------------------
+if (GVAR(enableHUDIndicators)) then {
+    [] call FUNC(handleHUDIndicators);
+};
 
 END_COUNTER(handleEffects);

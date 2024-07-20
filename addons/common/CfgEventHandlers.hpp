@@ -22,7 +22,7 @@ class Extended_DisplayLoad_EventHandlers {
         ADDON = QUOTE(_this call COMPILE_SCRIPT(XEH_missionDisplayLoad));
     };
     class RscUnitInfo {
-        ADDON = QUOTE([ARR_2('ace_infoDisplayChanged', [ARR_2(_this select 0, 'Any')])] call CBA_fnc_localEvent;);
+        ADDON = QUOTE([ARR_2('ace_infoDisplayChanged',[ARR_2(_this select 0,'Any')])] call CBA_fnc_localEvent;);
     };
 };
 

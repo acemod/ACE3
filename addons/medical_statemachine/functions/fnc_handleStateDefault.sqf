@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles the default state
@@ -18,8 +18,7 @@
 params ["_unit"];
 
 // If the unit died the loop is finished
-if (!alive _unit) exitWith {};
-if (!local _unit) exitWith {};
+if (!alive _unit || {!local _unit}) exitWith {};
 
 if ([_unit] call EFUNC(medical_vitals,handleUnitVitals)) then { // returns true when update ran
     private _painLevel = GET_PAIN_PERCEIVED(_unit);

@@ -60,6 +60,7 @@ def Paste( data ):
 def getFunctions(filepath):
     selfmodule = (re.search(r'addons[\W]*([_a-zA-Z0-9]*)', filepath)).group(1)
     # print("Checking {0} from {1}".format(filepath,selfmodule))
+    if (selfmodule.startswith("compat")): return []
 
     with open(filepath, 'r') as file:
         content = file.read()
@@ -85,6 +86,7 @@ def getFunctions(filepath):
 def getStrings(filepath):
     selfmodule = (re.search(r'addons[\W]*([_a-zA-Z0-9]*)', filepath)).group(1)
     # print("Checking {0} from {1}".format(filepath,selfmodule))
+    if (selfmodule.startswith("compat")): return []
 
     with open(filepath, 'r') as file:
         content = file.read()
@@ -121,7 +123,8 @@ def main():
     parser.add_argument('-m','--module', help='only search specified module addon folder', required=False, default=".")
     args = parser.parse_args()
 
-    for root, dirnames, filenames in os.walk('../addons' + '/' + args.module):
+    addon_base_path = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+    for root, dirnames, filenames in os.walk(addon_base_path +"/" + 'addons' + '/' + args.module):
       for filename in fnmatch.filter(filenames, '*.sqf'):
         sqf_list.append(os.path.join(root, filename))
       for filename in fnmatch.filter(filenames, '*.cpp'):

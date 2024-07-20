@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
-["ace_settingsInitialized", {
-    TRACE_2("ace_settingsInitialized",GVAR(advancedCorrections),GVAR(disableArtilleryComputer));
+["CBA_settingsInitialized", {
+    TRACE_2("CBA_settingsInitialized",GVAR(advancedCorrections),GVAR(disableArtilleryComputer));
 
     if (hasInterface) then {
         // Add hud overlay for actuall azimuth and elevation:
@@ -31,6 +31,6 @@
 }] call CBA_fnc_addEventHandler;
 
 #ifdef DEBUG_MODE_FULL
-#include "dev\showShotInfo.sqf"
-#include "dev\checkConfigs.sqf"
+#include "dev\showShotInfo.inc.sqf"
+#include "dev\checkConfigs.inc.sqf"
 #endif

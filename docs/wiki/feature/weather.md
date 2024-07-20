@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Weather
+component: weather
 description: The Weather module overrides the mission/editor weather setting with a synchronized realistic weather simulation.
 group: feature
 category: realism
@@ -21,7 +22,3 @@ ACE3 Weather extends the existing weather by temperature, humidity and air press
 ### 2.1 Wind info
 - Wind info is toggled on/off using <kbd>SHIFT</kbd> + <kbd>K</kbd>.
 - The arrow representing wind info is based on [Beaufort scale](http://en.wikipedia.org/wiki/Beaufort_scale#Modern_scale)
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="weather" %}

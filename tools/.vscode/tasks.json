@@ -49,7 +49,29 @@
             },
             "args": [
                 "sqfvmChecker.py"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Validate headers",
+            "command": "${config:python.pythonPath}",
+            "options": {
+                "cwd": "${workspaceFolder}/docs/tools"
+            },
+            "args": [
+                "document_functions.py",
+                "--debug"
             ]
+        },
+        {
+            "label": "HEMTT check",
+            "command": "hemtt.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "args": [
+                "check"
+            ],
         },
         {
             "label": "Test All",
@@ -57,13 +79,15 @@
                 "Validate SQF",
                 "Validate Config",
                 "Validate Stringtables",
+                "Validate headers",
                 "Check Strings",
-                "SQFVM Checker"
+                "SQFVM Checker",
+                "HEMTT check"
             ],
             "group": {
                 "kind": "test",
                 "isDefault": true
-            },
+            }
         },
         {
             "label": "Build: make.py (pboProject)",
@@ -72,23 +96,27 @@
                 "cwd": "${workspaceFolder}/tools"
             },
             "args": [
-                "make.py", "ci"
+                "make.py",
+                "ci"
             ],
             "group": {
-                "kind": "build",
-                "isDefault": true
+                "kind": "build"
             }
         },
         {
-            "label": "Build: Hemtt Release",
+            "label": "Build: Hemtt",
             "command": "hemtt.exe",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
             "args": [
-                "build", "--release", "--ci"
+                "build",
+                "-v"
             ],
-            "group": "build"
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }

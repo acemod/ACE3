@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Render all action points
@@ -28,6 +28,8 @@ private _fnc_renderNearbyActions = {
 
     GVAR(foundActions) = [];
     GVAR(lastTimeSearchedActions) = diag_tickTime;
+
+    QGVAR(renderNearbyActions) call CBA_fnc_localEvent;
 
     private _numInteractObjects = 0;
     private _nearestObjects = nearestObjects [ACE_player, ["All"], 13];
@@ -59,7 +61,7 @@ private _fnc_renderNearbyActions = {
         } forEach GVAR(objectActionList);
 
         // Iterate through base level class actions and render them if appropiate
-        private _classActions = GVAR(ActNamespace) getVariable [typeOf _target, []];
+        private _classActions = GVAR(ActNamespace) getOrDefault [typeOf _target, []];
         {
             private _action = _x;
             // Try to render the menu
@@ -93,8 +95,7 @@ private _fnc_renderSelfActions = {
     GVAR(objectActionList) = _target getVariable [QGVAR(selfActions), []];
 
     // Iterate through base level class actions and render them if appropiate
-    private _namespace = GVAR(ActSelfNamespace);
-    private _classActions = _namespace getVariable typeOf _target;
+    private _classActions = GVAR(ActSelfNamespace) get typeOf _target;
 
     private _pos = if !(GVAR(useCursorMenu)) then {
         //Convert to ASL, add offset and then convert back to AGL (handles waves when over water)
@@ -122,7 +123,7 @@ GVAR(collectedActionPoints) resize 0;
 // Render nearby actions, unit self actions or vehicle self actions as appropiate
 if (GVAR(openedMenuType) == 0) then {
     if (isNull curatorCamera) then {
-        if (!(isNull (ACE_controlledUAV select 0))) then {
+        if !(isNull (ACE_controlledUAV select 0)) then {
             // Render UAV self actions when in control of UAV AI
             (ACE_controlledUAV select 0) call _fnc_renderSelfActions;
         } else {

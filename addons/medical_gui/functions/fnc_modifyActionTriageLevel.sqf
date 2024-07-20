@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Brett Mayson
  * Modifies the action color to match the triage level.
@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [cursorObject, player, [], []] call ace_interaction_fnc_modifyActionTriageLevel
+ * [cursorObject, player, [], []] call ace_medical_gui_fnc_modifyActionTriageLevel
  *
  * Public: No
  */

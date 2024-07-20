@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Plays the corresponding treatment animation.
@@ -19,7 +19,7 @@
 params ["_unit", "_actionName", "_isSelfTreatment"];
 TRACE_3("playTreatmentAnim",_unit,_actionName,_isSelfTreatment);
 
-if (vehicle _unit != _unit) exitWith {};
+if (!isNull objectParent _unit) exitWith {};
 
 private _configProperty = "animationMedic";
 if (_isSelfTreatment) then {

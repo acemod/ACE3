@@ -13,7 +13,7 @@
             class GVAR(DetachVehicle) { \
                 displayName = CSTRING(Detach); \
                 condition = QUOTE(_this call FUNC(canDetach)); \
-                statement = QUOTE(_this call FUNC(detach) ); \
+                statement = QUOTE(_this call FUNC(detach)); \
                 exceptions[] = {"isNotSwimming"}; \
                 showDisabled = 0; \
                 icon = QPATHTOF(UI\detach_ca.paa); \
@@ -104,6 +104,12 @@ class CfgVehicles {
         nvTarget = 1;
         destrType = "DestructNo";
         brightness = 10;
+    };
+
+    class NVG_TargetBase: All {
+        class NVGMarker {
+            maxLifetime = "8 * 60 * 60";
+        };
     };
 
     class NATO_Box_Base;

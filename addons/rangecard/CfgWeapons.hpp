@@ -11,9 +11,10 @@ class CfgWeapons {
         picture = QPATHTOF(UI\RangeCard_Icon.paa);
         icon = "iconObject_circle";
         mapSize = 0.034;
+        ACE_isTool = 1;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.1;
         };
     };
 };

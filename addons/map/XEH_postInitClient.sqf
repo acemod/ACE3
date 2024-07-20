@@ -8,9 +8,9 @@ LOG(MSG_INIT);
 // Calculate the maximum zoom allowed for this map
 call FUNC(determineZoom);
 
-GVAR(flashlights) = [] call CBA_fnc_createNamespace;
+GVAR(flashlights) = createHashMap;
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     if (isMultiplayer && {GVAR(DefaultChannel) != -1}) then {
         //Set the chat channel once the map has finished loading
         [{
@@ -19,9 +19,9 @@ GVAR(flashlights) = [] call CBA_fnc_createNamespace;
 
             setCurrentChannel GVAR(DefaultChannel);
             if (currentChannel == GVAR(DefaultChannel)) then {
-                // INFO_1("Channel Set - %1", currentChannel);
+                // INFO_1("Channel Set - %1",currentChannel);
             } else {
-                ERROR_2("Failed To Set Channel %1 (is %2)", GVAR(DefaultChannel), currentChannel);
+                ERROR_2("Failed To Set Channel %1 (is %2)",GVAR(DefaultChannel),currentChannel);
             };
         }, 0, []] call CBA_fnc_addPerFrameHandler;
     };
@@ -73,8 +73,7 @@ GVAR(hasWatch) = true;
     GVAR(hasWatch) = false;
     {
         if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
-        false
-    } count (assignedItems _unit);
+    } forEach (assignedItems _unit);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 
@@ -93,10 +92,13 @@ GVAR(vehicleLightColor) = [1,1,1,0];
     // Handle vehicles with toggleable interior lights:
     private _vehicleLightCondition = getText (_cfg >> QGVAR(vehicleLightCondition));
     if (_vehicleLightCondition == "") then {
-        private _userAction = toLower getText (_cfg >> "UserActions" >> "ToggleLight" >> "statement");
-        switch (true) do {
-            case ((_userAction find "cabinlights_hide") > 0): {_vehicleLightCondition = "(_vehicle animationSourcePhase 'cabinlights_hide') == 1";};
-            case ((_userAction find "cargolights_hide") > 0): {_vehicleLightCondition = "(_vehicle animationSourcePhase 'cargolights_hide') == 1";};
+        private _userAction = toLowerANSI getText (_cfg >> "UserActions" >> "ToggleLight" >> "statement");
+        if (
+            false // isClass (_cfg >> "compartmentsLights")
+            || {_userAction find "cabinlights_hide" > 0}
+            || {_userAction find "cargolights_hide" > 0}
+        ) then {
+            _vehicleLightCondition = "false";
         };
     };
 
@@ -109,7 +111,7 @@ GVAR(vehicleLightColor) = [1,1,1,0];
     } else {
         switch (true) do {
             case (_vehicle isKindOf "Tank");
-            case (_vehicle isKindOf "Wheeled_APC"): { {true} };
+            case (_vehicle isKindOf "Wheeled_APC_F"): { {true} };
             case (_vehicle isKindOf "ParachuteBase"): { {false} };
             case (_vehicle isKindOf "Helicopter");
             case (_vehicle isKindOf "Plane"): { {(driver _vehicle == _unit) || {gunner _vehicle == _unit}} };
@@ -117,3 +119,17 @@ GVAR(vehicleLightColor) = [1,1,1,0];
         };
     };
 }, true] call CBA_fnc_addPlayerEventHandler;
+
+// compartmentsLights work only when cameraView == "INTERNAL" so we switch it on map opening
+["visibleMap", {
+    params ["_player", "_mapOn"];
+    if (_mapOn) then {
+        if (!isClass (configOf vehicle _player >> "compartmentsLights") || {cameraView == "INTERNAL"}) exitWith {};
+        GVAR(cameraViewLast) = cameraView;
+        vehicle _player switchCamera "INTERNAL";
+    } else {
+        if (isNil QGVAR(cameraViewLast)) exitWith {};
+        vehicle _player switchCamera GVAR(cameraViewLast);
+        GVAR(cameraViewLast) = nil;
+    };
+}] call CBA_fnc_addPlayerEventHandler;

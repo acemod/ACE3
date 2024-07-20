@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Reload Launchers
+component: reloadlaunchers
 description: Ability to reload someone else's launcher.
 group: feature
 category: interaction
@@ -22,7 +23,3 @@ Add the ability to reload someone else's launcher.
 - Press the interaction key <kbd>⊞&nbsp;Win</kbd> and aim at your buddy's launcher.
 - Select `reload launcher`.
 - Select the type of ammo.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="reloadlaunchers" %}

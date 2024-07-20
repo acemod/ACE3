@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function for spawning projectiles
@@ -42,7 +42,7 @@ if (_activated) then {
         _posAmmo = +_pos;
         _posAmmo set [2,0];
         _dir = direction _logic;
-        _simulation = tolower gettext (configfile >> "cfgammo" >> _ammo >> "simulation");
+        _simulation = toLowerANSI gettext (configfile >> "cfgammo" >> _ammo >> "simulation");
         _altitude = 0;
         _velocity = [];
         _attach = false;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Returns the metadata of a setting if it exists
@@ -32,7 +32,6 @@ scopeName "main";
     if (_x select 0 == _name) then {
         _x breakOut "main";
     };
-    false
-} count GVAR(settings);
+} forEach GVAR(settings);
 
 []

@@ -18,6 +18,12 @@ class CfgVehicles {
         GVAR(canDrag) = 0;
     };
 
+    // Invisible Target Soldier
+    class TargetSoldierBase: StaticWeapon {
+        GVAR(canCarry) = 0;
+        GVAR(canDrag) = 0;
+    };
+
     class StaticMortar;
     class Mortar_01_base_F: StaticMortar {
         GVAR(canCarry) = 1;
@@ -66,7 +72,7 @@ class CfgVehicles {
         GVAR(canDrag) = 0;
     };
 
-    // ammo boxes
+    // Ammo boxes
     class ThingX;
     class Items_base_F;
     class ReammoBox_F: ThingX {
@@ -80,7 +86,7 @@ class CfgVehicles {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
     };
-    //remove actions from Taru Pods
+    // Remove actions from Taru Pods
     class Pod_Heli_Transport_04_base_F: Slingload_base_F {
         GVAR(canCarry) = 0;
         GVAR(canDrag) = 0;
@@ -154,7 +160,7 @@ class CfgVehicles {
         GVAR(canDrag) = 0;
     };
 
-    //Plastic and metal case
+    // Plastic and metal case
     class PlasticCase_01_base_F: Items_base_F {
         GVAR(canCarry) = 1;
         GVAR(carryDirection) = 270;
@@ -186,6 +192,7 @@ class CfgVehicles {
     // Misc crates
     class Constructions_base_F;
     class Land_WoodenBox_F: Constructions_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
 
         GVAR(canDrag) = 1;
@@ -219,6 +226,32 @@ class CfgVehicles {
         GVAR(canCarry) = 1;
     };
 
+    // Weapons dropped from dead body
+    class WeaponHolderSimulated: ThingX {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,0.5,1.3};
+        GVAR(carryDirection) = 0;
+
+        // z-position floats from -1.2 to > 0
+        // It's OK for carrying but odd for dragging
+        // Needs workaround to drag correctly. Disabled ATM
+        GVAR(canDrag) = 0;
+        GVAR(dragPosition[]) = {0,1,0};
+        GVAR(dragDirection) = 0;
+    };
+
+    class ReammoBox;
+    // Dropped weapons/gear
+    class WeaponHolder: ReammoBox {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition[]) = {0,0.5,1};
+        GVAR(carryDirection) = 0;
+
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition[]) = {0,1,0};
+        GVAR(dragDirection) = 0;
+    };
+
     class Lamps_base_F;
     class Land_PortableLight_single_F: Lamps_base_F {
         GVAR(canCarry) = 1;
@@ -232,7 +265,7 @@ class CfgVehicles {
     class FloatingStructure_F;
     class Land_Camping_Light_F: FloatingStructure_F {
         GVAR(canCarry) = 1;
-        // if y < 0.9 player gets damage
+        // If y < 0.9 player gets damaged
         GVAR(carryPosition)[] = {0,0.9,1};
 
         GVAR(canDrag) = 1;
@@ -246,25 +279,38 @@ class CfgVehicles {
         GVAR(dragPosition)[] = {0,0.7,0};
     };
 
-    // some terrain objects
+    // Flexible Fuel tanks, 300L
+    class FlexibleTank_base_F: ThingX {
+        GVAR(canCarry) = 1;
+        GVAR(carryPosition)[] = {0,0.65,0};
 
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition)[] = {0,1,0};
+    };
+
+    // Some terrain objects
     class Land_CampingTable_F: ThingX {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
         GVAR(carryPosition)[] = {0,1,0.5};
     };
     class Land_CampingTable_small_F: ThingX {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
         GVAR(carryPosition)[] = {0,1,0.5};
     };
     class Land_GarbageContainer_closed_F: ThingX {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canDrag) = 1;
         GVAR(dragDirection) = 180;
     };
     class Land_GarbageContainer_open_F: ThingX {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canDrag) = 1;
         GVAR(dragDirection) = 180;
     };
     class Land_Sun_chair_F: ThingX {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
         GVAR(carryDirection) = 90;
 
@@ -273,56 +319,69 @@ class CfgVehicles {
         GVAR(dragDirection) = 90;
     };
     class Land_TablePlastic_01_F: ThingX {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
         GVAR(carryPosition)[] = {0,1,0};
 
         GVAR(canDrag) = 1;
     };
     class Land_Tyre_F: ThingX {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
         GVAR(carryPosition)[] = {0,0.6,1};
     };
     class Land_WoodenTable_large_F: ThingX {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canDrag) = 1;
         GVAR(dragDirection) = 90;
     };
     class Land_BarrelSand_F: Items_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canDrag) = 1;
         GVAR(dragPosition)[] = {0,1,0};
     };
     class Land_BarrelWater_F: Items_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canDrag) = 1;
         GVAR(dragPosition)[] = {0,1,0};
     };
     class Land_Bucket_F: Items_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
         GVAR(carryPosition)[] = {0,0.6,1};
     };
     class Land_CanisterPlastic_F: Items_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
         GVAR(carryPosition)[] = {0,0.6,0};
     };
     class Land_GarbageBarrel_01_english_F: Items_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canDrag) = 1;
     };
     class Land_MetalBarrel_F: Items_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canDrag) = 1;
         GVAR(dragPosition)[] = {0,1,0};
     };
     class Land_Pallet_F: Constructions_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
 
         GVAR(canDrag) = 1;
     };
     class Land_Pallet_vertical_F: Constructions_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
         GVAR(carryPosition)[] = {0,0.6,0.6};
         GVAR(carryDirection) = 180;
     };
     class Land_WheelCart_F: Constructions_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canDrag) = 1;
     };
     class Land_WorkStand_F: Constructions_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
         GVAR(carryPosition)[] = {0,1,0};
 
@@ -331,35 +390,41 @@ class CfgVehicles {
     };
     class Market_base_F;
     class Land_Basket_F: Market_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
         GVAR(carryPosition)[] = {0,0.6,0.5};
     };
     class Land_WoodenCart_F: Market_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canDrag) = 1;
     };
 
-    // static classes need XEH
 
+    // Static classes need XEH
     class NonStrategic;
     class Land_Pallets_F: NonStrategic {
         XEH_INHERITED;
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canDrag) = 1;
     };
     class Camping_base_F;
     class Land_CampingChair_V1_folded_F: Camping_base_F {
         XEH_INHERITED;
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
         GVAR(carryPosition)[] = {0,0.6,1};
     };
     class Stall_base_F;
     class Land_CratesPlastic_F: Stall_base_F {
         XEH_INHERITED;
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
         GVAR(carryPosition)[] = {0,0.6,1};
     };
     class House_Small_F;
     class Land_MetalBarrel_empty_F: House_Small_F {
         XEH_INHERITED;
+        EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canDrag) = 1;
         GVAR(dragPosition)[] = {0,1,0};
     };

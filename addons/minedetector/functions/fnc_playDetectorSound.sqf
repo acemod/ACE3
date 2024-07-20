@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Play the detector sound
@@ -28,6 +28,6 @@ if (!alive _unit) exitWith {
 if (_unit getVariable [QGVAR(isUsingHeadphones), false] && {_unit == ACE_player}) then {
     playSound _soundClass;
 } else {
-    private _posASL = AGLtoASL (_unit modelToWorld (_unit selectionPosition "granat"));
+    private _posASL = _unit modelToWorldWorld (_unit selectionPosition "granat");
     [_soundClass, _posASL, 3, 15] call EFUNC(common,playConfigSound3D);
 };

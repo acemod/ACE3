@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Nic547, commy2
  * Handcuffs a unit.
@@ -42,6 +42,7 @@ if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith 
 if (_state) then {
     _unit setVariable [QGVAR(isHandcuffed), true, true];
     [_unit, "setCaptive", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
+    [_unit, "blockRadio", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
 
     if (_unit getVariable [QGVAR(isSurrendering), false]) then {  //If surrendering, stop
         [_unit, false] call FUNC(setSurrendered);
@@ -57,7 +58,7 @@ if (_state) then {
     // fix anim on mission start (should work on dedicated servers)
     [{
         params ["_unit"];
-        if (!(_unit getVariable [QGVAR(isHandcuffed), false])) exitWith {};
+        if !(_unit getVariable [QGVAR(isHandcuffed), false]) exitWith {};
 
         if ((vehicle _unit) == _unit) then {
             [_unit] call EFUNC(common,fixLoweredRifleAnimation);
@@ -82,6 +83,7 @@ if (_state) then {
 } else {
     _unit setVariable [QGVAR(isHandcuffed), false, true];
     [_unit, "setCaptive", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
+    [_unit, "blockRadio", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
 
     //remove AnimChanged EH
     private _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
@@ -89,7 +91,7 @@ if (_state) then {
     _unit removeEventHandler ["AnimChanged", _animChangedEHID];
     _unit setVariable [QGVAR(handcuffAnimEHID), -1];
 
-    if (((vehicle _unit) == _unit) && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
+    if (((vehicle _unit) == _unit) && {_unit call EFUNC(common,isAwake)}) then {
         //Break out of hands up animation loop
         [_unit, "ACE_AmovPercMstpScapWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
     };

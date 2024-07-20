@@ -8,16 +8,18 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"VKing", "Jonpas"};
+        authors[] = {"VKing", "Jonpas", "veteran29"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgInGameUI.hpp"
 #include "CfgVehicles.hpp"
 #include "ACE_Settings.hpp"
 #include "ACE_UI.hpp"
 
 #include "RscChat.hpp"
+#include "RscInGameUI.hpp"
 #include "RscVignette.hpp"

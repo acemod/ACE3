@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: VKing
  * Calculate FCS solution
@@ -44,14 +44,13 @@ private _turretConfig = [configOf _vehicle, _turret] call EFUNC(common,getTurret
                 if (_x != "this") then {
                     _weaponMagazines append getArray (configFile >> "CfgWeapons" >> _weapon >> _x >> "magazines");
                 };
-                false
-            } count _muzzles;
+            } forEach _muzzles;
 
             // Fix the `in` operator being case sensitive and BI fucking up the spelling of their own classnames
-            private _weaponMagazinesCheck = _weaponMagazines apply {toLower _x};
+            private _weaponMagazinesCheck = _weaponMagazines apply {toLowerANSI _x};
 
             // Another BIS fix: ShotBullet simulation uses weapon initSpeed, others ignore it
-            if (toLower _magazine in _weaponMagazinesCheck && {_bulletSimulation == "shotBullet"}) exitWith {
+            if (toLowerANSI _magazine in _weaponMagazinesCheck && {_bulletSimulation == "shotBullet"}) exitWith {
                 private _initSpeedCoef = getNumber(configFile >> "CfgWeapons" >> _weapon >> "initSpeed");
 
                 if (_initSpeedCoef < 0) then {
@@ -62,8 +61,7 @@ private _turretConfig = [configOf _vehicle, _turret] call EFUNC(common,getTurret
                     _initSpeed = _initSpeedCoef;
                 };
             };
-            false
-        } count (_vehicle weaponsTurret _turret);
+        } forEach (_vehicle weaponsTurret _turret);
 
         private _offset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, _angleTarget, _distance];
         _offset = parseNumber _offset;
@@ -72,8 +70,7 @@ private _turretConfig = [configOf _vehicle, _turret] call EFUNC(common,getTurret
         _FCSMagazines pushBack _magazine;
         _FCSElevation pushBack _offset;
     };
-    false
-} count (_vehicle magazinesTurret _turret);
+} forEach (_vehicle magazinesTurret _turret);
 
 [_vehicle, format ["%1_%2", QGVAR(Distance),  _turret],     _distance] call EFUNC(common,setVariablePublic);
 [_vehicle, format ["%1_%2", QGVAR(InitSpeed), _turret], _FCSInitSpeed] call EFUNC(common,setVariablePublic);

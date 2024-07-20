@@ -13,15 +13,13 @@ class CfgPatches {
     };
 };
 
-#include "ACE_Settings.hpp" 
+#include "ACE_Settings.hpp"
 #include "CfgEventhandlers.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 
 
 class RscControlsGroup;
-class VScrollbar;
-class HScrollbar;
 class RscText;
 class RscMapControl;
 class RscControlsGroupNoScrollbars;
