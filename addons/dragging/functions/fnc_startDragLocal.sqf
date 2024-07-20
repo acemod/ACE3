@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player, cursorTarget, true] call ace_dragging_fnc_startDragLocal;
+ * [player, cursorTarget, true] call ace_dragging_fnc_startDragLocal
  *
  * Public: No
  */

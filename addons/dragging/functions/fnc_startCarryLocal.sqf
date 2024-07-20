@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player, cursorTarget, true] call ace_dragging_fnc_startCarryLocal;
+ * [player, cursorTarget, true] call ace_dragging_fnc_startCarryLocal
  *
  * Public: No
  */
