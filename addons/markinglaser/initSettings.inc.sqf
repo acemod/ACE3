@@ -4,5 +4,5 @@
     [LSTRING(Setting_Enabled_DisplayName), LSTRING(Setting_Enabled_Description)],
     ELSTRING(common,ACEKeybindCategoryVehicles),
     true,
-    true
+    1
 ] call CBA_fnc_addSetting;

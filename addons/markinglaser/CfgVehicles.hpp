@@ -1,5 +1,3 @@
-class CBA_Extended_EventHandlers_base;
-
 class CfgVehicles {
     class AllVehicles;
     class Air: AllVehicles {
@@ -10,8 +8,8 @@ class CfgVehicles {
                 property = QGVAR(enabled);
                 control = "Checkbox";
                 typeName = "BOOL";
-                expression = QUOTE(_this setVariable [ARR_3('GVAR(enabled)',_value,true)]);
-                defaultValue = "(true)";
+                expression = QUOTE(_this setVariable [ARR_3(QQGVAR(enabled),_value,true)]);
+                defaultValue = "true";
                 condition = "objectVehicle";
             };
         };

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Renders all marking lasers.
@@ -18,7 +18,7 @@
 if (GVAR(lasers) isEqualTo []) exitWith {};
 
 #ifndef DEBUG_MODE_FULL
-private _controlledUnit = [ACE_player, ACE_controlledUAV#1] select unitIsUAV cameraOn;
+private _controlledUnit = [ACE_player, ACE_controlledUAV # 1] select (unitIsUAV cameraOn);
 if (currentVisionMode _controlledUnit != 1 && {
     (!isNull curatorCamera) && {
         (_curator getVariable ["BIS_fnc_curatorVisionModes_current", 0]) != 0
@@ -41,12 +41,12 @@ if (currentVisionMode _controlledUnit != 1 && {
     // 0.1 is added to calculated values, seems to be slightly inaccurate
     _gimbalLimits params ["_minDir", "_maxDir", "_minElev", "_maxElev"];
     private _modelVector = _aircraft vectorWorldToModelVisual _vector;
-    private _dir = _modelVector#0 atan2 _modelVector#1;
+    private _dir = _modelVector # 0 atan2 _modelVector # 1;
     if (_dir < _minDir - 0.1 || {_dir > _maxDir + 0.1}) then {
         continue;
     };
 
-    private _elevation = _modelVector#2 atan2 vectorMagnitude [_modelVector#0, _modelVector#1, 0];
+    private _elevation = _modelVector # 2 atan2 vectorMagnitude [_modelVector # 0, _modelVector # 1, 0];
     if (_elevation < _minElev - 0.1 || {_elevation > _maxElev + 0.1}) then {
         continue;
     };

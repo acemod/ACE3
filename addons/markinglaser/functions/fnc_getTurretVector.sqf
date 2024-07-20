@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Calculates the directional vector of a turret mounted marking laser.
@@ -21,7 +21,7 @@ private _turretInfo = _aircraft getVariable [QGVAR(turretInfo), []];
 _turretInfo params ["_turretPath", "_animationSources", "_followFreeLook"];
 
 private _controlledTurret = if (unitIsUAV cameraOn) then {
-    ACE_controlledUAV#2
+    ACE_controlledUAV # 2
 } else {
     cameraOn unitTurret ACE_player
 };
@@ -31,8 +31,8 @@ if ((cameraOn == _aircraft) && {(_followFreeLook && {cameraView == "INTERNAL"}) 
     (AGLToASL positionCameraToWorld [0, 0, 0]) vectorFromTo (AGLToASL positionCameraToWorld [0, 0, 1])
 } else {
     // Get turret dir through animation source
-    private _angleBody = -deg(_aircraft animationPhase _animationSources#0);
-    private _angleGun = deg(_aircraft animationPhase _animationSources#1);
+    private _angleBody = -deg (_aircraft animationPhase _animationSources # 0);
+    private _angleGun = deg (_aircraft animationPhase _animationSources # 1);
 
     _aircraft vectorModelToWorld ([1, _angleBody, _angleGun] call CBA_fnc_polar2vect)
 };

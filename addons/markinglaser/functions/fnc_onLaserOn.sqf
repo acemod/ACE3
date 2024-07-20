@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles a plane turning its marking laser off.
@@ -19,14 +19,14 @@ params ["_aircraft"];
 
 // Start PFHs if this is the first laser
 if (local _aircraft && {GVAR(updatePFH) == -1}) then {
-    GVAR(updatePFH) = [FUNC(updatePFH), 1, []] call CBA_fnc_addPerFrameHandler;
+    GVAR(updatePFH) = [LINKFUNC(updatePFH), 1, []] call CBA_fnc_addPerFrameHandler;
 
     // Make sure update is called before first render
     [] call FUNC(updatePFH);
 };
 
 if (hasInterface && {GVAR(renderPFH) == -1}) then {
-    GVAR(renderPFH) = [FUNC(renderPFH), 0, []] call CBA_fnc_addPerFrameHandler;
+    GVAR(renderPFH) = [LINKFUNC(renderPFH), 0, []] call CBA_fnc_addPerFrameHandler;
 };
 
 GVAR(lasers) pushBack _aircraft;

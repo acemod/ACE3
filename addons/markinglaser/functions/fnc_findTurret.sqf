@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Finds the turret that has control over the marking laser.
@@ -34,7 +34,7 @@ private _walkTurrets = {
 
         // Check if turret has a optics with night or thermal vision
         private _visionModes = flatten (("true" configClasses (_x >> "OpticsIn")) apply {
-            (getArray (_x >> "visionMode")) apply {toLower _x}
+            (getArray (_x >> "visionMode")) apply {toLowerANSI _x}
         });
 
         if !("nvg" in _visionModes || {"ti" in _visionModes}) then {
