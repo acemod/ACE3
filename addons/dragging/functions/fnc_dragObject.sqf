@@ -19,6 +19,12 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
+// If in ViV cargo, unload it first
+// Warn user if it failed to unload (shouldn't happen)
+if (!isNull isVehicleCargo _target && {!(objNull setVehicleCargo _target)}) then {
+    WARNING_1("ViV Unload Failed %1",_target);
+};
+
 // Get attachTo offset and direction.
 private _position = _target getVariable [QGVAR(dragPosition), [0, 0, 0]];
 private _direction = _target getVariable [QGVAR(dragDirection), 0];
