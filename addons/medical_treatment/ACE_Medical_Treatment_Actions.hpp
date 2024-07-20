@@ -231,11 +231,11 @@ class GVAR(actions) {
         displayName = CSTRING(Actions_CheckPulse);
         displayNameProgress = CSTRING(Check_Pulse_Content);
         allowedSelections[] = {"All"};
-        treatmentTime = 15;
-        condition = QUOTE(GVAR(advancedDiagnose) != 0);
+        treatmentTime = QUOTE([ARR_2(2.5,15)] select GVAR(enableRealisticPulseChecking));
+        condition = QUOTE(GVAR(advancedDiagnose) != 0 && {!GVAR(enableRealisticPulseChecking) || {(_medic getSlotItemName TYPE_WATCH) isKindOf [ARR_2('ItemWatch',configFile >> 'CfgWeapons')]}});
         callbackSuccess = QFUNC(checkPulse);
         callbackProgress = QFUNC(checkPulseProgress);
-        callbackFailure = QUOTE(QQGVAR(checkPulse) cutText [ARR_2('','PLAIN')];);
+        callbackFailure = QUOTE(QQGVAR(checkPulse) cutText [ARR_2('','PLAIN')]);
         animationMedicProne = "";
         animationMedicSelfProne = "";
     };

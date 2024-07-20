@@ -17,6 +17,8 @@
  * Public: No
  */
 
+if (!GVAR(enableRealisticPulseChecking)) exitWith {true};
+
 (_this select 0) params ["", "_patient"];
 
 private _display = uiNamespace getVariable [QGVAR(checkPulseDisplay), displayNull];
@@ -32,6 +34,10 @@ if (isNull _display) then {
     private _nextPulse = _lastPulse + (if (_pulse == 0) then {1e99} else { 60 / _pulse });
     if (CBA_missionTime > _nextPulse) then { _display setVariable [QGVAR(lastPulse), _nextPulse]; };
     private _fade = (linearConversion [-0.1, 0, CBA_missionTime - _nextPulse, 0, 0.85, true] max linearConversion [0.35, 0, CBA_missionTime - _lastPulse, 0, 0.75, true]) ^ 2;
+
+    if (EGVAR(common,epilepsyFriendlyMode)) then {
+        _fade = _fade min 0.2;
+    };
 
     private _ctrlVignette = _display displayCtrl 5000;
     _ctrlVignette ctrlSetTextColor [0, 0, 0, _fade];
