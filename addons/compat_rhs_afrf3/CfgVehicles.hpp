@@ -60,7 +60,6 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretFireProb) = 0.7;
         EGVAR(vehicle_damage,engineFireProb) = 0.7;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
-
         class EGVAR(interaction,anims) {
             class wheel_1_unhide {
                 positions[] = {{-0.8,-2,0}};

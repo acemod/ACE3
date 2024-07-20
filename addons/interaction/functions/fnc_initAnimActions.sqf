@@ -18,58 +18,118 @@
 params ["_object"];
 
 private _class = typeOf _object;
-if (!GVAR(enableAnimActions) || {_class in GVAR(initializedAnimClasses)}) exitWith {};
+
+if (_class in GVAR(initializedAnimClasses)) exitWith {};
+
 GVAR(initializedAnimClasses) pushBack _class;
 
 private _statement = {
     params ["_target", "_player", "_params"];
     _params params ["_anim", "_phase", "_duration"];
     TRACE_5("statement",_target,_player,_anim,_phase,_duration);
+
     [
         _duration,
         [_target, _player, _anim, _phase],
         {
             (_this select 0) params ["_target", "_player", "_anim", "_phase"];
+
             private _items = _target getVariable [
                 format [QGVAR(animsItems_%1), _anim],
                 getArray (configOf _target >> QGVAR(anims) >> _anim >> "items")
             ];
-            private _success = true;
+
+            // If 1 object was spawned in, consider it a success
+            private _success = false;
+
             if (_items isNotEqualTo []) then {
-                if (_items isEqualType "") then {_items = [_items]};
-                private _emptyPosAGL = [_target, _items select 0, _player] call EFUNC(common,findUnloadPosition);
-                if (_emptyPosAGL isEqualTo []) exitWith {
-                    [LELSTRING(common,NoRoomToUnload)] call EFUNC(common,displayTextStructured);
-                    _success = false;
+                if (_items isEqualType "") then {
+                    _items = [_items];
                 };
-                private ["_weaponHolder"];
+
+                private _weaponHolder = objNull;
+
                 {
-                    switch true do {
-                        case (1 == getNumber (configFile >> "CfgVehicles" >> _x >> "isBackpack")): {
-                            if (isNil "_weaponHolder") then {
-                                _weaponHolder = createVehicle ["GroundWeaponHolder", _emptyPosAGL, [], 0, "CAN_COLLIDE"];
+                    private _type = (_x call EFUNC(common,getItemType)) select 0;
+
+                    if (_type == "") then {
+                        private _emptyPosAGL = [];
+
+                        // This covers testing vehicle stability and finding a safe position
+                        for "_i" from 1 to 3 do {
+                            _emptyPosAGL = [_target, _x, _player] call EFUNC(common,findUnloadPosition);
+
+                            if (_emptyPosAGL isNotEqualTo []) exitWith {};
+                        };
+
+                        // If still no valid position, try the next item
+                        if (_emptyPosAGL isEqualTo []) then {
+                            [LELSTRING(common,NoRoomToUnload)] call EFUNC(common,displayTextStructured);
+
+                            continue;
+                        };
+
+                        private _object = createVehicle [_x, _emptyPosAGL, [], 0, "CAN_COLLIDE"];
+
+                        if (!isNull _object) then {
+                            // Prevent items from taking damage when unloaded
+                            [_object, "blockDamage", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+                            [EFUNC(common,statusEffect_set), [_object, "blockDamage", QUOTE(ADDON), false], 2] call CBA_fnc_waitAndExecute;
+
+                            _success = true;
+                        } else {
+                            WARNING_1("Failed to create object of type '%1'",_x);
+                        };
+
+                        continue;
+                    };
+
+                    // Functions/code below are guaranteed to spawn in objects
+                    _success = true;
+
+                    // getItemType considers backpacks as weapons, so handle them first
+                    if (getNumber (configFile >> "CfgVehicles" >> _x >> "isBackpack") == 1) then {
+                        if (backpack _player == "") then {
+                            _player addBackpackGlobal _x;
+                        } else {
+                            if (isNull _weaponHolder) then {
+                                _weaponHolder = nearestObject [_player, "WeaponHolder"];
+
+                                if (isNull _weaponHolder || {_player distance _weaponHolder > 2}) then {
+                                    _weaponHolder = createVehicle ["GroundWeaponHolder", [0, 0, 0], [], 0, "NONE"];
+                                    _weaponHolder setPosASL getPosASL _player;
+                                };
                             };
+
                             _weaponHolder addBackpackCargoGlobal [_x, 1];
                         };
-                        case (getNumber (configfile >> "CfgWeapons" >> _x >> "type") in [TYPE_BINOCULAR_AND_NVG, TYPE_ITEM]): {
-                            if (isNil "_weaponHolder") then {
-                                _weaponHolder = createVehicle ["GroundWeaponHolder", _emptyPosAGL, [], 0, "CAN_COLLIDE"];
-                            };
-                            _weaponHolder addItemCargoGlobal [_x, 1];
+
+                        continue;
+                    };
+
+                    switch (_type) do {
+                        case "weapon": {
+                            [_player, _x, true] call CBA_fnc_addWeapon;
                         };
-                        default {
-                            createVehicle [_x, _emptyPosAGL];
+                        case "item": {
+                            [_player, _x, true] call CBA_fnc_addItem;
+                        };
+                        case "magazine": {
+                            [_player, _x, -1, true] call CBA_fnc_addMagazine;
                         };
                     };
                 } forEach _items;
             };
+
             if (!_success) exitWith {};
+
             _target animate [_anim, _phase, true];
         },
         {},
         nil,
         {
             (_this select 0) params ["_target", "", "_anim", "_phase"];
+
             _target animationPhase _anim != _phase
         },
         ["isNotSwimming"]
@@ -80,8 +140,7 @@ private _condition = {
     params ["_target", "_player", "_params"];
     _params params ["_anim", "_phase"];
 
-    GVAR(enableAnimActions)
-    && {_target animationPhase _anim != _phase}
+    _target animationPhase _anim != _phase
     && {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
 };
 
@@ -95,9 +154,9 @@ private _config = configOf _object;
 
     if !(
         isClass _animationSourcesConfig // anim exist
-        && {0 != [_animationSourcesConfig >> "scope", "number", 1] call CBA_fnc_getConfigEntry} // anim not hidden
+        && {0 != [_animationSourcesConfig >> "scope", "NUMBER", 1] call CBA_fnc_getConfigEntry} // anim not hidden
         && {isNumber (_animationSourcesConfig >> "initPhase")} // anim correct (some CUP anims are inherited and cleared)
-        && {0 != [_animConfig >> "enabled", "number", 1] call CBA_fnc_getConfigEntry} // anim enabled
+        && {0 != [_animConfig >> "enabled", "NUMBER", 1] call CBA_fnc_getConfigEntry} // anim enabled
     ) then {continue};
 
     private _positions = [];
@@ -116,10 +175,11 @@ private _config = configOf _object;
         continue;
     };
 
-    private _phase = [_animConfig >> "phase", "number", 1] call CBA_fnc_getConfigEntry;
-    private _name = [_animConfig >> "name", "text", localize "str_a3_cfgactions_unmountitem0"] call CBA_fnc_getConfigEntry;
-    private _icon = [_animConfig >> "icon", "text", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa"] call CBA_fnc_getConfigEntry;
-    private _duration = [_animConfig >> "duration", "number", 10] call CBA_fnc_getConfigEntry;
+    private _phase = [_animConfig >> "phase", "NUMBER", 1] call CBA_fnc_getConfigEntry;
+    private _name = [_animConfig >> "name", "TEXT", localize "str_a3_cfgactions_unmountitem0"] call CBA_fnc_getConfigEntry;
+    private _icon = [_animConfig >> "icon", "TEXT", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa"] call CBA_fnc_getConfigEntry;
+    private _duration = [_animConfig >> "duration", "NUMBER", 10] call CBA_fnc_getConfigEntry;
+
     {
         private _action = [
             format [QGVAR(anim_%1_%2), _anim, _forEachIndex],

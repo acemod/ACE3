@@ -149,11 +149,20 @@ GVAR(isOpeningDoor) = false;
 ["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);
 
 ["CBA_settingsInitialized", {
+    TRACE_2("settingsInitialized",GVAR(disableNegativeRating),GVAR(enableAnimActions));
+
     if (GVAR(disableNegativeRating)) then {
         player addEventHandler ["HandleRating", {
             (_this select 1) max 0
         }];
     };
+
+    if (!GVAR(enableAnimActions)) exitWith {};
+
+    // Don't add inherited anim actions (but actions are added to child classes)
+    {
+        [configName _x, "InitPost", LINKFUNC(initAnimActions), true, [], true] call CBA_fnc_addClassEventHandler;
+    } forEach (QUOTE(isClass (_x >> QQGVAR(anims)) && {!isClass (inheritsFrom _x >> QQGVAR(anims))}) configClasses (configFile >> "CfgVehicles"));
 }] call CBA_fnc_addEventHandler;
 
 {
@@ -178,8 +187,3 @@ private _action = [
 {
     [_x, 0, ["ACE_MainActions"], _action, true] call EFUNC(interact_menu,addActionToClass);
 } forEach ["WeaponHolder", "WeaponHolderSimulated"];
-
-{
-    if (isClass (inheritsFrom _x >> QGVAR(anims))) then {continue};
-    [configName _x, "initPost", {_this call FUNC(initAnimActions)}, true, [], true] call CBA_fnc_addClassEventHandler;
-} forEach (QUOTE(isClass (_x >> QQGVAR(anims))) configClasses (configFile >> "CfgVehicles"));

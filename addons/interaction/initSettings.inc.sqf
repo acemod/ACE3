@@ -44,8 +44,8 @@
     format ["ACE %1", LLSTRING(DisplayName)],
     true,
     true,
-    {},
-    true
+    {[QGVAR(enableAnimActions), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
