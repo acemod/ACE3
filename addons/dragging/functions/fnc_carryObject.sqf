@@ -21,7 +21,7 @@ TRACE_2("params",_unit,_target);
 
 // If in ViV cargo, unload it first
 if (!isNull isVehicleCargo _target) then {
-    objNull setVehicleCargo _target;
+    if (!(objNull setVehicleCargo _target)) then { WARNING_1("ViV Unload Failed %1",_target); };
 };
 
 // Get attachTo offset and direction
