@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Arguments <ARRAY>
- *   0: Medic <OBJECT>
- *   1: Patient <OBJECT>
+ * - 0: Medic <OBJECT>
+ * - 1: Patient <OBJECT>
  *
  * Return Value:
  * Continue CPR <BOOL>
