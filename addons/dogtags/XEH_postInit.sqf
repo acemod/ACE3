@@ -7,6 +7,11 @@
 if (hasInterface || isServer) then {
     [QGVAR(broadcastDogtagInfo), {
         GVAR(dogtagsData) set _this;
+        
+        if (isNil "CBA_fnc_renameInventoryItem") exitWith {}; // requires https://github.com/CBATeam/CBA_A3/pull/1329
+        params ["_item", "_dogTagData"];
+        private _name = [LLSTRING(itemName), ": ", _dogtagData param [0, LELSTRING(common,unknown)]] joinString "";
+        [_item, _name] call CBA_fnc_renameInventoryItem;
     }] call CBA_fnc_addEventHandler;
 
     if (isServer) then {
