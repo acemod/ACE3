@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Finger
+component: finger
 description: Finger pointing.
 group: feature
 category: realism
@@ -20,7 +21,3 @@ Allows players to point in a direction with their fingers, when they do so peopl
 
 ### 2.1 How to point things
 - Press <kbd>⇧&nbsp;Shift</kbd>+<kbd>`</kbd> (QWERTY and AZERTY layouts)
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="finger" %}

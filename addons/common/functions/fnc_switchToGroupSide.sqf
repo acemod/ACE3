@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Stack group switches. Will always trace back to original group.
@@ -58,7 +58,7 @@ if (_switch) then {
                 private _newGroup = createGroup (_x select 1);
                 [_unit] joinSilent _newGroup;
             };
-            if (count units _currentGroup == 0) then {
+            if (units _currentGroup isEqualTo []) then {
                 deleteGroup _currentGroup;
             };
             _previousGroupsList set [_forEachIndex, objNull];

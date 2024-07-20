@@ -1,25 +1,25 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe
  * Text statement for the smoke / chemlight time to live stat.
  *
  * Arguments:
- * 0: not used
- * 1: item config path (CONFIG)
+ * 0: Not used
+ * 1: Item config path <CONFIG>
  *
  * Return Value:
- * String to display
+ * Stat Text <STRING>
  *
  * Public: No
  */
 
 params ["", "_config"];
+TRACE_1("statTextStatement_smokeChemTTL",_config);
 
 private _TTL = getNumber (configFile >> "CfgAmmo" >> getText (_config >> "ammo") >> "timeToLive");
 
 if (_TTL > 3600) then {
-
-    _TTL = _TTL / 60^2;
+    _TTL = _TTL / 3600;
     _TTL = str _TTL splitString ".";
 
     if (count _TTL > 1) then  {
@@ -35,6 +35,5 @@ if (_TTL > 3600) then {
         ]
     };
 } else {
-
-    format ["%1m", round (_TTL / 60)];
+    format ["%1m", round (_TTL / 60)]
 };

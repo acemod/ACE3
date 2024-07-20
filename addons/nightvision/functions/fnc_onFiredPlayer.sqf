@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, Dslyecxi, PabstMirror
  * Change the blending when the player fires. Called from the unified fired EH only for the local player and his vehicle.
@@ -16,9 +16,14 @@
  */
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
-TRACE_7("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile);
+TRACE_7("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
-if ((!GVAR(running)) || {!GVAR(shutterEffects)} || {_weapon == "throw"} || {_weapon == "put"}) exitWith {};
+if ((!GVAR(running))
+    || {!GVAR(shutterEffects)}
+    || {EGVAR(common,epilepsyFriendlyMode)}
+    || {_weapon == "throw"}
+    || {_weapon == "put"}
+) exitWith {};
 
 private _visibleFireCoef = 1;
 if (_unit == ace_player) then {
@@ -50,7 +55,7 @@ _visibleFire = _visibleFireCoef * _visibleFire;
 if (_ammo isKindOf "BulletBase") then {
     _visibleFire = _visibleFire min 5; // Prevent every shot from triggering with HMG
 };
-TRACE_1("final", _visibleFire);
+TRACE_1("final",_visibleFire);
 
 if (_visibleFire <= 1.5) exitWith {};
 if ((random (linearConversion [1, 4, GVAR(nvgGeneration), 10, 20])) > _visibleFire) exitWith {};

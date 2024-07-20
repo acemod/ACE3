@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Sets the structural damage of a vehicle without altering the hitPoints, requires local vehicle.
@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Local Vehicle to Damage <OBJECT>
  * 1: Total Damage <NUMBER>
+ * 2: Use destruction effects <BOOL>
  *
  * Return Value:
  * None
@@ -16,7 +17,7 @@
  * Public: No
  */
 
-params ["_vehicle", "_damage"];
+params ["_vehicle", "_damage", ["_useEffects", false]];
 TRACE_2("params",_vehicle,_damage);
 
 // can't execute all commands if the vehicle isn't local. exit here.
@@ -31,7 +32,7 @@ if (_damageDisabled) then {
     _vehicle allowDamage true;
 };
 
-_vehicle setDamage _damage;
+_vehicle setDamage [_damage, _useEffects];
 
 // restore original hitpoint damage values
 {

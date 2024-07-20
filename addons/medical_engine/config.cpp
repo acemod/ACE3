@@ -1,5 +1,13 @@
 #include "script_component.hpp"
 
+#pragma hemtt flag pe23_ignore_has_include
+#if __has_include("\z\ace\addons\nomedical\script_component.hpp")
+#define PATCH_SKIP "No Medical"
+#endif
+
+#ifdef PATCH_SKIP
+ACE_PATCH_NOT_LOADED(ADDON,PATCH_SKIP)
+#else
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
@@ -14,10 +22,12 @@ class CfgPatches {
     };
 };
 
-#include "CfgEventHandlers.hpp"
-
 #include "CfgActions.hpp"
-#include "CfgMoves.hpp"
+#include "CfgEventHandlers.hpp"
 #include "CfgExtendedAnimation.hpp"
+#include "CfgFunctions.hpp"
+#include "CfgMoves.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
+
+#endif

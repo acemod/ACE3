@@ -27,32 +27,32 @@ Sync the module with vehicles and players. Custom keys will be handed to players
 
 ## 3. Scripting
 
-### 3.1 Assing Vehicle Key
+### 3.1 Adding Vehicle Key
 
 `ace_vehiclelock_fnc_addKeyForVehicle`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Unit | Object | Required
-1  | Vehicle | Object | Required
-2  | Use Custom Key | Boolean | Optional (default: `false`, `false` for side key, `true` for custom key)
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Unit | Object | Required |
+| 1  | Vehicle | Object | Required |
+| 2  | Use Custom Key | Boolean | Optional (default: `false`, `false` for side key, `true` for custom key) |
+| **R** | None | None | Return value |
 
 #### 3.1.1 Example
 
 `[bob, car1, true] call ace_vehiclelock_fnc_addKeyForVehicle;`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  | `bob` | Unit the key will be added to
-1  | `car1` | Vehicle the key will work on
-2  | `true` | Set custom key
+|    | Arguments | Explanation |
+|----| --------- | ----------- |
+| 0  | `bob` | Unit the key will be added to |
+| 1  | `car1` | Vehicle the key will work on |
+| 2  | `true` | Set custom key |
 
 ### 3.2 Override Side
 
 To override a vehicle's side, allowing locking and unlocking using a different side's key, use the following on that vehicle (use wanted side instead of `west`):
 
-```js
+```sqf
 this setVariable ["ace_vehiclelock_lockSide", west];
 ```
 
@@ -60,6 +60,6 @@ this setVariable ["ace_vehiclelock_lockSide", west];
 
 To override default lock pick strength for a vehicle, that is how long lock picking will take, use the following on that vehicle (use wanted time in seconds instead of `5`):
 
-```js
+```sqf
 this setVariable ["ace_vehiclelock_lockpickStrength", 5];
 ```

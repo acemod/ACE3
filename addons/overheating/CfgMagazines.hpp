@@ -7,7 +7,7 @@ class CfgMagazines {
         descriptionshort = CSTRING(SpareBarrelDescription);
         picture = QUOTE(PATHTOF(UI\spare_barrel_ca.paa));
         count = 1;
-        mass = 60;
+        mass = 25;
         ACE_isUnique = 1;
     };
 };

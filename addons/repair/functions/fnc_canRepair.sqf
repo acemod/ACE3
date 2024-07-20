@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Check if the repair action can be performed.
@@ -37,13 +37,8 @@ private _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
 };
 if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitWith {false};
 
-// Items can be an array of required items or a string to a missionNamespace variable
-private _items = if (isArray (_config >> "items")) then {
-    getArray (_config >> "items");
-} else {
-    missionNamespace getVariable [getText (_config >> "items"), []]
-};
-if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
+private _items = _config call FUNC(getRepairItems);
+if (_items isNotEqualTo [] && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
 
 private _return = true;
 if (getText (_config >> "condition") != "") then {
@@ -70,7 +65,7 @@ if (!_return) exitWith {false};
 // if (_vehicleStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitWith {false};
 
 private _repairLocations = getArray (_config >> "repairLocations");
-if (!("All" in _repairLocations)) then {
+if !("All" in _repairLocations) then {
     private _repairFacility = {([_caller] call FUNC(isInRepairFacility)) || ([_target] call FUNC(isInRepairFacility))};
     private _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC(isNearRepairVehicle))};
     {

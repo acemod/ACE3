@@ -9,7 +9,7 @@ class CfgVehicles {
                     statement = QUOTE(call FUNC(menuInit));
                     showDisabled = 0;
                     icon = QPATHTOF(UI\DAGR_Icon.paa);
-                    exceptions[] = {"isNotInside", "isNotSitting"};
+                    exceptions[] = {"notOnMap", "isNotInside", "isNotSitting"};
                     class GVAR(toggle) {
                         displayName = CSTRING(ToggleDAGR);
                         condition = QUOTE([ARR_2(_player,'ACE_DAGR')] call EFUNC(common,hasItem));

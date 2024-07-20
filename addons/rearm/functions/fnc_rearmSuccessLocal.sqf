@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Rearms a vehicle on the turret owner.
@@ -54,7 +54,7 @@ private _maxMagazines = [_vehicle, _turretPath, _magazineClass] call FUNC(getMax
 private _ammoCounts = [_vehicle, _turretPath, _magazineClass] call FUNC(getTurretMagazineAmmo);
 TRACE_3("start",_magazineClass,_maxMagazines,_ammoCounts);
 
-private _ammoToAdd = if (GVAR(level) == 2) then {_numRounds} else {_rounds};
+private _ammoToAdd = [_rounds, _numRounds] select (GVAR(level) == 2);
 private _ammoAdded = 0;
 private _arrayModified = false; // skip needing to remove and re-add mags, if we are only adding new ones
 
@@ -74,7 +74,7 @@ while {((count _ammoCounts) < _maxMagazines) && {_ammoToAdd > 0}} do {
     _ammoToAdd = _ammoToAdd - _xAdd;
     _ammoAdded = _ammoAdded + _xAdd;
     _ammoCounts pushBack _xAdd;
-    if (!_arrayModified) then {
+    if (_arrayModified) then {
         TRACE_1("adding new mag to array",_xAdd);
     } else {
         TRACE_1("adding new mag directly",_xAdd);

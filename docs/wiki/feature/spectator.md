@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Spectator
+component: spectator
 description: A flexible spectator system.
 group: feature
 category: interaction
@@ -73,7 +74,3 @@ The <kbd>O</kbd> hotkey can be used to toggle unit and group drawing on and off.
 ### 1.10 Projectile drawing
 
 The <kbd>P</kbd> hotkey can be used to toggle projectile drawing on and off. Projectiles originating from units listed in the unit list will be drawn in real time and allow fire fights to be observed more clearly. Note that this feature may have a significant performance impact in scenarios with lots of projectiles on screen at once.
-
-## 2. Dependencies
-
-{% include dependencies_list.md component="spectator" %}

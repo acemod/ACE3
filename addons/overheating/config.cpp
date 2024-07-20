@@ -4,7 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {};
+        weapons[] = {"ACE_SpareBarrel_Item"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
@@ -25,6 +25,8 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 
 #include "ACE_Settings.hpp"
+
+#include "ACE_Arsenal_Stats.hpp"
 
 class CfgMovesBasic {
     class ManActions {

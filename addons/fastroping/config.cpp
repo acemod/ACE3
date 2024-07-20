@@ -3,12 +3,12 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {"ACE_fastropingSupplyCrate"};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_interaction"};
+        requiredAddons[] = {"ace_interaction","ace_logistics_rope"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"KoffeinFlummi", "BaerMitUmlaut", "Pokertour"};
+        authors[] = {"KoffeinFlummi", "BaerMitUmlaut", "Pokertour", "veteran29"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
@@ -19,4 +19,4 @@ class CfgPatches {
 #include "CfgSounds.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWaypoints.hpp"
-#include "CfgWeapons.hpp"
+

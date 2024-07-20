@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Explosives
+component: explosives
 description: Adds numerous improvements to using and handling explosives.
 group: feature
 category: interaction
@@ -34,6 +35,7 @@ Enables attaching explosives to vehicles.
 - Interact with the explosive <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
 - Choose the arming method.
 - For clackers use Self Interaction `Explosives` &rarr; `Detonate` and choose the corresponding Firing Device.
+- Alternatively, use <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd> (ACE3 default key bind `Detonate All on Active Clacker`) to detonate all explosives tied to the `Active Detonator`, which can be changed via the `Set Active Detonator` interaction on the desired Clacker / Dead Man Switch.
 
 ### 2.3 Defusing explosives
 - A `Defusal Kit` is required.
@@ -42,7 +44,3 @@ Enables attaching explosives to vehicles.
 - You are safe to pick it up after the action has completed.
 
 **Tip:** To increase the success rate when defusing, make sure you crawl up to the IED.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="explosives" %}

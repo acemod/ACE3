@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Missile Guidance
+component: missileguidance
 description: Various modes for different missiles.
 group: feature
 category: realism
@@ -28,7 +29,3 @@ Adds the AMG framework, for more information about it refer to the [AMG framewor
 - Switch to thermals by pressing <kbd>N</kbd> the `FLTR` LED should light up.
 - Aim at the target and hold <kbd>Tab&nbsp;↹</kbd> a crosshair will appear and the `SEEK` LED will light up.
 - Fire!
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="missileguidance" %}

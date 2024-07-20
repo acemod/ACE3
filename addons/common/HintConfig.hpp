@@ -10,6 +10,11 @@ class GVAR(debug_structuredText): ctrlStructuredText {
 };
 
 class RscTitles {
+    class GVAR(ProgressBar_Display): GVAR(ProgressBar_Dialog) {
+        duration = 1e11; // forever, essentially
+        fadeIn = 0;
+        fadeOut = 0;
+    };
     class GVAR(watchVariableUI) {
         idd = -1;
         onLoad = QUOTE(with uiNameSpace do {GVAR(watchVariableUI) = _this select 0};);
@@ -37,10 +42,10 @@ class RscTitles {
                 SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
                 colorText[] = {1, 1, 1, 1};
                 colorBackground[] = {0, 0, 0, 0.5};
-                x = safeZoneW + safeZoneX - 0 * safezoneW;  //safeZoneW + safeZoneX - 0.2 * safezoneW;
-                y = safeZoneY + 0.2 * safezoneH;
-                w = 0.2 * safeZoneW;
-                h = 0.1 * SafeZoneH;
+                x = "safeZoneW + safeZoneX - 0 * safezoneW";  //safeZoneW + safeZoneX - 0.2 * safezoneW;
+                y = "safeZoneY + 0.2 * safezoneH";
+                w = "0.2 * safeZoneW";
+                h = "0.1 * SafeZoneH";
                 font = "RobotoCondensed";
             };
         };
@@ -61,10 +66,10 @@ class RscTitles {
                 SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
                 colorText[] = {1, 1, 1, 1};
                 colorBackground[] = {0.8, 0, 0, 0.5};
-                x = 0.3 * safeZoneW + safeZoneX;
-                y = 0.4 * safezoneH + safeZoneY;
-                w = 0.4 * safeZoneW;
-                h = 0.2 * SafeZoneH;
+                x = "0.3 * safeZoneW + safeZoneX";
+                y = "0.4 * safezoneH + safeZoneY";
+                w = "0.4 * safeZoneW";
+                h = "0.2 * SafeZoneH";
             };
         };
     };

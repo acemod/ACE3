@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Returns array of uav dummy ais.
@@ -17,4 +17,4 @@
 
 params [["_vehicle", objNull, [objNull]]];
 
-crew _vehicle select {getText (configOf _x >> "simulation") == "UAVPilot"} // return
+(crew _vehicle) select {unitIsUAV _x} // return

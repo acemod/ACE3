@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 // Used by public functions
 GVAR(availableModes) = [MODE_FREE, MODE_FPS, MODE_FOLLOW];

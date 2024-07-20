@@ -19,4 +19,4 @@ class CfgPatches {
 #include "CfgFactionClasses.hpp"
 #include "CfgVehicles.hpp"
 
-#include <RscTitles.hpp>
+#include "RscTitles.hpp"

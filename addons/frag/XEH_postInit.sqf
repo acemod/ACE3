@@ -2,10 +2,10 @@
 
 if (isServer) then {
     GVAR(lastFragTime) = -1;
-    [QGVAR(frag_eh), {_this call FUNC(frago);}] call CBA_fnc_addEventHandler;
+    [QGVAR(frag_eh), LINKFUNC(frago)] call CBA_fnc_addEventHandler;
 };
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 
     // Register fire event handler
@@ -18,7 +18,7 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 // Cache for ammo type configs
-GVAR(cacheRoundsTypesToTrack) = [false] call CBA_fnc_createNamespace;
+GVAR(cacheRoundsTypesToTrack) = createHashMap;
 
 
 // Debug stuff:

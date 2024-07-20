@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Flashlights
+component: flashlights
 description: Adds handheld flashlights.
 group: feature
 category: equipment
@@ -32,7 +33,3 @@ When using those flashlights you will have a slight glow around you making this 
     <h5>Note:</h5>
     <p>The flashlights states are persistent you don't need to turn the flashlight On everytime you open the map, it will stay turned on / off.</p>
 </div>
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="flashlights" %}

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, KoffeinFlummi
  * Disables/Enables AI
@@ -29,7 +29,7 @@ if !([_unit] call EFUNC(common,isPlayer)) then {
         _unit disableConversation true;
     } else {
         //Sanity check to make sure we don't enable unconsious AI
-        if (_unit getVariable ["ace_isunconscious", false] && alive _unit) exitWith {
+        if (_unit getVariable ["ACE_isUnconscious", false] && alive _unit) exitWith {
             ERROR("Enabling AI for unconsious unit");
         };
 

@@ -31,7 +31,7 @@
             <Portuguese>Saco de Areia (vazio)</Portuguese>
             <Japanese>土のう (空)</Japanese>
             <Korean>모래주머니(비어있음)</Korean>
-            <Chinesesimp>沙包 (空)</Chinesesimp>
+            <Chinesesimp>沙包（空）</Chinesesimp>
             <Chinese>沙包 (空)</Chinese>
             <Turkish>Kum Torbası (Boş)</Turkish>
         </Key>
@@ -45,7 +45,7 @@
             <Czech>Zde nelze postavit</Czech>
             <Italian>Impossibile costruire qui</Italian>
             <Hungarian>Nem teheted ide</Hungarian>
-            <Portuguese>Não pode contruir aqui</Portuguese>
+            <Portuguese>Não pode construir aqui</Portuguese>
             <Japanese>ここでは作れません</Japanese>
             <Korean>여기에 지을 수 없습니다</Korean>
             <Chinesesimp>无法放置在此</Chinesesimp>
@@ -94,10 +94,10 @@
             <Spanish>Dejar de portar</Spanish>
             <French>Arrêter de porter</French>
             <Czech>Položit</Czech>
-            <Italian>Fine Trasporto</Italian>
+            <Italian>Termina Trasporto</Italian>
             <Hungarian>Cipelés abbahagyása</Hungarian>
             <Portuguese>Parar de carregar</Portuguese>
-            <Japanese>下ろす</Japanese>
+            <Japanese>降ろす</Japanese>
             <Korean>그만 옮기기</Korean>
             <Chinesesimp>停止搬运</Chinesesimp>
             <Chinese>停止搬運</Chinese>
@@ -133,7 +133,7 @@
             <Portuguese>Confirmar implantação</Portuguese>
             <Japanese>ここで作る</Japanese>
             <Korean>설치 확인</Korean>
-            <Chinesesimp>确认布署</Chinesesimp>
+            <Chinesesimp>确认部署</Chinesesimp>
             <Chinese>確認佈署</Chinese>
             <Turkish>Yerleştirmeyi Onayla</Turkish>
         </Key>
@@ -150,7 +150,7 @@
             <Portuguese>Cancelar implantação</Portuguese>
             <Japanese>作るのを止める</Japanese>
             <Korean>설치 취소</Korean>
-            <Chinesesimp>取消布署</Chinesesimp>
+            <Chinesesimp>取消部署</Chinesesimp>
             <Chinese>取消佈署</Chinese>
             <Turkish>Yerleştirmeyi İptal Et</Turkish>
         </Key>
@@ -167,7 +167,7 @@
             <Portuguese>Implantar saco de areia</Portuguese>
             <Japanese>土のうを設置</Japanese>
             <Korean>모래주머니 설치</Korean>
-            <Chinesesimp>布署沙包</Chinesesimp>
+            <Chinesesimp>部署沙包</Chinesesimp>
             <Chinese>佈署沙包</Chinese>
             <Turkish>Kum Torbasını Yerleştir</Turkish>
         </Key>
@@ -179,7 +179,7 @@
             <Spanish>Caja de sacos de arena</Spanish>
             <French>Caisse de sacs de sable</French>
             <Czech>Bedna na pytle s pískem</Czech>
-            <Italian>Contenitore Sacchi di Sabbia</Italian>
+            <Italian>Scatola Sacchi di Sabbia</Italian>
             <Hungarian>Homokzsákos láda</Hungarian>
             <Portuguese>Caixa de saco de areia</Portuguese>
             <Japanese>土のう入れ</Japanese>
@@ -196,7 +196,7 @@
             <Spanish>Aqui no hay arena</Spanish>
             <French>Il n'y a pas de sable ici.</French>
             <Czech>Tady není písek</Czech>
-            <Italian>Qui non cè Sabbia</Italian>
+            <Italian>Qui non c'è Sabbia</Italian>
             <Hungarian>Itt nincs homok</Hungarian>
             <Portuguese>Aqui não tem areia</Portuguese>
             <Japanese>ここに土はありません</Japanese>

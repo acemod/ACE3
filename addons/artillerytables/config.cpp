@@ -4,7 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {};
+        weapons[] = {"ACE_artilleryTable"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
@@ -29,7 +29,7 @@ class ACE_Extensions {
 
 // Common UI Stuff:
 class RscText;
-class RscListbox;
+class RscListBox;
 class RscListNBox;
 class RscPicture;
 class RscControlsGroup;
