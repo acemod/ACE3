@@ -21,8 +21,8 @@ GVAR(ppeffectRadialBlur) = -1;
 GVAR(ppeffectColorCorrect) = -1;
 GVAR(ppeffectBlur) = -1;
 
-GVAR(constMaxBrightness) = 0;
-GVAR(constMinBrightness) = -6;
+GVAR(const_MaxBrightness) = 0;
+GVAR(const_MinBrightness) = -6;
 
 GVAR(isUsingMagnification) = false;
 
