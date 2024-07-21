@@ -506,6 +506,7 @@
             <Korean>연료통 집어들기</Korean>
             <Russian>Взять канистру с топливом</Russian>
             <French>Ramasser le réservoir de carburant</French>
+            <Spanish>Coger garrafa de combustible</Spanish>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeFuelCanisterAction">
             <English>Picking fuel canister up...</English>
@@ -515,6 +516,7 @@
             <Korean>연료통 집어드는 중...</Korean>
             <Russian>Поднимаю канистру с топливом...</Russian>
             <French>Ramasser les bidons de carburant... </French>
+            <Spanish>Cogiendo garrafa de combustible...</Spanish>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectFuelCanister">
             <English>Connect fuel canister</English>
@@ -524,6 +526,7 @@
             <Korean>연료통 꽂기</Korean>
             <Russian>Подсоединить канистру с топливом</Russian>
             <French>Raccorder le réservoir de carburant</French>
+            <Spanish>Conectar garrafa de combustible</Spanish>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectFuelCanisterAction">
             <English>Connecting fuel canister...</English>
@@ -533,6 +536,7 @@
             <Korean>연료통 꽂는 중...</Korean>
             <Russian>Подсоединение топливной канистры...</Russian>
             <French>Raccorder le réservoir de carburant...</French>
+            <Spanish>Conectando garrafa de combustible...</Spanish>
         </Key>
         <Key ID="STR_ACE_Refuel_DisconnectFuelCanister">
             <English>Disconnect fuel canister</English>
@@ -542,6 +546,7 @@
             <Korean>연료통 빼기</Korean>
             <Russian>Отсоединить канистру с топливом</Russian>
             <French>Débrancher le réservoir de carburant</French>
+            <Spanish>Desconectar garrafa de combustible</Spanish>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_hoseLength_DisplayName">
             <English>Refuel hose length</English>

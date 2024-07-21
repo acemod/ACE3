@@ -15,7 +15,5 @@ private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(itemName)
     [LSTRING(WaypointPrecision_DisplayName), LSTRING(WaypointPrecision_Description)],
     _category,
     [[1, 2, 3], [LSTRING(WaypointPrecision_medium), LSTRING(WaypointPrecision_close), LSTRING(WaypointPrecision_exact)], 2],  // [values, titles, defaultIndex]
-    true, // isGlobal
-    {[QGVAR(waypointPrecision), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    false // require mission restart
+    true // isGlobal
 ] call CBA_fnc_addSetting;
