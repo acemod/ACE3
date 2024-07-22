@@ -72,7 +72,7 @@ _ammoCount = _ammoCount max 0;
 // Remove some ammo, which will be detonated
 private _removed = _ammoCount min floor (1 + random (6 / GVAR(ammoCookoffDuration)));
 
-_ammoCount = _ammoCount - _removed - _ammoCount / 3;
+_ammoCount = _ammoCount - _removed;
 
 if (_ammoCount <= 0) then {
     _magazines deleteAt _magazineIndex;
@@ -80,7 +80,7 @@ if (_ammoCount <= 0) then {
     _magazine set [1, _ammoCount]; // remove ammo that was detonated
 };
 
-private _timeBetweenAmmoDetonation = ((random 10 / sqrt _totalAmmo) min MAX_TIME_BETWEEN_AMMO_DET) max 0.3;
+private _timeBetweenAmmoDetonation = ((random 10 / sqrt _totalAmmo) min MAX_TIME_BETWEEN_AMMO_DET) max 0.1;
 TRACE_2("",_totalAmmo,_timeBetweenAmmoDetonation);
 _totalAmmo = _totalAmmo - _removed;
 
@@ -132,7 +132,7 @@ switch (_simType) do {
     case "shotshell": {
         [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
 
-        if (random 1 < 0.075) then {
+        if (random 1 < 0.15) then {
             [_object, _ammo, _speed, true] call _fnc_spawnProjectile;
         };
     };
