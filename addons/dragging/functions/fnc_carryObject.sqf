@@ -20,8 +20,9 @@ params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
 // If in ViV cargo, unload it first
-if (!isNull isVehicleCargo _target) then {
-    objNull setVehicleCargo _target;
+// Warn user if it failed to unload (shouldn't happen)
+if (!isNull isVehicleCargo _target && {!(objNull setVehicleCargo _target)}) then {
+    WARNING_1("ViV Unload Failed %1",_target);
 };
 
 // Get attachTo offset and direction
@@ -65,10 +66,10 @@ private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
 
 if (_UAVCrew isNotEqualTo []) then {
     {
-        _target deleteVehicleCrew _x;
+        [_x, true] call EFUNC(common,disableAiUAV);
     } forEach _UAVCrew;
 
-    _target setVariable [QGVAR(isUAV), true, true];
+    _target setVariable [QGVAR(isUAV), _UAVCrew, true];
 };
 
 // Check everything
