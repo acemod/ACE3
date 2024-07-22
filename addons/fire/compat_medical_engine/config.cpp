@@ -1,19 +1,20 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class SUBADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common", "rhssaf_main_loadorder"};
+        requiredAddons[] = {"ace_medical_engine"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+
+        addonRootClass = QUOTE(ADDON);
     };
 };
 
-#include "CfgAmmo.hpp"
-#include "CfgWeapons.hpp"
+#include "ACE_Medical_Treatment_Actions.hpp"
