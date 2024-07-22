@@ -418,7 +418,6 @@ class CfgVehicles {
         class GVAR(anims) {
             class showBags {
                 phase = 0;
-                //selection = "vhc_bags";
                 positions[] = {{-0.685,-2.863,0.218}, {0.685,-2.863,0.218}};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
             };
