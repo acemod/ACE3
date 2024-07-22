@@ -99,6 +99,22 @@ if (
     0
 };
 
+// Kill units in wrecks
+if (
+    !alive _vehicle &&
+    {_vehicle != _unit} && {!(_vehicle isKindOf "StaticWeapon")}
+) exitWith {
+
+    private _damages = [];
+    {
+      _damages pushBack [1, ALL_BODY_PARTS select _forEachIndex, 1]
+    } forEach ALL_HITPOINTS;
+    TRACE_6("Vehicle explosion",_unit,_shooter,_instigator,_damage,_newDamage,_damages);
+    [QEGVAR(medical,woundReceived), [_unit, _damages, _unit, _ammo]] call CBA_fnc_localEvent;
+
+    0
+};
+
 // This hitpoint is set to trigger last, evaluate all the stored damage values
 // to determine where wounds are applied
 if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
