@@ -72,7 +72,7 @@ private _fnc_addToTabs = {
             _currentTab pushBack _sort;
             _return pushBack _sortName;
         } else {
-            TRACE_1("A sort with this ID already exists", _sortName);
+            TRACE_1("A sort with this ID already exists",_sortName);
         };
     } forEach _tabsToAddTo;
 };

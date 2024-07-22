@@ -22,7 +22,7 @@ params ["_medic", "_patient", "_bodyPart"];
 TRACE_3("tourniquetRemove",_medic,_patient,_bodyPart);
 
 // Remove tourniquet from body part, exit if no tourniquet applied
-private _partIndex = ALL_BODY_PARTS find toLower _bodyPart;
+private _partIndex = ALL_BODY_PARTS find tolowerANSI _bodyPart;
 private _tourniquets = GET_TOURNIQUETS(_patient);
 
 if (_tourniquets select _partIndex == 0) exitWith {

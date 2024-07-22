@@ -45,5 +45,48 @@ class CfgVehicles {
                 };
             };
         };
+
+        class ACE_SelfActions {
+            class GVAR(reloadTurret) {
+                displayName = "$STR_controls_tooltips_RELOAD_MAGAZINE";
+                condition = QUOTE(call FUNC(canSwapTurretMagazine));
+                statement = QUOTE(call FUNC(swapTurretMagazine));
+                icon = "\A3\ui_f\data\igui\cfg\simpletasks\types\rearm_ca.paa";
+            };
+        };
+    };
+
+    class Tank: LandVehicle {
+        class ACE_SelfActions {
+            class GVAR(reloadTurret) {
+                displayName = "$STR_controls_tooltips_RELOAD_MAGAZINE";
+                condition = QUOTE(call FUNC(canSwapTurretMagazine));
+                statement = QUOTE(call FUNC(swapTurretMagazine));
+                icon = "\A3\ui_f\data\igui\cfg\simpletasks\types\rearm_ca.paa";
+            };
+        };
+    };
+
+    class Car: LandVehicle {
+        class ACE_SelfActions {
+            class GVAR(reloadTurret) {
+                displayName = "$STR_controls_tooltips_RELOAD_MAGAZINE";
+                condition = QUOTE(call FUNC(canSwapTurretMagazine));
+                statement = QUOTE(call FUNC(swapTurretMagazine));
+                icon = "\A3\ui_f\data\igui\cfg\simpletasks\types\rearm_ca.paa";
+            };
+        };
+    };
+
+    class Air;
+    class Helicopter: Air {
+        class ACE_SelfActions {
+            class GVAR(reloadTurret) {
+                displayName = "$STR_controls_tooltips_RELOAD_MAGAZINE";
+                condition = QUOTE(call FUNC(canSwapTurretMagazine));
+                statement = QUOTE(call FUNC(swapTurretMagazine));
+                icon = "\A3\ui_f\data\igui\cfg\simpletasks\types\rearm_ca.paa";
+            };
+        };
     };
 };

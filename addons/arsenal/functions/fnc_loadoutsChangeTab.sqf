@@ -63,6 +63,7 @@ switch (ctrlIDC _control) do {
             _saveButtonCtrl ctrlSetTooltip LLSTRING(buttonSaveTooltip);
         };
 
+        _renameButtonCtrl ctrlEnable is3DEN; // no renaming mid-mission
         _saveButtonCtrl ctrlEnable call FUNC(canEditDefaultLoadout);
         _saveButtonCtrl ctrlCommit 0;
     };

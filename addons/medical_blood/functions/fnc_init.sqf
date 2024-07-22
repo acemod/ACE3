@@ -60,6 +60,6 @@ private _listCode = if (_mode == BLOOD_ONLY_PLAYERS) then {
 GVAR(stateMachine) = [_listCode, true] call CBA_statemachine_fnc_create;
 [GVAR(stateMachine), LINKFUNC(onBleeding), {}, {}, "Bleeding"] call CBA_statemachine_fnc_addState;
 
-GVAR(woundReceivedEH) = [QEGVAR(medical,woundReceived), FUNC(handleWoundReceived)] call CBA_fnc_addEventHandler;
+GVAR(woundReceivedEH) = [QEGVAR(medical,woundReceived), LINKFUNC(handleWoundReceived)] call CBA_fnc_addEventHandler;
 
 TRACE_3("Set up state machine and wounds event",_mode,GVAR(stateMachine),GVAR(woundReceivedEH));

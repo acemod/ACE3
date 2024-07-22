@@ -23,7 +23,7 @@ TRACE_4("params",_object,_effectName,_ID,_set);
 
 //Only run this after the settings are initialized
 if !(GVAR(settingsInitFinished)) exitWith {
-    TRACE_1("pushing to runAtSettingsInitialized", _this);
+    TRACE_1("pushing to runAtSettingsInitialized",_this);
     GVAR(runAtSettingsInitialized) pushBack [FUNC(statusEffect_set), _this];
 };
 
@@ -32,7 +32,7 @@ if (isNull _object) exitWith {TRACE_1("null",_object);};
 [_object, true] call FUNC(statusEffect_resetVariables); //Check for mismatch, and set object ref
 
 //check ID case and set globally if not already set:
-_ID = toLower _ID;
+_ID = toLowerANSI _ID;
 private _statusReasons = missionNamespace getVariable [(format [QGVAR(statusEffects_%1), _effectName]), []];
 private _statusIndex = _statusReasons find _ID;
 if (_statusIndex == -1) then {

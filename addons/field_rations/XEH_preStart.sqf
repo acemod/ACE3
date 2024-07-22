@@ -15,7 +15,7 @@ private _waterSourceOffsets = [
 // Fill water source arrays from CfgVehicles
 {
     private _split = (getText (_x >> "model")) splitString "\";
-    private _string = toLower (_split param [((count _split) - 1), ""]);
+    private _string = toLowerANSI (_split param [((count _split) - 1), ""]);
 
     // Append extension if necessary
     if ((_string select [count _string - 4]) != ".p3d") then {

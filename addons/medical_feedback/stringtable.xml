@@ -42,7 +42,7 @@
             <Portuguese>Selecione o tipo de efeito de dor.</Portuguese>
             <Chinese>選擇哪一個視覺效果用於回饋疼痛</Chinese>
             <Chinesesimp>选择反馈的疼痛效果类型。</Chinesesimp>
-            <Italian>Seleziona il tipo di effetto del dolore usato.</Italian>
+            <Italian>Seleziona il tipo di effetto causato dal dolore.</Italian>
             <Czech>Nastavuje který efekt bolesti bude používán.</Czech>
             <Polish>Wybiera rodzaj efektu bólu.</Polish>
             <Spanish>Selecciona el tipo de efecto de dolor</Spanish>
@@ -69,7 +69,7 @@
         <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
             <English>Pulsing Blur</English>
             <German>Wiederkehrende Unschärfe</German>
-            <Japanese>ボケの強弱</Japanese>
+            <Japanese>ぼかしの強弱</Japanese>
             <Russian>Пульсирующее размытие</Russian>
             <French>Pulsations floues</French>
             <Portuguese>Borrão Pulsante</Portuguese>
@@ -105,7 +105,7 @@
             <Chinese>只有在強烈疼痛時使用</Chinese>
             <Chinesesimp>仅在剧烈疼痛下启用</Chinesesimp>
             <French>Juste un fort effet douloureux</French>
-            <Italian>Solo elevato effetto di dolore</Italian>
+            <Italian>Solo effetto di elevato dolore</Italian>
             <Czech>Pouze efekt vysoké bolesti</Czech>
             <Polish>Tylko efekt mocnego bólu</Polish>
             <Portuguese>Apenas efeito de dor alta</Portuguese>
@@ -119,6 +119,7 @@
             <English>Low Blood Volume Effect Type</English>
             <Russian>Визуальный эффект низкого объема крови</Russian>
             <French>Effet de faible volume sanguin</French>
+            <Italian>Effetto di poco sangue</Italian>
             <Japanese>低血液量時効果の種類</Japanese>
             <Czech>Efekt pro nízké množství krve</Czech>
             <Polish>Efekt po utracie znacznej ilości krwi</Polish>
@@ -133,6 +134,7 @@
             <English>Selects the used low blood volume effect type.</English>
             <Russian>Выбирает тип визуализации эффекта низкого объема крови.</Russian>
             <French>Permet de choisir quel effet provoque un faible volume sanguin.</French>
+            <Italian>Seleziona il tipo di effetto causato da un volume di sangue molto ridotto.</Italian>
             <Japanese>低血液量時の画面効果を選択できます。</Japanese>
             <Czech>Nastavuje který efekt pro nízké množství krve bude používán.</Czech>
             <Polish>Wybiera efekt ktory będzie pokazywany po utracie znacznej ilości krwi.</Polish>
@@ -147,6 +149,7 @@
             <English>Color Fading</English>
             <Russian>Потеря цветности</Russian>
             <French>Atténuation des couleurs</French>
+            <Italian>Sbiadimento dei colori</Italian>
             <Japanese>退色</Japanese>
             <Czech>Ztráta barev</Czech>
             <Polish>Zanikanie kolorów</Polish>
@@ -161,6 +164,7 @@
             <English>Icon</English>
             <Russian>Иконка</Russian>
             <French>Icône</French>
+            <Italian>Icona</Italian>
             <Japanese>アイコン</Japanese>
             <Czech>Ikona</Czech>
             <Polish>Ikona</Polish>
@@ -175,6 +179,7 @@
             <English>Icon + Color Fading</English>
             <Russian>Иконка + Потеря цветности</Russian>
             <French>Icône + Atténuation des couleurs</French>
+            <Italian>Icona + Sbiadimento dei colori</Italian>
             <Japanese>アイコンと退色</Japanese>
             <Czech>Ikona + Ztráta barev</Czech>
             <Polish>Ikona + Zanikanie kolorów</Polish>
@@ -213,7 +218,7 @@
                 <Portuguese>Ativa gritos para unidades feridas</Portuguese>
                 <French>Si cette option est activée, les unités blessées crieront, voire hurleront sous l'effet de la douleur.</French>
                 <Hungarian>Engedélyezi a sérült egységek kiáltásait</Hungarian>
-                <Italian>Abilita Grida da parte delle unità ferite</Italian>
+                <Italian>Abilita Grida da parte di unità ferite</Italian>
                 <Japanese>負傷したユニットが悲鳴をあげるようにします。</Japanese>
                 <Korean>부상당한 인원이 소리지르는 것을 활성화합니다</Korean>
                 <Chinesesimp>启用伤者的惨叫声</Chinesesimp>
@@ -223,9 +228,10 @@
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_DisplayName">
                 <English>Enable Fracture/Tourniquet/Splint Indicators</English>
                 <Russian>Вкл. индикаторы переломов/жгутов/шин</Russian>
-                <Japanese>骨折/止血帯/副子の表記を有効化</Japanese>
+                <Japanese>骨折/止血帯/添え木の表記を有効化</Japanese>
                 <French>Indicateurs de fractures/garrots/attelles</French>
                 <German>Fraktur-/Tourniquet-/Schienen-Indikatoren aktivieren</German>
+                <Italian>Abilita indicatori di Frattura/Gessatura/Laccio Emostatico</Italian>
                 <Polish>Włącz wskaźniki złamań/stazy/szyny</Polish>
                 <Chinesesimp>启用骨折/止血带/夹板指示器</Chinesesimp>
                 <Korean>골절/지혈대/부목 표시 활성화</Korean>
@@ -235,9 +241,10 @@
             <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
                 <English>Enables indicators for fractures and applied tourniquets and splints over the Stance Indicator.</English>
                 <Russian>Включает индикацию переломов, наложенных шин и жгутов поверх индикатора положения тела.</Russian>
-                <Japanese>体勢インジケータに骨折や副子、止血帯の有無を表示するかどうかを設定できます。</Japanese>
+                <Japanese>体勢インジケータに骨折や添え木、止血帯の有無を表示するかどうかを設定できます。</Japanese>
                 <French>Affiche des icônes au niveau de l'indicateur de posture, indiquant si le personnage souffre de fractures ou si des garrots ou des attelles sont appliqués.</French>
                 <German>Aktiviert Indikatoren für Frakturen mit angelegte Tourniquets und Schienen über dem Haltungsindikator.</German>
+                <Italian>Abilita indicatori per la presenza di fratture, gessature o lacci emostatici applicati sopra l'indicatore di postura.</Italian>
                 <Polish>Włącza wskaźniki złamań oraz założonej staz/szyn przy ikonie stanu postawy </Polish>
                 <Chinesesimp>在姿态指示器上启用骨折、应用止血带和夹板指示器。</Chinesesimp>
                 <Korean>자세 표시기 옆에 골절, 지혈대, 부목의 여부를 표시합니다.</Korean>

@@ -52,4 +52,19 @@
 
 if (!hasInterface) exitWith {};
 
-#include "initKeybinds.sqf"
+#include "initKeybinds.inc.sqf"
+
+// Reload when default reload keybind is pressed
+addUserActionEventHandler ["ReloadMagazine", "Activate", {
+    private _vehicle = objectParent ACE_player;
+
+    // If on foot, skip
+    if (isNull _vehicle) exitWith {};
+
+    // weaponState is only updated after 3 frames, so wait to run checks in case we're doing an engine reload at the same time
+    [{
+        if !(_this call FUNC(canSwapTurretMagazine)) exitWith {};
+
+        _this call FUNC(swapTurretMagazine);
+    }, [_vehicle, ACE_player], 3] call CBA_fnc_execAfterNFrames;
+}];

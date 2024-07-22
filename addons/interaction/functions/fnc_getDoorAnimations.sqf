@@ -26,8 +26,8 @@ private _lockedVariable = [];
 private _numberStrings = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 {
-    private _animName = toLower _x;
-    private _index = _animName find toLower _door;
+    private _animName = toLowerANSI _x;
+    private _index = _animName find toLowerANSI _door;
 
     if (_index != -1 && {!(_animName select [_index + count _door, 1] in _numberStrings)}) then {
         if (((_animName find "disabled") != -1) || ((_animName find "locked") != -1)) then {
