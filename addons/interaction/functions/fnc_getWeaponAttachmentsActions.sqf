@@ -59,7 +59,7 @@ params ["_unit"];
                         _actions pushBack [
                             [
                                 QGVAR(attach_) + _attachment,
-                                format [LLSTRING(weaponAttachmentsAttach), _name],
+                                LLSTRING(weaponAttachmentsAttach),
                                 _picture,
                                 LINKFUNC(switchWeaponAttachment),
                                 {true},
@@ -78,7 +78,7 @@ params ["_unit"];
                     _actions pushBack [
                         [
                             QGVAR(detach_) + _attachment,
-                            format [LLSTRING(weaponAttachmentsDetach), _name],
+                            LLSTRING(weaponAttachmentsDetach),
                             _picture,
                             LINKFUNC(switchWeaponAttachment),
                             {true},
@@ -93,6 +93,7 @@ params ["_unit"];
 
                     // "switch" action
                     {
+                        // Ignore 2D scopes when using a PIP scope (e.g. CUP uses this)
                         if (getText (_CBA_PIPItems >> _x) == _attachment) then {
                             continue;
                         };
