@@ -1,25 +1,25 @@
-PREP(dev_debugAmmo);
-
-PREP(doSpall);
-PREP(fired);
-PREP(frago);
-PREP(spallTrack);
-
-// * Other */
 PREP(addBlackList);
-PREP(dev_addTrack);
-PREP(dev_drawTraces);
-PREP(spallHP);
-PREP(dev_startTracing);
-PREP(dev_stopTracing);
-PREP(dev_trackTrace);
-
-// New tracking mechanisms
-PREP(masterPFH);
-PREP(pfhRound);
-PREP(addPfhRound);
-
-// Explosive Reflection
-PREP(findReflections);
+PREP(dev_addRound);
+PREP(dev_clearTraces);
+PREP(dev_debugAmmo);
+PREP(dev_drawTrace);
+PREP(dev_fragCalcDump);
+PREP(dev_trackHitBox);
+PREP(dev_trackObj);
+PREP(dev_sphereDraw);
 PREP(doExplosions);
+PREP(doFrag);
+PREP(doFragRandom);
+PREP(doFragTargeted);
 PREP(doReflections);
+PREP(doSpallLocal);
+PREP(doSpallServer);
+PREP(findReflections);
+PREP(fired);
+PREP(getMaterialInfo);
+PREP(getSpallInfo);
+PREP(getFragInfo);
+PREP(initMaterialCache);
+PREP(roundInitFrag);
+PREP(shouldFrag);
+PREP(shouldSpall);
