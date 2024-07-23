@@ -4,13 +4,13 @@
  * Checks if there is a medic available in the unit's group.
  *
  * Arguments:
- * None
+ * Unit <OBJECT>
  *
  * Return Value:
  * Can request medic <BOOL>
  *
  * Example:
- * player call ACE_medical_ai_fnc_canRequestMedic
+ * player call ace_medical_ai_fnc_canRequestMedic
  *
  * Public: No
  */

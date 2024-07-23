@@ -11,7 +11,7 @@
             <Russian>Слайд-шоу</Russian>
             <Czech>Prezentace</Czech>
             <Spanish>Presentación de diapositivas</Spanish>
-            <Italian>Mostra Diapositive</Italian>
+            <Italian>Presentazione Diapositive</Italian>
             <Japanese>スライドショー</Japanese>
             <Korean>슬라이드 쇼</Korean>
             <Chinese>幻燈片</Chinese>
@@ -28,7 +28,7 @@
             <Russian>Этот модуль позволяет вам устроить слайд-шоу на различных объектах. Один модуль на один список изображений. Поддерживаются только объекты с hiddenSelection 0.</Russian>
             <Spanish>Este módulo permite configurar una presentación de diapositivas en diferentes objetos. Un módulo por lista de imágenes. Sólo son soportados objetos con hiddenSelection 0.</Spanish>
             <Czech>Tento modul umožňuje nastavit prezentaci na různé objekty. Jeden modul na seznam s obrázky. Podporované jsou pouze objekty s hiddenSelection 0.</Czech>
-            <Italian>Questo modulo ti permette di creare una presentazione con diapositive su vari oggetti. Un modulo per lista immagini. Solo oggetti con hiddenSelection 0 sono supportati.</Italian>
+            <Italian>Questo modulo ti permette di creare una presentazione con diapositive su vari oggetti. Un modulo per ogni lista immagini. Solo oggetti con hiddenSelection 0 sono supportati.</Italian>
             <Japanese>さまざまなオブジェクトへスライドショーを設定することができます。1つのモジュールは各画像リストになっています。オブジェクトが hiddenSelection 0へ対応している必要があります。</Japanese>
             <Korean>이 모듈은 다른 물체에 대해 슬라이드 쇼를 놓을 수 있게 해줍니다. 한 모듈 당 한 이미지 목록만 가능합니다. 또한 hiddenSelection 0가 있는 물체만 지원됩니다.</Korean>
             <Chinese>此模塊可讓圖片以幻燈片的形式顯示在物件上，每個模塊都能設定一串幻燈片清單，被設定的物件不能有隱藏部位(hiddenSelection)</Chinese>
@@ -61,7 +61,7 @@
             <Russian>Имена объектов (так же могут использоваться синхронизированные объекты), на которых будет отображаться слайд-шоу, разделенные запятыми.</Russian>
             <Spanish>Los nombres de objetos (también pueden ser objetos sincronizados) de diapositivas se mostrarán en, separados por comas.</Spanish>
             <Czech>Jména objektů (lze také použít synchronizované objekty) které se budou zobrazovat v prezentaci, oddělit čárkou pokud jich je více.</Czech>
-            <Italian>Nomi di oggetti (possono anche essere oggetti sincronizzati) che verranno usati per la presentazione di diapositive, separato da virgole se più di uno.</Italian>
+            <Italian>Nomi di oggetti (possono anche essere oggetti sincronizzati) che verranno usati per la presentazione di diapositive, separati da virgole se più di uno.</Italian>
             <Japanese>スライドショーを表示するオブジェクト名 (オブジェクトとの同期も可)。複数ある場合はコンマで区切れます</Japanese>
             <Korean>슬라이드 쇼가 보여질 물체(동기화 되는 물체도 가능합니다) 명칭, 다수의 경우 쉼표로 구분합니다.</Korean>
             <Chinese>物件名稱 (也可使用同步線來設定)，幻燈片將會顯示在該物件上，如有多個物件，請以逗號作區隔</Chinese>
@@ -127,8 +127,8 @@
             <Russian>Список изображений, которые будут использованы для слайд-шоу, разделенные запятыми, с полными путями в правильном формате (например, images\image.paa).</Russian>
             <Spanish>Lista de imágenes que se utilizarán para la presentación de diapositivas, separadas por comas, con la ruta completa en formato correcto (ej. imágenes\image.paa).</Spanish>
             <Czech>Seznam obrázků které budou použity v prezentaci, oddělené čárkami, s kompletní cestou ve správném formátu (např. image\image.paa).</Czech>
-            <Italian>Lista di immagini che verranno usate durante la presentazione, separati da virgole, con il formato completo del percorso (es. images\image.paa)</Italian>
-            <Japanese>完全なパスでスライドショーに使う画像一覧を入力してください。コンマで区別できます。(例: images\image.paa)</Japanese>
+            <Italian>Lista di immagini che verranno usate durante la presentazione, separate da virgole, con percorso completo formattato correttamente (es. images\image.paa)</Italian>
+            <Japanese>スライド ショーに使用される画像のリスト。完全パスで入力してください。コンマで区切ります。(例: images\image.paa)</Japanese>
             <Korean>슬라이드 쇼에 쓰일 사진목록입니다, 쉼표로 구분됩니다, 경로설정을 정확히 하십시요. (예: 사진\사진.ppa)</Korean>
             <Chinese>要做為幻燈片的圖片清單，每個圖片請已逗號區隔，並輸入完整路徑位址 (例如:images\image.paa)</Chinese>
             <Chinesesimp>要做为幻灯片的图片清单，每个图片请已逗号区隔，并输入完整路径位址（例如：images\image.paa）</Chinesesimp>
@@ -157,7 +157,7 @@
             <Portuguese>Lista dos nomes que serão usados para entradas de interação, separados por vírgulas, na ordem das imagens.</Portuguese>
             <Russian>Список имен, которые будут использованы при взаимодействии, разделенные запятыми, в порядке следования изображений.</Russian>
             <Spanish>Lista de nombres que se utilizarán para las entradas de interacción, separados por comas, en el orden de las imágenes.</Spanish>
-            <Italian>Lista di nomi che verranno usati per per le interazioni, separati da virgole, in ordine per immagini.</Italian>
+            <Italian>Lista di nomi che verranno usati per le interazioni, separati da virgole, nell'ordine delle immagini.</Italian>
             <German>Liste aller Namen, die für Interaktionseinträge genutzt werden. Mit Kommata getrennt, in Reihenfolge der Bilder.</German>
             <Japanese>画像を操作できるインタラクション エントリ名の一覧を入力してください。コンマで区切り複数を指定できます。</Japanese>
             <Korean>상호작용 메시지에 쓰일 명칭입니다, 쉼표로 구분합니다, 이미지의 순서입니다.</Korean>
@@ -184,9 +184,9 @@
             <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
             <German>Name der für den Hauptinteraktionseintrag benutzt wird (um mehrere Diavorführungen voneinander zu trennen).</German>
             <Polish>Nazwa, która będzie użyta w głównym menu interakcji (w celu rozróżnienia różnych slajdów). Domyślnie: "Slides"</Polish>
-            <Japanese>メイン インタラクション エントリで使われる名前を設定します。(複数のスライドショーを区別するため)。標準: "Slides"</Japanese>
+            <Japanese>メイン インタラクション エントリで使われる名前を設定します。(複数のスライドショーを区別するため)。 デフォルト: "Slides"</Japanese>
             <French>Nom qui sera utilisé pour l'entrée d'interaction principale (pour distinguer plusieurs diaporamas). Valeur par défaut : "Slides".</French>
-            <Italian>Nome che sarà utilizzato per le principali interazioni (per distinguere le multiple diapositive). Predefinito: "Slides"</Italian>
+            <Italian>Nome che verrà utilizzato per le principali interazioni (per distinguere multiple diapositive). Predefinito: "Slides"</Italian>
             <Chinese>設定該幻燈片的標題名稱 (用來區分多個不同標題的幻燈片) 預設名稱: "幻燈片"</Chinese>
             <Chinesesimp>设定该幻灯片的标题名称（用来区分多个不同标题的幻灯片）预设名称："幻灯片"</Chinesesimp>
             <Korean>상위 상호작용 이름 (여러 개의 슬라이드 쇼를 구분하기 위해 사용됨) 기본: "Slides"</Korean>
@@ -206,7 +206,7 @@
             <Czech>Doba trvání snímku</Czech>
             <Italian>Durata Diapositiva</Italian>
             <German>Länge der Diavorführung pro Bild</German>
-            <Japanese>スライドの持続時間</Japanese>
+            <Japanese>スライドの継続時間</Japanese>
             <Korean>슬라이드 지속 시간</Korean>
             <Chinese>幻燈片顯示時間</Chinese>
             <Chinesesimp>幻灯片显示时间</Chinesesimp>
@@ -220,9 +220,9 @@
             <Russian>Длительность каждого слайда. По умолчанию: 0 (автоматический переход отключен)</Russian>
             <Spanish>Duración de cada diapositiva. Por defecto: 0 (Transiciones automáticas desactivadas)</Spanish>
             <Czech>Doba trvání každého snímku. Výchozí: 0 (Automatické posouvání je zakázáno)</Czech>
-            <Italian>Durata di ogni diapositiva. Default: 0 (Transizioni Automatiche Disabilitate)</Italian>
+            <Italian>Durata di ogni diapositiva. Predefinito: 0 (Transizioni Automatiche Disabilitate)</Italian>
             <German>Länge der Diavorführung pro Bild. Standard: 0 (Automatischer Wechsel deaktiviert)</German>
-            <Japanese>各スライドの持続時間。標準:0 (自動的な切り替えは無効)</Japanese>
+            <Japanese>各スライドの継続時間。 デフォルト: 0 (自動的な切り替えは無効)</Japanese>
             <Korean>매 슬라이드의 지속 시간. 기본설정: 0 (자동 전환 비활성화)</Korean>
             <Chinese>每張幻燈片顯示的時間。 預設:0 (自動換圖已禁用)</Chinese>
             <Chinesesimp>每张幻灯片显示的时间。 预设：0（自动换图已禁用）</Chinesesimp>
@@ -233,6 +233,7 @@
             <Portuguese>텍스쳐 선택</Portuguese>
             <Korean>텍스쳐 선택</Korean>
             <German>Auswahl der Textur</German>
+            <Italian>Selezione della texture</Italian>
             <Polish>Wybór Tekstury</Polish>
             <Japanese>テクスチャの選択</Japanese>
             <Russian>Выбор текстуры</Russian>
@@ -245,8 +246,9 @@
             <Portuguese>개체 텍스처 선택(기본값: 0)</Portuguese>
             <Korean>물체의 텍스쳐를 선택합니다. 기본: 0</Korean>
             <German>Auswahl der Objekttextur. Standard: 0</German>
+            <Italian>Selezione della texture dell'oggetto. Predefinito: 0</Italian>
             <Polish>Wybór tekstury obiektu. Domyślnie: 0</Polish>
-            <Japanese>オブジェクトテクスチャの選択。デフォルト: 0</Japanese>
+            <Japanese>オブジェクトテクスチャの選択。 デフォルト: 0</Japanese>
             <Russian>Выбор текстуры объекта. По умолчанию: 0</Russian>
             <Spanish>Selección de textura de objeto. Defecto: 0</Spanish>
             <French>Sélection de la texture de l'objet. Valeur par défaut : 0</French>

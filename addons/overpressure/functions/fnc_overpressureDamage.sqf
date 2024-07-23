@@ -57,7 +57,7 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
                     [_damage * 100] call BIS_fnc_bloodEffect;
                 };
 
-                if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+                if (GETEGVAR(medical,enabled,false)) then {
                     [_x, _damage, "body", "backblast", _firer] call EFUNC(medical,addDamageToUnit);
                 } else {
                     _x setDamage (damage _x + _damage);

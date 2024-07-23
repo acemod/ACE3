@@ -915,3 +915,231 @@ class GVAR(RscSuicideBomber): RscDisplayAttributes {
         class ButtonCancel: ButtonCancel {};
     };
 };
+
+class GVAR(RscSpectator): RscDisplayAttributes {
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscSpectator))] call FUNC(zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscSpectator))] call FUNC(zeusAttributes));
+    class Controls: Controls {
+        class Background: Background {};
+        class Title: Title {};
+        class Content: Content {
+            class Controls {
+                class spectator: RscControlsGroupNoScrollbars {
+                    onSetFocus = QUOTE(_this call FUNC(ui_spectator));
+                    idc = 92530;
+                    x = 0;
+                    y = 0;
+                    w = QUOTE(W_PART(26));
+                    h = QUOTE(H_PART(10.7));
+                    class controls {
+                        class ForceInterfaceLabel: RscText {
+                            idc = -1;
+                            text = "$STR_a3_cfgvehicles_modulecurator_f_arguments_forced";
+                            tooltip = CSTRING(ModuleSpectator_ForceInterface_Tooltip);
+                            x = 0;
+                            y = 0;
+                            w = QUOTE(W_PART(10));
+                            h = QUOTE(H_PART(1));
+                            colorBackground[] = {0, 0, 0, 0.5};
+                        };
+                        class ForceInterface: ctrlToolbox {
+                            idc = 92531;
+                            x = QUOTE(W_PART(10.1));
+                            y = 0;
+                            w = QUOTE(W_PART(15.9));
+                            h = QUOTE(H_PART(1));
+                            rows = 1;
+                            columns = 2;
+                            strings[] = {ECSTRING(common,No), ECSTRING(common,Yes)};
+                        };
+                        class HidePlayerLabel: ForceInterfaceLabel {
+                            text = CSTRING(ModuleSpectator_HidePlayer);
+                            tooltip = CSTRING(ModuleSpectator_HidePlayer_Tooltip);
+                            y = QUOTE(H_PART(1.1));
+                        };
+                        class HidePlayer: ForceInterface {
+                            idc = 92532;
+                            y = QUOTE(H_PART(1.1));
+                        };
+                        class SpectateSides: RscControlsGroupNoScrollbars {
+                            idc = 92533;
+                            x = 0;
+                            y = QUOTE(H_PART(2.2));
+                            w = QUOTE(W_PART(26));
+                            h = QUOTE(H_PART(2.5));
+                            class controls {
+                                class Label: RscText {
+                                    idc = -1;
+                                    text = "$STR_A3_Spectator_Eden_WhitelistedSides_Name";
+                                    tooltip = CSTRING(ModuleSpectator_SpectableSides_Tooltip);
+                                    x = 0;
+                                    y = 0;
+                                    w = QUOTE(W_PART(10));
+                                    h = QUOTE(H_PART(2.5));
+                                    colorBackground[] = {0, 0, 0, 0.5};
+                                };
+                                class Background: RscText {
+                                    idc = -1;
+                                    x = QUOTE(W_PART(10));
+                                    y = 0;
+                                    w = QUOTE(W_PART(16));
+                                    h = QUOTE(H_PART(2.5));
+                                    colorBackground[] = {1, 1, 1, 0.1};
+                                };
+                                class BLUFOR: RscActivePicture {
+                                    idc = 92541;
+                                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_west_ca.paa";
+                                    x = QUOTE(W_PART(12.5));
+                                    y = QUOTE(H_PART(0.25));
+                                    w = QUOTE(W_PART(2));
+                                    h = QUOTE(H_PART(2));
+                                    tooltip = "$STR_WEST";
+                                };
+                                class OPFOR: BLUFOR {
+                                    idc = 92540;
+                                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_east_ca.paa";
+                                    x = QUOTE(W_PART(15.5));
+                                    tooltip = "$STR_EAST";
+                                };
+                                class Independent: BLUFOR {
+                                    idc = 92542;
+                                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_guer_ca.paa";
+                                    x = QUOTE(W_PART(18.5));
+                                    tooltip = "$STR_guerrila";
+                                };
+                                class Civilian: BLUFOR {
+                                    idc = 92543;
+                                    text = "\a3\Ui_F_Curator\Data\Displays\RscDisplayCurator\side_civ_ca.paa";
+                                    x = QUOTE(W_PART(21.5));
+                                    tooltip = "$STR_Civilian";
+                                };
+                            };
+                        };
+                        class CameraModes: RscControlsGroupNoScrollbars {
+                            idc = 92534;
+                            x = 0;
+                            y = QUOTE(H_PART(4.8));
+                            w = QUOTE(W_PART(26));
+                            h = QUOTE(H_PART(2.5));
+                            class controls {
+                                class Label: RscText {
+                                    idc = -1;
+                                    text = ECSTRING(spectator,modes_DisplayName);
+                                    tooltip = ECSTRING(spectator,modes_Description);
+                                    x = 0;
+                                    y = 0;
+                                    w = QUOTE(W_PART(10));
+                                    h = QUOTE(H_PART(2.5));
+                                    colorBackground[] = {0, 0, 0, 0.5};
+                                };
+                                class Background: RscText {
+                                    idc = -1;
+                                    x =QUOTE(W_PART(10));
+                                    y = 0;
+                                    w = QUOTE(W_PART(16));
+                                    h = QUOTE(H_PART(2.5));
+                                    colorBackground[] = {1, 1, 1, 0.1};
+                                };
+                                class Free: RscActivePicture {
+                                    idc = 92550;
+                                    text = "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\Free.paa";
+                                    x = QUOTE(W_PART(13.375));
+                                    y = QUOTE(H_PART(0.375));
+                                    w = QUOTE(W_PART(1.75));
+                                    h = QUOTE(H_PART(1.75));
+                                    tooltip = "$STR_A3_Spectator_free_camera_tooltip";
+                                };
+                                class Follow: Free {
+                                    idc = 92552;
+                                    text = "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\Follow.paa";
+                                    x = QUOTE(W_PART(17.125));
+                                    tooltip = "$STR_A3_Spectator_3pp_camera_tooltip";
+                                };
+                                class FirstPerson: Free {
+                                    idc = 92551;
+                                    text = "a3\Ui_f\data\GUI\Rsc\RscDisplayEGSpectator\Fps.paa";
+                                    x = QUOTE(W_PART(20.875));
+                                    tooltip = "$STR_A3_Spectator_1pp_camera_tooltip";
+                                };
+                            };
+                        };
+                        class VisionModes: RscControlsGroupNoScrollbars {
+                            idc = 92535;
+                            x = 0;
+                            y = QUOTE(H_PART(7.4));
+                            w = QUOTE(W_PART(26));
+                            h = QUOTE(H_PART(3.3));
+                            class controls {
+                                class Label: RscText {
+                                    idc = -1;
+                                    text = ECSTRING(spectator,visions_DisplayName);
+                                    tooltip = ECSTRING(spectator,visions_Description);
+                                    x = 0;
+                                    y = 0;
+                                    w = QUOTE(W_PART(26));
+                                    h = QUOTE(H_PART(1));
+                                    colorBackground[] = {0, 0, 0, 0.5};
+                                };
+                                class Background: RscText {
+                                    idc = -1;
+                                    x = 0;
+                                    y = QUOTE(H_PART(1));
+                                    w = QUOTE(W_PART(26));
+                                    h = QUOTE(H_PART(2.3));
+                                    colorBackground[] = {1, 1, 1, 0.1};
+                                };
+                                class AllCheckBox: RscCheckBox {
+                                    idc = 92557;
+                                    tooltip = CSTRING(ToggleAll);
+                                    x = QUOTE(W_PART(25));
+                                    y = 0;
+                                    w = QUOTE(W_PART(1));
+                                    h = QUOTE(H_PART(1));
+                                };
+                                class NormalLabel: Label {
+                                    text = "$STR_speed_normal";
+                                    tooltip = "";
+                                    x = QUOTE(W_PART(1));
+                                    y = QUOTE(H_PART(1.1));
+                                    w = QUOTE(W_PART(10.8));
+                                    colorBackground[] = {0, 0, 0, 0.6};
+                                };
+                                class Normal: AllCheckBox {
+                                    idc = 92558;
+                                    x = QUOTE(W_PART(11.9));
+                                    y = QUOTE(H_PART(1.1));
+                                };
+                                class NightVisionLabel: NormalLabel {
+                                    text = "$STR_usract_night_vision";
+                                    y = QUOTE(H_PART(2.2));
+                                };
+                                class NightVision: Normal {
+                                    idc = 92559;
+                                    y = QUOTE(H_PART(2.2));
+                                };
+                                class WhiteHotLabel: NormalLabel {
+                                    text = CSTRING(ModuleSpectator_WhiteHot);
+                                    x = QUOTE(W_PART(13.1));
+                                };
+                                class WhiteHot: Normal {
+                                    idc = 92560;
+                                    x = QUOTE(W_PART(24));
+                                };
+                                class BlackHotLabel: WhiteHotLabel {
+                                    text = CSTRING(ModuleSpectator_BlackHot);
+                                    y = QUOTE(Y_PART(2.2));
+                                };
+                                class BlackHot: WhiteHot {
+                                    idc = 92561;
+                                    y = QUOTE(H_PART(2.2));
+                                };
+                            };
+                        };
+                    };
+                };
+            };
+        };
+        class ButtonOK: ButtonOK {};
+        class ButtonCancel: ButtonCancel {};
+    };
+};

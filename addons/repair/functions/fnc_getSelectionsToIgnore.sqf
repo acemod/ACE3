@@ -39,7 +39,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 
 (getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];
 // get hitpoints of wheels with their selections
-([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
+([_vehicle] call EFUNC(common,getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
 
 private _indexesToIgnore = [];
 private _processedSelections = [];
@@ -48,7 +48,7 @@ private _complexDependsMap = createHashMap;
 
 {
     private _selection = _x;
-    private _hitPoint = toLower (_hitPoints select _forEachIndex);
+    private _hitPoint = toLowerANSI (_hitPoints select _forEachIndex);
     private _isWheelOrTrack = _selection in _wheelHitSelections || {_hitPoint in _wheelHitPoints} || {_hitPoint in TRACK_HITPOINTS};
 
     if (_hitPoint isEqualTo "") then { // skip empty hitpoint
@@ -56,7 +56,7 @@ private _complexDependsMap = createHashMap;
         continue
     };
 
-    if (_isWheelOrTrack && {_selection in _processedSelections || {_selection isEqualTo ""}}) then { 
+    if (_isWheelOrTrack && {_selection in _processedSelections || {_selection isEqualTo ""}}) then {
         TRACE_3("Skipping duplicate Wheel/Track or empty selection",_hitPoint,_forEachIndex,_selection);
         _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;
@@ -121,7 +121,7 @@ private _complexDependsMap = createHashMap;
         continue
     };
 
-    if (!(getText (_vehCfg >> "HitPoints" >> _hitPoint >> "depends") in ["", "0"])) then { 
+    if !(getText (_vehCfg >> "HitPoints" >> _hitPoint >> "depends") in ["", "0"]) then {
         // Caches depends hitpoints and their parents
         private _parentHitPoint = getText (_vehCfg >> "HitPoints" >> _hitPoint >> "depends");
         private _parentHitPointIndex = _hitPoints findIf {_x == _parentHitPoint};
@@ -129,7 +129,7 @@ private _complexDependsMap = createHashMap;
         if (_parentHitPointIndex != -1) then {
             _dependsIndexMap set [_forEachIndex, _parentHitPointIndex];
             TRACE_3("Depends hitpoint and parent index",_hitPoint,_forEachIndex,_parentHitPoint);
-        } else { 
+        } else {
             // Multiple/Complex parents or broken parents
             _indexesToIgnore pushBack _forEachIndex;
             private _parentHitPoints = _parentHitPoint splitString "+*() ";
@@ -162,7 +162,7 @@ private _complexDependsMap = createHashMap;
         continue
     };
 
-    if (ANY_OF(_hitPointGroups, ANY_OF(_x select 1, _x == _hitPoint))) then {
+    if (ANY_OF(_hitpointGroups,ANY_OF(_x select 1,_x == _hitpoint))) then {
         TRACE_3("Skipping child hitpoint",_hitPoint,_forEachIndex,_selection);
         _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;

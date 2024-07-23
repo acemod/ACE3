@@ -11,21 +11,23 @@ GVAR(GrenadesAll) = [];
 GVAR(GrenadesFrag) = [];
 GVAR(GrenadesNonFrag) = [];
 
+private _cfgMagazines = configFile >> "CfgMagazines";
+private _cfgAmmo = configFile >> "CfgAmmo";
+private _cfgThrow = configFile >> "CfgWeapons" >> "Throw";
+
 {
-    private _magazines = getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines");
+    private _magazines = getArray (_cfgThrow >> _x >> "magazines");
 
     GVAR(GrenadesAll) append _magazines;
 
     {
-        private _ammo = getText (configFile >> "CfgMagazines" >> _x >> "ammo");
-        private _explosive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "explosive");
+        private _ammo = getText (_cfgMagazines >> _x >> "ammo");
+        private _explosive = getNumber (_cfgAmmo >> _ammo >> "explosive");
 
         ([GVAR(GrenadesFrag), GVAR(GrenadesNonFrag)] select (_explosive == 0)) pushBack _x;
-        false
-    } count _magazines;
-    false
-} count getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
+    } forEach _magazines;
+} forEach getArray (_cfgThrow >> "muzzles");
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

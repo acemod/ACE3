@@ -25,7 +25,7 @@ private _pov = getText (_turret >> "memoryPointGunnerOptics");
 private _gunBeg = getText (_turret >> "gunBeg");
 private _gunEnd = getText (_turret >> "gunEnd");
 
-TRACE_3("", _pov, _gunBeg, _gunEnd);
+TRACE_3("",_pov,_gunBeg,_gunEnd);
 
 // Pull the PIP pov or barrel direction, depending on how the model is set up
 private _povPos = _vehicle modelToWorldVisualWorld (_vehicle selectionPosition _pov);

@@ -6,11 +6,8 @@
         "P:/"
     ],
     "excludeList": [
-        "initsettings.sqf",
-        "initkeybinds.sqf",
-        "xeh_prep.sqf",
+        ".inc.sqf",
         "\\dev\\",
-        "medical_ai\\statemachine.sqf",
         "common\\functions\\fnc_dummy.sqf",
         "zeus\\functions\\fnc_zeusAttributes.sqf"
     ],

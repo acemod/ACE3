@@ -10,6 +10,7 @@ PREP_RECOMPILE_END;
 GVAR(syncedEvents) = createHashMap;
 GVAR(showHudHash) = createHashMap;
 GVAR(vehicleIconCache) = createHashMap; // for getVehicleIcon
+GVAR(wheelSelections) = createHashMap;
 
 GVAR(blockItemReplacement) = false;
 
@@ -32,6 +33,7 @@ ACE_COUNTERS = [];
 
 GVAR(statusEffect_Names) = [];
 GVAR(statusEffect_isGlobal) = [];
+GVAR(statusEffect_sendJIP) = [];
 
 GVAR(setHearingCapabilityMap) = [];
 
@@ -78,6 +80,6 @@ isHC = !hasInterface && !isDedicated; // deprecated because no tag
 missionNamespace setVariable ["ACE_isHC", ACE_isHC];
 uiNamespace setVariable ["ACE_isHC", ACE_isHC];
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

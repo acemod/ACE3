@@ -26,7 +26,6 @@ PREP(getSelectionsToIgnore);
 PREP(getPatchWheelTime);
 PREP(getPostRepairDamage);
 PREP(getRepairItems);
-PREP(getWheelHitPointsWithSelections);
 PREP(hasItems);
 PREP(isEngineer);
 PREP(isInRepairFacility);
