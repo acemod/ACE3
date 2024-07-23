@@ -26,36 +26,36 @@ TRACE_4("params",_vehicle,typeOf _vehicle,_hitPointIndex,_hitPointDamage);
 if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1",_vehicle);};
 
 // get all hitpoints and selections and damages
-(getAllHitPointsDamage _vehicle) params ["", ["_hitSelections", []], ["_damageValues", []]];
-
-([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_indexesToIgnore", "_dependsIndexMap"];
+(getAllHitPointsDamage _vehicle) params [["_allHitPoints", []], ["_allHitPointsSelections", []], ["_allHitPointDamages", []]];
 
 // exit if the hitpoint is not valid
-if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _hitSelections)}) exitWith {ERROR_2("NOT A VALID HITPOINT: %1-%2",_hitPointIndex,_vehicle);};
+if ((_hitPointIndex < 0) || {_hitPointIndex >= (count _allHitPoints)}) exitWith {ERROR_2("NOT A VALID HITPOINT: %1-%2",_hitPointIndex,_vehicle);};
+
+([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_indexesToIgnore", "_dependsIndexMap"];
 
 // save structural damage and sum of hitpoint damages
 private _damageOld = damage _vehicle;
 
-private _realHitPointCount = 0;
+private _realHitpointCount = 0;
 private _hitPointDamageSumOld = 0;
 private _hitPointDamageRepaired = 0; //positive for repairs : newSum = (oldSum - repaired)
 {
     if (!(_forEachIndex in _indexesToIgnore) && !(_forEachIndex in _dependsIndexMap)) then {
-        _realHitPointCount = _realHitPointCount + 1;
+        _realHitpointCount = _realHitpointCount + 1;
         _hitPointDamageSumOld = _hitPointDamageSumOld + (_damageValues select _forEachIndex);
         if (_forEachIndex == _hitPointIndex) then {
             _hitPointDamageRepaired = (_damageValues select _forEachIndex) - _hitPointDamage;
         };
     };
-} forEach _hitSelections;
+} forEach _allHitPointsSelections;
 
 // calculate new structural damage
-private _damageNew = (_hitPointDamageSumOld - _hitPointDamageRepaired) / _realHitPointCount;
+private _damageNew = (_hitPointDamageSumOld - _hitPointDamageRepaired) / _realHitpointCount;
 
 if (_hitPointDamageSumOld > 0) then {
     _damageNew = _damageOld * ((_hitPointDamageSumOld - _hitPointDamageRepaired) / _hitPointDamageSumOld);
 };
-TRACE_5("structuralDamage",_damageOld,_damageNew,_hitPointDamageRepaired,_hitPointDamageSumOld,_realHitPointCount);
+TRACE_5("structuralDamage",_damageOld,_damageNew,_hitPointDamageRepaired,_hitPointDamageSumOld,_realHitpointCount);
 
 // set new structural damage value
 private _damageDisabled = !isDamageAllowed _vehicle;
@@ -66,12 +66,12 @@ if (_damageDisabled) then {
 _vehicle setDamage [_damageNew, _useEffects];
 
 //Repair the hitpoint in the damages array:
-_damageValues set [_hitPointIndex, _hitPointDamage];
+_allHitPointDamages set [_hitPointIndex, _hitPointDamage];
 
 //Set the new damage for all hitpoints
 {
     _vehicle setHitIndex [_forEachIndex, _x, _useEffects];
-} forEach _damageValues;
+} forEach _allHitPointDamages;
 
 // normalize hitpoints
 [_vehicle] call FUNC(normalizeHitPoints);
