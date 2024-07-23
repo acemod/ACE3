@@ -31,7 +31,7 @@ if (_type in _initializedClasses) exitWith {};
 if (_type == "") exitWith {};
 
 // get selections to ignore
-([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_indexesToIgnore"];
+([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_selectionsToIgnore"];
 
 // get all hitpoints and selections
 (getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];  // Since 1.82 these are all lower case
@@ -55,7 +55,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
     private _hitpoint = toLowerANSI (_hitPoints select _forEachIndex);
 
     // Skip ignored selections
-    if (_forEachIndex in _indexesToIgnore) then {
+    if (_forEachIndex in _selectionsToIgnore) then {
         TRACE_3("Skipping ignored hitpoint",_hitpoint,_forEachIndex,_selection);
         continue
     };
@@ -109,7 +109,7 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
                     private _turretHitpointCfg = ([_vehCfg, _x] call CBA_fnc_getTurret) >> "HitPoints";
                     private _hitpointsCfg = "configName _x == _hitpoint" configClasses _turretHitpointCfg;
                     if (_hitpointsCfg isNotEqualTo []) exitWith {
-                        TRACE_2("turret hitPoint configFound",_hitpoint,_x);
+                        TRACE_2("turret hitpoint configFound",_hitpoint,_x);
                         _armorComponent = getText (_hitpointsCfg # 0 >> "armorComponent");
                     };
                 } forEach _turretPaths;

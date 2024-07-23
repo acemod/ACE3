@@ -29,7 +29,7 @@ private _track = _trackArray isNotEqualTo [];
 private _text = LSTRING(Hit);
 
 // Remove # prefix
-if ((_hitPoint select [0, 1]) == "#") then { _hitPoint = _hitPoint select [1] };
+if ((_hitpoint select [0, 1]) == "#") then { _hitPoint = _hitPoint select [1] };
 
 // Remove "Hit" from hitpoint name if one exists
 private _toFind = if ((toLowerANSI _hitPoint) find "hit" == 0) then {

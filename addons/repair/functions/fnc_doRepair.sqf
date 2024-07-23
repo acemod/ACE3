@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit that does the repairing <OBJECT>
  * 1: Vehicle to repair <OBJECT>
- * 2: Selected hitPointIndex <NUMBER>
+ * 2: Selected hitpointIndex <NUMBER>
  * 3: Repair action classname <STRING>
  *
  * Return Value:
@@ -57,18 +57,18 @@ if (_hitPointNewDamage < _hitPointCurDamage) then {
 };
 
 // Get hitpoint groups if available
-private _hitPointGroupConfig = configOf _vehicle >> QGVAR(hitpointGroups);
-if (isArray _hitPointGroupConfig) then {
+private _hitpointGroupConfig = configOf _vehicle >> QGVAR(hitpointGroups);
+if (isArray _hitpointGroupConfig) then {
     // Retrieve hitpoint subgroup if current hitpoint is main hitpoint of a group
     {
-        _x params ["_masterHitPoint", "_subHitArray"];
+        _x params ["_masterHitpoint", "_subHitArray"];
         // Exit using found hitpoint group if this hitpoint is leader of any
-        if (_masterHitPoint == _hitPointClassname) exitWith {
+        if (_masterHitpoint == _hitPointClassname) exitWith {
             {
-                private _subHitPoint = _x;
-                private _subHitIndex = _allHitPoints findIf {_x == _subHitPoint}; //convert hitpoint classname to index
+                private _subHitpoint = _x;
+                private _subHitIndex = _allHitPoints findIf {_x == _subHitpoint}; //convert hitpoint classname to index
                 if (_subHitIndex == -1) then {
-                    ERROR_2("Invalid hitpoint %1 in hitPointGroups of %2",_subHitPoint,_vehicle);
+                    ERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_subHitpoint,_vehicle);
                 } else {
                     if (_subHitIndex in _repairedHitPoints) then {
                         TRACE_2("Skipping repair, sub hitpoint already fixed in depends",_subHitIndex,_vehicle);
@@ -84,7 +84,7 @@ if (isArray _hitPointGroupConfig) then {
                 };
             } forEach _subHitArray;
         };
-    } forEach (getArray _hitPointGroupConfig);
+    } forEach (getArray _hitpointGroupConfig);
 };
 
 // display text message if enabled

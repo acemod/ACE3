@@ -22,19 +22,20 @@
  */
 
 params ["_args", "_elapsedTime", "_totalTime"];
-_args params ["_unit", "_vehicle", "", "_action"];
+_args params ["_engineer", "_vehicle", "", "_action"];
 
 if !((alive _vehicle) && {(abs speed _vehicle) < 1}) exitWith {false}; // make sure vehicle doesn't drive off
 
 // Not enough time has elapsed to repair a hitpoint
-if (_totalTime - _elapsedTime > ([_unit, _vehicle] call FUNC(getFullRepairTime)) - (GVAR(miscRepairTime) * GVAR(timeCoefficientFullRepair))) exitWith {true};
+if (_totalTime - _elapsedTime > ([_engineer, _vehicle] call FUNC(getFullRepairTime)) - (GVAR(miscRepairTime) * GVAR(timeCoefficientFullRepair))) exitWith {true};
 
-(getAllHitPointsDamage _vehicle) params ["", "", "_damageValues"];
+private _allHitPointsDamage = getAllHitPointsDamage _vehicle;
+_allHitPointsDamage params ["_hitPoints", "", "_damageValues"];
 
-([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_indexesToIgnore"];
+([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_selectionsToIgnore"];
 
 private _firstDamagedIndex = {
-    if (_x > 0 && {!(_forEachIndex in _indexesToIgnore)}) exitWith {_forEachIndex};
+    if (_x > 0 && {!(_forEachIndex in _selectionsToIgnore)}) exitWith {_forEachIndex};
     -1
 } forEach _damageValues;
 
@@ -43,6 +44,6 @@ private _firstDamagedIndex = {
 if (_firstDamagedIndex == -1) exitWith {true};
 
 // Repair the first damaged hitpoint
-[_unit, _vehicle, _firstDamagedIndex, _action] call FUNC(doRepair);
+[_engineer, _vehicle, _firstDamagedIndex, _action] call FUNC(doRepair);
 
 true

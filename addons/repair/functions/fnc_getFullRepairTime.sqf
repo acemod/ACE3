@@ -16,18 +16,18 @@
  * Public: No
  */
 
-params ["_unit", "_vehicle"];
-TRACE_2("params",_unit,_vehicle);
+params ["_engineer", "_vehicle"];
 
-(getAllHitPointsDamage _vehicle) params ["", "", "_damageValues"];
+private _allHitPointsDamage = getAllHitPointsDamage _vehicle;
+_allHitPointsDamage params ["_hitPoints", "", "_damageValues"];
 
-([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_indexesToIgnore"];
+([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_selectionsToIgnore"];
 
 private _repairsNeeded = 0;
 private _doExtraRepair = false;
 {
     if (_x <= 0) then {continue}; // skip hitpoints that don't need repairs
-    if (_forEachIndex in _indexesToIgnore) then { // only add extra repair for ignore hitpoints if they're damaged
+    if (_forEachIndex in _selectionsToIgnore) then { // only add extra repair for ignore hitpoints if they're damaged
         _doExtraRepair = true;
         continue
     };

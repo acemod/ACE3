@@ -27,14 +27,11 @@ params ["_vehicle"];
 
 private _type = typeOf _vehicle;
 TRACE_2("getSelectionsToIgnore",_vehicle,_type);
-private _initializedClasses = GETMVAR(GVAR(ignoredAndDependsInitializedClasses),createHashMap);
-if (_type in _initializedClasses) exitWith {
-    TRACE_2("retrieved cached selections",_vehicle,_type);
-    _initializedClasses get _type;
-}; //you return different amount of values each time
+private _initializedClasses = missionNamespace getVariable [QGVAR(hitPointsToIgnoreInitializedClasses), createHashMap];
+if (_type in _initializedClasses) exitWith {_initializedClasses get _type};
 
 private _vehCfg = configOf _vehicle;
-private _hitPointGroups = getArray (_vehCfg >> QGVAR(hitpointGroups));
+private _hitpointGroups = getArray (_vehCfg >> QGVAR(hitpointGroups));
 private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehicle, "commander", true])) apply {_x # 3};
 
 (getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];
@@ -48,33 +45,42 @@ private _complexDependsMap = createHashMap;
 
 {
     private _selection = _x;
-    private _hitPoint = toLowerANSI (_hitPoints select _forEachIndex);
-    private _isWheelOrTrack = _selection in _wheelHitSelections || {_hitPoint in _wheelHitPoints} || {_hitPoint in TRACK_HITPOINTS};
+    private _hitpoint = toLowerANSI (_hitPoints select _forEachIndex);
+    private _isWheelOrTrack = _selection in _wheelHitSelections || {_hitpoint in _wheelHitPoints} || {_hitpoint in TRACK_HITPOINTS};
 
-    if (_hitPoint isEqualTo "") then { // skip empty hitpoint
+    if (_hitpoint isEqualTo "") then { // skip empty hitpoint
         _indexesToIgnore pushBack _forEachIndex;
         continue
     };
 
-    if (_isWheelOrTrack && {_selection in _processedSelections || {_selection isEqualTo ""}}) then {
-        TRACE_3("Skipping duplicate Wheel/Track or empty selection",_hitPoint,_forEachIndex,_selection);
-        _indexesToIgnore pushBack _forEachIndex;
-        _processedSelections pushBack _selection;
-        continue
-    };
-
-    if ("glass" in _hitPoint) then {
-        TRACE_3("Skipping glass",_hitPoint,_forEachIndex,_selection);
+    if (_isWheelOrTrack && {_selection in _processedSelections || {_selection isEqualTo ""}}) then { // skip duplicate or empty selection wheel/track
+        TRACE_3("Skipping duplicate Wheel/Track or empty selection",_hitpoint,_forEachIndex,_selection);
+        /*#ifdef DEBUG_MODE_FULL
+        systemChat format ["Skipping duplicate wheel, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
+        #endif*/
         _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
 
-    if (_hitPoint select [0,7] isEqualTo "hitera_" || {_hitPoint select [0,4] isEqualTo "era_"}
-    || {_hitPoint select [0,8] isEqualTo "hitslat_"}  || {_hitPoint select [0,5] isEqualTo "slat_"}
-    || {_hitPoint select [0,9] isEqualTo "sideskirt"} || {_hitPoint select [0,6] isEqualTo "armor_"}
-    || {_hitPoint select [0,3] isEqualTo "mud"} || {_hitPoint select [0,9] isEqualTo "smoketube"}) then {
-        TRACE_3("Skipping ERA/Slat/Sideskirt/Armor/Mudguard/Smoketube HitPoint",_hitPoint,_forEachIndex,_selection);
+    if ("glass" in _hitpoint) then { // skip glass
+        TRACE_3("Skipping glass",_hitpoint,_forEachIndex,_selection);
+        /*#ifdef DEBUG_MODE_FULL
+        systemChat format ["Skipping glass, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
+        #endif*/
+        _indexesToIgnore pushBack _forEachIndex;
+        _processedSelections pushBack _selection;
+        continue
+    };
+
+    if (_hitpoint select [0,7] isEqualTo "hitera_" || {_hitpoint select [0,4] isEqualTo "era_"}  // skip era/slat
+    || {_hitpoint select [0,8] isEqualTo "hitslat_"}  || {_hitpoint select [0,5] isEqualTo "slat_"}
+    || {_hitpoint select [0,9] isEqualTo "sideskirt"} || {_hitpoint select [0,6] isEqualTo "armor_"}
+    || {_hitpoint select [0,3] isEqualTo "mud"} || {_hitpoint select [0,9] isEqualTo "smoketube"}) then {
+        TRACE_3("Skipping ERA/Slat/Sideskirt/Armor/Mudguard/Smoketube HitPoint",_hitpoint,_forEachIndex,_selection);
+        /*#ifdef DEBUG_MODE_FULL
+        systemChat format ["Skipping ERA/Slat/Sideskirt/Armor/Mudguard/Smoketube HitPoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
+        #endif*/
         _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
@@ -83,52 +89,55 @@ private _complexDependsMap = createHashMap;
     private _armorComponent = "";
     if (_selection == "") then { // some hitpoints have empty selection but defined armor component (mostly RHS)
         {
-            private _turretHitPointCfg = ([_vehCfg, _x] call CBA_fnc_getTurret) >> "HitPoints";
-            private _hitPointsCfg = "configName _x == _hitPoint" configClasses _turretHitPointCfg;
-            if (_hitPointsCfg isNotEqualTo []) exitWith {
-                TRACE_2("turret hitpoint config found",_hitPoint,_x);
-                _hitPointsCfg = _hitPointsCfg # 0;
+            private _turretHitpointCfg = ([_vehCfg, _x] call CBA_fnc_getTurret) >> "HitPoints";
+            private _hitpointsCfg = "configName _x == _hitpoint" configClasses _turretHitpointCfg;
+            if (_hitpointsCfg isNotEqualTo []) exitWith {
+                TRACE_2("turret hitpoint configFound",_hitpoint,_x);
+                _hitpointsCfg = _hitpointsCfg # 0;
                 // only do turret hitpoints and stuff linked to visuals
                 if (
-                    (_hitPoint in ["hitturret", "hitgun"]) ||
-                    {(getNumber (_hitPointsCfg >> "isGun")) == 1} ||
-                    {(getNumber (_hitPointsCfg >> "isTurret")) == 1} ||
-                    {(getText (_hitPointsCfg >> "visual")) != ""}
+                    (_hitpoint in ["hitturret", "hitgun"]) ||
+                    {(getNumber (_hitpointsCfg >> "isGun")) == 1} ||
+                    {(getNumber (_hitpointsCfg >> "isTurret")) == 1} ||
+                    {(getText (_hitpointsCfg >> "visual")) != ""}
                 ) then {
-                    _armorComponent = getText (_hitPointsCfg >> "armorComponent");
+                    _armorComponent = getText (_hitpointsCfg >> "armorComponent");
                 };
             };
         } forEach _turretPaths;
         if (_armorComponent == "") then {
-            private _hitPointsCfg = "configName _x == _hitPoint" configClasses (_vehCfg >> "HitPoints");
-            if (_hitPointsCfg isNotEqualTo []) then {
-                _hitPointsCfg = _hitPointsCfg # 0;
+            private _hitpointsCfg = "configName _x == _hitpoint" configClasses (_vehCfg >> "HitPoints");
+            if (_hitpointsCfg isNotEqualTo []) then {
+                _hitpointsCfg = _hitpointsCfg # 0;
                 if (
-                    (getNumber (_hitPointsCfg >> "isGun")) == 1 ||
-                    {(getNumber (_hitPointsCfg >> "isTurret")) == 1} ||
-                    {(getText (_hitPointsCfg >> "visual")) != ""}
+                    (getNumber (_hitpointsCfg >> "isGun")) == 1 ||
+                    {(getNumber (_hitpointsCfg >> "isTurret")) == 1} ||
+                    {(getText (_hitpointsCfg >> "visual")) != ""}
                 ) then {
-                    _armorComponent = getText (_hitPointsCfg >> "armorComponent");
+                    _armorComponent = getText (_hitpointsCfg >> "armorComponent");
                 };
             };
         };
     };
 
     if ((_selection == "") && {_armorComponent == ""}) then {
-        TRACE_3("Skipping no selection OR armor component",_hitPoint,_forEachIndex,_selection);
+        TRACE_3("Skipping no selection OR armor component",_hitpoint,_forEachIndex,_selection);
+        /*#ifdef DEBUG_MODE_FULL
+        systemChat format ["Skipping no selection OR armor component, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
+        #endif*/
         _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
 
-    if !(getText (_vehCfg >> "HitPoints" >> _hitPoint >> "depends") in ["", "0"]) then {
+    if !(getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends") in ["", "0"]) then {
         // Caches depends hitpoints and their parents
-        private _parentHitPoint = getText (_vehCfg >> "HitPoints" >> _hitPoint >> "depends");
+        private _parentHitPoint = getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends");
         private _parentHitPointIndex = _hitPoints findIf {_x == _parentHitPoint};
 
         if (_parentHitPointIndex != -1) then {
             _dependsIndexMap set [_forEachIndex, _parentHitPointIndex];
-            TRACE_3("Depends hitpoint and parent index",_hitPoint,_forEachIndex,_parentHitPoint);
+            TRACE_3("Depends hitpoint and parent index",_hitpoint,_forEachIndex,_parentHitPoint);
         } else {
             // Multiple/Complex parents or broken parents
             _indexesToIgnore pushBack _forEachIndex;
@@ -146,15 +155,15 @@ private _complexDependsMap = createHashMap;
             } forEachReversed _parentHitPoints;
 
             if (_validComplexHitPoint || _parentHitPoint == "total") then {
-                TRACE_3("Skipping depends and setting complex parent",_hitPoint,_forEachIndex,_parentHitPoint);
+                TRACE_3("Skipping depends and setting complex parent",_hitpoint,_forEachIndex,_parentHitPoint);
                 _complexDependsMap set [_forEachIndex, [_parentHitPoint, _parentHitPoints]];
                 _dependsIndexMap set [_forEachIndex, _parentHitPointIndex];
             } else {
-                TRACE_3("Skipping depends with broken complex parent",_hitPoint,_forEachIndex,_parentHitPoint);
-                private _groupIndex = _hitPointGroups findIf {_x # 0 == _hitPoint};
+                TRACE_3("Skipping depends with broken complex parent",_hitpoint,_forEachIndex,_parentHitPoint);
+                private _groupIndex = _hitpointGroups findIf {_x # 0 == _hitpoint};
                 if (_groupIndex != -1) then {
-                    ERROR_2("[%1] hitpoint [%2] is both a group-parent and an ignored depends and will be unrepairable",_type,_hitPoint);
-                    ERROR_1("group: %1",_hitPointGroups # _groupIndex);
+                    ERROR_2("[%1] hitpoint [%2] is both a group-parent and an ignored depends and will be unrepairable",_type,_hitpoint);
+                    ERROR_1("group: %1",_hitpointGroups # _groupIndex);
                 };
             };
         };
@@ -162,8 +171,11 @@ private _complexDependsMap = createHashMap;
         continue
     };
 
-    if (ANY_OF(_hitpointGroups,ANY_OF(_x select 1,_x == _hitpoint))) then {
-        TRACE_3("Skipping child hitpoint",_hitPoint,_forEachIndex,_selection);
+    if (ANY_OF(_hitpointGroups,ANY_OF(_x select 1,_x == _hitpoint))) then { // skip child hitpoints
+        TRACE_3("Skipping child hitpoint",_hitpoint,_forEachIndex,_selection);
+        /*#ifdef DEBUG_MODE_FULL
+        systemChat format ["Skipping child hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
+        #endif*/
         _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
@@ -173,6 +185,6 @@ private _complexDependsMap = createHashMap;
 } forEach _hitSelections;
 
 _initializedClasses set [_type, [_indexesToIgnore, _dependsIndexMap, _complexDependsMap]];
-SETMVAR(GVAR(ignoredAndDependsInitializedClasses),_initializedClasses);
+missionNamespace setVariable [QGVAR(hitPointsToIgnoreInitializedClasses), _initializedClasses];
 
 [_indexesToIgnore, _dependsIndexMap, _complexDependsMap]

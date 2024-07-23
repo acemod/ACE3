@@ -38,7 +38,7 @@ if (isArray _hitpointGroupConfig) then {
                 private _subHitpoint = _x;
                 private _subHitIndex = _allHitPoints findIf {_x == _subHitpoint};
                 if (_subHitIndex == -1) then {
-                    ERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_subHitpoint,_target)
+                    ERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_subHitpoint,_target);
                 } else {
                     _hitpointGroup pushBack _subHitIndex;
                 };
