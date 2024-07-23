@@ -11,7 +11,7 @@
  * Nothing
  *
  * Example:
- * [a, b] call ACE_medical_ai_fnc_healingLogic
+ * [cursorObject, cursorObject] call ace_medical_ai_fnc_healingLogic
  *
  * Public: No
  */
