@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, PabstMirror
- * Applies healing to target
+ * Applies healing to target.
  *
  * Arguments:
  * 0: Healer <OBJECT>
