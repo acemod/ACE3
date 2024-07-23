@@ -151,6 +151,8 @@
 #define IDC_statsBackground5 5118
 #define IDC_statsBar5 5119
 #define IDC_statsText5 5120
+#define IDC_statsStaticBackground1 5121
+#define IDC_statsStaticBackground2 5122
 #define IDC_statsPreviousPage 52
 #define IDC_statsNextPage 53
 #define IDC_statsCurrentPage 54
