@@ -23,10 +23,10 @@ if IS_UNCONSCIOUS(_this) exitWith {
 
 // Find next unit to treat
 private _healQueue = _this getVariable [QGVAR(healQueue), []];
-private _target = _healQueue select 0;
+private _target = _healQueue param [0, objNull];
 
 // If unit died or was healed, be lazy and wait for the next tick
-if (isNull _target || {!alive _target} || {!(_target call FUNC(isInjured))}) exitWith {
+if (!alive _target || {!(_target call FUNC(isInjured))}) exitWith {
     _this forceSpeed -1;
     _target forceSpeed -1;
     _healQueue deleteAt 0;

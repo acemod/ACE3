@@ -87,9 +87,6 @@ switch (true) do {
         _treatmentArgs = [_target, selectRandom ["leftarm", "rightarm", "leftleg", "rightleg"], "SalineIV"];
         _treatmentItem = "@iv";
     };
-    case ((count (_target getVariable [VAR_MEDICATIONS, []])) >= 6): {
-        _treatmentEvent = "#tooManyMeds";
-    };
     case (((_fractures select 4) == 1)
     && {([_healer, "splint"] call FUNC(itemCheck)) # 0}): {
         _treatmentEvent = QEGVAR(medical_treatment,splintLocal);
@@ -103,6 +100,9 @@ switch (true) do {
         _treatmentTime = 6;
         _treatmentArgs = [_healer, _target, "rightleg"];
         _treatmentItem = "splint";
+    };
+    case ((count (_target getVariable [VAR_MEDICATIONS, []])) >= 6): {
+        _treatmentEvent = "#tooManyMeds";
     };
     case ((IS_UNCONSCIOUS(_target) || {_heartRate <= 50})
     && {([_healer, "epinephrine"] call FUNC(itemCheck)) # 0}): {
