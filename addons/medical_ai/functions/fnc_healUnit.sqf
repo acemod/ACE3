@@ -4,16 +4,17 @@
  * Makes a medic heal the next unit that needs treatment.
  *
  * Arguments:
- * None
+ * Unit <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ACE_medical_ai_fnc_healUnit
+ * cursorObject call ace_medical_ai_fnc_healUnit
  *
  * Public: No
  */
+
 // Player will have to do this manually of course
 if ([_this] call EFUNC(common,isPlayer)) exitWith {};
 // Can't heal other units when unconscious

@@ -10,7 +10,7 @@
  * Does unit need treatment <BOOL>
  *
  * Example:
- * player call ACE_medical_ai_fnc_isInjured
+ * cursorObject call ace_medical_ai_fnc_isInjured
  *
  * Public: No
  */
