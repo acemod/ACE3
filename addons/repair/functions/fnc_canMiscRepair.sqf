@@ -17,49 +17,48 @@
  * Public: No
  */
 
-params ["_unit", "_vehicle", "_hitPointIndex"];
-TRACE_3("params",_unit,_vehicle,_hitPointIndex);
+params ["_caller", "_target", "_hitPointIndex"];
 
-(getAllHitPointsDamage _vehicle) params ["_hitPoints", "", "_damageValues"];
+(getAllHitPointsDamage _target) params ["_allHitPoints", "", "_allHitPointDamages"];
 
-if !([_unit, _vehicle, ["isNotDragging", "isNotCarrying", "isNotSwimming", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
+if !([_caller, _target, ["isNotDragging", "isNotCarrying", "isNotSwimming", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
 // Get hitpoint groups if available
-private _hitPointGroupConfig = configOf _vehicle >> QGVAR(hitpointGroups);
-private _hitPointGroup = [];
-if (isArray _hitPointGroupConfig) then {
-    private _hitPointClassname = _hitPoints select _hitPointIndex;
+private _hitpointGroupConfig = configOf _target >> QGVAR(hitpointGroups);
+private _hitpointGroup = [];
+if (isArray _hitpointGroupConfig) then {
+    private _hitPointClassname = _allHitPoints select _hitPointIndex;
 
     // Retrieve hitpoint subgroup if current hitpoint is main hitpoint of a group
     {
-        _x params ["_masterHitPoint", "_subHitArray"];
+        _x params ["_masterHitpoint", "_subHitArray"];
         // Exit using found hitpoint group if this hitpoint is leader of any
-        if (_masterHitPoint == _hitPointClassname) exitWith {
+        if (_masterHitpoint == _hitPointClassname) exitWith {
             {
-                private _subHitPoint = _x;
-                private _subHitIndex = _hitPoints findIf {_x == _subHitPoint};
+                private _subHitpoint = _x;
+                private _subHitIndex = _allHitPoints findIf {_x == _subHitpoint};
                 if (_subHitIndex == -1) then {
-                    ERROR_2("Invalid hitpoint %1 in hitPointGroups of %2",_subHitPoint,_vehicle);
+                    ERROR_2("Invalid hitpoint %1 in hitpointGroups of %2",_subHitpoint,_target)
                 } else {
-                    _hitPointGroup pushBack _subHitIndex;
+                    _hitpointGroup pushBack _subHitIndex;
                 };
             } forEach _subHitArray;
         };
-    } forEach (getArray _hitPointGroupConfig);
+    } forEach (getArray _hitpointGroupConfig);
 };
 
 // Add current hitpoint to the group
-_hitPointGroup pushBack _hitPointIndex;
+_hitpointGroup pushBack _hitPointIndex;
 
 // Get post repair damage
-private _postRepairDamage = [_unit] call FUNC(getPostRepairDamage);
+private _postRepairDamage = [_caller] call FUNC(getPostRepairDamage);
 
 // Return true if damage can be repaired on any hitpoint in the group, else false
 private _return = false;
 {
-    if ((_damageValues select _x) > _postRepairDamage) exitWith {
+    if ((_allHitPointDamages select _x) > _postRepairDamage) exitWith {
         _return = true;
     };
-} forEach _hitPointGroup;
+} forEach _hitpointGroup;
 
 _return
