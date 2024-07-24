@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if a unit needs treatment.
@@ -10,7 +10,7 @@
  * Does unit need treatment <BOOL>
  *
  * Example:
- * player call ACE_medical_ai_fnc_isInjured
+ * cursorObject call ace_medical_ai_fnc_isInjured
  *
  * Public: No
  */

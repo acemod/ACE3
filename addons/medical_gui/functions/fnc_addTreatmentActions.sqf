@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, mharis001
  * Creates actions for treatments from config and adds them to the interaction menu.
@@ -36,14 +36,14 @@ private _fnc_condition = {
     private _displayName = getText (_x >> "displayName");
     private _icon = getText (_x >> "icon");
 
-    private _allowedBodyParts = getArray (_x >> "allowedSelections") apply {toLower _x};
+    private _allowedBodyParts = getArray (_x >> "allowedSelections") apply {toLowerANSI _x};
     if (_allowedBodyParts isEqualTo ["all"]) then {
-        _allowedBodyParts = ALL_BODY_PARTS apply {toLower _x};
+        _allowedBodyParts = ALL_BODY_PARTS apply {toLowerANSI _x};
     };
 
     {
         private _bodyPart = _x;
-        private _actionPath = _actionPaths select (ALL_BODY_PARTS find toLower _bodyPart);
+        private _actionPath = _actionPaths select (ALL_BODY_PARTS find toLowerANSI _bodyPart);
 
         private _action = [
             _actionName,

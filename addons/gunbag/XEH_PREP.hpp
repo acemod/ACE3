@@ -10,3 +10,6 @@ PREP(canInteract);
 PREP(calculateMass);
 PREP(hasGunbag);
 PREP(isMachineGun);
+PREP(BIArsenalClose);
+PREP(BIArsenalOpen);
+PREP(weaponName);

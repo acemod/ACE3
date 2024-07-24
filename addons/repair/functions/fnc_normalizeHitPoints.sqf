@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Used to normalize dependant hitpoints. May overwrite some global variables that are named like hitpoints or "Total" though...
@@ -16,14 +16,14 @@
  */
 
 params ["_vehicle"];
-TRACE_2("params",_vehicle, typeOf _vehicle);
+TRACE_2("params",_vehicle,typeOf _vehicle);
 
 // Can't execute all commands if the vehicle isn't local, exit if that's so
-if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1", _vehicle);};
+if !(local _vehicle) exitWith {ERROR_1("Vehicle Not Local %1",_vehicle);};
 
 (getAllHitPointsDamage _vehicle) params [["_allHitPoints", []]];
 
-private _config = configFile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints";
+private _config = configOf _vehicle >> "HitPoints";
 
 private _realHitPoints = [];
 private _dependentHitPoints = [];
@@ -33,7 +33,7 @@ private _dependentHitPointScripts = [];
 {
     if ((_x != "") && {isClass (_config >> _x)} && {!(_x in _realHitPoints)}) then {
         _realHitPoints pushBack _x;
-        if (!((getText (_config >> _x >> "depends")) in ["", "0"])) then {
+        if !((getText (_config >> _x >> "depends")) in ["", "0"]) then {
             _dependentHitPoints pushBack _x;
             _dependentHitPointScripts pushBack compile getText (_config >> _x >> "depends");
         };
@@ -46,15 +46,22 @@ TRACE_2("",_realHitPoints,_dependentHitPoints);
 if (_dependentHitPoints isEqualTo []) exitWith {};
 
 
-// Define global variables
-Total = damage _vehicle;
+// Define global variables and save original values
+private _savedGlobals = [["total", total]];
+total = damage _vehicle;
 {
+    _savedGlobals pushBack [_x, missionNamespace getVariable _x];
     missionNamespace setVariable [_x, _vehicle getHitPointDamage _x];
 } forEach _realHitPoints;
 
 // apply normalized damage to all dependand hitpoints
 {
     private _damage = call (_dependentHitPointScripts select _forEachIndex);
-    TRACE_2("setting depend hitpoint", _x, _damage);
+    TRACE_2("setting depend hitpoint",_x,_damage);
     _vehicle setHitPointDamage [_x, _damage];
 } forEach _dependentHitPoints;
+
+// Restore global variables
+{
+    missionNamespace setVariable _x;
+} forEach _savedGlobals;

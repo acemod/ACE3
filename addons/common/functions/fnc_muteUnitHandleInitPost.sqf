@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Applies speaker changes on init post. Used because setSpeaker is broken on init.

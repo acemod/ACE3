@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Starts progress bar for picking up a specific kind of magazine from an ammo truck.
@@ -30,7 +30,7 @@ REARM_HOLSTER_WEAPON;
 private _targetName = if (_vehicle == _unit) then {
     "CSW"
 } else {
-    getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName")
+    getText(configOf _vehicle >> "displayName")
 };
 
 [

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Grenades
+component: grenades
 description: Different throwing modes for grenades, a flashbang, incendiary grenade and hand flares.
 group: feature
 category: equipment
@@ -22,6 +23,8 @@ version:
 ### 1.1 Throw modes
 Provides different modes for throwing grenades (high throw, precision throw and drop mode).
 
+A grenade is only rollable if the fuse time (`explosionTime`) is >= 1 second and the player isn't in a vehicle.
+
 ### 1.2 Hand flares
 Adds throwable hand flares in the colors white, red, green and yellow. Additionally buffs existing flares by making them brighter and last longer.
 
@@ -39,7 +42,3 @@ Adds the AN-M14 incendiary grenade. This grenade has a thermate filler and is pr
 ### 2.2 Switching between grenades
 - Press <kbd>6</kbd> (ACE3 default key bind `Select frag`) to switch between `LETHAL` grenades
 - Press <kbd>7</kbd> (ACE3 default key bind `Select non-frag`) to switch between `NON LETHAL` grenades
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="grenades" %}

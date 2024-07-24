@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, AACO, SilentSpike
+ * Author: Nelson Duarte, AACO, kymckay
  * Function used to add projectiles to be drawn when a unit fires
  *
  * Arguments:

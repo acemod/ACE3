@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Sets advanced visible element of the UI using displays and controls.
@@ -20,7 +20,9 @@
 
 params ["_element", "_show", ["_showHint", false, [true]], ["_force", false, [true]]];
 
-private _cachedElement = GVAR(configCache) getVariable _element;
+_element = toLowerANSI _element;
+
+private _cachedElement = GVAR(configCache) get _element;
 if (isNil "_cachedElement") exitWith {TRACE_1("nil element",_this)};
 
 if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
@@ -33,9 +35,10 @@ _cachedElement params ["_idd", "_elements", "_location", "_conditions"];
 
 // Exit if main vehicle type condition not fitting
 private _canUseWeaponOrInCargo = ACE_player call CBA_fnc_canUseWeapon || {-1 < vehicle ACE_player getCargoIndex ACE_player};
+private _inUAVCamera = !isNull getConnectedUAVUnit player; // explictly using player
 if (
-    (_canUseWeaponOrInCargo && {_location == VEHICLE_ONLY})
-    || {!_canUseWeaponOrInCargo && {_location == GROUND_ONLY}}
+    (_canUseWeaponOrInCargo && {!_inUAVCamera} && {_location == VEHICLE_ONLY})
+    || {(!_canUseWeaponOrInCargo || {_inUAVCamera}) && {_location == GROUND_ONLY}}
 ) exitWith {
     TRACE_3("skip location",_this,_canUseWeaponOrInCargo,_location);
     false
@@ -51,11 +54,11 @@ if (
         };
         _show = false;
     };
-} count _conditions;
+} forEach _conditions;
 
 // Get setting from scripted API
 if (!_force) then {
-    private _setElement = GVAR(elementsSet) getVariable _element;
+    private _setElement = GVAR(elementsSet) get _element;
     if (!isNil "_setElement") then {
         _setElement params ["_sourceSet", "_showSet"];
         if (_showHint) then {
@@ -66,7 +69,8 @@ if (!_force) then {
     };
 };
 
-private _fade = [1, 0] select _show;
+private _displays = ((uiNamespace getVariable "IGUI_displays") + [findDisplay IDD_MISSION]) select {_idd == ctrlIDD _x};
+private _fade = parseNumber !_show;
 
 // Disable/Enable elements
 private _success = false;
@@ -75,16 +79,16 @@ private _success = false;
 
     // Loop through IGUI displays as they can be present several times for some reason
     {
-        if (_idd == ctrlIDD _x) then {
-            TRACE_4("Setting Element Visibility",_element,_fade,_idd,_idc);
+        _success = true;
 
-            (_x displayCtrl _idc) ctrlSetFade _fade;
-            (_x displayCtrl _idc) ctrlCommit 0;
+        private _control = _x displayCtrl _idc;
+        if (ctrlFade _control == _fade) then {continue};
 
-            _success = true;
-        };
-    } count (uiNamespace getVariable "IGUI_displays");
-    nil
-} count _elements;
+        TRACE_4("Setting Element Visibility",_element,_fade,_idd,_idc);
+
+        _control ctrlSetFade _fade;
+        _control ctrlCommit 0;
+    } forEach _displays;
+} forEach _elements;
 
 _success

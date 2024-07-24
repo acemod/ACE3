@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Check if unit has a mine detector in hands
@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-!(([currentWeapon _unit] call FUNC(getDetectorConfig)) isEqualTo []);
+([currentWeapon _unit] call FUNC(getDetectorConfig)) isNotEqualTo [];

@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Aircraft
+component: aircraft
 description: Aircraft overhaul.
 group: feature
 category: realism
@@ -38,7 +39,3 @@ Adds a laser marker to the copilot seat of the Wildcat.
 
 ### 2.1 Switching flare modes
 Press <kbd>Ctrl</kbd>+<kbd>C</kbd> to switch between flare firing modes (Arma 3 default key bind `countermeasure mode`)
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="aircraft" %}

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: alganthe
  * Used to un-garrison units.
@@ -28,7 +28,7 @@ _units = _units select {local _x};
 
         private _leader = leader _unit;
 
-        TRACE_3("fnc_ungarrison: unit and leader",_unit , _leader, (_leader == _unit));
+        TRACE_3("fnc_ungarrison: unit and leader",_unit,_leader,(_leader == _unit));
 
         _unit setVariable [QGVAR(garrisonned), false, true];
 

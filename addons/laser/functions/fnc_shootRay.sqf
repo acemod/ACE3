@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Nou, PabstMirror
  * Shoots a ray from a source to a direction and finds first intersction and distance.
@@ -21,7 +21,7 @@
 BEGIN_COUNTER(shootRay);
 
 params ["_posASL", "_dir", ["_ignoreVehicle1", objNull], ["_ignoreVehicle2", objNull]];
-// TRACE_2("ray origin:", _posASL, _dir);
+// TRACE_2("ray origin:",_posASL,_dir);
 
 private _distance = 0;
 private _resultPos = nil;
@@ -36,14 +36,14 @@ if (_intersects isEqualTo []) then {
     };
 };
 
-if (!(_intersects isEqualTo [])) then {
+if (_intersects isNotEqualTo []) then {
     (_intersects select 0) params ["_intersectPosASL", "", "_intersectObject"];
     // Move back slightly to prevents issues with it going below terrain
     _distance = (_posASL vectorDistance _intersectPosASL) - 0.005;
     _resultPos = _posASL vectorAdd (_dir vectorMultiply _distance);
 };
 
-TRACE_3("", _resultPos, _distance, _intersects);
+TRACE_3("",_resultPos,_distance,_intersects);
 
 #ifdef DRAW_LASER_INFO
 if (!isNil "_resultPos") then {

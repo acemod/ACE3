@@ -71,7 +71,7 @@ class CfgAmmo {
     class BombDemine_01_Ammo_F: BombCore {
         ACE_damageType = "explosive";
     };
-    
+
     // Autocannon rounds are special (#7401)
     class B_19mm_HE: BulletBase {
         ACE_damageType = "explosive";

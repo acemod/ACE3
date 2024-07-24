@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Play random injured sound for a unit. The sound is broadcasted across MP.
@@ -33,7 +33,7 @@ private _distance = if (_type == "hit") then {
 } else {
     [10, 15, 20] select _severity;
 };
-private _targets = allPlayers inAreaArray [getPosWorld _unit, _distance, _distance, 0, false, _distance];
+private _targets = allPlayers inAreaArray [ASLToAGL getPosASL _unit, _distance, _distance, 0, false, _distance];
 if (_targets isEqualTo []) exitWith {};
 
 // Handle timeout

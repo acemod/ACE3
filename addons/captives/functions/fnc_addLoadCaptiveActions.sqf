@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: 654wak654
  * Adds child actions to the "load captive" action for near vehicles.
@@ -22,4 +22,4 @@ private _statement = {
     [_player, _target, _vehicle] call FUNC(doLoadCaptive);
 };
 
-[_target call EFUNC(common,nearestVehiclesFreeSeat), _statement, _target] call EFUNC(interact_menu,createVehiclesActions)
+[[_target, nil, true] call EFUNC(common,nearestVehiclesFreeSeat), _statement, _target] call EFUNC(interact_menu,createVehiclesActions)

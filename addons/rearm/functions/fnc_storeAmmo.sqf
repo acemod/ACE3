@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Stores ammo in an ammo truck.
@@ -33,7 +33,7 @@ private _magazineClass = _attachedDummy getVariable [QGVAR(magazineClass), "#noV
         [_unit, true, true] call FUNC(dropAmmo);
     },
     "",
-    format [localize LSTRING(StoreAmmoAction), _magazineClass call FUNC(getMagazineName), getText(configFile >> "CfgVehicles" >> (typeOf _truck) >> "displayName")],
+    format [localize LSTRING(StoreAmmoAction), _magazineClass call FUNC(getMagazineName), getText(configOf _truck >> "displayName")],
     {true},
     ["isnotinside"]
 ] call EFUNC(common,progressBar);

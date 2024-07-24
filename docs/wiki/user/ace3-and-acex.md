@@ -15,6 +15,9 @@ It provides many [features](../feature) which enhance realism gameplay, and prov
 
 ## 2. ACEX
 
-**ACEX** is an optional package of mods that compliments the ACE3 modification.
+**ACEX** was an optional package of mods that complimented the ACE3 modification.
 
-ACEX [features](../featurex) enhance gameplay, but may focus on functionality over realism. It also provides [frameworks](../frameworkx) which do not fit into the scope of ACE3 but may be useful to mission makers, modders and scripters.
+<div class="panel callout">
+    <p><b>ACEX was merged into ACE3 v3.14.0!</b> Remove it if you still have it installed.</p>
+</div>
+

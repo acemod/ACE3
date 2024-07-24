@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Handle interactions key up
@@ -23,10 +23,9 @@ if (GVAR(openedMenuType) < 0) exitWith {true};
 if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
     (findDisplay 91919) closeDisplay 2;
 };
+if ((!isNull curatorCamera) && {!isNull (findDisplay 91919)}) then { closeDialog 2; };
 
 if (GVAR(actionSelected)) then {
-    this = GVAR(selectedTarget);
-
     private _player = ACE_Player;
     private _target = GVAR(selectedTarget);
 
@@ -38,6 +37,11 @@ if (GVAR(actionSelected)) then {
 
     // Check the action conditions
     private _actionData = GVAR(selectedAction) select 0;
+
+    // Use global variable this for action condition and action code
+    private _savedThis = this;
+    this = GVAR(selectedTarget);
+
     if ([_target, _player, _actionData select 6] call (_actionData select 4)) then {
         // Call the statement
         [_target, _player, _actionData select 6] call (_actionData select 3);
@@ -45,6 +49,9 @@ if (GVAR(actionSelected)) then {
         // Clear the conditions caches again if the action was performed
         [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;
     };
+
+    // Restore this variable
+    this = _savedThis;
 };
 
 ["ace_interactMenuClosed", [GVAR(openedMenuType)]] call CBA_fnc_localEvent;

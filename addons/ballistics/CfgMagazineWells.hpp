@@ -34,9 +34,7 @@ class CfgMagazineWells {
 
     class MX_65x39 { //Vanilla magwell
         ADDON[] = {
-            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim",
-            "ACE_30Rnd_65x47_Scenar_mag",
-            "ACE_30Rnd_65_Creedmor_mag"
+            "ACE_30Rnd_65x39_caseless_mag_Tracer_Dim"
         };
     };
 
@@ -67,6 +65,15 @@ class CfgMagazineWells {
         };
     };
 
+    class CBA_556x45_SCAR_EGLM {
+        ADDON[] = {
+            "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
+            "ACE_30Rnd_556x45_Stanag_Mk262_mag",
+            "ACE_30Rnd_556x45_Stanag_Mk318_mag",
+            "ACE_30Rnd_556x45_Stanag_Tracer_Dim"
+        };
+    };
+
     class STANAG_556x45 { //Vanilla magwell
         ADDON[] = {
             "ACE_30Rnd_556x45_Stanag_M995_AP_mag",
@@ -81,6 +88,9 @@ class CfgMagazineWells {
             "ACE_20Rnd_762x51_Mag_Tracer",
             "ACE_20Rnd_762x51_Mag_Tracer_Dim",
             "ACE_20Rnd_762x51_Mag_SD",
+            "ACE_10Rnd_762x51_Mag_Tracer",
+            "ACE_10Rnd_762x51_Mag_Tracer_Dim",
+            "ACE_10Rnd_762x51_Mag_SD",
             "ACE_10Rnd_762x51_M118LR_Mag",
             "ACE_10Rnd_762x51_Mk316_Mod_0_Mag",
             "ACE_10Rnd_762x51_Mk319_Mod_0_Mag",
@@ -97,6 +107,9 @@ class CfgMagazineWells {
             "ACE_20Rnd_762x51_Mag_Tracer",
             "ACE_20Rnd_762x51_Mag_Tracer_Dim",
             "ACE_20Rnd_762x51_Mag_SD",
+            "ACE_10Rnd_762x51_Mag_Tracer",
+            "ACE_10Rnd_762x51_Mag_Tracer_Dim",
+            "ACE_10Rnd_762x51_Mag_SD",
             "ACE_10Rnd_762x51_M118LR_Mag",
             "ACE_10Rnd_762x51_Mk316_Mod_0_Mag",
             "ACE_10Rnd_762x51_Mk319_Mod_0_Mag",
@@ -113,6 +126,9 @@ class CfgMagazineWells {
             "ACE_20Rnd_762x51_Mag_Tracer",
             "ACE_20Rnd_762x51_Mag_Tracer_Dim",
             "ACE_20Rnd_762x51_Mag_SD",
+            "ACE_10Rnd_762x51_Mag_Tracer",
+            "ACE_10Rnd_762x51_Mag_Tracer_Dim",
+            "ACE_10Rnd_762x51_Mag_SD",
             "ACE_10Rnd_762x51_M118LR_Mag",
             "ACE_10Rnd_762x51_Mk316_Mod_0_Mag",
             "ACE_10Rnd_762x51_Mk319_Mod_0_Mag",
@@ -129,6 +145,9 @@ class CfgMagazineWells {
             "ACE_20Rnd_762x51_Mag_Tracer",
             "ACE_20Rnd_762x51_Mag_Tracer_Dim",
             "ACE_20Rnd_762x51_Mag_SD",
+            "ACE_10Rnd_762x51_Mag_Tracer",
+            "ACE_10Rnd_762x51_Mag_Tracer_Dim",
+            "ACE_10Rnd_762x51_Mag_SD",
             "ACE_10Rnd_762x51_M118LR_Mag",
             "ACE_10Rnd_762x51_Mk316_Mod_0_Mag",
             "ACE_10Rnd_762x51_Mk319_Mod_0_Mag",
@@ -146,23 +165,17 @@ class CfgMagazineWells {
             "ACE_10Rnd_338_API526_Mag",
             "ACE_20Rnd_762x67_Mk248_Mod_0_Mag",
             "ACE_20Rnd_762x67_Mk248_Mod_1_Mag",
-            "ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag"
+            "ACE_20Rnd_762x67_Berger_Hybrid_OTM_Mag",
+            "ACE_10Rnd_762x67_Mk248_Mod_0_Mag",
+            "ACE_10Rnd_762x67_Mk248_Mod_1_Mag",
+            "ACE_10Rnd_762x67_Berger_Hybrid_OTM_Mag"
         };
     };
 
     class CBA_65C_AR10 {
         ADDON[] = {
-            "ACE_30Rnd_65_Creedmor_mag",
             "ACE_20Rnd_65_Creedmor_mag",
-            "ACE_30Rnd_65x47_Scenar_mag",
             "ACE_20Rnd_65x47_Scenar_mag"
-        };
-    };
-
-    class CBA_338LM_AI { //338 Lapua Magnum Accuracy International
-        ADDON[] = {
-            "ACE_10Rnd_338_300gr_HPBT_Mag",
-            "ACE_10Rnd_338_API526_Mag"
         };
     };
 
@@ -172,11 +185,19 @@ class CfgMagazineWells {
         };
     };
 
-    class CBA_50BMG_M107 {
+    class CBA_50BMG_AS50 {
         ADDON[] = {
             "ACE_5Rnd_127x99_Mag",
             "ACE_5Rnd_127x99_API_Mag",
             "ACE_5Rnd_127x99_AMAX_Mag"
+        };
+    };
+
+    class CBA_50BMG_M107 {
+        ADDON[] = {
+            "ACE_10Rnd_127x99_Mag",
+            "ACE_10Rnd_127x99_API_Mag",
+            "ACE_10Rnd_127x99_AMAX_Mag"
         };
     };
 

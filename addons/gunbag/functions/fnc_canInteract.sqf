@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ir0n1E
  * Check if client is able to interact with gunbag.
@@ -26,10 +26,10 @@ if ((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo [] && {_weapon != 
     _result = 0;
 };
 
-if (!((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo []) && {_weapon == ""}) then {
+if ((_gunbag getVariable [QGVAR(gunbagWeapon), []] isNotEqualTo []) && {_weapon == ""}) then {
     _result = 1;
 };
-if (!((_gunbag getVariable [QGVAR(gunbagWeapon), []]) isEqualTo []) && {_weapon != ""}) then {
+if ((_gunbag getVariable [QGVAR(gunbagWeapon), []] isNotEqualTo []) && {_weapon != ""}) then {
     _result = 2;
 };
 _result
