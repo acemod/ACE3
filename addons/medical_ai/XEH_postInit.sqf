@@ -20,5 +20,16 @@
         _unit setVariable [QGVAR(lastSuppressed), CBA_missionTime];
     }] call CBA_fnc_addClassEventHandler;
 
+    if (GVAR(requireItems) == 2) then {
+        ["CAManBase", "InitPost", {
+            [{
+                params ["_unit"];
+                if ((!local _unit) || {!alive _unit} || {isPlayer _unit}) exitWith {};
+                TRACE_2("replacing medical items on AI",_unit,typeOf _unit);
+                [_unit] call EFUNC(common,replaceRegisteredItems);
+            }, _this] call CBA_fnc_execNextFrame; // need to delay a frame before modifying items in a backpack
+        }, nil, [IGNORE_BASE_UAVPILOTS], true] call CBA_fnc_addClassEventHandler;
+    };
+
     #include "stateMachine.inc.sqf"
 }] call CBA_fnc_addEventHandler;
