@@ -58,7 +58,6 @@ private _attackProfile = _configurationSource getVariable [QGVAR(attackProfile),
 if ((getNumber (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "useModeForAttackProfile")) == 1) then {
     _attackProfile = getText (configFile >> "CfgWeapons" >> _weapon >> _mode >> QGVAR(attackProfile))
 };
-
 private _lockMode = _shooter getVariable [QGVAR(lockMode), nil];
 private _laserCode = _configurationSource getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
 private _laserInfo = [_laserCode, ACE_DEFAULT_LASER_WAVELENGTH, ACE_DEFAULT_LASER_WAVELENGTH];
