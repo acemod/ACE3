@@ -4,13 +4,13 @@
  * Sends a request to the units assigned medic to heal it.
  *
  * Arguments:
- * None
+ * Unit <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ACE_medical_ai_fnc_requestMedic
+ * cursorObject call ace_medical_ai_fnc_requestMedic
  *
  * Public: No
  */
