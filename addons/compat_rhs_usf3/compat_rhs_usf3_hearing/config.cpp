@@ -1,19 +1,19 @@
 #include "script_component.hpp"
+#include "\z\ace\addons\hearing\script_macros_hearingProtection.hpp"
 
 class CfgPatches {
-    class ADDON {
-        name = COMPONENT_NAME;
+    class SUBADDON {
+        addonRootClass = QUOTE(COMPONENT);
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common", "rhssaf_main_loadorder"};
+        requiredAddons[] = {
+            "rhsusf_main_loadorder",
+            "ace_hearing"
+        };
         skipWhenMissingDependencies = 1;
-        author = ECSTRING(common,ACETeam);
-        authors[] = {};
-        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-#include "CfgAmmo.hpp"
 #include "CfgWeapons.hpp"
