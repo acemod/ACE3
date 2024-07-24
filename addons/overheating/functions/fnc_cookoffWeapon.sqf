@@ -49,7 +49,13 @@ if !(_mode in _modes) then {
         params ["_unit", "_mode", "_muzzle", "_muzzleCache"];
 
         // fire the cookoff
-        _unit forceWeaponFire [_muzzle, _mode];
+        private _canFire = false; // check for animation here
+
+        if (_canFire) then {
+            _unit forceWeaponFire [_muzzle, _mode];
+        } else {
+            [_unit, _mode, _muzzle] call FUNC(cookoffWeaponDummy);
+        };
 
         // switch back to the cached muzzle if required
         if (_muzzle != _muzzleCache) then {
