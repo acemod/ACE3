@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: esteldunedain
- * Removes an action from a class
+ * Removes an action from a class.
  *
  * Arguments:
  * 0: TypeOf of the class <STRING>
@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [typeOf cursorTarget, 0,["ACE_TapShoulderRight","VulcanPinch"]] call ace_interact_menu_fnc_removeActionFromClass;
+ * [typeOf cursorTarget, 0, ["ACE_TapShoulderRight", "VulcanPinch"]] call ace_interact_menu_fnc_removeActionFromClass;
  *
  * Public: No
  */
@@ -33,7 +33,7 @@ if (_useInheritance) exitWith {
 
     // Find same path and actionName, and check if it's a parent class, needs to be checked for all classes
     private _index = GVAR(inheritedActionsAll) findIf {
-        params ["_currentType", "", "_currentParentPath", "_currentAction"];
+        _x params ["_currentType", "", "_currentParentPath", "_currentAction"];
 
         [_objectType isKindOf _currentType, _currentParentPath, _currentAction select 0] isEqualTo [true, _parentPath, _actionName]
     };
@@ -46,7 +46,7 @@ if (_useInheritance) exitWith {
     // Children of CAManBase need special treatment because of inheritedActionsMan array
     if (_objectType isKindOf "CAManBase") then {
         private _index = GVAR(inheritedActionsMan) findIf {
-            params ["", "_currentParentPath", "_currentAction"];
+            _x params ["", "_currentParentPath", "_currentAction"];
 
             [_currentParentPath, _currentAction select 0] isEqualTo [_parentPath, _actionName]
         };

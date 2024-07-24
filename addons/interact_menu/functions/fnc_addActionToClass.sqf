@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: esteldunedain
- * Insert an ACE action to a class, under a certain path
+ * Inserts an ACE action to a class, under a certain path.
  * Note: This function is NOT global.
  *
  * Arguments:
@@ -16,7 +16,7 @@
  * The entry full path, which can be used to remove the entry, or add children entries <ARRAY>.
  *
  * Example:
- * [typeOf cursorTarget, 0, ["ACE_TapShoulderRight"],VulcanPinchAction] call ace_interact_menu_fnc_addActionToClass;
+ * [typeOf cursorTarget, 0, ["ACE_TapShoulderRight"], VulcanPinchAction] call ace_interact_menu_fnc_addActionToClass;
  *
  * Public: Yes
  */
@@ -33,7 +33,7 @@ TRACE_6("addActionToClass",_objectType,_typeNum,_parentPath,_action,_useInherita
 if (_useInheritance) exitwith {
     BEGIN_COUNTER(addAction);
     private _cfgVehicles = configFile >> "CfgVehicles"; // store this so we don't resolve for every element
-    _excludedClasses = _excludedClasses apply {configName (_cfgVehicles >> _x)}; // ends up being faster than toLower'ing everything else
+    _excludedClasses = (_excludedClasses apply {configName (_cfgVehicles >> _x)}) - [""]; // ends up being faster than toLower'ing everything else
     if (_objectType == "CAManBase") then {
         GVAR(inheritedActionsMan) pushBack [_typeNum, _parentPath, _action, _excludedClasses];
         {
