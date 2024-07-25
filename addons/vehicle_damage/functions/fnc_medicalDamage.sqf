@@ -23,7 +23,7 @@ params ["_unit", "_source", "_instigator", ["_guaranteeDeath", false]];
 // Check if unit is invulnerable
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {};
 
-if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+if (GETEGVAR(medical,enabled,false)) then {
     for "_i" from 0 to floor (4 + random 3) do {
         [_unit, random [0, 0.66, 1], selectRandom ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"], selectRandom ["bullet", "shell", "explosive"], _instigator] call EFUNC(medical,addDamageToUnit);
     };

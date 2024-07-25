@@ -30,7 +30,7 @@ private _fncSumArray = {
 };
 
 //Sanity Checks
-if (!([_target] call FUNC(canBeDisarmed))) exitWith {
+if !([_target] call FUNC(canBeDisarmed)) exitWith {
     [_caller, _target, "Debug: Cannot disarm target"] call FUNC(eventTargetFinish);
 };
 if (_doNotDropAmmo && {({_x in _listOfItemsToRemove} count (magazines _target)) > 0}) exitWith {
@@ -74,7 +74,6 @@ if (_holder getVariable [QGVAR(holderInUse), false]) exitWith {
 };
 _holder setVariable [QGVAR(holderInUse), true];
 
-
 //Remove Magazines
 private _targetMagazinesStart = magazinesAmmo _target;
 private _holderMagazinesStart = magazinesAmmoCargo _holder;
@@ -96,7 +95,7 @@ if (({((_x select 0) in _listOfItemsToRemove) && {(getNumber (configFile >> "Cfg
     [_caller, _target, "Debug: Didn't Remove Magazines"] call FUNC(eventTargetFinish);
 };
 //Verify holder has mags unit had
-if (!([_targetMagazinesStart, _targetMagazinesEnd, _holderMagazinesStart, _holderMagazinesEnd] call FUNC(verifyMagazinesMoved))) then {
+if !([_targetMagazinesStart, _targetMagazinesEnd, _holderMagazinesStart, _holderMagazinesEnd] call FUNC(verifyMagazinesMoved)) then {
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Crate Magazines not in holder"] call FUNC(eventTargetFinish);
 };
@@ -238,7 +237,7 @@ if (_holderIsEmpty) then {
             [_caller, _target, "Debug: Drop Actions Timeout"] call FUNC(eventTargetFinish);
         };
         //If target lost disarm status:
-        if (!([_target] call FUNC(canBeDisarmed))) exitWith {
+        if !([_target] call FUNC(canBeDisarmed)) exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Target cannot be disarmed"] call FUNC(eventTargetFinish);
         };
