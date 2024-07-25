@@ -56,4 +56,6 @@ private _switchItemHintImage = getText (_configSwitchItem >> "picture");
 if (_switchItemHintText isNotEqualTo "") then {
     [[_switchItemHintImage, 2.0], [_switchItemHintText], true] call CBA_fnc_notify;
 };
-playSound "click";
+if (_unit == ACE_player) then {
+    playSound "click";
+};
