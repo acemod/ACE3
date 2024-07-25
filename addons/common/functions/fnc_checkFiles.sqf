@@ -145,6 +145,31 @@ if (isArray (configFile >> "ACE_Extensions" >> "extensions")) then {
     WARNING("extensions[] array no longer supported");
 };
 
+
+if (hasInterface && {_platform == "windows"}) then {
+    if (isFilePatchingEnabled) exitWith {};
+    {
+        private _extName = configName _x;
+        private _extensionType = "dll";
+        if (productVersion select 7 == "x64") then { _extensionType = format ["%1_x64", _extensionType]; };
+        private _expectedHash = getText (_x >> _extensionType);
+
+        private _extensionHash = "";
+        {
+            if ((_x getOrDefault ["name", ""]) == _extName) exitWith {
+                _extensionHash = _x getOrDefault ["hash", ""];
+            };
+        } forEach allExtensions;
+
+        if (_extensionHash != _expectedHash) then {
+            private _errorMsg = format ["Extension %1 wrong version [%2 vs %3].", _extName, _extensionHash, _expectedHash];
+            ERROR(_errorMsg);
+            ["[ACE] ERROR", _errorMsg] call FUNC(errorMessage);
+        };
+    } forEach ("true" configClasses (configFile >> "ACE_ExtensionsHashes"));
+};
+
+
 ///////////////
 // Check server version/addons
 ///////////////
