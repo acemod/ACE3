@@ -27,24 +27,11 @@
         }, {
             params ["_unit", "", "_item", "_slot", "_variant"];
 
+            if !(_slot in ["RIFLE_POINTER", "LAUNCHER_POINTER", "PISTOL_POINTER"]) exitWith {};
+
             private _baseClass = getText (configFile >> "CfgWeapons" >> _item >> "baseWeapon");
 
-            switch (_slot) do {
-                case "RIFLE_POINTER": {
-                    _unit removePrimaryWeaponItem _item;
-                    _unit addPrimaryWeaponItem (_baseClass + _variant);
-                };
-                case "LAUNCHER_POINTER": {
-                    _unit removeSecondaryWeaponItem _item;
-                    _unit addSecondaryWeaponItem (_baseClass + _variant);
-                };
-                case "PISTOL_POINTER": {
-                    _unit removeHandgunItem _item;
-                    _unit addHandgunItem (_baseClass + _variant);
-                };
-            };
-
-            playSound "click";
+            [_unit, _item, _baseClass + _variant] call EFUNC(common,switchAttachmentMode);
         }, false, _variant
     ] call CBA_fnc_addItemContextMenuOption;
 } forEach [
