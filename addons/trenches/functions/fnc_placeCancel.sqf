@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support
  * Cancels trench dig
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [ACE_player] call ace_sandbag_fnc_placeCancel
+ * [ACE_player] call ace_trenches_fnc_placeCancel
  *
  * Public: No
  */

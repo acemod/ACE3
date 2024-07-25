@@ -1,19 +1,19 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if the unit was requested to treat another unit.
  *
  * Arguments:
- * None
+ * Unit <OBJECT>
  *
  * Return Value:
  * Was requested <BOOL>
  *
  * Example:
- * call ACE_medical_ai_fnc_wasRequested
+ * cursorObject call ace_medical_ai_fnc_wasRequested
  *
  * Public: No
  */
 
 private _healQueue = _this getVariable [QGVAR(healQueue), []];
-!(_healQueue isEqualTo [])
+(_healQueue isNotEqualTo [])

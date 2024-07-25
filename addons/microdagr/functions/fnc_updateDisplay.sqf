@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Updates the display (several times a second) called from the pfeh
@@ -44,7 +44,7 @@ case (APP_MODE_INFODISPLAY): {
         (_display displayCtrl IDC_MODEDISPLAY_ELEVATIONNUM) ctrlSetText _aboveSeaLevelText;
 
         //Heading:
-        _compassAngleText = if (GVAR(settingUseMils)) then {
+        private _compassAngleText = if (GVAR(settingUseMils)) then {
             [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
         } else {
             ([([ACE_player] call CBA_fnc_headDir) select 0, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
@@ -65,12 +65,12 @@ case (APP_MODE_INFODISPLAY): {
         } else {
             private _targetPosName = "";
             private _targetPosLocationASL = [];
-            _bearingText = "----";
-            _rangeText = "----";
+            private _bearingText = "----";
+            private _rangeText = "----";
             _aboveSeaLevelText = "----";
 
             if (GVAR(currentWaypoint) == -2) then {
-                if (!(GVAR(rangeFinderPositionASL) isEqualTo [])) then {
+                if (GVAR(rangeFinderPositionASL) isNotEqualTo []) then {
                     private _targetPos = [GVAR(rangeFinderPositionASL)] call EFUNC(common,getMapGridFromPos);
                     _targetPosName = format ["[%1 %2 %3]", EGVAR(common,MGRS_data) select 1, _targetPos select 0, _targetPos select 1];
                     _targetPosLocationASL = GVAR(rangeFinderPositionASL);
@@ -81,7 +81,7 @@ case (APP_MODE_INFODISPLAY): {
                 _targetPosLocationASL = (_waypoints select GVAR(currentWaypoint)) select 1;
             };
 
-            if (!(_targetPosLocationASL isEqualTo [])) then {
+            if (_targetPosLocationASL isNotEqualTo []) then {
                 private _bearing = [(getPosASL ACE_player), _targetPosLocationASL] call BIS_fnc_dirTo;
                 _bearingText = if (GVAR(settingUseMils)) then {
                     [(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber;
@@ -123,7 +123,7 @@ case (APP_MODE_COMPASS): {
             private _targetPosLocationASL = [];
 
             if (GVAR(currentWaypoint) == -2) then {
-                if (!(GVAR(rangeFinderPositionASL) isEqualTo [])) then {
+                if (GVAR(rangeFinderPositionASL) isNotEqualTo []) then {
                     private _targetPos = [GVAR(rangeFinderPositionASL)] call EFUNC(common,getMapGridFromPos);
                     _targetPosName = format ["[%1 %2 %3]", EGVAR(common,MGRS_data) select 1, _targetPos select 0, _targetPos select 1];
                     _targetPosLocationASL = GVAR(rangeFinderPositionASL);
@@ -134,10 +134,10 @@ case (APP_MODE_COMPASS): {
                 _targetPosLocationASL = (_waypoints select GVAR(currentWaypoint)) select 1;
             };
 
-            _bearingText = "---";
-            _rangeText = "---";
+            private _bearingText = "---";
+            private _rangeText = "---";
 
-            if (!(_targetPosLocationASL isEqualTo [])) then {
+            if (_targetPosLocationASL isNotEqualTo []) then {
                 private _bearing = [(getPosASL ACE_player), _targetPosLocationASL] call BIS_fnc_dirTo;
                 _bearingText = if (GVAR(settingUseMils)) then {
                     [(floor ((6400 / 360) * (_bearing))), 4, 0] call CBA_fnc_formatNumber;

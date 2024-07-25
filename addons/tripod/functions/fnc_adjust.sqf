@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Adjust tripod height
@@ -30,17 +30,17 @@ GVAR(adjustPFH) = [{
         [_unit, "DefaultAction", _unit getVariable [QGVAR(Adjust), -1]] call EFUNC(common,removeActionEventHandler);
 
         [_this select 1] call CBA_fnc_removePerFrameHandler;
+        GVAR(adjustPFH) = -1;
     };
 
     {
         _tripod animate [_x, 1 - GVAR(height)];
-    } count ["slide_down_tripod", "retract_leg_1", "retract_leg_2", "retract_leg_3"];
-
+    } forEach ["slide_down_tripod", "retract_leg_1", "retract_leg_2", "retract_leg_3"];
 }, 0, [_unit, _tripod]] call CBA_fnc_addPerFrameHandler;
 
 [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 // add mouse button action and hint
-[localize "STR_ACE_Tripod_Done", "", localize "STR_ACE_Tripod_ScrollAction"] call EFUNC(interaction,showMouseHint);
+[LLSTRING(Done), "", LLSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
 
 _unit setVariable [QGVAR(Adjust), [
     _unit, "DefaultAction",

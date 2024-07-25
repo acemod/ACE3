@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Unfied handling of weapon fire
@@ -24,7 +24,7 @@
 BEGIN_COUNTER(firedEH);
 
 params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
-TRACE_7("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile);
+TRACE_7("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 if (_unit isKindOf "CAManBase") then {
     // The unit it on foot
@@ -50,8 +50,7 @@ if (_unit isKindOf "CAManBase") then {
             _gunner = _unit turretUnit _x;
             _turret = _x;
         };
-        false
-    } count allTurrets [_unit, true];
+    } forEach allTurrets [_unit, true];
     // Ensure that at least the pilot is returned if there is no gunner
     if (isManualFire _unit && {isNull _gunner}) then {
         _gunner = effectiveCommander _unit;

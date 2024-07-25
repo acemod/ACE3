@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 
     GVAR(temperatureShift) = random [-SD_TO_MIN_MAX(4), 0, SD_TO_MIN_MAX(4)]; // Gauss(0, 4)
@@ -9,8 +9,8 @@
 
     if (GVAR(windSimulation)) then {
         call FUNC(initWind);
-        [FUNC(updateWind), 1] call CBA_fnc_addPerFrameHandler;
+        [LINKFUNC(updateWind), 1] call CBA_fnc_addPerFrameHandler;
     };
-    [FUNC(updateWeather), GVAR(updateInterval)] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(updateWeather), GVAR(updateInterval)] call CBA_fnc_addPerFrameHandler;
 
 }] call CBA_fnc_addEventHandler;

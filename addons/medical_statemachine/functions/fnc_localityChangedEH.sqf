@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles locality switch. Will also be called at unit init.
@@ -56,7 +56,7 @@ if (_isLocal) then {
     /*
     // Not sure if this is even needed, idea is that on locality transfer we broadcast more up to date info
 
-    private _lastTimeUpdated = _unit getVariable [QEGVAR(medical_vitals,lastTimeUpdated), 1e99];
+    private _lastTimeUpdated = _unit getVariable [QEGVAR(medical_vitals,lastTimeUpdated), 1e38];
     private _deltaT = CBA_missionTime - _lastTimeUpdated;
     TRACE_1("not local",_deltaT);
     if (_deltaT < 5) then {

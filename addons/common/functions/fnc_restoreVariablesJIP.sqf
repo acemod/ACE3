@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Called from respawn eventhandler. Resets all public object namespace variables that are added via FUNC(setVariableJIP).
@@ -24,6 +24,4 @@ _respawnVariables pushBack "ACE_PersistentFunctions";
 
 {
     _unit setVariable [_x, _unit getVariable _x, true];
-    false
-} count _respawnVariables;
-nil
+} forEach _respawnVariables;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, esteldunedain, Ruthberg
  * Adjusts the flight path of the bullet according to the zeroing. Called from the unified fired EH only for local and non-local players on foot.
@@ -16,9 +16,9 @@
  */
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
-TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
+TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_vehicle,_gunner,_turret);
 
-if (!(_ammo isKindOf "BulletBase")) exitWith {};
+if !(_ammo isKindOf "BulletBase") exitWith {};
 
 private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {};
@@ -30,7 +30,7 @@ TRACE_1("Adjusting With",_zeroing);
 if (GVAR(correctZeroing) || GVAR(simplifiedZeroing)) then {
     private _advancedBallistics = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
     private _baseAngle = (_unit getVariable [QGVAR(baseAngle), [0,0,0]]) select _weaponIndex;
-    private _boreHeight = (_unit getVariable [QGVAR(boreHeight), [0,0,0]]) select _weaponIndex; 
+    private _boreHeight = (_unit getVariable [QGVAR(boreHeight), [0,0,0]]) select _weaponIndex;
     private _oldZeroRange = currentZeroing _unit;
     private _newZeroRange = [_unit] call FUNC(getCurrentZeroRange);
     private _zeroCorrection = missionNamespace getVariable format[QGVAR(%1_%2_%3_%4_%5_%6_%7), _oldZeroRange, _newZeroRange, _boreHeight, _weapon, _ammo, _magazine, _advancedBallistics];

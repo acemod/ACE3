@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Calculate light intensity object 1 recieves from object 2
@@ -29,8 +29,6 @@ if (_lightSource isKindOf "CAManBase") then {
     if !(_lightSource isFlashlightOn _weapon) exitWith {};
 
     private _flashlight = (_lightSource weaponAccessories _weapon) select 1;
-
-    if (getNumber (configFile >> "CfgWeapons" >> _flashlight >> "ACE_laserpointer") > 0) exitWith {}; // Red = 1, Green = 2
 
     private _properties = [[_flashlight], FUNC(getLightPropertiesWeapon), uiNamespace, format [QEGVAR(cache,%1_%2), QUOTE(DFUNC(getLightPropertiesWeapon)), _flashlight], 1E11] call FUNC(cachedCall);
     //_properties = [_flashlight] call FUNC(getLightPropertiesWeapon);
@@ -82,7 +80,7 @@ if (_lightSource isKindOf "CAManBase") then {
     if (isCollisionLightOn _lightSource) then {
         private _markerLights = [
             _lightSource,
-            {configProperties [configFile >> "CfgVehicles" >> typeOf _this >> "MarkerLights", "isClass _x", true]},
+            {configProperties [configOf _this >> "MarkerLights", "isClass _x", true]},
             uiNamespace,
             format [QEGVAR(cache,MarkerLights_%1), typeOf _lightSource],
             1E11

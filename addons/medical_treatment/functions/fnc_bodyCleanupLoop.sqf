@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, esteldunedain
- * Handles cleaning up bodies that were replaced by body bags.
+ * Handles cleaning up bodies or body bags that were replaced by body bags or put in grave.
  *
  * Arguments:
  * None
@@ -29,4 +29,4 @@ if (GVAR(bodiesToDelete) isEqualTo []) exitWith {
 };
 
 // Schedule cleanup loop to executed again
-[FUNC(litterCleanupLoop), [], BODY_CLEANUP_CHECK_DELAY] call CBA_fnc_waitAndExecute;
+[FUNC(bodyCleanupLoop), [], BODY_CLEANUP_CHECK_DELAY] call CBA_fnc_waitAndExecute;

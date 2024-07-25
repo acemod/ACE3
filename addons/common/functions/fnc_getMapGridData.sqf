@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Finds real x/y offset and map step for a 10 digit grid
@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [] call ace_map_fnc_getMapGridData
+ * [] call ace_common_fnc_getMapGridData
  *
  * Public: No
  */
@@ -23,7 +23,7 @@ GVAR(mapGridData) = [];
 private _cfgGrid = configFile >> "CfgWorlds" >> worldName >> "Grid";
 private _offsetX = getNumber (_cfgGrid >> "offsetX");
 private _offsetY = getNumber (_cfgGrid >> "offsetY");
-private _zoomMax = 1e99;
+private _zoomMax = 1e38;
 private _formatX = "";
 private _formatY = "";
 private _stepX = 1e10;
@@ -38,13 +38,12 @@ private _stepY = 1e10;
         _stepX = getNumber (_x >> "stepX");
         _stepY = getNumber (_x >> "stepY");
     };
-    false
-} count configProperties [_cfgGrid, "isClass _x", false];
+} forEach configProperties [_cfgGrid, "isClass _x", false];
 
 private _letterGrid = false;
 
-if (toLower _formatX find "a" != -1) then {_letterGrid = true};
-if (toLower _formatY find "a" != -1) then {_letterGrid = true};
+if (toLowerANSI _formatX find "a" != -1) then {_letterGrid = true};
+if (toLowerANSI _formatY find "a" != -1) then {_letterGrid = true};
 
 if (_letterGrid) exitWith {
     WARNING_3("Map Grid Warning (%1) - Map uses letter grids [%2, %3]",worldName,_formatX,_formatY);

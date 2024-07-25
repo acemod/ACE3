@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles visual changes of the stamina bar.
@@ -25,10 +25,14 @@ _posAndSize set [2, _stamina * GVAR(staminaBarWidth)];
 _staminaBarContainer ctrlSetPosition _posAndSize;
 
 // - Opacity ------------------------------------------------------------------
-if (_stamina >= 0.8) then {
-    _staminaBarContainer ctrlSetFade (0.9 + 0.1 * (_stamina - 0.8) / 0.2);
+if (GVAR(fadeStaminaBar)) then {
+    if (_stamina >= 0.8) then {
+        _staminaBarContainer ctrlSetFade (0.9 + 0.1 * (_stamina - 0.8) / 0.2);
+    } else {
+        _staminaBarContainer ctrlSetFade (0.9 * _stamina / 0.8);
+    };
 } else {
-    _staminaBarContainer ctrlSetFade (0.9 * _stamina / 0.8);
+    _staminaBarContainer ctrlSetFade 0;
 };
 
 // - Color --------------------------------------------------------------------

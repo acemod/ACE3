@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Check if the engineer has all items.
@@ -29,4 +29,4 @@ private _return = true;
     };
 } forEach _items;
 
-_return;
+_return

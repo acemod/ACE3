@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Parachute
+component: parachute
 description: Add an altimeter and a non-steerable parachute.
 group: feature
 category: equipment
@@ -35,7 +36,3 @@ Smoothens the parachute landing animation.
 ### 2.2 Cutting a parachute
 - While falling with a parachute deployed open the self interaction menu <kbd>Ctrl</kbd>+<kbd>⊞&nbsp;Win</kbd> (ACE3 default).
 - Select `Cut Parachute`
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="parachute" %}

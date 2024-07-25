@@ -41,10 +41,13 @@ class CfgActions {
     class ActivateMine: None {
         show = 0;
     };
-    class Deactivate:None {
+    class Deactivate: None {
         show = 0;
     };
-    class DeactivateMine:None {
+    class DeactivateMine: None {
+        show = 0;
+    };
+    class UseContainerMagazine: None {
         show = 0;
     };
 };

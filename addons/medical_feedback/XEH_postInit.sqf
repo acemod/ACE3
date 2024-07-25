@@ -30,7 +30,7 @@ GVAR(bloodTickCounter) = 0;
 
 [false] call FUNC(initEffects);
 [true] call FUNC(handleEffects);
-[FUNC(handleEffects), 1, false] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(handleEffects), 1, false] call CBA_fnc_addPerFrameHandler;
 
 ["ace_unconscious", {
     params ["_unit", "_unconscious"];
@@ -43,18 +43,13 @@ GVAR(bloodTickCounter) = 0;
         ACE_player switchCamera "INTERNAL";
     };
 
-    // Toggle unconscious player's ability to talk in radio addons
-    if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {
-        _unit setVariable ["tf_voiceVolume", [1, 0] select _unconscious, true];
-        _unit setVariable ["tf_unable_to_use_radio", _unconscious]; // Only used locally
-    };
-    if (["acre_main"] call EFUNC(common,isModLoaded)) then {
-        _unit setVariable ["acre_sys_core_isDisabled", _unconscious, true];
-    };
+    [!_unconscious, _unit] call EFUNC(common,setVolume);
 
     // Greatly reduce player's hearing ability while unconscious (affects radio addons)
-    [QUOTE(ADDON), VOL_UNCONSCIOUS, _unconscious] call EFUNC(common,setHearingCapability);
+    private _volume = missionNamespace getVariable [QEGVAR(hearing,unconsciousnessVolume), VOL_UNCONSCIOUS];
+    [QUOTE(ADDON), _volume, _unconscious] call EFUNC(common,setHearingCapability);
 
+    [_unconscious, 1] call FUNC(effectUnconscious);
     [true] call FUNC(handleEffects);
     ["unconscious", _unconscious] call EFUNC(common,setDisableUserInputStatus);
 }] call CBA_fnc_addEventHandler;
@@ -64,13 +59,9 @@ GVAR(bloodTickCounter) = 0;
     params ["_unit"];
 
     if (_unit != ACE_player) exitWith {};
-    if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {
-        _unit setVariable ["tf_voiceVolume", 1, true];
-        _unit setVariable ["tf_unable_to_use_radio", false];
-    };
-    if (["acre_main"] call EFUNC(common,isModLoaded)) then {
-        _unit setVariable ["acre_sys_core_isDisabled", false, true];
-    };
+    // Players always able to hear for any systems that might run while dead (e.g. spectator)
+    [true, _unit] call EFUNC(common,setVolume);
+
     [QUOTE(ADDON), 1, false] call EFUNC(common,setHearingCapability);
 }] call CBA_fnc_addEventHandler;
 
@@ -79,16 +70,32 @@ GVAR(bloodTickCounter) = 0;
     params ["_new"];
     private _status = IS_UNCONSCIOUS(_new);
 
-    if (["task_force_radio"] call EFUNC(common,isModLoaded)) then {
-        _new setVariable ["tf_voiceVolume", [1, 0] select _status, true];
-        _new setVariable ["tf_unable_to_use_radio", _status];
-    };
-    if (["acre_main"] call EFUNC(common,isModLoaded)) then {
-        _new setVariable ["acre_sys_core_isDisabled", _status, true];
-    };
-    [QUOTE(ADDON), VOL_UNCONSCIOUS, _status] call EFUNC(common,setHearingCapability);
+    [!_status, _new] call EFUNC(common,setVolume);
+
+    private _volume = missionNamespace getVariable [QEGVAR(hearing,unconsciousnessVolume), VOL_UNCONSCIOUS];
+    [QUOTE(ADDON), _volume, _status] call EFUNC(common,setHearingCapability);
     [true] call FUNC(handleEffects);
     ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
+}] call CBA_fnc_addPlayerEventHandler;
+
+// Update effects for featureCamera (curator, arsenal, etc)
+["featureCamera", {
+    params ["_unit", "_newCamera"];
+
+    [true] call FUNC(handleEffects);
+
+    private _volume = missionNamespace getVariable [QEGVAR(hearing,unconsciousnessVolume), VOL_UNCONSCIOUS];
+
+    if (_newCamera == "") then { // switched back to player view
+        private _status = IS_UNCONSCIOUS(_unit);
+        [!_status, _unit] call EFUNC(common,setVolume);
+        [QUOTE(ADDON), _volume, _status] call EFUNC(common,setHearingCapability);
+        ["unconscious", _status] call EFUNC(common,setDisableUserInputStatus);
+    } else { // camera view
+        [true, _unit] call EFUNC(common,setVolume);
+        [QUOTE(ADDON), 1, false] call EFUNC(common,setHearingCapability);
+        ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
+    };
 }] call CBA_fnc_addPlayerEventHandler;
 
 // Forced say3D
@@ -97,7 +104,7 @@ GVAR(bloodTickCounter) = 0;
 
     if (ACE_player distance _unit > _distance) exitWith {};
 
-    if (vehicle _unit == _unit) then {
+    if (isNull objectParent _unit) then {
         // say3D waits for the previous sound to finish, so use a dummy instead
         private _dummy = "#dynamicsound" createVehicleLocal [0, 0, 0];
         _dummy attachTo [_unit, [0, 0, 0], "camera"];

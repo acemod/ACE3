@@ -1,12 +1,12 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Alganthe
+ * Author: Alganthe, johnb43
  * Initialize a box / object for arsenal.
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Items <BOOL> or <ARRAY>
- * 2: Initialize globally <BOOL>
+ * 1: Items <BOOL> <ARRAY>
+ * 2: Initialize globally <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -22,40 +22,39 @@ params [["_object", objNull, [objNull]], ["_items", true, [[], true]], ["_global
 
 if (isNull _object) exitWith {};
 
-if (isNil QGVAR(EHIDArray)) then {
-    GVAR(EHIDArray) = [];
-};
+if (_global && {isMultiplayer} && {isNil {_object getVariable QGVAR(initBoxJIP)}}) then {
+    private _id = [QGVAR(initBox), [_object, _items, false]] call CBA_fnc_globalEventJIP;
 
-if (_global && {isMultiplayer} && {{_object in _x} count GVAR(EHIDArray) == 0}) then {
+    // Remove JIP EH if object is deleted
+    [_id, _object] call CBA_fnc_removeGlobalEventJIP;
 
-    private _ID = [QGVAR(initBox), [_object, _items, false]] call CBA_fnc_globalEventJIP;
-    [_ID, _object] call CBA_fnc_removeGlobalEventJIP;
-
-    GVAR(EHIDArray) pushBack [_ID, _object];
-    publicVariable QGVAR(EHIDArray);
+    // Save JIP ID
+    _object setVariable [QGVAR(initBoxJIP), _id, true];
 } else {
+    // Only add interaction if there isn't one already present
+    if (((_object getVariable [QEGVAR(interact_menu,actions), []]) findIf {((_x select 0) select 0) == QGVAR(interaction)}) != -1) exitWith {};
 
-    if ({(_x select 0) select 0 isEqualTo QGVAR(interaction)} count (_object getVariable [QEGVAR(interact_menu,actions), []]) == 0) then {
+    private _action = [
+        QGVAR(interaction),
+        localize "STR_A3_Arsenal",
+        "",
+        {
+            params ["_target", "_player"];
 
-        private _action = [
-            QGVAR(interaction),
-            localize "STR_A3_Arsenal",
-            "",
-            {
-                params ["_target", "_player"];
+            [_target, _player] call FUNC(openBox);
+        },
+        {
+            params ["_target", "_player"];
 
-                [_target, _player] call FUNC(openBox);
-            },
-            {
-                params ["_target", "_player"];
+            [_player, _target] call EFUNC(common,canInteractWith)
+        }
+    ] call EFUNC(interact_menu,createAction);
+    [_object, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
 
-                [_player, _target] call EFUNC(common,canInteractWith)
-            },
-            {},
-            []
-        ] call EFUNC(interact_menu,createAction);
-        [_object, 0, ["ACE_MainActions"], _action] call EFUNC(interact_menu,addActionToObject);
-
+    // If items were set globally, do not add items locally
+    if (isNil {_object getVariable QGVAR(virtualItems)}) then {
         [_object, _items, false] call FUNC(addVirtualItems);
     };
+
+    [QGVAR(boxInitialized), [_object, _items]] call CBA_fnc_localEvent;
 };

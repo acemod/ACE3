@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
- * Author: Nelson Duarte, AACO, SilentSpike
+ * Author: Nelson Duarte, AACO, kymckay
  * Function used to handle key down event
  *
  * Arguments:

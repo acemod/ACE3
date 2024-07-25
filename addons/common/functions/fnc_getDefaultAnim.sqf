@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Get the Defualt animation for the unit
@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-private _anim = toLower animationState _unit;
+private _anim = toLowerANSI animationState _unit;
 
 // stance is broken for some animations.
 private _stance = stance _unit;

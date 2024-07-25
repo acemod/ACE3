@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Server PerFrameHandler during fast roping.
@@ -20,7 +20,7 @@ _arguments params ["_unit", "_vehicle", "_rope", "_ropeIndex", "_hasBeenAttached
 _rope params ["_attachmentPoint", "_ropeTop", "_ropeBottom", "_dummy", "_hook"];
 
 //Wait until the unit is actually outside of the helicopter
-if (vehicle _unit != _unit) exitWith {};
+if (!isNull objectParent _unit) exitWith {};
 
 //Prevent teleport if hook has been deleted due to rope cut
 if (isNull _hook) exitWith {
@@ -28,7 +28,7 @@ if (isNull _hook) exitWith {
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;
 };
 
-private _ropeLength = _vehicle getVariable [QGVAR(ropeLength), 34.5];
+private _ropeLength = _vehicle getVariable [QGVAR(ropeLength), DEFAULT_ROPE_LENGTH];
 
 //Start fast roping
 if (getMass _dummy != 80) exitWith {

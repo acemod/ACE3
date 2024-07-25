@@ -36,7 +36,7 @@ Code running in the unscheduled environment uses linear execution, that means it
 
 
 ## 2. What is the scheduler and why do I care?
-The Arma 3 script scheduler basically gives a fair-share execution to all running scripts, FSMs, and SQS files running on any given client or server at any given time. See the [Biki article](https://community.bistudio.com/wiki/Biki2.0:Performance_Considerations){:target="_blank"} for a in-depth explanation of this. What this basically means though, is that all scripts get a fair share; this also means scheduled execution is drastically affected by other mods that use scheduled execution. For example, if 2 different spawn's are running in a tight loop of `while {true} do {...};`, they will both get exactly 50% of the scheduling time.
+The Arma 3 script scheduler basically gives a fair-share execution to all running scripts, FSMs, and SQS files running on any given client or server at any given time. See the [Biki article](https://community.bistudio.com/wiki/Biki2.0:Performance_Considerations){:target="_blank"} for an in-depth explanation of this. What this basically means though, is that all scripts get a fair share; this also means scheduled execution is drastically affected by other mods that use scheduled execution. For example, if 2 different spawn's are running in a tight loop of `while {true} do {...};`, they will both get exactly 50% of the scheduling time.
 
 With the way mission makers and mod makers generally use `spawn`/`execVM`, this means you're actually getting drastically less execution time in the scheduled environment than you might think. This leads to visible delay issues all the way up to massive delay on execution. You can easily test and prove this by looping spawns and watching the execution times extend.
 
@@ -45,7 +45,7 @@ It means we need to live outside of the spawn execution as much as possible. The
 
 The scheduler will also actually halt your script mid-execution, usually at the end of a given control block, and pause you to yield to other scripts. This can lead to drastically incorrect results when performing calculations and unexpected behaviours. For example, try the following code. Even though it doesn't seem logical, it will show a hint.
 
-```cpp
+```sqf
 myVar = true;
 0 spawn {
     while {true} do {
@@ -90,7 +90,7 @@ These rules follow from the rules of thumb above:
 #### 3.3.1 Per Frame Handler
 See: [https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_addPerFrameHandler.sqf](https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_addPerFrameHandler.sqf) for more details.
 
-```cpp
+```sqf
 [{code} , delay, [params]] call CBA_fnc_addPerFrameHandler;
 ```
 
@@ -98,7 +98,7 @@ See: [https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_addPerFram
 #### 3.3.2 WaitAndExecute
 See: [https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitAndExecute.sqf](https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitAndExecute.sqf) for more details.
 
-```cpp
+```sqf
 [{delayed code}, [params], delay] call CBA_fnc_waitAndExecute;
 ```
 
@@ -106,6 +106,6 @@ See: [https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitAndExe
 #### 3.3.3 WaitUntilAndExecute
 See: [https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitUntilAndExecute.sqf](https://github.com/CBATeam/CBA_A3/blob/master/addons/common/fnc_waitUntilAndExecute.sqf) for more details.
 
-```cpp
+```sqf
 [{condition}, {code}, [params]] call CBA_fnc_waitUntilAndExecute;
 ```

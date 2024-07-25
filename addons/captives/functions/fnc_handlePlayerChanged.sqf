@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Handles playerChanged.  Resets "showHUD" based on handcuff status
@@ -11,7 +11,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [bob1, bob2] call ACE_captives_fnc_handlePlayerChange
+ * [bob1, bob2] call ACE_captives_fnc_handlePlayerChanged
  *
  * Public: No
  */

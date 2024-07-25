@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Called when the mk6's in game UI is loaded.  Hides rangefinder data if it is disabled.
@@ -19,7 +19,7 @@
 disableSerialization;
 
 params ["_display", "_rscType"];
-TRACE_2("params",_display,_rscType);
+TRACE_2("turretDisplayLoaded",_display,_rscType);
 
 if (_rscType != "Mk6Mortar") exitWith {};
 if (isNull _display) exitWith {};

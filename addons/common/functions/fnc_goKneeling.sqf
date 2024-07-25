@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Move unit to kneeling position (only if not yet prone and not underwater).
@@ -18,7 +18,7 @@
 params ["_unit"];
 
 // Animation changes even inside vehicle post-1.60
-if (stance _unit == "PRONE" || {vehicle _unit != _unit} || {_unit call EFUNC(common,isSwimming)}) exitWith {};
+if (stance _unit == "PRONE" || {!isNull objectParent _unit} || {_unit call EFUNC(common,isSwimming)}) exitWith {};
 
 [
     _unit,

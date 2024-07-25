@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Authors: Ruthberg
  * Tests if the Kestrel 4500 can be shown
@@ -15,4 +15,4 @@
  * Public: No
  */
 
-("ACE_Kestrel4500" in (uniformItems ACE_player)) || ("ACE_Kestrel4500" in (vestItems ACE_player))
+"ACE_Kestrel4500" in ([ACE_player] call EFUNC(common,uniqueItems))

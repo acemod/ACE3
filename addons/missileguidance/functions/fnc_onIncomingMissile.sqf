@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus / nou
  * Handles AI shooting a locking missile
@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [cursorTarget, "x", player] call ace_missileguidance_fnc_changeMissileDirection;
+ * [cursorTarget, "x", player] call ace_missileguidance_fnc_onIncomingMissile;
  *
  * Public: No
  */

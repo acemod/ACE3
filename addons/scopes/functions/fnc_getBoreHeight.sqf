@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Gets the bore height of the weapon & optic combination with the given weapon index
@@ -18,10 +18,10 @@
 
 params ["_unit", "_weaponIndex"];
 
-if (_weaponIndex < 0 || {_weaponIndex > 2}) exitWith { 0 }; 
+if (_weaponIndex < 0 || {_weaponIndex > 2}) exitWith { 0 };
 
-private _weaponClass = [primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit] select _weaponIndex; 
-private _opticsClass = ([_unit] call FUNC(getOptics)) select _weaponIndex; 
+private _weaponClass = [primaryWeapon _unit, secondaryWeapon _unit, handgunWeapon _unit] select _weaponIndex;
+private _opticsClass = ([_unit] call FUNC(getOptics)) select _weaponIndex;
 
 if (_opticsClass == "") then { _opticsClass = _weaponClass; };
 

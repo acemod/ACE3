@@ -3,12 +3,12 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {QGVAR(virtual)};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_common"};
         author = ECSTRING(common,ACETeam);
-        authors[] = {"F3 Project","Head","SilentSpike","voiper"};
+        authors[] = {"F3 Project","Head","kymckay","voiper"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Unit joins a fire team.
@@ -6,19 +6,20 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Team <STRING>
+ * 2: Display hint <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "YELLOW"] call ace_interaction_fnc_joinTeam
+ * [player, "YELLOW", false] call ace_interaction_fnc_joinTeam
  *
  * Public: No
  */
 
-params ["_unit", "_team"];
+params ["_unit", "_team", ["_displayHint", false, [false]]];
 
-["CBA_teamColorChanged", [_unit, _team]] call CBA_fnc_globalEvent;
+_unit assignTeam _team;
 
 // display message
 if (_unit == ACE_player) then {
@@ -30,6 +31,7 @@ if (_unit == ACE_player) then {
         _team = localize format [LSTRING(Team%1), _team];
         _message = format [localize LSTRING(JoinedTeam), _team];
     };
-
-    [_message] call EFUNC(common,displayTextStructured);
+    if (_displayHint) then {
+        [_message] call EFUNC(common,displayTextStructured);
+    };
 };

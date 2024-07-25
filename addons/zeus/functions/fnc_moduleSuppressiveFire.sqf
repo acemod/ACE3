@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: bux, PabstMirror
  * Commands the selected unit or group to start suppressive fire on the unit, group or location the module is placed on
@@ -49,7 +49,7 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
     private _targetASL = _mousePosASL vectorAdd [0,0,0.6]; // mouse pos is at ground level zero, raise up a bit;
     private _artilleryMag = "";
 
-    if ((getNumber (configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "artilleryScanner")) == 1) then {
+    if ((getNumber (configOf _vehicle >> "artilleryScanner")) == 1) then {
         // Artillery - Get mortar ammo type and verify in range
         if (isNull gunner _vehicle) exitWith {_targetASL = [];};
         {
@@ -69,7 +69,7 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
     } else {
         // Direct fire - Get a target position that will work
         private _lis = lineIntersectsSurfaces [eyePos _unit, _targetASL, _unit, _vehicle];
-        if ((count _lis) > 0) then { // If point is hidden, unit won't fire, do a ray cast to find where they should shoot at
+        if (_lis isNotEqualTo []) then { // If point is hidden, unit won't fire, do a ray cast to find where they should shoot at
             _targetASL = ((_lis select 0) select 0);
             TRACE_1("using ray cast pos",_mousePosASL distance _targetASL);
         };

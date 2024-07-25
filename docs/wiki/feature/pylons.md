@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Pylons
+component: pylons
 description: Adds an interface that allow players to configure aircraft pylons in-game.
 group: feature
 category: interaction
@@ -35,7 +36,3 @@ To save a custom loadout you first configure it. In the text box above `SAVE`, `
 To load a custom loadout you select it in the preset pane and press `LOAD` followed by `APPLY`.
 
 To delete a custom loadout you select it in the preset pane and press `DELETE`.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="pylons" %}

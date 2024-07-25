@@ -15,7 +15,6 @@ GVAR(showNamesTime) = -10;
 
     // Statement
     GVAR(showNamesTime) = CBA_missionTime;
-    // if (call FUNC(canShow)) then{ call FUNC(doShow); }; // This code doesn't work (canShow has a nil / has never worked??)
     // Return false so it doesn't block other actions
     false
 },
@@ -23,13 +22,13 @@ GVAR(showNamesTime) = -10;
 [29, [false, false, false]], false] call CBA_fnc_addKeybind; //LeftControl Key
 
 // Wait until the colors are defined before starting to draw the nametags
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Draw handle
     call FUNC(updateSettings);
 }] call CBA_fnc_addEventHandler;
 
 // Change settings accordingly when they are changed
-["ace_settingChanged", {
+["CBA_SettingChanged", {
     params ["_name"];
     if (_name == QGVAR(showPlayerNames)) then {
         call FUNC(updateSettings);
@@ -51,7 +50,7 @@ if (missionNamespace getVariable [QGVAR(useFactionIcons), true]) then {
     {
         if (isArray (_x >> QGVAR(rankIcons))) then {
             private _faction = configName _x;
-            if (!isNil {GVAR(factionRanks) getVariable _faction}) exitWith {}; // don't overwrite if already set
+            if (_faction in GVAR(factionRanks)) exitWith {}; // don't overwrite if already set
             private _icons = getArray (_x >> QGVAR(rankIcons));
             [_faction, _icons] call FUNC(setFactionRankIcons);
         };

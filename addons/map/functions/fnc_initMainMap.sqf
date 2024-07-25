@@ -1,5 +1,10 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "\a3\ui_f\hpp\defineResincl.inc"
+/*
+ * Author: commy2
+ *
+ * Public: No
+*/
 
 params ["_display"];
 if (ctrlIDD _display != IDD_MAIN_MAP) exitWith {};

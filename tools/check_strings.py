@@ -17,8 +17,9 @@ def getDefinedStrings(filepath):
     return modStrings
 
 def getStringUsage(filepath):
-    selfmodule = (re.search('addons[\W]*([_a-zA-Z0-9]*)', filepath)).group(1)
-    # print("Checking {0} from {1}".format(filepath,selfmodule))
+    selfmodule = (re.search('(addons|optionals)[\W]*([_a-zA-Z0-9]*)', filepath)).group(2)
+    submodule = (re.search(f'(addons|optionals)[\W]*{selfmodule}[\W]*([_a-zA-Z0-9]*)', filepath)).group(2)
+    # print(f"Checking {filepath} from {selfmodule} ({submodule})")
     fileStrings = []
 
     with open(filepath, 'r') as file:
@@ -27,7 +28,7 @@ def getStringUsage(filepath):
         srch = re.compile('(STR_ACE_[_a-zA-Z0-9]*)', re.IGNORECASE)
         fileStrings = srch.findall(content)
 
-        srch = re.compile('[^E][CL]STRING\(([_a-zA-Z0-9]*)\)', re.IGNORECASE)
+        srch = re.compile('[^EB][CL]STRING\(([_a-zA-Z0-9]*)\)', re.IGNORECASE)
         modStrings = srch.findall(content)
         for localString in modStrings:
             fileStrings.append("STR_ACE_{0}_{1}".format(selfmodule, localString))
@@ -36,6 +37,11 @@ def getStringUsage(filepath):
         exStrings = srch.findall(content)
         for (exModule, exString) in exStrings:
             fileStrings.append("STR_ACE_{0}_{1}".format(exModule, exString))
+
+        srch = re.compile('SUB[CL]STRING\(([_a-zA-Z0-9]*)\)')
+        subStrings = srch.findall(content)
+        for (subString) in subStrings:
+            fileStrings.append(f"STR_ACE_{submodule}_{subString}")
 
         srch = re.compile('IGNORE_STRING_WARNING\([\'"]*([_a-zA-Z0-9]*)[\'"]*\)')
         ignoreWarnings = srch.findall(content)
@@ -51,23 +57,24 @@ def main(argv):
     allDefinedStrings = []
     allUsedStrings = []
 
-    # Allow running from root directory as well as from inside the tools directory
-    rootDir = "../addons"
-    if (os.path.exists("addons")):
-        rootDir = "addons"
+    for folder in ['addons', 'optionals']:
+        # Allow running from root directory as well as from inside the tools directory
+        rootDir = "../" + folder
+        if (os.path.exists(folder)):
+            rootDir = folder
 
-    for root, dirnames, filenames in os.walk(rootDir):
-      for filename in fnmatch.filter(filenames, '*.sqf'):
-        sqf_list.append(os.path.join(root, filename))
-      for filename in fnmatch.filter(filenames, '*.cpp'):
-        sqf_list.append(os.path.join(root, filename))
-      for filename in fnmatch.filter(filenames, '*.hpp'):
-        sqf_list.append(os.path.join(root, filename))
-      for filename in fnmatch.filter(filenames, '*.h'):
-        sqf_list.append(os.path.join(root, filename))
+        for root, dirnames, filenames in os.walk(rootDir):
+          for filename in fnmatch.filter(filenames, '*.sqf'):
+            sqf_list.append(os.path.join(root, filename))
+          for filename in fnmatch.filter(filenames, '*.cpp'):
+            sqf_list.append(os.path.join(root, filename))
+          for filename in fnmatch.filter(filenames, '*.hpp'):
+            sqf_list.append(os.path.join(root, filename))
+          for filename in fnmatch.filter(filenames, '*.h'):
+            sqf_list.append(os.path.join(root, filename))
 
-      for filename in fnmatch.filter(filenames, '*.xml'):
-        xml_list.append(os.path.join(root, filename))
+          for filename in fnmatch.filter(filenames, '*.xml'):
+            xml_list.append(os.path.join(root, filename))
 
     for filename in xml_list:
         allDefinedStrings = allDefinedStrings + getDefinedStrings(filename)
@@ -76,6 +83,8 @@ def main(argv):
 
     allDefinedStrings = list(sorted(set(allDefinedStrings)))
     allUsedStrings = list(sorted(set(allUsedStrings)))
+
+    if ("str_ace_tagging_name" in allUsedStrings): allUsedStrings.remove("str_ace_tagging_name") # Handle tagging macro
 
     print("-----------")
     countUnusedStrings = 0

@@ -24,10 +24,10 @@ class CfgVehicles {
         displayName = "HuntIR";
         model = QPATHTOF(data\huntir.p3d);
         scope = 1;
-        soundCrash[] = {"", db-30, 1 };
+        soundCrash[] = {"", "db-30", 1 };
         soundEnviron[] = {"z\ace\addons\apl\sounds\padak_let", 0.316228, 1, 80};
-        soundLandCrash[] = {"", db-30, 1 };
-        soundWaterCrash[] = {"", db10, 1 };
+        soundLandCrash[] = {"", "db-30", 1 };
+        soundWaterCrash[] = {"", "db-10", 1 };
         class HitPoints {
             class HitEngine {
                 armor = 0;
@@ -73,7 +73,7 @@ class CfgVehicles {
     class ReammoBox_F;
     class ACE_HuntIR_Box: ReammoBox_F {
         model = QPATHTOF(data\ace_huntirbox.p3d);
-        displayName = $STR_DN_ACE_HUNTIRBOX;
+        displayName = CSTRING(TransportBox_DisplayName);
         class TransportItems {
             MACRO_ADDITEM(ACE_HuntIR_monitor,5);
         };
