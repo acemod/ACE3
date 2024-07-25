@@ -18,7 +18,7 @@
  */
  
 params ["_unit", "_currItem", "_switchItem"];
-TRACE_3("switchAttachementMode",_unit,_currItem,_switchItem);
+TRACE_3("switchAttachmentMode",_unit,_currItem,_switchItem);
 
 switch (currentWeapon _unit) do {
     case (""): {};
