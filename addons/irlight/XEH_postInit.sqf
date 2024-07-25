@@ -2,8 +2,6 @@
 
 call FUNC(initItemContextMenu);
 
-//addUserActionEventHandler ["headlights", "Activate", {LINKFUNC(onLightToggled) call CBA_fnc_execNextFrame}];
-
 ["ACE3 Equipment", QGVAR(hold), LLSTRING(MomentarySwitch), {
     if !(ACE_player call CBA_fnc_canUseWeapon) exitWith {};
 
@@ -14,8 +12,6 @@ call FUNC(initItemContextMenu);
     action ["IRLaserOn", ACE_player];
 
     ACE_player selectWeapon _weaponState;
-
-    // call FUNC(onLightToggled);
 
     true
 }, {
@@ -28,6 +24,4 @@ call FUNC(initItemContextMenu);
     action ["IRLaserOff", ACE_player];
 
     ACE_player selectWeapon _weaponState;
-
-    // call FUNC(onLightToggled);
 }] call CBA_fnc_addKeybind;
