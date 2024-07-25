@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Switch attachement from one mode to another - based on CBA_accessory_fnc_switchAttachment
+ * Switch attachment from one mode to another - based on CBA_accessory_fnc_switchAttachment
  *
  * Arguments:
  * 0: Unit <OBJECT>
