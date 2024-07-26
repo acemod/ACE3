@@ -208,7 +208,17 @@ class CfgWeapons {
             };
         };
     };
-    PIP(optic_LRPS);
+    class ACE_optic_LRPS_PIP: ACE_optic_LRPS_2D {
+        author = ECSTRING(common,ACETeam);
+        scope = 1;
+        class ItemInfo: ItemInfo {
+            class OpticsModes: OpticsModes {
+                class Snip: Snip {
+                    modelOptics[] = {"\x\cba\addons\optics\cba_optic_big_pip.p3d", "\x\cba\addons\optics\cba_optic_big_pip.p3d"};
+                };
+            };
+        };
+    };
 
     /* CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT
     // DMS
