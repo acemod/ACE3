@@ -22,12 +22,13 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\hamr-reticle65_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\hamr-reticle65Illum_ca.paa);
-            reticleTextureSize = 1;
+            reticleTextureSize = "1 * 0.8";
 
             bodyTexture = QPATHTOF(reticles\hamr-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\hamr-bodyNight_ca.paa);
-            bodyTextureSize = 1.95;
+            bodyTextureSize = "1.95 * 0.8";
 
+            hideMagnification = 1;
             scriptedOpticsIndex = 1;
         };
         weaponInfoType = "CBA_ScriptedOptic";
@@ -43,7 +44,7 @@ class CfgWeapons {
             };
         };
     };
-    PIP(optic_Hamr);
+    PIP(ACE_optic_Hamr_PIP,ACE_optic_Hamr_2D);
 
     // ARCO
     class optic_Arco: ItemCore {
@@ -65,12 +66,13 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\arco-reticle65_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\arco-reticle65Illum_ca.paa);
-            reticleTextureSize = 1;
+            reticleTextureSize = "1 * 0.9";
 
             bodyTexture = QPATHTOF(reticles\arco-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\arco-bodyNight_ca.paa);
-            bodyTextureSize = 1.95;
+            bodyTextureSize = "1.95 * 0.9";
 
+            hideMagnification = 1;
             scriptedOpticsIndex = 1;
         };
         weaponInfoType = "CBA_ScriptedOptic";
@@ -86,7 +88,7 @@ class CfgWeapons {
             };
         };
     };
-    PIP(optic_Arco);
+    PIP(ACE_optic_Arco_PIP,ACE_optic_Arco_2D);
 
     // MRCO
     class optic_MRCO: ItemCore {
@@ -108,12 +110,13 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\mrco-reticle556_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\mrco-reticle556Illum_ca.paa);
-            reticleTextureSize = 1;
+            reticleTextureSize = "1 * 0.9";
 
             bodyTexture = QPATHTOF(reticles\mrco-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\mrco-bodyNight_ca.paa);
-            bodyTextureSize = 1.95;
+            bodyTextureSize = "1.95 * 0.9";
 
+            hideMagnification = 1;
             scriptedOpticsIndex = 1;
         };
         weaponInfoType = "CBA_ScriptedOptic";
@@ -129,7 +132,7 @@ class CfgWeapons {
             };
         };
     };
-    PIP(optic_MRCO);
+    PIP(ACE_optic_MRCO_PIP,ACE_optic_MRCO_2D);
 
     // SOS
     class optic_SOS: ItemCore {
@@ -151,26 +154,35 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\sos-reticleMLR_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\sos-reticleMLRIllum_ca.paa);
-            reticleTextureSize = 1;
+            reticleTextureSize = "1 * 0.75";
 
             bodyTexture = QPATHTOF(reticles\sos-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\sos-bodyNight_ca.paa);
-            bodyTextureSize = 1.95;
+            bodyTextureSize = "1.95 * 0.75";
         };
         weaponInfoType = "CBA_ScriptedOptic";
 
         class ItemInfo: ItemInfo {
-            modelOptics = "\x\cba\addons\optics\cba_optic_big_90.p3d";
-
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
+                    modelOptics[] = {"\x\cba\addons\optics\cba_optic_big_90.p3d", "\x\cba\addons\optics\cba_optic_big_90.p3d"};
                     useModelOptics = 1;
                 };
                 class Iron: Iron {};
             };
         };
     };
-    PIP(optic_SOS);
+    class ACE_optic_SOS_PIP: ACE_optic_SOS_2D {
+        author = ECSTRING(common,ACETeam);
+        scope = 1;
+        class ItemInfo: ItemInfo {
+            class OpticsModes: OpticsModes {
+                class Snip: Snip {
+                    modelOptics[] = {"\x\cba\addons\optics\cba_optic_big_pip.p3d", "\x\cba\addons\optics\cba_optic_big_pip.p3d"};
+                };
+            };
+        };
+    };
 
     // LRPS
     class optic_LRPS: ItemCore {
@@ -191,11 +203,11 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\sos-reticleMLR_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\sos-reticleMLRIllum_ca.paa);
-            reticleTextureSize = 1;
+            reticleTextureSize = "1 * 0.75";
 
             bodyTexture = QPATHTOF(reticles\sos-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\sos-bodyNight_ca.paa);
-            bodyTextureSize = 1.95;
+            bodyTextureSize = "1.95 * 0.75";
         };
         weaponInfoType = "CBA_ScriptedOptic";
 

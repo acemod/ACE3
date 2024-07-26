@@ -16,8 +16,9 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#define PIP(classname)\
-class TRIPLES(ACE,classname,PIP): TRIPLES(ACE,classname,2D) {\
+// Because pboProject complains otherwise...
+#define PIP(classname,parent)\
+class classname: parent {\
     author = ECSTRING(common,ACETeam);\
     scope = 1;\
     class ItemInfo: ItemInfo {\
