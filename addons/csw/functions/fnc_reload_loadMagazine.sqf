@@ -52,19 +52,24 @@ private _onFinish = {
     [_magSource, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
     if (_bestAmmoToSend == 0) exitWith {};
 
-    // workaround for removeSpecificMagazine and WeaponHolders being deleted when empty, get the closest object of same type on the next frame
-    private _magSourcePos = getPosATL _magSource;
-    private _magSourceType = typeOf _magSource;
-    private _eventParams = [_vehicle, _turret, objNull, _carryMag, _bestAmmoToSend];
+    // Workaround for removeSpecificMagazine and WeaponHolders being deleted when empty, get the closest object of same type on the next frame
     [{
-        params ["_args", "_magSourcePos", "_magSourceType"];
-        _args params ["_vehicle", "_turret", "_magSource", "_carryMag", "_bestAmmoToSend"];
-        _magSource = _magSourcePos nearestObject _magSourceType;
+        params ["_magSource", "_magSourcePos", "_magSourceType", "_args"];
 
-        TRACE_6("calling addTurretMag event",_vehicle,_turret,_magSource,_carryMag,_bestAmmoToSend, _unit);
-        [QGVAR(addTurretMag), [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend, _unit]] call CBA_fnc_globalEvent;
+        if (isNull _magSource) then {
+            _magSource = _magSourcePos nearestObject _magSourceType;
 
-    }, [_eventParams, _magSourcePos, _magSourceType]] call CBA_fnc_execNextFrame;
+            if (isNull _magSource || {((getPosATL _magSource) distance _magSourcePos) > 10}) then {
+                _magSource = createVehicle [["GroundWeaponHolder", QGVAR(ammo_holder)] select GVAR(handleExtraMagazinesType), [0, 0, 0], [], 0, "CAN_COLLIDE"];
+                _magSource setPosATL _magSourcePos;
+            };
+
+            _args set [2, _magSource];
+        };
+
+        TRACE_1("calling addTurretMag event",_args);
+        [QGVAR(addTurretMag), _args] call CBA_fnc_globalEvent;
+    }, [_magSource, getPosATL _magSource, typeOf _magSource, [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend, _unit]]] call CBA_fnc_execNextFrame;
 };
 
 
