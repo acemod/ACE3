@@ -48,15 +48,7 @@ class CfgVehicles {
     class Car: LandVehicle {
         GVAR(space) = 4;
         GVAR(hasCargo) = 1;
-        class ACE_Cargo {
-            /*
-            class Cargo {
-                class ACE_medicalSupplyCrate {
-                    type = "ACE_medicalSupplyCrate";
-                    amount = 1;
-                };
-            };*/
-        };
+        class ADDON {};
     };
 
     class Tank: LandVehicle {
@@ -75,7 +67,7 @@ class CfgVehicles {
         GVAR(hasCargo) = 1;
     };
 
-    // HEMTTs - Default at 10, some variants are altered based on model size and/or expected level of free space inside.
+    // HEMTTs - Default at 30, some variants are altered based on model size and/or expected level of free space inside.
     class Truck_01_base_F: Truck_F {
         GVAR(space) = 30;
     };
@@ -173,7 +165,7 @@ class CfgVehicles {
     };
 
 
-    // misc. vehicles
+    // Misc. vehicles
     class Quadbike_01_base_F: Car_F {
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
@@ -184,7 +176,7 @@ class CfgVehicles {
         GVAR(hasCargo) = 0;
     };
 
-    // helicopters
+    // Helicopters
     class Air;
     class Helicopter: Air {
         GVAR(space) = 8;
@@ -224,7 +216,7 @@ class CfgVehicles {
     };
 
     class Heli_Transport_04_base_F: Helicopter_Base_H {
-        // note the double brackets are because loadmasterTurrets is an array of arrays / turret paths
+        // Note the double brackets are because loadmasterTurrets is an array of arrays / turret paths
         GVAR(loadmasterTurrets)[] = {{1}};
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
@@ -363,8 +355,9 @@ class CfgVehicles {
         GVAR(size) = 6;
     };
 
+    // Slingload pallets
     class Slingload_base_F: ReammoBox_F {};
-    class CargoNet_01_base_F: Slingload_base_F { //Slingload pallets
+    class CargoNet_01_base_F: Slingload_base_F {
         GVAR(size) = 6;
     };
 
@@ -509,7 +502,7 @@ class CfgVehicles {
         };
 
         GVAR(space) = 2;
-        GVAR(hasCargo) = 2;
+        GVAR(hasCargo) = 1;
         GVAR(size) = 3;
         GVAR(canLoad) = 1;
 
@@ -522,8 +515,9 @@ class CfgVehicles {
         class EventHandlers {
             class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
         };
+
         GVAR(space) = 3;
-        GVAR(hasCargo) = 3;
+        GVAR(hasCargo) = 1;
         GVAR(size) = 3;
         GVAR(canLoad) = 1;
 

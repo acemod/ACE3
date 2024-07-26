@@ -19,6 +19,12 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
+// If in ViV cargo, unload it first
+// Warn user if it failed to unload (shouldn't happen)
+if (!isNull isVehicleCargo _target && {!(objNull setVehicleCargo _target)}) then {
+    WARNING_1("ViV Unload Failed %1",_target);
+};
+
 // Get attachTo offset and direction.
 private _position = _target getVariable [QGVAR(dragPosition), [0, 0, 0]];
 private _direction = _target getVariable [QGVAR(dragDirection), 0];
@@ -57,7 +63,7 @@ GVAR(releaseActionID) = [0xF1, [false, false, false], {
 ["", LLSTRING(Drop)] call EFUNC(interaction,showMouseHint);
 
 // Block firing
-if !(GVAR(dragAndFire)) then {
+if (!GVAR(dragAndFire)) then {
     _unit setVariable [QGVAR(blockFire), [
         _unit, "DefaultAction",
         {true},
@@ -66,24 +72,21 @@ if !(GVAR(dragAndFire)) then {
 };
 
 // Add anim changed EH
-[_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
-
-// Check everything
-[FUNC(dragObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
-
-// Reset current dragging height.
-GVAR(currentHeightChange) = 0;
+[_unit, "AnimChanged", LINKFUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
 
 // Prevent UAVs from firing
 private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
 
-// Fixes not being able to move when in combat pace
-[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-
 if (_UAVCrew isNotEqualTo []) then {
     {
-        _target deleteVehicleCrew _x;
+        [_x, true] call EFUNC(common,disableAiUAV);
     } forEach _UAVCrew;
 
-    _target setVariable [QGVAR(isUAV), true, true];
+    _target setVariable [QGVAR(isUAV), _UAVCrew, true];
 };
+
+// Check everything
+[LINKFUNC(dragObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
+
+// Fixes not being able to move when in combat pace
+[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);

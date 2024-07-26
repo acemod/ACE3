@@ -29,14 +29,20 @@ EGVAR(advanced_ballistics,Protractor) = false;
 GVAR(WindInfo) = true;
 
 
-TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
+TRACE_1("Starting Wind Info PFEH",GVAR(WindInfo));
 
 [{
     disableSerialization;
     params ["", "_pfID"];
 
-    if ((!GVAR(WindInfo)) || {!([ACE_player, ACE_player, []] call EFUNC(common,canInteractWith))}) exitWith {
-        TRACE_1("Ending Wind Info PFEH", GVAR(WindInfo));
+    // Allow wind indicator inside static weapons
+    private _playerInStaticWeapon = objectParent ACE_Player isKindOf "StaticWeapon";
+
+    if (
+        (!GVAR(WindInfo)) || 
+        {!([ACE_player, ACE_player, ["notOnMap", "isNotDragging", "isNotCarrying", "isNotSitting"]] call EFUNC(common,canInteractWith)) && !(_playerInStaticWeapon)}
+    ) exitWith {
+        TRACE_1("Ending Wind Info PFEH",GVAR(WindInfo));
         GVAR(WindInfo) = false;
         (["RscWindIntuitive"] call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
         [_pfID] call CBA_fnc_removePerFrameHandler;
@@ -45,12 +51,18 @@ TRACE_1("Starting Wind Info PFEH", GVAR(WindInfo));
     //Keeps the display open:
     (["RscWindIntuitive"] call BIS_fnc_rscLayer) cutRsc ["RscWindIntuitive", "PLAIN", 1, false];
 
+    private _playerEyePos = eyePos ACE_Player;
+    if (_playerInStaticWeapon) then {
+        // Raise eyePos by 1 meter if player is in a static weapon, to prevent wind from being blocked by the open vehicle
+        _playerEyePos = _playerEyePos vectorAdd [0, 0, 1];
+    };
+
     private _windSpeed = if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
         // With wind gradient
-        [eyePos ACE_player, true, true, true] call FUNC(calculateWindSpeed);
+        [_playerEyePos, true, true, true] call FUNC(calculateWindSpeed);
     } else {
         // Without wind gradient
-        [eyePos ACE_player, false, true, true] call FUNC(calculateWindSpeed);
+        [_playerEyePos, false, true, true] call FUNC(calculateWindSpeed);
     };
 
 

@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2, PabstMirror
- * Unit claims the ownership over an object. This is used to prevent multiple players from draging the same ammo box or using up the same wheel when repairing etc.
+ * Unit claims the ownership over an object. This is used to prevent multiple players from dragging the same ammo box or using up the same wheel when repairing etc.
  * This function only runs on the server and handles the "ace_common_claimSafe" event. It provides a network safe way claiming objects as all claims are run on server.
  * Return event is passed [_unit, _target, _success] for new claims, no event on claim release
  *
@@ -36,17 +36,10 @@ _target setVariable [QGVAR(owner), _unit, true];
 
 // lock target object
 if (_lockTarget) then {
-    private _canBeDisassembled = ([] isNotEqualTo getArray (configOf _target >> "assembleInfo" >> "dissasembleTo")) && { !([false, true] select (_target getVariable [QEGVAR(csw,assemblyMode), 0])) };
     if (!isNull _unit) then {
         [QGVAR(lockVehicle), _target, _target] call CBA_fnc_targetEvent;
-        if (_canBeDisassembled) then {
-            _target enableWeaponDisassembly false;
-        };
     } else {
         [QGVAR(unlockVehicle), _target, _target] call CBA_fnc_targetEvent;
-        if (_canBeDisassembled) then {
-            _target enableWeaponDisassembly true;
-        };
     };
 };
 

@@ -34,7 +34,7 @@ private _actions = [];
                 (_this select 2) params ["_objects", "_image", "_currentSlideshow", "_selection"];
                 {
                     _x setObjectTextureGlobal [_selection, _image]
-                } count _objects;
+                } forEach _objects;
                 [QGVAR(slideChanged), [_image, _currentSlideshow]] call CBA_fnc_localEvent;
             },
             {true},

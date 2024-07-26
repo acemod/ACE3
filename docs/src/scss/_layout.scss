@@ -1,7 +1,3 @@
-* {
-    transition: all 0.15s ease;
-}
-
 body {
     background-color: $oil;
 }
@@ -30,4 +26,8 @@ aside {
     @media #{$small-only} {
         overflow: hidden;
     }
+}
+
+a {
+    transition: $transition-default;
 }

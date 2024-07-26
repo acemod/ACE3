@@ -18,7 +18,7 @@
  * Whether or not to continue handling last frame's damage
  *
  * Example:
- * [ace_vehicle_damage_fnc_handleTankDamage, tank1, "Hit_Engine", 12]] call CBA_fnc_execNextFrame
+ * [ace_vehicle_damage_fnc_handleVehicleDamage, tank1, "Hit_Engine", 12]] call CBA_fnc_execNextFrame
  *
  * Public: No
  */
@@ -28,13 +28,13 @@ TRACE_6("handleVehicleDamage",_vehicle,_hitPoint,_hitIndex,_injurer,_oldDamage,_
 if !(alive _vehicle) exitWith {
     private _eventHandler = _vehicle getVariable[QGVAR(handleDamage), nil];
     if !(isNil "_eventHandler") then {
-        _vehicle removeEventHandler ["handleDamage", _eventHandler];
+        _vehicle removeEventHandler ["HandleDamage", _eventHandler];
     };
     LOG_1("Vehicle [%1] no longer alive",_vehicle);
     true
 };
 
-_hitPoint = toLower _hitPoint;
+_hitPoint = toLowerANSI _hitPoint;
 private _hitpointHash = _vehicle getVariable [QGVAR(hitpointHash), []];
 private _type = if (_hitpointHash isEqualTo []) then {
     "exit"

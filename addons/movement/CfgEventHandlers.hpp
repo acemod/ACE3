@@ -15,9 +15,3 @@ class Extended_PostInit_EventHandlers {
         init = QUOTE(call COMPILE_SCRIPT(XEH_postInit));
     };
 };
-
-class Extended_DisplayLoad_EventHandlers {
-    class RscDisplayInventory {
-        ADDON = QUOTE(_this call FUNC(inventoryDisplayLoad));
-    };
-};

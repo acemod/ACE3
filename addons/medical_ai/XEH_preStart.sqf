@@ -13,7 +13,7 @@ private _itemHash = createHashMap;
         private _items = getArray (configFile >> "ace_medical_treatment_actions" >> _x >> "items");
         if (_items isEqualTo []) then { ERROR_1("bad action %1",_x); };
         private _itemClassname = configName (configFile >> "CfgWeapons" >> _items # 0);
-        private _treatment = if ((count _treatments) > 1) then { _x } else { "" };
+        private _treatment = ["", _x] select ((count _treatments) > 1);
         _typeHash set [_itemClassname, _treatment];
     } forEach _treatments;
     _itemHash set [_itemType, _typeHash];

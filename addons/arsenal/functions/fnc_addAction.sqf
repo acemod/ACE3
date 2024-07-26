@@ -1,4 +1,5 @@
 #include "..\script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: johnb43
  * Adds custom action buttons.
@@ -10,6 +11,7 @@
  * 3: Actions <ARRAY of ARRAYS>
  * 4: Condition <CODE> (default: {true})
  * 5: Scope editor <NUMBER> (default: 2)
+ * 6: Update when cargo content changes <BOOL> (default: false)
  *
  * Return Value:
  * 0: Array of IDs <ARRAY of STRINGS>
@@ -30,7 +32,8 @@ params [
     ["_title", "", [""]],
     ["_actions", [], [[]]],
     ["_rootCondition", {true}, [{}]],
-    ["_scopeEditor", 2, [0]]
+    ["_scopeEditor", 2, [0]],
+    ["_updateOnCargoChange", false, [false]]
 ];
 
 // Compile actions from config (in case this is called before preInit)
@@ -38,13 +41,13 @@ call FUNC(compileActions);
 
 // Skip if not allowed in editor and in editor
 if (is3DEN && {_scopeEditor != 2}) exitWith {
-    TRACE_1("Skipping action because in editor", _rootClass);
+    TRACE_1("Skipping action because in editor",_rootClass);
     []
 };
 
 // Class can't contain ~, because it's used for formatting result
 if ("~" in _rootClass) exitWith {
-    TRACE_1("Classname can't contain '~'", _rootClass);
+    TRACE_1("Classname can't contain '~'",_rootClass);
     []
 };
 
@@ -65,7 +68,7 @@ private _fnc_addToGroup = {
 
         // Don't allow two of the same class
         if (_group findIf {(_x select 0) == _class} != -1) then {
-            TRACE_1("An action with this ID already exists", _class);
+            TRACE_1("An action with this ID already exists",_class);
             continue;
         };
 
@@ -118,5 +121,9 @@ private _group = [];
         _tab pushBack [_rootClass, _title, _rootCondition, _group];
     };
 } forEach _tabs;
+
+if (_updateOnCargoChange) then {
+    GVAR(updateActionsOnCargoChange) = true;
+};
 
 _return

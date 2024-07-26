@@ -55,7 +55,7 @@ params ["_listBoxCtrl", "_itemsCountArray"];
             };
         };
 
-        _listBoxCtrl lbAdd format ["%1", _displayName];
+        _listBoxCtrl lbAdd _displayName;
         _listBoxCtrl lbSetData [((lbSize _listBoxCtrl) - 1), _classname];
         _listBoxCtrl lbSetPicture [((lbSize _listBoxCtrl) - 1), _picture];
         _listBoxCtrl lbSetTextRight [((lbSize _listBoxCtrl) - 1), str _count];

@@ -24,7 +24,7 @@ class CfgMagazines {
 
     class ATMine_Range_Mag;
     class rhs_mine_M19_mag: ATMine_Range_Mag {
-        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhsusf_explosive_mine_M19);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhsusf_mine_M19);
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -34,7 +34,7 @@ class CfgMagazines {
     };
 
     class rhsusf_mine_m14_mag: ATMine_Range_Mag {
-        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhsusf_explosive_mine_m14);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhsusf_mine_m14);
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -44,7 +44,7 @@ class CfgMagazines {
     };
 
     class rhsusf_mine_m49a1_3m_mag: ATMine_Range_Mag {
-        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhsusf_explosive_mine_m49a1_3m);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhsusf_mine_m49a1_3m);
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};
             class Tripwire {
@@ -54,10 +54,10 @@ class CfgMagazines {
     };
 
     class rhsusf_mine_m49a1_6m_mag: rhsusf_mine_m49a1_3m_mag {
-        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhsusf_explosive_mine_m49a1_6m);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhsusf_mine_m49a1_6m);
     };
 
     class rhsusf_mine_m49a1_10m_mag: rhsusf_mine_m49a1_3m_mag {
-        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhsusf_explosive_mine_m49a1_10m);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhsusf_mine_m49a1_10m);
     };
 };
