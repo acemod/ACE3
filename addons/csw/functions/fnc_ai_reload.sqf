@@ -20,13 +20,13 @@ TRACE_3("AI reload",_vehicle,_gunner,_instantReload);
 
 // API, used for ai_switchMagazine
 private _forcedMag = _vehicle getVariable [QGVAR(forcedMag), ""];
-private _turretIndex = [_gunner] call EFUNC(common,getTurretIndex);
-if (_turretIndex isEqualTo []) then {
-    _turretIndex = [0];
+private _turretPath = _vehicle unitTurret _gunner;
+if (_turretPath isEqualTo []) then {
+    _turretPath = [0];
 };
 
 // If this is called while CSW has ammo, unload mags in gunner's turret
-if (someAmmo _vehicle) then {[_vehicle, _turretIndex] call FUNC(unloadMagazines)};
+if (someAmmo _vehicle) then {[_vehicle, _turretPath] call FUNC(unloadMagazines)};
 
 private _loadableMagazines = [_vehicle, _gunner, true] call FUNC(reload_getLoadableMagazines);
 if (_loadableMagazines isEqualTo []) exitWith {TRACE_1("could not find reloadable mag",_vehicle)};
