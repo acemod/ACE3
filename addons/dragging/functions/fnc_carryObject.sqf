@@ -19,6 +19,12 @@
 params ["_unit", "_target"];
 TRACE_2("params",_unit,_target);
 
+// If in ViV cargo, unload it first
+// Warn user if it failed to unload (shouldn't happen)
+if (!isNull isVehicleCargo _target && {!(objNull setVehicleCargo _target)}) then {
+    WARNING_1("ViV Unload Failed %1",_target);
+};
+
 // Get attachTo offset and direction
 private _position = _target getVariable [QGVAR(carryPosition), [0, 0, 0]];
 private _direction = _target getVariable [QGVAR(carryDirection), 0];
@@ -53,21 +59,18 @@ _unit setVariable [QGVAR(releaseActionID), [
 ] call EFUNC(common,addActionEventHandler)];
 
 // Add anim changed EH
-[_unit, "AnimChanged", FUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
+[_unit, "AnimChanged", LINKFUNC(handleAnimChanged), [_unit]] call CBA_fnc_addBISEventHandler;
 
 // Prevent UAVs from firing
 private _UAVCrew = _target call EFUNC(common,getVehicleUAVCrew);
 
 if (_UAVCrew isNotEqualTo []) then {
     {
-        _target deleteVehicleCrew _x;
+        [_x, true] call EFUNC(common,disableAiUAV);
     } forEach _UAVCrew;
 
-    _target setVariable [QGVAR(isUAV), true, true];
+    _target setVariable [QGVAR(isUAV), _UAVCrew, true];
 };
 
 // Check everything
-[FUNC(carryObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
-
-// Reset current dragging height
-GVAR(currentHeightChange) = 0;
+[LINKFUNC(carryObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;

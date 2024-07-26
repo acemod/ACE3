@@ -36,6 +36,6 @@ class CfgVehicles {
 
 ### 2.1 Listenable
 
-Event Name | Description | Passed Parameter(s) | Locality
----------- | ----------- | ------------------- | --------
-`ace_wireCuttingStarted` | Wire cutting started | `[_unit, _fence]` | Global
+| Event Name | Description | Passed Parameter(s) | Locality |
+| ---------- | ----------- | ------------------- | -------- |
+| `ace_wireCuttingStarted` | Wire cutting started | `[_unit, _fence]` | Global |

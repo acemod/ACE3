@@ -43,23 +43,27 @@ private _sources = [_unit] call FUNC(getNearbySources);
 
 if (_availableMagazines isEqualTo createHashMap) exitWith {[]}; // fast exit if no available mags
 
-private _loadInfo = [];
 private _return = [];
-private _turretPath = [_unit] call EFUNC(common,getTurretIndex);
 
 // Go through turrets and find weapons that we could reload
 // We can skip checking all turrets if we're doing AI reloading
+private _turrets = if (_aiReload) then {
+    [_vehicle unitTurret _unit]
+} else {
+    allTurrets _vehicle
+};
+
 {
     private _turretPath = _x;
     {
         //IGNORE_PRIVATE_WARNING ["_x", "_y"];
         private _carryMag = _x;
         _y params ["_magSource", "_ammo"];
-        _loadInfo = [_vehicle, _turretPath, _carryMag] call FUNC(reload_canLoadMagazine);
+        private _loadInfo = [_vehicle, _turretPath, _carryMag] call FUNC(reload_canLoadMagazine);
         if (_loadInfo select 0) then {
             _return pushBack [_carryMag, _turretPath, _loadInfo, _magSource, _unit, _ammo];
         };
     } forEach _availableMagazines;
-} forEach ([(allTurrets _vehicle), [_turretPath]] select _aiReload);
+} forEach _turrets;
 
 _return

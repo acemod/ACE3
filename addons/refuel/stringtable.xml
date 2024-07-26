@@ -58,6 +58,7 @@
             <Polish>Prędkość Tankowania Ładunku</Polish>
             <German>Frachtflussrate</German>
             <French>Vitesse de ravitaillement</French>
+            <Russian>Скорость заполнения груза</Russian>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_Description">
             <English>How fast should a fuel source's tank be filled?</English>
@@ -68,6 +69,7 @@
             <Polish>Jak szybko zbiornik paliwa powinien być napełniany?</Polish>
             <German>Wie schnell sollte der Tank einer Kraftstoffquelle gefüllt werden?</German>
             <French>A quelle vitesse le réservoir de carburant doit-il être rempli ?</French>
+            <Russian>Как быстро должен заполняться бак источника топлива?</Russian>
         </Key>
         <Key ID="STR_ACE_Refuel_Refuel">
             <English>Refuel</English>
@@ -318,6 +320,7 @@
             <Japanese>給油を始める (コンテナ)</Japanese>
             <Polish>Rozpocznij tankowanie (zbiornik)</Polish>
             <French>Commencer le ravitaillement (container)</French>
+            <Russian>Начать заправку топливом (контейнер)</Russian>
         </Key>
         <Key ID="STR_ACE_Refuel_CouldNotTurnOn">
             <English>Couldn't turn on fuel nozzle</English>
@@ -501,6 +504,9 @@
             <Italian>Raccogli contenitore di carburante</Italian>
             <Japanese>燃料キャニスターを持つ</Japanese>
             <Korean>연료통 집어들기</Korean>
+            <Russian>Взять канистру с топливом</Russian>
+            <French>Ramasser le réservoir de carburant</French>
+            <Spanish>Coger garrafa de combustible</Spanish>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeFuelCanisterAction">
             <English>Picking fuel canister up...</English>
@@ -508,6 +514,9 @@
             <Italian>Raccogliendo contenitore di carburante...</Italian>
             <Japanese>燃料キャニスターを持ち上げています・・・</Japanese>
             <Korean>연료통 집어드는 중...</Korean>
+            <Russian>Поднимаю канистру с топливом...</Russian>
+            <French>Ramasser les bidons de carburant... </French>
+            <Spanish>Cogiendo garrafa de combustible...</Spanish>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectFuelCanister">
             <English>Connect fuel canister</English>
@@ -515,6 +524,9 @@
             <Italian>Collega contenitore di carburante</Italian>
             <Japanese>燃料キャニスターを接続する</Japanese>
             <Korean>연료통 꽂기</Korean>
+            <Russian>Подсоединить канистру с топливом</Russian>
+            <French>Raccorder le réservoir de carburant</French>
+            <Spanish>Conectar garrafa de combustible</Spanish>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectFuelCanisterAction">
             <English>Connecting fuel canister...</English>
@@ -522,6 +534,9 @@
             <Italian>Collegando contenitore di carburante...</Italian>
             <Japanese>燃料キャニスターを接続しています・・・</Japanese>
             <Korean>연료통 꽂는 중...</Korean>
+            <Russian>Подсоединение топливной канистры...</Russian>
+            <French>Raccorder le réservoir de carburant...</French>
+            <Spanish>Conectando garrafa de combustible...</Spanish>
         </Key>
         <Key ID="STR_ACE_Refuel_DisconnectFuelCanister">
             <English>Disconnect fuel canister</English>
@@ -529,6 +544,9 @@
             <Italian>Scollega contenitore di carburante</Italian>
             <Japanese>燃料キャニスターを外します</Japanese>
             <Korean>연료통 빼기</Korean>
+            <Russian>Отсоединить канистру с топливом</Russian>
+            <French>Débrancher le réservoir de carburant</French>
+            <Spanish>Desconectar garrafa de combustible</Spanish>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_hoseLength_DisplayName">
             <English>Refuel hose length</English>
@@ -565,7 +583,7 @@
             <Russian>Время в секундах, которое занимает взаимодействие со шлангом.</Russian>
             <Spanish>Cuanto tiempo en segundos tardan las interacciones de repostado.</Spanish>
             <Italian>Durata delle interazioni in secondi.</Italian>
-            <Japanese>燃料補給に掛かる時間 (秒)</Japanese>
+            <Japanese>燃料補給に掛かる時間。 (秒単位)</Japanese>
             <Polish>Jak długo powinna trwać interakcja tankowania w sekundach.</Polish>
             <German>Wie lange Auftank-Interaktionen in Sekunden dauern.</German>
             <French>Durée des interactions de ravitaillement en secondes.</French>

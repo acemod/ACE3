@@ -12,10 +12,10 @@
  * Public: No
  */
 
-params ["_vehicle", "_role", "_gunner", "_turret"];
-TRACE_3("getInEH:",_vehicle,_role,_gunner);
+params ["_vehicle", "", "_gunner"];
+TRACE_2("getInEH:",_vehicle,_gunner);
 
-if ((!local _gunner) || {[_gunner] call EFUNC(common,isPlayer)}) exitWith {};
 if (someAmmo _vehicle) exitWith {};
+if ((!local _gunner) || {[_gunner] call EFUNC(common,isPlayer)}) exitWith {};
 
 [_vehicle, _gunner] call FUNC(ai_reload);

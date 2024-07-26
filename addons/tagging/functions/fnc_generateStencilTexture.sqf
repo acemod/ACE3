@@ -29,10 +29,10 @@ params [
     ["_dimension", 512, [0]]
 ];
 
-if (_textColor select [0, 1] == "#") then { _textColor = _textColor select [1]; };
-if (_backgroundColor select [0, 1] == "#") then { _backgroundColor = _backgroundColor select [1]; };
-if (!((count _textColor) in [6,8])) exitWith { ERROR_1("bad Tcolor %1",_textColor); "" };
-if (!((count _backgroundColor) in [6,8])) exitWith { ERROR_1("bad Bcolor %1",_textColor); "" };
+if (_textColor select [0, 1] == "#") then {_textColor = _textColor select [1];};
+if (_backgroundColor select [0, 1] == "#") then {_backgroundColor = _backgroundColor select [1];};
+if !((count _textColor) in [6,8]) exitWith {ERROR_1("bad Tcolor %1",_textColor); ""};
+if !((count _backgroundColor) in [6,8]) exitWith {ERROR_1("bad Bcolor %1",_textColor); ""};
 
 if (_autoMultiline) then {
     private _magicWidth = 0.75;

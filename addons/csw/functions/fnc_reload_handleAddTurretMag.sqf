@@ -11,7 +11,7 @@
  * 3: Vehicle Magazine <STRING>
  * 4: Ammo in magazine <NUMBER>
  * 5: Unit that added the magazine <OBJECT>
- * 6: Object to return extra ammo <OBJECT> (default: Unit that added the magazine)
+ * 6: Object to return extra ammo to <OBJECT> (default: Unit that added the magazine)
  *
  * Return Value:
  * None
@@ -31,7 +31,7 @@ if (isNull _returnTo) then {
 TRACE_7("reload_handleAddTurretMag",_vehicle,_turret,_magSource,_carryMag,_ammoReceived,_unit,_returnTo);
 
 TRACE_2("",local _vehicle,_vehicle turretLocal _turret);
-if (!(_vehicle turretLocal _turret)) exitWith {};
+if !(_vehicle turretLocal _turret) exitWith {};
 
 ([_vehicle, _turret, _carryMag] call FUNC(reload_canLoadMagazine)) params ["_canAdd", "_loadedMag", "_neededAmmo", "_isBeltLinking"];
 TRACE_4("canLoad",_canAdd,_loadedMag,_neededAmmo,_isBeltLinking);

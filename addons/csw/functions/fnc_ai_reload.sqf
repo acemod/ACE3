@@ -35,7 +35,7 @@ private _bestAmmo = 0;
 private _magazineInfo = [];
 {
     _x params ["_xMag", "", "", "", "", "_ammo"];
-    if (_forcedMag isNotEqualTo "" && {_xMag != _forcedMag}) then {continue};
+    if (_forcedMag != "" && {_xMag != _forcedMag}) then {continue};
     if (_ammo > _bestAmmo) then {
         _bestAmmo = _ammo;
         _magazineInfo = _x;
@@ -60,7 +60,7 @@ if (_instantReload) exitWith {
     [QGVAR(addTurretMag), _eventParams] call CBA_fnc_globalEvent;
 };
 
-private _timeToLoad = GET_NUMBER(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime", 1);
+private _timeToLoad = GET_NUMBER(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime",1);
 
 TRACE_1("Reloading in progress",_timeToLoad);
 [{

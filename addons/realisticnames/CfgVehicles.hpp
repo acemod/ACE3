@@ -249,6 +249,10 @@ class CfgVehicles {
     class O_Truck_02_medical_F: Truck_02_medical_base_F {
         displayName = CSTRING(Truck_02_medical_Name);
     };
+    class Truck_02_water_base_F;
+    class C_IDAP_Truck_02_water_F: Truck_02_water_base_F {
+        displayName = CSTRING(Truck_02_water_Name);
+    };
     class I_Truck_02_transport_F: Truck_02_transport_base_F {
         displayName = CSTRING(Truck_02_transport_Name);
     };
@@ -282,6 +286,12 @@ class CfgVehicles {
     };
     class C_Truck_02_box_F: Truck_02_box_base_F {
         displayName = CSTRING(Truck_02_box_Name);
+    };
+    class C_IDAP_Truck_02_transport_F: Truck_02_transport_base_F {
+        displayName = CSTRING(Truck_02_transport_Name);
+    };
+    class C_IDAP_Truck_02_F: Truck_02_base_F {
+        displayName = CSTRING(Truck_02_covered_Name);
     };
 
     class Truck_03_base_F;
@@ -382,6 +392,9 @@ class CfgVehicles {
 
     class Heli_Transport_02_base_F;
     class I_Heli_Transport_02_F: Heli_Transport_02_base_F {
+        displayName = CSTRING(Heli_Transport_02_Name);
+    };
+    class C_IDAP_Heli_Transport_02_F: Heli_Transport_02_base_F {
         displayName = CSTRING(Heli_Transport_02_Name);
     };
 

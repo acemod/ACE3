@@ -12,11 +12,11 @@
  * Public: No
  */
 
-params ["_vehicle", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
-TRACE_8("firedEH:",_vehicle,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_gunner);
+params ["_vehicle", "", "", "", "", "", "", "_gunner"];
+TRACE_1("firedEH:",_this);
 
-if ((!local _gunner) || {[_gunner] call EFUNC(common,isPlayer)}) exitWith {};
 if (someAmmo _vehicle) exitWith {};
+if ((!local _gunner) || {[_gunner] call EFUNC(common,isPlayer)}) exitWith {};
 
 TRACE_2("need ammo",someAmmo _vehicle,magazinesAllTurrets _vehicle);
 

@@ -31,7 +31,7 @@ if (_weaponBarrelClass == "") then {
 // Find all spare barrel the player has
 private _allBarrels = [_assistant, _weaponBarrelClass] call CBA_fnc_getMagazineIndex;
 TRACE_1("_allBarrels",_allBarrels);
-if ((count _allBarrels) < 1) exitWith {};
+if (_allBarrels isEqualTo []) exitWith {};
 
 // Determine which on is coolest
 private _coolestTemp = 10000;

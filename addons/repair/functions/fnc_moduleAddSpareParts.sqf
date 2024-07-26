@@ -30,8 +30,7 @@ if (!isNull _logic) then {
     // Add synchronized objects to list
     {
         _list pushBack _x;
-        nil
-    } count (synchronizedObjects _logic);
+    } forEach (synchronizedObjects _logic);
 
     if (_list isEqualTo []) exitWith {};
 
@@ -40,6 +39,5 @@ if (!isNull _logic) then {
     // Add spare parts
     {
         [_x, _amount, _part, true] call FUNC(addSpareParts);
-        false
-    } count _list;
+    } forEach _list;
 };

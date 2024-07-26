@@ -23,7 +23,7 @@
 params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit", "_ammo"];
 TRACE_6("loadMagazine",_vehicle,_turret,_carryMag,_magSource,_unit,_ammo);
 
-private _timeToLoad = GET_NUMBER(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime", 1);
+private _timeToLoad = GET_NUMBER(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime",1);
 
 private _displayName = format [LLSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
 

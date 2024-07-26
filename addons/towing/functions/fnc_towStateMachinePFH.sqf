@@ -44,15 +44,14 @@ if (GVAR(isSwimming) && {currentWeapon _unit isNotEqualTo ""}) then {
 private _exitCondition = !(
     (alive GVAR(attachHelper)) &&
     { alive _parent } &&
-    { alive _unit } &&
+    { _unit call EFUNC(common,isAwake) } &&
     {
         currentWeapon _unit isEqualTo ""
         || {_unit call EFUNC(common,isSwimming)} // swimming in wetsuit forces weapon in hands
         || {getPosASLW _unit select 2 < -1.5} // walking-to-swimming animation in wetsuit lasts for 3 seconds
     } &&
     { [_unit, objNull, [INTERACTION_EXCEPTIONS]] call EFUNC(common,canInteractWith) } &&
-    { "unconscious" isNotEqualTo toLower animationState _unit } &&
-    { !(_unit getVariable ["ACE_isUnconscious", false]) } &&
+    { "unconscious" != animationState _unit } &&
     { ACE_player == _unit }
 );
 

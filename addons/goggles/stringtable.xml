@@ -101,7 +101,7 @@
         </Key>
         <Key ID="STR_ACE_Goggles_effects_effectsOnly">
             <English>Effects</English>
-            <Russian>эффекты</Russian>
+            <Russian>Эффекты</Russian>
             <Japanese>エフェクト</Japanese>
             <Polish>Efekty</Polish>
             <German>Effekte</German>
@@ -137,7 +137,7 @@
             <Polish>Pokaż interakcję Wyczyść Gogle</Polish>
             <Italian>Mostra interazione automatica per la pulizia degli occhiali</Italian>
             <Czech>Ukaž Vyčistit brýle v menu Interakce (vlastní)</Czech>
-            <Japanese>ゴーグル拭き取りをｾﾙﾌ ｲﾝﾀﾗｸｼｮﾝに表示</Japanese>
+            <Japanese>ゴーグル拭き取りのアクションを表示</Japanese>
             <Chinese>在自我互動中顯示擦拭護目鏡的動作</Chinese>
             <Chinesesimp>在自我互动中显示擦拭护目镜的动作</Chinesesimp>
             <French>Afficher l'interaction "Essuyer les lunettes"</French>
