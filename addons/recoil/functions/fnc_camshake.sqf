@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player, (currentWeapon player), (currentMuzzle player)] call ace_recoil_fnc_camshake;
+ * [player, currentWeapon player, currentMuzzle player] call ace_recoil_fnc_camshake
  *
  * Public: No
  */
@@ -28,20 +28,19 @@ if (toLowerANSI _weapon in ["throw", "put"]) exitWith {};
 
 private _powerMod = ([0, -0.1, -0.1, 0, -0.2] select (["STAND", "CROUCH", "PRONE", "UNDEFINED", ""] find stance _unit)) + ([0, -1, 0, -1] select (["INTERNAL", "EXTERNAL", "GUNNER", "GROUP"] find cameraView));
 
-// to get camshake read kickback
-private _recoil = missionNamespace getVariable format [QGVAR(%1-%2), _weapon, _muzzle];
-
-if (isNil "_recoil") then {
+// Get camshake read kickback
+private _recoil = GVAR(recoilCache) getOrDefaultCall [_weapon + _muzzle, {
     private _config = configFile >> "CfgWeapons" >> _weapon;
 
-    if (_muzzle == _weapon) then {
-        _recoil = getText (_config >> "recoil")
+    private _recoil = if (_muzzle == _weapon) then {
+        getText (_config >> "recoil")
     } else {
-        _recoil = getText (_config >> _muzzle >> "recoil")
+        getText (_config >> _muzzle >> "recoil")
     };
 
     if (isClass (configFile >> "CfgRecoils" >> _recoil)) then {
         _recoil = getArray (configFile >> "CfgRecoils" >> _recoil >> "kickBack");
+
         if (count _recoil < 2) then {
             _recoil = [0, 0];
         };
@@ -51,12 +50,12 @@ if (isNil "_recoil") then {
 
     TRACE_3("Caching Recoil config",_weapon,_muzzle,_recoil);
 
-    // parse numbers
-    _recoil set [0, call compile format ["%1", _recoil select 0]];
-    _recoil set [1, call compile format ["%1", _recoil select 1]];
+    // Ensure format is correct
+    _recoil resize [2, 0];
 
-    missionNamespace setVariable [format [QGVAR(%1-%2), _weapon, _muzzle], _recoil];
-};
+    // Parse numbers
+    _recoil apply {call compile format ["%1", _x]} // return
+}, true];
 
 private _powerCoef = RECOIL_COEF * linearConversion [0, 1, random 1, _recoil select 0, _recoil select 1, false];
 

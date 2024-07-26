@@ -1,4 +1,3 @@
-
 #define KICKBACK 1.4
 
 #define MUZZLETEMP 1.2
