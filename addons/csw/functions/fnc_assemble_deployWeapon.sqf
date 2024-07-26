@@ -1,11 +1,11 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Deploys the current CSW
+ * Deploys the current CSW.
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Unit <OBJECT>
+ * 1: Player <OBJECT>
  * 2: Args <ANY>
  * 3: Action Data <ARRAY>
  *
