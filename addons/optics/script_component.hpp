@@ -17,19 +17,18 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define PIP(classname)\
-    class TRIPLES(ACE,classname,PIP): TRIPLES(ACE,classname,2D) {\
-        author = ECSTRING(common,ACETeam);\
-        scope = 1;\
-    \
-        class ItemInfo: ItemInfo {\
-            modelOptics = "\x\cba\addons\optics\cba_optic_big_pip.p3d";\
-        };\
-    }
+class TRIPLES(ACE,classname,PIP): TRIPLES(ACE,classname,2D) {\
+    author = ECSTRING(common,ACETeam);\
+    scope = 1;\
+    class ItemInfo: ItemInfo {\
+        modelOptics = "\x\cba\addons\optics\cba_optic_big_pip.p3d";\
+    };\
+}
 
 #define PRELOAD\
-    class CBA_ScriptedOptic {\
-        reticleTexture = "*";\
-        reticleTextureNight = "*";\
-        bodyTexture = "*";\
-        bodyTextureNight = "*";\
-    }
+class CBA_ScriptedOptic {\
+    reticleTexture = "*";\
+    reticleTextureNight = "*";\
+    bodyTexture = "*";\
+    bodyTextureNight = "*";\
+}
