@@ -26,7 +26,7 @@ class classname: parent {\
     };\
 }
 
-#define PRELOAD\
+#define PRELOAD \
 class CBA_ScriptedOptic {\
     reticleTexture = "*";\
     reticleTextureNight = "*";\
