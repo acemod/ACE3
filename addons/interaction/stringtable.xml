@@ -1247,30 +1247,30 @@
             <Korean>전면유리 부수기</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsAttach">
-            <English>Attach %1</English>
-            <Russian>Установить %1</Russian>
-            <Japanese>%1 を取り付け</Japanese>
-            <Spanish>Acoplar %1</Spanish>
-            <French>Fixer %1</French>
-            <Polish>Przyczep %1</Polish>
-            <German>Befestige %1</German>
-            <Italian>Attacca %1</Italian>
-            <Chinesesimp>附加 %1</Chinesesimp>
-            <Korean>%1 붙이기</Korean>
-            <Portuguese>Fixar %1</Portuguese>
+            <English>Attach</English>
+            <Russian>Установить</Russian>
+            <Japanese>を取り付け</Japanese>
+            <Spanish>Acoplar</Spanish>
+            <French>Fixer</French>
+            <Polish>Przyczep</Polish>
+            <German>Befestige</German>
+            <Italian>Attacca</Italian>
+            <Chinesesimp>附加</Chinesesimp>
+            <Korean>붙이기</Korean>
+            <Portuguese>Fixar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsDetach">
-            <English>Detach %1</English>
-            <Russian>Снять %1</Russian>
-            <Japanese>%1 を外す</Japanese>
-            <Spanish>Desacoplar %1</Spanish>
-            <French>Retirer %1</French>
-            <Polish>Odczep %1</Polish>
-            <German>Löse %1</German>
-            <Italian>Stacca %1</Italian>
-            <Chinesesimp>拆卸 %1</Chinesesimp>
-            <Korean>%1 떼내기</Korean>
-            <Portuguese>Desfixar %1</Portuguese>
+            <English>Detach</English>
+            <Russian>Снять</Russian>
+            <Japanese>を外す</Japanese>
+            <Spanish>Desacoplar</Spanish>
+            <French>Retirer</French>
+            <Polish>Odczep</Polish>
+            <German>Löse</German>
+            <Italian>Stacca</Italian>
+            <Chinesesimp>拆卸</Chinesesimp>
+            <Korean>떼내기</Korean>
+            <Portuguese>Desfixar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachments_Description">
             <English>Enables attach/detach weapon attachment actions for current weapon.</English>
