@@ -1,14 +1,14 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Checks if you can deploy a weapon on the tripod
+ * Checks if you can deploy a weapon on the tripod.
  *
  * Arguments:
- * 0: Target Tripod <OBJECT>
+ * 0: Target <OBJECT>
  * 1: Player <OBJECT>
  *
  * Return Value:
- * Wether or not you can deploy the weapon <BOOL>
+ * Whether or not you can deploy the weapon <BOOL>
  *
  * Example:
  * [cursorObject, player] call ace_csw_fnc_assemble_canDeployWeapon
