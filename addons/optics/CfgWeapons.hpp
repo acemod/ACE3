@@ -22,11 +22,11 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\hamr-reticle65_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\hamr-reticle65Illum_ca.paa);
-            reticleTextureSize = "1 * 0.8";
+            reticleTextureSize = 1 * 0.9;
 
             bodyTexture = QPATHTOF(reticles\hamr-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\hamr-bodyNight_ca.paa);
-            bodyTextureSize = "1.95 * 0.8";
+            bodyTextureSize = 1.95 * 0.9;
 
             hideMagnification = 1;
             scriptedOpticsIndex = 1;
@@ -66,11 +66,11 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\arco-reticle65_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\arco-reticle65Illum_ca.paa);
-            reticleTextureSize = "1 * 0.9";
+            reticleTextureSize = 1 * 0.95;
 
             bodyTexture = QPATHTOF(reticles\arco-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\arco-bodyNight_ca.paa);
-            bodyTextureSize = "1.95 * 0.9";
+            bodyTextureSize = 1.95 * 0.95;
 
             hideMagnification = 1;
             scriptedOpticsIndex = 1;
@@ -110,11 +110,11 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\mrco-reticle556_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\mrco-reticle556Illum_ca.paa);
-            reticleTextureSize = "1 * 0.9";
+            reticleTextureSize = 1 * 0.95;
 
             bodyTexture = QPATHTOF(reticles\mrco-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\mrco-bodyNight_ca.paa);
-            bodyTextureSize = "1.95 * 0.9";
+            bodyTextureSize = 1.95 * 0.95;
 
             hideMagnification = 1;
             scriptedOpticsIndex = 1;
@@ -154,11 +154,11 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\sos-reticleMLR_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\sos-reticleMLRIllum_ca.paa);
-            reticleTextureSize = "1 * 0.75";
+            reticleTextureSize = 1 * 0.75;
 
             bodyTexture = QPATHTOF(reticles\sos-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\sos-bodyNight_ca.paa);
-            bodyTextureSize = "1.95 * 0.75";
+            bodyTextureSize = 1.95 * 0.75;
         };
         weaponInfoType = "CBA_ScriptedOptic";
 
@@ -203,11 +203,11 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\sos-reticleMLR_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\sos-reticleMLRIllum_ca.paa);
-            reticleTextureSize = "1 * 0.75";
+            reticleTextureSize = 1 * 0.75;
 
             bodyTexture = QPATHTOF(reticles\sos-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\sos-bodyNight_ca.paa);
-            bodyTextureSize = "1.95 * 0.75";
+            bodyTextureSize = 1.95 * 0.75;
         };
         weaponInfoType = "CBA_ScriptedOptic";
 
