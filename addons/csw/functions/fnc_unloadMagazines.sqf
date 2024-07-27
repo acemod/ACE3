@@ -23,7 +23,6 @@ if (!alive _vehicle) exitWith {};
 
 private _magsToRemove = [];
 private _carryMagazines = createHashMap;
-private _containerMagazineCount = [];
 
 {
     _x params ["_xMag", "_xTurret", "_xAmmo"];
