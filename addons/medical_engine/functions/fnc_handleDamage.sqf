@@ -108,7 +108,7 @@ if (
 // Kill units in wrecks
 if (
     !alive _vehicle &&
-    {_vehicle != _unit} && {!(_vehicle isKindOf "StaticWeapon")}
+    _inVehicle && {!(_vehicle isKindOf "StaticWeapon")}
 ) exitWith {
 
     private _damages = [];
