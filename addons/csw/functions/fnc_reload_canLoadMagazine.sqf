@@ -34,7 +34,7 @@ if !(isNull _magSource) then {
     if !(_carryMag in (magazineCargo _magSource)) exitWith {TRACE_3("no carry mag",_magSource,_carryMag,magazineCargo _magSource); _return breakOut "main"};
 
     // Verify holder has not moved away from vehicle, with workaround for containers within containers
-    if ((_vehicle distance _magSource) > 5 && {(_vehicle distance (objectParent _magSource)) > 5}) exitWith {TRACE_1("too far",""); _return breakOut "main"};
+    if ((_vehicle distance _magSource) > DISTANCE_SEARCH_RADIUS && {(_vehicle distance (objectParent _magSource)) > DISTANCE_SEARCH_RADIUS}) exitWith {TRACE_1("too far",""); _return breakOut "main"};
 };
 
 // solve config lookups

@@ -20,9 +20,9 @@
 [_this, {
     params ["_unit", ["_skipVehicles", false], ["_includeCrew", false]];
 
-    private _nearSupplies = (_unit nearSupplies 5) select {
+    private _nearSupplies = (_unit nearSupplies DISTANCE_SEARCH_RADIUS) select {
         isNull (group _x) ||
-        {!([_x] call EFUNC(common,isPlayer)) && {[side group _unit, side group _x] call BIS_fnc_sideIsFriendly}}
+        {!(_x call EFUNC(common,isPlayer)) && {[side group _unit, side group _x] call BIS_fnc_sideIsFriendly}}
     };
 
     if (_includeCrew) then {

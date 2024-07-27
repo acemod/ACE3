@@ -25,7 +25,7 @@ private _fullMagazines = floor (_ammo / _carryMaxAmmo);
 private _bulletsRemaining = _ammo % _carryMaxAmmo;
 
 // Get nearby units to clear cache
-private _nearUnits = _unloadTo nearEntities ["CAManBase", 5];
+private _nearUnits = _unloadTo nearEntities ["CAManBase", DISTANCE_SEARCH_RADIUS];
 private _unloadToUnit = _unloadTo isKindOf "CAManBase";
 
 if (_unloadToUnit) then {
@@ -47,7 +47,7 @@ if ((_fullMagazines == 0) && {_bulletsRemaining == 0}) exitWith {
 private _container = [_unloadTo, objNull] select _unloadToUnit;
 if ((maxLoad _container) isEqualTo 0) then {
     _container = _unloadTo getVariable [QGVAR(container), objNull];
-    if ((_container distance _unloadTo) > 5) then { _container = objNull; };
+    if ((_container distance _unloadTo) > DISTANCE_SEARCH_RADIUS) then { _container = objNull; };
     if (isNull _container) then {
         _container = (nearestObjects [_unloadTo, [["GroundWeaponHolder"], [QGVAR(ammo_holder)]] select GVAR(handleExtraMagazinesType), 5]) param [0, objNull];
     };

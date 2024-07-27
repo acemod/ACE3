@@ -19,10 +19,10 @@
 
 params [["_vehicle", objNull, [objNull]], ["_turretPath", [0], [[0], true]], ["_returnMags", true, [true]]];
 
-if (isNull _vehicle) exitWith {};
+if (!alive _vehicle) exitWith {};
 
 private _magsToRemove = [];
-private _containerMagazineClassnames = [];
+private _carryMagazines = createHashMap;
 private _containerMagazineCount = [];
 
 {
@@ -31,12 +31,7 @@ private _containerMagazineCount = [];
     private _carryMag = _xMag call FUNC(getCarryMagazine);
     if (_carryMag != "") then {
         _magsToRemove pushBackUnique [_xMag, _xTurret];
-        private _index = _containerMagazineClassnames find _carryMag;
-        if (_index < 0) then {
-            _index = _containerMagazineClassnames pushBack _carryMag;
-            _containerMagazineCount pushBack 0;
-        };
-        _containerMagazineCount set [_index, (_containerMagazineCount select _index) + _xAmmo];
+        _carryMagazines set [_carryMag, (_carryMagazines getOrDefault [_carryMag, 0]) + _xAmmo];
     };
 } forEach (magazinesAllTurrets _vehicle);
 
@@ -46,6 +41,6 @@ private _containerMagazineCount = [];
 
 if (_returnMags) then {
     {
-        [_vehicle, _x, _containerMagazineCount select _forEachIndex] call FUNC(reload_handleReturnAmmo);
-    } forEach _containerMagazineClassnames;
+        [_vehicle, _x, _y] call FUNC(reload_handleReturnAmmo);
+    } forEach _carryMagazines;
 };

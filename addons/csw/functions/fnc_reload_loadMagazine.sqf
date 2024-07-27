@@ -36,7 +36,7 @@ private _onFinish = {
 
     [_magSource, _carryMag, _ammo] call EFUNC(common,removeSpecificMagazine);
 
-    private _nearUnits = _vehicle nearEntities ["CAManBase", 5];
+    private _nearUnits = _vehicle nearEntities ["CAManBase", DISTANCE_SEARCH_RADIUS];
     [QGVAR(clearNearbySourcesCache), [], _nearUnits] call CBA_fnc_targetEvent;
 
     // Workaround for removeSpecificMagazine and WeaponHolders being deleted when empty, give back to the unit if the weapon holder was deleted

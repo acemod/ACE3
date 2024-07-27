@@ -7,7 +7,7 @@
  * 0: CSW <OBJECT>
  * 1: Gunner <OBJECT>
  * 2: Skip reload time <BOOL> (default: false)
- * 3: Clear forced magazine after reloading (default: true)
+ * 3: Clear forced magazine after reloading (default: false)
  *
  * Return Value:
  * None
