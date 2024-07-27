@@ -149,10 +149,15 @@ if (_callbackProgress == "") then {
 // Player Animation
 private _callerAnim = [getText (_config >> "animationCaller"), getText (_config >> "animationCallerProne")] select (stance _caller == "PRONE");
 private _loopAnim = (getNumber (_config >> "loopAnimation")) isEqualTo 1;
-_caller setVariable [QGVAR(selectedWeaponOnrepair), currentWeapon _caller];
+
+private _currentWeapon = currentWeapon _caller;
+
+if (_currentWeapon != "") then {
+    _caller setVariable [QGVAR(selectedWeaponOnrepair), (weaponState _caller) select [0, 3]];
+};
 
 // Cannot use secondairy weapon for animation
-if (currentWeapon _caller == secondaryWeapon _caller) then {
+if (_currentWeapon == secondaryWeapon _caller) then {
     _caller selectWeapon (primaryWeapon _caller);
 };
 

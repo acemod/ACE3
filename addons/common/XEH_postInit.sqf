@@ -133,6 +133,30 @@
     _object lockInventory (_set > 0);
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(disableAiUAV), {
+    params ["_unit", "_disable"];
+
+    if (_disable) then {
+        private _features = ["AUTOTARGET", "TARGET", "WEAPONAIM"/*, "FIREWEAPON"*/, "RADIOPROTOCOL"]; // TODO: Uncomment in 2.18
+
+        // Save current status
+        _unit setVariable [QGVAR(featuresAiUAV), _features apply {[_x, _unit checkAIFeature _x]}];
+
+        {
+            _unit enableAIFeature [_x, false];
+        } forEach _features;
+    } else {
+        // Restore previous status
+        private _features = _unit getVariable [QGVAR(featuresAiUAV), []];
+
+        {
+            _unit enableAIFeature [_x select 0, _x select 1];
+        } forEach _features;
+
+        _unit setVariable [QGVAR(featuresAiUAV), nil];
+    };
+}] call CBA_fnc_addEventHandler;
+
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
 //This variable is used for isPlayer checks
 if (isServer) then {

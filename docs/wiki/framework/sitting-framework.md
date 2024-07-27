@@ -29,6 +29,7 @@ class CfgVehicles {
         acex_sitting_sitDirection = 180;  // Direction relative to object
         acex_sitting_sitPosition[] = {0, -0.1, -0.45};  // Position relative to object (may behave weird with certain objects)
         acex_sitting_interactPosition[] = {0, -0.1, -0.45};
+        ace_sitting_animations[] = {"ace_sitting_HubSittingChairA_idle1"}; // Overwrite random animation pool
         XEH_ENABLED;  // Enable XEH (only necessary if XEH is not yet enabled for this class or the one this inherits from)
     };
 };
