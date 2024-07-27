@@ -54,7 +54,7 @@ private _recoil = GVAR(recoilCache) getOrDefaultCall [_weapon + _muzzle, {
     _recoil resize [2, 0];
 
     // Parse numbers
-    _recoil apply {call compile format ["%1", _x]} // return
+    _recoil apply { if (_x isEqualType 0) then { _x } else { call compile format ["%1", _x] } } // return
 }, true];
 
 private _powerCoef = RECOIL_COEF * linearConversion [0, 1, random 1, _recoil select 0, _recoil select 1, false];
