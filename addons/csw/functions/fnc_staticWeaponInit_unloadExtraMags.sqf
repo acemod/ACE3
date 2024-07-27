@@ -70,29 +70,29 @@ TRACE_1("Remove all loaded magazines",_magsToRemove);
     };
 } forEach _magsToRemove;
 
-private _secondaryWeaponMagazines = _staticWeapon getVariable [QGVAR(secondaryWeaponMagazines), []];
+private _secondaryWeaponMagazines = _vehicle getVariable [QGVAR(secondaryWeaponMagazines), []];
 
 if (_secondaryWeaponMagazines isNotEqualTo []) then {
     // Check if the static weapon can take magazines
-    private _turret = (allTurrets _staticWeapon) param [0, []];
-    private _compatibleMagazinesTurret = flatten ((_staticWeapon weaponsTurret _turret) apply {compatibleMagazines _x});
+    private _turret = (allTurrets _vehicle) param [0, []];
+    private _compatibleMagazinesTurret = flatten ((_vehicle weaponsTurret _turret) apply {compatibleMagazines _x});
     private _container = objNull;
 
     {
-        private _vehicleMag = [_staticWeapon, _turret, _x select 0] call FUNC(reload_getVehicleMagazine);
+        private _vehicleMag = [_vehicle, _turret, _x select 0] call FUNC(reload_getVehicleMagazine);
         TRACE_3("Re-add previous mag",_x select 0,_turret,_vehicleMag);
 
         // If the magazine can be added to the static weapon, do it now
         if (_vehicleMag in _compatibleMagazinesTurret) then {
-            _staticWeapon addMagazineTurret [_vehicleMag, _turret, _x select 1];
+            _vehicle addMagazineTurret [_vehicleMag, _turret, _x select 1];
         } else {
             // Find a suitable container to place items in if necessary
             if (isNull _container) then {
-                _container = (nearestObjects [_staticWeapon, ["GroundWeaponHolder"], 10]) param [0, objNull];
+                _container = (nearestObjects [_vehicle, ["GroundWeaponHolder"], 10]) param [0, objNull];
 
                 // Create ammo storage container
                 if (isNull _container) then {
-                    _container = createVehicle ["GroundWeaponHolder", getPosATL _staticWeapon, [], 0, "NONE"];
+                    _container = createVehicle ["GroundWeaponHolder", getPosATL _vehicle, [], 0, "NONE"];
                 };
             };
 
@@ -101,7 +101,7 @@ if (_secondaryWeaponMagazines isNotEqualTo []) then {
         };
     } forEach _secondaryWeaponMagazines;
 
-    _staticWeapon setVariable [QGVAR(secondaryWeaponMagazines), nil, true];
+    _vehicle setVariable [QGVAR(secondaryWeaponMagazines), nil, true];
 };
 
 if (_storeExtraMagazines) then {

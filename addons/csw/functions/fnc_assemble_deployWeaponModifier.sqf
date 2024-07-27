@@ -21,7 +21,7 @@
 params ["_target", "_player", "", "_actionData"];
 
 private _carryWeaponClassname = secondaryWeapon _player;
-private _assembleTo = (getText(configFile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "assembleTo" >> (typeOf _target)));
+private _assembleTo = getText (configFile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "assembleTo" >> typeOf _target);
 private _icon = getText (configFile >> "CfgVehicles" >> _assembleTo >> "picture");
 TRACE_2("",_assembleTo,_icon);
 

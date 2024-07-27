@@ -10,7 +10,7 @@
  * Can dismount weapon <BOOL>
  *
  * Example:
- * [cursorObject] call ace_csw_fnc_assemble_canPickupWeapon
+ * cursorObject call ace_csw_fnc_assemble_canPickupWeapon
  *
  * Public: No
  */

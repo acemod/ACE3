@@ -36,7 +36,7 @@ private _condition = {
     {([_target, _turretPath, _carryMag, _magSource] call FUNC(reload_canLoadMagazine)) select 0}
 };
 
-private _cfgMagazines = configFile >> "CfgMagazines"; // micro-optimization
+private _cfgMagazines = configFile >> "CfgMagazines"; // Micro-optimization
 private _actions = [];
 {
     _x params ["_carryMag", "", "_loadInfo"];

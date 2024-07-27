@@ -99,7 +99,7 @@
             // Create a new weapon holder (don't try to get an existing one, as no guarantee where it could be)
             private _weaponHolder = createVehicle ["GroundWeaponHolder", [0, 0, 0], [], 0, "CAN_COLLIDE"];
             _weaponHolder setDir random [0, 180, 360];
-            _weaponHolder setVehiclePosition [_weaponPos, [], 0, "CAN_COLLIDE"]; // places object on surface below
+            _weaponHolder setVehiclePosition [_weaponPos, [], 0, "CAN_COLLIDE"]; // Places object on surface below
             _weaponHolder addWeaponWithAttachmentsCargoGlobal [[_carryWeaponClassname, "", "", "", _carryWeaponMag, [], ""], 1];
         }, [_player, _weaponPos, _carryWeaponClassname, _carryWeaponMag, _turretClassname]] call CBA_fnc_execNextFrame;
 

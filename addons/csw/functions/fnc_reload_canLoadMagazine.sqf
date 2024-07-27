@@ -44,7 +44,7 @@ private _cfgGroupsCarryMag = configFile >> QGVAR(groups) >> _carryMag;
 
 private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
 if (_desiredAmmo == 0) then { _desiredAmmo = 100; };
-private _ammoNeeded = _desiredAmmo min getNumber (_cfgMagazinesCarryMag >> "count"); // assume it needs full carry mag
+private _ammoNeeded = _desiredAmmo min getNumber (_cfgMagazinesCarryMag >> "count"); // Assume it needs full carry mag
 private _loadedMag = "";
 private _isBeltLinking = false;
 
