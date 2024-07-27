@@ -1,11 +1,11 @@
 #include "..\script_component.hpp"
 /*
- * Author: Orginal by Ryan Schultz, edited by KoffeinFlummi, commy2
+ * Author: Original by Ryan Schultz, edited by KoffeinFlummi, commy2
  * Adds camera shake when firing. Called from the unified fired EH only for the local player.
  * From TMR: Small Arms
  *
  * Arguments:
- * None. Parameters inherited from EFUNC(common,firedEH)
+ * Parameters inherited from EFUNC(common,firedEH)
  *
  * Return Value:
  * None
