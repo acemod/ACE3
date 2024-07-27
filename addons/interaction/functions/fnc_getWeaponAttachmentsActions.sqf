@@ -48,11 +48,11 @@ params ["_unit"];
                     _args params ["_attachment", "_name", "_picture", "_weaponItems", "_currentWeapon"];
 
                     private _cfgWeapons = configFile >> "CfgWeapons";
-                    private _attachementNotOnGun = !(_attachment in _weaponItems);
+                    private _attachmentNotOnGun = !(_attachment in _weaponItems);
                     private _actions = [];
 
                     // "attach" action
-                    if (_attachementNotOnGun && {[_unit, _attachment] call EFUNC(common,hasItem)}) then {
+                    if (_attachmentNotOnGun && {[_unit, _attachment] call EFUNC(common,hasItem)}) then {
                         private _type = getNumber (_cfgWeapons >> _attachment >> "itemInfo" >> "type");
                         private _currentAttachment = _weaponItems select ([TYPE_MUZZLE, TYPE_FLASHLIGHT, TYPE_OPTICS, TYPE_BIPOD] find _type);
 
@@ -72,7 +72,7 @@ params ["_unit"];
                     };
 
                     // Don't show interaction with attachments that aren't on the current weapon
-                    if (_attachementNotOnGun) exitWith {_actions};
+                    if (_attachmentNotOnGun) exitWith {_actions};
 
                     // "detach" action
                     _actions pushBack [
