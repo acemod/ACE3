@@ -6,8 +6,8 @@ class CfgWeapons {
     class optic_Hamr: ItemCore {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
-                class Hamr2Collimator;
                 class Hamr2Scope;
+                class Hamr2Collimator;
             };
         };
     };
@@ -29,7 +29,6 @@ class CfgWeapons {
             bodyTextureSize = 1.95 * 0.9;
 
             hideMagnification = 1;
-            scriptedOpticsIndex = 1;
         };
         weaponInfoType = "CBA_ScriptedOptic";
 
@@ -37,10 +36,10 @@ class CfgWeapons {
             modelOptics = "\x\cba\addons\optics\cba_optic_big_90.p3d";
 
             class OpticsModes: OpticsModes {
-                class Hamr2Collimator: Hamr2Collimator {};
                 class Hamr2Scope: Hamr2Scope {
                     useModelOptics = 1;
                 };
+                class Hamr2Collimator: Hamr2Collimator {};
             };
         };
     };
@@ -73,7 +72,6 @@ class CfgWeapons {
             bodyTextureSize = 1.95 * 0.95;
 
             hideMagnification = 1;
-            scriptedOpticsIndex = 1;
         };
         weaponInfoType = "CBA_ScriptedOptic";
 
@@ -81,10 +79,10 @@ class CfgWeapons {
             modelOptics = "\x\cba\addons\optics\cba_optic_big_90.p3d";
 
             class OpticsModes: OpticsModes {
-                class ARCO2collimator: ARCO2collimator {};
                 class ARCO2scope: ARCO2scope {
                     useModelOptics = 1;
                 };
+                class ARCO2collimator: ARCO2collimator {};
             };
         };
     };
@@ -94,8 +92,8 @@ class CfgWeapons {
     class optic_MRCO: ItemCore {
         class ItemInfo: InventoryOpticsItem_Base_F {
             class OpticsModes {
-                class MRCOcq;
                 class MRCOscope;
+                class MRCOcq;
             };
         };
     };
@@ -117,7 +115,6 @@ class CfgWeapons {
             bodyTextureSize = 1.95 * 0.95;
 
             hideMagnification = 1;
-            scriptedOpticsIndex = 1;
         };
         weaponInfoType = "CBA_ScriptedOptic";
 
@@ -125,10 +122,10 @@ class CfgWeapons {
             modelOptics = "\x\cba\addons\optics\cba_optic_big_90.p3d";
 
             class OpticsModes: OpticsModes {
-                class MRCOcq: MRCOcq {};
                 class MRCOscope: MRCOscope {
                     useModelOptics = 1;
                 };
+                class MRCOcq: MRCOcq {};
             };
         };
     };
@@ -180,6 +177,7 @@ class CfgWeapons {
                 class Snip: Snip {
                     modelOptics[] = {"\x\cba\addons\optics\cba_optic_big_pip.p3d", "\x\cba\addons\optics\cba_optic_big_pip.p3d"};
                 };
+                class Iron: Iron {};
             };
         };
     };
