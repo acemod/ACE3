@@ -31,6 +31,7 @@
     TRACE_3("assemble_deployWeapon_carryWeaponClassname",_tripod,_player,_carryWeaponClassname);
 
     private _tripodClassname = typeOf _tripod;
+
     private _weaponConfig = configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON);
     private _assembledClassname = getText (_weaponConfig >> "assembleTo" >> _tripodClassname);
 
@@ -80,6 +81,7 @@
                 [_csw, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
             };
             _csw setDir _tripodDir;
+            _csw setCenterOfMass ((getCenterOfMass _csw) vectorAdd [0,0,-0.3]);
             _csw setPosATL _tripodPos;
             if ((_tripodPos select 2) < 0.5) then {
                 _csw setVectorUp (surfaceNormal _tripodPos);

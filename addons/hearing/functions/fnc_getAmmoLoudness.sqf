@@ -37,7 +37,7 @@ GVAR(cacheAmmoLoudness) getOrDefaultCall [_magazine, {
         default {[_caliber, 6.5] select (_caliber <= 0)};
     };
 
-    private _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;
+    private _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 7;
     TRACE_5("building cache",_ammo,_magazine,_initSpeed,_caliber,_loudness);
 
     _loudness
