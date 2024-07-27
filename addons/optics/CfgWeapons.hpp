@@ -233,10 +233,10 @@ class CfgWeapons {
     // Binocular
     class Default;
     class Binocular: Default {
-        forceOptics = 0;              // Allow using compass with Binocular
-        opticsZoomMin = 0.056889;     // 5.25x power
+        opticsZoomInit = 0.056889;    // 7x power IRL
+        opticsZoomMin = 0.056889;     // but in order to make the stadiametric rangefinder useful, ~4.4x magnification has been set
         opticsZoomMax = 0.056889;     // 9 px/mil
-        modelOptics = "\z\ace\addons\optics\models\NWD_M22_5x"; // 7 degrees horizontal field of view
+        modelOptics = "\z\ace\addons\optics\models\NWD_M22_5x"; // 7 degrees horizontal field of view (Steiner M22)
         // Fix AI using Binocs on short range - #18737
         // minRange = 300; // 300 = uses Rangefinder often (runs a few meters, stops, uses RF, repeats)
         minRange = 500; // 500 = seem almost never use it..?
