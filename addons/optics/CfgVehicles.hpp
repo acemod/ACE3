@@ -7,7 +7,6 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_optic_MRCO_2D,2);
             MACRO_ADDITEM(ACE_optic_SOS_2D,2);
             MACRO_ADDITEM(ACE_optic_LRPS_2D,2);
-            //MACRO_ADDITEM(ACE_optic_DMS,2);
         };
     };
 };

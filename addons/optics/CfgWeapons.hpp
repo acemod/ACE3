@@ -230,46 +230,10 @@ class CfgWeapons {
         };
     };
 
-    /* CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT CUT
-    // DMS
-    class optic_DMS: ItemCore {
-        class ItemInfo: InventoryOpticsItem_Base_F {
-            class OpticsModes {
-                class Snip;
-                class Iron;
-            };
-        };
-    };
-
-    class ACE_optic_DMS: optic_DMS {
-        author = ECSTRING(common,ACETeam);
-        _generalMacro = "ACE_optic_DMS";
-        scope = 1;
-        displayName = "LOCALIZE ACE DMS";
-        //descriptionShort = "$STR_A3_CFGWEAPONS_ACC_DMS1";
-        weaponInfoType = "ACE_RscWeaponZeroing";
-
-        class ItemInfo: ItemInfo {
-            modelOptics = QPATHTOF(models\ace_shortdot_optics.p3d);
-
-            class OpticsModes: OpticsModes {
-                class Snip: Snip {
-                    opticsZoomMin = 0.05;
-                    opticsZoomMax = 0.3;
-                    opticsZoomInit = 0.3;
-                    discretefov[] = {};
-                    modelOptics[] = {};
-                };
-
-                class Iron: Iron {};
-            };
-        };
-    };*/
-
     // Binocular
     class Default;
     class Binocular: Default {
-        forceOptics = 0;             // Allow using compass with Binocular
+        forceOptics = 0;              // Allow using compass with Binocular
         opticsZoomMin = 0.056889;     // 5.25x power
         opticsZoomMax = 0.056889;     // 9 px/mil
         modelOptics = "\z\ace\addons\optics\models\NWD_M22_5x"; // 7 degrees horizontal field of view
