@@ -22,7 +22,7 @@
 
 params [["_vehicle", objNull, [objNull]], ["_onlyLoaded", false, [false]], ["_skipVehicles", true, [true]], ["_includeCrew", true, [true]]];
 
-if (isNull _vehicle) exitWith {createHashMap};
+if (!alive _vehicle) exitWith {createHashMap};
 
 private _availableMagazines = createHashMap;
 
