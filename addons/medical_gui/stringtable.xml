@@ -221,6 +221,7 @@
             <German>Zeige Triage-Einstufung im Interaktionsmenü</German>
             <Chinesesimp>在交互式菜单中显示分诊级别</Chinesesimp>
             <Korean>상호작용 메뉴에서 부상자 카드 보기</Korean>
+            <Portuguese>Mostrar Nível de Triagem no Menu de Interação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_InteractionMenuShowTriage_Description">
             <English>Shows the patient's triage level by changing the color of the main and medical menu actions.</English>
@@ -232,6 +233,7 @@
             <German>Zeigt die Triage-Einstufung des Patienten durch Ändern der Farbe der Aktionen des Hauptmenüs und des medizinischen Menüs an.</German>
             <Chinesesimp>通过改变主菜单和医疗菜单动作的颜色来显示伤员的分诊级别。</Chinesesimp>
             <Korean>환자의 부상자 카드를 상호작용에서 볼 수 있게 합니다.</Korean>
+            <Portuguese>Mostra o nível de triagem do paciente alterando a cor das ações do menu principal e do menu médico.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Medical">
             <English>Medical</English>
@@ -289,6 +291,7 @@
             <French>Aperçu des informations médicales</French>
             <German>Medizinische Info anzeigen</German>
             <Japanese>医療情報一時表示</Japanese>
+            <Portuguese>Visualização rápida das informações médicas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_DisplayName">
             <English>Medical Peek Duration</English>
@@ -297,6 +300,7 @@
             <French>Durée de l'aperçu des informations médicales</French>
             <German>Dauer zum Anzeigen der medizinischen Info</German>
             <Japanese>医療情報一時表示の長さ</Japanese>
+            <Portuguese>Duração da visualização geral das informações médicas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_Description">
             <English>How long the medical info peek remains open after releasing the key.</English>
@@ -305,6 +309,7 @@
             <French>Durée d'affichage des informations médicales après avoir relâché la touche.</French>
             <German>Wie lange die medizinische Info-Anzeige nach dem Loslassen der Taste geöffnet bleibt.</German>
             <Japanese>医療情報一時表示キーを放してからどれだけ長く情報表示するか。</Japanese>
+            <Portuguese>Quanto tempo a visualização rápida das informações médicas permanece aberta após soltar a tecla.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_LoadPatient">
             <English>Load Patient</English>
@@ -556,6 +561,7 @@
             <French>Passer à soi-même</French>
             <German>Wechseln zu selbst</German>
             <Japanese>自分に切り替え</Japanese>
+            <Portuguese>Trocar para si mesmo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ToggleToOther">
             <English>Switch to target</English>
@@ -564,6 +570,7 @@
             <French>Passer à la cible</French>
             <German>Wechseln zu Ziel</German>
             <Japanese>相手に切り替え</Japanese>
+            <Portuguese>Trocar para paciente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Head">
             <English>Head</English>
@@ -988,6 +995,7 @@
             <French>Pas de saignement</French>
             <German>Keine Blutung</German>
             <Japanese>出血はしていない</Japanese>
+            <Portuguese>Sem sangramento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate1">
             <English>Slow bleeding</English>
@@ -996,6 +1004,7 @@
             <French>Saignement lent</French>
             <German>Langsame Blutung</German>
             <Japanese>出血は穏やか</Japanese>
+            <Portuguese>Sangramento lento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate2">
             <English>Moderate bleeding</English>
@@ -1004,6 +1013,7 @@
             <French>Saignement modéré</French>
             <German>Mäßige Blutung</German>
             <Japanese>出血はそこそこ速い</Japanese>
+            <Portuguese>Sangramento moderado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate3">
             <English>Severe bleeding</English>
@@ -1012,6 +1022,7 @@
             <French>Saignement grave</French>
             <German>Schwere Blutung</German>
             <Japanese>出血は激しい</Japanese>
+            <Portuguese>Sangramento grave</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate4">
             <English>Massive bleeding</English>
@@ -1020,6 +1031,7 @@
             <French>Saignement massif</French>
             <German>Massive Blutung</German>
             <Japanese>出血は酷く多い</Japanese>
+            <Portuguese>Sangramento massivo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_PAIN">
             <English>in Pain</English>
@@ -1092,6 +1104,7 @@
             <French>Pas de perte de sang</French>
             <German>Kein Blutverlust</German>
             <Japanese>失血なし</Japanese>
+            <Portuguese>Sem perda de sangue</Portuguese>
         </Key>
         <!--Strings above match Blood2 but seem to differ in some languages, determine which is best to use-->
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
@@ -1235,6 +1248,7 @@
             <Spanish>Información de paciente</Spanish>
             <German>Patienteninformation</German>
             <Korean>환자 정보</Korean>
+            <Portuguese>Informações do paciente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColors">
             <English>Blood Loss Colors</English>
@@ -1246,6 +1260,7 @@
             <Chinesesimp>失血颜色</Chinesesimp>
             <Korean>출혈 색상</Korean>
             <Spanish>Colores de pérdida de sangre</Spanish>
+            <Portuguese>Cores de perda de sangue</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColor_Description">
             <English>Defines the 10 color gradient used to indicate blood loss in Medical GUIs.</English>
@@ -1257,6 +1272,7 @@
             <Chinesesimp>失血颜色，用于医学图形用户界面。10种渐变颜色。</Chinesesimp>
             <Korean>출혈로 인한 의료 GUI의 색상을 변경합니다. 총 10가지 색상이 있습니다.</Korean>
             <Spanish>Define los 10 gradientes de color utilizados para indicar la pérdida de sangre en la interfaz gráfica del sistema Médico.</Spanish>
+            <Portuguese>Define os 10 gradientes de cores utilizados para indicar perda de sangue nas interfaces médicas.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColorX_DisplayName">
             <English>Blood Loss Color %1</English>
@@ -1268,6 +1284,7 @@
             <Chinesesimp>失血颜色 %1</Chinesesimp>
             <Korean>출혈 색상 %1</Korean>
             <Spanish>Color de pérdida de sangre %1</Spanish>
+            <Portuguese>Cor de perda de sangue %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColors">
             <English>Damage Colors</English>
@@ -1279,6 +1296,7 @@
             <Chinesesimp>负伤颜色</Chinesesimp>
             <Korean>피해 색상</Korean>
             <Spanish>Colores de daño</Spanish>
+            <Portuguese>Cores de dano</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColor_Description">
             <English>Defines the 10 color gradient used to indicate damage in Medical GUIs.</English>
@@ -1290,6 +1308,7 @@
             <Chinesesimp>负伤颜色，用于医学图形用户界面。10种渐变颜色。</Chinesesimp>
             <Korean>의료 GUI에 쓰이는 피해 색상입니다. 총 10가지 색상이 있습니다.</Korean>
             <Spanish>Define los 10 gradientes de color utilizados para indicar el daño en la interfaz gráfiica del sistema Médico.</Spanish>
+            <Portuguese>Define os 10 gradientes de cor utilizados para indicar dano nas interfaces médicas.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_DamageColorX_DisplayName">
             <English>Damage Color %1</English>
@@ -1301,6 +1320,7 @@
             <Chinesesimp>负伤颜色 %1</Chinesesimp>
             <Korean>피해 색상 %1</Korean>
             <Spanish>Color de daño %1</Spanish>
+            <Portuguese>Cor de dano %1</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_DisplayName">
             <English>Show Blood Loss</English>
@@ -1312,6 +1332,7 @@
             <Russian>Показывать кровопотерю</Russian>
             <Spanish>Mostrar pérdida de sangre</Spanish>
             <French>Afficher les pertes de sang</French>
+            <Portuguese>Mostrar perda de sangue</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_Description">
             <English>Show qualitative blood loss in the injury list.</English>
@@ -1323,6 +1344,7 @@
             <Russian>Показывать тяжесть кровопотери в списке ранений.</Russian>
             <Spanish>Mostrar la pérdida de sangre cualitativa en la lista de heridas.</Spanish>
             <French>Afficher la quantité de sang perdue</French>
+            <Portuguese>Mostrar perda de sangue qualitativa na lista de feridas.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_DisplayName">
             <English>Peek Medical Info on Hit</English>
@@ -1332,6 +1354,7 @@
             <French>Aperçu des informations médicales lors d'une blessure</French>
             <German>Zeige medizinische Info beim Treffer an</German>
             <Japanese>受傷時の医療情報一時表示</Japanese>
+            <Portuguese>Visualização rápida das informações médicas durante uma lesão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_Description">
             <English>Temporarily show medical info when injured.</English>
@@ -1341,6 +1364,7 @@
             <French>Afficher temporairement les informations médicales lors d'une blessure.</French>
             <German>Bei Verletzungen vorübergehend medizinische Info anzeigen.</German>
             <Japanese>受傷時に医療情報を一時的に表示します。</Japanese>
+            <Portuguese>Mostrar informações médicas temporariamente durante uma lesão.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_DisplayName">
             <English>Medical Peek Duration on Hit</English>
@@ -1350,6 +1374,7 @@
             <French>Durée de l'aperçu des informations médicales lors d'une blessure</French>
             <German>Dauer der Anzeige bei einem Treffer.</German>
             <Japanese>受傷時の医療情報一時表示の長さ</Japanese>
+            <Portuguese>Duração da visualização rápida de informações médicas durante uma lesão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_Description">
             <English>How long the medical info peek remains open after being injured.</English>
@@ -1359,6 +1384,7 @@
             <French>Durée de l'affichage des informations médicales lors d'une blessure.</French>
             <German>Wie lange die medizinische Info nach einer Verletzung angezeigt wird.</German>
             <Japanese>受傷した後に医療情報の一時表示をどれだけ長く表示するか。</Japanese>
+            <Portuguese>Quanto tempo a visualização rápida de informações médicas permanece aberta após ser ferido.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_DisplayName">
             <English>Show Trauma Sustained</English>
@@ -1388,6 +1414,7 @@
             <French>Couleur des contours des parties du corps</French>
             <German>Umrissfarbe des Körperteils</German>
             <Japanese>身体部位の輪郭表示カラー</Japanese>
+            <Portuguese>Cor do contorno da parte do corpo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_bodyPartOutlineColor_Description">
             <English>Color of outline around selected body part.</English>
@@ -1397,6 +1424,7 @@
             <French>Couleur des contours autour des parties du corps sélectionnées.</French>
             <German>Farbe des Umrisses um das ausgewählten Körperteil.</German>
             <Japanese>選択した身体部位の輪郭表示の色。</Japanese>
+            <Portuguese>Cor do contorno em volta da parte do corpo selecionada.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_traumaSustained1">
             <English>Minor Trauma</English>
@@ -1446,6 +1474,7 @@
             <French>G</French>
             <German>L</German>
             <Japanese>左</Japanese>
+            <Portuguese>E</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BodyLabelRight">
             <English>R</English>
@@ -1455,6 +1484,7 @@
             <French>D</French>
             <German>R</German>
             <Japanese>右</Japanese>
+            <Portuguese>D</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Medic">
             <English>in your inventory</English>
@@ -1464,6 +1494,7 @@
             <French>dans votre inventaire</French>
             <German>im Inventar</German>
             <Japanese>あなたのインベントリ内</Japanese>
+            <Portuguese>em seu inventário</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Patient">
             <English>in patient's inventory</English>
@@ -1473,6 +1504,7 @@
             <French>dans l'inventaire du patient</French>
             <German>im Inventar des Patienten</German>
             <Japanese>患者のインベントリ内</Japanese>
+            <Portuguese>no inventário do paciente</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TreatmentItemCount_Vehicle">
             <English>in vehicle's inventory</English>
@@ -1482,6 +1514,7 @@
             <Korean>개: 차량의 소지품</Korean>
             <German>im Inventar des Fahrzeuges</German>
             <Japanese>車両のインベントリ内</Japanese>
+            <Portuguese>no inventário do veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning">
             <English>No effect until tourniquet removed</English>
@@ -1490,6 +1523,7 @@
             <Korean>지혈대를 제거할 때까지 효과 없음</Korean>
             <German>Keine Wirkung, bis das Tourniquet entfernt wurde</German>
             <Japanese>止血帯を外すまで効果を発揮しません</Japanese>
+            <Portuguese>Sem efeito até o torniquete ser removido</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_DisplayName">
             <English>Show Tourniquet Warning</English>
@@ -1498,6 +1532,7 @@
             <Korean>지혈 경고 표시</Korean>
             <German>Tourniquet-Warnung anzeigen</German>
             <Japanese>止血帯の警告を表示</Japanese>
+            <Portuguese>Mostrar aviso de torniquete</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_TourniquetWarning_Description">
             <English>Show a warning tooltip when a tourniquet will interfere with a medical action.</English>
@@ -1506,6 +1541,7 @@
             <Korean>지혈대가 의료 조치를 방해할 경우 경고 툴팁을 표시합니다.</Korean>
             <German>Zeigt einen Hinweis an, wenn ein Tourniquet eine medizinische Maßnahme beeinträchtigt.</German>
             <Japanese>止血帯が医療行為を妨げる場合には、警告ツールチップを表示します。</Japanese>
+            <Portuguese>Mostra uma dica de aviso quando um torniquete interfere com uma ação médica.</Portuguese>
         </Key>
     </Package>
 </Project>

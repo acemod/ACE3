@@ -75,6 +75,7 @@
             <Chinesesimp>已启用 &amp; 可以诊断死亡/心搏骤停</Chinesesimp>
             <Korean>활성화 및 사망/심정지 진찰가능</Korean>
             <Spanish>Habilitado y poder diagnosticar Muerte/Parada cardíaca</Spanish>
+            <Portuguese>Habilitado e permite diagnosticar morte/parada cardíaca</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -151,6 +152,7 @@
             <German>Aktiviert und können sich wieder öffnen</German>
             <Chinesesimp>已启用 &amp; 可以伤口开裂</Chinesesimp>
             <Korean>활성화 및 붕대 풀림 구현</Korean>
+            <Portuguese>Habilitado e pode reabrir</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopenChance_DisplayName">
             <English>Wound Reopening Coefficient</English>
@@ -164,6 +166,7 @@
             <Spanish>Coeficiente de reapertura de heridas</Spanish>
             <Chinesesimp>伤口开裂系数</Chinesesimp>
             <Korean>붕대 풀림 계수</Korean>
+            <Portuguese>Coeficiente de reabertura de feridas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundReopenChance_Description">
             <English>Coefficient for controlling the wound reopening chance. The final reopening chance is determined by multiplying this value with the specific reopening chance for the wound type and bandage used.</English>
@@ -177,6 +180,7 @@
             <Spanish>Coeficiente que controla la probabilidad de reapertura de heridas. La probabilidad final de reapertura de heridas queda determinada multiplicando este valor por la probabilidad específica del tipo de herida y venda usada.</Spanish>
             <Chinesesimp>用于控制伤口开裂概率的系数。最终的重开放概率=该值x伤口类型x所使用的绷带的具体开裂概率。</Chinesesimp>
             <Korean>붕대가 풀리는 확률 계수를 정합니다. 최종 붕대 풀림 계수는 상처의 종류와 쓰인 붕대의 합의 결과에 계수를 곱한 결과입니다.</Korean>
+            <Portuguese>Coeficiente para controlar a chance de reabertura da ferida. A chance final de reabertura é determinada multiplicando este valor com a chance específica de reabertura para o tipo de ferida e bandagem usada.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_DisplayName">
             <English>Clear Trauma</English>
@@ -188,6 +192,7 @@
             <Chinesesimp>清理创伤</Chinesesimp>
             <Korean>상처 제거</Korean>
             <Spanish>Despejar trauma</Spanish>
+            <Portuguese>Remover trauma</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_Description">
             <English>Controls when hitpoint damage from wounds is healed.</English>
@@ -199,6 +204,7 @@
             <Chinesesimp>控制伤口治疗后确定受伤部位的受伤情况。</Chinesesimp>
             <Korean>상처가 언제 제거되는 지를 결정합니다.</Korean>
             <Spanish>Controla cuando los puntos de daño de las heridas son curados.</Spanish>
+            <Portuguese>Controla quando o dano de pontos de vida de feridas é curado.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterBandage">
             <English>After Bandage</English>
@@ -210,6 +216,7 @@
             <Chinesesimp>包扎后</Chinesesimp>
             <Korean>붕대 묶은 후</Korean>
             <Spanish>Después de vendado</Spanish>
+            <Portuguese>Após fechamento com bandagens</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ClearTrauma_AfterStitch">
             <English>After Stitch</English>
@@ -221,6 +228,7 @@
             <Chinesesimp>缝合后</Chinesesimp>
             <Korean>상처 봉합 후</Korean>
             <Spanish>Después de sutura</Spanish>
+            <Portuguese>Após sutura</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationsBoostTraining_Description">
             <English>Boost medical training when in medical vehicles or facilities. Untrained becomes medic, medic becomes doctor.</English>
@@ -312,6 +320,7 @@
             <German>Behandlungszeit des Autoinjektors</German>
             <Chinesesimp>自动注射器治疗时间</Chinesesimp>
             <Korean>주사기 사용 시간</Korean>
+            <Portuguese>Tempo de tratamento de auto-injetores</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeAutoinjector_Description">
             <English>Time, in seconds, required to administer medication using an autoinjector.</English>
@@ -323,6 +332,7 @@
             <German>Zeit in Sekunden, die benötigt wird, um Medikamente mittels Autoinjektor zu verabreichen.</German>
             <Chinesesimp>使用自动注射器给药所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로 주사기를 사용하는데 걸리는 시간을 정합니다.</Korean>
+            <Portuguese>Tempo, em segundos, necessário para administrar medicações usando o auto-injetor.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_DisplayName">
             <English>Tourniquet Treatment Time</English>
@@ -334,6 +344,7 @@
             <Polish>Czas aplikacji stazy</Polish>
             <Chinesesimp>止血带治疗时间</Chinesesimp>
             <Korean>지혈대 사용 시간</Korean>
+            <Portuguese>Tempo de tratamento de torniquetes</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
             <English>Time, in seconds, required to apply/remove a tourniquet.</English>
@@ -345,6 +356,7 @@
             <Polish>Czas w sekundach potrzebny do założenia/zdjęcia stazy.</Polish>
             <Chinesesimp>使用/移除止血带所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로 지혈대를 사용/제거하는 데 걸리는 시간을 정합니다.</Korean>
+            <Portuguese>Tempo, em segundos, necessário para aplicar/remover um torniquete.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_DisplayName">
             <English>IV Bag Treatment Time</English>
@@ -356,6 +368,7 @@
             <Polish>Czas aplikacji IV</Polish>
             <Chinesesimp>静脉输液袋治疗时间</Chinesesimp>
             <Korean>수액용기 사용 시간</Korean>
+            <Portuguese>Tempo de tratamento de bolsas de IV</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_Description">
             <English>Time, in seconds, required to administer an IV bag.</English>
@@ -367,6 +380,7 @@
             <Polish>Czas w sekundach potrzebny na aplikację transfuzji IV.</Polish>
             <Chinesesimp>使用静脉输液所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로 수액용기를 사용하는 데 걸리는 시간을 정합니다.</Korean>
+            <Portuguese>Tempo, em segundos, necessário para administrar uma bolsa de IV.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_DisplayName">
             <English>Splint Treatment Time</English>
@@ -378,6 +392,7 @@
             <Polish>Czas aplikacji szyny</Polish>
             <Chinesesimp>夹板治疗时间</Chinesesimp>
             <Korean>부목 사용 시간</Korean>
+            <Portuguese>Tempo de tratamento de talas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
             <English>Time, in seconds, required to apply a splint.</English>
@@ -389,6 +404,7 @@
             <Polish>Czas w sekundach potrzebny na aplikację szyny.</Polish>
             <Chinesesimp>使用夹板所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로 부목을 사용하는데 걸리는 시간을 정합니다.</Korean>
+            <Portuguese>Tempo, em segundos, necessário para aplicar uma talas.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_DisplayName">
             <English>Body Bag Use Time</English>
@@ -400,6 +416,7 @@
             <Polish>Czas użycia worka na ciało</Polish>
             <Chinesesimp>尸袋使用时间</Chinesesimp>
             <Korean>시체 운반용 부대 사용 시간</Korean>
+            <Portuguese>Tempo de uso de sacos de cadáver</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_Description">
             <English>Time, in seconds, required to put a patient in a body bag.</English>
@@ -411,6 +428,7 @@
             <Polish>Czas w sekundach potrzebny na spakowanie ciała do worka na ciało.</Polish>
             <Chinesesimp>装入裹尸袋时间</Chinesesimp>
             <Korean>초 단위로 시체 운반용 부대를 사용하는데 걸리는 시간을 정합니다.</Korean>
+            <Portuguese>Tempo, em segundos, necessário para colocar um paciente em um saco de cadáver.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_DisplayName">
             <English>Grave Digging Time</English>
@@ -419,6 +437,7 @@
             <French>Durée pour creuser une tombe</French>
             <German>Zeit zum Graben von Gräbern</German>
             <Japanese>墓掘りの所要時間</Japanese>
+            <Portuguese>Tempo de escavação de cova</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_Description">
             <English>Time, in seconds, required to dig a grave for a body.</English>
@@ -427,6 +446,7 @@
             <French>Durée, en secondes, requise pour creuser une tombe pour un corps.</French>
             <German>Zeit (in Sekunden), die benötigt wird, um ein Grab für einen Leichnam auszuheben.</German>
             <Japanese>遺体の墓を掘るのに掛かる時間 (秒) を決定します。</Japanese>
+            <Portuguese>Tempo, em segundos, necessário para cavar uma cova para um corpo.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_DisplayName">
             <English>Allow Epinephrine</English>
@@ -604,6 +624,7 @@
             <Turkish>Kendi PAK Kullanımı</Turkish>
             <Spanish>Usar EPA sobre uno mismo</Spanish>
             <Korean>개인응급키트 자가 사용</Korean>
+            <Portuguese>Auto-tratamento com KPS</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfPAK_Description">
             <English>Enables the use of PAKs to heal oneself.</English>
@@ -619,6 +640,7 @@
             <Turkish>Kendini iyileştirmek için PAK'ların kullanılmasını sağlar.</Turkish>
             <Spanish>Habilita el uso de EPA para curarse a uno mismo.</Spanish>
             <Korean>개인응급키트를 사용자 본인에게 쓸 수 있는 지를 정합니다.</Korean>
+            <Portuguese>Permite o uso de KPS para se tratar.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_DisplayName">
             <English>Time Coefficient PAK</English>
@@ -780,6 +802,7 @@
             <German>Benötigte Zeit, um Wunden zu nähen</German>
             <Chinesesimp>伤口缝合时间</Chinesesimp>
             <Korean>상처 봉합 시간</Korean>
+            <Portuguese>Tempo de sutura de feridas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_WoundStitchTime_Description">
             <English>Time, in seconds, required to stitch a single wound.</English>
@@ -791,6 +814,7 @@
             <German>Zeit in Sekunden, um eine einzelne Wunde zu nähen.</German>
             <Chinesesimp>缝合一个伤口所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로, 한 상처를 봉합하는데 걸리는 시간을 설정합니다.</Korean>
+            <Portuguese>Tempo, em segundos, necessário para suturar uma única ferida.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSelfIV_DisplayName">
             <English>Self IV Transfusion</English>
@@ -832,6 +856,7 @@
             <German>Erlaube Benutzung des Leichensackes mit bewusstlosen Personen</German>
             <Chinesesimp>允许昏迷者装入尸袋</Chinesesimp>
             <Korean>기절 인원 시체 운반용 부대에 옮기기</Korean>
+            <Portuguese>Permitir inconscientes em sacos de cadáver</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBagUnconscious_Description">
             <English>Enables placing an unconscious patient in a body bag.</English>
@@ -843,6 +868,7 @@
             <German>Aktiviert, Bewusstlose in Leichensack zu legen.</German>
             <Chinesesimp>能够将昏迷的伤员装入尸袋中。</Chinesesimp>
             <Korean>기절 상태의 인원을 시체 운반용 부대에 옮겨 담을 수 있는 지를 정합니다.</Korean>
+            <Portuguese>Permite colocar um paciente inconsciente em um saco de cadáver.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_DisplayName">
             <English>Allow Grave Digging</English>
@@ -852,6 +878,7 @@
             <Spanish>Permitir cavar tumbas</Spanish>
             <French>Autoriser le creusement de tombes</French>
             <Japanese>墓掘りを許可</Japanese>
+            <Portuguese>Permitir escavamento de cova</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_Description">
             <English>Enables digging graves to dispose of corpses.</English>
@@ -861,6 +888,7 @@
             <Spanish>Habilita cavar tumbas para deshacerse de los cadáveres.</Spanish>
             <French>Active la possibilité de creuser des tombes pour enterrer les cadavres.</French>
             <Japanese>墓を掘って死体を処理できるようになります。</Japanese>
+            <Portuguese>Permite escavar covas para se livrar de cadáveres.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_graveOnlyDead">
             <English>Only if dead</English>
@@ -870,6 +898,7 @@
             <Spanish>Solo si está muerto</Spanish>
             <French>Uniquement s'il est mort</French>
             <Japanese>死体のみ</Japanese>
+            <Portuguese>Apenas se estiver morto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_GraveDiggingMarker_DisplayName">
             <English>Create Grave Markers</English>
@@ -879,6 +908,7 @@
             <Korean>무덤 마커 생성</Korean>
             <French>Créer des pierres tombales</French>
             <Japanese>墓標を作成</Japanese>
+            <Portuguese>Criar marcadores de covas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_GraveDiggingMarker_Description">
             <English>Enables the creation of grave markers when digging graves.</English>
@@ -888,6 +918,7 @@
             <Korean>무덤을 파낼 때 무덤 마커를 표시할 수 있습니다.</Korean>
             <French>Active la création de pierres tombales lors de l'enterrement de cadavres.</French>
             <Japanese>墓を掘った際、墓標を作成できるようにします。</Japanese>
+            <Portuguese>Permite a criação de marcadores de covas ao escavá-las.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_DisplayName">
             <English>Allow IV Transfusion</English>
@@ -901,6 +932,7 @@
             <Russian>Разрешить внутривенное переливание</Russian>
             <Spanish>Permitir transfusión de IV</Spanish>
             <Korean>수액용기 사용 허가</Korean>
+            <Portuguese>Permitir transfusão IV</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicIV_Description">
             <English>Training level required to transfuse IVs.</English>
@@ -914,6 +946,7 @@
             <Russian>Уровень навыка, требуемый для осуществления внутривенного переливания.</Russian>
             <Spanish>Nivel de capacitación requerido para transfusiones de IV.</Spanish>
             <Korean>수액용기를 사용하는데 필요한 등급을 정합니다.</Korean>
+            <Portuguese>Nível de treinamento necessário para transfusões IV.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_DisplayName">
             <English>Locations IV Transfusion</English>
@@ -925,6 +958,7 @@
             <German>Orte an denen IV-Transfusionen angelegt werden können</German>
             <Chinesesimp>静脉输液地点</Chinesesimp>
             <Korean>수액용기 사용 장소</Korean>
+            <Portuguese>Locais para transfusão IV</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_Description">
             <English>Controls where IV transfusions can be performed.</English>
@@ -936,6 +970,7 @@
             <German>Kontrolliert, wo IV-Transfusionen durchgeführt werden können.</German>
             <Chinesesimp>控制何地可以静脉输液</Chinesesimp>
             <Korean>수액용기를 사용할 수 있는 장소를 정합니다.</Korean>
+            <Portuguese>Controla onde as transfusões IV podem ser realizadas.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConvertItems_DisplayName">
             <English>Convert Vanilla Items</English>
@@ -1167,6 +1202,7 @@
             <Chinesesimp>心肺复苏的最低成功率</Chinesesimp>
             <Korean>최소 심폐소생술 성공 가능성</Korean>
             <Spanish>RCP posibilidad mínima de resultado satisfactorio</Spanish>
+            <Portuguese>Probabilidade mínima de sucesso de RCP</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_DisplayName">
             <English>CPR Success Chance Maximum</English>
@@ -1178,6 +1214,7 @@
             <Chinesesimp>心肺复苏的最高成功率</Chinesesimp>
             <Korean>최대 심폐소생술 성공 가능성</Korean>
             <Spanish>RCP posibilidad máxima de resultado satisfactorio</Spanish>
+            <Portuguese>Probabilidade máxima de sucesso de RCP</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMin_Description">
             <English>Minimum probability that performing CPR will restore heart rhythm.\nThis minimum value is used when the patient has at least "Lost a fatal amount of blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
@@ -1189,6 +1226,7 @@
             <Chinesesimp>实施心肺复苏恢复心律的最小可能性。\n当伤员至少有"致命失血量"时，就取该最小值。\n当伤员的血量介于最小和最大阈值之间时，将使用插值概率。</Chinesesimp>
             <Korean>심폐소생술 시 제일 낮은 성공 가능성을 결정합니다.\n이 가능성은 환자가 최소 "심각한 양의 혈액을 잃음"일 때 사용됩니다.</Korean>
             <Spanish>Probabilidad mínima de que realizar RCP restaure el ritmo cardíaco.\n Este valor mínimo es utilizado cuando el paciente tiene al menos "Pérdida fatal de sangre".\n Una probabilidad interpolada es usada cuando el volumen de sangre del paciente está entre el umbral mínimo y máximo.</Spanish>
+            <Portuguese>Probabilidade mínima do RCP restaurar a frequência cardíaca.\nEste valor é usado em pacientes que "perderam uma quantidade fatal de sangue".\nValores entre quantidades extremas de sangue resultam em uma probabilidade interpolada entre a mínima e a máxima.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_CPRSuccessChanceMax_Description">
             <English>Maximum probability that performing CPR will restore heart rhythm.\nThis maximum value is used when the patient has at most "Lost some blood".\nAn interpolated probability is used when the patient's blood volume is between the minimum and maximum thresholds.</English>
@@ -1200,6 +1238,7 @@
             <Chinesesimp>实施心肺复苏恢复心律的最大可能性。\n当伤员最多“失血一些”时，就取该最大值。\n当伤员的血量介于最小和最大阈值之间时，将使用插值概率。</Chinesesimp>
             <Korean>심폐소생술 시 제일 높은 성공 가능성을 결정합니다.\n이 가능성은 환자가 최소 "혈액을 조금 잃음"일 때 사용됩니다.</Korean>
             <Spanish>Probabilidad máxima de que realizar RCP restaure el ritmo cardíaco.\n Este valor máximo es utilizado cuando el paciente tiene como mucho "Pérdida de un poco de sangre".\n Una probabilidad interpolada es usada cuando el volumen de sangre del paciente está entre el umbral mínimo y máximo.</Spanish>
+            <Portuguese>Probabilidade máxima do RCP restaurar a frequência cardíaca.\nEste valor é usado em pacientes que "perderam pouco sangue".\nValores entre quantidades extremas de sangue resultam em uma probabilidade interpolada entre a mínima e a máxima.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_DisplayName">
             <English>CPR Treatment Time</English>
@@ -1211,6 +1250,7 @@
             <German>HLW Behandlungsdauer</German>
             <Chinesesimp>心肺复苏时间</Chinesesimp>
             <Korean>심폐소생술 시행 시간</Korean>
+            <Portuguese>Duração do RCP</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCPR_Description">
             <English>Time, in seconds, required to perform CPR on a patient.</English>
@@ -1222,6 +1262,7 @@
             <German>Zeit in Sekunden, die benötigt wird, um eine HLW durzuführen.</German>
             <Chinesesimp>对伤员实施心肺复苏所需的时间（秒）</Chinesesimp>
             <Korean>초 단위로, 심폐소생술을 진행하는 시간을 결정합니다.</Korean>
+            <Portuguese>Tempo, em segundos, necessário para realizar RCP em um paciente.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_DisplayName">
             <English>Holster Required</English>
@@ -1236,6 +1277,7 @@
             <Russian>Необходимость убирать оружие</Russian>
             <Spanish>Requiere enfundar</Spanish>
             <Korean>무장여부</Korean>
+            <Portuguese>Necessário guardar armas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Description">
             <English>Controls whether weapons must be holstered / lowered in order to perform medical actions.\nExcept Exam options allow examination actions (checking pulse, blood pressure, response) at all times regardless of this setting.</English>
@@ -1250,6 +1292,7 @@
             <Russian>Нужно ли убирать оружие для проведения медицинских действий.\nОпция «Проверка разрешена» разрешает проверять пульс, кровяное давление или реакцию независимо от этого параметра.</Russian>
             <Spanish>Controla si las armas deben estar enfundadas / bajadas para realizar acciones médicas. \n Excepto Las opciones de examen permiten acciones de examen (control del pulso, presión arterial, respuesta) en todo momento, independientemente de esta configuración.</Spanish>
             <Korean>치료하기에 앞서 손에서 무기를 집어넣을 지/내릴지를 결정합니다.\n검사제외 옵션의 경우 맥박 확인, 혈압 확인, 반응 확인은 앞선 옵션에 구애받지 않고 사용할 수 있습니다.</Korean>
+            <Portuguese>Controla se as armas devem ser guardadas/abaixadas para realizar ações médicas.\n"Exceto exame" faz com que ações de verificação de pulso, pressão arterial e resposta sejam permitidas a qualquer momento.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Lowered">
             <English>Lowered or Holstered</English>
@@ -1264,6 +1307,7 @@
             <Russian>Опущено или убрано</Russian>
             <Spanish>Bajada o enfundada</Spanish>
             <Korean>내리거나 집어넣기</Korean>
+            <Portuguese>Abaixada ou guardada</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_LoweredExam">
             <English>Lowered or Holstered (Except Exam)</English>
@@ -1278,6 +1322,7 @@
             <Russian>Опущено или убрано (Проверка разрешена)</Russian>
             <Spanish>Bajada o enfundada (excepto examen)</Spanish>
             <Korean>내리거나 집어넣기(검사 제외)</Korean>
+            <Portuguese>Abaixada ou guardada (exceto exame)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_Holstered">
             <English>Holstered Only</English>
@@ -1292,6 +1337,7 @@
             <Russian>Только убрано</Russian>
             <Spanish>Solo enfundada</Spanish>
             <Korean>집어넣기</Korean>
+            <Portuguese>Guardada apenas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HolsterRequired_HolsteredExam">
             <English>Holstered Only (Except Exam)</English>
@@ -1306,6 +1352,7 @@
             <Russian>Только убрано (Проверка разрешена)</Russian>
             <Spanish>Solo enfundada (excepto examen)</Spanish>
             <Korean>집어넣기(검사 제외)</Korean>
+            <Portuguese>Guardada apenas (exceto exame)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalSupplyCrate">
             <English>[ACE] Medical Supply Crate (Basic)</English>
@@ -2394,6 +2441,7 @@
             <Polish>Szew</Polish>
             <Korean>봉합술</Korean>
             <French>Suture</French>
+            <Portuguese>Sutura</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Short">
             <English>Surgical Suture for stitching injuries.</English>
@@ -2403,6 +2451,7 @@
             <Polish>Szew chirurgiczny do zszywania ran.</Polish>
             <Korean>상처를 꿰메는 수술용 봉합술.</Korean>
             <French>Suture chirurgicale pour suturer les blessures.</French>
+            <Portuguese>Sutura cirúrgica para fechar feridas.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Use">
             <English>Surgical Suture for stitching injuries.</English>
@@ -2412,6 +2461,7 @@
             <Polish>Szew chirurgiczny do zszywania ran.</Polish>
             <Korean>상처를 꿰메는 수술용 봉합술.</Korean>
             <French>Suture chirurgicale pour suturer les blessures.</French>
+            <Portuguese>Sutura cirúrgica para fechar feridas.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Bodybag_Display">
             <English>Bodybag</English>
@@ -4069,6 +4119,7 @@
             <Korean>%1 은 반응이 없고, 얕은 헐떡임과 경련증세를 보입니다</Korean>
             <Russian>%1 не реагирует на раздражители, поверхностно дышит, в конвульсиях</Russian>
             <Spanish>%1 no responde, dando pequeñas bocanadas y convulsionando</Spanish>
+            <Portuguese>%1 está inconsciente, com respiração curta e convulsionando</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
@@ -4080,6 +4131,7 @@
             <Korean>%1 은 반응이 없고, 움직임이 없으며 차갑습니다</Korean>
             <Russian>%1 не реагирует на раздражители, не шевелится и холодный</Russian>
             <Spanish>%1 no responde, sin movimiento y frío</Spanish>
+            <Portuguese>%1 está inconsciente, sem movimento e frio</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
@@ -4557,6 +4609,7 @@
             <French>Enterrer le corps</French>
             <German>Grabe ein Grab für den Leichnam</German>
             <Japanese>墓を掘る</Japanese>
+            <Portuguese>Escavar cova para cadáver</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_DiggingGrave">
             <English>Digging grave for body...</English>
@@ -4565,6 +4618,7 @@
             <French>Enterrement du corps...</French>
             <German>Grab für Leichnam ausheben ...</German>
             <Japanese>墓を掘っています</Japanese>
+            <Portuguese>Escavando cova para cadáver...</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Activity_bandagedPatient">
             <English>%1 has bandaged patient</English>
@@ -4806,6 +4860,7 @@
             <German>Der Körper zuckte und kann nicht tot sein!</German>
             <Chinesesimp>身体抽搐了一下，可能还没死！</Chinesesimp>
             <Korean>꿈틀대는걸 보니 죽은 것 같지는 않습니다!</Korean>
+            <Portuguese>O corpo se retorceu e pode não estar morto!</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_checkHeadstoneName">
             <English>Check name on headstone</English>
@@ -4814,6 +4869,7 @@
             <French>Vérifier le nom sur la pierre tombale</French>
             <German>Überprüfe Name auf dem Grabstein</German>
             <Japanese>墓石の名前を確認</Japanese>
+            <Portuguese>Checar nome na lápide</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_DisplayName">
             <English>Bandage Rollover</English>
@@ -4822,6 +4878,7 @@
             <Korean>붕대 모두 감기</Korean>
             <French>Pansement de plaies multiples</French>
             <Japanese>包帯の繰り越し</Japanese>
+            <Portuguese>Bandagem de Múltiplas Feridas</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_Description">
             <English>If enabled, bandages can close different types of wounds on the same body part.\nBandaging multiple injuries will scale bandaging time accordingly.</English>
@@ -4830,6 +4887,7 @@
             <Korean>활성화된 경우 붕대로 동일한 신체 부위에 있는 다른 유형의 상처를 막을 수 있습니다.\n여러 부상을 붕대로 감으면 붕대 감는 시간이 그만큼 늘어납니다.</Korean>
             <French>Si activé, les bandages peuvent fermer plusieurs types de blessures sur la même partie du corps.\nPanser de multiples blessures modifiera la durée d'application en conséquence.</French>
             <Japanese>有効にすると、体の同じ部分にある別の種類の傷を一つの包帯で閉じることができます。\n複数の傷に包帯を巻くと、それに応じて包帯時間が変動します。</Japanese>
+            <Portuguese>Se habilitado, bandagens podem fechar diferentes tipos de ferimento na mesma parte do corpo.\nO fechamento de múltiplas feridas modificará o tempo de aplicação proporcionalmente.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_DisplayName">
             <English>Bandage Effectiveness Coefficient</English>
@@ -4838,6 +4896,7 @@
             <Korean>붕대 효과 계수</Korean>
             <French>Coefficient d'efficacité des bandages</French>
             <Japanese>包帯有効性係数</Japanese>
+            <Portuguese>Coeficiente de Eficácia da Bandagem</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_Description">
             <English>Determines how effective bandages are at closing wounds.</English>
@@ -4846,6 +4905,7 @@
             <Korean>붕대가 상처를 치료하는 데 얼마나 효과적으로 지속되는지 결정합니다.</Korean>
             <French>Défini l'efficacité des bandages à refermer des plaies.</French>
             <Japanese>包帯が傷をふさぐのにどれだけ効果的かを決定します。</Japanese>
+            <Portuguese>Determina o quão efetivas as bandagens são em fechar ferimentos.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_medicalTab">
             <English>Medical Items</English>
@@ -4859,6 +4919,7 @@
             <German>Medizinisches Material</German>
             <Japanese>医療品</Japanese>
             <Spanish>Objetos médicos</Spanish>
+            <Portuguese>Objetos médicos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_DisplayName">
             <English>Zeus Treatment Time Coefficient</English>
