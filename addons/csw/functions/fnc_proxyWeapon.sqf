@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm, PabstMirror
- * Handles the use of proxy weapons to bypass engine reload times
+ * Handles the use of proxy weapons to fix engine-reload times.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret <ARRAY>
  * 2: Proxy weapon needed <BOOL>
  * 2: Weapon should be emptied <BOOL>

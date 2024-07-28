@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, PabstMirror
- * Applies healing to target
+ * Applies healing to target.
  *
  * Arguments:
  * 0: Healer <OBJECT>
@@ -15,6 +15,9 @@
  *
  * Public: No
  */
+
+// TODO: Add AI tourniquet behaviour
+// For now, AI handle player or otherwise scripted tourniquets only
 
 params ["_healer", "_target"];
 (_healer getVariable [QGVAR(currentTreatment), [-1]]) params ["_finishTime", "_treatmentTarget", "_treatmentEvent", "_treatmentArgs", "_treatmentItem"];
@@ -40,9 +43,33 @@ if (_finishTime > 0) exitWith {
     };
 };
 
+// Find a suitable limb (no tourniquets) for injecting and giving IVs
+private _fnc_findNoTourniquet = {
+    private _bodyPart = "";
+    private _bodyParts = ["leftarm", "rightarm", "leftleg", "rightleg"];
+    private _bodyPartsSaved = +_bodyParts;
+
+    while {_bodyParts isNotEqualTo []} do {
+        _bodyPart = selectRandom _bodyParts;
+
+        // If no tourniquet on, use that body part
+        if (_tourniquets select (ALL_BODY_PARTS find _bodyPart) == 0) exitWith {};
+
+        _bodyParts deleteAt (_bodyParts find _bodyPart);
+    };
+
+    // If all limbs have tourniquets, use random limb
+    if (_bodyPart == "") then {
+        _bodyPart = selectRandom _bodyPartsSaved;
+    };
+
+    _bodyPart
+};
+
 private _isMedic = [_healer] call EFUNC(medical_treatment,isMedic);
 private _heartRate = GET_HEART_RATE(_target);
 private _fractures = GET_FRACTURES(_target);
+private _tourniquets = GET_TOURNIQUETS(_target);
 
 private _treatmentEvent = "#none";
 private _treatmentArgs = [];
@@ -54,11 +81,13 @@ switch (true) do {
         // Select first bleeding wound and bandage it
         private _selection = "?";
         {
-            private _foundBleeding = _y findIf {
-                _x params ["", "_amount", "_percentage"];
-                (_amount * _percentage) > 0
-            };
-            if (_foundBleeding != -1) exitWith { _selection = _x; };
+            // Ignore tourniqueted limbs
+            if (_tourniquets select (ALL_BODY_PARTS find _x) == 0 && {
+                _y findIf {
+                    _x params ["", "_amount", "_percentage"];
+                    (_amount * _percentage) > 0
+                } != -1}
+            ) exitWith { _selection = _x; };
         } forEach GET_OPEN_WOUNDS(_target);
         _treatmentEvent = QEGVAR(medical_treatment,bandageLocal);
         _treatmentTime = 5;
@@ -84,7 +113,7 @@ switch (true) do {
         };
         _treatmentEvent = QEGVAR(medical_treatment,ivBagLocal);
         _treatmentTime = 5;
-        _treatmentArgs = [_target, selectRandom ["leftarm", "rightarm", "leftleg", "rightleg"], "SalineIV"];
+        _treatmentArgs = [_target, call _fnc_findNoTourniquet, "SalineIV"];
         _treatmentItem = "@iv";
     };
     case (((_fractures select 4) == 1)
@@ -115,7 +144,7 @@ switch (true) do {
         _target setVariable [QGVAR(nextEpinephrine), CBA_missionTime + 10];
         _treatmentEvent = QEGVAR(medical_treatment,medicationLocal);
         _treatmentTime = 2.5;
-        _treatmentArgs = [_target, selectRandom ["leftarm", "rightarm", "leftleg", "rightleg"], "Epinephrine"];
+        _treatmentArgs = [_target, call _fnc_findNoTourniquet, "Epinephrine"];
         _treatmentItem = "epinephrine";
     };
     case (((GET_PAIN_PERCEIVED(_target) > 0.25) || {_heartRate >= 180})
@@ -129,7 +158,7 @@ switch (true) do {
         _target setVariable [QGVAR(nextMorphine), CBA_missionTime + 30];
         _treatmentEvent = QEGVAR(medical_treatment,medicationLocal);
         _treatmentTime = 2.5;
-        _treatmentArgs = [_target, selectRandom ["leftarm", "rightarm", "leftleg", "rightleg"], "Morphine"];
+        _treatmentArgs = [_target, call _fnc_findNoTourniquet, "Morphine"];
         _treatmentItem = "morphine";
     };
 };
