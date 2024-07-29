@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Checks if AI healer has items
+ * Checks if AI healer has items.
  *
  * Arguments:
  * 0: Healer <OBJECT>
@@ -13,7 +13,7 @@
  * 2: Treatment <STRING> (Optional)
  *
  * Example:
- * [cursorObject, "@bandage"] call ACE_medical_ai_fnc_itemCheck
+ * [cursorObject, "@bandage"] call ace_medical_ai_fnc_itemCheck
  *
  * Public: No
  */

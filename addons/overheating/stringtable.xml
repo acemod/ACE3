@@ -714,7 +714,7 @@
         </Key>
         <Key ID="STR_ACE_Overheating_CoolWeaponWithItem">
             <English>Cool weapon with...</English>
-            <Japanese>武器を・・・で冷却</Japanese>
+            <Japanese>武器をアイテムで冷却</Japanese>
             <French>Refroidir l'arme avec...</French>
             <Russian>Охладить оружие с...</Russian>
             <German>Waffe mit... kühlen</German>
