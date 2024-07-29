@@ -41,7 +41,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 // process wounds separately for each body part hit
 {   // forEach _allDamages
     _x params ["_damage", "_bodyPart"];
-    _bodyPart = toLower _bodyPart;
+    _bodyPart = toLowerANSI _bodyPart;
 
     // silently ignore structural damage
     if (_bodyPart == "#structural") then {continue};

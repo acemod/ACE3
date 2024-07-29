@@ -21,7 +21,7 @@ params ["_logic"];
 
 if !(local _logic) exitWith {};
 
-if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+if !(GETEGVAR(medical,enabled,false)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);
 } else {
     private _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);

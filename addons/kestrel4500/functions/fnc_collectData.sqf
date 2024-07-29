@@ -15,6 +15,8 @@
  * Public: No
  */
 
+#define TEMPERATURE_SLOT_INDEX 5
+
 private _playerDir = getDir ACE_player;
 private _playerAltitude = (getPosASL ACE_player) select 2;
 private _temperature = _playerAltitude call EFUNC(weather,calculateTemperatureAtHeight);
@@ -41,9 +43,10 @@ if (isNil QGVAR(MIN) || isNil QGVAR(MAX)) then {
 [0, _playerDir] call FUNC(updateMemory);
 
 if (GVAR(MinAvgMaxMode) == 1) then {
+    private _useAB = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
     {
         GVAR(ENTRIES) set [_x, (GVAR(ENTRIES) select _x) + 1];
-    } count [2, 3, 4];
+    } forEach [2, 3, 4];
 
     // Wind SPD
     private _windSpeed = call FUNC(measureWindSpeed);
@@ -51,7 +54,7 @@ if (GVAR(MinAvgMaxMode) == 1) then {
 
     // CROSSWIND
     private _crosswind = 0;
-    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+    if (_useAB) then {
         _crosswind = abs(sin(GVAR(RefHeading) - _playerDir) * _windSpeed);
     } else {
         _crosswind = abs(sin(GVAR(RefHeading)) * _windSpeed);
@@ -60,7 +63,7 @@ if (GVAR(MinAvgMaxMode) == 1) then {
 
     // HEADWIND
     private _headwind = 0;
-    if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+    if (_useAB) then {
         _headwind = cos(GVAR(RefHeading) - _playerDir) * _windSpeed;
     } else {
         _headwind = cos(GVAR(RefHeading)) * _windSpeed;
@@ -74,4 +77,18 @@ if (GVAR(MinAvgMaxMode) == 1) then {
     GVAR(TOTAL) set [4, (GVAR(TOTAL) select 4) + _headwind];
 };
 
-{ _x call FUNC(updateMemory); true } count [[5, _temperature],[6, _chill],[7, _humidity],[8, _heatIndex],[9, _dewPoint],[10, _wetBulb],[11, _barometricPressure],[12, _altitude],[13, _densityAltitude]];
+private _data = [
+    _temperature,
+    _chill,
+    _humidity,
+    _heatIndex,
+    _dewPoint,
+    _wetBulb,
+    _barometricPressure,
+    _altitude,
+    _densityAltitude
+];
+
+{
+    [TEMPERATURE_SLOT_INDEX + _forEachIndex, _x] call FUNC(updateMemory);
+} forEach _data;

@@ -16,12 +16,14 @@
  */
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
-TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
+TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_vehicle,_gunner,_turret);
 
 // Retrieve backblast values
 private _bbValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
 
 _bbValues params ["_backblastAngle", "_backblastRange", "_backblastDamage", "_offset"];
+_backblastRange = _backblastRange * GVAR(backblastDistanceCoefficient);
+
 TRACE_4("cache",_backblastAngle,_backblastRange,_backblastDamage,_offset);
 
 if (_backblastDamage <= 0) exitWith {};
@@ -53,7 +55,7 @@ if (_distance < _backblastRange) then {
 
         [_damage * 100] call BIS_fnc_bloodEffect;
 
-        if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+        if (GETEGVAR(medical,enabled,false)) then {
             [_unit, _damage, "body", "backblast", _unit] call EFUNC(medical,addDamageToUnit);
         } else {
             _unit setDamage (damage _unit + _damage);

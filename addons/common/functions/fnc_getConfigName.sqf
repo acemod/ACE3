@@ -17,7 +17,7 @@
 
 params ["_className"];
 
-(uiNamespace getVariable QGVAR(configNames)) getOrDefaultCall [toLower _className, {
+(uiNamespace getVariable QGVAR(configNames)) getOrDefaultCall [toLowerANSI _className, {
     private _config = configNull;
 
     {

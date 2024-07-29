@@ -110,7 +110,7 @@ class Cfg3DEN {
                     h = QUOTE(65 * ATTRIBUTE_H);
                     drawSideArrows = 1;
                     disableOverflow = 1;
-                    columns[] = {0.05, 0.15, 0.85};
+                    columns[] = {0.05, 0.15, 0.83, 0.87};
                 };
                 class ArrowLeft: ctrlButton {
                     idc = IDC_ATTRIBUTE_LIST_LEFT;

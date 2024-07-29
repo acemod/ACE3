@@ -10,7 +10,7 @@
  * 2: Items <ARRAY>
  *
  * Return Value:
- * User and Item <ARRAY>
+ * User and Item and Litter Created<ARRAY>
  *
  * Example:
  * [player, cursorObject, ["bandage"]] call ace_medical_treatment_fnc_useItem
@@ -29,20 +29,35 @@ scopeName "Main";
 private _useOrder = [[_patient, _medic], [_medic, _patient], [_medic]] select GVAR(allowSharedEquipment);
 
 {
-    private _unit      = _x;
+    private _unit = _x;
     private _unitVehicle = objectParent _unit;
-    private _unitItems = _x call EFUNC(common,uniqueItems);
+    private _unitItems = [_x, 0] call EFUNC(common,uniqueItems);
+    private _unitMagazines = [_x, 2] call EFUNC(common,uniqueItems);
+    private _vehicleItems = itemCargo _unitVehicle; // [] for objNull
+    private _vehicleMagazines = magazineCargo _unitVehicle; // same
 
     {
-        if (!isNull _unitVehicle && {_x in (itemCargo _unitVehicle)}) then {
-            _unitVehicle addItemCargoGlobal [_x, -1];
-            [_unit, _x] breakOut "Main";
-        };
-        if (_x in _unitItems) then {
-            _unit removeItem _x;
-            [_unit, _x] breakOut "Main";
+        switch (true) do {
+            case (_x in _vehicleItems): {
+                _unitVehicle addItemCargoGlobal [_x, -1];
+                [_unit, _x, false] breakOut "Main";
+            };
+            case (_x in _vehicleMagazines): {
+                [_unitVehicle, _x] call EFUNC(common,adjustMagazineAmmo);
+                [_unit, _x, false] breakOut "Main";
+            };
+            case (_x in _unitItems): {
+                _unit removeItem _x;
+                [_unit, _x, true] breakOut "Main";
+            };
+            case (_x in _unitMagazines): {
+                private _magsStart = count magazines _unit;
+                [_unit, _x] call EFUNC(common,adjustMagazineAmmo);
+                private _magsEnd = count magazines _unit;
+                [_unit, _x, (_magsEnd < _magsStart)] breakOut "Main";
+            };
         };
     } forEach _items;
 } forEach _useOrder;
 
-[objNull, ""]
+[objNull, "", false]

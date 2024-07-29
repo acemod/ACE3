@@ -434,7 +434,11 @@ class CfgVehicles {
             "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint", "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint",
             "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint",
             "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
-            "era_31_hitpoint", "era_32_hitpoint"
+            "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint", "era_36_hitpoint",
+            "era_37_hitpoint", "era_38_hitpoint", "era_39_hitpoint", "era_40_hitpoint", "era_41_hitpoint", "era_42_hitpoint",
+            "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint", "era_46_hitpoint", "era_47_hitpoint", "era_48_hitpoint",
+            "era_49_hitpoint", "era_50_hitpoint", "era_58_hitpoint", "era_59_hitpoint", "era_60_hitpoint", "era_61_hitpoint",
+            "era_62_hitpoint", "era_63_hitpoint", "era_64_hitpoint", "era_65_hitpoint", "era_66_hitpoint", "era_67_hitpoint"
         };
         EGVAR(vehicle_damage,slatHitpoints)[] = {
             "SLAT_51_hitpoint", "SLAT_52_hitpoint", "SLAT_53_hitpoint",
@@ -470,6 +474,9 @@ class CfgVehicles {
             "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint", "era_46_hitpoint", "era_47_hitpoint", "era_48_hitpoint",
             "era_49_hitpoint", "era_50_hitpoint"
         };
+        EGVAR(vehicle_damage,slatHitpoints)[] = {
+            "slat_51_hitpoint", "slat_52_hitpoint", "slat_53_hitpoint", "slat_54_hitpoint"
+        };
     };
     class rhs_t90am_tv: rhs_t90_tv {
         EGVAR(vehicle_damage,eraHitpoints)[] = {
@@ -483,7 +490,7 @@ class CfgVehicles {
             "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint", "era_46_hitpoint", "era_47_hitpoint", "era_48_hitpoint",
             "era_49_hitpoint", "era_50_hitpoint", "era_51_hitpoint", "era_52_hitpoint", "era_53_hitpoint", "era_54_hitpoint",
             "era_55_hitpoint", "era_56_hitpoint", "era_57_hitpoint", "era_58_hitpoint", "era_59_hitpoint", "era_60_hitpoint",
-            "era_51_hitpoint", "era_62_hitpoint", "era_63_hitpoint", "era_64_hitpoint", "era_65_hitpoint", "era_66_hitpoint"
+            "era_61_hitpoint", "era_62_hitpoint", "era_63_hitpoint", "era_64_hitpoint", "era_65_hitpoint", "era_66_hitpoint"
         };
         EGVAR(vehicle_damage,slatHitpoints)[] = {
             "SLAT_18_hitpoint", "SLAT_19_hitpoint", "SLAT_20_hitpoint", "SLAT_21_hitpoint",
@@ -492,10 +499,31 @@ class CfgVehicles {
         };
     };
     class rhs_t90sm_tv: rhs_t90am_tv {
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
+            "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint",
+            "era_5_hitpoint", "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint",
+            "era_9_hitpoint", "era_10_hitpoint", "era_11_hitpoint", "era_12_hitpoint",
+            "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint", "era_16_hitpoint",
+            "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint",
+            "era_21_hitpoint", "era_22_hitpoint", "era_24_hitpoint", "era_25_hitpoint",
+            "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
+            "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint",
+            "era_35_hitpoint", "era_36_hitpoint", "era_37_hitpoint", "era_38_hitpoint",
+            "era_39_hitpoint", "era_40_hitpoint", "era_41_hitpoint", "era_42_hitpoint",
+            "era_43_hitpoint", "era_44_hitpoint", "era_45_hitpoint", "era_46_hitpoint",
+            "era_47_hitpoint", "era_48_hitpoint", "era_49_hitpoint", "era_50_hitpoint",
+            "era_26_hitpoint", "era_55_hitpoint", "era_56_hitpoint", "era_57_hitpoint",
+            "era_58_hitpoint", "era_59_hitpoint", "era_60_hitpoint", "era_61_hitpoint",
+            "era_62_hitpoint", "era_63_hitpoint", "era_64_hitpoint", "era_65_hitpoint",
+            "era_66_hitpoint", "era_23_hitpoint"
+        };
         EGVAR(vehicle_damage,slatHitpoints)[] = {
-            "SLAT_23_hitpoint", "SLAT_26_hitpoint", "SLAT_51_hitpoint", "SLAT_52_hitpoint",
-            "SLAT_53_hitpoint", "SLAT_54_hitpoint", "SLAT_55_hitpoint", "SLAT_56_hitpoint",
-            "SLAT_57_hitpoint"
+            "slat_23_hitpoint", "slat_26_hitpoint", "slat_51_hitpoint",
+            "slat_52_hitpoint", "slat_53_hitpoint", "slat_54_hitpoint",
+            "slat_55_hitpoint", "slat_56_hitpoint", "slat_57_hitpoint",
+            "slat_18_hitpoint", "slat_19_hitpoint", "slat_20_hitpoint",
+            "slat_21_hitpoint", "slat_22_hitpoint", "slat_24_hitpoint",
+            "slat_25_hitpoint"
         };
     };
 
@@ -537,6 +565,35 @@ class CfgVehicles {
             "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint",
             "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
             "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint", "era_36_hitpoint"
+        };
+    };
+    class rhs_t80um: rhs_t80u {
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
+            "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint", "era_5_hitpoint", "era_6_hitpoint",
+            "era_7_hitpoint", "era_8_hitpoint", "era_9_hitpoint", "era_10_hitpoint", "era_11_hitpoint", "era_12_hitpoint",
+            "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint", "era_16_hitpoint", "era_17_hitpoint", "era_18_hitpoint",
+            "era_19_hitpoint", "era_20_hitpoint", "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint",
+            "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint", "era_29_hitpoint", "era_30_hitpoint",
+            "era_31_hitpoint", "era_32_hitpoint", "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint", "era_36_hitpoint"
+        };
+    };
+
+    class rhs_t15_base;
+    class rhs_t15_tv: rhs_t15_base {
+        EGVAR(vehicle_damage,eraHitpoints)[] = {
+            "era_1_hitpoint", "era_2_hitpoint", "era_3_hitpoint", "era_4_hitpoint",
+            "era_5_hitpoint", "era_6_hitpoint", "era_7_hitpoint", "era_8_hitpoint",
+            "era_9_hitpoint", "era_10_hitpoint", "era_11_hitpoint", "era_12_hitpoint",
+            "era_13_hitpoint", "era_14_hitpoint", "era_15_hitpoint", "era_16_hitpoint",
+            "era_17_hitpoint", "era_18_hitpoint", "era_19_hitpoint", "era_20_hitpoint",
+            "era_21_hitpoint", "era_22_hitpoint", "era_23_hitpoint", "era_24_hitpoint",
+            "era_25_hitpoint", "era_26_hitpoint", "era_27_hitpoint", "era_28_hitpoint",
+            "era_29_hitpoint", "era_30_hitpoint", "era_31_hitpoint", "era_32_hitpoint",
+            "era_33_hitpoint", "era_34_hitpoint", "era_35_hitpoint", "era_36_hitpoint",
+            "era_37_hitpoint"
+        };
+        EGVAR(vehicle_damage,slatHitpoints)[] = {
+            "slat_38_hitpoint", "slat_39_hitpoint", "slat_40_hitpoint", "slat_41_hitpoint"
         };
     };
 

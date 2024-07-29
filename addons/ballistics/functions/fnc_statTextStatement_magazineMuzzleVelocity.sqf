@@ -41,14 +41,18 @@ if (_initSpeedCoef > 0) then {
 };
 
 private _abAdjustText = "";
-if (_magIsForCurrentWeapon && {["ace_advanced_ballistics"] call EFUNC(common,isModLoaded)}) then {
+if (
+    _magIsForCurrentWeapon &&
+    {missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]} &&
+    {missionNamespace getVariable [QEGVAR(advanced_ballistics,barrelLengthInfluenceEnabled), false]} // this can be on while AB is off or vice-versa
+) then {
     private _configAmmo = (configFile >> "CfgAmmo" >> (getText (_configMagazine >> "ammo")));
     private _barrelLength = getNumber (_configWeapon >> "ACE_barrelLength");
     private _muzzleVelocityTable = getArray (_configAmmo >> "ACE_muzzleVelocities");
     private _barrelLengthTable = getArray (_configAmmo >> "ACE_barrelLengths");
     private _abShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, 0] call EFUNC(advanced_ballistics,calculateBarrelLengthVelocityShift);
     if (_abShift != 0) then {
-        _abAdjustText = " [AB]",
+        _abAdjustText = " [AB]";
         _muzzleVelocity = _abShift;
     };
 };

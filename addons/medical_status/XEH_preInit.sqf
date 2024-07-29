@@ -6,15 +6,14 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 // Add vanilla killed EH to unit to set correct killer
 ["CAManBase", "init", {
     params ["_unit"];
 
-    private _config = configOf _unit;
-    if (getText (_config >> "simulation") == "UAVPilot") exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
-    if (getNumber (_config >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit)};
+    if (unitIsUAV _unit) exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
+    if (getNumber ((configOf _unit) >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit)};
 
     // Hopefully this EH gets added first as it can only effect other EH called after it
     private _ehIndex = _unit addEventHandler ["Killed", {_this call FUNC(handleKilled)}];

@@ -16,7 +16,7 @@
  */
 
 params ["_map"];
-_map = toLower _map;
+_map = toLowerANSI _map;
 
 // [latitude, altitude]
 

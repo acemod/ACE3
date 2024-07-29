@@ -16,16 +16,18 @@ version:
 
 ### 1.1 Preparing a vehicle for ACE3 cargo
 
+{% raw %}
 ```cpp
 class CfgVehicles {
     class yourVehicleBaseClass {
         ace_cargo_space = 4;  // Cargo space your vehicle has
         ace_cargo_hasCargo = 1;  // Enables cargo to be loaded inside the vehicle (1-yes, 0-no)
-        ace_cargo_loadmasterTurrets = {{1}}; // If vehicle inherits from "Air", you can set this attribute.
+        ace_cargo_loadmasterTurrets[] = {{1}}; // If vehicle inherits from "Air", you can set this attribute.
                                              // When sitting in the turret paths you define here, you can paradrop cargo items. By default, pilots and co-pilots can paradrop cargo items.
     };
 };
 ```
+{% endraw %}
 
 ### 1.2 Making an object loadable
 
@@ -45,6 +47,24 @@ class CfgVehicles {
     <p>ace_cargo_hasCargo and ace_cargo_canLoad are only needed if you aren't inheriting from any of BI base classes or if you are trying to disable loading for a specific vehicle / object.</p>
 </div>
 
+### 1.3 Adding predefined cargo via config
+
+```cpp
+class CfgVehicles {
+    class yourVehicleClass {
+        ace_cargo_space = 4;  // Add if necessary
+        ace_cargo_hasCargo = 1;  // Add if necessary
+        class ace_cargo {
+            class cargo {
+                class ACE_medicalSupplyCrate { // Doesn't have to have the same name as the item you're adding
+                    type = "ACE_medicalSupplyCrate";
+                    amount = 1;
+                };
+            };
+        };
+    };
+};
+```
 
 ## 2. Events
 

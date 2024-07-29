@@ -23,7 +23,6 @@ if !(_activated) exitWith {};
 
 {
     _x setVariable ["ACE_canMoveRallypoint", true];
-    false
-} count _units;
+} forEach _units;
 
 INFO("Rallypoint Module Initialized.");

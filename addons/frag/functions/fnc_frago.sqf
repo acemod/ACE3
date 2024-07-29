@@ -127,7 +127,7 @@ if (_objects isNotEqualTo []) then {
             if (_currentCount < 10) then {
                 private _count = ceil (random (sqrt (_m / 1000)));
                 private _vecVar = FRAG_VEC_VAR;
-                if (!(_target isKindOf "Man")) then {
+                if !(_target isKindOf "Man") then {
                     ADD(_vecVar,(sqrt _cubic) / 2000);
                     if ((crew _target) isEqualTo [] && {_count > 0}) then {
                         _count = 0 max (_count / 2);
@@ -144,7 +144,7 @@ if (_objects isNotEqualTo []) then {
                     private _vel = _vec vectorMultiply _fp;
 
                     private _fragObj = (selectRandom _fragTypes) createVehicleLocal [0,0,10000];
-                    // TRACE_4("targeted",_fp, typeOf _fragObj,_lastPos vectorDistance _targetPos,typeOf _x);
+                    // TRACE_4("targeted",_fp,typeOf _fragObj,_lastPos vectorDistance _targetPos,typeOf _x);
                     _fragObj setPosASL _lastPos;
                     _fragObj setVectorDir _vec;
                     _fragObj setVelocity _vel;

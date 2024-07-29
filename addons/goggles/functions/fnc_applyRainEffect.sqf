@@ -22,7 +22,7 @@ if (!alive _unit) exitWith {};
 private _fnc_underCover = {
     params ["_unit"];
 
-    if (vehicle _unit != _unit && {!isTurnedOut _unit}) exitWith {true};
+    if (!isNull objectParent _unit && {!isTurnedOut _unit}) exitWith {true};
 
     // looking up and no roof over head
     private _position = eyePos _unit;

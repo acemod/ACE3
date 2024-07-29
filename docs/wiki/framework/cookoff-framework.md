@@ -12,43 +12,22 @@ version:
   patch: 0
 ---
 
-## 1. Disabling / Enabling Cook off for individual vehicles
+## 1. Disabling cook-off fire for individual vehicles
 
-You can dynamically enable and/or disable vehicle cook off for individual vehicles by using `setVariable`:
-
-```
-VEHICLE setVariable ["ace_cookoff_enable", true, true];
-```
-
-The above will enable cook off for that specific vehicle, no matter the mission settings.
-
-Likewise, cook off can also be disabled for a specific vehicle:
+Cook-off fire can be disabled for a specific vehicle (does not affect ammo cook-off):
 
 ```
-VEHICLE setVariable ["ace_cookoff_enable", false, true];
+_vehicle setVariable ["ace_cookoff_enable", false, true];
 ```
 
-## 2. Cook off probability
+Mission settings will always apply however, so you can't enable cook-off on a vehicle if the mission settings have cook-off for vehicles disabled.
 
-You can set the probability of cook off for individual vehicle types by changing the `ace_cookoff_probability` value in the vehicle's config:
+## 2. Disabling ammunition cook-off for individual vehicles and boxes
 
-```
-class MyVehicle {
-    ace_cookoff_probability = 0.6;
-};
-```
-
-Global cook off probability can also be adjusted with the `ace_cookoff_probabilityCoef` mission setting.
-
-Higher values will make cook-off more probable, whilst lower values will make cook-off less probable.
-
-## 3. Ignore damage to turret
-
-For use on vehicles when damage to the main turret would not cause a vehicle cookoff.
-e.g. RCWS turrets
+Ammunition cook-off can be disabled for a specific vehicle or box (does not affect cook-off fire):
 
 ```
-class MyVehicle {
-    ace_vehicle_damage_turretFireProb = 0;
-};
+_vehicleOrBox setVariable ["ace_cookoff_enableAmmoCookoff", false, true];
 ```
+
+Mission settings will always apply however, so you can't enable ammunition cook-off on a vehicle or box if the mission settings have ammunition cook-off disabled.
