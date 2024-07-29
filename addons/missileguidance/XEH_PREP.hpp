@@ -6,6 +6,8 @@ PREP(changeMissileDirection);
 PREP(checkSeekerAngle);
 PREP(checkLos);
 
+PREP(dev_ProjectileCamera);
+
 PREP(onFired);
 PREP(onIncomingMissile);
 

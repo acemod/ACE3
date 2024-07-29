@@ -1,5 +1,16 @@
 #include "..\script_component.hpp"
-// tracks a projectile until it explodes
+/*
+ * Author: tcvm
+ * tracks a projectile until it explodes
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Public: No
+ */
 params ["_projectile"];
 
 private _camera = "camera" camCreate getPosATL _projectile;
