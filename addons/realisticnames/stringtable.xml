@@ -1324,7 +1324,7 @@
             <Czech>Demoliční nálož M183</Czech>
             <French>M183 Charge de démolition</French>
             <Russian>M183 комплектный подрывной заряд</Russian>
-            <Portuguese>M183 Sacola de Demolição</Portuguese>
+            <Portuguese>M183 Conjunto de Carga de Demolição</Portuguese>
             <Hungarian>M183 romboló töltet</Hungarian>
             <Italian>M183 Carica da Demolizioni</Italian>
             <Japanese>M183 梱包爆薬</Japanese>
@@ -1345,6 +1345,7 @@
             <German>M183 Geballte Sprengladung (Werfbar)</German>
             <Chinesesimp>M183 炸药包（可投掷）</Chinesesimp>
             <Korean>M183 폭파 장약 (투척)</Korean>
+            <Portuguese>M183 Carga de Demolição (Arremessável)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -1375,6 +1376,7 @@
             <German>M112 Sprengladung (Werfbar)</German>
             <Chinesesimp>M112 塑性炸药（可投掷）</Chinesesimp>
             <Korean>M112 폭파 장약 (투척)</Korean>
+            <Portuguese>M112 Carga de Demolição (Arremessável)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
@@ -4076,6 +4078,7 @@
             <Korean>엘칸 스펙터OS (초목)</Korean>
             <Russian>ELCAN SpecterOS (обильная растительность)</Russian>
             <Spanish>ELCAN SpecterOS (Exuberante)</Spanish>
+            <Portuguese>ELCAN SpecterOS (Exuberante)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
             <English>ELCAN SpecterOS (Arid)</English>
@@ -4088,6 +4091,7 @@
             <Korean>엘칸 스펙터OS (건조)</Korean>
             <Russian>ELCAN SpecterOS (сухая местность)</Russian>
             <Spanish>ELCAN SpecterOS (Árido)</Spanish>
+            <Portuguese>ELCAN SpecterOS (Árido)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
             <English>ELCAN SpecterOS 7.62 (Black)</English>
@@ -4100,6 +4104,7 @@
             <Korean>엘칸 스펙터OS 7.62 (검정)</Korean>
             <Russian>ELCAN SpecterOS 7.62 (чёрный)</Russian>
             <Spanish>ELCAN SpecterOS 7.62 (Negro)</Spanish>
+            <Portuguese>ELCAN SpecterOS 7.62 (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
             <English>ELCAN SpecterOS 7.62 (Lush)</English>
@@ -4112,6 +4117,7 @@
             <Korean>엘칸 스펙터OS 7.62 (초목)</Korean>
             <Russian>ELCAN SpecterOS 7.62 (обильная растительность)</Russian>
             <Spanish>ELCAN SpecterOS 7.62 (Exuberante)</Spanish>
+            <Portuguese>ELCAN SpecterOS 7.62 (Exuberante)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
             <English>ELCAN SpecterOS 7.62 (Arid)</English>
@@ -4124,6 +4130,7 @@
             <Korean>엘칸 스펙터OS 7.62 (건조)</Korean>
             <Russian>ELCAN SpecterOS 7.62 (сухая местность)</Russian>
             <Spanish>ELCAN SpecterOS 7.62 (Árido)</Spanish>
+            <Portuguese>ELCAN SpecterOS 7.62 (Árido)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -4408,6 +4415,7 @@
             <Korean>버리스 XTR II (낡음)</Korean>
             <Russian>Burris XTR II (старый)</Russian>
             <Spanish>Burris XTR II (Viejo)</Spanish>
+            <Portuguese>Burris XTR II (Velho)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
             <English>Burris XTR II (ASP-1 Kir)</English>
@@ -4420,6 +4428,7 @@
             <Korean>버리스 XTR II (ASP-1 키르용)</Korean>
             <Russian>Burris XTR II (ASP-1 Kir)</Russian>
             <Spanish>Burris XTR II (ASP-1 Kir)</Spanish>
+            <Portuguese>Burris XTR II (ASP-1 Kir)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -4480,6 +4489,7 @@
             <Korean>이오텍 XPS3 (초목)</Korean>
             <Russian>EOTech XPS3 (обильная растительность)</Russian>
             <Spanish>EOTech XPS3 (Exuberante)</Spanish>
+            <Portuguese>EOTech XPS3 (Exuberante)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
             <English>EOTech XPS3 (Arid)</English>
@@ -4492,6 +4502,7 @@
             <Korean>이오텍 XPS3 (건조)</Korean>
             <Russian>EOTech XPS3 (сухая местность)</Russian>
             <Spanish>EOTech XPS3 (Árido)</Spanish>
+            <Portuguese>EOTech XPS3 (Árido)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>
