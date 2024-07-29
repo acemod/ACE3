@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
- * Calculates the duty of the current animation.
+ * Calculates the duty ('postureWeight') of the current animation.
  *
  * Arguments:
  * 0: Unit <OBJECT>

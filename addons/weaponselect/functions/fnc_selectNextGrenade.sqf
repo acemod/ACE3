@@ -61,14 +61,14 @@ private _vestGrenades =     vestItems     _unit select {_x in GVAR(GrenadesAll) 
 private _backpackGrenades = backpackItems _unit select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
 
 // remove all grenades except those we are switching to --> this breaks the selector
-{_unit removeItemFromUniform  _x; false} count _uniformGrenades;
-{_unit removeItemFromVest     _x; false} count _vestGrenades;
-{_unit removeItemFromBackpack _x; false} count _backpackGrenades;
+{_unit removeItemFromUniform  _x} forEach _uniformGrenades;
+{_unit removeItemFromVest     _x} forEach _vestGrenades;
+{_unit removeItemFromBackpack _x} forEach _backpackGrenades;
 
 // readd grenades
-{_unit addItemToUniform  _x; false} count _uniformGrenades;
-{_unit addItemToVest     _x; false} count _vestGrenades;
-{_unit addItemToBackpack _x; false} count _backpackGrenades;
+{_unit addItemToUniform  _x} forEach _uniformGrenades;
+{_unit addItemToVest     _x} forEach _vestGrenades;
+{_unit addItemToBackpack _x} forEach _backpackGrenades;
 
 [_nextGrenade, {_x == _nextGrenade} count _magazines] call FUNC(displayGrenadeTypeAndNumber);
 

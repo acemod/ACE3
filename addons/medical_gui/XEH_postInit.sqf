@@ -21,7 +21,7 @@ GVAR(selfInteractionActions) = [];
 
 [QEGVAR(interact_menu,newControllableObject), {
     params ["_type"]; // string of the object's classname
-    if (!(_type isKindOf "CAManBase")) exitWith {};
+    if !(_type isKindOf "CAManBase") exitWith {};
     {
         _x set [0, _type];
         _x call EFUNC(interact_menu,addActionToClass);
