@@ -84,6 +84,7 @@
             <Korean>활성화 및 사망/심정지 진찰 가능 [직접]</Korean>
             <German>Aktiviert &amp; kann Tod/Herzstillstand diagnostizieren [Direkt]</German>
             <Italian>Abilitato e può diagnosticare Morte/Arresto Cardiaco [Esplicito]</Italian>
+            <French>Activé &amp; peut diagnostiquer la mort/l'arrêt cardiaque [Direct].</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -4147,7 +4148,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Unresponsive">
             <English>%1 is not responsive</English>
             <Russian>%1 не реагирует на раздражители</Russian>
-            <French>%1 est inconscient.</French>
+            <French>%1 ne répond pas aux stimuli</French>
             <Spanish>%1 no reacciona</Spanish>
             <Polish>%1 jest nieprzytomny</Polish>
             <German>%1 ist nicht ansprechbar</German>
@@ -4168,6 +4169,7 @@
             <Korean>%1은(는) 의식불명입니다</Korean>
             <German>%1 ist bewusstlos</German>
             <Italian>%1 è privo di sensi</Italian>
+            <French>%1 est inconscient</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrest">
             <English>%1 is not responsive, taking shallow gasps and convulsing</English>
@@ -4188,6 +4190,7 @@
             <Korean>%1은(는) 심정지 상태입니다</Korean>
             <German>%1 ist im Herzstillstand</German>
             <Italian>%1 è in arresto cardiaco</Italian>
+            <French>%1 est en arrêt cardiaque</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
@@ -4208,6 +4211,7 @@
             <Korean>%1은(는) 사망했습니다</Korean>
             <German>%1 ist tod</German>
             <Italian>%1 è morto</Italian>
+            <French>%1 est mort</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>

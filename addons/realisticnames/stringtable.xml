@@ -706,6 +706,7 @@
             <Korean>카마즈 급수</Korean>
             <German>KamAS Wasser</German>
             <Italian>KamAZ Acqua</Italian>
+            <French>KamAZ Eau</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_MRL_Name">
             <English>KamAZ MRL</English>
@@ -1672,6 +1673,7 @@
             <Korean>CZ 581</Korean>
             <German>CZ 581</German>
             <Italian>CZ 581</Italian>
+            <French>CZ 581</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_sawedoff_01_Name">
             <English>CZ 581 (Sawed-Off)</English>
@@ -3091,6 +3093,7 @@
             <Korean>115식 보총 (검정)</Korean>
             <German>Type 115 (Schwarz)</German>
             <Italian>Type 115 (Nero)</Italian>
+            <French>Type 115 (Noir)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_ghex_Name">
             <English>Type 115 (Green Hex)</English>
@@ -3100,6 +3103,7 @@
             <Korean>115식 보총 (초록육각)</Korean>
             <German>Type 115 (Hex Grün)</German>
             <Italian>Type 115 (Hex Verde)</Italian>
+            <French>Type 115 (Hew Vert)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_hex_Name">
             <English>Type 115 (Hex)</English>
@@ -3109,6 +3113,7 @@
             <Korean>115식 보총 (육각)</Korean>
             <German>Type 115 (Hex)</German>
             <Italian>Type 115 (Hex)</Italian>
+            <French>Type 115 (Hex)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_blk">
             <English>QBZ-95-1 (Black)</English>
@@ -3902,6 +3907,7 @@
             <Korean>UTG 디펜더 126</Korean>
             <German>UTG Defender 126</German>
             <Italian>UTG Defender 126</Italian>
+            <French>UTG Defender 126</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_Name">
             <English>EOTech MRDS</English>
@@ -3911,6 +3917,7 @@
             <Korean>이오텍 MRDS</Korean>
             <German>EOTech MRDS</German>
             <Italian>EOTech MRDS</Italian>
+            <French>EOTech MRDS</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_black_Name">
             <English>EOTech MRDS (Black)</English>
@@ -3920,6 +3927,7 @@
             <Korean>이오텍 MRDS (검정)</Korean>
             <German>EOTech MRDS (Schwarz)</German>
             <Italian>EOTech MRDS (Nero)</Italian>
+            <French>EOTech MRDS (Noir)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>

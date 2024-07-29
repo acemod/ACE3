@@ -29,6 +29,7 @@
             <Japanese>AA12 (ヘビ柄迷彩)</Japanese>
             <Russian>AA12 (Змея)</Russian>
             <Spanish>AA12 (Serpiente)</Spanish>
+            <French>AA12 (Sable)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Name">
             <English>Galil ARM</English>
@@ -68,6 +69,7 @@
             <Japanese>GLX 160 (ヘビ柄迷彩)</Japanese>
             <Russian>GLX 160 (Змея)</Russian>
             <Spanish>GLX 160 (Serpiente)</Spanish>
+            <French>GLX 160</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Hex_Name">
             <English>GLX 160 (Hex)</English>
@@ -127,6 +129,7 @@
             <Japanese>Mk14 Mod 1 EBR (ヘビ柄迷彩)</Japanese>
             <Russian>Mk14 Mod 1 EBR (Змея)</Russian>
             <Spanish>Mk14 Mod 1 EBR (Serpiente)</Spanish>
+            <French>Mk14 Mod 1 EBR (Serpent)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Name">
             <English>Vektor SS-77</English>
@@ -195,6 +198,7 @@
             <Japanese>ヴェクター SS-77 コンパクト (ヘビ柄迷彩)</Japanese>
             <Russian>Vektor SS-77 Compact (змея)</Russian>
             <Spanish>Vektor SS-77 Compacta (Serpiente)</Spanish>
+            <French>Vektor SS-77 Compacte (Serpent)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Wood_Name">
             <English>FN FAL 50.00 (Wood)</English>
@@ -262,6 +266,7 @@
             <Korean>FN FAL OSW 파라</Korean>
             <German>FN FAL OSW Fallschirmjäger</German>
             <Italian>FN FAL OSW Para</Italian>
+            <French>FN FAL OSW Para</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Para_Snake_Name">
             <English>FN FAL OSW Para (Snake)</English>
@@ -269,6 +274,7 @@
             <Korean>FN FAL OSW 파라 (뱀 위장)</Korean>
             <German>FN FAL OSW Fallschirmjäger (Schlange)</German>
             <Italian>FN FAL OSW Para (Serpe)</Italian>
+            <French>FN FAL OSW Para (Serpent)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R4_Name">
             <English>Vektor R4</English>
@@ -308,6 +314,7 @@
             <Japanese>ヴェクター R5 カービン (ヘビ柄迷彩)</Japanese>
             <Russian>Vektor R5 Carbine (Змея)</Russian>
             <Spanish>Vektor R5 Carabina (Serpiente)</Spanish>
+            <French>Vektor R5 Carbine (Serpent)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Snake_Name">
             <English>Vektor R5 Carbine GL (Snake)</English>
@@ -317,6 +324,7 @@
             <Japanese>ヴェクター R5 カービン GL (ヘビ柄迷彩)</Japanese>
             <Russian>Vektor R5 Carbine GL (Змея)</Russian>
             <Spanish>Vektor R5 Carabina GL (Serpiente)</Spanish>
+            <French>Vektor R5 Carbine GL (Serpent)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Name">
             <English>XMS</English>
