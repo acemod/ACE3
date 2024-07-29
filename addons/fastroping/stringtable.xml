@@ -134,7 +134,7 @@
             <Spanish>Equipa el helicoptero seleccionado con un Sistema de Inserción/Extracción Rápida por Cuerda</Spanish>
             <Italian>Equipaggia l'elicottero selezionato con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit vybraný vrtulník systémem Fast Rope Insertion Extraction (FRIES)</Czech>
-            <Portuguese>Equipa um helicóptero selecionado com um sistema de Fast Rope Insertion Extraction System</Portuguese>
+            <Portuguese>Equipa o helicóptero selecionado com um Sistema de Inserção/Extração Rápida por Corda</Portuguese>
             <Russian>Снаряжает выбранный вертолет оборудованием для спуска десанта по канатам</Russian>
             <Japanese>選択されたヘリコプターで Fast Rope Insertion Extraction System を使えるようにします。</Japanese>
             <Korean>선택된 헬리콥터에 패스트로프 투입 및 탈출 시스템을 장착합니다.</Korean>
@@ -145,7 +145,6 @@
             <English>LET UNITS FAST ROPE</English>
             <German>EINHEITEN ABSEILEN LASSEN</German>
             <Italian>FAI SCENDERE CON FASTROPE</Italian>
-            <Portuguese>Equipa o helicóptero selecionado com o Fast Rope Insertion Extraction System</Portuguese>
             <French>LAISSER LES UNITÉS UTILISER LA CORDE</French>
             <Russian>ДЕСАНТИРОВАНИЕ ПО КАНАТУ</Russian>
             <Japanese>ユニットへファストロープをさせる</Japanese>
