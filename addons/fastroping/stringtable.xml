@@ -298,6 +298,7 @@
             <German>Schnelles-Abseilen</German>
             <Italian>Fast Rope</Italian>
             <Korean>패스트로프</Korean>
+            <Portuguese>Descida rápida pela corda</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
