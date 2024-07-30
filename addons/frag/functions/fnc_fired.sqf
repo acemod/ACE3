@@ -1,7 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * Add eventhandlers to rounds as needed
+ * Add "Exploded" eventhandler to a projectile if it will produce fragments
+ * and a "HitPart" eventhandler if it will produce spall.
  *
  * Arguments:
  * Parameters inherited from EFUNC(common,firedEH)

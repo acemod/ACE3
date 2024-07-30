@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Jaynus, NouberNou
- * Adds a round to the blacklist (will be ignored).
+ * Adds a round to the blacklist (will be ignored) and removes any ace_frag event handlers added to it.
  *
  * Arguments:
  * 0: Projectile <OBJECT>

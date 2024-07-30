@@ -1,12 +1,12 @@
 #include "..\script_component.hpp"
 /*
- * Author: Jaynus, NouberNou
+ * Author: Jaynus, NouberNou, Lambda.Tiger
  * Server func to create the fragmentation for a round.
  *
  * Arguments:
- * 0: Last Position (ASL) <ARRAY>
- * 1: Ammo Classname <STRING>
- * 2: Shot parents <ARRAY>
+ * 0: ASL position projetile is fragmenting at <ARRAY>
+ * 1: Projectile ammo classname <STRING>
+ * 2: Projectile shot parents <ARRAY>
  *
  * Return Value:
  * The number of fragments created <NUMBER>

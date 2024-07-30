@@ -7,7 +7,7 @@
  * 0: Ammo classname <STRING>
  *
  * Return Value:
- * Whether the round type would spall when hitting an object <BOOL>
+ * Whether the round type could spall when hitting an object <BOOL>
  *
  * Example:
  * "B_556x45_Ball" call ace_frag_fnc_shouldSpall

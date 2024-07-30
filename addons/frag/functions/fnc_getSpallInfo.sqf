@@ -8,7 +8,7 @@
  *
  * Return Value:
  * _ammoInfo <ARRAY>
- *  0: Caliber <NUMBER>
+ *  0: Caliber config value <NUMBER>
  *  1: What part of the hit damage is from ballistic vs explosive energy (1 for all explosive) <NUMBER>
  *  2: Indirect hit damage <NUMBER>
  *

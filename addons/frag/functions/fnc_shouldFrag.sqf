@@ -7,9 +7,7 @@
  * 0: Ammo classname <STRING>
  *
  * Return Value:
- * An array containing <ARRAY>
- *   0: Should the ammo class generate fragments <BOOL>
- *   1: Should the ammo class create submunitions that may fragment <BOOL>
+ * Could the ammo class generate fragments <BOOL>
  *
  * Example:
  * "B_556x45_Ball" call ace_frag_fnc_shouldFrag
