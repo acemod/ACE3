@@ -44,7 +44,7 @@ class CfgAmmo {
 
 The amount of metal being fragmented. Generally taken as the entire weight of the warhead, though in some cases you might want to only include the fragmentation jacket or body.
 
-As long as the units match `ace_frag_charge`, the total mass of fragmenting metal given in grams.
+`ace_frag_charge` is the total mass of fragmenting metal given in grams.
 
 ### 2.2 Explosives filler amount
 
@@ -52,7 +52,7 @@ As long as the units match `ace_frag_charge`, the total mass of fragmenting meta
 
 The mass of explosive filler in the warhead. This may include any detonation/ignition charges, but usually such charges are relatively small.
 
-As long as the units match `ace_frag_metal`, the total mass of explosive filler given in grams.
+`ace_frag_metal` is the total mass of explosive filler given in grams.
 
 ### 2.3 Gurney velocity constant
 
