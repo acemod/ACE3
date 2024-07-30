@@ -84,7 +84,7 @@ if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
 
         _unit call CBA_fnc_canUseWeapon
         && {_currentMuzzle in (_unit getVariable [QGVAR(jammedWeapons), []])}
-        && {!([_unit, _currentWeapon, _currentMuzzle] call EFUNC(safemode,getWeaponSafety))}
+        && {!(["ace_safemode"] call EFUNC(common,isModLoaded)) || {!([_unit, _currentWeapon, _currentMuzzle] call EFUNC(safemode,getWeaponSafety))}}
     };
 
     private _statement = {
