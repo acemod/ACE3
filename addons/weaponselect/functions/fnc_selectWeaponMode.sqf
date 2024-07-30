@@ -28,7 +28,7 @@ if (currentWeapon _unit != _weapon) exitWith {
 };
 
 // Unlock safety
-if ([_unit, _weapon] call EFUNC(safemode,getWeaponSafety)) exitWith {
+if ((["ace_safemode"] call EFUNC(common,isModLoaded)) && {[_unit, _weapon] call EFUNC(safemode,getWeaponSafety)}) exitWith {
     [_unit, _weapon, false] call EFUNC(safemode,setWeaponSafety);
 };
 
