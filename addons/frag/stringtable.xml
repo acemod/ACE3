@@ -17,18 +17,6 @@
             <Chinesesimp>破片模拟</Chinesesimp>
             <Chinese>模擬碎片</Chinese>
         </Key>
-        <Key ID="STR_ACE_Frag_Frag">
-            <English>Fragmentation</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_Spall">
-            <English>Spalling</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_Reflections">
-            <English>Explosion Reflections</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_Debug">
-            <English>Debug</English>
-        </Key>
         <Key ID="STR_ACE_Frag_EnableFrag">
             <English>Fragmentation Simulation</English>
             <Polish>Symulacja fragmentacji</Polish>
@@ -122,6 +110,9 @@
             <Chinesesimp>启用 ACE 模拟爆炸反射</Chinesesimp>
             <Chinese>啟用ACE模擬爆炸反射</Chinese>
             <Czech>Povolit ACE simulaci odrazu exploze</Czech>
+        </Key>
+        <Key ID="STR_ACE_Frag_Debug">
+            <English>Debug</English>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>Frag/Spall Debug Tracing</English>
