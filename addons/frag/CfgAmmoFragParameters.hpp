@@ -66,7 +66,6 @@ class Gatling_30mm_HE_Plane_CAS_01_F: BulletBase {
     GVAR(gurney_k) = "1/2";
 };
 
-
 class ammo_Gun35mmAABase: BulletBase {
     // Gepard uses an Oerlikon GDF and the AA vehicles mimics it like it
     // https://en.wikipedia.org/wiki/Oerlikon_GDF#Ammunition
@@ -191,7 +190,7 @@ class GrenadeHand: Grenade {
     GVAR(gurney_c) = 2843; // Gurney velocity constant for explosive type. See: http://en.wikipedia.org/wiki/Gurney_equations
     GVAR(gurney_k) = "3/5"; // Gurney shape factor, in this case a sphere. See: http://en.wikipedia.org/wiki/Gurney_equations
 };
-class mini_Grenade:  GrenadeHand {
+class mini_Grenade: GrenadeHand {
     GVAR(classes)[] = {QGVAR(tiny)};
     GVAR(metal) = 104;
     GVAR(charge) = 36;
@@ -400,7 +399,6 @@ class M_SPG9_HE: M_SPG9_HEAT {
     GVAR(classes)[] = {QGVAR(small), QGVAR(tiny), QGVAR(medium), QGVAR(medium)};
 };
 
-
 // https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN18072_TC%203-22x84%20FINAL%20WEB.pdf
 class R_MRAAWS_HEAT_F: RocketBase { // Table A-20. HEAT 751
     GVAR(skip) = 0;
@@ -524,7 +522,6 @@ class M_Titan_AP: M_Titan_AT {
     GVAR(gurney_k) = "3/5";
     GVAR(classes)[] = {QGVAR(medium_HD)};
 };
-
 
 class M_Scalpel_AT: MissileBase { // 9K121 Vikhr
     GVAR(skip) = 0;
@@ -690,10 +687,10 @@ class M_NLAW_AT_F: MissileBase {
 class Sh_75mm_Railgun_APFSDS: ShellBase {
     GVAR(skip) = 1;
 };
-class  Sh_120mm_APFSDS: ShellBase {
+class Sh_120mm_APFSDS: ShellBase {
     GVAR(skip) = 1;
 };
-class  Sh_125mm_APFSDS: ShellBase {
+class Sh_125mm_APFSDS: ShellBase {
     GVAR(skip) = 1;
 };
 

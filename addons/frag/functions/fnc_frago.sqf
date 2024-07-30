@@ -132,7 +132,6 @@ if (_targets isNotEqualTo []) then {
     TRACE_1("",_randomCount);
     private _sectorSize = 360 / (_randomCount max 1);
 
-
     for "_i" from 1 to _randomCount do {
         // Distribute evenly
         private _sectorOffset = 360 * (_i - 1) / (_randomCount max 1);
