@@ -113,7 +113,11 @@ if (_targets isNotEqualTo []) then {
                     private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
                     _fragObj setVectorDir _vectorDir;
                     _fragObj setVelocity _fragObjVelocity;
-                    _fragObj setShotParents _shotParents;
+                    if (_shotParents#0 isEqualTo _target) then {
+                        _fragObj setShotParents [objNull, _fragObj#1];
+                    } else {
+                        _fragObj setShotParents _shotParents;
+                    };
                     #ifdef DEBUG_MODE_DRAW
                     [_fragObj, "green", true] call FUNC(dev_trackObj);
                     [_targetPos, "(0.88,0.36,0.92,0.8)"] call FUNC(dev_sphereDraw);
