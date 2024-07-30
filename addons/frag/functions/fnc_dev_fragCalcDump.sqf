@@ -34,8 +34,7 @@ diag_log text "//****************** fragCalcDump Beg ******************//";
     _ammo call FUNC(shouldFrag) params ["_shouldFrag"];
     if (_shouldFrag || _logAll) then {
         private _fragInfo = _ammo call FUNC(getFragInfo);
-        _fragInfo params ["_fragRange", "_fragMaxVelocity", "", "_modifiedFragCount"];
-        private _fragCount = 4 * pi * _modifiedFragCount;
+        _fragInfo params ["_fragRange", "_fragMaxVelocity"];
         private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
         private _indirectHitRange = getNumber (_ammoConfig >> "indirectHitRange");
         private _indirectHit = getNumber (_ammoConfig >> "indirectHit");
@@ -47,7 +46,6 @@ diag_log text "//****************** fragCalcDump Beg ******************//";
         diag_log text format ["    Frag sqrtPower:     %1", _fragPowerSqrt];
         diag_log text format ["    Frag range:         %1", _fragRange];
         diag_log text format ["    Frag speed range:   %1", _fragPowerSpeedRange];
-        diag_log text format ["    Number frags:       %1", _fragCount];
         INC(_numberPrinted);
     };
 

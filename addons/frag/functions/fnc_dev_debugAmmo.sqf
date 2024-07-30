@@ -29,7 +29,7 @@ params [
 
 diag_log text format ["~~~~~~~~~~~~~Start [%1]~~~~~~~~~~~~~", _this];
 if (_csvFormat) then {
-    diag_log text format ["ammo,gurney_c,gurney_m,gurney_k,gurney_gC,skip,fragCount,Inheritance"];
+    diag_log text format ["ammo,gurney_c,gurney_m,gurney_k,gurney_gC,skip,Inheritance"];
 };
 
 // Gather all configs, either those that could be created from firing or all classes
@@ -91,16 +91,14 @@ private _printCount = 0;
             if (_k == 0) then {_print = true;};
             private _gC = getNumber (_ammoConfig >> QGVAR(gurney_c));
             if (_gC == 0) then {_print = true;};
-            private _fragCount = getNumber (_ammoConfig >> QGVAR(fragCount));
-            if (_fragCount == 0) then {_fragCount = 200; _print = true;};
 
             if (!_printOnlyIncomplete || {_print && _skip != 0}) then {
                 INC(_printCount);
                 if (_csvFormat) then {
-                    diag_log text format ["%7,%1,%2,%3,%4,%5,%6,%9,%8", _c, _m, _k, _gC, _skip, _fragCount, _ammo, [_ammoConfig, true] call BIS_fnc_returnParents, _shouldFrag];
+                    diag_log text format ["%6,%1,%2,%3,%4,%5,%8,%7", _c, _m, _k, _gC, _skip, _ammo, [_ammoConfig, true] call BIS_fnc_returnParents, _shouldFrag];
                 } else {
                     diag_log text format ["Ammo [%1] MISSING frag configs:", _ammo];
-                    diag_log text format ["_c=%1,_m=%2,_k=%3,_gC=%4,_skip=%5,_fragCount=%6,_fragTypes=%7", _c, _m, _k, _gC, _skip, _fragCount, _fragTypes];
+                    diag_log text format ["_c=%1,_m=%2,_k=%3,_gC=%4,_skip=%5,_fragTypes=%6", _c, _m, _k, _gC, _skip, _fragTypes];
                 };
             };
         };
