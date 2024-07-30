@@ -37,10 +37,10 @@ GVAR(lastFragTime) = CBA_missionTime;
 
 _shellType call FUNC(getFragInfo) params ["_fragRange", "_fragVelocity", "_fragTypes", "_metalMassModifier"];
 
-private _fragPosAGL = ASLtoAGL _fragPosASL;
+private _fragPosAGL = ASLToAGL _fragPosASL;
 TRACE_5("fragValues",_fragPosASL,_fragPosAGL,_fragRange,_fragVelocity,_metalMassModifier);
 // Post 2.18 change - uncomment line 43, modify lines 45, and remove lines 44, 51-57, 64-66
-// private _targets = [ASLtoAGL _fragPosAGL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
+// private _targets = [ASLToAGL _fragPosAGL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
 private _objects = _fragPosAGL nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
 if (_objects isEqualTo []) exitWith {
     TRACE_2("No nearby targets",_fragPosAGL,_fragRange);
@@ -116,6 +116,7 @@ if (_targets isNotEqualTo []) then {
                     _fragObj setShotParents _shotParents;
                     #ifdef DEBUG_MODE_DRAW
                     [_fragObj, "green", true] call FUNC(dev_trackObj);
+                    [AGLToASL _fragPosAGL, "(0.88,0.36,0.92,0.5)"] call FUNC(dev_sphereDraw);
                     #endif
                     INC(_fragCount);
                     INC(_currentCount);
