@@ -1,16 +1,16 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm, PabstMirror
- * Handles adding ammo to a turret
- * Called from a global event but only runs where turret is local
+ * Handles adding ammo to a turret.
+ * Called from a global event but only runs where turret is local.
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret Path <ARRAY>
  * 2: Source of magazine <OBJECT>
  * 3: Vehicle Magazine <STRING>
  * 4: Ammo in magazine <NUMBER>
- * 5: Unit or object to return ammo to <OBJECT>
+ * 5: Unit or object to return ammo to <OBJECT> (default: Source of magazine)
  *
  * Return Value:
  * None
@@ -21,7 +21,8 @@
  * Public: No
  */
 
-params ["_vehicle", "_turret", "_magSource", "_carryMag", "_ammoReceived", ["_returnTo", _magSource]];
+params ["_vehicle", "_turret", "_magSource", "_carryMag", "_ammoReceived"];
+private _returnTo = param [5, _magSource];
 TRACE_6("reload_handleAddTurretMag",_vehicle,_turret,_magSource,_carryMag,_ammoReceived,_returnTo);
 
 TRACE_2("",local _vehicle,_vehicle turretLocal _turret);
