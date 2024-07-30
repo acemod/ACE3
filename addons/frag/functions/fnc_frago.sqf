@@ -5,9 +5,8 @@
  *
  * Arguments:
  * 0: Last Position (ASL) <ARRAY>
- * 1: Velocity <ARRAY>
- * 2: Ammo Classname <STRING>
- * 3: Shot parents <ARRAY>
+ * 1: Ammo Classname <STRING>
+ * 2: Shot parents <ARRAY>
  *
  * Return Value:
  * The number of fragments created <NUMBER>
@@ -22,11 +21,17 @@
 
 BEGIN_COUNTER(frago);
 
-params ["_fragPosASL", "_lastVel", "_shellType", "_shotParents"];
-TRACE_4("frago",_fragPosASL,_lastVel,_shellType,_shotParents);
+params ["_fragPosASL", "_shellType", "_shotParents"];
+TRACE_3("frago",_fragPosASL,_shellType,_shotParents);
 
 // Limit max frag count if there was a recent frag
-private _maxFrags = round linearConversion [ACE_FRAG_COUNT_MIN_TIME, ACE_FRAG_COUNT_MAX_TIME, (CBA_missionTime - GVAR(lastFragTime)), ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX, true];
+private _maxFrags = round linearConversion [
+    ACE_FRAG_COUNT_MIN_TIME,
+    ACE_FRAG_COUNT_MAX_TIME,
+    (CBA_missionTime - GVAR(lastFragTime)),
+    ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX,
+    true
+];
 TRACE_2("",_maxFrags,CBA_missionTime - GVAR(lastFragTime));
 GVAR(lastFragTime) = CBA_missionTime;
 
@@ -34,7 +39,7 @@ _shellType call FUNC(getFragInfo) params ["_fragRange", "_fragVelocity", "_fragT
 
 private _fragPosAGL = ASLtoAGL _fragPosASL;
 TRACE_5("fragValues",_fragPosASL,_fragPosAGL,_fragRange,_fragVelocity,_metalMassModifier);
-// Post 2.18 change - uncomment line 41, and remove lines 43, 50-55, 64-66
+// Post 2.18 change - uncomment line 43, modify lines 45, and remove lines 44, 51-57, 64-66
 // private _targets = [ASLtoAGL _fragPosAGL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
 private _objects = _fragPosAGL nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
 if (_objects isEqualTo []) exitWith {
@@ -63,7 +68,7 @@ if (_targets isNotEqualTo []) then {
     };
     {
         private _target = _x;
-        if (alive _target) then {
+        if (alive _target && {getNumber ((configOf _target) >> "isPlayableLogic") == 0}) then {
             (boundingBox _target) params ["_boundingBoxA", "_boundingBoxB"];
 
             private _cubic = ((abs (_boundingBoxA select 0)) + (_boundingBoxB select 0)) * ((abs (_boundingBoxA select 1)) + (_boundingBoxB select 1)) * ((abs (_boundingBoxA select 2)) + (_boundingBoxB select 2));
@@ -97,16 +102,15 @@ if (_targets isNotEqualTo []) then {
 
                 for "_i" from 1 to _count do {
                     private _vectorDir = _baseVec vectorDiff [
-                    (_vecVar / 2) + (random _vecVar),
-                    (_vecVar / 2) + (random _vecVar),
-                    (_vecVar / 2) + (random _vecVar)
+                    (_vecVar / 2) - (random _vecVar),
+                    (_vecVar / 2) - (random _vecVar),
+                    (_vecVar / 2) - (random _vecVar)
                     ];
 
                     private _fragObjSpeed = _fragVelocity * (1 - random 0.5);
                     private _fragObjVelocity = _vectorDir vectorMultiply _fragObjSpeed;
 
                     private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
-
                     _fragObj setVectorDir _vectorDir;
                     _fragObj setVelocity _fragObjVelocity;
                     _fragObj setShotParents _shotParents;
@@ -139,7 +143,6 @@ if (_targets isNotEqualTo []) then {
         _fragObjVelocity = _vectorDir vectorMultiply _fragObjSpeed;
 
         private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
-        _fragObj setPosASL _fragPosASL;
         _fragObj setVectorDir _vectorDir;
         _fragObj setVelocity _fragObjVelocity;
         _fragObj setShotParents _shotParents;
