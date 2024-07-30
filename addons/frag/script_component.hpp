@@ -10,6 +10,7 @@
 
 #ifdef DEBUG_ENABLED_FRAG
     #define DEBUG_MODE_FULL
+    #define DEBUG_MODE_DRAW
 #endif
 
 #ifdef DEBUG_SETTINGS_FRAG
