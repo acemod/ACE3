@@ -70,7 +70,7 @@ for "_i" from 0 to 20 do {
 if (_spallPosAGL isEqualTo _pos1) exitWith {
     TRACE_1("can't find other side",_oldPosASL);
 };
-_spallPosAGL = ASLtoAGL _spallPosAGL;
+_spallPosAGL = ASLToAGL _spallPosAGL;
 
 (_shotParents#1) setVariable [QGVAR(nextSpallEvent), CBA_missionTime + ACE_FRAG_SPALL_UNIT_HOLDOFF];
 private _oldVelocitySpherical = _oldVelocity call CBA_fnc_vect2polar;

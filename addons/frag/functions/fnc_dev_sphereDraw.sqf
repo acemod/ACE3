@@ -34,7 +34,7 @@ if (_color select [0,1] != "(") then {
 };
 private _colorString = "#(argb,8,8,3)color" + _color;
 
-private _sphere = createVehicle ["Sign_Sphere10cm_F", ASLtoATL _posASL, [], 0, "CAN_COLLIDE"];
+private _sphere = createVehicle ["Sign_Sphere10cm_F", ASLToATL _posASL, [], 0, "CAN_COLLIDE"];
 _sphere setObjectTextureGlobal [0, _colorString];
 GVAR(dev_eventSpheres) pushBack _sphere;
 _sphere

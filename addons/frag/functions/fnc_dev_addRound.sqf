@@ -61,7 +61,7 @@ _projectile addEventHandler [
     {
         params ["_projectile", "", "", "_posASL"];
         private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
-        _posArr pushBack ASLtoATL _posASL;
+        _posArr pushBack ASLToATL _posASL;
         if (GVAR(dbgSphere)) then {
             [_posASL, "green"] call FUNC(dev_sphereDraw);
         };
@@ -73,7 +73,7 @@ _projectile addEventHandler [
     {
         params ["_projectile", "_posASL"];
         private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
-        _posArr pushBack ASLtoATL _posASL;
+        _posArr pushBack ASLToATL _posASL;
         if (GVAR(dbgSphere)) then {
             [_posASL, "red"] call FUNC(dev_sphereDraw);
         };
@@ -85,7 +85,7 @@ _projectile addEventHandler [
     {
         params ["_projectile", "_posASL"];
         private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
-        _posArr pushBack ASLtoATL _posASL;
+        _posArr pushBack ASLToATL _posASL;
         if (GVAR(dbgSphere)) then {
             [_posASL, "blue"] call FUNC(dev_sphereDraw);
         };
