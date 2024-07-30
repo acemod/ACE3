@@ -45,7 +45,7 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
                     if (CBA_missionTime < _shotParents#1 getVariable [QGVAR(nextSpallEvent), -1]) exitWith {};
                     _this call FUNC(doSpall);
                 },
-                [_hitObject, _ammo, _projectile, _posASL, _velocity, _shotParents]
+                [_hitObject, _ammo, _projectile, _posASL, _velocity, [objNull, _shotParents#1]]
             ] call CBA_fnc_execNextFrame;
         }
     ];
@@ -73,7 +73,7 @@ if (GVAR(reflectionsEnabled) || GVAR(enabled) && _ammo call FUNC(shouldFrag)) th
             // Wait a frame to make sure it doesn't target the dead
             [
                 { [QGVAR(frag_eh), _this] call CBA_fnc_serverEvent; },
-                [_posASL, _ammo, _shotParents]
+                [_posASL, _ammo, [objNull _instigator]]
             ] call CBA_fnc_execNextFrame;
         }
     ];
