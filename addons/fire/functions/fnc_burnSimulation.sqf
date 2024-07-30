@@ -148,19 +148,29 @@ params ["_unit", "_instigator"];
             _unit call FUNC(burnReaction);
         };
 
-        if (!isNull _instigator) then {
-            _unit setVariable [QEGVAR(medical,lastDamageSource), _instigator];
-            _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
+        // Keep pain around unconsciousness limit to allow for more fun interactions
+        private _painPercieved = (0 max ((_unit getVariable [QEGVAR(medical,pain), 0]) - (_unit getVariable [QEGVAR(medical,painSuppress), 0])) min 1);
+        private _painUnconscious = missionNamespace getVariable [QEGVAR(medical,painUnconsciousThreshold), 0];
+        private _damageToAdd = [0.15, _intensity / BURN_MAX_INTENSITY] select (!alive _unit || {_painPercieved < _painUnconscious + random 0.2});
+
+        if (GETEGVAR(medical,enabled,false)) then {
+            if (!isNull _instigator) then {
+                _unit setVariable [QEGVAR(medical,lastDamageSource), _instigator];
+                _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
+            };
+
+            // Common burn areas are the hands and face https://www.ncbi.nlm.nih.gov/pubmed/16899341/
+            private _bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] selectRandomWeighted [0.77, 0.5, 0.8, 0.8, 0.3, 0.3];
+
+            // Use event directly, as ace_medical_fnc_addDamageToUnit requires unit to be alive
+            [QEGVAR(medical,woundReceived), [_unit, [[_damageToAdd, _bodyPart, _damageToAdd]], _instigator, "burn"]] call CBA_fnc_localEvent;
+        } else {
+            private _bodyParts = [["HitFace", "HitNeck", "HitHead"], ["HitPelvis", "HitAbdomen", "HitDiaphragm", "HitChest", "HitBody"], ["HitArms", "HitHands"], ["HitLegs"]] selectRandomWeighted [0.77, 0.5, 0.8, 0.3];
+
+            {
+                _unit setHitPointDamage [_x, (_unit getHitPointDamage _x) + _damageToAdd, true, _instigator, _instigator];
+            } forEach _bodyParts;
         };
-
-        // Common burn areas are the hands and face https://www.ncbi.nlm.nih.gov/pubmed/16899341/
-        private _bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] selectRandomWeighted [0.77, 0.5, 0.8, 0.8, 0.3, 0.3];
-
-        // Keep pain around unconciousness limit to allow for more fun interactions
-        private _damageToAdd = [0.15, _intensity / BURN_MAX_INTENSITY] select (!alive _unit || {GET_PAIN_PERCEIVED(_unit) < (PAIN_UNCONSCIOUS + random 0.2)});
-
-        // Use event directly, as ace_medical_fnc_addDamageToUnit requires unit to be alive
-        [QEGVAR(medical,woundReceived), [_unit, [[_damageToAdd, _bodyPart, _damageToAdd]], _instigator, "burn"]] call CBA_fnc_localEvent;
 
         _unit setVariable [QGVAR(intensity), _intensity, true]; // Globally sync intensity across all clients to make sure simulation is deterministic
     };
