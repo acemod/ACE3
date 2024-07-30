@@ -203,7 +203,6 @@ class SmokeShell: GrenadeHand {
     GVAR(skip) = 1;
 };
 class G_40mm_HE: GrenadeBase {
-    class EventHandlers: EventHandlers {};
     // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M441
     GVAR(skip) = 0;
     GVAR(force) = 0;
@@ -222,7 +221,6 @@ class G_20mm_HE: G_40mm_HE {
     GVAR(gurney_k) = "3/5"; // interior fragmenter/charge is a sphere
 };
 class G_40mm_HEDP: G_40mm_HE {
-    class EventHandlers: EventHandlers {};
     // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M433
     GVAR(classes)[] = {QGVAR(tiny), QGVAR(small), QGVAR(small_HD)};
     GVAR(metal) = 200;
@@ -231,12 +229,8 @@ class G_40mm_HEDP: G_40mm_HE {
     GVAR(gurney_k) = "1/2";
 };
 
-class ACE_G_40mm_HEDP: G_40mm_HEDP {
-    class EventHandlers: EventHandlers {};
-};
-class ACE_G_40mm_HE: G_40mm_HE {
-    class EventHandlers: EventHandlers {};
-};
+class ACE_G_40mm_HEDP: G_40mm_HEDP {};
+class ACE_G_40mm_HE: G_40mm_HE {};
 class ACE_G_40mm_Practice: ACE_G_40mm_HE {
     GVAR(skip) = 1;
     GVAR(force) = 0;
@@ -249,7 +243,6 @@ class ATMine_Range_Ammo: MineBase {
 };
 
 class APERSMine_Range_Ammo: MineBase { // VS-50
-    class EventHandlers: EventHandlers {};
     GVAR(skip) = 0;
     GVAR(force) = 0;
     GVAR(classes)[] = {QGVAR(tiny), QGVAR(tiny), QGVAR(small)};
@@ -552,11 +545,8 @@ class ACE_Hellfire_AGM114K: M_Scalpel_AT {
     GVAR(gurney_k) = "1/2";
 };
 
-class ammo_Missile_CruiseBase: MissileBase {
-    class EventHandlers: EventHandlers {};
-};
+class ammo_Missile_CruiseBase: MissileBase {};
 class ammo_missile_cruise_01: ammo_Missile_CruiseBase {
-    class EventHandlers: EventHandlers {};
     GVAR(skip) = 0;
     GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(large)};
     GVAR(metal) = 700000;
