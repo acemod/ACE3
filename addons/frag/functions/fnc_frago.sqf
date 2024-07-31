@@ -116,7 +116,9 @@ if (_targets isNotEqualTo []) then {
                     _fragObj setShotParents _shotParents;
                     #ifdef DEBUG_MODE_DRAW
                     [_fragObj, "green", true] call FUNC(dev_trackObj);
-                    [_targetPos, "(0.88,0.36,0.92,0.8)"] call FUNC(dev_sphereDraw);
+                    if (GVAR(dbgSphere)) then {
+                        [_targetPos, "(0.88,0.36,0.92,0.8)"] call FUNC(dev_sphereDraw);
+                    };
                     #endif
                     INC(_fragCount);
                     INC(_currentCount);
