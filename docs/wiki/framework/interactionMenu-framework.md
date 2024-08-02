@@ -59,6 +59,10 @@ class CfgVehicles {
 | `distance` | Number | External Base Actions Only, Max distance player can be from action point |
 | `position` | String (of code) | External Base Actions Only, Code to return a position in model cords (priority over `selection`) |
 | `selection` | String | External Base Actions Only, A memory point for `selectionPosition` |
+| `doNotCheckLOS` | Number | (1=true) - Ignores blocked LOS to the interaction node even when beyond 1.2m |
+| `showDisabled` | Number | Currently has no effect |
+| `enableInside` | Number | Currently has no effect |
+| `canCollapse` | Number | Currently has no effect |
 
 Actions can be inserted anywhere on the config tree, e.g. hearing's earplugs is a sub action of `ACE_Equipment`:
 
