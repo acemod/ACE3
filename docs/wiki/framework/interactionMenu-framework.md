@@ -72,6 +72,25 @@ class CAManBase: Man {
 };
 ```
 
+Interaction exceptions are defined by several components:
+
+| Component | Exception | Description |
+| ---------- | ----------- | ------------------- |
+| `captives` | `"isNotEscorting"` | Can interact while escorting a captive |
+|  | `"isNotHandcuffed"` | Can interact while handcuffed |
+|  | `"isNotSurrendering"` | Can interact while surrendering |
+| `common` | `"isNotDead"` | Can interact while dead |
+|  | `"notOnMap"` | Can interact while in Map |
+|  | `"isNotInside"` | Can interact while inside a vehicle |
+|  | `"isNotInZeus"` | Can interact while in the zeus interface |
+|  | `"isNotUnconscious"` | Can interact while unconscious |
+| `dragging` | `"isNotDragging"` | Can interact while dragging |
+|  | `"isNotCarrying"` | Can interact while carrying |
+| `interaction` | `"isNotSwimming"` | Can interact while swimming/diving |
+|  | `"isNotOnLadder"` | Can interact while climbing a ladder |
+| `refuel` | `"isNotRefueling"` | Can interact while carrying refueling nozzle |
+| `sitting` | `"isNotSitting"` | Can interact while sitting in a chair |
+
 ## 3. Adding actions via scripts
 
 Two steps, creating an action (array) and then adding it to either a class or object.
