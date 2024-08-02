@@ -22,11 +22,11 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\hamr-reticle65_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\hamr-reticle65Illum_ca.paa);
-            reticleTextureSize = 1 * 0.9;
+            reticleTextureSize = 0.9;
 
             bodyTexture = QPATHTOF(reticles\hamr-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\hamr-bodyNight_ca.paa);
-            bodyTextureSize = 1.95 * 0.9;
+            bodyTextureSize = 1.95;
 
             hideMagnification = 1;
         };
@@ -38,12 +38,21 @@ class CfgWeapons {
             class OpticsModes: OpticsModes {
                 class Hamr2Scope: Hamr2Scope {
                     useModelOptics = 1;
+                    opticsZoomInit = 0.25 / 4;
+                    opticsZoomMax = 0.25 / 4;
+                    opticsZoomMin = 0.25 / 4;
                 };
                 class Hamr2Collimator: Hamr2Collimator {};
             };
         };
     };
-    PIP(ACE_optic_Hamr_PIP,ACE_optic_Hamr_2D);
+    class ACE_optic_Hamr_PIP: ACE_optic_Hamr_2D {
+        author = ECSTRING(common,ACETeam);
+        scope = 1;
+        class ItemInfo: ItemInfo {
+            modelOptics = "\x\cba\addons\optics\cba_optic_big_pip.p3d";
+        };
+    };
 
     // ARCO
     class optic_Arco: ItemCore {
@@ -65,28 +74,37 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\arco-reticle65_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\arco-reticle65Illum_ca.paa);
-            reticleTextureSize = 1 * 0.95;
+            reticleTextureSize = 0.72;
 
             bodyTexture = QPATHTOF(reticles\arco-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\arco-bodyNight_ca.paa);
-            bodyTextureSize = 1.95 * 0.95;
+            bodyTextureSize = 1.55;
 
             hideMagnification = 1;
         };
         weaponInfoType = "CBA_ScriptedOptic";
 
         class ItemInfo: ItemInfo {
-            modelOptics = "\x\cba\addons\optics\cba_optic_big_90.p3d";
+            modelOptics = "\x\cba\addons\optics\cba_optic_small_90.p3d";
 
             class OpticsModes: OpticsModes {
                 class ARCO2scope: ARCO2scope {
                     useModelOptics = 1;
+                    opticsZoomInit = 0.25 / 4;
+                    opticsZoomMax = 0.25 / 4;
+                    opticsZoomMin = 0.25 / 4;
                 };
                 class ARCO2collimator: ARCO2collimator {};
             };
         };
     };
-    PIP(ACE_optic_Arco_PIP,ACE_optic_Arco_2D);
+    class ACE_optic_Arco_PIP: ACE_optic_Arco_2D {
+        author = ECSTRING(common,ACETeam);
+        scope = 1;
+        class ItemInfo: ItemInfo {
+            modelOptics = "\x\cba\addons\optics\cba_optic_small_pip.p3d";
+        };
+    };
 
     // MRCO
     class optic_MRCO: ItemCore {
@@ -108,28 +126,37 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\mrco-reticle556_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\mrco-reticle556Illum_ca.paa);
-            reticleTextureSize = 1 * 0.95;
+            reticleTextureSize = 0.72;
 
             bodyTexture = QPATHTOF(reticles\mrco-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\mrco-bodyNight_ca.paa);
-            bodyTextureSize = 1.95 * 0.95;
+            bodyTextureSize = 1.55;
 
             hideMagnification = 1;
         };
         weaponInfoType = "CBA_ScriptedOptic";
 
         class ItemInfo: ItemInfo {
-            modelOptics = "\x\cba\addons\optics\cba_optic_big_90.p3d";
+            modelOptics = "\x\cba\addons\optics\cba_optic_small_90.p3d";
 
             class OpticsModes: OpticsModes {
                 class MRCOscope: MRCOscope {
                     useModelOptics = 1;
+                    opticsZoomInit = 0.25 / 4;
+                    opticsZoomMax = 0.25 / 4;
+                    opticsZoomMin = 0.25 / 4;
                 };
                 class MRCOcq: MRCOcq {};
             };
         };
     };
-    PIP(ACE_optic_MRCO_PIP,ACE_optic_MRCO_2D);
+    class ACE_optic_MRCO_PIP: ACE_optic_MRCO_2D {
+        author = ECSTRING(common,ACETeam);
+        scope = 1;
+        class ItemInfo: ItemInfo {
+            modelOptics = "\x\cba\addons\optics\cba_optic_small_pip.p3d";
+        };
+    };
 
     // SOS
     class optic_SOS: ItemCore {
@@ -151,18 +178,22 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\sos-reticleMLR_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\sos-reticleMLRIllum_ca.paa);
-            reticleTextureSize = 1 * 0.75;
+            reticleTextureSize = 0.85;
 
             bodyTexture = QPATHTOF(reticles\sos-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\sos-bodyNight_ca.paa);
-            bodyTextureSize = 1.95 * 0.75;
+            bodyTextureSize = 1.75;
         };
         weaponInfoType = "CBA_ScriptedOptic";
 
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
-                    modelOptics[] = {"\x\cba\addons\optics\cba_optic_big_90.p3d", "\x\cba\addons\optics\cba_optic_big_90.p3d"};
+                    opticsZoomMin = "5.5 call (uiNamespace getVariable 'cba_optics_fnc_setOpticMagnificationHelper')";
+                    opticsZoomMax = "2.75 call (uiNamespace getVariable 'cba_optics_fnc_setOpticMagnificationHelper')";
+                    opticsZoomInit = "2.75 call (uiNamespace getVariable 'cba_optics_fnc_setOpticMagnificationHelper')";
+                    discreteFov[] = {};
+                    modelOptics[] = {"\x\cba\addons\optics\cba_optic_big_90.p3d"};
                     useModelOptics = 1;
                 };
                 class Iron: Iron {};
@@ -175,7 +206,7 @@ class CfgWeapons {
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
-                    modelOptics[] = {"\x\cba\addons\optics\cba_optic_big_pip.p3d", "\x\cba\addons\optics\cba_optic_big_pip.p3d"};
+                    modelOptics[] = {"\x\cba\addons\optics\cba_optic_big_pip.p3d"};
                 };
                 class Iron: Iron {};
             };
@@ -201,18 +232,22 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\sos-reticleMLR_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\sos-reticleMLRIllum_ca.paa);
-            reticleTextureSize = 1 * 0.75;
+            reticleTextureSize = 0.85;
 
             bodyTexture = QPATHTOF(reticles\sos-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\sos-bodyNight_ca.paa);
-            bodyTextureSize = 1.95 * 0.75;
+            bodyTextureSize = 1.75;
         };
         weaponInfoType = "CBA_ScriptedOptic";
 
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
-                    modelOptics[] = {"\x\cba\addons\optics\cba_optic_big_90.p3d", "\x\cba\addons\optics\cba_optic_big_90.p3d"};
+                    opticsZoomMin = "22 call (uiNamespace getVariable 'cba_optics_fnc_setOpticMagnificationHelper')";
+                    opticsZoomMax = "5.5 call (uiNamespace getVariable 'cba_optics_fnc_setOpticMagnificationHelper')";
+                    opticsZoomInit = "5.5 call (uiNamespace getVariable 'cba_optics_fnc_setOpticMagnificationHelper')";
+                    discreteFov[] = {};
+                    modelOptics[] = {"\x\cba\addons\optics\cba_optic_big_90.p3d"};
                     useModelOptics = 1;
                 };
             };
@@ -224,7 +259,7 @@ class CfgWeapons {
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
-                    modelOptics[] = {"\x\cba\addons\optics\cba_optic_big_pip.p3d", "\x\cba\addons\optics\cba_optic_big_pip.p3d"};
+                    modelOptics[] = {"\x\cba\addons\optics\cba_optic_big_pip.p3d"};
                 };
             };
         };
