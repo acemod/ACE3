@@ -173,6 +173,7 @@
             <Polish>Wykrwawienie podczas zatrzymanej akcji serca</Polish>
             <Chinesesimp>心脏骤停期间失血情况</Chinesesimp>
             <Korean>심정지 중 출혈</Korean>
+            <Portuguese>Sangramento durante parada cardíaca</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_CardiacArrestBleedout_Description">
             <English>Controls whether a person can die in cardiac arrest by blood loss before the cardiac arrest time runs out.</English>
@@ -185,6 +186,7 @@
             <Polish>Kontroluje czy śmierć osoby może nastąpić poprzez wykrwawienie zanim wyczerpię się Czas Zatrzymania Akcji Serca.</Polish>
             <Chinesesimp>控制单位是否会在心脏骤停时间耗完之前因失血过多而死亡。</Chinesesimp>
             <Korean>지정한 심정지 시간이 다 되기 전에 출혈로 인해 사망할 수 있는 지를 결정합니다.</Korean>
+            <Portuguese>Controla se uma pessoa pode morrer em parada cardíaca por perda de sangue antes que o tempo de parada cardíaca acabe.</Portuguese>
         </Key>
     </Package>
 </Project>
