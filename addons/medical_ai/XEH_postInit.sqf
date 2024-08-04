@@ -21,9 +21,7 @@
     }] call CBA_fnc_addClassEventHandler;
 
     // Add command actions to command AI medics to treat other units
-    if (hasInterface) then {
-        call FUNC(addHealingCommandActions);
-    };
+    call FUNC(addHealingCommandActions);
 
     if (GVAR(requireItems) == 2) then {
         ["CAManBase", "InitPost", {

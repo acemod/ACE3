@@ -10,10 +10,12 @@
  * None
  *
  * Example:
- * player call ace_medical_ai_fnc_addHealingCommandActions
+ * call ace_medical_ai_fnc_addHealingCommandActions
  *
  * Public: No
  */
+
+if (!hasInterface) exitWith {};
 
 private _action = [
     QGVAR(heal),
