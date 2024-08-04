@@ -190,6 +190,7 @@ PREP(stopGesture);
 PREP(stringCompare);
 PREP(stringToColoredText);
 PREP(swayLoop);
+PREP(switchAttachmentMode);
 PREP(switchPersistentLaser);
 PREP(switchToGroupSide);
 PREP(throttledPublicVariable);

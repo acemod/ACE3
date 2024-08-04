@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [cursorObject, true, true] call ace_medical_ai_fnc_playTreatmentAnim
+ * [cursorObject, "Splint", true] call ace_medical_ai_fnc_playTreatmentAnim
  *
  * Public: No
  */

@@ -12,6 +12,7 @@
             <Korean>ACE 고급 차량 피해</Korean>
             <Russian>ACE Продвинутое повреждение техники</Russian>
             <Spanish>ACE Daño avanzado de vehículos</Spanish>
+            <Portuguese>ACE Dano avançãdo de veículos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_setting_description">
             <English>Enable/Disable advanced vehicle damage</English>
@@ -24,6 +25,7 @@
             <Korean>고급 차량 피해 활성화/비활성화</Korean>
             <Russian>Включить/выключить продвинутое повреждение техники</Russian>
             <Spanish>Habilitar/Deshabilitar el daño avanzado de vehículos</Spanish>
+            <Portuguese>Ativar/Desativar dano avançado de veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_description">
             <English>Enable/Disable advanced car damage (Experimental)</English>
@@ -36,6 +38,7 @@
             <Korean>고급 차량 피해(실험용) 활성화/비활성화</Korean>
             <Russian>Включить/выключить продвинутое повреждение машин (экспериментальное)</Russian>
             <Spanish>Habilita/Deshabilita el daño avanzado de coche (Experimental)</Spanish>
+            <Portuguese>Ativar/Desativar dano avançado de carro (Experimental)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_enable">
             <English>Enable/Disable advanced car damage</English>
@@ -48,6 +51,7 @@
             <Korean>고급 차량 피해 활성화/비활성화</Korean>
             <Russian>Продвинутое повреждение машин</Russian>
             <Spanish>Habilitar/Deshabilitar daño avanzado de coche (Experimental)</Spanish>
+            <Portuguese>Ativar/Desativar dano avançado de carro</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_generic_turret_wreck">
             <English>Wreck (Turret)</English>
