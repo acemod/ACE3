@@ -94,6 +94,9 @@ private _treatmentTime = 6;
 private _treatmentItem = "";
 
 if (true) then {
+    private _isBleeding = GET_WOUND_BLEEDING(_target) > 0;
+    private _hasBandage = ([_healer, "@bandage"] call FUNC(itemCheck)) # 0;
+
     if (
         (GET_WOUND_BLEEDING(_target) > 0) &&
         {([_healer, "@bandage"] call FUNC(itemCheck)) # 0}
@@ -176,8 +179,8 @@ if (true) then {
     };
 
     // Wait until the injured has enough blood before administering drugs
-    if (_needsIv) then {
-        _treatmentEvent = "#waitForIV"
+    if (_needsIv) exitWith {
+        _treatmentEvent = "#needsIV";
     };
 
     if (_treatmentEvent == "#waitForIV") exitWith {};
