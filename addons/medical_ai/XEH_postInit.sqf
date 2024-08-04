@@ -6,6 +6,13 @@
     if (GVAR(enabledFor) == 0 || {!(GETEGVAR(medical,enabled,false))}) exitWith {}; // 0: disabled
     if ((GVAR(enabledFor) == 1) && {!isServer} && {hasInterface}) exitWith {}; // 1: Don't Run on non-hc Clients
 
+    // default time values for AI being ready to heal, used in fnc_isSafe
+    if (isNil QGVAR(timeSafe_shoot)) then { GVAR(timeSafe_shoot) = 30; };
+    if (isNil QGVAR(timeSafe_hit)) then { GVAR(timeSafe_hit) = 30; };
+    if (isNil QGVAR(timeSafe_suppressed)) then { GVAR(timeSafe_suppressed) = 30; };
+
+    GVAR(itemHash) = uiNamespace getVariable QGVAR(itemHash);
+
     ["ace_firedNonPlayer", {
         _unit setVariable [QGVAR(lastFired), CBA_missionTime];
     }] call CBA_fnc_addEventHandler;

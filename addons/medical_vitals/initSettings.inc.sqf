@@ -6,7 +6,7 @@
     true,
     1,
     {
-        if (_this) exitWith {}; // skip if true
+        if (_this || {!(GETEGVAR(medical,enabled,false))}) exitWith {}; // skip if true or if medical system disabled
         {
             _x setVariable [VAR_OXYGEN_DEMAND, 0, true];
             _x setVariable [VAR_SPO2, DEFAULT_SPO2, true];
