@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - master
+    - wog-release
 
 jobs:
   draft:
