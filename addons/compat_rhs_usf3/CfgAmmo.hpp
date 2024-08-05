@@ -405,8 +405,7 @@ class CfgAmmo {
     class rhs_ammo_smaw_SR: RocketBase {
         ACE_caliber = 9;
     };
-    class rhs_ammo_smaw_HEDP: RocketBase
-    {
+    class rhs_ammo_smaw_HEDP: RocketBase {
         ace_frag_enabled = 1;
         ace_frag_metal = 330;
         ace_frag_charge = 280;

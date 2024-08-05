@@ -89,6 +89,13 @@ class CfgVehicles {
                         showDisabled = 1;
                     };
                 };
+                class ACE_MapToolsDrawRadiusMarker {
+                    displayName = CSTRING(DrawRadius);
+                    condition = QUOTE((GVAR(mapTool_Shown) != 0));
+                    statement = QUOTE(call FUNC(mapToolDrawRadiusMarker));
+                    EXCEPTIONS;
+                    showDisabled = 1;
+                };
             };
             class ACE_PlottingBoard {
                 displayName = CSTRING(ShowPlottingBoard);
