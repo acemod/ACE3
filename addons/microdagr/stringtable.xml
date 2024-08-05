@@ -605,6 +605,7 @@
             <Polish>MicroDAGR - Poprzedni Tryb</Polish>
             <Chinesesimp>微型 GPS 接收器—上一个模式</Chinesesimp>
             <Korean>마이크로DAGR - 이전 모드</Korean>
+            <Portuguese>MicroDAGR - Modo Anterior</Portuguese>
         </Key>
         <Key ID="STR_ACE_MicroDAGR_nextMode">
             <English>MicroDAGR - Next Mode</English>
@@ -617,6 +618,7 @@
             <Polish>MicroDAGR - Kolejny Tryb</Polish>
             <Chinesesimp>微型 GPS 接收器—下一个模式</Chinesesimp>
             <Korean>마이크로DAGR - 다음 모드</Korean>
+            <Portuguese>MicroDAGR - Modo Seguinte</Portuguese>
         </Key>
     </Package>
 </Project>

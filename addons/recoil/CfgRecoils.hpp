@@ -332,16 +332,17 @@ class CfgRecoils {
 
     class recoil_rpg: recoil_default {
         muzzleOuter[] = {
-            2*MUZZLERIGHT_POS,
-            3*MUZZLECLIMB_POS,
-            1*MUZZLERIGHT_MAG,
+            0.0*MUZZLERIGHT_POS,
+            0.1*MUZZLECLIMB_POS,
+            0.3*MUZZLERIGHT_MAG,
             0.5*MUZZLECLIMB_MAG
         };
         kickBack[] = {
-            0.08*KICKBACK,
-            0.1*KICKBACK
+            0.0*KICKBACK,
+            0.08*KICKBACK
         };
-        temporary = 0.1*MUZZLETEMP;
+        permanent = 1.0*MUZZLEPERM;
+        temporary = 0.05*MUZZLETEMP;
     };
 
     class recoil_nlaw: recoil_default {
