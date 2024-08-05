@@ -19,6 +19,8 @@ uiNamespace setVariable [QGVAR(configNames), createHashMap];
 //Add warnings for missing compat PBOs
 GVAR(isModLoadedCache) = createHashMap;
 {
+    _x params ["_modPBO", "_compatPBO"];
+    if ([_modPBO] call FUNC(isModLoaded) && {!([_compatPBO] call FUNC(isModLoaded))}) then {
         WARNING_2("Weapon Mod [%1] missing ace compat pbo [%2]",_modPBO,_compatPBO);
     };
 } forEach [
