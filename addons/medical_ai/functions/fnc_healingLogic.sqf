@@ -334,6 +334,34 @@ if (true) then {
         _treatmentArgs = [_target, _bodyPart, "Morphine"];
         _treatmentItem = "morphine";
     };
+    if (_tourniquets isNotEqualTo DEFAULT_TOURNIQUET_VALUES) exitWith {
+        // Check if we have wounds that would bleed
+        private _bleedingSelection = "";
+        {
+            private _selection = _x;
+            {
+                _x params ["", "_amountOf", "_bleeding"];
+                if ((_amountOf * _bleeding) > 0) exitWith { _bleedingSelection = _selection; };
+            } forEach _y;
+        } forEach GET_OPEN_WOUNDS(_target);
+
+        // Bandage before removing tourniquet
+        if (_bleedingSelection != "") exitWith {
+            private _hasBandage = ([_healer, "@bandage"] call FUNC(itemCheck)) # 0;
+            if (!_hasBandage) exitWith {
+                _treatmentEvent = "#waitForBandages"; // TODO: Medic can move onto another patient/should be flagged as out of supplies
+            };
+            _treatmentEvent = QEGVAR(medical_treatment,bandageLocal);
+            _treatmentTime = 5;
+            _treatmentArgs = [_target, _bleedingSelection, "FieldDressing"];
+            _treatmentItem = "@bandage";
+        };
+
+        private _tourniquetIndex = _tourniquets findIf { _x != 0 };
+        _treatmentEvent = QGVAR(tourniquetRemove);
+        _treatmentTime = 7;
+        _treatmentArgs = [_healer, _target, ALL_BODY_PARTS select _tourniquetIndex];
+    };
 };
 
 _healer setVariable [QGVAR(currentTreatment), [CBA_missionTime + _treatmentTime, _target, _treatmentEvent, _treatmentArgs, _treatmentItem]];
