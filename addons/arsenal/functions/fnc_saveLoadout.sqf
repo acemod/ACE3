@@ -22,9 +22,7 @@ params [["_name", "", [""]], ["_loadout", [], [[]]], ["_replaceExisting", false,
 if (_name == "" || {_loadout isEqualTo []}) exitWith { false };
 
 private _loadouts = profileNamespace getVariable [QGVAR(saved_loadouts), []];
-private _loadoutNames = _loadouts apply {toLower (_x#0)};
-
-private _loadoutIndex = _loadoutNames find toLower _name;
+private _loadoutIndex = _loadouts findIf {(_x#0) == _name};
 
 if (_loadoutIndex == -1) then {
     _loadouts pushBack [_name, _loadout];
