@@ -24,7 +24,7 @@ if (_name == "" || {_loadout isEqualTo []}) exitWith { false };
 private _loadouts = profileNamespace getVariable [QGVAR(saved_loadouts), []];
 private _loadoutNames = _loadouts apply {toLowerANSI (_x#0)};
 
-if (!_replaceExisting && {toLowerANSI _name in _loadoutNames}) exitWith { false };
+if (!_replaceExisting && {toLower _name in _loadoutNames}) exitWith { false };
 
 private _loadoutIndex = _loadoutNames find _name;
 
