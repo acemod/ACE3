@@ -12,18 +12,20 @@
             <Korean>ACE 고급 차량 피해</Korean>
             <Russian>ACE Продвинутое повреждение техники</Russian>
             <Spanish>ACE Daño avanzado de vehículos</Spanish>
+            <Portuguese>ACE Dano avançãdo de veículos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_setting_description">
             <English>Enable advanced vehicle damage</English>
             <Japanese>アドバンスドビークルダメージを有効/無効にする</Japanese>
             <French>Active les dégâts de véhicule avancés.</French>
-            <German>Aktiviert/Deaktiviert den Erweiterten Fahrzeugsschaden</German>
+            <German>Aktiviert den Erweiterten Fahrzeugsschaden</German>
             <Italian>Abilità danni avanzati ai veicoli</Italian>
-            <Polish>Włącz/Wyłącz zaawansowane uszkodzenia pojazdów</Polish>
+            <Polish>Włącz zaawansowane uszkodzenia pojazdów</Polish>
             <Chinesesimp>启用/禁用高级载具损坏</Chinesesimp>
             <Korean>고급 차량 피해 활성화/비활성화</Korean>
-            <Russian>Включить/выключить продвинутое повреждение техники</Russian>
-            <Spanish>Habilitar/Deshabilitar el daño avanzado de vehículos</Spanish>
+            <Russian>Включить продвинутое повреждение техники</Russian>
+            <Spanish>Habilitar el daño avanzado de vehículos</Spanish>
+            <Portuguese>Ativar dano avançado de veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_enable">
             <English>Enable advanced car damage</English>
@@ -47,7 +49,8 @@
             <Chinesesimp>启用/禁用高级车辆损坏（实验性）</Chinesesimp>
             <Korean>고급 차량 피해(실험용) 활성화/비활성화</Korean>
             <Russian>Включить продвинутое повреждение машин (экспериментальное)</Russian>
-            <Spanish>Habilita el daño avanzado de coche (Experimental)</Spanish>
+            <Spanish>Habilitar daño avanzado de coche (Experimental)</Spanish>
+            <Portuguese>Ativar dano avançado de carro</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_generic_turret_wreck">
             <English>Wreck (Turret)</English>

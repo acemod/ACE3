@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Handles AI Fired EH
+ * Handles AI Fired EH.
  *
  * Arguments:
  * Fired EH
