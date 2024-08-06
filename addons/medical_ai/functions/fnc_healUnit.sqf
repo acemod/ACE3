@@ -27,7 +27,13 @@ private _healQueue = _this getVariable [QGVAR(healQueue), []];
 private _target = _healQueue param [0, objNull];
 
 // If unit died or was healed, be lazy and wait for the next tick
-if (!alive _target || {!(_target call FUNC(isInjured))} || {!([_this, _target] call FUNC(canHeal))}) exitWith {
+// If the unit can't be healed, go to the next unit to be healed
+if (!alive _target || {!(_target call FUNC(isInjured))} || {GVAR(requireItems) != 0 && {
+    private _treatmentEvent = (_this getVariable [QGVAR(currentTreatment), []]) param [2, ""];
+
+    // Target still needs healing, but the healer doesn't have the required items or needs to wait
+    _treatmentEvent in ["#needsBandages", "#needsBandagesOrTourniquets", "#needsIV", "#tooManyMeds", "#needsSlowerHeart", "#needsFasterHeart"]
+}}) exitWith {
     _this forceSpeed -1;
     _target forceSpeed -1;
     _healQueue deleteAt 0;

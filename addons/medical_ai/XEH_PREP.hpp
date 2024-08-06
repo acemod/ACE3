@@ -1,5 +1,4 @@
 PREP(addHealingCommandActions);
-PREP(canHeal);
 PREP(canRequestMedic);
 PREP(healingLogic);
 PREP(healSelf);

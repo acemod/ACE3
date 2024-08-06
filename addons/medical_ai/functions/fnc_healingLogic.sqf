@@ -1,7 +1,9 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut, PabstMirror
+ * Author: BaerMitUmlaut, PabstMirror, johnb43
  * Applies healing to target.
+ * States that contain "needs" are states in which the medic is blocked, either temporairly (HR too high/low) or until resupplied, from treating.
+ * States that contain "wait" are states where the medic waits temporairly before continuing treatment.
  *
  * Arguments:
  * 0: Healer <OBJECT>
@@ -16,8 +18,9 @@
  * Public: No
  */
 
-// TODO: Add AI tourniquet behaviour
-// For now, AI handle player or otherwise scripted tourniquets only
+// TODO: Complete AI tourniquet behaviour
+// For now, AI can apply tourniquets and remove them
+// Removal happens only if giving IVs or drugs are necessary, but they don't remove them if possible
 
 params ["_healer", "_target"];
 (_healer getVariable [QGVAR(currentTreatment), [-1]]) params ["_finishTime", "_treatmentTarget", "_treatmentEvent", "_treatmentArgs", "_treatmentItem"];
@@ -94,10 +97,10 @@ private _fnc_findNoTourniquet = {
     if ((_tourniquets select [2]) find 0 == -1) then {
         // If no bandages available, wait
         if !(([_healer, "@bandage"] call FUNC(itemCheck)) # 0) exitWith {
-            _treatmentEvent = "#waitForNonTourniquetedLimb"; // TODO: Medic can move onto another patient/should be flagged as out of supplies
+            _treatmentEvent = "#needsBandages";
         };
 
-        // Bandage the least bleeding body part
+        // Bandage the least bleeding limb
         private _bodyPartBleeding = [0, 0, 0, 0];
 
         {
@@ -158,7 +161,7 @@ if (true) then {
 
         // Patient is not worth treating if bloodloss can't be stopped
         if !(_hasBandage || _hasTourniquet) exitWith {
-            _treatmentEvent = "#cantStabilise"; // TODO: Medic should be flagged as out of supplies
+            _treatmentEvent = "#needsBandagesOrTourniquets";
         };
 
         // Bandage the heaviest bleeding body part
@@ -279,12 +282,12 @@ if (true) then {
 
         // If the injured needs IVs, but healer can't give it to them, have healder wait
         if (_needsIV) exitWith {
-            _treatmentEvent = "#needsIV"; // TODO: Medic can move onto another patient
+            _treatmentEvent = "#needsIV";
         };
     };
 
     if ((count (_target getVariable [VAR_MEDICATIONS, []])) >= 6) exitWith {
-        _treatmentEvent = "#tooManyMeds"; // TODO: Medic can move onto another patient
+        _treatmentEvent = "#tooManyMeds";
     };
 
     private _heartRate = GET_HEART_RATE(_target);
@@ -296,8 +299,9 @@ if (true) then {
         if (CBA_missionTime < (_target getVariable [QGVAR(nextEpinephrine), -1])) exitWith {
             _treatmentEvent = "#waitForEpinephrineToTakeEffect";
         };
+
         if (_heartRate > 180) exitWith {
-            _treatmentEvent = "#waitForSlowerHeart"; // TODO: Medic can move onto another patient, after X amount of time of high HR
+            _treatmentEvent = "#needsSlowerHeart";
         };
 
         // If all limbs are tourniqueted, bandage the one with the least amount of wounds, so that the tourniquet can be removed
@@ -319,8 +323,9 @@ if (true) then {
         if (CBA_missionTime < (_target getVariable [QGVAR(nextMorphine), -1])) exitWith {
             _treatmentEvent = "#waitForMorphineToTakeEffect";
         };
+
         if (_heartRate < 60) exitWith {
-            _treatmentEvent = "#waitForFasterHeart"; // TODO: Medic can move onto another patient, after X amount of time of low HR
+            _treatmentEvent = "#needsFasterHeart";
         };
 
         // If all limbs are tourniqueted, bandage the one with the least amount of wounds, so that the tourniquet can be removed
