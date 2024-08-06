@@ -34,31 +34,12 @@ _ctrlElevationLow ctrlSetTextColor ([[1,1,1,1],[0.25,0.25,0.25,1]] select GVAR(l
 
 lnbClear _ctrlRangeTable;
 // Call extension with current data and start workers
-TRACE_5("callExtension:start",_muzzleVelocity,_airFriction,_elevMin,_elevMax,GVAR(lastElevationMode));
-private _ret = "ace_artillerytables" callExtension ["start", [_muzzleVelocity,_airFriction,_elevMin,_elevMax,GVAR(lastElevationMode)]];
-TRACE_1("",_ret);
+TRACE_5("callExtension:artillery:calculate_table",_muzzleVelocity,_airFriction,_elevMin,_elevMax,GVAR(lastElevationMode));
+(
+    "ace" callExtension ["artillery:calculate_table", [_muzzleVelocity,_airFriction,_elevMin,_elevMax,GVAR(lastElevationMode)]]
+) params ["_data", "_code"];
+TRACE_1("",_code)
 
-// Non-blocking read data out of extension as it becomes availiable
-[{
-    private _dialog = uiNamespace getVariable [QGVAR(rangeTableDialog), displayNull];
-    private _ctrlRangeTable = _dialog displayCtrl IDC_TABLE;
-    if (isNull _dialog) exitWith {true};
-
-    private _status = 1; // 1 = data on line, 2 - data not ready, 3 - done
-    while {_status == 1} do {
-        private _ret = ("ace_artillerytables" callExtension ["getline", []]);
-        // TRACE_1("callExtension:getline",_ret);
-        _status = _ret select 1;
-        if (_status == 1) then { _ctrlRangeTable lnbAddRow parseSimpleArray (_ret select 0) };
-    };
-
-    (_status == 3) // exit loop when all data read
-}, {
-    // put dummy line at end because scrolling is problematic and can't see last line
-    private _dialog = uiNamespace getVariable [QGVAR(rangeTableDialog), displayNull];
-    private _ctrlRangeTable = _dialog displayCtrl IDC_TABLE;
-    if (isNull _dialog) exitWith {TRACE_1("dialog closed",_this);};
-
-    _ctrlRangeTable lnbAddRow ["", "", "", "", "", "", "", "", "", "", ""];
-    TRACE_1("table filled",_ctrlRangeTable);
-}, []] call CBA_fnc_waitUntilAndExecute;
+GVAR(tableData) = createHashMap;
+GVAR(tableSizeActual) = (parseSimpleArray _data) select 1;
+GVAR(tableSizeReceived) = 0;

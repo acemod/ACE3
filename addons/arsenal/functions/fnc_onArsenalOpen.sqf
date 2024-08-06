@@ -138,14 +138,6 @@ _actionsBoxCtrl ctrlSetPosition [
 ];
 _actionsBoxCtrl ctrlCommit 0;
 
-// Disable import in MP
-if (isMultiplayer) then {
-    private _importButtonCtrl = _display displayCtrl IDC_buttonImport;
-    _importButtonCtrl ctrlEnable false;
-    _importButtonCtrl ctrlSetFade 0.6;
-    _importButtonCtrl ctrlCommit 0;
-};
-
 //--------------- Camera prep
 cutText ["", "PLAIN"];
 showCommandingMenu "";
