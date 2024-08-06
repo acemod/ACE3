@@ -24,13 +24,12 @@ if (_name == "" || {_loadout isEqualTo []}) exitWith { false };
 private _loadouts = profileNamespace getVariable [QGVAR(saved_loadouts), []];
 private _loadoutNames = _loadouts apply {toLower (_x#0)};
 
-if (!_replaceExisting && {toLower _name in _loadoutNames}) exitWith { false };
-
-private _loadoutIndex = _loadoutNames find _name;
+private _loadoutIndex = _loadoutNames find toLower _name;
 
 if (_loadoutIndex == -1) then {
     _loadouts pushBack [_name, _loadout];
 } else {
+    if (!_replaceExisting) exitWith { false };
     _loadouts set [_loadoutIndex, [_name, _loadout]];
 };
 
