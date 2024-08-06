@@ -27,9 +27,10 @@ class CfgPatches {
 #include "ACE_Medical_Facilities.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgReplacementItems.hpp"
+#include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "Cfg3DEN.hpp"
-#include "CfgMagazines.hpp"
+#include "RscTitles.hpp"
 
 #endif
