@@ -19,7 +19,7 @@ Removes hit-point based damage on armoured vehicles.
 
 ### 1.1 Differences from vanilla
 
-Vehicle damage is component based in this system. Rather than catastrophically exploding when an arbitrary amount of damage is recieved, the system calculates what warhead hit you, if it hit SLAT/ERA, and what components it hits.
+Vehicle damage is component based in this system. Rather than catastrophically exploding when an arbitrary amount of damage is received, the system calculates what warhead hit you, if it hit SLAT/ERA, and what components it hits.
 When you are hit, a calculation takes place and determines which people inside the vehicle should get hurt.
 
 ### 1.2 How is damage calculated
@@ -116,20 +116,3 @@ When hit, HEAT warheads will be defeated and no damage will be applied. If hit w
 
 - Can cook-off [N]
 - Can injure occupants [N]
-
-## 3. Addon Options
-
-### 3.1 Enable
-
-- Enables/Disables the vehicle damage simulation
-- Default: On
-
-### 3.2 Enable/Disable Ammo Removal During Cook-Off
-
-- Enables/Disables whether or not vehicle ammo will be fully removed upon cooking-off
-- Default: On
-
-### 3.3 Enable/Disable advanced car damage (Experimental)
-
-- Enable experimental car damage. System will apply vehicle damage simulation to "car" types (trucks, SUVs, Humvees, etc.). Not fully tested and could be immbalanced causing weird behaviours.
-- Default: Off
