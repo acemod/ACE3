@@ -18,7 +18,6 @@ version:
 ### 1.1 Mk6 Mortar overhaul
 ACE3 adds wind deflection for shells as well as a rangetable to accurately take out your target without the artillery computer. If ammunition handling is enabled, rounds must be loaded manually.
 
-
 ## 2. Usage
 
 ### 2.1 Switching charge
@@ -31,7 +30,6 @@ ACE3 adds wind deflection for shells as well as a rangetable to accurately take 
 
 ### 2.2 Getting your shells to land where you want.
 For this you need a `82mm Rangetable`, `Map Tools` and a `Vector 21` are also recommended.
-
 
 - Get the distance and elevation difference between you and the target (you can use map tools).
 - Select the charge you want to use (0 = close / 1 = medium  / 2 = far).
