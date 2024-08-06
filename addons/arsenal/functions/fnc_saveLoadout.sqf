@@ -34,4 +34,5 @@ if (_loadoutIndex == -1) then {
     _loadouts set [_loadoutIndex, [_name, _loadout]];
 };
 
+profileNamespace setVariable [QGVAR(saved_loadouts), _loadouts];
 true
