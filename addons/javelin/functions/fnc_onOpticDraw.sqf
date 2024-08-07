@@ -19,7 +19,7 @@
  * Public: No
  */
 
-// TRACE_1("onOpticDraw",diag_frameno);
+// TRACE_1("onOpticDraw",diag_frameNo);
 
 #define __TRACKINTERVAL 0       // how frequent the ui update should be.
 #define __SCANNTERVAL 0.05      // how frequent the target scan check should be.

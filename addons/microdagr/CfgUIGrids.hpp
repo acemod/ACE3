@@ -3,7 +3,7 @@ class CfgUIGrids {
         class Presets {
             class Arma3 {
                 class Variables {
-                    grid_ACE_microDagr[] = {{"(safezoneX + safezoneW - 11 * (((safezoneW / safezoneH) min 1.2) / 40))","(safezoneY + safezoneH - 15 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))","(10 * (((safezoneW / safezoneH) min 1.2) / 40))","(10 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))"},"(((safezoneW / safezoneH) min 1.2) / 40)","((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)"};
+                    grid_ACE_microDagr[] = {{"(safeZoneX + safeZoneW - 11 * (((safeZoneW / safeZoneH) min 1.2) / 40))","(safeZoneY + safeZoneH - 15 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25))","(10 * (((safeZoneW / safeZoneH) min 1.2) / 40))","(10 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25))"},"(((safeZoneW / safeZoneH) min 1.2) / 40)","((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)"};
                 };
             };
         };

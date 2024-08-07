@@ -22,15 +22,15 @@ class RscInGameUI {
                 class ACE_LaserCode: RscText {
                     idc = IDC_LASERDESIGNATOR_LASERCODE;
                     style = 0;
-                    sizeEx = "0.038*SafezoneH";
+                    sizeEx = "0.038*safeZoneH";
                     colorText[] = {0.706,0.0745,0.0196,1};
                     shadow = 0;
                     font = "EtelkaMonospacePro";
                     text = "Code: 1001";
-                    x = "32.7 *         (0.01875 * SafezoneH)";
-                    y = "35.5 *         (0.025 * SafezoneH)";
-                    w = "12 *         (0.01875 * SafezoneH)";
-                    h = "1.6 *         (0.025 * SafezoneH)";
+                    x = "32.7 *         (0.01875 * safeZoneH)";
+                    y = "35.5 *         (0.025 * safeZoneH)";
+                    w = "12 *         (0.01875 * safeZoneH)";
+                    h = "1.6 *         (0.025 * safeZoneH)";
                 };
             };
         };

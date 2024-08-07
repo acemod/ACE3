@@ -66,7 +66,7 @@ private _fnc_onKeyUp = {
 private _fnc_onUnload = {
     params ["_display"];
 
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
     // Store checkbox value for reopening
@@ -79,7 +79,7 @@ private _fnc_onConfirm = {
     private _display = ctrlParent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
     private _lb = _display displayCtrl 16189;

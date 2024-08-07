@@ -68,8 +68,8 @@ class RscInGameUI {
             text = "";
             colorText[] = {1, 1, 1, 0};
             colorBackground[] = {0, 0, 0, 0};
-            x = QUOTE(safezoneX + 0.5 * safezoneW - 0.5 * SIZEX);
-            y = QUOTE(safezoneY + 0.5 * safezoneH - 0.5 * SIZEX * (4 / 3));
+            x = QUOTE(safeZoneX + 0.5 * safeZoneW - 0.5 * SIZEX);
+            y = QUOTE(safeZoneY + 0.5 * safeZoneH - 0.5 * SIZEX * (4 / 3));
             w = QUOTE(SIZEX);
             h = QUOTE(SIZEX * (4 / 3));
         };
@@ -84,8 +84,8 @@ class RscInGameUI {
         class BodyDay: ReticleDay {
             idc = 1713005;
             text = "";
-            x = QUOTE(safezoneX + 0.5 * safezoneW - 0.5 * SIZEX);
-            y = QUOTE(safezoneY + 0.5 * safezoneH - 0.5 * SIZEX * (4 / 3));
+            x = QUOTE(safeZoneX + 0.5 * safeZoneW - 0.5 * SIZEX);
+            y = QUOTE(safeZoneY + 0.5 * safeZoneH - 0.5 * SIZEX * (4 / 3));
             w = QUOTE(SIZEX);
             h = QUOTE(SIZEX * (4 / 3));
         };
@@ -96,19 +96,19 @@ class RscInGameUI {
         };
 
         // These are just black side panels to cover the areas that the optics p3d doesn't cover
-        // It will ONLY effect tripple head users as (safezoneX == safeZoneXAbs) for everyone else
+        // It will ONLY effect tripple head users as (safeZoneX == safeZoneXAbs) for everyone else
         // Reference PR #1156:
         class trippleHeadLeft: RscText {
             idc = 1713010;
             x = "safeZoneXAbs";
-            Y = "safezoneY";
-            W = "(safezoneX - safeZoneXAbs) * ((getResolution select 4) / (16 / 3))";
+            Y = "safeZoneY";
+            W = "(safeZoneX - safeZoneXAbs) * ((getResolution select 4) / (16 / 3))";
             H = "safeZoneH";
             colorBackground[] = {0, 0, 0, 1};
         };
         class trippleHeadRight: trippleHeadLeft {
             idc = 1713011;
-            x = "safeZoneXAbs + safeZoneWAbs - (safezoneX - safeZoneXABS) * ((getResolution select 4) / (16 / 3))";
+            x = "safeZoneXAbs + safeZoneWAbs - (safeZoneX - safeZoneXABS) * ((getResolution select 4) / (16 / 3))";
             colorBackground[] = {0, 0, 0, 1};
         };
     };
@@ -191,11 +191,11 @@ class RscInGameUI {
 _ctrl = (D displayCtrl 1713006);
 
 _sizeX = 1.54 / (getResolution select 5);
-_sizeY = _sizeX * safezoneW / safezoneH;
+_sizeY = _sizeX * safeZoneW / safeZoneH;
 
 _ctrl ctrlSetPosition [
-    safezoneX + 0.5 * safezoneW - 0.5 * _sizeX,
-    safezoneY + 0.5 * safezoneH - 0.5 * _sizeY,
+    safeZoneX + 0.5 * safeZoneW - 0.5 * _sizeX,
+    safeZoneY + 0.5 * safeZoneH - 0.5 * _sizeY,
     _sizeX,
     _sizeY
 ];

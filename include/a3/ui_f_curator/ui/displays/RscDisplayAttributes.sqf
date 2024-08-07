@@ -39,7 +39,7 @@ switch _mode do {
 		};
 
 		//--- Load default attributes
-		_attributes = if (getnumber (_displayConfig >> "filterAttributes") > 0) then {missionnamespace getvariable ["BIS_fnc_initCuratorAttributes_attributes",[]]} else {["%ALL"]};
+		_attributes = if (getnumber (_displayConfig >> "filterAttributes") > 0) then {missionNamespace getvariable ["BIS_fnc_initCuratorAttributes_attributes",[]]} else {["%ALL"]};
 		_allAttributes = "%ALL" in _attributes;
 
 		//--- Initialize attributes
@@ -73,7 +73,7 @@ switch _mode do {
 		};
 		_posH = ((_posY + _ctrlContentOffsetY) min 0.9) * 0.5;
 
-		_target = missionnamespace getvariable ["BIS_fnc_initCuratorAttributes_target",objnull];
+		_target = missionNamespace getvariable ["BIS_fnc_initCuratorAttributes_target",objnull];
 		_name = switch (typename _target) do {
 			case ("OBJECT"): {gettext (configfile >> "cfgvehicles" >> typeof _target >> "displayname")};
 			case ("GROUP"): {groupid _target};
@@ -113,7 +113,7 @@ switch _mode do {
 		[_display] spawn {
 			disableserialization;
 			_display = _this select 0;
-			_target = missionnamespace getvariable ["BIS_fnc_initCuratorAttributes_target",objnull];
+			_target = missionNamespace getvariable ["BIS_fnc_initCuratorAttributes_target",objnull];
 			switch (typename _target) do {
 				case ("OBJECT"): {
 					_isAlive = alive _target;

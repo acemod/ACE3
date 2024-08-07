@@ -37,7 +37,7 @@ if (_activated) then {
         //if !(isclass _cfgAmmo) exitwith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};
         // It seems BI broke this part...
         // _dirVar = _fnc_scriptname + typeof _logic;
-        // _logic setdir (missionnamespace getvariable [_dirVar,direction _logic]); //--- Restore custom direction
+        // _logic setdir (missionNamespace getvariable [_dirVar,direction _logic]); //--- Restore custom direction
         _pos = getPosATL _logic;
         _posAmmo = +_pos;
         _posAmmo set [2,0];
@@ -156,7 +156,7 @@ if (_activated) then {
                         _projectile setPosASL _posNew;
                         _pos = getPosATL _logic;
                         _dir = direction _logic;
-                        //missionnamespace setvariable [_dirVar,_dir]; See L37
+                        //missionNamespace setvariable [_dirVar,_dir]; See L37
                     };
                     sleep 0.1;
                     isNull _projectile || isNull _logic

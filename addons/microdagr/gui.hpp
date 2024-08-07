@@ -40,8 +40,8 @@ class GVAR(RscText): RscText {
 };
 
 //Redfine Scaling for the Dialog
-#define X_PART(num) QUOTE((((60 - 25)/2) + (num)) * (safeZoneH / 64) + (safezoneX + (safezoneW - safeZoneH)/2))
-#define Y_PART(num) QUOTE((0 + (num)) * (safeZoneH / 36) + (safezoneY + (safezoneH - (safeZoneH / 1.2))/2))
+#define X_PART(num) QUOTE((((60 - 25)/2) + (num)) * (safeZoneH / 64) + (safeZoneX + (safeZoneW - safeZoneH)/2))
+#define Y_PART(num) QUOTE((0 + (num)) * (safeZoneH / 36) + (safeZoneY + (safeZoneH - (safeZoneH / 1.2))/2))
 #define W_PART(num) QUOTE((num) * (safeZoneH / 64))
 #define H_PART(num) QUOTE((num) * (safeZoneH / 36))
 
