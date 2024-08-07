@@ -59,6 +59,10 @@ class CfgVehicles {
 | `distance` | Number | External Base Actions Only, Max distance player can be from action point |
 | `position` | String (of code) | External Base Actions Only, Code to return a position in model cords (priority over `selection`) |
 | `selection` | String | External Base Actions Only, A memory point for `selectionPosition` |
+| `doNotCheckLOS` | Number | (1=true) - Ignores blocked LOS to the interaction node even when beyond 1.2m |
+| `showDisabled` | Number | Currently has no effect |
+| `enableInside` | Number | Currently has no effect |
+| `canCollapse` | Number | Currently has no effect |
 
 Actions can be inserted anywhere on the config tree, e.g. hearing's earplugs is a sub action of `ACE_Equipment`:
 
@@ -71,6 +75,25 @@ class CAManBase: Man {
     };
 };
 ```
+
+Interaction exceptions are defined by several components:
+
+| Component | Exception | Description |
+| ---------- | ----------- | ------------------- |
+| `captives` | `"isNotEscorting"` | Can interact while escorting a captive |
+|  | `"isNotHandcuffed"` | Can interact while handcuffed |
+|  | `"isNotSurrendering"` | Can interact while surrendering |
+| `common` | `"isNotDead"` | Can interact while dead |
+|  | `"notOnMap"` | Can interact while in Map |
+|  | `"isNotInside"` | Can interact while inside a vehicle |
+|  | `"isNotInZeus"` | Can interact while in the zeus interface |
+|  | `"isNotUnconscious"` | Can interact while unconscious |
+| `dragging` | `"isNotDragging"` | Can interact while dragging |
+|  | `"isNotCarrying"` | Can interact while carrying |
+| `interaction` | `"isNotSwimming"` | Can interact while swimming/diving |
+|  | `"isNotOnLadder"` | Can interact while climbing a ladder |
+| `refuel` | `"isNotRefueling"` | Can interact while carrying refueling nozzle |
+| `sitting` | `"isNotSitting"` | Can interact while sitting in a chair |
 
 ## 3. Adding actions via scripts
 
