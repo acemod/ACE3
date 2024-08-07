@@ -34,7 +34,7 @@ if (
 ) exitWith {
     if (_player getVariable [QGVAR(nextUnconsciousTime), CBA_missionTime] > CBA_missionTime) exitWith {};
 
-    _player setVariable [QGVAR(nextUnconsciousTime), CBA_missionTime + 15];
+    _player setVariable [QGVAR(nextUnconsciousTime), CBA_missionTime + 45];
 
     [_player, true, 5, true] call EFUNC(medical,setUnconscious);
 };
