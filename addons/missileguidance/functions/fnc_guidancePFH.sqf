@@ -101,9 +101,9 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos
 
 #ifdef DRAW_GUIDANCE_INFO
 TRACE_3("",_projectilePos,_seekerTargetPos,_profileAdjustedTargetPos);
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _projectilePos, 0.75, 0.75, 0, _ammo, 1, 0.025, "TahomaB"];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToAGL _projectilePos, 0.75, 0.75, 0, _ammo, 1, 0.025, "TahomaB"];
 
-private _ps = "#particlesource" createVehicleLocal (ASLtoAGL _projectilePos);
+private _ps = "#particlesource" createVehicleLocal (ASLToAGL _projectilePos);
 _PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 2], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
 _PS setDropInterval 3.0;
 #endif

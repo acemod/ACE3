@@ -33,7 +33,7 @@ _attackProfileStateParams params ["_attackStage", "_configLaunchHeightClear"];
 
 
 private _projectilePos = getPosASL _projectile;
-private _distanceFromLaunch2d = _launchPos distance2d _projectilePos;
+private _distanceFromLaunch2d = _launchPos distance2D _projectilePos;
 private _heightAboveLaunch = (_projectilePos select 2) - (_launchPos select 2);
 
 // Add height depending on distance for compensate
@@ -63,8 +63,8 @@ switch (_attackStage) do {
     };
     case STAGE_ATTACK_CRUISE: {
         private _currentHeightOverTarget = (_projectilePos select 2) - (_seekerTargetPos select 2);
-        private _distanceToTarget2d = _seekerTargetPos distance2d _projectilePos;
-        private _distToGoRatio = _distanceToTarget2d / (_launchPos distance2d _seekerTargetPos);
+        private _distanceToTarget2d = _seekerTargetPos distance2D _projectilePos;
+        private _distToGoRatio = _distanceToTarget2d / (_launchPos distance2D _seekerTargetPos);
 
         // arcing up at 7 degrees to start until 50% left, then smooth curve to a downward attack
         private _gainSlope = linearConversion [0.5, 0.1, _distToGoRatio, 7, -7, true];
@@ -77,7 +77,7 @@ switch (_attackStage) do {
         };
     };
     case STAGE_ATTACK_TERMINAL: {
-        private _distanceToTarget2d = _seekerTargetPos distance2d _projectilePos;
+        private _distanceToTarget2d = _seekerTargetPos distance2D _projectilePos;
         _returnTargetPos = _seekerTargetPos vectorAdd [0, 0, _distanceToTarget2d * 0.02];
     };
 };

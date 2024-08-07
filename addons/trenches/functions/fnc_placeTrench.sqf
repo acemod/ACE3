@@ -77,7 +77,7 @@ GVAR(digPFH) = [{
                 _pos set [2, getTerrainHeightASL _pos];
                 _pos2 = +_pos;
                 _pos2 set [2, getTerrainHeightASL _pos + 1];
-                drawLine3D [ASLtoAGL _pos, ASLtoAGL _pos2, [1,1,0,1]];
+                drawLine3D [ASLToAGL _pos, ASLToAGL _pos2, [1,1,0,1]];
             #endif
         };
     };

@@ -26,11 +26,11 @@ if (!ctrlShown (_display displayCtrl 154)) exitWith {
 };
 
 private _sizeX = (call EFUNC(common,getZoom)) / 4;
-private _sizeY = _sizeX * safezoneW / safezoneH;
+private _sizeY = _sizeX * safeZoneW / safeZoneH;
 
 _control ctrlSetPosition [
-    safezoneX + 0.5 * safezoneW - 0.5 * _sizeX,
-    safezoneY + 0.5 * safezoneH - 0.5 * _sizeY,
+    safeZoneX + 0.5 * safeZoneW - 0.5 * _sizeX,
+    safeZoneY + 0.5 * safeZoneH - 0.5 * _sizeY,
     _sizeX,
     _sizeY
 ];

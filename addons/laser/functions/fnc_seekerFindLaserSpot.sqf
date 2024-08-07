@@ -192,10 +192,10 @@ END_COUNTER(seekerFindLaserSpot);
 
 #ifdef DRAW_LASER_INFO
 if (isNil "_finalPos") then {
-    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa", [0.9,1,0,1], (ASLtoAGL _posASL), 1, 1, 0, format ["Seeker: %1", _seekerCode], 0.5, 0.025, "TahomaB"];
+    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa", [0.9,1,0,1], (ASLToAGL _posASL), 1, 1, 0, format ["Seeker: %1", _seekerCode], 0.5, 0.025, "TahomaB"];
 } else {
-    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconManAT_ca.paa", [0.5,1,0,1], (ASLtoAGL _posASL), 1, 1, 0, format ["Seeker: %1", _seekerCode], 0.5, 0.025, "TahomaB"];
-    drawLine3D [ASLtoAGL _posASL, ASLtoAGL _finalPos, [0.5,1,0,1]];
+    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconManAT_ca.paa", [0.5,1,0,1], (ASLToAGL _posASL), 1, 1, 0, format ["Seeker: %1", _seekerCode], 0.5, 0.025, "TahomaB"];
+    drawLine3D [ASLToAGL _posASL, ASLToAGL _finalPos, [0.5,1,0,1]];
 };
 #endif
 

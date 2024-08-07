@@ -50,7 +50,7 @@ switch (currentWeapon _unit) do {
         }, [_unit, _currItem, _switchItem, _currWeaponType]] call CBA_fnc_execNextFrame;
     };
 };
-private _configSwitchItem = configfile >> "CfgWeapons" >> _switchItem;
+private _configSwitchItem = configFile >> "CfgWeapons" >> _switchItem;
 private _switchItemHintText = getText (_configSwitchItem >> "MRT_SwitchItemHintText");
 private _switchItemHintImage = getText (_configSwitchItem >> "picture");
 if (_switchItemHintText isNotEqualTo "") then {

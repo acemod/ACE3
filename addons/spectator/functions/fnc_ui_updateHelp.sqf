@@ -31,7 +31,7 @@ private _controls = [];
 
 // When not in first person, camera rotation applies
 if (_cameraMode != MODE_FPS) then {
-    _controls pushback ["[RMB]", localize "STR_A3_Spectator_Helper_CameraRotation"];
+    _controls pushBack ["[RMB]", localize "STR_A3_Spectator_Helper_CameraRotation"];
 };
 
 // When in free camera, focus/un-focus with LMB
@@ -52,31 +52,31 @@ if (_hasTarget && {count _availableModes > 1}) then {
 };
 
 if (_cameraMode == MODE_FREE) then {
-    _controls pushback [
+    _controls pushBack [
         format ["[%1/%2]", [DIK_W] call CBA_fnc_localizeKey, [DIK_S] call CBA_fnc_localizeKey],
         localize "STR_A3_Spectator_Helper_Movement"
     ];
-    _controls pushback [
+    _controls pushBack [
         format ["[%1/%2]", [DIK_A] call CBA_fnc_localizeKey, [DIK_D] call CBA_fnc_localizeKey],
         localize "STR_A3_Spectator_Helper_Strafing"
     ];
-    _controls pushback [
+    _controls pushBack [
         format ["[%1/%2]", [DIK_Q] call CBA_fnc_localizeKey, [DIK_Z] call CBA_fnc_localizeKey],
         localize "STR_A3_Spectator_Helper_Height"
     ];
 } else {
-    _controls pushback [
+    _controls pushBack [
         format ["[%1]", toUpper ([DIK_RIGHT] call CBA_fnc_localizeKey)],
         localize LSTRING(nextUnit)
     ];
-    _controls pushback [
+    _controls pushBack [
         format ["[%1]", toUpper ([DIK_LEFT] call CBA_fnc_localizeKey)],
         localize LSTRING(prevUnit)
     ];
 };
 
 if (_cameraMode != MODE_FPS) then {
-    _controls pushback [
+    _controls pushBack [
         format ["[%1]", ([DIK_N] call CBA_fnc_localizeKey)],
         localize LSTRING(nextVis)
     ];
@@ -128,7 +128,7 @@ lnbClear _help;
 
 // Set height based on number of rows
 private _newH = (GVAR(uiHelpH) / MAX_CONTROLS_HELP_ENTRIES) * count _controls;
-private _newY = safezoneY + safezoneH - _newH;
+private _newY = safeZoneY + safeZoneH - _newH;
 
 (ctrlPosition _help) params ["_newX","","_newW"];
 

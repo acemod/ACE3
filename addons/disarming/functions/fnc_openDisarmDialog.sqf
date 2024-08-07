@@ -96,7 +96,7 @@ GVAR(disarmTarget) = _target;
             if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
                 _holder = _x;
             };
-        } forEach ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
+        } forEach ((getPos _target) nearObjects [DISARM_CONTAINER, 3]);
 
         //If a holder exists, show it's inventory
         if (!isNull _holder) then {

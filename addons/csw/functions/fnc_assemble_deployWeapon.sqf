@@ -31,7 +31,7 @@
     TRACE_3("assemble_deployWeapon_carryWeaponClassname",_tripod,_player,_carryWeaponClassname);
 
     private _tripodClassname = typeOf _tripod;
-    private _weaponConfig = configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON);
+    private _weaponConfig = configFile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON);
     private _assembledClassname = getText (_weaponConfig >> "assembleTo" >> _tripodClassname);
 
     if (!isClass (configFile >> "CfgVehicles" >> _assembledClassname)) exitWith {ERROR_1("bad static classname [%1]",_assembledClassname);};

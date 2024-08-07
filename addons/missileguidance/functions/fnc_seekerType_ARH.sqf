@@ -60,7 +60,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
             _seekerBaseRadiusAdjusted = _seekerBaseRadiusAtGround;
         };
         // Look in front of seeker for any targets
-        private _nearestObjects = nearestObjects [ASLtoAGL _searchPos, ["Air", "LandVehicle", "Ship"], _seekerBaseRadiusAdjusted, false];
+        private _nearestObjects = nearestObjects [ASLToAGL _searchPos, ["Air", "LandVehicle", "Ship"], _seekerBaseRadiusAdjusted, false];
 
         _nearestObjects = _nearestObjects apply {
             // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
@@ -78,8 +78,8 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
         };
         private _closestDistance = _seekerBaseRadiusAtGround;
         {
-            if ((_x distance2d _searchPos) < _closestDistance) then {
-                _closestDistance = _x distance2d _searchPos;
+            if ((_x distance2D _searchPos) < _closestDistance) then {
+                _closestDistance = _x distance2D _searchPos;
                 _target = _x;
             };
         } forEach _nearestObjects;

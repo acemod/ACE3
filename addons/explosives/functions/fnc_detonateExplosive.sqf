@@ -31,9 +31,9 @@ private _result = true;
 
 if !([_unit, _range, _item select 0, _item select 1, _triggerClassname] call FUNC(checkDetonateHandlers)) exitWith {false};
 
-if (getNumber (ConfigFile >> "CfgAmmo" >> typeOf (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
+if (getNumber (configFile >> "CfgAmmo" >> typeOf (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
     private _previousExp = _item select 0;
-    private _exp = getText (ConfigFile >> "CfgAmmo" >> typeOf (_previousExp) >> QGVAR(Explosive));
+    private _exp = getText (configFile >> "CfgAmmo" >> typeOf (_previousExp) >> QGVAR(Explosive));
     if (_exp != "") then {
         _exp = createVehicle [_exp, [0,0,15001], [], 0, "NONE"];
         _exp setDir (getDir _previousExp);

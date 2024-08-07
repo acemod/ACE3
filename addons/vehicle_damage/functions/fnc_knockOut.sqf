@@ -28,7 +28,7 @@ if (isNil "_hash") exitWith {};
             if ((0.3 > random 1) || { _hitpointAlias isEqualTo "engine" }) then {
                 [_vehicle, -1, _key, 1] call FUNC(addDamage);
             } else {
-                private _currentDamage = _vehicle getHitpointDamage _key;
+                private _currentDamage = _vehicle getHitPointDamage _key;
                 [_vehicle, -1, _key, (_currentDamage + (0.3 max random 1)) min 1] call FUNC(addDamage);
             };
         };

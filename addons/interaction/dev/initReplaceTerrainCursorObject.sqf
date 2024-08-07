@@ -47,7 +47,7 @@ DFUNC(replaceTerrainModelsAdd) = {
     ) then {
         // wait while server replaces object, then init dragging on all clients
         [{
-            if (typeOf cursorObject == "") exitwith {};
+            if (typeOf cursorObject == "") exitWith {};
             [cursorObject, {
                 if !hasInterface exitWith {};
                 [_this, true] call EFUNC(dragging,setDraggable);

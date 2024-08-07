@@ -57,7 +57,7 @@ private _fnc_onConfirm = {
     params [["_ctrlButtonOK", controlNull, [controlNull]]];
     TRACE_1("_fnc_onConfirm params",_this);
 
-    private _display = ctrlparent _ctrlButtonOK;
+    private _display = ctrlParent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 
     GVAR(GlobalSkillAI) = [
