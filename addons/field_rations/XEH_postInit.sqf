@@ -6,6 +6,8 @@ if !(hasInterface) exitWith {};
     // Exit if not enabled
     if (!XGVAR(enabled)) exitWith {};
 
+    XGVAR(lastUnconEvent) = 0;
+
     // Add Advanced Fatigue duty factor
     if (XGVAR(affectAdvancedFatigue) && {missionNamespace getVariable [QEGVAR(advanced_fatigue,enabled), false]}) then {
         [QUOTE(ADDON), {
