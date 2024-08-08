@@ -1,11 +1,11 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm, PabstMirror
- * Handles adding ammo to a turret
- * Called from a global event but only runs where turret is local
+ * Handles adding ammo to a turret.
+ * Called from a global event but only runs where turret is local.
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret Path <ARRAY>
  * 2: Source of magazine <OBJECT>
  * 3: Vehicle Magazine <STRING>
