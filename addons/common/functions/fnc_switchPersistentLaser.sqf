@@ -83,7 +83,7 @@ GVAR(laserLoadoutEH) = ["loadout", {
 
     [
         _unit,
-        _unit getVariable [QGVAR(laserEnabled_) + str ([_unit, _currentWeapon] call FUNC(getWeaponIndex)), false]
+        _unit getVariable [QGVAR(laserEnabled_) + str ([_unit, currentWeapon _unit] call FUNC(getWeaponIndex)), false]
     ] call FUNC(setWeaponLightLaserState);
 }] call CBA_fnc_addPlayerEventHandler;
 
@@ -92,7 +92,7 @@ private _fnc_switchPersistentLaserEH = {
 
     [
         _unit,
-        _unit getVariable [QGVAR(laserEnabled_) + str ([_unit, _currentWeapon] call FUNC(getWeaponIndex)), false]
+        _unit getVariable [QGVAR(laserEnabled_) + str ([_unit, currentWeapon _unit] call FUNC(getWeaponIndex)), false]
     ] call FUNC(setWeaponLightLaserState);
 };
 
