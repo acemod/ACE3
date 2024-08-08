@@ -19,6 +19,7 @@
 
 params ["_vehicle", "_assemblyMode", "_emptyWeapon"];
 TRACE_3("staticWeaponInit_unloadExtraMags",_vehicle,_assemblyMode,_emptyWeapon);
+
 if (!_assemblyMode) exitWith {};
 
 private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
@@ -105,6 +106,7 @@ if (_secondaryWeaponMagazines isNotEqualTo []) then {
 
 if (_storeExtraMagazines) then {
     TRACE_1("saving extra mags to container",_containerMagazineCount);
+
     {
         [_vehicle, _x, _containerMagazineCount select _forEachIndex] call FUNC(reload_handleReturnAmmo);
     } forEach _containerMagazineClassnames;
