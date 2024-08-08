@@ -28,8 +28,8 @@ private _hitpointHash = [[], nil] call CBA_fnc_hashCreate;
 private _vehicleConfig = configOf _vehicle;
 private _hitpointsConfig = _vehicleConfig >> "HitPoints";
 private _turretConfig = _vehicleConfig >> "Turrets";
-private _eraHitpoints = [_vehicleConfig >> QGVAR(eraHitpoints), "ARRAY", []] call CBA_fnc_getConfigEntry;
-private _slatHitpoints = [_vehicleConfig >> QGVAR(slatHitpoints), "ARRAY", []] call CBA_fnc_getConfigEntry;
+private _eraHitpoints = ([_vehicleConfig >> QGVAR(eraHitpoints), "ARRAY", []] call CBA_fnc_getConfigEntry) apply {toLowerANSI _x};
+private _slatHitpoints = ([_vehicleConfig >> QGVAR(slatHitpoints), "ARRAY", []] call CBA_fnc_getConfigEntry) apply {toLowerANSI _x};
 
 // Add hitpoint names to config for quick lookup
 {

@@ -12,6 +12,7 @@
             <Chinesesimp>牵引</Chinesesimp>
             <Korean>견인</Korean>
             <Spanish>Remolcado</Spanish>
+            <Portuguese>Rebocando</Portuguese>
         </Key>
         <Key ID="STR_ACE_Towing_attach">
             <English>Attach Tow Rope</English>
@@ -24,6 +25,7 @@
             <Chinesesimp>系上牵引绳</Chinesesimp>
             <Korean>견인줄 부착</Korean>
             <Spanish>Sujetar cuerda de remolcado</Spanish>
+            <Portuguese>Fixar corda de reboque</Portuguese>
         </Key>
         <Key ID="STR_ACE_Towing_canceled">
             <English>Attaching Cancelled</English>
@@ -36,6 +38,7 @@
             <Chinesesimp>取消系上绳索</Chinesesimp>
             <Korean>견인 취소됨</Korean>
             <Spanish>Sujección cancelada</Spanish>
+            <Portuguese>Reboque cancelado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Towing_start3">
             <English>Attach Tow Rope (3.2m)</English>
@@ -48,6 +51,7 @@
             <Chinesesimp>系上牵引绳（3.2米）</Chinesesimp>
             <Korean>견인줄 부착(3.2M)</Korean>
             <Spanish>Sujetar cuerda de remolcado (3.2m)</Spanish>
+            <Portuguese>Fixar corda de reboque (3,2m)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Towing_start6">
             <English>Attach Tow Rope (6.2m)</English>
@@ -60,6 +64,7 @@
             <Chinesesimp>系上牵引绳（6.2米）</Chinesesimp>
             <Korean>견인줄 부착(6.2M)</Korean>
             <Spanish>Sujetar cuerda de remolcado (6.2m)</Spanish>
+            <Portuguese>Fixar corda de reboque (6,2m)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Towing_start12">
             <English>Attach Tow Rope (12.2m)</English>
@@ -72,6 +77,7 @@
             <Chinesesimp>系上牵引绳（12.2米）</Chinesesimp>
             <Korean>견인줄 부착(12.2M)</Korean>
             <Spanish>Sujetar cuerda de remolcado (12.2m)</Spanish>
+            <Portuguese>Fixar corda de reboque (12,2m)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Towing_start15">
             <English>Attach Tow Rope (15.2m)</English>
@@ -84,6 +90,7 @@
             <Chinesesimp>系上牵引绳（15.2米）</Chinesesimp>
             <Korean>견인줄 부착(15.2M)</Korean>
             <Spanish>Sujetar cuerda de remolcado (15.2m)</Spanish>
+            <Portuguese>Fixar corda de reboque (15,2m)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Towing_start18">
             <English>Attach Tow Rope (18.3m)</English>
@@ -96,6 +103,7 @@
             <Chinesesimp>系上牵引绳（18.3米）</Chinesesimp>
             <Korean>견인줄 부착(18.2M)</Korean>
             <Spanish>Sujetar cuerda de remolcado (18.3m)</Spanish>
+            <Portuguese>Fixar corda de reboque (18,3m)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Towing_start27">
             <English>Attach Tow Rope (27.4m)</English>
@@ -108,6 +116,7 @@
             <Chinesesimp>系上牵引绳（27.4米）</Chinesesimp>
             <Korean>견인줄 부착(27.4M)</Korean>
             <Spanish>Sujetar cuerda de remolcado (27.4m)</Spanish>
+            <Portuguese>Fixar corda de reboque (27,4m)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Towing_start36">
             <English>Attach Tow Rope (36.6m)</English>
@@ -120,6 +129,7 @@
             <Chinesesimp>系上牵引绳（36.6米）</Chinesesimp>
             <Korean>견인줄 부착(36.6M)</Korean>
             <Spanish>Sujetar cuerda de remolcado (36.6m)</Spanish>
+            <Portuguese>Fixar corda de reboque (36,6m)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Towing_detach">
             <English>Detach Tow Rope</English>
@@ -132,6 +142,7 @@
             <Chinesesimp>解开牵引绳</Chinesesimp>
             <Korean>견인줄 분리</Korean>
             <Spanish>Desmontar cuerda de remolcado</Spanish>
+            <Portuguese>Soltar corda de reboque</Portuguese>
         </Key>
         <Key ID="STR_ACE_Towing_Setting_addRopeToVehicleInventory_DisplayName">
             <English>Add Tow Rope to Vehicle Inventory</English>
@@ -143,6 +154,7 @@
             <Japanese>車両のインベントリに牽引ロープを追加する</Japanese>
             <German>Abschleppseil zum Fahrzeuginventar hinzufügen</German>
             <French>Ajouter une corde à l'inventaire des véhicules</French>
+            <Portuguese>Adicionar corda de reboque ao inventário do veículo</Portuguese>
         </Key>
     </Package>
 </Project>

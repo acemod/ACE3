@@ -20,6 +20,9 @@
         _unit setVariable [QGVAR(lastSuppressed), CBA_missionTime];
     }] call CBA_fnc_addClassEventHandler;
 
+    // Add command actions to command AI medics to treat other units
+    call FUNC(addHealingCommandActions);
+
     if (GVAR(requireItems) == 2) then {
         ["CAManBase", "InitPost", {
             [{
