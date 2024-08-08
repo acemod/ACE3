@@ -24,6 +24,7 @@ TRACE_4("switchAttachmentMode",_unit,_weapon,_currItem,_switchItem);
 
 if (_weapon isEqualTo "") exitWith {};
 
+private _exit = false;
 switch (_weapon) do {
     case 0;
     case (primaryWeapon _unit): {
@@ -55,8 +56,12 @@ switch (_weapon) do {
             ["CBA_attachmentSwitched", _this] call CBA_fnc_localEvent;
         }, [_unit, _currItem, _switchItem, _currWeaponType]] call CBA_fnc_execNextFrame;
     };
-    default { ERROR_1("bad weapon - %1",_this) };
+    default { 
+        ERROR_1("bad weapon - %1",_this);
+        _exit = true
+    };
 };
+if (_exit) exitWith {};
 
 private _configSwitchItem = configfile >> "CfgWeapons" >> _switchItem;
 private _switchItemHintText = getText (_configSwitchItem >> "MRT_SwitchItemHintText");
