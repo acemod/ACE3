@@ -5,8 +5,9 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: From <STRING>
- * 2: To <STRING>
+ * 1: Weapon <STRING>
+ * 2: From <STRING>
+ * 3: To <STRING>
  *
  * Return Value:
  * None
@@ -16,12 +17,13 @@
  *
  * Public: No
  */
- 
-params ["_unit", "_currItem", "_switchItem"];
-TRACE_3("switchAttachmentMode",_unit,_currItem,_switchItem);
 
-switch (currentWeapon _unit) do {
-    case (""): {};
+params ["_unit", "_weapon", "_currItem", "_switchItem"];
+TRACE_4("switchAttachmentMode",_unit,_weapon,_currItem,_switchItem);
+
+if (_weapon == "") exitWith {};
+
+switch (_weapon) do {
     case (primaryWeapon _unit): {
         private _currWeaponType = 0;
         _unit removePrimaryWeaponItem _currItem;

@@ -19,7 +19,12 @@
     _x params ["_variant", "_displayName"];
 
     [
-        "ACE_DBAL_A3_Red", "POINTER", _displayName, [], "", {
+        "ACE_DBAL_A3_Red",
+        "POINTER",
+        _displayName,
+        [],
+        "",
+        {
             params ["", "", "_item", "", "_variant"];
 
             private _baseClass = getText (configFile >> "CfgWeapons" >> _item >> "baseWeapon");
@@ -27,12 +32,21 @@
         }, {
             params ["_unit", "", "_item", "_slot", "_variant"];
 
-            if !(_slot in ["RIFLE_POINTER", "LAUNCHER_POINTER", "PISTOL_POINTER"]) exitWith {};
+            private _weapon = switch (_slot) do {
+                case "RIFLE_POINTER": {primaryWeapon _unit};
+                case "LAUNCHER_POINTER": {secondaryWeapon _unit};
+                case "PISTOL_POINTER": {handgunWeapon _unit};
+                default {""};
+            };
+
+            if (_weapon == "") exitWith {};
 
             private _baseClass = getText (configFile >> "CfgWeapons" >> _item >> "baseWeapon");
 
-            [_unit, _item, _baseClass + _variant] call EFUNC(common,switchAttachmentMode);
-        }, false, _variant
+            [_unit, _weapon, _item, _baseClass + _variant] call EFUNC(common,switchAttachmentMode);
+        },
+        false,
+        _variant
     ] call CBA_fnc_addItemContextMenuOption;
 } forEach [
     ["", LSTRING(Mode_IRDual)],
