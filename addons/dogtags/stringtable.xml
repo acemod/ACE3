@@ -13,7 +13,7 @@
             <Italian>Piastrina</Italian>
             <Chinese>兵籍牌</Chinese>
             <Chinesesimp>兵籍牌</Chinesesimp>
-            <Portuguese>Dog Tag</Portuguese>
+            <Portuguese>Chapa de Identificação</Portuguese>
             <Spanish>Placa de identidad</Spanish>
             <Turkish>Künye</Turkish>
         </Key>
@@ -29,7 +29,7 @@
             <Italian>Controlla Piastrina</Italian>
             <Chinese>檢查兵籍牌</Chinese>
             <Chinesesimp>检查兵籍牌</Chinesesimp>
-            <Portuguese>Verificar Dog Tag</Portuguese>
+            <Portuguese>Verificar chapa de identificação</Portuguese>
             <Spanish>Verificar placa de identidad</Spanish>
             <Turkish>Künyeyi Kontrol Et</Turkish>
         </Key>
@@ -77,7 +77,7 @@
             <Italian>Piastrina presa da %1...</Italian>
             <Chinese>從%1身上拿取兵籍牌...</Chinese>
             <Chinesesimp>从%1身上拿取兵籍牌...</Chinesesimp>
-            <Portuguese>Dogtag pego de %1...</Portuguese>
+            <Portuguese>Chapa de identificação pega de %1...</Portuguese>
             <Spanish>Tomada placa de identidad de %1...</Spanish>
             <Turkish>Künye %1 kişisinden alındı</Turkish>
         </Key>
@@ -93,7 +93,7 @@
             <Italian>Qualcun altro ha già preso la piastrina...</Italian>
             <Chinese>已經有人把他的兵籍牌拿走了...</Chinese>
             <Chinesesimp>已经有人把他的兵籍牌拿走了...</Chinesesimp>
-            <Portuguese>Alguém já pegou essa dogtag...</Portuguese>
+            <Portuguese>Alguém já pegou essa chapa de identificação...</Portuguese>
             <Spanish>Alguien más ha tomado la placa de identidad</Spanish>
             <Turkish>Başka biri zaten künyeyi almış</Turkish>
         </Key>
@@ -106,7 +106,7 @@
             <Italian>Indicatore su schermo per il controllo delle piastrine</Italian>
             <Polish>Wyświetlacz ekranowy dla sprawdzania nieśmiertelników</Polish>
             <Russian>Экран для проверки жетонов</Russian>
-            <Portuguese>Tela de Exibição para verificar dogtags</Portuguese>
+            <Portuguese>Tela de exibição para verificar chapas de identificação</Portuguese>
             <Spanish>Visualización en pantalla de placa de identidad</Spanish>
             <French>Affichage à l'écran pour le contrôle des plaques.</French>
             <Czech>Okno na obrazovce pro kontrolu známek</Czech>
