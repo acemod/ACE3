@@ -24,13 +24,7 @@ params ["", "_unit", "_actionParams"];
 _actionParams params ["_weapon", "_newAttachment", "_oldAttachment"];
 TRACE_3("Switching attachment",_weapon,_newAttachment,_oldAttachment);
 
-private _currWeaponType = switch (_weapon) do {
-    case (""): {-1};
-    case (primaryWeapon _unit): {0};
-    case (handgunWeapon _unit): {1};
-    case (secondaryWeapon _unit): {2};
-    default {-1};
-};
+private _currWeaponType = [_unit, _weapon] call EFUNC(common,getWeaponIndex);
 
 if (_currWeaponType == -1) exitWith {};
 
@@ -53,23 +47,23 @@ if (_removeOld && {!([_unit, _oldAttachment] call CBA_fnc_canAddItem)}) exitWith
 
 if (_removeOld) then {
     [{
-        params ["_unit", "_oldAttachment", "", "_currWeaponType"];
+        params ["_unit", "_oldAttachment", "_currWeaponType"];
 
         switch (_currWeaponType) do {
             case 0: {_unit removePrimaryWeaponItem _oldAttachment};
-            case 1: {_unit removeHandgunItem _oldAttachment};
-            case 2: {_unit removeSecondaryWeaponItem _oldAttachment};
+            case 1: {_unit removeSecondaryWeaponItem _oldAttachment};
+            case 2: {_unit removeHandgunItem _oldAttachment};
             default {};
         };
 
         _unit addItem _oldAttachment;
-    }, [_unit, _oldAttachment, _newAttachment, _currWeaponType], 0.3] call CBA_fnc_waitAndExecute;
+    }, [_unit, _oldAttachment, _currWeaponType], 0.3] call CBA_fnc_waitAndExecute;
 };
 
 if (!_addNew) exitWith {};
 
 [{
-    params ["_unit", "", "_newAttachment", "", "_weapon"];
+    params ["_unit", "_newAttachment", "_weapon"];
 
     // Delete weapon from array, to be able to pass _this to EH
     _unit addWeaponItem [_weapon, _newAttachment];
@@ -79,4 +73,4 @@ if (!_addNew) exitWith {};
     if (_unit == ACE_player) then {
         playSound "click";
     };
-}, [_unit, _oldAttachment, _newAttachment, _currWeaponType, _weapon], 1] call CBA_fnc_waitAndExecute;
+}, [_unit, _newAttachment, _weapon], 1] call CBA_fnc_waitAndExecute;

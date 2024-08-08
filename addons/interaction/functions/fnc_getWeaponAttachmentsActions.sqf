@@ -44,7 +44,7 @@ params ["_unit"];
                 {},
                 {true},
                 {
-                    params ["_unit", "", "_args"];
+                    params ["", "_unit", "_args"];
                     _args params ["_attachment", "_name", "_picture", "_weaponItems", "_currentWeapon"];
 
                     private _cfgWeapons = configFile >> "CfgWeapons";
