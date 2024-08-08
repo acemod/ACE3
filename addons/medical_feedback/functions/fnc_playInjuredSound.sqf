@@ -28,7 +28,7 @@ params [["_unit", objNull, [objNull]], ["_type", "hit", [""]], ["_severity", 0, 
 
 if (!local _unit) exitWith { ERROR_2("playInjuredSound: Unit not local or null [%1:%2]",_unit,typeOf _unit); };
 
-if !(_unit call EFUNC(common,isAwake) && _allowUnconscious) exitWith {};
+if (!(_unit call EFUNC(common,isAwake)) && !_allowUnconscious) exitWith {};
 
 // Limit network traffic by only sending the event to players who can potentially hear it
 private _distance = if (_type == "hit") then {
