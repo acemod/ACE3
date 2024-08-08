@@ -10,7 +10,6 @@
  * - 0: Weapon <STRING>
  * - 1: New Attachment <STRING>
  * - 2: Old Attachment <STRING>
- * - 3: Use CBA Mode Switch <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -22,12 +21,8 @@
  */
 
 params ["", "_unit", "_actionParams"];
-_actionParams params ["_weapon", "_newAttachment", "_oldAttachment", ["_cbaModeSwitch", false]];
+_actionParams params ["_weapon", "_newAttachment", "_oldAttachment"];
 TRACE_3("Switching attachment",_weapon,_newAttachment,_oldAttachment);
-
-if (_cbaModeSwitch) exitWith {
-    [_unit, _weapon, _oldAttachment, _newAttachment] call EFUNC(common,switchAttachmentMode);
-};
 
 private _currWeaponType = switch (_weapon) do {
     case (""): {-1};
