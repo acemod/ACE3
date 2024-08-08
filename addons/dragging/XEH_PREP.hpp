@@ -5,6 +5,8 @@ PREP(canDrop_carry);
 PREP(canRun_carry);
 PREP(carryObject);
 PREP(carryObjectPFH);
+PREP(createClone);
+PREP(deleteClone);
 PREP(dragObject);
 PREP(dragObjectPFH);
 PREP(dropObject);
