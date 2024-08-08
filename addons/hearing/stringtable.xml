@@ -372,6 +372,7 @@
             <French>Mettre/enlever les bouchons</French>
             <German>Ohrstöpsel einsetzen/herausnehmen</German>
             <Spanish>Poner/quitar tapones</Spanish>
+            <Portuguese>Colocar/retirar protetores auriculares</Portuguese>
         </Key>
         <Key ID="STR_ACE_Hearing_heavyWeaponUnits">
             <English>Only units with heavy weapons</English>
@@ -382,6 +383,7 @@
             <Spanish>Sólo unidades con armas pesadas</Spanish>
             <Italian>Solo a unità con armi pesanti</Italian>
             <Korean>중화기를 가진 유닛만 해당</Korean>
+            <Portuguese>Apenas unidades com armas pesadas</Portuguese>
         </Key>
     </Package>
 </Project>

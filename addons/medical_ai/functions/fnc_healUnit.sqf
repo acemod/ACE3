@@ -47,6 +47,10 @@ if (_this distance _target > 2.5) exitWith {
     _this setVariable [QGVAR(currentTreatment), nil];
     if (CBA_missionTime >= (_this getVariable [QGVAR(nextMoveOrder), CBA_missionTime])) then {
         _this setVariable [QGVAR(nextMoveOrder), CBA_missionTime + 10];
+
+        // Medic, when doing a lot of treatment, moves away from injured over time (because of animations)
+        // Need to allow the medic to move back to the injured again
+        _this forceSpeed -1;
         _this doMove getPosATL _target;
         #ifdef DEBUG_MODE_FULL
         systemChat format ["%1 moving to %2", _this, _target];

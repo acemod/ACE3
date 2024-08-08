@@ -5,7 +5,9 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     [LSTRING(enabled_DisplayName), LSTRING(enabled_Description)],
     _category,
     false,
-    1
+    1,
+    {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -45,5 +47,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     [LSTRING(simulationInterval_DisplayName), LSTRING(simulationInterval_Description)],
     _category,
     [0, 0.2, 0.05, 2],
-    1
+    1,
+    {[QGVAR(simulationInterval), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
