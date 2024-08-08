@@ -12,12 +12,18 @@
  * The new pain level <NUMBER>
  *
  * Example:
- * [guy, 0.5] call ace_medical_fnc_adjustPainLevel
+ * [player, 0.5] call ace_medical_fnc_adjustPainLevel
  *
  * Public: Yes
  */
 
-params ["_unit", "_addedPain"];
+if (!EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [LINKFUNC(adjustPainLevel), _this];
+};
+
+if !(GETEGVAR(medical,enabled,false)) exitWith {};
+
+params [["_unit", objNull, [objNull]], ["_addedPain", 0, [0]]];
 
 if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit); };
 

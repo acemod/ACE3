@@ -23,6 +23,12 @@
  */
 // #define DEBUG_TESTRESULTS
 
+if (!EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [LINKFUNC(addDamageToUnit), _this];
+};
+
+if !(GETEGVAR(medical,enabled,false)) exitWith {false};
+
 params [
     ["_unit", objNull, [objNull]],
     ["_damageToAdd", -1, [0]],

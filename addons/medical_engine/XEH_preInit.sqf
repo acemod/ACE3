@@ -85,9 +85,6 @@ addMissionEventHandler ["Loaded", {
     };
 }] call CBA_fnc_addEventhandler;
 
-[] call FUNC(disableThirdParty);
-
-// Future-proofing
-EGVAR(medical,enabled) = true; // TODO: remove when medical enable setting is implemented
+call FUNC(disableThirdParty);
 
 ADDON = true;
