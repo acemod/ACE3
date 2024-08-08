@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Weapon (String or CBA-Weapon-Index (not ace's getWeaponIndex)) <STRING><NUMBER>
+ * 1: Weapon (String or CBA-Weapon-Index (not ace's getWeaponIndex)) <STRING|NUMBER>
  * 2: From <STRING>
  * 3: To <STRING>
  *
@@ -24,7 +24,7 @@ TRACE_4("switchAttachmentMode",_unit,_weapon,_currItem,_switchItem);
 
 if (_weapon isEqualTo "") exitWith {};
 
-private _exit = false;
+private _exit = _unit != ACE_player;
 switch (_weapon) do {
     case 0;
     case (primaryWeapon _unit): {
@@ -56,19 +56,18 @@ switch (_weapon) do {
             ["CBA_attachmentSwitched", _this] call CBA_fnc_localEvent;
         }, [_unit, _currItem, _switchItem, _currWeaponType]] call CBA_fnc_execNextFrame;
     };
-    default { 
+    default {
         ERROR_1("bad weapon - %1",_this);
         _exit = true;
     };
 };
-if (_exit) exitWith {};
+if (_exit) exitWith {}; // Don't notify if the unit isn't the local player or if an invalid weapon was passed
 
 private _configSwitchItem = configfile >> "CfgWeapons" >> _switchItem;
 private _switchItemHintText = getText (_configSwitchItem >> "MRT_SwitchItemHintText");
 private _switchItemHintImage = getText (_configSwitchItem >> "picture");
-if (_unit == ACE_player) then {
-    playSound "click";
-    if (_switchItemHintText != "") then {
-        [[_switchItemHintImage, 2.0], [_switchItemHintText], true] call CBA_fnc_notify;
-    };
+
+playSound "click";
+if (_switchItemHintText != "") then {
+    [[_switchItemHintImage, 2.0], [_switchItemHintText], true] call CBA_fnc_notify;
 };
