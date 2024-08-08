@@ -28,7 +28,7 @@ private _maps = configProperties [configFile >> "CfgWorldList", "(isClass _x)", 
     private _stepX = 1e10;
     private _stepY = 1e10;
     {
-        private _zoom = getnumber (_x >> "zoomMax");
+        private _zoom = getNumber (_x >> "zoomMax");
         if (_zoom < _zoomMax) then {
             _zoomMax = _zoom;
             _formatX = getText (_x >> "formatX");

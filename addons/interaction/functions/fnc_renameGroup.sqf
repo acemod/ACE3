@@ -20,12 +20,12 @@ params [
     ["_group", grpNull, [grpNull]],
     ["_newName", "", [""]]
 ];
-if (_newName isEqualTo (groupID _group)) exitWith {true};
+if (_newName isEqualTo (groupId _group)) exitWith {true};
 
 private _lowerName = toLower _newName; // Case insensitive name search
 private _nameAlreadyTaken = allGroups findIf {
     side _x isEqualTo side _group
-    && {_lowerName isEqualTo toLower (groupID _x)}
+    && {_lowerName isEqualTo toLower (groupId _x)}
     && {_group != _x}
 } != -1;
 

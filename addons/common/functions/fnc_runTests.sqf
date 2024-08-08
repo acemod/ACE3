@@ -30,7 +30,7 @@ INFO_1("ace_common_fnc_runTests starting for [%1]",_specificTest);
         _total = _total + 1;
         private _testFile = getText _x;
         diag_log text format ["----- Starting Testing %1 [%2] -----", _testName, _testFile];
-        private _return = ([nil] apply (compile preProcessFileLineNumbers _testFile)) select 0;
+        private _return = ([nil] apply (compile preprocessFileLineNumbers _testFile)) select 0;
         if ((isNil "_return") || {_return isNotEqualTo true}) then {
             systemChat format ["Test [%1] Failed", _testName];
             diag_log text format ["----- Finished Testing %1 [Failed] -----", _testName];

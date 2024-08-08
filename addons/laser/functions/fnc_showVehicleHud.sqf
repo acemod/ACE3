@@ -68,7 +68,7 @@ GVAR(pfID) = [{
         if (_adjustDown) then {
             private _ctrl = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_MODECONTROLGROUP;
             private _pos = ctrlPosition _ctrl;
-            _pos set [1, (_pos select 1) + ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)];
+            _pos set [1, (_pos select 1) + ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)];
             _ctrl ctrlSetPosition _pos;
             _ctrl ctrlCommit 0;
         };

@@ -42,7 +42,7 @@ for "_row" from 0 to 49 do {
         _control ctrlSetTextColor [0, 0, 0, 1];
     };
     _control ctrlCommit 0;
-    _control ctrlSetText Str(100 + _row * 50);
+    _control ctrlSetText str(100 + _row * 50);
     GVAR(controls) pushBack _control;
 };
 for "_column" from 0 to 8 do {

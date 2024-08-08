@@ -69,7 +69,7 @@ if (_checkCount != _totalCount) then {
 // export text
 private _nl = toString [10];
 private _multipleBasePumps = 1 < count _basePumps;
-private _output = [format ["    %1[] = { /*  %2  */", worldName, getText (configfile >> "CfgWorlds" >> worldName >> "description")]];
+private _output = [format ["    %1[] = { /*  %2  */", worldName, getText (configFile >> "CfgWorlds" >> worldName >> "description")]];
 {
     if (_forEachIndex > 0) then {_output pushBack ","};
     _x params ["_class", "_positions"];

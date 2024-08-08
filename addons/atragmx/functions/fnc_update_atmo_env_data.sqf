@@ -18,20 +18,20 @@
 ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 13007);
 
 if (GVAR(currentUnit) == 2) then {
-    ctrlSetText [130040, Str(Round(GVAR(temperature) * 10) / 10)];
+    ctrlSetText [130040, str(round(GVAR(temperature) * 10) / 10)];
 } else {
-    ctrlSetText [130040, Str(Round((GVAR(temperature) * 1.8 + 32) * 10) / 10)];
+    ctrlSetText [130040, str(round((GVAR(temperature) * 1.8 + 32) * 10) / 10)];
 };
 if (GVAR(currentUnit) == 2) then {
-    ctrlSetText [130050, Str(Round(GVAR(barometricPressure)))];
+    ctrlSetText [130050, str(round(GVAR(barometricPressure)))];
 } else {
-    ctrlSetText [130050, Str(Round(GVAR(barometricPressure) / 33.8638866667 * 100) / 100)];
+    ctrlSetText [130050, str(round(GVAR(barometricPressure) / 33.8638866667 * 100) / 100)];
 };
-ctrlSetText [130060, Str(Round(GVAR(relativeHumidity) * 100 * 10) / 10)];
+ctrlSetText [130060, str(round(GVAR(relativeHumidity) * 100 * 10) / 10)];
 if (GVAR(currentUnit) == 2) then {
-    ctrlSetText [130030, Str(Round(GVAR(altitude)))];
+    ctrlSetText [130030, str(round(GVAR(altitude)))];
 } else {
-    ctrlSetText [130030, Str(Round(GVAR(altitude) * 3.2808399))];
+    ctrlSetText [130030, str(round(GVAR(altitude) * 3.2808399))];
 };
 
 if (GVAR(currentUnit) == 2) then {

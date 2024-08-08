@@ -20,7 +20,7 @@
 params ["_explosive", "_magazine", "_trigger"];
 TRACE_3("params",_explosive,_magazine,_trigger);
 
-private _config = ConfigFile >> "ACE_Triggers" >> _trigger;
+private _config = configFile >> "ACE_Triggers" >> _trigger;
 
 // Make selected trigger the active one (for keybind) if it's the first to be connected
 private _activeTrigger = GVAR(activeTrigger);

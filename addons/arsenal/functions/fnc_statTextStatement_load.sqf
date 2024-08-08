@@ -17,7 +17,7 @@ params ["_stats", "_config"];
 TRACE_2("statTextStatement_load",_stats,_config);
 
 if (!isNull (_config >> "ItemInfo" >> "containerClass")) then { // Uniform/Vest
-    _config = configfile >> "CfgVehicles" >> getText (_config >> "ItemInfo" >> "containerClass");
+    _config = configFile >> "CfgVehicles" >> getText (_config >> "ItemInfo" >> "containerClass");
 };
 
 private _load = getNumber (_config >> (_stats # 0));

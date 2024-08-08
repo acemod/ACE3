@@ -29,8 +29,8 @@ if (diag_tickTime < (GVAR(lastFPTime) + FP_ACTION_TIMEOUT)) exitWith {true};
 GVAR(lastFPTime) = diag_tickTime;
 
 // Find where is the finger pointing
-private _originASL = AGLtoASL positionCameraToWorld [0, 0, 0];
-private _fingerPosASL = AGLtoASL positionCameraToWorld [0, 0, FP_DISTANCE];
+private _originASL = AGLToASL positionCameraToWorld [0, 0, 0];
+private _fingerPosASL = AGLToASL positionCameraToWorld [0, 0, FP_DISTANCE];
 private _intersections = lineIntersectsSurfaces [_originASL, _fingerPosASL, ACE_player, vehicle ACE_player, true, 1];
 if (_intersections isNotEqualTo []) then {
     _fingerPosASL = _intersections select 0 select 0;

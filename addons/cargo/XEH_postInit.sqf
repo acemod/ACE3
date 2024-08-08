@@ -51,7 +51,7 @@
     params ["_item", "_emptyPosAGL"];
 
     _item hideObjectGlobal false;
-    _item setPosASL (AGLtoASL _emptyPosAGL);
+    _item setPosASL (AGLToASL _emptyPosAGL);
 
     // Let objects remain invulernable for a short while after placement
     [EFUNC(common,statusEffect_set), [_item, "blockDamage", QUOTE(ADDON), false], 2] call CBA_fnc_waitAndExecute;

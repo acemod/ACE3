@@ -89,7 +89,7 @@ private _camPos = AGLToASL positionCameraToWorld [0,0,0];
                     0,
                     _heightByDistance,
                     0,
-                    groupID _group,
+                    groupId _group,
                     2,
                     _fontSizeByDistance,
                     "PuristaMedium",

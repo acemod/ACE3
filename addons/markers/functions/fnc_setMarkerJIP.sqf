@@ -27,7 +27,7 @@ TRACE_2("params",_allMapMarkers,_allMapMarkersProperties);
         private _data = _allMapMarkersProperties select _index;
         _data params ["_markerClassname", "_colorClassname", "_pos", "_dir", "_scale"];
 
-        private _config = (configfile >> "CfgMarkers") >> _markerClassname;
+        private _config = (configFile >> "CfgMarkers") >> _markerClassname;
 
         if (!isClass _config) then {
             WARNING("CfgMarker not found, changed to milDot");
@@ -36,7 +36,7 @@ TRACE_2("params",_allMapMarkers,_allMapMarkersProperties);
 
         _x setMarkerTypeLocal configName _config;
 
-        _config = configfile >> "CfgMarkerColors" >> _colorClassname;
+        _config = configFile >> "CfgMarkerColors" >> _colorClassname;
 
         if (!isClass _config) then {
             WARNING("CfgMarkerColors not found, changed to Default");

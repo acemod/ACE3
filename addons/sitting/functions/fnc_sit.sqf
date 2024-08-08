@@ -56,7 +56,7 @@ TRACE_2("Sit pos and dir",_sitPosition,_sitDirection);
 // Set direction and position
 _player setDir _sitDirection;
 //modelToWorld returns AGL
-_player setPosASL (AGLtoASL (_seat modelToWorld _sitPosition));
+_player setPosASL (AGLToASL (_seat modelToWorld _sitPosition));
 
 // Set variables, save seat object on player
 _player setVariable [QGVAR(sittingStatus), [_seat, _actionID, _seatPos]];

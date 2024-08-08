@@ -31,7 +31,7 @@ params ["_wire"];
         private _dir = getDir _wire;
         private _pos = getPosASL _wire;
 
-        private _wirecoil = "ACE_ConcertinaWireCoil" createvehicle [0, 0, 0];
+        private _wirecoil = "ACE_ConcertinaWireCoil" createVehicle [0, 0, 0];
 
         deleteVehicle _wire;
 

@@ -25,10 +25,10 @@ if (isNil QGVAR(debugLines)) then {
 };
 
 if (count GVAR(debugLines) < 100) then {
-    GVAR(debugLines) pushBack [ASLtoAGL _startASL, ASLtoAGL _endASL, _color];
+    GVAR(debugLines) pushBack [ASLToAGL _startASL, ASLToAGL _endASL, _color];
     GVAR(debugLinesIndex) = 0;
 } else {
-    GVAR(debugLines) set [GVAR(debugLinesIndex), [ASLtoAGL _startASL, ASLtoAGL _endASL, _color]];
+    GVAR(debugLines) set [GVAR(debugLinesIndex), [ASLToAGL _startASL, ASLToAGL _endASL, _color]];
     GVAR(debugLinesIndex) = (GVAR(debugLinesIndex) + 1) mod 100;
 };
 

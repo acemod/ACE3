@@ -22,7 +22,7 @@ if (_round in GVAR(blackList)) exitWith {
 };
 
 if (!alive _round) exitWith {
-    if ((diag_frameno - _firedFrame) > 1) then { //skip if deleted within a single frame
+    if ((diag_frameNo - _firedFrame) > 1) then { //skip if deleted within a single frame
         if (_skip == 0) then {
             if ((_explosive > 0.5 && {_indirectRange >= 4.5} && {_fragPower >= 35}) || {_force == 1}) then {
                 // shotbullet, shotShell don't seem to explode when touching water, so don't create frags

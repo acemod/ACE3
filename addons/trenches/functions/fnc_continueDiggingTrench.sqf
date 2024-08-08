@@ -81,7 +81,7 @@ if(_actualProgress == 0) then {
         _cutterPos set [2, getTerrainHeightASL _cutterPos];
         _trenchGrassCutter setPosASL _cutterPos;
         deleteVehicle _trenchGrassCutter;
-    } foreach getArray (configOf _trench >> QGVAR(grassCuttingPoints));
+    } forEach getArray (configOf _trench >> QGVAR(grassCuttingPoints));
 };
 
 private _progressLeft = (_actualProgress * 10) + 1;

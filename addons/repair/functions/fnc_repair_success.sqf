@@ -54,7 +54,7 @@ if (!isNil "_weaponSelect") then {
 } forEach _claimedObjects;
 
 // Record specific callback
-private _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
+private _config = (configFile >> "ACE_Repair" >> "Actions" >> _className);
 
 private _callback = getText (_config >> "callbackSuccess");
 if (isNil _callback) then {

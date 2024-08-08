@@ -584,7 +584,7 @@ GVAR(menuRun) = true;
             };
             GVAR(tmpUpdateRate) = 0.1 max GVAR(tmpUpdateRate) min 2.0;
             if (!GVAR(busy)) then {
-                (__dsp displayCtrl __mainText) ctrlSetText (Str(GVAR(tmpUpdateRate) * 1000) + "ms");
+                (__dsp displayCtrl __mainText) ctrlSetText (str(GVAR(tmpUpdateRate) * 1000) + "ms");
                 (__dsp displayCtrl __F1) ctrlSetText "Save";
                 (__dsp displayCtrl __F3) ctrlSetText "Cancel";
             };

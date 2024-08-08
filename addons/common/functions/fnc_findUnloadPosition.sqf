@@ -61,7 +61,7 @@ if (isNull _unloader || {_unloader in _vehicle}) then {
 // Ideal unload pos is halfway between unloader and vehicle (at the unloader's height)
 private _originASL = ((getPosASL _unloader) vectorAdd (getPosASL _vehicle)) vectorMultiply 0.5;
 _originASL set [2, (getPosASL _unloader) select 2];
-private _originAGL = ASLtoAGL _originASL;
+private _originAGL = ASLToAGL _originASL;
 
 // Do a manual search for empty pos (handles underwater, buildings or piers)
 TRACE_2("Checking for unload",_originAGL,_radiusOfItem);
@@ -74,9 +74,9 @@ while {_rangeToCheck < _maxDistance} do {
 
     private _roundPointIsValid = false;
 
-    if (((AGLtoASL _roundAGL) select 2) > 0) then {
+    if (((AGLToASL _roundAGL) select 2) > 0) then {
         // Shoot a ray down, and make sure we hit something solid like a building or the ground
-        private _belowRoundArray = lineIntersectsSurfaces [(AGLtoASL _roundAGL) vectorAdd [0, 0, 0.5], (AGLtoASL _roundAGL) vectorAdd [0, 0, -1]];
+        private _belowRoundArray = lineIntersectsSurfaces [(AGLToASL _roundAGL) vectorAdd [0, 0, 0.5], (AGLToASL _roundAGL) vectorAdd [0, 0, -1]];
         TRACE_4("Testing for solid",_roundDistance,_roundAngle,_roundAGL,_belowRoundArray);
 
         if (_belowRoundArray isNotEqualTo []) then {
@@ -85,7 +85,7 @@ while {_rangeToCheck < _maxDistance} do {
             // Point is above something: Terrain (null) or Building
             if ((isNull _aboveBuilding) || {_aboveBuilding isKindOf "Building"}) then {
                 // Get the real intersection point
-                _roundAGL = ASLtoAGL ((_belowRoundArray select 0) select 0);
+                _roundAGL = ASLToAGL ((_belowRoundArray select 0) select 0);
 
                 _roundPointIsValid = true;
             };
@@ -102,13 +102,13 @@ while {_rangeToCheck < _maxDistance} do {
         for "_index" from 0 to (COL_TEST_COUNT -1) do {
             // Scan for collisions with objects with lineIntersectsSurfaces
             private _angle = _index * (360 / COL_TEST_COUNT);
-            private _point1ASL = (AGLtoASL _roundAGL) vectorAdd [_radiusOfItem * cos _angle, _radiusOfItem * sin _angle, 0.1];
-            private _point2ASL = (AGLtoASL _roundAGL) vectorAdd [-_radiusOfItem * cos _angle, -_radiusOfItem * sin _angle, _radiusOfItem + 0.5];
+            private _point1ASL = (AGLToASL _roundAGL) vectorAdd [_radiusOfItem * cos _angle, _radiusOfItem * sin _angle, 0.1];
+            private _point2ASL = (AGLToASL _roundAGL) vectorAdd [-_radiusOfItem * cos _angle, -_radiusOfItem * sin _angle, _radiusOfItem + 0.5];
             private _testIntersections = lineIntersectsSurfaces [_point1ASL, _point2ASL];
 
             if (((count _testIntersections) == 1) && {isNull ((_testIntersections select 0) select 2)}) then {
                 private _hitGroundASL = (_testIntersections select 0) select 0;
-                private _hitHeightOffset = ((AGLtoASL _roundAGL) select 2) - (_hitGroundASL select 2);
+                private _hitHeightOffset = ((AGLToASL _roundAGL) select 2) - (_hitGroundASL select 2);
                 private _hit2dOffset = _roundAGL distance2D _hitGroundASL;
                 private _slope = _hitHeightOffset atan2 _hit2dOffset;
 
@@ -124,8 +124,8 @@ while {_rangeToCheck < _maxDistance} do {
                 _roundPointIsValid = false;
             };
 
-            _point1ASL = (AGLtoASL _roundAGL) vectorAdd [_radiusOfItem * cos _angle, _radiusOfItem * sin _angle, 0.5];
-            _point2ASL = (AGLtoASL _roundAGL) vectorAdd [-_radiusOfItem * cos _angle, -_radiusOfItem * sin _angle, 1];
+            _point1ASL = (AGLToASL _roundAGL) vectorAdd [_radiusOfItem * cos _angle, _radiusOfItem * sin _angle, 0.5];
+            _point2ASL = (AGLToASL _roundAGL) vectorAdd [-_radiusOfItem * cos _angle, -_radiusOfItem * sin _angle, 1];
             _testIntersections = lineIntersectsSurfaces [_point1ASL, _point2ASL];
 
             if (_testIntersections isNotEqualTo []) exitWith {

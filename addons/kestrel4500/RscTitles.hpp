@@ -64,7 +64,7 @@ class Kestrel4500_Display {
             SizeEX=0.025;
             idc=74000;
             style=48;
-            x="safezoneX";
+            x="safeZoneX";
             y = DIALOG_SAFE_Y(0);
             w="1.024";
             h="1.024*4/3";
@@ -74,7 +74,7 @@ class Kestrel4500_Display {
         };
         class POWER: Kestrel4500_RscButton {
             idc=-1;
-            x="safezoneX+0.385";
+            x="safeZoneX+0.385";
             y = DIALOG_SAFE_Y(1.125);
             w="0.042";
             h="0.042*4/3";
@@ -83,7 +83,7 @@ class Kestrel4500_Display {
         };
         class ENTER: POWER {
             idc=-1;
-            x="safezoneX+0.46";
+            x="safeZoneX+0.46";
             y = DIALOG_SAFE_Y(1.0);
             w=0.1;
             action=QUOTE(0 call FUNC(buttonPressed));
@@ -91,7 +91,7 @@ class Kestrel4500_Display {
         };
         class TOP: Kestrel4500_RscButton {
             idc=-1;
-            x="safezoneX+0.46";
+            x="safeZoneX+0.46";
             y = DIALOG_SAFE_Y(0.93);
             w=0.1;
             h=0.03;
@@ -106,7 +106,7 @@ class Kestrel4500_Display {
         };
         class LEFT: Kestrel4500_RscButton {
             idc=-1;
-            x="safezoneX+0.4";
+            x="safeZoneX+0.4";
             y = DIALOG_SAFE_Y(0.97);
             w=0.046;
             h=0.11;
@@ -115,13 +115,13 @@ class Kestrel4500_Display {
         };
         class RIGHT: LEFT {
             idc=-1;
-            x="safezoneX+0.58";
+            x="safeZoneX+0.58";
             action=QUOTE(4 call FUNC(buttonPressed));
             onMouseButtonDown = "playSound 'kestrel4500_right_button_click'";
         };
         class MEMORY: Kestrel4500_RscButton {
             idc=-1;
-            x="safezoneX+0.395";
+            x="safeZoneX+0.395";
             y = DIALOG_SAFE_Y(0.87);
             w=0.05;
             h="0.045*4/3";
@@ -129,13 +129,13 @@ class Kestrel4500_Display {
         };
         class BACKLIGHT: MEMORY {
             idc=-1;
-            x="safezoneX+0.585";
+            x="safeZoneX+0.585";
             action=QUOTE(6 call FUNC(buttonPressed));
         };
 
         class TEXT_TOP: Kestrel4500_RscText {
             idc=74100;
-            x="safezoneX+0.40";
+            x="safeZoneX+0.40";
             y = DIALOG_SAFE_Y(0.58);
             w=0.22;
             h=0.04;
@@ -236,7 +236,7 @@ class RscTitles {
                 font="TahomaB";
                 SizeEX=".025*0.75";
                 style=48;
-                x="safezoneX+0.14";
+                x="safeZoneX+0.14";
                 y = DISPLAY_SAFE_Y(0);
                 w="0.512*0.75";
                 h="1.024*4/3*0.75";
@@ -246,7 +246,7 @@ class RscTitles {
             };
             class RscTextTop: Kestrel4500_RscText {
                 idc=75100;
-                x="safezoneX-0.05+0.40*0.75";
+                x="safeZoneX-0.05+0.40*0.75";
                 y = DISPLAY_SAFE_Y(0.58*0.75);
                 w="0.22*0.75";
                 h="0.04*0.75";

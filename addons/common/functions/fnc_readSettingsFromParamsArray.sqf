@@ -17,7 +17,7 @@
  */
 
 //paramsArray is a normal variable not a command
-private _paramsArray = missionnamespace getVariable ["paramsArray", []];
+private _paramsArray = missionNamespace getVariable ["paramsArray", []];
 
 TRACE_1("Reading missionConfigFile params",_paramsArray);
 

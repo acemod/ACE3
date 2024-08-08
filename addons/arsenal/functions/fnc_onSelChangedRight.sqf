@@ -16,7 +16,7 @@
 
 params ["_control", "_curSel"];
 
-if (_curSel < 0) exitwith {};
+if (_curSel < 0) exitWith {};
 
 private _display = ctrlParent _control;
 private _item = _control lbData _curSel;

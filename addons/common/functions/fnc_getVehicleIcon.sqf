@@ -28,8 +28,8 @@ private _objectType = if (_object isEqualType objNull) then {
 private _cachedValue = GVAR(vehicleIconCache) get _objectType;
 
 if (isNil "_cachedValue") then {
-    private _vehicleValue = getText (configfile >> "CfgVehicles" >> _objectType >> "icon");
-    private _vehicleIconValue = getText (configfile >> "CfgVehicleIcons" >> _vehicleValue);
+    private _vehicleValue = getText (configFile >> "CfgVehicles" >> _objectType >> "icon");
+    private _vehicleIconValue = getText (configFile >> "CfgVehicleIcons" >> _vehicleValue);
 
     if (_vehicleIconValue == "") then {
         if (_vehicleValue != "" && {((toLowerANSI _vehicleValue) find ".paa") > -1}) then {

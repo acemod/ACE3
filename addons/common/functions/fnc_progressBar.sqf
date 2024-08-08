@@ -57,7 +57,7 @@ if (_dialog) then {
 
 //Adjust position based on user setting:
 private _ctrlPos = ctrlPosition (uiNamespace getVariable QGVAR(ctrlProgressBarTitle));
-_ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2))];
+_ctrlPos set [1, ((0 + 29 * GVAR(settingProgressBarLocation)) * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2))];
 
 (uiNamespace getVariable QGVAR(ctrlProgressBG)) ctrlSetPosition _ctrlPos;
 (uiNamespace getVariable QGVAR(ctrlProgressBG)) ctrlCommit 0;

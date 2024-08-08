@@ -39,7 +39,7 @@ private _iconBaseSize = GVAR(sizeCoef) * BASE_SIZE * 0.10713 * (call EFUNC(commo
             _iconSize = _iconSize * linearConversion [0, GVAR(maxRange), (getPosASL ACE_player) vectorDistance (getPosASL _sourceUnit), 0.25, 2, true];
         };
 
-        drawIcon3D [QPATHTOF(UI\fp_icon2.paa), _drawColor, ASLtoAGL _pos, _iconSize, _iconSize, 0, _name, 1, 0.03, "RobotoCondensed"];
+        drawIcon3D [QPATHTOF(UI\fp_icon2.paa), _drawColor, ASLToAGL _pos, _iconSize, _iconSize, 0, _name, 1, 0.03, "RobotoCondensed"];
     };
 } forEach GVAR(fingersHash);
 

@@ -64,8 +64,8 @@ class RscInGameUI {
                     class Controls {
                         class GVAR(WFOV_mode_on): GVAR(WFOV_mode_off) {
                             idc = -1;
-                            y = "0.031*SafeZoneH - SafezoneY";
-                            x = "((SafezoneW -SafezoneH*3/4)/2)+ (0.307/4)*3*SafezoneH - SafezoneX";
+                            y = "0.031*SafeZoneH - safeZoneY";
+                            x = "((safeZoneW -safeZoneH*3/4)/2)+ (0.307/4)*3*safeZoneH - safeZoneX";
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
                         class StadiaL: RscLine {
@@ -127,8 +127,8 @@ class RscInGameUI {
                     class Controls {
                         class GVAR(NFOV_mode_on): GVAR(NFOV_mode_off) {
                             idc = -1;
-                            x = "((SafezoneW -SafezoneH*3/4)/2)+ (0.586/4)*3*SafezoneH - SafezoneX";
-                            y = "0.031*SafeZoneH - SafezoneY";
+                            x = "((safeZoneW -safeZoneH*3/4)/2)+ (0.586/4)*3*safeZoneH - safeZoneX";
+                            y = "0.031*SafeZoneH - safeZoneY";
                             colorText[] = {0.2941,0.8745,0.2157,1};
                         };
                         class StadiaL: RscLine {

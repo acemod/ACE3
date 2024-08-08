@@ -49,7 +49,7 @@ if ((_projPos distance _launchPos) >= 20) then {
         // This represents a position that the missile was at between the last frame and now
         private _virtualPos = _lastPos vectorAdd (_vectorDir vectorMultiply _stepSize);
         #ifdef DRAW_NLAW_INFO
-        drawLine3D [ASLtoAGL _virtualPos, ASLtoAGL (_virtualPos vectorAdd [0,0,-5]), [1,0,_stepSize/(_frameDistance max 0.1),1]];
+        drawLine3D [ASLToAGL _virtualPos, ASLToAGL (_virtualPos vectorAdd [0,0,-5]), [1,0,_stepSize/(_frameDistance max 0.1),1]];
         #endif
 
         // Limit scan to 5 meters directly down (shaped charge jet has a very limited range)

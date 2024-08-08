@@ -164,7 +164,7 @@ private _fnc_onVisionSelection = {
     params ["_ctrl", "_state"];
 
     private _display = ctrlParent _ctrl;
-    if (isNull _display) exitwith {};
+    if (isNull _display) exitWith {};
 
     // Convert to boolean since EH returns state as 0 or 1
     private _state = [false, true] select _state;

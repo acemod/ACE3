@@ -21,7 +21,7 @@ params ["_unit", "_targetASL", "_artilleryMag"];
 TRACE_4("moduleSuppressiveFireLocal",_unit,local _unit,_targetASL,_artilleryMag);
 
 if (_artilleryMag != "") exitWith {
-    (vehicle _unit) doArtilleryFire [ASLtoAGL _targetASL, _artilleryMag, 4];
+    (vehicle _unit) doArtilleryFire [ASLToAGL _targetASL, _artilleryMag, 4];
     TRACE_3("doArtilleryFire",_unit,_targetASL,_artilleryMag);
 };
 

@@ -25,7 +25,7 @@ private _optic = (primaryWeaponItems ACE_player) select 2;
 private _isPIP = (getText (configFile >> "CfgWeapons" >> _optic >> "ItemInfo" >> "modelOptics")) == QPATHTOF(models\ace_optics_pip.p3d);
 
 if (_isPIP) then {
-    GVAR(pipLastFrame) = diag_frameno;
+    GVAR(pipLastFrame) = diag_frameNo;
     if (isNull GVAR(camera)) then {
         if ((({_x != GVAR(camera)} count allMissionObjects "camera") > 0) || {!isNull curatorCamera}) exitWith {
             TRACE_1("waiting for feature camera to end",GVAR(camera));
@@ -44,7 +44,7 @@ if (_isPIP) then {
 
         // Start a waitUntil to handle destruction after GVAR(pipLastFrame) is no longer updated
         [{
-            (abs (diag_frameno - GVAR(pipLastFrame))) > 1
+            (abs (diag_frameNo - GVAR(pipLastFrame))) > 1
         }, {
             GVAR(camera) cameraEffect ["TERMINATE", "BACK"];
             camDestroy GVAR(camera);
@@ -70,11 +70,11 @@ if (_isPIP) then {
 
     // @todo, check if that needs to be done at all
     if (cameraView == "GUNNER") then {
-        GVAR(camera) camsetFOV 0.7;
-        GVAR(camera) camcommit 0;
+        GVAR(camera) camSetFov 0.7;
+        GVAR(camera) camCommit 0;
     } else {
-        GVAR(camera) camsetFOV 0.01;
-        GVAR(camera) camcommit 0;
+        GVAR(camera) camSetFov 0.01;
+        GVAR(camera) camCommit 0;
     };
 };
 

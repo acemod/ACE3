@@ -21,11 +21,11 @@
  */
 
 // positions for the icon UI
-#define RIGHT_SIDE    (safezoneW + safezoneX)
-#define LEFT_SIDE     safezoneX
+#define RIGHT_SIDE    (safeZoneW + safeZoneX)
+#define LEFT_SIDE     safeZoneX
 #define TOP_SIDE      safeZoneY
-#define BOTTOM_SIDE   (safeZoneH + safezoneY)
-#define ICON_WIDTH    (2 * (((safezoneW / safezoneH) min 1.2) / 40))
+#define BOTTOM_SIDE   (safeZoneH + safeZoneY)
+#define ICON_WIDTH    (2 * (((safeZoneW / safeZoneH) min 1.2) / 40))
 #define X_POS_ICONS   (RIGHT_SIDE - (1.5 * ICON_WIDTH))
 #define Y_POS_ICONS   (TOP_SIDE + (2.5 * ICON_WIDTH))
 #define DIFFERENCE_ICONS (1.1 * ICON_WIDTH)

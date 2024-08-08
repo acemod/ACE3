@@ -17,7 +17,7 @@
 
 135471 cutRsc ["DAGR_DISPLAY", "plain down"];
 
-#define __display (uiNameSpace getVariable "DAGR_DISPLAY")
+#define __display (uiNamespace getVariable "DAGR_DISPLAY")
 
 #define __gridControl (__display displayCtrl 266851)
 #define __speedControl (__display displayCtrl 266858)
@@ -48,17 +48,17 @@ GVAR(outputPFH) = [{
     private _yGrid2 = DAGR_WP_INFO - _xGrid2 * 10000;
 
     _xCoord2 = switch true do {
-        case (_xGrid2 >= 1000): { "" + Str(_xGrid2) };
-        case (_xGrid2 >= 100): { "0" + Str(_xGrid2) };
-        case (_xGrid2 >= 10): { "00" + Str(_xGrid2) };
-        default             { "000" + Str(_xGrid2) };
+        case (_xGrid2 >= 1000): { "" + str(_xGrid2) };
+        case (_xGrid2 >= 100): { "0" + str(_xGrid2) };
+        case (_xGrid2 >= 10): { "00" + str(_xGrid2) };
+        default             { "000" + str(_xGrid2) };
     };
 
     _yCoord2 = switch true do {
-        case (_yGrid2 >= 1000): { "" + Str(_yGrid2) };
-        case (_yGrid2 >= 100): { "0" + Str(_yGrid2) };
-        case (_yGrid2 >= 10): { "00" + Str(_yGrid2) };
-        default             { "000" + Str(_yGrid2) };
+        case (_yGrid2 >= 1000): { "" + str(_yGrid2) };
+        case (_yGrid2 >= 100): { "0" + str(_yGrid2) };
+        case (_yGrid2 >= 10): { "00" + str(_yGrid2) };
+        default             { "000" + str(_yGrid2) };
     };
 
     _dagrGrid2 = _xCoord2 + " " + _yCoord2;

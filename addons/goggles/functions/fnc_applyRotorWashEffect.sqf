@@ -75,7 +75,7 @@ if !(_safe) then {
         };
     };
 
-    _safe = getNumber (ConfigFile >> "CfgGlasses" >> goggles _unit >> "ACE_Protection") == 1;
+    _safe = getNumber (configFile >> "CfgGlasses" >> goggles _unit >> "ACE_Protection") == 1;
 };
 
 // quit if protected by goggles or helmet

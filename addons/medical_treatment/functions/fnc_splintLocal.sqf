@@ -20,7 +20,7 @@
 params ["_medic", "_patient", "_bodyPart"];
 TRACE_3("splintLocal",_medic,_patient,_bodyPart);
 
-private _partIndex = ALL_BODY_PARTS find tolowerANSI _bodyPart;
+private _partIndex = ALL_BODY_PARTS find toLowerANSI _bodyPart;
 
 private _fractures = GET_FRACTURES(_patient);
 _fractures set [_partIndex, -1];

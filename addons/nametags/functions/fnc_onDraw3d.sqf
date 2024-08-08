@@ -37,7 +37,7 @@ if (GVAR(showPlayerNames) == 4) then {
 private _camPosAGL = positionCameraToWorld [0, 0, 0];
 if !((_camPosAGL select 0) isEqualType 0) exitWith {}; // handle RHS / bugged vehicle slots
 
-private _camPosASL = AGLtoASL _camPosAGL;
+private _camPosASL = AGLToASL _camPosAGL;
 
 // Show nametag for the unit behind the cursor or its commander
 if (_enabledTagsCursor) then {
@@ -115,7 +115,7 @@ if (_enabledTagsNearby) then {
                 private _screenPos = worldToScreen (_target modelToWorld (_target selectionPosition "head"));
                 if (_screenPos isNotEqualTo []) then {
                     // Distance from center / half of screen width
-                    _centerOffsetFactor = 1 - ((_screenPos distance2D [0.5, 0.5]) / (safezoneW / 3));
+                    _centerOffsetFactor = 1 - ((_screenPos distance2D [0.5, 0.5]) / (safeZoneW / 3));
                 } else {
                     _centerOffsetFactor = 0;
                 };

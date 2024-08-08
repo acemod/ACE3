@@ -32,7 +32,7 @@ private _inRange = false;
         _attachedList deleteAt _forEachIndex;
         _attachToVehicle setVariable [QGVAR(attached), _attachedList, true];
     };
-    if (((getPos _unit) distance2d (getPos _xObject)) < 4) exitWith {_inRange = true};
+    if (((getPos _unit) distance2D (getPos _xObject)) < 4) exitWith {_inRange = true};
 } forEach _attachedList;
 
 _inRange &&
