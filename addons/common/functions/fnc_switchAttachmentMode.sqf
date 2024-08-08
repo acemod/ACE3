@@ -58,7 +58,7 @@ switch (_weapon) do {
     };
     default { 
         ERROR_1("bad weapon - %1",_this);
-        _exit = true
+        _exit = true;
     };
 };
 if (_exit) exitWith {};
