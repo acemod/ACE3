@@ -1,13 +1,21 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2, kymckay, LinkIsGrim
- * Get list of vehicle hitpoints to ignore
+ * Get list of vehicle hitpoints to ignore and depends hitpoints
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * HitPoints to ignore <ARRAY>
+ * 0: HitPoint indexes to ignore <ARRAY>
+ * 1: Depends hitpoints with parents <HASHMAP>
+ *   <KEY>: Depends Index <NUMBER>
+ *   <VALUE>: Parent Index <NUMBER>
+ * 2: Depends hitpoints with complex/multiple parents <HASHMAP>
+ *   <KEY>: Depends Index <NUMBER>
+ *   <VALUE>: Parent <ARRAY>
+ *     0: Parent Hitpoint <STRING>
+ *     1: Individual, valid parent hitpoints <ARRAY>
  *
  * Example:
  * [vehicle] call ace_repair_fnc_getSelectionsToIgnore
@@ -32,6 +40,8 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 
 private _indexesToIgnore = [];
 private _processedSelections = [];
+private _dependsIndexMap = createHashMap;
+private _complexDependsMap = createHashMap;
 
 {
     private _selection = _x;
@@ -63,10 +73,13 @@ private _processedSelections = [];
         continue
     };
 
-    if (_hitpoint select [0,7] isEqualTo "hitera_" || {_hitpoint select [0,8] isEqualTo "hitslat_"} || {_hitpoint select [0,4] isEqualTo "era_"}) then { // skip era/slat
-        TRACE_3("Skipping ERA/Slat HitPoint",_hitpoint,_forEachIndex,_selection);
+    if (_hitpoint select [0,7] isEqualTo "hitera_" || {_hitpoint select [0,4] isEqualTo "era_"}  // skip era/slat
+    || {_hitpoint select [0,8] isEqualTo "hitslat_"}  || {_hitpoint select [0,5] isEqualTo "slat_"}
+    || {_hitpoint select [0,9] isEqualTo "sideskirt"} || {_hitpoint select [0,6] isEqualTo "armor_"}
+    || {_hitpoint select [0,3] isEqualTo "mud"} || {_hitpoint select [0,9] isEqualTo "smoketube"}) then {
+        TRACE_3("Skipping ERA/Slat/Sideskirt/Armor/Mudguard/Smoketube HitPoint",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
-        systemChat format ["Skipping ERA/SLAT, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
+        systemChat format ["Skipping ERA/Slat/Sideskirt/Armor/Mudguard/Smoketube HitPoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
         #endif*/
         _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;
@@ -81,7 +94,7 @@ private _processedSelections = [];
             if (_hitpointsCfg isNotEqualTo []) exitWith {
                 TRACE_2("turret hitpoint configFound",_hitpoint,_x);
                 _hitpointsCfg = _hitpointsCfg # 0;
-                 // only do turret hitpoints and stuff linked to visuals
+                // only do turret hitpoints and stuff linked to visuals
                 if (
                     (_hitpoint in ["hitturret", "hitgun"]) ||
                     {(getNumber (_hitpointsCfg >> "isGun")) == 1} ||
@@ -117,19 +130,43 @@ private _processedSelections = [];
         continue
     };
 
-    if !(getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends") in ["", "0"]) then { // skip depends hitpoints, should be normalized by engine
-        TRACE_3("Skipping depends hitpoint",_hitpoint,_forEachIndex,_selection);
-        /*#ifdef DEBUG_MODE_FULL
-        systemChat format ["Skipping depends hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
-        #endif*/
+    if !(getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends") in ["", "0"]) then {
+        // Caches depends hitpoints and their parents
+        private _parentHitPoint = getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends");
+        private _parentHitPointIndex = _hitPoints findIf {_x == _parentHitPoint};
 
-        private _groupIndex = _hitpointGroups findIf {_x # 0 == _hitpoint};
-        if (_groupIndex != -1) then {
-            ERROR_2("[%1] hitpoint [%2] is both a group-parent and a depends and will be unrepairable",_type,_hitpoint);
-            ERROR_1("group: %1",_hitpointGroups # _groupIndex);
+        if (_parentHitPointIndex != -1) then {
+            _dependsIndexMap set [_forEachIndex, _parentHitPointIndex];
+            TRACE_3("Depends hitpoint and parent index",_hitpoint,_forEachIndex,_parentHitPoint);
+        } else {
+            // Multiple/Complex parents or broken parents
+            _indexesToIgnore pushBack _forEachIndex;
+            private _parentHitPoints = _parentHitPoint splitString "+*() ";
+            private _validComplexHitPoint = true;
+            {
+                if !(_x regexMatch ".*[a-z]+.*") then {
+                    _parentHitPoints deleteAt _forEachIndex;
+                } else {
+                    if !(_x in _hitPoints) then {
+                        _validComplexHitPoint = false;
+                        break;
+                    };
+                };
+            } forEachReversed _parentHitPoints;
+
+            if (_validComplexHitPoint || _parentHitPoint == "total") then {
+                TRACE_3("Skipping depends and setting complex parent",_hitpoint,_forEachIndex,_parentHitPoint);
+                _complexDependsMap set [_forEachIndex, [_parentHitPoint, _parentHitPoints]];
+                _dependsIndexMap set [_forEachIndex, _parentHitPointIndex];
+            } else {
+                TRACE_3("Skipping depends with broken complex parent",_hitpoint,_forEachIndex,_parentHitPoint);
+                private _groupIndex = _hitpointGroups findIf {_x # 0 == _hitpoint};
+                if (_groupIndex != -1) then {
+                    ERROR_2("[%1] hitpoint [%2] is both a group-parent and an ignored depends and will be unrepairable",_type,_hitpoint);
+                    ERROR_1("group: %1",_hitpointGroups # _groupIndex);
+                };
+            };
         };
-
-        _indexesToIgnore pushBack _forEachIndex;
         _processedSelections pushBack _selection;
         continue
     };
@@ -147,7 +184,7 @@ private _processedSelections = [];
     _processedSelections pushBack _selection;
 } forEach _hitSelections;
 
-_initializedClasses set [_type, _indexesToIgnore];
+_initializedClasses set [_type, [_indexesToIgnore, _dependsIndexMap, _complexDependsMap]];
 missionNamespace setVariable [QGVAR(hitPointsToIgnoreInitializedClasses), _initializedClasses];
 
-_indexesToIgnore
+[_indexesToIgnore, _dependsIndexMap, _complexDependsMap]
