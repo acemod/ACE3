@@ -26,7 +26,6 @@ class CfgPatches {
 };
 
 #include "CfgPreloadTextures.hpp"
-#include "CfgOpticsEffect.hpp"
 #include "CfgJointRails.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"

@@ -18,7 +18,7 @@ class CfgWeapons {
         displayName = CSTRING(hamr);
 
         class CBA_ScriptedOptic {
-            opticsPPEffects[] = {"ACE_OpticsRadBlur1"};
+            opticsPPEffects[] = {"CBA_OpticsRadBlur3"};
 
             reticleTexture = QPATHTOF(reticles\hamr-reticle65_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\hamr-reticle65Illum_ca.paa);
@@ -70,7 +70,7 @@ class CfgWeapons {
         displayName = CSTRING(arco);
 
         class CBA_ScriptedOptic {
-            opticsPPEffects[] = {"ACE_OpticsRadBlur1"};
+            opticsPPEffects[] = {"CBA_OpticsRadBlur3"};
 
             reticleTexture = QPATHTOF(reticles\arco-reticle65_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\arco-reticle65Illum_ca.paa);
@@ -122,7 +122,7 @@ class CfgWeapons {
         displayName = CSTRING(mrco);
 
         class CBA_ScriptedOptic {
-            opticsPPEffects[] = {"ACE_OpticsRadBlur1"};
+            opticsPPEffects[] = {"CBA_OpticsRadBlur3"};
 
             reticleTexture = QPATHTOF(reticles\mrco-reticle556_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\mrco-reticle556Illum_ca.paa);
@@ -174,7 +174,7 @@ class CfgWeapons {
         displayName = CSTRING(sos);
 
         class CBA_ScriptedOptic {
-            opticsPPEffects[] = {"ACE_OpticsRadBlur1"};
+            opticsPPEffects[] = {"CBA_OpticsRadBlur3"};
 
             reticleTexture = QPATHTOF(reticles\sos-reticleMLR_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\sos-reticleMLRIllum_ca.paa);
@@ -228,7 +228,7 @@ class CfgWeapons {
         displayName = CSTRING(lrps);
 
         class CBA_ScriptedOptic {
-            opticsPPEffects[] = {"ACE_OpticsRadBlur1"};
+            opticsPPEffects[] = {"CBA_OpticsRadBlur3"};
 
             reticleTexture = QPATHTOF(reticles\sos-reticleMLR_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\sos-reticleMLRIllum_ca.paa);
