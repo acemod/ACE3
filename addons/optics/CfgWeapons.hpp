@@ -22,11 +22,11 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\hamr-reticle65_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\hamr-reticle65Illum_ca.paa);
-            reticleTextureSize = 0.9;
+            reticleTextureSize = 6 / 25 * 4; // At 25x using https://github.com/CBATeam/CBA_A3/wiki/Scripted-Optics#debug-reticle, the best choice is 6
 
             bodyTexture = QPATHTOF(reticles\hamr-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\hamr-bodyNight_ca.paa);
-            bodyTextureSize = 1.95;
+            bodyTextureSize = 2.2;
 
             hideMagnification = 1;
         };
@@ -74,18 +74,18 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\arco-reticle65_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\arco-reticle65Illum_ca.paa);
-            reticleTextureSize = 0.72;
+            reticleTextureSize = 6.4 / 25 * 4; // At 25x using https://github.com/CBATeam/CBA_A3/wiki/Scripted-Optics#debug-reticle, the best choice is 6.4
 
             bodyTexture = QPATHTOF(reticles\arco-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\arco-bodyNight_ca.paa);
-            bodyTextureSize = 1.55;
+            bodyTextureSize = 2.2;
 
             hideMagnification = 1;
         };
         weaponInfoType = "CBA_ScriptedOptic";
 
         class ItemInfo: ItemInfo {
-            modelOptics = "\x\cba\addons\optics\cba_optic_small_90.p3d";
+            modelOptics = "\x\cba\addons\optics\cba_optic_big_90.p3d";
 
             class OpticsModes: OpticsModes {
                 class ARCO2scope: ARCO2scope {
@@ -102,7 +102,7 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         scope = 1;
         class ItemInfo: ItemInfo {
-            modelOptics = "\x\cba\addons\optics\cba_optic_small_pip.p3d";
+            modelOptics = "\x\cba\addons\optics\cba_optic_big_pip.p3d";
         };
     };
 
@@ -126,18 +126,18 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\mrco-reticle556_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\mrco-reticle556Illum_ca.paa);
-            reticleTextureSize = 0.72;
+            reticleTextureSize = 6.4 / 25 * 4; // At 25x using https://github.com/CBATeam/CBA_A3/wiki/Scripted-Optics#debug-reticle, the best choice is 6.4
 
             bodyTexture = QPATHTOF(reticles\mrco-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\mrco-bodyNight_ca.paa);
-            bodyTextureSize = 1.55;
+            bodyTextureSize = 2.2;
 
             hideMagnification = 1;
         };
         weaponInfoType = "CBA_ScriptedOptic";
 
         class ItemInfo: ItemInfo {
-            modelOptics = "\x\cba\addons\optics\cba_optic_small_90.p3d";
+            modelOptics = "\x\cba\addons\optics\cba_optic_big_90.p3d";
 
             class OpticsModes: OpticsModes {
                 class MRCOscope: MRCOscope {
@@ -154,7 +154,7 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         scope = 1;
         class ItemInfo: ItemInfo {
-            modelOptics = "\x\cba\addons\optics\cba_optic_small_pip.p3d";
+            modelOptics = "\x\cba\addons\optics\cba_optic_big_pip.p3d";
         };
     };
 
@@ -178,7 +178,7 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\sos-reticleMLR_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\sos-reticleMLRIllum_ca.paa);
-            reticleTextureSize = 0.75;
+            reticleTextureSize = 0.76; // At 22x using https://github.com/CBATeam/CBA_A3/wiki/Scripted-Optics#debug-reticle, the best choice is 0.76
 
             bodyTexture = QPATHTOF(reticles\sos-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\sos-bodyNight_ca.paa);
@@ -232,7 +232,7 @@ class CfgWeapons {
 
             reticleTexture = QPATHTOF(reticles\sos-reticleMLR_ca.paa);
             reticleTextureNight = QPATHTOF(reticles\sos-reticleMLRIllum_ca.paa);
-            reticleTextureSize = 0.75;
+            reticleTextureSize = 0.76; // At 22x using https://github.com/CBATeam/CBA_A3/wiki/Scripted-Optics#debug-reticle, the best choice is 0.76
 
             bodyTexture = QPATHTOF(reticles\sos-body_ca.paa);
             bodyTextureNight = QPATHTOF(reticles\sos-bodyNight_ca.paa);
