@@ -113,7 +113,7 @@ params ["_unit"];
                                 LINKFUNC(switchWeaponAttachment),
                                 {true},
                                 {},
-                                [_currentWeapon, _x, ""]
+                                [_currentWeapon, _x, _attachment, true]
                             ] call EFUNC(interact_menu,createAction),
                             [],
                             _unit
