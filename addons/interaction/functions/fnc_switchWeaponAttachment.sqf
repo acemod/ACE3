@@ -70,4 +70,6 @@ if (!_addNew) exitWith {};
     if (_unit != ACE_player) exitWith {};
 
     [[getText (configFile >> "CfgWeapons" >> _newAttachment >> "picture"), 4], true] call CBA_fnc_notify;
+
+    playSound "click";
 }, [_unit, _weapon, _newAttachment], 1] call CBA_fnc_waitAndExecute;
