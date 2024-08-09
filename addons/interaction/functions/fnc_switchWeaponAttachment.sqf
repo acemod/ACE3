@@ -65,7 +65,6 @@ if (!_addNew) exitWith {};
 [{
     params ["_unit", "_newAttachment", "_weapon"];
 
-    // Delete weapon from array, to be able to pass _this to EH
     _unit addWeaponItem [_weapon, _newAttachment];
 
     [[getText (configFile >> "CfgWeapons" >> _newAttachment >> "picture"), 4], true] call CBA_fnc_notify;
