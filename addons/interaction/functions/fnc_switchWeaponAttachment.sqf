@@ -47,7 +47,7 @@ if (_removeOld && {!([_unit, _oldAttachment] call CBA_fnc_canAddItem)}) exitWith
 
 if (_removeOld) then {
     [{
-        params ["_unit", "_weapon", "_oldAttachment"];
+        params ["_unit", "_currWeaponType", "_oldAttachment"];
 
         switch (_currWeaponType) do {
             case 0: {_unit removePrimaryWeaponItem _oldAttachment};
@@ -57,7 +57,7 @@ if (_removeOld) then {
         };
 
         _unit addItem _oldAttachment;
-    }, [_unit, _weapon, _oldAttachment], 0.3] call CBA_fnc_waitAndExecute;
+    }, [_unit, _currWeaponType, _oldAttachment], 0.3] call CBA_fnc_waitAndExecute;
 };
 
 if (!_addNew) exitWith {};
@@ -70,6 +70,4 @@ if (!_addNew) exitWith {};
     if (_unit != ACE_player) exitWith {};
 
     [[getText (configFile >> "CfgWeapons" >> _newAttachment >> "picture"), 4], true] call CBA_fnc_notify;
-
-    playSound "click";
 }, [_unit, _weapon, _newAttachment], 1] call CBA_fnc_waitAndExecute;
