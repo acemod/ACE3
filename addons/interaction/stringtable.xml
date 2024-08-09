@@ -1324,5 +1324,9 @@
             <Spanish>Advertencia: puede provocar que algunos objetos choquen con otros.</Spanish>
             <Portuguese>Aviso: pode causar que alguns objetos colidam com outros.</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Interaction_SettingAnimActionsName">
+            <English>Interaction with animations</English>
+            <Russian>Взаимодействие с анимациями</Russian>
+        </Key>
     </Package>
 </Project>

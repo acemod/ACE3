@@ -54,4 +54,5 @@ PREP(push);
 
 // misc
 PREP(canFlip);
+PREP(initAnimActions);
 PREP(replaceTerrainObject);

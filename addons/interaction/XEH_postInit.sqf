@@ -149,11 +149,20 @@ GVAR(isOpeningDoor) = false;
 ["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);
 
 ["CBA_settingsInitialized", {
+    TRACE_2("settingsInitialized",GVAR(disableNegativeRating),GVAR(enableAnimActions));
+
     if (GVAR(disableNegativeRating)) then {
         player addEventHandler ["HandleRating", {
             (_this select 1) max 0
         }];
     };
+
+    if (!GVAR(enableAnimActions)) exitWith {};
+
+    // Don't add inherited anim actions (but actions are added to child classes)
+    {
+        [_x, "InitPost", LINKFUNC(initAnimActions), true, [], true] call CBA_fnc_addClassEventHandler;
+    } forEach (keys (uiNamespace getVariable QGVAR(animActionsClasses)));
 }] call CBA_fnc_addEventHandler;
 
 {
@@ -161,7 +170,6 @@ GVAR(isOpeningDoor) = false;
         [QGVAR(clearWeaponAttachmentsActionsCache)] call CBA_fnc_localEvent;
     }] call CBA_fnc_addPlayerEventHandler;
 } forEach ["loadout", "weapon"];
-
 
 // add "Take _weapon_" action to dropped weapons
 private _action = [
