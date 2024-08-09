@@ -161,7 +161,7 @@ GVAR(isOpeningDoor) = false;
 
     // Don't add inherited anim actions (but actions are added to child classes)
     {
-        [configName _x, "InitPost", LINKFUNC(initAnimActions), true, [], true] call CBA_fnc_addClassEventHandler;
+        [_x, "InitPost", LINKFUNC(initAnimActions), true, [], true] call CBA_fnc_addClassEventHandler;
     } forEach (keys (uiNamespace getVariable QGVAR(animActionsClasses)));
 }] call CBA_fnc_addEventHandler;
 
