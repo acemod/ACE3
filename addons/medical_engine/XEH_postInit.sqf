@@ -1,7 +1,11 @@
 #include "script_component.hpp"
 
 ["CBA_settingsInitialized", {
-    if !(GETEGVAR(medical,enabled,false)) exitWith {};
+    if !(GETEGVAR(medical,enabled,false)) exitWith {
+        // Call manually (see CfgFunctions.hpp)
+        // https://community.bistudio.com/wiki/Arma_3:_Functions_Library#Config_Levels
+        ["postInit", didJIP] spawn BIS_fnc_reviveInit;
+    };
 
     [QGVAR(updateDamageEffects), LINKFUNC(updateDamageEffects)] call CBA_fnc_addEventHandler;
 
@@ -28,18 +32,26 @@
             _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
         ];
 
+        // Fires where healer is local
         _unit addEventHandler ["HandleHeal", {
-            params ["_injured", "_healer"];
+            params ["", "_healer", "", "_atVehicle"];
 
             // Replace the items so that the unit can't heal
-            _healer call EFUNC(common,replaceRegisteredItems);
+            // AI stay in healing loop if they have healing items available
+            if (isNull _atVehicle) then {
+                _healer call EFUNC(common,replaceRegisteredItems);
+            } else {
+                if (_healer call EFUNC(common,isPlayer)) exitWith {};
 
-            AISFinishHeal [_injured, _healer, true];
+                // This resets their action
+                private _assignedTeam = assignedTeam _healer;
+                private _groupInfo = [group _healer, groupId _healer];
+                [_healer] joinSilent grpNull; // If unit doesn't leave group first, it will take the lowest Id when joinAsSilent is run, regardless of parameters
+                _healer joinAsSilent _groupInfo;
+                _healer assignTeam _assignedTeam;
+            };
 
-            // Set animation to what it was before starting the healing animation
-            [{"dnon_medic" in animationState (_this select 0)}, {
-                [_this select 0, _this select 1, 2] call EFUNC(common,doAnimation);
-            }, [_healer, _healer call EFUNC(common,getDefaultAnim)], 5] call CBA_fnc_waitUntilAndExecute;
+            true
         }];
     }, nil, [IGNORE_BASE_UAVPILOTS], true] call CBA_fnc_addClassEventHandler;
 
