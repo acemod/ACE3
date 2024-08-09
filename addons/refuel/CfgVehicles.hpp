@@ -245,8 +245,10 @@ class CfgVehicles {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class showCanisters {
                 phase = 0;
-                positions[] = {{-1.188,-3.87,-0.769}, {1.638,-3.87,-0.769}};
+                positions[] = {{-1.188, -3.87, -0.769}, {1.638, -3.87, -0.769}};
                 items[] = {"Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F"};
+                name = CSTRING(TakeFuelCanister);
+                text = CSTRING(TakeFuelCanisterAction);
             };
         };
     };
@@ -342,8 +344,15 @@ class CfgVehicles {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class showCanisters {
                 phase = 0;
-                positions[] = {{-2,-1.95,-1}, {2,-1.95,-1}, {1.7,-4.898,-0.4}};
+                // Rotate interactions with turret rotation
+                positions[] = {
+                    "[0, -2.5, 0] vectorAdd ([[1.6, -2.4, -0.3], [0, 0, 1], deg (_target animationPhase 'MainTurret')] call CBA_fnc_vectRotate3D)",
+                    "[0, -2.5, 0] vectorAdd ([[1.8, 0.55, -0.7], [0, 0, 1], deg (_target animationPhase 'MainTurret')] call CBA_fnc_vectRotate3D)",
+                    "[0, -2.5, 0] vectorAdd ([[-1.8, 0.55, -0.7], [0, 0, 1], deg (_target animationPhase 'MainTurret')] call CBA_fnc_vectRotate3D)"
+                };
                 items[] = {"Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F", "Land_CanisterFuel_F"};
+                name = CSTRING(TakeFuelCanister);
+                text = CSTRING(TakeFuelCanisterAction);
             };
         };
     };
@@ -355,8 +364,11 @@ class CfgVehicles {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class showCanisters {
                 phase = 0;
-                positions[] = {{1.7,-4.8,-0.5}};
+                // Rotate interactions with turret rotation
+                positions[] = {"[0, -2.1, 0] vectorAdd ([[1.6, -2.65, -0.3], [0, 0, 1], deg (_target animationPhase 'MainTurret')] call CBA_fnc_vectRotate3D)"};
                 items[] = {"Land_CanisterFuel_F"};
+                name = CSTRING(TakeFuelCanister);
+                text = CSTRING(TakeFuelCanisterAction);
             };
         };
     };

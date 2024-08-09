@@ -60,16 +60,6 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretFireProb) = 0.7;
         EGVAR(vehicle_damage,engineFireProb) = 0.7;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
-        class EGVAR(interaction,anims) {
-            class wheel_1_unhide {
-                positions[] = {{-0.8,-2,0}};
-                items[] = {"ACE_Wheel"};
-            };
-            class wheel_2_unhide {
-                positions[] = {{0.5,-3.3,-0.3}};
-                items[] = {"ACE_Wheel"};
-            };
-        };
     };
 
     class rhs_infantry_msv_base;
@@ -107,12 +97,6 @@ class CfgVehicles {
     class Truck_F: Car_F {};
     class RHS_Ural_BaseTurret: Truck_F {
         EGVAR(refuel,fuelCapacity) = 360;
-        class EGVAR(interaction,anims) {
-           class spare_hide {
-               selections[] = {"spare"};
-               items[] = {"ACE_Wheel"};
-           };
-       };
     };
 
     class RHS_Ural_Base: RHS_Ural_BaseTurret {};
@@ -126,15 +110,6 @@ class CfgVehicles {
         EGVAR(rearm,defaultSupply) = 1200;
     };
 
-    class rhs_zil131_base: Truck_F {
-        class EGVAR(interaction,anims) {
-            class spare_hide {
-                selections[] = {"spare"};
-                items[] = {"ACE_Wheel"};
-            };
-        };
-    };
-
     class rhs_kraz255b1_base;
     class rhs_kraz255b1_fuel_base: rhs_kraz255b1_base {
         EGVAR(refuel,hooks)[] = {{-0.05,-3.6,-0.45}};
@@ -143,12 +118,6 @@ class CfgVehicles {
 
     class rhs_truck: Truck_F {
         EGVAR(refuel,fuelCapacity) = 210;
-        class EGVAR(interaction,anims) {
-            class spare_hide {
-                selections[] = {"spare"};
-                items[] = {"ACE_Wheel"};
-            };
-        };
     };
 
     class rhs_gaz66_vmf;
@@ -156,15 +125,7 @@ class CfgVehicles {
         EGVAR(rearm,defaultSupply) = 1200;
     };
 
-    class O_Truck_02_covered_F;
-    class rhs_kamaz5350: O_Truck_02_covered_F {
-        class EGVAR(interaction,anims) {
-            class spare_hide {
-                selections[] = {"spare"};
-                items[] = {"ACE_Wheel"};
-            };
-        };
-    };
+    class rhs_kamaz5350;
     class rhs_kamaz5350_ammo_base: rhs_kamaz5350 {
         EGVAR(rearm,defaultSupply) = 1200;
     };
@@ -172,23 +133,11 @@ class CfgVehicles {
     class MRAP_02_base_F;
     class rhs_tigr_base: MRAP_02_base_F {
         EGVAR(refuel,fuelCapacity) = 138;
-        class EGVAR(interaction,anims) {
-            class spare_hide {
-                selections[] = {"spare"};
-                items[] = {"ACE_Wheel"};
-            };
-        };
     };
 
     class Offroad_01_base_f;
     class RHS_UAZ_Base: Offroad_01_base_f {
         EGVAR(refuel,fuelCapacity) = 78;
-        class EGVAR(interaction,anims) {
-            class spare_hide {
-                selections[] = {"spare"};
-                items[] = {"ACE_Wheel"};
-            };
-        };
     };
 
     class APC_Tracked_02_base_F: Tank_F {
@@ -226,14 +175,6 @@ class CfgVehicles {
                 camAttach = -90;
                 compartments[]={"Compartment1"};
                 roles[]={"cargo"};
-            };
-        };
-        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
-            class wheel_1_unhide: wheel_1_unhide {
-                positions[] = {{-1.2,-2.5,0.2}};
-            };
-            class wheel_2_unhide: wheel_2_unhide {
-                positions[] = {{0,-4.2,0}};
             };
         };
     };
@@ -277,14 +218,6 @@ class CfgVehicles {
                 camAttach = -45;
                 compartments[]={"Compartment1"};
                 roles[]={"cargo"};
-            };
-        };
-        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
-            class wheel_1_unhide: wheel_1_unhide {
-                positions[] = {{-1,-2.5,0.7}};
-            };
-            class wheel_2_unhide: wheel_2_unhide {
-                enabled = 0;
             };
         };
     };

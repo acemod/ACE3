@@ -375,8 +375,10 @@ class CfgVehicles {
     class Offroad_01_base_F: Car_F {
         class GVAR(anims) {
             class HideBackpacks {
-                positions[] = {{-1.15,-1.15,-0.2}, {1.1,-1.15,-0.2}, {1.1,-2.5,-0.2}};
+                positions[] = {{-1.15, -1.15, -0.2}, {1.1, -1.15, -0.2}, {1.1, -2.5, -0.2}};
                 items[] = {"B_TacticalPack_blk", "B_TacticalPack_blk", "B_Carryall_khk", "B_Carryall_khk"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
             };
         };
     };
@@ -418,8 +420,15 @@ class CfgVehicles {
         class GVAR(anims) {
             class showBags {
                 phase = 0;
-                positions[] = {{-0.685,-2.863,0.218}, {0.685,-2.863,0.218}};
+                // Rotate interactions with turret rotation
+                positions[] = {
+                    "[0, -1.6, 0] vectorAdd ([[1, -1, 0.1], [0, 0, 1], deg (_target animationPhase 'MainTurret')] call CBA_fnc_vectRotate3D)",
+                    "[0, -1.6, 0] vectorAdd ([[-1, -1, 0.1], [0, 0, 1], deg (_target animationPhase 'MainTurret')] call CBA_fnc_vectRotate3D)"
+                };
+                selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
             };
         };
     };
@@ -432,6 +441,8 @@ class CfgVehicles {
                 phase = 0;
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr"};
+                name = "$STR_BACKPACK_CONTAINER_NAME";
+                text = "$STR_BACKPACK_CONTAINER_NAME";
             };
         };
     };
@@ -441,6 +452,8 @@ class CfgVehicles {
                 phase = 0;
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
             };
         };
     };
@@ -479,6 +492,8 @@ class CfgVehicles {
                 phase = 0;
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr"};
+                name = "$STR_BACKPACK_CONTAINER_NAME";
+                text = "$STR_BACKPACK_CONTAINER_NAME";
             };
             class showBags2: showBags {
                 selections[] = {"vhc_bags2"};
@@ -494,7 +509,10 @@ class CfgVehicles {
             class showBags {
                 phase = 0;
                 selections[] = {"vhc_bags"};
+                positions[] = {"private _pos = _target selectionPosition 'vhc_bags'; _pos set [0, -(_pos select 0)]; _pos"}; // Mirror position to other side of vehicle
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
             };
         };
     };
@@ -516,6 +534,8 @@ class CfgVehicles {
                 phase = 0;
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
             };
         };
     };
@@ -526,6 +546,8 @@ class CfgVehicles {
                 phase = 0;
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
             };
         };
     };
@@ -540,6 +562,8 @@ class CfgVehicles {
                 phase = 0;
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
             };
         };
     };

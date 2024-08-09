@@ -434,8 +434,10 @@ class CfgVehicles {
         class EGVAR(interaction,anims) {
             class showTracks {
                 phase = 0;
-                positions[] = {{-1.7,-3.875,-0.7}, {1.7,-3.875,-0.7}};
+                positions[] = {{-1.7, -3.875, -0.7}, {1.7, -3.875, -0.7}};
                 items[] = {"ACE_Track", "ACE_Track", "ACE_Track"};
+                name = CSTRING(RemoveTrack);
+                text = CSTRING(RemovingTrack);
             };
         };
     };
@@ -448,6 +450,8 @@ class CfgVehicles {
             class hideSpareWheel {
                 selections[] = {"spare_wheel"};
                 items[] = {"ACE_Wheel"};
+                name = CSTRING(RemoveWheel);
+                text = CSTRING(RemovingWheel);
             };
         };
     };
@@ -469,6 +473,28 @@ class CfgVehicles {
         };
     };
 
+    class Truck_01_viv_base_F;
+    class Truck_01_cargo_base_F: Truck_01_viv_base_F {
+        class EGVAR(interaction,anims) {
+            class Tyre1_hide {
+                selections[] = {"tyre1_hide"};
+                items[] = {"ACE_Wheel"};
+                name = CSTRING(RemoveWheel);
+                text = CSTRING(RemovingWheel);
+            };
+        };
+    };
+    class Truck_01_flatbed_base_F: Truck_01_viv_base_F {
+        class EGVAR(interaction,anims) {
+            class Tyre1_hide {
+                selections[] = {"tyre1_hide"};
+                items[] = {"ACE_Wheel"};
+                name = CSTRING(RemoveWheel);
+                text = CSTRING(RemovingWheel);
+            };
+        };
+    };
+
     class Quadbike_01_base_F: Car_F {
         GVAR(hitpointPositions)[] = { {"HitEngine", {0, 0.5, -0.7}}, {"HitFuel", {0, 0, -0.5}} };
     };
@@ -479,8 +505,10 @@ class CfgVehicles {
     class Van_02_base_F: Truck_F {
         class EGVAR(interaction,anims) {
             class spare_tyre_hide {
-                positions[] = {{-0.45,-3.5,-0.4}};
+                positions[] = {"[[-1.2, -3.7, -0.4], [-0.45, -3.5, -0.4]] select (_target animationPhase 'Door_4_source' == 0)"};
                 items[] = {"ACE_Wheel"};
+                name = CSTRING(RemoveWheel);
+                text = CSTRING(RemovingWheel);
             };
         };
     };

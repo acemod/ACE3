@@ -115,8 +115,10 @@ class CfgVehicles {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class showTools {
                 phase = 0;
-                positions[] = {{-1.108,-1.47,-0.769}};
+                positions[] = {{-1.108, -1.47, -0.769}};
                 items[] = {"ACE_EntrenchingTool"};
+                name = CSTRING(EntrenchingToolName);
+                text = CSTRING(EntrenchingToolName);
             };
         };
     };
@@ -124,18 +126,23 @@ class CfgVehicles {
         class EGVAR(interaction,anims) {
             class showTools {
                 phase = 0;
-                positions[] = {{-0.9,-3,-0.5}};
+                positions[] = {{-0.9, -3, -0.5}};
                 items[] = {"ACE_EntrenchingTool"};
+                name = CSTRING(EntrenchingToolName);
+                text = CSTRING(EntrenchingToolName);
             };
         };
     };
+
     class Tank_F;
     class LT_01_base_F: Tank_F {
         class EGVAR(interaction,anims) {
             class showTools {
                 phase = 0;
-                positions[] = {{0.6,0,-0.3}};
+                positions[] = {{0.6, 0, -0.3}};
                 items[] = {"ACE_EntrenchingTool"};
+                name = CSTRING(EntrenchingToolName);
+                text = CSTRING(EntrenchingToolName);
             };
         };
     };
