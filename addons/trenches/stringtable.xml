@@ -237,6 +237,7 @@
             <Italian>Camuffa la trincea</Italian>
             <Japanese>塹壕を偽装</Japanese>
             <German>Graben tarnen</German>
+            <Portuguese>Camuflar trincheira</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
@@ -265,6 +266,7 @@
             <Italian>ACE Trincee</Italian>
             <Chinesesimp>ACE 战壕</Chinesesimp>
             <Korean>ACE 참호</Korean>
+            <Portuguese>ACE Trincheiras</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_DisplayName">
             <English>Small Trench Dig Duration</English>
@@ -277,6 +279,7 @@
             <Italian>Trincea piccola - Durata di scavo</Italian>
             <Chinesesimp>小型战壕挖掘时间</Chinesesimp>
             <Korean>소형참호 건설 시간</Korean>
+            <Portuguese>Duração de Escavamento de Trincheira Pequena</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_Description">
             <English>Time, in seconds, required to dig a small trench.</English>
@@ -289,6 +292,7 @@
             <Italian>Tempo in secondi per scavare una trincea piccola.</Italian>
             <Chinesesimp>挖一条小型战壕所需的时间（秒）。</Chinesesimp>
             <Korean>소형 참호를 팔 때 필요한 시간을 설정합니다. (초 단위)</Korean>
+            <Portuguese>Tempo, em segundos, necessário para cavar uma trincheira pequena.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_DisplayName">
             <English>Small Trench Remove Duration</English>
@@ -301,6 +305,7 @@
             <Italian>Trincea piccola - Durata di rimozione</Italian>
             <Chinesesimp>小型战壕回填时间</Chinesesimp>
             <Korean>소형참호 제거 시간</Korean>
+            <Portuguese>Duração de Remoção de Trincheira Pequena</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_Description">
             <English>Time, in seconds, required to remove a small trench.</English>
@@ -313,6 +318,7 @@
             <Italian>Tempo in secondi per rimuovere una trincea piccola.</Italian>
             <Chinesesimp>回填一条小型战壕所需的时间（秒）。</Chinesesimp>
             <Korean>소형 참호를 제거할때 필요한 시간을 설정합니다. (초 단위)</Korean>
+            <Portuguese>Tempo, em segundos, necessário para remover uma trincheira pequena.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_DisplayName">
             <English>Big Trench Dig Duration</English>
@@ -325,6 +331,7 @@
             <Italian>Trincea grande - Durata di scavo</Italian>
             <Chinesesimp>大型战壕挖掘时间</Chinesesimp>
             <Korean>대형참호 건설 시간</Korean>
+            <Portuguese>Duração de Escavamento de Trincheira Grande</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_Description">
             <English>Time, in seconds, required to dig a big trench.</English>
@@ -337,6 +344,7 @@
             <Italian>Tempo in secondi per scavare una trincea grande.</Italian>
             <Chinesesimp>挖一条大型战壕所需的时间（秒）。</Chinesesimp>
             <Korean>대형 참호를 팔때 필요한 시간을 설정합니다. (초 단위)</Korean>
+            <Portuguese>Tempo, em segundos, necessário para cavar uma trincheira grande.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_DisplayName">
             <English>Big Trench Remove Duration</English>
@@ -349,6 +357,7 @@
             <Italian>Trincea grande - Durata di rimozione</Italian>
             <Chinesesimp>大型战壕回填时间</Chinesesimp>
             <Korean>대형참호 제거 시간</Korean>
+            <Portuguese>Duração de Remoção de Trincheira Grande</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_Description">
             <English>Time, in seconds, required to remove a big trench.</English>
@@ -361,6 +370,7 @@
             <Italian>Tempo in secondi per rimuovere una trincea grande.</Italian>
             <Chinesesimp>回填一条大型战壕所需的时间（秒）。</Chinesesimp>
             <Korean>대형 참호를 제거할때 필요한 시간을 설정합니다. (초 단위)</Korean>
+            <Portuguese>Tempo, em segundos, necessário para remover uma trincheira grande.</Portuguese>
         </Key>
     </Package>
 </Project>

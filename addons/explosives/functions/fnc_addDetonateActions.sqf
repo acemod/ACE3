@@ -92,19 +92,6 @@ if (_detonator != "ACE_DeadManSwitch") then {
         ];
     };
 } else {
-    //Add action to detonate all explosives (including the inventory explosive):
-    _children pushBack [
-        [
-            "Explosive_All_Deadman",
-            LLSTRING(DetonateAll),
-            getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
-            {[_player] call FUNC(onIncapacitated)},
-            {true}
-        ] call EFUNC(interact_menu,createAction),
-        [],
-        _unit
-    ];
-
     //Adds actions for the explosives you can connect to the deadman switch.
     private _connectedInventoryExplosive = _unit getVariable [QGVAR(deadmanInvExplosive), ""];
     if ((_connectedInventoryExplosive != "") && {!(_connectedInventoryExplosive in (magazines _unit))}) then {
@@ -113,6 +100,22 @@ if (_detonator != "ACE_DeadManSwitch") then {
     };
 
     _connectedInventoryExplosive = _unit getVariable [QGVAR(deadmanInvExplosive), ""];
+
+    //Add action to detonate all explosives (including the inventory explosive):
+    if (_connectedInventoryExplosive != "" || {count _explosivesList > 1}) then {
+        _children pushBack [
+            [
+                "Explosive_All_Deadman",
+                LLSTRING(DetonateAll),
+                getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
+                {[_player] call FUNC(onIncapacitated)},
+                {true}
+            ] call EFUNC(interact_menu,createAction),
+            [],
+            _unit
+        ];
+    };
+
     if (_connectedInventoryExplosive != "") then {
         //Add the disconnect action
         private _magConfig = configFile >> "CfgMagazines" >> _connectedInventoryExplosive;
