@@ -162,7 +162,7 @@ GVAR(isOpeningDoor) = false;
     // Don't add inherited anim actions (but actions are added to child classes)
     {
         [configName _x, "InitPost", LINKFUNC(initAnimActions), true, [], true] call CBA_fnc_addClassEventHandler;
-    } forEach (QUOTE(isClass (_x >> QQGVAR(anims)) && {!isClass (inheritsFrom _x >> QQGVAR(anims))}) configClasses (configFile >> "CfgVehicles"));
+    } forEach (keys (uiNamespace getVariable QGVAR(animActionsClasses)));
 }] call CBA_fnc_addEventHandler;
 
 {
