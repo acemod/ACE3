@@ -25,7 +25,7 @@ GVAR(initializedAnimClasses) pushBack _class;
 
 private _statement = {
     params ["_target", "_player", "_params"];
-    _params params ["_anim", "_phase", "_duration"];
+    _params params ["_anim", "_phase", "_duration", "_text"];
     TRACE_5("statement",_target,_player,_anim,_phase,_duration);
 
     [
@@ -126,7 +126,7 @@ private _statement = {
             _target animate [_anim, _phase, true];
         },
         {},
-        nil,
+        _text,
         {
             (_this select 0) params ["_target", "", "_anim", "_phase"];
 
@@ -179,12 +179,13 @@ private _config = configOf _object;
     private _name = [_animConfig >> "name", "TEXT", localize "str_a3_cfgactions_unmountitem0"] call CBA_fnc_getConfigEntry;
     private _icon = [_animConfig >> "icon", "TEXT", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa"] call CBA_fnc_getConfigEntry;
     private _duration = [_animConfig >> "duration", "NUMBER", 10] call CBA_fnc_getConfigEntry;
+    private _text = getText (_animConfig >> "text");
 
     {
         private _action = [
             format [QGVAR(anim_%1_%2), _anim, _forEachIndex],
             _name, _icon, _statement, _condition, {},
-            [_anim, _phase, _duration],
+            [_anim, _phase, _duration, _text],
             _x
         ] call EFUNC(interact_menu,createAction);
         [_class, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
