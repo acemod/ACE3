@@ -6,11 +6,11 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Type (optional) ["hit" (default) or "moan"] <STRING>
- * 2: Severity (optional) [0 (default), 1, 2] <NUMBER>
- * 3: Hit sound distances (optional) [50, 60, 70] (default) <ARRAY>
- * 4: Moan sound distances (optional) [10, 15, 20] (default) <ARRAY>
- * 5: Allow unconscious units (optional) (default: false) <BOOL>
+ * 1: Type ["hit", "moan"] <STRING> (default: "hit")
+ * 2: Severity [0, 1, 2] <NUMBER> (default: 0)
+ * 3: Hit sound distances <ARRAY> (default: [50, 60, 70])
+ * 4: Moan sound distances <ARRAY> (default: [10, 15, 20])
+ * 5: Allow unconscious units <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -23,18 +23,18 @@
 #define TIME_OUT_HIT 1
 #define TIME_OUT_MOAN [12, 7.5, 5]
 
-params [["_unit", objNull, [objNull]], ["_type", "hit", [""]], ["_severity", 0, [0]], ["_hitDistances", [50, 60, 70], [[]],[3]], ["_moanDistances", [10, 15, 20], [[]],[3]], ["_allowUnconscious", false, [true]]];
+params [["_unit", objNull, [objNull]], ["_type", "hit", [""]], ["_severity", 0, [0]], ["_hitDistances", [50, 60, 70], [[]], [3]], ["_moanDistances", [10, 15, 20], [[]], [3]], ["_allowUnconscious", false, [true]]];
 // TRACE_3("",_unit,_type,_severity);
 
 if (!local _unit) exitWith { ERROR_2("playInjuredSound: Unit not local or null [%1:%2]",_unit,typeOf _unit); };
 
-if (!(_unit call EFUNC(common,isAwake)) && !_allowUnconscious) exitWith {};
+if (!_allowUnconscious && {!(_unit call EFUNC(common,isAwake))}) exitWith {};
 
 // Limit network traffic by only sending the event to players who can potentially hear it
 private _distance = if (_type == "hit") then {
-    _hitDistances select _severity;
+    _hitDistances select _severity
 } else {
-    _moanDistances select _severity;
+    _moanDistances select _severity
 };
 private _targets = allPlayers inAreaArray [ASLToAGL getPosASL _unit, _distance, _distance, 0, false, _distance];
 if (_targets isEqualTo []) exitWith {};
