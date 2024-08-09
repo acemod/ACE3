@@ -24,10 +24,12 @@ if (_name == "" || {_loadout isEqualTo []}) exitWith { false };
 private _loadouts = profileNamespace getVariable [QGVAR(saved_loadouts), []];
 private _loadoutIndex = _loadouts findIf {(_x#0) == _name};
 
+// If a loadout with same name already exists and no overwriting enabled, quit
+if (!_replaceExisting && {_loadoutIndex != -1}) exitWith { false };
+
 if (_loadoutIndex == -1) then {
     _loadouts pushBack [_name, _loadout];
 } else {
-    if (!_replaceExisting) exitWith { false };
     _loadouts set [_loadoutIndex, [_name, _loadout]];
 };
 
