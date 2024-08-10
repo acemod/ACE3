@@ -84,56 +84,68 @@ if (_finishTime > 0) exitWith {
     };
 };
 
-// Find a suitable limb (no tourniquets) for injecting and giving IVs
-private _fnc_findNoTourniquet = {
-    params ["_removeAllTourniquets"];
+// Bandage a limb up, then remove the tourniquet on it
+private _fnc_removeTourniquet = {
+    params [["_removeAllTourniquets", false]];
 
     // Ignore head & torso if not removing all tourniquets (= administering drugs/IVs)
     private _offset = [2, 0] select _removeAllTourniquets;
+
+    // Bandage the least bleeding body part
+    private _bodyPartBleeding = [];
+    _bodyPartBleeding resize [[4, 6] select _removeAllTourniquets, -1];
+
+    {
+        // Ignore head and torso, if only looking for place to administer drugs/IVs
+        private _partIndex = (ALL_BODY_PARTS find _x) - _offset;
+
+        if (_partIndex >= 0 && {_tourniquets select _partIndex != 0}) then {
+            {
+                _x params ["", "_amountOf", "_bleeding"];
+
+                // max 0, to set the baseline to 0, as body parts with no wounds are marked with -1
+                _bodyPartBleeding set [_partIndex, ((_bodyPartBleeding select _partIndex) max 0) + (_amountOf * _bleeding)];
+            } forEach _y;
+        };
+    } forEach GET_OPEN_WOUNDS(_target);
+
+    // If there are no open wounds, check if there are tourniquets on limbs with no open wounds (stitched or full healed),
+    // as we know there have to be tourniquets at this point
+    if (_bodyPartBleeding findIf {_x != -1} == -1) then {
+        _bodyPartBleeding set [_tourniquets findIf {_x != 0}, 0];
+    };
+
+    // Ignore body parts that don't have open wounds (-1)
+    private _minBodyPartBleeding = selectMin (_bodyPartBleeding select {_x != -1});
+    private _selection = ALL_BODY_PARTS select ((_bodyPartBleeding find _minBodyPartBleeding) + _offset);
+
+    // If not bleeding anymore, remove the tourniquet
+    if (_minBodyPartBleeding == 0) exitWith {
+        _treatmentEvent = QGVAR(tourniquetRemove);
+        _treatmentTime = 7;
+        _treatmentArgs = [_healer, _target, _selection];
+    };
+
+    // If no bandages available, wait
+    // If check is done at the start of the scope, it will miss the edge case where the unit ran out of bandages just as they finished bandaging tourniqueted body part
+    if !(([_healer, "@bandage"] call FUNC(itemCheck)) # 0) exitWith {
+        _treatmentEvent = "#waitForBandages"; // TODO: Medic can move onto another patient/should be flagged as out of supplies
+    };
+
+    // Otherwise keep bandaging
+    _treatmentEvent = QEGVAR(medical_treatment,bandageLocal);
+    _treatmentTime = 5;
+    _treatmentArgs = [_target, _selection, "FieldDressing"];
+    _treatmentItem = "@bandage";
+};
+
+// Find a suitable limb (no tourniquets) for adminstering drugs/IVs
+private _fnc_findNoTourniquet = {
     private _bodyPart = "";
 
     // If all limbs have tourniquets, find the least damaged limb and try to bandage it
-    if (_removeAllTourniquets || {(_tourniquets select [2]) find 0 == -1}) then {
-        // Bandage the least bleeding body part
-        private _bodyPartBleeding = [];
-        _bodyPartBleeding resize [[4, 6] select _removeAllTourniquets, -1];
-
-        {
-            // Ignore head and torso, if only looking for place to administer drugs/IVs
-            private _partIndex = (ALL_BODY_PARTS find _x) - _offset;
-
-            if (_partIndex >= 0 && {_tourniquets select _partIndex != 0}) then {
-                {
-                    _x params ["", "_amountOf", "_bleeding"];
-
-                    // max 0, to set the baseline to 0, as body parts with no wounds are marked with -1
-                    _bodyPartBleeding set [_partIndex, ((_bodyPartBleeding select _partIndex) max 0) + (_amountOf * _bleeding)];
-                } forEach _y;
-            };
-        } forEach GET_OPEN_WOUNDS(_target);
-
-        // Ignore body parts that don't have open wounds (-1)
-        private _minBodyPartBleeding = selectMin (_bodyPartBleeding select {_x != -1});
-        private _selection = ALL_BODY_PARTS select ((_bodyPartBleeding find _minBodyPartBleeding) + _offset);
-
-        // If not bleeding anymore, remove the tourniquet
-        if (_minBodyPartBleeding == 0) exitWith {
-            _treatmentEvent = QGVAR(tourniquetRemove);
-            _treatmentTime = 7;
-            _treatmentArgs = [_healer, _target, _selection];
-        };
-
-        // If no bandages available, wait
-        // If check is done at the start of the scope, it will miss the edge case where the unit ran out of bandages just as they finished bandaging tourniqueted body part
-        if !(([_healer, "@bandage"] call FUNC(itemCheck)) # 0) exitWith {
-            _treatmentEvent = "#waitForBandages"; // TODO: Medic can move onto another patient/should be flagged as out of supplies
-        };
-
-        // Otherwise keep bandaging
-        _treatmentEvent = QEGVAR(medical_treatment,bandageLocal);
-        _treatmentTime = 5;
-        _treatmentArgs = [_target, _selection, "FieldDressing"];
-        _treatmentItem = "@bandage";
+    if ((_tourniquets select [2]) find 0 == -1) then {
+        call _fnc_removeTourniquet;
     } else {
         // Select a random non-tourniqueted limb otherwise
         private _bodyParts = ["leftarm", "rightarm", "leftleg", "rightleg"];
@@ -224,7 +236,7 @@ if (true) then {
     if (
         _canGiveIV && {
             // If all limbs are tourniqueted, bandage the one with the least amount of wounds, so that the tourniquet can be removed
-            _bodyPart = false call _fnc_findNoTourniquet;
+            _bodyPart = call _fnc_findNoTourniquet;
             _bodyPart == ""
         }
     ) exitWith {};
@@ -315,7 +327,7 @@ if (true) then {
 
     if (_canGiveEpinephrine) exitWith {
         // If all limbs are tourniqueted, bandage the one with the least amount of wounds, so that the tourniquet can be removed
-        _bodyPart = false call _fnc_findNoTourniquet;
+        _bodyPart = call _fnc_findNoTourniquet;
 
         if (_bodyPart == "") exitWith {};
 
@@ -328,7 +340,7 @@ if (true) then {
 
     // Remove all remaining tourniquets by bandaging all body parts
     if (_tourniquets isNotEqualTo DEFAULT_TOURNIQUET_VALUES) then {
-        true call _fnc_findNoTourniquet;
+        true call _fnc_removeTourniquet;
     };
 
     // If the healer can bandage or remove tourniquets, do that
@@ -348,7 +360,7 @@ if (true) then {
         };
 
         // If all limbs are tourniqueted, bandage the one with the least amount of wounds, so that the tourniquet can be removed
-        _bodyPart = false call _fnc_findNoTourniquet;
+        _bodyPart = call _fnc_findNoTourniquet;
 
         if (_bodyPart == "") exitWith {};
 
