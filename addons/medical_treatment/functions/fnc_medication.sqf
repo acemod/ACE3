@@ -26,4 +26,4 @@ params ["_medic", "_patient", "_bodyPart", "_classname", "", "_usedItem"];
 private _cfg = ["CfgWeapons", "CfgMagazines"] select (isClass (configFile >> "CfgMagazines" >> _usedItem));
 [_patient, "activity", LSTRING(Activity_usedItem), [[_medic, false, true] call EFUNC(common,getName), getText (configFile >> _cfg >> _usedItem >> "displayName")]] call FUNC(addToLog);
 
-[QGVAR(medicationLocal), [_patient, _bodyPart, _classname], _patient] call CBA_fnc_targetEvent;
+[QGVAR(medicationLocal), [_patient, _bodyPart, _classname, _medic], _patient] call CBA_fnc_targetEvent;

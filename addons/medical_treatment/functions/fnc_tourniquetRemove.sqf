@@ -60,7 +60,7 @@ private _arrayModified = false;
 
     if (_partIndex == _bodyPartN) then {
         TRACE_1("delayed medication call after tourniquet removeal",_x);
-        [QGVAR(medicationLocal), [_patient, _bodyPart, _medication], _patient] call CBA_fnc_targetEvent;
+        [QGVAR(medicationLocal), [_patient, _bodyPart, _medication, _medic], _patient] call CBA_fnc_targetEvent;
         _occludedMedications set [_forEachIndex, []];
         _arrayModified = true;
     };

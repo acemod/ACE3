@@ -30,4 +30,4 @@ if ([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo)) exitWith {
 [_patient, _usedItem] call FUNC(addToTriageCard);
 [_patient, "activity", LSTRING(Activity_appliedTourniquet), [[_medic, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 
-[QGVAR(tourniquetLocal), [_patient, _bodyPart], _patient] call CBA_fnc_targetEvent;
+[QGVAR(tourniquetLocal), [_patient, _bodyPart, _medic], _patient] call CBA_fnc_targetEvent;

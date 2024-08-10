@@ -29,4 +29,4 @@ params ["_medic", "_patient", "_bodyPart", "_classname", "", "", "", "_bandageEf
 
 [_patient, "activity", LSTRING(Activity_bandagedPatient), [[_medic, false, true] call EFUNC(common,getName)]] call FUNC(addToLog);
 
-[QGVAR(bandageLocal), [_patient, _bodyPart, _classname, _bandageEffectiveness], _patient] call CBA_fnc_targetEvent;
+[QGVAR(bandageLocal), [_patient, _bodyPart, _classname, _bandageEffectiveness, _medic], _patient] call CBA_fnc_targetEvent;
