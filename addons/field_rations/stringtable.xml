@@ -115,6 +115,21 @@
             <Spanish>Tiempo sin agua</Spanish>
             <Turkish>Susuz Kalma Süresi</Turkish>
         </Key>
+        <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_DisplayName">
+            <English>Consequence of extreme thirst/hunger</English>
+            <German>Folge von extremen Durst/Hunger</German>
+            <Italian>Conseguenze di sete/fame estrema</Italian>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Pain">
+            <English>Pain</English>
+            <German>Schmerzen</German>
+            <Italian>Dolore</Italian>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Unconsciousness">
+            <English>Fainting</English>
+            <German>Ohnmacht</German>
+            <Italian>Svenimenti</Italian>
+        </Key>
         <Key ID="STR_ACE_Field_Rations_TimeWithoutWater_Description">
             <English>How long should a person be able to go without water (hours).</English>
             <Chinese>一個單位脫水之前能支撐多久（單位為小時）。</Chinese>
