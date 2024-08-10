@@ -52,7 +52,7 @@ class CfgAmmo {
     class SatchelCharge_Remote_Ammo: PipeBombBase {
         soundActivation[] = {"", 0, 0, 0};  // No sound on activation
         soundDeactivation[] = {"", 0, 0, 0};  // No sound on deactivation
-        triggerWhenDestroyed = 1;  // (Optional) Explode when the object is shot and destroyed (after being placed) (0-disabled, 1-enabled).
+        triggerWhenDestroyed = 1;  // Explode when the object is shot and destroyed (after being placed) (0-disabled, 1-enabled). Required to be enabled prior to ACE 3.18.0.
         ACE_explodeOnDefuse = 0.02;  // (Optional) Add a chance for the explosive to detonate after being disarmed (in percent)
         ACE_explosives_defuseObjectPosition[] = {-1.415, 0, 0.12};  // (Optional) The position relative to the model where the defuse helper object will be attached and thus the interaction point will be rendered
         ACE_explosives_size = 0;  // (Optional) Setting to 1 will use a defusal action with a larger radius (useful for large mines or mines with a wide pressure plane trigger area)
