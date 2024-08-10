@@ -16,9 +16,6 @@
  * Public: No
  */
 
-// TODO: Add AI tourniquet behaviour
-// For now, AI handle player or otherwise scripted tourniquets only
-
 params ["_healer", "_target"];
 (_healer getVariable [QGVAR(currentTreatment), [-1]]) params ["_finishTime", "_treatmentTarget", "_treatmentEvent", "_treatmentArgs", "_treatmentItem"];
 
