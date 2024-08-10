@@ -28,7 +28,6 @@ class CfgMagazines {
         ACE_Explosives_Placeable = 1;  // Can be placed
         useAction = 0;  // Disable the vanilla interaction
         ACE_Explosives_SetupObject = "banana_satchel_place";  // The object placed before the explosive is armed
-        ACE_Explosives_DelayTime = 1.5;  // Seconds between trigger activation and explosion
         class ACE_Triggers {  // Trigger configurations
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};  // Triggers that can be used
             class Timer {
