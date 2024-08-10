@@ -49,7 +49,7 @@ if ((maxLoad _container) isEqualTo 0) then {
     _container = _unloadTo getVariable [QGVAR(container), objNull];
     if ((_container distance _unloadTo) > DISTANCE_SEARCH_RADIUS) then { _container = objNull; };
     if (isNull _container) then {
-        _container = (nearestObjects [_unloadTo, [["GroundWeaponHolder"], [QGVAR(ammo_holder)]] select GVAR(handleExtraMagazinesType), 5]) param [0, objNull];
+        _container = (nearestObjects [_unloadTo, [["GroundWeaponHolder"], [QGVAR(ammo_holder)]] select GVAR(handleExtraMagazinesType), DISTANCE_SEARCH_RADIUS]) param [0, objNull];
     };
 };
 
