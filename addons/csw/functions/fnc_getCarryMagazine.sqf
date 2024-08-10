@@ -17,7 +17,9 @@
 
 params [["_vehicleMag", "", [""]]];
 
-GVAR(vehicleMagCache) getOrDefaultCall [_vehicleMag, {
+if (_vehicleMag == "") exitWith {};
+
+GVAR(vehicleMagCache) getOrDefaultCall [toLowerANSI _vehicleMag, {
     private _groups = "getNumber (_x >> _vehicleMag) == 1 && {isClass (configFile >> 'CfgMagazines' >> configName _x)}" configClasses (configFile >> QGVAR(groups));
     _carryMag = configName (_groups param [0, configNull]);
     TRACE_2("setting cache",_vehicleMag,_carryMag);

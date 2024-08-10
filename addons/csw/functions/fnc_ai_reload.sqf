@@ -25,9 +25,6 @@ if (_turretPath isEqualTo []) then {
     _turretPath = [0];
 };
 
-// If this is called while CSW has ammo, unload mags in gunner's turret
-if (someAmmo _vehicle) then {[_vehicle, _turretPath] call FUNC(unloadMagazines)};
-
 private _loadableMagazines = [_vehicle, _gunner, true] call FUNC(reload_getLoadableMagazines);
 if (_loadableMagazines isEqualTo []) exitWith {TRACE_1("could not find reloadable mag",_vehicle)};
 
@@ -48,6 +45,9 @@ if (_clearForcedMag) then {
 
 if (_magazineInfo isEqualTo []) exitWith {};
 _magazineInfo params ["_carryMag", "_turretPath", "_loadInfo", "_magSource", "", "_ammo"];
+
+// If this is called while CSW has ammo, unload mags in gunner's turret
+if (someAmmo _vehicle) then {[_vehicle, _turretPath] call FUNC(unloadMagazines)};
 
 // Remove the mag from the source
 [_magSource, _carryMag, _ammo] call EFUNC(common,removeSpecificMagazine);
