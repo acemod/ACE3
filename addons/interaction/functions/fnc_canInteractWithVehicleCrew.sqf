@@ -11,7 +11,7 @@
  * Unit can interact with vehicle crew <BOOL>
  *
  * Example:
- * [player, cursorObject] call ace_interaction_fnc_canInteractWithVehicleCrew
+ * [cursorObject, player] call ace_interaction_fnc_canInteractWithVehicleCrew
  *
  * Public: No
  */

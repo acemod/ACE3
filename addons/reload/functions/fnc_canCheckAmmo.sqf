@@ -11,17 +11,17 @@
  * Can check ammo <BOOL>
  *
  * Example:
- * [cursorObject, player] call ace_reload_fnc_canCheckAmmo
+ * [cursorObject] call ace_reload_fnc_canCheckAmmo
  *
  * Public: No
  */
 
-params ["_target", "_player"];
+params ["_target"];
 
 // Static weapons
 if (_target isKindOf "StaticWeapon") exitWith {
     // No check ammo action on destroyed static weapons
-    if (!alive _target || {!([_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew))}) exitWith {false};
+    if (!alive _target) exitWith {false};
 
     if (currentMagazine _target != "") exitWith {true};
 

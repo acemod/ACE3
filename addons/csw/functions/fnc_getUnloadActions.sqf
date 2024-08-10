@@ -43,8 +43,7 @@ private _condition = {
     params ["_target", "_player", "_args"];
     _args params ["_vehMag", "_turretPath", "_carryMag"];
 
-    [_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew) &&
-    {[_target, _turretPath, _player, _carryMag, _vehMag] call FUNC(reload_canUnloadMagazine)}
+    [_target, _turretPath, _player, _carryMag, _vehMag] call FUNC(reload_canUnloadMagazine)
 };
 
 private _actions = [];
