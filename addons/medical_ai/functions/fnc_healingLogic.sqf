@@ -40,9 +40,10 @@ if (_finishTime > 0) exitWith {
                 _treatmentEvent = "#fail";
             };
 
+            _healer removeItem _itemClassname;
+            _usedItem = _itemClassname;
+
             if (_treatmentClass != "") then {
-                _healer removeItem _itemClassname;
-                _usedItem = _itemClassname;
                 _treatmentArgs set [2, _treatmentClass];
             };
         };

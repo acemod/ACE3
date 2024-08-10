@@ -178,6 +178,7 @@ PREP(setupLocalUnitsHandler);
 PREP(setVariableJIP);
 PREP(setVariablePublic);
 PREP(setVolume);
+PREP(setWeaponLightLaserState);
 PREP(showHud);
 PREP(statusEffect_addType);
 PREP(statusEffect_get);
