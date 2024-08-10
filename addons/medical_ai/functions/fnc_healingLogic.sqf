@@ -288,7 +288,7 @@ if (true) then {
     };
 
     if ((count (_target getVariable [VAR_MEDICATIONS, []])) >= 6) exitWith {
-        _treatmentEvent = "#tooManyMeds";
+        _treatmentEvent = "#needsFewerMeds";
     };
 
     private _heartRate = GET_HEART_RATE(_target);
