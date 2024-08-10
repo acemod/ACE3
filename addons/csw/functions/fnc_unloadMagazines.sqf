@@ -35,7 +35,7 @@ private _carryMagazines = createHashMap;
 } forEach (magazinesAllTurrets _vehicle);
 
 {
-    _vehicle removeMagazinesTurret _x;
+    [QEGVAR(common,removeMagazinesTurret), [_vehicle, _x select 0, _x select 1], _vehicle, _x select 1] call CBA_fnc_turretEvent;
 } forEach _magsToRemove;
 
 if (_returnMags) then {
