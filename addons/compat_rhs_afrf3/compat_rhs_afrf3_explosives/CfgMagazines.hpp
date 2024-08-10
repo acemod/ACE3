@@ -42,7 +42,6 @@ class CfgMagazines {
     };
 
     class rhs_ec75_mag: ATMine_Range_Mag {
-        EGVAR(explosives,DelayTime) = 1;
         EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_ec75);
         useAction = 0;
         class ACE_Triggers {
@@ -133,7 +132,6 @@ class CfgMagazines {
     };
 
     class rhs_mine_ozm72_c_mag: rhs_mine_ozm72_a_mag {
-        EGVAR(explosives,DelayTime) = 1;
         EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_ozm72_c);
         useAction = 0;
         class ACE_Triggers {
