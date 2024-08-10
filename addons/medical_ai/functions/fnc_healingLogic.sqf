@@ -330,10 +330,14 @@ if (true) then {
     };
 
     // Remove all remaining tourniquets by bandaging all body parts
-    if (_tourniquets isNotEqualTo DEFAULT_TOURNIQUET_VALUES) exitWith {
+    if (_tourniquets isNotEqualTo DEFAULT_TOURNIQUET_VALUES) then {
         true call _fnc_findNoTourniquet;
     };
 
+    // If the healer can bandage or remove tourniquets, do that
+    if (_treatmentEvent in [QEGVAR(medical_treatment,bandageLocal), QGVAR(tourniquetRemove)]) exitWith {};
+
+    // Otherwise, if the healer is either done or out of bandages, continue
     if (
         !(_treatmentEvent in ["#tooManyMeds", "#waitForIV"]) &&
         {(GET_PAIN_PERCEIVED(_target) > 0.25) || {_heartRate >= 180}} &&
