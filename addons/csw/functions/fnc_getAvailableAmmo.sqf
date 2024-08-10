@@ -28,11 +28,7 @@ private _availableMagazines = createHashMap;
 
 private _fnc_addAmmo = {
     params ["_magazine", "_ammo"];
-    if !(_magazine in _availableMagazines) then {
-        _availableMagazines set [_magazine, _ammo];
-    } else {
-        _availableMagazines set [_magazine, (_availableMagazines get _magazine) + _ammo];
-    };
+    _availableMagazines set [_magazine, (_availableMagazines getOrDefault [_magazine, 0]) + _ammo];
 };
 
 {
