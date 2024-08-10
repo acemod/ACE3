@@ -593,7 +593,7 @@ TAG_my_arsenal_essentials = ["arifle_AK12_F", "LMG_03_F"];
 A loadout can be saved to the player's profile using `ace_arsenal_fnc_saveLoadout`.
 
 ```sqf
-private _loadout = [ace_player] call CBA_fnc_getLoadout; // or getUnitLoadout ace_player
+private _loadout = [ACE_player] call CBA_fnc_getLoadout; // or getUnitLoadout ACE_player
 private _replaceExisting = true; // optional, default: false
 ["Current Loadout", _loadout, _replaceExisting] call ace_arsenal_fnc_saveLoadout;
 ```
