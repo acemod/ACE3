@@ -50,8 +50,8 @@ private _onFinish = {
         };
 
         TRACE_1("calling addTurretMag event",_args);
-        [QGVAR(addTurretMag), _args] call CBA_fnc_globalEvent;
-    }, [_magSource, _unit, [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend]]] call CBA_fnc_execNextFrame;
+        [QGVAR(addTurretMag), _args, _args select 0, _args select 1] call CBA_fnc_turretEvent;
+    }, [_magSource, _unit, [_vehicle, _turret, _magSource, _carryMag, _ammo]]] call CBA_fnc_execNextFrame;
 };
 
 [

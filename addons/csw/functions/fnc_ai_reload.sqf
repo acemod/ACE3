@@ -57,17 +57,17 @@ private _eventParams = [_vehicle, _turretPath, objNull, _carryMag, _ammo, _gunne
 
 if (_instantReload) exitWith {
     TRACE_1("calling addTurretMag event: instant AI reload",_this);
-    [QGVAR(addTurretMag), _eventParams] call CBA_fnc_globalEvent;
+    [QGVAR(addTurretMag), _eventParams, _vehicle, _turretPath] call CBA_fnc_turretEvent;
 };
 
 private _timeToLoad = GET_NUMBER(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime",1);
 
 TRACE_1("Reloading in progress",_timeToLoad);
 [{
-    params ["_vehicle", "", "", "", "", "_gunner"];
+    params ["_vehicle", "_turretPath", "", "", "", "_gunner"];
     if !(alive _vehicle && {alive _gunner}) exitWith {TRACE_2("invalid state",alive _vehicle,alive _gunner);};
 
     // Reload the static weapon
     TRACE_1("calling addTurretMag event: AI reload",_this);
-    [QGVAR(addTurretMag), _this] call CBA_fnc_globalEvent;
+    [QGVAR(addTurretMag), _this, _vehicle, _turretPath] call CBA_fnc_turretEvent;
 }, _eventParams, _timeToLoad] call CBA_fnc_waitAndExecute;

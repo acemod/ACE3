@@ -30,7 +30,7 @@ private _statement = {
         {
             (_this select 0) params ["_target", "_turretPath", "", "_carryMag", "_vehMag"];
             TRACE_5("unload progressBar finish",_target,_turretPath,_carryMag,_vehMag,_player);
-            [QGVAR(removeTurretMag), [_target, _turretPath, _carryMag, _vehMag, _player]] call CBA_fnc_globalEvent;
+            [QGVAR(removeTurretMag), [_target, _turretPath, _carryMag, _vehMag, _player], _target, _turretPath] call CBA_fnc_turretEvent;
         },
         {TRACE_1("unload progressBar fail",_this);},
         format [LLSTRING(actionUnload), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")],
