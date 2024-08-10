@@ -11,7 +11,7 @@
 
 // MINIMAL required version for the Mod. Components can specify others..
 #define REQUIRED_VERSION 2.14
-#define REQUIRED_CBA_VERSION {3,16,0}
+#define REQUIRED_CBA_VERSION {3,18,0}
 
 #ifndef COMPONENT_BEAUTIFIED
     #define COMPONENT_BEAUTIFIED COMPONENT
