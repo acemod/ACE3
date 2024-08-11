@@ -131,7 +131,7 @@ private _fnc_removeTourniquet = {
     // If no bandages available, wait
     // If check is done at the start of the scope, it will miss the edge case where the unit ran out of bandages just as they finished bandaging tourniqueted body part
     if !(([_healer, "@bandage"] call FUNC(itemCheck)) # 0) exitWith {
-        _treatmentEvent = "#needsBandages";
+        _treatmentEvent = "#needsBandage";
     };
 
     // Otherwise keep bandaging
@@ -179,7 +179,7 @@ if (true) then {
 
         // Patient is not worth treating if bloodloss can't be stopped
         if !(_hasBandage || _hasTourniquet) exitWith {
-            _treatmentEvent = "#needsBandagesOrTourniquets";
+            _treatmentEvent = "#needsBandageOrTourniquet";
         };
 
         // Bandage the heaviest bleeding body part
@@ -266,25 +266,20 @@ if (true) then {
         _treatmentItem = "@iv";
     };
 
-    private _fractures = GET_FRACTURES(_target);
+    // Leg fractures
+    private _index = (GET_FRACTURES(_target) select [4, 2]) find 1;
 
     if (
-        ((_fractures select 4) == 1) &&
-        {([_healer, "splint"] call FUNC(itemCheck)) # 0}
+        _index != -1 && {
+            // In case the unit doesn't have a splint, set state here
+            _treatmentEvent = "#needsSplint";
+
+            ([_healer, "splint"] call FUNC(itemCheck)) # 0
+        }
     ) exitWith {
         _treatmentEvent = QEGVAR(medical_treatment,splintLocal);
         _treatmentTime = 6;
-        _treatmentArgs = [_healer, _target, "leftleg"];
-        _treatmentItem = "splint";
-    };
-
-    if (
-        ((_fractures select 5) == 1) &&
-        {([_healer, "splint"] call FUNC(itemCheck)) # 0}
-    ) exitWith {
-        _treatmentEvent = QEGVAR(medical_treatment,splintLocal);
-        _treatmentTime = 6;
-        _treatmentArgs = [_healer, _target, "rightleg"];
+        _treatmentArgs = [_healer, _target, ALL_BODY_PARTS select (_index + 4)];
         _treatmentItem = "splint";
     };
 
@@ -293,7 +288,8 @@ if (true) then {
     if (_needsIV || {_doCPR && {_treatmentEvent == "#waitForIV"}}) exitWith {
         // If injured is in cardiac arrest and the healer is doing nothing else, start CPR
         if (_doCPR) exitWith {
-            _treatmentEvent = QEGVAR(medical_treatment,cprLocal); // TODO: Medic remains in this loop until injured is given enough IVs or dies
+            // Medic remains in this loop until injured is given enough IVs or dies
+            _treatmentEvent = QEGVAR(medical_treatment,cprLocal);
             _treatmentArgs = [_healer, _target];
             _treatmentTime = 15;
         };
@@ -312,7 +308,12 @@ if (true) then {
     private _heartRate = GET_HEART_RATE(_target);
     private _canGiveEpinephrine = !(_treatmentEvent in ["#needsFewerMeds", "#waitForIV"]) &&
                                   {IS_UNCONSCIOUS(_target) || {_heartRate <= 50}} &&
-                                  {([_healer, "epinephrine"] call FUNC(itemCheck)) # 0};
+                                  {
+                                      // In case the unit doesn't have a epinephrine injector, set state here
+                                      _treatmentEvent = "#needsEpinephrine";
+
+                                      ([_healer, "epinephrine"] call FUNC(itemCheck)) # 0
+                                  };
 
     // This allows for some multitasking
     if (_canGiveEpinephrine) then {
@@ -352,7 +353,12 @@ if (true) then {
     if (
         !(_treatmentEvent in ["#needsFewerMeds", "#waitForIV"]) &&
         {(GET_PAIN_PERCEIVED(_target) > 0.25) || {_heartRate >= 180}} &&
-        {([_healer, "morphine"] call FUNC(itemCheck)) # 0}
+        {
+            // In case the unit doesn't have a morphine injector, set state here
+            _treatmentEvent = "#needsMorphine";
+
+            ([_healer, "morphine"] call FUNC(itemCheck)) # 0
+        }
     ) exitWith {
         if (CBA_missionTime < (_target getVariable [QGVAR(nextMorphine), -1])) exitWith {
             _treatmentEvent = "#waitForMorphineToTakeEffect";
