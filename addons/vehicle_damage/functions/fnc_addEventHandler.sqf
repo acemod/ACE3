@@ -35,7 +35,7 @@ _vehicle allowCrewInImmobile true;
 
     if (!isNil {_vehicle getVariable QGVAR(handleDamage)}) exitWith {};
 
-    TRACE_1("EH not added yet - added eh now",_vehicle);
+    TRACE_1("added eh",_vehicle);
 
     _vehicle setVariable [QGVAR(hitHash), createHashMap];
     _vehicle setVariable [QGVAR(handleDamage), _vehicle addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]];
@@ -129,7 +129,9 @@ private _hitPointAliases = (getArray (_vehicleConfig >> QGVAR(hitpointAlias))) c
 
 TRACE_1("hitpoint alias",_hitPointAliases);
 
-_hitPointsConfig call _iterateThroughConfig;
-_turretConfig call _iterateThroughConfig;
+_hitPointsConfig call _fnc_iterateThroughConfig;
+_turretConfig call _fnc_iterateThroughConfig;
 
 GVAR(vehicleClassesHitPointHash) set [_typeOf, _hitPointHash];
+
+nil
