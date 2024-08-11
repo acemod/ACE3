@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Handles removing ammo from a turret
- * Called from a global event but only runs where turret is local
+ * Handles removing ammo from a turret.
+ * Called from a global event but only runs where turret is local.
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret Path <ARRAY>
- * 2: Magainze Unit Can Carry <STRING>
+ * 2: Magazine Unit Can Carry <STRING>
  * 3: Magazine To Remove From Static <STRING>
  * 4: Unit or container to unload to <OBJECT>
  *
@@ -24,7 +24,7 @@ params ["_vehicle", "_turretPath", "_carryMag", "_vehMag", "_unloadTo"];
 TRACE_5("removeTurretMag EH",_vehicle,_turretPath,_carryMag,_vehMag,_unloadTo);
 
 TRACE_3("",local _vehicle,_vehicle turretLocal _turretPath,local _unloadTo);
-if (!(_vehicle turretLocal _turretPath)) exitWith {};
+if !(_vehicle turretLocal _turretPath) exitWith {};
 
 private _magsInWeapon = [];  // Check how much ammo it has now:
 {

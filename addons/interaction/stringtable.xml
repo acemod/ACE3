@@ -164,7 +164,7 @@
             <Hungarian>Cselekvő menü</Hungarian>
             <Portuguese>Menu de Interação</Portuguese>
             <Italian>Menù Interazioni</Italian>
-            <Japanese>インタラクションメニュー</Japanese>
+            <Japanese>インタラクション メニュー</Japanese>
             <Korean>상호작용 메뉴</Korean>
             <Chinesesimp>互动菜单</Chinesesimp>
             <Chinese>互動選單</Chinese>
@@ -181,7 +181,7 @@
             <Hungarian>Cselekvő menü (saját) </Hungarian>
             <Portuguese>Menu de Interação (Individual)</Portuguese>
             <Italian>Menù Interazioni (su se stesso)</Italian>
-            <Japanese>インタラクションメニュー (セルフ)</Japanese>
+            <Japanese>インタラクション メニュー (セルフ)</Japanese>
             <Korean>상호작용 메뉴(자신)</Korean>
             <Chinesesimp>互动菜单（自我）</Chinesesimp>
             <Chinese>互動選單 (自我)</Chinese>
@@ -458,7 +458,7 @@
             <Russian>Вас похлопали по ПРАВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla destra</Italian>
-            <Japanese>右肩を叩かれました</Japanese>
+            <Japanese>右肩を叩かれた</Japanese>
             <Korean>누군가 오른쪽 어깨를 쳤다</Korean>
             <Chinesesimp>你的右肩膀被轻拍了一下</Chinesesimp>
             <Chinese>你的右肩膀被輕拍了一下</Chinese>
@@ -475,7 +475,7 @@
             <Russian>Вас похлопали по ЛЕВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro.</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla sinistra</Italian>
-            <Japanese>左肩を叩かれました</Japanese>
+            <Japanese>左肩を叩かれた</Japanese>
             <Korean>누군가 왼쪽 어깨를 쳤다</Korean>
             <Chinesesimp>你的左肩膀被轻拍了一下</Chinesesimp>
             <Chinese>你的左肩膀被輕拍了一下</Chinese>
@@ -848,7 +848,7 @@
             <Portuguese>Perdão</Portuguese>
             <Italian>Perdona</Italian>
             <Hungarian>Megbocsátás</Hungarian>
-            <Japanese>許す</Japanese>
+            <Japanese>赦免する</Japanese>
             <Korean>허용</Korean>
             <Chinesesimp>原谅</Chinesesimp>
             <Chinese>原諒</Chinese>
@@ -1247,30 +1247,30 @@
             <Korean>전면유리 부수기</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsAttach">
-            <English>Attach %1</English>
-            <Russian>Установить %1</Russian>
-            <Japanese>%1 を取り付け</Japanese>
-            <Spanish>Acoplar %1</Spanish>
-            <French>Fixer %1</French>
-            <Polish>Przyczep %1</Polish>
-            <German>Befestige %1</German>
-            <Italian>Attacca %1</Italian>
-            <Chinesesimp>附加 %1</Chinesesimp>
-            <Korean>%1 붙이기</Korean>
-            <Portuguese>Fixar %1</Portuguese>
+            <English>Attach</English>
+            <Russian>Установить</Russian>
+            <Japanese>を取り付け</Japanese>
+            <Spanish>Acoplar</Spanish>
+            <French>Fixer</French>
+            <Polish>Przyczep</Polish>
+            <German>Befestige</German>
+            <Italian>Attacca</Italian>
+            <Chinesesimp>附加</Chinesesimp>
+            <Korean>붙이기</Korean>
+            <Portuguese>Fixar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsDetach">
-            <English>Detach %1</English>
-            <Russian>Снять %1</Russian>
-            <Japanese>%1 を外す</Japanese>
-            <Spanish>Desacoplar %1</Spanish>
-            <French>Retirer %1</French>
-            <Polish>Odczep %1</Polish>
-            <German>Löse %1</German>
-            <Italian>Stacca %1</Italian>
-            <Chinesesimp>拆卸 %1</Chinesesimp>
-            <Korean>%1 떼내기</Korean>
-            <Portuguese>Desfixar %1</Portuguese>
+            <English>Detach</English>
+            <Russian>Снять</Russian>
+            <Japanese>を外す</Japanese>
+            <Spanish>Desacoplar</Spanish>
+            <French>Retirer</French>
+            <Polish>Odczep</Polish>
+            <German>Löse</German>
+            <Italian>Stacca</Italian>
+            <Chinesesimp>拆卸</Chinesesimp>
+            <Korean>떼내기</Korean>
+            <Portuguese>Desfixar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachments_Description">
             <English>Enables attach/detach weapon attachment actions for current weapon.</English>
@@ -1323,6 +1323,10 @@
             <Korean>주의: 물체끼리 충돌하는 현상이 있을 수 있음.</Korean>
             <Spanish>Advertencia: puede provocar que algunos objetos choquen con otros.</Spanish>
             <Portuguese>Aviso: pode causar que alguns objetos colidam com outros.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interaction_SettingAnimActionsName">
+            <English>Interaction with animations</English>
+            <Russian>Взаимодействие с анимациями</Russian>
         </Key>
     </Package>
 </Project>

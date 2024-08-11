@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Gets sub actions for what the unit can load into the CSW
+ * Gets sub actions for what the player can load into the CSW.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Unit <OBJECT>
  *
  * Return Value:
@@ -35,7 +35,7 @@ private _condition = {
     ([_target, _turretPath, _carryMag, _magSource] call FUNC(reload_canLoadMagazine)) select 0
 };
 
-private _cfgMagazines = configFile >> "CfgMagazines"; // micro-optimization
+private _cfgMagazines = configFile >> "CfgMagazines"; // Micro-optimization
 private _actions = [];
 {
     _x params ["_carryMag", "", "_loadInfo"];

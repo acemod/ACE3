@@ -140,7 +140,6 @@ ace_isbelt
 ace_attachable
 ace_placeable
 ace_setupobject
-ace_delaytime
 ace_triggers
 ace_magazines_forcemagazinemuzzlevelocity
 ```
