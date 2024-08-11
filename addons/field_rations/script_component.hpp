@@ -28,6 +28,7 @@
 #define DRINK_FROM_SOURCE_TIME 10
 
 // Threshold for high hunger/thirst consequences
+#define CONSEQ_THRESHOLD_LIGHT 75
 #define CONSEQ_THRESHOLD_SEVERE 85
 
 #define IDC_COLORED_HUD_THIRST 6740

@@ -27,6 +27,15 @@ if ((_thirst > 99.9 || {_hunger > 99.9}) && {random 1 < 0.5}) exitWith {
 // Exit if unit is not awake, below are animation based consequences
 if !(_player call EFUNC(common,isAwake)) exitWith {};
 
+// Make unit moan from high hunger/thirst
+if (
+    GETEGVAR(medical,enabled,false) && 
+    {(_thirst > CONSEQ_THRESHOLD_LIGHT) || {_hunger > CONSEQ_THRESHOLD_LIGHT}} && 
+    {random 1 < linearConversion [CONSEQ_THRESHOLD_LIGHT, 100, (_thirst max _hunger), 0.05, 0.2, true]}
+) then {
+    [ACE_Player, "moan", round (linearConversion [CONSEQ_THRESHOLD_LIGHT, 90, (_thirst max _hunger), 0, 2, true])] call EFUNC(medical_feedback,playInjuredSound);
+};
+
 // Trigger high thirst/hunger consequence (chance based on how high thirst/hunger are)
 if (
     GETEGVAR(medical,enabled,false) && 
