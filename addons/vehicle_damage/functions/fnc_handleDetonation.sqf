@@ -6,10 +6,10 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Chance of detonation <NUMBER>
- * 2: If the crew should be injured <BOOL>
- * 3: Source of damage <OBJECT>
- * 4: Person who caused damage <OBJECT>
- * 5: If the crew's death should be guaranteed <BOOL> (default: false)
+ * 2: If the vehicle should be knocked out <BOOL>
+ * 3: If the crew should be injured <BOOL>
+ * 4: Source of damage <OBJECT>
+ * 5: Person who caused damage <OBJECT>
  *
  * Return Value:
  * None
@@ -20,26 +20,38 @@
  * Public: No
  */
 
-params ["_vehicle", "_chanceOfDetonation", "_injureCrew", "_source", "_instigator", ["_guaranteeDeath", false]];
-TRACE_6("handleDetonation",_vehicle,_chanceOfDetonation,_injureCrew,_source,_instigator,_guaranteeDeath);
-
-private _isDetonating = _vehicle getVariable [QEGVAR(cookoff,isAmmoDetonating), false];
+params ["_vehicle", "_chanceOfDetonation", "_knockOut", "_injureCrew", "_source", "_instigator"];
 
 // Ignore if the vehicle is already detonating ammo
-if (!_guaranteeDeath && {_isDetonating || {random 1 > _chanceOfDetonation}}) exitWith {
-    TRACE_2("no detonation",_vehicle,_chanceOfDetonation);
+if (_vehicle getVariable [QEGVAR(cookoff,isAmmoDetonating), false]) exitWith {
+    TRACE_2("already detonating",_vehicle,_chanceOfDetonation);
+
+    if (_knockOut) then {
+        [_vehicle, _source, _instigator] call FUNC(knockOut);
+    };
+
+    _knockOut // return
 };
 
-// Injure the crew
-if (_injureCrew || _guaranteeDeath) then {
+if (_chanceOfDetonation > random 1) exitWith {
+    TRACE_2("no detonation",_vehicle,_chanceOfDetonation);
+
+    false // return
+};
+
+if (_injureCrew) then {
     {
-        [QGVAR(medicalDamage), [_x, _source, _instigator, _guaranteeDeath], _x] call CBA_fnc_targetEvent;
+        [QGVAR(medicalDamage), [_x, _source, _instigator], _x] call CBA_fnc_targetEvent;
     } forEach (crew _vehicle);
 };
 
-if (_isDetonating) exitWith {};
+TRACE_2("detonation",_vehicle,_chanceOfDetonation);
 
 // Detonate the vehicle
 [QEGVAR(cookoff,detonateAmmunitionServer), [_vehicle, false, _source, _instigator]] call CBA_fnc_serverEvent;
 
-TRACE_2("detonation",_vehicle,_chanceOfDetonation);
+if (_knockOut) then {
+    [_vehicle, _source, _instigator] call FUNC(knockOut);
+};
+
+_knockOut // return

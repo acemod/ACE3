@@ -30,8 +30,7 @@ TRACE_3("knockOut",_vehicle,_source,_instigator);
             if ((0.3 > random 1) || {_hitArea == "engine"}) then {
                 [_vehicle, _x, -1, 1, _source, _instigator] call FUNC(setDamage);
             } else {
-                private _currentDamage = _vehicle getHitpointDamage _x;
-                [_vehicle, _x, -1, (_currentDamage + (0.3 max random 1)) min 1, _source, _instigator] call FUNC(setDamage);
+                [_vehicle, _x, -1, ((_vehicle getHitpointDamage _x) + (0.3 max random 1)) min 1, _source, _instigator] call FUNC(setDamage);
             };
         };
     };

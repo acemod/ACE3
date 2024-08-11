@@ -38,7 +38,6 @@ _vehicle allowCrewInImmobile true;
     TRACE_1("EH not added yet - added eh now",_vehicle);
 
     _vehicle setVariable [QGVAR(hitHash), createHashMap];
-
     _vehicle setVariable [QGVAR(handleDamage), _vehicle addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]];
 }, _vehicle] call CBA_fnc_execNextFrame;
 
@@ -112,12 +111,8 @@ private _fnc_iterateThroughConfig = {
 };
 
 private _turretConfig = _vehicleConfig >> "Turrets";
-private _eraHitpoints = getArray (_vehicleConfig >> QGVAR(eraHitpoints));
-private _slatHitpoints = getArray (_vehicleConfig >> QGVAR(slatHitpoints));
-private _hitPointAliases = getArray (_vehicleConfig >> QGVAR(hitpointAlias));
-
-_eraHitpoints = _eraHitpoints apply {toLowerANSI _x};
-_slatHitpoints = _slatHitpoints apply {toLowerANSI _x};
+private _eraHitpoints = (getArray (_vehicleConfig >> QGVAR(eraHitpoints))) apply {toLowerANSI _x};
+private _slatHitpoints = (getArray (_vehicleConfig >> QGVAR(slatHitpoints))) apply {toLowerANSI _x};
 
 private _fnc_toLowerCase = {
     _this apply {
@@ -130,7 +125,7 @@ private _fnc_toLowerCase = {
 };
 
 // Convert areas to lower case
-_hitPointAliases = _hitPointAliases call _fnc_toLowerCase;
+private _hitPointAliases = (getArray (_vehicleConfig >> QGVAR(hitpointAlias))) call _fnc_toLowerCase;
 
 TRACE_1("hitpoint alias",_hitPointAliases);
 

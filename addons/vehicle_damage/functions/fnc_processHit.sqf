@@ -34,10 +34,12 @@ if (_addedDamage >= 15) exitWith {
     TRACE_2("immediate destruction - high damage",_addedDamage,_currentPartDamage);
 
     // Kill everyone inside for very insane damage
-    [_vehicle, 1, true, _source, _instigator, true] call FUNC(handleDetonation);
-    [_vehicle, _source, _instigator] call FUNC(knockOut);
+    {
+        [QGVAR(medicalDamage), [_x, _source, _instigator, true], _x] call CBA_fnc_targetEvent;
+    } forEach (crew _vehicle);
 
-    _vehicle setDamage 1;
+    // setDamage triggers "Killed" EH in cookoff, which starts ammo cook-off
+    [QGVAR(setDamage), [_vehicle, [1, true, _source, _instigator]]] call CBA_fnc_serverEvent;
 
     false
 };
@@ -153,23 +155,22 @@ switch (_hitArea) do {
 
         TRACE_4("hit engine",_chanceToDetonate,_incendiary,_chanceOfDetonation,_currentFuel);
 
-        [_vehicle, _chanceToDetonate, _totalAmmo > 0, _source, _instigator] call FUNC(handleDetonation);
-
-        if (_explosiveAmmoCount > 0) exitWith {
-            [_vehicle, _source, _instigator] call FUNC(knockOut);
-        };
+        // Knock out and detonate vehicle if necessary
+        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount > 0, _totalAmmo > 0, _source, _instigator] call FUNC(handleDetonation)) exitWith {};
 
         // Cap damage at 0.9 to avoid hard coded blow up
         _newPartDamage = 0.9 min _newPartDamage;
 
         // Fatal engine/drive system damage
-        if (_newPartDamage == 0.9 || {0.8 * _ammoEffectiveness > random 1}) then {
-            [_vehicle, _hitPoint, _hitIndex, 0.9 * _penChance, _source, _instigator] call FUNC(setDamage);
-
-            _vehicle setVariable [QGVAR(canMove), false];
-        } else {
-            [_vehicle, _hitPoint, _hitIndex, _newPartDamage * _penChance, _source, _instigator] call FUNC(setDamage);
+        if (0.8 * _ammoEffectiveness > random 1) then {
+            _newPartDamage = 0.9;
         };
+
+        if (_newPartDamage == 0.9) then {
+            _vehicle setVariable [QGVAR(canMove), false];
+        };
+
+        [_vehicle, _hitPoint, _hitIndex, _newPartDamage * _penChance, _source, _instigator] call FUNC(setDamage);
 
         // No cookoff for cars
         if (_isCar) exitWith {};
@@ -186,12 +187,9 @@ switch (_hitArea) do {
 
         TRACE_4("hit hull",_chanceToDetonate,_incendiary,_chanceOfDetonation,_currentFuel);
 
-        [_vehicle, _chanceToDetonate, _totalAmmo > 0, _source, _instigator] call FUNC(handleDetonation);
-
-        if (_explosiveAmmoCount > 0) exitWith {
+        // Knock out and detonate vehicle if necessary
+        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount > 0, _totalAmmo > 0, _source, _instigator] call FUNC(handleDetonation)) exitWith {
             [_vehicle, _hitPoint, _hitIndex, 0.89 * _penChance, _source, _instigator] call FUNC(setDamage);
-
-            [_vehicle, _source, _instigator] call FUNC(knockOut);
         };
 
         // 25% chance of jamming turret - 25% of mobility kill - 25% of both - 75% chance of critical hull damage
@@ -272,11 +270,7 @@ switch (_hitArea) do {
 
         TRACE_3("hit turret",_chanceToDetonate,_incendiary,_chanceOfDetonation);
 
-        [_vehicle, _chanceToDetonate, _totalAmmo > 0, _source, _instigator] call FUNC(handleDetonation);
-
-        if (_explosiveAmmoCount > 0) exitWith {
-            [_vehicle, _source, _instigator] call FUNC(knockOut);
-        };
+        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount > 0, _totalAmmo > 0, _source, _instigator] call FUNC(handleDetonation)) exitWith {};
 
         if (0.8 * _ammoEffectiveness > random 1) then {
             TRACE_1("damaged turret",_ammoEffectiveness * 0.8);

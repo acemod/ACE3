@@ -22,6 +22,11 @@
 
     [QGVAR(medicalDamage), LINKFUNC(medicalDamage)] call CBA_fnc_addEventHandler;
 
+    if (isServer) then {
+        // To set source and instigator, setDamage must be executed on the server
+        [QGVAR(setDamage), {(_this select 0) setDamage (_this select 1)}] call CBA_fnc_addEventHandler;
+    };
+
     [QGVAR(bailOut), {
         params ["_vehicle", "_unit"];
 
