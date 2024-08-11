@@ -23,8 +23,10 @@
     if (CBA_missionTime - _timeCreated < GVAR(litterCleanupDelay)) exitWith {};
 
     deleteVehicle _object;
-    GVAR(litterObjects) deleteAt _forEachIndex;
-} forEachReversed GVAR(litterObjects);
+    GVAR(litterObjects) set [_forEachIndex, objNull];
+} forEach GVAR(litterObjects);
+
+GVAR(litterObjects) = GVAR(litterObjects) - [objNull];
 
 // Exit the loop if no litter objects left
 if (GVAR(litterObjects) isEqualTo []) exitWith {
