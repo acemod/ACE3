@@ -33,7 +33,7 @@ if (
     {(_thirst > 70) || {_hunger > 70}} && 
     {random 1 < linearConversion [70, 100, _thirst max _hunger, 0.05, 0.2, true]}
 ) then {
-    [ACE_Player, "moan", round (linearConversion [70, 100, _thirst max _hunger, 0, 1, true])] call EFUNC(medical_feedback,playInjuredSound);
+    [ACE_Player, "moan", round (linearConversion [70, 90, _thirst max _hunger, 0, 2, true])] call EFUNC(medical_feedback,playInjuredSound);
 };
 
 // Trigger high thirst/hunger consequence
