@@ -35,7 +35,7 @@ private _ammoConfig = _ammo call CBA_fnc_getObjectConfig;
 if (
     (getNumber (_ammoConfig >> "explosive") >= 0.5) ||
     {getNumber (_ammoConfig >> QEGVAR(vehicle_damage,incendiary)) > random 1} ||
-    {_damage * 0.05 > random 1 && {_ammo getShotInfo 4}} // there is a small chance of cooking a box off if it's shot by tracer ammo
+    {_damage * 0.05 > random 1 && {_ammo getShotInfo 4}} // There is a small chance of cooking a box off if it's shot by tracer ammo
 ) then {
     [QGVAR(cookOffBoxServer), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
 };
