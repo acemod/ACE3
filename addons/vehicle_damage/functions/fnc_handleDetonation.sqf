@@ -33,12 +33,14 @@ if (_vehicle getVariable [QEGVAR(cookoff,isAmmoDetonating), false]) exitWith {
     _knockOut // return
 };
 
+// Failure to detonate
 if (_chanceOfDetonation > random 1) exitWith {
     TRACE_2("no detonation",_vehicle,_chanceOfDetonation);
 
     false // return
 };
 
+// Vehicle will be detonated
 if (_injureCrew) then {
     {
         [QGVAR(medicalDamage), [_x, _source, _instigator], _x] call CBA_fnc_targetEvent;

@@ -17,7 +17,10 @@
 
 params ["_vehicle"];
 
-if (_vehicle getVariable [QGVAR(allowCrewInImmobile), false]) exitWith {}; // Check for API
+// Check for API
+if (_vehicle getVariable [QGVAR(allowCrewInImmobile), false]) exitWith {
+    TRACE_1("API prevented crew from dismounting",_vehicle);
+};
 
 TRACE_1("abandon",_vehicle);
 
