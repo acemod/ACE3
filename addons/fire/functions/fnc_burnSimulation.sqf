@@ -38,7 +38,7 @@ params ["_unit", "_instigator"];
         [QGVAR(burnSimulation), [_unit, _instigator], _unit] call CBA_fnc_targetEvent;
     };
 
-    // If unit is invulnerable or in water or if the fire has died out, stop burning unit
+    // If the unit is invulnerable, in water or if the fire has died out, stop burning the unit
     if (
         !(_unit call FUNC(isBurning)) ||
         {!(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]})} ||
@@ -69,11 +69,9 @@ params ["_unit", "_instigator"];
     if (_intensity >= BURN_THRESHOLD_INTENSE) then {
         TRACE_2("check for other units",_unit,_intensity);
 
-        private _adjustedIntensity = 0;
-
         {
-            _distancePercent = 1 - ((_unit distance _x) / BURN_PROPAGATE_DISTANCE);
-            _adjustedIntensity = _intensity * _distancePercent;
+            private _distancePercent = 1 - ((_unit distance _x) / BURN_PROPAGATE_DISTANCE);
+            private _adjustedIntensity = _intensity * _distancePercent;
 
             // Don't burn if intensity is too low or already burning with higher intensity
             if (BURN_MIN_INTENSITY > _adjustedIntensity || {(_x getVariable [QGVAR(intensity), 0]) > _adjustedIntensity}) then {
@@ -95,7 +93,12 @@ params ["_unit", "_instigator"];
         _intensity = _intensity - INTENSITY_LOSS - (rain / 10);
 
         if (_unit call EFUNC(common,isAwake)) then {
-            if (!isPlayer _unit) then {
+            if (_unit call EFUNC(common,isPlayer)) then {
+                // Decrease intensity of burn if rolling around
+                if ((animationState _unit) in PRONE_ROLLING_ANIMS) then {
+                    _intensity = _intensity * INTENSITY_DECREASE_MULT_ROLLING;
+                };
+            } else {
                 private _sdr = _unit getVariable [QGVAR(stopDropRoll), false];
 
                 private _vehicle = objectParent _unit;
@@ -139,30 +142,35 @@ params ["_unit", "_instigator"];
                     _unit setSpeedMode "FULL";
                     _unit setSuppression 1;
                 };
-            } else {
-                // Decrease intensity of burn if rolling around
-                if ((animationState _unit) in PRONE_ROLLING_ANIMS) then {
-                    _intensity = _intensity * INTENSITY_DECREASE_MULT_ROLLING;
-                };
             };
 
             // Play screams and throw weapon (if enabled)
             _unit call FUNC(burnReaction);
         };
 
-        if (!isNull _instigator) then {
-            _unit setVariable [QEGVAR(medical,lastDamageSource), _instigator];
-            _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
+        // Keep pain around unconsciousness limit to allow for more fun interactions
+        private _painPercieved = (0 max ((_unit getVariable [QEGVAR(medical,pain), 0]) - (_unit getVariable [QEGVAR(medical,painSuppress), 0])) min 1);
+        private _painUnconscious = missionNamespace getVariable [QEGVAR(medical,painUnconsciousThreshold), 0];
+        private _damageToAdd = [0.15, _intensity / BURN_MAX_INTENSITY] select (!alive _unit || {_painPercieved < _painUnconscious + random 0.2});
+
+        if (GETEGVAR(medical,enabled,false)) then {
+            if (!isNull _instigator) then {
+                _unit setVariable [QEGVAR(medical,lastDamageSource), _instigator];
+                _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
+            };
+
+            // Common burn areas are the hands and face https://www.ncbi.nlm.nih.gov/pubmed/16899341/
+            private _bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] selectRandomWeighted [0.77, 0.5, 0.8, 0.8, 0.3, 0.3];
+
+            // Use event directly, as ace_medical_fnc_addDamageToUnit requires unit to be alive
+            [QEGVAR(medical,woundReceived), [_unit, [[_damageToAdd, _bodyPart, _damageToAdd]], _instigator, "burn"]] call CBA_fnc_localEvent;
+        } else {
+            private _bodyParts = [["HitFace", "HitNeck", "HitHead"], ["HitPelvis", "HitAbdomen", "HitDiaphragm", "HitChest", "HitBody"], ["HitArms", "HitHands"], ["HitLegs"]] selectRandomWeighted [0.77, 0.5, 0.8, 0.3];
+
+            {
+                _unit setHitPointDamage [_x, (_unit getHitPointDamage _x) + _damageToAdd, true, _instigator, _instigator];
+            } forEach _bodyParts;
         };
-
-        // Common burn areas are the hands and face https://www.ncbi.nlm.nih.gov/pubmed/16899341/
-        private _bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] selectRandomWeighted [0.77, 0.5, 0.8, 0.8, 0.3, 0.3];
-
-        // Keep pain around unconciousness limit to allow for more fun interactions
-        private _damageToAdd = [0.15, _intensity / BURN_MAX_INTENSITY] select (!alive _unit || {GET_PAIN_PERCEIVED(_unit) < (PAIN_UNCONSCIOUS + random 0.2)});
-
-        // Use event directly, as ace_medical_fnc_addDamageToUnit requires unit to be alive
-        [QEGVAR(medical,woundReceived), [_unit, [[_damageToAdd, _bodyPart, _damageToAdd]], _instigator, "burn"]] call CBA_fnc_localEvent;
 
         _unit setVariable [QGVAR(intensity), _intensity, true]; // Globally sync intensity across all clients to make sure simulation is deterministic
     };

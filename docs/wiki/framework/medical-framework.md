@@ -241,3 +241,10 @@ The damage elements are sorted in descending order according to how much damage 
 Some of ACE Medical's underlying behavior, primarily related to damage handling and the vitals loop, can be fine-tuned by editing `ace_medical_const_` variables, found in [script_macros_medical.hpp](https://github.com/acemod/ACE3/blob/master/addons/medical_engine/script_macros_medical.hpp).
 
 Modification of those values should be done by advanced users only. Values and variable names are subject to change without prior warning. Modifying values mid-mission may lead to undefined behavior. Expect minimal support.
+
+### 5.1 Disable seat locking for unconscious
+ACE will lock the seat of an unconscious or dead unit to prevent automatic unloading. This can be disabled by setting:
+```sqf
+ace_medical_engine_disableSeatLocking = true;     // disable on everything
+ace_medical_engine_disableSeatLocking = ["ship"]; // disable just on boats
+```

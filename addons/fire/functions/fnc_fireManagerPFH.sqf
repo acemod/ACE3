@@ -15,9 +15,6 @@
  * Public: No
  */
 
-private _distancePercent = 0;
-private _adjustedIntensity = 0;
-
 {
     _y params ["_fireLogic", "_radius", "_intensity", "_condition", "_conditionArgs"];
     TRACE_2("fireManagerPFH loop",_x,_y);
@@ -36,8 +33,8 @@ private _adjustedIntensity = 0;
 
     // Burn units (alive or dead) close to the fire
     {
-        _distancePercent = 1 - ((_fireLogic distance _x) / _radius);
-        _adjustedIntensity = _intensity * _distancePercent;
+        private _distancePercent = 1 - ((_fireLogic distance _x) / _radius);
+        private _adjustedIntensity = _intensity * _distancePercent;
 
         // Don't burn if intensity is too low or already burning with higher intensity
         if (BURN_MIN_INTENSITY > _adjustedIntensity || {(_x getVariable [QGVAR(intensity), 0]) > _adjustedIntensity}) then {

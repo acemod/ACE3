@@ -1,38 +1,22 @@
 #include "script_component.hpp"
 
-[QGVAR(burn), LINKFUNC(burn)] call CBA_fnc_addEventHandler;
-[QGVAR(burnEffects), LINKFUNC(burnEffects)] call CBA_fnc_addEventHandler;
-[QGVAR(burnSimulation), LINKFUNC(burnSimulation)] call CBA_fnc_addEventHandler;
-
-[QGVAR(playScream), {
-    params ["_scream", "_source"];
-
-    // Only play sound if enabled in settings and enabled for the unit
-    if (GVAR(enableScreams) && {_source getVariable [QGVAR(enableScreams), true]}) then {
-        _source say3D _scream;
-    };
-}] call CBA_fnc_addEventHandler;
-
 ["CBA_settingsInitialized", {
-    TRACE_1("settingsInit",GVAR(enabled));
+    TRACE_1("settingsInitialized",GVAR(enabled));
 
     if (!GVAR(enabled)) exitWith {};
 
-    // Make burning wrecks into fire sources
-    ["AllVehicles", "Killed", {
-        params ["_vehicle", "", "", "_useEffects"];
+    [QGVAR(burn), LINKFUNC(burn)] call CBA_fnc_addEventHandler;
+    [QGVAR(burnEffects), LINKFUNC(burnEffects)] call CBA_fnc_addEventHandler;
+    [QGVAR(burnSimulation), LINKFUNC(burnSimulation)] call CBA_fnc_addEventHandler;
 
-        if (_useEffects) then {
-            [QGVAR(addFireSource), [
-                _vehicle,
-                (boundingBoxReal [_vehicle, "FireGeometry"]) select 2,
-                BURN_MAX_INTENSITY,
-                QGVAR(wreck) + hashValue _vehicle,
-                {!isNull _this && {_this getEntityInfo 13}},
-                _vehicle
-            ]] call CBA_fnc_serverEvent;
+    [QGVAR(playScream), {
+        params ["_scream", "_source"];
+
+        // Only play sound if enabled in settings and enabled for the unit
+        if (GVAR(enableScreams) && {_source getVariable [QGVAR(enableScreams), true]}) then {
+            _source say3D _scream;
         };
-    }, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
+    }] call CBA_fnc_addEventHandler;
 
     if (!isServer) exitWith {};
 
@@ -44,7 +28,7 @@
             ["_radius", 0, [0]],
             ["_intensity", 0, [0]],
             ["_key", ""],
-            ["_condition", {true}],
+            ["_condition", {true}, [{}]],
             ["_conditionArgs", []]
         ];
 
