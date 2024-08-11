@@ -32,7 +32,7 @@ if (!alive _target || {!(_target call FUNC(isInjured))} || {GVAR(requireItems) !
     private _treatmentEvent = (_this getVariable [QGVAR(currentTreatment), []]) param [2, ""];
 
     // Target still needs healing, but the healer doesn't have the required items or needs to wait
-    _treatmentEvent in ["#needsBandages", "#needsBandagesOrTourniquets", "#needsIV", "#needsFewerMeds", "#needsSlowerHeart", "#needsFasterHeart"]
+    (_treatmentEvent select [0, 6]) == "#needs"
 }}) exitWith {
     _this forceSpeed -1;
     _target forceSpeed -1;
