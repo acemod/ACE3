@@ -161,7 +161,7 @@ switch (_hitArea) do {
         // Cap damage at 0.9 to avoid hard coded blow up
         _newPartDamage = 0.9 min _newPartDamage;
 
-        // Fatal engine/drive system damage
+        // Fatal engine/drive system damage (engine and tracks stop working at 0.9)
         if (0.8 * _ammoEffectiveness > random 1) then {
             _newPartDamage = 0.9;
         };
@@ -289,7 +289,7 @@ switch (_hitArea) do {
         [_vehicle, _chanceOfFire, _cookoffIntensity, _source, _instigator] call FUNC(handleCookoff);
     };
     case "gun": {
-        TRACE_3("hit gun",_chanceToDetonate,_incendiary,_chanceOfDetonation);
+        TRACE_2("hit gun",_addedDamage,_minDamage);
 
         if (0.8 * _ammoEffectiveness > random 1) then {
             TRACE_1("damaged gun",_ammoEffectiveness * 0.8);

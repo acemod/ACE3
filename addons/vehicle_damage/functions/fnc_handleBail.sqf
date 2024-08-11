@@ -20,8 +20,9 @@ TRACE_1("handleBail",_vehicle);
 
 private _isCar = _vehicle isKindOf "Car" && {!(_vehicle isKindOf "Wheeled_APC_F")};
 
-private _canMove = (_vehicle getVariable [QGVAR(canShoot), true]) && {alive driver _vehicle};
-private _canShoot = (_vehicle getVariable [QGVAR(canMove), true]) && {alive gunner _vehicle};
+// canFire command is broken, hence the variable
+private _canMove = (_vehicle getVariable [QGVAR(canMove), true]) && {alive driver _vehicle};
+private _canShoot = (_vehicle getVariable [QGVAR(canShoot), true]) && {alive gunner _vehicle};
 
 _vehicle setVariable [QGVAR(canMove), _canMove];
 _vehicle setVariable [QGVAR(canShoot), _canShoot];

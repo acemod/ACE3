@@ -35,7 +35,7 @@ if (_vehicle getVariable [QEGVAR(cookoff,isCookingOff), false]) exitWith {
 _chanceOfFire = _chanceOfFire * EGVAR(cookoff,probabilityCoef);
 
 // Failure to cook off
-if (_chanceOfFire >= random 1) exitWith {
+if (_chanceOfFire == 0 || {_chanceOfFire < random 1}) exitWith {
     TRACE_3("no cook-off",_vehicle,_chanceOfFire,_intensity);
 
     false // return

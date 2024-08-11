@@ -20,11 +20,11 @@
  * Public: No
  */
 
-params ["_vehicle", "_chanceOfDetonation", "_knockOut", "_injureCrew", "_source", "_instigator"];
+params ["_vehicle", "_chanceToDetonate", "_knockOut", "_injureCrew", "_source", "_instigator"];
 
 // Ignore if the vehicle is already detonating ammo
 if (_vehicle getVariable [QEGVAR(cookoff,isAmmoDetonating), false]) exitWith {
-    TRACE_2("already detonating",_vehicle,_chanceOfDetonation);
+    TRACE_2("already detonating",_vehicle,_chanceToDetonate);
 
     if (_knockOut) then {
         [_vehicle, _source, _instigator] call FUNC(knockOut);
@@ -34,8 +34,8 @@ if (_vehicle getVariable [QEGVAR(cookoff,isAmmoDetonating), false]) exitWith {
 };
 
 // Failure to detonate
-if (_chanceOfDetonation > random 1) exitWith {
-    TRACE_2("no detonation",_vehicle,_chanceOfDetonation);
+if (_chanceToDetonate == 0 || {_chanceToDetonate < random 1}) exitWith {
+    TRACE_2("no detonation",_vehicle,_chanceToDetonate);
 
     false // return
 };
@@ -47,7 +47,7 @@ if (_injureCrew) then {
     } forEach (crew _vehicle);
 };
 
-TRACE_2("detonation",_vehicle,_chanceOfDetonation);
+TRACE_2("detonation",_vehicle,_chanceToDetonate);
 
 // Detonate the vehicle
 [QEGVAR(cookoff,detonateAmmunitionServer), [_vehicle, false, _source, _instigator]] call CBA_fnc_serverEvent;
