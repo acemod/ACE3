@@ -109,7 +109,7 @@ private _fnc_removeTourniquet = {
         };
     } forEach GET_OPEN_WOUNDS(_target);
 
-    // If there are no open wounds, check if there are tourniquets on limbs with no open wounds (stitched or full healed),
+    // If there are no open wounds, check if there are tourniquets on limbs with no open wounds (stitched or fully healed),
     // as we know there have to be tourniquets at this point
     if (_bodyPartBleeding findIf {_x != -1} == -1) then {
         _bodyPartBleeding set [_tourniquets findIf {_x != 0}, 0];
