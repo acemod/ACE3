@@ -30,13 +30,11 @@ if !(_player call EFUNC(common,isAwake)) exitWith {};
 // Trigger high thirst/hunger consequence
 if (
     GETEGVAR(medical,enabled,false) && 
-    {(_thirst > 85 || {_hunger > 85})}
+    {(_thirst > 85 || {_hunger > 85})} && 
+    {random 1 < linearConversion [85, 100, _thirst max _hunger, 0.05, 0.1, true]}
 ) exitWith {
     if (XGVAR(nearDepletedConsequence) == 1) then { // Set unit unconscious with a 45s cooldown
-        if (
-            (CBA_missionTime - XGVAR(lastUnconEvent)) > 45 && 
-            {random 1 < linearConversion [85, 100, _thirst max _hunger, 0.05, 0.1, true]}
-        ) then {
+        if (CBA_missionTime - XGVAR(lastUnconEvent) > 45) then {
             [_player, true, 5, true] call EFUNC(medical,setUnconscious);
             XGVAR(lastUnconEvent) = CBA_missionTime;
         };
