@@ -24,3 +24,4 @@ if !(alive _this) exitWith {false};
     private _fractures = GET_FRACTURES(_this);
     ((_fractures select 4) == 1) || {(_fractures select 5) == 1}
 }
+|| { GET_TOURNIQUETS(_this) isNotEqualTo DEFAULT_TOURNIQUET_VALUES }
