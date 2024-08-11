@@ -7,18 +7,15 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "rhsusf_main_loadorder",
-            "ace_refuel"
+            "rhs_main_loadorder",
+            "ace_repair"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {};
+        authors[] = {"Dystopian", "johnb43"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
-
-        addonRootClass = QUOTE(ADDON);
     };
 };
 
-#include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"

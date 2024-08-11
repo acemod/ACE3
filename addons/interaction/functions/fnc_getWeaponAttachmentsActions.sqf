@@ -44,7 +44,7 @@ params ["_unit"];
                 {},
                 {true},
                 {
-                    params ["_unit", "", "_args"];
+                    params ["", "_unit", "_args"];
                     _args params ["_attachment", "_name", "_picture", "_weaponItems", "_currentWeapon"];
 
                     private _cfgWeapons = configFile >> "CfgWeapons";
@@ -110,10 +110,14 @@ params ["_unit"];
                                 QGVAR(switch_) + _x,
                                 format ["%1: %2", localize "str_sensortype_switch", _modeName],
                                 getText (_config >> "picture"),
-                                LINKFUNC(switchWeaponAttachment),
+                                {
+                                    params ["", "_unit", "_actionParams"];
+                                    _actionParams params ["_weapon", "_newAttachment", "_oldAttachment"];
+                                    [_unit, _weapon, _oldAttachment, _newAttachment] call EFUNC(common,switchAttachmentMode);
+                                },
                                 {true},
                                 {},
-                                [_currentWeapon, _x, ""]
+                                [_currentWeapon, _x, _attachment]
                             ] call EFUNC(interact_menu,createAction),
                             [],
                             _unit

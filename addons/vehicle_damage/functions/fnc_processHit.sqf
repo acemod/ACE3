@@ -340,12 +340,12 @@ switch (_hitArea) do {
         TRACE_2("hit slat",_warheadType,_warheadTypeStr);
 
         // Incredibly small chance of AP destroying SLAT
-        if (_warheadType in [WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM, WARHEAD_TYPE_HE] || {0.01 > random 1}) then {
+        if (_warheadType in [WARHEAD_TYPE_HE, WARHEAD_TYPE_AP, WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM] || {0.01 > random 1}) then {
             private _currentDamage = _vehicle getHitIndex _hitIndex;
 
             TRACE_3("damaged slat",_warheadType,_warheadTypeStr,_currentDamage);
 
-            if (_warheadType in [WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM]) then {
+            if (_warheadType in [WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM, WARHEAD_TYPE_AP]) then {
                 [_vehicle, _hitPoint, _hitIndex, 1, _source, _instigator] call FUNC(setDamage);
             } else {
                 [_vehicle, _hitPoint, _hitIndex, _currentDamage + (0.5 max random 1), _source, _instigator] call FUNC(setDamage);
@@ -359,7 +359,7 @@ switch (_hitArea) do {
     case "era": {
         TRACE_2("hit era",_warheadType,_warheadTypeStr);
 
-        if (_warheadType in [WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM] || {0.05 > random 1}) then {
+        if (_warheadType in [WARHEAD_TYPE_AP, WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM] || {0.05 > random 1}) then {
             private _currentDamage = _vehicle getHitIndex _hitIndex;
 
             TRACE_3("damaged era",_warheadType,_warheadTypeStr,_currentDamage);
