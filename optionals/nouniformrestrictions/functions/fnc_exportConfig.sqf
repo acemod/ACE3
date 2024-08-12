@@ -23,12 +23,12 @@ private _baseClasses = [];
     if !(_baseClass in (_modifyClasses apply {_x select 0})) then {
         _baseClasses pushBackUnique _baseClass;
     };
-} forEach (toString {
+} forEach ((toString {
     !isNull (_x >> 'modelSides') &&
     {(_x >> 'modelSides') in (configProperties [_x, 'true', false])} &&
     {getArray (_x >> 'modelSides') isNotEqualTo [6]} &&
     {getArray (_x >> 'modelSides') isNotEqualTo [0,1,2,3]}
-} configClasses (configFile >> "CfgVehicles"));
+}) configClasses (configFile >> "CfgVehicles"));
 
 private _nl = endl;
 private _output = ["class CfgVehicles {", _nl];
