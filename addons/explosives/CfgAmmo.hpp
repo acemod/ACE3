@@ -167,6 +167,7 @@ class CfgAmmo {
 
     // Orange DLC:
     class APERSMineDispenser_Ammo: PipeBombBase {
+        triggerWhenDestroyed = 1;
         GVAR(magazine) = "APERSMineDispenser_Mag";
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0.0, -0.05, 0.15};
