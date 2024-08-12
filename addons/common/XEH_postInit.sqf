@@ -19,16 +19,16 @@
 
 //Status Effect EHs:
 [QGVAR(setStatusEffect), LINKFUNC(statusEffect_set)] call CBA_fnc_addEventHandler;
-["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ace_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
-["blockSprint", false, ["ace_advanced_fatigue", "ace_dragging", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
-["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
-["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
-["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
-["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ace_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
+["forceWalk", false, ["ace_advanced_fatigue", "ace_attach", "ace_dragging", "ace_explosives", QEGVAR(medical,fracture), "ace_rearm", "ace_refuel", "ace_sandbag", "ace_switchunits", "ace_tacticalladder", "ace_trenches"]] call FUNC(statusEffect_addType);
+["blockSprint", false, ["ace_advanced_fatigue", "ace_dragging", QEGVAR(medical,fracture)]] call FUNC(statusEffect_addType);
+["setCaptive", true, [QEGVAR(captives,handcuffed), QEGVAR(captives,surrendered)]] call FUNC(statusEffect_addType);
+["blockDamage", false, ["fixCollision", "ace_cargo"]] call FUNC(statusEffect_addType);
+["blockEngine", false, ["ace_refuel"]] call FUNC(statusEffect_addType);
+["blockThrow", false, ["ace_attach", "ace_concertina_wire", "ace_dragging", "ace_explosives", "ace_rearm", "ace_refuel", "ace_sandbag", "ace_tacticalladder", "ace_trenches", "ace_tripod"]] call FUNC(statusEffect_addType);
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
-["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
+["blockRadio", false, [QEGVAR(captives,handcuffed), QEGVAR(captives,surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
-["disableWeaponAssembly", false, ["ace_common", "ace_common_lockVehicle", "ace_csw"]] call FUNC(statusEffect_addType);
+["disableWeaponAssembly", false, ["ace_common", QGVAR(lockVehicle), "ace_csw"]] call FUNC(statusEffect_addType);
 ["lockInventory", true, [], true] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
