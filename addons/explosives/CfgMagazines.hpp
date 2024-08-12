@@ -171,7 +171,6 @@ class CfgMagazines {
 
     // Orange DLC:
     class APERSMineDispenser_Mag: SatchelCharge_Remote_Mag {
-        displayNameShort = ""; // Original text: "Mine Dispenser descr. short" which is useless
         GVAR(SetupObject) = "ACE_Explosives_Place_APERSMineDispenser";
         class ACE_Triggers {
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter"};
@@ -185,7 +184,6 @@ class CfgMagazines {
         };
     };
     class TrainingMine_Mag: APERSMine_Range_Mag {
-        displayNameShort = ""; // Original text: "Dummy Mine descr. short" which is useless
         GVAR(SetupObject) = "ACE_Explosives_Place_TrainingMine";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
