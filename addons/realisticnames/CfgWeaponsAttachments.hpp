@@ -1,7 +1,5 @@
-//attachments
-
+// Attachments
 class ItemCore;
-
 class acc_flashlight: ItemCore {
     displayName = CSTRING(flashlight_Name);
 };
