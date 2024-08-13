@@ -1,10 +1,10 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Initializes visual effects of medical.
  *
  * Arguments:
- * 0: Just Pain Effects <BOOL>
+ * 0: Update pain and low blood volume effects only <BOOL>
  *
  * Return Value:
  * None
@@ -15,9 +15,9 @@
  * Public: No
  */
 
-params [["_justPain", false]];
+params [["_updateOnly", false]];
 
-TRACE_1("initEffects",_justPain);
+TRACE_1("initEffects",_updateOnly);
 
 private _fnc_createEffect = {
     params ["_type", "_layer", "_default"];
@@ -33,7 +33,7 @@ private _fnc_createEffect = {
 // - Pain ---------------------------------------------------------------------
 if (!isNil QGVAR(ppPain)) then {
     TRACE_1("delete pain",GVAR(ppPain));
-    ppEffectDestroy GVAR(ppPain)
+    if (GVAR(ppPain) != -1) then { ppEffectDestroy GVAR(ppPain); };
 };
 switch (GVAR(painEffectType)) do {
     case FX_PAIN_WHITE_FLASH: {
@@ -57,6 +57,7 @@ switch (GVAR(painEffectType)) do {
             [0, 0, false]
         ] call _fnc_createEffect;
     };
+    default { GVAR(ppPain) = -1; };
 };
 // Base blur on high pain
 if (isNil QGVAR(ppPainBlur)) then {
@@ -68,7 +69,34 @@ if (isNil QGVAR(ppPainBlur)) then {
 };
 
 TRACE_1("created pain",GVAR(ppPain));
-if (_justPain) exitWith {};
+
+// - Blood volume -------------------------------------------------------------
+private _ppBloodVolumeSettings = [
+    "ColorCorrections",
+    13503,
+    [1, 1, 0,  [0, 0, 0, 0],  [1, 1, 1, 1],  [0.2, 0.2, 0.2, 0]]
+];
+GVAR(showBloodVolumeIcon) = false;
+
+if (!isNil QGVAR(ppBloodVolume)) then {
+    TRACE_1("delete blood volume",GVAR(ppBloodVolume));
+    ppEffectDestroy GVAR(ppBloodVolume);
+    GVAR(ppBloodVolume) = nil;
+};
+switch (GVAR(bloodVolumeEffectType)) do {
+    case FX_BLOODVOLUME_COLOR_CORRECTION: {
+        GVAR(ppBloodVolume) = _ppBloodVolumeSettings call _fnc_createEffect;
+    };
+    case FX_BLOODVOLUME_ICON: {
+        GVAR(showBloodVolumeIcon) = true;
+    };
+    case FX_BLOODVOLUME_BOTH: {
+        GVAR(showBloodVolumeIcon) = true;
+        GVAR(ppBloodVolume) = _ppBloodVolumeSettings call _fnc_createEffect;
+    };
+};
+
+if (_updateOnly) exitWith {};
 
 // - Unconscious --------------------------------------------------------------
 GVAR(ppUnconsciousBlur) = [
@@ -81,14 +109,6 @@ GVAR(ppUnconsciousBlackout) = [
     "ColorCorrections",
     13500,
     [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
-] call _fnc_createEffect;
-
-
-// - Blood volume -------------------------------------------------------------
-GVAR(ppBloodVolume) = [
-    "ColorCorrections",
-    13503,
-    [1, 1, 0,  [0, 0, 0, 0],  [1, 1, 1, 1],  [0.2, 0.2, 0.2, 0]]
 ] call _fnc_createEffect;
 
 // - Incapacitation -----------------------------------------------------------

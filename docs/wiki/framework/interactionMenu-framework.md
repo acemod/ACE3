@@ -40,21 +40,29 @@ class CfgVehicles {
                 exceptions[] = {};
                 statement = "_player switchMove 'TestDance'";
                 icon = "\z\dance.paa";
+            };
+        };
+    };
+};
 ```
 
-Config Name | Type | Description
----------- | ----------- | -------------------
-`displayName` | String | Text shown to user
-`condition` | String (of code) | Condition to show the action
-`statement` | String (of code) | Statement run when selected
-`icon` | String (file path) | Icon shown (OPTIONAL)
-`exceptions` | Array (of strings) | Exceptions to `canInteractWith` conditions (e.g. `"notOnMap"`) (OPTIONAL)
-`insertChildren` | String (of code) | Code to return sub actions (OPTIONAL)
-`modifierFunction` | String (of code) | Code to modify this action (OPTIONAL)
-`runOnHover` | Number or String | (1=true) OR Condition code - Will run the statement on hover (OPTIONAL)
-`distance` | Number | External Base Actions Only, Max distance player can be from action point
-`position` | String (of code) | External Base Actions Only, Code to return a position in model cords (priority over `selection`)
-`selection` | String | External Base Actions Only, A memory point for `selectionPosition`
+| Config Name | Type | Description |
+| ---------- | ----------- | ------------------- |
+| `displayName` | String | Text shown to user |
+| `condition` | String (of code) | Condition to show the action |
+| `statement` | String (of code) | Statement run when selected |
+| `icon` | String (file path) | Icon shown (OPTIONAL) |
+| `exceptions` | Array (of strings) | Exceptions to `canInteractWith` conditions (e.g. `"notOnMap"`) (OPTIONAL) |
+| `insertChildren` | String (of code) | Code to return sub actions (OPTIONAL) |
+| `modifierFunction` | String (of code) | Code to modify this action (OPTIONAL) |
+| `runOnHover` | Number or String | (1=true) OR Condition code - Will run the statement on hover (OPTIONAL) |
+| `distance` | Number | External Base Actions Only, Max distance player can be from action point |
+| `position` | String (of code) | External Base Actions Only, Code to return a position in model cords (priority over `selection`) |
+| `selection` | String | External Base Actions Only, A memory point for `selectionPosition` |
+| `doNotCheckLOS` | Number | (1=true) - Ignores blocked LOS to the interaction node even when beyond 1.2m |
+| `showDisabled` | Number | Currently has no effect |
+| `enableInside` | Number | Currently has no effect |
+| `canCollapse` | Number | Currently has no effect |
 
 Actions can be inserted anywhere on the config tree, e.g. hearing's earplugs is a sub action of `ACE_Equipment`:
 
@@ -62,8 +70,30 @@ Actions can be inserted anywhere on the config tree, e.g. hearing's earplugs is 
 class CAManBase: Man {
     class ACE_SelfActions {
         class ACE_Equipment {
-            class ACE_PutInEarplugs {
+            class ACE_PutInEarplugs {};
+        };
+    };
+};
 ```
+
+Interaction exceptions are defined by several components:
+
+| Component | Exception | Description |
+| ---------- | ----------- | ------------------- |
+| `captives` | `"isNotEscorting"` | Can interact while escorting a captive |
+|  | `"isNotHandcuffed"` | Can interact while handcuffed |
+|  | `"isNotSurrendering"` | Can interact while surrendering |
+| `common` | `"isNotDead"` | Can interact while dead |
+|  | `"notOnMap"` | Can interact while in Map |
+|  | `"isNotInside"` | Can interact while inside a vehicle |
+|  | `"isNotInZeus"` | Can interact while in the zeus interface |
+|  | `"isNotUnconscious"` | Can interact while unconscious |
+| `dragging` | `"isNotDragging"` | Can interact while dragging |
+|  | `"isNotCarrying"` | Can interact while carrying |
+| `interaction` | `"isNotSwimming"` | Can interact while swimming/diving |
+|  | `"isNotOnLadder"` | Can interact while climbing a ladder |
+| `refuel` | `"isNotRefueling"` | Can interact while carrying refueling nozzle |
+| `sitting` | `"isNotSitting"` | Can interact while sitting in a chair |
 
 ## 3. Adding actions via scripts
 
@@ -74,7 +104,7 @@ Important: `ace_common_fnc_canInteractWith` is not automatically checked and nee
 
 `ace_interact_menu_fnc_createAction`
 
-```cpp
+```sqf
 /*
  * Argument:
  * 0: Action name <STRING>
@@ -95,7 +125,7 @@ Important: `ace_common_fnc_canInteractWith` is not automatically checked and nee
 
 `ace_interact_menu_fnc_addActionToClass`
 
-```cpp
+```sqf
 /*
  * Argument:
  * 0: TypeOf of the class <STRING>
@@ -103,6 +133,7 @@ Important: `ace_common_fnc_canInteractWith` is not automatically checked and nee
  * 2: Parent path of the new action <ARRAY>
  * 3: Action <ARRAY>
  * 4: Use Inheritance (Default: False) <BOOL><OPTIONAL>
+ * 5: Classes excluded from inheritance (children included) (Default: []) <ARRAY><OPTIONAL>
  */
 ```
 By default this function will not use inheritance, so actions will only be added to the specific class.
@@ -111,7 +142,7 @@ By default this function will not use inheritance, so actions will only be added
 
 `ace_interact_menu_fnc_addActionToObject`
 
-```cpp
+```sqf
 /*
  * Argument:
  * 0: Object the action should be assigned to <OBJECT>
@@ -125,7 +156,7 @@ By default this function will not use inheritance, so actions will only be added
 
 `ace_interact_menu_fnc_addActionToZeus`
 
-```cpp
+```sqf
 /*
  * Argument:
  * 0: Parent path of the new action <ARRAY> (Example: `["ACE_ZeusActions"]`)
@@ -137,14 +168,14 @@ By default this function will not use inheritance, so actions will only be added
 
 External:
 
-```cpp
+```sqf
 _action = ["VulcanPinch","Vulcan Pinch","",{_target setDamage 1;},{true},{},[parameters], [0,0,0], 100] call ace_interact_menu_fnc_createAction;
 [cursorTarget, 0, ["ACE_TapShoulderRight"], _action] call ace_interact_menu_fnc_addActionToObject;
 ```
 
 Self:
 
-```cpp
+```sqf
 _condition = {
     (!pabst_radioFinder_on) && {(backpack _player) in pabst_radioFinder_backpacks} && {[_player, _target, []] call ace_common_fnc_canInteractWith}
 };
@@ -157,10 +188,14 @@ _action = ["Open RDF","Radio Direction Finder","pabst\RDF.jpg",_statement,_condi
 
 Using `addActionToClass` inheritance:
 
-```cpp
+```sqf
 // Adds action to check fuel levels for all land vehicles
 _action = ["CheckFuel", "Check Fuel", "", {hint format ["Fuel: %1", fuel _target]}, {true}] call ace_interact_menu_fnc_createAction;
 ["LandVehicle", 0, ["ACE_MainActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
+
+// Same as above, but children of "MRAP_01_Base" will not have the action
+_action = ["CheckFuel", "Check Fuel", "", {hint format ["Fuel: %1", fuel _target]}, {true}] call ace_interact_menu_fnc_createAction;
+["LandVehicle", 0, ["ACE_MainActions"], _action, true, ["MRAP_01_Base"]] call ace_interact_menu_fnc_addActionToClass;
 
 // Adds action to check external fuel levels on tanks.  Will be a sub action of the previous action.
 _action = ["CheckExtTank","Check External Tank","",{hint format ["Ext Tank: %1", 5]},{true}] call ace_interact_menu_fnc_createAction;
@@ -169,7 +204,7 @@ _action = ["CheckExtTank","Check External Tank","",{hint format ["Ext Tank: %1",
 
 Zeus:
 
-```cpp
+```sqf
 _statement = {
     playSound3D ["alarm.ogg", theBase]
 };
@@ -185,7 +220,7 @@ This adds an interaction to a unit that allows passing items that the player is 
 - The parent action's display name is modified based on the item count.
 - When hovering on the action, a hint text is sent to the target.
 
-```cpp
+```sqf
 _condition = {
     true
 };
@@ -227,13 +262,13 @@ _action = ["GiveItems", "?","",_statement,_condition,_insertChildren,[123],"",4,
 CBA event `ace_interact_menu_newControllableObject` fires only once the first time the player controls a new object (new man, vehicle or controlled UAV)
 This is the ideal way to add self interaction actions, as adding them via `addActionToClass` will force self interaction actions to be compiled for classes that may never be used.
 
-```cpp
+```sqf
 // Example: Add radio self-action to all civilian cars
 ["ace_interact_menu_newControllableObject", {
     params ["_type"]; // string of the object's classname
     if (!(_type isKindOf "Car")) exitWith {};
     if ((getNumber (configFile >> "CfgVehicles" >> _type >> "side")) != 3) exitWith {};
-    
+
     private _action = ["playRadio","Play Radio","",{playMusic "NeverGonnaGiveYouUp"},{true}] call ace_interact_menu_fnc_createAction;
     [_type, 1, ["ACE_SelfActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 }] call CBA_fnc_addEventHandler;

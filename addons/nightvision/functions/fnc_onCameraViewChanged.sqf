@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Disables/re-enables NVGs when the player starts/stops aiming down his sight.
@@ -20,10 +20,10 @@ params ["_unit", "_cameraView"];
 TRACE_2("onCameraViewChanged",_unit,_cameraView);
 
 // Refresh goggle effect (e.g. switching to vehicle's NVG)
-[] call FUNC(refreshGoggleType);
+call FUNC(refreshGoggleType);
 
 if (GVAR(disableNVGsWithSights) && {(hmd _unit) != ""}) then {
-    if ((vehicle _unit == _unit)
+    if ((isNull objectParent _unit)
         || {isTurnedOut _unit}
         || {!([_unit] call EFUNC(common,hasHatch))
             && {[_unit] call EFUNC(common,getTurretIndex) in ([vehicle _unit] call EFUNC(common,getTurretsFFV))}

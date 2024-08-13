@@ -4,7 +4,6 @@ class CfgMagazines {
         GVAR(Placeable) = 1;
         useAction = 0;
         GVAR(SetupObject) = "ACE_Explosives_Place_ATMine"; // CfgVehicle class for setup object.
-        GVAR(DelayTime) = 2.5;
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -50,7 +49,6 @@ class CfgMagazines {
         GVAR(Placeable) = 1;
         useAction = 0;
         GVAR(SetupObject) = "ACE_Explosives_Place_Claymore";
-        GVAR(DelayTime) = 1.5;
         class ACE_Triggers {
             SupportedTriggers[] = {"Command", "MK16_Transmitter"};
             class Command {
@@ -64,7 +62,6 @@ class CfgMagazines {
         GVAR(Placeable) = 1;
         useAction = 0;
         GVAR(SetupObject) = "ACE_Explosives_Place_SatchelCharge";
-        GVAR(DelayTime) = 1;
         class ACE_Triggers {
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
             class Timer {
@@ -86,13 +83,13 @@ class CfgMagazines {
         GVAR(SetupObject) = "ACE_Explosives_Place_SLAM";
         class ACE_Triggers {
             SupportedTriggers[] = {"IRSensor", "PressurePlate", "Timer", "Command", "MK16_Transmitter"};
-            class PressurePlate{
+            class PressurePlate {
                 displayName = CSTRING(SLAME_Magnetic);
                 digDistance = 0;
                 ammo = "ACE_SLAMDirectionalMine_Magnetic_Ammo";
                 pitch = 90;
             };
-            class IRSensor{
+            class IRSensor {
                 displayName = CSTRING(SLAME_IRSensor);
             };
             class Timer {

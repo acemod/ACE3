@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * The ace_spectator respawn template, compatible with types 1,2,3,4 & 5
  *
  * Handles killed and respawned events as per BI's respawn framework:

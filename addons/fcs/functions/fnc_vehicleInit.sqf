@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, commy2
  * Checks if a vehicle is equipped with an FCS and if so, adds the fired event handler. Execute on server.
@@ -18,14 +18,12 @@
 params ["_vehicle"];
 
 {
-    private _turretConfig = [configFile >> "CfgVehicles" >> typeOf _vehicle, _x] call EFUNC(common,getTurretConfigPath);
+    private _turretConfig = [configOf _vehicle, _x] call EFUNC(common,getTurretConfigPath);
 
     if (getNumber (_turretConfig >> QGVAR(Enabled)) == 1) then {
-        if (missionNamespace getVariable [QGVAR(needToAddFiredEH), true]) then {
-            ["ace_firedPlayerVehicle", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
-            ["ace_firedPlayerVehicleNonLocal", LINKFUNC(firedEH)] call CBA_fnc_addEventHandler;
-            GVAR(needToAddFiredEH) = false;
-            TRACE_1("Registered fired event handlers for all vehicles",GVAR(needToAddFiredEH));
+        if (isNil QGVAR(jipID)) then {
+            GVAR(jipID) = [QGVAR(addFiredEH), [], QGVAR(addFiredEH)] call CBA_fnc_globalEventJIP;
+            TRACE_1("Adding fired EH for players",GVAR(jipID));
         };
 
         _vehicle setVariable [format ["%1_%2", QGVAR(Distance),  _x],  0, true];
@@ -48,5 +46,4 @@ params ["_vehicle"];
             _vehicle setVariable [format ["%1_%2", QGVAR(ViewDiff), _x],         0, true];
         };
     };
-    false
-} count allTurrets _vehicle;
+} forEach allTurrets _vehicle;

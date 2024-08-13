@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: bux578
  * Switches to a unit close to a clicked map position
@@ -18,8 +18,7 @@
  * Public: No
  */
 
-params ["_faction", "_pos"];
-_faction params ["", "_sides"];
+params ["_sides", "_pos"];
 
 private _nearestObjects = nearestObjects [_pos, ["Man"], 15];
 

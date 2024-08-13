@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Takes a magazine from an ammo truck.
@@ -36,8 +36,8 @@ if (_vehicle == _unit) exitWith {
     [_unit, _magazineClass, _rounds] call EFUNC(csw,reload_handleReturnAmmo);
 };
 
-[_unit, "forceWalk", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 private _dummy = [_unit, _magazineClass] call FUNC(createDummy);
 [_dummy, _unit] call FUNC(pickUpAmmo);
 

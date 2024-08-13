@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Set structural damage of an object without modifying the individual hit points.
@@ -18,9 +18,7 @@
 
 params [["_unit", objNull, [objNull]], ["_damage", 0, [0]]];
 
-if (!local _unit) exitWith {
-    ERROR("Unit not local or null");
-};
+if (!local _unit) exitWith { ERROR_2("setStructuralDamage: Unit not local or null [%1:%2]",_unit,typeOf _unit); };
 
 private _hitPointDamages = getAllHitPointsDamage _unit param [2, []];
 

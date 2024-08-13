@@ -3,8 +3,8 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
 
     class Turrets: Turrets {
         class MainTurret: MainTurret {
-            weapons[] = {"ACE_gatling_20mm_Comanche", "missiles_DAGR", "missiles_ASRAAM"};
-            magazines[] = {"ACE_500Rnd_20mm_shells_Comanche", "4Rnd_AAA_missiles", "24Rnd_PG_missiles"};
+            weapons[] = {"ACE_gatling_20mm_Comanche", "missiles_DAGR", "missiles_ASRAAM", "Laserdesignator_mounted"};
+            magazines[] = {"ACE_500Rnd_20mm_shells_Comanche", "4Rnd_AAA_missiles", "24Rnd_PG_missiles", "Laserbatteries"};
             turretInfoType = "Rsc_ACE_Helo_UI_Turret";
 
 
@@ -119,9 +119,8 @@ class Heli_Attack_01_base_F: Helicopter_Base_F {
 class Heli_Attack_01_dynamicLoadout_base_F: Heli_Attack_01_base_F {
     class Turrets: Turrets {
         class MainTurret: MainTurret {
-            weapons[] = {"ACE_gatling_20mm_Comanche"};
-            magazines[] = {"ACE_500Rnd_20mm_shells_Comanche"};
+            weapons[] = {"ACE_gatling_20mm_Comanche", "Laserdesignator_mounted"};
+            magazines[] = {"ACE_500Rnd_20mm_shells_Comanche", "Laserbatteries"};
         };
     };
 };
-

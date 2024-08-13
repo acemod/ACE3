@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: joko // Jonas, Emperias, Zigomarvin
  * Detect if the player and play the Gesture Animation

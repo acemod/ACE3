@@ -35,9 +35,11 @@ PREP(seekerType_SALH);
 PREP(seekerType_Optic);
 PREP(seekerType_SACLOS);
 PREP(seekerType_MCLOS);
+PREP(seekerType_ARH);
 
 // Attack Profiles OnFired
 PREP(wire_onFired);
 
 // Seeker OnFired
 PREP(SACLOS_onFired);
+PREP(ahr_onFired);

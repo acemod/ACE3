@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Waypoint function for the fast rope waypoint.
@@ -11,7 +11,7 @@
  * true <BOOL>
  *
  * Example:
- * [_group, [6560, 12390, 0]] call ace_fastroping_fnc_deployAIWayoint
+ * [_group, [6560, 12390, 0]] call ace_fastroping_fnc_deployAIWaypoint
  *
  * Public: No
  */
@@ -24,7 +24,7 @@ private _speedMode = speedMode _group;
 // - Approach -----------------------------------------------------------------
 if (_vehicle distance2D _position > 50) then {
     _group setSpeedMode "LIMITED";
-    _vehicle flyInHeight 20;
+    _vehicle flyInHeight [20, true];
     _commander doMove _position;
     waitUntil {_vehicle distance2D _position < 50};
     waitUntil {vectorMagnitude (velocity _vehicle) < 3};
@@ -33,7 +33,7 @@ if (_vehicle distance2D _position > 50) then {
 
 // - Deployment ---------------------------------------------------------------
 [_vehicle] call FUNC(deployAI);
-waitUntil {!((_vehicle getVariable [QGVAR(deployedRopes), []]) isEqualTo [])};
+waitUntil {(_vehicle getVariable [QGVAR(deployedRopes), []]) isNotEqualTo []};
 waitUntil {(_vehicle getVariable [QGVAR(deployedRopes), []]) isEqualTo []};
 _group setSpeedMode _speedMode;
 

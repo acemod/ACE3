@@ -1,18 +1,24 @@
 
 class Extended_PreStart_EventHandlers {
     class ADDON {
-        init = QUOTE(call COMPILE_FILE(XEH_preStart));
+        init = QUOTE(call COMPILE_SCRIPT(XEH_preStart));
     };
 };
 
 class Extended_PreInit_EventHandlers {
     class ADDON {
-        init = QUOTE(call COMPILE_FILE(XEH_preInit));
+        init = QUOTE(call COMPILE_SCRIPT(XEH_preInit));
     };
 };
 
 class Extended_PostInit_EventHandlers {
     class ADDON {
-        clientInit = QUOTE(call COMPILE_FILE(XEH_clientInit));
+        clientInit = QUOTE(call COMPILE_SCRIPT(XEH_clientInit));
+    };
+};
+
+class Extended_DisplayUnload_EventHandlers {
+    class RscDisplayOptionsVideo {
+        ADDON = QUOTE([false] call FUNC(adaptViewDistance));
     };
 };

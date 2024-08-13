@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Compile the action menu from config for an object's class
@@ -17,22 +17,22 @@
 
 params ["_target"];
 
-private _objectType = _target;
-if (_target isEqualType objNull) then {
-    _objectType = typeOf _target;
+private _objectType = if (_target isEqualType objNull) then {
+    typeOf _target
+} else {
+    _target call EFUNC(common,getConfigName)
 };
-private _namespace = GVAR(ActNamespace);
 
 // Exit if the action menu is already compiled for this class
-if !(isNil {_namespace getVariable _objectType}) exitWith {};
+if (_objectType in GVAR(ActNamespace)) exitWith {};
 
 if (_objectType isKindOf "VirtualMan_F") exitWith { // these have config: isPlayableLogic = 1
     TRACE_1("skipping playable logic",_objectType);
-    _namespace setVariable [_objectType, []];
+    GVAR(ActNamespace) set [_objectType, []];
 };
 
 if ((_objectType isKindOf "CAManBase") && {!isNil QGVAR(cacheManActions)}) exitWith {
-    _namespace setVariable [_objectType, +GVAR(cacheManActions)]; // copy
+    GVAR(ActNamespace) set [_objectType, +GVAR(cacheManActions)]; // copy
 };
 
 private _recurseFnc = {
@@ -41,11 +41,11 @@ private _recurseFnc = {
 
     {
         private _entryCfg = _x;
-        if(isClass _entryCfg) then {
+        if (isClass _entryCfg) then {
             private _displayName = getText (_entryCfg >> "displayName");
             private _distance = _parentDistance;
             if (isNumber (_entryCfg >> "distance")) then {_distance = getNumber (_entryCfg >> "distance");};
-            // if (_distance < _parentDistance) then {WARNING_3("[%1] distance %2 less than parent %3", configName _entryCfg, _distance, _parentDistance);};
+            // if (_distance < _parentDistance) then {WARNING_3("[%1] distance %2 less than parent %3",configName _entryCfg,_distance,_parentDistance);};
             private _icon = if (isArray (_entryCfg >> "icon")) then {
                 getArray (_entryCfg >> "icon");
             } else {
@@ -69,11 +69,14 @@ private _recurseFnc = {
             };
 
             private _condition = getText (_entryCfg >> "condition");
-            if (_condition == "") then {_condition = "true"};
 
-            // Add canInteract (including exceptions) and canInteractWith to condition
-            if ((configName _entryCfg) != "ACE_MainActions") then {
-                _condition = _condition + format [QUOTE( && {[ARR_3(ACE_player, _target, %1)] call EFUNC(common,canInteractWith)} ), getArray (_entryCfg >> "exceptions")];
+            if (configName _entryCfg == "ACE_MainActions") then {
+                if (_condition isEqualTo "") then {_condition = "true"};
+            } else {
+                // Add canInteract (including exceptions) and canInteractWith to condition
+                private _canInteractCondition = format [QUOTE([ARR_3(ACE_player,_target,%1)] call EFUNC(common,canInteractWith)),getArray (_entryCfg >> "exceptions")];
+                private _conditionFormatPattern = ["%1 && {%2}", "%2"] select (_condition isEqualTo "" || {_condition == "true"});
+                _condition = format [_conditionFormatPattern, _condition, _canInteractCondition];
             };
 
             private _insertChildren = compile (getText (_entryCfg >> "insertChildren"));
@@ -88,6 +91,7 @@ private _recurseFnc = {
             } else {
                 _runOnHover = (getNumber (_entryCfg >> "runOnHover")) > 0;
             };
+            private _doNotCheckLOS = getNumber (_entryCfg >> "doNotCheckLOS") > 0;
 
             _condition = compile _condition;
             private _children = [_entryCfg, _distance] call _recurseFnc;
@@ -103,15 +107,14 @@ private _recurseFnc = {
                             [],
                             _position,
                             _distance,
-                            [_showDisabled,_enableInside,_canCollapse,_runOnHover, false],
+                            [_showDisabled, _enableInside, _canCollapse, _runOnHover, _doNotCheckLOS],
                             _modifierFunction
                         ],
                         _children
                     ];
             _actions pushBack _entry;
         };
-        nil
-    } count (configProperties [_actionsCfg, "isClass _x", true]);
+    } forEach (configProperties [_actionsCfg, "isClass _x", true]);
     _actions
 };
 
@@ -136,7 +139,7 @@ if (_objectType isKindOf "CAManBase") then {
     };
 };
 
-_namespace setVariable [_objectType, _actions];
+GVAR(ActNamespace) set [_objectType, _actions];
 
 /*
 [

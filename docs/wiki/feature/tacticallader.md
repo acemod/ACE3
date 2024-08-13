@@ -1,6 +1,7 @@
 ---
 layout: wiki
 title: Tactical Ladder
+component: tacticalladder
 description: Adds a deployable ladder with adjustable height that you can transport on your back.
 group: feature
 category: equipment
@@ -22,7 +23,3 @@ Adds a deployable ladder with adjustable height that you can transport on your b
 - Self interact <kbd>Ctrl</kbd>+<kbd>⊞&nbsp;Win</kbd> (ACE3 default).
 - Select `Deploy ladder`.
 - You can adjust it's position and height by interacting with it <kbd>⊞&nbsp;Win</kbd> (ACE3 default) and following the instructions on screen.
-
-## 3. Dependencies
-
-{% include dependencies_list.md component="tacticalladder" %}

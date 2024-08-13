@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Handle interactions key down
@@ -15,13 +15,29 @@
  * Public: No
  */
 
+#include "\a3\ui_f\hpp\defineResincl.inc"
+
 params ["_menuType"];
 
 if (GVAR(openedMenuType) == _menuType) exitWith {true};
 
+// Conditions: Don't open when editing a text box
+private _focusedTextIndex = allDisplays findIf {(ctrlType (focusedCtrl _x)) == CT_EDIT};
+private _isTextEditing = _focusedTextIndex != -1;
+
+// Map's controls remain open and focused despite map not being visible, workaround
+if (_isTextEditing) then {
+    if (ctrlIDD (allDisplays select _focusedTextIndex) == IDD_MAIN_MAP) then {
+        _isTextEditing = visibleMap;
+    };
+};
+
 // Conditions: canInteract (these don't apply to zeus)
-if ((isNull curatorCamera) && {
-    !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith))
+if (
+    _isTextEditing ||
+    {(isNull curatorCamera) && {
+        !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotHandcuffed", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith))
+    }
 }) exitWith {false};
 
 while {dialog} do {
@@ -36,6 +52,12 @@ if (_menuType == 0) then {
     GVAR(keyDownSelfAction) = true;
 };
 GVAR(keyDownTime) = diag_tickTime;
+
+// Raise MenuClosed event whenever one type is replaced with another, because KeyUp code is not guaranteed.
+if (GVAR(openedMenuType) != -1) then {
+    ["ace_interactMenuClosed", [GVAR(openedMenuType)]] call CBA_fnc_localEvent;
+};
+
 GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];
@@ -94,7 +116,7 @@ GVAR(selfMenuOffset) = (AGLtoASL (positionCameraToWorld [0, 0, 2])) vectorDiff (
 //Auto expand the first level when self, mounted vehicle or zeus (skips the first animation as there is only one choice)
 if (GVAR(openedMenuType) == 0) then {
     if (isNull curatorCamera) then {
-        if (!(isNull (ACE_controlledUAV select 0))) then {
+        if !(isNull (ACE_controlledUAV select 0)) then {
             GVAR(menuDepthPath) = [["ACE_SelfActions", (ACE_controlledUAV select 0)]];
             GVAR(expanded) = true;
             GVAR(expandedTime) = diag_tickTime;

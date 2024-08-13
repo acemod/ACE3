@@ -72,49 +72,49 @@ class CfgVehicles {
                     displayName = CSTRING(TeamManagement);
                     condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {GVAR(EnableTeamManagement)});
                     statement = "";
+                    modifierFunction = QUOTE([ARR_3(assignedTeam _target,'PATHTOF(UI\team\team_management_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
-                    icon = QPATHTOF(UI\team\team_management_ca.paa);
 
                     class ACE_AssignTeamRed {
                         displayName = CSTRING(AssignTeamRed);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
-                        statement = QUOTE([ARR_2(_target,'RED')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'RED',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
-                        icon = QPATHTOF(UI\team\team_red_ca.paa);
+                        modifierFunction = QUOTE([ARR_3('RED','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                     };
                     class ACE_AssignTeamGreen {
                         displayName = CSTRING(AssignTeamGreen);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
-                        statement = QUOTE([ARR_2(_target,'GREEN')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'GREEN',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
-                        icon = QPATHTOF(UI\team\team_green_ca.paa);
+                        modifierFunction = QUOTE([ARR_3('GREEN','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                     };
                     class ACE_AssignTeamBlue {
                         displayName = CSTRING(AssignTeamBlue);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
-                        statement = QUOTE([ARR_2(_target,'BLUE')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'BLUE',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
-                        icon = QPATHTOF(UI\team\team_blue_ca.paa);
+                        modifierFunction = QUOTE([ARR_3('BLUE','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                     };
                     class ACE_AssignTeamYellow {
                         displayName = CSTRING(AssignTeamYellow);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
-                        statement = QUOTE([ARR_2(_target,'YELLOW')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'YELLOW',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
-                        icon = QPATHTOF(UI\team\team_yellow_ca.paa);
+                        modifierFunction = QUOTE([ARR_3('YELLOW','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                     };
                     class ACE_UnassignTeam {
                         displayName = CSTRING(LeaveTeam);
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'MAIN'});
-                        statement = QUOTE([ARR_2(_target,'MAIN')] call DFUNC(joinTeam));
+                        statement = QUOTE([ARR_3(_target,'MAIN',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
-                        icon = QPATHTOF(UI\team\team_white_ca.paa);
+                        modifierFunction = QUOTE([ARR_3('MAIN','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                     };
                 };
 
@@ -161,6 +161,12 @@ class CfgVehicles {
                     statement = QUOTE(call DFUNC(pullOutBody));
                     exceptions[] = {"isNotSwimming"};
                     icon = "\a3\ui_f\data\IGUI\Cfg\simpleTasks\types\getout_ca.paa";
+                };
+                class GVAR(Gear) {
+                    displayName = "$STR_ACTION_GEAR";
+                    condition = QUOTE(!(lifeState _target in [ARR_2('HEALTHY','INJURED')]) && {isNull objectParent _target});
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
                 };
             };
 
@@ -224,16 +230,16 @@ class CfgVehicles {
                 displayName = CSTRING(TapShoulder);
                 selection = "rightshoulder";
                 distance = 2.0;
-                condition = QUOTE([ARR_2(_player, _target)] call DFUNC(canTapShoulder));
-                statement = QUOTE([ARR_3(_player, _target, 0)] call DFUNC(tapShoulder));
+                condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canTapShoulder));
+                statement = QUOTE([ARR_3(_player,_target,0)] call DFUNC(tapShoulder));
                 exceptions[] = {"isNotSwimming"};
             };
             class ACE_TapShoulderLeft {
                 displayName = CSTRING(TapShoulder);
                 selection = "leftshoulder";
                 distance = 2.0;
-                condition = QUOTE([ARR_2(_player, _target)] call DFUNC(canTapShoulder));
-                statement = QUOTE([ARR_3(_player, _target, 1)] call DFUNC(tapShoulder));
+                condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canTapShoulder));
+                statement = QUOTE([ARR_3(_player,_target,1)] call DFUNC(tapShoulder));
                 exceptions[] = {"isNotSwimming"};
             };
         };
@@ -244,48 +250,48 @@ class CfgVehicles {
                 condition = QUOTE(GVAR(EnableTeamManagement));
                 exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                 statement = "";
+                modifierFunction = QUOTE([ARR_3(assignedTeam _target,'PATHTOF(UI\team\team_management_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                 showDisabled = 1;
-                icon = QPATHTOF(UI\team\team_management_ca.paa);
 
                 class ACE_JoinTeamRed {
                     displayName = CSTRING(JoinTeamRed);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'RED')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'RED',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    icon = QPATHTOF(UI\team\team_red_ca.paa);
+                    modifierFunction = QUOTE([ARR_3('RED','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                 };
                 class ACE_JoinTeamGreen {
                     displayName = CSTRING(JoinTeamGreen);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'GREEN')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'GREEN',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    icon = QPATHTOF(UI\team\team_green_ca.paa);
+                    modifierFunction = QUOTE([ARR_3('GREEN','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                 };
                 class ACE_JoinTeamBlue {
                     displayName = CSTRING(JoinTeamBlue);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'BLUE')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'BLUE',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    icon = QPATHTOF(UI\team\team_blue_ca.paa);
+                    modifierFunction = QUOTE([ARR_3('BLUE','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                 };
                 class ACE_JoinTeamYellow {
                     displayName = CSTRING(JoinTeamYellow);
                     condition = QUOTE(true);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'YELLOW')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'YELLOW',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    icon = QPATHTOF(UI\team\team_yellow_ca.paa);
+                    modifierFunction = QUOTE([ARR_3('YELLOW','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                 };
                 class ACE_LeaveTeam {
                     displayName = CSTRING(LeaveTeam);
                     condition = QUOTE(assignedTeam _player != 'MAIN');
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE([ARR_2(_player,'MAIN')] call DFUNC(joinTeam));
+                    statement = QUOTE([ARR_3(_player,'MAIN',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
-                    icon = QPATHTOF(UI\team\team_white_ca.paa);
+                    modifierFunction = QUOTE([ARR_3('MAIN','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                 };
                 class ACE_BecomeLeader {
                     displayName = CSTRING(BecomeLeader);
@@ -299,9 +305,16 @@ class CfgVehicles {
                     displayName = CSTRING(LeaveGroup);
                     condition = QUOTE(count (units group _player) > 1);
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE(_oldGroup = units group _player; _newGroup = createGroup side _player; [_player] joinSilent _newGroup; {_player reveal _x} forEach _oldGroup;);
+                    statement = QUOTE(_oldGroup = units group _player; _newGroup = createGroup side group _player; [_player] joinSilent _newGroup; {_player reveal _x} forEach _oldGroup;);
                     showDisabled = 1;
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
+                };
+                class ACE_RenameGroup {
+                    displayName = CSTRING(RenameGroup);
+                    condition = QUOTE(_player call FUNC(canRenameGroup));
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    statement = QUOTE(_player call FUNC(renameGroupUI));
+                    showDisabled =1;
                 };
             };
 
@@ -312,6 +325,14 @@ class CfgVehicles {
                 statement = "";
                 showDisabled = 1;
                 icon = "";  // @todo
+
+                class GVAR(weaponAttachments) {
+                    displayName = "$STR_A3_CfgEditorSubcategories_EdSubcat_SideSlot0";
+                    condition = QGVAR(enableWeaponAttachments);
+                    exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
+                    insertChildren = QUOTE(call DFUNC(getWeaponAttachmentsActions));
+                    modifierFunction = QUOTE(_this select 3 set [ARR_2(2,getText (configFile >> 'CfgWeapons' >> currentWeapon (_this select 0) >> 'picture'))];);
+                };
             };
         };
     };
@@ -327,7 +348,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = QUOTE(alive _target);
+                    condition = QUOTE(true);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -350,7 +371,17 @@ class CfgVehicles {
         };
     };
 
-    class Car_F: Car{};
+    class Car_F: Car {};
+    class Offroad_01_base_F: Car_F {
+        class GVAR(anims) {
+            class HideBackpacks {
+                positions[] = {{-1.15, -1.15, -0.2}, {1.1, -1.15, -0.2}, {1.1, -2.5, -0.2}};
+                items[] = {"B_TacticalPack_blk", "B_TacticalPack_blk", "B_Carryall_khk", "B_Carryall_khk"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+            };
+        };
+    };
     class Quadbike_01_base_F: Car_F {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -384,6 +415,49 @@ class CfgVehicles {
         };
     };
 
+    class Wheeled_APC_F;
+    class APC_Wheeled_01_base_F: Wheeled_APC_F {
+        class GVAR(anims) {
+            class showBags {
+                phase = 0;
+                // Rotate interactions with turret rotation
+                positions[] = {
+                    "[0, -1.6, 0] vectorAdd ([[1, -1, 0.1], [0, 0, 1], deg (_target animationPhase 'MainTurret')] call CBA_fnc_vectRotate3D)",
+                    "[0, -1.6, 0] vectorAdd ([[-1, -1, 0.1], [0, 0, 1], deg (_target animationPhase 'MainTurret')] call CBA_fnc_vectRotate3D)"
+                };
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+            };
+        };
+    };
+    class APC_Wheeled_02_base_F: Wheeled_APC_F {
+        class GVAR(anims);
+    };
+    class APC_Wheeled_02_base_v2_F: APC_Wheeled_02_base_F {
+        class GVAR(anims): GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr"};
+                name = "$STR_BACKPACK_CONTAINER_NAME";
+                text = "$STR_BACKPACK_CONTAINER_NAME";
+            };
+        };
+    };
+    class APC_Wheeled_03_base_F: Wheeled_APC_F {
+        class GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+            };
+        };
+    };
+
     class Tank: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
@@ -394,7 +468,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = QUOTE(alive _target);
+                    condition = QUOTE(true);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -411,6 +485,88 @@ class CfgVehicles {
             };
         };
     };
+    class Tank_F;
+    class LT_01_base_F: Tank_F {
+        class GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr"};
+                name = "$STR_BACKPACK_CONTAINER_NAME";
+                text = "$STR_BACKPACK_CONTAINER_NAME";
+            };
+            class showBags2: showBags {
+                selections[] = {"vhc_bags2"};
+            };
+        };
+    };
+
+    class APC_Tracked_01_base_F: Tank_F {
+        class GVAR(anims);
+    };
+    class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {
+        class GVAR(anims): GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selections[] = {"vhc_bags"};
+                positions[] = {"private _pos = _target selectionPosition 'vhc_bags'; _pos set [0, -(_pos select 0)]; _pos"}; // Mirror position to other side of vehicle
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+            };
+        };
+    };
+    class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
+        class GVAR(anims): GVAR(anims) {
+            class showBags: showBags {
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+            };
+        };
+    };
+
+    class APC_Tracked_02_base_F: Tank_F {
+        class GVAR(anims);
+    };
+    class O_APC_Tracked_02_base_F: APC_Tracked_02_base_F {};
+    class O_APC_Tracked_02_cannon_F: O_APC_Tracked_02_base_F {
+        class GVAR(anims): GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+            };
+        };
+    };
+
+    class APC_Tracked_03_base_F: Tank_F {
+        class GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+            };
+        };
+    };
+
+    class MBT_01_base_F: Tank_F {
+        class GVAR(anims);
+    };
+    class B_MBT_01_base_F: MBT_01_base_F {};
+    class B_MBT_01_cannon_F: B_MBT_01_base_F {
+        class GVAR(anims): GVAR(anims) {
+            class showBags {
+                phase = 0;
+                selections[] = {"vhc_bags"};
+                items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+            };
+        };
+    };
 
     class Motorcycle: LandVehicle {
         class ACE_Actions {
@@ -421,7 +577,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = QUOTE(alive _target);
+                    condition = QUOTE(true);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -446,13 +602,13 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
-                position = QUOTE([ARR_2(_target, EGVAR(interact_menu,cameraPosASL))] call DFUNC(getVehiclePosComplex));
+                position = QUOTE([ARR_2(_target,EGVAR(interact_menu,cameraPosASL))] call DFUNC(getVehiclePosComplex));
                 selection = "";
                 distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = QUOTE(alive _target);
+                    condition = QUOTE(true);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -474,13 +630,13 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_MainActions {
                 displayName = CSTRING(MainAction);
-                position = QUOTE([ARR_2(_target, EGVAR(interact_menu,cameraPosASL))] call DFUNC(getVehiclePosComplex));
+                position = QUOTE([ARR_2(_target,EGVAR(interact_menu,cameraPosASL))] call DFUNC(getVehiclePosComplex));
                 selection = "";
                 distance = 4;
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = QUOTE(alive _target);
+                    condition = QUOTE(true);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -528,7 +684,7 @@ class CfgVehicles {
                 };
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = QUOTE(alive _target);
+                    condition = QUOTE(true);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -560,7 +716,7 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_Passengers {
                     displayName = CSTRING(Passengers);
-                    condition = QUOTE(alive _target);
+                    condition = QUOTE(true);
                     statement = "";
                     exceptions[] = {"isNotSwimming"};
                     insertChildren = QUOTE(_this call DFUNC(addPassengersActions));
@@ -620,14 +776,35 @@ class CfgVehicles {
                 condition = "true";
                 class ACE_OpenBox {
                     displayName = CSTRING(OpenBox);
-                    condition = QUOTE((alive _target) && {(getNumber (configFile >> 'CfgVehicles' >> (typeOf _target) >> 'disableInventory')) == 0});
-                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)), _target)]);
+                    condition = QUOTE(alive _target && {!lockedInventory _target} && {getNumber (configOf _target >> 'disableInventory') == 0});
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
                     showDisabled = 0;
                 };
             };
         };
         class ACE_SelfActions {};
     };
+
+    class Items_base_F;
+    class PlasticCase_01_base_F: Items_base_F {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                selection = "";
+                distance = 2;
+                condition = "true";
+                class ACE_OpenBox {
+                    displayName = CSTRING(OpenBox);
+                    condition = QUOTE(alive _target && {!lockedInventory _target} && {getNumber (configOf _target >> 'disableInventory') == 0});
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    showDisabled = 0;
+                };
+            };
+        };
+        class ACE_SelfActions {};
+    };
+
+
     class Slingload_base_F: ReammoBox_F {};
     class Slingload_01_Base_F: Slingload_base_F {
         class ACE_Actions: ACE_Actions {
@@ -655,6 +832,62 @@ class CfgVehicles {
         };
 
         class ACE_SelfActions {};
+    };
+
+    // weapons dropped from dead body
+    class WeaponHolderSimulated: ThingX {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                distance = 3;
+                position = QUOTE(_target worldToModel ASLToAGL getPosASL _target);
+
+                class GVAR(Gear) {
+                    displayName = "$STR_ACTION_GEAR";
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
+                };
+            };
+        };
+    };
+    // Don't enable for scripted
+    class WeaponHolderSimulated_Scripted: WeaponHolderSimulated {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                delete GVAR(Gear);
+            };
+        };
+    };
+
+    class ReammoBox;
+    // dropped weapons/gear
+    class WeaponHolder: ReammoBox {
+        class ACE_Actions {
+            class ACE_MainActions {
+                displayName = CSTRING(MainAction);
+                distance = 3;
+                position = QUOTE(_target worldToModel ASLToAGL getPosASL _target);
+
+                class GVAR(Gear) {
+                    displayName = "$STR_ACTION_GEAR";
+                    statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
+                    icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
+                };
+            };
+        };
+    };
+    // Don't enable for scripted
+    class GroundWeaponHolder: WeaponHolder {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions;
+        };
+    };
+    class GroundWeaponHolder_Scripted: GroundWeaponHolder {
+        class ACE_Actions: ACE_Actions {
+            class ACE_MainActions: ACE_MainActions {
+                delete GVAR(Gear);
+            };
+        };
     };
 
     class Lamps_base_F;
@@ -717,6 +950,7 @@ class CfgVehicles {
                     displayName = CSTRING(TurnOn);
                     icon = "\A3\Ui_f\data\IGUI\Cfg\VehicleToggles\LightsIconOn_ca.paa";
                     condition = QUOTE(alive _target);
+                    #pragma hemtt suppress pw3_padded_arg
                     statement = QUOTE(\
                         private _position = getPosATL _target;\
                         private _vectorDirAndUp = [ARR_2(vectorDir _target,vectorUp _target)];\

@@ -1,11 +1,11 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
- * Check if unit can drop the object.
+ * Checks if unit can drop the dragged object.
  *
  * Arguments:
- * 0: Unit that currently drags a object <OBJECT>
- * 1: Object that is dragged <OBJECT>
+ * 0: Unit that is currently dragging an object <OBJECT>
+ * 1: Object being dragged <OBJECT>
  *
  * Return Value:
  * Can the unit drop the object? <BOOL>

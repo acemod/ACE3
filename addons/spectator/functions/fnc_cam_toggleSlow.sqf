@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, SilentSpike
+ * Author: Nelson Duarte, kymckay
  * Function used to set camera slow speed mode
  *
  * Arguments:
@@ -17,7 +17,7 @@
 
 params ["_slowSpeed"];
 
-if !(GVAR(camSlow) isEqualTo _slowSpeed) then {
+if (GVAR(camSlow) isNotEqualTo _slowSpeed) then {
     private _camera = GVAR(camera);
 
     if (GVAR(camMode) == MODE_FREE) then {

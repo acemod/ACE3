@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Get the variable default value
@@ -19,7 +19,7 @@ params ["_varName"];
 
 private _variableDefinition = _varName call FUNC(getDefinedVariableInfo);
 
-if !(_variableDefinition isEqualTo []) exitWith {
+if (_variableDefinition isNotEqualTo []) exitWith {
     _variableDefinition select 1;
 };
 

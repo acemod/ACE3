@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: eRazeri, esteldunedain, PabstMirror
  * Attach an item to the unit
@@ -26,10 +26,12 @@ if ((_itemClassname == "") || {(!_silentScripted) && {!(_this call FUNC(canAttac
 
 private _itemVehClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_Attachable");
 private _onAttachText = getText (configFile >> "CfgWeapons" >> _itemClassname >> "displayName");
+private _itemModelOrientation = getArray (configFile >> "CfgWeapons" >> _itemClassname >> QGVAR(orientation));
 
 if (_itemVehClass == "") then {
     _itemVehClass = getText (configFile >> "CfgMagazines" >> _itemClassname >> "ACE_Attachable");
     _onAttachText = getText (configFile >> "CfgMagazines" >> _itemClassname >> "displayName");
+    _itemModelOrientation = getArray (configFile >> "CfgWeapons" >> _itemClassname >> QGVAR(orientation));
 };
 
 if (_itemVehClass == "") exitWith {ERROR("no ACE_Attachable for Item");};
@@ -38,17 +40,18 @@ private _onAttachText = format [localize LSTRING(Item_Attached), _onAttachText];
 
 if (_unit == _attachToVehicle) then {  //Self Attachment
     private _attachedItem = _itemVehClass createVehicle [0,0,0];
-    _attachedItem attachTo [_unit, [0.05, -0.09, 0.1], "leftshoulder"];
+    _attachedItem attachTo [_unit, [0.07, -0.06, 0.085], "leftshoulder", true];
     if (!_silentScripted) then {
         _unit removeItem _itemClassname;  // Remove item
         [_onAttachText, 2] call EFUNC(common,displayTextStructured);
     };
     _unit setVariable [QGVAR(attached), [[_attachedItem, _itemClassname]], true];
+    [QGVAR(attached), [_attachedItem, _itemClassname, _silentScripted]] call CBA_fnc_localEvent;
 } else {
     GVAR(placeAction) = PLACE_WAITING;
 
-    [_unit, "forceWalk", "ACE_Attach", true] call EFUNC(common,statusEffect_set);
-    [_unit, "blockThrow", "ACE_Attach", true] call EFUNC(common,statusEffect_set);
+    [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+    [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
     [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call CBA_fnc_execNextFrame;
     _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
@@ -67,14 +70,14 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
 
     [{
         params ["_args","_idPFH"];
-        _args params ["_unit","_attachToVehicle","_itemClassname","_itemVehClass","_onAttachText","_actionID"];
+        _args params ["_unit","_attachToVehicle","_itemClassname","_itemVehClass","_onAttachText","_actionID", "_itemModelOrientation"];
 
         private _virtualPosASL = (eyePos _unit) vectorAdd (positionCameraToWorld [0,0,0.6]) vectorDiff (positionCameraToWorld [0,0,0]);
         if (cameraView == "EXTERNAL") then {
             _virtualPosASL = _virtualPosASL vectorAdd ((positionCameraToWorld [0.3,0,0]) vectorDiff (positionCameraToWorld [0,0,0]));
         };
         private _virtualPos = _virtualPosASL call EFUNC(common,ASLToPosition);
-        private _lineInterection = !((lineIntersectsSurfaces [eyePos ACE_player, _virtualPosASL, ACE_player]) isEqualTo []);
+        private _lineInterection = ((lineIntersectsSurfaces [eyePos ACE_player, _virtualPosASL, ACE_player]) isNotEqualTo []);
 
         //Don't allow placing in a bad position:
         if (_lineInterection && {GVAR(placeAction) == PLACE_APPROVE}) then {GVAR(placeAction) = PLACE_WAITING;};
@@ -85,8 +88,8 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
                 {!([_attachToVehicle, _unit, _itemClassname] call FUNC(canAttach))}) then {
 
             [_idPFH] call CBA_fnc_removePerFrameHandler;
-            [_unit, "forceWalk", "ACE_Attach", false] call EFUNC(common,statusEffect_set);
-            [_unit, "blockThrow", "ACE_Attach", false] call EFUNC(common,statusEffect_set);
+            [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+            [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
             [] call EFUNC(interaction,hideMouseHint);
             [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
             _unit removeAction _actionID;
@@ -94,7 +97,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
             (QGVAR(virtualAmmo) call BIS_fnc_rscLayer) cutText ["", "PLAIN"];
 
             if (GVAR(placeAction) == PLACE_APPROVE) then {
-                [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _virtualPos] call FUNC(placeApprove);
+                [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _virtualPos, _itemModelOrientation] call FUNC(placeApprove);
             };
         } else {
             //Show the virtual object:
@@ -111,9 +114,13 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
                 ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _screenPos;
                 private _dir = (positionCameraToWorld [0,0,1]) vectorFromTo (positionCameraToWorld [0,0,0]);
                 private _angle = asin (_dir select 2);
-                private _up = [0, cos _angle, sin _angle];
-                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp [[1,0,0], _up];
+
+                // Tranform yaw/roll angle to vector, defaults are pre-#9623 behavior
+                _itemModelOrientation params [["_roll", 0], ["_yaw", 90]];
+                private _dirAndUp = [[[0,1,0], [0,0,1]], _yaw, 0, _roll] call BIS_fnc_transformVectorDirAndUp;
+                private _dirAndUp = [_dirAndUp, 0, _angle, 0] call BIS_fnc_transformVectorDirAndUp;
+                ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp _dirAndUp;
             };
         };
-    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _actionID]] call CBA_fnc_addPerFrameHandler;
+    }, 0, [_unit, _attachToVehicle, _itemClassname, _itemVehClass, _onAttachText, _actionID, _itemModelOrientation]] call CBA_fnc_addPerFrameHandler;
 };

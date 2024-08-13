@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Contextually removes addons (given in ACE_Curator) from zeus based on their required addon(s)
  *
  * ACE_Curator format:
@@ -30,14 +30,14 @@ private _removeAddons = [];
     private _addon = _x;
     if (isArray _addon) then {
         {
-            if !(isClass (configFile >> "CfgPatches" >> _x)) exitWith {
+            if !([_x] call EFUNC(common,isModLoaded)) exitWith {
                 _removeAddons pushBack (configName _addon);
             };
         } forEach (getArray _addon);
     };
 
     if (isText _addon) then {
-        if !(isClass (configFile >> "CfgPatches" >> getText _addon)) then {
+        if !([getText _addon] call EFUNC(common,isModLoaded)) then {
             _removeAddons pushBack (configName _addon);
         };
     };

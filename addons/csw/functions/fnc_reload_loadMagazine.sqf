@@ -1,38 +1,40 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Loads a magazine into a static weapon from a magazine carried by the player.
+ * Loads a magazine into a CSW from a magazine carried by or next to the player.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret <ARRAY>
  * 2: Unit Carried Magazine <STRING>
- * 3: Player <OBJECT>
+ * 3: Magazine source <OBJECT>
+ * 4: Unit doing the action <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [cursorTarget, [0], "ACE_csw_100Rnd_127x99_mag_red", player] call ace_csw_fnc_reload_loadMagazine
+ * [cursorTarget, [0], "ACE_csw_100Rnd_127x99_mag_red", player, player] call ace_csw_fnc_reload_loadMagazine
  *
  * Public: No
  */
 
-params ["_vehicle", "_turret", "_carryMag", "_unit"];
-TRACE_4("loadMagazine",_vehicle,_turret,_carryMag,_unit);
+params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit"];
+TRACE_5("loadMagazine",_vehicle,_turret,_carryMag,_magSource,_unit);
 
 private _timeToLoad = 1;
-if (!isNull(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QUOTE(ADDON) >> "ammoLoadTime")) then {
-    _timeToLoad = getNumber(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> QUOTE(ADDON) >> "ammoLoadTime");
+private _config = configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime";
+if (!isNull _config) then {
+    _timeToLoad = getNumber _config;
 };
 
-private _displayName = format [localize LSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
+private _displayName = format [LLSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
 
 private _onFinish = {
-    (_this select 0) params ["_vehicle", "_turret", "_carryMag", "_unit"];
-    TRACE_4("load progressBar finish",_vehicle,_turret,_carryMag,_unit);
+    (_this select 0) params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit"];
+    TRACE_5("load progressBar finish",_vehicle,_turret,_carryMag,_magSource,_unit);
 
-    ([_vehicle, _turret, _carryMag, _unit] call FUNC(reload_canLoadMagazine)) params ["", "", "_neededAmmo", ""];
+    ([_vehicle, _turret, _carryMag, _magSource] call FUNC(reload_canLoadMagazine)) params ["", "", "_neededAmmo", ""];
     if (_neededAmmo <= 0) exitWith { ERROR_1("Can't load ammo - %1",_this); };
 
     // Figure out what we can add from the magazines we have
@@ -44,23 +46,34 @@ private _onFinish = {
                 _bestAmmoToSend = _xAmmo;
             };
         };
-    } forEach (magazinesAmmo _unit);
+    } forEach (if (_magSource isKindOf "CAManBase") then {magazinesAmmo _magSource} else {magazinesAmmoCargo _magSource});
 
     if (_bestAmmoToSend == -1) exitWith {ERROR_2("No ammo [%1 - %2]?",_xMag,_bestAmmoToSend);};
-    [_unit, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
+    [_magSource, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
     if (_bestAmmoToSend == 0) exitWith {};
 
-    TRACE_5("calling addTurretMag event",_vehicle,_turret,_unit,_carryMag,_bestAmmoToSend);
-    [QGVAR(addTurretMag), [_vehicle, _turret, _unit, _carryMag, _bestAmmoToSend]] call CBA_fnc_globalEvent;
+    // Workaround for removeSpecificMagazine and WeaponHolders being deleted when empty, give back to the unit if the weapon holder was deleted
+    // TODO: Pass type and position of deleted object to create a new one
+    // TODO: Use '_magSource getEntityInfo 14' in 2.18 and the isSetForDeletion flag to execute in same frame
+    [{
+        params ["_magSource", "_unit", "_args"];
+
+        if (isNull _magSource) then {
+            _args pushBack _unit;
+        };        
+
+        TRACE_1("calling addTurretMag event",_args);
+        [QGVAR(addTurretMag), _args] call CBA_fnc_globalEvent;
+    }, [_magSource, _unit, [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend]]] call CBA_fnc_execNextFrame;
 };
 
 
 [
-TIME_PROGRESSBAR(_timeToLoad),
-[_vehicle, _turret, _carryMag, _unit],
-_onFinish,
-{TRACE_1("load progressBar fail",_this);},
-_displayName,
-{((_this select 0) call FUNC(reload_canLoadMagazine)) select 0},
-["isNotInside"]
+    TIME_PROGRESSBAR(_timeToLoad),
+    [_vehicle, _turret, _carryMag, _magSource],
+    _onFinish,
+    {TRACE_1("load progressBar fail",_this);},
+    _displayName,
+    {((_this select 0) call FUNC(reload_canLoadMagazine)) select 0},
+    ["isNotInside"]
 ] call EFUNC(common,progressBar);

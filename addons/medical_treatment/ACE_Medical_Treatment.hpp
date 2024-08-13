@@ -154,7 +154,7 @@ class ADDON {
             };
         };
 
-        class PackingBandage: fieldDressing {
+        class PackingBandage: FieldDressing {
             class Abrasion {
                 effectiveness = 3;
                 reopeningChance = 0.6;
@@ -289,7 +289,7 @@ class ADDON {
             };
         };
 
-        class ElasticBandage: fieldDressing {
+        class ElasticBandage: FieldDressing {
             class Abrasion {
                 effectiveness = 4;
                 reopeningChance = 0.6;
@@ -424,7 +424,7 @@ class ADDON {
             };
         };
 
-        class QuikClot: fieldDressing {
+        class QuikClot: FieldDressing {
             class Abrasion {
                 effectiveness = 2;
                 reopeningChance = 0.3;
@@ -440,7 +440,7 @@ class ADDON {
             };
             class AbrasionLarge: Abrasion {
                 effectiveness = 0.7;
-                reopeningChance = 5;
+                reopeningChance = 0.5;
             };
 
             class Avulsion: Abrasion {
@@ -494,7 +494,6 @@ class ADDON {
             };
             class CutMinor: Cut {
                 effectiveness = 2;
-                reopeningChance = 0.3;
             };
             class CutMedium: Cut {
                 effectiveness = 1;
@@ -566,8 +565,11 @@ class ADDON {
         timeInSystem = 120;
         // How long until the maximum effect is reached
         timeTillMaxEffect = 30;
-        // How many of this type of medication can be in the system before the patient overdoses?
+        // How many of this type of medication can be in the system before the patient can possibly overdose?
         maxDose = 4;
+        // The number of doses over maxDose where there is a chance to overdose.
+        // Example with maxDose = 4 and maxDoseDeviation = 2: Dose 4: Safe | Dose 5 and 6: Possible overdose | Dose 7: Guaranteed overdose
+        maxDoseDeviation = 2;
         // Function to execute upon overdose. Arguments passed to call back are 0: unit <OBJECT>, 1: medicationClassName <STRING>
         onOverDose = "";
         // The viscosity of a fluid is a measure of its resistance to gradual deformation by shear stress or tensile stress. For liquids, it corresponds to the informal concept of "thickness". This value will increase/decrease the viscoty of the blood with the percentage given. Where 100 = max. Using the minus will decrease viscosity
@@ -592,7 +594,7 @@ class ADDON {
             hrIncreaseHigh[] = {10, 40};
             timeInSystem = 120;
             timeTillMaxEffect = 10;
-            maxDose = 10;
+            maxDose = 9;
             incompatibleMedication[] = {};
         };
         class Adenosine {
@@ -602,14 +604,17 @@ class ADDON {
             hrIncreaseHigh[] = {-15, -35};
             timeInSystem = 120;
             timeTillMaxEffect = 15;
-            maxDose = 6;
+            maxDose = 5;
             incompatibleMedication[] = {};
         };
         class PainKillers {
-            painReduce = 0.1;
-            timeInSystem = 600;
+            painReduce = 0.35;
+            hrIncreaseLow[] = {-5, -10};
+            hrIncreaseNormal[] = {-5, -15};
+            hrIncreaseHigh[] = {-5, -17};
+            timeInSystem = 420;
             timeTillMaxEffect = 60;
-            maxDose = 10;
+            maxDose = 5;
             incompatibleMedication[] = {};
             viscosityChange = 5;
         };

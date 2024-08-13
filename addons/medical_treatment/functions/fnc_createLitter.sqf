@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, mharis001
  * Creates litter around the patient based on the treatment.
@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [player, cursorObject, "Head", "BasicBandage"] call ace_medical_fnc_createLitter
+ * [player, cursorObject, "Head", "BasicBandage"] call ace_medical_treatment_fnc_createLitter
  *
  * Public: No
  */
@@ -27,11 +27,10 @@ params ["_medic", "_patient", "_bodyPart", "_classname"];
 if (vehicle _medic != _medic || {vehicle _patient != _patient}) exitWith {};
 
 // Determine if treated body part is bleeding
-private _index = ALL_BODY_PARTS find toLower _bodyPart;
-private _isBleeding = GET_OPEN_WOUNDS(_patient) findIf {
-    _x params ["", "_bodyPartN", "_amountOf", "_bleeding"];
-
-    _bodyPartN == _index && {_amountOf * _bleeding > 0}
+private _index = ALL_BODY_PARTS find toLowerANSI _bodyPart;
+private _isBleeding = (GET_OPEN_WOUNDS(_patient) get _bodyPart) findIf {
+    _x params ["", "_amountOf", "_bleeding"];
+    _amountOf * _bleeding > 0
 } != -1;
 
 // Get litter config for the treatment

@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Returns the current spectator camera attributes (see setCameraAttributes for details).
  *
  * Arguments:
@@ -15,7 +15,7 @@
  * Public: Yes
  */
 
-if !(isNil QGVAR(camera)) then {
+if (!isNil QGVAR(camera)) then {
     [GVAR(camMode), GVAR(camFocus), GVAR(camVision), getPosATL GVAR(camera), getDirVisual GVAR(camera)]
 } else {
     // These values could be pre-set by function

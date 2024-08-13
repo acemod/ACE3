@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles lockpick functionality.  Three different functions:
@@ -33,7 +33,10 @@ if ((locked _veh) == 0) exitWith {false};
 if !("ACE_key_lockpick" in (_unit call EFUNC(common,uniqueItems))) exitWith {false};
 
 private _vehLockpickStrength = _veh getVariable[QGVAR(lockpickStrength), GVAR(DefaultLockpickStrength)];
-if (!(_vehLockpickStrength isEqualType 0)) exitWith {ERROR("ACE_vehicleLock_LockpickStrength invalid"); false};
+if !(_vehLockpickStrength isEqualType 0) exitWith {
+    ERROR("ACE_vehicleLock_LockpickStrength invalid");
+    false
+};
 
 //-1 indicates unpickable lock
 if (_vehLockpickStrength < 0) exitWith {false};
@@ -45,7 +48,7 @@ private _condition = {
     ((_unit distance _veh) < 5) && {(speed _veh) < 0.1}
 };
 
-if (!([[_unit, _veh]] call _condition)) exitWith {false};
+if !([[_unit, _veh]] call _condition) exitWith {false};
 
 private _returnValue = _funcType in ["canLockpick", "startLockpick", "finishLockpick"];
 switch (_funcType) do {
@@ -53,10 +56,12 @@ switch (_funcType) do {
         _returnValue = !([_unit, _veh] call FUNC(hasKeyForVehicle)) && {(locked _veh) in [2, 3]};
     };
     case "startLockpick": {
+        [QGVAR(startedLockpick), [_veh]] call CBA_fnc_localEvent;
         [_vehLockpickStrength, [_unit, _veh, "finishLockpick"], {(_this select 0) call FUNC(lockpick)}, {}, (localize LSTRING(Action_LockpickInUse)), _condition, ["isNotInside", "isNotSwimming"]] call EFUNC(common,progressBar);
     };
     case "finishLockpick": {
         [QGVAR(setVehicleLock), [_veh, false], [_veh]] call CBA_fnc_targetEvent;
+        [QGVAR(finishedLockpick), [_veh]] call CBA_fnc_localEvent;
     };
     default {
         ERROR("bad function type");

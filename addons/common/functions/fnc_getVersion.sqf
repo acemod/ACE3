@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Get the version number of the current ACE build.
@@ -15,4 +15,4 @@
  * Public: Yes
  */
 
-getText (configFile >> "CfgPatches" >> "ACE_main" >> "version") // return
+getText (configFile >> "CfgPatches" >> "ACE_main" >> "versionStr") // return

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus / nou
  * Guidance Per Frame Handler
@@ -37,7 +37,7 @@ private _adjustTime = 1;
 if (accTime > 0) then {
     _adjustTime = 1/accTime;
     _adjustTime = _adjustTime *  (_runtimeDelta / TIMESTEP_FACTOR);
-    TRACE_4("Adjust timing", 1/accTime, _adjustTime, _runtimeDelta, (_runtimeDelta / TIMESTEP_FACTOR) );
+    TRACE_4("Adjust timing",1/accTime,_adjustTime,_runtimeDelta,(_runtimeDelta / TIMESTEP_FACTOR));
 } else {
     _adjustTime = 0;
 };
@@ -56,7 +56,7 @@ private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStat
 
 // If we have no seeker target, then do not change anything
 // If there is no deflection on the missile, this cannot change and therefore is redundant. Avoid calculations for missiles without any deflection
-if ((_minDeflection != 0 || {_maxDeflection != 0}) && {!(_profileAdjustedTargetPos isEqualTo [0,0,0])}) then {
+if ((_minDeflection != 0 || {_maxDeflection != 0}) && {_profileAdjustedTargetPos isNotEqualTo [0,0,0]}) then {
 
     private _targetVector = _projectilePos vectorFromTo _profileAdjustedTargetPos;
     private _adjustVector = _targetVector vectorDiff (vectorDir _projectile);
@@ -89,8 +89,8 @@ if ((_minDeflection != 0 || {_maxDeflection != 0}) && {!(_profileAdjustedTargetP
     };
     private _finalAdjustVector = [_yaw, _roll, _pitch];
 
-    TRACE_3("", _pitch, _yaw, _roll);
-    TRACE_3("", _targetVector, _adjustVector, _finalAdjustVector);
+    TRACE_3("",_pitch,_yaw,_roll);
+    TRACE_3("",_targetVector,_adjustVector,_finalAdjustVector);
 
     if (accTime > 0) then {
         private _changeVector = (vectorDir _projectile) vectorAdd _finalAdjustVector;

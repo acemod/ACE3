@@ -18,6 +18,9 @@
 
 extern "C" {
     EXPORT void __stdcall RVExtension(char *output, int outputSize, const char *function);
+    EXPORT void __stdcall RVExtensionVersion(char *output, int outputSize) {
+        strncpy(output, ACE_FULL_VERSION_STR, outputSize - 1);
+    }
 }
 
 std::string gClipboardData;
@@ -33,7 +36,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     }
 
     if (!strcmp(function, "version")) {
-        std::strncpy(output, ACE_FULL_VERSION_STR, outputSize);
+        std::strncpy(output, ACE_FULL_VERSION_STR, outputSize - 1);
         EXTENSION_RETURN();
     }
 
@@ -72,7 +75,7 @@ void __stdcall RVExtension(char *output, int outputSize, const char *function) {
     }
 
     if (result.length() > 1) {
-        strncpy(output, result.c_str(), outputSize);
+        strncpy(output, result.c_str(), outputSize - 1);
     }
 
     #endif

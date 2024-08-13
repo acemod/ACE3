@@ -11,7 +11,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
                 showDisabled = 1;
                 icon = QPATHTOF(UI\Explosives_Menu_ca.paa);
-                insertChildren = QUOTE([_player] call FUNC(addTransmitterActions););
+                insertChildren = QUOTE([_player] call FUNC(addTransmitterActions));
                 class ACE_Place {
                     displayName = CSTRING(Place);
                     statement = "";
@@ -49,7 +49,7 @@ class CfgVehicles {
                 distance = 1;
                 displayName = CSTRING(Defuse);
                 condition = QUOTE([ARR_2(_player,_target)] call FUNC(canDefuse));
-                statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse););
+                statement = QUOTE([ARR_2(_player,_target)] call FUNC(startDefuse));
                 exceptions[] = {"isNotSwimming"};
                 icon = QPATHTOF(UI\Defuse_ca.paa);
             };
@@ -78,6 +78,7 @@ class CfgVehicles {
         vehicleClass = "Cargo";
         class ACE_Actions {
             class ACE_MainActions {
+                displayName = ECSTRING(interaction,MainAction);
                 selection = "";
                 distance = 1.5;
                 condition = "true";
@@ -86,7 +87,7 @@ class CfgVehicles {
                     displayName = CSTRING(TriggerMenu);
                     condition = "true";
                     statement = "";
-                    insertChildren = QUOTE([ARR_3(_target getVariable QUOTE(QGVAR(class)),_target,_player)] call FUNC(addTriggerActions););
+                    insertChildren = QUOTE([ARR_3(_target getVariable QUOTE(QGVAR(class)),_target,_player)] call FUNC(addTriggerActions));
                     showDisabled = 0;
                     exceptions[] = {"isNotSwimming"};
                     icon = QPATHTOF(UI\Explosives_Menu_ca.paa);
@@ -105,7 +106,7 @@ class CfgVehicles {
     };
 
     class ACE_Explosives_Place_DemoCharge: ACE_Explosives_Place {
-        displayName = "Demo Charge";
+        displayName = "$STR_A3_cfgMagazines_DemoCharge0";
         model = "\A3\Weapons_F\explosives\c4_charge_small_d";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -114,15 +115,15 @@ class CfgVehicles {
         };
     };
     class ACE_Explosives_Place_APERSBoundingMine: ACE_Explosives_Place {
-        displayName = "APERS Bounding Mine";
+        displayName = "$STR_A3_cfgMagazines_BouncingMineRangeMagazine0";
         model = "\A3\Weapons_F\explosives\mine_AP_bouncing";
     };
     class ACE_Explosives_Place_APERSMine: ACE_Explosives_Place {
-        displayName = "APERS Mine";
+        displayName = "$STR_A3_cfgMagazines_ClassicMineRangeMagazine0";
         model = "\A3\Weapons_F\explosives\mine_ap";
     };
     class ACE_Explosives_Place_APERSTripwireMine: ACE_Explosives_Place {
-        displayName = "APERS Tripwire Mine";
+        displayName = "$STR_A3_cfgMagazines_ClassicMineWireMagazine0";
         model = "\A3\Weapons_F\explosives\mine_AP_tripwire";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -132,12 +133,12 @@ class CfgVehicles {
     };
 
     class ACE_Explosives_Place_ATMine: ACE_Explosives_Place {
-        displayName = "AT Mine";
+        displayName = "$STR_A3_CfgMagazines_Mine0";
         model = "\A3\Weapons_f\Explosives\mine_at";
     };
 
     class ACE_Explosives_Place_Claymore: ACE_Explosives_Place {
-        displayName = "Claymore";
+        displayName = "$STR_A3_cfgMagazines_DirectionalMineRemoteMagazine0";
         model = "\A3\Weapons_F\explosives\mine_AP_miniclaymore";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -147,7 +148,7 @@ class CfgVehicles {
     };
 
     class ACE_Explosives_Place_SatchelCharge: ACE_Explosives_Place {
-        displayName = "Satchel Charge";
+        displayName = "$STR_A3_cfgMagazines_PipeBomb0";
         model = "\A3\Weapons_F\Explosives\satchel";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -158,7 +159,7 @@ class CfgVehicles {
 
     // Orange DLC:
     class ACE_Explosives_Place_APERSMineDispenser: ACE_Explosives_Place {
-        displayName = "APERSMineDispenser";
+        displayName = "$STR_A3_CfgMagazines_APERSMineDispenser_Mag0";
         model = "\A3\Weapons_F_Orange\Explosives\APERSmineDispenser";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -167,7 +168,7 @@ class CfgVehicles {
         };
     };
     class ACE_Explosives_Place_TrainingMine: ACE_Explosives_Place {
-        displayName = "TrainingMine";
+        displayName = "$STR_A3_CfgMagazines_TrainingMine_Mag0";
         model = "\A3\Weapons_F_Orange\Explosives\TrainingMine_F";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -178,28 +179,28 @@ class CfgVehicles {
 
 
     class ACE_Explosives_Place_SLAM: ACE_Explosives_Place {
-        displayName = "SLAM";
+        displayName = "$STR_A3_cfgMagazines_DirectionalMineRangeMagazine0";
         model = "\A3\Weapons_F\Explosives\mine_SLAM_directional";
     };
 
     // IEDs
     class ACE_Explosives_Place_IEDUrbanBig: ACE_Explosives_Place {
-        displayName = "IED Urban Big";
+        displayName = "$STR_A3_CfgVehicles_IEDUrbanBig_F";
         model = "\A3\Weapons_F\Explosives\IED_urban_big";
     };
 
     class ACE_Explosives_Place_IEDLandBig: ACE_Explosives_Place {
-        displayName = "IED Land Big";
+        displayName = "$STR_A3_CfgVehicles_IEDLandBig_F";
         model = "\A3\Weapons_F\Explosives\IED_land_big";
     };
 
     class ACE_Explosives_Place_IEDUrbanSmall: ACE_Explosives_Place {
-        displayName = "IED Urban Small";
+        displayName = "$STR_A3_CfgVehicles_IEDUrbanSmall_F";
         model = "\A3\Weapons_F\Explosives\IED_urban_small";
     };
 
     class ACE_Explosives_Place_IEDLandSmall: ACE_Explosives_Place {
-        displayName = "IED Land Small";
+        displayName = "$STR_A3_CfgVehicles_IEDLandSmall_F";
         model = "\A3\Weapons_F\Explosives\IED_land_small";
     };
 

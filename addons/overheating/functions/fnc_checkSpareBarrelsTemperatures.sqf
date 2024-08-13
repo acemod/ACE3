@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Make the player check the temperature of his spare barrels
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [bob] call ace_overheating_fnc_checkSpareBarrelsTemperature
+ * [bob] call ace_overheating_fnc_checkSpareBarrelsTemperatures
  *
  *
  * Public: No
