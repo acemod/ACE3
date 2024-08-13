@@ -92,6 +92,7 @@ private _previousOwner = -1;
         continue;
     };
 
+    _transfer = true;
     {
         // No transfer if already transferred
         if (!_force && {(owner _x) in [_idHC1, _idHC2, _idHC3]}) exitWith {
