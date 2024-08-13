@@ -81,7 +81,7 @@ if !(_projectile in ["ace_ammoExplosion", "ACE_ammoExplosionLarge"]) then {
 private _criticalDamageIndex = CRITICAL_HITPOINTS findIf {_x == _hitPoint};
 
 if (_criticalDamageIndex != -1) then {
-    _currentDamage = _currentDamage min (CRITICAL_HITPOINTS_THESHOLDS select _criticalDamageIndex);
+    _currentDamage = _currentDamage min (CRITICAL_HITPOINTS_THRESHOLDS select _criticalDamageIndex);
 };
 
 if (_hitPoint == "" && {_hitIndex < 0}) then {
