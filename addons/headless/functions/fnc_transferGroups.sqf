@@ -146,11 +146,13 @@ private _previousOwner = -1;
             // Don't transfer if it's already local to HC1
             if (_previousOwner == _idHC1) exitWith {};
 
-            [QGVAR(groupTransferPre), [_x, _HC1, _previousOwner, _idHC1], [_previousOwner, _idHC1]] call CBA_fnc_targetEvent; // API
+            [QGVAR(groupTransferPre), [_x, _HC1, _previousOwner, _idHC1], _previousOwner] call CBA_fnc_ownerEvent; // API
+            [QGVAR(groupTransferPre), [_x, _HC1, _previousOwner, _idHC1], _idHC1] call CBA_fnc_ownerEvent; // API
 
             private _transferred = _x setGroupOwner _idHC1;
 
-            [QGVAR(groupTransferPost), [_x, _HC1, _previousOwner, _idHC1, _transferred], [_previousOwner, _idHC1]] call CBA_fnc_targetEvent; // API
+            [QGVAR(groupTransferPost), [_x, _HC1, _previousOwner, _idHC1, _transferred], _previousOwner] call CBA_fnc_ownerEvent; // API
+            [QGVAR(groupTransferPost), [_x, _HC1, _previousOwner, _idHC1, _transferred], _idHC1] call CBA_fnc_ownerEvent; // API
 
             if (_transferred) then {
                 _numTransferredHC1 = _numTransferredHC1 + 1;
@@ -172,11 +174,13 @@ private _previousOwner = -1;
             // Don't transfer if it's already local to HC2
             if (_previousOwner == _idHC2) exitWith {};
 
-            [QGVAR(groupTransferPre), [_x, _HC2, _previousOwner, _idHC2], [_previousOwner, _idHC2]] call CBA_fnc_targetEvent; // API
+            [QGVAR(groupTransferPre), [_x, _HC2, _previousOwner, _idHC2], _previousOwner] call CBA_fnc_ownerEvent; // API
+            [QGVAR(groupTransferPre), [_x, _HC2, _previousOwner, _idHC2], _idHC2] call CBA_fnc_ownerEvent; // API
 
             private _transferred = _x setGroupOwner _idHC2;
 
-            [QGVAR(groupTransferPost), [_x, _HC2, _previousOwner, _idHC2, _transferred], [_previousOwner, _idHC2]] call CBA_fnc_targetEvent; // API
+            [QGVAR(groupTransferPost), [_x, _HC2, _previousOwner, _idHC2, _transferred], _previousOwner] call CBA_fnc_ownerEvent; // API
+            [QGVAR(groupTransferPost), [_x, _HC2, _previousOwner, _idHC2, _transferred], _idHC2] call CBA_fnc_ownerEvent; // API
 
             if (_transferred) then {
                 _numTransferredHC2 = _numTransferredHC2 + 1;
@@ -198,11 +202,13 @@ private _previousOwner = -1;
             // Don't transfer if it's already local to HC3
             if (_previousOwner == _idHC3) exitWith {};
 
-            [QGVAR(groupTransferPre), [_x, _HC3, _previousOwner, _idHC3], [_previousOwner, _idHC3]] call CBA_fnc_targetEvent; // API
+            [QGVAR(groupTransferPre), [_x, _HC3, _previousOwner, _idHC3], _previousOwner] call CBA_fnc_ownerEvent; // API
+            [QGVAR(groupTransferPre), [_x, _HC3, _previousOwner, _idHC3], _idHC3] call CBA_fnc_ownerEvent; // API
 
             private _transferred = _x setGroupOwner _idHC2;
 
-            [QGVAR(groupTransferPost), [_x, _HC3, _previousOwner, _idHC3, _transferred], [_previousOwner, _idHC3]] call CBA_fnc_targetEvent; // API
+            [QGVAR(groupTransferPost), [_x, _HC3, _previousOwner, _idHC3, _transferred], _previousOwner] call CBA_fnc_ownerEvent; // API
+            [QGVAR(groupTransferPost), [_x, _HC3, _previousOwner, _idHC3, _transferred], _idHC3] call CBA_fnc_ownerEvent; // API
 
             if (_transferred) then {
                 _numTransferredHC3 = _numTransferredHC3 + 1;
