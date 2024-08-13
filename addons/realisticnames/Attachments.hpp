@@ -19,12 +19,6 @@ class optic_Hamr: ItemCore {
 class optic_Hamr_khk_F: optic_Hamr {
     displayName = CSTRING(optic_hamr_khk);
 };
-class ACE_optic_Hamr_2D: optic_Hamr {
-    displayName = CSTRING(optic_hamr_2d);
-};
-class ACE_optic_Hamr_PIP: ACE_optic_Hamr_2D {
-    displayName = CSTRING(optic_hamr_pip);
-};
 
 class optic_Arco: ItemCore {
     displayName = CSTRING(optic_arco);
@@ -34,12 +28,6 @@ class optic_Arco_blk_F: optic_Arco {
 };
 class optic_Arco_ghex_F: optic_Arco {
     displayName = CSTRING(optic_arco_ghex);
-};
-class ACE_optic_Arco_2D: optic_Arco {
-    displayName = CSTRING(optic_arco_2d);
-};
-class ACE_optic_Arco_PIP: ACE_optic_Arco_2D {
-    displayName = CSTRING(optic_arco_pip);
 };
 class optic_Arco_lush_F: optic_Arco {
     displayName = CSTRING(optic_arco_lush);
@@ -75,12 +63,6 @@ class optic_LRPS_ghex_F: optic_LRPS {
 };
 class optic_LRPS_tna_F: optic_LRPS {
     displayName = CSTRING(optic_lrps_tna);
-};
-class ACE_optic_LRPS_2D: optic_LRPS {
-    displayName = CSTRING(optic_lrps_2d);
-};
-class ACE_optic_LRPS_PIP: ACE_optic_LRPS_2D {
-    displayName = CSTRING(optic_lrps_pip);
 };
 
 class optic_AMS_base;
@@ -148,12 +130,6 @@ class optic_Holosight_smg_khk_F: optic_Holosight_smg {
 
 class optic_MRCO: ItemCore {
     displayName = CSTRING(optic_MRCO);
-};
-class ACE_optic_MRCO_2D: optic_MRCO {
-    displayName = CSTRING(optic_MRCO_2d);
-};
-class ACE_optic_MRCO_PIP: ACE_optic_MRCO_2D {
-    displayName = CSTRING(optic_MRCO_pip);
 };
 
 class optic_Yorris: ItemCore {

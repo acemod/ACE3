@@ -532,11 +532,6 @@ class CfgWeapons {
         };
     };
 
-    class HMG_127_APC: HMG_127 {};
-    class ACE_HMG_127_KORD: HMG_127_APC {
-        displayName = "6P49 Kord";
-    };
-
     class HMG_01: HMG_127 {
         displayName = "XM312";
     };
@@ -605,10 +600,6 @@ class CfgWeapons {
         class player: player {};
     };
 
-    class ACE_cannon_120mm_GT12: cannon_120mm {
-        displayName = "GT12";
-    };
-
     class cannon_105mm: CannonCore {
         displayName = "M68";
         class player: Mode_SemiAuto {
@@ -627,22 +618,6 @@ class CfgWeapons {
     // coax machine guns
     class LMG_coax: LMG_RCWS {
         displayName = "PKT";
-    };
-    class LMG_coax_ext: LMG_coax {};
-    class ACE_LMG_coax_ext_MAG58: LMG_coax_ext {
-        displayName = "MAG 58M";
-    };
-    class ACE_LMG_coax_MAG58_mem3: LMG_coax {
-        displayName = "MAG 58M";
-    };
-    class ACE_LMG_coax_L94A1_mem3: LMG_coax {
-        displayName = "L94A1";
-    };
-    class ACE_LMG_coax_ext_MG3: LMG_coax_ext {
-        displayName = "Rheinmetall MG3";
-    };
-    class ACE_LMG_coax_DenelMG4: LMG_coax {
-        displayName = "Denel MG4";
     };
 
     // more autocannons
@@ -692,20 +667,6 @@ class CfgWeapons {
 
     class autocannon_30mm_RCWS: autocannon_Base_F {
         displayName = "2A42";
-    };
-
-    class cannon_20mm: autocannon_Base_F {
-        class AP: autocannon_Base_F {};
-        class HE: autocannon_Base_F {};
-    };
-    class ACE_cannon_20mm_Rh202: cannon_20mm {
-        displayName = "MK20 Rh 202";
-        class AP: AP {
-            displayName = "MK20 Rh 202";
-        };
-        class HE: HE {
-            displayName = "MK20 Rh 202";
-        };
     };
 
     // APEX/Tanoa
