@@ -672,6 +672,22 @@
             <Russian>[CSW] Лента 20-мм гранат для ст. гранатомёта</Russian>
             <Korean>[CSW] 20mm 고속유탄발사기 탄띠</Korean>
         </Key>
+        <Key ID="STR_ACE_CSW_GMGBelt_descriptionShort">
+            <English>Caliber: 20 mm&lt;br/&gt;Rounds: 20&lt;br /&gt;Used in: Grenade Launcher</English>
+            <Chinese>口徑：20 mm&lt;br/&gt;個數：20&lt;br /&gt;用於：榴彈發射器</Chinese>
+            <French>Calibre : 20 mm&lt;br/&gt;Munitions : 20&lt;br /&gt;Application : lance-grenades</French>
+            <Spanish>Calibre: 20 mm&lt;br/&gt;Cargas: 20&lt;br /&gt;Se usa en: lanzagranadas</Spanish>
+            <Italian>Calibro: 20 mm&lt;br/&gt;Munizioni: 20&lt;br /&gt;Si usa in: lanciagranate</Italian>
+            <Polish>Kaliber: 20 mm&lt;br/&gt;Naboje: 20&lt;br /&gt;Używane w: granatniku</Polish>
+            <Russian>Калибр: 20 мм&lt;br/&gt;Кол-во: 20&lt;br /&gt;Применение: гранатомет</Russian>
+            <German>Kaliber: 20 mm&lt;br/&gt;Patronen: 20&lt;br /&gt;Eingesetzt von: Granatenwerfer</German>
+            <Czech>Ráže: 20 mm&lt;br/&gt;Munice: 20&lt;br /&gt;Použití: Granátomet</Czech>
+            <Portuguese>Calibre: 20 mm&lt;br/&gt;Balas: 20&lt;br /&gt;Uso em: Lança-granadas</Portuguese>
+            <Korean>구경: 20mm&lt;br /&gt;탄 수: 20&lt;br /&gt;사용 가능: 유탄발사기</Korean>
+            <Chinesesimp>口径：20 毫米&lt;br/&gt;容弹量：20&lt;br /&gt;用于：枪榴弹发射器</Chinesesimp>
+            <Japanese>口径：20 mm &lt;br/&gt;弾薬：20&lt;br /&gt;使用：グレネードランチャー</Japanese>
+            <Turkish>Kalibre: 20 mm&lt;br/&gt;Mermi: 20&lt;br /&gt;Kullanıldığı Yer: Bombaatar</Turkish>
+        </Key>
         <Key ID="STR_ACE_CSW_m3Tripod_displayName">
             <English>M3 Tripod</English>
             <Spanish>Trípode M3</Spanish>
