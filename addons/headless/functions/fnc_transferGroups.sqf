@@ -74,13 +74,9 @@ private _numTransferredHC1 = 0;
 private _numTransferredHC2 = 0;
 private _numTransferredHC3 = 0;
 
-private _units = [];
-private _transfer = false;
-private _previousOwner = -1;
-
 // Transfer AI groups
 {
-    _units = units _x;
+    private _units = units _x;
 
     // No transfer if empty group or if group is blacklisted
     if (_units isEqualTo [] || {_x getVariable [QXGVAR(blacklist), false]}) then {
@@ -92,7 +88,8 @@ private _previousOwner = -1;
         continue;
     };
 
-    _transfer = true;
+    private _transfer = true;
+
     {
         // No transfer if already transferred
         if (!_force && {(owner _x) in [_idHC1, _idHC2, _idHC3]}) exitWith {
@@ -127,7 +124,7 @@ private _previousOwner = -1;
     };
 
     // Round robin between HCs if load balance enabled, else pass all to one HC
-    _previousOwner = groupOwner _x;
+    private _previousOwner = groupOwner _x;
 
     switch (_currentHC) do {
         case 1: {
