@@ -1,20 +1,19 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * Blacklist an ammo class, thus preventing it from producing fragments or spall. This function will not allow you to force a projectile to produce fragments or spall.
- * The function takes three arguments, although the last two are optional. The first argument is the ammo class name to ignore, while the second and third are
- * whether the class should be blacklisted from producing fragments and spall, respectively. Once an ammo has been blacklisted, it can be removed from the blacklist
- * using this function without restarting the mission.
+ * Blacklist an ammo class preventing it from producing fragments and/or spall.
+ * Once an ammo class has been blacklisted, it can be removed from the blacklist using this function without restarting the mission.
  *
  * Arguments:
  * 0: Class name of the ammo to be blacklisted <STRING>
- * 1: Should a projectile be blacklisted from producing fragments <BOOL>
- * 2: Should a projectile be blacklisted from producing spall <BOOL>
+ * 1: Should a projectile be blacklisted from producing fragments <BOOL> (default: true)
+ * 2: Should a projectile be blacklisted from producing spall <BOOL> (default: true)
  *
  * Return Value:
  * Were the changes properly applied <BOOL>
  *
  * Example:
+ * // Stop "ACE_20mm_HE" from producing spall
  * ["ACE_20mm_HE", false, true] call ace_frag_fnc_addClassBlackList;
  *
  * Public: Yes
