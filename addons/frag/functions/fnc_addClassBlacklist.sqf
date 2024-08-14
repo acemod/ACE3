@@ -2,6 +2,7 @@
 /*
  * Author: Lambda.Tiger
  * Blacklist an ammo class preventing it from producing fragments and/or spall.
+ * This function will not allow you to force a projectile to produce fragments or spall.
  * Once an ammo class has been blacklisted, it can be removed from the blacklist using this function without restarting the mission.
  *
  * Arguments:
