@@ -1,7 +1,6 @@
 class CfgMagazines {
     class SPE_Mine_Magazine;
     class SPE_US_TNT_4pound_mag: SPE_Mine_Magazine {
-        EGVAR(explosives,DelayTime) = 1;
         EGVAR(explosives,Placeable) = 1;
         EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(4LBTNT);
         useAction = 0;
@@ -19,7 +18,6 @@ class CfgMagazines {
     };
 
     class SPE_US_TNT_half_pound_mag: SPE_Mine_Magazine {
-        EGVAR(explosives,DelayTime) = 1;
         EGVAR(explosives,Placeable) = 1;
         EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(halfLBTNT);
         useAction = 0;
@@ -37,7 +35,6 @@ class CfgMagazines {
     };
 
     class SPE_US_Bangalore_mag: SPE_Mine_Magazine {
-        EGVAR(explosives,DelayTime) = 1;
         EGVAR(explosives,Placeable) = 1;
         EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(bangalore);
         useAction = 0;
@@ -55,7 +52,6 @@ class CfgMagazines {
     };
 
     class SPE_Ladung_Small_MINE_mag: SPE_Mine_Magazine {
-        EGVAR(explosives,DelayTime) = 1;
         EGVAR(explosives,Placeable) = 1;
         EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(smallLadung);
         useAction = 0;
@@ -73,7 +69,6 @@ class CfgMagazines {
     };
 
     class SPE_Ladung_Big_MINE_mag: SPE_Mine_Magazine {
-        EGVAR(explosives,DelayTime) = 1;
         EGVAR(explosives,Placeable) = 1;
         EGVAR(explosives,SetupObject) = QEXPLOSIVES_PLACE(bigLadung);
         useAction = 0;
