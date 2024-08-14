@@ -15,7 +15,7 @@
  * None
  *
  * Example:
- * [[1000, 45, 60], 0.8, getPosASL ace_player] call ace_frag_fnc_doSpall
+ * [editorPlacedHouse_0, typeOf _projectile, _projectile, [1000, 40, 60], [0, 1000, 0], [objNull, ace_player]] call ace_frag_fnc_doSpall
  *
  * Public: No
  */

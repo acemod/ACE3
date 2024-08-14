@@ -29,7 +29,8 @@ private _maxFrags = round linearConversion [
     ACE_FRAG_COUNT_MIN_TIME,
     ACE_FRAG_COUNT_MAX_TIME,
     (CBA_missionTime - GVAR(lastFragTime)),
-    ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX,
+    ACE_FRAG_COUNT_MIN,
+    ACE_FRAG_COUNT_MAX,
     true
 ];
 TRACE_2("",_maxFrags,CBA_missionTime - GVAR(lastFragTime));

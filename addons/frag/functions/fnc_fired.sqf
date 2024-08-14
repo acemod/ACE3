@@ -53,7 +53,7 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
     _projectile setVariable [QGVAR(hitPartEventHandler), _hitPartEventHandler];
 };
 
-if (GVAR(reflectionsEnabled) || GVAR(enabled) && _ammo call FUNC(shouldFrag)) then {
+if (GVAR(reflectionsEnabled) || (GVAR(enabled) && {_ammo call FUNC(shouldFrag)})) then {
     private _explodeEventHandler = _projectile addEventHandler [
         "Explode",
         {
