@@ -51,7 +51,6 @@ class CfgMagazines {
     class CA_Magazine;
     class rhssaf_tm100_mag: CA_Magazine {
         useAction = 0;
-        EGVAR(explosives,DelayTime) = 1;
         EGVAR(explosives,Placeable) = 1;
         EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhssaf_tm100);
         class ACE_Triggers {

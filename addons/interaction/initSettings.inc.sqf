@@ -39,6 +39,16 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(enableAnimActions), "CHECKBOX",
+    LSTRING(SettingAnimActionsName),
+    format ["ACE %1", LLSTRING(DisplayName)],
+    true,
+    true,
+    {[QGVAR(enableAnimActions), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(interactWithTerrainObjects), "CHECKBOX",
     ["str_a3_modules_moduleomquest_defend_f_attributes_useterrainobject0", LSTRING(interactWithTerrainObjects_Description)],
     format ["ACE %1", LLSTRING(DisplayName)],

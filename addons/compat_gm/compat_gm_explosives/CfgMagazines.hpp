@@ -2,7 +2,6 @@ class CfgMagazines {
     // Explosives
     class gm_explosive_petn_charge_base;
     class gm_explosive_petn_charge: gm_explosive_petn_charge_base {
-        EGVAR(explosives,DelayTime) = 1;
         EGVAR(explosives,Placeable) = 1;
         EGVAR(explosives,SetupObject) =QEGVAR(explosives,Place_gm_explosive_petn);
         useAction = 0;
@@ -21,7 +20,6 @@ class CfgMagazines {
 
     class gm_explosive_plnp_charge_base;
     class gm_explosive_plnp_charge: gm_explosive_plnp_charge_base {
-        EGVAR(explosives,DelayTime) = 1;
         EGVAR(explosives,Placeable) = 1;
         EGVAR(explosives,SetupObject) =QEGVAR(explosives,Place_gm_explosive_plnp);
         useAction = 0;
