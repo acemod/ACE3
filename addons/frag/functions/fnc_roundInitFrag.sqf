@@ -20,10 +20,10 @@ params ["_ammo", "_projectile"];
 
 _ammo call FUNC(shouldFrag) params ["_shouldFrag", "_submunitionShouldFrag"];
 if (_shouldFrag) then {
-    _projectile addEventHandler [
+    private _explodeEH = _projectile addEventHandler [
         "Explode",
         {
-            params ["_projectile", "_posASL", "_velocity"];
+            params ["_projectile", "_posASL"];
 
             if (GVAR(reflectionsEnabled)) then {
                 [_posASL, _ammo] call FUNC(doReflections);
@@ -37,11 +37,13 @@ if (_shouldFrag) then {
             private _ammo = typeOf _projectile;
             // Wait a frame to make sure it doesn't target soon to be dead objects
             [
-                { [QGVAR(explosionEvent), _this] call CBA_fnc_serverEvent; },
-                [_posASL, _velocity, _ammo, _shotParents]
+                { [QGVAR(frag_eh), _this] call CBA_fnc_serverEvent; },
+                [_posASL, _ammo, _shotParents]
             ] call CBA_fnc_execNextFrame;
         }
     ];
+    TRACE_2("adding explode EH",_projectile,_explodeEH);
+    _projectile setVariable [QGVAR(explodeEventHandler),explodeEH];
 };
 
 if (_submunitionShouldFrag) then {
