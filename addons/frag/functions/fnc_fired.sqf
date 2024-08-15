@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * Add "Exploded" eventhandler to a projectile if it will produce fragments
- * and a "HitPart" eventhandler if it will produce spall.
+ * Adds a "HitPart" eventhandler if it will produce spall and the spall system is enabled, and calls the
+ * roundFragInit function if frag or explosion reflections are enabled.
  *
  * Arguments:
  * Parameters inherited from EFUNC(common,firedEH)
