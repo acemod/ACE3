@@ -1,150 +1,146 @@
-//attachments
-
-class ItemCore;
-
-class acc_flashlight: ItemCore {
+// Attachments
+class Item_Base_F;
+class Item_acc_flashlight: Item_Base_F {
     displayName = CSTRING(flashlight_Name);
 };
 
-class optic_MRD: ItemCore {
+class Item_optic_MRD: Item_Base_F {
     displayName = CSTRING(optic_mrd_Name);
 };
-class optic_MRD_black: optic_MRD {
+class Item_optic_MRD_black: Item_Base_F {
     displayName = CSTRING(optic_mrd_black_Name);
 };
 
-class optic_Hamr: ItemCore {
+class Item_optic_Hamr: Item_Base_F {
     displayName = CSTRING(optic_hamr);
 };
-class optic_Hamr_khk_F: optic_Hamr {
+class Item_optic_Hamr_khk_F: Item_Base_F {
     displayName = CSTRING(optic_hamr_khk);
 };
 
-class optic_Arco: ItemCore {
+class Item_optic_Arco: Item_Base_F {
     displayName = CSTRING(optic_arco);
 };
-class optic_Arco_blk_F: optic_Arco {
+class Item_optic_Arco_blk_F: Item_Base_F {
     displayName = CSTRING(optic_arco_blk);
 };
-class optic_Arco_ghex_F: optic_Arco {
+class Item_optic_Arco_ghex_F: Item_Base_F {
     displayName = CSTRING(optic_arco_ghex);
 };
-class optic_Arco_lush_F: optic_Arco {
+class Item_optic_Arco_lush_F: Item_Base_F {
     displayName = CSTRING(optic_arco_lush);
 };
-class optic_Arco_arid_F: optic_Arco {
+class Item_optic_Arco_arid_F: Item_Base_F {
     displayName = CSTRING(optic_arco_arid);
 };
-class optic_Arco_AK_blk_F: optic_Arco_blk_F {
+class Item_optic_Arco_AK_blk_F: Item_Base_F {
     displayName = CSTRING(optic_arco_ak_blk);
 };
-class optic_Arco_AK_lush_F: optic_Arco_lush_F {
+class Item_optic_Arco_AK_lush_F: Item_Base_F {
     displayName = CSTRING(optic_arco_ak_lush);
 };
-class optic_Arco_AK_arid_F: optic_Arco_arid_F {
+class Item_optic_Arco_AK_arid_F: Item_Base_F {
     displayName = CSTRING(optic_arco_ak_arid);
 };
 
-class optic_ERCO_blk_f: optic_Arco {
+class Item_optic_ERCO_blk_f: Item_Base_F {
     displayName = CSTRING(optic_erco_blk);
 };
-class optic_ERCO_khk_f: optic_ERCO_blk_f {
+class Item_optic_ERCO_khk_f: Item_Base_F {
     displayName = CSTRING(optic_erco_khk);
 };
-class optic_ERCO_snd_f: optic_ERCO_blk_f {
+class Item_optic_ERCO_snd_f: Item_Base_F {
     displayName = CSTRING(optic_erco_snd);
 };
 
-class optic_LRPS: ItemCore {
+class Item_optic_LRPS: Item_Base_F {
     displayName = CSTRING(optic_lrps);
 };
-class optic_LRPS_ghex_F: optic_LRPS {
+class Item_optic_LRPS_ghex_F: Item_Base_F {
     displayName = CSTRING(optic_lrps_ghex);
 };
-class optic_LRPS_tna_F: optic_LRPS {
+class Item_optic_LRPS_tna_F: Item_Base_F {
     displayName = CSTRING(optic_lrps_tna);
 };
 
-class optic_AMS_base;
-class optic_AMS: optic_AMS_base {
+class Item_optic_AMS: Item_Base_F {
     displayName = CSTRING(optic_ams);
 };
-class optic_AMS_khk: optic_AMS {
+class Item_optic_AMS_khk: Item_Base_F {
     displayName = CSTRING(optic_ams_khk);
 };
-class optic_AMS_snd: optic_AMS {
+class Item_optic_AMS_snd: Item_Base_F {
     displayName = CSTRING(optic_ams_snd);
 };
 
-class optic_KHS_base;
-class optic_KHS_blk: optic_KHS_base {
+class Item_optic_KHS_blk: Item_Base_F {
     displayName = CSTRING(optic_khs_blk);
 };
-class optic_KHS_hex: optic_KHS_blk {
+class Item_optic_KHS_hex: Item_Base_F {
     displayName = CSTRING(optic_khs_hex);
 };
-class optic_KHS_old: ItemCore {
+class Item_optic_KHS_old: Item_Base_F {
     displayName = CSTRING(optic_khs_old);
 };
-class optic_KHS_tan: optic_KHS_blk {
+class Item_optic_KHS_tan: Item_Base_F {
     displayName = CSTRING(optic_khs_tan);
 };
 
-class optic_DMS: ItemCore {
+class Item_optic_DMS: Item_Base_F {
     displayName = CSTRING(optic_dms);
 };
-class optic_DMS_ghex_F: optic_DMS {
+class Item_optic_DMS_ghex_F: Item_Base_F {
     displayName = CSTRING(optic_dms_ghex);
 };
-class optic_DMS_weathered_F: optic_DMS {
+class Item_optic_DMS_weathered_F: Item_Base_F {
     displayName = CSTRING(optic_dms_weathered);
 };
-class optic_DMS_weathered_Kir_F: optic_DMS_weathered_F {
+class Item_optic_DMS_weathered_Kir_F: Item_Base_F {
     displayName = CSTRING(optic_dms_weathered_kir);
 };
 
-class optic_holosight: ItemCore {
+class Item_optic_holosight: Item_Base_F {
     displayName = CSTRING(optic_holosight);
 };
-class optic_Holosight_blk_F: optic_holosight {
+class Item_optic_Holosight_blk_F: Item_Base_F {
     displayName = CSTRING(optic_holosight_blk);
 };
-class optic_Holosight_khk_F: optic_holosight {
+class Item_optic_Holosight_khk_F: Item_Base_F {
     displayName = CSTRING(optic_holosight_khk);
 };
-class optic_Holosight_lush_F: optic_holosight {
+class Item_optic_Holosight_lush_F: Item_Base_F {
     displayName = CSTRING(optic_holosight_lush);
 };
-class optic_Holosight_arid_F: optic_holosight {
+class Item_optic_Holosight_arid_F: Item_Base_F {
     displayName = CSTRING(optic_holosight_arid);
 };
-class optic_Holosight_smg: ItemCore {
+class Item_optic_Holosight_smg: Item_Base_F {
     displayName = CSTRING(optic_holosight_smg);
 };
-class optic_Holosight_smg_blk_F: optic_Holosight_smg {
+class Item_optic_Holosight_smg_blk_F: Item_Base_F {
     displayName = CSTRING(optic_holosight_smg_blk);
 };
-class optic_Holosight_smg_khk_F: optic_Holosight_smg {
+class Item_optic_Holosight_smg_khk_F: Item_Base_F {
     displayName = CSTRING(optic_holosight_smg_khk);
 };
 
-class optic_MRCO: ItemCore {
+class Item_optic_MRCO: Item_Base_F {
     displayName = CSTRING(optic_MRCO);
 };
 
-class optic_Yorris: ItemCore {
+class Item_optic_Yorris: Item_Base_F {
     displayName = CSTRING(optic_Yorris);
 };
 
-class optic_ACO: ItemCore {
+class Item_optic_ACO: Item_Base_F {
     displayName = CSTRING(optic_ACO);
 };
-class optic_ACO_grn: ItemCore {
+class Item_optic_ACO_grn: Item_Base_F {
     displayName = CSTRING(optic_ACO_grn);
 };
-class optic_ACO_smg: ItemCore {
+class Item_optic_ACO_smg: Item_Base_F {
     displayName = CSTRING(optic_ACO_smg);
 };
-class optic_ACO_grn_smg: ItemCore {
+class Item_optic_ACO_grn_smg: Item_Base_F {
     displayName = CSTRING(optic_ACO_grn_smg);
 };
