@@ -49,6 +49,8 @@ class CfgWeapons {
     class ACE_optic_Hamr_PIP: ACE_optic_Hamr_2D {
         author = ECSTRING(common,ACETeam);
         scope = 1;
+        displayName = CSTRING(hamr_pip);
+
         class ItemInfo: ItemInfo {
             modelOptics = "\x\cba\addons\optics\cba_optic_big_pip.p3d";
         };
@@ -101,6 +103,8 @@ class CfgWeapons {
     class ACE_optic_Arco_PIP: ACE_optic_Arco_2D {
         author = ECSTRING(common,ACETeam);
         scope = 1;
+        displayName = CSTRING(arco_pip);
+
         class ItemInfo: ItemInfo {
             modelOptics = "\x\cba\addons\optics\cba_optic_big_pip.p3d";
         };
@@ -153,6 +157,8 @@ class CfgWeapons {
     class ACE_optic_MRCO_PIP: ACE_optic_MRCO_2D {
         author = ECSTRING(common,ACETeam);
         scope = 1;
+        displayName = CSTRING(mrco_pip);
+
         class ItemInfo: ItemInfo {
             modelOptics = "\x\cba\addons\optics\cba_optic_big_pip.p3d";
         };
@@ -203,6 +209,8 @@ class CfgWeapons {
     class ACE_optic_SOS_PIP: ACE_optic_SOS_2D {
         author = ECSTRING(common,ACETeam);
         scope = 1;
+        displayName = CSTRING(sos_pip);
+
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
@@ -256,6 +264,8 @@ class CfgWeapons {
     class ACE_optic_LRPS_PIP: ACE_optic_LRPS_2D {
         author = ECSTRING(common,ACETeam);
         scope = 1;
+        displayName = CSTRING(lrps_pip);
+
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
