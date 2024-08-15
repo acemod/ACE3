@@ -146,6 +146,7 @@
             <Chinesesimp>开伞失败率</Chinesesimp>
             <Korean>낙하산 펼치기 실패 확률</Korean>
             <Spanish>Probabilidad de fallo de paracaidas</Spanish>
+            <Portuguese>Probabilidade de falha do paraquedas</Portuguese>
         </Key>
     </Package>
 </Project>

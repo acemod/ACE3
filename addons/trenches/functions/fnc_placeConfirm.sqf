@@ -18,8 +18,8 @@
 params ["_unit"];
 
 // enable running again
-[_unit, "forceWalk", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // remove dig pfh
 [GVAR(digPFH)] call CBA_fnc_removePerFrameHandler;
