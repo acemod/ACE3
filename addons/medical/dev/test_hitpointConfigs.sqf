@@ -10,7 +10,11 @@ private _cfgWeapons = configFile >> "CfgWeapons";
 private _cfgVehicles = configFile >> "CfgVehicles";
 
 private _uniforms = "getNumber (_x >> 'scope') == 2 && {configName _x isKindOf ['Uniform_Base', _cfgWeapons]}" configClasses _cfgWeapons;
-private _units = _uniforms apply {_cfgVehicles >> getText (_x >> "ItemInfo" >> "uniformClass")};
+private _units = _uniforms apply {
+    private _unitCfg = _cfgVehicles >> getText (_x >> "ItemInfo" >> "uniformClass");
+    if (isNull _unitCfg) then { WARNING_2("%1 has invalid uniformClass %2",configName _x,getText (_x >> "ItemInfo" >> "uniformClass")) };
+    _unitCfg
+};
 if (param [0, false]) then { // Check all units (if naked)
     INFO("checking ALL units");
    _units append ((configProperties [configFile >> "CfgVehicles", "(isClass _x) && {(getNumber (_x >> 'scope')) == 2} && {configName _x isKindOf 'CAManBase'}", true]));
@@ -21,6 +25,7 @@ INFO_1("Checking uniforms for correct medical hitpoints [%1 units]",count _units
 private _testPass = true;
 {
     private _typeOf = configName _x;
+    if (_typeOf == "") then { continue };
     private _hitpoints = (configProperties [_x >> "HitPoints", "isClass _x", true]) apply {toLowerANSI configName _x};
     private _expectedHitPoints = ["hitleftarm","hitrightarm","hitleftleg","hitrightleg","hithead","hitbody"];
     private _missingHitPoints = _expectedHitPoints select {!(_x in _hitpoints)};

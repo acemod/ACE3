@@ -18,7 +18,7 @@ class ACE_Triggers {
         isAttachable = 1;
         displayName = CSTRING(clacker_displayName);
         picture = QPATHTOF(Data\UI\Clacker.paa);
-        onPlace = QUOTE(_this call FUNC(AddClacker);false);
+        onPlace = QUOTE(_this call FUNC(addClacker); false);
         requires[] = {"ACE_Clacker"};
     };
     class MK16_Transmitter: Command {
@@ -37,7 +37,7 @@ class ACE_Triggers {
         isAttachable = 1;
         displayName = CSTRING(cellphone_displayName);
         picture = QPATHTOF(Data\UI\Cellphone_UI.paa);
-        onPlace = QUOTE(_this call FUNC(addCellphoneIED);false);
+        onPlace = QUOTE(_this call FUNC(addCellphoneIED); false);
         requires[] = {"ACE_Cellphone"};
     };
     class PressurePlate {

@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
- * Author: Grim
- * Handles AI GetIn on an empty weapon
+ * Author: LinkIsGrim
+ * Handles AI GetIn on an empty CSW.
  *
  * Arguments:
  * GetIn EH
