@@ -173,6 +173,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |---------- |------------|----------|------|-------------|
 | `ace_huntir_monitorOpened` | [_unit] | Local | Listen | Called when the monitor is opened
 | `ace_huntir_monitorClosed` | [_unit] | Local | Listen | Called when the monitor is closed (may be fired multiple times when the monitor is closed by ACE and not the user)
+| `ace_huntir_monitorStarted` | [_unit] | Local | Listen | Called when the monitor is started
 | `ace_huntir_monitorSearching` | [_unit] | Local | Listen | Called when the monitor is searching
 | `ace_huntir_monitorConnecting` | [_unit] | Local | Listen | Called when the monitor is connecting
 | `ace_huntir_monitorConnected` | [_unit, _huntir] | Local | Listen | Called when the monitor is connected
