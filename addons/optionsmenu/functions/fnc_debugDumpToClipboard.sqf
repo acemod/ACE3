@@ -19,8 +19,7 @@
 
 private _outputText = {
     diag_log text (_this select 0);
-    "ace" callExtension ["clipboard:append", [((_this select 0) + "
-")]];
+    "ace" callExtension ["clipboard:append", [(_this select 0) + endl]];
 };
 
 private _text = format ["~~~~~~~~~ACE Debug~~~~~~~~~
