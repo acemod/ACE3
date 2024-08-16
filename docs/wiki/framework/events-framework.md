@@ -177,7 +177,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_huntir_monitorSearching` | [_unit] | Local | Listen | Called when the monitor is searching
 | `ace_huntir_monitorConnecting` | [_unit] | Local | Listen | Called when the monitor is connecting
 | `ace_huntir_monitorConnected` | [_unit, _huntir] | Local | Listen | Called when the monitor is connected
-| `ace_huntir_monitorNoGDS` | [_unit] | Local | Listen | Called when the found no GDS
+| `ace_huntir_monitorNoGDS` | [_unit] | Local | Listen | Called when the monitor found no GDS
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
