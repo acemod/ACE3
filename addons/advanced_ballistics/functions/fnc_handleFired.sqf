@@ -131,7 +131,6 @@ if (_caliber * _bulletLength * _bulletMass * _barrelTwist > 0) then {
         _stabilityFactor,
         _twistDirection,
         _transonicStabilityCoef,
-        getPosASL _projectile,
         _bulletVelocity,
         EGVAR(common,mapLatitude),
         EGVAR(weather,currentTemperature),
