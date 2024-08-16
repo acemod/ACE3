@@ -50,6 +50,7 @@ class CfgWeapons {
 
 ## 2. Event Handlers
 ### 2.1 Listenable Events
+
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|
 |`ace_attach_attached` | [_attachedObject, _itemClassname, _temporary] | Local | Listen | After an item was attached to a unit/vehicle. _temporary flag means a item is being re-attached after the player exits a vehicle |
