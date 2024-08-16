@@ -26,7 +26,7 @@ if (GVAR(shiftState)) then {
         switch (true) do {
             // Beginning
             case (_index == -1): {
-                "ace" callExtension ["clipboard:append", [(format ["[%1", endl])]];
+                "ace" callExtension ["clipboard:append", [format ["[%1", endl]]];
             };
             // End
             case (_index == _listLength): {
@@ -34,7 +34,7 @@ if (GVAR(shiftState)) then {
             };
             // Rest
             default {
-                "ace" callExtension ["clipboard:append", [(["    ", str (GVAR(defaultLoadoutsList) select _index), [",", ""] select (_index == _listLength - 1), endl] joinString "")]];
+                "ace" callExtension ["clipboard:append", [["    ", str (GVAR(defaultLoadoutsList) select _index), [",", ""] select (_index == _listLength - 1), endl] joinString ""]];
             };
         };
     };
