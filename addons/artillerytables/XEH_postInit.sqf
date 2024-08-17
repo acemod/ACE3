@@ -4,9 +4,12 @@
     TRACE_2("CBA_settingsInitialized",GVAR(advancedCorrections),GVAR(disableArtilleryComputer));
 
     if (hasInterface) then {
-        // Add hud overlay for actuall azimuth and elevation:
+        // Add hud overlay for actual azimuth and elevation:
         GVAR(pfID) = -1;
         ["turret", LINKFUNC(turretChanged), true] call CBA_fnc_addPlayerEventHandler;
+
+        // Handles being teleported from one vehicle to another
+        ["vehicle", {[_this select 0, (_this select 1) unitTurret (_this select 0)] call FUNC(turretChanged)}] call CBA_fnc_addPlayerEventHandler;
 
         // Add ability to dynamically open rangetables:
         ["ace_interactMenuOpened", LINKFUNC(interactMenuOpened)] call CBA_fnc_addEventHandler;
