@@ -17,14 +17,6 @@
 
 #include "\z\ace\addons\main\script_macros.hpp"
 
-#pragma hemtt flag pe23_ignore_has_include
-#if __has_include("\z\ace\addons\medical_engine\script_macros_medical.hpp")
-#include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
-#else
-#define GET_PAIN_PERCEIVED(var) 0
-#define PAIN_UNCONSCIOUS 1
-#endif
-
 #define FIRE_MANAGER_PFH_DELAY 0.25
 #define FLARE_SIZE_MODIFIER 5
 #define PRONE_ROLLING_ANIMS [\
