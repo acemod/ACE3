@@ -1,0 +1,26 @@
+[package]
+name = "ace"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "ace"
+crate-type = ["cdylib"]
+
+[dependencies]
+arma-rs = { version = "1.10.5", features = ["uuid"] }
+uuid = { version = "1.9.1", features = ["v4"] }
+rand = "0.8.5"
+rand_chacha = "0.3.1"
+
+# Artillery
+rayon = "1.10.0"
+
+# Clipboard
+clipboard = { version = "0.5.0", optional = true }
+
+[build-dependencies]
+git2 = "0.19.0"
+
+[features]
+default = ["clipboard"]
