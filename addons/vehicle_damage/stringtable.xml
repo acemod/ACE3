@@ -41,6 +41,7 @@
             <Polish>Włącz zaawansowane uszkodzenia w samochodach (eksperymentalne)</Polish>
             <Russian>Включить продвинутое повреждение машин (экспериментальное)</Russian>
             <Spanish>Habilitar daño avanzado de coche (Experimental)</Spanish>
+            <Portuguese>Habilitar dano avançado para carros (Experimental)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_generic_turret_wreck">
             <English>Wreck (Turret)</English>
