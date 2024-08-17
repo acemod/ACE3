@@ -1,11 +1,7 @@
 #include "script_component.hpp"
 
 ["CBA_settingsInitialized", {
-    if !(GETEGVAR(medical,enabled,false)) exitWith {
-        // Call manually (see CfgFunctions.hpp)
-        // https://community.bistudio.com/wiki/Arma_3:_Functions_Library#Config_Levels
-        ["postInit", didJIP] spawn BIS_fnc_reviveInit;
-    };
+    if !(GETEGVAR(medical,enabled,false)) exitWith {};
 
     [QGVAR(updateDamageEffects), LINKFUNC(updateDamageEffects)] call CBA_fnc_addEventHandler;
 
@@ -34,21 +30,27 @@
 
         // Fires where healer is local
         _unit addEventHandler ["HandleHeal", {
-            params ["", "_healer", "", "_atVehicle"];
+            params ["_injured", "_healer", "_isMedic", "_atVehicle"];
+
+            AISFinishHeal [_injured, _healer, _isMedic];
 
             // Replace the items so that the unit can't heal
             // AI stay in healing loop if they have healing items available
             if (isNull _atVehicle) then {
                 _healer call EFUNC(common,replaceRegisteredItems);
             } else {
+                // If medical_treatment isn't loaded, interrupt healing command by forcing the unit to leave and rejoin the group
                 if (_healer call EFUNC(common,isPlayer)) exitWith {};
 
-                // This resets their action
+                // This resets their command/action
                 private _assignedTeam = assignedTeam _healer;
                 private _groupInfo = [group _healer, groupId _healer];
                 [_healer] joinSilent grpNull; // If unit doesn't leave group first, it will take the lowest Id when joinAsSilent is run, regardless of parameters
                 _healer joinAsSilent _groupInfo;
-                _healer assignTeam _assignedTeam;
+
+                if (_assignedTeam != "") then {
+                    _healer assignTeam _assignedTeam;
+                };
             };
 
             true
