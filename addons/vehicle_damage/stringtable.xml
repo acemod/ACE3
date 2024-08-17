@@ -31,6 +31,7 @@
             <Italian>Abilita danni avanzati alle macchine</Italian>
             <Polish>Włącz zaawansowane uszkodzenia w samochodach</Polish>
             <Spanish>Habilitar daño avanzado de coche</Spanish>
+            <Portuguese>Habilitar dano avançado para carros</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_description">
             <English>Enable advanced car damage (Experimental)</English>
