@@ -6,7 +6,7 @@ if (!hasInterface) exitWith {};
 
 ["CBA_settingsInitialized", {
     if !(GETEGVAR(medical,enabled,false)) exitWith {};
-        
+
     GVAR(target) = objNull;
     GVAR(previousTarget) = objNull;
     GVAR(selectedBodyPart) = 0;

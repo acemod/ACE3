@@ -20,6 +20,7 @@ private _itemHash = createHashMap;
 } forEach [
     ["@bandage", ["FieldDressing", "PackingBandage", "ElasticBandage", "QuikClot"]],
     ["@iv", ["SalineIV", "SalineIV_500", "SalineIV_250", "BloodIV", "BloodIV_500", "BloodIV_250", "PlasmaIV", "PlasmaIV_500", "PlasmaIV_250"]],
+    ["tourniquet", ["ApplyTourniquet"]],
     ["splint", ["splint"]],
     ["morphine", ["morphine"]],
     ["epinephrine", ["epinephrine"]]

@@ -13,7 +13,7 @@
                 // Only look "through" player and player's vehicle
                 if (!(_intersectObject isKindOf "CAManBase") && {_intersectObject != vehicle ACE_player}) exitWith {};
                 if (_intersectObject != ACE_player && {_intersectObject isKindOf "CAManBase" && {[ACE_player, _intersectObject] call FUNC(canOpenMenu)}}) exitWith {
-                    _target = _intersectObject
+                    _target = _intersectObject;
                 };
             } forEach _intersections;
             if (!(_target isKindOf "CAManBase") || {!([ACE_player, _target] call FUNC(canOpenMenu))}) then {
@@ -36,8 +36,7 @@
     };
 }, [DIK_H, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
-["ACE3 Common", QGVAR(peekMedicalInfoKey), localize LSTRING(PeekMedicalInfo),
-{
+["ACE3 Common", QGVAR(peekMedicalInfoKey), LLSTRING(PeekMedicalInfo), {
     if !(GETEGVAR(medical,enabled,false)) exitWith {};
 
     // Conditions: canInteract
@@ -50,7 +49,9 @@
     if (CBA_missionTime - GVAR(peekLastOpenedOn) > GVAR(peekMedicalInfoReleaseDelay)) then {
         [{
             CBA_missionTime - GVAR(peekLastOpenedOn) > GVAR(peekMedicalInfoReleaseDelay)
-        }, {QGVAR(RscPatientInfo) cutFadeOut 0.3}] call CBA_fnc_waitUntilAndExecute;
+        }, {
+            QGVAR(RscPatientInfo) cutFadeOut 0.3;
+        }] call CBA_fnc_waitUntilAndExecute;
     };
     GVAR(peekLastOpenedOn) = CBA_missionTime;
 }, [DIK_H, [false, true, false]], false, 0] call CBA_fnc_addKeybind;
