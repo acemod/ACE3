@@ -29,7 +29,9 @@ pub fn complete() -> Result<(), String> {
     let mut clipboard = Clipboard::new().map_err(|e| e.to_string())?;
     // Safety: this is all single threaded, so no need to lock
     unsafe {
-        clipboard.set_text(BUFFER.clone()).map_err(|e| e.to_string())?;
+        clipboard
+            .set_text(BUFFER.clone())
+            .map_err(|e| e.to_string())?;
         BUFFER = String::new();
     }
     Ok(())
