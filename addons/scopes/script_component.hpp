@@ -18,6 +18,8 @@
 
 #define DEFAULT_RAIL_BASE_ANGLE 0.0086 // deg
 
+#define MIN_ZOOM_NAKEDEYE 0.2 // Magnification (CfgWeapons opticsZoomMax) that will always be unachievable by the naked eye
+
 // #define DISABLE_DISPERSION
 
 #ifdef DEBUG_ENABLED_SCOPES
