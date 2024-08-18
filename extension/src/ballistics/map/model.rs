@@ -58,6 +58,7 @@ impl Map {
     }
 
     #[allow(dead_code)]
+    #[must_use]
     pub const fn size(&self) -> u32 {
         self.size
     }
