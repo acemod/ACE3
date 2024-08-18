@@ -61,5 +61,5 @@
         if (_this select 3 && random 1 < 0.15) then {
             (_this select 0) call FUNC(blowOffTurret);
         };
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
+    }] call CBA_fnc_addClassEventHandler;
 }] call CBA_fnc_addEventHandler;
