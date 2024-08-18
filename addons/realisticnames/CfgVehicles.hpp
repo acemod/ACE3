@@ -1043,20 +1043,20 @@ class CfgVehicles {
     };
 
     // RPG-32
-    class Weapon_launch_RPG32_ghex_F: Weapon_Base_F {
+    class Weapon_launch_RPG32_ghex_F: Launcher_Base_F {
         displayName = CSTRING(launch_RPG32_ghex);
     };
 
     // P99
-    class Weapon_hgun_P07_khk_F: Weapon_Base_F {
+    class Weapon_hgun_P07_khk_F: Pistol_Base_F {
         displayName = CSTRING(hgun_P07_khk);
     };
-    class Weapon_hgun_P07_blk_F: Weapon_Base_F {
+    class Weapon_hgun_P07_blk_F: Pistol_Base_F {
         displayName = CSTRING(hgun_P07_blk);
     };
 
     // Makarov
-    class Weapon_hgun_Pistol_01_F: Weapon_Base_F {
+    class Weapon_hgun_Pistol_01_F: Pistol_Base_F {
         displayName = CSTRING(hgun_Pistol_01);
     };
 
@@ -1081,12 +1081,12 @@ class CfgVehicles {
     };
 
     // FNX-45 (Green)
-    class Weapon_hgun_Pistol_heavy_01_green_F: Weapon_Base_F {
+    class Weapon_hgun_Pistol_heavy_01_green_F: Pistol_Base_F {
         displayName = CSTRING(hgun_Pistol_heavy_01_green_Name);
     };
 
     // RPG-32 (Green)
-    class Weapon_launch_RPG32_green_F: Weapon_Base_F {
+    class Weapon_launch_RPG32_green_F: Launcher_Base_F {
         displayName = CSTRING(launch_RPG32_green_Name);
     };
 
