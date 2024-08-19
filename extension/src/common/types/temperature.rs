@@ -28,6 +28,7 @@ impl Temperature {
         self.0
     }
 
+    #[allow(dead_code)]
     pub fn as_fahrenheit(self) -> f64 {
         (self.0 - 273.15) * 9.0 / 5.0 + 32.0
     }
