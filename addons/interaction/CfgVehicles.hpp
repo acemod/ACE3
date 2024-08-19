@@ -316,6 +316,12 @@ class CfgVehicles {
                     statement = QUOTE(_player call FUNC(renameGroupUI));
                     showDisabled =1;
                 };
+                class ACE_groupDropDistantUnits {
+                    displayName = CSTRING(groupDropDistantUnits);
+                    condition = QUOTE(call FUNC(canGroupDropDistantUnits));
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    statement = QUOTE(call FUNC(groupDropDistantUnits));
+                };
             };
 
             class ACE_Equipment {
