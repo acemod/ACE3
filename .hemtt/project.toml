@@ -34,32 +34,26 @@ workshop = [
 ]
 
 [hemtt.launch.spe]
-workshop = [
-    "450814997", # CBA_A3
-]
+extends = "default"
 dlc = [
     "spe"
 ]
 
 [hemtt.launch.vn]
-workshop = [
-    "450814997", # CBA_A3's Workshop ID
-]
+extends = "default"
 dlc = [
     "S.O.G. Prairie Fire",
 ]
 
 [hemtt.launch.ws]
-workshop = [
-    "450814997", # CBA_A3's Workshop ID
-]
+extends = "default"
 dlc = [
     "Western Sahara",
 ]
 
 [hemtt.launch.rhs]
+extends = "default"
 workshop = [
-    "450814997", # CBA_A3's Workshop ID
     "843425103", # RHS AFRF Workshop ID
     "843577117", # RHS USAF Workshop ID
     "843593391", # RHS GREF Workshop ID
