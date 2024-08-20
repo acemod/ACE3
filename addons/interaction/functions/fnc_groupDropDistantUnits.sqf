@@ -18,7 +18,7 @@
 params ["_unit"];
 
 {
-    if ((_x distance _unit) > 100) then {
+    if ((_x distance _unit) > (missionNamespace getVariable [QGVAR(groupDropUnitDistance), 100])) then {
         TRACE_1("drop",_x);
         [_x] joinSilent grpNull;
     };
