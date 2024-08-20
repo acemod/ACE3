@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * (vehicle player) call ace_vehicle_damage_fnc_blowOffTurret
+ * cursorObject call ace_vehicle_damage_fnc_blowOffTurret
  *
  * Public: No
  */
@@ -19,6 +19,7 @@
 // The sudden change in the model would cause nearby PhysX objects to get stuck
 [{
     params ["_vehicle"];
+    TRACE_1("blowOffTurret",_vehicle);
 
     (getArray (configOf _vehicle >> QGVAR(turret))) params [["_model", "", [""]], ["_offset", [0, 0, 0], [[]], 3]];
 

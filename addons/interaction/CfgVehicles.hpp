@@ -439,7 +439,7 @@ class CfgVehicles {
         class GVAR(anims): GVAR(anims) {
             class showBags {
                 phase = 0;
-                selections[] = {"vhc_bags"};
+                positions[] = {"_target selectionPosition ['vhc_bags', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"B_Carryall_cbr"};
                 name = "$STR_BACKPACK_CONTAINER_NAME";
                 text = "$STR_BACKPACK_CONTAINER_NAME";
@@ -450,7 +450,7 @@ class CfgVehicles {
         class GVAR(anims) {
             class showBags {
                 phase = 0;
-                selections[] = {"vhc_bags"};
+                positions[] = {"_target selectionPosition ['vhc_bags', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
                 name = "$STR_a3_cfgvehicleclasses_backpacks0";
                 text = "$STR_a3_cfgvehicleclasses_backpacks0";
@@ -490,13 +490,13 @@ class CfgVehicles {
         class GVAR(anims) {
             class showBags {
                 phase = 0;
-                selections[] = {"vhc_bags"};
+                positions[] = {"_target selectionPosition ['vhc_bags', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"B_Carryall_cbr"};
                 name = "$STR_BACKPACK_CONTAINER_NAME";
                 text = "$STR_BACKPACK_CONTAINER_NAME";
             };
             class showBags2: showBags {
-                selections[] = {"vhc_bags2"};
+                positions[] = {"_target selectionPosition ['vhc_bags2', 'FireGeometry', 'AveragePoint']"};
             };
         };
     };
