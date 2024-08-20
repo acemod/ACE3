@@ -1,7 +1,7 @@
 ---
 layout: wiki
 title: Magazine Repack Framework
-description: Explains how to set-up the disable repack.
+description: Explains how to disable repacking.
 group: framework
 order: 5
 parent: wiki
@@ -14,7 +14,7 @@ version:
 
 ## 1. Config Values
 
-### 1.1 Disable Magazine Repack
+### 1.1 Disable Magazine Repacking
 
 ```cpp
 class CfgMagazines {
