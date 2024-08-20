@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-(_unit == leader _unit) && {missionNamespace getVariable [QGVAR(groupDropUnitDistance), 100] > -1}
+(_unit == leader _unit) && {missionNamespace getVariable [QGVAR(groupDropUnitDistance), 100] > 0}
