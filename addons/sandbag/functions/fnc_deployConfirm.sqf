@@ -18,8 +18,8 @@
 params ["_unit"];
 
 // enable running again
-[_unit, "forceWalk", "ACE_Sandbag", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_Sandbag", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // remove sandbag from inventory
 _unit removeItem "ACE_Sandbag_empty";
