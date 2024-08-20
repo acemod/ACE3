@@ -420,15 +420,11 @@ class CfgVehicles {
         class GVAR(anims) {
             class showBags {
                 phase = 0;
-                // Rotate interactions with turret rotation
-                positions[] = {
-                    "[0, -1.6, 0] vectorAdd ([[1, -1, 0.1], [0, 0, 1], deg (_target animationPhase 'MainTurret')] call CBA_fnc_vectRotate3D)",
-                    "[0, -1.6, 0] vectorAdd ([[-1, -1, 0.1], [0, 0, 1], deg (_target animationPhase 'MainTurret')] call CBA_fnc_vectRotate3D)"
-                };
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
                 name = "$STR_a3_cfgvehicleclasses_backpacks0";
                 text = "$STR_a3_cfgvehicleclasses_backpacks0";
+                distance = 3;
             };
         };
     };
