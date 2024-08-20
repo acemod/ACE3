@@ -8,11 +8,11 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "gm_core",
-            "ace_refuel"
+            "ace_repair"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {};
+        authors[] = {"johnb43"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
 
@@ -20,5 +20,4 @@ class CfgPatches {
     };
 };
 
-#include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
