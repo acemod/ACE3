@@ -24,7 +24,6 @@ private _unitMagCounts = [];
 {
     _x params ["_xClassname", "_xCount", "_xLoaded", "_xType"];
 
-    private _xFullMagazineCount = getNumber (configFile >> "CfgMagazines" >> _xClassname >> "count");
     private _configMagazine = getNumber (configFile >> "CfgMagazines" >> _xClassname);
     private _xFullMagazineCount = getNumber (_configMagazine >> "count");
     private _isRepackDisabled = getNumber (_configMagazine >> "ace_disableRepacking") == 1;
