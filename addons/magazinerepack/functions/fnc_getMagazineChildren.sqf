@@ -18,13 +18,15 @@
 
 params ["_target", "_player"];
 
+private _cfgMagazines = configFile >> "CfgMagazines";
+
 // get all mags and ammo count
 private _unitMagazines = [];
 private _unitMagCounts = [];
 {
     _x params ["_xClassname", "_xCount", "_xLoaded", "_xType"];
 
-    private _configMagazine = getNumber (configFile >> "CfgMagazines" >> _xClassname);
+    private _configMagazine = _cfgMagazines >> _xClassname;
     private _xFullMagazineCount = getNumber (_configMagazine >> "count");
     private _isRepackDisabled = getNumber (_configMagazine >> "ace_disableRepacking") == 1;
 
