@@ -74,7 +74,7 @@ Adding new elements through scripting is currently not possible.
 
 ### 2.2 Hide UI Keybind
 
-There is a keybind that will hide most UI elements
+There is a keybind that will hide most UI elements (<kbd>Ctrl</kbd>-<kbd>F12</kbd> by default).
 It triggers an event that is listenable allowing other mods to hide their displays.
 
 | Event Key | Parameters | Locality | Type | Description |
