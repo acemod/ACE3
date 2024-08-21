@@ -112,7 +112,7 @@ Cela n'inclut pas les effets d'explosion.</French>
             <Korean>차량 내 탄약 유폭을 활성화합니다. 차량에 탄약이 남아 있는 동안 탄약 발사체를 발사합니다.\n여기엔 화재 효과가 포함되지 않습니다.</Korean>
             <Italian>Abilita l'esplosione delle munizioni dei veicoli. Spara via pezzi di munizioni se il veicolo ha ancora munizioni rimanenti.\nNon include gli effetti di fuoco.</Italian>
             <German>Aktiviert Durchzündung von Fahrzeugmunition. Schleudert Munitionsfragmente umher wenn das Fahrzeug noch Munition an Bord hat.\nBrandeffekte sind nicht mit einbegriffen.</German>
-            <French>Permet l'explosion des munitions du véhicule. Tire des morceaux de munitions si le véhicule a encore des munitions restantes. \nIl n'y a pas d'effets de feu.</French>
+            <French>Permet l'explosion des munitions du véhicule. Tire des morceaux de munitions si le véhicule a encore des munitions restantes.\nIl n'y a pas d'effets de feu.</French>
         </Key>
         <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
             <English>Enable ammo box cook-off</English>
