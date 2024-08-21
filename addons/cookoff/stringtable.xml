@@ -32,8 +32,7 @@
             <Korean>차량 유폭 효과를 활성화합니다.\n여기엔 탄약 유폭이 포함되지 않습니다.</Korean>
             <Italian>Abilita effetti di incendio del veicolo dovuto all'esplosione delle munizioni.\nQuesto non include gli effetti di esplosione.</Italian>
             <German>Aktiviert Fahrzeug Brandeffekte durch Durchzündung.\nExplosionseffekte sind nicht mit einbegriffen.</German>
-            <French>Permet d'obtenir des effets de feu de véhicule à partir de munitions qui explosent.
-Cela n'inclut pas les effets d'explosion.</French>
+            <French>Permet d'obtenir des effets de feu de véhicule à partir de munitions qui explosent.\nCela n'inclut pas les effets d'explosion.</French>
         </Key>
         <Key ID="STR_ACE_CookOff_cookoffDuration_name">
             <English>Vehicle cook-off fire duration multiplier</English>
