@@ -119,6 +119,8 @@ private _statement = {
                         };
                     };
                 } forEach _items;
+            } else {
+                [LELSTRING(common,disabled)] call EFUNC(common,displayTextStructured);
             };
 
             if (!_success) exitWith {};
