@@ -1,3 +1,4 @@
+// Attachments
 class optic_Arco;
 class optic_arco_hex_lxWS: optic_Arco {
     displayName = SUBCSTRING(arco_hex_Name);
