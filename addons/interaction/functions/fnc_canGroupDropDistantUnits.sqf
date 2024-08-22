@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Checks if the unit can drop distance units from their group
+ * Checks if the unit can drop distant units from their group
  *
  * Arguments:
  * 0: Unit <OBJECT>

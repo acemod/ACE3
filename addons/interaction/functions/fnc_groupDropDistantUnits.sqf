@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Drops distance units from their group
+ * Drops distant units from their group
  *
  * Arguments:
  * 0: Unit <OBJECT>
