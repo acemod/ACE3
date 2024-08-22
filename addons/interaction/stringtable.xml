@@ -1330,6 +1330,7 @@
         <Key ID="STR_ACE_Interaction_SettingAnimActionsName">
             <English>Interaction with animations</English>
             <Russian>Взаимодействие с анимациями</Russian>
+            <French>Interaction avec les animations</French>
         </Key>
     </Package>
 </Project>
