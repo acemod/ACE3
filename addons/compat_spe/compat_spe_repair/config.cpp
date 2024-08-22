@@ -7,12 +7,16 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "gm_core",
-            "ace_refuel"
+            "ww2_spe_assets_c_weapons_infantryweapons_c",
+            "ww2_spe_assets_c_vehicles_staticweapons_c",
+            "ww2_spe_assets_c_vehicles_weapons_c",
+            "ww2_spe_core_f_system_staticweapons_f",
+            "ww2_spe_core_c_core_c_eventhandlers",
+            "ace_repair"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {};
+        authors[] = {"johnb43"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
 
@@ -20,5 +24,4 @@ class CfgPatches {
     };
 };
 
-#include "CfgEventHandlers.hpp"
 #include "CfgVehicles.hpp"
