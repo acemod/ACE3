@@ -28,8 +28,8 @@ if (currentWeapon _unit != _weapon) exitWith {
 };
 
 // Unlock safety
-if (_weapon in (_unit getVariable [QEGVAR(safemode,safedWeapons), []])) exitWith {
-    [_unit, _weapon, _weapon] call EFUNC(safemode,unlockSafety);
+if ((["ace_safemode"] call EFUNC(common,isModLoaded)) && {[_unit, _weapon] call EFUNC(safemode,getWeaponSafety)}) exitWith {
+    [_unit, _weapon, false] call EFUNC(safemode,setWeaponSafety);
 };
 
 private _modes = _weapon call EFUNC(common,getWeaponModes);

@@ -65,7 +65,7 @@ class CfgVehicles {
         class ace_csw {
             enabled = 1;
             proxyWeapon = "CUP_proxy_DSHKM";
-            magazineLocation = "_target selectionPosition 'magazine'";
+            magazineLocation = "_target selectionPosition 'otocvez'";
             disassembleWeapon = "CUP_DSHKM_carry";
             disassembleTurret = "ace_csw_kordTripod";
             desiredAmmo = 100;
@@ -119,7 +119,7 @@ class CfgVehicles {
         class ace_csw {
             enabled = 1;
             proxyWeapon = "CUP_proxy_MK19";
-            magazineLocation = "_target selectionPosition 'magazine'";
+            magazineLocation = "_target selectionPosition 'otochlaven'";
             disassembleWeapon = "CUP_MK19_carry";
             disassembleTurret = "ace_csw_m3TripodLow";
             desiredAmmo = 48;
@@ -165,7 +165,7 @@ class CfgVehicles {
         class ace_csw {
             enabled = 1;
             proxyWeapon = "CUP_proxy_SPG9";
-            magazineLocation = "_target selectionPosition 'otochlaven'";
+            magazineLocation = "_target selectionPosition 'handle'";
             disassembleWeapon = "CUP_SPG9_carry";
             disassembleTurret = "ace_csw_spg9Tripod";
             desiredAmmo = 1;

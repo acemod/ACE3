@@ -61,6 +61,9 @@ private _powerCoef = RECOIL_COEF * linearConversion [0, 1, random 1, _recoil sel
 
 if (isWeaponRested _unit) then {_powerMod = _powerMod - 0.07};
 if (isWeaponDeployed _unit) then {_powerMod = _powerMod - 0.11};
+if (_weapon isEqualTo secondaryWeapon _unit) then {
+    _powerCoef = _powerCoef + 25.0;
+};
 
 private _camshake = [
     _powerCoef * (BASE_POWER + _powerMod) max 0,
