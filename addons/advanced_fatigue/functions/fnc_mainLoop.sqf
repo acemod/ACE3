@@ -140,7 +140,7 @@ systemChat format ["---- velocity %1 - respiratoryRate: %2 ----", (vectorMagnitu
 
 [ACE_player, _perceivedFatigue, GVAR(anReserve) == 0, _fwdAngle, _sideAngle] call FUNC(handleEffects);
 
-if (GVAR(enableStaminaBar)) then {
+if (GVAR(enableStaminaBarRealized)) then {
     [GVAR(anReserve) / AN_MAXRESERVE] call FUNC(handleStaminaBar);
 };
 
