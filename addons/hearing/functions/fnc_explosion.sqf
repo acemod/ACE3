@@ -6,13 +6,12 @@
  * Arguments:
  * 0: Projectile <OBJECT>
  * 1: Explosion position ASL <ARRAY>
- * 2: Velocity <ARRAY> (unused)
  *
  * Return Value:
  * None
  *
  * Example:
- * [_projectile, [0, 0, 0], [0, 0, 0]] call ace_hearing_fnc_explosion
+ * [_projectile, [0, 0, 0]] call ace_hearing_fnc_explosion
  *
  * Public: No
  */

@@ -60,10 +60,11 @@ class CfgVehicles {
     class rhsusf_HEMTT_A4_base: Truck_01_base_F {
         class EGVAR(interaction,anims) {
             class hide_spare {
-                positions[] = {"_target selectionPosition 'sparewheel' vectorAdd [0.6, 0.6, -0.4]"};
+                positions[] = {"_target selectionPosition ['sparewheel', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = ECSTRING(repair,RemoveWheel);
                 text = ECSTRING(repair,RemovingWheel);
+                distance = 2.5;
             };
         };
     };
@@ -72,7 +73,7 @@ class CfgVehicles {
     class rhsusf_m1151_base: MRAP_01_base_F {
         class EGVAR(interaction,anims) {
             class hide_spare {
-                positions[] = {"_target selectionPosition 'sparewheel' vectorAdd [-0.465, 0, 0]"};
+                positions[] = {"_target selectionPosition ['sparewheel', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = ECSTRING(repair,RemoveWheel);
                 text = ECSTRING(repair,RemovingWheel);
@@ -83,7 +84,7 @@ class CfgVehicles {
     class rhsusf_M1165A1_GMV_SAG2_base: rhsusf_m1151_base {
         class EGVAR(interaction,anims) {
             class hide_spare {
-                positions[] = {"_target selectionPosition 'sparewheel_gmv' vectorAdd [0, -0.44, 0]"};
+                positions[] = {"_target selectionPosition ['sparewheel_gmv', 'Geometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = ECSTRING(repair,RemoveWheel);
                 text = ECSTRING(repair,RemovingWheel);
@@ -94,7 +95,7 @@ class CfgVehicles {
     class rhsusf_rg33_base: MRAP_01_base_F {
         class EGVAR(interaction,anims) {
             class hide_spare {
-                selections[] = {"sparewheel"};
+                positions[] = {"_target selectionPosition ['sparewheel', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = ECSTRING(repair,RemoveWheel);
                 text = ECSTRING(repair,RemovingWheel);
@@ -105,7 +106,7 @@ class CfgVehicles {
     class rhsusf_M1239_base: MRAP_01_base_F {
         class EGVAR(interaction,anims) {
             class hide_spare {
-                selections[] = {"sparewheel"};
+                positions[] = {"_target selectionPosition ['sparewheel', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = ECSTRING(repair,RemoveWheel);
                 text = ECSTRING(repair,RemovingWheel);
@@ -116,7 +117,7 @@ class CfgVehicles {
     class rhsusf_MATV_base: MRAP_01_base_F {
         class EGVAR(interaction,anims) {
             class hide_spare {
-                selections[] = {"sparewheel"};
+                positions[] = {"_target selectionPosition ['sparewheel', 'Geometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = ECSTRING(repair,RemoveWheel);
                 text = ECSTRING(repair,RemovingWheel);

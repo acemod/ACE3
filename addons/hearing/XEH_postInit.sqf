@@ -11,6 +11,17 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 };
 
+["CBA_settingsInitialized", {
+    TRACE_1("settingInit - common",GVAR(enableCombatDeafness));
+    // Only install event handler if combat deafness is enabled
+    if (!GVAR(enableCombatDeafness)) exitWith {};
+
+    [{ // Convert ace_common's local explosion to a hearing global explosion event 
+        TRACE_1("Explode",_this);
+        [QGVAR(explosion), _this select [0,2]] call CBA_fnc_globalEvent; // trim unused 3rd arg for network savings
+    }] call EFUNC(common,addExplosionEventHandler);
+}] call CBA_fnc_addEventHandler;
+
 if (!hasInterface) exitWith {};
 
 #include "initKeybinds.inc.sqf"
@@ -27,7 +38,7 @@ GVAR(volumeAttenuation) = 1;
 GVAR(lastPlayerVehicle) = objNull;
 
 ["CBA_settingsInitialized", {
-    TRACE_1("settingInit",GVAR(enableCombatDeafness));
+    TRACE_1("settingInit - client",GVAR(enableCombatDeafness));
 
     // Only run PFEH and install event handlers if combat deafness is enabled
     if (!GVAR(enableCombatDeafness)) exitWith {};
@@ -91,17 +102,6 @@ GVAR(lastPlayerVehicle) = objNull;
 
         call FUNC(updateHearingProtection);
     }, true] call CBA_fnc_addPlayerEventHandler;
-
-    addMissionEventHandler ["ProjectileCreated", {
-        params ["_projectile"];
-
-        if (!local _projectile) exitWith {};
-
-        // Rockets only explode on local clients
-        _projectile addEventHandler ["Explode", {
-            [QGVAR(explosion), _this] call CBA_fnc_globalEvent;
-        }];
-    }];
 
     // Update protection on possible helmet change
     ["loadout", LINKFUNC(updateHearingProtection), false] call CBA_fnc_addPlayerEventHandler;

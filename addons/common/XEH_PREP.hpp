@@ -269,6 +269,7 @@ PREP(_handleRequestAllSyncedEvents);
 // other eventhandlers
 PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
+PREP(addExplosionEventHandler);
 PREP(addMapMarkerCreatedEventHandler);
 PREP(addPlayerEH);
 
