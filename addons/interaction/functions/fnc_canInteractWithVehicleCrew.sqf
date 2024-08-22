@@ -18,6 +18,9 @@
 
 params ["_player", "_vehicle"];
 
+if (GVAR(interactWithEnemyCrew) == 2) exitWith { true };
+if ((GVAR(interactWithEnemyCrew) == 1) && {_vehicle isKindOf "StaticWeapon"}) exitWith { true };
+
 private _crew = crew _vehicle;
 
 // If vehicle is empty, quit
