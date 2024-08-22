@@ -22,5 +22,3 @@ private _dir = [sin _yaw * cos _pitch, cos _yaw * cos _pitch, sin _pitch];
 private _up = [[sin _roll, -sin _pitch, cos _roll * cos _pitch], -_yaw] call BIS_fnc_rotateVector2D;
 
 _projectile setVectorDirAndUp [_dir, _up];
-
-

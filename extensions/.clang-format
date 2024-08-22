@@ -1,9 +1,0 @@
-BasedOnStyle: Google
-IndentWidth: 4
-ColumnLimit: 160
-DerivePointerAlignment: false
-PointerAlignment: Left
-NamespaceIndentation: All
-IncludeBlocks: Merge
-
-AllowShortBlocksOnASingleLine: true

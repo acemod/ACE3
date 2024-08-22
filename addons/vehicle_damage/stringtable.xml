@@ -12,6 +12,7 @@
             <Korean>ACE 고급 차량 피해</Korean>
             <Russian>ACE Продвинутое повреждение техники</Russian>
             <Spanish>ACE Daño avanzado de vehículos</Spanish>
+            <Portuguese>ACE Dano avançãdo de veículos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_setting_description">
             <English>Enable/Disable advanced vehicle damage</English>
@@ -24,6 +25,7 @@
             <Korean>고급 차량 피해 활성화/비활성화</Korean>
             <Russian>Включить/выключить продвинутое повреждение техники</Russian>
             <Spanish>Habilitar/Deshabilitar el daño avanzado de vehículos</Spanish>
+            <Portuguese>Ativar/Desativar dano avançado de veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_description">
             <English>Enable/Disable advanced car damage (Experimental)</English>
@@ -36,6 +38,7 @@
             <Korean>고급 차량 피해(실험용) 활성화/비활성화</Korean>
             <Russian>Включить/выключить продвинутое повреждение машин (экспериментальное)</Russian>
             <Spanish>Habilita/Deshabilita el daño avanzado de coche (Experimental)</Spanish>
+            <Portuguese>Ativar/Desativar dano avançado de carro (Experimental)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_enable">
             <English>Enable/Disable advanced car damage</English>
@@ -48,30 +51,7 @@
             <Korean>고급 차량 피해 활성화/비활성화</Korean>
             <Russian>Продвинутое повреждение машин</Russian>
             <Spanish>Habilitar/Deshabilitar daño avanzado de coche (Experimental)</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Vehicle_Damage_removeAmmoAfterCookoff_setting_description">
-            <English>Removes all vehicle ammo after cook-off</English>
-            <Japanese>誘爆後に車両から全ての弾薬を削除</Japanese>
-            <French>Retire toutes les munitions des véhicules après une auto-inflammation.</French>
-            <German>Entfernt die gesamte Munition nach dem Durchzünden der Munition eines Fahrzeuges.</German>
-            <Italian>Rimuove tutte le munizioni dal veicolo dopo l'esplosione delle stesse</Italian>
-            <Polish>Usuwa całą amunicję z pojazdu po samozapłonie</Polish>
-            <Chinesesimp>殉爆后移除所有车辆弹药</Chinesesimp>
-            <Korean>쿡오프 현상 후 차량에서 모든 탄약을 제거합니다.</Korean>
-            <Russian>Удалять все боеприпасы из техники после их детонации</Russian>
-            <Spanish>Elimina toda la munición del vehículo despues ser inducida a detonar por calor</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Vehicle_Damage_removeAmmoAfterCookoff_setting_enable">
-            <English>Enable/Disable Ammo Removal During Cook-Off</English>
-            <Japanese>誘爆中の弾薬除去を有効/無効にする</Japanese>
-            <French>Retirer les munitions durant l'auto-inflammation</French>
-            <German>Aktiviert/Deaktiviert Entfernung der Munition beim Durchzünden</German>
-            <Italian>Abilita rimozione munizioni dopo l'esplosione</Italian>
-            <Polish>Włącz/Wyłącz usuwanie amunicji podczas samozapłonu</Polish>
-            <Chinesesimp>启用/禁用殉爆过程中的弹药移除功能</Chinesesimp>
-            <Korean>쿡오프시 탄약 제거 활성화/비활성화</Korean>
-            <Russian>Удалять боеприпасы из-за детонации</Russian>
-            <Spanish>Habilita/Deshabilita ka eliminación de munición durante la detonación inducida por calor</Spanish>
+            <Portuguese>Ativar/Desativar dano avançado de carro</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_generic_turret_wreck">
             <English>Wreck (Turret)</English>

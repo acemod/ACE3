@@ -37,12 +37,10 @@ if (_newDamage >= 15) exitWith {
     TRACE_2("immediate destruction - high damage",_newDamage,_currentPartDamage);
     [_vehicle] call FUNC(knockOut);
     [_vehicle, 1] call FUNC(handleDetonation);
-    // kill everyone inside for very insane damage
+    // Kill everyone inside for very insane damage
     {
-        _x setDamage 1;
-        _x setVariable [QEGVAR(medical,lastDamageSource), _injurer];
-        _x setVariable [QEGVAR(medical,lastInstigator), _injurer];
-    } forEach crew _vehicle;
+        [QGVAR(medicalDamage), [_x, _injurer, _injurer, true], _x] call CBA_fnc_targetEvent;
+    } forEach (crew _vehicle);
     _vehicle setDamage 1;
     _return = false;
     _return
@@ -119,7 +117,7 @@ if (_isCar) then {
     _ammoEffectiveness = (_ammoEffectiveness + (_ammoEffectiveness * 0.5)) min 1;
 };
 
-private _currentVehicleAmmo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);
+private _currentVehicleAmmo = _vehicle call EFUNC(cookoff,getVehicleAmmo);
 private _chanceOfDetonation = 0;
 private _explosiveAmmoCount = 0;
 private _nonExplosiveAmmoCount = 0;
@@ -163,7 +161,7 @@ switch (_hitArea) do {
             _chanceOfFire = 0; // no cookoff for cars
         };
 
-        if ([_vehicle, _chanceToDetonate, _currentVehicleAmmo, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
+        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
             [_vehicle] call FUNC(knockOut);
         };
 
@@ -191,7 +189,7 @@ switch (_hitArea) do {
             _chanceOfFire = 0; // no cookoff for cars
         };
 
-        if ([_vehicle, _chanceToDetonate, _currentVehicleAmmo, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
+        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
             [_vehicle, _hitIndex, _hitpointName, 0.89 * _penChance] call FUNC(addDamage);
             [_vehicle] call FUNC(knockOut);
         };
@@ -265,7 +263,7 @@ switch (_hitArea) do {
             _chanceOfFire = 0; // no cookoff for cars
         };
 
-        if ([_vehicle, _chanceToDetonate, _currentVehicleAmmo, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
+        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
             [_vehicle] call FUNC(knockOut);
         };
 
@@ -315,11 +313,11 @@ switch (_hitArea) do {
     case "slat": {
         TRACE_2("hit slat",_warheadType,_warheadTypeStr);
         // incredibly small chance of AP destroying SLAT
-        if (_warheadType isEqualTo WARHEAD_TYPE_HEAT || { _warheadType isEqualTo WARHEAD_TYPE_TANDEM } || { _warheadType isEqualTo WARHEAD_TYPE_HE } || { 0.01 > random 1 }) then {
+        if (_warheadType in [WARHEAD_TYPE_HE, WARHEAD_TYPE_AP, WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM] || { 0.01 > random 1 }) then {
             private _currentDamage = _vehicle getHitIndex _hitIndex;
             TRACE_3("damaged slat",_warheadType,_warheadTypeStr,_currentDamage);
 
-            if (_warheadType isEqualTo WARHEAD_TYPE_HEAT || { _warheadType isEqualTo WARHEAD_TYPE_TANDEM }) then {
+            if (_warheadType in [WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM, WARHEAD_TYPE_AP]) then {
                 [_vehicle, _hitIndex, _hitpointName, 1] call FUNC(addDamage);
             } else {
                 [_vehicle, _hitIndex, _hitpointName, _currentDamage + (0.5 max random 1)] call FUNC(addDamage);
@@ -332,7 +330,7 @@ switch (_hitArea) do {
     };
     case "era": {
         TRACE_2("hit era",_warheadType,_warheadTypeStr);
-        if (_warheadType isEqualTo WARHEAD_TYPE_HEAT || { _warheadType isEqualTo WARHEAD_TYPE_TANDEM } || { 0.05 > random 1 }) then {
+        if (_warheadType in [WARHEAD_TYPE_AP, WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM] || { 0.05 > random 1 }) then {
             private _currentDamage = _vehicle getHitIndex _hitIndex;
             TRACE_3("damaged era",_warheadType,_warheadTypeStr,_currentDamage);
             [_vehicle, _hitIndex, _hitpointName, 1] call FUNC(addDamage);

@@ -18,6 +18,8 @@
 params ["_vehicle"];
 TRACE_2("abandon",_vehicle,(crew _vehicle) select {alive _x});
 
+if (_vehicle getVariable [QGVAR(allowCrewInImmobile), false]) exitWith {}; // check for API
+
 [{
     params ["_vehicle"];
     _vehicle allowCrewInImmobile false;

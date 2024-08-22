@@ -70,6 +70,7 @@ GVAR(no_cams) sort true;
     //Close monitor if we no longer have the item:
     if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable [QGVAR(monitor), displayNull])}) then {
         closeDialog 0;
+        [QGVAR(monitorClosed), [ACE_player]] call CBA_fnc_localEvent;
     };
 
     GVAR(nearHuntIRs) = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
@@ -113,6 +114,7 @@ GVAR(no_cams) sort true;
         if (player != ACE_player) then {
             player remoteControl ACE_player;
         };
+        [QGVAR(monitorClosed), [ACE_player]] call CBA_fnc_localEvent;
     };
 
     switch (GVAR(ZOOM)) do {

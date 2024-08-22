@@ -20,7 +20,7 @@
     false,
     true,
     {[QGVAR(disableNegativeRating), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -36,6 +36,16 @@
     format ["ACE %1", LLSTRING(DisplayName)],
     true,
     true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableAnimActions), "CHECKBOX",
+    LSTRING(SettingAnimActionsName),
+    format ["ACE %1", LLSTRING(DisplayName)],
+    true,
+    true,
+    {[QGVAR(enableAnimActions), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [

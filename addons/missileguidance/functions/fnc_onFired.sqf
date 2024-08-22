@@ -231,7 +231,7 @@ if (_onFiredFunc != "") then {
 [LINKFUNC(guidancePFH),0, _args ] call CBA_fnc_addPerFrameHandler;
 
 if (GVAR(debug_enableMissileCamera)) then {
-    [_projectile] call GVAR(dev_fnc_projectileCamera);
+    [_projectile] call FUNC(dev_ProjectileCamera);
 };
 
 
