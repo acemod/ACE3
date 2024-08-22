@@ -428,8 +428,8 @@ class CfgVehicles {
                 phase = 0;
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
-                name = "$STR_a3_cfgvehicleclasses_backpacks0";
-                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
                 distance = 3;
             };
         };
@@ -443,8 +443,8 @@ class CfgVehicles {
                 phase = 0;
                 positions[] = {"_target selectionPosition ['vhc_bags', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"B_Carryall_cbr"};
-                name = "$STR_BACKPACK_CONTAINER_NAME";
-                text = "$STR_BACKPACK_CONTAINER_NAME";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
         };
     };
@@ -454,8 +454,8 @@ class CfgVehicles {
                 phase = 0;
                 positions[] = {"_target selectionPosition ['vhc_bags', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
-                name = "$STR_a3_cfgvehicleclasses_backpacks0";
-                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
         };
     };
@@ -494,8 +494,8 @@ class CfgVehicles {
                 phase = 0;
                 positions[] = {"_target selectionPosition ['vhc_bags', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"B_Carryall_cbr"};
-                name = "$STR_BACKPACK_CONTAINER_NAME";
-                text = "$STR_BACKPACK_CONTAINER_NAME";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
             class showBags2: showBags {
                 positions[] = {"_target selectionPosition ['vhc_bags2', 'FireGeometry', 'AveragePoint']"};
@@ -513,8 +513,8 @@ class CfgVehicles {
                 selections[] = {"vhc_bags"};
                 positions[] = {"private _pos = _target selectionPosition 'vhc_bags'; _pos set [0, -(_pos select 0)]; _pos"}; // Mirror position to other side of vehicle
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
-                name = "$STR_a3_cfgvehicleclasses_backpacks0";
-                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
         };
     };
@@ -536,8 +536,8 @@ class CfgVehicles {
                 phase = 0;
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
-                name = "$STR_a3_cfgvehicleclasses_backpacks0";
-                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
         };
     };
@@ -548,8 +548,8 @@ class CfgVehicles {
                 phase = 0;
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
-                name = "$STR_a3_cfgvehicleclasses_backpacks0";
-                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
         };
     };
@@ -564,8 +564,8 @@ class CfgVehicles {
                 phase = 0;
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
-                name = "$STR_a3_cfgvehicleclasses_backpacks0";
-                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
         };
     };

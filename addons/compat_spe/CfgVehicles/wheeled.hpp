@@ -85,8 +85,8 @@ class SPE_G503_MB_base: SPE_Car_base {
         class hide_musette_source {
             positions[] = {{0.8, -0.97, -0.6}, {-0.8, -0.92, -0.6}};
             items[] = {"B_SPE_US_M36", "B_SPE_US_M36"};
-            name = "$STR_a3_cfgvehicleclasses_backpacks0";
-            text = "$STR_a3_cfgvehicleclasses_backpacks0";
+            name = "$STR_CTH_B_SPE_US_M36";
+            text = "$STR_CTH_B_SPE_US_M36";
         };
     };
 };
