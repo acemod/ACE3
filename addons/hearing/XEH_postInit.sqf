@@ -16,16 +16,10 @@ if (isServer) then {
     // Only install event handler if combat deafness is enabled
     if (!GVAR(enableCombatDeafness)) exitWith {};
 
-    addMissionEventHandler ["ProjectileCreated", {
-        params ["_projectile"];
-
-        if (!local _projectile) exitWith {};
-
-        // Rockets only explode on local clients
-        _projectile addEventHandler ["Explode", {
-            [QGVAR(explosion), _this] call CBA_fnc_globalEvent;
-        }];
-    }];
+    [{ // Convert ace_common's local explosion to a hearing global explosion event 
+        TRACE_1("Explode",_this);
+        [QGVAR(explosion), _this select [0,2]] call CBA_fnc_globalEvent; // trim unused 3rd arg for network savings
+    }] call EFUNC(common,addExplosionEventHandler);
 }] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};
