@@ -3,6 +3,39 @@
 [
     "CBA_settingsInitialized",
     {
+
+        [{
+            params ["_projectile", "_posASL"];
+
+            if (_projectile getVariable [QGVAR(blacklisted), false]) exitWith {};
+
+            if (GVAR(reflectionsEnabled)) then {
+                [_posASL, _ammo] call FUNC(doReflections);
+            };
+
+            private _ammo = typeOf _projectile;
+            if !(_ammo call FUNC(shouldFrag)) exitWith {};
+            private _shotParents = getShotParents _projectile;
+
+            // only let a unit make a frag event once per second
+            private _instigator = _shotParents#1;
+            if (CBA_missionTime < (_instigator getVariable [QGVAR(nextFragEvent), -1])) exitWith {};
+            _instigator setVariable [QGVAR(nextFragEvent), CBA_missionTime + ACE_FRAG_FRAG_UNIT_HOLDOFF];
+
+            // Wait a frame to make sure it doesn't target the dead
+            [
+                { [QGVAR(frag_eh), _this] call CBA_fnc_serverEvent; },
+                [_posASL, _ammo, [objNull, _instigator]]
+            ] call CBA_fnc_execNextFrame;
+
+        }] call EFUNC(common,addExplosionEventHandler);
+
+
+
+#ifndef DEBUG_MODE_DRAW
+        if (GVAR(spallEnabled)) exitWith {};
+#endif
+
         ["ace_firedPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
         ["ace_firedNonPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
         ["ace_firedPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
