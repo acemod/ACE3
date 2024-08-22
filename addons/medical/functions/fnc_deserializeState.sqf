@@ -15,6 +15,13 @@
  *
  * Public: Yes
  */
+
+if (!EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [LINKFUNC(deserializeState), _this];
+};
+
+if !(GETEGVAR(medical,enabled,false)) exitWith {};
+
 params [["_unit", objNull, [objNull]], ["_json", "{}", [""]]];
 
 // Don't run in scheduled environment

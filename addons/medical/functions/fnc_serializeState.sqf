@@ -10,10 +10,17 @@
  * Serialized state as JSON string <STRING>
  *
  * Example:
- * [player] call ace_medical_fnc_serializeState
+ * player call ace_medical_fnc_serializeState
  *
  * Public: Yes
  */
+
+if (!EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [LINKFUNC(serializeState), _this];
+};
+
+if !(GETEGVAR(medical,enabled,false)) exitWith {""};
+
 params [["_unit", objNull, [objNull]]];
 
 private _state = [] call CBA_fnc_createNamespace;

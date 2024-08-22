@@ -85,7 +85,7 @@
     "LIST",
     [LSTRING(ConvertItems_DisplayName), LSTRING(ConvertItems_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1, 2], [ELSTRING(common,Enabled), LSTRING(ConvertItems_RemoveOnly), ELSTRING(common,Disabled)], 0],
+    [[0, 1], [ELSTRING(common,Enabled), LSTRING(ConvertItems_RemoveOnly)], 0],
     1,
     {[QGVAR(convertItems), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart

@@ -4,57 +4,61 @@ if (!hasInterface) exitWith {};
 
 #include "initKeybinds.inc.sqf"
 
-GVAR(target) = objNull;
-GVAR(previousTarget) = objNull;
-GVAR(selectedBodyPart) = 0;
-GVAR(selectedCategory) = "triage";
+["CBA_settingsInitialized", {
+    if !(GETEGVAR(medical,enabled,false)) exitWith {};
 
-GVAR(lastOpenedOn) = -1;
-GVAR(pendingReopen) = false;
+    GVAR(target) = objNull;
+    GVAR(previousTarget) = objNull;
+    GVAR(selectedBodyPart) = 0;
+    GVAR(selectedCategory) = "triage";
 
-GVAR(menuPFH) = -1;
+    GVAR(lastOpenedOn) = -1;
+    GVAR(pendingReopen) = false;
 
-GVAR(peekLastOpenedOn) = -1;
-GVAR(peekOnHitLastOpenedOn) = -1;
+    GVAR(menuPFH) = -1;
 
-GVAR(selfInteractionActions) = [];
-[] call FUNC(addTreatmentActions);
-[] call FUNC(collectActions);
+    GVAR(peekLastOpenedOn) = -1;
+    GVAR(peekOnHitLastOpenedOn) = -1;
 
-[QEGVAR(interact_menu,newControllableObject), {
-    params ["_type"]; // string of the object's classname
-    if !(_type isKindOf "CAManBase") exitWith {};
-    {
-        _x set [0, _type];
-        _x call EFUNC(interact_menu,addActionToClass);
-    } forEach GVAR(selfInteractionActions);
-}] call CBA_fnc_addEventHandler;
+    GVAR(selfInteractionActions) = [];
+    [] call FUNC(addTreatmentActions);
+    [] call FUNC(collectActions);
 
-["ace_treatmentSucceded", {
-    if (GVAR(openAfterTreatment) && {GVAR(pendingReopen)}) then {
-        GVAR(pendingReopen) = false;
-        [FUNC(openMenu), GVAR(target)] call CBA_fnc_execNextFrame;
-    };
-}] call CBA_fnc_addEventHandler;
+    [QEGVAR(interact_menu,newControllableObject), {
+        params ["_type"]; // string of the object's classname
+        if !(_type isKindOf "CAManBase") exitWith {};
+        {
+            _x set [0, _type];
+            _x call EFUNC(interact_menu,addActionToClass);
+        } forEach GVAR(selfInteractionActions);
+    }] call CBA_fnc_addEventHandler;
 
-// Close patient information display when interaction menu is closed
-["ace_interactMenuClosed", {
-    QGVAR(RscPatientInfo) cutFadeOut 0.3;
-}] call CBA_fnc_addEventHandler;
+    ["ace_treatmentSucceded", {
+        if (GVAR(openAfterTreatment) && {GVAR(pendingReopen)}) then {
+            GVAR(pendingReopen) = false;
+            [FUNC(openMenu), GVAR(target)] call CBA_fnc_execNextFrame;
+        };
+    }] call CBA_fnc_addEventHandler;
 
-[QEGVAR(medical,woundReceived), {
-    params ["_unit", "_allDamages", ""];
-    if !(GVAR(peekMedicalOnHit) && {_unit == ACE_player}) exitWith {};
+    // Close patient information display when interaction menu is closed
+    ["ace_interactMenuClosed", {
+        QGVAR(RscPatientInfo) cutFadeOut 0.3;
+    }] call CBA_fnc_addEventHandler;
 
-    private _bodypart = toLowerANSI (_allDamages select 0 select 1);
-    private _bodypartIndex = ALL_BODY_PARTS find _bodypart;
+    [QEGVAR(medical,woundReceived), {
+        params ["_unit", "_allDamages", ""];
+        if !(GVAR(peekMedicalOnHit) && {_unit == ACE_player}) exitWith {};
 
-    [ACE_player, _bodypartIndex] call FUNC(displayPatientInformation);
+        private _bodypart = toLowerANSI (_allDamages select 0 select 1);
+        private _bodypartIndex = ALL_BODY_PARTS find _bodypart;
 
-    if (CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > GVAR(peekMedicalOnHitDuration)) then {
-        [{
-            CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > GVAR(peekMedicalOnHitDuration)
-        }, {QGVAR(RscPatientInfo) cutFadeOut 0.3}] call CBA_fnc_waitUntilAndExecute;
-    };
-    GVAR(peekOnHitLastOpenedOn) = CBA_missionTime;
+        [ACE_player, _bodypartIndex] call FUNC(displayPatientInformation);
+
+        if (CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > GVAR(peekMedicalOnHitDuration)) then {
+            [{
+                CBA_missionTime - GVAR(peekOnHitLastOpenedOn) > GVAR(peekMedicalOnHitDuration)
+            }, {QGVAR(RscPatientInfo) cutFadeOut 0.3}] call CBA_fnc_waitUntilAndExecute;
+        };
+        GVAR(peekOnHitLastOpenedOn) = CBA_missionTime;
+    }] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;

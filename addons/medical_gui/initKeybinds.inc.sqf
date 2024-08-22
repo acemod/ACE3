@@ -37,6 +37,8 @@
 }, [DIK_H, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
 
 ["ACE3 Common", QGVAR(peekMedicalInfoKey), LLSTRING(PeekMedicalInfo), {
+    if !(GETEGVAR(medical,enabled,false)) exitWith {};
+
     // Conditions: canInteract
     if !([ACE_player, objNull, []] call EFUNC(common,canInteractWith)) exitWith {false};
 

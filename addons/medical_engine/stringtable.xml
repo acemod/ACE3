@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Engine">
+        <Key ID="STR_ACE_Medical_Engine_Enabled_DisplayName">
+            <English>Enable Medical System</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Engine_Enabled_Description">
+            <English>Controls whether ACE's Medical System is enabled. Disabling the medical system through this setting is experimental, and may not be compatible with other mods.\nUse the No Medical optional component instead if you have issues.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Engine_EnableVehicleCrashes_DisplayName">
             <English>Enable Vehicle Crash Damage</English>
             <Russian>Вкл. урон при аварии в транспорте</Russian>

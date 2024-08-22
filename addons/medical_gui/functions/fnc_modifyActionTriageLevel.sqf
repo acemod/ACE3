@@ -18,7 +18,10 @@
  * Public: No
  */
 
+if !(GETEGVAR(medical,enabled,false)) exitWith {};
+
 params ["_target", "_player", "", "_actionData"];
+
 if (
     GVAR(interactionMenuShowTriage) == 1 // Anyone
     || {GVAR(interactionMenuShowTriage) == 2 && {[_player] call EFUNC(medical_treatment,isMedic)}} // Medics & Doctors
