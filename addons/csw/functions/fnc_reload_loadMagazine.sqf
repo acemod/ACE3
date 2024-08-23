@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Loads a magazine into a static weapon from a magazine carried by or next to the player.
+ * Loads a magazine into a CSW from a magazine carried by or next to the player.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret <ARRAY>
  * 2: Unit Carried Magazine <STRING>
  * 3: Magazine source <OBJECT>
@@ -52,8 +52,19 @@ private _onFinish = {
     [_magSource, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
     if (_bestAmmoToSend == 0) exitWith {};
 
-    TRACE_6("calling addTurretMag event",_vehicle,_turret,_magSource,_carryMag,_bestAmmoToSend,_unit);
-    [QGVAR(addTurretMag), [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend, _unit]] call CBA_fnc_globalEvent;
+    // Workaround for removeSpecificMagazine and WeaponHolders being deleted when empty, give back to the unit if the weapon holder was deleted
+    // TODO: Pass type and position of deleted object to create a new one
+    // TODO: Use '_magSource getEntityInfo 14' in 2.18 and the isSetForDeletion flag to execute in same frame
+    [{
+        params ["_magSource", "_unit", "_args"];
+
+        if (isNull _magSource) then {
+            _args pushBack _unit;
+        };        
+
+        TRACE_1("calling addTurretMag event",_args);
+        [QGVAR(addTurretMag), _args] call CBA_fnc_globalEvent;
+    }, [_magSource, _unit, [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend]]] call CBA_fnc_execNextFrame;
 };
 
 

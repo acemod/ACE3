@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL, mharis001
- * Returns children actions for checking dogtags in player's inventory.
+ * Returns children actions for checking dog tags in the player's inventory.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -10,7 +10,7 @@
  * Actions <ARRAY>
  *
  * Example:
- * [_player] call ace_dogtags_fnc_addDogtagActions
+ * player call ace_dogtags_fnc_addDogtagActions
  *
  * Public: No
  */
@@ -23,12 +23,21 @@ private _fnc_getActions = {
 
     {
         private _config = _cfgWeapons >> _x;
-        if (getNumber (_config >> QGVAR(tagID)) > 0) then {
-            private _displayName = getText (_config >> "displayName");
-            private _picture = getText (_config >> "picture");
 
-            private _action = [_x, _displayName, _picture, FUNC(checkDogtagItem), {true}, {}, _x] call EFUNC(interact_menu,createAction);
-            _actions pushBack [_action, [], _player];
+        if (getNumber (_config >> QGVAR(tagID)) > 0) then {
+            _actions pushBack [
+                [
+                    _x,
+                    getText (_config >> "displayName"),
+                    getText (_config >> "picture"),
+                    {[GVAR(dogtagsData) getOrDefault [_this select 2, []]] call FUNC(showDogtag)},
+                    {true},
+                    {},
+                    _x
+                ] call EFUNC(interact_menu,createAction),
+                [],
+                _player
+            ];
         };
     } forEach (_player call EFUNC(common,uniqueItems));
 

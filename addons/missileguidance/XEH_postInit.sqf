@@ -10,8 +10,6 @@
 },
 [15, [false, true, false]], false] call CBA_fnc_addKeybind;  //Ctrl+Tab Key
 
-GVAR(dev_fnc_projectileCamera) = compile preprocessFileLineNumbers QPATHTOF(dev\projectileCamera.sqf);
-
 if (!hasInterface) exitWith {};
 
 ["ace_settingsInitialized", {
@@ -27,4 +25,3 @@ if (!hasInterface) exitWith {};
         };
     }] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
-

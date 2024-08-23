@@ -1,8 +1,8 @@
-
 PREP(addEarPlugs);
 PREP(earRinging);
-PREP(explosionNear);
+PREP(explosion);
 PREP(firedNear);
+PREP(getAmmoLoudness);
 PREP(handleRespawn);
 PREP(hasEarPlugsIn);
 PREP(moduleHearing);
