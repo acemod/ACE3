@@ -63,7 +63,7 @@ _target switchMove "amovpercmstpslowwrfldnon";
 _target setVariable ["origin", _position];
 
 // When killed, respawn AI
-_target addEventHandler ["killed", {
+_target addEventHandler ["Killed", {
     params ["_target"];
 
     // Killed may fire twice, 2nd will be null - https://github.com/acemod/ACE3/pull/7561

@@ -25,6 +25,7 @@ if (isNull _unit || {!isNil {_unit getVariable QEGVAR(medical,causeOfDeath)}}) e
 TRACE_4("enteredStateDeath",_this,_thisOrigin,_thisTransition,CBA_missionTime);
 
 private _causeOfDeath = format ["%1:%2", _thisOrigin, _thisTransition];
+private _source = _unit getVariable [QEGVAR(medical,lastDamageSource), objNull];
 private _instigator = _unit getVariable [QEGVAR(medical,lastInstigator), objNull];
 
-[_unit, _causeOfDeath, _instigator] call EFUNC(medical_status,setDead);
+[_unit, _causeOfDeath, _source, _instigator] call EFUNC(medical_status,setDead);
