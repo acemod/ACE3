@@ -40,7 +40,7 @@ if (_transonicStabilityCoef == 0) then {
     _transonicStabilityCoef = 0.5;
 };
 private _dragModel = getNumber(_ammoConfig >> "ACE_dragModel");
-if (!(_dragModel in [1, 2, 5, 6, 7, 8])) then {
+if !(_dragModel in [1, 2, 5, 6, 7, 8]) then {
     _dragModel = 1;
 };
 private _ballisticCoefficients = getArray(_ammoConfig >> "ACE_ballisticCoefficients");

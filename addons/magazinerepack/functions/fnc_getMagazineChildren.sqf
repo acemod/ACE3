@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror, commy2, esteldunedain, Ruthberg
- * Gets magazine children for interaciton menu.
+ * Gets magazine children for interaction menu.
  *
  * Arguments:
  * 0: Target <OBJECT>
@@ -18,16 +18,20 @@
 
 params ["_target", "_player"];
 
+private _cfgMagazines = configFile >> "CfgMagazines";
+
 // get all mags and ammo count
 private _unitMagazines = [];
 private _unitMagCounts = [];
 {
     _x params ["_xClassname", "_xCount", "_xLoaded", "_xType"];
 
-    private _xFullMagazineCount = getNumber (configFile >> "CfgMagazines" >> _xClassname >> "count");
+    private _configMagazine = _cfgMagazines >> _xClassname;
+    private _xFullMagazineCount = getNumber (_configMagazine >> "count");
+    private _isRepackDisabled = getNumber (_configMagazine >> "ace_disableRepacking") == 1;
 
     //for every partial magazine, that is either in inventory or can be moved there
-    if ((_xCount < _xFullMagazineCount) && {_xCount > 0} && {(!_xLoaded) || {GVAR(repackLoadedMagazines) && {[_player, _xClassname] call CBA_fnc_canAddItem}}}) then {
+    if ((!_isRepackDisabled) && {_xCount < _xFullMagazineCount} && {_xCount > 0} && {(!_xLoaded) || {GVAR(repackLoadedMagazines) && {[_player, _xClassname] call CBA_fnc_canAddItem}}}) then {
         private _index = _unitMagazines find _xClassname;
         if (_index == -1) then {
             _unitMagazines pushBack _xClassname;

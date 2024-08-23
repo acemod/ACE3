@@ -80,7 +80,7 @@ params [
             _nozzle setVariable [QGVAR(attachPos), _attachPos, true];
             _nozzle setVariable [QGVAR(source), _source, true];
 
-            [_source, "blockEngine", "ACE_Refuel", true] call EFUNC(common,statusEffect_set);
+            [_source, "blockEngine", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
             _source setVariable [QGVAR(isConnected), true, true];
             _source setVariable [QGVAR(ownedNozzle), _nozzle, true];
 
@@ -100,8 +100,8 @@ params [
         _unit call EFUNC(common,fixLoweredRifleAnimation);
         _unit action ["SwitchWeapon", _unit, _unit, 299];
 
-        [_unit, "forceWalk", "ACE_refuel", true] call EFUNC(common,statusEffect_set);
-        [_unit, "blockThrow", "ACE_refuel", true] call EFUNC(common,statusEffect_set);
+        [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+        [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
         [_unit, _nozzle] call FUNC(startNozzleInHandsPFH);
     },

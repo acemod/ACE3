@@ -65,7 +65,7 @@ if (!_return) exitWith {false};
 // if (_vehicleStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitWith {false};
 
 private _repairLocations = getArray (_config >> "repairLocations");
-if (!("All" in _repairLocations)) then {
+if !("All" in _repairLocations) then {
     private _repairFacility = {([_caller] call FUNC(isInRepairFacility)) || ([_target] call FUNC(isInRepairFacility))};
     private _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC(isNearRepairVehicle))};
     {
