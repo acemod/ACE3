@@ -10,7 +10,7 @@
  * Does unit need treatment <BOOL>
  *
  * Example:
- * player call ACE_medical_ai_fnc_isInjured
+ * cursorObject call ace_medical_ai_fnc_isInjured
  *
  * Public: No
  */
@@ -24,3 +24,4 @@ if !(alive _this) exitWith {false};
     private _fractures = GET_FRACTURES(_this);
     ((_fractures select 4) == 1) || {(_fractures select 5) == 1}
 }
+|| { GET_TOURNIQUETS(_this) isNotEqualTo DEFAULT_TOURNIQUET_VALUES }

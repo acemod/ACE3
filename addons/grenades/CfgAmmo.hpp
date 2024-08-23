@@ -1,4 +1,3 @@
-
 class CfgAmmo {
     class Default;
     class Grenade: Default {

@@ -1,7 +1,7 @@
 class CfgMagazines {
     class APERSMine_Range_Mag;
     class rhs_mine_a200_bz_mag: APERSMine_Range_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_a200_bz";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_a200_bz";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -11,7 +11,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_a200_dz35_mag: rhs_mine_a200_bz_mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_a200_dz35";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_a200_dz35";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -21,7 +21,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_glasmine43_hz_mag: APERSMine_Range_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_glasmine43_hz";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_glasmine43_hz";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -31,12 +31,12 @@ class CfgMagazines {
     };
 
     class rhs_mine_glasmine43_bz_mag: rhs_mine_glasmine43_hz_mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_glasmine43_bz";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_glasmine43_bz";
     };
 
     class APERSBoundingMine_Range_Mag;
     class rhs_mine_m2a3b_press_mag: APERSBoundingMine_Range_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_m2a3b_press";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_m2a3b_press";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -46,7 +46,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_m2a3b_trip_mag: rhs_mine_m2a3b_press_mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_m2a3b_trip";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_m2a3b_trip";
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};
             class Tripwire {
@@ -56,7 +56,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_m3_pressure_mag: APERSMine_Range_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_m3_pressure";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_m3_pressure";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -67,7 +67,7 @@ class CfgMagazines {
 
     class APERSTripMine_Wire_Mag;
     class rhs_mine_M3_tripwire_mag: APERSTripMine_Wire_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_M3_tripwire";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_M3_tripwire";
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};
             class Tripwire {
@@ -78,7 +78,7 @@ class CfgMagazines {
 
     class ATMine_Range_Mag;
     class rhs_mine_TM43_mag: ATMine_Range_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_TM43";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_TM43";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -88,7 +88,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_M7A2_mag: APERSMine_Range_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_M7A2";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_M7A2";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -98,7 +98,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_mk2_pressure_mag: APERSMine_Range_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_mk2_pressure";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_mk2_pressure";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -108,7 +108,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_Mk2_tripwire_mag: APERSTripMine_Wire_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_Mk2_tripwire";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_Mk2_tripwire";
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};
             class Tripwire {
@@ -118,7 +118,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_smine35_press_mag: APERSBoundingMine_Range_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_smine35_press";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_smine35_press";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -128,7 +128,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_smine35_trip_mag: rhs_mine_smine35_press_mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_smine35_trip";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_smine35_trip";
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};
             class Tripwire {
@@ -138,7 +138,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_smine44_trip_mag: APERSBoundingMine_Range_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_smine44_trip";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_smine44_trip";
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};
             class Tripwire {
@@ -148,7 +148,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_smine44_press_mag: rhs_mine_smine44_trip_mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_smine44_press";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_smine44_press";
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -158,7 +158,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_stockmine43_2m_mag: APERSTripMine_Wire_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_stockmine43_2m";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_stockmine43_2m";
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};
             class Tripwire {
@@ -168,7 +168,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_stockmine43_4m_mag: rhs_mine_stockmine43_2m_mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_mine_stockmine43_4m";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_mine_stockmine43_4m";
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};
             class Tripwire {
@@ -179,7 +179,7 @@ class CfgMagazines {
 
     class DemoCharge_Remote_Mag;
     class rhs_charge_M2tet_x2_mag: DemoCharge_Remote_Mag {
-        ace_explosives_SetupObject = "ACE_Explosives_Place_rhs_charge_M2tet_x2";
+        EGVAR(explosives,setupObject) = "ACE_Explosives_Place_rhs_charge_M2tet_x2";
         class ACE_Triggers {
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
             class Timer {

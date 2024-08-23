@@ -23,8 +23,8 @@ params ["_unit", "_key"];
 if (_key != 1 || {isNull GVAR(ladder)}) exitWith {};
 
 // enable running again
-[_unit, "forceWalk", "ACE_Ladder", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_Ladder", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 detach GVAR(ladder);
 

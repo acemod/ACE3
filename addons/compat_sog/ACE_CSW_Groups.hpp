@@ -2,7 +2,7 @@ class ACE_CSW_Groups {
 
     // --- Gun Turrets -------------------------------------------------------------
 
-    class ace_csw_100Rnd_127x99_mag {
+    class EGVAR(csw,100Rnd_127x99_mag) {
         vn_m2_v_100_mag = 1;
     };
 
