@@ -19,11 +19,10 @@ params ["_projectile"];
 TRACE_2("addBlackList",_projectile,typeOf projectile);
 
 _projectile setVariable [QGVAR(blacklisted), true];
-_projectile removeEventHandler [
-    "HitPart",
-    _projectile getVariable [QGVAR(hitPartEventHandler), -1]
-];
+(_projectile getVariable [QGVAR(spallEH), [-1, -1]]) params ["_hitPartEH", "_penetratedEH"];
+_projectile removeEventHandler ["HitPart", _hitPartEH];
+_projectile removeEventHandler ["Penetrated", _penetratedEH];
 _projectile removeEventHandler [
     "Explode",
-    _projectile getVariable [QGVAR(explodeEventHandler), -1]
+    _projectile getVariable [QGVAR(fragEH), -1]
 ];

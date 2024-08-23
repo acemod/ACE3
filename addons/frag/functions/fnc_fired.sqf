@@ -28,29 +28,24 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
     private _hitPartEventHandler = _projectile addEventHandler [
         "HitPart",
         {
-            params ["_projectile", "_hitObject", "", "_posASL", "_velocity"];
+            params ["_projectile", "_objectHit", "", "_posASL", "_velocity", "_surfNorm", "", "", "_surfType"];
 
             // starting v2.18 it may be faster to use the instigator EH parameter, the same as the second entry shotParents, to recreate _shotParent
             // The "explode" EH does not get the same parameter
             private _shotParents = getShotParents _projectile;
+            _shotParents set [0, objNull];
             private _ammo = typeOf _projectile;
+            private _vectorUp = vectorUp _projectile;
 
             /*
              * Wait a frame to see what happens to the round, may result in
              * multiple hits / slowdowns getting shunted to the first hit
              */
-            [
-                // only let a unit make a frag event once per ACE_FRAG_SPALL_UNIT_HOLDOFF
-                {
-                    private _shotParents = _this#5;
-                    if (CBA_missionTime < _shotParents#1 getVariable [QGVAR(nextSpallEvent), -1]) exitWith {};
-                    _this call FUNC(doSpall);
-                },
-                [_hitObject, _ammo, _projectile, _posASL, _velocity, [objNull, _shotParents#1]]
-            ] call CBA_fnc_execNextFrame;
+            [LINKFUNC(doSpallHitPart), [_projectile, _objectHit, _posASL, _velocity, _surfNorm, _surfType, _ammo, _shotParents, _vectorUp]] call CBA_fnc_execNextFrame;
         }
     ];
-    _projectile setVariable [QGVAR(hitPartEventHandler), _hitPartEventHandler];
+    private _penetratedEventHandler = _projectile addEventHandler ["Penetrated",LINKFUNC(doSpallPenetrate)];
+    _projectile setVariable [QGVAR(hitPartEventHandler), [_hitPartEventHandler, _penetratedEventHandler]];
 };
 
 if (GVAR(reflectionsEnabled) || (GVAR(enabled) && {_ammo call FUNC(shouldFrag)})) then {
