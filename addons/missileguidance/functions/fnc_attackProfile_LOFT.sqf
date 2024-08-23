@@ -51,4 +51,3 @@ if (!_atMinRotationAngle && _distanceToTarget2d >= 500 && _timeToGo >= 10) then 
 };
 
 _returnTargetPos
-

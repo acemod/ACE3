@@ -21,7 +21,7 @@ params ["_medic", "_patient", "_bodyPart"];
 
 private _heartRate = 0;
 
-if (!([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo))) then {
+if !([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo)) then {
     _heartRate = switch (true) do {
         case (alive _patient): {
             GET_HEART_RATE(_patient)

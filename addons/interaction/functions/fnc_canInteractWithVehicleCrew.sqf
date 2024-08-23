@@ -11,12 +11,15 @@
  * Unit can interact with vehicle crew <BOOL>
  *
  * Example:
- * [cursorObject, player] call ace_interaction_fnc_canInteractWithVehicleCrew
+ * [player, cursorObject] call ace_interaction_fnc_canInteractWithVehicleCrew
  *
  * Public: No
  */
 
 params ["_player", "_vehicle"];
+
+if (GVAR(interactWithEnemyCrew) == 2) exitWith { true };
+if ((GVAR(interactWithEnemyCrew) == 1) && {_vehicle isKindOf "StaticWeapon"}) exitWith { true };
 
 private _crew = crew _vehicle;
 
