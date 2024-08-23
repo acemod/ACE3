@@ -48,7 +48,7 @@ private _gravity = [-sin (_bank) * cos(_scopeBaseAngle + _inclinationAngle) * -G
 
 private _useAB = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
 if (_useAB) then {
-    _bc = parseNumber(("ace_advanced_ballistics" callExtension format["atmosphericCorrection:%1:%2:%3:%4:%5", _bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel]));
+    _bc = parseNumber (("ace" callExtension ["ballistics:atmospheric_correction", [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel]]) select 0);
 };
 
 private _deltaT = 1 / 60;
@@ -58,7 +58,7 @@ while {(_TOF < 5) && {(_bulletPos # 1) < _targetRange}} do {
     private _trueSpeed = vectorMagnitude _trueVelocity;
 
     private _bulletAccel = if (_useAB) then {
-        private _drag = parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3:%4", _dragModel, _bc, _trueSpeed, _temperature]));
+        private _drag = parseNumber (("ace" callExtension ["ballistics:retard", [_dragModel, _bc, _trueSpeed, _temperature]]) select 0);
         (vectorNormalized _trueVelocity) vectorMultiply (-1 * _drag);
     } else {
         _trueVelocity vectorMultiply (_trueSpeed * _airFriction);

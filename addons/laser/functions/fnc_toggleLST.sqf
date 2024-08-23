@@ -39,7 +39,7 @@ if (_enabled) exitWith {};
         [_pfhID] call CBA_fnc_removePerFrameHandler;
     };
 
-    private _laserCode = _vehicle getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
+    private _laserCode = _vehicle getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
     private _angle = 25;
 
     private _pos = _vehicle modelToWorldVisualWorld [0,0,0];

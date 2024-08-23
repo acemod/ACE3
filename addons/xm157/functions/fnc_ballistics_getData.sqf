@@ -56,8 +56,7 @@ if ((_weaponInfo isEqualTo []) && {_magazineClass != ""}) then {
     };
 
     // Scope Base Angle
-    private _zeroAngle = "ace_advanced_ballistics" callExtension format ["calcZero:%1:%2:%3:%4", _zeroRange, _muzzleVelocity, _airFriction, _boreHeight];
-    private _scopeBaseAngle = parseNumber _zeroAngle;
+    private _scopeBaseAngle = parseNumber (("ace" callExtension ["ballistics:zero_vanilla", [_zeroRange, _muzzleVelocity, _airFriction, _boreHeight]]) select 0);
 
     _weaponInfo = [_scopeBaseAngle,_boreHeight,_airFriction,_muzzleVelocity,_bc,_dragModel,_atmosphereModel,_barrelTwist,_twistDirection,_caliber,_bulletLength,_bulletMass];
     GVAR(data) set [_key, _weaponInfo];
