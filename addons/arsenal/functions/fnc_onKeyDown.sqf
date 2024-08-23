@@ -94,8 +94,8 @@ if (!isNull _loadoutsDisplay) then {
                         };
                     } params ["_className"];
 
-                    "ace_clipboard" callExtension (_className + ";");
-                    "ace_clipboard" callExtension "--COMPLETE--";
+                    "ace" callExtension ["clipboard:append", [_className]];
+                    "ace" callExtension ["clipboard:complete", []];
 
                     [_display, LLSTRING(exportedClassnameText)] call FUNC(message);
                 } else {
@@ -147,7 +147,7 @@ if (!isNull _loadoutsDisplay) then {
             // Right panel lnb + and - buttons
             case (_keyPressed in [DIK_LEFT, DIK_RIGHT]): {
                 if (GVAR(rightTabLnBFocus)) then {
-                    [_display, [1, 0] select (_keyPressed == DIK_LEFT)] call FUNC(buttonCargo);
+                    [_display, parseNumber (_keyPressed != DIK_LEFT)] call FUNC(buttonCargo);
                 };
             };
         };

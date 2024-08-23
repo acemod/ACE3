@@ -26,14 +26,14 @@ if (!isNil QGVAR(releaseActionID)) then {
 };
 
 // Stop blocking
-if !(GVAR(dragAndFire)) then {
+if (!GVAR(dragAndFire)) then {
     [_unit, "DefaultAction", _unit getVariable [QGVAR(blockFire), -1]] call EFUNC(common,removeActionEventHandler);
 };
 
 private _inBuilding = _unit call FUNC(isObjectOnObject);
 
 // Play release animation
-if !(_unit getVariable ["ACE_isUnconscious", false]) then {
+if (_unit call EFUNC(common,isAwake)) then {
     [_unit, "released"] call EFUNC(common,doGesture);
 };
 
@@ -80,14 +80,16 @@ if (_unit getVariable ["ACE_isUnconscious", false]) then {
     [_unit, "unconscious", 2] call EFUNC(common,doAnimation);
 };
 
-// Recreate UAV crew (add a frame delay or this may cause the vehicle to be moved to [0,0,0])
-if (_target getVariable [QGVAR(isUAV), false]) then {
-    [{  
-        params ["_target"];
-        if (!alive _target) exitWith {};
-        TRACE_2("restoring uav crew",_target,getPosASL _target);
-        createVehicleCrew _target;
-    }, [_target]] call CBA_fnc_execNextFrame;
+// Reenable UAV crew
+private _UAVCrew = _target getVariable [QGVAR(isUAV), []];
+
+if (_UAVCrew isNotEqualTo []) then {
+    // Reenable AI
+    {
+        [_x, false] call EFUNC(common,disableAiUAV);
+    } forEach _UAVCrew;
+
+    _target setVariable [QGVAR(isUAV), nil, true];
 };
 
 // Fixes not being able to move when in combat pace

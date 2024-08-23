@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 /*
- * Author: jaynus / nou
+ * Author: tcvm
  * Attack profile: DIR
- * TODO: falls back to Linear
+ * Returns target position with no modifications
  *
  * Arguments:
  * 0: Seeker Target PosASL <ARRAY>
@@ -18,4 +18,5 @@
  * Public: No
  */
 
-_this call FUNC(attackProfile_LIN);
+params ["_seekerTargetPos"];
+_seekerTargetPos

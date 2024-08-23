@@ -30,6 +30,6 @@ _vehicles apply {
         _name = format ["%1 (%2m)", _name, _distanceStr];
     };
     private _icon = [_x] call EFUNC(common,getVehicleIcon);
-    private _action = [format ["%1", _x], _name, _icon, _statement, {true}, {}, _x] call EFUNC(interact_menu,createAction);
+    private _action = [str _x, _name, _icon, _statement, {true}, {}, _x] call EFUNC(interact_menu,createAction);
     [_action, [], _target]
 }

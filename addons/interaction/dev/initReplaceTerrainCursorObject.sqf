@@ -17,7 +17,7 @@ DFUNC(replaceTerrainModelsAdd) = {
     if (_class isEqualTo "") then {
         private _configClasses = QUOTE(getNumber (_x >> 'scope') == 2 && {!(configName _x isKindOf 'AllVehicles')}) configClasses (configFile >> "CfgVehicles");
         {
-            private _xmodel = toLower getText (_x >> "model");
+            private _xmodel = toLowerANSI getText (_x >> "model");
             if (_xmodel select [0, 1] == "\") then {
                 _xmodel = _xmodel select [1];
             };

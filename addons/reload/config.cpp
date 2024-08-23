@@ -14,10 +14,11 @@ class CfgPatches {
     };
 };
 
-#include "ACE_Arsenal_Stats.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgMagazines.hpp"
-#include "CfgEventHandlers.hpp"
 #include "CfgActions.hpp"
+#include "CfgEventHandlers.hpp"
+#include "CfgMagazines.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
+#include "ACE_Arsenal_Stats.hpp"
 #include "ACE_Settings.hpp"
 #include "ACE_UI.hpp"

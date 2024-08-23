@@ -42,7 +42,6 @@ private _ammo = _muzzles apply {0};
             _ammo set [_index, _x select 1];
         };
     };
-    false
-} count magazinesAmmoFull _unit;
+} forEach magazinesAmmoFull _unit;
 
 [_attachments, _muzzles, _magazines, _ammo];

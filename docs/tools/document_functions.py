@@ -192,6 +192,9 @@ class FunctionFile:
                 if arg_default is None:
                     arg_default = ""
 
+                if ("SCALAR" in arg_types or "NUMVER" in arg_types):
+                    self.feedback("Bad Arg Type \"{}\"".format(arg_types), 1)
+
                 arguments.append([arg_index, arg_name, arg_types, arg_default, arg_notes])
             else:
                 # Notes about the above argument won't start with an index
@@ -336,6 +339,8 @@ def document_functions(addons_dir, components):
 
     return errors
 
+def getFunctionPath(func):
+    return func.path.casefold()
 
 def crawl_dir(addons_dir, directory, debug=False, lint_private=False):
     components = {}
@@ -357,7 +362,11 @@ def crawl_dir(addons_dir, directory, debug=False, lint_private=False):
                     if function.is_public() and not debug:
                         # Add functions to component key (initalise key if necessary)
                         component = os.path.basename(os.path.dirname(root))
-                        components.setdefault(component, []).append(function)
+
+                        # Sort functions alphabetically
+                        functions = components.setdefault(component, [])
+                        functions.append(function)
+                        functions.sort(key=getFunctionPath)
 
                         function.feedback("Publicly documented")
                 else:

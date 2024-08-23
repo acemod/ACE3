@@ -23,7 +23,7 @@
             <French>Masque l'interface</French>
             <German>Oberfläche verstecken</German>
             <Polish>Ukryj interfejs</Polish>
-            <Japanese>インターフェースを隠す</Japanese>
+            <Japanese>インタフェースを隠す</Japanese>
             <Italian>Nascondi interfaccia</Italian>
             <Korean>인터페이스 숨기기</Korean>
             <Chinese>隱藏介面</Chinese>
@@ -613,7 +613,7 @@
             <French>Le set d'équipement suivant a été supprimé :</French>
             <German>Folgende Ausrüstung wurde entfernt:</German>
             <Polish>Następujący zestaw został skasowany:</Polish>
-            <Japanese>次の装備は削除されました:</Japanese>
+            <Japanese>装備を削除しました:</Japanese>
             <Italian>Il seguente equipaggiamento è stato eliminato:</Italian>
             <Korean>다음 로드아웃이 삭제됨 :</Korean>
             <Chinese>以下的裝備已被刪除:</Chinese>
@@ -629,7 +629,7 @@
             <French>Le set d'équipement suivant n'est plus public :</French>
             <German>Folgende Ausrüstung ist nicht mehr öffentlich:</German>
             <Polish>Następujący zestaw nie jest już publiczny:</Polish>
-            <Japanese>次の装備は非公開になりました:</Japanese>
+            <Japanese>装備を非公開にしました:</Japanese>
             <Italian>Il seguente equipaggiamento non è più pubblico:</Italian>
             <Korean>다음 로드아웃이 더이상 공용이 아님:</Korean>
             <Chinese>以下的裝備已不再被分享:</Chinese>
@@ -645,7 +645,7 @@
             <French>Le champ "nom" est vide !</French>
             <German>Das Feld "Name" ist leer!</German>
             <Polish>Pole nazwy jest puste!</Polish>
-            <Japanese>名前が空白です!</Japanese>
+            <Japanese>名前が空欄です!</Japanese>
             <Italian>Il campo del nome è vuoto!</Italian>
             <Korean>이름칸이 비었습니다!</Korean>
             <Chinese>名稱欄位為空!</Chinese>
@@ -677,7 +677,7 @@
             <French>Un de vos sets d'équipement ayant le même nom est public.</French>
             <German>Eine deiner Ausrüstungen mit dem gleichen Namen ist öffentlich</German>
             <Polish>Jeden z Twoich zestawów nazwany tak samo jest już publiczny</Polish>
-            <Japanese>あなたの装備は既に公開されているものと同名です</Japanese>
+            <Japanese>あなたのものと同じ名前の装備が既に公開されています</Japanese>
             <Italian>Un tuo equipaggiamento con lo stesso nome è pubblico</Italian>
             <Korean>같은 이름의 로드아웃이 공용에 있습니다.</Korean>
             <Chinese>已有相同名稱的裝備在公用分享區</Chinese>
@@ -693,7 +693,7 @@
             <French>Le set d'équipement suivant a été enregistré :</French>
             <German>Folgende Ausrüstung wurde gespeichert:</German>
             <Polish>Następujący zestaw został zapisany:</Polish>
-            <Japanese>次の装備は保存されました:</Japanese>
+            <Japanese>装備を保存しました:</Japanese>
             <Italian>Il seguente equipaggiamento è stato salvato:</Italian>
             <Korean>다음 로드아웃이 저장됨:</Korean>
             <Chinese>以下的裝備已被保存:</Chinese>
@@ -709,7 +709,7 @@
             <French>Le set d'équipement suivant a été chargé :</French>
             <German>Folgene Ausrüstung wurde geladen:</German>
             <Polish>Następujący zestaw został wczytany:</Polish>
-            <Japanese>次の装備が読み込みされました:</Japanese>
+            <Japanese>装備を読み込みました:</Japanese>
             <Italian>Il seguente equipaggiamento è stato caricato:</Italian>
             <Korean>다음 로드아웃을 불러옴:</Korean>
             <Chinese>以下的裝備已被載入:</Chinese>
@@ -725,7 +725,7 @@
             <French>Un set d'équipement ayant le même nom existe déjà !</French>
             <German>Eine Ausrüstung mit dem gleichen Namen existiert bereits!</German>
             <Polish>Zestaw z tą nazwą już istnieje!</Polish>
-            <Japanese>既にその名前は装備に使われています!</Japanese>
+            <Japanese>既に同じ名前の装備が存在しています!</Japanese>
             <Italian>Un equipaggiamento con lo stesso nome è gia esistente!</Italian>
             <Korean>같은 이름의 로드아웃이 이미 존재합니다!</Korean>
             <Chinese>已有相同名稱的裝備!</Chinese>
@@ -741,7 +741,7 @@
             <French>a été renommé en</French>
             <German>wurde umbenannt in</German>
             <Polish>zmienił nazwę na</Polish>
-            <Japanese>次の名前に変更されました</Japanese>
+            <Japanese>を次の名前に変更しました:</Japanese>
             <Italian>È stato rinominato in</Italian>
             <Korean>이름이 다음과 같이 변경됨:</Korean>
             <Chinese>已被改名為</Chinese>
@@ -1181,7 +1181,7 @@
             <English>Nightvision Support</English>
             <Spanish>Soporte de visión nocturna</Spanish>
             <German>Nachtsicht Unterstützung</German>
-            <Japanese>暗視装置への対応有無</Japanese>
+            <Japanese>暗視装置への対応</Japanese>
             <Polish>Wsparcie noktowizyjne</Polish>
             <Italian>Supporto visore notturno</Italian>
             <Russian>Поддержка ночного видения</Russian>
@@ -1191,7 +1191,7 @@
             <Chinesesimp>支持夜视仪</Chinesesimp>
             <Czech>Podpora nočního vidění</Czech>
             <Turkish>Gece Görüş Desteği</Turkish>
-            <Korean>야간투시 지원여부</Korean>
+            <Korean>야간투시 지원</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supPrim">
             <English>Primary supported</English>
@@ -1206,7 +1206,7 @@
             <Chinese>主武器支援</Chinese>
             <Chinesesimp>主镜支持</Chinesesimp>
             <Czech>Hlavní část hledí podporuje</Czech>
-            <Korean>주무기 지원여부</Korean>
+            <Korean>주무기 지원</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supSec">
             <English>Secondary supported</English>
@@ -1221,9 +1221,9 @@
             <Chinese>次要武器支援</Chinese>
             <Chinesesimp>副镜支持</Chinesesimp>
             <Czech>Vedlejší část hledí podporuje</Czech>
-            <Korean>보조무기 지원여부</Korean>
+            <Korean>보조무기 지원</Korean>
         </Key>
-        <Key ID="STR_ACE_Arsenal_statVisionMode_IntPrim">
+        <Key ID="STR_ACE_Arsenal_statVisionMode_intPrim">
             <English>Primary integrated</English>
             <Spanish>Primaria integrada</Spanish>
             <German>Primär Integriert</German>
@@ -1236,7 +1236,27 @@
             <Chinese>整合主武器</Chinese>
             <Chinesesimp>主镜内置</Chinesesimp>
             <Czech>Integrováno do hlavní části hledí</Czech>
-            <Korean>주무기 내장여부</Korean>
+            <Korean>주무기 내장</Korean>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_ti">
+            <English>Thermal integrated</English>
+            <Italian>Termico integrato</Italian>
+            <Japanese>熱画像装置内蔵</Japanese>
+            <Russian>Интегрирован тепловизор.</Russian>
+            <Korean>열화상 내장</Korean>
+            <French>Thermique intégrée</French>
+            <German>Thermal integriert</German>
+            <Spanish>Térmica integrada</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_statVisionMode_intPrimTi">
+            <English>Thermal &amp; Primary integrated</English>
+            <Italian>Termico e Primario integrato</Italian>
+            <Japanese>熱画像装置内蔵・プライマリに内蔵</Japanese>
+            <Russian>Интегрирован тепловизор и осн.прицел.</Russian>
+            <Korean>열화상과 주무기 내장</Korean>
+            <French>Thermique et primaire intégrés</French>
+            <German>Thermal und in Primärwaffe integriert</German>
+            <Spanish>Térmica y Primaria integrada</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">
             <English>Not Supported</English>
@@ -1257,7 +1277,7 @@
         <Key ID="STR_ACE_Arsenal_statVisionModeGeneric">
             <English>Vision Mode</English>
             <German>Sichtmodus</German>
-            <Japanese>ビジョン モード</Japanese>
+            <Japanese>映像モード</Japanese>
             <Italian>Modalità Visiva</Italian>
             <Chinese>視覺模式</Chinese>
             <Chinesesimp>视觉模式</Chinesesimp>
@@ -1495,7 +1515,7 @@
             <Spanish>Añade automáticamente accesorios o cargadores (de la categoría seleccionada) a todas las armas de la lista de objetos</Spanish>
             <German>Es werden automatisch kompatible Aufsätze oder Magazine für alle ausgewählten Waffen hinzugefügt</German>
             <Polish>Automatycznie doda kompatybilne dodatki oraz magazynki (odpowiednio do każdej kategorii) dla wszystkich broni na liście</Polish>
-            <Japanese>現在のアイテムリスト内にある全武器に対応する アタッチメントと弾倉(選択したカテゴリに基づく)を自動的に追加します</Japanese>
+            <Japanese>現在のアイテムリスト内の全武器に対応する アタッチメントと弾倉(選択したカテゴリに基づく)を自動的に追加します</Japanese>
             <Russian>Добавляет совместимые приспособления или магазины (в зависимости от выбранной категории) для всего оружия в текущем списке предметов</Russian>
             <Portuguese>Irá automaticamente adicionar acessórios ou carregadores (baseado na categoria selecionada) para todas as armas na lista de itens atual</Portuguese>
             <French>Ajoute automatiquement des accessoires ou des chargeurs compatibles (en fonction de la catégorie sélectionnée), pour toutes les armes de la liste actuelle.</French>
@@ -1592,6 +1612,8 @@
             <Korean>내림차순</Korean>
             <French>Décroissant</French>
             <Portuguese>Decrescente</Portuguese>
+            <Russian>Нисходящий</Russian>
+            <Spanish>Descendiente</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortAscending">
             <English>Ascending</English>
@@ -1602,6 +1624,8 @@
             <Korean>오름차순</Korean>
             <French>Croissant</French>
             <Portuguese>Crescente</Portuguese>
+            <Russian>Восходящий</Russian>
+            <Spanish>Ascendiente</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_toolsTab">
             <English>Tools</English>
@@ -1628,6 +1652,8 @@
             <Korean>장탄 수</Korean>
             <French>Nombre de munitions</French>
             <Portuguese>Quantidade de munição</Portuguese>
+            <Russian>Количество боеприпасов</Russian>
+            <Spanish>Cantidad de munición</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_statIlluminators">
             <English>Illuminators</English>
@@ -1637,6 +1663,8 @@
             <Korean>조명</Korean>
             <Portuguese>Iluminadores</Portuguese>
             <Japanese>イルミネーター</Japanese>
+            <Russian>Осветители</Russian>
+            <Spanish>Iluminadores</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesSetting">
             <English>Default to Favorites</English>
@@ -1647,6 +1675,8 @@
             <Korean>즐겨찾기 기본값</Korean>
             <French>Favoris par défaut</French>
             <Portuguese>Favoritos por padrão</Portuguese>
+            <Russian>По умолчанию - Избранное</Russian>
+            <Spanish>Favoritos por defecto</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
             <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
@@ -1657,6 +1687,8 @@
             <Korean>ACE 아스널이 기본적으로 모든 아이템 또는 즐겨찾기를 표시할 지 여부를 조정합니다.</Korean>
             <French>Contrôle si l'arsenal ACE affiche par défaut tous les éléments ou les favoris.</French>
             <Portuguese>Controla se o Arsenal ACE exibe por padrão todos os itens ou favoritos.</Portuguese>
+            <Russian>Определяет, будет ли в арсенале ACE по умолчанию отображаться все предметы или избранное.</Russian>
+            <Spanish>Controla si el Arsenal de ACE muestra por defecto todos los objetos o sólo los favoritos</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorSetting">
             <English>Favorites Color</English>
@@ -1667,6 +1699,8 @@
             <Korean>즐겨찾기 색상</Korean>
             <French>Couleurs favorites</French>
             <Portuguese>Cor dos favoritos</Portuguese>
+            <Russian>Избранный цвет</Russian>
+            <Spanish>Color de Favoritos</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorTooltip">
             <English>Highlight color for favorited items.</English>
@@ -1677,6 +1711,8 @@
             <Korean>즐겨찾기한 아이템을 색상으로 강조합니다.</Korean>
             <French>Met en surbrillance les éléments favoris.</French>
             <Portuguese>Cor de destaque para itens favoritados.</Portuguese>
+            <Russian>Выделите цветом любимые предметы.</Russian>
+            <Spanish>Color de marcado para los objetos favoritos</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonFavoritesTooltip">
             <English>Switch between displaying all items or your favorites.\nDouble click while holding Shift to add or remove an item.</English>
@@ -1687,6 +1723,8 @@
             <Korean>모든 아이템을 표시하거나 즐겨찾기를 표시할 때 전환합니다\nShift 키를 누른 상태에서 두 번 클릭하여 아이템을 추가하거나 제거합니다.</Korean>
             <French>Change entre l'affichage de tous les éléments ou de vos favoris.\nDouble-cliquez en maintenant la touche Maj enfoncée pour ajouter ou supprimer un élément.</French>
             <Portuguese>Alterna entre a exibição de todos os itens ou seus favoritos.\nClique duas vezes enquanto mantém pressionada a tecla Shift para adicionar ou remover um item.</Portuguese>
+            <Russian>Переключайтесь между отображением всех элементов или ваших избранных.\nДважды щелкните, удерживая Shift, чтобы добавить или удалить элемент.</Russian>
+            <Spanish>Alterna entre mostrar todos los objetos o sólo los favoritos.\nDoble click mientras se pulsa Shift para añadir o quitar un objeto.</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSearchTooltip">
             <English>Search\nCTRL + Click to enable live results</English>
@@ -1694,6 +1732,9 @@
             <Italian>Cerca\nCTRL + Click per modificare i risultati mentre scrivi</Italian>
             <Japanese>検索\nCTRL + クリックで検索結果の即時表示を有効化</Japanese>
             <Korean>검색\nCtrl + 클릭으로 실시간 검색 결과를 활성화</Korean>
+            <Russian>Поиск\nCtrl + Click для включения результатов в реальном времени</Russian>
+            <French>Recherche\nCTRL + clic pour modifier les résultats tout en écrivant</French>
+            <Spanish>Buscar\nCTRL + Click habilita los objetos en directo</Spanish>
         </Key>
     </Package>
 </Project>

@@ -6,6 +6,11 @@ class GVAR(AttackProfiles) {
 
         functionName = QFUNC(attackProfile_LIN);
     };
+    // empty classes for backwards compat
+    class MID: LIN {
+    };
+    class HI: LIN {
+    };
     class DIR {
         name = "";
         visualName = "";
@@ -13,21 +18,14 @@ class GVAR(AttackProfiles) {
 
         functionName = QFUNC(attackProfile_DIR);
     };
-    class MID {
+    class LOFT {
         name = "";
         visualName = "";
         description = "";
 
-        functionName = QFUNC(attackProfile_MID);
+        functionName = QFUNC(attackProfile_LOFT);
     };
-    class HI {
-        name = "";
-        visualName = "";
-        description = "";
-
-        functionName = QFUNC(attackProfile_HI);
-    };
-     class JAV_DIR {
+    class JAV_DIR {
         name = "";
         visualName = "";
         description = "";
@@ -82,12 +80,39 @@ class GVAR(SeekerTypes) {
         functionName = QFUNC(seekerType_SACLOS);
         onFired = QFUNC(SACLOS_onFired);
     };
-    class ARH {
+    class MillimeterWaveRadar {
         name = "";
         visualName = "";
         description = "";
 
-        functionName = QFUNC(seekerType_ARH);
-        onFired = QFUNC(ahr_onFired);
+        functionName = QFUNC(seekerType_MWR);
+        onFired = QFUNC(mwr_onFired);
+    };
+};
+
+class GVAR(NavigationTypes) {
+    class Direct {
+        functionName = QFUNC(navigationType_direct);
+        onFired = "";
+    };
+    class Line {
+        functionName = QFUNC(navigationType_line);
+        onFired = QFUNC(line_onFired);
+    };
+    class LineOfSight {
+        functionName = QFUNC(navigationType_lineOfSight);
+        onFired = QFUNC(proNav_onFired);
+    };
+    class ProportionalNavigation {
+        functionName = QFUNC(navigationType_proNav);
+        onFired = QFUNC(proNav_onFired);
+    };
+    class AugmentedProportionalNavigation {
+        functionName = QFUNC(navigationType_augmentedProNav);
+        onFired = QFUNC(proNav_onFired);
+    };
+    class ZeroEffortMiss {
+        functionName = QFUNC(navigationType_zeroEffortMiss);
+        onFired = QFUNC(proNav_onFired);
     };
 };

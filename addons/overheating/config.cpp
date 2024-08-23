@@ -26,6 +26,8 @@ class CfgPatches {
 
 #include "ACE_Settings.hpp"
 
+#include "ACE_Arsenal_Stats.hpp"
+
 class CfgMovesBasic {
     class ManActions {
         GVAR(GestureMountMuzzle) = QGVAR(GestureMountMuzzle);

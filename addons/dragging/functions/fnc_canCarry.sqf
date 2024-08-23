@@ -28,7 +28,7 @@ if ((_unit getHitPointDamage "HitLegs") >= 0.5) exitWith {false};
 
 // Static weapons need to be empty for carrying (ignore UAV AI)
 if (_target isKindOf "StaticWeapon") exitWith {
-    (crew _target) findIf {getText (configOf _x >> "simulation") != "UAVPilot"} == -1
+    (crew _target) findIf {!unitIsUAV _x} == -1
 };
 
 // Units need to be unconscious or limping; Units also need to not be in ragdoll, as that causes desync issues

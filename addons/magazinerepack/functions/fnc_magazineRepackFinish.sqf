@@ -25,7 +25,7 @@ _args params ["_magazineClassname", "_lastAmmoCount"];
 private _fullMagazineCount = getNumber (configFile >> "CfgMagazines" >> _magazineClassname >> "count");
 
 // Don't show anything if player can't interact
-if (!([ACE_player, objNull, ["isNotInside", "isNotSitting", "isNotSwimming"]] call EFUNC(common,canInteractWith))) exitWith {};
+if !([ACE_player, objNull, ["isNotInside", "isNotSitting", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {};
 
 // Count mags
 private _fullMags = 0;

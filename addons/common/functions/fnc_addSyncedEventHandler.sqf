@@ -24,7 +24,7 @@ if (_name in GVAR(syncedEvents)) exitWith {
     false
 };
 
-private _eventId = [_name, FUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
+private _eventId = [_name, LINKFUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
 private _data = [_handler, [], _ttl, _eventId];
 
 GVAR(syncedEvents) set [_name, _data];

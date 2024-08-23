@@ -10,6 +10,9 @@ PREP_RECOMPILE_END;
 GVAR(syncedEvents) = createHashMap;
 GVAR(showHudHash) = createHashMap;
 GVAR(vehicleIconCache) = createHashMap; // for getVehicleIcon
+GVAR(wheelSelections) = createHashMap;
+
+GVAR(InteractionConditions) = createHashMap;
 
 GVAR(blockItemReplacement) = false;
 
@@ -32,6 +35,7 @@ ACE_COUNTERS = [];
 
 GVAR(statusEffect_Names) = [];
 GVAR(statusEffect_isGlobal) = [];
+GVAR(statusEffect_sendJIP) = [];
 
 GVAR(setHearingCapabilityMap) = [];
 

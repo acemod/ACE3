@@ -237,6 +237,7 @@
             <Italian>Camuffa la trincea</Italian>
             <Japanese>塹壕を偽装</Japanese>
             <German>Graben tarnen</German>
+            <Portuguese>Camuflar trincheira</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_RemovingTrench">
             <English>Removing Trench</English>
@@ -265,6 +266,7 @@
             <Italian>ACE Trincee</Italian>
             <Chinesesimp>ACE 战壕</Chinesesimp>
             <Korean>ACE 참호</Korean>
+            <Portuguese>ACE Trincheiras</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_DisplayName">
             <English>Small Trench Dig Duration</English>
@@ -277,18 +279,20 @@
             <Italian>Trincea piccola - Durata di scavo</Italian>
             <Chinesesimp>小型战壕挖掘时间</Chinesesimp>
             <Korean>소형참호 건설 시간</Korean>
+            <Portuguese>Duração de Escavamento de Trincheira Pequena</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeDigDuration_Description">
             <English>Time, in seconds, required to dig a small trench.</English>
             <Russian>Время в секундах, необходимое для рытья малого окопа</Russian>
             <French>Définit le temps nécessaire au déploiement des petites tranchées (en secondes).</French>
-            <Japanese>小型塹壕の造成が完了するまで掛かる時間 (秒) を設定できます。</Japanese>
+            <Japanese>小型塹壕の造成が完了するまで掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para cavar una trinchera pequeña.</Spanish>
             <Polish>Czas, w sekundach wymagany do wykopania małego okopu</Polish>
             <German>Zeit in Sekunden, um einen kleinen Graben auszuheben.</German>
             <Italian>Tempo in secondi per scavare una trincea piccola.</Italian>
             <Chinesesimp>挖一条小型战壕所需的时间（秒）。</Chinesesimp>
             <Korean>소형 참호를 팔 때 필요한 시간을 설정합니다. (초 단위)</Korean>
+            <Portuguese>Tempo, em segundos, necessário para cavar uma trincheira pequena.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_DisplayName">
             <English>Small Trench Remove Duration</English>
@@ -301,18 +305,20 @@
             <Italian>Trincea piccola - Durata di rimozione</Italian>
             <Chinesesimp>小型战壕回填时间</Chinesesimp>
             <Korean>소형참호 제거 시간</Korean>
+            <Portuguese>Duração de Remoção de Trincheira Pequena</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_SmallEnvelopeRemoveDuration_Description">
             <English>Time, in seconds, required to remove a small trench.</English>
             <Russian>Время в секундах, необходимое для удаления малого окопа</Russian>
             <French>Définit le temps nécessaire pour le retrait des petites tranchées (en secondes).</French>
-            <Japanese>小型塹壕の撤去が完了するまで掛かる時間 (秒) を設定できます。</Japanese>
+            <Japanese>小型塹壕の撤去が完了するまで掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para eliminar una trinchera pequeña.</Spanish>
             <Polish>Czas, w sekundach wymagany do usunięcia małego okopu</Polish>
             <German>Zeit in Sekunden, um einen kleinen Graben aufzuschütten.</German>
             <Italian>Tempo in secondi per rimuovere una trincea piccola.</Italian>
             <Chinesesimp>回填一条小型战壕所需的时间（秒）。</Chinesesimp>
             <Korean>소형 참호를 제거할때 필요한 시간을 설정합니다. (초 단위)</Korean>
+            <Portuguese>Tempo, em segundos, necessário para remover uma trincheira pequena.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_DisplayName">
             <English>Big Trench Dig Duration</English>
@@ -325,18 +331,20 @@
             <Italian>Trincea grande - Durata di scavo</Italian>
             <Chinesesimp>大型战壕挖掘时间</Chinesesimp>
             <Korean>대형참호 건설 시간</Korean>
+            <Portuguese>Duração de Escavamento de Trincheira Grande</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeDigDuration_Description">
             <English>Time, in seconds, required to dig a big trench.</English>
             <Russian>Время в секундах, необходимое для рытья большого окопа</Russian>
             <French>Définit le temps nécessaire au déploiement des grandes tranchées (en secondes).</French>
-            <Japanese>大型塹壕の造成が完了するまで掛かる時間 (秒) を設定できます。</Japanese>
+            <Japanese>大型塹壕の造成が完了するまで掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para cavar una trinchera grande</Spanish>
             <Polish>Czas, w sekundach wymagany do wykopania dużego okopu</Polish>
             <German>Zeit in Sekunden, um einen großen Graben auszuheben.</German>
             <Italian>Tempo in secondi per scavare una trincea grande.</Italian>
             <Chinesesimp>挖一条大型战壕所需的时间（秒）。</Chinesesimp>
             <Korean>대형 참호를 팔때 필요한 시간을 설정합니다. (초 단위)</Korean>
+            <Portuguese>Tempo, em segundos, necessário para cavar uma trincheira grande.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_DisplayName">
             <English>Big Trench Remove Duration</English>
@@ -349,18 +357,20 @@
             <Italian>Trincea grande - Durata di rimozione</Italian>
             <Chinesesimp>大型战壕回填时间</Chinesesimp>
             <Korean>대형참호 제거 시간</Korean>
+            <Portuguese>Duração de Remoção de Trincheira Grande</Portuguese>
         </Key>
         <Key ID="STR_ACE_Trenches_BigEnvelopeRemoveDuration_Description">
             <English>Time, in seconds, required to remove a big trench.</English>
             <Russian>Время в секундах, необходимое для удаления большого окопа</Russian>
             <French>Définit le temps nécessaire pour le retrait des grandes tranchées (en secondes).</French>
-            <Japanese>大型塹壕の撤去が完了するまで掛かる時間 (秒) を設定できます。</Japanese>
+            <Japanese>大型塹壕の撤去が完了するまで掛かる時間。 (秒単位)</Japanese>
             <Spanish>Tiempo, en segundos, requerido para eliminar una trinchera grande</Spanish>
             <Polish>Czas, w sekundach wymagany do usunięcia dużego okopu</Polish>
             <German>Zeit in Sekunden, um einen großen Graben aufzuschütten.</German>
             <Italian>Tempo in secondi per rimuovere una trincea grande.</Italian>
             <Chinesesimp>回填一条大型战壕所需的时间（秒）。</Chinesesimp>
             <Korean>대형 참호를 제거할때 필요한 시간을 설정합니다. (초 단위)</Korean>
+            <Portuguese>Tempo, em segundos, necessário para remover uma trincheira grande.</Portuguese>
         </Key>
     </Package>
 </Project>

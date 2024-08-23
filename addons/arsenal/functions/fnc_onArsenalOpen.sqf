@@ -68,18 +68,17 @@ if (isNil QGVAR(virtualItems)) then {
 GVAR(virtualItemsFlatAll) = +GVAR(virtualItemsFlat);
 
 GVAR(currentFace) = face GVAR(center);
-GVAR(currentVoice) = speaker GVAR(center);
+GVAR(currentVoice) = (speaker GVAR(center)) call EFUNC(common,getConfigName);
 GVAR(currentInsignia) = GVAR(center) call BIS_fnc_getUnitInsignia;
 
 GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
 
-GVAR(showStats) = true;
 GVAR(currentStatPage) = 0;
 GVAR(statsInfo) = [true, controlNull, nil, nil];
 
-GVAR(showActions) = true;
 GVAR(currentActionPage) = 0;
+GVAR(actionsInfo) = [controlNull, nil, nil];
 
 // Update current item list
 call FUNC(updateCurrentItemsList);
@@ -138,14 +137,6 @@ _actionsBoxCtrl ctrlSetPosition [
     11 * GRID_H
 ];
 _actionsBoxCtrl ctrlCommit 0;
-
-// Disable import in MP
-if (isMultiplayer) then {
-    private _importButtonCtrl = _display displayCtrl IDC_buttonImport;
-    _importButtonCtrl ctrlEnable false;
-    _importButtonCtrl ctrlSetFade 0.6;
-    _importButtonCtrl ctrlCommit 0;
-};
 
 //--------------- Camera prep
 cutText ["", "PLAIN"];
@@ -279,4 +270,4 @@ showCinemaBorder false;
 
 //--------------- Reset camera pos
 [nil, [controlNull, 0, 0]] call FUNC(handleMouse);
-GVAR(camPosUpdateHandle) = addMissionEventHandler ["draw3D", {call FUNC(updateCamPos)}];
+GVAR(camPosUpdateHandle) = addMissionEventHandler ["Draw3D", {call FUNC(updateCamPos)}];
