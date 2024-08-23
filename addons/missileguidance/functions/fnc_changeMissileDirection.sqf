@@ -2,6 +2,7 @@
 /*
  * Author: jaynus / nou
  * Change a projectile's direction, maintaing speed
+ * No longer used in guidancePFH, kept for backwards compatibility
  *
  * Arguments:
  * 0: Projectile <OBJECT>
