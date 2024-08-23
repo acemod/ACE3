@@ -19,4 +19,3 @@ _args params ["_firedEH"];
 _firedEH params ["","","","","","","_projectile"];
 
 _profileAdjustedTargetPos vectorDiff getPosASLVisual _projectile
-

@@ -19,7 +19,7 @@ params ["_unit"];
 
 if (cameraView == "GUNNER") exitWith {false};
 if (!isNull objectParent _unit) exitWith {false};
-if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) exitWith {false};
+if !(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) exitWith {false};
 
 private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith {false};

@@ -33,7 +33,10 @@ if ((locked _veh) == 0) exitWith {false};
 if !("ACE_key_lockpick" in (_unit call EFUNC(common,uniqueItems))) exitWith {false};
 
 private _vehLockpickStrength = _veh getVariable[QGVAR(lockpickStrength), GVAR(DefaultLockpickStrength)];
-if (!(_vehLockpickStrength isEqualType 0)) exitWith {ERROR("ACE_vehicleLock_LockpickStrength invalid"); false};
+if !(_vehLockpickStrength isEqualType 0) exitWith {
+    ERROR("ACE_vehicleLock_LockpickStrength invalid");
+    false
+};
 
 //-1 indicates unpickable lock
 if (_vehLockpickStrength < 0) exitWith {false};
@@ -45,7 +48,7 @@ private _condition = {
     ((_unit distance _veh) < 5) && {(speed _veh) < 0.1}
 };
 
-if (!([[_unit, _veh]] call _condition)) exitWith {false};
+if !([[_unit, _veh]] call _condition) exitWith {false};
 
 private _returnValue = _funcType in ["canLockpick", "startLockpick", "finishLockpick"];
 switch (_funcType) do {

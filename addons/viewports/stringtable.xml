@@ -12,6 +12,7 @@
             <Spanish>Periscopios</Spanish>
             <German>Sichtfenster</German>
             <French>Périscopes</French>
+            <Portuguese>Periscópios</Portuguese>
         </Key>
         <Key ID="STR_ACE_Viewports_setting_enabled_description">
             <English>Allows crew to look through periscopes</English>
@@ -24,6 +25,7 @@
             <Spanish>Permite a la tripulación asomarse a través de los periscopios</Spanish>
             <German>Ermöglicht der Besatzung den Blick durch Periskope</German>
             <French>Permet à l'équipage de regarder à travers des périscopes.</French>
+            <Portuguese>Permite que a tripulação olhe através de periscópios</Portuguese>
         </Key>
     </Package>
 </Project>

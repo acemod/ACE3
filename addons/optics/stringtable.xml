@@ -69,7 +69,7 @@
             <Chinese>先進步槍戰鬥光學瞄準鏡(擬真版)</Chinese>
             <Turkish>ARCO (PIP)</Turkish>
         </Key>
-        <Key ID="STR_ACE_Optics_valdada">
+        <Key ID="STR_ACE_Optics_mrco">
             <English>MRCO (2D)</English>
             <Czech>MRCO (2D)</Czech>
             <French>MRCO (2D)</French>
@@ -86,7 +86,7 @@
             <Chinese>多距離戰鬥瞄準鏡(2D)</Chinese>
             <Turkish>MRCO (2D)</Turkish>
         </Key>
-        <Key ID="STR_ACE_Optics_valdada_pip">
+        <Key ID="STR_ACE_Optics_mrco_pip">
             <English>MRCO (PIP)</English>
             <Czech>MRCO (PIP)</Czech>
             <French>MRCO (PIP)</French>
