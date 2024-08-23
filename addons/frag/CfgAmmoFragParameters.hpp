@@ -204,7 +204,7 @@ class SmokeShell: GrenadeHand {
 class G_40mm_HE: GrenadeBase {
     // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M441
     GVAR(skip) = 0;
-    GVAR(force) = 0;
+    GVAR(force) = 1;
     GVAR(classes)[] = {QGVAR(small), QGVAR(tiny), QGVAR(small)};
     GVAR(metal) = 200;
     GVAR(charge) = 32;
@@ -212,7 +212,6 @@ class G_40mm_HE: GrenadeBase {
     GVAR(gurney_k) = "3/5"; // interior fragmenter/charge is a sphere
 };
 class G_20mm_HE: G_40mm_HE {
-    GVAR(skip) = 1;
     GVAR(classes)[] = {QGVAR(tiny)};
     GVAR(metal) = 50;
     GVAR(charge) = 8;
@@ -655,10 +654,6 @@ class ammo_Missile_AA_R77: ammo_Missile_MediumRangeAABase {
     GVAR(metal) = 145; // dg
     GVAR(gurney_c) = 2700;
     GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(large), QGVAR(large)};
-};
-
-class ammo_Missile_LongRangeAABase: MissileBase {
-    GVAR(skip) = 1;
 };
 
 class M_Vorona_HEAT: MissileBase {
