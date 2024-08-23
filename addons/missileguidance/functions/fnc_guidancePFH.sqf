@@ -177,7 +177,7 @@ if ((_pitchRate != 0 || {_yawRate != 0})) then {
         private _up = [_quaternion, [0, 0, 1]] call _multiplyVector;
 
         _projectile setVectorDirAndUp [_dir, _up];
- 
+
         _guidanceParameters set [0, _yaw];
         _guidanceParameters set [2, _pitch];
 
