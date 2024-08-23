@@ -27,7 +27,9 @@ if (GVAR(simplifiedZeroing)) exitWith {
     ((_adjustment select _weaponIndex) select 0)
 };
 
-private _optic = if (_unit == ACE_Player) then {
+private _local = (_unit == ACE_Player);
+
+private _optic = if (_local) then {
     GVAR(Optics) select _weaponIndex;
 } else {
     ([_unit] call FUNC(getOptics)) select _weaponIndex;
@@ -35,7 +37,7 @@ private _optic = if (_unit == ACE_Player) then {
 private _opticConfig = if (_optic != "") then {
     (configFile >> "CfgWeapons" >> _optic)
 } else {
-    if (_unit == ACE_Player) then {
+    if (_local) then {
         (configFile >> "CfgWeapons" >> (GVAR(Guns) select _weaponIndex))
     } else {
         private _gun = switch (_weaponIndex) do {
