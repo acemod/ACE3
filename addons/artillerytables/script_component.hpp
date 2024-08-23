@@ -12,6 +12,10 @@
 // This is a good fit for most large artillery, but a little low for lighter mortars
 #define DEFAULT_AIR_FRICTION -0.00006
 
+#define DEFAULT_MIN_ELEV 0
+// 90 degrees in radians
+#define DEFAULT_MAX_ELEV 1.5708
+
 #define DEGTOMILS 17.7777778
 
 #define IDC_MODECONTROLGROUP 1000

@@ -19,7 +19,7 @@
 params ["_unit", "_newAnimation"];
 
 TRACE_2("AnimChanged",_unit,_newAnimation);
-if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
+if ((_newAnimation != "ACE_AmovPercMstpSsurWnonDnon") && {_unit call EFUNC(common,isAwake)}) then {
     TRACE_1("Surrender animation interrupted",_newAnimation);
     [_unit, "ACE_AmovPercMstpSsurWnonDnon", 1] call EFUNC(common,doAnimation);
 };

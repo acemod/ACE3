@@ -37,6 +37,11 @@ class CfgWeapons {
         ACE_twistDirection = 1;
     };
 
+    class arifle_SLR_V_lxWS;
+    class arifle_SLR_Para_lxWS: arifle_SLR_V_lxWS {
+        ACE_barrelLength = 266.7;
+    };
+
     // Velko R4/R5
     class arifle_Velko_base_lxWS: arifle_Galat_base_lxWS {
         ACE_barrelLength = 460;
