@@ -27,7 +27,11 @@ if (GVAR(simplifiedZeroing)) exitWith {
     ((_adjustment select _weaponIndex) select 0)
 };
 
-private _optic = GVAR(Optics) select _weaponIndex;
+private _optic = if (_unit == ACE_Player) then {
+    GVAR(Optics) select _weaponIndex;
+} else {
+    ([_unit] call FUNC(getOptics)) select _weaponIndex;
+};
 private _opticConfig = if (_optic != "") then {
     (configFile >> "CfgWeapons" >> _optic)
 } else {
