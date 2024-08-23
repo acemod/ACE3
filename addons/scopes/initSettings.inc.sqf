@@ -81,7 +81,7 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     [LSTRING(useLegacyUI_displayName), LSTRING(useLegacyUI_description)],
     _category,
     false,
-    0
+    2
 ] call CBA_fnc_addSetting;
 
 [
@@ -97,5 +97,5 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     LSTRING(inScopeAdjustment_displayName),
     _category,
     false,
-    0
+    2
 ] call CBA_fnc_addSetting;
