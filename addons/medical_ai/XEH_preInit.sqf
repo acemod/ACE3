@@ -13,6 +13,6 @@ if (isNil QGVAR(timeSafe_shoot)) then { GVAR(timeSafe_shoot) = 30; };
 if (isNil QGVAR(timeSafe_hit)) then { GVAR(timeSafe_hit) = 30; };
 if (isNil QGVAR(timeSafe_suppressed)) then { GVAR(timeSafe_suppressed) = 30; };
 
-GVAR(itemHash) = uinamespace getVariable QGVAR(itemHash);
+GVAR(itemHash) = uiNamespace getVariable QGVAR(itemHash);
 
 ADDON = true;
