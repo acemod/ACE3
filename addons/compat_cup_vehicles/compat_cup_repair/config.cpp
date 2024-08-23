@@ -8,11 +8,11 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "CUP_Vehicles_LoadOrder",
-            "ace_fastroping"
+            "ace_repair"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Community Upgrade Project", "Mike"};
+        authors[] = {"johnb43"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
 
