@@ -9,6 +9,3 @@
     false
 },
 [15, [false, true, false]], false] call CBA_fnc_addKeybind;  //Ctrl+Tab Key
-
-GVAR(dev_fnc_projectileCamera) = compile preprocessFileLineNumbers QPATHTOF(dev\projectileCamera.sqf);
-
