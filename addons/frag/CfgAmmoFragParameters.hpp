@@ -250,7 +250,7 @@ class APERSMine_Range_Ammo: MineBase { // VS-50
     GVAR(gurney_k) = "1/3";
 };
 
-class APERSBoundingMine_Range_Ammo: MineBase {
+class APERSBoundingMine_Range_Ammo: BoundingMineBase {
     GVAR(skip) = 1;
     GVAR(force) = 0;
     GVAR(classes)[] = {QGVAR(tiny)};
@@ -433,7 +433,7 @@ class R_60mm_HE: R_80mm_HE { // no idea but looks like a FFAR so made it weaker
     GVAR(charge) = 3850;
 };
 
-class m_70mm_saami: RocketBase {///!!! fix me
+class m_70mm_saami: MissileBase {
     GVAR(skip) = 0;
     GVAR(charge) = 2150;
     GVAR(metal) = 1650;
@@ -463,7 +463,7 @@ class ammo_Missile_CannonLaunchedBase: MissileBase {
     GVAR(skip) = 1;
 };
 
-class R_230mm_fly: RocketBase {
+class R_230mm_fly: ShellBase {
     GVAR(skip) = 0;
     GVAR(charge) = 100; // kg
     GVAR(metal) = 150; // kg
@@ -685,7 +685,7 @@ class Sh_75mm_Railgun_APFSDS: ShellBase {
 class Sh_120mm_APFSDS: ShellBase {
     GVAR(skip) = 1;
 };
-class Sh_125mm_APFSDS: ShellBase {
+class Sh_125mm_APFSDS: Sh_120mm_APFSDS {
     GVAR(skip) = 1;
 };
 
@@ -729,7 +729,7 @@ class ammo_ShipCannon_120mm_HE: Sh_155mm_AMOS {
     GVAR(classes)[] = {QGVAR(small), QGVAR(small), QGVAR(medium), QGVAR(large)};
 };
 
-class Sh_125mm_HEAT: Sh_120mm_HE {
+class Sh_125mm_HEAT: Sh_125mm_HE {
     GVAR(skip) = 1;
     GVAR(metal) = 16760;
     GVAR(charge) = 1640;
