@@ -1332,5 +1332,14 @@
             <Russian>Взаимодействие с анимациями</Russian>
             <French>Interaction avec les animations</French>
         </Key>
+        <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_DisplayName">
+            <English>Interact With Enemy Crew</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_Description">
+            <English>Limit some interactions on vehicles crewed by enemy factions.</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_allowCSW">
+            <English>Allow for Static Weapons</English>
+        </Key>
     </Package>
 </Project>
