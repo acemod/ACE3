@@ -18,7 +18,7 @@ PREP(doSeekerSearch);
 PREP(doHandoff);
 PREP(handleHandoff);
 
-//re-enable after feature merge - PREP(shouldFilterRadarHit);
+PREP(shouldFilterRadarHit);
 
 // Attack Profiles
 PREP(attackProfile_AIR);
@@ -46,7 +46,7 @@ PREP(navigationType_direct);
 PREP(seekerType_SALH);
 PREP(seekerType_Optic);
 PREP(seekerType_SACLOS);
-//re-enable after feature merge - PREP(seekerType_Doppler);
+PREP(seekerType_Doppler);
 PREP(seekerType_MWR);
 
 // Attack Profiles OnFired
