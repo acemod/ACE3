@@ -26,7 +26,7 @@ class CfgVehicles {
             };
         };
     };
-    class rhsusf_stryker_m1134_base: rhsusf_stryker_m1132_m2_base {
+    class rhsusf_stryker_m1134_base: rhsusf_stryker_m1126_m2_base {
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class Hide_FCans: Hide_FCans {
                 positions[] = {{-0.7, -3, -0.7}};

@@ -316,6 +316,12 @@ class CfgVehicles {
                     statement = QUOTE(_player call FUNC(renameGroupUI));
                     showDisabled =1;
                 };
+                class ACE_groupDropDistantUnits {
+                    displayName = CSTRING(groupDropDistantUnits);
+                    condition = QUOTE(call FUNC(canGroupDropDistantUnits));
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    statement = QUOTE(call FUNC(groupDropDistantUnits));
+                };
             };
 
             class ACE_Equipment {
@@ -420,15 +426,11 @@ class CfgVehicles {
         class GVAR(anims) {
             class showBags {
                 phase = 0;
-                // Rotate interactions with turret rotation
-                positions[] = {
-                    "[0, -1.6, 0] vectorAdd ([[1, -1, 0.1], [0, 0, 1], deg (_target animationPhase 'MainTurret')] call CBA_fnc_vectRotate3D)",
-                    "[0, -1.6, 0] vectorAdd ([[-1, -1, 0.1], [0, 0, 1], deg (_target animationPhase 'MainTurret')] call CBA_fnc_vectRotate3D)"
-                };
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
-                name = "$STR_a3_cfgvehicleclasses_backpacks0";
-                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
+                distance = 3;
             };
         };
     };
@@ -439,10 +441,10 @@ class CfgVehicles {
         class GVAR(anims): GVAR(anims) {
             class showBags {
                 phase = 0;
-                selections[] = {"vhc_bags"};
+                positions[] = {"_target selectionPosition ['vhc_bags', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"B_Carryall_cbr"};
-                name = "$STR_BACKPACK_CONTAINER_NAME";
-                text = "$STR_BACKPACK_CONTAINER_NAME";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
         };
     };
@@ -450,10 +452,10 @@ class CfgVehicles {
         class GVAR(anims) {
             class showBags {
                 phase = 0;
-                selections[] = {"vhc_bags"};
+                positions[] = {"_target selectionPosition ['vhc_bags', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
-                name = "$STR_a3_cfgvehicleclasses_backpacks0";
-                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
         };
     };
@@ -490,13 +492,13 @@ class CfgVehicles {
         class GVAR(anims) {
             class showBags {
                 phase = 0;
-                selections[] = {"vhc_bags"};
+                positions[] = {"_target selectionPosition ['vhc_bags', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"B_Carryall_cbr"};
-                name = "$STR_BACKPACK_CONTAINER_NAME";
-                text = "$STR_BACKPACK_CONTAINER_NAME";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
             class showBags2: showBags {
-                selections[] = {"vhc_bags2"};
+                positions[] = {"_target selectionPosition ['vhc_bags2', 'FireGeometry', 'AveragePoint']"};
             };
         };
     };
@@ -511,8 +513,8 @@ class CfgVehicles {
                 selections[] = {"vhc_bags"};
                 positions[] = {"private _pos = _target selectionPosition 'vhc_bags'; _pos set [0, -(_pos select 0)]; _pos"}; // Mirror position to other side of vehicle
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
-                name = "$STR_a3_cfgvehicleclasses_backpacks0";
-                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
         };
     };
@@ -534,8 +536,8 @@ class CfgVehicles {
                 phase = 0;
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
-                name = "$STR_a3_cfgvehicleclasses_backpacks0";
-                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
         };
     };
@@ -546,8 +548,8 @@ class CfgVehicles {
                 phase = 0;
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr"};
-                name = "$STR_a3_cfgvehicleclasses_backpacks0";
-                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
         };
     };
@@ -562,8 +564,8 @@ class CfgVehicles {
                 phase = 0;
                 selections[] = {"vhc_bags"};
                 items[] = {"B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr", "B_Carryall_cbr"};
-                name = "$STR_a3_cfgvehicleclasses_backpacks0";
-                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+                name = "$STR_A3_B_Carryall_cbr0";
+                text = "$STR_A3_B_Carryall_cbr0";
             };
         };
     };

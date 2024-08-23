@@ -8,7 +8,7 @@ class CfgPatches {
             QXGVAR(document),
             QXGVAR(photo)
         };
-        weapons[] = {};
+        weapons[] = {QGVAR(notepad_Item)};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interact_menu", "ace_zeus"};
         author = ECSTRING(common,ACETeam);
@@ -23,5 +23,6 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgEditorSubcategories.hpp"
 #include "CfgMagazines.hpp"
+#include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
 #include "gui.hpp"
