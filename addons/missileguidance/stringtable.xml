@@ -229,12 +229,6 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_attack_heading">
             <English>Attack Heading</English>
         </Key>
-        <Key ID="STR_ACE_MissileGuidance_GPS_ui_cancel">
-            <English>Cancel</English>
-        </Key>
-        <Key ID="STR_ACE_MissileGuidance_GPS_ui_confirm">
-            <English>Confirm</English>
-        </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_short">
             <English>PP</English>
         </Key>

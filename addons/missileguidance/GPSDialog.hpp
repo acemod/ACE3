@@ -227,7 +227,7 @@ class GVAR(gpsAttackOptionsUI) {
 
         class CancelButton: RscButton {
             idc = -1;
-            text = CSTRING(GPS_ui_cancel);
+            text = ECSTRING(common,cancel);
             onButtonClick = QUOTE(closeDialog 0);
             x = "13.5 * GUI_GRID_W + GUI_GRID_CENTER_X";
             y = "14.2 * GUI_GRID_H + GUI_GRID_CENTER_Y";
@@ -239,7 +239,7 @@ class GVAR(gpsAttackOptionsUI) {
         };
         class ConfirmButton: CancelButton {
             idc = IDC_TIMER_CONFIRM;
-            text = CSTRING(GPS_ui_confirm);
+            text = ECSTRING(common,confirm);
             onButtonClick = QUOTE([] call FUNC(gps_confirm));
             x = "27.5 * GUI_GRID_W + GUI_GRID_CENTER_X";
         };
