@@ -9,6 +9,8 @@
             <German>[CSW] AGS30 Gurt</German>
             <Spanish>[CSW] Cinta de AGS30</Spanish>
             <Italian>[CSW] Nastro AGS30</Italian>
+            <Portuguese>[CSW] Cinto de AGS30</Portuguese>
+            <French>[CSW] Ceinture AGS30</French>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_MK19_displayName">
             <English>[CSW] MK19 Belt</English>
@@ -18,6 +20,8 @@
             <German>[CSW] MK19 Gurt</German>
             <Spanish>[CSW] Cinta de MK19</Spanish>
             <Italian>[CSW] Nastro MK19</Italian>
+            <Portuguese>[CSW] Cinto de MK19</Portuguese>
+            <French>[CSW] Ceinture MK19</French>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_TOW_displayName">
             <English>[CSW] TOW Tube</English>
@@ -27,6 +31,8 @@
             <German>[CSW] TOW Rohr</German>
             <Spanish>[CSW] Tubo de TOW</Spanish>
             <Italian>[CSW] Tubo TOW</Italian>
+            <Portuguese>[CSW] Tubo de TOW</Portuguese>
+            <French>[CSW] Tube TOW</French>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_TOW2_displayName">
             <English>[CSW] TOW2 Tube</English>
@@ -36,6 +42,8 @@
             <German>[CSW] TOW2 Rohr</German>
             <Spanish>[CSW] Tubo de TOW2</Spanish>
             <Italian>[CSW] Tubo TOW2</Italian>
+            <Portuguese>[CSW] Tubo de TOW2</Portuguese>
+            <French>[CSW] Tube TOW2</French>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_PG9_displayName">
             <English>[CSW] PG-9 Round</English>
@@ -45,6 +53,8 @@
             <German>[CSW] PG-9 Rakete</German>
             <Spanish>[CSW] Carga de PG-9</Spanish>
             <Italian>[CSW] Razzo PG-9</Italian>
+            <Portuguese>[CSW] Cartucho PG-9</Portuguese>
+            <French>[CSW] Projectile PG-9</French>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_OG9_displayName">
             <English>[CSW] OG-9 Round</English>
@@ -54,6 +64,8 @@
             <German>[CSW] OG-9 Rakete</German>
             <Spanish>[CSW] Carga de OG-9</Spanish>
             <Italian>[CSW] Razzo OG-9</Italian>
+            <Portuguese>[CSW] Cartucho OG-9</Portuguese>
+            <French>[CSW] Projectile OG-9.</French>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M1HE_displayName">
             <English>[CSW] M1 HE</English>
@@ -74,6 +86,7 @@
             <German>[CSW] M84 Rauch</German>
             <Spanish>[CSW] Humo M84</Spanish>
             <Italian>[CSW] M84 Fumogeno</Italian>
+            <Portuguese>[CSW] M84 Fumígeno</Portuguese>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M60A2_displayName">
             <English>[CSW] M60A2 WP</English>
