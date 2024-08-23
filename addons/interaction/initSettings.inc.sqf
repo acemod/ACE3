@@ -55,3 +55,11 @@
     false,
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(interactWithEnemyCrew), "LIST",
+    [LSTRING(interactWithEnemyCrew_DisplayName), LSTRING(interactWithEnemyCrew_Description)],
+    format ["ACE %1", LLSTRING(DisplayName)],
+    [[0, 1, 2], [ELSTRING(common,Never), LSTRING(interactWithEnemyCrew_allowCSW), ELSTRING(common,Always)], 0],
+    true
+] call CBA_fnc_addSetting;
