@@ -36,6 +36,8 @@ PREP(pullOutBody);
 PREP(canRenameGroup);
 PREP(renameGroupUI);
 PREP(renameGroup);
+PREP(canGroupDropDistantUnits);
+PREP(groupDropDistantUnits);
 
 // Weapon Attachments
 PREP(getWeaponAttachmentsActions);
@@ -54,4 +56,5 @@ PREP(push);
 
 // misc
 PREP(canFlip);
+PREP(initAnimActions);
 PREP(replaceTerrainObject);

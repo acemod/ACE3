@@ -227,4 +227,3 @@ if (GVAR(debug_drawGuidanceInfo)) then {
 _stateParams set [0, diag_tickTime];
 
 END_COUNTER(guidancePFH);
-

@@ -5,7 +5,7 @@
 // cannot create checkboxes which have the default value "true"
 // 3den uses inverted checkboxes instead, but those only change in appearence
 // we have to auto set these settings manually - on mission creation
-add3DENEventHandler ["onMissionNew", {
+add3DENEventHandler ["OnMissionNew", {
     set3DENMissionAttributes [
         ["Intel", "IntelWavesIsForced", true],
         ["Intel", "IntelWindIsForced", true]

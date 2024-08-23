@@ -25,7 +25,7 @@ private _hpData = (_hitData select 1) select _hitPartDataIndex;
 private _objectHit = _hpData param [0, objNull];
 TRACE_1("",_objectHit);
 if ((isNil "_objectHit") || {isNull _objectHit}) exitWith {WARNING_1("Problem with hitPart data - bad object [%1]",_objectHit);};
-_objectHit removeEventHandler ["hitPart", _hpId];
+_objectHit removeEventHandler ["HitPart", _hpId];
 
 private _caliber = getNumber (configFile >> "CfgAmmo" >> _roundType >> "caliber");
 private _explosive = getNumber (configFile >> "CfgAmmo" >> _roundType >> "explosive");

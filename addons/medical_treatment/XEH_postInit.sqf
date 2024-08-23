@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Pain killers item to magazine
+["ACE_painkillers_Item", "ACE_painkillers"] call EFUNC(common,registerItemReplacement);
+
 [QEGVAR(medical_status,initialized), {
     params ["_unit"];
 
