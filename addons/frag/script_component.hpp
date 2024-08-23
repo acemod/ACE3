@@ -3,9 +3,9 @@
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define LOG_FRAG_INFO
-#define DEBUG_MODE_FULL
-#define DEBUG_MODE_DRAW
-#define DISABLE_COMPILE_CACHE
+// #define DEBUG_MODE_FULL
+// #define DEBUG_MODE_DRAW
+// #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_FRAG
