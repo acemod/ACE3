@@ -23,28 +23,26 @@ private _baseClasses = [];
     if !(_baseClass in (_modifyClasses apply {_x select 0})) then {
         _baseClasses pushBackUnique _baseClass;
     };
-    false
-} count (
-    ("!isNull (_x >> 'modelSides') &&" +
-    "{(_x >> 'modelSides') in (configProperties [_x, 'true', false])} &&" +
-    "{getArray (_x >> 'modelSides') isNotEqualTo [6]} &&" +
-    "{getArray (_x >> 'modelSides') isNotEqualTo [0,1,2,3]}")
-    configClasses (configFile >> "CfgVehicles")
-);
+} forEach ((toString {
+    !isNull (_x >> 'modelSides') &&
+    {(_x >> 'modelSides') in (configProperties [_x, 'true', false])} &&
+    {getArray (_x >> 'modelSides') isNotEqualTo [6]} &&
+    {getArray (_x >> 'modelSides') isNotEqualTo [0,1,2,3]}
+}) configClasses (configFile >> "CfgVehicles"));
 
-private _nl = toString [13, 10];
-private _output = "class CfgVehicles {" + _nl;
+private _nl = endl;
+private _output = ["class CfgVehicles {", _nl];
 {
-    ADD(_output,format [ARR_3("    class %1;%2",configName _x,_nl)]);
-    false
-} count _baseClasses;
-ADD(_output,_nl);
+    _output pushBack format ["    class %1;%2", configName _x, _nl];
+} forEach _baseClasses;
+_output pushBack _nl;
 {
     _x params ["_class", "_parent"];
-    ADD(_output,format [ARR_4("    class %1: %2 {%3        modelSides[] = {6};%3    };%3",configName _class,configName _parent,_nl)]);
-    false
-} count _modifyClasses;
-ADD(_output,"};");
+    _output pushBack format ["    class %1: %2 {%3        modelSides[] = {6};%3    };%3", configName _class, configName _parent, _nl];
+} forEach _modifyClasses;
+_output pushBack "};";
+
+_output = _output joinString "";
 
 copyToClipboard _output;
-_output;
+_output // return

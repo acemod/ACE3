@@ -15,6 +15,8 @@ class CfgPatches {
         authors[] = {"Community Upgrade Project", "Mike"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+
+        addonRootClass = QUOTE(ADDON);
     };
 };
 

@@ -81,15 +81,242 @@ class CfgVehicles {
 
     class gm_brdm2_base: gm_wheeled_APC_base {
         EGVAR(refuel,fuelCapacity) = 290;
+
+        class EGVAR(interaction,anims) {
+            class AmmoBox_01_unhide {
+                phase = 0;
+                positions[] = {"_target selectionPosition ['ammobox_01', 'FireGeometry', 'AveragePoint']"};
+                items[] = {"gm_AmmoBox_wood_04_empty"};
+                name = "$STR_DN_gm_AmmoBox_wood_04_base";
+                text = "$STR_DN_gm_AmmoBox_wood_04_base";
+            };
+            class AmmoBox_02_unhide {
+                phase = 0;
+                positions[] = {"_target selectionPosition ['ammobox_02', 'FireGeometry', 'AveragePoint']"};
+                items[] = {"gm_AmmoBox_wood_04_empty"};
+                name = "$STR_DN_gm_AmmoBox_wood_04_base";
+                text = "$STR_DN_gm_AmmoBox_wood_04_base";
+            };
+            class AmmoBox_03_unhide {
+                phase = 0;
+                positions[] = {"_target selectionPosition ['ammobox_03', 'FireGeometry', 'AveragePoint']"};
+                items[] = {"gm_AmmoBox_wood_04_empty"};
+                name = "$STR_DN_gm_AmmoBox_wood_04_base";
+                text = "$STR_DN_gm_AmmoBox_wood_04_base";
+            };
+        };
+    };
+    class gm_brdm2um_base: gm_brdm2_base {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class AmmoBox_01_unhide: AmmoBox_01_unhide {
+                positions[] = {{-0.1, -1.9, -0.5}};
+            };
+            class AmmoBox_02_unhide: AmmoBox_02_unhide {
+                positions[] = {{-0.55, -0.35, -0.35}};
+            };
+            class AmmoBox_03_unhide: AmmoBox_03_unhide {
+                positions[] = {{0.3, -1.85, -0.5}};
+            };
+        };
     };
 
     class gm_btr60_base: gm_wheeled_APC_base {
         EGVAR(refuel,fuelCapacity) = 290;
         EGVAR(cookoff,cookoffSelections)[] = {"commanderturret_hatch"};
+
+        class EGVAR(interaction,anims) {
+            class AmmoBox_01_unhide {
+                phase = 0;
+                positions[] = {"_target selectionPosition ['ammobox_01', 'FireGeometry', 'AveragePoint']"};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_02_unhide {
+                phase = 0;
+                positions[] = {"_target selectionPosition ['ammobox_02', 'FireGeometry', 'AveragePoint']"};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_03_unhide {
+                phase = 0;
+                positions[] = {"_target selectionPosition ['ammobox_03', 'FireGeometry', 'AveragePoint']"};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_04_unhide {
+                phase = 0;
+                positions[] = {"_target selectionPosition ['ammobox_04', 'FireGeometry', 'AveragePoint']"};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_05_unhide {
+                phase = 0;
+                positions[] = {"_target selectionPosition ['ammobox_05', 'FireGeometry', 'AveragePoint']"};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_06_unhide {
+                phase = 0;
+                positions[] = {"_target selectionPosition ['ammobox_06', 'FireGeometry', 'AveragePoint']"};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_07_unhide {
+                phase = 0;
+                positions[] = {"_target selectionPosition ['ammobox_07', 'FireGeometry', 'AveragePoint']"};
+                items[] = {"gm_AmmoBox_wood_04_empty"};
+                name = "$STR_DN_gm_AmmoBox_wood_04_base";
+                text = "$STR_DN_gm_AmmoBox_wood_04_base";
+            };
+        };
+    };
+
+    class gm_ural375d_base: gm_wheeled_truck_base {
+        EGVAR(refuel,fuelCapacity) = 360;
+
+        class EGVAR(interaction,anims) {
+            class AmmoBox_01_unhide {
+                phase = 0;
+                positions[] = {{-0.55, 1.83, 0.7}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                distance = 2.5;
+            };
+            class AmmoBox_02_unhide {
+                phase = 0;
+                positions[] = {{0, 1.83, 0.7}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                distance = 3;
+            };
+            class AmmoBox_03_unhide {
+                phase = 0;
+                positions[] = {{0.55, 1.83, 0.7}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                distance = 2.5;
+            };
+            class AmmoBox_04_unhide {
+                phase = 0;
+                positions[] = {{-0.45, 1.83, 0.7}};
+                items[] = {"gm_AmmoBox_wood_04_empty"};
+                name = "$STR_DN_gm_AmmoBox_wood_04_base";
+                text = "$STR_DN_gm_AmmoBox_wood_04_base";
+                distance = 2.5;
+            };
+        };
+    };
+    class gm_ural375d_mlrs_base: gm_ural375d_base {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class AmmoBox_01_unhide: AmmoBox_01_unhide {
+                positions[] = {{-0.55, 2, 0.5}};
+            };
+            class AmmoBox_02_unhide: AmmoBox_02_unhide {
+                positions[] = {{0, 2, 0.5}};
+            };
+            class AmmoBox_03_unhide: AmmoBox_03_unhide {
+                positions[] = {{0.55, 2, 0.5}};
+            };
+            class AmmoBox_04_unhide: AmmoBox_04_unhide {
+                positions[] = {{-0.45, 2, 0.5}};
+            };
+        };
+    };
+    class gm_ural375d_medic_base: gm_ural375d_base {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class AmmoBox_01_unhide: AmmoBox_01_unhide {
+                positions[] = {{-0.55, 2, 0.7}};
+            };
+            class AmmoBox_02_unhide: AmmoBox_02_unhide {
+                positions[] = {{0, 2, 0.7}};
+            };
+            class AmmoBox_03_unhide: AmmoBox_03_unhide {
+                positions[] = {{0.55, 2, 0.7}};
+            };
+            class AmmoBox_04_unhide: AmmoBox_04_unhide {
+                positions[] = {{-0.45, 2, 0.7}};
+            };
+        };
     };
 
     class gm_ural4320_base: gm_wheeled_truck_base {
         EGVAR(refuel,fuelCapacity) = 360;
+
+        class EGVAR(interaction,anims) {
+            class AmmoBox_01_unhide {
+                phase = 0;
+                positions[] = {{-0.55, 1.47, 0.7}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                distance = 2.5;
+            };
+            class AmmoBox_02_unhide {
+                phase = 0;
+                positions[] = {{0, 1.47, 0.7}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                distance = 3;
+            };
+            class AmmoBox_03_unhide {
+                phase = 0;
+                positions[] = {{0.55, 1.47, 0.7}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                distance = 2.5;
+            };
+            class AmmoBox_04_unhide {
+                phase = 0;
+                positions[] = {{-0.45, 1.47, 0.7}};
+                items[] = {"gm_AmmoBox_wood_04_empty"};
+                name = "$STR_DN_gm_AmmoBox_wood_04_base";
+                text = "$STR_DN_gm_AmmoBox_wood_04_base";
+                distance = 2.5;
+            };
+        };
+    };
+    class gm_ural4320_repair_base: gm_ural4320_base {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class AmmoBox_01_unhide: AmmoBox_01_unhide {
+                positions[] = {{-0.55, 1.62, 0.7}};
+            };
+            class AmmoBox_02_unhide: AmmoBox_02_unhide {
+                positions[] = {{0, 1.62, 0.7}};
+            };
+            class AmmoBox_03_unhide: AmmoBox_03_unhide {
+                positions[] = {{0.55, 1.62, 0.7}};
+            };
+            class AmmoBox_04_unhide: AmmoBox_04_unhide {
+                positions[] = {{-0.45, 1.62, 0.7}};
+            };
+        };
+    };
+    class gm_ural44202_base: gm_ural4320_base {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class AmmoBox_01_unhide: AmmoBox_01_unhide {
+                positions[] = {{-0.55, 1.37, 0.7}};
+            };
+            class AmmoBox_02_unhide: AmmoBox_02_unhide {
+                positions[] = {{0, 1.37, 0.7}};
+            };
+            class AmmoBox_03_unhide: AmmoBox_03_unhide {
+                positions[] = {{0.55, 1.37, 0.7}};
+            };
+            class AmmoBox_04_unhide: AmmoBox_04_unhide {
+                positions[] = {{-0.45, 1.37, 0.7}};
+            };
+        };
     };
 
     class gm_ural4320_reammo_base: gm_ural4320_base {
@@ -190,9 +417,103 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 460;
         EGVAR(cookoff,cookoffSelections)[] = {"mainturret_hatch","commanderturret_hatch"};
     };
+    class gm_bmp1sp2_base: gm_bmp1_base {
+        class EGVAR(interaction,anims) {
+            class AmmoBox_01_unhide {
+                phase = 0;
+                positions[] = {{-1.2, -2.52, -1.2}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_02_unhide {
+                phase = 0;
+                positions[] = {{-1.3, -2, -1.2}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_03_unhide {
+                phase = 0;
+                positions[] = {{-1.35, -1.43, -1.2}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_04_unhide {
+                phase = 0;
+                positions[] = {{1.2, -2.52, -1.2}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_05_unhide {
+                phase = 0;
+                positions[] = {{1.3, -2, -1.2}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_06_unhide {
+                phase = 0;
+                positions[] = {{1.35, -1.43, -1.2}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_07_unhide {
+                phase = 0;
+                positions[] = {{-1.45, 0.1, -1.3}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_08_unhide {
+                phase = 0;
+                positions[] = {{-1.45, 2, -1.3}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+            class AmmoBox_09_unhide {
+                phase = 0;
+                positions[] = {{1.45, 2, -1.3}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+            };
+        };
+    };
 
     class gm_pt76_base: gm_tracked_Tank_base {
         EGVAR(refuel,fuelCapacity) = 250;
+
+        class EGVAR(interaction,anims) {
+            class AmmoBox_01_unhide {
+                phase = 0;
+                positions[] = {{0.08, -1.75, -1}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                distance = 2.5;
+            };
+            class AmmoBox_02_unhide {
+                phase = 0;
+                positions[] = {{0.08, -1.38, -1}};
+                items[] = {"gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47"};
+                name = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                text = "$STR_DN_gm_AmmoBox_880Rnd_762x39mm_b_M43_ak47";
+                distance = 2.5;
+            };
+            class AmmoBox_03_unhide {
+                phase = 0;
+                positions[] = {{0.08, -2.15, -1}};
+                items[] = {"gm_AmmoBox_wood_04_empty"};
+                name = "$STR_DN_gm_AmmoBox_wood_04_base";
+                text = "$STR_DN_gm_AmmoBox_wood_04_base";
+                distance = 2.5;
+            };
+        };
     };
 
     class gm_t55_base: gm_tracked_Tank_base {
@@ -204,11 +525,47 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 812;
     };
 
+    class gm_tracked_Artillery_base;
+    class gm_2s1_base: gm_tracked_Artillery_base {
+        class EGVAR(interaction,anims) {
+            class AmmoBox_01_unhide {
+                phase = 0;
+                // Rotate interactions with turret rotation
+                positions[] = {"[0, -1.3, 0] vectorAdd ([[0, -1.1, -0.35], [0, 0, 1], deg (_target animationPhase 'mainturret_trav_anim')] call CBA_fnc_vectRotate3D)"};
+                items[] = {"gm_AmmoBox_wood_04_empty"};
+                name = "$STR_DN_gm_AmmoBox_wood_04_base";
+                text = "$STR_DN_gm_AmmoBox_wood_04_base";
+                distance = 2.5;
+            };
+        };
+    };
+
     // WEST
     class gm_Leopard1_base;
     class gm_Leopard1a0_base: gm_Leopard1_base {
         EGVAR(refuel,fuelCapacity) = 955;
         EGVAR(cookoff,cookoffSelections)[] = {"mainturret_hatch_1","commanderturret_hatch"};
+    };
+
+    class gm_Leopard1a1_base: gm_Leopard1a0_base {
+        class EGVAR(interaction,anims) {
+            class AmmoBox_01_unhide {
+                phase = 0;
+                // Rotate interactions with turret rotation
+                positions[] = {"[0, -0.6, 0] vectorAdd ([[0.7, -2, -0.6], [0, 0, 1], deg (_target animationPhase 'mainturret_trav_anim')] call CBA_fnc_vectRotate3D)"};
+                items[] = {"gm_AmmoBox_wood_04_empty"};
+                name = "$STR_DN_gm_AmmoBox_wood_04_base";
+                text = "$STR_DN_gm_AmmoBox_wood_04_base";
+            };
+            class AmmoBox_02_unhide {
+                phase = 0;
+                // Rotate interactions with turret rotation
+                positions[] = {"[0, -0.6, 0] vectorAdd ([[-0.3, -1.95, -0.6], [0, 0, 1], deg (_target animationPhase 'mainturret_trav_anim')] call CBA_fnc_vectRotate3D)"};
+                items[] = {"gm_AmmoBox_wood_04_empty"};
+                name = "$STR_DN_gm_AmmoBox_wood_04_base";
+                text = "$STR_DN_gm_AmmoBox_wood_04_base";
+            };
+        };
     };
 
     class gm_Gepard_base: gm_Leopard1_base {
@@ -257,42 +614,39 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 3700;
         EGVAR(fastroping,enabled) = 0;
 
-        // TODO: stringtables
         class UserActions {
-                class openDoor_L {
-                    displayNameDefault = "Open left Door";
-                    displayName = "Open left Door";
-                    position = "";
-                    radius = 2.7;
-                    onlyForPlayer = 1;
-                    condition = QUOTE((this animationSourcePhase 'door_2_1_unhide' > 0.5) && (this doorPhase 'door_2_1_source' < 0.5) && {alive this} && {!(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)])});
-                    statement = "this animateDoor ['door_2_1_source',1]";
-                };
-
-                class openDoor_R: openDoor_L {
-                    displayNameDefault = "Open right Door";
-                    displayName = "Open right Door";
-                    condition = QUOTE((this animationSourcePhase 'door_2_2_unhide' > 0.5) && (this doorPhase 'door_2_2_source' < 0.5) && {alive this} && {!(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)])});
-                    statement = "this animateDoor ['door_2_2_source',1]";
-                };
-
-                class closeDoor_L {
-                    displayNameDefault = "Close left Door";
-                    displayName = "Close left Door";
-                    position = "";
-                    radius = 2.7;
-                    onlyForPlayer = 1;
-                    condition = QUOTE((this animationSourcePhase 'door_2_1_unhide' > 0.5) && (this doorPhase 'door_2_1_source' > 0.5) && {alive this} && {!(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)])});
-                    statement = "this animateDoor ['door_2_1_source',0]";
-                };
-
-                class closeDoor_R: closeDoor_L {
-                    displayNameDefault = "Close right Door";
-                    displayName = "Close right Door";
-                    condition = QUOTE((this animationSourcePhase 'door_2_2_unhide' > 0.5) && (this doorPhase 'door_2_2_source' > 0.5) && {alive this} && {!(this getVariable [ARR_2(QUOTE(QEGVAR(fastroping,doorsLocked)),false)])});
-                    statement = "this animateDoor ['door_2_2_source',0]";
-                };
+            class openDoor_L {
+                displayNameDefault = "$STR_a3_cfgvehicles_useractions_openldoor0";
+                displayName = "$STR_a3_cfgvehicles_useractions_openldoor0";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = QUOTE((this animationSourcePhase 'door_2_1_unhide' > 0.5) && (this doorPhase 'door_2_1_source' < 0.5) && {alive this} && {!(this getVariable [ARR_2(QQEGVAR(fastroping,doorsLocked),false)])});
+                statement = "this animateDoor ['door_2_1_source',1]";
             };
+            class openDoor_R: openDoor_L {
+                displayNameDefault = "$STR_a3_cfgvehicles_useractions_openrdoor0";
+                displayName = "$STR_a3_cfgvehicles_useractions_openrdoor0";
+                condition = QUOTE((this animationSourcePhase 'door_2_2_unhide' > 0.5) && (this doorPhase 'door_2_2_source' < 0.5) && {alive this} && {!(this getVariable [ARR_2(QQEGVAR(fastroping,doorsLocked),false)])});
+                statement = "this animateDoor ['door_2_2_source',1]";
+            };
+
+            class closeDoor_L {
+                displayNameDefault = "$STR_a3_cfgvehicles_useractions_closeldoor0";
+                displayName = "$STR_a3_cfgvehicles_useractions_closeldoor0";
+                position = "";
+                radius = 2.7;
+                onlyForPlayer = 1;
+                condition = QUOTE((this animationSourcePhase 'door_2_1_unhide' > 0.5) && (this doorPhase 'door_2_1_source' > 0.5) && {alive this} && {!(this getVariable [ARR_2(QQEGVAR(fastroping,doorsLocked),false)])});
+                statement = "this animateDoor ['door_2_1_source',0]";
+            };
+            class closeDoor_R: closeDoor_L {
+                displayNameDefault = "$STR_a3_cfgvehicles_useractions_closerdoor0";
+                displayName = "$STR_a3_cfgvehicles_useractions_closerdoor0";
+                condition = QUOTE((this animationSourcePhase 'door_2_2_unhide' > 0.5) && (this doorPhase 'door_2_2_source' > 0.5) && {alive this} && {!(this getVariable [ARR_2(QQEGVAR(fastroping,doorsLocked),false)])});
+                statement = "this animateDoor ['door_2_2_source',0]";
+            };
+        };
     };
     class gm_bo105p1m_vbh_base;
     class gm_bo105p1m_vbh_swooper_base: gm_bo105p1m_vbh_base {

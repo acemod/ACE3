@@ -30,14 +30,29 @@ As of ACEX v3.2.0 _(before merge into ACE3)_ this feature can also be enabled wi
 
 ## 2. Scripting
 
-### 2.1 Disable Transferring for a Group
+### 2.1 Manipulating HC Transfers of Groups via function
 
-To prevent a group from transferring to a Headless Client use the following line on a group leader (or every unit in a group in case group leader may not spawn):
+`ace_headless_fnc_blacklist`
+
+   | Arguments | Type | Optional (default value)
+---| --------- | ---- | ------------------------
+0  | Units | Object, Group or Array of both | Required
+1  | Add (true) or remove (false) from blacklist | Bool | Optional (default: `true`)
+2  | Owner to transfer units to | Number | Optional (default: `-1`)
+3  | Rebalance (0 = no rebalance, 1 = rebalance, 2 = force rebalance) | Number | (default: `0`)
+**R** | None | None | Return value
+
+`Force rebalance` means that all units, including the ones that are on the HCs, are rebalanced amongst the HCs, whereas `rebalance` means that newly spawned units are going to be evenly distributed amongst HCs. Therefore, `rebalance` does not guarantee that the HCs will have an equal amount of groups, whereas `force rebalance` does.
+
+### 2.2 Disable Transferring for a Group via variable
+
+To prevent a group from transferring to a Headless Client use the following line on a unit within a group:
 
 ```sqf
 this setVariable ["acex_headless_blacklist", true];
 ```
 
+This variable can also be set on vehicles, disabling transferal of any groups having units in said vehicles.
 
 ## 3. Limitations
 
@@ -48,3 +63,7 @@ Some Arma 3 features are incompatible, this is up to BI to add support. Disable 
 Additionally, groups will not be transferred due to lack of support if they:
 
 - Have waypoints with synchronized triggers (waypoint would not change status based on trigger condition) (added in ACEX v3.2.0 - _before merge into ACE3_)
+
+Groups will not be transferred to avoid issues:
+- If a player is within the group.
+- If they contain UAVs.
