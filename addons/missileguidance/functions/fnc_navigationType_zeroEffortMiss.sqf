@@ -35,7 +35,4 @@ private _zeroEffortMissNormal = _zeroEffortMiss vectorDiff _zeroEffortMissProjec
 
 private _commandedAcceleration = _zeroEffortMissNormal vectorMultiply (_navigationGain / (_timeToGo * _timeToGo));
 
-if (accTime > 0) then {
-    _navigationParams set [0, [_lineOfSight]];
-};
 _commandedAcceleration

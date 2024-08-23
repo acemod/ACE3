@@ -46,4 +46,3 @@ if (accTime > 0) then {
 };
 
 _targetDirection
-
