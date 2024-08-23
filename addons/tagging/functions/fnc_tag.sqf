@@ -60,8 +60,8 @@ if ((!isNull _object) && {
     };
 
     // If the class is not categorized correctly search the cache
-    private _modelName = (getModelInfo _object) select 0;
-    private _isStatic = GVAR(cacheStaticModels) getVariable [_modelName, false];
+    private _modelName = toLowerANSI ((getModelInfo _object) select 0);
+    private _isStatic = _modelName in (uiNamespace getVariable QGVAR(cacheStaticModels));
     TRACE_2("Object:",_modelName,_isStatic);
     // If the class in not on the cache, exit
     (!_isStatic)

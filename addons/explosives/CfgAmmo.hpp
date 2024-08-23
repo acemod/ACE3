@@ -3,38 +3,19 @@ class CfgAmmo {
     class Default;
 
     class TimeBombCore: Default {
-        GVAR(DefuseTime) = 5;
+        GVAR(defuseTime) = 5;
     };
-    /*
-    class BoundingMineCore: TimeBombCore;
-    class BoundingMineBase: BoundingMineCore;
-    class APERSBoundingMine_Range_Ammo: BoundingMineBase;
 
-    class MineCore: TimeBombCore;
-    class MineBase: MineCore;
-    class APERSMine_Range_Ammo: MineBase;
-    class ATMine_Range_Ammo: MineBase;
-
-    class DirectionalBombCore: TimeBombCore;
-    class DirectionalBombBase: DirectionalBombCore;
-
-    class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase;
-
-    class PipeBombCore: TimeBombCore;
-    class PipeBombBase: PipeBombCore;
-    */
     // GVAR(size) = 0; is small size
     // GVAR(size) = 1; is large size
     class DirectionalBombBase;
     class ClaymoreDirectionalMine_Remote_Ammo: DirectionalBombBase {
         GVAR(magazine) = "ClaymoreDirectionalMine_Remote_Mag";
-        GVAR(Explosive) = "ClaymoreDirectionalMine_Remote_Ammo_Scripted";
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0, 0, 0.038};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
     };
-    // class ClaymoreDirectionalMine_Remote_Ammo_Scripted: ClaymoreDirectionalMine_Remote_Ammo {};
 
     class APERSTripMine_Wire_Ammo: DirectionalBombBase {
         GVAR(defuseObjectPosition)[] = {-1.415, 0, 0.12};
@@ -43,7 +24,7 @@ class CfgAmmo {
 
     class ACE_FlareTripMine_Wire_Ammo: APERSTripMine_Wire_Ammo {
         SoundSetExplosion[] = {};
-        defaultMagazine = "ACE_FlareTripMine_Mag"; //Mag that gets dropped after defuse
+        defaultMagazine = "ACE_FlareTripMine_Mag"; // Mag that gets dropped after defuse
         hit = 0;
         indirectHit = 0;
         indirectHitRange = 0;
@@ -92,7 +73,6 @@ class CfgAmmo {
     class PipeBombBase;
     class DemoCharge_Remote_Ammo: PipeBombBase {
         GVAR(magazine) = "DemoCharge_Remote_Mag";
-        GVAR(Explosive) = "DemoCharge_Remote_Ammo_Scripted"; // can probably remove as base ammo now has triggerWhenDestroyed
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0.07, 0, 0.055};
         soundActivation[] = {"", 0, 0, 0};
@@ -103,14 +83,11 @@ class CfgAmmo {
     };
     class SatchelCharge_Remote_Ammo: PipeBombBase {
         GVAR(magazine) = "SatchelCharge_Remote_Mag";
-        GVAR(Explosive) = "SatchelCharge_Remote_Ammo_Scripted"; // can probably remove as base ammo now has triggerWhenDestroyed
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0.1, 0.1, 0.05};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
     };
-    // class DemoCharge_Remote_Ammo_Scripted: DemoCharge_Remote_Ammo {};
-    // class SatchelCharge_Remote_Ammo_Scripted: SatchelCharge_Remote_Ammo {};
 
     class IEDUrbanBig_Remote_Ammo: PipeBombBase {
         triggerWhenDestroyed = 1;
@@ -168,10 +145,9 @@ class CfgAmmo {
         mineTrigger = "RangeTriggerShort";
     };
 
-    // Orange DLC:
+    // Orange DLC
     class APERSMineDispenser_Ammo: PipeBombBase {
         GVAR(magazine) = "APERSMineDispenser_Mag";
-        GVAR(Explosive) = "APERSMineDispenser_Ammo_Scripted"; // triggerWhenDestroyed = 1;
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0.0, -0.05, 0.15};
     };

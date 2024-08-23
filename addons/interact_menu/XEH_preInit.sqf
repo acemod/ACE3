@@ -88,8 +88,8 @@ GVAR(inheritedClassesMan) = [];
     if (GVAR(inheritedClassesAll) pushBackUnique _type == -1) exitWith { END_COUNTER(InitPost); };
 
     {
-        _x params ["_objectType", "_typeNum", "_parentPath", "_action"];
-        if (_object isKindOf _objectType) then {
+        _x params ["_objectType", "_typeNum", "_parentPath", "_action", "_excludedClasses"];
+        if (_type isKindOf _objectType && {_excludedClasses findIf {_type isKindOf _x} == -1}) then {
             [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
         };
     } forEach GVAR(inheritedActionsAll);
@@ -102,8 +102,10 @@ GVAR(inheritedClassesMan) = [];
 
     if (GVAR(inheritedClassesMan) pushBackUnique _type == -1) exitWith { END_COUNTER(InitPost); };
     {
-        _x params ["_typeNum", "_parentPath", "_action"];
-        [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+        _x params ["_typeNum", "_parentPath", "_action", "_excludedClasses"];
+        if (_excludedClasses findIf {_type isKindOf _x} == -1) then { // skip excluded classes and children
+            [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+        };
     } forEach GVAR(inheritedActionsMan);
     END_COUNTER(InitPost);
 }, true, ["VirtualMan_F"]] call CBA_fnc_addClassEventHandler;

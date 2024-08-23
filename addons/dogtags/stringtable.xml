@@ -13,7 +13,7 @@
             <Italian>Piastrina</Italian>
             <Chinese>兵籍牌</Chinese>
             <Chinesesimp>兵籍牌</Chinesesimp>
-            <Portuguese>Dog Tag</Portuguese>
+            <Portuguese>Chapa de Identificação</Portuguese>
             <Spanish>Placa de identidad</Spanish>
             <Turkish>Künye</Turkish>
         </Key>
@@ -29,7 +29,7 @@
             <Italian>Controlla Piastrina</Italian>
             <Chinese>檢查兵籍牌</Chinese>
             <Chinesesimp>检查兵籍牌</Chinesesimp>
-            <Portuguese>Verificar Dog Tag</Portuguese>
+            <Portuguese>Verificar chapa de identificação</Portuguese>
             <Spanish>Verificar placa de identidad</Spanish>
             <Turkish>Künyeyi Kontrol Et</Turkish>
         </Key>
@@ -66,7 +66,7 @@
             <Turkish>Al</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_takeDogtagSuccess">
-            <English>Dogtag taken from %1...</English>
+            <English>Dog Tag taken from %1...</English>
             <Polish>Zabrałeś nieśmiertelnik %1...</Polish>
             <Russian>Жетон снят с %1...</Russian>
             <Czech>Sebral jsem známku od %1...</Czech>
@@ -77,12 +77,12 @@
             <Italian>Piastrina presa da %1...</Italian>
             <Chinese>從%1身上拿取兵籍牌...</Chinese>
             <Chinesesimp>从%1身上拿取兵籍牌...</Chinesesimp>
-            <Portuguese>Dogtag pego de %1...</Portuguese>
+            <Portuguese>Chapa de identificação pega de %1...</Portuguese>
             <Spanish>Tomada placa de identidad de %1...</Spanish>
             <Turkish>Künye %1 kişisinden alındı</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_dogtagAlreadyTaken">
-            <English>Somebody else has already taken the dogtag...</English>
+            <English>Somebody else has already taken the Dog Tag...</English>
             <Polish>Ktoś już zabrał ten nieśmiertelnik...</Polish>
             <Russian>Кто-то уже забрал жетон...</Russian>
             <Czech>Někdo jiný už vzal identifikační známku...</Czech>
@@ -93,12 +93,12 @@
             <Italian>Qualcun altro ha già preso la piastrina...</Italian>
             <Chinese>已經有人把他的兵籍牌拿走了...</Chinese>
             <Chinesesimp>已经有人把他的兵籍牌拿走了...</Chinesesimp>
-            <Portuguese>Alguém já pegou essa dogtag...</Portuguese>
+            <Portuguese>Alguém já pegou essa chapa de identificação...</Portuguese>
             <Spanish>Alguien más ha tomado la placa de identidad</Spanish>
             <Turkish>Başka biri zaten künyeyi almış</Turkish>
         </Key>
         <Key ID="STR_ACE_Dogtags_IGUI_Description">
-            <English>Onscreen display for checking dogtags</English>
+            <English>Onscreen display for checking Dog Tags</English>
             <German>Anzeige um Erkennungsmarke zu überprüfen</German>
             <Chinese>在畫面中顯示檢查兵籍牌</Chinese>
             <Chinesesimp>在画面中显示检查兵籍牌</Chinesesimp>
@@ -106,7 +106,7 @@
             <Italian>Indicatore su schermo per il controllo delle piastrine</Italian>
             <Polish>Wyświetlacz ekranowy dla sprawdzania nieśmiertelników</Polish>
             <Russian>Экран для проверки жетонов</Russian>
-            <Portuguese>Tela de Exibição para verificar dogtags</Portuguese>
+            <Portuguese>Tela de exibição para verificar chapas de identificação</Portuguese>
             <Spanish>Visualización en pantalla de placa de identidad</Spanish>
             <French>Affichage à l'écran pour le contrôle des plaques.</French>
             <Czech>Okno na obrazovce pro kontrolu známek</Czech>

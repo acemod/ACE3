@@ -21,16 +21,18 @@ Because `ace_zeus` is being removed you must also remove any components that req
 
 ## 2. Dependencies
 
-{% assign pages_by_title = site.pages | sort: "title" %}
+{% assign pages_by_title = site.pages | sort_natural: "title" %}
 {% for page in pages_by_title %}
     {%- if page.group == 'feature' and page.component -%}
-        ### {{ page.title }}
+        {%- unless page.version.removed -%}
+            ### {{ page.title }}
+            
+            {% capture component %}{{ page.component }}{% endcapture %}
+            {% include dependencies_list.md component=component %}
 
-        {% capture component %}{{ page.component }}{% endcapture %}
-        {% include dependencies_list.md component=component %}
-
-        {%- if page.core_component -%}
-            _Note: This module is required by nearly all other modules. Do NOT remove it!_
-        {% endif %}
+            {%- if page.core_component -%}
+                _Note: This module is required by nearly all other modules. Do NOT remove it!_
+            {% endif %}
+        {% endunless %}
     {% endif %}
 {% endfor %}
