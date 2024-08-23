@@ -59,12 +59,12 @@ if (GVAR(reflectionsEnabled) || (GVAR(enabled) && {_ammo call FUNC(shouldFrag)})
         {
             params ["_projectile", "_posASL"];
 
+            private _ammo = typeOf _projectile;
             if (GVAR(reflectionsEnabled)) then {
                 [_posASL, _ammo] call FUNC(doReflections);
             };
 
             private _shotParents = getShotParents _projectile;
-            private _ammo = typeOf _projectile;
 
             // only let a unit make a frag event once per second
             private _instigator = _shotParents#1;
