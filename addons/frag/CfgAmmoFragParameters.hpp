@@ -670,7 +670,7 @@ class M_Vorona_HE: M_Vorona_HEAT {
     GVAR(classes)[] = {QGVAR(tiny)};
 };
 
-class M_127mm_Firefist_AT: RocketBase { // HOT missile
+class M_127mm_Firefist_AT: MissileBase { // HOT missile
     GVAR(skip) = 1;
 };
 
@@ -729,15 +729,16 @@ class ammo_ShipCannon_120mm_HE: Sh_155mm_AMOS {
     GVAR(classes)[] = {QGVAR(small), QGVAR(small), QGVAR(medium), QGVAR(large)};
 };
 
+class Sh_125mm_HE: Sh_120mm_HE {
+    GVAR(metal) = 19900;
+    GVAR(charge) = 3400;
+    GVAR(gurney_c) = 2901;
+};
+
 class Sh_125mm_HEAT: Sh_125mm_HE {
     GVAR(skip) = 1;
     GVAR(metal) = 16760;
     GVAR(charge) = 1640;
-    GVAR(gurney_c) = 2901;
-};
-class Sh_125mm_HE: Sh_120mm_HE {
-    GVAR(metal) = 19900;
-    GVAR(charge) = 3400;
     GVAR(gurney_c) = 2901;
 };
 
