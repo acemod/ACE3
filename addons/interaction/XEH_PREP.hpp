@@ -36,6 +36,8 @@ PREP(pullOutBody);
 PREP(canRenameGroup);
 PREP(renameGroupUI);
 PREP(renameGroup);
+PREP(canGroupDropDistantUnits);
+PREP(groupDropDistantUnits);
 
 // Weapon Attachments
 PREP(getWeaponAttachmentsActions);

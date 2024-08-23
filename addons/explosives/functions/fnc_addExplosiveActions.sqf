@@ -27,11 +27,8 @@
     {
         private _config = _cfgMagazines >> _x;
         if (getNumber (_config >> QGVAR(Placeable)) == 1) then {
-            private _name = getText (_config >> "displayNameShort");
+            private _name = getText (_config >> "displayName");
             private _picture = getText (_config >> "picture");
-            if (_name isEqualTo "") then {
-                _name = getText (_config >> "displayName");
-            };
 
             private _action = [_x, format ["%1 (%2)", _name, _totalCount - count (_magazines - [_x])], _picture, {[{_this call FUNC(setupExplosive)}, _this] call CBA_fnc_execNextFrame}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
             _actions pushBack [_action, [], _player];
