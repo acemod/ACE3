@@ -33,4 +33,3 @@ private _navigationParams = [
     _correctionDistance
 ];
 _navigationParams
-

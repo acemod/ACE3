@@ -41,4 +41,3 @@ _attackProfileStateParams set [2, _final];
 _targetData set [0, _projectilePos vectorFromTo _final];
 
 _final
-

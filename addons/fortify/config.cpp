@@ -2,6 +2,7 @@
 
 class CfgPatches {
     class ADDON {
+        name = COMPONENT_NAME;
         units[] = {QXGVAR(setupModule), QXGVAR(buildLocationModule)};
         weapons[] = {"ACE_Fortify"};
         requiredVersion = REQUIRED_VERSION;

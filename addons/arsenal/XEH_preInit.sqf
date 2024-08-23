@@ -85,10 +85,10 @@ private _insigniaCondition = toString {
 
 // Ref fnc_addListBoxItem, 0/nil = configFile, 1 = campaignConfigFile, 2 = missionConfigFile
 {
-    GVAR(insigniaCache) set [_x, 1];
+    GVAR(insigniaCache) set [configName _x, 1];
 } forEach (_insigniaCondition configClasses (campaignConfigFile >> "CfgUnitInsignia"));
 {
-    GVAR(insigniaCache) set [_x, 2];
+    GVAR(insigniaCache) set [configName _x, 2];
 } forEach (_insigniaCondition configClasses (missionConfigFile >> "CfgUnitInsignia"));
 
 ADDON = true;

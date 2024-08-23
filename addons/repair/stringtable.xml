@@ -280,7 +280,7 @@
             <Italian>Coefficiente di riparazione completa</Italian>
             <Korean>전체 수리 시간 계수</Korean>
             <French>Coefficient du temps de réparation complète</French>
-            <Russian>Коэффициент времени полного ремонта</Russian>
+            <Russian>Коэф. времени полного ремонта</Russian>
             <Spanish>Coeficiente de Tiempo de Reparación Completa</Spanish>
         </Key>
         <Key ID="STR_ACE_Repair_timeCoefficientFullRepair_description">

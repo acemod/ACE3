@@ -10,6 +10,7 @@
 },
 [15, [false, true, false]], false] call CBA_fnc_addKeybind;  //Ctrl+Tab Key
 
+
 // Each MCLOS argument is the vector which acceleration will be applied
 ["ACE3 Weapons", QGVAR(mclosUp), localize LSTRING(mclosUp), {
     [[0, 0, 1], ACE_PLAYER] call FUNC(mclosButtonPressed);
@@ -46,5 +47,3 @@
     false
 },
 [0x4B, [false, false, false]], false, 0] call CBA_fnc_addKeybind;  // Numpad 4
-
-GVAR(dev_fnc_projectileCamera) = compile preprocessFileLineNumbers QPATHTOF(dev\projectileCamera.sqf);

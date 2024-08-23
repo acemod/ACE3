@@ -6,6 +6,8 @@ PREP(changeMissileDirection);
 PREP(checkSeekerAngle);
 PREP(checkLos);
 
+PREP(dev_ProjectileCamera);
+
 PREP(onFired);
 PREP(onIncomingMissile);
 
@@ -16,7 +18,7 @@ PREP(doSeekerSearch);
 PREP(doHandoff);
 PREP(handleHandoff);
 
-PREP(shouldFilterRadarHit);
+//re-enable after feature merge - PREP(shouldFilterRadarHit);
 
 PREP(mclosButtonPressed);
 
@@ -27,7 +29,7 @@ PREP(attackProfile_LIN);
 PREP(attackProfile_LOFT);
 PREP(attackProfile_WIRE);
 PREP(attackProfile_BEAM);
-PREP(attackProfile_JDAM);
+//re-enable after feature merge - PREP(attackProfile_JDAM);
 
 // Javelin profiles
 PREP(attackProfile_JAV_DIR);
@@ -46,6 +48,7 @@ PREP(seekerType_SALH);
 PREP(seekerType_Optic);
 PREP(seekerType_SACLOS);
 PREP(seekerType_MCLOS);
+//re-enable after feature merge - PREP(seekerType_Doppler);
 PREP(seekerType_MWR);
 
 // Attack Profiles OnFired

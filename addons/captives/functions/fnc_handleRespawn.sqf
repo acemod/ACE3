@@ -40,12 +40,12 @@ if (_respawn > 3) then {
     if (_unit getVariable [QGVAR(isHandcuffed), false]) then {
         [_unit, false] call FUNC(setHandcuffed);
     };
-    [_unit, "setCaptive", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
+    [_unit, "setCaptive", QGVAR(handcuffed), false] call EFUNC(common,statusEffect_set);
 
     if (_unit getVariable [QGVAR(isSurrendering), false]) then {
         [_unit, false] call FUNC(setSurrendered);
     };
-    [_unit, "setCaptive", QGVAR(Surrendered), false] call EFUNC(common,statusEffect_set);
+    [_unit, "setCaptive", QGVAR(surrendered), false] call EFUNC(common,statusEffect_set);
 
     if (_unit getVariable [QGVAR(isEscorting), false]) then {
         _unit setVariable [QGVAR(isEscorting), false, true];
