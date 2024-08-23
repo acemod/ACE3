@@ -73,4 +73,3 @@ _seekerStateParams set [7, [0, 0, 0]];
 _seekerStateParams set [8, CBA_missionTime];
 _seekerStateParams set [9, isNull _target];
 _seekerStateParams set [10, _lockTypes];
-

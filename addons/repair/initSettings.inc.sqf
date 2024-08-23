@@ -8,16 +8,14 @@ private _catFullRepair = [_category, LLSTRING(fullRepair)];
     true,
     true,
     {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
     QGVAR(displayTextOnRepair), "CHECKBOX",
     [LSTRING(SettingDisplayTextName), LSTRING(SettingDisplayTextDesc)],
     _category,
-    true, // default value
-    false, // isGlobal
-    {[QGVAR(displayTextOnRepair), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    true // default value
 ] call CBA_fnc_addSetting;
 
 [
@@ -25,8 +23,7 @@ private _catFullRepair = [_category, LLSTRING(fullRepair)];
     [LSTRING(engineerSetting_Repair_name), LSTRING(engineerSetting_Repair_description)],
     _category,
     [[0,1,2],[LSTRING(engineerSetting_anyone), LSTRING(engineerSetting_EngineerOnly), LSTRING(engineerSetting_AdvancedOnly)],1], // [values, titles, defaultIndex]
-    true, // isGlobal
-    {[QGVAR(engineerSetting_repair), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -34,8 +31,7 @@ private _catFullRepair = [_category, LLSTRING(fullRepair)];
     [LSTRING(engineerSetting_Wheel_name), LSTRING(engineerSetting_Wheel_description)],
     _category,
     [[0,1,2],[LSTRING(engineerSetting_anyone), LSTRING(engineerSetting_EngineerOnly), LSTRING(engineerSetting_AdvancedOnly)],0], // [values, titles, defaultIndex]
-    true, // isGlobal
-    {[QGVAR(engineerSetting_wheel), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -69,8 +65,7 @@ private _catFullRepair = [_category, LLSTRING(fullRepair)];
     [LSTRING(repairDamageThreshold_name), LSTRING(repairDamageThreshold_description)],
     _category,
     [0, 1, 0.6, 1, true],
-    true, // isGlobal
-    {[QGVAR(repairDamageThreshold), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -78,8 +73,7 @@ private _catFullRepair = [_category, LLSTRING(fullRepair)];
     [LSTRING(repairDamageThreshold_Engineer_name), LSTRING(repairDamageThreshold_Engineer_description)],
     _category,
     [0, 1, 0.4, 1, true],
-    true, // isGlobal
-    {[QGVAR(repairDamageThreshold_engineer), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -87,8 +81,7 @@ private _catFullRepair = [_category, LLSTRING(fullRepair)];
     [LSTRING(consumeItem_ToolKit_name), LSTRING(consumeItem_ToolKit_description)],
     _category,
     [[0,1],[ELSTRING(common,No), ELSTRING(common,Yes)],0], // [values, titles, defaultIndex]
-    true, // isGlobal
-    {[QGVAR(consumeItem_toolKit), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -105,8 +98,7 @@ private _catFullRepair = [_category, LLSTRING(fullRepair)];
     [LSTRING(fullRepairLocation), LSTRING(fullRepairLocation_description)],
     _catFullRepair,
     [[0,1,2,3,4],[LSTRING(useAnywhere), LSTRING(repairVehicleOnly), LSTRING(repairFacilityOnly), LSTRING(vehicleAndFacility), ELSTRING(common,Disabled)],2], // [values, titles, defaultIndex]
-    true, // isGlobal
-    {[QGVAR(fullRepairLocation), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -114,8 +106,7 @@ private _catFullRepair = [_category, LLSTRING(fullRepair)];
     [LSTRING(engineerSetting_fullRepair_name), LSTRING(engineerSetting_fullRepair_description)],
     _catFullRepair,
     [[0,1,2],[LSTRING(engineerSetting_anyone), LSTRING(engineerSetting_EngineerOnly), LSTRING(engineerSetting_AdvancedOnly)],2], // [values, titles, defaultIndex]
-    true, // isGlobal
-    {[QGVAR(engineerSetting_fullRepair), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
@@ -168,8 +159,7 @@ private _catFullRepair = [_category, LLSTRING(fullRepair)];
     [LSTRING(autoShutOffEngineWhenStartingRepair_name), LSTRING(autoShutOffEngineWhenStartingRepair_description)],
     _category,
     false, // default value
-    true, // isGlobal
-    {[QGVAR(autoShutOffEngineWhenStartingRepair), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [

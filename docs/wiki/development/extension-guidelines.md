@@ -7,87 +7,59 @@ parent: wiki
 order: 9
 ---
 
-## 1. Basics
+## 1. Setup
 
 ### 1.1 Requirements
 
-- A compiler (VS/GCC/Clang) 
-    - If starting with Visual Studio, you need to make sure to use the Visual studio command prompt
-- cmake 3.0 or later in your path
+- [Rust](https://rustup.rs/)
+- [cargo-make](https://crates.io/crates/cargo-make)  
+`cargo install --no-default-features --force cargo-make`
 
-### 1.2 Cross-Platform Guidelines
+### 1.2 Recomendations
 
-### 1.3 C++ basic style and naming guide
+- [VSCode](https://code.visualstudio.com/)
+- [Rust Analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+- [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb)
 
-### 1.4 ace_common cpp library
+### 1.3 Rust Resources
+
+- [Learn Rust](https://www.rust-lang.org/learn)
 
 ---
 
-## 2 Building Extensions on Windows
+## 2 Development
 
-###  2.1 Compiling 
+### 2.1 Code Standards
 
-####  2.1.1 Windows - Creating a Visual Studio Project
-1. Open your compiling command prompt (which has cmake and your compiler)
-2. From this directory, you need to use cmake to build the appropriate build files. Change the -G property appropriately. run cmake --help to get a list of the options.
+1. [Rust API Guidelines for naming](https://rust-lang.github.io/api-guidelines/naming.html) should be followed
+2. All code should be formatted with `cargo fmt`
+3. All code should be free from errors and warnings
+4. Tests should be written where applicable
 
-```
-cd extensions\build
-cmake .. -G "Visual Studio 15 2017 Win64"
-```
+### 2.2 Local Development
 
-A Visual studio project file will now be generated in your build directory.
+Running `cargo make debug` will compile the project for x32 and x64 and move the built libraries to `ace.dll` and `ace_x64.dll`.
 
-#### 2.1.2 Windows - Visual Studio - Compile only (nmake)
-1. Open your compiling command prompt (which has cmake and your compiler)
-2. From this directory, you need to use cmake to build the appropriate build files. Change the -G property appropriately. run cmake --help to get a list of the options.
+The library can be debugged with the following `.vscode/launch.json` file. Replace all sections in `{}` with the appropriate path.
 
-```
-cd extensions\build
-cmake .. -G "NMake Makefiles"
-nmake
-```
-
-The extensions will not be built in its appropriate project folder, for example:
-
-```
-extensions\
-    build\
-        fcs\ace_fcs.dll
-        somethingElse\ace_somethingElse.dll
+```json
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug",
+            "program": "{Path to Arma}\\arma3_x64.exe",
+            "args": ["-mod=\"{Path to CBA};{Path to ACE development folder}\""],
+            "cwd": "{Path to Arma}"
+        }
+    ]
+}
 ```
 
-### 2.2 Creating a new Extension
+Use the `Run and Debug` tab in VSCode to launch Arma, or Press `F5`.
 
-#### 2.2.1 Arma Config
+### 2.3 Release
 
-ACE3 loads extensions defined in `ACE_Extensions` root config class and supports the following entries:
-
-```cpp
-// Platform
-windows = 1; // Load on Windows
-linux = 1;   // Load on Linux
-
-// Type
-client = 1;  // Load on Client
-server = 1;  // Load on Server
-```
-
-```cpp
-class ACE_Extensions {
-    // Windows Client only extension
-    class tag_extension {
-       windows = 1;
-       client = 1;
-    };
-
-    // Any platform Server extension
-    class tag_extension2 {
-        windows = 1;
-        linux = 1;
-        server = 1;
-    };
-};
-```
-
-Combining platform and client/server values is possible to get all combinations currently supported by the game and more.
+Release versions can be built using `cargo make release`.

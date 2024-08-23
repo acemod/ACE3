@@ -42,7 +42,7 @@ if (isServer) then {
             params ["_explosive"];
             TRACE_1("exploding",_explosive);
             if (!isNull _explosive) then {
-                _explosive setDamage 1;
+                [QEGVAR(common,triggerAmmo), _explosive, _explosive] call CBA_fnc_targetEvent;
             };
         }, _explosive, _delay] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_addEventHandler;

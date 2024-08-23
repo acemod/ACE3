@@ -16,8 +16,8 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         scope = 0;
         displayName = CSTRING(itemName);
-        model = QUOTE(PATHTOF(data\ace_dogtag.p3d));
-        picture = QUOTE(PATHTOF(data\dogtagSingle.paa));
+        model = QPATHTOF(data\ace_dogtag.p3d);
+        picture = QPATHTOF(data\dogtagSingle.paa);
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0; //too small to for 1 ?
         };

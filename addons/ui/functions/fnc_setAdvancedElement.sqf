@@ -20,7 +20,9 @@
 
 params ["_element", "_show", ["_showHint", false, [true]], ["_force", false, [true]]];
 
-private _cachedElement = GVAR(configCache) getVariable _element;
+_element = toLowerANSI _element;
+
+private _cachedElement = GVAR(configCache) get _element;
 if (isNil "_cachedElement") exitWith {TRACE_1("nil element",_this)};
 
 if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
@@ -56,7 +58,7 @@ if (
 
 // Get setting from scripted API
 if (!_force) then {
-    private _setElement = GVAR(elementsSet) getVariable _element;
+    private _setElement = GVAR(elementsSet) get _element;
     if (!isNil "_setElement") then {
         _setElement params ["_sourceSet", "_showSet"];
         if (_showHint) then {
