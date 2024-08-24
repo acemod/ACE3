@@ -1424,7 +1424,7 @@
             <French>[ACE] Caisse médicale (basique)</French>
             <Hungarian>[ACE] Orvosi láda (Alap)</Hungarian>
             <Italian>[ACE] Cassa Rifornimenti Medici (Basici)</Italian>
-            <Japanese>[ACE] 医療物資箱 (ベーシック)</Japanese>
+            <Japanese>[ACE] 医療物資箱 (基本)</Japanese>
             <Korean>[ACE] 의료 물자 (기본)</Korean>
             <Chinesesimp>[ACE] 医疗补给箱（基础）</Chinesesimp>
             <Chinese>[ACE] 醫療補給箱（基本）</Chinese>
@@ -1441,7 +1441,7 @@
             <French>[ACE] Caisse médicale (avancée)</French>
             <Hungarian>[ACE] Orvosi láda (Fejlett)</Hungarian>
             <Italian>[ACE] Cassa Rifornimenti Medici (Avanzati)</Italian>
-            <Japanese>[ACE] 医療物資箱 (アドバンスド)</Japanese>
+            <Japanese>[ACE] 医療物資箱 (高度)</Japanese>
             <Korean>[ACE] 의료 물자 (고급)</Korean>
             <Chinesesimp>[ACE] 医疗补给箱（高级）</Chinesesimp>
             <Chinese>[ACE] 醫療補給箱（進階）</Chinese>
