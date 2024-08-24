@@ -381,13 +381,36 @@ class CfgVehicles {
     class Offroad_01_base_F: Car_F {
         class GVAR(anims) {
             class HideBackpacks {
-                positions[] = {{-1.15, -1.15, -0.2}, {1.1, -1.15, -0.2}, {1.1, -2.5, -0.2}};
+                positions[] = {{-1.15, -1.15, -0.2}, {1.05, -1.15, -0.2}, {1.05, -2.5, -0.2}};
                 items[] = {"B_TacticalPack_blk", "B_TacticalPack_blk", "B_Carryall_khk", "B_Carryall_khk"};
                 name = "$STR_a3_cfgvehicleclasses_backpacks0";
                 text = "$STR_a3_cfgvehicleclasses_backpacks0";
             };
         };
     };
+    class Offroad_01_military_base_F: Offroad_01_base_F {};
+    class Offroad_01_armed_base_F: Offroad_01_military_base_F {
+        class GVAR(anims): GVAR(anims) {
+            class HideBackpacks: HideBackpacks {
+                positions[] = {{-1.15, -1.03, -0.8}, {1.05, -1.03, -0.8}, {1.05, -2.38, -0.8}};
+            };
+        };
+    };
+    class Offroad_01_AT_base_F: Offroad_01_military_base_F {
+        class GVAR(anims): GVAR(anims) {
+            class HideBackpacks: HideBackpacks {
+                positions[] = {{-1.15, -1.25, -0.2}, {1.05, -1.25, -0.2}, {1.05, -2.6, -0.2}};
+            };
+        };
+    };
+    class Offroad_01_military_covered_base_F: Offroad_01_military_base_F {
+        class GVAR(anims): GVAR(anims) {
+            class HideBackpacks: HideBackpacks {
+                positions[] = {{-1.15, -1, -0.27}, {1.05, -1, -0.27}, {1.05, -2.35, -0.27}};
+            };
+        };
+    };
+
     class Quadbike_01_base_F: Car_F {
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
@@ -504,10 +527,7 @@ class CfgVehicles {
     };
 
     class APC_Tracked_01_base_F: Tank_F {
-        class GVAR(anims);
-    };
-    class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {
-        class GVAR(anims): GVAR(anims) {
+        class GVAR(anims) {
             class showBags {
                 phase = 0;
                 selections[] = {"vhc_bags"};
@@ -518,6 +538,7 @@ class CfgVehicles {
             };
         };
     };
+    class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {};
     class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
         class GVAR(anims): GVAR(anims) {
             class showBags: showBags {
@@ -527,11 +548,7 @@ class CfgVehicles {
     };
 
     class APC_Tracked_02_base_F: Tank_F {
-        class GVAR(anims);
-    };
-    class O_APC_Tracked_02_base_F: APC_Tracked_02_base_F {};
-    class O_APC_Tracked_02_cannon_F: O_APC_Tracked_02_base_F {
-        class GVAR(anims): GVAR(anims) {
+        class GVAR(anims) {
             class showBags {
                 phase = 0;
                 selections[] = {"vhc_bags"};
