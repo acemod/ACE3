@@ -527,10 +527,7 @@ class CfgVehicles {
     };
 
     class APC_Tracked_01_base_F: Tank_F {
-        class GVAR(anims);
-    };
-    class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {
-        class GVAR(anims): GVAR(anims) {
+        class GVAR(anims) {
             class showBags {
                 phase = 0;
                 selections[] = {"vhc_bags"};
@@ -541,6 +538,7 @@ class CfgVehicles {
             };
         };
     };
+    class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {};
     class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
         class GVAR(anims): GVAR(anims) {
             class showBags: showBags {
@@ -550,11 +548,7 @@ class CfgVehicles {
     };
 
     class APC_Tracked_02_base_F: Tank_F {
-        class GVAR(anims);
-    };
-    class O_APC_Tracked_02_base_F: APC_Tracked_02_base_F {};
-    class O_APC_Tracked_02_cannon_F: O_APC_Tracked_02_base_F {
-        class GVAR(anims): GVAR(anims) {
+        class GVAR(anims) {
             class showBags {
                 phase = 0;
                 selections[] = {"vhc_bags"};
