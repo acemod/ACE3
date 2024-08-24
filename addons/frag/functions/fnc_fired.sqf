@@ -59,7 +59,6 @@ if (GVAR(reflectionsEnabled) || (GVAR(enabled) && {_ammo call FUNC(shouldFrag)})
         "Explode",
         {
             params ["_projectile", "_posASL"];
-            diag_log formatText ["Explode of %1, %2", getObjectID _projectile, _projectile];
 
             private _ammo = typeOf _projectile;
             if (GVAR(reflectionsEnabled)) then {
