@@ -20,6 +20,7 @@
 TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_vehicle,_gunner,_turret);
 
 if (_ammo isEqualTo "" || {isNull _projectile} ||
+    !(if (isNil "_gunner") then {local _unit} else {local _gunner}) ||
     {_projectile getVariable [QGVAR(blacklisted), false]}) exitWith {
     TRACE_2("bad ammo or projectile, or blackList",_ammo,_projectile);
 };
@@ -58,6 +59,7 @@ if (GVAR(reflectionsEnabled) || (GVAR(enabled) && {_ammo call FUNC(shouldFrag)})
         "Explode",
         {
             params ["_projectile", "_posASL"];
+            diag_log formatText ["Explode of %1, %2", getObjectID _projectile, _projectile];
 
             private _ammo = typeOf _projectile;
             if (GVAR(reflectionsEnabled)) then {
