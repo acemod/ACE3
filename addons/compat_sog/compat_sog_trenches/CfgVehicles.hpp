@@ -121,7 +121,7 @@ class CfgVehicles {
     class vn_wheeled_lr2a_base: vn_wheeled_car_base {
         class EGVAR(interaction,anims) {
             class hide_shovel {
-                positions[] = {"_target selectionPosition ['hide_shovel', 'ViewGeometry', 'AveragePoint']"};
+                positions[] = {"_target selectionPosition ['hide_shovel', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"ACE_EntrenchingTool"};
                 name = ECSTRING(trenches,EntrenchingToolName);
                 text = ECSTRING(trenches,EntrenchingToolName);
