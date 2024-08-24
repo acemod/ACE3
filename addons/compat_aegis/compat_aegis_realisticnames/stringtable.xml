@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_Aegis_RealisticNames">
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_APC_Wheeled_01_medical_Name">
+            <English>Badger IFV (Medical)</English>
+            <German>SPz Badger (Sanitäter)</German>
+            <French>Badger IFV (Médical)</French>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_APC_Tracked_02_medical_Name">
+            <English>BM-2T Stalker (Medical)</English>
+            <German>BM-2T Stalker (Sanitäter)</German>
+            <French>BM-2T Stalker (Médical)</French>
+        </Key>
+    </Package>
+</Project>
