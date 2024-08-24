@@ -38,7 +38,7 @@ TRACE_5("callExtension:artillery:calculate_table",_muzzleVelocity,_airFriction,_
 (
     "ace" callExtension ["artillery:calculate_table", [_muzzleVelocity, _airFriction, _elevMin, _elevMax, GVAR(lastElevationMode)]]
 ) params ["_data", "_code"];
-TRACE_1("",_code)
+TRACE_1("",_code);
 
 GVAR(tableData) = createHashMap;
 GVAR(tableSizeActual) = (parseSimpleArray _data) select 1;
