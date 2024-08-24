@@ -1,12 +1,16 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class SUBADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {
+            "A3_Aegis_Armor_F_Aegis_MBT_01",
+            "A3_Aegis_Armor_F_Aegis_APC_Tracked_03",
+            "ace_vehicles"
+        };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"johnb43"};
@@ -17,3 +21,5 @@ class CfgPatches {
         addonRootClass = "A3_Characters_F";
     };
 };
+
+#include "CfgVehicles.hpp"
