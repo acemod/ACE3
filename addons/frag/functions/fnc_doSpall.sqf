@@ -24,7 +24,7 @@ params ["_objectHit", "_roundType", "_round", "_oldPosASL", "_oldVelocity", "_sh
 
 TRACE_6("",_objectHit,_roundType,_round,_oldPosASL,_oldVelocity,_shotParents);
 if ((isNil "_objectHit") || {isNull _objectHit}) exitWith {
-    WARNING_1("Problem with hitPart data - bad object [%1]",_objectHit);
+    TRACE_1("Problem with hitPart data - bad object [%1]",_objectHit);
 };
 
 private _caliber = getNumber (configFile >> "CfgAmmo" >> _roundType >> "caliber");
