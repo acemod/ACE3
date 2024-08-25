@@ -582,8 +582,28 @@
             <Chinese>小隊管理</Chinese>
             <Turkish>Takım Yönetimi</Turkish>
         </Key>
-        <Key ID="STR_ACE_Interaction_groupDropDistantUnits">
-            <English>Drop Distant Members</English>
+        <Key ID="STR_ACE_Interaction_remoteTeamManagement_DisplayName">
+            <Original>Remote Squad Management</Original>
+        </Key>
+        <Key ID="STR_ACE_Interaction_remoteTeamManagement_Description">
+            <Original>Allow dropping and changing team colors of any unit in player's squad</Original>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Squad">
+            <Original>Squad</Original>
+            <English>Squad</English>
+            <Czech>Družstvo</Czech>
+            <German>Trupp</German>
+            <Russian>Отряд</Russian>
+            <Polish>Drużyna</Polish>
+            <Italian>Squadra</Italian>
+            <Spanish>Escuadrón</Spanish>
+            <French>Escouade</French>
+            <Chinese>分隊</Chinese>
+            <Japanese>分隊</Japanese>
+            <Korean>분대</Korean>
+            <Portuguese>Esquadrão</Portuguese>
+            <Chinesesimp>小队</Chinesesimp>
+            <Turkish>Manga</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamRED">
             <English>Red</English>

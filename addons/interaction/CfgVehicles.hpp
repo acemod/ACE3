@@ -253,6 +253,12 @@ class CfgVehicles {
                 modifierFunction = QUOTE([ARR_3(assignedTeam _target,'PATHTOF(UI\team\team_management_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                 showDisabled = 1;
 
+                class ACE_Squad {
+                    displayName = CSTRING(Squad);
+                    condition = QUOTE(GVAR(remoteTeamManagement));
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
+                    insertChildren = QUOTE(call FUNC(addSquadChildren));
+                };
                 class ACE_JoinTeamRed {
                     displayName = CSTRING(JoinTeamRed);
                     condition = QUOTE(true);
@@ -315,12 +321,6 @@ class CfgVehicles {
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE(_player call FUNC(renameGroupUI));
                     showDisabled =1;
-                };
-                class ACE_groupDropDistantUnits {
-                    displayName = CSTRING(groupDropDistantUnits);
-                    condition = QUOTE(call FUNC(canGroupDropDistantUnits));
-                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
-                    statement = QUOTE(call FUNC(groupDropDistantUnits));
                 };
             };
 
