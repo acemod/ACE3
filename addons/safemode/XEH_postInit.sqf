@@ -30,7 +30,7 @@ if (!hasInterface) exitWith {};
 
 // Variables are transferred from corpse to new body and EH above triggers on respawn, which desyncs safeties
 // Therefore, clear variables and remove mouse button input blocking when controlled unit dies
-[QUOTE(ADDON), "Killed", {
+[QUOTE(ADDON), "Respawn", {
     params ["_unit"];
 
     _unit setVariable [QGVAR(safedWeapons), nil];
