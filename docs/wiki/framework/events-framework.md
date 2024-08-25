@@ -112,7 +112,7 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 ### 2.10 Cook Off (`ace_cookoff`)
 
 | Event Key | Parameters | Locality | Type | Description |
-|----------|---------|---------|---------|---------|---------|
+|----------|---------|---------|---------|---------|
 |`ace_cookoff_cookOff` | [_vehicle, _intensity, _instigator, _smokeDelayEnabled, _ammoDetonationChance, _detonateAfterCookoff, _fireSource, _canRing, _maxIntensity, _canJet] | Global | Listen | Vehicle cook-off has started |
 |`ace_cookoff_cookOffBox` | [_box, _source, _instigator, _delay] | Global | Listen | Ammo box cook-off has started |
 |`ace_cookoff_engineFire` | [_vehicle] | Global | Listen | Engine fire has started |
@@ -173,6 +173,18 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |---------- |------------|----------|------|-------------|
 | `ace_dragging_cloneCreated` | [_clone, _corpse] | Local | Listen | Called when a clone used for dragging/carrying corpses is created
 | `ace_dragging_cloneDeleted` | [_clone, _corpse] | Local | Listen | Called when a clone used for dragging/carrying corpses is deleted
+
+### 2.19 HuntIR (`ace_huntir`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_huntir_monitorOpened` | [_unit] | Local | Listen | Called when the monitor is opened
+| `ace_huntir_monitorClosed` | [_unit] | Local | Listen | Called when the monitor is closed (may be fired multiple times when the monitor is closed by ACE and not the user)
+| `ace_huntir_monitorStarted` | [_unit] | Local | Listen | Called when the monitor is started
+| `ace_huntir_monitorSearching` | [_unit] | Local | Listen | Called when the monitor is searching
+| `ace_huntir_monitorConnecting` | [_unit] | Local | Listen | Called when the monitor is connecting
+| `ace_huntir_monitorConnected` | [_unit, _huntir] | Local | Listen | Called when the monitor is connected
+| `ace_huntir_monitorNoGDS` | [_unit] | Local | Listen | Called when the monitor found no GDS
 
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.

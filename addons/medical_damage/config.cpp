@@ -27,13 +27,4 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgEden.hpp"
-
-/*
-class ACE_Extensions {
-    class ace_medical {
-        // Not yet used
-    };
-};
- */
-
 #endif

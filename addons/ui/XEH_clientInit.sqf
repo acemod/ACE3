@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 // Exit on Headless
 if (!hasInterface) exitWith {};
@@ -48,3 +49,24 @@ GVAR(elementsSet) = createHashMap;
 }] call CBA_fnc_addEventHandler;
 
 [QUOTE(ADDON), "AnimChanged", LINKFUNC(onAnimChanged), true] call EFUNC(common,addPlayerEH);
+
+
+["ACE3 Common", QGVAR(hideHud), localize LSTRING(hideHud), {
+    GVAR(hideHud) = !(missionNamespace getVariable [QGVAR(hideHud), false]);
+    [QGVAR(hideHud), [GVAR(hideHud)]] call CBA_fnc_localEvent;
+
+    private _mask = [];
+    if (GVAR(hideHud)) then { _mask resize [10, false] };
+    [QGVAR(hideHud), _mask] call EFUNC(common,showHud);
+
+    if (missionNamespace getVariable [QGVAR(hideHud_hideChat), true]) then {
+        showChat !GVAR(hideHud);
+    };
+
+    if (!isNil "diwako_dui_main_toggled_off") then {
+        diwako_dui_main_toggled_off = GVAR(hideHud); // ref https://github.com/diwako/diwako_dui/wiki/Hiding-DUI-for-cutscenes
+    };
+    true
+},
+{false},
+[DIK_F12, [false, true, false]], false] call CBA_fnc_addKeybind; // ctrl+f12

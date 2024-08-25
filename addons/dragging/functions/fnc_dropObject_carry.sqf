@@ -94,16 +94,16 @@ if !(_target isKindOf "CAManBase") then {
     [QEGVAR(common,fixFloating), _target, _target] call CBA_fnc_targetEvent;
 };
 
-// Recreate UAV crew (add a frame delay or this may cause the vehicle to be moved to [0,0,0])
-if (_target getVariable [QGVAR(isUAV), false]) then {
-    _target setVariable [QGVAR(isUAV), nil, true];
+// Reenable UAV crew
+private _UAVCrew = _target getVariable [QGVAR(isUAV), []];
 
-    [{
-        params ["_target"];
-        if (!alive _target) exitWith {};
-        TRACE_2("restoring uav crew",_target,getPosASL _target);
-        createVehicleCrew _target;
-    }, [_target]] call CBA_fnc_execNextFrame;
+if (_UAVCrew isNotEqualTo []) then {
+    // Reenable AI
+    {
+        [_x, false] call EFUNC(common,disableAiUAV);
+    } forEach _UAVCrew;
+
+    _target setVariable [QGVAR(isUAV), nil, true];
 };
 
 // Reset mass

@@ -72,7 +72,7 @@ private _finalOwner = objNull;
 
         TRACE_1("",_laser);
         //Handle Weird Data Return - skips over this laser in the for loop
-        if ((_laser isEqualTo []) || {_laser isEqualTo [-1, -1]}) exitWith {WARNING_1("Bad Laser Return",_laser);};
+        if ((_laser isEqualTo []) || {_laser isEqualTo [-1, -1]}) exitWith {WARNING_1("Bad Laser Return %1",_laser);};
         _laser params [["_laserPos", [], [[]], 3], ["_laserDir", [], [[]], 3]];
 
         if (GVAR(dispersionCount) > 0) then {

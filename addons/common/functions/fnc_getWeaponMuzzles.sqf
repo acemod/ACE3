@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: commy2
+ * Author: commy2, johnb43
  * Get the muzzles of a weapon.
  *
  * Arguments:
@@ -10,19 +10,30 @@
  * All weapon muzzles <ARRAY>
  *
  * Example:
- * ["gun"] call ace_common_fnc_getWeaponMuzzles
+ * "arifle_AK12_F" call ace_common_fnc_getWeaponMuzzles
  *
  * Public: Yes
  */
 
 params [["_weapon", "", [""]]];
 
-private _muzzles = getArray (configFile >> "CfgWeapons" >> _weapon >> "muzzles");
+private _config = configFile >> "CfgWeapons" >> _weapon;
 
+if (!isClass _config) exitWith {
+    [] // return
+};
+
+private _muzzles = [];
+
+// Get config case muzzle names
 {
     if (_x == "this") then {
-        _muzzles set [_forEachIndex, configName (configFile >> "CfgWeapons" >> _weapon)];
+        _muzzles pushBack (configName _config);
+    } else {
+        if (isClass (_config >> _x)) then {
+            _muzzles pushBack (configName (_config >> _x));
+        };
     };
-} forEach _muzzles;
+} forEach getArray (_config >> "muzzles");
 
-_muzzles
+_muzzles // return

@@ -19,17 +19,4 @@
 params ["_conditionName", "_conditionFunc"];
 
 _conditionName = toLowerANSI _conditionName;
-
-private _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
-_conditions params ["_conditionNames", "_conditionFuncs"];
-
-private _index = _conditionNames find _conditionName;
-
-if (_index == -1) then {
-    _index = count _conditionNames;
-};
-
-_conditionNames set [_index, _conditionName];
-_conditionFuncs set [_index, _conditionFunc];
-
-GVAR(InteractionConditions) = _conditions;
+GVAR(InteractionConditions) set [_conditionName, _conditionFunc];
