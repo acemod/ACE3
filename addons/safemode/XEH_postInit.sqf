@@ -29,7 +29,7 @@ if (!hasInterface) exitWith {};
 }] call CBA_fnc_addPlayerEventHandler;
 
 // Variables are transferred from corpse to new body and EH above triggers on respawn, which desyncs safeties
-// Therefore, clear variables and remove mouse button input blocking when controlled unit dies
+// Therefore, clear variables and remove mouse button input blocking upon respawn
 [QUOTE(ADDON), "Respawn", {
     params ["_unit"];
 
