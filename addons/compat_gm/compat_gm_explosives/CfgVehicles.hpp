@@ -10,7 +10,7 @@ class CfgVehicles {
     // CHARGE
     class EGVAR(explosives,Place_gm_explosive_petn): EGVAR(explosives,Place) {
         displayName = "$STR_DN_GM_EXPLOSIVE_PETN_CHARGE";
-        model = "\gm\gm_weapons\gm_put\gm_explosive_charge_petn";
+        model = "gm\gm_weapons\gm_put\gm_explosive_charge_petn";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[-0.002, 0.022, 0.02]";
@@ -19,7 +19,7 @@ class CfgVehicles {
     };
     class EGVAR(explosives,Place_gm_explosive_plnp): EGVAR(explosives,Place) {
         displayName = "$STR_DN_GM_EXPLOSIVE_PLNP_CHARGE";
-        model = "\gm\gm_weapons\gm_put\gm_explosive_charge_plnp";
+        model = "gm\gm_weapons\gm_put\gm_explosive_charge_plnp";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[-0.002, 0.022, 0.02]";
@@ -29,7 +29,7 @@ class CfgVehicles {
     // AT MINE
     class EGVAR(explosives,Place_gm_mine_tm46): EGVAR(explosives,Place) {
         displayName = "$STR_DN_GM_MINE_AT_TM46";
-        model = "\gm\gm_weapons\gm_put\gm_mine_at_tm46";
+        model = "gm\gm_weapons\gm_put\gm_mine_at_tm46";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[-0.002, 0.022, 0.02]";
@@ -38,7 +38,7 @@ class CfgVehicles {
     };
     class EGVAR(explosives,Place_gm_explosive_dm21): EGVAR(explosives,Place) {
         displayName = "$STR_DN_GM_MINE_AT_DM21";
-        model = "\gm\gm_weapons\gm_put\gm_mine_at_dm21";
+        model = "gm\gm_weapons\gm_put\gm_mine_at_dm21";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[-0.002, 0.022, 0.02]";
@@ -47,7 +47,7 @@ class CfgVehicles {
     };
     class EGVAR(explosives,Place_gm_explosive_m111): EGVAR(explosives,Place) {
         displayName = "$STR_DN_GM_MINE_AT_MN111";
-        model = "\gm\gm_weapons\gm_launchers\gm_platan\gm_mine_at_mn111_disarmed";
+        model = "gm\gm_weapons\gm_launchers\gm_platan\gm_mine_at_mn111_disarmed";
         class ACE_Actions: ACE_Actions {
             class ACE_MainActions: ACE_MainActions {
                 position = "[-0.002, 0.022, 0.02]";
