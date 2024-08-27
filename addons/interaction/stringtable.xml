@@ -808,6 +808,18 @@
             <Chinese>加入黃組</Chinese>
             <Turkish>Sarıya Katıl</Turkish>
         </Key>
+        <Key ID="STR_ACE_Interaction_JoinTeamMain">
+            <English>Join White</English>
+            <German>Weiss beitreten</German>
+            <Spanish>Unirse a Blanco</Spanish>
+            <Polish>Dołącz do Biała</Polish>
+            <Portuguese>Entrar em Branco</Portuguese>
+            <Czech>Připojit k Bílý Tým</Czech>
+            <Russian>Присоединиться к Белая</Russian>
+            <French>Rejoindre Blanc</French>
+            <Italian>Unirsi al team Bianco</Italian>
+            <Korean>백팀 참여</Korean>
+        </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
             <German>Du bist Gruppe %1 beigetreten</German>

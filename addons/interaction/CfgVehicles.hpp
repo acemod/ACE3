@@ -78,7 +78,7 @@ class CfgVehicles {
 
                     class ACE_AssignTeamRed {
                         displayName = CSTRING(AssignTeamRed);
-                        condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
+                        condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'RED'});
                         statement = QUOTE([ARR_3(_target,'RED',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
@@ -86,7 +86,7 @@ class CfgVehicles {
                     };
                     class ACE_AssignTeamGreen {
                         displayName = CSTRING(AssignTeamGreen);
-                        condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
+                        condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'GREEN'});
                         statement = QUOTE([ARR_3(_target,'GREEN',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
@@ -94,7 +94,7 @@ class CfgVehicles {
                     };
                     class ACE_AssignTeamBlue {
                         displayName = CSTRING(AssignTeamBlue);
-                        condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
+                        condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'BLUE'});
                         statement = QUOTE([ARR_3(_target,'BLUE',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
@@ -102,14 +102,14 @@ class CfgVehicles {
                     };
                     class ACE_AssignTeamYellow {
                         displayName = CSTRING(AssignTeamYellow);
-                        condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam));
+                        condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'YELLOW'});
                         statement = QUOTE([ARR_3(_target,'YELLOW',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
                         showDisabled = 1;
                         modifierFunction = QUOTE([ARR_3('YELLOW','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                     };
-                    class ACE_UnassignTeam {
-                        displayName = CSTRING(LeaveTeam);
+                    class ACE_AssignTeamMain {
+                        displayName = "$str_assign_main";
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'MAIN'});
                         statement = QUOTE([ARR_3(_target,'MAIN',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
@@ -253,15 +253,16 @@ class CfgVehicles {
                 modifierFunction = QUOTE([ARR_3(assignedTeam _target,'PATHTOF(UI\team\team_management_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                 showDisabled = 1;
 
-                class ACE_Squad {
+                class ACE_remoteTeamManagement {
                     displayName = CSTRING(Squad);
+                    icon = QPATHTOF(UI\team\team_management_ca.paa);
                     condition = QUOTE(GVAR(remoteTeamManagement));
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     insertChildren = QUOTE(call FUNC(addSquadChildren));
                 };
                 class ACE_JoinTeamRed {
                     displayName = CSTRING(JoinTeamRed);
-                    condition = QUOTE(true);
+                    condition = QUOTE(assignedTeam _player != 'RED');
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_3(_player,'RED',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
@@ -269,7 +270,7 @@ class CfgVehicles {
                 };
                 class ACE_JoinTeamGreen {
                     displayName = CSTRING(JoinTeamGreen);
-                    condition = QUOTE(true);
+                    condition = QUOTE(assignedTeam _player != 'GREEN');
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_3(_player,'GREEN',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
@@ -277,7 +278,7 @@ class CfgVehicles {
                 };
                 class ACE_JoinTeamBlue {
                     displayName = CSTRING(JoinTeamBlue);
-                    condition = QUOTE(true);
+                    condition = QUOTE(assignedTeam _player != 'BLUE');
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_3(_player,'BLUE',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
@@ -285,14 +286,14 @@ class CfgVehicles {
                 };
                 class ACE_JoinTeamYellow {
                     displayName = CSTRING(JoinTeamYellow);
-                    condition = QUOTE(true);
+                    condition = QUOTE(assignedTeam _player != 'YELLOW');
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_3(_player,'YELLOW',true)] call DFUNC(joinTeam));
                     showDisabled = 1;
                     modifierFunction = QUOTE([ARR_3('YELLOW','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                 };
-                class ACE_LeaveTeam {
-                    displayName = CSTRING(LeaveTeam);
+                class ACE_JoinTeamMain {
+                    displayName = CSTRING(JoinTeamMain);
                     condition = QUOTE(assignedTeam _player != 'MAIN');
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     statement = QUOTE([ARR_3(_player,'MAIN',true)] call DFUNC(joinTeam));
