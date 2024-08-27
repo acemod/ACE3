@@ -24,6 +24,6 @@ _unit assignTeam _team;
 // display message
 if (_displayHint && {_unit == ACE_player}) then {
     private _team = localize format ["str_team_%1", _team];
-    private _message = format [localize LSTRING(JoinedTeam), _team];
+    private _message = format [LLSTRING(JoinedTeam), _team];
     [_message] call EFUNC(common,displayTextStructured);
 };
