@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: True to enable dragging, false to disable <BOOL>
+ * 1: True to enable dragging, false to disable <BOOL> (default: false)
  * 2: Position offset for attachTo command <ARRAY> (default: [0, 1.5, 0])
  * 3: Direction in degrees to rotate the object after attachTo <NUMBER> (default: 0)
  * 4: Override weight limit <BOOL> (default: false)
