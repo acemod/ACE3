@@ -10,6 +10,9 @@ PREP_RECOMPILE_END;
 GVAR(syncedEvents) = createHashMap;
 GVAR(showHudHash) = createHashMap;
 GVAR(vehicleIconCache) = createHashMap; // for getVehicleIcon
+GVAR(wheelSelections) = createHashMap;
+
+GVAR(InteractionConditions) = createHashMap;
 
 GVAR(blockItemReplacement) = false;
 

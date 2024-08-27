@@ -370,15 +370,20 @@
             <Italian>Metti/Togli tappi</Italian>
             <Korean>귀마개 토글</Korean>
             <French>Mettre/enlever les bouchons</French>
+            <German>Ohrstöpsel einsetzen/herausnehmen</German>
             <Spanish>Poner/quitar tapones</Spanish>
+            <Portuguese>Colocar/retirar protetores auriculares</Portuguese>
         </Key>
         <Key ID="STR_ACE_Hearing_heavyWeaponUnits">
             <English>Only units with heavy weapons</English>
             <French>Uniquement les unités dotées d'armes lourdes</French>
             <Russian>Только юниты с тяжелым вооружением</Russian>
+            <German>Nur Einheiten mit schweren Waffen</German>
             <Japanese>重火器を装備したユニットのみ</Japanese>
             <Spanish>Sólo unidades con armas pesadas</Spanish>
             <Italian>Solo a unità con armi pesanti</Italian>
+            <Korean>중화기를 가진 유닛만 해당</Korean>
+            <Portuguese>Apenas unidades com armas pesadas</Portuguese>
         </Key>
     </Package>
 </Project>

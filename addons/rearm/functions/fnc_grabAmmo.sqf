@@ -19,8 +19,8 @@
 params ["_dummy", "_unit"];
 
 REARM_HOLSTER_WEAPON;
-[_unit, "forceWalk", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 [
     TIME_PROGRESSBAR(5),

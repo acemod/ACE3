@@ -50,7 +50,7 @@ if (_target isKindOf "CAManBase") then {
     };
 
     // Select primary, otherwise the carry animation actions don't work
-    _unit selectWeapon _primaryWeapon;
+    _unit selectWeapon _primaryWeapon; // This turns off lasers/lights
 
     // Move a bit closer and adjust direction when trying to pick up a person
     [QEGVAR(common,setDir), [_target, getDir _unit + 180], _target] call CBA_fnc_targetEvent;
@@ -62,10 +62,11 @@ if (_target isKindOf "CAManBase") then {
     _timer = CBA_missionTime + 10;
 } else {
     // Select no weapon and stop sprinting
-    private _previousWeaponIndex = [_unit] call EFUNC(common,getFiremodeIndex);
-    _unit setVariable [QGVAR(previousWeapon), _previousWeaponIndex, true];
+    if (currentWeapon _unit != "") then {
+        _unit setVariable [QGVAR(previousWeapon), (weaponState _unit) select [0, 3], true];
 
-    _unit action ["SwitchWeapon", _unit, _unit, 299];
+        _unit action ["SwitchWeapon", _unit, _unit, 299];
+    };
 
     [_unit, "AmovPercMstpSnonWnonDnon", 0] call EFUNC(common,doAnimation);
 
@@ -81,7 +82,7 @@ if (_target isKindOf "CAManBase") then {
 // Prevents dragging and carrying at the same time
 _unit setVariable [QGVAR(isCarrying), true, true];
 
-// Required for aborting animation
+// Required for aborting (animation & keybind)
 _unit setVariable [QGVAR(carriedObject), _target, true];
 
 [LINKFUNC(startCarryPFH), 0.2, [_unit, _target, _timer]] call CBA_fnc_addPerFrameHandler;
