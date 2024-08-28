@@ -43,3 +43,10 @@ Additional color presets
 ```cpp
 ace_nightvision_colorPreset[] = {0.0, {0.0, 0.0, 0.0, 0.0}, {1.1, 0.8, 1.9, 0.9}, {1, 1, 6, 0.0}}; // White Phosphor Preset
 ```
+
+## 3. Brightness Limits
+
+```cpp
+ace_nightvision_const_maxBrightness = 0; // Defaults, change at your leisure
+ace_nightvision_const_minBrightness = -6;
+```

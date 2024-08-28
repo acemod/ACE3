@@ -2,8 +2,9 @@ class Mode_SemiAuto;
 class Mode_FullAuto;
 
 class CfgWeapons {
-    #include "Attachments.hpp"
-    // assault rifles
+    #include "CfgWeaponsAttachments.hpp"
+
+    // Assault rifles
 
     // MX
     class arifle_MX_Base_F;
@@ -176,13 +177,13 @@ class CfgWeapons {
         displayName = CSTRING(SMG_02_Name);
     };
 
-    // PDW 2000
+    // CPW
     class pdw2000_base_F;
     class hgun_pdw2000_F: pdw2000_base_F {
         displayName = CSTRING(hgun_PDW2000_Name);
     };
 
-    // pistols
+    // Pistols
     class Pistol_Base_F;
     class hgun_P07_F: Pistol_Base_F {
         displayName = CSTRING(hgun_P07_Name);
@@ -208,7 +209,7 @@ class CfgWeapons {
         displayName = CSTRING(hgun_Pistol_Signal_Name);
     };
 
-    // machine guns
+    // Machine guns
     class Rifle_Long_Base_F;
     class LMG_Mk200_F: Rifle_Long_Base_F {
         displayName = CSTRING(LMG_Mk200_Name);
@@ -218,7 +219,7 @@ class CfgWeapons {
         displayName = CSTRING(LMG_Zafir_Name);
     };
 
-    // sniper rifles
+    // Sniper rifles
     class EBR_base_F;
     class srifle_EBR_F: EBR_base_F {
         displayName = CSTRING(srifle_EBR_Name);
@@ -245,7 +246,7 @@ class CfgWeapons {
         displayName = CSTRING(srifle_DMR_01_Name);
     };
 
-    // launchers
+    // Launchers
     class Launcher_Base_F;
     class launch_RPG32_F: Launcher_Base_F {
         displayName = CSTRING(launch_RPG32_Name);
@@ -270,42 +271,35 @@ class CfgWeapons {
         displayName = CSTRING(launch_Vorona_green);
     };
 
-    // marksmen marksman
+    // Marksmen marksman
     class DMR_02_base_F: Rifle_Long_Base_F {
         displayName = CSTRING(DMR_02); //MAR-10 .338;
     };
-
     class srifle_DMR_02_F: DMR_02_base_F {
         displayName = CSTRING(srifle_DMR_02); //MAR-10 .338 (Black);
     };
-
     class srifle_DMR_02_camo_F: srifle_DMR_02_F {
         displayName = CSTRING(srifle_DMR_02_camo); //MAR-10 .338 (Camo);
     };
-
     class srifle_DMR_02_sniper_F: srifle_DMR_02_F {
         displayName = CSTRING(srifle_DMR_02_sniper); //MAR-10 .338 (Sand);
     };
+
     class DMR_03_base_F: Rifle_Long_Base_F {
         displayName = CSTRING(DMR_03); //Mk-I EMR 7.62 mm;
     };
-
     class srifle_DMR_03_F: DMR_03_base_F {
         displayName = CSTRING(srifle_DMR_03); //Mk-I EMR 7.62 mm (Black);
     };
-
     class srifle_DMR_03_khaki_F: srifle_DMR_03_F {
         displayName = CSTRING(srifle_DMR_03_khaki); //Mk-I EMR 7.62 mm (Khaki);
     };
-
     class srifle_DMR_03_tan_F: srifle_DMR_03_F {
         displayName = CSTRING(srifle_DMR_03_tan); //Mk-I EMR 7.62 mm (Sand);
     };
-
     class srifle_DMR_03_multicam_F: srifle_DMR_03_F {
         displayName = CSTRING(srifle_DMR_03_multicam); //Mk-I EMR 7.62 mm (Camo);
     };
-
     class srifle_DMR_03_woodland_F: srifle_DMR_03_F {
         displayName = CSTRING(srifle_DMR_03_woodland); //Mk-I EMR 7.62 mm (Woodland);
     };
@@ -313,11 +307,9 @@ class CfgWeapons {
     class DMR_04_base_F: Rifle_Long_Base_F {
         displayName = CSTRING(DMR_04); //ASP-1 Kir 12.7 mm;
     };
-
     class srifle_DMR_04_F: DMR_04_base_F {
         displayName = CSTRING(srifle_DMR_04); //ASP-1 Kir 12.7 mm (Black);
     };
-
     class srifle_DMR_04_Tan_F: srifle_DMR_04_F {
         displayName = CSTRING(srifle_DMR_04_Tan); //ASP-1 Kir 12.7 mm (Tan);
     };
@@ -325,31 +317,27 @@ class CfgWeapons {
     class DMR_05_base_F: Rifle_Long_Base_F {
         displayName = CSTRING(DMR_05); //Cyrus 9.3 mm;
     };
-
     class srifle_DMR_05_blk_F: DMR_05_base_F {
         displayName = CSTRING(srifle_DMR_05_blk); //Cyrus 9.3 mm (Black)
     };
-
     class srifle_DMR_05_hex_F: srifle_DMR_05_blk_F {
         displayName = CSTRING(srifle_DMR_05_hex); //Cyrus 9.3 mm (Hex);
     };
-
     class srifle_DMR_05_tan_f: srifle_DMR_05_blk_F {
         displayName = CSTRING(srifle_DMR_05_tan); //Cyrus 9.3 mm (Tan);
     };
+
     class DMR_06_base_F: Rifle_Long_Base_F {
         displayName = CSTRING(DMR_06); //Mk14 7.62 mm;
     };
-
     class srifle_DMR_06_camo_F: DMR_06_base_F {
         displayName = CSTRING(srifle_DMR_06_camo); //Mk14 7.62 mm (Camo)
     };
-
     class srifle_DMR_06_olive_F: srifle_DMR_06_camo_F {
         displayName = CSTRING(srifle_DMR_06_olive); //Mk14 7.62 mm (Olive);
     };
 
-    // marksmen mgs
+    // Marksmen MGs
     class MMG_01_base_F: Rifle_Long_Base_F {
         displayName = CSTRING(MMG_01); //Navid 9.3 mm;
     };
@@ -377,15 +365,12 @@ class CfgWeapons {
         displayName = CSTRING(MMG_02_sand); //SPMG .338 (Sand);
     };
 
-    // vehicle weapons
+    // Vehicle weapons
 
-    // gatlings
+    // Gatlings
     class CannonCore;
     class gatling_20mm: CannonCore {
-        //displayName = "";
-        class manual: CannonCore {
-            //displayName = "";
-        };
+        class manual;
     };
     class Twin_Cannon_20mm: gatling_20mm {
         displayName = "Plamen PL-20";
@@ -415,7 +400,7 @@ class CfgWeapons {
         };
     };
 
-    // missiles
+    // Missiles
     class RocketPods;
     class Missile_AA_04_Plane_CAS_01_F: RocketPods {
         displayName = "AIM-9 Sidewinder";
@@ -438,7 +423,7 @@ class CfgWeapons {
         displayName = CSTRING(missiles_vorona);
     };
 
-    // rockets
+    // Rockets
     class Rocket_04_HE_Plane_CAS_01_F: RocketPods {
         displayName = "Hydra 70";
         class Burst: RocketPods {
@@ -469,7 +454,7 @@ class CfgWeapons {
         };
     };
 
-    // more missiles
+    // More missiles
     class missiles_DAR: RocketPods {
         displayName = "Hydra 70";
         class Burst: RocketPods {
@@ -492,17 +477,17 @@ class CfgWeapons {
         displayName = "AIM-120A AMRAAM";
     };
 
-    class missiles_SCALPEL: RocketPods { // according to zGuba, this is what it's based on
+    class missiles_SCALPEL: RocketPods { // According to zGuba, this is what it's based on
         displayName = "9K121 Vikhr";
     };
 
-    // bomb
+    // Bomb
     class Bomb_04_Plane_CAS_01_F;
     class Bomb_03_Plane_CAS_02_F: Bomb_04_Plane_CAS_01_F {
         displayName = "FAB-250M-54";
     };
 
-    // machine guns
+    // Machine guns
     class MGunCore;
     class M134_minigun: MGunCore {
         displayName = "2x M134 Minigun";
@@ -532,11 +517,6 @@ class CfgWeapons {
         };
     };
 
-    class HMG_127_APC: HMG_127 {};
-    class ACE_HMG_127_KORD: HMG_127_APC {
-        displayName = "6P49 Kord";
-    };
-
     class HMG_01: HMG_127 {
         displayName = "XM312";
     };
@@ -551,7 +531,7 @@ class CfgWeapons {
         };
     };
 
-    // grenade launchers
+    // Grenade launchers
     class GMG_F;
     class GMG_20mm: GMG_F {
         displayName = "XM307";
@@ -567,7 +547,7 @@ class CfgWeapons {
         };
     };
 
-    // autocannons
+    // Autocannons
     class autocannon_35mm: CannonCore {
         displayName = "GDF-001";
         class manual: CannonCore {
@@ -575,7 +555,7 @@ class CfgWeapons {
         };
     };
 
-    // aa missiles
+    // AA missiles
     class missiles_titan: MissileLauncher {
         displayName = "Mini-Spike";
     };
@@ -584,17 +564,17 @@ class CfgWeapons {
         displayName = "FIM-92F";
     };
 
-    // mortar
+    // Nortar
     class mortar_155mm_AMOS: CannonCore {
         displayName = "L/52";
     };
 
-    // artillery rockets
+    // Artillery rockets
     class rockets_230mm_GAT: RocketPods {
         displayName = "M269";
     };
 
-    // tank guns
+    // Tank guns
     class cannon_120mm: CannonCore {
         class player;
         displayName = "MG251";
@@ -603,10 +583,6 @@ class CfgWeapons {
     class cannon_120mm_long: cannon_120mm {
         displayName = "L/55";
         class player: player {};
-    };
-
-    class ACE_cannon_120mm_GT12: cannon_120mm {
-        displayName = "GT12";
     };
 
     class cannon_105mm: CannonCore {
@@ -624,28 +600,12 @@ class CfgWeapons {
         displayName = "2A82-1M";
     };
 
-    // coax machine guns
+    // Coax machine guns
     class LMG_coax: LMG_RCWS {
         displayName = "PKT";
     };
-    class LMG_coax_ext: LMG_coax {};
-    class ACE_LMG_coax_ext_MAG58: LMG_coax_ext {
-        displayName = "MAG 58M";
-    };
-    class ACE_LMG_coax_MAG58_mem3: LMG_coax {
-        displayName = "MAG 58M";
-    };
-    class ACE_LMG_coax_L94A1_mem3: LMG_coax {
-        displayName = "L94A1";
-    };
-    class ACE_LMG_coax_ext_MG3: LMG_coax_ext {
-        displayName = "Rheinmetall MG3";
-    };
-    class ACE_LMG_coax_DenelMG4: LMG_coax {
-        displayName = "Denel MG4";
-    };
 
-    // more autocannons
+    // More autocannons
     class autocannon_Base_F;
     class autocannon_40mm_CTWS: autocannon_Base_F {
         displayName = "Mk44 Bushmaster II";
@@ -692,20 +652,6 @@ class CfgWeapons {
 
     class autocannon_30mm_RCWS: autocannon_Base_F {
         displayName = "2A42";
-    };
-
-    class cannon_20mm: autocannon_Base_F {
-        class AP: autocannon_Base_F {};
-        class HE: autocannon_Base_F {};
-    };
-    class ACE_cannon_20mm_Rh202: cannon_20mm {
-        displayName = "MK20 Rh 202";
-        class AP: AP {
-            displayName = "MK20 Rh 202";
-        };
-        class HE: HE {
-            displayName = "MK20 Rh 202";
-        };
     };
 
     // APEX/Tanoa
