@@ -39,4 +39,12 @@ class CfgWeapons {
         EGVAR(overpressure,damage) = 0.6;
         EGVAR(overpressure,offset) = -1.2;
     };
+
+    class missiles_titan;
+    class Rhs_weap_TOW_Launcher_static: missiles_titan {
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,range) = 4;
+        EGVAR(overpressure,damage) = 0.7;
+        EGVAR(overpressure,offset) = -0.8;
+    };
 };
