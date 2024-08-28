@@ -6,12 +6,7 @@
     true,
     1,
     {
-        if (!_this) then {
-            private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
-            _staminaBarContainer ctrlSetFade 1;
-            _staminaBarContainer ctrlCommit 0;
-        };
-
+        call FUNC(updateStaminaBar);
         [QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)
     },
     true // Needs mission restart
@@ -24,13 +19,7 @@
     LSTRING(DisplayName),
     true,
     1,
-    {
-        if (!_this) then {
-            private _staminaBarContainer = uiNamespace getVariable [QGVAR(staminaBarContainer), controlNull];
-            _staminaBarContainer ctrlSetFade 1;
-            _staminaBarContainer ctrlCommit 0;
-        };
-    }
+    {call FUNC(updateStaminaBar)}
 ] call CBA_fnc_addSetting;
 
 [

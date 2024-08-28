@@ -1,7 +1,9 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut, PabstMirror
+ * Author: BaerMitUmlaut, PabstMirror, johnb43
  * Applies healing to target.
+ * States that contain "needs" are states in which the medic is blocked, either temporairly (HR too high/low) or until resupplied, from treating.
+ * States that contain "wait" are states where the medic waits temporairly before continuing treatment.
  *
  * Arguments:
  * 0: Healer <OBJECT>
@@ -15,9 +17,6 @@
  *
  * Public: No
  */
-
-// TODO: Add AI tourniquet behaviour
-// For now, AI handle player or otherwise scripted tourniquets only
 
 params ["_healer", "_target"];
 (_healer getVariable [QGVAR(currentTreatment), [-1]]) params ["_finishTime", "_treatmentTarget", "_treatmentEvent", "_treatmentArgs", "_treatmentItem"];
@@ -87,47 +86,68 @@ if (_finishTime > 0) exitWith {
     };
 };
 
-// Find a suitable limb (no tourniquets) for injecting and giving IVs
+// Bandage a limb up, then remove the tourniquet on it
+private _fnc_removeTourniquet = {
+    params [["_removeAllTourniquets", false]];
+
+    // Ignore head & torso if not removing all tourniquets (= administering drugs/IVs)
+    private _offset = [2, 0] select _removeAllTourniquets;
+
+    // Bandage the least bleeding body part
+    private _bodyPartBleeding = [];
+    _bodyPartBleeding resize [[4, 6] select _removeAllTourniquets, -1];
+
+    {
+        // Ignore head and torso, if only looking for place to administer drugs/IVs
+        private _partIndex = (ALL_BODY_PARTS find _x) - _offset;
+
+        if (_partIndex >= 0 && {_tourniquets select _partIndex != 0}) then {
+            {
+                _x params ["", "_amountOf", "_bleeding"];
+
+                // max 0, to set the baseline to 0, as body parts with no wounds are marked with -1
+                _bodyPartBleeding set [_partIndex, ((_bodyPartBleeding select _partIndex) max 0) + (_amountOf * _bleeding)];
+            } forEach _y;
+        };
+    } forEach GET_OPEN_WOUNDS(_target);
+
+    // If there are no open wounds, check if there are tourniquets on limbs with no open wounds (stitched or fully healed),
+    // as we know there have to be tourniquets at this point
+    if (_bodyPartBleeding findIf {_x != -1} == -1) then {
+        _bodyPartBleeding set [_tourniquets findIf {_x != 0}, 0];
+    };
+
+    // Ignore body parts that don't have open wounds (-1)
+    private _minBodyPartBleeding = selectMin (_bodyPartBleeding select {_x != -1});
+    private _selection = ALL_BODY_PARTS select ((_bodyPartBleeding find _minBodyPartBleeding) + _offset);
+
+    // If not bleeding anymore, remove the tourniquet
+    if (_minBodyPartBleeding == 0) exitWith {
+        _treatmentEvent = QGVAR(tourniquetRemove);
+        _treatmentTime = 7;
+        _treatmentArgs = [_healer, _target, _selection];
+    };
+
+    // If no bandages available, wait
+    // If check is done at the start of the scope, it will miss the edge case where the unit ran out of bandages just as they finished bandaging tourniqueted body part
+    if !(([_healer, "@bandage"] call FUNC(itemCheck)) # 0) exitWith {
+        _treatmentEvent = "#needsBandage";
+    };
+
+    // Otherwise keep bandaging
+    _treatmentEvent = QEGVAR(medical_treatment,bandageLocal);
+    _treatmentTime = 5;
+    _treatmentArgs = [_target, _selection, "FieldDressing"];
+    _treatmentItem = "@bandage";
+};
+
+// Find a suitable limb (no tourniquets) for adminstering drugs/IVs
 private _fnc_findNoTourniquet = {
     private _bodyPart = "";
 
     // If all limbs have tourniquets, find the least damaged limb and try to bandage it
     if ((_tourniquets select [2]) find 0 == -1) then {
-        // If no bandages available, wait
-        if !(([_healer, "@bandage"] call FUNC(itemCheck)) # 0) exitWith {
-            _treatmentEvent = "#waitForNonTourniquetedLimb"; // TODO: Medic can move onto another patient/should be flagged as out of supplies
-        };
-
-        // Bandage the least bleeding body part
-        private _bodyPartBleeding = [0, 0, 0, 0];
-
-        {
-            // Ignore head and torso
-            private _partIndex = (ALL_BODY_PARTS find _x) - 2;
-
-            if (_partIndex >= 0) then {
-                {
-                    _x params ["", "_amountOf", "_bleeding"];
-                    _bodyPartBleeding set [_partIndex, (_bodyPartBleeding select _partIndex) + (_amountOf * _bleeding)];
-                } forEach _y;
-            };
-        } forEach GET_OPEN_WOUNDS(_target);
-
-        private _minBodyPartBleeding = selectMin _bodyPartBleeding;
-        private _selection = ALL_BODY_PARTS select ((_bodyPartBleeding find _minBodyPartBleeding) + 2);
-
-        // If not bleeding anymore, remove the tourniquet
-        if (_minBodyPartBleeding == 0) exitWith {
-            _treatmentEvent = QGVAR(tourniquetRemove);
-            _treatmentTime = 7;
-            _treatmentArgs = [_healer, _target, _selection];
-        };
-
-        // Otherwise keep bandaging
-        _treatmentEvent = QEGVAR(medical_treatment,bandageLocal);
-        _treatmentTime = 5;
-        _treatmentArgs = [_target, _selection, "FieldDressing"];
-        _treatmentItem = "@bandage";
+        call _fnc_removeTourniquet;
     } else {
         // Select a random non-tourniqueted limb otherwise
         private _bodyParts = ["leftarm", "rightarm", "leftleg", "rightleg"];
@@ -159,7 +179,7 @@ if (true) then {
 
         // Patient is not worth treating if bloodloss can't be stopped
         if !(_hasBandage || _hasTourniquet) exitWith {
-            _treatmentEvent = "#cantStabilise"; // TODO: Medic should be flagged as out of supplies
+            _treatmentEvent = "#needsBandageOrTourniquet";
         };
 
         // Bandage the heaviest bleeding body part
@@ -246,61 +266,69 @@ if (true) then {
         _treatmentItem = "@iv";
     };
 
-    private _fractures = GET_FRACTURES(_target);
+    // Leg fractures
+    private _index = (GET_FRACTURES(_target) select [4, 2]) find 1;
 
     if (
-        ((_fractures select 4) == 1) &&
-        {([_healer, "splint"] call FUNC(itemCheck)) # 0}
+        _index != -1 && {
+            // In case the unit doesn't have a splint, set state here
+            _treatmentEvent = "#needsSplint";
+
+            ([_healer, "splint"] call FUNC(itemCheck)) # 0
+        }
     ) exitWith {
         _treatmentEvent = QEGVAR(medical_treatment,splintLocal);
         _treatmentTime = 6;
-        _treatmentArgs = [_healer, _target, "leftleg"];
-        _treatmentItem = "splint";
-    };
-
-    if (
-        ((_fractures select 5) == 1) &&
-        {([_healer, "splint"] call FUNC(itemCheck)) # 0}
-    ) exitWith {
-        _treatmentEvent = QEGVAR(medical_treatment,splintLocal);
-        _treatmentTime = 6;
-        _treatmentArgs = [_healer, _target, "rightleg"];
+        _treatmentArgs = [_healer, _target, ALL_BODY_PARTS select (_index + 4)];
         _treatmentItem = "splint";
     };
 
     // Wait until the injured has enough blood before administering drugs
      // (_needsIV && !_canGiveIV), but _canGiveIV is false here, otherwise IV would be given
-    if (_needsIV || {_treatmentEvent == "#waitForIV"}) exitWith {
+    if (_needsIV || {_doCPR && {_treatmentEvent == "#waitForIV"}}) exitWith {
         // If injured is in cardiac arrest and the healer is doing nothing else, start CPR
         if (_doCPR) exitWith {
-            _treatmentEvent = QEGVAR(medical_treatment,cprLocal); // TODO: Medic remains in this loop until injured is given enough IVs or dies
+            // Medic remains in this loop until injured is given enough IVs or dies
+            _treatmentEvent = QEGVAR(medical_treatment,cprLocal);
             _treatmentArgs = [_healer, _target];
             _treatmentTime = 15;
         };
 
         // If the injured needs IVs, but healer can't give it to them, have healder wait
         if (_needsIV) exitWith {
-            _treatmentEvent = "#needsIV"; // TODO: Medic can move onto another patient
+            _treatmentEvent = "#needsIV";
         };
     };
 
-    if ((count (_target getVariable [VAR_MEDICATIONS, []])) >= 6) exitWith {
-        _treatmentEvent = "#tooManyMeds"; // TODO: Medic can move onto another patient
+    // These checks are not exitWith, so that the medic can try to bandage up tourniqueted body parts
+    if ((count (_target getVariable [VAR_MEDICATIONS, []])) >= 6) then {
+        _treatmentEvent = "#needsFewerMeds";
     };
 
     private _heartRate = GET_HEART_RATE(_target);
+    private _canGiveEpinephrine = !(_treatmentEvent in ["#needsFewerMeds", "#waitForIV"]) &&
+                                  {IS_UNCONSCIOUS(_target) || {_heartRate <= 50}} &&
+                                  {
+                                      // In case the unit doesn't have a epinephrine injector, set state here
+                                      _treatmentEvent = "#needsEpinephrine";
 
-    if (
-        (IS_UNCONSCIOUS(_target) || {_heartRate <= 50}) &&
-        {([_healer, "epinephrine"] call FUNC(itemCheck)) # 0}
-    ) exitWith {
-        if (CBA_missionTime < (_target getVariable [QGVAR(nextEpinephrine), -1])) exitWith {
+                                      ([_healer, "epinephrine"] call FUNC(itemCheck)) # 0
+                                  };
+
+    // This allows for some multitasking
+    if (_canGiveEpinephrine) then {
+        if (CBA_missionTime < (_target getVariable [QGVAR(nextEpinephrine), -1])) then {
             _treatmentEvent = "#waitForEpinephrineToTakeEffect";
-        };
-        if (_heartRate > 180) exitWith {
-            _treatmentEvent = "#waitForSlowerHeart"; // TODO: Medic can move onto another patient, after X amount of time of high HR
+            _canGiveEpinephrine = false;
         };
 
+        if (_heartRate > 180) then {
+            _treatmentEvent = "#needsSlowerHeart";
+            _canGiveEpinephrine = false;
+        };
+    };
+
+    if (_canGiveEpinephrine) exitWith {
         // If all limbs are tourniqueted, bandage the one with the least amount of wounds, so that the tourniquet can be removed
         _bodyPart = call _fnc_findNoTourniquet;
 
@@ -313,15 +341,31 @@ if (true) then {
         _treatmentItem = "epinephrine";
     };
 
+    // Remove all remaining tourniquets by bandaging all body parts
+    if (_tourniquets isNotEqualTo DEFAULT_TOURNIQUET_VALUES) then {
+        true call _fnc_removeTourniquet;
+    };
+
+    // If the healer can bandage or remove tourniquets, do that
+    if (_treatmentEvent in [QEGVAR(medical_treatment,bandageLocal), QGVAR(tourniquetRemove)]) exitWith {};
+
+    // Otherwise, if the healer is either done or out of bandages, continue
     if (
-        ((GET_PAIN_PERCEIVED(_target) > 0.25) || {_heartRate >= 180}) &&
-        {([_healer, "morphine"] call FUNC(itemCheck)) # 0}
+        !(_treatmentEvent in ["#needsFewerMeds", "#waitForIV"]) &&
+        {(GET_PAIN_PERCEIVED(_target) > 0.25) || {_heartRate >= 180}} &&
+        {
+            // In case the unit doesn't have a morphine injector, set state here
+            _treatmentEvent = "#needsMorphine";
+
+            ([_healer, "morphine"] call FUNC(itemCheck)) # 0
+        }
     ) exitWith {
         if (CBA_missionTime < (_target getVariable [QGVAR(nextMorphine), -1])) exitWith {
             _treatmentEvent = "#waitForMorphineToTakeEffect";
         };
+
         if (_heartRate < 60) exitWith {
-            _treatmentEvent = "#waitForFasterHeart"; // TODO: Medic can move onto another patient, after X amount of time of low HR
+            _treatmentEvent = "#needsFasterHeart";
         };
 
         // If all limbs are tourniqueted, bandage the one with the least amount of wounds, so that the tourniquet can be removed
