@@ -33,7 +33,7 @@ if ((_unit getHitPointDamage "HitLegs") >= 0.5) exitWith {false};
 if (_isPerson) exitWith {
     !_alive ||
     {(isAwake _target) && // not ragdolled if alive
-    {!(lifeState _target in ["HEALTHY", "INJURED"]) ||
+    {!(_target call EFUNC(common,isAwake)) ||
     {_target getHitPointDamage "HitLegs" >= 0.5}}}
 };
 
