@@ -1,6 +1,8 @@
 
 class CfgWeapons {
 
+    // Man-Portable launchers, rear-facing overpressure
+
     class LauncherCore;
     class Launcher: LauncherCore {
         GVAR(priority) = 1;
@@ -60,6 +62,49 @@ class CfgWeapons {
         GVAR(angle) = 40;
         GVAR(offset) = 0.9;
     };
+
+    // Vehicle recoilless rifles and missile launchers, rear-facing overpressure
+
+    class MissileLauncher;
+    class MissileLauncher: LauncherCore {
+        GVAR(priority) = 1;
+        GVAR(angle) = 60;
+        GVAR(range) = 10;
+        GVAR(damage) = 0.7;
+        GVAR(offset) = -0.8;
+    };
+
+    class missiles_titan_static;
+    class missiles_titan_static {
+        GVAR(angle) = 40;
+        GVAR(range) = 8;
+        GVAR(damage) = 0.5;
+    };
+
+    class EGVAR(javelin,Titan_Static): missiles_titan_static {
+        // Titan is a soft-launch launcher
+        GVAR(priority) = 1;
+        GVAR(angle) = 30;
+        GVAR(range) = 2;
+        GVAR(damage) = 0.5;
+        GVAR(offset) = -0.5;
+    };
+
+    class missiles_Vorona: MissileLauncher {
+        GVAR(angle) = 50;
+        GVAR(offset) = -0.5;
+    };
+
+    class RocketPods;
+    class RocketPods: LauncherCore {
+        GVAR(priority) = 1;
+        GVAR(angle) = 60;
+        GVAR(range) = 10;
+        GVAR(damage) = 0.7;
+        GVAR(offset) = -0.8;
+    };
+
+    // Vehicle cannons, forward-facing overpressure
 
     class CannonCore;
     class cannon_120mm: CannonCore {
