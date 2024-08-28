@@ -582,8 +582,27 @@
             <Chinese>小隊管理</Chinese>
             <Turkish>Takım Yönetimi</Turkish>
         </Key>
-        <Key ID="STR_ACE_Interaction_groupDropDistantUnits">
-            <English>Drop Distant Members</English>
+        <Key ID="STR_ACE_Interaction_remoteTeamManagement_DisplayName">
+            <English>Remote Squad Management</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_remoteTeamManagement_Description">
+            <English>Allow dropping and changing team colors of any unit in player's squad</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Squad">
+            <English>Squad</English>
+            <Czech>Družstvo</Czech>
+            <German>Trupp</German>
+            <Russian>Отряд</Russian>
+            <Polish>Drużyna</Polish>
+            <Italian>Squadra</Italian>
+            <Spanish>Escuadrón</Spanish>
+            <French>Escouade</French>
+            <Chinese>分隊</Chinese>
+            <Japanese>分隊</Japanese>
+            <Korean>분대</Korean>
+            <Portuguese>Esquadrão</Portuguese>
+            <Chinesesimp>小队</Chinesesimp>
+            <Turkish>Manga</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamRED">
             <English>Red</English>
@@ -788,6 +807,18 @@
             <Chinesesimp>加入黄组</Chinesesimp>
             <Chinese>加入黃組</Chinese>
             <Turkish>Sarıya Katıl</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_JoinTeamMain">
+            <English>Join White</English>
+            <German>Weiss beitreten</German>
+            <Spanish>Unirse a Blanco</Spanish>
+            <Polish>Dołącz do Biała</Polish>
+            <Portuguese>Entrar em Branco</Portuguese>
+            <Czech>Připojit k Bílý Tým</Czech>
+            <Russian>Присоединиться к Белая</Russian>
+            <French>Rejoindre Blanc</French>
+            <Italian>Unirsi al team Bianco</Italian>
+            <Korean>백팀 참여</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
