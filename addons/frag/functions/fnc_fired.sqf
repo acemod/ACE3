@@ -27,8 +27,7 @@ if (_ammo isEqualTo "" || {isNull _projectile} ||
 
 if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
     private _hitPartEventHandler = _projectile addEventHandler [
-        "HitPart",
-        {
+        "HitPart", {
             params ["_projectile", "_hitObject", "", "_posASL", "_velocity"];
 
             // starting v2.18 it may be faster to use the instigator EH parameter, the same as the second entry shotParents, to recreate _shotParent
@@ -56,8 +55,7 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
 
 if (GVAR(reflectionsEnabled) || (GVAR(enabled) && {_ammo call FUNC(shouldFrag)})) then {
     private _explodeEventHandler = _projectile addEventHandler [
-        "Explode",
-        {
+        "Explode", {
             params ["_projectile", "_posASL"];
 
             private _ammo = typeOf _projectile;

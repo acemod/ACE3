@@ -1,8 +1,7 @@
 #include "script_component.hpp"
 
 [
-    "CBA_settingsInitialized",
-    {
+    "CBA_settingsInitialized", {
         ["ace_firedPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
         ["ace_firedNonPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
         ["ace_firedPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
@@ -15,17 +14,14 @@
         ["ace_firedPlayerNonLocal", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
         GVAR(dev_drawPFEH) = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
         [
-            "ace_interact_menu_newControllableObject",
-            {
+            "ace_interact_menu_newControllableObject", {
                 params ["_type"];
 
                 private _action = [
                     QGVAR(debugReset),
                     "Reset ACE Frag traces",
                     "",
-                    {
-                        [QGVAR(dev_clearTraces), []] call CBA_fnc_globalEvent;
-                    },
+                    {[QGVAR(dev_clearTraces), []] call CBA_fnc_globalEvent;},
                     {GVAR(dev_trackLines) isNotEqualTo createHashMap}
                 ] call EFUNC(interact_menu,createAction);
                 [

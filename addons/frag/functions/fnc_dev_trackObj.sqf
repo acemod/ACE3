@@ -64,8 +64,7 @@ GVAR(dev_trackLines) set [getObjectID _object, [[getPosATL _object], _colorArray
 if (!_isProj) exitWith {};
 
 _object addEventHandler [
-    "HitPart",
-    {
+    "HitPart", {
         params ["_projectile", "", "", "_posASL"];
         private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
         _posArr pushBack ASLToATL _posASL;
@@ -76,8 +75,7 @@ _object addEventHandler [
 ];
 
 _object addEventHandler [
-    "Explode",
-    {
+    "Explode", {
         params ["_projectile", "_posASL"];
         private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
         _posArr pushBack ASLToATL _posASL;
@@ -88,8 +86,7 @@ _object addEventHandler [
 ];
 
 _object addEventHandler [
-    "Deflected",
-    {
+    "Deflected", {
         params ["_projectile", "_posASL"];
         private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
         _posArr pushBack ASLToATL _posASL;

@@ -57,8 +57,7 @@ if (_isTraceBlue) then {
 if (!_addProjectileEventHandlers) exitWith {};
 
 _projectile addEventHandler [
-    "HitPart",
-    {
+    "HitPart", {
         params ["_projectile", "", "", "_posASL"];
         private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
         _posArr pushBack ASLToATL _posASL;
@@ -69,8 +68,7 @@ _projectile addEventHandler [
 ];
 
 _projectile addEventHandler [
-    "Explode",
-    {
+    "Explode", {
         params ["_projectile", "_posASL"];
         private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
         _posArr pushBack ASLToATL _posASL;
@@ -81,8 +79,7 @@ _projectile addEventHandler [
 ];
 
 _projectile addEventHandler [
-    "Deflected",
-    {
+    "Deflected", {
         params ["_projectile", "_posASL"];
         private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
         _posArr pushBack ASLToATL _posASL;

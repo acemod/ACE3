@@ -21,8 +21,7 @@
 params ["_ammo"];
 
 GVAR(spallInfoCache) getOrDefaultCall [
-    _ammo,
-    {
+    _ammo, {
         private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
         private _caliber = getNumber (_ammoConfig >> "caliber");
         private _explosive = getNumber (_ammoConfig >> "explosive");

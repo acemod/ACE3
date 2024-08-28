@@ -18,8 +18,7 @@
 params ["_ammo"];
 
 GVAR(shouldSpallCache) getOrDefaultCall [
-    _ammo,
-    {
+    _ammo, {
         (_ammo call FUNC(getSpallInfo)) params ["_caliber", "_explosive", "_indirectHit"];
 
         _caliber >= 2.5 || (_explosive > 0 && _indirectHit >= 1)
