@@ -95,6 +95,10 @@ class CfgWeapons {
         GVAR(offset) = -0.5;
     };
 
+    class launcher_SPG9: MissileLauncher {
+        GVAR(offset) = -1.25;
+    };
+
     class RocketPods;
     class RocketPods: LauncherCore {
         GVAR(priority) = 1;
