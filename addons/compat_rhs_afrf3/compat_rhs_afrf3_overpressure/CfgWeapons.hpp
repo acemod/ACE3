@@ -26,6 +26,16 @@ class CfgWeapons {
         EGVAR(overpressure,offset) = 1.65;
     };
 
+    // Vehicle recoilless rifles and missile launchers, rear-facing overpressure
+
+    class missiles_titan_static;
+    class rhs_Igla_AA_pod_Base: missiles_titan_static { // Soft-launched Igla missile
+        EGVAR(overpressure,range) = 6;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,damage) = 0.6;
+        EGVAR(overpressure,offset) = -1.8;
+    };
+
     // Vehicle cannons, forward-facing overpressure
 
     class rhs_weap_d81;
