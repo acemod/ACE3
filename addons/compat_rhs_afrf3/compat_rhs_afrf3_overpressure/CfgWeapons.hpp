@@ -36,6 +36,11 @@ class CfgWeapons {
         EGVAR(overpressure,offset) = -1.8;
     };
 
+    class RocketPods;
+    class rhs_weap_SPG9: RocketPods {
+        EGVAR(overpressure,offset) = -1.2;
+    };
+
     // Vehicle cannons, forward-facing overpressure
 
     class rhs_weap_d81;
