@@ -19,7 +19,7 @@
 params [["_logAll", false, [false]]];
 
 private _allAmmoConfigs = configProperties [configFile >> "CfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true];
-private _processedCfgAmmos = [];
+private _processedCfgAmmos = createHashMap;
 
 private _numberPrinted = 0;
 
@@ -34,22 +34,22 @@ diag_log text "//****************** fragCalcDump Beg ******************//";
     _ammo call FUNC(shouldFrag) params ["_shouldFrag"];
     if (_shouldFrag || _logAll) then {
         private _fragInfo = _ammo call FUNC(getFragInfo);
-        _fragInfo params ["_fragRange", "_fragMaxVelocity"];
+        _fragInfo params ["_fragRange", "_fragMaxSpeed"];
         private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
         private _indirectHitRange = getNumber (_ammoConfig >> "indirectHitRange");
         private _indirectHit = getNumber (_ammoConfig >> "indirectHit");
-        private _fragPowerSpeedRange = [0.5, 1] vectorMultiply _fragMaxVelocity;
+        private _fragPowerSpeedRange = [0.5, 1] vectorMultiply _fragMaxSpeed;
 
         diag_log text format ["Ammo type: %1 | Should frag: %2", _ammo, _shouldFrag];
         diag_log text format ["    Indirect hit range: %1", _indirectHitRange];
         diag_log text format ["    Indirect hit:       %1", _indirectHit];
-        diag_log text format ["    Frag sqrtPower:     %1", _fragPowerSqrt];
+        diag_log text format ["    Max frag speed:     %1", _fragMaxSpeed];
         diag_log text format ["    Frag range:         %1", _fragRange];
         diag_log text format ["    Frag speed range:   %1", _fragPowerSpeedRange];
         INC(_numberPrinted);
     };
 
-    _processedCfgAmmos pushBack _ammo;
+    _processedCfgAmmos set [_ammo, 1];
 } forEach _allAmmoConfigs;
 
 diag_log text "//****************** fragCalcDump End ******************//";

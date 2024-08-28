@@ -33,14 +33,14 @@ if (_csvFormat) then {
 };
 
 // Gather all configs, either those that could be created from firing or all classes
-private _allAmmoConfigs = [];
+private _allAmmoConfigs = createHashMap;
 if (_onlyShotAmmoTypes) then {
     private _configSearchFunction = {
         params [
             ["_ammo", "", [""]]
         ];
         if (_ammo isEqualTo "" || {_ammo in _allAmmoConfigs}) exitWith {};
-        _allAmmoConfigs pushBack _ammo;
+        _allAmmoConfigs set [_ammo, 1];
         private _cfgAmmoRoot = configFile >> "CfgAmmo";
         private _submunitionConfig = _cfgAmmoRoot >> _ammo >> "submunitionAmmo";
         if (isArray _submunitionConfig) then {
@@ -63,16 +63,17 @@ if (_onlyShotAmmoTypes) then {
         private _magAmmo = getText (_x >> "ammo");
         configName (_cfgAmmoCfgPath >> _magAmmo) call _configSearchFunction;
     } forEach _allMagazineConfigs;
+    _allAmmoConfigs = keys _allAmmoConfigs;
 } else {
     _allAmmoConfigs = configProperties [configFile >> "CfgAmmo", "isClass _x && !('ace_frag' in configName _x)", true] apply {configName _x};
 };
 
-private _processedCfgAmmos = [];
+private _processedCfgAmmos = 0;
 private _printCount = 0;
 { // Begin forEach to check each ammo type
     private _ammo = _x;
     if (_ammo isNotEqualTo "") then {
-        _processedCfgAmmos pushBack _ammo;
+        INC(_processedCfgAmmos);
 
         private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
         _ammo call FUNC(shouldFrag) params ["_shouldFrag"];
@@ -105,5 +106,5 @@ private _printCount = 0;
     };
 } forEach _allAmmoConfigs;
 
-diag_log text format ["~~~~~~~~~~~~~~End [%1-%2]~~~~~~~~~~~~~~", count _allAmmoConfigs, count _processedCfgAmmos];
+diag_log text format ["~~~~~~~~~~~~~~End [%1-%2]~~~~~~~~~~~~~~", count _allAmmoConfigs, _processedCfgAmmos];
 diag_log text format ["~~~~~~~~~~~~~~Printed: %1~~~~~~~~~~~", _printCount];
