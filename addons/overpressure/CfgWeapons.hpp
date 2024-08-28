@@ -65,7 +65,6 @@ class CfgWeapons {
 
     // Vehicle recoilless rifles and missile launchers, rear-facing overpressure
 
-    class MissileLauncher;
     class MissileLauncher: LauncherCore {
         GVAR(priority) = 1;
         GVAR(angle) = 60;
@@ -74,7 +73,6 @@ class CfgWeapons {
         GVAR(offset) = -0.8;
     };
 
-    class missiles_titan_static;
     class missiles_titan_static {
         GVAR(angle) = 40;
         GVAR(range) = 8;
@@ -99,7 +97,6 @@ class CfgWeapons {
         GVAR(offset) = -1.25;
     };
 
-    class RocketPods;
     class RocketPods: LauncherCore {
         GVAR(priority) = 1;
         GVAR(angle) = 60;
