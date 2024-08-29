@@ -29,6 +29,8 @@ if (_item isEqualType "") then {
 private _loaded = _vehicle getVariable [QGVAR(loaded), []];
 
 if !(_item in _loaded) exitWith {
+    ERROR_3("Tried to paradrop item [%1] not in vehicle[%2] cargo[%3]",_item,_vehicle,_loaded);
+
     false // return
 };
 
@@ -39,64 +41,51 @@ if (_itemSize < 0) exitWith {
     false // return
 };
 
-// Unload item from cargo
-_loaded deleteAt (_loaded find _item);
-_vehicle setVariable [QGVAR(loaded), _loaded, true];
-
-// Update cargo space remaining
-private _cargoSpace = _vehicle call FUNC(getCargoSpaceLeft);
-_vehicle setVariable [QGVAR(space), _cargoSpace + _itemSize, true];
-
 (boundingBoxReal _vehicle) params ["_bb1", "_bb2"];
 private _distBehind = ((_bb1 select 1) min (_bb2 select 1)) - 4; // 4 meters behind max bounding box
 private _posBehindVehicleAGL = _vehicle modelToWorld [0, _distBehind, -2];
 
-TRACE_1("",_distBehind);
-
-private _object = _item;
-
-if (_item isEqualType objNull) then {
-    detach _object;
-
-    // hideObjectGlobal must be executed before setPos to ensure light objects are rendered correctly
-    // Do both on server to ensure they are executed in the correct order
-    [QGVAR(serverUnload), [_object, _posBehindVehicleAGL]] call CBA_fnc_serverEvent;
-} else {
-    _object = createVehicle [_item, _posBehindVehicleAGL, [], 0, "NONE"];
-    _object setPosASL (AGLtoASL _posBehindVehicleAGL);
-};
+private _object = [_item, _vehicle, _posBehindVehicleAGL, false] call FUNC(unload);
 
 [QEGVAR(common,setVelocity), [_object, (velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5)], _object] call CBA_fnc_targetEvent;
 
 // Open parachute and IR light effect
 [{
-    params ["_object"];
+    params ["_object", "_vehicle"];
 
     if (isNull _object || {getPos _object select 2 < 1}) exitWith {};
 
-    private _parachute = createVehicle ["B_Parachute_02_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
+    private _objectAttachedTo = attachedTo _object;
+    private _parachuteTypeVehicle = getText (configOf _vehicle >> "VehicleTransport" >> "Carrier" >> "parachuteClassDefault");
+    private _parachuteTypeObject = getText (configOf _object >> "VehicleTransport" >> "Cargo" >> "parachuteClass");
 
-    // Prevent collision damage
-    [QEGVAR(common,fixCollision), _parachute] call CBA_fnc_localEvent;
-    [QEGVAR(common,fixCollision), _object, _object] call CBA_fnc_targetEvent;
+    if (
+        !(_objectAttachedTo isKindOf _parachuteTypeVehicle) &&
+        !(_objectAttachedTo isKindOf _parachuteTypeObject)
+    ) then {
+        private _velocity = velocity _object;
+        private _parachute = createVehicle ["B_Parachute_02_F", [0, 0, 0], [], 0, "CAN_COLLIDE"];
 
-    // Cannot use setPos on parachutes without them closing down
-    _parachute attachTo [_object, [0, 0, 0]];
-    detach _parachute;
+        // Prevent collision damage
+        [QEGVAR(common,fixCollision), _parachute] call CBA_fnc_localEvent;
+        [QEGVAR(common,fixCollision), _object, _object] call CBA_fnc_targetEvent;
 
-    private _velocity = velocity _object;
+        // Cannot use setPos on parachutes without them closing down
+        _parachute attachTo [_object, [0, 0, 0]];
+        detach _parachute;
 
-    // Attach to the middle of the object
-    (2 boundingBoxReal _object) params ["_bb1", "_bb2"];
+        // Attach to the middle of the object
+        (2 boundingBoxReal _object) params ["_bb1", "_bb2"];
 
-    _object attachTo [_parachute, [0, 0, ((_bb2 select 2) - (_bb1 select 2)) / 2]];
-    _parachute setVelocity _velocity;
+        _object attachTo [_parachute, [0, 0, ((_bb2 select 2) - (_bb1 select 2)) / 2]];
+        _parachute setVelocity _velocity;
+    };
 
     if ((GVAR(disableParadropEffectsClasstypes) findIf {_object isKindOf _x}) == -1) then {
         private _light = "Chemlight_yellow" createVehicle [0, 0, 0];
         _light attachTo [_object, [0, 0, 0]];
     };
-}, _object, 0.7] call CBA_fnc_waitAndExecute;
+}, [_object, _vehicle], 0.7] call CBA_fnc_waitAndExecute;
 
 // Create smoke effect when crate landed
 [{
