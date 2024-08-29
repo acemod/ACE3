@@ -584,9 +584,11 @@
         </Key>
         <Key ID="STR_ACE_Interaction_remoteTeamManagement_DisplayName">
             <English>Remote Squad Management</English>
+            <French>Gestion à distance de l'escouade</French>
         </Key>
         <Key ID="STR_ACE_Interaction_remoteTeamManagement_Description">
             <English>Allow dropping and changing team colors of any unit in player's squad</English>
+            <French>Permettre d'abandonner et de changer les couleurs de n'importe quelle unité de l'escouade du joueur</French>
         </Key>
         <Key ID="STR_ACE_Interaction_Squad">
             <English>Squad</English>
