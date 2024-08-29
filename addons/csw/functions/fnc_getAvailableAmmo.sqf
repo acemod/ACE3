@@ -26,11 +26,6 @@ if (!alive _vehicle) exitWith {createHashMap};
 
 private _availableMagazines = createHashMap;
 
-private _fnc_addAmmo = {
-    params ["_magazine", "_ammo"];
-    _availableMagazines set [_magazine, (_availableMagazines getOrDefault [_magazine, 0]) + _ammo];
-};
-
 {
     _x params ["_xMag", "", "_xAmmo"];
 
@@ -39,7 +34,7 @@ private _fnc_addAmmo = {
     private _carryMag = _xMag call FUNC(getCarryMagazine);
     if (_carryMag isEqualTo "") then {continue};
 
-    [_carryMag, _xAmmo] call _fnc_addAmmo
+    _availableMagazines set [_carryMag, (_availableMagazines getOrDefault [_carryMag, 0]) + _xAmmo];
 } forEach (magazinesAllTurrets _vehicle);
 
 if (_onlyLoaded) exitWith {_availableMagazines};
@@ -51,7 +46,9 @@ if (_sources isEqualTo []) exitWith {_availableMagazines};
 {
     private _source = _x;
     {
-        _x call _fnc_addAmmo
+        _x params ["_xMag", "_xAmmo"];
+
+        _availableMagazines set [_xMag, (_availableMagazines getOrDefault [_xMag, 0]) + _xAmmo];
     } forEach ([_source, _vehicle] call FUNC(getSourceCompatibleMagazines));
 } forEach _sources;
 

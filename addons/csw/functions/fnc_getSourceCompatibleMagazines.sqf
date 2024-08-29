@@ -20,7 +20,7 @@
 
 params [["_source", objNull, [objNull]], ["_csw", objNull, [objNull]]];
 
-if (isNull _source || {isNull _csw}) exitWith {[]};
+if (isNull _source || {!alive _csw}) exitWith {[]};
 
 if !(typeOf _csw in GVAR(initializedStaticTypes)) exitWith {[]};
 
