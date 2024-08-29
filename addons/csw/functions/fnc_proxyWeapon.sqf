@@ -21,6 +21,11 @@
 params ["_vehicle", "_turret", "_needed", "_emptyWeapon"];
 TRACE_4("proxyWeapon",_vehicle,_turret,_needed,_emptyWeapon);
 
+// addWeaponTurret/removeWeaponTurret need to be executed where turret is local
+if !(_vehicle turretLocal _turret) exitWith {
+    TRACE_1("turret not local",_vehicle);
+};
+
 if (_vehicle getVariable [format [QGVAR(proxyHandled_%1), _turret], false]) exitWith { TRACE_1("already handled",typeOf _vehicle); };
 
 private _proxyWeapon = getText (configOf _vehicle >> QUOTE(ADDON) >> "proxyWeapon");
