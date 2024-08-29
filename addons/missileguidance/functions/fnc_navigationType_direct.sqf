@@ -34,4 +34,4 @@ private _iTimestep = 0;
 if (_timestep != 0) then {
     _iTimestep = 1 / _timestep;
 };
-_deltaDirection vectorMultiply _iTimestep
+_deltaDirection vectorMultiply _iTimestep // return
