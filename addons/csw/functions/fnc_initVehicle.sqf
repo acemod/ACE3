@@ -33,18 +33,11 @@ if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
     _vehicle addEventHandler ["GetIn", LINKFUNC(ai_handleGetIn)]; // handle AI getting inside weapon with no ammo
 };
 
-if (_configEnabled) then {
+TRACE_2("",local _vehicle,_vehicle turretLocal [0]);
+if (_configEnabled && {_vehicle turretLocal [0]}) then { // if turret is local to us, then handle mags/weapon
     [{
         params ["_vehicle"];
-        TRACE_2("",local _vehicle,_vehicle turretLocal [0]);
-
         if (!alive _vehicle) exitWith { TRACE_1("dead/deleted",_vehicle); };
-
-        // If turret is local, handle mags/weapon
-        if !(_vehicle turretLocal [0]) exitWith {
-            TRACE_1("turret not local",_vehicle);
-        };
-
         // Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
         private _assemblyModeIndex = _vehicle getVariable [QGVAR(assemblyMode), 3];
         private _emptyWeapon = _assemblyModeIndex isEqualTo 2;
