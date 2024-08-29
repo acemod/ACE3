@@ -1,5 +1,4 @@
 #include "script_component.hpp"
-#include "\z\ace\addons\hearing\script_macros_hearingProtection.hpp"
 
 class CfgPatches {
     class ADDON {
@@ -7,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"rhsusf_main_loadorder"};
+        requiredAddons[] = {"ace_common", "rhsusf_main_loadorder"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"Ruthberg", "GitHawk", "BaerMitUmlaut", "Fyuran"};
@@ -19,7 +18,6 @@ class CfgPatches {
 #include "CfgAmmo.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgMagazines.hpp"
-#include "CfgMagazineWells.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgGlasses.hpp"

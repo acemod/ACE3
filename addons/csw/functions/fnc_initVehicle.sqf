@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Initializes CSW systems on vehicle
+ * Initializes CSW systems on vehicle.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
@@ -74,7 +74,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     private _condition = { //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         [_player, _target, ["isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith)
     };
-    private _childenCode = {
+    private _childrenCode = {
         BEGIN_COUNTER(getActions); // can remove for final release
         private _ret = (call FUNC(getLoadActions)) + (call FUNC(getUnloadActions));
         END_COUNTER(getActions);
@@ -82,10 +82,10 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     };
     if (_configEnabled && {_magazineLocation != ""}) then {
         private _positionCode = compile _magazineLocation;
-        private _ammoAction = [QGVAR(magazine), LLSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode, [], _positionCode, 4] call EFUNC(interact_menu,createAction);
+        private _ammoAction = [QGVAR(magazine), LLSTRING(AmmoHandling_displayName), "", {}, _condition, _childrenCode, [], _positionCode, 4] call EFUNC(interact_menu,createAction);
         _ammoActionPath = [_typeOf, 0, [], _ammoAction] call EFUNC(interact_menu,addActionToClass);
     } else {
-        private _ammoAction = [QGVAR(magazine), LLSTRING(AmmoHandling_displayName), "", {}, _condition, _childenCode] call EFUNC(interact_menu,createAction);
+        private _ammoAction = [QGVAR(magazine), LLSTRING(AmmoHandling_displayName), "", {}, _condition, _childrenCode] call EFUNC(interact_menu,createAction);
         _ammoActionPath = [_typeOf, 0, ["ACE_MainActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
     };
 

@@ -1,23 +1,20 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * If the CSW is mounted or in use this will not allow you to dismount the weapon
+ * If the CSW is mounted or in use this will not allow you to dismount the weapon.
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  *
  * Return Value:
- * Can Dismount <BOOL>
+ * Can dismount weapon <BOOL>
  *
  * Example:
- * [cursorObject] call ace_csw_fnc_assemble_canPickupWeapon
+ * cursorObject call ace_csw_fnc_assemble_canPickupWeapon
  *
  * Public: No
  */
 
-params ["_staticWeapon"];
+params ["_vehicle"];
 
-private _notCrewed = (crew _staticWeapon) isEqualTo [];
-private _deadCrew = !(alive (gunner _staticWeapon)); // need to eject body???
-
-GVAR(defaultAssemblyMode) && {alive _staticWeapon} && {_notCrewed || _deadCrew}
+GVAR(defaultAssemblyMode) && {alive _vehicle} && {((crew _vehicle) findIf {alive _x && {!unitIsUAV _x}}) == -1} // return

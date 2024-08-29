@@ -3,7 +3,7 @@
     "LIST",
     [LSTRING(AdvancedDiagnose_DisplayName), LSTRING(AdvancedDiagnose_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrest)], 1],
+    [[0, 1, 2, 3], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrest), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrestDirect)], 1],
     true
 ] call CBA_fnc_addSetting;
 
@@ -86,7 +86,9 @@
     [LSTRING(ConvertItems_DisplayName), LSTRING(ConvertItems_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2], [ELSTRING(common,Enabled), LSTRING(ConvertItems_RemoveOnly), ELSTRING(common,Disabled)], 0],
-    true
+    1,
+    {[QGVAR(convertItems), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [

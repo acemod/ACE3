@@ -20,7 +20,7 @@
             <Spanish>Controla si la tripulación recibe daño debido a colisiones en vehículo.</Spanish>
             <French>Définit si les passagers à bord des véhicules peuvent être blessés en cas d'accident.</French>
             <Polish>Kontroluje czy załoga pojazdu otrzyma obrażenia podczas kolizji pojazdu.</Polish>
-            <Japanese>車両が衝突をすると乗員がダメージを受けるかどうかを決定します。</Japanese>
+            <Japanese>車両が衝突をすると乗員がダメージを受けるかどうかを制御します。</Japanese>
             <German>Kontrolliert, ob Besatzung eines Fahrzeugs Schaden durch Unfälle erleiden soll</German>
             <Italian>Determina se i passeggeri di un veicolo subiranno danni da schianti o incidenti.</Italian>
             <Chinesesimp>控制乘员是否受到车辆碰撞的伤害。</Chinesesimp>
@@ -37,6 +37,7 @@
             <Portuguese>Efeito de Penetração de Blindagem</Portuguese>
             <Japanese>装甲貫通効果</Japanese>
             <Russian>Эффект сквозного прохождения брони</Russian>
+            <Spanish>Efecto de Atravesar Armadura</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Engine_damagePassThroughEffect_description">
             <English>Controls effect of armor 'passThrough' on final damage. Makes high armor values, like ones used in GL rigs, less effective.\nUse 0% for pre 3.16.0 armor behavior.\nOnly touch this if you know what you're doing!</English>
@@ -48,6 +49,7 @@
             <Portuguese>Controla o efeito de penetração (passThrough) da blindagem no dano final. Torna valores de blindagem altos, como os usados em coletes GL, menos eficazes.\nUse 0% para o comportamento de blindagem anterior à versão 3.16.0.\nSó mexa nisso se souber o que está fazendo!</Portuguese>
             <Japanese>ボディアーマーの'passThrough'値が最終的な身体ダメージに与える影響を調整します。擲弾兵リグで使用されるような高い装甲値では効果が低くなります。\n3.16.0以前の挙動にするには0%にしてください。\nこれが何かわからない場合は変更しないことをお勧めします。</Japanese>
             <Russian>Контролирует эффект `passThrough` при нанесении конечного урона. Делает высокие значения брони, подобные тем, которые используются в GL rigs, менее эффективными.\nИспользуйте 0% для поведения брони до версии 3.16.0.n\Прикасайтесь к этому, только если знаете, что делаете!</Russian>
+            <Spanish>Controla el efecto de 'passThrough' de armadura en el daño final. Hace que los valores altos de armadura, como los usados en los chalecos GL, sean menos efectivos.\nUsar 0% para comportamiento de armadura en versiones anteriores a 3.16.0.\nSólo modifica esto si sabes lo que estás haciendo!</Spanish>
         </Key>
     </Package>
 </Project>
