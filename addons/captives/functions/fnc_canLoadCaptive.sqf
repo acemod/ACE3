@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Check if the unit can load the target object into a vehicle.
@@ -20,7 +20,7 @@
 params ["_unit", "_target", "_vehicle"];
 
 // Don't show "Load Captive" if unit is unconscious (already has "Load Patient")
-if (_target getVariable ["ACE_isUnconscious", false]) exitWith {false};
+if !(_target call EFUNC(common,isAwake)) exitWith {false};
 
 if ((isNull _target) && {_unit getVariable [QGVAR(isEscorting), false]}) then {
     //Looking at a vehicle while escorting, get target from attached objects:

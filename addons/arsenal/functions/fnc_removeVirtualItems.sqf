@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
@@ -100,5 +100,12 @@ if (_items isEqualType true) then {
         [_object, _global] call FUNC(removeBox);
     } else {
         _object setVariable [QGVAR(virtualItems), _cargo, _global];
+
+        // If the arsenal is already open, refresh arsenal display
+        if (_global) then {
+            [QGVAR(refresh), _object] call CBA_fnc_globalEvent;
+        } else {
+            [QGVAR(refresh), _object] call CBA_fnc_localEvent;
+        };
     };
 };

@@ -1,5 +1,5 @@
 #define DEBUG_MODE_FULL
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  *
@@ -80,7 +80,7 @@ for "_i" from 0 to (count _cfgWeapons)-1 do {
                         diag_log text format ["AB_Diagnose_barrelTwist,%1,%2,%3,%4,%5",_weapon,_magazine,_ammo,_twistDirection,_barrelTwist];
                     };
                     if (_barrelLength == 0) then {
-                        diag_log text format ["AB_Diagnose_barrelLength,%1,%2,%3,%4,%5",_weapon,_magazine,_ammo,_barrelLength];
+                        diag_log text format ["AB_Diagnose_barrelLength,%1,%2,%3,%4",_weapon,_magazine,_ammo,_barrelLength];
                     };
                 };
             } forEach _magazines;

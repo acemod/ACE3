@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas, DaC
  * Prepares necessary variables and default image.
@@ -50,7 +50,7 @@ if (isServer) then {
     // Default images on whiteboards (first image)
     {
         _x setObjectTextureGlobal [_selection, _images select 0];
-    } count _objects;
+    } forEach _objects;
 };
 
 // Number of slideshows (multiple modules support)
@@ -61,7 +61,7 @@ private _currentSlideshow = GVAR(slideshows); // Local variable in case GVAR get
 // If interaction menu module is not present, set default duration value
 if !(["ace_interact_menu"] call EFUNC(common,isModLoaded)) then {
     _duration = NOINTERACTMENU_DURATION;
-    INFO_1("Interaction Menu module not present, defaulting duration value to %1",_duration);
+    INFO_1("Interaction Menu module not present,defaulting duration value to %1",_duration);
 };
 
 // Add interactions if automatic transitions are disabled, else setup automatic transitions
@@ -89,8 +89,7 @@ if (_duration == 0) then {
             2
         ] call EFUNC(interact_menu,createAction);
         [_x, 0, ["ACE_MainActions"], _slidesAction] call EFUNC(interact_menu,addActionToObject);
-        nil
-    } count _controllers;
+    } forEach _controllers;
 } else {
     if !(isServer) exitWith {};
 

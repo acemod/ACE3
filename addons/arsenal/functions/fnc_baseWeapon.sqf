@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Karel Moricky, johnb43
  * Returns base weapon (weapon without any attachments), but it returns it in config sensitive case.
@@ -19,7 +19,7 @@
 params [["_weapon", "", [""]]];
 
 // Check if item is cached
-(uiNamespace getVariable QGVAR(baseWeaponNameCache)) getOrDefaultCall [toLower _weapon, {
+(uiNamespace getVariable QGVAR(baseWeaponNameCache)) getOrDefaultCall [toLowerANSI _weapon, {
     private _cfgWeapons = configfile >> "CfgWeapons";
     private _config = _cfgWeapons >> _weapon;
 

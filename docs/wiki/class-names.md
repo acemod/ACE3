@@ -171,6 +171,18 @@ ACE_HuntIR_monitor | HuntIR monitor | ACE_ItemCore |
 ACE_HuntIR_M203 | HuntIR Round | Grenade shell |
 ACE_HuntIR_Box | HuntIR Transport Box | ammo box |
 
+### IR Lights
+`Added in 3.16.0`
+
+Class Name | In-Game Name | Type   |
+---------- | --------- | ---------
+ACE_DBAL_A3_Red | DBAL-A3 (red) | Weapon accessory |
+ACE_DBAL_A3_Red_LR | DBAL-A3 (red) | Weapon accessory |
+ACE_DBAL_A3_Green | DBAL-A3 (green) | Weapon accessory |
+ACE_DBAL_A3_Green_LR | DBAL-A3 (green) | Weapon accessory |
+ACE_SPIR | SPIR | Weapon accessory |
+ACE_SPIR_LR | SPIR | Weapon accessory |
+
 ### Kestrel
 `Added in 3.0.0`
 
@@ -228,6 +240,7 @@ ACE_plasmaIV_250 | Plasma IV (250ml) | ACE_ItemCore |
 ACE_salineIV | Saline IV (1000ml) | ACE_ItemCore |
 ACE_salineIV_500 | Saline IV (500ml) | ACE_ItemCore |
 ACE_salineIV_250 | Saline IV (250ml) | ACE_ItemCore |
+ACE_suture | Suture | ACE_ItemCore |
 ACE_surgicalKit | Surgical Kit | ACE_ItemCore |
 ACE_tourniquet | Tourniquet (CAT) | ACE_ItemCore |
 ACE_medicalSupplyCrate | Simple ACE Medical Supply Crate | ammo box |

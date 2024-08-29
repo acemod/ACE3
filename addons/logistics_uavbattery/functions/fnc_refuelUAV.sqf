@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: marc_book
  * Starts refueling/recharging the 'Dartar' UAVs
@@ -17,7 +17,7 @@
  */
 params ["_caller", "_target"];
 
-if (!(_this call FUNC(canRefuelUAV))) exitWith {};
+if !(_this call FUNC(canRefuelUAV)) exitWith {};
 
 private _onFinish = {
     (_this select 0) params ["_caller", "_target"];

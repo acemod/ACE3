@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Is the unit able to enter the vehicle in the given position?
@@ -24,7 +24,7 @@
 
 params ["_unit", "_vehicle", "_position", ["_checkDistance", false], ["_index", -1]];
 
-_position = toLower _position;
+_position = toLowerANSI _position;
 
 // general
 if (!alive _vehicle || {locked _vehicle > 1}) exitWith {false};

@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 DFUNC(repair_Statement) = { // moved from config because of build problems
     TRACE_1("repair_Statement",_this);
@@ -16,6 +16,7 @@ DFUNC(repair_Statement) = { // moved from config because of build problems
 };
 
 if (hasInterface) then {
+    GVAR(initializedAnimClasses) = [];
     GVAR(replaceTerrainModels) = createHashMapFromArray call (uiNamespace getVariable QGVAR(cacheReplaceTerrainModels));
 };
 

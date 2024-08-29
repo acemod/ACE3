@@ -1,4 +1,5 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
  * Remove arsenal from target.
@@ -24,7 +25,7 @@ private _id = _object getVariable QGVAR(initBoxJIP);
 
 if (_global && {isMultiplayer} && {!isNil "_id"}) then {
     // Remove event from JIP queue
-    [_id] call CBA_fnc_removeGlobalEventJIP;
+    _id call CBA_fnc_removeGlobalEventJIP;
 
     // Reset JIP ID
     _object setVariable [QGVAR(initBoxJIP), nil, true];
@@ -38,4 +39,17 @@ if (_global && {isMultiplayer} && {!isNil "_id"}) then {
     _object setVariable [QGVAR(virtualItems), nil];
     [_object, 0, ["ACE_MainActions", QGVAR(interaction)]] call EFUNC(interact_menu,removeActionFromObject);
     [QGVAR(boxRemoved), _object] call CBA_fnc_localEvent;
+};
+
+// If the arsenal is already open and not ignoring content (see FUNC(openBox)), close arsenal display
+// Deliberate == check, fail on objNull
+if (!isNil QGVAR(currentBox) && {GVAR(currentBox) == _object} && {isNil QGVAR(ignoredVirtualItems)}) then {
+    // Delay a frame in case this is running on display open/close
+    [{
+        private _display = findDisplay IDD_ace_arsenal;
+        if (isNull _display) exitWith {};
+
+        [LLSTRING(noVirtualItems), false, 5, 1] call EFUNC(common,displayText);
+        _display closeDisplay 0;
+    }] call CBA_fnc_execNextFrame;
 };

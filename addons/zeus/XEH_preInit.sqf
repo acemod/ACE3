@@ -7,18 +7,18 @@ PREP_RECOMPILE_START;
 PREP_RECOMPILE_END;
 
 if (isServer) then {
-    [QGVAR(zeusUnitAssigned), FUNC(handleZeusUnitAssigned)] call CBA_fnc_addEventHandler;
+    [QGVAR(zeusUnitAssigned), LINKFUNC(handleZeusUnitAssigned)] call CBA_fnc_addEventHandler;
 
     // Only add an InitPost EH if setting is enabled (and apply retroactively)
     ["CBA_settingsInitialized", {
         if (GVAR(autoAddObjects)) then {
-            ["AllVehicles", "InitPost", FUNC(addObjectToCurator), true, [], true] call CBA_fnc_addClassEventHandler;
+            ["AllVehicles", "InitPost", LINKFUNC(addObjectToCurator), true, [], true] call CBA_fnc_addClassEventHandler;
         };
     }] call CBA_fnc_addEventHandler;
 };
 
 GVAR(GlobalSkillAI) = [0.5,0.5,0.5,0.5,true,true];
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

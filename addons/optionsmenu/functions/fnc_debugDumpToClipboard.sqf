@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Dumps debug info to clipboard.
@@ -19,8 +19,7 @@
 
 private _outputText = {
     diag_log text (_this select 0);
-    "ace_clipboard" callExtension ((_this select 0) + "
-");
+    "ace" callExtension ["clipboard:append", [(_this select 0) + endl]];
 };
 
 private _text = format ["~~~~~~~~~ACE Debug~~~~~~~~~
@@ -94,4 +93,4 @@ _text = format ["
     } forEach (allVariables _unit);
 } forEach allUnits;
 
-"ace_clipboard" callExtension "--COMPLETE--";
+"ace" callExtension ["clipboard:complete", []];

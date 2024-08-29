@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Unit claims the ownership over an object. This is used to prevent multiple players from draging the same ammo box or using up the same wheel when repairing etc.
@@ -30,17 +30,10 @@ _target setVariable [QGVAR(owner), _unit, true];
 
 // lock target object
 if (_lockTarget) then {
-    private _canBeDisassembled = ([] isNotEqualTo getArray (configOf _target >> "assembleInfo" >> "dissasembleTo")) && { !([false, true] select (_target getVariable [QEGVAR(csw,assemblyMode), 0])) };
     if (!isNull _unit) then {
         [QGVAR(lockVehicle), _target, _target] call CBA_fnc_targetEvent;
-        if (_canBeDisassembled) then {
-            _target enableWeaponDisassembly false;
-        };
     } else {
         [QGVAR(unlockVehicle), _target, _target] call CBA_fnc_targetEvent;
-        if (_canBeDisassembled) then {
-            _target enableWeaponDisassembly true;
-        };
     };
 };
 

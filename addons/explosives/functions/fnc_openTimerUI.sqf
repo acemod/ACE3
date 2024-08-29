@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Opens the Explosive Timer UI for given explosive.
@@ -66,7 +66,7 @@ _display displayAddEventHandler ["MouseZChanged", {
 
     // Make sure explosive still exists and is near player
     if ((!isNull _display) && {!alive ACE_player} || {!alive GVAR(explosive)} || {(ACE_player distance GVAR(explosive)) > 5}) exitWith {
-        INFO_2("explosive became invalid",ACE_player,GVAR(explosive));
+        INFO_2("%1's explosive %2 became invalid",ACE_player,GVAR(explosive));
         closeDialog 0;
         _pfhID call CBA_fnc_removePerFrameHandler;
     };

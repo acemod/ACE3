@@ -11,6 +11,7 @@ QGVAR(GlobalSkillAI) addPublicVariableEventHandler FUNC(moduleGlobalSetSkill);
 [QGVAR(moduleSearchNearby), CBA_fnc_searchNearby] call CBA_fnc_addEventHandler;
 [QGVAR(moduleSearchArea), CBA_fnc_taskSearchArea] call CBA_fnc_addEventHandler;
 [QGVAR(suppressiveFire), LINKFUNC(moduleSuppressiveFireLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(moduleSpectator), LINKFUNC(moduleSpectator)] call CBA_fnc_addEventHandler;
 
 // Editable object commands must be ran on server, this events are used in the respective module
 if (isServer) then {
@@ -19,20 +20,32 @@ if (isServer) then {
     [QGVAR(addObjects), {
         params ["_objects", ["_curator", objNull]];
 
-        if (!isNull _curator) exitWith {_curator addCuratorEditableObjects [_objects, true]};
+        // If valid object
+        if (_curator isEqualType objNull && {!isNull _curator}) exitWith {_curator addCuratorEditableObjects [_objects, true]};
+
+        // If invalid object (= objNull) or other
+        if !(_curator isEqualType []) then {
+            _curator = allCurators;
+        };
 
         {
             _x addCuratorEditableObjects [_objects, true];
-        } forEach allCurators;
+        } forEach _curator;
     }] call CBA_fnc_addEventHandler;
     [QGVAR(removeObjects), {
         params ["_objects", ["_curator", objNull]];
 
-        if (!isNull _curator) exitWith {_curator removeCuratorEditableObjects [_objects, true]};
+        // If valid object
+        if (_curator isEqualType objNull && {!isNull _curator}) exitWith {_curator removeCuratorEditableObjects [_objects, true]};
+
+        // If invalid object (= objNull) or other
+        if !(_curator isEqualType []) then {
+            _curator = allCurators;
+        };
 
         {
             _x removeCuratorEditableObjects [_objects, true];
-        } forEach allCurators;
+        } forEach _curator;
     }] call CBA_fnc_addEventHandler;
 
     [QGVAR(createZeus), {

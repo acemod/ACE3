@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Handle interactions key down
@@ -36,7 +36,7 @@ if (_isTextEditing) then {
 if (
     _isTextEditing ||
     {(isNull curatorCamera) && {
-        !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith))
+        !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotHandcuffed", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith))
     }
 }) exitWith {false};
 
@@ -116,7 +116,7 @@ GVAR(selfMenuOffset) = (AGLtoASL (positionCameraToWorld [0, 0, 2])) vectorDiff (
 //Auto expand the first level when self, mounted vehicle or zeus (skips the first animation as there is only one choice)
 if (GVAR(openedMenuType) == 0) then {
     if (isNull curatorCamera) then {
-        if (!(isNull (ACE_controlledUAV select 0))) then {
+        if !(isNull (ACE_controlledUAV select 0)) then {
             GVAR(menuDepthPath) = [["ACE_SelfActions", (ACE_controlledUAV select 0)]];
             GVAR(expanded) = true;
             GVAR(expandedTime) = diag_tickTime;

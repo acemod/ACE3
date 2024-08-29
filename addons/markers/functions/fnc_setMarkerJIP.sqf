@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Client: Recives a marker data from server.
@@ -49,5 +49,4 @@ TRACE_2("params",_allMapMarkers,_allMapMarkersProperties);
         _x setMarkerDirLocal _dir;
         _x setMarkerSizeLocal [_scale, _scale];
     };
-    false
-} count allMapMarkers;
+} forEach allMapMarkers;

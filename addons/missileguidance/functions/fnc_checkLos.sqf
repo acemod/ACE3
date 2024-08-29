@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus
  * Returns whether the seeker object can see the target position with checkVisibility
@@ -25,7 +25,7 @@ if (_checkVisibilityTest) exitWith {
     _visibility > 0.001
 };
 if ((isNil "_seeker") || {isNil "_target"}) exitWith {
-    ERROR_2("nil",_seeker,_target);
+    ERROR_2("nil [%1]->[%2]",_seeker,_target);
     false
 };
 
@@ -43,4 +43,3 @@ if (!((terrainIntersectASL [_seekerPos, _targetPos]) && {terrainIntersectASL [_s
 };
 
 _return
-

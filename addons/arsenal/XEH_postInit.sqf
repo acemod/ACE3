@@ -18,6 +18,16 @@ GVAR(lastSortDirectionRight) = DESCENDING;
 [QGVAR(removeDefaultLoadout), LINKFUNC(removeDefaultLoadout)] call CBA_fnc_addEventHandler;
 [QGVAR(renameDefaultLoadout), LINKFUNC(renameDefaultLoadout)] call CBA_fnc_addEventHandler;
 
+[QGVAR(refresh), {
+    params ["_object"];
+
+    // If the arsenal is already open, refresh arsenal display
+    // Deliberate == check, fail on objNull
+    if (!isNil QGVAR(currentBox) && {GVAR(currentBox) == _object}) then {
+        [true, true] call FUNC(refresh);
+    };
+}] call CBA_fnc_addEventHandler;
+
 [QGVAR(broadcastFace), {
     params ["_unit", "_face"];
     _unit setFace _face;
@@ -60,7 +70,7 @@ GVAR(lastSortDirectionRight) = DESCENDING;
     if (!isNil QGVAR(currentLoadoutsTab) && {GVAR(currentLoadoutsTab) == IDC_buttonSharedLoadouts}) then {
         private _curSelData = _contentPanelCtrl lnbData [lnbCurSelRow _contentPanelCtrl, 1];
 
-        ([_loadoutData] call FUNC(verifyLoadout)) params ["_extendedLoadout", "_nullItemsAmount", "_unavailableItemsAmount"];
+        ([_loadoutData] call FUNC(verifyLoadout)) params ["_extendedLoadout", "_nullItemsList", "_unavailableItemsList"];
         _extendedLoadout params ["_loadout"];
 
         private _newRow = _contentPanelCtrl lnbAddRow [_playerName, _loadoutName];
@@ -71,10 +81,10 @@ GVAR(lastSortDirectionRight) = DESCENDING;
         _contentPanelCtrl lnbSetData [[_newRow, 1], _playerName + _loadoutName];
 
         // Set color of row, depending if items are unavailable/missing
-        if (_nullItemsAmount > 0) then {
+        if (_nullItemsList isNotEqualTo []) then {
             _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]];
         } else {
-            if (_unavailableItemsAmount > 0) then {
+            if (_unavailableItemsList isNotEqualTo []) then {
                 _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]];
             };
         };
@@ -98,24 +108,16 @@ GVAR(lastSortDirectionRight) = DESCENDING;
     private _face = _extendedInfo getOrDefault [QGVAR(face), ""];
 
     if (_face != "") then {
-        if (isMultiplayer) then {
-            private _id = [QGVAR(broadcastFace), [_unit, _face], QGVAR(centerFace_) + netId _unit] call CBA_fnc_globalEventJIP;
-            [_id, _unit] call CBA_fnc_removeGlobalEventJIP;
-        } else {
-            _unit setFace _face;
-        };
+        private _id = [QGVAR(broadcastFace), [_unit, _face], QGVAR(centerFace_) + hashValue _unit] call CBA_fnc_globalEventJIP;
+        [_id, _unit] call CBA_fnc_removeGlobalEventJIP;
     };
 
     // Set voice
     private _voice = _extendedInfo getOrDefault [QGVAR(voice), ""];
 
     if (_voice != "") then {
-        if (isMultiplayer) then {
-            private _id = [QGVAR(broadcastVoice), [_unit, _voice], QGVAR(centerVoice_) + netId _unit] call CBA_fnc_globalEventJIP;
-            [_id, _unit] call CBA_fnc_removeGlobalEventJIP;
-        } else {
-            _unit setSpeaker _voice;
-        };
+        private _id = [QGVAR(broadcastVoice), [_unit, _voice], QGVAR(centerVoice_) + hashValue _unit] call CBA_fnc_globalEventJIP;
+        [_id, _unit] call CBA_fnc_removeGlobalEventJIP;
     };
 
     // Set insignia
@@ -137,7 +139,7 @@ GVAR(lastSortDirectionRight) = DESCENDING;
 
     // Set voice if enabled
     if (GVAR(loadoutsSaveVoice)) then {
-        _extendedInfo set [QGVAR(voice), speaker _unit];
+        _extendedInfo set [QGVAR(voice), (speaker _unit) call EFUNC(common,getConfigName)];
     };
 
     // Set insignia if enabled
@@ -149,3 +151,25 @@ GVAR(lastSortDirectionRight) = DESCENDING;
         };
     };
 }] call CBA_fnc_addEventHandler;
+
+// Compatibility for RHS attachment system. Also used by NIArms.
+// Will only work for ACE_player, different arsenal centers will be ignored. RHS limitation.
+if (!isNil "rhs_fnc_accGripod") then {
+    [QEGVAR(arsenal,weaponItemChanged), {
+        params ["_weapon", "_item", "_itemIndex"];
+        if (EGVAR(arsenal,center) != ACE_player) exitWith {};
+
+        switch (_itemIndex) do {
+            case ITEM_INDEX_SIDE: {
+                call rhs_fnc_anpeq15_rail;
+            };
+            case ITEM_INDEX_BIPOD: {
+                // Need this call to make sure RHS's functions are set
+                call rhs_fnc_accGripod;
+                if (getText (configFile >> "CfgWeapons" >> _item >> "rhs_grip_type") == "") then {
+                    call rhs_grip_deinitialize;
+                };
+            };
+        };
+    }] call CBA_fnc_addEventHandler;
+};

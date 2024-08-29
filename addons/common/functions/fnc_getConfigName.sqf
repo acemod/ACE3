@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: johnb43
  * Returns an item's config case sensitive name.
@@ -17,7 +17,7 @@
 
 params ["_className"];
 
-(uiNamespace getVariable QGVAR(configNames)) getOrDefaultCall [toLower _className, {
+(uiNamespace getVariable QGVAR(configNames)) getOrDefaultCall [toLowerANSI _className, {
     private _config = configNull;
 
     {

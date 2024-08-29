@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support
  * Cancels trench dig
@@ -21,8 +21,8 @@ params ["_unit", "_key"];
 if (_key != 1 || {GVAR(digPFH) == -1}) exitWith {};
 
 // enable running again
-[_unit, "forceWalk", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // delete placement dummy
 deleteVehicle GVAR(trench);

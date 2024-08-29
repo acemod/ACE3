@@ -1,15 +1,15 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Gets magazines that the player is carrying that can be loaded into the static weapon
+ * Gets nearby magazines that can be loaded into the CSW.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
- * 1: Player <OBJECT>
+ * 0: CSW <OBJECT>
+ * 1: Unit <OBJECT>
  *
  * Return Value:
  * Mags <ARRAY>
- * [Carry Magazine <STRING>, Turret Path <ARRAY>, Load Info <NUMBER>, Magazine Source <OBJECT>]
+ *   [Carry Magazine <STRING>, Turret Path <ARRAY>, Load Info <ARRAY>, Magazine Source <OBJECT>]
  *
  * Example:
  * [cursorObject, player] call ace_csw_fnc_reload_getLoadableMagazines
@@ -70,7 +70,7 @@ private _return = [];
                 ) exitWith {
                     _return pushBack [_carryMag, _turretPath, _loadInfo, _magSource];
                 };
-            } forEach ([_weapon] call CBA_fnc_compatibleMagazines);
+            } forEach (compatibleMagazines _weapon);
         } forEach _availableMagazines;
     } forEach (_vehicle weaponsTurret _turretPath);
 } forEach (allTurrets _vehicle);

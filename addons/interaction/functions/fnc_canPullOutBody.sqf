@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dystopian
  * Checks if unit can pull target body out of vehicle.
@@ -19,7 +19,7 @@
 params ["_body", "_unit"];
 
 // Defer to ACE Medical's unload patient if present
-if (["ace_medical"] call EFUNC(common,isModLoaded)) exitWith {false};
+if (GETEGVAR(medical,enabled,false)) exitWith {false};
 
 private _vehicle = objectParent _body;
 

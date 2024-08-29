@@ -14,6 +14,7 @@
             <Polish>Głosność</Polish>
             <Turkish>Ses</Turkish>
             <Spanish>Volumen</Spanish>
+            <Portuguese>Volume</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_KeybindName">
             <English>Toggle Volume</English>
@@ -23,11 +24,12 @@
             <Korean>음량 토글</Korean>
             <Chinesesimp>切换音量</Chinesesimp>
             <Chinese>切換音量</Chinese>
-            <Italian>Attiva Volume</Italian>
+            <Italian>Cambia Volume</Italian>
             <Russian>Переключить громкость</Russian>
             <Polish>Przełącz Głosność</Polish>
             <Turkish>Sesi Aç/Kapat</Turkish>
             <Spanish>Activar control de volumen</Spanish>
+            <Portuguese>Alternar volume</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_KeybindDescription">
             <English>Toggle volume reduction.</English>
@@ -37,11 +39,12 @@
             <Korean>토글하여 음량 감소합니다.</Korean>
             <Chinesesimp>切换降低音量。</Chinesesimp>
             <Chinese>切換降低音量。</Chinese>
-            <Italian>Attiva riduzione del volume.</Italian>
+            <Italian>Cambia Riduzione del Volume.</Italian>
             <Russian>Переключает уменьшение громкости</Russian>
             <Polish>Przełącz redukcje głosności</Polish>
             <Turkish>Ses azaltmayı aç / kapat.</Turkish>
             <Spanish>Activar reducción de volumen.</Spanish>
+            <Portuguese>Alternar redução de volume</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_Lowered">
             <English>Lowered volume</English>
@@ -51,11 +54,12 @@
             <Korean>음량 감소됨</Korean>
             <Chinesesimp>降低音量</Chinesesimp>
             <Chinese>降低音量</Chinese>
-            <Italian>Volume diminuito</Italian>
+            <Italian>Volume Abbassato</Italian>
             <Russian>Громкость снижена</Russian>
             <Polish>Zmniejszona głosność</Polish>
             <Turkish>Azaltılmış ses</Turkish>
             <Spanish>Volumen reducido</Spanish>
+            <Portuguese>Volume reduzido</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_Restored">
             <English>Restored volume</English>
@@ -65,10 +69,11 @@
             <Korean>음량 복구됨</Korean>
             <Chinesesimp>恢复音量</Chinesesimp>
             <Chinese>回復音量</Chinese>
-            <Italian>Volume ripristinato</Italian>
+            <Italian>Volume Ripristinato</Italian>
             <Russian>Громкость восстановлена</Russian>
             <Polish>Przywrócona głosność</Polish>
             <Spanish>Volumen restaurado</Spanish>
+            <Portuguese>Volume restaurado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_Reduction">
             <English>Reduction</English>
@@ -82,6 +87,7 @@
             <Russian>Уменьшение</Russian>
             <Polish>Redukcja</Polish>
             <Spanish>Reducción</Spanish>
+            <Portuguese>Redução</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_ReductionDescription">
             <English>Reduce volume by this percentage.</English>
@@ -95,6 +101,7 @@
             <Russian>Уменьшает громкость</Russian>
             <Polish>Zmniejsz głosność o tyle procent</Polish>
             <Spanish>Reducir el volumen este porcentaje.</Spanish>
+            <Portuguese>Reduzir o volume por esta porcentagem.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_LowerInVehicles">
             <English>Lower in vehicles</English>
@@ -109,6 +116,7 @@
             <Polish>Zmniejsz w pojazdach</Polish>
             <Turkish>Araçlarda Daha Düşük</Turkish>
             <Spanish>Reducir en vehículos</Spanish>
+            <Portuguese>Reduzir em veículos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_LowerInVehiclesDescription">
             <English>Automatically lower volume when inside vehicles.</English>
@@ -123,6 +131,7 @@
             <Polish>Automatycznie zmniejsz głosność będąc w pojeździe</Polish>
             <Turkish>Araçlara binince sesi azalt.</Turkish>
             <Spanish>Reduce automáticamente el volumen dentro de vehículos.</Spanish>
+            <Portuguese>Reduz automaticamente o volume dentro de veículos.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_ShowNotification">
             <English>Show notification</English>
@@ -132,11 +141,12 @@
             <Korean>설정 보기</Korean>
             <Chinesesimp>显示提示</Chinesesimp>
             <Chinese>顯示提示</Chinese>
-            <Italian>Mostra notifiche</Italian>
+            <Italian>Mostra notifica</Italian>
             <Russian>Показывать уведомление</Russian>
             <Polish>Pokaż powiadomienie</Polish>
             <Turkish>Bildirim Göster</Turkish>
             <Spanish>Mostrar notificación</Spanish>
+            <Portuguese>Mostrar notificação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_ShowNotificationDescription">
             <English>Show notification when lowering/restoring volume.</English>
@@ -146,37 +156,40 @@
             <Korean>음량이 감소/복구될 때 메시지를 표시합니다.</Korean>
             <Chinesesimp>当正在降低/恢复音量时显示提示。</Chinesesimp>
             <Chinese>當正在降低/回復音量時顯示提示。</Chinese>
-            <Italian>Mostra notifiche mentre si abbassa/ripristina il volume.</Italian>
+            <Italian>Mostra notifiche quando si abbassa/ripristina il volume.</Italian>
             <Russian>Показывать уведомление при уменьшении/восстановлении громкости</Russian>
             <Polish>Pokaż powiadomienie zmniejszając/odnawiając głosność</Polish>
             <Turkish>Ses azaltıldığın da bildirim göster.</Turkish>
             <Spanish>Mostrar notificación cuando se disminuye/restaura el volumen.</Spanish>
+            <Portuguese>Mostrar notificação quando o volume for reduzido/restaurado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_FadeDelay">
             <English>Fade delay</English>
             <German>Ausblendzeit</German>
-            <Japanese>フェードへの遅延</Japanese>
+            <Japanese>フェードの遅延</Japanese>
             <French>Retard fondu</French>
             <Korean>페이드 지연</Korean>
             <Chinesesimp>淡出/入延迟</Chinesesimp>
             <Chinese>淡出/入延遲</Chinese>
-            <Italian>Latenza della dissolvenza</Italian>
+            <Italian>Latenza del cambio volume</Italian>
             <Russian>Задержка затухания</Russian>
             <Polish>Opoznienie wyciszenia</Polish>
             <Spanish>Retardo en disminución gradual</Spanish>
+            <Portuguese>Atraso de alteração gradual de volume</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_FadeDelayDescription">
             <English>Time it takes (in seconds) for the sound to fade in/out.</English>
             <German>Zeit, die es benötigt (in Sekunden), für das Geräusch, ein- bzw. auszublenden.</German>
-            <Japanese>音がフェードイン、アウトするまでの時間 (秒) を決定します。</Japanese>
+            <Japanese>音がフェードイン/アウトするまでの時間。 (秒単位)</Japanese>
             <French>Temps nécessaire (en secondes) aux sons pour être réduits/rétablis.</French>
             <Korean>페이드 인/아웃 되는데 걸리는 시간(초)</Korean>
             <Chinesesimp>设定音量淡出/入时所需的秒数。</Chinesesimp>
             <Chinese>設定音量淡出/入時所需的秒數。</Chinese>
-            <Italian>Il tempo che impiega (in secondi) il suono a dissolversi entrata/uscita.</Italian>
+            <Italian>Il tempo che impiega (in secondi) il suono a cambiare volume.</Italian>
             <Russian>Время (сек.) для затухания/восстановления звука.</Russian>
             <Polish>Ilość czasu (w sekundach) ile zajmuje wyciszenie/zgłośnienie dźwięku</Polish>
             <Spanish>Tiempo que tarda (en segundos) para que se active o desactive la disminuación gradual del volumen</Spanish>
+            <Portuguese>Tempo de atraso (em segundos) para que o volume do som sofra alteração gradual</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_RemindIfLowered">
             <English>Reminder if lowered</English>
@@ -186,11 +199,12 @@
             <Korean>감소 시 알림</Korean>
             <Chinesesimp>降低音量时是否提醒</Chinesesimp>
             <Chinese>降低音量時是否提醒</Chinese>
-            <Italian>Sollecita se diminuito</Italian>
+            <Italian>Notifica se diminuito</Italian>
             <Russian>Напоминать о снижении громкости</Russian>
             <Polish>Przypomnij o zmniejszonej głosności dźwięku</Polish>
             <Turkish>Eğer Düşükse Hatırlat</Turkish>
             <Spanish>Recordatorio s reducido</Spanish>
+            <Portuguese>Lembrete de redução sonora</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_RemindIfLoweredDescription">
             <English>Reminds you every minute if your volume is lowered.</English>
@@ -200,11 +214,12 @@
             <Korean>음량이 감소되면 매 분 마다 알려줍니다</Korean>
             <Chinesesimp>开启后会每分钟警告一次你的音量已被降低。</Chinesesimp>
             <Chinese>開啟後會每分鐘警告一次你的音量已被降低。</Chinese>
-            <Italian>Ti notifica ogni minuto se il tuo volume è basso.</Italian>
+            <Italian>Ti notifica ogni minuto se il tuo volume è abbassato.</Italian>
             <Russian>Ежеминутное напоминание о сниженной громкости</Russian>
             <Polish>Przypomina co minuten o zmniejszonej głosności dźwięku</Polish>
             <Turkish>Eğer ses düşükse her dakika hatırlatır.</Turkish>
             <Spanish>Te recuerda cada minuto si el volumen está siendo reducido.</Spanish>
+            <Portuguese>Te notifica a cada minuto se o volume sonoro estiver reduzido.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_LoweredReminder">
             <English>Volume still lowered</English>
@@ -214,11 +229,12 @@
             <Korean>음량 감소 중</Korean>
             <Chinesesimp>降低音量中</Chinesesimp>
             <Chinese>降低音量中</Chinese>
-            <Italian>Il volume è ancora basso</Italian>
+            <Italian>Il volume è ancora abbassato</Italian>
             <Russian>Громкость все еще снижена</Russian>
             <Polish>Dźwięk jest nadal zmniejszony</Polish>
             <Turkish>Ses hala düşük</Turkish>
             <Spanish>Volumen todavía reducido</Spanish>
+            <Portuguese>Volume ainda está reduzido</Portuguese>
         </Key>
     </Package>
 </Project>

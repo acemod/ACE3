@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Cleans up refuel on client disconnect.
@@ -24,4 +24,4 @@ private _nozzle = _unit getVariable [QGVAR(nozzle), objNull];
 if (isNull _nozzle) exitWith {};
 
 [_unit, _nozzle] call FUNC(dropNozzle);
-[_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);

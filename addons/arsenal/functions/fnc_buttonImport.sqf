@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
@@ -16,7 +16,13 @@
 params ["_display"];
 
 // Can be either a singular loadout or an array of loadouts
-private _extendedLoadout = call compile copyFromClipboard;
+private _extendedLoadout = if (isMultiplayer) then {
+    ("ace" callExtension ["clipboard:loadout", []]) params ["_loadout", "_code"];
+    if (_code != 0) exitWith {};
+    parseSimpleArray _loadout
+} else {
+    call compile copyFromClipboard
+};
 
 // If error, exit
 if (isNil "_extendedLoadout" || {!(_extendedLoadout isEqualType [])}) exitWith {
@@ -51,7 +57,7 @@ if (GVAR(shiftState) && {is3DEN}) then {
         [GVAR(center), _extendedLoadout] call CBA_fnc_setLoadout;
 
         // Update current item list and unique items
-        call FUNC(refresh);
+        [true] call FUNC(refresh);
 
         _extendedLoadout params ["_loadout", "_extendedInfo"];
 

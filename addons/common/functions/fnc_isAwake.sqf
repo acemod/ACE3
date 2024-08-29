@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Check if unit is awake. Will be false when death or unit is unconscious.
@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-alive _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}
+lifeState _unit in ["HEALTHY", "INJURED"]

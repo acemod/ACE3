@@ -1,13 +1,13 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author:Dani (TCVM)
- * Handles removing ammo from a turret
- * Called from a global event but only runs where turret is local
+ * Author: tcvm
+ * Handles removing ammo from a turret.
+ * Called from a global event but only runs where turret is local.
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret Path <ARRAY>
- * 2: Magainze Unit Can Carry <STRING>
+ * 2: Magazine Unit Can Carry <STRING>
  * 3: Magazine To Remove From Static <STRING>
  * 4: Unit or container to unload to <OBJECT>
  *
@@ -23,8 +23,8 @@
 params ["_vehicle", "_turretPath", "_carryMag", "_vehMag", "_unloadTo"];
 TRACE_5("removeTurretMag EH",_vehicle,_turretPath,_carryMag,_vehMag,_unloadTo);
 
-TRACE_3("",local _vehicle, _vehicle turretLocal _turretPath,local _unloadTo);
-if (!(_vehicle turretLocal _turretPath)) exitWith {};
+TRACE_3("",local _vehicle,_vehicle turretLocal _turretPath,local _unloadTo);
+if !(_vehicle turretLocal _turretPath) exitWith {};
 
 private _magsInWeapon = [];  // Check how much ammo it has now:
 {
@@ -55,10 +55,10 @@ if ((_magsInWeapon isEqualTo []) && {_ammoInFirstMag > _ammoRemoved}) then {
 
     // setMagazineTurretAmmo is broken on split locality, use setAmmo for now
     private _weapon = (_vehicle weaponsTurret _turretPath) param [0, ""];
-    TRACE_3("setAmmo",_vehicle,_weapon, _ammoLeft);
+    TRACE_3("setAmmo",_vehicle,_weapon,_ammoLeft);
     _vehicle setAmmo [_weapon, _ammoLeft];
     private _currentAmmo = _vehicle magazineTurretAmmo [_vehMag, _turretPath];
-    if ((_weapon == "") || {_currentAmmo != _ammoLeft}) then { ERROR_1("failed to setAmmo - %1", _this); };
+    if ((_weapon == "") || {_currentAmmo != _ammoLeft}) then { ERROR_1("failed to setAmmo - %1",_this); };
 
 
 } else {

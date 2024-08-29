@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Shows real azimuth and elevation on hud
@@ -30,7 +30,10 @@ if (isNull (uiNamespace getVariable [QGVAR(display), displayNull])) then {
 };
 
 private _ctrlGroup = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl 1000;
-if (cameraView != "GUNNER") exitWith { // need to be in gunner mode, so we can check where the optics are aiming at
+
+// Need to be in gunner mode, so we can check where the optics are aiming at
+// However, if there are no optics, ignore the above
+if (!_invalidGunnerMem && {cameraView != "GUNNER"}) exitWith {
     _ctrlGroup ctrlShow false;
 };
 _ctrlGroup ctrlShow true;

@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 // Override CSW's ammo handling with Mk6 setting for non-advanced assembly mortars
 ["Mortar_01_base_F", "Init", {

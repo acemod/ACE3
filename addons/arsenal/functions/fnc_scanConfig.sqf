@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Dedmen, johnb43
@@ -141,6 +141,7 @@ private _isTool = false;
 } forEach configProperties [_cfgWeapons, _filterFunction, true];
 
 // Get all grenades
+// Explicitly don't look at scope for these, we want hidden items to be sorted as grenades/explosives properly
 private _grenadeList = createHashMap;
 
 {
@@ -154,11 +155,17 @@ private _putList = createHashMap;
     _putList insert [true, (getArray (_cfgWeapons >> "Put" >> _x >> "magazines")) apply {_x call EFUNC(common,getConfigName)}, []];
 } forEach getArray (_cfgWeapons >> "Put" >> "muzzles");
 
+// Get all magazine misc items
+private _magazineMiscItems = createHashMap;
+
+{
+    _magazineMiscItems set [configName _x, nil];
+} forEach ((toString {getNumber (_x >> "ACE_isUnique") == 1 || getNumber (_x >> "ACE_asItem") == 1}) configClasses _cfgMagazines);
+
 // Remove invalid/non-existent entries
 _grenadeList deleteAt "";
 _putList deleteAt "";
-
-private _magazineMiscItems = createHashMap;
+_magazineMiscItems deleteAt "";
 
 // Get all other grenades, explosives (and similar) and magazines
 {
@@ -166,9 +173,8 @@ private _magazineMiscItems = createHashMap;
 
     switch (true) do {
         // "Misc. items" magazines (e.g. spare barrels, intel, photos)
-        case (getNumber (_x >> "ACE_isUnique") isEqualTo 1): {
+        case (_className in _magazineMiscItems): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
-            _magazineMiscItems set [_className, nil];
             if (getNumber (_x >> "ACE_isTool") isEqualTo 1) then {_toolList set [_className, nil]};
         };
         // Grenades
@@ -264,13 +270,54 @@ for "_index" from IDX_VIRT_OPTICS_ATTACHMENTS to IDX_VIRT_BIPOD_ATTACHMENTS do {
 };
 
 // This contains config case entries only
-uiNamespace setVariable [QGVAR(configItems), _configItems];
-uiNamespace setVariable [QGVAR(configItemsFlat), _configItemsFlat];
-uiNamespace setVariable [QGVAR(faceCache), _faceCache];
-uiNamespace setVariable [QGVAR(voiceCache), _voiceCache];
-uiNamespace setVariable [QGVAR(insigniaCache), _insigniaCache];
-uiNamespace setVariable [QGVAR(grenadeCache), _grenadeList];
-uiNamespace setVariable [QGVAR(putCache), _putList];
-uiNamespace setVariable [QGVAR(magazineMiscItems), _magazineMiscItems];
-uiNamespace setVariable [QGVAR(CBAdisposableLaunchers), _launchers];
-uiNamespace setVariable [QGVAR(configItemsTools), _toolList];
+uiNamespace setVariable [QGVAR(configItems), compileFinal _configItems];
+uiNamespace setVariable [QGVAR(configItemsFlat), compileFinal _configItemsFlat];
+uiNamespace setVariable [QGVAR(faceCache), compileFinal _faceCache];
+uiNamespace setVariable [QGVAR(voiceCache), compileFinal (_voiceCache createHashMapFromArray [])];
+uiNamespace setVariable [QGVAR(insigniaCache), compileFinal (_insigniaCache createHashMapFromArray [])];
+uiNamespace setVariable [QGVAR(grenadeCache), compileFinal _grenadeList];
+uiNamespace setVariable [QGVAR(putCache), compileFinal _putList];
+uiNamespace setVariable [QGVAR(magazineMiscItems), compileFinal _magazineMiscItems];
+uiNamespace setVariable [QGVAR(CBAdisposableLaunchers), compileFinal _launchers];
+uiNamespace setVariable [QGVAR(configItemsTools), compileFinal _toolList];
+
+// Compatibility: Override baseWeapon for RHS optics
+// No good way to do this via script for other RHS attachments, needs manual compat
+private _baseWeaponCache = uiNamespace getVariable QGVAR(baseWeaponNameCache);
+{
+    private _baseAttachment = configName (_cfgWeapons >> getText (_x >> "rhs_optic_base"));
+    if (_baseAttachment != "") then {
+        _baseWeaponCache set [toLowerANSI configName _x, _baseAttachment];
+    };
+} forEach ("getText (_x >> 'rhs_optic_base') != ''" configClasses _cfgWeapons);
+
+// Compatibility: Override baseWeapon for CBA Scripted Optics
+// Adapted from https://github.com/Theseus-Aegis/Mods/blob/master/addons/armory/functions/fnc_getBaseVariant.sqf
+private _isScriptedOptic = toString {
+    isClass (_x >> "CBA_ScriptedOptic") ||
+    {(getText (_x >> "weaponInfoType")) regexMatch "CBA_scriptedOptic.*?"}
+};
+
+{
+    private _xClass = toLowerANSI configName _x;
+    private _baseOptic = _xClass call FUNC(baseOptic);
+    if (_baseOptic != "" && {_baseOptic != _xClass}) then {
+        TRACE_2("updating baseOptic",_xClass,_baseOptic);
+        _baseWeaponCache set [_xClass, _baseOptic];
+    };
+} forEach (_isScriptedOptic configClasses _cfgWeapons);
+
+// Compatibility: Override baseWeapon for CBA Scripted Attachments
+private _isScriptedAttachment = toString {
+    getText (_x >> "MRT_SwitchItemNextClass") != "" ||
+    {getText (_x >> "MRT_SwitchItemPrevClass") != ""}
+};
+
+{
+    private _xClass = toLowerANSI configName _x;
+    private _baseAttachment = _xClass call FUNC(baseAttachment);
+    if (_baseAttachment != "" && {_baseAttachment != _xClass}) then {
+        TRACE_2("updating baseAttachment",_xClass,_baseAttachment);
+        _baseWeaponCache set [_xClass, _baseAttachment];
+    };
+} forEach (_isScriptedAttachment configClasses _cfgWeapons);

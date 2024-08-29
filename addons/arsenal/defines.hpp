@@ -5,7 +5,7 @@
 
 #define WIDTH_TOTAL (safezoneW - 2 * (93 * GRID_W))
 #define WIDTH_GAP (WIDTH_TOTAL / 100)
-#define WIDTH_SINGLE ((WIDTH_TOTAL - 6 * WIDTH_GAP) / 5)
+#define WIDTH_SINGLE ((WIDTH_TOTAL - 7 * WIDTH_GAP) / 6)
 
 // IDDs
 #define IDD_MISSION 46
@@ -18,6 +18,17 @@
 // Sorting
 #define ASCENDING 0
 #define DESCENDING 1
+
+// Favorites
+#define FAVORITES_COLOR (GVAR(favoritesColor) + [1])
+
+// Attachments
+#define ITEM_INDEX_MUZZLE 0
+#define ITEM_INDEX_SIDE 1
+#define ITEM_INDEX_OPTIC 2
+#define ITEM_INDEX_BIPOD 3
+#define ITEM_INDEX_MAGAZINE 4
+#define ITEM_INDEX_MAGAZINE_SECONDARY 5
 
 // IDCs
 #define IDD_ace_arsenal 1127001
@@ -39,6 +50,7 @@
 #define IDC_buttonLoadouts 1003
 #define IDC_buttonExport 1004
 #define IDC_buttonImport 1005
+#define IDC_buttonFavorites 1006
 #define IDC_infoBox 11
 #define IDC_infoBackground 1101
 #define IDC_infoName 1102
@@ -143,6 +155,8 @@
 #define IDC_statsNextPage 53
 #define IDC_statsCurrentPage 54
 #define IDC_actionsBox 90
+#define IDC_actionsBackground1 90010
+#define IDC_actionsBackground2 90011
 #define IDC_actionsText1 9001
 #define IDC_actionsButton1 9002
 #define IDC_actionsText2 9003
@@ -256,6 +270,7 @@
 #define IDX_VIRT_UNIQUE_UNKNOWN_ITEMS 25
 
 // Indexes of current items array
+// Should match IDX_VIRT_X macros for any left panel tabs
 #define IDX_CURR_PRIMARY_WEAPON 0
 #define IDX_CURR_SECONDARY_WEAPON 1
 #define IDX_CURR_HANDGUN_WEAPON 2
@@ -475,3 +490,6 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
     _contentPanelCtrl lnbSetPicture [[_newRow, 7], getText (configFile >> "CfgVehicles" >> (_loadout select IDX_LOADOUT_BACKPACK) select 0 >> "picture")];\
     _contentPanelCtrl lnbSetPicture [[_newRow, 8], getText (_cfgWeapons >> _loadout select IDX_LOADOUT_HEADGEAR >> "picture")];\
     _contentPanelCtrl lnbSetPicture [[_newRow, 9], getText (configFile >> "CfgGlasses" >> _loadout select IDX_LOADOUT_GOGGLES >> "picture")];
+
+#define ACTION_TYPE_TEXT 0
+#define ACTION_TYPE_BUTTON 1

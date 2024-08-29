@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, commy2
  * Checks for nearby running helicopters (within 15m)
@@ -36,7 +36,6 @@ private _rotorWash = [false, 0];
             _rotorWash set [1, _distance];
         };
     };
-    false
-} count (position _unit nearEntities [["Helicopter"], _radius]);
+} forEach (position _unit nearEntities [["Helicopter"], _radius]);
 
 _rotorWash

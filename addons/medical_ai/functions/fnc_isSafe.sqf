@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Checks if a unit is currently considered safe enough to treat itself.
@@ -10,7 +10,7 @@
  * Is unit safe enough <BOOL>
  *
  * Example:
- * call ACE_medical_ai_fnc_isSafe
+ * cursorObject call ace_medical_ai_fnc_isSafe
  *
  * Public: No
  */

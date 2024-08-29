@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Returns array of crew member objects.
@@ -29,11 +29,10 @@ private _crew = [];
         };
     } else {
         // otherwise check if we search for that type. toLower, because fullCrew returns "driver" vs. "Turret".
-        if (toLower (_x select 1) in _types) then {
+        if (toLowerANSI (_x select 1) in _types) then {
             _crew pushBack (_x select 0);
         };
     };
-    false
-} count fullCrew _vehicle;
+} forEach fullCrew _vehicle;
 
 _crew

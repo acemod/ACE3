@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, Glowbal
  * Callback when repair completes.
@@ -38,16 +38,18 @@ if (vehicle _caller == _caller && {!(_caller call EFUNC(common,isSwimming))}) th
 _caller setVariable [QGVAR(repairCurrentAnimCaller), nil];
 _caller setVariable [QGVAR(repairPrevAnimCaller), nil];
 
-private _weaponSelect = (_caller getVariable [QGVAR(selectedWeaponOnrepair), ""]);
-if (_weaponSelect != "") then {
+private _weaponSelect = _caller getVariable QGVAR(selectedWeaponOnrepair);
+
+if (!isNil "_weaponSelect") then {
     _caller selectWeapon _weaponSelect;
+    _caller setVariable [QGVAR(selectedWeaponOnrepair), nil];
 } else {
     _caller action ["SwitchWeapon", _caller, _caller, 299];
 };
 
 //Unclaim repair objects:
 {
-    TRACE_2("Releasing", _x, (typeOf _x));
+    TRACE_2("Releasing",_x,(typeOf _x));
     [objNull, _x, false] call EFUNC(common,claim);
 } forEach _claimedObjects;
 
@@ -60,7 +62,7 @@ if (isNil _callback) then {
 } else {
     _callback = missionNamespace getVariable _callback;
 };
-if (!(_callback isEqualType {})) then {_callback = {TRACE_1("callback was NOT code",_callback)};};
+if !(_callback isEqualType {}) then {_callback = {TRACE_1("callback was NOT code",_callback)};};
 
 _args call _callback;
 

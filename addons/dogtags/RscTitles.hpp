@@ -13,8 +13,8 @@ class RscTitles {
         class controls {
             class background: RscPicture {
                 idc = 1000;
-                x = QUOTE(profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(grid),X)', (safeZoneX + safeZoneW) - 12.9 * GUI_GRID_W)]);
-                y = QUOTE(profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(grid),Y)', safeZoneY + 0.175 * safeZoneH)]);
+                x = QUOTE(profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(grid),X)',(safeZoneX + safeZoneW) - 12.9 * GUI_GRID_W)]);
+                y = QUOTE(profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(grid),Y)',safeZoneY + 0.175 * safeZoneH)]);
                 w = QUOTE(8 * GUI_GRID_W);
                 h = QUOTE(8 * GUI_GRID_H);
                 text = QPATHTOF(data\dogtagSingle.paa);
@@ -26,8 +26,8 @@ class RscTitles {
                 sizeEx = QUOTE(GUI_GRID_H);
                 colorText[] = {1, 1, 1, 1};
                 colorBackground[] = {0, 0, 0, 0};
-                x = QUOTE(1.6 * GUI_GRID_W + (profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(grid),X)', (safeZoneX + safeZoneW) - 12.9 * GUI_GRID_W)]));
-                y = QUOTE(0.065 * safeZoneH + (profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(grid),Y)', safeZoneY + 0.175 * safeZoneH)]));
+                x = QUOTE(1.6 * GUI_GRID_W + (profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(grid),X)',(safeZoneX + safeZoneW) - 12.9 * GUI_GRID_W)]));
+                y = QUOTE(0.065 * safeZoneH + (profileNamespace getVariable [ARR_2('TRIPLES(IGUI,GVAR(grid),Y)',safeZoneY + 0.175 * safeZoneH)]));
                 w = QUOTE(5.9 * GUI_GRID_W);
                 h = QUOTE(3 * GUI_GRID_H);
                 font = "RobotoCondensed";

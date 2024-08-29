@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Brett Mayson, johnb43
  * Statement to sort items by the mod they belong to.
@@ -14,4 +14,9 @@
 
 params ["_config"];
 
-(modParams [_config call EFUNC(common,getAddon), ["name"]]) param [0, ""]
+private _addon = _config call EFUNC(common,getAddon);
+
+// Calling modParams with "" prints 'ModParams - Undefined or empty mod directory' in RPT
+if (_addon == "") exitWith {""};
+
+(modParams [_addon, ["name"]]) param [0, ""]

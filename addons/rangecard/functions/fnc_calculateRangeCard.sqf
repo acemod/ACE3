@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Calculates the range card data
@@ -49,7 +49,8 @@ private _bulletSpeed = 0;
 private _gravity = [0, sin(_scopeBaseAngle) * -GRAVITY, cos(_scopeBaseAngle) * -GRAVITY];
 private _deltaT = 1 / _simSteps;
 private _speedOfSound = 0;
-if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
+private _isABenabled = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
+if (_isABenabled) then {
     _speedOfSound = _temperature call EFUNC(weather,calculateSpeedOfSound);
 };
 
@@ -64,11 +65,11 @@ private _n = 0;
 private _range = 0;
 
 if (_useABConfig) then {
-    _bc = parseNumber(("ace_advanced_ballistics" callExtension format["atmosphericCorrection:%1:%2:%3:%4:%5", _bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel]));
+    _bc = parseNumber (("ace" callExtension ["ballistics:atmospheric_correction", [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel]]) select 0);
 };
 
 private _airFrictionCoef = 1;
-if (!_useABConfig && (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) then {
+if (!_useABConfig && _isABenabled) then {
     private _airDensity = [_temperature, _barometricPressure, _relativeHumidity] call EFUNC(weather,calculateAirDensity);
     _airFrictionCoef = _airDensity / 1.22498;
 };
@@ -98,7 +99,7 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _trueSpeed = vectorMagnitude _trueVelocity;
 
     if (_useABConfig) then {
-        private _drag = parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3:%4", _dragModel, _bc, _trueSpeed, _temperature]));
+        private _drag = parseNumber (("ace" callExtension ["ballistics:retard", [_dragModel, _bc, _trueSpeed, _temperature]]) select 0);
         _bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (-1 * _drag);
     } else {
         _bulletAccel = _trueVelocity vectorMultiply (_trueSpeed * _airFriction * _airFrictionCoef);

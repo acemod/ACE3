@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Scans the buidling type for UserActions and Ladder mount points.
@@ -17,8 +17,9 @@
 
 params ["_typeOfBuilding"];
 
-private _searchIndex = GVAR(cachedBuildingTypes) find _typeOfBuilding;
-if (_searchIndex != -1) exitWith {GVAR(cachedBuildingActionPairs) select _searchIndex};
+private _cachedMemPoints = GVAR(cachedBuildingTypes) get _typeOfBuilding;
+
+if (!isNil "_cachedMemPoints") exitWith {_cachedMemPoints};
 
 private _memPoints = [];
 private _memPointsActions = [];
@@ -148,8 +149,6 @@ private _ladders = getArray (configFile >> "CfgVehicles" >> _typeOfBuilding >> "
 
 } forEach _ladders;
 
-GVAR(cachedBuildingTypes) pushBack _typeOfBuilding;
-GVAR(cachedBuildingActionPairs) pushBack [_memPoints, _memPointsActions];
-
+GVAR(cachedBuildingTypes) set [_typeOfBuilding, [_memPoints, _memPointsActions]];
 
 [_memPoints, _memPointsActions]
