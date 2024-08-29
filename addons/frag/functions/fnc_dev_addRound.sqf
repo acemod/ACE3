@@ -1,14 +1,14 @@
 #include "..\script_component.hpp"
 /*
  * Author: Lambda.Tiger
- * This function initialize projectile tracking of a round so that it's path
+ * This function initialize projectile tracking of a round so that its path
  * can be drawn in debug mode. It may optionally include hit / explode /
  * deflected event handlers that spawn color coded spheres on each event,
  * green / red / blue, respectively.
  *
  * Arguments:
  * 0: Projectile to be tracked <OBJECT>
- * 1: Add projectile hit/explode/defelceted event handlers <BOOL> (default: true)
+ * 1: Add projectile hit/explode/deflected event handlers <BOOL> (default: true)
  * 2: Should the round track be blue. True results in blue traces, false in red <BOOL> (default: true)
  *
  * Return Value:
