@@ -18,3 +18,4 @@ params ["_firedEH", "", "", "", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _stateParams params ["", "_seekerStateParams"];
 
+_projectile setVariable [QGVAR(source), vehicle _shooter];
