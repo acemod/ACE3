@@ -23,7 +23,7 @@ TRACE_4("proxyWeapon",_vehicle,_turret,_needed,_emptyWeapon);
 
 // addWeaponTurret/removeWeaponTurret need to be executed where turret is local
 if !(_vehicle turretLocal _turret) exitWith {
-    TRACE_1("turret not local",_vehicle);
+    WARNING_1("[%1]'s turret [%2] isn't local, skipping proxy weapon change",_vehicle,_turret);
 };
 
 if (_vehicle getVariable [format [QGVAR(proxyHandled_%1), _turret], false]) exitWith { TRACE_1("already handled",typeOf _vehicle); };
