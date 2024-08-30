@@ -62,25 +62,14 @@ if (isNull _trackingTarget) then {
     } forEach _potentialTargets;
 };
 
-if (true || {accTime > 0 && !isGamePaused}) then {
+if (accTime > 0 && !isGamePaused) then {
     // If there are flares nearby, check if they will confuse missile
     private _nearby = _trackingTarget nearObjects _flareDistanceFilter;
     _nearby = _nearby select {
         // 2 = IR blocking
-        private _blocking = configOf _x >> "weaponLockSystem";
-        private _isFlare = false;
-        if (isNumber _blocking) then {
-            _isFlare = (2 == getNumber _blocking);
-        };
-
-        if (isText _blocking) then {
-            _isFlare = ("2" in getText _blocking);
-        };
-
-        private _withinView = [_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle);
-        private _canSee = [_projectile, _x, false] call FUNC(checkLos);
-
-        (_x isEqualTo _target && _trackingTarget isNotEqualTo _target) || { (_withinView && _canSee && _isFlare) }
+        (([getNumber (configOf _x >> "weaponLockSystem"), 4] call EFUNC(common,binarizeNumber)) select 1) && // Check if chaff can break radar lock
+        {[_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle)} && // Check if within view
+        {[_projectile, _x, false] call FUNC(checkLos)} // Check if can be seen
     };
 
     private _frontAspectMultiplier = 1;
