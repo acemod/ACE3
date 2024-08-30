@@ -117,7 +117,7 @@ if (_hasGimbal) then {
         private _offsetY = (_speedModifier * _gimbalSpeedY * _deltaTime * (_up - _down));
 
         private _directionToLast = _relativePos;
-        if !(_groundPos isEqualTo [0, 0, 0]) then {
+        if (_groundPos isNotEqualTo [0, 0, 0]) then {
             private _lastLogicPos = getPosASLVisual _logic;
             _directionToLast = _cameraPosASL vectorFromTo _groundPos;
         };
