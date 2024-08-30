@@ -18,4 +18,10 @@ params ["_firedEH", "", "", "", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _stateParams params ["", "_seekerStateParams"];
 
-_projectile setVariable [QGVAR(source), vehicle _shooter];
+private _source = vehicle _shooter;
+
+private _controlled = _source getVariable [QGVAR(mclos_projectiles), []];
+_controlled pushBack _projectile;
+_source setVariable [QGVAR(mclos_projectiles), _controlled];
+
+_projectile setVariable [QGVAR(source), _source];

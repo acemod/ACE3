@@ -15,10 +15,8 @@
  *
  * Public: No
  */
+
 params ["_accelerationDirection", "_player"];
-private _projectiles = _player getVariable [QGVAR(MCLOS_Projectiles), []];
-_projectiles = _projectiles select { !isNull _x };
-_player setVariable [QGVAR(MCLOS_Projectiles), _projectiles];
 
 private _inMclosControlled = false;
 
@@ -27,10 +25,18 @@ if (getNumber ((configOf _shooter) >> QGVAR(hasMCLOSControl) == 1) then {
     playSound "ACE_Sound_Click";
 
     private _currentDirection = _shooter getVariable [QGVAR(MCLOS_direction), [0, 0, 0]];
-    // Send direction across network for non-local projectiles
-    // This is the case in a wanted development for a proper Malyutka implementation
+    // Send data across network for handling non-local projectiles
+    // This is the case in a wanted development for a proper Malyutka implementation where projectiles will
+    // have their locality change via script
     _shooter setVariable [QGVAR(MCLOS_direction), _currentDirection vectorAdd _accelerationDirection, true];
-    _inMclosControlled = true;
+
+    // Shouldn't have too many projectiles sent across the network. Planned max is 4 at a time
+    private _controlled = _shooter getVariable [QGVAR(mclos_projectiles), []];
+    _controlled = _controlled select { !isNull _x };
+    _shooter setVariable [QGVAR(mclos_projectiles), _controlled, true];
+
+    // if we are controlling missiles, we want the input to be captured
+    _inMclosControlled = _controlled isNotEqualTo [];
 };
 
 _inMclosControlled
