@@ -22,9 +22,5 @@ if (GVAR(gps_mode) isEqualTo "too") then {
 };
 
 // create a copy of this array to make sure values are not overwritten
-[
-    GVAR(gps_currentSettings)#0,
-    GVAR(gps_currentSettings)#1,
-    GVAR(gps_currentSettings)#2
-]
++GVAR(gps_currentSettings)  // return
 
