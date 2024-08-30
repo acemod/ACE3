@@ -13,6 +13,7 @@ PREP(showMouseHint);
 PREP(hideMouseHint);
 
 // interaction with units
+PREP(addSquadChildren);
 PREP(canInteractWithCivilian);
 PREP(canInteractWithVehicleCrew);
 PREP(getDown);
@@ -36,8 +37,6 @@ PREP(pullOutBody);
 PREP(canRenameGroup);
 PREP(renameGroupUI);
 PREP(renameGroup);
-PREP(canGroupDropDistantUnits);
-PREP(groupDropDistantUnits);
 
 // Weapon Attachments
 PREP(getWeaponAttachmentsActions);

@@ -33,29 +33,8 @@ if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
 };
 
 if (_showTrail) then {
-    drop [
-        "\a3\data_f\kouleSvetlo", "", "Billboard", 
-        100,
-        0.03,
-        _projectile modelToWorld [0, 0, 0],
-        [0, 0, 0],
-        0,
-        1.25,
-        1,
-        0.05,
-        [0.5],
-        [TRAIL_COLOUR(1)],
-        [0],
-        0,
-        0,
-        "",
-        "",
-        "",
-        0,
-        false,
-        -1,
-        [TRAIL_COLOUR(10000)]
-    ];
+    drop ["\a3\data_f\kouleSvetlo", "", "Billboard",  100, 0.03, _projectile modelToWorld [0, 0, 0], 
+        [0, 0, 0], 0, 1.25, 1, 0.05, [0.5], [TRAIL_COLOUR(1)], [0], 0, 0, "", "", "", 0, false, -1, [TRAIL_COLOUR(10000)]];
 };
 
 private _timestep = diag_deltaTime * accTime;
@@ -199,8 +178,6 @@ if ((_pitchRate != 0 || {_yawRate != 0})) then {
 
         _projectile setVectorDirAndUp [_dir, _up];
 
-        //[_projectile, _pitch, _yaw, 0] call FUNC(changeMissileDirection);
-        
         _guidanceParameters set [0, _yaw];
         _guidanceParameters set [2, _pitch];
 

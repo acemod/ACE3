@@ -40,6 +40,14 @@ if (isServer) then {
     }, true, ["ACE_friesBase"], true] call CBA_fnc_addClassEventHandler;
 };
 
+// Handles the Vanilla respawn module
+[missionNamespace, "respawn", {
+    params ["_vehicle"];
+
+    if !(_vehicle getVariable [QGVAR(addFRIESOnRespawn), false]) exitWith {};
+
+    _vehicle call FUNC(equipFRIES);
+}] call BIS_fnc_addScriptedEventHandler;
 
 #ifdef DRAW_FASTROPE_INFO
 addMissionEventHandler ["Draw3D", {

@@ -49,9 +49,6 @@ if (_target isKindOf "CAManBase") then {
     [_target, "AinjPpneMrunSnonWnonDb_still", 0] call EFUNC(common,doAnimation);
 };
 
-_unit setVariable [QGVAR(isDragging), true, true];
-_unit setVariable [QGVAR(draggedObject), _target, true];
-
 // Add drop action
 GVAR(unit) = _unit;
 

@@ -22,7 +22,7 @@ private _magazines = configProperties [configFile >> "CfgMagazines", "isClass _x
                 diag_log text format ['class %1;', configName inheritsFrom _x];
                 diag_log text format ['class %1: %2 {', configName _x, configName inheritsFrom _x];
                 diag_log text format ['displayName = "%1"; [vanilla: %2 - %3]', _weaponName, _pylonMagName, _pylonWeapon];
-                diag_log text format ['};', configName _x, configName inheritsFrom _x, _weaponName, _pylonMagName];
+                diag_log text format ['};'];
             };
         };
     };

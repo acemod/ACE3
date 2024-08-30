@@ -35,7 +35,11 @@ if (isNil "_cachedValue") then {
         if (_vehicleValue != "" && {((toLowerANSI _vehicleValue) find ".paa") > -1}) then {
             _cachedValue = _vehicleValue;
         } else {
-            _cachedValue = DEFAULT_TEXTURE;
+            if (_vehicleValue != "" && {fileExists (_vehicleValue + ".paa")}) then {
+                _cachedValue = _vehicleValue + ".paa";
+            } else {
+                _cachedValue = DEFAULT_TEXTURE;
+            };
         };
     } else {
         _cachedValue = _vehicleIconValue;
