@@ -21,7 +21,7 @@ params ["_accelerationDirection", "_player"];
 private _inMclosControlled = false;
 
 private _shooter = vehicle _player;
-if (getNumber ((configOf _shooter) >> QGVAR(hasMCLOSControl) == 1) then {
+if (getNumber ((configOf _shooter) >> QGVAR(hasMCLOSControl)) == 1) then {
     playSound "ACE_Sound_Click";
 
     private _currentDirection = _shooter getVariable [QGVAR(MCLOS_direction), [0, 0, 0]];
