@@ -98,7 +98,7 @@ if (_hasGimbal) then {
         };
 
         // lock the camera and dont gimbal with missile rotation
-        if !(_lastGroundPos isEqualTo [0, 0, 0]) then {
+        if (_lastGroundPos isNotEqualTo [0, 0, 0]) then {
             #ifdef DEBUG_MODE_FULL
             drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1, 1, 1, 1], ASLtoATL (_lastGroundPos), 0.75, 0.75, 0, "Last Camera Ground Position", 1, 0.025, "TahomaB"];
             #endif
