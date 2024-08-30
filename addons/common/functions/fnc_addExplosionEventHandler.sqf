@@ -2,6 +2,8 @@
 /*
  * Author: johnb432, PabstMirror
  * Adds event hander for explosions (for local projectiles)
+ * Warning: For shots that are tracers and explosive the event will trigger on all machines in range
+ *          This function may be changed after 2.18!
  *
  * Arguments:
  * 0: Code to execute <CODE>
@@ -12,7 +14,7 @@
  * Example:
  * [{systemChat "boom"}] call ace_common_fnc_addExplosionEventHandler
  *
- * Public: Yes
+ * Public: No (maybe after 2.18)
  */
 
 params [["_code", {}, [{}]]];

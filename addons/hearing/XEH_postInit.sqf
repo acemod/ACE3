@@ -21,7 +21,7 @@ if (isServer) then {
         TRACE_1("Explode",_this);
         
         // If projectile is local only, don't raise event globally
-        if (_projectile call BIS_fnc_netId == "0:0") then { // TODO: Use netId instead of BIS_fnc_netId in 2.18
+        if (isMultiplayer && {(netId _projectile) == "0:0"}) then { // TODO: netId always returns valid after 2.18
             [QGVAR(explosion), [_projectile, _pos]] call CBA_fnc_localEvent;
         } else {
             [QGVAR(explosion), [_projectile, _pos]] call CBA_fnc_globalEvent;
