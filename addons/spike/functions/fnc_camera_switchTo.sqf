@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 /*
-  * Author: Dani (TCVM)
+ * Author: Dani (TCVM)
  * Switches to the currently controlled camera
  *
  * Arguments:
