@@ -30,7 +30,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
         _seekerStateParams set [6, true];
         TRACE_1("Missile Pitbull",_seekerStateParams);
     };
-    
+
     // if we are tracking a projectile, don't bother with radar crap just fly to it
     if (isNull _target || { !((typeOf _target) isKindOf ["Default", configFile >> "CfgAmmo"]) }) then {
         // Internal radar homing
@@ -71,10 +71,10 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
             private _nearestObjects = nearestObjects [ASLtoAGL _searchPos, _lockTypes, _seekerBaseRadiusAdjusted, false];
             _nearestObjects = _nearestObjects select {
                 // If target within angle AND we can see target AND we shouldn't filter target, then target is a candidate
-                ([_projectile, getPosASL _x, _seekerAngle] call FUNC(checkSeekerAngle) && {
+                [_projectile, getPosASL _x, _seekerAngle] call FUNC(checkSeekerAngle) && {
                     // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same
                     // time ensure that this can see through smoke
-                    ([_projectile, _x, true] call FUNC(checkLos)) || { ([_projectile, _x, false] call FUNC(checkLos)) } 
+                    ([_projectile, _x, true] call FUNC(checkLos)) || { ([_projectile, _x, false] call FUNC(checkLos)) }
                 } && {
                     !([_x, _projectile, _minimumFilterSpeed, _minimumFilterTime, _maxTerrainCheck, _seekerAngle] call FUNC(shouldFilterRadarHit))
                 }
@@ -92,7 +92,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
                     _target = _x;
                 };
             } forEach _nearestObjects;
-            
+
             _expectedTargetPos = _searchPos;
         };
     };
@@ -157,4 +157,3 @@ _targetData set [0, (getPosASLVisual _projectile) vectorFromTo _expectedTargetPo
 _seekerStateParams set [3, _expectedTargetPos];
 _launchParams set [0, _target];
 _expectedTargetPos
-
