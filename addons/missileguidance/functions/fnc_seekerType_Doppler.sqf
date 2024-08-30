@@ -32,7 +32,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     };
     
     // if we are tracking a projectile, don't bother with radar crap just fly to it
-    if (!isNil "_target" || { !((typeOf _target) isKindOf ["Default", configFile >> "CfgAmmo"]) }) then {
+    if (isNull _target || { !((typeOf _target) isKindOf ["Default", configFile >> "CfgAmmo"]) }) then {
         // Internal radar homing
         // For performance reasons only poll for target every so often instead of each frame
         if ((_lastTargetPollTime + ACTIVE_RADAR_POLL_FREQUENCY) - CBA_missionTime < 0) then {
@@ -61,7 +61,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
             private _lastKnownSpeed = if (_lastKnownVelocity isEqualTo [0, 0, 0]) then {
                 0
             } else {
-                vectorMagnitude _lastKnownVelocity;
+                vectorMagnitude _lastKnownVelocity
             };
             private _seekerBaseRadiusAdjusted = linearConversion [0, _seekerBaseRadiusAtGround, (CBA_missionTime - _lastTimeSeen) * vectorMagnitude _lastKnownVelocity, ACTIVE_RADAR_MINIMUM_SCAN_AREA, _seekerBaseRadiusAtGround, false];
             if (_doesntHaveTarget) then {
@@ -69,21 +69,18 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
             };
             // Look in front of seeker for any targets
             private _nearestObjects = nearestObjects [ASLtoAGL _searchPos, _lockTypes, _seekerBaseRadiusAdjusted, false];
-            _nearestObjects = _nearestObjects apply {
-                // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
-                if ([_projectile, getPosASL _x, _seekerAngle] call FUNC(checkSeekerAngle) && { ([_projectile, _x, true] call FUNC(checkLOS)) || { ([_projectile, _x, false] call FUNC(checkLOS)) } }) then {
-                    
-                    if !([_x, _projectile, _minimumFilterSpeed, _minimumFilterTime, _maxTerrainCheck, _seekerAngle] call FUNC(shouldFilterRadarHit)) exitWith {
-                        _x
-                    };
-                    objNull;
-                } else {
-                    objNull
-                };
+            _nearestObjects = _nearestObjects select {
+                // If target within angle AND we can see target AND we shouldn't filter target, then target is a candidate
+                ([_projectile, getPosASL _x, _seekerAngle] call FUNC(checkSeekerAngle) && {
+                    // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same
+                    // time ensure that this can see through smoke
+                    ([_projectile, _x, true] call FUNC(checkLos)) || { ([_projectile, _x, false] call FUNC(checkLos)) } 
+                } && {
+                    !([_x, _projectile, _minimumFilterSpeed, _minimumFilterTime, _maxTerrainCheck, _seekerAngle] call FUNC(shouldFilterRadarHit))
+                }
             };
-            _nearestObjects = _nearestObjects select { !isNull _x };
             // Select closest object to the expected position to be the current radar target
-            if ((count _nearestObjects) <= 0) exitWith {
+            if (_nearestObjects isEqualTo []) exitWith {
                 _projectile setMissileTarget objNull;
                 _seekerStateParams set [3, _searchPos];
                 _searchPos
@@ -106,9 +103,10 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     // External radar homing
     // if the target is in the remote targets for the side, whoever the donor is will "datalink" the target for the hellfire.
     private _remoteTargets = listRemoteTargets side _shooter;
-    if ((_remoteTargets findIf { (_target in _x) && (_x#1 > 0) }) < 0) then {
+    if ((_remoteTargets findIf { (_target in _x) && (_x#1 > 0) }) == -1) then {
         // I check both Line of Sight versions to make sure that a single bush doesnt make the target lock dissapear but at the same time ensure that this can see through smoke. Should work 80% of the time
-        if (!_shooterHasRadar || { !isVehicleRadarOn vehicle _shooter } || { !alive vehicle _shooter } || { !([vehicle _shooter, _target, true] call FUNC(checkLOS)) && { !([vehicle _shooter, _target, false] call FUNC(checkLOS)) } }) then {
+        private _vehicle = vehicle _shooter;
+        if (!_shooterHasRadar || { !isVehicleRadarOn _vehicle } || { !alive _vehicle } || { !([_vehicle, _target, true] call FUNC(checkLOS)) && { !([_vehicle, _target, false] call FUNC(checkLOS)) } }) then {
             _seekerStateParams set [0, true];
             _target = objNull; // set up state for active guidance
         };
@@ -125,8 +123,7 @@ if !(isNull _target) then {
     private _targetAdjustedPos = _target modelToWorldVisualWorld _centerOfObject;
     _expectedTargetPos = _targetAdjustedPos;
 
-    private _filterTarget = [_target, _projectile, _minimumFilterSpeed, _minimumFilterTime, _maxTerrainCheck, _seekerAngle] call FUNC(shouldFilterRadarHit);
-    if (_filterTarget) then {
+    if ([_target, _projectile, _minimumFilterSpeed, _minimumFilterTime, _maxTerrainCheck, _seekerAngle] call FUNC(shouldFilterRadarHit)) then {
         // filter out target
         _target = objNull;
         _seekerStateParams set [9, true];

@@ -28,7 +28,7 @@ TRACE_5("should filter target",_projectile,_target,_minimumSpeed,_minimumTime,_m
 
 // helicopter blades will always produce a doppler shift due to their nature. Don't filter
 if (_target isKindOf "Helicopter" && isEngineOn _target) exitWith {
-    TRACE_2("dont filter helicopters",_target isKindOf "Helicopter",isEngineOn _target);
+    TRACE_1("dont filter helicopters",_target);
     false
 };
 
@@ -78,19 +78,9 @@ if !(_maskedByGround) exitWith {
     _nearby = _nearby select {
         // 8 = radar blocking
         private _blocking = configOf _x >> "weaponLockSystem";
-        private _isChaff = false;
-        if (isNumber _blocking) then {
-            _isChaff = (8 == getNumber _blocking);
-        };
-
-        if (isText _blocking) then {
-            _isChaff = ("8" in getText _blocking);
-        };
-
-        private _withinView = [_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle);
-        private _canSee = [_projectile, _x, false] call FUNC(checkLos);
-
-        (_withinView && _canSee && _isChaff)
+        (([getNumber (configOf _x >> "weaponLockSystem"), 4] call EFUNC(common,binarizeNumber)) select 3) && // Check if chaff can break radar lock
+        {[_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle)} && // Check if within view
+        {[_projectile, _x, false] call FUNC(checkLos)} // Check if can be seen
     };
 
     private _foundDecoy = false;
