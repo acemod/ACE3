@@ -17,8 +17,15 @@ if (isServer) then {
     if (!GVAR(enableCombatDeafness)) exitWith {};
 
     [{ // Convert ace_common's local explosion to a hearing global explosion event 
+        params ["_projectile", "_pos"];
         TRACE_1("Explode",_this);
-        [QGVAR(explosion), _this select [0,2]] call CBA_fnc_globalEvent; // trim unused 3rd arg for network savings
+        
+        // If projectile is local only, don't raise event globally
+        if (_projectile call BIS_fnc_netId == "0:0") then { // TODO: Use netId instead of BIS_fnc_netId in 2.18
+            [QGVAR(explosion), [_projectile, _pos]] call CBA_fnc_localEvent;
+        } else {
+            [QGVAR(explosion), [_projectile, _pos]] call CBA_fnc_globalEvent;
+        };
     }] call EFUNC(common,addExplosionEventHandler);
 }] call CBA_fnc_addEventHandler;
 
