@@ -74,8 +74,8 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     private _ammoActionPath = [];
     private _magazineLocation = getText (_configOf >> QUOTE(ADDON) >> "magazineLocation");
     private _condition = { //IGNORE_PRIVATE_WARNING ["_target", "_player"];
-    // If magazine handling and weapon assembly/disassembly are enabled we enable ammo handling
-    if ((GVAR(ammoHandling) == 0) || {!([false, true, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 3]))}) exitWith { false };
+        // If magazine handling and weapon assembly/disassembly are enabled we enable ammo handling
+        if ((GVAR(ammoHandling) == 0) || {!([false, true, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 3]))}) exitWith { false };
         [_player, _target, ["isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith)
     };
     private _childrenCode = {
