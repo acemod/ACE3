@@ -38,7 +38,7 @@ if (_isDeprecatedLoaded && {!_isReplacementLoaded}) then {
     switch (true) do {
         case (_componentMajor >= _major && {_componentMinor >= _minor} && {_componentPatch >= _patch}): { // Removed from this version
             private _message = format[
-                "Component %1 is deprecated. It has been replaced by %2. The component %1 is no longer usable on this version. ", _oldComponentName, _newComponentName, _version];
+                "Component %1 is deprecated. It has been replaced by %2. The component %1 is no longer usable on this version %3. ", _oldComponentName, _newComponentName, _version];
             systemChat format["ACE [ERROR] - %1", _message];
             ERROR(_message);
         };

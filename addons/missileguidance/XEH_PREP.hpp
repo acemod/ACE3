@@ -34,6 +34,7 @@ PREP(attackProfile_BEAM);
 // Javelin profiles
 PREP(attackProfile_JAV_DIR);
 PREP(attackProfile_JAV_TOP);
+PREP(javelin_midCourseTransition);
 
 // Navigation Profiles
 PREP(navigationType_zeroEffortMiss);

@@ -724,6 +724,7 @@
         </Key>
         <Key ID="STR_ACE_UI_hideHud">
             <English>Hide all UI</English>
+            <Japanese>全てのUIを隠す</Japanese>
         </Key>
     </Package>
 </Project>

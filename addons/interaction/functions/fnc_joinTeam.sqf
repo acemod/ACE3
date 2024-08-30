@@ -22,16 +22,8 @@ params ["_unit", "_team", ["_displayHint", false, [false]]];
 _unit assignTeam _team;
 
 // display message
-if (_unit == ACE_player) then {
-    private _message = "";
-
-    if (_team == "MAIN") then {
-        _message = localize LSTRING(LeftTeam);
-    } else {
-        _team = localize format [LSTRING(Team%1), _team];
-        _message = format [localize LSTRING(JoinedTeam), _team];
-    };
-    if (_displayHint) then {
-        [_message] call EFUNC(common,displayTextStructured);
-    };
+if (_displayHint && {_unit == ACE_player}) then {
+    private _team = localize format ["str_team_%1", _team];
+    private _message = format [LLSTRING(JoinedTeam), _team];
+    [_message] call EFUNC(common,displayTextStructured);
 };

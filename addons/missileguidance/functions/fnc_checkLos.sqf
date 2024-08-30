@@ -25,7 +25,7 @@ if (_checkVisibilityTest) exitWith {
     _visibility > 0.001
 };
 if ((isNil "_seeker") || {isNil "_target"}) exitWith {
-    ERROR_2("nil",_seeker,_target);
+    ERROR_2("nil [%1]->[%2]",_seeker,_target);
     false
 };
 
