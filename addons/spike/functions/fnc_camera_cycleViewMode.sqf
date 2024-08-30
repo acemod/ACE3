@@ -18,9 +18,11 @@
 params ["_cameraNamespace"];
 
 private _tiIndex = _cameraNamespace getVariable [QGVAR(currentTIModeIndex), 0];
+
+if (_tiArray isEqualTo []) exitWith {};
+
 private _tiArray = _cameraNamespace getVariable [QGVAR(thermalTypes), []];
 
-if ((count _tiArray) == 0) exitWith {};
 if ((_tiIndex + 1) >= count _tiArray) then {
     _tiIndex = 0;
 } else {

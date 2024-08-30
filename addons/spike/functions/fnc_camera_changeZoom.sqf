@@ -17,10 +17,12 @@
  */
 params ["_cameraNamespace", "_increase"];
 
-private _zoomIndex = _cameraNamespace getVariable [QGVAR(currentZoomIndex), 0];
 private _zoomArray = _cameraNamespace getVariable [QGVAR(fovLevels), []];
 
-if ((count _zoomArray) == 0) exitWith {};
+if (_zoomArray isEqualTo []) exitWith {};
+
+private _zoomIndex = _cameraNamespace getVariable [QGVAR(currentZoomIndex), 0];
+
 if (_increase) then {
     if ((_zoomIndex + 1) < count _zoomArray) then {
         _zoomIndex = _zoomIndex + 1;

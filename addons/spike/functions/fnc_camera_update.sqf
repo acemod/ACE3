@@ -204,7 +204,7 @@ private _surfaceIntersections = lineIntersectsSurfaces [_cameraPosASL, _projecte
 private _pointPos = [0, 0, 0];
 private _groundPos = terrainIntersectAtASL [_cameraPosASL, _projectedPos];
 
-if (count _surfaceIntersections > 0) then {
+if (_surfaceIntersections isNotEqualTo []) then {
     _pointPos = (_surfaceIntersections select 0) select 0;
 };
 
