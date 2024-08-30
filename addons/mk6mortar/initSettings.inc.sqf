@@ -3,41 +3,41 @@
 private _category = [format ["ACE %1", localize "str_a3_cfgmarkers_nato_art"], localize LSTRING(DisplayName)];
 
 [
-    QGVAR(airResistanceEnabled), "CHECKBOX",
+    QGVAR(airResistanceEnabled),
+    "CHECKBOX",
     [LSTRING(airResistanceEnabled_DisplayName), LSTRING(airResistanceEnabled_Description)],
     _category,
     false, // default value
-    true, // isGlobal
+    1, // isGlobal
     {[QGVAR(airResistanceEnabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(allowComputerRangefinder), "CHECKBOX",
+    QGVAR(allowComputerRangefinder),
+    "CHECKBOX",
     [LSTRING(allowComputerRangefinder_DisplayName), LSTRING(allowComputerRangefinder_Description)],
     _category,
     true, // default value
-    true, // isGlobal
-    {[QGVAR(allowComputerRangefinder), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    1 // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(allowCompass), "CHECKBOX",
+    QGVAR(allowCompass),
+    "CHECKBOX",
     [LSTRING(allowCompass_DisplayName), LSTRING(allowCompass_Description)],
     _category,
     true, // default value
-    true, // isGlobal
-    {[QGVAR(allowCompass), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true // Needs mission restart
+    1 // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(useAmmoHandling), "CHECKBOX",
+    QGVAR(useAmmoHandling),
+    "CHECKBOX",
     [LSTRING(useAmmoHandling_DisplayName), LSTRING(useAmmoHandling_Description)],
     _category,
     false, // default value
-    true, // isGlobal
+    1, // isGlobal
     {[QGVAR(useAmmoHandling), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
 ] call CBA_fnc_addSetting;
