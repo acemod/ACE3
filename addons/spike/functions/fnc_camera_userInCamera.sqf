@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Switches away from the currently controlled camera
@@ -19,5 +19,4 @@ params [["_cameraNamespace", objNull]];
 
 if (isNil QGVAR(activeCamera)) exitWith { false };
 
-(GVAR(activeCamera) isNotEqualTo objNull) && { (_cameraNamespace isEqualTo objNull) || (_cameraNamespace isEqualTo GVAR(activeCamera)) };
-
+(!isNull GVAR(activeCamera)) && { isNull _cameraNamespace || (_cameraNamespace isEqualTo GVAR(activeCamera)) };

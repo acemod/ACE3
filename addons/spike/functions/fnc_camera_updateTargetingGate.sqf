@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Switches away from the currently controlled camera
@@ -21,7 +21,7 @@ _viewData params ["_lookDir", "_groundPos", "_pointPos", "_movingCameraX", "_mov
 _gimbalData params ["_hasGimbal", "_maxGimbalX", "_maxGimbalY", "_gimbalSpeedX", "_gimbalSpeedY", "", "", "_gimbalZoomSpeedModifiers"];
 _reticleData params ["", "", "", "", "", "", "", "", "", "_reticleMovesWithTrack"];
 
-if !(([_cameraNamespace] call FUNC(camera_userInCamera))) exitWith {};
+if !([_cameraNamespace] call FUNC(camera_userInCamera)) exitWith {};
 
 private _seekerTargetPos = _cameraNamespace getVariable [QGVAR(seekerTargetPos), [0, 0, 0]];
 private _seekerTargetInfo = _cameraNamespace getVariable [QGVAR(seekerTargetInfo), [false, [0, 0], [0, 0]]];
@@ -45,7 +45,7 @@ if (_seekerTargetPos isEqualTo [0, 0, 0]) then {
     {
         _x ctrlShow false;
     } forEach (_cameraNamespace getVariable QGVAR(disappearOnLock));
-    
+
     if (_reticleMovesWithTrack) then {
         _seekerPositionScreen = worldToScreen ASLtoAGL _seekerTargetPos;
         if (_seekerPositionScreen isEqualTo []) then {
@@ -66,7 +66,7 @@ if (_locked) then {
     _seekerTargetInfo params ["_lockedObject", "_boundsTL", "_boundsBR"];
     if (_lockedObject) then {
         private _missile = _cameraNamespace getVariable QGVAR(missile);
-    
+
         private _avgDistance = (_boundsTL#1 + _boundsBR#1) / 2;
 
         private _topCenter      = [((_boundsTL#0) + (_boundsBR#0)) / 2, _avgDistance, _boundsBR#2];
@@ -80,21 +80,21 @@ if (_locked) then {
             _ctrlPos set [1, 0.5];
         };
         (_cameraNamespace getVariable QGVAR(reticleLeft)) ctrlSetPosition [(_ctrlPos#0 - _seekerPositionScreen#0) - 0.5, (_ctrlPos#1 - _seekerPositionScreen#1) - 0.5];
-        
+
         _ctrlPos = worldToScreen (_missile modelToWorldVisual _rightCenter);
         if (_ctrlPos isEqualTo []) then {
             _ctrlPos set [0, 0.5];
             _ctrlPos set [1, 0.5];
         };
         (_cameraNamespace getVariable QGVAR(reticleRight)) ctrlSetPosition [(_ctrlPos#0 - _seekerPositionScreen#0) - 0.5, (_ctrlPos#1 - _seekerPositionScreen#1) - 0.5];
-        
+
         _ctrlPos = worldToScreen (_missile modelToWorldVisual _topCenter);
         if (_ctrlPos isEqualTo []) then {
             _ctrlPos set [0, 0.5];
             _ctrlPos set [1, 0.5];
         };
         (_cameraNamespace getVariable QGVAR(reticleTop)) ctrlSetPosition [(_ctrlPos#0 - _seekerPositionScreen#0) - 0.5, (_ctrlPos#1 - _seekerPositionScreen#1) - 0.5];
-        
+
         _ctrlPos = worldToScreen (_missile modelToWorldVisual _bottomCenter);
         if (_ctrlPos isEqualTo []) then {
             _ctrlPos set [0, 0.5];

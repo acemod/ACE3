@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Initializes camera for player to view missile from its nose
@@ -18,9 +18,9 @@
 params ["_projectile", "_cameraArray", "_shooter", "_switchOnFireInit"];
 _cameraArray params ["_enabled", "_fovLevels", "_initialFOV", "_thermalTypes", "_initialThermalType", "_switchOnFire", "_lerpFOV", "_fovChangeTime", "", "_gimbalData", "_reticleData", "_designating"];
 _gimbalData params ["_hasGimbal", "_maxGimbalX", "_maxGimbalY", "_gimbalSpeedX", "_gimbalSpeedY", "_initGimbalAngleX", "_initGimbalAngleY", "_gimbalZoomSpeedModifiers"];
- 
+
 if !(_enabled) exitWith {};
- 
+
 private _activeCameraNamespace = [] call CBA_fnc_createNamespace;
 _activeCameraNamespace setVariable [QGVAR(fovLevels), _fovLevels];
 _activeCameraNamespace setVariable [QGVAR(thermalTypes), _thermalTypes];
@@ -83,4 +83,3 @@ if (_switchOnFire && _switchOnFireInit) then {
 };
 
 _activeCameraNamespace
-

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Sets up a top-attack profile. If we don't have a target: coast
@@ -113,4 +113,3 @@ drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,0,1], (ASLt
 #endif
 
 _projectile vectorModelToWorldVisual _cmdAccel
-

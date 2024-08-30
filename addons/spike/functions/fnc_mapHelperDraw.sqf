@@ -1,9 +1,8 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Handles the map helper's draw event
- * Resets arguments if not run recently
- * And starts a watchdog to detect when weapon display unloaded
+ * Resets arguments if not run recently and starts a watchdog to detect when weapon display unloaded
  *
  * Arguments:
  * None
@@ -21,7 +20,7 @@
 
 private _currentShooter = if (ACE_player call CBA_fnc_canUseWeapon) then {ACE_player} else {vehicle ACE_player};
 if (isNil QGVAR(arguments)) then {
-    TRACE_1("Starting optic draw", _this);
+    TRACE_1("Starting optic draw",_this);
 
     // reset shooter var:
     _currentShooter setVariable ["ace_missileguidance_target", nil, false];
@@ -64,7 +63,7 @@ if (cameraView isEqualTo "GUNNER") then {
     } else {
         if (_targetPosition isEqualTo [0, 0, 0]) then {
             __SPIKE_RETICLE ctrlSetPosition [0, 0];
-            
+
             (__SPIKE_DISPLAY displayCtrl 243101) ctrlShow false;
             (__SPIKE_DISPLAY displayCtrl 243201) ctrlShow false;
             (__SPIKE_DISPLAY displayCtrl 243301) ctrlShow false;
@@ -98,4 +97,3 @@ if (cameraView isEqualTo "GUNNER") then {
     __SPIKE_RETICLE ctrlShow false;
     (__SPIKE_DISPLAY displayCtrl 241000) ctrlShow false;
 };
-

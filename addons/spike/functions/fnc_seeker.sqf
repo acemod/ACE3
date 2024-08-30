@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Seeker Type: Spike Optical
@@ -74,4 +74,3 @@ _seekerStateParams set [0, _lastPositions];
 _seekerStateParams set [2, _velocity];
 
 _seekerTargetPos
-

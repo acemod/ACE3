@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Switches to the currently controlled camera
@@ -50,4 +50,3 @@ _cameraNamespace setVariable [QGVAR(reticleLeft), (uiNameSpace getVariable _uiNa
 _cameraNamespace setVariable [QGVAR(reticleRight), (uiNameSpace getVariable _uiNamespaceDialogVariable) displayCtrl _rightGate];
 _cameraNamespace setVariable [QGVAR(reticleTop), (uiNameSpace getVariable _uiNamespaceDialogVariable) displayCtrl _topGate];
 _cameraNamespace setVariable [QGVAR(reticleBottom), (uiNameSpace getVariable _uiNamespaceDialogVariable) displayCtrl _bottomGate];
-

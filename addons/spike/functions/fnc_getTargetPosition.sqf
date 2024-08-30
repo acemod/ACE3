@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Return the position of a potential EO target via a "edge detection" algorithm. Compares object bounding boxes to see what we are most likely hitting
@@ -65,7 +65,7 @@ if (_nearObjects isNotEqualTo []) then {
     // I want to prefer the designated position on the object moreso than the bounds of the object
     private _averagePosition = _seekerTargetPos vectorMultiply SEEKER_BIAS;
     private _averagePositionCounter = SEEKER_BIAS;
-    
+
     private _bestScore = 0;
     private _bestObject = objNull;
 
@@ -122,4 +122,3 @@ if (_nearObjects isNotEqualTo []) then {
 };
 
 _seekerTargetPos
-

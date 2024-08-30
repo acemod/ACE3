@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Switches away from the currently controlled camera
@@ -24,4 +24,3 @@ _camera cameraEffect ["terminate", "back"];
 GVAR(activeCamera) = objNull;
 
 QGVAR(camera_hud) cutText ["", "PLAIN"];
-

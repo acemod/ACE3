@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Updates camera with inputs
@@ -43,7 +43,7 @@ switch (_key) do {
         };
         _return = true;
     }; //Up
-    
+
     case CAMERA_KEY_LEFT: {
         if (_down) then {
             _lookInput set [2, 1];
@@ -52,7 +52,7 @@ switch (_key) do {
         };
         _return = true;
     }; //Left
-    
+
     case CAMERA_KEY_RIGHT: {
         if (_down) then {
             _lookInput set [3, 1];
@@ -61,7 +61,7 @@ switch (_key) do {
         };
         _return = true;
     }; //Right
-    
+
     case CAMERA_KEY_DOWN: {
         if (_down) then {
             _lookInput set [1, 1];

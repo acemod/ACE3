@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Cycles camera thermal mode (if avaliable)
@@ -23,7 +23,7 @@ private _tiArray = _cameraNamespace getVariable [QGVAR(thermalTypes), []];
 if ((count _tiArray) == 0) exitWith {};
 if ((_tiIndex + 1) >= count _tiArray) then {
     _tiIndex = 0;
-} else { 
+} else {
     _tiIndex = _tiIndex + 1;
 };
 

@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-if (hasInterface) then { 
+if (hasInterface) then {
     #include "initKeybinds.inc.sqf"
 
     // add camera interactions
@@ -14,14 +14,13 @@ if (hasInterface) then {
         params ["_target", "_player", "_params"];
         private _camera = _player getVariable [QGVAR(missileCamera), objNull];
         private _projectile = _camera getVariable [QGVAR(missile), objNull];
-        !([] call FUNC(camera_userInCamera)) && { !(_camera isEqualTo objNull); } && { !(_projectile isEqualTo objNull) }
+        !([] call FUNC(camera_userInCamera)) && { !isNull _camera } && { !isNull _projectile }
     }/*, {
         params ["_target", "_player", "_params"];
         // insert children
     }*/] call EFUNC(interact_menu,createAction);
     ["CAManBase", 1, ["ACE_SelfActions"], _switchToCameraAction, true] call EFUNC(interact_menu,addActionToClass);
-    
+
     GVAR(activeCamera) = objNull;
     GVAR(projectileHashMap) = createHashMap; // used in the seeker to get the namespace for the associated projectile
 };
-

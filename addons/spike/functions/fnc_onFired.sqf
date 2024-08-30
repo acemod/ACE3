@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Initialises SPIKE camera
@@ -22,21 +22,21 @@ private _missileGuidanceConfig = (configOf _projectile) >> "ace_missileguidance"
 // Setup camera array
 private _cameraConfig = _missileGuidanceConfig >> "camera";
 private _cameraArray = [false];
-if (!(_cameraConfig isEqualTo configNull) && { (getNumber (_cameraConfig >> "enabled")) == 1 }) then {
+if (!isNull _cameraConfig && { (getNumber (_cameraConfig >> "enabled")) == 1 }) then {
     _cameraArray set [0, true];
     _cameraArray set [1, getArray (_cameraConfig >> "fovLevels")];
     _cameraArray set [2, getNumber (_cameraConfig >> "initialFOV")];
-    
+
     _cameraArray set [3, getArray (_cameraConfig >> "enabledThermalTypes")];
     _cameraArray set [4, getText (_cameraConfig >> "initialThermalType")];
-    
+
     _cameraArray set [5, (getNumber (_cameraConfig >> "switchOnFire")) == 1];
-    
+
     _cameraArray set [6, getNumber (_cameraConfig >> "lerpFOV")];
     _cameraArray set [7, getNumber (_cameraConfig >> "fovChangeTime")];
-    
+
     _cameraArray set [8, [[0, 0, 0], [0, 0, 0], [0, 0, 0], false, false]]; // camera view data. [look direction, ground pos, point pos, moving camera x, moving camera y]
-    
+
     _cameraArray set [9, [
         getNumber (_cameraConfig >> "gimbal" >> "enabled") == 1,
         getNumber (_cameraConfig >> "gimbal" >> "gimbalAngleX"),
@@ -50,7 +50,7 @@ if (!(_cameraConfig isEqualTo configNull) && { (getNumber (_cameraConfig >> "ena
         getNumber (_cameraConfig >> "gimbal" >> "designateWhenStationary") == 1,
         getNumber (_cameraConfig >> "gimbal" >> "trackLockedPosition") == 1
     ]];
-    
+
     _cameraArray set [10, [
         getText (_cameraConfig >> "reticle" >> "titleRsc"),
         getNumber (_cameraConfig >> "reticle" >> "centerReticle"),
@@ -63,13 +63,13 @@ if (!(_cameraConfig isEqualTo configNull) && { (getNumber (_cameraConfig >> "ena
         getText (_cameraConfig >> "reticle" >> "uiNamespaceDialogVariable"),
         getNumber (_cameraConfig >> "reticle" >> "reticleMovesWithTrack") == 1
     ]];
-    
+
     _cameraArray set [11, (getNumber (_cameraConfig >> "alwaysDesignate")) == 1];
     _cameraArray set [12, (getNumber (_cameraConfig >> "canStopDesignating")) == 1];
 };
 
-private _preTarget = +(ACE_PLAYER getVariable [QGVAR(target), [0, 0, 0]]);
-ACE_PLAYER setVariable [QGVAR(target), [0, 0, 0]];
+private _preTarget = +(ACE_player getVariable [QGVAR(target), [0, 0, 0]]);
+ACE_player setVariable [QGVAR(target), [0, 0, 0]];
 private _camera = [_projectile, _cameraArray, _shooter, _preTarget isEqualTo [0, 0, 0]] call FUNC(camera_init);
 GVAR(projectileHashMap) set [hashValue _projectile, [_camera, _preTarget]];
 [{

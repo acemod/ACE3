@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Updates camera to be on a fixed point
@@ -20,7 +20,7 @@ _cameraArray params ["_hasCamera", "", "", "", "", "", "", "", "_viewData", "_gi
 _viewData params ["_lookDir", "_groundPos", "_pointPos", "_movingCameraX", "_movingCameraY"];
 _gimbalData params ["_hasGimbal", "_maxGimbalX", "_maxGimbalY", "_gimbalSpeedX", "_gimbalSpeedY", "", "", "_gimbalZoomSpeedModifiers", "_stabilizeWhenMoving", "_designateWhenStationary", "_trackLockedPosition"];
 
-if (!_hasCamera || { _cameraNamespace isEqualTo objNull }) exitWith {};
+if (!_hasCamera || { isNull _cameraNamespace }) exitWith {};
 
 if ([_cameraNamespace] call FUNC(camera_userInCamera)) then {
     cameraEffectEnableHUD true;
@@ -51,20 +51,20 @@ if (_fovChanged) then {
     private _fovChangeStart = _cameraNamespace getVariable [QGVAR(fovChangedTime), 0];
     private _startingFOV = _cameraNamespace getVariable [QGVAR(startingFov), 1];
     private _fovChangeTime = _cameraNamespace getVariable [QGVAR(fovChangeTime), 0];
-    
+
     private _setFOV = _targetFOV;
     if (_lerpFovEnabled) then {
         _setFOV = linearConversion [0, _fovChangeTime, CBA_missionTime - _fovChangeStart, _startingFOV, _targetFOV, true];
     } else {
         _fovChanged = false;
     };
-    
+
     // if the FOV is near enough to the target FOV stop the lerp
     if (abs(_setFOV - _targetFOV) == 0 || ((CBA_missionTime - _fovChangeStart) > _fovChangeTime + 2)) then {
         _setFOV = _targetFOV;
         _fovChanged = false;
     };
-    
+
     _camera camSetFOV _setFOV;
     _cameraNamespace setVariable [QGVAR(fovChanged), _fovChanged];
     _cameraNamespace setVariable [QGVAR(currentFOV), _setFOV];
@@ -84,7 +84,7 @@ if (_hasGimbal) then {
 
     private _lastGroundPos = _cameraNamespace getVariable [QGVAR(lastMovedGroundPos), [0, 0, 0]];
 
-    if !((_movingCameraX || _movingCameraY) || true) then {       
+    if !((_movingCameraX || _movingCameraY) || true) then {
         // If we designate a target set the current tracking point to the current ground point to avoid unwanted behavior from static cameras
         if (_designating && !_designatedLastFrame) then {
             _designatedLastFrame = true;
@@ -107,7 +107,7 @@ if (_hasGimbal) then {
 
             _expectedPos = _directionToGround vectorMultiply GIMBAL_LOGIC_OFFSET;
         };
-    } else {   
+    } else {
         private _speedModifier = 1;
         if (_gimbalZoomSpeedModifiers isNotEqualTo []) then {
             _speedModifier = (_gimbalZoomSpeedModifiers select (_cameraNamespace getVariable [QGVAR(currentZoomIndex), 0]));
@@ -238,5 +238,3 @@ _cameraArray set [8, _viewData];
 _camera camCommit 0;
 
 [_cameraNamespace, _cameraArray] call FUNC(camera_updateTargetingGate);
-
- 

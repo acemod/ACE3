@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Decreases zoom of current camera
@@ -22,4 +22,3 @@ _cameraNamespace setVariable [QGVAR(targetFOV), _zoomArray select _zoomIndex];
 _cameraNamespace setVariable [QGVAR(fovChanged), true];
 _cameraNamespace setVariable [QGVAR(fovChangedTime), CBA_missionTime];
 _cameraNamespace setVariable [QGVAR(startingFov), _cameraNamespace getVariable QGVAR(currentFOV)];
-

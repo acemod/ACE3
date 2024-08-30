@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Condition to switch to next navigation profile
@@ -19,4 +19,3 @@ _stateParams params ["", "", "", "","_navigationParams"];
 
 _navigationParams params ["_state"];
 _state isEqualTo STAGE_TERMINAL
-

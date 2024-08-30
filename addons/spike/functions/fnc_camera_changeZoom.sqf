@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
  * Decreases zoom of current camera
@@ -31,4 +31,3 @@ if (_increase) then {
     };
 };
 [_cameraNamespace, _zoomIndex] call FUNC(camera_setZoom);
-
