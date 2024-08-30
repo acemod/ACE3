@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * SACLOS seeker
+ * MCLOS seeker
  *
  * Arguments:
  * 1: Guidance Arg Array <ARRAY>
@@ -11,7 +11,7 @@
  * Position of wanted missile pos relative to the camera direction <ARRAY>
  *
  * Example:
- * [] call ace_missileguidance_fnc_seekerType_SACLOS
+ * [] call ace_missileguidance_fnc_seekerType_MCLOS
  *
  * Public: No
  */
