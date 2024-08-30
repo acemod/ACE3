@@ -50,7 +50,7 @@ if (_vehicle turretLocal [0]) then {
 
         [_vehicle, [0], _assemblyMode, _emptyWeapon] call FUNC(proxyWeapon);
 
-        if (!_assemblyMode) exitWith {};
+        if !(_assemblyMode && {GVAR(ammoHandling) > 0}) exitWith {};
 
         [_vehicle, _emptyWeapon] call FUNC(staticWeaponInit_unloadExtraMags);
     };
