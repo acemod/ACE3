@@ -4,7 +4,6 @@ GVAR(vehicleMagCache) = createHashMap;
 
 ["CBA_settingsInitialized", {
     TRACE_3("settingsInit",GVAR(defaultAssemblyMode),GVAR(handleExtraMagazines),GVAR(ammoHandling));
-
     ["StaticWeapon", "Init", {
         // needs a small delay for network syncing, or we end up with duplicate mags with ammo handling
         [LINKFUNC(initVehicle), _this, 1] call CBA_fnc_waitAndExecute;

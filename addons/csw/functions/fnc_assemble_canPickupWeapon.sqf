@@ -17,4 +17,7 @@
 
 params ["_vehicle"];
 
-GVAR(defaultAssemblyMode) && {alive _vehicle} && {((crew _vehicle) findIf {alive _x && {!unitIsUAV _x}}) == -1} // return
+// Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
+private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select (_vehicle getVariable [QGVAR(assemblyMode), 3]);
+
+_assemblyMode && {alive _vehicle} && {((crew _vehicle) findIf {alive _x && {!unitIsUAV _x}}) == -1} // return

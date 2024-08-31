@@ -58,7 +58,8 @@
         [{
             params ["_assembledClassname", "_tripodDir", "_tripodPos", "_player", "_carryWeaponInfo", "_secondaryWeaponMagazines"];
             private _csw = createVehicle [_assembledClassname, [0, 0, 0], [], 0, "NONE"];
-            _csw setVariable [QGVAR(assembled), true, true];
+            // Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
+            _csw setVariable [QGVAR(assemblyMode), 2, true]; // Explicitly set advanced assembly mode + unload, and broadcast
 
             {
                 // Magazines

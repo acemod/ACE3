@@ -38,7 +38,8 @@
 
         // Create a tripod
         private _cswTripod = createVehicle [_tripodClassname, [0, 0, 0], [], 0, "NONE"];
-        _cswTripod setVariable [QGVAR(assembled), true, true];
+        // Because the tripod can be a "full weapon" we disable any data that will allow it to be loaded
+        _cswTripod setVariable [QGVAR(assemblyMode), 2, true]; // Explicitly set enabled&unload assembly mode and broadcast
 
         private _secondaryWeaponMagazines = [];
 
