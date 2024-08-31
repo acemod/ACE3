@@ -22,7 +22,7 @@ class CfgWeapons {
         ace_overpressure_angle = 60;    // Cone in which the damage is applied (in degrees from the back end of the launcher towards the side)
         ace_overpressure_range = 10;    // Range in meters in which the damage is applied
         ace_overpressure_damage = 0.7;  // Damage multiplier
-        ace_overpressure_offset = 1;    // Offset from the projectile origin backwards, to where the backblast should originate (backblast is always directed backwards, regardless of the number's sign)
+        ace_overpressure_offset = 1;    // Offset from the projectile origin backwards, to where the backblast should originate from
     };
 };
 ```
@@ -35,14 +35,13 @@ class CfgWeapons {
         ace_overpressure_angle = 90;    // Cone in which the damage is applied (in degrees from the muzzle of the cannon towards the side)
         ace_overpressure_range = 50;    // Range in meters in which the damage is applied
         ace_overpressure_damage = 0.85; // Damage multiplier
-        ace_overpressure_offset = 1;    // Offset from the projectile origin forward, to where the overpressure should originate (positive number to direct the overpressure forward)
     };
 };
 ```
 
 - You can note that the angle, range and damage values are higher, that's because this is a cannon and the overpressure area is much larger.
 
-### 1.3 Vehicle-mounted/Static Missile launchers and Recoilless Guns, rear-facing overpressure
+### 1.3 Vehicle-mounted/Static Missile launchers and Recoilless Guns, rear-facing backblast
 
 ```cpp
 class CfgWeapons {
@@ -50,7 +49,8 @@ class CfgWeapons {
         ace_overpressure_angle = 60;    // Cone in which the damage is applied (in degrees from the back end of the launcher towards the side)
         ace_overpressure_range = 15;    // Range in meters in which the damage is applied
         ace_overpressure_damage = 0.8;  // Damage multiplier
-        ace_overpressure_offset = -1;   // Offset from the projectile origin backwards, to where the backblast should originate (negative number to direct the overpressure backwards)
+        ace_overpressure_offset = 1;    // Offset from the projectile origin backwards, to where the backblast should originate from
+        ace_overpressure_backblast = 1; // Defines the overpressure as backblast, so that it will be directed backwards
     };
 };
 ```
