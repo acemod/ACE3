@@ -1,11 +1,11 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Deploys the current CSW
+ * Deploys the current CSW.
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Unit <OBJECT>
+ * 1: Player <OBJECT>
  * 2: Args <ANY>
  * 3: Action Data <ARRAY>
  *
@@ -76,9 +76,9 @@
                 _csw setVariable [QGVAR(secondaryWeaponMagazines), _secondaryWeaponMagazines, true];
             };
 
-            if (!GVAR(defaultAssemblyMode)) then {
-                [_csw, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-            };
+            // Disable vanilla assembly until FUNC(initVehicle) runs and sets the definite value
+            [_csw, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+
             _csw setDir _tripodDir;
             _csw setPosATL _tripodPos;
             if ((_tripodPos select 2) < 0.5) then {
