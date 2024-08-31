@@ -37,7 +37,7 @@ class CfgWeapons {
         EGVAR(overpressure,range) = 6;
         EGVAR(overpressure,angle) = 40;
         EGVAR(overpressure,damage) = 0.6;
-        EGVAR(overpressure,offset) = -1.2;
+        EGVAR(overpressure,offset) = 1.2;
     };
 
     class missiles_titan;
@@ -45,6 +45,6 @@ class CfgWeapons {
         EGVAR(overpressure,angle) = 40;
         EGVAR(overpressure,range) = 4;
         EGVAR(overpressure,damage) = 0.7;
-        EGVAR(overpressure,offset) = -0.8;
+        EGVAR(overpressure,offset) = 0.8;
     };
 };

@@ -70,7 +70,7 @@ class CfgWeapons {
         GVAR(angle) = 60;
         GVAR(range) = 10;
         GVAR(damage) = 0.7;
-        GVAR(offset) = -0.8;
+        GVAR(offset) = 0.8;
         GVAR(backblast) = 1;
     };
 
@@ -83,11 +83,11 @@ class CfgWeapons {
 
     class missiles_Vorona: MissileLauncher {
         GVAR(angle) = 50;
-        GVAR(offset) = -0.5;
+        GVAR(offset) = 0.5;
     };
 
     class launcher_SPG9: MissileLauncher {
-        GVAR(offset) = -1.25;
+        GVAR(offset) = 1.25;
     };
 
     class RocketPods: LauncherCore {
@@ -95,7 +95,7 @@ class CfgWeapons {
         GVAR(angle) = 60;
         GVAR(range) = 10;
         GVAR(damage) = 0.7;
-        GVAR(offset) = -0.8;
+        GVAR(offset) = 0.8;
         GVAR(backblast) = 1;
     };
 
