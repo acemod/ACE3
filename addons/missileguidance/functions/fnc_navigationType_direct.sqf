@@ -20,7 +20,6 @@ _flightParams params ["_pitchRate", "_yawRate"];
 _firedEH params ["","","","","","","_projectile"];
 
 private _projectilePos = getPosASLVisual _projectile;
-private _magnitude = _profileAdjustedTargetPos vectorDistance _projectilePos;
 
 private _targetDirection = _projectilePos vectorFromTo _profileAdjustedTargetPos;
 private _projectileDirection = vectorNormalized velocity _projectile;
