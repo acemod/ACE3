@@ -34,24 +34,30 @@ if (_configEnabled && {GVAR(ammoHandling) == 2}) then {
 };
 
 TRACE_2("",local _vehicle,_vehicle turretLocal [0]);
-if (_configEnabled && {_vehicle turretLocal [0]}) then { // if turret is local to us, then handle mags/weapon
+
+if (_vehicle turretLocal [0]) then {
     TRACE_2("turretLocal",_vehicle,GVAR(defaultAssemblyMode));
 
-    // If the weapon was assembled by players, remove all magazines that spawn with the weapon
-    private _emptyWeapon = _csw getVariable [QGVAR(assembled), false];
+    // If turret is local, handle unloading mags and proxy weapons
+    if (_configEnabled) then {
+        TRACE_1("config enabled",_vehicle);
 
-    [_vehicle, [0], GVAR(defaultAssemblyMode), _emptyWeapon] call FUNC(proxyWeapon);
+        // If the weapon was assembled by players, remove all magazines that spawn with the weapon
+        private _emptyWeapon = _csw getVariable [QGVAR(assembled), false];
 
-    // If magazine handling is disabled, do not unload magazines
-    if (GVAR(ammoHandling) == 0) exitWith {};
+        [_vehicle, [0], GVAR(defaultAssemblyMode), _emptyWeapon] call FUNC(proxyWeapon);
 
-    [_vehicle, _emptyWeapon] call FUNC(staticWeaponInit_unloadExtraMags);
-};
+        // If magazine handling is disabled, do not unload magazines
+        if (GVAR(ammoHandling) == 0) exitWith {};
 
-if (_assemblyConfig) then {
-    TRACE_2("assemblyConfig present",_vehicle,GVAR(defaultAssemblyMode));
-    if (GVAR(defaultAssemblyMode)) then { // Disable vanilla assembly if assemblyMode enabled
-        [_vehicle, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+        [_vehicle, _emptyWeapon] call FUNC(staticWeaponInit_unloadExtraMags);
+    };
+
+    if (_assemblyConfig) then {
+        TRACE_1("assemblyConfig present",_vehicle);
+        // Disable vanilla assembly if assemblyMode enabled
+        // Need to wait to allow setting object vars during assembly, but since this function runs 1 second after vehicle init, it can run immediately
+        [_vehicle, "disableWeaponAssembly", QUOTE(ADDON), GVAR(defaultAssemblyMode)] call EFUNC(common,statusEffect_set);
     };
 };
 
