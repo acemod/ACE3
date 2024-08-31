@@ -43,7 +43,7 @@ if (_vehicle turretLocal [0]) then {
         TRACE_1("config enabled",_vehicle);
 
         // If the weapon was assembled by players, remove all magazines that spawn with the weapon
-        private _emptyWeapon = _csw getVariable [QGVAR(assembled), false];
+        private _emptyWeapon = _vehicle getVariable [QGVAR(assembled), false];
 
         [_vehicle, [0], GVAR(defaultAssemblyMode), _emptyWeapon] call FUNC(proxyWeapon);
 
@@ -61,9 +61,6 @@ if (_vehicle turretLocal [0]) then {
     };
 };
 
-// If magazine handling is disabled, don't enable ammo handling
-if (GVAR(ammoHandling) == 0) exitWith {};
-
 // Add interactions for players
 if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     GVAR(initializedStaticTypes) pushBack _typeOf;
@@ -74,6 +71,8 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
         [_typeOf, 0, ["ACE_MainActions"], _disassembleAction] call EFUNC(interact_menu,addActionToClass);
     };
 
+    // If magazine handling is disabled, don't enable ammo handling
+    if (GVAR(ammoHandling) == 0) exitWith {};
 
     private _ammoActionPath = [];
     private _magazineLocation = getText (_configOf >> QUOTE(ADDON) >> "magazineLocation");

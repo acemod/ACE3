@@ -5,7 +5,21 @@ GVAR(vehicleMagCache) = createHashMap;
 ["CBA_settingsInitialized", {
     TRACE_3("settingsInit",GVAR(defaultAssemblyMode),GVAR(handleExtraMagazines),GVAR(ammoHandling));
 
+    ["StaticWeapon", "Init", {
+        // needs a small delay for network syncing, or we end up with duplicate mags with ammo handling
+        [LINKFUNC(initVehicle), _this, 1] call CBA_fnc_waitAndExecute;
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+}] call CBA_fnc_addEventHandler;
+
+// Also triggered at mission start
+["CBA_SettingChanged", {
+    GVAR(quickmountEnabled) = (
+        missionNamespace getVariable [QEGVAR(quickmount,enabled), false] &&
+        {(missionNamespace getVariable [QEGVAR(quickmount,enableMenu), -1]) in [1,3]}
+    );
+
     // Do not allow no ammo handling when advanced assembly is enabled
+    // Reason: When using advanced assembly, the amount of ammo is not stored anywhere, so when you reassemble a static, it will spawn full ammo
     if (GVAR(defaultAssemblyMode) && GVAR(ammoHandling) == 0) then {
         if (isServer) then {
             [QGVAR(ammoHandling), 2, 2, "server"] call CBA_settings_fnc_set;
@@ -21,23 +35,6 @@ GVAR(vehicleMagCache) = createHashMap;
             parseText format ["<t align='center'>%1</t>", "No mission restart is required."]
         ], 4]] call CBA_fnc_localEvent;
     };
-
-    ["StaticWeapon", "Init", {
-        // needs a small delay for network syncing, or we end up with duplicate mags with ammo handling
-        [LINKFUNC(initVehicle), _this, 1] call CBA_fnc_waitAndExecute;
-    }, true, [], true] call CBA_fnc_addClassEventHandler;
-
-    GVAR(quickmountEnabled) = (
-        missionNamespace getVariable [QEGVAR(quickmount,enabled), false] &&
-        {(missionNamespace getVariable [QEGVAR(quickmount,enableMenu), -1]) in [1,3]}
-    );
-}] call CBA_fnc_addEventHandler;
-
-["CBA_SettingChanged", {
-    GVAR(quickmountEnabled) = (
-        missionNamespace getVariable [QEGVAR(quickmount,enabled), false] &&
-        {(missionNamespace getVariable [QEGVAR(quickmount,enableMenu), -1]) in [1,3]}
-    );
 }] call CBA_fnc_addEventHandler;
 
 // Event handlers:
