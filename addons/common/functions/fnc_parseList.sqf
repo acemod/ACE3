@@ -32,8 +32,7 @@ private _whitespaceList = [];
     } else {
         _whitespaceList pushBack ([_x] call CBA_fnc_trim);
     };
-    false
-} count _list;
+} forEach _list;
 
 _list = _whitespaceList;
 TRACE_1("Whitespace List",_list);
@@ -46,8 +45,7 @@ if (_checkNil) then {
         if (!isNil _x) then {
             _nilCheckedList pushBack (missionNamespace getVariable _x);
         };
-        false
-    } count _list;
+    } forEach _list;
 
     _list = _nilCheckedList;
 };

@@ -4,6 +4,7 @@
 #include "..\script_component.hpp"
 
 addMissionEventHandler ["Draw3D", {
+    if (isGamePaused) exitWith {};
     if !((cursorObject isKindOf "Car") || (cursorObject isKindOf "Tank") || (cursorObject isKindOf "Air")) exitWith {};
     private _config = configOf cursorObject;
 
@@ -11,7 +12,7 @@ addMissionEventHandler ["Draw3D", {
     private _hitpointGroups = getArray (_config >> QGVAR(hitpointGroups));
 
     (getAllHitPointsDamage cursorObject) params [["_hitPoints", []], ["_hitSelections", []]];
-    ([cursorObject] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
+    ([cursorObject] call EFUNC(common,getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
 
     private _output = [];
 
@@ -28,7 +29,7 @@ addMissionEventHandler ["Draw3D", {
                 _info = _info + "[Wheel]";
                 _color = [0,1,0,1];
             };
-            if (!((getText (_config>> "HitPoints" >> _hitpoint >> "depends")) in ["", "0"])) then {
+            if !((getText (_config>> "HitPoints" >> _hitpoint >> "depends")) in ["", "0"]) then {
                 _info = _info + format ["[depends: %1]", getText (_config>> "HitPoints" >> _hitpoint >> "depends")];
                 _color = [0,0,1,1]
             };

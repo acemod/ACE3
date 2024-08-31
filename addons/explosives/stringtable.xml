@@ -75,6 +75,8 @@
             <Russian>Подрыв всех на активном детонаторе</Russian>
             <Japanese>選択した点火装置を全て起爆</Japanese>
             <Korean>활성화된 격발기의 모든 것을 폭파</Korean>
+            <French>Détoner tout sur le détonateur actif</French>
+            <Spanish>Detonar Todos al Activar el detonador</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_SetActiveTrigger">
             <English>Set Active Clacker</English>
@@ -83,6 +85,8 @@
             <Russian>Установить активный детонатор</Russian>
             <Japanese>この点火装置を選択</Japanese>
             <Korean>격발기 활성 설정</Korean>
+            <French>Définir le détonateur actif</French>
+            <Spanish>Establecer el Detonador Activo</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_CycleActiveTrigger">
             <English>Cycle Active Clacker</English>
@@ -91,6 +95,8 @@
             <Russian>Цикл активного детонатора</Russian>
             <Japanese>点火装置を切り替え</Japanese>
             <Korean>격발기 활성 전환</Korean>
+            <French>Modifier le détonateur actif</French>
+            <Spanish>Ciclar el Detonador Activo</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_ActiveTrigger">
             <English>Active Clacker</English>
@@ -99,6 +105,8 @@
             <Russian>Активный детонатор</Russian>
             <Japanese>選択中の点火装置</Japanese>
             <Korean>격발기 활성</Korean>
+            <French>Détonateur actif</French>
+            <Spanish>Activar Detonador</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
@@ -1166,7 +1174,7 @@
             <English>Minimum time value (in seconds) for the explosive timer.</English>
             <Russian>Минимальное время до взрыва в секундах</Russian>
             <French>Définit la durée minimale paramétrable sur le minuteur.</French>
-            <Japanese>起爆タイマーの最低時間 (秒) を設定します。</Japanese>
+            <Japanese>起爆タイマーの最短時間 (秒単位) を設定します。</Japanese>
             <Spanish>Tiempo mínimo (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Minimalna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Minimale Zeit (in Sekunden) für den Zeitzünder.</German>
@@ -1179,7 +1187,7 @@
             <English>Maximum time value (in seconds) for the explosive timer.</English>
             <Russian>Макисмальное время до взрыва в секундах</Russian>
             <French>Définit la durée maximale paramétrable sur le minuteur.</French>
-            <Japanese>起爆タイマーの最長時間 (秒) を設定します。</Japanese>
+            <Japanese>起爆タイマーの最長時間 (秒単位) を設定します。</Japanese>
             <Spanish>Tiempo máximo (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Maksymalna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Maximale Zeit (in Sekunden) für den Zeitzünder.</German>
@@ -1192,7 +1200,7 @@
             <English>Default time value (in seconds) for the explosive timer.</English>
             <Russian>Стандартное время до взрыва в секундах</Russian>
             <French>Définit la durée paramétrée par défaut sur le minuteur.</French>
-            <Japanese>起爆タイマーの標準時間 (秒) を設定します。</Japanese>
+            <Japanese>起爆タイマーの標準時間 (秒単位) を設定します。</Japanese>
             <Spanish>Tiempo por defecto (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Domyślna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Standardmäßige Zeit (in Sekunden) für den Zeitzünder.</German>

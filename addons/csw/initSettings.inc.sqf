@@ -45,17 +45,12 @@ private _categoryArray = [format ["ACE %1", localize LSTRING(DisplayName)]];
     [LSTRING(progressBarTimeCoefficent_displayName), LSTRING(progressBarTimeCoefficent_description)],
     _categoryArray,
     [0,2,1,2], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
-    true, // isGlobal
-    {[QGVAR(progressBarTimeCoefficent), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    false // Needs mission restart
+    true // isGlobal
 ] call CBA_fnc_addSetting;
 
 [
     QGVAR(dragAfterDeploy), "CHECKBOX",
     [LSTRING(dragAfterDeploy_displayName), LSTRING(dragAfterDeploy_description)],
     _categoryArray,
-    false, // default value
-    false, // isGlobal
-    {[QGVAR(dragAfterDeploy), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    false // Needs mission restart
+    false // default value
 ] call CBA_fnc_addSetting;

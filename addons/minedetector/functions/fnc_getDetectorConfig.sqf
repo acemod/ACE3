@@ -19,18 +19,15 @@ params ["_detectorType"];
 
 if (_detectorType isEqualTo "") exitWith {[]};
 
-private _detectorConfig = GVAR(detectorConfigs) getVariable _detectorType;
-if (isNil "_detectorConfig") then {
+GVAR(detectorConfigs) getOrDefaultCall [_detectorType, {
     private _cfgEntry = (configFile >> "ACE_detector" >> "detectors" >> _detectorType);
     if (isClass _cfgEntry) then {
-        _detectorConfig = [
+        [
             _detectorType,
             getNumber (_cfgEntry >> "radius"),
             getArray (_cfgEntry >> "sounds")
         ];
     } else {
-        _detectorConfig = [];
+        []
     };
-    GVAR(detectorConfigs) setVariable [_detectorType, _detectorConfig];
-};
-_detectorConfig
+}, true]

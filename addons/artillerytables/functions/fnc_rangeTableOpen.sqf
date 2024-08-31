@@ -34,15 +34,22 @@ TRACE_2("created dialog",_dialog,_ctrlChargeList);
 
 // Get Mags:
 private _mags = [_weaponName] call CBA_fnc_compatibleMagazines;
-if (_mags isEqualTo []) exitWith {WARNING_1("No Mags",_weaponName);};
+if (_mags isEqualTo []) exitWith {WARNING_1("No Mags %1",_weaponName);};
 private _magCfg = configFile >> "CfgMagazines";
 private _magParamsArray = [];
 _mags = _mags apply {
     private _initSpeed = getNumber (_magCfg >> _x >> "initSpeed");
     _magParamsArray pushBackUnique _initSpeed;
     private _airFriction = 0;
-    if (_advCorrection) then {
-        _airFriction = if (isNumber (_magCfg >> _x >> QGVAR(airFriction))) then { getNumber (_magCfg >> _x >> QGVAR(airFriction)) } else { DEFAULT_AIR_FRICTION };
+    private _magAirFriction = getNumber (_magCfg >> _x >> QGVAR(airFriction));
+    if (_magAirFriction <= 0) then {
+        if (_advCorrection) then {
+            _airFriction = [DEFAULT_AIR_FRICTION, _magAirFriction] select (isNumber (_magCfg >> _x >> QGVAR(airFriction)));
+        };
+    } else {
+        // positive value, use ammo's airFriction (regardless of setting)
+        private _ammo = getText (_magCfg >> _x >> "ammo");
+        _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
     };
     _magParamsArray pushBackUnique _airFriction;
     [getText (_magCfg >> _x >> "displayNameShort"), getText (_magCfg >> _x >> "displayName"), _initSpeed, _airFriction]

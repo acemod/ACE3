@@ -43,8 +43,7 @@ if (isServer) then {
     {
         _x params ["", "_eventArgs","_ttl"];
         [_eventName, _eventArgs, _ttl] call FUNC(_handleSyncedEvent);
-        false
-    } count _eventLog;
+    } forEach _eventLog;
 
     INFO_1("[%1] synchronized",_eventName);
 };
