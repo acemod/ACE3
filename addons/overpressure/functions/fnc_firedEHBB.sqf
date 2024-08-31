@@ -18,6 +18,8 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 TRACE_8("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_gunner);
 
+private _shooter = if (vehicle _unit != _unit) then {_gunner} else {_unit};
+
 // Retrieve backblast values
 private _bbValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
 
@@ -35,18 +37,18 @@ private _position = (getPosASL _projectile) vectorAdd (_direction vectorMultiply
 private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
 
 // Let each client handle their own affected units
-["ace_overpressure", [_gunner, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;
+["ace_overpressure", [_shooter, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;
 
 // Damage to the firer
-private _distance = 2 * ([_position, _direction, _backblastRange, _gunner] call FUNC(getDistance));
+private _distance = 2 * ([_position, _direction, _backblastRange, _shooter] call FUNC(getDistance));
 
 TRACE_1("Distance",_distance);
 
 if (_distance < _backblastRange) then {
-    TRACE_2("",isDamageAllowed _gunner,_gunner getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
+    TRACE_2("",isDamageAllowed _shooter,_shooter getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
 
     // Skip damage if not allowed
-    if (isDamageAllowed _gunner && {_gunner getVariable [QEGVAR(medical,allowDamage), true]}) then {
+    if (isDamageAllowed _shooter && {_shooter getVariable [QEGVAR(medical,allowDamage), true]}) then {
         private _alpha = sqrt (1 - _distance / _backblastRange);
         private _beta = sqrt 0.5;
 
@@ -56,9 +58,9 @@ if (_distance < _backblastRange) then {
         [_damage * 100] call BIS_fnc_bloodEffect;
 
         if (GETEGVAR(medical,enabled,false)) then {
-            [_gunner, _damage, "body", "backblast", _gunner] call EFUNC(medical,addDamageToUnit);
+            [_shooter, _damage, "body", "backblast", _shooter] call EFUNC(medical,addDamageToUnit);
         } else {
-            _gunner setDamage (damage _gunner + _damage);
+            _shooter setDamage (damage _shooter + _damage);
         };
     };
 };
