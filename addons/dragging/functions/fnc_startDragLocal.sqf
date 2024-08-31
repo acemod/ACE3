@@ -46,7 +46,10 @@ if (!GVAR(dragAndFire)) then {
         _primaryWeapon = "ACE_FakePrimaryWeapon";
     };
 
-    _unit selectWeapon _primaryWeapon;
+    // Keep the laser/light on if the weapon is already selected
+    if (currentWeapon _unit != _primaryWeapon) then {
+        _unit selectWeapon _primaryWeapon;
+    };
 } else { // Making sure the unit is holding a primary weapon or handgun
     private _handgunWeapon = handgunWeapon _unit;
 
@@ -95,6 +98,9 @@ if (_target isKindOf "CAManBase") then {
 
 // Prevents dragging and carrying at the same time
 _unit setVariable [QGVAR(isDragging), true, true];
+
+// Required for aborting (keybind)
+_unit setVariable [QGVAR(draggedObject), _target, true];
 
 [LINKFUNC(startDragPFH), 0.2, [_unit, _target, CBA_missionTime + 5]] call CBA_fnc_addPerFrameHandler;
 

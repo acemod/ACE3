@@ -80,7 +80,7 @@ class CfgWeapons {
 
     class H_HelmetO_ocamo: H_HelmetB {
         HEARING_PROTECTION_PELTOR;
-    }; // Defender and Assasin Helmet inherit.
+    }; // Defender and Assassin Helmet inherit.
 
     class H_HelmetO_ViperSP_hex_f: H_HelmetB {
         HEARING_PROTECTION_PELTOR;

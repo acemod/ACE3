@@ -1,4 +1,3 @@
-
 class CfgMagazines {
     class HandGrenade;
     class ACE_HandFlare_Base: HandGrenade {

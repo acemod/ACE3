@@ -15,7 +15,7 @@
  * Public: No
  */
 
-if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) exitWith {};
+if !(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) exitWith {};
 
 if (ctrlVisible 17000) then {
     false call FUNC(show_c1_ballistic_coefficient_data);

@@ -27,7 +27,7 @@
             <Italian>Abilita Chiazze di Sangue</Italian>
             <Chinesesimp>开启血液滴落效果</Chinesesimp>
             <Chinese>開啟血液滴落效果</Chinese>
-            <Russian>Разрешить капли крови</Russian>
+            <Russian>Вкл. капли крови</Russian>
             <Portuguese>Permitir gotas de sangue</Portuguese>
             <Czech>Povolit kapky krve</Czech>
             <Spanish>Habilitar manchas de sangre</Spanish>
@@ -37,7 +37,7 @@
             <English>Enables the creation of blood drops when units are bleeding or take damage.</English>
             <Japanese>ユニットが出血や負傷した時に、血痕を残すようにします。</Japanese>
             <French>Si une unité saigne, elle laissera des traces de sang derrière elle.</French>
-            <Russian>Разрешает создание капель крови при кровотечении или получении урона</Russian>
+            <Russian>Включает создание капель крови при кровотечении или получении урона</Russian>
             <Portuguese>Permitir a criação de gotas de sangue quando as unidades recebem ferimentos ou estão sangrando.</Portuguese>
             <Chinesesimp>当单位失血或受伤的时，启用出血效果。</Chinesesimp>
             <Chinese>啟用出血效果當單位失血或受傷的時候。</Chinese>
@@ -99,7 +99,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Blood_BloodLifetime_Description">
             <English>Controls the lifetime of blood drop objects.</English>
-            <Japanese>血痕オブジェクトの寿命を決定します。</Japanese>
+            <Japanese>血痕オブジェクトの寿命を制御します。</Japanese>
             <French>Définit la durée d'affichage des traces de sang.</French>
             <Russian>Управляет временем жизни объектов капель крови.</Russian>
             <Portuguese>Controla o tempo de vida que um objeto de gota de sangue tem.</Portuguese>

@@ -382,6 +382,9 @@ switch (GVAR(currentLeftPanel)) do {
                 };
 
                 GVAR(currentItems) set [IDX_CURR_VEST, _item];
+
+                [GVAR(center), ""] call BIS_fnc_setUnitInsignia;
+                [GVAR(center), GVAR(currentInsignia)] call BIS_fnc_setUnitInsignia;
             };
 
             TOGGLE_RIGHT_PANEL_CONTAINER
@@ -420,6 +423,9 @@ switch (GVAR(currentLeftPanel)) do {
                 };
 
                 GVAR(currentItems) set [IDX_CURR_BACKPACK, _item];
+
+                [GVAR(center), ""] call BIS_fnc_setUnitInsignia;
+                [GVAR(center), GVAR(currentInsignia)] call BIS_fnc_setUnitInsignia;
             };
 
             TOGGLE_RIGHT_PANEL_CONTAINER
