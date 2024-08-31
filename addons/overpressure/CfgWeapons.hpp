@@ -1,7 +1,7 @@
 
 class CfgWeapons {
 
-    // Man-Portable launchers, rear-facing overpressure
+    // Man-Portable launchers, rear-facing backblast
 
     class LauncherCore;
     class Launcher: LauncherCore {
@@ -63,7 +63,7 @@ class CfgWeapons {
         GVAR(offset) = 0.9;
     };
 
-    // Vehicle recoilless rifles and missile launchers, rear-facing overpressure
+    // Vehicle recoilless rifles and missile launchers, rear-facing backblast
 
     class MissileLauncher: LauncherCore {
         GVAR(priority) = 1;

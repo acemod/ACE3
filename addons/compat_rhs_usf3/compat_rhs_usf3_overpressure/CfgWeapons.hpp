@@ -1,5 +1,5 @@
 class CfgWeapons {
-    // Man-Portable launchers, rear-facing overpressure
+    // Man-Portable launchers, rear-facing backblast
 
     class launch_O_Titan_F;
 
@@ -30,7 +30,7 @@ class CfgWeapons {
         EGVAR(overpressure,offset) = 0.9;
     };
 
-    // Missile launchers, rear-facing overpressure
+    // Missile launchers, rear-facing backblast
 
     class rhs_weap_stinger_Launcher;
     class rhs_weap_stinger_Launcher_static: rhs_weap_stinger_Launcher {

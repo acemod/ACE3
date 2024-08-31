@@ -1,5 +1,5 @@
 class CfgWeapons {
-    // Man-Portable launchers, rear-facing overpressure
+    // Man-Portable launchers, rear-facing backblast
 
     class Launcher_Base_F;
     class rhs_weap_rpg7: Launcher_Base_F {
@@ -26,7 +26,7 @@ class CfgWeapons {
         EGVAR(overpressure,offset) = 1.65;
     };
 
-    // Vehicle recoilless rifles and missile launchers, rear-facing overpressure
+    // Vehicle recoilless rifles and missile launchers, rear-facing backblast
 
     class missiles_titan_static;
     class rhs_Igla_AA_pod_Base: missiles_titan_static { // Soft-launched Igla missile
