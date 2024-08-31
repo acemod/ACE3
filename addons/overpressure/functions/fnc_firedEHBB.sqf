@@ -29,24 +29,24 @@ TRACE_4("cache",_backblastAngle,_backblastRange,_backblastDamage,_offset);
 if (_backblastDamage <= 0) exitWith {};
 
 private _direction = (vectorDir _projectile) vectorMultiply -1;
-private _position = (getPosASL _projectile) vectorAdd (_direction vectorMultiply _offset);
+private _position = (getPosASL _projectile) vectorAdd (_direction vectorMultiply (abs _offset)); // Temp fix before more extensive config changes
 
 // Damage to others
 private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
 
 // Let each client handle their own affected units
-["ace_overpressure", [_unit, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;
+["ace_overpressure", [_gunner, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;
 
 // Damage to the firer
-private _distance = 2 * ([_position, _direction, _backblastRange, _unit] call FUNC(getDistance));
+private _distance = 2 * ([_position, _direction, _backblastRange, _gunner] call FUNC(getDistance));
 
 TRACE_1("Distance",_distance);
 
 if (_distance < _backblastRange) then {
-    TRACE_2("",isDamageAllowed _unit,_unit getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
+    TRACE_2("",isDamageAllowed _gunner,_gunner getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
 
     // Skip damage if not allowed
-    if (isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) then {
+    if (isDamageAllowed _gunner && {_gunner getVariable [QEGVAR(medical,allowDamage), true]}) then {
         private _alpha = sqrt (1 - _distance / _backblastRange);
         private _beta = sqrt 0.5;
 
@@ -56,9 +56,9 @@ if (_distance < _backblastRange) then {
         [_damage * 100] call BIS_fnc_bloodEffect;
 
         if (GETEGVAR(medical,enabled,false)) then {
-            [_unit, _damage, "body", "backblast", _unit] call EFUNC(medical,addDamageToUnit);
+            [_gunner, _damage, "body", "backblast", _gunner] call EFUNC(medical,addDamageToUnit);
         } else {
-            _unit setDamage (damage _unit + _damage);
+            _gunner setDamage (damage _gunner + _damage);
         };
     };
 };

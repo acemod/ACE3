@@ -71,6 +71,7 @@ class CfgWeapons {
         GVAR(range) = 10;
         GVAR(damage) = 0.7;
         GVAR(offset) = -0.8;
+        GVAR(backblast) = 1;
     };
 
     class missiles_titan;
@@ -95,6 +96,7 @@ class CfgWeapons {
         GVAR(range) = 10;
         GVAR(damage) = 0.7;
         GVAR(offset) = -0.8;
+        GVAR(backblast) = 1;
     };
 
     // Vehicle cannons, forward-facing overpressure

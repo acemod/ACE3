@@ -33,13 +33,13 @@ private _position = getPosASL _projectile;
 private _direction = vectorDir _projectile;
 
 // Offset overpressure origin position along the barrel
-if (_offset != 0) then {
+/*if (_offset != 0) then {
     _position = _position vectorAdd (_direction vectorMultiply _offset);
     // A negative offset will invert the direction, for vehicle weapons like recoilless rifles and missile launchers
     if (_offset < 0) then {
         _direction = _direction vectorMultiply -1;
     };
-};
+};*/
 
 // Damage to others
 private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _dangerZoneRange];
