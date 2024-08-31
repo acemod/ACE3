@@ -80,15 +80,6 @@ class CfgWeapons {
         GVAR(damage) = 0.5;
     };
 
-    class EGVAR(javelin,Titan_Static): missiles_titan_static {
-        // Titan is a soft-launch launcher
-        GVAR(priority) = 1;
-        GVAR(angle) = 30;
-        GVAR(range) = 2;
-        GVAR(damage) = 0.5;
-        GVAR(offset) = -0.5;
-    };
-
     class missiles_Vorona: MissileLauncher {
         GVAR(angle) = 50;
         GVAR(offset) = -0.5;
