@@ -4,9 +4,9 @@
     [ELSTRING(common,Enabled), LSTRING(Enabled_Description)],
     LSTRING(DisplayName),
     false,
-    true,
-    {},
-    true // Needs restart
+    1,
+    {[QXGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [

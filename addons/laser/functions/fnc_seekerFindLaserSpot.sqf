@@ -72,7 +72,7 @@ private _finalOwner = objNull;
 
         TRACE_1("",_laser);
         //Handle Weird Data Return - skips over this laser in the for loop
-        if ((_laser isEqualTo []) || {_laser isEqualTo [-1, -1]}) exitWith {WARNING_1("Bad Laser Return",_laser);};
+        if ((_laser isEqualTo []) || {_laser isEqualTo [-1, -1]}) exitWith {WARNING_1("Bad Laser Return %1",_laser);};
         _laser params [["_laserPos", [], [[]], 3], ["_laserDir", [], [[]], 3]];
 
         if (GVAR(dispersionCount) > 0) then {
@@ -115,7 +115,7 @@ if (_spots isNotEqualTo []) then {
     while { count(_spots) != count(_excludes) && _c < (count _spots) } do {
         scopeName "mainSearch";
         {
-            if (!(_forEachIndex in _excludes)) then {
+            if !(_forEachIndex in _excludes) then {
                 private _index = _buckets pushBack [_x, [_x]];
                 _excludes pushBack _forEachIndex;
                 _bucketPos = _x select 0;
@@ -124,7 +124,7 @@ if (_spots isNotEqualTo []) then {
             };
         } forEach _spots;
         {
-            if (!(_forEachIndex in _excludes)) then {
+            if !(_forEachIndex in _excludes) then {
                 private _testPos = (_x select 0);
                 if ((_testPos vectorDistanceSqr _bucketPos) <= 100) then {
                     _bucketList pushBack _x;

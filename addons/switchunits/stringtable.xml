@@ -92,7 +92,7 @@
             <Hungarian>Átváltás BLUFOR-ra?</Hungarian>
             <Russian>На синих?</Russian>
             <Italian>Cambia per BLUFOR?</Italian>
-            <Japanese>同盟軍へ切り替える?</Japanese>
+            <Japanese>BLUFOR軍へ切り替える?</Japanese>
             <Chinesesimp>切换至蓝方？</Chinesesimp>
             <Chinese>切換至藍方?</Chinese>
             <Korean>청군으로 변경합니까?</Korean>
@@ -109,7 +109,7 @@
             <Hungarian>Nyugat-fakciós egységekre való váltás engedélyezése?</Hungarian>
             <Russian>Разрешить переключаться на синих юнитов?</Russian>
             <Italian>Consenti passaggio ad unità BLUFOR?</Italian>
-            <Japanese>同盟軍ユニットへの切り替えを許可しますか?</Japanese>
+            <Japanese>BLUFOR軍ユニットへの切り替えを許可しますか?</Japanese>
             <Chinesesimp>允许切换至蓝方？</Chinesesimp>
             <Chinese>允許切換至藍方?</Chinese>
             <Korean>청군 인원으로 변경하는 것을 허락합니까?</Korean>
@@ -158,7 +158,7 @@
             <Hungarian>Átváltás INDFOR-ra?</Hungarian>
             <Russian>На независимых?</Russian>
             <Italian>Cambia per INDFOR?</Italian>
-            <Japanese>独立軍へ切り替える?</Japanese>
+            <Japanese>INDEPENDENT軍へ切り替える?</Japanese>
             <Chinesesimp>切换至独立方？</Chinesesimp>
             <Chinese>切換至獨立方?</Chinese>
             <Korean>무소속군으로 전환합니까?</Korean>
@@ -175,7 +175,7 @@
             <Hungarian>Független egységekre való váltás engedélyezése?</Hungarian>
             <Russian>Разрешить переключаться на независимых юнитов?</Russian>
             <Italian>Consenti passaggio ad unità INDFOR?</Italian>
-            <Japanese>独立軍ユニットへの切り替えを許可しますか?</Japanese>
+            <Japanese>INDEPENDENT軍ユニットへの切り替えを許可しますか?</Japanese>
             <Chinesesimp>允许切换至独立方？</Chinesesimp>
             <Chinese>允許切換至獨立方?</Chinese>
             <Korean>무소속군 인원으로 변경하는 것을 허락합니까?</Korean>

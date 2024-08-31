@@ -1,65 +1,65 @@
 #include "script_component.hpp"
 
-["ace_settingsInitialized", {
+// Init eject from destroyed vehicles
+// See https://github.com/acemod/ACE3/pull/6330
+// Still valid for Arma 2.16
+{
+    [_x, "Init", {
+        params ["_vehicle"];
+
+        if (!alive _vehicle) exitWith {};
+
+        TRACE_2("ejectIfDestroyed init",_vehicle,typeOf _vehicle);
+
+        _vehicle addEventHandler ["HandleDamage", {call FUNC(handleDamageEjectIfDestroyed)}];
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach EJECT_IF_DESTROYED_VEHICLES;
+
+["CBA_settingsInitialized", {
     TRACE_1("settings init",GVAR(enabled));
-    if (GVAR(enabled)) then {
-        [QGVAR(medicalDamage), LINKFUNC(medicalDamage)] call CBA_fnc_addEventHandler;
 
-        [QGVAR(bailOut), {
-            params ["_center", "_crewman", "_vehicle"];
-            TRACE_3("bailOut",_center,_crewman,_vehicle);
+    if (!GVAR(enabled)) exitWith {};
 
-            if (isPlayer _crewman) exitWith {};
-            if (!alive _crewman || { !( [_crewman] call EFUNC(common,isAwake))} ) exitWith {};
+    [QGVAR(medicalDamage), LINKFUNC(medicalDamage)] call CBA_fnc_addEventHandler;
 
-            unassignVehicle _crewman;
-            _crewman leaveVehicle _vehicle;
-            doGetOut _crewman;
-
-            private _angle = floor (random 360);
-            private _dist = (30 + (random 10));
-            private _escape = _center getPos [_dist, _angle];
-
-            _crewman doMove _escape;
-            _crewman setSpeedMode "FULL";
-        }] call CBA_fnc_addEventHandler;
-
-        ["Tank", "init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
-        ["Wheeled_APC_F", "init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
-
-        if (GVAR(enableCarDamage)) then {
-            ["Car", "init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
-        };
-
-        // blow off turret effect
-        /*
-        Disabled temporarily due to issues with being able to repair tanks after death. Needs work
-        */
-        /*["Tank", "killed", {
-            if (random 1 < 0.15) then {
-                (_this select 0) call FUNC(blowOffTurret);
-            };
-        }, true, [], true] call CBA_fnc_addClassEventHandler;*/
-
-        // event to add a turret to a curator if the vehicle already belonged to that curator
-        if (isServer) then {
-            [QGVAR(addTurretToEditable), {
-                params ["_vehicle", "_turret"];
-
-                {
-                    _x addCuratorEditableObjects [[_turret], false];
-                } forEach (objectCurators _vehicle);
-            }] call CBA_fnc_addEventHandler;
-        };
+    if (isServer) then {
+        // To set source and instigator, setDamage must be executed on the server
+        [QGVAR(setDamage), {(_this select 0) setDamage (_this select 1)}] call CBA_fnc_addEventHandler;
     };
 
-    // init eject from destroyed vehicle
-    {
-        [_x, "init", {
-            params ["_vehicle"];
-            if (!alive _vehicle) exitWith {};
-            TRACE_2("ejectIfDestroyed init",_vehicle,typeOf _vehicle);
-            _vehicle addEventHandler ["HandleDamage", {call FUNC(handleDamageEjectIfDestroyed)}];
-        }, true, [], true] call CBA_fnc_addClassEventHandler;
-    } forEach EJECT_IF_DESTROYED_VEHICLES;
+    [QGVAR(bailOut), {
+        params ["_vehicle", "_unit"];
+
+        TRACE_2("bailOut",_vehicle,_unit);
+
+        // Ignore players and the dead
+        if (_unit call EFUNC(common,isPlayer) || {!(_unit call EFUNC(common,isAwake))}) exitWith {};
+
+        unassignVehicle _unit;
+        _unit leaveVehicle _vehicle;
+        doGetOut _unit;
+
+        private _angle = floor (random 360);
+        private _dist = 30 + (random 10);
+        private _escape = _vehicle getPos [_dist, _angle];
+
+        _unit doMove _escape;
+        _unit setSpeedMode "FULL";
+    }] call CBA_fnc_addEventHandler;
+
+    GVAR(vehicleClassesHitPointHash) = createHashMap;
+
+    ["Tank", "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
+
+    // Wheeled_APC_F inherits from Car
+    [["Wheeled_Apc_F", "Car"] select GVAR(enableCarDamage), "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
+
+    // Blow off turret effect
+    // TODO: Add blowing-off-turret effect to vehicles that cook-off but aren't destroyed (no catastrophic explosion)
+    // The problem is that vehicles are repairable if they haven't been destroyed. So if the turret is gone and vehicle is repaired, how do we handle that?
+    ["Tank", "Killed", {
+        if (_this select 3 && random 1 < 0.15) then {
+            (_this select 0) call FUNC(blowOffTurret);
+        };
+    }] call CBA_fnc_addClassEventHandler;
 }] call CBA_fnc_addEventHandler;

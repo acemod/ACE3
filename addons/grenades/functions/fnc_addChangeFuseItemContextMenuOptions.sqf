@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Cyruz
- * Allows conversion of explosive charges in to throwable versions
+ * Allows conversion of explosive charges into throwable versions.
  *
  * Arguments:
  * None
@@ -14,7 +14,8 @@
  *
  * Public: No
  */
- TRACE_1("addChangeFuseItemContextMenuOptions",_this);
+
+LOG("addChangeFuseItemContextMenuOptions");
 
 {
     _x params ["_mag", "_throwableMag"];
@@ -29,21 +30,25 @@
             {true},
             {
                 params ["", "", "_item", "", "_magArr"];
-                _item isEqualTo (_magArr select 0);
+
+                _item == (_magArr select 0)
             }
         ],
         {
             params ["_unit", "", "", "_slot", "_magArr"];
-            private _container = "";
-            switch _slot do {
+
+            private _container = switch (_slot) do {
                 case "UNIFORM_CONTAINER": {
-                    _container = "uniform";
+                    "uniform"
                 };
                 case "VEST_CONTAINER": {
-                    _container = "vest";
+                    "vest"
                 };
                 case "BACKPACK_CONTAINER": {
-                    _container = "backpack";
+                    "backpack"
+                };
+                default {
+                    ""
                 };
             };
 
@@ -54,7 +59,7 @@
             false
         },
         true,
-        [_mag,_throwableMag]
+        [_mag, _throwableMag]
     ] call CBA_fnc_addItemContextMenuOption;
 
     [
@@ -67,21 +72,25 @@
             {true},
             {
                 params ["", "", "_item", "", "_magArr"];
-                _item isEqualTo (_magArr select 1);
+
+                _item == (_magArr select 1)
             }
         ],
         {
             params ["_unit", "", "", "_slot", "_magArr"];
-            private _container = "";
-            switch _slot do {
+
+            private _container = switch (_slot) do {
                 case "UNIFORM_CONTAINER": {
-                    _container = "uniform";
+                    "uniform"
                 };
                 case "VEST_CONTAINER": {
-                    _container = "vest";
+                    "vest"
                 };
                 case "BACKPACK_CONTAINER": {
-                    _container = "backpack";
+                    "backpack"
+                };
+                default {
+                    ""
                 };
             };
 
@@ -92,7 +101,7 @@
             false
         },
         true,
-        [_mag,_throwableMag]
+        [_mag, _throwableMag]
     ] call CBA_fnc_addItemContextMenuOption;
 } forEach [
     ["SatchelCharge_Remote_Mag", "ACE_SatchelCharge_Remote_Mag_Throwable"],

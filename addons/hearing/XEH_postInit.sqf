@@ -11,6 +11,23 @@ if (isServer) then {
     }] call CBA_fnc_addEventHandler;
 };
 
+["CBA_settingsInitialized", {
+    TRACE_1("settingInit - common",GVAR(enableCombatDeafness));
+    // Only install event handler if combat deafness is enabled
+    if (!GVAR(enableCombatDeafness)) exitWith {};
+
+    addMissionEventHandler ["ProjectileCreated", {
+        params ["_projectile"];
+
+        if (!local _projectile) exitWith {};
+
+        // Rockets only explode on local clients
+        _projectile addEventHandler ["Explode", {
+            [QGVAR(explosion), _this] call CBA_fnc_globalEvent;
+        }];
+    }];
+}] call CBA_fnc_addEventHandler;
+
 if (!hasInterface) exitWith {};
 
 #include "initKeybinds.inc.sqf"
@@ -27,7 +44,7 @@ GVAR(volumeAttenuation) = 1;
 GVAR(lastPlayerVehicle) = objNull;
 
 ["CBA_settingsInitialized", {
-    TRACE_1("settingInit",GVAR(enableCombatDeafness));
+    TRACE_1("settingInit - client",GVAR(enableCombatDeafness));
 
     // Only run PFEH and install event handlers if combat deafness is enabled
     if (!GVAR(enableCombatDeafness)) exitWith {};
@@ -35,6 +52,7 @@ GVAR(lastPlayerVehicle) = objNull;
     // Spawn volume updating process
     [LINKFUNC(updateVolume), 1, false] call CBA_fnc_addPerFrameHandler;
 
+    [QGVAR(explosion), LINKFUNC(explosion)] call CBA_fnc_addEventHandler;
     [QGVAR(updateVolume), LINKFUNC(updateVolume)] call CBA_fnc_addEventHandler;
 
     // Update veh attunation when player veh changes
@@ -63,7 +81,6 @@ GVAR(lastPlayerVehicle) = objNull;
     ["turret", LINKFUNC(updatePlayerVehAttenuation), false] call CBA_fnc_addPlayerEventHandler;
 
     [QGVAR(firedNear), "FiredNear", LINKFUNC(firedNear), true] call EFUNC(common,addPlayerEH);
-    [QGVAR(explosion), "Explosion", LINKFUNC(explosionNear), true] call EFUNC(common,addPlayerEH);
     [QGVAR(slotItemChanged), "SlotItemChanged", {(_this select 2) call FUNC(updateHearingProtection)}, true] call EFUNC(common,addPlayerEH);
 
     // Reset deafness on respawn (or remote control player switch)
