@@ -21,7 +21,7 @@
 params ["_posASL", "_direction", "_maxDistance", "_shooter"];
 TRACE_4("params",_posASL,_direction,_maxDistance,_shooter);
 
-private _intersections = lineIntersectsSurfaces [_posASL, _posASL vectorAdd (_direction vectorMultiply _maxDistance), _shooter, objNull, true, 99];
+private _intersections = lineIntersectsSurfaces [_posASL, _posASL vectorAdd (_direction vectorMultiply _maxDistance), _shooter, vehicle _shooter, true, 99];
 
 TRACE_1("lineIntersectsSurfaces",_intersections);
 
