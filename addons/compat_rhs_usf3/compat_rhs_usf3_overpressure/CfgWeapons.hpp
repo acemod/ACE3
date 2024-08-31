@@ -32,8 +32,8 @@ class CfgWeapons {
 
     // Missile launchers, rear-facing overpressure
 
-    class rhs_weap_TOW_Launcher;
-    class Rhs_weap_stinger_Launcher_static: rhs_weap_TOW_Launcher {
+    class rhs_weap_stinger_Launcher;
+    class rhs_weap_stinger_Launcher_static: rhs_weap_stinger_Launcher {
         EGVAR(overpressure,range) = 6;
         EGVAR(overpressure,angle) = 40;
         EGVAR(overpressure,damage) = 0.6;

@@ -73,7 +73,8 @@ class CfgWeapons {
         GVAR(offset) = -0.8;
     };
 
-    class missiles_titan_static {
+    class missiles_titan;
+    class missiles_titan_static: missiles_titan {
         GVAR(angle) = 40;
         GVAR(range) = 8;
         GVAR(damage) = 0.5;
