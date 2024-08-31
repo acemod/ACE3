@@ -44,7 +44,7 @@ private _distance = 999;
             if (_angle < 25) exitWith {_distance = 999};
             // Angles is below 45deg the distance is increased according to the difference
             if (_angle < 45) exitWith {_distance = _distance * (5 - 4 * sqrt ((_angle - 25)/20))};
-            // Angles above 45degcreate full backblast
+            // Angles above 45deg create full backblast
         };
     };
 } forEach _intersections;
