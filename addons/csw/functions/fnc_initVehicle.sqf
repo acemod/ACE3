@@ -101,10 +101,10 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
 
         // Replace existing check ammo interaction with one that takes into account if the magazine actions are available
         private _checkAmmoAction = [QEGVAR(reload,CheckAmmo), LELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), {
-    		if !((GVAR(ammoHandling) == 0) && {!([false, true, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 3]))}) exitWith { false };
-    		_this call EFUNC(reload,canCheckAmmo)
+            if !((GVAR(ammoHandling) == 0) && {!([false, true, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 3]))}) exitWith { false };
+            _this call EFUNC(reload,canCheckAmmo)
         }] call ace_interact_menu_fnc_createAction;
-		[_typeOf, 0, ["ACE_MainActions"], _checkAmmoAction] call EFUNC(interact_menu,addActionToClass);
+        [_typeOf, 0, ["ACE_MainActions"], _checkAmmoAction] call EFUNC(interact_menu,addActionToClass);
 
         // Add another check ammo action to the ammo handling point
         _checkAmmoAction = [QGVAR(checkAmmo), LELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), EFUNC(reload,canCheckAmmo)] call EFUNC(interact_menu,createAction);
