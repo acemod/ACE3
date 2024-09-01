@@ -24,7 +24,7 @@ class GVAR(stats) {
         priority = 1.5;
         displayName = "$STR_a3_rscdisplayarsenal_stat_weight";
         showText = 1;
-        textStatement = QUOTE(ARR_2([""Line One"",""Line Two""]));
+        textStatement = QUOTE([ARR_2(_this select 0,_this select 1)] call FUNC(statTextStatement_mass));
         tabs[] = {{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14}, {0,1,2,3,4,5,6,7}};
     };
     class ACE_rateOfFire: statBase {
@@ -35,7 +35,7 @@ class GVAR(stats) {
         showBar = 1;
         showText = 1;
         barStatement = QUOTE([ARR_3((_this select 0) select 0,_this select 1,[ARR_2([ARR_2(-1.4,0.31)],[ARR_2(1,0.01)])])] call FUNC(statBarStatement_rateOfFIre));
-        textStatement = "[""first"",""second"", ""third""]";
+        textStatement = QUOTE([ARR_3((_this select 0) select 0,_this select 1,[ARR_2([ARR_2(-1.4,0.31)],false)])] call FUNC(statTextStatement_rateOfFire));
         tabs[] = {{0,1}, {}};
     };
     class ACE_accuracy: statBase {
