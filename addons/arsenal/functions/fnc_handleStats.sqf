@@ -165,8 +165,7 @@ private _fnc_handleStats = {
             _statsTextCtrl ctrlSetText _textStatementResult;
             _statsTextCtrl ctrlSetTextColor ([[1, 1, 1, 1], [0, 0, 0, 1]] select (_showBar));
             
-            //Handle MultiLine scaling
-            systemChat format ["_statsTextCtrl: %1",  _statsTextCtrl];
+            //Height based on Text lines
             {
                 _x ctrlSetPositionH (ctrlTextHeight _statsTextCtrl);
             } forEach [
@@ -176,11 +175,16 @@ private _fnc_handleStats = {
             ];
 
             _statsTextCtrl ctrlSetFade 0;
-            _statsBackgroundCtrl ctrlSetBackgroundColor[random(1),random(1),random(1),1]; //DEBUG
-            //systemChat format ["_lines: %1 -- _height %2 -- _grid %3", _textStatementLines, _height, GRID_H];//DEBUG
-
         } else {
             _statsTextCtrl ctrlSetFade 1;
+            //Ensure default height
+            {
+                _x ctrlSetPositionH (4 * GRID_H);
+            } forEach [
+                _statsBackgroundCtrl,
+                _statsBarCtrl,
+                _statsTextCtrl
+            ];
         };
         
         {
