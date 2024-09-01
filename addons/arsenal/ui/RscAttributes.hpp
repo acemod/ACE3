@@ -316,7 +316,7 @@ class GVAR(display) {
                     x = QUOTE(1 * GRID_W);
                     y = QUOTE(10 * GRID_H);
                     w = QUOTE(45 * GRID_W);
-                    h = QUOTE(4 * GRID_H);
+                    h = QUOTE(5 * GRID_H);
                     colorBackground[] = {1,1,1,0.15};
                 };
                 class statsBar1: ctrlProgress {
@@ -329,7 +329,7 @@ class GVAR(display) {
                     x = QUOTE(1 * GRID_W);
                     y = QUOTE(10 * GRID_H);
                     w = QUOTE(45 * GRID_W);
-                    h = QUOTE(4 * GRID_H);
+                    h = QUOTE(5 * GRID_H);
                 };
                 class statsText1: RscTextMulti {
                     idc = IDC_statsText1;
@@ -340,7 +340,7 @@ class GVAR(display) {
                     x = QUOTE(0 * GRID_W);
                     y = QUOTE(10 * GRID_H);
                     w = QUOTE(45 * GRID_W);
-                    h = QUOTE(4 * GRID_H);
+                    h = QUOTE(5 * GRID_H);
                     sizeEx = QUOTE(5 * GRID_H);
                     text = "";
                 };
@@ -482,7 +482,7 @@ class GVAR(display) {
                     x = QUOTE(1 * GRID_W);
                     y = QUOTE(6 * GRID_H);
                     w = QUOTE(45 * GRID_W);
-                    h = QUOTE(4 * GRID_H);
+                    h = QUOTE(5 * GRID_H);
                 };
                 class actionsText2: actionsText1 {
                     idc = IDC_actionsText2;

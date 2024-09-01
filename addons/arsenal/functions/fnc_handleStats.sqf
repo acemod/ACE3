@@ -179,7 +179,7 @@ private _fnc_handleStats = {
             _statsTextCtrl ctrlSetFade 1;
             //Ensure default height
             {
-                _x ctrlSetPositionH (4 * GRID_H);
+                _x ctrlSetPositionH (5 * GRID_H);
             } forEach [
                 _statsBackgroundCtrl,
                 _statsBarCtrl,
