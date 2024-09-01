@@ -10,12 +10,12 @@
  * None
  *
  * Example:
- * [bullet] call ace_frag_fnc_addBlackList
+ * [_projectile] call ace_frag_fnc_addBlackList
  *
  * Public: No
  */
 
-params ["_round"];
-TRACE_1("addBlackList",_round);
+params ["_projectile"];
+TRACE_2("addBlackList",_projectile,typeOf projectile);
 
-GVAR(blackList) pushBack _round;
+_projectile setVariable [QGVAR(blacklisted)];
