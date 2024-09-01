@@ -19,7 +19,8 @@
 params ["_display", "_control", "_curSel", ["_itemCfg", configNull]];
 
 private _statsBoxCtrl = _display displayCtrl IDC_statsBox;
-private _statsStaticBackground = _display displayCtrl IDC_statsStaticBackground1;
+private _statsBoxTitleBackgroundCtrl = _display displayCtrl IDC_statsBoxTitleBackground;
+private _statsBoxBackgroundCtrl = _display displayCtrl IDC_statsBoxBackground;
 private _statsPreviousPageCtrl = _display displayCtrl IDC_statsPreviousPage;
 private _statsNextPageCtrl = _display displayCtrl IDC_statsNextPage;
 private _statsCurrentPageCtrl = _display displayCtrl IDC_statsCurrentPage;
@@ -112,7 +113,7 @@ private _fnc_handleStats = {
     private _statsBarCtrl = controlNull;
     private _statsTextCtrl = controlNull;
     private _textStatementResult = "";
-    private _height = 5;
+    private _lastCtrl = _statsBoxTitleBackgroundCtrl;
 
     {
         _x params ["", "_configEntry", "_title", "_bools", "_statements"];
@@ -129,6 +130,17 @@ private _fnc_handleStats = {
         _statsTitleCtrl ctrlSetText _title;
         _statsTitleCtrl ctrlSetFade 0;
 
+        //Vertical Position
+        ctrlPosition _lastCtrl params ["", "_lastPosY", "", "_lastPosH"];
+        _statsTitleCtrl ctrlSetPositionY (_lastPosY + _lastPosH + GRID_H);
+        {
+            _x ctrlSetPositionY (_lastPosY + _lastPosH + GRID_H + (5 * GRID_H));
+        } forEach [
+            _statsBackgroundCtrl,
+            _statsBarCtrl,
+            _statsTextCtrl
+        ];
+
         // Handle bars
         if (_showBar) then {
             _statsBarCtrl progressSetPosition ([_configEntry, _itemCfg] call _barStatement);
@@ -142,7 +154,6 @@ private _fnc_handleStats = {
         // Handle text entries
         if (_showText) then {
             _textStatementResult = [_configEntry, _itemCfg] call _textStatement;
-
             if (_textStatementResult isEqualType []) then {
                 _textStatementResult = _textStatementResult joinString endl;
             } else {
@@ -153,16 +164,29 @@ private _fnc_handleStats = {
 
             _statsTextCtrl ctrlSetText _textStatementResult;
             _statsTextCtrl ctrlSetTextColor ([[1, 1, 1, 1], [0, 0, 0, 1]] select (_showBar));
-            _statsTextCtrl ctrlSetPositionH (ctrlTextHeight _statsTextCtrl);
-            _statsTextCtrl ctrlSetFade 0;
+            
+            //Height based on Text lines
+            {
+                _x ctrlSetPositionH (ctrlTextHeight _statsTextCtrl);
+            } forEach [
+                _statsBackgroundCtrl,
+                _statsBarCtrl,
+                _statsTextCtrl
+            ];
 
-            _height = _height + (ctrlTextHeight _statsTextCtrl);
+            _statsTextCtrl ctrlSetFade 0;
         } else {
             _statsTextCtrl ctrlSetFade 1;
+            //Ensure default height
+            {
+                _x ctrlSetPositionH (5 * GRID_H);
+            } forEach [
+                _statsBackgroundCtrl,
+                _statsBarCtrl,
+                _statsTextCtrl
+            ];
         };
-
-        _height = _height + 10;
-
+        
         {
             _x ctrlCommit 0;
         } forEach [
@@ -171,25 +195,29 @@ private _fnc_handleStats = {
             _statsBarCtrl,
             _statsTextCtrl
         ];
+
+        _lastCtrl = _statsTextCtrl;
+
     } forEach _statsToDisplay;
 
 
     // Resize the window
     (5 - _statsCount) call _fnc_hideUnused;
+    ctrlPosition _lastCtrl params ["", "_lastPosY", "", "_lastPosH"];
     _statsBoxCtrl ctrlSetPosition [
         (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
         safezoneY + 1.8 * GRID_H,
         47 * GRID_W,
-        _height * GRID_H
+        _lastPosY + _lastPosH + GRID_H
     ];
-    _statsStaticBackground ctrlSetPositionH (_height * GRID_H);
-    _statsStaticBackground ctrlCommit 0;
+    _statsBoxBackgroundCtrl ctrlSetPositionH (_lastPosY + _lastPosH + GRID_H);
+    _statsBoxBackgroundCtrl ctrlCommit 0;
     _statsBoxCtrl ctrlCommit 0;
 
     // Move the actions box
     private _ctrl = _display displayCtrl IDC_actionsBox;
     private _pos = ctrlPosition _ctrl;
-    _pos set [1, safezoneY + (_height + 3.6) * GRID_H];
+    _pos set [1, safezoneY + (_lastPosY + _lastPosH + GRID_H + (3.6 * GRID_H))];
     _ctrl ctrlSetPosition _pos;
     _ctrl ctrlCommit 0;
 
