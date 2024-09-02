@@ -28,11 +28,6 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 
-#define OVERWRITE_FUNC(funcName)\
-class funcName {\
-    file = QPATHTOF(DOUBLES(COMPONENT,SUBCOMPONENT)\functions\DOUBLES(fnc,funcName).sqf);\
-}
-
 class CfgFunctions {
     class SPE_WEAPONS_STATIC {
         class SPE_Weapons_Static {
