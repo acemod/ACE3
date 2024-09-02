@@ -220,7 +220,7 @@ if (_activated) then {
 
                 // Locality changed
                 _logic addEventHandler [
-                    "local",
+                    "Local",
                     {
                         _logic = _this select 0;
                         _bird = _logic getVariable ["bird",objNull];
@@ -298,12 +298,12 @@ if (_activated) then {
                         waitUntil {sleep 0.1; serverCommandAvailable _serverCommand};
                         missionNamespace setVariable [_adminVar,player];
                         publicVariable _adminVar;
-                        _respawn = player addEventHandler ["respawn",format ["%1 = _this select 0; publicvariable '%1';",_adminVar]];
+                        _respawn = player addEventHandler ["Respawn",format ["%1 = _this select 0; publicvariable '%1';",_adminVar]];
 
                         waitUntil {sleep 0.1; !serverCommandAvailable _serverCommand};
                         missionNamespace setVariable [_adminVar,objNull];
                         publicVariable _adminVar;
-                        player removeEventHandler ["respawn",_respawn];
+                        player removeEventHandler ["Respawn",_respawn];
                     };
                 };
             };
@@ -340,16 +340,16 @@ if (_activated) then {
         };
 
         // Add local event handlers
-        _logic addEventHandler ["curatorFeedbackMessage",{_this call bis_fnc_showCuratorFeedbackMessage;}];
-        _logic addEventHandler ["curatorPinged",{_this call bis_fnc_curatorPinged;}];
-        _logic addEventHandler ["curatorObjectPlaced",{_this call bis_fnc_curatorObjectPlaced;}];
-        _logic addEventHandler ["curatorObjectEdited",{_this call bis_fnc_curatorObjectEdited;}];
-        _logic addEventHandler ["curatorWaypointPlaced",{_this call bis_fnc_curatorWaypointPlaced;}];
+        _logic addEventHandler ["CuratorFeedbackMessage",{_this call bis_fnc_showCuratorFeedbackMessage;}];
+        _logic addEventHandler ["CuratorPinged",{_this call bis_fnc_curatorPinged;}];
+        _logic addEventHandler ["CuratorObjectPlaced",{_this call bis_fnc_curatorObjectPlaced;}];
+        _logic addEventHandler ["CuratorObjectEdited",{_this call bis_fnc_curatorObjectEdited;}];
+        _logic addEventHandler ["CuratorWaypointPlaced",{_this call bis_fnc_curatorWaypointPlaced;}];
 
-        _logic addEventHandler ["curatorObjectDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
-        _logic addEventHandler ["curatorGroupDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
-        _logic addEventHandler ["curatorWaypointDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
-        _logic addEventHandler ["curatorMarkerDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+        _logic addEventHandler ["CuratorObjectDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+        _logic addEventHandler ["CuratorGroupDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+        _logic addEventHandler ["CuratorWaypointDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
+        _logic addEventHandler ["CuratorMarkerDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
 
         player call bis_fnc_curatorRespawn;
     };
