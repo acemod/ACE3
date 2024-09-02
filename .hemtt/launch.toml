@@ -6,7 +6,7 @@ workshop = [
 [spe]
 extends = "default"
 dlc = [
-    "spe"
+    "Spearhead 1944"
 ]
 
 [vn]
