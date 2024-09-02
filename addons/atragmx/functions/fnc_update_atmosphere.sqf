@@ -16,18 +16,18 @@
  */
 
 if (GVAR(currentUnit) == 2) then {
-    ctrlSetText [200, Str(Round(GVAR(temperature) * 10) / 10)];
+    ctrlSetText [200, str(round(GVAR(temperature) * 10) / 10)];
 } else {
-    ctrlSetText [200, Str(Round((GVAR(temperature) * 1.8 + 32) * 10) / 10)];
+    ctrlSetText [200, str(round((GVAR(temperature) * 1.8 + 32) * 10) / 10)];
 };
 if (GVAR(currentUnit) == 2) then {
-    ctrlSetText [210, Str(Round(GVAR(barometricPressure)))];
+    ctrlSetText [210, str(round(GVAR(barometricPressure)))];
 } else {
-    ctrlSetText [210, Str(Round(GVAR(barometricPressure) / 33.8638866667 * 100) / 100)];
+    ctrlSetText [210, str(round(GVAR(barometricPressure) / 33.8638866667 * 100) / 100)];
 };
-ctrlSetText [220, Str(Round(GVAR(relativeHumidity) * 100 * 10) / 10)];
+ctrlSetText [220, str(round(GVAR(relativeHumidity) * 100 * 10) / 10)];
 if (GVAR(currentUnit) == 2) then {
-    ctrlSetText [230, Str(Round(GVAR(altitude)))];
+    ctrlSetText [230, str(round(GVAR(altitude)))];
 } else {
-    ctrlSetText [230, Str(Round(GVAR(altitude) * 3.2808399))];
+    ctrlSetText [230, str(round(GVAR(altitude) * 3.2808399))];
 };

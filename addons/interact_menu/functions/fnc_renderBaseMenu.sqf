@@ -46,7 +46,7 @@ if ((GVAR(openedMenuType) == 0) && {isNull (ACE_controlledUAV select 0)} && {veh
 
         if ((_distanceToBasePoint > 1.2) && {!(_params select 4)}) exitWith {
             // If distance to action is greater than 1.2 m and check isn't disabled in params, check LOS
-            lineIntersects [AGLtoASL _headPos, AGLtoASL _pos, _object, ACE_player]
+            lineIntersects [AGLToASL _headPos, AGLToASL _pos, _object, ACE_player]
         };
         false
     }) exitWith {false};
@@ -91,7 +91,7 @@ if (_activeActionTree isEqualTo []) exitWith {false};
 BEGIN_COUNTER(fnc_renderMenus);
 
 if (count _pos > 2) then {
-    _sPos pushBack (((AGLtoASL _pos) vectorDiff GVAR(cameraPosASL)) vectorDotProduct GVAR(cameraDir));
+    _sPos pushBack (((AGLToASL _pos) vectorDiff GVAR(cameraPosASL)) vectorDotProduct GVAR(cameraDir));
 } else {
     _sPos pushBack 0;
 };

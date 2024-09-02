@@ -21,10 +21,10 @@ params ["_newUnit","_oldUnit"];
 //set showHUD based on new unit status:
 if ((_newUnit getVariable [QGVAR(isHandcuffed), false]) || {_newUnit getVariable [QGVAR(isSurrendering), false]}) then {
     TRACE_1("Player Change (showHUD false)",_newUnit);
-    ["captive", [false, false, false, false, false, false, false, false, false, true]] call EFUNC(common,showHud);
+    ["captive", [false, false, false, false, false, false, false, false, false, true]] call EFUNC(common,showHUD);
 } else {
     TRACE_1("Player Change (showHUD true)",_newUnit);
-    ["captive", []] call EFUNC(common,showHud); //same as showHud true;
+    ["captive", []] call EFUNC(common,showHUD); //same as showHud true;
 };
 
 //If old player was escorting, stop

@@ -63,7 +63,7 @@ if (_item isEqualType objNull) then {
     [QGVAR(serverUnload), [_object, _posBehindVehicleAGL]] call CBA_fnc_serverEvent;
 } else {
     _object = createVehicle [_item, _posBehindVehicleAGL, [], 0, "NONE"];
-    _object setPosASL (AGLtoASL _posBehindVehicleAGL);
+    _object setPosASL (AGLToASL _posBehindVehicleAGL);
 };
 
 [QEGVAR(common,setVelocity), [_object, (velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5)], _object] call CBA_fnc_targetEvent;

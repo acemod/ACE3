@@ -42,7 +42,7 @@ private _timestep = diag_deltaTime * accTime;
 // Run seeker function:
 private _seekerTargetPos = [[0,0,0], _args, _seekerStateParams, _lastKnownPosState, _timestep] call FUNC(doSeekerSearch);
 // Run attack profile function:
-_seekerTargetPos = AGLtoASL ASLToAGL _seekerTargetPos;
+_seekerTargetPos = AGLToASL ASLToAGL _seekerTargetPos;
 private _profileAdjustedTargetPos = [_seekerTargetPos, _args, _attackProfileStateParams, _timestep] call FUNC(doAttackProfile);
 
 private _projectilePos = getPosASLVisual _projectile;
@@ -190,15 +190,15 @@ if ((_pitchRate != 0 || {_yawRate != 0})) then {
 
 if (GVAR(debug_drawGuidanceInfo)) then {
     TRACE_3("",_projectilePos,_seekerTargetPos,_profileAdjustedTargetPos);
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _projectilePos, 0.75, 0.75, 0, _ammo, 1, 0.025, "TahomaB"];
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToAGL _projectilePos, 0.75, 0.75, 0, _ammo, 1, 0.025, "TahomaB"];
 
     if (!isGamePaused && accTime > 0) then {
-        private _ps = "#particlesource" createVehicleLocal (ASLtoAGL _projectilePos);
+        private _ps = "#particlesource" createVehicleLocal (ASLToAGL _projectilePos);
         _PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 0], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[1, 0, 0, 1], [1, 0, 0, 1], [1, 0, 0, 1]], [1], 1, 0, "", "", nil];
         _PS setDropInterval 1.0;
     };
 
-    drawLine3D [ASLtoAGL _projectilePos, (ASLtoAGL _projectilePos) vectorAdd velocity _projectile, [1, 1, 1, 1]];
+    drawLine3D [ASLToAGL _projectilePos, (ASLToAGL _projectilePos) vectorAdd velocity _projectile, [1, 1, 1, 1]];
 };
 
 _stateParams set [0, diag_tickTime];

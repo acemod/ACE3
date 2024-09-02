@@ -57,7 +57,7 @@ GVAR(elementsSet) = createHashMap;
 
     private _mask = [];
     if (GVAR(hideHud)) then { _mask resize [10, false] };
-    [QGVAR(hideHud), _mask] call EFUNC(common,showHud);
+    [QGVAR(hideHud), _mask] call EFUNC(common,showHUD);
 
     if (missionNamespace getVariable [QGVAR(hideHud_hideChat), true]) then {
         showChat !GVAR(hideHud);

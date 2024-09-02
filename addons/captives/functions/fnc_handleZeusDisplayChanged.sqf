@@ -19,8 +19,8 @@
 
 if ((ACE_player getVariable [QGVAR(isHandcuffed), false]) || {ACE_player getVariable [QGVAR(isSurrendering), false]}) then {
     TRACE_1("Player Change (showHUD false)",ACE_player);
-    ["captive", [false, false, false, false, false, false, false, false, false, true]] call EFUNC(common,showHud);
+    ["captive", [false, false, false, false, false, false, false, false, false, true]] call EFUNC(common,showHUD);
 } else {
     TRACE_1("Player Change (showHUD true)",ACE_player);
-    ["captive", []] call EFUNC(common,showHud); //same as showHud true;
+    ["captive", []] call EFUNC(common,showHUD); //same as showHud true;
 };

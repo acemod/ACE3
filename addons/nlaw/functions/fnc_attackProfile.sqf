@@ -35,14 +35,14 @@ private _flightTime = CBA_missionTime - _startTime;
 private _realYaw = _yaw + _yawChange * _flightTime;
 private _realPitch = _pitch + _pitchChange * _flightTime;
 
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], ASLtoAGL _launchPos, 0.75, 0.75, 0, "LAUNCH", 1, 0.025, "TahomaB"];
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,1,1], ASLtoAGL (_launchPos vectorAdd (_startLOS vectorMultiply (_distanceFromLaunch + 50))), 0.75, 0.75, 0, "Original LOS", 1, 0.025, "TahomaB"];
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,0,1], ASLtoAGL (_launchPos vectorAdd ([_distanceFromLaunch + 50, _realYaw, _realPitch] call CBA_fnc_polar2vect)), 0.75, 0.75, 0, format ["Predicted @%1sec",(floor(_flightTime * 10)/10)], 1, 0.025, "TahomaB"];
-drawLine3D [ASLtoAGL _launchPos, ASLtoAGL (_launchPos vectorAdd (_startLOS vectorMultiply (_distanceFromLaunch + 50))), [1,0,0,1]];
-drawLine3D [ASLtoAGL _launchPos, ASLtoAGL (_launchPos vectorAdd ([_distanceFromLaunch + 50, _realYaw, _realPitch] call CBA_fnc_polar2vect)), [1,1,0,1]];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], ASLToAGL _launchPos, 0.75, 0.75, 0, "LAUNCH", 1, 0.025, "TahomaB"];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,1,1], ASLToAGL (_launchPos vectorAdd (_startLOS vectorMultiply (_distanceFromLaunch + 50))), 0.75, 0.75, 0, "Original LOS", 1, 0.025, "TahomaB"];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,0,1], ASLToAGL (_launchPos vectorAdd ([_distanceFromLaunch + 50, _realYaw, _realPitch] call CBA_fnc_polar2vect)), 0.75, 0.75, 0, format ["Predicted @%1sec",(floor(_flightTime * 10)/10)], 1, 0.025, "TahomaB"];
+drawLine3D [ASLToAGL _launchPos, ASLToAGL (_launchPos vectorAdd (_startLOS vectorMultiply (_distanceFromLaunch + 50))), [1,0,0,1]];
+drawLine3D [ASLToAGL _launchPos, ASLToAGL (_launchPos vectorAdd ([_distanceFromLaunch + 50, _realYaw, _realPitch] call CBA_fnc_polar2vect)), [1,1,0,1]];
 private _test = lineIntersectsSurfaces [_launchPos, _launchPos vectorAdd (_startLOS vectorMultiply 3000), player, _projectile];
 if ((count _test) > 0) then {
-    private _posAGL = ASLtoAGL ((_test select 0) select 0);
+    private _posAGL = ASLToAGL ((_test select 0) select 0);
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], _posAGL, 0.75, 0.75, 0, "Original Impact", 1, 0.025, "TahomaB"];
 };
 #endif

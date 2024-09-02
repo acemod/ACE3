@@ -32,7 +32,7 @@ if (_attackProfileStateParams isEqualTo []) then {
 _attackProfileStateParams params ["_attackStage", "_configLaunchHeightClear", "_missileStateData"];
 
 private _projectilePos = getPosASL _projectile;
-private _distanceFromLaunch2d = _launchPos distance2d _projectilePos;
+private _distanceFromLaunch2d = _launchPos distance2D _projectilePos;
 private _heightAboveLaunch = (_projectilePos select 2) - (_launchPos select 2);
 
 // Add height depending on distance for compensate
@@ -45,7 +45,7 @@ if (_returnTargetPos isEqualTo [0, 0, 0]) then {
 private _closingRate = vectorMagnitude velocity _projectile;
 // subtract 500 meters to account for the fact that we don't want to be at the perfect pitch exactly when we cross the target
 // 500 seemed good in testing
-private _timeToGo = ((_projectilePos distance2d _seekerTargetPos) - 500) / _closingRate;
+private _timeToGo = ((_projectilePos distance2D _seekerTargetPos) - 500) / _closingRate;
 
 // we could do stuff like desired attack angle, but I'm not going that far today
 private _los = _projectilePos vectorFromTo _seekerTargetPos; 
@@ -64,14 +64,14 @@ switch (_attackStage) do {
         if (_heightAboveLaunch > _configLaunchHeightClear) then {
             _attackProfileStateParams set [0, STAGE_SEEK_CRUISE];
 
-            _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2d _projectilePos]];
+            _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2D _projectilePos]];
             TRACE_2("New Stage: STAGE_SEEK_CRUISE",_distanceFromLaunch2d,_heightAboveLaunch);
         };
 
         if (_atMinRotationAngle) then {
             _attackProfileStateParams set [0, STAGE_ATTACK_TERMINAL];
 
-            _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2d _projectilePos]];
+            _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2D _projectilePos]];
             TRACE_2("New Stage: STAGE_ATTACK_TERMINAL",_distanceToTarget2d,_currentHeightOverTarget);
         };
     };
@@ -84,7 +84,7 @@ switch (_attackStage) do {
         if (_seekerTargetPos isNotEqualTo [0,0,0]) then {
             _attackProfileStateParams set [0, STAGE_ATTACK_CRUISE];
             
-            _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2d _projectilePos]];
+            _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2D _projectilePos]];
             TRACE_1("New Stage: STAGE_ATTACK_CRUISE",_distanceFromLaunch2d);
         };
     };
@@ -92,7 +92,7 @@ switch (_attackStage) do {
         _missileStateData params ["_heightBeforeStateSwitch", "_initialDistanceToTarget"];
 
         private _currentHeightOverTarget = (_projectilePos select 2) - (_seekerTargetPos select 2);
-        private _distanceToTarget2d = _seekerTargetPos distance2d _projectilePos;
+        private _distanceToTarget2d = _seekerTargetPos distance2D _projectilePos;
 
         _returnTargetPos set [2, _heightBeforeStateSwitch + (_initialDistanceToTarget * sin 7)];
 
@@ -100,7 +100,7 @@ switch (_attackStage) do {
         if (_atMinRotationAngle || {(_currentHeightOverTarget atan2 _distanceToTarget2d) > 15}) then { // Wait until we can come down at a sharp angle
             _attackProfileStateParams set [0, STAGE_ATTACK_TERMINAL];
 
-            _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2d _projectilePos]];
+            _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2D _projectilePos]];
             TRACE_2("New Stage: STAGE_ATTACK_TERMINAL",_distanceToTarget2d,_currentHeightOverTarget);
         };
     };

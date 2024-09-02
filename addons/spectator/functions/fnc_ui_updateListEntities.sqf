@@ -54,7 +54,7 @@ private _entities = [true] call FUNC(getTargetEntities);
 
             // Cache the info of the group itself
             private _groupTexture = [_group] call FUNC(getGroupIcon);
-            private _groupInfo = [_group, str _group, _groupTexture, groupID _group];
+            private _groupInfo = [_group, str _group, _groupTexture, groupId _group];
 
             // Add the group to the correct side
             private _side = side _group;

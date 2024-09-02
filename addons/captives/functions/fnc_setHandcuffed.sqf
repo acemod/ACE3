@@ -52,7 +52,7 @@ if (_state) then {
     _unit setVariable [QGVAR(CargoIndex), ((vehicle _unit) getCargoIndex _unit), true];
 
     if (_unit == ACE_player) then {
-        ["captive", [false, false, false, false, false, false, false, false, false, true]] call EFUNC(common,showHud);
+        ["captive", [false, false, false, false, false, false, false, false, false, true]] call EFUNC(common,showHUD);
     };
 
     // fix anim on mission start (should work on dedicated servers)
@@ -101,7 +101,7 @@ if (_state) then {
     };
 
     if (_unit == ACE_player) then {
-        ["captive", []] call EFUNC(common,showHud); //same as showHud true;
+        ["captive", []] call EFUNC(common,showHUD); //same as showHud true;
     };
 };
 
