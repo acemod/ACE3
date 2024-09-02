@@ -32,7 +32,6 @@ exclude = [
 workshop = [
     "450814997", # CBA_A3
 ]
-mission = "addons\\arsenal\\missions\\Arsenal.VR"
 
 [hemtt.launch.spe]
 extends = "default"
