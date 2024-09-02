@@ -94,8 +94,8 @@ class CfgVehicles {
         };
     };
 
-	class SPE_MG42_Lafette_low;
-	class SPE_MG42_Lafette_low_Deployed: SPE_MG42_Lafette_low {
+    class SPE_MG42_Lafette_low;
+    class SPE_MG42_Lafette_low_Deployed: SPE_MG42_Lafette_low {
         class ace_csw {
             enabled = 1;
             proxyWeapon = "SPE_MG42_Tripod_proxy";
@@ -105,13 +105,13 @@ class CfgVehicles {
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
         };
-	};
-	class SPE_MG42_Lafette_trench_Deployed: SPE_MG42_Lafette_low_Deployed {
+    };
+    class SPE_MG42_Lafette_trench_Deployed: SPE_MG42_Lafette_low_Deployed {
         class ace_csw: ace_csw {
             disassembleWeapon = "";
             disassembleTurret = "";
         };
-	};
+    };
 
     class SPE_MG34_Lafette_low_Deployed: SPE_MG42_Lafette_low {
         class ace_csw {
@@ -123,13 +123,13 @@ class CfgVehicles {
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
         };
-	};
+    };
     class SPE_MG34_Lafette_Trench_Deployed: SPE_MG34_Lafette_low_Deployed {
         class ace_csw: ace_csw {
             disassembleWeapon = "";
             disassembleTurret = "";
         };
-	};
+    };
 
 
     class SPE_MG_Bipod_base;
@@ -146,7 +146,7 @@ class CfgVehicles {
     };
 
 
-	class SPE_MG42_Bipod: SPE_MG_Bipod_base {
+    class SPE_MG42_Bipod: SPE_MG_Bipod_base {
         class ace_csw {
             enabled = 1;
             proxyWeapon = "SPE_MG42_Tripod_proxy";
@@ -156,8 +156,8 @@ class CfgVehicles {
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
         };
-	};
-	class SPE_MG34_Bipod: SPE_MG_Bipod_base {
+    };
+    class SPE_MG34_Bipod: SPE_MG_Bipod_base {
         class ace_csw {
             enabled = 1;
             proxyWeapon = "SPE_MG34_Tripod_proxy";

@@ -1,3 +1,4 @@
+// In SPE 1.1.1, the tracer magazines don't have proper names
 class CfgMagazines {
     class SPE_50Rnd_762x63;
     class SPE_50Rnd_762x63_Tracer: SPE_50Rnd_762x63 {
