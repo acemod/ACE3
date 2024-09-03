@@ -34,4 +34,4 @@ if (isArray (missionConfigFile >> "showHUD")) exitWith {
     true,
     true,
     true
-]] call EFUNC(common,showHUD);
+]] call EFUNC(common,showHud);
