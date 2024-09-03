@@ -7,8 +7,7 @@ class CfgVehicles {
     
     // Enable Water Source by Default
     class C_IDAP_Pickup_rf;
-    class C_IDAP_Pickup_water_rf: C_IDAP_Pickup_rf
-    {
+    class C_IDAP_Pickup_water_rf: C_IDAP_Pickup_rf {
         EXGVAR(field_rations,waterSupply) = 500;
     };
     
