@@ -35,7 +35,7 @@ REARM_HOLSTER_WEAPON;
             _unit removeAction _actionID;
         };
         _actionID = _unit addAction [
-            format ["<t color='#FF0000'>%1</t>", localize ELSTRING(dragging,Drop)],
+            format ["<t color='#FF0000'>%1</t>", LELSTRING(common,Drop)],
             '(_this select 0) call FUNC(dropAmmo)',
             nil,
             20,

@@ -42,7 +42,7 @@ private _dummy = [_unit, _magazineClass] call FUNC(createDummy);
 [_dummy, _unit] call FUNC(pickUpAmmo);
 
 private _actionID = _unit addAction [
-    format ["<t color='#FF0000'>%1</t>", localize ELSTRING(dragging,Drop)],
+    format ["<t color='#FF0000'>%1</t>", LELSTRING(common,Drop)],
     '(_this select 0) call FUNC(dropAmmo)',
     nil,
     20,
