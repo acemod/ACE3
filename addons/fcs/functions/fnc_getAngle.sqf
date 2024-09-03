@@ -71,7 +71,7 @@ private _f1 = _data call _fnc_traceBullet;
 
 if (abs _f1 <= precision) exitWith {0};
 
-while {abs _f1 > precision} do {
+while {abs _f1 > VAR_PRECISION} do {
     _data set [7, _angle2];
     private _f2 = _data call _fnc_traceBullet;
 
