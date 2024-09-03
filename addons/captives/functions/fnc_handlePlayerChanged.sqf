@@ -24,7 +24,7 @@ if ((_newUnit getVariable [QGVAR(isHandcuffed), false]) || {_newUnit getVariable
     ["captive", [false, false, false, false, false, false, false, false, false, true]] call EFUNC(common,showHUD);
 } else {
     TRACE_1("Player Change (showHUD true)",_newUnit);
-    ["captive", []] call EFUNC(common,showHUD); //same as showHud true;
+    ["captive", []] call EFUNC(common,showHud); //same as showHud true;
 };
 
 //If old player was escorting, stop
