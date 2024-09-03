@@ -39,12 +39,12 @@ if (cba_events_control) then {
     ([_player] call FUNC(getSeatInfo)) params ["_role", "", "", "_compartment"];
 
     private _newIndexAngle = 45; // Controls the max angle
-    private _eyesPosASL = AGLtoASL (positionCameraToWorld [0, 0, 0]);
-    private _eyesDir = (AGLtoASL (positionCameraToWorld [0, 0, 1])) vectorDiff _eyesPosASL;
+    private _eyesPosASL = AGLToASL (positionCameraToWorld [0, 0, 0]);
+    private _eyesDir = (AGLToASL (positionCameraToWorld [0, 0, 1])) vectorDiff _eyesPosASL;
     {
         _x params ["", "", "_camLocation", "", "_screenLocation", "_maxDistance", "_compartments", "_roles"];
 
-        private _viewASL = AGLtoASL (_vehicle modelToWorldVisual _screenLocation);
+        private _viewASL = AGLToASL (_vehicle modelToWorldVisual _screenLocation);
         private _viewDiff = _viewASL vectorDiff _eyesPosASL;
         private _viewAngle = acos (_viewDiff vectorCos _eyesDir);
         #ifdef DEBUG_MODE_FULL

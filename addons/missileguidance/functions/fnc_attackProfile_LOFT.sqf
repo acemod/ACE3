@@ -32,7 +32,7 @@ if (_seekerTargetPos isEqualTo [0, 0, 0]) exitWith {
 };
 
 private _projectilePos = getPosASLVisual _projectile;
-private _distanceToTarget2d = _projectilePos distance2d _seekerTargetPos;
+private _distanceToTarget2d = _projectilePos distance2D _seekerTargetPos;
 
 private _closingRate = vectorMagnitude velocity _projectile;
 private _timeToGo = (_projectilePos distance _seekerTargetPos) / _closingRate;

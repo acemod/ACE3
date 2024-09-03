@@ -62,7 +62,7 @@ if ((_vehicle getVariable [QEGVAR(cargo,loaded), []]) isEqualTo []) exitWith {
 
     [_group] call CBA_fnc_clearWaypoints;
 
-    private _wp = _group addWaypoint [ASLtoAGL _mousePosASL, 0];
+    private _wp = _group addWaypoint [ASLToAGL _mousePosASL, 0];
     _wp setWaypointType "SCRIPTED";
     _wp setWaypointScript QPATHTOF(functions\DOUBLES(fnc,moduleCargoParadropWaypoint).sqf);
 

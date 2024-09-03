@@ -17,7 +17,7 @@
 
 params ["_enabled"];
 
-if (!hasInterface) exitwith {};
+if (!hasInterface) exitWith {};
 
 // Reset state
 {
