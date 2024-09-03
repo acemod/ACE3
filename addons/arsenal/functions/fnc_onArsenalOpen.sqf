@@ -144,7 +144,7 @@ showCommandingMenu "";
 
 GVAR(cameraView) = cameraView;
 GVAR(center) switchCamera "internal";
-[QUOTE(ADDON), [false, true, true, true, true, true, true, false, true, true]] call EFUNC(common,showHUD);
+[QUOTE(ADDON), [false, true, true, true, true, true, true, false, true, true]] call EFUNC(common,showHud);
 
 private _mouseAreaCtrl = _display displayCtrl IDC_mouseArea;
 ctrlSetFocus _mouseAreaCtrl;
