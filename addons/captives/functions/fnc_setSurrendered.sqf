@@ -82,7 +82,7 @@ if (_state) then {
     if (_unit == ACE_player) then {
         //only re-enable HUD if not handcuffed
         if !(_unit getVariable [QGVAR(isHandcuffed), false]) then {
-            ["captive", []] call EFUNC(common,showHUD); //same as showHud true;
+            ["captive", []] call EFUNC(common,showHud); //same as showHud true;
         };
     };
 
