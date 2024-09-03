@@ -24,12 +24,14 @@ if !(missionNamespace getVariable [QGVAR(addExplosionEventHandlerActive), false]
 
     // Add EH to existing projectiles and mines
     {
+        TRACE_2("existing",typeOf _x,local _x);
         // Rockets only explode on local clients
-        _projectile addEventHandler ["Explode", {
-            TRACE_1("exp",_this);
+        _x addEventHandler ["Explode", {
+            TRACE_1("exp (existing)",_this);
             [QGVAR(explosion), _this] call CBA_fnc_localEvent;
         }];
     } forEach ((8 allObjects 2) select {local _x});
+
     addMissionEventHandler ["ProjectileCreated", {
         params ["_projectile"];
         TRACE_2("pc",typeOf _projectile,local _projectile);
