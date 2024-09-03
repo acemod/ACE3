@@ -101,7 +101,7 @@ if (_state) then {
     };
 
     if (_unit == ACE_player) then {
-        ["captive", []] call EFUNC(common,showHUD); //same as showHud true;
+        ["captive", []] call EFUNC(common,showHud); //same as showHud true;
     };
 };
 
