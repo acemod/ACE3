@@ -13,9 +13,7 @@ GVAR(locations) = [];
 // Custom deploy handlers
 GVAR(deployHandlers) = [];
 
-GVAR(fortifyTools) = (QUOTE(getNumber (_x >> QQGVAR(fortifyTool)) > 0) configClasses (configFile >> "CfgWeapons") apply {configName _x});
-GVAR(fortifyTools) append (QUOTE(getNumber (_x >> QQGVAR(fortifyTool)) > 0) configClasses (configFile >> "CfgVehicles") apply {configName _x});
-TRACE_1("",_fortifyTools);
+GVAR(fortifyTools) = call (uiNamespace getVariable QGVAR(fortifyTools));
 
 #include "initSettings.inc.sqf"
 
