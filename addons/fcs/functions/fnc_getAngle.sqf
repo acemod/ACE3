@@ -21,7 +21,7 @@
  * Public: No
  */
 
-#define precision 0.1
+#define VAR_PRECISION 0.1
 
 params ["_distance", "_angleTarget", "_maxElev", "_initSpeed", "_airFriction", "_timeToLive", "_simulationStep"];
 
