@@ -12,8 +12,7 @@ class CfgVehicles {
     };
     
     class O_Truck_03_fuel_F;
-    class C_Truck_03_water_rf: O_Truck_03_fuel_F
-    {
+    class C_Truck_03_water_rf: O_Truck_03_fuel_F {
         EXGVAR(field_rations,waterSupply) = 10000;
         EXGVAR(field_rations,offset)[] = {0, -5.05, -0.3}; // Rear
         //EXGVAR(field_rations,offset)[] = {1.25,-1.59,-0.58}; // Right Side Latch
