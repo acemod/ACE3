@@ -150,7 +150,7 @@
     "LIST",
     [LSTRING(LocationEpinephrine_DisplayName), LSTRING(LocationEpinephrine_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
+    [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
     true
 ] call CBA_fnc_addSetting;
 
