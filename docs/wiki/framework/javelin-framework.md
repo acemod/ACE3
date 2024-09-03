@@ -18,7 +18,7 @@ version:
 class CfgWeapons {
     class MyLauncher {
         ace_javelin_enabled = 1;  // Enable Javelin-style locking (0-disabled, 1-enabled)
-        weaponInfoType = "ACE_RscOptics_javelin";  // Inteface
+        weaponInfoType = "ACE_RscOptics_javelin";  // Interface
         modelOptics = "\z\ace\addons\javelin\data\reticle_titan.p3d";  // Optics model
         canLock = 0;  // Disable vanilla locking (0-disabled, 1-enabled)
         lockingTargetSound[] = {"", 0, 1};  // Locking sound
