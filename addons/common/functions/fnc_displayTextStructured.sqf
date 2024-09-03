@@ -30,7 +30,7 @@ if (typeName _text != "TEXT") then {
                 if (_x isEqualType "" && {isLocalized _x}) then {
                     _text set [_foreachIndex, localize _x];
                 };
-            }forEach _text;
+            } forEach _text;
             _text = format _text;
         };
     };
