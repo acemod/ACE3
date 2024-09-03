@@ -6,4 +6,4 @@ private _fortifyTools = (QUOTE(getNumber (_x >> QQGVAR(fortifyTool)) > 0) config
 _fortifyTools append    (QUOTE(getNumber (_x >> QQGVAR(fortifyTool)) > 0) configClasses (configFile >> "CfgVehicles") apply {configName _x});
 TRACE_1("",_fortifyTools);
 
-uiNamespace setVariable [QGVAR(fortifyTools), compileFinal str _fortifyTools];
+uiNamespace setVariable [QGVAR(fortifyTools), compileFinal (_fortifyTools createHashMapFromArray [])];
