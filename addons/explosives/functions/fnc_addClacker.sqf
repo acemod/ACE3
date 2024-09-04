@@ -34,7 +34,7 @@ private _detonators = [_unit] call FUNC(getDetonators);
 } forEach _requiredItems;
 
 if !(_hasRequired) exitWith {};
-private _config = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> configName _config;
+private _config = configFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> configName _config;
 
 private _clacker = _unit getVariable [QGVAR(Clackers), []];
 GVAR(PlacedCount) = GVAR(PlacedCount) + 1;

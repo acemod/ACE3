@@ -53,7 +53,7 @@ private _fnc_hideEverything = {
     // Hide the stats box
     _statsBoxCtrl ctrlSetPosition [
         (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-        safezoneY + 1.8 * GRID_H,
+        safeZoneY + 1.8 * GRID_H,
         0,
         0
     ];
@@ -62,7 +62,7 @@ private _fnc_hideEverything = {
     // Move action display
     private _ctrl = _display displayCtrl IDC_actionsBox;
     private _pos = ctrlPosition _ctrl;
-    _pos set [1, safezoneY + 1.8 * GRID_H];
+    _pos set [1, safeZoneY + 1.8 * GRID_H];
     _ctrl ctrlSetPosition _pos;
     _ctrl ctrlCommit 0;
 
@@ -141,7 +141,7 @@ private _fnc_handleStats = {
         if (_showText) then {
             _textStatementResult = [_configEntry, _itemCfg] call _textStatement;
 
-            if !(_textStatementResult isEqualtype "") then {
+            if !(_textStatementResult isEqualType "") then {
                 _textStatementResult = str _textStatementResult;
             };
 
@@ -168,7 +168,7 @@ private _fnc_handleStats = {
     private _height = 10 * _statsCount + 5;
     _statsBoxCtrl ctrlSetPosition [
         (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-        safezoneY + 1.8 * GRID_H,
+        safeZoneY + 1.8 * GRID_H,
         47 * GRID_W,
         _height * GRID_H
     ];
@@ -177,7 +177,7 @@ private _fnc_handleStats = {
     // Move the actions box
     private _ctrl = _display displayCtrl IDC_actionsBox;
     private _pos = ctrlPosition _ctrl;
-    _pos set [1, safezoneY + (_height + 3.6) * GRID_H];
+    _pos set [1, safeZoneY + (_height + 3.6) * GRID_H];
     _ctrl ctrlSetPosition _pos;
     _ctrl ctrlCommit 0;
 

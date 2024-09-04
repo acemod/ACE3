@@ -36,7 +36,7 @@ GVAR(loadoutAction) = [ // create action
 [QGVAR(setPylonLoadOutEvent), {
     params ["_aircraft", "_pylonIndex", "_pylon", "_turret", "_weaponToRemove"];
     TRACE_5("setPylonLoadOutEvent",_aircraft,_pylonIndex,_pylon,_turret,_weaponToRemove);
-    _aircraft setPylonLoadOut [_pylonIndex, _pylon, false, _turret];
+    _aircraft setPylonLoadout [_pylonIndex, _pylon, false, _turret];
     if (_weaponToRemove != "") then {
         {
             if (_aircraft turretLocal _x) then {
