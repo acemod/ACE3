@@ -27,7 +27,7 @@ params [
 TRACE_3("addBlackListClass",_ammo,_blacklistFrag,_blacklistSpall);
 
 if (_ammo isEqualTo "" || {!isClass (configFile >> "CfgAmmo" >> _ammo)}) exitWith {
-    INFO_1("Invalid ammo class",_ammo);
+    INFO_1("Invalid ammo class [%1]",_ammo);
     false
 };
 
