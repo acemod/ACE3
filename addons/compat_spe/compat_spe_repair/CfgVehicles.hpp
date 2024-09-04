@@ -30,6 +30,20 @@ class CfgVehicles {
             };
         };
     };
+    class SPE_CCKW_353_Repair: SPE_CCKW_353_Base {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class spare_wheel_hide_source: spare_wheel_hide_source {
+                positions[] = {{-0.9, 0.43, -0.75}};
+            };
+        };
+    };
+    class SPE_CCKW_353_Fuel: SPE_CCKW_353_Base {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class spare_wheel_hide_source: spare_wheel_hide_source {
+                positions[] = {{-0.9, -0.2, -0.7}};
+            };
+        };
+    };
 
     class SPE_R200_base: SPE_Car_base {
         class EGVAR(interaction,anims) {

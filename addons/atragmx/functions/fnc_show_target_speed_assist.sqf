@@ -22,7 +22,7 @@ GVAR(showTargetSpeedAssist) = _this;
 if (_this) then {
     ctrlSetFocus ((uiNamespace getVariable "ATragMX_Display") displayCtrl 8012);
 
-    ctrlSetText [8004, Str(Round((GVAR(targetRange) select GVAR(currentTarget))))];
+    ctrlSetText [8004, str(round((GVAR(targetRange) select GVAR(currentTarget))))];
 
     if (GVAR(currentUnit) == 1) then {
         ctrlSetText [8008, "Yards"];

@@ -1932,5 +1932,22 @@
             <Russian>Влияет на величину колебания прицела оружия при его развертывании.</Russian>
             <Spanish>Afecta la cantidad de oscilación del arma cuando se está desplegado.</Spanish>
         </Key>
+        <Key ID="STR_ACE_Common_Drop">
+            <English>Release</English>
+            <Russian>Отпустить</Russian>
+            <Spanish>Soltar</Spanish>
+            <Polish>Puść</Polish>
+            <Czech>Položit</Czech>
+            <French>Lâcher</French>
+            <German>Loslassen</German>
+            <Portuguese>Soltar</Portuguese>
+            <Italian>Lascia</Italian>
+            <Hungarian>Elengedés</Hungarian>
+            <Japanese>離す</Japanese>
+            <Korean>놓기</Korean>
+            <Chinese>放開</Chinese>
+            <Chinesesimp>放开</Chinesesimp>
+            <Turkish>Bırak</Turkish>
+        </Key>
     </Package>
 </Project>

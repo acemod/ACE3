@@ -44,7 +44,7 @@ _attackProfileStateParams set [0, _startingStage];
 _attackProfileStateParams set [1, _configLaunchHeightClear];
 _attackProfileStateParams set [2, [
     _projectilePos select 2,
-    _seekerTargetPos distance2d _projectilePos
+    _seekerTargetPos distance2D _projectilePos
 ]];
 
 TRACE_1("new shot settings",_attackProfileStateParams);
