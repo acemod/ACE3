@@ -23,7 +23,7 @@ TRACE_3("params",_receiver,_giver,_item);
 
 if ((_receiver != ace_player) && {_giver != ace_player}) exitWith {};
 
-private _config = ConfigFile >> "CfgWeapons" >> _item;
+private _config = configFile >> "CfgWeapons" >> _item;
 if (isClass _config && {getNumber(_config >> QGVAR(Detonator)) == 1}) then {
     private _clackerItems = _giver getVariable [QGVAR(Clackers), []];
     _receiver setVariable [QGVAR(Clackers), (_receiver getVariable [QGVAR(Clackers), []]) + _clackerItems, true];

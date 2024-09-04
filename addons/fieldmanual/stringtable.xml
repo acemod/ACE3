@@ -169,6 +169,7 @@
             <Japanese>%3IV 輸液%4は失われた血液を回復します。血液、血漿、生理食塩水は機能的には同じです。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%13%4] または [%3%14%4] を使って四肢を選択します。&lt;br/&gt;%2希望の%3IV 輸液%4の種類を選択して、血液量を復元します。</Japanese>
             <Russian>%%3Внутривенные жидкости%4восстанавливают потерянный объем крови. Кровь, плазма и физраствор функционально идентичны.&lt;br/&gt;&lt;br/&gt;%3 Использование:%4&lt;br/&gt;%2 Используйте [%3%13%4] или [%3%14%4] и выберите добавку.&lt;br/&gt;%2 Восстановите объем крови выбрав желаемый %4тип %3жидкости</Russian>
             <Spanish>Los %3Fluidos IV%4 restauran el volumen de sangre. Sangre, Plasma, y Salino funcionan de manera similar.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Uso [%3%13%4] o [%3%14%4] y seleccionar una extremidad.&lt;br/&gt;%2Restaura el volumen de sangre seleccionando el tipo de %3Fluido IV%4 elegido.</Spanish>
+            <French>%3IV fluides%4 restaurer le volume sanguin perdu. Sang, Plasma, and Saline fonctionnent de la même manière.&lt;br/&gt;&lt;br/&gt;%3Utilisation:%4&lt;br/&gt;%2Utiliser [%3%13%4] ou [%3%14%4] et sélectionner un appendice.&lt;br/&gt;%2Restaurer le volume sanguin en sélectionnant le volume désiré %3IV Fluide%4 type.</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Medical_Treatment_Epinephrine_ShortName">
             <English>Increase Heart Rate | Wake Up Faster</English>

@@ -107,7 +107,7 @@ class ACE_gui_editBase {
     style = "0x00 + 0x40";
     font = "RobotoCondensed";
     shadow = 2;
-    sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+    sizeEx = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 1)";
     colorDisabled[] = {1, 1, 1, 0.25};
 };
 
@@ -187,10 +187,10 @@ class ACE_gui_RscProgress {
     colorFrame[] = {1, 1, 1, 0.7};
     colorBar[] = {1, 1, 1, 0.7};
     texture = "#(argb,8,8,3)color(1,1,1,0.7)";
-    x = "1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-    y = "10 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-    w = "38 * (((safezoneW / safezoneH) min 1.2) / 40)";
-    h = "0.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+    x = "1 * (((safeZoneW / safeZoneH) min 1.2) / 40) + (safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2))/2)";
+    y = "10 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2)";
+    w = "38 * (((safeZoneW / safeZoneH) min 1.2) / 40)";
+    h = "0.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
 };
 
 class ACE_gui_staticBase {
@@ -384,9 +384,9 @@ class ACE_gui_comboBoxBase: RscCombo {
 class ACE_gui_mapBase {
     moveOnEdges = 1;
     x = "SafeZoneXAbs";
-    y = "SafeZoneY + 1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+    y = "SafeZoneY + 1.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
     w = "SafeZoneWAbs";
-    h = "SafeZoneH - 1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+    h = "SafeZoneH - 1.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
     type = 100; // Use 100 to hide markers
     style = 48;
     shadow = 0;
@@ -440,15 +440,15 @@ class ACE_gui_mapBase {
     onMouseButtonDblClick = "";
 
     fontLabel = "RobotoCondensed";
-    sizeExLabel = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+    sizeExLabel = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 0.8)";
     fontGrid = "TahomaB";
     sizeExGrid = 0.02;
     fontUnits = "TahomaB";
-    sizeExUnits = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+    sizeExUnits = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 0.8)";
     fontNames = "RobotoCondensed";
-    sizeExNames = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8) * 2";
+    sizeExNames = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 0.8) * 2";
     fontInfo = "RobotoCondensed";
-    sizeExInfo = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+    sizeExInfo = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 0.8)";
     fontLevel = "TahomaB";
     sizeExLevel = 0.02;
     text = "#(argb,8,8,3)color(1,1,1,1)";
@@ -458,12 +458,12 @@ class ACE_gui_mapBase {
         size = 50;
     };
     class Legend {
-        x = "SafeZoneX + (((safezoneW / safezoneH) min 1.2) / 40)";
-        y = "SafeZoneY + safezoneH - 4.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-        w = "10 * (((safezoneW / safezoneH) min 1.2) / 40)";
-        h = "3.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+        x = "SafeZoneX + (((safeZoneW / safeZoneH) min 1.2) / 40)";
+        y = "SafeZoneY + safeZoneH - 4.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
+        w = "10 * (((safeZoneW / safeZoneH) min 1.2) / 40)";
+        h = "3.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
         font = "RobotoCondensed";
-        sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.8)";
+        sizeEx = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 0.8)";
         colorBackground[] = {1, 1, 1, 0.5};
         color[] = {0, 0, 0, 1};
     };

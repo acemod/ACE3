@@ -7,6 +7,14 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(remoteTeamManagement), "CHECKBOX",
+    [LSTRING(remoteTeamManagement_DisplayName), LSTRING(remoteTeamManagement_Description)],
+    format ["ACE %1", LLSTRING(DisplayName)],
+    true,
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(enableMagazinePassing), "CHECKBOX",
     LSTRING(PassMagazineSetting),
     format ["ACE %1", LLSTRING(DisplayName)],

@@ -25,14 +25,14 @@ private _itemsUsedBy = [];
     if (_x isEqualType []) then {
         {
             private _itemUsedInfo = [_unit, _x] call FUNC(useItem);
-            if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
+            if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushBack [(_itemUsedInfo select 1), _x]};
         } forEach _x;
     };
 
     // handle required item
     if (_x isEqualType "") then {
         private _itemUsedInfo = [_unit, _x] call FUNC(useItem);
-        if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushback [(_itemUsedInfo select 1), _x]};
+        if (_itemUsedInfo select 0) exitWith { _itemsUsedBy pushBack [(_itemUsedInfo select 1), _x]};
     };
 } forEach _items;
 
