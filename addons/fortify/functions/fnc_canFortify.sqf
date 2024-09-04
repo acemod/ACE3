@@ -23,7 +23,7 @@ params ["_player", ["_cost", 0]];
     private _items = _player call EFUNC(common,uniqueItems);
     _items append weapons _player;
     _items pushBack backpack _player;
-    GVAR(fortifyTools) findIf {_x in _items} != -1
+    GVAR(fortifyTools) findAny _items != -1
 } && {
     private _budget = [side group _player] call FUNC(getBudget);
     ((_budget == -1) || {_budget >= _cost})
