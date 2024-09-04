@@ -30,9 +30,9 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
         "HitPart", {
             params ["_projectile", "_hitObject", "", "_posASL", "_velocity"];
 
-            // starting v2.18 it may be faster to use the instigator EH parameter, the same as the second entry shotParents, to recreate _shotParent
+            // get rid of _shot parents starting after v2.18 is released and instead use the instigator EH parameter
             // The "explode" EH does not get the same parameter
-            private _shotParents = getShotParents _projectile;
+            private _instigator = (getShotParents _projectile)#1;
             private _ammo = typeOf _projectile;
 
             /*
@@ -46,7 +46,7 @@ if (GVAR(spallEnabled) && {_ammo call FUNC(shouldSpall)}) then {
                     if (CBA_missionTime < _shotParents#1 getVariable [QGVAR(nextSpallEvent), -1]) exitWith {};
                     _this call FUNC(doSpall);
                 },
-                [_hitObject, _ammo, _projectile, _posASL, _velocity, [objNull, _shotParents#1]]
+                [_hitObject, _ammo, _projectile, _posASL, _velocity, [objNull, _instigator]]
             ] call CBA_fnc_execNextFrame;
         }
     ];
