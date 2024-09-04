@@ -62,20 +62,21 @@ if (GVAR(reflectionsEnabled) || GVAR(enabled) && _ammo call FUNC(shouldFrag)) th
             if (GVAR(reflectionsEnabled)) then {
                 [_posASL, _ammo] call FUNC(doReflections);
             };
+            if (GVAR(enabled)) then {
+                private _shotParents = getShotParents _projectile;
+                private _ammo = typeOf _projectile;
 
-            private _shotParents = getShotParents _projectile;
-            private _ammo = typeOf _projectile;
+                // only let a unit make a frag event once per second
+                private _instigator = _shotParents#1;
+                if (CBA_missionTime < (_instigator getVariable [QGVAR(nextFragEvent), -1])) exitWith {};
+                _instigator setVariable [QGVAR(nextFragEvent), CBA_missionTime + ACE_FRAG_FRAG_UNIT_HOLDOFF];
 
-            // only let a unit make a frag event once per second
-            private _instigator = _shotParents#1;
-            if (CBA_missionTime < (_instigator getVariable [QGVAR(nextFragEvent), -1])) exitWith {};
-            _instigator setVariable [QGVAR(nextFragEvent), CBA_missionTime + ACE_FRAG_FRAG_UNIT_HOLDOFF];
-
-            // Wait a frame to make sure it doesn't target the dead
-            [
-                { [QGVAR(frag_eh), _this] call CBA_fnc_serverEvent; },
-                [_posASL, _ammo, [objNull, _instigator]]
-            ] call CBA_fnc_execNextFrame;
+                // Wait a frame to make sure it doesn't target the dead
+                [
+                    { [QGVAR(frag_eh), _this] call CBA_fnc_serverEvent; },
+                    [_posASL, _ammo, [objNull, _instigator]]
+                ] call CBA_fnc_execNextFrame;
+            };
         }
     ];
     _projectile setVariable [QGVAR(explodeEventHandler), _explodeEventHandler];
