@@ -31,8 +31,8 @@ private _minDistance = 1000;
 {
     _x params ["_xObject", "_xItemName"];
 
-    if (((getPos _unit) distance2d (getPos _xObject)) < _minDistance) then {
-        _minDistance = ((getPos _unit) distance2d (getPos _xObject));
+    if (((getPos _unit) distance2D (getPos _xObject)) < _minDistance) then {
+        _minDistance = ((getPos _unit) distance2D (getPos _xObject));
         _attachedObject = _xObject;
         _itemName = _xItemName;
         _attachedIndex = _forEachIndex;

@@ -35,7 +35,7 @@ if (_closeNum isEqualTo 1) then {
         private _newestMarkerDist = 1e10;
 
         {
-            private _distX = GVAR(currentMarkerPosition) distance2d (getMarkerPos _x);
+            private _distX = GVAR(currentMarkerPosition) distance2D (getMarkerPos _x);
             if (_distX < _newestMarkerDist) then {
                 _newestMarker = _x;
                 _newestMarkerDist = _distX;

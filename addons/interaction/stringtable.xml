@@ -585,10 +585,12 @@
         <Key ID="STR_ACE_Interaction_remoteTeamManagement_DisplayName">
             <English>Remote Squad Management</English>
             <French>Gestion à distance de l'escouade</French>
+            <Russian>Дистанционное управление отрядом</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_remoteTeamManagement_Description">
             <English>Allow dropping and changing team colors of any unit in player's squad</English>
             <French>Permettre d'abandonner et de changer les couleurs de n'importe quelle unité de l'escouade du joueur</French>
+            <Russian>Позволяет сбрасывать и менять командные цвета любого подразделения в отряде игрока</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_Squad">
             <English>Squad</English>
@@ -1370,16 +1372,19 @@
             <English>Interact With Enemy Crew</English>
             <Japanese>敵乗員がいる状態でのインタラクト</Japanese>
             <French>Interagir avec l'équipage ennemi</French>
+            <Russian>Взаимодействие с вражеским экипажем</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_Description">
             <English>Limit some interactions on vehicles crewed by enemy factions.</English>
             <Japanese>敵性力の乗員が乗っている車両へのインタラクションを一部制限します。</Japanese>
             <French>Limiter certaines interactions sur les véhicules dont l'équipage appartient à des factions ennemies.</French>
+            <Russian>Ограничьте некоторые взаимодействия на транспортных средствах, управляемых вражеской стороной.</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_allowCSW">
             <English>Allow for Static Weapons</English>
             <Japanese>固定火器への許可</Japanese>
             <French>Autoriser les armes statiques</French>
+            <Russian>Разрешить использование статического оружия</Russian>
         </Key>
     </Package>
 </Project>

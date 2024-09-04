@@ -48,10 +48,10 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
     {
         if (_doesIntersect) exitWith {};
         private _startingPosShifted = _startingPosition vectorAdd _x;
-        private _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLtoASL _startingPosShifted};
+        private _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLToASL _startingPosShifted};
         {
             private _endPosShifted = _endPosTest vectorAdd _x;
-            private _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
+            private _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLToASL _endPosShifted};
 
             #ifdef DRAW_ATTACH_SCAN
                 [{

@@ -50,7 +50,7 @@ if (!_doNotDropAmmo) then {
         if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
             _holder = _x;
         };
-    } forEach ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
+    } forEach ((getPos _target) nearObjects [DISARM_CONTAINER, 3]);
 };
 
 //Create a new weapon holder
@@ -101,7 +101,7 @@ if !([_targetMagazinesStart, _targetMagazinesEnd, _holderMagazinesStart, _holder
 };
 
 //Remove Items, Assigned Items and NVG
-private _holderItemsStart = getitemCargo _holder;
+private _holderItemsStart = getItemCargo _holder;
 private _targetItemsStart = (assignedItems _target) + (items _target) - (weapons _target);
 if ((headgear _target) != "") then {_targetItemsStart pushBack (headgear _target);};
 if ((goggles _target) != "") then {_targetItemsStart pushBack (goggles _target);};
@@ -131,7 +131,7 @@ private _addToCrateCount = [];
     _holder addItemCargoGlobal [(_addToCrateClassnames select _forEachIndex), (_addToCrateCount select _forEachIndex)];
 } forEach _addToCrateClassnames;
 
-private _holderItemsEnd = getitemCargo _holder;
+private _holderItemsEnd = getItemCargo _holder;
 private _targetItemsEnd = (assignedItems _target) + (items _target) - (weapons _target);
 if ((headgear _target) != "") then {_targetItemsEnd pushBack (headgear _target);};
 if ((goggles _target) != "") then {_targetItemsEnd pushBack (goggles _target);};
@@ -172,7 +172,7 @@ if (_holderIsEmpty) then {
 
     private _needToRemoveWeapon = ({_x in _listOfItemsToRemove} count (weapons _target)) > 0;
     private _needToRemoveMagazines = ({_x in _listOfItemsToRemove} count (magazines _target)) > 0;
-    private _needToRemoveBackpack = ((backPack _target) != "") && {(backPack _target) in _listOfItemsToRemove};
+    private _needToRemoveBackpack = ((backpack _target) != "") && {(backpack _target) in _listOfItemsToRemove};
     private _needToRemoveVest = ((vest _target) != "") && {(vest _target) in _listOfItemsToRemove};
     private _needToRemoveUniform = ((uniform _target) != "") && {(uniform _target) in _listOfItemsToRemove};
 
@@ -192,7 +192,7 @@ if (_holderIsEmpty) then {
         } forEach (magazines _target);
 
         //Drop backpack (Keeps variables for ACRE/TFR)
-        if (_needToRemoveBackpack) then {_target action ["DropBag", _holder, (backPack _target)];};
+        if (_needToRemoveBackpack) then {_target action ["DropBag", _holder, (backpack _target)];};
     } else {
         [_pfID] call CBA_fnc_removePerFrameHandler;
 

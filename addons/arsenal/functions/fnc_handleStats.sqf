@@ -55,7 +55,7 @@ private _fnc_hideEverything = {
     // Hide the stats box
     _statsBoxCtrl ctrlSetPosition [
         (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-        safezoneY + 1.8 * GRID_H,
+        safeZoneY + 1.8 * GRID_H,
         0,
         0
     ];
@@ -64,7 +64,7 @@ private _fnc_hideEverything = {
     // Move action display
     private _ctrl = _display displayCtrl IDC_actionsBox;
     private _pos = ctrlPosition _ctrl;
-    _pos set [1, safezoneY + 1.8 * GRID_H];
+    _pos set [1, safeZoneY + 1.8 * GRID_H];
     _ctrl ctrlSetPosition _pos;
     _ctrl ctrlCommit 0;
 
@@ -206,7 +206,7 @@ private _fnc_handleStats = {
     ctrlPosition _lastCtrl params ["", "_lastPosY", "", "_lastPosH"];
     _statsBoxCtrl ctrlSetPosition [
         (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-        safezoneY + 1.8 * GRID_H,
+        safeZoneY + 1.8 * GRID_H,
         47 * GRID_W,
         _lastPosY + _lastPosH + GRID_H
     ];
