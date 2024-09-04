@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Lambda.Tiger
+ * Author: nou, jaynus, Lambda.Tiger, PabstMirror
  * Add "Exploded" eventhandler to a projectile if it will produce fragments
  * and a "HitPart" eventhandler if it will produce spall.
  *
