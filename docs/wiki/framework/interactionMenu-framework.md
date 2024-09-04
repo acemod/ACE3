@@ -27,6 +27,8 @@ The simplest action is just a condition and statement. The code to these are pas
 
 ## 2. Adding actions via config
 
+### 2.1 Class interactions
+
 Example:
 
 ```cpp
@@ -94,6 +96,42 @@ Interaction exceptions are defined by several components:
 |  | `"isNotOnLadder"` | Can interact while climbing a ladder |
 | `refuel` | `"isNotRefueling"` | Can interact while carrying refueling nozzle |
 | `sitting` | `"isNotSitting"` | Can interact while sitting in a chair |
+
+### 2.2 Vehicle interactions based on animations
+
+Some classes (usually vehicles) might have `AnimationSources` defined, which can hide/show e.g. spare wheels, ammo boxes, tools, doors etc. ACE offers a framework to be able to interact with those animations, which would allow players to e.g. remove the spare wheel from the vehicle, by hiding the spare wheel and spawning in a wheel object.
+
+{% raw %}
+```cpp
+class Car_F;
+class Offroad_01_base_F: Car_F {
+    class ace_interaction_anims {
+        class HideBackpacks { // Class name of the animation (has to be defined in 'AnimationSources' of the class, with scope > 0)
+            phase = 0; // The phase which is set after the action has successfully completed (default: 1)
+            // At least 1 selection or position must be defined, otherwise an error will be raised and the interaction not added
+            // Both selections[] and positions[] can be used at the same time
+            selections[] = {"vhc_bags"}; // Selections where to have the interaction appear, equivalent to "_target selectionPosition 'vhc_bags'" if put in positions[] (default: [])
+            positions[] = {{-1.15, -1.15, -0.2}, "_target selectionPosition ['vhc_bags', 'FireGeometry', 'AveragePoint']"}; // Positions where to have the interaction appear. It can either be model coordinates (in the array format) or a string containing code which returns model coordinates (default: [])
+            items[] = {"B_TacticalPack_blk", "ACE_Wheel", "ACE_EntrenchingTool"}; // Items to spawn in when the progress bar finishes successfully (default: [])
+            name = "$STR_a3_cfgvehicleclasses_backpacks0"; // Interaction name to display when interacting with the object (default: localised version of "Take it off")
+            icon = "\A3\ui_f\data\igui\cfg\actions\take_ca.paa"; // Interaction icon to display when interacting with the object (default: "\A3\ui_f\data\igui\cfg\actions\take_ca.paa")
+            text = "Removing backpacks..."; // Text to display in the progress bar (default: "")
+            duration = 10; // Sets the progress bar duration (default: 10 seconds)
+            distance = 2; // Sets at which distance the interactions can be accessed (default: 2)
+            enabled = 1; // Enables (1) or disables (0) the interaction (default: 1)
+        };
+    };
+};
+```
+{% endraw %}
+
+Individual animations can have the items they spawn in changed dynamically using a variable. If you set the items to `[]`, it will disable the interaction from completing (the progress bar will play, but once it reaches the end, it will stop and fail):
+```sqf
+_target setVariable [format ["ace_interaction_animsItems_%1", _anim], ["B_TacticalPack_blk"], true];
+
+// To disable the interaction from the example above
+_target setVariable ["ace_interaction_animsItems_HideBackpacks", [], true];
+```
 
 ## 3. Adding actions via scripts
 

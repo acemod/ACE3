@@ -8,16 +8,16 @@ class GVAR(menu) {
     class controlsBackground {
         class HeaderBackground: ACE_gui_backgroundBase {
             idc = -1;
-            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-            x = "13 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            y = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-            w = "13 * (((safezoneW / safezoneH) min 1.2) / 40)";
-            h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            SizeEx = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 1)";
+            x = "13 * (((safeZoneW / safeZoneH) min 1.2) / 40) + (safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2))/2)";
+            y = "1 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2)";
+            w = "13 * (((safeZoneW / safeZoneH) min 1.2) / 40)";
+            h = "1 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
             text = "#(argb,8,8,3)color(0,0,0,0)";
         };
         class CenterBackground: HeaderBackground {
-            y = "2.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-            h = "14.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            y = "2.1 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2)";
+            h = "14.2 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
             text = "#(argb,8,8,3)color(0,0,0,0.8)";
             colorText[] = {0, 0, 0, "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             colorBackground[] = {0, 0, 0, "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
@@ -28,36 +28,36 @@ class GVAR(menu) {
         class HeaderName {
             idc = 1;
             type = CT_STATIC;
-            x = "13 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            y = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-            w = "13 * (((safezoneW / safezoneH) min 1.2) / 40)";
-            h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            x = "13 * (((safeZoneW / safeZoneH) min 1.2) / 40) + (safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2))/2)";
+            y = "1 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2)";
+            w = "13 * (((safeZoneW / safeZoneH) min 1.2) / 40)";
+            h = "1 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
             style = QUOTE(ST_LEFT + ST_SHADOW);
             font = "RobotoCondensed";
-            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+            SizeEx = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 1)";
             colorText[] = {0.95, 0.95, 0.95, 0.75};
             colorBackground[] = {"(profilenamespace getVariable ['GUI_BCG_RGB_R',0.69])","(profilenamespace getVariable ['GUI_BCG_RGB_G',0.75])","(profilenamespace getVariable ['GUI_BCG_RGB_B',0.5])", "(profilenamespace getVariable ['GUI_BCG_RGB_A',0.9])"};
             text = CSTRING(cargoMenu);
         };
         class SubHeader: HeaderName {
             idc = 2;
-            x = "13 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            y = "2.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-            w = "13 * (((safezoneW / safezoneH) min 1.2) / 40)";
-            h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            x = "13 * (((safeZoneW / safeZoneH) min 1.2) / 40) + (safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2))/2)";
+            y = "2.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2)";
+            w = "13 * (((safeZoneW / safeZoneH) min 1.2) / 40)";
+            h = "1 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
             style = ST_CENTER;
             colorText[] = {1, 1, 1, 0.9};
             colorBackground[] = {0, 0, 0, 0};
-            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1.2)";
+            SizeEx = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 1.2)";
             text = "";
         };
         class cargoList: ACE_gui_listBoxBase {
             idc = 100;
-            x = "13.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            y = "4 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-            w = "12.8 * (((safezoneW / safezoneH) min 1.2) / 40)";
-            h = "10 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
+            x = "13.1 * (((safeZoneW / safeZoneH) min 1.2) / 40) + (safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2))/2)";
+            y = "4 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2)";
+            w = "12.8 * (((safeZoneW / safeZoneH) min 1.2) / 40)";
+            h = "10 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
+            SizeEx = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 0.7)";
             rowHeight = 0.03;
             colorBackground[] = {0, 0, 0, 0.2};
             colorText[] = {1, 1, 1, 1.0};
@@ -70,12 +70,12 @@ class GVAR(menu) {
         class btnCancel: ACE_gui_buttonBase {
             text = "$STR_DISP_CANCEL";
             idc = 11;
-            x = "13.1 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
-            y = "14.1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
-            w = "6 * (((safezoneW / safezoneH) min 1.2) / 40)";
-            h = "1 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            size = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
-            SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 0.7)";
+            x = "13.1 * (((safeZoneW / safeZoneH) min 1.2) / 40) + (safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2))/2)";
+            y = "14.1 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2)";
+            w = "6 * (((safeZoneW / safeZoneH) min 1.2) / 40)";
+            h = "1 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
+            size = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 1)";
+            SizeEx = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 0.7)";
             animTextureNormal = "#(argb,8,8,3)color(0,0,0,0.9)";
             animTextureDisabled = "#(argb,8,8,3)color(0,0,0,0.8)";
             animTextureOver = "#(argb,8,8,3)color(1,1,1,1)";
@@ -96,13 +96,13 @@ class GVAR(menu) {
         class btnUnload: btnCancel {
             text = CSTRING(unloadObject);
             idc = 12;
-            x = "19.9 * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2)";
+            x = "19.9 * (((safeZoneW / safeZoneH) min 1.2) / 40) + (safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2))/2)";
             action = QUOTE(ACE_player call FUNC(startUnload));
         };
         class btnPlace: btnUnload {
             text = CSTRING(deployObject);
             idc = 13;
-            y = "15.2 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2)";
+            y = "15.2 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2)";
             action = QUOTE(ACE_player call FUNC(startDeploy));
             colorDisabled[] = {0.25, 0.25, 0.25, 1};
         };

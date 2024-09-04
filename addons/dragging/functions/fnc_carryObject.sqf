@@ -48,9 +48,6 @@ if (_target isKindOf "CAManBase") then {
 
 [QEGVAR(common,setDir), [_target, _direction], _target] call CBA_fnc_targetEvent;
 
-_unit setVariable [QGVAR(isCarrying), true, true];
-_unit setVariable [QGVAR(carriedObject), _target, true];
-
 // Add drop action
 _unit setVariable [QGVAR(releaseActionID), [
     _unit, "DefaultAction",

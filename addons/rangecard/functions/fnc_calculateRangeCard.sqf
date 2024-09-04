@@ -65,7 +65,7 @@ private _n = 0;
 private _range = 0;
 
 if (_useABConfig) then {
-    _bc = parseNumber(("ace_advanced_ballistics" callExtension format["atmosphericCorrection:%1:%2:%3:%4:%5", _bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel]));
+    _bc = parseNumber (("ace" callExtension ["ballistics:atmospheric_correction", [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel]]) select 0);
 };
 
 private _airFrictionCoef = 1;
@@ -83,8 +83,8 @@ _bulletPos set [1, 0];
 _bulletPos set [2, -(_boreHeight / 100)];
 
 _bulletVelocity set [0, 0];
-_bulletVelocity set [1, Cos(_scopeBaseAngle) * _muzzleVelocity];
-_bulletVelocity set [2, Sin(_scopeBaseAngle) * _muzzleVelocity];
+_bulletVelocity set [1, cos(_scopeBaseAngle) * _muzzleVelocity];
+_bulletVelocity set [2, sin(_scopeBaseAngle) * _muzzleVelocity];
 
 while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _bulletSpeed = vectorMagnitude _bulletVelocity;
@@ -99,7 +99,7 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _trueSpeed = vectorMagnitude _trueVelocity;
 
     if (_useABConfig) then {
-        private _drag = parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3:%4", _dragModel, _bc, _trueSpeed, _temperature]));
+        private _drag = parseNumber (("ace" callExtension ["ballistics:retard", [_dragModel, _bc, _trueSpeed, _temperature]]) select 0);
         _bulletAccel = (vectorNormalized _trueVelocity) vectorMultiply (-1 * _drag);
     } else {
         _bulletAccel = _trueVelocity vectorMultiply (_trueSpeed * _airFriction * _airFrictionCoef);
@@ -123,21 +123,21 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
             _tz = (_lastBulletPos select 2) + (_range - (_lastBulletPos select 1)) * ((_bulletPos select 2) - (_lastBulletPos select 2)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
             _elevation = - atan(_tz / _range);
             _windage = - atan(_tx / _range);
-            _lead = (_targetSpeed * _TOF) / (Tan(MRAD_TO_DEG(1)) * _range);
+            _lead = (_targetSpeed * _TOF) / (tan(MRAD_TO_DEG(1)) * _range);
         };
 
-        private _elevationString = Str(round(-DEG_TO_MRAD(_elevation) * 10) / 10);
+        private _elevationString = str(round(-DEG_TO_MRAD(_elevation) * 10) / 10);
         if (_elevationString == "0") then {
             _elevationString = "-0.0";
         };
         if (_elevationString find "." == -1) then {
             _elevationString = _elevationString + ".0";
         };
-        private _windageString = Str(round(DEG_TO_MRAD(_windage) * 10) / 10);
+        private _windageString = str(round(DEG_TO_MRAD(_windage) * 10) / 10);
         if (_windageString find "." == -1) then {
             _windageString = _windageString + ".0";
         };
-        private _leadString = Str(round(_lead * 10) / 10);
+        private _leadString = str(round(_lead * 10) / 10);
         if (_leadString find "." == -1) then {
             _leadString = _leadString + ".0";
         };

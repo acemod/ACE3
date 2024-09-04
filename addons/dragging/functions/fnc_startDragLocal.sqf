@@ -99,6 +99,9 @@ if (_target isKindOf "CAManBase") then {
 // Prevents dragging and carrying at the same time
 _unit setVariable [QGVAR(isDragging), true, true];
 
+// Required for aborting (keybind)
+_unit setVariable [QGVAR(draggedObject), _target, true];
+
 [LINKFUNC(startDragPFH), 0.2, [_unit, _target, CBA_missionTime + 5]] call CBA_fnc_addPerFrameHandler;
 
 // Disable collisions by setting the physx mass to almost zero

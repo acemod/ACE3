@@ -89,7 +89,7 @@ TRACE_2("start",_unit,_nozzle);
     };
 
     private _hintLMB = "";
-    private _hintRMB = localize ELSTRING(dragging,Drop);
+    private _hintRMB = LELSTRING(common,Drop);
 
     getCursorObjectParams params ["_cursorObject", "", "_distance"];
     if (!isNull _cursorObject && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}) then {
