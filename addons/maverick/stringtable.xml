@@ -111,6 +111,41 @@
                 <Turkish>1x Kh-25ML [ACE]</Turkish>
                 <Spanish>1x Kh-25ML [ACE]</Spanish>
             </Key>
+            <Key ID="STR_ACE_Maverick_d">
+                <English>AGM-65 Maverick D</English>
+                <French>AGM-65 Maverick D</French>
+                <Russian>AGM-65 Maverick D</Russian>
+            </Key>
+            <Key ID="STR_ACE_Maverick_g">
+                <English>AGM-65 Maverick G</English>
+                <French>AGM-65 Maverick G</French>
+                <Russian>AGM-65 Maverick G</Russian>
+            </Key>
+            <Key ID="STR_ACE_Maverick_d_mag_x1">
+                <English>AGM-65 Maverick D [ACE]</English>
+                <French>AGM-65 Maverick D [ACE]</French>
+                <Russian>AGM-65 Maverick D [ACE]</Russian>
+            </Key>
+            <Key ID="STR_ACE_Maverick_d_mag_x3">
+                <English>3x AGM-65 Maverick D [ACE]</English>
+                <French>3x AGM-65 Maverick D [ACE]</French>
+                <Russian>3x AGM-65 Maverick D [ACE]</Russian>
+            </Key>
+            <Key ID="STR_ACE_Maverick_g_mag_x1">
+                <English>AGM-65 Maverick G [ACE]</English>
+                <French>AGM-65 Maverick G [ACE]</French>
+                <Russian>AGM-65 Maverick G [ACE]</Russian>
+            </Key>
+            <Key ID="STR_ACE_Maverick_g_mag_x2">
+                <English>2x AGM-65 Maverick G [ACE]</English>
+                <French>2x AGM-65 Maverick G [ACE]</French>
+                <Russian>2x AGM-65 Maverick G [ACE]</Russian>
+            </Key>
+            <Key ID="STR_ACE_Maverick_g_mag_x3">
+                <English>3x AGM-65 Maverick G [ACE]</English>
+                <French>3x AGM-65 Maverick G [ACE]</French>
+                <Russian>3x AGM-65 Maverick G [ACE]</Russian>
+            </Key>
         </Container>
         <Container name="weapons">
             <Key ID="STR_ACE_Maverick_l">

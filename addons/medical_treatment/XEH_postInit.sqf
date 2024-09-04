@@ -1,5 +1,8 @@
 #include "script_component.hpp"
 
+// Pain killers item to magazine
+["ACE_painkillers_Item", "ACE_painkillers"] call EFUNC(common,registerItemReplacement);
+
 [QEGVAR(medical_status,initialized), {
     params ["_unit"];
 
@@ -77,7 +80,7 @@ if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
             {!isNil {_target getVariable QGVAR(headstoneData)}}
         ] call EFUNC(interact_menu,createAction);
 
-        [missionNameSpace getVariable [QGVAR(graveClassname), "ACE_Grave"], 0, [], _checkHeadstoneAction] call EFUNC(interact_menu,addActionToClass);
+        [missionNamespace getVariable [QGVAR(graveClassname), "ACE_Grave"], 0, [], _checkHeadstoneAction] call EFUNC(interact_menu,addActionToClass);
     };
 
     if (isServer) then {

@@ -39,11 +39,11 @@ class RscTitles {
                 idc = 1;
                 text = "";
                 //size = "1 / 40 / (getResolution select 5)";
-                SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+                SizeEx = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 1)";
                 colorText[] = {1, 1, 1, 1};
                 colorBackground[] = {0, 0, 0, 0.5};
-                x = "safeZoneW + safeZoneX - 0 * safezoneW";  //safeZoneW + safeZoneX - 0.2 * safezoneW;
-                y = "safeZoneY + 0.2 * safezoneH";
+                x = "safeZoneW + safeZoneX - 0 * safeZoneW";  //safeZoneW + safeZoneX - 0.2 * safeZoneW;
+                y = "safeZoneY + 0.2 * safeZoneH";
                 w = "0.2 * safeZoneW";
                 h = "0.1 * SafeZoneH";
                 font = "RobotoCondensed";
@@ -63,11 +63,11 @@ class RscTitles {
                 idc = 1;
                 text = "";
                 //size = "1 / 40 / (getResolution select 5)";
-                SizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+                SizeEx = "(((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) * 1)";
                 colorText[] = {1, 1, 1, 1};
                 colorBackground[] = {0.8, 0, 0, 0.5};
                 x = "0.3 * safeZoneW + safeZoneX";
-                y = "0.4 * safezoneH + safeZoneY";
+                y = "0.4 * safeZoneH + safeZoneY";
                 w = "0.4 * safeZoneW";
                 h = "0.2 * SafeZoneH";
             };
