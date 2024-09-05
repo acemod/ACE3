@@ -31,7 +31,7 @@
     TRACE_3("assemble_deployWeapon_carryWeaponClassname",_tripod,_player,_carryWeaponClassname);
 
     private _tripodClassname = typeOf _tripod;
-    private _weaponConfig = configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON);
+    private _weaponConfig = configFile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON);
     private _assembledClassname = getText (_weaponConfig >> "assembleTo" >> _tripodClassname);
 
     if (!isClass (configFile >> "CfgVehicles" >> _assembledClassname)) exitWith {ERROR_1("bad static classname [%1]",_assembledClassname);};
@@ -76,9 +76,9 @@
                 _csw setVariable [QGVAR(secondaryWeaponMagazines), _secondaryWeaponMagazines, true];
             };
 
-            if (!GVAR(defaultAssemblyMode)) then {
-                [_csw, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-            };
+            // Disable vanilla assembly until FUNC(initVehicle) runs and sets the definite value
+            [_csw, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+
             _csw setDir _tripodDir;
             _csw setPosATL _tripodPos;
             if ((_tripodPos select 2) < 0.5) then {

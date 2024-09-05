@@ -12,8 +12,10 @@ version:
   patch: 0
 ---
 
-Support for the ACE3 disposable framework will be dropped in 3.13.0!
-Switch to the [CBA Disposable Framework](https://github.com/CBATeam/CBA_A3/wiki/Disposable-Launchers)
+<div class="panel callout">
+    <h5>Note:</h5>
+    <p>Deprecated and replaced with <a href="https://github.com/CBATeam/CBA_A3/wiki/Disposable-Launchers">CBA Disposable Framework</a> in 3.13.0!</p>
+</div>
 
 Old weapon configs that are no longer supported:
 ```cpp

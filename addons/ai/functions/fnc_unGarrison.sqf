@@ -32,7 +32,7 @@ _units = _units select {local _x};
 
         _unit setVariable [QGVAR(garrisonned), false, true];
 
-        private _unitMoveList = missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []];
+        private _unitMoveList = missionNamespace getVariable [QGVAR(garrison_unitMoveList), []];
        _unitMoveList deleteAt (_unitMoveList findIf {_x select 0 == _unit});
 
         if (_leader != _unit) then {
@@ -43,9 +43,9 @@ _units = _units select {local _x};
             _unit doMove ((nearestBuilding (getPos _unit)) buildingExit 0);
         };
 
-        if ((units _unit) findif {(_x getVariable [QGVAR(garrisonned), false]) && !isPlayer _x} == -1) then {
+        if ((units _unit) findIf {(_x getVariable [QGVAR(garrisonned), false]) && !isPlayer _x} == -1) then {
             LOG("fnc_ungarrison: enableAttack true");
             (group _unit) enableAttack true;
         };
     };
-} foreach _units;
+} forEach _units;

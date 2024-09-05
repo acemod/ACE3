@@ -49,9 +49,6 @@ if (_target isKindOf "CAManBase") then {
     [_target, "AinjPpneMrunSnonWnonDb_still", 0] call EFUNC(common,doAnimation);
 };
 
-_unit setVariable [QGVAR(isDragging), true, true];
-_unit setVariable [QGVAR(draggedObject), _target, true];
-
 // Add drop action
 GVAR(unit) = _unit;
 
@@ -60,7 +57,7 @@ GVAR(releaseActionID) = [0xF1, [false, false, false], {
 }, "keydown", "", false, 0] call CBA_fnc_addKeyHandler;
 
 // Show mouse hint
-["", LLSTRING(Drop)] call EFUNC(interaction,showMouseHint);
+["", LELSTRING(common,Drop)] call EFUNC(interaction,showMouseHint);
 
 // Block firing
 if (!GVAR(dragAndFire)) then {

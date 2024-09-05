@@ -34,7 +34,7 @@ private _magToPassIndex = 0;
         _magToPass = _x;
         _magToPassIndex = _forEachIndex;
     };
-} foreach _filteredMags;
+} forEach _filteredMags;
 
 //remove the magazine from _player and add it to _target
 _magToPass params ["_magToPassClassName", "_magToPassAmmoCount"];

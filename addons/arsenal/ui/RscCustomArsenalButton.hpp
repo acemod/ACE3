@@ -1,6 +1,6 @@
 class GVAR(customArsenalButton_Button): RscButtonArsenal {
-    x = QUOTE(safezoneW + safezoneX - 10 * GRID_W);
-    y = QUOTE(safezoneY + 88 * GRID_H);
+    x = QUOTE(safeZoneW + safeZoneX - 10 * GRID_W);
+    y = QUOTE(safeZoneY + 88 * GRID_H);
     w = QUOTE(9 * GRID_W);
     h = QUOTE(9 * GRID_H);
 
@@ -11,8 +11,8 @@ class GVAR(customArsenalButton_Button): RscButtonArsenal {
 };
 
 class GVAR(customArsenalButton_Background): ctrlStaticBackground {
-    x = QUOTE(safezoneW + safezoneX - 13 * GRID_W);
-    y = QUOTE(safezoneY + 88 * GRID_H);
+    x = QUOTE(safeZoneW + safeZoneX - 13 * GRID_W);
+    y = QUOTE(safeZoneY + 88 * GRID_H);
     w = QUOTE(12 * GRID_W);
     h = QUOTE(9 * GRID_H);
 
