@@ -33,7 +33,7 @@ jobs:
     - name: Checkout the source code
       uses: actions/checkout@v4
     - name: Setup HEMTT
-      uses: arma-actions/hemtt@v1
+      uses: arma-actions/hemtt@main
     - name: Run HEMTT build
       run: hemtt build
     - name: Rename build folder
