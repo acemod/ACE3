@@ -130,7 +130,7 @@ private _fnc_handleStats = {
         _statsTitleCtrl ctrlSetText _title;
         _statsTitleCtrl ctrlSetFade 0;
 
-        //Vertical Position
+        // Vertical Position
         ctrlPosition _lastCtrl params ["", "_lastPosY", "", "_lastPosH"];
         _statsTitleCtrl ctrlSetPositionY (_lastPosY + _lastPosH + GRID_H);
         {
@@ -157,7 +157,7 @@ private _fnc_handleStats = {
             if (_textStatementResult isEqualType []) then {
                 _textStatementResult = _textStatementResult joinString endl;
             } else {
-                if !(_textStatementResult isEqualtype "") then {
+                if !(_textStatementResult isEqualType "") then {
                     _textStatementResult = str _textStatementResult;
                 };
             };
@@ -217,7 +217,7 @@ private _fnc_handleStats = {
     // Move the actions box
     private _ctrl = _display displayCtrl IDC_actionsBox;
     private _pos = ctrlPosition _ctrl;
-    _pos set [1, safezoneY + (_lastPosY + _lastPosH + GRID_H + (3.6 * GRID_H))];
+    _pos set [1, safeZoneY + (_lastPosY + _lastPosH + GRID_H + (3.6 * GRID_H))];
     _ctrl ctrlSetPosition _pos;
     _ctrl ctrlCommit 0;
 
