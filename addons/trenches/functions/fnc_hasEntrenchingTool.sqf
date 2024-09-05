@@ -23,4 +23,4 @@ private _uniqueItems = _unit call EFUNC(common,uniqueItems);
 _uniqueItems append weapons _unit;
 _uniqueItems pushBack backpack _unit;
 
-GVAR(entrenchingTools) findIf {_x in _uniqueItems} != -1 // return
+GVAR(entrenchingTools) findAny _uniqueItems != -1 // return
