@@ -31,7 +31,7 @@ TRACE_4("cache",_backblastAngle,_backblastRange,_backblastDamage,_offset);
 if (_backblastDamage <= 0) exitWith {};
 
 private _direction = (vectorDir _projectile) vectorMultiply -1;
-private _position = (getPosASL _projectile) vectorAdd (_direction vectorMultiply (abs _offset)); // Temp fix before more extensive config changes
+private _position = (getPosASL _projectile) vectorAdd (_direction vectorMultiply _offset);
 
 // Damage to others
 private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
