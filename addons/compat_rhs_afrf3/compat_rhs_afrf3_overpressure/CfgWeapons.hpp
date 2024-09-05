@@ -48,9 +48,15 @@ class CfgWeapons {
         EGVAR(overpressure,range) = 15;
         EGVAR(overpressure,damage) = 0.5;
     };
+
     class cannon_120mm;
     class rhs_weap_2a28_base: cannon_120mm { // "Low pressure"
         EGVAR(overpressure,range) = 15;
         EGVAR(overpressure,damage) = 0.5;
+    };
+
+    class mortar_82mm;
+    class rhs_weap_2b14: mortar_82mm {
+        EGVAR(overpressure,offset) = 0.4;
     };
 };

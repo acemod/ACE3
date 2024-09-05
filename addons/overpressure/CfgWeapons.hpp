@@ -129,4 +129,12 @@ class CfgWeapons {
         GVAR(range) = 60;
         GVAR(damage) = 1;
     };
+
+    class mortar_82mm: CannonCore {
+        GVAR(priority) = 1;
+        GVAR(angle) = 80;
+        GVAR(range) = 5;
+        GVAR(damage) = 0.7;
+        GVAR(offset) = 0.6;
+    };
 };

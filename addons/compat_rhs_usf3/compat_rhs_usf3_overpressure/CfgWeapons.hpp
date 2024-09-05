@@ -47,4 +47,11 @@ class CfgWeapons {
         EGVAR(overpressure,damage) = 0.7;
         EGVAR(overpressure,offset) = 0.8;
     };
+
+    // Vehicle cannons, forward-facing overpressure
+
+    class mortar_82mm;
+    class rhs_mortar_81mm: mortar_82mm {
+        EGVAR(overpressure,offset) = 0.2;
+    };
 };
