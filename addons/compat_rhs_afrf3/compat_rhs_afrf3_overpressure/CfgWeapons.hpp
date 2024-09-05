@@ -41,6 +41,11 @@ class CfgWeapons {
         EGVAR(overpressure,offset) = 1.2;
     };
 
+    class rhs_weap_grad;
+    class rhs_weap_bm21: rhs_weap_grad {
+        EGVAR(overpressure,offset) = 0;
+    };
+
     // Vehicle cannons, forward-facing overpressure
 
     class rhs_weap_d81;

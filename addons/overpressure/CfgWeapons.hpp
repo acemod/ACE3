@@ -99,6 +99,10 @@ class CfgWeapons {
         GVAR(backblast) = 1;
     };
 
+    class rockets_230mm_GAT: RocketPods {
+        GVAR(offset) = 1;
+    };
+
     // Vehicle cannons, forward-facing overpressure
 
     class CannonCore;

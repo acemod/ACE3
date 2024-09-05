@@ -48,6 +48,11 @@ class CfgWeapons {
         EGVAR(overpressure,offset) = 0.8;
     };
 
+    class rockets_230mm_GAT;
+    class rhs_weap_mlrs: rockets_230mm_GAT {
+        EGVAR(overpressure,offset) = 3.8;
+    };
+
     // Vehicle cannons, forward-facing overpressure
 
     class mortar_82mm;
