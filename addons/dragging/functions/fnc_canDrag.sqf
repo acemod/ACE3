@@ -27,7 +27,7 @@ if !([_unit, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)) exi
 
 // Units need to be unconscious or limping; Units also need to not be in ragdoll if alive, as that causes desync issues
 if (_isPerson) exitWith {
-    !_alive ||
+    ((!_alive) && {missionNamespace getVariable [QGVAR(canMoveDead), true]}) ||
     {(isAwake _target) && // not ragdolled if alive
     {!(_target call EFUNC(common,isAwake)) ||
     {_target getHitPointDamage "HitLegs" >= 0.5}}}
