@@ -62,3 +62,8 @@ if (_target isKindOf "StaticWeapon" && {((crew _target) - (_target getVariable [
 
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
+
+// Clones can die of drowning if oxygen is under 0.5, so refill their oxygen from time to time
+if (_target isKindOf QGVAR(clone) && {getOxygenRemaining _target < 0.8}) then {
+    _target setOxygenRemaining 1;
+};

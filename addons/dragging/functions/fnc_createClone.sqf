@@ -24,7 +24,7 @@ params ["_unit", "_target"];
 private _posATL = getPosATL _target;
 
 // Create clone
-private _clone = createVehicle [QGVAR(clone), _posATL, [], 0, "CAN_COLLIDE"];
+private _clone = createVehicle [[configOf _target >> QGVAR(cloneClass), "TEXT", QGVAR(clone)] call CBA_fnc_getConfigEntry, _posATL, [], 0, "CAN_COLLIDE"];
 
 // Claim the clone
 [_unit, _clone] call EFUNC(common,claim);
