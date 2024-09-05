@@ -21,7 +21,9 @@ if (isServer) then {
         TRACE_1("Explode",_this);
         
         // If projectile is local only, don't raise event globally
-        if (isMultiplayer && {(netId _projectile) == "0:0"}) then { // TODO: netId always returns valid after 2.18
+        // TODO: netId always returns valid after 2.18
+        // use _projectile getShotInfo 5 (https://community.bistudio.com/wiki/getShotInfo)
+        if (isMultiplayer && {(netId _projectile) == "0:0"}) then { 
             [QGVAR(explosion), [_projectile, _pos]] call CBA_fnc_localEvent;
         } else {
             [QGVAR(explosion), [_projectile, _pos]] call CBA_fnc_globalEvent;
