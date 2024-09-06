@@ -37,7 +37,7 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
         private _distance = vectorMagnitude _relativePosition;
         private _angle = acos (_axisDistance / _distance);
 
-        private _line = [_posASL, _targetPositionASL, _firer, _x];
+        private _line = [_posASL, _targetPositionASL, vehicle _firer, _x];
         private _line2 = [_posASL, _targetPositionASL];
         TRACE_4("Affected:",_x,_axisDistance,_distance,_angle);
 
