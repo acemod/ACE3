@@ -100,6 +100,7 @@ class CfgWeapons {
     };
 
     class rockets_230mm_GAT: RocketPods {
+        GVAR(damage) = 0.85;
         GVAR(offset) = 1;
     };
 
