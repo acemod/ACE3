@@ -18,7 +18,7 @@
 
 
 // Javelin IGUI defines
-#define __JavelinIGUI (uinamespace getVariable "ACE_RscOptics_javelin")
+#define __JavelinIGUI (uiNamespace getVariable "ACE_RscOptics_javelin")
 
 // Custom controls
 #define __JavelinIGUITargeting (__JavelinIGUI displayCtrl 6999)

@@ -29,7 +29,7 @@ if (isNil QEFUNC(captives,setSurrendered)) then {
     if ((_mouseOver select 0) != "OBJECT") then {
         [LSTRING(NothingSelected)] call FUNC(showMessage);
     } else {
-        private _unit = effectivecommander (_mouseOver select 1);
+        private _unit = effectiveCommander (_mouseOver select 1);
 
         if !(_unit isKindOf "CAManBase") then {
             [LSTRING(OnlyInfantry)] call FUNC(showMessage);

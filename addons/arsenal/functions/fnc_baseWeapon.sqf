@@ -20,7 +20,7 @@ params [["_weapon", "", [""]]];
 
 // Check if item is cached
 (uiNamespace getVariable QGVAR(baseWeaponNameCache)) getOrDefaultCall [toLowerANSI _weapon, {
-    private _cfgWeapons = configfile >> "CfgWeapons";
+    private _cfgWeapons = configFile >> "CfgWeapons";
     private _config = _cfgWeapons >> _weapon;
 
     // If class doesn't exist, exit

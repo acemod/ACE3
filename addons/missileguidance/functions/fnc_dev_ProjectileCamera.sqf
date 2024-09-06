@@ -14,7 +14,7 @@
 params ["_projectile"];
 
 private _camera = "camera" camCreate getPosATL _projectile;
-_camera camPrepareFOV 0.7;
+_camera camPrepareFov 0.7;
 _camera cameraEffect ["internal", "back"];
 
 _camera camCommitPrepared 0;

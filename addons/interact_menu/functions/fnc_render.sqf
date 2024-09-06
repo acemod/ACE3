@@ -38,7 +38,7 @@ if (GVAR(openedMenuType) >= 0) then {
     private _closestSelection = -1;
     {
         _x params ["", "_sPos"];
-        private _distanceFromCursor = _cursorScreenPos distance2d _sPos;
+        private _distanceFromCursor = _cursorScreenPos distance2D _sPos;
         if ((_distanceFromCursor < 0.1118) && {_distanceFromCursor < _closestDistance}) then {
             _closestDistance = _distanceFromCursor;
             _closestSelection = _forEachIndex;
