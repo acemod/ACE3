@@ -97,5 +97,5 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     LSTRING(inScopeAdjustment_displayName),
     _category,
     false,
-    2
+    0
 ] call CBA_fnc_addSetting;
