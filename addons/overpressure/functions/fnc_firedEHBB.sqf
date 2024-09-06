@@ -48,20 +48,24 @@ if (_distance < _backblastRange && {EGVAR(hearing,playerVehAttenuation) > 0.8}) 
     TRACE_2("",isDamageAllowed _shooter,_shooter getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
 
     // Skip damage if not allowed
-    if (isDamageAllowed _shooter && {_shooter getVariable [QEGVAR(medical,allowDamage), true]}) then {
-        private _alpha = sqrt (1 - _distance / _backblastRange);
-        private _beta = sqrt 0.5;
+    if (!isDamageAllowed _shooter || {!(_shooter getVariable [QEGVAR(medical,allowDamage), true])}) exitWith {};
 
-        private _damage = _alpha * _beta * _backblastDamage;
-        TRACE_1("",_damage);
+    // Skip if vehicle backblast reflection is disabled
+    private _vehicle = vehicle _shooter;
+    if (_vehicle != _shooter && {getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(noReflection)) == 1}) exitWith {};
 
-        [_damage * 100] call BIS_fnc_bloodEffect;
+    private _alpha = sqrt (1 - _distance / _backblastRange);
+    private _beta = sqrt 0.5;
 
-        if (GETEGVAR(medical,enabled,false)) then {
-            [_shooter, _damage, "body", "backblast", _shooter] call EFUNC(medical,addDamageToUnit);
-        } else {
-            _shooter setDamage (damage _shooter + _damage);
-        };
+    private _damage = _alpha * _beta * _backblastDamage;
+    TRACE_1("",_damage);
+
+    [_damage * 100] call BIS_fnc_bloodEffect;
+
+    if (GETEGVAR(medical,enabled,false)) then {
+        [_shooter, _damage, "body", "backblast", _shooter] call EFUNC(medical,addDamageToUnit);
+    } else {
+        _shooter setDamage (damage _shooter + _damage);
     };
 };
 

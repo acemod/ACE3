@@ -56,6 +56,14 @@ class CfgWeapons {
 };
 ```
 
+```cpp
+class CfgVehicles {
+    class MyClosedMLRS {
+        ace_overpressure_noReflection = 1; // Prevents backblast reflection to the gunner in light vehicles like Vanilla MLRS Trucks, which are otherwise counted as "open" by ace_hearing_fnc_updatePlayerVehAttenuation
+    };
+};
+```
+
 ## 2. Events
 
 ### 2.1 Listenable
