@@ -144,9 +144,32 @@ class ace_missileguidance_navigationTypes {
 };
 ```
 
-## 5. Events
+## 5. Migrating From Old Missile Guidance
 
-### 5.1 Listenable
+There are a few changes existing missiles need to implement to work with the new framework. Although sensible defaults are used, they may not be sufficient for all users
+
+### 5.1 Turn Rate
+
+`minDeflection`, `maxDeflection`, and `incDeflection` are all deprecated. These values were never used before, and had no meaning. The new system one should use is through `pitchRate` and `yawRate`: these describe the missiles rotation in pitch and yaw in degrees/second
+
+### 5.2 Navigation
+
+Missiles before didn't have any navigation logic. The new framework utilizes a navigation autopilot to guide the missile. You must add `defaultNavigationType`, `navigationTypes` and `navigationGain` to your missiles.
+
+### 5.2.1 Available Navigation Types
+
+| Navigation Name | Description | Use Case | Caveats |
+| ---------- | ----------- | ------------------- | ------- |
+| `Direct` | Adjusts missile direction so it is always pointing at the target | If you have a static target that doesn't need movement prediction | N/A |
+| `Line` | Attempts to drive missile so the direction to the target is zero | Any missile which needs to follow a line | Can only be used with some seekers |
+| `LineOfSight` | Accelerations missile to null-out the line-of-sight rate of change to try and intercept target | Old missiles which have a low-hit rate that predict target motion | N/A |
+| `ProportionalNavigation` | Adjusts missile to enter collision course with target | Missiles which intercept by predicting target motion | N/A |
+| `AugmentedProportionalNavigation` | Adjusts missile to enter collision course with target while taking into account target acceleration to reduce energy loss | Missiles which intercept by predicting target motion | N/A |
+| `ZeroEffortMiss` | Adjusts missile to enter collision course with target with minimal energy loss | Missiles which intercept by predicting target motion | N/A |
+
+## 6. Events
+
+### 6.1 Listenable
 
 | Event Name | Description | Passed Parameter(s) | Locality |
 | ---------- | ----------- | ------------------- | -------- |
