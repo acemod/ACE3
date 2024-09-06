@@ -1,5 +1,5 @@
+class ace_missileguidance_type_Nlaw;
 class CfgAmmo {
-    class ace_missileguidance_type_Nlaw;
     class M_NLAW_AT_F;
     class ACE_NLAW: M_NLAW_AT_F {
         hit = 400; // Default was 500

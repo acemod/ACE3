@@ -1,7 +1,4 @@
 class CfgAmmo {
-    class Default;
-    #include "CfgMissileTypesNato.hpp"
-    #include "CfgMissileTypesWarsaw.hpp"
     class MissileBase;
 
     class M_PG_AT: MissileBase {};

@@ -1,5 +1,5 @@
+class ace_missileguidance_type_Maverick;
 class CfgAmmo {
-    class ace_missileguidance_type_Maverick;
     class MissileCore;
     class MissileBase: MissileCore {
         class Components;

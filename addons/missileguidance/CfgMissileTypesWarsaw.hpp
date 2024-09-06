@@ -1,4 +1,4 @@
-class GVAR(type_Ataka): Default {
+class GVAR(type_Ataka) {
     enabled = 0;
 
     pitchRate = 45;          // Minium flap deflection for guidance
@@ -37,7 +37,7 @@ class GVAR(type_Ataka): Default {
     attackProfiles[] = {"BEAM"};
 };
 
-class GVAR(type_Bastion): Default {
+class GVAR(type_Bastion) {
     enabled = 0;
 
     pitchRate = 45;          // Minium flap deflection for guidance
@@ -76,7 +76,7 @@ class GVAR(type_Bastion): Default {
     attackProfiles[] = {"BEAM"};
 };
 
-class GVAR(type_Drakon): Default {
+class GVAR(type_Drakon) {
     enabled = 0;
 
     pitchRate = 25;          // Minium flap deflection for guidance
@@ -116,7 +116,7 @@ class GVAR(type_Drakon): Default {
     attackProfiles[] = {"BEAM"};
 };
 
-class GVAR(type_Fagot): Default {
+class GVAR(type_Fagot) {
     enabled = 0;
 
     pitchRate = 45;          // Minium flap deflection for guidance
@@ -156,7 +156,7 @@ class GVAR(type_Fagot): Default {
     attackProfiles[] = {"BEAM"};
 };
 
-class GVAR(type_Falanga): Default {
+class GVAR(type_Falanga) {
     enabled = 0;
 
     pitchRate = 15;          // Minium flap deflection for guidance
@@ -194,7 +194,7 @@ class GVAR(type_Falanga): Default {
     attackProfiles[] = {"WIRE"};
 };
 
-class GVAR(type_Fleyta): Default {
+class GVAR(type_Fleyta) {
     enabled = 0;
 
     pitchRate = 15;          // Minium flap deflection for guidance
@@ -232,7 +232,7 @@ class GVAR(type_Fleyta): Default {
     attackProfiles[] = {"WIRE"};
 };
 
-class GVAR(type_Igla): Default {
+class GVAR(type_Igla) {
     enabled = 0;
 
     pitchRate = 30;          // Minium flap deflection for guidance
@@ -265,7 +265,7 @@ class GVAR(type_Igla): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_KAB): Default {
+class GVAR(type_KAB) {
     enabled = 0;
 
     pitchRate = 8;
@@ -298,7 +298,7 @@ class GVAR(type_KAB): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_KH25): Default {
+class GVAR(type_KH25) {
     enabled = 0;
 
     pitchRate = 20;
@@ -326,7 +326,7 @@ class GVAR(type_KH25): Default {
     attackProfiles[] = {"maverick"};
 };
 
-class GVAR(type_KH29): Default {
+class GVAR(type_KH29) {
     enabled = 0;
 
     pitchRate = 20;
@@ -354,7 +354,7 @@ class GVAR(type_KH29): Default {
     attackProfiles[] = {"maverick"};
 };
 
-class GVAR(type_Kobra): Default {
+class GVAR(type_Kobra) {
     enabled = 0;
 
     pitchRate = 45;          // Minium flap deflection for guidance
@@ -394,7 +394,7 @@ class GVAR(type_Kobra): Default {
     attackProfiles[] = {"BEAM"};
 };
 
-class GVAR(type_Konkurs): Default {
+class GVAR(type_Konkurs) {
     enabled = 0;
 
     pitchRate = 45;          // Minium flap deflection for guidance
@@ -433,7 +433,7 @@ class GVAR(type_Konkurs): Default {
     attackProfiles[] = {"WIRE"};
 };
 
-class GVAR(type_Kornet): Default {
+class GVAR(type_Kornet) {
     enabled = 0;
 
     pitchRate = 45;          // Minium flap deflection for guidance
@@ -473,7 +473,7 @@ class GVAR(type_Kornet): Default {
     attackProfiles[] = {"BEAM"};
 };
 
-class GVAR(type_Malyutka): Default {
+class GVAR(type_Malyutka) {
     enabled = 0;
 
     pitchRate = 15;          // Minium flap deflection for guidance
@@ -511,7 +511,7 @@ class GVAR(type_Malyutka): Default {
     attackProfiles[] = {"WIRE"};
 };
 
-class GVAR(type_Metis): Default {
+class GVAR(type_Metis) {
     enabled = 0;
 
     pitchRate = 50;          // Minium flap deflection for guidance
@@ -550,7 +550,7 @@ class GVAR(type_Metis): Default {
     attackProfiles[] = {"WIRE"};
 };
 
-class GVAR(type_Molniya): Default {
+class GVAR(type_Molniya) {
     enabled = 0;
 
     pitchRate = 45;          // Minium flap deflection for guidance
@@ -583,7 +583,7 @@ class GVAR(type_Molniya): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_R73): Default {
+class GVAR(type_R73) {
     enabled = 0;
 
     pitchRate = 35;          // Minium flap deflection for guidance
@@ -616,7 +616,7 @@ class GVAR(type_R73): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_R74): Default {
+class GVAR(type_R74) {
     enabled = 1;
 
     pitchRate = 50;          // Minium flap deflection for guidance
@@ -649,7 +649,7 @@ class GVAR(type_R74): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_R77): Default {
+class GVAR(type_R77) {
     enabled = 0;
 
     pitchRate = 40;          // Minium flap deflection for guidance
@@ -685,7 +685,7 @@ class GVAR(type_R77): Default {
     useModeForAttackProfile = 1;
 };
 
-class GVAR(type_Refleks): Default {
+class GVAR(type_Refleks) {
     enabled = 0;
 
     pitchRate = 45;          // Minium flap deflection for guidance
@@ -725,7 +725,7 @@ class GVAR(type_Refleks): Default {
     attackProfiles[] = {"BEAM"};
 };
 
-class GVAR(type_S400): Default {
+class GVAR(type_S400) {
     enabled = 0;
 
     pitchRate = 25;          // Minium flap deflection for guidance
@@ -760,7 +760,7 @@ class GVAR(type_S400): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_Shturm): Default {
+class GVAR(type_Shturm) {
     enabled = 0;
 
     pitchRate = 45;          // Minium flap deflection for guidance
@@ -799,7 +799,7 @@ class GVAR(type_Shturm): Default {
     attackProfiles[] = {"BEAM"};
 };
 
-class GVAR(type_Strela): Default {
+class GVAR(type_Strela) {
     enabled = 0;
 
     pitchRate = 30;          // Minium flap deflection for guidance
@@ -832,7 +832,7 @@ class GVAR(type_Strela): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_Vikhr): Default {
+class GVAR(type_Vikhr) {
     enabled = 0;
     showTrail = 1;
 
@@ -867,7 +867,7 @@ class GVAR(type_Vikhr): Default {
     attackProfiles[] = {"BEAM"};
 };
 
-class GVAR(type_Vympel): Default {
+class GVAR(type_Vympel) {
     enabled = 0;
 
     pitchRate = 35;          // Minium flap deflection for guidance

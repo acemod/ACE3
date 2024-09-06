@@ -1,6 +1,6 @@
+class ace_missileguidance_type_Hellfire;
 class CfgAmmo {
     class M_Scalpel_AT;
-    class ace_missileguidance_type_Hellfire;
 
     class ACE_Hellfire_AGM114K: M_Scalpel_AT {
         displayName = "AGM-114K";

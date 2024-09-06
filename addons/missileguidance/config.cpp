@@ -15,6 +15,8 @@ class CfgPatches {
 
 #include "ACE_GuidanceConfig.hpp"
 
+#include "CfgMissileTypesNato.hpp"
+#include "CfgMissileTypesWarsaw.hpp"
 #include "CfgEventhandlers.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"

@@ -1,7 +1,7 @@
+class ace_missileguidance_type_Hot;
 class CfgAmmo {
     class M_Scalpel_AT;
     class ammo_Penetrator_Base;
-    class ace_missileguidance_type_Hot;
 
     class GVAR(ammo_Penetrator_HOT1): ammo_Penetrator_Base {
         caliber = 60;

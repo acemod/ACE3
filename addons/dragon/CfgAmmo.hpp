@@ -1,5 +1,5 @@
+class ace_missileguidance_type_Dragon;
 class CfgAmmo {
-    class ace_missileguidance_type_Dragon;
     class ammo_Penetrator_Base;
     class M_Scalpel_AT;
     class Rocket_03_AP_F;

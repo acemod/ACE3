@@ -1,5 +1,5 @@
-class GVAR(type_AMRAAM): Default {
-    enabled = 1;
+class GVAR(type_AMRAAM) {
+    enabled = 0;
 
     pitchRate = 30;          // Minium flap deflection for guidance
     yawRate = 30;            // Maximum flap deflection for guidance
@@ -34,8 +34,8 @@ class GVAR(type_AMRAAM): Default {
     useModeForAttackProfile = 1;
 };
 
-class GVAR(type_ASRAAM): Default {
-    enabled = 1;
+class GVAR(type_ASRAAM) {
+    enabled = 0;
 
     pitchRate = 100;          // Minium flap deflection for guidance
     yawRate = 100;            // Maximum flap deflection for guidance
@@ -67,7 +67,7 @@ class GVAR(type_ASRAAM): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_Dagr): Default {
+class GVAR(type_Dagr) {
     enabled = 0;
 
     pitchRate = 40; // degrees per second
@@ -96,7 +96,7 @@ class GVAR(type_Dagr): Default {
     attackProfiles[] = { "LIN", "DIR", "MID", "HI" };
 };
 
-class GVAR(type_Dragon): Default {
+class GVAR(type_Dragon) {
     enabled = 0;
 
     pitchRate = 0;
@@ -134,7 +134,7 @@ class GVAR(type_Dragon): Default {
     attackProfiles[] = {"DRAGON"};
 };
 
-class GVAR(type_ESSM): Default {
+class GVAR(type_ESSM) {
     enabled = 0;
 
     pitchRate = 15;          // Minium flap deflection for guidance
@@ -169,7 +169,7 @@ class GVAR(type_ESSM): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_Hellfire): Default {
+class GVAR(type_Hellfire) {
     enabled = 0;
 
     pitchRate = 30; // degrees per second
@@ -198,12 +198,12 @@ class GVAR(type_Hellfire): Default {
     defaultAttackProfile = "hellfire";
     attackProfiles[] = {"hellfire", "hellfire_hi", "hellfire_lo"};
 
-    class navigationStates: Default {
-        class initial: Default {
+    class navigationStates {
+        class initial {
             transitionCondition = QEFUNC(hellfire,midCourseTransition);
             navigationType = "Direct";
         };
-        class terminal: Default {
+        class terminal {
             transitionCondition = "";
             navigationType = "ZeroEffortMiss";
         };
@@ -212,7 +212,7 @@ class GVAR(type_Hellfire): Default {
     };
 };
 
-class GVAR(type_Hot): Default {
+class GVAR(type_Hot) {
     enabled = 0;
 
     pitchRate = 45;          // Minium flap deflection for guidance
@@ -251,7 +251,7 @@ class GVAR(type_Hot): Default {
     attackProfiles[] = {"WIRE"};
 };
 
-class GVAR(type_Javelin): Default {
+class GVAR(type_Javelin) {
     enabled = 0;
 
     pitchRate = 120; // degrees per second
@@ -286,12 +286,12 @@ class GVAR(type_Javelin): Default {
     attackProfiles[] = { "JAV_TOP", "JAV_DIR" };
     useModeForAttackProfile = 1;
 
-    class navigationStates: Default {
-        class initial: Default {
+    class navigationStates {
+        class initial {
             transitionCondition = QFUNC(javelin_midCourseTransition);
             navigationType = "Direct";
         };
-        class terminal: Default {
+        class terminal {
             transitionCondition = "";
             navigationType = "ZeroEffortMiss";
         };
@@ -300,7 +300,7 @@ class GVAR(type_Javelin): Default {
     };
 };
 
-class GVAR(type_Jdam): Default {
+class GVAR(type_Jdam) {
     enabled = 0;
 
     pitchRate = 15;
@@ -333,7 +333,7 @@ class GVAR(type_Jdam): Default {
     attackProfiles[] = {"JDAM"};
 };
 
-class GVAR(type_Maverick): Default {
+class GVAR(type_Maverick) {
     enabled = 0;
 
     pitchRate = 15;
@@ -361,7 +361,7 @@ class GVAR(type_Maverick): Default {
     attackProfiles[] = {"maverick"};
 };
 
-class GVAR(type_Milan): Default {
+class GVAR(type_Milan) {
     enabled = 0;
 
     pitchRate = 60;          // Minium flap deflection for guidance
@@ -400,7 +400,7 @@ class GVAR(type_Milan): Default {
     attackProfiles[] = {"WIRE"};
 };
 
-class GVAR(type_Nlaw): Default {
+class GVAR(type_Nlaw) {
     enabled = 0;
 
     pitchRate = 5;      // Minium flap deflection for guidance
@@ -435,7 +435,7 @@ class GVAR(type_Nlaw): Default {
     onFired = QEFUNC(nlaw,onFired);
 };
 
-class GVAR(type_Patriot): Default {
+class GVAR(type_Patriot) {
     enabled = 0;
 
     pitchRate = 30;          // Minium flap deflection for guidance
@@ -470,7 +470,7 @@ class GVAR(type_Patriot): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_Paveway): Default {
+class GVAR(type_Paveway) {
     enabled = 0;
 
     pitchRate = 5;
@@ -503,7 +503,7 @@ class GVAR(type_Paveway): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_RAM): Default {
+class GVAR(type_RAM) {
     enabled = 0;
 
     pitchRate = 50;          // Minium flap deflection for guidance
@@ -536,7 +536,7 @@ class GVAR(type_RAM): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_RBS70): Default {
+class GVAR(type_RBS70) {
     enabled = 0;
 
     pitchRate = 45;          // Minium flap deflection for guidance
@@ -576,7 +576,7 @@ class GVAR(type_RBS70): Default {
     attackProfiles[] = {"BEAM"};
 };
 
-class GVAR(type_Redeye): Default {
+class GVAR(type_Redeye) {
     enabled = 0;
 
     pitchRate = 27;          // Minium flap deflection for guidance
@@ -609,7 +609,7 @@ class GVAR(type_Redeye): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_Sidewinder): Default {
+class GVAR(type_Sidewinder) {
     enabled = 0;
 
     pitchRate = 25;          // Minium flap deflection for guidance
@@ -642,7 +642,7 @@ class GVAR(type_Sidewinder): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_Stinger): Default {
+class GVAR(type_Stinger) {
     enabled = 0;
 
     pitchRate = 42;          // Minium flap deflection for guidance
@@ -675,7 +675,7 @@ class GVAR(type_Stinger): Default {
     attackProfiles[] = {"DIR"};
 };
 
-class GVAR(type_TOW): Default {
+class GVAR(type_TOW) {
     enabled = 0;
 
     pitchRate = 45;          // Minium flap deflection for guidance

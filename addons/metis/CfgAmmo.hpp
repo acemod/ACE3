@@ -1,6 +1,6 @@
+class ace_missileguidance_type_Metis;
 class CfgAmmo {
     class M_Vorona_HEAT;
-    class ace_missileguidance_type_Metis;
     class GVAR(HEAT): M_Vorona_HEAT {
         manualControl = 0;
         irLock = 0;
