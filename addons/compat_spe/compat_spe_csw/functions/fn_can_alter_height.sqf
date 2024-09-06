@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
 Author: Kerc, original by www.3commandobrigade.com, edited by johnb43 to be made CSW compatible
-Check if resupply of ammo to a static weapon is available
+Check if weapon can have height adjusted
 Arguments:
 0: static weapon platform
 Return Value:
