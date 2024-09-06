@@ -20,6 +20,6 @@ class CfgVehicles {
     class B_Truck_01_fuel_F;
     class C_Truck_01_water_rf : B_Truck_01_fuel_F {
         EXGVAR(field_rations,waterSupply) = 10000;
-        EXGVAR(field_rations,offset)[] = {-0.41,-5.15,-0.3};
+        EXGVAR(field_rations,offset)[] = {-0.41, -5.15, -0.3};
     };
 };
