@@ -43,7 +43,7 @@
 
     _player removeWeaponGlobal _carryWeaponClassname;
 
-    private _deployTime = getNumber (configfile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "deployTime");
+    private _deployTime = getNumber (configFile >> "CfgWeapons" >> _carryWeaponClassname >> QUOTE(ADDON) >> "deployTime");
 
     TRACE_4("",_carryWeaponClassname,_tripodClassname,_assembledClassname,_deployTime);
 
