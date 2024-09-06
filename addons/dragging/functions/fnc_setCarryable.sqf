@@ -99,7 +99,7 @@ private _carryAction = [
 
 private _dropAction = [
     QGVAR(drop_carry),
-    LLSTRING(Drop),
+    LELSTRING(common,Drop),
     "",
     {
         [_player, _target] call FUNC(dropObject_carry)

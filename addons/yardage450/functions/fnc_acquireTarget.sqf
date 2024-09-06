@@ -45,7 +45,7 @@ GVAR(distanceIndex) = -1;
             private _range = (_min + _max) / 2;
             if (_range >= MIN_DISTANCE && _range <= MAX_DISTANCE) then {
                 GVAR(targetAcquired) = true;
-                GVAR(targetRangeText) = Str(round(_range));
+                GVAR(targetRangeText) = str(round(_range));
             };
         };
     };

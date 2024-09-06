@@ -35,7 +35,7 @@ INFO("showing shot info");
         private _diff = _lastPos vectorDiff _shootPos;
         _mkrB setMarkerText format ["%1", _diff apply {round _x}];
 
-        private _dist2d = _shootPos distance2d _lastPos;
+        private _dist2d = _shootPos distance2D _lastPos;
         private _dir = _shootPos getDir _lastPos;
         private _height = (_lastPos select 2) - (_shootPos select 2);
         _mkrB setMarkerText format ["Dist: %1m Az: %2[%3] Height:%4", _dist2d toFixed 0, _dir toFixed 2, ((6400 / 360) * _dir) toFixed 0, _height toFixed 0];

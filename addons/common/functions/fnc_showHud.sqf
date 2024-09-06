@@ -65,6 +65,6 @@ for "_index" from 0 to 9 do {
 };
 
 TRACE_2("showHud",_resultMask,keys GVAR(showHudHash));
-showHud _resultMask;
+showHUD _resultMask;
 
 _resultMask
