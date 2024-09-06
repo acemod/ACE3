@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
 Author: Kerc, Original by www.3commandobrigade.com, edited by johnb43 to be made CSW compatible
-Remove ammo from static weapon
+Alter weapon height
 Arguments:
 0: static weapon platform
 1: new static weapon (ie the weapon to replace the current weapon)
