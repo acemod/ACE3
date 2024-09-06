@@ -29,6 +29,7 @@ class CfgVehicles {
             disassembleTurret = QGVAR(M3_Tripod);
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
+            desiredAmmo = 100;
         };
     };
     class SPE_M2_M3_Trench: SPE_M2_M3 {
