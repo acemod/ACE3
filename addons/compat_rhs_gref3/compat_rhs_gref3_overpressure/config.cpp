@@ -2,18 +2,20 @@
 
 class CfgPatches {
     class SUBADDON {
-        addonRootClass = QUOTE(COMPONENT);
+        name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "rhs_main_loadorder",
+            "rhsgref_main_loadorder",
             "ace_overpressure"
         };
         skipWhenMissingDependencies = 1;
+        author = ECSTRING(common,ACETeam);
+        authors[] = {};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
 #include "CfgVehicles.hpp"
-#include "CfgWeapons.hpp"
