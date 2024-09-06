@@ -17,7 +17,7 @@ jobs:
     - name: Checkout the source code
       uses: actions/checkout@v4
     - name: Setup HEMTT
-      uses: arma-actions/hemtt@main
+      uses: arma-actions/hemtt@v1
     - name: Checkout pull request
       uses: actions/checkout@v4
       if: ${{ github.event_name == 'pull_request_target' }}
