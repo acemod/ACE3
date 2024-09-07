@@ -39,6 +39,7 @@ class CfgWeapons {
 ### 1.2 Carryable Weapon
 
 Carried CSW weapons are technically rocket launchers. This allows the player to carry both a CSW weapon and a backpack with magazines for the CSW.
+ACE 3.18.0 added support for primary weapons to be used as CSW weapons, but not tripods.
 
 ```cpp
 class CfgWeapons {
