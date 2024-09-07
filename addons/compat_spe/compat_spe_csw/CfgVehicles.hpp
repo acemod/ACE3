@@ -49,6 +49,7 @@ class CfgVehicles {
             disassembleTurret = QGVAR(M2_Tripod);
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
+            desiredAmmo = 100;
         };
     };
     class SPE_M1919_M2_Trench_Deployed: SPE_M1919_M2 {
@@ -81,6 +82,7 @@ class CfgVehicles {
             disassembleTurret = QGVAR(Lafette_Tripod);
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
+            desiredAmmo = 100;
         };
     };
     class SPE_MG34_Lafette_Deployed: SPE_MG42_Lafette {
@@ -92,6 +94,7 @@ class CfgVehicles {
             disassembleTurret = QGVAR(Lafette_Tripod);
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
+            desiredAmmo = 100;
         };
     };
 
@@ -105,6 +108,7 @@ class CfgVehicles {
             disassembleTurret = QGVAR(Lafette_Tripod_Low);
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
+            desiredAmmo = 100;
         };
     };
     class SPE_MG42_Lafette_trench_Deployed: SPE_MG42_Lafette_low_Deployed {
@@ -123,6 +127,7 @@ class CfgVehicles {
             disassembleTurret = QGVAR(Lafette_Tripod_Low);
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
+            desiredAmmo = 100;
         };
     };
     class SPE_MG34_Lafette_Trench_Deployed: SPE_MG34_Lafette_low_Deployed {
@@ -143,6 +148,7 @@ class CfgVehicles {
             disassembleTurret = "";
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
+            desiredAmmo = 100;
         };
     };
 
@@ -156,6 +162,7 @@ class CfgVehicles {
             disassembleTurret = "";
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
+            desiredAmmo = 100;
         };
     };
     class SPE_MG34_Bipod: SPE_MG_Bipod_base {
@@ -167,6 +174,7 @@ class CfgVehicles {
             disassembleTurret = "";
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
+            desiredAmmo = 100;
         };
     };
 
