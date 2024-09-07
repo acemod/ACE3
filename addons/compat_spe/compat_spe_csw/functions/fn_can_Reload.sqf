@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
 Author: Kerc, edited by johnb43 to be made CSW compatible
-Check if has magazine prepped for mortar
+Check if weapon can be reloaded
 Arguments:
 0: static weapon platform
 Return Value:
