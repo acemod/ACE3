@@ -59,15 +59,11 @@ class EGVAR(csw,groups) {
         SPE_100Rnd_792x57_Tracer = 1;
     };
 
-    /*
     // Makes it compatible with other mods' .50 BMG
     class EGVAR(csw,100Rnd_127x99_mag) {
         SPE_100Rnd_127x99_M2 = 1;
     };
-    */
-    class SPE_100Rnd_127x99_M2 {
-        SPE_100Rnd_127x99_M2 = 1;
-    };
+    class SPE_100Rnd_127x99_M2: EGVAR(csw,100Rnd_127x99_mag) {};
 
     // --- Mortars -------------------------------------------------------------
     class SPE_1Rnd_81mmHE_M1_M43A1 {
