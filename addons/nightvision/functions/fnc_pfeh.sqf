@@ -163,7 +163,7 @@ if (CBA_missionTime < GVAR(nextEffectsUpdate)) then {
         };
 
         _fogApply = linearConversion [0, 1, GVAR(priorFog) select 0, (GVAR(fogScaling) * _fogApply), 1]; // mix in old fog if present
-        GVAR(nvgFog) = [_fogApply, 0, 0];
+        GVAR(nvgFog) = [_fogApply, fogParams#1, fogParams#2];
         0 setFog GVAR(nvgFog)
     };
 
