@@ -28,3 +28,10 @@
 #define ACE_FRAG_COUNT_MAX_TIME 1.5
 #define ACE_FRAG_COUNT_MAX 50
 #define ACE_FRAG_IMPERIC_VELOCITY_CONSTANT 0.8
+#define ACE_FRAG_DEFAULT_FRAG_TYPES [\
+    QGVAR(tiny), QGVAR(tiny), QGVAR(tiny),\
+    QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(tiny_HD),\
+    QGVAR(small), QGVAR(small), QGVAR(small), QGVAR(small),\
+    QGVAR(small_HD), QGVAR(small_HD), QGVAR(small_HD), QGVAR(small_HD),\
+    QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD)\
+]
