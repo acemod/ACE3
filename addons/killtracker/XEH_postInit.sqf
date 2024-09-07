@@ -16,7 +16,7 @@
  * Public: No
  */
 
-if ((getText (missionconfigfile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QXGVAR(outputText)) exitWith {
+if ((getText (missionConfigFile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QXGVAR(outputText)) exitWith {
     TRACE_1("no mission debriefing config",_this);
 };
 
@@ -65,7 +65,7 @@ GVAR(killCount) = 0;
     private _killInfo = [];
 
     if (!isNull _killer) then {
-        if !(_killer isKindof "CAManBase") then { // If killer is a vehicle log the vehicle type
+        if !(_killer isKindOf "CAManBase") then { // If killer is a vehicle log the vehicle type
             _killInfo pushBack format [LLSTRING(Vehicle), getText ((configOf _killer) >> "displayName")];
         };
         if (isNull _instigator) then {
