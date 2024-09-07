@@ -29,13 +29,3 @@ workshop = [
     "843593391", # RHS GREF Workshop ID
     "843632231", # RHS SAF  Workshop ID
 ]
-
-
-## NVG FOG Test
-
-[nvg-fog]
-extends = "default"
-mission = "nvg-fog.Altis"
-workshop = [
-    "2369477168", # Advanced Dev Tools
-]
