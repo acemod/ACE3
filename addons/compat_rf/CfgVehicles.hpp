@@ -1,5 +1,5 @@
 class CfgVehicles {
-    // applies the offset to all RF Offroads which can have the optional Tank in the back
+    // Applies the offset to all RF Offroads which can have the optional tank in the back
     class Offroad_01_unarmed_base_F;
     class Pickup_01_base_rf: Offroad_01_unarmed_base_F {
         EXGVAR(field_rations,offset)[] = {-0.04, -2.45, -0.9};
