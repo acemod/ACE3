@@ -98,3 +98,27 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 | 1  |  `true`| Carrying is enabled |
 | 2  | `[0,2,0]` | 0 meters sideways, 3 meters forward, 1 meter upwards |
 | 3  | `10` | Rotated by 10° |
+
+## 3. Corpse moving
+Added in 3.18.0, ACE allows you to drag and carry corpses.
+
+### 3.1 Config Values
+
+```cpp
+class CfgVehicles {
+    class MyUnit {
+        ace_dragging_cloneClass = "MyClone"; // Allows you to define what type of clone is used for moving the corpse (default: "ace_dragging_clone")
+    };
+    
+    class ace_dragging_clone;
+    class MyClone: ace_dragging_clone {}; // Custom clones must inherit from ace_dragging_clone
+};
+```
+
+### 3.2 Enabling / disabling corpse moving
+
+By default, corpse moving is enabled. If you wish to disable it, you can set the variable below to `false`:
+
+```sqf
+ace_dragging_canMoveDead = false;
+```
