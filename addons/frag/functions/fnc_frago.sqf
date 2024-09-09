@@ -17,7 +17,7 @@
  * Public: No
  */
 
-#define FRAG_VEC_VAR 0.004
+#define FRAG_VEC_VAR 0.008
 
 BEGIN_COUNTER(frago);
 
