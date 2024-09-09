@@ -90,6 +90,11 @@ if !(_unit call EFUNC(common,isSwimming)) then {
 
 // Move a bit closer and adjust direction when trying to pick up a person
 if (_target isKindOf "CAManBase") then {
+    // Create clone for dead units
+    if (!alive _target) then {
+        _target = [_unit, _target] call FUNC(createClone);
+    };
+
     [QEGVAR(common,setDir), [_target, getDir _unit + 180], _target] call CBA_fnc_targetEvent;
     _target setPosASL (getPosASL _unit vectorAdd (vectorDir _unit vectorMultiply 1.5));
 

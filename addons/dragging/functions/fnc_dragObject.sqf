@@ -57,7 +57,7 @@ GVAR(releaseActionID) = [0xF1, [false, false, false], {
 }, "keydown", "", false, 0] call CBA_fnc_addKeyHandler;
 
 // Show mouse hint
-["", LLSTRING(Drop)] call EFUNC(interaction,showMouseHint);
+["", LELSTRING(common,Drop)] call EFUNC(interaction,showMouseHint);
 
 // Block firing
 if (!GVAR(dragAndFire)) then {

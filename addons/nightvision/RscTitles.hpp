@@ -28,13 +28,13 @@ class RscTitles {
                 idc = 1002;
                 text = "#(argb,8,8,3)color(0,0,0,1)";
                 x = "safeZoneXAbs";
-                Y = "safezoneY";
-                W = "(safezoneX - safeZoneXAbs) * ((getResolution select 4)/(16/3))";
+                Y = "safeZoneY";
+                W = "(safeZoneX - safeZoneXAbs) * ((getResolution select 4)/(16/3))";
                 H = "safeZoneH";
             };
             class trippleHeadRight: trippleHeadLeft {
                 idc = 1003;
-                x = "safeZoneXAbs + safeZoneWAbs - (safezoneX - safeZoneXABS) * ((getResolution select 4)/(16/3))";
+                x = "safeZoneXAbs + safeZoneWAbs - (safeZoneX - safeZoneXABS) * ((getResolution select 4)/(16/3))";
             };
         };
     };

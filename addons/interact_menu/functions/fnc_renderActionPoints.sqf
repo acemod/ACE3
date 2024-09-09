@@ -19,8 +19,8 @@ GVAR(currentOptions) = [];
 
 private _player = ACE_player;
 
-GVAR(cameraPosASL) = AGLtoASL (positionCameraToWorld [0, 0, 0]);
-GVAR(cameraDir) = (AGLtoASL (positionCameraToWorld [0, 0, 1])) vectorDiff GVAR(cameraPosASL);
+GVAR(cameraPosASL) = AGLToASL (positionCameraToWorld [0, 0, 0]);
+GVAR(cameraDir) = (AGLToASL (positionCameraToWorld [0, 0, 1])) vectorDiff GVAR(cameraPosASL);
 
 private _fnc_renderNearbyActions = {
     // Render all nearby interaction menus
@@ -99,7 +99,7 @@ private _fnc_renderSelfActions = {
 
     private _pos = if !(GVAR(useCursorMenu)) then {
         //Convert to ASL, add offset and then convert back to AGL (handles waves when over water)
-        ASLtoAGL ((AGLtoASL (positionCameraToWorld [0, 0, 0])) vectorAdd GVAR(selfMenuOffset));
+        ASLToAGL ((AGLToASL (positionCameraToWorld [0, 0, 0])) vectorAdd GVAR(selfMenuOffset));
     } else {
         [0.5, 0.5]
     };
@@ -160,7 +160,7 @@ if (count GVAR(collectedActionPoints) > 1) then {
             private _delta = vectorNormalized ((GVAR(collectedActionPoints) select _i select 1) vectorDiff (GVAR(collectedActionPoints) select _j select 1));
 
             // If _i is inside a cone with 20º half angle with origin on _j
-            if ((_delta select 2 > 0.94) && {((GVAR(collectedActionPoints) select _i select 1) distance2d (GVAR(collectedActionPoints) select _j select 1)) < 0.1}) exitWith {
+            if ((_delta select 2 > 0.94) && {((GVAR(collectedActionPoints) select _i select 1) distance2D (GVAR(collectedActionPoints) select _j select 1)) < 0.1}) exitWith {
                 GVAR(collectedActionPoints) deleteAt _i;
             };
         };

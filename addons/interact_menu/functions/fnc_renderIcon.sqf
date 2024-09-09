@@ -27,8 +27,8 @@ if(GVAR(iconCount) > (count GVAR(iconCtrls))-1) then {
     private _displayNum = [[46, 12] select visibleMap, 91919] select (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]);
     GVAR(iconCtrls) pushBack ((findDisplay _displayNum) ctrlCreate ["RscStructuredText", 54021 + GVAR(iconCount)]);
     if (GVAR(useCursorMenu)) then {
-        ((finddisplay _displayNum) displayctrl (54021 + GVAR(iconCount))) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];
-        ((finddisplay _displayNum) displayctrl (54021 + GVAR(iconCount))) ctrlAddEventHandler ["MouseButtonDown", DFUNC(handleMouseButtonDown)];
+        ((findDisplay _displayNum) displayCtrl (54021 + GVAR(iconCount))) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];
+        ((findDisplay _displayNum) displayCtrl (54021 + GVAR(iconCount))) ctrlAddEventHandler ["MouseButtonDown", DFUNC(handleMouseButtonDown)];
     };
 };
 private _ctrl = GVAR(iconCtrls) select GVAR(iconCount);
@@ -48,9 +48,9 @@ _text = if ([GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAc
 GVAR(iconCount) = GVAR(iconCount) + 1;
 
 private _pos = if ([GVAR(useListMenu), GVAR(useListMenuSelf)] select GVAR(keyDownSelfAction)) then {
-    [(_sPos select 0) - (0.0095 * SafeZoneW), (_sPos select 1) - (0.0095 * SafeZoneW), 0.20 * SafeZoneW, 0.035 * SafeZoneW]
+    [(_sPos select 0) - (0.0095 * safeZoneW), (_sPos select 1) - (0.0095 * safeZoneW), 0.20 * safeZoneW, 0.035 * safeZoneW]
 } else {
-    [(_sPos select 0) - (0.0750 * SafeZoneW), (_sPos select 1) - (0.0095 * SafeZoneW), 0.15 * SafeZoneW, 0.100 * SafeZoneW]
+    [(_sPos select 0) - (0.0750 * safeZoneW), (_sPos select 1) - (0.0095 * safeZoneW), 0.15 * safeZoneW, 0.100 * safeZoneW]
 };
 
 

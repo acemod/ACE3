@@ -180,7 +180,7 @@ private _action = [
     nil, nil, nil, nil, nil,
     {
         params ["_target", "", "", "_actionData"];
-        _actionData set [1, format [localize "STR_ACTION_TAKE_BAG", getText (configfile >> "CfgWeapons" >> weaponCargo _target select 0 >> "displayName")]];
+        _actionData set [1, format [localize "STR_ACTION_TAKE_BAG", getText (configFile >> "CfgWeapons" >> weaponCargo _target select 0 >> "displayName")]];
     }
 ] call EFUNC(interact_menu,createAction);
 
