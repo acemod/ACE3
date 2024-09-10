@@ -73,7 +73,7 @@ if (_warn) then {
 // Gunery equation is for a non-fragmenting metal, imperical value of 80% represents fragmentation
 private _fragPower = 0.8 * (((_m / _c) + _k) ^ - (1 / 2)) * _gC;
 
-private _atlPos = ASLtoATL _lastPos;
+private _atlPos = ASLToATL _lastPos;
 
 private _fragPowerRandom = _fragPower * 0.5;
 if ((_atlPos select 2) < 0.5) then {
