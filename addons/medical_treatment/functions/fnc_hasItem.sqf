@@ -31,7 +31,7 @@ private _fnc_checkItems = {
         _unitItems append (itemCargo _unitVehicle);
         _unitItems append (magazineCargo _unitVehicle);
     };
-    _items findIf {_x in _unitItems} != -1
+    _items findAny _unitItems != -1
 };
 
 _medic call _fnc_checkItems || {GVAR(allowSharedEquipment) != 2 && {_patient call _fnc_checkItems}}

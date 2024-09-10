@@ -582,8 +582,31 @@
             <Chinese>小隊管理</Chinese>
             <Turkish>Takım Yönetimi</Turkish>
         </Key>
-        <Key ID="STR_ACE_Interaction_groupDropDistantUnits">
-            <English>Drop Distant Members</English>
+        <Key ID="STR_ACE_Interaction_remoteTeamManagement_DisplayName">
+            <English>Remote Squad Management</English>
+            <French>Gestion à distance de l'escouade</French>
+            <Russian>Дистанционное управление отрядом</Russian>
+        </Key>
+        <Key ID="STR_ACE_Interaction_remoteTeamManagement_Description">
+            <English>Allow dropping and changing team colors of any unit in player's squad</English>
+            <French>Permettre d'abandonner et de changer les couleurs de n'importe quelle unité de l'escouade du joueur</French>
+            <Russian>Позволяет сбрасывать и менять командные цвета любого подразделения в отряде игрока</Russian>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Squad">
+            <English>Squad</English>
+            <Czech>Družstvo</Czech>
+            <German>Trupp</German>
+            <Russian>Отряд</Russian>
+            <Polish>Drużyna</Polish>
+            <Italian>Squadra</Italian>
+            <Spanish>Escuadrón</Spanish>
+            <French>Escouade</French>
+            <Chinese>分隊</Chinese>
+            <Japanese>分隊</Japanese>
+            <Korean>분대</Korean>
+            <Portuguese>Esquadrão</Portuguese>
+            <Chinesesimp>小队</Chinesesimp>
+            <Turkish>Manga</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamRED">
             <English>Red</English>
@@ -788,6 +811,18 @@
             <Chinesesimp>加入黄组</Chinesesimp>
             <Chinese>加入黃組</Chinese>
             <Turkish>Sarıya Katıl</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_JoinTeamMain">
+            <English>Join White</English>
+            <German>Weiss beitreten</German>
+            <Spanish>Unirse a Blanco</Spanish>
+            <Polish>Dołącz do Biała</Polish>
+            <Portuguese>Entrar em Branco</Portuguese>
+            <Czech>Připojit k Bílý Tým</Czech>
+            <Russian>Присоединиться к Белая</Russian>
+            <French>Rejoindre Blanc</French>
+            <Italian>Unirsi al team Bianco</Italian>
+            <Korean>백팀 참여</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
@@ -1336,14 +1371,20 @@
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_DisplayName">
             <English>Interact With Enemy Crew</English>
             <Japanese>敵乗員がいる状態でのインタラクト</Japanese>
+            <French>Interagir avec l'équipage ennemi</French>
+            <Russian>Взаимодействие с вражеским экипажем</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_Description">
             <English>Limit some interactions on vehicles crewed by enemy factions.</English>
             <Japanese>敵性力の乗員が乗っている車両へのインタラクションを一部制限します。</Japanese>
+            <French>Limiter certaines interactions sur les véhicules dont l'équipage appartient à des factions ennemies.</French>
+            <Russian>Ограничьте некоторые взаимодействия на транспортных средствах, управляемых вражеской стороной.</Russian>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_allowCSW">
             <English>Allow for Static Weapons</English>
             <Japanese>固定火器への許可</Japanese>
+            <French>Autoriser les armes statiques</French>
+            <Russian>Разрешить использование статического оружия</Russian>
         </Key>
     </Package>
 </Project>

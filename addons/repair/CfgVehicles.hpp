@@ -478,20 +478,22 @@ class CfgVehicles {
     class Truck_01_cargo_base_F: Truck_01_viv_base_F {
         class EGVAR(interaction,anims) {
             class Tyre1_hide {
-                selections[] = {"tyre1_hide"};
+                positions[] = {"_target selectionPosition ['tyre1_hide', 'ViewGeometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = CSTRING(RemoveWheel);
                 text = CSTRING(RemovingWheel);
+                distance = 2.5;
             };
         };
     };
     class Truck_01_flatbed_base_F: Truck_01_viv_base_F {
         class EGVAR(interaction,anims) {
             class Tyre1_hide {
-                selections[] = {"tyre1_hide"};
+                positions[] = {"_target selectionPosition ['tyre1_hide', 'ViewGeometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = CSTRING(RemoveWheel);
                 text = CSTRING(RemovingWheel);
+                distance = 2.5;
             };
         };
     };

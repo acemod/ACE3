@@ -83,8 +83,8 @@ _bulletPos set [1, 0];
 _bulletPos set [2, -(_boreHeight / 100)];
 
 _bulletVelocity set [0, 0];
-_bulletVelocity set [1, Cos(_scopeBaseAngle) * _muzzleVelocity];
-_bulletVelocity set [2, Sin(_scopeBaseAngle) * _muzzleVelocity];
+_bulletVelocity set [1, cos(_scopeBaseAngle) * _muzzleVelocity];
+_bulletVelocity set [2, sin(_scopeBaseAngle) * _muzzleVelocity];
 
 while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
     _bulletSpeed = vectorMagnitude _bulletVelocity;
@@ -123,21 +123,21 @@ while {_TOF < 6 && (_bulletPos select 1) < _targetRange} do {
             _tz = (_lastBulletPos select 2) + (_range - (_lastBulletPos select 1)) * ((_bulletPos select 2) - (_lastBulletPos select 2)) / ((_bulletPos select 1) - (_lastBulletPos select 1));
             _elevation = - atan(_tz / _range);
             _windage = - atan(_tx / _range);
-            _lead = (_targetSpeed * _TOF) / (Tan(MRAD_TO_DEG(1)) * _range);
+            _lead = (_targetSpeed * _TOF) / (tan(MRAD_TO_DEG(1)) * _range);
         };
 
-        private _elevationString = Str(round(-DEG_TO_MRAD(_elevation) * 10) / 10);
+        private _elevationString = str(round(-DEG_TO_MRAD(_elevation) * 10) / 10);
         if (_elevationString == "0") then {
             _elevationString = "-0.0";
         };
         if (_elevationString find "." == -1) then {
             _elevationString = _elevationString + ".0";
         };
-        private _windageString = Str(round(DEG_TO_MRAD(_windage) * 10) / 10);
+        private _windageString = str(round(DEG_TO_MRAD(_windage) * 10) / 10);
         if (_windageString find "." == -1) then {
             _windageString = _windageString + ".0";
         };
-        private _leadString = Str(round(_lead * 10) / 10);
+        private _leadString = str(round(_lead * 10) / 10);
         if (_leadString find "." == -1) then {
             _leadString = _leadString + ".0";
         };
