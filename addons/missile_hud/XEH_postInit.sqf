@@ -1,6 +1,14 @@
 #include "script_component.hpp"
 
 if (hasInterface) then {
+    GVAR(pfID) = -1;
+    GVAR(generators) = [];
+
+    GVAR(config) = configFile >> "RscTitles" >> QGVAR(infoDisplay) >> "controlPrefabs";
+    GVAR(config_line) = GVAR(config) >> "line";
+    GVAR(lineHeight) = getNumber (GVAR(config_line) >> "h");
+    GVAR(lineWidth) = getNumber (GVAR(config_line) >> "w");
+
     ["CBA_settingsInitialized", {
         // Laser code display
         ["turret", LINKFUNC(showVehicleHud), false] call CBA_fnc_addPlayerEventHandler;

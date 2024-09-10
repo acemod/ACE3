@@ -15,3 +15,9 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+
+class RscText;
+class RscControlsGroupNoScrollbars;
+class RscPictureKeepAspect;
+
+#include "RscTitles.hpp"
