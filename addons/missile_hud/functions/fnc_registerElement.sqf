@@ -15,7 +15,7 @@
  * 2: Generator function <CODE>
  *
  * Return Value:
- * Nothing
+ * None
  *
  * Example:
  * [{ params ["_unit", "_vehicle"]; _unit == gunner _vehicle }, { [_this, 123] }, { params ["_vars", "_myVar"]; ["TEXT", format ["Hello, world! %1", _myVar], [1, 0, 0]] }] call ace_missile_hud_fnc_registerElement
