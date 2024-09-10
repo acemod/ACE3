@@ -14,7 +14,7 @@ class CfgAmmo {
     class GVAR(FAB250): Bomb_03_F {
         maneuvrability = 0; // no maneuvrability so that default guidance doesnt work
         airFriction = 0.25; // bombs have high drag who woulda thunk
-        class ace_missileguidance: EGVAR(missileguidance,KAB) {
+        class ace_missileguidance: EGVAR(missileguidance,type_KAB) {
             enabled = 1;
         };
     };
