@@ -20,7 +20,7 @@ PREP(handleHandoff);
 
 //re-enable after feature merge - PREP(shouldFilterRadarHit);
 
-PREP(mclosButtonPressed);
+PREP(MCLOS_buttonPressed);
 
 // Attack Profiles
 PREP(attackProfile_AIR);
