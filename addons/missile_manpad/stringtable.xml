@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
-    <Package name="MANPAD">
+    <Package name="MISSILE_MANPAD">
         <Key ID="STR_ACE_MISSILE_MANPAD_stinger">
             <English>FIM-92 Stinger [ACE]</English>
         </Key>
