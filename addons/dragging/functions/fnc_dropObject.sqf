@@ -49,6 +49,7 @@ if (_unit call EFUNC(common,isAwake)) then {
 
 // Release object
 detach _target;
+[QGVAR(objectDropped), [_unit, _target]] call CBA_fnc_localEvent;
 
 if (_target isKindOf "CAManBase") then {
     if (_target getVariable ["ACE_isUnconscious", false]) then {
