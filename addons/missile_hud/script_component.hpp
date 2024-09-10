@@ -15,5 +15,6 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+#include "\a3\ui_f\hpp\defineResincl.inc"
 
 #define HUD_UPDATE_RATE 0.1
