@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MISSILE_VIKHR">
-        <Key ID="STR_ACE_MISSILE_Vikhr_9k121">
+        <Key ID="STR_ACE_MISSILE_VIKHR_9k121">
             <English>9k121 Vikhr [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_MISSILE_Vikhr_1x">
+        <Key ID="STR_ACE_MISSILE_VIKHR_1x">
             <English>1x 9k121 Vikhr [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_MISSILE_Vikhr_2x">
+        <Key ID="STR_ACE_MISSILE_VIKHR_2x">
             <English>2x 9k121 Vikhr [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_MISSILE_Vikhr_3x">
+        <Key ID="STR_ACE_MISSILE_VIKHR_3x">
             <English>3x 9k121 Vikhr [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_MISSILE_Vikhr_4x">
+        <Key ID="STR_ACE_MISSILE_VIKHR_4x">
             <English>4x 9k121 Vikhr [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_MISSILE_Vikhr_6x">
+        <Key ID="STR_ACE_MISSILE_VIKHR_6x">
             <English>6x 9k121 Vikhr [ACE]</English>
         </Key>
-        <Key ID="STR_ACE_MISSILE_Vikhr_8x">
+        <Key ID="STR_ACE_MISSILE_VIKHR_8x">
             <English>8x 9k121 Vikhr [ACE]</English>
         </Key>
     </Package>
