@@ -58,9 +58,8 @@
             _cswTripod setVariable [QGVAR(secondaryWeaponMagazines), _secondaryWeaponMagazines, true];
         };
 
-        if (!GVAR(defaultAssemblyMode)) then {
-            [_cswTripod, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-        };
+        // Disable vanilla assembly until FUNC(initVehicle) runs and sets the definite value
+        [_cswTripod, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
         private _posATL = _player getRelPos [2, 0];
         _posATL set [2, ((getPosATL _player) select 2) + 0.5];

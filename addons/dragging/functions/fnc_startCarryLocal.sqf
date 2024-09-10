@@ -41,6 +41,11 @@ private _timer = CBA_missionTime + 5;
 
 // Handle objects vs. persons
 if (_target isKindOf "CAManBase") then {
+    // Create clone for dead units
+    if (!alive _target) then {
+        _target = [_unit, _target] call FUNC(createClone);
+    };
+
     private _primaryWeapon = primaryWeapon _unit;
 
     // Add a primary weapon if the unit has none
@@ -82,7 +87,7 @@ if (_target isKindOf "CAManBase") then {
 // Prevents dragging and carrying at the same time
 _unit setVariable [QGVAR(isCarrying), true, true];
 
-// Required for aborting animation
+// Required for aborting (animation & keybind)
 _unit setVariable [QGVAR(carriedObject), _target, true];
 
 [LINKFUNC(startCarryPFH), 0.2, [_unit, _target, _timer]] call CBA_fnc_addPerFrameHandler;

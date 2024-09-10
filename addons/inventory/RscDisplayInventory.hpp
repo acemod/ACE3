@@ -17,13 +17,13 @@ class RscStructuredText;
 class RscActiveText;
 class RscCombo;
 
-#define X_BIS(num) (num * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2))
-#define Y_BIS(num) (num * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2))
-#define W_BIS(num) (num * (((safezoneW / safezoneH) min 1.2) / 40))
-#define H_BIS(num) (num * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))
+#define X_BIS(num) (num * (((safeZoneW / safeZoneH) min 1.2) / 40) + (safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2))/2))
+#define Y_BIS(num) (num * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2))
+#define W_BIS(num) (num * (((safeZoneW / safeZoneH) min 1.2) / 40))
+#define H_BIS(num) (num * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25))
 
-#define X_MAKEITBIGGA(num) (num * (safeZoneH / 40) + (safezoneX + (safezoneW - safeZoneH)/2))
-#define Y_MAKEITBIGGA(num) (num * (safeZoneH / 30) + (safezoneY + (safezoneH - (safeZoneH / 1.2))/2))
+#define X_MAKEITBIGGA(num) (num * (safeZoneH / 40) + (safeZoneX + (safeZoneW - safeZoneH)/2))
+#define Y_MAKEITBIGGA(num) (num * (safeZoneH / 30) + (safeZoneY + (safeZoneH - (safeZoneH / 1.2))/2))
 #define W_MAKEITBIGGA(num) (num * (safeZoneH / 40))
 #define H_MAKEITBIGGA(num) (num * (safeZoneH / 30))
 

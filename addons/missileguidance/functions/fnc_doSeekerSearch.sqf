@@ -31,7 +31,7 @@ if ((isNil "_seekerTargetPos") || {_seekerTargetPos isEqualTo [0,0,0]}) then { /
         TRACE_2("seeker returned bad pos - using last known",_seekLastTargetPos,_lastKnownPos);
         _seekerTargetPos = _lastKnownPos;
         if (GVAR(debug_drawGuidanceInfo)) then {
-            drawIcon3D ["\A3\ui_f\data\map\markers\military\unknown_CA.paa", [1,1,0,1], ASLtoAGL _lastKnownPos, 0.25, 0.25, 0, "LastKnownPos", 1, 0.02, "TahomaB"];
+            drawIcon3D ["\A3\ui_f\data\map\markers\military\unknown_CA.paa", [1,1,0,1], ASLToAGL _lastKnownPos, 0.25, 0.25, 0, "LastKnownPos", 1, 0.02, "TahomaB"];
         };
     } else {
         TRACE_1("seeker returned no pos",_seekerTargetPos);
@@ -45,7 +45,7 @@ if ((isNil "_seekerTargetPos") || {_seekerTargetPos isEqualTo [0,0,0]}) then { /
 };
 
 if (GVAR(debug_drawGuidanceInfo)) then {
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,0,1], ASLtoAGL _seekerTargetPos, 0.5, 0.5, 0, _seekerTypeName, 1, 0.025, "TahomaB"];
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,0,1], ASLToAGL _seekerTargetPos, 0.5, 0.5, 0, _seekerTypeName, 1, 0.025, "TahomaB"];
 };
 
 TRACE_2("return",_seekerTargetPos,_seekerTypeName);
