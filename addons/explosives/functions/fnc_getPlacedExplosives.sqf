@@ -23,7 +23,7 @@ TRACE_1("params",_unit);
 
 private _filter = nil;
 if (count _this > 1) then {
-    _filter = ConfigFile >> "ACE_Triggers" >> (_this select 1);
+    _filter = configFile >> "ACE_Triggers" >> (_this select 1);
 };
 private _clackerList = [];
 private _adjustedList = false;
@@ -34,7 +34,7 @@ private _list = [];
         _clackerList set [_forEachIndex, "X"];
         _adjustedList = true;
     } else {
-        if (isNil "_filter" || {(ConfigFile >> "ACE_Triggers" >> (_x select 4)) == _filter}) then {
+        if (isNil "_filter" || {(configFile >> "ACE_Triggers" >> (_x select 4)) == _filter}) then {
             _list pushBack _x;
         };
     };

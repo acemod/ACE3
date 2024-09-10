@@ -31,6 +31,12 @@ if (!GVAR(dragAndFire)) then {
 };
 
 private _inBuilding = _unit call FUNC(isObjectOnObject);
+private _isClone = _target isKindOf QGVAR(clone);
+
+// Drop cloned dead units
+if (_isClone) then {
+    _target = [_unit, _target, _inBuilding] call FUNC(deleteClone);
+};
 
 // Play release animation
 if (_unit call EFUNC(common,isAwake)) then {
@@ -57,7 +63,7 @@ _unit removeWeapon "ACE_FakePrimaryWeapon";
 [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // Prevent object from flipping inside buildings
-if (_inBuilding) then {
+if (_inBuilding && {!_isClone}) then {
     _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);
     TRACE_2("setPos",getPosASL _unit,getPosASL _target);
 };

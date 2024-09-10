@@ -5,7 +5,7 @@
             <English>Advanced Throwing</English>
             <Spanish>Lanzamiento Avanzado</Spanish>
             <Russian>Улучшенный бросок гранат</Russian>
-            <Japanese>アドバンスド投擲</Japanese>
+            <Japanese>高度な投擲</Japanese>
             <Polish>Zaawansowane rzucanie</Polish>
             <German>Erweitertes Wurfsystem</German>
             <Korean>고급 투척</Korean>
@@ -21,7 +21,7 @@
             <English>Allows changing advanced throwing behaviour.</English>
             <Spanish>Permite modificar el comportamiento del lanzamiento avanzado</Spanish>
             <Russian>Позволяет настраивать поведение улучшенного броска гранат.</Russian>
-            <Japanese>アドバンスド投擲は投擲の高度な動作挙動を変更可能にします。</Japanese>
+            <Japanese>高度な投擲挙動への変更を可能にします。</Japanese>
             <Polish>Zezwala na zmianę zachowania zaawansowanego trybu rzucania.</Polish>
             <German>Erlaubt es, das Verhalten des erweiterten Wurfsystems zu ändern.</German>
             <Korean>고급 투척 행위를 허가합니다</Korean>
@@ -36,7 +36,7 @@
             <English>Enable Advanced Throwing</English>
             <Spanish>Activar Lanzamiento Avanzado</Spanish>
             <Russian>Вкл. улучшенный бросок</Russian>
-            <Japanese>アドバンスド投擲を有効化</Japanese>
+            <Japanese>高度な投擲を有効化</Japanese>
             <Polish>Aktywuj zaawansowane rzucanie</Polish>
             <German>Aktiviere erweitertes Wurfsystem</German>
             <Korean>고급 투척 활성화 </Korean>
@@ -52,7 +52,7 @@
             <English>Enables advanced throwing system.</English>
             <Spanish>Activa el Lanzamiento Avanzado</Spanish>
             <Russian>Включает систему улучшенного броска.</Russian>
-            <Japanese>アドバンスド投擲は高度な投擲システムを有効化します。</Japanese>
+            <Japanese>高度な投擲システムを有効化します。</Japanese>
             <Polish>Aktywuje system zaawansowanego rzucania.</Polish>
             <German>Aktiviert das erweiterte Wurfsystem.</German>
             <Korean>고급 투척을 활성화 합니다</Korean>

@@ -122,7 +122,7 @@ if (_isStaticWeapon) then {
 
     _loadedName = parseText format ["<t align='center' >%1</t>", _loadedName];
 
-    private _text = composeText [_loadedName, linebreak, _ammoBarsStructuredText];
+    private _text = composeText [_loadedName, lineBreak, _ammoBarsStructuredText];
     [_text] call EFUNC(common,displayTextStructured);
 } else {
     if (_magazine != "") then {
