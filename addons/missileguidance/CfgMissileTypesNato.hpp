@@ -594,8 +594,8 @@ class GVAR(type_Redeye) {
     defaultSeekerLockMode = "LOBL";
     seekerLockModes[] = { "LOBL" };
 
-    defaultNavigationType = "ProportionalNavigation";
-    navigationTypes[] = { "ProportionalNavigation" };
+    defaultNavigationType = "LineOfSight";
+    navigationTypes[] = { "LineOfSight" };
 
     seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
     seekerAngle = 45;           // Angle from the shooter's view that can track the missile
