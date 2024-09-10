@@ -59,6 +59,7 @@ PREP(mwr_onFired);
 PREP(IR_onFired);
 
 // Navigation OnFired
+PREP(los_onFired);
 PREP(proNav_onFired);
 PREP(line_onFired);
 
