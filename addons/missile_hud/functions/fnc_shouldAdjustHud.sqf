@@ -12,7 +12,7 @@
  * Whether or not to adjust hud <BOOL>
  *
  * Example:
- * [player, player, [0]] call ace_laser_fnc_showVehicleHud
+ * [player, player, [0]] call ace_missile_hud_fnc_shouldAdjustHud
  *
  * Public: No
  */

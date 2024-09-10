@@ -12,7 +12,7 @@
  * Control <CONTROL>
  *
  * Example:
- * [findDisplay 46, ["TEXT", "Hello, world!", [1, 1, 0]]] call ace_laser_fnc_createCtrlFromElement
+ * [findDisplay 46, ["TEXT", "Hello, world!", [1, 1, 0]]] call ace_missile_hud_fnc_createCtrlFromElement
  *
  * Public: No
  */
@@ -37,6 +37,12 @@ switch (_element select 0) do {
         _ctrl ctrlSetText _path;
         if (3 == count _color) then { _color pushBack 1; };
         _ctrl ctrlSetTextColor _color;
+    };
+    case "SPACER": {
+        private _controlConfig = GVAR(config) >> "icon";
+        _ctrl = _display ctrlCreate [_controlConfig, -1, _line];
+        _ctrl ctrlSetText "\A3\ui_f\data\map\markers\system\empty_ca.paa";
+        _ctrl ctrlSetTextColor [0, 0, 0, 0];
     };
 };
 

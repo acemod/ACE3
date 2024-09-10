@@ -27,4 +27,5 @@ params ["_condition", "_setup", "_generator"];
 TRACE_2("registerElement",_condition,_generator);
 
 GVAR(generators) pushBack [_condition, _setup, _generator];
+[ACE_PLAYER] call FUNC(showVehicleHud);
 

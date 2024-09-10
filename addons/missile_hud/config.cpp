@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_common"};
+        requiredAddons[] = {"ace_common", "ace_missileguidance"};
         author = ECSTRING(common,ACETeam);
         authors[] = {"tcvm"};
         url = ECSTRING(main,URL);
@@ -15,6 +15,7 @@ class CfgPatches {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "ACE_GuidanceConfig.hpp"
 
 class RscText;
 class RscControlsGroupNoScrollbars;

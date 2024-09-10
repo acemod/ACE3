@@ -8,9 +8,9 @@ if (hasInterface) then {
     GVAR(config_line) = GVAR(config) >> "line";
     GVAR(lineHeight) = getNumber (GVAR(config_line) >> "h");
     GVAR(lineWidth) = getNumber (GVAR(config_line) >> "w");
+    GVAR(itemWidth) = getNumber (GVAR(config) >> "icon" >> "w") / 1.25;
 
     ["CBA_settingsInitialized", {
-        // Laser code display
         ["turret", LINKFUNC(showVehicleHud), false] call CBA_fnc_addPlayerEventHandler;
         ["vehicle", LINKFUNC(showVehicleHud), true] call CBA_fnc_addPlayerEventHandler; // only one of these needs the retro flag
 
@@ -24,6 +24,8 @@ if (hasInterface) then {
                 [ace_player] call FUNC(showVehicleHud);
             };
         }] call CBA_fnc_addEventHandler;
+
+        [] call FUNC(registerDefaultHud);
     }] call CBA_fnc_addEventHandler;
 };
 

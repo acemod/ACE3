@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * [player] call ace_laser_fnc_showVehicleHud
+ * [player] call ace_missile_hud_fnc_showVehicleHud
  *
  * Public: No
  */
@@ -112,6 +112,7 @@ GVAR(pfID) = [{
         {
             private _control = [_display, _line, _x] call FUNC(createCtrlFromElement);
             private _width = ctrlTextWidth _control;
+            _width = ceil (_width / GVAR(itemWidth)) * GVAR(itemWidth);
 
             // If we overflow, create a new line for next element
             // If we are the first element being added, add us to the row. Otherwise, dont
