@@ -91,7 +91,7 @@ private _previousHint = _unit getVariable [QGVAR(hint), []];
 if (_previousHint isEqualType "") exitWith {};
 
 // Mouse hint
-private _hintLMB = LLSTRING(Drop);
+private _hintLMB = LELSTRING(common,Drop);
 private _cursorObject = cursorObject;
 
 if (

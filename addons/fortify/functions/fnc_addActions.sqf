@@ -21,7 +21,7 @@ private _side = side group _player;
 private _objects = missionNamespace getVariable [format [QGVAR(Objects_%1), _side], []];
 private _actions = [];
 private _infiniteBudget = ([side group _player] call FUNC(getBudget)) == -1;
-private _subActions = createHashmap;
+private _subActions = createHashMap;
 
 {
     _x params ["_classname", "_cost", ["_category", ""]];

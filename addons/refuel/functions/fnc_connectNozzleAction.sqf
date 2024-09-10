@@ -62,7 +62,7 @@ if (_bestPosASL isEqualTo []) exitWith {
 //Move it out slightly, for visibility sake (better to look a little funny than be embedded//sunk in the hull and be useless)
 _bestPosASL = _bestPosASL vectorAdd ((_bestPosASL vectorFromTo _startingPosASL) vectorMultiply 0.05);
 
-private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
+private _attachPosModel = _sink worldToModel (ASLToAGL _bestPosASL);
 
 [
     GVAR(progressDuration),

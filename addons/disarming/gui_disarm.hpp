@@ -7,13 +7,13 @@ class RscActiveText;
 class RscListBox;
 
 //Use the definese from
-#define X_BIS(num) (num * (((safezoneW / safezoneH) min 1.2) / 40) + (safezoneX + (safezoneW - ((safezoneW / safezoneH) min 1.2))/2))
-#define Y_BIS(num) (num * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + (safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))/2))
-#define W_BIS(num) (num * (((safezoneW / safezoneH) min 1.2) / 40))
-#define H_BIS(num) (num * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25))
+#define X_BIS(num) (num * (((safeZoneW / safeZoneH) min 1.2) / 40) + (safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2))/2))
+#define Y_BIS(num) (num * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2))
+#define W_BIS(num) (num * (((safeZoneW / safeZoneH) min 1.2) / 40))
+#define H_BIS(num) (num * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25))
 
-#define X_MAKEITBIGGA(num) (num * (safeZoneH / 40) + (safezoneX + (safezoneW - safeZoneH)/2))
-#define Y_MAKEITBIGGA(num) (num * (safeZoneH / 30) + (safezoneY + (safezoneH - (safeZoneH / 1.2))/2))
+#define X_MAKEITBIGGA(num) (num * (safeZoneH / 40) + (safeZoneX + (safeZoneW - safeZoneH)/2))
+#define Y_MAKEITBIGGA(num) (num * (safeZoneH / 30) + (safeZoneY + (safeZoneH - (safeZoneH / 1.2))/2))
 #define W_MAKEITBIGGA(num) (num * (safeZoneH / 40))
 #define H_MAKEITBIGGA(num) (num * (safeZoneH / 30))
 
@@ -140,9 +140,9 @@ class GVAR(remoteInventory) {
         };
         class GroundContainer: RscListBox {
             idc = 632;
-            sizeEx = "0.8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            sizeEx2 = "0.8 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-            rowHeight = "1.75 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+            sizeEx = "0.8 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
+            sizeEx2 = "0.8 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
+            rowHeight = "1.75 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)";
             canDrag = 0;
             colorText[] = {1,1,1,1};
             colorBackground[] = {0,0,0,0};

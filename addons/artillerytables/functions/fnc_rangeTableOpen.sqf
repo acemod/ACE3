@@ -34,7 +34,7 @@ TRACE_2("created dialog",_dialog,_ctrlChargeList);
 
 // Get Mags:
 private _mags = [_weaponName] call CBA_fnc_compatibleMagazines;
-if (_mags isEqualTo []) exitWith {WARNING_1("No Mags",_weaponName);};
+if (_mags isEqualTo []) exitWith {WARNING_1("No Mags %1",_weaponName);};
 private _magCfg = configFile >> "CfgMagazines";
 private _magParamsArray = [];
 _mags = _mags apply {

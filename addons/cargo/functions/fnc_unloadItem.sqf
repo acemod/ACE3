@@ -116,7 +116,7 @@ if (_object isEqualType objNull) then {
         _object setDir _direction;
     };
 
-    _object setPosASL (AGLtoASL _emptyPosAGL);
+    _object setPosASL (AGLToASL _emptyPosAGL);
 
     [QEGVAR(common,fixCollision), _object] call CBA_fnc_localEvent;
     [QEGVAR(common,fixPosition), _object] call CBA_fnc_localEvent;

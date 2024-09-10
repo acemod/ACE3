@@ -77,7 +77,7 @@ if (_muzzle == "this") then {
     _muzzle = _weapon;
 };
 
-private _reloadTime = getNumber (configfile >> "CfgWeapons" >> _weapon >> (_modes select 0) >> "reloadTime");
+private _reloadTime = getNumber (configFile >> "CfgWeapons" >> _weapon >> (_modes select 0) >> "reloadTime");
 
 private _closedBolt = getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(closedBolt));
 

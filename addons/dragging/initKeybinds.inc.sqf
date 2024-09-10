@@ -19,6 +19,7 @@
     };
 
     private _cursorObject = cursorObject;
+    if (_cursorObject isKindOf "CaManBase" && {unitIsUAV _cursorObject}) then { _cursorObject = vehicle _cursorObject };
 
     if (isNull _cursorObject || {(_cursorObject distance _player) > 2.6}) exitWith {false};
     if !([_player, _cursorObject] call FUNC(canDrag)) exitWith {false};
@@ -48,6 +49,7 @@
     };
 
     private _cursorObject = cursorObject;
+    if (_cursorObject isKindOf "CaManBase" && {unitIsUAV _cursorObject}) then { _cursorObject = vehicle _cursorObject };
 
     if (isNull _cursorObject || {(_cursorObject distance _player) > 2.6}) exitWith {false};
     if !([_player, _cursorObject] call FUNC(canCarry)) exitWith {false};

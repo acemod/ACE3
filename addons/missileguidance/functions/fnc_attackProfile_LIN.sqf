@@ -45,7 +45,7 @@ if (_2dDistance <= 1) then {
     _addHeight =  [0, 0, (_projectilePos#2) + 8];
 } else {
     // Always climb an arc on initial launch if we are close to the round
-    if ((((ASLtoAGL _projectilePos) select 2) < 5) && {_distanceToShooter < 15}) then {
+    if ((((ASLToAGL _projectilePos) select 2) < 5) && {_distanceToShooter < 15}) then {
         _addHeight = _addHeight vectorAdd [0,0,_distanceToTarget];
         TRACE_1("climb - near shooter",_addHeight);
     } else {
