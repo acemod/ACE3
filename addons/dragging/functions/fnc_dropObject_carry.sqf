@@ -46,7 +46,7 @@ if (_tryLoad && {!(_target isKindOf "CAManBase")} && {["ace_cargo"] call EFUNC(c
 } else {
     // Release object
     detach _target;
-    [QEGVAR(common,setVelocity), [_target, getVelocity _unit], _target] call CBA_fnc_targetEvent;
+    [QEGVAR(common,setVelocity), [_target, velocity _unit], _target] call CBA_fnc_targetEvent;
 };
 
 // Fix anim when aborting carrying persons
