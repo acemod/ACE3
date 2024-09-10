@@ -1,4 +1,4 @@
-ace_gbu
+ace_missile_gbu
 ===================
 
 Adds GBU-12 LGB
