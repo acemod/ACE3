@@ -22,7 +22,7 @@ TRACE_3("woundsHandlerBase",_unit,_allDamages,_typeOfDamage);
 
 
 if !(_typeOfDamage in GVAR(damageTypeDetails)) then {
-    WARNING_1("damage type not found",_typeOfDamage);
+    WARNING_1("damage type %1 not found",_typeOfDamage);
     _typeOfDamage = "unknown";
 };
 
@@ -80,7 +80,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         // Select the injury we are going to add
         selectRandomWeighted _weightedWoundTypes params ["_woundTypeToAdd", "", "_dmgMultiplier", "_bleedMultiplier", "_sizeMultiplier", "_painMultiplier", "_fractureMultiplier"];
         if (isNil "_woundTypeToAdd") then {
-            WARNING_4("No valid wound types",_damage,_dmgPerWound,_typeOfDamage,_bodyPart);
+            WARNING_4("No valid wound types %1-%2-%3-%4",_damage,_dmgPerWound,_typeOfDamage,_bodyPart);
             continue
         };
         GVAR(woundDetails) get _woundTypeToAdd params ["","_injuryBleedingRate","_injuryPain","_causeLimping","_causeFracture"];

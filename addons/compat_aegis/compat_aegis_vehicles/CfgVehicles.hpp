@@ -6,6 +6,19 @@ class CfgVehicles {
         };
     };
 
+    class APC_Tracked_03_base_F: Tank_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {};
+        };
+    };
+    class APC_Tracked_03_base_v2_F: APC_Tracked_03_base_F {
+        class Turrets: Turrets {
+            class MainTurret: MainTurret {
+                weapons[] = {"autocannon_40mm_CTWS", "ACE_LMG_coax_L94A1_mem3"}; // Aegis upgrades to a 40mm cannon, but we want realistic MG name
+            };
+        };
+    };
+
     class MBT_01_base_F: Tank_F {
         class Turrets: Turrets {
             class MainTurret: MainTurret {

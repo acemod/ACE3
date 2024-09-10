@@ -17,7 +17,7 @@
 
 135471 cutRsc ["DAGR_DISPLAY", "plain down"];
 
-#define __display (uiNameSpace getVariable "DAGR_DISPLAY")
+#define __display (uiNamespace getVariable "DAGR_DISPLAY")
 
 #define __gridControl (__display displayCtrl 266851)
 #define __speedControl (__display displayCtrl 266858)
@@ -36,7 +36,7 @@ if (_lazPosX < 0) then { _lazPosX = _lazPosX + 99999;};
 if (_lazPosY < 0) then {_lazPosY = _lazPosY + 99999;};
 
 // Find laser position
-private _xGrid = toArray Str(round _lazPosX);
+private _xGrid = toArray str(round _lazPosX);
 
 while {count _xGrid < 5} do {
     _xGrid = [48] + _xGrid;
@@ -45,7 +45,7 @@ _xGrid resize 4;
 _xGrid = toString _xGrid;
 _xGrid = parseNumber _xGrid;
 
-private _yGrid = toArray Str(round _lazPosY);
+private _yGrid = toArray str(round _lazPosY);
 while {count _yGrid < 5} do {
     _yGrid = [48] + _yGrid;
 };
@@ -54,17 +54,17 @@ _yGrid = toString _yGrid;
 _yGrid = parseNumber _yGrid;
 
 private _xCoord = switch true do {
-    case (_xGrid >= 1000): { "" + Str(_xGrid) };
-    case (_xGrid >= 100): { "0" + Str(_xGrid) };
-    case (_xGrid >= 10): { "00" + Str(_xGrid) };
-    default             { "000" + Str(_xGrid) };
+    case (_xGrid >= 1000): { "" + str(_xGrid) };
+    case (_xGrid >= 100): { "0" + str(_xGrid) };
+    case (_xGrid >= 10): { "00" + str(_xGrid) };
+    default             { "000" + str(_xGrid) };
 };
 
 private _yCoord = switch true do {
-    case (_yGrid >= 1000): { "" + Str(_yGrid) };
-    case (_yGrid >= 100): { "0" + Str(_yGrid) };
-    case (_yGrid >= 10): { "00" + Str(_yGrid) };
-    default             { "000" + Str(_yGrid) };
+    case (_yGrid >= 1000): { "" + str(_yGrid) };
+    case (_yGrid >= 100): { "0" + str(_yGrid) };
+    case (_yGrid >= 10): { "00" + str(_yGrid) };
+    default             { "000" + str(_yGrid) };
 };
 
 private _dagrGrid = _xCoord + " " + _yCoord;
@@ -74,7 +74,7 @@ private _elevation = floor ((_lazPosZ) + EGVAR(common,mapAltitude));
 private _dagrElevation = str _elevation + "m";
 
 // Time
-private _dagrTime = [daytime, "HH:MM"] call bis_fnc_timeToString;
+private _dagrTime = [dayTime, "HH:MM"] call bis_fnc_timeToString;
 
 // Bearing
 private _bearing = GVAR(LAZHEADING);
