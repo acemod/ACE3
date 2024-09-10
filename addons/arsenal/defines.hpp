@@ -3,7 +3,7 @@
 #define GRID_W (pixelW * pixelGridNoUIScale * pixelScale)
 #define GRID_H (pixelH * pixelGridNoUIScale * pixelScale)
 
-#define WIDTH_TOTAL (safezoneW - 2 * (93 * GRID_W))
+#define WIDTH_TOTAL (safeZoneW - 2 * (93 * GRID_W))
 #define WIDTH_GAP (WIDTH_TOTAL / 100)
 #define WIDTH_SINGLE ((WIDTH_TOTAL - 7 * WIDTH_GAP) / 6)
 
@@ -154,6 +154,8 @@
 #define IDC_statsPreviousPage 52
 #define IDC_statsNextPage 53
 #define IDC_statsCurrentPage 54
+#define IDC_statsBoxTitleBackground 55
+#define IDC_statsBoxBackground 56
 #define IDC_actionsBox 90
 #define IDC_actionsBackground1 90010
 #define IDC_actionsBackground2 90011
@@ -360,10 +362,10 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
 {\
     _x = _display displayCtrl _x;\
     _x ctrlSetPosition [\
-        safezoneX + safezoneW - 93 * GRID_W,\
-        safezoneY + 14 * GRID_H,\
+        safeZoneX + safeZoneW - 93 * GRID_W,\
+        safeZoneY + 14 * GRID_H,\
         80 * GRID_W,\
-        safezoneH - 28 * GRID_H\
+        safeZoneH - 28 * GRID_H\
     ];\
     _x ctrlCommit 0;\
 } forEach [\
@@ -406,10 +408,10 @@ _buttonCurrentMag2Ctrl ctrlCommit FADE_DELAY;\
 {\
     _x = _display displayCtrl _x;\
     _x ctrlSetPosition [\
-        safezoneX + safezoneW - 93 * GRID_W,\
-        safezoneY + 14 * GRID_H,\
+        safeZoneX + safeZoneW - 93 * GRID_W,\
+        safeZoneY + 14 * GRID_H,\
         80 * GRID_W,\
-        safezoneH - 34 * GRID_H\
+        safeZoneH - 34 * GRID_H\
     ];\
     _x ctrlCommit 0;\
 } forEach [\
@@ -426,16 +428,16 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
             if (isNull (_display displayCtrl (60 + _plusId))) then {\
                 private _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Background), 60 + _plusId];\
                 _ctrl ctrlSetPosition [\
-                    safezoneW + safezoneX - 13 * GRID_W,\
-                    safezoneY + (88 + (10 * _forEachIndex)) * GRID_H\
+                    safeZoneW + safeZoneX - 13 * GRID_W,\
+                    safeZoneY + (88 + (10 * _forEachIndex)) * GRID_H\
                 ];\
                 _ctrl ctrlCommit 0;\
             };\
             if (isNull (_display displayCtrl (61 + _plusId))) then {\
                 _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Button), 61 + _plusId];\
                 _ctrl ctrlSetPosition [\
-                    safezoneW + safezoneX - 10 * GRID_W,\
-                    safezoneY + (88 + (10 * _forEachIndex)) * GRID_H\
+                    safeZoneW + safeZoneX - 10 * GRID_W,\
+                    safeZoneY + (88 + (10 * _forEachIndex)) * GRID_H\
                 ];\
                 _ctrl ctrlSetText _picture;\
                 _ctrl ctrlSetTooltip _tooltip;\
@@ -446,8 +448,8 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
     {\
         _x = _display displayCtrl _x;\
         _x ctrlSetPosition [\
-            safezoneW + safezoneX - (10 + (3 * _forEachIndex)) * GRID_W,\
-            safezoneY + (88 + (10 * _miscOffset)) * GRID_H\
+            safeZoneW + safeZoneX - (10 + (3 * _forEachIndex)) * GRID_W,\
+            safeZoneY + (88 + (10 * _miscOffset)) * GRID_H\
         ];\
         _x ctrlCommit 0;\
     } forEach [IDC_buttonMisc, IDC_iconBackgroundMisc];\

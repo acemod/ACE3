@@ -50,6 +50,28 @@ class CfgVehicles {
             };
         };
     };
+    class rhs_gaz66_vmf: rhs_truck {};
+    class rhs_gaz66_ammo_base: rhs_gaz66_vmf {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class spare_hide: spare_hide {
+                positions[] = {"_target selectionPosition ['spare', 'FireGeometry', 'AveragePoint']"};
+            };
+        };
+    };
+    class rhs_gaz66_repair_base: rhs_gaz66_vmf {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class spare_hide: spare_hide {
+                positions[] = {"_target selectionPosition ['spare', 'FireGeometry', 'AveragePoint']"};
+            };
+        };
+    };
+    class rhs_gaz66_ap2_base: rhs_gaz66_vmf {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class spare_hide: spare_hide {
+                positions[] = {"_target selectionPosition ['spare', 'FireGeometry', 'AveragePoint']"};
+            };
+        };
+    };
 
     class RHS_Ural_BaseTurret: Truck_F {
         class EGVAR(interaction,anims) {
