@@ -4,7 +4,7 @@
  * Gets the delay duration an item should take to load/unload.
  *
  * Arguments:
- * 0: Item <OBJECT>
+ * 0: Item <OBJECT><TEXT>
  *
  * Return Value:
  * Item load/unload duration <NUMBER>
@@ -17,7 +17,7 @@
 
 params ["_item"];
 
-if (_item getVariable [QGVAR(delay), -1] >= 0) exitWith {
+if ((_item isEqualType objNull) && {_item getVariable [QGVAR(delay), -1] >= 0}) exitWith {
     _item getVariable QGVAR(delay)  // return
 };
 GVAR(loadTimeCoefficient) * (_item call FUNC(getSizeItem))  // return
