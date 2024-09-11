@@ -49,7 +49,6 @@ if (_unit call EFUNC(common,isAwake)) then {
 
 // Release object
 detach _target;
-[QGVAR(objectDropped), [_unit, _target]] call CBA_fnc_localEvent;
 
 if (_target isKindOf "CAManBase") then {
     if (_target getVariable ["ACE_isUnconscious", false]) then {
@@ -108,3 +107,6 @@ private _mass = _target getVariable [QGVAR(originalMass), 0];
 if (_mass != 0) then {
     [QEGVAR(common,setMass), [_target, _mass]] call CBA_fnc_globalEvent; // Force global sync
 };
+
+// API
+[QGVAR(stoppedDrag), [_unit, _target]] call CBA_fnc_localEvent;
