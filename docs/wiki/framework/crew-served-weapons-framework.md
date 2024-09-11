@@ -138,7 +138,7 @@ class CfgVehicles {
     class prefix_hmg: StaticMGWeapon {
         class ACE_CSW {
             enabled = 1; // Enables ACE CSW for this weapon              
-            proxyWeapon = "prefix_hmg_weapon_proxy"; // The proxy weapon created above. This can also be a function name that returns a proxy weapon
+            proxyWeapon = "prefix_hmg_weapon_proxy"; // The proxy weapon created above. This can also be a function name that returns a proxy weapon - passed [_vehicle, _turret, _currentWeapon, _needed, _emptyWeapon]
             magazineLocation = "_target selectionPosition 'magazine'"; // Ammo handling interaction point location
             disassembleWeapon = "prefix_hmg_carry";  // Carryable weapon created above
             disassembleTurret = "ace_csw_m3Tripod";  // Which static tripod will appear when weapon is disassembled
