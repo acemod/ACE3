@@ -44,10 +44,10 @@ if (_enabledTagsCursor) then {
     private _target = cursorTarget;
     if !(_target isKindOf "CAManBase") then {
         // When cursorTarget is on a vehicle show the nametag for the commander.
-        if !(_target in allUnitsUAV) then {
-            _target = effectiveCommander _target;
-        } else {
+        if (_target in allUnitsUAV) then {
             _target = objNull;
+        } else {
+            _target = effectiveCommander _target;
         };
     };
     if (isNull _target) exitWith {};
