@@ -28,7 +28,7 @@ private _velocity = velocity ACE_player;
 private _normal = surfaceNormal (getPosWorld ACE_player);
 private _movementVector = vectorNormalized _velocity;
 private _fwdAngle = asin (_movementVector select 2);
-private _sideAngle = if ((getPosATL ACE_player) select 2 > 0.02) then { 
+private _sideAngle = if ((getPosATL ACE_player) select 2 > 0.01) then { 
     0 // ignore terrain normal if not touching it
 } else {
     private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
