@@ -24,6 +24,8 @@ private _carryMaxAmmo = getNumber (configFile >> "CfgMagazines" >> _carryMag >> 
 private _fullMagazines = floor (_ammo / _carryMaxAmmo);
 private _bulletsRemaining = _ammo % _carryMaxAmmo;
 
+// Get nearby units to clear cache
+private _nearUnits = _unloadTo nearEntities ["CAManBase", DISTANCE_SEARCH_RADIUS];
 private _unloadToUnit = _unloadTo isKindOf "CAManBase";
 
 if (_unloadToUnit) then {
@@ -37,23 +39,38 @@ if (_unloadToUnit) then {
     };
 };
 
-if ((_fullMagazines == 0) && {_bulletsRemaining == 0}) exitWith {};
+if ((_fullMagazines == 0) && {_bulletsRemaining == 0}) exitWith {
+    [QGVAR(clearNearbySourcesCache), [], _nearUnits] call CBA_fnc_targetEvent;
+};
 
 // Try to use object inventory or existing container
 private _container = [_unloadTo, objNull] select _unloadToUnit;
 if ((maxLoad _container) isEqualTo 0) then {
     _container = _unloadTo getVariable [QGVAR(container), objNull];
-    if ((_container distance _unloadTo) > 10) then { _container = objNull; };
+    if ((_container distance _unloadTo) > DISTANCE_SEARCH_RADIUS) then { _container = objNull; };
     if (isNull _container) then {
-        _container = (nearestObjects [_unloadTo, [["GroundWeaponHolder"], [QGVAR(ammo_holder)]] select GVAR(handleExtraMagazinesType), 10]) param [0, objNull];
+        _container = (nearestObjects [_unloadTo, [["GroundWeaponHolder"], [QGVAR(ammo_holder)]] select GVAR(handleExtraMagazinesType), DISTANCE_SEARCH_RADIUS]) param [0, objNull];
     };
 };
 
 if (isNull _container) then {
     // Create ammo storage container
-    private _weaponRelPos = _unloadTo getRelPos RELATIVE_DIRECTION(270);
-    _weaponRelPos set [2, ((getPosATL _unloadTo) select 2) + 0.05];
-    _container = createVehicle [["GroundWeaponHolder", QGVAR(ammo_holder)] select GVAR(handleExtraMagazinesType), [0, 0, 0], [], 0, "CAN_COLLIDE"];
+    private _containerType = getText (configOf _unloadTo >> QUOTE(ADDON) >> "container");
+
+    // Use setting if container already created or not defined
+    if (_containerType isEqualTo "" || {!isNil {_unloadTo getVariable QGVAR(container)}}) then {
+        _containerType = ["GroundWeaponHolder", QGVAR(ammo_holder)] select GVAR(handleExtraMagazinesType);
+    };
+
+    _container = createVehicle [_containerType, [0, 0, 0], [], 0, "CAN_COLLIDE"];
+    if ((loadAbs _container) isNotEqualTo 0) then {
+        clearItemCargoGlobal _container;
+        clearWeaponCargoGlobal _container;
+        clearBackpackCargoGlobal _container;
+        clearMagazineCargoGlobal _container;
+    };
+
+    private _weaponRelPos = (_unloadTo getRelPos RELATIVE_DIRECTION(270)) vectorAdd [0, 0, 0.05];
     _unloadTo setVariable [QGVAR(container), _container, true];
     _container setDir random [0, 180, 360];
     _container setPosATL _weaponRelPos;
@@ -71,3 +88,5 @@ if (_fullMagazines > 0) then {
 if (_bulletsRemaining > 0) then {
     _container addMagazineAmmoCargo [_carryMag, 1, _bulletsRemaining];
 };
+
+[QGVAR(clearNearbySourcesCache), [], _nearUnits] call CBA_fnc_targetEvent;

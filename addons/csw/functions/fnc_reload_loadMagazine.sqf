@@ -9,6 +9,7 @@
  * 2: Unit Carried Magazine <STRING>
  * 3: Magazine source <OBJECT>
  * 4: Unit doing the action <OBJECT>
+ * 5: Ammo <NUMBER>
  *
  * Return Value:
  * None
@@ -19,38 +20,24 @@
  * Public: No
  */
 
-params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit"];
-TRACE_5("loadMagazine",_vehicle,_turret,_carryMag,_magSource,_unit);
+params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit", "_ammo"];
+TRACE_6("loadMagazine",_vehicle,_turret,_carryMag,_magSource,_unit,_ammo);
 
-private _timeToLoad = 1;
-private _config = configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime";
-if (!isNull _config) then {
-    _timeToLoad = getNumber _config;
-};
+private _timeToLoad = GET_NUMBER(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime",1);
 
 private _displayName = format [LLSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
 
 private _onFinish = {
-    (_this select 0) params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit"];
-    TRACE_5("load progressBar finish",_vehicle,_turret,_carryMag,_magSource,_unit);
+    (_this select 0) params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit", "_ammo"];
+    TRACE_6("load progressBar finish",_vehicle,_turret,_carryMag,_magSource,_unit,_ammo);
 
-    ([_vehicle, _turret, _carryMag, _magSource] call FUNC(reload_canLoadMagazine)) params ["", "", "_neededAmmo", ""];
+    ([_vehicle, _turret, _carryMag] call FUNC(reload_canLoadMagazine)) params ["", "", "_neededAmmo", ""];
     if (_neededAmmo <= 0) exitWith { ERROR_1("Can't load ammo - %1",_this); };
 
-    // Figure out what we can add from the magazines we have
-    private _bestAmmoToSend = -1;
-    {
-        _x params ["_xMag", "_xAmmo"];
-        if (_xMag == _carryMag) then {
-            if ((_bestAmmoToSend == -1) || {(_xAmmo > _bestAmmoToSend) && {_xAmmo <= _neededAmmo}}) then {
-                _bestAmmoToSend = _xAmmo;
-            };
-        };
-    } forEach (if (_magSource isKindOf "CAManBase") then {magazinesAmmo _magSource} else {magazinesAmmoCargo _magSource});
+    [_magSource, _carryMag, _ammo] call EFUNC(common,removeSpecificMagazine);
 
-    if (_bestAmmoToSend == -1) exitWith {ERROR_2("No ammo [%1 - %2]?",_xMag,_bestAmmoToSend);};
-    [_magSource, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
-    if (_bestAmmoToSend == 0) exitWith {};
+    private _nearUnits = _vehicle nearEntities ["CAManBase", DISTANCE_SEARCH_RADIUS];
+    [QGVAR(clearNearbySourcesCache), [], _nearUnits] call CBA_fnc_targetEvent;
 
     // Workaround for removeSpecificMagazine and WeaponHolders being deleted when empty, give back to the unit if the weapon holder was deleted
     // TODO: Pass type and position of deleted object to create a new one
@@ -60,17 +47,16 @@ private _onFinish = {
 
         if (isNull _magSource) then {
             _args pushBack _unit;
-        };        
+        };
 
         TRACE_1("calling addTurretMag event",_args);
-        [QGVAR(addTurretMag), _args] call CBA_fnc_globalEvent;
-    }, [_magSource, _unit, [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend]]] call CBA_fnc_execNextFrame;
+        [QGVAR(addTurretMag), _args, _args select 0, _args select 1] call CBA_fnc_turretEvent;
+    }, [_magSource, _unit, [_vehicle, _turret, _magSource, _carryMag, _ammo]]] call CBA_fnc_execNextFrame;
 };
-
 
 [
     TIME_PROGRESSBAR(_timeToLoad),
-    [_vehicle, _turret, _carryMag, _magSource],
+    [_vehicle, _turret, _carryMag, _magSource, _unit, _ammo],
     _onFinish,
     {TRACE_1("load progressBar fail",_this);},
     _displayName,

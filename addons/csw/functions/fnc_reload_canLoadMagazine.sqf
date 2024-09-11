@@ -19,21 +19,23 @@
  */
 
 params ["_vehicle", "_turret", "_carryMag", ["_magSource", objNull]];
-// TRACE_4("reload_canLoadMagazine",_vehicle,_turret,_carryMag,_magSource);
+TRACE_4("reload_canLoadMagazine",_vehicle,_turret,_carryMag,_magSource);
 
 private _return = [false, "", -2, false];
 
 // Handle disassembled or deleted
-if (!alive _vehicle) exitWith { _return };
-// Verify holder has carry magazine
-if (
-    (!isNull _magSource) &&
-    {!((_magSource isKindOf "Bag_Base") || {_magSource isKindOf "ContainerSupply"})} && // Hacky workaround for magazines within dropped backpacks
-    {
-        ((_vehicle distance _magSource) > 10) ||
-        {((magazineCargo _magSource) findIf {_x == _carryMag}) == -1}
-    }
-) exitWith { _return };
+if !(alive _vehicle) exitWith {TRACE_1("not alive",_vehicle); _return};
+
+scopeName "main";
+
+// objNull as mag source means we can skip these checks: used to just get magazine info to load in turret
+if !(isNull _magSource) then {
+    // Verify holder has carry magazine
+    if !(_carryMag in (magazineCargo _magSource)) exitWith {TRACE_3("no carry mag",_magSource,_carryMag,magazineCargo _magSource); _return breakOut "main"};
+
+    // Verify holder has not moved away from vehicle, with workaround for containers within containers
+    if ((_vehicle distance _magSource) > DISTANCE_SEARCH_RADIUS && {(_vehicle distance (objectParent _magSource)) > DISTANCE_SEARCH_RADIUS}) exitWith {TRACE_1("too far",""); _return breakOut "main"};
+};
 
 // solve config lookups
 private _cfgMagazines = configFile >> "CfgMagazines";
@@ -46,7 +48,6 @@ private _ammoNeeded = _desiredAmmo min getNumber (_cfgMagazinesCarryMag >> "coun
 private _loadedMag = "";
 private _isBeltLinking = false;
 
-scopeName "main";
 {
     _x params ["_xMag", "_xTurret", "_xAmmo"];
     if (_xTurret isEqualTo _turret) then {

@@ -64,7 +64,7 @@
             <Turkish>Bin</Turkish>
             <Korean>탑승하기</Korean>
         </Key>
-        <Key ID="STR_ACE_CSW_loadX">
+        <Key ID="STR_ACE_CSW_actionLoad">
             <English>Load %1</English>
             <German>Lade %1</German>
             <Spanish>Cargar %1</Spanish>
@@ -81,7 +81,7 @@
             <Turkish>Yükle %1</Turkish>
             <Korean>%1 싣기</Korean>
         </Key>
-        <Key ID="STR_ACE_CSW_unloadX">
+        <Key ID="STR_ACE_CSW_actionUnload">
             <English>Unload %1</English>
             <German>Entlade %1</German>
             <Spanish>Descargar %1</Spanish>
@@ -112,6 +112,12 @@
             <Spanish>Conectar %1</Spanish>
             <Russian>Соединить %1</Russian>
             <Korean>%1 연결</Korean>
+        </Key>
+        <Key ID="STR_ACE_CSW_loadX">
+            <English>Loading %1...</English>
+        </Key>
+        <Key ID="STR_ACE_CSW_unloadX">
+            <English>Unloading %1...</English>
         </Key>
         <Key ID="STR_ACE_CSW_defaultAssemblyMode_displayName">
             <English>Advanced Assembly</English>

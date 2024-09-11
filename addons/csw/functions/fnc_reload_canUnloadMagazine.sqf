@@ -21,8 +21,8 @@
 
 params ["_vehicle", "_turretPath", "_unit", "_carryMag", "_vehMag"];
 
-// handle disassembled or deleted
-if ((!alive _vehicle) || {(_vehicle distance _unit) > 5}) exitWith {false};
+// Handle disassembled or deleted
+if (!alive _vehicle || {(_vehicle distance _unit) > DISTANCE_SEARCH_RADIUS}) exitWith {false};
 
 private _return = false;
 {

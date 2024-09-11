@@ -34,13 +34,24 @@ TRACE_2("",typeOf _vehicle,_proxyWeapon);
 if (_proxyWeapon == "") exitWith {};
 
 private _currentWeapon = (_vehicle weaponsTurret [0]) param [0, "#none"];
-if ((missionNamespace getVariable [_proxyWeapon, objNull]) isEqualType {}) then { // check if string is a function
+if ((missionNamespace getVariable [_proxyWeapon, objNull]) isEqualType {}) then { // Check if string is a function
     TRACE_1("Calling proxyWeapon function",_proxyWeapon);
     // This function may replace magazines or do other things to the static weapon
     _proxyWeapon = [_vehicle, _turret, _currentWeapon, _needed, _emptyWeapon] call (missionNamespace getVariable _proxyWeapon);
-    _needed = _proxyWeapon != "";
+    _needed = _proxyWeapon != "" && {_proxyWeapon != _currentWeapon};
 };
 if (!_needed) exitWith { TRACE_2("not needed",_needed,_proxyWeapon); };
+
+// Config case for hashmap key
+_proxyWeapon = configName (configFile >> "CfgWeapons" >> _proxyWeapon);
+if (_proxyWeapon isEqualTo "") exitWith {ERROR_1("proxy weapon non-existent for [%1]",_currentWeapon)};
+
+// Cache compatible magazines
+if !(_proxyWeapon in GVAR(compatibleMagsCache)) then {
+    private _compatibleMagazines = compatibleMagazines _proxyWeapon;
+    GVAR(compatibleVehicleMagsCache) set [_proxyWeapon, _compatibleMagazines];
+    GVAR(compatibleMagsCache) set [_proxyWeapon, (_compatibleMagazines apply {_x call FUNC(getCarryMagazine)}) createHashMapFromArray []];
+};
 
 // Rearm compatibility, prevent reloading entire static and breaking CSW
 _vehicle setVariable [QEGVAR(rearm,scriptedLoadout), true, true];

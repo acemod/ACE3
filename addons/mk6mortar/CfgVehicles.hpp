@@ -29,6 +29,7 @@ class CfgVehicles {
         class ace_csw {
             proxyWeapon = QFUNC(csw_getProxyWeapon);
             magazineLocation = "_target selectionPosition 'usti hlavne'";
+            container = "ACE_Box_82mm_Mo_Combo";
         };
         class Turrets: Turrets {
             class MainTurret: MainTurret {

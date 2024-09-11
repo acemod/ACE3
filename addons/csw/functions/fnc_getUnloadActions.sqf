@@ -22,11 +22,7 @@ private _statement = {
     _args params ["_vehMag", "_turretPath", "_carryMag"];
     TRACE_5("starting unload",_target,_turretPath,_player,_carryMag,_vehMag);
 
-    private _timeToUnload = 1;
-    private _config = configOf _target >> QUOTE(ADDON) >> "ammoUnloadTime";
-    if (!isNull _config) then {
-        _timeToUnload = getNumber _config;
-    };
+    private _timeToUnload = GET_NUMBER(configOf _target >> QUOTE(ADDON) >> "ammoUnloadTime",1);
 
     [
         TIME_PROGRESSBAR(_timeToUnload),
@@ -34,10 +30,10 @@ private _statement = {
         {
             (_this select 0) params ["_target", "_turretPath", "", "_carryMag", "_vehMag"];
             TRACE_5("unload progressBar finish",_target,_turretPath,_carryMag,_vehMag,_player);
-            [QGVAR(removeTurretMag), [_target, _turretPath, _carryMag, _vehMag, _player]] call CBA_fnc_globalEvent;
+            [QGVAR(removeTurretMag), [_target, _turretPath, _carryMag, _vehMag, _player], _target, _turretPath] call CBA_fnc_turretEvent;
         },
         {TRACE_1("unload progressBar fail",_this);},
-        format [LLSTRING(unloadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")],
+        format [LLSTRING(actionUnload), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")],
         {(_this select 0) call FUNC(reload_canUnloadMagazine)},
         ["isNotInside"]
     ] call EFUNC(common,progressBar);
@@ -46,7 +42,7 @@ private _statement = {
 private _condition = {
     params ["_target", "_player", "_args"];
     _args params ["_vehMag", "_turretPath", "_carryMag"];
-    
+
     [_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew) &&
     {[_target, _turretPath, _player, _carryMag, _vehMag] call FUNC(reload_canUnloadMagazine)}
 };
@@ -66,7 +62,7 @@ private _cfgMagazines = configFile >> "CfgMagazines";
         if (_carryMag == "") exitWith {};
 
         private _displayName = getText (_cfgMagazines >> _carryMag >> "displayName");
-        private _text = format [LLSTRING(unloadX), _displayName];
+        private _text = format [LLSTRING(actionUnload), _displayName];
         private _picture = getText (_cfgMagazines >> _carryMag >> "picture");
         private _action = [format ["unload_%1", _forEachIndex], _text, _picture, _statement, _condition, {}, [_xMag, _xTurret, _carryMag]] call EFUNC(interact_menu,createAction);
         _actions pushBack [_action, [], _vehicle];

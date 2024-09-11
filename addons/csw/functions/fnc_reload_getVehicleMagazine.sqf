@@ -26,18 +26,18 @@ if (_desiredAmmo == 0) then { _desiredAmmo = 100; };
 
 private _bestMag = "#";
 private _bestMagCount = -1;
+private _cfgMagazines = configFile >> "CfgMagazines";
 
 {
-    private _weapon = _x;
     {
         if ((getNumber (_carryGroupCfg >> _x)) == 1) then {
-            private _xAmmo = getNumber (configFile >> "CfgMagazines" >> _x >> "ammo");
+            private _xAmmo = getNumber (_cfgMagazines >> _x >> "ammo");
             if (((_xAmmo >= _bestMagCount) && {_bestMagCount < _desiredAmmo}) || {(_xAmmo >= _desiredAmmo) && {_xAmmo < _bestMagCount}}) then {
                 _bestMag = _x;
                 _bestMagCount = _xAmmo;
             };
         };
-    } forEach (compatibleMagazines _weapon);
+    } forEach (GVAR(compatibleVehicleMagsCache) get _x);
 } forEach (_vehicle weaponsTurret _turret);
 TRACE_3("best fit",_desiredAmmo,_bestMag,_bestMagCount);
 
