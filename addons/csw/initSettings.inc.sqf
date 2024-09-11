@@ -34,7 +34,7 @@ private _categoryArray = [format ["ACE %1", localize LSTRING(DisplayName)]];
     QGVAR(ammoHandling), "LIST",
     [LSTRING(ammoHandling_displayName), LSTRING(ammoHandling_description)],
     _categoryArray,
-    [[0, 1, 2], [LELSTRING(common,Disabled), LELSTRING(common,playerOnly), LELSTRING(common,playersAndAI)], 2], //  [_values, _valueTitles, _defaultIndex]
+    [[1, 2], [LELSTRING(common,playerOnly), LELSTRING(common,playersAndAI)], 2], //  [_values, _valueTitles, _defaultIndex]
     true, // isGlobal
     {[QGVAR(ammoHandling), _this] call EFUNC(common,cbaSettings_settingChanged)},
     true // Needs mission restart
