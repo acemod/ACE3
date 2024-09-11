@@ -173,6 +173,12 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |---------- |------------|----------|------|-------------|
 | `ace_dragging_cloneCreated` | [_clone, _corpse] | Local | Listen | Called when a clone used for dragging/carrying corpses is created
 | `ace_dragging_cloneDeleted` | [_clone, _corpse] | Local | Listen | Called when a clone used for dragging/carrying corpses is deleted
+| `ace_dragging_setupCarry` | [_unit, _target] | Local | Listen | Called when the unit starts the carrying animation for the target
+| `ace_dragging_startedCarry` | [_unit, _target] | Local | Listen | Called when the unit starts successfully carrying the target. This event is called after `ace_dragging_setupCarry`.
+| `ace_dragging_stoppedCarry` | [_unit, _target, _loadCargo] | Local | Listen | Called when the unit stops carrying the target. `_loadCargo` says if the target is being loaded as cargo/person or not.
+| `ace_dragging_setupDrag` | [_unit, _target] | Local | Listen | Called when the unit starts the dragging animation for the target
+| `ace_dragging_startedDrag` | [_unit, _target] | Local | Listen | Called when the unit starts successfully dragging the target. This event is called after `ace_dragging_setupDrag`.
+| `ace_dragging_stoppedDrag` | [_unit, _target] | Local | Listen | Called when the unit stops dragging the target
 
 ### 2.19 HuntIR (`ace_huntir`)
 

@@ -46,7 +46,6 @@ if (_tryLoad && {!(_target isKindOf "CAManBase")} && {["ace_cargo"] call EFUNC(c
 } else {
     // Release object
     detach _target;
-    [QGVAR(objectDroppedCarry), [_unit, _target]] call CBA_fnc_localEvent;
 };
 
 // Fix anim when aborting carrying persons
@@ -130,6 +129,12 @@ if (_loadCargo) then {
             } else {
                 [_unit, _target, _cursorObject] call EFUNC(common,loadPerson);
             };
+
+            // Repurpose variable for flag used in event below
+            _loadCargo = true;
         };
     };
 };
+
+// API
+[QGVAR(stoppedCarry), [_unit, _target, _loadCargo]] call CBA_fnc_localEvent;
