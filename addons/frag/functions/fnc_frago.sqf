@@ -103,9 +103,9 @@ if (_targets isNotEqualTo []) then {
 
                 for "_i" from 1 to _count do {
                     private _vectorDir = _baseVec vectorDiff [
-                    (_vecVar / 2) - (random _vecVar),
-                    (_vecVar / 2) - (random _vecVar),
-                    (_vecVar / 2) - (random _vecVar)
+                        (_vecVar / 2) - (random _vecVar),
+                        (_vecVar / 2) - (random _vecVar),
+                        (_vecVar / 2) - (random _vecVar)
                     ];
 
                     private _fragObjSpeed = _fragVelocity * (1 - random 0.5);

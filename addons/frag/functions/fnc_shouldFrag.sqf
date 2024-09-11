@@ -17,33 +17,30 @@
 
 params ["_ammo"];
 
-GVAR(shouldFragCache) getOrDefaultCall [
-    _ammo, {
-        private _shouldFrag = true;
+GVAR(shouldFragCache) getOrDefaultCall [_ammo, {
+    private _shouldFrag = true;
 
-        private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
-        private _skip = getNumber (_ammoConfig >> QGVAR(skip));
-        if (_skip == 1) then {
+    private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
+    private _skip = getNumber (_ammoConfig >> QGVAR(skip));
+    if (_skip == 1) then {
+        _shouldFrag = false;
+        TRACE_1("No frag: skip",_skip);
+    };
+
+    private _force = getNumber (_ammoConfig >> QGVAR(force));
+    if (_shouldFrag && _force == 0) then {
+        private _explosive = getNumber (_ammoConfig >> "explosive");
+        if (_explosive < 0.5) exitWith {
             _shouldFrag = false;
-            TRACE_1("No frag: skip",_skip);
+            TRACE_3("No frag: _explosive",_skip,_force,_explosive);
         };
-
-        private _force = getNumber (_ammoConfig >> QGVAR(force));
-        if (_shouldFrag && _force == 0) then {
-            private _explosive = getNumber (_ammoConfig >> "explosive");
-            if (_explosive < 0.5) exitWith {
-                _shouldFrag = false;
-                TRACE_3("No frag: _explosive",_skip,_force,_explosive);
-            };
-            private _indirectHit = getNumber (_ammoConfig >> "indirectHit");
-            private _indirectRange = getNumber (_ammoConfig >> "indirectHitRange");
-            if (_indirectHit * sqrt(_indirectRange) < 35 || _indirectRange < 4.5) then {
-                _shouldFrag = false;
-                TRACE_5("No frag",_ammo,_skip,_explosive,_indirectRange,_indirectHit);
-            };
+        private _indirectHit = getNumber (_ammoConfig >> "indirectHit");
+        private _indirectRange = getNumber (_ammoConfig >> "indirectHitRange");
+        if (_indirectRange < 4.5 || {_indirectHit * sqrt(_indirectRange) < 35}) then {
+            _shouldFrag = false;
+            TRACE_5("No frag",_ammo,_skip,_explosive,_indirectRange,_indirectHit);
         };
+    };
 
-        _shouldFrag
-    },
-    true
-]
+    _shouldFrag
+}, true]

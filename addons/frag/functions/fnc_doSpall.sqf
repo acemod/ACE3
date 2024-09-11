@@ -27,11 +27,7 @@ if ((isNil "_objectHit") || {isNull _objectHit}) exitWith {
     TRACE_1("Problem with hitPart data - bad object [%1]",_objectHit);
 };
 
-private _caliber = getNumber (configFile >> "CfgAmmo" >> _roundType >> "caliber");
-private _explosive = getNumber (configFile >> "CfgAmmo" >> _roundType >> "explosive");
-private _idh = getNumber (configFile >> "CfgAmmo" >> _roundType >> "indirectHitRange");
-
-_roundType call FUNC(getSpallInfo) params ["_caliber", "_explosive"];
+_roundType call FUNC(getSpallInfo) params ["_caliber", "_explosive", "_idh"];
 
 private _exit = false;
 private _velocityModifier = 1;

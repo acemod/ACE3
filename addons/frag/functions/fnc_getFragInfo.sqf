@@ -21,8 +21,7 @@
 
 params ["_ammo"];
 
-GVAR(fragInfoCache) getOrDefaultCall [
-    _ammo, {
+GVAR(fragInfoCache) getOrDefaultCall [_ammo, {
     private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
     private _fragTypes = ACE_FRAG_DEFAULT_FRAG_TYPES;
     private _notifyMissingEntries = false;
@@ -93,7 +92,5 @@ GVAR(fragInfoCache) getOrDefaultCall [
         ACE_FRAG_IMPERIC_VELOCITY_CONSTANT * _gurneyConstant * sqrt (_chargeMass / (_metalMass + _chargeMass * _geometryCoefficient)),
         _fragTypes,
         sqrt (_metalMass / 1000)
-    ]
-    },
-    true
-]
+    ] // return
+}, true]

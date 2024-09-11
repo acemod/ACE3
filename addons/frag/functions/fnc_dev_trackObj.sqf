@@ -39,59 +39,49 @@ private _colorArray = switch (toLowerANSI _color) do {
 GVAR(dev_trackLines) set [getObjectID _object, [[getPosATL _object], _colorArray]];
 
 // event handler to track round and cleanup when round is "dead"
-[
-    {
-        if (isGamePaused || accTime == 0) exitWith {};
-        params ["_object", "_handle"];
+[{
+    if (isGamePaused || accTime == 0) exitWith {};
+    params ["_object", "_handle"];
 
-        if (!alive _object) exitWith {
-            _handle call CBA_fnc_removePerFrameHandler;
-        };
+    if (!alive _object) exitWith {
+        _handle call CBA_fnc_removePerFrameHandler;
+    };
 
-        private _objectArray = GVAR(dev_trackLines) get (getObjectID _object);
+    private _objectArray = GVAR(dev_trackLines) get (getObjectID _object);
 
-        if (isNil "_objectArray") exitWith {
-            _handle call CBA_fnc_removePerFrameHandler;
-        };
+    if (isNil "_objectArray") exitWith {
+        _handle call CBA_fnc_removePerFrameHandler;
+    };
 
-        (_objectArray#0) pushBack getPosATL _object;
-    },
-    0,
-    _object
-] call CBA_fnc_addPerFrameHandler;
+    (_objectArray#0) pushBack getPosATL _object;
+}, 0, _object] call CBA_fnc_addPerFrameHandler;
 
 // Projectile event handlers that add spheres and points for more accurate round tracking
 if (!_isProj) exitWith {};
 
-_object addEventHandler [
-    "HitPart", {
-        params ["_projectile", "", "", "_posASL"];
-        private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
-        _posArr pushBack ASLToATL _posASL;
-        if (GVAR(dbgSphere)) then {
-            [_posASL, "green"] call FUNC(dev_sphereDraw);
-        };
-    }
-];
+_object addEventHandler ["HitPart", {
+    params ["_projectile", "", "", "_posASL"];
+    private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
+    _posArr pushBack ASLToATL _posASL;
+    if (GVAR(dbgSphere)) then {
+        [_posASL, "green"] call FUNC(dev_sphereDraw);
+    };
+}];
 
-_object addEventHandler [
-    "Explode", {
-        params ["_projectile", "_posASL"];
-        private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
-        _posArr pushBack ASLToATL _posASL;
-        if (GVAR(dbgSphere)) then {
-            [_posASL, "red"] call FUNC(dev_sphereDraw);
-        };
-    }
-];
+_object addEventHandler ["Explode", {
+    params ["_projectile", "_posASL"];
+    private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
+    _posArr pushBack ASLToATL _posASL;
+    if (GVAR(dbgSphere)) then {
+        [_posASL, "red"] call FUNC(dev_sphereDraw);
+    };
+}];
 
-_object addEventHandler [
-    "Deflected", {
-        params ["_projectile", "_posASL"];
-        private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
-        _posArr pushBack ASLToATL _posASL;
-        if (GVAR(dbgSphere)) then {
-            [_posASL, "blue"] call FUNC(dev_sphereDraw);
-        };
-    }
-];
+_object addEventHandler ["Deflected", {
+    params ["_projectile", "_posASL"];
+    private _posArr = (GVAR(dev_trackLines) get (getObjectID _projectile))#0;
+    _posArr pushBack ASLToATL _posASL;
+    if (GVAR(dbgSphere)) then {
+        [_posASL, "blue"] call FUNC(dev_sphereDraw);
+    };
+}];

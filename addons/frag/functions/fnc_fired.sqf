@@ -35,30 +35,27 @@ if (!GVAR(spallEnabled) || {!(_ammo call FUNC(shouldSpall))}) exitWith {
     TRACE_2("No spall",GVAR(spallEnabled),_ammo call FUNC(shouldSpall));
 };
 
-private _hitPartEventHandler = _projectile addEventHandler [
-    "HitPart", {
-        params ["_projectile", "_hitObject", "", "_posASL", "_velocity"];
+private _hitPartEventHandler = _projectile addEventHandler ["HitPart", {
+    params ["_projectile", "_hitObject", "", "_posASL", "_velocity"];
 
-        // get rid of _shot parents starting after v2.18 is released and instead use the instigator EH parameter
-        // The "explode" EH does not get the same parameter
-        private _instigator = (getShotParents _projectile)#1;
-        private _ammo = typeOf _projectile;
+    // get rid of _shot parents starting after v2.18 is released and instead use the instigator EH parameter
+    // The "explode" EH does not get the same parameter
+    private _instigator = (getShotParents _projectile)#1;
+    private _ammo = typeOf _projectile;
 
-        /*
-            * Wait a frame to see what happens to the round, may result in
-            * multiple hits / slowdowns getting shunted to the first hit
-            */
-        [
-            // only let a unit make a spall once per ACE_FRAG_SPALL_UNIT_HOLDOFF
-            {
-                private _shotParents = _this#5;
-                if (CBA_missionTime < _shotParents#1 getVariable [QGVAR(nextSpallEvent), -1]) exitWith {};
-                _this call FUNC(doSpall);
-            },
-            [_hitObject, _ammo, _projectile, _posASL, _velocity, [objNull, _instigator]]
-        ] call CBA_fnc_execNextFrame;
-    }
-];
+    /*
+        * Wait a frame to see what happens to the round, may result in
+        * multiple hits / slowdowns getting shunted to the first hit
+    */
+    [{
+        private _shotParents = _this#5;
+
+        // only let a unit make a spall once per ACE_FRAG_SPALL_UNIT_HOLDOFF
+        if (CBA_missionTime < _shotParents#1 getVariable [QGVAR(nextSpallEvent), -1]) exitWith {};
+
+        _this call FUNC(doSpall);
+    }, [_hitObject, _ammo, _projectile, _posASL, _velocity, [objNull, _instigator]]] call CBA_fnc_execNextFrame;
+}];
 _projectile setVariable [QGVAR(hitPartEventHandler), _hitPartEventHandler];
 
 TRACE_1("firedExit",_ammo);
