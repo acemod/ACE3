@@ -47,7 +47,7 @@ if (_targets isEqualTo []) exitWith {
     TRACE_2("No nearby targets",_fragPosAGL,_fragRange);
     0
 };
-TRACE_3("",_fragRange,count _targets,);
+TRACE_3("",_fragRange,count _targets,_targets);
 
 private _fragCount = 0;
 
