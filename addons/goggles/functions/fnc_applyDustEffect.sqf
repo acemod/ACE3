@@ -60,7 +60,6 @@ GVAR(DustHandler) = [{
         if !(_unit getVariable ["ACE_EyesDamaged", false]) then {
             GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [_amount, _amount, _amount, _amount], [1, 1, 1, 0]];
             GVAR(PostProcessEyes) ppEffectCommit 0.5;
-            [QGVAR(eyeInjury), _unit] call CBA_fnc_localEvent;
         };
 
         if (GETDUSTT(DAMOUNT) <= 0) then {
@@ -69,6 +68,7 @@ GVAR(DustHandler) = [{
 
             GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [1, 1, 1, 0]];
             GVAR(PostProcessEyes) ppEffectCommit 2;
+            [QGVAR(effect), [ace_player, "dust", ace_player call FUNC(isGogglesVisible)]] call CBA_fnc_localEvent;
 
             [{
                 if (GVAR(DustHandler) == -1) then {

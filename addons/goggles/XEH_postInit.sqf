@@ -111,7 +111,6 @@ if (!hasInterface) exitWith {};
             params ["_unit"];
 
             _unit setVariable ["ACE_EyesDamaged", true];
-            [QGVAR(eyeInjury), _unit] call CBA_fnc_localEvent;
 
             GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0.5, 0.5, 0.5, 0.5], [1, 1, 1, 0]];
             GVAR(PostProcessEyes) ppEffectCommit 0;
