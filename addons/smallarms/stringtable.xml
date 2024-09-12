@@ -30,6 +30,7 @@
             <Japanese>.45 ACP 25Rnd マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣</Chinesesimp>
             <Korean>.45 ACP 25발 탄창</Korean>
+            <Portuguese>Carregador 25Mun. .45 ACP</Portuguese>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Green_Name">
             <English>.45 ACP 25Rnd Tracers (Green) Mag</English>
@@ -44,6 +45,7 @@
             <Japanese>.45 ACP 25Rnd トレーサー (緑) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，绿）</Chinesesimp>
             <Korean>.45 ACP 25발 예광탄 (초록) 탄창</Korean>
+            <Portuguese>Carregador 25Mun. .45 ACP Traçante (Verde)</Portuguese>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Red_Name">
             <English>.45 ACP 25Rnd Tracers (Red) Mag</English>
@@ -58,6 +60,7 @@
             <Japanese>.45 ACP 25Rnd トレーサー (赤) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，红）</Chinesesimp>
             <Korean>.45 ACP 25발 예광탄 (빨강) 탄창</Korean>
+            <Portuguese>Carregador 25Mun. .45 ACP Traçante (Vermelha)</Portuguese>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Yellow_Name">
             <English>.45 ACP 25Rnd Tracers (Yellow) Mag</English>
@@ -72,6 +75,7 @@
             <Japanese>.45 ACP 25Rnd トレーサー (黄) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，黄）</Chinesesimp>
             <Korean>.45 ACP 25발 예광탄 (노랑) 탄창</Korean>
+            <Portuguese>Carregador 25Mun. .45 ACP Traçante (Amarela)</Portuguese>
         </Key>
         <Key ID="STR_ACE_SmallArms_8Rnd_45_Name">
             <English>.45 ACP 8Rnd Mag</English>
@@ -86,6 +90,7 @@
             <Japanese>.45 ACP 8Rnd マガジン</Japanese>
             <Chinesesimp>.45 ACP 8发 弹匣</Chinesesimp>
             <Korean>.45 ACP 8발 탄창</Korean>
+            <Portuguese>Carregador 8Mun. .45 ACP</Portuguese>
         </Key>
         <Key ID="STR_ACE_SmallArms_15Rnd_45_Name">
             <English>.45 ACP 15Rnd Mag</English>
@@ -100,6 +105,7 @@
             <Japanese>.45 ACP 15Rnd マガジン</Japanese>
             <Chinesesimp>.45 ACP 15发 弹匣</Chinesesimp>
             <Korean>.45 ACP 15발 탄창</Korean>
+            <Portuguese>Carregador 15Mun. .45 ACP</Portuguese>
         </Key>
     </Package>
 </Project>

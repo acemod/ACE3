@@ -1,6 +1,5 @@
 #include "script_component.hpp"
 
-GVAR(hardpointGroupsCache) = [] call CBA_fnc_createNamespace;
 GVAR(configTypesAdded) = [];
 GVAR(magazineNameCache) = createHashMap;
 GVAR(usedMagazineNames) = createHashMap;

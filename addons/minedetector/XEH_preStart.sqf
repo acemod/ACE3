@@ -15,5 +15,5 @@ private _detectableClasses = [];
     };
 } forEach (configProperties [configFile >> "CfgAmmo", "isClass _x", true]);
 
-TRACE_1("compiled",count _detectableClasses);
-uiNamespace setVariable [QGVAR(detectableClasses), compileFinal str _detectableClasses];
+TRACE_1("built cache",count _detectableClasses);
+uiNamespace setVariable [QGVAR(detectableClasses), compileFinal (_detectableClasses createHashMapFromArray [])];

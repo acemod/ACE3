@@ -16,7 +16,7 @@
  * Public: No
  */
 
-if (!((currentWeapon ACE_player) isKindOf ["ACE_Vector", configFile >> "CfgWeapons"])) exitWith {
+if !((currentWeapon ACE_player) isKindOf ["ACE_Vector", configFile >> "CfgWeapons"]) exitWith {
     [_this select 1] call CBA_fnc_removePerFrameHandler;
 
     GVAR(currentMode) = "";

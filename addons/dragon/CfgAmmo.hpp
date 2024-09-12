@@ -1,3 +1,4 @@
+class ace_missileguidance_type_Dragon;
 class CfgAmmo {
     class ammo_Penetrator_Base;
     class M_Scalpel_AT;
@@ -37,39 +38,7 @@ class CfgAmmo {
 
         EGVAR(vehicle_damage,incendiary) = 1.0;
 
-        class ace_missileguidance {
-            minDeflection = 0;
-            maxDeflection = 0;
-            incDeflection = 0;
-
-            canVanillaLock = 0;
-
-            // Guidance type for munitions
-            defaultSeekerType = "SACLOS";
-            seekerTypes[] = { "SACLOS" };
-
-            defaultSeekerLockMode = "LOAL";
-            seekerLockModes[] = { "LOAL", "LOBL" };
-
-            seekLastTargetPos = 0;
-            seekerAngle = 30;
-            seekerAccuracy = 1;
-
-            seekerMinRange = 65;
-            seekerMaxRange = 1000;
-
-            correctionDistance = 30;
-            missileLeadDistance = 0;
-            offsetFromCrosshair[] = { 0, 0, 0 };
-
-            serviceInterval = 0.33; // how many seconds between pops
-            serviceCharges = 32; // how many charges are in this missile
-            serviceChargeAcceleration = 6.5;
-            dragonSpeed = 100; // meters per second
-
-            defaultAttackProfile = "DRAGON";
-            attackProfiles[] = {"DRAGON"};
-        };
+        class ace_missileguidance: ace_missileguidance_type_Dragon {};
     };
 
     class GVAR(super): GVAR(dragonBase) {
@@ -79,33 +48,11 @@ class CfgAmmo {
         submunitionParentSpeedCoef = 0;
         submunitionInitialOffset[] = { 0, 0, -0.2 };
 
-        class ace_missileguidance {
+        class ace_missileguidance: ace_missileguidance {
             enabled = 1;
-
-            // Guidance type for munitions
-            defaultSeekerType = "SACLOS";
-            seekerTypes[] = { "SACLOS" };
-
-            defaultSeekerLockMode = "LOAL";
-            seekerLockModes[] = { "LOAL", "LOBL" };
-
-            seekLastTargetPos = 0;
-            seekerAngle = 30;
-            seekerAccuracy = 1;
-
             seekerMinRange = 30;
             seekerMaxRange = 1500;
-
-            correctionDistance = 30;
-            missileLeadDistance = 0;
-
-            serviceInterval = 0.33; // how many seconds between pops
             serviceCharges = 60; // how many charges are in this missile
-            serviceChargeAcceleration = 6.5;
-            dragonSpeed = 100; // meters per second
-
-            defaultAttackProfile = "DRAGON";
-            attackProfiles[] = {"DRAGON"};
         };
     };
 

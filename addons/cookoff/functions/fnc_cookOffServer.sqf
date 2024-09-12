@@ -175,7 +175,7 @@ if (_delayBetweenSmokeAndFire) then {
             if (["ace_fire"] call EFUNC(common,isModLoaded)) then {
                 // Use current intensity, in case GVAR(cookoffDuration) is very large and only 1 flameout stage happens
                 {
-                    [QEGVAR(fire,burn), [_x, _intensity * 1.5, _instigator]] call CBA_fnc_globalEvent;
+                    [QEGVAR(fire,burn), [_x, _intensity * 1.5, _instigator], _x] call CBA_fnc_targetEvent;
                 } forEach (crew _vehicle);
             };
 

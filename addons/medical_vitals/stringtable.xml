@@ -21,6 +21,7 @@
             <French>Activer la simulation de la SpO2</French>
             <German>SpO2-Simulation aktivieren</German>
             <Spanish>Habilitar Simulación SpO2</Spanish>
+            <Portuguese>Habilitar simulação de SpO2</Portuguese>
         </Key>
         <Key ID="STR_ACE_Medical_Vitals_simulateSpO2_Description">
             <English>Enables oxygen saturation simulation, providing variable heart rate and oxygen demand based on physical activity and altitude. Required for Airway Management.</English>
@@ -31,6 +32,7 @@
             <French>Permet de simuler la saturation en oxygène, de modifier la fréquence cardiaque et la consommation d'oxygène en fonction de l'activité physique et de l'altitude. Nécessaire pour la gestion des voies respiratoires.</French>
             <German>Aktiviert die Simulation der Sauerstoffsättigung und bietet variable Herzfrequenz und Sauerstoffbedarf basierend auf körperlicher Aktivität und Geländehöhe. Erforderlich für das Atemwegsmanagement.</German>
             <Spanish>Habilita la saturación de oxígeno, utilizando la demanda de oxígeno y ritmo cardíaco basado en la actividad física y la altitud. Requerido para el Manejo de las Vías Aéreas.</Spanish>
+            <Portuguese>Habilita a saturação de oxigênio, tornando variáveis o batimento cardíaco e demanda de oxigênio baseados em atividade física e altitude. Necessário para o gerenciamento de vias aéreas.</Portuguese>
         </Key>
     </Package>
 </Project>

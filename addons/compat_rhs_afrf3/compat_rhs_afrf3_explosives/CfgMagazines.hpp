@@ -2,7 +2,7 @@ class CfgMagazines {
     // ACE Explosives
     class ATMine_Range_Mag;
     class rhs_mine_tm62m_mag: ATMine_Range_Mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_tm62m);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_tm62m);
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -12,7 +12,7 @@ class CfgMagazines {
     };
 
     class rhs_mine_pmn2_mag: ATMine_Range_Mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_pmn2);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_pmn2);
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -22,7 +22,7 @@ class CfgMagazines {
     };
 
     class rhs_mag_mine_ptm1: ATMine_Range_Mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_ptm1);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_ptm1);
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -32,7 +32,7 @@ class CfgMagazines {
     };
 
     class rhs_mag_mine_pfm1: ATMine_Range_Mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_pfm1);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_pfm1);
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -42,8 +42,7 @@ class CfgMagazines {
     };
 
     class rhs_ec75_mag: ATMine_Range_Mag {
-        EGVAR(explosives,DelayTime) = 1;
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_ec75);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_ec75);
         useAction = 0;
         class ACE_Triggers {
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};
@@ -59,27 +58,27 @@ class CfgMagazines {
     };
 
     class rhs_ec75_sand_mag: rhs_ec75_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_ec75_sand);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_ec75_sand);
     };
 
     class rhs_ec200_mag: rhs_ec75_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_ec200);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_ec200);
     };
 
     class rhs_ec200_sand_mag: rhs_ec200_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_ec200_sand);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_ec200_sand);
     };
 
     class rhs_ec400_mag: rhs_ec75_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_ec400);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_ec400);
     };
 
     class rhs_ec400_sand_mag: rhs_ec400_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_ec400_sand);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_ec400_sand);
     };
 
     class rhs_mine_msk40p_white_mag: ATMine_Range_Mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_msk40p_white);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_msk40p_white);
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};
             class Tripwire {
@@ -89,19 +88,19 @@ class CfgMagazines {
     };
 
     class rhs_mine_msk40p_red_mag: rhs_mine_msk40p_white_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_msk40p_red);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_msk40p_red);
     };
 
     class rhs_mine_msk40p_green_mag: rhs_mine_msk40p_white_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_msk40p_green);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_msk40p_green);
     };
 
     class rhs_mine_msk40p_blue_mag: rhs_mine_msk40p_white_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_msk40p_blue);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_msk40p_blue);
     };
 
     class rhs_mine_sm320_white_mag: rhs_mine_msk40p_white_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_sm320_white);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_sm320_white);
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};
             class Tripwire {
@@ -111,15 +110,15 @@ class CfgMagazines {
     };
 
     class rhs_mine_sm320_red_mag: rhs_mine_sm320_white_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_sm320_red);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_sm320_red);
     };
 
     class rhs_mine_sm320_green_mag: rhs_mine_sm320_white_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_sm320_green);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_sm320_green);
     };
 
     class rhs_mine_ozm72_a_mag: ATMine_Range_Mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_ozm72_a);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_ozm72_a);
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};
             class Tripwire {
@@ -129,12 +128,11 @@ class CfgMagazines {
     };
 
     class rhs_mine_ozm72_b_mag: rhs_mine_ozm72_a_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_ozm72_b);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_ozm72_b);
     };
 
     class rhs_mine_ozm72_c_mag: rhs_mine_ozm72_a_mag {
-        EGVAR(explosives,DelayTime) = 1;
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhs_mine_ozm72_c);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhs_mine_ozm72_c);
         useAction = 0;
         class ACE_Triggers {
             SupportedTriggers[] = {"Command", "MK16_Transmitter"};

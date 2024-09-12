@@ -164,7 +164,7 @@
             <Hungarian>Cselekvő menü</Hungarian>
             <Portuguese>Menu de Interação</Portuguese>
             <Italian>Menù Interazioni</Italian>
-            <Japanese>インタラクションメニュー</Japanese>
+            <Japanese>インタラクション メニュー</Japanese>
             <Korean>상호작용 메뉴</Korean>
             <Chinesesimp>互动菜单</Chinesesimp>
             <Chinese>互動選單</Chinese>
@@ -181,7 +181,7 @@
             <Hungarian>Cselekvő menü (saját) </Hungarian>
             <Portuguese>Menu de Interação (Individual)</Portuguese>
             <Italian>Menù Interazioni (su se stesso)</Italian>
-            <Japanese>インタラクションメニュー (セルフ)</Japanese>
+            <Japanese>インタラクション メニュー (セルフ)</Japanese>
             <Korean>상호작용 메뉴(자신)</Korean>
             <Chinesesimp>互动菜单（自我）</Chinesesimp>
             <Chinese>互動選單 (自我)</Chinese>
@@ -458,7 +458,7 @@
             <Russian>Вас похлопали по ПРАВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla destra</Italian>
-            <Japanese>右肩を叩かれました</Japanese>
+            <Japanese>右肩を叩かれた</Japanese>
             <Korean>누군가 오른쪽 어깨를 쳤다</Korean>
             <Chinesesimp>你的右肩膀被轻拍了一下</Chinesesimp>
             <Chinese>你的右肩膀被輕拍了一下</Chinese>
@@ -475,7 +475,7 @@
             <Russian>Вас похлопали по ЛЕВОМУ плечу</Russian>
             <Portuguese>Você foi tocado no ombro.</Portuguese>
             <Italian>Ti è stato dato un colpetto sulla spalla sinistra</Italian>
-            <Japanese>左肩を叩かれました</Japanese>
+            <Japanese>左肩を叩かれた</Japanese>
             <Korean>누군가 왼쪽 어깨를 쳤다</Korean>
             <Chinesesimp>你的左肩膀被轻拍了一下</Chinesesimp>
             <Chinese>你的左肩膀被輕拍了一下</Chinese>
@@ -581,6 +581,32 @@
             <Chinesesimp>小队管理</Chinesesimp>
             <Chinese>小隊管理</Chinese>
             <Turkish>Takım Yönetimi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_remoteTeamManagement_DisplayName">
+            <English>Remote Squad Management</English>
+            <French>Gestion à distance de l'escouade</French>
+            <Russian>Дистанционное управление отрядом</Russian>
+        </Key>
+        <Key ID="STR_ACE_Interaction_remoteTeamManagement_Description">
+            <English>Allow dropping and changing team colors of any unit in player's squad</English>
+            <French>Permettre d'abandonner et de changer les couleurs de n'importe quelle unité de l'escouade du joueur</French>
+            <Russian>Позволяет сбрасывать и менять командные цвета любого подразделения в отряде игрока</Russian>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Squad">
+            <English>Squad</English>
+            <Czech>Družstvo</Czech>
+            <German>Trupp</German>
+            <Russian>Отряд</Russian>
+            <Polish>Drużyna</Polish>
+            <Italian>Squadra</Italian>
+            <Spanish>Escuadrón</Spanish>
+            <French>Escouade</French>
+            <Chinese>分隊</Chinese>
+            <Japanese>分隊</Japanese>
+            <Korean>분대</Korean>
+            <Portuguese>Esquadrão</Portuguese>
+            <Chinesesimp>小队</Chinesesimp>
+            <Turkish>Manga</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_TeamRED">
             <English>Red</English>
@@ -786,6 +812,18 @@
             <Chinese>加入黃組</Chinese>
             <Turkish>Sarıya Katıl</Turkish>
         </Key>
+        <Key ID="STR_ACE_Interaction_JoinTeamMain">
+            <English>Join White</English>
+            <German>Weiss beitreten</German>
+            <Spanish>Unirse a Blanco</Spanish>
+            <Polish>Dołącz do Biała</Polish>
+            <Portuguese>Entrar em Branco</Portuguese>
+            <Czech>Připojit k Bílý Tým</Czech>
+            <Russian>Присоединиться к Белая</Russian>
+            <French>Rejoindre Blanc</French>
+            <Italian>Unirsi al team Bianco</Italian>
+            <Korean>백팀 참여</Korean>
+        </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
             <German>Du bist Gruppe %1 beigetreten</German>
@@ -848,7 +886,7 @@
             <Portuguese>Perdão</Portuguese>
             <Italian>Perdona</Italian>
             <Hungarian>Megbocsátás</Hungarian>
-            <Japanese>許す</Japanese>
+            <Japanese>赦免する</Japanese>
             <Korean>허용</Korean>
             <Chinesesimp>原谅</Chinesesimp>
             <Chinese>原諒</Chinese>
@@ -1247,30 +1285,30 @@
             <Korean>전면유리 부수기</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsAttach">
-            <English>Attach %1</English>
-            <Russian>Установить %1</Russian>
-            <Japanese>%1 を取り付け</Japanese>
-            <Spanish>Acoplar %1</Spanish>
-            <French>Fixer %1</French>
-            <Polish>Przyczep %1</Polish>
-            <German>Befestige %1</German>
-            <Italian>Attacca %1</Italian>
-            <Chinesesimp>附加 %1</Chinesesimp>
-            <Korean>%1 붙이기</Korean>
-            <Portuguese>Fixar %1</Portuguese>
+            <English>Attach</English>
+            <Russian>Установить</Russian>
+            <Japanese>を取り付け</Japanese>
+            <Spanish>Acoplar</Spanish>
+            <French>Fixer</French>
+            <Polish>Przyczep</Polish>
+            <German>Befestige</German>
+            <Italian>Attacca</Italian>
+            <Chinesesimp>附加</Chinesesimp>
+            <Korean>붙이기</Korean>
+            <Portuguese>Fixar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsDetach">
-            <English>Detach %1</English>
-            <Russian>Снять %1</Russian>
-            <Japanese>%1 を外す</Japanese>
-            <Spanish>Desacoplar %1</Spanish>
-            <French>Retirer %1</French>
-            <Polish>Odczep %1</Polish>
-            <German>Löse %1</German>
-            <Italian>Stacca %1</Italian>
-            <Chinesesimp>拆卸 %1</Chinesesimp>
-            <Korean>%1 떼내기</Korean>
-            <Portuguese>Desfixar %1</Portuguese>
+            <English>Detach</English>
+            <Russian>Снять</Russian>
+            <Japanese>を外す</Japanese>
+            <Spanish>Desacoplar</Spanish>
+            <French>Retirer</French>
+            <Polish>Odczep</Polish>
+            <German>Löse</German>
+            <Italian>Stacca</Italian>
+            <Chinesesimp>拆卸</Chinesesimp>
+            <Korean>떼내기</Korean>
+            <Portuguese>Desfixar</Portuguese>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachments_Description">
             <English>Enables attach/detach weapon attachment actions for current weapon.</English>
@@ -1323,6 +1361,30 @@
             <Korean>주의: 물체끼리 충돌하는 현상이 있을 수 있음.</Korean>
             <Spanish>Advertencia: puede provocar que algunos objetos choquen con otros.</Spanish>
             <Portuguese>Aviso: pode causar que alguns objetos colidam com outros.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Interaction_SettingAnimActionsName">
+            <English>Interaction with animations</English>
+            <Russian>Взаимодействие с анимациями</Russian>
+            <French>Interaction avec les animations</French>
+            <Japanese>車両アニメーションベースのインタラクション</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_DisplayName">
+            <English>Interact With Enemy Crew</English>
+            <Japanese>敵乗員がいる状態でのインタラクト</Japanese>
+            <French>Interagir avec l'équipage ennemi</French>
+            <Russian>Взаимодействие с вражеским экипажем</Russian>
+        </Key>
+        <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_Description">
+            <English>Limit some interactions on vehicles crewed by enemy factions.</English>
+            <Japanese>敵性力の乗員が乗っている車両へのインタラクションを一部制限します。</Japanese>
+            <French>Limiter certaines interactions sur les véhicules dont l'équipage appartient à des factions ennemies.</French>
+            <Russian>Ограничьте некоторые взаимодействия на транспортных средствах, управляемых вражеской стороной.</Russian>
+        </Key>
+        <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_allowCSW">
+            <English>Allow for Static Weapons</English>
+            <Japanese>固定火器への許可</Japanese>
+            <French>Autoriser les armes statiques</French>
+            <Russian>Разрешить использование статического оружия</Russian>
         </Key>
     </Package>
 </Project>

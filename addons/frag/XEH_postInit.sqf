@@ -18,7 +18,7 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 // Cache for ammo type configs
-GVAR(cacheRoundsTypesToTrack) = [false] call CBA_fnc_createNamespace;
+GVAR(cacheRoundsTypesToTrack) = createHashMap;
 
 
 // Debug stuff:

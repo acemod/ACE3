@@ -1,6 +1,5 @@
-
 class CfgVehicles {
-    // static weapons
+    // Static weapons
     class StaticMGWeapon;
     class HMG_01_base_F: StaticMGWeapon {
         displayName = CSTRING(HMG_01_Name);
@@ -61,7 +60,7 @@ class CfgVehicles {
         displayName = CSTRING(MRAP_01_hmg_Name);
     };
 
-    // punisher
+    // Punisher
     class MRAP_02_base_F;
     class O_MRAP_02_F: MRAP_02_base_F {
         displayName = CSTRING(MRAP_02_Name);
@@ -86,7 +85,7 @@ class CfgVehicles {
         displayName = CSTRING(MRAP_02_gmg_Name);
     };
 
-    // strider
+    // Strider
     class MRAP_03_base_F;
     class I_MRAP_03_F: MRAP_03_base_F {
         displayName = CSTRING(MRAP_03_Name);
@@ -102,7 +101,7 @@ class CfgVehicles {
         displayName = CSTRING(MRAP_03_gmg_Name);
     };
 
-    // merkava derivates
+    // Merkava derivates
     class MBT_01_base_F;
     class B_MBT_01_base_F: MBT_01_base_F {};
 
@@ -124,7 +123,7 @@ class CfgVehicles {
     class B_MBT_01_mlrs_base_F: MBT_01_mlrs_base_F {};
 
     class B_MBT_01_mlrs_F: B_MBT_01_mlrs_base_F {
-        displayName = CSTRING(MBT_01_mlrs_Name); // Fictional name, (probably wrong) hebrew translation of storm.
+        displayName = CSTRING(MBT_01_mlrs_Name); // Fictional name, (probably wrong) hebrew translation of storm
     };
 
     // T100 derivates
@@ -142,20 +141,20 @@ class CfgVehicles {
         displayName = CSTRING(MBT_02_arty_Name);
     };
 
-    // leopard sg
+    // Leopard 2 SG
     class I_MBT_03_base_F;
     class I_MBT_03_cannon_F: I_MBT_03_base_F {
         displayName = CSTRING(MBT_03_cannon_Name);
     };
 
-    // tracked apcs
+    // Tracked apcs
     class B_APC_Tracked_01_base_F;
     class B_APC_Tracked_01_rcws_F: B_APC_Tracked_01_base_F {
         displayName = CSTRING(APC_Tracked_01_rcws_Name);
     };
 
     class B_APC_Tracked_01_AA_F: B_APC_Tracked_01_base_F {
-        displayName = CSTRING(APC_Tracked_01_AA_Name); // Fictional name, (probably wrong) hebrew translation of cheetah.
+        displayName = CSTRING(APC_Tracked_01_AA_Name); // Fictional name, (probably wrong) hebrew translation of cheetah
     };
 
     class B_APC_Tracked_01_CRV_F: B_APC_Tracked_01_base_F {
@@ -176,7 +175,7 @@ class CfgVehicles {
         displayName = CSTRING(APC_tracked_03_cannon_Name);
     };
 
-    // wheeled apcs
+    // Wheeled apcs
     class B_APC_Wheeled_01_base_F;
     class B_APC_Wheeled_01_cannon_F: B_APC_Wheeled_01_base_F {
         displayName = CSTRING(APC_Wheeled_01_cannon_Name);
@@ -199,7 +198,7 @@ class CfgVehicles {
         displayName = CSTRING(APC_Wheeled_03_cannon_Name);
     };
 
-    // trucks
+    // Trucks
     class Truck_01_base_F;
     class B_Truck_01_transport_F: Truck_01_base_F {
         displayName = CSTRING(Truck_01_transport_Name);
@@ -317,7 +316,7 @@ class CfgVehicles {
         displayName = CSTRING(Truck_03_medical_Name);
     };
 
-    // helicopters
+    // Helicopters
     class Heli_Attack_01_base_F;
     class B_Heli_Attack_01_F: Heli_Attack_01_base_F {
         displayName = CSTRING(Heli_Attack_01_Name);
@@ -398,7 +397,7 @@ class CfgVehicles {
         displayName = CSTRING(Heli_Transport_02_Name);
     };
 
-    // planes
+    // Planes
     class Plane_CAS_01_base_F;
     class B_Plane_CAS_01_F: Plane_CAS_01_base_F {
         displayName = CSTRING(Plane_CAS_01_Name);
@@ -438,7 +437,7 @@ class CfgVehicles {
         displayName = CSTRING(Plane_Fighter_04_Name);
     };
 
-    // uavs
+    // UAVs
     class UAV_02_base_F;
     class B_UAV_02_F: UAV_02_base_F {
         displayName = CSTRING(UAV_02_Name);
@@ -472,7 +471,177 @@ class CfgVehicles {
         displayName = CSTRING(UAV_02_Name);
     };
 
-    // pistols
+    #include "CfgVehiclesAttachments.hpp"
+
+    // Assault rifles
+
+    // MX
+    class Weapon_Base_F;
+    class Weapon_arifle_MX_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MX_Name);
+    };
+    class Weapon_arifle_MX_Black_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MX_Black_Name);
+    };
+    class Weapon_arifle_MX_khk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MX_Khaki_Name);
+    };
+
+    class Weapon_arifle_MXC_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MXC_Name);
+    };
+    class Weapon_arifle_MXC_Black_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MXC_Black_Name);
+    };
+    class Weapon_arifle_MXC_khk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MXC_Khaki_Name);
+    };
+
+    class Weapon_arifle_MX_GL_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MX_GL_Name);
+    };
+    class Weapon_arifle_MX_GL_Black_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MX_GL_Black_Name);
+    };
+    class Weapon_arifle_MX_GL_khk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MX_GL_Khaki_Name);
+    };
+
+    class Weapon_arifle_MX_SW_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MX_SW_Name);
+    };
+    class Weapon_arifle_MX_SW_Black_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MX_SW_Black_Name);
+    };
+    class Weapon_arifle_MX_SW_khk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MX_SW_Khaki_Name);
+    };
+
+    class Weapon_arifle_MXM_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MXM_Name);
+    };
+    class Weapon_arifle_MXM_Black_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MXM_Black_Name);
+    };
+    class Weapon_arifle_MXM_khk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MXM_Khaki_Name);
+    };
+
+    // Katiba
+    class Weapon_arifle_Katiba_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_Katiba_Name);
+    };
+    class Weapon_arifle_Katiba_C_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_Katiba_C_Name);
+    };
+    class Weapon_arifle_Katiba_GL_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_Katiba_GL_Name);
+    };
+
+    // SDAR
+    class Weapon_arifle_SDAR_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_SDAR_Name);
+    };
+
+    // TAR-21
+    class Weapon_arifle_TRG21_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_TRG21_Name);
+    };
+    class Weapon_arifle_TRG20_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_TRG20_Name);
+    };
+    class Weapon_arifle_TRG21_GL_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_TRG21_GL_Name);
+    };
+
+    // F2000
+    class Weapon_arifle_Mk20_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_Mk20_Name);
+    };
+    class Weapon_arifle_Mk20_plain_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_Mk20_plain_Name);
+    };
+
+    class Weapon_arifle_Mk20C_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_Mk20C_Name);
+    };
+    class Weapon_arifle_Mk20C_plain_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_Mk20C_plain_Name);
+    };
+
+    class Weapon_arifle_Mk20_GL_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_Mk20_GL_Name);
+    };
+    class Weapon_arifle_Mk20_GL_plain_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_Mk20_GL_plain_Name);
+    };
+
+    // P90 (1.86)
+    class Weapon_SMG_03_TR_black: Weapon_Base_F {
+        displayName = CSTRING(PS90_TR_Black_Name);
+    };
+    class Weapon_SMG_03_TR_khaki: Weapon_Base_F {
+        displayName = CSTRING(PS90_TR_Khaki_Name);
+    };
+    class Weapon_SMG_03_TR_camo: Weapon_Base_F {
+        displayName = CSTRING(PS90_TR_Camo_Name);
+    };
+    class Weapon_SMG_03_TR_hex: Weapon_Base_F {
+        displayName = CSTRING(PS90_TR_Hex_Name);
+    };
+    class Weapon_SMG_03_black: Weapon_Base_F {
+        displayName = CSTRING(PS90_Black_Name);
+    };
+    class Weapon_SMG_03_khaki: Weapon_Base_F {
+        displayName = CSTRING(PS90_Khaki_Name);
+    };
+    class Weapon_SMG_03_camo: Weapon_Base_F {
+        displayName = CSTRING(PS90_Camo_Name);
+    };
+    class Weapon_SMG_03_hex: Weapon_Base_F {
+        displayName = CSTRING(PS90_Hex_Name);
+    };
+    class Weapon_SMG_03C_TR_black: Weapon_Base_F {
+        displayName = CSTRING(P90_TR_Black_Name);
+    };
+    class Weapon_SMG_03C_TR_khaki: Weapon_Base_F {
+        displayName = CSTRING(P90_TR_Khaki_Name);
+    };
+    class Weapon_SMG_03C_TR_camo: Weapon_Base_F {
+        displayName = CSTRING(P90_TR_Camo_Name);
+    };
+    class Weapon_SMG_03C_TR_hex: Weapon_Base_F {
+        displayName = CSTRING(P90_TR_Hex_Name);
+    };
+    class Weapon_SMG_03C_black: Weapon_Base_F {
+        displayName = CSTRING(P90_Black_Name);
+    };
+    class Weapon_SMG_03C_khaki: Weapon_Base_F {
+        displayName = CSTRING(P90_Khaki_Name);
+    };
+    class Weapon_SMG_03C_camo: Weapon_Base_F {
+        displayName = CSTRING(P90_Camo_Name);
+    };
+    class Weapon_SMG_03C_hex: Weapon_Base_F {
+        displayName = CSTRING(P90_Hex_Name);
+    };
+
+    // Vector
+    class Weapon_SMG_01_F: Weapon_Base_F {
+        displayName = CSTRING(SMG_01_Name);
+    };
+
+    // Scorpion
+    class Weapon_SMG_02_F: Weapon_Base_F {
+        displayName = CSTRING(SMG_02_Name);
+    };
+
+    // CPW
+    class Weapon_hgun_PDW2000_F: Weapon_Base_F {
+        displayName = CSTRING(hgun_PDW2000_Name);
+    };
+
+    // Pistols
     class Pistol_Base_F;
     class Weapon_hgun_P07_F: Pistol_Base_F {
         displayName = CSTRING(hgun_P07_Name);
@@ -498,14 +667,46 @@ class CfgVehicles {
         displayName = CSTRING(hgun_Pistol_Signal_Name);
     };
 
-    // rocket launchers
-    class Launcher_Base_F;
-    class Weapon_launch_NLAW_F: Launcher_Base_F {
-        displayName = CSTRING(launch_NLAW_Name);
+    // Machine guns
+    class Weapon_LMG_Mk200_F: Weapon_Base_F {
+        displayName = CSTRING(LMG_Mk200_Name);
     };
 
+    class Weapon_LMG_Zafir_F: Weapon_Base_F {
+        displayName = CSTRING(LMG_Zafir_Name);
+    };
+
+    // Sniper rifles
+    class Weapon_srifle_EBR_F: Weapon_Base_F {
+        displayName = CSTRING(srifle_EBR_Name);
+    };
+
+    class Weapon_srifle_LRR_F: Weapon_Base_F {
+        displayName = CSTRING(srifle_LRR_Name);
+    };
+    class Weapon_srifle_LRR_camo_F: Weapon_Base_F {
+        displayName = CSTRING(srifle_LRR_camo_Name);
+    };
+
+    class Weapon_srifle_GM6_F: Weapon_Base_F {
+        displayName = CSTRING(srifle_GM6_Name);
+    };
+    class Weapon_srifle_GM6_camo_F: Weapon_Base_F {
+        displayName = CSTRING(srifle_GM6_camo_Name);
+    };
+
+    class Weapon_srifle_DMR_01_F: Weapon_Base_F {
+        displayName = CSTRING(srifle_DMR_01_Name);
+    };
+
+    // Rocket launchers
+    class Launcher_Base_F;
     class Weapon_launch_RPG32_F: Launcher_Base_F {
         displayName = CSTRING(launch_RPG32_Name);
+    };
+
+    class Weapon_launch_NLAW_F: Launcher_Base_F {
+        displayName = CSTRING(launch_NLAW_Name);
     };
 
     /*class Weapon_launch_Titan_F: Launcher_Base_F {
@@ -528,145 +729,20 @@ class CfgVehicles {
     //class Weapon_launch_I_Titan_short_F: Weapon_launch_launch_B_Titan_short_F {};
     //class Weapon_launch_O_Titan_short_F: Weapon_launch_launch_B_Titan_short_F {};
 
-    // rifles
-
-    // MX
-    class Weapon_Base_F;
-    class Weapon_arifle_MX_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_MX_Name);
+    class Weapon_launch_O_Vorona_brown_F: Launcher_Base_F {
+        displayName = CSTRING(launch_Vorona_brown);
+    };
+    class Weapon_launch_O_Vorona_green_F: Launcher_Base_F {
+        displayName = CSTRING(launch_Vorona_green);
     };
 
-    class Weapon_arifle_MXC_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_MXC_Name);
-    };
-
-    class Weapon_arifle_MX_GL_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_MX_GL_Name);
-    };
-
-    class Weapon_arifle_MX_SW_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_MX_SW_Name);
-    };
-
-    class Weapon_arifle_MXM_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_MXM_Name);
-    };
-
-    // Katiba
-    class Weapon_arifle_Katiba_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_Katiba_Name);
-    };
-
-    class Weapon_arifle_Katiba_C_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_Katiba_C_Name);
-    };
-
-    class Weapon_arifle_Katiba_GL_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_Katiba_GL_Name);
-    };
-
-    // F2000
-    class Weapon_arifle_Mk20_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_Mk20_Name);
-    };
-
-    class Weapon_arifle_Mk20_plain_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_Mk20_plain_Name);
-    };
-
-    class Weapon_arifle_Mk20C_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_Mk20C_Name);
-    };
-
-    class Weapon_arifle_Mk20C_plain_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_Mk20C_plain_Name);
-    };
-
-    class Weapon_arifle_Mk20_GL_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_Mk20_GL_Name);
-    };
-
-    class Weapon_arifle_Mk20_GL_plain_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_Mk20_GL_plain_Name);
-    };
-
-    // TAR-21
-    class Weapon_arifle_TRG21_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_TRG21_Name);
-    };
-
-    class Weapon_arifle_TRG20_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_TRG20_Name);
-    };
-
-    class Weapon_arifle_TRG21_GL_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_TRG21_GL_Name);
-    };
-
-    // sub machine guns
-    class Weapon_SMG_01_F: Weapon_Base_F {
-        displayName = CSTRING(SMG_01_Name);
-    };
-
-    class Weapon_SMG_02_F: Weapon_Base_F {
-        displayName = CSTRING(SMG_02_Name);
-    };
-
-    class Weapon_SMG_05_F: Weapon_Base_F {
-        displayName = CSTRING(SMG_05);
-    };
-
-    class Weapon_hgun_PDW2000_F: Weapon_Base_F {
-        displayName = CSTRING(hgun_PDW2000_Name);
-    };
-
-    class Weapon_arifle_SDAR_F: Weapon_Base_F {
-        displayName = CSTRING(arifle_SDAR_Name);
-    };
-
-    // machine guns
-    class Weapon_LMG_Mk200_F: Weapon_Base_F {
-        displayName = CSTRING(LMG_Mk200_Name);
-    };
-
-    class Weapon_LMG_Zafir_F: Weapon_Base_F {
-        displayName = CSTRING(LMG_Zafir_Name);
-    };
-
-    // sniper rifles
-    class Weapon_srifle_EBR_F: Weapon_Base_F {
-        displayName = CSTRING(srifle_EBR_Name);
-    };
-
-    class Weapon_srifle_GM6_F: Weapon_Base_F {
-        displayName = CSTRING(srifle_GM6_Name);
-    };
-
-    class Weapon_srifle_GM6_camo_F: Weapon_Base_F {
-        displayName = CSTRING(srifle_GM6_camo_Name);
-    };
-
-    class Weapon_srifle_LRR_F: Weapon_Base_F {
-        displayName = CSTRING(srifle_LRR_Name);
-    };
-
-    class Weapon_srifle_LRR_camo_F: Weapon_Base_F {
-        displayName = CSTRING(srifle_LRR_camo_Name);
-    };
-
-    class Weapon_srifle_DMR_01_F: Weapon_Base_F {
-        displayName = CSTRING(srifle_DMR_01_Name);
-    };
-
-    // marksmen
-    /*class Weapon_srifle_DMR_02_F: Weapon_Base_F {
+    // Marksmen marksman
+    class Weapon_srifle_DMR_02_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_02);
     };
-
     class Weapon_srifle_DMR_02_camo_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_02_camo);
     };
-
     class Weapon_srifle_DMR_02_sniper_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_02_sniper);
     };
@@ -674,19 +750,15 @@ class CfgVehicles {
     class Weapon_srifle_DMR_03_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_03);
     };
-
     class Weapon_srifle_DMR_03_khaki_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_03_khaki);
     };
-
     class Weapon_srifle_DMR_03_tan_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_03_tan);
     };
-
     class Weapon_srifle_DMR_03_multicam_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_03_multicam);
     };
-
     class Weapon_srifle_DMR_03_woodland_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_03_woodland);
     };
@@ -694,7 +766,6 @@ class CfgVehicles {
     class Weapon_srifle_DMR_04_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_04);
     };
-
     class Weapon_srifle_DMR_04_Tan_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_04_Tan);
     };
@@ -702,11 +773,9 @@ class CfgVehicles {
     class Weapon_srifle_DMR_05_blk_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_05_blk);
     };
-
     class Weapon_srifle_DMR_05_hex_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_05_hex);
     };
-
     class Weapon_srifle_DMR_05_tan_f: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_05_tan);
     };
@@ -714,11 +783,11 @@ class CfgVehicles {
     class Weapon_srifle_DMR_06_camo_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_06_camo);
     };
-
     class Weapon_srifle_DMR_06_olive_F: Weapon_Base_F {
         displayName = CSTRING(srifle_DMR_06_olive);
     };
 
+    // Marksmen MGs
     class Weapon_MMG_01_hex_F: Weapon_Base_F {
         displayName = CSTRING(MMG_01_hex);
     };
@@ -737,14 +806,58 @@ class CfgVehicles {
 
     class Weapon_MMG_02_sand_F: Weapon_Base_F {
         displayName = CSTRING(MMG_02_sand);
-    };*/
+    };
 
-    //attachments
+    // Tanks DLC
 
-    class Item_Base_F;
+    // Rooikat 120 (Rhino MGS)
+    class AFV_Wheeled_01_base_F;
+    class B_AFV_Wheeled_01_cannon_F: AFV_Wheeled_01_base_F {
+        displayName = CSTRING(afv_wheeled_01);
+    };
+    class B_T_AFV_Wheeled_01_cannon_F: AFV_Wheeled_01_base_F {
+        displayName = CSTRING(afv_wheeled_01);
+    };
+    class AFV_Wheeled_01_up_base_F;
+    class B_AFV_Wheeled_01_up_cannon_F: AFV_Wheeled_01_up_base_F {
+        displayName = CSTRING(afv_wheeled_01_up);
+    };
+    class B_T_AFV_Wheeled_01_up_cannon_F: AFV_Wheeled_01_up_base_F {
+        displayName = CSTRING(afv_wheeled_01_up);
+    };
 
-    class Item_acc_flashlight: Item_Base_F {
-        displayName="UTG Defender 126";
+    // T-14 Armata (T-140 Angara)
+    class MBT_04_cannon_base_F;
+    class O_MBT_04_cannon_F: MBT_04_cannon_base_F {
+        displayName = CSTRING(MBT_04_cannon);
+    };
+    class O_T_MBT_04_cannon_F: MBT_04_cannon_base_F {
+        displayName = CSTRING(MBT_04_cannon);
+    };
+    class MBT_04_command_base_F; // Keep "K" designation for command variant.
+    class O_MBT_04_command_F: MBT_04_command_base_F {
+        displayName = CSTRING(MBT_04_command);
+    };
+    class O_T_MBT_04_command_F: MBT_04_command_base_F {
+        displayName = CSTRING(MBT_04_command);
+    };
+
+    // Wiesel 2 (AWC 302 Nyx)
+    class LT_01_AA_base_F;
+    class I_LT_01_AA_F: LT_01_AA_base_F {
+        displayName = CSTRING(LT_01_AA);
+    };
+    class LT_01_AT_base_F;
+    class I_LT_01_AT_F: LT_01_AT_base_F {
+        displayName = CSTRING(LT_01_AT);
+    };
+    class LT_01_cannon_base_F;
+    class I_LT_01_cannon_F: LT_01_cannon_base_F {
+        displayName = CSTRING(LT_01_cannon);
+    };
+    class LT_01_scout_base_F;
+    class I_LT_01_scout_F: LT_01_scout_base_F {
+        displayName = CSTRING(LT_01_scout);
     };
 
     // APEX/Tanoa
@@ -815,54 +928,266 @@ class CfgVehicles {
         displayName = CSTRING(lsv_02_at);
     };
 
-    // Rooikat 120 (Rhino MGS)
-    class AFV_Wheeled_01_base_F;
-    class B_AFV_Wheeled_01_cannon_F: AFV_Wheeled_01_base_F {
-        displayName = CSTRING(afv_wheeled_01);
+    // Type 115
+    class Weapon_arifle_ARX_blk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_arx_blk_Name);
     };
-    class B_T_AFV_Wheeled_01_cannon_F: AFV_Wheeled_01_base_F {
-        displayName = CSTRING(afv_wheeled_01);
+    class Weapon_arifle_ARX_ghex_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_arx_ghex_Name);
     };
-    class AFV_Wheeled_01_up_base_F;
-    class B_AFV_Wheeled_01_up_cannon_F: AFV_Wheeled_01_up_base_F {
-        displayName = CSTRING(afv_wheeled_01_up);
-    };
-    class B_T_AFV_Wheeled_01_up_cannon_F: AFV_Wheeled_01_up_base_F {
-        displayName = CSTRING(afv_wheeled_01_up);
+    class Weapon_arifle_ARX_hex_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_arx_hex_Name);
     };
 
-    // T-14 Armata (T-140 Angara)
-    class MBT_04_cannon_base_F;
-    class O_MBT_04_cannon_F: MBT_04_cannon_base_F {
-        displayName = CSTRING(MBT_04_cannon);
+    // QBZ-95 and variants
+    class Weapon_arifle_CTAR_blk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_CTAR_blk);
     };
-    class O_T_MBT_04_cannon_F: MBT_04_cannon_base_F {
-        displayName = CSTRING(MBT_04_cannon);
+    class Weapon_arifle_CTAR_ghex_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_CTAR_ghex);
     };
-    class MBT_04_command_base_F; // Keep "K" designation for command variant.
-    class O_MBT_04_command_F: MBT_04_command_base_F {
-        displayName = CSTRING(MBT_04_command);
-    };
-    class O_T_MBT_04_command_F: MBT_04_command_base_F {
-        displayName = CSTRING(MBT_04_command);
+    class Weapon_arifle_CTAR_hex_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_CTAR_hex);
     };
 
-    // Wiesel 2 (AWC 302 Nyx)
-    class LT_01_AA_base_F;
-    class I_LT_01_AA_F: LT_01_AA_base_F {
-        displayName = CSTRING(LT_01_AA);
+    class Weapon_arifle_CTAR_GL_blk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_CTAR_GL_blk);
     };
-    class LT_01_AT_base_F;
-    class I_LT_01_AT_F: LT_01_AT_base_F {
-        displayName = CSTRING(LT_01_AT);
+    class Weapon_arifle_CTAR_GL_ghex_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_CTAR_GL_ghex);
     };
-    class LT_01_cannon_base_F;
-    class I_LT_01_cannon_F: LT_01_cannon_base_F {
-        displayName = CSTRING(LT_01_cannon);
-    };
-    class LT_01_scout_base_F;
-    class I_LT_01_scout_F: LT_01_scout_base_F {
-        displayName = CSTRING(LT_01_scout);
+    class Weapon_arifle_CTAR_GL_hex_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_CTAR_GL_hex);
     };
 
+    class Weapon_arifle_CTARS_blk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_CTARS_blk);
+    };
+    class Weapon_arifle_CTARS_ghex_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_CTARS_ghex);
+    };
+    class Weapon_arifle_CTARS_hex_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_CTARS_hex);
+    };
+
+    // QBU-88
+    class Weapon_srifle_DMR_07_blk_F: Weapon_Base_F {
+        displayName = CSTRING(srifle_DMR_07_blk);
+    };
+    class Weapon_srifle_DMR_07_ghex_F: Weapon_Base_F {
+        displayName = CSTRING(srifle_DMR_07_ghex);
+    };
+    class Weapon_srifle_DMR_07_hex_F: Weapon_Base_F {
+        displayName = CSTRING(srifle_DMR_07_hex);
+    };
+
+    // GM6
+    class Weapon_srifle_GM6_ghex_F: Weapon_Base_F {
+        displayName = CSTRING(srifle_GM6_ghex);
+    };
+
+    // M249
+    class Weapon_LMG_03_F: Weapon_Base_F {
+        displayName = CSTRING(LMG_03);
+    };
+
+    // Intervention
+    class Weapon_srifle_LRR_tna_F: Weapon_Base_F {
+        displayName = CSTRING(srifle_LRR_tna);
+    };
+
+    // MP5
+    class Weapon_SMG_05_F: Weapon_Base_F {
+        displayName = CSTRING(SMG_05);
+    };
+
+    // HK416 and variants
+    class Weapon_arifle_SPAR_01_blk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_SPAR_01_blk);
+    };
+    class Weapon_arifle_SPAR_01_khk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_SPAR_01_khk);
+    };
+    class Weapon_arifle_SPAR_01_snd_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_SPAR_01_snd);
+    };
+
+    class Weapon_arifle_SPAR_01_GL_blk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_SPAR_01_GL_blk);
+    };
+    class Weapon_arifle_SPAR_01_GL_khk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_SPAR_01_GL_khk);
+    };
+    class Weapon_arifle_SPAR_01_GL_snd_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_SPAR_01_GL_snd);
+    };
+
+    class Weapon_arifle_SPAR_02_blk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_SPAR_02_blk);
+    };
+    class Weapon_arifle_SPAR_02_khk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_SPAR_02_khk);
+    };
+    class Weapon_arifle_SPAR_02_snd_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_SPAR_02_snd);
+    };
+
+    class Weapon_arifle_SPAR_03_blk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_SPAR_03_blk);
+    };
+    class Weapon_arifle_SPAR_03_khk_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_SPAR_03_khk);
+    };
+    class Weapon_arifle_SPAR_03_snd_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_SPAR_03_snd);
+    };
+
+    // RPG-32
+    class Weapon_launch_RPG32_ghex_F: Launcher_Base_F {
+        displayName = CSTRING(launch_RPG32_ghex);
+    };
+
+    // P99
+    class Weapon_hgun_P07_khk_F: Pistol_Base_F {
+        displayName = CSTRING(hgun_P07_khk);
+    };
+    class Weapon_hgun_P07_blk_F: Pistol_Base_F {
+        displayName = CSTRING(hgun_P07_blk);
+    };
+
+    // Makarov
+    class Weapon_hgun_Pistol_01_F: Pistol_Base_F {
+        displayName = CSTRING(hgun_Pistol_01);
+    };
+
+    // AKM
+    class Weapon_arifle_AKM_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_AKM);
+    };
+
+    // AKSU
+    class Weapon_arifle_AKS_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_AKS);
+    };
+
+    // Contact/Livonia
+
+    // CZ 581 Shotgun
+    class Weapon_sgun_HunterShotgun_01_F: Weapon_Base_F {
+        displayName = CSTRING(sgun_huntershotgun_01_Name);
+    };
+    class Weapon_sgun_HunterShotgun_01_sawedoff_F: Weapon_Base_F {
+        displayName = CSTRING(sgun_huntershotgun_sawedoff_01_Name);
+    };
+
+    // FNX-45 (Green)
+    class Weapon_hgun_Pistol_heavy_01_green_F: Pistol_Base_F {
+        displayName = CSTRING(hgun_Pistol_heavy_01_green_Name);
+    };
+
+    // RPG-32 (Green)
+    class Weapon_launch_RPG32_green_F: Launcher_Base_F {
+        displayName = CSTRING(launch_RPG32_green_Name);
+    };
+
+    // AK15 variants
+    class Weapon_arifle_AK12_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_AK12);
+    };
+    class Weapon_arifle_AK12_lush_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_AK12_lush);
+    };
+    class Weapon_arifle_AK12_arid_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_AK12_arid);
+    };
+
+    class Weapon_arifle_AK12_GL_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_AK12_GL);
+    };
+    class Weapon_arifle_AK12_GL_lush_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_AK12_GL_lush);
+    };
+    class Weapon_arifle_AK12_GL_arid_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_AK12_GL_arid);
+    };
+
+    class Weapon_arifle_AK12U_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_AK12U);
+    };
+    class Weapon_arifle_AK12U_lush_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_AK12U_lush);
+    };
+    class Weapon_arifle_AK12U_arid_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_AK12U_arid);
+    };
+
+    class Weapon_arifle_RPK12_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_RPK12);
+    };
+    class Weapon_arifle_RPK12_lush_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_RPK12_lush);
+    };
+    class Weapon_arifle_RPK12_arid_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_RPK12_arid);
+    };
+
+    // M14 (Classic)
+    class Weapon_srifle_DMR_06_hunter_F: Weapon_Base_F {
+        displayName = CSTRING(srifle_DMR_06_hunter);
+    };
+
+    // Stoner 99 LMG (Black)
+    class Weapon_LMG_Mk200_black_F: Weapon_Base_F {
+        displayName = CSTRING(LMG_Mk200_black);
+    };
+
+    // MSBS Grot variants
+    class Weapon_arifle_MSBS65_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65);
+    };
+    class Weapon_arifle_MSBS65_black_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_black);
+    };
+    class Weapon_arifle_MSBS65_camo_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_camo);
+    };
+    class Weapon_arifle_MSBS65_sand_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_sand);
+    };
+    class Weapon_arifle_MSBS65_GL_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_GL);
+    };
+    class Weapon_arifle_MSBS65_GL_black_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_GL_black);
+    };
+    class Weapon_arifle_MSBS65_GL_camo_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_GL_camo);
+    };
+    class Weapon_arifle_MSBS65_GL_sand_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_GL_sand);
+    };
+    class Weapon_arifle_MSBS65_Mark_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_Mark);
+    };
+    class Weapon_arifle_MSBS65_Mark_black_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_Mark_black);
+    };
+    class Weapon_arifle_MSBS65_Mark_camo_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_Mark_camo);
+    };
+    class Weapon_arifle_MSBS65_Mark_sand_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_Mark_sand);
+    };
+    class Weapon_arifle_MSBS65_UBS_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_UBS);
+    };
+    class Weapon_arifle_MSBS65_UBS_black_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_UBS_black);
+    };
+    class Weapon_arifle_MSBS65_UBS_camo_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_UBS_camo);
+    };
+    class Weapon_arifle_MSBS65_UBS_sand_F: Weapon_Base_F {
+        displayName = CSTRING(arifle_MSBS65_UBS_sand);
+    };
 };

@@ -31,7 +31,7 @@ if (_intersectsWith isEqualTo []) exitWith {};
 {
     // diag_log text format ["Adding HP: %1", _x];
     private _index = count GVAR(spallHPData);
-    private _hpId = _x addEventHandler ["hitPart", compile format ["[%1, _this] call " + QFUNC(spallHP), _index]];
+    private _hpId = _x addEventHandler ["HitPart", compile format ["[%1, _this] call " + QFUNC(spallHP), _index]];
     _foundObjects pushBack _x;
     _foundObjectHPIds pushBack _hpId;
     private _data = [_hpId, _x, typeOf _round, _round, _curPos, _velocity, 0, _foundObjects, _foundObjectHPIds];

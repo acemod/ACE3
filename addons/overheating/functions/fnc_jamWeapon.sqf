@@ -80,9 +80,11 @@ if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
 
     private _condition = {
         private _unit = _this select 1;
-        [_unit] call CBA_fnc_canUseWeapon
-        && {currentMuzzle _unit in (_unit getVariable [QGVAR(jammedWeapons), []])}
-        && {!(currentMuzzle _unit in (_unit getVariable [QEGVAR(safemode,safedWeapons), []]))}
+        (weaponState _unit) params ["_currentWeapon", "_currentMuzzle"];
+
+        _unit call CBA_fnc_canUseWeapon
+        && {_currentMuzzle in (_unit getVariable [QGVAR(jammedWeapons), []])}
+        && {!(["ace_safemode"] call EFUNC(common,isModLoaded)) || {!([_unit, _currentWeapon, _currentMuzzle] call EFUNC(safemode,getWeaponSafety))}}
     };
 
     private _statement = {

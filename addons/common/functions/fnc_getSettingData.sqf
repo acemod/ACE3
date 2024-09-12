@@ -32,7 +32,6 @@ scopeName "main";
     if (_x select 0 == _name) then {
         _x breakOut "main";
     };
-    false
-} count GVAR(settings);
+} forEach GVAR(settings);
 
 []

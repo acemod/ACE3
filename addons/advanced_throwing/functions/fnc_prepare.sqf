@@ -21,7 +21,7 @@ TRACE_1("params",_unit);
 // Select next throwable if one already in hand
 if (_unit getVariable [QGVAR(inHand), false]) exitWith {
     TRACE_1("inHand",_unit);
-    if (!(_unit getVariable [QGVAR(primed), false])) then {
+    if !(_unit getVariable [QGVAR(primed), false]) then {
         TRACE_1("not primed",_unit);
         // Restore muzzle ammo (setAmmo 1 has no impact if no appliccable throwable in inventory)
         // selectNextGrenade relies on muzzles array (setAmmo 0 removes the muzzle from the array and current can't be found, cycles between 0 and 1 muzzles)

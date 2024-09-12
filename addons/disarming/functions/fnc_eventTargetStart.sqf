@@ -32,7 +32,7 @@ private _itemsToAdd = [];
 } forEach _listOfObjectsToRemove;
 
 {
-    if (!(_x in _listOfObjectsToRemove)) then {
+    if !(_x in _listOfObjectsToRemove) then {
         _listOfObjectsToRemove pushBack _x;
     };
 } forEach _itemsToAdd;

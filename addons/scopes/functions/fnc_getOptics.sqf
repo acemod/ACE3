@@ -21,7 +21,7 @@ params ["_unit"];
 
 private _optics = ["", "", ""];
 
-if (!(_unit isKindOf "CAManBase")) exitWith {_optics};
+if !(_unit isKindOf "CAManBase") exitWith {_optics};
 
 {
     if (count _x >= 2) then {

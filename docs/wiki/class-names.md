@@ -240,6 +240,7 @@ ACE_plasmaIV_250 | Plasma IV (250ml) | ACE_ItemCore |
 ACE_salineIV | Saline IV (1000ml) | ACE_ItemCore |
 ACE_salineIV_500 | Saline IV (500ml) | ACE_ItemCore |
 ACE_salineIV_250 | Saline IV (250ml) | ACE_ItemCore |
+ACE_suture | Suture | ACE_ItemCore |
 ACE_surgicalKit | Surgical Kit | ACE_ItemCore |
 ACE_tourniquet | Tourniquet (CAT) | ACE_ItemCore |
 ACE_medicalSupplyCrate | Simple ACE Medical Supply Crate | ammo box |

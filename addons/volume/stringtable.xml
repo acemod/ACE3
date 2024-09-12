@@ -14,6 +14,7 @@
             <Polish>Głosność</Polish>
             <Turkish>Ses</Turkish>
             <Spanish>Volumen</Spanish>
+            <Portuguese>Volume</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_KeybindName">
             <English>Toggle Volume</English>
@@ -28,6 +29,7 @@
             <Polish>Przełącz Głosność</Polish>
             <Turkish>Sesi Aç/Kapat</Turkish>
             <Spanish>Activar control de volumen</Spanish>
+            <Portuguese>Alternar volume</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_KeybindDescription">
             <English>Toggle volume reduction.</English>
@@ -42,6 +44,7 @@
             <Polish>Przełącz redukcje głosności</Polish>
             <Turkish>Ses azaltmayı aç / kapat.</Turkish>
             <Spanish>Activar reducción de volumen.</Spanish>
+            <Portuguese>Alternar redução de volume</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_Lowered">
             <English>Lowered volume</English>
@@ -56,6 +59,7 @@
             <Polish>Zmniejszona głosność</Polish>
             <Turkish>Azaltılmış ses</Turkish>
             <Spanish>Volumen reducido</Spanish>
+            <Portuguese>Volume reduzido</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_Restored">
             <English>Restored volume</English>
@@ -69,6 +73,7 @@
             <Russian>Громкость восстановлена</Russian>
             <Polish>Przywrócona głosność</Polish>
             <Spanish>Volumen restaurado</Spanish>
+            <Portuguese>Volume restaurado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_Reduction">
             <English>Reduction</English>
@@ -82,6 +87,7 @@
             <Russian>Уменьшение</Russian>
             <Polish>Redukcja</Polish>
             <Spanish>Reducción</Spanish>
+            <Portuguese>Redução</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_ReductionDescription">
             <English>Reduce volume by this percentage.</English>
@@ -95,6 +101,7 @@
             <Russian>Уменьшает громкость</Russian>
             <Polish>Zmniejsz głosność o tyle procent</Polish>
             <Spanish>Reducir el volumen este porcentaje.</Spanish>
+            <Portuguese>Reduzir o volume por esta porcentagem.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_LowerInVehicles">
             <English>Lower in vehicles</English>
@@ -109,6 +116,7 @@
             <Polish>Zmniejsz w pojazdach</Polish>
             <Turkish>Araçlarda Daha Düşük</Turkish>
             <Spanish>Reducir en vehículos</Spanish>
+            <Portuguese>Reduzir em veículos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_LowerInVehiclesDescription">
             <English>Automatically lower volume when inside vehicles.</English>
@@ -123,6 +131,7 @@
             <Polish>Automatycznie zmniejsz głosność będąc w pojeździe</Polish>
             <Turkish>Araçlara binince sesi azalt.</Turkish>
             <Spanish>Reduce automáticamente el volumen dentro de vehículos.</Spanish>
+            <Portuguese>Reduz automaticamente o volume dentro de veículos.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_ShowNotification">
             <English>Show notification</English>
@@ -137,6 +146,7 @@
             <Polish>Pokaż powiadomienie</Polish>
             <Turkish>Bildirim Göster</Turkish>
             <Spanish>Mostrar notificación</Spanish>
+            <Portuguese>Mostrar notificação</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_ShowNotificationDescription">
             <English>Show notification when lowering/restoring volume.</English>
@@ -151,6 +161,7 @@
             <Polish>Pokaż powiadomienie zmniejszając/odnawiając głosność</Polish>
             <Turkish>Ses azaltıldığın da bildirim göster.</Turkish>
             <Spanish>Mostrar notificación cuando se disminuye/restaura el volumen.</Spanish>
+            <Portuguese>Mostrar notificação quando o volume for reduzido/restaurado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_FadeDelay">
             <English>Fade delay</English>
@@ -164,6 +175,7 @@
             <Russian>Задержка затухания</Russian>
             <Polish>Opoznienie wyciszenia</Polish>
             <Spanish>Retardo en disminución gradual</Spanish>
+            <Portuguese>Atraso de alteração gradual de volume</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_FadeDelayDescription">
             <English>Time it takes (in seconds) for the sound to fade in/out.</English>
@@ -177,6 +189,7 @@
             <Russian>Время (сек.) для затухания/восстановления звука.</Russian>
             <Polish>Ilość czasu (w sekundach) ile zajmuje wyciszenie/zgłośnienie dźwięku</Polish>
             <Spanish>Tiempo que tarda (en segundos) para que se active o desactive la disminuación gradual del volumen</Spanish>
+            <Portuguese>Tempo de atraso (em segundos) para que o volume do som sofra alteração gradual</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_RemindIfLowered">
             <English>Reminder if lowered</English>
@@ -191,6 +204,7 @@
             <Polish>Przypomnij o zmniejszonej głosności dźwięku</Polish>
             <Turkish>Eğer Düşükse Hatırlat</Turkish>
             <Spanish>Recordatorio s reducido</Spanish>
+            <Portuguese>Lembrete de redução sonora</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_RemindIfLoweredDescription">
             <English>Reminds you every minute if your volume is lowered.</English>
@@ -205,6 +219,7 @@
             <Polish>Przypomina co minuten o zmniejszonej głosności dźwięku</Polish>
             <Turkish>Eğer ses düşükse her dakika hatırlatır.</Turkish>
             <Spanish>Te recuerda cada minuto si el volumen está siendo reducido.</Spanish>
+            <Portuguese>Te notifica a cada minuto se o volume sonoro estiver reduzido.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Volume_LoweredReminder">
             <English>Volume still lowered</English>
@@ -219,6 +234,7 @@
             <Polish>Dźwięk jest nadal zmniejszony</Polish>
             <Turkish>Ses hala düşük</Turkish>
             <Spanish>Volumen todavía reducido</Spanish>
+            <Portuguese>Volume ainda está reduzido</Portuguese>
         </Key>
     </Package>
 </Project>

@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm, PabstMirror
- * Handles the use of proxy weapons to bypass engine reload times
+ * Handles the use of proxy weapons to fix engine-reload times.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret <ARRAY>
  * 2: Proxy weapon needed <BOOL>
  * 2: Weapon should be emptied <BOOL>
@@ -20,6 +20,11 @@
 
 params ["_vehicle", "_turret", "_needed", "_emptyWeapon"];
 TRACE_4("proxyWeapon",_vehicle,_turret,_needed,_emptyWeapon);
+
+// addWeaponTurret/removeWeaponTurret need to be executed where turret is local
+if !(_vehicle turretLocal _turret) exitWith {
+    WARNING_2("[%1]'s turret [%2] isn't local, skipping proxy weapon change",_vehicle,_turret);
+};
 
 if (_vehicle getVariable [format [QGVAR(proxyHandled_%1), _turret], false]) exitWith { TRACE_1("already handled",typeOf _vehicle); };
 

@@ -65,7 +65,7 @@ if (_zIndex < 5) then {
     while {count _nlos != count _excludes && {_c < (count _nlos)}} do {
         scopeName "mainSearch";
         {
-            if (!(_forEachIndex in _excludes)) then {
+            if !(_forEachIndex in _excludes) then {
                 private _index = _buckets pushBack [_x, [_x]];
                 _excludes pushBack _forEachIndex;
                 _bucketPos = _x;
@@ -74,7 +74,7 @@ if (_zIndex < 5) then {
             };
         } forEach _nlos;
         {
-            if (!(_forEachIndex in _excludes)) then {
+            if !(_forEachIndex in _excludes) then {
                 _testPos = _x;
                 if (_testPos vectorDistanceSqr _bucketPos <= 30) then {
                     _bucketList pushBack _x;
@@ -120,7 +120,7 @@ if (_zIndex < 5) then {
     // _dirvec = _pos vectorFromTo ((player modelToWorldVisualWorld (player selectionPosition "Spine3")));
     // _dirvec = _dirvec vectorMultiply 100;
     // _can setVelocity _dirvec;
-    [DFUNC(doExplosions), 0, [_explosions, 0]] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(doExplosions), 0, [_explosions, 0]] call CBA_fnc_addPerFrameHandler;
     [_pfhID] call CBA_fnc_removePerFrameHandler;
 };
 END_COUNTER(fnc_findReflections);

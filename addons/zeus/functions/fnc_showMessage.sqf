@@ -18,7 +18,7 @@
  * Public: Yes
  */
 
-if (!(_this isEqualTypeParams [""])) exitWith {ERROR_1("First arg must be string [%1]",_this);};
+if !(_this isEqualTypeParams [""]) exitWith {ERROR_1("First arg must be string [%1]",_this);};
 
 private _message = _this apply {if ((_x isEqualType "") && {isLocalized _x}) then {localize _x} else {_x}};
 [objNull, format _message] call BIS_fnc_showCuratorFeedbackMessage;

@@ -129,6 +129,7 @@
             <Russian>Значение 0 будет использовать настройки видео по умолчанию</Russian>
             <Spanish>Establecer a 0 utiliza las opciones de video por defecto</Spanish>
             <French>La valeur 0 permet d'utiliser les paramètres vidéo par défaut</French>
+            <Portuguese>Estabelecer em 0 utilizará as configurações padrão de vídeo</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewDistance_onFoot_DisplayName">
             <English>Client View Distance (On Foot)</English>

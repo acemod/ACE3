@@ -28,7 +28,9 @@
 
 
 #define REARM_HOLSTER_WEAPON \
-    _unit setVariable [QGVAR(selectedWeaponOnRearm), currentWeapon _unit]; \
+    if (currentWeapon _unit != "") then { \
+        _unit setVariable [QGVAR(selectedWeaponOnRearm), (weaponState _unit) select [0, 3]]; \
+    }; \
     TRACE_2("REARM_HOLSTER_WEAPON",_unit,currentWeapon _unit); \
     _unit action ["SwitchWeapon", _unit, _unit, 299];
 

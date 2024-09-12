@@ -134,7 +134,7 @@
             <Spanish>Equipa el helicoptero seleccionado con un Sistema de Inserción/Extracción Rápida por Cuerda</Spanish>
             <Italian>Equipaggia l'elicottero selezionato con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit vybraný vrtulník systémem Fast Rope Insertion Extraction (FRIES)</Czech>
-            <Portuguese>Equipa um helicóptero selecionado com um sistema de Fast Rope Insertion Extraction System</Portuguese>
+            <Portuguese>Equipa o helicóptero selecionado com um Sistema de Inserção/Extração Rápida por Corda</Portuguese>
             <Russian>Снаряжает выбранный вертолет оборудованием для спуска десанта по канатам</Russian>
             <Japanese>選択されたヘリコプターで Fast Rope Insertion Extraction System を使えるようにします。</Japanese>
             <Korean>선택된 헬리콥터에 패스트로프 투입 및 탈출 시스템을 장착합니다.</Korean>
@@ -298,6 +298,7 @@
             <German>Schnelles-Abseilen</German>
             <Italian>Fast Rope</Italian>
             <Korean>패스트로프</Korean>
+            <Portuguese>Descida rápida pela corda</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>

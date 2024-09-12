@@ -129,7 +129,7 @@
             <Japanese>30mm コンバット ミックス 4:1 劣化ウラン徹甲弾:焼夷榴弾</Japanese>
             <Czech>30mm Bojový Mix 4:1 DU:HEI</Czech>
             <Russian>30мм Смешанное боепитание 4:1 ОУ:ОФЗ</Russian>
-            <Korean>30mm 4:1 열화:고폭소이</Korean>
+            <Korean>30mm 열화우라늄:고폭소이 4:1 혼합</Korean>
             <Portuguese>30mm Mix de Combate 4:1 DU:AEI</Portuguese>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM41">
@@ -145,7 +145,7 @@
             <Japanese>30mm CM 4:1</Japanese>
             <Czech>30mm BM 4:1</Czech>
             <Russian>30мм СБ 4:1</Russian>
-            <Korean>30mm CM 4:1</Korean>
+            <Korean>30mm 4:1 혼합</Korean>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionCM51">
             <English>30mm Combat Mix 5:1 DU:HEI</English>
@@ -160,7 +160,7 @@
             <Japanese>30mm コンバット ミックス 5:1 劣化ウラン徹甲弾:焼夷榴弾</Japanese>
             <Czech>30mm Bojový Mix 5:1 DU:HEI</Czech>
             <Russian>30мм Смешанное боепитание 5:1 ОУ:ОФЗ</Russian>
-            <Korean>30mm 5:1 열화:고폭소이</Korean>
+            <Korean>30mm 열화우라늄:고폭소이 5:1 혼합</Korean>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM51">
             <English>30mm CM 5:1</English>
@@ -175,7 +175,25 @@
             <Japanese>30mm CM 5:1</Japanese>
             <Czech>30mm BM 5:1</Czech>
             <Russian>30мм СБ 5:1</Russian>
-            <Korean>30mm CM 5:1</Korean>
+            <Korean>30mm 5:1 혼합</Korean>
+        </Key>
+        <Key ID="STR_ACE_Aircraft_DroneFollowDistance">
+            <English>Follow Distance</English>
+            <Italian>Distanza di seguimento</Italian>
+            <German>Folge-Entfernung</German>
+            <Korean>따라가는 거리</Korean>
+            <French>Distance de suivi</French>
+            <Japanese>追跡距離</Japanese>
+            <Russian>Расстояние отслеживания</Russian>
+        </Key>
+        <Key ID="STR_ACE_Aircraft_DroneFollowHint">
+            <English>Following unit within %1m</English>
+            <Italian>Seguendo unità entro %1m</Italian>
+            <German>Folgt Einheit bis zu %1m</German>
+            <Korean>%1m 이내로 유닛을 따라갑니다</Korean>
+            <French>Suivre l'unité jusqu'à %1m</French>
+            <Japanese>%1m 間隔で 目標を追跡します</Japanese>
+            <Russian>Отслеживание в пределах %1m</Russian>
         </Key>
     </Package>
 </Project>

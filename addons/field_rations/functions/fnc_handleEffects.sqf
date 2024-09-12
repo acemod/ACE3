@@ -28,13 +28,14 @@ if ((_thirst > 99.9 || {_hunger > 99.9}) && {random 1 < 0.5}) exitWith {
 if !(_player call EFUNC(common,isAwake)) exitWith {};
 
 // Set unit unconscious (chance based on how high thirst/hunger are)
-if ((_thirst > 85 || {_hunger > 85}) && {random 1 < linearConversion [85, 100, _thirst max _hunger, 0.05, 0.1, true]}) exitWith {
-    if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
-        [_player, true, 5, true] call EFUNC(medical,setUnconscious);
-    };
+if (
+    GETEGVAR(medical,enabled,false) && 
+    {(_thirst > 85 || {_hunger > 85}) && {random 1 < linearConversion [85, 100, _thirst max _hunger, 0.05, 0.1, true]}}
+) exitWith {
+    [_player, true, 5, true] call EFUNC(medical,setUnconscious);
 };
 
 // Make unit fall if moving fast
-if ((_thirst > 93 || {_hunger > 93}) && {speed _player > 1} && {vehicle _player == _player}) exitWith {
+if ((_thirst > 93 || {_hunger > 93}) && {speed _player > 1} && {isNull objectParent _player}) exitWith {
     [_player, "down"] call EFUNC(common,doGesture);
 };

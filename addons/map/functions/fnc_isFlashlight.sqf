@@ -17,14 +17,12 @@
 
 params [["_class", "", [""]]];
 
-private _isFlashlight = GVAR(flashlights) getVariable _class;
-
-if (isNil "_isFlashlight") then {
+GVAR(flashlights) getOrDefaultCall [_class, {
     private _items = ([_class] + (_class call CBA_fnc_switchableAttachments));
     private _cfgWeapons = configFile >> "CfgWeapons";
 
     // if this item or any of the switchable items is a flashlight
-    _isFlashlight = _items findIf {
+    _items findIf {
         private _weaponConfig = _cfgWeapons >> _x;
 
         [
@@ -34,10 +32,5 @@ if (isNil "_isFlashlight") then {
             isText (_x >> "ACE_Flashlight_Colour")
             || {!(getArray (_x >> "ambient") in [[], [0,0,0]]) && {getNumber (_x >> "irLight") == 0}}
         } != -1 // return
-    } != -1;
-
-    // cache value
-    GVAR(flashlights) setVariable [_class, _isFlashlight];
-};
-
-_isFlashlight // return
+    } != -1 // return
+}, true] // return

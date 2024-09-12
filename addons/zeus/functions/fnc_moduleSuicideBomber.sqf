@@ -57,7 +57,7 @@ if (_autoSeek) then {
         LOG("Unit deleted or killed, PFH removed");
     };
 
-    if (!([_unit] call EFUNC(common,isAwake))) exitWith {};
+    if !([_unit] call EFUNC(common,isAwake)) exitWith {};
 
     // Detonation
     private _nearObjects = (_unit nearObjects _activationRadius) select {side _x == _activationSide && {_x != _unit} && {alive _x}};
