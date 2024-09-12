@@ -1,6 +1,6 @@
 #![allow(clippy::approx_constant)]
 
-use arma_rs::FromArma;
+use arma_rs::{FromArma, FromArmaError};
 
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum DragFunction {
@@ -13,7 +13,7 @@ pub enum DragFunction {
 }
 
 impl FromArma for DragFunction {
-    fn from_arma(s: String) -> Result<Self, String> {
+    fn from_arma(s: String) -> Result<Self, FromArmaError> {
         match s.as_str() {
             "1" => Ok(Self::G1),
             "2" => Ok(Self::G2),
@@ -21,7 +21,7 @@ impl FromArma for DragFunction {
             "6" => Ok(Self::G6),
             "7" => Ok(Self::G7),
             "8" => Ok(Self::G8),
-            _ => Err(format!("Unknown drag function: {s}")),
+            _ => Err(FromArmaError::InvalidValue(format!("Unknown drag function: {s}"))),
         }
     }
 }

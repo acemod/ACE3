@@ -1,6 +1,6 @@
 use std::ops::Deref;
 
-use arma_rs::FromArma;
+use arma_rs::{FromArma, FromArmaError};
 
 #[derive(Debug, Clone, Copy)]
 /// Muzzle velocity in m/s
@@ -14,11 +14,11 @@ impl MuzzleVelocity {
 }
 
 impl FromArma for MuzzleVelocity {
-    fn from_arma(value: String) -> Result<Self, String> {
+    fn from_arma(value: String) -> Result<Self, FromArmaError> {
         Ok(Self(
             value
                 .parse::<f64>()
-                .map_err(|_| "Invalid muzzle velocity")?,
+                .map_err(|_| FromArmaError::InvalidValue("Invalid muzzle velocity".into()))?,
         ))
     }
 }

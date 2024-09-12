@@ -1,6 +1,6 @@
 use std::ops::Deref;
 
-use arma_rs::FromArma;
+use arma_rs::{FromArma, FromArmaError};
 
 #[derive(Debug, Clone, Copy)]
 /// Height in meters
@@ -13,8 +13,8 @@ impl Height {
 }
 
 impl FromArma for Height {
-    fn from_arma(value: String) -> Result<Self, String> {
-        Ok(Self(value.parse::<f64>().map_err(|_| "Invalid height")?))
+    fn from_arma(value: String) -> Result<Self, FromArmaError> {
+        Ok(Self(value.parse::<f64>().map_err(|_| FromArmaError::InvalidValue("Invalid height".into()))?))
     }
 }
 
