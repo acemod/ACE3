@@ -46,5 +46,6 @@ _unit addAction ["OpenBag", {
     {!lockedInventory _backpackContainer} &&
     {maxLoad _backpackContainer > 0} &&
     {getNumber (_backpackConfig >> "disableInventory") != 1} &&
+    {!(_target isKindOf QEGVAR(dragging,clone))} &&
     {_target setUserActionText [_actionId, format [localize "STR_ACTION_OPEN_BAG", getText (_backpackConfig >> "displayName")]]; true}
 }, 2];

@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Animaion <STRING>
+ * 1: Animation <STRING>
  *
  * Return Value:
  * None

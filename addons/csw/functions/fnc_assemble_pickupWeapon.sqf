@@ -21,13 +21,17 @@
     TRACE_2("assemble_pickupWeapon",_vehicle,_player);
 
     private _weaponConfig = configOf _vehicle >> QUOTE(ADDON);
-    private _carryWeaponClassname = getText (_weaponConfig >> "disassembleWeapon");
+    private _componentClasses = _vehicle getVariable QGVAR(componentClasses);
+
+    (if (!isNil "_componentClasses") then {
+        _componentClasses
+    } else {
+        [getText (_weaponConfig >> "disassembleTurret"), getText (_weaponConfig >> "disassembleWeapon")]
+    }) params ["_turretClassname", "_carryWeaponClassname"];
 
     if (!isClass (configFile >> "CfgWeapons" >> _carryWeaponClassname)) exitWith {
         ERROR_1("bad weapon classname [%1]",_carryWeaponClassname);
     };
-
-    private _turretClassname = getText (_weaponConfig >> "disassembleTurret");
 
     // Turret classname can equal nothing if the deploy bag is the "whole" weapon. e.g Kornet, Metis, other ATGMs
     if ((_turretClassname != "") && {!isClass (configFile >> "CfgVehicles" >> _turretClassname)}) exitWith {
@@ -58,7 +62,9 @@
             if (_carryWeaponMag isEqualTo [] && {_carryMag in _carryWeaponMags}) then {
                 TRACE_3("Adding mag to secondary weapon",_xMag,_xAmmo,_carryMag);
                 _carryWeaponMag = [_carryMag, _xAmmo];
-                DEC(_xAmmo);
+
+                // Do not return this magazine, as it will be put into the weapon
+                continue;
             };
             if ((_xAmmo > 0) && {_carryMag != ""}) then {
                 TRACE_2("Removing ammo",_xMag,_carryMag);
@@ -82,8 +88,19 @@
         [{
             params ["_player", "_weaponPos", "_carryWeaponClassname", "_carryWeaponMag", "_turretClassname"];
 
+            private _carryWeaponType = _carryWeaponClassname call EFUNC(common,getWeaponType);
+
+            if !(_carryWeaponType in [1, 2]) exitWith {
+                ERROR_1("bad carry weapon type [%1]",_carryWeaponClassname);
+
+                if (_carryWeaponMag isEqualTo []) exitWith {};
+
+                // Return the ammo, so it doesn't vanish
+                [_player, _carryWeaponMag select 0, _carryWeaponMag select 1] call FUNC(reload_handleReturnAmmo);
+            };
+
             // Give the weapon to the player if possible
-            if ((alive _player) && {(secondaryWeapon _player) == ""}) exitWith {
+            if ((alive _player) && {([primaryWeapon _player, secondaryWeapon _player] select (_carryWeaponType - 1)) == ""}) exitWith {
                 [_player, _carryWeaponClassname] call CBA_fnc_addWeaponWithoutItems;
 
                 if (_carryWeaponMag isNotEqualTo []) then {

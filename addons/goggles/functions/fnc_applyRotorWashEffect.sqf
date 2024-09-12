@@ -64,14 +64,14 @@ if !(_safe) then {
     if !([_unit] call FUNC(isGogglesVisible)) exitWith {};
 
     if (GETDUSTT(DAMOUNT) < 2) then {
-        if !(GETDUSTT(DACTIVE)) then {
-            SETDUST(DACTIVE,true);
-
-            call FUNC(applyDustEffect);
-        } else {
+        if (GETDUSTT(DACTIVE)) then {
             if (_rotorWash select 1 > 0.5) then {
                 call FUNC(applyDustEffect);
             };
+        } else {
+            SETDUST(DACTIVE,true);
+
+            call FUNC(applyDustEffect);
         };
     };
 
