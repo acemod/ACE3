@@ -120,7 +120,11 @@ if (GVAR(reflectionsEnabled)) then {
     if (_fragCount > _maxFrags) exitWith {};
 } forEach _targets;
 TRACE_1("targeted",_fragCount);
-if (_fragCount > _maxFrags) exitWith {};
+if (_fragCount > _maxFrags) exitWith {
+    TRACE_1("total created",_fragCount);
+    END_COUNTER(frago);
+    _fragCount
+};
 private _randomCount = ceil ((_maxFrags - _fragCount) * 0.35);
 TRACE_1("",_randomCount);
 private _sectorSize = 360 / (_randomCount max 1);
