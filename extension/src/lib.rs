@@ -14,6 +14,9 @@ mod fcs;
 
 #[arma]
 fn init() -> Extension {
+    #[no_mangle]
+    pub static RVExtensionFeatureFlags: u64 = 4;  
+
     Extension::build()
         .version(env!("GIT_HASH").to_string())
         .group("artillery", artillery::group())
