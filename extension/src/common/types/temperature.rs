@@ -37,23 +37,33 @@ impl Temperature {
 impl FromArma for Temperature {
     fn from_arma(s: String) -> Result<Self, FromArmaError> {
         if s.is_empty() {
-            return Err(FromArmaError::InvalidValue("unexpected empty string".into()));
+            return Err(FromArmaError::InvalidValue(
+                "unexpected empty string".into(),
+            ));
         }
         match s.chars().next().unwrap() {
             'c' => {
-                let temp = s[1..].parse::<f64>().map_err(|e| FromArmaError::InvalidValue(format!("{e}")))?;
+                let temp = s[1..]
+                    .parse::<f64>()
+                    .map_err(|e| FromArmaError::InvalidValue(format!("{e}")))?;
                 Ok(Self::new_celsius(temp))
             }
             'f' => {
-                let temp = s[1..].parse::<f64>().map_err(|e| FromArmaError::InvalidValue(format!("{e}")))?;
+                let temp = s[1..]
+                    .parse::<f64>()
+                    .map_err(|e| FromArmaError::InvalidValue(format!("{e}")))?;
                 Ok(Self::new_fahrenheit(temp))
             }
             'k' => {
-                let temp = s[1..].parse::<f64>().map_err(|e| FromArmaError::InvalidValue(format!("{e}")))?;
+                let temp = s[1..]
+                    .parse::<f64>()
+                    .map_err(|e| FromArmaError::InvalidValue(format!("{e}")))?;
                 Ok(Self::new_kelvin(temp))
             }
             _ => {
-                let temp = s.parse::<f64>().map_err(|e| FromArmaError::InvalidValue(format!("{e}")))?;
+                let temp = s
+                    .parse::<f64>()
+                    .map_err(|e| FromArmaError::InvalidValue(format!("{e}")))?;
                 Ok(Self::new_celsius(temp))
             }
         }

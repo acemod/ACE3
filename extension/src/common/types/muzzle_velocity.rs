@@ -15,11 +15,9 @@ impl MuzzleVelocity {
 
 impl FromArma for MuzzleVelocity {
     fn from_arma(value: String) -> Result<Self, FromArmaError> {
-        Ok(Self(
-            value
-                .parse::<f64>()
-                .map_err(|_| FromArmaError::InvalidValue("Invalid muzzle velocity".into()))?,
-        ))
+        Ok(Self(value.parse::<f64>().map_err(|_| {
+            FromArmaError::InvalidValue("Invalid muzzle velocity".into())
+        })?))
     }
 }
 

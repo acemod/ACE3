@@ -21,7 +21,9 @@ impl FromArma for DragFunction {
             "6" => Ok(Self::G6),
             "7" => Ok(Self::G7),
             "8" => Ok(Self::G8),
-            _ => Err(FromArmaError::InvalidValue(format!("Unknown drag function: {s}"))),
+            _ => Err(FromArmaError::InvalidValue(format!(
+                "Unknown drag function: {s}"
+            ))),
         }
     }
 }

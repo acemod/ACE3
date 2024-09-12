@@ -14,7 +14,9 @@ impl Height {
 
 impl FromArma for Height {
     fn from_arma(value: String) -> Result<Self, FromArmaError> {
-        Ok(Self(value.parse::<f64>().map_err(|_| FromArmaError::InvalidValue("Invalid height".into()))?))
+        Ok(Self(value.parse::<f64>().map_err(|_| {
+            FromArmaError::InvalidValue("Invalid height".into())
+        })?))
     }
 }
 

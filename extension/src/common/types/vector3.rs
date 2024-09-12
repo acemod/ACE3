@@ -1,4 +1,4 @@
-use arma_rs::{FromArma, IntoArma, FromArmaError};
+use arma_rs::{FromArma, FromArmaError, IntoArma};
 
 #[derive(Debug, Clone, Copy, PartialEq, Default)]
 pub struct Vector3 {
