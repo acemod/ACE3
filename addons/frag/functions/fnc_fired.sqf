@@ -36,13 +36,8 @@ if (!GVAR(spallEnabled) || {!(_ammo call FUNC(shouldSpall))}) exitWith {
 };
 
 private _hitPartEventHandler = _projectile addEventHandler ["HitPart", {
-    params ["_projectile", "_hitObject", "", "_posASL", "_velocity"];
-
-    // get rid of _shot parents starting after v2.18 is released and instead use the instigator EH parameter
-    // The "explode" EH does not get the same parameter
-    private _instigator = (getShotParents _projectile)#1;
+    params ["_projectile", "_hitObject", "", "_posASL", "_velocity", "_instigator"];
     private _ammo = typeOf _projectile;
-
     /*
         * Wait a frame to see what happens to the round, may result in
         * multiple hits / slowdowns getting shunted to the first hit
