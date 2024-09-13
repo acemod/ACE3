@@ -52,7 +52,7 @@ if (GVAR(RainLastLevel) != rain) then {
         GVAR(RainDrops) setParticleClass "ACERainEffect";
         GVAR(RainDrops) setDropInterval (0.07 * (1.1 - GVAR(RainLastLevel)));
         GVAR(RainDrops) attachTo [vehicle _unit, [0,0,0]];
-        [QGVAR(effect), [ace_player, "rain", ace_player call FUNC(isGogglesVisible)]] call CBA_fnc_localEvent;
+        [QGVAR(effect), [_unit, "rain", _unit call FUNC(isGogglesVisible)]] call CBA_fnc_localEvent;
     };
 } else {
     if (GVAR(RainLastLevel) > 0.05) then {

@@ -38,4 +38,4 @@ class CfgGlasses {
 | ---------- | ----------- | ------------------- | -------- |
 | `ace_glassesChanged` | Glasses Changed | `[_unit, _glassesClass]` | Local |
 | `ace_glassesCracked` | Glasses Cracked | `[_unit]` | Local |
-| `ace_goggles_effect` | Applied Goggle Effect | `[ace_player, "cause", ace_player call FUNC(isGogglesVisible)]` | Local
+| `ace_goggles_effect` | Applied Goggle Effect | `[_unit, "cause", _unit call FUNC(isGogglesVisible)]` | Local
