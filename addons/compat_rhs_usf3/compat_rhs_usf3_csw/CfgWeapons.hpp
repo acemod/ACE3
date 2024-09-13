@@ -44,6 +44,7 @@ class CfgWeapons {
             class assembleTo {
                 EGVAR(csw,m3Tripod) = "RHS_M2StaticMG_WD";
                 EGVAR(csw,m3TripodLow) = "RHS_M2StaticMG_MiniTripod_WD";
+                EGVAR(compat_spe,m3Tripod) = "RHS_M2StaticMG_MiniTripod_WD";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {
