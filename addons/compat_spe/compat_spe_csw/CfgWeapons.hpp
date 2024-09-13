@@ -6,14 +6,14 @@ class CfgWeapons {
     class EGVAR(csw,staticHMGCarry): Launcher_Base_F {
         class ace_csw {
             class assembleTo {
-                GVAR(M3_Tripod) = "B_HMG_01_F";
+                GVAR(m3Tripod) = "B_HMG_01_F";
             };
         };
     };
     class EGVAR(csw,staticM2ShieldCarry): EGVAR(csw,staticHMGCarry) {
         class ace_csw: ace_csw {
             class assembleTo {
-                GVAR(M3_Tripod) = "B_HMG_02_F";
+                GVAR(m3Tripod) = "B_HMG_02_F";
             };
         };
     };
@@ -21,14 +21,14 @@ class CfgWeapons {
     class EGVAR(csw,staticGMGCarry): Launcher_Base_F {
         class ace_csw {
             class assembleTo {
-                GVAR(M3_Tripod) = "B_GMG_01_F";
+                GVAR(m3Tripod) = "B_GMG_01_F";
             };
         };
     };
 
     // --- Gun Turrets -------------------------------------------------------------
     class SPE_M2_M3_Tripod;
-    class SPE_M2_M3_Tripod_proxy: SPE_M2_M3_Tripod {
+    class GVAR(M2_proxy): SPE_M2_M3_Tripod {
         magazineReloadTime = 0.5;
     };
 
@@ -37,7 +37,7 @@ class CfgWeapons {
             type = "mount";
             deployTime = 4;
             pickupTime = 4;
-            deploy = QGVAR(M3_Tripod);
+            deploy = QGVAR(m3Tripod);
         };
     };
     class SPE_M2_50: SPE_Slung_Static_Weapon_Base {
@@ -46,14 +46,14 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                GVAR(M3_Tripod) = "SPE_M2_M3";
+                GVAR(m3Tripod) = "SPE_M2_M3";
                 EGVAR(csw,m3TripodLow) = "SPE_M2_M3";
             };
         };
     };
 
     class SPE_M1919A4_tripod;
-    class SPE_M1919A4_tripod_proxy: SPE_M1919A4_tripod {
+    class GVAR(M1919A4_proxy): SPE_M1919A4_tripod {
         magazineReloadTime = 0.5;
     };
 
@@ -62,7 +62,7 @@ class CfgWeapons {
             type = "mount";
             deployTime = 4;
             pickupTime = 4;
-            deploy = QGVAR(M2_Tripod);
+            deploy = QGVAR(m2Tripod);
         };
     };
 
@@ -73,23 +73,23 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                GVAR(M2_Tripod) = "SPE_M1919_M2";
+                GVAR(m2Tripod) = "SPE_M1919_M2";
             };
         };
     };
 
     class SPE_M1919A6_StaticBipod;
-    class SPE_M1919A6_StaticBipod_proxy: SPE_M1919A6_StaticBipod {
+    class GVAR(M1919A6_proxy): SPE_M1919A6_StaticBipod {
         magazineReloadTime = 0.5;
     };
 
     class SPE_MG42_Tripod;
-    class SPE_MG42_Tripod_proxy: SPE_MG42_Tripod {
+    class GVAR(MG42_proxy): SPE_MG42_Tripod {
         magazineReloadTime = 0.5;
     };
 
     class SPE_MG34_Tripod;
-    class SPE_MG34_Tripod_proxy: SPE_MG34_Tripod {
+    class GVAR(MG34_proxy): SPE_MG34_Tripod {
         magazineReloadTime = 0.5;
     };
 
@@ -98,7 +98,7 @@ class CfgWeapons {
             type = "mount";
             deployTime = 4;
             pickupTime = 4;
-            deploy = QGVAR(Lafette_Tripod_Low);
+            deploy = QGVAR(LafetteTripodLow);
         };
     };
     class SPE_MG42: SPE_LMG {
@@ -107,8 +107,8 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                GVAR(Lafette_Tripod_Low) = "SPE_MG42_Lafette_low_Deployed";
-                GVAR(Lafette_Tripod) = "SPE_MG42_Lafette_Deployed";
+                GVAR(LafetteTripodLow) = "SPE_MG42_Lafette_low_Deployed";
+                GVAR(LafetteTripod) = "SPE_MG42_Lafette_Deployed";
             };
         };
     };
@@ -118,15 +118,15 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                GVAR(Lafette_Tripod_Low) = "SPE_MG34_Lafette_low_Deployed";
-                GVAR(Lafette_Tripod) = "SPE_MG34_Lafette_Deployed";
+                GVAR(LafetteTripodLow) = "SPE_MG34_Lafette_low_Deployed";
+                GVAR(LafetteTripod) = "SPE_MG34_Lafette_Deployed";
             };
         };
     };
 
     // --- Mortars -----------------------------------------------------------------
     class SPE_M1_81;
-    class SPE_M1_81_proxy: SPE_M1_81 {
+    class GVAR(M1_proxy): SPE_M1_81 {
         magazineReloadTime = 0.5;
     };
 
@@ -135,7 +135,7 @@ class CfgWeapons {
             type = "mount";
             deployTime = 4;
             pickupTime = 4;
-            deploy = QGVAR(M1_81_baseplate);
+            deploy = QGVAR(m1Baseplate);
         };
     };
     class SPE_M1_81_Barrel: SPE_Slung_Static_Weapon_Base {
@@ -144,14 +144,14 @@ class CfgWeapons {
             deployTime = 4;
             pickupTime = 4;
             class assembleTo {
-                GVAR(M1_81_baseplate) = "SPE_M1_81";
+                GVAR(m1Baseplate) = "SPE_M1_81";
                 EGVAR(csw,mortarBaseplate) = "SPE_M1_81";
             };
         };
     };
 
     class SPE_MLE_27_31;
-    class SPE_MLE_27_31_proxy: SPE_MLE_27_31 {
+    class GVAR(MLE_27_31_proxy): SPE_MLE_27_31 {
         magazineReloadTime = 0.5;
     };
 
@@ -176,7 +176,7 @@ class CfgWeapons {
     };
 
     class SPE_GrW278_1;
-    class SPE_GrW278_1_proxy: SPE_GrW278_1 {
+    class GVAR(GrW278_1_proxy): SPE_GrW278_1 {
         magazineReloadTime = 0.5;
     };
 
