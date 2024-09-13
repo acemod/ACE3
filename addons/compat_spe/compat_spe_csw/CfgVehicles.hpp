@@ -27,8 +27,8 @@ class CfgVehicles {
             magazineLocation = "";
             disassembleWeapon = "SPE_M2_50";
             disassembleTurret = QGVAR(m3Tripod);
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 10;
+            ammoUnloadTime = 8;
             desiredAmmo = 100;
         };
     };
@@ -47,8 +47,8 @@ class CfgVehicles {
             magazineLocation = "_target selectionPosition ['magazine', 'FireGeometry', 'AveragePoint']";
             disassembleWeapon = "SPE_M1919A4";
             disassembleTurret = QGVAR(m2Tripod);
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 8;
+            ammoUnloadTime = 6;
             desiredAmmo = 100;
         };
     };
@@ -80,8 +80,8 @@ class CfgVehicles {
             magazineLocation = "";
             disassembleWeapon = "SPE_MG42";
             disassembleTurret = QGVAR(LafetteTripod);
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
             desiredAmmo = 100;
         };
     };
@@ -92,8 +92,8 @@ class CfgVehicles {
             magazineLocation = "";
             disassembleWeapon = "SPE_MG34";
             disassembleTurret = QGVAR(LafetteTripod);
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
             desiredAmmo = 100;
         };
     };
@@ -106,8 +106,8 @@ class CfgVehicles {
             magazineLocation = "";
             disassembleWeapon = "SPE_MG42";
             disassembleTurret = QGVAR(LafetteTripodLow);
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
             desiredAmmo = 100;
         };
     };
@@ -125,8 +125,8 @@ class CfgVehicles {
             magazineLocation = "";
             disassembleWeapon = "SPE_MG34";
             disassembleTurret = QGVAR(LafetteTripodLow);
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
             desiredAmmo = 100;
         };
     };
@@ -146,8 +146,8 @@ class CfgVehicles {
             magazineLocation = "";
             disassembleWeapon = "";
             disassembleTurret = "";
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 8;
+            ammoUnloadTime = 6;
             desiredAmmo = 100;
         };
     };
@@ -160,8 +160,8 @@ class CfgVehicles {
             magazineLocation = "";
             disassembleWeapon = "";
             disassembleTurret = "";
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
             desiredAmmo = 100;
         };
     };
@@ -172,8 +172,8 @@ class CfgVehicles {
             magazineLocation = "";
             disassembleWeapon = "";
             disassembleTurret = "";
-            ammoLoadTime = 3;
-            ammoUnloadTime = 3;
+            ammoLoadTime = 7;
+            ammoUnloadTime = 5;
             desiredAmmo = 100;
         };
     };

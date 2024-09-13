@@ -141,8 +141,8 @@ class CfgWeapons {
     class SPE_M1_81_Barrel: SPE_Slung_Static_Weapon_Base {
         class ace_csw {
             type = "weapon";
-            deployTime = 4;
-            pickupTime = 4;
+            deployTime = 20;
+            pickupTime = 25;
             class assembleTo {
                 GVAR(m1Baseplate) = "SPE_M1_81";
                 EGVAR(csw,mortarBaseplate) = "SPE_M1_81";
