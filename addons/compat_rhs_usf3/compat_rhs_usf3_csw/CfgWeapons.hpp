@@ -11,7 +11,7 @@ class CfgWeapons {
 
     class GVAR(m252_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 20;
             pickupTime = 25;
@@ -37,7 +37,7 @@ class CfgWeapons {
 
     class GVAR(m2_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 4;
             pickupTime = 4;
@@ -62,7 +62,7 @@ class CfgWeapons {
 
     class GVAR(mk19_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 4;
             pickupTime = 4;
@@ -86,7 +86,7 @@ class CfgWeapons {
 
     class GVAR(tow_carry): Launcher_Base_F {
         dlc = "ace";
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 4;
             pickupTime = 4;
