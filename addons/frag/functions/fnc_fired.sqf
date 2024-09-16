@@ -48,13 +48,11 @@ private _hitPartEventHandler = _projectile addEventHandler ["HitPart", {
         * multiple hits / slowdowns getting shunted to the first hit
     */
     [{
-        private _shotParents = _this#5;
-
         // only let a unit make a spall once per ACE_FRAG_SPALL_UNIT_HOLDOFF
-        if (CBA_missionTime < _shotParents#1 getVariable [QGVAR(nextSpallEvent), -1]) exitWith {};
+        if (CBA_missionTime < (_this#5) getVariable [QGVAR(nextSpallEvent), -1]) exitWith {};
 
         _this call FUNC(doSpall);
-    }, [_hitObject, _ammo, _projectile, _posASL, _velocity, [objNull, _instigator]]] call CBA_fnc_execNextFrame;
+    }, [_hitObject, _ammo, _projectile, _posASL, _velocity, _instigator]] call CBA_fnc_execNextFrame;
 }];
 _projectile setVariable [QGVAR(hitPartEventHandler), _hitPartEventHandler];
 

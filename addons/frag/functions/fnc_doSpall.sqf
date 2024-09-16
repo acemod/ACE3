@@ -9,7 +9,7 @@
  * 2: The projectile that should cause spalling <OBJECT>
  * 3: The position (ASL) the projectile hit the object <ARRAY>
  * 4: The old velocity of the projectile <ARRAY>
- * 5: The projectile's shotParents <ARRAY>
+ * 5: The projectile's instigator, or the second argument of a projectile's shotParents <OBJECT>
  *
  * Return Value:
  * None
@@ -20,9 +20,9 @@
  * Public: No
  */
 #define WEIGHTED_SIZE [QGVAR(spall_small), 4, QGVAR(spall_medium), 3, QGVAR(spall_large), 2, QGVAR(spall_huge), 1]
-params ["_objectHit", "_roundType", "_round", "_oldPosASL", "_oldVelocity", "_shotParents"];
+params ["_objectHit", "_roundType", "_round", "_oldPosASL", "_oldVelocity", "_instigator"];
 
-TRACE_6("",_objectHit,_roundType,_round,_oldPosASL,_oldVelocity,_shotParents);
+TRACE_6("",_objectHit,_roundType,_round,_oldPosASL,_oldVelocity,_instigator);
 if ((isNil "_objectHit") || {isNull _objectHit}) exitWith {
     TRACE_1("Problem with hitPart data - bad object [%1]",_objectHit);
 };
@@ -68,7 +68,7 @@ if (_spallPosAGL isEqualTo _pos1) exitWith {
 };
 _spallPosAGL = ASLToAGL _spallPosAGL;
 
-(_shotParents#1) setVariable [QGVAR(nextSpallEvent), CBA_missionTime + ACE_FRAG_SPALL_UNIT_HOLDOFF];
+_instigator setVariable [QGVAR(nextSpallEvent), CBA_missionTime + ACE_FRAG_SPALL_UNIT_HOLDOFF];
 private _oldVelocitySpherical = _oldVelocity call CBA_fnc_vect2polar;
 
 if (_explosive > 0) then {
@@ -93,7 +93,6 @@ for "_i" from 1 to _spallCount do {
     private _spallFragVect = [_fragmentSpeed, _fragmentAzimuth, _fragmentElevation] call CBA_fnc_polar2vect;
     private _fragment = createVehicleLocal [selectRandomWeighted WEIGHTED_SIZE, _spallPosAGL, [], 0, "CAN_COLLIDE"];
     _fragment setVelocity _spallFragVect;
-    _fragment setShotParents _shotParents;
 
     #ifdef DEBUG_MODE_DRAW
     [_fragment, "orange", true] call FUNC(dev_trackObj);
@@ -115,7 +114,6 @@ for "_i" from 1 to _spallCount do {
     private _spallFragVect = [_fragmentSpeed, _fragmentAzimuth, _fragmentElevation] call CBA_fnc_polar2vect;
     private _fragment = createVehicleLocal [selectRandomWeighted WEIGHTED_SIZE, _spallPosAGL, [], 0, "CAN_COLLIDE"];
     _fragment setVelocity _spallFragVect;
-    _fragment setShotParents _shotParents;
 
     #ifdef DEBUG_MODE_DRAW
     [_fragment, "purple", true] call FUNC(dev_trackObj);
