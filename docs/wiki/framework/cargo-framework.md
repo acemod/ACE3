@@ -122,7 +122,7 @@ object setVariable ["ace_cargo_delay", <TIME IN SECONDS>]
 
 This will override the load/unload time calculation and instead set it to the value as specified. This value will _not_ be affected by any scaling coefficients, but will instead always take as long as the set delay.
 
-To disable, use `object setVariable ["ace_cargo_delay", -1]`.
+To disable, remove the variable with `object setVariable ["ace_cargo_delay", nil]` or set the delay to a negative value, e.g.: `object setVariable ["ace_cargo_delay", -1]`.
 
 ### 4.4 Adjusting cargo space of a vehicle
 
