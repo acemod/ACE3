@@ -101,6 +101,6 @@ if (_rotorWash select 1 > 0) then {
         GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [_scale, _scale, _scale, _scale], [1, 1, 1, 0]];
         GVAR(PostProcessEyes) ppEffectCommit 0.5;
         GVAR(PostProcessEyes) ppEffectEnable true;
-        [QGVAR(effect), [_unit, "rotorWash", _unit call FUNC(isGogglesVisible)]] call CBA_fnc_localEvent;
+        [QGVAR(effect), [_unit, "rotorWash"]] call CBA_fnc_localEvent;
     };
 };
