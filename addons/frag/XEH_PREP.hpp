@@ -9,7 +9,7 @@ PREP(dev_trackObj);
 PREP(doExplosions);
 PREP(doReflections);
 PREP(doSpallHitPart);
-PREP(doSpallHitPenetrate);
+PREP(doSpallPenetrate);
 PREP(findReflections);
 PREP(fired);
 PREP(frago);
