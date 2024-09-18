@@ -123,8 +123,24 @@
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>Frag/Spall Debug Tracing</English>
             <German>Splitter-/Explosions-Debug-Verfolgung</German>
+            <English>Frag/Spall Debug Tracing</English>
+            <German>Splitter-/Explosions-Debug-Verfolgung</German>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
+            <English>Enables visual tracing of fragmentation and spalling rounds.</English>
+            <German>Splitter-/Explosions-Debugging</German>
+        </Key>
+        <Key ID="STR_ACE_Frag_HitSphereEnable">
+            <English>Draw Event Spheres</English>
+        </Key>
+        <Key ID="STR_ACE_Frag_HitSphereEnable_Desc">
+            <English>Draw color coded spheres at any event for tracked rounds.</English>
+        </Key>
+        <Key ID="STR_ACE_Frag_DrawHitBox">
+            <English>Draw Hitboxes</English>
+        </Key>
+        <Key ID="STR_ACE_Frag_DrawHitBox_Desc">
+            <English>Draw hitboxes on objects that were targeted.</English>
             <English>Enables visual tracing of fragmentation and spalling rounds.</English>
             <German>Splitter-/Explosions-Debugging</German>
         </Key>

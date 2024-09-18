@@ -3,13 +3,16 @@
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define LOG_FRAG_INFO
+// #define LOG_FRAG_INFO
 // #define DEBUG_MODE_FULL
+// #define DEBUG_MODE_DRAW
 // #define DEBUG_MODE_DRAW
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
 #ifdef DEBUG_ENABLED_FRAG
     #define DEBUG_MODE_FULL
+    #define DEBUG_MODE_DRAW
     #define DEBUG_MODE_DRAW
 #endif
 
@@ -30,6 +33,14 @@
 #define ACE_FRAG_COUNT_MAX_TIME 1.5
 #define ACE_FRAG_COUNT_MAX 50
 #define ACE_FRAG_IMPERIC_VELOCITY_CONSTANT 0.8
+
+#define ACE_FRAG_DEFAULT_FRAG_TYPES [\
+    QGVAR(tiny), QGVAR(tiny), QGVAR(tiny),\
+    QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(tiny_HD),\
+    QGVAR(small), QGVAR(small), QGVAR(small), QGVAR(small),\
+    QGVAR(small_HD), QGVAR(small_HD), QGVAR(small_HD), QGVAR(small_HD),\
+    QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD)\
+]
 
 // Spall values
 #define ACE_FRAG_SPALL_HOLDOFF 0.2

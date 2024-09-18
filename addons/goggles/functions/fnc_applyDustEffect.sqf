@@ -68,6 +68,7 @@ GVAR(DustHandler) = [{
 
             GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [1, 1, 1, 0]];
             GVAR(PostProcessEyes) ppEffectCommit 2;
+            [QGVAR(effect), [_unit, "dust"]] call CBA_fnc_localEvent;
 
             [{
                 if (GVAR(DustHandler) == -1) then {

@@ -5,6 +5,7 @@ PREP(canUnloadItem);
 PREP(deployCancel);
 PREP(deployConfirm);
 PREP(getCargoSpaceLeft);
+PREP(getDelayItem);
 PREP(getNameItem);
 PREP(getSelectedItem);
 PREP(getSizeItem);

@@ -26,7 +26,7 @@ TRACE_1("doSpallHitPart",_this);
 if (CBA_missionTime < GVAR(nextSpallAllowTime)) exitWith {
     TRACE_2("timeExit",CBA_missionTime,GVAR(nextSpallAllowTime));
 };
-params ["_projectile", "_objectHit", "_lastPosASL", "_lastVelocity", "_surfaceNorm", "_surfaceType", "_ammo", "_shotParents", "_vectorUp"];
+params ["_projectile", "_objectHit", "_lastPosASL", "_lastVelocity", "_surfaceNorm", "_surfaceType", "_ammo", "_vectorUp"];
 
 // Find spall speed / fragment info
 _ammo call FUNC(getSpallInfo) params ["_caliber", "_explosive", "_indirectHit"];
@@ -115,9 +115,8 @@ private _spallSpawner = createVehicleLocal [
     0,
     "CAN_COLLIDE"
 ];
-_spallSpawner setVectorDirandUp [_lastVelocityNorm, _vectorUp];
+_spallSpawner setVectorDirAndUp [_lastVelocityNorm, _vectorUp];
 _spallSpawner setVelocityModelSpace [0, _speedChange * ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF, 0];
-_spallSpawner setShotParents _shotParents;
 
 TRACE_3("createSpallSpawner",speed _spallSpawner,_material + _spawnSize,_spallPower);
 #ifdef DEBUG_MODE_DRAW

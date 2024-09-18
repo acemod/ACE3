@@ -82,9 +82,8 @@ private _spallSpawner = createVehicleLocal [
     0,
     "CAN_COLLIDE"
 ];
-_spallSpawner setVectorDirandUp [_spallDirection, _spallVectorUp];
+_spallSpawner setVectorDirAndUp [_spallDirection, _spallVectorUp];
 _spallSpawner setVelocityModelSpace [0, _speedChange * ACE_FRAG_SPALL_VELOCITY_INHERIT_COEFF, 0];
-_spallSpawner setShotParents getShotParents _projectile;
 TRACE_4("dir&up",_spallDirection,vectorDir _spallSpawner,_spallVectorUp,vectorUp _spallSpawner);
 
 TRACE_3("createSpallSpawner",speed _spallSpawner,_material + _spawnSize,_spallPower);

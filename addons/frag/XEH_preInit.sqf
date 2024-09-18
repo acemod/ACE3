@@ -34,4 +34,21 @@ if (isServer) then {
     [QGVAR(frag_eh), LINKFUNC(frago)] call CBA_fnc_addEventHandler;
 };
 
+GVAR(dev_trackLines) = createHashMap;
+GVAR(dev_hitBoxes) = createHashMap;
+GVAR(dev_eventSpheres) = [];
+GVAR(dev_drawPFEH) = -1;
+
+#ifdef DEBUG_MODE_DRAW
+#include "initSettingsDebug.inc.sqf"
+#else
+GVAR(debugOptions) = false;
+GVAR(dbgSphere) = false;
+GVAR(drawHitBox) = false;
+#endif
+
+if (isServer) then {
+    [QGVAR(frag_eh), LINKFUNC(frago)] call CBA_fnc_addEventHandler;
+};
+
 ADDON = true;

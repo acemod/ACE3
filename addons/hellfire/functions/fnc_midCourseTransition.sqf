@@ -15,6 +15,7 @@
  * Public: No
  */
 
+params ["_args", "_timestep"];
 _args params ["_firedEH", "_launchParams", "_flightParams", "_seekerParams", "_stateParams", "_targetData", "_navigationStateData"];
 _firedEH params ["_shooter","","","","_ammo","","_projectile"];
 _launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo","_navigationType"];

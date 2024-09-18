@@ -54,7 +54,7 @@ if ((_pitchRate != 0 || {_yawRate != 0})) then {
     private _navigationFunction = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "functionName");
     if (_navigationStateData isNotEqualTo []) then {
         (_navigationStateData select _currentState) params ["_transitionCondition"];
-        private _transition = (_args call (missionNamespace getVariable [_transitionCondition, { false }]));
+        private _transition = ([_args, _timestep] call (missionNamespace getVariable [_transitionCondition, { false }]));
         if (_transition) then {
             _currentState = _currentState + 1;
             _navigationStateParams set [0, _currentState];

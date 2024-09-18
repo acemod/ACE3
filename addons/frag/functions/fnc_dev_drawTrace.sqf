@@ -23,7 +23,7 @@ if (!GVAR(debugOptions)) exitWith {};
     _y params ["_posArray", "_color"];
     if (count _posArray > 1) then {
         for "_j" from 1 to count _posArray - 1 do {
-            drawLine3D [_posArray#(_j-1), _posArray#_j, _color];
+            drawLine3D [_posArray#(_j - 1), _posArray#_j, _color];
         };
     };
 } forEach GVAR(dev_trackLines);
@@ -37,8 +37,8 @@ if (GVAR(drawHitBox)) then {
         };
 
         {
-            for "_i" from 1 to count _x -1 do {
-                drawLine3D [_object modelToWorld (_boxPoints#(_x#_i)), _object modelToWorld (_boxPoints#(_x#(_i-1))), _color];
+            for "_i" from 1 to count _x - 1 do {
+                drawLine3D [_object modelToWorld (_boxPoints#(_x#_i)), _object modelToWorld (_boxPoints#(_x#(_i - 1))), _color];
             };
         } forEach HITBOX_DRAW_PATH;
     } forEach GVAR(dev_hitBoxes);
