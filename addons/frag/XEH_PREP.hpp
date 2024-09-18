@@ -14,5 +14,6 @@ PREP(fired);
 PREP(frago);
 PREP(getFragInfo);
 PREP(getSpallInfo);
+PREP(setClassBlacklisted);
 PREP(shouldFrag);
 PREP(shouldSpall);
