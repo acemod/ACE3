@@ -1,5 +1,4 @@
 PREP(addBlackList);
-PREP(addClassBlacklist);
 PREP(dev_clearTraces);
 PREP(dev_debugAmmo);
 PREP(dev_drawTrace);
@@ -15,5 +14,6 @@ PREP(fired);
 PREP(frago);
 PREP(getFragInfo);
 PREP(getSpallInfo);
+PREP(setClassBlacklisted);
 PREP(shouldFrag);
 PREP(shouldSpall);

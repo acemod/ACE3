@@ -15,7 +15,7 @@
  *
  * Example:
  * // Stop "ACE_20mm_HE" from producing spall
- * ["ACE_20mm_HE", false, true] call ace_frag_fnc_addClassBlackList;
+ * ["ACE_20mm_HE", false, true] call ace_frag_fnc_setClassBlacklisted;
  *
  * Public: Yes
  */
