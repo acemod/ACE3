@@ -167,7 +167,20 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_headless_groupTransferPre` | [_group, _HC (OBJECT), _previousOwner, _idHC] | Target | Listen | Called just before a group is transferred from any machine to a HC. Called where group currently is local and on the HC, where group is going to be local.
 | `ace_headless_groupTransferPost` | [_group, _HC (OBJECT), _previousOwner, _idHC, _transferredSuccessfully] | Target | Listen | Called just after a group is transferred from a machine to a HC. Called where group was local and on the HC, where group is now local. `_transferredSuccessfully` is passed so mods can actually check if the locality was properly transferred, as ownership transfer is not guaranteed.
 
-### 2.18 HuntIR (`ace_huntir`)
+### 2.18 Dragging (`ace_dragging`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_dragging_cloneCreated` | [_clone, _corpse] | Local | Listen | Called when a clone used for dragging/carrying corpses is created
+| `ace_dragging_cloneDeleted` | [_clone, _corpse] | Local | Listen | Called when a clone used for dragging/carrying corpses is deleted
+| `ace_dragging_setupCarry` | [_unit, _target] | Local | Listen | Called when the unit starts the carrying animation for the target
+| `ace_dragging_startedCarry` | [_unit, _target] | Local | Listen | Called when the unit starts successfully carrying the target. This event is called after `ace_dragging_setupCarry`.
+| `ace_dragging_stoppedCarry` | [_unit, _target, _loadCargo] | Local | Listen | Called when the unit stops carrying the target. `_loadCargo` says if the target is being loaded as cargo/person or not.
+| `ace_dragging_setupDrag` | [_unit, _target] | Local | Listen | Called when the unit starts the dragging animation for the target
+| `ace_dragging_startedDrag` | [_unit, _target] | Local | Listen | Called when the unit starts successfully dragging the target. This event is called after `ace_dragging_setupDrag`.
+| `ace_dragging_stoppedDrag` | [_unit, _target] | Local | Listen | Called when the unit stops dragging the target
+
+### 2.19 HuntIR (`ace_huntir`)
 
 | Event Key | Parameters | Locality | Type | Description |
 |---------- |------------|----------|------|-------------|

@@ -204,7 +204,7 @@ class SmokeShell: GrenadeHand {
 class G_40mm_HE: GrenadeBase {
     // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M441
     GVAR(skip) = 0;
-    GVAR(force) = 0;
+    GVAR(force) = 1;
     GVAR(classes)[] = {QGVAR(small), QGVAR(tiny), QGVAR(small)};
     GVAR(metal) = 200;
     GVAR(charge) = 32;
@@ -212,7 +212,6 @@ class G_40mm_HE: GrenadeBase {
     GVAR(gurney_k) = "3/5"; // interior fragmenter/charge is a sphere
 };
 class G_20mm_HE: G_40mm_HE {
-    GVAR(skip) = 1;
     GVAR(classes)[] = {QGVAR(tiny)};
     GVAR(metal) = 50;
     GVAR(charge) = 8;
@@ -251,7 +250,7 @@ class APERSMine_Range_Ammo: MineBase { // VS-50
     GVAR(gurney_k) = "1/3";
 };
 
-class APERSBoundingMine_Range_Ammo: MineBase {
+class APERSBoundingMine_Range_Ammo: BoundingMineBase {
     GVAR(skip) = 1;
     GVAR(force) = 0;
     GVAR(classes)[] = {QGVAR(tiny)};
@@ -434,7 +433,7 @@ class R_60mm_HE: R_80mm_HE { // no idea but looks like a FFAR so made it weaker
     GVAR(charge) = 3850;
 };
 
-class m_70mm_saami: RocketBase {///!!! fix me
+class m_70mm_saami: MissileBase {
     GVAR(skip) = 0;
     GVAR(charge) = 2150;
     GVAR(metal) = 1650;
@@ -464,7 +463,7 @@ class ammo_Missile_CannonLaunchedBase: MissileBase {
     GVAR(skip) = 1;
 };
 
-class R_230mm_fly: RocketBase {
+class R_230mm_fly: ShellBase {
     GVAR(skip) = 0;
     GVAR(charge) = 100; // kg
     GVAR(metal) = 150; // kg
@@ -657,10 +656,6 @@ class ammo_Missile_AA_R77: ammo_Missile_MediumRangeAABase {
     GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(large), QGVAR(large)};
 };
 
-class ammo_Missile_LongRangeAABase: MissileBase {
-    GVAR(skip) = 1;
-};
-
 class M_Vorona_HEAT: MissileBase {
     // tandem shaped charges
     GVAR(skip) = 1;
@@ -675,7 +670,7 @@ class M_Vorona_HE: M_Vorona_HEAT {
     GVAR(classes)[] = {QGVAR(tiny)};
 };
 
-class M_127mm_Firefist_AT: RocketBase { // HOT missile
+class M_127mm_Firefist_AT: MissileBase { // HOT missile
     GVAR(skip) = 1;
 };
 
@@ -690,7 +685,7 @@ class Sh_75mm_Railgun_APFSDS: ShellBase {
 class Sh_120mm_APFSDS: ShellBase {
     GVAR(skip) = 1;
 };
-class Sh_125mm_APFSDS: ShellBase {
+class Sh_125mm_APFSDS: Sh_120mm_APFSDS {
     GVAR(skip) = 1;
 };
 
@@ -734,15 +729,16 @@ class ammo_ShipCannon_120mm_HE: Sh_155mm_AMOS {
     GVAR(classes)[] = {QGVAR(small), QGVAR(small), QGVAR(medium), QGVAR(large)};
 };
 
-class Sh_125mm_HEAT: Sh_120mm_HE {
-    GVAR(skip) = 1;
-    GVAR(metal) = 16760;
-    GVAR(charge) = 1640;
-    GVAR(gurney_c) = 2901;
-};
 class Sh_125mm_HE: Sh_120mm_HE {
     GVAR(metal) = 19900;
     GVAR(charge) = 3400;
+    GVAR(gurney_c) = 2901;
+};
+
+class Sh_125mm_HEAT: Sh_125mm_HE {
+    GVAR(skip) = 1;
+    GVAR(metal) = 16760;
+    GVAR(charge) = 1640;
     GVAR(gurney_c) = 2901;
 };
 

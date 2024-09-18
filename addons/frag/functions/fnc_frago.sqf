@@ -17,7 +17,7 @@
  * Public: No
  */
 
-#define FRAG_VEC_VAR 0.004
+#define FRAG_VEC_VAR 0.008
 
 BEGIN_COUNTER(frago);
 
@@ -29,7 +29,8 @@ private _maxFrags = round linearConversion [
     ACE_FRAG_COUNT_MIN_TIME,
     ACE_FRAG_COUNT_MAX_TIME,
     (CBA_missionTime - GVAR(lastFragTime)),
-    ACE_FRAG_COUNT_MIN, ACE_FRAG_COUNT_MAX,
+    ACE_FRAG_COUNT_MIN,
+    ACE_FRAG_COUNT_MAX,
     true
 ];
 TRACE_2("",_maxFrags,CBA_missionTime - GVAR(lastFragTime));
@@ -99,12 +100,12 @@ if (_targets isNotEqualTo []) then {
                         _count = 0 max (_count / 2);
                     };
                 };
-
+                private _vecVarHalf = _vecVar / 2;
                 for "_i" from 1 to _count do {
                     private _vectorDir = _baseVec vectorDiff [
-                    (_vecVar / 2) - (random _vecVar),
-                    (_vecVar / 2) - (random _vecVar),
-                    (_vecVar / 2) - (random _vecVar)
+                        _vecVarHalf - (random _vecVar),
+                        _vecVarHalf - (random _vecVar),
+                        _vecVarHalf - (random _vecVar)
                     ];
 
                     private _fragObjSpeed = _fragVelocity * (1 - random 0.5);

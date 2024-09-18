@@ -44,3 +44,4 @@ jobs:
       with:
         name: ace3-${{ github.sha }}
         path: .hemttout/@*
+        include-hidden-files: true # Because .hemttout is a hidden directory

@@ -57,7 +57,7 @@ if (GVAR(currentApplicationPage) == APP_MODE_INFODISPLAY) then {
 (_display displayCtrl IDC_MAPDETAILS) ctrlShow ((GVAR(currentApplicationPage) == APP_MODE_MAP) && {GVAR(mapShowTexture)});
 
 if (GVAR(currentApplicationPage) == APP_MODE_MAP) then {
-    _theMap = if (!GVAR(mapShowTexture)) then {_display displayCtrl IDC_MAPPLAIN} else {_display displayCtrl IDC_MAPDETAILS};
+    _theMap = if (GVAR(mapShowTexture)) then {_display displayCtrl IDC_MAPDETAILS} else {_display displayCtrl IDC_MAPPLAIN};
     _mapSize = (ctrlPosition _theMap) select 3;
     _theMap ctrlMapAnimAdd [0, (GVAR(mapZoom) / _mapSize), GVAR(mapPosition)];
     ctrlMapAnimCommit _theMap;

@@ -9,29 +9,25 @@
  * 2: The projectile that should cause spalling <OBJECT>
  * 3: The position (ASL) the projectile hit the object <ARRAY>
  * 4: The old velocity of the projectile <ARRAY>
- * 5: The projectile's shotParents <ARRAY>
+ * 5: The projectile's instigator, or the second argument of a projectile's shotParents <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[1000, 45, 60], 0.8, getPosASL ace_player] call ace_frag_fnc_doSpall
+ * [editorPlacedHouse_0, typeOf _projectile, _projectile, [1000, 40, 60], [0, 1000, 0], [objNull, ace_player]] call ace_frag_fnc_doSpall
  *
  * Public: No
  */
 #define WEIGHTED_SIZE [QGVAR(spall_small), 4, QGVAR(spall_medium), 3, QGVAR(spall_large), 2, QGVAR(spall_huge), 1]
-params ["_objectHit", "_roundType", "_round", "_oldPosASL", "_oldVelocity", "_shotParents"];
+params ["_objectHit", "_roundType", "_round", "_oldPosASL", "_oldVelocity", "_instigator"];
 
-TRACE_6("",_objectHit,_roundType,_round,_oldPosASL,_oldVelocity,_shotParents);
+TRACE_6("",_objectHit,_roundType,_round,_oldPosASL,_oldVelocity,_instigator);
 if ((isNil "_objectHit") || {isNull _objectHit}) exitWith {
-    WARNING_1("Problem with hitPart data - bad object [%1]",_objectHit);
+    TRACE_1("Problem with hitPart data - bad object [%1]",_objectHit);
 };
 
-private _caliber = getNumber (configFile >> "CfgAmmo" >> _roundType >> "caliber");
-private _explosive = getNumber (configFile >> "CfgAmmo" >> _roundType >> "explosive");
-private _idh = getNumber (configFile >> "CfgAmmo" >> _roundType >> "indirectHitRange");
-
-_roundType call FUNC(getSpallInfo) params ["_caliber", "_explosive"];
+_roundType call FUNC(getSpallInfo) params ["_caliber", "_explosive", "_idh"];
 
 private _exit = false;
 private _velocityModifier = 1;
@@ -72,7 +68,7 @@ if (_spallPosAGL isEqualTo _pos1) exitWith {
 };
 _spallPosAGL = ASLToAGL _spallPosAGL;
 
-(_shotParents#1) setVariable [QGVAR(nextSpallEvent), CBA_missionTime + ACE_FRAG_SPALL_UNIT_HOLDOFF];
+_instigator setVariable [QGVAR(nextSpallEvent), CBA_missionTime + ACE_FRAG_SPALL_UNIT_HOLDOFF];
 private _oldVelocitySpherical = _oldVelocity call CBA_fnc_vect2polar;
 
 if (_explosive > 0) then {
