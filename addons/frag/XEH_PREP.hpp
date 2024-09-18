@@ -14,6 +14,7 @@ PREP(findReflections);
 PREP(fired);
 PREP(frago);
 PREP(getFragInfo);
+PREP(getMaterialInfo);
 PREP(getSpallInfo);
 PREP(initMaterialCache);
 PREP(setClassBlacklisted);
