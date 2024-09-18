@@ -93,7 +93,6 @@ for "_i" from 1 to _spallCount do {
     private _spallFragVect = [_fragmentSpeed, _fragmentAzimuth, _fragmentElevation] call CBA_fnc_polar2vect;
     private _fragment = createVehicleLocal [selectRandomWeighted WEIGHTED_SIZE, _spallPosAGL, [], 0, "CAN_COLLIDE"];
     _fragment setVelocity _spallFragVect;
-    _fragment setShotParents _shotParents;
 
     #ifdef DEBUG_MODE_DRAW
     [_fragment, "orange", true] call FUNC(dev_trackObj);
@@ -115,7 +114,6 @@ for "_i" from 1 to _spallCount do {
     private _spallFragVect = [_fragmentSpeed, _fragmentAzimuth, _fragmentElevation] call CBA_fnc_polar2vect;
     private _fragment = createVehicleLocal [selectRandomWeighted WEIGHTED_SIZE, _spallPosAGL, [], 0, "CAN_COLLIDE"];
     _fragment setVelocity _spallFragVect;
-    _fragment setShotParents _shotParents;
 
     #ifdef DEBUG_MODE_DRAW
     [_fragment, "purple", true] call FUNC(dev_trackObj);
