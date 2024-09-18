@@ -21,7 +21,7 @@ TRACE_2("addBlackList",_projectile,typeOf projectile);
 
 if (isNull _projectile || {!isClass (configFile >> "CfgAmmo" >> (typeOf _projectile))}) exitWith {
     TRACE_1("Invalid projectile",_this);
-    false;
+    false
 };
 
 _projectile setVariable [QGVAR(blacklisted), true];
@@ -29,4 +29,4 @@ _projectile removeEventHandler [
     "HitPart",
     _projectile getVariable [QGVAR(hitPartEventHandler), -1]
 ];
-true;
+true
