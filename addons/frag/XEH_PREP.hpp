@@ -1,4 +1,5 @@
 PREP(addBlackList);
+PREP(addClassBlacklist);
 PREP(dev_clearTraces);
 PREP(dev_debugAmmo);
 PREP(dev_drawTrace);

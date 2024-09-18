@@ -29,8 +29,4 @@ _projectile removeEventHandler [
     "HitPart",
     _projectile getVariable [QGVAR(hitPartEventHandler), -1]
 ];
-_projectile removeEventHandler [
-    "Explode",
-    _projectile getVariable [QGVAR(explodeEventHandler), -1]
-];
 true;
