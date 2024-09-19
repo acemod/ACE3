@@ -10,7 +10,7 @@ class CfgAmmo {
     class GVAR(base): B_65x39_Caseless {
         ACE_damageType = "grenade"; // compatibility with medical_damage, shrapnel should produce grenade wounds
         timeToLive = 4;
-        typicalSpeed = 800;
+        typicalSpeed = 1500;
         maxSpeed = 1200;
         deflecting = 65;
         GVAR(skip) = 1;
