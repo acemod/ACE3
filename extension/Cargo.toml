@@ -8,7 +8,7 @@ name = "ace"
 crate-type = ["cdylib"]
 
 [dependencies]
-arma-rs = { version = "1.11.0", default-features = false, features = ["extension", "uuid"]}
+arma-rs = { version = "1.11.10", default-features = false, features = ["extension", "uuid"]}
 uuid = { version = "1.10.0", features = ["v4"] }
 rand = "0.8.5"
 rand_chacha = "0.3.1"
