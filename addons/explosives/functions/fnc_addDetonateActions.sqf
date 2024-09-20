@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Opens the UI for explosive detonation selection
@@ -19,16 +19,16 @@
 params ["_unit", "_detonator"];
 TRACE_2("params",_unit,_detonator);
 
-private _range = getNumber (ConfigFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
+private _range = getNumber (configFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
 
 private _result = [_unit] call FUNC(getPlacedExplosives);
 private _children = [];
 private _explosivesList = [];
 {
     if (!isNull(_x select 0)) then {
-        private _required = getArray (ConfigFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
+        private _required = getArray (configFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
         if (_detonator in _required) then {
-            private _item = ConfigFile >> "CfgMagazines" >> (_x select 3);
+            private _item = configFile >> "CfgMagazines" >> (_x select 3);
 
             _explosivesList pushBack _x;
 
@@ -49,37 +49,49 @@ private _explosivesList = [];
         };
     };
 } forEach _result;
-if (_detonator != "ACE_DeadManSwitch") then {
-    // Add action to detonate all explosives tied to the detonator
-    if (count _explosivesList > 0) then {
-        _children pushBack [
+
+// If the detonator is not active, is a clacker and has assigned explosives, generate an interaction to make it the active detonator for use with the "trigger all" keybind
+if (
+    _detonator != GVAR(activeTrigger) &&
+    {_detonator != "Cellphone"} &&
+    {
+        _explosivesList isNotEqualTo [] ||
+        {_detonator == "ACE_DeadManSwitch" && {_unit getVariable [QGVAR(deadmanInvExplosive), ""] != ""}}
+    }
+) then {
+    _children pushBack [
         [
-            "Explosive_All",
-            localize LSTRING(DetonateAll),
-            getText(ConfigFile >> "CfgWeapons" >> _detonator >> "picture"),
-            {(_this select 2) call FUNC(detonateExplosiveAll);},
+            QGVAR(setActiveTrigger),
+            LLSTRING(SetActiveTrigger),
+            "",
+            {GVAR(activeTrigger) = (_this select 2) select 0;},
             {true},
             {},
-            [_unit,_range,_explosivesList, _detonator]
+            [_detonator]
+        ] call EFUNC(interact_menu,createAction),
+        [],
+        _unit
+    ];
+};
+
+if (_detonator != "ACE_DeadManSwitch") then {
+    // Add action to detonate all explosives tied to the detonator
+    if (count _explosivesList > 1) then {
+        _children pushBack [
+            [
+                "Explosive_All",
+                LLSTRING(DetonateAll),
+                getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
+                {(_this select 2) call FUNC(detonateExplosiveAll);},
+                {true},
+                {},
+                [_unit, _range, _explosivesList, _detonator]
             ] call EFUNC(interact_menu,createAction),
             [],
             _unit
         ];
     };
 } else {
-    //Add action to detonate all explosives (including the inventory explosive):
-    _children pushBack [
-    [
-    "Explosive_All_Deadman",
-    localize LSTRING(DetonateAll),
-    getText(ConfigFile >> "CfgWeapons" >> _detonator >> "picture"),
-    {[_player] call FUNC(onIncapacitated)},
-    {true}
-    ] call EFUNC(interact_menu,createAction),
-    [],
-    _unit
-    ];
-
     //Adds actions for the explosives you can connect to the deadman switch.
     private _connectedInventoryExplosive = _unit getVariable [QGVAR(deadmanInvExplosive), ""];
     if ((_connectedInventoryExplosive != "") && {!(_connectedInventoryExplosive in (magazines _unit))}) then {
@@ -88,44 +100,55 @@ if (_detonator != "ACE_DeadManSwitch") then {
     };
 
     _connectedInventoryExplosive = _unit getVariable [QGVAR(deadmanInvExplosive), ""];
+
+    //Add action to detonate all explosives (including the inventory explosive):
+    if (_connectedInventoryExplosive != "" || {count _explosivesList > 1}) then {
+        _children pushBack [
+            [
+                "Explosive_All_Deadman",
+                LLSTRING(DetonateAll),
+                getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
+                {[_player] call FUNC(onIncapacitated)},
+                {true}
+            ] call EFUNC(interact_menu,createAction),
+            [],
+            _unit
+        ];
+    };
+
     if (_connectedInventoryExplosive != "") then {
-        //Add the disconect action
+        //Add the disconnect action
         private _magConfig = configFile >> "CfgMagazines" >> _connectedInventoryExplosive;
-        private _name = if ((getText (_magConfig >> "displayNameShort")) != "") then {
-            getText (_magConfig >> "displayNameShort")
-        } else {
-            getText(_magConfig >> "displayName")
-        };
+        private _name = getText (_magConfig >> "displayName");
         private _picture = getText (_magConfig >> "picture");
 
         _children pushBack [
-        ([
-        "Deadman_disconnect",
-        format ["%1 %2", localize "str_disp_disconnect", _name],
-        _picture,
-        {
-            params ["_player"];
-            TRACE_1("clear",_player);
-            _player setVariable [QGVAR(deadmanInvExplosive), "", true];
-        },
-        {true}
-        ] call EFUNC(interact_menu,createAction)), [], _unit];
+            ([
+                "Deadman_disconnect",
+                format ["%1 %2", localize "str_disp_disconnect", _name],
+                _picture,
+                {
+                    params ["_player"];
+                    TRACE_1("clear",_player);
+                    _player setVariable [QGVAR(deadmanInvExplosive), "", true];
+                },
+                {true}
+            ] call EFUNC(interact_menu,createAction)),
+            [],
+            _unit
+        ];
 
     } else {
         //Add all magazines that would work with the deadman switch
         private _procressedMags = [];
         {
             private _mag = _x;
-            if (!(_mag in _procressedMags)) then {
+            if !(_mag in _procressedMags) then {
                 _procressedMags pushBack _x;
                 private _magConfig = configFile >> "CfgMagazines" >> _mag;
                 private _supportedTriggers = getArray (_magConfig >> "ACE_Triggers" >> "SupportedTriggers");
                 if (({_x == "DeadmanSwitch"} count _supportedTriggers) == 1) then { //case insensitive search
-                    private _name = if ((getText (_magConfig >> "displayNameShort")) != "") then {
-                        getText (_magConfig >> "displayNameShort")
-                    } else {
-                        getText(_magConfig >> "displayName")
-                    };
+                    private _name = getText (_magConfig >> "displayName");
                     private _picture = getText (_magConfig >> "picture");
 
                     _children pushBack [

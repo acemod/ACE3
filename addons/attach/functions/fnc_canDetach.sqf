@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Check if a unit has an item attached and if it can remove that item.
@@ -32,7 +32,7 @@ private _inRange = false;
         _attachedList deleteAt _forEachIndex;
         _attachToVehicle setVariable [QGVAR(attached), _attachedList, true];
     };
-    if (((getPos _unit) distance2d (getPos _xObject)) < 4) exitWith {_inRange = true};
+    if (((getPos _unit) distance2D (getPos _xObject)) < 4) exitWith {_inRange = true};
 } forEach _attachedList;
 
 _inRange &&

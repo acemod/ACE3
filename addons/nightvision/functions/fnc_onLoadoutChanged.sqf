@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * Refreshes nvg effect if switching NVG goggles.

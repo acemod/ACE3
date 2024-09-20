@@ -148,8 +148,8 @@ class RscDisplayAttributes {
 };
 
 class GVAR(RscSetData): RscDisplayAttributes {
-    onLoad = QUOTE([ARR_3('onLoad', _this, QQGVAR(RscSetData))] call EFUNC(zeus,zeusAttributes));
-    onUnload = QUOTE([ARR_3('onUnload', _this, QQGVAR(RscSetData))] call EFUNC(zeus,zeusAttributes));
+    onLoad = QUOTE([ARR_3('onLoad',_this,QQGVAR(RscSetData))] call EFUNC(zeus,zeusAttributes));
+    onUnload = QUOTE([ARR_3('onUnload',_this,QQGVAR(RscSetData))] call EFUNC(zeus,zeusAttributes));
     class Controls: Controls {
         class Background: Background {};
         class Title: Title {};

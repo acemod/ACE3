@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Change the laser key code (both seeker and transmitter)
@@ -40,20 +40,37 @@ if (isNull (ACE_controlledUAV param [0, objNull])) then {
 };
 
 TRACE_2("",_currentShooter,_currentWeapon);
-if (((getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> "laser")) == 0) &&
-        {(getNumber (configFile >> "CfgWeapons" >> _currentWeapon >> QGVAR(canSelect))) == 0}) exitWith {false};
+private _currentWeaponCfg = configFile >> "CfgWeapons" >> _currentWeapon;
+if (
+    (getNumber (_currentWeaponCfg  >> "laser") == 0) && 
+    { 
+        !(_currentShooter getVariable [QGVAR(hasLaserSpotTracker), false])  && 
+        {(getNumber (_currentWeaponCfg >> QGVAR(canSelect))) == 0}
+    }
+) exitWith {false};
 
 private _oldLaserCode = _currentShooter getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
-private _newLaserCode = _oldLaserCode;
+private _newLaserCode = 0;
 
 // "Four-digit code equipment settings range from 1111 to 1788"
 // While there is a 0 or 9 in code, keep adding change
 
-if (((_codeChange < 0) && {_oldLaserCode > ACE_DEFAULT_LASER_CODE}) || {(_codeChange > 0) && {_oldLaserCode < 1788}}) then {
-    _newLaserCode = _oldLaserCode + _codeChange;
-    while {(((str _newLaserCode) find "0") >= 0) || {((str _newLaserCode) find "9") >= 0}} do {
-        _newLaserCode = _newLaserCode + _codeChange;
+_codeChange = floor((_codeChange max 0) min 2);
+private _placeValue = 10 ^ _codeChange;
+
+private _oldDigit = (floor(_oldLaserCode / _placeValue)) % 10;
+private _newDigit = _oldDigit + 1;
+private _limit = 8;
+if (_codeChange == 2) then {_limit = 7};
+
+if (_newDigit > _limit) then {_newDigit = 1};
+
+for "_i" from 0 to 3 step 1 do {
+    private _digit = floor(_oldLaserCode / (10 ^ _i)) mod 10;
+    if (_i == _codeChange) then {
+        _digit = _newDigit;
     };
+    _newLaserCode = _newLaserCode +  (_digit * 10 ^ _i);
 };
 
 TRACE_2("",_oldLaserCode,_newLaserCode);

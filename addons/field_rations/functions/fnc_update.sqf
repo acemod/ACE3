@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001, Glowbal, PabstMirror
  * Main looping function that updates thirst/hunger status.
@@ -25,7 +25,7 @@ private _player = ACE_player;
 
 // Exit if player is not alive or a virtual unit
 if (!alive _player || {_player isKindOf "VirtualMan_F"}) exitWith {
-    [FUNC(update), _nextMpSync, 1] call CBA_fnc_waitAndExecute;
+    [LINKFUNC(update), _nextMpSync, 1] call CBA_fnc_waitAndExecute;
     QGVAR(hud) cutFadeOut 0.5;
 };
 
@@ -73,4 +73,4 @@ if (!EGVAR(common,OldIsCamera) && {_thirst > XGVAR(hudShowLevel) || {_hunger > X
     QGVAR(hud) cutFadeOut 0.5;
 };
 
-[FUNC(update), _nextMpSync, 1] call CBA_fnc_waitAndExecute;
+[LINKFUNC(update), _nextMpSync, 1] call CBA_fnc_waitAndExecute;

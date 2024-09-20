@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, SilentSpike
+ * Author: Nelson Duarte, kymckay
  * Moves the spectator camera to a position relative to the camera focus.
  * Used for 3PP camera and teleporting, etc.
  *

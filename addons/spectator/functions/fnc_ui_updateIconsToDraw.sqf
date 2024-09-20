@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, AACO, SilentSpike
+ * Author: Nelson Duarte, AACO, kymckay
  * Function used update the things to 3D draw
  *
  * Arguments:
@@ -89,7 +89,7 @@ private _camPos = AGLToASL positionCameraToWorld [0,0,0];
                     0,
                     _heightByDistance,
                     0,
-                    groupID _group,
+                    groupId _group,
                     2,
                     _fontSizeByDistance,
                     "PuristaMedium",

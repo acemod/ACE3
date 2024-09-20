@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Recalculates the muzzle velocity based on the muzzle velocity vs. temperature interpolation input

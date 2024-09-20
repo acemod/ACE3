@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: bovine3dom
  * Determines whether one string matches another and how many characters match. Case insensitive.

@@ -141,6 +141,19 @@ class GVAR(actions) {
         litter[] = {{"ACE_MedicalLitter_epinephrine"}};
     };
 
+    // - Generic Medication ---------------------------------------------------
+    class Painkillers: Morphine {
+        displayName = CSTRING(Administer_Painkillers);
+        displayNameProgress = CSTRING(Administering_Painkillers);
+        icon = QPATHTOEF(medical_gui,ui\painkillers.paa);
+        allowedSelections[] = {"Head"};
+        medicRequired = 0;
+        items[] = {"ACE_painkillers"};
+        treatmentTime = 4;
+        sounds[] = {{QPATHTO_R(sounds\Pills.ogg),1,1,50}};
+        litter[] = {{"Land_PainKillers_F"}}; // just use BI's model as litter
+    };
+
     // - IV Bags --------------------------------------------------------------
     class BloodIV: BasicBandage {
         displayName = CSTRING(Actions_Blood4_1000);
@@ -239,7 +252,7 @@ class GVAR(actions) {
 
     // - Misc -----------------------------------------------------------------
     class BodyBag: BasicBandage {
-        displayName = CSTRING(PlaceInBodyBag);
+        displayName = CSTRING(PlaceInBodyBagBlack);
         displayNameProgress = CSTRING(PlacingInBodyBag);
         icon = QPATHTOEF(medical_gui,ui\bodybag.paa);
         category = "advanced";
@@ -252,6 +265,24 @@ class GVAR(actions) {
         callbackSuccess = QFUNC(placeInBodyBag);
         consumeItem = 1;
         litter[] = {};
+    };
+    class BodyBagBlue: BodyBag {
+        displayName = CSTRING(PlaceInBodyBagBlue);
+        items[] = {"ACE_bodyBag_blue"};
+    };
+    class BodyBagWhite: BodyBag {
+        displayName = CSTRING(PlaceInBodyBagWhite);
+        items[] = {"ACE_bodyBag_white"};
+    };
+    class Grave: BodyBag {
+        displayName = CSTRING(DigGrave);
+        displayNameProgress = CSTRING(DiggingGrave);
+        icon = QPATHTOEF(medical_gui,ui\grave.paa);
+        treatmentTime = QGVAR(treatmentTimeGrave);
+        condition = QFUNC(canDigGrave);
+        callbackSuccess = QFUNC(placeInGrave);
+        items[] = {};
+        consumeItem = 0;
     };
     class CPR: BasicBandage {
         displayName = CSTRING(Actions_CPR);

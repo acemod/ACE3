@@ -72,6 +72,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(MX991_Description);
         model = QPATHTOF(data\mx_991.p3d);
         picture = QPATHTOF(UI\mx_991_ca.paa);
+        ACE_isTool = 1;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 4;
@@ -91,6 +92,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(KSF1_Description);
         model = QPATHTOF(data\ksf_1.p3d);
         picture = QPATHTOF(UI\ksf_1_ca.paa);
+        ACE_isTool = 1;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 4;
@@ -110,6 +112,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(XL50_Description);
         model = QPATHTOF(data\maglite_xl50.p3d);
         picture = QPATHTOF(UI\maglite_xl50_ca.paa);
+        ACE_isTool = 1;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;

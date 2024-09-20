@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, AACO, SilentSpike
+ * Author: Nelson Duarte, AACO, kymckay
  * Function used to select the camera mode
  *
  * Intended to run even if new mode == old mode, as it handles focus

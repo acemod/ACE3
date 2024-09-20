@@ -2,7 +2,7 @@
 // ["mapConfigs"] call ace_common_fnc_runTests;
 // execVM "z\ace\addons\common\dev\test_mapConfigs.sqf";
 
-#include "\z\ace\addons\common\script_component.hpp"
+#include "..\script_component.hpp"
 
 diag_log text format ["--- Checking Map Configs ---"];
 
@@ -28,7 +28,7 @@ private _maps = configProperties [configFile >> "CfgWorldList", "(isClass _x)", 
     private _stepX = 1e10;
     private _stepY = 1e10;
     {
-        private _zoom = getnumber (_x >> "zoomMax");
+        private _zoom = getNumber (_x >> "zoomMax");
         if (_zoom < _zoomMax) then {
             _zoomMax = _zoom;
             _formatX = getText (_x >> "formatX");

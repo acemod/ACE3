@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Handles automatic slide transitions using waitAndExecute in a PFH-like manner resulting in no performance loss.
@@ -36,7 +36,7 @@ private _image = _images select _currentSlide;
 // Set slide
 {
     _x setObjectTextureGlobal [_selection, _image];
-} count _objects;
+} forEach _objects;
 
 [QGVAR(slideChanged), [_image, _currentSlideshow]] call CBA_fnc_localEvent;
 

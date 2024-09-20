@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: voiper
  * Compile list of flashlight classnames and add to the "Flashlight" parent menu.

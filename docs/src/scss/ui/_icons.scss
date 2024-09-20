@@ -1,22 +1,58 @@
 .icon {
+    display: inline-block;
+    inline-size: 1rem;
+    block-size: 1rem;
+    font-style: unset;
+
+    svg {
+        inline-size: inherit;
+        block-size: inherit;
+        transition: $transition-default;
+    }
+
+    &--1-25x {
+        inline-size: 1.25rem;
+        block-size: 1.25rem;
+    }
+
+    &--1-5x {
+        inline-size: 1.5rem;
+        block-size: 1.5rem;
+    }
+
+    &--2x {
+        inline-size: 2rem;
+        block-size: 2rem;
+    }
+
+    &--white {
+        svg {
+            fill: #ffffff;
+        }
+    }
+
+    &--red {
+        svg {
+            fill: $primary-color;
+        }
+    }
+}
+
+.color-box {
     position: relative;
     top: 1px;
     display: inline-block;
     width: 16px;
     height: 16px;
+    border: 1px solid #aaa;
 
-    &-color {
-        border: 1px solid #aaa;
-
-        &-white {
-            background-color: #fff;
-        }
-        &-black {
-            background-color: #000;
-        }
-        &-red {
-            background-color: $ace-primary-color;
-        }
+    &-white {
+        background-color: #fff;
     }
-
+    &-black {
+        background-color: #000;
+    }
+    &-red {
+        background-color: $primary-color;
+    }
 }

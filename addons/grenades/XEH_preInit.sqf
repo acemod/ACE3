@@ -6,6 +6,9 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+GVAR(currentThrowMode) = 0;
+GVAR(throwModePFEH) = -1;
+
+#include "initSettings.inc.sqf"
 
 ADDON = true;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: ddm999
  * Handle holster settings [disabled, lowered, loweredExam, holster, holsterExam]

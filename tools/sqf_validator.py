@@ -149,6 +149,10 @@ def check_sqf_syntax(filepath):
         if pattern.match(content):
             print("ERROR: A found #include after block comment in file {0}".format(filepath))
             bad_count_file += 1
+        if ("functions" in filepath):
+            if (content.startswith("#include \"script_component.hpp\"")):
+                print(f"ERROR: Using old script_component.hpp in {filepath}")
+                bad_count_file += 1
 
 
 

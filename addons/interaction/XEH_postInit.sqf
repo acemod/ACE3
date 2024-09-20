@@ -78,7 +78,7 @@ ACE_Modifier = 0;
 }] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    [QGVAR(replaceTerrainObject), FUNC(replaceTerrainObject)] call CBA_fnc_addEventHandler;
+    [QGVAR(replaceTerrainObject), LINKFUNC(replaceTerrainObject)] call CBA_fnc_addEventHandler;
 };
 
 if (!hasInterface) exitWith {};
@@ -136,7 +136,7 @@ GVAR(isOpeningDoor) = false;
     if !([ACE_player, cursorTarget] call FUNC(canTapShoulder)) exitWith {false};
 
     //Tap whichever shoulder is closest
-    private _shoulderNum = [0, 1] select (([cursorTarget, ACE_player] call BIS_fnc_relativeDirTo) > 180);
+    private _shoulderNum = parseNumber (([cursorTarget, ACE_player] call BIS_fnc_relativeDirTo) > 180);
 
     // Statement
     [ACE_player, cursorTarget, _shoulderNum] call FUNC(tapShoulder);
@@ -149,11 +149,20 @@ GVAR(isOpeningDoor) = false;
 ["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);
 
 ["CBA_settingsInitialized", {
+    TRACE_2("settingsInitialized",GVAR(disableNegativeRating),GVAR(enableAnimActions));
+
     if (GVAR(disableNegativeRating)) then {
         player addEventHandler ["HandleRating", {
             (_this select 1) max 0
         }];
     };
+
+    if (!GVAR(enableAnimActions)) exitWith {};
+
+    // Don't add inherited anim actions (but actions are added to child classes)
+    {
+        [_x, "InitPost", LINKFUNC(initAnimActions), true, [], true] call CBA_fnc_addClassEventHandler;
+    } forEach (keys (uiNamespace getVariable QGVAR(animActionsClasses)));
 }] call CBA_fnc_addEventHandler;
 
 {
@@ -161,3 +170,20 @@ GVAR(isOpeningDoor) = false;
         [QGVAR(clearWeaponAttachmentsActionsCache)] call CBA_fnc_localEvent;
     }] call CBA_fnc_addPlayerEventHandler;
 } forEach ["loadout", "weapon"];
+
+// add "Take _weapon_" action to dropped weapons
+private _action = [
+    // action display name will be overwritten in modifier function
+    QGVAR(takeWeapon), "take", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa",
+    {_player action ["TakeWeapon", _target, weaponCargo _target select 0]},
+    {(count weaponCargo _target == 1) && {[_player, objNull, []] call EFUNC(common,canInteractWith)}}, // Not checking if container is claimed
+    nil, nil, nil, nil, nil,
+    {
+        params ["_target", "", "", "_actionData"];
+        _actionData set [1, format [localize "STR_ACTION_TAKE_BAG", getText (configFile >> "CfgWeapons" >> weaponCargo _target select 0 >> "displayName")]];
+    }
+] call EFUNC(interact_menu,createAction);
+
+{
+    [_x, 0, ["ACE_MainActions"], _action, true] call EFUNC(interact_menu,addActionToClass);
+} forEach ["WeaponHolder", "WeaponHolderSimulated"];

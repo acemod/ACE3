@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Check if a unit has stable vitals (required to become conscious)
@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-if (GET_BLOOD_VOLUME(_unit) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE) exitWith { false };
+if (GET_BLOOD_VOLUME(_unit) < MINIMUM_BLOOD_FOR_STABLE_VITALS) exitWith { false };
 if IN_CRDC_ARRST(_unit) exitWith { false };
 
 private _cardiacOutput = [_unit] call FUNC(getCardiacOutput);

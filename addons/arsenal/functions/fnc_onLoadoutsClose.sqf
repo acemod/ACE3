@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
@@ -14,13 +14,11 @@
 */
 
 GVAR(currentLoadoutsTab) = nil;
-
-private _arsenalDisplay = findDisplay IDD_ace_arsenal;
-private _mouseBlockCtrl = _arsenalDisplay displayCtrl IDC_mouseBlock;
-
 GVAR(loadoutsSearchbarFocus) = nil;
 GVAR(loadoutsPanelFocus) =  nil;
 
+private _arsenalDisplay = findDisplay IDD_ace_arsenal;
+private _mouseBlockCtrl = _arsenalDisplay displayCtrl IDC_mouseBlock;
 _mouseBlockCtrl ctrlEnable false;
 _mouseBlockCtrl ctrlCommit 0;
 
@@ -28,4 +26,4 @@ _mouseBlockCtrl ctrlCommit 0;
 
 [QGVAR(loadoutsDisplayClosed), []] call CBA_fnc_localEvent;
 
-[_arsenalDisplay , _arsenalDisplay displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);
+[_arsenalDisplay, _arsenalDisplay displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);

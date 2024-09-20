@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Pterolatypus
  * Custom wound handler for burns. Stores up small damage events until there's enough to create a wound.

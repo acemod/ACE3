@@ -14,15 +14,34 @@ version:
 
 ## 1. Config Values
 
-### 1.2 Setting Vehicle As Repair Location
+### 1.1 Setting Vehicle As Repair Location
 
 A vehicle will be set as a repair truck based on the config `ace_repair_canRepair`.
 Setting `fullRepairLocation` needs to be enabled and is by *disabled* default.
 
 ```cpp
-class CfgVehicles: Car_F{
-    class MyRepairTruck {
+class CfgVehicles {
+    class Car_F;
+    class MyTruck: Car_F {
         ace_repair_canRepair = 1; // Make repair vehicle
+    };
+};
+```
+
+### 1.2 Setting Vehicle Spare Wheels and Tracks
+
+A vehicle can have a default count of spare wheels/tracks based on the config `ace_repair_spareWheels` and `ace_repair_spareTracks`.
+Values set in 3den for a vehicle will be used first. Vehicles with no value set in 3den or config will default to 1 spare wheel/track.
+
+```cpp
+class CfgVehicles {
+    class Car_F;
+    class MyTruck: Car_F {
+        ace_repair_spareWheels = 4;
+    };
+    class Tank_F;
+    class MyTank: Tank_F {
+        ace_repair_spareTracks = 4;
     };
 };
 ```

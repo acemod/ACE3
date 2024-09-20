@@ -10,6 +10,7 @@ PREP(cancelPlacement);
 PREP(canDefuse);
 PREP(canDetonate);
 PREP(connectExplosive);
+PREP(cycleActiveTrigger);
 PREP(defuseExplosive);
 PREP(detonateExplosive);
 PREP(detonateExplosiveAll);

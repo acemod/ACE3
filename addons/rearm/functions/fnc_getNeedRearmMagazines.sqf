@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Tuupertunut
  * Returns information about every magazine that can be rearmed in the vehicle. Multiple mags of

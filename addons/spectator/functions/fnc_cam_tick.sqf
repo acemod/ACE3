@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, AACO, SilentSpike
+ * Author: Nelson Duarte, AACO, kymckay
  * Function used to perform camera ticks
  *
  * Updates camera position in follow mode
@@ -58,7 +58,9 @@ if (_cameraMode != MODE_FREE) then {
 _camTarget = GVAR(camFocus);
 
 // Focus get in / out of vehicle state
-if !(isNull _camTarget) then {
+if (isNull _camTarget) then {
+    GVAR(camTargetInVehicle) = false;
+} else {
     private _targetInVeh = GVAR(camTargetInVehicle);
 
     if (GVAR(camHasTarget)) then {
@@ -72,8 +74,6 @@ if !(isNull _camTarget) then {
             GVAR(camTargetInVehicle) = false;
         };
     };
-} else {
-    GVAR(camTargetInVehicle) = false;
 };
 
 // Camera lights

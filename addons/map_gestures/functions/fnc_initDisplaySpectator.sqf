@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: joko // Jonas
  * Binds Draw EventHandlers to Spectator map.
@@ -23,11 +23,11 @@ _mapCtrl ctrlAddEventHandler ["Draw", {
 
     private _aceSpectatorFocus = missionNamespace getVariable [QEGVAR(spectator,camFocus), objNull];
     if (!isNull _aceSpectatorFocus) then {
-        _targets pushback [_aceSpectatorFocus, GVAR(maxRange)];
+        _targets pushBack [_aceSpectatorFocus, GVAR(maxRange)];
     };
     private _vanillaSpectatorFocus = uiNamespace getVariable ["RscEGSpectator_focus", objNull];
     if (!isNull _vanillaSpectatorFocus) then {
-        _targets pushback [_vanillaSpectatorFocus, GVAR(maxRange)];
+        _targets pushBack [_vanillaSpectatorFocus, GVAR(maxRange)];
     };
     [_this select 0, _targets] call FUNC(drawMapGestures);
 }];

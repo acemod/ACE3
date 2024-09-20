@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, mharis001
  * Opens the patient information display for given target.
@@ -18,7 +18,7 @@
 
 #define MAX_DISTANCE 4
 
-params ["_target", "_selectionN"];
+params ["_target", ["_selectionN", -1]];
 
 private _display = uiNamespace getVariable [QGVAR(RscPatientInfo), displayNull];
 
@@ -34,18 +34,19 @@ if (isNull _display) then {
         };
 
         private _target = _display getVariable [QGVAR(target), objNull];
-        private _selectionN = _display getVariable [QGVAR(selectionN), 0];
+        private _selectionN = _display getVariable [QGVAR(selectionN), -1];
 
         // Close display if target moved too far away (ignore if in same vehicle)
         if (ACE_player distance _target > MAX_DISTANCE && {vehicle _target != vehicle ACE_player}) exitWith {
             [_pfhID] call CBA_fnc_removePerFrameHandler;
             QGVAR(RscPatientInfo) cutFadeOut 0.3;
+            if (((getPosATL _target) # 2) < -9) exitWith {}; // handle dragging corpse/clone
             [[ELSTRING(medical,DistanceToFar), _target call EFUNC(common,getName)], 2] call EFUNC(common,displayTextStructured);
         };
 
         // Update body image
         private _ctrlBodyImage = _display displayCtrl IDC_BODY_GROUP;
-        [_ctrlBodyImage, _target] call FUNC(updateBodyImage);
+        [_ctrlBodyImage, _target, _selectionN] call FUNC(updateBodyImage);
 
         // Update injury list
         private _ctrlInjuries = _display displayCtrl IDC_INJURIES;

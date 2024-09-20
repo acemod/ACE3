@@ -83,8 +83,8 @@ class CfgVehicles {
             };
             class ACE_fastRope {
                 displayName = CSTRING(Interaction_fastRope);
-                condition = QUOTE([ARR_2(_player, _target)] call FUNC(canFastRope));
-                statement = QUOTE([ARR_2(_player, _target)] call FUNC(fastRope));
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canFastRope));
+                statement = QUOTE([ARR_2(_player,_target)] call FUNC(fastRope));
             };
         };
     };

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: 10Dozen
  * Angle slider clicked handler. Resets slider pos to 0 on RMB button up.

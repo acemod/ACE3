@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Authors: Ruthberg
  * Checks if the target has a copyable range card

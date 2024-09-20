@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Sets screen tint for glasses.
@@ -47,7 +47,7 @@ private _imagePath = getText (_config >> ["ACE_Overlay", "ACE_OverlayCracked"] s
 private _angle = getNumber (_config >> "ACE_Overlay_Angle");
 
 if (_imagePath != "") then {
-    GVAR(GogglesLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false];
+    GVAR(GogglesLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false, false];
     private _overlay = (GLASSDISPLAY displayCtrl 10650);
     _overlay ctrlSetText _imagePath;
 

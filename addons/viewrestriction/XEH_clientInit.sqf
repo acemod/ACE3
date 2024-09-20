@@ -19,7 +19,7 @@ if !(hasInterface) exitWith {};
     };
 
     // Exit if third person view is not available
-    if (difficultyOption "thirdPersonView" == 0) exitWith {
+    if (difficultyOption "thirdPersonView" != 1) exitWith {
         WARNING("View Restriction is enabled, but 3rd person is disabled with server difficulty.");
     };
 

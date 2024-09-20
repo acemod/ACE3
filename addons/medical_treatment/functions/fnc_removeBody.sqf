@@ -1,11 +1,11 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Removes a body. Ideally it is deleted the next frame.
  * However, player bodies cannot be deleted until they respawn, so it is hidden and deleted later.
  *
  * Arguments:
- * 0: Body <OBJECT>
+ * 0: Body or Bodybag <OBJECT>
  *
  * Return Value:
  * None

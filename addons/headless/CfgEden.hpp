@@ -9,7 +9,7 @@ class Cfg3DEN {
                         property = QXGVAR(blacklist);
                         control = "Checkbox";
                         condition = "objectControllable";
-                        expression = QUOTE(_this setVariable [ARR_3(QQXGVAR(blacklist), _value, true)]);
+                        expression = QUOTE(_this setVariable [ARR_3(QQXGVAR(blacklist),_value,true)]);
                         defaultValue = "(false)";
                     };
                 };
@@ -25,7 +25,7 @@ class Cfg3DEN {
                         tooltip = CSTRING(BlacklistEdenDesc);
                         property = QXGVAR(blacklist);
                         control = "Checkbox";
-                        expression = QUOTE(_this setVariable [ARR_3(QQXGVAR(blacklist), _value, true)]);
+                        expression = QUOTE(_this setVariable [ARR_3(QQXGVAR(blacklist),_value,true)]);
                         defaultValue = "(false)";
                     };
                 };

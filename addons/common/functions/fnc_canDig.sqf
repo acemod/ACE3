@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg, commy2
  * Checks if the player can dig on the surface below (enough dust).
@@ -22,8 +22,8 @@ private _posASL = _input;
 
 if ((_input isEqualType objNull) && {
     _posASL = getPosASL _input;
-    (getPosATL _unit) select 2 > 0.05 || // Walking on objects, such as buildings, pavements, etc.
-    {surfaceIsWater _posASL} // posATL in low water (not as low to allow awalking) is negative
+    (getPosATL _input) select 2 > 0.05 || // Walking on objects, such as buildings, pavements, etc.
+    {surfaceIsWater _posASL} // posATL in low water (not as low to allow walking) is negative
 }) exitWith {false};
 
 private _surfaceClass = (surfaceType _posASL) select [1];

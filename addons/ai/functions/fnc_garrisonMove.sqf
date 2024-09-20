@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: alganthe
  * Internal function used by ace_ai_fnc_garrison to make the units move to the positions it picked.
@@ -31,21 +31,21 @@ private _unitMoveListUnits = (_unitMoveList apply {_x select 0});
 {
     _x setVariable [QGVAR(garrisonMove_failSafe), nil, true];
     _x setVariable [QGVAR(garrisonMove_unitPosMemory), nil, true];
-} foreach _unitMoveListUnits;
+} forEach _unitMoveListUnits;
 
 // Avoid duplicate PFHs
 if (isNil QGVAR(garrison_moveUnitPFH)) then {
-    missionNameSpace setVariable [QGVAR(garrison_moveUnitPFH), true, true];
+    missionNamespace setVariable [QGVAR(garrison_moveUnitPFH), true, true];
 
     // PFH checking if the units have reached their destination
     [{
         params ["_args", "_pfhID"];
 
-        private _unitMoveList = missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []];
+        private _unitMoveList = missionNamespace getVariable [QGVAR(garrison_unitMoveList), []];
 
         // End PFH if all units are placed / unable to reach position
         if (_unitMoveList isEqualTo []) then {
-            missionNameSpace setVariable [QGVAR(garrison_moveUnitPFH), nil, true];
+            missionNamespace setVariable [QGVAR(garrison_moveUnitPFH), nil, true];
             LOG("garrisonMove PFH: PFH finished it's job | deleting PFH");
             _pfhID call CBA_fnc_removePerFrameHandler;
 
@@ -81,17 +81,17 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                         [QGVAR(enableAttack), [[_unit], true], _unit] call CBA_fnc_targetEvent;
                     };
 
-                    LOG(format [ARR_2("garrisonMove PFH: unit in position | %1 units left", count _unitMoveList)]);
+                    LOG(format [ARR_2("garrisonMove PFH: unit in position | %1 units left",count _unitMoveList)]);
                 };
 
                 // Check if unit is alive or even existing
                 if (!alive _unit || {_unit getVariable [QGVAR(garrisoned), false]}) then {
                     _unitMoveList deleteAt (_unitMoveList find _x);
-                    LOG(format [ARR_2("garrisonMove PFH: unit dead, deleted or garrisoned via TP | %1 units left", count _unitMoveList)]);
+                    LOG(format [ARR_2("garrisonMove PFH: unit dead, deleted or garrisoned via TP | %1 units left",count _unitMoveList)]);
 
                 } else {
                     private _unitPos = getPos _unit;
-                    if (surfaceisWater _unitPos) then {
+                    if (surfaceIsWater _unitPos) then {
                         _unitPos = getPosASL _unit;
                     } else {
                         _unitPos = getPosATL _unit;
@@ -131,9 +131,9 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                         };
                     };
                 };
-            } foreach _unitMoveList;
+            } forEach _unitMoveList;
 
-            missionNameSpace setVariable [QGVAR(garrison_unitMoveList), _unitMoveList, true];
+            missionNamespace setVariable [QGVAR(garrison_unitMoveList), _unitMoveList, true];
         };
     }, 0.5, []] call CBA_fnc_addPerFrameHandler;
 };

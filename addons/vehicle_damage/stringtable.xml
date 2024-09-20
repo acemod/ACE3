@@ -3,75 +3,55 @@
     <Package name="Vehicle_Damage">
         <Key ID="STR_ACE_Vehicle_Damage_category_displayName">
             <English>ACE Advanced Vehicle Damage</English>
-            <Japanese>ACE 拡張車両ダメージ</Japanese>
+            <Japanese>ACE 高度な乗り物ダメージ</Japanese>
             <French>ACE Dégâts de véhicule avancés</French>
             <German>ACE Erweiterter Fahrzeugsschaden</German>
+            <Italian>ACE Danni Veicolo Avanzati</Italian>
             <Polish>ACE Zaawansowany system uszkodzeń pojazdów</Polish>
             <Chinesesimp>ACE 高级载具损坏</Chinesesimp>
             <Korean>ACE 고급 차량 피해</Korean>
             <Russian>ACE Продвинутое повреждение техники</Russian>
             <Spanish>ACE Daño avanzado de vehículos</Spanish>
+            <Portuguese>ACE Dano avançãdo de veículos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_setting_description">
-            <English>Enable/Disable advanced vehicle damage</English>
-            <Japanese>拡張車両ダメージの使用を設定します。</Japanese>
+            <English>Enable advanced vehicle damage</English>
             <French>Active les dégâts de véhicule avancés.</French>
-            <German>Aktiviert/Deaktiviert den Erweiterten Fahrzeugsschaden</German>
-            <Polish>Włącz/Wyłącz zaawansowane uszkodzenia pojazdów</Polish>
-            <Chinesesimp>启用/禁用高级载具损坏</Chinesesimp>
-            <Korean>고급 차량 피해 활성화/비활성화</Korean>
-            <Russian>Включить/выключить продвинутое повреждение техники</Russian>
-            <Spanish>Habilitar/Deshabilitar el daño avanzado de vehículos</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_description">
-            <English>Enable/Disable advanced car damage (Experimental)</English>
-            <Japanese>拡張車ダメージ (試験的)</Japanese>
-            <French>Active les dégâts avancés sur les voitures (expérimental).</French>
-            <German>Aktiviert/Deaktiviert den Erweiterten Fahrzeugsschaden (Experimentell)</German>
-            <Polish>Włącz/Wyłącz zaawansowane uszkodzenia w samochodach (eksperymentalne)</Polish>
-            <Chinesesimp>启用/禁用高级车辆损坏（实验性）</Chinesesimp>
-            <Korean>고급 차량 피해(실험용) 활성화/비활성화</Korean>
-            <Russian>Включить/выключить продвинутое повреждение машин (экспериментальное)</Russian>
-            <Spanish>Habilita/Deshabilita el daño avanzado de coche (Experimental)</Spanish>
+            <German>Aktiviert den Erweiterten Fahrzeugsschaden</German>
+            <Italian>Abilità danni avanzati ai veicoli</Italian>
+            <Polish>Włącz zaawansowane uszkodzenia pojazdów</Polish>
+            <Russian>Включить продвинутое повреждение техники</Russian>
+            <Spanish>Habilitar el daño avanzado de vehículos</Spanish>
+            <Portuguese>Ativar dano avançado de veículo</Portuguese>
+            <Japanese>乗り物(Vehicle)に対しての高度なダメージ計算を有効化します</Japanese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_enable">
-            <English>Enable/Disable advanced Car Damage</English>
-            <Japanese>拡張車ダメージの使用を設定します。</Japanese>
+            <English>Enable advanced car damage</English>
             <French>Dégâts de voiture avancés</French>
-            <German>Aktiviert/Deaktiviert erweiterten Autoschaden</German>
-            <Polish>Włącz/Wyłącz zaawansowane uszkodzenia w samochodach</Polish>
-            <Chinesesimp>启用/禁用高级车辆损坏</Chinesesimp>
-            <Korean>고급 차량 피해 활성화/비활성화</Korean>
-            <Russian>Продвинутое повреждение машин</Russian>
-            <Spanish>Habilitar/Deshabilitar daño avanzado de coche (Experimental)</Spanish>
+            <German>Aktiviert erweiterten Autoschaden</German>
+            <Italian>Abilita danni avanzati alle macchine</Italian>
+            <Polish>Włącz zaawansowane uszkodzenia w samochodach</Polish>
+            <Spanish>Habilitar daño avanzado de coche</Spanish>
+            <Portuguese>Habilitar dano avançado para carros</Portuguese>
+            <Japanese>高度な車ダメージを有効化</Japanese>
+            <Russian>Включить продвинутое повреждение автомобиля</Russian>
         </Key>
-        <Key ID="STR_ACE_Vehicle_Damage_removeAmmoAfterCookoff_setting_description">
-            <English>Removes all vehicle ammo after cook-off</English>
-            <Japanese>誘爆後は車両から全ての弾薬を削除します。</Japanese>
-            <French>Retire toutes les munitions des véhicules après une auto-inflammation.</French>
-            <German>Entfernt die gesamte Munition nach dem Durchzünden der Munition eines Fahrzeuges.</German>
-            <Polish>Usuwa całą amunicję z pojazdu po samozapłonie</Polish>
-            <Chinesesimp>殉爆后移除所有车辆弹药</Chinesesimp>
-            <Korean>쿡오프 현상 후 차량에서 모든 탄약을 제거합니다.</Korean>
-            <Russian>Удалять все боеприпасы из техники после их детонации</Russian>
-            <Spanish>Elimina toda la munición del vehículo despues ser inducida a detonar por calor</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Vehicle_Damage_removeAmmoAfterCookoff_setting_enable">
-            <English>Enable/Disable Ammo Removal During Cook-Off</English>
-            <Japanese>誘爆後の弾薬処理</Japanese>
-            <French>Retirer les munitions durant l'auto-inflammation</French>
-            <German>Aktiviert/Deaktiviert Entfernung der Munition beim Durchzünden</German>
-            <Polish>Włącz/Wyłącz usuwanie amunicji podczas samozapłonu</Polish>
-            <Chinesesimp>启用/禁用殉爆过程中的弹药移除功能</Chinesesimp>
-            <Korean>쿡오프시 탄약 제거 활성화/비활성화</Korean>
-            <Russian>Удалять боеприпасы из-за детонации</Russian>
-            <Spanish>Habilita/Deshabilita ka eliminación de munición durante la detonación inducida por calor</Spanish>
+        <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_description">
+            <English>Enable advanced car damage (Experimental)</English>
+            <French>Active les dégâts avancés sur les voitures (expérimental).</French>
+            <German>Aktiviert den Erweiterten Fahrzeugsschaden (Experimentell)</German>
+            <Italian>Abilita danni avanzati ai veicoli (sperimentale)</Italian>
+            <Polish>Włącz zaawansowane uszkodzenia w samochodach (eksperymentalne)</Polish>
+            <Russian>Включить продвинутое повреждение машин (экспериментальное)</Russian>
+            <Spanish>Habilitar daño avanzado de coche (Experimental)</Spanish>
+            <Portuguese>Habilitar dano avançado para carros (Experimental)</Portuguese>
+            <Japanese>車(Car)に対しての高度なダメージ計算を有効化します (試験的機能)</Japanese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_generic_turret_wreck">
             <English>Wreck (Turret)</English>
             <French>Épave (tourelle)</French>
             <Spanish>Restos (torreta)</Spanish>
-            <Italian>Rottami (torretta)</Italian>
+            <Italian>Rottame (Torretta)</Italian>
             <Polish>Wrak (wieżyczka)</Polish>
             <Russian>Обломки (башня)</Russian>
             <German>Wrack (Geschützturm)</German>

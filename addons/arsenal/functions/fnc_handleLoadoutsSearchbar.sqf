@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
@@ -16,30 +16,56 @@
 
 params ["_display", "_control"];
 
-private _textString = ctrlText _control;
-
 private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
 
-if !(GVAR(lastSearchTextLoadouts) isEqualTo "" || {(_textString find GVAR(lastSearchTextLoadouts)) == 0}) then {//don't refill if there is no need
+// Get the currently selected item in panel
+private _selectedLoadoutIndex = lnbCurSelRow _contentPanelCtrl;
+private _selectedLoadout = "";
+
+// If something is selected, save it
+if (_selectedLoadoutIndex != -1) then {
+    _selectedLoadout = _contentPanelCtrl lnbText [_selectedLoadoutIndex, 1];
+};
+
+private _searchString = ctrlText _control;
+
+// Don't refill if there is no need
+if (GVAR(lastSearchTextLoadouts) != "" && {(_searchString find GVAR(lastSearchTextLoadouts)) != 0}) then {
     [_display, _display displayCtrl GVAR(currentLoadoutsTab)] call FUNC(fillLoadoutsList);
 };
 
-GVAR(lastSearchTextLoadouts) = _textString;
-if (count _textString == 0) exitWith {};
+GVAR(lastSearchTextLoadouts) = _searchString;
 
-private _contentPanelCtrl = _display displayCtrl IDC_contentPanel;
+// If nothing searched, quit here
+if (_searchString != "") then {
+    _searchString = toLower _searchString;
 
-private _itemsToGo = (lnbSize _contentPanelCtrl) select 0;
-private _lbIndex = 0;
-while {_itemsToGo > 0} do {
-    private _currentData = _contentPanelCtrl lnbText [_lbIndex, 1];
-    private _currentClassname = _contentPanelCtrl lnbData [_lbIndex, 0];
+    private _loadoutName = "";
+    private _loadout = [];
+    private _currentTab = str GVAR(currentLoadoutsTab);
 
-    if ((_currentData isEqualTo "") || {(((toUpper _currentData) find (toUpper _textString)) == -1) && {((toUpper _currentClassname) find (toUpper _textString)) == -1}}) then {
-        _contentPanelCtrl lnbDeleteRow _lbIndex;
-    } else {
-        _lbIndex = _lbIndex + 1;
+    // Go through all items in panel and see if they need to be deleted or not
+    for "_lbIndex" from (lnbSize _contentPanelCtrl select 0) - 1 to 0 step -1 do {
+        _loadoutName = toLower (_contentPanelCtrl lnbText [_lbIndex, 1]);
+
+        // Remove item in panel if it doesn't match search, skip otherwise
+        if ((_loadoutName == "") || {!(_searchString in _loadoutName)}) then {
+            _contentPanelCtrl lnbDeleteRow _lbIndex;
+        };
     };
-    _itemsToGo = _itemsToGo - 1;
 };
-_contentPanelCtrl lnbSetCurSelRow -1;
+
+// Try to select previously selected item again, otherwise select nothing
+if (_selectedLoadoutIndex != -1) then {
+    private _index = -1;
+
+    for "_lbIndex" from 0 to (lnbSize _contentPanelCtrl select 0) - 1 do {
+        if ((_contentPanelCtrl lnbText [_lbIndex, 1]) == _selectedLoadout) exitWith {
+            _index = _lbIndex;
+        };
+    };
+
+    _contentPanelCtrl lnbSetCurSelRow _index;
+} else {
+    _contentPanelCtrl lnbSetCurSelRow -1;
+};

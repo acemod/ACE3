@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * On the server: Adds a key (magazineDetail name) to approved keys for a vehicle.

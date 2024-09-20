@@ -10,3 +10,4 @@ PREP(pfeh);
 PREP(refreshGoggleType);
 PREP(scaleCtrl);
 PREP(setupDisplayEffects);
+PREP(statTextStatement_NVGeneration);

@@ -28,7 +28,7 @@ class Cfg3DEN {
             w = QUOTE(130 * ATTRIBUTE_W);
             h = QUOTE(106.83 * ATTRIBUTE_H);
             attributeLoad = QUOTE([ARR_2(_this,+_value)] call FUNC(attributeLoad));
-            attributeSave = QUOTE(uiNamespace getVariable [ARR_2(QQGVAR(attributeValue),[ARR_2([], 0)])]);
+            attributeSave = QUOTE(uiNamespace getVariable [ARR_2(QQGVAR(attributeValue),[ARR_2([],0)])]);
             class controls {
                 class ModeTitle: ctrlStatic {
                     idc = -1;
@@ -40,7 +40,7 @@ class Cfg3DEN {
                 };
                 class Mode: ctrlToolbox {
                     idc = IDC_ATTRIBUTE_MODE;
-                    onToolBoxSelChanged = QUOTE([ARR_2(ctrlParentControlsGroup (_this select 0), _this select 1)] call FUNC(attributeMode));
+                    onToolBoxSelChanged = QUOTE([ARR_2(ctrlParentControlsGroup (_this select 0),_this select 1)] call FUNC(attributeMode));
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(5 * ATTRIBUTE_H);
                     w = QUOTE(125 * ATTRIBUTE_W);
@@ -55,7 +55,7 @@ class Cfg3DEN {
                 };
                 class Category: ctrlToolboxPictureKeepAspect {
                     idc = IDC_ATTRIBUTE_CATEGORY;
-                    onToolBoxSelChanged = QUOTE([ARR_2(ctrlParentControlsGroup (_this select 0), _this select 1)] call FUNC(attributeCategory));
+                    onToolBoxSelChanged = QUOTE([ARR_2(ctrlParentControlsGroup (_this select 0),_this select 1)] call FUNC(attributeCategory));
                     x = QUOTE(5 * ATTRIBUTE_W);
                     y = QUOTE(15 * ATTRIBUTE_H);
                     w = QUOTE(125 * ATTRIBUTE_W);
@@ -110,7 +110,7 @@ class Cfg3DEN {
                     h = QUOTE(65 * ATTRIBUTE_H);
                     drawSideArrows = 1;
                     disableOverflow = 1;
-                    columns[] = {0.05, 0.15, 0.85};
+                    columns[] = {0.05, 0.15, 0.83, 0.87};
                 };
                 class ArrowLeft: ctrlButton {
                     idc = IDC_ATTRIBUTE_LIST_LEFT;
@@ -129,7 +129,8 @@ class Cfg3DEN {
                 };
                 class SearchButton: ctrlButtonPicture {
                     idc = IDC_ATTRIBUTE_SEARCH_BUTTON;
-                    onButtonClick = QUOTE( \
+                    #pragma hemtt suppress pw3_padded_arg
+                    onButtonClick = QUOTE(\
                         params ['_searchButton']; \
                         private _controlsGroup = ctrlParentControlsGroup _searchButton; \
                         private _searchBar = _controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR; \
@@ -147,7 +148,8 @@ class Cfg3DEN {
                 class SearchBar: ctrlEdit {
                     idc = IDC_ATTRIBUTE_SEARCHBAR;
                     onKeyUp = QUOTE([ctrlParentControlsGroup (_this select 0)] call FUNC(attributeAddItems));
-                    onMouseButtonClick = QUOTE( \
+                    #pragma hemtt suppress pw3_padded_arg
+                    onMouseButtonClick = QUOTE(\
                         params [ARR_2('_searchBar','_button')]; \
                         if (_button != 1) exitWith {}; \
                         _searchBar ctrlSetText ''; \

@@ -1,20 +1,13 @@
 #include "script_component.hpp"
 
-#if __has_include("\lxWS\data_f_lxWS\config.bin")
-#else
-#define PATCH_SKIP "Western Sahara"
-#endif
-
-#ifdef PATCH_SKIP
-ACE_PATCH_NOT_LOADED(ADDON,PATCH_SKIP)
-#else
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"data_f_lxWS_Loadorder"};
+        requiredAddons[] = {"data_f_lxWS_Loadorder", "ace_common"};
+        skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"Mike"};
         url = ECSTRING(main,URL);
@@ -22,6 +15,5 @@ class CfgPatches {
     };
 };
 
+#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-
-#endif

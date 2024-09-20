@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Inserts entry in the c1 ballistic coefficient vs. distance interpolation table

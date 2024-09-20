@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Rosuto
  * DAGR data output loop
@@ -17,7 +17,7 @@
 
 135471 cutRsc ["DAGR_DISPLAY", "plain down"];
 
-#define __display (uiNameSpace getVariable "DAGR_DISPLAY")
+#define __display (uiNamespace getVariable "DAGR_DISPLAY")
 
 #define __gridControl (__display displayCtrl 266851)
 #define __speedControl (__display displayCtrl 266852)
@@ -62,13 +62,13 @@ GVAR(outputPFH) = [{
     };
 
     // Time
-    private _dagrTime = [daytime, "HH:MM"] call bis_fnc_timeToString;
+    private _dagrTime = [dayTime, "HH:MM"] call bis_fnc_timeToString;
 
     // Output
-    __gridControl ctrlSetText format ["%1", _dagrGrid];
-    __speedControl ctrlSetText format ["%1", _dagrSpeed];
-    __elevationControl ctrlSetText format ["%1", _dagrElevation];
-    __headingControl ctrlSetText (if (!GVAR(useDegrees)) then { format ["%1", _dagrHeading] } else { format ["%1 �", _dagrHeading] });
-    __timeControl ctrlSetText format ["%1", _dagrTime];
+    __gridControl ctrlSetText _dagrGrid;
+    __speedControl ctrlSetText _dagrSpeed;
+    __elevationControl ctrlSetText _dagrElevation;
+    __headingControl ctrlSetText (if (!GVAR(useDegrees)) then { str _dagrHeading } else { format ["%1 �", _dagrHeading] });
+    __timeControl ctrlSetText _dagrTime;
 
 }, GVAR(updateInterval), []] call CBA_fnc_addPerFrameHandler;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Arsenal display <DISPLAY>
  * 1: Searchbar control <CONTROL>
- * 2: Right button state <BOOL>
+ * 2: Mouse button <NUMBER>
  *
  * Return Value:
  * None
@@ -15,11 +15,11 @@
  * Public: No
 */
 
-params ["_display", "_control", "_rightButton"];
+params ["_display", "_control", "_buttonPressed"];
 
-if (_rightButton != 1) exitWith  {};
+if (_buttonPressed != 1) exitWith  {};
 
-_control ctrlSetText '';
+_control ctrlSetText "";
 
 if (ctrlIDC _control == IDC_leftSearchbar) then {
     [_display, _display displayCtrl GVAR(currentLeftPanel)] call FUNC(fillLeftPanel);

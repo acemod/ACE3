@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk, Jonpas
  * Calculates the maximum number of magazines a turret can hold according to config.

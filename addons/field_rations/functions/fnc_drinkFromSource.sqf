@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Makes the player drink directly from the given water source.
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [_player, _source] call ace_field_rations_drinkFromSource
+ * [_player, _source] call ace_field_rations_fnc_drinkFromSource
  *
  * Public: No
  */

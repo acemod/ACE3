@@ -11,6 +11,8 @@ class CfgPatches {
         authors[] = {"ACE2 Team"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+        ACE_expectedModDir = "@ACE Tracers";
+        ACE_expectedSteamID = "2202414450";
     };
 };
 

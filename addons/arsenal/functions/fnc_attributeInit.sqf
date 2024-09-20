@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
- * Initializes the objects 3DEN attribute at scenario start.
+ * Initializes the objects 3DEN's ace arsenal attribute at scenario start.
  *
  * Arguments:
  * 0: Attribute target <OBJECT>
@@ -24,13 +24,12 @@ if (_mode > 0) then {
     // Blacklist: add full arsenal and take items away
     [_object, true, true] call FUNC(initBox);
 
-    // Need to delay removal by 2 frames
+    // Wait until all items have been added, so that the blacklisted items can be removed
     [{
-        [{
-            params ["_object", "_items"];
-            [_object, _items, true] call FUNC(removeVirtualItems);
-        }, _this] call CBA_fnc_execNextFrame;
-    }, [_object, _items]] call CBA_fnc_execNextFrame;
+        !isNil {(_this select 0) getVariable QGVAR(virtualItems)}
+    }, {
+        [_this select 0, _this select 1, true] call FUNC(removeVirtualItems);
+    }, [_object, _items], 20] call CBA_fnc_waitUntilAndExecute; // 20s timeout in case of failure
 } else {
      // Exit on whitelist mode with no items
     if (_items isEqualTo []) exitWith {};

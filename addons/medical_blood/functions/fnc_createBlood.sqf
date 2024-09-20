@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Creates a blood object and handles its cleanup.
@@ -21,7 +21,7 @@
 params ["_type", "_position", "_source"];
 TRACE_3("Creating blood",_type,_position,_source);
 
-private _model = GVAR(models) getVariable _type;
+private _model = GVAR(models) get _type;
 
 private _bloodDrop = createSimpleObject [_model, [0, 0, 0]];
 _bloodDrop setDir random 360;

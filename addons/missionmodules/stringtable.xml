@@ -11,7 +11,7 @@
             <French>ACE modules de mission</French>
             <Hungarian>ACE küldetési modulok</Hungarian>
             <Russian>ACE Модули миссий</Russian>
-            <Italian>Moduli Missione ACE</Italian>
+            <Italian>ACE Moduli Missione</Italian>
             <Japanese>ACE ミッション モジュール</Japanese>
             <Korean>ACE 미션 모듈</Korean>
             <Chinesesimp>ACE 任务模块</Chinesesimp>
@@ -78,7 +78,7 @@
             <French>Distance minimale</French>
             <Hungarian>Minimális távolság</Hungarian>
             <Russian>Мин. дистанция</Russian>
-            <Italian>Distanza Minimale</Italian>
+            <Italian>Distanza Minima</Italian>
             <Japanese>最低距離</Japanese>
             <Korean>최소 거리</Korean>
             <Chinesesimp>最小距离</Chinesesimp>
@@ -95,7 +95,7 @@
             <French>Valeur utilisée pour calculer une position aléatoire et définir la distance minimale entre les joueurs et les sons joués.</French>
             <Hungarian>Egy véletlenszerű pozíció számításához használt érték, amihez megadja a minimum távolságot a játékosok és a lejátszott hangfájl(ok) között</Hungarian>
             <Russian>Используется для расчета случайной позиции и указывает минимальное расстояние между игроками и источниками звука</Russian>
-            <Italian>Usati per calcolare una posizione casuale ed impostare la distanza minima tra i giocatori ed il file suono eseguito</Italian>
+            <Italian>Usati per calcolare una posizione casuale ed impostare la distanza minima tra i giocatori ed il file audio riprodotto</Italian>
             <Japanese>無作為な位置への計算や、プレイヤーと再生されるファイルの間へ最低距離を設定します</Japanese>
             <Korean>무작위 위치 계산에 사용되며 플레이어와 재생된 사운드 파일 간의 최소 거리를 설정합니다.</Korean>
             <Chinesesimp>声音将随机产生在玩家附近，此选项定义该声音最近会距离玩家多少米</Chinesesimp>
@@ -128,7 +128,7 @@
             <French>Valeur utilisée pour calculer une position aléatoire et définir la distance maximale entre les joueurs et les sons joués.</French>
             <Hungarian>Egy véletlenszerű pozíció számításához használt érték, amihez megadja a maximum távolságot a játékosok és a lejátszott hangfájl(ok) között</Hungarian>
             <Russian>Используется для расчета случайной позиции и указывает максимальное расстояние между игроками и источниками звука</Russian>
-            <Italian>Usato per calcolare una posizione casuale ed impostare la distanza massima tra giocatori e il file suono eseguito</Italian>
+            <Italian>Usato per calcolare una posizione casuale ed impostare la distanza massima tra giocatori e il file audio riprodotto</Italian>
             <Japanese>無作為な位置への計算や、プレイヤーと再生されるファイルの間へ最大距離を設定します</Japanese>
             <Korean>무작위 위치 계산에 사용되며 플레이어와 재생된 사운드 파일 간의 최대 거리를 설정합니다.</Korean>
             <Chinesesimp>声音将随机产生在玩家附近，此选项定义该声音最远会距离玩家多少米</Chinesesimp>
@@ -161,7 +161,7 @@
             <French>Délai minimal entre deux sons consécutifs.</French>
             <Hungarian>Minimum késleltetés a lejátszott hangok között</Hungarian>
             <Russian>Минимальная задержка между воспроизведением звуков</Russian>
-            <Italian>Pausa Minima tra suoni eseguiti</Italian>
+            <Italian>Pausa Minima tra suoni riprodotti</Italian>
             <Japanese>再生されるまでの最低遅延</Japanese>
             <Korean>재생된 소리간 최소 지연 시간</Korean>
             <Chinesesimp>设定每个声音档案中间最少间隔多久再进行播放</Chinesesimp>
@@ -195,7 +195,7 @@
             <French>Délai maximal entre deux sons consécutifs.</French>
             <Hungarian>Maximum késleltetés a lejátszott hangok között</Hungarian>
             <Russian>Максимальная задержка между воспроизведением звуков</Russian>
-            <Italian>Pausa Massima tra suoni eseguiti</Italian>
+            <Italian>Pausa Massima tra suoni riprodotti</Italian>
             <Japanese>再生されるまでの最大遅延</Japanese>
             <Korean>재생된 소리간 최대 지연 시간</Korean>
             <Chinesesimp>设定每个声音档案中间最多间隔多久再进行播放</Chinesesimp>
@@ -229,7 +229,7 @@
             <French>Suivre les joueurs. Si défini sur false, les sons ne seront joués qu'autour de la position du module.</French>
             <Hungarian>Játékosok követése. Ha le van tiltva, az ismétlés csak a legközelebbi logikai ponton játszik le hangokat.</Hungarian>
             <Russian>Следовать за игроками. Если установить в Ложь, звуки будут циклически проигрываться только около позиции Логики.</Russian>
-            <Italian>Segui Giocatori. Se impostato su falso, il ciclo eseguirà i suoni solo vicino ad una posizione logica.</Italian>
+            <Italian>Segui Giocatori. Se impostato su falso, il ciclo riprodurrà i suoni solo in prossimità del modulo.</Italian>
             <Japanese>プレイヤーを追随します。False に設定するとロジックの近くで延々と再生します。</Japanese>
             <Korean>플레이어를 따라갑니다. False로 설정될 경우 오직 한 자리에서만 반복해서 소리를 재생합니다.</Korean>
             <Chinesesimp>设定声音是否会在玩家的附近产生。假如关闭此功能，声音只会在模块的位置产生。</Chinesesimp>
@@ -263,7 +263,7 @@
             <French>Définit le volume des sons.</French>
             <Hungarian>A lejátszott hangok hangereje</Hungarian>
             <Russian>Громкость воспроизводимых звуков</Russian>
-            <Italian>Il volume dei suoni eseguiti</Italian>
+            <Italian>Il volume dei suoni riprodotti</Italian>
             <Japanese>再生される音の大きさ</Japanese>
             <Korean>재생되는 소리의 볼륨</Korean>
             <Chinesesimp>调整声音的音量</Chinesesimp>

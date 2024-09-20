@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, mharis001
  * Handles the surgical kit treatment by periodically closing bandaged wounds.
@@ -56,7 +56,7 @@ if (GVAR(clearTrauma) == 1) then {
     private _partIndex = ALL_BODY_PARTS find _bodyPart;
     TRACE_2("clearTrauma - clearing trauma after stitching",_bodyPart,_treatedWound);
     private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), []];
-    _bodyPartDamage set [_partIndex, (_bodyPartDamage select _partIndex) - _treatedDamageOf];
+    _bodyPartDamage set [_partIndex, (_bodyPartDamage select _partIndex) - (_treatedDamageOf * _treatedAmountOf)];
     _patient setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
     TRACE_2("clearTrauma - healed damage",_bodyPart,_treatedDamageOf);
 
@@ -83,9 +83,7 @@ if (
 };
 
 // Consume a suture for the next wound if one exists, stop stitching if none are left
-if (GVAR(consumeSurgicalKit) == 2) then {
-    // Don't consume a suture if there are no more wounds to stitch
-    if (_bandagedWoundsOnPart isEqualTo []) exitWith {false};
+if (GVAR(consumeSurgicalKit) == 2 && {_bandagedWoundsOnPart isNotEqualTo []}) then {
     ([_medic, _patient, ["ACE_suture"]] call FUNC(useItem)) params ["_user"];
     !isNull _user
 } else {

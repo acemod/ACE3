@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Updates the display (several times a second) called from the pfeh
@@ -24,7 +24,7 @@ if (isNull _display) exitWith {ERROR("No Display");};
 private _daylight = [] call EFUNC(common,ambientBrightness);
 (_display displayCtrl IDC_MICRODAGRSHELL) ctrlSetTextColor [_daylight, _daylight, _daylight, 1];
 
-(_display displayCtrl IDC_CLOCKTEXT) ctrlSetText ([daytime, "HH:MM"] call bis_fnc_timeToString);
+(_display displayCtrl IDC_CLOCKTEXT) ctrlSetText ([dayTime, "HH:MM"] call bis_fnc_timeToString);
 
 private _waypoints = [] call FUNC(deviceGetWaypoints);
 
@@ -44,7 +44,7 @@ case (APP_MODE_INFODISPLAY): {
         (_display displayCtrl IDC_MODEDISPLAY_ELEVATIONNUM) ctrlSetText _aboveSeaLevelText;
 
         //Heading:
-        _compassAngleText = if (GVAR(settingUseMils)) then {
+        private _compassAngleText = if (GVAR(settingUseMils)) then {
             [(floor ((6400 / 360) * (([ACE_player] call CBA_fnc_headDir) select 0))), 4, 0] call CBA_fnc_formatNumber;
         } else {
             ([([ACE_player] call CBA_fnc_headDir) select 0, 3, 1] call CBA_fnc_formatNumber) + "°" //degree symbol is in UTF-8
@@ -61,12 +61,12 @@ case (APP_MODE_INFODISPLAY): {
             private _dayString = if ((date select 2) < 10) then {"0" + str (date select 2)} else {str (date select 2)};
 
             (_display displayCtrl IDC_MODEDISPLAY_TIMEDISPLAYGREEN1) ctrlSetText format ["%1-%2-%3", _yearString, _monthSring, _dayString]; //"18-Feb-2010";
-            (_display displayCtrl IDC_MODEDISPLAY_TIMEDISPLAYGREEN2) ctrlSetText ([daytime, "HH:MM:SS"] call bis_fnc_timeToString);
+            (_display displayCtrl IDC_MODEDISPLAY_TIMEDISPLAYGREEN2) ctrlSetText ([dayTime, "HH:MM:SS"] call bis_fnc_timeToString);
         } else {
             private _targetPosName = "";
             private _targetPosLocationASL = [];
-            _bearingText = "----";
-            _rangeText = "----";
+            private _bearingText = "----";
+            private _rangeText = "----";
             _aboveSeaLevelText = "----";
 
             if (GVAR(currentWaypoint) == -2) then {
@@ -134,8 +134,8 @@ case (APP_MODE_COMPASS): {
                 _targetPosLocationASL = (_waypoints select GVAR(currentWaypoint)) select 1;
             };
 
-            _bearingText = "---";
-            _rangeText = "---";
+            private _bearingText = "---";
+            private _rangeText = "---";
 
             if (_targetPosLocationASL isNotEqualTo []) then {
                 private _bearing = [(getPosASL ACE_player), _targetPosLocationASL] call BIS_fnc_dirTo;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Builds color strings needed for displaying interaction text
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call ACE_interact_menu_fnc_setupTextColor
+ * call ace_interact_menu_fnc_setupTextColors
  *
  * Public: No
  */

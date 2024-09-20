@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe, Brett Mayson
  * Statement to sort weapons by their accuracy.
@@ -14,7 +14,6 @@
 
 params ["_config"];
 
-private _fireModes = getArray (_config >> "modes");
 private _dispersion = [];
 
 {
@@ -27,7 +26,7 @@ private _dispersion = [];
 
         _dispersion pushBackUnique _n;
     };
-} foreach _fireModes;
+} forEach (getArray (_config >> "modes"));
 
 _dispersion sort true;
 

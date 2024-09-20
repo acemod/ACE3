@@ -14,7 +14,7 @@ private _vehicles = configProperties [configFile >> "CfgVehicles", "(isClass _x)
             private _glassesConfig = configFile >> "CfgGlasses" >> _name;
             if (((!isClass _weaponConfig) || {(getNumber (_weaponConfig >> "type")) in [1,2,4]}) && {!isClass _glassesConfig}) then {
                 diag_log text format ["%1 -> TransportItems -> %2 = Bad", _vehType, _name];
-                if ("ace" in toLower (_vehType + _name)) then { _testPass = false; };
+                if ("ace" in toLowerANSI (_vehType + _name)) then { _testPass = false; };
             };
         };
     } forEach (configProperties [_x >> "TransportItems", "isClass _x", true]);
@@ -23,7 +23,7 @@ private _vehicles = configProperties [configFile >> "CfgVehicles", "(isClass _x)
         private _weaponConfig = configFile >> "CfgWeapons" >> _name;
         if ((!isClass _weaponConfig) || {!((getNumber (_weaponConfig >> "type")) in [1,2,4])}) then {
             diag_log text format ["%1 -> TransportWeapons -> %2 = Bad", _vehType, _name];
-            if ("ace" in toLower (_vehType + _name)) then { _testPass = false; };
+            if ("ace" in toLowerANSI (_vehType + _name)) then { _testPass = false; };
         };
     } forEach (configProperties [_x >> "TransportWeapons", "isClass _x", true]);
     {
@@ -31,7 +31,7 @@ private _vehicles = configProperties [configFile >> "CfgVehicles", "(isClass _x)
         private _magConfig = configFile >> "CfgMagazines" >> _name;
         if ((!isClass _magConfig)) then {
             diag_log text format ["%1 -> TransportMagazines -> %2 = Bad", _vehType, _name];
-            if ("ace" in toLower (_vehType + _name)) then { _testPass = false; };
+            if ("ace" in toLowerANSI (_vehType + _name)) then { _testPass = false; };
         };
     } forEach (configProperties [_x >> "TransportMagazines", "isClass _x", true]);
     {
@@ -39,7 +39,7 @@ private _vehicles = configProperties [configFile >> "CfgVehicles", "(isClass _x)
         private _vehConfig = configFile >> "CfgVehicles" >> _name;
         if ((!isClass _vehConfig)) then {
             diag_log text format ["%1 -> TransportBackpacks -> %2 = Bad", _vehType, _name];
-            if ("ace" in toLower (_vehType + _name)) then { _testPass = false; };
+            if ("ace" in toLowerANSI (_vehType + _name)) then { _testPass = false; };
         };
     } forEach (configProperties [_x >> "TransportBackpacks", "isClass _x", true]);
 } forEach _vehicles;

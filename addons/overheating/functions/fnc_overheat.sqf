@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Commy2 and esteldunedain
  * Handle weapon fire, heat up the weapon

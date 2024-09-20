@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: VKing
  * Detonate explosives via script, for use in triggers or mission scripts to detonate editor-placed explosives.

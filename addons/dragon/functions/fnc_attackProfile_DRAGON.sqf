@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM) (Code inspired by NouberNou's Dragon Guidance)
+ * Author: tcvm (Code inspired by NouberNou's Dragon Guidance)
  * Attack profile: Dragon Guidance
  *
  * Arguments:
@@ -23,7 +23,7 @@ _attackProfileStateParams params ["_maxCorrectableDistance", "_wireCut", "_seeke
 
 private _projectilePos = getPosASL _projectile;
 private _distanceToProjectile = (getPosASL _shooter) vectorDistanceSqr _projectilePos;
-private _retPos = _projectilePos vectorAdd (AGLtoASL (_projectile vectorModelToWorld [0, 50, 0]));
+private _retPos = _projectilePos vectorAdd (AGLToASL (_projectile vectorModelToWorld [0, 50, 0]));
 
 // _shooter returns the vehicle that shot it. If the launcher dies, the wire would probably be cut so assume it
 if ((_distanceToProjectile > _seekerMaxRangeSqr) || _wireCut || { !alive _shooter }) exitWith {

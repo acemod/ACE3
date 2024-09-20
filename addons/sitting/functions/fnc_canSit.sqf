@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas, vabene1111
  * Check if the player can sit down.
@@ -21,6 +21,7 @@ params ["_seat", "_player", ["_seatPos", 0]];
 
 // Sitting enabled, not occupied and standing up (or not on a big slope)
 XGVAR(enable) &&
+{[_player, _seat] call EFUNC(common,canInteractWith)} &&
 {isNil {_player getVariable QGVAR(sittingStatus)}} &&
 {
     private _seatsClaimed = _seat getVariable [QGVAR(seatsClaimed), []];

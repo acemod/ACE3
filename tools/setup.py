@@ -17,8 +17,9 @@ PROJECTDIR = "ace"
 CBA = "P:\\x\\cba"
 ##########################
 
+
 def main():
-    FULLDIR = "{}\\{}".format(MAINDIR,PROJECTDIR)
+    FULLDIR = "{}\\{}".format(MAINDIR, PROJECTDIR)
     print("""
   ######################################
   # ACE3 Development Environment Setup #
@@ -36,14 +37,14 @@ def main():
     [Arma 3 installation directory]\\{} => ACE3 project folder
     P:\\{}                              => ACE3 project folder
 
-  It will also copy the required CBA includes to {}, if you do not have the CBA source code already.""".format(FULLDIR,FULLDIR,CBA))
+  It will also copy the required CBA includes to {}, if you do not have the CBA source code already.""".format(FULLDIR, FULLDIR, CBA))
     print("\n")
 
     try:
         reg = winreg.ConnectRegistry(None, winreg.HKEY_LOCAL_MACHINE)
         key = winreg.OpenKey(reg,
-                r"SOFTWARE\Wow6432Node\bohemia interactive\arma 3")
-        armapath = winreg.EnumValue(key,1)[1]
+                             r"SOFTWARE\Wow6432Node\bohemia interactive\arma 3")
+        armapath = winreg.EnumValue(key, 1)[1]
     except:
         print("Failed to determine Arma 3 Path.")
         return 1
@@ -63,15 +64,26 @@ def main():
     if repl.lower() != "y":
         return 3
 
-    print("\n# Creating links ...")
+    hemmt_path = os.path.join(projectpath, ".hemttout", "dev")
+    print("\n# Use Hemmt Dev Path for arma filepatching:")
+    print(f"  y: {hemmt_path}")
+    print(f"  n: {projectpath}")
+    repl = input("(y/n): ")
+    filepatching_path = projectpath
+    if repl.lower() == "y":
+        if not os.path.exists(hemmt_path):
+            print(f"creating {hemmt_path}")
+            os.makedirs(hemmt_path)
+        filepatching_path = hemmt_path
 
-    if os.path.exists("P:\\{}\\{}".format(MAINDIR,PROJECTDIR)):
+    if os.path.exists("P:\\{}\\{}".format(MAINDIR, PROJECTDIR)):
         print("Link on P: already exists. Please finish the setup manually.")
         return 4
 
     if os.path.exists(os.path.join(armapath, MAINDIR, PROJECTDIR)):
         print("Link in Arma directory already exists. Please finish the setup manually.")
         return 5
+    print("\n# Creating links ...")
 
     try:
         if not os.path.exists("P:\\{}".format(MAINDIR)):
@@ -79,15 +91,14 @@ def main():
         if not os.path.exists(os.path.join(armapath, MAINDIR)):
             os.mkdir(os.path.join(armapath, MAINDIR))
 
-        subprocess.call(["cmd", "/c", "mklink", "/J", "P:\\{}\\{}".format(MAINDIR,PROJECTDIR), projectpath])
-        subprocess.call(["cmd", "/c", "mklink", "/J", os.path.join(armapath, MAINDIR, PROJECTDIR), projectpath])
+        subprocess.call(["cmd", "/c", "mklink", "/J", "P:\\{}\\{}".format(MAINDIR, PROJECTDIR), projectpath])
+        subprocess.call(["cmd", "/c", "mklink", "/J", os.path.join(armapath, MAINDIR, PROJECTDIR), filepatching_path])
     except:
         raise
         print("Something went wrong during the link creation. Please finish the setup manually.")
         return 6
 
     print("# Links created successfully.")
-
 
     print("\n# Copying required CBA includes ...")
 

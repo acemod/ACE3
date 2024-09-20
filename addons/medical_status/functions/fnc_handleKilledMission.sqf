@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Vanilla EntityKilled mission EH, attempts to set correct source/killer for other killed event handlers.

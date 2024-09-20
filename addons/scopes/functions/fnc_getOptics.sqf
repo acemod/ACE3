@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Gets the optic classnames of all currently equipped weapons.
@@ -21,7 +21,7 @@ params ["_unit"];
 
 private _optics = ["", "", ""];
 
-if (!(_unit isKindOf "CAManBase")) exitWith {_optics};
+if !(_unit isKindOf "CAManBase") exitWith {_optics};
 
 {
     if (count _x >= 2) then {

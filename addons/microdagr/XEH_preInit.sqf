@@ -9,6 +9,6 @@ PREP_RECOMPILE_END;
 //Functions that are called for each draw of the map:
 GVAR(miniMapDrawHandlers) = [];
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

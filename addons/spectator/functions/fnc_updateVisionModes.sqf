@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Adds or removes spectator vision modes from the selection available to the local player.
  *
  * Possible vision modes are:

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Creates an isolated ACE action
@@ -49,7 +49,7 @@ _position = if (_position isEqualType "") then {
 } else {
     if (_position isEqualType []) then {
         // If the action is set to a array position, create the suitable code
-        compile format ["%1", _position];
+        compile str _position;
     } else {
         _position;
     };

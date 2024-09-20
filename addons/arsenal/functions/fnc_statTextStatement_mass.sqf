@@ -1,19 +1,20 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe
  * Text statement for the mass stat.
  *
  * Arguments:
- * 0: not used
- * 1: item config path (CONFIG)
+ * 0: Not used
+ * 1: Item config path <CONFIG>
  *
  * Return Value:
- * String to display
+ * Stat Text <STRING>
  *
  * Public: No
 */
 
 params ["", "_config"];
+TRACE_1("statTextStatement_mass",_config);
 
 private _mass = getNumber (_config >> "mass");
 
@@ -25,4 +26,4 @@ if (_mass == 0 && {isClass (_config >> "WeaponSlotsInfo")}) then {
     _mass = getNumber (_config >> "WeaponSlotsInfo" >> "mass");
 };
 
-format ["%1kg (%2lb)",((_mass * 0.1 * (1/2.2046) * 100) / 100) ToFixed 2, ((_mass * 0.1 * 100) / 100) ToFixed 2]
+format ["%1kg (%2lb)", ((_mass * 0.1 * (1 / 2.2046) * 100) / 100) toFixed 2, ((_mass * 0.1 * 100) / 100) toFixed 2]

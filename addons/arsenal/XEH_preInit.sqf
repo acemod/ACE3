@@ -1,78 +1,94 @@
 #include "script_component.hpp"
 #include "defines.hpp"
 
+#define TOOLS_TAB_ICON "\A3\ui_f\data\igui\cfg\actions\repair_ca.paa"
+
 ADDON = false;
 
 PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-// Arsenal
-[QGVAR(camInverted), "CHECKBOX", localize LSTRING(invertCameraSetting), localize LSTRING(settingCategory), false] call CBA_fnc_addSetting;
-[QGVAR(enableModIcons), "CHECKBOX", [LSTRING(modIconsSetting), LSTRING(modIconsTooltip)], localize LSTRING(settingCategory), true] call CBA_fnc_addSetting;
-[QGVAR(fontHeight), "SLIDER", [LSTRING(fontHeightSetting), LSTRING(fontHeightTooltip)], localize LSTRING(settingCategory), [1, 10, 4.5, 1]] call CBA_fnc_addSetting;
-[QGVAR(enableIdentityTabs), "CHECKBOX", localize LSTRING(enableIdentityTabsSettings), localize LSTRING(settingCategory), true, true] call CBA_fnc_addSetting;
+#include "initSettings.inc.sqf"
 
-// Arsenal loadouts
-[QGVAR(allowDefaultLoadouts), "CHECKBOX", [LSTRING(allowDefaultLoadoutsSetting), LSTRING(defaultLoadoutsTooltip)], [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], true, true] call CBA_fnc_addSetting;
-[QGVAR(allowSharedLoadouts), "CHECKBOX", localize LSTRING(allowSharingSetting), [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], true, true] call CBA_fnc_addSetting;
-[QGVAR(EnableRPTLog), "CHECKBOX", [LSTRING(printToRPTSetting), LSTRING(printToRPTTooltip)], [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], false, false] call CBA_fnc_addSetting;
+// Arsenal events
+[QGVAR(statsChangePage), LINKFUNC(buttonStatsPage)] call CBA_fnc_addEventHandler;
+[QGVAR(displayStats), LINKFUNC(handleStats)] call CBA_fnc_addEventHandler;
+[QGVAR(actionsChangePage), LINKFUNC(buttonActionsPage)] call CBA_fnc_addEventHandler;
+[QGVAR(displayActions), LINKFUNC(handleActions)] call CBA_fnc_addEventHandler;
 
-[QGVAR(loadoutsSaveFace), "CHECKBOX", localize LSTRING(loadoutsSaveFaceSetting), [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], false] call CBA_fnc_addSetting;
-[QGVAR(loadoutsSaveVoice), "CHECKBOX", localize LSTRING(loadoutsSaveVoiceSetting), [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], false] call CBA_fnc_addSetting;
-[QGVAR(loadoutsSaveInsignia), "CHECKBOX", localize LSTRING(loadoutsSaveInsigniaSetting), [localize LSTRING(settingCategory), localize LSTRING(loadoutSubcategory)], true] call CBA_fnc_addSetting;
-
-[QGVAR(statsToggle), {
-    params ["_display", "_showStats"];
-
-    private _statsCtrlGroupCtrl = _display displayCtrl IDC_statsBox;
-    private _statsPreviousPageCtrl = _display displayCtrl IDC_statsPreviousPage;
-    private _statsNextPageCtrl = _display displayCtrl IDC_statsNextPage;
-    private _statsCurrentPageCtrl = _display displayCtrl IDC_statsCurrentPage;
-
-    private _statsButtonCtrl = _display displayCtrl IDC_statsButton;
-    private _statsButtonCloseCtrl = _display displayCtrl IDC_statsButtonClose;
-
-    {
-        _x ctrlShow (GVAR(showStats) && {_showStats});
-    } forEach [
-        _statsCtrlGroupCtrl,
-        _statsPreviousPageCtrl,
-        _statsNextPageCtrl,
-        _statsCurrentPageCtrl,
-        _statsButtonCloseCtrl
-    ];
-
-    _statsButtonCtrl ctrlShow (!GVAR(showStats) && {_showStats})
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(statsButton), {
-    _this call FUNC(buttonStats);
-}] call CBA_fnc_addEventHandler;
-
-[QGVAR(statsChangePage), {
-    _this call FUNC(buttonStatsPage);
-}] call CBA_fnc_addEventHandler;
-
-
-[QGVAR(displayStats), {
-    _this call FUNC(handleStats);
-}] call CBA_fnc_addEventHandler;
-
-call FUNC(compileStats);
+call FUNC(compileActions);
 call FUNC(compileSorts);
+call FUNC(compileStats);
 
 [QUOTE(ADDON), {!isNil QGVAR(camera)}] call CBA_fnc_registerFeatureCamera;
 
-// Compatibility with CBA scripted optics and dispoable framework
+// Compatibility with CBA scripted optics and disposable framework
 [QGVAR(displayOpened), {
-    "cba_optics_arsenalOpened" call CBA_fnc_localEvent;
-    "cba_disposable_arsenalOpened" call CBA_fnc_localEvent;
+    "CBA_optics_arsenalOpened" call CBA_fnc_localEvent;
+    "CBA_disposable_arsenalOpened" call CBA_fnc_localEvent;
+    EGVAR(common,blockItemReplacement) = true;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(displayClosed), {
-    "cba_optics_arsenalClosed" call CBA_fnc_localEvent;
-    "cba_disposable_arsenalClosed" call CBA_fnc_localEvent;
+    "CBA_optics_arsenalClosed" call CBA_fnc_localEvent;
+    "CBA_disposable_arsenalClosed" call CBA_fnc_localEvent;
+    EGVAR(common,blockItemReplacement) = false;
 }] call CBA_fnc_addEventHandler;
+
+[QGVAR(cargoChanged), {
+    params ["_display"];
+    // Only update actions if necessary, this can get performance-intensive using the arrow keys
+    if (!GVAR(updateActionsOnCargoChange)) exitWith {};
+    private _actionInfo = [_display];
+    _actionInfo append GVAR(actionInfo);
+    [QGVAR(displayActions), _actionInfo] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
+
+// Setup Tools tab
+[keys (uiNamespace getVariable [QGVAR(configItemsTools), createHashMap]), LLSTRING(toolsTab), TOOLS_TAB_ICON, -1, true] call FUNC(addRightPanelButton);
+
+// TODO: make IDCs able to match IDX with simple math?
+GVAR(idxMap) = createHashMapFromArray [
+    [IDC_buttonPrimaryWeapon, IDX_VIRT_PRIMARY_WEAPONS],
+    [IDC_buttonHandgun, IDX_VIRT_HANDGUN_WEAPONS],
+    [IDC_buttonSecondaryWeapon, IDX_VIRT_SECONDARY_WEAPONS],
+    [IDC_buttonHeadgear, IDX_VIRT_HEADGEAR],
+    [IDC_buttonUniform, IDX_VIRT_UNIFORM],
+    [IDC_buttonVest, IDX_VIRT_VEST],
+    [IDC_buttonBackpack, IDX_VIRT_BACKPACK],
+    [IDC_buttonGoggles, IDX_VIRT_GOGGLES],
+    [IDC_buttonNVG, IDX_VIRT_NVG],
+    [IDC_buttonBinoculars, IDX_VIRT_BINO],
+    [IDC_buttonMap, IDX_VIRT_MAP],
+    [IDC_buttonGPS, IDX_VIRT_COMMS],
+    [IDC_buttonRadio, IDX_VIRT_RADIO],
+    [IDC_buttonCompass, IDX_VIRT_COMPASS],
+    [IDC_buttonWatch, IDX_VIRT_WATCH]
+];
+
+// Make new hashmaps for face/voice/insignia so mission makers can disable them
+// Copies of hashmaps aren't final
+GVAR(faceCache) = +(uiNamespace getVariable QGVAR(faceCache));
+GVAR(voiceCache) = +(uiNamespace getVariable QGVAR(voiceCache));
+GVAR(insigniaCache) = +(uiNamespace getVariable QGVAR(insigniaCache));
+
+// Get mission/campaign insignias
+// BIS_fnc_setUnitInsignia will look in mission config, then campaign, then global config last, so overwrite accordingly
+private _insigniaCondition = toString {
+    if (isNumber (_x >> "scope")) then {
+        getNumber (_x >> "scope") == 2
+    } else {
+        true
+    };
+};
+
+// Ref fnc_addListBoxItem, 0/nil = configFile, 1 = campaignConfigFile, 2 = missionConfigFile
+{
+    GVAR(insigniaCache) set [configName _x, 1];
+} forEach (_insigniaCondition configClasses (campaignConfigFile >> "CfgUnitInsignia"));
+{
+    GVAR(insigniaCache) set [configName _x, 2];
+} forEach (_insigniaCondition configClasses (missionConfigFile >> "CfgUnitInsignia"));
 
 ADDON = true;

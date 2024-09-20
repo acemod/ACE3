@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Creates UI
@@ -18,7 +18,7 @@
 params ["_display"];
 TRACE_1("weaponInfo_onLoad",_display);
 
-uinamespace setVariable [QGVAR(display), _display];
+uiNamespace setVariable [QGVAR(display), _display];
 [_display, true] call cba_optics_fnc_loadScriptedOptic; // pass thru to cba
 
 

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, PabstMirror
  * Get the death animation for the unit at current time
@@ -27,9 +27,11 @@ if (getNumber (_unitAnimationCfg >> "terminal") == 1) exitWith {_animationState}
 
 private _unitActionsCfg = configFile >> "CfgMovesBasic" >> "Actions" >> getText (_unitAnimationCfg >> "actions");
 
-TRACE_2("Animation/Action", configName _unitAnimationCfg, configName _unitActionsCfg);
+TRACE_2("Animation/Action",configName _unitAnimationCfg,configName _unitActionsCfg);
 
-if (vehicle _unit != _unit) then {
+if (isNull objectParent _unit) then {
+    _returnAnimation = getText (_unitActionsCfg >> "die");
+} else {
     private _interpolateArray = getArray (_unitAnimationCfg >> "interpolateTo");
 
     for "_index" from 0 to (count _interpolateArray - 1) step 2 do {
@@ -42,8 +44,6 @@ if (vehicle _unit != _unit) then {
             _returnAnimation = _indexAnimation;
         };
     };
-} else {
-    _returnAnimation = getText (_unitActionsCfg >> "die");
 };
 
 //Fallback if nothing valid found:

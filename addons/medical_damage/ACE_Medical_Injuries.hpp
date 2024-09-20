@@ -97,8 +97,8 @@ class ACE_Medical_Injuries {
                 weighting[] = {{0.35, 0}, {0.35, 1}};
                 // bruises caused by bullets hitting the plate are big
                 sizeMultiplier = 3.2;
-                // tone down the pain a tiny bit to compensate
-                painMultiplier = 0.8;
+                // increase the pain to allow for bruises to actually knock out on repeated hits
+                painMultiplier = 2.2;
             };
             class VelocityWound {
                 // velocity wounds are only in the 0.35-1.5 range
@@ -165,6 +165,13 @@ class ACE_Medical_Injuries {
                 weighting[] = {{0.5, 0}, {0.35, 1}};
                 sizeMultiplier = 2;
                 painMultiplier = 0.9;
+            };
+        };
+        class vehiclehit: explosive {
+            // vehicle explosions are usually caused by explosive damage and should behave similarly
+            thresholds[] = {{6, 3}, {4.5, 2}, {2, 2}, {0.8, 1}, {0.2, 1}, {0, 0}};
+            class woundHandlers: woundHandlers {
+                GVAR(vehiclehit) = QFUNC(woundsHandlerVehiclehit);
             };
         };
         class vehiclecrash {

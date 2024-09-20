@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Bohemia Interactive
  * Module function to open a full arsenal on a unit
@@ -21,19 +21,19 @@
 params ["_logic", "", "_activated"];
 
 if (_activated && local _logic) then {
-    _unit = _logic getvariable ["bis_fnc_curatorAttachObject_object",objnull];
+    _unit = _logic getVariable ["bis_fnc_curatorAttachObject_object",objNull];
 
     //--- Check if the unit is suitable
     _error = "";
     switch true do {
-        case (isnull _unit): {_error = localize "str_a3_BIS_fnc_showCuratorFeedbackMessage_506";};
+        case (isNull _unit): {_error = localize "str_a3_BIS_fnc_showCuratorFeedbackMessage_506";};
         case !(alive _unit): {_error = localize "str_a3_BIS_fnc_moduleArsenal_errorDead";};
-        case (isnull group _unit || !(side group _unit in [east,west,resistance,civilian])): {_error = localize "str_a3_BIS_fnc_moduleArsenal_errorBrain";};
-        case (vehicle _unit != _unit || effectivecommander _unit != _unit): {_error = localize "str_a3_BIS_fnc_moduleArsenal_errorVehicle";};
+        case (isNull group _unit || !(side group _unit in [east,west,resistance,civilian])): {_error = localize "str_a3_BIS_fnc_moduleArsenal_errorBrain";};
+        case (!isNull objectParent _unit || effectiveCommander _unit != _unit): {_error = localize "str_a3_BIS_fnc_moduleArsenal_errorVehicle";};
     };
 
     if (_error == "") then {
-        if (["ACE_Arsenal"] call EFUNC(common,isModLoaded)) then {
+        if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
             if (!isPlayer _unit || {player == _unit}) then {
 
                 [{
@@ -51,10 +51,10 @@ if (_activated && local _logic) then {
         } else {
             if !(isPlayer _unit) then {
 
-                ([] call bis_fnc_rscLayer) cuttext ["","black out",0.5];
+                ([] call bis_fnc_rscLayer) cutText ["","black out",0.5];
                 ["#(argb,8,8,3)color(0,0,0,1)",false,nil,0,[0.5,0]] call bis_fnc_textTiles;
                 ["Open",[true,nil,_unit]] call bis_fnc_arsenal;
-                ([] call bis_fnc_rscLayer) cuttext ["","plain"];
+                ([] call bis_fnc_rscLayer) cutText ["","plain"];
             } else {
 
                 [objNull, localize "str_a3_BIS_fnc_moduleArsenal_errorDead"] call bis_fnc_showCuratorFeedbackMessage;

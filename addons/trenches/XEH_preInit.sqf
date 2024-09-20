@@ -6,8 +6,8 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
-GVAR(entrenchingTools) = call (uiNamespace getVariable QGVAR(entrenchingTools));
+GVAR(entrenchingTools) = keys (uiNamespace getVariable QGVAR(entrenchingTools));
 
 ADDON = true;

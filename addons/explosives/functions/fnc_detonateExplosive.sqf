@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Causes the unit to detonate the passed explosive.
@@ -7,8 +7,8 @@
  * 0: Unit <OBJECT>
  * 1: Max range (-1 to ignore) <NUMBER>
  * 2: Explosive <ARRAY>
- *   2.0: Explosive <OBJECT>
- *   2.1: Fuse time <NUMBER>
+ * - 0: Explosive <OBJECT>
+ * - 1: Fuse time <NUMBER>
  * 3: Trigger Item Classname <STRING>
  *
  * Return Value:
@@ -31,24 +31,8 @@ private _result = true;
 
 if !([_unit, _range, _item select 0, _item select 1, _triggerClassname] call FUNC(checkDetonateHandlers)) exitWith {false};
 
-if (getNumber (ConfigFile >> "CfgAmmo" >> typeOf (_item select 0) >> "TriggerWhenDestroyed") == 0) then {
-    private _previousExp = _item select 0;
-    private _exp = getText (ConfigFile >> "CfgAmmo" >> typeOf (_previousExp) >> QGVAR(Explosive));
-    if (_exp != "") then {
-        _exp = createVehicle [_exp, [0,0,15001], [], 0, "NONE"];
-        _exp setDir (getDir _previousExp);
-        _item set [0, _exp];
-        private _pos = getPosASL _previousExp;
-        deleteVehicle _previousExp;
-        _exp setPosASL _pos;
-    };
-};
-
 if (isNull (_item select 0)) then {
     WARNING_1("Explosive is null [%1]",_this);
-};
-if ((getNumber (configFile >> "CfgAmmo" >> (typeOf (_item select 0)) >> "triggerWhenDestroyed")) != 1) then {
-    WARNING_1("Explosive is not triggerWhenDestroyed [%1]",typeOf (_item select 0));
 };
 
 [QGVAR(detonate), [_unit, _item select 0, _item select 1]] call CBA_fnc_serverEvent;

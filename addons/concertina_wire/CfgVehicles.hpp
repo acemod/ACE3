@@ -136,7 +136,7 @@ class CfgVehicles {
                     distance = 4;
                     condition = "true";
                     //wait a frame to handle "Do When releasing action menu key" option:
-                    statement = QUOTE([ARR_2({_this call FUNC(deploy)}, [ARR_2(_target,_player)])] call CBA_fnc_execNextFrame);
+                    statement = QUOTE([ARR_2({_this call FUNC(deploy)},[ARR_2(_target,_player)])] call CBA_fnc_execNextFrame);
                     showDisabled = 0;
                     exceptions[] = {};
                     icon = QPATHTOF(UI\icon_sandbag_ca.paa);

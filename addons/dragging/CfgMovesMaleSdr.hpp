@@ -2,8 +2,6 @@ class CfgMovesMaleSdr: CfgMovesBasic {
     class InjuredMovedBase;
     class AgonyBaseRfl;
     class StandBase;
-    class AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_1;
-    class DraggerBase;
 
     class States {
         class AcinPknlMstpSnonWnonDnon_AcinPercMrunSnonWnonDnon: InjuredMovedBase {
@@ -14,59 +12,71 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             speed = -10; // 1/10
         };
 
-        class AmovPercMstpSrasWpstDnon: StandBase {
-            ConnectTo[] = {
-                "AmovPercMstpSrasWpstDnon",
-                0.02,
-                "AovrPercMstpSrasWpstDf",
-                0.025,
-                "AmovPercMstpSrasWpstDnon_AidlPercMstpSlowWpstDnon",
-                0.0099999998,
-                "PistolMagazineReloadStand",
-                0.1,
-                "AmovPercMstpSrasWpstDnon_AmovPercMstpSlowWpstDnon",
-                0.02,
-                "AmovPercMstpSrasWpstDnon_AmovPercMstpSrasWrflDnon",
-                0.02,
-                "AmovPercMstpSrasWpstDnon_AwopPercMstpSoptWbinDnon",
-                0.02,
-                "AmovPercMstpSrasWpstDnon_AmovPercMstpSnonWnonDnon",
-                0.02,
-                "AmovPercMstpSrasWpstDnon_SaluteIn",
-                0.02,
-                "AwopPercMstpSgthWpstDnon_Part1",
-                0.1,
-                "AmovPercMstpSrasWpstDnon_AinvPknlMstpSnonWnonDnon",
-                0.02,
-                "AmovPercMstpSrasWpstDnon_AmovPercMstpSrasWlnrDnon",
-                0.02,
-                "AmovPercMstpSrasWpstDnon_AadjPercMstpSrasWpstDup",
-                0.02,
-                "AmovPercMstpSrasWpstDnon_AadjPercMstpSrasWpstDdown",
-                0.02,
-                "AmovPercMstpSrasWpstDnon_AadjPercMstpSrasWpstDleft",
-                0.02,
-                "AmovPercMstpSrasWpstDnon_AadjPercMstpSrasWpstDright",
-                0.02,
-                "AmovPercMstpSrasWpstDnon_AmovPercMstpSrasWpstDnon_gear",
-                0.02,
-                "Acts_starterPistol_in",
-                0.001,
-                "Acts_PistolRaisedStand_Default",
-                1,
-                "ace_dragging",
+        // For dragging with rifles
+        class AmovPercMstpSlowWrflDnon;
+        class AmovPercMstpSrasWrflDnon: AmovPercMstpSlowWrflDnon {
+            ConnectTo[] += {
+                "ace_dragging_rifle_limpB",
                 0.1
             };
         };
 
+        class AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_1;
         class AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_2: AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_1 {
             aiming = "aimingDefault";
             aimingBody = "aimingUpDefault";
             aimPrecision = 5; // default: 1
+            ConnectTo[] += {
+                "ace_dragging_rifle_limpB",
+                0.1
+            };
+            InterpolateTo[] += {
+                "ace_dragging_rifle_limpB",
+                0.1
+            };
         };
 
+        class AcinPknlMstpSrasWrflDnon: AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_1 {
+            ConnectTo[] += {
+                "ace_dragging_rifle_limpB",
+                0.1
+            };
+            InterpolateTo[] += {
+                "ace_dragging_rifle_limpB",
+                0.1
+            };
+        };
+
+        class AcinPknlMwlkSrasWrflDb: AmovPercMstpSlowWrflDnon_AcinPknlMwlkSlowWrflDb_1 {
+            ConnectTo[] += {
+                "ace_dragging_rifle_limpB",
+                0.1
+            };
+            InterpolateTo[] += {
+                "ace_dragging_rifle_limpB",
+                0.1
+            };
+        };
+
+        class ace_dragging_rifle_limpB: AcinPknlMwlkSrasWrflDb {
+            speed = 0.5;
+        };
+
+        // For dragging with pistols
+        class AmovPercMstpSrasWpstDnon: StandBase {
+            ConnectTo[] += {
+                "ace_dragging",
+                0.1,
+                "ace_dragging_limpB",
+                0.1,
+                "ace_dragging_static",
+                0.1
+            };
+        };
+
+        class DraggerBase;
         class ace_dragging: DraggerBase {
-            actions = "ace_MoveWithInjuredManDraggerPst";
+            actions = "ACE_MoveWithInjuredManDraggerPst";
             aiming = "aimingPistol";
             aimingBody = "aimingPistol";
             aimPrecision = 2; // default: 1
@@ -75,14 +85,24 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             ConnectTo[] = {
                 "ace_dragging",
                 0.1,
+                "ace_dragging_limpB",
+                0.1,
                 "ace_dragging_drop",
-                0.2
+                0.2,
+                "ace_dragging_static",
+                0.1
             };
             disableWeapons = 0;
             duty = 0.6;
             enableBinocular = 0;
             file = QPATHTO_T(anim\ace_dragging.rtm);
             InterpolateTo[] = {
+                "ace_dragging",
+                0.1,
+                "ace_dragging_limpB",
+                0.1,
+                "ace_dragging_drop",
+                0.2,
                 "ace_dragging_static",
                 0.1
             };
@@ -93,20 +113,11 @@ class CfgMovesMaleSdr: CfgMovesBasic {
             turnSpeed = 0.5;
         };
 
+        class ace_dragging_limpB: ace_dragging {
+            speed = 0.5;
+        };
+
         class ace_dragging_static: ace_dragging {
-            ConnectTo[] = {
-                "ace_dragging",
-                0.1,
-                "ace_dragging_drop",
-                0.2
-            };
-            InterpolateTo[] = {
-                "ace_dragging",
-                0.1,
-                "ace_dragging_drop",
-                0.2
-            };
-            looped = 1;
             speed = 0;
         };
 

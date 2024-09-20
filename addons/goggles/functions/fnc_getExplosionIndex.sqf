@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, commy2
  * Turns 0-1 damage of explosion Event into a rating system of 0-3

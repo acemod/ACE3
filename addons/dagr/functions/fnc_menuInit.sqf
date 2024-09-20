@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Rosuto, Ruthberg
  * Creates the DAGR menu dialog
@@ -10,6 +10,7 @@
  * None
  *
  * Example:
+ * [] call ace_dagr_fnc_menuInit
  *
  * Public: No
  */
@@ -540,7 +541,7 @@ GVAR(menuRun) = true;
         };
         case "options": {
             (__dsp displayCtrl __Option0) ctrlSetText "Signal Delay";
-            (__dsp displayCtrl __Option1) ctrlSetText (if (GVAR(useDegrees)) then { "Direction: Deg" } else { "Direction: MIL" });
+            (__dsp displayCtrl __Option1) ctrlSetText (["Direction: MIL", "Direction: Deg"] select GVAR(useDegrees));
             (__dsp displayCtrl (__Selection0 + GVAR(selection))) ctrlSetText QPATHTOF(UI\DAGR_Selection.paa);
             if (GVAR(SEL)) then {
                 GVAR(vectorConnected) = false;
@@ -583,7 +584,7 @@ GVAR(menuRun) = true;
             };
             GVAR(tmpUpdateRate) = 0.1 max GVAR(tmpUpdateRate) min 2.0;
             if (!GVAR(busy)) then {
-                (__dsp displayCtrl __mainText) ctrlSetText (Str(GVAR(tmpUpdateRate) * 1000) + "ms");
+                (__dsp displayCtrl __mainText) ctrlSetText (str(GVAR(tmpUpdateRate) * 1000) + "ms");
                 (__dsp displayCtrl __F1) ctrlSetText "Save";
                 (__dsp displayCtrl __F3) ctrlSetText "Cancel";
             };
