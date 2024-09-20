@@ -50,9 +50,9 @@ dependencies = [
 
 [[package]]
 name = "arma-rs"
-version = "1.11.0"
+version = "1.11.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bad8039943dfee4cb81a4fb4cdab56b1003c4b0f21ffed7e71b323072e3b240a"
+checksum = "e722ed20b6266ceccf4334d32a528fcef9a2dca341b8bbcceb99eb7152081239"
 dependencies = [
  "arma-rs-proc",
  "crossbeam-channel",
