@@ -27,7 +27,7 @@ PREP(attackProfile_LIN);
 PREP(attackProfile_LOFT);
 PREP(attackProfile_WIRE);
 PREP(attackProfile_BEAM);
-//re-enable after feature merge - PREP(attackProfile_JDAM);
+PREP(attackProfile_JDAM);
 
 // Javelin profiles
 PREP(attackProfile_JAV_DIR);
