@@ -36,7 +36,7 @@ if (!GVAR(spallEnabled) || {!(_ammo call FUNC(shouldSpall))}) exitWith {
 };
 
 private _hitPartEventHandler = _projectile addEventHandler ["HitPart", {
-    params ["_projectile", "_hitObject", "", "_posASL", "_velocity"];
+    params ["_projectile", "_hitObject", "", "_posASL", "_velocity", "_surfNorm", "", "" ,"_surfaceType"];
     private _ammo = typeOf _projectile;
     private _vectorUp = vectorUp _projectile;
 
