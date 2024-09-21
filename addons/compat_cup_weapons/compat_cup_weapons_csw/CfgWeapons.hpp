@@ -60,6 +60,7 @@ class CfgWeapons {
             class assembleTo {
                 ace_csw_m3Tripod = "CUP_I_M2StaticMG_AAF";
                 ace_csw_m3TripodLow = "CUP_I_M2StaticMG_MiniTripod_AAF";
+                EGVAR(compat_spe,m3Tripod) = "CUP_I_M2StaticMG_MiniTripod_AAF";
             };
         };
         class WeaponSlotsInfo: WeaponSlotsInfo {

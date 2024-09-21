@@ -37,7 +37,7 @@ private _bestMagCount = -1;
                 _bestMagCount = _xAmmo;
             };
         };
-    } forEach (getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines"));
+    } forEach (compatibleMagazines _weapon);
 } forEach (_vehicle weaponsTurret _turret);
 TRACE_3("best fit",_desiredAmmo,_bestMag,_bestMagCount);
 

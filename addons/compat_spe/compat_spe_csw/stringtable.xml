@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_SPE_CSW">
+        <Key ID="STR_ACE_Compat_SPE_CSW_alteringHeight">
+            <English>Altering Height...</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_SPE_CSW_50Rnd_762x63_Tracer">
+            <English>.30-06 50Rnd Belt (M2/Tracer)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_SPE_CSW_100Rnd_762x63_Tracer">
+            <English>.30-06 100Rnd Belt (M2/Tracer)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_SPE_CSW_50Rnd_792x57_Tracer">
+            <English>7.92x57 50Rnd Gurttrommel (L.S./Tracer)</English>
+        </Key>
+        <Key ID="STR_ACE_Compat_SPE_CSW_100Rnd_792x57_Tracer">
+            <English>7.92x57 100Rnd Belt (L.S./Tracer)</English>
+        </Key>
+    </Package>
+</Project>

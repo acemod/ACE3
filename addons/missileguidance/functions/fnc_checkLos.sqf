@@ -34,12 +34,12 @@ private _targetAimPos = aimPos _target;
 private _seekerPos = getPosASL _seeker;
 private _return = true;
 
-if (!((terrainIntersectASL [_seekerPos, _targetPos]) && {terrainIntersectASL [_seekerPos, _targetAimPos]})) then {
+if ((terrainIntersectASL [_seekerPos, _targetPos]) && {terrainIntersectASL [_seekerPos, _targetAimPos]}) then {
+    _return = false;
+} else {
     if (lineIntersects [_seekerPos, _targetPos, _seeker, _target]) then {
         _return = false;
     };
-} else {
-    _return = false;
 };
 
 _return

@@ -13,8 +13,8 @@ class ACE_Interaction_Button_Base {
     style = 2;
     x = 0;
     y = 0;
-    w = "2.0 / 16 * safezoneW";
-    h = "0.3 / 9 * safezoneH";
+    w = "2.0 / 16 * safeZoneW";
+    h = "0.3 / 9 * safeZoneH";
 
     offsetX = 0.003;
     offsetY = 0.003;

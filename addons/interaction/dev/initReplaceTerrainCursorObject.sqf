@@ -49,7 +49,7 @@ DFUNC(replaceTerrainModelsAdd) = {
         [{
             private _object = cursorObject;
 
-            if (isNull _object) exitwith {};
+            if (isNull _object) exitWith {};
 
             [_object, true, nil, nil, nil, true] call EFUNC(dragging,setCarryable);
             [_object, true, nil, nil, nil, true] call EFUNC(dragging,setDraggable);
