@@ -2,7 +2,7 @@
 /*
  * Author: Jaynus, NouberNou, Lambda.Tiger,
  * This function creates spalling if a projectile penetrated a surface and was slowed down enough proportional to the caliber.
- * It is dissimilar in function from fnc_doSpall, but leveraging the "Penetrated" projectile EH to process faster.
+ * It is dissimilar in function from fnc_doSpallHitPart, but leveraging the "Penetrated" projectile EH to process faster.
  *
  * Arguments:
  * Arguments are the same as BI's "Penetratred" EH:
