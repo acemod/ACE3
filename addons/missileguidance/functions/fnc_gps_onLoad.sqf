@@ -18,11 +18,7 @@
     params ["_display"];
     uiNamespace setVariable [QGVAR(gpsAttackOptionDisplay), _display];
 
-    private _mode = if (GVAR(gps_mode) isEqualTo "too") then {
-        GPS_UI_TOO
-    } else {
-        GPS_UI_PB
-    };
+    private _mode = [GPS_UI_PB, GPS_UI_TOO] select (GVAR(gps_mode) isEqualTo "too");
 
     [_mode, true] call FUNC(gps_modeSelect);
     (_display displayCtrl GPS_UI_PB_MISSION) ctrlSetText format ["%1 %2", localize LSTRING(GPS_ui_pp_short), GVAR(gps_pbMode) + 1];

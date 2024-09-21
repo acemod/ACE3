@@ -50,9 +50,9 @@ if (GVAR(debug_drawGuidanceInfo)) then {
     private _projectilePitch = ((vectorDir _projectile) call CBA_fnc_vect2polar) select 2;
     //IGNORE_PRIVATE_WARNING ["_attackProfileName"];
     _attackProfileName = format ["JDAM [Pitch - %1  Impact Pitch - %2]", _projectilePitch, _impactAngle];
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _missilePosProjected, 0.75, 0.75, 0, "P", 1, 0.025, "TahomaB"];
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToAGL _missilePosProjected, 0.75, 0.75, 0, "P", 1, 0.025, "TahomaB"];
     private _desiredAngle = _lineDir vectorMultiply 5000;
-    private _targetPosAGL = ASLtoAGL _seekerTargetPos;
+    private _targetPosAGL = ASLToAGL _seekerTargetPos;
     drawLine3D [_targetPosAGL, _targetPosAGL vectorAdd _desiredAngle, [1, 1, 1, 1]];
 };
 
