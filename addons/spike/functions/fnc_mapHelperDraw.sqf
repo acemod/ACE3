@@ -15,7 +15,7 @@
  *
  * Public: No
  */
-#define __SPIKE_DISPLAY (uinamespace getVariable "ACE_RscOptics_spike")
+#define __SPIKE_DISPLAY (uiNamespace getVariable "ACE_RscOptics_spike")
 #define __SPIKE_RETICLE (__SPIKE_DISPLAY displayCtrl 242000)
 
 private _currentShooter = if (ACE_player call CBA_fnc_canUseWeapon) then {ACE_player} else {vehicle ACE_player};
@@ -26,7 +26,7 @@ if (isNil QGVAR(arguments)) then {
     _currentShooter setVariable ["ace_missileguidance_target", nil, false];
 
     GVAR(arguments) = [
-        diag_frameno,       // Last run frame
+        diag_frameNo,       // Last run frame
         [0, 0, 0]            // currentTargetObject
     ];
 
@@ -34,7 +34,7 @@ if (isNil QGVAR(arguments)) then {
     [{
         if (isNull (uiNamespace getVariable ["ACE_RscOptics_spike", displayNull])) exitWith {true};
         GVAR(arguments) params ["_lastRunFrame"];
-        (diag_frameno < _lastRunFrame) || {diag_frameno > (_lastRunFrame + 1)}
+        (diag_frameNo < _lastRunFrame) || {diag_frameNo > (_lastRunFrame + 1)}
     }, {
         TRACE_1("old/null display - ending optic draw",_this);
         GVAR(arguments) = nil;
@@ -52,8 +52,8 @@ if (cameraView isEqualTo "GUNNER") then {
 
     private _designating = __SPIKE_DISPLAY getVariable [QGVAR(designate), 0];
     if (_currentAmmo != 0 && { _designating == 1 || _targetPosition isNotEqualTo [0, 0, 0] }) then {
-        private _viewASL = AGLtoASL positionCameraToWorld [0,0,0];
-        private _viewDir = _viewASL vectorFromTo (AGLtoASL positionCameraToWorld [0,0,1]);
+        private _viewASL = AGLToASL positionCameraToWorld [0,0,0];
+        private _viewDir = _viewASL vectorFromTo (AGLToASL positionCameraToWorld [0,0,1]);
         _targetPosition = [_viewASL, _viewDir, _designating, _targetPosition, _currentShooter, _currentShooter] call FUNC(getTargetPosition);
         GVAR(arguments) set [1, _targetPosition];
     };
@@ -76,7 +76,7 @@ if (cameraView isEqualTo "GUNNER") then {
 
             (__SPIKE_DISPLAY displayCtrl 241000) ctrlShow false;
 
-            _seekerPositionScreen = worldToScreen ASLtoAGL _targetPosition;
+            _seekerPositionScreen = worldToScreen ASLToAGL _targetPosition;
             if (_seekerPositionScreen isEqualTo []) then {
                 _seekerPositionScreen = [0, 0];
             };

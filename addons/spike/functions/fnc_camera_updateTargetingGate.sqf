@@ -47,7 +47,7 @@ if (_seekerTargetPos isEqualTo [0, 0, 0]) then {
     } forEach (_cameraNamespace getVariable QGVAR(disappearOnLock));
 
     if (_reticleMovesWithTrack) then {
-        _seekerPositionScreen = worldToScreen ASLtoAGL _seekerTargetPos;
+        _seekerPositionScreen = worldToScreen ASLToAGL _seekerTargetPos;
         if (_seekerPositionScreen isEqualTo []) then {
             _seekerPositionScreen = [0, 0];
         };

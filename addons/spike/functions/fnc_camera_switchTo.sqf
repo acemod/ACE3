@@ -36,17 +36,17 @@ private _rscDissapearOnLock = [];
 private _rscAppearOnLock = [];
 
 {
-    _rscDissapearOnLock pushBack ((uiNameSpace getVariable _uiNamespaceDialogVariable) displayCtrl _x);
+    _rscDissapearOnLock pushBack ((uiNamespace getVariable _uiNamespaceDialogVariable) displayCtrl _x);
 } forEach _controlsToDisappearOnLock;
 
 {
-    _rscAppearOnLock pushBack ((uiNameSpace getVariable _uiNamespaceDialogVariable) displayCtrl _x);
+    _rscAppearOnLock pushBack ((uiNamespace getVariable _uiNamespaceDialogVariable) displayCtrl _x);
 } forEach _controlsToAppearOnLock;
 
-_cameraNamespace setVariable [QGVAR(reticleCenter), (uiNameSpace getVariable _uiNamespaceDialogVariable) displayCtrl _centerReticle];
+_cameraNamespace setVariable [QGVAR(reticleCenter), (uiNamespace getVariable _uiNamespaceDialogVariable) displayCtrl _centerReticle];
 _cameraNamespace setVariable [QGVAR(disappearOnLock), _rscDissapearOnLock];
 _cameraNamespace setVariable [QGVAR(appearOnLock), _rscAppearOnLock];
-_cameraNamespace setVariable [QGVAR(reticleLeft), (uiNameSpace getVariable _uiNamespaceDialogVariable) displayCtrl _leftGate];
-_cameraNamespace setVariable [QGVAR(reticleRight), (uiNameSpace getVariable _uiNamespaceDialogVariable) displayCtrl _rightGate];
-_cameraNamespace setVariable [QGVAR(reticleTop), (uiNameSpace getVariable _uiNamespaceDialogVariable) displayCtrl _topGate];
-_cameraNamespace setVariable [QGVAR(reticleBottom), (uiNameSpace getVariable _uiNamespaceDialogVariable) displayCtrl _bottomGate];
+_cameraNamespace setVariable [QGVAR(reticleLeft), (uiNamespace getVariable _uiNamespaceDialogVariable) displayCtrl _leftGate];
+_cameraNamespace setVariable [QGVAR(reticleRight), (uiNamespace getVariable _uiNamespaceDialogVariable) displayCtrl _rightGate];
+_cameraNamespace setVariable [QGVAR(reticleTop), (uiNamespace getVariable _uiNamespaceDialogVariable) displayCtrl _topGate];
+_cameraNamespace setVariable [QGVAR(reticleBottom), (uiNamespace getVariable _uiNamespaceDialogVariable) displayCtrl _bottomGate];

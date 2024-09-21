@@ -65,8 +65,8 @@ private _logicPosition = [_initPosX, GIMBAL_LOGIC_OFFSET, _initPosY] vectorAdd [
 _logic setPosASL (_projectile modelToWorldVisualWorld _logicPosition);
 
 _camera camSetTarget _logic;
-_camera setPos (_projectile modelToWorldVisual ((_projectile worldToModelVisual (ASLtoATL getPosASL _projectile)) vectorAdd [0, _projectileSize#1, 0]));
-_camera camSetFOV _initialFOV;
+_camera setPos (_projectile modelToWorldVisual ((_projectile worldToModelVisual (ASLToATL getPosASL _projectile)) vectorAdd [0, _projectileSize#1, 0]));
+_camera camSetFov _initialFOV;
 
 _camera camCommit 0;
 showCinemaBorder false;

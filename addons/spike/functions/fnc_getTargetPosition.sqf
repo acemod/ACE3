@@ -30,7 +30,7 @@ private _intersections = [];
 if (_designateInput == 1) then {
     for "_xOffset" from -SEEKER_GRID_RADIUS to SEEKER_GRID_RADIUS do {
         for "_yOffset" from -SEEKER_GRID_RADIUS to SEEKER_GRID_RADIUS do {
-            private _testPosASL = AGLtoASL (positionCameraToWorld [_xOffset, _yOffset, MAX_RANGE]);
+            private _testPosASL = AGLToASL (positionCameraToWorld [_xOffset, _yOffset, MAX_RANGE]);
             private _intersectionsToCursorTarget = lineIntersectsSurfaces [_origin, _testPosASL, _ignoreObject, objNull, true, 1, "FIRE", "VIEW", true];
             #ifdef DEBUG_MODE_FULL
             drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", [0,1,0,1], ASLtoAGL _testPosASL, 0.25, 0.25, 0, "", 0.5, 0.025, "TahomaB"];
@@ -51,7 +51,7 @@ if (_intersections isNotEqualTo []) then {
         _seekerTargetPos = _intersectPos;
     };
 
-    _nearObjects = (ASLtoAGL _seekerTargetPos) nearObjects ["AllVehicles", CHECK_DISTANCE];
+    _nearObjects = (ASLToAGL _seekerTargetPos) nearObjects ["AllVehicles", CHECK_DISTANCE];
 
     if (_designateInput == 1 && { !isNull _object } && { _object isKindOf "Building" }) then {
         _nearObjects pushBack _object;

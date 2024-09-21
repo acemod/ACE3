@@ -65,7 +65,7 @@ if (_fovChanged) then {
         _fovChanged = false;
     };
 
-    _camera camSetFOV _setFOV;
+    _camera camSetFov _setFOV;
     _cameraNamespace setVariable [QGVAR(fovChanged), _fovChanged];
     _cameraNamespace setVariable [QGVAR(currentFOV), _setFOV];
 };
