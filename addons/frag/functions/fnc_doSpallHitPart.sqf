@@ -80,7 +80,10 @@ if (120 > acos (_lastVelocityNorm vectorDotProduct _surfaceNorm)) then {
     _spallPosASL = _spallPosASL vectorAdd (_deltaStep vectorMultiply 5);
 };
 private _lastSpallPos = _spallPosASL;
-for "_i" from 2 to 21 do
+// we need to check 1.05 m in the direction of last velocity incrementing by delta step
+// Our initial check is from 0m to 5 cm, so we only need to iterate from 2 to 21 to get
+// to the full 1.05m
+for "_stepNumber" from 2 to 21 do
 {
     _spallPosASL = _lastSpallPos vectorAdd _deltaStep;
     if (!lineIntersects [_lastSpallPos, _spallPosASL]) exitWith {
