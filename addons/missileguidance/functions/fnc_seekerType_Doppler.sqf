@@ -68,7 +68,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
                 _seekerBaseRadiusAdjusted = _seekerBaseRadiusAtGround;
             };
             // Look in front of seeker for any targets
-            private _nearestObjects = nearestObjects [ASLtoAGL _searchPos, _lockTypes, _seekerBaseRadiusAdjusted, false];
+            private _nearestObjects = nearestObjects [ASLToAGL _searchPos, _lockTypes, _seekerBaseRadiusAdjusted, false];
             _nearestObjects = _nearestObjects select {
                 // If target within angle AND we can see target AND we shouldn't filter target, then target is a candidate
                 [_projectile, getPosASL _x, _seekerAngle] call FUNC(checkSeekerAngle) && {
@@ -87,8 +87,8 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
             };
             private _closestDistance = _seekerBaseRadiusAtGround;
             {
-                if ((_x distance2d _searchPos) < _closestDistance) then {
-                    _closestDistance = _x distance2d _searchPos;
+                if ((_x distance2D _searchPos) < _closestDistance) then {
+                    _closestDistance = _x distance2D _searchPos;
                     _target = _x;
                 };
             } forEach _nearestObjects;
@@ -114,7 +114,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
 };
 
 if (GVAR(debug_drawGuidanceInfo)) then {
-    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _expectedTargetPos, 0.75, 0.75, 0, "expected target pos", 1, 0.025, "TahomaB"];
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToAGL _expectedTargetPos, 0.75, 0.75, 0, "expected target pos", 1, 0.025, "TahomaB"];
 };
 
 if !(isNull _target) then {
