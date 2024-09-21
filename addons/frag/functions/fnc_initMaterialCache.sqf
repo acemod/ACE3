@@ -15,7 +15,7 @@
  * Public: No
  */
 
-GVAR(spallMaterialCache) = createHashMapFromArray [
+uinamespace setVariable [QGVAR(spallMaterialCache), createHashMapFromArray [
     ["a3\data_f\penetration\armour.bisurf","metal"],
     ["a3\data_f\penetration\armour_plate.bisurf","metal"],
     ["a3\data_f\penetration\armour_plate_100mm.bisurf","metal"],
@@ -93,4 +93,4 @@ GVAR(spallMaterialCache) = createHashMapFromArray [
     ["a3\data_f\penetration\weapon_plate.bisurf","metal"],
     ["a3\data_f\penetration\wood.bisurf","wood"],
     ["a3\data_f\penetration\wood_plate.bisurf","wood"]
-];
+]];
