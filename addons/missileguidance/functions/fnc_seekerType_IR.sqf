@@ -126,7 +126,7 @@ private _targetPosition = _trackingTarget modelToWorldVisualWorld getCenterOfMas
 
 if (GVAR(debug_drawGuidanceInfo) && { _targetPosition isNotEqualTo [0, 0, 0] }) then {
     if (!isGamePaused && accTime > 0) then {
-        private _ps = "#particlesource" createVehicleLocal (ASLtoAGL _targetPosition);
+        private _ps = "#particlesource" createVehicleLocal (ASLToAGL _targetPosition);
         _PS setParticleParams [["\A3\Data_f\cl_basic", 8, 3, 1], "", "Billboard", 1, 3.0141, [0, 0, 0], [0, 0, 0], 1, 1.275, 1, 0, [1, 1], [[0, 0, 1, 1], [0, 0, 1, 1], [0, 0, 1, 1]], [1], 1, 0, "", "", nil];
         _PS setDropInterval 1.0;
     };
