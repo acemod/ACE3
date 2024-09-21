@@ -1,139 +1,121 @@
 #include "..\script_component.hpp"
 /*
- * Author: ACE-Team
- * Dev things
+ * Author: Jaynus, NouberNou, Lambda.Tiger,
+ * This function check whether a spall event has occured and generates spall.
  *
  * Arguments:
- * None
+ * 0: The object a projectile hit <OBJECT>
+ * 1: The config name of the projectile <STRING>
+ * 2: The projectile that should cause spalling <OBJECT>
+ * 3: The position (ASL) the projectile hit the object <ARRAY>
+ * 4: The old velocity of the projectile <ARRAY>
+ * 5: The projectile's instigator, or the second argument of a projectile's shotParents <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ace_frag_fnc_doSpall
+ * [editorPlacedHouse_0, typeOf _projectile, _projectile, [1000, 40, 60], [0, 1000, 0], [objNull, ace_player]] call ace_frag_fnc_doSpall
  *
  * Public: No
  */
-
 #define WEIGHTED_SIZE [QGVAR(spall_small), 4, QGVAR(spall_medium), 3, QGVAR(spall_large), 2, QGVAR(spall_huge), 1]
+params ["_objectHit", "_roundType", "_round", "_oldPosASL", "_oldVelocity", "_instigator"];
 
-params ["_hitData", "_hitPartDataIndex"];
-private _initialData = GVAR(spallHPData) select (_hitData select 0);
-_initialData params ["_hpId", "_object", "_roundType", "_round", "_curPos", "_velocity"];
+TRACE_6("",_objectHit,_roundType,_round,_oldPosASL,_oldVelocity,_instigator);
+if ((isNil "_objectHit") || {isNull _objectHit}) exitWith {
+    TRACE_1("Problem with hitPart data - bad object [%1]",_objectHit);
+};
 
-private _hpData = (_hitData select 1) select _hitPartDataIndex;
-private _objectHit = _hpData param [0, objNull];
-TRACE_1("",_objectHit);
-if ((isNil "_objectHit") || {isNull _objectHit}) exitWith {WARNING_1("Problem with hitPart data - bad object [%1]",_objectHit);};
-_objectHit removeEventHandler ["HitPart", _hpId];
+_roundType call FUNC(getSpallInfo) params ["_caliber", "_explosive", "_idh"];
 
-private _caliber = getNumber (configFile >> "CfgAmmo" >> _roundType >> "caliber");
-private _explosive = getNumber (configFile >> "CfgAmmo" >> _roundType >> "explosive");
-private _idh = getNumber (configFile >> "CfgAmmo" >> _roundType >> "indirectHitRange");
-
-if !(_caliber >= 2.5 || {(_explosive > 0 && {_idh >= 1})}) exitWith {};
-// ACE_player sideChat format ["BBBB"];
 private _exit = false;
-private _vm = 1;
+private _velocityModifier = 1;
 
-private _oldVelocity = vectorMagnitude _velocity;
-private _curVelocity = vectorMagnitude (velocity _round);
+private _curVelocity = velocity _round;
+private _oldSpeed = vectorMagnitude _oldVelocity;
+private _curSpeed = vectorMagnitude _curVelocity;
 
 if (alive _round) then {
-    private _diff = _velocity vectorDiff (velocity _round);
+    private _diff = _oldVelocity vectorDiff _curVelocity;
     private _polar = _diff call CBA_fnc_vect2polar;
-    // ACE_player sideChat format ["polar: %1", _polar];
+
     if (abs (_polar select 1) > 45 || {abs (_polar select 2) > 45}) then {
         if (_caliber < 2.5) then {
-            // ACE_player sideChat format ["exit!"];
             _exit = true;
         } else {
-            SUB(_vm,_curVelocity / _oldVelocity);
+            SUB(_velocityModifier,_curSpeed / _oldSpeed);
         };
     };
 };
-if (_exit) exitWith {};
-
-private _unitDir = vectorNormalized _velocity;
-private _pos = _hpData select 3;
-private _spallPos = [];
-if ((isNil "_pos") || {!(_pos isEqualTypeArray [0,0,0])}) exitWith {WARNING_1("Problem with hitPart data - bad pos [%1]",_pos);};
-for "_i" from 0 to 100 do {
-    private _pos1 = _pos vectorAdd (_unitDir vectorMultiply (0.01 * _i));
-    private _pos2 = _pos vectorAdd (_unitDir vectorMultiply (0.01 * (_i + 1)));
-    // _data = [nil, nil, nil, 1, [[ASLtoATL _pos1, 1], [ASLtoATL _pos2, 1]]];
-    // NOU_TRACES pushBack _data;
-
-    if (!lineIntersects [_pos1, _pos2]) exitWith {
-        // ACE_player sideChat format ["FOUND!"];
-        _spallPos = _pos2;
-    };
+if (_exit) exitWith {
+    TRACE_1("exit alive",_caliber);
 };
-if (_spallPos isEqualTo []) exitWith {};
-private _spallPolar = _velocity call CBA_fnc_vect2polar;
+
+private _unitDir = vectorNormalized _oldVelocity;
+
+if ((isNil "_oldPosASL") || {!(_oldPosASL isEqualTypeArray [0,0,0])}) exitWith {WARNING_1("Problem with hitPart data - bad pos [%1]",_oldPosASL);};
+private _pos1 = _oldPosASL;
+private _spallPosAGL = _pos1;
+private _searchStepSize = _unitDir vectorMultiply 0.05;
+for "_i" from 0 to 20 do {
+    _spallPosAGL = _pos1 vectorAdd _searchStepSize;
+    if (!lineIntersects [_pos1, _spallPosAGL]) exitWith {};
+    _pos1 = _spallPosAGL;
+};
+if (_spallPosAGL isEqualTo _pos1) exitWith {
+    TRACE_1("can't find other side",_oldPosASL);
+};
+_spallPosAGL = ASLToAGL _spallPosAGL;
+
+_instigator setVariable [QGVAR(nextSpallEvent), CBA_missionTime + ACE_FRAG_SPALL_UNIT_HOLDOFF];
+private _oldVelocitySpherical = _oldVelocity call CBA_fnc_vect2polar;
 
 if (_explosive > 0) then {
-    // ACE_player sideChat format ["EXPLOSIVE!"];
-    private _warn = false;
-    private _c = getNumber (configFile >> "CfgAmmo" >> _roundType >> QGVAR(CHARGE));
-    if (_c == 0) then {_c = 1; _warn = true;};
-    private _m = getNumber (configFile >> "CfgAmmo" >> _roundType >> QGVAR(METAL));
-    if (_m == 0) then {_m = 2; _warn = true;};
-    private _k = getNumber (configFile >> "CfgAmmo" >> _roundType >> QGVAR(GURNEY_K));
-    if (_k == 0) then {_k = 1 / 2; _warn = true;};
-    private _gC = getNumber (configFile >> "CfgAmmo" >> _roundType >> QGVAR(GURNEY_C));
-    if (_gC == 0) then {_gC = 2440; _warn = true;};
-
-    // if (_warn) then {
-        // WARNING_1("Ammo class %1 lacks proper explosive properties definitions for frag!",_roundType); //TODO: turn this off when we get closer to release
-    // };
-
-    private _fragPower = (((_m / _c) + _k) ^ - (1 / 2)) * _gC;
-    _spallPolar set [0, _fragPower * 0.66];
+    _roundType call FUNC(getFragInfo) params ["", "_fragVelocity"];
+    _oldVelocitySpherical set [0, _fragVelocity * 0.66];
 };
+TRACE_2("spallPosandVel",_spallPosAGL,_oldVelocitySpherical);
 
-// diag_log text format ["SPALL POWER: %1", _spallPolar select 0];
 private _spread = 15 + (random 25);
 private _spallCount = 5 + (random 10);
 TRACE_1("",_spallCount);
 for "_i" from 1 to _spallCount do {
-    private _elev = ((_spallPolar select 2) - _spread) + (random (_spread * 2));
-    private _dir = ((_spallPolar select 1) - _spread) + (random (_spread * 2));
-    if (abs _elev > 90) then {
-        ADD(_dir,180);
+    private _fragmentElevation = ((_oldVelocitySpherical select 2) - _spread) + (random (_spread * 2));
+    private _fragmentAzimuth = ((_oldVelocitySpherical select 1) - _spread) + (random (_spread * 2));
+    if (abs _fragmentElevation > 90) then {
+        ADD(_fragmentAzimuth,180);
     };
-    _dir = _dir % 360;
-    private _vel = (_spallPolar select 0) * 0.33 * _vm;
-    _vel = (_vel - (_vel * 0.25)) + (random (_vel * 0.5));
+    _fragmentAzimuth = _fragmentAzimuth % 360;
+    private _fragmentSpeed = (_oldVelocitySpherical select 0) * 0.33 * _velocityModifier;
+    _fragmentSpeed = _fragmentSpeed * (0.75 + random 0.5);
 
-    private _spallFragVect = [_vel, _dir, _elev] call CBA_fnc_polar2vect;
-    private _fragment = (selectRandomWeighted WEIGHTED_SIZE) createVehicleLocal [0,0,10000];
-    _fragment setPosASL _spallPos;
+    private _spallFragVect = [_fragmentSpeed, _fragmentAzimuth, _fragmentElevation] call CBA_fnc_polar2vect;
+    private _fragment = createVehicleLocal [selectRandomWeighted WEIGHTED_SIZE, _spallPosAGL, [], 0, "CAN_COLLIDE"];
     _fragment setVelocity _spallFragVect;
 
-    #ifdef DRAW_FRAG_INFO
-        [ACE_player, _fragment, [1, 0.5, 0, 1]] call FUNC(dev_addTrack);
+    #ifdef DEBUG_MODE_DRAW
+    [_fragment, "orange", true] call FUNC(dev_trackObj);
     #endif
 };
 
 _spread = 5 + (random 5);
 _spallCount = 3 + (random 5);
 for "_i" from 1 to _spallCount do {
-    private _elev = ((_spallPolar select 2) - _spread) + (random (_spread * 2));
-    private _dir = ((_spallPolar select 1) - _spread) + (random (_spread * 2));
-    if (abs _elev > 90) then {
-        ADD(_dir,180);
+    private _fragmentElevation = ((_oldVelocitySpherical select 2) - _spread) + (random (_spread * 2));
+    private _fragmentAzimuth = ((_oldVelocitySpherical select 1) - _spread) + (random (_spread * 2));
+    if (abs _fragmentElevation > 90) then {
+        ADD(_fragmentAzimuth,180);
     };
-    _dir = _dir % 360;
-    private _vel = (_spallPolar select 0) * 0.55 * _vm;
-    _vel = (_vel - (_vel * 0.25)) + (random (_vel * 0.5));
+    _fragmentAzimuth = _fragmentAzimuth % 360;
+    private _fragmentSpeed = (_oldVelocitySpherical select 0) * 0.55 * _velocityModifier;
+    _fragmentSpeed = _fragmentSpeed * (0.75 + random 0.5);
 
-    private _spallFragVect = [_vel, _dir, _elev] call CBA_fnc_polar2vect;
-    private _fragment = (selectRandomWeighted WEIGHTED_SIZE) createVehicleLocal [0, 0, 10000];
-    _fragment setPosASL _spallPos;
+    private _spallFragVect = [_fragmentSpeed, _fragmentAzimuth, _fragmentElevation] call CBA_fnc_polar2vect;
+    private _fragment = createVehicleLocal [selectRandomWeighted WEIGHTED_SIZE, _spallPosAGL, [], 0, "CAN_COLLIDE"];
     _fragment setVelocity _spallFragVect;
 
-    #ifdef DRAW_FRAG_INFO
-        [ACE_player, _fragment, [1, 0, 0, 1]] call FUNC(dev_addTrack);
+    #ifdef DEBUG_MODE_DRAW
+    [_fragment, "purple", true] call FUNC(dev_trackObj);
     #endif
 };

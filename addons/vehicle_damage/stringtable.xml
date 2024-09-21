@@ -3,7 +3,7 @@
     <Package name="Vehicle_Damage">
         <Key ID="STR_ACE_Vehicle_Damage_category_displayName">
             <English>ACE Advanced Vehicle Damage</English>
-            <Japanese>ACE アドバンスドビークルダメージ</Japanese>
+            <Japanese>ACE 高度な乗り物ダメージ</Japanese>
             <French>ACE Dégâts de véhicule avancés</French>
             <German>ACE Erweiterter Fahrzeugsschaden</German>
             <Italian>ACE Danni Veicolo Avanzati</Italian>
@@ -23,6 +23,7 @@
             <Russian>Включить продвинутое повреждение техники</Russian>
             <Spanish>Habilitar el daño avanzado de vehículos</Spanish>
             <Portuguese>Ativar dano avançado de veículo</Portuguese>
+            <Japanese>乗り物(Vehicle)に対しての高度なダメージ計算を有効化します</Japanese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_enable">
             <English>Enable advanced car damage</English>
@@ -32,6 +33,8 @@
             <Polish>Włącz zaawansowane uszkodzenia w samochodach</Polish>
             <Spanish>Habilitar daño avanzado de coche</Spanish>
             <Portuguese>Habilitar dano avançado para carros</Portuguese>
+            <Japanese>高度な車ダメージを有効化</Japanese>
+            <Russian>Включить продвинутое повреждение автомобиля</Russian>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_description">
             <English>Enable advanced car damage (Experimental)</English>
@@ -42,6 +45,7 @@
             <Russian>Включить продвинутое повреждение машин (экспериментальное)</Russian>
             <Spanish>Habilitar daño avanzado de coche (Experimental)</Spanish>
             <Portuguese>Habilitar dano avançado para carros (Experimental)</Portuguese>
+            <Japanese>車(Car)に対しての高度なダメージ計算を有効化します (試験的機能)</Japanese>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_generic_turret_wreck">
             <English>Wreck (Turret)</English>
