@@ -15,7 +15,7 @@
  * Public: No
  */
 
-uinamespace setVariable [QGVAR(spallMaterialCache), createHashMapFromArray [
+uiNamespace setVariable [QGVAR(spallMaterialCache), createHashMapFromArray [
     ["a3\data_f\penetration\armour.bisurf","metal"],
     ["a3\data_f\penetration\armour_plate.bisurf","metal"],
     ["a3\data_f\penetration\armour_plate_100mm.bisurf","metal"],
