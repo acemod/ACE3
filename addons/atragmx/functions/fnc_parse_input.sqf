@@ -100,11 +100,11 @@ if (GVAR(currentUnit) == 1) then {
     _targetRange = 25 max _targetRange min 3700;
 };
 GVAR(targetRangeDirtyFlag) = GVAR(targetRangeDirtyFlag) || {_targetRange != GVAR(targetRange) select GVAR(currentTarget)};
-GVAR(latitude) set [GVAR(currentTarget), -90 max Round(parseNumber(ctrlText 140000)) min 90];
-GVAR(directionOfFire) set [GVAR(currentTarget), 0 max abs(Round(parseNumber(ctrlText 140010))) min 359];
+GVAR(latitude) set [GVAR(currentTarget), -90 max round(parseNumber(ctrlText 140000)) min 90];
+GVAR(directionOfFire) set [GVAR(currentTarget), 0 max abs(round(parseNumber(ctrlText 140010))) min 359];
 GVAR(windSpeed1) set [GVAR(currentTarget), _windSpeed1];
 GVAR(windSpeed2) set [GVAR(currentTarget), _windSpeed2];
-GVAR(windDirection) set [GVAR(currentTarget), 1 max Round(parseNumber(ctrlText 140030)) min 12];
+GVAR(windDirection) set [GVAR(currentTarget), 1 max round(parseNumber(ctrlText 140030)) min 12];
 GVAR(targetSpeed) set [GVAR(currentTarget), _targetSpeed];
 GVAR(targetRange) set [GVAR(currentTarget), _targetRange];
 private _inclinationAngleCosine = 0.5 max parseNumber(ctrlText 140041) min 1;
@@ -112,7 +112,7 @@ private _inclinationAngleDegree = -60 max round(parseNumber(ctrlText 140040)) mi
 if (_inclinationAngleDegree != GVAR(inclinationAngle) select GVAR(currentTarget)) then {
     GVAR(inclinationAngle) set [GVAR(currentTarget), _inclinationAngleDegree];
 } else {
-    if (_inclinationAngleCosine != Round(cos(GVAR(inclinationAngle) select GVAR(currentTarget)) * 100) / 100) then {
+    if (_inclinationAngleCosine != round(cos(GVAR(inclinationAngle) select GVAR(currentTarget)) * 100) / 100) then {
         GVAR(inclinationAngle) set [GVAR(currentTarget), round(acos(_inclinationAngleCosine))];
     };
 };

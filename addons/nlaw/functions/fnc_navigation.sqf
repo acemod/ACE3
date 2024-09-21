@@ -67,8 +67,8 @@ _navigationParams set [6, _yawRateDifference];
 private _desiredYawChange = _yawRateDifference * PROPORTIONALITY_CONSTANT + _yawRateDifference * 2;
 
 #ifdef DRAW_NLAW_INFO
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], ASLtoAGL getPosASLVisual _projectile, 0.75, 0.75, 0, format ["dP [%1] dY: [%2]", _desiredPitchChange, _desiredYawChange], 1, 0.025, "TahomaB"];
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], [0, 0, 1] vectorAdd ASLtoAGL getPosASLVisual _projectile, 0.75, 0.75, 0, format ["pitch proportional [%1] yaw proportional [%2]", _pitchModifier, _yawModifier], 1, 0.025, "TahomaB"];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], ASLToAGL getPosASLVisual _projectile, 0.75, 0.75, 0, format ["dP [%1] dY: [%2]", _desiredPitchChange, _desiredYawChange], 1, 0.025, "TahomaB"];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], [0, 0, 1] vectorAdd ASLToAGL getPosASLVisual _projectile, 0.75, 0.75, 0, format ["pitch proportional [%1] yaw proportional [%2]", _pitchModifier, _yawModifier], 1, 0.025, "TahomaB"];
 #endif
 
 TRACE_4("nlaw pitch/yaw info",_currentPitch,_lastPitch,_currentYaw,_lastYaw);

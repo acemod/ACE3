@@ -347,6 +347,11 @@
             <Czech>Replikuje systém naměřování puškohledů ze základní hry.</Czech>
             <Spanish>Replica en los visores el sistema de homogeneizado de vanilla</Spanish>
         </Key>
+        <Key ID="STR_ACE_Scopes_inScopeAdjustment_displayName">
+            <English>Show adjustment UI in scope</English>
+            <German>Zeige Absehenverstellungs-UI im Zielfernrohr</German>
+            <Italian>Mostra UI delle manopole nel mirino</Italian>
+        </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
             <German>Kleine Korrektur hoch</German>

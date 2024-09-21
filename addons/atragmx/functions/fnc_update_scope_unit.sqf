@@ -16,7 +16,7 @@
  */
 
 ctrlSetText [2000, GVAR(scopeUnits) select GVAR(currentScopeUnit)];
-ctrlSetText [2001, Str(GVAR(currentScopeClickNumber))];
+ctrlSetText [2001, str(GVAR(currentScopeClickNumber))];
 
 if (GVAR(currentScopeUnit) == 3) then {
     ctrlSetText [5000, format["Clicks=%1", GVAR(currentScopeClickNumber)]];

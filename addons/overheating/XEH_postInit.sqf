@@ -71,7 +71,7 @@ if (hasInterface) then {
         ["CAManBase", "Reloaded", {
             params ["_unit", "_weapon", "_muzzle"];
             if (_muzzle == _weapon) then {
-                _unit setVariable [format [QGVAR(%1_ammoTemp), _weapon], 0];
+                _unit setVariable [format [QGVAR(%1_ammoTemp), _weapon], ambientTemperature select 0];
             };
         }] call CBA_fnc_addClassEventHandler;
     };
