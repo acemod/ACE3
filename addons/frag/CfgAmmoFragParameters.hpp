@@ -11,7 +11,7 @@ class B_20mm: BulletBase {
     GVAR(metal) = 114;
     GVAR(gurney_c) = 2830;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(tiny)};
+    GVAR(classes)[] = {QGVAR(tiny_HD)};
 };
 
 class B_20mm_AP: BulletBase {
@@ -24,7 +24,7 @@ class ammo_Gun20mmAABase: BulletBase { // 20x139mm
     GVAR(metal) = 114;
     GVAR(gurney_c) = 2830;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(tiny)};
+    GVAR(classes)[] = {QGVAR(tiny_HD)};
 };
 
 class ammo_Gun30mmAABase: BulletBase { // 30x210mm HEI
@@ -33,7 +33,7 @@ class ammo_Gun30mmAABase: BulletBase { // 30x210mm HEI
     GVAR(metal) = 410;
     GVAR(gurney_k) = "1/2";
     GVAR(gurney_c) = 2901;
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(tiny), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(small_HD)};
 
 };
 
@@ -45,7 +45,7 @@ class B_30mm_HE: B_19mm_HE {
     GVAR(metal) = 320;
     GVAR(gurney_c) = 2552;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(tiny), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(small_HD)};
 };
 class B_30mm_MP: B_30mm_HE {
     // Used in Mora (FV510 Warrior), assuming it's a Mk44 Bushmaster II, specifically HEI-T due to tracers
@@ -54,12 +54,12 @@ class B_30mm_MP: B_30mm_HE {
     GVAR(charge) = 56;
     GVAR(gurney_c) = 2600;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(tiny), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(small_HD)};
 };
 
 class Gatling_30mm_HE_Plane_CAS_01_F: BulletBase {
     GVAR(skip) = 0;
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(tiny_HD), QGVAR(small_HD)};
     GVAR(metal) = 388;
     GVAR(charge) = 56;
     GVAR(gurney_c) = 2600; // guessed
@@ -75,7 +75,7 @@ class ammo_Gun35mmAABase: BulletBase {
     GVAR(metal) = 400;
     GVAR(gurney_k) = "1/2";
     GVAR(gurney_c) = 2700;
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(tiny), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(small_HD)};
 };
 
 class B_35mm_AA: BulletBase {
@@ -87,14 +87,14 @@ class B_35mm_AA: BulletBase {
     GVAR(metal) = 400;
     GVAR(gurney_k) = "1/2";
     GVAR(gurney_c) = 2700;
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(tiny), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(small_HD)};
 };
 
 class B_40mm_GPR: B_30mm_HE {
     // Based on noted 40mm Autocannons, base ROF, and ammo names, looks to be a CTAS40, specifically GPR-PD-T
     // https://www.cta-international.com/ammunition/
     // https://ndiastorage.blob.core.usgovcloudapi.net/ndia/2002/gun/leslie.pdf
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(tiny_HD), QGVAR(small_HD)};
     GVAR(metal) = 750;
     GVAR(charge) = 120;
     GVAR(gurney_c) = 2700; // guessed
@@ -111,7 +111,7 @@ class Bo_GBU12_LGB: ammo_Bomb_LaserGuidedBase {
     GVAR(metal) = 140000;
     GVAR(gurney_c) = 2320;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
+    GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large_HD), QGVAR(huge_HD), QGVAR(huge_HD), QGVAR(huge_HD)};
 };
 class Bomb_03_F: ammo_Bomb_LaserGuidedBase {
     GVAR(skip) = 0;
@@ -119,7 +119,7 @@ class Bomb_03_F: ammo_Bomb_LaserGuidedBase {
     GVAR(metal) = 150000;
     GVAR(gurney_c) = 2320;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
+    GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large_HD), QGVAR(huge_HD), QGVAR(huge_HD), QGVAR(huge_HD)};
 };
 class Bomb_04_F: ammo_Bomb_LaserGuidedBase {
     GVAR(skip) = 0;
@@ -127,7 +127,7 @@ class Bomb_04_F: ammo_Bomb_LaserGuidedBase {
     GVAR(metal) = 140000;
     GVAR(gurney_c) = 2320;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
+    GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large_HD), QGVAR(huge_HD), QGVAR(huge_HD), QGVAR(huge_HD)};
 };
 class BombCluster_01_Ammo_F: Bomb_04_F {
     GVAR(skip) = 1;
@@ -138,12 +138,12 @@ class ammo_Bomb_SmallDiameterBase: ammo_Bomb_LaserGuidedBase {
     GVAR(metal) = 113; // kg
     GVAR(gurney_c) = 2830;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(medium), QGVAR(medium), QGVAR(large), QGVAR(large), QGVAR(huge), QGVAR(huge_HD)};
+    GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD), QGVAR(large), QGVAR(large_HD), QGVAR(huge_HD), QGVAR(huge_HD)};
 };
 
 class BombCore;
 class Bo_Mk82: BombCore {
-    GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
+    GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large_HD), QGVAR(huge_HD), QGVAR(huge_HD), QGVAR(huge_HD)};
     GVAR(metal) = 140000;
     GVAR(charge) = 87000;
     GVAR(gurney_c) = 2320;
@@ -156,20 +156,20 @@ class Mo_cluster_AP: ShellBase {
 };
 class Mo_cluster_Bomb_01_F: Mo_cluster_AP { // Mk 118 Rockeye
     GVAR(skip) = 0;
-    GVAR(classes)[] = {QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(small_HD)};
     GVAR(metal) = 400;
     GVAR(charge) = 180;
     GVAR(gurney_c) = 2700;
     GVAR(gurney_k) = "1/2";
 };
 class Mo_cluster_Bomb_02_F: Mo_cluster_Bomb_01_F { // ShOAB-0.5
-    GVAR(classes)[] = {QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(small_HD)};
     GVAR(metal) = 400;
     GVAR(charge) = 100;
     GVAR(gurney_c) = 2700;
 };
 class Mo_cluster_Bomb_03_F: Mo_cluster_Bomb_01_F { // idk, @lambda.tiger on the ace discord if you find out
-    GVAR(classes)[] = {QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(small_HD)};
     GVAR(metal) = 400;
     GVAR(charge) = 140;
     GVAR(gurney_c) = 2400;
@@ -184,14 +184,14 @@ class GrenadeHand: Grenade {
     These values are based on the M67 Grenade, should be tweaked for
     individual grenades.
     */
-    GVAR(classes)[] = {QGVAR(tiny)};
+    GVAR(classes)[] = {QGVAR(tiny_HD)};
     GVAR(metal) = 210; // metal in grams
     GVAR(charge) = 185; // explosive in grams
     GVAR(gurney_c) = 2843; // Gurney velocity constant for explosive type. See: http://en.wikipedia.org/wiki/Gurney_equations
     GVAR(gurney_k) = "3/5"; // Gurney shape factor, in this case a sphere. See: http://en.wikipedia.org/wiki/Gurney_equations
 };
 class mini_Grenade: GrenadeHand {
-    GVAR(classes)[] = {QGVAR(tiny)};
+    GVAR(classes)[] = {QGVAR(tiny_HD)};
     GVAR(metal) = 104;
     GVAR(charge) = 36;
 };
@@ -205,14 +205,14 @@ class G_40mm_HE: GrenadeBase {
     // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M441
     GVAR(skip) = 0;
     GVAR(force) = 1;
-    GVAR(classes)[] = {QGVAR(small), QGVAR(tiny), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(small_HD), QGVAR(tiny_HD), QGVAR(small_HD)};
     GVAR(metal) = 200;
     GVAR(charge) = 32;
     GVAR(gurney_c) = 2700;
     GVAR(gurney_k) = "3/5"; // interior fragmenter/charge is a sphere
 };
 class G_20mm_HE: G_40mm_HE {
-    GVAR(classes)[] = {QGVAR(tiny)};
+    GVAR(classes)[] = {QGVAR(tiny_HD)};
     GVAR(metal) = 50;
     GVAR(charge) = 8;
     GVAR(gurney_c) = 2700;
@@ -220,7 +220,7 @@ class G_20mm_HE: G_40mm_HE {
 };
 class G_40mm_HEDP: G_40mm_HE {
     // Source: http://www.inetres.com/gp/military/infantry/grenade/40mm_ammo.html#M433
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small), QGVAR(small_HD)};
+    GVAR(classes)[] = {QGVAR(tiny_HD), QGVAR(small_HD), QGVAR(small_HD)};
     GVAR(metal) = 200;
     GVAR(charge) = 45;
     GVAR(gurney_c) = 2830;
@@ -243,7 +243,7 @@ class ATMine_Range_Ammo: MineBase {
 class APERSMine_Range_Ammo: MineBase { // VS-50
     GVAR(skip) = 0;
     GVAR(force) = 0;
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(tiny), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(small_HD)};
     GVAR(metal) = 100;
     GVAR(charge) = 50;
     GVAR(gurney_c) = 2700;
@@ -253,7 +253,7 @@ class APERSMine_Range_Ammo: MineBase { // VS-50
 class APERSBoundingMine_Range_Ammo: BoundingMineBase {
     GVAR(skip) = 1;
     GVAR(force) = 0;
-    GVAR(classes)[] = {QGVAR(tiny)};
+    GVAR(classes)[] = {QGVAR(tiny_HD)};
     GVAR(metal) = 80;
     GVAR(charge) = 170;
     GVAR(gurney_c) = 2700;
@@ -271,7 +271,7 @@ class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase {
 class APERSTripMine_Wire_Ammo: DirectionalBombBase {
     GVAR(skip) = 0;
     GVAR(force) = 0;
-    GVAR(classes)[] = {QGVAR(tiny)};
+    GVAR(classes)[] = {QGVAR(tiny_HD)};
     GVAR(metal) = 210;
     GVAR(charge) = 185;
     GVAR(gurney_c) = 2843;
@@ -280,7 +280,7 @@ class APERSTripMine_Wire_Ammo: DirectionalBombBase {
 
 class IEDUrbanBig_Remote_Ammo: PipeBombBase {
     GVAR(skip) = 0;
-    GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
+    GVAR(classes)[] = {QGVAR(large), QGVAR(large_HD), QGVAR(large_HD), QGVAR(large_HD), QGVAR(huge_HD), QGVAR(huge_HD), QGVAR(huge_HD)};
     GVAR(metal) = 36000;
     GVAR(charge) = 9979;
     GVAR(gurney_c) = 2440;
@@ -288,7 +288,7 @@ class IEDUrbanBig_Remote_Ammo: PipeBombBase {
 };
 class IEDLandBig_Remote_Ammo: PipeBombBase {
     GVAR(skip) = 0;
-    GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
+    GVAR(classes)[] = {QGVAR(large), QGVAR(large_HD), QGVAR(large_HD), QGVAR(large_HD), QGVAR(huge_HD), QGVAR(huge_HD), QGVAR(huge_HD)};
     GVAR(metal) = 36000;
     GVAR(charge) = 9979;
     GVAR(gurney_c) = 2440;
@@ -300,7 +300,7 @@ class IEDUrbanSmall_Remote_Ammo: PipeBombBase {
     GVAR(charge) = 3148;
     GVAR(gurney_c) = 2830;
     GVAR(gurney_k) = "3/5";
-    GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(medium_HD)};
+    GVAR(classes)[] = {QGVAR(small), QGVAR(medium_HD), QGVAR(medium_HD)};
 };
 class IEDLandSmall_Remote_Ammo: PipeBombBase {
     GVAR(skip) = 0;
@@ -308,7 +308,7 @@ class IEDLandSmall_Remote_Ammo: PipeBombBase {
     GVAR(charge) = 3148;
     GVAR(gurney_c) = 2830;
     GVAR(gurney_k) = "3/5";
-    GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(medium_HD)};
+    GVAR(classes)[] = {QGVAR(small), QGVAR(medium_HD), QGVAR(medium_HD)};
 };
 
 class APERSMineDispenser_Ammo: PipeBombBase {
@@ -321,12 +321,12 @@ class UXO1_Ammo_Base_F: APERSMine_Range_Ammo { // Mk 118 Rockeye
     GVAR(metal) = 400;
     GVAR(gurney_c) = 2700;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(small_HD)};
 };
 
 class UXO2_Ammo_Base_F: UXO1_Ammo_Base_F {
     GVAR(charge) = 100;
-    GVAR(classes)[] = {QGVAR(small), QGVAR(tiny)};
+    GVAR(classes)[] = {QGVAR(small_HD), QGVAR(tiny_HD)};
 };
 
 class APERSMineDispenser_Mine_Ammo: APERSMine_Range_Ammo {
@@ -363,7 +363,7 @@ class BombDemine_01_SubAmmo_F: ShellBase {
 class R_PG7_F: RocketBase {
     GVAR(skip) = 0;
     GVAR(force) = 0;
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small_HD)};
     GVAR(metal) = 100;
     GVAR(charge) = 560;
     GVAR(gurney_c) = 2730;
@@ -395,7 +395,7 @@ class M_SPG9_HE: M_SPG9_HEAT {
     GVAR(charge) = 655;
     GVAR(gurney_c) = 2800;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(small), QGVAR(tiny), QGVAR(medium), QGVAR(medium)};
+    GVAR(classes)[] = {QGVAR(small_HD), QGVAR(tiny), QGVAR(medium_HD), QGVAR(medium_HD)};
 };
 
 // https://armypubs.army.mil/epubs/DR_pubs/DR_a/pdf/web/ARN18072_TC%203-22x84%20FINAL%20WEB.pdf
@@ -405,7 +405,7 @@ class R_MRAAWS_HEAT_F: RocketBase { // Table A-20. HEAT 751
     GVAR(charge) = 635;
     GVAR(gurney_c) = 2970;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(small_HD)};
 
 };
 class R_MRAAWS_HEAT55_F: R_MRAAWS_HEAT_F { // Table A-16. HEAT 551C
@@ -417,7 +417,7 @@ class R_MRAAWS_HE_F: R_MRAAWS_HEAT_F { // Table A-6. HE 441D RS
     GVAR(charge) = 590;
     GVAR(gurney_c) = 2800;
     GVAR(gurney_k) = "3/5";
-    GVAR(classes)[] = {QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(small_HD)};
 };
 
 class R_80mm_HE: RocketBase { // S-8D
@@ -426,7 +426,7 @@ class R_80mm_HE: RocketBase { // S-8D
     GVAR(metal) = 1650;
     GVAR(gurney_c) = 2700;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(small), QGVAR(tiny), QGVAR(tiny)};
+    GVAR(classes)[] = {QGVAR(small_HD), QGVAR(tiny_HD), QGVAR(tiny)};
 };
 class R_60mm_HE: R_80mm_HE { // no idea but looks like a FFAR so made it weaker
     GVAR(metal) = 1040;
@@ -439,7 +439,7 @@ class m_70mm_saami: MissileBase {
     GVAR(metal) = 1650;
     GVAR(gurney_c) = 2700;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(small), QGVAR(tiny), QGVAR(tiny)};
+    GVAR(classes)[] = {QGVAR(small_HD), QGVAR(tiny_HD), QGVAR(tiny)};
 };
 
 class Rocket_04_HE_F: MissileBase { // Shrieker (Hydra 70)
@@ -469,12 +469,12 @@ class R_230mm_fly: ShellBase {
     GVAR(metal) = 150; // kg
     GVAR(gurney_c) = 2320;
     GVAR(gurney_k) = "3/5";
-    GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
+    GVAR(classes)[] = {QGVAR(large_HD), QGVAR(large), QGVAR(large), QGVAR(large), QGVAR(huge_HD), QGVAR(huge_HD), QGVAR(huge)};
 };
 
 class M_PG_AT: MissileBase { // DAGR M247 warhead
     GVAR(skip) = 0;
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small), QGVAR(small), QGVAR(medium)};
+    GVAR(classes)[] = {QGVAR(tiny_HD), QGVAR(small_HD), QGVAR(small), QGVAR(medium)};
     GVAR(charge) = 910;
     GVAR(metal) = 3085;
     GVAR(gurney_c) = 2700;
@@ -508,7 +508,7 @@ class M_Titan_AA: MissileBase {
     GVAR(charge) = 1020;
     GVAR(gurney_c) = 2501;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(tiny), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(tiny), QGVAR(tiny_HD), QGVAR(small_HD)};
 };
 class M_Titan_AT: MissileBase {
     GVAR(skip) = 1;
@@ -524,7 +524,7 @@ class M_Titan_AP: M_Titan_AT {
 
 class M_Scalpel_AT: MissileBase { // 9K121 Vikhr
     GVAR(skip) = 0;
-    GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(medium_HD)};
+    GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
     GVAR(metal) = 10000;
     GVAR(charge) = 3000;
     GVAR(gurney_c) = 2700;
@@ -544,7 +544,7 @@ class ACE_Hellfire_AGM114K: M_Scalpel_AT {
 class ammo_Missile_CruiseBase: MissileBase {};
 class ammo_missile_cruise_01: ammo_Missile_CruiseBase {
     GVAR(skip) = 0;
-    GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(large)};
+    GVAR(classes)[] = {QGVAR(small), QGVAR(medium_HD), QGVAR(large_HD)};
     GVAR(metal) = 700000;
     GVAR(charge) = 110000;
     GVAR(gurney_c) = 2600;
@@ -558,13 +558,13 @@ class ammo_Missile_AntiRadiationBase: MissileBase {
 };
 class ammo_Missile_HARM: ammo_Missile_AntiRadiationBase {
     GVAR(skip) = 0;
-    GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(large)};
+    GVAR(classes)[] = {QGVAR(small), QGVAR(medium_HD), QGVAR(large_HD)};
     GVAR(charge) = 10000;
     GVAR(metal) = 58000;
 };
 class ammo_Missile_KH58: ammo_Missile_AntiRadiationBase {
     GVAR(skip) = 0;
-    GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(large)};
+    GVAR(classes)[] = {QGVAR(small), QGVAR(medium_HD), QGVAR(large_HD)};
     GVAR(charge) = 20000;
     GVAR(metal) = 129000;
 };
@@ -575,7 +575,7 @@ class M_Zephyr: M_Titan_AA { // model is an AMRAAM- WDU-41/B warhead
     GVAR(charge) = 4000;
     GVAR(gurney_c) = 2900;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(medium), QGVAR(small), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(tiny), QGVAR(medium_HD), QGVAR(small), QGVAR(small_HD)};
 };
 
 class M_Air_AA: MissileBase { // Looks not real, maybe r-73 inspired?
@@ -584,7 +584,7 @@ class M_Air_AA: MissileBase { // Looks not real, maybe r-73 inspired?
     GVAR(metal) = 4950;
     GVAR(gurney_c) = 2700;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(medium), QGVAR(small), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(tiny), QGVAR(medium_HD), QGVAR(small_HD), QGVAR(small_HD)};
 };
 
 class Missile_AA_04_F: MissileBase {
@@ -608,7 +608,7 @@ class ammo_Missile_rim116: ammo_Missile_ShortRangeAABase {
     GVAR(charge) = 400;
     GVAR(metal) = 730;
     GVAR(gurney_c) = 2400;
-    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small)};
+    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small_HD)};
 };
 class ammo_Missile_BIM9X: ammo_Missile_ShortRangeAABase {
     GVAR(skip) = 0;
@@ -711,7 +711,7 @@ class Sh_120mm_HE: ShellBase {
     GVAR(metal) = 23000;
     GVAR(gurney_c) = 2830;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(medium), QGVAR(medium_HD)};
+    GVAR(classes)[] = {QGVAR(medium), QGVAR(medium_HD)};
 };
 class Sh_120mm_HEAT_MP: ShellBase {
     GVAR(skip) = 0;
@@ -719,14 +719,14 @@ class Sh_120mm_HEAT_MP: ShellBase {
     GVAR(metal) = 5000;
     GVAR(gurney_c) = 2500;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(medium), QGVAR(medium_HD)};
+    GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(medium_HD), QGVAR(medium_HD)};
 };
 
 class ammo_ShipCannon_120mm_HE: Sh_155mm_AMOS {
     GVAR(charge) = 3148;
     GVAR(metal) = 23000;
     GVAR(gurney_c) = 2830;
-    GVAR(classes)[] = {QGVAR(small), QGVAR(small), QGVAR(medium), QGVAR(large)};
+    GVAR(classes)[] = {QGVAR(small), QGVAR(small), QGVAR(medium_HD), QGVAR(large_HD)};
 };
 
 class Sh_125mm_HE: Sh_120mm_HE {
@@ -744,7 +744,7 @@ class Sh_125mm_HEAT: Sh_125mm_HE {
 
 class Sh_105mm_HEAT_MP: Sh_125mm_HEAT {
     GVAR(skip) = 0;
-    GVAR(classes)[] = {QGVAR(small), QGVAR(medium), QGVAR(medium), QGVAR(medium_HD)};
+    GVAR(classes)[] = {QGVAR(small), QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD)};
     GVAR(metal) = 11400;
     GVAR(charge) = 7100;
     GVAR(gurney_c) = 2800;
@@ -756,7 +756,7 @@ class ModuleOrdnanceHowitzer_F_ammo: Sh_155mm_AMOS {
     GVAR(charge) = 15800;
     GVAR(gurney_c) = 2320;
     GVAR(gurney_k) = "1/2";
-    GVAR(classes)[] = {QGVAR(large), QGVAR(large), QGVAR(large_HD), QGVAR(large), QGVAR(huge), QGVAR(huge_HD), QGVAR(huge)};
+    GVAR(classes)[] = {QGVAR(large), QGVAR(large_HD), QGVAR(large_HD), QGVAR(large_HD), QGVAR(huge_HD), QGVAR(huge_HD), QGVAR(huge_HD)};
 };
 class ammo_Penetrator_Base: ShellBase {
     GVAR(skip) = 1;

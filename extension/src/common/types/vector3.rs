@@ -1,4 +1,4 @@
-use arma_rs::{FromArma, IntoArma};
+use arma_rs::{FromArma, FromArmaError, IntoArma};
 
 #[derive(Debug, Clone, Copy, PartialEq, Default)]
 pub struct Vector3 {
@@ -52,7 +52,7 @@ impl Vector3 {
 }
 
 impl FromArma for Vector3 {
-    fn from_arma(s: String) -> Result<Self, String> {
+    fn from_arma(s: String) -> Result<Self, FromArmaError> {
         let data = <[f64; 3]>::from_arma(s)?;
         Ok(Self {
             x: data[0],

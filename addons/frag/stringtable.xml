@@ -114,6 +114,12 @@
         <Key ID="STR_ACE_Frag_Debug">
             <English>Debug</English>
         </Key>
+        <Key ID="STR_ACE_Frag_SpallIntensity">
+            <English>Spalling Intensity</English>
+        </Key>
+        <Key ID="STR_ACE_Frag_SpallIntensity_Desc">
+            <English>Modifier to increase or decrease the number and intensity of spalling events. Increasing this value may cause performance degradation.</English>
+        </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>Frag/Spall Debug Tracing</English>
             <German>Splitter-/Explosions-Debug-Verfolgung</German>
@@ -133,6 +139,7 @@
         </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox_Desc">
             <English>Draw hitboxes on objects that were targeted.</English>
+            <German>Splitter-/Explosions-Debugging</German>
         </Key>
     </Package>
 </Project>

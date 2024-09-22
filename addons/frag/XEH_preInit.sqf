@@ -6,8 +6,10 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
+GVAR(spallMaterialCache) = uiNamespace getVariable QGVAR(spallMaterialCache);
 GVAR(spallInfoCache) = createHashMap;
 GVAR(shouldSpallCache) = createHashMap;
+GVAR(nextSpallAllowTime) = -1;
 
 GVAR(shouldFragCache) = createHashMap;
 GVAR(fragInfoCache) = createHashMap;
