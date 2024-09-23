@@ -727,6 +727,7 @@
             <Japanese>全てのUIを隠す</Japanese>
             <French>Cacher toute l'interface utilisateur.</French>
             <Russian>Скрыть весь интерфейс</Russian>
+            <Korean>모든 UI 숨기기</Korean>
         </Key>
     </Package>
 </Project>
