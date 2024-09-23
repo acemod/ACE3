@@ -3,18 +3,23 @@
     <Package name="Compat_SPE_CSW">
         <Key ID="STR_ACE_Compat_SPE_CSW_alteringHeight">
             <English>Altering Height...</English>
+            <Japanese>高さを変更・・・</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_50Rnd_762x63_Tracer">
             <English>.30-06 50Rnd Belt (M2/Tracer)</English>
+            <Japanese>.30-06 50Rnd Belt (M2/Tracer)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_100Rnd_762x63_Tracer">
             <English>.30-06 100Rnd Belt (M2/Tracer)</English>
+            <Japanese>.30-06 100Rnd Belt (M2/Tracer)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_50Rnd_792x57_Tracer">
             <English>7.92x57 50Rnd Gurttrommel (L.S./Tracer)</English>
+            <Japanese>7.92x57 50Rnd Gurttrommel (L.S./Tracer)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_100Rnd_792x57_Tracer">
             <English>7.92x57 100Rnd Belt (L.S./Tracer)</English>
+            <Japanese>7.92x57 100Rnd Belt (L.S./Tracer)</Japanese>
         </Key>
     </Package>
 </Project>
