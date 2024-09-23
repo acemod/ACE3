@@ -351,6 +351,7 @@
             <English>Show adjustment UI in scope</English>
             <German>Zeige Absehenverstellungs-UI im Zielfernrohr</German>
             <Italian>Mostra UI delle manopole nel mirino</Italian>
+            <Japanese>調整UIをスコープ内に表示</Japanese>
             <Korean>스코프에 조절 UI 보이기</Korean>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
