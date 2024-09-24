@@ -57,7 +57,7 @@ GVAR(DustHandler) = [{
 
         private _amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
 
-        if !(ACE_player getVariable ["ACE_EyesDamaged", false]) then { // double check
+        if !(ACE_player getVariable ["ACE_EyesDamaged", false]) then {
             GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [_amount, _amount, _amount, _amount], [1, 1, 1, 0]];
             GVAR(PostProcessEyes) ppEffectCommit 0.5;
         };

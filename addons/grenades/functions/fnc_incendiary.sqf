@@ -202,7 +202,7 @@ if (isServer) then {
             {EGVAR(cookoff,ammoCookoffDuration) != 0} &&
             {_x getVariable [QEGVAR(cookoff,enableAmmoCookoff), true]}
         ) then {
-            [QEGVAR(cookOff,cookOffBoxServer), _x] call CBA_fnc_serverEvent; // double check
+            [QEGVAR(cookOff,cookOffBoxServer), _x] call CBA_fnc_serverEvent;
         } else {
             _x setDamage 1;
         };
