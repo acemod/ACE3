@@ -3,7 +3,7 @@ class Cfg3DEN {
         class Slider;
         class GVAR(slider): Slider {
             #pragma hemtt suppress pw3_padded_arg
-            attributeLoad = QUOTE( \
+            attributeLoad = QUOTE(\
                 params ['_ctrlGroup']; \
                 private _slider = _ctrlGroup controlsGroupCtrl 100; \
                 private _edit = _ctrlGroup controlsGroupCtrl 101; \
