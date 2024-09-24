@@ -78,6 +78,7 @@ if (_enabledTagsCursor) then {
 if (_enabledTagsNearby) then {
     // Find valid targets and cache them
     private _targets = [[], {
+        //IGNORE_PRIVATE_WARNING ["_camPosAGL", "_maxDistance"];
         private _nearMen = _camPosAGL nearObjects ["CAManBase", _maxDistance + 7];
         _nearMen = _nearMen select {
             _x != ACE_player &&

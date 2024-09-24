@@ -199,4 +199,4 @@ if (_delayBetweenSmokeAndFire) then {
 }, [_vehicle, _selections, _ammoDetonationChance, _detonateAfterCookoff, _source, _instigator, _fireSelection, _canRing, _canJet, _smokeJipID, _fireJipID], _delay] call CBA_fnc_waitAndExecute;
 
 // API
-[QGVAR(cookoff), [_vehicle, _intensity, _instigator, _smokeDelayEnabled, _ammoDetonationChance, _detonateAfterCookoff, _fireSelection, _canRing, _maxIntensity, _canJet]] call CBA_fnc_globalEvent;
+[QGVAR(cookoff), [_vehicle, _intensity, _instigator, _delayBetweenSmokeAndFire, _ammoDetonationChance, _detonateAfterCookoff, _fireSelection, _canRing, _maxIntensity, _canJet]] call CBA_fnc_globalEvent; // double check

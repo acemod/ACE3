@@ -30,4 +30,5 @@ if (!IS_EXPLOSIVE_AMMO(_ammo)) then {
     } forEach crew _vehicle;
 };
 
+//IGNORE_PRIVATE_WARNING ["_thisEventHandler"];
 _vehicle removeEventHandler ["HandleDamage", _thisEventHandler];
