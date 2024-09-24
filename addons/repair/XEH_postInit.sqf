@@ -39,12 +39,28 @@
 
     ["CAManBase", "InitPost", {
         params ["_unit"];
-        if !(local _unit && {_unit getUnitTrait "engineer"}) exitWith {};
+        // getUnitTrait can return nil so check config instead
+        if (getNumber (configOf _unit >> "engineer") < 1) exitWith {};
+
+        // unit can be local here for both server and client so use CBA_fnc_execNextFrame for safe
+        [{
+            params ["_unit"];
+            if !(local _unit) exitWith {};
+            private _isEngineer = _unit getUnitTrait "engineer";
+            if (isNil "_isEngineer" || {_isEngineer isNotEqualTo true}) exitWith {};
+            _unit setUnitTrait ["engineer", false];
+            TRACE_3("setUnitTrait2",_unit,typeOf _unit,_unit getUnitTrait "engineer");
+        }, _unit] call CBA_fnc_execNextFrame;
+
+        if !(local _unit) exitWith {};
+        private _isEngineer = _unit getUnitTrait "engineer";
+        if (isNil "_isEngineer" || {_isEngineer isNotEqualTo true}) exitWith {};
         _unit setUnitTrait ["engineer", false];
+        TRACE_3("setUnitTrait1",_unit,typeOf _unit,_unit getUnitTrait "engineer");
+
         if (_unit getVariable ["ACE_IsEngineer", -1] isEqualTo -1) then {
             _unit setVariable ["ACE_IsEngineer", true, true];
         };
-        TRACE_3("setUnitTrait",_unit,typeOf _unit,_unit getUnitTrait "engineer");
     }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 
