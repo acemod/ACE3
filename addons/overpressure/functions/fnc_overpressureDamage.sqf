@@ -73,4 +73,4 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
             #endif
         };
     };
-} forEach ((ASLtoAGL _posASL) nearEntities ["CAManBase", _overpressureRange]);
+} forEach ((ASLToAGL _posASL) nearEntities ["CAManBase", _overpressureRange]);

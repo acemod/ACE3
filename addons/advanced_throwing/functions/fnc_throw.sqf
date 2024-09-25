@@ -89,7 +89,7 @@ GVAR(flightPath) = [];
 GVAR(flightRotation) = [];
 (_unit getVariable QGVAR(activeThrowable)) spawn {
     while {!isNull _this && {(getPosATL _this) select 2 > 0.05}} do {
-        GVAR(flightPath) pushBack [ASLtoAGL (getPosASL _this), vectorUp _this];
+        GVAR(flightPath) pushBack [ASLToAGL (getPosASL _this), vectorUp _this];
         sleep 0.05;
     };
 };

@@ -50,7 +50,7 @@ if (_shooter == ACE_player) then {
         private _debugYaw = _debugYaw + _yawChange * _x;
         private _debugPitch = _debugPitch + _pitchChange * _x;
         private _debugPos = _debugPos vectorAdd ([_distance, _debugYaw, _debugPitch] call CBA_fnc_polar2vect);
-        GVAR(debug_firedPrediction) pushBack ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,0,0,1], ASLtoAGL _debugPos, 0.5, 0.5, 0, format ["%1", _x], 1, 0.025, "TahomaB"];
+        GVAR(debug_firedPrediction) pushBack ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,0,0,1], ASLToAGL _debugPos, 0.5, 0.5, 0, format ["%1", _x], 1, 0.025, "TahomaB"];
     };
     #endif
 } else {

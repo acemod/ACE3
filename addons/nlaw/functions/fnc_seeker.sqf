@@ -62,7 +62,7 @@ if ((_projPos distance _launchPos) >= 20) then {
         // This represents a position that the missile was at between the last frame and now
         private _virtualPos = _lastPos vectorAdd (_vectorDir vectorMultiply _stepSize);
         #ifdef DRAW_NLAW_INFO
-        drawLine3D [ASLtoAGL _virtualPos, ASLtoAGL (_virtualPos vectorAdd [0,0,-5]), [1,0,_stepSize/(_frameDistance max 0.1),1]];
+        drawLine3D [ASLToAGL _virtualPos, ASLToAGL (_virtualPos vectorAdd [0,0,-5]), [1,0,_stepSize/(_frameDistance max 0.1),1]];
         #endif
 
         // Limit scan to 5 meters directly down (shaped charge jet has a very limited range)
@@ -71,7 +71,7 @@ if ((_projPos distance _launchPos) >= 20) then {
             (_res select 0) params ["_targetPos", "", "_target"];
             if ((_target isKindOf "Tank") || {_target isKindOf "Car"} || {_target isKindOf "Air"}) exitWith {
                 TRACE_3("Firing shaped charge down",_target,_targetPos distance _virtualPos,_frameDistance);
-                TRACE_2("",_target worldToModel (ASLtoAGL _virtualPos),boundingBoxReal _target);
+                TRACE_2("",_target worldToModel (ASLToAGL _virtualPos),boundingBoxReal _target);
                 _virtualPos = _virtualPos vectorAdd (_vectorDir vectorMultiply 1.25);
 
                 deleteVehicle _projectile;
