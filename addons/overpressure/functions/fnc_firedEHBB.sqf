@@ -52,7 +52,7 @@ if (_distance < _backblastRange && {EGVAR(hearing,playerVehAttenuation) > 0.8}) 
 
     // Skip if vehicle backblast reflection is disabled
     private _vehicle = vehicle _shooter;
-    if (_vehicle != _shooter && {getNumber (configFile >> "CfgVehicles" >> typeOf _vehicle >> QGVAR(noReflection)) == 1}) exitWith {};
+    if (_vehicle != _shooter && {getNumber (configOf _vehicle >> QGVAR(noReflection)) == 1}) exitWith {};
 
     private _alpha = sqrt (1 - _distance / _backblastRange);
     private _beta = sqrt 0.5;

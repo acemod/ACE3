@@ -40,11 +40,11 @@ private _distance = 999;
             // Calculate the angle between the terrain and the back blast direction
             private _angle = 90 - acos (- (_surfaceNormal vectorDotProduct _direction));
             TRACE_3("Terrain Intersect",_surfaceNormal,_direction,_angle);
-            // Angles is below 25deg, no backblast at all
+            // Angles is below 25°, no backblast at all
             if (_angle < 25) exitWith {_distance = 999};
-            // Angles is below 45deg the distance is increased according to the difference
+            // Angles is below 45° the distance is increased according to the difference
             if (_angle < 45) exitWith {_distance = _distance * (5 - 4 * sqrt ((_angle - 25)/20))};
-            // Angles above 45deg create full backblast
+            // Angles above 45° create full backblast
         };
     };
 } forEach _intersections;
