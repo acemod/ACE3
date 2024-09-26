@@ -44,7 +44,7 @@ private _distance = 2 * ([_position, _direction, _backblastRange, _shooter] call
 
 TRACE_1("Distance",_distance);
 
-if (_distance < _backblastRange && {isNil QEGVAR(hearing,playerVehAttenuation) || {EGVAR(hearing,playerVehAttenuation) > 0.8}}) then {
+if (_distance < _backblastRange && {EGVAR(common,playerVehAttenuation) > 0.8}) then {
     TRACE_2("",isDamageAllowed _shooter,_shooter getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
 
     // Skip damage if not allowed

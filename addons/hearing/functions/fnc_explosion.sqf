@@ -32,7 +32,7 @@ if (_distance > 100) exitWith {
 private _ammoConfig = configOf _projectile;
 private _explosive = getNumber (_ammoConfig >> "explosive");
 
-private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
+private _vehAttenuation = [EGVAR(common,playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
 
 TRACE_5("",typeOf _projectile,_distance,_explosive,_audibleFire,_vehAttenuation);
 
