@@ -35,5 +35,4 @@ private _wheelDamage = (damage _target) - GVAR(patchWheelMaximumRepair);
     _target setDamage _damage;
 
     _damage > GVAR(patchWheelMaximumRepair)
-}] call ace_common_fnc_progressBar;
-
+}] call EFUNC(common,progressBar);
