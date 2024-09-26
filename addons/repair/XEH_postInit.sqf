@@ -42,7 +42,7 @@
         // getUnitTrait can return nil so check config instead
         if (getNumber (configOf _unit >> "engineer") < 1) exitWith {};
 
-        // unit can be local here for both server and client so use CBA_fnc_execNextFrame for safe
+        // unit can be local here for both server and client for one frame so use CBA_fnc_execNextFrame to be safe
         [{
             params ["_unit"];
             if !(local _unit) exitWith {};
