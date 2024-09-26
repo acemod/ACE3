@@ -58,8 +58,19 @@ private _detonateAfterCookoff = (_fireDetonateChance / 4) > random 1;
 
 private _sourceHitpoint = "";
 
+// Passed to the selectionPosition command in cookoff
 if (_hitPart == "engine") then {
-    _sourceHitpoint = ["hit_engine_point", "HitPoints"];
+    private _hitPoints = getAllHitPointsDamage _vehicle;
+
+    if (_hitPoints isEqualTo []) exitWith {};
+
+    // Get hitpoint for engine
+    private _index = (_hitPoints select 0) findIf {_x == "hitengine"};
+
+    if (_index == -1) exitWith {};
+
+    // Get corresponding selection
+    _sourceHitpoint = [(_hitPoints select 1) select _index, "HitPoints", "AveragePoint"];
 };
 
 [QEGVAR(cookOff,cookOffServer), [_vehicle, _intensity, _source, _instigator, _delaySmoke, _fireDetonateChance, _detonateAfterCookoff, _sourceHitpoint, _canRing, _canJet]] call CBA_fnc_serverEvent;
