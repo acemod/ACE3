@@ -62,7 +62,7 @@ if (_hitPart == "engine") then {
     _sourceHit = ["hit_engine_point", "HitPoints"];
 };
 
-[QEGVAR(cookOff,cookOffServer), [_vehicle, _intensity, _sourceObj, _instigator, _delayWithSmoke, _fireDetonateChance, _detonateAfterCookoff, _sourceHit, _canRing, _canJet]] call CBA_fnc_serverEvent;
+[QEGVAR(cookOff,cookOffServer), [_vehicle, _intensity, _sourceObj, _instigator, _delaySmoke, _fireDetonateChance, _detonateAfterCookoff, _sourceHit, _canRing, _canJet]] call CBA_fnc_serverEvent;
 TRACE_4("cooking-off",_vehicle,_chanceOfFire,_delaySmoke,_detonateAfterCookoff);
 
 // Abandon vehicle
