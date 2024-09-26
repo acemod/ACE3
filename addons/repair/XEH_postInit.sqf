@@ -39,24 +39,20 @@
 
     ["CAManBase", "InitPost", {
         params ["_unit"];
-        // getUnitTrait can return nil so check config instead
-        if (getNumber (configOf _unit >> "engineer") < 1) exitWith {};
+        private _isEngineer = _unit getUnitTrait "engineer";
+        if (isNil "_isEngineer" || {_isEngineer isNotEqualTo true}) exitWith {};
 
         // unit can be local here for both server and client for one frame so use CBA_fnc_execNextFrame to be safe
         [{
             params ["_unit"];
-            if !(local _unit) exitWith {};
-            private _isEngineer = _unit getUnitTrait "engineer";
-            if (isNil "_isEngineer" || {_isEngineer isNotEqualTo true}) exitWith {};
+            if !(local _unit && {_unit getUnitTrait "engineer"}) exitWith {};
             _unit setUnitTrait ["engineer", false];
             TRACE_3("setUnitTrait2",_unit,typeOf _unit,_unit getUnitTrait "engineer");
         }, _unit] call CBA_fnc_execNextFrame;
 
         if !(local _unit) exitWith {};
-        private _isEngineer = _unit getUnitTrait "engineer";
-        if (isNil "_isEngineer" || {_isEngineer isNotEqualTo true}) exitWith {};
         _unit setUnitTrait ["engineer", false];
-        TRACE_3("setUnitTrait1",_unit,typeOf _unit,_unit getUnitTrait "engineer");
+        TRACE_3("setUnitTrait1",_unit,typeOf _unit,_isEngineer);
 
         if (_unit getVariable ["ACE_IsEngineer", -1] isEqualTo -1) then {
             _unit setVariable ["ACE_IsEngineer", true, true];
