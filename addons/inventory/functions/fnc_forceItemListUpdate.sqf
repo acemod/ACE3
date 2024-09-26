@@ -29,7 +29,7 @@ private _itemKeyCache = uiNamespace getVariable QGVAR(itemKeyCache);
 private _backpackKeyCache = uiNamespace getVariable QGVAR(backpackKeyCache);
 private _config = configNull;
 
-for "_i" from (lbSize _itemList) to 0 step -1 do {
+for "_i" from (lbSize _itemList) - 1 to 0 step -1 do {
     // All items have their classnames in lbData, except backpacks
     _className = _itemList lbData _i;
 
