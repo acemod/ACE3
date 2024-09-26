@@ -58,7 +58,7 @@ if (GVAR(currentApplicationPage) == APP_MODE_INFODISPLAY) then {
 
 if (GVAR(currentApplicationPage) == APP_MODE_MAP) then {
     _theMap = if (GVAR(mapShowTexture)) then {_display displayCtrl IDC_MAPDETAILS} else {_display displayCtrl IDC_MAPPLAIN};
-    _mapSize = (ctrlPosition _theMap) select 3;
+    private _mapSize = (ctrlPosition _theMap) select 3;
     _theMap ctrlMapAnimAdd [0, (GVAR(mapZoom) / _mapSize), GVAR(mapPosition)];
     ctrlMapAnimCommit _theMap;
     if (GVAR(mapAutoTrackPosition)) then {
