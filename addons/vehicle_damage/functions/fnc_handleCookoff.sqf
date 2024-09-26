@@ -22,8 +22,8 @@
  * Public: No
  */
 
-params ["_vehicle", "_chanceOfFire", "_intensity", "_sourceObj", "_instigator", ["_hitPart", ""], ["_canRing", true], ["_canJet", true]];
-TRACE_8("handleCookoff",_vehicle,_chanceOfFire,_intensity,_sourceObj,_instigator,_hitPart,_canRing,_canJet);
+params ["_vehicle", "_chanceOfFire", "_intensity", "_source", "_instigator", ["_hitPart", ""], ["_canRing", true], ["_canJet", true]];
+TRACE_8("handleCookoff",_vehicle,_chanceOfFire,_intensity,_source,_instigator,_hitPart,_canRing,_canJet);
 
 // Ignore if the vehicle is already cooking off
 if (_vehicle getVariable [QEGVAR(cookoff,isCookingOff), false]) exitWith {
@@ -56,13 +56,13 @@ if (_canJet) then {
 private _delaySmoke = _chanceOfFire < random 1;
 private _detonateAfterCookoff = (_fireDetonateChance / 4) > random 1;
 
-private _sourceHit = "";
+private _sourceHitpoint = "";
 
 if (_hitPart == "engine") then {
-    _sourceHit = ["hit_engine_point", "HitPoints"];
+    _sourceHitpoint = ["hit_engine_point", "HitPoints"];
 };
 
-[QEGVAR(cookOff,cookOffServer), [_vehicle, _intensity, _sourceObj, _instigator, _delaySmoke, _fireDetonateChance, _detonateAfterCookoff, _sourceHit, _canRing, _canJet]] call CBA_fnc_serverEvent;
+[QEGVAR(cookOff,cookOffServer), [_vehicle, _intensity, _source, _instigator, _delaySmoke, _fireDetonateChance, _detonateAfterCookoff, _sourceHitpoint, _canRing, _canJet]] call CBA_fnc_serverEvent;
 TRACE_4("cooking-off",_vehicle,_chanceOfFire,_delaySmoke,_detonateAfterCookoff);
 
 // Abandon vehicle
