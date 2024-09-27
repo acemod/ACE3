@@ -41,22 +41,29 @@
         params ["_unit"];
         private _isEngineer = _unit getUnitTrait "engineer";
         if (isNil "_isEngineer" || {_isEngineer isNotEqualTo true}) exitWith {};
+        TRACE_4("setUnitTrait 1",_unit,typeOf _unit,local _unit,ACE_player);
 
-        // unit can be local here for both server and client for one frame so use CBA_fnc_execNextFrame to be safe
-        [{
-            params ["_unit"];
-            if !(local _unit && {_unit getUnitTrait "engineer"}) exitWith {};
+        if (local _unit) exitWith {
             _unit setUnitTrait ["engineer", false];
-            TRACE_3("setUnitTrait2",_unit,typeOf _unit,_unit getUnitTrait "engineer");
-        }, _unit] call CBA_fnc_execNextFrame;
 
-        if !(local _unit) exitWith {};
-        _unit setUnitTrait ["engineer", false];
-        TRACE_3("setUnitTrait1",_unit,typeOf _unit,_isEngineer);
-
-        if (_unit getVariable ["ACE_IsEngineer", -1] isEqualTo -1) then {
-            _unit setVariable ["ACE_IsEngineer", true, true];
+            if (_unit getVariable ["ACE_IsEngineer", -1] isEqualTo -1) then {
+                _unit setVariable ["ACE_IsEngineer", true, true];
+            };
         };
+
+        // handle delay of player locality pass
+        if (_unit isNotEqualTo ACE_player) exitWith {};
+        [
+            {local _this},
+            {
+                params ["_unit"];
+                TRACE_3("setUnitTrait 2",_unit,typeOf _unit,_unit getUnitTrait "engineer");
+                _unit setUnitTrait ["engineer", false];
+            },
+            _unit,
+            60,
+            {ERROR_3("setUnitTrait locality timeout unit=%1 type=%2 isEngineer=%3",_this,typeOf _this,_this getUnitTrait "engineer");}
+        ] call CBA_fnc_waitUntilAndExecute;
     }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 
