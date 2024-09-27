@@ -125,7 +125,7 @@ private _statement = {
 
             if (!_success) exitWith {};
 
-            _target animateSource [_anim, _phase, true];
+            _target animate [_anim, _phase, true];
         },
         {},
         _text,
