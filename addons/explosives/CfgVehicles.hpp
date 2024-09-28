@@ -364,7 +364,6 @@ class CfgVehicles {
         author = ECSTRING(common,aceteam);
         ammo = "ACE_SLAMDirectionalMine_Magnetic_Ammo";
         displayName = CSTRING(Module_SLAMBottomAttack_DisplayName);
-        // TODO: Find a way to place the mine laying down instead of standing up
     };
 
     class APERSTripMine: MineBase {};
