@@ -23,10 +23,10 @@ DFUNC(dev_trackShell) = {
         if (_ammo isKindOf "SubmunitionBase") then {
             private _projectilePos = getPosASL _projectile;
             private _forwardPosition = _projectilePos vectorAdd ((vectorNormalized (velocity _projectile)) vectorMultiply 15);
-            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLtoAGL _projectilePos, 0.75, 0.75, 0, _ammo, 1, 0.025, "TahomaB"];
-            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0.5,0,1,1], ASLtoAGL _forwardPosition, 0.75, 0.75, 0, 
+            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,0,1], ASLToAGL _projectilePos, 0.75, 0.75, 0, _ammo, 1, 0.025, "TahomaB"];
+            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0.5,0,1,1], ASLToAGL _forwardPosition, 0.75, 0.75, 0, 
                 format ["V: %1 (%2)", round vectorMagnitude velocity _projectile, round ((velocity _projectile) # 2)], 1, 0.025, "TahomaB"];
-            drawLine3D [ASLtoAGL _projectilePos, ASLtoAGL _forwardPosition, [0.5,0,1,1]];
+            drawLine3D [ASLToAGL _projectilePos, ASLToAGL _forwardPosition, [0.5,0,1,1]];
         };
 
         private _deltaT = CBA_missionTime - _time;

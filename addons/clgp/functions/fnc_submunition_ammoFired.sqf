@@ -25,7 +25,7 @@ private _ammoCfg = configOf _projectile;
 private _firedEH = +_this;
 // Inject the submunition ammo into guidance args
 _firedEH set [4, getText (_ammoCfg >> "submunitionAmmo")];
-private _guidanceArgs = _firedEH call EFUNC(missileguidance,onFiredDeferred);
+private _guidanceArgs = _firedEH call EFUNC(missileguidance,onFiredGetArgs);
 if (_guidanceArgs isEqualTo []) then { WARNING_1("no args %1",_projectile); };
 _projectile setVariable [QGVAR(guidanceArgs), _guidanceArgs];
 

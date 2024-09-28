@@ -30,12 +30,6 @@ if (_guidanceArgs isNotEqualTo []) then { // Inject the submunition projectile a
     [EFUNC(missileguidance,guidancePFH), 0, _guidanceArgs] call CBA_fnc_addPerFrameHandler;
 };
 
-// NOTE: Probably need to remove after frag-rewrite
-if (!isNil QEFUNC(frag,addPfhRound)) then { // todo make frag work for original and sub
-    TRACE_1("-Starting frag track",_submunitionProjectile); 
-    [_firedEH # 0, _firedEH # 4, _submunitionProjectile] call EFUNC(frag,addPfhRound);
-};
-
 private _deployArtilleryDragConfig = (configOf _projectile) >> QGVAR(artilleryDrag);
 if (isNumber _deployArtilleryDragConfig) then {
     private _deployArtilleryDrag = getNumber _deployArtilleryDragConfig;

@@ -64,7 +64,7 @@ class GVAR(copperhead_dialog) {
                     class Controls {
                         class ButtonDial: GVAR(copperhead_dialButton) {
                             idc = 113;
-                            tooltip = CSTRING(copperhead_dial_LaserCode);
+                            tooltip = ECSTRING(laser,laserCode);
                         };
                     };
                 };
@@ -73,7 +73,7 @@ class GVAR(copperhead_dialog) {
                     class Controls {
                         class ButtonDial: GVAR(copperhead_dialButton) {
                             idc = 114;
-                            tooltip = CSTRING(copperhead_dial_LaserCode);
+                            tooltip = ECSTRING(laser,laserCode);
                         };
                     };
                 };
@@ -82,7 +82,7 @@ class GVAR(copperhead_dialog) {
                     class Controls {
                         class ButtonDial: GVAR(copperhead_dialButton) {
                             idc = 115;
-                            tooltip = CSTRING(copperhead_dial_LaserCode);
+                            tooltip = ECSTRING(laser,laserCode);
                         };
                     };
                 };
