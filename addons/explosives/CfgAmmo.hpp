@@ -26,6 +26,14 @@ class CfgAmmo {
         GVAR(size) = 0;
     };
 
+    class BoundingMineBase;
+    class APERSBoundingMine_Range_Ammo: BoundingMineBase {
+        // Reduce vanilla damage, so that it doesn't destroy buildings
+        hit = 10;
+        indirectHit = 10;
+        CraterEffects = "MineCrater";
+    };
+
     class ACE_FlareTripMine_Wire_Ammo: APERSTripMine_Wire_Ammo {
         SoundSetExplosion[] = {};
         defaultMagazine = "ACE_FlareTripMine_Mag"; // Mag that gets dropped after defuse

@@ -242,7 +242,7 @@ class ATMine_Range_Ammo: MineBase {
 
 class APERSMine_Range_Ammo: MineBase { // VS-50
     GVAR(skip) = 0;
-    GVAR(force) = 0;
+    GVAR(force) = 1;
     GVAR(classes)[] = {QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(small_HD)};
     GVAR(metal) = 100;
     GVAR(charge) = 50;
@@ -251,7 +251,7 @@ class APERSMine_Range_Ammo: MineBase { // VS-50
 };
 
 class APERSBoundingMine_Range_Ammo: BoundingMineBase {
-    GVAR(skip) = 1;
+    GVAR(skip) = 0;
     GVAR(force) = 0;
     GVAR(classes)[] = {QGVAR(tiny_HD)};
     GVAR(metal) = 80;
