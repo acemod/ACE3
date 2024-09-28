@@ -434,7 +434,7 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
                 _ctrl ctrlCommit 0;\
             };\
             if (isNull (_display displayCtrl (61 + _plusId))) then {\
-                _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Button), 61 + _plusId];\
+                private _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Button), 61 + _plusId];\
                 _ctrl ctrlSetPosition [\
                     safeZoneW + safeZoneX - 10 * GRID_W,\
                     safeZoneY + (88 + (10 * _forEachIndex)) * GRID_H\
