@@ -17,8 +17,8 @@ class CfgAmmo {
         soundDeactivation[] = {"", 0, 0, 0};
 
         // Reduce vanilla damage, so that it doesn't destroy buildings
-        hit = 20;
-        indirectHit = 20;
+        hit = 10;
+        indirectHit = 10;
     };
 
     class APERSTripMine_Wire_Ammo: DirectionalBombBase {
