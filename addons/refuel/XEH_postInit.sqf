@@ -49,7 +49,6 @@
         private _halfWorldSize = worldSize / 2;
         private _worldCenter = [_halfWorldSize, _halfWorldSize];
         _halfWorldSize = _halfWorldSize * sqrt 2;
-        private _refuelMissionObjects = allMissionObjects "" select {getFuelCargo _x > 0};
         private _baseStaticClasses = keys (uiNamespace getVariable QGVAR(cacheRefuelClassesBaseStatic));
 
         {
@@ -67,6 +66,7 @@
 
     ["MouseButtonDown", LINKFUNC(onMouseButtonDown)] call CBA_fnc_addDisplayHandler;
 
+    //IGNORE_PRIVATE_WARNING ["_player", "_target"];
     GVAR(mainAction) = [
         QGVAR(Refuel),
         localize LSTRING(Refuel),

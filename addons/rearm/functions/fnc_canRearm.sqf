@@ -22,7 +22,7 @@ if (!alive _vehicle) exitWith {false};
 if (GVAR(level) == 0 || {isNull _unit} || {!(_unit isKindOf "CAManBase")} || {!local _unit} || {_vehicle distance _unit > REARM_ACTION_DISTANCE} || {_vehicle getVariable [QGVAR(disabled), false]}) exitWith {false};
 
 private _dummy = _unit getVariable [QGVAR(dummy), objNull];
-if (isNull _dummy) exitwith {false};
+if (isNull _dummy) exitWith {false};
 private _magazineClass = _dummy getVariable QGVAR(magazineClass);
 if (isNil "_magazineClass") exitWith {false};
 

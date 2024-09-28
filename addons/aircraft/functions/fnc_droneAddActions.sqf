@@ -22,7 +22,7 @@ if (!alive _vehicle) exitWith {};
 if (_vehicle getVariable [QGVAR(droneActionsAdded), false]) exitWith {};
 _vehicle setVariable [QGVAR(droneActionsAdded), true];
 
-// move to location
+// Move to location
 private _condition = {
     params ["_vehicle"];
     (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
@@ -37,14 +37,63 @@ private _action = [QGVAR(droneSetWaypointMove), localize "$STR_AC_MOVE",
     "\a3\3DEN\Data\CfgWaypoints\Move_ca.paa", _statement, _condition] call EFUNC(interact_menu,createAction);
 [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
 
+// Follow unit/vehicle at turret location
+_condition = {
+    params ["_vehicle"];
+    private _target = cursorTarget;
+    (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]} && {!isNull _target} && {["CAManBase", "LandVehicle", "Ship"] findIf {_target isKindOf _x} != -1}
+};
+_statement = {
+    params ["_vehicle"];
+    private _group = group driver _vehicle;
+    private _pos = ([_vehicle, [0]] call FUNC(droneGetTurretTargetPos)) select 0;
+    [QGVAR(droneSetWaypoint), [_vehicle, _group, _pos, "FOLLOW", cursorTarget], _group] call CBA_fnc_targetEvent;
+    private _followDistance = _vehicle getVariable [QGVAR(wpFollowDistance), 0];
+    [[LLSTRING(DroneFollowHint), _followDistance], 3] call EFUNC(common,displayTextStructured);
+};
+_action = [QGVAR(droneSetWaypointFollow), localize "$STR_AC_FOLLOW", "\a3\3DEN\Data\CfgWaypoints\Follow_ca.paa", _statement, _condition] call EFUNC(interact_menu,createAction);
+[_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
+
+// Set drone follow distance
+_condition = {
+    params ["_vehicle"];
+    private _group = group driver _vehicle;
+    private _index = (currentWaypoint _group) min count waypoints _group;
+    private _waypoint = [_group, _index];
+    (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]} && {(waypointType _waypoint) == "HOLD"}
+};
+_statement = {
+    params ["_vehicle", "", "_value"];
+    _vehicle setVariable [QGVAR(wpFollowDistance), _value];
+    [[LLSTRING(DroneFollowHint), _value], 3] call EFUNC(common,displayTextStructured);
+};
+_action = [QGVAR(droneSetFollowDistance), LLSTRING(DroneFollowDistance), "", {}, _condition] call EFUNC(interact_menu,createAction);
+private _base = [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
+private _followDistances = if (_vehicle isKindOf "Car_F") then {
+    [0, 25, 50, 100, 200]
+} else {
+    [0, 100, 200, 300, 400, 500]
+};
+{
+    _action = [
+        QGVAR(droneSetFollowDistance_) + str _x,
+        str _x,
+        "",
+        _statement,
+        {true},
+        {},
+        _x
+    ] call EFUNC(interact_menu,createAction);
+    [_vehicle, 1, _base, _action] call EFUNC(interact_menu,addActionToObject);
+} forEach _followDistances;
 
 if (_vehicle isKindOf "Air") then {
-    // loiter at location
+    // Loiter at location
     _condition = {
         params ["_vehicle"];
         (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
     };
-    _statement = {        
+    _statement = {
         params ["_vehicle"];
         private _group = group driver _vehicle;
         private _pos = ([_vehicle, [0]] call FUNC(droneGetTurretTargetPos)) select 0;
@@ -55,7 +104,7 @@ if (_vehicle isKindOf "Air") then {
     [_vehicle, 1, ["ACE_SelfActions"], _action] call EFUNC(interact_menu,addActionToObject);
 
 
-    // set height
+    // Set height
     _condition = {
         params ["_vehicle"];
         (missionNamespace getVariable [QGVAR(droneWaypoints), true]) && {waypointsEnabledUAV _vehicle} && {(ACE_controlledUAV select 2) isEqualTo [0]}
@@ -74,7 +123,7 @@ if (_vehicle isKindOf "Air") then {
     } forEach [20, 50, 200, 500, 2000];
 
 
-    // set loiter radius
+    // Set loiter radius
     _condition = {
         params ["_vehicle"];
         private _group = group driver _vehicle;
@@ -97,7 +146,7 @@ if (_vehicle isKindOf "Air") then {
     } forEach [500, 750, 1000, 1250, 1500];
 
 
-    // set loiter direction
+    // Set loiter direction
     _condition = {
         params ["_vehicle", "", "_args"];
         private _group = group driver _vehicle;

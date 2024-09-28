@@ -15,4 +15,4 @@
  * Public: No
  */
 
-GVAR(effects) in [2, 3] && {!GETVAR(ACE_player,ACE_isUnconscious,false)} // return
+GVAR(effects) in [2, 3] && {ACE_player call EFUNC(common,isAwake)} // return

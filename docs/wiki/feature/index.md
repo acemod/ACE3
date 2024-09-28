@@ -19,7 +19,7 @@ redirect_from: "/wiki/featurex"
         <h2>General</h2>
         <nav>
             <ul>
-                {% assign feature_list = site.pages | sort: "title" %}
+                {% assign feature_list = site.pages | sort_natural: "title" %}
                 {% assign group = 'feature' %}
                 {% assign category = 'general' %}
                 {% include feature_list %}
@@ -30,7 +30,7 @@ redirect_from: "/wiki/featurex"
         <h2>Interaction</h2>
         <nav>
             <ul>
-                {% assign feature_list = site.pages | sort: "title" %}
+                {% assign feature_list = site.pages | sort_natural: "title" %}
                 {% assign group = 'feature' %}
                 {% assign category = 'interaction' %}
                 {% include feature_list %}
@@ -41,7 +41,7 @@ redirect_from: "/wiki/featurex"
         <h2>Realism</h2>
         <nav>
             <ul>
-                {% assign feature_list = site.pages | sort: "title" %}
+                {% assign feature_list = site.pages | sort_natural: "title" %}
                 {% assign group = 'feature' %}
                 {% assign category = 'realism' %}
                 {% include feature_list %}
@@ -52,7 +52,7 @@ redirect_from: "/wiki/featurex"
         <h2>Equipment</h2>
         <nav>
             <ul>
-                {% assign feature_list = site.pages | sort: "title" %}
+                {% assign feature_list = site.pages | sort_natural: "title" %}
                 {% assign group = 'feature' %}
                 {% assign category = 'equipment' %}
                 {% include feature_list %}

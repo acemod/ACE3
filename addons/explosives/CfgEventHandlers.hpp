@@ -9,6 +9,7 @@ class Extended_PreInit_EventHandlers {
         init = QUOTE(call COMPILE_SCRIPT(XEH_preInit));
     };
 };
+
 class Extended_PostInit_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_SCRIPT(XEH_postInit));
@@ -26,6 +27,7 @@ class Extended_Take_EventHandlers {
         GVAR(takeHandler) = QUOTE(call FUNC(onInventoryChanged));
     };
 };
+
 class Extended_Put_EventHandlers {
     class CAManBase {
         GVAR(takeHandler) = QUOTE([ARR_3(_this select 1,_this select 0,_this select 2)] call FUNC(onInventoryChanged));

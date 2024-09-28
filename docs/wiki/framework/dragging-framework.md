@@ -35,11 +35,6 @@ class CfgVehicles {
 
 ## 2. Functions
 
-<div class="panel callout">
-    <h5>Note:</h5>
-    <p>The following functions are NOT public and are likely to change in the future!</p>
-</div>
-
 You will **not** be able to carry / drag objects that are too heavy, the mass is also affected by what is inside the object. To bypass this empty the object. You can change the weight limits by setting `ACE_maxWeightDrag` (default 800) and `ACE_maxWeightCarry` (default 600).
 
 ### 2.1 Enabling / disabling dragging
@@ -53,6 +48,7 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 | 2  | Position to offset the object from player | Array | Optional (default: `[0, 1.5, 0]`) |
 | 3  | Direction in degree to rotate the object | Number | Optional (default: `0`) |
 | 4  | Ignore weight limitation for dragging | Boolean | Optional (default: `false`) |
+| 5  | Apply changes globally | Boolean | Optional (default: `false`) |
 | **R** | None | None | Return value |
 
 #### 2.1.1 Example 1
@@ -63,7 +59,7 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 |----| --------- | ----------- |
 | 0  | `foo` | My object |
 | 1  | `true` | Dragging is enabled |
-| 2  | `[0,2,0]` | 0 meters sideways, 2 meters forward, 0  |meters upwards
+| 2  | `[0,2,0]` | 0 meters sideways, 2 meters forward, 0 meters upwards |
 | 3  | `45` | Rotated by 45° |
 
 #### 2.1.2 Example 2
@@ -89,6 +85,7 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 | 2  | Position to offset the object from player | Array | Optional (default: `[0, 1, 1]`) |
 | 3  | Direction in degree to rotate the object | Number | Optional (default: `0`) |
 | 4  | Ignore weight limitation for carrying | Boolean | Optional (default: `false`) |
+| 5  | Apply changes globally | Boolean | Optional (default: `false`) |
 | **R** | None | None | Return value |
 
 #### 2.2.1 Example
@@ -101,3 +98,27 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 | 1  |  `true`| Carrying is enabled |
 | 2  | `[0,2,0]` | 0 meters sideways, 3 meters forward, 1 meter upwards |
 | 3  | `10` | Rotated by 10° |
+
+## 3. Corpse moving
+Added in 3.18.0, ACE allows you to drag and carry corpses.
+
+### 3.1 Config Values
+
+```cpp
+class CfgVehicles {
+    class MyUnit {
+        ace_dragging_cloneClass = "MyClone"; // Allows you to define what type of clone is used for moving the corpse (default: "ace_dragging_clone")
+    };
+    
+    class ace_dragging_clone;
+    class MyClone: ace_dragging_clone {}; // Custom clones must inherit from ace_dragging_clone
+};
+```
+
+### 3.2 Enabling / disabling corpse moving
+
+By default, corpse moving is enabled. If you wish to disable it, you can set the variable below to `false`:
+
+```sqf
+ace_dragging_canMoveDead = false;
+```

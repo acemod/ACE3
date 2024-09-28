@@ -31,9 +31,15 @@ if (!GVAR(dragAndFire)) then {
 };
 
 private _inBuilding = _unit call FUNC(isObjectOnObject);
+private _isClone = _target isKindOf QGVAR(clone);
+
+// Drop cloned dead units
+if (_isClone) then {
+    _target = [_unit, _target, _inBuilding] call FUNC(deleteClone);
+};
 
 // Play release animation
-if !(_unit getVariable ["ACE_isUnconscious", false]) then {
+if (_unit call EFUNC(common,isAwake)) then {
     [_unit, "released"] call EFUNC(common,doGesture);
 };
 
@@ -57,7 +63,7 @@ _unit removeWeapon "ACE_FakePrimaryWeapon";
 [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // Prevent object from flipping inside buildings
-if (_inBuilding) then {
+if (_inBuilding && {!_isClone}) then {
     _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);
     TRACE_2("setPos",getPosASL _unit,getPosASL _target);
 };
@@ -80,16 +86,16 @@ if (_unit getVariable ["ACE_isUnconscious", false]) then {
     [_unit, "unconscious", 2] call EFUNC(common,doAnimation);
 };
 
-// Recreate UAV crew (add a frame delay or this may cause the vehicle to be moved to [0,0,0])
-if (_target getVariable [QGVAR(isUAV), false]) then {
-    _target setVariable [QGVAR(isUAV), nil, true];
+// Reenable UAV crew
+private _UAVCrew = _target getVariable [QGVAR(isUAV), []];
 
-    [{
-        params ["_target"];
-        if (!alive _target) exitWith {};
-        TRACE_2("restoring uav crew",_target,getPosASL _target);
-        createVehicleCrew _target;
-    }, [_target]] call CBA_fnc_execNextFrame;
+if (_UAVCrew isNotEqualTo []) then {
+    // Reenable AI
+    {
+        [_x, false] call EFUNC(common,disableAiUAV);
+    } forEach _UAVCrew;
+
+    _target setVariable [QGVAR(isUAV), nil, true];
 };
 
 // Fixes not being able to move when in combat pace
@@ -101,3 +107,6 @@ private _mass = _target getVariable [QGVAR(originalMass), 0];
 if (_mass != 0) then {
     [QEGVAR(common,setMass), [_target, _mass]] call CBA_fnc_globalEvent; // Force global sync
 };
+
+// API
+[QGVAR(stoppedDrag), [_unit, _target]] call CBA_fnc_localEvent;
