@@ -23,7 +23,7 @@
 
     if (isServer) then {
         if (missionNamespace getVariable [QGVAR(setShotParents), true]) then {
-            _explosive setShotParents [_unit, _unit];
+            _explosive setShotParents [objNull, _unit];
         };
     };
 }] call CBA_fnc_addEventHandler;
@@ -36,7 +36,7 @@ if (isServer) then {
         params ["_unit", "_explosive", "_delay"];
         TRACE_3("server detonate EH",_unit,_explosive,_delay);
         if (missionNamespace getVariable [QGVAR(setShotParents), true]) then {
-            _explosive setShotParents [_unit, _unit];
+            _explosive setShotParents [objNull, _unit];
         };
         [{
             params ["_explosive"];
