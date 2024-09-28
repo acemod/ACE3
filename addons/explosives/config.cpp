@@ -54,10 +54,9 @@ class CfgActions {
 };
 
 class CfgMineTriggers {
-    class RangeTrigger;
-    class ACE_MagneticTrigger: RangeTrigger {
-        mineMagnetic = 1;
-        mineTriggerRange = 1;
+    class IRTrigger;
+    class ACE_MagneticTrigger: IRTrigger {
+        mineWireEnd[] = {0,0.1,0.5};
     };
 
     class TankTriggerMagnetic;

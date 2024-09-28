@@ -76,7 +76,9 @@ class CfgAmmo {
         mineTrigger = "ACE_MagneticTrigger";
         GVAR(explodeOnDefuseChance) = 1;
         explosionAngle = 60;
-        indirectHitRange = 1;
+        hit = 3000;
+        indirectHit = 3000;
+        indirectHitRange = 10;
         mineInconspicuousness = 25;
         icon = "iconExplosiveGP";
     };
