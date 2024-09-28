@@ -87,6 +87,7 @@ GVAR(initializedClasses_carry) = _initializedClasses;
 
 private _icon = [QPATHTOF(UI\icons\box_carry.paa), QPATHTOF(UI\icons\person_carry.paa)] select (_object isKindOf "CAManBase");
 
+//IGNORE_PRIVATE_WARNING ["_target", "_player"];
 private _carryAction = [
     QGVAR(carry),
     LLSTRING(Carry),

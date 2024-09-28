@@ -17,6 +17,7 @@
 
 if (!hasInterface) exitWith {};
 
+//IGNORE_PRIVATE_WARNING ["_player", "_target"];
 private _action = [
     QGVAR(heal),
     localize "STR_A3_Task180_name",
