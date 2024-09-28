@@ -57,7 +57,7 @@ GVAR(DustHandler) = [{
 
         private _amount = 1 - (GETDUSTT(DAMOUNT) * 0.125);
 
-        if !(_unit getVariable ["ACE_EyesDamaged", false]) then {
+        if !(ACE_player getVariable ["ACE_EyesDamaged", false]) then {
             GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [_amount, _amount, _amount, _amount], [1, 1, 1, 0]];
             GVAR(PostProcessEyes) ppEffectCommit 0.5;
         };
@@ -68,6 +68,7 @@ GVAR(DustHandler) = [{
 
             GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [1, 1, 1, 1], [1, 1, 1, 0]];
             GVAR(PostProcessEyes) ppEffectCommit 2;
+            [QGVAR(effect), [ACE_player, "dust"]] call CBA_fnc_localEvent;
 
             [{
                 if (GVAR(DustHandler) == -1) then {

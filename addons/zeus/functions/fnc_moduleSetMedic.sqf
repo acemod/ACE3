@@ -21,7 +21,7 @@ params ["_logic"];
 
 if !(local _logic) exitWith {};
 
-if !(["ace_medical"] call EFUNC(common,isModLoaded)) then {
+if !(GETEGVAR(medical,enabled,false)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);
 } else {
     private _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
@@ -29,7 +29,7 @@ if !(["ace_medical"] call EFUNC(common,isModLoaded)) then {
     if ((_mouseOver select 0) != "OBJECT") then {
         [LSTRING(NothingSelected)] call FUNC(showMessage);
     } else {
-        private _unit = effectivecommander (_mouseOver select 1);
+        private _unit = effectiveCommander (_mouseOver select 1);
 
         if !(_unit isKindOf "CAManBase") then {
             [LSTRING(OnlyInfantry)] call FUNC(showMessage);

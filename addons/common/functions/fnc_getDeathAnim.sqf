@@ -29,7 +29,9 @@ private _unitActionsCfg = configFile >> "CfgMovesBasic" >> "Actions" >> getText 
 
 TRACE_2("Animation/Action",configName _unitAnimationCfg,configName _unitActionsCfg);
 
-if (!isNull objectParent _unit) then {
+if (isNull objectParent _unit) then {
+    _returnAnimation = getText (_unitActionsCfg >> "die");
+} else {
     private _interpolateArray = getArray (_unitAnimationCfg >> "interpolateTo");
 
     for "_index" from 0 to (count _interpolateArray - 1) step 2 do {
@@ -42,8 +44,6 @@ if (!isNull objectParent _unit) then {
             _returnAnimation = _indexAnimation;
         };
     };
-} else {
-    _returnAnimation = getText (_unitActionsCfg >> "die");
 };
 
 //Fallback if nothing valid found:

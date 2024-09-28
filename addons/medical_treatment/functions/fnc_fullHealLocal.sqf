@@ -77,12 +77,12 @@ _patient setVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0], true];
 
 // wakeup needs to be done after achieving stable vitals, but before manually reseting unconc var
 if IS_UNCONSCIOUS(_patient) then {
-    if (!([_patient] call EFUNC(medical_status,hasStableVitals))) then { ERROR_2("fullheal [unit %1][state %2] did not restore stable vitals",_patient,_state); };
+    if !([_patient] call EFUNC(medical_status,hasStableVitals)) then {ERROR_2("fullheal [unit %1][state %2] did not restore stable vitals",_patient,_state);};
     TRACE_1("Waking up",_patient);
     [QEGVAR(medical,WakeUp), _patient] call CBA_fnc_localEvent;
     _state = GET_SM_STATE(_patient);
     TRACE_1("after WakeUp",_state);
-    if IS_UNCONSCIOUS(_patient) then { ERROR_2("fullheal [unit %1][state %2] failed to wake up patient",_patient,_state); };
+    if IS_UNCONSCIOUS(_patient) then {ERROR_2("fullheal [unit %1][state %2] failed to wake up patient",_patient,_state);};
 };
 
 // Generic medical admin

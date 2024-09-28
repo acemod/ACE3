@@ -3,6 +3,14 @@
 
 #include "\z\ace\addons\refuel\script_component.hpp"
 
+{
+    if (!isArray (configFile >> QGVAR(positions) >> configName _x)) then {
+        WARNING_1("need configs on [%1]",configName _x);
+    };
+} forEach ("true" configClasses (configFile >> "CfgWorldList"));
+
+
+
 private _basePumps = [];
 private _totalCount = 0;
 private _posCount = 0;
@@ -47,9 +55,12 @@ _basePumps sort true; // sort pump classes alphabetically
 private _checkCount = 0;
 {
     _x params ["_class", "_positions"];
+    private _pumps = [];
     {
-        _checkCount = _checkCount + count (_x nearObjects [_class, 30]);
+        _pumps append (_x nearObjects [_class, 30]);
     } forEach _positions;
+    _pumps = _pumps arrayIntersect _pumps;
+    _checkCount = _checkCount + count _pumps;
 } forEach _basePumps;
 if (_checkCount != _totalCount) then {
     _message = "WRONG COUNT " + str _checkCount;
@@ -58,7 +69,7 @@ if (_checkCount != _totalCount) then {
 // export text
 private _nl = toString [10];
 private _multipleBasePumps = 1 < count _basePumps;
-private _output = [format ["    %1[] = { /*  %2  */", worldName, getText (configfile >> "CfgWorlds" >> worldName >> "description")]];
+private _output = [format ["    %1[] = { /*  %2  */", worldName, getText (configFile >> "CfgWorlds" >> worldName >> "description")]];
 {
     if (_forEachIndex > 0) then {_output pushBack ","};
     _x params ["_class", "_positions"];

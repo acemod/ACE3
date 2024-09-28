@@ -37,7 +37,7 @@
         <Key ID="STR_ACE_Compat_CUP_Weapons_nightvision_CUP_NVG_PVS15_tan_WP">
             <English>AN/PVS-15 (Tan, WP)</English>
             <Japanese>AN/PVS-15 (タン, 白色蛍光)</Japanese>
-            <Italian>AN/PVS-15 (Marroncina, FB)</Italian>
+            <Italian>AN/PVS-15 (Marroncino, FB)</Italian>
             <Polish>AN/PVS-15 (Jasnobrązowa, WP)</Polish>
             <German>AN/PVS-15 (Hellbraun, WP)</German>
             <Korean>AN/PVS-15 (황갈색, 백색광)</Korean>
@@ -48,9 +48,11 @@
         <Key ID="STR_ACE_Compat_CUP_Weapons_nightvision_CUP_NVG_PVS15_winter_WP">
             <English>AN/PVS-15 (Winter, WP)</English>
             <Japanese>AN/PVS-15 (冬季迷彩, WP)</Japanese>
+            <Italian>AN/PVS-15 (Invernale, FB)</Italian>
             <Korean>AN/PVS-15 (설상, 백색광)</Korean>
             <Russian>AN/PVS-15 (Белый, БФ)</Russian>
             <French>AN/PVS-15 (Blanc, WP)</French>
+            <German>AN/PVS-15 (Winter, WP)</German>
             <Spanish>AN/PVS-15 (Blancas, WP)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_nightvision_CUP_NVG_GPNVG_black_WP">
@@ -67,7 +69,7 @@
         <Key ID="STR_ACE_Compat_CUP_Weapons_nightvision_CUP_NVG_GPNVG_tan_WP">
             <English>GPNVG (Tan, WP)</English>
             <Japanese>GPNVG (タン, 白色蛍光)</Japanese>
-            <Italian>GPNVG (Marroncina, FB)</Italian>
+            <Italian>GPNVG (Marroncino, FB)</Italian>
             <Polish>GPNVG (Jasnobrązowa, WP)</Polish>
             <German>GPNVG (Hellbraun, WP)</German>
             <Korean>GPNVG (황갈색, 백색광)</Korean>
@@ -89,9 +91,11 @@
         <Key ID="STR_ACE_Compat_CUP_Weapons_nightvision_CUP_NVG_GPNVG_winter_WP">
             <English>GPNVG (Winter, WP)</English>
             <Japanese>GPNVG (冬季迷彩, WP)</Japanese>
+            <Italian>GPNVG (Invernale, FB)</Italian>
             <Korean>GPNVG (설상, 백색광)</Korean>
             <Russian>AN/PVS-15 (Белый, БФ)</Russian>
             <French>GPNVG (Blanc, WP)</French>
+            <German>GPNVG (Winter, WP)</German>
             <Spanish>GPNVG (Blancas, WP)</Spanish>
         </Key>
     </Package>

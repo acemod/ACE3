@@ -79,8 +79,8 @@
             <Russian>Взламываем замок...</Russian>
             <Italian>Scassinando il veicolo...</Italian>
             <Portuguese>Usando Mixa...</Portuguese>
-            <Japanese>鍵をこじ開けている・・・</Japanese>
-            <Korean>문따는 중...</Korean>
+            <Japanese>鍵をこじ開けています・・・</Japanese>
+            <Korean>문 따는 중...</Korean>
             <Chinesesimp>正在开锁...</Chinesesimp>
             <Chinese>解鎖中...</Chinese>
             <Turkish>Maymuncuklanıyor...</Turkish>
@@ -144,7 +144,7 @@
             <Russian>Ключ для открытия большинства машин Красных.</Russian>
             <Italian>Una chiave che apre la maggior parte dei veicoli occidentali</Italian>
             <Portuguese>Uma chave que abre a maioria dos veículos ocidentais</Portuguese>
-            <Japanese>このキーは多くの同盟軍車両を開けられます。</Japanese>
+            <Japanese>このキーは多くのBLUFOR軍車両を開けられます。</Japanese>
             <Korean>거의 모든 청군 진영 차량을 여는 열쇠입니다.</Korean>
             <Chinesesimp>一组解锁钥匙（可解锁大部份蓝方载具）</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份藍方載具)</Chinese>
@@ -176,7 +176,7 @@
             <Russian>Ключ для открытия большинства машин Независимых.</Russian>
             <Italian>Una chiave che apre la maggior parte dei veicoli degli indipendenti.</Italian>
             <Portuguese>Uma chave que abre a maioria dos veículos independentes</Portuguese>
-            <Japanese>このキーは多くの独立軍車両を開けられます。</Japanese>
+            <Japanese>このキーは多くのINDEPENDENT軍車両を開けられます。</Japanese>
             <Korean>거의 모든 무소속군 진영 차량을 여는 열쇠입니다.</Korean>
             <Chinesesimp>一组解锁钥匙（可解锁大部份独立方载具）</Chinesesimp>
             <Chinese>一組解鎖鑰匙 (可解鎖大部份獨立方載具)</Chinese>
@@ -288,6 +288,7 @@
             <German>Unklaren Sperrzustand entfernen</German>
             <Chinesesimp>移除不明确的上锁状态</Chinesesimp>
             <Korean>불분명한 잠금상태 제거</Korean>
+            <Portuguese>Remover estado de bloqueio ambíguo</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>

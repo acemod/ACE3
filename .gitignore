@@ -2,8 +2,6 @@
 *.zip
 release/*
 releases/*
-extensions/vcproj32/*
-extensions/vcproj64/*
 .vscode/*
 hemtt
 hemtt.exe
@@ -20,4 +18,5 @@ CHANGELOG.md
 sqfvm.exe
 ArmaScriptCompiler.exe
 *.sqfc
+target/
 !extras/**/*.zip

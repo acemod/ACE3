@@ -26,10 +26,10 @@ if !(ctrlVisible 9000) then {
         params ["_args"];
         _args params ["_startTime"];
 
-        if (!(GVAR(speedAssistTimer))) exitWith {
+        if !(GVAR(speedAssistTimer)) exitWith {
             GVAR(speedAssistTimer) = true;
 
-            ctrlSetText [8006, Str(Round((CBA_missionTime - _startTime) * 10) / 10)];
+            ctrlSetText [8006, str(round((CBA_missionTime - _startTime) * 10) / 10)];
 
             [] call FUNC(calculate_target_speed_assist);
 
@@ -39,7 +39,7 @@ if !(ctrlVisible 9000) then {
             [_this select 1] call CBA_fnc_removePerFrameHandler;
         };
 
-        ctrlSetText [9001, Str(Round((CBA_missionTime - _startTime) * 10) / 10)];
+        ctrlSetText [9001, str(round((CBA_missionTime - _startTime) * 10) / 10)];
 
     }, 0.1, [CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 };

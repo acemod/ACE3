@@ -29,8 +29,8 @@ if (!isClass (configFile >> "CfgVehicles" >> _setupObjectClass)) exitWith {ERROR
 private _p3dModel = getText (configFile >> "CfgVehicles" >> _setupObjectClass >> "model");
 if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!
 
-[_unit, "forceWalk", "ACE_Explosives", true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_Explosives", true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 //Show mouse buttons:
 [localize LSTRING(PlaceAction), localize LSTRING(CancelAction), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
@@ -78,7 +78,7 @@ GVAR(TweakedAngle) = 0;
         {
             private _testPos = _testBase vectorAdd [0.1 * (_x select 0) * (cos _cameraAngle), 0.1 * (_x select 0) * (sin _cameraAngle), 0.1 * (_x select 1)];
             #ifdef DEBUG_MODE_FULL
-            drawLine3d [(eyePos _unit) call EFUNC(common,ASLToPosition), (_testPos) call EFUNC(common,ASLToPosition), [1,0,0,1]];
+            drawLine3D [(eyePos _unit) call EFUNC(common,ASLToPosition), (_testPos) call EFUNC(common,ASLToPosition), [1,0,0,1]];
             #endif
             if ((lineIntersectsSurfaces [eyePos _unit, _testPos, _unit]) isNotEqualTo []) exitWith {_return = false;};
         } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
@@ -149,8 +149,8 @@ GVAR(TweakedAngle) = 0;
         [_pfID] call CBA_fnc_removePerFrameHandler;
         GVAR(pfeh_running) = false;
 
-        [_unit, "forceWalk", "ACE_Explosives", false] call EFUNC(common,statusEffect_set);
-        [_unit, "blockThrow", "ACE_Explosives", false] call EFUNC(common,statusEffect_set);
+        [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+        [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
         [] call EFUNC(interaction,hideMouseHint);
         [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
         [_unit, "zoomtemp", (_unit getVariable [QGVAR(cancelActionEH), -1])] call EFUNC(common,removeActionEventHandler);
@@ -167,7 +167,7 @@ GVAR(TweakedAngle) = 0;
 
             if (isNull _attachVehicle) then {
                 _placeAngle = _cameraAngle - GVAR(TweakedAngle) + 180;
-                _expSetupVehicle setPosAsl _virtualPosASL;
+                _expSetupVehicle setPosASL _virtualPosASL;
                 _expSetupVehicle setDir _placeAngle;
                 _placeAngle = _placeAngle + 180; //CfgAmmos seem to be 180 for some reason
             } else {

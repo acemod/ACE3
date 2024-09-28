@@ -25,7 +25,7 @@
 params ["_vehicle", "", "", "", "", "_magazine", "_projectile", "_gunner"];
 TRACE_4("firedEH",_vehicle,_magazine,_projectile,_gunner);
 
-if (!([_gunner] call EFUNC(common,isPlayer))) exitWith {}; // AI don't know how to use (this does give them more range than a player)
+if !([_gunner] call EFUNC(common,isPlayer)) exitWith {}; // AI don't know how to use (this does give them more range than a player)
 if ((gunner _vehicle) != _gunner) exitWith {}; // check if primaryGunner
 
 
@@ -35,7 +35,7 @@ if (isNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(airFriction))) 
     _airFriction = getNumber (configFile >> "CfgMagazines" >> _magazine >> QGVAR(airFriction));
 };
 TRACE_1("",_airFriction);
-if (_airFriction >= 0) exitWith {}; // 0 disables everything, >0 makes no sense
+if (_airFriction == 0) exitWith {}; // 0 disables everything
 
 BEGIN_COUNTER(adjustmentsCalc);
 
@@ -59,6 +59,8 @@ if (_newMuzzleVelocityCoefficent != 1) then {
     _bulletVelocity = (vectorNormalized _bulletVelocity) vectorMultiply (_bulletSpeed * _newMuzzleVelocityCoefficent);
     _projectile setVelocity _bulletVelocity;
 };
+
+if (_airFriction > 0) exitWith {}; // positive value indicates it has vanilla airFriction, so we can just exit
 
 // For compatiblity with other addons
 _projectile setVariable [QGVAR(kFactor), _kFactor];

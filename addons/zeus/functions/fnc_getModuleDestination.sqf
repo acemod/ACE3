@@ -109,13 +109,13 @@ GVAR(moduleDestination_mapDrawEH) = [((findDisplay 312) displayCtrl 50), "draw",
         private _mousePosAGL = screenToWorld getMousePosition;
         [_object, AGLToASL _mousePosAGL] call _drawCode;
         drawIcon3D [_icon, _color, _mousePosAGL, 1.5, 1.5, _angle, _text];
-        drawLine3D [_mousePosAGL, ASLtoAGL (getPosASL _object), _color];;
+        drawLine3D [_mousePosAGL, ASLToAGL (getPosASL _object), _color];;
     } else {
         TRACE_4("cleaning up",_this select 1,GVAR(moduleDestination_displayEHMouse),GVAR(moduleDestination_displayEHKeyboard),GVAR(moduleDestination_mapDrawEH));
         (_this select 1) call CBA_fnc_removePerFrameHandler;
-        (findDisplay 312) displayRemoveEventHandler ["mouseButtonDown", GVAR(moduleDestination_displayEHMouse)];
+        (findDisplay 312) displayRemoveEventHandler ["MouseButtonDown", GVAR(moduleDestination_displayEHMouse)];
         (findDisplay 312) displayRemoveEventHandler ["KeyDown", GVAR(moduleDestination_displayEHKeyboard)];
-        ((findDisplay 312) displayCtrl 50) ctrlRemoveEventHandler ["draw", GVAR(moduleDestination_mapDrawEH)];
+        ((findDisplay 312) displayCtrl 50) ctrlRemoveEventHandler ["Draw", GVAR(moduleDestination_mapDrawEH)];
         GVAR(moduleDestination_displayEHMouse) = nil;
         GVAR(moduleDestination_displayEHKeyboard) = nil;
         GVAR(moduleDestination_mapDrawEH) = nil;

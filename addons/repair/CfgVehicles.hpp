@@ -429,9 +429,34 @@ class CfgVehicles {
         GVAR(hitpointPositions)[] = {{"HitTurret", {0,-2,0}}};
     };
 
+    class Tank_F;
+    class APC_Tracked_02_base_F: Tank_F {
+        class EGVAR(interaction,anims) {
+            class showTracks {
+                phase = 0;
+                selections[] = {"vhc_tracks"};
+                positions[] = {"private _pos = _target selectionPosition 'vhc_tracks'; _pos set [0, -(_pos select 0)]; _pos"}; // Mirror position to other side of vehicle
+                items[] = {"ACE_Track", "ACE_Track", "ACE_Track"};
+                name = CSTRING(RemoveTrack);
+                text = CSTRING(RemovingTrack);
+            };
+        };
+    };
+
     class Car_F: Car {
         class HitPoints;
     };
+    class Offroad_02_base_F: Car_F {
+        class EGVAR(interaction,anims) {
+            class hideSpareWheel {
+                positions[] = {"_target selectionPosition ['spare_wheel', 'ViewGeometry', 'AveragePoint']"};
+                items[] = {"ACE_Wheel"};
+                name = CSTRING(RemoveWheel);
+                text = CSTRING(RemovingWheel);
+            };
+        };
+    };
+
     class Truck_F: Car_F {
         class HitPoints: HitPoints {
             class HitLBWheel;
@@ -449,10 +474,45 @@ class CfgVehicles {
         };
     };
 
+    class Truck_01_viv_base_F;
+    class Truck_01_cargo_base_F: Truck_01_viv_base_F {
+        class EGVAR(interaction,anims) {
+            class Tyre1_hide {
+                positions[] = {"_target selectionPosition ['tyre1_hide', 'ViewGeometry', 'AveragePoint']"};
+                items[] = {"ACE_Wheel"};
+                name = CSTRING(RemoveWheel);
+                text = CSTRING(RemovingWheel);
+                distance = 2.5;
+            };
+        };
+    };
+    class Truck_01_flatbed_base_F: Truck_01_viv_base_F {
+        class EGVAR(interaction,anims) {
+            class Tyre1_hide {
+                positions[] = {"_target selectionPosition ['tyre1_hide', 'ViewGeometry', 'AveragePoint']"};
+                items[] = {"ACE_Wheel"};
+                name = CSTRING(RemoveWheel);
+                text = CSTRING(RemovingWheel);
+                distance = 2.5;
+            };
+        };
+    };
+
     class Quadbike_01_base_F: Car_F {
         GVAR(hitpointPositions)[] = { {"HitEngine", {0, 0.5, -0.7}}, {"HitFuel", {0, 0, -0.5}} };
     };
     class Hatchback_01_base_F: Car_F {
         GVAR(hitpointPositions)[] = {{"HitBody", {0, 0.7, -0.5}}, {"HitFuel", {0, -1.75, -0.75}}};
+    };
+
+    class Van_02_base_F: Truck_F {
+        class EGVAR(interaction,anims) {
+            class spare_tyre_hide {
+                positions[] = {"_target selectionPosition ['spare_tyre', 'ViewGeometry', 'AveragePoint']"};
+                items[] = {"ACE_Wheel"};
+                name = CSTRING(RemoveWheel);
+                text = CSTRING(RemovingWheel);
+            };
+        };
     };
 };

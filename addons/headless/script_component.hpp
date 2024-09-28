@@ -17,3 +17,7 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define DELAY_DEFAULT 15
+
+#define NO_REBALANCE 0
+#define REBALANCE 1
+#define FORCED_REBALANCE 2

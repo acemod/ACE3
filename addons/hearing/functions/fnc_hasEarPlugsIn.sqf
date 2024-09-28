@@ -4,16 +4,17 @@
  * Check if the unit has earplugs put in.
  *
  * Arguments:
- * 0: Unit (player) <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
- * Have Earplugs in <BOOL>
+ * Has Earplugs in <BOOL>
  *
  * Example:
- * [ace_player] call ace_hearing_fnc_hasEarPlugsIn
+ * player call ace_hearing_fnc_hasEarPlugsIn
  *
  * Public: No
  */
+
 params ["_unit"];
 
 _unit getVariable ["ACE_hasEarPlugsin", false]

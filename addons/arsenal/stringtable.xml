@@ -23,7 +23,7 @@
             <French>Masque l'interface</French>
             <German>Oberfläche verstecken</German>
             <Polish>Ukryj interfejs</Polish>
-            <Japanese>インターフェースを隠す</Japanese>
+            <Japanese>インタフェースを隠す</Japanese>
             <Italian>Nascondi interfaccia</Italian>
             <Korean>인터페이스 숨기기</Korean>
             <Chinese>隱藏介面</Chinese>
@@ -1245,6 +1245,7 @@
             <Russian>Интегрирован тепловизор.</Russian>
             <Korean>열화상 내장</Korean>
             <French>Thermique intégrée</French>
+            <German>Thermal integriert</German>
             <Spanish>Térmica integrada</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_intPrimTi">
@@ -1254,6 +1255,7 @@
             <Russian>Интегрирован тепловизор и осн.прицел.</Russian>
             <Korean>열화상과 주무기 내장</Korean>
             <French>Thermique et primaire intégrés</French>
+            <German>Thermal und in Primärwaffe integriert</German>
             <Spanish>Térmica y Primaria integrada</Spanish>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_NoSup">

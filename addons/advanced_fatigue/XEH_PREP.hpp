@@ -9,3 +9,5 @@ PREP(handleStaminaBar);
 PREP(mainLoop);
 PREP(moduleSettings);
 PREP(removeDutyFactor);
+PREP(renderDebugLines);
+PREP(updateStaminaBar);

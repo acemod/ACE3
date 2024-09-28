@@ -6,7 +6,7 @@
     [[0, 1, 2, 3], [LSTRING(Disabled), LSTRING(FirstPerson), LSTRING(ThirdPerson), LSTRING(Selective)], 0],
     true,
     {[QGVAR(mode), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -17,7 +17,7 @@
     [[0, 1, 2], [LSTRING(Disabled), LSTRING(FirstPerson), LSTRING(ThirdPerson)], 0],
     true,
     {[QGVAR(modeSelectiveFoot), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -28,7 +28,7 @@
     [[0, 1, 2], [LSTRING(Disabled), LSTRING(FirstPerson), LSTRING(ThirdPerson)], 0],
     true,
     {[QGVAR(modeSelectiveLand), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -39,7 +39,7 @@
     [[0, 1, 2], [LSTRING(Disabled), LSTRING(FirstPerson), LSTRING(ThirdPerson)], 0],
     true,
     {[QGVAR(modeSelectiveAir), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -50,7 +50,7 @@
     [[0, 1, 2], [LSTRING(Disabled), LSTRING(FirstPerson), LSTRING(ThirdPerson)], 0],
     true,
     {[QGVAR(modeSelectiveSea), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [

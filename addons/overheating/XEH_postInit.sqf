@@ -71,7 +71,7 @@ if (hasInterface) then {
         ["CAManBase", "Reloaded", {
             params ["_unit", "_weapon", "_muzzle"];
             if (_muzzle == _weapon) then {
-                _unit setVariable [format [QGVAR(%1_ammoTemp), _weapon], 0];
+                _unit setVariable [format [QGVAR(%1_ammoTemp), _weapon], ambientTemperature select 0];
             };
         }] call CBA_fnc_addClassEventHandler;
     };
@@ -103,6 +103,7 @@ if (hasInterface) then {
                     LLSTRING(CoolWeaponWithWaterSource),
                     QPATHTOEF(field_rations,ui\icon_water_tap.paa),
                     {
+                        //IGNORE_PRIVATE_WARNING ["_player", "_target"];
                         private _waterSource = _target getVariable [QEGVAR(field_rations,waterSource), objNull];
                         [_player, _waterSource] call FUNC(coolWeaponWithWaterSource);
                     },

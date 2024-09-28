@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL
- * If dogtag is not already taken triggers event on server.
- * If dogtag already taken displays info about it.
+ * If the dog tag hasn't already been taken, it triggers an event on the server.
+ * If the dog tag has already been taken, it displays info about it.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -12,17 +12,17 @@
  * None
  *
  * Example:
- * [player, unit] call ace_dogtags_fnc_takeDogtag
+ * [player, cursorObject] call ace_dogtags_fnc_takeDogtag
  *
  * Public: No
  */
 
 params ["_player", "_target"];
 
-// animation
+// Animation
 _player call EFUNC(common,goKneeling);
 
-// sound
+// Sound
 private _position = _target modelToWorldWorld (_target selectionPosition "neck");
 
 playSound3D [
@@ -35,12 +35,11 @@ playSound3D [
     50
 ];
 
-// display message
+// Display message
 if ((_target getVariable [QGVAR(dogtagTaken), objNull]) == _target) then {
-    [{
-        [_this, 2.5] call EFUNC(common,displayTextStructured);
-    }, localize LSTRING(dogtagAlreadyTaken), DOGTAG_SHOW_DELAY] call CBA_fnc_waitAndExecute;
+    [EFUNC(common,displayTextStructured), [LLSTRING(dogtagAlreadyTaken), 2.5], DOGTAG_SHOW_DELAY] call CBA_fnc_waitAndExecute;
 } else {
     _target setVariable [QGVAR(dogtagTaken), _target, true];
+
     [QGVAR(getDogtagItem), [_player, _target]] call CBA_fnc_serverEvent;
 };

@@ -5,8 +5,8 @@
     format ["ACE %1", LLSTRING(Module)],
     false,
     1,
-    {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
+    {[QXGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -15,8 +15,7 @@
     [LSTRING(Delay), LSTRING(DelayDesc)],
     format ["ACE %1", LLSTRING(Module)],
     [0, 60, 15, -1],
-    1,
-    {[QGVAR(delay), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -26,8 +25,8 @@
     format ["ACE %1", LLSTRING(Module)],
     [[0, 1, 2], [ELSTRING(Common,Disabled), LSTRING(Instant), LSTRING(Delayed)], 0],
     1,
-    {[QGVAR(delay), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    true
+    {[QXGVAR(endMission), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -36,8 +35,7 @@
     [LSTRING(Log), LSTRING(LogDesc)],
     format ["ACE %1", LLSTRING(Module)],
     false,
-    1,
-    {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)}
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -47,6 +45,6 @@
     format ["ACE %1", LLSTRING(Module)],
     [[0, 1, 2], [ELSTRING(Common,Disabled), LSTRING(TransferLoadoutCurrent), LSTRING(TransferLoadoutConfig)], 0],
     1,
-    {},
-    true // needs mission restart
+    {[QXGVAR(transferLoadout), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;

@@ -1,21 +1,20 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Checks if the unit can pickup the tripod
+ * Checks if the player can pickup the tripod.
  *
  * Arguments:
  * 0: Tripod <OBJECT>
- * 1: Unit <OBJECT>
  *
  * Return Value:
  * Can pickup <BOOL>
  *
  * Example:
- * [cursorObject, player] call ace_csw_fnc_canPickupTripod
+ * cursorObject call ace_csw_fnc_canPickupTripod
  *
  * Public: No
  */
 
-params ["_tripod", "_unit"];
+params ["_tripod"];
 
-((secondaryWeapon _unit) == "") && {alive _tripod} // return
+alive _tripod && {((crew _tripod) findIf {alive _x && {!unitIsUAV _x}}) == -1} // return

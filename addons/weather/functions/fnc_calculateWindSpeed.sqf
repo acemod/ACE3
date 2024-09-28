@@ -47,15 +47,15 @@ if (_terrainEffectEnabled) then {
         private _newWindSpeed = 0;
         {
             private _windSource = [100, _windDirAdjusted, _x] call _fnc_polar2vect;
-            if (!(terrainIntersectASL [_position, _position vectorAdd _windSource])) exitWith {
+            if !(terrainIntersectASL [_position, _position vectorAdd _windSource]) exitWith {
                 _newWindSpeed = cos(_x * 9) * _windSpeed;
             };
             _windSource = [100, _windDirAdjusted + _x, 0] call _fnc_polar2vect;
-            if (!(terrainIntersectASL [_position, _position vectorAdd _windSource])) exitWith {
+            if !(terrainIntersectASL [_position, _position vectorAdd _windSource]) exitWith {
                 _newWindSpeed = cos(_x * 9) * _windSpeed;
             };
             _windSource = [100, _windDirAdjusted - _x, 0] call _fnc_polar2vect;
-            if (!(terrainIntersectASL [_position, _position vectorAdd _windSource])) exitWith {
+            if !(terrainIntersectASL [_position, _position vectorAdd _windSource]) exitWith {
                 _newWindSpeed = cos(_x * 9) * _windSpeed;
             };
         } forEach [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -69,15 +69,15 @@ if (_obstacleEffectEnabled) then {
         private _newWindSpeed = 0;
         {
             private _windSource = [20, _windDirAdjusted, _x] call _fnc_polar2vect;
-            if (!(lineIntersects [_position, _position vectorAdd _windSource])) exitWith {
+            if !(lineIntersects [_position, _position vectorAdd _windSource]) exitWith {
                 _newWindSpeed = cos(_x * 2) * _windSpeed;
             };
             _windSource = [20, _windDirAdjusted + _x, 0] call _fnc_polar2vect;
-            if (!(lineIntersects [_position, _position vectorAdd _windSource])) exitWith {
+            if !(lineIntersects [_position, _position vectorAdd _windSource]) exitWith {
                 _newWindSpeed = cos(_x * 2) * _windSpeed;
             };
             _windSource = [20, _windDirAdjusted - _x, 0] call _fnc_polar2vect;
-            if (!(lineIntersects [_position, _position vectorAdd _windSource])) exitWith {
+            if !(lineIntersects [_position, _position vectorAdd _windSource]) exitWith {
                 _newWindSpeed = cos(_x * 2) * _windSpeed;
             };
         } forEach [0, 5, 10, 15, 20, 25, 30, 35, 40, 45];

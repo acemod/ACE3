@@ -16,11 +16,14 @@
  *
  * Public: No
  */
+
 params ["_caller", "_target"];
-#define DEFUALTPATH "\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa"
+
+#define DEFAULTPATH "\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa"
+
 //Sanity Checks
 if (_caller != ACE_player) exitWith {ERROR("Player isn't caller?");};
-if (!([_player, _target] call FUNC(canPlayerDisarmUnit))) exitWith {ERROR("Can't Disarm Unit");};
+if !([_caller, _target] call FUNC(canPlayerDisarmUnit)) exitWith {ERROR("Can't Disarm Unit");};
 if (dialog) then {ERROR("Dialog open when trying to open disarm dialog"); closeDialog 0;};
 
 disableSerialization;
@@ -74,8 +77,8 @@ GVAR(disarmTarget) = _target;
         private _rankPicture = _display displayCtrl 1203;
 
         //Show rank and name (just like BIS's inventory)
-        private _icon = format [DEFUALTPATH, toLowerANSI (rank _target)];
-        if (_icon isEqualTo DEFUALTPATH) then {_icon = ""};
+        private _icon = format [DEFAULTPATH, toLowerANSI (rank _target)];
+        if (_icon isEqualTo DEFAULTPATH) then {_icon = ""};
         _rankPicture ctrlSetText _icon;
         _playerName ctrlSetText ([GVAR(disarmTarget), false, true] call EFUNC(common,getName));
 
@@ -93,7 +96,7 @@ GVAR(disarmTarget) = _target;
             if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
                 _holder = _x;
             };
-        } forEach ((getpos _target) nearObjects [DISARM_CONTAINER, 3]);
+        } forEach ((getPos _target) nearObjects [DISARM_CONTAINER, 3]);
 
         //If a holder exists, show it's inventory
         if (!isNull _holder) then {

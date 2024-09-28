@@ -42,6 +42,7 @@
             <Italian>Tavola di calcolo</Italian>
             <Russian>Графическая доска</Russian>
             <French>Planche traçante</French>
+            <German>Wurfparabel Kartenwerkzeug</German>
             <Spanish>Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoard_Description">
@@ -51,6 +52,7 @@
             <Italian>La tavola di calcolo è uno strumento utilizzato per dirigere fuoco di artiglieria a corto raggio.</Italian>
             <Russian>Графическая доска - это картографический инструмент, предназначенный для использования при ведении непрямого огня с малой дистанции.</Russian>
             <French>Une planche traçante est un outil cartographique conçu pour diriger des tirs indirects à courte distance.</French>
+            <German>Das Wurfparabel-Kartenwerkzeug ist ein Werkzeug, das für die Steuerung indirekten Feuers auf kurze Distanz entwickelt wurde.</German>
             <Spanish>El Tablero de Trazado es una herramienta de mapa utilizada para dirigir fuego indirecto de corto alcance.</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_MapTools_Menu">
@@ -277,6 +279,7 @@
             <Italian>Canali ammessi su tavola di calcolo</Italian>
             <Russian>Разрешить создание каналов на миллиметровой доске.</Russian>
             <French>Canaux autorisés sur la planche traçante</French>
+            <German>Wurfparabel Kartenwerkzeug erlaubte Kanäle</German>
             <Spanish>Permitir Canales de Dibujado de Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_allowChannelDrawing_description">
@@ -286,6 +289,7 @@
             <Italian>Canali in cui si può disegnare sulla tavola di calcolo.</Italian>
             <Russian>Каналы, в которых включено рисование на миллиметровой доске.</Russian>
             <French>Canaux dans lesquels vous pouvez dessiner sur le planche traçante</French>
+            <German>Kanäle, in denen das Zeichnen mit dem Wurfparabel-Kartenwerkzeug auf der Karte erlaubt ist.</German>
             <Spanish>Canales en los que el tablero de trazado está habilitado.</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectCommsOnly">
@@ -295,6 +299,7 @@
             <Italian>Comunicazioni Dirette (solo linee)</Italian>
             <Russian>Разрешать только прямую связь (только полилинии)</Russian>
             <French>Communications directes uniquement (lignes uniquement)</French>
+            <German>Nur direkte Kommunikation zulassen (nur Polylinien)</German>
             <Spanish>Permitir Sólo Comunicaciones Directas (Sólo Polylineas)</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectGroupComms">
@@ -304,6 +309,7 @@
             <Italian>Comunicazioni dirette/gruppo (linee e marker)</Italian>
             <Russian>Разрешить прямую/групповую связь (полилинии и групповые маркеры)</Russian>
             <French>Autoriser les communications directes/de groupe (polylignes et marqueurs de groupe)</French>
+            <German>Direkte/Gruppenkommunikation zulassen (Polylinien und Gruppenmarkierungen)</German>
             <Spanish>Permitir Comunicaciones Directas/Grupales (Polylineas y Marcadores de Grupo)</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardLabel">
@@ -313,6 +319,7 @@
             <Italian>Tavola di calcolo</Italian>
             <Russian>Миллиметровая доска</Russian>
             <French>Planche traçante</French>
+            <German>Wurfparabel Kartenwerkzeug</German>
             <Spanish>Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardAcrylicLabel">
@@ -322,6 +329,7 @@
             <Italian>Acrilico tavola di calcolo</Italian>
             <Russian>Миллиметровая доска акрилловая</Russian>
             <French>Planche traçante Acrylique</French>
+            <German>Wurfparabel Kartenwerkzeug Acryl</German>
             <Spanish>Tablero de Trazado Acrílico</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardRulerLabel">
@@ -331,6 +339,7 @@
             <Italian>Righello tavola di calcolo</Italian>
             <Russian>Линейка для миллиметровой доски</Russian>
             <French>Règle de la planche traçante</French>
+            <German>Wurfparabel Kartenwerkzeug Lineal</German>
             <Spanish>Regla de Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardLabel">
@@ -340,6 +349,7 @@
             <Italian>Su tavola di calcolo</Italian>
             <Russian>К миллиметровой доске.</Russian>
             <French>Sur la planche traçante</French>
+            <German>Zum Wurfparabel Kartenwerkzeug</German>
             <Spanish>A Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardAcrylicLabel">
@@ -349,6 +359,7 @@
             <Italian>Su acrilico tavola di calcolo</Italian>
             <Russian>К миллиметровой доске акрилловой</Russian>
             <French>Sur la planche traçante Acrylique</French>
+            <German>Zum Wurfparabel Kartenwerkzeug Acryl</German>
             <Spanish>A Tablero de Trazado Acrílico</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardRulerLabel">
@@ -358,6 +369,7 @@
             <Italian>Su righello tavola di calcolo</Italian>
             <Russian>К линейке миллиметровой доски.</Russian>
             <French>Sur la règle de la planche traçante</French>
+            <German>Zum Wurfparabel Kartenwerkzeug Lineal</German>
             <Spanish>A Regla de Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_WipeBoard">
@@ -367,6 +379,7 @@
             <Italian>Cancella tutti i disegni dalla tavola</Italian>
             <Russian>Сотрите все маркеры с миллиметровой доски.</Russian>
             <French>Effacer tous les dessins de la planche traçante</French>
+            <German>Alle Markierungen vom Wurfparabel Kartenwerkzeug entfernen</German>
             <Spanish>Borrar todas las marcas del Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_ShowPlottingBoard">
@@ -376,6 +389,7 @@
             <Italian>Mostra tavola di calcolo</Italian>
             <Russian>Показать миллиметровую доску.</Russian>
             <French>Afficher la planche traçante</French>
+            <German>Zeige Wurfparabel Kartenwerkzeug</German>
             <Spanish>Mostrar Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_HidePlottingBoard">
@@ -385,6 +399,7 @@
             <Italian>Nascondi tavola di calcolo</Italian>
             <Russian>Скрыть миллиметровую доску.</Russian>
             <French>Masquer la planche traçante</French>
+            <German>Verstecke Wurfparabel Kartenwerkzeug</German>
             <Spanish>Ocultar Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_TogglePlottingBoardRuler">
@@ -394,6 +409,7 @@
             <Italian>Mostra/Nascondi Righello</Italian>
             <Russian>Переключить линейку миллиметровой доски.</Russian>
             <French>Afficher/masquer la règle</French>
+            <German>Schalte das Lineal des Wurfparabel-Kartenwerkzeuges um</German>
             <Spanish>Alternar Regla de Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_AlignTo">
@@ -445,6 +461,7 @@
             <Italian>Su</Italian>
             <Russian>Вверх</Russian>
             <French>Monter</French>
+            <German>Nach oben</German>
             <Spanish>Arriba</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_ToMapToolLabel">
@@ -454,6 +471,7 @@
             <Italian>Su strumento cartografico</Italian>
             <Russian>К инструментам карты</Russian>
             <French>Outil cartographique</French>
+            <German>Zum Kartenwerkzeug</German>
             <Spanish>A Herramienta de Mapa</Spanish>
         </Key>
     </Package>

@@ -15,22 +15,24 @@
  * Public: No
  */
 
-//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
-TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_vehicle,_gunner,_turret);
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
+TRACE_8("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_gunner);
 
 // Retrieve backblast values
 private _bbValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
 
 _bbValues params ["_backblastAngle", "_backblastRange", "_backblastDamage", "_offset"];
+_backblastRange = _backblastRange * GVAR(backblastDistanceCoefficient);
+
 TRACE_4("cache",_backblastAngle,_backblastRange,_backblastDamage,_offset);
 
 if (_backblastDamage <= 0) exitWith {};
 
-private _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
-private _position = ((getPosASL _projectile) vectorAdd (_direction vectorMultiply _offset));
+private _direction = (vectorDir _projectile) vectorMultiply -1;
+private _position = (getPosASL _projectile) vectorAdd (_direction vectorMultiply _offset);
 
 // Damage to others
-private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
+private _affected = (ASLToAGL _position) nearEntities ["CAManBase", _backblastRange];
 
 // Let each client handle their own affected units
 ["ace_overpressure", [_unit, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;
@@ -53,7 +55,7 @@ if (_distance < _backblastRange) then {
 
         [_damage * 100] call BIS_fnc_bloodEffect;
 
-        if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+        if (GETEGVAR(medical,enabled,false)) then {
             [_unit, _damage, "body", "backblast", _unit] call EFUNC(medical,addDamageToUnit);
         } else {
             _unit setDamage (damage _unit + _damage);

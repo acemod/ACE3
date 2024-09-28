@@ -32,6 +32,7 @@ class RscEdit;
 class RscPicture;
 class RscButton;
 class ctrlXSliderH;
+
 #include "ExplosivesUI.hpp"
 #include "TimerDialog.hpp"
 #include "GUI_VirtualAmmo.hpp"
