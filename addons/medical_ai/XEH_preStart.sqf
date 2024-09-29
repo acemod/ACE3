@@ -25,4 +25,4 @@ private _itemHash = createHashMap;
     ["morphine", ["morphine"]],
     ["epinephrine", ["epinephrine"]]
 ];
-uinamespace setVariable [QGVAR(itemHash), compileFinal _itemHash];
+uiNamespace setVariable [QGVAR(itemHash), compileFinal _itemHash];

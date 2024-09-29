@@ -19,6 +19,7 @@ params ["_unit"];
 
 private _fnc_getActions = {
     TRACE_1("Creating overheating consumable item actions",_unit);
+    //IGNORE_PRIVATE_WARNING ["_unit"];
 
     private _actions = [];
     private _cfgWeapons = configFile >> "CfgWeapons";

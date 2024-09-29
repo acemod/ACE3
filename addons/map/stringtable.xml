@@ -492,7 +492,7 @@
             <Spanish>Setear canal al comenzar</Spanish>
             <French>Définir un canal par défaut</French>
             <Japanese>開始時のチャンネルを指定</Japanese>
-            <Korean>시작시 채널</Korean>
+            <Korean>시작 시 채널 설정</Korean>
             <Chinesesimp>设定游戏开始时的聊天频道</Chinesesimp>
             <Chinese>設定遊戲開始時的聊天頻道</Chinese>
         </Key>
@@ -507,7 +507,7 @@
             <Spanish>Cambiar el canal de marcadores inicial al comenzar la misión</Spanish>
             <French>Change le canal de communication par défaut au début de la mission.</French>
             <Japanese>ミッション開始時に使用されるマーカーチャンネルの指定を変更します</Japanese>
-            <Korean>미션 시작시 마커채널을 변경합니다</Korean>
+            <Korean>미션 시작 시 마커채널을 변경합니다</Korean>
             <Chinesesimp>更改任务启动时的聊天频道</Chinesesimp>
             <Chinese>更改任務啟動時的聊天頻道</Chinese>
         </Key>

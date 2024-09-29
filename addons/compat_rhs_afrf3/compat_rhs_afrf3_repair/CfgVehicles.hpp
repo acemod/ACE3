@@ -43,10 +43,32 @@ class CfgVehicles {
     class rhs_truck: Truck_F {
         class EGVAR(interaction,anims) {
             class spare_hide {
-                selections[] = {"spare"};
+                positions[] = {"_target selectionPosition ['spare', 'ViewGeometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = ECSTRING(repair,RemoveWheel);
                 text = ECSTRING(repair,RemovingWheel);
+            };
+        };
+    };
+    class rhs_gaz66_vmf: rhs_truck {};
+    class rhs_gaz66_ammo_base: rhs_gaz66_vmf {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class spare_hide: spare_hide {
+                positions[] = {"_target selectionPosition ['spare', 'FireGeometry', 'AveragePoint']"};
+            };
+        };
+    };
+    class rhs_gaz66_repair_base: rhs_gaz66_vmf {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class spare_hide: spare_hide {
+                positions[] = {"_target selectionPosition ['spare', 'FireGeometry', 'AveragePoint']"};
+            };
+        };
+    };
+    class rhs_gaz66_ap2_base: rhs_gaz66_vmf {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class spare_hide: spare_hide {
+                positions[] = {"_target selectionPosition ['spare', 'FireGeometry', 'AveragePoint']"};
             };
         };
     };
@@ -54,7 +76,7 @@ class CfgVehicles {
     class RHS_Ural_BaseTurret: Truck_F {
         class EGVAR(interaction,anims) {
            class spare_hide {
-               selections[] = {"spare"};
+               positions[] = {"_target selectionPosition ['spare', 'ViewGeometry', 'AveragePoint']"};
                items[] = {"ACE_Wheel"};
                name = ECSTRING(repair,RemoveWheel);
                text = ECSTRING(repair,RemovingWheel);
@@ -65,7 +87,7 @@ class CfgVehicles {
     class rhs_zil131_base: Truck_F {
         class EGVAR(interaction,anims) {
             class spare_hide {
-                selections[] = {"spare"};
+                positions[] = {"_target selectionPosition ['spare', 'ViewGeometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = ECSTRING(repair,RemoveWheel);
                 text = ECSTRING(repair,RemovingWheel);
@@ -77,7 +99,7 @@ class CfgVehicles {
     class rhs_kraz255b1_base: rhs_kraz255_base {
         class EGVAR(interaction,anims) {
             class spare_hide {
-                selections[] = {"spare"};
+                positions[] = {"_target selectionPosition ['spare', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = ECSTRING(repair,RemoveWheel);
                 text = ECSTRING(repair,RemovingWheel);
@@ -89,7 +111,7 @@ class CfgVehicles {
     class rhs_kamaz5350: O_Truck_02_covered_F {
         class EGVAR(interaction,anims) {
             class spare_hide {
-                selections[] = {"spare"};
+                positions[] = {"_target selectionPosition ['spare', 'FireGeometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = ECSTRING(repair,RemoveWheel);
                 text = ECSTRING(repair,RemovingWheel);
@@ -101,7 +123,7 @@ class CfgVehicles {
     class rhs_tigr_base: MRAP_02_base_F {
         class EGVAR(interaction,anims) {
             class spare_hide {
-                selections[] = {"spare"};
+                positions[] = {"_target selectionPosition ['spare', 'ViewGeometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = ECSTRING(repair,RemoveWheel);
                 text = ECSTRING(repair,RemovingWheel);
@@ -113,7 +135,7 @@ class CfgVehicles {
     class RHS_UAZ_Base: Offroad_01_base_f {
         class EGVAR(interaction,anims) {
             class spare_hide {
-                selections[] = {"spare"};
+                positions[] = {"_target selectionPosition ['spare', 'ViewGeometry', 'AveragePoint']"};
                 items[] = {"ACE_Wheel"};
                 name = ECSTRING(repair,RemoveWheel);
                 text = ECSTRING(repair,RemovingWheel);

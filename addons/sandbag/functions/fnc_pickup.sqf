@@ -29,7 +29,7 @@ _unit setVariable [QGVAR(isUsingSandbag), true];
 
     if (isNull _sandbag) exitWith {};
 
-    deletevehicle _sandbag;
+    deleteVehicle _sandbag;
 
     // Force physx update
     {

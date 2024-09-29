@@ -21,7 +21,14 @@ if (!GVAR(enabled)) exitWith {};
 private _initStartTime = diag_tickTime;
 private _mapSize = worldSize;
 
-if (("ace_advanced_ballistics" callExtension format["init:%1:%2", worldName, _mapSize]) == "Terrain already initialized") exitWith {
+(
+    "ace" callExtension ["ballistics:map:init", [worldName, _mapSize]]
+) params ["_data", "_code"];
+if (_code != 0) exitWith {
+    ERROR("Error initializing map")
+};
+
+if (_data == "true") exitWith {
     INFO_1("Terrain already initialized [world: %1]",worldName);
     #ifdef DEBUG_MODE_FULL
         systemChat "AdvancedBallistics: Terrain already initialized";
@@ -53,8 +60,7 @@ INFO_2("Starting Terrain Extension [cells: %1] [world: %2]",_gridCells,worldName
         private _gridCenter = [_x + 25, _y + 25];
         private _gridHeight = round(getTerrainHeightASL _gridCenter);
         private _gridNumObjects = count (_gridCenter nearObjects ["Building", 50]);
-        private _gridSurfaceIsWater = parseNumber (surfaceIsWater _gridCenter);
-        "ace_advanced_ballistics" callExtension format["set:%1:%2:%3", _gridHeight, _gridNumObjects, _gridSurfaceIsWater];
+        "ace" callExtension ["ballistics:map:set", [GVAR(currentGrid), _gridHeight, _gridNumObjects, surfaceIsWater _gridCenter]];
         GVAR(currentGrid) = GVAR(currentGrid) + 1;
         if (GVAR(currentGrid) >= _gridCells) exitWith {};
     };

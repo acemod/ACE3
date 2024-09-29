@@ -182,14 +182,18 @@
             <Italian>Distanza di seguimento</Italian>
             <German>Folge-Entfernung</German>
             <Korean>따라가는 거리</Korean>
+            <French>Distance de suivi</French>
             <Japanese>追跡距離</Japanese>
+            <Russian>Расстояние отслеживания</Russian>
         </Key>
         <Key ID="STR_ACE_Aircraft_DroneFollowHint">
             <English>Following unit within %1m</English>
             <Italian>Seguendo unità entro %1m</Italian>
             <German>Folgt Einheit bis zu %1m</German>
             <Korean>%1m 이내로 유닛을 따라갑니다</Korean>
+            <French>Suivre l'unité jusqu'à %1m</French>
             <Japanese>%1m 間隔で 目標を追跡します</Japanese>
+            <Russian>Отслеживание в пределах %1m</Russian>
         </Key>
     </Package>
 </Project>
