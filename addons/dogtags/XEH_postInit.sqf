@@ -3,6 +3,18 @@
 if (hasInterface || isServer) then {
     [QGVAR(broadcastDogtagInfo), {
         GVAR(dogtagsData) set _this;
+        
+        if (isNil "CBA_fnc_renameInventoryItem") exitWith {}; // requires https://github.com/CBATeam/CBA_A3/pull/1329
+        params ["_item", "_dogTagData"];
+        private _name = _dogtagData param [0, ""];
+
+        // If data doesn't exist or body has no name, set name as "unknown"
+        if (_name == "") then {
+            _name = LELSTRING(common,unknown);
+        };
+        
+        _name = [LLSTRING(itemName), ": ", _name] joinString "";
+        [_item, _name] call CBA_fnc_renameInventoryItem;
     }] call CBA_fnc_addEventHandler;
 
     if (isServer) then {
@@ -77,6 +89,7 @@ if (hasInterface) then {
     if !(GETEGVAR(medical,enabled,false)) exitWith {};
 
     if (hasInterface) then {
+        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         private _checkTagAction = [
             "ACE_CheckDogtag",
             format ["%1: %2", LLSTRING(itemName), LLSTRING(checkDogtag)],

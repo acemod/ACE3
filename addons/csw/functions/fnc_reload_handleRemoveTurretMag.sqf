@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Handles removing ammo from a turret
- * Called from a global event but only runs where turret is local
+ * Handles removing ammo from a turret.
+ * Called from a global event but only runs where turret is local.
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret Path <ARRAY>
- * 2: Magainze Unit Can Carry <STRING>
+ * 2: Magazine Unit Can Carry <STRING>
  * 3: Magazine To Remove From Static <STRING>
  * 4: Unit or container to unload to <OBJECT>
  *

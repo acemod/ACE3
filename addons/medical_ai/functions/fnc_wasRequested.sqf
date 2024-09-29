@@ -4,13 +4,13 @@
  * Checks if the unit was requested to treat another unit.
  *
  * Arguments:
- * None
+ * Unit <OBJECT>
  *
  * Return Value:
  * Was requested <BOOL>
  *
  * Example:
- * call ACE_medical_ai_fnc_wasRequested
+ * cursorObject call ace_medical_ai_fnc_wasRequested
  *
  * Public: No
  */

@@ -22,13 +22,13 @@ TRACE_1("params",_this);
     // Only handle locally created lasers
     if(!(local _targetObject)) exitWith {TRACE_1("not local",_targetObject);};
 
-    private _owners = allUnits select {(lasertarget _x) == _targetObject};
+    private _owners = allUnits select {(laserTarget _x) == _targetObject};
     if (count _owners == 1) exitWith {
         TRACE_2("Laser target owner [allUnits]",_targetObject,_owners select 0);
         [_targetObject, _owners select 0] call FUNC(addLaserTarget);
     };
 
-    _owners = vehicles select {(lasertarget _x) == _targetObject};
+    _owners = vehicles select {(laserTarget _x) == _targetObject};
     if (count _owners == 1) exitWith {
         TRACE_2("Laser target owner [vehicles]",_targetObject,_owners select 0);
         [_targetObject, _owners select 0] call FUNC(addLaserTarget);
@@ -58,7 +58,7 @@ TRACE_1("params",_this);
         };
     };
     if (!_foundSource) then {
-        WARNING_1("Laser target doesn't have owner",_targetObject);
+        WARNING_1("Laser target %1 doesn't have owner",_targetObject);
     };
 
 }, _this] call CBA_fnc_execNextFrame;

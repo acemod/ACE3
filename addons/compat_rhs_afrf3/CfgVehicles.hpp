@@ -60,6 +60,8 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretFireProb) = 0.7;
         EGVAR(vehicle_damage,engineFireProb) = 0.7;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+
+        class EGVAR(interaction,anims);
     };
 
     class rhs_infantry_msv_base;
@@ -156,68 +158,186 @@ class CfgVehicles {
         EGVAR(vehicle_damage,engineFireProb) = 0.8;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.8;
         EGVAR(vehicle_damage,canHaveFireRing) = 1;
-     };
+    };
 
     class rhs_btr60_base: rhs_btr_base {
         EGVAR(refuel,fuelCapacity) = 290;
+
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class crate_l1_unhide {
+                positions[] = {{-1.1, 2, -0.3}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_l2_unhide {
+                positions[] = {{-1.1, 1.05, -0.3}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_l3_unhide {
+                positions[] = {{-1.1, -1.1, -0.3}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_r1_unhide {
+                positions[] = {{1.1, 1.93, -0.3}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_r2_unhide {
+                positions[] = {{1.1, 0.25, -0.3}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_r3_unhide {
+                positions[] = {{1.1, -1.1, -0.3}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+        };
     };
     class rhs_btr70_vmf: rhs_btr_base {
         EGVAR(refuel,fuelCapacity) = 350;
+
         class ace_viewports {
             class view_0 {
                 camLocation[] = {0.478394, -0.575, -0.145};
                 camAttach = 90;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
             };
             class view_1 {
                 camLocation[] = {-1.38184, -0.575, -0.145};
                 camAttach = -90;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
+            };
+        };
+
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class crate_l1_unhide {
+                positions[] = {{-1.7, 0.55, -0.4}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_l2_unhide {
+                positions[] = {{-1.7, -0.95, -0.4}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_l3_unhide {
+                positions[] = {{-1.7, -1.45, -0.4}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_l4_unhide {
+                positions[] = {{-1.7, -2.7, -0.4}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_r1_unhide {
+                positions[] = {{0.8, 1, -0.4}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_r2_unhide {
+                positions[] = {{0.8, 0.12, -0.4}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_r3_unhide {
+                positions[] = {{0.8, -0.7, -0.4}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_r4_unhide {
+                positions[] = {{0.8, -1.85, -0.4}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
             };
         };
     };
-
     class rhs_btr70_msv: rhs_btr70_vmf {};
     class rhs_btr80_msv: rhs_btr70_msv {
         EGVAR(refuel,fuelCapacity) = 300;
+
         class ace_viewports {
             class view_0 {
                 camLocation[] = {0.534424, -0.336914, 0.636819};
                 camAttach = 45;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
             };
             class view_1 {
                 camLocation[] = {0.760254, -0.459473, 0.526328};
                 camAttach = 90;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
             };
             class view_2 {
                 camLocation[] = {0.770508, -1.21924, 0.526954};
                 camAttach = 90;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
             };
             class view_3 {
                 camLocation[] = {-1.13, -1.2085, 0.490339};
                 camAttach = -90;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
             };
             class view_4 {
                 camLocation[] = {-1.14124, -0.416992, 0.460611};
                 camAttach = -90;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
             };
             class view_5 {
                 camLocation[] = {-0.932983, -0.326172, 0.647666};
                 camAttach = -45;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
+            };
+        };
+
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class crate_l1_unhide: crate_l1_unhide {
+                positions[] = {{-1.45, 0, 0.25}};
+            };
+            class crate_l2_unhide: crate_l2_unhide {
+                positions[] = {{-1.45, -1.68, 0.15}};
+            };
+            class crate_l3_unhide: crate_l3_unhide {
+                positions[] = {{-1.45, -2.87, 0.15}};
+            };
+            class crate_l4_unhide: crate_l4_unhide {
+                enabled = 0;
+            };
+            class crate_r1_unhide: crate_r1_unhide {
+                positions[] = {{1.1, 0.97, 0.15}};
+            };
+            class crate_r2_unhide: crate_r2_unhide {
+                positions[] = {{1.1, -1.5, 0.15}};
+            };
+            class crate_r3_unhide: crate_r3_unhide {
+                enabled = 0;
+            };
+            class crate_r4_unhide: crate_r4_unhide {
+                enabled = 0;
             };
         };
     };
@@ -226,38 +346,56 @@ class CfgVehicles {
             class view_0 {
                 camLocation[] = {0.589844, -0.314941, 0.449678};
                 camAttach = 45;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
             };
             class view_1 {
                 camLocation[] = {0.809082, -0.442871, 0.276865};
                 camAttach = 90;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
             };
             class view_2 {
                 camLocation[] = {0.819092, -1.24414, 0.27857};
                 camAttach = 90;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
             };
             class view_3 {
                 camLocation[] = {-1.1012, -1.22461, 0.341089};
                 camAttach = -90;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
             };
             class view_4 {
                 camLocation[] = {-1.11597, -0.458984, 0.307256};
                 camAttach = -90;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
             };
             class view_5 {
                 camLocation[] = {-0.869995, -0.304688, 0.461181};
                 camAttach = -45;
-                compartments[]={"Compartment1"};
-                roles[]={"cargo"};
+                compartments[] = {"Compartment1"};
+                roles[] = {"cargo"};
+            };
+        };
+
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class crate_l1_unhide: crate_l1_unhide {
+                positions[] = {{-1.45, 0, 0}};
+            };
+            class crate_l2_unhide: crate_l2_unhide {
+                positions[] = {{-1.45, -1.68, 0}};
+            };
+            class crate_l3_unhide: crate_l3_unhide {
+                positions[] = {{-1.45, -2.87, 0}};
+            };
+            class crate_r1_unhide: crate_l3_unhide {
+                positions[] = {{1.1, 0.97, 0}};
+            };
+            class crate_r2_unhide: crate_r2_unhide {
+                positions[] = {{1.1, -1.5, 0}};
             };
         };
     };
@@ -279,11 +417,289 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretFireProb) = 0.5;
         EGVAR(vehicle_damage,engineFireProb) = 0.8;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+
+        class EGVAR(interaction,anims) {
+            class crate_l1_unhide {
+                positions[] = {{-1.45, 0.5, -0.65}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_l2_unhide {
+                positions[] = {{-1.45, -0.2, -0.65}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_l3_unhide {
+                positions[] = {{-1.45, -1.2, -0.65}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_r1_unhide {
+                positions[] = {{1.45, 0.6, -0.65}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_r2_unhide {
+                positions[] = {{1.45, -0.4, -0.65}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_r3_unhide {
+                positions[] = {{1.45, -1.2, -0.65}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+        };
     };
+    class rhs_bmd1_base: rhs_bmd_base {};
+    class rhs_bmd1p: rhs_bmd1_base {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class crate_l1_unhide: crate_l1_unhide {
+                positions[] = {{-1.45, 0.5, -0.8}};
+            };
+            class crate_l2_unhide: crate_l2_unhide {
+                positions[] = {{-1.45, -0.2, -0.8}};
+            };
+            class crate_l3_unhide: crate_l3_unhide {
+                positions[] = {{-1.45, -1.2, -0.8}};
+            };
+            class crate_r1_unhide: crate_l3_unhide {
+                positions[] = {{1.45, 0.6, -0.8}};
+            };
+            class crate_r2_unhide: crate_r2_unhide {
+                positions[] = {{1.45, -0.4, -0.8}};
+            };
+            class crate_r3_unhide: crate_r3_unhide {
+                positions[] = {{1.45, -1.2, -0.8}};
+            };
+        };
+    };
+    class rhs_bmd2_base: rhs_bmd_base {};
+    class rhs_bmd2: rhs_bmd2_base {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class crate_l1_unhide: crate_l1_unhide {
+                positions[] = {{-1.45, 0.5, -0.8}};
+            };
+            class crate_l2_unhide: crate_l2_unhide {
+                positions[] = {{-1.45, -0.2, -0.8}};
+            };
+            class crate_l3_unhide: crate_l3_unhide {
+                positions[] = {{-1.45, -1.2, -0.8}};
+            };
+            class crate_r1_unhide: crate_l3_unhide {
+                positions[] = {{1.45, 0.6, -0.8}};
+            };
+            class crate_r2_unhide: crate_r2_unhide {
+                positions[] = {{1.45, -0.4, -0.8}};
+            };
+            class crate_r3_unhide: crate_r3_unhide {
+                positions[] = {{1.45, -1.2, -0.8}};
+            };
+        };
+    };
+    class rhs_bmd2m: rhs_bmd2 {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class crate_l1_unhide: crate_l1_unhide {
+                positions[] = {{-1.45, 0.5, -0.7}};
+            };
+            class crate_l2_unhide: crate_l2_unhide {
+                positions[] = {{-1.45, -0.2, -0.7}};
+            };
+            class crate_l3_unhide: crate_l3_unhide {
+                positions[] = {{-1.45, -1.2, -0.7}};
+            };
+            class crate_r1_unhide: crate_l3_unhide {
+                positions[] = {{1.45, 0.6, -0.7}};
+            };
+            class crate_r2_unhide: crate_r2_unhide {
+                positions[] = {{1.45, -0.4, -0.7}};
+            };
+            class crate_r3_unhide: crate_r3_unhide {
+                positions[] = {{1.45, -1.2, -0.7}};
+            };
+        };
+    };
+
     class rhs_bmp1tank_base: Tank_F {
         EGVAR(map,vehicleLightColor)[] = {0,1,0,0.1};
         EGVAR(refuel,fuelCapacity) = 460;
     };
+    class rhs_bmp_base: rhs_bmp1tank_base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0.2;
+        EGVAR(vehicle_damage,engineDetonationProb) = 0;
+        EGVAR(vehicle_damage,hullFireProb) = 0.8;
+        EGVAR(vehicle_damage,turretFireProb) = 0.5;
+        EGVAR(vehicle_damage,engineFireProb) = 0.8;
+        EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+
+        class EGVAR(interaction,anims) {
+            class crate_l1_unhide {
+                positions[] = {{-1.55, 1.1, -0.55}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_l2_unhide {
+                positions[] = {{-1.55, 0.35, -0.55}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_l3_unhide {
+                positions[] = {{-1.55, -0.6, -0.55}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_r1_unhide {
+                positions[] = {{1.55, 1.75, -0.55}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_r2_unhide {
+                positions[] = {{1.55, -0.25, -0.55}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+            class crate_r3_unhide {
+                positions[] = {{1.55, -1, -0.55}};
+                items[] = {"rhs_3Ya40_1_single"};
+                name = "3Ya40-1 Crate";
+                text = "3Ya40-1 Crate";
+            };
+        };
+    };
+    class rhs_bmp1_vdv: rhs_bmp_base {};
+    class rhs_bmp1d_vdv: rhs_bmp1_vdv {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class crate_r3_unhide: crate_r3_unhide {
+                positions[] = {{1.5, -1.2, -0.55}};
+            };
+        };
+    };
+    class rhs_prp3_vdv: rhs_bmp1_vdv {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class crate_l1_unhide: crate_l1_unhide {
+                enabled = 0;
+            };
+            class crate_l2_unhide: crate_l2_unhide {
+                enabled = 0;
+            };
+            class crate_l3_unhide: crate_l3_unhide {
+                enabled = 0;
+            };
+            class crate_r1_unhide: crate_l3_unhide {
+                enabled = 0;
+            };
+            class crate_r2_unhide: crate_r2_unhide {
+                enabled = 0;
+            };
+            class crate_r3_unhide: crate_r3_unhide {
+                enabled = 0;
+            };
+        };
+    };
+
+    class rhs_bmp2e_vdv: rhs_bmp1_vdv {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class crate_l1_unhide: crate_l1_unhide {
+                positions[] = {{-1.8, 1.05, -0.55}};
+            };
+            class crate_l2_unhide: crate_l2_unhide {
+                positions[] = {{-1.8, 0.35, -0.55}};
+            };
+            class crate_l3_unhide: crate_l3_unhide {
+                positions[] = {{-1.8, -0.65, -0.55}};
+            };
+            class crate_r1_unhide: crate_l3_unhide {
+                positions[] = {{1.4, 1.7, -0.55}};
+            };
+            class crate_r2_unhide: crate_r2_unhide {
+                positions[] = {{1.4, -0.25, -0.55}};
+            };
+            class crate_r3_unhide: crate_r3_unhide {
+                positions[] = {{1.4, -1.05, -0.55}};
+            };
+        };
+    };
+    class rhs_bmp2_vdv: rhs_bmp2e_vdv {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class crate_l1_unhide: crate_l1_unhide {
+                positions[] = {{-1.8, 1.2, -0.55}};
+            };
+            class crate_l2_unhide: crate_l2_unhide {
+                positions[] = {{-1.8, 0.5, -0.55}};
+            };
+            class crate_l3_unhide: crate_l3_unhide {
+                positions[] = {{-1.8, -0.5, -0.55}};
+            };
+            class crate_r1_unhide: crate_l3_unhide {
+                positions[] = {{1.4, 1.85, -0.55}};
+            };
+            class crate_r2_unhide: crate_r2_unhide {
+                positions[] = {{1.4, -0.1, -0.55}};
+            };
+            class crate_r3_unhide: crate_r3_unhide {
+                positions[] = {{1.4, -0.9, -0.55}};
+            };
+        };
+    };
+    class rhs_bmp2e_msv: rhs_bmp2e_vdv {};
+    class rhs_Ob_681_2: rhs_bmp2e_msv {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class crate_l1_unhide: crate_l1_unhide {
+                positions[] = {{-1.8, 1.2, -0.55}};
+            };
+            class crate_l2_unhide: crate_l2_unhide {
+                positions[] = {{-1.8, 0.5, -0.55}};
+            };
+            class crate_l3_unhide: crate_l3_unhide {
+                positions[] = {{-1.8, -0.5, -0.55}};
+            };
+            class crate_r1_unhide: crate_l3_unhide {
+                positions[] = {{1.4, 1.85, -0.55}};
+            };
+            class crate_r2_unhide: crate_r2_unhide {
+                positions[] = {{1.4, -0.1, -0.55}};
+            };
+            class crate_r3_unhide: crate_r3_unhide {
+                positions[] = {{1.4, -0.9, -0.55}};
+            };
+        };
+    };
+
+    class rhs_brm1k_base: rhs_bmp2e_vdv {
+        class EGVAR(interaction,anims): EGVAR(interaction,anims) {
+            class crate_l1_unhide: crate_l1_unhide {
+                enabled = 0;
+            };
+            class crate_l2_unhide: crate_l2_unhide {
+                enabled = 0;
+            };
+            class crate_l3_unhide: crate_l3_unhide {
+                enabled = 0;
+            };
+            class crate_r1_unhide: crate_l3_unhide {
+                enabled = 0;
+            };
+            class crate_r2_unhide: crate_r2_unhide {
+                enabled = 0;
+            };
+            class crate_r3_unhide: crate_r3_unhide {
+                enabled = 0;
+            };
+        };
+    };
+
     class rhs_bmp3tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 460;
         EGVAR(vehicle_damage,hullDetonationProb) = 0.2;
@@ -293,37 +709,39 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretFireProb) = 0.2;
         EGVAR(vehicle_damage,engineFireProb) = 0.8;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
+
         class ace_viewports {
             class view_0 {
                 camLocation[] = {1.02881, -0.923828, -0.647231};
                 screenLocation[] = {1.12881, -0.653828, -1.08223};
                 camAttach = 50;
                 maxDistance = 0.5;
-                roles[]={"cargo"};
+                roles[] = {"cargo"};
             };
             class view_1 {
                 camLocation[] = {1.01709, -1.55664, -0.647231};
                 screenLocation[] = {1.10709, -1.42664, -1.14223};
                 camAttach = 82;
                 maxDistance = 0.5;
-                roles[]={"cargo"};
+                roles[] = {"cargo"};
             };
             class view_2 {
                 camLocation[] = {-0.871094, -1.55762, -0.647231};
                 screenLocation[] = {-0.981094, -1.42762, -1.13223};
                 camAttach = 285;
                 maxDistance = 0.5;
-                roles[]={"cargo"};
+                roles[] = {"cargo"};
             };
             class view_3 {
                 camLocation[] = {-1.00879, -0.939941, -0.650259};
                 screenLocation[] = {-0.97879, -0.689941, -1.09526};
                 camAttach = 310;
                 maxDistance = 0.5;
-                roles[]={"cargo"};
+                roles[] = {"cargo"};
             };
         };
     };
+
     class rhs_a3spruttank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 400;
         EGVAR(vehicle_damage,hullDetonationProb) = 0.2;
@@ -334,6 +752,7 @@ class CfgVehicles {
         EGVAR(vehicle_damage,engineFireProb) = 0.8;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
     };
+
     class rhs_a3t72tank_base: Tank_F {
         EGVAR(refuel,fuelCapacity) = 1200;
         EGVAR(vehicle_damage,hullDetonationProb) = 0.8;
@@ -343,15 +762,6 @@ class CfgVehicles {
         EGVAR(vehicle_damage,turretFireProb) = 0.2;
         EGVAR(vehicle_damage,engineFireProb) = 0.5;
         EGVAR(vehicle_damage,detonationDuringFireProb) = 0.2;
-    };
-    class rhs_bmp_base: rhs_bmp1tank_base {
-        EGVAR(vehicle_damage,hullDetonationProb) = 0;
-        EGVAR(vehicle_damage,turretDetonationProb) = 0.2;
-        EGVAR(vehicle_damage,engineDetonationProb) = 0;
-        EGVAR(vehicle_damage,hullFireProb) = 0.8;
-        EGVAR(vehicle_damage,turretFireProb) = 0.5;
-        EGVAR(vehicle_damage,engineFireProb) = 0.8;
-        EGVAR(vehicle_damage,detonationDuringFireProb) = 0.5;
     };
     class rhs_t72bd_tv: rhs_a3t72tank_base {
         EGVAR(vehicle_damage,eraHitpoints)[] = {

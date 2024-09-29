@@ -47,7 +47,7 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
 
 if (_modelPath isEqualTo "") exitWith {};
 
-private _unitPos = getposASL _unit;
+private _unitPos = getPosASL _unit;
 // Distant shooters don't produce as many cases
 if ((AGLToASL positionCameraToWorld [0,0,0]) vectorDistance _unitPos > 100 && {random 1 < 0.9}) exitWith {};
 

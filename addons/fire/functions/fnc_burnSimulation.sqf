@@ -149,7 +149,9 @@ params ["_unit", "_instigator"];
         };
 
         // Keep pain around unconsciousness limit to allow for more fun interactions
-        private _damageToAdd = [0.15, _intensity / BURN_MAX_INTENSITY] select (!alive _unit || {GET_PAIN_PERCEIVED(_unit) < (PAIN_UNCONSCIOUS + random 0.2)});
+        private _painPercieved = (0 max ((_unit getVariable [QEGVAR(medical,pain), 0]) - (_unit getVariable [QEGVAR(medical,painSuppress), 0])) min 1);
+        private _painUnconscious = missionNamespace getVariable [QEGVAR(medical,painUnconsciousThreshold), 0];
+        private _damageToAdd = [0.15, _intensity / BURN_MAX_INTENSITY] select (!alive _unit || {_painPercieved < _painUnconscious + random 0.2});
 
         if (GETEGVAR(medical,enabled,false)) then {
             if (!isNull _instigator) then {

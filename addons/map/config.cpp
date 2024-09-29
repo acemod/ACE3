@@ -119,16 +119,16 @@ class RscDisplayDiary {
                     onButtonClick = "";
                 };
                 class CA_PlayerName: RscText {
-                    x = "2 *    ( ((safezoneW / safezoneH) min 1.2) / 40)";
+                    x = "2 *    ( ((safeZoneW / safeZoneH) min 1.2) / 40)";
                 };
                 class ProfilePicture: RscPicture {
-                    x = "13.5 * ( ((safezoneW / safezoneH) min 1.2) / 40)";
+                    x = "13.5 * ( ((safeZoneW / safeZoneH) min 1.2) / 40)";
                 };
                 class ProfileBackground: RscText {
-                    x = "13.3 * ( ((safezoneW / safezoneH) min 1.2) / 40)";
+                    x = "13.3 * ( ((safeZoneW / safeZoneH) min 1.2) / 40)";
                 };
                 class Separator1: RscPicture {
-                    x = "14.5 * ( ((safezoneW / safezoneH) min 1.2) / 40)";
+                    x = "14.5 * ( ((safeZoneW / safeZoneH) min 1.2) / 40)";
                 };
             };
         };
