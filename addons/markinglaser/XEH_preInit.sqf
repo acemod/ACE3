@@ -8,9 +8,4 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
-GVAR(lasers) = [];
-GVAR(localLasers) = [];
-GVAR(renderPFH) = -1;
-GVAR(updatePFH) = -1;
-
 ADDON = true;

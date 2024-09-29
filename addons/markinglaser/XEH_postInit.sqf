@@ -1,45 +1,39 @@
 #include "script_component.hpp"
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
-// Events
-[QGVAR(laserOn),  LINKFUNC(onLaserOn)]  call CBA_fnc_addEventHandler;
-[QGVAR(laserOff), LINKFUNC(onLaserOff)] call CBA_fnc_addEventHandler;
+if (!hasInterface) exitWith {};
 
 // Keybinds
 ["ACE3 Vehicles", QGVAR(toggleLaser), LLSTRING(ToggleLaser), {
     // Ignore when in Zeus
-    if (!isNull curatorCamera) exitWith {};
+    if (!isNull curatorCamera) exitWith {false};
 
     private _vehicle = cameraOn;
     if !(_vehicle getVariable [QGVAR(enabled), false]) exitWith {false};
 
     private _controlledUnit = [ACE_player, ACE_controlledUAV # 1] select (unitIsUAV _vehicle);
 
-    private _canTurnOn = if (_vehicle getVariable [QGVAR(useTurret), false]) then {
-        private _turretInfo = _vehicle getVariable [QGVAR(turretInfo), []];
-        _controlledUnit == _vehicle turretUnit _turretInfo # 0
-    } else {
-        _controlledUnit == driver _vehicle
-    };
+    private _turretInfo = _vehicle getVariable [QGVAR(turretInfo), []];
+    private _canTurnOn = _controlledUnit == _vehicle turretUnit _turretInfo;
+    if (!_canTurnOn) exitWith { false };
 
-    if (_canTurnOn) then {
-        if (_vehicle getVariable [QGVAR(laserOn), false]) then {
-            [QGVAR(laserOff), [_vehicle]] call CBA_fnc_globalEvent;
-        } else {
-            [QGVAR(laserOn), [_vehicle]] call CBA_fnc_globalEvent;
-        };
+    playSound "ACE_Sound_Click";
+    private _current = _vehicle getVariable [QGVAR(laserOn), false];
+    _vehicle setVariable [QGVAR(laserOn), !_current, true];
+    true
+}, "", [DIK_L, [false, false, true]]] call CBA_fnc_addKeybind; // ALT-L
 
-        true
-    } else {
-        false
-    };
-}, "", [DIK_L, [false, false, true]]] call CBA_fnc_addKeybind;
+["CBA_settingsInitialized", {
+    TRACE_1("settingsInitialized",1);
 
-// JIP init
-if (didJIP) then {
-    {
-        if (_x getVariable [QGVAR(laserOn), false]) then {
-            [_x] call FUNC(onLaserOn);
-        };
-    } forEach (allMissionObjects "Air");
-};
+    GVAR(pfEH) = -1;
+    ["visionMode", LINKFUNC(onLaserOn), true] call CBA_fnc_addPlayerEventHandler;
+    ["ace_laserOn", {
+        params ["", "_args"];
+        _args params ["_object"];
+        if !(_object getVariable [QGVAR(enabled), false]) exitWith {};
+        _object setVariable [QGVAR(smoothing), []];
+
+        [] call LINKFUNC(onLaserOn);
+    }] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addEventHandler;
