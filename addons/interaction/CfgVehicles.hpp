@@ -256,7 +256,7 @@ class CfgVehicles {
                 class ACE_remoteTeamManagement {
                     displayName = CSTRING(Squad);
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
-                    condition = QUOTE(GVAR(remoteTeamManagement));
+                    condition = QUOTE(GVAR(remoteTeamManagement) && {_player == leader _player});
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     insertChildren = QUOTE(call FUNC(addSquadChildren));
                 };
