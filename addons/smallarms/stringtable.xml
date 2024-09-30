@@ -29,7 +29,7 @@
             <Turkish>.45 ACP 25 Merm. Şarjör</Turkish>
             <Japanese>.45 ACP 25Rnd マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣</Chinesesimp>
-            <Korean>.45 ACP 25발 들이 탄창</Korean>
+            <Korean>.45구경 ACP 25발 들이 탄창</Korean>
             <Portuguese>Carregador 25Mun. .45 ACP</Portuguese>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Green_Name">
@@ -44,7 +44,7 @@
             <Turkish>.45 ACP 25 Merm. İzli (Yeşil) Şarjör</Turkish>
             <Japanese>.45 ACP 25Rnd トレーサー (緑) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，绿）</Chinesesimp>
-            <Korean>.45 ACP 25발 들이 탄창 (녹색 예광탄)</Korean>
+            <Korean>.45구경 ACP 25발 들이 탄창 (녹색 예광탄)</Korean>
             <Portuguese>Carregador 25Mun. .45 ACP Traçante (Verde)</Portuguese>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Red_Name">
@@ -59,7 +59,7 @@
             <Turkish>.45 ACP 25 Merm. İzli (Kırmızı) Şarjör</Turkish>
             <Japanese>.45 ACP 25Rnd トレーサー (赤) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，红）</Chinesesimp>
-            <Korean>.45 ACP 25발 들이 탄창 (적색 예광탄)</Korean>
+            <Korean>.45구경 ACP 25발 들이 탄창 (적색 예광탄)</Korean>
             <Portuguese>Carregador 25Mun. .45 ACP Traçante (Vermelha)</Portuguese>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Yellow_Name">
@@ -74,7 +74,7 @@
             <Turkish>.45 ACP 25 Merm. İzli (Sarı) Şarjör</Turkish>
             <Japanese>.45 ACP 25Rnd トレーサー (黄) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，黄）</Chinesesimp>
-            <Korean>.45 ACP 25발 들이 탄창 (황색 예광탄)</Korean>
+            <Korean>.45구경 ACP 25발 들이 탄창 (황색 예광탄)</Korean>
             <Portuguese>Carregador 25Mun. .45 ACP Traçante (Amarela)</Portuguese>
         </Key>
         <Key ID="STR_ACE_SmallArms_8Rnd_45_Name">
@@ -89,7 +89,7 @@
             <Turkish>.45 ACP 8 Merm. Şarjör</Turkish>
             <Japanese>.45 ACP 8Rnd マガジン</Japanese>
             <Chinesesimp>.45 ACP 8发 弹匣</Chinesesimp>
-            <Korean>.45 ACP 8발 들이 탄창</Korean>
+            <Korean>.45구경 ACP 8발 들이 탄창</Korean>
             <Portuguese>Carregador 8Mun. .45 ACP</Portuguese>
         </Key>
         <Key ID="STR_ACE_SmallArms_15Rnd_45_Name">
@@ -104,7 +104,7 @@
             <Turkish>.45 ACP 15 Merm. Şarjör</Turkish>
             <Japanese>.45 ACP 15Rnd マガジン</Japanese>
             <Chinesesimp>.45 ACP 15发 弹匣</Chinesesimp>
-            <Korean>.45 ACP 15발 들이 탄창</Korean>
+            <Korean>.45구경 ACP 15발 들이 탄창</Korean>
             <Portuguese>Carregador 15Mun. .45 ACP</Portuguese>
         </Key>
     </Package>
