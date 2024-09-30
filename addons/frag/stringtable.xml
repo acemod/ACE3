@@ -151,7 +151,7 @@
         </Key>
         <Key ID="STR_ACE_Frag_HitSphereEnable_Desc">
             <English>Draw color coded spheres at any event for tracked rounds.</English>
-            <Korean>모든 ㅇ이벤트에서 추적된 파편을 위한 색상으로 구분하는 구체를 그립니다.</Korean>
+            <Korean>모든 이벤트에서 추적된 파편을 위한 색상으로 구분하는 구체를 그립니다.</Korean>
             <Japanese>追跡中の飛翔体に発生した全てのイベントを色付けた球体として描画します。</Japanese>
             <Russian>Изобразить цветные сферы на любом событии для отслеживаемых раундов.</Russian>
         </Key>
