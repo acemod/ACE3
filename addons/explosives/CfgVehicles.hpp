@@ -373,6 +373,18 @@ class CfgVehicles {
         displayName = CSTRING(TripFlare_Name);
     };
 
+    class Claymore_F: MineBase {
+        ammo = "ACE_ClaymoreDirectionalMine_Remote_Ammo";
+    };
+
+    class APERSBoundingMine: MineBase {
+        ammo = "ACE_APERSBoundingMine_Range_Ammo";
+    };
+
+    class DemoCharge_F: MineBase {
+        ammo = "ACE_DemoCharge_Remote_Ammo";
+    };
+
     class IEDUrbanBig_F;
     class ACE_IEDUrbanBig_Range: IEDUrbanBig_F {
         author = ECSTRING(common,aceteam);

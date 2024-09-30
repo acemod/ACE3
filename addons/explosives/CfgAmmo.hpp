@@ -8,8 +8,8 @@ class CfgAmmo {
 
     // GVAR(size) = 0; is small size
     // GVAR(size) = 1; is large size
-    class DirectionalBombBase;
-    class ClaymoreDirectionalMine_Remote_Ammo: DirectionalBombBase {
+    class ClaymoreDirectionalMine_Remote_Ammo;
+    class ACE_ClaymoreDirectionalMine_Remote_Ammo: ClaymoreDirectionalMine_Remote_Ammo {
         GVAR(magazine) = "ClaymoreDirectionalMine_Remote_Mag";
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0, 0, 0.038};
@@ -21,13 +21,14 @@ class CfgAmmo {
         indirectHit = 10;
     };
 
+    class DirectionalBombBase;
     class APERSTripMine_Wire_Ammo: DirectionalBombBase {
         GVAR(defuseObjectPosition)[] = {-1.415, 0, 0.12};
         GVAR(size) = 0;
     };
 
-    class BoundingMineBase;
-    class APERSBoundingMine_Range_Ammo: BoundingMineBase {
+    class APERSBoundingMine_Range_Ammo;
+    class ACE_APERSBoundingMine_Range_Ammo: APERSBoundingMine_Range_Ammo {
         // Reduce vanilla damage, so that it doesn't destroy buildings
         hit = 10;
         indirectHit = 10;
@@ -91,8 +92,8 @@ class CfgAmmo {
         icon = "iconExplosiveGP";
     };
 
-    class PipeBombBase;
-    class DemoCharge_Remote_Ammo: PipeBombBase {
+    class DemoCharge_Remote_Ammo;
+    class ACE_DemoCharge_Remote_Ammo: DemoCharge_Remote_Ammo {
         GVAR(magazine) = "DemoCharge_Remote_Mag";
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0.07, 0, 0.055};
@@ -102,6 +103,7 @@ class CfgAmmo {
         indirectHit = 500;
         indirectHitRange = 7;
     };
+    class PipeBombBase;
     class SatchelCharge_Remote_Ammo: PipeBombBase {
         GVAR(magazine) = "SatchelCharge_Remote_Mag";
         GVAR(size) = 0;
