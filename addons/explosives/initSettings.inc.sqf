@@ -27,6 +27,15 @@ private _categoryStr = format ["ACE %1", LLSTRING(Menu)];
     1
 ] call CBA_fnc_addSetting;
 
+[
+    QGVAR(setShotParents),
+    "CHECKBOX",
+    [LLSTRING(SetShotParents_DisplayName), LLSTRING(SetShotParents_Description)],
+    _categoryStr,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
 // Variable names to preserve https://github.com/acemod/ACE3/pull/6882
 [
     QGVAR(customTimerMin),
