@@ -1131,12 +1131,6 @@
             <Korean>유닛이 폭발물 처리반인지 결정합니다</Korean>
             <Portuguese>Controla se a unidade é um especialista em explosivos.</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Explosives_SetShotParents_DisplayName">
-            <English>Set Shot Parent Owner</English>
-        </Key>
-        <Key ID="STR_ACE_Explosives_SetShotParents_Description">
-            <English>ACE can set the owner/instigator of the explosive to the unit placing/detonating it.\nBy default, it will only set the instigator to prevent unrealistic AI behavior where it immediately knows the placer's exact location upon detonation.\nEnabling this will also set the explosive owner, if required.</English>
-        </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
             <English>Minimum Time</English>
             <Russian>Мин. время</Russian>
