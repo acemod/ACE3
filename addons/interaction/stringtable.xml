@@ -283,7 +283,7 @@
             <Hungarian>Csatlakozás a csoporthoz</Hungarian>
             <Portuguese>Unir-se ao grupo</Portuguese>
             <Italian>Unisciti alla squadra</Italian>
-            <Japanese>グループに入る</Japanese>
+            <Japanese>グループに参加</Japanese>
             <Korean>그룹 참여</Korean>
             <Chinesesimp>加入小队</Chinesesimp>
             <Chinese>加入小隊</Chinese>
@@ -373,7 +373,7 @@
             <Hungarian>TÁNC!</Hungarian>
             <Portuguese>DANCE!</Portuguese>
             <Italian>DANZA!</Italian>
-            <Japanese>おどれ!</Japanese>
+            <Japanese>踊ろう!</Japanese>
             <Korean>춤추기!</Korean>
             <Chinesesimp>跳舞</Chinesesimp>
             <Chinese>跳舞</Chinese>
@@ -586,11 +586,15 @@
             <English>Remote Squad Management</English>
             <French>Gestion à distance de l'escouade</French>
             <Russian>Дистанционное управление отрядом</Russian>
+            <Japanese>遠隔分隊管理</Japanese>
+            <Korean>분대 원격 관리</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_remoteTeamManagement_Description">
             <English>Allow dropping and changing team colors of any unit in player's squad</English>
             <French>Permettre d'abandonner et de changer les couleurs de n'importe quelle unité de l'escouade du joueur</French>
             <Russian>Позволяет сбрасывать и менять командные цвета любого подразделения в отряде игрока</Russian>
+            <Japanese>プレイヤー分隊内の任意のユニットにチームからの脱退と色の変更を許可します</Japanese>
+            <Korean>플레이어 분대의 모든 유닛을 삭제하고 팀 색상 변경하는 것을 허용합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_Squad">
             <English>Squad</English>
@@ -755,7 +759,7 @@
             <Russian>Присоединиться к Красной группе</Russian>
             <French>Rejoindre rouge</French>
             <Italian>Unirsi al team rosso</Italian>
-            <Japanese>レッドに入る</Japanese>
+            <Japanese>レッドに参加</Japanese>
             <Korean>빨강에 참여</Korean>
             <Chinesesimp>加入红组</Chinesesimp>
             <Chinese>加入紅組</Chinese>
@@ -772,7 +776,7 @@
             <Russian>Присоединиться к Зеленой группе</Russian>
             <French>Rejoindre vert</French>
             <Italian>Unirsi al team verde</Italian>
-            <Japanese>グリーンに入る</Japanese>
+            <Japanese>グリーンに参加</Japanese>
             <Korean>초록에 참여</Korean>
             <Chinesesimp>加入绿组</Chinesesimp>
             <Chinese>加入綠組</Chinese>
@@ -789,7 +793,7 @@
             <Russian>Присоединиться к Синей группе</Russian>
             <French>Rejoindre bleu</French>
             <Italian>Unirsi al team blu</Italian>
-            <Japanese>ブルーに入る</Japanese>
+            <Japanese>ブルーに参加</Japanese>
             <Korean>파랑에 참여</Korean>
             <Chinesesimp>加入蓝组</Chinesesimp>
             <Chinese>加入藍組</Chinese>
@@ -806,7 +810,7 @@
             <Russian>Присоединиться к Жёлтой группе</Russian>
             <French>Rejoindre jaune</French>
             <Italian>Unirsi al team giallo</Italian>
-            <Japanese>イエローに入る</Japanese>
+            <Japanese>イエローに参加</Japanese>
             <Korean>노랑에 참여</Korean>
             <Chinesesimp>加入黄组</Chinesesimp>
             <Chinese>加入黃組</Chinese>
@@ -823,6 +827,7 @@
             <French>Rejoindre Blanc</French>
             <Italian>Unirsi al team Bianco</Italian>
             <Korean>백팀 참여</Korean>
+            <Japanese>ホワイトに参加</Japanese>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinedTeam">
             <English>You joined Team %1</English>
@@ -835,7 +840,7 @@
             <Portuguese>Você uniu-se à Equipe %1</Portuguese>
             <Italian>Sei entrato nel team %1</Italian>
             <Hungarian>Csatlakoztál a %1 csapathoz</Hungarian>
-            <Japanese>チーム %1 に入りました</Japanese>
+            <Japanese>チーム %1 に参加しました</Japanese>
             <Korean>당신은 %1팀에 참여했습니다</Korean>
             <Chinesesimp>你已加入%1组</Chinesesimp>
             <Chinese>你已加入%1組</Chinese>
@@ -1098,7 +1103,7 @@
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_DisplayName">
             <English>Disable negative rating</English>
             <German>Negative Bewertung deaktivieren</German>
-            <Japanese>否定評価を無効化</Japanese>
+            <Japanese>ネガティブな評価を無効化</Japanese>
             <Italian>Impedisci Valutazione Negativa</Italian>
             <Chinese>關閉負面評價</Chinese>
             <Chinesesimp>关闭负面评价</Chinesesimp>
@@ -1113,7 +1118,7 @@
         <Key ID="STR_ACE_Interaction_DisableNegativeRating_Description">
             <English>Should players receive negative rating? When enabled players are only receiving positive ratings which prevents friendly AI fire when destroying friendly equipment or killing team members.</English>
             <German>Sollen Spieler negative Bewertungen erhalten dürfen? Wenn diese Option aktiviert ist, erhalten Spieler nur positive Bewertungen, was Freundbeschuss durch KI verhindert, wenn befreundete Ausrüstung zerstört oder befreundete Einheiten von Spielern des selben Teams getötet werden.</German>
-            <Japanese>否定評価を受けますか?有効化した場合プレイヤーは肯定評価のみを受け、友軍の装備を壊したり殺害をしてもAIからの攻撃を防ぎます。</Japanese>
+            <Japanese>プレイヤーはネガティブな評価を受けるべきですか? これを有効化すると、プレイヤーはポジティブな評価のみ受けるようになり、仮に味方の兵器を破壊したり、友軍兵士を殺害したとしても、友軍AI兵がプレイヤーに対して発砲するのを防ぐことができます。</Japanese>
             <Italian>I giocatori possono ricevere valutazioni negative? Se abilitato i giocatori riceveranno esclusivamente valutazioni positive, impedendo l'ingaggio da parte di IA alleate quando distruggono equipaggiamenti o uccidono alleati/civili.</Italian>
             <Chinese>玩家是否會收到負面評價? 當本功能開啟時玩家只會接收到正面評價，所以當玩家做出擊殺友軍AI、毀壞友軍裝備或殺害小隊夥伴都不會收到負面評價</Chinese>
             <Chinesesimp>玩家是否会收到负面评价？ 当本功能开启时玩家只会接收到正面评价，所以当玩家做出击杀友军 AI、毁坏友军装备或杀害小队伙伴都不会收到负面评价。</Chinesesimp>
@@ -1246,7 +1251,7 @@
             <Italian>Mostra l'interazione "passa caricatore"</Italian>
             <Spanish>Mostrar "Pasar cargador" en el menú de interacción</Spanish>
             <French>Montrer l'interaction "Passer un chargeur"</French>
-            <Japanese>"弾倉を渡す"をインタラクションに表示</Japanese>
+            <Japanese>弾倉を渡すをインタラクションに表示</Japanese>
             <Korean>'탄창 건네기'를 상호작용에서 보여줌</Korean>
             <Chinesesimp>显示"给予弹匣"互动动作</Chinesesimp>
             <Chinese>顯示"給予彈匣"互動動作</Chinese>
@@ -1275,7 +1280,7 @@
             <Russian>Выбить лобовое стекло</Russian>
             <Polish>Wyłam szybę</Polish>
             <Hungarian>Szélvédő széttörése</Hungarian>
-            <Japanese>フロントガラスを破る</Japanese>
+            <Japanese>風防を破る</Japanese>
             <Italian>Sfonda il parabrezza</Italian>
             <Portuguese>Quebrar pára-brisa</Portuguese>
             <Chinese>踹開擋風玻璃</Chinese>
@@ -1367,24 +1372,28 @@
             <Russian>Взаимодействие с анимациями</Russian>
             <French>Interaction avec les animations</French>
             <Japanese>車両アニメーションベースのインタラクション</Japanese>
+            <Korean>애니메이션 있는 상호작용</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_DisplayName">
             <English>Interact With Enemy Crew</English>
             <Japanese>敵乗員がいる状態でのインタラクト</Japanese>
             <French>Interagir avec l'équipage ennemi</French>
             <Russian>Взаимодействие с вражеским экипажем</Russian>
+            <Korean>적 승무원과의 상호작용</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_Description">
             <English>Limit some interactions on vehicles crewed by enemy factions.</English>
             <Japanese>敵性力の乗員が乗っている車両へのインタラクションを一部制限します。</Japanese>
             <French>Limiter certaines interactions sur les véhicules dont l'équipage appartient à des factions ennemies.</French>
             <Russian>Ограничьте некоторые взаимодействия на транспортных средствах, управляемых вражеской стороной.</Russian>
+            <Korean>적 진영이 탑승한 차량과의 일부 상호작용을 제한합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_allowCSW">
             <English>Allow for Static Weapons</English>
-            <Japanese>固定火器への許可</Japanese>
+            <Japanese>固定火器での許可</Japanese>
             <French>Autoriser les armes statiques</French>
             <Russian>Разрешить использование статического оружия</Russian>
+            <Korean>고정화기 허용</Korean>
         </Key>
     </Package>
 </Project>

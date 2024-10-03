@@ -48,7 +48,7 @@ private _missionRoot = str missionConfigFile select [0, count str missionConfigF
         };
     } else {
         if (isClass (configFile >> "CfgSounds" >> _x)) then {
-            _soundPath = (getArray(configFile >> "CfgSounds" >> _x >> "sound")) param [0, ""];
+            private _soundPath = (getArray(configFile >> "CfgSounds" >> _x >> "sound")) param [0, ""];
             if ((_soundPath select [0, 1]) == "\") then {_soundPath = _soundPath select [1];};
             _ambianceSounds pushBack _soundPath;
         } else {

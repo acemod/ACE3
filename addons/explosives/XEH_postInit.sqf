@@ -53,6 +53,14 @@ if (isServer) then {
         TRACE_1("Knocked Out, Doing Deadman",_unit);
         [_unit] call FUNC(onIncapacitated);
     }] call CBA_fnc_addEventHandler;
+
+    // Orient all Editor-placed SLAM (Bottom attack) mines facing upward
+    {
+        private _mine = _x;
+        if (typeOf _mine == "ACE_SLAMDirectionalMine_Magnetic_Ammo") then {
+            [_mine, MINE_PITCH_UP, 0] call CALLSTACK(BIS_fnc_setPitchBank);
+        };
+    } forEach allMines;
 };
 
 if (!hasInterface) exitWith {};
