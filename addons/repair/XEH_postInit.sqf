@@ -51,7 +51,7 @@
             };
         };
 
-        // handle delay of player locality pass
+        // Handle player locality delay, can be anywhere from instant to 10+ seconds (#10337)
         if (_unit isNotEqualTo ACE_player) exitWith {};
         _unit addEventHandler ["Local", {
             params ["_unit", "_isLocal"];
