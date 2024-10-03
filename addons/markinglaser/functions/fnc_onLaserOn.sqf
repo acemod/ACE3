@@ -19,4 +19,4 @@ if (GVAR(pfEH) != -1) exitWith {};
 if (((currentVisionMode focusOn) != 1) || {EGVAR(laser,laserEmitters) isEqualTo []}) exitWith {};
 
 GVAR(pfEH) = [LINKFUNC(renderPFH), 0, []] call CBA_fnc_addPerFrameHandler;
-TRACE_1("start PFEH", GVAR(pfEH));
+TRACE_1("start PFEH",GVAR(pfEH));

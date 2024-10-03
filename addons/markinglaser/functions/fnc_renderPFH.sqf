@@ -18,7 +18,7 @@
 if (((currentVisionMode focusOn) != 1) || {EGVAR(laser,laserEmitters) isEqualTo []}) exitWith {
     GVAR(pfEH) call CBA_fnc_removePerFrameHandler;
     GVAR(pfEH) = -1;
-    TRACE_1("end PFEH", GVAR(pfEH));
+    TRACE_1("end PFEH",GVAR(pfEH));
 };
 
 {
