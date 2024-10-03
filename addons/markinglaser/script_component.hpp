@@ -17,3 +17,7 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define LASER_MAX 3000
+
+#define MODE_OFF 0
+#define MODE_ON 1
+#define MODE_FLASH 2
