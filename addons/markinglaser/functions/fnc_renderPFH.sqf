@@ -24,8 +24,14 @@ if (((currentVisionMode focusOn) != 1) || {EGVAR(laser,laserEmitters) isEqualTo 
 {
     _y params ["_aircraft", "", "_laserMethod"];
 
-    if !(_aircraft getVariable [QGVAR(laserOn), false]) then { continue };
+    private _currentMode = _aircraft getVariable [QGVAR(laserMode), MODE_OFF];
+    if (_currentMode == MODE_OFF) then { continue };
     if (_laserMethod != QEFUNC(laser,findLaserSource)) then { continue }; // Normal vanilla laserTarget func
+
+    if ((_currentMode == MODE_FLASH) && {
+        private _cycle = (CBA_missionTime + (_aircraft getVariable [QGVAR(flashOffset), 0])) % (1/3);
+        _cycle > 1/6
+    }) then { continue };
 
     private _targetObject = _aircraft getVariable [QEGVAR(laser,targetObject), objNull];
     private _targetPosASL = getPosASL _targetObject;

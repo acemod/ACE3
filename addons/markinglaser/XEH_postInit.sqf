@@ -18,8 +18,9 @@ if (!hasInterface) exitWith {};
     if (!_canTurnOn) exitWith { false };
 
     playSound "ACE_Sound_Click";
-    private _current = _vehicle getVariable [QGVAR(laserOn), false];
-    _vehicle setVariable [QGVAR(laserOn), !_current, true];
+    private _currentMode = _vehicle getVariable [QGVAR(laserMode), MODE_OFF];
+    private _newMode = (_currentMode + 1) % 3;
+    _vehicle setVariable [QGVAR(laserMode), _newMode, true];
     true
 }, "", [DIK_L, [false, false, true]]] call CBA_fnc_addKeybind; // ALT-L
 
@@ -33,6 +34,7 @@ if (!hasInterface) exitWith {};
         _args params ["_object"];
         if !(_object getVariable [QGVAR(enabled), false]) exitWith {};
         _object setVariable [QGVAR(smoothing), []];
+        _object setVariable [QGVAR(flashOffset), random 1]; // make flashes not syncronized
 
         [] call LINKFUNC(onLaserOn);
     }] call CBA_fnc_addEventHandler;
