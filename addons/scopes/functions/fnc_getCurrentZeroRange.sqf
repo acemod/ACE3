@@ -27,12 +27,12 @@ if (GVAR(simplifiedZeroing)) exitWith {
     ((_adjustment select _weaponIndex) select 0)
 };
 
-private _local = (_unit == ACE_Player);
+private _local = _unit == ACE_Player;
 
 private _optic = if (_local) then {
-    GVAR(Optics) select _weaponIndex;
+    GVAR(Optics) select _weaponIndex
 } else {
-    ([_unit] call FUNC(getOptics)) select _weaponIndex;
+    ([_unit] call FUNC(getOptics)) select _weaponIndex
 };
 private _opticConfig = if (_optic != "") then {
     (configFile >> "CfgWeapons" >> _optic)
@@ -40,11 +40,7 @@ private _opticConfig = if (_optic != "") then {
     if (_local) then {
         (configFile >> "CfgWeapons" >> (GVAR(Guns) select _weaponIndex))
     } else {
-        private _gun = switch (_weaponIndex) do {
-            case 1: { secondaryWeapon _unit };
-            case 2: { handgunWeapon _unit };
-            default { primaryWeapon _unit };
-        };
+        private _gun = currentWeapon _unit;
         (configFile >> "CfgWeapons" >> _gun)
     };
 };
@@ -52,7 +48,7 @@ private _opticConfig = if (_optic != "") then {
 private _zeroRange = currentZeroing _unit;
 // Revert zeroing to default if overriding is enabled OR the selected sight's magnification is not higher than that of the naked eye, meaning that it is a secondary iron/holo sight
 if (
-    (_local) && 
+    _local && 
     (GVAR(canAdjustElevation) select _weaponIndex) && 
     {GVAR(overwriteZeroRange) || {getNumber (_opticConfig >> "ItemInfo" >> "OpticsModes" >> (_unit getOpticsMode _weaponIndex) >> "opticsZoomMax") > MIN_ZOOM_NAKEDEYE}}
 ) then {
