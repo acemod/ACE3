@@ -157,6 +157,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
                     format [localize LSTRING(connectInventoryExplosiveToDeadman), _name],
                     _picture,
                     {
+                        //IGNORE_PRIVATE_WARNING ["_player"];
                         params ["_player", "", "_mag"];
                         TRACE_2("set new",_player,_mag);
                         _player setVariable [QGVAR(deadmanInvExplosive), _mag, true];

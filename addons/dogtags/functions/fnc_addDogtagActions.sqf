@@ -18,6 +18,7 @@
 params ["_player"];
 
 private _fnc_getActions = {
+    //IGNORE_PRIVATE_WARNING ["_player"];
     private _actions = [];
     private _cfgWeapons = configFile >> "CfgWeapons";
 

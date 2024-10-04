@@ -29,6 +29,7 @@ if (_playProgressBar) exitWith {
 
         [_weaponPlatform, _newStaticWeapon] call SPE_Weapons_Static_fnc_alter_height;
     }, {}, LSUBLSTRING(alteringHeight), {
+        //IGNORE_PRIVATE_WARNING ["_player"];
         (_this select 0) params ["_weaponPlatform"];
 
         _player distance _weaponPlatform <= 4 && {[_weaponPlatform, true] call SPE_Weapons_Static_fnc_can_alter_height}

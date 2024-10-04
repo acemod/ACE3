@@ -38,6 +38,7 @@ if !(hasInterface) exitWith {};
         [false, false, false, false, true]
     ] call EFUNC(interact_menu,createAction);
 
+    //IGNORE_PRIVATE_WARNING ["_player", "_target"];
     private _subActions = [
         [
             QGVAR(checkWater),

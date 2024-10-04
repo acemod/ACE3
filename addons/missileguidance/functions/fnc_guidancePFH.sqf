@@ -50,7 +50,7 @@ _targetData set [1, _projectilePos vectorFromTo _profileAdjustedTargetPos];
 
 // If we have no seeker target, then do not change anything
 // If there is no deflection on the missile, this cannot change and therefore is redundant. Avoid calculations for missiles without any deflection
-if ((_pitchRate != 0 || {_yawRate != 0})) then {
+if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqualTo [0,0,0]}) then {
     private _navigationFunction = getText (configFile >> QGVAR(NavigationTypes) >> _navigationType >> "functionName");
     if (_navigationStateData isNotEqualTo []) then {
         (_navigationStateData select _currentState) params ["_transitionCondition"];

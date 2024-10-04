@@ -242,7 +242,7 @@ class ATMine_Range_Ammo: MineBase {
 
 class APERSMine_Range_Ammo: MineBase { // VS-50
     GVAR(skip) = 0;
-    GVAR(force) = 0;
+    GVAR(force) = 1;
     GVAR(classes)[] = {QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(small_HD)};
     GVAR(metal) = 100;
     GVAR(charge) = 50;
@@ -251,7 +251,7 @@ class APERSMine_Range_Ammo: MineBase { // VS-50
 };
 
 class APERSBoundingMine_Range_Ammo: BoundingMineBase {
-    GVAR(skip) = 1;
+    GVAR(skip) = 0;
     GVAR(force) = 0;
     GVAR(classes)[] = {QGVAR(tiny_HD)};
     GVAR(metal) = 80;
@@ -336,7 +336,14 @@ class APERSMineDispenser_Mine_Ammo: APERSMine_Range_Ammo {
 class UXO_deploy_base_f: SubmunitionBase {};
 
 class ClaymoreDirectionalMine_Remote_Ammo: DirectionalBombBase {
-    GVAR(skip) = 1;
+    GVAR(skip) = 0;
+    GVAR(force) = 0;
+    GVAR(classes)[] = {QGVAR(tiny), QGVAR(small)};
+    GVAR(fragCount) = 700;
+    GVAR(metal) = 700;
+    GVAR(charge) = 680;
+    GVAR(gurney_c) = 2700;
+    GVAR(gurney_k) = "3/5";
 };
 
 class SatchelCharge_Remote_Ammo: PipeBombBase {

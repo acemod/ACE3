@@ -142,8 +142,7 @@ if (_targets isNotEqualTo []) then {
         private _vectorDir = [cos (_sectorOffset + _randomDir), sin (_sectorOffset + _randomDir), sin (30 - (random 45))];
 
         private _fragObjSpeed = _fragVelocity * (1 - random 0.5);
-
-        _fragObjVelocity = _vectorDir vectorMultiply _fragObjSpeed;
+        private _fragObjVelocity = _vectorDir vectorMultiply _fragObjSpeed;
 
         private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
         _fragObj setVectorDir _vectorDir;
