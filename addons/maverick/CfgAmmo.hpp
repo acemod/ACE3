@@ -1,9 +1,25 @@
+class ace_missileguidance_type_Maverick;
 class CfgAmmo {
     class MissileCore;
     class MissileBase: MissileCore {
         class Components;
     };
     class Missile_AGM_02_F: MissileBase {};
+
+    class GVAR(D): Missile_AGM_02_F {
+        author = "Dani (TCVM)";
+        missileLockMaxDistance = 14000;
+        maneuvrability = 0;
+        class ace_missileguidance: ace_missileguidance_type_Maverick {
+            enabled = 1;
+        };
+    };
+
+    class GVAR(G): GVAR(D) {
+        class ace_missileguidance: ace_missileguidance {
+            enabled = 1;
+        };
+    };
 
     class GVAR(L): Missile_AGM_02_F {
         author = "xrufix";
@@ -13,30 +29,15 @@ class CfgAmmo {
         manualControl = 0;
         missileLockMaxDistance = 16000;
         weaponLockSystem = 4;
-        class ace_missileguidance {
+        class ace_missileguidance: ace_missileguidance_type_Maverick {
             enabled = 1;
-
-            minDeflection = 0;
-            maxDeflection = 0.002;
-            incDeflection = 0.001;
-
-            canVanillaLock = 0;
-
             defaultSeekerType = "SALH";
             seekerTypes[] = {"SALH"};
 
             defaultSeekerLockMode = "LOAL";
-            seekerLockModes[] = {"LOAL","LOBL"};
+            seekerLockModes[] = {"LOAL"};
 
-            seekLastTargetPos = 1;
-            seekerAngle = 60;
-            seekerAccuracy = 1;
-
-            seekerMinRange = 1;
             seekerMaxRange = 16000;
-
-            defaultAttackProfile = "maverick";
-            attackProfiles[] = {"maverick"};
         };
     };
 
@@ -46,14 +47,10 @@ class CfgAmmo {
         irLock = 0;
         missileLockMaxDistance = 10000;
         weaponLockSystem = 4;
-        class ace_missileguidance {
+        class ace_missileguidance: ace_missileguidance_type_Maverick {
             enabled = 1;
-
-            minDeflection = 0;
-            maxDeflection = 0.002;
-            incDeflection = 0.001;
-
-            canVanillaLock = 0;
+            pitchRate = 20;
+            yawRate = 20;
 
             defaultSeekerType = "SALH";
             seekerTypes[] = {"SALH"};
@@ -61,15 +58,8 @@ class CfgAmmo {
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = {"LOAL"};
 
-            seekLastTargetPos = 1;
             seekerAngle = 40;
-            seekerAccuracy = 1;
-
-            seekerMinRange = 1;
             seekerMaxRange = 10000;
-
-            defaultAttackProfile = "maverick";
-            attackProfiles[] = {"maverick"};
         };
     };
 };

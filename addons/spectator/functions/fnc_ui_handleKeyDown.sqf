@@ -108,13 +108,13 @@ if (_key == DIK_L) exitWith {
         { deleteVehicle _x; } forEach GVAR(camLights);
         GVAR(camLights) = [];
     } else {
-        private _cameraLight = "#lightpoint" createvehicleLocal getPosASL GVAR(camera);
+        private _cameraLight = "#lightpoint" createVehicleLocal getPosASL GVAR(camera);
         _cameraLight setLightBrightness 2;
         _cameraLight setLightAmbient [1,1,1];
         _cameraLight setLightColor [0,0,0];
         _cameraLight lightAttachObject [GVAR(camera), [0,0,0]];
 
-        private _pointerLight = "#lightpoint" createvehicleLocal getPosASL GVAR(camera);
+        private _pointerLight = "#lightpoint" createVehicleLocal getPosASL GVAR(camera);
         _pointerLight setLightBrightness 1;
         _pointerLight setLightAmbient [1,1,1];
         _pointerLight setLightColor [0,0,0];

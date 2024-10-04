@@ -7,7 +7,7 @@
  * 0: Vehicle <OBJECT>
  * 1: Spawn fire jet <BOOL>
  * 2: Spawn fire ring <BOOL>
- * 3: What selection fire will originate from <STRING>
+ * 3: What selection fire will originate from <STRING><ARRAY>
  * 4: Cookoff intensity value <NUMBER>
  * 5: Start time <NUMBER>
  * 6: Duration of effect (max 20 seconds) <NUMBER>
@@ -127,49 +127,49 @@ if (isServer) then {
 
     if (_ring) then {
         private _ringOrigin = (_vehicle selectionPosition _fireSelection) vectorAdd [-0.1 + random 0.2, -0.1 + random 0.2, -1];
-
-        drop [
-            ["\A3\data_f\ParticleEffects\Universal\Universal",16,2,32],
-            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
-            _ringOrigin,
-            [0, 20 * (_factor / 2), 0],
-            0, 10, 7.9, 0.075,
-            [1.25 * _factor, FLAME_SIZE * _factor],
-            [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
-            [2 + random 1], 1, 0, "", "", _vehicle
-        ];
-        drop [
-            ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
-            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
-            _ringOrigin,
-            [0, -20 * (_factor / 2), 0],
-            0, 10, 7.9, 0.075,
-            [1.25 * _factor, FLAME_SIZE * _factor],
-            [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
-            [2 + random 1], 1, 0, "", "", _vehicle
-        ];
-        drop [
-            ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
-            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
-            _ringOrigin,
-            [20 * (_factor / 2), 0, 0],
-            0, 10, 7.9, 0.075,
-            [1.25 * _factor, FLAME_SIZE * _factor],
-            [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
-            [2 + random 1], 1, 0, "", "", _vehicle
-        ];
-        drop [
-            ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
-            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
-            [-0.1 + random 0.2, -0.1 + random 0.2, -1],
-            [-20 * (_factor / 2), 0, 0],
-            0, 10, 7.9, 0.075,
-            [1.25 * _factor, FLAME_SIZE * _factor],
-            [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
-            [2 + random 1], 1, 0, "", "", _vehicle
-        ];
-
         private _dir = 20 * (_factor / 2);
+
+        drop [
+            ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
+            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
+            _ringOrigin,
+            [0, _dir, 0],
+            0, 10, 7.9, 0.075,
+            [1.25 * _factor, FLAME_SIZE * _factor],
+            [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
+            [2 + random 1], 1, 0, "", "", _vehicle
+        ];
+        drop [
+            ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
+            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
+            _ringOrigin,
+            [0, -_dir, 0],
+            0, 10, 7.9, 0.075,
+            [1.25 * _factor, FLAME_SIZE * _factor],
+            [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
+            [2 + random 1], 1, 0, "", "", _vehicle
+        ];
+        drop [
+            ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
+            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
+            _ringOrigin,
+            [_dir, 0, 0],
+            0, 10, 7.9, 0.075,
+            [1.25 * _factor, FLAME_SIZE * _factor],
+            [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
+            [2 + random 1], 1, 0, "", "", _vehicle
+        ];
+        drop [
+            ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
+            "", "Billboard", 1, (0.1 + random 0.2) * _factor,
+            _ringOrigin,
+            [-_dir, 0, 0],
+            0, 10, 7.9, 0.075,
+            [1.25 * _factor, FLAME_SIZE * _factor],
+            [[1, 1, 1, -2], [1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
+            [2 + random 1], 1, 0, "", "", _vehicle
+        ];
+
         drop [
             ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
             "", "Billboard", 1, (0.1 + random 0.2) * _factor,
@@ -181,21 +181,19 @@ if (isServer) then {
             [2 + random 1], 1, 0, "", "", _vehicle
         ];
 
-        _dir = -20 * (_factor / 2);
         drop [
             ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
             "", "Billboard", 1, (0.1 + (random 0.2)) * _factor,
             _ringOrigin,
-            [_dir, _dir, 0],
+            [-_dir, -_dir, 0],
             0, 10, 7.9, 0.075,
             [1.25 * _factor, FLAME_SIZE * _factor],
             [[1, 1, 1, -2],[1, 1, 1, -2], [1, 1, 1, -1], [1, 1, 1, -0]],
             [2 + random 1], 1, 0, "", "", _vehicle
         ];
 
-        _dir = 20 * (_factor / 2);
         drop [
-            ["\A3\data_f\ParticleEffects\Universal\Universal",16,2,32],
+            ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
             "", "Billboard", 1, (0.1 + (random 0.2)) * _factor,
             _ringOrigin,
             [_dir, -_dir, 0],
@@ -205,7 +203,6 @@ if (isServer) then {
             [2 + random 1], 1, 0, "", "", _vehicle
         ];
 
-        _dir = 20 * (_factor / 2);
         drop [
             ["\A3\data_f\ParticleEffects\Universal\Universal", 16, 2, 32],
             "", "Billboard", 1, (0.1 + random 0.2) * _factor,

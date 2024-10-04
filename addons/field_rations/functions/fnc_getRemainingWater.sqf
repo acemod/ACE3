@@ -23,7 +23,10 @@ private _water = _source getVariable QGVAR(currentWaterSupply);
 
 if (isNil "_water") then {
     private _configOf = configOf _source;
-    if !(isNull _configOf) then {
+    if (isNull _configOf) then {
+        // Check the p3d name against list
+        _water = if ((getModelInfo _source select 0) in GVAR(waterSourceP3ds)) then {REFILL_WATER_INFINITE} else {REFILL_WATER_DISABLED};
+    } else {
         // Check for waterSupply entry since we have valid typeOf
         _water = getNumber (_configOf >> QXGVAR(waterSupply));
         if (_water == 0) then {_water = REFILL_WATER_DISABLED};
@@ -35,9 +38,6 @@ if (isNil "_water") then {
                 _source setVariable [QGVAR(currentWaterSupply), _water, true];
             };
         };
-    } else {
-        // Check the p3d name against list
-        _water = if ((getModelInfo _source select 0) in GVAR(waterSourceP3ds)) then {REFILL_WATER_INFINITE} else {REFILL_WATER_DISABLED};
     };
 };
 

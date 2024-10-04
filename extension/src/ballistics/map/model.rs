@@ -1,9 +1,10 @@
 #[derive(Debug)]
+#[allow(dead_code)]
 pub struct Map {
     heights: Vec<i64>,
     building_nums: Vec<i64>,
     surface_is_water: Vec<bool>,
-    size: u32,
+    size: u32, // unused
     grids: u32,
 }
 
@@ -56,6 +57,7 @@ impl Map {
         self.surface_is_water[index] = is_water;
     }
 
+    #[allow(dead_code)]
     #[must_use]
     pub const fn size(&self) -> u32 {
         self.size

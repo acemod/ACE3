@@ -110,6 +110,7 @@
             <Korean>이 수류탄은 굴릴 수 없습니다. %1(으)로 전환되었습니다.</Korean>
             <German>Granate kann nicht rollen, zu %1 gewechselt</German>
             <Italian>Granata non può rotolare, cambiato a %1</Italian>
+            <French>Grenade ne peut pas rouler, passé à %1</French>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_Name">
             <English>M84 Stun Grenade</English>

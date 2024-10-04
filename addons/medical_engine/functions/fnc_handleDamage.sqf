@@ -94,7 +94,7 @@ if (
         GET_NUMBER(_ammoCfg >> "explosive",0) > 0 ||
         {GET_NUMBER(_ammoCfg >> "indirectHit",0) > 0}
     }
-) exitwith {
+) exitWith {
     TRACE_5("Vehicle hit",_unit,_shooter,_instigator,_damage,_newDamage);
 
     _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
@@ -165,7 +165,11 @@ if (_context == 2) then {
     if (_environmentDamage) then {
         // Any collision with terrain/vehicle/object has a shooter
         // Check this first because burning can happen at any velocity
-        if !(isNull _shooter) then {
+        if (isNull _shooter) then {
+            // Anything else is almost guaranteed to be fire damage
+            _ammo = "fire";
+            TRACE_5("Fire Damage",_unit,_shooter,_instigator,_damage,_allDamages);
+        } else {
             /*
               If shooter != unit then they hit unit, otherwise it could be:
                - Unit hitting anything at speed
@@ -180,10 +184,6 @@ if (_context == 2) then {
                 _ammo = "collision";
                 TRACE_5("Collision",_unit,_shooter,_instigator,_damage,_allDamages);
             };
-        } else {
-            // Anything else is almost guaranteed to be fire damage
-            _ammo = "fire";
-            TRACE_5("Fire Damage",_unit,_shooter,_instigator,_damage,_allDamages);
         };
     };
 

@@ -41,3 +41,5 @@
 #define AE1_MAXRESERVE 4000000 // mmol
 #define AE2_MAXRESERVE   84000 // mmol
 #define AN_MAXRESERVE     2300 // mmol
+
+#define MAX_PERFORMANCE_FACTOR 10

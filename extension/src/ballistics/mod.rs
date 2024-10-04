@@ -13,7 +13,7 @@ use self::{
     drag::calculate_retard,
 };
 
-pub use self::{atmosphere::AtmosphereModel, drag::DragFunction, map::Map};
+pub use self::{atmosphere::AtmosphereModel, drag::DragFunction};
 
 #[derive(Debug)]
 pub enum BallisticModel {
