@@ -116,18 +116,21 @@
             <Korean>디버그</Korean>
             <Japanese>デバッグ</Japanese>
             <Russian>Отладка</Russian>
+            <Italian>Debug</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_SpallIntensity">
             <English>Spalling Intensity</English>
             <Korean>파편 강도</Korean>
             <Japanese>スポーリング強度</Japanese>
             <Russian>Интенсивность обрушения</Russian>
+            <Italian>Intensità dello spalling</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_SpallIntensity_Desc">
             <English>Modifier to increase or decrease the number and intensity of spalling events. Increasing this value may cause performance degradation.</English>
             <Korean>파편 이벤트 수와 강도를 늘리거나 줄입니다. 이 값을 늘리면 성능이 저하될 수 있습니다.</Korean>
             <Japanese>スポーリング現象が発生する数と強度を増減することが出来ます。この値を大きくすることはパフォーマンスの低下につながる可能性があります。</Japanese>
             <Russian>Модификатор для увеличения или уменьшения количества и интенсивности событий обрушения. Увеличение этого значения может привести к ухудшению производительности.</Russian>
+            <Italian>Modificatore per il numero e intensità di spalling simulato, ovvero la frammentazione interna ad un veicolo colpito. Valori alti possono causare una degradazione della performance.</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>Frag/Spall Debug Tracing</English>
@@ -135,6 +138,7 @@
             <Japanese>フラグとスポールの追跡デバッグ</Japanese>
             <Korean>파열/파편 디버그 추적</Korean>
             <Russian>Отладка трассировки фрагментации/осколков</Russian>
+            <Italian>Traccia Frag/Spall per Debug</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
             <English>Enables visual tracing of fragmentation and spalling rounds.</English>
@@ -142,24 +146,28 @@
             <Korean>파열과 파편의 시각적 추적을 활성화합니다.</Korean>
             <Japanese>フラグメンテーションとスポーリングによって発生した破片飛翔体の動きを視覚的に追跡できる機能を有効化します。</Japanese>
             <Russian>Включает визуальную трассировку фрагментации и осколочных снарядов.</Russian>
+            <Italian>Abilita il tracciamento visivo di effetti di frammentazione e spalling.</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_HitSphereEnable">
             <English>Draw Event Spheres</English>
             <Korean>이벤트 구체 그리기</Korean>
             <Japanese>イベントを球体として描画</Japanese>
             <Russian>Изобразить сферы событий</Russian>
+            <Italian>Visualizza sfere eventi</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_HitSphereEnable_Desc">
             <English>Draw color coded spheres at any event for tracked rounds.</English>
             <Korean>모든 이벤트에서 추적된 파편을 위한 색상으로 구분하는 구체를 그립니다.</Korean>
             <Japanese>追跡中の飛翔体に発生した全てのイベントを色付けた球体として描画します。</Japanese>
             <Russian>Изобразить цветные сферы на любом событии для отслеживаемых раундов.</Russian>
+            <Italian>Visualizza sfere colorate su ogni evento di un frammento tracciato.</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox">
             <English>Draw Hitboxes</English>
             <Korean>히트박스 그리기</Korean>
             <Japanese>ヒットボックスを描画</Japanese>
             <Russian>Изобразить хитбоксы</Russian>
+            <Italian>Visualizza hitbox</Italian>
         </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox_Desc">
             <English>Draw hitboxes on objects that were targeted.</English>
@@ -167,6 +175,7 @@
             <Japanese>被弾した物体のヒットボックスを描画します。</Japanese>
             <Korean>타겟팅된 오브젝트에 히트박스를 그립니다.</Korean>
             <Russian>Изобразить хитбоксы на объектах, которые были нацелены.</Russian>
+            <Italian>Visualizza hitbox su potenziali bersagli della frammentazione.</Italian>
         </Key>
     </Package>
 </Project>
