@@ -53,6 +53,8 @@ Saving loadouts from the default and public tabs will save them in your profile,
 
 All loadouts can be loaded, however items not available or missing, will NOT be added. This limitation applies to all tabs as well as imported loadouts.
 
+In the case of a stored loadout's uniform, vest or backpack not being available or missing, loading it will retain the currently equipped uniform/vest/backpack and attempt to fill it with the stored one's content that is available in the arsenal.
+
 The color coding for loadouts is as follows:
 - White: All items are available and will be loaded.
 - Grey: Some items in that loadout are not available in that box.
