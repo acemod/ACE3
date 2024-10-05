@@ -34,6 +34,20 @@ private _extendedLoadout = switch (GVAR(currentLoadoutsTab)) do {
     };
 };
 
+// Keep current loadout containers if those being loaded are not present or unavailable
+private _uniform = _extendedLoadout select 0 select 3;
+if (_uniform select 0 == "") then {
+    _uniform set [0, uniform GVAR(center)];
+};
+private _vest = _extendedLoadout select 0 select 4;
+if (_vest select 0 == "") then {
+    _vest set [0, vest GVAR(center)];
+};
+private _backpack = _extendedLoadout select 0 select 5;
+if (_backpack select 0 == "") then {
+    _backpack set [0, backpack GVAR(center)];
+};
+
 // Apply loadout to unit
 [GVAR(center), _extendedLoadout, true] call CBA_fnc_setLoadout;
 
