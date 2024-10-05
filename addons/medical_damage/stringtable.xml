@@ -843,5 +843,17 @@
             <Korean>치명상으로 인해 사망할 확률을 정합니다.</Korean>
             <Portuguese>A chance de morrer para um ferimento fatal.</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_DisplayName">
+            <English>Use Limb Damage</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_Description">
+            <English>Controls whether limb damage is taken into account for fatality and unconsciousness calculations.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_DisplayName">
+            <English>Limb Damage Threshold</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_Description">
+            <English>Sets the amount of damage a limb can receive before going critical (leading to unconsciousness, or death if "Sum of Trauma" is enabled).\nDoes nothing if the "Use Limb Damage" setting is disabled.</English>
+        </Key>
     </Package>
 </Project>

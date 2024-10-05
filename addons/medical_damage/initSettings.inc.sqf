@@ -2,7 +2,7 @@
     QEGVAR(medical,fatalDamageSource),
     "LIST",
     [LSTRING(fatalDamageSource_DisplayName), LSTRING(fatalDamageSource_Description)],
-    [ELSTRING(medical,Category)],
+    ELSTRING(medical,Category),
     [[0, 1, 2], [LSTRING(fatalDamageSource_vitalShotsOnly), LSTRING(fatalDamageSource_trauma), LSTRING(fatalDamageSource_both)], 2],
     true
 ] call CBA_fnc_addSetting;
@@ -22,6 +22,24 @@
     [LSTRING(AIDamageThreshold_DisplayName), LSTRING(AIDamageThreshold_Description)],
     ELSTRING(medical,Category),
     [0, 25, 1, 2],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QEGVAR(medical,useLimbDamage),
+    "LIST",
+    [LSTRING(useLimbDamage_DisplayName), LSTRING(useLimbDamage_Description)],
+    ELSTRING(medical,Category),
+    [[0, 1, 2], [ELSTRING(common,Never), ELSTRING(common,aiOnly), ELSTRING(common,playersAndAI)], 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QEGVAR(medical,limbDamageThreshold),
+    "SLIDER",
+    [LSTRING(limbDamageThreshold_DisplayName), LSTRING(limbDamageThreshold_Description)],
+    ELSTRING(medical,Category),
+    [0, 25, 5, 2],
     true
 ] call CBA_fnc_addSetting;
 
