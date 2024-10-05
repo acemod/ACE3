@@ -52,7 +52,7 @@ private _ammo = "";
     _x params ["_magazine", "_count"];
 
     if (_count > 0 && {!(_magazine call FUNC(isMagazineFlare))}) then {
-        _ammoToDetonate pushBack [_magazine, _count, false];
+        _ammoToDetonate pushBack [_magazine, _count, random 1 < 0.5];
         _totalAmmo = _totalAmmo + _count;
     };
 } forEach (magazinesAmmoCargo _object);

@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL
- * Shows dogtag.
+ * Shows dog tag.
  *
  * Arguments:
- * 0: Dogtag data <ARRAY>
+ * 0: Dog tag data <ARRAY>
  * 1: Display as double tag <BOOLEAN>
  *
  * Return Value:
@@ -27,8 +27,10 @@ if (_doubleTags) then {
 } else {
     (QGVAR(tag) call BIS_fnc_rscLayer) cutRsc [QGVAR(singleTag), "PLAIN", 1, true];
 };
-private _display = uiNamespace getvariable [QGVAR(tag), displayNull];
-if(isNull _display) exitWith {};
+
+private _display = uiNamespace getVariable [QGVAR(tag), displayNull];
+
+if (isNull _display) exitWith {};
 
 private _control = _display displayCtrl 1001;
 _dogtagData params ["_name", "_code", "_bloodType"];

@@ -13,6 +13,7 @@ PREP(showMouseHint);
 PREP(hideMouseHint);
 
 // interaction with units
+PREP(addSquadChildren);
 PREP(canInteractWithCivilian);
 PREP(canInteractWithVehicleCrew);
 PREP(getDown);
@@ -54,4 +55,5 @@ PREP(push);
 
 // misc
 PREP(canFlip);
+PREP(initAnimActions);
 PREP(replaceTerrainObject);

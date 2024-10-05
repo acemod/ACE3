@@ -3,22 +3,22 @@ class CfgMagazines {
     // ACE Explosives
     class ATMine_Range_Mag;
     class rhssaf_mine_mrud_a_mag: ATMine_Range_Mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhssaf_mine_mrud_a);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhssaf_mine_mrud_a);
         class ACE_Triggers {
             SupportedTriggers[] = {"Tripwire"};
         };
     };
 
     class rhssaf_mine_mrud_b_mag: rhssaf_mine_mrud_a_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhssaf_mine_mrud_b);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhssaf_mine_mrud_b);
     };
 
     class rhssaf_mine_mrud_c_mag: rhssaf_mine_mrud_a_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhssaf_mine_mrud_c);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhssaf_mine_mrud_c);
     };
 
     class rhssaf_mine_mrud_d_mag: rhssaf_mine_mrud_a_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhssaf_mine_mrud_d);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhssaf_mine_mrud_d);
         class ACE_Triggers {
             SupportedTriggers[] = {"Command", "MK16_Transmitter"};
             class Command {
@@ -29,7 +29,7 @@ class CfgMagazines {
     };
 
     class rhssaf_mine_pma3_mag: ATMine_Range_Mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhssaf_mine_pma3);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhssaf_mine_pma3);
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -39,7 +39,7 @@ class CfgMagazines {
     };
 
     class rhssaf_mine_tma4_mag: ATMine_Range_Mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhssaf_mine_tma4);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhssaf_mine_tma4);
         class ACE_Triggers {
             SupportedTriggers[] = {"PressurePlate"};
             class PressurePlate {
@@ -51,9 +51,8 @@ class CfgMagazines {
     class CA_Magazine;
     class rhssaf_tm100_mag: CA_Magazine {
         useAction = 0;
-        EGVAR(explosives,DelayTime) = 1;
-        EGVAR(explosives,Placeable) = 1;
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhssaf_tm100);
+        EGVAR(explosives,placeable) = 1;
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhssaf_tm100);
         class ACE_Triggers {
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter"};
             class Timer {
@@ -67,10 +66,10 @@ class CfgMagazines {
     };
 
     class rhssaf_tm200_mag: rhssaf_tm100_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhssaf_tm200);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhssaf_tm200);
     };
 
     class rhssaf_tm500_mag: rhssaf_tm100_mag {
-        EGVAR(explosives,SetupObject) = QEGVAR(explosives,Place_rhssaf_tm500);
+        EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_rhssaf_tm500);
     };
 };

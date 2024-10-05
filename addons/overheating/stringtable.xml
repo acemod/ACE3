@@ -58,6 +58,7 @@
             <Chinesesimp>过热系数</Chinesesimp>
             <Korean>과열 계수</Korean>
             <Spanish>Coeficiente de calentamiento</Spanish>
+            <Portuguese>Coeficiente de aquecimento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_heatCoef_description">
             <English>Coefficient for the amount of heat a weapon generates per shot.\nHigher value increases heat.</English>
@@ -70,6 +71,7 @@
             <Chinesesimp>武器每次射击产生的热量系数。\n数值越高，热量越高。</Chinesesimp>
             <Korean>매 발사마다 만들어지는 열에 계수를 적용합니다.\n높은 계수는 더 많은 열을 발생시킵니다.</Korean>
             <Spanish>Coeficiente para la cantidad de calor que genera un arma por disparo.\nValores más altos incrementan el calor</Spanish>
+            <Portuguese>Coeficiente da quantidade de calor que um armamento gera por disparo.\nValores mais altos potencializam o aquecimento.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_coolingCoef_displayName">
             <English>Cooling Coefficient</English>
@@ -82,6 +84,7 @@
             <Russian>Коэф. остывания</Russian>
             <Spanish>Coeficiente de enfriado</Spanish>
             <French>Coefficient de refroidissement</French>
+            <Portuguese>Coeficiente de resfriamento</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_coolingCoef_description">
             <English>Coefficient for how quickly a weapon cools down.\nHigher value increases cooling speed.</English>
@@ -94,6 +97,7 @@
             <Russian>Коэффициент скорости остывания орудия.\nЧем больше значение, тем быстрее остывает.</Russian>
             <Spanish>Coeficiente para cómo de rápido se enfría un arma.\nValores más altos incrementan la velocidad de enfriamiento.</Spanish>
             <French>Coefficient de rapidité de refroidissement de l'arme.\nUne valeur élevée augmente la vitesse de refroidissement.</French>
+            <Portuguese>Coeficiente que determina o quão rápido a arma resfria.\nValores mais altos potencializam o resfriamento.</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_displayName">
             <English>Suppressor Coefficient</English>
@@ -106,6 +110,7 @@
             <Russian>Коэф. глушителя</Russian>
             <Spanish>Coeficiente del silenciador</Spanish>
             <French>Coefficient de suppresion</French>
+            <Portuguese>Coeficiente de supressão</Portuguese>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_description">
             <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>

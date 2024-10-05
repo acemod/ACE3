@@ -7,6 +7,7 @@
             <Korean>이오텍 MRDS (카키)</Korean>
             <German>EOTech MRDS (Khaki)</German>
             <Italian>EOTech MRDS (Cachi)</Italian>
+            <French>EOTech MRDS (Khaki)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_mrd_tan_Name">
             <English>EOTech MRDS (Tan)</English>
@@ -14,6 +15,7 @@
             <Korean>이오텍 MRDS (황갈)</Korean>
             <German>EOTech MRDS (Hellbraun)</German>
             <Italian>EOTech MRDS (Marroncino)</Italian>
+            <French>EOTech MRDS (Marron)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_desert_Name">
             <English>C-More Railway (Green, Desert)</English>
@@ -21,6 +23,7 @@
             <Korean>씨모어 레일웨이 (녹색, 사막)</Korean>
             <German>C-More Railway (Grün, Wüste)</German>
             <Italian>C-More Railway (Verde, Deserto)</Italian>
+            <French>C-More Railway (Vert, Désert)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_wood_Name">
             <English>C-More Railway (Green, Woodland)</English>
@@ -28,6 +31,7 @@
             <Korean>씨모어 레일웨이 (녹색, 수풀 위장)</Korean>
             <German>C-More Railway (Grün, Grünes Tarnmuster)</German>
             <Italian>C-More Railway (Verde, Boschivo)</Italian>
+            <French>C-More Railway (Vert, Woodland)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_desert_Name">
             <English>C-More Railway (Red, Desert)</English>
@@ -35,6 +39,7 @@
             <Korean>씨모어 레일웨이 (빨강, 사막)</Korean>
             <German>C-More Railway (Rot, Wüste)</German>
             <Italian>C-More Railway (Rosso, Desert)</Italian>
+            <French>C-More Railway (Rouge, Désert)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_wood_Name">
             <English>C-More Railway (Red, Woodland)</English>
@@ -42,6 +47,7 @@
             <Korean>씨모어 레일웨이 (빨강, 수풀)</Korean>
             <German>C-More Railway (Rot, Grünes Tarnmuster)</German>
             <Italian>C-More Railway (Rosso, Boschivo)</Italian>
+            <French>C-More Railway (Rouge, Woodland)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_rds_Name">
             <English>Aimpoint Micro R-1</English>
@@ -49,6 +55,7 @@
             <Korean>에임포인트 마이크로 R-1</Korean>
             <German>Aimpoint Micro R-1</German>
             <Italian>Aimpoint Micro R-1</Italian>
+            <French>Aimpoint Micro R-1</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_Name">
             <English>Vortex Spitfire Prism</English>
@@ -56,6 +63,7 @@
             <Korean>버텍스 스핏파이어 프리즘</Korean>
             <German>Vortex Spitfire Prism</German>
             <Italian>Vortex Spitfire Prism</Italian>
+            <French>Vortex Spitfire Prism</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_tan_Name">
             <English>Vortex Spitfire Prism (Tan)</English>
@@ -63,6 +71,7 @@
             <Korean>버텍스 스핏파이어 프리즘 (황갈)</Korean>
             <German>Vortex Spitfire Prism (Hellbraun)</German>
             <Italian>Vortex Spitfire Prism (Marroncino)</Italian>
+            <French>Vortex Spitfire Prism (Marron)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_khk_Name">
             <English>Vortex Spitfire Prism (Khaki)</English>
@@ -70,6 +79,7 @@
             <Korean>버텍스 스핏파이어 프리즘 (카키)</Korean>
             <German>Vortex Spitfire Prism (Khaki)</German>
             <Italian>Vortex Spitfire Prism (Cachi)</Italian>
+            <French>Vortex Spitfire Prism (Khaki)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_pistol_Name">
             <English>Vortex Spitfire Prism (Pistol)</English>
@@ -77,6 +87,7 @@
             <Korean>버텍스 스핏파이어 프리즘 (권총용)</Korean>
             <German>Vortex Spitfire Prism (Pistole)</German>
             <Italian>Vortex Spitfire Prism (Pistola)</Italian>
+            <French>Vortex Spitfire Prism (Pistol)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_Name">
             <English>Glock 19X</English>
@@ -84,6 +95,7 @@
             <Korean>글록 19X</Korean>
             <German>Glock 19X</German>
             <Italian>Glock 19X</Italian>
+            <French>Glock 19X</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_khk_Name">
             <English>Glock 19X (Khaki)</English>
@@ -91,6 +103,7 @@
             <Korean>글록 19X (카키)</Korean>
             <German>Glock 19X (Khaki)</German>
             <Italian>Glock 19X (Cachi)</Italian>
+            <French>Glock 19X (Khaki)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_tan_Name">
             <English>Glock 19X (Tan)</English>
@@ -98,6 +111,7 @@
             <Korean>글록 19X (황갈)</Korean>
             <German>Glock 19X (Hellbraun)</German>
             <Italian>Glock 19X (Marroncino)</Italian>
+            <French>Glock 19X (Marron)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_Name">
             <English>Glock 19X Auto</English>
@@ -105,6 +119,7 @@
             <Korean>글록 19X 기관권총</Korean>
             <German>Glock 19X Auto</German>
             <Italian>Glock 19X Auto</Italian>
+            <French>Glock 19X Auto</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_khk_Name">
             <English>Glock 19X Auto (Khaki)</English>
@@ -112,6 +127,7 @@
             <Korean>글록 19X 기관권총 (카키)</Korean>
             <German>Glock 19X Auto (Khaki)</German>
             <Italian>Glock 19X Auto (Cachi)</Italian>
+            <French>Glock 19X Auto (Khaki)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_tan_Name">
             <English>Glock 19X Auto (Tan)</English>
@@ -119,6 +135,7 @@
             <Korean>글록 19X 기관권총 (황갈)</Korean>
             <German>Glock 19X Auto (Hellbraun)</German>
             <Italian>Glock 19X Auto (Marroncino)</Italian>
+            <French>Glock 19X Auto (Marron)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_Name">
             <English>Desert Eagle Mark XIX L5</English>
@@ -126,6 +143,7 @@
             <Korean>데저트 이글 마크 XIX L5</Korean>
             <German>Desert Eagle Mark XIX L5</German>
             <Italian>Desert Eagle Mark XIX L5</Italian>
+            <French>Desert Eagle Mark XIX L5</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_classic_Name">
             <English>Desert Eagle Mark XIX L5 (Classic)</English>
@@ -133,6 +151,7 @@
             <Korean>데저트 이글 마크 XIX L5 (클래식)</Korean>
             <German>Desert Eagle Mark XIX L5 (Klassisch)</German>
             <Italian>Desert Eagle Mark XIX L5 (Classico)</Italian>
+            <French>Desert Eagle Mark XIX L5 (Classique)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_bronze_Name">
             <English>Desert Eagle Mark XIX L5 (Bronze)</English>
@@ -140,6 +159,7 @@
             <Korean>데저트 이글 마크 XIX L5 (브론즈)</Korean>
             <German>Desert Eagle Mark XIX L5 (Bronze)</German>
             <Italian>Desert Eagle Mark XIX L5 (Bronzo)</Italian>
+            <French>Desert Eagle Mark XIX L5 (Bronze)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_copper_Name">
             <English>Desert Eagle Mark XIX L5 (Copper)</English>
@@ -147,6 +167,7 @@
             <Korean>데저트 이글 마크 XIX L5 (구리)</Korean>
             <German>Desert Eagle Mark XIX L5 (Kupfer)</German>
             <Italian>Desert Eagle Mark XIX L5 (Rame)</Italian>
+            <French>Desert Eagle Mark XIX L5 (Cuivre)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_gold_Name">
             <English>Desert Eagle Mark XIX L5 (Gold)</English>
@@ -154,6 +175,7 @@
             <Korean>데저트 이글 마크 XIX L5 (금색)</Korean>
             <German>Desert Eagle Mark XIX L5 (Gold)</German>
             <Italian>Desert Eagle Mark XIX L5 (Oro)</Italian>
+            <French>Desert Eagle Mark XIX L5 (Or)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_tan_Name">
             <English>HERA H6 (Tan)</English>
@@ -161,6 +183,7 @@
             <Korean>헤라 H6 (황갈)</Korean>
             <German>HERA H6 (Hellbraun)</German>
             <Italian>HERA H6 (Marroncino)</Italian>
+            <French>HERA H6 (Marron)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_oli_Name">
             <English>HERA H6 (Olive)</English>
@@ -168,6 +191,7 @@
             <Korean>헤라 H6 (올리브)</Korean>
             <German>HERA H6 (Olivgrün)</German>
             <Italian>HERA H6 (Oliva)</Italian>
+            <French>HERA H6 (Olive)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_blk_Name">
             <English>HERA H6 (Black)</English>
@@ -175,6 +199,7 @@
             <Korean>헤라 H6 (검정)</Korean>
             <German>HERA H6 (Schwarz)</German>
             <Italian>HERA H6 (Nero)</Italian>
+            <French>HERA H6 (Noir)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_digi_Name">
             <English>HERA H6 (Digital)</English>
@@ -182,6 +207,7 @@
             <Korean>헤라 H6 (AAF 디지털)</Korean>
             <German>HERA H6 (Digital)</German>
             <Italian>HERA H6 (Digitale)</Italian>
+            <French>HERA H6 (Digital)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_gold_Name">
             <English>HERA H6 (Gold)</English>
@@ -189,6 +215,7 @@
             <Korean>헤라 H6 (금색)</Korean>
             <German>HERA H6 (Gold)</German>
             <Italian>HERA H6 (Oro)</Italian>
+            <French>HERA H6 (Or)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_dmr_01_black_Name">
             <English>VS-121 (Black)</English>
@@ -196,6 +223,7 @@
             <Korean>VS-121 (검정)</Korean>
             <German>VS-121 (Schwarz)</German>
             <Italian>VS-121 (Nero)</Italian>
+            <French>VS-121 (Noir)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_dmr_01_tan_Name">
             <English>VS-121 (Tan)</English>
@@ -203,6 +231,7 @@
             <Korean>VS-121 (황갈)</Korean>
             <German>VS-121 (Hellbraun)</German>
             <Italian>VS-121 (Marroncino)</Italian>
+            <French>VS-121 (Marron)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_smg_01_black_Name">
             <English>Vector SMG (Black)</English>
@@ -210,6 +239,7 @@
             <Korean>벡터 SMG (검정)</Korean>
             <German>Vector SMG (Schwarz)</German>
             <Italian>Vector SMG (Nero)</Italian>
+            <French>Vector SMG (Noir)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_blk_Name">
             <English>ASh-12 (Black)</English>
@@ -217,6 +247,7 @@
             <Korean>ASh-12 (검정)</Korean>
             <German>ASh-12 (Schwarz)</German>
             <Italian>ASh-12 (Nero)</Italian>
+            <French>ASh-12 (Noir)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_desert_Name">
             <English>ASh-12 (Desert)</English>
@@ -224,6 +255,7 @@
             <Korean>ASh-12 (사막)</Korean>
             <German>ASh-12 (Wüste)</German>
             <Italian>ASh-12 (Deserto)</Italian>
+            <French>ASh-12 (Désert )</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_urban_Name">
             <English>ASh-12 (Urban)</English>
@@ -231,6 +263,7 @@
             <Korean>ASh-12 (도심)</Korean>
             <German>ASh-12 (Urban)</German>
             <Italian>ASh-12 (Urbano)</Italian>
+            <French>ASh-12 (Urbain)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_wood_Name">
             <English>ASh-12 (Woodland)</English>
@@ -238,6 +271,7 @@
             <Korean>ASh-12 (수풀)</Korean>
             <German>ASh-12 (Grünes Tarnmuster)</German>
             <Italian>ASh-12 (Boschivo)</Italian>
+            <French>ASh-12 (Woodland)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_blk_Name">
             <English>ASh-12 GL (Black)</English>
@@ -245,6 +279,7 @@
             <Korean>ASh-12 GL (검정)</Korean>
             <German>ASh-12 GL (Schwarz)</German>
             <Italian>ASh-12 GL (Nero)</Italian>
+            <French>ASh-12 GL (Noir)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_desert_Name">
             <English>ASh-12 GL (Desert)</English>
@@ -252,6 +287,7 @@
             <Korean>ASh-12 GL (사막)</Korean>
             <German>ASh-12 GL (Wüste)</German>
             <Italian>ASh-12 GL (Deserto)</Italian>
+            <French>ASh-12 GL (Désert)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_urban_Name">
             <English>ASh-12 GL (Urban)</English>
@@ -259,6 +295,7 @@
             <Korean>ASh-12 GL (도심)</Korean>
             <German>ASh-12 GL (Urban)</German>
             <Italian>ASh-12 GL (Urbano)</Italian>
+            <French>ASh-12 GL (Urbain)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_wood_Name">
             <English>ASh-12 GL (Woodland)</English>
@@ -266,6 +303,7 @@
             <Korean>ASh-12 GL (수풀)</Korean>
             <German>ASh-12 GL (Grünes Tarnmuster)</German>
             <Italian>ASh-12 GL (Boschivo)</Italian>
+            <French>ASh-12 GL (Woodland)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_blk_Name">
             <English>ASh-12 LR (Black)</English>
@@ -273,6 +311,7 @@
             <Korean>ASh-12 LR (검정)</Korean>
             <German>ASh-12 LR (Schwarz)</German>
             <Italian>ASh-12 LR (Nero)</Italian>
+            <French>ASh-12 LR (Noir)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_desert_Name">
             <English>ASh-12 LR (Desert)</English>
@@ -280,6 +319,7 @@
             <Korean>ASh-12 LR (사막)</Korean>
             <German>ASh-12 LR (Wüste)</German>
             <Italian>ASh-12 LR (Deserto)</Italian>
+            <French>ASh-12 LR (Désert)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_urban_Name">
             <English>ASh-12 LR (Urban)</English>
@@ -287,6 +327,7 @@
             <Korean>ASh-12 LR (도심)</Korean>
             <German>ASh-12 LR (Urban)</German>
             <Italian>ASh-12 LR (Urbano)</Italian>
+            <French>ASh-12 LR (Urbain)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_wood_Name">
             <English>ASh-12 LR (Woodland)</English>
@@ -294,6 +335,7 @@
             <Korean>ASh-12 LR (수풀)</Korean>
             <German>ASh-12 LR (Grünes Tarnmuster)</German>
             <Italian>ASh-12 LR (Boschivo)</Italian>
+            <French>ASh-12 LR (Woodland)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_Name">
             <English>AW159 Wildcat ASW</English>
@@ -301,6 +343,7 @@
             <Korean>AW159 와일드캣 ASW</Korean>
             <German>AW159 Wildcat ASW</German>
             <Italian>AW159 Wildcat ASW</Italian>
+            <French>AW159 Wildcat ASW</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_unarmed_Name">
             <English>AW159 Wildcat ASW (Unarmed)</English>
@@ -308,6 +351,7 @@
             <Korean>AW159 와일드캣 ASW (비무장)</Korean>
             <German>AW159 Wildcat ASW (Unbewaffnet)</German>
             <Italian>AW159 Wildcat ASW (Disarmato)</Italian>
+            <French>AW159 Wildcat ASW (non armé)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_base_Name">
             <English>H225 Super Puma (Transport)</English>
@@ -315,6 +359,7 @@
             <Korean>H225 슈퍼 퓨마 (비무장)</Korean>
             <German>H225 Super Puma (Transport)</German>
             <Italian>H225 Super Puma (Trasporto)</Italian>
+            <French>H225 Super Puma (Transport )</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_civ_base_Name">
             <English>H225 Super Puma (Civilian)</English>
@@ -322,6 +367,7 @@
             <Korean>H225 슈퍼 퓨마 (비무장)</Korean>
             <German>H225 Super Puma (Zivil)</German>
             <Italian>H225 Super Puma (Civile)</Italian>
+            <French>H225 Super Puma (Civil)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_base_Name">
             <English>H215 Super Puma (Transport)</English>
@@ -329,6 +375,7 @@
             <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
             <German>H215 Super Puma (Transport)</German>
             <Italian>H215 Super Puma (Trasporto)</Italian>
+            <French>H215 Super Puma (Transport)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_civ_base_Name">
             <English>H215 Super Puma (Civilian)</English>
@@ -336,6 +383,7 @@
             <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
             <German>H215 Super Puma (Zivil)</German>
             <Italian>H215 Super Puma (Civile)</Italian>
+            <French>H215 Super Puma (Civil)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_military_base_Name">
             <English>H215 Super Puma (Unarmed)</English>
@@ -343,6 +391,7 @@
             <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
             <German>H215 Super Puma (Unbewaffnet)</German>
             <Italian>H215 Super Puma (Disarmato)</Italian>
+            <French>H215 Super Puma (non armé)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_base_Name">
             <English>H225M Super Cougar SOCAT</English>
@@ -350,6 +399,7 @@
             <Korean>H225M 슈퍼 쿠거 SOCAT</Korean>
             <German>H225M Super Cougar SOCAT</German>
             <Italian>H225M Super Cougar SOCAT</Italian>
+            <French>H225M Super Cougar SOCAT</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_nato_Name">
             <English>H225M Super Cougar SOCAT</English>
@@ -357,6 +407,7 @@
             <Korean>H225M 슈퍼 쿠거 SOCAT</Korean>
             <German>H225M Super Cougar SOCAT</German>
             <Italian>H225M Super Cougar SOCAT</Italian>
+            <French>H225M Super Cougar SOCAT</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_03_base_Name">
             <English>H225M Super Cougar</English>
@@ -364,6 +415,7 @@
             <Korean>H225M 슈퍼 쿠거</Korean>
             <German>H225M Super Cougar</German>
             <Italian>H225M Super Cougar</Italian>
+            <French>H225M Super Cougar</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_base_Name">
             <English>H225 Super Puma SAR</English>
@@ -371,6 +423,7 @@
             <Korean>H225 슈퍼 퓨마 SAR</Korean>
             <German>H225 Super Puma SAR</German>
             <Italian>H225 Super Puma SAR</Italian>
+            <French>H225 Super Puma SAR</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_military_base_Name">
             <English>H225M Super Cougar (Unarmed)</English>
@@ -378,6 +431,7 @@
             <German>H225M Super Cougar (Unbewaffnet)</German>
             <Italian>H225M Super Cougar (Disarmato)</Italian>
             <Korean>H225M 슈퍼 쿠거 (비무장)</Korean>
+            <French>H225M Super Cougar (Non armé)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_01_water_Name">
             <English>HEMTT Fire Truck</English>
@@ -398,6 +452,7 @@
             <Korean>타이푼 급수</Korean>
             <German>Typhoon Water</German>
             <Italian>Typhoon Acqua</Italian>
+            <French>Typhoon Water</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_Name">
             <English>Ram 1500</English>
@@ -405,6 +460,7 @@
             <Korean>램 1500</Korean>
             <German>Ram 1500</German>
             <Italian>Ram 1500</Italian>
+            <French>Ram 1500</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_Fuel_Name">
             <English>Ram 1500 (Fuel)</English>
@@ -412,6 +468,7 @@
             <Korean>램 1500 (연료)</Korean>
             <German>Ram 1500 (Treibstoff)</German>
             <Italian>Ram 1500 (Carburante)</Italian>
+            <French>Ram 1500 (Carburant)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_service_Name">
             <English>Ram 1500 (Services)</English>
@@ -419,6 +476,7 @@
             <Korean>램 1500 (서비스)</Korean>
             <German>Ram 1500 (Pannenhilfe)</German>
             <Italian>Ram 1500 (Servizi)</Italian>
+            <French>Ram 1500 (Dépannage)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_repair_Name">
             <English>Ram 1500 (Repair)</English>
@@ -426,6 +484,7 @@
             <Korean>램 1500 (정비)</Korean>
             <German>Ram 1500 (Instandsetzung)</German>
             <Italian>Ram 1500 (Riparazioni)</Italian>
+            <French>Ram 1500 (Réparation)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_comms_Name">
             <English>Ram 1500 (Comms)</English>
@@ -433,6 +492,7 @@
             <Korean>램 1500 (통신)</Korean>
             <German>Ram 1500 (Kommunikation)</German>
             <Italian>Ram 1500 (Comunicazioni)</Italian>
+            <French>Ram 1500 (Communication)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_hmg_Name">
             <English>Ram 1500 (HMG)</English>
@@ -440,6 +500,7 @@
             <Korean>램 1500 (중기관총)</Korean>
             <German>Ram 1500 (HMG)</German>
             <Italian>Ram 1500 (HMG)</Italian>
+            <French>Ram 1500 (HMG)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mmg_Name">
             <English>Ram 1500 (MMG)</English>
@@ -447,6 +508,7 @@
             <Korean>램 1500 (중형기관총)</Korean>
             <German>Ram 1500 (MMG)</German>
             <Italian>Ram 1500 (MMG)</Italian>
+            <French>Ram 1500 (MMG)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mrl_Name">
             <English>Ram 1500 (MRL)</English>
@@ -454,6 +516,7 @@
             <Korean>램 1500 (다연장로켓)</Korean>
             <German>Ram 1500 (MRL)</German>
             <Italian>Ram 1500 (MRL)</Italian>
+            <French>Ram 1500 (MRL)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_aa_Name">
             <English>Ram 1500 (AA)</English>
@@ -461,6 +524,7 @@
             <Korean>램 1500 (대공)</Korean>
             <German>Ram 1500 (AA)</German>
             <Italian>Ram 1500 (AA)</Italian>
+            <French>Ram 1500 (AA)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_covered_Name">
             <English>Ram 1500 (Covered)</English>
@@ -468,6 +532,7 @@
             <Korean>램 1500 (커버)</Korean>
             <German>Ram 1500 (Abgedeckt)</German>
             <Italian>Ram 1500 (Coperto)</Italian>
+            <French>Ram 1500 (couvert)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_water_Name">
             <English>Ram 1500 (Water)</English>
@@ -475,6 +540,7 @@
             <Korean>램 1500 (급수)</Korean>
             <German>Ram 1500 (Wasser)</German>
             <Italian>Ram 1500 (Acqua)</Italian>
+            <French>Ram 1500 (eau)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_commando_Name">
             <English>RSG60</English>
@@ -482,6 +548,7 @@
             <Korean>RSG60</Korean>
             <German>RSG60</German>
             <Italian>RSG60</Italian>
+            <French>RSG60</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_twinmortar_Name">
             <English>AMOS Container</English>
@@ -489,6 +556,7 @@
             <Korean>AMOS 컨테이너</Korean>
             <German>AMOS Container</German>
             <Italian>AMOS Container</Italian>
+            <French>AMOS Container</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_base_Name">
             <English>Drone40</English>
@@ -496,6 +564,7 @@
             <Korean>드론40</Korean>
             <German>Drone40</German>
             <Italian>Drone40</Italian>
+            <French>Drone40</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_Name">
             <English>Drone40 Scout</English>
@@ -503,6 +572,7 @@
             <Korean>드론40 정찰</Korean>
             <German>Drone40 Scout</German>
             <Italian>Drone40 Scout</Italian>
+            <French>Drone40 Scout</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_he_Name">
             <English>Drone40 HE</English>
@@ -510,6 +580,7 @@
             <Korean>드론40 고폭</Korean>
             <German>Drone40 HE</German>
             <Italian>Drone40 HE</Italian>
+            <French>Drone40 HE</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_white_Name">
             <English>Drone40 Smoke (White)</English>
@@ -517,6 +588,7 @@
             <Korean>드론40 연막 (백색)</Korean>
             <German>Drone40 Smoke (Weiß)</German>
             <Italian>Drone40 Smoke (Bianco)</Italian>
+            <French>Drone40 Fumée (Blanc)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_blue_Name">
             <English>Drone40 Smoke (Blue)</English>
@@ -524,6 +596,7 @@
             <Korean>드론40 연막 (청색)</Korean>
             <German>Drone40 Smoke (Blau)</German>
             <Italian>Drone40 Smoke (Blu)</Italian>
+            <French>Drone40 Fumée (Bleu)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_red_Name">
             <English>Drone40 Smoke (Red)</English>
@@ -531,6 +604,7 @@
             <Korean>드론40 연막 (적색)</Korean>
             <German>Drone40 Smoke (Rot)</German>
             <Italian>Drone40 Smoke (Rosso)</Italian>
+            <French>Drone40 Fumée (Rouge)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_green_Name">
             <English>Drone40 Smoke (Green)</English>
@@ -538,6 +612,7 @@
             <Korean>드론40 연막 (녹색)</Korean>
             <German>Drone40 Smoke (Grün)</German>
             <Italian>Drone40 Smoke (Verde)</Italian>
+            <French>Drone40 Fumée (Vert)</French>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_orange_Name">
             <English>Drone40 Smoke (Orange)</English>
@@ -545,6 +620,7 @@
             <Korean>드론40 연막 (주황색)</Korean>
             <German>Drone40 Smoke (Orange)</German>
             <Italian>Drone40 Smoke (Arancione)</Italian>
+            <French>Drone40 Fumée (Orange)</French>
         </Key>
     </Package>
 </Project>

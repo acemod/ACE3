@@ -49,7 +49,7 @@ TRACE_1("Running treatmentMedicationLocal with Advanced configuration for",_pati
 
 
 // Handle tourniquet on body part blocking blood flow at injection site
-private _partIndex = ALL_BODY_PARTS find tolowerANSI _bodyPart;
+private _partIndex = ALL_BODY_PARTS find toLowerANSI _bodyPart;
 
 if (HAS_TOURNIQUET_APPLIED_ON(_patient,_partIndex)) exitWith {
     TRACE_1("unit has tourniquets blocking blood flow on injection site",_tourniquets);

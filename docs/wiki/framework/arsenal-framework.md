@@ -214,7 +214,7 @@ class ace_arsenal_stats {
         showBar = 1; // 0 disabled; 1 enabled;
         showText = 1; // 0 disabled; 1 enabled;
         barStatement = "1"; // Statement evaluated to set the bar progress, needs to return a NUMBER.
-        textStatement = "test entry"; // statement evaluated to set the text entry, can return anything.
+        textStatement = "test entry"; // statement evaluated to set the text entry, can return anything. Arrays will have a linebreak added after each element.
         condition = "true"; // Condition for the stats to be displayed, default is true if not defined, needs to return a BOOL.
         tabs[] = { {0,1,2}, { } }; // Arrays of tabs, left array is left tabs, right array is right tabs.
     };
@@ -587,4 +587,13 @@ TAG_my_arsenal_essentials = ["arifle_AK12_F", "LMG_03_F"];
 ["ace_arsenal_displayOpened", {
     [ace_arsenal_currentBox, TAG_my_arsenal_essentials] call ace_arsenal_fnc_addVirtualItems
 }] call CBA_fnc_addEventHandler;
+```
+
+### 10.4 Saving loadouts to profile
+A loadout can be saved to the player's profile using `ace_arsenal_fnc_saveLoadout`.
+
+```sqf
+private _loadout = [ACE_player] call CBA_fnc_getLoadout; // or getUnitLoadout ACE_player
+private _replaceExisting = true; // optional, default: false
+["Current Loadout", _loadout, _replaceExisting] call ace_arsenal_fnc_saveLoadout;
 ```
