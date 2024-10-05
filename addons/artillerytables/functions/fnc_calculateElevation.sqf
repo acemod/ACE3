@@ -32,7 +32,7 @@ params ["_targetDistance", "_targetHeight", "_muzzleVelocity", ["_highArc", true
 //MK6_82mm_AIR_FRICTION == -0.0001
 
 if (_airFriction != 0) then {
-    _muzzleVelocity = [_muzzleVelocity, _temperature, _atmosphericDensity] call FUNC(calculateMuzzleVelocity);
+    _muzzleVelocity = [_muzzleVelocity, _temperature, _airDensity] call FUNC(calculateMuzzleVelocity);
 };
 private _maxResults = [_muzzleVelocity, _airFriction] call FUNC(calculateMaxAngle);
 

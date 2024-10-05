@@ -155,6 +155,7 @@ private _for = if (_right) then {
     for "_i" from 0 to (lbSize _panel) - 1
 };
 
+//IGNORE_PRIVATE_WARNING ["_i"];
 _for do {
     // Get item
     _item = if (_right) then {

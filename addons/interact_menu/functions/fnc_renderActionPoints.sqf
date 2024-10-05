@@ -97,15 +97,15 @@ private _fnc_renderSelfActions = {
     // Iterate through base level class actions and render them if appropiate
     private _classActions = GVAR(ActSelfNamespace) get typeOf _target;
 
-    private _pos = if !(GVAR(useCursorMenu)) then {
+    private _pos = if (GVAR(useCursorMenu)) then {
+        [0.5, 0.5]
+    } else {
         //Convert to ASL, add offset and then convert back to AGL (handles waves when over water)
         ASLToAGL ((AGLToASL (positionCameraToWorld [0, 0, 0])) vectorAdd GVAR(selfMenuOffset));
-    } else {
-        [0.5, 0.5]
     };
 
     {
-        _action = _x;
+        private _action = _x;
         [_target, _action, _pos] call FUNC(renderBaseMenu);
     } forEach _classActions;
 };
@@ -123,10 +123,7 @@ GVAR(collectedActionPoints) resize 0;
 // Render nearby actions, unit self actions or vehicle self actions as appropiate
 if (GVAR(openedMenuType) == 0) then {
     if (isNull curatorCamera) then {
-        if !(isNull (ACE_controlledUAV select 0)) then {
-            // Render UAV self actions when in control of UAV AI
-            (ACE_controlledUAV select 0) call _fnc_renderSelfActions;
-        } else {
+        if (isNull (ACE_controlledUAV select 0)) then {
             if (vehicle ACE_player == ACE_player) then {
                 if (diag_tickTime > GVAR(lastTimeSearchedActions) + 0.20) then {
                     // Once every 0.2 secs, collect nearby objects active and visible action points and render them
@@ -139,6 +136,10 @@ if (GVAR(openedMenuType) == 0) then {
                 // Render vehicle self actions when in vehicle
                 (vehicle ACE_player) call _fnc_renderSelfActions;
             };
+        } else {
+            // Render UAV self actions when in control of UAV AI
+            (ACE_controlledUAV select 0) call _fnc_renderSelfActions;
+
         };
     } else {
         // Render zeus actions when zeus open

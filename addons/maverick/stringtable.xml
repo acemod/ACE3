@@ -6,7 +6,7 @@
                 <English>AGM-65 Maverick L, Laser Guided Anti-Ground-Missile</English>
                 <German>AGM-65 Maverick L, lasergelenkte Luft-Boden-Rakete</German>
                 <Italian>AGM-65 Maverick L, Missile Aria-Terra Laserguidato</Italian>
-                <Japanese>AGM-65 マーベリック L、レーザー誘導対地ミサイル</Japanese>
+                <Japanese>AGM-65 マーベリック L、 レーザー誘導対地ミサイル</Japanese>
                 <Chinese>AGM-65"小牛"飛彈L型，雷射導引對地導彈</Chinese>
                 <Chinesesimp>AGM-65"小牛"L型激光制导对地导弹</Chinesesimp>
                 <Korean>AGM-65 매버릭 L, 레이저 유도 대지 미사일</Korean>
@@ -82,10 +82,10 @@
             <Key ID="STR_ACE_Maverick_kh25ml_mag_descr">
                 <English>Kh-25ML, Laser Guided Air-to-Ground-Missile</English>
                 <German>Ch-25ML, Lasergelenkte Luft-Boden-Rakete</German>
-                <Korean>Kh-25ML, 레이저 유도 대공 미사일</Korean>
+                <Korean>Kh-25ML, 레이저 유도 공대지 미사일</Korean>
                 <Chinese>Kh-25ML，雷射導引對地導彈</Chinese>
                 <Chinesesimp>Kh-25ML，激光制导空地导弹</Chinesesimp>
-                <Japanese>Kh-25ML、レーザー誘導対地ミサイル</Japanese>
+                <Japanese>Kh-25ML、 レーザー誘導対地ミサイル</Japanese>
                 <Italian>Kh-25ML, Missile Aria-Terra Laserguidato</Italian>
                 <Polish>Kh-25ML, Kierowany laserowo pocisk powietrze-ziemia</Polish>
                 <Russian>Х-25МЛ, ракета Воздух-Земля с лазерным наведением</Russian>
@@ -115,36 +115,50 @@
                 <English>AGM-65 Maverick D</English>
                 <French>AGM-65 Maverick D</French>
                 <Russian>AGM-65 Maverick D</Russian>
+                <Japanese>AGM-65 マーベリック D</Japanese>
+                <Korean>AGM-65 매버릭 D</Korean>
             </Key>
             <Key ID="STR_ACE_Maverick_g">
                 <English>AGM-65 Maverick G</English>
                 <French>AGM-65 Maverick G</French>
                 <Russian>AGM-65 Maverick G</Russian>
+                <Japanese>AGM-65 マーベリック G</Japanese>
+                <Korean>AGM-65 매버릭 G</Korean>
             </Key>
             <Key ID="STR_ACE_Maverick_d_mag_x1">
                 <English>AGM-65 Maverick D [ACE]</English>
                 <French>AGM-65 Maverick D [ACE]</French>
                 <Russian>AGM-65 Maverick D [ACE]</Russian>
+                <Japanese>AGM-65 マーベリック D [ACE]</Japanese>
+                <Korean>AGM-65 매버릭 D [ACE]</Korean>
             </Key>
             <Key ID="STR_ACE_Maverick_d_mag_x3">
                 <English>3x AGM-65 Maverick D [ACE]</English>
                 <French>3x AGM-65 Maverick D [ACE]</French>
                 <Russian>3x AGM-65 Maverick D [ACE]</Russian>
+                <Japanese>3x AGM-65 マーベリック D [ACE]</Japanese>
+                <Korean>3x AGM-65 매버릭 D [ACE]</Korean>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x1">
                 <English>AGM-65 Maverick G [ACE]</English>
                 <French>AGM-65 Maverick G [ACE]</French>
                 <Russian>AGM-65 Maverick G [ACE]</Russian>
+                <Japanese>AGM-65 マーベリック G [ACE]</Japanese>
+                <Korean>AGM-65 매버릭 G [ACE]</Korean>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x2">
                 <English>2x AGM-65 Maverick G [ACE]</English>
                 <French>2x AGM-65 Maverick G [ACE]</French>
                 <Russian>2x AGM-65 Maverick G [ACE]</Russian>
+                <Japanese>2x AGM-65 マーベリック G [ACE]</Japanese>
+                <Korean>2x AGM-65 매버릭 G [ACE]</Korean>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x3">
                 <English>3x AGM-65 Maverick G [ACE]</English>
                 <French>3x AGM-65 Maverick G [ACE]</French>
                 <Russian>3x AGM-65 Maverick G [ACE]</Russian>
+                <Japanese>3x AGM-65 マーベリック G [ACE]</Japanese>
+                <Korean>3x AGM-65 매버릭 G [ACE]</Korean>
             </Key>
         </Container>
         <Container name="weapons">

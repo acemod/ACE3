@@ -58,6 +58,7 @@
 )
 
 #define MOVE_IN_CODE(command) (_this select 0) command (_this select 1)
+//IGNORE_PRIVATE_WARNING ["_player", "_target"];
 
 private _fnc_move = {
     (_this select 2) params ["_moveInCode", "_moveInParams", "_currentTurret", "_moveBackCode", "_moveBackParams"];
@@ -202,15 +203,15 @@ private _cargoNumber = -1;
                 if (_vehicle lockedTurret _turretPath) then {breakTo "crewLoop"};
                 if (_role == "gunner" && {unitIsUAV _vehicle}) then {breakTo "crewLoop"};
                 private _turretConfig = [_vehicleConfig, _turretPath] call CBA_fnc_getTurret;
-                if (!_isInVehicle) then {
-                    _params = ["GetInTurret", _vehicle, _turretPath];
-                    _statement = {_player action (_this select 2)};
-                } else {
+                if (_isInVehicle) then {
                     private _gunnerCompartments = (_turretConfig >> "gunnerCompartments") call BIS_fnc_getCfgData;
                     TO_COMPARTMENT_STRING(_gunnerCompartments);
                     if (_compartment != _gunnerCompartments) then {breakTo "crewLoop"};
                     _params = [{MOVE_IN_CODE(moveInTurret)}, [_vehicle, _turretPath], _currentTurret, _moveBackCode, _moveBackParams];
                     _statement = _fnc_move;
+                } else {
+                    _params = ["GetInTurret", _vehicle, _turretPath];
+                    _statement = {_player action (_this select 2)};
                 };
                 _name = getText (_turretConfig >> "gunnerName");
                 _icon = switch true do {

@@ -33,6 +33,7 @@ private _fnc_clearCurrentWeaponMags = {
 
     // If nothing was selected, remove all magazines from the current weapon
     if (_item != "") then {
+        //IGNORE_PRIVATE_WARNING ["_compatibleMags"];
         _compatibleMagsCurrentWeapon = _compatibleMagsCurrentWeapon - _compatibleMags;
     };
 

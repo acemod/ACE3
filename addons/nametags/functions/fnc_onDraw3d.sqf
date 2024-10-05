@@ -44,10 +44,10 @@ if (_enabledTagsCursor) then {
     private _target = cursorTarget;
     if !(_target isKindOf "CAManBase") then {
         // When cursorTarget is on a vehicle show the nametag for the commander.
-        if !(_target in allUnitsUAV) then {
-            _target = effectiveCommander _target;
-        } else {
+        if (_target in allUnitsUAV) then {
             _target = objNull;
+        } else {
+            _target = effectiveCommander _target;
         };
     };
     if (isNull _target) exitWith {};
@@ -78,6 +78,7 @@ if (_enabledTagsCursor) then {
 if (_enabledTagsNearby) then {
     // Find valid targets and cache them
     private _targets = [[], {
+        //IGNORE_PRIVATE_WARNING ["_camPosAGL", "_maxDistance"];
         private _nearMen = _camPosAGL nearObjects ["CAManBase", _maxDistance + 7];
         _nearMen = _nearMen select {
             _x != ACE_player &&

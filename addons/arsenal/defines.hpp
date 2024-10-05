@@ -154,6 +154,8 @@
 #define IDC_statsPreviousPage 52
 #define IDC_statsNextPage 53
 #define IDC_statsCurrentPage 54
+#define IDC_statsBoxTitleBackground 55
+#define IDC_statsBoxBackground 56
 #define IDC_actionsBox 90
 #define IDC_actionsBackground1 90010
 #define IDC_actionsBackground2 90011
@@ -432,7 +434,7 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
                 _ctrl ctrlCommit 0;\
             };\
             if (isNull (_display displayCtrl (61 + _plusId))) then {\
-                _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Button), 61 + _plusId];\
+                private _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Button), 61 + _plusId];\
                 _ctrl ctrlSetPosition [\
                     safeZoneW + safeZoneX - 10 * GRID_W,\
                     safeZoneY + (88 + (10 * _forEachIndex)) * GRID_H\
