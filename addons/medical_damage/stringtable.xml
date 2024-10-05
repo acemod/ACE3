@@ -843,10 +843,10 @@
             <Korean>치명상으로 인해 사망할 확률을 정합니다.</Korean>
             <Portuguese>A chance de morrer para um ferimento fatal.</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_DisplayName">
+        <Key ID="STR_ACE_Medical_Damage_uselimbDamage_DisplayName">
             <English>Use Limb Damage</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_Description">
+        <Key ID="STR_ACE_Medical_Damage_uselimbDamage_Description">
             <English>Controls whether limb damage is taken into account for fatality and unconsciousness calculations.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_DisplayName">
