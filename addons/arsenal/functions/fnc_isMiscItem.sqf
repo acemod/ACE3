@@ -4,7 +4,7 @@
  * Determines if a class is a miscellaneous item or not.
  *
  * Arguments:
- * 0: Item, or magazine <STRING>
+ * 0: Item or magazine <STRING>
  *
  * Return Value:
  * True if class is a misc item, otherwise false <BOOL>
