@@ -137,8 +137,8 @@ Examples:
 ACE Arsenal uses 2 existing config entries to sort and display items.
 
 - `baseWeapon`: Class name that is used to display an item in the arsenal, used for weapon/attachment variants that are not normally shown to the player (AI variants, PIP optics, and so on). This property can be applied to any weapon or weapon attachment in `CfgWeapons`. Items using CBA or RHS' Scripted Optics systems, or CBA Switchable Attachments do not need this property explictly set, and will automatically use their player-accessible class.
-- `ACE_isUnique`: Classes in `CfgMagazines` with this property set to `1` will be treated and shown by the Arsenal as Misc. Items. Used for items with attached data that needs to be kept track of, such as Notepads or Spare Barrels.
-- `ACE_asItem`: Classes in `CfgMagazines` with this property set to `1` will be treated and shown by the Arsenal as Items. Used for magazines that are not meant to be used in a weapon, such as Painkillers.
+- `ACE_isUnique`: Classes in `CfgWeapons` or `CfgMagazines` with this property set to `1` will be treated and shown by the Arsenal as Misc. Items. Used for items with attached data that needs to be kept track of, such as Notepads or Spare Barrels.
+- `ACE_asItem`: Classes in `CfgWeapons` or `CfgMagazines` with this property set to `1` will be treated and shown by the Arsenal as Items. Used for magazines that are not meant to be used in a weapon, such as Painkillers.
 
 ### 3.2 New config entries
 
