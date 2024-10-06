@@ -63,7 +63,7 @@ private _configItemInfo = "";
 _items = _items select {
     _configItemInfo = _cfgWeapons >> _x >> "ItemInfo";
 
-    _x call FUNC(isMiscItem) && {getNumber (_configItemInfo >> "type") in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD]} ||
+    getNumber (_configItemInfo >> "type") in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD] && {_x call FUNC(isMiscItem)} ||
     {getNumber (_configItemInfo >> "type") in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
     {getText (_cfgWeapons >> _x >> "simulation") == "ItemMineDetector"}
 };
