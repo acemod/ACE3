@@ -3,17 +3,3 @@ options.ignore = [
     "addPublicVariableEventHandler", # Alt syntax is broken, we are using main syntax
     "createSoundSource", # Greatly attenuated when in first person and in a vehicle
 ]
-
-[sqf.undefined]
-enabled = true
-options.check_oprhan_code = true
-
-[sqf.unused]
-enabled = false
-options.check_params = false
-
-[sqf.shadowed]
-enabled = false
-
-[sqf.not_private]
-enabled = true
