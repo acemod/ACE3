@@ -28,7 +28,7 @@ private _velocity = velocity ACE_player;
 private _normal = surfaceNormal (getPosWorld ACE_player);
 private _movementVector = vectorNormalized _velocity;
 private _fwdAngle = asin (_movementVector select 2);
-private _sideAngle = if ((getPosATL ACE_player) select 2 > 0.01) then { 
+private _sideAngle = if ((getPosATL ACE_player) select 2 > 0.01) then {
     0 // ignore terrain normal if not touching it
 } else {
     private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
@@ -78,7 +78,8 @@ if (isNull objectParent ACE_player && {_currentSpeed > 0.1} && {isTouchingGround
         };
     };
 
-    _currentWork = [_duty, _gearMass, _terrainGradient * GVAR(terrainGradientFactor), _terrainFactor, _currentSpeed] call FUNC(getMetabolicCosts);
+    // Add a scaling factor of 0.1 to reduce excessive stamina consumption on default settings (see #10361)
+    _currentWork = [_duty, _gearMass, _terrainGradient * GVAR(terrainGradientFactor) * 0.1, _terrainFactor, _currentSpeed] call FUNC(getMetabolicCosts);
     _currentWork = _currentWork max REE;
 };
 
