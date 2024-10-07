@@ -76,6 +76,6 @@
     "SLIDER",
     [LSTRING(TerrainGradientFactor), LSTRING(TerrainGradientFactor_Description)],
     LSTRING(DisplayName),
-    [0, 5, 0.1, 2],
+    [0, 5, 1, 2],
     1
 ] call CBA_fnc_addSetting;
