@@ -105,7 +105,7 @@ private _fnc_renderSelfActions = {
     };
 
     {
-        _action = _x;
+        private _action = _x;
         [_target, _action, _pos] call FUNC(renderBaseMenu);
     } forEach _classActions;
 };

@@ -25,7 +25,7 @@ TRACE_1("drawName:",_this);
 
 params ["", "_target", "", "_heightOffset"];
 
-_fnc_parameters = {
+private _fnc_parameters = {
     params ["_player", "_target", "_alpha", "_heightOffset", "_drawName", "_drawRank", "_drawSoundwave"];
 
     //Set Icon:

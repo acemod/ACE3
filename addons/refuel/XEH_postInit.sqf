@@ -66,6 +66,7 @@
 
     ["MouseButtonDown", LINKFUNC(onMouseButtonDown)] call CBA_fnc_addDisplayHandler;
 
+    //IGNORE_PRIVATE_WARNING ["_player", "_target"];
     GVAR(mainAction) = [
         QGVAR(Refuel),
         localize LSTRING(Refuel),

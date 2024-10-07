@@ -47,14 +47,14 @@ GVAR(outputPFH) = [{
     private _xGrid2 = floor (DAGR_WP_INFO / 10000);
     private _yGrid2 = DAGR_WP_INFO - _xGrid2 * 10000;
 
-    _xCoord2 = switch true do {
+    private _xCoord2 = switch true do {
         case (_xGrid2 >= 1000): { "" + str(_xGrid2) };
         case (_xGrid2 >= 100): { "0" + str(_xGrid2) };
         case (_xGrid2 >= 10): { "00" + str(_xGrid2) };
         default             { "000" + str(_xGrid2) };
     };
 
-    _yCoord2 = switch true do {
+    private _yCoord2 = switch true do {
         case (_yGrid2 >= 1000): { "" + str(_yGrid2) };
         case (_yGrid2 >= 100): { "0" + str(_yGrid2) };
         case (_yGrid2 >= 10): { "00" + str(_yGrid2) };

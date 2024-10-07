@@ -172,6 +172,7 @@ GVAR(isOpeningDoor) = false;
 } forEach ["loadout", "weapon"];
 
 // add "Take _weapon_" action to dropped weapons
+//IGNORE_PRIVATE_WARNING ["_target", "_player"];
 private _action = [
     // action display name will be overwritten in modifier function
     QGVAR(takeWeapon), "take", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa",
