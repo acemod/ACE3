@@ -117,6 +117,7 @@
                 <Russian>AGM-65 Maverick D</Russian>
                 <Japanese>AGM-65 マーベリック D</Japanese>
                 <Korean>AGM-65 매버릭 D</Korean>
+                <Italian>AGM-65 Maverick D</Italian>
             </Key>
             <Key ID="STR_ACE_Maverick_g">
                 <English>AGM-65 Maverick G</English>
@@ -124,6 +125,7 @@
                 <Russian>AGM-65 Maverick G</Russian>
                 <Japanese>AGM-65 マーベリック G</Japanese>
                 <Korean>AGM-65 매버릭 G</Korean>
+                <Italian>AGM-65 Maverick G</Italian>
             </Key>
             <Key ID="STR_ACE_Maverick_d_mag_x1">
                 <English>AGM-65 Maverick D [ACE]</English>
@@ -131,6 +133,7 @@
                 <Russian>AGM-65 Maverick D [ACE]</Russian>
                 <Japanese>AGM-65 マーベリック D [ACE]</Japanese>
                 <Korean>AGM-65 매버릭 D [ACE]</Korean>
+                <Italian>AGM-65 Maverick D [ACE]</Italian>
             </Key>
             <Key ID="STR_ACE_Maverick_d_mag_x3">
                 <English>3x AGM-65 Maverick D [ACE]</English>
@@ -138,6 +141,7 @@
                 <Russian>3x AGM-65 Maverick D [ACE]</Russian>
                 <Japanese>3x AGM-65 マーベリック D [ACE]</Japanese>
                 <Korean>3x AGM-65 매버릭 D [ACE]</Korean>
+                <Italian>3x AGM-65 Maverick D [ACE]</Italian>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x1">
                 <English>AGM-65 Maverick G [ACE]</English>
@@ -145,6 +149,7 @@
                 <Russian>AGM-65 Maverick G [ACE]</Russian>
                 <Japanese>AGM-65 マーベリック G [ACE]</Japanese>
                 <Korean>AGM-65 매버릭 G [ACE]</Korean>
+                <Italian>AGM-65 Maverick G [ACE]</Italian>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x2">
                 <English>2x AGM-65 Maverick G [ACE]</English>
@@ -152,6 +157,7 @@
                 <Russian>2x AGM-65 Maverick G [ACE]</Russian>
                 <Japanese>2x AGM-65 マーベリック G [ACE]</Japanese>
                 <Korean>2x AGM-65 매버릭 G [ACE]</Korean>
+                <Italian>2x AGM-65 Maverick G [ACE]</Italian>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x3">
                 <English>3x AGM-65 Maverick G [ACE]</English>
@@ -159,6 +165,7 @@
                 <Russian>3x AGM-65 Maverick G [ACE]</Russian>
                 <Japanese>3x AGM-65 マーベリック G [ACE]</Japanese>
                 <Korean>3x AGM-65 매버릭 G [ACE]</Korean>
+                <Italian>3x AGM-65 Maverick G [ACE]</Italian>
             </Key>
         </Container>
         <Container name="weapons">
