@@ -16,16 +16,19 @@ if (isServer) then {
     // Only install event handler if combat deafness is enabled
     if (!GVAR(enableCombatDeafness)) exitWith {};
 
-    addMissionEventHandler ["ProjectileCreated", {
-        params ["_projectile"];
-
-        if (!local _projectile) exitWith {};
-
-        // Rockets only explode on local clients
-        _projectile addEventHandler ["Explode", {
-            [QGVAR(explosion), _this] call CBA_fnc_globalEvent;
-        }];
-    }];
+    [{ // Convert ace_common's local explosion to a hearing global explosion event 
+        params ["_projectile", "_pos"];
+        TRACE_1("Explode",_this);
+        
+        // If projectile is local only, don't raise event globally
+        // TODO: netId always returns valid after 2.18
+        // use _projectile getShotInfo 5 (https://community.bistudio.com/wiki/getShotInfo)
+        if (isMultiplayer && {(netId _projectile) == "0:0"}) then { 
+            [QGVAR(explosion), [_projectile, _pos]] call CBA_fnc_localEvent;
+        } else {
+            [QGVAR(explosion), [_projectile, _pos]] call CBA_fnc_globalEvent;
+        };
+    }] call EFUNC(common,addExplosionEventHandler);
 }] call CBA_fnc_addEventHandler;
 
 if (!hasInterface) exitWith {};

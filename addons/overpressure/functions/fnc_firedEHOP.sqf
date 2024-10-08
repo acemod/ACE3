@@ -33,7 +33,7 @@ private _position = getPosASL _projectile;
 private _direction = vectorDir _projectile;
 
 // Damage to others
-private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _dangerZoneRange];
+private _affected = (ASLToAGL _position) nearEntities ["CAManBase", _dangerZoneRange];
 
 // Let each client handle their own affected units
 ["ace_overpressure", [_unit, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;
