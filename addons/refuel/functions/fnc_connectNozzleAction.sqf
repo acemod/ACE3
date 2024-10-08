@@ -62,7 +62,7 @@ if (_bestPosASL isEqualTo []) exitWith {
 //Move it out slightly, for visibility sake (better to look a little funny than be embedded//sunk in the hull and be useless)
 _bestPosASL = _bestPosASL vectorAdd ((_bestPosASL vectorFromTo _startingPosASL) vectorMultiply 0.05);
 
-private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
+private _attachPosModel = _sink worldToModel (ASLToAGL _bestPosASL);
 
 [
     GVAR(progressDuration),
@@ -115,6 +115,9 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
 
         // Reset fuel counter
         _source setVariable [QGVAR(fuelCounter), 0, true];
+
+        // Let other players access nozzle
+        [objNull, _nozzle] call EFUNC(common,claim);
 
         [_unit, _sink, _nozzle, _endPosTestOffset] call FUNC(refuel);
 

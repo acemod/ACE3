@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Handles AI Fired EH
+ * Handles AI Fired EH.
  *
  * Arguments:
  * Fired EH
@@ -11,6 +11,8 @@
  *
  * Public: No
  */
+
+if (GVAR(ammoHandling) != 2) exitWith {};
 
 params ["_vehicle", "_weapon", "", "", "", "_magazine", "", "_gunner"];
 TRACE_4("firedEH:",_vehicle,_weapon,_magazine,_gunner);

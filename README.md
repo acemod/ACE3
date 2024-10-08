@@ -5,7 +5,7 @@
 
 <p align="center">
     <a href="https://github.com/acemod/ACE3/releases/latest">
-        <img src="https://img.shields.io/badge/Version-3.16.3-blue.svg?style=flat-square" alt="ACE3 Version">
+        <img src="https://img.shields.io/github/release/acemod/ACE3.svg?style=flat-square&label=Version" alt="ACE3 Version">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
         <img src="https://img.shields.io/github/issues-raw/acemod/ACE3.svg?style=flat-square&label=Issues" alt="ACE3 Issues">
@@ -55,7 +55,7 @@ The mod is **built modularly**, so almost any included PBO can be easily removed
 - Carrying and dragging
 - Realistic names for vehicles and weapons
 - A fire control system (FCS) for armored vehicles and helicopters
-- Realistic ballistics/FCS calculated in C/C++ extensions
+- Realistic ballistics/FCS calculated in Rust extensions
 - Backblast area and overpressure simulation
 - Disposable launchers
 - Realistic G-forces

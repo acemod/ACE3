@@ -8,22 +8,8 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
-// Damage types which do not cause blood spurts
-GVAR(noBloodDamageTypes) = createHashMapFromArray (call (uiNamespace getVariable QGVAR(noBloodDamageTypes)));
-
 // blood object model namespace
-GVAR(models) = [] call CBA_fnc_createNamespace;
-
-{
-    _x params ["_name", "_model"];
-
-    // createSimpleObject expects a path without the leading slash
-    if ((_model select [0,1]) isEqualTo "\") then {
-        _model = _model select [1];
-    };
-
-    GVAR(models) setVariable [_name, _model];
-} forEach [
+GVAR(models) = createHashMapFromArray [
     // higher number means bigger model
     ["blooddrop_1", QPATHTOF(data\ace_drop_1.p3d)],
     ["blooddrop_2", QPATHTOF(data\ace_drop_2.p3d)],

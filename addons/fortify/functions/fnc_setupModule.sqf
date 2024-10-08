@@ -48,10 +48,10 @@ if IS_NUMBER(_preset) then { // Legacy support
 };
 
 private _budget = _logic getVariable ["Budget", -1];
-if (!(_budget isEqualType 0)) then {_budget = -1};
+if !(_budget isEqualType 0) then {_budget = -1};
 
 private _addToolItem = _logic getVariable ["AddToolItem", false];
-if (!(_addToolItem isEqualType false)) then {_addToolItem = false};
+if !(_addToolItem isEqualType false) then {_addToolItem = false};
 
 
 private _objects = [_preset] call FUNC(getPlaceableSet);

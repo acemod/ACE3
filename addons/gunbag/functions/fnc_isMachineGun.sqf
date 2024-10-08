@@ -22,7 +22,7 @@ private _config = _weapon call CBA_fnc_getItemConfig;
 // definition of a machine gun by BIS_fnc_itemType
 private _cursor = getText (_config >> "cursor");
 
-if (toLower _cursor in ["", "emptycursor"]) then {
+if (toLowerANSI _cursor in ["", "emptycursor"]) then {
     _cursor = getText (_config >> "cursorAim");
 };
 

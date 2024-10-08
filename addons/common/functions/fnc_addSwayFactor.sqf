@@ -18,7 +18,7 @@
 */
 params ["_type", "_code", "_id"];
 
-_type = toLower _type;
+_type = toLowerANSI _type;
 
 if !(_type in ["baseline", "multiplier"]) exitWith { ERROR_2("%1-%2 type unsupported",_type,_id); false };
 

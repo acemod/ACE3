@@ -38,6 +38,7 @@ if !(hasInterface) exitWith {};
         [false, false, false, false, true]
     ] call EFUNC(interact_menu,createAction);
 
+    //IGNORE_PRIVATE_WARNING ["_player", "_target"];
     private _subActions = [
         [
             QGVAR(checkWater),
@@ -96,10 +97,10 @@ if !(hasInterface) exitWith {};
     ] call CBA_fnc_addItemContextMenuOption;
 
     // Add water source helpers when interaction menu is opened
-    ["ace_interactMenuOpened", {call FUNC(addWaterSourceInteractions)}] call CBA_fnc_addEventHandler;
+    ["ace_interactMenuOpened", LINKFUNC(addWaterSourceInteractions)] call CBA_fnc_addEventHandler;
 
     // Add status modifiers
-    if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+    if (GETEGVAR(medical,enabled,false)) then {
         [0, {
             if (_this getVariable [QEGVAR(medical,isBleeding), false]) exitWith {
                 0.5
@@ -134,7 +135,7 @@ if !(hasInterface) exitWith {};
     ["CAManBase", "respawn", LINKFUNC(handleRespawn)] call CBA_fnc_addClassEventHandler;
 
     // Start update loop
-    [FUNC(update), CBA_missionTime + MP_SYNC_INTERVAL, 1] call CBA_fnc_waitAndExecute;
+    [LINKFUNC(update), CBA_missionTime + MP_SYNC_INTERVAL, 1] call CBA_fnc_waitAndExecute;
 
     #ifdef DEBUG_MODE_FULL
         ["ACE_player thirst", {ACE_player getVariable [QXGVAR(thirst), 0]}, [true, 0, 100]] call EFUNC(common,watchVariable);

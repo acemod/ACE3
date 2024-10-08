@@ -290,8 +290,8 @@ class CfgVehicles {
         displayName = CSTRING(painkillers_Display);
         author = "Alganthe";
         vehicleClass = "Items";
-        class TransportItems {
-            MACRO_ADDITEM(ACE_painkillers,1);
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_painkillers,1);
         };
     };
 
@@ -313,9 +313,11 @@ class CfgVehicles {
         model = QPATHTOF(data\ace_medcrate.p3d);
         editorPreview = QPATHTOF(data\ACE_medicalSupplyCrate.jpg);
         author = ECSTRING(common,ACETeam);
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_painkillers,25);
+        };
         class TransportItems {
             MACRO_ADDITEM(ACE_fieldDressing,50);
-            MACRO_ADDITEM(ACE_painkillers,25);
             MACRO_ADDITEM(ACE_morphine,25);
             MACRO_ADDITEM(ACE_epinephrine,25);
             MACRO_ADDITEM(ACE_bloodIV,15);
@@ -357,13 +359,15 @@ class CfgVehicles {
     };
     class ACE_medicalSupplyCrate_advanced: ACE_medicalSupplyCrate {
         displayName = CSTRING(medicalSupplyCrate_advanced);
+        class TransportMagazines {
+            MACRO_ADDMAGAZINE(ACE_painkillers,15);
+        };
         class TransportItems {
             MACRO_ADDITEM(ACE_fieldDressing,25);
             MACRO_ADDITEM(ACE_packingBandage,25);
             MACRO_ADDITEM(ACE_elasticBandage,25);
             MACRO_ADDITEM(ACE_tourniquet,15);
             MACRO_ADDITEM(ACE_splint,15);
-            MACRO_ADDITEM(ACE_painkillers,15);
             MACRO_ADDITEM(ACE_morphine,15);
             MACRO_ADDITEM(ACE_adenosine,15);
             MACRO_ADDITEM(ACE_epinephrine,15);

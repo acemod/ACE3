@@ -17,9 +17,9 @@
 
 params ["_magazineClassname"];
 
-_magazineClassname = toLower _magazineClassname;
+_magazineClassname = toLowerANSI _magazineClassname;
 private _throwMuzzles = getArray (configFile >> "CfgWeapons" >> "Throw" >> "muzzles");
 
-_throwMuzzles = _throwMuzzles select {_magazineClassname in ((getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines")) apply {toLower _x})};
+_throwMuzzles = _throwMuzzles select {_magazineClassname in ((getArray (configFile >> "CfgWeapons" >> "Throw" >> _x >> "magazines")) apply {toLowerANSI _x})};
 
 [_throwMuzzles select 0, ""] select (_throwMuzzles isEqualTo [])

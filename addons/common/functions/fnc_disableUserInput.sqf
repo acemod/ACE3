@@ -143,11 +143,7 @@ if (_state) then {
                 _ctrl ctrlSetEventHandler ["ButtonClick", toString {
                     closeDialog 0;
 
-                    if (["ace_medical"] call FUNC(isModLoaded)) then {
-                        [player, "respawn_button"] call EFUNC(medical_status,setDead);
-                    } else {
-                        player setDamage 1;
-                    };
+                    [player, "respawn_button"] call FUNC(setDead);
 
                     [false] call FUNC(disableUserInput);
                 }];

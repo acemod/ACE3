@@ -24,7 +24,7 @@ private _ctrlButtonOK = _display displayCtrl 1; //IDC_OK
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 TRACE_1("logicObject",_logic);
 
-_control ctrlRemoveAllEventHandlers "setFocus";
+_control ctrlRemoveAllEventHandlers "SetFocus";
 
 //Specific on-load stuff:
 private _fnc_sliderMove = {
@@ -47,7 +47,7 @@ private _fnc_sliderMove = {
 (_display displayCtrl 16189) cbSetChecked (GVAR(GlobalSkillAI) select 5);
 
 private _fnc_onUnload = {
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
     deleteVehicle _logic;
@@ -57,7 +57,7 @@ private _fnc_onConfirm = {
     params [["_ctrlButtonOK", controlNull, [controlNull]]];
     TRACE_1("_fnc_onConfirm params",_this);
 
-    private _display = ctrlparent _ctrlButtonOK;
+    private _display = ctrlParent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 
     GVAR(GlobalSkillAI) = [
@@ -74,5 +74,5 @@ private _fnc_onConfirm = {
     [QGVAR(GlobalSkillAI),GVAR(GlobalSkillAI)] call FUNC(moduleGlobalSetSkill);
 };
 
-_display displayAddEventHandler ["unload", _fnc_onUnload];
-_ctrlButtonOK ctrlAddEventHandler ["buttonclick", _fnc_onConfirm];
+_display displayAddEventHandler ["Unload", _fnc_onUnload];
+_ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

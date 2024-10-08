@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Dedmen
+ * Author: Dedmen, Blue, johnb43
  * Return how many items of type _itemType the player has in his containers (Uniform, Vest, Backpack)
  * Doesn't count assignedItems, weapons, weapon attachments, magazines in weapons
  *
@@ -19,13 +19,17 @@
 
 params ["_unit", "_itemType"];
 
-private _countItemsInContainer = {
-    (getItemCargo _this) params ["_itemTypes", "_itemCounts"];
+private _count = 0;
+private _isMagazine = isClass (configFile >> "CfgMagazines" >> _itemType);
 
-    private _index = _itemTypes find _itemType;
-    _itemCounts param [_index, 0]
-};
+{
+    (if (_isMagazine) then {
+        getMagazineCargo _x
+    } else {
+        getItemCargo _x
+    }) params ["_itemTypes", "_itemCounts"];
 
-((uniformContainer _unit) call _countItemsInContainer) +
-((vestContainer _unit) call _countItemsInContainer) +
-((backpackContainer _unit) call _countItemsInContainer)
+    _count = _count + (_itemCounts param [_itemTypes find _itemType, 0]);
+} forEach [uniformContainer _unit, vestContainer _unit, backpackContainer _unit];
+
+_count

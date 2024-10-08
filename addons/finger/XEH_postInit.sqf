@@ -11,7 +11,7 @@ if (!hasInterface) exitWith {};
     GVAR(fingersHash) = createHashMap;
     GVAR(pfeh_id) = -1;
 
-    [QGVAR(fingered), {_this call FUNC(incomingFinger)}] call CBA_fnc_addEventHandler;
+    [QGVAR(fingered), LINKFUNC(incomingFinger)] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
 
 //Add Keybind:

@@ -138,7 +138,6 @@ class CfgVehicles {
     class StaticMGWeapon: StaticWeapon {};
 
     class HMG_01_base_F: StaticMGWeapon {
-        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(HMG_Static);
@@ -198,7 +197,6 @@ class CfgVehicles {
 
     class GMG_TriPod;
     class GMG_01_base_F: GMG_TriPod {
-        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(GMG_20mm); // Weapon Proxy (Shorter Reload Time) [CfgWeapons]
@@ -232,7 +230,6 @@ class CfgVehicles {
 
 
     class AT_01_base_F: StaticMGWeapon {
-        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(Titan_AT_Static);
@@ -246,7 +243,6 @@ class CfgVehicles {
     };
 
     class AA_01_base_F: StaticMGWeapon {
-        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             proxyWeapon = QGVAR(Titan_AA_Static); // Weapon Proxy (Shorter Reload Time) [CfgWeapons]
@@ -262,7 +258,6 @@ class CfgVehicles {
 
     class StaticMortar: StaticWeapon {};
     class Mortar_01_base_F: StaticMortar {
-        // ENABLE_CSW_ATTRIBUTE;
         class ADDON {
             enabled = 1;
             magazineLocation = "";

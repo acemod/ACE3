@@ -101,6 +101,11 @@ private _fnc_uniqueEquipment = {
         case IDX_LOADOUT_BACKPACK: {
             _x params [["_containerClass", ""]];
 
+            // Handle preset (loaded/AI) backpacks
+            if (_containerClass != "" && _forEachIndex == IDX_LOADOUT_BACKPACK) then {
+                _containerClass = [_containerClass, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
+            };
+
             // Remove all unique equipment in tab; Add container as a unique equipment
             [GVAR(virtualItems) get (_forEachIndex + 1), _containerClass] call _fnc_uniqueEquipment;
         };

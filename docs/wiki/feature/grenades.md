@@ -23,6 +23,8 @@ version:
 ### 1.1 Throw modes
 Provides different modes for throwing grenades (high throw, precision throw and drop mode).
 
+A grenade is only rollable if the fuse time (`explosionTime`) is >= 1 second and the player isn't in a vehicle.
+
 ### 1.2 Hand flares
 Adds throwable hand flares in the colors white, red, green and yellow. Additionally buffs existing flares by making them brighter and last longer.
 

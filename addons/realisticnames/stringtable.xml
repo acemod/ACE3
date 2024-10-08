@@ -13,7 +13,7 @@
             <Hungarian>XM312</Hungarian>
             <Italian>XM312</Italian>
             <Japanese>XM312</Japanese>
-            <Korean>XM312</Korean>
+            <Korean>XM312 중기관총</Korean>
             <Chinese>XM312重機槍</Chinese>
             <Chinesesimp>XM312</Chinesesimp>
             <Turkish>XM312</Turkish>
@@ -30,7 +30,7 @@
             <Hungarian>XM312A</Hungarian>
             <Italian>XM312A</Italian>
             <Japanese>XM312A</Japanese>
-            <Korean>XM312A</Korean>
+            <Korean>XM312A 무인 중기관총</Korean>
             <Chinese>XM312A重機槍</Chinese>
             <Chinesesimp>XM312A</Chinesesimp>
             <Turkish>XM312A</Turkish>
@@ -46,8 +46,8 @@
             <Portuguese>XM312 (Alta)</Portuguese>
             <Hungarian>XM312 (Magasított)</Hungarian>
             <Italian>XM312 (Alto)</Italian>
-            <Japanese>XM312 (高)</Japanese>
-            <Korean>XM312 (높음)</Korean>
+            <Japanese>XM312 (ハイマウント)</Japanese>
+            <Korean>XM312 중기관총 (높음)</Korean>
             <Chinese>XM312重機槍 (高射腳架)</Chinese>
             <Chinesesimp>XM312（高）</Chinesesimp>
             <Turkish>XM312 (Yüksek)</Turkish>
@@ -64,7 +64,7 @@
             <Hungarian>XM307</Hungarian>
             <Italian>XM307</Italian>
             <Japanese>XM307</Japanese>
-            <Korean>XM307</Korean>
+            <Korean>XM307 유탄기관총</Korean>
             <Chinese>XM307榴彈機槍</Chinese>
             <Chinesesimp>XM307</Chinesesimp>
             <Turkish>XM307</Turkish>
@@ -81,7 +81,7 @@
             <Hungarian>XM307A</Hungarian>
             <Italian>XM307A</Italian>
             <Japanese>XM307A</Japanese>
-            <Korean>XM307A</Korean>
+            <Korean>XM307A 무인유탄기관총</Korean>
             <Chinese>XM307A榴彈機槍</Chinese>
             <Chinesesimp>XM307A</Chinesesimp>
             <Turkish>XM307A</Turkish>
@@ -97,8 +97,8 @@
             <Portuguese>XM307 (Alta)</Portuguese>
             <Hungarian>XM307 (Magasított)</Hungarian>
             <Italian>XM307 (Alto)</Italian>
-            <Japanese>XM307 (高)</Japanese>
-            <Korean>XM307 (높음)</Korean>
+            <Japanese>XM307 (ハイマウント)</Japanese>
+            <Korean>XM307 유탄기관총 (높음)</Korean>
             <Chinese>XM307榴彈機槍 (高射腳架)</Chinese>
             <Chinesesimp>XM307（高）</Chinesesimp>
             <Turkish>XM307 (Yüksek)</Turkish>
@@ -149,7 +149,7 @@
             <Hungarian>YABHON-R3</Hungarian>
             <Italian>YABHON-R3</Italian>
             <Japanese>YABHON-R3</Japanese>
-            <Korean>YABHON-R3</Korean>
+            <Korean>YABHON-R3 무인기</Korean>
             <Chinese>"亞伯罕-R3型"空中無人載具</Chinese>
             <Chinesesimp>"联合"-R3</Chinesesimp>
             <Turkish>YABHON-R3</Turkish>
@@ -166,7 +166,7 @@
             <Italian>YABHON-R3 (CAS)</Italian>
             <Portuguese>YABHON-R3 (CAS)</Portuguese>
             <Japanese>YABHON-R3 (CAS)</Japanese>
-            <Korean>YABHON-R3 (근접지원)</Korean>
+            <Korean>YABHON-R3 무인기 (근접항공지원)</Korean>
             <Chinese>"亞伯罕-R3型"空中無人載具 (近空支援)</Chinese>
             <Chinesesimp>"联合"-R3（近空支援）</Chinesesimp>
             <Turkish>YABHON-R3 (CAS)</Turkish>
@@ -556,7 +556,7 @@
             <Portuguese>Leopard 2SG</Portuguese>
             <Hungarian>Leopard 2SG</Hungarian>
             <Italian>Leopard 2SG</Italian>
-            <Japanese>レオパルト 2SG</Japanese>
+            <Japanese>レオパルト2SG</Japanese>
             <Korean>레오파르트 2SG</Korean>
             <Chinese>"豹2型新加坡版"主戰坦克</Chinese>
             <Chinesesimp>"豹"2 新加坡版</Chinesesimp>
@@ -697,6 +697,16 @@
             <Chinese>"卡瑪斯"卡車 (醫療)</Chinese>
             <Chinesesimp>"卡玛兹"（医疗）</Chinesesimp>
             <Turkish>KamAZ Medikal</Turkish>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_Truck_02_water_Name">
+            <English>KamAZ Water</English>
+            <Portuguese>KamAZ Água</Portuguese>
+            <Japanese>KamAZ 給水</Japanese>
+            <Russian>КамАЗ (водоноситель)</Russian>
+            <Korean>카마즈 급수</Korean>
+            <German>KamAS Wasser</German>
+            <Italian>KamAZ Acqua</Italian>
+            <French>KamAZ Eau</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_MRL_Name">
             <English>KamAZ MRL</English>
@@ -845,7 +855,7 @@
             <Hungarian>Otokar ARMA</Hungarian>
             <Italian>Otokar ARMA</Italian>
             <Japanese>オトカ アルマ</Japanese>
-            <Korean>오토카르 아르마 APC</Korean>
+            <Korean>오토카 아르마 APC</Korean>
             <Chinese>"奧托卡—阿爾默"裝甲運兵車</Chinese>
             <Chinesesimp>奥托卡尔 "阿玛"</Chinesesimp>
             <Turkish>Otokar ARMA</Turkish>
@@ -1151,7 +1161,7 @@
             <Hungarian>L-159 ALCA (Légitámogató)</Hungarian>
             <Italian>L-159 ALCA (CAS)</Italian>
             <Japanese>L-159 ALCA (CAS)</Japanese>
-            <Korean>L-159 ALCA (근접지원)</Korean>
+            <Korean>L-159 ALCA (근접항공지원)</Korean>
             <Chinese>L-159先進輕型戰鬥機 (近空支援)</Chinese>
             <Chinesesimp>L-159 ALCA（近空支援）</Chinesesimp>
             <Turkish>L-159 ALCA (CAS)</Turkish>
@@ -1315,7 +1325,7 @@
             <Czech>Demoliční nálož M183</Czech>
             <French>M183 Charge de démolition</French>
             <Russian>M183 комплектный подрывной заряд</Russian>
-            <Portuguese>M183 Sacola de Demolição</Portuguese>
+            <Portuguese>M183 Conjunto de Carga de Demolição</Portuguese>
             <Hungarian>M183 romboló töltet</Hungarian>
             <Italian>M183 Carica da Demolizioni</Italian>
             <Japanese>M183 梱包爆薬</Japanese>
@@ -1336,6 +1346,7 @@
             <German>M183 Geballte Sprengladung (Werfbar)</German>
             <Chinesesimp>M183 炸药包（可投掷）</Chinesesimp>
             <Korean>M183 폭파 장약 (투척)</Korean>
+            <Portuguese>M183 Carga de Demolição (Arremessável)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_DemoCharge_Name">
             <English>M112 Demolition Block</English>
@@ -1366,6 +1377,7 @@
             <German>M112 Sprengladung (Werfbar)</German>
             <Chinesesimp>M112 塑性炸药（可投掷）</Chinesesimp>
             <Korean>M112 폭파 장약 (투척)</Korean>
+            <Portuguese>M112 Carga de Demolição (Arremessável)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_HandGrenade_Name">
             <English>M67 Fragmentation Grenade</English>
@@ -1654,6 +1666,26 @@
             <Korean>FNX-45 택티컬</Korean>
             <Chinese>FNX-45戰術型手槍</Chinese>
             <Chinesesimp>FNX-45 战术型</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_01_Name">
+            <English>CZ 581</English>
+            <Portuguese>CZ 581</Portuguese>
+            <Japanese>CZ 581</Japanese>
+            <Russian>CZ 581</Russian>
+            <Korean>CZ 581</Korean>
+            <German>CZ 581</German>
+            <Italian>CZ 581</Italian>
+            <French>CZ 581</French>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_sawedoff_01_Name">
+            <English>CZ 581 (Sawed-Off)</English>
+            <Portuguese>CZ 581 (Cano serrado)</Portuguese>
+            <Japanese>CZ 581 (ソードオフ)</Japanese>
+            <Russian>CZ 581 (Sawed-Off)</Russian>
+            <Korean>CZ 581 (소드오프)</Korean>
+            <German>CZ 581 (Abgesägt)</German>
+            <Italian>CZ 581 (Canne mozze)</Italian>
+            <French>CZ 581 (canon scié)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_green_Name">
             <English>FNX-45 Tactical (Green)</English>
@@ -2321,7 +2353,7 @@
             <Russian>Scorpion Evo 3 A1</Russian>
             <Portuguese>Scorpion Evo 3 A1</Portuguese>
             <Italian>Scorpion Evo 3 A1</Italian>
-            <Japanese>スコーピオン エボ 3 A1</Japanese>
+            <Japanese>スコーピオン Evo 3 A1</Japanese>
             <Korean>스콜피온 에보 3 A1</Korean>
             <Chinese>"蠍式"Evo 3 A1衝鋒槍</Chinese>
             <Chinesesimp>Evo 3 A1 "蝎"</Chinesesimp>
@@ -2372,7 +2404,7 @@
             <Russian>Stoner 99 LMG</Russian>
             <Portuguese>Stoner 99 LMG</Portuguese>
             <Italian>Stoner 99 LMG</Italian>
-            <Japanese>ストーナー 99 LMG</Japanese>
+            <Japanese>ストーナー99 LMG</Japanese>
             <Korean>스토너 99 LMG</Korean>
             <Chinese>斯通納99輕機槍</Chinese>
             <Chinesesimp>斯通纳 99</Chinesesimp>
@@ -2704,7 +2736,7 @@
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_04_Tan">
             <English>ASP-1 Kir (Tan)</English>
             <Czech>ASP-1 Kir (Žlutohnědá)</Czech>
-            <French>ASP-1 Kir (Tan)</French>
+            <French>ASP-1 Kir (Marron)</French>
             <Spanish>ASP-1 Kir (Tan)</Spanish>
             <Russian>ASP-1 Kir (пустынный)</Russian>
             <German>ASP-1 Kir (Hellbraun)</German>
@@ -3056,6 +3088,36 @@
             <Chinesesimp>"柏拉格" 战斗无人机</Chinesesimp>
             <Turkish>Burraq UCAV</Turkish>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_arx_blk_Name">
+            <English>Type 115 (Black)</English>
+            <Portuguese>Type 115 (Preto)</Portuguese>
+            <Japanese>Type 115 (ブラック)</Japanese>
+            <Russian>Type 115 (чёрный)</Russian>
+            <Korean>115식 보총 (검정)</Korean>
+            <German>Type 115 (Schwarz)</German>
+            <Italian>Type 115 (Nero)</Italian>
+            <French>Type 115 (Noir)</French>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_arx_ghex_Name">
+            <English>Type 115 (Green Hex)</English>
+            <Portuguese>Type 115 (Verde Hex)</Portuguese>
+            <Japanese>Type 115 (緑六角形迷彩)</Japanese>
+            <Russian>Type 115 (зелёный гекс)</Russian>
+            <Korean>115식 보총 (초록육각)</Korean>
+            <German>Type 115 (Hex Grün)</German>
+            <Italian>Type 115 (Hex Verde)</Italian>
+            <French>Type 115 (Hew Vert)</French>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_arifle_arx_hex_Name">
+            <English>Type 115 (Hex)</English>
+            <Portuguese>Type 115 (Hex)</Portuguese>
+            <Japanese>Type 115 (六角形迷彩)</Japanese>
+            <Russian>Type 115 (гекс)</Russian>
+            <Korean>115식 보총 (육각)</Korean>
+            <German>Type 115 (Hex)</German>
+            <Italian>Type 115 (Hex)</Italian>
+            <French>Type 115 (Hex)</French>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_blk">
             <English>QBZ-95-1 (Black)</English>
             <Czech>QBZ-95-1 (Černá)</Czech>
@@ -3077,7 +3139,7 @@
             <English>QBZ-95-1 (Green Hex)</English>
             <German>QBZ-95-1 (Hex Grün)</German>
             <Spanish>QBZ-95-1 (Hex Verde)</Spanish>
-            <Polish>QBZ-95-1 (zielony hex)</Polish>
+            <Polish>QBZ-95-1 (Zielony hex)</Polish>
             <Czech>QBZ-95-1 (Zelený Hex)</Czech>
             <French>QBZ-95-1 (Hex Vert)</French>
             <Russian>QBZ-95-1 (зелёный гекс)</Russian>
@@ -3128,7 +3190,7 @@
             <English>QBZ-95-1 GL (Green Hex)</English>
             <German>QBZ-95-1 GL (Hex Grün)</German>
             <Spanish>QBZ-95-1 GL (Hex Verde)</Spanish>
-            <Polish>QBZ-95-1 GL (zielony hex)</Polish>
+            <Polish>QBZ-95-1 GL (Zielony hex)</Polish>
             <Czech>QBZ-95-1 GL (Zelený Hex)</Czech>
             <French>QBZ-95-1 GL (Hex Vert)</French>
             <Russian>QBZ-95-1 GL (зелёный гекс)</Russian>
@@ -3179,7 +3241,7 @@
             <English>QBZ-95-1 LSW (Green Hex)</English>
             <German>QBZ-95-1 LSW (Hex Grün)</German>
             <Spanish>QBZ-95-1 LSW (Hex Verde)</Spanish>
-            <Polish>QBZ-95-1 LSW (zielony hex)</Polish>
+            <Polish>QBZ-95-1 LSW (Zielony hex)</Polish>
             <Czech>QBZ-95-1 LSW (Zelený Hex)</Czech>
             <French>QBZ-95-1 LSW (Hex Vert)</French>
             <Russian>QBZ-95-1 LSW (зелёный гекс)</Russian>
@@ -3230,7 +3292,7 @@
             <English>QBU-88 (Green Hex)</English>
             <German>QBU-88 (Hex Grün)</German>
             <Spanish>QBU-88 (Hex Verde)</Spanish>
-            <Polish>QBU-88 (zielony hex)</Polish>
+            <Polish>QBU-88 (Zielony hex)</Polish>
             <Czech>QBU-88 (Zelený Hex)</Czech>
             <French>QBU-88 (Hex Vert)</French>
             <Russian>QBU-88 (зелёный гекс)</Russian>
@@ -3536,7 +3598,7 @@
             <English>RPG-32 (Green Hex)</English>
             <German>RPG-32 (Hex Grün)</German>
             <Spanish>RPG-32 (Hex Verde)</Spanish>
-            <Polish>RPG-32 (zielony hex)</Polish>
+            <Polish>RPG-32 (Zielony hex)</Polish>
             <Czech>RPG-32 (Zelený Hex)</Czech>
             <French>RPG-32 (Hex Vert)</French>
             <Russian>RPG-32 (зелёный гекс)</Russian>
@@ -3614,7 +3676,7 @@
             <Czech>Polaris DAGOR (XM312)</Czech>
             <Turkish>Polaris DAGOR (XM312)</Turkish>
             <Spanish>Polaris DAGOR (XM312)</Spanish>
-            <Korean>폴라리스 DAGOR (XM312)</Korean>
+            <Korean>폴라리스 DAGOR (XM312 중기관총)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_at">
             <English>Polaris DAGOR (Mini-Spike AT)</English>
@@ -3630,7 +3692,7 @@
             <Czech>Polaris DAGOR (Mini-Spike AT)</Czech>
             <Turkish>Polaris DAGOR (Mini-Spike AT)</Turkish>
             <Spanish>Polaris DAGOR (Mini-Spike AT)</Spanish>
-            <Korean>폴라리스 DAGOR (스파이크 미사일 대전차)</Korean>
+            <Korean>폴라리스 DAGOR (스파이크 대전차미사일)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_01_unarmed">
             <English>Polaris DAGOR</English>
@@ -3651,7 +3713,7 @@
         <Key ID="STR_ACE_RealisticNames_lsv_01_light">
             <English>Polaris DAGOR (light)</English>
             <German>Polaris DAGOR (leicht)</German>
-            <Japanese>ポラリス DAGOR (軽)</Japanese>
+            <Japanese>ポラリス DAGOR (軽装)</Japanese>
             <Chinese>"北極星"先進佈署越野車 (輕型)</Chinese>
             <Chinesesimp>"北极星"（轻型）</Chinesesimp>
             <Italian>Polaris DAGOR (leggero)</Italian>
@@ -3678,7 +3740,7 @@
             <Czech>LSV Mk. II (M134)</Czech>
             <Turkish>LSV Mk. II (M134)</Turkish>
             <Spanish>LSV Mk. II (M134)</Spanish>
-            <Korean>LSV Mk.II (M134)</Korean>
+            <Korean>LSV Mk.II (M134 미니건)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_lsv_02_at">
             <English>LSV Mk. II (Metis-M)</English>
@@ -3790,7 +3852,7 @@
             <Czech>Wiesel 2 Ozelot (AA)</Czech>
             <Turkish>Wiesel 2 Ozelot (AA)</Turkish>
             <Spanish>Wiesel 2 Ozelot (AA)</Spanish>
-            <Korean>비젤 2 오셀롯 (대공)</Korean>
+            <Korean>비젤 2 오젤롯 (대공)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_AT">
             <English>Wiesel 2 (ATGM)</English>
@@ -3806,7 +3868,7 @@
             <Czech>Wiesel 2 (ATGM)</Czech>
             <Turkish>Wiesel 2 (ATGM)</Turkish>
             <Spanish>Wiesel 2 (ATGM)</Spanish>
-            <Korean>비젤 2 (대전차유도)</Korean>
+            <Korean>비젤 2 (대전차미사일)</Korean>
         </Key>
         <Key ID="STR_ACE_RealisticNames_LT_01_cannon">
             <English>Wiesel 2 (MK20)</English>
@@ -3839,6 +3901,36 @@
             <Turkish>Wiesel 2 RFCV (Radar)</Turkish>
             <Spanish>Wiesel 2 RFCV (Radar)</Spanish>
             <Korean>비젤 2 RFCV (레이더)</Korean>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_flashlight_Name">
+            <English>UTG Defender 126</English>
+            <Portuguese>UTG Defender 126</Portuguese>
+            <Japanese>UTG ディフェンダー 126</Japanese>
+            <Russian>UTG Defender 126</Russian>
+            <Korean>UTG 디펜더 126</Korean>
+            <German>UTG Defender 126</German>
+            <Italian>UTG Defender 126</Italian>
+            <French>UTG Defender 126</French>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_mrd_Name">
+            <English>EOTech MRDS</English>
+            <Portuguese>EOTech MRDS</Portuguese>
+            <Japanese>EOTech MRDS</Japanese>
+            <Russian>EOTech MRDS</Russian>
+            <Korean>이오텍 MRDS</Korean>
+            <German>EOTech MRDS</German>
+            <Italian>EOTech MRDS</Italian>
+            <French>EOTech MRDS</French>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_optic_mrd_black_Name">
+            <English>EOTech MRDS (Black)</English>
+            <Portuguese>EOTech MRDS (Preto)</Portuguese>
+            <Japanese>EOTech MRDS (ブラック)</Japanese>
+            <Russian>EOTech MRDS (чёрный)</Russian>
+            <Korean>이오텍 MRDS (검정)</Korean>
+            <German>EOTech MRDS (Schwarz)</German>
+            <Italian>EOTech MRDS (Nero)</Italian>
+            <French>EOTech MRDS (Noir)</French>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>
@@ -3995,6 +4087,7 @@
             <Korean>엘칸 스펙터OS (초목)</Korean>
             <Russian>ELCAN SpecterOS (обильная растительность)</Russian>
             <Spanish>ELCAN SpecterOS (Exuberante)</Spanish>
+            <Portuguese>ELCAN SpecterOS (Exuberante)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_arid">
             <English>ELCAN SpecterOS (Arid)</English>
@@ -4007,6 +4100,7 @@
             <Korean>엘칸 스펙터OS (건조)</Korean>
             <Russian>ELCAN SpecterOS (сухая местность)</Russian>
             <Spanish>ELCAN SpecterOS (Árido)</Spanish>
+            <Portuguese>ELCAN SpecterOS (Árido)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_blk">
             <English>ELCAN SpecterOS 7.62 (Black)</English>
@@ -4019,6 +4113,7 @@
             <Korean>엘칸 스펙터OS 7.62 (검정)</Korean>
             <Russian>ELCAN SpecterOS 7.62 (чёрный)</Russian>
             <Spanish>ELCAN SpecterOS 7.62 (Negro)</Spanish>
+            <Portuguese>ELCAN SpecterOS 7.62 (Preto)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_lush">
             <English>ELCAN SpecterOS 7.62 (Lush)</English>
@@ -4031,6 +4126,7 @@
             <Korean>엘칸 스펙터OS 7.62 (초목)</Korean>
             <Russian>ELCAN SpecterOS 7.62 (обильная растительность)</Russian>
             <Spanish>ELCAN SpecterOS 7.62 (Exuberante)</Spanish>
+            <Portuguese>ELCAN SpecterOS 7.62 (Exuberante)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_arco_ak_arid">
             <English>ELCAN SpecterOS 7.62 (Arid)</English>
@@ -4043,6 +4139,7 @@
             <Korean>엘칸 스펙터OS 7.62 (건조)</Korean>
             <Russian>ELCAN SpecterOS 7.62 (сухая местность)</Russian>
             <Spanish>ELCAN SpecterOS 7.62 (Árido)</Spanish>
+            <Portuguese>ELCAN SpecterOS 7.62 (Árido)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_erco_blk">
             <English>SIG BRAVO4 / ROMEO3 (Black)</English>
@@ -4272,7 +4369,7 @@
             <English>KAHLES Helia (Tan)</English>
             <Chinese>KAHLES Helia (Tan)</Chinese>
             <Chinesesimp>KAHLES Helia（沙色）</Chinesesimp>
-            <Japanese>KAHLES Helia (タン)</Japanese>
+            <Japanese>KAHLES ヘリア (タン)</Japanese>
             <Polish>KAHLES Helia (Tan)</Polish>
             <Italian>KAHLES Helia (Marroncino)</Italian>
             <Russian>KAHLES Helia (пустынный)</Russian>
@@ -4327,6 +4424,7 @@
             <Korean>버리스 XTR II (낡음)</Korean>
             <Russian>Burris XTR II (старый)</Russian>
             <Spanish>Burris XTR II (Viejo)</Spanish>
+            <Portuguese>Burris XTR II (Velho)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_dms_weathered_kir">
             <English>Burris XTR II (ASP-1 Kir)</English>
@@ -4339,6 +4437,7 @@
             <Korean>버리스 XTR II (ASP-1 키르용)</Korean>
             <Russian>Burris XTR II (ASP-1 Kir)</Russian>
             <Spanish>Burris XTR II (ASP-1 Kir)</Spanish>
+            <Portuguese>Burris XTR II (ASP-1 Kir)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight">
             <English>EOTech XPS3 (Tan)</English>
@@ -4399,6 +4498,7 @@
             <Korean>이오텍 XPS3 (초목)</Korean>
             <Russian>EOTech XPS3 (обильная растительность)</Russian>
             <Spanish>EOTech XPS3 (Exuberante)</Spanish>
+            <Portuguese>EOTech XPS3 (Exuberante)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_arid">
             <English>EOTech XPS3 (Arid)</English>
@@ -4411,6 +4511,7 @@
             <Korean>이오텍 XPS3 (건조)</Korean>
             <Russian>EOTech XPS3 (сухая местность)</Russian>
             <Spanish>EOTech XPS3 (Árido)</Spanish>
+            <Portuguese>EOTech XPS3 (Árido)</Portuguese>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_holosight_smg">
             <English>EOTech XPS3 SMG (Tan)</English>

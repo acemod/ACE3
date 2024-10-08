@@ -24,24 +24,31 @@ private _nonissueColor = [1, 1, 1, 0.33];
 
 // Indicate if unit is bleeding at all
 if (IS_BLEEDING(_target)) then {
-    // Give a qualitative description of the rate of bleeding
-    private _cardiacOutput = [_target] call EFUNC(medical_status,getCardiacOutput);
-    private _bleedRate = GET_BLOOD_LOSS(_target);
-    private _bleedRateKO = BLOOD_LOSS_KNOCK_OUT_THRESHOLD * (_cardiacOutput max 0.05);
-    // Use nonzero minimum cardiac output to prevent all bleeding showing as massive during cardiac arrest
-
-    switch (true) do {
-        case (_bleedRate < _bleedRateKO * BLEED_RATE_SLOW): {
-            _entries pushBack [localize LSTRING(Bleed_Rate1), [1, 1, 0, 1]];
+    switch (GVAR(showBleeding)) do {
+        case 1: {
+        //  Just show whether the unit is bleeding at all
+            _entries pushBack [localize LSTRING(Status_Bleeding), [1, 0, 0, 1]];
         };
-        case (_bleedRate < _bleedRateKO * BLEED_RATE_MODERATE): {
-            _entries pushBack [localize LSTRING(Bleed_Rate2), [1, 0.67, 0, 1]];
-        };
-        case (_bleedRate < _bleedRateKO * BLEED_RATE_SEVERE): {
-            _entries pushBack [localize LSTRING(Bleed_Rate3), [1, 0.33, 0, 1]];
-        };
-        default {
-            _entries pushBack [localize LSTRING(Bleed_Rate4), [1, 0, 0, 1]];
+        case 2: {
+            // Give a qualitative description of the rate of bleeding
+            private _cardiacOutput = [_target] call EFUNC(medical_status,getCardiacOutput);
+            private _bleedRate = GET_BLOOD_LOSS(_target);
+            private _bleedRateKO = BLOOD_LOSS_KNOCK_OUT_THRESHOLD * (_cardiacOutput max 0.05);
+            // Use nonzero minimum cardiac output to prevent all bleeding showing as massive during cardiac arrest
+            switch (true) do {
+                case (_bleedRate < _bleedRateKO * BLEED_RATE_SLOW): {
+                    _entries pushBack [localize LSTRING(Bleed_Rate1), [1, 1, 0, 1]];
+                };
+                case (_bleedRate < _bleedRateKO * BLEED_RATE_MODERATE): {
+                    _entries pushBack [localize LSTRING(Bleed_Rate2), [1, 0.67, 0, 1]];
+                };
+                case (_bleedRate < _bleedRateKO * BLEED_RATE_SEVERE): {
+                    _entries pushBack [localize LSTRING(Bleed_Rate3), [1, 0.33, 0, 1]];
+                };
+                default {
+                    _entries pushBack [localize LSTRING(Bleed_Rate4), [1, 0, 0, 1]];
+                };
+            };
         };
     };
 } else {
@@ -70,13 +77,35 @@ if (GVAR(showBloodlossEntry)) then {
 };
 // Show receiving IV volume remaining
 private _totalIvVolume = 0;
+private _saline = 0;
+private _blood = 0;
+private _plasma = 0;
 {
-    _x params ["_volumeRemaining"];
+    _x params ["_volumeRemaining", "_type"];
+    switch (_type) do {
+        case "Saline": {
+            _saline = _saline + _volumeRemaining;
+        };
+        case "Blood": {
+            _blood = _blood + _volumeRemaining;
+        };
+        case "Plasma": {
+            _plasma = _plasma + _volumeRemaining;
+        };
+    };
     _totalIvVolume = _totalIvVolume + _volumeRemaining;
 } forEach (_target getVariable [QEGVAR(medical,ivBags), []]);
 
-if (_totalIvVolume >= 1) then {
-    _entries pushBack [format [localize ELSTRING(medical_treatment,receivingIvVolume), floor _totalIvVolume], [1, 1, 1, 1]];
+if (_totalIvVolume > 0) then {
+    if (_saline > 0) then {
+        _entries pushBack [format [localize ELSTRING(medical_treatment,receivingSalineIvVolume), floor _saline], [1, 1, 1, 1]];
+    };
+    if (_blood > 0) then {
+        _entries pushBack [format [localize ELSTRING(medical_treatment,receivingBloodIvVolume), floor _blood], [1, 1, 1, 1]];
+    };
+    if (_plasma > 0) then {
+        _entries pushBack [format [localize ELSTRING(medical_treatment,receivingPlasmaIvVolume), floor _plasma], [1, 1, 1, 1]];
+    };
 } else {
     _entries pushBack [localize ELSTRING(medical_treatment,Status_NoIv), _nonissueColor];
 };
@@ -115,6 +144,8 @@ if (_selectionN == -1) exitWith {
 
     _ctrl lbSetCurSel -1;
 };
+
+[QGVAR(updateInjuryListGeneral), [_ctrl, _target, _selectionN, _entries]] call CBA_fnc_localEvent;
 
 _entries pushBack ["", [1, 1, 1, 1]];
 
@@ -184,6 +215,8 @@ switch (GET_FRACTURES(_target) select _selectionN) do {
     };
 };
 
+[QGVAR(updateInjuryListPart), [_ctrl, _target, _selectionN, _entries, _bodyPartName]] call CBA_fnc_localEvent;
+
 // Add entries for open, bandaged, and stitched wounds
 private _woundEntries = [];
 
@@ -215,6 +248,8 @@ private _fnc_processWounds = {
 [GET_OPEN_WOUNDS(_target), "%1", [1, 1, 1, 1]] call _fnc_processWounds;
 [GET_BANDAGED_WOUNDS(_target), "[B] %1", [0.88, 0.7, 0.65, 1]] call _fnc_processWounds;
 [GET_STITCHED_WOUNDS(_target), "[S] %1", [0.7, 0.7, 0.7, 1]] call _fnc_processWounds;
+
+[QGVAR(updateInjuryListWounds), [_ctrl, _target, _selectionN, _woundEntries, _bodyPartName]] call CBA_fnc_localEvent;
 
 // Handle no wound entries
 if (_woundEntries isEqualTo []) then {

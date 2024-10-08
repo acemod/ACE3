@@ -15,6 +15,9 @@
  * Public: No
  */
 
-visibleMap &&
-{alive ACE_player} &&
-{"ItemGPS" in (assignedItems ACE_player)}
+if (!visibleMap || {!alive ACE_player}) exitWith {false};
+
+private _panels = flatten (ACE_player infoPanelComponents "left");
+private _index = _panels find "MinimapDisplayComponent";
+
+_index != -1 && {_panels select (_index + 1)}

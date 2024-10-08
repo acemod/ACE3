@@ -33,12 +33,15 @@ jobs:
         xcopy /e /h /q pullrequest\addons addons\
         xcopy /e /h /q pullrequest\optionals optionals\
         xcopy /e /h /q pullrequest\include include\
+        xcopy /y /h /q pullrequest\ace.dll ace.dll
+        xcopy /y /h /q pullrequest\ace_x64.dll ace_x64.dll
     - name: Run HEMTT build
       run: hemtt build
     - name: Rename build folder
       run: mv .hemttout/build .hemttout/@ace
     - name: Upload Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: ace3-${{ github.sha }}
         path: .hemttout/@*
+        include-hidden-files: true # Because .hemttout is a hidden directory

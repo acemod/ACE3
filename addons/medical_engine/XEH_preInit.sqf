@@ -19,6 +19,7 @@ if (isNil QUOTE(BLOOD_LOSS_KNOCK_OUT_THRESHOLD)) then {BLOOD_LOSS_KNOCK_OUT_THRE
 if (isNil QUOTE(PAIN_FADE_TIME)) then {PAIN_FADE_TIME = PAIN_FADE_TIME_DEFAULT};
 if (isNil QUOTE(LIMPING_DAMAGE_THRESHOLD)) then {LIMPING_DAMAGE_THRESHOLD = LIMPING_DAMAGE_THRESHOLD_DEFAULT};
 if (isNil QUOTE(FRACTURE_DAMAGE_THRESHOLD)) then {FRACTURE_DAMAGE_THRESHOLD = FRACTURE_DAMAGE_THRESHOLD_DEFAULT};
+if (isNil QUOTE(CARDIAC_OUTPUT_MIN)) then {CARDIAC_OUTPUT_MIN = CARDIAC_OUTPUT_MIN_DEFAULT};
 // Derive the alternate fatal damage coefficents
 if (isNil QUOTE(FATAL_SUM_DAMAGE_WEIBULL_K) || isNil QUOTE(FATAL_SUM_DAMAGE_WEIBULL_L)) then {
     private _x1 = 0.5;
@@ -39,11 +40,14 @@ GVAR(armorCache) = createHashMap;
 // with handle damage not returning full results.
 GVAR(fixedStatics) = [];
 
-GVAR(animations) = [] call CBA_fnc_createNamespace;
-GVAR(animations) setVariable [QUNCON_ANIM(faceUp), [QUNCON_ANIM(2),QUNCON_ANIM(2_1),QUNCON_ANIM(7_1),QUNCON_ANIM(8_1),QUNCON_ANIM(5_1),QUNCON_ANIM(6_1)]];
-GVAR(animations) setVariable [QUNCON_ANIM(faceDown), [QUNCON_ANIM(1),QUNCON_ANIM(3),QUNCON_ANIM(4),"unconscious",QUNCON_ANIM(9),QUNCON_ANIM(3_1),QUNCON_ANIM(4_1)]];
-GVAR(animations) setVariable [QUNCON_ANIM(faceLeft), [QUNCON_ANIM(7),QUNCON_ANIM(8),QUNCON_ANIM(1_1),QUNCON_ANIM(7_1),QUNCON_ANIM(8_1)]];
-GVAR(animations) setVariable [QUNCON_ANIM(faceRight), [QUNCON_ANIM(5),QUNCON_ANIM(6),QUNCON_ANIM(10),QUNCON_ANIM(5_1),QUNCON_ANIM(6_1)]];
+GVAR(animations) = createHashMapFromArray [
+    [toLowerANSI QUNCON_ANIM(faceUp), [QUNCON_ANIM(2),QUNCON_ANIM(2_1),QUNCON_ANIM(7_1),QUNCON_ANIM(8_1),QUNCON_ANIM(5_1),QUNCON_ANIM(6_1)]],
+    [toLowerANSI QUNCON_ANIM(faceDown), [QUNCON_ANIM(1),QUNCON_ANIM(3),QUNCON_ANIM(4),"unconscious",QUNCON_ANIM(9),QUNCON_ANIM(3_1),QUNCON_ANIM(4_1)]],
+    [toLowerANSI QUNCON_ANIM(faceLeft), [QUNCON_ANIM(7),QUNCON_ANIM(8),QUNCON_ANIM(1_1),QUNCON_ANIM(7_1),QUNCON_ANIM(8_1)]],
+    [toLowerANSI QUNCON_ANIM(faceRight), [QUNCON_ANIM(5),QUNCON_ANIM(6),QUNCON_ANIM(10),QUNCON_ANIM(5_1),QUNCON_ANIM(6_1)]]
+];
+
+GVAR(customHitpoints) = ["hitleftarm", "hitrightarm", "hitleftleg", "hitrightleg"];
 
 private _fnc_fixStatic = {
     params ["_vehicle"];
@@ -82,5 +86,8 @@ addMissionEventHandler ["Loaded", {
 }] call CBA_fnc_addEventhandler;
 
 [] call FUNC(disableThirdParty);
+
+// Future-proofing
+EGVAR(medical,enabled) = true; // TODO: remove when medical enable setting is implemented
 
 ADDON = true;

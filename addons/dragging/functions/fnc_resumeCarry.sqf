@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-// If not dragging, don't do anything
+// If not carrying, don't do anything
 if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {};
 
 // If action is already present, don't add it again

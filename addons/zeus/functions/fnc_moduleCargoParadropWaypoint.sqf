@@ -22,8 +22,8 @@ TRACE_2("moduleCargoParadropWaypoint",_vehicleGroup,_wpPos);
 private _vehicle = vehicle leader _vehicleGroup;
 private _commander = driver _vehicle;
 private _cargo = _vehicle getVariable [QEGVAR(cargo,loaded), []];
-if (!(_vehicle isKindOf "Air")) exitWith {WARNING_1("not in a air vehicle",typeOf _vehicle); true};
-if (_cargo isEqualTo []) exitWith {WARNING_1("no cargo",_cargo); true};
+if !(_vehicle isKindOf "Air") exitWith {WARNING_1("not in a air vehicle %1",typeOf _vehicle); true};
+if (_cargo isEqualTo []) exitWith {WARNING_1("no cargo %1",_cargo); true};
 
 private _previousSpeedMode = speedMode _vehicleGroup;
 private _nextMoveUpdate = -1;

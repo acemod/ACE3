@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-private _anim = toLower animationState _unit;
+private _anim = toLowerANSI animationState _unit;
 
 // stance is broken for some animations.
 private _stance = stance _unit;

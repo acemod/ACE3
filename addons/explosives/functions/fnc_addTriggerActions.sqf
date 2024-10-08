@@ -22,7 +22,7 @@ TRACE_2("params",_magazine,_explosive);
 private _isAttached = !isNull (attachedTo _explosive);
 private _detonators = [ACE_player] call FUNC(getDetonators);
 private _triggerTypes = [_magazine] call FUNC(triggerType);
-private _magTriggers = ConfigFile >> "CfgMagazines" >> _magazine >> "ACE_Triggers";
+private _magTriggers = configFile >> "CfgMagazines" >> _magazine >> "ACE_Triggers";
 private _children = [];
 {
     private _required = getArray (_x >> "requires");
@@ -31,7 +31,7 @@ private _children = [];
         if !(_x in _detonators) exitWith {
             _hasRequiredItems = false;
         };
-    } count _required;
+    } forEach _required;
     if (_hasRequiredItems && {(!_isAttached) || {(getNumber (_x >> "isAttachable")) == 1}}) then {
         _children pushBack
             [

@@ -39,11 +39,21 @@
             <English>Plotting Board</English>
             <Korean>플로팅 보드</Korean>
             <Japanese>標定盤</Japanese>
+            <Italian>Tavola di calcolo</Italian>
+            <Russian>Графическая доска</Russian>
+            <French>Planche traçante</French>
+            <German>Wurfparabel Kartenwerkzeug</German>
+            <Spanish>Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoard_Description">
             <English>The Plotting Board is a map tool designed for use in the directing of short range indirect fires.</English>
             <Korean>플로팅 보드는 단거리 간접 사격을 지시하는 데 사용하도록 설계된 독도용 도구입니다.</Korean>
             <Japanese>標定盤(プロッティング・ボード)は、短距離の間接射撃の指示に使用するために設計されたマップツールです。</Japanese>
+            <Italian>La tavola di calcolo è uno strumento utilizzato per dirigere fuoco di artiglieria a corto raggio.</Italian>
+            <Russian>Графическая доска - это картографический инструмент, предназначенный для использования при ведении непрямого огня с малой дистанции.</Russian>
+            <French>Une planche traçante est un outil cartographique conçu pour diriger des tirs indirects à courte distance.</French>
+            <German>Das Wurfparabel-Kartenwerkzeug ist ein Werkzeug, das für die Steuerung indirekten Feuers auf kurze Distanz entwickelt wurde.</German>
+            <Spanish>El Tablero de Trazado es una herramienta de mapa utilizada para dirigir fuego indirecto de corto alcance.</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_MapTools_Menu">
             <English>Map Tools</English>
@@ -266,71 +276,141 @@
             <English>Allow Plotting Board Drawing channels</English>
             <Japanese>標定盤への書き込みを許可するチャンネル</Japanese>
             <Korean>플로팅 보드 그리기 채널 허용</Korean>
+            <Italian>Canali ammessi su tavola di calcolo</Italian>
+            <Russian>Разрешить создание каналов на миллиметровой доске.</Russian>
+            <French>Canaux autorisés sur la planche traçante</French>
+            <German>Wurfparabel Kartenwerkzeug erlaubte Kanäle</German>
+            <Spanish>Permitir Canales de Dibujado de Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_allowChannelDrawing_description">
             <English>Channels in which plotting board drawing is enabled.</English>
             <Japanese>どのチャンネルで標定盤の書き込みを有効化するか。</Japanese>
             <Korean>플로팅 보드 그리기가 활성화된 채널입니다.</Korean>
+            <Italian>Canali in cui si può disegnare sulla tavola di calcolo.</Italian>
+            <Russian>Каналы, в которых включено рисование на миллиметровой доске.</Russian>
+            <French>Canaux dans lesquels vous pouvez dessiner sur le planche traçante</French>
+            <German>Kanäle, in denen das Zeichnen mit dem Wurfparabel-Kartenwerkzeug auf der Karte erlaubt ist.</German>
+            <Spanish>Canales en los que el tablero de trazado está habilitado.</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectCommsOnly">
             <English>Allow Direct Comms Only (Polylines Only)</English>
             <Japanese>直接チャンネルのみ許可 (線のみ)</Japanese>
             <Korean>직접교신만 허용 (선 긋기만)</Korean>
+            <Italian>Comunicazioni Dirette (solo linee)</Italian>
+            <Russian>Разрешать только прямую связь (только полилинии)</Russian>
+            <French>Communications directes uniquement (lignes uniquement)</French>
+            <German>Nur direkte Kommunikation zulassen (nur Polylinien)</German>
+            <Spanish>Permitir Sólo Comunicaciones Directas (Sólo Polylineas)</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectGroupComms">
             <English>Allow Direct/Group Comms (Polylines and Group Markers)</English>
             <Japanese>直接/グループチャンネルを許可 (線とグループマーカー)</Japanese>
             <Korean>직접교신/그룹무전망 허용 (선 긋기와 그룹 마커)</Korean>
+            <Italian>Comunicazioni dirette/gruppo (linee e marker)</Italian>
+            <Russian>Разрешить прямую/групповую связь (полилинии и групповые маркеры)</Russian>
+            <French>Autoriser les communications directes/de groupe (polylignes et marqueurs de groupe)</French>
+            <German>Direkte/Gruppenkommunikation zulassen (Polylinien und Gruppenmarkierungen)</German>
+            <Spanish>Permitir Comunicaciones Directas/Grupales (Polylineas y Marcadores de Grupo)</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardLabel">
             <English>Plotting Board</English>
             <Japanese>標定盤</Japanese>
             <Korean>플로팅 보드</Korean>
+            <Italian>Tavola di calcolo</Italian>
+            <Russian>Миллиметровая доска</Russian>
+            <French>Planche traçante</French>
+            <German>Wurfparabel Kartenwerkzeug</German>
+            <Spanish>Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardAcrylicLabel">
             <English>Plotting Board Acrylic</English>
             <Japanese>標定盤の アクリル板</Japanese>
             <Korean>플로팅 보드 (아크릴)</Korean>
+            <Italian>Acrilico tavola di calcolo</Italian>
+            <Russian>Миллиметровая доска акрилловая</Russian>
+            <French>Planche traçante Acrylique</French>
+            <German>Wurfparabel Kartenwerkzeug Acryl</German>
+            <Spanish>Tablero de Trazado Acrílico</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardRulerLabel">
             <English>Plotting Board Ruler</English>
             <Japanese>標定盤の 定規</Japanese>
             <Korean>플로팅 보드 (자)</Korean>
+            <Italian>Righello tavola di calcolo</Italian>
+            <Russian>Линейка для миллиметровой доски</Russian>
+            <French>Règle de la planche traçante</French>
+            <German>Wurfparabel Kartenwerkzeug Lineal</German>
+            <Spanish>Regla de Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardLabel">
             <English>To Plotting Board</English>
             <Japanese>標定盤に</Japanese>
             <Korean>플로팅 보드에</Korean>
+            <Italian>Su tavola di calcolo</Italian>
+            <Russian>К миллиметровой доске.</Russian>
+            <French>Sur la planche traçante</French>
+            <German>Zum Wurfparabel Kartenwerkzeug</German>
+            <Spanish>A Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardAcrylicLabel">
             <English>To Plotting Board Acrylic</English>
             <Japanese>標定盤の アクリル板に</Japanese>
             <Korean>플로팅 보드 (아크릴)에</Korean>
+            <Italian>Su acrilico tavola di calcolo</Italian>
+            <Russian>К миллиметровой доске акрилловой</Russian>
+            <French>Sur la planche traçante Acrylique</French>
+            <German>Zum Wurfparabel Kartenwerkzeug Acryl</German>
+            <Spanish>A Tablero de Trazado Acrílico</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardRulerLabel">
             <English>To Plotting Board Ruler</English>
             <Japanese>標定盤の 定規に</Japanese>
             <Korean>플로팅 보드 (자)에</Korean>
+            <Italian>Su righello tavola di calcolo</Italian>
+            <Russian>К линейке миллиметровой доски.</Russian>
+            <French>Sur la règle de la planche traçante</French>
+            <German>Zum Wurfparabel Kartenwerkzeug Lineal</German>
+            <Spanish>A Regla de Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_WipeBoard">
             <English>Wipe all markers off Plotting Board</English>
             <Japanese>標定盤の 全マーカーを 拭き消す</Japanese>
             <Korean>플로팅 보드에 있는 모든 마커 지우기</Korean>
+            <Italian>Cancella tutti i disegni dalla tavola</Italian>
+            <Russian>Сотрите все маркеры с миллиметровой доски.</Russian>
+            <French>Effacer tous les dessins de la planche traçante</French>
+            <German>Alle Markierungen vom Wurfparabel Kartenwerkzeug entfernen</German>
+            <Spanish>Borrar todas las marcas del Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_ShowPlottingBoard">
             <English>Show Plotting Board</English>
             <Japanese>標定盤を 表示</Japanese>
             <Korean>플로팅 보드 보이기</Korean>
+            <Italian>Mostra tavola di calcolo</Italian>
+            <Russian>Показать миллиметровую доску.</Russian>
+            <French>Afficher la planche traçante</French>
+            <German>Zeige Wurfparabel Kartenwerkzeug</German>
+            <Spanish>Mostrar Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_HidePlottingBoard">
             <English>Hide Plotting Board</English>
             <Japanese>標定盤を 隠す</Japanese>
             <Korean>플로팅 보드 숨기기</Korean>
+            <Italian>Nascondi tavola di calcolo</Italian>
+            <Russian>Скрыть миллиметровую доску.</Russian>
+            <French>Masquer la planche traçante</French>
+            <German>Verstecke Wurfparabel Kartenwerkzeug</German>
+            <Spanish>Ocultar Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_TogglePlottingBoardRuler">
             <English>Toggle Plotting Board Ruler</English>
             <Japanese>標定盤の 定規を 表示切替</Japanese>
             <Korean>플로팅 보드 (자) 토글</Korean>
+            <Italian>Mostra/Nascondi Righello</Italian>
+            <Russian>Переключить линейку миллиметровой доски.</Russian>
+            <French>Afficher/masquer la règle</French>
+            <German>Schalte das Lineal des Wurfparabel-Kartenwerkzeuges um</German>
+            <Spanish>Alternar Regla de Tablero de Trazado</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_AlignTo">
             <English>Align</English>
@@ -378,11 +458,21 @@
             <English>Up</English>
             <Japanese>上に</Japanese>
             <Korean>위로</Korean>
+            <Italian>Su</Italian>
+            <Russian>Вверх</Russian>
+            <French>Monter</French>
+            <German>Nach oben</German>
+            <Spanish>Arriba</Spanish>
         </Key>
         <Key ID="STR_ACE_MapTools_ToMapToolLabel">
             <English>To Maptool</English>
             <Japanese>マップツールに</Japanese>
             <Korean>독도용 도구로</Korean>
+            <Italian>Su strumento cartografico</Italian>
+            <Russian>К инструментам карты</Russian>
+            <French>Outil cartographique</French>
+            <German>Zum Kartenwerkzeug</German>
+            <Spanish>A Herramienta de Mapa</Spanish>
         </Key>
     </Package>
 </Project>

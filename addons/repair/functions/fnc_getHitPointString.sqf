@@ -20,17 +20,9 @@
  */
 
 params ["_hitPoint", "_textLocalized", "_textDefault", ["_trackArray", []]];
+_trackArray params [["_trackNames", []], ["_trackStrings", []], ["_trackAmount", []]];
 
-private _track = (count _trackArray > 0);
-private _trackNames = [];
-private _trackStrings = [];
-private _trackAmount = [];
-
-if (_track) then {
-    _trackNames = _trackArray select 0;
-    _trackStrings = _trackArray select 1;
-    _trackAmount = _trackArray select 2;
-};
+private _track = _trackArray isNotEqualTo [];
 
 // Prepare first part of the string from stringtable
 //IGNORE_STRING_WARNING(str_ace_repair_hit);
@@ -40,7 +32,7 @@ private _text = LSTRING(Hit);
 if ((_hitpoint select [0, 1]) == "#") then { _hitPoint = _hitPoint select [1] };
 
 // Remove "Hit" from hitpoint name if one exists
-private _toFind = if ((toLower _hitPoint) find "hit" == 0) then {
+private _toFind = if ((toLowerANSI _hitPoint) find "hit" == 0) then {
     [_hitPoint, 3] call CBA_fnc_substr
 } else {
     _hitPoint

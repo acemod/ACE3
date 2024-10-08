@@ -26,7 +26,7 @@ private _glassDoor = _door splitString "_";
 private _glassPos = (_house selectionPosition [(_glassDoor select 0) + "_" + (_glassDoor select 1) + "_effects", "Memory"]);
 // Calculate all animation names so we know what is there
 {
-    private _animName = toLower _x;
+    private _animName = toLowerANSI _x;
     if (((_animName find "door") != -1) && ((_animName find "locked") == -1) && ((_animName find "disabled") == -1) && ((_animName find "handle") == -1)) then {
         private _splitStr = _animName splitString "_";
         _doorParts pushBack ((_splitStr select 0) + "_" + (_splitStr select 1) + "_trigger");
@@ -64,4 +64,3 @@ private _lowestDistance = 0;
 if ((isNil "_door") || ((_door find "glass") != -1)) exitWith {};
 
 _door
-

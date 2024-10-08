@@ -15,6 +15,7 @@ private _weapons = (call (uiNamespace getVariable [QGVAR(flagItems), {[]}])) app
     private _icon = getText (_x >> QGVAR(icon));
     GVAR(flagCache) set [_name, [_vehicleClass, _displayName, _icon]];
 
+    //IGNORE_PRIVATE_WARNING ["_player", "_target"];
     private _action = [
         QGVAR(pickup),
         LLSTRING(ActionPickUp),

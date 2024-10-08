@@ -20,9 +20,9 @@ params ["_target", "_unit"];
 TRACE_2("rearm",_target,_unit);
 
 private _attachedDummy = _unit getVariable [QGVAR(dummy), objNull];
-if (isNull _attachedDummy) exitwith {ERROR_1("attachedDummy null",_attachedDummy);};
+if (isNull _attachedDummy) exitWith {ERROR_1("attachedDummy null %1",_attachedDummy);};
 private _magazineClass = _attachedDummy getVariable QGVAR(magazineClass);
-if (isNil "_magazineClass") exitWith {ERROR_1("magazineClass nil",_attachedDummy);};
+if (isNil "_magazineClass") exitWith {ERROR_1("magazineClass nil %1",_attachedDummy);};
 
 ([_magazineClass] call FUNC(getCaliber)) params ["_cal", "_idx"];
 
@@ -45,6 +45,7 @@ private _magazineDisplayName = _magazineClass call FUNC(getMagazineName);
     "",
     format [localize LSTRING(RearmAction), getText(configOf _target >> "displayName"), _magazineDisplayName],
     {
+        //IGNORE_PRIVATE_WARNING ["_player"];
         param [0] params ["_target", "_unit"];
         _player distance _target <= GVAR(distance);
     },

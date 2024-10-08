@@ -29,8 +29,8 @@ if (_parseInput) then {
         _transonicRange = _transonicRange * 0.9144;
         _subsonicRange = _subsonicRange * 0.9144;
     };
-    _transonicRange = Round(_transonicRange);
-    _subsonicRange  = Round(_subsonicRange);
+    _transonicRange = round(_transonicRange);
+    _subsonicRange  = round(_subsonicRange);
 
     _subsonicRange = _transonicRange max _subsonicRange;
 
@@ -54,8 +54,8 @@ if (_parseInput) then {
             _subsonicDrop  = _subsonicDrop  / 1.047;
         };
     };
-    _transonicDrop = Round(_transonicDrop * 100) / 100;
-    _subsonicDrop  = Round(_subsonicDrop  * 100) / 100;
+    _transonicDrop = round(_transonicDrop * 100) / 100;
+    _subsonicDrop  = round(_subsonicDrop  * 100) / 100;
 
     _subsonicDrop = _transonicDrop max _subsonicDrop;
 };
@@ -67,11 +67,11 @@ if ((GVAR(truingDropDropData) select 0) == 0 || {[_transonicRange, _subsonicRang
     private _solutionInput = +GVAR(targetSolutionInput);
 
     if (_transonicRange == 0) then {
-        _transonicRange = Round(403 call FUNC(calculate_distance_at_velocity));
+        _transonicRange = round(403 call FUNC(calculate_distance_at_velocity));
     };
     _solutionInput set [13, _transonicRange];
     private _result1 = _solutionInput call FUNC(calculate_solution);
-    _transonicDrop = Round((_result1 select 0) * 100) / 100;
+    _transonicDrop = round((_result1 select 0) * 100) / 100;
     GVAR(truingDropRangeData) set [0, _transonicRange];
     GVAR(truingDropDropData) set [1, _transonicDrop];
     GVAR(truingDropReferenceDropData) set [0, _transonicDrop];
@@ -84,11 +84,11 @@ if ((GVAR(truingDropDropData) select 0) == 0 || {[_transonicRange, _subsonicRang
         } else {
             _subsonicRange = _subsonicRange + 200 * 1.0936133;
         };
-        _subsonicRange = Round(_subsonicRange);
+        _subsonicRange = round(_subsonicRange);
     };
     _solutionInput set [13, _subsonicRange];
     private _result2 = _solutionInput call FUNC(calculate_solution);
-    _subsonicDrop = Round((_result2 select 0) * 100) / 100;
+    _subsonicDrop = round((_result2 select 0) * 100) / 100;
     GVAR(truingDropRangeData) set [1, _subsonicRange];
     GVAR(truingDropDropData) set [2, _subsonicDrop];
     GVAR(truingDropReferenceDropData) set [1, _subsonicDrop];

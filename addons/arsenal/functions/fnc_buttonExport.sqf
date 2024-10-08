@@ -26,28 +26,27 @@ if (GVAR(shiftState)) then {
         switch (true) do {
             // Beginning
             case (_index == -1): {
-                "ace_clipboard" callExtension (format ["[%1", endl]);
+                "ace" callExtension ["clipboard:append", [format ["[%1", endl]]];
             };
             // End
             case (_index == _listLength): {
-                "ace_clipboard" callExtension "];";
+                "ace" callExtension ["clipboard:append", ["];"]];
             };
             // Rest
             default {
-                "ace_clipboard" callExtension (["    ", str (GVAR(defaultLoadoutsList) select _index), [",", ""] select (_index == _listLength - 1), endl] joinString "");
+                "ace" callExtension ["clipboard:append", [["    ", str (GVAR(defaultLoadoutsList) select _index), [",", ""] select (_index == _listLength - 1), endl] joinString ""]];
             };
         };
     };
 
-    "ace_clipboard" callExtension "--COMPLETE--";
+    "ace" callExtension ["clipboard:complete", []];
 
     [_display, LLSTRING(exportDefault)] call FUNC(message);
 } else {
     // Export singular loadout
     private _export = str (GVAR(center) call CBA_fnc_getLoadout);
-
-    "ace_clipboard" callExtension (_export + ";");
-    "ace_clipboard" callExtension "--COMPLETE--";
+    "ace" callExtension ["clipboard:append", [_export]];
+    "ace" callExtension ["clipboard:complete", []];
 
     [_display, LLSTRING(exportCurrent)] call FUNC(message);
 };

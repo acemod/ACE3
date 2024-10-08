@@ -73,11 +73,11 @@ switch (true) do {
             GVAR(freeDrawingData) = ["left", _currentMousePos, _currentMousePos];
         } else {
             if ((GVAR(freeDrawingData) select 0) == "left") then { // We are already drawing on this line, find best spot
-                if ((_currentMousePos distance2d _posTopLeft) < ((GVAR(freeDrawingData) select 1) distance2d _posTopLeft)) then {
+                if ((_currentMousePos distance2D _posTopLeft) < ((GVAR(freeDrawingData) select 1) distance2D _posTopLeft)) then {
                     GVAR(freeDrawingData) set [1, _currentMousePos];
                 };
 
-                if ((_currentMousePos distance2d _posBottomLeft) < ((GVAR(freeDrawingData) select 2) distance2d _posBottomLeft)) then {
+                if ((_currentMousePos distance2D _posBottomLeft) < ((GVAR(freeDrawingData) select 2) distance2D _posBottomLeft)) then {
                     GVAR(freeDrawingData) set [2, _currentMousePos];
                 };
             };
@@ -95,11 +95,11 @@ switch (true) do {
             GVAR(freeDrawingData) = ["top", _currentMousePos, _currentMousePos];
         } else {
             if ((GVAR(freeDrawingData) select 0) == "top") then { // We are already drawing on this line, find best spot
-                if ((_currentMousePos distance2d _posTopLeft) < ((GVAR(freeDrawingData) select 1) distance2d _posTopLeft)) then {
+                if ((_currentMousePos distance2D _posTopLeft) < ((GVAR(freeDrawingData) select 1) distance2D _posTopLeft)) then {
                     GVAR(freeDrawingData) set [1, _currentMousePos];
                 };
 
-                if ((_currentMousePos distance2d _posTopRight) < ((GVAR(freeDrawingData) select 2) distance2d _posTopRight)) then {
+                if ((_currentMousePos distance2D _posTopRight) < ((GVAR(freeDrawingData) select 2) distance2D _posTopRight)) then {
                     GVAR(freeDrawingData) set [2, _currentMousePos];
                 };
             };
@@ -117,11 +117,11 @@ switch (true) do {
             GVAR(freeDrawingData) = ["right", _currentMousePos, _currentMousePos];
         } else {
             if ((GVAR(freeDrawingData) select 0) == "right") then { // We are already drawing on this line, find best spot
-                if ((_currentMousePos distance2d _posTopRight) < ((GVAR(freeDrawingData) select 1) distance2d _posTopRight)) then {
+                if ((_currentMousePos distance2D _posTopRight) < ((GVAR(freeDrawingData) select 1) distance2D _posTopRight)) then {
                     GVAR(freeDrawingData) set [1, _currentMousePos];
                 };
 
-                if ((_currentMousePos distance2d _posBottomRight) < ((GVAR(freeDrawingData) select 2) distance2d _posBottomRight)) then {
+                if ((_currentMousePos distance2D _posBottomRight) < ((GVAR(freeDrawingData) select 2) distance2D _posBottomRight)) then {
                     GVAR(freeDrawingData) set [2, _currentMousePos];
                 };
             };
@@ -139,11 +139,11 @@ switch (true) do {
             GVAR(freeDrawingData) = ["bottom", _currentMousePos, _currentMousePos];
         } else {
             if ((GVAR(freeDrawingData) select 0) == "bottom") then { // We are already drawing on this line, find best spot
-                if ((_currentMousePos distance2d _posBottomLeft) < ((GVAR(freeDrawingData) select 1) distance2d _posBottomLeft)) then {
+                if ((_currentMousePos distance2D _posBottomLeft) < ((GVAR(freeDrawingData) select 1) distance2D _posBottomLeft)) then {
                     GVAR(freeDrawingData) set [1, _currentMousePos];
                 };
 
-                if ((_currentMousePos distance2d _posBottomRight) < ((GVAR(freeDrawingData) select 2) distance2d _posBottomRight)) then {
+                if ((_currentMousePos distance2D _posBottomRight) < ((GVAR(freeDrawingData) select 2) distance2D _posBottomRight)) then {
                     GVAR(freeDrawingData) set [2, _currentMousePos];
                 };
             };

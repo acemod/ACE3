@@ -34,7 +34,7 @@ params [
 ];
 TRACE_7("addDamageToUnit",_unit,_damageToAdd,_bodyPart,_typeOfDamage,_instigator,_damageSelectionArray,_overrideInvuln);
 
-_bodyPart = toLower _bodyPart;
+_bodyPart = toLowerANSI _bodyPart;
 private _bodyPartIndex = ALL_BODY_PARTS find _bodyPart;
 if (_bodyPartIndex < 0) then { _bodyPartIndex = ALL_SELECTIONS find _bodyPart; }; // 2nd attempt with selection names ("hand_l", "hand_r", "leg_l", "leg_r")
 if (_bodyPartIndex < 0) exitWith {ERROR_1("addDamageToUnit - bad selection %1",_this); false};

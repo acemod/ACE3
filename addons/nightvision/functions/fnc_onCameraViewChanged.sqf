@@ -23,7 +23,7 @@ TRACE_2("onCameraViewChanged",_unit,_cameraView);
 call FUNC(refreshGoggleType);
 
 if (GVAR(disableNVGsWithSights) && {(hmd _unit) != ""}) then {
-    if ((vehicle _unit == _unit)
+    if ((isNull objectParent _unit)
         || {isTurnedOut _unit}
         || {!([_unit] call EFUNC(common,hasHatch))
             && {[_unit] call EFUNC(common,getTurretIndex) in ([vehicle _unit] call EFUNC(common,getTurretsFFV))}

@@ -108,6 +108,10 @@
 #define FRACTURE_DAMAGE_THRESHOLD EGVAR(medical,const_fractureDamageThreshold)
 #define FRACTURE_DAMAGE_THRESHOLD_DEFAULT 0.50
 
+// Minimum cardiac output
+#define CARDIAC_OUTPUT_MIN EGVAR(medical,const_minCardiacOutput)
+#define CARDIAC_OUTPUT_MIN_DEFAULT 0.05
+
 // Minimum body part damage required for blood effect on uniform
 #define VISUAL_BODY_DAMAGE_THRESHOLD 0.35
 

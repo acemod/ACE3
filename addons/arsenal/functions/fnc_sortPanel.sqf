@@ -155,6 +155,7 @@ private _for = if (_right) then {
     for "_i" from 0 to (lbSize _panel) - 1
 };
 
+//IGNORE_PRIVATE_WARNING ["_i"];
 _for do {
     // Get item
     _item = if (_right) then {
@@ -244,7 +245,7 @@ _for do {
 
 // Sort alphabetically, find the previously selected item and select it again
 if (_right) then {
-    [_panel, 1] lnbSortBy ["TEXT", _sortDirection == ASCENDING, false, true, false];
+    [_panel, 1] lnbSortBy ["TEXT", _sortDirection == ASCENDING, false, true, true]; // do not support unicode, as it's much more performance intensive (~3x more)
 
     _for do {
         // Remove sorting text, as it blocks the item name otherwise
@@ -258,7 +259,7 @@ if (_right) then {
         };
     };
 } else {
-    _panel lbSortBy ["TEXT", _sortDirection == ASCENDING, false, true, false];
+    _panel lbSortBy ["TEXT", _sortDirection == ASCENDING, false, true, true]; // do not support unicode, as it's much more performance intensive (~3x more)
 
     _for do {
         _item = _panel lbData _i;

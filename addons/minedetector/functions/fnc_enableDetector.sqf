@@ -31,4 +31,4 @@ if (_unit == ACE_player) then {
 [QGVAR(detectorEnabled), [_unit, _detectorType]] call CBA_fnc_localEvent;
 
 private _config = [_detectorType] call FUNC(getDetectorConfig);
-[FUNC(detectorLoop), 0.05, [_unit, _detectorType, _config, CBA_missionTime - 0.25]] call CBA_fnc_addPerFrameHandler;
+[LINKFUNC(detectorLoop), 0.05, [_unit, _detectorType, _config, CBA_missionTime - 0.25]] call CBA_fnc_addPerFrameHandler;

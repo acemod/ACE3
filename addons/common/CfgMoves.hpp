@@ -1,5 +1,6 @@
 class CfgMovesBasic {
     class Default;
+
     // From ACRE
     class ManActions {
         GVAR(stop) = QGVAR(stop);
@@ -81,6 +82,15 @@ class CfgMovesMaleSdr: CfgMovesBasic {
         // idk. Flummi?
         class AinvPknlMstpSnonWnonDnon_medic0: HealBase {
             variantsPlayer[] = {};
+        };
+
+        // Idle affects legs when weapon switching - fixes units sliding when holstering weapons
+        class AmovPercMstpSnonWnonDnon: StandBase {
+            idle = "";
+        };
+        // Need to reset idle, as it breaks animations otherwise
+        class CutSceneAnimationBase: AmovPercMstpSnonWnonDnon {
+            idle = "idleDefault";
         };
     };
 };

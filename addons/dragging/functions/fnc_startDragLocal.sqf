@@ -31,19 +31,25 @@ if !(_target getVariable [QGVAR(ignoreWeightDrag), false]) then {
 
 // Exit if object weight is over global var value
 if (_weight > GETMVAR(ACE_maxWeightDrag,1E11)) exitWith {
+    // Release claim on object
+    [objNull, _target, true] call EFUNC(common,claim);
+
     [LLSTRING(UnableToDrag)] call EFUNC(common,displayTextStructured);
 };
 
 private _primaryWeapon = primaryWeapon _unit;
 
 // Add a primary weapon if the unit has none
-if !(GVAR(dragAndFire)) then {
+if (!GVAR(dragAndFire)) then {
     if (_primaryWeapon == "") then {
         _unit addWeapon "ACE_FakePrimaryWeapon";
         _primaryWeapon = "ACE_FakePrimaryWeapon";
     };
 
-    _unit selectWeapon _primaryWeapon;
+    // Keep the laser/light on if the weapon is already selected
+    if (currentWeapon _unit != _primaryWeapon) then {
+        _unit selectWeapon _primaryWeapon;
+    };
 } else { // Making sure the unit is holding a primary weapon or handgun
     private _handgunWeapon = handgunWeapon _unit;
 
@@ -84,6 +90,11 @@ if !(_unit call EFUNC(common,isSwimming)) then {
 
 // Move a bit closer and adjust direction when trying to pick up a person
 if (_target isKindOf "CAManBase") then {
+    // Create clone for dead units
+    if (!alive _target) then {
+        _target = [_unit, _target] call FUNC(createClone);
+    };
+
     [QEGVAR(common,setDir), [_target, getDir _unit + 180], _target] call CBA_fnc_targetEvent;
     _target setPosASL (getPosASL _unit vectorAdd (vectorDir _unit vectorMultiply 1.5));
 
@@ -93,7 +104,10 @@ if (_target isKindOf "CAManBase") then {
 // Prevents dragging and carrying at the same time
 _unit setVariable [QGVAR(isDragging), true, true];
 
-[FUNC(startDragPFH), 0.2, [_unit, _target, CBA_missionTime + 5]] call CBA_fnc_addPerFrameHandler;
+// Required for aborting (keybind)
+_unit setVariable [QGVAR(draggedObject), _target, true];
+
+[LINKFUNC(startDragPFH), 0.2, [_unit, _target, CBA_missionTime + 5]] call CBA_fnc_addPerFrameHandler;
 
 // Disable collisions by setting the physx mass to almost zero
 private _mass = getMass _target;
@@ -102,3 +116,6 @@ if (_mass > 1) then {
     _target setVariable [QGVAR(originalMass), _mass, true];
     [QEGVAR(common,setMass), [_target, 1e-12]] call CBA_fnc_globalEvent; // Force global sync
 };
+
+// API
+[QGVAR(setupDrag), [_unit, _target]] call CBA_fnc_localEvent;

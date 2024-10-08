@@ -28,14 +28,14 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
 
 (getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];
 // get hitpoints of wheels with their selections
-([_vehicle] call FUNC(getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
+([_vehicle] call EFUNC(common,getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
 
 private _indexesToIgnore = [];
 private _processedSelections = [];
 
 {
     private _selection = _x;
-    private _hitpoint = toLower (_hitPoints select _forEachIndex);
+    private _hitpoint = toLowerANSI (_hitPoints select _forEachIndex);
     private _isWheelOrTrack = _selection in _wheelHitSelections || {_hitpoint in _wheelHitPoints} || {_hitpoint in TRACK_HITPOINTS};
 
     if (_hitpoint isEqualTo "") then { // skip empty hitpoint
@@ -117,7 +117,7 @@ private _processedSelections = [];
         continue
     };
 
-    if (!(getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends") in ["", "0"])) then { // skip depends hitpoints, should be normalized by engine
+    if !(getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends") in ["", "0"]) then { // skip depends hitpoints, should be normalized by engine
         TRACE_3("Skipping depends hitpoint",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping depends hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];

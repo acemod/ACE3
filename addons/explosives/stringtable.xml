@@ -46,7 +46,7 @@
             <Hungarian>Robbantás</Hungarian>
             <Portuguese>Detonar</Portuguese>
             <Russian>Подрыв</Russian>
-            <Japanese>点火</Japanese>
+            <Japanese>起爆</Japanese>
             <Korean>폭파</Korean>
             <Chinesesimp>引爆</Chinesesimp>
             <Chinese>引爆</Chinese>
@@ -62,7 +62,7 @@
             <Italian>Detona Tutti</Italian>
             <French>Tout détoner</French>
             <Portuguese>Detonar Tudo</Portuguese>
-            <Japanese>すべて点火</Japanese>
+            <Japanese>全て起爆</Japanese>
             <Korean>모두 폭파</Korean>
             <Chinesesimp>引爆全部</Chinesesimp>
             <Chinese>引爆全部</Chinese>
@@ -72,21 +72,41 @@
             <English>Detonate All on Active Clacker</English>
             <German>Alle auf Standardzünder zünden</German>
             <Italian>Detona Tutti sul Detonatore Attivo</Italian>
+            <Russian>Подрыв всех на активном детонаторе</Russian>
+            <Japanese>選択した点火装置を全て起爆</Japanese>
+            <Korean>활성화된 격발기의 모든 것을 폭파</Korean>
+            <French>Détoner tout sur le détonateur actif</French>
+            <Spanish>Detonar Todos al Activar el detonador</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_SetActiveTrigger">
             <English>Set Active Clacker</English>
             <German>Als Standardzünder wählen</German>
             <Italian>Imposta Detonatore Attivo</Italian>
+            <Russian>Установить активный детонатор</Russian>
+            <Japanese>この点火装置を選択</Japanese>
+            <Korean>격발기 활성 설정</Korean>
+            <French>Définir le détonateur actif</French>
+            <Spanish>Establecer el Detonador Activo</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_CycleActiveTrigger">
             <English>Cycle Active Clacker</English>
             <German>Standardzünder wechseln</German>
             <Italian>Cambia Detonatore Attivo</Italian>
+            <Russian>Цикл активного детонатора</Russian>
+            <Japanese>点火装置を切り替え</Japanese>
+            <Korean>격발기 활성 전환</Korean>
+            <French>Modifier le détonateur actif</French>
+            <Spanish>Ciclar el Detonador Activo</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_ActiveTrigger">
             <English>Active Clacker</English>
             <German>Standardzünder</German>
             <Italian>Detonatore Attivo</Italian>
+            <Russian>Активный детонатор</Russian>
+            <Japanese>選択中の点火装置</Japanese>
+            <Korean>격발기 활성</Korean>
+            <French>Détonateur actif</French>
+            <Spanish>Activar Detonador</Spanish>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
@@ -201,7 +221,7 @@
             <Portuguese>Ativar Thor III</Portuguese>
             <Russian>Активировать Thor III</Russian>
             <Japanese>Thor III を使う</Japanese>
-            <Korean>Thor III 켜기</Korean>
+            <Korean>토르 III 켜기</Korean>
             <Chinesesimp>开启索尔三型</Chinesesimp>
             <Chinese>開啟索爾三型</Chinese>
             <Turkish>Thor III ü aç</Turkish>
@@ -218,7 +238,7 @@
             <Portuguese>Desativar Thor III</Portuguese>
             <Russian>Деактивировать Thor III</Russian>
             <Japanese>Thor III を止める</Japanese>
-            <Korean>Thor III 끄기</Korean>
+            <Korean>토르 III 끄기</Korean>
             <Chinesesimp>关闭索尔三型</Chinesesimp>
             <Chinese>關閉索爾三型</Chinese>
             <Turkish>Thor III ü kapat</Turkish>
@@ -827,7 +847,7 @@
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Predefinito: No</Italian>
             <Japanese>爆発物を無効にするために爆発物専門兵の特性を必要としますか? デフォルト: 不要</Japanese>
-            <Korean>폭발물을 해제하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
+            <Korean>폭발물을 해체하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
             <Chinesesimp>需要爆破专业兵才能拆除爆炸物？ 预设：否</Chinesesimp>
             <Chinese>需要炸彈專家才能拆除炸彈? 預設: 否</Chinese>
             <Turkish>Patlayıcı uzmanlarının patlayıcıları etkisiz hale getirmesini ister misiniz? Varsayılan: Hayır</Turkish>
@@ -860,7 +880,7 @@
             <Russian>Увеличивать время завершения действий для не-специалистов? По умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Predefinito: Si</Italian>
             <Japanese>専門兵以外がアクション完了するのに必要な時間を増加しますか? デフォルト: 有効</Japanese>
-            <Korean>비전문가가 폭발물을 해제 시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
+            <Korean>비전문가가 폭발물을 해체 시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
             <Chinesesimp>增加非专业人员相关操作的时间？ 预设：是</Chinesesimp>
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
         </Key>
@@ -876,7 +896,7 @@
             <Russian>Взрыв при разминировании?</Russian>
             <Italian>Detona se disarmati?</Italian>
             <Japanese>解除中に爆発するか?</Japanese>
-            <Korean>해제 시 폭발합니까?</Korean>
+            <Korean>해체 시 폭발합니까?</Korean>
             <Chinesesimp>拆除时引爆？</Chinesesimp>
             <Chinese>拆除時引爆?</Chinese>
         </Key>
@@ -892,7 +912,7 @@
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По умолчанию: Да</Russian>
             <Italian>Permettere ad alcuni esplosivi di esplodere quando si tenta il disinnesco? Predefinito: Si</Italian>
             <Japanese>特定の爆発物を解除中に爆発可能にしますか? デフォルト: 有効</Japanese>
-            <Korean>특정 폭발물이 해제 시 폭발하게 합니까? 기본설정: 예</Korean>
+            <Korean>특정 폭발물이 해체 시 폭발하게 합니까? 기본설정: 예</Korean>
             <Chinesesimp>启用后，某些爆炸物会在拆除时引爆？ 预设：是</Chinesesimp>
             <Chinese>啟用後, 某些炸彈會在拆除時引爆? 預設: 是</Chinese>
         </Key>
@@ -1154,7 +1174,7 @@
             <English>Minimum time value (in seconds) for the explosive timer.</English>
             <Russian>Минимальное время до взрыва в секундах</Russian>
             <French>Définit la durée minimale paramétrable sur le minuteur.</French>
-            <Japanese>起爆タイマーの最低時間 (秒) を設定します。</Japanese>
+            <Japanese>起爆タイマーの最短時間 (秒単位) を設定します。</Japanese>
             <Spanish>Tiempo mínimo (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Minimalna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Minimale Zeit (in Sekunden) für den Zeitzünder.</German>
@@ -1167,7 +1187,7 @@
             <English>Maximum time value (in seconds) for the explosive timer.</English>
             <Russian>Макисмальное время до взрыва в секундах</Russian>
             <French>Définit la durée maximale paramétrable sur le minuteur.</French>
-            <Japanese>起爆タイマーの最長時間 (秒) を設定します。</Japanese>
+            <Japanese>起爆タイマーの最長時間 (秒単位) を設定します。</Japanese>
             <Spanish>Tiempo máximo (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Maksymalna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Maximale Zeit (in Sekunden) für den Zeitzünder.</German>
@@ -1180,7 +1200,7 @@
             <English>Default time value (in seconds) for the explosive timer.</English>
             <Russian>Стандартное время до взрыва в секундах</Russian>
             <French>Définit la durée paramétrée par défaut sur le minuteur.</French>
-            <Japanese>起爆タイマーの標準時間 (秒) を設定します。</Japanese>
+            <Japanese>起爆タイマーの標準時間 (秒単位) を設定します。</Japanese>
             <Spanish>Tiempo por defecto (en segundos) para el temporizador del explosivo.</Spanish>
             <Polish>Domyślna wartość czasomierza dla ładunku (w sekundach).</Polish>
             <German>Standardmäßige Zeit (in Sekunden) für den Zeitzünder.</German>

@@ -23,7 +23,7 @@ private _effectsEnabled    = GVAR(effectScaling) != 0;
 private _defaultBrightness = [-3, 0] select _effectsEnabled;
 
 private _brightness = _player getVariable [QGVAR(NVGBrightness), _defaultBrightness];
-_brightness = ((_brightness + _changeInBrightness) min 0) max -6;
+_brightness = ((_brightness + _changeInBrightness) min GVAR(const_MaxBrightness)) max GVAR(const_MinBrightness);
 _player setVariable [QGVAR(NVGBrightness), _brightness, false];
 
 // Display default setting as 0

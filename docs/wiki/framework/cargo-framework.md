@@ -47,6 +47,24 @@ class CfgVehicles {
     <p>ace_cargo_hasCargo and ace_cargo_canLoad are only needed if you aren't inheriting from any of BI base classes or if you are trying to disable loading for a specific vehicle / object.</p>
 </div>
 
+### 1.3 Adding predefined cargo via config
+
+```cpp
+class CfgVehicles {
+    class yourVehicleClass {
+        ace_cargo_space = 4;  // Add if necessary
+        ace_cargo_hasCargo = 1;  // Add if necessary
+        class ace_cargo {
+            class cargo {
+                class ACE_medicalSupplyCrate { // Doesn't have to have the same name as the item you're adding
+                    type = "ACE_medicalSupplyCrate";
+                    amount = 1;
+                };
+            };
+        };
+    };
+};
+```
 
 ## 2. Events
 
@@ -96,7 +114,17 @@ Note that this function can be used to make objects loadable/unloadable (set to 
  * [object, 3] call ace_cargo_fnc_setSize
 ```
 
-### 4.3 Adjusting cargo space of a vehicle
+### 4.3 Setting Custom Load/Unload Time
+
+```sqf
+object setVariable ["ace_cargo_delay", <TIME IN SECONDS>]
+```
+
+This will override the load/unload time calculation and instead set it to the value as specified. This value will _not_ be affected by any scaling coefficients, but will instead always take as long as the set delay.
+
+To disable, remove the variable with `object setVariable ["ace_cargo_delay", nil]` or set the delay to a negative value, e.g.: `object setVariable ["ace_cargo_delay", -1]`.
+
+### 4.4 Adjusting cargo space of a vehicle
 
 `ace_cargo_fnc_setSpace`
 Note that this function can be used to enable/disable a vehicle's cargo space (set to `0` to disable).
@@ -116,7 +144,7 @@ Note that this function can be used to enable/disable a vehicle's cargo space (s
  * [vehicle, 20] call ace_cargo_fnc_setSpace
 ```
 
-### 4.4 Load cargo into vehicle 
+### 4.5 Load cargo into vehicle 
 
 `ace_cargo_fnc_loadItem` (Also callable from CBA event `ace_loadCargo`)
 Note first argument can be a in-game object or a classname of an object type.
@@ -137,7 +165,7 @@ Note first argument can be a in-game object or a classname of an object type.
  * [object, vehicle] call ace_cargo_fnc_loadItem
 ```
 
-### 4.5 Unload cargo from vehicle 
+### 4.6 Unload cargo from vehicle 
 
 `ace_cargo_fnc_unloadItem` (Also callable from CBA event `ace_unloadCargo`)
 
@@ -154,7 +182,7 @@ Note first argument can be a in-game object or a classname of an object type.
  * [object, vehicle] call ace_cargo_fnc_unloadItem
 ```
 
-### 4.6 Remove/ Delete cargo from vehicle (Added in ACE3 3.11.0)
+### 4.7 Remove/ Delete cargo from vehicle (Added in ACE3 3.11.0)
 
 `ace_cargo_fnc_removeCargoItem`
 
@@ -172,7 +200,7 @@ Note first argument can be a in-game object or a classname of an object type.
  * [crate_7, truck] call ace_cargo_fnc_removeCargoItem
 ```
 
-### 4.7 Disable cargo renaming via script
+### 4.8 Disable cargo renaming via script
 
 ```sqf
 cargoBox setVariable ["ace_cargo_noRename", true, _disableGlobally]

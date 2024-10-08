@@ -30,7 +30,7 @@ private _stepX = 1e10;
 private _stepY = 1e10;
 
 {
-    private _zoom = getnumber (_x >> "zoomMax");
+    private _zoom = getNumber (_x >> "zoomMax");
     if (_zoom < _zoomMax) then {
         _zoomMax = _zoom;
         _formatX = getText (_x >> "formatX");
@@ -38,13 +38,12 @@ private _stepY = 1e10;
         _stepX = getNumber (_x >> "stepX");
         _stepY = getNumber (_x >> "stepY");
     };
-    false
-} count configProperties [_cfgGrid, "isClass _x", false];
+} forEach configProperties [_cfgGrid, "isClass _x", false];
 
 private _letterGrid = false;
 
-if (toLower _formatX find "a" != -1) then {_letterGrid = true};
-if (toLower _formatY find "a" != -1) then {_letterGrid = true};
+if (toLowerANSI _formatX find "a" != -1) then {_letterGrid = true};
+if (toLowerANSI _formatY find "a" != -1) then {_letterGrid = true};
 
 if (_letterGrid) exitWith {
     WARNING_3("Map Grid Warning (%1) - Map uses letter grids [%2, %3]",worldName,_formatX,_formatY);
