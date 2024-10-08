@@ -302,7 +302,7 @@
             <Italian>Influenza la Fatica Avanzata</Italian>
             <Chinese>與進階疲勞聯動</Chinese>
             <Chinesesimp>与进阶疲劳联动</Chinesesimp>
-            <Japanese>アドバンスド疲労への影響</Japanese>
+            <Japanese>高度な疲労への影響</Japanese>
             <Russian>Влияние на продвинутую усталость</Russian>
             <Polish>Wpływ na zaawansowane zmęczenie</Polish>
             <Turkish>Gelişmiş Yorgunluk</Turkish>
@@ -317,7 +317,7 @@
             <Italian>Determina se fame e sete influenzano la Fatica Avanzata ACE.</Italian>
             <Chinese>是否讓飲食影響到ACE的進階疲勞。</Chinese>
             <Chinesesimp>是否让饮食影响到 ACE 的进阶疲劳。</Chinesesimp>
-            <Japanese>喉の渇きと空腹度が ACE アドバンスド疲労へ与える影響を定義します。</Japanese>
+            <Japanese>喉の渇きと空腹度が ACE 高度な疲労へ与える影響を定義します。</Japanese>
             <Russian>Определяет, будет ли жажда и голод влиять на продвинутую усталость ACE.</Russian>
             <Polish>Kontroluje czy pragnienie i głód mają wpływ na zaawansowane zmęczenie ACE.</Polish>
             <Turkish>Acıkınca veya susayınca kişinin yorulup yorulmayacağını belirler.</Turkish>
@@ -870,7 +870,7 @@
             <Hungarian>A vízzel töltött kantin</Hungarian>
             <Italian>Una borraccia riempita per metà di acqua</Italian>
             <Japanese>半分入っている水筒</Japanese>
-            <Korean>반이 차 있는 수통입니다</Korean>
+            <Korean>물이 반 정도 차 있는 수통입니다</Korean>
             <Polish>Manierka w połowie wypełniona wodą</Polish>
             <Portuguese>Uma meia cantina cheia de água</Portuguese>
             <Russian>Наполовину заполненая водой фляга</Russian>

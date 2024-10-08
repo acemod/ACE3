@@ -1,133 +1,132 @@
 #include "..\script_component.hpp"
 /*
- * Author: tcvm
+ * Author: tcvm, johnb43
  * Process hit by projectile against vehicle and apply appropiate damage to part.
  *
  * Arguments:
- * 0: The vehicle <OBJECT>
- * 1: Projectile that hit <OBJECT>
- * 2: Hit index of potentially damaged part <NUMBER>
- * 3: New damage done to part <NUMBER>
- * 4: Information about hitpoint <ARRAY>
- * 5: Person who caused damage <OBJECT>
+ * 0: Vehicle <OBJECT>
+ * 1: Hit point <STRING>
+ * 2: Hit index <NUMBER>
+ * 3: Added damage to part <NUMBER>
+ * 4: Projectile <OBJECT>
+ * 5: Source of damage <OBJECT>
+ * 6: Person who caused damage <OBJECT>
  *
  * Return Value:
- * None
+ * Whether or not to continue handling last frame's damage <BOOL>
  *
  * Example:
- * [myVehicle, projectile, 5, 0.663] call ace_vehicle_damage_fnc_processHit;
+ * [cursorObject, "HitEngine", 1, 0.25, projectile, player, player] call ace_vehicle_damage_fnc_processHit
  *
  * Public: No
  */
 
-params ["_vehicle", "_projectile", "_hitIndex", "_newDamage", "_hitpointData", "_injurer"];
-_hitpointData params ["_hitArea", "_hitpointConfig", "_hitpointName"];
+params ["_vehicle", "_hitPoint", "_hitIndex", "_addedDamage", "_projectile", "_source", "_instigator"];
+TRACE_7("processHit",_vehicle,_hitPoint,_hitIndex,_addedDamage,_projectile,_source,_instigator);
 
-private _return = true;
-
-if (_newDamage < 0) then {
-    _newDamage = -_newDamage;
-};
+_addedDamage = abs _addedDamage;
 
 private _currentPartDamage = _vehicle getHitIndex _hitIndex;
-private _nextPartDamage = _currentPartDamage + _newDamage;
+private _newPartDamage = _currentPartDamage + _addedDamage;
 
-// damage is high enough for immediate destruction
-if (_newDamage >= 15) exitWith {
-    TRACE_2("immediate destruction - high damage",_newDamage,_currentPartDamage);
-    [_vehicle] call FUNC(knockOut);
-    [_vehicle, 1] call FUNC(handleDetonation);
+// Damage is high enough for immediate destruction
+if (_addedDamage >= 15) exitWith {
+    TRACE_2("immediate destruction - high damage",_addedDamage,_currentPartDamage);
+
     // Kill everyone inside for very insane damage
     {
-        [QGVAR(medicalDamage), [_x, _injurer, _injurer, true], _x] call CBA_fnc_targetEvent;
+        [QGVAR(medicalDamage), [_x, _source, _instigator, true], _x] call CBA_fnc_targetEvent;
     } forEach (crew _vehicle);
-    _vehicle setDamage 1;
-    _return = false;
-    _return
+
+    // setDamage triggers "Killed" EH in cookoff, which starts ammo cook-off
+    [QGVAR(setDamage), [_vehicle, [1, true, _source, _instigator]]] call CBA_fnc_serverEvent;
+
+    false
 };
 
 private _projectileConfig = _projectile call CBA_fnc_getObjectConfig;
 
-private _warheadTypeStr = getText (_projectileConfig >> "warheadName");
-private _incendiary = [_projectileConfig >> QGVAR(incendiary), "NUMBER", -1] call CBA_fnc_getConfigEntry;
-private _warheadType = ["HE", "AP", "HEAT", "TandemHEAT"] find _warheadTypeStr; // numerical index for warhead type for quicker checks. Numbers defined in script_macros.hpp
-if (_warheadType < 0) then {
-    _warheadType = WARHEAD_TYPE_NONE;
-};
-if (_incendiary < 0) then {
-    _incendiary = [0.3, 0.1, 1, 1, 0] select _warheadType;
-};
+private _warheadTypeStr = toLowerANSI getText (_projectileConfig >> "warheadName");
+private _warheadType = ["he", "ap", "heat", "tandemheat"] find _warheadTypeStr; // numerical index for warhead type for quicker checks. Numbers defined in script_macros.hpp
 
-private _minDamage = [_hitpointConfig >> "minimalHit", "NUMBER", 0] call CBA_fnc_getConfigEntry;
-if (_minDamage < 0) then {
-    _minDamage = -_minDamage;
-};
+private _incendiary = [_projectileConfig >> QGVAR(incendiary), "NUMBER", [0.3, 0.1, 1, 1, 0] select _warheadType] call CBA_fnc_getConfigEntry;
 
-private _ammoEffectiveness = 0;
-private _projectileExplosive = [_projectileConfig >> "explosive", "NUMBER", 0] call CBA_fnc_getConfigEntry;
-private _indirectHit = [_projectileConfig >> "indirectHit", "NUMBER", 0] call CBA_fnc_getConfigEntry;
+private _hitPointHash = GVAR(vehicleClassesHitPointHash) getOrDefault [typeOf _vehicle, createHashMap];
+(_hitPointHash getOrDefault [_hitPoint, []]) params ["_hitArea", "_minDamage"];
 
-if (_warheadType isEqualTo WARHEAD_TYPE_AP) then {
-    // change damage based on projectile speed (doesn't do this in vanilla ARMA believe it or not)
-    if !(isNull _injurer) then {
-        private _airFriction = [_projectileConfig >> "airFriction", "NUMBER", 0] call CBA_fnc_getConfigEntry;
-        private _distance = _injurer distance _vehicle;
-        _newDamage = (1 - _projectileExplosive) * _newDamage * exp(_airFriction * _distance);
+private _projectileExplosive = getNumber (_projectileConfig >> "explosive");
+private _indirectHit = getNumber (_projectileConfig >> "indirectHit");
+
+if (_warheadType == WARHEAD_TYPE_AP) then {
+    // Change damage based on projectile speed (doesn't do this in vanilla Arma believe it or not)
+    if (!isNull _source) then {
+        private _airFriction = getNumber (_projectileConfig >> "airFriction");
+        private _distance = _source distance _vehicle;
+        _addedDamage = (1 - _projectileExplosive) * _addedDamage * exp (_airFriction * _distance);
     };
 };
 
 private _penChance = 1;
-if (_newDamage < _minDamage) then {
-    _penChance = _newDamage / _minDamage;
-    TRACE_5("minimum damage modifying hit",_newDamage,_penChance,abs _minDamage,_warheadTypeStr,_hitArea);
+
+// Added damage can't be 0, so don't need to worry about 0 division here
+if (_addedDamage < _minDamage) then {
+    _penChance = _addedDamage / _minDamage;
+
+    TRACE_5("minimum damage modifying hit",_addedDamage,_penChance,_minDamage,_warheadTypeStr,_hitArea);
 };
 
 if (_penChance < random 1) exitWith {
     TRACE_1("didn't penetrate",_penChance);
-    _return
+
+    true
 };
 
 if (_minDamage == 0) then {
     _minDamage = 1;
 };
 
-if (_warheadType isEqualTo WARHEAD_TYPE_HE) then {
+if (_warheadType == WARHEAD_TYPE_HE) then {
     private _modifiedIndirectHit = _indirectHit / 100;
-    if (_newDamage > _modifiedIndirectHit) then {
-        _newDamage = _newDamage / 2;
+
+    if (_addedDamage > _modifiedIndirectHit) then {
+        _addedDamage = _addedDamage / 2;
     };
-    _newDamage = (_newDamage * (_newDamage / _modifiedIndirectHit)) min _newDamage;
+
+    _addedDamage = (_addedDamage * (_addedDamage / _modifiedIndirectHit)) min _addedDamage;
 };
 
-_ammoEffectiveness = if (_warheadType isEqualTo WARHEAD_TYPE_AP) then {
-    0.15 max _newDamage
+private _ammoEffectiveness = if (_warheadType == WARHEAD_TYPE_AP) then {
+    0.15 max _addedDamage
 } else {
-    if (_warheadType isEqualTo WARHEAD_TYPE_HE) then {
-        (_newDamage / (_minDamage + (_indirectHit / 100)) * 0.2)
+    if (_warheadType == WARHEAD_TYPE_HE) then {
+        (_addedDamage / (_minDamage + (_indirectHit / 100)) * 0.2)
     } else {
-        ((_newDamage / _minDamage) * 0.4) min 1
+        ((_addedDamage / _minDamage) * 0.4) min 1
     };
 };
-TRACE_4("ammo effectiveness",_ammoEffectiveness,_newDamage,_minDamage,_warheadTypeStr);
+
+TRACE_4("ammo effectiveness",_ammoEffectiveness,_addedDamage,_minDamage,_warheadTypeStr);
 
 _incendiary = _incendiary * _ammoEffectiveness;
 
-private _isCar = (_vehicle isKindOf "Car" && { !(_vehicle isKindOf "Wheeled_APC_F") });
+private _isCar = _vehicle isKindOf "Car" && {!(_vehicle isKindOf "Wheeled_APC_F")};
+
 if (_isCar) then {
-    _ammoEffectiveness = (_ammoEffectiveness + (_ammoEffectiveness * 0.5)) min 1;
+    _ammoEffectiveness = (_ammoEffectiveness * 1.5) min 1;
 };
 
-private _currentVehicleAmmo = _vehicle call EFUNC(cookoff,getVehicleAmmo);
+(_vehicle call EFUNC(cookoff,getVehicleAmmo)) params ["_magazines", "_totalAmmo"];
 private _chanceOfDetonation = 0;
 private _explosiveAmmoCount = 0;
-private _nonExplosiveAmmoCount = 0;
 
-if ((_currentVehicleAmmo select 0) isNotEqualTo []) then {
+if (_magazines isNotEqualTo []) then {
     private _magConfig = configFile >> "CfgMagazines";
     private _ammoConfig = configFile >> "CfgAmmo";
     private _countOfExplodableAmmo = 0;
+
     {
         _x params ["_magazineClassname", "_currentAmmoCount"];
+
         private _initialAmmoCount = getNumber (_magConfig >> _magazineClassname >> "count");
         _chanceOfDetonation = _chanceOfDetonation + (_currentAmmoCount / _initialAmmoCount);
         _countOfExplodableAmmo = _countOfExplodableAmmo + 1;
@@ -135,215 +134,241 @@ if ((_currentVehicleAmmo select 0) isNotEqualTo []) then {
         private _ammoClassname = getText (_magConfig >> _magazineClassname >> "ammo");
         private _explosive = getNumber (_ammoConfig >> _ammoClassname >> "explosive");
         private _hit = getNumber (_ammoConfig >> _ammoClassname >> "hit");
-        if (_explosive > 0.5 || _hit > 50) then {
+
+        if (_explosive > 0.5 || {_hit > 50}) then {
             _explosiveAmmoCount = _explosiveAmmoCount + 1;
-        } else {
-            _nonExplosiveAmmoCount = _nonExplosiveAmmoCount + 1;
         };
-    } forEach (_currentVehicleAmmo select 0);
+    } forEach _magazines;
+
     if (_countOfExplodableAmmo != 0) then {
         _chanceOfDetonation = _chanceOfDetonation / _countOfExplodableAmmo;
     };
 };
-private _chanceToDetonate = 0;
-private _chanceOfFire = 0;
-private _currentFuel = fuel _vehicle;
-private _vehicleConfig = _vehicle call CBA_fnc_getObjectConfig;
+
+private _return = true;
+
 switch (_hitArea) do {
     case "engine": {
-        _chanceToDetonate = ([_vehicleConfig >> QGVAR(engineDetonationProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _currentFuel * _penChance;
-        _chanceOfFire = ([_vehicleConfig >> QGVAR(engineFireProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _currentFuel * _penChance;
+        private _vehicleConfig = configOf _vehicle;
+        private _currentFuel = fuel _vehicle;
+        private _chanceToDetonate = getNumber (_vehicleConfig >> QGVAR(engineDetonationProb)) * _incendiary * _currentFuel * _penChance;
 
-        private _cookoffIntensity = 4 * _currentFuel;
-        TRACE_6("hit engine",_chanceToDetonate,_chanceOfFire,_incendiary,_chanceOfDetonation,_currentFuel,_cookoffIntensity);
+        TRACE_4("hit engine",_chanceToDetonate,_incendiary,_chanceOfDetonation,_currentFuel);
 
-        if (_isCar) then {
-            _chanceOfFire = 0; // no cookoff for cars
+        // Knock out and detonate vehicle if necessary
+        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount > 0, _totalAmmo > 0, _source, _instigator] call FUNC(handleDetonation)) exitWith {};
+
+        // Cap damage at 0.9 to avoid hard coded blow up
+        _newPartDamage = 0.9 min _newPartDamage;
+
+        // Fatal engine/drive system damage (engine and tracks stop working at 0.9)
+        if (0.8 * _ammoEffectiveness > random 1) then {
+            _newPartDamage = 0.9;
         };
 
-        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
-            [_vehicle] call FUNC(knockOut);
-        };
-
-        // cap damage at 0.9 to avoid hard coded blow up
-        _nextPartDamage = (0.9 min _nextPartDamage);
-
-        // fatal engine/drive system damage
-        if (_nextPartDamage == 0.9 || { 0.8 * _ammoEffectiveness > random 1 }) then {
-            [_vehicle, _hitIndex, _hitpointName, 0.9 * _penChance] call FUNC(addDamage);
+        if (_newPartDamage == 0.9) then {
             _vehicle setVariable [QGVAR(canMove), false];
-        } else {
-            [_vehicle, _hitIndex, _hitpointName, _nextPartDamage * _penChance] call FUNC(addDamage);
         };
 
-        [_vehicle, _chanceOfFire, _cookoffIntensity, _injurer, _hitArea, false] call FUNC(handleCookoff);
+        [_vehicle, _hitPoint, _hitIndex, _newPartDamage * _penChance, _source, _instigator] call FUNC(setDamage);
+
+        // No cookoff for cars
+        if (_isCar) exitWith {};
+
+        private _chanceOfFire = getNumber (_vehicleConfig >> QGVAR(engineFireProb)) * _incendiary * _currentFuel * _penChance;
+        private _cookoffIntensity = 4 * _currentFuel;
+
+        [_vehicle, _chanceOfFire, _cookoffIntensity, _source, _instigator, "engine", false, false] call FUNC(handleCookoff);
     };
     case "hull": {
-        _chanceToDetonate = ([_vehicleConfig >> QGVAR(hullDetonationProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * ((_chanceOfDetonation + _currentFuel) / 2) * _penChance;
-        _chanceOfFire = ([_vehicleConfig >> QGVAR(hullFireProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * ((_chanceOfDetonation + _currentFuel) / 2) * _penChance;
+        private _vehicleConfig = configOf _vehicle;
+        private _currentFuel = fuel _vehicle;
+        private _chanceToDetonate = getNumber (_vehicleConfig >> QGVAR(hullDetonationProb)) * _incendiary * ((_chanceOfDetonation + _currentFuel) / 2) * _penChance;
 
-        private _cookoffIntensity = 1.5 + (_explosiveAmmoCount * _chanceOfFire);
-        TRACE_6("hit hull",_chanceToDetonate,_chanceOfFire,_incendiary,_chanceOfDetonation,_currentFuel,_cookoffIntensity);
+        TRACE_4("hit hull",_chanceToDetonate,_incendiary,_chanceOfDetonation,_currentFuel);
 
-        if (_isCar) then {
-            _chanceOfFire = 0; // no cookoff for cars
+        // Knock out and detonate vehicle if necessary
+        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount > 0, _totalAmmo > 0, _source, _instigator] call FUNC(handleDetonation)) exitWith {
+            [_vehicle, _hitPoint, _hitIndex, 0.89 * _penChance, _source, _instigator] call FUNC(setDamage);
         };
-
-        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
-            [_vehicle, _hitIndex, _hitpointName, 0.89 * _penChance] call FUNC(addDamage);
-            [_vehicle] call FUNC(knockOut);
-        };
-
-        private _hash = _vehicle getVariable [QGVAR(hitpointHash), []];
-        private _hashKeys = [_hash] call CBA_fnc_hashKeys;
 
         // 25% chance of jamming turret - 25% of mobility kill - 25% of both - 75% chance of critical hull damage
         private _rand = random 1;
+
         TRACE_2("rolling hull damage",_ammoEffectiveness,_rand);
+
         private _partKill = [];
+
         if (_ammoEffectiveness > _rand) then {
             _rand = random 1;
+
             TRACE_2("damaged hull part",_ammoEffectiveness,_rand);
+
             switch (true) do {
                 case (_rand < 0.25): {
-                    [_vehicle, _hitIndex, _hitpointName, 0.89 * _penChance] call FUNC(addDamage);
-                    // iterate through all keys and find appropriate turret
-                    [_hash, {
-                        if (_value#0 isEqualTo "turret") then {
-                            _partKill pushBack _key;
+                    [_vehicle, _hitPoint, _hitIndex, 0.89 * _penChance, _source, _instigator] call FUNC(setDamage);
+
+                    // Iterate through all keys and find appropriate turret
+                    {
+                        if ((_y select 0) == "turret") then {
+                            _partKill pushBack _x;
                         };
-                    }] call CBA_fnc_hashEachPair;
+                    } forEach _hitPointHash;
+
                     _vehicle setVariable [QGVAR(canShoot), false];
                 };
                 case (_rand < 0.5): {
-                    [_vehicle, _hitIndex, _hitpointName, 0.89 * _penChance] call FUNC(addDamage);
-                    _partKill = _partKill + ENGINE_HITPOINTS#0;
+                    [_vehicle, _hitPoint, _hitIndex, 0.89 * _penChance, _source, _instigator] call FUNC(setDamage);
+
+                    _partKill append (ENGINE_HITPOINTS select 0);
+
                     if !(_vehicle isKindOf "Wheeled_APC_F") then {
-                        _partKill = _partKill + TRACK_HITPOINTS#0;
+                        _partKill append (TRACK_HITPOINTS select 0);
                     };
 
                     _vehicle setVariable [QGVAR(canMove), false];
                 };
                 case (_rand < 0.75): {
-                    [_vehicle, _hitIndex, _hitpointName, 0.89 * _penChance] call FUNC(addDamage);
-                    _partKill = _partKill + ENGINE_HITPOINTS#0;
+                    [_vehicle, _hitPoint, _hitIndex, 0.89 * _penChance, _source, _instigator] call FUNC(setDamage);
+
+                    _partKill append (ENGINE_HITPOINTS select 0);
+
                     if !(_vehicle isKindOf "Wheeled_APC_F") then {
-                        _partKill = _partKill + TRACK_HITPOINTS#0;
+                        _partKill append (TRACK_HITPOINTS select 0);
                     };
 
-                    // iterate through all keys and find appropriate turret
-                    [_hash, {
-                        if (_value#0 isEqualTo "turret") then {
-                            _partKill pushBack _key;
+                    // Iterate through all keys and find appropriate turret
+                    {
+                        if ((_y select 0) == "turret") then {
+                            _partKill pushBack _x;
                         };
-                    }] call CBA_fnc_hashEachPair;
+                    } forEach _hitPointHash;
 
                     _vehicle setVariable [QGVAR(canMove), false];
                     _vehicle setVariable [QGVAR(canShoot), false];
                 };
-                default{};
             };
         };
 
         {
+            [_vehicle, _x, -1, _penChance, _source, _instigator] call FUNC(setDamage);
+
             TRACE_1("doing damage to hitpoint",_x);
-            [_vehicle, -1, _x, 1 * _penChance] call FUNC(addDamage);
         } forEach _partKill;
 
-        [_vehicle, _chanceOfFire, _cookoffIntensity, _injurer, "", true] call FUNC(handleCookoff);
+        // No cookoff for cars
+        if (_isCar) exitWith {};
+
+        private _chanceOfFire = getNumber (_vehicleConfig >> QGVAR(hullFireProb)) * _incendiary * ((_chanceOfDetonation + _currentFuel) / 2) * _penChance;
+        private _cookoffIntensity = 1.5 + (_explosiveAmmoCount * _chanceOfFire);
+
+        [_vehicle, _chanceOfFire, _cookoffIntensity, _source, _instigator] call FUNC(handleCookoff);
     };
     case "turret": {
-        _chanceToDetonate = ([_vehicleConfig >> QGVAR(turretDetonationProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _chanceOfDetonation * _penChance;
-        _chanceOfFire = ([_vehicleConfig >> QGVAR(turretFireProb), "NUMBER", 0] call CBA_fnc_getConfigEntry) * _incendiary * _chanceOfDetonation * _penChance;
+        private _vehicleConfig = configOf _vehicle;
+        private _chanceToDetonate = getNumber (_vehicleConfig >> QGVAR(turretDetonationProb)) * _incendiary * _chanceOfDetonation * _penChance;
 
-        private _cookoffIntensity = _explosiveAmmoCount * _chanceOfFire;
-        TRACE_6("hit turret",_chanceToDetonate,_chanceOfFire,_incendiary,_chanceOfDetonation,_currentFuel,_cookoffIntensity);
+        TRACE_3("hit turret",_chanceToDetonate,_incendiary,_chanceOfDetonation);
 
-        if (_isCar) then {
-            _chanceOfFire = 0; // no cookoff for cars
-        };
-
-        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount, _nonExplosiveAmmoCount, _injurer] call FUNC(handleDetonation)) exitWith {
-            [_vehicle] call FUNC(knockOut);
-        };
+        if ([_vehicle, _chanceToDetonate, _explosiveAmmoCount > 0, _totalAmmo > 0, _source, _instigator] call FUNC(handleDetonation)) exitWith {};
 
         if (0.8 * _ammoEffectiveness > random 1) then {
             TRACE_1("damaged turret",_ammoEffectiveness * 0.8);
-            [_vehicle, _hitIndex, _hitpointName, 1 * _penChance] call FUNC(addDamage);
+
+            [_vehicle, _hitPoint, _hitIndex, _penChance, _source, _instigator] call FUNC(setDamage);
+
             _vehicle setVariable [QGVAR(canShoot), false];
         };
 
-        [_vehicle, _chanceOfFire, _cookoffIntensity, _injurer, "", true] call FUNC(handleCookoff);
+        // No cookoff for cars
+        if (_isCar) exitWith {};
+
+        private _chanceOfFire = getNumber (_vehicleConfig >> QGVAR(turretFireProb)) * _incendiary * _chanceOfDetonation * _penChance;
+        private _cookoffIntensity = _explosiveAmmoCount * _chanceOfFire;
+
+        [_vehicle, _chanceOfFire, _cookoffIntensity, _source, _instigator] call FUNC(handleCookoff);
     };
     case "gun": {
-        TRACE_5("hit gun",_chanceToDetonate,_chanceOfFire,_incendiary,_chanceOfDetonation,_currentFuel);
+        TRACE_2("hit gun",_addedDamage,_minDamage);
+
         if (0.8 * _ammoEffectiveness > random 1) then {
             TRACE_1("damaged gun",_ammoEffectiveness * 0.8);
-            [_vehicle, _hitIndex, _hitpointName, 1 * _penChance] call FUNC(addDamage);
+
+            [_vehicle, _hitPoint, _hitIndex, _penChance, _source, _instigator] call FUNC(setDamage);
+
             _vehicle setVariable [QGVAR(canShoot), false];
         };
     };
     case "track": {
-        private _damage = (0.1 max (0.1 * _newDamage / _minDamage)) min 1;
-        [_vehicle, _hitIndex, _hitpointName, (_currentPartDamage + _damage) * _penChance] call FUNC(addDamage);
-        TRACE_3("damaged track",_damage,_newDamage,_minDamage);
+        private _damage = (0.1 max (0.1 * _addedDamage / _minDamage)) min 1;
+
+        [_vehicle, _hitPoint, _hitIndex, (_currentPartDamage + _damage) * _penChance] call FUNC(setDamage);
+
+        TRACE_3("damaged track",_damage,_addedDamage,_minDamage);
 
         if ((_vehicle getHitIndex _hitIndex) >= 1) then {
             _vehicle setVariable [QGVAR(canMove), false];
         };
     };
     case "wheel": {
-        [_vehicle, _hitIndex, _hitpointName, (_currentPartDamage + _newDamage) * _penChance] call FUNC(addDamage);
-        TRACE_1("damaged wheel",_newDamage);
+        [_vehicle, _hitPoint, _hitIndex, (_currentPartDamage + _addedDamage) * _penChance, _source, _instigator] call FUNC(setDamage);
+
+        TRACE_1("damaged wheel",_addedDamage);
     };
     case "fuel": {
-        _chanceOfFire = (_incendiary * _currentFuel * _penChance) / 2;
+        private _damage = (0.1 max (0.1 * _addedDamage / _minDamage)) min 1;
+        [_vehicle, _hitPoint, _hitIndex, (_currentPartDamage + _damage) * _penChance, _source, _instigator] call FUNC(setDamage);
+
+        // No cookoff for cars
+        if (_isCar) exitWith {};
+
+        private _currentFuel = fuel _vehicle;
+        private _chanceOfFire = (_incendiary * _currentFuel * _penChance) / 2;
         private _cookoffIntensity = _currentFuel * 5;
-        TRACE_2("damaged fuel",_chanceOfFire,_cookoffIntensity);
 
-        if (_isCar) then {
-            _chanceOfFire = 0; // no cookoff for cars
-        };
+        TRACE_4("damaged fuel",_chanceOfFire,_incendiary,_cookoffIntensity,_currentFuel);
 
-        [_vehicle, _chanceOfFire, _cookoffIntensity, _injurer, "", false] call FUNC(handleCookoff);
-
-        private _damage = (0.1 max (0.1 * _newDamage / _minDamage)) min 1;
-        [_vehicle, _hitIndex, _hitpointName, (_currentPartDamage + _damage) * _penChance] call FUNC(addDamage);
+        [_vehicle, _chanceOfFire, _cookoffIntensity, _source, _instigator, "", false, false] call FUNC(handleCookoff);
     };
     case "slat": {
         TRACE_2("hit slat",_warheadType,_warheadTypeStr);
-        // incredibly small chance of AP destroying SLAT
-        if (_warheadType isEqualTo WARHEAD_TYPE_HEAT || { _warheadType isEqualTo WARHEAD_TYPE_TANDEM } || { _warheadType isEqualTo WARHEAD_TYPE_HE } || { 0.01 > random 1 }) then {
+
+        // Incredibly small chance of AP destroying SLAT
+        if (_warheadType in [WARHEAD_TYPE_HE, WARHEAD_TYPE_AP, WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM] || {0.01 > random 1}) then {
             private _currentDamage = _vehicle getHitIndex _hitIndex;
+
             TRACE_3("damaged slat",_warheadType,_warheadTypeStr,_currentDamage);
 
-            if (_warheadType isEqualTo WARHEAD_TYPE_HEAT || { _warheadType isEqualTo WARHEAD_TYPE_TANDEM }) then {
-                [_vehicle, _hitIndex, _hitpointName, 1] call FUNC(addDamage);
+            if (_warheadType in [WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM, WARHEAD_TYPE_AP]) then {
+                [_vehicle, _hitPoint, _hitIndex, 1, _source, _instigator] call FUNC(setDamage);
             } else {
-                [_vehicle, _hitIndex, _hitpointName, _currentDamage + (0.5 max random 1)] call FUNC(addDamage);
+                [_vehicle, _hitPoint, _hitIndex, _currentDamage + (0.5 max random 1), _source, _instigator] call FUNC(setDamage);
             };
 
-            if (_currentDamage < 1 && _warheadType isEqualTo WARHEAD_TYPE_HEAT) then {
+            if (_currentDamage < 1 && {_warheadType == WARHEAD_TYPE_HEAT}) then {
                 _return = false;
             };
         };
     };
     case "era": {
         TRACE_2("hit era",_warheadType,_warheadTypeStr);
-        if (_warheadType isEqualTo WARHEAD_TYPE_HEAT || { _warheadType isEqualTo WARHEAD_TYPE_TANDEM } || { 0.05 > random 1 }) then {
-            private _currentDamage = _vehicle getHitIndex _hitIndex;
-            TRACE_3("damaged era",_warheadType,_warheadTypeStr,_currentDamage);
-            [_vehicle, _hitIndex, _hitpointName, 1] call FUNC(addDamage);
 
-            // dont process anymore damage if this is HEAT - shouldnt happen anyway but ARMA says it does so you know
-            if (_currentDamage < 1 && _warheadType isEqualTo WARHEAD_TYPE_HEAT) then {
+        if (_warheadType in [WARHEAD_TYPE_AP, WARHEAD_TYPE_HEAT, WARHEAD_TYPE_TANDEM] || {0.05 > random 1}) then {
+            private _currentDamage = _vehicle getHitIndex _hitIndex;
+
+            TRACE_3("damaged era",_warheadType,_warheadTypeStr,_currentDamage);
+
+            [_vehicle, _hitPoint, _hitIndex, 1, _source, _instigator] call FUNC(setDamage);
+
+            // Don't process anymore damage if this is HEAT - shouldn't happen anyway but Arma says it does so you know
+            if (_currentDamage < 1 && {_warheadType == WARHEAD_TYPE_HEAT}) then {
                 _return = false;
             };
         };
     };
     default {
         TRACE_1("hit unknown hitpoint??",_hitArea);
-    }
+    };
 };
 
 _return

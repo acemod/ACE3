@@ -108,19 +108,7 @@ class CfgWeapons {
         EGVAR(overpressure,offset) = 1.65;
     };
 
-    class H_HelmetB;
-    class rhs_tsh4: H_HelmetB {
-        HEARING_PROTECTION_VICCREW;
-    };
-
-    class rhs_6b47_bare;
-    class rhs_6b48: rhs_6b47_bare {
-        HEARING_PROTECTION_VICCREW;
-    };
-
-    class rhs_zsh7a: H_HelmetB {
-        HEARING_PROTECTION_VICCREW;
-    };
+    class rhs_zsh7a;
     class rhs_zsh7a_alt: rhs_zsh7a {
         ACE_Protection = 1;
     };
@@ -131,22 +119,6 @@ class CfgWeapons {
     class rhs_zsh7a_mike_green;
     class rhs_zsh7a_mike_green_alt: rhs_zsh7a_mike_green {
         ACE_Protection = 1;
-    };
-
-    class rhs_gssh18: H_HelmetB {
-        HEARING_PROTECTION_EARMUFF;
-    };
-
-    class rhs_6b47;
-    class rhs_6b47_6m2: rhs_6b47 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhs_6b47_6m2_1: rhs_6b47 {
-        HEARING_PROTECTION_PELTOR;
-    };
-
-    class rhs_6m2: H_HelmetB {
-        HEARING_PROTECTION_PELTOR;
     };
 
     class rhs_weap_d81;

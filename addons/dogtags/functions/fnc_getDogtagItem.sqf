@@ -35,7 +35,7 @@ private _item = format ["ACE_dogtag_%1", GVAR(idCounter)];
 // Dog tags have no mass, so no need to check if it can fit in container, but check if unit has an inventory at all
 [_player, _item, true] call CBA_fnc_addItem;
 
-_name = _dogtagData param [0, ""];
+private _name = _dogtagData param [0, ""];
 
 // If data doesn't exist or body has no name, set name as "unknown"
 if (_name == "") then {

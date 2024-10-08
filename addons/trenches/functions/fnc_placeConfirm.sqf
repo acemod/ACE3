@@ -18,8 +18,8 @@
 params ["_unit"];
 
 // enable running again
-[_unit, "forceWalk", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // remove dig pfh
 [GVAR(digPFH)] call CBA_fnc_removePerFrameHandler;
@@ -64,7 +64,7 @@ for [{private _ix = -_dx/2},{_ix <= _dx/2},{_ix = _ix + _dx/3}] do {
             _pos set [2, getTerrainHeightASL _pos];
             _pos2 = +_pos;
             _pos2 set [2, getTerrainHeightASL _pos + 1];
-            drawLine3D [ASLtoAGL _pos, ASLtoAGL _pos2, [1,1,0,1]];
+            drawLine3D [ASLToAGL _pos, ASLToAGL _pos2, [1,1,0,1]];
         #endif
     };
 };

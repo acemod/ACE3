@@ -4,29 +4,34 @@
  * Forces the AI currently in a vehicle to bail out.
  *
  * Arguments:
- * 0: The vehicle in which to bail out <OBJECT>
+ * 0: Vehicle <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [tank2] call ace_vehicle_damage_fnc_abandon;
+ * cursorObject call ace_vehicle_damage_fnc_abandon
  *
  * Public: No
  */
 
 params ["_vehicle"];
-TRACE_2("abandon",_vehicle,(crew _vehicle) select {alive _x});
 
-if (_vehicle getVariable [QGVAR(allowCrewInImmobile), false]) exitWith {}; // check for API
+// Check for API
+if (_vehicle getVariable [QGVAR(allowCrewInImmobile), false]) exitWith {
+    TRACE_1("API prevented crew from dismounting",_vehicle);
+};
+
+TRACE_1("abandon",_vehicle);
 
 [{
     params ["_vehicle"];
+
     _vehicle allowCrewInImmobile false;
 
-    private _center = getPosASL _vehicle;
-    TRACE_2("bailing out crew after delay",_vehicle,_center);
+    TRACE_2("bailing out crew after delay",_vehicle,crew _vehicle);
+
     {
-        [QGVAR(bailOut), [_center, _x, _vehicle], _x] call CBA_fnc_targetEvent;
-    } forEach crew _vehicle;
-}, _this, random MAX_CREW_BAILOUT_TIME] call CBA_fnc_waitAndExecute;
+        [QGVAR(bailOut), [_vehicle, _x], _x] call CBA_fnc_targetEvent;
+    } forEach (crew _vehicle);
+}, _vehicle, random MAX_CREW_BAILOUT_TIME] call CBA_fnc_waitAndExecute;

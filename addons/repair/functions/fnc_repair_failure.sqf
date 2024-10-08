@@ -59,7 +59,7 @@ if (!isNil "_weaponSelect") then {
 
 
 // Record specific callback
-private _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
+private _config = (configFile >> "ACE_Repair" >> "Actions" >> _className);
 
 private _callback = getText (_config >> "callbackFailure");
 if (isNil _callback) then {

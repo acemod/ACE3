@@ -80,7 +80,7 @@
             <Italian>Scassinando il veicolo...</Italian>
             <Portuguese>Usando Mixa...</Portuguese>
             <Japanese>鍵をこじ開けています・・・</Japanese>
-            <Korean>문따는 중...</Korean>
+            <Korean>문 따는 중...</Korean>
             <Chinesesimp>正在开锁...</Chinesesimp>
             <Chinese>解鎖中...</Chinese>
             <Turkish>Maymuncuklanıyor...</Turkish>
@@ -288,6 +288,7 @@
             <German>Unklaren Sperrzustand entfernen</German>
             <Chinesesimp>移除不明确的上锁状态</Chinesesimp>
             <Korean>불분명한 잠금상태 제거</Korean>
+            <Portuguese>Remover estado de bloqueio ambíguo</Portuguese>
         </Key>
         <Key ID="STR_ACE_VehicleLock_VehicleStartingLockState_AsIs">
             <English>As Is</English>
