@@ -114,7 +114,10 @@ GVAR(objectActions) = [
     [QGVAR(checkSize), LLSTRING(checkSize), "\a3\ui_f\data\igui\cfg\simpletasks\types\box_ca.paa",
         {
             //IGNORE_PRIVATE_WARNING ["_target", "_player"];
-            format [LLSTRING(SizeMenu), _target call FUNC(getSizeItem)];
+            [
+                [format [LLSTRING(SizeMenu), _target call FUNC(getSizeItem)]],
+                true
+            ] call CBA_fnc_notify;
         },
         {
             //IGNORE_PRIVATE_WARNING ["_target", "_player"];
