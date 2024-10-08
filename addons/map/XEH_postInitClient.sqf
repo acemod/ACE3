@@ -71,7 +71,7 @@ GVAR(hasWatch) = true;
     if (_slot != TYPE_WATCH) exitWith {};
 
     GVAR(hasWatch) = _assign && {_item isKindOf ["ItemWatch", configFile >> "CfgWeapons"]};
-}] call EFUNC(common,addPlayerEH);
+}] call CBA_fnc_addBISPlayerEventHandler;
 
 ["unit", {
     params ["_newPlayer"];
