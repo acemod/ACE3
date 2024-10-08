@@ -17,7 +17,7 @@
  * Public: No
  */
 
-if (missionNameSpace getVariable [QGVAR(setPlayerOwnerRunning), false]) exitWith {};
+if (missionNamespace getVariable [QGVAR(setPlayerOwnerRunning), false]) exitWith {};
 GVAR(setPlayerOwnerRunning) = true;
 
 if (isServer) then {

@@ -40,6 +40,7 @@ if (isNull _display) then {
         if (ACE_player distance _target > MAX_DISTANCE && {vehicle _target != vehicle ACE_player}) exitWith {
             [_pfhID] call CBA_fnc_removePerFrameHandler;
             QGVAR(RscPatientInfo) cutFadeOut 0.3;
+            if (((getPosATL _target) # 2) < -9) exitWith {}; // handle dragging corpse/clone
             [[ELSTRING(medical,DistanceToFar), _target call EFUNC(common,getName)], 2] call EFUNC(common,displayTextStructured);
         };
 

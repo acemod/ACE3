@@ -25,7 +25,7 @@ if (isNil QGVAR(arguments)) then {
     _currentShooter setVariable ["ace_missileguidance_target", nil, false];
 
     GVAR(arguments) = [
-        diag_frameno,       // Last run frame
+        diag_frameNo,       // Last run frame
         objNull,            // currentTargetObject
         0,                  // Lock Start Time
         0,                  // Next Sound timer
@@ -37,7 +37,7 @@ if (isNil QGVAR(arguments)) then {
     [{
         if (isNull (uiNamespace getVariable ["ACE_RscOptics_javelin", displayNull])) exitWith {true};
         GVAR(arguments) params ["_lastRunFrame"];
-        (diag_frameno < _lastRunFrame) || {diag_frameno > (_lastRunFrame + 1)}
+        (diag_frameNo < _lastRunFrame) || {diag_frameNo > (_lastRunFrame + 1)}
     }, {
         TRACE_1("old/null display - ending optic draw",_this);
         private _fireDisabledEH = GVAR(arguments) param [4, -1];

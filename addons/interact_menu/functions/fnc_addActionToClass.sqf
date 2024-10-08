@@ -30,7 +30,7 @@ private _useInheritance = _this param [4, false, [false]];
 private _excludedClasses = _this param [5, [], [[]]];
 TRACE_6("addActionToClass",_objectType,_typeNum,_parentPath,_action,_useInheritance,_excludedClasses);
 
-if (_useInheritance) exitwith {
+if (_useInheritance) exitWith {
     BEGIN_COUNTER(addAction);
     private _cfgVehicles = configFile >> "CfgVehicles"; // store this so we don't resolve for every element
     _excludedClasses = (_excludedClasses apply {configName (_cfgVehicles >> _x)}) - [""]; // ends up being faster than toLower'ing everything else

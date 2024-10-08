@@ -228,10 +228,10 @@ private _faceCategory = "";
             _faceCache set [configName _x, [getText (_x >> "displayName"), _modPicture, _faceCategory]];
         };
     } forEach ("true" configClasses _x);
-} forEach ("true" configClasses (configfile >> "CfgFaces"));
+} forEach ("true" configClasses (configFile >> "CfgFaces"));
 
 // Get all voices
-private _voiceCache = (configProperties [configFile >> "CfgVoice", "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [configfile >> "CfgVoice" >> "NoVoice"];
+private _voiceCache = (configProperties [configFile >> "CfgVoice", "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [configFile >> "CfgVoice" >> "NoVoice"];
 _voiceCache = _voiceCache apply {configName _x};
 
 // Get all insignia

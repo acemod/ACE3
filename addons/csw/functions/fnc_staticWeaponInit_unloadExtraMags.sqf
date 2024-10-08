@@ -5,8 +5,7 @@
  *
  * Arguments:
  * 0: CSW <OBJECT>
- * 1: Using advanced assembly <BOOL>
- * 2: Empty weapon <BOOL>
+ * 1: Empty weapon <BOOL>
  *
  * Return Value:
  * None
@@ -17,9 +16,8 @@
  * Public: No
  */
 
-params ["_vehicle", "_assemblyMode", "_emptyWeapon"];
-TRACE_3("staticWeaponInit_unloadExtraMags",_vehicle,_assemblyMode,_emptyWeapon);
-if (!_assemblyMode) exitWith {};
+params ["_vehicle", "_emptyWeapon"];
+TRACE_2("staticWeaponInit_unloadExtraMags",_vehicle,_emptyWeapon);
 
 private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
 private _storeExtraMagazines = GVAR(handleExtraMagazines);
@@ -62,10 +60,12 @@ private _containerMagazineCount = [];
 
 TRACE_1("Remove all loaded magazines",_magsToRemove);
 {
-    _vehicle removeMagazinesTurret _x;
+    [QEGVAR(common,removeMagazinesTurret), [_vehicle, _x select 0, _x select 1], _vehicle, _x select 1] call CBA_fnc_turretEvent;
+
     if ((_loadedMagazineInfo select [0,2]) isEqualTo _x) then {
         TRACE_1("Re-add the starting mag",_loadedMagazineInfo);
-        _vehicle addMagazineTurret _loadedMagazineInfo;
+
+        [QEGVAR(common,addMagazineTurret), [_vehicle, _loadedMagazineInfo], _vehicle, _x select 1] call CBA_fnc_turretEvent;
     };
 } forEach _magsToRemove;
 
@@ -83,7 +83,7 @@ if (_secondaryWeaponMagazines isNotEqualTo []) then {
 
         // If the magazine can be added to the static weapon, do it now
         if (_vehicleMag in _compatibleMagazinesTurret) then {
-            _vehicle addMagazineTurret [_vehicleMag, _turret, _x select 1];
+            [QEGVAR(common,addMagazineTurret), [_vehicle, [_vehicleMag, _turret, _x select 1]], _vehicle, _turret] call CBA_fnc_turretEvent;
         } else {
             // Find a suitable container to place items in if necessary
             if (isNull _container) then {
