@@ -50,18 +50,18 @@ private _yawRate = if (_timestep == 0) then {
 };
 _navigationParams set [3, _currentYaw];
 
-private _yawModifier = if (_yawChange == 0) then {
-    1
-} else {
-    abs (_yawRate / _yawChange)
-};
+// private _yawModifier = if (_yawChange == 0) then {
+//     1
+// } else {
+//     abs (_yawRate / _yawChange)
+// };
 
 private _yawRateDifference = _yawChange - _yawRate;
-private _yawChangeDerivative = if (_timestep == 0) then {
-    0
-} else {
-    (_yawRateDifference - _lastYawRateDifference) / _timestep
-};
+// private _yawChangeDerivative = if (_timestep == 0) then {
+//     0
+// } else {
+//     (_yawRateDifference - _lastYawRateDifference) / _timestep
+// };
 _navigationParams set [6, _yawRateDifference];
 
 private _desiredYawChange = _yawRateDifference * PROPORTIONALITY_CONSTANT + _yawRateDifference * 2;
