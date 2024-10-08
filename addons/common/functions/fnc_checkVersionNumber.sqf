@@ -32,7 +32,7 @@ private _cfgPatches = configFile >> "CfgPatches";
 private _versions = [];
 
 {
-    // Determine the version of addon. Parse it into a floating point number for comparison. Only major and minor are used.
+    // Determine the version of the addon. Parse it into a floating point number for comparison. Only major and minor are used.
     // If no version is found or a parsing error occurs, the version is zero.
     private _versionCfg = _cfgPatches >> _x >> "version";
     private _version = switch (true) do {
@@ -40,7 +40,7 @@ private _versions = [];
         case (isNumber _versionCfg): {
             getNumber _versionCfg
         };
-        // Addon Builder converts the version to a string if it is an invalid float -> "MAJOR.MINOR.PATCH"
+        // Addon Builder converts the version into a string if it is an invalid float -> "MAJOR.MINOR.PATCH"
         case (isText _versionCfg): {
             (getText _versionCfg splitString ".") params [["_major", "0"], ["_minor", "0"]];
 
