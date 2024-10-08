@@ -21,8 +21,8 @@
 params ["_unit", "_ladder"];
 
 // prevent the placing unit from running
-[_unit, "forceWalk", "ACE_Ladder", true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_Ladder", true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 {
     _ladder animate [_x, 0];

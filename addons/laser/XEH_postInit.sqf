@@ -21,10 +21,10 @@ if (hasInterface) then {
         ["ACE_controlledUAV", {
             params ["_UAV", "_seatAI", "_turret", "_position"];
             TRACE_4("ACE_controlledUAV EH",_UAV,_seatAI,_turret,_position);
-            if (!isNull _seatAI) then {
-                [_seatAI] call FUNC(showVehicleHud);
-            } else {
+            if (isNull _seatAI) then {
                 [ace_player] call FUNC(showVehicleHud);
+            } else {
+                [_seatAI] call FUNC(showVehicleHud);
             };
         }] call CBA_fnc_addEventHandler;
     }] call CBA_fnc_addEventHandler;

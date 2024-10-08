@@ -75,7 +75,7 @@
             <German>Maximale Reichweite zwischen Spielern um Kartenzeichen anzuzeigen</German>
             <Spanish>Máxima distancia a la cual pueden verse el indicador de gestos</Spanish>
             <French>Définit le rayon au-delà duquel un joueur ne verra plus l'indicateur de pointage des autres joueurs.</French>
-            <Japanese>マップ ジェスチャのインジケータを表示可能なプレーヤー間の最大距離</Japanese>
+            <Japanese>マップ ジェスチャのインジケータを表示可能なプレーヤー間の最大範囲距離</Japanese>
             <Korean>플레이어간에 지도 신호 표시거리를 설정합니다.</Korean>
             <Chinesesimp>设定地图指示显示的最大范围距离</Chinesesimp>
             <Chinese>設定地圖指示器顯示的最大範圍距離</Chinese>

@@ -107,7 +107,7 @@
             <German>Gurt anhängen</German>
             <Hungarian>Töltényheveder összekötése</Hungarian>
             <Italian>Combina nastro</Italian>
-            <Portuguese>Ligar cintos de munição</Portuguese>
+            <Portuguese>Conectar cintos de munição</Portuguese>
             <Japanese>ベルトを繋げる</Japanese>
             <Korean>탄띠 연결</Korean>
             <Chinesesimp>连接弹链</Chinesesimp>
@@ -123,7 +123,7 @@
             <German>Gurt anhängen...</German>
             <Hungarian>Töltényheveder összekötése folyamatban...</Hungarian>
             <Italian>Combinando nastro...</Italian>
-            <Portuguese>Ligando cintos...</Portuguese>
+            <Portuguese>Conectando cintos...</Portuguese>
             <Japanese>ベルトを繋げています・・・</Japanese>
             <Korean>탄띠 연결 중...</Korean>
             <Chinesesimp>正在连接弹链...</Chinesesimp>
@@ -139,6 +139,7 @@
             <Korean>탄띠가 연결되었습니다</Korean>
             <Russian>Ремень был пристегнут</Russian>
             <Spanish>Cinta enganchada</Spanish>
+            <Portuguese>Cinto conectado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Reload_BeltNotLinked">
             <English>Belt could not be linked</English>
@@ -150,6 +151,7 @@
             <Korean>탄띠를 연결할 수 없습니다</Korean>
             <Russian>Ремень не удалось пристегнуть</Russian>
             <Spanish>La cinta no ha podido ser enganchada</Spanish>
+            <Portuguese>Cinto não pôde ser conectado</Portuguese>
         </Key>
     </Package>
 </Project>

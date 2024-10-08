@@ -71,3 +71,12 @@ Adding new elements through scripting is currently not possible.
 | 1  | `true` | Set element, preventing others to change it (except config, which always has priority) |
 | 2  | `"ammoCount"` | Element name to modify |
 | 3  | `false` | Hide the element |
+
+### 2.2 Hide UI Keybind
+
+There is a keybind that will hide most UI elements (<kbd>Ctrl</kbd>-<kbd>F12</kbd> by default).
+It triggers an event that is listenable allowing other mods to hide their displays.
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_ui_hideHud` | `[_set]` | Local | Listen | _set=true means things should be hidden

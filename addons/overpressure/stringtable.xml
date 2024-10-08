@@ -52,6 +52,7 @@
             <Italian>Coefficiente distanza di svampata</Italian>
             <Japanese>後方噴射の距離係数</Japanese>
             <Korean>후폭풍 거리 계수</Korean>
+            <French>Multiplicateur de distance de réflexion</French>
         </Key>
         <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_toolTip">
             <English>Scales the backblast effect</English>
@@ -60,6 +61,7 @@
             <Italian>Scala l'effetto delle svampate dei lanciarazzi</Italian>
             <Japanese>無反動砲による後方噴射の影響範囲の大きさ</Japanese>
             <Korean>후폭풍 효과의 스케일을 조정합니다</Korean>
+            <French>Multiplicateur de distance de réflexion</French>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastRange">
             <English>Backblast range</English>
@@ -72,7 +74,7 @@
             <Russian>Дальность реактивной струи</Russian>
             <Portuguese>Alcance do Sopro de Disparo</Portuguese>
             <Hungarian>Utóhatás távolsága</Hungarian>
-            <French>Portée du backblast</French>
+            <French>Portée du souffle</French>
             <Czech>Dosah zpětné tlakové vlny (backblast)</Czech>
             <Spanish>Alcance del cono de fuego</Spanish>
             <Korean>후폭풍 거리</Korean>
@@ -88,7 +90,7 @@
             <Russian>Угол реактивной струи</Russian>
             <Portuguese>Ângulo do Sopro de Disparo</Portuguese>
             <Hungarian>Utóhatás aránya</Hungarian>
-            <French>Angle du backblast</French>
+            <French>Angle du souffle</French>
             <Czech>Úhel zpětné tlakové vlny (backblast)</Czech>
             <Spanish>Ángulo del cono de fuego</Spanish>
             <Korean>후폭풍 각도</Korean>

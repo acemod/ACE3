@@ -134,10 +134,10 @@
             <Spanish>Equipa el helicoptero seleccionado con un Sistema de Inserción/Extracción Rápida por Cuerda</Spanish>
             <Italian>Equipaggia l'elicottero selezionato con il Fast Rope Insertion Extraction System</Italian>
             <Czech>Vybavit vybraný vrtulník systémem Fast Rope Insertion Extraction (FRIES)</Czech>
-            <Portuguese>Equipa um helicóptero selecionado com um sistema de Fast Rope Insertion Extraction System</Portuguese>
+            <Portuguese>Equipa o helicóptero selecionado com um Sistema de Inserção/Extração Rápida por Corda</Portuguese>
             <Russian>Снаряжает выбранный вертолет оборудованием для спуска десанта по канатам</Russian>
             <Japanese>選択されたヘリコプターで Fast Rope Insertion Extraction System を使えるようにします。</Japanese>
-            <Korean>선택된 헬리콥터에 패스트로프 투입 및 탈출 시스템을 장착합니다.</Korean>
+            <Korean>선택된 헬리콥터에 패스트로프 투입 및 탈출 시스템(FRIES)을 장착합니다.</Korean>
             <Chinesesimp>使指定的直升机启用快速绳降及撤离系统</Chinesesimp>
             <Chinese>使指定的直升機啟用快速繩降及撤離系統</Chinese>
         </Key>
@@ -298,6 +298,7 @@
             <German>Schnelles-Abseilen</German>
             <Italian>Fast Rope</Italian>
             <Korean>패스트로프</Korean>
+            <Portuguese>Descida rápida pela corda</Portuguese>
         </Key>
         <Key ID="STR_ACE_Fastroping_setting_requireRopeItems_displayName">
             <English>Require rope item to deploy</English>
@@ -321,7 +322,7 @@
             <Japanese>FRIESの自動装備</Japanese>
             <German>FRIES automatisch ausrüsten</German>
             <Italian>Auto-Aggiungi FRIES</Italian>
-            <Korean>FRIES 로프 자동 장착</Korean>
+            <Korean>패스트로프 자동 장착</Korean>
             <French>Equipement automatique FRIES</French>
             <Portuguese>Auto-equipar FRIES</Portuguese>
             <Russian>Авто-подготовка канатов</Russian>
@@ -333,7 +334,7 @@
             <Japanese>FRIESをサポートするヘリコプターに自動的にFRIESを追加します。</Japanese>
             <German>FRIES automatisch Helikoptern hinzufügen, die es unterstützen</German>
             <Italian>Aggiunge il sistema FRIES in automatico su elicotteri compatibili.</Italian>
-            <Korean>로프를 지원하는 헬기에 자동으로 FRIES 로프를 추가합니다.</Korean>
+            <Korean>로프를 지원하는 헬기에 자동으로 패스트로프를 추가합니다.</Korean>
             <French>Ajoute automatiquement des FRIES aux hélicoptères qui les supportent.</French>
             <Portuguese>Adiciona automaticamente FRIES a helicópteros que os suportam.</Portuguese>
             <Russian>Автоматически добавляйте канаты в вертолеты, которые их поддерживают.</Russian>

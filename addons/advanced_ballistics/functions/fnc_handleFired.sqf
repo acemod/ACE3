@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal, Ruthberg
+ * Author: Glowbal, Ruthberg, Brett Mayson
  *
  * Handles advanced ballistics for (BulletBase) projectiles. Called from the unified fired EH only for players.
  *
@@ -62,11 +62,11 @@ if (_abort) exitWith {};
 // Get Weapon and Ammo Configurations
 private _AmmoCacheEntry = uiNamespace getVariable format[QGVAR(%1), _ammo];
 if (isNil "_AmmoCacheEntry") then {
-     _AmmoCacheEntry = _ammo call FUNC(readAmmoDataFromConfig);
+    _AmmoCacheEntry = _ammo call FUNC(readAmmoDataFromConfig);
 };
 private _WeaponCacheEntry = uiNamespace getVariable format[QGVAR(%1), _weapon];
 if (isNil "_WeaponCacheEntry") then {
-     _WeaponCacheEntry = _weapon call FUNC(readWeaponDataFromConfig);
+    _WeaponCacheEntry = _weapon call FUNC(readWeaponDataFromConfig);
 };
 
 _AmmoCacheEntry params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocityVariationSD"];
@@ -120,8 +120,26 @@ if (_caliber * _bulletLength * _bulletMass * _barrelTwist > 0) then {
     _stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call FUNC(calculateStabilityFactor);
 };
 
-GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
-
-"ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _ammoCount, _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _transonicStabilityCoef, getPosASL _projectile, _bulletVelocity, EGVAR(common,mapLatitude), EGVAR(weather,currentTemperature), EGVAR(common,mapAltitude), EGVAR(weather,currentHumidity), EGVAR(weather,currentOvercast), CBA_missionTime toFixed 6];
-
-GVAR(allBullets) pushBack [_projectile, _caliber, _bulletTraceVisible, GVAR(currentbulletID)];
+("ace" callExtension [
+    "ballistics:bullet:new", [
+        _ammoCount,
+        _airFriction,
+        _ballisticCoefficients,
+        _velocityBoundaries,
+        _atmosphereModel,
+        _dragModel,
+        _stabilityFactor,
+        _twistDirection,
+        _transonicStabilityCoef,
+        _bulletVelocity,
+        EGVAR(common,mapLatitude),
+        EGVAR(weather,currentTemperature),
+        EGVAR(common,mapAltitude),
+        EGVAR(weather,currentHumidity),
+        EGVAR(weather,currentOvercast),
+        CBA_missionTime toFixed 6
+    ]
+]) params ["_id", "_code"];
+if (_code == 0) then {
+    GVAR(allBullets) set [_id, [_projectile, _caliber, _bulletTraceVisible]];
+};

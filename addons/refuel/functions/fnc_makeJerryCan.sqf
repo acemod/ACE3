@@ -38,6 +38,8 @@ if (isServer) then {
     [QGVAR(jerryCanInitalized), [_target]] call CBA_fnc_globalevent;
 };
 
+//IGNORE_PRIVATE_WARNING ["_player", "_target"];
+
 // Main Action
 private _action = [QGVAR(Refuel),
     localize LSTRING(Refuel),

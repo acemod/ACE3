@@ -4,7 +4,7 @@ class CfgVehicles {
         class ACE_Actions {
             class ACE_Dogtag {
                 displayName = CSTRING(itemName);
-                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canTakeDogtag));
+                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canCheckDogtag));
                 statement = "";
                 exceptions[] = {"isNotSwimming", "isNotInside"};
                 showDisabled = 0;

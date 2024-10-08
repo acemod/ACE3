@@ -44,7 +44,7 @@
             <French>Avancé</French>
             <Hungarian>Fejlett</Hungarian>
             <Italian>Avanzato</Italian>
-            <Japanese>アドバンスド</Japanese>
+            <Japanese>高度な</Japanese>
             <Korean>고급</Korean>
             <Chinese>進階</Chinese>
             <Chinesesimp>进阶</Chinesesimp>
@@ -658,7 +658,7 @@
             <Hungarian>Az ACE-súgók hátterének színe.</Hungarian>
             <Portuguese>A cor de fundo das hints do ACE.</Portuguese>
             <Japanese>ACE によるヒントの背景色を指定します。</Japanese>
-            <Korean>ACE힌트의 배경색을 정합니다.</Korean>
+            <Korean>ACE 힌트의 배경색을 정합니다.</Korean>
             <Chinese>設定ACE提示的背景顏色.</Chinese>
             <Chinesesimp>设定 ACE 提示的背景颜色。</Chinesesimp>
         </Key>
@@ -1931,6 +1931,23 @@
             <Japanese>武器の接地展開時の武器の手ぶれの大きさに影響します。</Japanese>
             <Russian>Влияет на величину колебания прицела оружия при его развертывании.</Russian>
             <Spanish>Afecta la cantidad de oscilación del arma cuando se está desplegado.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Common_Drop">
+            <English>Release</English>
+            <Russian>Отпустить</Russian>
+            <Spanish>Soltar</Spanish>
+            <Polish>Puść</Polish>
+            <Czech>Položit</Czech>
+            <French>Lâcher</French>
+            <German>Loslassen</German>
+            <Portuguese>Soltar</Portuguese>
+            <Italian>Lascia</Italian>
+            <Hungarian>Elengedés</Hungarian>
+            <Japanese>離す</Japanese>
+            <Korean>놓기</Korean>
+            <Chinese>放開</Chinese>
+            <Chinesesimp>放开</Chinesesimp>
+            <Turkish>Bırak</Turkish>
         </Key>
     </Package>
 </Project>

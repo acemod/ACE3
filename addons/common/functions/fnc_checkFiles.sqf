@@ -103,47 +103,29 @@ if (_oldCompats isNotEqualTo []) then {
 ///////////////
 private _platform = toLowerANSI (productVersion select 6);
 
-if (!isServer && {_platform in ["linux", "osx"]}) then {
+if (_platform in ["linux", "osx"]) then {
     // Linux and OSX client ports do not support extensions at all
-    INFO("Operating system does not support extensions");
+    if (hasInterface) then {
+        WARNING("Operating system does not support extensions");
+    } else {
+        INFO("Operating system does not support extensions");
+    };
 } else {
-    {
-        private _extension = configName _x;
-        private _isWindows = _platform == "windows" && {getNumber (_x >> "windows") == 1};
-        private _isLinux = _platform == "linux" && {getNumber (_x >> "linux") == 1};
-        private _isClient = hasInterface && {getNumber (_x >> "client") == 1};
-        private _isServer = !hasInterface && {getNumber (_x >> "server") == 1};
+    ("ace" callExtension ["version", []]) params [["_versionEx", "", [""]], ["_returnCode", -1, [-1]]];
 
-        if ((_isWindows || _isLinux) && {_isClient || _isServer}) then {
-            private _versionEx = _extension callExtension "version";
+    if (_returnCode != 0 || {_versionEx == ""}) then {
+        private _errorMsg = format ["Extension not found. [Return Code: %1]", _returnCode];
+        ERROR(_errorMsg);
 
-            if (_versionEx == "") then {
-                private _extensionFile = _extension;
-
-                if (productVersion select 7 == "x64") then {
-                    _extensionFile = format ["%1_x64", _extensionFile];
-                };
-
-                private _platformExt = [".dll", ".so"] select (_platform == "linux");
-                _extensionFile = format ["%1%2", _extensionFile, _platformExt];
-
-                private _errorMsg = format ["Extension %1 not found.", _extensionFile];
-                ERROR(_errorMsg);
-
-                if (hasInterface) then {
-                    ["[ACE] ERROR", _errorMsg] call FUNC(errorMessage);
-                };
-            } else {
-                // Print the current extension version
-                INFO_2("Extension version: %1: %2",_extension,_versionEx);
-            };
+        if (hasInterface) then {
+            ["[ACE] ERROR", _errorMsg] call FUNC(errorMessage);
         };
-    } forEach ("true" configClasses (configFile >> "ACE_Extensions"));
+    } else {
+        _versionEx = _versionEx select [0, 8]; // git hash
+        INFO_1("Extension [Version: %1]",_versionEx);
+    };
 };
 
-if (isArray (configFile >> "ACE_Extensions" >> "extensions")) then {
-    WARNING("extensions[] array no longer supported");
-};
 
 ///////////////
 // Check server version/addons
@@ -162,7 +144,7 @@ if (isMultiplayer) then {
         publicVariable QGVAR(serverAddons);
         publicVariable QGVAR(serverSource);
     } else {
-        GVAR(clientVersion) = _version;
+        GVAR(clientVersion) = _mainVersion;
         GVAR(clientAddons) = _addons;
 
         private _fnc_check = {
