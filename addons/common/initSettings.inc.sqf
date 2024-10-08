@@ -148,3 +148,4 @@ private _categorySway = [_category, LSTRING(subcategory_sway)];
     _categorySway,
     [0, 5, 1, 2],
     1
+] call CBA_fnc_addSetting;
