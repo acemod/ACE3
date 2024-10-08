@@ -2017,6 +2017,7 @@
             <German>Erzwingt die Zuschauer-Ansicht und verhindert dass der Spieler sie mit der Esc-Taste schließen kann</German>
             <Italian>Forza l'interfaccia di spettatore, impedendo al giocatore di chiuderla con il tasto Esc</Italian>
             <French>Force le mode spectateur en empêchant le joueur de la fermer avec la touche Echap.</French>
+            <Spanish>Fuerza la interfaz del espectador a prevenir al jugador de cerrarla pulsando la tecla de Escape</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer">
             <English>Hide player</English>
@@ -2026,6 +2027,7 @@
             <German>Spieler ausblenden</German>
             <Italian>Nascondi giocatore</Italian>
             <French>Cacher le joueur</French>
+            <Spanish>Ocultar jugador</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer_Tooltip">
             <English>Hides the player by making them invisible, invulnerable, muted, and removing them from their group</English>
@@ -2035,6 +2037,7 @@
             <German>Blendet den Spieler aus, macht ihn unsichtbar, unverwundbar, stumm und entfernt ihn von seiner Gruppe</German>
             <Italian>Nasconde il giocatore, rendendolo invisibile, invulnerabile, muto e lo rimuove dal proprio gruppo</Italian>
             <French>Cache le joueur en le rendant invisible, invulnérable, muet et en le retirant de son groupe.</French>
+            <Spanish>Oculta al jugador haciéndolo invisible, invulnerable, silenciado, y eliminándole del grupo</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_SpectableSides_Tooltip">
             <English>Sets the sides that are available to spectate</English>
@@ -2044,6 +2047,7 @@
             <German>Bestimmt die Seiten denen man zuschauen kann</German>
             <Italian>Imposta le fazioni che lo spettatore può osservare</Italian>
             <French>Définit les côtés disponibles pour le mode spectateur</French>
+            <Spanish>Establece los bandos que tienen disponible ser espectador</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_WhiteHot">
             <English>White Hot</English>
@@ -2053,6 +2057,7 @@
             <German>Weiß-Schwarz</German>
             <Italian>Bianco-caldo</Italian>
             <French>Blanc-noir</French>
+            <Spanish>Blanco Caliente</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_BlackHot">
             <English>Black Hot</English>
@@ -2062,6 +2067,7 @@
             <German>Schwarz-Weiß</German>
             <Italian>Nero-caldo</Italian>
             <French>Noir et blanc</French>
+            <Spanish>Negro Caliente</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleAll">
             <English>Toggle All</English>
@@ -2071,6 +2077,7 @@
             <German>Alle wechseln</German>
             <Italian>Cambia tutti</Italian>
             <French>Tout afficher</French>
+            <Spanish>Alternar todo</Spanish>
         </Key>
     </Package>
 </Project>

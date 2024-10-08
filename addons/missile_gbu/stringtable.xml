@@ -4,30 +4,37 @@
         <Key ID="STR_ACE_MISSILE_GBU_12">
             <English>GBU-12 [ACE]</English>
             <Italian>GBU-12 [ACE]</Italian>
+            <Spanish>GBU-12 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_fab250">
             <English>FAB-250M-54 [ACE]</English>
             <Italian>FAB-250M-54 [ACE]</Italian>
+            <Spanish>FAB-250M-54 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_12_1x">
             <English>1x GBU-12 [ACE]</English>
             <Italian>1x GBU-12 [ACE]</Italian>
+            <Spanish>1x GBU-12 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_12_2x">
             <English>2x GBU-12 [ACE]</English>
             <Italian>2x GBU-12 [ACE]</Italian>
+            <Spanish>2x GBU-12 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_12_4x">
             <English>4x GBU-12 [ACE]</English>
             <Italian>4x GBU-12 [ACE]</Italian>
+            <Spanish>4x GBU-12 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_fab250_1x">
             <English>1x FAB-250M-54 [ACE]</English>
             <Italian>1x FAB-250M-54 [ACE]</Italian>
+            <Spanish>1x FAB-250M-54 [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_fab250_2x">
             <English>2x FAB-250M-54 [ACE]</English>
             <Italian>2x FAB-250M-54 [ACE]</Italian>
+            <Spanish>2x FAB-250M-54 [ACE]</Spanish>
         </Key>
     </Package>
 </Project>
