@@ -372,57 +372,6 @@
             <Chinesesimp>VS-121（黑色）</Chinesesimp>
             <Turkish>VS-121 (Siyah)</Turkish>
         </Key>
-        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_Aegis_arifle_SPAR_02_inf_blk_F">
-            <English>HK416A5 14.5 " (Black)</English>
-            <Czech>HK416A5 14.5 " (Černá)</Czech>
-            <French>HK416A5 14.5 " (Noir)</French>
-            <Spanish>HK416A5 14.5 " (Negro)</Spanish>
-            <Russian>HK416A5 14.5 " (чёрный)</Russian>
-            <Polish>HK416A5 14.5 " (czarny)</Polish>
-            <German>HK416A5 14.5 " (Schwarz)</German>
-            <Italian>HK416A5 14.5 " (Nero)</Italian>
-            <Hungarian>HK416A5 14.5 " (Fekete)</Hungarian>
-            <Portuguese>HK416A5 14.5 " (Preto)</Portuguese>
-            <Japanese>HK416A5 14.5 " (ブラック)</Japanese>
-            <Korean>HK416A5 14.5인치 (검정)</Korean>
-            <Chinese>HK416A5 14.5 "突擊步槍 (黑色)</Chinese>
-            <Chinesesimp>HK416A5 14.5英寸（黑色）</Chinesesimp>
-            <Turkish>HK416A5 14.5 " (Siyah)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_Aegis_arifle_SPAR_02_inf_khk_F">
-            <English>HK416A5 14.5 " (Khaki)</English>
-            <Czech>HK416A5 14.5 " (Khaki)</Czech>
-            <French>HK416A5 14.5 " (Kaki)</French>
-            <Spanish>HK416A5 14.5 " (Caqui)</Spanish>
-            <Russian>HK416A5 14.5 " (хаки)</Russian>
-            <Polish>HK416A5 14.5 " (Khaki)</Polish>
-            <German>HK416A5 14.5 " (Khaki)</German>
-            <Italian>HK416A5 14.5 " (Cachi)</Italian>
-            <Hungarian>HK416A5 14.5 " (Khaki)</Hungarian>
-            <Portuguese>HK416A5 14.5 " (Caqui)</Portuguese>
-            <Japanese>HK416A5 14.5 " (カーキ)</Japanese>
-            <Korean>HK416A5 14.5인치 (카키)</Korean>
-            <Chinese>HK416A5 14.5 "突擊步槍 (卡其色)</Chinese>
-            <Chinesesimp>HK416A5 14.5英寸（卡其色）</Chinesesimp>
-            <Turkish>HK416A5 14.5 " (Haki)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_Aegis_arifle_SPAR_02_inf_snd_F">
-            <English>HK416A5 14.5 " (Sand)</English>
-            <Czech>HK416A5 14.5 " (Písková)</Czech>
-            <French>HK416A5 14.5 " (Beige)</French>
-            <Spanish>HK416A5 14.5 " (Arena)</Spanish>
-            <Russian>HK416A5 14.5 " (песочный)</Russian>
-            <German>HK416A5 14.5 " (sandfarben)</German>
-            <Polish>HK416A5 14.5 " (piaskowy)</Polish>
-            <Italian>HK416A5 14.5 " (Sabbia)</Italian>
-            <Hungarian>HK416A5 14.5 " (Homok)</Hungarian>
-            <Portuguese>HK416A5 14.5 " (Deserto)</Portuguese>
-            <Japanese>HK416A5 14.5 " (サンド)</Japanese>
-            <Korean>HK416A5 14.5인치 (모래)</Korean>
-            <Chinese>HK416A5 14.5 "突擊步槍 (沙色)</Chinese>
-            <Chinesesimp>HK416A5 14.5英寸（沙色）</Chinesesimp>
-            <Turkish>HK416A5 14.5 " (Kum)</Turkish>
-        </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_MMG_02_khaki_F">
             <English>LWMMG (Khaki)</English>
             <German>LWMMG (Khaki)</German>
