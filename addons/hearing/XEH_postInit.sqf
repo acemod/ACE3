@@ -80,8 +80,8 @@ GVAR(lastPlayerVehicle) = objNull;
 
     ["turret", LINKFUNC(updatePlayerVehAttenuation), false] call CBA_fnc_addPlayerEventHandler;
 
-    [QGVAR(firedNear), "FiredNear", LINKFUNC(firedNear), true] call EFUNC(common,addPlayerEH);
-    [QGVAR(slotItemChanged), "SlotItemChanged", {(_this select 2) call FUNC(updateHearingProtection)}, true] call EFUNC(common,addPlayerEH);
+    [QGVAR(firedNear), "FiredNear", LINKFUNC(firedNear), true] call CBA_fnc_addBISPlayerEventHandler;
+    [QGVAR(slotItemChanged), "SlotItemChanged", {(_this select 2) call FUNC(updateHearingProtection)}, true] call CBA_fnc_addBISPlayerEventHandler;
 
     // Reset deafness on respawn (or remote control player switch)
     ["unit", {
