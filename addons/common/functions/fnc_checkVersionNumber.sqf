@@ -34,7 +34,8 @@ private _versions = [];
 {
     // Determine the version of the addon. Parse it into a floating point number for comparison. Only major and minor are used.
     // If no version is found or a parsing error occurs, the version is zero.
-    private _versionCfg = _cfgPatches >> _x >> "version";
+    private _addonCfgPatches = _cfgPatches >> _x;
+    private _versionCfg = _addonCfgPatches >> "version";
     private _version = switch (true) do {
         // Normal case. Version is defined as a floating point number -> MAJOR.MINOR
         case (isNumber _versionCfg): {
@@ -47,14 +48,14 @@ private _versions = [];
             parseNumber _major + parseNumber _minor / 100
         };
         // Fallback 1 (maybe versionAr is defined)
-        case (isArray (_cfgPatches >> _x >> "versionAr")): {
-            (getArray (_cfgPatches >> _x >> "versionAr")) params [["_major", 0], ["_minor", 0]];
+        case (isArray (_addonCfgPatches >> "versionAr")): {
+            (getArray (_addonCfgPatches >> "versionAr")) params [["_major", 0], ["_minor", 0]];
 
             _major + _minor / 100
         };
         // Fallback 2 (maybe versionStr is defined)
-        case (isText (_cfgPatches >> _x >> "versionStr")): {
-            (getText (_cfgPatches >> _x >> "versionStr") splitString ".") params [["_major", "0"], ["_minor", "0"]];
+        case (isText (_addonCfgPatches >> "versionStr")): {
+            (getText (_addonCfgPatches >> "versionStr") splitString ".") params [["_major", "0"], ["_minor", "0"]];
 
             parseNumber _major + parseNumber _minor / 100
         };
