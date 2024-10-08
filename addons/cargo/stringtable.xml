@@ -343,6 +343,9 @@
             <Russian>Не может быть выгружен</Russian>
             <Spanish>No puede ser descargado</Spanish>
         </Key>
+        <Key ID="STR_ACE_Cargo_checkSize">
+            <English>Check Cargo Size</English>
+        </Key>
         <Key ID="STR_ACE_Cargo_SizeMenu">
             <English>Cargo Size: %1</English>
             <German>Frachtgröße: %1</German>
