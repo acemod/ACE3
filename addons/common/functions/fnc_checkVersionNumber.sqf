@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: commy2, johnb43
+ * Author: commy2, johnb43, Timi007
  * Compares version numbers from loaded addons.
  *
  * Arguments:
@@ -32,8 +32,36 @@ private _cfgPatches = configFile >> "CfgPatches";
 private _versions = [];
 
 {
-    (getText (_cfgPatches >> _x >> "version") splitString ".") params [["_major", "0"], ["_minor", "0"]];
-    private _version = parseNumber _major + parseNumber _minor / 100;
+    // Determine version of addon. Parse it to a floating point number for comparison. Only major and minor are used.
+    // If no version is found or a parsing error occurs, the version is zero.
+    private _versionCfg = _cfgPatches >> _x >> "version";
+    private _version = switch (true) do {
+        // Normal case. Version is defined as floating point number -> MAJOR.MINOR
+        case (isNumber _versionCfg): {
+            getNumber _versionCfg
+        };
+        // Addon Builder convert the version to a string if it is an invalid float -> "MAJOR.MINOR.PATCH"
+        case (isText _versionCfg): {
+            (getText _versionCfg splitString ".") params [["_major", "0"], ["_minor", "0"]];
+
+            parseNumber _major + parseNumber _minor / 100
+        };
+        // Fallback 1 (maybe versionAr is defined)
+        case (isArray (_cfgPatches >> _x >> "versionAr")): {
+            (getArray (_cfgPatches >> _x >> "versionAr")) params [["_major", 0], ["_minor", 0]];
+
+            _major + _minor / 100
+        };
+        // Fallback 2 (maybe versionStr is defined)
+        case (isText (_cfgPatches >> _x >> "versionStr")): {
+            (getText (_cfgPatches >> _x >> "versionStr") splitString ".") params [["_major", "0"], ["_minor", "0"]];
+
+            parseNumber _major + parseNumber _minor / 100
+        };
+        // No version found
+        default { 0 };
+    };
+
     _versions pushBack _version;
 } forEach _files;
 
