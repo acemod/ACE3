@@ -21,7 +21,7 @@
             <English>Enable ACE Scope adjustment</English>
             <German>Aktiviere das Nullen von Zielfernrohren</German>
             <Japanese>ACE スコープ調節を有効化</Japanese>
-            <Korean>ACE 조준경 영점조작 활성화</Korean>
+            <Korean>ACE 조준경 영점조절 활성화</Korean>
             <Polish>Włącz ustawienia celowników optycznych ACE</Polish>
             <French>Activer le réglage ACE des lunettes</French>
             <Italian>Abilita Regolazione Mirino ACE</Italian>
@@ -337,7 +337,7 @@
             <German>Repliziert das Vanilla-Zeroing-System für Zielfernrohre.</German>
             <Japanese>バニラ(ゲーム標準)のライフルスコープ用ゼロイン調整システムを再現します。</Japanese>
             <Italian>Replica il sistema di azzeramento vanilla per le ottiche.</Italian>
-            <Korean>라이플 스코프용 바닐라 영점조정 시스템을 복제합니다.</Korean>
+            <Korean>라이플 스코프용 바닐라 영점조절 시스템을 복제합니다.</Korean>
             <Chinese>使用原版的歸零系統來取代ACE複雜的歸零模擬。</Chinese>
             <Chinesesimp>使用原版的归零系统来取代 ACE 复杂的归零模拟。</Chinesesimp>
             <Polish>Replikuje system zerowania, dla celowników karabinowych, z domyślnej gry.</Polish>
@@ -346,6 +346,15 @@
             <French>Reproduit le système de zérotage vanilla pour les lunettes.</French>
             <Czech>Replikuje systém naměřování puškohledů ze základní hry.</Czech>
             <Spanish>Replica en los visores el sistema de homogeneizado de vanilla</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Scopes_inScopeAdjustment_displayName">
+            <English>Show adjustment UI in scope</English>
+            <German>Zeige Absehenverstellungs-UI im Zielfernrohr</German>
+            <Italian>Mostra UI delle manopole nel mirino</Italian>
+            <Japanese>調整UIをスコープ内に表示</Japanese>
+            <Korean>스코프에 조절 UI 보이기</Korean>
+            <Russian>Показать интерфейс настройки в области видимости.</Russian>
+            <Spanish>Mostrar IU de ajuste en el visor</Spanish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
@@ -496,7 +505,7 @@
             <German>Nullung zurücksetzen</German>
             <Japanese>ゼロイン調節を初期化</Japanese>
             <Italian>Resetta l'azzeramento</Italian>
-            <Korean>영점 조정 재설정</Korean>
+            <Korean>영점 조절 재설정</Korean>
             <Chinese>重設歸零</Chinese>
             <Chinesesimp>重设归零</Chinesesimp>
             <Polish>Zresetuj wyzerowanie</Polish>

@@ -77,17 +77,25 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(useLegacyUI), "CHECKBOX",
-    [LSTRING(useLegacyUI_displayName), LSTRING(useLegacyUI_description)],
-    _category,
-    false,
-    0
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(simplifiedZeroing), "CHECKBOX",
     [LSTRING(simplifiedZeroing_displayName), LSTRING(simplifiedZeroing_description)],
     _category,
     false,
     1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(useLegacyUI), "CHECKBOX",
+    [LSTRING(useLegacyUI_displayName), LSTRING(useLegacyUI_description)],
+    _category,
+    false,
+    2
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(inScopeAdjustment), "CHECKBOX",
+    LSTRING(inScopeAdjustment_displayName),
+    _category,
+    false,
+    0
 ] call CBA_fnc_addSetting;

@@ -144,7 +144,7 @@ if (isMultiplayer) then {
         publicVariable QGVAR(serverAddons);
         publicVariable QGVAR(serverSource);
     } else {
-        GVAR(clientVersion) = _version;
+        GVAR(clientVersion) = _mainVersion;
         GVAR(clientAddons) = _addons;
 
         private _fnc_check = {

@@ -72,6 +72,7 @@ if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
             LLSTRING(checkHeadstoneName),
             QPATHTOEF(medical_gui,ui\grave.paa),
             {
+                //IGNORE_PRIVATE_WARNING ["_target"];
                 [
                     [_target getVariable QGVAR(headstoneData)],
                     true
@@ -80,7 +81,7 @@ if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
             {!isNil {_target getVariable QGVAR(headstoneData)}}
         ] call EFUNC(interact_menu,createAction);
 
-        [missionNameSpace getVariable [QGVAR(graveClassname), "ACE_Grave"], 0, [], _checkHeadstoneAction] call EFUNC(interact_menu,addActionToClass);
+        [missionNamespace getVariable [QGVAR(graveClassname), "ACE_Grave"], 0, [], _checkHeadstoneAction] call EFUNC(interact_menu,addActionToClass);
     };
 
     if (isServer) then {

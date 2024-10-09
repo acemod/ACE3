@@ -1,3 +1,4 @@
+class ace_missileguidance_type_Hellfire;
 class CfgAmmo {
     class M_Scalpel_AT;
 
@@ -23,47 +24,8 @@ class CfgAmmo {
 
         EGVAR(rearm,caliber) = 178;
 
-        class ace_missileguidance {
+        class ace_missileguidance: ace_missileguidance_type_Hellfire {
             enabled = 1;
-
-            pitchRate = 30; // degrees per second
-            yawRate = 30;
-
-            canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
-
-            // Guidance type for munitions
-            defaultSeekerType = "SALH";
-            seekerTypes[] = { "SALH", "LIDAR", "SARH", "Optic", "Thermal", "GPS", "SACLOS", "MCLOS" };
-
-            defaultSeekerLockMode = "LOAL";
-            seekerLockModes[] = { "LOAL", "LOBL" };
-
-            defaultNavigationType = "Direct";
-            navigationTypes[] = { "Direct", "ZeroEffortMiss" };
-
-            seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
-            seekerAngle = 70;           // Angle in front of the missile which can be searched
-            seekerAccuracy = 1;         // seeker accuracy multiplier
-
-            seekerMinRange = 1;
-            seekerMaxRange = 8000;      // Range from the missile which the seeker can visually search
-
-            // Attack profile type selection
-            defaultAttackProfile = "hellfire";
-            attackProfiles[] = {"hellfire", "hellfire_hi", "hellfire_lo"};
-
-            class navigationStates {
-                class initial {
-                    transitionCondition = QFUNC(midCourseTransition);
-                    navigationType = "Direct";
-                };
-                class terminal {
-                    transitionCondition = "";
-                    navigationType = "ZeroEffortMiss";
-                };
-                // transitions from initial -> termimal
-                states[] = {"initial", "terminal"};
-            };
         };
     };
     class ACE_Hellfire_AGM114N: ACE_Hellfire_AGM114K {

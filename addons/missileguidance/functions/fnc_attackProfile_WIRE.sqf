@@ -30,7 +30,7 @@ if ((_distanceToProjectile > _seekerMaxRangeSqr) || { _wireCut }) exitWith {
     // wire snap, random direction
     if !(_wireCut) then {
         _attackProfileStateParams set [1, true];
-        playSound3D ["a3\sounds_f\air\sfx\SL_rope_break.wss", objNull, false, AGLtoASL (_shooter modelToWorld _wireCutSource), 5, 1, 150];
+        playSound3D ["a3\sounds_f\air\sfx\SL_rope_break.wss", objNull, false, AGLToASL (_shooter modelToWorld _wireCutSource), 5, 1, 150];
     };
     _lastInput
 };

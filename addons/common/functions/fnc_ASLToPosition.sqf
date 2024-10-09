@@ -20,5 +20,5 @@
 if (surfaceIsWater _this) then {
     _this
 } else {
-    ASLtoATL _this
+    ASLToATL _this
 };

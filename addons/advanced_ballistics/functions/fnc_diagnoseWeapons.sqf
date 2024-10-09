@@ -108,16 +108,16 @@ for "_i" from 0 to (count _cfgWeapons)-1 do {
         };
         if (_weapons find _weapon == -1) then {
             _weapons pushBack _weapon;
-            _magIndex = _magazines find _magazine;
-            _magSpeed = _magazineInitSpeeds select _magIndex;
+            private _magIndex = _magazines find _magazine;
+            private _magSpeed = _magazineInitSpeeds select _magIndex;
             _weaponInitSpeeds pushBack (_abInitialSpeed / _magSpeed);
         };
     } forEach _data;
     {
         _x params ["_magazineIndex", "_abInitialSpeed", "_magazine", "_weapon"];
-        _magIndex = _magazines find _magazine;
-        _magSpeed = _magazineInitSpeeds select _magIndex;
-        _wepIndex = _weapons find _weapon;
+        private _magIndex = _magazines find _magazine;
+        private _magSpeed = _magazineInitSpeeds select _magIndex;
+        private _wepIndex = _weapons find _weapon;
         _wepSpeed = _weaponInitSpeeds select _wepIndex;
     } forEach _data;
     {
