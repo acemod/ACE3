@@ -111,6 +111,20 @@ GVAR(objectActions) = [
             {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)}
         }
     ] call EFUNC(interact_menu,createAction),
+    [QGVAR(checkSize), LLSTRING(checkSize), "\a3\ui_f\data\igui\cfg\simpletasks\types\box_ca.paa",
+        {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+            [format [LLSTRING(SizeMenu), _target call FUNC(getSizeItem)], 3] call EFUNC(common,displayTextStructured);
+        },
+        {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+            GVAR(enable) &&
+            {alive _target} &&
+            {_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad)) == 1]} &&
+            {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
+            {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)}
+        }
+    ] call EFUNC(interact_menu,createAction),
     [QGVAR(load), LLSTRING(loadObject), "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",
         {
             //IGNORE_PRIVATE_WARNING ["_target", "_player"];
