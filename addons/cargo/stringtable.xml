@@ -345,6 +345,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_checkSize">
             <English>Check Cargo Size</English>
+            <Korean>화물 크기 확인</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_SizeMenu">
             <English>Cargo Size: %1</English>
