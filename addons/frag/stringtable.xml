@@ -117,6 +117,7 @@
             <Japanese>デバッグ</Japanese>
             <Russian>Отладка</Russian>
             <Italian>Debug</Italian>
+            <Spanish>Debug</Spanish>
         </Key>
         <Key ID="STR_ACE_Frag_SpallIntensity">
             <English>Spalling Intensity</English>
@@ -124,6 +125,7 @@
             <Japanese>スポーリング強度</Japanese>
             <Russian>Интенсивность обрушения</Russian>
             <Italian>Intensità dello spalling</Italian>
+            <Spanish>Intensidad del astillamiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Frag_SpallIntensity_Desc">
             <English>Modifier to increase or decrease the number and intensity of spalling events. Increasing this value may cause performance degradation.</English>
@@ -131,6 +133,7 @@
             <Japanese>スポーリング現象が発生する数と強度を増減することが出来ます。この値を大きくすることはパフォーマンスの低下につながる可能性があります。</Japanese>
             <Russian>Модификатор для увеличения или уменьшения количества и интенсивности событий обрушения. Увеличение этого значения может привести к ухудшению производительности.</Russian>
             <Italian>Modificatore per il numero e intensità di spalling simulato, ovvero la frammentazione interna ad un veicolo colpito. Valori alti possono causare una degradazione della performance.</Italian>
+            <Spanish>Modificador para aumentar o disminuir el número y la intensidad de los eventos de astillamiento. Aumentar este valor puede producir una degradación en el rendimiento.</Spanish>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>Frag/Spall Debug Tracing</English>
@@ -139,6 +142,7 @@
             <Korean>파열/파편 디버그 추적</Korean>
             <Russian>Отладка трассировки фрагментации/осколков</Russian>
             <Italian>Traccia Frag/Spall per Debug</Italian>
+            <Spanish>Trazado Debug de Fragmentación/Astillamiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
             <English>Enables visual tracing of fragmentation and spalling rounds.</English>
@@ -147,6 +151,7 @@
             <Japanese>フラグメンテーションとスポーリングによって発生した破片飛翔体の動きを視覚的に追跡できる機能を有効化します。</Japanese>
             <Russian>Включает визуальную трассировку фрагментации и осколочных снарядов.</Russian>
             <Italian>Abilita il tracciamento visivo di effetti di frammentazione e spalling.</Italian>
+            <Spanish>Habilitar trazado visual de los proyectiles generados por la fragmentación y el astillamiento.</Spanish>
         </Key>
         <Key ID="STR_ACE_Frag_HitSphereEnable">
             <English>Draw Event Spheres</English>
@@ -154,6 +159,7 @@
             <Japanese>イベントを球体として描画</Japanese>
             <Russian>Изобразить сферы событий</Russian>
             <Italian>Visualizza sfere eventi</Italian>
+            <Spanish>Dibujar Esferas de Eventos</Spanish>
         </Key>
         <Key ID="STR_ACE_Frag_HitSphereEnable_Desc">
             <English>Draw color coded spheres at any event for tracked rounds.</English>
@@ -161,6 +167,7 @@
             <Japanese>追跡中の飛翔体に発生した全てのイベントを色付けた球体として描画します。</Japanese>
             <Russian>Изобразить цветные сферы на любом событии для отслеживаемых раундов.</Russian>
             <Italian>Visualizza sfere colorate su ogni evento di un frammento tracciato.</Italian>
+            <Spanish>Dibujar esferas codificadas por color en cualquier evento para proyectiles seguidos.</Spanish>
         </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox">
             <English>Draw Hitboxes</English>
@@ -168,6 +175,7 @@
             <Japanese>ヒットボックスを描画</Japanese>
             <Russian>Изобразить хитбоксы</Russian>
             <Italian>Visualizza hitbox</Italian>
+            <Spanish>Dibujar hitboxes</Spanish>
         </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox_Desc">
             <English>Draw hitboxes on objects that were targeted.</English>
@@ -176,6 +184,7 @@
             <Korean>타겟팅된 오브젝트에 히트박스를 그립니다.</Korean>
             <Russian>Изобразить хитбоксы на объектах, которые были нацелены.</Russian>
             <Italian>Visualizza hitbox su potenziali bersagli della frammentazione.</Italian>
+            <Spanish>Dibuja hitboxes en objetos que son seguidos.</Spanish>
         </Key>
     </Package>
 </Project>

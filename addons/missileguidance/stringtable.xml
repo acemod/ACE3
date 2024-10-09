@@ -212,6 +212,7 @@
             <Japanese>6x DAGR [ACE]</Japanese>
             <Korean>6x DAGR [ACE]</Korean>
             <Italian>6x DAGR [ACE]</Italian>
+            <Spanish>6x DAGR [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_12x">
             <English>12x DAGR [ACE]</English>
@@ -220,6 +221,7 @@
             <Japanese>12x DAGR [ACE]</Japanese>
             <Korean>12x DAGR [ACE]</Korean>
             <Italian>12x DAGR [ACE]</Italian>
+            <Spanish>12x DAGR [ACE]</Spanish>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hydra70_DAGR_24x">
             <English>24x DAGR [ACE]</English>
@@ -228,6 +230,7 @@
             <Japanese>24x DAGR [ACE]</Japanese>
             <Korean>24x DAGR [ACE]</Korean>
             <Italian>24x DAGR [ACE]</Italian>
+            <Spanish>24x DAGR [ACE]</Spanish>
         </Key>
     </Package>
 </Project>

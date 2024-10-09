@@ -26,6 +26,7 @@
             <Italian>Probabilità dei giocatori di far cadere l'arma (colpo al braccio)</Italian>
             <French>Probabilité de lâcher l'arme (coup au bras)</French>
             <Portuguese>Probabilidade do jogador de largar a arma após tiro no braço</Portuguese>
+            <Spanish>Probabilidad del Jugador de Soltar el Arma (Impacto en Brazo)</Spanish>
         </Key>
         <Key ID="STR_ACE_HitReactions_weaponDropChanceArmHitAI_displayName">
             <English>AI Weapon Drop Chance (Arm Hit)</English>
@@ -36,6 +37,7 @@
             <Italian>Probabilità dell'IA di far cadere l'arma (colpo al braccio)</Italian>
             <French>Probabilité de l'IA de lâcher l'arme (coup au bras)</French>
             <Portuguese>Probabilidade da IA de largar a arma após tiro no braço</Portuguese>
+            <Spanish>Probabilidad de IA de Soltar el Arma (Impacto en Brazo)</Spanish>
         </Key>
     </Package>
 </Project>
