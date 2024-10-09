@@ -1,4 +1,3 @@
-
 class CBA_Extended_EventHandlers;
 
 class CfgVehicles {
@@ -55,7 +54,7 @@ class CfgVehicles {
         GVAR(space) = 4;
         GVAR(hasCargo) = 1;
     };
-    class Tank_F: Tank {};
+    class Tank_F;
     class UGV_02_Base_F: Tank_F {
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
@@ -237,8 +236,6 @@ class CfgVehicles {
         GVAR(hasCargo) = 1;
     };
 
-    class O_Heli_Transport_04_fuel_F: Heli_Transport_04_base_F {};
-
     class O_Heli_Transport_04_medevac_F: Heli_Transport_04_base_F {
         GVAR(space) = 10;
         GVAR(hasCargo) = 1;
@@ -259,7 +256,7 @@ class CfgVehicles {
         GVAR(hasCargo) = 0;
     };
 
-    class Plane_Base_F: Plane {};
+    class Plane_Base_F;
     class Plane_Civil_01_base_F: Plane_Base_F { // Tanoa Civilian Prop Plane
         GVAR(space) = 2;
         GVAR(hasCargo) = 1;
@@ -300,7 +297,7 @@ class CfgVehicles {
         GVAR(hasCargo) = 1;
     };
 
-    class Boat_F: Ship_F {};
+    class Boat_F;
     class Rubber_duck_base_F: Boat_F {
         GVAR(space) = 0;
         GVAR(hasCargo) = 0;
@@ -356,7 +353,7 @@ class CfgVehicles {
     };
 
     // Slingload pallets
-    class Slingload_base_F: ReammoBox_F {};
+    class Slingload_base_F;
     class CargoNet_01_base_F: Slingload_base_F {
         GVAR(size) = 6;
     };
@@ -512,10 +509,6 @@ class CfgVehicles {
         transportMaxWeapons = 12;
     };
     class Land_WoodenCrate_01_F: ThingX {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 3;
         GVAR(hasCargo) = 1;
         GVAR(size) = 3;
@@ -545,240 +538,141 @@ class CfgVehicles {
         };
     };
     class Cargo10_base_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 14;
         GVAR(size) = 15;
     };
-    class Land_Cargo20_blue_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
+    class Land_Cargo10_IDAP_F: ThingX {
+        GVAR(space) = 14;
+        GVAR(size) = 15;
+    };
 
+    class Land_Cargo20_blue_F: Cargo_base_F {
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
     class Land_Cargo20_brick_red_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
     class Land_Cargo20_cyan_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
     class Land_Cargo20_grey_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
     class Land_Cargo20_light_blue_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
     class Land_Cargo20_light_green_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
     class Land_Cargo20_military_green_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
 
     class Land_Cargo20_orange_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
     class Land_Cargo20_red_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
     class Land_Cargo20_sand_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
     class Land_Cargo20_vr_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
     class Land_Cargo20_white_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
     class Land_Cargo20_yellow_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
-    class Cargo_IDAP_base_F: Cargo_base_F {};
-    class Land_Cargo20_IDAP_F: Cargo_IDAP_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
 
+    class Cargo_IDAP_base_F;
+    class Land_Cargo20_IDAP_F: Cargo_IDAP_base_F {
+        GVAR(space) = 49;
+        GVAR(size) = 50;
+    };
+
+    class Cargo_EMP_base_F;
+    class Land_Cargo20_EMP_F: Cargo_EMP_base_F {
+        GVAR(space) = 49;
+        GVAR(size) = 50;
+    };
+    class Land_Cargo20_EMP_Training_F: Cargo_EMP_base_F {
         GVAR(space) = 49;
         GVAR(size) = 50;
     };
 
     class Land_Cargo40_blue_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 99;
         GVAR(size) = 100;
     };
     class Land_Cargo40_brick_red_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 99;
         GVAR(size) = 100;
     };
     class Land_Cargo40_cyan_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 99;
         GVAR(size) = 100;
     };
     class Land_Cargo40_grey_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 99;
         GVAR(size) = 100;
     };
     class Land_Cargo40_light_blue_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 99;
         GVAR(size) = 100;
     };
     class Land_Cargo40_light_green_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 99;
         GVAR(size) = 100;
     };
     class Land_Cargo40_military_green_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 99;
         GVAR(size) = 100;
     };
 
     class Land_Cargo40_orange_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 99;
         GVAR(size) = 100;
     };
     class Land_Cargo40_red_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 99;
         GVAR(size) = 100;
     };
     class Land_Cargo40_sand_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
-        GVAR(space) = 99;
-        GVAR(size) = 100;
-    };
-    class Land_Cargo40_vr_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 99;
         GVAR(size) = 100;
     };
     class Land_Cargo40_white_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 99;
         GVAR(size) = 100;
     };
     class Land_Cargo40_yellow_F: Cargo_base_F {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
+        GVAR(space) = 99;
+        GVAR(size) = 100;
+    };
 
+    class Land_Cargo40_IDAP_F: Cargo_IDAP_base_F {
         GVAR(space) = 99;
         GVAR(size) = 100;
     };
 
     // Small
     class Land_CargoBox_V1_F: ThingX {
-        class EventHandlers {
-            class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers {};
-        };
-
         GVAR(space) = 7;
         GVAR(hasCargo) = 1;
         GVAR(size) = 7;

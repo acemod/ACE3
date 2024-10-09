@@ -78,6 +78,7 @@ PREP(removeStat);
 PREP(removeVirtualItems);
 PREP(renameDefaultLoadout);
 PREP(replaceUniqueItemsLoadout);
+PREP(saveLoadout);
 PREP(scanConfig);
 PREP(showItem);
 PREP(sortPanel);

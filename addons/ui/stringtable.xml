@@ -168,6 +168,7 @@
             <Italian>Filigrana per versione in fase di sviluppo</Italian>
             <Chinesesimp>开发建设水印</Chinesesimp>
             <Korean>개발용 빌드 워터마크</Korean>
+            <Portuguese>Marca d'agua de versão de desenvolvimento</Portuguese>
         </Key>
         <Key ID="STR_ACE_UI_WeaponName">
             <English>Weapon Name</English>
@@ -680,6 +681,7 @@
             <Chinesesimp>启用移动速度指示器</Chinesesimp>
             <Korean>이동 속도 표시기 활성화</Korean>
             <Spanish>Habilitar indicador de velocidad de movimiento</Spanish>
+            <Portuguese>Habilitar indicador de velocidade de movimento</Portuguese>
         </Key>
         <Key ID="STR_ACE_UI_EnableSpeedIndicator_Description">
             <English>Enables movement speed indicator for player character.</English>
@@ -692,6 +694,7 @@
             <Chinesesimp>为玩家角色启用移动速度指示器。</Chinesesimp>
             <Korean>플레이어 캐릭터를 위한 이동속도 표시기를 활성화합니다.</Korean>
             <Spanish>Habilita el indicador de velocidad de movimiento para el personaje del jugador.</Spanish>
+            <Portuguese>Habilita o indicador de velocidade de movimento do personagem do jogador.</Portuguese>
         </Key>
         <Key ID="STR_ACE_UI_HideDefaultActionIcon">
             <English>Hide Default Action Icon</English>
@@ -704,6 +707,7 @@
             <German>Standardaktionssymbol ausblenden</German>
             <French>Masquer l'icône d'action par défaut</French>
             <Italian>Nascondi Icona dell'Interazione Standard</Italian>
+            <Portuguese>Esconder ícone padrão de ação</Portuguese>
         </Key>
         <Key ID="STR_ACE_UI_HideDefaultActionIcon_Description">
             <English>Hides the icon shown automatically when something is in front of the cursor. Requires a game restart.\nWarning: Does not remove the action itself! It is advisable to unbind 'Use default action' key to prevent unwanted interactions.</English>
@@ -716,6 +720,16 @@
             <German>Blendet das Symbol aus, das automatisch angezeigt wird, wenn sich etwas vor dem Cursor befindet. Erfordert einen Neustart des Spiels.\nWarnung: Die Aktion selbst wird nicht entfernt! Es empfiehlt sich, die Belegung der Taste 'Standardaktion verwenden' aufzuheben, um unerwünschte Interaktionen zu verhindern.</German>
             <French>Cache l'icône qui s'affiche automatiquement lorsque quelque chose est devant le curseur. Nécessite un redémarrage du jeu.\nAvertissement : l'action n'est pas supprimée ! Il est recommandé d'annuler l'affectation du bouton 'Utiliser l'action par défaut' afin d'éviter des interactions indésirables.</French>
             <Italian>Nasconde l'icona mostrata in automatico quando qualcosa è davanti al cursore. La modifica richiede un riavvio del gioco.\nAttenzione: Non rimuovere l'azione stessa! È consigliato rimuovere solo il tasto dall'assegnazione 'Usa Azione Standard' per impedire interazioni non volute.</Italian>
+            <Portuguese>Esconde o ícone mostrado automaticamente quando algo está a frente do cursor. É preciso reiniciar o jogo.\nAviso: Não remove a ação em si! É recomendado desvincular a tecla de "Usar ação padrão" para previnir interações indesejadas.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_UI_hideHud">
+            <English>Hide all UI</English>
+            <Japanese>全てのUIを隠す</Japanese>
+            <French>Cacher toute l'interface utilisateur.</French>
+            <Russian>Скрыть весь интерфейс</Russian>
+            <Korean>모든 UI 숨기기</Korean>
+            <Italian>Nascondi tutta l'IU</Italian>
+            <Spanish>Ocultar toda la IU</Spanish>
         </Key>
     </Package>
 </Project>

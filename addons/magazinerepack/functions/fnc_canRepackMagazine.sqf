@@ -18,6 +18,9 @@
 
 params ["_unit", "_magazine"];
 
+// Exit if repack is disabled for this magazine.
+if (getNumber (configFile >> "CfgMagazines" >> _magazine >> "ace_disableRepacking") == 1) exitWith {false};
+
 private _maxAmmoCount = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
 
 {

@@ -16,14 +16,27 @@
  *
  * Public: No
  */
+#define PITCH_UP_TIME 1
 
-params ["", "_args", "_seekerStateParams"];
+params ["", "_args", "_seekerStateParams", "", "", "_targetData"];
 _args params ["_firedEH", "_launchParams", "", "_seekerParams", "_stateParams"];
 _firedEH params ["","","","","","","_projectile"];
 _launchParams params ["", "_targetLaunchParams", "", "_attackProfile"];
 _targetLaunchParams params ["", "", "_launchPos"];
+_stateParams params ["", "", "", "", "_navigationParams"];
 
-if (_attackProfile == QGVAR(directAttack)) exitWith {[0,0,0]};
+if (_attackProfile == QGVAR(directAttack)) exitWith {
+    _navigationParams set [5, 1];
+    [0,0,0]
+};
+
+_seekerStateParams params ["", "", "", "_originalPitchRate", "_startTime"];
+_navigationParams params ["", "_pitchRate"];
+
+// pitch up for the first second of flight to begin an over-fly trajectory
+private _pitchChange = linearConversion [0, PITCH_UP_TIME, CBA_missionTime - _startTime, 2, 0, true];
+_navigationParams set [1, _originalPitchRate + _pitchChange];
+_navigationParams set [5, ((CBA_missionTime - _startTime) min PITCH_UP_TIME) / PITCH_UP_TIME];
 
 private _projPos = getPosASL _projectile;
 
@@ -49,7 +62,7 @@ if ((_projPos distance _launchPos) >= 20) then {
         // This represents a position that the missile was at between the last frame and now
         private _virtualPos = _lastPos vectorAdd (_vectorDir vectorMultiply _stepSize);
         #ifdef DRAW_NLAW_INFO
-        drawLine3D [ASLtoAGL _virtualPos, ASLtoAGL (_virtualPos vectorAdd [0,0,-5]), [1,0,_stepSize/(_frameDistance max 0.1),1]];
+        drawLine3D [ASLToAGL _virtualPos, ASLToAGL (_virtualPos vectorAdd [0,0,-5]), [1,0,_stepSize/(_frameDistance max 0.1),1]];
         #endif
 
         // Limit scan to 5 meters directly down (shaped charge jet has a very limited range)
@@ -58,7 +71,7 @@ if ((_projPos distance _launchPos) >= 20) then {
             (_res select 0) params ["_targetPos", "", "_target"];
             if ((_target isKindOf "Tank") || {_target isKindOf "Car"} || {_target isKindOf "Air"}) exitWith {
                 TRACE_3("Firing shaped charge down",_target,_targetPos distance _virtualPos,_frameDistance);
-                TRACE_2("",_target worldToModel (ASLtoAGL _virtualPos),boundingBoxReal _target);
+                TRACE_2("",_target worldToModel (ASLToAGL _virtualPos),boundingBoxReal _target);
                 _virtualPos = _virtualPos vectorAdd (_vectorDir vectorMultiply 1.25);
 
                 deleteVehicle _projectile;

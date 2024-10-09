@@ -1,16 +1,16 @@
 #include "..\script_component.hpp"
 /*
- * Author: PabstMirror &tcvm
- * Tests if unit can load a magazine into a static weapon.
+ * Author: PabstMirror, tcvm
+ * Tests if unit can load a magazine into a CSW.
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret Path <ARRAY>
  * 2: Carryable Magazine <STRING>
- * 3: Supplier <OBJECT>
+ * 3: Supplier <OBJECT> (default: objNull)
  *
  * Return Value:
- * [CanLoad<BOOL>, LoadedMag<STRING>, AmmoNeeded<NUMBER>, IsBeltLinking<BOOL>]<ARRAY>
+ * [Can Load <BOOL>, Loaded Mag <STRING>, Ammo Needed <NUMBER>, Is Belt Linking <BOOL>] <ARRAY>
  *
  * Example:
  * [cursorObject, [0], "ACE_csw_100Rnd_127x99_mag_red", player] call ace_csw_fnc_reload_canLoadMagazine
@@ -28,7 +28,7 @@ if (!alive _vehicle) exitWith { _return };
 // Verify holder has carry magazine
 if (
     (!isNull _magSource) &&
-    {!((_magSource isKindOf "Bag_Base") || {_magSource isKindOf "ContainerSupply"})} && // hacky workaround for magazines within dropped backpacks
+    {!((_magSource isKindOf "Bag_Base") || {_magSource isKindOf "ContainerSupply"})} && // Hacky workaround for magazines within dropped backpacks
     {
         ((_vehicle distance _magSource) > 10) ||
         {((magazineCargo _magSource) findIf {_x == _carryMag}) == -1}
@@ -42,7 +42,7 @@ private _cfgGroupsCarryMag = configFile >> QGVAR(groups) >> _carryMag;
 
 private _desiredAmmo = getNumber (configOf _vehicle >> QUOTE(ADDON) >> "desiredAmmo");
 if (_desiredAmmo == 0) then { _desiredAmmo = 100; };
-private _ammoNeeded = _desiredAmmo min getNumber (_cfgMagazinesCarryMag >> "count"); // assume it needs full carry mag
+private _ammoNeeded = _desiredAmmo min getNumber (_cfgMagazinesCarryMag >> "count"); // Assume it needs full carry mag
 private _loadedMag = "";
 private _isBeltLinking = false;
 
@@ -62,7 +62,7 @@ scopeName "main";
             };
             private _maxMagazineAmmo = _desiredAmmo min getNumber (_cfgMagazines >> _xMag >> "count");
             if (_xAmmo >= _maxMagazineAmmo) exitWith {
-                [false, _loadedMag, -6, false] breakOut "main"; // Already at capicity
+                [false, _loadedMag, -6, false] breakOut "main"; // Already at capacity
             };
             _ammoNeeded = _maxMagazineAmmo - _xAmmo;
             _isBeltLinking = true;

@@ -1,30 +1,27 @@
 #include "script_component.hpp"
 
-[] call FUNC(initItemContextMenu);
-
-addUserActionEventHandler ["headlights", "Deactivate", LINKFUNC(onLightToggled)];
+call FUNC(initItemContextMenu);
 
 ["ACE3 Equipment", QGVAR(hold), LLSTRING(MomentarySwitch), {
-    ACE_player action ["GunLightOn", ACE_player];
-    ACE_player action ["IRLaserOn", ACE_player];
-    [] call FUNC(onLightToggled);
+    if !(ACE_player call CBA_fnc_canUseWeapon) exitWith {};
+
+    // Save current weapon state to reapply later
+    private _weaponState = (weaponState ACE_player) select [0, 3];
+
+    action ["GunLightOn", ACE_player];
+    action ["IRLaserOn", ACE_player];
+
+    ACE_player selectWeapon _weaponState;
+
     true
 }, {
-    ACE_player action ["GunLightOff", ACE_player];
-    ACE_player action ["IRLaserOff", ACE_player];
-    [] call FUNC(onLightToggled);
-    true
+    if !(ACE_player call CBA_fnc_canUseWeapon) exitWith {};
+
+    // Save current weapon state to reapply later
+    private _weaponState = (weaponState ACE_player) select [0, 3];
+
+    action ["GunLightOff", ACE_player];
+    action ["IRLaserOff", ACE_player];
+
+    ACE_player selectWeapon _weaponState;
 }] call CBA_fnc_addKeybind;
-
-["CBA_attachmentSwitched", {
-    params ["", "", "_item"];
-
-    private _substr = _item select [0, 8];
-    if (
-        ACE_player getVariable [QGVAR(isTurnedOn), false]
-        && {_substr == "ACE_SPIR" || {_substr == "ACE_DBAL"}}
-    ) then {
-        ACE_player action ["GunLightOn", ACE_player];
-        ACE_player action ["IRLaserOn", ACE_player];
-    };
-}] call CBA_fnc_addEventHandler;

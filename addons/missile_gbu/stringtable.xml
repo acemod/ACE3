@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="MISSILE_GBU">
+        <Key ID="STR_ACE_MISSILE_GBU_12">
+            <English>GBU-12 [ACE]</English>
+            <Italian>GBU-12 [ACE]</Italian>
+            <Spanish>GBU-12 [ACE]</Spanish>
+            <Japanese>GBU-12 [ACE]</Japanese>
+            <Korean>GBU-12 [ACE]</Korean>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_GBU_fab250">
+            <English>FAB-250M-54 [ACE]</English>
+            <Italian>FAB-250M-54 [ACE]</Italian>
+            <Spanish>FAB-250M-54 [ACE]</Spanish>
+            <Japanese>FAB-250M-54 [ACE]</Japanese>
+            <Korean>FAB-250M-54 [ACE]</Korean>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_GBU_12_1x">
+            <English>1x GBU-12 [ACE]</English>
+            <Italian>1x GBU-12 [ACE]</Italian>
+            <Spanish>1x GBU-12 [ACE]</Spanish>
+            <Japanese>1x GBU-12 [ACE]</Japanese>
+            <Korean>1x GBU-12 [ACE]</Korean>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_GBU_12_2x">
+            <English>2x GBU-12 [ACE]</English>
+            <Italian>2x GBU-12 [ACE]</Italian>
+            <Spanish>2x GBU-12 [ACE]</Spanish>
+            <Japanese>2x GBU-12 [ACE]</Japanese>
+            <Korean>2x GBU-12 [ACE]</Korean>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_GBU_12_4x">
+            <English>4x GBU-12 [ACE]</English>
+            <Italian>4x GBU-12 [ACE]</Italian>
+            <Spanish>4x GBU-12 [ACE]</Spanish>
+            <Japanese>4x GBU-12 [ACE]</Japanese>
+            <Korean>4x GBU-12 [ACE]</Korean>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_GBU_fab250_1x">
+            <English>1x FAB-250M-54 [ACE]</English>
+            <Italian>1x FAB-250M-54 [ACE]</Italian>
+            <Spanish>1x FAB-250M-54 [ACE]</Spanish>
+            <Japanese>1x FAB-250M-54 [ACE]</Japanese>
+            <Korean>1x FAB-250M-54 [ACE]</Korean>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_GBU_fab250_2x">
+            <English>2x FAB-250M-54 [ACE]</English>
+            <Italian>2x FAB-250M-54 [ACE]</Italian>
+            <Spanish>2x FAB-250M-54 [ACE]</Spanish>
+            <Japanese>2x FAB-250M-54 [ACE]</Japanese>
+            <Korean>2x FAB-250M-54 [ACE]</Korean>
+        </Key>
+    </Package>
+</Project>

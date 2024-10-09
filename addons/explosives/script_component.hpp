@@ -34,3 +34,5 @@
 #define PLACE_WAITING -1
 #define PLACE_CANCEL 0
 #define PLACE_APPROVE 1
+
+#define MINE_PITCH_UP 90

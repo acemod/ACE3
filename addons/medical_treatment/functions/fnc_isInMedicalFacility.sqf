@@ -18,6 +18,7 @@
 #define CHECK_OBJECTS(var) ((var) findIf {typeOf _x in GVAR(facilityClasses) || {_x getVariable [QEGVAR(medical,isMedicalFacility), false]}} != -1)
 
 params ["_unit"];
+//IGNORE_PRIVATE_WARNING ["_unit"];
 
 private _fnc_check = {
     private _position = _unit modelToWorldVisual [0, 0, eyePos _unit select 2];

@@ -27,15 +27,11 @@ private _owner = _target getVariable [QGVAR(owner), objNull];
 if (!isNull _owner && {_unit != _owner}) exitWith {false};
 
 // check general conditions
-private _conditions = missionNamespace getVariable [QGVAR(InteractionConditions), [[],[]]];
-_conditions params ["_conditionNames", "_conditionFuncs"];
-
 private _canInteract = true;
-
 {
-    if (!(_x in _exceptions) && {!([_unit, _target] call (_conditionFuncs select _forEachIndex))}) exitWith {
+    if (!(_x in _exceptions) && {!([_unit, _target] call _y)}) exitWith {
         _canInteract = false;
     };
-} forEach _conditionNames;
+} forEach GVAR(InteractionConditions);
 
 _canInteract

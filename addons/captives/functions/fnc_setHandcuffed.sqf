@@ -41,8 +41,8 @@ if ((_unit getVariable [QGVAR(isHandcuffed), false]) isEqualTo _state) exitWith 
 
 if (_state) then {
     _unit setVariable [QGVAR(isHandcuffed), true, true];
-    [_unit, "setCaptive", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
-    [_unit, "blockRadio", QGVAR(Handcuffed), true] call EFUNC(common,statusEffect_set);
+    [_unit, "setCaptive", QGVAR(handcuffed), true] call EFUNC(common,statusEffect_set);
+    [_unit, "blockRadio", QGVAR(handcuffed), true] call EFUNC(common,statusEffect_set);
 
     if (_unit getVariable [QGVAR(isSurrendering), false]) then {  //If surrendering, stop
         [_unit, false] call FUNC(setSurrendered);
@@ -82,8 +82,8 @@ if (_state) then {
     }, [_unit], 0.01] call CBA_fnc_waitAndExecute;
 } else {
     _unit setVariable [QGVAR(isHandcuffed), false, true];
-    [_unit, "setCaptive", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
-    [_unit, "blockRadio", QGVAR(Handcuffed), false] call EFUNC(common,statusEffect_set);
+    [_unit, "setCaptive", QGVAR(handcuffed), false] call EFUNC(common,statusEffect_set);
+    [_unit, "blockRadio", QGVAR(handcuffed), false] call EFUNC(common,statusEffect_set);
 
     //remove AnimChanged EH
     private _animChangedEHID = _unit getVariable [QGVAR(handcuffAnimEHID), -1];
