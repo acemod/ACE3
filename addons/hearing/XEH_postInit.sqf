@@ -40,7 +40,6 @@ GVAR(cacheAmmoLoudness) = createHashMap;
 GVAR(deafnessDV) = 0;
 GVAR(deafnessPrior) = 0;
 GVAR(volume) = 1;
-GVAR(playerVehAttenuation) = 1;
 GVAR(time3) = 0;
 GVAR(damageCoefficent) = 1;
 GVAR(volumeAttenuation) = 1;
@@ -63,7 +62,6 @@ GVAR(lastPlayerVehicle) = objNull;
         params ["_player", "_vehicle"];
 
         TRACE_2("vehicle change",_player,_vehicle);
-        _this call FUNC(updatePlayerVehAttenuation);
 
         if (!isNull GVAR(lastPlayerVehicle)) then {
             private _firedEH = GVAR(lastPlayerVehicle) getVariable [QGVAR(firedEH), -1];
@@ -80,8 +78,6 @@ GVAR(lastPlayerVehicle) = objNull;
             TRACE_2("added veh eh",_firedEH,GVAR(lastPlayerVehicle));
         };
     }, true] call CBA_fnc_addPlayerEventHandler;
-
-    ["turret", LINKFUNC(updatePlayerVehAttenuation), false] call CBA_fnc_addPlayerEventHandler;
 
     // Reset deafness on respawn (or remote control player switch)
     ["unit", {

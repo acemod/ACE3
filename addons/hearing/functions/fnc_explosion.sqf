@@ -34,7 +34,7 @@ private _hit = getNumber (_ammoConfig >> "hit");
 if (_hit < 0.5) exitWith { TRACE_1("ignore smoke/flare",_hit) };
 private _explosive = getNumber (_ammoConfig >> "explosive");
 
-private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
+private _vehAttenuation = [EGVAR(common,playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
 
 TRACE_4("",typeOf _projectile,_distance,_explosive,_vehAttenuation);
 
