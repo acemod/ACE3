@@ -26,7 +26,7 @@ private _ropeOrigins = getArray (_config >> QGVAR(ropeOrigins));
 private _deployedRopes = _vehicle getVariable [QGVAR(deployedRopes), []];
 private _hookAttachment = _vehicle getVariable [QGVAR(FRIES), _vehicle];
 
-private _ropeLength = getNumber (configfile >> "CfgWeapons" >> _ropeClass >> QEGVAR(logistics_rope,length));
+private _ropeLength = getNumber (configFile >> "CfgWeapons" >> _ropeClass >> QEGVAR(logistics_rope,length));
 
 if (_ropeLength <= 0) then {
     _ropeLength = DEFAULT_ROPE_LENGTH;

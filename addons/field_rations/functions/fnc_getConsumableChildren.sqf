@@ -18,6 +18,7 @@
 params ["_player"];
 
 private _fnc_getActions = {
+    //IGNORE_PRIVATE_WARNING ["_player"];
     TRACE_1("Creating consumable item actions",_player);
 
     private _actions = [];

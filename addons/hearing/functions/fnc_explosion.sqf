@@ -6,13 +6,12 @@
  * Arguments:
  * 0: Projectile <OBJECT>
  * 1: Explosion position ASL <ARRAY>
- * 2: Velocity <ARRAY> (unused)
  *
  * Return Value:
  * None
  *
  * Example:
- * [_projectile, [0, 0, 0], [0, 0, 0]] call ace_hearing_fnc_explosion
+ * [_projectile, [0, 0, 0]] call ace_hearing_fnc_explosion
  *
  * Public: No
  */
@@ -31,11 +30,13 @@ if (_distance > 100) exitWith {
 };
 
 private _ammoConfig = configOf _projectile;
+private _hit = getNumber (_ammoConfig >> "hit");
+if (_hit < 0.5) exitWith { TRACE_1("ignore smoke/flare",_hit) };
 private _explosive = getNumber (_ammoConfig >> "explosive");
 
 private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
 
-TRACE_5("",typeOf _projectile,_distance,_explosive,_audibleFire,_vehAttenuation);
+TRACE_4("",typeOf _projectile,_distance,_explosive,_vehAttenuation);
 
 (if (isArray (_ammoConfig >> "soundHit1")) then {
     getArray (_ammoConfig >> "soundHit1")

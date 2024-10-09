@@ -27,9 +27,18 @@ if (!alive ACE_player) exitWith {
 private _velocity = velocity ACE_player;
 private _normal = surfaceNormal (getPosWorld ACE_player);
 private _movementVector = vectorNormalized _velocity;
-private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
 private _fwdAngle = asin (_movementVector select 2);
-private _sideAngle = asin (_sideVector select 2);
+private _sideAngle = if ((getPosATL ACE_player) select 2 > 0.01) then {
+    0 // ignore terrain normal if not touching it
+} else {
+    private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
+    asin (_sideVector select 2);
+};
+if (GVAR(isSwimming)) then { // ignore when floating
+    _fwdAngle = 0;
+    _sideAngle = 0;
+};
+
 
 private _currentWork = REE;
 private _currentSpeed = (vectorMagnitude _velocity) min 6;
@@ -62,14 +71,15 @@ if (isNull objectParent ACE_player && {_currentSpeed > 0.1} && {isTouchingGround
         };
 
         // Used to simulate the unevenness/roughness of the terrain
-        if ((getPosATL ACE_player) select 2 < 0.01) then {
+        if (_sideAngle != 0) then {
             private _sideGradient = abs (_sideAngle / 45) min 1;
 
             _terrainFactor = 1 + _sideGradient ^ 4;
         };
     };
 
-    _currentWork = [_duty, _gearMass, _terrainGradient * GVAR(terrainGradientFactor), _terrainFactor, _currentSpeed] call FUNC(getMetabolicCosts);
+    // Add a scaling factor of 0.1 to reduce excessive stamina consumption on default settings (see #10361)
+    _currentWork = [_duty, _gearMass, _terrainGradient * GVAR(terrainGradientFactor) * 0.1, _terrainFactor, _currentSpeed] call FUNC(getMetabolicCosts);
     _currentWork = _currentWork max REE;
 };
 
@@ -140,7 +150,7 @@ systemChat format ["---- velocity %1 - respiratoryRate: %2 ----", (vectorMagnitu
 
 [ACE_player, _perceivedFatigue, GVAR(anReserve) == 0, _fwdAngle, _sideAngle] call FUNC(handleEffects);
 
-if (GVAR(enableStaminaBar)) then {
+if (GVAR(enableStaminaBarRealized)) then {
     [GVAR(anReserve) / AN_MAXRESERVE] call FUNC(handleStaminaBar);
 };
 

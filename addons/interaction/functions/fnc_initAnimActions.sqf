@@ -119,6 +119,8 @@ private _statement = {
                         };
                     };
                 } forEach _items;
+            } else {
+                [LELSTRING(common,disabled)] call EFUNC(common,displayTextStructured);
             };
 
             if (!_success) exitWith {};
@@ -180,13 +182,19 @@ private _config = configOf _object;
     private _icon = [_animConfig >> "icon", "TEXT", "\A3\ui_f\data\igui\cfg\actions\take_ca.paa"] call CBA_fnc_getConfigEntry;
     private _duration = [_animConfig >> "duration", "NUMBER", 10] call CBA_fnc_getConfigEntry;
     private _text = getText (_animConfig >> "text");
+    private _distance = [_animConfig >> "distance", "NUMBER", 2] call CBA_fnc_getConfigEntry;
 
     {
         private _action = [
             format [QGVAR(anim_%1_%2), _anim, _forEachIndex],
-            _name, _icon, _statement, _condition, {},
+            _name,
+            _icon,
+            _statement,
+            _condition,
+            {},
             [_anim, _phase, _duration, _text],
-            _x
+            _x,
+            _distance
         ] call EFUNC(interact_menu,createAction);
         [_class, 0, [], _action] call EFUNC(interact_menu,addActionToClass);
         TRACE_3("add anim",_class,_anim,_x);

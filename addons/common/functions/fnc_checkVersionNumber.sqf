@@ -155,7 +155,7 @@ private _fnc_check = {
 
 // Wait for server to send the servers files and version numbers
 if (isNil "ACE_Version_ServerVersions") then {
-    ACE_Version_ServerVersions addPublicVariableEventHandler _fnc_check;
+    "ACE_Version_ServerVersions" addPublicVariableEventHandler _fnc_check;
 } else {
     call _fnc_check;
 };

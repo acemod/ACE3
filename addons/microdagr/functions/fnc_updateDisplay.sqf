@@ -24,7 +24,7 @@ if (isNull _display) exitWith {ERROR("No Display");};
 private _daylight = [] call EFUNC(common,ambientBrightness);
 (_display displayCtrl IDC_MICRODAGRSHELL) ctrlSetTextColor [_daylight, _daylight, _daylight, 1];
 
-(_display displayCtrl IDC_CLOCKTEXT) ctrlSetText ([daytime, "HH:MM"] call bis_fnc_timeToString);
+(_display displayCtrl IDC_CLOCKTEXT) ctrlSetText ([dayTime, "HH:MM"] call bis_fnc_timeToString);
 
 private _waypoints = [] call FUNC(deviceGetWaypoints);
 
@@ -61,7 +61,7 @@ case (APP_MODE_INFODISPLAY): {
             private _dayString = if ((date select 2) < 10) then {"0" + str (date select 2)} else {str (date select 2)};
 
             (_display displayCtrl IDC_MODEDISPLAY_TIMEDISPLAYGREEN1) ctrlSetText format ["%1-%2-%3", _yearString, _monthSring, _dayString]; //"18-Feb-2010";
-            (_display displayCtrl IDC_MODEDISPLAY_TIMEDISPLAYGREEN2) ctrlSetText ([daytime, "HH:MM:SS"] call bis_fnc_timeToString);
+            (_display displayCtrl IDC_MODEDISPLAY_TIMEDISPLAYGREEN2) ctrlSetText ([dayTime, "HH:MM:SS"] call bis_fnc_timeToString);
         } else {
             private _targetPosName = "";
             private _targetPosLocationASL = [];

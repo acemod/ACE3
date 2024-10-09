@@ -7,6 +7,14 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(remoteTeamManagement), "CHECKBOX",
+    [LSTRING(remoteTeamManagement_DisplayName), LSTRING(remoteTeamManagement_Description)],
+    format ["ACE %1", LLSTRING(DisplayName)],
+    true,
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(enableMagazinePassing), "CHECKBOX",
     LSTRING(PassMagazineSetting),
     format ["ACE %1", LLSTRING(DisplayName)],
@@ -53,5 +61,13 @@
     ["str_a3_modules_moduleomquest_defend_f_attributes_useterrainobject0", LSTRING(interactWithTerrainObjects_Description)],
     format ["ACE %1", LLSTRING(DisplayName)],
     false,
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(interactWithEnemyCrew), "LIST",
+    [LSTRING(interactWithEnemyCrew_DisplayName), LSTRING(interactWithEnemyCrew_Description)],
+    format ["ACE %1", LLSTRING(DisplayName)],
+    [[0, 1, 2], [ELSTRING(common,Never), LSTRING(interactWithEnemyCrew_allowCSW), ELSTRING(common,Always)], 0],
     true
 ] call CBA_fnc_addSetting;

@@ -88,7 +88,7 @@ if (!isNil QGVAR(camera)) then {
 
     // GVARs exits purely for pre-setting of these attributes
     if (!isNil "_position") then {
-        GVAR(camPos) = ATLtoASL _position;
+        GVAR(camPos) = ATLToASL _position;
     };
 
     if (!isNil "_direction") then {

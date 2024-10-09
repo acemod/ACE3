@@ -34,7 +34,7 @@ createDialog QGVAR(cam_dialog_off);
     };
     closeDialog 0;
     createDialog QGVAR(cam_dialog_inactive);
-    uiNameSpace setVariable [QGVAR(monitor), findDisplay 18881];
+    uiNamespace setVariable [QGVAR(monitor), findDisplay 18881];
     [{
         GVAR(startTime) = CBA_missionTime;
         GVAR(done) = false;
@@ -46,7 +46,7 @@ createDialog QGVAR(cam_dialog_off);
         [QGVAR(monitorStarted), [ACE_player]] call CBA_fnc_localEvent;
         [{
             //Close monitor if we no longer have item:
-            if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable [QGVAR(monitor), displayNull])}) then {
+            if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNamespace getVariable [QGVAR(monitor), displayNull])}) then {
                 closeDialog 0;
                 [QGVAR(monitorClosed), [ACE_player]] call CBA_fnc_localEvent;
             };
@@ -108,7 +108,7 @@ createDialog QGVAR(cam_dialog_off);
                     ctrlSetText [1, "No GDS System detected"];
                     [{
                         GVAR(done) = true;
-                        closedialog 0;
+                        closeDialog 0;
                         HUNTIR_BACKGROUND_LAYER_ID cutText ["", "PLAIN"];
                         [QGVAR(monitorClosed), [ACE_player]] call CBA_fnc_localEvent;
                     }, [], 3, 0] call CBA_fnc_waitAndExecute;

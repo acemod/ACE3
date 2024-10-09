@@ -49,9 +49,6 @@ if (_target isKindOf "CAManBase") then {
     [_target, "AinjPpneMrunSnonWnonDb_still", 0] call EFUNC(common,doAnimation);
 };
 
-_unit setVariable [QGVAR(isDragging), true, true];
-_unit setVariable [QGVAR(draggedObject), _target, true];
-
 // Add drop action
 GVAR(unit) = _unit;
 
@@ -60,7 +57,7 @@ GVAR(releaseActionID) = [0xF1, [false, false, false], {
 }, "keydown", "", false, 0] call CBA_fnc_addKeyHandler;
 
 // Show mouse hint
-["", LLSTRING(Drop)] call EFUNC(interaction,showMouseHint);
+["", LELSTRING(common,Drop)] call EFUNC(interaction,showMouseHint);
 
 // Block firing
 if (!GVAR(dragAndFire)) then {
@@ -90,3 +87,6 @@ if (_UAVCrew isNotEqualTo []) then {
 
 // Fixes not being able to move when in combat pace
 [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+
+// API
+[QGVAR(startedDrag), [_unit, _target]] call CBA_fnc_localEvent;

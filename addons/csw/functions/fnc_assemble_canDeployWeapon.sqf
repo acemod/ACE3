@@ -20,4 +20,7 @@ params ["_target", "_player"];
 
 // If the current launcher has a config-value that defines the tripod, it is a CSW
 (alive _target) &&
-{(getText (configFile >> "CfgWeapons" >> secondaryWeapon _player >> QUOTE(ADDON) >> "assembleTo" >> typeOf _target)) != ""}
+{
+    (getText (configFile >> "CfgWeapons" >> secondaryWeapon _player >> QUOTE(ADDON) >> "assembleTo" >> typeOf _target)) != "" ||
+    {(getText (configFile >> "CfgWeapons" >> primaryWeapon _player >> QUOTE(ADDON) >> "assembleTo" >> typeOf _target)) != ""}
+}
