@@ -9,6 +9,22 @@
     [QGVAR(burnEffects), LINKFUNC(burnEffects)] call CBA_fnc_addEventHandler;
     [QGVAR(burnSimulation), LINKFUNC(burnSimulation)] call CBA_fnc_addEventHandler;
 
+    // Make burning wrecks into fire sources
+    ["AllVehicles", "Killed", {
+        params ["_vehicle", "", "", "_useEffects"];
+
+        if (_useEffects) then {
+            [QGVAR(addFireSource), [
+                _vehicle,
+                (boundingBoxReal [_vehicle, "FireGeometry"]) select 2,
+                BURN_MAX_INTENSITY,
+                QGVAR(wreck) + hashValue _vehicle,
+                {!isNull _this && {_this getEntityInfo 13}},
+                _vehicle
+            ]] call CBA_fnc_serverEvent;
+        };
+    }, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
+
     [QGVAR(playScream), {
         params ["_scream", "_source"];
 
