@@ -6,4 +6,4 @@ private _entrenchingTools = (QUOTE(getNumber (_x >> QQGVAR(entrenchingTool)) > 0
 _entrenchingTools append    (QUOTE(getNumber (_x >> QQGVAR(entrenchingTool)) > 0) configClasses (configFile >> "CfgVehicles") apply {configName _x});
 TRACE_1("",_entrenchingTools);
 
-uiNamespace setVariable [QGVAR(entrenchingTools), compileFinal str _entrenchingTools];
+uiNamespace setVariable [QGVAR(entrenchingTools), compileFinal (_entrenchingTools createHashMapFromArray [])];

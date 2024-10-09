@@ -1,8 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Function for handeling a cba setting being changed.
- * Adds warning if global setting is changed after ace_settingsInitialized
+ * Function for handling a cba setting being changed.
+ * Adds warning if global setting is changed after ace_settingsInitialized.
  *
  * Arguments:
  * 0: Setting Name <STRING>
@@ -21,9 +21,7 @@
 params ["_settingName", "_newValue", ["_canBeChanged", false]];
 TRACE_2("",_settingName,_newValue);
 
-["ace_settingChanged", [_settingName, _newValue]] call CBA_fnc_localEvent;
-
-if (!((toLower _settingName) in CBA_settings_needRestart)) exitWith {};
+if !((toLower _settingName) in CBA_settings_needRestart) exitWith {};
 if (_canBeChanged) exitWith {WARNING_1("update cba setting [%1] to use correct Need Restart param",_settingName);};
 if (!GVAR(settingsInitFinished)) exitWith {}; // Ignore changed event before CBA_settingsInitialized
 

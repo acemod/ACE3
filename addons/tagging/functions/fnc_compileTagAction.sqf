@@ -24,6 +24,7 @@ _actions pushBack ([
     _displayName,
     _icon,
     {
+        //IGNORE_PRIVATE_WARNING ["_player", "_target"];
         (_this select 2) params ["_class", "_textures", "_materials", "_tagModel"];
 
         (

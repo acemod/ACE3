@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
- * Author: PabstMirror, modified by Grim
- * Handles AI reloading
+ * Author: PabstMirror, LinkIsGrim
+ * Handles AI reloading.
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Gunner <OBJECT>
  * 2: Weapon <STRING>
  * 3: Magazine <STRING> (default: "")
@@ -15,7 +15,7 @@
  * Public: No
  */
 
-params ["_staticWeapon", "_gunner", "_weapon", ["_magazine", ""]];
+params ["_vehicle", "_gunner", "_weapon", ["_magazine", ""]];
 
 private _turretPath = [_gunner] call EFUNC(common,getTurretIndex);
 private _reloadSource = objNull;
@@ -24,7 +24,7 @@ private _reloadNeededAmmo = -1;
 
 private _cfgMagGroups = configFile >> QGVAR(groups);
 
-private _nearSupplies = [_gunner] + ((_staticWeapon nearSupplies 10) select {
+private _nearSupplies = [_gunner] + ((_vehicle nearSupplies 10) select {
     isNull (group _x) ||
     {!([_x] call EFUNC(common,isPlayer)) && {[side group _gunner, side group _x] call BIS_fnc_sideIsFriendly}}
 });
@@ -49,7 +49,7 @@ private _nearSupplies = [_gunner] + ((_staticWeapon nearSupplies 10) select {
         private _xWeaponMag = _x;
         {
             if ((getNumber (_cfgMagGroups >> _x >> _xWeaponMag)) == 1) then {
-                private _loadInfo = [_staticWeapon, _turretPath, _x, _xSource] call FUNC(reload_canLoadMagazine);
+                private _loadInfo = [_vehicle, _turretPath, _x, _xSource] call FUNC(reload_canLoadMagazine);
                 if (_loadInfo select 0) then {
                     _reloadMag = _x;
                     _reloadSource = _xSource;
@@ -81,16 +81,16 @@ if (_bestAmmoToSend == -1) exitWith {ERROR("No ammo");};
 [_reloadSource, _reloadMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
 
 private _timeToLoad = 1;
-if (!isNull(configOf _staticWeapon >> QUOTE(ADDON) >> "ammoLoadTime")) then {
-    _timeToLoad = getNumber(configOf _staticWeapon >> QUOTE(ADDON) >> "ammoLoadTime");
+if (!isNull(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime")) then {
+    _timeToLoad = getNumber(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime");
 };
 
 TRACE_1("Reloading in progress",_timeToLoad);
 [{
-    params ["_staticWeapon", "_turretPath", "_gunner", "_reloadMag", "_bestAmmoToSend"];
-    if ((!alive _staticWeapon) || {!alive _gunner} || {(_staticWeapon distance _gunner) > 10}) exitWith {TRACE_1("invalid state",_this);};
+    params ["_vehicle", "_turretPath", "_gunner", "_reloadMag", "_bestAmmoToSend"];
+    if ((!alive _vehicle) || {!alive _gunner} || {(_vehicle distance _gunner) > 10}) exitWith {TRACE_1("invalid state",_this);};
 
     // Reload the static weapon
-    TRACE_5("calling addTurretMag event",_staticWeapon,_turretPath,_gunner,_reloadMag,_bestAmmoToSend);
+    TRACE_5("calling addTurretMag event",_vehicle,_turretPath,_gunner,_reloadMag,_bestAmmoToSend);
     [QGVAR(addTurretMag), _this] call CBA_fnc_globalEvent;
-}, [_staticWeapon, _turretPath, _gunner, _reloadMag, _bestAmmoToSend], _timeToLoad] call CBA_fnc_waitAndExecute;
+}, [_vehicle, _turretPath, _gunner, _reloadMag, _bestAmmoToSend], _timeToLoad] call CBA_fnc_waitAndExecute;

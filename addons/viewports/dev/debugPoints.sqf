@@ -22,8 +22,8 @@
 #define IDD_3DEN 313
 
 [] spawn {
-    INFO_2("Pre-Init [is3den %1][3den display: %2]",is3den,!isNull findDisplay IDD_3DEN);
-    if (!is3den) exitWith {};
+    INFO_2("Pre-Init [is3den %1][3den display: %2]",is3DEN,!isNull findDisplay IDD_3DEN);
+    if (!is3DEN) exitWith {};
 
     GVAR(3denIndex) = 0;
     GVAR(3denViewports) = [];
@@ -99,7 +99,7 @@
             private _pointASL = _intersections # 0 # 0;
             if (isNil "_pointASL") exitWith {};
             _pointASL = _pointASL vectorAdd [0,0,0.09]; // Add a little bit up because it always sinks into the model
-            private _pointMS = _vehicle worldToModel ASLtoAGL _pointASL;
+            private _pointMS = _vehicle worldToModel ASLToAGL _pointASL;
 
             private _name = format ["view_%1",GVAR(3denIndex)];
             // [_name, _type, _camLocation, _camAttach, _screenLocation, _maxDistance, _compartments, _roles]
@@ -114,7 +114,7 @@ addMissionEventHandler ["Draw3D", {
     private _vehicle = vehicle player;
     private _viewports = _vehicle getVariable [QGVAR(viewports), []];
 
-    if (is3den) then {
+    if (is3DEN) then {
         _vehicle = (get3DENSelected "object") param [0, objNull];
         if (isNull _vehicle) exitWith {};
         _viewports = [_vehicle] call FUNC(getViewports);
@@ -127,7 +127,7 @@ addMissionEventHandler ["Draw3D", {
 
     drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [1,1,0,1], _vehicle modelToWorldVisual [0,0,0], 0.1, 0.1, 0, "", 1, 0.02, "TahomaB"];
     if (alive player) then { // not using ace_player so this works in 3den
-        drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,1,0,1], aslToAGL eyepos player, 0.1, 0.1, 0, "eye", 1, 0.02, "TahomaB"];
+        drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,1,0,1], ASLToAGL eyePos player, 0.1, 0.1, 0, "eye", 1, 0.02, "TahomaB"];
         drawIcon3D ["#(argb,8,8,3)color(1,1,1,1)", [0,1,0,1], player modelToWorldVisual (player selectionPosition "pilot"), 0.1, 0.1, 0, "pilot", 1, 0.02, "TahomaB"];
     };
     // {

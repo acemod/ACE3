@@ -19,6 +19,7 @@
 
 params ["_unit"];
 TRACE_1("params",_unit);
+//IGNORE_PRIVATE_WARNING ["_unit"];
 
 private _fnc_check = {
     private _nearObjects = nearestObjects [_unit, ["Air", "LandVehicle", "Slingload_base_F"], 20];

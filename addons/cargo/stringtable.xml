@@ -39,6 +39,9 @@
             <Russian>Разместить</Russian>
             <Japanese>配置する</Japanese>
             <Korean>배치하기</Korean>
+            <French>Déployer</French>
+            <German>Aufstellen</German>
+            <Spanish>Desplegar</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_ScrollAction">
             <English>Raise/Lower | (Ctrl + Scroll) Rotate</English>
@@ -285,6 +288,8 @@
             <Japanese>%1 を %2 に積み込んでいます・・・</Japanese>
             <Russian>Загружаем %1 в %2...</Russian>
             <Korean>%1을(를) %2에 싣는 중...</Korean>
+            <French>Chargement %1 dans %2...</French>
+            <German>%1 wird in %2 geladen...</German>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading %1 from %2...</English>
@@ -293,6 +298,8 @@
             <Japanese>%1 を %2 から降ろしています・・・</Japanese>
             <Russian>Выгружаем %1 из %2...</Russian>
             <Korean>%1을(를) %2(으)로부터 내리는 중...</Korean>
+            <French>Déchargement %1 de %2...</French>
+            <German>%1 wird von %2 entladen...</German>
         </Key>
         <Key ID="STR_ACE_Cargo_LoadingFailed">
             <English>%1&lt;br/&gt;could not be loaded</English>
@@ -334,6 +341,11 @@
             <Japanese>荷降ろし不可能です</Japanese>
             <Korean>하역할 수가 없습니다</Korean>
             <Russian>Не может быть выгружен</Russian>
+            <Spanish>No puede ser descargado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Cargo_checkSize">
+            <English>Check Cargo Size</English>
+            <Korean>화물 크기 확인</Korean>
         </Key>
         <Key ID="STR_ACE_Cargo_SizeMenu">
             <English>Cargo Size: %1</English>
@@ -343,6 +355,7 @@
             <Japanese>貨物のサイズ: %1</Japanese>
             <Korean>화물 크기: %1</Korean>
             <Russian>Размер груза: %1</Russian>
+            <Spanish>Tamaño de carga: %1</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_customName_edenName">
             <English>Custom Name</English>
@@ -497,7 +510,7 @@
             <German>Ladezeitmultiplikator</German>
             <Japanese>積載の所要時間係数</Japanese>
             <Polish>Współczynnik czasu załadowania</Polish>
-            <Italian>Coefficente Tempo Caricamento</Italian>
+            <Italian>Coefficiente Tempo Caricamento</Italian>
             <Russian>Коэф. времени погрузки</Russian>
             <Portuguese>Fator de tempo para carregar</Portuguese>
             <French>Coefficient du temps de chargement</French>
@@ -510,7 +523,7 @@
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
             <English>Modifies how long it takes to load/unload items.\nTime, in seconds, is the size of the item multiplied by this value.</English>
             <German>Gibt an, wie lange das Laden / Entladen von Gegenständen dauern soll.\nZeit in Sekunden, die mit der Größe des Gegenstandes multipliziert wird.</German>
-            <Japanese>貨物の積み込み/積み下ろしに掛かる時間を変更します。\n時間 (秒) は、貨物のサイズにこの値を掛けたものです。</Japanese>
+            <Japanese>貨物の積み込み/積み下ろしに掛かる時間を変更します。\n時間 (秒単位) は、貨物のサイズにこの値を掛けたものです。</Japanese>
             <Polish>Modyfikuje, jak długo zajmuje załadowywanie/wyładowywanie przedmiotów. \nCzasem, w sekundach, jest wielkość przedmiotu razy jego wartość.</Polish>
             <Italian>Modifica il tempo impiegato per caricare o scaricare gli oggetti.\nIl tempo, in secondi, equivale alla dimensione dell'oggetto moltiplicata per questo valore</Italian>
             <Russian>Изменяет время для загрузки/выгрузки предметов. \nВремя (сек) - это размер предмета, умноженный на это значение.</Russian>
@@ -580,6 +593,9 @@
             <Russian>Включить размещение</Russian>
             <Japanese>配置機能を有効化</Japanese>
             <Korean>배치 활성화</Korean>
+            <French>Permettre le placement</French>
+            <German>Aktiviere Aufbauen</German>
+            <Spanish>Habilitar despliegue</Spanish>
         </Key>
         <Key ID="STR_ACE_Cargo_enableDeploy_description">
             <English>Controls whether cargo items can be unloaded via the deploy method.</English>
@@ -587,6 +603,9 @@
             <Russian>Определяет, можно ли выгружать грузы с помощью метода размещения.</Russian>
             <Japanese>配置機能を介して貨物アイテムを降ろすことが出来るかどうかを制御します。</Japanese>
             <Korean>배치 방법을 통해 화물 아이템을 내릴 수 있는지 여부를 제어합니다.</Korean>
+            <French>Contrôler si les éléments de cargaison peuvent être déchargés via la méthode de déploiement.</French>
+            <German>Steuert, ob Frachtgegenstände über die Aufbaumethode entladen werden können.</German>
+            <Spanish>Controla si los objetos de la carga pueden ser descargados mediante el método de despliegue.</Spanish>
         </Key>
     </Package>
 </Project>

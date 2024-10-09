@@ -48,11 +48,11 @@ Note that these settings govern the default spectator behaviour. Through the use
 
 ### 3.1 Listenable
 
-Event Name | Passed Parameter(s) | Locality | Description
----------- | ----------- | ------------------- | --------
-`ace_spectatorSet` | [_isSpectator, _player] | Global | Player's spectator status was changed
-`ace_spectator_displayLoaded` | _display | Local | Spectator display was loaded
-`ace_spectator_displayUnloaded` | _display | Local | Spectator display was unloaded
+| Event Name | Passed Parameter(s) | Locality | Description |
+| ---------- | ----------- | ------------------- | -------- |
+| `ace_spectatorSet` | [_isSpectator, _player] | Global | Player's spectator status was changed |
+| `ace_spectator_displayLoaded` | _display | Local | Spectator display was loaded |
+| `ace_spectator_displayUnloaded` | _display | Local | Spectator display was unloaded |
 
 ## 4. Scripting
 

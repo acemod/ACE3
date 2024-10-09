@@ -53,7 +53,7 @@ if ((_ammoCount == 0) || // No ammo loaded
     __JavelinIGUISeek ctrlSetTextColor __ColorGray;
 
     _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
-    _this set [0, diag_frameno];
+    _this set [0, diag_frameNo];
     _this set [4, _fireDisabledEH];
 
     // Fix weapon being in top-attack when loading AP magazine (https://feedback.bistudio.com/T171012)
@@ -194,7 +194,7 @@ if (isNull _newTarget) then {
 };
 
 // Save arguments for next run
-_this set [0, diag_frameno];
+_this set [0, diag_frameNo];
 _this set [1, _currentTarget];
 _this set [2, _lockStartTime];
 _this set [3, _soundNextPlayTime];

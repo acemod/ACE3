@@ -19,8 +19,7 @@
 
 private _outputText = {
     diag_log text (_this select 0);
-    "ace_clipboard" callExtension ((_this select 0) + "
-");
+    "ace" callExtension ["clipboard:append", [(_this select 0) + endl]];
 };
 
 private _text = format ["~~~~~~~~~ACE Debug~~~~~~~~~
@@ -76,8 +75,8 @@ _text = format ["
 
 
 {
-    _var = missionNamespace getVariable [_x, nil];
-    if(!isnil "_var" && {_var isEqualType []} && {(count _var) > MIN_ARRAY_SIZE}) then {
+    private _var = missionNamespace getVariable [_x, nil];
+    if(!isNil "_var" && {_var isEqualType []} && {(count _var) > MIN_ARRAY_SIZE}) then {
         _text = format ["%1 - ARRAY SIZE: %2", _x, (count _var)];
         [_text] call _outputText;
     };
@@ -87,11 +86,11 @@ _text = format ["
     private _unit = _x;
     {
         private _var = _unit getVariable [_x, nil];
-        if(!isnil "_var" && {_var isEqualType []} && {(count _var) > MIN_ARRAY_SIZE}) then {
+        if(!isNil "_var" && {_var isEqualType []} && {(count _var) > MIN_ARRAY_SIZE}) then {
             _text = format ["%1 on [%2] - ARRAY SIZE: %3", _x, _unit, (count _var)];
             [_text] call _outputText;
         };
     } forEach (allVariables _unit);
 } forEach allUnits;
 
-"ace_clipboard" callExtension "--COMPLETE--";
+"ace" callExtension ["clipboard:complete", []];

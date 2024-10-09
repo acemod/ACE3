@@ -8,7 +8,7 @@ LOG(MSG_INIT);
 // Calculate the maximum zoom allowed for this map
 call FUNC(determineZoom);
 
-GVAR(flashlights) = [] call CBA_fnc_createNamespace;
+GVAR(flashlights) = createHashMap;
 
 ["CBA_settingsInitialized", {
     if (isMultiplayer && {GVAR(DefaultChannel) != -1}) then {
@@ -73,8 +73,7 @@ GVAR(hasWatch) = true;
     GVAR(hasWatch) = false;
     {
         if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
-        false
-    } count (assignedItems _unit);
+    } forEach (assignedItems _unit);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 
@@ -110,6 +109,7 @@ GVAR(vehicleLightColor) = [1,1,1,0];
             compile _vehicleLightCondition
         };
     } else {
+        //IGNORE_PRIVATE_WARNING ["_vehicle", "_unit"];
         switch (true) do {
             case (_vehicle isKindOf "Tank");
             case (_vehicle isKindOf "Wheeled_APC_F"): { {true} };

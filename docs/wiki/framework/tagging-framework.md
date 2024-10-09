@@ -41,28 +41,28 @@ class ACE_Tags {
 
 `ace_tagging_fnc_addCustomTag`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Unique Identifier | String | Required
-1  | Display Name | String | Required
-2  | Required Item | String | Required
-3  | Textures | Array | Required
-4  | Icon | String | Optional (default: `""` - Default white point)
-5  | Material Paths | Array | Optional (default: `[]] - No custom material)
-6  | Tag Model | String | Optional (default: `"UserTexture1m_F"` - 1x1m texture surface)
-**R** | Successfully Added Tag | Boolean | Return value
+|    | Arguments | Type | Optional (default value) |
+| ---| --------- | ---- | ------------------------ |
+| 0  | Unique Identifier | String | Required |
+| 1  | Display Name | String | Required |
+| 2  | Required Item | String | Required |
+| 3  | Textures | Array | Required |
+| 4  | Icon | String | Optional (default: `""` - Default white point) |
+| 5  | Material Paths | Array | Optional (default: `[]` - No custom material) |
+| 6  | Tag Model | String | Optional (default: `"UserTexture1m_F"` - 1x1m texture surface) |
+| **R** | Successfully Added Tag | Boolean | Return value |
 
 #### 2.1.1 Example
 
 `["ace_victoryRed", "Victory Red", "ACE_SpraypaintRed", ["tagTexture1.paa", "tagTexture2.paa"], "icon.paa"] call ace_tagging_fnc_addCustomTag;`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  | `"ace_victoryRed"` | Unique identifier (similar to class name)
-1  | `"Victory Red"` | Name of your tag being displayed in the interaction menu
-2  | `"ACE_SpraypaintRed"` | Required item to have in the inventory to be able to spray your tag
-3  | `["tagTexture1.paa", "tagTexture2.paa"]` | List of texture variants (one is randomly selected when tagging)
-4  | `"icon.paa"` | Icon being displayed in the interaction menu
+|    | Arguments | Explanation |
+| ---| --------- | ----------- |
+| 0  | `"ace_victoryRed"` | Unique identifier (similar to class name) |
+| 1  | `"Victory Red"` | Name of your tag being displayed in the interaction menu |
+| 2  | `"ACE_SpraypaintRed"` | Required item to have in the inventory to be able to spray your tag |
+| 3  | `["tagTexture1.paa", "tagTexture2.paa"]` | List of texture variants (one is randomly selected when tagging) |
+| 4  | `"icon.paa"` | Icon being displayed in the interaction menu |
 
 
 ### 2.2 Tags in description.ext

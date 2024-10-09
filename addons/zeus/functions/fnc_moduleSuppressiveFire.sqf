@@ -59,7 +59,7 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
         } forEach getArtilleryAmmo [_vehicle];
         TRACE_1("getArtilleryAmmo",_artilleryMag);
         if (_artilleryMag == "") exitWith {_targetASL = [];};
-        private _eta = _vehicle getArtilleryETA [ASLtoAGL _targetASL, _artilleryMag];
+        private _eta = _vehicle getArtilleryETA [ASLToAGL _targetASL, _artilleryMag];
         TRACE_1("getArtilleryETA",_eta);
         if (_eta < 0) exitWith {
             [ELSTRING(Interaction,NotInRange)] call FUNC(showMessage);
@@ -69,7 +69,7 @@ if ([_unit] call EFUNC(common,isPlayer)) exitWith {
     } else {
         // Direct fire - Get a target position that will work
         private _lis = lineIntersectsSurfaces [eyePos _unit, _targetASL, _unit, _vehicle];
-        if ((count _lis) > 0) then { // If point is hidden, unit won't fire, do a ray cast to find where they should shoot at
+        if (_lis isNotEqualTo []) then { // If point is hidden, unit won't fire, do a ray cast to find where they should shoot at
             _targetASL = ((_lis select 0) select 0);
             TRACE_1("using ray cast pos",_mousePosASL distance _targetASL);
         };

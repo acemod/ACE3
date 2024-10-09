@@ -1,25 +1,23 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * If the CSW is mounted or in use this will not allow you to dismount the weapon
+ * If the CSW is mounted or in use this will not allow you to dismount the weapon.
  *
  * Arguments:
- * 0: Static Weapon <OBJECT>
+ * 0: CSW <OBJECT>
  *
  * Return Value:
- * Can Dismount <BOOL>
+ * Can dismount weapon <BOOL>
  *
  * Example:
- * [cursorObject] call ace_csw_fnc_assemble_canPickupWeapon
+ * cursorObject call ace_csw_fnc_assemble_canPickupWeapon
  *
  * Public: No
  */
 
-params ["_staticWeapon"];
+params ["_vehicle"];
 
 // Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
-private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select (_staticWeapon getVariable [QGVAR(assemblyMode), 3]);
-private _notCrewed = (crew _staticWeapon) isEqualTo [];
-private _deadCrew = !(alive (gunner _staticWeapon)); // need to eject body???
+private _assemblyMode = [false, true, true, GVAR(defaultAssemblyMode)] select (_vehicle getVariable [QGVAR(assemblyMode), 3]);
 
-_assemblyMode && {alive _staticWeapon} && {_notCrewed || _deadCrew}
+_assemblyMode && {alive _vehicle} && {((crew _vehicle) findIf {alive _x && {!unitIsUAV _x}}) == -1} // return

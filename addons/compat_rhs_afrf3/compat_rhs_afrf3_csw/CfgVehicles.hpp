@@ -5,7 +5,7 @@ class CfgVehicles {
     class StaticGrenadeLauncher;
 
     class rhs_SPG9_base: AT_01_base_F {
-        class ACE_CSW {
+        class ace_csw {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_SPG9);
             magazineLocation = "_target selectionPosition 'breach'";
@@ -18,14 +18,14 @@ class CfgVehicles {
     };
 
     class rhs_SPG9M_base: rhs_SPG9_base {
-        class ACE_CSW: ACE_CSW {
+        class ace_csw: ace_csw {
             enabled = 1;
             disassembleWeapon = QGVAR(spg9m_carry);
         };
     };
 
     class rhs_Kornet_Base: AT_01_base_F {
-        class ACE_CSW {
+        class ace_csw {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_9K133_launcher);
             magazineLocation = "_target selectionPosition 'gun'";
@@ -38,7 +38,7 @@ class CfgVehicles {
     };
 
     class rhs_Metis_Base: AT_01_base_F {
-        class ACE_CSW {
+        class ace_csw {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_9K115_2_launcher);
             magazineLocation = "_target selectionPosition 'gun'";
@@ -51,7 +51,7 @@ class CfgVehicles {
     };
 
     class rhs_2b14_82mm_Base: StaticMortar {
-        class ACE_CSW {
+        class ace_csw {
             enabled = 1;
             magazineLocation = "";
             proxyWeapon = QGVAR(rhs_weap_2b14);
@@ -64,7 +64,7 @@ class CfgVehicles {
     };
 
     class rhs_nsv_tripod_base: StaticMGWeapon {
-        class ACE_CSW {
+        class ace_csw {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_nsvt_effects);
             magazineLocation = "_target selectionPosition 'magazine'";
@@ -77,7 +77,7 @@ class CfgVehicles {
     };
 
     class RHS_KORD_Base: rhs_nsv_tripod_base {
-        class ACE_CSW: ACE_CSW {
+        class ace_csw: ace_csw {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_KORD);
             disassembleWeapon = QGVAR(kord_carry);
@@ -86,7 +86,7 @@ class CfgVehicles {
     };
 
     class RHS_KORD_high_base: RHS_KORD_Base {
-        class ACE_CSW: ACE_CSW {
+        class ace_csw: ace_csw {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_KORD);
             disassembleWeapon = QGVAR(kord_carry);
@@ -95,7 +95,7 @@ class CfgVehicles {
     };
 
     class RHS_AGS30_TriPod_base: StaticGrenadeLauncher {
-        class ACE_CSW {
+        class ace_csw {
             enabled = 1;
             proxyWeapon = QGVAR(rhs_weap_AGS30);
             magazineLocation = "_target selectionPosition 'magazine'";

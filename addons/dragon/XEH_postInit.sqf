@@ -6,7 +6,7 @@
 ["vehicle", {
     params ["","_vehicle"];
     TRACE_2("vehicle change",_vehicle,typeOf _vehicle);
-    if (!(_vehicle isKindOf QGVAR(staticBase))) exitWith {};
+    if !(_vehicle isKindOf QGVAR(staticBase)) exitWith {};
 
     _vehicle animate ["rest_rotate", 0];
 
@@ -14,7 +14,7 @@
     [GVAR(pfID)] call CBA_fnc_removePerFrameHandler;
 
     private _lastView = cameraView;
-    if (!(_lastView in ["INTERNAL", "EXTERNAL"])) then { _lastView == "INTERNAL"; };
+    if !(_lastView in ["INTERNAL", "EXTERNAL"]) then { _lastView == "INTERNAL"; };
 
     GVAR(pfID) = [{
         params ["_args"];

@@ -32,16 +32,16 @@ Important notes:
 
 `ace_slideshow_fnc_createSlideshow`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Screen Objects | Array | Required
-1  | Controller Objects | Array | Required (screen objects are used if empty `[]`, none are available with automatic transitions)
-2  | Image Paths | Array | Required (paths must use backslash `\`)
-3  | Action Names | Array | Required
-4  | Slide Duration | Number | Optional (default: `0`, `0` disables automatic transitions)
-5  | Set Name | String | Optional (default: localized `"Slides"`)
-6  | Texture Selection | Number | Optional (default: `0`)
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Screen Objects | Array | Required |
+| 1  | Controller Objects | Array | Required (screen objects are used if empty `[]`, none are available with automatic transitions) |
+| 2  | Image Paths | Array | Required (paths must use backslash `\`) |
+| 3  | Action Names | Array | Required |
+| 4  | Slide Duration | Number | Optional (default: `0`, `0` disables automatic transitions) |
+| 5  | Set Name | String | Optional (default: localized `"Slides"`) |
+| 6  | Texture Selection | Number | Optional (default: `0`) |
+| **R** | None | None | Return value |
 
 _Note: Set Name argument added in 3.9.1._
 
@@ -49,15 +49,15 @@ _Note: Set Name argument added in 3.9.1._
 
 `[[object1, object2], [controller1], ["images\image1.paa", "images\image2.paa"], ["Action1", "Action2"], 5, "My Slides", 1] call ace_slideshow_fnc_createSlideshow;`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  | `[object1, object2]` | Objects on which images will be projected on
-1  | `[controller1]` | Objects with which slideshow can be controlled
-2  | `["images\image1.paa", "images\image2.paa"]` | Paths to images projected on screen objects
-3  | `["Action1", "Action2"]` | Action names for interaction menu if automatic transitions are not enabled
-4  | `5` | 5s slide duration before change to next image
-5  | `"My Slides"` | Main interaction point name, for easier distinguishing of multiple slideshow sets
-6  | `1` | Uses texture selection 1 for objects with multiple options
+|    | Arguments | Explanation |
+|----| --------- | ----------- |
+| 0  | `[object1, object2]` | Objects on which images will be projected on |
+| 1  | `[controller1]` | Objects with which slideshow can be controlled |
+| 2  | `["images\image1.paa", "images\image2.paa"]` | Paths to images projected on screen objects |
+| 3  | `["Action1", "Action2"]` | Action names for interaction menu if automatic transitions are not enabled |
+| 4  | `5` | 5s slide duration before change to next image |
+| 5  | `"My Slides"` | Main interaction point name, for easier distinguishing of multiple slideshow sets |
+| 6  | `1` | Uses texture selection 1 for objects with multiple options |
 
 ### 2.2 Create Map Images
 
@@ -86,7 +86,7 @@ _Note: Set Name argument added in 3.9.1._
 tex1 = [] call ace_slideshow_fnc_mapImage;
 tex2 = [(getPos aWhiteboard), 0.5, [[getpos aWhiteboard, "you", "mil_start"]], 0] call ace_slideshow_fnc_mapImage;
 tex3 = [[4000, 4000], 0.5, [[[5000, 5000], "target", "mil_objective"]], 2] call ace_slideshow_fnc_mapImage;
-[[aWhiteboard], [], [tex1, tex2, tex3], ["Full", "Sat Start", "Sat Objective"]] call ace_slideshow_fnc_createSlideshow;  
+[[aWhiteboard], [], [tex1, tex2, tex3], ["Full", "Sat Start", "Sat Objective"]] call ace_slideshow_fnc_createSlideshow;
 ```
 
 ### 2.2.2 Map Slideshow Advanced Example
@@ -105,12 +105,12 @@ private _initCode = {
     [{
         params ["_displayID","_idPFH"];
         private _display = findDisplay _displayID;
-        if (isNull _display) exitWith { 
+        if (isNull _display) exitWith {
             systemChat format ["%1 - removing pfeh", _this];
             [_idPFH] call CBA_fnc_removePerFrameHandler;
         };
         displayUpdate _display;
-        
+
         private _map = _display displayCtrl 1;
         _map ctrlMapAnimAdd [0, 0.3, getpos theUAV];
         ctrlMapAnimCommit _map;

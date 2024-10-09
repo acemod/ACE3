@@ -38,9 +38,9 @@ private _enemiesInVehicle = false;   //Possible Side Restriction
 
 {
     if (side _unit getFriend side _x < 0.6) exitWith {_enemiesInVehicle = true};
-    false
-} count crew _vehicle;
+} forEach crew _vehicle;
 
+//IGNORE_PRIVATE_WARNING ["_unit", "_isInside", "_vehicle", "_turret", "_index", "_fnc_getInEH", "_position"];
 switch (_position) do {
     case "driver" : {
         if (CANGETINDRIVER) then {

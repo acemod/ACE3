@@ -421,6 +421,7 @@
             <Korean>"MS" - 밀리초 (0부터 59까지)</Korean>
             <Japanese>"MM" - ミリ秒 (0から59)</Japanese>
             <Russian>"ММ" - миллисекунды (от 0 до 59)</Russian>
+            <Spanish>"MM" - Milisegundos (de 0 a 59)</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription5">
             <English>"mmm" - Milliseconds (from 0 to 999)</English>
@@ -431,6 +432,7 @@
             <Korean>"mmm" - 밀리초 (0부터 999까지)</Korean>
             <Japanese>"mmm" - ミリ秒 (0から599)</Japanese>
             <Russian>"ммм" - миллисекунды (от 0 до 999)</Russian>
+            <Spanish>"mmm" - Milisegundos (de 0 a 999)</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>

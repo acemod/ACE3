@@ -46,7 +46,7 @@ if ((getNumber (configOf _vehicle >> QGVAR(addLaserDesignator))) == 1) then {
         params ["_vehicle", "_turretPath"];
         TRACE_3("checking for laser",_vehicle,_turretPath,_vehicle turretLocal _turretPath);
         if (!alive _vehicle) exitWith {};
-        if (!(_vehicle turretLocal _turretPath)) then {WARNING("Turret not local");};
+        if !(_vehicle turretLocal _turretPath) then {WARNING("Turret not local");};
         private _hasLaser = false;
         {
             // Most addons just use "Laserdesignator_mounted", but this should cover custom ones

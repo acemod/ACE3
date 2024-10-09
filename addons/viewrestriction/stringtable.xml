@@ -15,6 +15,7 @@
             <Russian>Ограничение обзора</Russian>
             <Turkish>Görüntüyü Kısıtla</Turkish>
             <Spanish>Reestricción de Vista</Spanish>
+            <Portuguese>Restrição do Modo de Visão</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModuleDescription">
             <English>View restriction settings to limit the usage of 1st or 3rd person views globally or per vehicle type.</English>
@@ -29,6 +30,7 @@
             <Russian>Настройки ограничения обзора при виде от 1-го или 3-го лица. Общие для всех, или Выборочные, в зависимости от техники.</Russian>
             <Turkish>1. veya 3. kişi görünümlerinin kullanımını genel olarak veya araç türüne göre sınırlamak için kısıtlama ayarlarını görüntüleyin.</Turkish>
             <Spanish>Opciones de Reestricción de Vista para limitar el uso de 1º o 3º persona globalmente o según el tipo de vehículo.</Spanish>
+            <Portuguese>A restrição do modo de visão limita o uso de 1ª ou 3ª pessoa globalmente ou por tipo de veículo.</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_Mode">
             <English>Mode</English>
@@ -44,6 +46,7 @@
             <Russian>Режим установок</Russian>
             <Turkish>Mod</Turkish>
             <Spanish>Modo</Spanish>
+            <Portuguese>Modo</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeDesc">
             <English>Sets global mode. Default: Disabled</English>
@@ -59,6 +62,7 @@
             <Russian>Общие установки для всех. По умолчанию: Отключено.</Russian>
             <Turkish>Global modu ayarlar. Varsayılan: Devre Dışı</Turkish>
             <Spanish>Establece el modo global. Defecto: Deshabilitado</Spanish>
+            <Portuguese>Define o modo global. Padrão: Desabilitado</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveFoot">
             <English>(Selective) Foot</English>
@@ -74,6 +78,7 @@
             <Russian>(Выборочные) Пешком</Russian>
             <Turkish>(Seçilebilir) Ayakta</Turkish>
             <Spanish>(Selectivo) Pie</Spanish>
+            <Portuguese>(Seletivo) A pé</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveFootDesc">
             <English>Selective mode on Foot. Default: Disabled (Requires Mode: Selective)</English>
@@ -89,6 +94,7 @@
             <Russian>Выборочные установки без техники. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
             <Turkish>Ayakta iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
             <Spanish>Modo selectivo a pie. Defecto: Deshabilitado (Requiere Modo: Selectivo)</Spanish>
+            <Portuguese>Modo seletivo a pé. Padrão: Desabilitado (Modo necessário: Seletivo)</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveLand">
             <English>(Selective) Land Vehicles</English>
@@ -104,6 +110,7 @@
             <Russian>(Выборочные) Наземная техника</Russian>
             <Turkish>(Seçilebilir) Kara Araçları</Turkish>
             <Spanish>(Selectivo) Vehículos de tierra</Spanish>
+            <Portuguese>(Seletivo) Veículos terrestres</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveLandDesc">
             <English>Selective mode in Land Vehicles. Default: Disabled (Requires Mode: Selective)</English>
@@ -119,6 +126,7 @@
             <Russian>Выборочные установки для наземной техники. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
             <Turkish>Kara araçlarında iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
             <Spanish>Modo selectivo en vehículos de tierra.Defecto: Deshabilitado (Requiere Modo: Selectivo)</Spanish>
+            <Portuguese>Modo seletivo em veículos terrestres. Padrão: Desabilitado (Modo necessário: Seletivo)</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveAir">
             <English>(Selective) Air Vehicles</English>
@@ -134,6 +142,7 @@
             <Russian>(Выборочные) Авиатехника</Russian>
             <Turkish>(Seçilebilir) Hava Araçları</Turkish>
             <Spanish>(Selectivo) Vehículos aéreos</Spanish>
+            <Portuguese>(Seletivo) Aeronaves</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveAirDesc">
             <English>Selective mode in Air Vehicles. Default: Disabled (Requires Mode: Selective)</English>
@@ -149,6 +158,7 @@
             <Russian>Выборочные установки для авиатехники. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
             <Turkish>Hava araçlarında iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
             <Spanish>Modo selectivo en vehículos aéreos. Defecto: Deshabilitado (Requiere Modo: Selectivo)</Spanish>
+            <Portuguese>Modo seletivo em aeronaves. Padrão: Desabilitado (Modo necessário: Seletivo)</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveSea">
             <English>(Selective) Sea Vehicles</English>
@@ -164,6 +174,7 @@
             <Russian>(Выборочные) Водный транспорт</Russian>
             <Turkish>(Seçilebilir) Deniz Araçları</Turkish>
             <Spanish>(Selectivo) Vehículos marítimos</Spanish>
+            <Portuguese>(Seletivo) Veículos aquáticos</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveSeaDesc">
             <English>Selective mode in Sea Vehicles. Default: Disabled (Requires Mode: Selective)</English>
@@ -179,6 +190,7 @@
             <Russian>Выборочные установки для водного транспорта. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
             <Turkish>Deniz araçlarında iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
             <Spanish>Modo selectivo en vehículos marítimos. Defecto: Deshabilitado (Requiere Modo: Selectivo)</Spanish>
+            <Portuguese>Modo seletivo em veículos aquáticos. Padrão: Desabilitado (Modo necessário: Seletivo)</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveUAV">
             <English>(Selective) UAVs</English>
@@ -194,6 +206,7 @@
             <Russian>(Выборочные) Беспиплотники</Russian>
             <Turkish>(Seçilebilir) IHA'lar</Turkish>
             <Spanish>(Selectivo) VANTs</Spanish>
+            <Portuguese>(Seletivo) VANTs</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ModeSelectiveUAVDesc">
             <English>Selective mode in UAVs. Default: Disabled (Requires Mode: Selective)</English>
@@ -209,6 +222,7 @@
             <Russian>Выборочные установки для беспилотников. По умолчанию: Отключено (требуется режим: Выборочные)</Russian>
             <Turkish>IHA araçlarında iken seçilen görüş modu. Varsayılan: Etkin Değil</Turkish>
             <Spanish>Modo selectivo en VANTs. Defecto: Deshabilitado (Requiere Modo: Selectivo)</Spanish>
+            <Portuguese>Modo seletivo em VANTs. Padrão: Desabilitado (Modo necessário: Seletivo)</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_Disabled">
             <English>Disabled</English>
@@ -224,6 +238,7 @@
             <Russian>Отключено</Russian>
             <Turkish>Devre Dışı</Turkish>
             <Spanish>Deshabilitado</Spanish>
+            <Portuguese>Desabilitado</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_FirstPerson">
             <English>Forced 1st Person</English>
@@ -238,6 +253,7 @@
             <Russian>От 1-го лица (принудительно)</Russian>
             <Turkish>1. Kişi Görüşüne Zorla</Turkish>
             <Spanish>Forzada 1º persona</Spanish>
+            <Portuguese>Forçada 1ª pessoa</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_ThirdPerson">
             <English>Forced 3rd Person</English>
@@ -252,6 +268,7 @@
             <Russian>От 3-го лица (принудительно)</Russian>
             <Turkish>3. Kişi Görüşüne Zorla</Turkish>
             <Spanish>Forzada 3º persona</Spanish>
+            <Portuguese>Forçada 3ª pessoa</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_Selective">
             <English>Selective</English>
@@ -267,6 +284,7 @@
             <Russian>Выборочный</Russian>
             <Turkish>Seçilebilinir</Turkish>
             <Spanish>Selectivo</Spanish>
+            <Portuguese>Seletivo</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_SettingPreserveViewName">
             <English>Preserve view for vehicle types</English>
@@ -281,6 +299,7 @@
             <Korean>차량 타입에 따른 시야 정보 저장</Korean>
             <Spanish>Preservar vista para los tipos de vehículos</Spanish>
             <French>Conserver la vue pour les types de véhicules</French>
+            <Portuguese>Mantém o modo de visão por tipo de veículo</Portuguese>
         </Key>
         <Key ID="STR_ACE_ViewRestriction_SettingPreserveViewDesc">
             <English>Switch view on vehicle change to last used in this vehicle type (Requires Mode: Disabled)</English>
@@ -295,6 +314,7 @@
             <Korean>해당 차량 타입에서 마지막으로 사용했던 시야로 설정하여 봅니다 (모드 - 사용 안함 필요)</Korean>
             <Spanish>Cambiar vista en el cambio de vehículo hacia la última usada en ese tipo de vehículo (Requiere Modo: Deshabilitado)</Spanish>
             <French>Lors d'un changement de véhicule, change la vue pour la dernière utilisée dans ce type de véhicule (Mod requis : désactivé).</French>
+            <Portuguese>Ao trocar de veículo, troca o modo de visão para aquele usado anteriormente no mesmo tipo de veículo (Modo necessário: Desabilitado)</Portuguese>
         </Key>
     </Package>
 </Project>

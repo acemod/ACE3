@@ -29,6 +29,7 @@
             <Russian>Круиз-контроль включён</Russian>
             <Spanish>Control de crucero encendido</Spanish>
             <French>Régulateur de vitesse activé</French>
+            <Portuguese>Controle de cruzeiro ativado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicles_Off">
             <English>Speed Limiter off</English>
@@ -58,6 +59,7 @@
             <Russian>Круиз-контроль выключен</Russian>
             <Spanish>Control de crucero apagado</Spanish>
             <French>Régulateur de vitesse désactivé</French>
+            <Portuguese>Controle de cruzeiro desativado</Portuguese>
         </Key>
         <Key ID="STR_ACE_Vehicles_SpeedLimit">
             <English>Speed Limit</English>

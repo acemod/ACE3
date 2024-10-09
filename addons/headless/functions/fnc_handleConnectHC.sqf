@@ -19,17 +19,14 @@ params ["_headlessClient"];
 
 // Exit if HC already registered
 // No need to check if distribution or end mission enabled, as if disabled this will never run
-if (_headlessClient in GVAR(headlessClients)) exitWith {};
-
-// Register for use
-GVAR(headlessClients) pushBack _headlessClient;
+if (GVAR(headlessClients) pushBackUnique _headlessClient == -1) exitWith {};
 
 if (XGVAR(log)) then {
     INFO_1("Registered HC: %1",_headlessClient);
 };
 
 // Exit if AI distribution is disabled
-if (!XGVAR(enabled)) exitWith {true};
+if (!XGVAR(enabled)) exitWith {};
 
 // Rebalance
 [true] call FUNC(rebalance);

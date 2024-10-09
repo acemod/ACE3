@@ -25,7 +25,7 @@ TRACE_1("drawName:",_this);
 
 params ["", "_target", "", "_heightOffset"];
 
-_fnc_parameters = {
+private _fnc_parameters = {
     params ["_player", "_target", "_alpha", "_heightOffset", "_drawName", "_drawRank", "_drawSoundwave"];
 
     //Set Icon:
@@ -42,13 +42,13 @@ _fnc_parameters = {
 
         default {
             private _targetFaction = _target getVariable [QGVAR(faction), faction _target];
-            private _customRankIcons = GVAR(factionRanks) getVariable _targetFaction;
+            private _customRankIcons = GVAR(factionRanks) get _targetFaction;
 
-            if (!isNil "_customRankIcons") then {
-                _customRankIcons param [ALL_RANKS find rank _target, ""] // return
-            } else {
+            if (isNil "_customRankIcons") then {
                 // default rank icons
                 format ["\A3\Ui_f\data\GUI\Cfg\Ranks\%1_gs.paa", rank _target] // return
+            } else {
+                _customRankIcons param [ALL_RANKS find rank _target, ""] // return
             };
         };
     };

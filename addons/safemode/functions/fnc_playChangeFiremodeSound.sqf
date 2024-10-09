@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Play weapon firemode change sound.
+ * Plays weapon firemode change sound.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -21,21 +21,23 @@ params ["_unit", "_weapon"];
 private _sound = getArray (configFile >> "CfgWeapons" >> _weapon >> "changeFiremodeSound");
 
 if (_sound isEqualTo []) exitWith {
-    playSound "ACE_Sound_Click";
+    playSoundUI ["ACE_Sound_Click"];
 };
 
-// get position where to play the sound (position of the weapon)
-private _position = _unit modelToWorldVisualWorld (_unit selectionPosition "RightHand");
-
-_sound params ["_filename", ["_volume", 1], ["_soundPitch", 1], ["_distance", 0]];
+_sound params [["_filename", ""], ["_volume", 1], ["_soundPitch", 1], ["_distance", 0]];
 
 if (_filename == "") exitWith {
-    playSound "ACE_Sound_Click";
+    playSoundUI ["ACE_Sound_Click"];
 };
 
-// add file extension .wss as default
+// Add file extension .wss as default
 if !(toLowerANSI (_filename select [count _filename - 4]) in [".wav", ".ogg", ".wss"]) then {
     _filename = format ["%1.wss", _filename];
 };
 
-playSound3D [_filename, objNull, false, _position, _volume, _soundPitch, _distance];
+// Get position where to play the sound (position of the weapon)
+private _position = _unit modelToWorldVisualWorld (_unit selectionPosition "RightHand");
+
+playSound3D [_filename, objNull, insideBuilding _unit >= 0.5, _position, _volume, _soundPitch, _distance];
+
+nil // return
