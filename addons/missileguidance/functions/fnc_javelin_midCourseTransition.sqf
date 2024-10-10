@@ -34,7 +34,6 @@ _targetData params ["_targetDirection", "_attackProfileDirection", "_targetRange
 
 _attackProfileStateParams params ["_state", "_stableTime", "_target"];
 private _projectileDirection = vectorNormalized velocity _projectile;
-private _targetDistance = _target vectorDistance getPosASLVisual _projectile;
 private _targetDirection = (getPosASLVisual _projectile) vectorFromTo _target;
 private _angle = _projectileDirection vectorCos _targetDirection;
 if (_angle > cos REQUIRED_ANGLE) then {

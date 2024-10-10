@@ -38,7 +38,6 @@ private _lmb = LLSTRING(confirm);
 if (_budget > -1) then {_lmb = _lmb + format [" -$%1", _cost];};
 private _rmb = localize ELSTRING(Common,Cancel);
 private _wheel = LLSTRING(rotate);
-private _xAxis = localize "str_disp_conf_xaxis";
 private _icons = [["alt", localize "str_3den_display3den_entitymenu_movesurface_text"], ["shift", localize "str_disp_conf_xaxis" + " " + _wheel], ["control", localize "str_disp_conf_yaxis" + " " + _wheel]];
 [_lmb, _rmb, _wheel, _icons] call EFUNC(interaction,showMouseHint);
 

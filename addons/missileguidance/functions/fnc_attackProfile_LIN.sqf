@@ -30,9 +30,6 @@ private _projectilePos = getPosASL _projectile;
 
 private _distanceToTarget = _projectilePos vectorDistance _seekerTargetPos;
 private _distanceToShooter = _projectilePos vectorDistance _shooterPos;
-private _distanceShooterToTarget = _shooterPos vectorDistance _seekerTargetPos;
-
-private _ttgo = _distanceToTarget / (vectorMagnitude velocity _projectile);
 
 TRACE_2("",_distanceToTarget,_distanceToShooter);
 

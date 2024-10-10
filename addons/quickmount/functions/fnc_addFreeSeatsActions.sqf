@@ -84,7 +84,7 @@ private _fnc_move = {
         {params ["_target", "_player", "_currentTurret"]; IS_MOVED_OUT},
         {
             params ["", "_player", "", "_moveInCode", "_moveInParams", "_moveBackCode", "_moveBackParams"];
-            LOG_2("moved out after %1 frames",diag_frameNo-GVAR(frame),call {GVAR(frame)=diag_frameNo; 0});
+            LOG_2("moved out after %1 frames %2",diag_frameNo-GVAR(frame),call {GVAR(frame)=diag_frameNo; 0});
             [_player, _moveInParams] call _moveInCode;
             WAIT_IN_OR_MOVE_BACK;
         },

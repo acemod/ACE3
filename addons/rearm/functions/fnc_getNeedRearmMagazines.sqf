@@ -32,8 +32,6 @@ private _magazineInfo = [];
 // 1.70 pylons
 private _pylonConfigs = configProperties [configOf _vehicle >> "Components" >> "TransportPylonsComponent" >> "Pylons", "isClass _x"];
 {
-    private _pylonConfig = _x;
-
     // Strangely, a 1-based index.
     private _pylonIndex = _forEachIndex + 1;
 

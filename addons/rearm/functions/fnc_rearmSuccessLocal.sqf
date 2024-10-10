@@ -49,7 +49,6 @@ if (_pylon > 0) exitWith {
     };
 };
 
-private _currentRounds = 0;
 private _maxMagazines = [_vehicle, _turretPath, _magazineClass] call FUNC(getMaxMagazines);
 private _ammoCounts = [_vehicle, _turretPath, _magazineClass] call FUNC(getTurretMagazineAmmo);
 TRACE_3("start",_magazineClass,_maxMagazines,_ammoCounts);

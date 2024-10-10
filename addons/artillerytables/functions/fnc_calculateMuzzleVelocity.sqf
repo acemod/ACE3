@@ -20,7 +20,7 @@
 params ["_muzzleVelocity", "_temperature", "_airDensity"];
 
 // Calculate air density
-private _relativeDensity = _airDensity / 1.225;
+// private _relativeDensity = _airDensity / 1.225; // unused
 private _newMuzzleVelocityCoefficient = (((_temperature + 273.13) / 288.13 - 1) / 40 + 1);
 
 private _newMuzzleVelocity = _muzzleVelocity * _newMuzzleVelocityCoefficient;
