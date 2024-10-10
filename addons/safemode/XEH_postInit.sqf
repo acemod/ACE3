@@ -42,4 +42,4 @@ if (!hasInterface) exitWith {};
     [_unit, "DefaultAction", _ehID] call EFUNC(common,removeActionEventHandler);
 
     _unit setVariable [QGVAR(actionID), nil];
-}] call EFUNC(common,addPlayerEH);
+}] call CBA_fnc_addBISPlayerEventHandler;

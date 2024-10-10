@@ -271,7 +271,6 @@ PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
 PREP(addExplosionEventHandler);
 PREP(addMapMarkerCreatedEventHandler);
-PREP(addPlayerEH);
 
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
