@@ -79,6 +79,8 @@ PREP(getFirstTerrainIntersection);
 PREP(getGunner);
 PREP(getInPosition);
 PREP(getLocalUnits);
+PREP(getMagneticBearing);
+PREP(getMagneticBearingOffset);
 PREP(getMapData);
 PREP(getMapGridData);
 PREP(getMapGridFromPos);
