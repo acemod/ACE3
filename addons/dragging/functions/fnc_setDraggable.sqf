@@ -87,7 +87,6 @@ GVAR(initializedClasses) = _initializedClasses;
 
 private _icon = [QPATHTOF(UI\icons\box_drag.paa), QPATHTOF(UI\icons\person_drag.paa)] select (_object isKindOf "CAManBase");
 
-//IGNORE_PRIVATE_WARNING ["_target", "_player"];
 private _dragAction = [
     QGVAR(drag),
     LLSTRING(Drag),

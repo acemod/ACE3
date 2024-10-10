@@ -89,7 +89,6 @@ if (hasInterface) then {
     if !(GETEGVAR(medical,enabled,false)) exitWith {};
 
     if (hasInterface) then {
-        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         private _checkTagAction = [
             "ACE_CheckDogtag",
             format ["%1: %2", LLSTRING(itemName), LLSTRING(checkDogtag)],

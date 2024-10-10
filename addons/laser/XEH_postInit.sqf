@@ -69,7 +69,6 @@ if (hasInterface) then {
         _unit setVariable [QGVAR(laserSpotTrackerOn), false];
 
         private _condition = {
-            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
             (_player == driver _target)
             && {(_target getVariable [QGVAR(laserSpotTrackerOn), false])}
             && {[_player, _target, []] call EFUNC(common,canInteractWith)}
@@ -78,7 +77,6 @@ if (hasInterface) then {
         [_unit, 1, ["ACE_SelfActions"], _actionOff] call EFUNC(interact_menu,addActionToObject);
 
         private _condition = {
-            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
             (_player == driver _target)
             && {!(_target getVariable [QGVAR(laserSpotTrackerOn), false])}
             && {[_player, _target, []] call EFUNC(common,canInteractWith)}

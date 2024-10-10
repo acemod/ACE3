@@ -24,7 +24,6 @@ if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "Stat
 private _iconBaseSize = GVAR(sizeCoef) * BASE_SIZE * 0.10713 * (call EFUNC(common,getZoom));
 
 {
-    //IGNORE_PRIVATE_WARNING ["_x", "_y"];
     _y params ["_lastTime", "_pos", "_name", "_sourceUnit"];
     private _timeLeftToShow = _lastTime + FP_TIMEOUT - diag_tickTime;
     if (_timeLeftToShow <= 0) then {

@@ -18,6 +18,9 @@
  * Public: No
  */
 
+// IGNORE_PRIVATE_WARNING["_logic", "_units", "_activated", "_mouseOver", "_error", "_unit", "_color"];
+// IGNORE_PRIVATE_WARNING["_curator", "_blur", "_vehicle", "_cam", "_camPos", "_rating", "_unitPos", "_vehicleRole"];
+
 _logic = _this select 0;
 _units = _this select 1;
 _activated = _this select 2;

@@ -17,7 +17,6 @@
 
 [_this, {
     params ["_unit"];
-    //IGNORE_PRIVATE_WARNING ["_unit"];
 
     // Exit if no required item in inventory
     if ([_unit, {

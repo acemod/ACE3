@@ -17,6 +17,7 @@
  */
 
 params ["", "_idPFH"];
+// IGNORE_PRIVATE_WARNING["ace_viewdistance_fovBasedPFHminimalViewDistance"];
 
 // Remove PFH and set Object View Distance back to what it was before
 if (GVAR(objectViewDistanceCoeff) < 6) exitWith {

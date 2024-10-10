@@ -16,7 +16,6 @@
  *
  * Public: Yes
  */
-//IGNORE_PRIVATE_WARNING ["_allExplosives", "_deadmanExplosives"];
 
 params ["_unit"];
 TRACE_1("params",_unit);

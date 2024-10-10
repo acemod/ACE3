@@ -95,7 +95,6 @@ if (_hasCargoConfig) then {
 // Add the paradrop self interaction for planes and helicopters
 if (_vehicle isKindOf "Air") then {
     private _condition = {
-        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         GVAR(enable) &&
         {[_player, _target, []] call EFUNC(common,canInteractWith)} && {
             private _turretPath = _target unitTurret _player;
@@ -107,7 +106,6 @@ if (_vehicle isKindOf "Air") then {
     };
 
     private _statement = {
-        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         GVAR(interactionVehicle) = _target;
         GVAR(interactionParadrop) = true;
         createDialog QGVAR(menu);

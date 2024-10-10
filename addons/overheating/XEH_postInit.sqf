@@ -103,7 +103,6 @@ if (hasInterface) then {
                     LLSTRING(CoolWeaponWithWaterSource),
                     QPATHTOEF(field_rations,ui\icon_water_tap.paa),
                     {
-                        //IGNORE_PRIVATE_WARNING ["_player", "_target"];
                         private _waterSource = _target getVariable [QEGVAR(field_rations,waterSource), objNull];
                         [_player, _waterSource] call FUNC(coolWeaponWithWaterSource);
                     },

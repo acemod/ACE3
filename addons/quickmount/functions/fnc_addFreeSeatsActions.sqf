@@ -58,7 +58,6 @@
 )
 
 #define MOVE_IN_CODE(command) (_this select 0) command (_this select 1)
-//IGNORE_PRIVATE_WARNING ["_player", "_target"];
 
 private _fnc_move = {
     (_this select 2) params ["_moveInCode", "_moveInParams", "_currentTurret", "_moveBackCode", "_moveBackParams"];

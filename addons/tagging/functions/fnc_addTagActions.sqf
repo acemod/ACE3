@@ -19,7 +19,6 @@ params ["_unit"];
 
 private _actions = [];
 {
-    //IGNORE_PRIVATE_WARNING ["_player", "_target"];
     _actions pushBack [
         [
             format ["ACE_TagItem_%1", _x],
