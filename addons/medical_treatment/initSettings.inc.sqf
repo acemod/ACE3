@@ -191,24 +191,6 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(MorphineDoseLimit),
-    "SLIDER",
-    [LSTRING(DoseLimitMorphine_DisplayName), LSTRING(DoseLimitMorphine_DESC)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [1, 9, 3, 0],
-    true
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(MorphineDoseLimitDeviation),
-    "SLIDER",
-    [LSTRING(DoseLimitDeviationMorphine_DisplayName), LSTRING(DoseLimitDeviationMorphine_DESC)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [0, 3, 1, 0],
-    true
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(medicAdenosine),
     "LIST",
     [LSTRING(MedicAdenosine_DisplayName), LSTRING(MedicAdenosine_Description)],
@@ -223,24 +205,6 @@
     [LSTRING(LocationAdenosine_DisplayName), LSTRING(LocationAdenosine_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
     [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
-    true
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(AdenosineDoseLimit),
-    "SLIDER",
-    [LSTRING(DoseLimitAdenosine_DisplayName), LSTRING(DoseLimitAdenosine_DESC)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [1, 9, 3, 0],
-    true
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(AdenosineDoseLimitDeviation),
-    "SLIDER",
-    [LSTRING(DoseLimitDeviationAdenosine_DisplayName), LSTRING(DoseLimitDeviationAdenosine_DESC)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [0, 3, 1, 0],
     true
 ] call CBA_fnc_addSetting;
 
