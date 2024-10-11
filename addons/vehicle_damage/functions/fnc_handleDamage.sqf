@@ -22,10 +22,13 @@
  * Public: No
  */
 
-params ["_vehicle", "_selection", "_newDamage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
-TRACE_8("handleDamage",_vehicle,_selection,_newDamage,_source,_projectile,_hitIndex,_instigator,_hitPoint);
+params ["_vehicle", "_selection", "_newDamage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint", "", "_context"];
+TRACE_9("handleDamage",_vehicle,_selection,_newDamage,_source,_projectile,_hitIndex,_instigator,_hitPoint,_context);
 
 if (!local _vehicle) exitWith {};
+
+// Killing units via End key is an edge case (#10375)
+if (_context == 0 && {_newDamage == 1 && _projectile == "" && isNull _source && isNull _instigator}) exitWith {_newDamage};
 
 private _currentDamage = if (_selection != "") then {
     _vehicle getHitIndex _hitIndex
