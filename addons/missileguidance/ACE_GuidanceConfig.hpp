@@ -88,6 +88,14 @@ class GVAR(SeekerTypes) {
         functionName = QFUNC(seekerType_MWR);
         onFired = QFUNC(mwr_onFired);
     };
+    class DopplerRadar {
+        name = "";
+        visualName = "";
+        description = "";
+
+        functionName = QFUNC(seekerType_Doppler);
+        onFired = QFUNC(doppler_onFired);
+    };
 };
 
 class GVAR(NavigationTypes) {
