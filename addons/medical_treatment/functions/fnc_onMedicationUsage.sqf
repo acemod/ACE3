@@ -34,7 +34,7 @@ if (_maxDose > 0) then {
 
     if (_currentDose > _maxDose + (floor random _maxDoseDeviation)) then {
         TRACE_1("exceeded max dose",_currentDose);
-        [_target, _classname] call FUNC(onOverdose);
+        [_target, _classname] call FUNC(Overdose);
     };
 };
 
@@ -43,6 +43,6 @@ if (_maxDose > 0) then {
     _x params ["_xMed", "_xLimit"];
     private _inSystem = [_target, _xMed] call EFUNC(medical_status,getMedicationCount);
     if (_inSystem> _xLimit) then {
-        [_target, _classname] call FUNC(onOverdose);
+        [_target, _classname] call FUNC(Overdose);
     };
 } forEach _incompatibleMedication;
