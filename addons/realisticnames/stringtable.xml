@@ -361,7 +361,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_01_transport_Name">
             <English>HEMTT Transport</English>
             <German>HEMTT Transport</German>
-            <Spanish>HEMTT de transporte</Spanish>
+            <Spanish>HEMTT de Transporte</Spanish>
             <Polish>HEMTT Transportowy</Polish>
             <Czech>HEMTT (valník)</Czech>
             <French>HEMTT Transport</French>
@@ -378,7 +378,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_01_covered_Name">
             <English>HEMTT Transport (covered)</English>
             <German>HEMTT Transport (bedeckt)</German>
-            <Spanish>HEMTT de transporte (cubierto)</Spanish>
+            <Spanish>HEMTT de Transporte (cubierto)</Spanish>
             <Polish>HEMTT Transportowy (zakryty)</Polish>
             <Czech>HEMTT (valník-krytý)</Czech>
             <French>HEMTT Transport (bâché)</French>
@@ -412,7 +412,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_01_box_Name">
             <English>HEMTT Container</English>
             <German>HEMTT Container</German>
-            <Spanish>HEMTT con contenedor</Spanish>
+            <Spanish>HEMTT con Contenedor</Spanish>
             <Polish>HEMTT Kontener</Polish>
             <Czech>HEMTT (skříňový)</Czech>
             <French>HEMTT Conteneur</French>
@@ -429,7 +429,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_01_medical_Name">
             <English>HEMTT Medical</English>
             <German>HEMTT Sanitäter</German>
-            <Spanish>HEMTT médico</Spanish>
+            <Spanish>HEMTT Médico</Spanish>
             <Polish>HEMTT Medyczny</Polish>
             <Czech>HEMTT (zdravotnický)</Czech>
             <French>HEMTT Médical</French>
@@ -446,7 +446,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_01_ammo_Name">
             <English>HEMTT Ammo</English>
             <German>HEMTT Munition</German>
-            <Spanish>HEMTT de munición</Spanish>
+            <Spanish>HEMTT de Munición</Spanish>
             <Polish>HEMTT Amunicyjny</Polish>
             <Czech>HEMTT (muniční)</Czech>
             <French>HEMTT Munitions</French>
@@ -463,7 +463,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_01_fuel_Name">
             <English>HEMTT Fuel</English>
             <German>HEMTT Treibstoff</German>
-            <Spanish>HEMTT de combustible</Spanish>
+            <Spanish>HEMTT de Combustible</Spanish>
             <Polish>HEMTT Cysterna</Polish>
             <Czech>HEMTT (cisterna)</Czech>
             <French>HEMTT Citerne</French>
@@ -480,7 +480,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_01_Repair_Name">
             <English>HEMTT Repair</English>
             <German>HEMTT Instandsetzung</German>
-            <Spanish>HEMTT de reparación</Spanish>
+            <Spanish>HEMTT de Reparación</Spanish>
             <Polish>HEMTT Naprawczy</Polish>
             <Czech>HEMTT (opravárenský)</Czech>
             <French>HEMTT Réparation</French>
@@ -599,7 +599,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_02_transport_Name">
             <English>KamAZ Transport</English>
             <German>KamAS Transport</German>
-            <Spanish>KamAZ de transporte</Spanish>
+            <Spanish>KamAZ de Transporte</Spanish>
             <Polish>KamAZ transportowy</Polish>
             <Czech>KamAZ (valník)</Czech>
             <French>KamAZ Transport</French>
@@ -616,7 +616,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_02_covered_Name">
             <English>KamAZ Transport (covered)</English>
             <German>KamAS Transport (bedeckt)</German>
-            <Spanish>KamAZ de transporte (cubierto)</Spanish>
+            <Spanish>KamAZ de Transporte (cubierto)</Spanish>
             <Polish>KamAZ Transportowy (zakryty)</Polish>
             <Czech>KamAZ (valník-krytý)</Czech>
             <French>KamAZ Transport (bâché)</French>
@@ -633,7 +633,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_02_ammo_Name">
             <English>KamAZ Ammo</English>
             <German>KamAS Munition</German>
-            <Spanish>KamAZ de munición</Spanish>
+            <Spanish>KamAZ de Munición</Spanish>
             <Polish>KamAZ Amunicyjny</Polish>
             <Czech>KamAZ (muniční)</Czech>
             <French>KamAZ Munitions</French>
@@ -650,7 +650,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_02_fuel_Name">
             <English>KamAZ Fuel</English>
             <German>KamAS Treibstoff</German>
-            <Spanish>KamAZ de combustible</Spanish>
+            <Spanish>KamAZ de Combustible</Spanish>
             <Polish>KamAZ cysterna</Polish>
             <Czech>KamAZ (cisterna)</Czech>
             <French>KamAZ Citerne</French>
@@ -667,7 +667,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_02_box_Name">
             <English>KamAZ Repair</English>
             <German>KamAS Instandsetzung</German>
-            <Spanish>KamAZ de reparación</Spanish>
+            <Spanish>KamAZ de Reparación</Spanish>
             <Polish>KamAZ Naprawczy</Polish>
             <Czech>KamAZ (opravárenský)</Czech>
             <French>KamAZ Réparation</French>
@@ -684,7 +684,7 @@
         <Key ID="STR_ACE_RealisticNames_Truck_02_medical_Name">
             <English>KamAZ Medical</English>
             <German>KamAS Sanitäter</German>
-            <Spanish>KamAZ médico</Spanish>
+            <Spanish>KamAZ Médico</Spanish>
             <Polish>KamAZ Medyczny</Polish>
             <Czech>KamAZ (zdravotnický)</Czech>
             <French>KamAZ Médical</French>
@@ -707,6 +707,7 @@
             <German>KamAS Wasser</German>
             <Italian>KamAZ Acqua</Italian>
             <French>KamAZ Eau</French>
+            <Spanish>KamAZ de Agua</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_02_MRL_Name">
             <English>KamAZ MRL</English>
@@ -1676,6 +1677,7 @@
             <German>CZ 581</German>
             <Italian>CZ 581</Italian>
             <French>CZ 581</French>
+            <Spanish>CZ 581</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_sawedoff_01_Name">
             <English>CZ 581 (Sawed-Off)</English>
@@ -1686,6 +1688,7 @@
             <German>CZ 581 (Abgesägt)</German>
             <Italian>CZ 581 (Canne mozze)</Italian>
             <French>CZ 581 (canon scié)</French>
+            <Spanish>CZ 581 (Recortada)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_Pistol_heavy_01_green_Name">
             <English>FNX-45 Tactical (Green)</English>
@@ -1694,7 +1697,7 @@
             <Polish>FNX-45 Tactical (Zielony)</Polish>
             <French>FNX-45 Tactical (Vert)</French>
             <Hungarian>FNX-45 Tactical (Zöld)</Hungarian>
-            <Spanish>FNX-45 Tactical (Verde)</Spanish>
+            <Spanish>HEMTT de transporte (cubierto)</Spanish>
             <Russian>FNX-45 Tactical (зелёный)</Russian>
             <Portuguese>FNX-45 Tactical (Verde)</Portuguese>
             <Italian>FNX-45 Tactical (Verde)</Italian>
@@ -3097,6 +3100,7 @@
             <German>Type 115 (Schwarz)</German>
             <Italian>Type 115 (Nero)</Italian>
             <French>Type 115 (Noir)</French>
+            <Spanish>Type 115 (Negro)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_ghex_Name">
             <English>Type 115 (Green Hex)</English>
@@ -3107,6 +3111,7 @@
             <German>Type 115 (Hex Grün)</German>
             <Italian>Type 115 (Hex Verde)</Italian>
             <French>Type 115 (Hew Vert)</French>
+            <Spanish>Type 115 (Verde Hex)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_hex_Name">
             <English>Type 115 (Hex)</English>
@@ -3117,6 +3122,7 @@
             <German>Type 115 (Hex)</German>
             <Italian>Type 115 (Hex)</Italian>
             <French>Type 115 (Hex)</French>
+            <Spanish>Type 115 (Hex)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_CTAR_blk">
             <English>QBZ-95-1 (Black)</English>
@@ -3911,6 +3917,7 @@
             <German>UTG Defender 126</German>
             <Italian>UTG Defender 126</Italian>
             <French>UTG Defender 126</French>
+            <Spanish>UTG Defender 126</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_Name">
             <English>EOTech MRDS</English>
@@ -3921,6 +3928,7 @@
             <German>EOTech MRDS</German>
             <Italian>EOTech MRDS</Italian>
             <French>EOTech MRDS</French>
+            <Spanish>EOTech MRDS</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_black_Name">
             <English>EOTech MRDS (Black)</English>
@@ -3931,6 +3939,7 @@
             <German>EOTech MRDS (Schwarz)</German>
             <Italian>EOTech MRDS (Nero)</Italian>
             <French>EOTech MRDS (Noir)</French>
+            <Spanish>EOTech MRDS (Negro)</Spanish>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_hamr">
             <English>Leupold Mark 4 HAMR</English>
