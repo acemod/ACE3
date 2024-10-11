@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: PabstMirror
+ * Author: PabstMirror modified by Cplhardcore
  * Gets effective count of medications in a unit's system
  * (each medication dose is scaled from 0..1 based on time till max effect and max time in system)
  *
@@ -10,7 +10,8 @@
  * 2: Get raw count (true) or effect ratio (false) <BOOL>(default: true)
  *
  * Return Value:
- * Medication count (float) <NUMBER>
+ * Dose Count <NUMBER>
+ * Medication effectiveness (float) <NUMBER>
  *
  * Example:
  * [player, "Epinephrine"] call ace_medical_status_fnc_getMedicationCount
@@ -21,10 +22,12 @@
 params ["_target", "_medication", ["_getCount", true]];
 
 private _return = 0;
+private _medDose = 0;
 {
-    _x params ["_xMed", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem"];
+    _x params ["_xMed", "_timeAdded", "_dose", "_timeTillMaxEffect", "_maxTimeInSystem"];
     if (_xMed == _medication) then {
         private _timeInSystem = CBA_missionTime - _timeAdded;
+        _medDose = _medDose + _dose;
         if (_getCount) then {
             // just return effective count, a medication will always start at 1 and only drop after reaching timeTilMaxEffect
             _return = _return + linearConversion [_timeTillMaxEffect, _maxTimeInSystem, _timeInSystem, 1, 0, true];
@@ -35,5 +38,6 @@ private _return = 0;
     };
 } forEach (_target getVariable [VAR_MEDICATIONS, []]);
 
-TRACE_4("getMedicationCount",_target,_medication,_getCount,_return);
-_return
+TRACE_5("getMedicationCount",_target,_medication,_getCount,_return,_medDose);
+
+[_medDose, _return]

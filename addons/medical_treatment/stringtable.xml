@@ -546,6 +546,66 @@
             <Spanish>Controla donde puede sr usada la Epinefrina.</Spanish>
             <Korean>에피네프린을 사용할 수 있는 장소를 정합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DoseLimitEpinephrine_DisplayName">
+            <English>Maximum Dose of Epinephrine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DoseLimitEpinephrine_DESC">
+            <English>The maximum Dose of Epinephrine you can give to a player</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DoseLimitDeviationEpinephrine_DisplayName">
+            <English>Maximum Dose Deviation of Epinephrine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DoseLimitDeviationEpinephrine_DESC">
+            <English>The number of additional doses you may be able to give of Epinephrine, while risking overdose</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
+            <English>Allow Morphine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_Description">
+            <English>Training level required to use Morphine.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_DisplayName">
+            <English>Locations Morphine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_Description">
+            <English>Controls where Morphine can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DoseLimitMorphine_DisplayName">
+            <English>Maximum Dose of Morphine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DoseLimitMorphine_DESC">
+            <English>The maximum Dose of Morphine you can give to a player</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DoseLimitDeviationMorphine_DisplayName">
+            <English>Maximum Dose Deviation of Morphine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DoseLimitDeviationMorphine_DESC">
+            <English>The number of additional doses you may be able to give of Morphine, while risking overdose</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_DisplayName">
+            <English>Allow Adenosine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_Description">
+            <English>Training level required to use Adenosine.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_DisplayName">
+            <English>Locations Adenosine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_Description">
+            <English>Controls where Adenosine can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DoseLimitAdenosine_DisplayName">
+            <English>Maximum Dose of Adenosine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DoseLimitAdenosine_DESC">
+            <English>The maximum Dose of Adenosine you can give to a player</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DoseLimitDeviationAdenosine_DisplayName">
+            <English>Maximum Dose Deviation of Adenosine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_DoseLimitDeviationAdenosine_DESC">
+            <English>The number of additional doses you may be able to give of Adenosine, while risking overdose</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_DisplayName">
             <English>Allow PAK</English>
             <Russian>Доступ к Аптечке</Russian>

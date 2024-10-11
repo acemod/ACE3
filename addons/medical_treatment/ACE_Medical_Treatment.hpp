@@ -571,7 +571,7 @@ class ADDON {
         // Example with maxDose = 4 and maxDoseDeviation = 2: Dose 4: Safe | Dose 5 and 6: Possible overdose | Dose 7: Guaranteed overdose
         maxDoseDeviation = 2;
         // Function to execute upon overdose. Arguments passed to call back are 0: unit <OBJECT>, 1: medicationClassName <STRING>
-        onOverDose = "";
+        onOverDoseCustom = "";
         // The viscosity of a fluid is a measure of its resistance to gradual deformation by shear stress or tensile stress. For liquids, it corresponds to the informal concept of "thickness". This value will increase/decrease the viscoty of the blood with the percentage given. Where 100 = max. Using the minus will decrease viscosity
         viscosityChange = 0;
 
@@ -584,6 +584,7 @@ class ADDON {
             timeInSystem = 1800;
             timeTillMaxEffect = 30;
             maxDose = 4;
+            dose = 1;
             incompatibleMedication[] = {};
             viscosityChange = -10;
         };
@@ -595,6 +596,7 @@ class ADDON {
             timeInSystem = 120;
             timeTillMaxEffect = 10;
             maxDose = 9;
+            dose = 1;
             incompatibleMedication[] = {};
         };
         class Adenosine {
@@ -605,6 +607,7 @@ class ADDON {
             timeInSystem = 120;
             timeTillMaxEffect = 15;
             maxDose = 5;
+            dose = 1;
             incompatibleMedication[] = {};
         };
         class PainKillers {
@@ -615,6 +618,7 @@ class ADDON {
             timeInSystem = 420;
             timeTillMaxEffect = 60;
             maxDose = 5;
+            dose = 1;
             incompatibleMedication[] = {};
             viscosityChange = 5;
         };
