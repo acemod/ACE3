@@ -32,20 +32,19 @@ private _explosivesList = [];
 
             _explosivesList pushBack _x;
 
-            _children pushBack
+            _children pushBack [
                 [
-                    [
-                        format ["Explosive_%1", _forEachIndex],
-                        _x select 2,
-                        getText(_item >> "picture"),
-                        {(_this select 2) call FUNC(detonateExplosive);},
-                        {true},
-                        {},
-                        [_unit,_range,_x,_detonator]
-                    ] call EFUNC(interact_menu,createAction),
-                    [],
-                    _unit
-                ];
+                    format ["Explosive_%1", _forEachIndex],
+                    _x select 2,
+                    getText(_item >> "picture"),
+                    {(_this select 2) call FUNC(detonateExplosive);},
+                    {true},
+                    {},
+                    [_unit,_range,_x,_detonator]
+                ] call EFUNC(interact_menu,createAction),
+                [],
+                _unit
+            ];
         };
     };
 } forEach _result;
