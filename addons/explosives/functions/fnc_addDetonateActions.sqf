@@ -19,7 +19,8 @@
 params ["_unit", "_detonator"];
 TRACE_2("params",_unit,_detonator);
 
-private _range = getNumber (configFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
+private _detonatorConfig = configFile >> "CfgWeapons" >> _detonator;
+private _range = getNumber (_detonatorConfig >> QGVAR(Range));
 
 private _result = [_unit] call FUNC(getPlacedExplosives);
 private _children = [];
@@ -80,7 +81,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
             [
                 "Explosive_All",
                 LLSTRING(DetonateAll),
-                getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
+                getText (_detonatorConfig >> "picture"),
                 {(_this select 2) call FUNC(detonateExplosiveAll);},
                 {true},
                 {},
@@ -106,7 +107,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
             [
                 "Explosive_All_Deadman",
                 LLSTRING(DetonateAll),
-                getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
+                getText (_detonatorConfig >> "picture"),
                 {[_player] call FUNC(onIncapacitated)},
                 {true}
             ] call EFUNC(interact_menu,createAction),
