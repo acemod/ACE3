@@ -67,14 +67,11 @@
     false,
     true,
     {
-        [QGVAR(BFT_Enabled), _this] call EFUNC(common,cbaSettings_settingChanged);
-
         if (GVAR(BFT_Enabled) && {isNil QGVAR(BFT_markers)}) then {
             GVAR(BFT_markers) = [];
             [LINKFUNC(blueForceTrackingUpdate), GVAR(BFT_Interval), []] call CBA_fnc_addPerFrameHandler;
         };
-    },
-    false
+    }
 ] call CBA_fnc_addSetting;
 
 [
@@ -94,9 +91,7 @@
     [localize LSTRING(BFT_ShowPlayerNames_DisplayName), localize LSTRING(BFT_ShowPlayerNames_Description)],
     [format ["ACE %1", localize LSTRING(Module_DisplayName)], localize LSTRING(BFT_Module_DisplayName)],
     false,
-    true,
-    {[QGVAR(BFT_ShowPlayerNames), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    false
+    true
 ] call CBA_fnc_addSetting;
 
 [
@@ -105,7 +100,5 @@
     [localize LSTRING(BFT_HideAiGroups_DisplayName), localize LSTRING(BFT_HideAiGroups_Description)],
     [format ["ACE %1", localize LSTRING(Module_DisplayName)], localize LSTRING(BFT_Module_DisplayName)],
     false,
-    true,
-    {[QGVAR(BFT_HideAiGroups), _this] call EFUNC(common,cbaSettings_settingChanged)},
-    false
+    true
 ] call CBA_fnc_addSetting;

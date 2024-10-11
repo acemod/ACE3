@@ -29,14 +29,14 @@ if (!_activated) exitWith {};
 private _defaultLeadColor = _logic getVariable ["defaultLeadColor", ""];
 if (_defaultLeadColor != "") then {
     _defaultLeadColor = call compile ("[" + _defaultLeadColor + "]");
-    if (!([_defaultLeadColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaultLeadColor is not a valid color array.")};
+    if !([_defaultLeadColor] call FUNC(isValidColorArray)) exitWith {ERROR("defaultLeadColor is not a valid color array.")};
     ["CBA_settings_setSettingMission", [QGVAR(defaultLeadColor), _defaultLeadColor, true]] call CBA_fnc_localEvent;
 };
 
 private _defaultColor = _logic getVariable ["defaultColor", ""];
 if (_defaultColor != "") then {
     _defaultColor = call compile ("[" + _defaultColor + "]");
-    if (!([_defaultColor] call FUNC(isValidColorArray))) exitWith {ERROR("defaultColor is not a valid color array.")};
+    if !([_defaultColor] call FUNC(isValidColorArray)) exitWith {ERROR("defaultColor is not a valid color array.")};
     ["CBA_settings_setSettingMission", [QGVAR(defaultColor), _defaultColor, true]] call CBA_fnc_localEvent;
 };
 

@@ -25,6 +25,12 @@ TRACE_1("params",_this);
 _unit setVariable [QGVAR(releaseActionID), nil];
 
 private _inBuilding = _unit call FUNC(isObjectOnObject);
+private _isClone = _target isKindOf QGVAR(clone);
+
+// Drop cloned dead units
+if (_isClone) then {
+    _target = [_unit, _target, _inBuilding] call FUNC(deleteClone);
+};
 
 // Prevent collision damage
 [QEGVAR(common,fixCollision), _unit] call CBA_fnc_localEvent;
@@ -44,7 +50,7 @@ if (_tryLoad && {!(_target isKindOf "CAManBase")} && {["ace_cargo"] call EFUNC(c
 
 // Fix anim when aborting carrying persons
 if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) then {
-    if (isNull objectParent _unit && {!(_unit getVariable ["ACE_isUnconscious", false])}) then {
+    if (isNull objectParent _unit && {_unit call EFUNC(common,isAwake)}) then {
         [_unit, "", 2] call EFUNC(common,doAnimation);
     };
 
@@ -59,11 +65,12 @@ if (_target isKindOf "CAManBase" || {animationState _unit in CARRY_ANIMATIONS}) 
 _unit removeWeapon "ACE_FakePrimaryWeapon";
 
 // Reselect weapon and re-enable sprint
-private _previousWeaponIndex = _unit getVariable [QGVAR(previousWeapon), -1];
-_unit setVariable [QGVAR(previousWeapon), nil, true];
+private _previousWeaponState = _unit getVariable QGVAR(previousWeapon);
 
-if (_previousWeaponIndex != -1) then {
-    _unit action ["SwitchWeapon", _unit, _unit, _previousWeaponIndex];
+if (!isNil "_previousWeaponState") then {
+    _unit selectWeapon _previousWeaponState;
+
+    _unit setVariable [QGVAR(previousWeapon), nil, true];
 };
 
 [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
@@ -71,8 +78,9 @@ if (_previousWeaponIndex != -1) then {
 [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // Prevent object from flipping inside buildings
-if (_inBuilding) then {
+if (_inBuilding && {!_isClone}) then {
     _target setPosASL (getPosASL _target vectorAdd [0, 0, 0.05]);
+    TRACE_2("setPos",getPosASL _unit,getPosASL _target);
 };
 
 _unit setVariable [QGVAR(isCarrying), false, true];
@@ -86,16 +94,16 @@ if !(_target isKindOf "CAManBase") then {
     [QEGVAR(common,fixFloating), _target, _target] call CBA_fnc_targetEvent;
 };
 
-// Recreate UAV crew (add a frame delay or this may cause the vehicle to be moved to [0,0,0])
-if (_target getVariable [QGVAR(isUAV), false]) then {
-    _target setVariable [QGVAR(isUAV), nil, true];
+// Reenable UAV crew
+private _UAVCrew = _target getVariable [QGVAR(isUAV), []];
 
-    [{
-        params ["_target"];
-        if (!alive _target) exitWith {};
-        TRACE_2("restoring uav crew",_target,getPosASL _target);
-        createVehicleCrew _target;
-    }, [_target]] call CBA_fnc_execNextFrame;
+if (_UAVCrew isNotEqualTo []) then {
+    // Reenable AI
+    {
+        [_x, false] call EFUNC(common,disableAiUAV);
+    } forEach _UAVCrew;
+
+    _target setVariable [QGVAR(isUAV), nil, true];
 };
 
 // Reset mass
@@ -116,11 +124,17 @@ if (_loadCargo) then {
         private _vehicles = [_cursorObject, 0, true] call EFUNC(common,nearestVehiclesFreeSeat);
 
         if ([_cursorObject] isEqualTo _vehicles) then {
-            if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+            if (GETEGVAR(medical,enabled,false)) then {
                 [_unit, _target, _cursorObject] call EFUNC(medical_treatment,loadUnit);
             } else {
                 [_unit, _target, _cursorObject] call EFUNC(common,loadPerson);
             };
+
+            // Repurpose variable for flag used in event below
+            _loadCargo = true;
         };
     };
 };
+
+// API
+[QGVAR(stoppedCarry), [_unit, _target, _loadCargo]] call CBA_fnc_localEvent;

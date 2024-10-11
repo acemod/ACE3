@@ -99,6 +99,11 @@ class CfgPatches {
             QGVAR(moduleLayTrench)
         };
     };
+    class GVAR(spectator): ADDON {
+        units[] = {
+            QGVAR(moduleSpectator)
+        };
+    };
 };
 
 class ACE_Curator {
@@ -112,6 +117,7 @@ class ACE_Curator {
     GVAR(arsenal) = "ace_arsenal";
     GVAR(fire) = "ace_fire";
     GVAR(trenches) = "ace_trenches";
+    GVAR(spectator) = "ace_spectator";
 };
 
 #include "CfgFactionClasses.hpp"

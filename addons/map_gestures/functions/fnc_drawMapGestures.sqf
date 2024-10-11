@@ -41,7 +41,7 @@ private _players = [_positions, FUNC(getProximityPlayers), missionNamespace, QGV
         };
 
         // If color settings for the group exist, then use those, otherwise fall back to the default colors
-        private _colorMap = GVAR(GroupColorCfgMappingNew) getVariable [(groupID (group _x)), [GVAR(defaultLeadColor), GVAR(defaultColor)]];
+        private _colorMap = GVAR(GroupColorCfgMappingNew) getOrDefault [toLower groupId (group _x), [GVAR(defaultLeadColor), GVAR(defaultColor)]];
         private _color = _colorMap select (_x != leader _x);
 
         TRACE_2("",_colorMap,_color);

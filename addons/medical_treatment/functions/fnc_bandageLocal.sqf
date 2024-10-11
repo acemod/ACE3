@@ -18,7 +18,7 @@
  * Public: No
  */
 
-params ["_patient", "_bodyPart", "_bandage", ["_bandageEffectiveness", 1]];
+params ["_patient", "_bodyPart", "_bandage", ["_bandageEffectiveness", 1, [0]]];
 TRACE_4("bandageLocal",_patient,_bodyPart,_bandage,_bandageEffectiveness);
 _bodyPart = toLowerANSI _bodyPart;
 

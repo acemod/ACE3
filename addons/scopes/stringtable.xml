@@ -21,7 +21,7 @@
             <English>Enable ACE Scope adjustment</English>
             <German>Aktiviere das Nullen von Zielfernrohren</German>
             <Japanese>ACE スコープ調節を有効化</Japanese>
-            <Korean>ACE 조준경 영점조작 활성화</Korean>
+            <Korean>ACE 조준경 영점조절 활성화</Korean>
             <Polish>Włącz ustawienia celowników optycznych ACE</Polish>
             <French>Activer le réglage ACE des lunettes</French>
             <Italian>Abilita Regolazione Mirino ACE</Italian>
@@ -35,7 +35,7 @@
         <Key ID="STR_ACE_Scopes_enabled_description">
             <English>Enable adjustment turrets on high powered scopes</English>
             <German>Aktiviere Absehenverstellungen für Waffen mit Zielfernrohren</German>
-            <Japanese>高倍率スコープでACE スコープ調節を有効化</Japanese>
+            <Japanese>高倍率スコープでのタレット調整を有効化します</Japanese>
             <Korean>고성능 조준경 조절 나사 활성화</Korean>
             <Polish>Włącz pokrętła regulacyjne </Polish>
             <French>Active les tourelles de réglage des lunettes de visée à fort grossissement.</French>
@@ -50,7 +50,7 @@
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_displayName">
             <English>Force adjustment turrets</English>
             <German>Erzwinge Absehenverstellungen</German>
-            <Japanese>ACE スコープ調節を有効化</Japanese>
+            <Japanese>タレット調整を強制</Japanese>
             <Korean>조절 나사 강제</Korean>
             <Polish>Wymuś użycie pokręteł regulacyjnych</Polish>
             <French>Forcer les tourelles de réglage</French>
@@ -65,7 +65,7 @@
         <Key ID="STR_ACE_Scopes_forceUseOfAdjustmentTurrets_description">
             <English>Force usage of adjustment turrets on high powered scopes</English>
             <German>Erzwinge Absehenverstellungen für Waffen mit Zielfernrohren</German>
-            <Japanese>高倍率スコープで調整の使用を強制させます</Japanese>
+            <Japanese>高倍率スコープでタレット調整の使用を強制させます</Japanese>
             <Korean>고성능 조준경의 조절 나사 사용을 강제합니다</Korean>
             <Polish>Wymuś użycie pokręteł regulacyjnych dla celowników o dużym powiększeniu</Polish>
             <French>Force l'utilisation des tourelles de réglage sur les lunettes de visée à fort grossissement.</French>
@@ -80,7 +80,7 @@
         <Key ID="STR_ACE_Scopes_correctZeroing_displayName">
             <English>Correct zeroing</English>
             <German>Nullungsanpassung</German>
-            <Japanese>ゼロイン調節</Japanese>
+            <Japanese>ゼロイン規整</Japanese>
             <Korean>영점 고치기</Korean>
             <Polish>Poprawka zerowania </Polish>
             <French>Corriger le zérotage</French>
@@ -95,7 +95,7 @@
         <Key ID="STR_ACE_Scopes_correctZeroing_description">
             <English>Corrects the zeroing of all small arms sights</English>
             <German>Korrigiert alle Nullungen von Handfeuerwaffen</German>
-            <Japanese>全ての小口径用照準器のゼロインを調節します</Japanese>
+            <Japanese>全ての小火器用照準器のゼロインを規整します</Japanese>
             <Korean>모든 소화기의 영점을 고칩니다</Korean>
             <Polish>Poprawia zerowanie wszystkich celowników broni ręcznej</Polish>
             <French>Corrige le zérotage de tous les viseurs d'armes légères.</French>
@@ -125,7 +125,7 @@
         <Key ID="STR_ACE_Scopes_overwriteZeroRange_Description">
             <English>Uses the 'defaultZeroRange' setting to overwrite the zero range of high power scopes</English>
             <German>Nutzt die Einstellung 'defaultZeroRange' um Zielfernrohre anzupassen</German>
-            <Japanese>'defaultZeroRange'設定を使う高倍率スコープのゼロイン距離を上書きします</Japanese>
+            <Japanese>'標準のゼロイン距離'設定を使用して、高倍率スコープのゼロイン距離を上書きします。</Japanese>
             <Korean>기존 고성능 조준경의 영점거리에 'defaultZeroRange'를 덮어씌웁니다</Korean>
             <Polish>Używa 'defaultZeroRange' zamiast ustawionej odległości zerowania dla celowników o duzym przybliżeniu </Polish>
             <French>Utilise le paramètre "Distance de zérotage par défaut" pour remplacer la distance de zérotage des lunettes de visée à fort grossissement.</French>
@@ -155,7 +155,7 @@
         <Key ID="STR_ACE_Scopes_defaultZeroRange_description">
             <English>High powered scopes will be zeroed at this distance</English>
             <German>Zielfernrohre werden auf diese Entfernung genullt</German>
-            <Japanese>高倍率スコープのゼロイン距離はこの設定になります</Japanese>
+            <Japanese>高倍率スコープのゼロイン位置はこの設定になります</Japanese>
             <Korean>고성능 조준경이 정해진 수만큼 영점거리를 맞추게 됩니다.</Korean>
             <Polish>Celowniki o dużym powiększeniu będą zerowane dla tej odległości</Polish>
             <French>Distance de zérotage des lunettes de visée à fort grossissement.</French>
@@ -308,7 +308,7 @@
             <Italian>Visualizza Alzo e Deriva con numeri firmati</Italian>
             <Chinese>使用帶著標籤的數字顯示歸零遠近與風偏程度</Chinese>
             <Chinesesimp>使用带着标签的数字显示归零远近与风偏程度</Chinesesimp>
-            <Japanese>印付きの数字で仰角と横風を表示</Japanese>
+            <Japanese>ウィンデージとエレベーションを符号付き数字で表示します</Japanese>
             <Korean>기존의 부호가 있는 숫자로 표고와 폭을 표시합니다.</Korean>
             <Polish>Wyświetla elewację i tarcie powietrza poprzez podpisane liczby</Polish>
             <Russian>Отображает горизонтальные и вертикальные поправки с подписанными числами</Russian>
@@ -320,7 +320,7 @@
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_displayName">
             <English>Simplified zeroing</English>
             <German>Vereinfachte Nullung</German>
-            <Japanese>簡略なゼロイン</Japanese>
+            <Japanese>簡素化ゼロイン</Japanese>
             <Italian>Azzeramento semplificato</Italian>
             <Korean>단순화된 영점 조정</Korean>
             <Chinese>簡單歸零</Chinese>
@@ -335,9 +335,9 @@
         <Key ID="STR_ACE_Scopes_simplifiedZeroing_description">
             <English>Replicates the vanilla zeroing system for riflescopes.</English>
             <German>Repliziert das Vanilla-Zeroing-System für Zielfernrohre.</German>
-            <Japanese>バニラ(ゲーム標準)のライフルスコープ用ゼロイン調整システムを複製します。</Japanese>
+            <Japanese>バニラ(ゲーム標準)のライフルスコープ用ゼロイン調整システムを再現します。</Japanese>
             <Italian>Replica il sistema di azzeramento vanilla per le ottiche.</Italian>
-            <Korean>라이플 스코프용 바닐라 영점조정 시스템을 복제합니다.</Korean>
+            <Korean>라이플 스코프용 바닐라 영점조절 시스템을 복제합니다.</Korean>
             <Chinese>使用原版的歸零系統來取代ACE複雜的歸零模擬。</Chinese>
             <Chinesesimp>使用原版的归零系统来取代 ACE 复杂的归零模拟。</Chinesesimp>
             <Polish>Replikuje system zerowania, dla celowników karabinowych, z domyślnej gry.</Polish>
@@ -346,6 +346,15 @@
             <French>Reproduit le système de zérotage vanilla pour les lunettes.</French>
             <Czech>Replikuje systém naměřování puškohledů ze základní hry.</Czech>
             <Spanish>Replica en los visores el sistema de homogeneizado de vanilla</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Scopes_inScopeAdjustment_displayName">
+            <English>Show adjustment UI in scope</English>
+            <German>Zeige Absehenverstellungs-UI im Zielfernrohr</German>
+            <Italian>Mostra UI delle manopole nel mirino</Italian>
+            <Japanese>調整UIをスコープ内に表示</Japanese>
+            <Korean>스코프에 조절 UI 보이기</Korean>
+            <Russian>Показать интерфейс настройки в области видимости.</Russian>
+            <Spanish>Mostrar IU de ajuste en el visor</Spanish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>
@@ -486,7 +495,7 @@
             <Hungarian>Állítások nullázása</Hungarian>
             <Portuguese>Zerar ajuste</Portuguese>
             <Czech>Vynulovat korekci</Czech>
-            <Japanese>ゼロインを調節</Japanese>
+            <Japanese>ゼロイン調節をセット</Japanese>
             <Korean>영점 초기화</Korean>
             <Chinesesimp>设定归零</Chinesesimp>
             <Chinese>設定歸零</Chinese>
@@ -496,7 +505,7 @@
             <German>Nullung zurücksetzen</German>
             <Japanese>ゼロイン調節を初期化</Japanese>
             <Italian>Resetta l'azzeramento</Italian>
-            <Korean>영점 조정 재설정</Korean>
+            <Korean>영점 조절 재설정</Korean>
             <Chinese>重設歸零</Chinese>
             <Chinesesimp>重设归零</Chinesesimp>
             <Polish>Zresetuj wyzerowanie</Polish>
@@ -509,7 +518,7 @@
         <Key ID="STR_ACE_Scopes_Description">
             <English>This module adds windage and elevation adjustment turrets on high power rifle scopes.</English>
             <German>Dieses Modul fügt Absehenverstellung (horizontal und vertikal) zu Zielfernrohren hinzu.</German>
-            <Japanese>このモジュールは高倍率ライフル スコープにおいて横風と仰角の調節ができます。</Japanese>
+            <Japanese>このモジュールは高倍率ライフル スコープにおいてウィンデージとエレベーションの調節ができます。</Japanese>
             <Korean>이 모듈은 고성능 조준경에 조준 나사를 이용한 편차 및 고도 조절 기능을 더해줍니다.</Korean>
             <Polish>Ten moduł włącza pokrętła kalibracyjne poprawki na wiatr oraz poprawki wysokości dla celowników o dużym powiększeniu.</Polish>
             <French>Ce module ajoute les tourelles de correction de hausse et de dérive sur les lunettes de visée à fort grossissement.</French>

@@ -18,32 +18,22 @@
 
 params ["_unit", "_weapon"];
 
-if (_weapon == "") exitWith {};
+if (_weapon == "" || {!(_unit hasWeapon _weapon)}) exitWith {};
 
 private _muzzles = _weapon call EFUNC(common,getWeaponMuzzles);
 
-if (currentWeapon _unit != _weapon) exitWith {
-    if (count _muzzles > 1) then {
+if (count _muzzles <= 1) exitWith {};
 
-        // unlock safety
-        /*if (_weapon in (_unit getVariable [QEGVAR(safemode,safedWeapons), []])) exitWith {
-            [_unit, _weapon, _muzzles select 1] call EFUNC(safemode,unlockSafety);
-        };*/
+private _muzzle = (_unit weaponState _weapon) select 1;
 
-        _unit selectWeapon (_muzzles select 1);
-    };
+private _index = if (currentWeapon _unit == _weapon) then {
+    (((_muzzles find currentMuzzle _unit) + 1) % (count _muzzles)) max 1
+} else {
+    1
 };
-
-private _index = (_muzzles find currentMuzzle _unit) + 1;
-
-if (_index > count _muzzles - 1) then {_index = 1};
 
 private _muzzle = _muzzles select _index;
 
-_index = 0;
-while {
-    _index < 299 && {currentMuzzle _unit != _muzzle}
-} do {
-    _unit action ["SwitchWeapon", _unit, _unit, _index];
-    _index = _index + 1;
-};
+_unit selectWeapon [_weapon, _muzzle, ([_weapon, _muzzle] call EFUNC(common,getWeaponModes)) select 0];
+
+nil // return

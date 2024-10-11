@@ -41,6 +41,6 @@ private _compartment = switch (_role) do {
     };
 };
 
-if (!(_compartment isEqualType "")) then { _compartment = format ["Compartment%1",_compartment] };
+if !(_compartment isEqualType "") then {_compartment = format ["Compartment%1",_compartment]};
 
 [_role, _cargoIndex, _turretPath, _compartment]

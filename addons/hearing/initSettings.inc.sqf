@@ -1,7 +1,8 @@
-private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
+private _category = format ["ACE %1", LLSTRING(Module_DisplayName)];
 
 [
-    QGVAR(enableCombatDeafness), "CHECKBOX",
+    QGVAR(enableCombatDeafness),
+    "CHECKBOX",
     [LSTRING(EnableCombatDeafness_DisplayName), LSTRING(EnableCombatDeafness_Description)],
     _category,
     true,
@@ -11,7 +12,8 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(earplugsVolume), "SLIDER",
+    QGVAR(earplugsVolume),
+    "SLIDER",
     [LSTRING(earplugsVolume_DisplayName), LSTRING(earplugsVolume_Description)],
     _category,
     [0, 1, 0.5, 1],
@@ -19,7 +21,8 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(unconsciousnessVolume), "SLIDER",
+    QGVAR(unconsciousnessVolume),
+    "SLIDER",
     [LSTRING(unconsciousnessVolume_DisplayName), LSTRING(unconsciousnessVolume_Description)],
     _category,
     [0, 1, 0.4, 1],
@@ -27,15 +30,16 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(disableEarRinging), "CHECKBOX",
+    QGVAR(disableEarRinging),
+    "CHECKBOX",
     [LSTRING(DisableEarRinging_DisplayName), LSTRING(DisableEarRinging_Description)],
     _category,
-    false,
-    0
+    false
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(enabledForZeusUnits), "CHECKBOX",
+    QGVAR(enabledForZeusUnits),
+    "CHECKBOX",
     [LSTRING(enabledForZeusUnits_DisplayName), LSTRING(enabledForZeusUnits_Description)],
     _category,
     true,
@@ -43,7 +47,8 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(autoAddEarplugsToUnits), "LIST",
+    QGVAR(autoAddEarplugsToUnits),
+    "LIST",
     [LSTRING(autoAddEarplugsToUnits_DisplayName), LSTRING(autoAddEarplugsToUnits_Description)],
     _category,
     [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(heavyWeaponUnits), ELSTRING(common,Enabled)], 1],

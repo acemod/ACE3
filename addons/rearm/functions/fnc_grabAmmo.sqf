@@ -19,8 +19,8 @@
 params ["_dummy", "_unit"];
 
 REARM_HOLSTER_WEAPON;
-[_unit, "forceWalk", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_rearm", true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 [
     TIME_PROGRESSBAR(5),
@@ -35,7 +35,7 @@ REARM_HOLSTER_WEAPON;
             _unit removeAction _actionID;
         };
         _actionID = _unit addAction [
-            format ["<t color='#FF0000'>%1</t>", localize ELSTRING(dragging,Drop)],
+            format ["<t color='#FF0000'>%1</t>", LELSTRING(common,Drop)],
             '(_this select 0) call FUNC(dropAmmo)',
             nil,
             20,

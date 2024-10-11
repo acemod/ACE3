@@ -61,7 +61,7 @@
             <Hungarian>Felemelkedési üzenetek</Hungarian>
             <Russian>Сообщения о вознесении</Russian>
             <Italian>Messaggi di Ascesa</Italian>
-            <Japanese>転生の布告</Japanese>
+            <Japanese>Zeus転生通知</Japanese>
             <Korean>재림 메세지</Korean>
             <Chinesesimp>宙斯上任信息</Chinesesimp>
             <Chinese>宙斯上任訊息</Chinese>
@@ -1097,6 +1097,22 @@
             <Chinese>需要一個不存在的插件</Chinese>
             <Korean>현재 없는 애드온을 필요로 합니다</Korean>
         </Key>
+        <Key ID="STR_ACE_Zeus_OnlyPlayers">
+            <English>Only Players</English>
+            <Japanese>プレイヤーのみ</Japanese>
+            <German>Nur Spieler</German>
+            <Korean>오직 플레이어만</Korean>
+            <Polish>Tylko gracze</Polish>
+            <French>Joueurs seulement</French>
+            <Italian>Solo Giocatori</Italian>
+            <Chinesesimp>仅玩家</Chinesesimp>
+            <Chinese>只有玩家</Chinese>
+            <Russian>Только игроки</Russian>
+            <Portuguese>Apenas Jogadores</Portuguese>
+            <Czech>Pouze hráči</Czech>
+            <Spanish>Solo jugadores</Spanish>
+            <Turkish>Sadece Oyuncular</Turkish>
+        </Key>
         <Key ID="STR_ACE_Zeus_None">
             <English>None</English>
             <German>Keiner</German>
@@ -1322,6 +1338,7 @@
             <Korean>화물 내리기</Korean>
             <Russian>Выгрузить из отсека</Russian>
             <French>Décharger de la cargaison </French>
+            <Spanish>Descargar de la carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleToggleNVG_DisplayName">
             <English>Toggle NVGs</English>
@@ -1483,7 +1500,7 @@
             <English>Fill from top to bottom</English>
             <German>Von oben nach unten befüllen</German>
             <French>Remplir de haut en bas</French>
-            <Japanese>上から下まで占拠</Japanese>
+            <Japanese>上から下へと占拠</Japanese>
             <Italian>Riempi dall'alto al basso</Italian>
             <Chinese>由上而下進行填滿</Chinese>
             <Chinesesimp>由上而下进行填满</Chinesesimp>
@@ -1762,7 +1779,7 @@
             <German>Explosionsgröße</German>
             <Hungarian>Robbanásméret</Hungarian>
             <Italian>Dimensione dell'Esplosione</Italian>
-            <Japanese>爆発サイズ</Japanese>
+            <Japanese>爆発の大きさ</Japanese>
             <Korean>폭발 크기</Korean>
             <Polish>Rozmiar wybuchu</Polish>
             <Portuguese>Tamanho da Explosão</Portuguese>
@@ -1968,6 +1985,7 @@
             <Korean>의료 메뉴가 비활성화되었습니다</Korean>
             <Russian>Медицинское меню отключено</Russian>
             <French>Le Menu médical est désactivé</French>
+            <Spanish>El menú médico está deshabilitado</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_DisplayName">
             <English>Lay Trenchline</English>
@@ -1978,6 +1996,7 @@
             <Italian>Piazza Trincea</Italian>
             <Japanese>塹壕溝線を敷設</Japanese>
             <Russian>Проложить траншею</Russian>
+            <Spanish>Poner una Trinchera</Spanish>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_Tooltip">
             <English>+SHIFT to force (Can only lay N/S or E/W)</English>
@@ -1985,9 +2004,80 @@
             <Korean>+ Shift 키로 강제하기 (동서남북 방향으로만 깔 수 있음)</Korean>
             <French>+MAJ pour forcer (Disponible uniquement sur les alignements N/S ou E/O)</French>
             <German>+SHIFT zum Erzwingen (Kann nur nach N/S oder E/W legen)</German>
-            <Italian>+SHIFT per forzare (Può piazzare solo N/S o E/O</Italian>
+            <Italian>+SHIFT per forzare (Può piazzare solo N/S o E/O)</Italian>
             <Japanese>+SHIFTキー で強制的に敷設 (北/南または東/西方向にのみ配置可能)</Japanese>
             <Russian>+SHIFT на принудительное (может укладываться только на Север/Юг или Восток/Запад)</Russian>
+            <Spanish>+SHIFT para forzar (Puede solo colocar en N/S or E/O)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_ForceInterface_Tooltip">
+            <English>Forces the spectator interface preventing the player from closing it with the Escape key</English>
+            <Japanese>観戦インターフェイスを強制し、ユーザがEscキーでも閉じられないようにします。</Japanese>
+            <Russian>Активирует интерфейс spectator, не позволяя игроку закрыть его с помощью клавиши Escape.</Russian>
+            <Korean>플레이어가 Esc 키로 관전자 인터페이스를 닫지 못하도록 강제로 관전자 인터페이스를 설정합니다.</Korean>
+            <German>Erzwingt die Zuschauer-Ansicht und verhindert dass der Spieler sie mit der Esc-Taste schließen kann</German>
+            <Italian>Forza l'interfaccia di spettatore, impedendo al giocatore di chiuderla con il tasto Esc</Italian>
+            <French>Force le mode spectateur en empêchant le joueur de la fermer avec la touche Echap.</French>
+            <Spanish>Fuerza la interfaz del espectador a prevenir al jugador de cerrarla pulsando la tecla de Escape</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer">
+            <English>Hide player</English>
+            <Japanese>プレイヤーを隠す</Japanese>
+            <Russian>Скрыть игрока</Russian>
+            <Korean>플레이어 숨기기</Korean>
+            <German>Spieler ausblenden</German>
+            <Italian>Nascondi giocatore</Italian>
+            <French>Cacher le joueur</French>
+            <Spanish>Ocultar jugador</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer_Tooltip">
+            <English>Hides the player by making them invisible, invulnerable, muted, and removing them from their group</English>
+            <Japanese>透明化、無敵化、ミュート、グループからの除外を行いプレーヤーを隠します</Japanese>
+            <Russian>Скрывает игрока, делая его невидимым, неуязвимым, отключая звук и удаляя из группы.</Russian>
+            <Korean>플레이어를 투명, 무적, 음소거화하고 그룹에서 제거하여 숨깁니다.</Korean>
+            <German>Blendet den Spieler aus, macht ihn unsichtbar, unverwundbar, stumm und entfernt ihn von seiner Gruppe</German>
+            <Italian>Nasconde il giocatore, rendendolo invisibile, invulnerabile, muto e lo rimuove dal proprio gruppo</Italian>
+            <French>Cache le joueur en le rendant invisible, invulnérable, muet et en le retirant de son groupe.</French>
+            <Spanish>Oculta al jugador haciéndolo invisible, invulnerable, silenciado, y eliminándole del grupo</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_SpectableSides_Tooltip">
+            <English>Sets the sides that are available to spectate</English>
+            <Japanese>指定の陣営を観戦可能に設定します</Japanese>
+            <Russian>Устанавливает стороны, доступные для режима spectator</Russian>
+            <Korean>관전 가능한 진영을 설정합니다.</Korean>
+            <German>Bestimmt die Seiten denen man zuschauen kann</German>
+            <Italian>Imposta le fazioni che lo spettatore può osservare</Italian>
+            <French>Définit les côtés disponibles pour le mode spectateur</French>
+            <Spanish>Establece los bandos que tienen disponible ser espectador</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_WhiteHot">
+            <English>White Hot</English>
+            <Japanese>白=熱源</Japanese>
+            <Russian>Белый</Russian>
+            <Korean>백색 열원</Korean>
+            <German>Weiß-Schwarz</German>
+            <Italian>Bianco-caldo</Italian>
+            <French>Blanc-noir</French>
+            <Spanish>Blanco Caliente</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ModuleSpectator_BlackHot">
+            <English>Black Hot</English>
+            <Japanese>黒=熱源</Japanese>
+            <Russian>Чёрный</Russian>
+            <Korean>흑색 열원</Korean>
+            <German>Schwarz-Weiß</German>
+            <Italian>Nero-caldo</Italian>
+            <French>Noir et blanc</French>
+            <Spanish>Negro Caliente</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Zeus_ToggleAll">
+            <English>Toggle All</English>
+            <Japanese>全てを切り替え</Japanese>
+            <Russian>Выключить все</Russian>
+            <Korean>전부 토글</Korean>
+            <German>Alle wechseln</German>
+            <Italian>Cambia tutti</Italian>
+            <French>Tout afficher</French>
+            <Spanish>Alternar todo</Spanish>
         </Key>
     </Package>
 </Project>

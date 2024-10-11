@@ -71,31 +71,31 @@ Meant to run on server only.
 
 `ace_rearm_fnc_makeSource`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Ammo Truck | Object | Required
-1  | Supply Count | Number | Optional (default: `0`)
-1  | Add (`true`) or set (`false`) supply | Bool | Optional (default: `false`)
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Ammo Truck | Object | Required |
+| 1  | Supply Count | Number | Optional (default: `0`) |
+| 1  | Add (`true`) or set (`false`) supply | Bool | Optional (default: `false`) |
+| **R** | None | None | Return value |
 
 #### 3.1.1 Example
 
 `[cursorObject, 1200] call ace_rearm_fnc_makeSource`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  | `cursorObject` | Rearm source object
-1  | `1200` | Ammo supply
+|    | Arguments | Explanation |
+|----| --------- | ----------- |
+| 0  | `cursorObject` | Rearm source object |
+| 1  | `1200` | Ammo supply |
 
 ### 3.2 Enabling / disabling rearming
 
 `ace_rearm_fnc_disable`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Ammo Truck | Object | Required
-1  | Disable rearming, true to disable, false to enable | Boolean | Optional (default: `true`)
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Ammo Truck | Object | Required |
+| 1  | Disable rearming, true to disable, false to enable | Boolean | Optional (default: `true`) |
+| **R** | None | None | Return value |
 
 This function disables rearming for all supported turrets of a vehicle.
 
@@ -103,9 +103,9 @@ This function disables rearming for all supported turrets of a vehicle.
 
 `[tank] call ace_rearm_fnc_disable;`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  |  `tank` | My object
+|    | Arguments | Explanation |
+|----| --------- | ----------- |
+| 0  |  `tank`   | My object   |
 
 Disables rearming on the object `tank`.
 
@@ -113,10 +113,10 @@ Disables rearming on the object `tank`.
 
 `[tank, false] call ace_rearm_fnc_disable;`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  |  `tank` | My object
-1  |  `false`| Rearming is enabled
+|    | Arguments | Explanation |
+|----| --------- | ----------- |
+| 0  |  `tank`   | My object |
+| 1  |  `false`  | Rearming is enabled |
 
 Enables rearming on the object `tank`.
 
@@ -124,10 +124,10 @@ Enables rearming on the object `tank`.
 
 `ace_rearm_fnc_getSupplyCount`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Ammo Truck | Object | Required
-**R** | Supply count | Number | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Ammo Truck | Object | Required |
+| **R** | Supply count | Number | Return value |
 
 This function returns the current supply count of the ammo truck.
 
@@ -135,9 +135,9 @@ This function returns the current supply count of the ammo truck.
 
 `[ammo_truck] call ace_rearm_fnc_getSupplyCount;`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  |  `ammo_truck` | My object
+|    | Arguments     | Explanation |
+| ---| ------------- | ----------- |
+| 0  |  `ammo_truck` | My object   |
 
 The remaining supply count of `ammo_truck` will be returned.
 
@@ -145,11 +145,11 @@ The remaining supply count of `ammo_truck` will be returned.
 
 `ace_rearm_fnc_setSupplyCount`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Ammo Truck | Object | Required
-1  | Supply Count | Boolean | Required
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Ammo Truck | Object | Required |
+| 1  | Supply Count | Boolean | Required |
+| **R** | None | None | Return value |
 
 This function sets the current supply count of the ammo truck. It can be used to replenish the ammo truck on `Limited ammo supply based on caliber` setting.
 
@@ -157,21 +157,21 @@ This function sets the current supply count of the ammo truck. It can be used to
 
 `[ammo_truck, 1000] call ace_rearm_fnc_setSupplyCount;`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  |  `ammo_truck` | My ammo truck object
-1  |  `1000`| Supply Count
+|    | Arguments | Explanation |
+|----| --------- | ----------- |
+| 0  |  `ammo_truck` | My ammo truck object |
+| 1  |  `1000`| Supply Count |
 
 ### 3.5 Adding specific magazines
 
 `ace_rearm_fnc_addMagazineToSupply`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Ammo Truck | Object | Required
-1  | Magazine Classname | String | Required
-2  | Only add content of one ammo box | Boolean | Optional (default: `false`)
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Ammo Truck | Object | Required |
+| 1  | Magazine Classname | String | Required |
+| 2  | Only add content of one ammo box | Boolean | Optional (default: `false`) |
+| **R** | None | None | Return value |
 
 This function is most useful with the module setting `Only specific Magazines`. Note that this function only adds one magazine of a specific class. Other magazines of the same size are not available on this module setting. It has to be used to replenish the ammo truck on `Only specific Magazines` setting.
 
@@ -181,10 +181,10 @@ This function can also be used to increase the supply count on setting `Limited 
 
 `[ammo_truck, "32Rnd_155mm_Mo_shells"] call ace_rearm_fnc_addMagazineToSupply;`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  | `ammo_truck` | My ammo truck object
-1  | `"32Rnd_155mm_Mo_shells"` | Some magazine class
+|    | Arguments | Explanation |
+|----| --------- | ----------- |
+| 0  | `ammo_truck` | My ammo truck object |
+| 1  | `"32Rnd_155mm_Mo_shells"` | Some magazine class |
 
 The 32 artillery shells are added to the supply count or the magazine storage of the specified ammo truck.
 
@@ -192,11 +192,11 @@ The 32 artillery shells are added to the supply count or the magazine storage of
 
 `ace_rearm_fnc_addVehicleMagazinesToSupply`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Ammo Truck | Object | Required
-1  | Any vehicle object or class name | Object or String | Required
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Ammo Truck | Object | Required |
+| 1  | Any vehicle object or class name | Object or String | Required |
+| **R** | None | None | Return value |
 
 This function wraps `ace_rearm_fnc_addMagazineToSupply` and uses it to add all default magazines of all supported turrets of the vehicle to the ammo truck.
 
@@ -204,10 +204,10 @@ This function wraps `ace_rearm_fnc_addMagazineToSupply` and uses it to add all d
 
 `[ammo_truck, tank] call ace_rearm_fnc_addVehicleMagazinesToSupply;`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  |  `ammo_truck` | My ammo truck object
-1  |  `tank`| A vehicle object
+|    | Arguments | Explanation |
+|----| --------- | ----------- |
+| 0  |  `ammo_truck` | My ammo truck object |
+| 1  |  `tank`| A vehicle object |
 
 All magazines found in the class config of the object `tank` are made available.
 
@@ -215,10 +215,10 @@ All magazines found in the class config of the object `tank` are made available.
 
 `[ammo_truck, "B_MBT_01_arty_F"] call ace_rearm_fnc_addVehicleMagazinesToSupply;`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  |  `ammo_truck` | My ammo truck object
-1  |  `"B_MBT_01_arty_F"`| Vehicle class name
+|    | Arguments | Explanation |
+|----| --------- | ----------- |
+| 0  |  `ammo_truck` | My ammo truck object |
+| 1  |  `"B_MBT_01_arty_F"`| Vehicle class name |
 
 All magazines found in the config of the vehicle class `B_MBT_01_arty_F` are made available.
 
@@ -227,21 +227,21 @@ All magazines found in the config of the vehicle class `B_MBT_01_arty_F` are mad
 
 `ace_rearm_fnc_removeMagazineFromSupply`
 
-   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Ammo Truck | Object | Required
-1  | Magazine Classname | String | Required
-2  | Number of Rounds to withdraw | Number | Optional (default: `-1`)
-**R** | Magazine could be removed successfully | Boolean | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Ammo Truck | Object | Required |
+| 1  | Magazine Classname | String | Required |
+| 2  | Number of Rounds to withdraw | Number | Optional (default: `-1`) |
+| **R** | Magazine could be removed successfully | Boolean | Return value |
 
 #### 3.7.1 Example 1
 
 `[ammo_truck, "500Rnd_127x99_mag_Tracer_Red"] call ace_rearm_fnc_removeMagazineFromSupply;`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  |  `ammo_truck` | My ammo truck object
-1  |  `"500Rnd_127x99_mag_Tracer_Red"`| Carrying is enabled
+|    | Arguments | Explanation |
+|----| --------- | ----------- |
+| 0  |  `ammo_truck` | My ammo truck object |
+| 1  |  `"500Rnd_127x99_mag_Tracer_Red"`| Carrying is enabled |
 
 Removes one ammo box worth of "500Rnd_127x99_mag_Tracer_Red" from the supply. Depending on the module setting the ammo box does hold an entire magazine or only the caliber based amount of rounds.
 
@@ -249,16 +249,16 @@ Removes one ammo box worth of "500Rnd_127x99_mag_Tracer_Red" from the supply. De
 
 `[ammo_truck, "500Rnd_127x99_mag_Tracer_Red", 50] call ace_rearm_fnc_removeMagazineFromSupply;`
 
-   | Arguments | Explanation
----| --------- | -----------
-0  |  `ammo_truck` | My ammo truck object
-1  |  `"500Rnd_127x99_mag_Tracer_Red"`| Carrying is enabled
-2  |  `50` | Number of rounds
+|    | Arguments | Explanation |
+|----| --------- | ----------- |
+| 0  |  `ammo_truck` | My ammo truck object |
+| 1  |  `"500Rnd_127x99_mag_Tracer_Red"`| Carrying is enabled |
+| 2  |  `50` | Number of rounds |
 
 Removes one ammo box with 50 rounds of 500Rnd_127x99_mag_Tracer_Red from the supply. This is 10% of the supply of an entire magazine.
 
 ## 4. Events
 
-| Name  | Arguments | Global? | Added in |
-| ------------- | ------------- | ------------- |
-| ace_rearm_sourceInitalized | Yes | Ammo truck (OBJECT) | 3.16.0 |
+| Name          | Arguments | Global? | Added in |
+| ------------- | --------- | ------- | -------- |
+| `ace_rearm_sourceInitalized` | Ammo truck (OBJECT) | Yes | 3.16.0 |

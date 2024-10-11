@@ -38,6 +38,7 @@ if !(hasInterface) exitWith {};
         [false, false, false, false, true]
     ] call EFUNC(interact_menu,createAction);
 
+    //IGNORE_PRIVATE_WARNING ["_player", "_target"];
     private _subActions = [
         [
             QGVAR(checkWater),
@@ -99,7 +100,7 @@ if !(hasInterface) exitWith {};
     ["ace_interactMenuOpened", LINKFUNC(addWaterSourceInteractions)] call CBA_fnc_addEventHandler;
 
     // Add status modifiers
-    if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+    if (GETEGVAR(medical,enabled,false)) then {
         [0, {
             if (_this getVariable [QEGVAR(medical,isBleeding), false]) exitWith {
                 0.5

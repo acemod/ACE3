@@ -91,6 +91,7 @@
             <Portuguese>Equipar NVGs automaticamente</Portuguese>
             <Japanese>暗視装置の自動装備</Japanese>
             <Russian>Автоматическое оснащение ПНВ</Russian>
+            <Spanish>Auto equipar gafas de visión nocturna</Spanish>
         </Key>
         <Key ID="STR_ACE_AI_AssignNVG_Description">
             <English>Equips NVG in inventory during night time and unequips it during day time.\nDoes not add NVGs to inventory!</English>
@@ -102,6 +103,7 @@
             <Portuguese>Equipa o NVG do inventário durante a noite e desequipa durante o dia.\nNão adiciona NVGs ao inventário!</Portuguese>
             <Japanese>インベントリ内の暗視装置を夜間に装備し、日中は解除し収納します。\nこれはNVGをインベントリに追加しません。</Japanese>
             <Russian>Экипирует ПНВ в ночное время и отключает его в дневное время.\nНе добавляет ПНВ в инвентарь!</Russian>
+            <Spanish>Equipa las gafas de visión nocturna en el inventario cuando es de noche, y las desequipa cuando es de día.\nNo añade las gafas al inventario!</Spanish>
         </Key>
     </Package>
 </Project>

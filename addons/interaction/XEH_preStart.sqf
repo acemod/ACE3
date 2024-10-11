@@ -23,3 +23,13 @@ private _cacheReplaceTerrainModels = createHashMap;
 } forEach _replaceTerrainClasses;
 
 uiNamespace setVariable [QGVAR(cacheReplaceTerrainModels), compileFinal str _cacheReplaceTerrainModels];
+
+
+// Cache classes with anim actions
+private _animActionsClasses = (QUOTE(isClass (_x >> QQGVAR(anims)) && {!isClass (inheritsFrom _x >> QQGVAR(anims))}) configClasses (configFile >> "CfgVehicles"));
+_animActionsClasses = _animActionsClasses apply { configName _x };
+_animActionsClasses = _animActionsClasses select {
+    private _class = _x;
+    (_animActionsClasses findIf {(_class != _x) && {_class isKindOf _x}}) == -1  // filter classes that already have a parent in the list
+};
+uiNamespace setVariable [QGVAR(animActionsClasses), compileFinal (_animActionsClasses createHashMapFromArray [])];

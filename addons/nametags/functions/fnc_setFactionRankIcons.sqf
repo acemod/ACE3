@@ -25,7 +25,7 @@
  */
 
 if (isNil QGVAR(factionRanks)) then {
-    GVAR(factionRanks) = [] call CBA_fnc_createNamespace;
+    GVAR(factionRanks) = createHashMap;
 };
 
 params [["_faction", "", [""]], ["_icons", [], [[]], [7]]];
@@ -33,6 +33,11 @@ TRACE_2("setFactionRankIcons",_faction,_icons);
 
 if !(_faction != "" && {_icons isEqualTypeAll ""}) exitWith {false};
 
-GVAR(factionRanks) setVariable [_faction, _icons];
+_faction = configName (configFile >> "CfgFactionClasses" >> _faction);
+
+// Faction doesn't exist
+if (_faction == "") exitWith {false};
+
+GVAR(factionRanks) set [_faction, _icons];
 
 true

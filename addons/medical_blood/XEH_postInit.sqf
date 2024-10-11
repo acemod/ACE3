@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-GVAR(useAceMedical) = ["ace_medical"] call EFUNC(common,isModLoaded);
-
 // To support public API regardless of component settings
 [QGVAR(spurt), LINKFUNC(spurt)] call CBA_fnc_addEventHandler;
 

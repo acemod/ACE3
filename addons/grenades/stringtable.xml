@@ -103,6 +103,16 @@
             <Chinese>下丟投擲</Chinese>
             <Turkish>Bombayı Yere Bırak</Turkish>
         </Key>
+        <Key ID="STR_ACE_Grenades_RollGrenadeDisabled">
+            <English>Can't roll this grenade, switched to %1</English>
+            <Japanese>この手榴弾は転がせません、 %1 に切り替えます</Japanese>
+            <Russian>Эта граната не может быть брошена, переключитесь на %1</Russian>
+            <Korean>이 수류탄은 굴릴 수 없습니다. %1(으)로 전환되었습니다.</Korean>
+            <German>Granate kann nicht rollen, zu %1 gewechselt</German>
+            <Italian>Granata non può rotolare, cambiato a %1</Italian>
+            <French>Grenade ne peut pas rouler, passé à %1</French>
+            <Spanish>No se puede rodar esta granada, cambiando a %1</Spanish>
+        </Key>
         <Key ID="STR_ACE_Grenades_M84_Name">
             <English>M84 Stun Grenade</English>
             <German>M84 Blendgranate</German>
@@ -149,7 +159,7 @@
             <Italian>Anche conosciuta come flashbang. Causa accecamento immediato, sensazioni di sposatezza, mancanza d'equilibrio e disturbi al timpano.</Italian>
             <Portuguese>Também conhecida como flashbang. Causa uma clarão imediato, cegueira, surdez, zumbido e distúrbio no tímpano.</Portuguese>
             <Japanese>フラッシュバンとも知られています。即時に失明と難聴、耳鳴り、内耳障害を引き起こします。</Japanese>
-            <Korean>플래시뱅이라고도 알려져있습니다. 사용 즉시 섬광으로 인한 시력장애, 청각장애, 이명, 내이기관방해를 유발합니다.</Korean>
+            <Korean>플래시뱅이라고도 알려져 있습니다. 사용 즉시 섬광으로 인한 시력장애, 청각장애, 이명, 내이기관방해를 유발합니다.</Korean>
             <Chinesesimp>也被称为闪光弹，会造成暂时性失明，耳聋，耳鸣等效果。</Chinesesimp>
             <Chinese>也被稱為閃光彈，會造成暫時性失明，耳聾，耳鳴等效果</Chinese>
             <Turkish>Flashbang olarak da bilinir. Ani flaş körlüğü, sağırlık, kulak çınlaması ve iç kulak rahatsızlığına neden olur.</Turkish>

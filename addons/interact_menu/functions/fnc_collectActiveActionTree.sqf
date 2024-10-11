@@ -109,14 +109,14 @@ if ((_activeChildren isEqualTo []) && {_statementCode isEqualTo {}}) exitWith {
 
 if (GVAR(consolidateSingleChild) && {count _activeChildren == 1} && {_statementCode isEqualTo {}}) then {
     _activeChildren select 0 params ["_childActionData", "_childChildren", "_childObject"];
-    _childActionData params ["", "_displayNameChild", "_iconChild", "_statementChild", "", "", "_customParamsChild", "", "", "_paramsChild"];
+    _childActionData params ["", "_displayNameChild", "_iconChild", "_statementChild", "_conditionChild", "_insertChildrenChild", "_customParamsChild", "", "", "_paramsChild"];
     _origActionData = [
         _actionName,
         format ["%1 > %2", _displayName, _displayNameChild],
         _iconChild,
         _statementChild,
-        _conditionCode,
-        _insertChildrenCode,
+        _conditionChild,
+        _insertChildrenChild,
         _customParamsChild,
         _position,
         _distance,

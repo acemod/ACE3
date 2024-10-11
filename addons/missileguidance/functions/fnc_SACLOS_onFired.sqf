@@ -32,4 +32,3 @@ _seekerStateParams set [2, _animationSourceGun];
 _seekerStateParams set [3, _usePilotCamera || { (_shooter isKindOf "Plane") && hasPilotCamera _shooter }];
 
 if ((_shooter isKindOf "Plane") && !hasPilotCamera _shooter) then { WARNING("SACLOS fired from planes without pilot camera unsupported!"); };
-

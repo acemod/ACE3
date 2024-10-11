@@ -18,7 +18,7 @@
 params ["_unit"];
 
 // don't switch to original player units
-if (!([_unit] call FUNC(isValidAi))) exitWith {};
+if !([_unit] call FUNC(isValidAi)) exitWith {};
 
 // exit var
 private _leave = false;

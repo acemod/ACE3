@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Disable this faction from using dogtags.
+ * Disables this faction from using dog tags.
  *
  * Arguments:
  * 0: Faction <STRING>
@@ -17,4 +17,9 @@
 
 params [["_faction", "", [""]]];
 
-GVAR(disabledFactions) setVariable [_faction, true];
+_faction = configName (configFile >> "CfgFactionClasses" >> _faction);
+
+// Faction doesn't exist
+if (_faction == "") exitWith {};
+
+GVAR(disabledFactions) set [_faction, true];

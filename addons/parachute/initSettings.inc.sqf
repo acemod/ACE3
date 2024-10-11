@@ -5,9 +5,7 @@ private _category = [LELSTRING(common,categoryUncategorized), localize "str_dn_p
     "CHECKBOX",
     [LSTRING(HideAltimeter), LSTRING(HideAltimeter_tooltip)],
     _category,
-    true,
-    false,
-    {[QGVAR(hideAltimeter), _this, false] call EFUNC(common,cbaSettings_settingChanged)}
+    true
 ] call CBA_fnc_addSetting;
 
 [

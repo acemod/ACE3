@@ -46,7 +46,7 @@
             <Portuguese>Abrir tabela de distâncias para 82mm</Portuguese>
             <Czech>Otevřít 82mm Rangetable</Czech>
             <Italian>Apri la tavola di tiro 82mm</Italian>
-            <Japanese>82mm用射表を開く</Japanese>
+            <Japanese>82mm用 射表 を開く</Japanese>
             <Korean>82mm 사거리표 열기</Korean>
             <Chinesesimp>开启82 mm 迫击炮射表</Chinesesimp>
             <Chinese>開啟82毫米迫擊炮射表</Chinese>
@@ -120,10 +120,10 @@
             <Turkish>Hava Direnci</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_airResistanceEnabled_Description">
-            <English>For Player Shots, Model Air Resistance and Wind Effects</English>
+            <English>Simulates air resistance and wind effects for player shots.</English>
             <Polish>Modeluj opór powietrza oraz wpływ wiatru na tor lotu pocisku dla strzałów z moździerza Mk6 przez graczy</Polish>
             <Spanish>Para disparos del jugador, modelo de resistencia al aire y efectos de viento</Spanish>
-            <German>Für Spielerschüsse, Luftwiderstand und Windeffekte</German>
+            <German>Simuliert Luftwiderstand und Windeffekte für Spielerschüsse.</German>
             <Czech>Pro hráčovu střelbu, Model odporu vzduchu a povětrných podmínek</Czech>
             <Portuguese>Para disparos do jogador, modelo de resistência de ar e efeitos de vento</Portuguese>
             <French>Pour les tirs des joueurs, simule la résistance de l'air et les effets du vent.</French>
@@ -163,7 +163,7 @@
             <Hungarian>A távmérő és számítógép megjelenítése (ezeket el KELL távolítani ha a légellenállás engedélyezve van)</Hungarian>
             <Russian>Показывает компьютер и дальномер (это НУЖНО отключить, если вы включаете сопротивление воздуха)</Russian>
             <Italian>Consenti l'utilizzo del Computer Balistico e del Telemetro (questi DEVONO essere disabilitati se vuoi abilitare la resistenza dell'aria)</Italian>
-            <Japanese>砲撃コンピュータと距離計を表示します (空気抵抗を仕様する場合は必ず無効化する必要があります)</Japanese>
+            <Japanese>砲撃コンピュータと距離計を表示します (空気抵抗を有効化する場合はこれらを取り除く必要があります)</Japanese>
             <Korean>탄도계산컴퓨터와 거리측정기를 보여줍니다(공기저항을 활성화했을 경우 이 항목은 비활성화 되어야 합니다)</Korean>
             <Chinesesimp>显示弹道计算机和测距仪（如果有启用空气阻力功能时，须停用此项功能）</Chinesesimp>
             <Chinese>顯示射控電腦和測距儀 (如果有啟用空氣阻力功能時，須停用此項功能)</Chinese>
@@ -233,19 +233,19 @@
             <Czech>Používat ruční manipulaci s municí</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
-            <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Does not affect AI mortars.</English>
-            <German>Enfernt das Magzin des Mörsers. Es ist nun erforderlich, die einzelnen Patronen manuell zu laden. Dies beeinflusst nicht die KI-Truppen.</German>
-            <Spanish>Elimina los cargadores del mortero, requiriendo al artillero o cargador la carga manual de cada rondas. No afecta morteros controlados por IA.</Spanish>
-            <Polish>Usuwa magazynki moździerza, wymagając ładowania pojedynczych pocisków przez strzelca lub ładowniczego. Nie dotyczy moździerzy AI.</Polish>
-            <French>Enlève les chargeurs de mortier, ce qui oblige le tireur ou le servant à charger les obus manuellement. N'affecte pas les mortiers IA.</French>
-            <Italian>Rimuove i caricatori di colpi dal mortaio. Un operatore dovrà caricare proiettili singoli prima di poter fare fuoco. Non viene applicato su operatori IA.</Italian>
-            <Portuguese>Elimina os carregadores do morteiro, requerendo que o atirador ou carregador utilize de forma individual a munição. Não afeta os morteiros controlados pela IA.</Portuguese>
-            <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжающим. Не влияет на артиллерию ИИ.</Russian>
-            <Japanese>迫撃砲から弾薬を除去します。射手か装填手により予め装填されている必要があります。AI迫撃砲へ影響を与えません。</Japanese>
-            <Korean>박격포 탄창을 제거합니다, 사수나 장전수가 개별적으로 탄환을 넣어줘야 합니다. 인공지능은 영향을 받지 않습니다.</Korean>
-            <Chinesesimp>开启此功能时。迫击炮的弹药需由炮手与装填手共同合作来进行装填。此功能并不影响由 AI 射击的迫击炮</Chinesesimp>
-            <Chinese>開啟此功能時。迫擊砲的彈藥需由砲手與裝填手共同合作來進行裝填。此功能並不影響由AI射擊的迫擊砲</Chinese>
-            <Czech>Odstraní z minometu zásobník a vynucuje nabíjení po každém výstřelu buď mířičem nebo nabíječem. Tato možnost neovlivňuje AI posádky.</Czech>
+            <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader.</English>
+            <German>Enfernt das Magzin des Mörsers. Es ist nun erforderlich, die einzelnen Patronen manuell zu laden.</German>
+            <Spanish>Elimina los cargadores del mortero, requiriendo al artillero o cargador la carga manual de cada rondas.</Spanish>
+            <Polish>Usuwa magazynki moździerza, wymagając ładowania pojedynczych pocisków przez strzelca lub ładowniczego.</Polish>
+            <French>Enlève les chargeurs de mortier, ce qui oblige le tireur ou le servant à charger les obus manuellement.</French>
+            <Italian>Rimuove i caricatori di colpi dal mortaio. Un operatore dovrà caricare proiettili singoli prima di poter fare fuoco.</Italian>
+            <Portuguese>Elimina os carregadores do morteiro, requerendo que o atirador ou carregador utilize de forma individual a munição.</Portuguese>
+            <Russian>Удаляет артиллерийские магазины, требует загрузку отдельных снарядов стрелком или заряжающим.</Russian>
+            <Japanese>迫撃砲から弾倉を除去します。一発ずつ射手か装填手によって装填される必要があります。</Japanese>
+            <Korean>박격포 탄창을 제거합니다, 사수나 장전수가 개별적으로 탄환을 넣어줘야 합니다.</Korean>
+            <Chinesesimp>开启此功能时。迫击炮的弹药需由炮手与装填手共同合作来进行装填</Chinesesimp>
+            <Chinese>開啟此功能時。迫擊砲的彈藥需由砲手與裝填手共同合作來進行裝填</Chinese>
+            <Czech>Odstraní z minometu zásobník a vynucuje nabíjení po každém výstřelu buď mířičem nebo nabíječem.</Czech>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_unloadMortar">
             <English>Remove Round</English>
@@ -257,7 +257,7 @@
             <Czech>Odstranit náboj</Czech>
             <Portuguese>Remover munição</Portuguese>
             <Russian>Извлечь снаряд</Russian>
-            <Japanese>弾薬を除去</Japanese>
+            <Japanese>砲弾を取り除く</Japanese>
             <Korean>탄약 제거</Korean>
             <Chinesesimp>卸除弹头</Chinesesimp>
             <Chinese>卸除彈頭</Chinese>
@@ -273,7 +273,7 @@
             <Czech>Nabít minomet</Czech>
             <Portuguese>Carregar morteiro</Portuguese>
             <Russian>Зарядить миномет</Russian>
-            <Japanese>弾薬を装填</Japanese>
+            <Japanese>砲弾を装填</Japanese>
             <Korean>탄약 장전</Korean>
             <Chinesesimp>装载弹头</Chinesesimp>
             <Chinese>裝載彈頭</Chinese>
@@ -288,7 +288,7 @@
             <Italian>Togliendo Proiettile</Italian>
             <Portuguese>Descarregar munição</Portuguese>
             <Russian>Извлечение снаряда</Russian>
-            <Japanese>弾薬を除去しています</Japanese>
+            <Japanese>砲弾を取り除いています</Japanese>
             <Korean>탄약 제거 중</Korean>
             <Chinesesimp>正在卸除弹头</Chinesesimp>
             <Chinese>卸除彈頭中</Chinese>
@@ -305,7 +305,7 @@
             <Czech>Připavuji náboj</Czech>
             <Portuguese>Preparar munição</Portuguese>
             <Russian>Подготовка снаряда</Russian>
-            <Japanese>砲弾を事前装填</Japanese>
+            <Japanese>砲弾を準備</Japanese>
             <Korean>탄약 준비 중</Korean>
             <Chinesesimp>正在准备弹头</Chinesesimp>
             <Chinese>準備彈頭中</Chinese>
@@ -544,7 +544,7 @@
             <Czech>[ACE] Bedna se standardní 82mm municí</Czech>
             <Portuguese>[ACE] Caixa de Munição 82mm Padrão</Portuguese>
             <Russian>[ACE] Ящик снарядов 82мм (стандартный)</Russian>
-            <Japanese>[ACE] 82mm 保管箱</Japanese>
+            <Japanese>[ACE] 82mm 標準砲弾セット入り弾薬箱</Japanese>
             <Korean>[ACE] 82mm 기본 장비 상자</Korean>
             <Chinesesimp>[ACE] 82 mm 预设弹药箱</Chinesesimp>
             <Chinese>[ACE] 82毫米預設彈藥箱</Chinese>
