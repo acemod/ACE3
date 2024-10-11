@@ -39,10 +39,8 @@ private _explosivesList = [];
                 {_detonator == GVAR(activeTrigger)} && 
                 {count (_result select {(_x select 4) == getText (_detonatorConfig >> QGVAR(triggerType))}) < 2}
             ) then {
-                systemChat "true";
                 getText (_detonatorConfig >> "picture")
             } else {
-                systemChat "false";
                 getText (_item >> "picture")
             };
 
