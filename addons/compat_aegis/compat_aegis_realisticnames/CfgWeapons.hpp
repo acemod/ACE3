@@ -35,6 +35,11 @@ class CfgWeapons {
         displayName = SUBCSTRING(srifle_DMR_02_tna_F);
     };
 
+    class srifle_DMR_05_blk_F;
+    class srifle_DMR_05_ghex_F: srifle_DMR_05_blk_F {
+        displayName = SUBCSTRING(srifle_DMR_05_ghex_F);
+    };
+
     class srifle_DMR_06_camo_F;
     class srifle_DMR_06_black_F: srifle_DMR_06_camo_F {
         displayName = SUBCSTRING(srifle_DMR_06_black_F);

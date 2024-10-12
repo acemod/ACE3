@@ -169,6 +169,23 @@
             <Chinesesimp>诺琳 "坏消息" 极距狙击步枪（热带迷彩）</Chinesesimp>
             <Turkish>Noreen "Bad News" ULR (Tropic)</Turkish>
         </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_DMR_05_ghex_F">
+            <English>Cyrus (Green Hex)</English>
+            <Czech>Cyrus (Zelený Hex)</Czech>
+            <French>Cyrus (Hex Vert)</French>
+            <Spanish>Cyrus (Hex Verde)</Spanish>
+            <Russian>Cyrus (зелёный гекс)</Russian>
+            <German>Cyrus (Hex Grün)</German>
+            <Polish>Cyrus (Zielony hex)</Polish>
+            <Italian>Cyrus (Hex Verde)</Italian>
+            <Hungarian>Cyrus (Zöld Hex)</Hungarian>
+            <Portuguese>Cyrus (Verde Hex)</Portuguese>
+            <Japanese>サイラス (緑六角形迷彩)</Japanese>
+            <Korean>사이러스 (초록육각)</Korean>
+            <Chinese>"居鲁士"狙擊步槍 (綠色數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>"居鲁士"（绿色蜂巢迷彩）</Chinesesimp>
+            <Turkish>Cyrus (Yeşil Hex)</Turkish>
+        </Key>
         <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_DMR_06_black_F">
             <English>M14 (Black)</English>
             <Czech>M14 (Černá)</Czech>
