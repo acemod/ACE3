@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut, PabstMirror modified by Cplhardcore
+ * Author: BaerMitUmlaut, PabstMirror, Cplhardcore
  * Adds a medication and it's effects
  *
  * Arguments:
