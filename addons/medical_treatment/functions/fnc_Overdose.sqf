@@ -36,3 +36,4 @@ if (!isNil "_onOverDose" && {isText _onOverDose}) then {
 } else {
     _onOverDose = missionNamespace getVariable _onOverDose;
 };
+[_target, _className] call _onOverDose;
