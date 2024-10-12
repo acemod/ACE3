@@ -17,6 +17,9 @@
             <Turkish>Düşmeyi tetikleyen min hasar</Turkish>
             <Spanish>Daño mínimo para provocar la caída</Spanish>
         </Key>
+        <Key ID="STR_ACE_HitReactions_minDamageToTrigger_Description">
+            <English>If a unit takes more damage than this setting's value whilst moving on foot, they will fall over.\nIf set to a negative value, this mechanic is turned off.</English>
+        </Key>
         <Key ID="STR_ACE_HitReactions_weaponDropChanceArmHitPlayer_displayName">
             <English>Player Weapon Drop Chance (Arm Hit)</English>
             <Japanese>プレイヤーが武器を落とす確率 (腕部への被弾)</Japanese>
