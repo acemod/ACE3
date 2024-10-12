@@ -53,6 +53,7 @@
             <Japanese>後方噴射の距離係数</Japanese>
             <Korean>후폭풍 거리 계수</Korean>
             <French>Multiplicateur de distance de réflexion</French>
+            <Spanish>Coeficiente de Distancia de Fogonazo</Spanish>
         </Key>
         <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_toolTip">
             <English>Scales the backblast effect</English>
@@ -62,6 +63,7 @@
             <Japanese>無反動砲による後方噴射の影響範囲の大きさ</Japanese>
             <Korean>후폭풍 효과의 스케일을 조정합니다</Korean>
             <French>Multiplicateur de distance de réflexion</French>
+            <Spanish>Escala el efecto del fogonazo</Spanish>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastRange">
             <English>Backblast range</English>
