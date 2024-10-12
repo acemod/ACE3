@@ -108,7 +108,7 @@ private _categorySway = [_category, LSTRING(subcategory_sway)];
     [LSTRING(magneticDeclination), LSTRING(magneticDeclinationooltip)],
     _category,
     false,
-    true,
+    1,
     {call FUNC(getMagneticBearingOffset)}
 ] call CBA_fnc_addSetting;
 
