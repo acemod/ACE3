@@ -32,6 +32,9 @@ if (_structuralDamage) then {
 // Damage can be disabled with old variable or via sqf command allowDamage
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
+// Killing units via End key is an edge case (#10375)
+if (_structuralDamage && {_damage == 1 && _ammo == "" && isNull _shooter && isNull _instigator}) exitWith {_damage};
+
 private _newDamage = _damage - _oldDamage;
 
 // _newDamage == 0 happens occasionally for vehiclehit events (see line 80 onwards), just exit early to save some frametime
