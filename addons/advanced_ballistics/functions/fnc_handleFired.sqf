@@ -50,7 +50,7 @@ if (_abort) then {
 
     if (GVAR(bulletTraceEnabled) && {_muzzleVelocity > BULLET_TRACE_MIN_VELOCITY} && {cameraView == "GUNNER"}) then {
         if (currentWeapon ACE_player == binocular ACE_player) exitWith { _abort = false };
-        if (currentWeapon ACE_player == primaryWeapon ACE_player && {count primaryWeaponItems ACE_player > 2}) then {
+        if (currentWeapon ACE_player == primaryWeapon ACE_player) then {
             private _opticsName = (primaryWeaponItems ACE_player) select 2;
             private _opticType = getNumber(configFile >> "CfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
             if (_opticType == 2) exitWith { _abort = false };
@@ -103,7 +103,7 @@ if (GVAR(bulletTraceEnabled) && {_muzzleVelocity > BULLET_TRACE_MIN_VELOCITY} &&
     if (currentWeapon ACE_player == binocular ACE_player) then {
         _bulletTraceVisible = true;
     } else {
-        if (currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
+        if (currentWeapon ACE_player == primaryWeapon ACE_player) then {
             private _opticsName = (primaryWeaponItems ACE_player) select 2;
             private _opticType = getNumber(configFile >> "CfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
             _bulletTraceVisible = _opticType == 2;
