@@ -18,20 +18,23 @@
 
 #define __TYPE_WRITER_DELAY 0.05
 
-if ((ACE_player call CBA_fnc_getUnitAnim) select 0 == "stand") then {
+if (missionNamespace getVariable [QGVAR(animatePlayer), true] && {(ACE_player call CBA_fnc_getUnitAnim) select 0 == "stand"}) then {
     ACE_player playMove "AmovPercMstpSrasWrflDnon_diary";
 };
 
 HUNTIR_BACKGROUND_LAYER_ID cutText ["", "BLACK", 0];
 createDialog QGVAR(cam_dialog_off);
 
+[QGVAR(monitorOpened), [ACE_player]] call CBA_fnc_localEvent;
+
 [{
     if (!dialog) exitWith {
         HUNTIR_BACKGROUND_LAYER_ID cutText ["", "PLAIN", 0];
+        [QGVAR(monitorClosed), [ACE_player]] call CBA_fnc_localEvent;
     };
     closeDialog 0;
     createDialog QGVAR(cam_dialog_inactive);
-    uiNameSpace setVariable [QGVAR(monitor), findDisplay 18881];
+    uiNamespace setVariable [QGVAR(monitor), findDisplay 18881];
     [{
         GVAR(startTime) = CBA_missionTime;
         GVAR(done) = false;
@@ -40,10 +43,12 @@ createDialog QGVAR(cam_dialog_off);
         GVAR(message) = [];
         GVAR(messageSearching) = toArray "Searching.....";
         GVAR(messageConnecting) = toArray "Connecting.....";
+        [QGVAR(monitorStarted), [ACE_player]] call CBA_fnc_localEvent;
         [{
             //Close monitor if we no longer have item:
-            if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable [QGVAR(monitor), displayNull])}) then {
+            if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNamespace getVariable [QGVAR(monitor), displayNull])}) then {
                 closeDialog 0;
+                [QGVAR(monitorClosed), [ACE_player]] call CBA_fnc_localEvent;
             };
 
             private _elapsedTime = CBA_missionTime - GVAR(startTime);
@@ -55,6 +60,7 @@ createDialog QGVAR(cam_dialog_off);
                 GVAR(done) = false;
                 GVAR(message) = [];
                 GVAR(connectionDelay) = 5;
+                [QGVAR(monitorDisconnected), [ACE_player]] call CBA_fnc_localEvent;
             };
 
             if ((!dialog) || GVAR(done)) exitWith {
@@ -64,6 +70,7 @@ createDialog QGVAR(cam_dialog_off);
                     [_nearestHuntIRs select 0] call FUNC(cam);
                 } else {
                     HUNTIR_BACKGROUND_LAYER_ID cutText ["", "PLAIN"];
+                    [QGVAR(monitorClosed), [ACE_player]] call CBA_fnc_localEvent;
                 };
             };
             switch (GVAR(state)) do {
@@ -75,9 +82,11 @@ createDialog QGVAR(cam_dialog_off);
                         GVAR(message) = [];
                         if (_elapsedTime > 10) then {
                             GVAR(state) = "noGDS";
+                            [QGVAR(monitorNoGDS), [ACE_player]] call CBA_fnc_localEvent;
                         };
                         if (_elapsedTime > 5 && {{_x getHitPointDamage "HitCamera" < 0.25} count _nearestHuntIRs > 0}) then {
                             GVAR(state) = "connecting";
+                            [QGVAR(monitorConnecting), [ACE_player]] call CBA_fnc_localEvent;
                         };
                     };
                 };
@@ -91,6 +100,7 @@ createDialog QGVAR(cam_dialog_off);
                         if (GVAR(connectionDelay) <= 0) then {
                             GVAR(done) = true;
                             GVAR(state) = "connected";
+                            [QGVAR(monitorConnected), [ACE_player, _nearestHuntIRs select 0]] call CBA_fnc_localEvent;
                         };
                     };
                 };
@@ -98,8 +108,9 @@ createDialog QGVAR(cam_dialog_off);
                     ctrlSetText [1, "No GDS System detected"];
                     [{
                         GVAR(done) = true;
-                        closedialog 0;
+                        closeDialog 0;
                         HUNTIR_BACKGROUND_LAYER_ID cutText ["", "PLAIN"];
+                        [QGVAR(monitorClosed), [ACE_player]] call CBA_fnc_localEvent;
                     }, [], 3, 0] call CBA_fnc_waitAndExecute;
                 };
             };

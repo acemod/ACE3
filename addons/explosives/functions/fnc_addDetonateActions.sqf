@@ -19,16 +19,16 @@
 params ["_unit", "_detonator"];
 TRACE_2("params",_unit,_detonator);
 
-private _range = getNumber (ConfigFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
+private _range = getNumber (configFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
 
 private _result = [_unit] call FUNC(getPlacedExplosives);
 private _children = [];
 private _explosivesList = [];
 {
     if (!isNull(_x select 0)) then {
-        private _required = getArray (ConfigFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
+        private _required = getArray (configFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
         if (_detonator in _required) then {
-            private _item = ConfigFile >> "CfgMagazines" >> (_x select 3);
+            private _item = configFile >> "CfgMagazines" >> (_x select 3);
 
             _explosivesList pushBack _x;
 
@@ -119,11 +119,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
     if (_connectedInventoryExplosive != "") then {
         //Add the disconnect action
         private _magConfig = configFile >> "CfgMagazines" >> _connectedInventoryExplosive;
-        private _name = if ((getText (_magConfig >> "displayNameShort")) != "") then {
-            getText (_magConfig >> "displayNameShort")
-        } else {
-            getText(_magConfig >> "displayName")
-        };
+        private _name = getText (_magConfig >> "displayName");
         private _picture = getText (_magConfig >> "picture");
 
         _children pushBack [
@@ -152,11 +148,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
                 private _magConfig = configFile >> "CfgMagazines" >> _mag;
                 private _supportedTriggers = getArray (_magConfig >> "ACE_Triggers" >> "SupportedTriggers");
                 if (({_x == "DeadmanSwitch"} count _supportedTriggers) == 1) then { //case insensitive search
-                    private _name = if ((getText (_magConfig >> "displayNameShort")) != "") then {
-                        getText (_magConfig >> "displayNameShort")
-                    } else {
-                        getText(_magConfig >> "displayName")
-                    };
+                    private _name = getText (_magConfig >> "displayName");
                     private _picture = getText (_magConfig >> "picture");
 
                     _children pushBack [
@@ -165,6 +157,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
                     format [localize LSTRING(connectInventoryExplosiveToDeadman), _name],
                     _picture,
                     {
+                        //IGNORE_PRIVATE_WARNING ["_player"];
                         params ["_player", "", "_mag"];
                         TRACE_2("set new",_player,_mag);
                         _player setVariable [QGVAR(deadmanInvExplosive), _mag, true];

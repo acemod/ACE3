@@ -25,8 +25,8 @@ private _fnc_DefuseTime = {
     params ["_specialist", "_target"];
     TRACE_2("defuseTime",_specialist,_target);
     private _defuseTime = 5;
-    if (isNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> QGVAR(DefuseTime))) then {
-        _defuseTime = getNumber(ConfigFile >> "CfgAmmo" >> typeOf (_target) >> QGVAR(DefuseTime));
+    if (isNumber(configFile >> "CfgAmmo" >> typeOf (_target) >> QGVAR(DefuseTime))) then {
+        _defuseTime = getNumber(configFile >> "CfgAmmo" >> typeOf (_target) >> QGVAR(DefuseTime));
     };
     if (!_specialist && {GVAR(PunishNonSpecialists)}) then {
         _defuseTime = _defuseTime * 1.5;
@@ -34,7 +34,7 @@ private _fnc_DefuseTime = {
     _defuseTime
 };
 private _actionToPlay = "MedicOther";
-if (STANCE _unit == "Prone") then {
+if (stance _unit == "Prone") then {
     _actionToPlay = "PutDown";
 };
 

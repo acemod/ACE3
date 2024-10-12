@@ -17,6 +17,7 @@
 
 if (!hasInterface) exitWith {};
 
+//IGNORE_PRIVATE_WARNING ["_player", "_target"];
 private _action = [
     QGVAR(heal),
     localize "STR_A3_Task180_name",
@@ -30,7 +31,7 @@ private _action = [
             [
                 [
                     QGVAR(medicHeal_) + str _x,
-                    format ["%1: (%2)", [_x, false, true] call EFUNC(common,getName), groupID _x],
+                    format ["%1: (%2)", [_x, false, true] call EFUNC(common,getName), groupId _x],
                     "",
                     {},
                     {true},
@@ -41,7 +42,7 @@ private _action = [
                             [
                                 [
                                     QGVAR(healUnit_) + str _x,
-                                    format [localize "str_action_heal_soldier", ([_x, false, true] call EFUNC(common,getName)) + " (" + str groupID _x + ")"],
+                                    format [localize "str_action_heal_soldier", ([_x, false, true] call EFUNC(common,getName)) + " (" + str groupId _x + ")"],
                                     "",
                                     {
                                         (_this select 2) params ["_healer", "_target"];

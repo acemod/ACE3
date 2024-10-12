@@ -91,7 +91,7 @@ private _configMagazine = configFile >> "CfgMagazines" >> _magazineClassname;
 private _ammo = getText (_configMagazine >> "ammo");
 private _configAmmo = configFile >> "CfgAmmo" >> _ammo;
 
-private _simType = toLower getText (_configAmmo >> "simulation");
+private _simType = toLowerANSI getText (_configAmmo >> "simulation");
 private _speed = linearConversion [0, 1, random 1, 1, 20, true];
 private _effect2pos = _object selectionPosition "destructionEffect2";
 
@@ -100,7 +100,7 @@ private _fnc_spawnProjectile = {
     // If the magazines are inside of the cargo (inventory), don't let their projectiles escape the interior of the vehicle
     if (!_spawnProjectile) exitWith {};
 
-    params ["_object", "_ammo", "_speed", "_flyAway"];
+    params ["_flyAway"];
 
     private _spawnPos = _object modelToWorld [-0.2 + random 0.4, -0.2 + random 0.4, random 3];
 
@@ -117,7 +117,7 @@ private _fnc_spawnProjectile = {
         _projectile setVectorDir _vectorVelocity;
         _projectile setVelocity _vectorVelocity;
     } else {
-        _projectile setDamage 1;
+        triggerAmmo _projectile;
     };
 };
 
@@ -126,14 +126,14 @@ switch (_simType) do {
         [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
 
         if (random 1 < 0.6) then {
-            [_object, _ammo, _speed, true] call _fnc_spawnProjectile;
+            true call _fnc_spawnProjectile;
         };
     };
     case "shotshell": {
         [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
 
         if (random 1 < 0.15) then {
-            [_object, _ammo, _speed, true] call _fnc_spawnProjectile;
+            true call _fnc_spawnProjectile;
         };
     };
     case "shotgrenade": {
@@ -141,7 +141,7 @@ switch (_simType) do {
             _speed = 0;
         };
 
-        [_object, _ammo, _speed, random 1 < 0.5] call _fnc_spawnProjectile;
+        (random 1 < 0.5) call _fnc_spawnProjectile;
     };
     case "shotrocket";
     case "shotmissile";
@@ -149,7 +149,7 @@ switch (_simType) do {
         if (random 1 < 0.1) then {
             [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
 
-            [_object, _ammo, _speed, random 1 < 0.3] call _fnc_spawnProjectile;
+            (random 1 < 0.3) call _fnc_spawnProjectile;
         } else {
             createVehicle ["ACE_ammoExplosionLarge", _object modelToWorld _effect2pos, [], 0 , "CAN_COLLIDE"];
         };
@@ -157,22 +157,13 @@ switch (_simType) do {
     case "shotdirectionalbomb";
     case "shotmine": {
         if (random 1 < 0.5) then {
-            // Not all explosives detonate on destruction, some have scripted alternatives
-            if (getNumber (_configAmmo >> "triggerWhenDestroyed") != 1) then {
-                _ammo = getText (_configAmmo >> QEGVAR(explosives,explosive));
-            };
-
-            // If a scripted alternative doesn't exist use generic explosion
-            if (_ammo != "") then {
-                [_object, _ammo, 0, false] call _fnc_spawnProjectile;
-            } else {
-                createVehicle ["SmallSecondary", _object modelToWorld _effect2pos, [], 0 , "CAN_COLLIDE"];
-            };
+            // _speed should be 0, but as it doesn't fly away, no need to set _speed
+            false call _fnc_spawnProjectile;
         };
     };
     case "shotilluminating": {
         if (random 1 < 0.15) then {
-            [_object, _ammo, _speed, random 1 < 0.3] call _fnc_spawnProjectile;
+            (random 1 < 0.3) call _fnc_spawnProjectile;
         };
     };
 };

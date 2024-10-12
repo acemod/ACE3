@@ -85,6 +85,8 @@
             <Korean>활성화 및 사망/심정지 진찰 가능 [직접]</Korean>
             <German>Aktiviert &amp; kann Tod/Herzstillstand diagnostizieren [Direkt]</German>
             <Italian>Abilitato e può diagnosticare Morte/Arresto Cardiaco [Esplicito]</Italian>
+            <French>Activé &amp; peut diagnostiquer la mort/l'arrêt cardiaque [Direct].</French>
+            <Spanish>Habilitado y poder diagnosticar Muerte/Parada cardíaca [Directamente]</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -1423,7 +1425,7 @@
             <French>[ACE] Caisse médicale (basique)</French>
             <Hungarian>[ACE] Orvosi láda (Alap)</Hungarian>
             <Italian>[ACE] Cassa Rifornimenti Medici (Basici)</Italian>
-            <Japanese>[ACE] 医療物資箱 (ベーシック)</Japanese>
+            <Japanese>[ACE] 医療物資箱 (基本)</Japanese>
             <Korean>[ACE] 의료 물자 (기본)</Korean>
             <Chinesesimp>[ACE] 医疗补给箱（基础）</Chinesesimp>
             <Chinese>[ACE] 醫療補給箱（基本）</Chinese>
@@ -1440,7 +1442,7 @@
             <French>[ACE] Caisse médicale (avancée)</French>
             <Hungarian>[ACE] Orvosi láda (Fejlett)</Hungarian>
             <Italian>[ACE] Cassa Rifornimenti Medici (Avanzati)</Italian>
-            <Japanese>[ACE] 医療物資箱 (アドバンスド)</Japanese>
+            <Japanese>[ACE] 医療物資箱 (高度)</Japanese>
             <Korean>[ACE] 의료 물자 (고급)</Korean>
             <Chinesesimp>[ACE] 医疗补给箱（高级）</Chinesesimp>
             <Chinese>[ACE] 醫療補給箱（進階）</Chinese>
@@ -1874,7 +1876,7 @@
             <Czech>Auto-morfin</Czech>
             <Hungarian>Morfium autoinjektor</Hungarian>
             <Italian>Autoiniettore di Morfina</Italian>
-            <Portuguese>Auto-injetor de morfina</Portuguese>
+            <Portuguese>Autoinjetor de Morfina</Portuguese>
             <Japanese>モルヒネ自動注射器</Japanese>
             <Korean>자동주사기 (모르핀)</Korean>
             <Chinesesimp>吗啡自动注射器</Chinesesimp>
@@ -1921,7 +1923,7 @@
             <French>Auto-injecteur d'adénosine</French>
             <Italian>Autoiniettore di Adenosina</Italian>
             <Czech>Auto-adenosine</Czech>
-            <Portuguese>Auto-injetor de Adenosina</Portuguese>
+            <Portuguese>Autoinjetor de Adenosina</Portuguese>
             <Russian>Аденозин в пневмошприце</Russian>
             <Japanese>アデノシン自動注射器</Japanese>
             <Korean>자동주사기 (아데노신)</Korean>
@@ -1969,7 +1971,7 @@
             <Czech>Auto-atropine</Czech>
             <Hungarian>Atropin autoinjektor</Hungarian>
             <Italian>Autoiniettore di Atropina</Italian>
-            <Portuguese>Auto-injetor de Atropina</Portuguese>
+            <Portuguese>Autoinjetor de Atropina</Portuguese>
             <Japanese>アトロピン自動注射器</Japanese>
             <Korean>자동주사기 (아트로핀)</Korean>
             <Chinesesimp>阿托品自动注射器</Chinesesimp>
@@ -2018,7 +2020,7 @@
             <Czech>Auto-adrenalin</Czech>
             <Hungarian>Epinefrin autoinjektor</Hungarian>
             <Italian>Autoiniettore di Epinefrina</Italian>
-            <Portuguese>Auto-injetor de epinefrina</Portuguese>
+            <Portuguese>Autoinjetor de Epinefrina</Portuguese>
             <Japanese>アドレナリン自動注射器</Japanese>
             <Korean>자동주사기 (에피네프린)</Korean>
             <Chinesesimp>肾上腺素自动注射器</Chinesesimp>
@@ -2432,7 +2434,7 @@
             <German>Operationsset</German>
             <Hungarian>Sebészeti készlet</Hungarian>
             <Italian>Kit chirurgico</Italian>
-            <Portuguese>Kit Cirurgico</Portuguese>
+            <Portuguese>Kit Cirúrgico</Portuguese>
             <Czech>Chirurgická sada</Czech>
             <Japanese>手術キット</Japanese>
             <Korean>봉합 키트</Korean>
@@ -2449,7 +2451,7 @@
             <German>Operationsset für fortgeschrittene medizinische Feldversorgung</German>
             <Hungarian>Sebészeti készlet komplex orvosi feladatok terepen való ellátására</Hungarian>
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
-            <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo</Portuguese>
+            <Portuguese>Kit Cirúrgico para uso de tratamento médico avançado em campo</Portuguese>
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
             <Japanese>手術キットは戦場で高度な処置をする為に用いる</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
@@ -2466,7 +2468,7 @@
             <French>Trousse chirurgicale pour le traitement avancé sur le terrain.</French>
             <Hungarian>Sebészeti készlet komplex orvosi feladatok terepen való ellátására</Hungarian>
             <Italian>Kit chirurgico per trattamenti avanzati sul campo.</Italian>
-            <Portuguese>Kit Cirurgico para uso de tratamento médico avançado em campo.</Portuguese>
+            <Portuguese>Kit Cirúrgico para uso de tratamento médico avançado em campo.</Portuguese>
             <Czech>Chirurgická sada určená k pokročilejším zdravotnickým zákrokům v poli</Czech>
             <Japanese>手術キットは戦場で高度な処置をする為に用いる</Japanese>
             <Korean>야전 상황에서 고급 의료 처치를 위해 사용되는 봉합 키트</Korean>
@@ -4197,7 +4199,7 @@
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Unresponsive">
             <English>%1 is not responsive</English>
             <Russian>%1 не реагирует на раздражители</Russian>
-            <French>%1 est inconscient.</French>
+            <French>%1 ne répond pas aux stimuli</French>
             <Spanish>%1 no reacciona</Spanish>
             <Polish>%1 jest nieprzytomny</Polish>
             <German>%1 ist nicht ansprechbar</German>
@@ -4218,6 +4220,8 @@
             <Korean>%1은(는) 의식불명입니다</Korean>
             <German>%1 ist bewusstlos</German>
             <Italian>%1 è privo di sensi</Italian>
+            <French>%1 est inconscient</French>
+            <Spanish>%1 está inconsciente</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrest">
             <English>%1 is not responsive, taking shallow gasps and convulsing</English>
@@ -4239,6 +4243,8 @@
             <Korean>%1은(는) 심정지 상태입니다</Korean>
             <German>%1 ist im Herzstillstand</German>
             <Italian>%1 è in arresto cardiaco</Italian>
+            <French>%1 est en arrêt cardiaque</French>
+            <Spanish>%1 en parada cardíaca</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
@@ -4260,6 +4266,8 @@
             <Korean>%1은(는) 사망했습니다</Korean>
             <German>%1 ist tod</German>
             <Italian>%1 è morto</Italian>
+            <French>%1 est mort</French>
+            <Spanish>%1 está muerto</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>

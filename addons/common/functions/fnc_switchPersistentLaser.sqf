@@ -17,7 +17,7 @@
 
 params ["_enabled"];
 
-if (!hasInterface) exitwith {};
+if (!hasInterface) exitWith {};
 
 // Reset state
 {
@@ -54,12 +54,14 @@ private _fnc_getLightLaserState = {
     if (_weaponIndex == -1) exitWith {};
 
     // Light/laser state only changes in the next frame
+    // However, as by default changing attachment modes is CTRL + L, the vanilla EH triggers when lights are bound to L (even despite CBA intercepting keystroke)
+    // Therefore, add an extra frame of delay, after which the previous laser state will have been restored
     [{
         ACE_player setVariable [
             QGVAR(laserEnabled_) + str (_this select 1),
             ACE_player isIRLaserOn (_this select 0) || {ACE_player isFlashlightOn (_this select 0)}
         ];
-    }, [_currentWeapon, _weaponIndex]] call CBA_fnc_execNextFrame;
+    }, [_currentWeapon, _weaponIndex], 2] call CBA_fnc_execAfterNFrames;
 };
 
 // Get current weapon light/laser state
@@ -68,14 +70,14 @@ call _fnc_getLightLaserState;
 // Update state every time it's changed
 GVAR(laserKeyDownEH) = addUserActionEventHandler ["headlights", "Activate", _fnc_getLightLaserState];
 
-// Dropping weapons turns off lights/lasers
-GVAR(lastWeapons) = [primaryWeapon ACE_player, handgunWeapon ACE_player, secondaryWeapon ACE_player];
+// Dropping weapons, as well as switching light/laser attachments turns off lights/lasers
+GVAR(lastWeapons) = (getUnitLoadout ACE_player) select [0, 3];
 
 // Monitor weapon addition/removal here
 GVAR(laserLoadoutEH) = ["loadout", {
-    params ["_unit"];
+    params ["_unit", "_loadout"];
 
-    private _weapons = [primaryWeapon _unit, handgunWeapon _unit, secondaryWeapon _unit];
+    private _weapons = _loadout select [0, 3];
 
     if (_weapons isEqualTo GVAR(lastWeapons)) exitWith {};
 

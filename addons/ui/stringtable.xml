@@ -722,5 +722,14 @@
             <Italian>Nasconde l'icona mostrata in automatico quando qualcosa è davanti al cursore. La modifica richiede un riavvio del gioco.\nAttenzione: Non rimuovere l'azione stessa! È consigliato rimuovere solo il tasto dall'assegnazione 'Usa Azione Standard' per impedire interazioni non volute.</Italian>
             <Portuguese>Esconde o ícone mostrado automaticamente quando algo está a frente do cursor. É preciso reiniciar o jogo.\nAviso: Não remove a ação em si! É recomendado desvincular a tecla de "Usar ação padrão" para previnir interações indesejadas.</Portuguese>
         </Key>
+        <Key ID="STR_ACE_UI_hideHud">
+            <English>Hide all UI</English>
+            <Japanese>全てのUIを隠す</Japanese>
+            <French>Cacher toute l'interface utilisateur.</French>
+            <Russian>Скрыть весь интерфейс</Russian>
+            <Korean>모든 UI 숨기기</Korean>
+            <Italian>Nascondi tutta l'IU</Italian>
+            <Spanish>Ocultar toda la IU</Spanish>
+        </Key>
     </Package>
 </Project>

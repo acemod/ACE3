@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_Aegis_RealisticNames">
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_APC_Wheeled_01_medical_Name">
+            <English>Badger IFV (Medical)</English>
+            <German>SPz Badger (Medizin)</German>
+            <Spanish>Badger IFV (médico)</Spanish>
+            <Polish>Badger IFV (sprzęt medyczny)</Polish>
+            <Czech>Badger IFV (zdravotnický)</Czech>
+            <French>Badger IFV (médical)</French>
+            <Russian>БМП Badger (медицинский)</Russian>
+            <Portuguese>Badger IFV (médico)</Portuguese>
+            <Italian>Badger IFV (medico)</Italian>
+            <Japanese>バジャー IFV（医療）</Japanese>
+            <Korean>뱃져 보병전투차 (의료)</Korean>
+            <Chinese>"蜜獾"步兵戰車（醫療用）</Chinese>
+            <Chinesesimp>"蜜獾"（医疗）</Chinesesimp>
+            <Turkish>Badger IFV (Sıhhiye)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_APC_Tracked_02_medical_Name">
+            <English>BM-2T Stalker (Medical)</English>
+            <German>BM-2T Stalker (Medizin)</German>
+            <Spanish>BM-2T Stalker (médico)</Spanish>
+            <Polish>BM-2T Stalker (sprzęt medyczny)</Polish>
+            <Czech>BM-2T Stalker (zdravotnický)</Czech>
+            <French>BM-2T Stalker (médical)</French>
+            <Russian>БМ-2Т Сталкер (медицинский)</Russian>
+            <Portuguese>BM-2T Stalker (médico)</Portuguese>
+            <Italian>BM-2T Stalker (medico)</Italian>
+            <Japanese>BM-2T ストーカー（医療）</Japanese>
+            <Korean>BM-2T 스토커 (의료)</Korean>
+            <Chinese>BM-2T"潛行者"步兵戰車（醫療用）</Chinese>
+            <Chinesesimp>BM-2T "潜行者"（医疗）</Chinesesimp>
+            <Turkish>BM-2T Stalker (Sıhhiye)</Turkish>
+        </Key>
+    </Package>
+</Project>
