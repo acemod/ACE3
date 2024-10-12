@@ -155,24 +155,6 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(EpinephrineDoseLimit),
-    "SLIDER",
-    [LSTRING(DoseLimitEpinephrine_DisplayName), LSTRING(DoseLimitEpinephrine_DESC)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [1, 9, 3, 0],
-    true
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(EpinephrineDoseLimitDeviation),
-    "SLIDER",
-    [LSTRING(DoseLimitDeviationEpinephrine_DisplayName), LSTRING(DoseLimitDeviationEpinephrine_DESC)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [0, 3, 1, 0],
-    true
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(medicMorphine),
     "LIST",
     [LSTRING(MedicMorphine_DisplayName), LSTRING(MedicMorphine_Description)],

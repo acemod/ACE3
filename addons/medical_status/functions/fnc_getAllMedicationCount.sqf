@@ -15,15 +15,15 @@
  * Example:
  * [player] call ace_medical_status_fnc_getAllMedicationCount
  *
- * Public: No
+ * Public: Yes
  */
 
 params ["_target", ["_getCount", true]];
 
-private _medStack = []; // Array to store stacked medication info
+private _medStack = [];
 
 {
-    _x params ["_xMed", "_timeAdded", "_dose", "_timeTillMaxEffect", "_maxTimeInSystem"];
+    _x params ["_xMed", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem", "_dose"];
     
     private _timeInSystem = CBA_missionTime - _timeAdded;
     private _effectiveness = 0;
@@ -40,11 +40,8 @@ private _medStack = []; // Array to store stacked medication info
         
         if (_existingMed isEqualTo _xMed) then {
             _found = true;
-            _medStack set [_forEachIndex, [_existingMed, _totalDose + _dose, _totalEffectiveness + _effectiveness]]; // Stack dose and add effectiveness
-            true
-        } else {
-            false
-        };
+            _medStack set [_forEachIndex, [_existingMed, _totalDose + _dose, _totalEffectiveness + _effectiveness]]; 
+        } else {};
     } forEach _medStack;
     if (!_found) then {
         _medStack pushBack [_xMed, _dose, _effectiveness];

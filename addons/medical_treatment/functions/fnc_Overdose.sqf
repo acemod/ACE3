@@ -12,24 +12,26 @@
  * None
  *
  * Example:
- * [player, "morphine"] call ace_medical_treatment_fnc_OverDose
+ * [player, "morphine"] call ace_medical_treatment_fnc_overDose
  * Public: No
  */
 
- params ["_unit", "_classname"];
-
-private _medicationConfig = (configFile >> "ace_medical_treatment" >> "_classname");
+params ["_unit", "_classname"];
+private _medicationConfig = (configFile >> "ace_medical_treatment" >> _classname);
 private _onOverDose = getText (_medicationConfig >> "onOverDose");
-if (isClass (_medicationConfig >> _className)) then {
-     _medicationConfig = (_medicationConfig >> _className);
-    if (isText (_medicationConfig  >> "onOverDose")) then { _onOverDose = getText (_medicationConfig >> "onOverDose"); };
+
+if (isClass (_medicationConfig)) then {
+    _medicationConfig = (_medicationConfig >> _classname);
+    if (isText (_medicationConfig >> "onOverDose")) then { 
+        _onOverDose = getText (_medicationConfig >> "onOverDose"); 
+    };
 };
-TRACE_2("overdose",_classname,_onOverDose);
+TRACE_2("overdose", _classname, _onOverDose);
 if (_onOverDose == "") exitWith {
-    TRACE_1("CriticalVitals Event",_target); // make unconscious
-    [QEGVAR(medical,CriticalVitals), _target] call CBA_fnc_localEvent;
+    TRACE_1("CriticalVitals Event", _unit);
+    [QEGVAR(medical, CriticalVitals), _unit] call CBA_fnc_localEvent;
 };
-if (isNil _onOverDose) then {
+if (!isNil "_onOverDose" && {isText _onOverDose}) then {
     _onOverDose = compile _onOverDose;
 } else {
     _onOverDose = missionNamespace getVariable _onOverDose;

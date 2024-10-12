@@ -21,8 +21,8 @@
  *
  * Public: No
  */
-params ["_unit", "_medication", "_dose", "_timeToMaxEffect", "_maxTimeInSystem", "_hrAdjust", "_painAdjust", "_flowAdjust"];
-TRACE_8("addMedicationAdjustment",_unit,_medication,_dose,_timeToMaxEffect,_maxTimeInSystem,_hrAdjust,_painAdjust,_flowAdjust);
+params ["_unit", "_medication", "_timeToMaxEffect", "_maxTimeInSystem", "_hrAdjust", "_painAdjust", "_flowAdjust","_dose",];
+TRACE_8("addMedicationAdjustment",_unit,_medication,_timeToMaxEffect,_maxTimeInSystem,_hrAdjust,_painAdjust,_flowAdjust,_dose);
 
 if (_maxTimeInSystem <= 0) exitWith { WARNING_1("bad value for _maxTimeInSystem - %1",_this); };
 _timeToMaxEffect = _timeToMaxEffect max 1;
@@ -30,6 +30,5 @@ _timeToMaxEffect = _timeToMaxEffect max 1;
 
 private _adjustments = _unit getVariable [VAR_MEDICATIONS, []];
 
-_adjustments pushBack [_medication, CBA_missionTime, _dose, _timeToMaxEffect, _maxTimeInSystem, _hrAdjust, _painAdjust, _flowAdjust];
-
+_adjustments pushBack [_medication, CBA_missionTime, _timeToMaxEffect, _maxTimeInSystem, _hrAdjust, _painAdjust, _flowAdjust, _dose];
 _unit setVariable [VAR_MEDICATIONS, _adjustments, true];
