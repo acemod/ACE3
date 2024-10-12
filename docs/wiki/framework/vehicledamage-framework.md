@@ -47,7 +47,7 @@ Default: 0.5
 
 #### 1.1.5 `ace_vehicle_damage_turretFireProb`
 
-The probabilitiy for the vehicle to catch on fire upon its turret being penetrated
+The probability for the vehicle to catch on fire upon its turret being penetrated
 
 Default: 0.2
 
@@ -65,27 +65,33 @@ Default: 0.2
 
 #### 1.1.8 `ace_vehicle_damage_canHaveFireRing`
 
-Whether or not this vehicle can spawn `ring-of-fire` effect (Boolean value: 0 or 1)
+Whether or not this vehicle can spawn a `ring-of-fire` effect (Boolean value: 0 or 1)
 
 Default: 0
 
-#### 1.1.9 `ace_vehicle_damage_slatHitpoints`
+#### 1.1.9 `ace_cookoff_canHaveFireJet`
+
+Whether or not this vehicle can spawn a `jet` effect (Boolean value: 0 or 1)
+
+Default: 1
+
+#### 1.1.10 `ace_vehicle_damage_slatHitpoints`
 
 An array of all hitpoints that are defined to be SLAT. String array
 
 Default: {}
 
-#### 1.1.10 `ace_vehicle_damage_eraHitpoints`
+#### 1.1.11 `ace_vehicle_damage_eraHitpoints`
 
 An array of all hitpoints that are defined to be ERA. String array
 
 Default: {}
 
-#### 1.1.11 `ace_vehicle_damage_turret`
+#### 1.1.12 `ace_vehicle_damage_turret`
 
-String for turret classname to spawn when catastrophically destroyed. Turret will pop-off and this is the class spawned
+String for turret classname to spawn when catastrophically destroyed, followed by offset the object should spawn with. Turret will pop-off and this is the class spawned
 
-Default: ""
+Default: {}
 
 ### 1.2 Defined Hitpoints
 
@@ -126,3 +132,11 @@ Default ARMA config value. We assume that the warheads are vanilla strings, so o
 - `TandemHEAT`
 
 If no `ace_vehicle_damage_incendiary` defined, this value will be used to assume a default based on above table of common values (excluding `Incendiary Bullet` which is 0).
+
+## 3. Disabling crew bailing for individual vehicles
+
+Crew bailing when their vehicle is disabled (immobile or can't shoot) can be disabled for a specific vehicle:
+
+```
+_vehicle setVariable ["ace_vehicle_damage_allowCrewInImmobile", true, true];
+```

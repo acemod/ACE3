@@ -35,15 +35,9 @@ if !(_unit getVariable [QGVAR(isCarrying), false]) exitWith {
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-// Drop if the crate is destroyed OR target moved away from carrier (weapon disassembled) OR carrier starts limping
-if !(alive _target && {_unit distance _target <= 10} && {_unit getHitPointDamage "HitLegs" < 0.5}) exitWith {
-    TRACE_2("dead/distance",_unit,_target);
-
-    if ((_unit distance _target > 10) && {(CBA_missionTime - _startTime) < 1}) exitWith {
-        // attachTo seems to have some kind of network delay and target can return an odd position during the first few frames,
-        // So wait a full second to exit if out of range (this is critical as we would otherwise detach and set it's pos to weird pos)
-        TRACE_3("ignoring bad distance at start",_unit distance _target,_startTime,CBA_missionTime);
-    };
+// Drop if the target is destroyed
+if (!alive _target) exitWith {
+    TRACE_2("dead",_unit,_target);
 
     [_unit, _target] call FUNC(dropObject_carry);
 
@@ -53,8 +47,34 @@ if !(alive _target && {_unit distance _target <= 10} && {_unit getHitPointDamage
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-// Drop static if crew is in it (UAV crew deletion may take a few frames)
-if (_target isKindOf "StaticWeapon" && {(crew _target) isNotEqualTo []} && {!(_target getVariable [QGVAR(isUAV), false])}) then {
+// Drop if the target moved away from carrier (e.g. weapon disassembled)
+// attachTo seems to have some kind of network delay and target can return an odd position during the first few frames,
+// So wait a full second to exit if out of range (this is critical as we would otherwise detach and set it's pos to weird pos)
+if (_unit distance _target > 10 && {(CBA_missionTime - _startTime) >= 1}) exitWith {
+    TRACE_2("distance",_unit,_target);
+
+    [_unit, _target] call FUNC(dropObject_carry);
+
+    _unit setVariable [QGVAR(hint), nil];
+    call EFUNC(interaction,hideMouseHint);
+
+    _idPFH call CBA_fnc_removePerFrameHandler;
+};
+
+// Drop if the carrier starts limping
+if (_unit getHitPointDamage "HitLegs" >= 0.5) exitWith {
+    TRACE_2("limping",_unit,_target);
+
+    [_unit, _target] call FUNC(dropObject_carry);
+
+    _unit setVariable [QGVAR(hint), nil];
+    call EFUNC(interaction,hideMouseHint);
+
+    _idPFH call CBA_fnc_removePerFrameHandler;
+};
+
+// Drop static if either non-UAV crew or new UAV crew is in it (ignore saved UAV crew)
+if (_target isKindOf "StaticWeapon" && {((crew _target) - (_target getVariable [QGVAR(isUAV), []])) isNotEqualTo []}) exitWith {
     TRACE_2("static weapon crewed",_unit,_target);
 
     [_unit, _target] call FUNC(dropObject_carry);
@@ -71,7 +91,7 @@ private _previousHint = _unit getVariable [QGVAR(hint), []];
 if (_previousHint isEqualType "") exitWith {};
 
 // Mouse hint
-private _hintLMB = LLSTRING(Drop);
+private _hintLMB = LELSTRING(common,Drop);
 private _cursorObject = cursorObject;
 
 if (

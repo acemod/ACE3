@@ -34,4 +34,4 @@ if (_sideKeyName in _items) exitWith {true};
 private _customKeys = _veh getVariable [QGVAR(customKeys), []];
 private _magazines = magazinesDetail _unit;
 
-(_customKeys findIf {_x in _magazines}) != -1
+_customKeys findAny _magazines != -1

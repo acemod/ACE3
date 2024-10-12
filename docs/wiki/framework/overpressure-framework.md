@@ -46,6 +46,6 @@ class CfgWeapons {
 
 ### 2.1 Listenable
 
-Event Name | Description | Passed Parameter(s) | Locality
----------- | ----------- | ------------------- | --------
-`ace_overpressure` | Overpressure damage inflicted | `[_firer, _posASL, _direction, _weapon, _magazine, _ammo]` | Target
+| Event Name | Description | Passed Parameter(s) | Locality |
+| ---------- | ----------- | ------------------- | -------- |
+| `ace_overpressure` | Overpressure damage inflicted | `[_firer, _posASL, _direction, _weapon, _magazine, _ammo]` | Target |

@@ -71,7 +71,7 @@ if (_textMMB == "") then {
     // Only create extra key if both name and text are valid
     if (_keyName != "" && {_keyText != ""}) then {
         // Localize Ctrl, Shift, or Alt keys
-        switch (toLower _keyName) do {
+        switch (toLowerANSI _keyName) do {
             case "ctrl";
             case "control": {_keyName = format ["<%1>", toUpper localize "STR_dik_control"]};
             case "shift": {_keyName = format ["<%1>", toUpper localize "STR_dik_shift"]};

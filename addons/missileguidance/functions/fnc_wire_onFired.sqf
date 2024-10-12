@@ -45,4 +45,3 @@ _attackProfileStateParams set [4, _maxDistanceSqr]; // max distance squared used
 _attackProfileStateParams set [5, _minDistanceSqr];
 _attackProfileStateParams set [6, _wireCutSource];
 _attackProfileStateParams set [7, _distanceAheadOfMissile];
-

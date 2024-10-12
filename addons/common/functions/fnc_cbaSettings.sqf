@@ -66,8 +66,7 @@ GVAR(settingsMovedToSQF) = [];
     INFO_1("%1 delayed functions running.",count GVAR(runAtSettingsInitialized));
     {
         (_x select 1) call (_x select 0);
-        false
-    } count GVAR(runAtSettingsInitialized);
+    } forEach GVAR(runAtSettingsInitialized);
     GVAR(runAtSettingsInitialized) = nil; //cleanup
 
     #ifdef DEBUG_MODE_FULL
@@ -89,7 +88,7 @@ for "_index" from 0 to (_countOptions - 1) do {
         if (isNil (configName _optionEntry)) then {
             [_optionEntry] call FUNC(cbaSettings_loadFromConfig);
         } else {
-            WARNING_1("Setting [%1] - Already defined from somewhere else??",_varName);
+            WARNING_1("Setting [%1] - Already defined from somewhere else??",configName _optionEntry);
         };
         #ifdef DEBUG_MODE_FULL
     } else {
@@ -104,8 +103,8 @@ TRACE_1("Reading settings from missionConfigFile",_countOptions);
 for "_index" from 0 to (_countOptions - 1) do {
     private _optionEntry = _missionSettingsConfig select _index;
     private _settingName = configName _optionEntry;
-    if ((toLower _settingName) in GVAR(cbaSettings_forcedSettings)) then {
-        WARNING_1("Setting [%1] - Already Forced - ignoring missionConfig",_varName);
+    if ((toLowerANSI _settingName) in GVAR(cbaSettings_forcedSettings)) then {
+        WARNING_1("Setting [%1] - Already Forced - ignoring missionConfig",configName _optionEntry);
     } else {
         if ((isNil _settingName) && {(getNumber (_settingsConfig >> _settingName >> "movedToSQF")) == 0}) then {
             // New setting, that was first defined in missionConfigFile

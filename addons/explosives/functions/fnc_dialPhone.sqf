@@ -30,7 +30,7 @@ for "_i" from 1 to _ran do {
 };
 if (_unit == ace_player) then {
     ctrlSetText [1400,"Calling"];
-    [FUNC(dialingPhone), 0.25, [_unit,4,_arr,_code]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
+    [LINKFUNC(dialingPhone), 0.25, [_unit,4,_arr,_code]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
 } else {
     private _explosive = [_code] call FUNC(getSpeedDialExplosive);
     if ((count _explosive) > 0) then {

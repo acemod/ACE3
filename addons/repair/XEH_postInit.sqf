@@ -2,10 +2,10 @@
 
 ["CBA_settingsInitialized", {
 
-    if !GVAR(enabled) exitWith {};
+    if (!GVAR(enabled)) exitWith {};
 
-    [QGVAR(setVehicleDamage), {_this call FUNC(setDamage)}] call CBA_fnc_addEventHandler;
-    [QGVAR(setVehicleHitPointDamage), {_this call FUNC(setHitPointDamage)}] call CBA_fnc_addEventHandler;
+    [QGVAR(setVehicleDamage), LINKFUNC(setDamage)] call CBA_fnc_addEventHandler;
+    [QGVAR(setVehicleHitPointDamage), LINKFUNC(setHitPointDamage)] call CBA_fnc_addEventHandler;
     [QGVAR(setWheelHitPointDamage), {
         params ["_object", "_hitPoint", "_damage"];
         private _damageDisabled = !isDamageAllowed _object;
@@ -39,12 +39,27 @@
 
     ["CAManBase", "InitPost", {
         params ["_unit"];
-        if !(local _unit && {_unit getUnitTrait "engineer"}) exitWith {};
-        _unit setUnitTrait ["engineer", false];
-        if (_unit getVariable ["ACE_IsEngineer", -1] isEqualTo -1) then {
-            _unit setVariable ["ACE_IsEngineer", true, true];
+        private _isEngineer = _unit getUnitTrait "engineer";
+        if (isNil "_isEngineer" || {_isEngineer isNotEqualTo true}) exitWith {};
+        TRACE_4("setUnitTrait 1",_unit,typeOf _unit,local _unit,ACE_player);
+
+        if (local _unit) exitWith {
+            _unit setUnitTrait ["engineer", false];
+
+            if (_unit getVariable ["ACE_IsEngineer", -1] isEqualTo -1) then {
+                _unit setVariable ["ACE_IsEngineer", true, true];
+            };
         };
-        TRACE_3("setUnitTrait",_unit,typeOf _unit,_unit getUnitTrait "engineer");
+
+        // Handle player locality delay, can be anywhere from instant to 10+ seconds (#10337)
+        if (_unit isNotEqualTo ACE_player) exitWith {};
+        _unit addEventHandler ["Local", {
+            params ["_unit", "_isLocal"];
+            if (!_isLocal) exitWith {};
+            TRACE_3("setUnitTrait 2",_unit,typeOf _unit,_unit getUnitTrait "engineer");
+            _unit setUnitTrait ["engineer", false];
+            _unit removeEventHandler ["Local", _thisEventHandler];
+        }];
     }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 

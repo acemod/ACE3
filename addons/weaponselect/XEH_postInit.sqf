@@ -198,7 +198,7 @@ if (!hasInterface) exitWith {};
 
 ["ACE3 Vehicles", QGVAR(CollisionLights), localize LSTRING(CollisionLights), {
     // Conditions: canInteract
-    if (!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))) exitWith {false};
+    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((ACE_player isEqualTo (vehicle ACE_player)) || {ACE_player != (driver (vehicle ACE_player))}) exitWith {false};
 
@@ -210,4 +210,4 @@ if (!hasInterface) exitWith {};
 [0, [false, false, false]]] call CBA_fnc_addKeybind;
 
 // Register fire event handler
-["ace_firedPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+["ace_firedPlayer", LINKFUNC(throwGrenade)] call CBA_fnc_addEventHandler;

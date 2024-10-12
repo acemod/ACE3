@@ -24,7 +24,7 @@ if (isNull _unit ||
     {!alive _object} ||
     {!isNull (_unit getVariable [QGVAR(nozzle), objNull])} || // Not already carrying a nozzle
     {(_object getVariable [QGVAR(jerryCan), false]) && {!isNull (_object getVariable [QGVAR(nozzle), objNull])}} || // Prevent jerry cans from being picked up if they have a nozzle connected
-    {typeOf _object == QGVAR(fuelNozzle) && {!isNull (attachedTo _object)}} || // Not carried by someone else
+    {!([_unit, _object, [INTERACT_EXCEPTIONS]] call EFUNC(common,canInteractWith))} || // Not carried by someone else
     {([_unit, _object] call EFUNC(interaction,getInteractionDistance)) > REFUEL_ACTION_DISTANCE}) exitWith {false};
 
 !(_object getVariable [QGVAR(isConnected), false]) && {!(_unit getVariable [QGVAR(isRefueling), false])}

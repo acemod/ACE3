@@ -1,5 +1,6 @@
 private _category = format ["ACE %1", LLSTRING(DisplayName)];
-private _categoryColors = [_category, format ["| %1 |", LLSTRING(subcategory_colors)]];
+private _categoryColors = [_category, LSTRING(subcategory_colors)];
+private _categorySway = [_category, LSTRING(subcategory_sway)];
 
 [
     QGVAR(checkPBOsAction),
@@ -87,7 +88,7 @@ private _categoryColors = [_category, format ["| %1 |", LLSTRING(subcategory_col
     QGVAR(epilepsyFriendlyMode),
     "CHECKBOX",
     [LSTRING(EpilepsyFriendlyMode), LSTRING(EpilepsyFriendlyModeTooltip)],
-    format ["ACE %1", localize LSTRING(DisplayName)],
+    _category,
     false,
     2
 ] call CBA_fnc_addSetting;
@@ -96,7 +97,45 @@ private _categoryColors = [_category, format ["| %1 |", LLSTRING(subcategory_col
     QGVAR(progressBarInfo),
     "LIST",
     [LSTRING(progressBarInfoName), LSTRING(progressBarInfoDesc)],
-    format ["ACE %1", localize LSTRING(DisplayName)],
+    _category,
     [[0, 1, 2], [LSTRING(None), LSTRING(progressBarInfoPercentage), LSTRING(progressBarInfoTime)], 2],
     0
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableSway),
+    "CHECKBOX",
+    [LSTRING(enableSway), LSTRING(enableSway_Description)],
+    _categorySway,
+    true,
+    1,
+    {},
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(swayFactor),
+    "SLIDER",
+    [LSTRING(SwayFactor), LSTRING(SwayFactor_Description)],
+    _categorySway,
+    [0, 5, 1, 2],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(restedSwayFactor),
+    "SLIDER",
+    [LSTRING(RestedSwayFactor), LSTRING(RestedSwayFactor_Description)],
+    _categorySway,
+    [0, 5, 1, 2],
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(deployedSwayFactor),
+    "SLIDER",
+    [LSTRING(DeployedSwayFactor), LSTRING(DeployedSwayFactor_Description)],
+    _categorySway,
+    [0, 5, 1, 2],
+    1
 ] call CBA_fnc_addSetting;

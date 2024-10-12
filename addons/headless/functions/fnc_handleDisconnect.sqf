@@ -17,7 +17,7 @@
  */
 
 params ["_object"];
-TRACE_1("HandleDisconnect",_this);
+TRACE_1("HandleDisconnect",_object);
 
 // Exit if not HC
 if !(_object in GVAR(headlessClients)) exitWith {
@@ -28,9 +28,7 @@ if !(_object in GVAR(headlessClients)) exitWith {
         if (CBA_missionTime < 150) then {
             TRACE_1("Mission start delay",CBA_missionTime);
             GVAR(endMissionCheckDelayed) = true;
-            [{
-                call FUNC(endMissionNoPlayers);
-            }, [], 150 - CBA_missionTime] call CBA_fnc_waitAndExecute;
+            [LINKFUNC(endMissionNoPlayers), [], 150 - CBA_missionTime] call CBA_fnc_waitAndExecute;
         } else {
             // End instantly or after delay
             if (XGVAR(endMission) == 1) then {
@@ -39,7 +37,7 @@ if !(_object in GVAR(headlessClients)) exitWith {
             } else {
                 TRACE_2("Delayed 60s end",GVAR(endMission),CBA_missionTime);
                 GVAR(endMissionCheckDelayed) = true;
-                [FUNC(endMissionNoPlayers), [], 60] call CBA_fnc_waitAndExecute;
+                [LINKFUNC(endMissionNoPlayers), [], 60] call CBA_fnc_waitAndExecute;
             };
         };
     };

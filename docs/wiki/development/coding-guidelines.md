@@ -381,11 +381,19 @@ However the following is allowed:
 _value = (_array select 0) select 1;
 ```
 
-Any conditions in statements shall always be wrapped around brackets.
+Any conditions in statements shall always be wrapped around brackets. Both uses of the `!` operator below are allowed.
 
 ```sqf
-if (!_value) then {};
 if (_value) then {};
+if (!_value) then {};
+if !(_value) then {};
+```
+
+Use of the `!` operator on the lefthand-side of brackets can be more readable, particularly for more complex conditions or macros:
+
+```sqf
+if !(_value && _otherValue && {_thirdValue call _something}) then {};
+if !(GETEGVAR(addon,globalVariableName,defaultValue)) then {};
 ```
 
 ### 5.6 Magic Numbers
@@ -631,81 +639,6 @@ BIS's event handlers (`addEventHandler`, `addMissionEventHandler`) are slow when
 player addEventHandler ["Fired", FUNC(handleFired)]; // bad
 player addEventHandler ["Fired", {call FUNC(handleFired)}]; // good
 ```
-
-### 7.4 Hashes
-
-When a key value pair is required, make use of the hash implementation from ACE3.
-
-Hashes are a variable type that store key value pairs. They are not implemented natively in SQF, so there are a number of macros and functions for their usage in ACE3. If you are unfamiliar with the idea, they are similar in function to `setVariable`/`getVariable` but do not require an object to use.
-
-The following example is a simple usage using our macros which will be explained further below.
-
-```sqf
-_hash = HASHCREATE;
-HASH_SET(_hash,"key","value");
-if (HASH_HASKEY(_hash,"key")) then {
-    player sideChat format ["val: %1", HASH_GET(_hash,"key"); // will print out "val: value"
-};
-HASH_REM(_hash,"key");
-if (HASH_HASKEY(_hash,"key")) then {
-    // this will never execute because we removed the hash key/val pair "key"
-};
-```
-
-A description of the above macros is below.
-
-| Macro | Use |
-| ------|-------|
-|`HASHCREATE` | Used to create an empty hash. |
-|`HASH_SET(hash,key,val)` | Will set the hash key to that value, a key can be anything, even objects. |
-|`HASH_GET(hash,key)` | Will return the value of that key (or nil if it doesn't exist). |
-|`HASH_HASKEY(hash,key)` | Will return true/false if that key exists in the hash. |
-|`HASH_REM(hash,key)` | Will remove that hash key. |
-
-#### 7.4.1 Hashlists
-
-A hashlist is an extension of a hash. It is a list of hashes! The reason for having this special type of storage container rather than using a normal array is that an array of normal hashes that are similar will duplicate a large amount of data in their storage of keys. A hashlist on the other hand uses a common list of keys and an array of unique value containers. The following will demonstrate its usage.
-
-```sqf
-_defaultKeys = ["key1", "key2", "key3"];
-// create a new hashlist using the above keys as default
-_hashList = HASHLIST_CREATELIST(_defaultKeys);
-
-//lets get a blank hash template out of this hashlist
-_hash = HASHLIST_CREATEHASH(_hashList);
-
-//_hash is now a standard hash...
-HASH_SET(_hash,"key1","1");
-
-//to store it to the list we need to push it to the list
-HASHLIST_PUSH(_hashList, _hash);
-
-//now lets get it out and store it in something else for fun
-//it was pushed to an empty list, so it's index is 0
-_anotherHash = HASHLIST_SELECT(_hashList,0);
-
-// this should print "val: 1"
-player sideChat format["val: %1", HASH_GET(_anotherHash,"key1")];
-
-//Say we need to add a new key to the hashlist
-//that we didn't initialize it with? We can simply
-//set a new key using the standard HASH_SET macro
-HASH_SET(_anotherHash,"anotherKey","another value");
-```
-
-As you can see above working with hashlists are fairly simple, a more in depth explanation of the macros is below.
-
-| Macro  |  Use |
-| -------|---------|
-|`HASHLIST_CREATELIST(keys)` | Creates a new hashlist with the default keys, pass [] for no default keys. |
-|`HASHLIST_CREATEHASH(hashlist)` | Returns a blank hash template from a hashlist. |
-|`HASHLIST_PUSH(hashList, hash)` | Pushes a new hash onto the end of the list. |
-|`HASHLIST_SELECT(hashlist, index)` | Returns the hash at that index in the list. |
-|`HASHLIST_SET(hashlist, index, hash)` | Sets a specific index to that hash. |
-
-##### 7.4.1.1 A note on pass by reference and hashes
-
-Hashes and hashlists are implemented with SQF arrays, and as such they are passed by reference to other functions. Remember to make copies (using the `+` operator) if you intend for the hash or hashlist to be modified with out the need for changing the original value.
 
 ## 8. Performance Considerations
 

@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
-#include "..\defines.hpp"
 #include "\a3\ui_f\hpp\defineResincl.inc"
+#include "..\defines.hpp"
 /*
  * Author: LinkIsGrim
  * Add or remove item(s) to favorites when LShift is pressed
@@ -27,9 +27,9 @@ private _favorited = false;
 // Favorites/blacklist will always be lowercase to handle configCase changes
 private _item = "";
 if (_isLnB) then {
-    _item = toLower (_control lnbData [_curSel, 0]);
+    _item = toLowerANSI (_control lnbData [_curSel, 0]);
 } else {
-    _item = toLower (_control lbData _curSel);
+    _item = toLowerANSI (_control lbData _curSel);
 };
 
 if (_item in GVAR(favorites)) then {

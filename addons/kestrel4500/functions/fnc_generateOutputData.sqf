@@ -89,7 +89,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
             private _monthString = localize (["str_january","str_february","str_march","str_april","str_may","str_june","str_july","str_august","str_september","str_october","str_november","str_december"] select (_month - 1));
             _textTop = _dayString;
             _textCenter = format["%1 %2 %3", _day, _monthString, _year];
-            _textBottomBig = [daytime, "HH:MM:SS"] call bis_fnc_timeToString;
+            _textBottomBig = [dayTime, "HH:MM:SS"] call bis_fnc_timeToString;
         };
         case 1: { // Direction
             if (!GVAR(MinAvgMax)) then {
@@ -105,7 +105,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
         };
         case 2: { // Wind SPD
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = Str(round(_windSpeed * 10) / 10);
+                _textCenterBig = str(round(_windSpeed * 10) / 10);
             } else {
                 _textCenterLine1Left = "Max";
                 _textCenterLine2Left = "Avg";
@@ -116,13 +116,13 @@ if (GVAR(referenceHeadingMenu) == 0) then {
                         _textInfoLine2 = "- average";
                     };
                     case 1: {
-                        _textCenterLine1Right = Str(round((GVAR(Max) select 2) * 10) / 10);
-                        _textCenterLine2Right = Str(round((GVAR(Total) select 2) / (GVAR(Entries) select 2) * 10) / 10);
+                        _textCenterLine1Right = str(round((GVAR(Max) select 2) * 10) / 10);
+                        _textCenterLine2Right = str(round((GVAR(Total) select 2) / (GVAR(Entries) select 2) * 10) / 10);
                         _textInfoLine2 = "- stop";
                     };
                     case 2: {
-                        _textCenterLine1Right = Str(round((GVAR(Max) select 2) * 10) / 10);
-                        _textCenterLine2Right = Str(round((GVAR(Total) select 2) / (GVAR(Entries) select 2) * 10) / 10);
+                        _textCenterLine1Right = str(round((GVAR(Max) select 2) * 10) / 10);
+                        _textCenterLine2Right = str(round((GVAR(Total) select 2) / (GVAR(Entries) select 2) * 10) / 10);
                         _textInfoLine2 = "- clear";
                     };
                 };
@@ -131,10 +131,10 @@ if (GVAR(referenceHeadingMenu) == 0) then {
         case 3: { // CROSSWIND
             if (!GVAR(MinAvgMax)) then {
                 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-                    _textCenterBig = Str(round(abs(sin(GVAR(RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
+                    _textCenterBig = str(round(abs(sin(GVAR(RefHeading) - _playerDir) * _windSpeed) * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_playerDir)];
                 } else {
-                    _textCenterBig = Str(round(abs(sin(GVAR(RefHeading) - _windDir) * _windSpeed) * 10) / 10);
+                    _textCenterBig = str(round(abs(sin(GVAR(RefHeading) - _windDir) * _windSpeed) * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(180 + _windDir)];
                 };
                 _textInfoLine2 = "- set heading";
@@ -148,13 +148,13 @@ if (GVAR(referenceHeadingMenu) == 0) then {
                         _textInfoLine2 = "- average";
                     };
                     case 1: {
-                        _textCenterLine1Right = Str(round((GVAR(Max) select 3) * 10) / 10);
-                        _textCenterLine2Right = Str(round((GVAR(Total) select 3) / (GVAR(Entries) select 3) * 10) / 10);
+                        _textCenterLine1Right = str(round((GVAR(Max) select 3) * 10) / 10);
+                        _textCenterLine2Right = str(round((GVAR(Total) select 3) / (GVAR(Entries) select 3) * 10) / 10);
                         _textInfoLine2 = "- stop";
                     };
                     case 2: {
-                        _textCenterLine1Right = Str(round((GVAR(Max) select 3) * 10) / 10);
-                        _textCenterLine2Right = Str(round((GVAR(Total) select 3) / (GVAR(Entries) select 3) * 10) / 10);
+                        _textCenterLine1Right = str(round((GVAR(Max) select 3) * 10) / 10);
+                        _textCenterLine2Right = str(round((GVAR(Total) select 3) / (GVAR(Entries) select 3) * 10) / 10);
                         _textInfoLine2 = "- clear";
                     };
                 };
@@ -163,10 +163,10 @@ if (GVAR(referenceHeadingMenu) == 0) then {
         case 4: { // HEADWIND
             if (!GVAR(MinAvgMax)) then {
                 if (missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) then {
-                    _textCenterBig = Str(round(cos(GVAR(RefHeading) - _playerDir) * _windSpeed * 10) / 10);
+                    _textCenterBig = str(round(cos(GVAR(RefHeading) - _playerDir) * _windSpeed * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(_playerDir)];
                 } else {
-                    _textCenterBig = Str(round(-cos(GVAR(RefHeading) - _windDir) * _windSpeed * 10) / 10);
+                    _textCenterBig = str(round(-cos(GVAR(RefHeading) - _windDir) * _windSpeed * 10) / 10);
                     _textInfoLine1 = format["%1 m/s @ %2", round(_windSpeed * 10) / 10, round(180 + _windDir)];
                 };
                 _textInfoLine2 = "- set heading";
@@ -180,13 +180,13 @@ if (GVAR(referenceHeadingMenu) == 0) then {
                         _textInfoLine2 = "- average";
                     };
                     case 1: {
-                        _textCenterLine1Right = Str(round((GVAR(Max) select 4) * 10) / 10);
-                        _textCenterLine2Right = Str(round((GVAR(Total) select 4) / (GVAR(Entries) select 4) * 10) / 10);
+                        _textCenterLine1Right = str(round((GVAR(Max) select 4) * 10) / 10);
+                        _textCenterLine2Right = str(round((GVAR(Total) select 4) / (GVAR(Entries) select 4) * 10) / 10);
                         _textInfoLine2 = "- stop";
                     };
                     case 2: {
-                        _textCenterLine1Right = Str(round((GVAR(Max) select 4) * 10) / 10);
-                        _textCenterLine2Right = Str(round((GVAR(Total) select 4) / (GVAR(Entries) select 4) * 10) / 10);
+                        _textCenterLine1Right = str(round((GVAR(Max) select 4) * 10) / 10);
+                        _textCenterLine2Right = str(round((GVAR(Total) select 4) / (GVAR(Entries) select 4) * 10) / 10);
                         _textInfoLine2 = "- clear";
                     };
                 };
@@ -194,124 +194,124 @@ if (GVAR(referenceHeadingMenu) == 0) then {
         };
         case 5: { // TEMP
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = Str(round(_temperature * 10) / 10);
+                _textCenterBig = str(round(_temperature * 10) / 10);
             } else {
                 _textCenterLine1Left = "Min";
                 _textCenterLine2Left = "Avg";
                 _textCenterLine3Left = "Max";
-                _textCenterLine1Right = Str(round((GVAR(Min) select 5) * 10) / 10);
-                _textCenterLine2Right = Str(round((GVAR(Total) select 5) / (GVAR(Entries) select 5) * 10) / 10);
-                _textCenterLine3Right = Str(round((GVAR(Max) select 5) * 10) / 10);
+                _textCenterLine1Right = str(round((GVAR(Min) select 5) * 10) / 10);
+                _textCenterLine2Right = str(round((GVAR(Total) select 5) / (GVAR(Entries) select 5) * 10) / 10);
+                _textCenterLine3Right = str(round((GVAR(Max) select 5) * 10) / 10);
             };
         };
         case 6: { // CHILL
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = Str(round(_chill * 10) / 10);
+                _textCenterBig = str(round(_chill * 10) / 10);
             } else {
                 _textCenterLine1Left = "Min";
                 _textCenterLine2Left = "Avg";
                 _textCenterLine3Left = "Max";
-                _textCenterLine1Right = Str(round((GVAR(Min) select 6) * 10) / 10);
-                _textCenterLine2Right = Str(round((GVAR(Total) select 6) / (GVAR(Entries) select 6) * 10) / 10);
-                _textCenterLine3Right = Str(round((GVAR(Max) select 6) * 10) / 10);
+                _textCenterLine1Right = str(round((GVAR(Min) select 6) * 10) / 10);
+                _textCenterLine2Right = str(round((GVAR(Total) select 6) / (GVAR(Entries) select 6) * 10) / 10);
+                _textCenterLine3Right = str(round((GVAR(Max) select 6) * 10) / 10);
             };
         };
         case 7: { // HUMIDITY
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = Str(round(_humidity * 100 * 10) / 10);
+                _textCenterBig = str(round(_humidity * 100 * 10) / 10);
             } else {
                 _textCenterLine1Left = "Min";
                 _textCenterLine2Left = "Avg";
                 _textCenterLine3Left = "Max";
-                _textCenterLine1Right = Str(round((GVAR(Min) select 7) * 100 * 10) / 10);
-                _textCenterLine2Right = Str(round((GVAR(Total) select 7) / (GVAR(Entries) select 7) * 100 * 10) / 10);
-                _textCenterLine3Right = Str(round((GVAR(Max) select 7) * 100 * 10) / 10);
+                _textCenterLine1Right = str(round((GVAR(Min) select 7) * 100 * 10) / 10);
+                _textCenterLine2Right = str(round((GVAR(Total) select 7) / (GVAR(Entries) select 7) * 100 * 10) / 10);
+                _textCenterLine3Right = str(round((GVAR(Max) select 7) * 100 * 10) / 10);
             };
         };
         case 8: { // HEAT INDEX
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = Str(round(_heatIndex * 10) / 10);
+                _textCenterBig = str(round(_heatIndex * 10) / 10);
             } else {
                 _textCenterLine1Left = "Min";
                 _textCenterLine2Left = "Avg";
                 _textCenterLine3Left = "Max";
-                _textCenterLine1Right = Str(round((GVAR(Min) select 8) * 10) / 10);
-                _textCenterLine2Right = Str(round((GVAR(Total) select 8) / (GVAR(Entries) select 8) * 10) / 10);
-                _textCenterLine3Right = Str(round((GVAR(Max) select 8) * 10) / 10);
+                _textCenterLine1Right = str(round((GVAR(Min) select 8) * 10) / 10);
+                _textCenterLine2Right = str(round((GVAR(Total) select 8) / (GVAR(Entries) select 8) * 10) / 10);
+                _textCenterLine3Right = str(round((GVAR(Max) select 8) * 10) / 10);
             };
         };
         case 9: { // DEW POINT
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = Str(round(_dewPoint * 10) / 10);
+                _textCenterBig = str(round(_dewPoint * 10) / 10);
             } else {
                 _textCenterLine1Left = "Min";
                 _textCenterLine2Left = "Avg";
                 _textCenterLine3Left = "Max";
-                _textCenterLine1Right = Str(round((GVAR(Min) select 9) * 10) / 10);
-                _textCenterLine2Right = Str(round((GVAR(Total) select 9) / (GVAR(Entries) select 9) * 10) / 10);
-                _textCenterLine3Right = Str(round((GVAR(Max) select 9) * 10) / 10);
+                _textCenterLine1Right = str(round((GVAR(Min) select 9) * 10) / 10);
+                _textCenterLine2Right = str(round((GVAR(Total) select 9) / (GVAR(Entries) select 9) * 10) / 10);
+                _textCenterLine3Right = str(round((GVAR(Max) select 9) * 10) / 10);
             };
         };
         case 10: { // WET BULB
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = Str(round(_wetBulb * 10) / 10);
+                _textCenterBig = str(round(_wetBulb * 10) / 10);
             } else {
                 _textCenterLine1Left = "Min";
                 _textCenterLine2Left = "Avg";
                 _textCenterLine3Left = "Max";
-                _textCenterLine1Right = Str(round((GVAR(Min) select 10) * 10) / 10);
-                _textCenterLine2Right = Str(round((GVAR(Total) select 10) / (GVAR(Entries) select 10) * 10) / 10);
-                _textCenterLine3Right = Str(round((GVAR(Max) select 10) * 10) / 10);
+                _textCenterLine1Right = str(round((GVAR(Min) select 10) * 10) / 10);
+                _textCenterLine2Right = str(round((GVAR(Total) select 10) / (GVAR(Entries) select 10) * 10) / 10);
+                _textCenterLine3Right = str(round((GVAR(Max) select 10) * 10) / 10);
             };
         };
         case 11: { // BARO
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = Str(round(_barometricPressure * 10) / 10);
+                _textCenterBig = str(round(_barometricPressure * 10) / 10);
             } else {
                 _textCenterLine1Left = "Min";
                 _textCenterLine2Left = "Avg";
                 _textCenterLine3Left = "Max";
-                _textCenterLine1Right = Str(round((GVAR(Min) select 11) * 10) / 10);
-                _textCenterLine2Right = Str(round((GVAR(Total) select 11) / (GVAR(Entries) select 11) * 10) / 10);
-                _textCenterLine3Right = Str(round((GVAR(Max) select 11) * 10) / 10);
+                _textCenterLine1Right = str(round((GVAR(Min) select 11) * 10) / 10);
+                _textCenterLine2Right = str(round((GVAR(Total) select 11) / (GVAR(Entries) select 11) * 10) / 10);
+                _textCenterLine3Right = str(round((GVAR(Max) select 11) * 10) / 10);
             };
         };
         case 12: { // ALTITUDE
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = Str(round(EGVAR(common,mapAltitude) + _playerAltitude));
+                _textCenterBig = str(round(EGVAR(common,mapAltitude) + _playerAltitude));
             } else {
                 _textCenterLine1Left = "Min";
                 _textCenterLine2Left = "Avg";
                 _textCenterLine3Left = "Max";
-                _textCenterLine1Right = Str(round(GVAR(Min) select 12));
-                _textCenterLine2Right = Str(round((GVAR(Total) select 12) / (GVAR(Entries) select 12)));
-                _textCenterLine3Right = Str(round(GVAR(Max) select 12));
+                _textCenterLine1Right = str(round(GVAR(Min) select 12));
+                _textCenterLine2Right = str(round((GVAR(Total) select 12) / (GVAR(Entries) select 12)));
+                _textCenterLine3Right = str(round(GVAR(Max) select 12));
             };
         };
         case 13: { // DENSITY ALTITUDE
             if (!GVAR(MinAvgMax)) then {
-                _textCenterBig = Str(round(_densityAltitude));
+                _textCenterBig = str(round(_densityAltitude));
             } else {
                 _textCenterLine1Left = "Min";
                 _textCenterLine2Left = "Avg";
                 _textCenterLine3Left = "Max";
-                _textCenterLine1Right = Str(round(GVAR(Min) select 13));
-                _textCenterLine2Right = Str(round((GVAR(Total) select 13) / (GVAR(Entries) select 13)));
-                _textCenterLine3Right = Str(round(GVAR(Max) select 13));
+                _textCenterLine1Right = str(round(GVAR(Min) select 13));
+                _textCenterLine2Right = str(round((GVAR(Total) select 13) / (GVAR(Entries) select 13)));
+                _textCenterLine3Right = str(round(GVAR(Max) select 13));
             };
         };
         case 14: { // User Screen 1
-            _textCenterLine1Left = Str(round(_playerDir));
-            _textCenterLine2Left = Str(round(EGVAR(common,mapAltitude) + _playerAltitude));
-            _textCenterLine3Left = Str(round(abs(_windSpeed) * 10) / 10);
+            _textCenterLine1Left = str(round(_playerDir));
+            _textCenterLine2Left = str(round(EGVAR(common,mapAltitude) + _playerAltitude));
+            _textCenterLine3Left = str(round(abs(_windSpeed) * 10) / 10);
             _textCenterLine1Right = GVAR(Directions) select GVAR(Direction);
             _textCenterLine2Right = "m";
             _textCenterLine3Right = "m/s";
         };
         case 15: { // User Screen 2
-            _textCenterLine1Left = Str(round(_temperature * 10) / 10);
-            _textCenterLine2Left = Str(round(_humidity * 100 * 10) / 10);
-            _textCenterLine3Left = Str(round((_playerAltitude call EFUNC(weather,calculateBarometricPressure)) * 10) / 10);
+            _textCenterLine1Left = str(round(_temperature * 10) / 10);
+            _textCenterLine2Left = str(round(_humidity * 100 * 10) / 10);
+            _textCenterLine3Left = str(round((_playerAltitude call EFUNC(weather,calculateBarometricPressure)) * 10) / 10);
             _textCenterLine1Right = "C";
             _textCenterLine2Right = "%";
             _textCenterLine3Right = "hPA";
@@ -322,7 +322,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
     switch (GVAR(referenceHeadingMenu)) do {
         case 1: {
             _textCenterLine1 = "MAGNETIC  HEADING";
-            _textCenterLine2 = Str(round(GVAR(RefHeading)));
+            _textCenterLine2 = str(round(GVAR(RefHeading)));
             _textCenterLine3 = "Auto Set           ";
             _textCenterLine4 = "Manual Set         ";
             _textCenterLine5 = "================";
@@ -330,7 +330,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
         };
         case 2: {
             _textCenterLine1 = "MAGNETIC  HEADING";
-            _textCenterLine2 = Str(round(_playerDir));
+            _textCenterLine2 = str(round(_playerDir));
             _textCenterLine3 = "Point Down the";
             _textCenterLine4 = "Runway or Range";
             _textCenterLine5 = "================";
@@ -338,7 +338,7 @@ if (GVAR(referenceHeadingMenu) == 0) then {
         };
         case 3: {
             _textCenterLine1 = "MAGNETIC  HEADING";
-            _textCenterLine2 = Str(round(GVAR(TmpHeading)));
+            _textCenterLine2 = str(round(GVAR(TmpHeading)));
             _textCenterLine3 = "Press < and >";
             _textCenterLine4 = "to Adjust";
             _textCenterLine5 = "================";

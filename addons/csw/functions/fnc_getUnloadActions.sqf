@@ -23,20 +23,22 @@ private _statement = {
     TRACE_5("starting unload",_target,_turretPath,_player,_carryMag,_vehMag);
 
     private _timeToUnload = 1;
-    if (!isNull (configOf _target >> QUOTE(ADDON) >> "ammoUnloadTime")) then {
-        _timeToUnload = getNumber (configOf _target >> QUOTE(ADDON) >> "ammoUnloadTime");
+    private _config = configOf _target >> QUOTE(ADDON) >> "ammoUnloadTime";
+    if (!isNull _config) then {
+        _timeToUnload = getNumber _config;
     };
 
     [
         TIME_PROGRESSBAR(_timeToUnload),
         [_target, _turretPath, _player, _carryMag, _vehMag],
         {
+            //IGNORE_PRIVATE_WARNING ["_player"];
             (_this select 0) params ["_target", "_turretPath", "", "_carryMag", "_vehMag"];
             TRACE_5("unload progressBar finish",_target,_turretPath,_carryMag,_vehMag,_player);
             [QGVAR(removeTurretMag), [_target, _turretPath, _carryMag, _vehMag, _player]] call CBA_fnc_globalEvent;
         },
         {TRACE_1("unload progressBar fail",_this);},
-        format [localize LSTRING(unloadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")],
+        format [LLSTRING(unloadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")],
         {(_this select 0) call FUNC(reload_canUnloadMagazine)},
         ["isNotInside"]
     ] call EFUNC(common,progressBar);
@@ -45,7 +47,9 @@ private _statement = {
 private _condition = {
     params ["_target", "_player", "_args"];
     _args params ["_vehMag", "_turretPath", "_carryMag"];
-    [_target, _turretPath, _player, _carryMag, _vehMag] call FUNC(reload_canUnloadMagazine)
+    
+    [_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew) &&
+    {[_target, _turretPath, _player, _carryMag, _vehMag] call FUNC(reload_canUnloadMagazine)}
 };
 
 private _actions = [];

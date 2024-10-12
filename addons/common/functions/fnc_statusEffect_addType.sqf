@@ -32,6 +32,6 @@ GVAR(statusEffect_sendJIP) pushBack _sendJIP;
 //We add reasons at any time, but more efficenet to add all common ones at one time during init
 if (isServer && {_commonReasonsArray isNotEqualTo []}) then {
     //Switch case to lower:
-    _commonReasonsArray = _commonReasonsArray apply { toLower _x };
+    _commonReasonsArray = _commonReasonsArray apply { toLowerANSI _x };
     missionNamespace setVariable [(format [QGVAR(statusEffects_%1), _name]), _commonReasonsArray, true];
 };

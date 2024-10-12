@@ -17,22 +17,22 @@
 
 params ["_target"];
 
-private _objectType = _target;
-if (_target isEqualType objNull) then {
-    _objectType = typeOf _target;
+private _objectType = if (_target isEqualType objNull) then {
+    typeOf _target
+} else {
+    _target call EFUNC(common,getConfigName)
 };
-private _namespace = GVAR(ActNamespace);
 
 // Exit if the action menu is already compiled for this class
-if (!isNil {_namespace getVariable _objectType}) exitWith {};
+if (_objectType in GVAR(ActNamespace)) exitWith {};
 
 if (_objectType isKindOf "VirtualMan_F") exitWith { // these have config: isPlayableLogic = 1
     TRACE_1("skipping playable logic",_objectType);
-    _namespace setVariable [_objectType, []];
+    GVAR(ActNamespace) set [_objectType, []];
 };
 
 if ((_objectType isKindOf "CAManBase") && {!isNil QGVAR(cacheManActions)}) exitWith {
-    _namespace setVariable [_objectType, +GVAR(cacheManActions)]; // copy
+    GVAR(ActNamespace) set [_objectType, +GVAR(cacheManActions)]; // copy
 };
 
 private _recurseFnc = {
@@ -114,8 +114,7 @@ private _recurseFnc = {
                     ];
             _actions pushBack _entry;
         };
-        nil
-    } count (configProperties [_actionsCfg, "isClass _x", true]);
+    } forEach (configProperties [_actionsCfg, "isClass _x", true]);
     _actions
 };
 
@@ -140,7 +139,7 @@ if (_objectType isKindOf "CAManBase") then {
     };
 };
 
-_namespace setVariable [_objectType, _actions];
+GVAR(ActNamespace) set [_objectType, _actions];
 
 /*
 [

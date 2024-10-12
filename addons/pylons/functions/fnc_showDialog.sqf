@@ -73,8 +73,8 @@ GVAR(comboBoxes) = [];
     _combo ctrlSetPosition [
         (_picturePos select 0) + (_uiPos select 0),
         (_picturePos select 1) + (_uiPos select 1),
-        0.1 * safezoneW,
-        0.028 * safezoneH
+        0.1 * safeZoneW,
+        0.028 * safeZoneH
     ];
     _combo ctrlCommit 0;
 
@@ -107,16 +107,16 @@ GVAR(comboBoxes) = [];
     private _mirroredIndex = getNumber (_x >> "mirroredMissilePos");
 
     private _button = controlNull;
-    if (count allTurrets [_aircraft, false] > 0) then {
+    if ((allTurrets [_aircraft, false]) isNotEqualTo []) then {
         _button = _display ctrlCreate ["ctrlButtonPictureKeepAspect", -1];
         private _turret = [_aircraft, _forEachIndex] call EFUNC(common,getPylonTurret);
         [_button, false, _turret] call FUNC(onButtonTurret);
         _button ctrlAddEventHandler ["ButtonClick", {[_this select 0, true, []] call FUNC(onButtonTurret)}];
         _button ctrlSetPosition [
-            (_picturePos select 0) + (_uiPos select 0) - (0.0165 * safezoneW),
+            (_picturePos select 0) + (_uiPos select 0) - (0.0165 * safeZoneW),
             (_picturePos select 1) + (_uiPos select 1),
-            0.0165 * safezoneW,
-            0.028 * safezoneH
+            0.0165 * safeZoneW,
+            0.028 * safeZoneH
         ];
         _button ctrlCommit 0;
     };

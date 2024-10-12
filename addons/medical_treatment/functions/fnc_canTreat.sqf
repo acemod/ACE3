@@ -28,7 +28,7 @@ private _config = configFile >> QGVAR(actions) >> _classname;
 ) && {
     _patient isKindOf "CAManBase"
 } && {
-    private _selections = getArray (_config >> "allowedSelections") apply {toLower _x};
+    private _selections = getArray (_config >> "allowedSelections") apply {toLowerANSI _x};
     "all" in _selections || {_bodyPart in _selections}
 } && {
     GET_FUNCTION(_condition,_config >> "condition");

@@ -34,7 +34,7 @@ class CfgWeapons {
 
     // Binocular
     class CUP_NVG_PVS14: NVGoggles {
-        NVG_BINO_PRESET;
+        NVG_MONO_PRESET(3);
         NVG_GREEN_PRESET;
     };
     class CUP_NVG_PVS15_black: NVGoggles {
@@ -107,12 +107,12 @@ class CfgWeapons {
         displayName = SUBCSTRING(CUP_NVG_GPNVG_tan_WP);
         NVG_WP_PRESET;
     };
-    class CUP_GPNVG_green_WP: CUP_NVG_GPNVG_green {
-        displayName = SUBCSTRING(CUP_GPNVG_green_WP);
+    class CUP_NVG_GPNVG_green_WP: CUP_NVG_GPNVG_green {
+        displayName = SUBCSTRING(CUP_NVG_GPNVG_green_WP);
         NVG_WP_PRESET;
     };
-    class CUP_GPNVG_winter_WP: CUP_NVG_GPNVG_winter {
-        displayName = SUBCSTRING(CUP_GPNVG_winter_WP);
+    class CUP_NVG_GPNVG_winter_WP: CUP_NVG_GPNVG_winter {
+        displayName = SUBCSTRING(CUP_NVG_GPNVG_winter_WP);
         NVG_WP_PRESET;
     };
 };

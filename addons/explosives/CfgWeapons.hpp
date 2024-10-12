@@ -12,8 +12,7 @@ class CfgWeapons {
     class CBA_MiscItem_ItemInfo;
 
     class ACE_ExplosiveItem: CBA_MiscItem_ItemInfo {
-        allowedSlots[] = {TYPE_UNIFORM,TYPE_VEST,TYPE_BACKPACK};
-        //type = 201;
+        allowedSlots[] = {TYPE_UNIFORM, TYPE_VEST, TYPE_BACKPACK};
     };
 
     class ACE_Clacker: ACE_ItemCore {
@@ -23,8 +22,8 @@ class CfgWeapons {
         descriptionShort = CSTRING(clacker_description);
         picture = QPATHTOF(Data\UI\Clacker.paa);
         model = QPATHTOF(data\ace_m57.p3d);
-        GVAR(Range) = 250;
-        GVAR(Detonator) = 1;
+        GVAR(range) = 250;
+        GVAR(detonator) = 1;
         GVAR(triggerType) = "Command";
         ACE_isTool = 1;
 
@@ -37,7 +36,7 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         displayName = CSTRING(M152_Clacker_displayName);
         picture = QPATHTOF(Data\UI\MK26_Transmitter_ca.paa);
-        GVAR(Range) = 5000;
+        GVAR(range) = 5000;
         GVAR(triggerType) = "MK16_Transmitter";
     };
     class ACE_DefusalKit: ACE_ItemCore {
@@ -47,8 +46,8 @@ class CfgWeapons {
         descriptionShort = CSTRING(DefusalKit_description);
         picture = QPATHTOF(Data\UI\Pliers.paa);
         model = "\A3\Structures_F\Items\Tools\Pliers_F.p3d";
-        ACE_isTool = 1;
         GVAR(defusalKit) = 1;
+        ACE_isTool = 1;
 
         class ItemInfo: ACE_ExplosiveItem {
             mass = 5;
@@ -62,8 +61,8 @@ class CfgWeapons {
         descriptionShort = CSTRING(DeadManSwitch_description);
         picture = QPATHTOF(Data\UI\DeadmanSwitch.paa);
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
-        GVAR(Range) = 100;
-        GVAR(Detonator) = 1;
+        GVAR(range) = 100;
+        GVAR(detonator) = 1;
         GVAR(triggerType) = "DeadManSwitch";
         ACE_isTool = 1;
 
@@ -79,8 +78,8 @@ class CfgWeapons {
         descriptionShort = CSTRING(cellphone_description);
         picture = QPATHTOF(Data\UI\Cellphone_UI.paa);
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
-        GVAR(Range) = 15000;
-        GVAR(Detonator) = 1;
+        GVAR(range) = 15000;
+        GVAR(detonator) = 1;
         GVAR(triggerType) = "Cellphone";
         ACE_isTool = 1;
 

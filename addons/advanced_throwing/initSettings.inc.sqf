@@ -40,3 +40,11 @@ private _category = format ["ACE %1", localize LSTRING(Category)];
     true,
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableTempWindInfo), "CHECKBOX",
+    [LSTRING(EnableTempWindInfo_DisplayName), LSTRING(EnableTempWindInfo_Description)],
+    _category,
+    true,
+    0
+] call CBA_fnc_addSetting;

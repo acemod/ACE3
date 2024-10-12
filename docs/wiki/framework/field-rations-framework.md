@@ -16,19 +16,19 @@ redirect_from: "/wiki/frameworkx/field-rations-framework.html"
 
 ### 1.1 Consumable Items
 
-Config Name | Type | Description
------------ | ---- | -----------
-`acex_field_rations_thirstQuenched` | Number | Amount of thirst quenched when item is consumed*
-`acex_field_rations_hungerSatiated` | Number | Amount of hunger satiated when item is consumed*
-`acex_field_rations_consumeTime` | Number | Time required to consume the item (in seconds)
-`acex_field_rations_consumeText` | String | Progress bar text (OPTIONAL)
-`acex_field_rations_consumeAnims` | Array | Animations to play when consuming item** (OPTIONAL)
-`acex_field_rations_consumeSounds` | Array | Sounds to play when consuming item** (OPTIONAL)
-`acex_field_rations_replacementItem` | String | Class name of replacement item to add on consumption (OPTIONAL)
-`acex_field_rations_refillItem` | String | Makes an item refillable, class name of item added when refilled (OPTIONAL)
-`acex_field_rations_refillAmount` | Number | Amount of water required to refill item (OPTIONAL)
-`acex_field_rations_refillTime` | Number | Time required to refill item (in seconds) (OPTIONAL)
-`ACE_isFieldRationItem` | Number | Force adds the item to the ACE Field Rations category in ACE Arsenal (OPTIONAL)
+| Config Name | Type | Description |
+| ----------- | ---- | ----------- |
+| `acex_field_rations_thirstQuenched` | Number | Amount of thirst quenched when item is consumed* |
+| `acex_field_rations_hungerSatiated` | Number | Amount of hunger satiated when item is consumed* |
+| `acex_field_rations_consumeTime` | Number | Time required to consume the item (in seconds) |
+| `acex_field_rations_consumeText` | String | Progress bar text (OPTIONAL) |
+| `acex_field_rations_consumeAnims` | Array | Animations to play when consuming item** (OPTIONAL) |
+| `acex_field_rations_consumeSounds` | Array | Sounds to play when consuming item** (OPTIONAL) |
+| `acex_field_rations_replacementItem` | String | Class name of replacement item to add on consumption (OPTIONAL) |
+| `acex_field_rations_refillItem` | String | Makes an item refillable, class name of item added when refilled (OPTIONAL) |
+| `acex_field_rations_refillAmount` | Number | Amount of water required to refill item (OPTIONAL) |
+| `acex_field_rations_refillTime` | Number | Time required to refill item (in seconds) (OPTIONAL) |
+| `ACE_isFieldRationItem` | Number | Force adds the item to the ACE Field Rations category in ACE Arsenal (OPTIONAL) |
 
 
 _* Value range is 0 to 100 and can be modified by the corresponding coefficient setting._
@@ -37,17 +37,17 @@ _** Array is in format: STAND, CROUCH, PRONE. If player is in vehicle, the first
 
 ### 1.2 Water Sources
 
-Config Name | Type | Description
------------ | ---- | -----------
-`acex_field_rations_waterSupply` | Number | Amount of water inside the object (-1 - disabled, -10 - infinite) (OPTIONAL)
-`acex_field_rations_offset` | Array | Refill action offset relative to model (OPTIONAL)
+| Config Name | Type | Description |
+| ----------- | ---- | ----------- |
+| `acex_field_rations_waterSupply` | Number | Amount of water inside the object (-1 - disabled, -10 - infinite) (OPTIONAL) |
+| `acex_field_rations_offset` | Array | Refill action offset relative to model (OPTIONAL) |
 
 ## 2. Events
 
-Event Name | Passed Parameter(s) | Locality | Description
----------- | ------------------- | -------- | -----------
-`acex_rationConsumed` | [_player, _consumeItem, _replacementItem, _thirstQuenched, _hungerSatiated, _isMagazine] | Local | Item consumed
-`acex_rationRefilled` | [_source, _player, _item, _refillItem, _refillAmount, _isMagazine] | Local | Item refilled
+| Event Name | Passed Parameter(s) | Locality | Description |
+| ---------- | ------------------- | -------- | ----------- |
+| `acex_rationConsumed` | [_player, _consumeItem, _replacementItem, _thirstQuenched, _hungerSatiated, _isMagazine] | Local | Item consumed |
+| `acex_rationRefilled` | [_source, _player, _item, _refillItem, _refillAmount, _isMagazine] | Local | Item refilled |
 
 ## 3. Scripting
 

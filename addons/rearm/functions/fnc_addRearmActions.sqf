@@ -30,7 +30,9 @@ private _cswCarryMagazines = [];
 private _vehicleActions = [];
 {
     private _vehicle = _x;
-
+    private _displayName = getText (configOf _vehicle >> "displayName");
+    private _distanceStr = (ACE_player distance _vehicle) toFixed 1;
+    private _actionName = format ["%1 (%2m)", _displayName, _distanceStr];
     // Array of magazines that can be rearmed in the vehicle
     private _needRearmMags = ([_vehicle] call FUNC(getNeedRearmMagazines)) apply {_x select 0};
 
@@ -57,7 +59,7 @@ private _vehicleActions = [];
             // [Level 0] adds a single action to rearm the entire vic
             private _action = [
                 _vehicle,
-                getText(configOf _vehicle >> "displayName"),
+                _actionName,
                 _icon,
                 {_this call FUNC(rearmEntireVehicle)},
                 {true},
@@ -84,7 +86,7 @@ private _vehicleActions = [];
 
             private _action = [
                 _vehicle,
-                getText(configOf _vehicle >> "displayName"),
+                _actionName,
                 _icon,
                 {},
                 {true},

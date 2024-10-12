@@ -24,7 +24,6 @@ scopeName "main";
 
 {
     if (_unit == (_vehicle turretUnit _x)) then {_x breakOut "main"};
-    nil
-} count allTurrets [_vehicle, true];
+} forEach allTurrets [_vehicle, true];
 
 []

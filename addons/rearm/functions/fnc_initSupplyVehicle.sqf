@@ -33,7 +33,7 @@ if (!alive _vehicle) exitWith {};
 
 private _configSupply = getNumber (_configOf >> QGVAR(defaultSupply));
 if (_configSupply == 0) then {
-    _configSupply = getNumber (_config >> "transportAmmo");
+    _configSupply = getNumber (_configOf >> "transportAmmo");
 };
 private _isSupplyVehicle = _vehicle getVariable [QGVAR(isSupplyVehicle), false];
 private _oldRearmConfig = isClass (_configOf >> "ACE_Actions" >> "ACE_MainActions" >> QGVAR(takeAmmo));

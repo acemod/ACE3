@@ -129,6 +129,7 @@
             <French>Traqueur laser : activé</French>
             <Portuguese>Rastreador a Laser: Ligado</Portuguese>
             <Russian>Лазерный точечный трекер: Включен</Russian>
+            <Spanish>Rastreador del Puntero Láser: On</Spanish>
         </Key>
         <Key ID="STR_ACE_Laser_LSTOff">
             <English>Laser Spot Tracker: Off</English>
@@ -140,6 +141,7 @@
             <French>Traqueur laser : désactivé</French>
             <Portuguese>Rastreador a Laser: Desligado</Portuguese>
             <Russian>Лазерный точечный трекер: выключен</Russian>
+            <Spanish>Rastreador del Puntero Láser: Off</Spanish>
         </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap">
             <English>Draw Laser on Map</English>

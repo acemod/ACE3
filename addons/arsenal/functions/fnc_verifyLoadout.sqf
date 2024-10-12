@@ -22,6 +22,10 @@ private _extendedInfo = createHashMap;
 // Check if the provided loadout is a CBA extended loadout
 if (count _loadout == 2) then {
     _extendedInfo = +(_loadout select 1); // Copy the hashmap to prevent events from modifiyng the profileNamespace extendedInfo
+    if (_extendedInfo isEqualType []) then { // Hashmaps are serialized as arrays, convert back to hashmap
+        _extendedInfo = createHashMapFromArray _extendedInfo;
+        _loadout set [1, _extendedInfo]; // Also fix source variable, technically not needed but doesn't hurt
+    };
     _loadout = _loadout select 0;
 };
 

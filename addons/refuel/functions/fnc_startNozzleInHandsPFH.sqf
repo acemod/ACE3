@@ -23,8 +23,8 @@
 #define END_PFH \
     _unit setVariable [QGVAR(hint), nil]; \
     call EFUNC(interaction,hideMouseHint); \
-    [_unit, "forceWalk", "ACE_refuel", false] call EFUNC(common,statusEffect_set); \
-    [_unit, "blockThrow", "ACE_refuel", false] call EFUNC(common,statusEffect_set); \
+    [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set); \
+    [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set); \
     [_idPFH] call CBA_fnc_removePerFrameHandler;
 
 params ["_unit", "_nozzle"];
@@ -35,11 +35,9 @@ TRACE_2("start",_unit,_nozzle);
     _args params ["_unit", "_nozzle"];
 
     if !(
-        alive _unit
+        _unit call EFUNC(common,isAwake)
         && {"" isEqualTo currentWeapon _unit || {_unit call EFUNC(common,isSwimming)}}
         && {[_unit, objNull, [INTERACT_EXCEPTIONS, "notOnMap"]] call EFUNC(common,canInteractWith)}
-        && {"unconscious" isNotEqualTo toLower animationState _unit}
-        && {!(_unit getVariable ["ACE_isUnconscious", false])}
     ) exitWith {
         TRACE_3("stop dead/weapon/interact/uncon",_unit,alive _unit,currentWeapon _unit);
         DROP_NOZZLE
@@ -91,7 +89,7 @@ TRACE_2("start",_unit,_nozzle);
     };
 
     private _hintLMB = "";
-    private _hintRMB = localize ELSTRING(dragging,Drop);
+    private _hintRMB = LELSTRING(common,Drop);
 
     getCursorObjectParams params ["_cursorObject", "", "_distance"];
     if (!isNull _cursorObject && {_distance < REFUEL_NOZZLE_ACTION_DISTANCE}) then {

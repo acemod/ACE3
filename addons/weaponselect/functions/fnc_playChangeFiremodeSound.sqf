@@ -30,8 +30,10 @@ _sound params ["_filename", ["_volume", 1], ["_soundPitch", 1], ["_distance", 0]
 if (_filename == "") exitWith {};
 
 // add file extension .wss as default
-if !(toLower (_filename select [count _filename - 4]) in [".wav", ".ogg", ".wss"]) then {
+if !(toLowerANSI (_filename select [count _filename - 4]) in [".wav", ".ogg", ".wss"]) then {
     _filename = format ["%1.wss", _filename];
 };
 
 playSound3D [_filename, objNull, false, _position, _volume, _soundPitch, _distance];
+
+nil // return

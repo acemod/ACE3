@@ -57,7 +57,7 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
                     [_damage * 100] call BIS_fnc_bloodEffect;
                 };
 
-                if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+                if (GETEGVAR(medical,enabled,false)) then {
                     [_x, _damage, "body", "backblast", _firer] call EFUNC(medical,addDamageToUnit);
                 } else {
                     _x setDamage (damage _x + _damage);
@@ -73,4 +73,4 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
             #endif
         };
     };
-} forEach ((ASLtoAGL _posASL) nearEntities ["CAManBase", _overpressureRange]);
+} forEach ((ASLToAGL _posASL) nearEntities ["CAManBase", _overpressureRange]);

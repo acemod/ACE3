@@ -6,6 +6,14 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-GVAR(disabledFactions) = [] call CBA_fnc_createNamespace;
+GVAR(disabledFactions) = createHashMap;
+
+if (hasInterface || isServer) then {
+    GVAR(dogtagsData) = createHashMap;
+
+    if (!isServer) exitWith {};
+
+    GVAR(idCounter) = 0;
+};
 
 ADDON = true;

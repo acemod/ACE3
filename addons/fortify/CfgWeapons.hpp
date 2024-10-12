@@ -10,6 +10,7 @@ class CfgWeapons {
         picture = QPATHTOF(UI\hammer_ca.paa);
         scope = 2;
         ACE_isTool = 1;
+        GVAR(fortifyTool) = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 0;
         };
