@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: The patient <OBJECT>
- * 1: Get raw count (true) or effect ratio (false) <BOOL>(default: true)
+ * 1: Get raw count (true) or effect ratio (false) <BOOL> (default: true)
  *
  * Return Value:
  * Dose Count <NUMBER>
