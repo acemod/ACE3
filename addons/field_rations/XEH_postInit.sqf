@@ -2,7 +2,7 @@
 
 if !(hasInterface) exitWith {};
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Exit if not enabled
     if (!XGVAR(enabled)) exitWith {};
 
