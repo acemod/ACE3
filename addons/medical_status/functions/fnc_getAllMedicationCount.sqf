@@ -52,6 +52,6 @@ private _medStack = []; // Array to store stacked medication info
 
 } forEach (_target getVariable [VAR_MEDICATIONS, []]);
 
-TRACE_3("getMedicationStack", _target, _medStack, _getCount);
+TRACE_3("getMedicationStack",_target,_medStack,_getCount);
 
 _medStack
