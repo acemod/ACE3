@@ -18,11 +18,18 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 TRACE_8("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_gunner);
 
+
+
 // Retrieve overpressure values
 private _opValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
 
 _opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
-_dangerZoneRange = _dangerZoneRange * GVAR(overpressureDistanceCoefficient);
+
+// Check if the unit attribute slider is set, if not, use the general config one... bit messy.
+private _unitCoef = _unit getVariable [QEGVAR(overpressure,distance), GVAR(overpressureDistanceCoefficient)];
+
+// We check the unitCoef this time.
+_dangerZoneRange = _dangerZoneRange * _unitCoef;
 
 TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
 
