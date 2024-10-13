@@ -48,7 +48,8 @@ if (_distance > _maxDistance) exitWith {
     TRACE_2("too far away",_distance,_maxDistance);
 };
 
-private _strength = _vehAttenuation * _explosive * _volume * _maxDistance / _distance^2;
+// Tone down _maxDistance to bring strength back to similar levels as a large burst of a loud weapon
+private _strength = _vehAttenuation * _explosive * _volume * (sqrt _maxDistance) / _distance^2;
 
 TRACE_2("strength",_volume,_strength);
 
