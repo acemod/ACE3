@@ -26,7 +26,7 @@ _opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
 private _unitOverpressureRangeAttribute = _unit getVariable QEGVAR(overpressure,distance);
 
 // If -1 (disabled) we return to server value, otherwise we use the given value.
-if(_unitOverpressureRangeAttribute == -1) then { _unitOverpressureRangeAttribute = GVAR(overpressureDistanceCoefficient); };
+if(_unitOverpressureRangeAttribute < 0) then { _unitOverpressureRangeAttribute = GVAR(overpressureDistanceCoefficient); };
 _dangerZoneRange = _dangerZoneRange * _unitOverpressureRangeAttribute;
 
 TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
