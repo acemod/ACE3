@@ -33,6 +33,8 @@ if (_structuralDamage) then {
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
 // Killing units via End key is an edge case (#10375)
+// This didn't matter pre-Arma 3 2.18 but now this goes through the event handler
+// TODO: Structural fire damage >= 1 in a single damage event could still be caught here and we don't want that, but we haven't found a better way to catch this, fire damage should be small most of the time anyway
 if (_structuralDamage && {_damage >= 1 && _ammo == "" && isNull _shooter && isNull _instigator}) exitWith {_damage};
 
 private _newDamage = _damage - _oldDamage;
