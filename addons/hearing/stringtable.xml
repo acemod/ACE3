@@ -197,6 +197,12 @@
             <Chinesesimp>当玩家听力受损时降低听力能力？</Chinesesimp>
             <Chinese>當玩家聽力受損時降低聽力能力?</Chinese>
         </Key>
+        <Key ID="STR_ACE_Hearing_explosionDeafnessCoefficient_DisplayName">
+            <English>Explosion Deafness Coefficient</English>
+        </Key>
+        <Key ID="STR_ACE_Hearing_explosionDeafnessCoefficient_Description">
+            <English>Changes how much deafness explosions cause.</English>
+        </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
             <Hungarian>Harci süketség engedélyezése?</Hungarian>
