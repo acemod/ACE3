@@ -39,7 +39,7 @@ switch (_container) do {
         _canAdd = (uniformContainer _unit) canAdd _classname;
     };
     default {
-        _canAdd = [_unit, _classname] call CBA_fnc_canAddItem; // replace with canAdd with ignoreMaxSoldierLoad in 2.18
+        _canAdd = _unit canAdd [_classname, 1, true];
         if (_canAdd) then {
             switch (_type select 1) do {
                 case "primary": {
@@ -95,7 +95,7 @@ switch (_type select 0) do {
                     } else {
                         {
                             if (_x canAdd _classname) exitWith {
-                                _x addWeaponCargoGlobal [_classname, 1]; // addWeaponGlobal will replace the weapon currently in a slot
+                                _x addWeaponCargoGlobal [_classname, 1];
                             };
                         } forEach [backpackContainer _unit, vestContainer _unit, uniformContainer _unit];
                     };
