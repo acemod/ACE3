@@ -22,7 +22,18 @@ params ["_medic", "_patient", "_bodyPart", "_classname"];
 
 // Exit if patient has max blood volume
 private _bloodVolume = GET_BLOOD_VOLUME(_patient);
-if (_bloodVolume >= DEFAULT_BLOOD_VOLUME) exitWith {_medic addItem _classname};
+if (_bloodVolume >= DEFAULT_BLOOD_VOLUME) exitWith {
+    // Return the bag if patient is topped up on blood
+    if (_medic call EFUNC(common,isPlayer)) then {
+        private _receiver = [_patient, _medic, _medic] select GVAR(allowSharedEquipment);
+        [_receiver, _classname] call EFUNC(common,addToInventory);
+    } else {
+        // If the medic is AI, only return bag if enabled
+        if (missionNamespace getVariable [QEGVAR(medical_ai,requireItems), 0] > 0) then {
+            [_medic, _classname] call EFUNC(common,addToInventory);
+        };
+    };
+};
 
 private _partIndex = ALL_BODY_PARTS find toLowerANSI _bodyPart;
 
