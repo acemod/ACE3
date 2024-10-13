@@ -4,21 +4,21 @@
  * Local callback for administering an IV bag to a patient.
  *
  * Arguments:
- * 0: Medic <OBJECT>
- * 1: Patient <OBJECT>
- * 2: Body Part <STRING>
- * 3: Treatment <STRING>
+ * 0: Patient <OBJECT>
+ * 1: Body Part <STRING>
+ * 2: Treatment <STRING>
+ * 3: Medic <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, player, "RightArm", "BloodIV"] call ace_medical_treatment_fnc_ivBagLocal
+ * [player, "RightArm", "BloodIV", player] call ace_medical_treatment_fnc_ivBagLocal
  *
  * Public: No
  */
 
-params ["_medic", "_patient", "_bodyPart", "_classname"];
+params ["_patient", "_bodyPart", "_classname", "_medic"];
 
 // Exit if patient has max blood volume
 private _bloodVolume = GET_BLOOD_VOLUME(_patient);
