@@ -37,7 +37,7 @@ if (_dangerZoneDamage <= 0) exitWith {};
 private _position = getPosASL _projectile;
 private _direction = vectorDir _projectile;
 
-// damage to others
+// Damage to others
 private _affected = (ASLToAGL _position) nearEntities ["CAManBase", _dangerZoneRange];
 
 // Let each client handle their own affected units
