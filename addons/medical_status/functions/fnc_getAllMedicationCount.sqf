@@ -9,8 +9,9 @@
  * 1: Get raw count (true) or effect ratio (false) <BOOL> (default: true)
  *
  * Return Value:
- * Dose Count <NUMBER>
- * Medication effectiveness (float) <NUMBER>
+ * Array of medication counts <ARRAY of ARRAY>:
+ *     Dose Count <NUMBER>
+ *     Medication effectiveness (float) <NUMBER>
  *
  * Example:
  * [player] call ace_medical_status_fnc_getAllMedicationCount
