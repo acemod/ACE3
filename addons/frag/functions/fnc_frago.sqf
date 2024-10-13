@@ -146,7 +146,6 @@ if (_targets isNotEqualTo []) then {
         private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
         _fragObj setVectorDir _vectorDir;
         _fragObj setVelocity _fragObjVelocity;
-        _fragObj setShotParents _shotParents;
 
         #ifdef DEBUG_MODE_DRAW
         [_fragObj, "blue", true] call FUNC(dev_trackObj);
