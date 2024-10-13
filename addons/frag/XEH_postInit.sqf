@@ -12,7 +12,10 @@
         };
         if (GVAR(enabled) && _ammo call FUNC(shouldFrag)) then {
             // only let a unit make a frag event once per second
+
+            private _instigator = _shotParents select !isNull ((getShotParents _projectile)#1);
             if (CBA_missionTime < (_instigator getVariable [QGVAR(nextFragEvent), -1])) exitWith {};
+            _instigator setVariable [QGVAR(nextFragEvent), CBA_missionTime + ACE_FRAG_FRAG_UNIT_HOLDOFF];
 
             // Wait a frame to make sure it doesn't target the dead
             [{
