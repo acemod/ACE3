@@ -4,9 +4,8 @@
  * Server func to create the fragmentation for a round.
  *
  * Arguments:
- * 0: ASL position projetile is fragmenting at <ARRAY>
- * 1: Projectile ammo classname <STRING>
- * 2: Projectile shot parents <ARRAY>
+ * 0: Projectile ammo classname <STRING>
+ * 1: ASL position projetile is fragmenting at <ARRAY>
  *
  * Return Value:
  * The number of fragments created <NUMBER>
