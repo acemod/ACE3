@@ -99,28 +99,28 @@ if (GVAR(reflectionsEnabled)) then {
                 private _fragObjSpeed = _fragVelocity * (1 - random 0.5);
                 private _fragObjVelocity = _vectorDir vectorMultiply _fragObjSpeed;
 
-                    private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
-                    _fragObj setVectorDir _vectorDir;
-                    _fragObj setVelocity _fragObjVelocity;
-                    #ifdef DEBUG_MODE_DRAW
-                    [_fragObj, "green", true] call FUNC(dev_trackObj);
-                    if (GVAR(dbgSphere)) then {
-                        [_targetPos, "(0.88,0.36,0.92,0.8)"] call FUNC(dev_sphereDraw);
-                    };
-                    #endif
-                    INC(_fragCount);
-                    INC(_currentCount);
+                private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
+                _fragObj setVectorDir _vectorDir;
+                _fragObj setVelocity _fragObjVelocity;
+                #ifdef DEBUG_MODE_DRAW
+                [_fragObj, "green", true] call FUNC(dev_trackObj);
+                if (GVAR(dbgSphere)) then {
+                    [_targetPos, "(0.88,0.36,0.92,0.8)"] call FUNC(dev_sphereDraw);
                 };
-                _fragArcs set [_dir, _currentCount];
+                #endif
+                INC(_fragCount);
+                INC(_currentCount);
             };
+            _fragArcs set [_dir, _currentCount];
         };
-        if (_fragCount > _maxFrags) exitWith {};
-    } forEach _targets;
-    TRACE_1("targeted",_fragCount);
+    };
     if (_fragCount > _maxFrags) exitWith {};
-    private _randomCount = ceil ((_maxFrags - _fragCount) * 0.35);
-    TRACE_1("",_randomCount);
-    private _sectorSize = 360 / (_randomCount max 1);
+} forEach _targets;
+TRACE_1("targeted",_fragCount);
+if (_fragCount > _maxFrags) exitWith {};
+private _randomCount = ceil ((_maxFrags - _fragCount) * 0.35);
+TRACE_1("",_randomCount);
+private _sectorSize = 360 / (_randomCount max 1);
 
 for "_i" from 1 to _randomCount do {
     // Distribute evenly
