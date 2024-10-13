@@ -21,7 +21,7 @@
 
 BEGIN_COUNTER(frago);
 
-params ["_fragPosASL", "_shellType", "_shotParents"];
+params ["_shellType", "_fragPosASL"];
 TRACE_3("frago",_fragPosASL,_shellType,_shotParents);
 
 // Limit max frag count if there was a recent frag
@@ -114,7 +114,6 @@ if (_targets isNotEqualTo []) then {
                     private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
                     _fragObj setVectorDir _vectorDir;
                     _fragObj setVelocity _fragObjVelocity;
-                    _fragObj setShotParents _shotParents;
                     #ifdef DEBUG_MODE_DRAW
                     [_fragObj, "green", true] call FUNC(dev_trackObj);
                     if (GVAR(dbgSphere)) then {
