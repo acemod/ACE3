@@ -5,13 +5,13 @@
  *
  * Arguments:
  * 0: The Unit <OBJECT>
- * 1: Medication <STRING>
- * 2: Dose of medication <NUMBER>
- * 3: Time in system for the adjustment to reach its peak <NUMBER>
- * 4: Duration the adjustment will have an effect <NUMBER>
- * 5: Heart Rate Adjust <NUMBER>
- * 6: Pain Suppress Adjust <NUMBER>
- * 7: Flow Adjust <NUMBER>
+ * 1: Medication <STRING> 
+ * 2: Time in system for the adjustment to reach its peak <NUMBER>
+ * 3: Duration the adjustment will have an effect <NUMBER>
+ * 4: Heart Rate Adjust <NUMBER>
+ * 5: Pain Suppress Adjust <NUMBER>
+ * 6: Flow Adjust <NUMBER>
+ * 7: Dose of medication <NUMBER>
  *
  * Return Value:
  * None
