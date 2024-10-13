@@ -30,7 +30,7 @@ private _replacements = GVAR(itemReplacements) getOrDefault [_item, []];
 
 if (_includeType) then {
     // If replaceRegisteredItems ever supports replacing magazines this'll need to be more robust
-    private _itemType = getNumber (configFile >> "CfgWeapons" >> "ItemInfo" >> "type");
+    private _itemType = getNumber (configFile >> "CfgWeapons" >> _item >> "ItemInfo" >> "type");
     _replacements append (GVAR(itemReplacements) getOrDefault ["$" + str _itemType]);
 };
 
