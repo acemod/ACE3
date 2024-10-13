@@ -22,7 +22,7 @@
 BEGIN_COUNTER(frago);
 
 params ["_shellType", "_fragPosASL"];
-TRACE_3("frago",_fragPosASL,_shellType,_shotParents);
+TRACE_2("frago",_fragPosASL,_shellType);
 
 // Limit max frag count if there was a recent frag
 private _maxFrags = round linearConversion [
