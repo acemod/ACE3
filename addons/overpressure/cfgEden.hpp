@@ -4,8 +4,8 @@ class Cfg3DEN {
             class ace_attributes {
                 class Attributes {
                     class GVAR(overPressureDistanceSetting) {
-                        displayName = LSTRING(distanceCoefficient_displayName);
-                        tooltip =  LSTRING(distanceCoefficient_toolTip);
+                        displayName = CSTRING(distanceCoefficient_displayName);
+                        tooltip = CSTRING(distanceCoefficient_toolTip);
                         property = QUOTE(overpressureDistanceCoefficient);
                         control = "Edit";
                         expression = QUOTE(_this setVariable [ARR_3(QQEGVAR(overpressure,distance),_value,true)]);
