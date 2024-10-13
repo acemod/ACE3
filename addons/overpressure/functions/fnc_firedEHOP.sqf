@@ -44,27 +44,27 @@ private _affected = (ASLToAGL _position) nearEntities ["CAManBase", _dangerZoneR
 
 // Draw debug lines
 #ifdef DEBUG_MODE_FULL
-[ _position,
-	_position vectorAdd (_direction vectorMultiply _dangerZoneRange),
-	[1, 0, 0, 1]
-] call EFUNC(common, addLineToDebugDraw);
+    [   _position,
+        _position vectorAdd (_direction vectorMultiply _dangerZoneRange),
+        [1,0,0,1]
+    ] call EFUNC(common,addLineToDebugDraw);
 
-private _ref = _direction call EFUNC(common, createOrthonormalReference);
-[ _position,
-	_position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorAdd ((_ref select 1) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),
-	[1, 1, 0, 1]
-] call EFUNC(common, addLineToDebugDraw);
-[ _position,
-	_position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorDiff ((_ref select 1) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),
-	[1, 1, 0, 1]
-] call EFUNC(common, addLineToDebugDraw);
-[ _position,
-	_position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorAdd ((_ref select 2) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),
-	[1, 1, 0, 1]
-] call EFUNC(common, addLineToDebugDraw);
-[ _position,
-	_position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorDiff ((_ref select 2) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),
-	[1, 1, 0, 1]
-] call EFUNC(common, addLineToDebugDraw);
+    private _ref = _direction call EFUNC(common,createOrthonormalReference);
+    [   _position,
+        _position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorAdd ((_ref select 1) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),
+        [1,1,0,1]
+    ] call EFUNC(common,addLineToDebugDraw);
+    [   _position,
+        _position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorDiff ((_ref select 1) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),
+        [1,1,0,1]
+    ] call EFUNC(common,addLineToDebugDraw);
+    [   _position,
+        _position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorAdd ((_ref select 2) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),
+        [1,1,0,1]
+    ] call EFUNC(common,addLineToDebugDraw);
+    [   _position,
+        _position vectorAdd (_direction vectorMultiply _dangerZoneRange) vectorDiff ((_ref select 2) vectorMultiply _dangerZoneRange * tan _dangerZoneAngle),
+        [1,1,0,1]
+    ] call EFUNC(common,addLineToDebugDraw);
 
 #endif
