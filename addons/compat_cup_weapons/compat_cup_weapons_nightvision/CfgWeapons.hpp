@@ -34,7 +34,7 @@ class CfgWeapons {
 
     // Binocular
     class CUP_NVG_PVS14: NVGoggles {
-        NVG_BINO_PRESET;
+        NVG_MONO_PRESET(3);
         NVG_GREEN_PRESET;
     };
     class CUP_NVG_PVS15_black: NVGoggles {

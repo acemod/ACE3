@@ -44,7 +44,6 @@ GVAR(moduleDestination_displayEHMouse) = [findDisplay 312, "mouseButtonDown", {
 
     if (_mouseButton != 0) exitWith {}; // Only watch for LMB
 
-    //IGNORE_PRIVATE_WARNING ["_thisArgs"]
     _thisArgs params ["_object", "_code"];
 
     // Get mouse position on 2D map or 3D world
@@ -67,7 +66,6 @@ GVAR(moduleDestination_displayEHKeyboard) = [findDisplay 312, "KeyDown", {
 
     if (_keyCode != 1) exitWith {}; // Only watch for ESC
 
-    //IGNORE_PRIVATE_WARNING ["_thisArgs"]
     _thisArgs params ["_object", "_code"];
 
     // Get mouse position on 2D map or 3D world
@@ -88,7 +86,6 @@ GVAR(moduleDestination_displayEHKeyboard) = [findDisplay 312, "KeyDown", {
 // Add draw EH for the zeus map - draws the 2D icon and line
 GVAR(moduleDestination_mapDrawEH) = [((findDisplay 312) displayCtrl 50), "draw", {
     params ["_mapCtrl"];
-    //IGNORE_PRIVATE_WARNING ["_thisArgs"]
     _thisArgs params ["_object", "_text", "_icon", "_color", "_angle"];
 
     private _pos2d = (((findDisplay 312) displayCtrl 50) ctrlMapScreenToWorld getMousePosition);

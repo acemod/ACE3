@@ -38,6 +38,7 @@ if (!_checkAll) exitWith {};
 if (!isServer) then {
     ["ace_versioning_clientCheckDone", {
         // Don't let this event get triggered again
+        //IGNORE_PRIVATE_WARNING ["_thisType", "_thisId", "_thisArgs"];
         [_thisType, _thisId] call CBA_fnc_removeEventHandler;
 
         params ["_clientErrors"];
