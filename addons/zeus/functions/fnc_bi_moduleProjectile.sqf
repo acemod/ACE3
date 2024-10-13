@@ -19,6 +19,11 @@
  * Public: No
  */
 
+// IGNORE_PRIVATE_WARNING["_dir", "_altitude", "_velocity", "_ammo", "_sounds", "_projectile", "_soundSource", "_attach", "_posAmmo"];
+// IGNORE_PRIVATE_WARNING["_shakeStrength", "_sound", "_dirDiff", "_repeat", "_soundSourceClass", "_hint", "_posNew", "_activated"];
+// IGNORE_PRIVATE_WARNING["_side", "_fnc_playRadio", "_delay", "_logic", "_radio", "_pos", "_cfgAmmo", "_shakeRadius"];
+// IGNORE_PRIVATE_WARNING["_units", "_sides", "_simulation"];
+
 _logic = _this select 0;
 _units = _this select 1;
 _activated = _this select 2;

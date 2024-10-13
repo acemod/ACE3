@@ -41,7 +41,6 @@ private _icon = "";
         _icon = QPATHTOEF(captives,UI\handcuff_ca.paa);
     };
 
-    //IGNORE_PRIVATE_WARNING ["_target"];
     _actions pushBack [
         [
             str _unit,

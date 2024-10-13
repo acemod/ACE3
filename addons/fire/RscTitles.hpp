@@ -1,5 +1,6 @@
+class RscPicture;
+
 class RscTitles {
-    class RscPicture;
     class GVAR(onFire1) {
         idd = -1;
         movingEnable = "true";
