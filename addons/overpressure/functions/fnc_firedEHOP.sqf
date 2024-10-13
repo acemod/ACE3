@@ -15,7 +15,7 @@
 	 * Public: No
  */
 
-// IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 TRACE_8("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_gunner);
 
 // Retrieve overpressure values
@@ -26,9 +26,7 @@ _opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
 private _unitOverpressureRangeAttribute = _unit getVariable QEGVAR(overpressure,distance);
 
 // If -1 (disabled) we return to server value, otherwise we use the given value.
-if(_unitOverpressureRangeAttribute == -1) then { _unitOverpressureRangeAttribute = GVAR(overpressureDistanceCoefficient); };
-
-
+if(_unitOverpressureRangeAttribute < 0) then { _unitOverpressureRangeAttribute = GVAR(overpressureDistanceCoefficient); };
 _dangerZoneRange = _dangerZoneRange * _unitOverpressureRangeAttribute;
 
 TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
@@ -39,7 +37,7 @@ if (_dangerZoneDamage <= 0) exitWith {};
 private _position = getPosASL _projectile;
 private _direction = vectorDir _projectile;
 
-// damage to others
+// Damage to others
 private _affected = (ASLToAGL _position) nearEntities ["CAManBase", _dangerZoneRange];
 
 // Let each client handle their own affected units
