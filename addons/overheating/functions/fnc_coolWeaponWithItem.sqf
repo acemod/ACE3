@@ -61,8 +61,8 @@ private _fnc_onSuccess = {
     };
 
     // cool the weapon
-    private _barrelMass = ([_weapon] call FUNC(getWeaponData)) select 7;
-    _temperature = [_temperature, _barrelMass, _liquidAmount * 10] call FUNC(calculateCooling);
+    private _weaponData = [_weapon] call FUNC(getWeaponData);
+    _temperature = [_temperature, _weaponData select 7, _liquidAmount * 10, _weaponData select 6] call FUNC(calculateCooling);
     [_target, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
 };
 

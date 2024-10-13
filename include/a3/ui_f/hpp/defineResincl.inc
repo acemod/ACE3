@@ -1380,6 +1380,7 @@ enum
 #define IDC_OPTIONS_PP_DOF_SLIDER            1317
 #define IDC_OPTIONS_PP_DOF_VALUE             1318
 #define IDC_OPTIONS_PP_CAUSTICS              1319
+#define IDC_OPTIONS_PP_HAZE                  1329
 #define IDC_OPTIONS_PP_SHARPEN_SLIDER        1320
 #define IDC_OPTIONS_PP_SHARPEN_VALUE         1321
 #define IDC_OPTIONS_PP_COLOR_CORRECTIONS     1322

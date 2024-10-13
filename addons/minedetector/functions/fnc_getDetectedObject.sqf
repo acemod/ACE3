@@ -38,15 +38,13 @@ private _mine = objNull;
 private _distance = -1;
 
 {
-    private _objectType = typeOf _x;
-
-    _isDetectable = GVAR(detectableClasses) getVariable _objectType;
-    if (isNil "_isDetectable" || {(getModelInfo _x) select 0 == "empty.p3d"}) then {
-        _isDetectable = false;
+    if ((getModelInfo _x) select 0 == "empty.p3d") then {
+        continue;
     };
 
-    // If a nun-null object was detected exit the search
-    if (_isDetectable && {!isNull _x}) exitWith {
+    // If an object was detected, exit the search
+    if ((typeOf _x) in GVAR(detectableClasses)) exitWith {
+        _isDetectable = true;
         _distance = _detectorPointAGL distance _x;
         _mine = _x;
         TRACE_3("return",_isDetectable,_mine,_distance);

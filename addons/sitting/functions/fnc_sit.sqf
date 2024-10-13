@@ -48,7 +48,7 @@ if (_multiSitting) then {
 };
 
 // Get random animation and perform it (before moving player to ensure correct placement)
-[_player, call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation); // Correctly places when using non-transitional animations
+[_player, [_seat] call FUNC(getRandomAnimation), 2] call EFUNC(common,doAnimation); // Correctly places when using non-transitional animations
 [_player, "", 1] call EFUNC(common,doAnimation); // Correctly applies animation's config values (such as disallow throwing of grenades, intercept keybinds... etc).
 
 TRACE_2("Sit pos and dir",_sitPosition,_sitDirection);
@@ -56,7 +56,7 @@ TRACE_2("Sit pos and dir",_sitPosition,_sitDirection);
 // Set direction and position
 _player setDir _sitDirection;
 //modelToWorld returns AGL
-_player setPosASL (AGLtoASL (_seat modelToWorld _sitPosition));
+_player setPosASL (AGLToASL (_seat modelToWorld _sitPosition));
 
 // Set variables, save seat object on player
 _player setVariable [QGVAR(sittingStatus), [_seat, _actionID, _seatPos]];
@@ -78,7 +78,7 @@ if (_seatsClaimed isEqualTo []) then {
 _seat setVariable [QGVAR(seatsClaimed), _seatsClaimed, true];
 
 // Also prevent dragging/carrying
-if (!([_seat] call EFUNC(common,owned))) then {
+if !([_seat] call EFUNC(common,owned)) then {
     [_player, _seat] call EFUNC(common,claim);
 };
 

@@ -21,11 +21,11 @@
  */
 
 // positions for the icon UI
-#define RIGHT_SIDE    (safezoneW + safezoneX)
-#define LEFT_SIDE     safezoneX
+#define RIGHT_SIDE    (safeZoneW + safeZoneX)
+#define LEFT_SIDE     safeZoneX
 #define TOP_SIDE      safeZoneY
-#define BOTTOM_SIDE   (safeZoneH + safezoneY)
-#define ICON_WIDTH    (2 * (((safezoneW / safezoneH) min 1.2) / 40))
+#define BOTTOM_SIDE   (safeZoneH + safeZoneY)
+#define ICON_WIDTH    (2 * (((safeZoneW / safeZoneH) min 1.2) / 40))
 #define X_POS_ICONS   (RIGHT_SIDE - (1.5 * ICON_WIDTH))
 #define Y_POS_ICONS   (TOP_SIDE + (2.5 * ICON_WIDTH))
 #define DIFFERENCE_ICONS (1.1 * ICON_WIDTH)
@@ -53,8 +53,7 @@ private _refresh = {
 
     {
         ctrlDelete _x;
-        false
-    } count _allControls;
+    } forEach _allControls;
 
     _allControls = [];
 
@@ -80,7 +79,6 @@ private _refresh = {
             _ctrl ctrlSetTextColor _xcolor;
             _ctrl ctrlCommit 0;
             _allControls pushBack _ctrl;
-            false
         } forEach (missionNamespace getVariable [QGVAR(displayIconList),[]]);
     };
 
@@ -116,8 +114,7 @@ if (_show) then {
             if (_x select 0 != _iconId) then {
                 _newList pushBack _x;
             };
-            false
-        } count _list;
+        } forEach _list;
 
         missionNamespace setVariable [QGVAR(displayIconList), _newList];
         call _refresh;

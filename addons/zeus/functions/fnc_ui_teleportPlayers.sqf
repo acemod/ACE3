@@ -23,7 +23,7 @@ private _ctrlButtonOK = _display displayCtrl 1; //IDC_OK
 private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 TRACE_1("logicObject",_logic);
 
-_control ctrlRemoveAllEventHandlers "setFocus";
+_control ctrlRemoveAllEventHandlers "SetFocus";
 
 //Specific on-load stuff:
 private _listbox = _display displayCtrl 16189;
@@ -66,7 +66,7 @@ private _fnc_onKeyUp = {
 private _fnc_onUnload = {
     params ["_display"];
 
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
     // Store checkbox value for reopening
@@ -76,10 +76,10 @@ private _fnc_onUnload = {
 private _fnc_onConfirm = {
     params [["_ctrlButtonOK", controlNull, [controlNull]]];
 
-    private _display = ctrlparent _ctrlButtonOK;
+    private _display = ctrlParent _ctrlButtonOK;
     if (isNull _display) exitWith {};
 
-    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objnull);
+    private _logic = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     if (isNull _logic) exitWith {};
 
     private _lb = _display displayCtrl 16189;
@@ -91,5 +91,5 @@ private _fnc_onConfirm = {
 };
 
 _display displayAddEventHandler ["KeyUp", _fnc_onKeyUp];
-_display displayAddEventHandler ["unload", _fnc_onUnload];
-_ctrlButtonOK ctrlAddEventHandler ["buttonclick", _fnc_onConfirm];
+_display displayAddEventHandler ["Unload", _fnc_onUnload];
+_ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

@@ -32,6 +32,7 @@ class RscEdit;
 class RscPicture;
 class RscButton;
 class ctrlXSliderH;
+
 #include "ExplosivesUI.hpp"
 #include "TimerDialog.hpp"
 #include "GUI_VirtualAmmo.hpp"
@@ -53,9 +54,15 @@ class CfgActions {
 };
 
 class CfgMineTriggers {
-    class RangeTrigger;
-    class ACE_MagneticTrigger: RangeTrigger {
-        mineMagnetic = 1;
-        mineTriggerRange = 1;
+    class IRTrigger;
+    class ACE_MagneticTrigger: IRTrigger {
+        mineWireEnd[] = {0,0.1,0.5};
+    };
+
+    class TankTriggerMagnetic;
+    class ACE_TankTriggerLight: TankTriggerMagnetic {
+        // Reduce mass needed to trigger vanilla AT Mine to realistic levels (https://en.wikipedia.org/wiki/M15_mine#Specifications).
+        // Will now trigger for any vehicle heavier than the Vanilla ATV (280kg)
+        mineTriggerMass = 300; // Default: 7000
     };
 };

@@ -17,7 +17,7 @@ params ["", "_config"];
 TRACE_1("statTextStatement_binoVisionMode",_config);
 
 private _text = [];
-private _visionModes = getArray (_config >> "visionMode") apply {toLower _x};
+private _visionModes = getArray (_config >> "visionMode") apply {toLowerANSI _x};
 {
     if (_x in _visionModes) then {
         _text pushBack (localize ([LSTRING(VisionNormal), LSTRING(VisionNight), LSTRING(VisionThermal)] select _forEachIndex));

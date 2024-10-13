@@ -19,11 +19,11 @@
 params ["_func", "_keyDown"];
 
 if (!GVAR(shown)) exitWith { false }; // fast exit if not shown
-if (!([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith { false };
-if (!(ACE_player call CBA_fnc_canUseWeapon)) exitWith { false };
+if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith { false };
+if !(ACE_player call CBA_fnc_canUseWeapon) exitWith { false };
 
 if (currentMuzzle ACE_player != currentWeapon ACE_player) exitWith { false };
-private _display = uinamespace getVariable [QGVAR(display), displayNull];
+private _display = uiNamespace getVariable [QGVAR(display), displayNull];
 if (isNull _display) exitWith { ERROR("keyPress-no display"); false };
 
 if (_keyDown) then { playSound QGVAR(click); };

@@ -30,6 +30,6 @@ _vehicle == vehicle _unit
         if (_unit == _x select FULLCREW_UNIT) exitWith {
             _ejectVarName = format [QGVAR(ejectAction_%1_%2), _x select FULLCREW_ROLE, _x select FULLCREW_TURRETPATH];
         };
-    } count fullCrew _vehicle;
+    } forEach fullCrew _vehicle;
     _vehicle getVariable [_ejectVarName, false]
 }

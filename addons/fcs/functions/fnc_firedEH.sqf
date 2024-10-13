@@ -41,7 +41,7 @@ if (_zeroDistance > 0) then {
     private _weaponCombo = [_weapon, _magazine, _ammo, _zeroDistance];
     if (_weaponCombo isNotEqualTo (_gunner getVariable [QGVAR(lastWeaponCombo), []])) then {
         private _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
-        private _antiOffset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, 0, _zeroDistance];
+        private _antiOffset = ("ace" callExtension ["fcs", [_initSpeed, _airFriction, 0, _zeroDistance]]) # 0;
         _antiOffset = parseNumber _antiOffset;
 
         _gunner setVariable [QGVAR(lastWeaponCombo), _weaponCombo];
@@ -72,5 +72,5 @@ if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(Airburst)) == 1) then {
     if (_zeroing < 50) exitWith {};
     if (_zeroing > 1500) exitWith {};
 
-    [FUNC(handleAirBurstAmmunitionPFH), 0, [_vehicle, _projectile, _zeroing]] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(handleAirBurstAmmunitionPFH), 0, [_vehicle, _projectile, _zeroing]] call CBA_fnc_addPerFrameHandler;
 };

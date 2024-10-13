@@ -18,17 +18,17 @@ version:
 
 `ace_laser_fnc_getLaserCode`
 
-|   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Unit/Vehicle | Object | Required
-**R** | Laser code | Number | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Unit/Vehicle | Object | Required |
+| **R** | Laser code | Number | Return value |
 
 ### 1.2. Set object's laser code
 
 `ace_laser_fnc_setLaserCode`
 
-|   | Arguments | Type | Optional (default value)
----| --------- | ---- | ------------------------
-0  | Unit/Vehicle | Object | Required
-1  | Laser code | Number | Required
-**R** | None | None | Return value
+|    | Arguments | Type | Optional (default value) |
+|----| --------- | ---- | ------------------------ |
+| 0  | Unit/Vehicle | Object | Required |
+| 1  | Laser code | Number | Required |
+| **R** | None | None | Return value |

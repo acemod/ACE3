@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Checks if it's possible to get in the CSW
+ * Checks if it's possible to get in the CSW.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: CSW <OBJECT>
  *
  * Return Value:
  * None

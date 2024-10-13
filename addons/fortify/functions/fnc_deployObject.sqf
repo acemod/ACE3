@@ -70,6 +70,7 @@ private _mouseClickID = [_player, "DefaultAction", {GVAR(isPlacing) == PLACE_WAI
             [_unit, _object] call FUNC(deployConfirm);
         } else {
             TRACE_1("deleting object",_object);
+            [QGVAR(onDeployStop), [_unit, _object, _cost]] call CBA_fnc_localEvent;
             deleteVehicle _object;
         };
     };

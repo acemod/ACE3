@@ -10,4 +10,4 @@ GVAR(deployPFH) = -1;
     };
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(vehicleDamage), {_this call FUNC(vehicleDamage)}] call CBA_fnc_addEventHandler;
+[QGVAR(vehicleDamage), LINKFUNC(vehicleDamage)] call CBA_fnc_addEventHandler;

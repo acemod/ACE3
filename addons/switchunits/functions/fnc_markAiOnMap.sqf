@@ -27,7 +27,7 @@ GVAR(AllMarkerNames) = [];
     // delete markers
     {
         deleteMarkerLocal _x;
-    } count GVAR(AllMarkerNames);
+    } forEach GVAR(AllMarkerNames);
 
     // reset the array
     GVAR(AllMarkerNames) = [];
@@ -58,8 +58,7 @@ GVAR(AllMarkerNames) = [];
                 };
 
                 GVAR(AllMarkerNames) pushBack _markerName;
-                nil
             };
-        } count allUnits;
+        } forEach allUnits;
     };
 }, 1.5, [_sidesToShow]] call CBA_fnc_addPerFrameHandler;

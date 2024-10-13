@@ -7,6 +7,7 @@
  * 0: The unit <OBJECT>
  * 1: Reason for death <STRING>
  * 2: Killer <OBJECT>
+ * 3: Instigator <OBJECT>
  *
  * Return Value:
  * None
@@ -14,12 +15,15 @@
  * Public: No
  */
 
-params ["_unit", ["_reason", "#setDead"], ["_instigator", objNull]];
-TRACE_3("setDead",_unit,_reason,_instigator);
+params ["_unit", ["_reason", "#setDead"], ["_source", objNull], ["_instigator", objNull]];
+TRACE_4("setDead",_unit,_reason,_source,_instigator);
 
 // No heart rate or blood pressure to measure when dead
 _unit setVariable [VAR_HEART_RATE, 0, true];
 _unit setVariable [VAR_BLOOD_PRESS, [0, 0], true];
+
+// Clear uncon variable just to be safe
+_unit setVariable [VAR_UNCON, nil, true];
 
 _unit setVariable [QEGVAR(medical,causeOfDeath), _reason, true];
 
@@ -34,7 +38,7 @@ if (_unitState isNotEqualTo "Dead") then {
 
 // (#8803) Reenable damage if disabled to prevent having live units in dead state
 // Keep this after death event for compatibility with third party hooks
-if !(isDamageAllowed _unit) then {
+if (!isDamageAllowed _unit) then {
     WARNING_1("setDead executed on unit with damage blocked - %1",_this);
     _unit allowDamage true;
 };
@@ -42,6 +46,6 @@ if !(isDamageAllowed _unit) then {
 // Kill the unit without changing visual apperance
 private _prevDamage = _unit getHitPointDamage "HitHead";
 
-_unit setHitPointDamage ["HitHead", 1, true, _instigator];
+_unit setHitPointDamage ["HitHead", 1, true, _source, _instigator];
 
-_unit setHitPointDamage ["HitHead", _prevDamage];
+_unit setHitPointDamage ["HitHead", _prevDamage, true, _source, _instigator];

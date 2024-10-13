@@ -10,14 +10,14 @@ PREP_RECOMPILE_END;
 
 if (!hasInterface) exitWith { ADDON = true; };
 
-["All", "init", {_this call FUNC(compileMenu)}] call CBA_fnc_addClassEventHandler;
+["All", "init", LINKFUNC(compileMenu)] call CBA_fnc_addClassEventHandler;
 
-GVAR(ActNamespace) = [] call CBA_fnc_createNamespace;
-GVAR(ActSelfNamespace) = [] call CBA_fnc_createNamespace;
+GVAR(ActNamespace) = createHashMap;
+GVAR(ActSelfNamespace) = createHashMap;
 
 // Compile actions for CAManBase now and use for all mans types
 ["CAManBase"] call FUNC(compileMenu);
-GVAR(cacheManActions) = +(GVAR(ActNamespace) getVariable ["CAManBase", []]); // copy
+GVAR(cacheManActions) = +(GVAR(ActNamespace) getOrDefault ["CAManBase" call EFUNC(common,getConfigName), []]); // copy
 
 // Event handlers for all interact menu controls
 DFUNC(handleMouseMovement) = {
@@ -88,8 +88,8 @@ GVAR(inheritedClassesMan) = [];
     if (GVAR(inheritedClassesAll) pushBackUnique _type == -1) exitWith { END_COUNTER(InitPost); };
 
     {
-        _x params ["_objectType", "_typeNum", "_parentPath", "_action"];
-        if (_object isKindOf _objectType) then {
+        _x params ["_objectType", "_typeNum", "_parentPath", "_action", "_excludedClasses"];
+        if (_type isKindOf _objectType && {_excludedClasses findIf {_type isKindOf _x} == -1}) then {
             [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
         };
     } forEach GVAR(inheritedActionsAll);
@@ -102,8 +102,10 @@ GVAR(inheritedClassesMan) = [];
 
     if (GVAR(inheritedClassesMan) pushBackUnique _type == -1) exitWith { END_COUNTER(InitPost); };
     {
-        _x params ["_typeNum", "_parentPath", "_action"];
-        [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+        _x params ["_typeNum", "_parentPath", "_action", "_excludedClasses"];
+        if (_excludedClasses findIf {_type isKindOf _x} == -1) then { // skip excluded classes and children
+            [_type, _typeNum, _parentPath, _action] call FUNC(addActionToClass);
+        };
     } forEach GVAR(inheritedActionsMan);
     END_COUNTER(InitPost);
 }, true, ["VirtualMan_F"]] call CBA_fnc_addClassEventHandler;

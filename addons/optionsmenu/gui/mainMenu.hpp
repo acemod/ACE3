@@ -22,7 +22,7 @@ class RscDisplayMain: RscStandardDisplay {
 
         class ACE_news_apex: InfoNews {
             idc = IDC_MAIN_INFO;
-            y = "safezoneY + safezoneH - (3 * 2 + 1) * (pixelH * pixelGrid * 2) - 4 * (4 * pixelH)";
+            y = "safeZoneY + safeZoneH - (3 * 2 + 1) * (pixelH * pixelGrid * 2) - 4 * (4 * pixelH)";
 
             class Controls: Controls {
                 class Background: Background {};

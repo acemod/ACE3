@@ -123,7 +123,9 @@ class GVAR(stats) {
         stats[] = {"maximumLoad"};
         displayName = "$STR_a3_rscdisplayarsenal_stat_load";
         showBar = 1;
+        showText = 1;
         barStatement = QUOTE([ARR_3((_this select 0) select 0,_this select 1,[ARR_3([ARR_2(0,500)],[ARR_2(0.01,1)],false)])] call FUNC(statBarStatement_default));
+        textStatement = QUOTE(call FUNC(statTextStatement_load));
         tabs[] = {{3,4,5}, {}};
     };
     class ACE_smokeChemTTL: statBase {

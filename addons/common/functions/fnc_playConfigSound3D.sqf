@@ -35,7 +35,7 @@ ISNILS(_distance,_cfgDistance);
 _fileName = _fileName select [1];
 
 // add file extension .wss as default
-if !(toLower (_fileName select [count _fileName - 4]) in [".wav", ".ogg", ".wss"]) then {
+if !(toLowerANSI (_fileName select [count _fileName - 4]) in [".wav", ".ogg", ".wss"]) then {
     ADD(_fileName,".wss");
 };
 TRACE_5("vars",_fileName,_posASL,_volume,_pitch,_distance);

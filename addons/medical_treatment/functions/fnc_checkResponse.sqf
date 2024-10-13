@@ -22,6 +22,11 @@ params ["_medic", "_patient"];
 private _output = if (_patient call EFUNC(common,isAwake)) then {
      LSTRING(Check_Response_Responsive)
 } else {
+    if (GVAR(advancedDiagnose) == 3) exitWith {
+        if (IN_CRDC_ARRST(_patient)) exitWith { LSTRING(Check_Response_CardiacArrestDirect) };
+        if (!alive _patient) exitWith { LSTRING(Check_Response_DeadDirect) };
+        LSTRING(Check_Response_UnresponsiveDirect)
+    };
     if ((GVAR(advancedDiagnose) == 2) && {IN_CRDC_ARRST(_patient)}) exitWith { LSTRING(Check_Response_CardiacArrest) };
     if ((GVAR(advancedDiagnose) == 2) && {!alive _patient}) exitWith { LSTRING(Check_Response_Dead) };
     LSTRING(Check_Response_Unresponsive)

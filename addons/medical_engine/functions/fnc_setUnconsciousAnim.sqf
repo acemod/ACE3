@@ -33,14 +33,14 @@ if (_isUnconscious) then {
     };
 
     // set animation inside vehicles
-    if (vehicle _unit != _unit) then {
+    if (!isNull objectParent _unit) then {
         private _unconAnim = _unit call EFUNC(common,getDeathAnim);
         TRACE_2("inVehicle - playing death anim",_unit,_unconAnim);
         [_unit, _unconAnim] call EFUNC(common,doAnimation);
     };
 } else {
     // reset animation inside vehicles
-    if (vehicle _unit != _unit) then {
+    if (!isNull objectParent _unit) then {
         private _awakeAnim = _unit call EFUNC(common,getAwakeAnim);
         TRACE_2("inVehicle - playing awake anim",_unit,_awakeAnim);
         [_unit, _awakeAnim, 2] call EFUNC(common,doAnimation);

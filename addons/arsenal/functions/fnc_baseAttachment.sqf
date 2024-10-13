@@ -22,9 +22,17 @@ TRACE_1("looking up base attachment",_item);
 
 private _switchableClasses = [];
 
-private _cfgWeapons = configfile >> "CfgWeapons";
+private _cfgWeapons = configFile >> "CfgWeapons";
 private _config = _cfgWeapons >> _item;
 _item = configName _config;
+
+// If the switch config entries are inherited, ignore
+if (
+    (inheritsFrom (_config >> "MRT_SwitchItemNextClass") isNotEqualTo _config) ||
+    {inheritsFrom (_config >> "MRT_SwitchItemPrevClass") isNotEqualTo _config}
+) exitWith {
+    _item // return
+};
 
 while {
     _config = _cfgWeapons >> getText (_config >> "MRT_SwitchItemNextClass");

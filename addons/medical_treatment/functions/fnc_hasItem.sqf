@@ -25,12 +25,13 @@ params ["_medic", "_patient", "_items"];
 private _fnc_checkItems = {
     params ["_unit"];
 
-    private _unitItems = _unit call EFUNC(common,uniqueItems);
+    private _unitItems = [_unit, 1] call EFUNC(common,uniqueItems);
     private _unitVehicle = objectParent _unit;
     if (!isNull _unitVehicle) then {
         _unitItems append (itemCargo _unitVehicle);
+        _unitItems append (magazineCargo _unitVehicle);
     };
-    _items findIf {_x in _unitItems} != -1
+    _items findAny _unitItems != -1
 };
 
 _medic call _fnc_checkItems || {GVAR(allowSharedEquipment) != 2 && {_patient call _fnc_checkItems}}

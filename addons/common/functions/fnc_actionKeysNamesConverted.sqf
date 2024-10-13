@@ -43,10 +43,10 @@ if (isNil "_keyTable") then {
     };
 };
 
-private _keyCache = uiNamespace getVariable [QGVAR(keyNameCache), locationNull];
+private _keyCache = uiNamespace getVariable QGVAR(keyNameCache); // @TODO: Move cache creation to preStart/somewhere else
 
-if (isNull _keyCache) then {
-    _keyCache = call CBA_fnc_createNamespace;
+if (isNil "_keyCache") then {
+    _keyCache = createHashMap;
     uiNamespace setVariable [QGVAR(keyNameCache), _keyCache];
 };
 
@@ -54,7 +54,7 @@ params [["_action", "", [""]]];
 
 private _keybinds = actionKeysNamesArray _action apply {
     private _keyName = _x;
-    private _keybind = _keyCache getVariable _keyName;
+    private _keybind = _keyCache get _keyName;
 
     if (isNil "_keybind") then {
         private _key = -1;
@@ -101,7 +101,7 @@ private _keybinds = actionKeysNamesArray _action apply {
 
         // cache
         _keybind = [_key, _shift, _ctrl, _alt];
-        _keyCache setVariable [_keyName, _keybind];
+        _keyCache set [_keyName, _keybind];
     };
 
     _keybind

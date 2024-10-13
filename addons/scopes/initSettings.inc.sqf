@@ -5,7 +5,9 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     [LSTRING(enabled_displayName), LSTRING(enabled_description)],
     _category,
     true,
-    1
+    1,
+    {[QGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -69,15 +71,9 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     [LSTRING(deduceBarometricPressureFromTerrainAltitude_displayName), LSTRING(deduceBarometricPressureFromTerrainAltitude_description)],
     _category,
     false,
-    1
-] call CBA_fnc_addSetting;
-
-[
-    QGVAR(useLegacyUI), "CHECKBOX",
-    [LSTRING(useLegacyUI_displayName), LSTRING(useLegacyUI_description)],
-    _category,
-    false,
-    0
+    1,
+    {[QGVAR(deduceBarometricPressureFromTerrainAltitude), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -86,4 +82,20 @@ private _category = format ["ACE %1", localize LSTRING(DisplayName)];
     _category,
     false,
     1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(useLegacyUI), "CHECKBOX",
+    [LSTRING(useLegacyUI_displayName), LSTRING(useLegacyUI_description)],
+    _category,
+    false,
+    2
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(inScopeAdjustment), "CHECKBOX",
+    LSTRING(inScopeAdjustment_displayName),
+    _category,
+    false,
+    0
 ] call CBA_fnc_addSetting;

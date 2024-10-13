@@ -21,10 +21,3 @@ class CfgPatches {
 #include "CursorMenus.hpp"
 
 #include "ACE_Settings.hpp"
-
-class ACE_Extensions {
-    class ace_break_line {
-        windows = 1;
-        client = 1;
-    };
-};

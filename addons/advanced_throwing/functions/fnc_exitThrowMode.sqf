@@ -53,6 +53,12 @@ _unit setVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT];
 // Remove controls hint (check if ever enabled is inside the function)
 call EFUNC(interaction,hideMouseHint);
 
+// Hide wind info after throw, if it was temporarily enabled for the throw
+if (GVAR(tempWindInfo)) then {
+    EGVAR(weather,WindInfo) = false;
+    GVAR(tempWindInfo) = false;
+};
+
 // Remove throw action
 [_unit, "DefaultAction", _unit getVariable [QGVAR(throwAction), -1]] call EFUNC(common,removeActionEventHandler);
 

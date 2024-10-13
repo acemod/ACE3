@@ -22,13 +22,13 @@ params ["_unit", "_allDamages", "_shooter", "_damageType"];
 (_allDamages select 0) params ["_damage"];
 
 // Don't bleed if damage type does not cause bleeding
-if (_damageType in GVAR(noBloodDamageTypes)) exitWith {};
+if (_damageType in (uiNamespace getVariable QGVAR(noBloodDamageTypes))) exitWith {};
 
 // Don't bleed when players only and a non-player unit is wounded
 if (GVAR(enabledFor) == BLOOD_ONLY_PLAYERS && {!isPlayer _unit && {_unit != ACE_player}}) exitWith {};
 
 // Don't bleed on the ground if in a vehicle
-if (vehicle _unit != _unit && {!(vehicle _unit isKindOf "StaticWeapon")}) exitWith {};
+if (!isNull objectParent _unit && {!(vehicle _unit isKindOf "StaticWeapon")}) exitWith {};
 
 private _bulletDir = if (isNull _shooter) then {
     random 360 // Cannot calculate the direction properly, pick a random direction

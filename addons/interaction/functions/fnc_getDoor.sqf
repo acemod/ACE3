@@ -33,7 +33,7 @@ if (typeOf _house == "") exitWith {[objNull, ""]};
 
 _intersections = [_house, "GEOM"] intersect [_position0, _position1];
 
-private _door = toLower (_intersections select 0 select 0);
+private _door = toLowerANSI (_intersections select 0 select 0);
 
 if (isNil "_door") exitWith {[_house, ""]};
 

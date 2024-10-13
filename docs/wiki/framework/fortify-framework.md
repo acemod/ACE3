@@ -109,15 +109,28 @@ The Fortify budget can be updated for any side using the function.
 * [west, -250, false] call ace_fortify_fnc_updateBudget
 ```
 
+## 2. Config Values
 
-## 2. Events
+### 2.1 Enabling fortify tools on an item or backpack
+```cpp
+class CfgWeapons { // same config also works on backpacks (CfgVehicles)
+    class yourBaseClass;
+    class yourFortifyToolClass: yourBaseClass {
+        ace_fortify_fortifyTool = 1;
+    };
+};
+```
 
-### 2.1 Listenable
 
-Event Name | Passed Parameter(s) | Locality | Description
----------- | ----------- | ------------------- | --------
-`acex_fortify_objectPlaced` | [player, side, objectPlaced] | Global | Foritfy object placed
-`acex_fortify_objectDeleted` | [player, side, objectDeleted] | Global | Foritfy object deleted
-`acex_fortify_onDeployStart` | [player, object, cost] | Local | Player starts placing object
-`ace_fortify_deployFinished` | [player, side, configName, posASL, vectorDir, vectorUp] | Local | Player successfully finishes building object
-`ace_fortify_deployCanceled` | [player, side, configName, posASL, vectorDir, vectorUp] | Local | Player cancels building object
+## 3. Events
+
+### 3.1 Listenable
+
+| Event Name | Passed Parameter(s) | Locality | Description |
+| ---------- | ----------- | ------------------- | -------- |
+| `acex_fortify_objectPlaced` | [player, side, objectPlaced] | Global | Fortify object placed |
+| `acex_fortify_objectDeleted` | [player, side, objectDeleted] | Global | Fortify object deleted |
+| `acex_fortify_onDeployStart` | [player, object, cost] | Local | Player starts placing object |
+| `ace_fortify_onDeployStop` | [player, object, cost] | Local | Player stops placing object. Raised only if stopped before trying to place (= before progress bar appears). If it's during progress bar, only `ace_fortify_deployCanceled` is raised. |
+| `ace_fortify_deployFinished` | [[player, side, configName, posASL, vectorDir, vectorUp, cost], elapsedTime, totalTime, errorCode] | Local | Player successfully finishes building object |
+| `ace_fortify_deployCanceled` | [[player, side, configName, posASL, vectorDir, vectorUp, cost], elapsedTime, totalTime, errorCode] | Local | Player cancels building object |

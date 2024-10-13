@@ -31,8 +31,8 @@ private _minDistance = 1000;
 {
     _x params ["_xObject", "_xItemName"];
 
-    if (((getPos _unit) distance2d (getPos _xObject)) < _minDistance) then {
-        _minDistance = ((getPos _unit) distance2d (getPos _xObject));
+    if (((getPos _unit) distance2D (getPos _xObject)) < _minDistance) then {
+        _minDistance = ((getPos _unit) distance2D (getPos _xObject));
         _attachedObject = _xObject;
         _itemName = _xItemName;
         _attachedIndex = _forEachIndex;
@@ -57,7 +57,7 @@ if (!_isChemlight) then {
     _unit addItem _itemName;
 };
 
-if (toLower _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) then {
+if (toLowerANSI _itemName in ["b_ir_grenade", "o_ir_grenade", "i_ir_grenade"]) then {
     // Hack for dealing with X_IR_Grenade effect not dissapearing on deleteVehicle
     detach _attachedObject;
     _attachedObject setPos ((getPos _unit) vectorAdd [0, 0, -1000]);

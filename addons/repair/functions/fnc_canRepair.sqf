@@ -21,7 +21,7 @@
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_caller,_target,_hitPoint,_className);
 
-private _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
+private _config = (configFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitWith {false}; // or go for a default?
 
 // if(isEngineOn _target) exitWith {false}; // Ignore here so action shows, then exit and show warning when selected #3348
@@ -38,7 +38,7 @@ private _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
 if !([_caller, _engineerRequired] call FUNC(isEngineer)) exitWith {false};
 
 private _items = _config call FUNC(getRepairItems);
-if (count _items > 0 && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
+if (_items isNotEqualTo [] && {!([_caller, _items] call FUNC(hasItems))}) exitWith {false};
 
 private _return = true;
 if (getText (_config >> "condition") != "") then {
@@ -65,7 +65,7 @@ if (!_return) exitWith {false};
 // if (_vehicleStateCondition == 1 && {!([_target] call FUNC(isInStableCondition))}) exitWith {false};
 
 private _repairLocations = getArray (_config >> "repairLocations");
-if (!("All" in _repairLocations)) then {
+if !("All" in _repairLocations) then {
     private _repairFacility = {([_caller] call FUNC(isInRepairFacility)) || ([_target] call FUNC(isInRepairFacility))};
     private _repairVeh = {([_caller] call FUNC(isNearRepairVehicle)) || ([_target] call FUNC(isNearRepairVehicle))};
     {

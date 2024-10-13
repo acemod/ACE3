@@ -17,7 +17,7 @@ DFUNC(replaceTerrainModelsAdd) = {
     if (_class isEqualTo "") then {
         private _configClasses = QUOTE(getNumber (_x >> 'scope') == 2 && {!(configName _x isKindOf 'AllVehicles')}) configClasses (configFile >> "CfgVehicles");
         {
-            private _xmodel = toLower getText (_x >> "model");
+            private _xmodel = toLowerANSI getText (_x >> "model");
             if (_xmodel select [0, 1] == "\") then {
                 _xmodel = _xmodel select [1];
             };
@@ -47,12 +47,12 @@ DFUNC(replaceTerrainModelsAdd) = {
     ) then {
         // wait while server replaces object, then init dragging on all clients
         [{
-            if (typeOf cursorObject == "") exitwith {};
-            [cursorObject, {
-                if !hasInterface exitWith {};
-                [_this, true] call EFUNC(dragging,setDraggable);
-                [_this, true] call EFUNC(dragging,setCarryable);
-            }] remoteExec ["call", 0];
+            private _object = cursorObject;
+
+            if (isNull _object) exitWith {};
+
+            [_object, true, nil, nil, nil, true] call EFUNC(dragging,setCarryable);
+            [_object, true, nil, nil, nil, true] call EFUNC(dragging,setDraggable);
         }, [], 1] call CBA_fnc_waitAndExecute;
     };
     true

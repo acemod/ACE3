@@ -20,7 +20,7 @@ _arguments params ["_unit", "_vehicle", "_rope", "_ropeIndex", "_hasBeenAttached
 _rope params ["_attachmentPoint", "_ropeTop", "_ropeBottom", "_dummy", "_hook"];
 
 //Wait until the unit is actually outside of the helicopter
-if (vehicle _unit != _unit) exitWith {};
+if (!isNull objectParent _unit) exitWith {};
 
 //Prevent teleport if hook has been deleted due to rope cut
 if (isNull _hook) exitWith {

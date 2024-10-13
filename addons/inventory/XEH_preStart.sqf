@@ -29,7 +29,7 @@ uiNamespace setVariable [QGVAR(backpackKeyCache), compileFinal createHashMapFrom
     };
 
     // Listboxes store pictures as lowercase
-    [format ["%1:%2", _displayName, toLower _picture], _x]
+    [format ["%1:%2", _displayName, toLowerANSI _picture], _x]
 })];
 
 // Generate list of grenades

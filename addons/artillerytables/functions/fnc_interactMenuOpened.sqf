@@ -19,7 +19,7 @@ params ["_menuType"];
 TRACE_1("interactMenuOpened",_menuType);
 
 if (_menuType != 1) exitWith {};
-if (!("ACE_artilleryTable" in (ace_player call EFUNC(common,uniqueItems)))) exitWith {};
+if !("ACE_artilleryTable" in (ace_player call EFUNC(common,uniqueItems))) exitWith {};
 
 private _vehicleAdded = ace_player getVariable [QGVAR(vehiclesAdded), []];
 private _rangeTablesShown = ace_player getVariable [QGVAR(rangeTablesShown), []];
@@ -95,7 +95,6 @@ TRACE_2("searching for new vehicles",_vehicleAdded,_rangeTablesShown);
                 [FUNC(rangeTableOpen), _info] call CBA_fnc_execNextFrame; // delay a frame because of interaction menu closing dialogs
             };
             private _condition = {
-                //IGNORE_PRIVATE_WARNING ["_player"];
                 ("ACE_artilleryTable" in (_player call EFUNC(common,uniqueItems))) && {[_player, objNull, ["notOnMap", "isNotSitting", "isNotInside"]] call EFUNC(common,canInteractWith)}
             };
             private _displayName = format ["%1%2", getText (_vehicleCfg >> "displayName"),["","*"] select _advCorrection];

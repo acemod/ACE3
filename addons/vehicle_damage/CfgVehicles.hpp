@@ -28,6 +28,7 @@ class CfgVehicles {
         GVAR(engineFireProb) = 0.5;
         GVAR(detonationDuringFireProb) = 0.2;
         GVAR(canHaveFireRing) = 0;
+        EGVAR(cookoff,canHaveFireJet) = 1;
     };
     class Wheeled_APC_F: Car_F {
         GVAR(hullDetonationProb) = 0.2;
@@ -38,6 +39,7 @@ class CfgVehicles {
         GVAR(engineFireProb) = 0.5;
         GVAR(detonationDuringFireProb) = 0.2;
         GVAR(canHaveFireRing) = 0;
+        EGVAR(cookoff,canHaveFireJet) = 1;
     };
     class APC_Tracked_01_base_F: Tank_F {};
     class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {};
@@ -288,4 +290,3 @@ class CfgVehicles {
         GVAR(canHaveFireRing) = 1;
     };
 };
-

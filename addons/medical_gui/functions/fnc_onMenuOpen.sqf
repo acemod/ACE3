@@ -41,7 +41,7 @@ if (GVAR(menuPFH) != -1) exitWith {
     TRACE_1("Menu PFH already running",GVAR(menuPFH));
 };
 
-GVAR(menuPFH) = [FUNC(menuPFH), 0, []] call CBA_fnc_addPerFrameHandler;
+GVAR(menuPFH) = [LINKFUNC(menuPFH), 0, []] call CBA_fnc_addPerFrameHandler;
 
 // Hide categories if they don't have any actions (airway)
 private _list = [

@@ -38,7 +38,7 @@ private _perframeCheck = {
     _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp", "_cost"];
 
     // Animation loop (required for longer constructions)
-    if (animationState _unit isNotEqualTo "AinvPknlMstpSnonWnonDnon_medic4") then {
+    if (_totalTime != 0 && {animationState _unit != "AinvPknlMstpSnonWnonDnon_medic4"}) then {
         // Perform animation
         [_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);
     };
@@ -55,4 +55,3 @@ private _perframeCheck = {
     LLSTRING(progressBarTitle),
     _perframeCheck
 ] call EFUNC(common,progressBar);
-
