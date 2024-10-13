@@ -23,6 +23,4 @@ if (isNull _target) exitWith {false};
 // Check if disabled for faction
 if ((faction _target) in GVAR(disabledFactions)) exitWith {false};
 
-!(_target call EFUNC(common,isAwake)) && {[_player, "ACE_dogtag_1"] call CBA_fnc_canAddItem}
-// Todo: Use code below in 2.18
-// _player canAdd ["ACE_dogtag_1", 1, true]
+!(_target call EFUNC(common,isAwake)) && {_player canAdd ["ACE_dogtag_1", 1, true]}
