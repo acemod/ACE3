@@ -6,7 +6,6 @@
  * Arguments:
  * 0: ASL position projetile is fragmenting at <ARRAY>
  * 1: Projectile ammo classname <STRING>
- * 2: Projectile shot parents <ARRAY>
  *
  * Return Value:
  * The number of fragments created <NUMBER>
@@ -21,8 +20,8 @@
 
 BEGIN_COUNTER(frago);
 
-params ["_fragPosASL", "_shellType", "_shotParents"];
-TRACE_3("frago",_fragPosASL,_shellType,_shotParents);
+params ["_fragPosASL", "_shellType"];
+TRACE_2("frago",_fragPosASL,_shellType);
 
 // Limit max frag count if there was a recent frag
 private _maxFrags = round linearConversion [
@@ -114,7 +113,6 @@ if (_targets isNotEqualTo []) then {
                     private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
                     _fragObj setVectorDir _vectorDir;
                     _fragObj setVelocity _fragObjVelocity;
-                    _fragObj setShotParents _shotParents;
                     #ifdef DEBUG_MODE_DRAW
                     [_fragObj, "green", true] call FUNC(dev_trackObj);
                     if (GVAR(dbgSphere)) then {
@@ -147,7 +145,6 @@ if (_targets isNotEqualTo []) then {
         private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
         _fragObj setVectorDir _vectorDir;
         _fragObj setVelocity _fragObjVelocity;
-        _fragObj setShotParents _shotParents;
 
         #ifdef DEBUG_MODE_DRAW
         [_fragObj, "blue", true] call FUNC(dev_trackObj);
