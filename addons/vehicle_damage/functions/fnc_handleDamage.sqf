@@ -28,7 +28,9 @@ TRACE_9("handleDamage",_vehicle,_selection,_newDamage,_source,_projectile,_hitIn
 if (!local _vehicle) exitWith {};
 
 // Killing units via End key is an edge case (#10375)
-if (_context == 0 && {_newDamage == 1 && _projectile == "" && isNull _source && isNull _instigator}) exitWith {_newDamage};
+// This didn't matter pre-Arma 3 2.18 but now this goes through the event handler
+// TODO: Structural fire damage >= 1 in a single damage event could still be caught here and we don't want that, but we haven't found a better way to catch this, fire damage should be small most of the time anyway
+if (_context == 0 && {_newDamage >= 1 && _projectile == "" && isNull _source && isNull _instigator}) exitWith {_newDamage};
 
 private _currentDamage = if (_selection != "") then {
     _vehicle getHitIndex _hitIndex
