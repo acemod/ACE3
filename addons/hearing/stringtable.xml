@@ -201,7 +201,7 @@
             <English>Explosion Deafness Coefficient</English>
         </Key>
         <Key ID="STR_ACE_Hearing_explosionDeafnessCoefficient_Description">
-            <English>Changes how much deafness explosions cause.</English>
+            <English>Changes how much deafness explosions cause.\nSetting to 0 will disable explosion hearing damage.</English>
         </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
