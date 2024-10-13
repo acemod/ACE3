@@ -23,7 +23,7 @@ private _opValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues)
 
 _opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
 
-private _unitCoef = _unit getVariable [QEGVAR(overpressure,distance), GVAR(overpressureDistanceCoefficient)]; // Because server setting is <null> we fall back to server settings.
+private _unitCoef = _unit getVariable [QEGVAR(overpressure,distance), GVAR(overpressureDistanceCoefficient)]; // Because object attribute slider is <null> we fall back to server settings.
 
 
 _dangerZoneRange = _dangerZoneRange * _unitCoef;
