@@ -16,7 +16,7 @@
  * Public: Yes
  */
 
-params [["_item", "", [0,""]], ["_includeType", true, [true]]];
+params [["_item", "", [0, ""]], ["_includeType", true, [true]]];
 
 // If no item replacements exist or item is empty then we don't have any
 if (isNil QGVAR(itemReplacements) || _item isEqualTo "") exitWith {[]};
