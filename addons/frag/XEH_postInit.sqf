@@ -20,7 +20,7 @@
             // Wait a frame to make sure it doesn't target the dead
             [{
                 [QGVAR(frag_eh), _this] call CBA_fnc_serverEvent
-            }, _this] call CBA_fnc_execNextFrame;
+            }, [_posASL, _ammo]] call CBA_fnc_execNextFrame;
         };
     }] call EFUNC(common,addExplosionEventHandler);
 

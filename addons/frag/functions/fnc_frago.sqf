@@ -4,8 +4,8 @@
  * Server func to create the fragmentation for a round.
  *
  * Arguments:
- * 0: Projectile ammo classname <STRING>
- * 1: ASL position projetile is fragmenting at <ARRAY>
+ * 0: ASL position projetile is fragmenting at <ARRAY>
+ * 1: Projectile ammo classname <STRING>
  *
  * Return Value:
  * The number of fragments created <NUMBER>
@@ -20,7 +20,7 @@
 
 BEGIN_COUNTER(frago);
 
-params ["_shellType", "_fragPosASL"];
+params ["_fragPosASL", "_shellType"];
 TRACE_2("frago",_fragPosASL,_shellType);
 
 // Limit max frag count if there was a recent frag
