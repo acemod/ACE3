@@ -4,9 +4,10 @@
  * Local callback for administering an IV bag to a patient.
  *
  * Arguments:
- * 0: Patient <OBJECT>
- * 1: Body Part <STRING>
- * 2: Treatment <STRING>
+ * 0: Medic <OBJECT>
+ * 1: Patient <OBJECT>
+ * 2: Body Part <STRING>
+ * 3: Treatment <STRING>
  *
  * Return Value:
  * None
