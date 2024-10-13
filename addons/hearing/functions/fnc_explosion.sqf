@@ -51,7 +51,7 @@ if (_distance > _maxDistance) exitWith {
 // Tone down _maxDistance to bring strength back to similar levels as a large burst of a loud weapon
 private _strength = _vehAttenuation * _explosive * _volume * (sqrt _maxDistance) / _distance^2;
 
-TRACE_2("strength",_volume,_strength);
+TRACE_6("strength",_vehAttenuation,_explosive,_volume,_maxDistance,_distance,_strength);
 
 // Call immediately, as it will get picked up later by the update thread anyway
-_strength call FUNC(earRinging);
+(_strength * GVAR(explosionDeafnessCoefficient)) call FUNC(earRinging);
