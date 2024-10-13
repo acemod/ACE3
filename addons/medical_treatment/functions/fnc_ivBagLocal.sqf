@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal, mharis001
+ * Author: Glowbal, mharis001, modified by Cplhardcore
  * Local callback for administering an IV bag to a patient.
  *
  * Arguments:
@@ -12,16 +12,16 @@
  * None
  *
  * Example:
- * [player, "RightArm", "BloodIV"] call ace_medical_treatment_fnc_ivBagLocal
+ * [player, player, "RightArm", "BloodIV"] call ace_medical_treatment_fnc_ivBagLocal
  *
  * Public: No
  */
 
-params ["_patient", "_bodyPart", "_classname"];
+params ["_medic", "_patient", "_bodyPart", "_classname"];
 
 // Exit if patient has max blood volume
 private _bloodVolume = GET_BLOOD_VOLUME(_patient);
-if (_bloodVolume >= DEFAULT_BLOOD_VOLUME) exitWith {};
+if (_bloodVolume >= DEFAULT_BLOOD_VOLUME) exitWith {_medic addItem _classname};
 
 private _partIndex = ALL_BODY_PARTS find toLowerANSI _bodyPart;
 
