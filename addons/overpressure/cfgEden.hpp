@@ -37,7 +37,7 @@ class Cfg3DEN {
                         control = QGVAR(slider);
                         displayName = CSTRING(Overpressure_distanceCoefficient_displayName);
                         tooltip = CSTRING(Overpressure_distanceCoefficient_toolTip);
-                        expression = QUOTE(if (_value >= 0.1) then {_this setVariable [ARR_3(QQEGVAR(overpressure,distance),_value,true)]}); // ace_overpressure_distance
+                        expression = QUOTE(if (_value >= 0.1) then {_this setVariable [ARR_3(QQEGVAR(overpressure,distance),_value,true)]});// Will return <null> if the slider is not set. NEEDS CHECKING!
                         typeName = "NUMBER";
                         condition = "objectVehicle";
                         defaultValue = 0;

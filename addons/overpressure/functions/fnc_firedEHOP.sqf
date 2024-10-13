@@ -23,10 +23,9 @@ private _opValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues)
 
 _opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
 
-private _unitCoef = _unit getVariable [QEGVAR(overpressure,distance), GVAR(overpressureDistanceCoefficient)];
-systemChat format ["coef  = %1", _unitCoef];
+private _unitCoef = _unit getVariable [QEGVAR(overpressure,distance), GVAR(overpressureDistanceCoefficient)]; // Because server setting is <null> we fall back to server settings.
 
-// We check the unitCoef this time.
+
 _dangerZoneRange = _dangerZoneRange * _unitCoef;
 
 TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
