@@ -24,7 +24,7 @@ params ["_target", "_medication", ["_getCount", true]];
 private _return = 0;
 private _medDose = 0;
 {
-    _x params ["_xMed", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem", "_dose"];
+    _x params ["_xMed", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem", "", "", "", "_dose"];
     if (_xMed == _medication) then {
         private _timeInSystem = CBA_missionTime - _timeAdded;
         _medDose = _medDose + _dose;
@@ -40,4 +40,4 @@ private _medDose = 0;
 
 TRACE_5("getMedicationCount",_target,_medication,_getCount,_return,_medDose);
 
-[_medDose, _return]
+[_medication, _medDose, _return]

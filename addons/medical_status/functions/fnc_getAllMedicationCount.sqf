@@ -20,35 +20,6 @@
 
 params ["_target", ["_getCount", true]];
 
-private _medStack = [];
-
-{
-    _x params ["_xMed", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem", "_dose"];
-    
-    private _timeInSystem = CBA_missionTime - _timeAdded;
-    private _effectiveness = 0;
-    
-    if (_getCount) then {
-        _effectiveness = linearConversion [_timeTillMaxEffect, _maxTimeInSystem, _timeInSystem, 1, 0, true];
-    } else {
-        _effectiveness = (((_timeInSystem / _timeTillMaxEffect) ^ 2) min 1) * (_maxTimeInSystem - _timeInSystem) / _maxTimeInSystem;
-    };
-    
-    private _found = false;
-    {
-        _x params ["_existingMed", "_totalDose", "_totalEffectiveness"];
-        
-        if (_existingMed isEqualTo _xMed) then {
-            _found = true;
-            _medStack set [_forEachIndex, [_existingMed, _totalDose + _dose, _totalEffectiveness + _effectiveness]]; 
-        } else {};
-    } forEach _medStack;
-    if (!_found) then {
-        _medStack pushBack [_xMed, _dose, _effectiveness];
-    };
-
-} forEach (_target getVariable [VAR_MEDICATIONS, []]);
-
-TRACE_3("getMedicationStack",_target,_medStack,_getCount);
-
-_medStack
+private _medicationClasses = (_target getVariable [VAR_MEDICATIONS, []]) apply {_x select 0};
+_medicationClasses = _medicationClasses arrayIntersect _medicationClasses;
+_medicationClasses apply {[_target, _x, _getCount] call FUNC(getMedicationCount)} // return

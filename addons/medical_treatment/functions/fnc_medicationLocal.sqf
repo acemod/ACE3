@@ -79,7 +79,7 @@ private _heartRateChange = _minIncrease + random (_maxIncrease - _minIncrease);
 
 // Adjust the medication effects and add the medication to the list
 TRACE_3("adjustments",_heartRateChange,_painReduce,_viscosityChange);
-[_patient, _className, _dose, _timeTillMaxEffect, _timeInSystem, _heartRateChange, _painReduce, _viscosityChange] call EFUNC(medical_status,addMedicationAdjustment);
+[_patient, _className, _timeTillMaxEffect, _timeInSystem, _heartRateChange, _painReduce, _viscosityChange, _dose] call EFUNC(medical_status,addMedicationAdjustment);
 
 // Check for medication compatiblity
 [_patient, _className, _incompatibleMedication] call FUNC(onMedicationUsage);

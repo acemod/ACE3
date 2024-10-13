@@ -26,10 +26,10 @@ if (isClass (_medicationConfig)) then {
         _onOverDose = getText (_medicationConfig >> "onOverDose"); 
     };
 };
-TRACE_2("overdose", _classname, _onOverDose);
+TRACE_2("overdose",_classname,_onOverDose);
 if (_onOverDose == "") exitWith {
-    TRACE_1("CriticalVitals Event", _unit);
-    [QEGVAR(medical, CriticalVitals), _unit] call CBA_fnc_localEvent;
+    TRACE_1("CriticalVitals Event",_unit);
+    [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
 };
 if (!isNil "_onOverDose" && {isText _onOverDose}) then {
     _onOverDose = compile _onOverDose;
