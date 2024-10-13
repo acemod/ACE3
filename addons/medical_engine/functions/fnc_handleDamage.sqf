@@ -33,7 +33,7 @@ if (_structuralDamage) then {
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
 // Killing units via End key is an edge case (#10375)
-if (_structuralDamage && {_damage == 1 && _ammo == "" && isNull _shooter && isNull _instigator}) exitWith {_damage};
+if (_structuralDamage && {_damage >= 1 && _ammo == "" && isNull _shooter && isNull _instigator}) exitWith {_damage};
 
 private _newDamage = _damage - _oldDamage;
 
