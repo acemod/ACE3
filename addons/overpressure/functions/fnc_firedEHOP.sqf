@@ -1,18 +1,18 @@
 #include "..\script_component.hpp"
 /*
  * Author: joko // Jonas
-	 * Handle fire of vehicle weapons. Called from the unified fired EH only for the local player vehicle.
-	 *
-	 * Arguments:
-	 * None. Parameters inherited from EFUNC(common, firedEH)
-	 *
-	 * Return Value:
-	 * None
-	 *
-	 * Example:
-	 * [tank, "cannon_125mm", "cannon_125mm", "player", "Sh_125mm_APFSDS_T_Green", "24Rnd_125mm_APFSDS_T_Green", projectile] call ace_overpressure_fnc_firedEHOP
-	 *
-	 * Public: No
+ * Handle fire of Vehicle Weapons. Called from the unified fired EH only for the local player vehicle.
+ *
+ * Arguments:
+ * None. Parameters inherited from EFUNC(common,firedEH)
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [tank, "cannon_125mm", "cannon_125mm", "player", "Sh_125mm_APFSDS_T_Green", "24Rnd_125mm_APFSDS_T_Green", projectile] call ace_overpressure_fnc_firedEHOP
+ *
+ * Public: No
  */
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
