@@ -26,7 +26,7 @@ _opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
 private _unitOverpressureRangeAttribute = _unit getVariable [QEGVAR(overpressure,distance), -1];
 
 // If -1 (disabled) we return to server value, otherwise we use the given value.
-_dangerZoneRange = _dangerZoneRange * [_unitOverpressureRangeAttribute, GVAR(overpressureDistanceCoefficient)] select (_unitOverpressureRangeAttribute < 0);
+_dangerZoneRange = _dangerZoneRange * ([_unitOverpressureRangeAttribute, GVAR(overpressureDistanceCoefficient)] select (_unitOverpressureRangeAttribute < 0));
 
 TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
 
