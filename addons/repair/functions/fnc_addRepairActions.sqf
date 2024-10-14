@@ -31,7 +31,7 @@ if (_type in _initializedClasses) exitWith {};
 if (_type == "") exitWith {};
 
 // get selections to ignore
-private _selectionsToIgnore = _vehicle call FUNC(getSelectionsToIgnore);
+([_vehicle] call FUNC(getSelectionsToIgnore)) params ["_selectionsToIgnore"];
 
 // get all hitpoints and selections
 (getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];  // Since 1.82 these are all lower case
@@ -120,6 +120,10 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
         // Find the action position
         //IGNORE_PRIVATE_WARNING ["_target"];
         private _position = compile format ["_target selectionPosition ['%1', 'HitPoints'];", _selection];
+        if ("rotor" in _hitpoint || "hull" in _hitpoint || "engine" in _hitpoint) then {
+            _position = compile format ["_target selectionPosition ['%1', 'HitPoints', 'AveragePoint'];", _selection];
+        };
+
         {
             _x params ["_hit", "_pos"];
             if (_hitpoint == _hit) exitWith {
