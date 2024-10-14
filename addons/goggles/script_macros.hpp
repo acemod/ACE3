@@ -27,3 +27,10 @@
 #define GLASSDISPLAY GETUVAR(GVAR(Display),displayNull)
 
 #define CLAMP(x,low,high) (if(x > high)then{high}else{if(x < low)then{low}else{x}})
+
+#define IDD_GOGGLES 1044
+#define IDC_GOGGLES_OVERLAY 10650
+
+#define IDD_GOGGLESEFFECTS 1045
+#define IDC_GOGGLESEFFECTS_DIRT 10660
+#define IDC_GOGGLESEFFECTS_DUST 10662
