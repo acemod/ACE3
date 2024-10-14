@@ -17,8 +17,7 @@
 
 params ["_item"];
 
-private _cfgWeapons = configFile >> "CfgWeapons";
-private _config = _item call CBA_fnc_getItemConfig;
-_item isKindOf ["CBA_MiscItem", _cfgWeapons] ||
-{getNumber (_config >> "ACE_asItem") == 1} ||
-{getNumber (_config >> "ACE_isUnique") == 1};
+_item isKindOf ["CBA_MiscItem", configFile >> "CfgWeapons"] || {
+    private _config = _item call CBA_fnc_getItemConfig;
+    getNumber (_config >> "ACE_asItem") == 1 || {getNumber (_config >> "ACE_isUnique") == 1}
+};
