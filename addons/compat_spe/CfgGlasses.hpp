@@ -1,4 +1,5 @@
-#define COMBAT_GOGGLES         ACE_Overlay = QPATHTOEF(goggles,textures\HUD\CombatGoggles.paa); \
+#define COMBAT_GOGGLES \
+        ACE_Overlay = QPATHTOEF(goggles,textures\HUD\CombatGoggles.paa); \
         ACE_OverlayCracked = QPATHTOEF(goggles,textures\HUD\CombatGogglesCracked.paa); \
         ACE_Resistance = 2; \
         ACE_Protection = 1
