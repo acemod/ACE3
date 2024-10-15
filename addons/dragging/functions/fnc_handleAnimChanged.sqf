@@ -17,6 +17,7 @@
 */
 
 params ["_unit", "_anim"];
+//IGNORE_PRIVATE_WARNING ["_thisArgs", "_thisID"];
 _thisArgs params ["_realUnit"];
 TRACE_4("params",_unit,_anim,_realUnit,_thisID);
 

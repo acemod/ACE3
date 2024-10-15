@@ -354,6 +354,7 @@
             <Japanese>調整UIをスコープ内に表示</Japanese>
             <Korean>스코프에 조절 UI 보이기</Korean>
             <Russian>Показать интерфейс настройки в области видимости.</Russian>
+            <Spanish>Mostrar IU de ajuste en el visor</Spanish>
         </Key>
         <Key ID="STR_ACE_Scopes_AdjustUpMinor">
             <English>Minor adjustment up</English>

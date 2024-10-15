@@ -43,7 +43,7 @@ private _distance = -1;
     };
 
     // If an object was detected, exit the search
-    if ((typeOf _x) in (uiNamespace getVariable QGVAR(detectableClasses))) exitWith {
+    if ((typeOf _x) in GVAR(detectableClasses)) exitWith {
         _isDetectable = true;
         _distance = _detectorPointAGL distance _x;
         _mine = _x;

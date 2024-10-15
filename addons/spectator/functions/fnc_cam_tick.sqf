@@ -64,12 +64,12 @@ if (isNull _camTarget) then {
     private _targetInVeh = GVAR(camTargetInVehicle);
 
     if (GVAR(camHasTarget)) then {
-        if (!_targetInVeh && { vehicle _camTarget != _camTarget }) then {
+        if (!_targetInVeh && { !isNull objectParent _camTarget }) then {
             [_camTarget] call FUNC(cam_setTarget);
             GVAR(camTargetInVehicle) = true;
         };
 
-        if (_targetInVeh && { vehicle _camTarget == _camTarget }) then {
+        if (_targetInVeh && { isNull objectParent _camTarget }) then {
             [_camTarget] call FUNC(cam_setTarget);
             GVAR(camTargetInVehicle) = false;
         };

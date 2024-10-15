@@ -30,7 +30,7 @@ _opValues params ["_overpressureAngle", "_overpressureRange", "_overpressureDama
 TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
 
 {
-    if (local _x && {_x != _firer} && {vehicle _x == _x}) then {
+    if (local _x && {_x != _firer} && {isNull objectParent _x}) then {
         private _targetPositionASL = eyePos _x;
         private _relativePosition = _targetPositionASL vectorDiff _posASL;
         private _axisDistance = _relativePosition vectorDotProduct _direction;

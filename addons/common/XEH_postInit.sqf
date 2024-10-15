@@ -137,7 +137,7 @@
     params ["_unit", "_disable"];
 
     if (_disable) then {
-        private _features = ["AUTOTARGET", "TARGET", "WEAPONAIM"/*, "FIREWEAPON"*/, "RADIOPROTOCOL"]; // TODO: Uncomment in 2.18
+        private _features = ["AUTOTARGET", "TARGET", "WEAPONAIM", "FIREWEAPON", "RADIOPROTOCOL"];
 
         // Save current status
         _unit setVariable [QGVAR(featuresAiUAV), _features apply {[_x, _unit checkAIFeature _x]}];
@@ -197,7 +197,7 @@ if (isServer) then {
 
 [QGVAR(unlockVehicle), {
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
-    if ([] isNotEqualTo getArray (configOf _target >> "assembleInfo" >> "dissasembleTo")) then {
+    if ([] isNotEqualTo getArray (configOf _this >> "assembleInfo" >> "dissasembleTo")) then {
         [_this, "disableWeaponAssembly", QGVAR(lockVehicle), false] call FUNC(statusEffect_set);
     };
 }] call CBA_fnc_addEventHandler;
@@ -294,7 +294,7 @@ call FUNC(checkFiles);
 
 
 //////////////////////////////////////////////////
-// Set up ace_settingsInitialized eventhandler
+// Set up CBA_settingsInitialized eventhandler
 //////////////////////////////////////////////////
 
 ["CBA_settingsInitialized", {

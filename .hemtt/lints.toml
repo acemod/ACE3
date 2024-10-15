@@ -3,3 +3,8 @@ options.ignore = [
     "addPublicVariableEventHandler", # Alt syntax is broken, we are using main syntax
     "createSoundSource", # Greatly attenuated when in first person and in a vehicle
 ]
+
+[sqf.var_all_caps]
+options.ignore = [
+    "SLX_*", "ACE_*"
+]
