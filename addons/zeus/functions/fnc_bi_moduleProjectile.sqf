@@ -124,11 +124,6 @@ if (_activated) then {
             _projectile setVelocity _velocity;
             if (_attach) then {_projectile attachTo [_logic,[0,0,_altitude]];};
 
-            // Added by ace_zeus for ace_frag compatibility
-            if (!isNil QEFUNC(frag,addPfhRound)) then {
-                [objNull, _ammo, _projectile, true] call EFUNC(frag,addPfhRound);
-            };
-
             //--- Play sound
             if (_sound != "") then {[[_logic,_sound,"say3D"],"bis_fnc_sayMessage"] call bis_fnc_mp;};
 
