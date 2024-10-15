@@ -2,7 +2,6 @@
 
 GVAR(aircraftWithPylons) = [];
 
-//IGNORE_PRIVATE_WARNING ["_player", "_target"];
 GVAR(loadoutAction) = [ // create action
     QGVAR(loadoutAction),
     localize LSTRING(ConfigurePylons),
