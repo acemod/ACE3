@@ -589,6 +589,7 @@
             <Japanese>遠隔分隊管理</Japanese>
             <Korean>분대 원격 관리</Korean>
             <Italian>Gestione squadra da remoto</Italian>
+            <Spanish>Gestión Remota de Escuadra</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_remoteTeamManagement_Description">
             <English>Allow dropping and changing team colors of any unit in player's squad</English>
@@ -597,6 +598,7 @@
             <Japanese>プレイヤー分隊内の任意のユニットにチームからの脱退と色の変更を許可します</Japanese>
             <Korean>플레이어 분대의 모든 유닛을 삭제하고 팀 색상 변경하는 것을 허용합니다.</Korean>
             <Italian>Permetti di cambiare il colore o rimuovere una qualsiasi unità della propria squadra</Italian>
+            <Spanish>Permite abandonar y cambiar el color del equipo de cualquier unidad en la escuadra del jugador</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_Squad">
             <English>Squad</English>
@@ -1376,6 +1378,7 @@
             <Japanese>車両アニメーションベースのインタラクション</Japanese>
             <Korean>애니메이션 있는 상호작용</Korean>
             <Italian>Interazione con animazioni</Italian>
+            <Spanish>Interacción con animaciones</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_DisplayName">
             <English>Interact With Enemy Crew</English>
@@ -1384,6 +1387,7 @@
             <Russian>Взаимодействие с вражеским экипажем</Russian>
             <Korean>적 승무원과의 상호작용</Korean>
             <Italian>Interazioni con equipaggio nemico</Italian>
+            <Spanish>Interactuar Con Tripulación Enemiga</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_Description">
             <English>Limit some interactions on vehicles crewed by enemy factions.</English>
@@ -1392,6 +1396,7 @@
             <Russian>Ограничьте некоторые взаимодействия на транспортных средствах, управляемых вражеской стороной.</Russian>
             <Korean>적 진영이 탑승한 차량과의 일부 상호작용을 제한합니다.</Korean>
             <Italian>Limita alcune interazioni su veicoli con nemici a bordo.</Italian>
+            <Spanish>Limita algunas interacciones en vehículos tripulador por facciones enemigas.</Spanish>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_allowCSW">
             <English>Allow for Static Weapons</English>
@@ -1400,6 +1405,7 @@
             <Russian>Разрешить использование статического оружия</Russian>
             <Korean>고정화기 허용</Korean>
             <Italian>Permetti con armi statiche</Italian>
+            <Spanish>Permitir para Armas Estáticas</Spanish>
         </Key>
     </Package>
 </Project>

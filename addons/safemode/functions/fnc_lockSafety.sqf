@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2, johnb43
- * Puts weapon on safety, or take it off safety if safety is already put on.
+ * Puts weapon on safety, or takes it off safety if safety is already put on.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -36,10 +36,13 @@ if (_muzzle in _safedWeaponMuzzles) exitWith {
     [_unit, _weapon, _muzzle, _hint] call FUNC(unlockSafety);
 };
 
+private _weaponSelected = currentWeapon _unit == _weapon;
 private _firemode = (_unit weaponState _muzzle) select 2;
 
 // This syntax of selectWeapon doesn't mess with gun lights and lasers
-_unit selectWeapon [_weapon, _muzzle, _firemode];
+if (_weaponSelected) then {
+    _unit selectWeapon [_weapon, _muzzle, _firemode];
+};
 
 // Store new muzzle & firemode
 _safedWeaponMuzzles set [_muzzle, _firemode];
@@ -83,7 +86,9 @@ if (isNil {_unit getVariable QGVAR(actionID)}) then {
 };
 
 // Play fire mode selector sound
-[_unit, _weapon, _muzzle] call FUNC(playChangeFiremodeSound);
+if (_weaponSelected) then {
+    [_unit, _weapon, _muzzle] call FUNC(playChangeFiremodeSound);
+};
 
 // Show info box unless disabled
 if (_hint) then {
