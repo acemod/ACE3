@@ -609,5 +609,8 @@
             <German>Steuert, ob Frachtgegenstände über die Aufbaumethode entladen werden können.</German>
             <Spanish>Controla si los objetos de la carga pueden ser descargados mediante el método de despliegue.</Spanish>
         </Key>
+        <Key ID="STR_ACE_Cargo_SizeMenu">
+            <English>Show Check Cargo Size Interaction</English>
+        </Key>
     </Package>
 </Project>
