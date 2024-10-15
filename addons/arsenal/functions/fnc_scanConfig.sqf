@@ -127,13 +127,7 @@ private _isTool = false;
             };
         };
         // Misc. items
-        case (
-            _hasItemInfo &&
-            {_isMiscItem &&
-            {_itemInfoType in [TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD]}} ||
-            {_itemInfoType in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
-            {_simulationType == "ItemMineDetector"}
-        ): {
+        case (_hasItemInfo && _isMiscItem): {
             (_configItems get IDX_VIRT_MISC_ITEMS) set [_className, nil];
             if (_isTool) then {_toolList set [_className, nil]};
         };
@@ -162,7 +156,7 @@ private _magazineMiscItems = createHashMap;
     _magazineMiscItems set [configName _x, nil];
 } forEach ((toString {
     with uiNamespace do {
-        [(configName _x), _x] call FUNC(isMiscItem);
+        [(configName _x), _x, true] call FUNC(isMiscItem);
     };
 }) configClasses _cfgMagazines);
 
