@@ -74,7 +74,7 @@ GVAR(lastPlayerVehicle) = objNull;
         };
 
         if ((!isNull _vehicle) && {_player != _vehicle}) then {
-            private _firedEH = _vehicle addEventHandler ["FiredNear", {call FUNC(firedNear)}];
+            private _firedEH = _vehicle addEventHandler ["FiredNear", LINKFUNC(firedNear)];
             _vehicle setVariable [QGVAR(firedEH), _firedEH];
             GVAR(lastPlayerVehicle) = _vehicle;
             TRACE_2("added veh eh",_firedEH,GVAR(lastPlayerVehicle));
@@ -83,35 +83,15 @@ GVAR(lastPlayerVehicle) = objNull;
 
     ["turret", LINKFUNC(updatePlayerVehAttenuation), false] call CBA_fnc_addPlayerEventHandler;
 
+    [QGVAR(firedNear), "FiredNear", LINKFUNC(firedNear), true] call CBA_fnc_addBISPlayerEventHandler;
+    [QGVAR(slotItemChanged), "SlotItemChanged", {(_this select 2) call FUNC(updateHearingProtection)}, true] call CBA_fnc_addBISPlayerEventHandler;
+
     // Reset deafness on respawn (or remote control player switch)
     ["unit", {
-        params ["_player", "_oldPlayer"];
-        TRACE_2("unit change",_player,_oldPlayer);
-
-        if (!isNull _oldPlayer) then {
-            private _firedEH = _oldPlayer getVariable [QGVAR(firedEH), -1];
-            _oldPlayer removeEventHandler ["FiredNear", _firedEH];
-            _oldPlayer setVariable [QGVAR(firedEH), nil];
-            TRACE_2("removed unit eh",_oldPlayer,_firedEH);
-        };
-        // Don't add a new EH if the unit respawned
-        if ((_player getVariable [QGVAR(firedEH), -1]) == -1) then {
-            if ((getNumber (configOf _player >> "isPlayableLogic")) == 1) exitWith {
-                TRACE_1("skipping playable logic",typeOf _player); // VirtualMan_F (placeable logic zeus / spectator)
-            };
-
-            private _firedEH = _player addEventHandler ["FiredNear", {call FUNC(firedNear)}];
-            _player setVariable [QGVAR(firedEH), _firedEH];
-            TRACE_2("added unit eh",_player,_firedEH);
-        };
-
         GVAR(deafnessDV) = 0;
         GVAR(deafnessPrior) = 0;
         GVAR(time3) = 0;
 
-        call FUNC(updateHearingProtection);
+        UPDATE_HEARING_EARPLUGS call FUNC(updateHearingProtection);
     }, true] call CBA_fnc_addPlayerEventHandler;
-
-    // Update protection on possible helmet change
-    ["loadout", LINKFUNC(updateHearingProtection), false] call CBA_fnc_addPlayerEventHandler;
 }] call CBA_fnc_addEventHandler;
