@@ -50,7 +50,7 @@ private _isTool = false;
     _configItemInfo = _x >> "ItemInfo";
     _hasItemInfo = isClass (_configItemInfo);
     _itemInfoType = if (_hasItemInfo) then {getNumber (_configItemInfo >> "type")} else {0};
-    _isMiscItem = _className call FUNC(isMiscItem);
+    _isMiscItem = [_className, _x] call FUNC(isMiscItem);
     _isTool = getNumber (_x >> "ACE_isTool") isEqualTo 1;
 
     switch (true) do {
@@ -162,7 +162,7 @@ private _magazineMiscItems = createHashMap;
     _magazineMiscItems set [configName _x, nil];
 } forEach ((toString {
     with uiNamespace do {
-        (configName _x) call FUNC(isMiscItem);
+        [(configName _x), _x] call FUNC(isMiscItem);
     };
 }) configClasses _cfgMagazines);
 
