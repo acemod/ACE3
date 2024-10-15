@@ -26,6 +26,7 @@ params [["_items", [], [[]]], ["_tooltip", "", [""]], ["_picture", QPATHTOF(data
 if (isNil QGVAR(customRightPanelButtons)) then {
     GVAR(customRightPanelButtons) = [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil];
 };
+_items = _items apply {_x call EFUNC(common,getConfigName)}; // sanitize to configCase, required for cache, this doesn't run constantly anyway
 
 private _position = -1;
 
@@ -56,20 +57,8 @@ if (!isNil "_currentButtonInPosition") then {
 };
 
 // If spot found, add items and return position
-private _cfgWeapons = configFile >> "CfgWeapons";
-private _cfgMagazines = configFile >> "CfgMagazines";
-private _configItemInfo = "";
+_items = _items select {_x call FUNC(isMiscItem)}; // Only misc items can be added
 
-_items = _items select {
-    _configItemInfo = _cfgWeapons >> _x >> "ItemInfo";
-
-    _x isKindOf ["CBA_MiscItem", _cfgWeapons] && {getNumber (_configItemInfo >> "type") in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD]} ||
-    {getNumber (_configItemInfo >> "type") in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
-    {getText (_cfgWeapons >> _x >> "simulation") == "ItemMineDetector"} ||
-    {getNumber (_cfgMagazines >> _x >> "ACE_isUnique") == 1} ||
-    {getNumber (_cfgMagazines >> _x >> "ACE_asItem") == 1}
-};
-
-GVAR(customRightPanelButtons) set [_position, [_items apply {_x call EFUNC(common,getConfigName)}, _picture, _tooltip, _moveOnOverwrite]];
+GVAR(customRightPanelButtons) set [_position, [_items, _picture, _tooltip, _moveOnOverwrite]];
 
 _position

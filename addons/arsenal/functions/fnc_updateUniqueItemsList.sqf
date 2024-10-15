@@ -211,7 +211,7 @@ private _attachments = GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS;
             _configItemInfo = _config >> "ItemInfo";
             _hasItemInfo = isClass (_configItemInfo);
             _itemInfoType = if (_hasItemInfo) then {getNumber (_configItemInfo >> "type")} else {0};
-            _isMiscItem = _x isKindOf ["CBA_MiscItem", _cfgWeapons];
+            _isMiscItem = _x call FUNC(isMiscItem);
 
             _baseWeapon = if (!_isMiscItem) then {
                 _x call FUNC(baseWeapon)
@@ -263,12 +263,7 @@ private _attachments = GVAR(virtualItems) get IDX_VIRT_ATTACHMENTS;
                 // Misc. items
                 case (
                     !(_x in (GVAR(virtualItems) get IDX_VIRT_MISC_ITEMS)) && // misc. items don't use 'baseWeapon'
-                    {_x in (_configItems get IDX_VIRT_MISC_ITEMS) ||
-                    {_hasItemInfo &&
-                    {_isMiscItem &&
-                    {_itemInfoType in [TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_MUZZLE, TYPE_BIPOD]}} ||
-                    {_itemInfoType in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
-                    {_simulationType == "ItemMineDetector"}}}
+                    {_x in (_configItems get IDX_VIRT_MISC_ITEMS) || {_hasItemInfo && _isMiscItem}}
                 ): {
                     (GVAR(virtualItems) get IDX_VIRT_UNIQUE_MISC_ITEMS) set [_x, nil];
                 };
