@@ -28,7 +28,7 @@ TRACE_3("",_item,_config,_isMag);
         } else {
             if (isNil "_config") then {
                 _config = _item call CBA_fnc_getItemConfig;
-            }
+            };
             private _configItemInfo = _config >> "ItemInfo";
             ( // Special items
                 getNumber (_configItemInfo >> "type") in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT] ||
