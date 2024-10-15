@@ -160,7 +160,11 @@ private _magazineMiscItems = createHashMap;
 
 {
     _magazineMiscItems set [configName _x, nil];
-} forEach ((toString {(configName _x) call FUNC(isMiscItem)}) configClasses _cfgMagazines);
+} forEach ((toString {
+    with uiNamespace do {
+        (configName _x) call FUNC(isMiscItem);
+    };
+}) configClasses _cfgMagazines);
 
 // Remove invalid/non-existent entries
 _grenadeList deleteAt "";
