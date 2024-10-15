@@ -14,12 +14,8 @@
  *
  * Public: No
  */
-params ["_firedEH", "", "", "", "_stateParams"];
-_firedEH params ["_shooter","","","","_ammo","","_projectile"];
-_launchParams params ["_shooter","_targetLaunchParams","_seekerType","_attackProfile","_lockMode","_laserInfo","_navigationType"];
-_targetLaunchParams params ["_target", "_targetPos", "_launchPos"];
-_stateParams params ["_lastRunTime", "_seekerStateParams", "_attackProfileStateParams", "_lastKnownPosState"];      
-_seekerParams params ["_seekerAngle", "_seekerAccuracy", "_seekerMaxRange", "_seekerMinRange"];
+params ["_firedEH"];
+_firedEH params ["","","","","","","_projectile"];
 
 private _ammoConfig = configOf _projectile;
 private _navigationGain = getNumber (_ammoConfig >> QUOTE(ADDON) >> "navigationGain");

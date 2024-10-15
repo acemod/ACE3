@@ -12,6 +12,15 @@ private _category = format ["ACE %1", LLSTRING(Module_DisplayName)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(explosionDeafnessCoefficient),
+    "SLIDER",
+    [LSTRING(explosionDeafnessCoefficient_DisplayName), LSTRING(explosionDeafnessCoefficient_Description)],
+    _category,
+    [0, 5, 1, 2],
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(earplugsVolume),
     "SLIDER",
     [LSTRING(earplugsVolume_DisplayName), LSTRING(earplugsVolume_Description)],

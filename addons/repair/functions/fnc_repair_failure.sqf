@@ -32,7 +32,7 @@ if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
 
 _caller removeEventHandler ["AnimDone", _caller getVariable [QGVAR(repairLoopAnimEh), -1]];
 _caller setVariable [QGVAR(repairLoopAnimEh), nil];
-if (vehicle _caller == _caller && {!(_caller call EFUNC(common,isSwimming))}) then {
+if (isNull objectParent _caller && {!(_caller call EFUNC(common,isSwimming))}) then {
     [_caller, _caller getVariable [QGVAR(repairPrevAnimCaller), ""], 2] call EFUNC(common,doAnimation);
 };
 _caller setVariable [QGVAR(repairCurrentAnimCaller), nil];
