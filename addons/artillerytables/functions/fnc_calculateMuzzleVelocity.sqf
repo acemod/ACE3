@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Initial Muzzle velocity; meters/second <NUMBER>
  * 1: Temperature; degrees Celsius <NUMBER>
- * 2: Atmospheric Density; kg/(meters^3) <NUMBER>
+ * 2: Atmospheric Density; kg/(meters^3) (unused) <NUMBER>
  *
  * Return Value:
  * Adjusted Muzzle Velocity; Meters <NUMBER>
