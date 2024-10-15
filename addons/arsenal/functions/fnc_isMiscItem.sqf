@@ -45,7 +45,7 @@ if (isNil "_return") then {
     };
 
     if (_return || !_inPreStart) then {
-        _cache set [_item, true];
+        _cache set [_item, _return];
     };
 };
 
