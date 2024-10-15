@@ -294,7 +294,7 @@ call FUNC(checkFiles);
 
 
 //////////////////////////////////////////////////
-// Set up ace_settingsInitialized eventhandler
+// Set up CBA_settingsInitialized eventhandler
 //////////////////////////////////////////////////
 
 ["CBA_settingsInitialized", {

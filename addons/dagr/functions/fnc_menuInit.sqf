@@ -382,6 +382,7 @@ GVAR(menuRun) = true;
                             GVAR(digit8) = floor (GVAR(wp3) - GVAR(digit7) * 10 - GVAR(digit6) * 100 - GVAR(digit5) * 1000 - GVAR(digit4) * 10000 - GVAR(digit3) * 100000 - GVAR(digit2) * 1000000 - GVAR(digit1) * 10000000);
                         };
                         case 4: {
+                            //IGNORE_PRIVATE_WARNING ["ace_dagr_wp4"];
                             GVAR(digit1) = floor (GVAR(wp4) / 10000000);
                             GVAR(digit2) = floor (GVAR(wp4) / 1000000 - GVAR(digit1) *10);
                             GVAR(digit3) = floor (GVAR(wp4) / 100000 - GVAR(digit2) * 10 - GVAR(digit1) * 100);

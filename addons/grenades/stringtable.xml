@@ -111,6 +111,7 @@
             <German>Granate kann nicht rollen, zu %1 gewechselt</German>
             <Italian>Granata non può rotolare, cambiato a %1</Italian>
             <French>Grenade ne peut pas rouler, passé à %1</French>
+            <Spanish>No se puede rodar esta granada, cambiando a %1</Spanish>
         </Key>
         <Key ID="STR_ACE_Grenades_M84_Name">
             <English>M84 Stun Grenade</English>
