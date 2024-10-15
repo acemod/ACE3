@@ -18,11 +18,11 @@ class CfgGlasses {
     };
 
     class G_Combat: None {
-        COMBAT_GOGGLES
+        COMBAT_GOGGLES;
     };
 
     class G_Combat_Goggles_tna_F: None {
-        COMBAT_GOGGLES
+        COMBAT_GOGGLES;
     };
 
     class G_Diving {
@@ -157,7 +157,7 @@ class CfgGlasses {
     class G_Balaclava_blk;
 
     class G_Balaclava_combat: G_Balaclava_blk {
-        COMBAT_GOGGLES
+        COMBAT_GOGGLES;
     };
 
     class G_Balaclava_lowprofile: G_Balaclava_blk {
@@ -168,12 +168,12 @@ class CfgGlasses {
 
     class G_Balaclava_TI_blk_F;
     class G_Balaclava_TI_G_blk_F: G_Balaclava_TI_blk_F {
-        COMBAT_GOGGLES
+        COMBAT_GOGGLES;
     };
 
     class G_Balaclava_TI_tna_F;
     class G_Balaclava_TI_G_tna_F: G_Balaclava_TI_tna_F {
-        COMBAT_GOGGLES
+        COMBAT_GOGGLES;
     };
 
     class G_Bandanna_blk;
