@@ -21,5 +21,7 @@ class CfgPatches {
 #include "RscTitles.hpp"
 #include "CfgMovesBasic.hpp"
 #include "CfgGesturesMale.hpp"
+#include "CfgCloudlets.hpp"
+#include "ComplexEffects.hpp"
 
 #include "ACE_Settings.hpp"
