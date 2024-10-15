@@ -1209,5 +1209,20 @@
             <Korean>초 단위로, 기본 폭발 타이머 시간을 정합니다</Korean>
             <Portuguese>Tempo padrão (em segundos) para o temporizador do explosivo.</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Explosives_Tripflares">
+            <English>Tripflares</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripflareAirMode_DisplayName">
+            <English>Tripflare Air Mode</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripflareAirMode_Description">
+            <English>When enabled tripflares will be fired into the sky.</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripflareColour_DisplayName">
+            <English>Tripflare Colour</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripflareColour_Description">
+            <English>What colour the tripflare will be</English>
+        </Key>
     </Package>
 </Project>
