@@ -60,7 +60,7 @@ if (_state) then {
         params ["_unit"];
         if !(_unit getVariable [QGVAR(isHandcuffed), false]) exitWith {};
 
-        if ((vehicle _unit) == _unit) then {
+        if (isNull objectParent _unit) then {
             [_unit] call EFUNC(common,fixLoweredRifleAnimation);
             [_unit, "ACE_AmovPercMstpScapWnonDnon", 1] call EFUNC(common,doAnimation);
         } else {
@@ -91,7 +91,7 @@ if (_state) then {
     _unit removeEventHandler ["AnimChanged", _animChangedEHID];
     _unit setVariable [QGVAR(handcuffAnimEHID), -1];
 
-    if (((vehicle _unit) == _unit) && {_unit call EFUNC(common,isAwake)}) then {
+    if ((isNull objectParent _unit) && {_unit call EFUNC(common,isAwake)}) then {
         //Break out of hands up animation loop
         [_unit, "ACE_AmovPercMstpScapWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
     };

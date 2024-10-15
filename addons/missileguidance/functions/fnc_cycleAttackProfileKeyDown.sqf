@@ -25,7 +25,7 @@ private _currentShooter = objNull;
 private _currentMagazine = "";
 private _turretPath = [];
 if (isNull (ACE_controlledUAV param [0, objNull])) then {
-    if (((vehicle ACE_player) == ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
+    if ((isNull objectParent ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
         _currentShooter = ACE_player;
         _currentMagazine = currentMagazine ACE_player;
     } else {
