@@ -48,7 +48,7 @@ private _angle = getNumber (_config >> "ACE_Overlay_Angle");
 
 if (_imagePath != "") then {
     GVAR(GogglesLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false, false];
-    private _overlay = (GLASSDISPLAY displayCtrl 10650);
+    private _overlay = (GLASSDISPLAY displayCtrl IDC_GOGGLES_OVERLAY);
     _overlay ctrlSetText _imagePath;
 
     if ((_angle != 0) && {((ctrlAngle _overlay) # 0) != _angle}) then {

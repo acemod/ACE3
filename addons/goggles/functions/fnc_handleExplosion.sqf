@@ -44,7 +44,7 @@ if (getText (_config >> "ACE_OverlayCracked") != "") then {
         GVAR(GogglesLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false, false];
     };
 
-    (GLASSDISPLAY displayCtrl 10650) ctrlSetText getText (_config >> "ACE_OverlayCracked");
+    (GLASSDISPLAY displayCtrl IDC_GOGGLES_OVERLAY) ctrlSetText getText (_config >> "ACE_OverlayCracked");
 };
 
 ["ace_glassesCracked", [_unit]] call CBA_fnc_localEvent;
