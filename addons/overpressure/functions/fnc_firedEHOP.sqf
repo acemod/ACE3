@@ -22,7 +22,11 @@ TRACE_8("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_gunn
 private _opValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
 
 _opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
-_dangerZoneRange = _dangerZoneRange * GVAR(overpressureDistanceCoefficient);
+
+private _unitOverpressureRangeAttribute = _unit getVariable [QEGVAR(overpressure,distance), -1];
+
+// If -1 (disabled) we return to server value, otherwise we use the given value.
+_dangerZoneRange = _dangerZoneRange * ([_unitOverpressureRangeAttribute, GVAR(overpressureDistanceCoefficient)] select (_unitOverpressureRangeAttribute < 0));
 
 TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
 
