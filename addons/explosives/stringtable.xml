@@ -1054,6 +1054,9 @@
             <Czech>Světlice na nástražném drátu</Czech>
             <Spanish>Bengala con cable trampa</Spanish>
         </Key>
+        <Key ID="STR_ACE_Explosives_TripFlareAir_Name">
+            <English>Tripwire Flare (Air)</English>
+        </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Description">
             <English>Type: Tripwire flare - Ignites a non-lethal flare when triggered.&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Ground</English>
             <Russian>Тип: Сигнальная растяжка - При срабатывании выпускает несмертельную сигнальную вспышку.&lt;br /&gt;Зарядов: 1&lt;br /&gt;Используется на: Земле</Russian>
@@ -1211,12 +1214,6 @@
         </Key>
         <Key ID="STR_ACE_Explosives_Tripflares">
             <English>Tripflares</English>
-        </Key>
-        <Key ID="STR_ACE_Explosives_TripflareAirMode_DisplayName">
-            <English>Tripflare Air Mode</English>
-        </Key>
-        <Key ID="STR_ACE_Explosives_TripflareAirMode_Description">
-            <English>When enabled tripflares will be fired into the sky.</English>
         </Key>
         <Key ID="STR_ACE_Explosives_TripflareColour_DisplayName">
             <English>Tripflare Colour</English>

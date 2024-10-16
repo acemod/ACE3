@@ -56,15 +56,6 @@ private _categoryStr = format ["ACE %1", LLSTRING(Menu)];
 
 // Tripflares
 [
-    QGVAR(tripflareAirMode),
-    "CHECKBOX",
-    [LLSTRING(TripflareAirMode_DisplayName), LLSTRING(TripflareAirMode_Description)],
-    [_categoryStr, LLSTRING(Tripflares)],
-    false,
-    1
-] call CBA_fnc_addSetting;
-
-[
     QGVAR(tripflareColour),
     "LIST",
     [LLSTRING(TripflareColour_DisplayName), LLSTRING(TripflareColour_Description)],
