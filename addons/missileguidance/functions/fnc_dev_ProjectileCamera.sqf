@@ -51,8 +51,6 @@ private _displayEH = (findDisplay 46) displayAddEventHandler ["KeyDown", {
         [_pfh] call CBA_fnc_removePerFrameHandler;
     };
 
-    private _currentProjectilePos = getPosATLVisual _projectile;
-
     _camera camPrepareTarget _projectile;
     _camera camPrepareRelPos [0, -5, 1];
     _camera camCommitPrepared 0;

@@ -114,13 +114,6 @@ for "_i" from 0 to (count _cfgWeapons)-1 do {
         };
     } forEach _data;
     {
-        _x params ["_magazineIndex", "_abInitialSpeed", "_magazine", "_weapon"];
-        private _magIndex = _magazines find _magazine;
-        private _magSpeed = _magazineInitSpeeds select _magIndex;
-        private _wepIndex = _weapons find _weapon;
-        _wepSpeed = _weaponInitSpeeds select _wepIndex;
-    } forEach _data;
-    {
         diag_log text format ["AB_WeaponInitSpeed,%1,%2", _x, _weaponInitSpeeds select _forEachIndex];
     } forEach _weapons;
     {

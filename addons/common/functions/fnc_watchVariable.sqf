@@ -43,7 +43,7 @@ if (isNull (findDisplay 46)) exitWith {
     [{!isNull (findDisplay 46)}, {_this call FUNC(watchVariable);}, _this] call CBA_fnc_waitUntilAndExecute;
 };
 
-if (_code isEqualTo {}) then {TRACE_1("using title as code",_title); _code = compile _name;};
+if (_code isEqualTo {}) then {TRACE_1("using name as code",_name); _code = compile _name;};
 
 private _trackedDisplay = uiNamespace getVariable [QGVAR(watchVariableUI), displayNull];
 if (isNull _trackedDisplay) then {

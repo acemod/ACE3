@@ -52,7 +52,7 @@ TRACE_1("Running treatmentMedicationLocal with Advanced configuration for",_pati
 private _partIndex = ALL_BODY_PARTS find toLowerANSI _bodyPart;
 
 if (HAS_TOURNIQUET_APPLIED_ON(_patient,_partIndex)) exitWith {
-    TRACE_1("unit has tourniquets blocking blood flow on injection site",_tourniquets);
+    TRACE_1("unit has tourniquets blocking blood flow on injection site",GET_TOURNIQUETS(_patient));
     private _occludedMedications = _patient getVariable [QEGVAR(medical,occludedMedications), []];
     _occludedMedications pushBack [_partIndex, _classname];
     _patient setVariable [QEGVAR(medical,occludedMedications), _occludedMedications, true];

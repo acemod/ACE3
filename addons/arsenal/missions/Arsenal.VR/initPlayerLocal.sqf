@@ -101,7 +101,7 @@ if (!isNil "_massDestructionAchieved" && {_massDestructionAchieved isEqualTo 1})
             private _allDisabled = true;
 
             {
-                _hitAlive = _x getVariable ["BIS_fnc_VRHitParts_hitalive", []];
+                private _hitAlive = _x getVariable ["BIS_fnc_VRHitParts_hitalive", []];
                 _allDisabled = _allDisabled && ({!_x} count _hitAlive >= 2);
 
                 sleep 0.1;

@@ -32,7 +32,6 @@ private _fnc_newMag = {
 
 private _lowIndex = 0;
 private _highIndex = (count _arrayOfAmmoCounts) - 1;
-private _ammoToTransfer = 0;
 private _ammoAvailable = 0;
 private _time = 0;
 private _events = [];

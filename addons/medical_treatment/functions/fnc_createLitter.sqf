@@ -27,7 +27,6 @@ params ["_medic", "_patient", "_bodyPart", "_classname"];
 if (!isNull objectParent _medic || {!isNull objectParent _patient}) exitWith {};
 
 // Determine if treated body part is bleeding
-private _index = ALL_BODY_PARTS find toLowerANSI _bodyPart;
 private _isBleeding = (GET_OPEN_WOUNDS(_patient) get _bodyPart) findIf {
     _x params ["", "_amountOf", "_bleeding"];
     _amountOf * _bleeding > 0

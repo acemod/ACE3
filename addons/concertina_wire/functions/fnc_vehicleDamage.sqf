@@ -36,7 +36,6 @@ if (_mode == -1) exitWith {};
 //9.78744 (10)
 
 _type = typeOf _wire;
-private _anim = _wire animationPhase "wire_2";
 private _pos_w = getPos _wire;
 private _dir_w = getDir _wire;
 

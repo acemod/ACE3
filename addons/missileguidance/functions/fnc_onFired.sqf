@@ -126,10 +126,8 @@ private _navigationStateSubclass = _config >> "navigationStates";
 private _states = getArray (_navigationStateSubclass >> "states");
 
 private _navigationStateData = [];
-private _initialState = "";
 
 if (_states isNotEqualTo []) then {
-    _initialState = _states select 0;
     {
         private _stateClass = _navigationStateSubclass >> _x;
         _navigationStateData pushBack [
