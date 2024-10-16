@@ -9,7 +9,7 @@
  * None
  *
  * Example:
- * beforeDestroyScript = "\z\ace\addons\explosives\scripts\TripflareEffect.sqf;
+ * beforeDestroyScript = "\z\ace\addons\explosives\scripts\TripflareEffect.sqf";
  *
  * Public: no
  */
