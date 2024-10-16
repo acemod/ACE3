@@ -23,6 +23,34 @@
         QEGVAR(medical,HandleDamageEHID),
         _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
     ];
+
+    // Fires where healer is local
+    _unit addEventHandler ["HandleHeal", {
+        params ["_injured", "_healer", "_isMedic", "_atVehicle"];
+
+        AISFinishHeal [_injured, _healer, _isMedic];
+
+        // AI stay in healing loop if they have healing items available (they try to heal once every second)
+        if (isNull _atVehicle && {(missionNamespace getVariable [QEGVAR(medical_treatment,convertItems), 2]) != 2}) then {
+            // Replace the items (if enabled) so that the unit can't heal
+            _healer call EFUNC(common,replaceRegisteredItems);
+        } else {
+            // If medical_treatment isn't loaded, interrupt healing command by forcing the unit to leave and rejoin the group
+            if (_healer call EFUNC(common,isPlayer)) exitWith {};
+
+            // This resets their command/action
+            private _assignedTeam = assignedTeam _healer;
+            private _groupInfo = [group _healer, groupId _healer];
+            [_healer] joinSilent grpNull; // If unit doesn't leave group first, it will take the lowest Id when joinAsSilent is run, regardless of parameters
+            _healer joinAsSilent _groupInfo;
+
+            if (_assignedTeam != "") then {
+                _healer assignTeam _assignedTeam;
+            };
+        };
+
+        true
+    }];
 }, nil, [IGNORE_BASE_UAVPILOTS], true] call CBA_fnc_addClassEventHandler;
 
 #ifdef DEBUG_MODE_FULL
