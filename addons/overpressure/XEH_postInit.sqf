@@ -10,7 +10,13 @@
         ["ace_firedPlayer", LINKFUNC(firedEHBB)] call CBA_fnc_addEventHandler;
     };
     if (GVAR(overpressureDistanceCoefficient) > 0) then {
-        ["ace_firedPlayerVehicle", LINKFUNC(firedEHOP)] call CBA_fnc_addEventHandler;
+        ["ace_firedPlayerVehicle", {
+            if (getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(backblast)) == 1) then {
+                _this call FUNC(firedEHBB);
+            } else {
+                _this call FUNC(firedEHOP);
+            };
+        }] call CBA_fnc_addEventHandler;
     };
 
     GVAR(cacheHash) = createHashMap;
