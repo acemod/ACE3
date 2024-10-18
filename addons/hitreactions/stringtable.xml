@@ -7,7 +7,7 @@
             <Chinese>觸發倒下前最低需受到多少傷害</Chinese>
             <Chinesesimp>触发倒下前最低需受到多少伤害</Chinesesimp>
             <Japanese>転倒が発生するダメージの最低値</Japanese>
-            <Korean>넘어질 때 발생하는 최소 피해량</Korean>
+            <Korean>넘어지는 최소 대미지</Korean>
             <German>Mindestschaden, um Sturz auszulösen</German>
             <Polish>Minimalne obrażenie, żeby aktywować spadanie</Polish>
             <Russian>Мин. урон для активации падения</Russian>
@@ -16,6 +16,11 @@
             <Czech>Minimum škody pro aktivaci spadnutí</Czech>
             <Turkish>Düşmeyi tetikleyen min hasar</Turkish>
             <Spanish>Daño mínimo para provocar la caída</Spanish>
+        </Key>
+        <Key ID="STR_ACE_HitReactions_minDamageToTrigger_Description">
+            <English>If a unit takes more damage than this setting's value whilst moving on foot, they will fall over.\nIf set to -1 the mechanic is turned off.</English>
+            <Japanese>徒歩で移動中のユニットが設定値を超えるダメージを受けると転倒します。\n-1に設定することでこの機能を無効化できます。</Japanese>
+            <Korean>유닛이 도보로 이동하는 동안 이 설정 값보다 많은 대미지를 입으면 넘어집니다.\n-1로 설정하면 이 기능은 꺼집니다.</Korean>
         </Key>
         <Key ID="STR_ACE_HitReactions_weaponDropChanceArmHitPlayer_displayName">
             <English>Player Weapon Drop Chance (Arm Hit)</English>

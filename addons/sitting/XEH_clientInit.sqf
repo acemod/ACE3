@@ -3,7 +3,7 @@
 // Exit on Headless
 if (!hasInterface) exitWith {};
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     TRACE_1("SettingInit",XGVAR(enable));
 
     // If not enabled, then do not add CanInteractWith Condition or event handlers

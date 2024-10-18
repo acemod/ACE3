@@ -19,6 +19,11 @@
  * Public: No
  */
 
+// IGNORE_PRIVATE_WARNING["_dir", "_altitude", "_velocity", "_ammo", "_sounds", "_projectile", "_soundSource", "_attach", "_posAmmo"];
+// IGNORE_PRIVATE_WARNING["_shakeStrength", "_sound", "_dirDiff", "_repeat", "_soundSourceClass", "_hint", "_posNew", "_activated"];
+// IGNORE_PRIVATE_WARNING["_side", "_fnc_playRadio", "_delay", "_logic", "_radio", "_pos", "_cfgAmmo", "_shakeRadius"];
+// IGNORE_PRIVATE_WARNING["_units", "_sides", "_simulation"];
+
 _logic = _this select 0;
 _units = _this select 1;
 _activated = _this select 2;
@@ -118,11 +123,6 @@ if (_activated) then {
             _projectile setPos _posAmmo;
             _projectile setVelocity _velocity;
             if (_attach) then {_projectile attachTo [_logic,[0,0,_altitude]];};
-
-            // Added by ace_zeus for ace_frag compatibility
-            if (!isNil QEFUNC(frag,addPfhRound)) then {
-                [objNull, _ammo, _projectile, true] call EFUNC(frag,addPfhRound);
-            };
 
             //--- Play sound
             if (_sound != "") then {[[_logic,_sound,"say3D"],"bis_fnc_sayMessage"] call bis_fnc_mp;};

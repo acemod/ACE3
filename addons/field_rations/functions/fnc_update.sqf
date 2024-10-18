@@ -35,7 +35,7 @@ private _hunger = _player getVariable [QXGVAR(hunger), 0];
 
 // Determine base change based on work multiplier
 private _currentWork = 1;
-if (vehicle _player == _player && {isTouchingGround _player}) then {
+if (isNull objectParent _player && {isTouchingGround _player}) then {
     private _speed = vectorMagnitude velocity _player;
     _currentWork = linearConversion [2, 7, _speed, 1, 2, true];
 };

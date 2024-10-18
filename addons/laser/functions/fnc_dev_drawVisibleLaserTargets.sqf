@@ -43,7 +43,6 @@ private _testSeekerDir = vectorDirVisual _seekerVehicle;
 
 // Draw all lasers
 {
-    //IGNORE_PRIVATE_WARNING ["_x", "_y];
     // TRACE_2("",_x,_y);
     _y params ["_obj", "_owner", "_laserMethod", "_waveLength", "_laserCode", "_beamSpread"];
 
