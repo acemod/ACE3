@@ -64,17 +64,17 @@ def main():
     if repl.lower() != "y":
         return 3
 
-    hemmt_path = os.path.join(projectpath, ".hemttout", "dev")
-    print("\n# Use Hemmt Dev Path for arma filepatching:")
-    print(f"  y: {hemmt_path}")
+    hemtt_path = os.path.join(projectpath, ".hemttout", "dev")
+    print("\n# Use HEMTT Dev Path for arma filepatching:")
+    print(f"  y: {hemtt_path}")
     print(f"  n: {projectpath}")
     repl = input("(y/n): ")
     filepatching_path = projectpath
     if repl.lower() == "y":
-        if not os.path.exists(hemmt_path):
-            print(f"creating {hemmt_path}")
-            os.makedirs(hemmt_path)
-        filepatching_path = hemmt_path
+        if not os.path.exists(hemtt_path):
+            print(f"creating {hemtt_path}")
+            os.makedirs(hemtt_path)
+        filepatching_path = hemtt_path
 
     if os.path.exists("P:\\{}\\{}".format(MAINDIR, PROJECTDIR)):
         print("Link on P: already exists. Please finish the setup manually.")
