@@ -31,7 +31,7 @@
         AISFinishHeal [_injured, _healer, _isMedic];
 
         // AI stay in healing loop if they have healing items available (they try to heal once every second)
-        if (isNull _atVehicle && {(missionNamespace getVariable [QEGVAR(medical_treatment,convertItems), 2]) != 2}) then {
+        if (isNull _atVehicle && {!isNil {TYPE_FIRST_AID_KIT call EFUNC(common,getItemReplacements)} || {!isNil {TYPE_MEDIKIT call EFUNC(common,getItemReplacements)}}}) then {
             // Replace the items (if enabled) so that the unit can't heal
             _healer call EFUNC(common,replaceRegisteredItems);
         } else {
