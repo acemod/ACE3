@@ -267,6 +267,7 @@
             <German>FN FAL OSW Fallschirmjäger</German>
             <Italian>FN FAL OSW Para</Italian>
             <French>FN FAL OSW Para</French>
+            <Spanish>FN FAL OSW Paracaidista</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Para_Snake_Name">
             <English>FN FAL OSW Para (Snake)</English>
@@ -275,6 +276,7 @@
             <German>FN FAL OSW Fallschirmjäger (Schlange)</German>
             <Italian>FN FAL OSW Para (Serpe)</Italian>
             <French>FN FAL OSW Para (Serpent)</French>
+            <Spanish>FN FAL OSW Paracaidista (Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R4_Name">
             <English>Vektor R4</English>
@@ -477,6 +479,7 @@
             <German>GM6 Lynx (Schlange)</German>
             <Italian>GM6 Lynx (Serpe)</Italian>
             <French>GM6 Lynx (Serpent)</French>
+            <Spanish>GM6 Lynx (Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_rpg32_tan_Name">
             <English>RPG-32 (Sand)</English>
@@ -485,6 +488,7 @@
             <German>RPG-32 (Sand)</German>
             <Italian>RPG-32 (Sabbia)</Italian>
             <French>RPG-32 (Sable)</French>
+            <Spanish>RPG-32 (Arena)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_arco_hex_Name">
             <English>ELCAN SpecterOS (Hex)</English>
@@ -493,6 +497,7 @@
             <German>ELCAN SpecterOS (Hex)</German>
             <Italian>ELCAN SpecterOS (Hex)</Italian>
             <French>ELCAN SpecterOS (Hex)</French>
+            <Spanish>ELCAN SpecterOS (Hex)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_holosight_snake_Name">
             <English>EOTech XPS3 (Snake)</English>
@@ -501,6 +506,7 @@
             <German>EOTech XPS3 (Schlange)</German>
             <Italian>EOTech XPS3 (Serpe)</Italian>
             <French>EOTech XPS3 (Serpent)</French>
+            <Spanish>EOTech XPS3 (Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_holosight_snake_smg_Name">
             <English>EOTech XPS3 SMG (Snake)</English>
@@ -509,6 +515,7 @@
             <German>EOTech XPS3 SMG (Schlange)</German>
             <Italian>EOTech XPS3 SMG (Serpe)</Italian>
             <French>EOTech XPS3 SMG (Serpent)</French>
+            <Spanish>EOTech XPS3 SMG (Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_arid_Name">
             <English>Leupold Mark 4 HAMR (Arid)</English>
@@ -517,6 +524,7 @@
             <German>Leupold Mark 4 HAMR (Trocken)</German>
             <Italian>Leupold Mark 4 HAMR (Arido)</Italian>
             <French>Leupold Mark 4 HAMR (Aride)</French>
+            <Spanish>Leupold Mark 4 HAMR (Árida)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_lush_Name">
             <English>Leupold Mark 4 HAMR (Lush)</English>
@@ -525,6 +533,7 @@
             <German>Leupold Mark 4 HAMR (Grün)</German>
             <Italian>Leupold Mark 4 HAMR (Verdeggiante)</Italian>
             <French>Leupold Mark 4 HAMR (Vert)</French>
+            <Spanish>Leupold Mark 4 HAMR (Exuberante)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_sand_Name">
             <English>Leupold Mark 4 HAMR (Sand)</English>
@@ -533,6 +542,7 @@
             <German>Leupold Mark 4 HAMR (Sand)</German>
             <Italian>Leupold Mark 4 HAMR (Sabbia)</Italian>
             <French>Leupold Mark 4 HAMR (Sable)</French>
+            <Spanish>Leupold Mark 4 HAMR (Arena)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_snake_Name">
             <English>Leupold Mark 4 HAMR (Snake)</English>
@@ -541,6 +551,7 @@
             <German>Leupold Mark 4 HAMR (Schlange)</German>
             <Italian>Leupold Mark 4 HAMR (Serpe)</Italian>
             <French>Leupold Mark 4 HAMR (Serpent)</French>
+            <Spanish>Leupold Mark 4 HAMR (Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_black_Name">
             <English>Aimpoint Micro R-1 (High, Black)</English>
@@ -549,6 +560,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Schwarz)</German>
             <Italian>Aimpoint Micro R-1 (Alto, Nero)</Italian>
             <French>Aimpoint Micro R-1 (Haut, Noir)</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Negro)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_khaki_Name">
             <English>Aimpoint Micro R-1 (High, Khaki)</English>
@@ -557,6 +569,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Khaki)</German>
             <Italian>Aimpoint Micro R-1 (Alto, Cachi)</Italian>
             <French>Aimpoint Micro R-1 (Haut, Kaki)</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Caqui)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_sand_Name">
             <English>Aimpoint Micro R-1 (High, Sand)</English>
@@ -565,6 +578,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Sand)</German>
             <Italian>Aimpoint Micro R-1 (Alto, Sabbia)</Italian>
             <French>Aimpoint Micro R-1 (Haut, Sable)</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Arena)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_snake_Name">
             <English>Aimpoint Micro R-1 (High, Snake)</English>
@@ -573,6 +587,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Schlange)</German>
             <Italian>Aimpoint Micro R-1 (Alto, Serpe)</Italian>
             <French>Aimpoint Micro R-1 (Haut, Serpent)</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_arid_Name">
             <English>Aimpoint Micro R-1 (High, Arid)</English>
@@ -581,6 +596,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Trocken)</German>
             <Italian>Aimpoint Micro R-1 (Alto, Arido)</Italian>
             <French>Aimpoint Micro R-1 (Hoch, Arid</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Árido)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_lush_Name">
             <English>Aimpoint Micro R-1 (High, Lush)</English>
@@ -589,6 +605,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Grün)</German>
             <Italian>Aimpoint Micro R-1 (Alto, Verdeggiante)</Italian>
             <French>Aimpoint Micro R-1 (Haute, Vert)</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Exuberante)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_black_sand_Name">
             <English>Aimpoint Micro R-1 (High, Black/Sand)</English>
@@ -597,6 +614,7 @@
             <German>Aimpoint Micro R-1 (Hoch, Schwarz/Sand)</German>
             <Italian>Aimpoint Micro R-1 (Alto, Nero/Sabbia)</Italian>
             <French>Aimpoint Micro R-1 (Haut, Noir/Sable)</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Negro/Arena)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_black_Name">
             <English>Aimpoint Micro R-1 (Low, Black)</English>
@@ -605,6 +623,7 @@
             <German>Aimpoint Micro R-1 (Tief, Schwarz)</German>
             <Italian>Aimpoint Micro R-1 (Basso, Nero)</Italian>
             <French>Aimpoint Micro R-1 (Bas, Noir)</French>
+            <Spanish>Aimpoint Micro R-1 (Bajo, Negro)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_khaki_Name">
             <English>Aimpoint Micro R-1 (Low, Khaki)</English>
@@ -613,6 +632,7 @@
             <German>Aimpoint Micro R-1 (Tief, Khaki)</German>
             <Italian>Aimpoint Micro R-1 (Basso, Cachi)</Italian>
             <French>Aimpoint Micro R-1 (Bas, Kaki)</French>
+            <Spanish>Aimpoint Micro R-1 (Bajo, Caqui)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_sand_Name">
             <English>Aimpoint Micro R-1 (Low, Sand)</English>
@@ -621,6 +641,7 @@
             <German>Aimpoint Micro R-1 (Tief, Sand)</German>
             <Italian>Aimpoint Micro R-1 (Basso, Sabbia)</Italian>
             <French>Aimpoint Micro R-1 ( Bas, Sable )</French>
+            <Spanish>Aimpoint Micro R-1 (Bajo, Arena)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_snake_Name">
             <English>Aimpoint Micro R-1 (Low, Snake)</English>
@@ -629,6 +650,7 @@
             <German>Aimpoint Micro R-1 (Tief, Schlange)</German>
             <Italian>Aimpoint Micro R-1 (Basso, Serpe)</Italian>
             <French>Aimpoint Micro R-1 (Bas, Serpent)</French>
+            <Spanish>Aimpoint Micro R-1 (Bajo, Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_arid_Name">
             <English>Aimpoint Micro R-1 (Low, Arid)</English>
@@ -637,6 +659,7 @@
             <German>Aimpoint Micro R-1 (Tief, Trocken)</German>
             <Italian>Aimpoint Micro R-1 (Basso, Arido)</Italian>
             <French>Aimpoint Micro R-1 (Bas, Arid)</French>
+            <Spanish>Aimpoint Micro R-1 (Bajo, Árido)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_lush_Name">
             <English>Aimpoint Micro R-1 (Low, Lush)</English>
@@ -645,6 +668,7 @@
             <German>Aimpoint Micro R-1 (Tief, Grün)</German>
             <Italian>Aimpoint Micro R-1 (Basso, Verdeggiante)</Italian>
             <French>Aimpoint Micro R-1 (Bas, Vert)</French>
+            <Spanish>Aimpoint Micro R-1 (Low, Lush)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_dms_snake_Name">
             <English>Burris XTR II (Snake)</English>
@@ -653,6 +677,7 @@
             <German>Burris XTR II (Schlange)</German>
             <Italian>Burris XTR II (Serpe)</Italian>
             <French>Burris XTR II (Serpent)</French>
+            <Spanish>Burris XTR II (Serpiente)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_atgm_Name">
             <English>Badger IFV (ATGM)</English>
@@ -661,6 +686,7 @@
             <German>Badger IFV (PzAbw)</German>
             <Italian>Badger IFV (ATGM)</Italian>
             <French>Badger IFV (ATGM)</French>
+            <Spanish>Badger IFV (ATGM)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_command_Name">
             <English>Badger IFV (Command)</English>
@@ -669,6 +695,7 @@
             <German>Badger IFV (Kommando)</German>
             <Italian>Badger IFV (Comando)</Italian>
             <French>Badger IFV (Commandement)</French>
+            <Spanish>Badger IFV (Comandancia)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_mortar_Name">
             <English>Badger IFV (Mortar)</English>
@@ -677,6 +704,7 @@
             <German>Badger IFV (Mörser)</German>
             <Italian>Badger IFV (Mortaio)</Italian>
             <French>Badger IFV (mortier)</French>
+            <Spanish>Badger IFV (Mortero)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_aa_Name">
             <English>KamAZ (Zu-23-2)</English>
@@ -685,6 +713,7 @@
             <German>KamAZ (Zu-23-2)</German>
             <Italian>KamAZ (Zu-23-2)</Italian>
             <French>KamAZ (Zu-23-2)</French>
+            <Spanish>KamAZ (Zu-23-2)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_cargo_Name">
             <English>KamAZ Cargo</English>
@@ -693,6 +722,7 @@
             <German>KamAZ Fracht</German>
             <Italian>KamAZ Carico</Italian>
             <French>KamAZ Cargo</French>
+            <Spanish>KamAZ Carga</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_repair_Name">
             <English>KamAZ Repair</English>
@@ -701,6 +731,7 @@
             <German>KamAZ Instandsetzung</German>
             <Italian>KamAZ Riparazione</Italian>
             <French>KamAZ Réparation</French>
+            <Spanish>KamAZ Reparaciones</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_racing_Name">
             <English>KamAZ Racing</English>
@@ -709,6 +740,7 @@
             <German>KamAZ Rennlaster</German>
             <Italian>KamAZ da corsa</Italian>
             <French>KamAZ de course</French>
+            <Spanish>KamAZ Carreras</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_ammo_Name">
             <English>KamAZ Ammo</English>
@@ -717,6 +749,7 @@
             <German>KamAZ Munition</German>
             <Italian>KamAZ Munizioni</Italian>
             <French>KamAZ Munitions</French>
+            <Spanish>KamAZ Municiones</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_flatbed_Name">
             <English>KamAZ Flatbed</English>
@@ -725,6 +758,7 @@
             <German>KamAZ Flachbett</German>
             <Italian>KamAZ Pianale</Italian>
             <French>KamAZ Flatbed</French>
+            <Spanish>KamAZ Flatbed</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_transport_02_Name">
             <English>AW101 Merlin</English>
@@ -733,6 +767,7 @@
             <German>AW101 Merlin</German>
             <Italian>AW101 Merlin</Italian>
             <French>AW101 Merlin</French>
+            <Spanish>AW101 Merlin</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_tracked_02_Name">
             <English>BM-2T Stalker (Bumerang-BM)</English>
@@ -741,6 +776,7 @@
             <German>BM-2T Stalker (Bumerang-BM)</German>
             <Italian>BM-2T Stalker (Bumerang-BM)</Italian>
             <French>BM-2T Stalker (Boomerang-BM)</French>
+            <Spanish>BM-2T Stalker (Bumerang-BM)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_02_hmg_Name">
             <English>Otokar ARMA (HMG)</English>
@@ -749,6 +785,7 @@
             <German>Otokar ARMA (HMG)</German>
             <Italian>Otokar ARMA (HMG)</Italian>
             <French>Otokar ARMA (HMG)</French>
+            <Spanish>Otokar ARMA (HMG)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_02_unarmed_Name">
             <English>Otokar ARMA (Unarmed)</English>
@@ -757,6 +794,7 @@
             <German>Otokar ARMA (Unbewaffnet)</German>
             <Italian>Otokar ARMA (Disarmato)</Italian>
             <French>Otokar ARMA (non armé)</French>
+            <Spanish>Otokar ARMA (Desarmado)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_light_02_armed_Name">
             <English>Ka-60 Kasatka (UP)</English>
@@ -765,6 +803,7 @@
             <German>Ka-60 Kasatka (UP)</German>
             <Italian>Ka-60 Kasatka (UP)</Italian>
             <French>Ka-60 Kasatka (UP)</French>
+            <Spanish>Ka-60 Kasatka (UP)</Spanish>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_light_02_unarmed_Name">
             <English>Ka-60 Kasatka (UP, Unarmed)</English>
@@ -773,6 +812,7 @@
             <German>Ka-60 Kasatka (UP, Unbewaffnet)</German>
             <Italian>Ka-60 Kasatka (UP, Disarmato)</Italian>
             <French>Ka-60 Kasatka (UP, non armé)</French>
+            <Spanish>Ka-60 Kasatka (UP, Desarmado)</Spanish>
         </Key>
     </Package>
 </Project>

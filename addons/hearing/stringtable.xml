@@ -197,6 +197,16 @@
             <Chinesesimp>当玩家听力受损时降低听力能力？</Chinesesimp>
             <Chinese>當玩家聽力受損時降低聽力能力?</Chinese>
         </Key>
+        <Key ID="STR_ACE_Hearing_explosionDeafnessCoefficient_DisplayName">
+            <English>Explosion Deafness Coefficient</English>
+            <Japanese>爆発による難聴発生係数</Japanese>
+            <Korean>폭발 난청 계수</Korean>
+        </Key>
+        <Key ID="STR_ACE_Hearing_explosionDeafnessCoefficient_Description">
+            <English>Changes how much deafness explosions cause.\nSetting to 0 will disable explosion hearing damage.</English>
+            <Japanese>爆発による聴力低下の程度を変更します。\n0に設定することで爆発による聴力低下を無効化できます。</Japanese>
+            <Korean>폭발로 인한 청력 상실 정도를 변경합니다.\n0으로 설정하면 폭발에도 청력을 온전히 유지할 수 있습니다.</Korean>
+        </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
             <Hungarian>Harci süketség engedélyezése?</Hungarian>

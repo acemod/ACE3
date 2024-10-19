@@ -77,7 +77,7 @@ GVAR(tempWindInfo) = false;
     } else {
         params ["_interactionType"];
         // Ignore self-interaction menu, when in vehicle and when pick up is disabled
-        if (GVAR(enablePickUp) && {_interactionType == 0} && {vehicle ACE_player == ACE_player}) then {
+        if (GVAR(enablePickUp) && {_interactionType == 0} && {isNull objectParent ACE_player}) then {
             // Show pick up actions on CfgAmmo's
             call FUNC(renderPickUpInteraction);
         };

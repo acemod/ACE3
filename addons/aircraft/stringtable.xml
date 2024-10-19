@@ -185,6 +185,7 @@
             <French>Distance de suivi</French>
             <Japanese>追跡距離</Japanese>
             <Russian>Расстояние отслеживания</Russian>
+            <Spanish>Distancia de Seguimiento</Spanish>
         </Key>
         <Key ID="STR_ACE_Aircraft_DroneFollowHint">
             <English>Following unit within %1m</English>
@@ -194,6 +195,7 @@
             <French>Suivre l'unité jusqu'à %1m</French>
             <Japanese>%1m 間隔で 目標を追跡します</Japanese>
             <Russian>Отслеживание в пределах %1m</Russian>
+            <Spanish>Seguir unidad a %1m</Spanish>
         </Key>
     </Package>
 </Project>

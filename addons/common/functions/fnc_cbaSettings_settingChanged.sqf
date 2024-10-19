@@ -2,7 +2,7 @@
 /*
  * Author: PabstMirror
  * Function for handling a cba setting being changed.
- * Adds warning if global setting is changed after ace_settingsInitialized.
+ * Adds warning if global setting is changed after CBA_settingsInitialized.
  *
  * Arguments:
  * 0: Setting Name <STRING>
