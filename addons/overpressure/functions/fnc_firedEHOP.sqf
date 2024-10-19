@@ -23,7 +23,7 @@ private _opValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues)
 
 _opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
 
-private _unitOverpressureRangeAttribute = _unit getVariable [QEGVAR(overpressure,distance), -1];
+private _unitOverpressureRangeAttribute = _unit getVariable [QEGVAR(overpressure,distance), GVAR(overpressureDistanceCoefficient)];
 
 _dangerZoneRange = _dangerZoneRange * _unitOverpressureRangeAttribute;
 
