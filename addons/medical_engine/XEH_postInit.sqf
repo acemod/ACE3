@@ -32,10 +32,10 @@
 
         // AI stay in healing loop if they have healing items available (they try to heal once every second)
         if (isNull _atVehicle && {!isNil {TYPE_FIRST_AID_KIT call EFUNC(common,getItemReplacements)} || {!isNil {TYPE_MEDIKIT call EFUNC(common,getItemReplacements)}}}) then {
-            // Replace the items (if enabled) so that the unit can't heal
+            // Replace the items (if possible) so that the unit can't heal
             _healer call EFUNC(common,replaceRegisteredItems);
         } else {
-            // If medical_treatment isn't loaded, interrupt healing command by forcing the unit to leave and rejoin the group
+            // If there are no replacements available, interrupt healing command by forcing the unit to leave and rejoin the group
             if (_healer call EFUNC(common,isPlayer)) exitWith {};
 
             // This resets their command/action
