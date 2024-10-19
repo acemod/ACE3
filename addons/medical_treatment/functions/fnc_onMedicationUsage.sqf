@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal, modified by Cplhardcore
+ * Author: Glowbal, Cplhardcore
  * Handles the medication given to a patient.
  *
  * Arguments:

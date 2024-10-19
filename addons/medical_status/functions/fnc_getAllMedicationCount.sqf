@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: PabstMirror, modified by Cplhardcore
+ * Author: PabstMirror, Cplhardcore
  * Gets effective count of all medications in a unit's system
  * (each medication dose is scaled from 0..1 based on time till max effect and max time in system)
  *
