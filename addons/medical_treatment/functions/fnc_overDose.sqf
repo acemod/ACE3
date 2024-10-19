@@ -17,6 +17,7 @@
  */
 
 params ["_unit", "_classname"];
+
 private _medicationConfig = configFile >> "ace_medical_treatment" >> _classname;
 private _onOverDose = getText (_medicationConfig >> "onOverDose");
 
@@ -27,13 +28,16 @@ if (isClass _medicationConfig) then {
     };
 };
 TRACE_2("overdose",_classname,_onOverDose);
+
 if (_onOverDose == "") exitWith {
     TRACE_1("CriticalVitals Event",_unit);
     [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
 };
+
 if (isNil _onOverDose) then {
     _onOverDose = compile _onOverDose;
 } else {
     _onOverDose = missionNamespace getVariable _onOverDose;
 };
+
 [_target, _className] call _onOverDose
