@@ -30,7 +30,7 @@ private _blurRadius = -1;
 private _preset = getArray (configFile >> "CfgWeapons" >> "NVGoggles" >> QGVAR(colorPreset));
 
 if ((alive ACE_player) && {isNull (ACE_controlledUAV select 0)}) then {
-    if (((vehicle ACE_player) == ACE_player) || {
+    if ((isNull objectParent ACE_player) || {
         // Test if we are using player's nvg or if sourced from vehicle:
 
         private _currentVehicle = vehicle ACE_player;

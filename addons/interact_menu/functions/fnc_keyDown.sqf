@@ -62,7 +62,7 @@ GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];
 
-GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
+GVAR(useCursorMenu) = (!isNull objectParent ACE_player) ||
                       (!(isNull (ACE_controlledUAV select 0))) ||
                       visibleMap ||
                       (!isNull curatorCamera) ||
@@ -117,7 +117,7 @@ GVAR(selfMenuOffset) = (AGLToASL (positionCameraToWorld [0, 0, 2])) vectorDiff (
 if (GVAR(openedMenuType) == 0) then {
     if (isNull curatorCamera) then {
         if (isNull (ACE_controlledUAV select 0)) then {
-            if (vehicle ACE_player != ACE_player) then {
+            if (!isNull objectParent ACE_player) then {
                 GVAR(menuDepthPath) = [["ACE_SelfActions", (vehicle ACE_player)]];
                 GVAR(expanded) = true;
                 GVAR(expandedTime) = diag_tickTime;
