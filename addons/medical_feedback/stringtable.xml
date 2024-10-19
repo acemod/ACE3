@@ -1,255 +1,255 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Project name="ACE">
     <Package name="Medical_Feedback">
-        <Key ID="STR_ACE_Medical_Feedback_SubCategory">
-            <English>Feedback</English>
-            <German>Rückmeldung</German>
-            <Japanese>フィードバック</Japanese>
-            <Russian>Реакция на ранения</Russian>
-            <French>Réaction aux blessures</French>
-            <Portuguese>Reação a Lesões</Portuguese>
-            <Chinese>視覺回饋</Chinese>
-            <Chinesesimp>受伤反应</Chinesesimp>
-            <Italian>Commenti</Italian>
-            <Czech>Zpětná vazba</Czech>
-            <Polish>Informacje Zwrotne</Polish>
-            <Spanish>Reacción</Spanish>
-            <Turkish>Geri Bildirim</Turkish>
-            <Korean>피드백</Korean>
-        </Key>
-        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
-            <English>Pain Effect Type</English>
-            <German>Schmerzeffekt-Typ</German>
-            <Polish>Rodzaj efektu bólu</Polish>
-            <Russian>Визуальный эффект боли</Russian>
-            <Italian>Effetto del dolore</Italian>
-            <Spanish>Tipo de efecto de dolor</Spanish>
-            <French>Effet de douleur</French>
-            <Hungarian>Fájdalom-effekt típusa</Hungarian>
-            <Portuguese>Tipo do efeito de dor</Portuguese>
-            <Czech>Efekt pro bolest</Czech>
-            <Japanese>痛み効果の種類</Japanese>
-            <Korean>고통 효과 종류</Korean>
-            <Chinese>疼痛效果類型</Chinese>
-            <Chinesesimp>疼痛效果类型</Chinesesimp>
-            <Turkish>Ağrı Etkisi Türü</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_Description">
-            <English>Selects the used pain effect type.</English>
-            <Japanese>痛みの画面効果を選択できます。</Japanese>
-            <French>Permet de choisir quel effet provoque la douleur.</French>
-            <Russian>Выбирает тип визуализации болевого эффекта.</Russian>
-            <Portuguese>Selecione o tipo de efeito de dor.</Portuguese>
-            <Chinese>選擇哪一個視覺效果用於回饋疼痛</Chinese>
-            <Chinesesimp>选择反馈的疼痛效果类型。</Chinesesimp>
-            <Italian>Seleziona il tipo di effetto causato dal dolore.</Italian>
-            <Czech>Nastavuje který efekt bolesti bude používán.</Czech>
-            <Polish>Wybiera rodzaj efektu bólu.</Polish>
-            <Spanish>Selecciona el tipo de efecto de dolor</Spanish>
-            <Turkish>Kullanılan ağrı efekti tipini seçer.</Turkish>
-            <German>Wählt den zu benutzenden Schmerzeffekt aus.</German>
-            <Korean>고통 시 어떤 효과로 나타낼 지 결정합니다.</Korean>
-        </Key>
-        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
-            <English>White Flashing</English>
-            <German>Weißes blinken</German>
-            <Japanese>白く点滅</Japanese>
-            <Russian>Белые вспышки</Russian>
-            <French>Flash blancs</French>
-            <Portuguese>Flashes Brancos</Portuguese>
-            <Chinese>白光閃爍</Chinese>
-            <Chinesesimp>白光闪烁</Chinesesimp>
-            <Italian>Bianco lampeggiante</Italian>
-            <Czech>Blikání bílé barvy</Czech>
-            <Polish>Miganie na biało</Polish>
-            <Spanish>Destello blanco</Spanish>
-            <Turkish>Beyaz Yanıp Sönüyor</Turkish>
-            <Korean>반짝이는 하얀색</Korean>
-        </Key>
-        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
-            <English>Pulsing Blur</English>
-            <German>Wiederkehrende Unschärfe</German>
-            <Japanese>ぼかしの強弱</Japanese>
-            <Russian>Пульсирующее размытие</Russian>
-            <French>Pulsations floues</French>
-            <Portuguese>Borrão Pulsante</Portuguese>
-            <Chinese>脈動模糊</Chinese>
-            <Chinesesimp>脉冲式模糊</Chinesesimp>
-            <Italian>Sfocatura pulsante</Italian>
-            <Czech>Pulzující rozmazání</Czech>
-            <Polish>Pulsujące rozmycie</Polish>
-            <Spanish>Enborronamiento pulsante</Spanish>
-            <Turkish>Titreşimli Bulanıklık</Turkish>
-            <Korean>두근대는 흐려짐</Korean>
-        </Key>
-        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_ChromAberration">
-            <English>Chromatic Aberration</English>
-            <German>Chromatische Aberration</German>
-            <Polish>Aberracja chromatyczna</Polish>
-            <Russian>Хроматическая аберрация</Russian>
-            <Italian>Aberrazione cromatica</Italian>
-            <Spanish>Aberración cromática</Spanish>
-            <French>Aberration chromatique</French>
-            <Hungarian>Kromatikus aberráció</Hungarian>
-            <Czech>Chromatická aberace</Czech>
-            <Portuguese>Aberração cromática</Portuguese>
-            <Japanese>色収差</Japanese>
-            <Korean>색수차</Korean>
-            <Chinesesimp>色差</Chinesesimp>
-            <Chinese>色差</Chinese>
-            <Turkish>Renk sapmaları</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_OnlyBase">
-            <English>Only high pain effect</English>
-            <Japanese>強い痛み効果のみ</Japanese>
-            <Chinese>只有在強烈疼痛時使用</Chinese>
-            <Chinesesimp>仅在剧烈疼痛下启用</Chinesesimp>
-            <French>Juste un fort effet douloureux</French>
-            <Italian>Solo effetto di elevato dolore</Italian>
-            <Czech>Pouze efekt vysoké bolesti</Czech>
-            <Polish>Tylko efekt mocnego bólu</Polish>
-            <Portuguese>Apenas efeito de dor alta</Portuguese>
-            <Spanish>Solo efecto de dolor fuerte</Spanish>
-            <Turkish>Sadece yüksek ağrı etkisi</Turkish>
-            <German>Nur bei starken Schmerzen</German>
-            <Russian>Эффект только сильной боли</Russian>
-            <Korean>강한 고통 때만 보여짐</Korean>
+        <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_Description">
+            <English>Selects the used low blood volume effect type.</English>
+            <Chinesesimp>选择低血容量下的效果类型。</Chinesesimp>
+            <Czech>Nastavuje který efekt pro nízké množství krve bude používán.</Czech>
+            <French>Permet de choisir quel effet provoque un faible volume sanguin.</French>
+            <German>Wählt die verwendete Effektart für niedriges Blutvolumen.</German>
+            <Italian>Seleziona il tipo di effetto causato da un volume di sangue molto ridotto.</Italian>
+            <Japanese>低血液量時の画面効果を選択できます。</Japanese>
+            <Korean>혈액량이 부족할 때 어떤 효과로 나타낼지 결정합니다.</Korean>
+            <Polish>Wybiera efekt ktory będzie pokazywany po utracie znacznej ilości krwi.</Polish>
+            <Portuguese>Seleciona o tipo de efeito visual quando o volume de sangue está baixo.</Portuguese>
+            <Russian>Выбирает тип визуализации эффекта низкого объема крови.</Russian>
+            <Spanish>Selecciona el tipo de efecto a causa de un volumen bajo de sangre.</Spanish>
+            <Turkish>Kullanılan düşük kan hacmi efekt türünü seçer.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_DisplayName">
             <English>Low Blood Volume Effect Type</English>
-            <Russian>Визуальный эффект низкого объема крови</Russian>
+            <Chinesesimp>低血容量影响类型</Chinesesimp>
+            <Czech>Efekt pro nízké množství krve</Czech>
             <French>Effet de faible volume sanguin</French>
+            <German>Effektart für "Niedriges Blutvolumen"</German>
             <Italian>Effetto di poco sangue</Italian>
             <Japanese>低血液量時効果の種類</Japanese>
-            <Czech>Efekt pro nízké množství krve</Czech>
-            <Polish>Efekt po utracie znacznej ilości krwi</Polish>
-            <Turkish>Düşük Kan Efekt Türü</Turkish>
-            <Spanish>Tipo de efecto por volumen bajo de sangre</Spanish>
-            <German>Effektart für "Niedriges Blutvolumen"</German>
-            <Chinesesimp>低血容量影响类型</Chinesesimp>
             <Korean>혈액량 부족 시 효과 종류</Korean>
+            <Polish>Efekt po utracie znacznej ilości krwi</Polish>
             <Portuguese>Tipo de efeito por volume baixo de sangue</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_Description">
-            <English>Selects the used low blood volume effect type.</English>
-            <Russian>Выбирает тип визуализации эффекта низкого объема крови.</Russian>
-            <French>Permet de choisir quel effet provoque un faible volume sanguin.</French>
-            <Italian>Seleziona il tipo di effetto causato da un volume di sangue molto ridotto.</Italian>
-            <Japanese>低血液量時の画面効果を選択できます。</Japanese>
-            <Czech>Nastavuje který efekt pro nízké množství krve bude používán.</Czech>
-            <Polish>Wybiera efekt ktory będzie pokazywany po utracie znacznej ilości krwi.</Polish>
-            <Turkish>Kullanılan düşük kan hacmi efekt türünü seçer.</Turkish>
-            <Spanish>Selecciona el tipo de efecto a causa de un volumen bajo de sangre.</Spanish>
-            <German>Wählt die verwendete Effektart für niedriges Blutvolumen.</German>
-            <Chinesesimp>选择低血容量下的效果类型。</Chinesesimp>
-            <Korean>혈액량이 부족할 때 어떤 효과로 나타낼지 결정합니다.</Korean>
-            <Portuguese>Seleciona o tipo de efeito visual quando o volume de sangue está baixo.</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_colorCorrection">
-            <English>Color Fading</English>
-            <Russian>Потеря цветности</Russian>
-            <French>Atténuation des couleurs</French>
-            <Italian>Sbiadimento dei colori</Italian>
-            <Japanese>退色</Japanese>
-            <Czech>Ztráta barev</Czech>
-            <Polish>Zanikanie kolorów</Polish>
-            <Turkish>Renk Soldurma</Turkish>
-            <Spanish>Atenuación del color</Spanish>
-            <German>Farbverblassen</German>
-            <Chinesesimp>褪色</Chinesesimp>
-            <Korean>색바램</Korean>
-            <Portuguese>Atenuação de cores</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_icon">
-            <English>Icon</English>
-            <Russian>Иконка</Russian>
-            <French>Icône</French>
-            <Italian>Icona</Italian>
-            <Japanese>アイコン</Japanese>
-            <Czech>Ikona</Czech>
-            <Polish>Ikona</Polish>
-            <Turkish>Simge</Turkish>
-            <Spanish>Icono</Spanish>
-            <German>Symbol</German>
-            <Chinesesimp>图标</Chinesesimp>
-            <Korean>아이콘</Korean>
-            <Portuguese>Ícone</Portuguese>
+            <Russian>Визуальный эффект низкого объема крови</Russian>
+            <Spanish>Tipo de efecto por volumen bajo de sangre</Spanish>
+            <Turkish>Düşük Kan Efekt Türü</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_both">
             <English>Icon + Color Fading</English>
-            <Russian>Иконка + Потеря цветности</Russian>
+            <Chinesesimp>图标+褪色</Chinesesimp>
+            <Czech>Ikona + Ztráta barev</Czech>
             <French>Icône + Atténuation des couleurs</French>
+            <German>Symbol + Farbverblassen</German>
             <Italian>Icona + Sbiadimento dei colori</Italian>
             <Japanese>アイコンと退色</Japanese>
-            <Czech>Ikona + Ztráta barev</Czech>
-            <Polish>Ikona + Zanikanie kolorów</Polish>
-            <Turkish>Simge + Renk Soldurma</Turkish>
-            <Spanish>Icono + Atenuación del color</Spanish>
-            <German>Symbol + Farbverblassen</German>
-            <Chinesesimp>图标+褪色</Chinesesimp>
             <Korean>아이콘 및 색바램</Korean>
+            <Polish>Ikona + Zanikanie kolorów</Polish>
             <Portuguese>Ícone + Atenuação de cores</Portuguese>
+            <Russian>Иконка + Потеря цветности</Russian>
+            <Spanish>Icono + Atenuación del color</Spanish>
+            <Turkish>Simge + Renk Soldurma</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_colorCorrection">
+            <English>Color Fading</English>
+            <Chinesesimp>褪色</Chinesesimp>
+            <Czech>Ztráta barev</Czech>
+            <French>Atténuation des couleurs</French>
+            <German>Farbverblassen</German>
+            <Italian>Sbiadimento dei colori</Italian>
+            <Japanese>退色</Japanese>
+            <Korean>색바램</Korean>
+            <Polish>Zanikanie kolorów</Polish>
+            <Portuguese>Atenuação de cores</Portuguese>
+            <Russian>Потеря цветности</Russian>
+            <Spanish>Atenuación del color</Spanish>
+            <Turkish>Renk Soldurma</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_BloodVolumeEffectType_icon">
+            <English>Icon</English>
+            <Chinesesimp>图标</Chinesesimp>
+            <Czech>Ikona</Czech>
+            <French>Icône</French>
+            <German>Symbol</German>
+            <Italian>Icona</Italian>
+            <Japanese>アイコン</Japanese>
+            <Korean>아이콘</Korean>
+            <Polish>Ikona</Polish>
+            <Portuguese>Ícone</Portuguese>
+            <Russian>Иконка</Russian>
+            <Spanish>Icono</Spanish>
+            <Turkish>Simge</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_ChromAberration">
+            <English>Chromatic Aberration</English>
+            <Chinese>色差</Chinese>
+            <Chinesesimp>色差</Chinesesimp>
+            <Czech>Chromatická aberace</Czech>
+            <French>Aberration chromatique</French>
+            <German>Chromatische Aberration</German>
+            <Hungarian>Kromatikus aberráció</Hungarian>
+            <Italian>Aberrazione cromatica</Italian>
+            <Japanese>色収差</Japanese>
+            <Korean>색수차</Korean>
+            <Polish>Aberracja chromatyczna</Polish>
+            <Portuguese>Aberração cromática</Portuguese>
+            <Russian>Хроматическая аберрация</Russian>
+            <Spanish>Aberración cromática</Spanish>
+            <Turkish>Renk sapmaları</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_Description">
+            <English>Selects the used pain effect type.</English>
+            <Chinese>選擇哪一個視覺效果用於回饋疼痛</Chinese>
+            <Chinesesimp>选择反馈的疼痛效果类型。</Chinesesimp>
+            <Czech>Nastavuje který efekt bolesti bude používán.</Czech>
+            <French>Permet de choisir quel effet provoque la douleur.</French>
+            <German>Wählt den zu benutzenden Schmerzeffekt aus.</German>
+            <Italian>Seleziona il tipo di effetto causato dal dolore.</Italian>
+            <Japanese>痛みの画面効果を選択できます。</Japanese>
+            <Korean>고통 시 어떤 효과로 나타낼 지 결정합니다.</Korean>
+            <Polish>Wybiera rodzaj efektu bólu.</Polish>
+            <Portuguese>Selecione o tipo de efeito de dor.</Portuguese>
+            <Russian>Выбирает тип визуализации болевого эффекта.</Russian>
+            <Spanish>Selecciona el tipo de efecto de dolor</Spanish>
+            <Turkish>Kullanılan ağrı efekti tipini seçer.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_DisplayName">
+            <English>Pain Effect Type</English>
+            <Chinese>疼痛效果類型</Chinese>
+            <Chinesesimp>疼痛效果类型</Chinesesimp>
+            <Czech>Efekt pro bolest</Czech>
+            <French>Effet de douleur</French>
+            <German>Schmerzeffekt-Typ</German>
+            <Hungarian>Fájdalom-effekt típusa</Hungarian>
+            <Italian>Effetto del dolore</Italian>
+            <Japanese>痛み効果の種類</Japanese>
+            <Korean>고통 효과 종류</Korean>
+            <Polish>Rodzaj efektu bólu</Polish>
+            <Portuguese>Tipo do efeito de dor</Portuguese>
+            <Russian>Визуальный эффект боли</Russian>
+            <Spanish>Tipo de efecto de dolor</Spanish>
+            <Turkish>Ağrı Etkisi Türü</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_OnlyBase">
+            <English>Only high pain effect</English>
+            <Chinese>只有在強烈疼痛時使用</Chinese>
+            <Chinesesimp>仅在剧烈疼痛下启用</Chinesesimp>
+            <Czech>Pouze efekt vysoké bolesti</Czech>
+            <French>Juste un fort effet douloureux</French>
+            <German>Nur bei starken Schmerzen</German>
+            <Italian>Solo effetto di elevato dolore</Italian>
+            <Japanese>強い痛み効果のみ</Japanese>
+            <Korean>강한 고통 때만 보여짐</Korean>
+            <Polish>Tylko efekt mocnego bólu</Polish>
+            <Portuguese>Apenas efeito de dor alta</Portuguese>
+            <Russian>Эффект только сильной боли</Russian>
+            <Spanish>Solo efecto de dolor fuerte</Spanish>
+            <Turkish>Sadece yüksek ağrı etkisi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_PulsingBlur">
+            <English>Pulsing Blur</English>
+            <Chinese>脈動模糊</Chinese>
+            <Chinesesimp>脉冲式模糊</Chinesesimp>
+            <Czech>Pulzující rozmazání</Czech>
+            <French>Pulsations floues</French>
+            <German>Wiederkehrende Unschärfe</German>
+            <Italian>Sfocatura pulsante</Italian>
+            <Japanese>ぼかしの強弱</Japanese>
+            <Korean>두근대는 흐려짐</Korean>
+            <Polish>Pulsujące rozmycie</Polish>
+            <Portuguese>Borrão Pulsante</Portuguese>
+            <Russian>Пульсирующее размытие</Russian>
+            <Spanish>Enborronamiento pulsante</Spanish>
+            <Turkish>Titreşimli Bulanıklık</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_PainEffectType_WhiteFlashing">
+            <English>White Flashing</English>
+            <Chinese>白光閃爍</Chinese>
+            <Chinesesimp>白光闪烁</Chinesesimp>
+            <Czech>Blikání bílé barvy</Czech>
+            <French>Flash blancs</French>
+            <German>Weißes blinken</German>
+            <Italian>Bianco lampeggiante</Italian>
+            <Japanese>白く点滅</Japanese>
+            <Korean>반짝이는 하얀색</Korean>
+            <Polish>Miganie na biało</Polish>
+            <Portuguese>Flashes Brancos</Portuguese>
+            <Russian>Белые вспышки</Russian>
+            <Spanish>Destello blanco</Spanish>
+            <Turkish>Beyaz Yanıp Sönüyor</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Feedback_SubCategory">
+            <English>Feedback</English>
+            <Chinese>視覺回饋</Chinese>
+            <Chinesesimp>受伤反应</Chinesesimp>
+            <Czech>Zpětná vazba</Czech>
+            <French>Réaction aux blessures</French>
+            <German>Rückmeldung</German>
+            <Italian>Commenti</Italian>
+            <Japanese>フィードバック</Japanese>
+            <Korean>피드백</Korean>
+            <Polish>Informacje Zwrotne</Polish>
+            <Portuguese>Reação a Lesões</Portuguese>
+            <Russian>Реакция на ранения</Russian>
+            <Spanish>Reacción</Spanish>
+            <Turkish>Geri Bildirim</Turkish>
         </Key>
         <Container name="Settings">
-            <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
-                <English>Enable Screams</English>
-                <Russian>Вкл. крики</Russian>
-                <Polish>Aktywuj wrzaski</Polish>
-                <Spanish>Activar gritos</Spanish>
-                <German>Schreie aktivieren</German>
-                <Czech>Povolit křik</Czech>
-                <Portuguese>Ativar gritos</Portuguese>
-                <French>Activer les cris</French>
-                <Hungarian>Kiáltások engedélyezése</Hungarian>
-                <Italian>Abilita Grida</Italian>
-                <Japanese>悲鳴を有効化</Japanese>
-                <Korean>비명 활성화</Korean>
-                <Chinesesimp>启用惨叫</Chinesesimp>
-                <Chinese>啟用尖叫</Chinese>
-                <Turkish>Çığlıkları Etkinleştir</Turkish>
+            <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
+                <English>Enables indicators for fractures and applied tourniquets and splints over the Stance Indicator.</English>
+                <Chinesesimp>在姿态指示器上启用骨折、应用止血带和夹板指示器。</Chinesesimp>
+                <French>Affiche des icônes au niveau de l'indicateur de posture, indiquant si le personnage souffre de fractures ou si des garrots ou des attelles sont appliqués.</French>
+                <German>Aktiviert Indikatoren für Frakturen mit angelegte Tourniquets und Schienen über dem Haltungsindikator.</German>
+                <Italian>Abilita indicatori per la presenza di fratture, gessature o lacci emostatici applicati sopra l'indicatore di postura.</Italian>
+                <Japanese>体勢インジケータに骨折や添え木、止血帯の有無を表示するかどうかを設定できます。</Japanese>
+                <Korean>자세 표시기 옆에 골절, 지혈대, 부목의 여부를 표시합니다.</Korean>
+                <Polish>Włącza wskaźniki złamań oraz założonej staz/szyn przy ikonie stanu postawy </Polish>
+                <Portuguese>Habilita indicadores para fraturas, torniquetes e talas sobre o indicador de posição do personagem.</Portuguese>
+                <Russian>Включает индикацию переломов, наложенных шин и жгутов поверх индикатора положения тела.</Russian>
+                <Spanish>Habilita los indicadores para fracturas y torniquetes apllicados y férulas sobre el indicador de posición del personaje.</Spanish>
+            </Key>
+            <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_DisplayName">
+                <English>Enable Fracture/Tourniquet/Splint Indicators</English>
+                <Chinesesimp>启用骨折/止血带/夹板指示器</Chinesesimp>
+                <French>Indicateurs de fractures/garrots/attelles</French>
+                <German>Fraktur-/Tourniquet-/Schienen-Indikatoren aktivieren</German>
+                <Italian>Abilita indicatori di Frattura/Gessatura/Laccio Emostatico</Italian>
+                <Japanese>骨折/止血帯/添え木の表記を有効化</Japanese>
+                <Korean>골절/지혈대/부목 표시 활성화</Korean>
+                <Polish>Włącz wskaźniki złamań/stazy/szyny</Polish>
+                <Portuguese>Habilitar indicadores de Fratura/Torniquete/Tala</Portuguese>
+                <Russian>Вкл. индикаторы переломов/жгутов/шин</Russian>
+                <Spanish>Habilitar indicadores de Fractura/Torniquete</Spanish>
             </Key>
             <Key ID="STR_ACE_Medical_Feedback_enableScreams_Description">
                 <English>Enable screaming by injured units</English>
-                <Russian>Включить крики раненных бойцов</Russian>
-                <Polish>Aktywuj wrzeszczenie z bólu przez ranne jednostki</Polish>
-                <Spanish>Activar gritos para unidades heridas</Spanish>
-                <German>Aktiviere Schreie bei verletzten Einheiten</German>
+                <Chinese>啟用傷者的尖叫聲</Chinese>
+                <Chinesesimp>启用伤者的惨叫声</Chinesesimp>
                 <Czech>Povolit křičení zraněných jednotek</Czech>
-                <Portuguese>Ativa gritos para unidades feridas</Portuguese>
                 <French>Si cette option est activée, les unités blessées crieront, voire hurleront sous l'effet de la douleur.</French>
+                <German>Aktiviere Schreie bei verletzten Einheiten</German>
                 <Hungarian>Engedélyezi a sérült egységek kiáltásait</Hungarian>
                 <Italian>Abilita Grida da parte di unità ferite</Italian>
                 <Japanese>負傷したユニットが悲鳴をあげるようにします。</Japanese>
                 <Korean>부상당한 인원이 소리지르는 것을 활성화합니다</Korean>
-                <Chinesesimp>启用伤者的惨叫声</Chinesesimp>
-                <Chinese>啟用傷者的尖叫聲</Chinese>
+                <Polish>Aktywuj wrzeszczenie z bólu przez ranne jednostki</Polish>
+                <Portuguese>Ativa gritos para unidades feridas</Portuguese>
+                <Russian>Включить крики раненных бойцов</Russian>
+                <Spanish>Activar gritos para unidades heridas</Spanish>
                 <Turkish>Yaralı birimler tarafından çığlık atmayı etkinleştir</Turkish>
             </Key>
-            <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_DisplayName">
-                <English>Enable Fracture/Tourniquet/Splint Indicators</English>
-                <Russian>Вкл. индикаторы переломов/жгутов/шин</Russian>
-                <Japanese>骨折/止血帯/添え木の表記を有効化</Japanese>
-                <French>Indicateurs de fractures/garrots/attelles</French>
-                <German>Fraktur-/Tourniquet-/Schienen-Indikatoren aktivieren</German>
-                <Italian>Abilita indicatori di Frattura/Gessatura/Laccio Emostatico</Italian>
-                <Polish>Włącz wskaźniki złamań/stazy/szyny</Polish>
-                <Chinesesimp>启用骨折/止血带/夹板指示器</Chinesesimp>
-                <Korean>골절/지혈대/부목 표시 활성화</Korean>
-                <Spanish>Habilitar indicadores de Fractura/Torniquete</Spanish>
-                <Portuguese>Habilitar indicadores de Fratura/Torniquete/Tala</Portuguese>
-            </Key>
-            <Key ID="STR_ACE_Medical_Feedback_EnableHUDIndicators_Description">
-                <English>Enables indicators for fractures and applied tourniquets and splints over the Stance Indicator.</English>
-                <Russian>Включает индикацию переломов, наложенных шин и жгутов поверх индикатора положения тела.</Russian>
-                <Japanese>体勢インジケータに骨折や添え木、止血帯の有無を表示するかどうかを設定できます。</Japanese>
-                <French>Affiche des icônes au niveau de l'indicateur de posture, indiquant si le personnage souffre de fractures ou si des garrots ou des attelles sont appliqués.</French>
-                <German>Aktiviert Indikatoren für Frakturen mit angelegte Tourniquets und Schienen über dem Haltungsindikator.</German>
-                <Italian>Abilita indicatori per la presenza di fratture, gessature o lacci emostatici applicati sopra l'indicatore di postura.</Italian>
-                <Polish>Włącza wskaźniki złamań oraz założonej staz/szyn przy ikonie stanu postawy </Polish>
-                <Chinesesimp>在姿态指示器上启用骨折、应用止血带和夹板指示器。</Chinesesimp>
-                <Korean>자세 표시기 옆에 골절, 지혈대, 부목의 여부를 표시합니다.</Korean>
-                <Spanish>Habilita los indicadores para fracturas y torniquetes apllicados y férulas sobre el indicador de posición del personaje.</Spanish>
-                <Portuguese>Habilita indicadores para fraturas, torniquetes e talas sobre o indicador de posição do personagem.</Portuguese>
+            <Key ID="STR_ACE_Medical_Feedback_enableScreams_DisplayName">
+                <English>Enable Screams</English>
+                <Chinese>啟用尖叫</Chinese>
+                <Chinesesimp>启用惨叫</Chinesesimp>
+                <Czech>Povolit křik</Czech>
+                <French>Activer les cris</French>
+                <German>Schreie aktivieren</German>
+                <Hungarian>Kiáltások engedélyezése</Hungarian>
+                <Italian>Abilita Grida</Italian>
+                <Japanese>悲鳴を有効化</Japanese>
+                <Korean>비명 활성화</Korean>
+                <Polish>Aktywuj wrzaski</Polish>
+                <Portuguese>Ativar gritos</Portuguese>
+                <Russian>Вкл. крики</Russian>
+                <Spanish>Activar gritos</Spanish>
+                <Turkish>Çığlıkları Etkinleştir</Turkish>
             </Key>
         </Container>
     </Package>

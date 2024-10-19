@@ -1,205 +1,205 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Project name="ACE">
     <Package name="Marker_Flags">
-        <Key ID="STR_ACE_Marker_Flags_DisplayName_Settings">
-            <English>Marker Flags</English>
-            <German>Markierungsfahnen</German>
-            <Italian>Bandiere segnaletiche</Italian>
-            <Polish>Chorągiewki</Polish>
-            <Japanese>マーカー旗</Japanese>
-            <Korean>마킹용 깃발</Korean>
-            <Chinesesimp>标记旗</Chinesesimp>
-            <Russian>Флажки</Russian>
-            <Spanish>Banderas de señalizado</Spanish>
-            <French>Drapeaux de marquage</French>
-            <Portuguese>Bandeiras de marcação</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_DisplayName">
-            <English>Place Anywhere</English>
-            <German>Überall platzieren</German>
-            <Italian>Piazza ovunque</Italian>
-            <Japanese>どこでも設置可能</Japanese>
-            <Polish>Umieść w dowolnym miejscu</Polish>
-            <Korean>아무 곳에나 배치</Korean>
-            <Chinesesimp>随意放置</Chinesesimp>
-            <Russian>Размещать где угодно</Russian>
-            <Spanish>Colocar en cualquier lugar</Spanish>
-            <French>Placer partout</French>
-            <Portuguese>Colocar em qualquer lugar</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_Description">
-            <English>Place marker flag anywhere regardless of surface.</English>
-            <Japanese>どのような地表でも旗を設置できるようにします</Japanese>
-            <Polish>Umieść chorągiewkę w dowolnym miejscu, niezależnie od powierzchni.</Polish>
-            <Korean>지면에 상관없이 아무곳에서나 마킹용 깃발을 배치합니다.</Korean>
-            <Chinesesimp>不管地形表面是什么都可以放标记旗</Chinesesimp>
-            <Russian>Размещать флажки где угодно вне зависимости от поверхности.</Russian>
-            <Spanish>Permitir colocar las banderas de señalizado en cualquier lugar, al margen del tipo de superficie.</Spanish>
-            <German>Platzieren Sie die Markierungsfahne überall, unabhängig von der Oberfläche.</German>
-            <Italian>Piazza bandiere segnaletiche ovunque, indipendentemente dalla superficie.</Italian>
-            <French>Place un drapeau de marquage n'importe où, quelle que soit la surface.</French>
-            <Portuguese>Permite colocar as bandeiras de marcação em qualquer lugar, independente do tipo de superfice</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Marker_Flags_ActionPlace">
-            <English>Place Marker Flag</English>
-            <German>Markierungsfahne platzieren</German>
-            <Italian>Piazza bandiera segnaletica</Italian>
-            <Polish>Postaw chorągiewkę</Polish>
-            <Korean>마킹용 깃발 꽂기</Korean>
-            <Russian>Поставить флажок</Russian>
-            <Spanish>Colocar Bandera de señalizado</Spanish>
-            <Japanese>マーカー旗 を置く</Japanese>
-            <French>Placer le drapeau de marquage</French>
-            <Portuguese>Colocar Bandeira de Marcação</Portuguese>
-        </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionAdjustHeight">
             <English>Adjust height</English>
+            <French>Ajuster la hauteur</French>
             <German>Höhe anpassen</German>
             <Italian>Modifica altezza</Italian>
-            <Polish>Dostosuj wysokość</Polish>
+            <Japanese>高さを調整する</Japanese>
             <Korean>높이 조정</Korean>
+            <Polish>Dostosuj wysokość</Polish>
+            <Portuguese>Ajustar altura</Portuguese>
             <Russian>Регулировать высоту</Russian>
             <Spanish>Ajustar altura</Spanish>
-            <Japanese>高さを調整する</Japanese>
-            <French>Ajuster la hauteur</French>
-            <Portuguese>Ajustar altura</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionCancel">
             <English>Cancel</English>
-            <German>Abbrechen</German>
-            <Spanish>Cancelar</Spanish>
-            <Polish>Anuluj</Polish>
-            <French>Annuler</French>
+            <Chinese>取消</Chinese>
+            <Chinesesimp>取消</Chinesesimp>
             <Czech>Zrušit</Czech>
-            <Italian>Annulla</Italian>
+            <French>Annuler</French>
+            <German>Abbrechen</German>
             <Hungarian>Mégsem</Hungarian>
-            <Portuguese>Cancelar</Portuguese>
-            <Russian>Отмена</Russian>
+            <Italian>Annulla</Italian>
             <Japanese>中止</Japanese>
             <Korean>취소</Korean>
-            <Chinesesimp>取消</Chinesesimp>
-            <Chinese>取消</Chinese>
+            <Polish>Anuluj</Polish>
+            <Portuguese>Cancelar</Portuguese>
+            <Russian>Отмена</Russian>
+            <Spanish>Cancelar</Spanish>
             <Turkish>Iptal</Turkish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPickUp">
             <English>Pick Up</English>
             <Chinese>提取點</Chinese>
-            <French>Récupérer</French>
-            <Spanish>Recoger</Spanish>
-            <Italian>Recupera</Italian>
-            <Polish>Podnieś</Polish>
-            <Russian>Подобрать</Russian>
-            <Czech>Vyzvednutí</Czech>
-            <Portuguese>Pegar</Portuguese>
-            <Korean>가져가기</Korean>
             <Chinesesimp>提取点</Chinesesimp>
-            <Japanese>拾う</Japanese>
-            <Turkish>Al</Turkish>
+            <Czech>Vyzvednutí</Czech>
+            <French>Récupérer</French>
             <German>Aufheben</German>
+            <Italian>Recupera</Italian>
+            <Japanese>拾う</Japanese>
+            <Korean>가져가기</Korean>
+            <Polish>Podnieś</Polish>
+            <Portuguese>Pegar</Portuguese>
+            <Russian>Подобрать</Russian>
+            <Spanish>Recoger</Spanish>
+            <Turkish>Al</Turkish>
         </Key>
-        <Key ID="STR_ACE_Marker_Flags_white">
-            <English>Marker Flag (White)</English>
-            <German>Markierungsfahne (Weiß)</German>
-            <Italian>Bandiera segnaletica (Bianca)</Italian>
-            <Polish>Chorągiewka (Biała)</Polish>
-            <Japanese>マーカー旗 (白)</Japanese>
-            <Korean>마킹용 깃발(하양)</Korean>
-            <Chinesesimp>标记旗（白）</Chinesesimp>
-            <Russian>Флажок (белый)</Russian>
-            <Spanish>Bandera de señalizado (Blanca)</Spanish>
-            <French>Drapeau de marquage (Blanc)</French>
-            <Portuguese>Bandeira de Marcação (Branca)</Portuguese>
+        <Key ID="STR_ACE_Marker_Flags_ActionPlace">
+            <English>Place Marker Flag</English>
+            <French>Placer le drapeau de marquage</French>
+            <German>Markierungsfahne platzieren</German>
+            <Italian>Piazza bandiera segnaletica</Italian>
+            <Japanese>マーカー旗 を置く</Japanese>
+            <Korean>마킹용 깃발 꽂기</Korean>
+            <Polish>Postaw chorągiewkę</Polish>
+            <Portuguese>Colocar Bandeira de Marcação</Portuguese>
+            <Russian>Поставить флажок</Russian>
+            <Spanish>Colocar Bandera de señalizado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_DisplayName_Settings">
+            <English>Marker Flags</English>
+            <Chinesesimp>标记旗</Chinesesimp>
+            <French>Drapeaux de marquage</French>
+            <German>Markierungsfahnen</German>
+            <Italian>Bandiere segnaletiche</Italian>
+            <Japanese>マーカー旗</Japanese>
+            <Korean>마킹용 깃발</Korean>
+            <Polish>Chorągiewki</Polish>
+            <Portuguese>Bandeiras de marcação</Portuguese>
+            <Russian>Флажки</Russian>
+            <Spanish>Banderas de señalizado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_Description">
+            <English>Place marker flag anywhere regardless of surface.</English>
+            <Chinesesimp>不管地形表面是什么都可以放标记旗</Chinesesimp>
+            <French>Place un drapeau de marquage n'importe où, quelle que soit la surface.</French>
+            <German>Platzieren Sie die Markierungsfahne überall, unabhängig von der Oberfläche.</German>
+            <Italian>Piazza bandiere segnaletiche ovunque, indipendentemente dalla superficie.</Italian>
+            <Japanese>どのような地表でも旗を設置できるようにします</Japanese>
+            <Korean>지면에 상관없이 아무곳에서나 마킹용 깃발을 배치합니다.</Korean>
+            <Polish>Umieść chorągiewkę w dowolnym miejscu, niezależnie od powierzchni.</Polish>
+            <Portuguese>Permite colocar as bandeiras de marcação em qualquer lugar, independente do tipo de superfice</Portuguese>
+            <Russian>Размещать флажки где угодно вне зависимости от поверхности.</Russian>
+            <Spanish>Permitir colocar las banderas de señalizado en cualquier lugar, al margen del tipo de superficie.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_PlaceAnywhere_DisplayName">
+            <English>Place Anywhere</English>
+            <Chinesesimp>随意放置</Chinesesimp>
+            <French>Placer partout</French>
+            <German>Überall platzieren</German>
+            <Italian>Piazza ovunque</Italian>
+            <Japanese>どこでも設置可能</Japanese>
+            <Korean>아무 곳에나 배치</Korean>
+            <Polish>Umieść w dowolnym miejscu</Polish>
+            <Portuguese>Colocar em qualquer lugar</Portuguese>
+            <Russian>Размещать где угодно</Russian>
+            <Spanish>Colocar en cualquier lugar</Spanish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_black">
             <English>Marker Flag (Black)</English>
+            <Chinesesimp>标记旗（黑）</Chinesesimp>
+            <French>Drapeau de marquage (Noir)</French>
             <German>Markierungsfahne (Schwarz)</German>
             <Italian>Bandiera segnaletica (Nera)</Italian>
-            <Polish>Chorągiewka (Czarna)</Polish>
             <Japanese>マーカー旗 (黒)</Japanese>
             <Korean>마킹용 깃발(검정)</Korean>
-            <Chinesesimp>标记旗（黑）</Chinesesimp>
+            <Polish>Chorągiewka (Czarna)</Polish>
+            <Portuguese>Bandeira de Marcação (Preta)</Portuguese>
             <Russian>Флажок (чёрный)</Russian>
             <Spanish>Bandera de señalizado (Negra)</Spanish>
-            <French>Drapeau de marquage (Noir)</French>
-            <Portuguese>Bandeira de Marcação (Preta)</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Marker_Flags_red">
-            <English>Marker Flag (Red)</English>
-            <German>Markierungsfahne (Rot)</German>
-            <Italian>Bandiera segnaletica (Rossa)</Italian>
-            <Polish>Chorągiewka (Czerwona)</Polish>
-            <Japanese>マーカー旗 (赤)</Japanese>
-            <Korean>마킹용 깃발(빨강)</Korean>
-            <Chinesesimp>标记旗（红）</Chinesesimp>
-            <Russian>Флажок (красный)</Russian>
-            <Spanish>Bandera de señalizado (Roja)</Spanish>
-            <French>Drapeau de marquage (Rouge)</French>
-            <Portuguese>Bandeira de Marcação (Vermelha)</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Marker_Flags_green">
-            <English>Marker Flag (Green)</English>
-            <German>Markierungsfahne (Grün)</German>
-            <Italian>Bandiera segnaletica (Verde)</Italian>
-            <Polish>Chorągiewka (Zielona)</Polish>
-            <Japanese>マーカー旗 (緑)</Japanese>
-            <Korean>마킹용 깃발(초록)</Korean>
-            <Chinesesimp>标记旗（绿）</Chinesesimp>
-            <Russian>Флажок (зелёный)</Russian>
-            <Spanish>Bandera de señalizado (Verde)</Spanish>
-            <French>Drapeau de marquage (Vert)</French>
-            <Portuguese>Bandeira de Marcação (Verde)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_blue">
             <English>Marker Flag (Blue)</English>
+            <Chinesesimp>标记旗（蓝）</Chinesesimp>
+            <French>Drapeau de marquage (Bleu)</French>
             <German>Markierungsfahne (Blau)</German>
             <Italian>Bandiera segnaletica (Blu)</Italian>
-            <Polish>Chorągiewka (Niebieska)</Polish>
             <Japanese>マーカー旗 (青)</Japanese>
             <Korean>마킹용 깃발(파랑)</Korean>
-            <Chinesesimp>标记旗（蓝）</Chinesesimp>
+            <Polish>Chorągiewka (Niebieska)</Polish>
+            <Portuguese>Bandeira de Marcação (Azul)</Portuguese>
             <Russian>Флажок (синий)</Russian>
             <Spanish>Bandera de señalizado (Azul)</Spanish>
-            <French>Drapeau de marquage (Bleu)</French>
-            <Portuguese>Bandeira de Marcação (Azul)</Portuguese>
         </Key>
-        <Key ID="STR_ACE_Marker_Flags_yellow">
-            <English>Marker Flag (Yellow)</English>
-            <German>Markierungsfahne (Gelb)</German>
-            <Italian>Bandiera segnaletica (Gialla)</Italian>
-            <Polish>Chorągiewka (Żółta)</Polish>
-            <Japanese>マーカー旗 (黄)</Japanese>
-            <Korean>마킹용 깃발(노랑)</Korean>
-            <Chinesesimp>标记旗（黄）</Chinesesimp>
-            <Russian>Флажок (жёлтый)</Russian>
-            <Spanish>Bandera de señalizado (Amarilla)</Spanish>
-            <French>Drapeau de marquage (Jaune)</French>
-            <Portuguese>Bandeira de Marcação (Amarela)</Portuguese>
+        <Key ID="STR_ACE_Marker_Flags_green">
+            <English>Marker Flag (Green)</English>
+            <Chinesesimp>标记旗（绿）</Chinesesimp>
+            <French>Drapeau de marquage (Vert)</French>
+            <German>Markierungsfahne (Grün)</German>
+            <Italian>Bandiera segnaletica (Verde)</Italian>
+            <Japanese>マーカー旗 (緑)</Japanese>
+            <Korean>마킹용 깃발(초록)</Korean>
+            <Polish>Chorągiewka (Zielona)</Polish>
+            <Portuguese>Bandeira de Marcação (Verde)</Portuguese>
+            <Russian>Флажок (зелёный)</Russian>
+            <Spanish>Bandera de señalizado (Verde)</Spanish>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_orange">
             <English>Marker Flag (Orange)</English>
+            <Chinesesimp>标记旗（橙）</Chinesesimp>
+            <French>Drapeau de marquage (Orange)</French>
             <German>Markierungsfahne (Orange)</German>
             <Italian>Bandiera segnaletica (Arancione)</Italian>
-            <Polish>Chorągiewka (Pomarańczowa)</Polish>
             <Japanese>マーカー旗 (橙)</Japanese>
             <Korean>마킹용 깃발(주황)</Korean>
-            <Chinesesimp>标记旗（橙）</Chinesesimp>
+            <Polish>Chorągiewka (Pomarańczowa)</Polish>
+            <Portuguese>Bandeira de Marcação (Laranja)</Portuguese>
             <Russian>Флажок (оранжевый)</Russian>
             <Spanish>Bandera de señalizado (Naranja)</Spanish>
-            <French>Drapeau de marquage (Orange)</French>
-            <Portuguese>Bandeira de Marcação (Laranja)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_purple">
             <English>Marker Flag (Purple)</English>
+            <Chinesesimp>标记旗（紫）</Chinesesimp>
+            <French>Drapeau de marquage (Violet)</French>
             <German>Markierungsfahne (Lila)</German>
             <Italian>Bandiera segnaletica (Viola)</Italian>
-            <Polish>Chorągiewka (Fioletowa)</Polish>
             <Japanese>マーカー旗 (紫)</Japanese>
             <Korean>마킹용 깃발(보라)</Korean>
-            <Chinesesimp>标记旗（紫）</Chinesesimp>
+            <Polish>Chorągiewka (Fioletowa)</Polish>
+            <Portuguese>Bandeira de Marcação (Roxa)</Portuguese>
             <Russian>Флажок (фиолетовый)</Russian>
             <Spanish>Bandera de señalizado (Púrpura)</Spanish>
-            <French>Drapeau de marquage (Violet)</French>
-            <Portuguese>Bandeira de Marcação (Roxa)</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_red">
+            <English>Marker Flag (Red)</English>
+            <Chinesesimp>标记旗（红）</Chinesesimp>
+            <French>Drapeau de marquage (Rouge)</French>
+            <German>Markierungsfahne (Rot)</German>
+            <Italian>Bandiera segnaletica (Rossa)</Italian>
+            <Japanese>マーカー旗 (赤)</Japanese>
+            <Korean>마킹용 깃발(빨강)</Korean>
+            <Polish>Chorągiewka (Czerwona)</Polish>
+            <Portuguese>Bandeira de Marcação (Vermelha)</Portuguese>
+            <Russian>Флажок (красный)</Russian>
+            <Spanish>Bandera de señalizado (Roja)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_white">
+            <English>Marker Flag (White)</English>
+            <Chinesesimp>标记旗（白）</Chinesesimp>
+            <French>Drapeau de marquage (Blanc)</French>
+            <German>Markierungsfahne (Weiß)</German>
+            <Italian>Bandiera segnaletica (Bianca)</Italian>
+            <Japanese>マーカー旗 (白)</Japanese>
+            <Korean>마킹용 깃발(하양)</Korean>
+            <Polish>Chorągiewka (Biała)</Polish>
+            <Portuguese>Bandeira de Marcação (Branca)</Portuguese>
+            <Russian>Флажок (белый)</Russian>
+            <Spanish>Bandera de señalizado (Blanca)</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Marker_Flags_yellow">
+            <English>Marker Flag (Yellow)</English>
+            <Chinesesimp>标记旗（黄）</Chinesesimp>
+            <French>Drapeau de marquage (Jaune)</French>
+            <German>Markierungsfahne (Gelb)</German>
+            <Italian>Bandiera segnaletica (Gialla)</Italian>
+            <Japanese>マーカー旗 (黄)</Japanese>
+            <Korean>마킹용 깃발(노랑)</Korean>
+            <Polish>Chorągiewka (Żółta)</Polish>
+            <Portuguese>Bandeira de Marcação (Amarela)</Portuguese>
+            <Russian>Флажок (жёлтый)</Russian>
+            <Spanish>Bandera de señalizado (Amarilla)</Spanish>
         </Key>
     </Package>
 </Project>

@@ -1,37 +1,37 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Project name="ACE">
     <Package name="Main">
         <Key ID="STR_ACE_Main_Category_Logistics">
             <English>ACE Logistics</English>
+            <Chinese>ACE 後勤</Chinese>
+            <Chinesesimp>ACE 后勤</Chinesesimp>
+            <Czech>ACE Logistika</Czech>
+            <French>ACE Logistique</French>
             <German>ACE Logistik</German>
+            <Italian>ACE Logistica</Italian>
+            <Japanese>ACE ロジスティクス</Japanese>
+            <Korean>ACE 병참</Korean>
             <Polish>ACE Logistyka</Polish>
             <Portuguese>Logísticas ACE</Portuguese>
             <Russian>ACE: Логистика</Russian>
-            <Czech>ACE Logistika</Czech>
             <Spanish>ACE Logística</Spanish>
-            <Italian>ACE Logistica</Italian>
-            <French>ACE Logistique</French>
-            <Japanese>ACE ロジスティクス</Japanese>
-            <Chinesesimp>ACE 后勤</Chinesesimp>
-            <Chinese>ACE 後勤</Chinese>
-            <Korean>ACE 병참</Korean>
             <Turkish>ACE Lojistik</Turkish>
         </Key>
         <Key ID="STR_ACE_Main_URL">
             <English>https://ace3.acemod.org/</English>
+            <Chinese>https://ace3.acemod.org/</Chinese>
+            <Chinesesimp>https://ace3.acemod.org/</Chinesesimp>
+            <Czech>https://ace3.acemod.org/</Czech>
+            <French>https://ace3.acemod.org/</French>
             <German>https://ace3.acemod.org/</German>
+            <Hungarian>https://ace3.acemod.org/</Hungarian>
+            <Italian>https://ace3.acemod.org/</Italian>
+            <Japanese>https://ace3.acemod.org/</Japanese>
+            <Korean>https://ace3.acemod.org/</Korean>
             <Polish>https://ace3.acemod.org/</Polish>
             <Portuguese>https://ace3.acemod.org/</Portuguese>
             <Russian>https://ace3.acemod.org/</Russian>
-            <Czech>https://ace3.acemod.org/</Czech>
             <Spanish>https://ace3.acemod.org/</Spanish>
-            <Italian>https://ace3.acemod.org/</Italian>
-            <French>https://ace3.acemod.org/</French>
-            <Korean>https://ace3.acemod.org/</Korean>
-            <Japanese>https://ace3.acemod.org/</Japanese>
-            <Chinesesimp>https://ace3.acemod.org/</Chinesesimp>
-            <Chinese>https://ace3.acemod.org/</Chinese>
-            <Hungarian>https://ace3.acemod.org/</Hungarian>
             <Turkish>https://ace3.acemod.org/</Turkish>
         </Key>
     </Package>

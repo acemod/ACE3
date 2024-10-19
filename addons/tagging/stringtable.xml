@@ -1,401 +1,401 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Project name="ACE">
     <Package name="Tagging">
-        <Key ID="STR_ACE_Tagging_Tagging">
-            <English>Tagging</English>
-            <Russian>Маркировка</Russian>
-            <Japanese>タグ付け</Japanese>
-            <Polish>Tagowanie</Polish>
-            <German>Markieren (Spraydose)</German>
-            <Korean>태그하기</Korean>
-            <French>Marquage</French>
-            <Italian>Marcamento</Italian>
-            <Chinesesimp>喷漆</Chinesesimp>
-            <Chinese>噴漆</Chinese>
-            <Portuguese>Marcação</Portuguese>
-            <Czech>Označování</Czech>
-            <Turkish>Işaretleme</Turkish>
-            <Spanish>Marcado</Spanish>
+        <Key ID="STR_ACE_Tagging_LastUsed">
+            <English>Last Used</English>
+            <Chinese>上次最後使用</Chinese>
+            <Chinesesimp>上次最后使用</Chinesesimp>
+            <Czech>Naposledy použitý</Czech>
+            <French>Dernier utilisé</French>
+            <German>Zuletzt benutzt</German>
+            <Italian>Ultimo Usato</Italian>
+            <Japanese>最後に使用したタグ</Japanese>
+            <Korean>최근 사용</Korean>
+            <Polish>Ostatnio użyte</Polish>
+            <Portuguese>Último usado</Portuguese>
+            <Russian>Повторить последний</Russian>
+            <Spanish>Último usado</Spanish>
+            <Turkish>Son Kullanan</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_ModuleDesc">
             <English>Configure how the tagging system will operate by default.</English>
-            <Russian>Настройка работы системы спрей-маркеров по умолчанию.</Russian>
-            <Japanese>タグ付けシステムの標準動作を設定します。</Japanese>
-            <Polish>Skonfiguruj zachowanie systemu tagowania.</Polish>
-            <German>Konfiguriert, wie das Markieren standardmäßig funktioniert.</German>
-            <Korean>태그 시스템의 기본사항을 설정합니다.</Korean>
-            <French>Configure le fonctionnement par défaut du système de marquage.</French>
-            <Italian>Configura come il sistema di marcamento agirà in maniera predefinita.</Italian>
-            <Chinesesimp>定义喷漆系统预设设定</Chinesesimp>
             <Chinese>定義噴漆系統預設設定</Chinese>
-            <Portuguese>Configura como o sistema de Marcação funcionará como padrão. (Tagging)</Portuguese>
+            <Chinesesimp>定义喷漆系统预设设定</Chinesesimp>
             <Czech>Nakonfigurujte, jak bude systém značkování ve výchozím nastavení fungovat.</Czech>
+            <French>Configure le fonctionnement par défaut du système de marquage.</French>
+            <German>Konfiguriert, wie das Markieren standardmäßig funktioniert.</German>
+            <Italian>Configura come il sistema di marcamento agirà in maniera predefinita.</Italian>
+            <Japanese>タグ付けシステムの標準動作を設定します。</Japanese>
+            <Korean>태그 시스템의 기본사항을 설정합니다.</Korean>
+            <Polish>Skonfiguruj zachowanie systemu tagowania.</Polish>
+            <Portuguese>Configura como o sistema de Marcação funcionará como padrão. (Tagging)</Portuguese>
+            <Russian>Настройка работы системы спрей-маркеров по умолчанию.</Russian>
             <Spanish>Configura cómo funciona el sistema de marcado por defecto.</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTag">
             <English>Spray Paint - Quick Tag</English>
-            <Russian>Быстрый маркер</Russian>
-            <Japanese>スプレーペイント - クイックタグ</Japanese>
-            <Polish>Szybkie tagowanie</Polish>
-            <German>Schnelle Markierung (Spraydose)</German>
-            <Korean>스프레이 페인트 - 빠른 태그</Korean>
-            <French>Peinture en spray - Marquage rapide</French>
-            <Italian>Marcamento Spray - Rapido</Italian>
-            <Chinesesimp>快速喷漆</Chinesesimp>
             <Chinese>快速噴漆</Chinese>
-            <Portuguese>Lata de Tinta - Marcação Rápida</Portuguese>
+            <Chinesesimp>快速喷漆</Chinesesimp>
             <Czech>Stříkací barva - Rychlá značka</Czech>
-            <Turkish>Sprey Boya- Hızlı Işaretleme</Turkish>
+            <French>Peinture en spray - Marquage rapide</French>
+            <German>Schnelle Markierung (Spraydose)</German>
+            <Italian>Marcamento Spray - Rapido</Italian>
+            <Japanese>スプレーペイント - クイックタグ</Japanese>
+            <Korean>스프레이 페인트 - 빠른 태그</Korean>
+            <Polish>Szybkie tagowanie</Polish>
+            <Portuguese>Lata de Tinta - Marcação Rápida</Portuguese>
+            <Russian>Быстрый маркер</Russian>
             <Spanish>Pintada con spray - Marcado rápido</Spanish>
+            <Turkish>Sprey Boya- Hızlı Işaretleme</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_QuickTagDesc">
             <English>Action performed on main tag interaction point.</English>
-            <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
-            <Japanese>メインのインタラクションポイント(タグ)を選択した際に行われるアクション。</Japanese>
-            <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
-            <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
-            <Korean>상호작용 시 표시할 낙서를 고릅니다.</Korean>
-            <French>Type de marquage à appliquer sur le point visé.</French>
-            <Italian>Azione eseguita sul punto di interazione del tag principale.</Italian>
-            <Chinesesimp>直接喷漆在互动菜单瞄准的点上。</Chinesesimp>
             <Chinese>直接噴漆在互動選單瞄準的點上。</Chinese>
-            <Portuguese>Ação executada no ponto principal de marcação</Portuguese>
+            <Chinesesimp>直接喷漆在互动菜单瞄准的点上。</Chinesesimp>
             <Czech>Akce prováděná v hlavním bodě značky interakce.</Czech>
+            <French>Type de marquage à appliquer sur le point visé.</French>
+            <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
+            <Italian>Azione eseguita sul punto di interazione del tag principale.</Italian>
+            <Japanese>メインのインタラクションポイント(タグ)を選択した際に行われるアクション。</Japanese>
+            <Korean>상호작용 시 표시할 낙서를 고릅니다.</Korean>
+            <Polish>Akcja wykonywana na głównym punkcie interakcji tagu.</Polish>
+            <Portuguese>Ação executada no ponto principal de marcação</Portuguese>
+            <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
             <Spanish>Acción realizada en el punto de interacción de marcado principal.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Tagging_LastUsed">
-            <English>Last Used</English>
-            <Russian>Повторить последний</Russian>
-            <Japanese>最後に使用したタグ</Japanese>
-            <Polish>Ostatnio użyte</Polish>
-            <German>Zuletzt benutzt</German>
-            <Korean>최근 사용</Korean>
-            <French>Dernier utilisé</French>
-            <Italian>Ultimo Usato</Italian>
-            <Chinesesimp>上次最后使用</Chinesesimp>
-            <Chinese>上次最後使用</Chinese>
-            <Portuguese>Último usado</Portuguese>
-            <Czech>Naposledy použitý</Czech>
-            <Turkish>Son Kullanan</Turkish>
-            <Spanish>Último usado</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Tagging_RandomX">
-            <English>Random X</English>
-            <Russian>Случайный Х</Russian>
-            <Japanese>無作為なX印</Japanese>
-            <Polish>Losowy X</Polish>
-            <German>Zufällig X</German>
-            <Korean>무작위 X</Korean>
-            <French>X aléatoire</French>
-            <Italian>Randomico X</Italian>
-            <Chinesesimp>随机X标记</Chinesesimp>
-            <Chinese>隨機X標記</Chinese>
-            <Portuguese>Aleatório X</Portuguese>
-            <Czech>Náhodné X</Czech>
-            <Turkish>Rasgele X</Turkish>
-            <Spanish>Aleatorio X</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_Random">
             <English>Random</English>
-            <Russian>Случайный</Russian>
-            <Japanese>無作為</Japanese>
-            <Polish>Losowy</Polish>
-            <German>Zufällig</German>
-            <Korean>무작위</Korean>
-            <French>Aléatoire</French>
-            <Italian>Randomico</Italian>
-            <Chinesesimp>随机</Chinesesimp>
             <Chinese>隨機</Chinese>
-            <Portuguese>Aleatório</Portuguese>
+            <Chinesesimp>随机</Chinesesimp>
             <Czech>Náhodný</Czech>
-            <Turkish>Rasgele</Turkish>
+            <French>Aléatoire</French>
+            <German>Zufällig</German>
+            <Italian>Randomico</Italian>
+            <Japanese>無作為</Japanese>
+            <Korean>무작위</Korean>
+            <Polish>Losowy</Polish>
+            <Portuguese>Aleatório</Portuguese>
+            <Russian>Случайный</Russian>
             <Spanish>Aleatorio</Spanish>
+            <Turkish>Rasgele</Turkish>
         </Key>
-        <Key ID="STR_ACE_Tagging_Tag">
-            <English>Tag</English>
-            <German>Markieren (Spraydose)</German>
-            <Spanish>Marcar</Spanish>
-            <Polish>Oznakuj</Polish>
-            <Italian>Marca</Italian>
-            <Czech>Označit</Czech>
-            <Portuguese>Marcar</Portuguese>
-            <Russian>Маркер</Russian>
-            <Japanese>タグ (スプレーペイント)</Japanese>
-            <Korean>태그</Korean>
-            <French>Tag</French>
-            <Chinesesimp>喷漆</Chinesesimp>
-            <Chinese>噴漆</Chinese>
-            <Turkish>Işaretle</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Tagging_x">
-            <English>X</English>
-            <German>X</German>
-            <Spanish>X</Spanish>
-            <Polish>X</Polish>
-            <French>X</French>
-            <Italian>X</Italian>
-            <Czech>X</Czech>
-            <Portuguese>X</Portuguese>
-            <Russian>Х</Russian>
-            <Japanese>X印</Japanese>
-            <Korean>X</Korean>
-            <Chinesesimp>X标记</Chinesesimp>
-            <Chinese>X標記</Chinese>
-            <Turkish>X</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Tagging_arrow_up">
-            <English>Up Arrow</English>
-            <Japanese>矢印 (上)</Japanese>
-            <Polish>Strzałka w górę</Polish>
-            <Korean>화살표(위)</Korean>
-            <Russian>Стрелка вверх</Russian>
-            <Spanish>Flecha Arriba</Spanish>
-            <German>Pfeil Hoch</German>
-            <Italian>Freccia in alto</Italian>
-            <French>Flèche du haut</French>
-        </Key>
-        <Key ID="STR_ACE_Tagging_arrow_down">
-            <English>Down Arrow</English>
-            <Japanese>矢印 (下)</Japanese>
-            <Polish>Strzałka w dół</Polish>
-            <Korean>화살표(아래)</Korean>
-            <Russian>Стрелка вниз</Russian>
-            <Spanish>Flecha Abajo</Spanish>
-            <German>Pfeil Runter</German>
-            <Italian>Freccia in basso</Italian>
-            <French>Flèche du bas</French>
-        </Key>
-        <Key ID="STR_ACE_Tagging_arrow_left">
-            <English>Left Arrow</English>
-            <Japanese>矢印 (左)</Japanese>
-            <Polish>Strzałka w lewo</Polish>
-            <Korean>화살표(왼쪽)</Korean>
-            <Russian>Стрелка влево</Russian>
-            <Spanish>Flecha Izquierda</Spanish>
-            <German>Pfeil Links</German>
-            <Italian>Freccia a sinistra</Italian>
-            <French>Flèche gauche</French>
-        </Key>
-        <Key ID="STR_ACE_Tagging_arrow_right">
-            <English>Right Arrow</English>
-            <Japanese>矢印 (右)</Japanese>
-            <Polish>Strzałka w prawo</Polish>
-            <Korean>화살표(오른쪽)</Korean>
-            <Russian>Стрелка вправо</Russian>
-            <Spanish>Flecha Derecha</Spanish>
-            <German>Pfeil Rechts</German>
-            <Italian>Freccia a destra</Italian>
-            <French>Flèche droite</French>
-        </Key>
-        <Key ID="STR_ACE_Tagging_circle">
-            <English>Circle</English>
-            <Japanese>丸</Japanese>
-            <Polish>Okrąg</Polish>
-            <Korean>원</Korean>
-            <Russian>Круг</Russian>
-            <Spanish>Círculo</Spanish>
-            <German>Kreis</German>
-            <Italian>Cerchio</Italian>
-            <French>Cercle</French>
-        </Key>
-        <Key ID="STR_ACE_Tagging_cross">
-            <English>Cross</English>
-            <Japanese>十字</Japanese>
-            <Polish>Krzyż</Polish>
-            <Korean>십자</Korean>
-            <Russian>Перекрестие</Russian>
-            <Spanish>Cruz</Spanish>
-            <German>Kreuz</German>
-            <Italian>Croce</Italian>
-            <French>Croix</French>
-        </Key>
-        <Key ID="STR_ACE_Tagging_diamond">
-            <English>Diamond</English>
-            <Japanese>菱形</Japanese>
-            <Polish>Diament</Polish>
-            <Korean>마름모</Korean>
-            <Russian>Алмаз</Russian>
-            <Spanish>Diamante</Spanish>
-            <German>Diamant</German>
-            <Italian>Diamante</Italian>
-            <French>Losange</French>
-        </Key>
-        <Key ID="STR_ACE_Tagging_square">
-            <English>Square</English>
-            <Japanese>四角</Japanese>
-            <Polish>Kwadrat</Polish>
-            <Korean>사각형</Korean>
-            <Russian>Квадрат</Russian>
-            <Spanish>Cuadrado</Spanish>
-            <German>Quadrat</German>
-            <Italian>Quadrato</Italian>
-            <French>Carré</French>
-        </Key>
-        <Key ID="STR_ACE_Tagging_square_filled">
-            <English>Filled Square</English>
-            <Japanese>四角 (塗りつぶし)</Japanese>
-            <Polish>Wypełniony Kwadrat</Polish>
-            <Korean>채워진 사각형</Korean>
-            <Russian>Заполненный Квадрат</Russian>
-            <Spanish>Cuadrado Lleno</Spanish>
-            <German>Gefülltes Quadrat</German>
-            <Italian>Quadrato pieno</Italian>
-            <French>Carré rempli</French>
-        </Key>
-        <Key ID="STR_ACE_Tagging_triangle">
-            <English>Triangle</English>
-            <Japanese>三角</Japanese>
-            <Polish>Trójkąt</Polish>
-            <Korean>삼각형</Korean>
-            <Russian>Треугольник</Russian>
-            <Spanish>Triángulo</Spanish>
-            <German>Dreieck</German>
-            <Italian>Triangolo</Italian>
-            <French>Triangle</French>
-        </Key>
-        <Key ID="STR_ACE_Tagging_triangle_inverted">
-            <English>Triangle Inverted</English>
-            <Japanese>三角 (反転)</Japanese>
-            <Polish>Odwrócony trójkąt</Polish>
-            <Korean>역삼각형</Korean>
-            <Russian>Обратный треугольник</Russian>
-            <Spanish>Triángulo invertido</Spanish>
-            <German>Invertiertes Dreieck</German>
-            <Italian>Triangolo capovolto</Italian>
-            <French>Triangle inversé</French>
+        <Key ID="STR_ACE_Tagging_RandomX">
+            <English>Random X</English>
+            <Chinese>隨機X標記</Chinese>
+            <Chinesesimp>随机X标记</Chinesesimp>
+            <Czech>Náhodné X</Czech>
+            <French>X aléatoire</French>
+            <German>Zufällig X</German>
+            <Italian>Randomico X</Italian>
+            <Japanese>無作為なX印</Japanese>
+            <Korean>무작위 X</Korean>
+            <Polish>Losowy X</Polish>
+            <Portuguese>Aleatório X</Portuguese>
+            <Russian>Случайный Х</Russian>
+            <Spanish>Aleatorio X</Spanish>
+            <Turkish>Rasgele X</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlack">
             <English>Spray Paint (Black)</English>
-            <German>Sprühfarbe (Schwarz)</German>
-            <Spanish>Pintura negra</Spanish>
-            <Polish>Farba w Sprayu (Czarna)</Polish>
-            <French>Peinture en spray (Noire)</French>
-            <Italian>Bomboletta spray nera</Italian>
+            <Chinese>黑色噴漆</Chinese>
+            <Chinesesimp>黑色喷漆</Chinesesimp>
             <Czech>Černý sprej</Czech>
-            <Portuguese>Spray de tinta preta</Portuguese>
-            <Russian>Черный спрей</Russian>
+            <French>Peinture en spray (Noire)</French>
+            <German>Sprühfarbe (Schwarz)</German>
+            <Italian>Bomboletta spray nera</Italian>
             <Japanese>スプレーペイント缶 (黒色)</Japanese>
             <Korean>검정 스프레이</Korean>
-            <Chinesesimp>黑色喷漆</Chinesesimp>
-            <Chinese>黑色噴漆</Chinese>
+            <Polish>Farba w Sprayu (Czarna)</Polish>
+            <Portuguese>Spray de tinta preta</Portuguese>
+            <Russian>Черный спрей</Russian>
+            <Spanish>Pintura negra</Spanish>
             <Turkish>Sprey Boya (Siyah)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Tagging_SpraypaintRed">
-            <English>Spray Paint (Red)</English>
-            <German>Sprühfarbe (Rot)</German>
-            <Spanish>Pintura roja</Spanish>
-            <Polish>Farba w Sprayu (Czerwona)</Polish>
-            <French>Peinture en spray (Rouge)</French>
-            <Italian>Bomboletta spray rossa</Italian>
-            <Czech>Červený sprej</Czech>
-            <Portuguese>Spray de tinta vermelha</Portuguese>
-            <Russian>Красный спрей</Russian>
-            <Japanese>スプレーペイント缶 (赤色)</Japanese>
-            <Korean>빨강 스프레이</Korean>
-            <Chinesesimp>红色喷漆</Chinesesimp>
-            <Chinese>紅色噴漆</Chinese>
-            <Turkish>Sprey Boya (Kırmızı)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Tagging_SpraypaintGreen">
-            <English>Spray Paint (Green)</English>
-            <German>Sprühfarbe (Grün)</German>
-            <Spanish>Pintura verde</Spanish>
-            <Polish>Farba w Sprayu (Zielona)</Polish>
-            <French>Peinture en spray (Verte)</French>
-            <Italian>Bomboletta spray verde</Italian>
-            <Czech>Zelený sprej</Czech>
-            <Portuguese>Spray de tinta verde</Portuguese>
-            <Russian>Зелёный спрей</Russian>
-            <Japanese>スプレーペイント缶 (緑色)</Japanese>
-            <Korean>초록 스프레이</Korean>
-            <Chinesesimp>绿色喷漆</Chinesesimp>
-            <Chinese>綠色噴漆</Chinese>
-            <Turkish>Sprey Boya (Yeşil)</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintBlue">
             <English>Spray Paint (Blue)</English>
-            <German>Sprühfarbe (Blau)</German>
-            <Spanish>Pintura azul</Spanish>
-            <Polish>Farba w Sprayu (Niebieska)</Polish>
-            <French>Peinture en spray (Bleue)</French>
-            <Italian>Bomboletta spray blu</Italian>
+            <Chinese>藍色噴漆</Chinese>
+            <Chinesesimp>蓝色喷漆</Chinesesimp>
             <Czech>Modrý sprej</Czech>
-            <Portuguese>Spray de tinta azul</Portuguese>
-            <Russian>Синий спрей</Russian>
+            <French>Peinture en spray (Bleue)</French>
+            <German>Sprühfarbe (Blau)</German>
+            <Italian>Bomboletta spray blu</Italian>
             <Japanese>スプレーペイント缶 (青色)</Japanese>
             <Korean>파랑 스프레이</Korean>
-            <Chinesesimp>蓝色喷漆</Chinesesimp>
-            <Chinese>藍色噴漆</Chinese>
+            <Polish>Farba w Sprayu (Niebieska)</Polish>
+            <Portuguese>Spray de tinta azul</Portuguese>
+            <Russian>Синий спрей</Russian>
+            <Spanish>Pintura azul</Spanish>
             <Turkish>Sprey Boya (Mavi)</Turkish>
         </Key>
-        <Key ID="STR_ACE_Tagging_SpraypaintYellow">
-            <English>Spray Paint (Yellow)</English>
-            <German>Sprühfarbe (Gelb)</German>
-            <Spanish>Pintura amarilla</Spanish>
-            <Polish>Farba w Sprayu (Żółta)</Polish>
-            <French>Peinture en spray (Jaune)</French>
-            <Italian>Bomboletta spray gialla</Italian>
-            <Czech>Žlutý sprej</Czech>
-            <Portuguese>Spray de tinta amarela</Portuguese>
-            <Russian>Желтый спрей</Russian>
-            <Japanese>スプレーペイント缶 (黄色)</Japanese>
-            <Korean>노랑 스프레이</Korean>
-            <Chinesesimp>黄色喷漆</Chinesesimp>
-            <Chinese>黃色噴漆</Chinese>
-            <Turkish>Sprey Boya (Sarı)</Turkish>
+        <Key ID="STR_ACE_Tagging_SpraypaintGreen">
+            <English>Spray Paint (Green)</English>
+            <Chinese>綠色噴漆</Chinese>
+            <Chinesesimp>绿色喷漆</Chinesesimp>
+            <Czech>Zelený sprej</Czech>
+            <French>Peinture en spray (Verte)</French>
+            <German>Sprühfarbe (Grün)</German>
+            <Italian>Bomboletta spray verde</Italian>
+            <Japanese>スプレーペイント缶 (緑色)</Japanese>
+            <Korean>초록 스프레이</Korean>
+            <Polish>Farba w Sprayu (Zielona)</Polish>
+            <Portuguese>Spray de tinta verde</Portuguese>
+            <Russian>Зелёный спрей</Russian>
+            <Spanish>Pintura verde</Spanish>
+            <Turkish>Sprey Boya (Yeşil)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_SpraypaintRed">
+            <English>Spray Paint (Red)</English>
+            <Chinese>紅色噴漆</Chinese>
+            <Chinesesimp>红色喷漆</Chinesesimp>
+            <Czech>Červený sprej</Czech>
+            <French>Peinture en spray (Rouge)</French>
+            <German>Sprühfarbe (Rot)</German>
+            <Italian>Bomboletta spray rossa</Italian>
+            <Japanese>スプレーペイント缶 (赤色)</Japanese>
+            <Korean>빨강 스프레이</Korean>
+            <Polish>Farba w Sprayu (Czerwona)</Polish>
+            <Portuguese>Spray de tinta vermelha</Portuguese>
+            <Russian>Красный спрей</Russian>
+            <Spanish>Pintura roja</Spanish>
+            <Turkish>Sprey Boya (Kırmızı)</Turkish>
         </Key>
         <Key ID="STR_ACE_Tagging_SpraypaintWhite">
             <English>Spray Paint (White)</English>
-            <German>Sprühfarbe (Weiß)</German>
-            <Spanish>Pintura blanca</Spanish>
-            <Polish>Farba w Sprayu (Biała)</Polish>
-            <French>Peinture en spray (Blanc)</French>
-            <Italian>Bomboletta spray bianca</Italian>
+            <Chinese>白色噴漆</Chinese>
+            <Chinesesimp>白色喷漆</Chinesesimp>
             <Czech>Bílý sprej</Czech>
-            <Portuguese>Spray de tinta branca</Portuguese>
-            <Russian>Белый спрей</Russian>
+            <French>Peinture en spray (Blanc)</French>
+            <German>Sprühfarbe (Weiß)</German>
+            <Italian>Bomboletta spray bianca</Italian>
             <Japanese>スプレーペイント缶 (白色)</Japanese>
             <Korean>하양 스프레이</Korean>
-            <Chinesesimp>白色喷漆</Chinesesimp>
-            <Chinese>白色噴漆</Chinese>
+            <Polish>Farba w Sprayu (Biała)</Polish>
+            <Portuguese>Spray de tinta branca</Portuguese>
+            <Russian>Белый спрей</Russian>
+            <Spanish>Pintura blanca</Spanish>
             <Turkish>Sprey Boya (Beyaz)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_SpraypaintYellow">
+            <English>Spray Paint (Yellow)</English>
+            <Chinese>黃色噴漆</Chinese>
+            <Chinesesimp>黄色喷漆</Chinesesimp>
+            <Czech>Žlutý sprej</Czech>
+            <French>Peinture en spray (Jaune)</French>
+            <German>Sprühfarbe (Gelb)</German>
+            <Italian>Bomboletta spray gialla</Italian>
+            <Japanese>スプレーペイント缶 (黄色)</Japanese>
+            <Korean>노랑 스프레이</Korean>
+            <Polish>Farba w Sprayu (Żółta)</Polish>
+            <Portuguese>Spray de tinta amarela</Portuguese>
+            <Russian>Желтый спрей</Russian>
+            <Spanish>Pintura amarilla</Spanish>
+            <Turkish>Sprey Boya (Sarı)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_Tag">
+            <English>Tag</English>
+            <Chinese>噴漆</Chinese>
+            <Chinesesimp>喷漆</Chinesesimp>
+            <Czech>Označit</Czech>
+            <French>Tag</French>
+            <German>Markieren (Spraydose)</German>
+            <Italian>Marca</Italian>
+            <Japanese>タグ (スプレーペイント)</Japanese>
+            <Korean>태그</Korean>
+            <Polish>Oznakuj</Polish>
+            <Portuguese>Marcar</Portuguese>
+            <Russian>Маркер</Russian>
+            <Spanish>Marcar</Spanish>
+            <Turkish>Işaretle</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_Tagging">
+            <English>Tagging</English>
+            <Chinese>噴漆</Chinese>
+            <Chinesesimp>喷漆</Chinesesimp>
+            <Czech>Označování</Czech>
+            <French>Marquage</French>
+            <German>Markieren (Spraydose)</German>
+            <Italian>Marcamento</Italian>
+            <Japanese>タグ付け</Japanese>
+            <Korean>태그하기</Korean>
+            <Polish>Tagowanie</Polish>
+            <Portuguese>Marcação</Portuguese>
+            <Russian>Маркировка</Russian>
+            <Spanish>Marcado</Spanish>
+            <Turkish>Işaretleme</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_arrow_down">
+            <English>Down Arrow</English>
+            <French>Flèche du bas</French>
+            <German>Pfeil Runter</German>
+            <Italian>Freccia in basso</Italian>
+            <Japanese>矢印 (下)</Japanese>
+            <Korean>화살표(아래)</Korean>
+            <Polish>Strzałka w dół</Polish>
+            <Russian>Стрелка вниз</Russian>
+            <Spanish>Flecha Abajo</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_arrow_left">
+            <English>Left Arrow</English>
+            <French>Flèche gauche</French>
+            <German>Pfeil Links</German>
+            <Italian>Freccia a sinistra</Italian>
+            <Japanese>矢印 (左)</Japanese>
+            <Korean>화살표(왼쪽)</Korean>
+            <Polish>Strzałka w lewo</Polish>
+            <Russian>Стрелка влево</Russian>
+            <Spanish>Flecha Izquierda</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_arrow_right">
+            <English>Right Arrow</English>
+            <French>Flèche droite</French>
+            <German>Pfeil Rechts</German>
+            <Italian>Freccia a destra</Italian>
+            <Japanese>矢印 (右)</Japanese>
+            <Korean>화살표(오른쪽)</Korean>
+            <Polish>Strzałka w prawo</Polish>
+            <Russian>Стрелка вправо</Russian>
+            <Spanish>Flecha Derecha</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_arrow_up">
+            <English>Up Arrow</English>
+            <French>Flèche du haut</French>
+            <German>Pfeil Hoch</German>
+            <Italian>Freccia in alto</Italian>
+            <Japanese>矢印 (上)</Japanese>
+            <Korean>화살표(위)</Korean>
+            <Polish>Strzałka w górę</Polish>
+            <Russian>Стрелка вверх</Russian>
+            <Spanish>Flecha Arriba</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_circle">
+            <English>Circle</English>
+            <French>Cercle</French>
+            <German>Kreis</German>
+            <Italian>Cerchio</Italian>
+            <Japanese>丸</Japanese>
+            <Korean>원</Korean>
+            <Polish>Okrąg</Polish>
+            <Russian>Круг</Russian>
+            <Spanish>Círculo</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_cross">
+            <English>Cross</English>
+            <French>Croix</French>
+            <German>Kreuz</German>
+            <Italian>Croce</Italian>
+            <Japanese>十字</Japanese>
+            <Korean>십자</Korean>
+            <Polish>Krzyż</Polish>
+            <Russian>Перекрестие</Russian>
+            <Spanish>Cruz</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
-            <German>Eine Farbsprühdose um Wände zu markieren.</German>
-            <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
-            <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
-            <French>Une bombe de peinture en spray pour tagger les murs.</French>
-            <Italian>Una bomboletta spay per applicare marker sui muri.</Italian>
+            <Chinese>噴漆可噴塗在牆壁上</Chinese>
+            <Chinesesimp>喷漆可喷涂在墙壁上</Chinesesimp>
             <Czech>Plechovka se sprejem k vytváření značek.</Czech>
-            <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
-            <Russian>Балончик спрея для рисования маркеров на стенах.</Russian>
+            <French>Une bombe de peinture en spray pour tagger les murs.</French>
+            <German>Eine Farbsprühdose um Wände zu markieren.</German>
+            <Italian>Una bomboletta spay per applicare marker sui muri.</Italian>
             <Japanese>壁にタグを描くためのスプレーペイント缶。</Japanese>
             <Korean>벽에 낙서할 수 있는 스프레이캔 입니다.</Korean>
-            <Chinesesimp>喷漆可喷涂在墙壁上</Chinesesimp>
-            <Chinese>噴漆可噴塗在牆壁上</Chinese>
+            <Polish>Farba w sprayu, służy do oznakowywania terenu.</Polish>
+            <Portuguese>Uma lata de tinta spray para marcar paredes.</Portuguese>
+            <Russian>Балончик спрея для рисования маркеров на стенах.</Russian>
+            <Spanish>Lata de pintura en aerosol para marcar.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_diamond">
+            <English>Diamond</English>
+            <French>Losange</French>
+            <German>Diamant</German>
+            <Italian>Diamante</Italian>
+            <Japanese>菱形</Japanese>
+            <Korean>마름모</Korean>
+            <Polish>Diament</Polish>
+            <Russian>Алмаз</Russian>
+            <Spanish>Diamante</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_square">
+            <English>Square</English>
+            <French>Carré</French>
+            <German>Quadrat</German>
+            <Italian>Quadrato</Italian>
+            <Japanese>四角</Japanese>
+            <Korean>사각형</Korean>
+            <Polish>Kwadrat</Polish>
+            <Russian>Квадрат</Russian>
+            <Spanish>Cuadrado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_square_filled">
+            <English>Filled Square</English>
+            <French>Carré rempli</French>
+            <German>Gefülltes Quadrat</German>
+            <Italian>Quadrato pieno</Italian>
+            <Japanese>四角 (塗りつぶし)</Japanese>
+            <Korean>채워진 사각형</Korean>
+            <Polish>Wypełniony Kwadrat</Polish>
+            <Russian>Заполненный Квадрат</Russian>
+            <Spanish>Cuadrado Lleno</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_stencilVehicle">
             <English>Vehicle ID Marking</English>
-            <Japanese>車両IDマーキング</Japanese>
-            <Polish>Oznaczenie identyfikacyjne pojazdu</Polish>
+            <French>Marquage ID des véhicules</French>
             <German>Fahrzeug ID Markierung</German>
             <Italian>Marcatore identificativo sui veicoli</Italian>
+            <Japanese>車両IDマーキング</Japanese>
             <Korean>차량 ID 마킹</Korean>
-            <French>Marquage ID des véhicules</French>
+            <Polish>Oznaczenie identyfikacyjne pojazdu</Polish>
             <Russian>Идентификационная маркировка транспортного средства</Russian>
             <Spanish>Marcado Identificativo de Vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_Tagging_stencilVehicle_tooltip">
             <English>Replaces clan tag with stenciled text</English>
-            <Japanese>部隊タグをステンシルテキストに置き換える</Japanese>
-            <Polish>Zastępuje tag klanu tekstem z szablonu</Polish>
+            <French>Remplace le tag du clan par un texte au pochoir</French>
             <German>Ersetzt das Clan-Tag durch Schablonentext</German>
             <Italian>Sostituisce l'icona del clan con testo in stampatello</Italian>
+            <Japanese>部隊タグをステンシルテキストに置き換える</Japanese>
             <Korean>클랜 태그를 스텐실 텍스트로 바꿉니다.</Korean>
-            <French>Remplace le tag du clan par un texte au pochoir</French>
+            <Polish>Zastępuje tag klanu tekstem z szablonu</Polish>
             <Russian>Заменяет тег клана трафаретным текстом</Russian>
             <Spanish>Reemplaza marca del clan con un texto serigrafiado</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_triangle">
+            <English>Triangle</English>
+            <French>Triangle</French>
+            <German>Dreieck</German>
+            <Italian>Triangolo</Italian>
+            <Japanese>三角</Japanese>
+            <Korean>삼각형</Korean>
+            <Polish>Trójkąt</Polish>
+            <Russian>Треугольник</Russian>
+            <Spanish>Triángulo</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_triangle_inverted">
+            <English>Triangle Inverted</English>
+            <French>Triangle inversé</French>
+            <German>Invertiertes Dreieck</German>
+            <Italian>Triangolo capovolto</Italian>
+            <Japanese>三角 (反転)</Japanese>
+            <Korean>역삼각형</Korean>
+            <Polish>Odwrócony trójkąt</Polish>
+            <Russian>Обратный треугольник</Russian>
+            <Spanish>Triángulo invertido</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Tagging_x">
+            <English>X</English>
+            <Chinese>X標記</Chinese>
+            <Chinesesimp>X标记</Chinesesimp>
+            <Czech>X</Czech>
+            <French>X</French>
+            <German>X</German>
+            <Italian>X</Italian>
+            <Japanese>X印</Japanese>
+            <Korean>X</Korean>
+            <Polish>X</Polish>
+            <Portuguese>X</Portuguese>
+            <Russian>Х</Russian>
+            <Spanish>X</Spanish>
+            <Turkish>X</Turkish>
         </Key>
     </Package>
 </Project>

@@ -1,71 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Project name="ACE">
     <Package name="SafeMode">
+        <Key ID="STR_ACE_SafeMode_PutOnSafety">
+            <English>Put on Safety</English>
+            <Chinese>關保險</Chinese>
+            <Chinesesimp>关保险</Chinesesimp>
+            <Czech>Zbraň zajistěna</Czech>
+            <French>Sécurité mise</French>
+            <German>Waffe gesichert</German>
+            <Hungarian>Biztonsági kapcsoló helyretolása</Hungarian>
+            <Italian>Sicura inserita</Italian>
+            <Japanese>安全装置をかけました</Japanese>
+            <Korean>안전장치 적용</Korean>
+            <Polish>Zabezpieczono broń</Polish>
+            <Portuguese>Colocar Segurança</Portuguese>
+            <Russian>Поставлено на предохранитель</Russian>
+            <Spanish>Seguro puesto</Spanish>
+            <Turkish>Emniyete alındı</Turkish>
+        </Key>
         <Key ID="STR_ACE_SafeMode_SafeMode">
             <English>Safe Mode</English>
-            <German>Waffe sichern</German>
-            <Spanish>Poner seguro</Spanish>
-            <Polish>Bezpiecznik</Polish>
+            <Chinese>保險模式</Chinese>
+            <Chinesesimp>保险</Chinesesimp>
             <Czech>Pojistka</Czech>
-            <Hungarian>Biztonságos mód</Hungarian>
-            <Russian>Предохранитель</Russian>
             <French>Sécurité</French>
+            <German>Waffe sichern</German>
+            <Hungarian>Biztonságos mód</Hungarian>
             <Italian>Modalità Sicura</Italian>
-            <Portuguese>Modo de segurança</Portuguese>
             <Japanese>安全装置</Japanese>
             <Korean>안전 모드</Korean>
-            <Chinesesimp>保险</Chinesesimp>
-            <Chinese>保險模式</Chinese>
+            <Polish>Bezpiecznik</Polish>
+            <Portuguese>Modo de segurança</Portuguese>
+            <Russian>Предохранитель</Russian>
+            <Spanish>Poner seguro</Spanish>
             <Turkish>Emniyet Modu</Turkish>
         </Key>
         <Key ID="STR_ACE_SafeMode_TakeOffSafety">
             <English>Take off Safety</English>
-            <German>Waffe entsichern</German>
-            <Spanish>Quitar seguro</Spanish>
-            <Polish>Zwolnij bezpiecznik</Polish>
+            <Chinese>開保險</Chinese>
+            <Chinesesimp>开保险</Chinesesimp>
             <Czech>Uvolnit pojistku</Czech>
-            <Hungarian>Biztonsági kapcsoló eltolása</Hungarian>
-            <Russian>Снять с предохранителя</Russian>
             <French>Enlever la sécurité</French>
+            <German>Waffe entsichern</German>
+            <Hungarian>Biztonsági kapcsoló eltolása</Hungarian>
             <Italian>Togli la sicura</Italian>
-            <Portuguese>Tirar segurança</Portuguese>
             <Japanese>安全装置を外す</Japanese>
             <Korean>안전장치 해제</Korean>
-            <Chinesesimp>开保险</Chinesesimp>
-            <Chinese>開保險</Chinese>
-        </Key>
-        <Key ID="STR_ACE_SafeMode_PutOnSafety">
-            <English>Put on Safety</English>
-            <German>Waffe gesichert</German>
-            <Spanish>Seguro puesto</Spanish>
-            <Polish>Zabezpieczono broń</Polish>
-            <Czech>Zbraň zajistěna</Czech>
-            <Hungarian>Biztonsági kapcsoló helyretolása</Hungarian>
-            <Russian>Поставлено на предохранитель</Russian>
-            <French>Sécurité mise</French>
-            <Italian>Sicura inserita</Italian>
-            <Portuguese>Colocar Segurança</Portuguese>
-            <Japanese>安全装置をかけました</Japanese>
-            <Korean>안전장치 적용</Korean>
-            <Chinesesimp>关保险</Chinesesimp>
-            <Chinese>關保險</Chinese>
-            <Turkish>Emniyete alındı</Turkish>
+            <Polish>Zwolnij bezpiecznik</Polish>
+            <Portuguese>Tirar segurança</Portuguese>
+            <Russian>Снять с предохранителя</Russian>
+            <Spanish>Quitar seguro</Spanish>
         </Key>
         <Key ID="STR_ACE_SafeMode_TookOffSafety">
             <English>Took off Safety</English>
-            <German>Waffe entsichert</German>
-            <Spanish>Seguro quitado</Spanish>
-            <Polish>Odbezpieczono broń</Polish>
+            <Chinese>已開保險</Chinese>
+            <Chinesesimp>已开保险</Chinesesimp>
             <Czech>Zbraň odjištěna</Czech>
-            <Hungarian>Biztonságos mód megszüntetve</Hungarian>
-            <Russian>Снято с предохранителя</Russian>
             <French>Sécurité enlevée</French>
+            <German>Waffe entsichert</German>
+            <Hungarian>Biztonságos mód megszüntetve</Hungarian>
             <Italian>Sicura tolta</Italian>
-            <Portuguese>Tirou Segurança</Portuguese>
             <Japanese>安全装置を外しました</Japanese>
             <Korean>안전장치 해제됨</Korean>
-            <Chinesesimp>已开保险</Chinesesimp>
-            <Chinese>已開保險</Chinese>
+            <Polish>Odbezpieczono broń</Polish>
+            <Portuguese>Tirou Segurança</Portuguese>
+            <Russian>Снято с предохранителя</Russian>
+            <Spanish>Seguro quitado</Spanish>
             <Turkish>Emniyetten çıkartıldı</Turkish>
         </Key>
     </Package>

@@ -1,417 +1,415 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Project name="ACE">
     <Package name="Spectator">
+        <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
+            <English>Maximum distance the follow camera can be from the target</English>
+            <Chinese>攝影機能追隨目標的最大距離</Chinese>
+            <Chinesesimp>摄影机能追随目标的最大距离</Chinesesimp>
+            <Czech>Maximální vzdálenost při které může kamera sledovat cíl</Czech>
+            <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible.</French>
+            <German>Maximale Distanz in welcher die Kamera dem Ziel folgen kann.</German>
+            <Italian>Distanza massima che la telecamera seguente può allontanarsi dall'obiettivo</Italian>
+            <Japanese>カメラが目標へ追随できる最大距離</Japanese>
+            <Korean>카메라가 목표를 따라갈 수 있는 최대 거리를 설정합니다.</Korean>
+            <Polish>Maksymalna odległość na jakiej kamera może podążać od celu</Polish>
+            <Portuguese>A distância máxima que a câmera de acompanhamento pode estar do alvo.</Portuguese>
+            <Russian>Максимальная дистанция от камеры слежения до цели</Russian>
+            <Spanish>Distancia máxima que la cámara de seguimiento puede estar del objetivo</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_MaxFollowDistance_DisplayName">
+            <English>Max Follow Distance</English>
+            <Chinese>最大跟隨距離</Chinese>
+            <Chinesesimp>最大跟随距离</Chinesesimp>
+            <Czech>Maximální vzdálenost sledování objektu</Czech>
+            <French>Distance maximale de suivi</French>
+            <German>Maximale Beobachtungsdistance</German>
+            <Italian>Distanza massima per seguire</Italian>
+            <Japanese>最大追随距離</Japanese>
+            <Korean>최대 추적 거리</Korean>
+            <Polish>Maksymalna odległość śledzenia</Polish>
+            <Portuguese>Distância Máxima de Acompanhamento</Portuguese>
+            <Russian>Макс. дистанция следования</Russian>
+            <Spanish>Distancia máxima de seguimiento</Spanish>
+        </Key>
         <Key ID="STR_ACE_Spectator_Module_DisplayName">
             <English>Spectator</English>
-            <German>Zuschauer</German>
-            <Italian>Spettatore</Italian>
             <Chinese>旁觀者</Chinese>
             <Chinesesimp>旁观者</Chinesesimp>
+            <Czech>Divák</Czech>
+            <French>Spectateur</French>
+            <German>Zuschauer</German>
+            <Italian>Spettatore</Italian>
             <Japanese>観戦者</Japanese>
             <Korean>관전자</Korean>
-            <French>Spectateur</French>
             <Polish>Obserwator</Polish>
-            <Russian>Зритель</Russian>
             <Portuguese>Espectador</Portuguese>
-            <Czech>Divák</Czech>
-            <Turkish>Izleyici</Turkish>
+            <Russian>Зритель</Russian>
             <Spanish>Espectador</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_Settings_DisplayName">
-            <English>ACE Spectator</English>
-            <German>ACE Zuschauer</German>
-            <Japanese>ACE 観戦者</Japanese>
-            <Italian>ACE Spettatore</Italian>
-            <French>ACE Spectateur</French>
-            <Chinesesimp>ACE 旁观者</Chinesesimp>
-            <Chinese>ACE 旁觀者</Chinese>
-            <Polish>ACE Obserwator</Polish>
-            <Korean>ACE 관전자</Korean>
-            <Russian>ACE Зритель</Russian>
-            <Portuguese>ACE Espectador</Portuguese>
-            <Czech>ACE Divák</Czech>
-            <Turkish>ACE Izleyici</Turkish>
-            <Spanish>ACE Espectador</Spanish>
+            <Turkish>Izleyici</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_Settings_Description">
             <English>Configure how the spectator system will operate by default.</English>
+            <Chinese>設定旁觀者系統相關配置</Chinese>
+            <Chinesesimp>设定旁观者系统相关配置</Chinesesimp>
+            <Czech>Konfigurovat výchozí nastavení pozorovatele</Czech>
+            <French>Configure le fonctionnement par défaut du système spectateur.</French>
             <German>Konfiguriert den Zuschauermodus</German>
+            <Italian>Configura come il sistema spettatore si comporterà di base.</Italian>
+            <Japanese>観戦者システムが標準でどのように動作するか設定できます。</Japanese>
+            <Korean>어떻게 관전자 시스템이 기본적으로 작동되는지 설정합니다</Korean>
             <Polish>Skonfiguruj domyślne ustawienia obserwatora.</Polish>
             <Portuguese>Configura como o sistema de espectador operará por padrão.</Portuguese>
             <Russian>Определяют, как система спектатора будет функционировать по умолчанию.</Russian>
             <Spanish>Configurar cómo el sistema de espectador funcionará por defecto.</Spanish>
-            <Czech>Konfigurovat výchozí nastavení pozorovatele</Czech>
-            <Italian>Configura come il sistema spettatore si comporterà di base.</Italian>
-            <French>Configure le fonctionnement par défaut du système spectateur.</French>
-            <Japanese>観戦者システムが標準でどのように動作するか設定できます。</Japanese>
-            <Korean>어떻게 관전자 시스템이 기본적으로 작동되는지 설정합니다</Korean>
-            <Chinesesimp>设定旁观者系统相关配置</Chinesesimp>
-            <Chinese>設定旁觀者系統相關配置</Chinese>
         </Key>
-        <Key ID="STR_ACE_Spectator_ai_DisplayName">
-            <English>AI Enabled</English>
-            <German>KI Sichtbarkeit</German>
-            <Japanese>AIにも有効化</Japanese>
-            <Italian>IA Abilitate</Italian>
-            <Chinese>可觀察AI</Chinese>
-            <Chinesesimp>可观察 AI</Chinesesimp>
-            <Korean>AI 활성</Korean>
-            <French>IA visible</French>
-            <Polish>SI Aktywowane</Polish>
-            <Russian>Разрешить для ИИ</Russian>
-            <Portuguese>IA Ativado</Portuguese>
-            <Czech>AI povoleno</Czech>
-            <Turkish>AI Etkin</Turkish>
-            <Spanish>IA Activada</Spanish>
+        <Key ID="STR_ACE_Spectator_Settings_DisplayName">
+            <English>ACE Spectator</English>
+            <Chinese>ACE 旁觀者</Chinese>
+            <Chinesesimp>ACE 旁观者</Chinesesimp>
+            <Czech>ACE Divák</Czech>
+            <French>ACE Spectateur</French>
+            <German>ACE Zuschauer</German>
+            <Italian>ACE Spettatore</Italian>
+            <Japanese>ACE 観戦者</Japanese>
+            <Korean>ACE 관전자</Korean>
+            <Polish>ACE Obserwator</Polish>
+            <Portuguese>ACE Espectador</Portuguese>
+            <Russian>ACE Зритель</Russian>
+            <Spanish>ACE Espectador</Spanish>
+            <Turkish>ACE Izleyici</Turkish>
         </Key>
-        <Key ID="STR_ACE_Spectator_ai_Description">
-            <English>Make AI viewable in spectator</English>
-            <German>Macht KI-Einheiten den Zuschauern sichtbar</German>
-            <Japanese>観戦者でAI視点を可能に</Japanese>
-            <Italian>Rende le IA visibili come spettatore</Italian>
-            <Chinese>開啟此功能後可在觀察者模式下觀察AI單位</Chinese>
-            <Chinesesimp>开启此功能后可在观察者模式下观察 AI 单位。</Chinesesimp>
-            <Korean>관전자가 AI를 관전할 수 있습니다.</Korean>
-            <French>Rend les unités IA visibles en spectateur.</French>
-            <Polish>Spraw, aby SI było widoczne jako obserwator</Polish>
-            <Russian>Сделать ИИ видимыми в режиме зрителя</Russian>
-            <Portuguese>Permite que IA seja visível no espectador</Portuguese>
-            <Czech>Umožňuje sledovat AI v módu diváka</Czech>
-            <Spanish>Permitir ver a la IA en espectador</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_modes_DisplayName">
-            <English>Camera modes</English>
-            <German>Kameramodus</German>
-            <Polish>Tryby kamery</Polish>
-            <Portuguese>Modos de câmera</Portuguese>
-            <Russian>Режимы камеры</Russian>
-            <Czech>Módy kamery</Czech>
-            <Spanish>Modos de cámara</Spanish>
-            <Italian>Modalità Videocamera</Italian>
-            <French>Modes de caméra</French>
-            <Japanese>カメラ モード</Japanese>
-            <Korean>카메라 모드</Korean>
-            <Chinesesimp>摄影机模式</Chinesesimp>
-            <Chinese>攝影機模式</Chinese>
-            <Turkish>Kamera Modları</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_modes_Description">
-            <English>Camera modes that can be used</English>
-            <German>Verwendbare Kameramodi</German>
-            <Polish>Tryby kamery, jakie mogą być używane.</Polish>
-            <Portuguese>Modos de câmera que podem ser utilizados</Portuguese>
-            <Russian>Режимы камеры, которые могут быть использованы</Russian>
-            <Spanish>Modos de la cámara que se pueden utilizar.</Spanish>
-            <Czech>Módy kamery které mohou být použity.</Czech>
-            <Italian>Modalità utilizzabili dalla videocamera spettatore.</Italian>
-            <French>Modes de caméra pouvant être utilisés.</French>
-            <Japanese>カメラ モードを設定できます。</Japanese>
-            <Korean>사용할 수 있는 카메라 모드들입니다</Korean>
-            <Chinesesimp>设定可使用的摄影机模式</Chinesesimp>
-            <Chinese>設定可使用的攝影機模式</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Spectator_modes_all">
-            <English>All</English>
-            <German>Alle</German>
-            <Polish>Wszystkie</Polish>
-            <Portuguese>Todos</Portuguese>
-            <Russian>Все</Russian>
-            <Czech>Všechny</Czech>
-            <Spanish>Todos</Spanish>
-            <Italian>Tutte</Italian>
-            <French>Tous</French>
-            <Japanese>全て</Japanese>
-            <Korean>모두</Korean>
-            <Chinesesimp>所有</Chinesesimp>
-            <Chinese>所有</Chinese>
-            <Turkish>Hepsi</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_modes_unit">
-            <English>1PP and 3PP</English>
-            <French>1ère et 3ème personne</French>
-            <Spanish>1.ª y 3.ª persona</Spanish>
-            <Italian>1° e 3° pers</Italian>
-            <Polish>1 i 3 os.</Polish>
-            <Russian>первого а также третьего</Russian>
-            <German>1PP und 3PP</German>
-            <Czech>1. a 3. osoby</Czech>
-            <Portuguese>1ª e 3ª pessoa</Portuguese>
-            <Korean>1인칭과 3인칭 카메라</Korean>
-            <Japanese>一人称と三人称</Japanese>
-            <Chinese>第一人稱與第三人稱</Chinese>
-            <Chinesesimp>第一人称与第三人称</Chinesesimp>
-            <Turkish>1PP ve 3PP</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_visions_DisplayName">
-            <English>Vision modes</English>
-            <German>Sichtmodus</German>
-            <Polish>Tryby wizji</Polish>
-            <Portuguese>Modos de visão</Portuguese>
-            <Russian>Режимы видения</Russian>
-            <Spanish>Modos de visión</Spanish>
-            <Czech>Módy zobrazení</Czech>
-            <Italian>Modalità visuali</Italian>
-            <French>Modes de visualisation</French>
-            <Japanese>ビジョン モード</Japanese>
-            <Korean>시야 모드</Korean>
-            <Chinesesimp>视觉模式</Chinesesimp>
-            <Chinese>視覺模式</Chinese>
-            <Turkish>Görüş Modları</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_visions_Description">
-            <English>Vision modes that can be used</English>
-            <German>Sichtmodi die verwendet werden können.</German>
-            <Polish>Tryby wizji, jakie mogą być używane.</Polish>
-            <Portuguese>Modos de visão que podem ser utilizados</Portuguese>
-            <Russian>Режимы видения, которые могут быть использованы</Russian>
-            <Spanish>Modos de visión que pueden ser utilizados.</Spanish>
-            <Czech>Módy zobrazení které mohou být použity.</Czech>
-            <Italian>Modalità visuali che possono essere usate.</Italian>
-            <French>Modes de visualisation pouvant être utilisés.</French>
-            <Japanese>ビジョン モードを設定できます。</Japanese>
-            <Korean>사용할 수 있는 시야 모드들입니다</Korean>
-            <Chinesesimp>设定可使用的视觉模式</Chinesesimp>
-            <Chinese>設定可使用的視覺模式</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Spectator_visions_nv">
-            <English>Night vision</English>
-            <German>Nachtsicht</German>
-            <Polish>Noktowizja</Polish>
-            <Portuguese>Visão noturna</Portuguese>
-            <Russian>Ночное видение</Russian>
-            <Czech>Noktovize</Czech>
-            <Spanish>Visión nocturna</Spanish>
-            <Italian>Visione Notturna</Italian>
-            <French>Vision nocturne</French>
-            <Japanese>夜間暗視</Japanese>
-            <Korean>야간투시경</Korean>
-            <Chinesesimp>夜视</Chinesesimp>
-            <Chinese>夜視</Chinese>
-            <Turkish>Geçe Görüşü</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_visions_ti">
-            <English>Thermal imaging</English>
-            <German>Wärmebild</German>
-            <Polish>Termowizja</Polish>
-            <Portuguese>Visão térmica</Portuguese>
-            <Russian>Тепловизионное</Russian>
-            <Czech>Termovize</Czech>
-            <Spanish>Imagen térmica</Spanish>
-            <Italian>Visione Termica</Italian>
-            <French>Vision thermique</French>
-            <Japanese>熱源画像</Japanese>
-            <Korean>열화상</Korean>
-            <Chinesesimp>热成像</Chinesesimp>
-            <Chinese>熱成像</Chinese>
-            <Turkish>Termal Görüş</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_MaxFollowDistance_DisplayName">
-            <English>Max Follow Distance</English>
-            <German>Maximale Beobachtungsdistance</German>
-            <Russian>Макс. дистанция следования</Russian>
-            <Japanese>最大追随距離</Japanese>
-            <Portuguese>Distância Máxima de Acompanhamento</Portuguese>
-            <Chinese>最大跟隨距離</Chinese>
-            <Chinesesimp>最大跟随距离</Chinesesimp>
-            <French>Distance maximale de suivi</French>
-            <Italian>Distanza massima per seguire</Italian>
-            <Czech>Maximální vzdálenost sledování objektu</Czech>
-            <Polish>Maksymalna odległość śledzenia</Polish>
-            <Spanish>Distancia máxima de seguimiento</Spanish>
-            <Korean>최대 추적 거리</Korean>
-        </Key>
-        <Key ID="STR_ACE_Spectator_MaxFollowDistance_Description">
-            <English>Maximum distance the follow camera can be from the target</English>
-            <German>Maximale Distanz in welcher die Kamera dem Ziel folgen kann.</German>
-            <Russian>Максимальная дистанция от камеры слежения до цели</Russian>
-            <Japanese>カメラが目標へ追随できる最大距離</Japanese>
-            <Portuguese>A distância máxima que a câmera de acompanhamento pode estar do alvo.</Portuguese>
-            <Chinese>攝影機能追隨目標的最大距離</Chinese>
-            <Chinesesimp>摄影机能追随目标的最大距离</Chinesesimp>
-            <Italian>Distanza massima che la telecamera seguente può allontanarsi dall'obiettivo</Italian>
-            <French>Distance maximale à laquelle la caméra de suivi peut se trouver par rapport à la cible.</French>
-            <Czech>Maximální vzdálenost při které může kamera sledovat cíl</Czech>
-            <Polish>Maksymalna odległość na jakiej kamera może podążać od celu</Polish>
-            <Spanish>Distancia máxima que la cámara de seguimiento puede estar del objetivo</Spanish>
-            <Korean>카메라가 목표를 따라갈 수 있는 최대 거리를 설정합니다.</Korean>
-        </Key>
-        <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">
             <English>Engineer</English>
+            <Chinese>工兵</Chinese>
+            <Chinesesimp>工兵</Chinesesimp>
+            <Czech>Inženýr</Czech>
+            <French>Ingénieur</French>
             <German>Pionier</German>
+            <Italian>Geniere</Italian>
+            <Japanese>工兵</Japanese>
+            <Korean>정비공</Korean>
             <Polish>Mechanik</Polish>
             <Portuguese>Engenheiro</Portuguese>
             <Russian>Инженер</Russian>
-            <Czech>Inženýr</Czech>
             <Spanish>Ingeniero</Spanish>
-            <Italian>Geniere</Italian>
-            <French>Ingénieur</French>
-            <Japanese>工兵</Japanese>
-            <Korean>정비공</Korean>
-            <Chinese>工兵</Chinese>
-            <Chinesesimp>工兵</Chinesesimp>
             <Turkish>Mühendis</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_ViewFree">
             <English>Free</English>
+            <Chinese>自由模式</Chinese>
+            <Chinesesimp>自由模式</Chinesesimp>
+            <Czech>Volná</Czech>
+            <French>Libre</French>
             <German>Frei</German>
+            <Italian>Libera</Italian>
+            <Japanese>自由視点</Japanese>
+            <Korean>자유시점</Korean>
             <Polish>Wolna</Polish>
             <Portuguese>Livre</Portuguese>
             <Russian>Свободная</Russian>
-            <Czech>Volná</Czech>
             <Spanish>Libre</Spanish>
-            <Italian>Libera</Italian>
-            <French>Libre</French>
-            <Japanese>自由視点</Japanese>
-            <Korean>자유시점</Korean>
-            <Chinesesimp>自由模式</Chinesesimp>
-            <Chinese>自由模式</Chinese>
             <Turkish>Serbest</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_VisionNormal">
-            <English>Normal</English>
-            <German>Normal</German>
-            <Polish>Normalna</Polish>
-            <Portuguese>Normal</Portuguese>
-            <Russian>Нормальное</Russian>
-            <Czech>Normální</Czech>
-            <Spanish>Normal</Spanish>
-            <Italian>Normale</Italian>
-            <French>Normale</French>
-            <Japanese>通常</Japanese>
-            <Korean>일반</Korean>
-            <Chinesesimp>正常</Chinesesimp>
-            <Chinese>正常</Chinese>
-            <Turkish>Normal</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionNight">
             <English>Night</English>
+            <Chinese>夜視</Chinese>
+            <Chinesesimp>夜视</Chinesesimp>
+            <Czech>Noční</Czech>
+            <French>Nocturne</French>
             <German>Nacht</German>
+            <Italian>Notturno</Italian>
+            <Japanese>暗視装置</Japanese>
+            <Korean>야간</Korean>
             <Polish>Noc</Polish>
             <Portuguese>Visão Noturna</Portuguese>
             <Russian>Ночное</Russian>
-            <Czech>Noční</Czech>
             <Spanish>Nocturna</Spanish>
-            <Italian>Notturno</Italian>
-            <French>Nocturne</French>
-            <Japanese>暗視装置</Japanese>
-            <Korean>야간</Korean>
-            <Chinesesimp>夜视</Chinesesimp>
-            <Chinese>夜視</Chinese>
             <Turkish>Gece</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_VisionNormal">
+            <English>Normal</English>
+            <Chinese>正常</Chinese>
+            <Chinesesimp>正常</Chinesesimp>
+            <Czech>Normální</Czech>
+            <French>Normale</French>
+            <German>Normal</German>
+            <Italian>Normale</Italian>
+            <Japanese>通常</Japanese>
+            <Korean>일반</Korean>
+            <Polish>Normalna</Polish>
+            <Portuguese>Normal</Portuguese>
+            <Russian>Нормальное</Russian>
+            <Spanish>Normal</Spanish>
+            <Turkish>Normal</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_VisionThermal">
             <English>Thermal</English>
+            <Chinese>熱成像</Chinese>
+            <Chinesesimp>热成像</Chinesesimp>
+            <Czech>Termální</Czech>
+            <French>Thermique</French>
             <German>Wärmebild</German>
+            <Italian>Termica</Italian>
+            <Japanese>熱源画像</Japanese>
+            <Korean>열상</Korean>
             <Polish>Termo</Polish>
             <Portuguese>Térmica</Portuguese>
             <Russian>Тепловизор</Russian>
-            <Czech>Termální</Czech>
             <Spanish>Térmica</Spanish>
-            <Italian>Termica</Italian>
-            <French>Thermique</French>
-            <Japanese>熱源画像</Japanese>
-            <Korean>열상</Korean>
-            <Chinesesimp>热成像</Chinesesimp>
-            <Chinese>熱成像</Chinese>
             <Turkish>Termal</Turkish>
         </Key>
-        <!-- Controls -->
-        <Key ID="STR_ACE_Spectator_uiIcons">
-            <English>Icons</English>
-            <German>Icons</German>
-            <Japanese>アイコン</Japanese>
-            <Italian>Icone</Italian>
-            <Chinese>單位圖示</Chinese>
-            <Chinesesimp>单位图示</Chinesesimp>
-            <Korean>아이콘</Korean>
-            <French>Icônes</French>
-            <Polish>Ikony</Polish>
-            <Russian>Иконки</Russian>
-            <Portuguese>Ícones</Portuguese>
-            <Czech>Ikony</Czech>
-            <Turkish>Ikonlar</Turkish>
-            <Spanish>Iconos</Spanish>
+        <Key ID="STR_ACE_Spectator_ai_Description">
+            <English>Make AI viewable in spectator</English>
+            <Chinese>開啟此功能後可在觀察者模式下觀察AI單位</Chinese>
+            <Chinesesimp>开启此功能后可在观察者模式下观察 AI 单位。</Chinesesimp>
+            <Czech>Umožňuje sledovat AI v módu diváka</Czech>
+            <French>Rend les unités IA visibles en spectateur.</French>
+            <German>Macht KI-Einheiten den Zuschauern sichtbar</German>
+            <Italian>Rende le IA visibili come spettatore</Italian>
+            <Japanese>観戦者でAI視点を可能に</Japanese>
+            <Korean>관전자가 AI를 관전할 수 있습니다.</Korean>
+            <Polish>Spraw, aby SI było widoczne jako obserwator</Polish>
+            <Portuguese>Permite que IA seja visível no espectador</Portuguese>
+            <Russian>Сделать ИИ видимыми в режиме зрителя</Russian>
+            <Spanish>Permitir ver a la IA en espectador</Spanish>
         </Key>
-        <Key ID="STR_ACE_Spectator_uiProjectiles">
-            <English>Projectiles</English>
-            <German>Geschosse</German>
-            <Japanese>弾道表示</Japanese>
-            <Italian>Proiettili</Italian>
-            <Chinese>顯示彈道</Chinese>
-            <Chinesesimp>显示弹道</Chinesesimp>
-            <Korean>발사체</Korean>
-            <French>Projectiles</French>
-            <Polish>Pociski</Polish>
-            <Russian>Осколки</Russian>
-            <Portuguese>Projéteis</Portuguese>
-            <Czech>Projektily</Czech>
-            <Turkish>Mermiler</Turkish>
-            <Spanish>Proyectiles</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_nextUnit">
-            <English>Next Unit</English>
-            <German>Nächste Einheit</German>
-            <Polish>Następna jednostka</Polish>
-            <Portuguese>Próxima unidade</Portuguese>
-            <Russian>Следующий юнит</Russian>
-            <Czech>Následující jednotka</Czech>
-            <Spanish>Siguiente unidad</Spanish>
-            <Italian>Unità Successiva</Italian>
-            <French>Unité suivante</French>
-            <Japanese>次のユニット</Japanese>
-            <Korean>다음 인원</Korean>
-            <Chinesesimp>下个单位</Chinesesimp>
-            <Chinese>下個單位</Chinese>
-            <Turkish>Sonraki Takım</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_prevUnit">
-            <English>Previous Unit</English>
-            <German>Vorherige Einheit</German>
-            <Polish>Poprzednia jednostka</Polish>
-            <Portuguese>Unidade anterior</Portuguese>
-            <Russian>Предыдущий юнит</Russian>
-            <Czech>Předchozí jednotka</Czech>
-            <Spanish>Anterior unidad</Spanish>
-            <Italian>Unità Precedente</Italian>
-            <French>Unité précédente</French>
-            <Japanese>前のユニット</Japanese>
-            <Korean>이전 인원</Korean>
-            <Chinesesimp>上个单位</Chinesesimp>
-            <Chinese>上個單位</Chinese>
-            <Turkish>Önceki Takım</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Spectator_nextVis">
-            <English>Vision Mode</English>
-            <German>Sichtmodus</German>
-            <Japanese>ビジョン モード</Japanese>
-            <Italian>Modalità Visiva</Italian>
-            <Chinese>視覺模式</Chinese>
-            <Chinesesimp>视觉模式</Chinesesimp>
-            <Korean>보기 모드</Korean>
-            <French>Mode de vision</French>
-            <Polish>Tryb Wizji</Polish>
-            <Russian>Режим видения</Russian>
-            <Portuguese>Modo de Visão</Portuguese>
-            <Czech>Režim sledování</Czech>
-            <Turkish>Görüş Modu</Turkish>
-            <Spanish>Modo de visión</Spanish>
+        <Key ID="STR_ACE_Spectator_ai_DisplayName">
+            <English>AI Enabled</English>
+            <Chinese>可觀察AI</Chinese>
+            <Chinesesimp>可观察 AI</Chinesesimp>
+            <Czech>AI povoleno</Czech>
+            <French>IA visible</French>
+            <German>KI Sichtbarkeit</German>
+            <Italian>IA Abilitate</Italian>
+            <Japanese>AIにも有効化</Japanese>
+            <Korean>AI 활성</Korean>
+            <Polish>SI Aktywowane</Polish>
+            <Portuguese>IA Ativado</Portuguese>
+            <Russian>Разрешить для ИИ</Russian>
+            <Spanish>IA Activada</Spanish>
+            <Turkish>AI Etkin</Turkish>
         </Key>
         <Key ID="STR_ACE_Spectator_camSlow">
             <English>Slow Speed</English>
-            <German>Langsam</German>
-            <Japanese>速度を下げる</Japanese>
-            <Italian>Bassa Velocità</Italian>
             <Chinese>慢速度</Chinese>
             <Chinesesimp>慢速度</Chinesesimp>
-            <Korean>느린 속도</Korean>
-            <French>Vitesse lente</French>
-            <Polish>Wolna Prędkość</Polish>
-            <Russian>Замедление</Russian>
-            <Portuguese>Velocidade Lenta</Portuguese>
             <Czech>Pomalá rychlost</Czech>
-            <Turkish>Yavaş Hız</Turkish>
+            <French>Vitesse lente</French>
+            <German>Langsam</German>
+            <Italian>Bassa Velocità</Italian>
+            <Japanese>速度を下げる</Japanese>
+            <Korean>느린 속도</Korean>
+            <Polish>Wolna Prędkość</Polish>
+            <Portuguese>Velocidade Lenta</Portuguese>
+            <Russian>Замедление</Russian>
             <Spanish>Velocidad lenta</Spanish>
+            <Turkish>Yavaş Hız</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_Description">
+            <English>Camera modes that can be used</English>
+            <Chinese>設定可使用的攝影機模式</Chinese>
+            <Chinesesimp>设定可使用的摄影机模式</Chinesesimp>
+            <Czech>Módy kamery které mohou být použity.</Czech>
+            <French>Modes de caméra pouvant être utilisés.</French>
+            <German>Verwendbare Kameramodi</German>
+            <Italian>Modalità utilizzabili dalla videocamera spettatore.</Italian>
+            <Japanese>カメラ モードを設定できます。</Japanese>
+            <Korean>사용할 수 있는 카메라 모드들입니다</Korean>
+            <Polish>Tryby kamery, jakie mogą być używane.</Polish>
+            <Portuguese>Modos de câmera que podem ser utilizados</Portuguese>
+            <Russian>Режимы камеры, которые могут быть использованы</Russian>
+            <Spanish>Modos de la cámara que se pueden utilizar.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_DisplayName">
+            <English>Camera modes</English>
+            <Chinese>攝影機模式</Chinese>
+            <Chinesesimp>摄影机模式</Chinesesimp>
+            <Czech>Módy kamery</Czech>
+            <French>Modes de caméra</French>
+            <German>Kameramodus</German>
+            <Italian>Modalità Videocamera</Italian>
+            <Japanese>カメラ モード</Japanese>
+            <Korean>카메라 모드</Korean>
+            <Polish>Tryby kamery</Polish>
+            <Portuguese>Modos de câmera</Portuguese>
+            <Russian>Режимы камеры</Russian>
+            <Spanish>Modos de cámara</Spanish>
+            <Turkish>Kamera Modları</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_all">
+            <English>All</English>
+            <Chinese>所有</Chinese>
+            <Chinesesimp>所有</Chinesesimp>
+            <Czech>Všechny</Czech>
+            <French>Tous</French>
+            <German>Alle</German>
+            <Italian>Tutte</Italian>
+            <Japanese>全て</Japanese>
+            <Korean>모두</Korean>
+            <Polish>Wszystkie</Polish>
+            <Portuguese>Todos</Portuguese>
+            <Russian>Все</Russian>
+            <Spanish>Todos</Spanish>
+            <Turkish>Hepsi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_modes_unit">
+            <English>1PP and 3PP</English>
+            <Chinese>第一人稱與第三人稱</Chinese>
+            <Chinesesimp>第一人称与第三人称</Chinesesimp>
+            <Czech>1. a 3. osoby</Czech>
+            <French>1ère et 3ème personne</French>
+            <German>1PP und 3PP</German>
+            <Italian>1° e 3° pers</Italian>
+            <Japanese>一人称と三人称</Japanese>
+            <Korean>1인칭과 3인칭 카메라</Korean>
+            <Polish>1 i 3 os.</Polish>
+            <Portuguese>1ª e 3ª pessoa</Portuguese>
+            <Russian>первого а также третьего</Russian>
+            <Spanish>1.ª y 3.ª persona</Spanish>
+            <Turkish>1PP ve 3PP</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_nextUnit">
+            <English>Next Unit</English>
+            <Chinese>下個單位</Chinese>
+            <Chinesesimp>下个单位</Chinesesimp>
+            <Czech>Následující jednotka</Czech>
+            <French>Unité suivante</French>
+            <German>Nächste Einheit</German>
+            <Italian>Unità Successiva</Italian>
+            <Japanese>次のユニット</Japanese>
+            <Korean>다음 인원</Korean>
+            <Polish>Następna jednostka</Polish>
+            <Portuguese>Próxima unidade</Portuguese>
+            <Russian>Следующий юнит</Russian>
+            <Spanish>Siguiente unidad</Spanish>
+            <Turkish>Sonraki Takım</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_nextVis">
+            <English>Vision Mode</English>
+            <Chinese>視覺模式</Chinese>
+            <Chinesesimp>视觉模式</Chinesesimp>
+            <Czech>Režim sledování</Czech>
+            <French>Mode de vision</French>
+            <German>Sichtmodus</German>
+            <Italian>Modalità Visiva</Italian>
+            <Japanese>ビジョン モード</Japanese>
+            <Korean>보기 모드</Korean>
+            <Polish>Tryb Wizji</Polish>
+            <Portuguese>Modo de Visão</Portuguese>
+            <Russian>Режим видения</Russian>
+            <Spanish>Modo de visión</Spanish>
+            <Turkish>Görüş Modu</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_prevUnit">
+            <English>Previous Unit</English>
+            <Chinese>上個單位</Chinese>
+            <Chinesesimp>上个单位</Chinesesimp>
+            <Czech>Předchozí jednotka</Czech>
+            <French>Unité précédente</French>
+            <German>Vorherige Einheit</German>
+            <Italian>Unità Precedente</Italian>
+            <Japanese>前のユニット</Japanese>
+            <Korean>이전 인원</Korean>
+            <Polish>Poprzednia jednostka</Polish>
+            <Portuguese>Unidade anterior</Portuguese>
+            <Russian>Предыдущий юнит</Russian>
+            <Spanish>Anterior unidad</Spanish>
+            <Turkish>Önceki Takım</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_uiIcons">
+            <English>Icons</English>
+            <Chinese>單位圖示</Chinese>
+            <Chinesesimp>单位图示</Chinesesimp>
+            <Czech>Ikony</Czech>
+            <French>Icônes</French>
+            <German>Icons</German>
+            <Italian>Icone</Italian>
+            <Japanese>アイコン</Japanese>
+            <Korean>아이콘</Korean>
+            <Polish>Ikony</Polish>
+            <Portuguese>Ícones</Portuguese>
+            <Russian>Иконки</Russian>
+            <Spanish>Iconos</Spanish>
+            <Turkish>Ikonlar</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_uiProjectiles">
+            <English>Projectiles</English>
+            <Chinese>顯示彈道</Chinese>
+            <Chinesesimp>显示弹道</Chinesesimp>
+            <Czech>Projektily</Czech>
+            <French>Projectiles</French>
+            <German>Geschosse</German>
+            <Italian>Proiettili</Italian>
+            <Japanese>弾道表示</Japanese>
+            <Korean>발사체</Korean>
+            <Polish>Pociski</Polish>
+            <Portuguese>Projéteis</Portuguese>
+            <Russian>Осколки</Russian>
+            <Spanish>Proyectiles</Spanish>
+            <Turkish>Mermiler</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_visions_Description">
+            <English>Vision modes that can be used</English>
+            <Chinese>設定可使用的視覺模式</Chinese>
+            <Chinesesimp>设定可使用的视觉模式</Chinesesimp>
+            <Czech>Módy zobrazení které mohou být použity.</Czech>
+            <French>Modes de visualisation pouvant être utilisés.</French>
+            <German>Sichtmodi die verwendet werden können.</German>
+            <Italian>Modalità visuali che possono essere usate.</Italian>
+            <Japanese>ビジョン モードを設定できます。</Japanese>
+            <Korean>사용할 수 있는 시야 모드들입니다</Korean>
+            <Polish>Tryby wizji, jakie mogą być używane.</Polish>
+            <Portuguese>Modos de visão que podem ser utilizados</Portuguese>
+            <Russian>Режимы видения, которые могут быть использованы</Russian>
+            <Spanish>Modos de visión que pueden ser utilizados.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_visions_DisplayName">
+            <English>Vision modes</English>
+            <Chinese>視覺模式</Chinese>
+            <Chinesesimp>视觉模式</Chinesesimp>
+            <Czech>Módy zobrazení</Czech>
+            <French>Modes de visualisation</French>
+            <German>Sichtmodus</German>
+            <Italian>Modalità visuali</Italian>
+            <Japanese>ビジョン モード</Japanese>
+            <Korean>시야 모드</Korean>
+            <Polish>Tryby wizji</Polish>
+            <Portuguese>Modos de visão</Portuguese>
+            <Russian>Режимы видения</Russian>
+            <Spanish>Modos de visión</Spanish>
+            <Turkish>Görüş Modları</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_visions_nv">
+            <English>Night vision</English>
+            <Chinese>夜視</Chinese>
+            <Chinesesimp>夜视</Chinesesimp>
+            <Czech>Noktovize</Czech>
+            <French>Vision nocturne</French>
+            <German>Nachtsicht</German>
+            <Italian>Visione Notturna</Italian>
+            <Japanese>夜間暗視</Japanese>
+            <Korean>야간투시경</Korean>
+            <Polish>Noktowizja</Polish>
+            <Portuguese>Visão noturna</Portuguese>
+            <Russian>Ночное видение</Russian>
+            <Spanish>Visión nocturna</Spanish>
+            <Turkish>Geçe Görüşü</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Spectator_visions_ti">
+            <English>Thermal imaging</English>
+            <Chinese>熱成像</Chinese>
+            <Chinesesimp>热成像</Chinesesimp>
+            <Czech>Termovize</Czech>
+            <French>Vision thermique</French>
+            <German>Wärmebild</German>
+            <Italian>Visione Termica</Italian>
+            <Japanese>熱源画像</Japanese>
+            <Korean>열화상</Korean>
+            <Polish>Termowizja</Polish>
+            <Portuguese>Visão térmica</Portuguese>
+            <Russian>Тепловизионное</Russian>
+            <Spanish>Imagen térmica</Spanish>
+            <Turkish>Termal Görüş</Turkish>
         </Key>
     </Package>
 </Project>

@@ -1,175 +1,175 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Project name="ACE">
     <Package name="Optics">
-        <Key ID="STR_ACE_Optics_hamr">
-            <English>RCO (2D)</English>
-            <Czech>RCO (2D)</Czech>
-            <French>RCO (2D)</French>
-            <German>RCO (2D)</German>
-            <Italian>RCO (2D)</Italian>
-            <Polish>RCO (2D)</Polish>
-            <Portuguese>RCO (2D)</Portuguese>
-            <Russian>RCO (2D)</Russian>
-            <Spanish>RCO (2D)</Spanish>
-            <Hungarian>RCO (2D)</Hungarian>
-            <Japanese>RCO (2D)</Japanese>
-            <Korean>류폴드 마크 4 HAMR (2D)</Korean>
-            <Chinesesimp>RCO（2D）</Chinesesimp>
-            <Chinese>步槍戰鬥光學瞄準鏡(2D)</Chinese>
-            <Turkish>RCO (2D)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Optics_hamr_pip">
-            <English>RCO (PIP)</English>
-            <Czech>RCO (PIP)</Czech>
-            <French>RCO (PIP)</French>
-            <German>RCO (BIB)</German>
-            <Italian>RCO (PIP)</Italian>
-            <Polish>RCO (PIP)</Polish>
-            <Portuguese>RCO (PIP)</Portuguese>
-            <Russian>RCO (PIP)</Russian>
-            <Spanish>RCO (PIP)</Spanish>
-            <Hungarian>RCO (PIP)</Hungarian>
-            <Japanese>RCO (PIP)</Japanese>
-            <Korean>류폴드 마크 4 HAMR (PIP)</Korean>
-            <Chinesesimp>RCO（画中画）</Chinesesimp>
-            <Chinese>步槍戰鬥光學瞄準鏡(擬真版)</Chinese>
-            <Turkish>RCO (PIP)</Turkish>
-        </Key>
         <Key ID="STR_ACE_Optics_arco">
             <English>ARCO (2D)</English>
+            <Chinese>先進步槍戰鬥光學瞄準鏡(2D)</Chinese>
+            <Chinesesimp>ARCO（2D）</Chinesesimp>
             <Czech>ARCO (2D)</Czech>
             <French>ARCO (2D)</French>
             <German>ARCO (2D)</German>
+            <Hungarian>ARCO (2D)</Hungarian>
             <Italian>ARCO (2D)</Italian>
+            <Japanese>ARCO (2D)</Japanese>
+            <Korean>엘칸 스펙터OS (2D)</Korean>
             <Polish>ARCO (2D)</Polish>
             <Portuguese>ARCO (2D)</Portuguese>
             <Russian>ARCO (2D)</Russian>
             <Spanish>ARCO (2D)</Spanish>
-            <Hungarian>ARCO (2D)</Hungarian>
-            <Japanese>ARCO (2D)</Japanese>
-            <Korean>엘칸 스펙터OS (2D)</Korean>
-            <Chinesesimp>ARCO（2D）</Chinesesimp>
-            <Chinese>先進步槍戰鬥光學瞄準鏡(2D)</Chinese>
             <Turkish>ARCO (2D)</Turkish>
         </Key>
         <Key ID="STR_ACE_Optics_arco_pip">
             <English>ARCO (PIP)</English>
+            <Chinese>先進步槍戰鬥光學瞄準鏡(擬真版)</Chinese>
+            <Chinesesimp>ARCO（画中画）</Chinesesimp>
             <Czech>ARCO (PIP)</Czech>
             <French>ARCO (PIP)</French>
             <German>ARCO (BIB)</German>
+            <Hungarian>ARCO (PIP)</Hungarian>
             <Italian>ARCO (PIP)</Italian>
+            <Japanese>ARCO (PIP)</Japanese>
+            <Korean>엘칸 스펙터OS (PIP)</Korean>
             <Polish>ARCO (PIP)</Polish>
             <Portuguese>ARCO (PIP)</Portuguese>
             <Russian>ARCO (PIP)</Russian>
             <Spanish>ARCO (PIP)</Spanish>
-            <Hungarian>ARCO (PIP)</Hungarian>
-            <Japanese>ARCO (PIP)</Japanese>
-            <Korean>엘칸 스펙터OS (PIP)</Korean>
-            <Chinesesimp>ARCO（画中画）</Chinesesimp>
-            <Chinese>先進步槍戰鬥光學瞄準鏡(擬真版)</Chinese>
             <Turkish>ARCO (PIP)</Turkish>
         </Key>
-        <Key ID="STR_ACE_Optics_mrco">
-            <English>MRCO (2D)</English>
-            <Czech>MRCO (2D)</Czech>
-            <French>MRCO (2D)</French>
-            <German>MRCO (2D)</German>
-            <Italian>MRCO (2D)</Italian>
-            <Polish>MRCO (2D)</Polish>
-            <Portuguese>MRCO (2D)</Portuguese>
-            <Russian>MRCO (2D)</Russian>
-            <Spanish>MRCO (2D)</Spanish>
-            <Hungarian>MRCO (2D)</Hungarian>
-            <Japanese>MRCO (2D)</Japanese>
-            <Korean>IOR-Valdada 핏불 2 (2D)</Korean>
-            <Chinesesimp>MRCO（2D）</Chinesesimp>
-            <Chinese>多距離戰鬥瞄準鏡(2D)</Chinese>
-            <Turkish>MRCO (2D)</Turkish>
+        <Key ID="STR_ACE_Optics_hamr">
+            <English>RCO (2D)</English>
+            <Chinese>步槍戰鬥光學瞄準鏡(2D)</Chinese>
+            <Chinesesimp>RCO（2D）</Chinesesimp>
+            <Czech>RCO (2D)</Czech>
+            <French>RCO (2D)</French>
+            <German>RCO (2D)</German>
+            <Hungarian>RCO (2D)</Hungarian>
+            <Italian>RCO (2D)</Italian>
+            <Japanese>RCO (2D)</Japanese>
+            <Korean>류폴드 마크 4 HAMR (2D)</Korean>
+            <Polish>RCO (2D)</Polish>
+            <Portuguese>RCO (2D)</Portuguese>
+            <Russian>RCO (2D)</Russian>
+            <Spanish>RCO (2D)</Spanish>
+            <Turkish>RCO (2D)</Turkish>
         </Key>
-        <Key ID="STR_ACE_Optics_mrco_pip">
-            <English>MRCO (PIP)</English>
-            <Czech>MRCO (PIP)</Czech>
-            <French>MRCO (PIP)</French>
-            <German>MRCO (BIB)</German>
-            <Italian>MRCO (PIP)</Italian>
-            <Polish>MRCO (PIP)</Polish>
-            <Portuguese>MRCO (PIP)</Portuguese>
-            <Russian>MRCO (PIP)</Russian>
-            <Spanish>MRCO (PIP)</Spanish>
-            <Hungarian>MRCO (PIP)</Hungarian>
-            <Japanese>MRCO (PIP)</Japanese>
-            <Korean>IOR-Valdada 핏불 2 (PIP)</Korean>
-            <Chinesesimp>MRCO（画中画）</Chinesesimp>
-            <Chinese>多距離戰鬥瞄準鏡(擬真版)</Chinese>
-            <Turkish>MRCO (PIP)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Optics_sos">
-            <English>MOS (2D)</English>
-            <Czech>MOS (2D)</Czech>
-            <French>MOS (2D)</French>
-            <German>MOS (2D)</German>
-            <Italian>MOS (2D)</Italian>
-            <Polish>MOS (2D)</Polish>
-            <Portuguese>MOS (2D)</Portuguese>
-            <Russian>MOS (2D)</Russian>
-            <Spanish>MOS (2D)</Spanish>
-            <Hungarian>MOS (2D)</Hungarian>
-            <Japanese>MOS (2D)</Japanese>
-            <Korean>MOS (2D)</Korean>
-            <Chinesesimp>MOS（2D）</Chinesesimp>
-            <Chinese>精準光學瞄準鏡(2D)</Chinese>
-            <Turkish>MOS (2D)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Optics_sos_pip">
-            <English>MOS (PIP)</English>
-            <Czech>MOS (PIP)</Czech>
-            <French>MOS (PIP)</French>
-            <German>MOS (BIB)</German>
-            <Italian>MOS (PIP)</Italian>
-            <Polish>MOS (PIP)</Polish>
-            <Portuguese>MOS (PIP)</Portuguese>
-            <Russian>MOS (PIP)</Russian>
-            <Spanish>MOS (PIP)</Spanish>
-            <Hungarian>MOS (PIP)</Hungarian>
-            <Japanese>MOS (PIP)</Japanese>
-            <Korean>MOS (PIP)</Korean>
-            <Chinesesimp>MOS（画中画）</Chinesesimp>
-            <Chinese>精準光學瞄準鏡(擬真版)</Chinese>
-            <Turkish>MOS (PIP)</Turkish>
+        <Key ID="STR_ACE_Optics_hamr_pip">
+            <English>RCO (PIP)</English>
+            <Chinese>步槍戰鬥光學瞄準鏡(擬真版)</Chinese>
+            <Chinesesimp>RCO（画中画）</Chinesesimp>
+            <Czech>RCO (PIP)</Czech>
+            <French>RCO (PIP)</French>
+            <German>RCO (BIB)</German>
+            <Hungarian>RCO (PIP)</Hungarian>
+            <Italian>RCO (PIP)</Italian>
+            <Japanese>RCO (PIP)</Japanese>
+            <Korean>류폴드 마크 4 HAMR (PIP)</Korean>
+            <Polish>RCO (PIP)</Polish>
+            <Portuguese>RCO (PIP)</Portuguese>
+            <Russian>RCO (PIP)</Russian>
+            <Spanish>RCO (PIP)</Spanish>
+            <Turkish>RCO (PIP)</Turkish>
         </Key>
         <Key ID="STR_ACE_Optics_lrps">
             <English>LRPS (2D)</English>
+            <Chinese>長距離精確瞄準鏡(2D)</Chinese>
+            <Chinesesimp>LRPS（2D）</Chinesesimp>
             <Czech>LRPS (2D)</Czech>
             <French>LRPS (2D)</French>
             <German>LRPS (2D)</German>
+            <Hungarian>LRPS (2D)</Hungarian>
             <Italian>LRPS (2D)</Italian>
+            <Japanese>LRPS (2D)</Japanese>
+            <Korean>나이트포스 NXS (2D)</Korean>
             <Polish>LRPS (2D)</Polish>
             <Portuguese>LRPS (2D)</Portuguese>
             <Russian>LRPS (2D)</Russian>
             <Spanish>MPLD (2D)</Spanish>
-            <Hungarian>LRPS (2D)</Hungarian>
-            <Japanese>LRPS (2D)</Japanese>
-            <Korean>나이트포스 NXS (2D)</Korean>
-            <Chinesesimp>LRPS（2D）</Chinesesimp>
-            <Chinese>長距離精確瞄準鏡(2D)</Chinese>
             <Turkish>LRPS (2D)</Turkish>
         </Key>
         <Key ID="STR_ACE_Optics_lrps_pip">
             <English>LRPS (PIP)</English>
+            <Chinese>長距離精確瞄準鏡(擬真版)</Chinese>
+            <Chinesesimp>LRPS（画中画）</Chinesesimp>
             <Czech>LRPS (PIP)</Czech>
             <French>LRPS (PIP)</French>
             <German>LRPS (BIB)</German>
+            <Hungarian>LRPS (PIP)</Hungarian>
             <Italian>LRPS (PIP)</Italian>
+            <Japanese>LRPS (PIP)</Japanese>
+            <Korean>나이트포스 NXS (PIP)</Korean>
             <Polish>LRPS (PIP)</Polish>
             <Portuguese>LRPS (PIP)</Portuguese>
             <Russian>LRPS (PIP)</Russian>
             <Spanish>MPLD (PIP)</Spanish>
-            <Hungarian>LRPS (PIP)</Hungarian>
-            <Japanese>LRPS (PIP)</Japanese>
-            <Korean>나이트포스 NXS (PIP)</Korean>
-            <Chinesesimp>LRPS（画中画）</Chinesesimp>
-            <Chinese>長距離精確瞄準鏡(擬真版)</Chinese>
             <Turkish>LRPS (PIP)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Optics_mrco">
+            <English>MRCO (2D)</English>
+            <Chinese>多距離戰鬥瞄準鏡(2D)</Chinese>
+            <Chinesesimp>MRCO（2D）</Chinesesimp>
+            <Czech>MRCO (2D)</Czech>
+            <French>MRCO (2D)</French>
+            <German>MRCO (2D)</German>
+            <Hungarian>MRCO (2D)</Hungarian>
+            <Italian>MRCO (2D)</Italian>
+            <Japanese>MRCO (2D)</Japanese>
+            <Korean>IOR-Valdada 핏불 2 (2D)</Korean>
+            <Polish>MRCO (2D)</Polish>
+            <Portuguese>MRCO (2D)</Portuguese>
+            <Russian>MRCO (2D)</Russian>
+            <Spanish>MRCO (2D)</Spanish>
+            <Turkish>MRCO (2D)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Optics_mrco_pip">
+            <English>MRCO (PIP)</English>
+            <Chinese>多距離戰鬥瞄準鏡(擬真版)</Chinese>
+            <Chinesesimp>MRCO（画中画）</Chinesesimp>
+            <Czech>MRCO (PIP)</Czech>
+            <French>MRCO (PIP)</French>
+            <German>MRCO (BIB)</German>
+            <Hungarian>MRCO (PIP)</Hungarian>
+            <Italian>MRCO (PIP)</Italian>
+            <Japanese>MRCO (PIP)</Japanese>
+            <Korean>IOR-Valdada 핏불 2 (PIP)</Korean>
+            <Polish>MRCO (PIP)</Polish>
+            <Portuguese>MRCO (PIP)</Portuguese>
+            <Russian>MRCO (PIP)</Russian>
+            <Spanish>MRCO (PIP)</Spanish>
+            <Turkish>MRCO (PIP)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Optics_sos">
+            <English>MOS (2D)</English>
+            <Chinese>精準光學瞄準鏡(2D)</Chinese>
+            <Chinesesimp>MOS（2D）</Chinesesimp>
+            <Czech>MOS (2D)</Czech>
+            <French>MOS (2D)</French>
+            <German>MOS (2D)</German>
+            <Hungarian>MOS (2D)</Hungarian>
+            <Italian>MOS (2D)</Italian>
+            <Japanese>MOS (2D)</Japanese>
+            <Korean>MOS (2D)</Korean>
+            <Polish>MOS (2D)</Polish>
+            <Portuguese>MOS (2D)</Portuguese>
+            <Russian>MOS (2D)</Russian>
+            <Spanish>MOS (2D)</Spanish>
+            <Turkish>MOS (2D)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Optics_sos_pip">
+            <English>MOS (PIP)</English>
+            <Chinese>精準光學瞄準鏡(擬真版)</Chinese>
+            <Chinesesimp>MOS（画中画）</Chinesesimp>
+            <Czech>MOS (PIP)</Czech>
+            <French>MOS (PIP)</French>
+            <German>MOS (BIB)</German>
+            <Hungarian>MOS (PIP)</Hungarian>
+            <Italian>MOS (PIP)</Italian>
+            <Japanese>MOS (PIP)</Japanese>
+            <Korean>MOS (PIP)</Korean>
+            <Polish>MOS (PIP)</Polish>
+            <Portuguese>MOS (PIP)</Portuguese>
+            <Russian>MOS (PIP)</Russian>
+            <Spanish>MOS (PIP)</Spanish>
+            <Turkish>MOS (PIP)</Turkish>
         </Key>
     </Package>
 </Project>

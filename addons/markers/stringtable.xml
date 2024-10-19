@@ -1,425 +1,304 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Project name="ACE">
     <Package name="Markers">
-        <Key ID="STR_ACE_Markers_MarkerScale">
-            <English>Scale: %1</English>
-            <Spanish>Escala: %1</Spanish>
-            <French>Échelle : %1</French>
-            <Russian>Масштаб: %1</Russian>
-            <Japanese>大きさ: %1</Japanese>
-            <Polish>Skala: %1</Polish>
-            <German>Skalierung: %1</German>
-            <Italian>Scala: %1</Italian>
-            <Chinesesimp>规模：%1°</Chinesesimp>
-            <Korean>크기: %1</Korean>
-            <Portuguese>Escala: %1</Portuguese>
-        </Key>
         <Key ID="STR_ACE_Markers_MarkerDirection">
             <English>Direction: %1°</English>
-            <German>Drehung: %1°</German>
-            <French>Direction : %1°</French>
+            <Chinese>方位: %1°</Chinese>
+            <Chinesesimp>方位：%1°</Chinesesimp>
             <Czech>Směr: %1°</Czech>
-            <Polish>Kierunek: %1°</Polish>
-            <Spanish>Dirección: %1°</Spanish>
-            <Russian>Направление: %1°</Russian>
+            <French>Direction : %1°</French>
+            <German>Drehung: %1°</German>
             <Hungarian>Irány: %1°</Hungarian>
             <Italian>Direzione: %1°</Italian>
-            <Portuguese>Direção %1</Portuguese>
             <Japanese>方向: %1°</Japanese>
             <Korean>방위: %1°</Korean>
-            <Chinesesimp>方位：%1°</Chinesesimp>
-            <Chinese>方位: %1°</Chinese>
+            <Polish>Kierunek: %1°</Polish>
+            <Portuguese>Direção %1</Portuguese>
+            <Russian>Направление: %1°</Russian>
+            <Spanish>Dirección: %1°</Spanish>
             <Turkish>Yön: %1°</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MarkerDirectionScaleSlider_Tooltip">
             <English>Click RMB to reset</English>
-            <Russian>Нажми ПКМ чтобы сбросить</Russian>
+            <Chinesesimp>点击鼠标右键重置</Chinesesimp>
             <French>Clic droit pour réinitialiser</French>
-            <Japanese>右クリックでリセット</Japanese>
-            <Polish>Naciśnij PPM żeby zresetować</Polish>
             <German>Rechte Maustaste zum Zurücksetzen</German>
             <Italian>Tasto Destro per ripristinare</Italian>
-            <Chinesesimp>点击鼠标右键重置</Chinesesimp>
+            <Japanese>右クリックでリセット</Japanese>
             <Korean>오른쪽 클릭으로 재설정</Korean>
-            <Spanish>Click botón derecho para restaurar</Spanish>
+            <Polish>Naciśnij PPM żeby zresetować</Polish>
             <Portuguese>Clique com o botão direito para redefinir</Portuguese>
+            <Russian>Нажми ПКМ чтобы сбросить</Russian>
+            <Spanish>Click botón derecho para restaurar</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Markers_MarkerScale">
+            <English>Scale: %1</English>
+            <Chinesesimp>规模：%1°</Chinesesimp>
+            <French>Échelle : %1</French>
+            <German>Skalierung: %1</German>
+            <Italian>Scala: %1</Italian>
+            <Japanese>大きさ: %1</Japanese>
+            <Korean>크기: %1</Korean>
+            <Polish>Skala: %1</Polish>
+            <Portuguese>Escala: %1</Portuguese>
+            <Russian>Масштаб: %1</Russian>
+            <Spanish>Escala: %1</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_Module_DisplayName">
             <English>Markers</English>
-            <German>Markierungen</German>
-            <Japanese>マーカー</Japanese>
-            <Italian>Marcatori</Italian>
             <Chinese>標誌</Chinese>
             <Chinesesimp>标识</Chinesesimp>
+            <Czech>Značky</Czech>
+            <French>Marqueurs</French>
+            <German>Markierungen</German>
+            <Italian>Marcatori</Italian>
+            <Japanese>マーカー</Japanese>
             <Korean>지도 마커</Korean>
             <Polish>Znaczniki</Polish>
-            <Russian>Маркеры</Russian>
             <Portuguese>Marcadores</Portuguese>
-            <French>Marqueurs</French>
-            <Czech>Značky</Czech>
-            <Turkish>Işaretleyiciler</Turkish>
+            <Russian>Маркеры</Russian>
             <Spanish>Marcadores</Spanish>
+            <Turkish>Işaretleyiciler</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction">
             <English>Allow moving markers for</English>
-            <German>Erlaube Marker zu bewegen für</German>
-            <Japanese>マーカー移動を許可する対象</Japanese>
-            <Korean>마커 이동 허가</Korean>
             <Chinese>誰可以移動標誌</Chinese>
             <Chinesesimp>谁可以移动标识</Chinesesimp>
-            <Italian>Permetti di spostare i marcatori a:</Italian>
-            <Polish>Zezwól na poruszanie znaczników dla</Polish>
-            <Russian>Разрешить перемещение маркеров для</Russian>
-            <Portuguese>Permitir que movam marcadores</Portuguese>
-            <French>Permettre le déplacement des marqueurs pour</French>
             <Czech>Povolit pohyb se značkami pro</Czech>
+            <French>Permettre le déplacement des marqueurs pour</French>
+            <German>Erlaube Marker zu bewegen für</German>
+            <Italian>Permetti di spostare i marcatori a:</Italian>
+            <Japanese>マーカー移動を許可する対象</Japanese>
+            <Korean>마커 이동 허가</Korean>
+            <Polish>Zezwól na poruszanie znaczników dla</Polish>
+            <Portuguese>Permitir que movam marcadores</Portuguese>
+            <Russian>Разрешить перемещение маркеров для</Russian>
             <Spanish>Permitir marcadores en movimiento para</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Markers_MoveRestriction_Description">
-            <English>Restricts which players are able to move markers while holding the Alt key.</English>
-            <German>Beschränkt welche Spieler Marker mit gedrückter Alt-Taste bewegen können.</German>
-            <Japanese>Altキーを押しながらマーカー移動をできるプレイヤーを制限します。</Japanese>
-            <Korean>Alt 키를 누른 상태에서 마커를 움직일 수 있는 플레이어를 제한합니다.</Korean>
-            <Chinese>設定誰可以透過按住Alt鍵來移動標誌</Chinese>
-            <Chinesesimp>设定谁可以透过按住 Alt 键来移动标识。</Chinesesimp>
-            <Italian>Limita quali giocatori possono spostare i marcatori premendo il tasto Alt.</Italian>
-            <Polish>Ogranicz którzy gracze mogą poruszać znacznikami podczas trzymania przycisku Alt.</Polish>
-            <Russian>Устанавливает ограничение на перемещения маркеров игроками при помощи клавиши Alt</Russian>
-            <Portuguese>Restringe quais jogadores podem mover os marcadores do mapa enquanto seguram a tecla ALT.</Portuguese>
-            <French>Définit quels joueurs peuvent déplacer des marqueurs en maintenant la touche Alt enfoncée.</French>
-            <Czech>Omezuje kdo může pohybovat se značkami při podržení klávesy Alt.</Czech>
-            <Turkish>Alt tuşunu basılı tutarken hangi işaretçilerin hareket edebileceğini sınırlar.</Turkish>
-            <Spanish>Reestringir qué jugadores son capaces de mover los marcadores manteniendo pulsada la tecla Alt.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
-            <English>Nobody</English>
-            <German>Niemand</German>
-            <Japanese>不許可</Japanese>
-            <Korean>비활성</Korean>
-            <Chinese>沒有人</Chinese>
-            <Chinesesimp>没有人</Chinesesimp>
-            <Italian>Nessuno</Italian>
-            <Polish>Nikt</Polish>
-            <Russian>Никого</Russian>
-            <Portuguese>Ninguém</Portuguese>
-            <French>Personne</French>
-            <Czech>Nikdo</Czech>
-            <Turkish>Hiçkimse</Turkish>
-            <Spanish>Ninguno</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Markers_MoveRestriction_All">
-            <English>All players</English>
-            <German>Alle Spieler</German>
-            <Japanese>全プレイヤー</Japanese>
-            <Italian>Tutti i giocatori</Italian>
-            <Chinese>所有玩家</Chinese>
-            <Chinesesimp>所有玩家</Chinesesimp>
-            <Korean>모든 플레이어</Korean>
-            <Polish>Wszyscy gracze</Polish>
-            <Russian>Всех игроков</Russian>
-            <Portuguese>Todos jogadores</Portuguese>
-            <French>Tous les joueurs</French>
-            <Czech>Všichni hráči</Czech>
-            <Turkish>Bütün Oyuncular</Turkish>
-            <Spanish>Todos los jugadores</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Admins">
             <English>Admins</English>
-            <German>Admins</German>
-            <Japanese>管理者</Japanese>
-            <Italian>Amministratori</Italian>
             <Chinese>管理員</Chinese>
             <Chinesesimp>管理员</Chinesesimp>
+            <Czech>Administrátoři</Czech>
+            <French>Admins</French>
+            <German>Admins</German>
+            <Italian>Amministratori</Italian>
+            <Japanese>管理者</Japanese>
             <Korean>관리자</Korean>
             <Polish>Administratorzy</Polish>
-            <Russian>Админов</Russian>
             <Portuguese>Administradores</Portuguese>
-            <French>Admins</French>
-            <Czech>Administrátoři</Czech>
-            <Turkish>Adminler</Turkish>
+            <Russian>Админов</Russian>
             <Spanish>Admins</Spanish>
+            <Turkish>Adminler</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_All">
+            <English>All players</English>
+            <Chinese>所有玩家</Chinese>
+            <Chinesesimp>所有玩家</Chinesesimp>
+            <Czech>Všichni hráči</Czech>
+            <French>Tous les joueurs</French>
+            <German>Alle Spieler</German>
+            <Italian>Tutti i giocatori</Italian>
+            <Japanese>全プレイヤー</Japanese>
+            <Korean>모든 플레이어</Korean>
+            <Polish>Wszyscy gracze</Polish>
+            <Portuguese>Todos jogadores</Portuguese>
+            <Russian>Всех игроков</Russian>
+            <Spanish>Todos los jugadores</Spanish>
+            <Turkish>Bütün Oyuncular</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_Description">
+            <English>Restricts which players are able to move markers while holding the Alt key.</English>
+            <Chinese>設定誰可以透過按住Alt鍵來移動標誌</Chinese>
+            <Chinesesimp>设定谁可以透过按住 Alt 键来移动标识。</Chinesesimp>
+            <Czech>Omezuje kdo může pohybovat se značkami při podržení klávesy Alt.</Czech>
+            <French>Définit quels joueurs peuvent déplacer des marqueurs en maintenant la touche Alt enfoncée.</French>
+            <German>Beschränkt welche Spieler Marker mit gedrückter Alt-Taste bewegen können.</German>
+            <Italian>Limita quali giocatori possono spostare i marcatori premendo il tasto Alt.</Italian>
+            <Japanese>Altキーを押しながらマーカー移動をできるプレイヤーを制限します。</Japanese>
+            <Korean>Alt 키를 누른 상태에서 마커를 움직일 수 있는 플레이어를 제한합니다.</Korean>
+            <Polish>Ogranicz którzy gracze mogą poruszać znacznikami podczas trzymania przycisku Alt.</Polish>
+            <Portuguese>Restringe quais jogadores podem mover os marcadores do mapa enquanto seguram a tecla ALT.</Portuguese>
+            <Russian>Устанавливает ограничение на перемещения маркеров игроками при помощи клавиши Alt</Russian>
+            <Spanish>Reestringir qué jugadores son capaces de mover los marcadores manteniendo pulsada la tecla Alt.</Spanish>
+            <Turkish>Alt tuşunu basılı tutarken hangi işaretçilerin hareket edebileceğini sınırlar.</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeaders">
             <English>Group leaders</English>
-            <German>Gruppenführer</German>
-            <Japanese>グループ リーダー</Japanese>
-            <Italian>Capigruppo</Italian>
             <Chinese>小隊長</Chinese>
             <Chinesesimp>小队长</Chinesesimp>
+            <Czech>Velitelé jednotek</Czech>
+            <French>Chefs de groupe</French>
+            <German>Gruppenführer</German>
+            <Italian>Capigruppo</Italian>
+            <Japanese>グループ リーダー</Japanese>
             <Korean>분대장</Korean>
             <Polish>Przywódcy grup</Polish>
-            <Russian>Лидеров групп</Russian>
             <Portuguese>Líderes de grupo</Portuguese>
-            <French>Chefs de groupe</French>
-            <Czech>Velitelé jednotek</Czech>
-            <Turkish>Grup Liderleri</Turkish>
+            <Russian>Лидеров групп</Russian>
             <Spanish>Líderes de grupo</Spanish>
+            <Turkish>Grup Liderleri</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_GroupLeadersAndAdmins">
             <English>Group leaders and Admins</English>
-            <German>Gruppenführer und Admins</German>
-            <Japanese>グループ リーダーと管理者</Japanese>
-            <Italian>Capigruppo e Amministratori</Italian>
             <Chinese>小隊長與管理員</Chinese>
             <Chinesesimp>小队长与管理员</Chinesesimp>
+            <Czech>Velitelé jednotek a Administrátoři</Czech>
+            <French>Chefs de groupe et Admins</French>
+            <German>Gruppenführer und Admins</German>
+            <Italian>Capigruppo e Amministratori</Italian>
+            <Japanese>グループ リーダーと管理者</Japanese>
             <Korean>분대장과 관리자</Korean>
             <Polish>Przywódcy grup i Administratorzy</Polish>
-            <Russian>Лидеров групп и Админов</Russian>
             <Portuguese>Líderes de grupo e Administradores</Portuguese>
-            <French>Chefs de groupe et Admins</French>
-            <Czech>Velitelé jednotek a Administrátoři</Czech>
-            <Turkish>Grup Liderleri Ve Adminler</Turkish>
+            <Russian>Лидеров групп и Админов</Russian>
             <Spanish>Líderes de grupo y administradores</Spanish>
+            <Turkish>Grup Liderleri Ve Adminler</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Markers_MoveRestriction_Nobody">
+            <English>Nobody</English>
+            <Chinese>沒有人</Chinese>
+            <Chinesesimp>没有人</Chinesesimp>
+            <Czech>Nikdo</Czech>
+            <French>Personne</French>
+            <German>Niemand</German>
+            <Italian>Nessuno</Italian>
+            <Japanese>不許可</Japanese>
+            <Korean>비활성</Korean>
+            <Polish>Nikt</Polish>
+            <Portuguese>Ninguém</Portuguese>
+            <Russian>Никого</Russian>
+            <Spanish>Ninguno</Spanish>
+            <Turkish>Hiçkimse</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_MoveRestriction_Owner">
             <English>Creator</English>
-            <German>Ersteller</German>
-            <Japanese>設置者</Japanese>
-            <Polish>Twórca</Polish>
-            <Russian>Создателя</Russian>
-            <Portuguese>Criador</Portuguese>
             <Chinese>放置者</Chinese>
             <Chinesesimp>放置者</Chinesesimp>
-            <French>Créateur</French>
-            <Italian>Creatore</Italian>
             <Czech>Tvůrce</Czech>
-            <Turkish>Yaratıcı</Turkish>
-            <Spanish>Creador</Spanish>
+            <French>Créateur</French>
+            <German>Ersteller</German>
+            <Italian>Creatore</Italian>
+            <Japanese>設置者</Japanese>
             <Korean>제작자</Korean>
-        </Key>
-        <Key ID="STR_ACE_Markers_TimestampEnabled">
-            <English>Allow Timestamps</English>
-            <Russian>Вкл. отображение времени на метках</Russian>
-            <French>Permettre l'horodatage</French>
-            <Japanese>タイムスタンプの許可</Japanese>
-            <Spanish>Permitir marcas de tiempo</Spanish>
-            <Polish>Zezwól na znaczniki czasu</Polish>
-            <German>Erlaube Zeitstempel</German>
-            <Italian>Permetti marca temporale</Italian>
-            <Chinesesimp>允许时间戳</Chinesesimp>
-            <Korean>시간 표기 허용</Korean>
-            <Portuguese>Permitir Marcação de Tempo</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Markers_TimestampEnabledDescription">
-            <English>Whether to allow timestamps to be automatically applied to markers</English>
-            <Russian>Автоматическое отображение времени, когда поставлена метка</Russian>
-            <French>Active une interface permettant d'apposer un horodatage sur les marqueurs.</French>
-            <Japanese>タイムスタンプをマーカーに自動的に適用することを許可するかどうか</Japanese>
-            <Spanish>Permitir que las marcas de tiempo sean automáticamente aplicadas a los marcadores</Spanish>
-            <Polish>Zezwól na automatyczne stosowanie znaczników czasu do markerów</Polish>
-            <German>Ob Zeitstempel automatisch auf Maker angewendet werden sollen.</German>
-            <Italian>Se i giocatori possono scegliere di aggiungere in automatico un marco temporale ai propri marcatori.</Italian>
-            <Chinesesimp>是否允许时间戳自动应用于标记</Chinesesimp>
-            <Korean>허용 시 마커를 내려놓음과 동시에 시간이 표기됩니다</Korean>
-            <Portuguese>Permite que marcações de tempo sejam automaticamente aplicadas aos marcadores</Portuguese>
+            <Polish>Twórca</Polish>
+            <Portuguese>Criador</Portuguese>
+            <Russian>Создателя</Russian>
+            <Spanish>Creador</Spanish>
+            <Turkish>Yaratıcı</Turkish>
         </Key>
         <Key ID="STR_ACE_Markers_Timestamp">
             <English>Timestamp</English>
-            <Russian>Время постановки метки</Russian>
+            <Chinesesimp>时间戳</Chinesesimp>
             <French>Horodatage</French>
-            <Japanese>タイムスタンプ</Japanese>
-            <Spanish>Marca de tiempo</Spanish>
-            <Polish>Znacznik czasu</Polish>
             <German>Zeitstempel</German>
             <Italian>Marca temporale</Italian>
-            <Chinesesimp>时间戳</Chinesesimp>
+            <Japanese>タイムスタンプ</Japanese>
             <Korean>시간 표기</Korean>
+            <Polish>Znacznik czasu</Polish>
             <Portuguese>Marcação de Tempo</Portuguese>
+            <Russian>Время постановки метки</Russian>
+            <Spanish>Marca de tiempo</Spanish>
         </Key>
-        <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
-            <English>Watch Required</English>
-            <Russian>Необходимы часы</Russian>
-            <French>Une montre est requise.</French>
-            <Japanese>時計が必要</Japanese>
-            <Spanish>Reloj requerido</Spanish>
-            <Polish>Wymagany zegarek</Polish>
-            <German>Uhr benötigt</German>
-            <Italian>Necessario orologio</Italian>
-            <Chinesesimp>需要手表</Chinesesimp>
-            <Korean>시계 필요함</Korean>
-            <Portuguese>Relógio necessário</Portuguese>
+        <Key ID="STR_ACE_Markers_TimestampEnabled">
+            <English>Allow Timestamps</English>
+            <Chinesesimp>允许时间戳</Chinesesimp>
+            <French>Permettre l'horodatage</French>
+            <German>Erlaube Zeitstempel</German>
+            <Italian>Permetti marca temporale</Italian>
+            <Japanese>タイムスタンプの許可</Japanese>
+            <Korean>시간 표기 허용</Korean>
+            <Polish>Zezwól na znaczniki czasu</Polish>
+            <Portuguese>Permitir Marcação de Tempo</Portuguese>
+            <Russian>Вкл. отображение времени на метках</Russian>
+            <Spanish>Permitir marcas de tiempo</Spanish>
         </Key>
-        <Key ID="STR_ACE_Markers_TimestampTimezone">
-            <English>Time Zone</English>
-            <Russian>Часовой пояс</Russian>
-            <French>Fuseau horaire</French>
-            <Japanese>タイムゾーン</Japanese>
-            <Spanish>Zona horaria</Spanish>
-            <Polish>Strefa czasowa</Polish>
-            <German>Zeitzone</German>
-            <Italian>Fuso orario</Italian>
-            <Chinesesimp>时区</Chinesesimp>
-            <Korean>시간대</Korean>
-        </Key>
-        <Key ID="STR_ACE_Markers_TimestampTimezoneDescription">
-            <English>Changes the time zone for the timestamp</English>
-            <Russian>Измените часовой пояс для метки времени</Russian>
-            <French>Modifiez le fuseau horaire pour l'horodatage</French>
-            <Japanese>タイムスタンプのタイムゾーンを変更します</Japanese>
-            <Spanish>Cambie la zona horaria para la marca de tiempo</Spanish>
-            <Polish>Zmień strefę czasową dla znaczników czasu</Polish>
-            <German>Ändern Sie die Zeitzone für den Zeitstempel</German>
-            <Italian>Modifica il fuso orario per la marca temporale</Italian>
-            <Chinesesimp>更改时间戳的时区</Chinesesimp>
-            <Korean>타임스탬프의 시간대를 변경하십시오</Korean>
-        </Key>
-        <Key ID="STR_ACE_Markers_TimestampTimezoneIngameTime">
-            <English>In-game Time</English>
-            <Russian>Время в игре</Russian>
-            <French>Heure de jeu</French>
-            <Japanese>ゲーム内時間</Japanese>
-            <Spanish>Hora del juego</Spanish>
-            <Polish>Czas gry</Polish>
-            <German>Ingame-Zeit</German>
-            <Italian>Ora del gioco</Italian>
-            <Chinesesimp>游戏内时间</Chinesesimp>
-            <Korean>게임 시간</Korean>
-        </Key>
-        <Key ID="STR_ACE_Markers_TimestampTimezoneSystemTime">
-            <English>System Time</English>
-            <Russian>Системное время</Russian>
-            <French>Heure système</French>
-            <Japanese>システム時間</Japanese>
-            <Spanish>Hora del sistema</Spanish>
-            <Polish>Czas systemowy</Polish>
-            <German>Systemzeit</German>
-            <Italian>Ora del sistema</Italian>
-            <Chinesesimp>系统时间</Chinesesimp>
-            <Korean>시스템 시간</Korean>
-        </Key>
-        <Key ID="STR_ACE_Markers_TimestampTimezoneUTCTime">
-            <English>UTC Time</English>
-            <Russian>Время UTC</Russian>
-            <French>Heure UTC</French>
-            <Japanese>UTC時間</Japanese>
-            <Spanish>Hora UTC</Spanish>
-            <Polish>Czas UTC</Polish>
-            <German>UTC-Zeit</German>
-            <Italian>Tempo-UTC</Italian>
-            <Chinesesimp>UTC时间</Chinesesimp>
-            <Korean>UTC 시간</Korean>
-        </Key>
-        <Key ID="STR_ACE_Markers_TimestampUTCOffset">
-            <English>UTC Offset</English>
-            <Russian>Смещение UTC</Russian>
-            <French>Décalage UTC</French>
-            <Japanese>UTCオフセット</Japanese>
-            <Spanish>Desplazamiento UTC</Spanish>
-            <Polish>Przesunięcie UTC</Polish>
-            <German>UTC-Verschiebung</German>
-            <Italian>Deviazione-UTC</Italian>
-            <Chinesesimp>UTC偏移量</Chinesesimp>
-            <Korean>UTC 오프셋</Korean>
-        </Key>
-        <Key ID="STR_ACE_Markers_TimestampUTCOffsetDescription">
-            <English>Changes the time offset for the UTC timestamp</English>
-            <Russian>Измените смещение времени для метки времени UTC</Russian>
-            <French>Modifier le décalage horaire pour l'horodatage UTC</French>
-            <Japanese>UTCタイムスタンプの時オフセットを変更します</Japanese>
-            <Spanish>Cambiar el desplazamiento horario para la marca de tiempo UTC</Spanish>
-            <Polish>Zmień przesunięcie czasu dla sygnatury czasowej UTC</Polish>
-            <German>Ändere die Zeitverschiebung für den UTC-Zeitstempel</German>
-            <Italian>Modifica la deviazione della marca temporale UTC.</Italian>
-            <Chinesesimp>更改UTC时间戳的时间偏移量</Chinesesimp>
-            <Korean>UTC 타임 스탬프의 시간 오프셋을 변경하십시오</Korean>
-        </Key>
-        <Key ID="STR_ACE_Markers_TimestampUTCMinutesOffset">
-            <English>UTC Minutes Offset</English>
-            <Russian>UTC Минутное смещение</Russian>
-            <French>Décalage des minutes UTC</French>
-            <Japanese>UTC分オフセット</Japanese>
-            <Spanish>Desplazamiento de minutos UTC</Spanish>
-            <Polish>Przesunięcie minut UTC</Polish>
-            <German>UTC-Minutenversatz</German>
-            <Italian>Deviazione Minuti UTC</Italian>
-            <Chinesesimp>UTC分钟偏移量</Chinesesimp>
-            <Korean>UTC 분 오프셋</Korean>
-        </Key>
-        <Key ID="STR_ACE_Markers_TimestampUTCMinutesOffsetDescription">
-            <English>Change the minute offset for the UTC timestamp</English>
-            <Russian>Изменить минутное смещение для времени UTC</Russian>
-            <French>Modifier le décalage des minutes pour l'horodatage UTC</French>
-            <Japanese>UTCタイムスタンプの分オフセットを変更します</Japanese>
-            <Spanish>Cambiar el desplazamiento de minutos para la marca de tiempo UTC</Spanish>
-            <Polish>Zmień przesunięcie minut dla sygnatury czasowej UTC</Polish>
-            <German>Ändere den Minutenversatz für den UTC-Zeitstempel</German>
-            <Italian>Modifica la deviazione dei minuti della marca temporale UTC.</Italian>
-            <Chinesesimp>更改UTC时间戳的分钟偏移量</Chinesesimp>
-            <Korean>UTC 타임 스탬프의 분 오프셋을 변경하십시오</Korean>
+        <Key ID="STR_ACE_Markers_TimestampEnabledDescription">
+            <English>Whether to allow timestamps to be automatically applied to markers</English>
+            <Chinesesimp>是否允许时间戳自动应用于标记</Chinesesimp>
+            <French>Active une interface permettant d'apposer un horodatage sur les marqueurs.</French>
+            <German>Ob Zeitstempel automatisch auf Maker angewendet werden sollen.</German>
+            <Italian>Se i giocatori possono scegliere di aggiungere in automatico un marco temporale ai propri marcatori.</Italian>
+            <Japanese>タイムスタンプをマーカーに自動的に適用することを許可するかどうか</Japanese>
+            <Korean>허용 시 마커를 내려놓음과 동시에 시간이 표기됩니다</Korean>
+            <Polish>Zezwól na automatyczne stosowanie znaczników czasu do markerów</Polish>
+            <Portuguese>Permite que marcações de tempo sejam automaticamente aplicadas aos marcadores</Portuguese>
+            <Russian>Автоматическое отображение времени, когда поставлена метка</Russian>
+            <Spanish>Permitir que las marcas de tiempo sean automáticamente aplicadas a los marcadores</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormat">
             <English>Timestamp Format</English>
-            <Russian>Формат времени</Russian>
+            <Chinesesimp>时间戳格式</Chinesesimp>
             <French>Horodatage - Format</French>
-            <Japanese>タイムスタンプの形式</Japanese>
-            <Spanish>Formato de marca de tiempo</Spanish>
-            <Polish>Format znacznika czasu</Polish>
             <German>Format des Zeitstempels</German>
             <Italian>Formato della marca temporale</Italian>
-            <Chinesesimp>时间戳格式</Chinesesimp>
+            <Japanese>タイムスタンプの形式</Japanese>
             <Korean>시간 표기 포맷</Korean>
+            <Polish>Format znacznika czasu</Polish>
             <Portuguese>Formato da Marcação de Tempo</Portuguese>
+            <Russian>Формат времени</Russian>
+            <Spanish>Formato de marca de tiempo</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription0">
             <English>Changes the timestamp format</English>
-            <Russian>Изменение формата времени</Russian>
+            <Chinesesimp>更改时间戳格式</Chinesesimp>
             <French>Modifie le format de l'horodatage.</French>
-            <Japanese>タイムスタンプの形式を変更します</Japanese>
-            <Spanish>Cambia el formato de marca de tiempo</Spanish>
-            <Polish>Zmienia format znacznika czasu</Polish>
             <German>Zeitstempel-Format anpassen</German>
             <Italian>Modifica il formato dell'ora nella marca temporale</Italian>
-            <Chinesesimp>更改时间戳格式</Chinesesimp>
+            <Japanese>タイムスタンプの形式を変更します</Japanese>
             <Korean>시간 표기 포맷을 바꿉니다</Korean>
+            <Polish>Zmienia format znacznika czasu</Polish>
             <Portuguese>Altera a formatação da marcação de tempo</Portuguese>
+            <Russian>Изменение формата времени</Russian>
+            <Spanish>Cambia el formato de marca de tiempo</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription1">
             <English>"HH" - Hour</English>
-            <Russian>"ЧЧ" - Час</Russian>
+            <Chinesesimp>"HH"—时</Chinesesimp>
             <French>"HH" - Heures</French>
-            <Japanese>"HH" - 時</Japanese>
-            <Spanish>"HH" - Hora</Spanish>
-            <Polish>"HH" - Godziny</Polish>
             <German>"HH" - Stunden</German>
             <Italian>"HH" - Ore</Italian>
-            <Chinesesimp>"HH"—时</Chinesesimp>
+            <Japanese>"HH" - 時</Japanese>
             <Korean>"HH" - 시</Korean>
+            <Polish>"HH" - Godziny</Polish>
             <Portuguese>HH - Horas</Portuguese>
+            <Russian>"ЧЧ" - Час</Russian>
+            <Spanish>"HH" - Hora</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription2">
             <English>"MM" - Minute</English>
-            <Russian>"ММ" - Минута</Russian>
+            <Chinesesimp>"MM"—分</Chinesesimp>
             <French>"MM" - Minutes</French>
-            <Japanese>"MM" - 分</Japanese>
-            <Spanish>"MM" - Minuto</Spanish>
-            <Polish>"MM" - Minuty</Polish>
             <German>"MM" - Minuten</German>
             <Italian>"MM" - Minuti</Italian>
-            <Chinesesimp>"MM"—分</Chinesesimp>
+            <Japanese>"MM" - 分</Japanese>
             <Korean>"MM" - 분</Korean>
+            <Polish>"MM" - Minuty</Polish>
             <Portuguese>MM - Minutos</Portuguese>
+            <Russian>"ММ" - Минута</Russian>
+            <Spanish>"MM" - Minuto</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription3">
             <English>"SS" - Seconds</English>
-            <Russian>"СС" - Секунда</Russian>
+            <Chinesesimp>"SS"—秒</Chinesesimp>
             <French>"SS" - Secondes</French>
-            <Japanese>"SS" - 秒</Japanese>
-            <Spanish>"SS" - Segundos</Spanish>
-            <Polish>"SS" - Sekundy</Polish>
             <German>"SS" - Sekunden</German>
             <Italian>"SS" - Secondi</Italian>
-            <Chinesesimp>"SS"—秒</Chinesesimp>
+            <Japanese>"SS" - 秒</Japanese>
             <Korean>"SS" - 초</Korean>
+            <Polish>"SS" - Sekundy</Polish>
             <Portuguese>SS - Segundos</Portuguese>
+            <Russian>"СС" - Секунда</Russian>
+            <Spanish>"SS" - Segundos</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription4">
             <English>"MM" - Milliseconds (from 0 to 59)</English>
             <French>"MM" - Millisecondes (de 0 à 59)</French>
             <German>"MS" - Milisekunden (von 0 bis 59)</German>
             <Italian>"MS" - Millisecondi (da 0 a 59)</Italian>
-            <Portuguese>"MS" - Milissegundos (de 0 a 59)</Portuguese>
-            <Korean>"MS" - 밀리초 (0부터 59까지)</Korean>
             <Japanese>"MM" - ミリ秒 (0から59)</Japanese>
+            <Korean>"MS" - 밀리초 (0부터 59까지)</Korean>
+            <Portuguese>"MS" - Milissegundos (de 0 a 59)</Portuguese>
             <Russian>"ММ" - миллисекунды (от 0 до 59)</Russian>
             <Spanish>"MM" - Milisegundos (de 0 a 59)</Spanish>
         </Key>
@@ -428,63 +307,184 @@
             <French>"mmm" - Millisecondes (de 0 à 999)</French>
             <German>"mmm" - Milisekunden (von 0 bis 999)</German>
             <Italian>"mmm" - Millisecondi (da 0 a 999)</Italian>
-            <Portuguese>"mmm" - Milissegundos (de 0 a 999)</Portuguese>
-            <Korean>"mmm" - 밀리초 (0부터 999까지)</Korean>
             <Japanese>"mmm" - ミリ秒 (0から599)</Japanese>
+            <Korean>"mmm" - 밀리초 (0부터 999까지)</Korean>
+            <Portuguese>"mmm" - Milissegundos (de 0 a 999)</Portuguese>
             <Russian>"ммм" - миллисекунды (от 0 до 999)</Russian>
             <Spanish>"mmm" - Milisegundos (de 0 a 999)</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>
-            <Russian>Часовой формат времени</Russian>
+            <Chinesesimp>时间戳小时格式</Chinesesimp>
             <French>Horodatage - Système horaire</French>
-            <Japanese>タイムスタンプ時刻形式</Japanese>
-            <Spanish>Formato de hora de marca de tiempo</Spanish>
-            <Polish>Format Godzinnych znaczników czasu</Polish>
             <German>Zeitstempel-Stundenformat</German>
             <Italian>Formato ore delle marche temporali</Italian>
-            <Chinesesimp>时间戳小时格式</Chinesesimp>
+            <Japanese>タイムスタンプ時刻形式</Japanese>
             <Korean>시간 표기 시간 포맷</Korean>
+            <Polish>Format Godzinnych znaczników czasu</Polish>
             <Portuguese>Sistema Horário das Marcações de Tempo</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Markers_TimestampHourFormat24">
-            <English>24-Hour Clock</English>
-            <Russian>24 часовой формат</Russian>
-            <French>Format 24 heures</French>
-            <Japanese>24時間表記</Japanese>
-            <Spanish>Reloj 24-Horas</Spanish>
-            <Polish>Zegar 24-godzinny</Polish>
-            <German>24-Stunden</German>
-            <Italian>24-Ore</Italian>
-            <Chinesesimp>24小时制</Chinesesimp>
-            <Korean>24시간제</Korean>
-            <Portuguese>24 Horas</Portuguese>
+            <Russian>Часовой формат времени</Russian>
+            <Spanish>Formato de hora de marca de tiempo</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat12">
             <English>12-Hour Clock</English>
-            <Russian>12 часовой формат</Russian>
+            <Chinesesimp>12小时制</Chinesesimp>
             <French>Format 12 heures</French>
-            <Japanese>12時間表記</Japanese>
-            <Spanish>Reloj 12-Horas</Spanish>
-            <Polish>Zegar 12-godzinny</Polish>
             <German>12-Stunden</German>
             <Italian>12-Ore</Italian>
-            <Chinesesimp>12小时制</Chinesesimp>
+            <Japanese>12時間表記</Japanese>
             <Korean>12시간제</Korean>
+            <Polish>Zegar 12-godzinny</Polish>
             <Portuguese>12 Horas</Portuguese>
+            <Russian>12 часовой формат</Russian>
+            <Spanish>Reloj 12-Horas</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampHourFormat24">
+            <English>24-Hour Clock</English>
+            <Chinesesimp>24小时制</Chinesesimp>
+            <French>Format 24 heures</French>
+            <German>24-Stunden</German>
+            <Italian>24-Ore</Italian>
+            <Japanese>24時間表記</Japanese>
+            <Korean>24시간제</Korean>
+            <Polish>Zegar 24-godzinny</Polish>
+            <Portuguese>24 Horas</Portuguese>
+            <Russian>24 часовой формат</Russian>
+            <Spanish>Reloj 24-Horas</Spanish>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormatDescription">
             <English>Changes timestamp to use either 24-hour or 12-hour clock format</English>
-            <Russian>Изменяет формат времени на маркере на 24 часовой, либо 12 часовой</Russian>
+            <Chinesesimp>改变时间戳以使用24小时或12小时的时钟格式</Chinesesimp>
             <French>Permet de choisir le système d'horodatage souhaité, au format 12 ou 24 heures.</French>
-            <Japanese>タイムスタンプの時刻を24時間表記か12時間表記かのどちらかに変更します</Japanese>
-            <Spanish>Cambia que la marca de tiempo sea en formato de reloj 24-horas o 12-horas</Spanish>
-            <Polish>Zmienia znacznik czasu tak, aby używał formatu 24-godzinnego lub 12-godzinnego</Polish>
             <German>Ändert den Zeitstempel, um entweder das 24-Stunden- oder das 12-Stunden-Format zu verwenden</German>
             <Italian>Determina se le marche temporali sui marcatori saranno in formato 24-Ore o 12-Ore.</Italian>
-            <Chinesesimp>改变时间戳以使用24小时或12小时的时钟格式</Chinesesimp>
+            <Japanese>タイムスタンプの時刻を24時間表記か12時間表記かのどちらかに変更します</Japanese>
             <Korean>시간 표기를 24시간제 혹은 12시간제 에서 골라 표기합니다</Korean>
+            <Polish>Zmienia znacznik czasu tak, aby używał formatu 24-godzinnego lub 12-godzinnego</Polish>
             <Portuguese>Altera a marcação de tempo para usar o formato de relógio 24-horas ou 12-horas</Portuguese>
+            <Russian>Изменяет формат времени на маркере на 24 часовой, либо 12 часовой</Russian>
+            <Spanish>Cambia que la marca de tiempo sea en formato de reloj 24-horas o 12-horas</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTimezone">
+            <English>Time Zone</English>
+            <Chinesesimp>时区</Chinesesimp>
+            <French>Fuseau horaire</French>
+            <German>Zeitzone</German>
+            <Italian>Fuso orario</Italian>
+            <Japanese>タイムゾーン</Japanese>
+            <Korean>시간대</Korean>
+            <Polish>Strefa czasowa</Polish>
+            <Russian>Часовой пояс</Russian>
+            <Spanish>Zona horaria</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTimezoneDescription">
+            <English>Changes the time zone for the timestamp</English>
+            <Chinesesimp>更改时间戳的时区</Chinesesimp>
+            <French>Modifiez le fuseau horaire pour l'horodatage</French>
+            <German>Ändern Sie die Zeitzone für den Zeitstempel</German>
+            <Italian>Modifica il fuso orario per la marca temporale</Italian>
+            <Japanese>タイムスタンプのタイムゾーンを変更します</Japanese>
+            <Korean>타임스탬프의 시간대를 변경하십시오</Korean>
+            <Polish>Zmień strefę czasową dla znaczników czasu</Polish>
+            <Russian>Измените часовой пояс для метки времени</Russian>
+            <Spanish>Cambie la zona horaria para la marca de tiempo</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTimezoneIngameTime">
+            <English>In-game Time</English>
+            <Chinesesimp>游戏内时间</Chinesesimp>
+            <French>Heure de jeu</French>
+            <German>Ingame-Zeit</German>
+            <Italian>Ora del gioco</Italian>
+            <Japanese>ゲーム内時間</Japanese>
+            <Korean>게임 시간</Korean>
+            <Polish>Czas gry</Polish>
+            <Russian>Время в игре</Russian>
+            <Spanish>Hora del juego</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTimezoneSystemTime">
+            <English>System Time</English>
+            <Chinesesimp>系统时间</Chinesesimp>
+            <French>Heure système</French>
+            <German>Systemzeit</German>
+            <Italian>Ora del sistema</Italian>
+            <Japanese>システム時間</Japanese>
+            <Korean>시스템 시간</Korean>
+            <Polish>Czas systemowy</Polish>
+            <Russian>Системное время</Russian>
+            <Spanish>Hora del sistema</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTimezoneUTCTime">
+            <English>UTC Time</English>
+            <Chinesesimp>UTC时间</Chinesesimp>
+            <French>Heure UTC</French>
+            <German>UTC-Zeit</German>
+            <Italian>Tempo-UTC</Italian>
+            <Japanese>UTC時間</Japanese>
+            <Korean>UTC 시간</Korean>
+            <Polish>Czas UTC</Polish>
+            <Russian>Время UTC</Russian>
+            <Spanish>Hora UTC</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
+            <English>Watch Required</English>
+            <Chinesesimp>需要手表</Chinesesimp>
+            <French>Une montre est requise.</French>
+            <German>Uhr benötigt</German>
+            <Italian>Necessario orologio</Italian>
+            <Japanese>時計が必要</Japanese>
+            <Korean>시계 필요함</Korean>
+            <Polish>Wymagany zegarek</Polish>
+            <Portuguese>Relógio necessário</Portuguese>
+            <Russian>Необходимы часы</Russian>
+            <Spanish>Reloj requerido</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampUTCMinutesOffset">
+            <English>UTC Minutes Offset</English>
+            <Chinesesimp>UTC分钟偏移量</Chinesesimp>
+            <French>Décalage des minutes UTC</French>
+            <German>UTC-Minutenversatz</German>
+            <Italian>Deviazione Minuti UTC</Italian>
+            <Japanese>UTC分オフセット</Japanese>
+            <Korean>UTC 분 오프셋</Korean>
+            <Polish>Przesunięcie minut UTC</Polish>
+            <Russian>UTC Минутное смещение</Russian>
+            <Spanish>Desplazamiento de minutos UTC</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampUTCMinutesOffsetDescription">
+            <English>Change the minute offset for the UTC timestamp</English>
+            <Chinesesimp>更改UTC时间戳的分钟偏移量</Chinesesimp>
+            <French>Modifier le décalage des minutes pour l'horodatage UTC</French>
+            <German>Ändere den Minutenversatz für den UTC-Zeitstempel</German>
+            <Italian>Modifica la deviazione dei minuti della marca temporale UTC.</Italian>
+            <Japanese>UTCタイムスタンプの分オフセットを変更します</Japanese>
+            <Korean>UTC 타임 스탬프의 분 오프셋을 변경하십시오</Korean>
+            <Polish>Zmień przesunięcie minut dla sygnatury czasowej UTC</Polish>
+            <Russian>Изменить минутное смещение для времени UTC</Russian>
+            <Spanish>Cambiar el desplazamiento de minutos para la marca de tiempo UTC</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampUTCOffset">
+            <English>UTC Offset</English>
+            <Chinesesimp>UTC偏移量</Chinesesimp>
+            <French>Décalage UTC</French>
+            <German>UTC-Verschiebung</German>
+            <Italian>Deviazione-UTC</Italian>
+            <Japanese>UTCオフセット</Japanese>
+            <Korean>UTC 오프셋</Korean>
+            <Polish>Przesunięcie UTC</Polish>
+            <Russian>Смещение UTC</Russian>
+            <Spanish>Desplazamiento UTC</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Markers_TimestampUTCOffsetDescription">
+            <English>Changes the time offset for the UTC timestamp</English>
+            <Chinesesimp>更改UTC时间戳的时间偏移量</Chinesesimp>
+            <French>Modifier le décalage horaire pour l'horodatage UTC</French>
+            <German>Ändere die Zeitverschiebung für den UTC-Zeitstempel</German>
+            <Italian>Modifica la deviazione della marca temporale UTC.</Italian>
+            <Japanese>UTCタイムスタンプの時オフセットを変更します</Japanese>
+            <Korean>UTC 타임 스탬프의 시간 오프셋을 변경하십시오</Korean>
+            <Polish>Zmień przesunięcie czasu dla sygnatury czasowej UTC</Polish>
+            <Russian>Измените смещение времени для метки времени UTC</Russian>
+            <Spanish>Cambiar el desplazamiento horario para la marca de tiempo UTC</Spanish>
         </Key>
     </Package>
 </Project>

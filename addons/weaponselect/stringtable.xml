@@ -1,408 +1,408 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Project name="ACE">
     <Package name="WeaponSelect">
-        <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextName">
-            <English>Display text on grenade throw</English>
-            <German>Zeige Text beim Granatwurf</German>
-            <Spanish>Mostrar texto al lanzar una granada</Spanish>
-            <Russian>Показывать текст при броске</Russian>
-            <Czech>Zobrazí text při hodu granátem</Czech>
-            <Polish>Wyświetl tekst przy rzucie granatem</Polish>
-            <French>Afficher du texte lors d'un lancé de grenade</French>
-            <Hungarian>Szöveg mutatása gránát eldobásakor</Hungarian>
-            <Italian>Mostra indicazioni nel lancio granate</Italian>
-            <Portuguese>Mostrar texto ao lançar granada</Portuguese>
-            <Japanese>手榴弾投擲時に通知</Japanese>
-            <Korean>수류탄 투척 시 화면에 문자 표시</Korean>
-            <Chinesesimp>投掷手榴弹时显示提示信息</Chinesesimp>
-            <Chinese>投擲手榴彈時顯示提示訊息</Chinese>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextDesc">
-            <English>Display a hint or text on grenade throw.</English>
-            <German>Zeige Hinweis oder Text beim Granatwurf</German>
-            <Spanish>Muestra una notificación o texto al lanzar una granada</Spanish>
-            <Russian>Показывать текст или подсказку при броске гранаты.</Russian>
-            <Czech>Zobrazí upozornění nebo text při hodu granátem.</Czech>
-            <Polish>Wyświetla powiadomienie lub tekst przy rzucie granatem.</Polish>
-            <French>Affiche un texte ou une notification lors d'un lancé de grenade.</French>
-            <Hungarian>Jelez egy súgót vagy szöveget a gránát eldobásakor.</Hungarian>
-            <Italian>Mostra una notifica quando si lanciano granate</Italian>
-            <Portuguese>Mostra uma notificação ou texto ao lançar uma granada</Portuguese>
-            <Japanese>手榴弾を投げるときに、ヒントか文で通知します。</Japanese>
-            <Korean>수류탄 투척 시 화면에 문자나 힌트를 표시합니다.</Korean>
-            <Chinesesimp>投掷手榴弹时显示提示信息。</Chinesesimp>
-            <Chinese>投擲手榴彈時顯示提示訊息</Chinese>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_SelectPistol">
-            <English>Select Pistol</English>
-            <German>Pistole auswählen</German>
-            <Spanish>Seleccionar pistola</Spanish>
-            <Polish>Wybierz pistolet</Polish>
-            <Czech>Zvolit Pistoly</Czech>
-            <Russian>Выбрать пистолет</Russian>
-            <French>Sélectionner le pistolet</French>
-            <Hungarian>Pisztoly Kiválasztása</Hungarian>
-            <Portuguese>Selecionar Pistola</Portuguese>
-            <Italian>Seleziona la Pistola</Italian>
-            <Japanese>拳銃を選択</Japanese>
-            <Korean>권총 선택</Korean>
-            <Chinesesimp>选择手枪</Chinesesimp>
-            <Chinese>選擇手槍</Chinese>
-            <Turkish>Tabancayı Seç</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_SelectRifle">
-            <English>Select Rifle</English>
-            <German>Gewehr auswählen</German>
-            <Spanish>Seleccionar fusil</Spanish>
-            <Polish>Wybierz karabin</Polish>
-            <Czech>Zvolit Pušku</Czech>
-            <Russian>Выбрать винтовку</Russian>
-            <French>Sélectionner le fusil</French>
-            <Hungarian>Puska Kiválasztása</Hungarian>
-            <Portuguese>Selecionar Rifle</Portuguese>
-            <Italian>Seleziona il fucile</Italian>
-            <Japanese>小銃を選択</Japanese>
-            <Korean>소총 선택</Korean>
-            <Chinesesimp>选择步枪</Chinesesimp>
-            <Chinese>選擇步槍</Chinese>
-            <Turkish>Tüfeği Seç</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_SelectLauncher">
-            <English>Select Launcher</English>
-            <German>Raketenwerfer auswählen</German>
-            <Spanish>Seleccionar lanzador</Spanish>
-            <Polish>Wybierz wyrzutnię</Polish>
-            <Czech>Zvolit Raketomet</Czech>
-            <Russian>Выбрать гранатомёт</Russian>
-            <French>Sélectionner le lanceur</French>
-            <Hungarian>Rakétavető Kiválasztása</Hungarian>
-            <Portuguese>Selecionar Lançador</Portuguese>
-            <Italian>Seleziona il lanciamissili</Italian>
-            <Japanese>ランチャーを選択</Japanese>
-            <Korean>발사기 선택</Korean>
-            <Chinesesimp>选择发射器</Chinesesimp>
-            <Chinese>選擇發射器</Chinese>
-            <Turkish>Fırlatılabiliri Seç</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_SelectRifleMuzzle">
-            <English>Select Grenade Launcher</English>
-            <German>Granatwerfer auswählen</German>
-            <Spanish>Seleccionar lanzagranadas</Spanish>
-            <Polish>Wybierz granatnik</Polish>
-            <Czech>Zvolit Granátomet</Czech>
-            <Russian>Выбрать подствольный гранатомёт</Russian>
-            <French>Sélectionner le lance-grenades</French>
-            <Hungarian>Gránátvető Kiválasztása</Hungarian>
-            <Portuguese>Selecionar Lança-Granadas</Portuguese>
-            <Italian>Seleziona il lanciagranate</Italian>
-            <Japanese>グレネード ランチャーを選択</Japanese>
-            <Korean>유탄발사기 선택</Korean>
-            <Chinesesimp>选择榴弹发射器</Chinesesimp>
-            <Chinese>選擇榴彈發射器</Chinese>
-            <Turkish>Bombaatarı Seç</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_SelectBinocular">
-            <English>Select Binoculars</English>
-            <German>Fernglas auswählen</German>
-            <Spanish>Seleccionar prismáticos</Spanish>
-            <Polish>Wybierz lornetkę</Polish>
-            <Czech>Zvolit Dalekohled</Czech>
-            <Russian>Выбрать бинокль</Russian>
-            <French>Sélectionner les jumelles</French>
-            <Hungarian>Távcső Kiválasztása</Hungarian>
-            <Portuguese>Selecionar Binóculos</Portuguese>
-            <Italian>Seleziona il Binocolo</Italian>
-            <Japanese>双眼鏡を選択</Japanese>
-            <Korean>망원경 선택</Korean>
-            <Chinesesimp>选择望远镜</Chinesesimp>
-            <Chinese>選擇望遠鏡</Chinese>
-            <Turkish>Dürbünü Seç</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_HolsterWeapon">
-            <English>Holster Weapon</English>
-            <German>Waffe holstern</German>
-            <Spanish>Enfundar el arma</Spanish>
-            <Polish>Schowaj broń</Polish>
-            <Czech>Schovat zbraň</Czech>
-            <Russian>Убрать оружие</Russian>
-            <French>Arme à la bretelle</French>
-            <Hungarian>Fegyvert tokba</Hungarian>
-            <Portuguese>Guardar Arma</Portuguese>
-            <Italian>Nascondi l'arma</Italian>
-            <Japanese>武器をしまう</Japanese>
-            <Korean>무기 집어넣기</Korean>
-            <Chinesesimp>武器套</Chinesesimp>
-            <Chinese>武器套</Chinese>
-            <Turkish>Silahını Kılıfına Koy</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_EngineOn">
-            <English>Engine on</English>
-            <German>Motor an</German>
-            <Spanish>Encender motor</Spanish>
-            <Polish>Włącz silnik</Polish>
-            <French>Démarrer le moteur</French>
-            <Hungarian>Motor indítása</Hungarian>
-            <Czech>Zapnout motor</Czech>
-            <Portuguese>Ligar Motor</Portuguese>
-            <Italian>Motore acceso</Italian>
-            <Russian>Включить двигатель</Russian>
-            <Japanese>エンジン始動</Japanese>
-            <Korean>엔진 켜기</Korean>
-            <Chinesesimp>引擎发动</Chinesesimp>
-            <Chinese>引擎發動</Chinese>
-            <Turkish>Motor Açık</Turkish>
+        <Key ID="STR_ACE_WeaponSelect_CollisionLights">
+            <English>Toggle Collision Lights</English>
+            <Chinese>切換碰撞燈</Chinese>
+            <Chinesesimp>切换碰撞灯</Chinesesimp>
+            <Czech>Přepnout kolizní světla</Czech>
+            <French>Allumer les feux anti-collision</French>
+            <German>Kollisionslichter an/ausschalten</German>
+            <Italian>Attiva Luci di Collisione</Italian>
+            <Japanese>衝突防止灯を切り替え</Japanese>
+            <Korean>충돌 표시등 토글</Korean>
+            <Polish>Przełącz światła kolizyjne</Polish>
+            <Portuguese>Alternar Luzes de Colisão</Portuguese>
+            <Russian>Переключить бортовые огни</Russian>
+            <Spanish>Alternar luces de colisión</Spanish>
+            <Turkish>Çarpışma Işıklarını Aç/Kapat</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_EngineOff">
             <English>Engine off</English>
-            <German>Motor aus</German>
-            <Spanish>Apagar motor</Spanish>
-            <Polish>Wyłącz silnik</Polish>
-            <French>Couper le moteur</French>
-            <Hungarian>Motor leállítása</Hungarian>
+            <Chinese>引擎熄火</Chinese>
+            <Chinesesimp>引擎熄火</Chinesesimp>
             <Czech>Vypnout motor</Czech>
-            <Portuguese>Desligar Motor</Portuguese>
+            <French>Couper le moteur</French>
+            <German>Motor aus</German>
+            <Hungarian>Motor leállítása</Hungarian>
             <Italian>Motore spento</Italian>
-            <Russian>Выключить двигатель</Russian>
             <Japanese>エンジン停止</Japanese>
             <Korean>엔진 끄기</Korean>
-            <Chinesesimp>引擎熄火</Chinesesimp>
-            <Chinese>引擎熄火</Chinese>
+            <Polish>Wyłącz silnik</Polish>
+            <Portuguese>Desligar Motor</Portuguese>
+            <Russian>Выключить двигатель</Russian>
+            <Spanish>Apagar motor</Spanish>
             <Turkish>Motor Kapalı</Turkish>
         </Key>
-        <Key ID="STR_ACE_WeaponSelect_SelectMainGun">
-            <English>Select Main Gun</English>
-            <German>Hauptgeschütz auswählen</German>
-            <Spanish>Seleccionar arma principal</Spanish>
-            <Polish>Wybierz główną broń</Polish>
-            <French>Sélectionner l'arme principale</French>
-            <Hungarian>Elsődleges Fegyver Kiválasztása</Hungarian>
-            <Czech>Zvolit Hlavní Zbraň</Czech>
-            <Portuguese>Selecionar Arma Principal</Portuguese>
-            <Italian>Seleziona Cannone Primario</Italian>
-            <Russian>Выбрать основное оружие</Russian>
-            <Japanese>主砲を選択</Japanese>
-            <Korean>주포 선택</Korean>
-            <Chinesesimp>选择主武器</Chinesesimp>
-            <Chinese>選擇主武器</Chinese>
-            <Turkish>Ana Silahı Seç</Turkish>
+        <Key ID="STR_ACE_WeaponSelect_EngineOn">
+            <English>Engine on</English>
+            <Chinese>引擎發動</Chinese>
+            <Chinesesimp>引擎发动</Chinesesimp>
+            <Czech>Zapnout motor</Czech>
+            <French>Démarrer le moteur</French>
+            <German>Motor an</German>
+            <Hungarian>Motor indítása</Hungarian>
+            <Italian>Motore acceso</Italian>
+            <Japanese>エンジン始動</Japanese>
+            <Korean>엔진 켜기</Korean>
+            <Polish>Włącz silnik</Polish>
+            <Portuguese>Ligar Motor</Portuguese>
+            <Russian>Включить двигатель</Russian>
+            <Spanish>Encender motor</Spanish>
+            <Turkish>Motor Açık</Turkish>
         </Key>
-        <Key ID="STR_ACE_WeaponSelect_SelectMachineGun">
-            <English>Select Machine Gun</English>
-            <German>Maschinengewehr auswählen</German>
-            <Spanish>Seleccionar ametralladora</Spanish>
-            <Polish>Wybierz karabin maszynowy</Polish>
-            <French>Sélectionner la mitrailleuse</French>
-            <Hungarian>Géppuska Kiválasztása</Hungarian>
-            <Czech>Zvolit Kulomet</Czech>
-            <Portuguese>Selecionar Metralhadora</Portuguese>
-            <Italian>Seleziona Mitragliatrice</Italian>
-            <Russian>Выбрать пулемёт</Russian>
-            <Japanese>機銃を選択</Japanese>
-            <Korean>기관총 선택</Korean>
-            <Chinesesimp>选择机枪</Chinesesimp>
-            <Chinese>選擇機槍</Chinese>
-            <Turkish>Makineli Silahı Seç</Turkish>
+        <Key ID="STR_ACE_WeaponSelect_FireSmokeLauncher">
+            <English>Fire Smoke Launcher</English>
+            <Chinese>發射煙霧發射器</Chinese>
+            <Chinesesimp>发射烟雾发射器</Chinesesimp>
+            <Czech>Kouřový odpalovač</Czech>
+            <French>Lancer les pots fumigènes</French>
+            <German>Rauchwand abfeuern</German>
+            <Hungarian>Füstvető eltüzelése</Hungarian>
+            <Italian>Lancia Cortina Fumogena</Italian>
+            <Japanese>発煙弾を発射</Japanese>
+            <Korean>연막발사기 박사</Korean>
+            <Polish>Wystrzel granat dymny</Polish>
+            <Portuguese>Lançador de fumaça</Portuguese>
+            <Russian>Пустить дымовую завесу</Russian>
+            <Spanish>Disparar lanzador de humo</Spanish>
+            <Turkish>Ateşli Sis Fırlatıcısı</Turkish>
         </Key>
-        <Key ID="STR_ACE_WeaponSelect_SelectMissiles">
-            <English>Select Missiles</English>
-            <German>Raketen auswählen</German>
-            <Spanish>Seleccionar misiles</Spanish>
-            <Polish>Wybierz rakiety</Polish>
-            <French>Sélectionner les missiles</French>
-            <Hungarian>Rakéták Kiválasztása</Hungarian>
-            <Czech>Zvolit Rakety</Czech>
-            <Portuguese>Selecionar Mísseis</Portuguese>
-            <Italian>Seleziona Missili</Italian>
-            <Russian>Выбрать ракеты</Russian>
-            <Japanese>ミサイルを選択</Japanese>
-            <Korean>미사일 선택</Korean>
-            <Chinesesimp>选择导弹</Chinesesimp>
-            <Chinese>選擇導彈</Chinese>
-            <Turkish>Füzeleri Seç</Turkish>
+        <Key ID="STR_ACE_WeaponSelect_HolsterWeapon">
+            <English>Holster Weapon</English>
+            <Chinese>武器套</Chinese>
+            <Chinesesimp>武器套</Chinesesimp>
+            <Czech>Schovat zbraň</Czech>
+            <French>Arme à la bretelle</French>
+            <German>Waffe holstern</German>
+            <Hungarian>Fegyvert tokba</Hungarian>
+            <Italian>Nascondi l'arma</Italian>
+            <Japanese>武器をしまう</Japanese>
+            <Korean>무기 집어넣기</Korean>
+            <Polish>Schowaj broń</Polish>
+            <Portuguese>Guardar Arma</Portuguese>
+            <Russian>Убрать оружие</Russian>
+            <Spanish>Enfundar el arma</Spanish>
+            <Turkish>Silahını Kılıfına Koy</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_LoadGrenade">
             <English>Grenade %1</English>
-            <German>Granate %1</German>
-            <Spanish>Granada %1</Spanish>
-            <Polish>Granat %1</Polish>
+            <Chinese>手榴彈 %1</Chinese>
+            <Chinesesimp>手榴弹 %1</Chinesesimp>
             <Czech>Granát %1</Czech>
-            <Hungarian>Gránát: %1</Hungarian>
-            <Russian>Граната %1</Russian>
             <French>Grenade %1</French>
+            <German>Granate %1</German>
+            <Hungarian>Gránát: %1</Hungarian>
             <Italian>Granata %1</Italian>
-            <Portuguese>Granada %1</Portuguese>
             <Japanese>%1 手榴弾</Japanese>
             <Korean>%1 수류탄</Korean>
-            <Chinesesimp>手榴弹 %1</Chinesesimp>
-            <Chinese>手榴彈 %1</Chinese>
+            <Polish>Granat %1</Polish>
+            <Portuguese>Granada %1</Portuguese>
+            <Russian>Граната %1</Russian>
+            <Spanish>Granada %1</Spanish>
             <Turkish>El Bombası %1</Turkish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_NoFragsLeft">
+            <English>No frags left</English>
+            <Chinese>已無破片手榴彈</Chinese>
+            <Chinesesimp>已无破片手榴弹</Chinesesimp>
+            <Czech>Žádné výbušné granáty</Czech>
+            <French>Il n'y a plus de grenades à fragmentation.</French>
+            <German>Keine explosiven Granaten übrig</German>
+            <Hungarian>Nincs több repeszgránát</Hungarian>
+            <Italian>Nessuna granata a frammentazione rimanente</Italian>
+            <Japanese>破片手榴弾は残っていない</Japanese>
+            <Korean>세열 수류탄 없음</Korean>
+            <Polish>Brak granatów odłamkowych</Polish>
+            <Portuguese>Não há granadas de fragmentação restantes</Portuguese>
+            <Russian>Осколочных гранат нет</Russian>
+            <Spanish>No quedan granadas de fragmentación</Spanish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_NoGrenadeSelected">
+            <English>No grenade selected</English>
+            <Chinese>未選擇手榴彈</Chinese>
+            <Chinesesimp>未选择手榴弹</Chinesesimp>
+            <Czech>Není zvolen žádný granát</Czech>
+            <French>Aucune grenade sélectionnée.</French>
+            <German>Keine Granate ausgewählt</German>
+            <Hungarian>Nincs semmilyen gránát kiválasztva</Hungarian>
+            <Italian>Nessuna granata selezionata</Italian>
+            <Japanese>手榴弾は未選択</Japanese>
+            <Korean>선택된 수류탄 없음</Korean>
+            <Polish>Nie wybrano żadnego granatu</Polish>
+            <Portuguese>Nenhuma granada selecionada</Portuguese>
+            <Russian>Нет выбранной гранаты</Russian>
+            <Spanish>Granada no seleccionada</Spanish>
+            <Turkish>Bomba Seçilmedi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_NoGrenadesLeft">
+            <English>No grenades left</English>
+            <Chinese>已無手榴彈</Chinese>
+            <Chinesesimp>已无手榴弹</Chinesesimp>
+            <Czech>Žádné granáty</Czech>
+            <French>Il n'y a plus de grenades.</French>
+            <German>Keine Granaten übrig</German>
+            <Hungarian>Nincs több gránát</Hungarian>
+            <Italian>Granate esaurite</Italian>
+            <Japanese>手榴弾は残っていない</Japanese>
+            <Korean>투척물 없음</Korean>
+            <Polish>Brak granatów</Polish>
+            <Portuguese>Sem mais granadas</Portuguese>
+            <Russian>Гранат не осталось</Russian>
+            <Spanish>No quedan granadas</Spanish>
+            <Turkish>El Bombası Kalmadı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_NoMiscGrenadeLeft">
+            <English>No misc. grenades left</English>
+            <Chinese>已無其他手榴彈</Chinese>
+            <Chinesesimp>已无其他手榴弹</Chinesesimp>
+            <Czech>Už nejsou žádné ostatní granáty</Czech>
+            <French>Il n'y a plus de grenades non létales.</French>
+            <German>Keine nichtexplosiven Granaten übrig</German>
+            <Hungarian>Nincs több egyéb gránát</Hungarian>
+            <Italian>Nessun'altra granata rimanente.</Italian>
+            <Japanese>その他の手榴弾は残っていない</Japanese>
+            <Korean>기타 투척물 없음</Korean>
+            <Polish>Brak granatów nieodłamkowych</Polish>
+            <Portuguese>Não há outras granadas restantes</Portuguese>
+            <Russian>Нелетальные гранаты закончились</Russian>
+            <Spanish>Sin granadas misc.</Spanish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_ReadyGrenade">
             <English>Ready Grenade</English>
-            <German>Granate nehmen</German>
-            <Spanish>Granada lista</Spanish>
-            <Polish>Przygotuj granat</Polish>
+            <Chinese>準備手榴彈</Chinese>
+            <Chinesesimp>准备手榴弹</Chinesesimp>
             <Czech>Odjistit granát</Czech>
-            <Hungarian>Gránát előkészítése</Hungarian>
-            <Russian>Подготовить гранату</Russian>
             <French>Grenade prête</French>
+            <German>Granate nehmen</German>
+            <Hungarian>Gránát előkészítése</Hungarian>
             <Italian>Prepara Granata</Italian>
-            <Portuguese>Granada pronta</Portuguese>
             <Japanese>手榴弾を準備</Japanese>
             <Korean>투척물 준비</Korean>
-            <Chinesesimp>准备手榴弹</Chinesesimp>
-            <Chinese>準備手榴彈</Chinese>
+            <Polish>Przygotuj granat</Polish>
+            <Portuguese>Granada pronta</Portuguese>
+            <Russian>Подготовить гранату</Russian>
+            <Spanish>Granada lista</Spanish>
             <Turkish>El Bombası Hazır</Turkish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectBinocular">
+            <English>Select Binoculars</English>
+            <Chinese>選擇望遠鏡</Chinese>
+            <Chinesesimp>选择望远镜</Chinesesimp>
+            <Czech>Zvolit Dalekohled</Czech>
+            <French>Sélectionner les jumelles</French>
+            <German>Fernglas auswählen</German>
+            <Hungarian>Távcső Kiválasztása</Hungarian>
+            <Italian>Seleziona il Binocolo</Italian>
+            <Japanese>双眼鏡を選択</Japanese>
+            <Korean>망원경 선택</Korean>
+            <Polish>Wybierz lornetkę</Polish>
+            <Portuguese>Selecionar Binóculos</Portuguese>
+            <Russian>Выбрать бинокль</Russian>
+            <Spanish>Seleccionar prismáticos</Spanish>
+            <Turkish>Dürbünü Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectGrenadeFrag">
             <English>Select Frag Grenade</English>
-            <German>Explosive Granate auswählen</German>
-            <Spanish>Seleccionar granada de fragmenación</Spanish>
-            <Polish>Wybierz granat odłamkowy</Polish>
-            <French>Sélectionner les grenades à fragmentation</French>
-            <Hungarian>Repeszgránát Kiválasztása</Hungarian>
+            <Chinese>選擇破片手榴彈</Chinese>
+            <Chinesesimp>选择破片手榴弹</Chinesesimp>
             <Czech>Zvolit výbušný granát</Czech>
-            <Portuguese>Selecionar Granada de Fragmentação</Portuguese>
+            <French>Sélectionner les grenades à fragmentation</French>
+            <German>Explosive Granate auswählen</German>
+            <Hungarian>Repeszgránát Kiválasztása</Hungarian>
             <Italian>Seleziona Granata a Frammentazione</Italian>
-            <Russian>Выбрать осколочную гранату</Russian>
             <Japanese>破片手榴弾を選択</Japanese>
             <Korean>살상 투척물 선택</Korean>
-            <Chinesesimp>选择破片手榴弹</Chinesesimp>
-            <Chinese>選擇破片手榴彈</Chinese>
+            <Polish>Wybierz granat odłamkowy</Polish>
+            <Portuguese>Selecionar Granada de Fragmentação</Portuguese>
+            <Russian>Выбрать осколочную гранату</Russian>
+            <Spanish>Seleccionar granada de fragmenación</Spanish>
             <Turkish>El Bombasını Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_SelectGrenadeOther">
             <English>Select Non-Frag Grenade</English>
-            <German>Nichtexplosive Granate auswählen</German>
-            <Spanish>Seleccionar granada de no fragmentación</Spanish>
-            <Polish>Wybierz granat nieodłamkowy</Polish>
-            <French>Sélectionner les grenades non létales</French>
-            <Hungarian>Nem-robbanó Gránát Kiválasztása</Hungarian>
+            <Chinese>選擇非破片手榴彈</Chinese>
+            <Chinesesimp>选择非破片手榴弹</Chinesesimp>
             <Czech>Zvolit ne-výbušný granát</Czech>
-            <Portuguese>Selecionar Granada</Portuguese>
+            <French>Sélectionner les grenades non létales</French>
+            <German>Nichtexplosive Granate auswählen</German>
+            <Hungarian>Nem-robbanó Gránát Kiválasztása</Hungarian>
             <Italian>Seleziona granate non a frammentazione</Italian>
-            <Russian>Выбрать гранату</Russian>
             <Japanese>その他の手榴弾を選択</Japanese>
             <Korean>비살상 투척물 선택</Korean>
-            <Chinesesimp>选择非破片手榴弹</Chinesesimp>
-            <Chinese>選擇非破片手榴彈</Chinese>
+            <Polish>Wybierz granat nieodłamkowy</Polish>
+            <Portuguese>Selecionar Granada</Portuguese>
+            <Russian>Выбрать гранату</Russian>
+            <Spanish>Seleccionar granada de no fragmentación</Spanish>
             <Turkish>El Bombası Dışındakileri Seç</Turkish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectLauncher">
+            <English>Select Launcher</English>
+            <Chinese>選擇發射器</Chinese>
+            <Chinesesimp>选择发射器</Chinesesimp>
+            <Czech>Zvolit Raketomet</Czech>
+            <French>Sélectionner le lanceur</French>
+            <German>Raketenwerfer auswählen</German>
+            <Hungarian>Rakétavető Kiválasztása</Hungarian>
+            <Italian>Seleziona il lanciamissili</Italian>
+            <Japanese>ランチャーを選択</Japanese>
+            <Korean>발사기 선택</Korean>
+            <Polish>Wybierz wyrzutnię</Polish>
+            <Portuguese>Selecionar Lançador</Portuguese>
+            <Russian>Выбрать гранатомёт</Russian>
+            <Spanish>Seleccionar lanzador</Spanish>
+            <Turkish>Fırlatılabiliri Seç</Turkish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectMachineGun">
+            <English>Select Machine Gun</English>
+            <Chinese>選擇機槍</Chinese>
+            <Chinesesimp>选择机枪</Chinesesimp>
+            <Czech>Zvolit Kulomet</Czech>
+            <French>Sélectionner la mitrailleuse</French>
+            <German>Maschinengewehr auswählen</German>
+            <Hungarian>Géppuska Kiválasztása</Hungarian>
+            <Italian>Seleziona Mitragliatrice</Italian>
+            <Japanese>機銃を選択</Japanese>
+            <Korean>기관총 선택</Korean>
+            <Polish>Wybierz karabin maszynowy</Polish>
+            <Portuguese>Selecionar Metralhadora</Portuguese>
+            <Russian>Выбрать пулемёт</Russian>
+            <Spanish>Seleccionar ametralladora</Spanish>
+            <Turkish>Makineli Silahı Seç</Turkish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectMainGun">
+            <English>Select Main Gun</English>
+            <Chinese>選擇主武器</Chinese>
+            <Chinesesimp>选择主武器</Chinesesimp>
+            <Czech>Zvolit Hlavní Zbraň</Czech>
+            <French>Sélectionner l'arme principale</French>
+            <German>Hauptgeschütz auswählen</German>
+            <Hungarian>Elsődleges Fegyver Kiválasztása</Hungarian>
+            <Italian>Seleziona Cannone Primario</Italian>
+            <Japanese>主砲を選択</Japanese>
+            <Korean>주포 선택</Korean>
+            <Polish>Wybierz główną broń</Polish>
+            <Portuguese>Selecionar Arma Principal</Portuguese>
+            <Russian>Выбрать основное оружие</Russian>
+            <Spanish>Seleccionar arma principal</Spanish>
+            <Turkish>Ana Silahı Seç</Turkish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectMissiles">
+            <English>Select Missiles</English>
+            <Chinese>選擇導彈</Chinese>
+            <Chinesesimp>选择导弹</Chinesesimp>
+            <Czech>Zvolit Rakety</Czech>
+            <French>Sélectionner les missiles</French>
+            <German>Raketen auswählen</German>
+            <Hungarian>Rakéták Kiválasztása</Hungarian>
+            <Italian>Seleziona Missili</Italian>
+            <Japanese>ミサイルを選択</Japanese>
+            <Korean>미사일 선택</Korean>
+            <Polish>Wybierz rakiety</Polish>
+            <Portuguese>Selecionar Mísseis</Portuguese>
+            <Russian>Выбрать ракеты</Russian>
+            <Spanish>Seleccionar misiles</Spanish>
+            <Turkish>Füzeleri Seç</Turkish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectPistol">
+            <English>Select Pistol</English>
+            <Chinese>選擇手槍</Chinese>
+            <Chinesesimp>选择手枪</Chinesesimp>
+            <Czech>Zvolit Pistoly</Czech>
+            <French>Sélectionner le pistolet</French>
+            <German>Pistole auswählen</German>
+            <Hungarian>Pisztoly Kiválasztása</Hungarian>
+            <Italian>Seleziona la Pistola</Italian>
+            <Japanese>拳銃を選択</Japanese>
+            <Korean>권총 선택</Korean>
+            <Polish>Wybierz pistolet</Polish>
+            <Portuguese>Selecionar Pistola</Portuguese>
+            <Russian>Выбрать пистолет</Russian>
+            <Spanish>Seleccionar pistola</Spanish>
+            <Turkish>Tabancayı Seç</Turkish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectRifle">
+            <English>Select Rifle</English>
+            <Chinese>選擇步槍</Chinese>
+            <Chinesesimp>选择步枪</Chinesesimp>
+            <Czech>Zvolit Pušku</Czech>
+            <French>Sélectionner le fusil</French>
+            <German>Gewehr auswählen</German>
+            <Hungarian>Puska Kiválasztása</Hungarian>
+            <Italian>Seleziona il fucile</Italian>
+            <Japanese>小銃を選択</Japanese>
+            <Korean>소총 선택</Korean>
+            <Polish>Wybierz karabin</Polish>
+            <Portuguese>Selecionar Rifle</Portuguese>
+            <Russian>Выбрать винтовку</Russian>
+            <Spanish>Seleccionar fusil</Spanish>
+            <Turkish>Tüfeği Seç</Turkish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SelectRifleMuzzle">
+            <English>Select Grenade Launcher</English>
+            <Chinese>選擇榴彈發射器</Chinese>
+            <Chinesesimp>选择榴弹发射器</Chinesesimp>
+            <Czech>Zvolit Granátomet</Czech>
+            <French>Sélectionner le lance-grenades</French>
+            <German>Granatwerfer auswählen</German>
+            <Hungarian>Gránátvető Kiválasztása</Hungarian>
+            <Italian>Seleziona il lanciagranate</Italian>
+            <Japanese>グレネード ランチャーを選択</Japanese>
+            <Korean>유탄발사기 선택</Korean>
+            <Polish>Wybierz granatnik</Polish>
+            <Portuguese>Selecionar Lança-Granadas</Portuguese>
+            <Russian>Выбрать подствольный гранатомёт</Russian>
+            <Spanish>Seleccionar lanzagranadas</Spanish>
+            <Turkish>Bombaatarı Seç</Turkish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextDesc">
+            <English>Display a hint or text on grenade throw.</English>
+            <Chinese>投擲手榴彈時顯示提示訊息</Chinese>
+            <Chinesesimp>投掷手榴弹时显示提示信息。</Chinesesimp>
+            <Czech>Zobrazí upozornění nebo text při hodu granátem.</Czech>
+            <French>Affiche un texte ou une notification lors d'un lancé de grenade.</French>
+            <German>Zeige Hinweis oder Text beim Granatwurf</German>
+            <Hungarian>Jelez egy súgót vagy szöveget a gránát eldobásakor.</Hungarian>
+            <Italian>Mostra una notifica quando si lanciano granate</Italian>
+            <Japanese>手榴弾を投げるときに、ヒントか文で通知します。</Japanese>
+            <Korean>수류탄 투척 시 화면에 문자나 힌트를 표시합니다.</Korean>
+            <Polish>Wyświetla powiadomienie lub tekst przy rzucie granatem.</Polish>
+            <Portuguese>Mostra uma notificação ou texto ao lançar uma granada</Portuguese>
+            <Russian>Показывать текст или подсказку при броске гранаты.</Russian>
+            <Spanish>Muestra una notificación o texto al lanzar una granada</Spanish>
+        </Key>
+        <Key ID="STR_ACE_WeaponSelect_SettingDisplayTextName">
+            <English>Display text on grenade throw</English>
+            <Chinese>投擲手榴彈時顯示提示訊息</Chinese>
+            <Chinesesimp>投掷手榴弹时显示提示信息</Chinesesimp>
+            <Czech>Zobrazí text při hodu granátem</Czech>
+            <French>Afficher du texte lors d'un lancé de grenade</French>
+            <German>Zeige Text beim Granatwurf</German>
+            <Hungarian>Szöveg mutatása gránát eldobásakor</Hungarian>
+            <Italian>Mostra indicazioni nel lancio granate</Italian>
+            <Japanese>手榴弾投擲時に通知</Japanese>
+            <Korean>수류탄 투척 시 화면에 문자 표시</Korean>
+            <Polish>Wyświetl tekst przy rzucie granatem</Polish>
+            <Portuguese>Mostrar texto ao lançar granada</Portuguese>
+            <Russian>Показывать текст при броске</Russian>
+            <Spanish>Mostrar texto al lanzar una granada</Spanish>
         </Key>
         <Key ID="STR_ACE_WeaponSelect_ThrowGrenade">
             <English>Throw Selected Grenade</English>
-            <German>Gewählte Granate werfen</German>
-            <Spanish>Lanzar granada seleccionada</Spanish>
-            <Polish>Rzuć wybrany granat</Polish>
-            <French>Lancer la grenade sélectionnée</French>
-            <Hungarian>Kiválasztott Gránát Eldobása</Hungarian>
+            <Chinese>投擲選擇的手榴彈</Chinese>
+            <Chinesesimp>投掷选择的手榴弹</Chinesesimp>
             <Czech>Hodit zvolený granát</Czech>
-            <Portuguese>Lançar Granada Selecionada</Portuguese>
+            <French>Lancer la grenade sélectionnée</French>
+            <German>Gewählte Granate werfen</German>
+            <Hungarian>Kiválasztott Gránát Eldobása</Hungarian>
             <Italian>Lancia la Granata Selezionata</Italian>
-            <Russian>Бросить выбранную гранату</Russian>
             <Japanese>選択された手榴弾を投擲</Japanese>
             <Korean>선택된 투척물 투척</Korean>
-            <Chinesesimp>投掷选择的手榴弹</Chinesesimp>
-            <Chinese>投擲選擇的手榴彈</Chinese>
+            <Polish>Rzuć wybrany granat</Polish>
+            <Portuguese>Lançar Granada Selecionada</Portuguese>
+            <Russian>Бросить выбранную гранату</Russian>
+            <Spanish>Lanzar granada seleccionada</Spanish>
             <Turkish>Seçilen Bombayı Fırlat</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_NoGrenadesLeft">
-            <English>No grenades left</English>
-            <German>Keine Granaten übrig</German>
-            <Spanish>No quedan granadas</Spanish>
-            <French>Il n'y a plus de grenades.</French>
-            <Polish>Brak granatów</Polish>
-            <Czech>Žádné granáty</Czech>
-            <Hungarian>Nincs több gránát</Hungarian>
-            <Russian>Гранат не осталось</Russian>
-            <Italian>Granate esaurite</Italian>
-            <Portuguese>Sem mais granadas</Portuguese>
-            <Japanese>手榴弾は残っていない</Japanese>
-            <Korean>투척물 없음</Korean>
-            <Chinesesimp>已无手榴弹</Chinesesimp>
-            <Chinese>已無手榴彈</Chinese>
-            <Turkish>El Bombası Kalmadı</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_NoFragsLeft">
-            <English>No frags left</English>
-            <German>Keine explosiven Granaten übrig</German>
-            <Spanish>No quedan granadas de fragmentación</Spanish>
-            <Polish>Brak granatów odłamkowych</Polish>
-            <French>Il n'y a plus de grenades à fragmentation.</French>
-            <Hungarian>Nincs több repeszgránát</Hungarian>
-            <Czech>Žádné výbušné granáty</Czech>
-            <Portuguese>Não há granadas de fragmentação restantes</Portuguese>
-            <Italian>Nessuna granata a frammentazione rimanente</Italian>
-            <Russian>Осколочных гранат нет</Russian>
-            <Japanese>破片手榴弾は残っていない</Japanese>
-            <Korean>세열 수류탄 없음</Korean>
-            <Chinesesimp>已无破片手榴弹</Chinesesimp>
-            <Chinese>已無破片手榴彈</Chinese>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_NoMiscGrenadeLeft">
-            <English>No misc. grenades left</English>
-            <German>Keine nichtexplosiven Granaten übrig</German>
-            <Spanish>Sin granadas misc.</Spanish>
-            <Polish>Brak granatów nieodłamkowych</Polish>
-            <French>Il n'y a plus de grenades non létales.</French>
-            <Hungarian>Nincs több egyéb gránát</Hungarian>
-            <Czech>Už nejsou žádné ostatní granáty</Czech>
-            <Portuguese>Não há outras granadas restantes</Portuguese>
-            <Italian>Nessun'altra granata rimanente.</Italian>
-            <Russian>Нелетальные гранаты закончились</Russian>
-            <Japanese>その他の手榴弾は残っていない</Japanese>
-            <Korean>기타 투척물 없음</Korean>
-            <Chinesesimp>已无其他手榴弹</Chinesesimp>
-            <Chinese>已無其他手榴彈</Chinese>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_NoGrenadeSelected">
-            <English>No grenade selected</English>
-            <German>Keine Granate ausgewählt</German>
-            <Spanish>Granada no seleccionada</Spanish>
-            <Polish>Nie wybrano żadnego granatu</Polish>
-            <French>Aucune grenade sélectionnée.</French>
-            <Hungarian>Nincs semmilyen gránát kiválasztva</Hungarian>
-            <Czech>Není zvolen žádný granát</Czech>
-            <Portuguese>Nenhuma granada selecionada</Portuguese>
-            <Italian>Nessuna granata selezionata</Italian>
-            <Russian>Нет выбранной гранаты</Russian>
-            <Japanese>手榴弾は未選択</Japanese>
-            <Korean>선택된 수류탄 없음</Korean>
-            <Chinesesimp>未选择手榴弹</Chinesesimp>
-            <Chinese>未選擇手榴彈</Chinese>
-            <Turkish>Bomba Seçilmedi</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_FireSmokeLauncher">
-            <English>Fire Smoke Launcher</English>
-            <German>Rauchwand abfeuern</German>
-            <Spanish>Disparar lanzador de humo</Spanish>
-            <Czech>Kouřový odpalovač</Czech>
-            <French>Lancer les pots fumigènes</French>
-            <Polish>Wystrzel granat dymny</Polish>
-            <Hungarian>Füstvető eltüzelése</Hungarian>
-            <Russian>Пустить дымовую завесу</Russian>
-            <Italian>Lancia Cortina Fumogena</Italian>
-            <Portuguese>Lançador de fumaça</Portuguese>
-            <Japanese>発煙弾を発射</Japanese>
-            <Korean>연막발사기 박사</Korean>
-            <Chinesesimp>发射烟雾发射器</Chinesesimp>
-            <Chinese>發射煙霧發射器</Chinese>
-            <Turkish>Ateşli Sis Fırlatıcısı</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WeaponSelect_CollisionLights">
-            <English>Toggle Collision Lights</English>
-            <German>Kollisionslichter an/ausschalten</German>
-            <Italian>Attiva Luci di Collisione</Italian>
-            <Korean>충돌 표시등 토글</Korean>
-            <Chinese>切換碰撞燈</Chinese>
-            <Chinesesimp>切换碰撞灯</Chinesesimp>
-            <Japanese>衝突防止灯を切り替え</Japanese>
-            <Polish>Przełącz światła kolizyjne</Polish>
-            <Russian>Переключить бортовые огни</Russian>
-            <Portuguese>Alternar Luzes de Colisão</Portuguese>
-            <Spanish>Alternar luces de colisión</Spanish>
-            <Czech>Přepnout kolizní světla</Czech>
-            <French>Allumer les feux anti-collision</French>
-            <Turkish>Çarpışma Işıklarını Aç/Kapat</Turkish>
         </Key>
     </Package>
 </Project>

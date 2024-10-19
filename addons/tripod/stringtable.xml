@@ -1,106 +1,106 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Project name="ACE">
     <Package name="Tripod">
-        <Key ID="STR_ACE_Tripod_DisplayName">
-            <English>SSWT Kit</English>
-            <German>Scharfschützendreibein</German>
-            <Russian>Снайперский штатив</Russian>
-            <Polish>Trójnóg snajperski</Polish>
-            <Spanish>Equipo SSWT</Spanish>
-            <French>Kit SSWT</French>
-            <Czech>SSWT souprava</Czech>
-            <Italian>Kit SSWT</Italian>
-            <Hungarian>SSWT Készlet</Hungarian>
-            <Portuguese>Kit SSWT</Portuguese>
-            <Japanese>SSWT キット</Japanese>
-            <Korean>SSWT 키트</Korean>
-            <Chinesesimp>狙击手专用三脚架</Chinesesimp>
-            <Chinese>狙擊手專用三腳架</Chinese>
-            <Turkish>SSWT Kiti</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Tripod_PlaceDown">
-            <English>Place SSWT Kit</English>
-            <German>Scharfschützendreibein aufstellen</German>
-            <Russian>Установить снайперский штатив</Russian>
-            <Polish>Postaw trójnóg snajperski</Polish>
-            <Spanish>Colocar equipo SSWT</Spanish>
-            <French>Placer le kit SSWT</French>
-            <Czech>Rozlož souprava SSWT</Czech>
-            <Italian>Piazza Kit SSWT</Italian>
-            <Hungarian>SSWT készlet elhelyezése</Hungarian>
-            <Portuguese>Colocar kit SSWT</Portuguese>
-            <Japanese>SSWT キットを置く</Japanese>
-            <Korean>SSWT 키트 배치</Korean>
-            <Chinesesimp>放置狙击手专用三脚架</Chinesesimp>
-            <Chinese>放置狙擊手專用三腳架</Chinese>
-            <Turkish>Yerleştir SSWT Kit</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Tripod_PickUp">
-            <English>Pick up SSWT Kit</English>
-            <Polish>Podnieś trójnóg snajperski</Polish>
-            <Spanish>Coger equipo SSWT</Spanish>
-            <Czech>Zvednout SSWT soupravu</Czech>
-            <German>Scharfschützendreibein einpacken</German>
-            <Portuguese>Pegar kit SSWT</Portuguese>
-            <French>Prendre le kit SSWT</French>
-            <Hungarian>SSWT készlet felvétele</Hungarian>
-            <Russian>Подобрать снайперский штатив</Russian>
-            <Italian>Prendi Kit SSWT</Italian>
-            <Japanese>SSWT キットを拾う</Japanese>
-            <Korean>SSWT 키트 줍기</Korean>
-            <Chinesesimp>捡起狙击手专用三脚架</Chinesesimp>
-            <Chinese>撿起狙擊手專用三腳架</Chinese>
-            <Turkish>Al SSWT Kit</Turkish>
-        </Key>
         <Key ID="STR_ACE_Tripod_Adjust">
             <English>Adjust SSWT Kit</English>
-            <Polish>Reguluj trójnóg snajperski</Polish>
-            <Spanish>Ajustar equipo SSWT</Spanish>
+            <Chinese>調整狙擊手專用三腳架</Chinese>
+            <Chinesesimp>调整狙击手专用三脚架</Chinesesimp>
             <Czech>Regulovat SSWT soupravu</Czech>
-            <German>Scharfschützendreibein anpassen</German>
-            <Portuguese>Ajustar kit SSWT</Portuguese>
             <French>Régler le kit SSWT</French>
+            <German>Scharfschützendreibein anpassen</German>
             <Hungarian>SSWT készlet állítása</Hungarian>
-            <Russian>Выровнять снайперский штатив</Russian>
             <Italian>Regola Kit SSWT</Italian>
             <Japanese>SSWT キットを調節</Japanese>
             <Korean>SSWT 키트 조절</Korean>
-            <Chinesesimp>调整狙击手专用三脚架</Chinesesimp>
-            <Chinese>調整狙擊手專用三腳架</Chinese>
+            <Polish>Reguluj trójnóg snajperski</Polish>
+            <Portuguese>Ajustar kit SSWT</Portuguese>
+            <Russian>Выровнять снайперский штатив</Russian>
+            <Spanish>Ajustar equipo SSWT</Spanish>
             <Turkish>Ayarla SSWT Kit</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Tripod_DisplayName">
+            <English>SSWT Kit</English>
+            <Chinese>狙擊手專用三腳架</Chinese>
+            <Chinesesimp>狙击手专用三脚架</Chinesesimp>
+            <Czech>SSWT souprava</Czech>
+            <French>Kit SSWT</French>
+            <German>Scharfschützendreibein</German>
+            <Hungarian>SSWT Készlet</Hungarian>
+            <Italian>Kit SSWT</Italian>
+            <Japanese>SSWT キット</Japanese>
+            <Korean>SSWT 키트</Korean>
+            <Polish>Trójnóg snajperski</Polish>
+            <Portuguese>Kit SSWT</Portuguese>
+            <Russian>Снайперский штатив</Russian>
+            <Spanish>Equipo SSWT</Spanish>
+            <Turkish>SSWT Kiti</Turkish>
         </Key>
         <Key ID="STR_ACE_Tripod_Done">
             <English>Done</English>
-            <Polish>Gotowe</Polish>
-            <Spanish>Hecho</Spanish>
+            <Chinese>完成</Chinese>
+            <Chinesesimp>完成</Chinesesimp>
             <Czech>Hotovo</Czech>
-            <German>Fertig</German>
-            <Portuguese>Feito</Portuguese>
             <French>Terminé</French>
+            <German>Fertig</German>
             <Hungarian>Kész</Hungarian>
-            <Russian>Готово</Russian>
             <Italian>Fatto</Italian>
             <Japanese>完了</Japanese>
             <Korean>완료</Korean>
-            <Chinesesimp>完成</Chinesesimp>
-            <Chinese>完成</Chinese>
+            <Polish>Gotowe</Polish>
+            <Portuguese>Feito</Portuguese>
+            <Russian>Готово</Russian>
+            <Spanish>Hecho</Spanish>
             <Turkish>Bitti</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Tripod_PickUp">
+            <English>Pick up SSWT Kit</English>
+            <Chinese>撿起狙擊手專用三腳架</Chinese>
+            <Chinesesimp>捡起狙击手专用三脚架</Chinesesimp>
+            <Czech>Zvednout SSWT soupravu</Czech>
+            <French>Prendre le kit SSWT</French>
+            <German>Scharfschützendreibein einpacken</German>
+            <Hungarian>SSWT készlet felvétele</Hungarian>
+            <Italian>Prendi Kit SSWT</Italian>
+            <Japanese>SSWT キットを拾う</Japanese>
+            <Korean>SSWT 키트 줍기</Korean>
+            <Polish>Podnieś trójnóg snajperski</Polish>
+            <Portuguese>Pegar kit SSWT</Portuguese>
+            <Russian>Подобрать снайперский штатив</Russian>
+            <Spanish>Coger equipo SSWT</Spanish>
+            <Turkish>Al SSWT Kit</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Tripod_PlaceDown">
+            <English>Place SSWT Kit</English>
+            <Chinese>放置狙擊手專用三腳架</Chinese>
+            <Chinesesimp>放置狙击手专用三脚架</Chinesesimp>
+            <Czech>Rozlož souprava SSWT</Czech>
+            <French>Placer le kit SSWT</French>
+            <German>Scharfschützendreibein aufstellen</German>
+            <Hungarian>SSWT készlet elhelyezése</Hungarian>
+            <Italian>Piazza Kit SSWT</Italian>
+            <Japanese>SSWT キットを置く</Japanese>
+            <Korean>SSWT 키트 배치</Korean>
+            <Polish>Postaw trójnóg snajperski</Polish>
+            <Portuguese>Colocar kit SSWT</Portuguese>
+            <Russian>Установить снайперский штатив</Russian>
+            <Spanish>Colocar equipo SSWT</Spanish>
+            <Turkish>Yerleştir SSWT Kit</Turkish>
         </Key>
         <Key ID="STR_ACE_Tripod_ScrollAction">
             <English>adjust</English>
-            <Polish>regulacja</Polish>
-            <Spanish>Ajustar</Spanish>
+            <Chinese>調整</Chinese>
+            <Chinesesimp>调整</Chinesesimp>
             <Czech>regulace</Czech>
-            <German>anpassen</German>
-            <Portuguese>ajuste</Portuguese>
             <French>Régler</French>
+            <German>anpassen</German>
             <Hungarian>szabályzás</Hungarian>
-            <Russian>подстройка</Russian>
             <Italian>regola</Italian>
             <Japanese>調節</Japanese>
             <Korean>조절</Korean>
-            <Chinesesimp>调整</Chinesesimp>
-            <Chinese>調整</Chinese>
+            <Polish>regulacja</Polish>
+            <Portuguese>ajuste</Portuguese>
+            <Russian>подстройка</Russian>
+            <Spanish>Ajustar</Spanish>
             <Turkish>Ayarlamak</Turkish>
         </Key>
     </Package>

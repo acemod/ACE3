@@ -1,69 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Project name="ACE">
     <Package name="DAGR">
-        <Key ID="STR_ACE_DAGR_Name">
-            <English>DAGR</English>
-            <German>DAGR</German>
-            <Polish>DAGR</Polish>
-            <Spanish>DAGR</Spanish>
-            <Russian>DAGR</Russian>
-            <Portuguese>DAGR</Portuguese>
-            <Czech>DAGR</Czech>
-            <Italian>DAGR</Italian>
-            <French>DAGR</French>
-            <Japanese>DAGR</Japanese>
-            <Korean>DAGR</Korean>
-            <Chinese>軍用GPS接收器</Chinese>
-            <Chinesesimp>军用 GPS 接收器</Chinesesimp>
-            <Turkish>DAGR</Turkish>
-        </Key>
         <Key ID="STR_ACE_DAGR_ConfigureDAGR">
             <English>Configure DAGR</English>
-            <German>DAGR konfigurien</German>
-            <Polish>Konfiguruj DAGR</Polish>
-            <Spanish>Configurar DAGR</Spanish>
-            <Russian>Настроить DAGR</Russian>
-            <Portuguese>Configurar DAGR</Portuguese>
-            <Czech>Konfigurovat DAGR</Czech>
-            <Italian>Configura DAGR</Italian>
-            <French>Configurer le DAGR</French>
-            <Japanese>DAGR を設定</Japanese>
-            <Korean>DAGR 설정</Korean>
             <Chinese>設定軍用GPS接收器</Chinese>
             <Chinesesimp>设定军用 GPS 接收器</Chinesesimp>
+            <Czech>Konfigurovat DAGR</Czech>
+            <French>Configurer le DAGR</French>
+            <German>DAGR konfigurien</German>
+            <Italian>Configura DAGR</Italian>
+            <Japanese>DAGR を設定</Japanese>
+            <Korean>DAGR 설정</Korean>
+            <Polish>Konfiguruj DAGR</Polish>
+            <Portuguese>Configurar DAGR</Portuguese>
+            <Russian>Настроить DAGR</Russian>
+            <Spanish>Configurar DAGR</Spanish>
             <Turkish>DAGR'ı yapılandır</Turkish>
-        </Key>
-        <Key ID="STR_ACE_DAGR_ToggleDAGR">
-            <English>Toggle DAGR</English>
-            <German>DAGR umschalten</German>
-            <Polish>Przełącz DAGR</Polish>
-            <Spanish>Mostrar DAGR</Spanish>
-            <Russian>Переключить DAGR</Russian>
-            <Portuguese>Mostrar DAGR</Portuguese>
-            <Czech>Přepnout DAGR</Czech>
-            <Italian>Apri/Chiudi DAGR</Italian>
-            <French>Activer/Désactiver le DAGR</French>
-            <Japanese>DAGR 表示切替</Japanese>
-            <Korean>DAGR 토글</Korean>
-            <Chinese>切換軍用GPS接收器</Chinese>
-            <Chinesesimp>切换军用 GPS 接收器</Chinesesimp>
-            <Turkish>DAGR'yi aç / kapat</Turkish>
         </Key>
         <Key ID="STR_ACE_DAGR_Description">
             <English>Defense Advanced GPS Receiver</English>
-            <German>Defense Advanced GPS Receiver</German>
-            <Polish>Defense Advanced GPS Receiver</Polish>
-            <Spanish>Defense Advanced GPS Receiver</Spanish>
-            <Russian>Военный многофункциональный GPS-приёмник</Russian>
-            <Portuguese>Defense Advanced GPS Receiver</Portuguese>
-            <Czech>Defense Advanced GPS Receiver</Czech>
-            <Italian>Defense Advanced GPS Receiver</Italian>
-            <French>Defense Advanced GPS Receiver</French>
-            <Japanese>国防のための高機能なGPS受信機 (Defense Advanced GPS Receiver)</Japanese>
-            <Korean>국방 고급위성항법시스템 수신기</Korean>
             <Chinese>軍用高級防禦GPS接收器</Chinese>
             <Chinesesimp>军用高级防御 GPS 接收器</Chinesesimp>
+            <Czech>Defense Advanced GPS Receiver</Czech>
+            <French>Defense Advanced GPS Receiver</French>
+            <German>Defense Advanced GPS Receiver</German>
+            <Italian>Defense Advanced GPS Receiver</Italian>
+            <Japanese>国防のための高機能なGPS受信機 (Defense Advanced GPS Receiver)</Japanese>
+            <Korean>국방 고급위성항법시스템 수신기</Korean>
+            <Polish>Defense Advanced GPS Receiver</Polish>
+            <Portuguese>Defense Advanced GPS Receiver</Portuguese>
+            <Russian>Военный многофункциональный GPS-приёмник</Russian>
+            <Spanish>Defense Advanced GPS Receiver</Spanish>
             <Turkish>Gelişmiş Savunma GPS Alıcısı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_DAGR_Name">
+            <English>DAGR</English>
+            <Chinese>軍用GPS接收器</Chinese>
+            <Chinesesimp>军用 GPS 接收器</Chinesesimp>
+            <Czech>DAGR</Czech>
+            <French>DAGR</French>
+            <German>DAGR</German>
+            <Italian>DAGR</Italian>
+            <Japanese>DAGR</Japanese>
+            <Korean>DAGR</Korean>
+            <Polish>DAGR</Polish>
+            <Portuguese>DAGR</Portuguese>
+            <Russian>DAGR</Russian>
+            <Spanish>DAGR</Spanish>
+            <Turkish>DAGR</Turkish>
+        </Key>
+        <Key ID="STR_ACE_DAGR_ToggleDAGR">
+            <English>Toggle DAGR</English>
+            <Chinese>切換軍用GPS接收器</Chinese>
+            <Chinesesimp>切换军用 GPS 接收器</Chinesesimp>
+            <Czech>Přepnout DAGR</Czech>
+            <French>Activer/Désactiver le DAGR</French>
+            <German>DAGR umschalten</German>
+            <Italian>Apri/Chiudi DAGR</Italian>
+            <Japanese>DAGR 表示切替</Japanese>
+            <Korean>DAGR 토글</Korean>
+            <Polish>Przełącz DAGR</Polish>
+            <Portuguese>Mostrar DAGR</Portuguese>
+            <Russian>Переключить DAGR</Russian>
+            <Spanish>Mostrar DAGR</Spanish>
+            <Turkish>DAGR'yi aç / kapat</Turkish>
         </Key>
     </Package>
 </Project>

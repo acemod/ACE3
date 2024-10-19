@@ -1,55 +1,55 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Project name="ACE">
     <Package name="Yardage450">
-        <Key ID="STR_ACE_Yardage450_DisplayName">
-            <English>Yardage 450</English>
-            <Polish>Yardage 450</Polish>
-            <Spanish>Yardage 450</Spanish>
-            <Czech>Yardage 450</Czech>
-            <German>Yardage 450</German>
-            <Portuguese>Yardage 450</Portuguese>
-            <Hungarian>Yardage 450</Hungarian>
-            <Russian>Yardage 450</Russian>
-            <Italian>Yardage 450</Italian>
-            <French>Yardage 450</French>
-            <Japanese>ヤードエイジ 450</Japanese>
-            <Korean>야드에이지 450</Korean>
-            <Chinesesimp>Yardage 450</Chinesesimp>
-            <Chinese>Yardage 450</Chinese>
-            <Turkish>Yardage 450</Turkish>
-        </Key>
         <Key ID="STR_ACE_Yardage450_Description">
             <English>Laser Rangefinder</English>
-            <German>Laserentfernungsmesser</German>
-            <Polish>Dalmierz laserowy</Polish>
-            <Spanish>Telémetro láser</Spanish>
+            <Chinese>雷射測距儀</Chinese>
+            <Chinesesimp>激光测距仪</Chinesesimp>
             <Czech>Laserový dálkoměr</Czech>
-            <Portuguese>Medidor de Distância a laser</Portuguese>
-            <Hungarian>Lézeres távolságmérő</Hungarian>
-            <Russian>Лазерный дальномер</Russian>
-            <Italian>Telemetro Laser</Italian>
             <French>Télémètre laser</French>
+            <German>Laserentfernungsmesser</German>
+            <Hungarian>Lézeres távolságmérő</Hungarian>
+            <Italian>Telemetro Laser</Italian>
             <Japanese>レーザー測距機</Japanese>
             <Korean>레이저 거리측정기</Korean>
-            <Chinesesimp>激光测距仪</Chinesesimp>
-            <Chinese>雷射測距儀</Chinese>
+            <Polish>Dalmierz laserowy</Polish>
+            <Portuguese>Medidor de Distância a laser</Portuguese>
+            <Russian>Лазерный дальномер</Russian>
+            <Spanish>Telémetro láser</Spanish>
             <Turkish>Lazer Menzil Bulucu</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Yardage450_DisplayName">
+            <English>Yardage 450</English>
+            <Chinese>Yardage 450</Chinese>
+            <Chinesesimp>Yardage 450</Chinesesimp>
+            <Czech>Yardage 450</Czech>
+            <French>Yardage 450</French>
+            <German>Yardage 450</German>
+            <Hungarian>Yardage 450</Hungarian>
+            <Italian>Yardage 450</Italian>
+            <Japanese>ヤードエイジ 450</Japanese>
+            <Korean>야드에이지 450</Korean>
+            <Polish>Yardage 450</Polish>
+            <Portuguese>Yardage 450</Portuguese>
+            <Russian>Yardage 450</Russian>
+            <Spanish>Yardage 450</Spanish>
+            <Turkish>Yardage 450</Turkish>
         </Key>
         <Key ID="STR_ACE_Yardage450_PowerButtonKey">
             <English>Yardage 450 - Power Button</English>
-            <German>Yardage 450 - Einschalt-Taste</German>
-            <Polish>Yardage 450 - Przycisk zasilania</Polish>
-            <Spanish>Yardage 450 - Botón de encendido</Spanish>
+            <Chinese>Yardage 450 - 電源按鈕</Chinese>
+            <Chinesesimp>Yardage 450—电源按钮</Chinesesimp>
             <Czech>Yardage 450 - Tlačítko napájení</Czech>
-            <Portuguese>Yardage 450 - Botão de energia</Portuguese>
-            <Hungarian>Yardage 450 - Főkapcsoló gomb</Hungarian>
-            <Russian>Yardage 450 - Кнопка питания</Russian>
-            <Italian>Yardage 450 - Bottone Accensione</Italian>
             <French>Yardage 450 - Bouton d'alimentation</French>
+            <German>Yardage 450 - Einschalt-Taste</German>
+            <Hungarian>Yardage 450 - Főkapcsoló gomb</Hungarian>
+            <Italian>Yardage 450 - Bottone Accensione</Italian>
             <Japanese>ヤードエイジ 450 - 起動ボタン</Japanese>
             <Korean>야드에이지 450 - 전원 버튼</Korean>
-            <Chinesesimp>Yardage 450—电源按钮</Chinesesimp>
-            <Chinese>Yardage 450 - 電源按鈕</Chinese>
+            <Polish>Yardage 450 - Przycisk zasilania</Polish>
+            <Portuguese>Yardage 450 - Botão de energia</Portuguese>
+            <Russian>Yardage 450 - Кнопка питания</Russian>
+            <Spanish>Yardage 450 - Botón de encendido</Spanish>
             <Turkish>Yardage 450 - Güç Tuşu</Turkish>
         </Key>
     </Package>

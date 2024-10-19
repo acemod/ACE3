@@ -1,70 +1,70 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version='1.0' encoding='utf-8'?>
 <Project name="ACE">
     <Package name="Casings">
         <Key ID="STR_ACE_Casings_Settings_DisplayName">
             <English>ACE Casings</English>
-            <Japanese>ACE 薬莢</Japanese>
-            <Polish>ACE Łuski</Polish>
-            <Korean>ACE 탄피</Korean>
-            <Italian>ACE Bossoli</Italian>
             <Chinesesimp>ACE 弹壳</Chinesesimp>
+            <French>ACE Douilles</French>
+            <German>ACE Patronenhülsen</German>
+            <Italian>ACE Bossoli</Italian>
+            <Japanese>ACE 薬莢</Japanese>
+            <Korean>ACE 탄피</Korean>
+            <Polish>ACE Łuski</Polish>
+            <Portuguese>ACE Cartuchos</Portuguese>
             <Russian>ACE Гильзы</Russian>
             <Spanish>ACE Casquillos</Spanish>
-            <German>ACE Patronenhülsen</German>
-            <French>ACE Douilles</French>
-            <Portuguese>ACE Cartuchos</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Casings_displayName">
-            <English>Casings Enabled</English>
-            <Japanese>薬莢の有効化</Japanese>
-            <Polish>Łuski włączone</Polish>
-            <Italian>Abilita Bossoli</Italian>
-            <Korean>탄피 활성화</Korean>
-            <Chinesesimp>开启弹壳生成</Chinesesimp>
-            <Russian>Гильзы включены</Russian>
-            <Spanish>Habilitar Casquillos</Spanish>
-            <German>Patronenhülsen aktiviert</German>
-            <French>Douilles activées</French>
-            <Portuguese>Cartuchos habilitados</Portuguese>
         </Key>
         <Key ID="STR_ACE_Casings_description">
             <English>Enable persistent casings (POTENTIAL performance impact on old/weak systems)</English>
-            <Japanese>永続的な薬莢を有効にする (古い/弱いシステムに対する潜在的なパフォーマンスの影響)</Japanese>
-            <Polish>Włącz pozostawanie łusek (MOŻLIWY wpływ na wydajność na starych/słabych komputerach)</Polish>
-            <Korean>영구적으로 남는 탄피를 활성화합니다(오래되거나 저사양에 잠재적인 성능 영향을 줄 수 있음)</Korean>
             <Chinesesimp>开启生成持续存在的弹壳（可能对较老和性能不行的系统有影响）</Chinesesimp>
-            <Russian>Включить постоянные гильзы (ПОТЕНЦИАЛЬНО может повлиять на производительность на старых/слабых системах)</Russian>
-            <Spanish>Habilitar persistencia de casquillos (POTENCIAL impacto en el rendimiento de ordenadores antiguos o no potentes)</Spanish>
+            <French>Active la persistance des douilles (POTENTIEL impact sur les performances sur les anciens/faibles systèmes)</French>
             <German>Persistente Patronenhülsen aktivieren (POTENZIELLE Leistungseinbußen bei alten/schwachen Systemen)</German>
             <Italian>Abilita bossoli persistenti (POTENZIALE impatto sulla perfomance su sistemi vecchi/deboli)</Italian>
-            <French>Active la persistance des douilles (POTENTIEL impact sur les performances sur les anciens/faibles systèmes)</French>
+            <Japanese>永続的な薬莢を有効にする (古い/弱いシステムに対する潜在的なパフォーマンスの影響)</Japanese>
+            <Korean>영구적으로 남는 탄피를 활성화합니다(오래되거나 저사양에 잠재적인 성능 영향을 줄 수 있음)</Korean>
+            <Polish>Włącz pozostawanie łusek (MOŻLIWY wpływ na wydajność na starych/słabych komputerach)</Polish>
             <Portuguese>Habilitar persistência de cartuchos (POTENCIAL impacto no desempenho de sistemas antigos/fracos)</Portuguese>
+            <Russian>Включить постоянные гильзы (ПОТЕНЦИАЛЬНО может повлиять на производительность на старых/слабых системах)</Russian>
+            <Spanish>Habilitar persistencia de casquillos (POTENCIAL impacto en el rendimiento de ordenadores antiguos o no potentes)</Spanish>
         </Key>
-        <Key ID="STR_ACE_Casings_maxCasings_displayName">
-            <English>Maximum casings</English>
-            <Japanese>薬莢の最大量</Japanese>
-            <Polish>Maksymalna liczba łusek</Polish>
-            <Korean>탄피 최대 갯수</Korean>
-            <Chinesesimp>最大弹壳量</Chinesesimp>
-            <Russian>Макс. кол-во гильз</Russian>
-            <Spanish>Casquillos máximos</Spanish>
-            <German>Maximale Patronenhülsen</German>
-            <Italian>Numero massimo di bossoli</Italian>
-            <French>Nombre maximum de douilles</French>
-            <Portuguese>Máxima de cartuchos</Portuguese>
+        <Key ID="STR_ACE_Casings_displayName">
+            <English>Casings Enabled</English>
+            <Chinesesimp>开启弹壳生成</Chinesesimp>
+            <French>Douilles activées</French>
+            <German>Patronenhülsen aktiviert</German>
+            <Italian>Abilita Bossoli</Italian>
+            <Japanese>薬莢の有効化</Japanese>
+            <Korean>탄피 활성화</Korean>
+            <Polish>Łuski włączone</Polish>
+            <Portuguese>Cartuchos habilitados</Portuguese>
+            <Russian>Гильзы включены</Russian>
+            <Spanish>Habilitar Casquillos</Spanish>
         </Key>
         <Key ID="STR_ACE_Casings_maxCasings_description">
             <English>Maximum amount of casings to display</English>
-            <Japanese>表示される薬莢の最大の数</Japanese>
-            <Polish>Maksymalna liczba wyświetlanych łusek</Polish>
-            <Korean>표시할 최대 탄피 갯수</Korean>
             <Chinesesimp>显示的最大弹壳数量</Chinesesimp>
-            <Russian>Максимальное количество гильз для отображения</Russian>
-            <Spanish>Máxima cantidad de casquillos para mostrar</Spanish>
+            <French>Nombre maximum de douilles à afficher</French>
             <German>Maximale Anzahl an Patronenhülsen, die angezeigt werden</German>
             <Italian>Numero massimo di bossoli renderizzati</Italian>
-            <French>Nombre maximum de douilles à afficher</French>
+            <Japanese>表示される薬莢の最大の数</Japanese>
+            <Korean>표시할 최대 탄피 갯수</Korean>
+            <Polish>Maksymalna liczba wyświetlanych łusek</Polish>
             <Portuguese>Quantidade máxima de cartuchos para exibir</Portuguese>
+            <Russian>Максимальное количество гильз для отображения</Russian>
+            <Spanish>Máxima cantidad de casquillos para mostrar</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Casings_maxCasings_displayName">
+            <English>Maximum casings</English>
+            <Chinesesimp>最大弹壳量</Chinesesimp>
+            <French>Nombre maximum de douilles</French>
+            <German>Maximale Patronenhülsen</German>
+            <Italian>Numero massimo di bossoli</Italian>
+            <Japanese>薬莢の最大量</Japanese>
+            <Korean>탄피 최대 갯수</Korean>
+            <Polish>Maksymalna liczba łusek</Polish>
+            <Portuguese>Máxima de cartuchos</Portuguese>
+            <Russian>Макс. кол-во гильз</Russian>
+            <Spanish>Casquillos máximos</Spanish>
         </Key>
     </Package>
 </Project>
