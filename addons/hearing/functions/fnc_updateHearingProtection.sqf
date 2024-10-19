@@ -28,7 +28,7 @@ TRACE_1("",_slot);
 if !(_slot in [UPDATE_HEARING_EARPLUGS, TYPE_GOGGLE, TYPE_HEADGEAR]) exitWith {};
 
 // Handle Earplugs
-private _hasEarPlugsIn = ACE_player call FUNC(hasEarPlugsIn);
+private _hasEarPlugsIn = ACE_player getVariable ["ACE_hasEarPlugsIn", false];
 GVAR(damageCoefficent) = [1, 0.25] select _hasEarPlugsIn;
 GVAR(volumeAttenuation) = [1, GVAR(earplugsVolume)] select _hasEarPlugsIn;
 
