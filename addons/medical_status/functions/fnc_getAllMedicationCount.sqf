@@ -11,7 +11,7 @@
  * Return Value:
  * Array of medication counts <ARRAY of ARRAY>:
  *     Dose Count <NUMBER>
- *     Medication effectiveness (float) <NUMBER>
+ *     Medication effectiveness (0-1) <NUMBER>
  *
  * Example:
  * [player] call ace_medical_status_fnc_getAllMedicationCount

@@ -11,7 +11,7 @@
  *
  * Return Value:
  * Dose Count <NUMBER>
- * Medication effectiveness (float) <NUMBER>
+ * Medication effectiveness (0-1) <NUMBER>
  *
  * Example:
  * [player, "Epinephrine"] call ace_medical_status_fnc_getMedicationCount
