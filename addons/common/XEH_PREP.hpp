@@ -80,6 +80,8 @@ PREP(getGunner);
 PREP(getInPosition);
 PREP(getItemReplacements);
 PREP(getLocalUnits);
+PREP(getMagneticBearing);
+PREP(getMagneticBearingOffset);
 PREP(getMapData);
 PREP(getMapGridData);
 PREP(getMapGridFromPos);

@@ -30,7 +30,7 @@ if (CBA_missionTime < GVAR(mapGpsNextUpdate)) exitWith {};
 GVAR(mapGpsNextUpdate) = CBA_missionTime + 0.5;
 
 private _ctrl = _mapDisplay displayCtrl 913590;
-_ctrl ctrlSetText str (round (getDir ACE_player));  // Set Heading
+_ctrl ctrlSetText str (round ([ACE_player] call EFUNC(common,getMagneticBearing)));  // Set Heading
 
 _ctrl = _mapDisplay displayCtrl 913591;
 _ctrl ctrlSetText str (round ((getPosASL ACE_player) select 2) + EGVAR(common,mapAltitude)); // Set Altitude
