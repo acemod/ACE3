@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal, mharis001, modified by Cplhardcore
+ * Author: Glowbal, mharis001, Cplhardcore
  * Local callback for administering medication to a patient.
  *
  * Arguments:
