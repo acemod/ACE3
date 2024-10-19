@@ -49,7 +49,7 @@ if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
 
     // Sum of trauma to the limbs can also be fatal (shock) but this should take much more damage at default (5x as much)
     if ([false, !isPlayer _unit, true] select EGVAR(medical,useLimbDamage)) then {
-        private _limbThreshold = QEGVAR(medical,limbDamageThreshold) * _damageThreshold;
+        private _limbThreshold = EGVAR(medical,limbDamageThreshold) * _damageThreshold;
         {
             _vitalDamage = _vitalDamage + ((_x - _limbThreshold) max 0);
         } forEach _bodyPartDamage select [2];
