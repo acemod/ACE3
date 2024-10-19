@@ -166,7 +166,7 @@ private _markers = [];
 
 {
     private _marker = createMarker [vehicleVarName _x, position _x];
-    _marker setMarkerType "mil_dot";
+    _marker setMarkerTypeLocal "mil_dot";
     _marker setMarkerColor "ColorOrange";
 
     _markers pushBack _marker;
