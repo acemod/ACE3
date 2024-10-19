@@ -24,7 +24,7 @@ if (!GVAR(allowLitterCreation)) exitWith {};
 params ["_medic", "_patient", "_bodyPart", "_classname"];
 
 // Don't create litter if medic or patient are inside a vehicle
-if (vehicle _medic != _medic || {vehicle _patient != _patient}) exitWith {};
+if (!isNull objectParent _medic || {!isNull objectParent _patient}) exitWith {};
 
 // Determine if treated body part is bleeding
 private _index = ALL_BODY_PARTS find toLowerANSI _bodyPart;
