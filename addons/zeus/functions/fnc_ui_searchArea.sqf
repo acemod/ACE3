@@ -67,7 +67,7 @@ private _fnc_onConfirm = {
     private _position = getPos _logic;
     private _marker = QGVAR(ModuleSearchArea) + str _unit;
 
-    createMarker [_marker, _position];
+    createMarkerLocal [_marker, _position];
     _marker setMarkerAlphaLocal 0;
     _marker setMarkerShapeLocal "ELLIPSE";
     _marker setMarkerSize [_radius, _radius];
