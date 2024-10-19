@@ -40,11 +40,11 @@ _shellType call FUNC(getFragInfo) params ["_fragRange", "_fragVelocity", "_fragT
 private _fragPosAGL = ASLToAGL _fragPosASL;
 TRACE_5("fragValues",_fragPosASL,_fragPosAGL,_fragRange,_fragVelocity,_metalMassModifier);
 
-// compile possible targets including units, vehicles, and crews
+// Compile possible targets including units, vehicles, and crews
 private _targets = [_fragPosAGL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
 if (_targets isEqualTo []) exitWith {
     TRACE_2("No nearby targets",_fragPosAGL,_fragRange);
-    0
+    0 // return
 };
 TRACE_3("",_fragRange,count _targets,_targets);
 
@@ -144,4 +144,4 @@ for "_i" from 1 to _randomCount do {
 TRACE_1("total created",_fragCount);
 
 END_COUNTER(frago);
-_fragCount
+_fragCount // return
