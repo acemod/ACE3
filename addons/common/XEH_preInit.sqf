@@ -37,7 +37,7 @@ GVAR(statusEffect_Names) = [];
 GVAR(statusEffect_isGlobal) = [];
 GVAR(statusEffect_sendJIP) = [];
 
-GVAR(setHearingCapabilityMap) = [];
+GVAR(setHearingCapabilityMap) = createHashMap;
 
 [] call FUNC(setupLocalUnitsHandler); // Add local units event handlers (ace_common_localUnits)
 
