@@ -17,11 +17,11 @@
  */
 
 params ["_unit", "_classname"];
-private _medicationConfig = (configFile >> "ace_medical_treatment" >> _classname);
+private _medicationConfig = configFile >> "ace_medical_treatment" >> _classname;
 private _onOverDose = getText (_medicationConfig >> "onOverDose");
 
-if (isClass (_medicationConfig)) then {
-    _medicationConfig = (_medicationConfig >> _classname);
+if (isClass _medicationConfig) then {
+    _medicationConfig = _medicationConfig >> _classname;
     if (isText (_medicationConfig >> "onOverDose")) then { 
         _onOverDose = getText (_medicationConfig >> "onOverDose"); 
     };
@@ -36,4 +36,4 @@ if (!isNil "_onOverDose" && {isText _onOverDose}) then {
 } else {
     _onOverDose = missionNamespace getVariable _onOverDose;
 };
-[_target, _className] call _onOverDose;
+[_target, _className] call _onOverDose
