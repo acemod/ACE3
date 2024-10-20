@@ -2,16 +2,6 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Validate SQF",
-            "command": "${config:python.pythonPath}",
-            "options": {
-                "cwd": "${workspaceFolder}/tools"
-            },
-            "args": [
-                "sqf_validator.py"
-            ]
-        },
-        {
             "label": "Validate Config",
             "command": "${config:python.pythonPath}",
             "options": {
