@@ -21,7 +21,11 @@ params ["_unit", "_target"];
 private _alive = alive _target;
 private _isPerson = _target isKindOf "CAManBase";
 
-if !((_alive || _isPerson) && {_target getVariable [QGVAR(canCarry), false]} && {isNull objectParent _target}) exitWith {false};
+if !(
+    (_alive || _isPerson)
+    && {_target getVariable [QGVAR(canCarry), false]}
+    && {!_isPerson || {isNull objectParent _target}}
+) exitWith {false};
 
 if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
