@@ -5,11 +5,10 @@
  * Calculation is done according to the Pandolf/Wojtowicz formulas.
  *
  * Arguments:
- * 0: Duty of animation
- * 1: Mass of unit <NUMBER>
- * 2: Terrain gradient <NUMBER>
- * 3: Terrain factor <NUMBER>
- * 4: Speed <NUMBER>
+ * 0 Mass of unit <NUMBER>
+ * 1: Terrain gradient <NUMBER>
+ * 2: Terrain factor <NUMBER>
+ * 3: Speed <NUMBER>
  *
  * Return Value:
  * Metabolic cost <NUMBER>
@@ -20,7 +19,18 @@
  * Public: No
  */
 
-params ["_duty", "_gearMass", "_terrainGradient", "_terrainFactor", "_speed"];
+params ["_gearMass", "_terrainGradient", "_terrainFactor", "_speed"];
+
+// Get the current duty
+private _duty = GVAR(animDuty);
+
+{
+    if (_x isEqualType 0) then {
+        _duty = _duty * _x;
+    } else {
+        _duty = _duty * (ACE_player call _x);
+    };
+} forEach (values GVAR(dutyList));
 
 // Metabolic cost for walking and running is different
 if (_speed > 2) then {
