@@ -5,7 +5,7 @@
  * Calculation is done according to the Pandolf/Wojtowicz formulas.
  *
  * Arguments:
- * 0 Mass of unit <NUMBER>
+ * 0: Mass of unit <NUMBER>
  * 1: Terrain gradient <NUMBER>
  * 2: Terrain factor <NUMBER>
  * 3: Speed <NUMBER>
