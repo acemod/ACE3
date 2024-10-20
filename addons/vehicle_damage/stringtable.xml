@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Vehicle_Damage">
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_description">

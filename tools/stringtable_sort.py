@@ -105,6 +105,9 @@ def main():
 
         tree.write(filepath, encoding="utf-8", xml_declaration=True, method='xml')
 
+        # use double quotes on header
+        with open( filepath, "r+", encoding="utf-8") as file:
+            file.write('<?xml version="1.0" encoding="utf-8"?>')
 
 if __name__ == "__main__":
     main()
