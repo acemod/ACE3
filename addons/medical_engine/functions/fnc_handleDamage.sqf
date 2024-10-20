@@ -32,7 +32,11 @@ if (_structuralDamage) then {
 // Damage can be disabled with old variable or via sqf command allowDamage
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
+// Killing units via End key is an edge case (#10375)
+// This didn't matter pre-Arma 3 2.18 but now this goes through the event handler
+// TODO: Structural fire damage >= 1 in a single damage event could still be caught here and we don't want that, but we haven't found a better way to catch this, fire damage should be small most of the time anyway
 private _newDamage = _damage - _oldDamage;
+if (_structuralDamage && {(abs (_newDamage - 1)) < 0.001 && _ammo == "" && isNull _shooter && isNull _instigator}) exitWith {_damage};
 
 // _newDamage == 0 happens occasionally for vehiclehit events (see line 80 onwards), just exit early to save some frametime
 // context 4 is engine "bleeding". For us, it's just a duplicate event for #structural which we can ignore without any issues
@@ -94,7 +98,7 @@ if (
         GET_NUMBER(_ammoCfg >> "explosive",0) > 0 ||
         {GET_NUMBER(_ammoCfg >> "indirectHit",0) > 0}
     }
-) exitwith {
+) exitWith {
     TRACE_5("Vehicle hit",_unit,_shooter,_instigator,_damage,_newDamage);
 
     _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
@@ -165,7 +169,11 @@ if (_context == 2) then {
     if (_environmentDamage) then {
         // Any collision with terrain/vehicle/object has a shooter
         // Check this first because burning can happen at any velocity
-        if !(isNull _shooter) then {
+        if (isNull _shooter) then {
+            // Anything else is almost guaranteed to be fire damage
+            _ammo = "fire";
+            TRACE_5("Fire Damage",_unit,_shooter,_instigator,_damage,_allDamages);
+        } else {
             /*
               If shooter != unit then they hit unit, otherwise it could be:
                - Unit hitting anything at speed
@@ -180,10 +188,6 @@ if (_context == 2) then {
                 _ammo = "collision";
                 TRACE_5("Collision",_unit,_shooter,_instigator,_damage,_allDamages);
             };
-        } else {
-            // Anything else is almost guaranteed to be fire damage
-            _ammo = "fire";
-            TRACE_5("Fire Damage",_unit,_shooter,_instigator,_damage,_allDamages);
         };
     };
 

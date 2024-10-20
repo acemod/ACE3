@@ -14,6 +14,5 @@
  *
  * Public: Yes
  */
-// IGNORE_PRIVATE_WARNING(_hasPlacedExplosives);
 
 (count (_this call FUNC(getPlacedExplosives)) > 0)

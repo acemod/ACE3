@@ -52,7 +52,7 @@ if (_reason != "") then {
 };
 
 private _masks = values GVAR(showHudHash);
-private _resultMask = [];
+private _resultMask = []; //IGNORE_PRIVATE_WARNING ["_resultMask"];
 
 for "_index" from 0 to 9 do {
     private _set = true; //Default to true
@@ -65,6 +65,6 @@ for "_index" from 0 to 9 do {
 };
 
 TRACE_2("showHud",_resultMask,keys GVAR(showHudHash));
-showHud _resultMask;
+showHUD _resultMask;
 
 _resultMask

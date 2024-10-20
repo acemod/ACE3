@@ -75,7 +75,7 @@ if (_zIndex < 5) then {
         } forEach _nlos;
         {
             if !(_forEachIndex in _excludes) then {
-                _testPos = _x;
+                private _testPos = _x;
                 if (_testPos vectorDistanceSqr _bucketPos <= 30) then {
                     _bucketList pushBack _x;
                     _excludes pushBack _forEachIndex;

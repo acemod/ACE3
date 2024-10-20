@@ -23,8 +23,8 @@ _oldComponent params ["_oldComponentName", "_oldSettingName"];
 _newComponent params ["_newComponentName", "_newSettingName"];
 
 private _isReplacementAvailable = [_newComponentName] call FUNC(isModLoaded);
-private _isDeprecatedLoaded = missionNamespace getvariable [_oldSettingName, false];
-private _isReplacementLoaded = missionNamespace getvariable [_newSettingName, false];
+private _isDeprecatedLoaded = missionNamespace getVariable [_oldSettingName, false];
+private _isReplacementLoaded = missionNamespace getVariable [_newSettingName, false];
 
 if (_isDeprecatedLoaded && {_isReplacementAvailable} && {!_isReplacementLoaded}) then {
     [_newSettingName, true, true, true] call FUNC(setSetting);

@@ -19,33 +19,44 @@
 params ["_unit", "_detonator"];
 TRACE_2("params",_unit,_detonator);
 
-private _range = getNumber (ConfigFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
+private _detonatorConfig = configFile >> "CfgWeapons" >> _detonator;
+private _range = getNumber (_detonatorConfig >> QGVAR(Range));
 
 private _result = [_unit] call FUNC(getPlacedExplosives);
 private _children = [];
 private _explosivesList = [];
 {
     if (!isNull(_x select 0)) then {
-        private _required = getArray (ConfigFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
+        private _required = getArray (configFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
         if (_detonator in _required) then {
-            private _item = ConfigFile >> "CfgMagazines" >> (_x select 3);
+            private _item = configFile >> "CfgMagazines" >> (_x select 3);
 
             _explosivesList pushBack _x;
 
-            _children pushBack
+            // Prevent consolidated detonate actions from having the same icon as consolidated place actions of the same explosive type
+            private _icon = if (
+                EGVAR(interact_menu,consolidateSingleChild) && 
+                {_detonator == GVAR(activeTrigger)} && 
+                {count (_result select {(_x select 4) == getText (_detonatorConfig >> QGVAR(triggerType))}) < 2}
+            ) then {
+                getText (_detonatorConfig >> "picture")
+            } else {
+                getText (_item >> "picture")
+            };
+
+            _children pushBack [
                 [
-                    [
-                        format ["Explosive_%1", _forEachIndex],
-                        _x select 2,
-                        getText(_item >> "picture"),
-                        {(_this select 2) call FUNC(detonateExplosive);},
-                        {true},
-                        {},
-                        [_unit,_range,_x,_detonator]
-                    ] call EFUNC(interact_menu,createAction),
-                    [],
-                    _unit
-                ];
+                    format ["Explosive_%1", _forEachIndex],
+                    _x select 2,
+                    _icon,
+                    {(_this select 2) call FUNC(detonateExplosive);},
+                    {true},
+                    {},
+                    [_unit,_range,_x,_detonator]
+                ] call EFUNC(interact_menu,createAction),
+                [],
+                _unit
+            ];
         };
     };
 } forEach _result;
@@ -81,7 +92,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
             [
                 "Explosive_All",
                 LLSTRING(DetonateAll),
-                getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
+                getText (_detonatorConfig >> "picture"),
                 {(_this select 2) call FUNC(detonateExplosiveAll);},
                 {true},
                 {},
@@ -107,7 +118,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
             [
                 "Explosive_All_Deadman",
                 LLSTRING(DetonateAll),
-                getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
+                getText (_detonatorConfig >> "picture"),
                 {[_player] call FUNC(onIncapacitated)},
                 {true}
             ] call EFUNC(interact_menu,createAction),

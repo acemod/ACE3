@@ -46,7 +46,7 @@ private _fnc_onFailure = {
     _args params ["_player"];
 
     // Reset animation if needed
-    if (vehicle _player == _player && {!(_player call EFUNC(common,isSwimming))}) then {
+    if (isNull objectParent _player && {!(_player call EFUNC(common,isSwimming))}) then {
         private _previousAnim = _player getVariable [QGVAR(previousAnim), ""];
         if (_previousAnim != "") then {
             [_player, _previousAnim, 2] call EFUNC(common,doAnimation);

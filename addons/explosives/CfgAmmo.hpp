@@ -8,18 +8,31 @@ class CfgAmmo {
 
     // GVAR(size) = 0; is small size
     // GVAR(size) = 1; is large size
-    class DirectionalBombBase;
-    class ClaymoreDirectionalMine_Remote_Ammo: DirectionalBombBase {
+    class ClaymoreDirectionalMine_Remote_Ammo;
+    class ACE_ClaymoreDirectionalMine_Remote_Ammo: ClaymoreDirectionalMine_Remote_Ammo { // Wrapper class to avoid unintentional changes to third-party mods. Ref #10105 
         GVAR(magazine) = "ClaymoreDirectionalMine_Remote_Mag";
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0, 0, 0.038};
         soundActivation[] = {"", 0, 0, 0};
         soundDeactivation[] = {"", 0, 0, 0};
+
+        // Reduce vanilla damage, so that it doesn't destroy buildings
+        hit = 10;
+        indirectHit = 10;
     };
 
+    class DirectionalBombBase;
     class APERSTripMine_Wire_Ammo: DirectionalBombBase {
         GVAR(defuseObjectPosition)[] = {-1.415, 0, 0.12};
         GVAR(size) = 0;
+    };
+
+    class APERSBoundingMine_Range_Ammo;
+    class ACE_APERSBoundingMine_Range_Ammo: APERSBoundingMine_Range_Ammo {
+        // Reduce vanilla damage, so that it doesn't destroy buildings
+        hit = 10;
+        indirectHit = 10;
+        CraterEffects = "MineCrater";
     };
 
     class ACE_FlareTripMine_Wire_Ammo: APERSTripMine_Wire_Ammo {
@@ -46,9 +59,16 @@ class CfgAmmo {
         GVAR(size) = 0;
     };
 
+    // More sensitive pressure-fuze for the Vanilla AT Mine.
+    class MineBase;
+    class ATMine_Range_Ammo: MineBase {
+        mineTrigger = "ACE_TankTriggerLight";
+    };
+
     // "The SLAM has an anti-tamper feature that is only active in the bottom- and side-attack modes."
     class SLAMDirectionalMine_Wire_Ammo: DirectionalBombBase {
         indirectHitRange = 20;
+        explosionAngle = 60;
         GVAR(explodeOnDefuseChance) = 1;
         GVAR(magazine) = "SLAMDirectionalMine_Wire_Mag";
         GVAR(size) = 0;
@@ -64,14 +84,16 @@ class CfgAmmo {
     class ACE_SLAMDirectionalMine_Magnetic_Ammo: SLAMDirectionalMine_Wire_Ammo {
         mineTrigger = "ACE_MagneticTrigger";
         GVAR(explodeOnDefuseChance) = 1;
-        explosionAngle = 360;
-        indirectHitRange = 1;
+        explosionAngle = 60;
+        hit = 3000;
+        indirectHit = 3000;
+        indirectHitRange = 10;
         mineInconspicuousness = 25;
         icon = "iconExplosiveGP";
     };
 
-    class PipeBombBase;
-    class DemoCharge_Remote_Ammo: PipeBombBase {
+    class DemoCharge_Remote_Ammo;
+    class ACE_DemoCharge_Remote_Ammo: DemoCharge_Remote_Ammo {
         GVAR(magazine) = "DemoCharge_Remote_Mag";
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0.07, 0, 0.055};
@@ -81,6 +103,7 @@ class CfgAmmo {
         indirectHit = 500;
         indirectHitRange = 7;
     };
+    class PipeBombBase;
     class SatchelCharge_Remote_Ammo: PipeBombBase {
         GVAR(magazine) = "SatchelCharge_Remote_Mag";
         GVAR(size) = 0;
@@ -157,7 +180,6 @@ class CfgAmmo {
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0, 0, 0.15};
     };
-    class MineBase;
     class UnderwaterMine_Range_Ammo: MineBase {
         GVAR(size) = 1;
     };

@@ -137,7 +137,7 @@
     params ["_unit", "_disable"];
 
     if (_disable) then {
-        private _features = ["AUTOTARGET", "TARGET", "WEAPONAIM"/*, "FIREWEAPON"*/, "RADIOPROTOCOL"]; // TODO: Uncomment in 2.18
+        private _features = ["AUTOTARGET", "TARGET", "WEAPONAIM", "FIREWEAPON", "RADIOPROTOCOL"];
 
         // Save current status
         _unit setVariable [QGVAR(featuresAiUAV), _features apply {[_x, _unit checkAIFeature _x]}];
@@ -165,7 +165,7 @@ if (isServer) then {
         private _zeusLogic = getAssignedCuratorLogic _dcPlayer;
         if ((!isNil "_zeusLogic") && {!isNull _zeusLogic}) then {
             {
-                if ((_x getvariable ["bis_fnc_moduleRemoteControl_owner", objnull]) isEqualTo _dcPlayer) exitWith {
+                if ((_x getVariable ["bis_fnc_moduleRemoteControl_owner", objNull]) isEqualTo _dcPlayer) exitWith {
                     INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`",[_x] call FUNC(getName),_dcPlayer,_x);
                     _x setVariable ["bis_fnc_moduleRemoteControl_owner", nil, true];
                 };
@@ -197,7 +197,7 @@ if (isServer) then {
 
 [QGVAR(unlockVehicle), {
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
-    if ([] isNotEqualTo getArray (configOf _target >> "assembleInfo" >> "dissasembleTo")) then {
+    if ([] isNotEqualTo getArray (configOf _this >> "assembleInfo" >> "dissasembleTo")) then {
         [_this, "disableWeaponAssembly", QGVAR(lockVehicle), false] call FUNC(statusEffect_set);
     };
 }] call CBA_fnc_addEventHandler;
@@ -296,7 +296,7 @@ call FUNC(checkFiles);
 
 
 //////////////////////////////////////////////////
-// Set up ace_settingsInitialized eventhandler
+// Set up CBA_settingsInitialized eventhandler
 //////////////////////////////////////////////////
 
 ["CBA_settingsInitialized", {
@@ -498,10 +498,10 @@ GVAR(reloadMutex_lastMagazines) = [];
         private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
         private _duration = 0;
         if (_isLauncher) then {
-            _duration = getNumber (configfile >> "CfgMovesMaleSdr" >> "States" >> _gesture >> "speed");
+            _duration = getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> _gesture >> "speed");
         };
         if (_duration == 0) then {
-            _duration = getNumber (configfile >> "CfgGesturesMale" >> "States" >> _gesture >> "speed");
+            _duration = getNumber (configFile >> "CfgGesturesMale" >> "States" >> _gesture >> "speed");
         };
 
         if (_duration != 0) then {
@@ -564,7 +564,7 @@ GVAR(reloadMutex_lastMagazines) = [];
 // Lastly, do JIP events
 // JIP Detection and event trigger. Run this at the very end, just in case anything uses it
 // Note: usage of player is most likely on purpose
-if (didJip) then {
+if (didJIP) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
         if(!isNull player && GVAR(settingsInitFinished)) then {

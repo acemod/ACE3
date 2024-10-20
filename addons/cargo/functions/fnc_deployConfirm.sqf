@@ -24,7 +24,7 @@ if (!isNull GVAR(itemPreviewObject) && {[GVAR(selectedItem), GVAR(interactionVeh
     // Position is AGL for unloading event
     private _position = ASLToAGL getPosASL GVAR(itemPreviewObject);
     private _direction = getDir GVAR(itemPreviewObject);
-    private _duration = GVAR(loadTimeCoefficient) * (GVAR(selectedItem) call FUNC(getSizeItem));
+    private _duration = [GVAR(selectedItem), false] call FUNC(getDelayItem);
 
     // If unload time is 0, don't show a progress bar
     if (_duration <= 0) exitWith {

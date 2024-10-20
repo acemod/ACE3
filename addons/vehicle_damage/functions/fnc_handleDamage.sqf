@@ -22,8 +22,8 @@
  * Public: No
  */
 
-params ["_vehicle", "_selection", "_newDamage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint"];
-TRACE_8("handleDamage",_vehicle,_selection,_newDamage,_source,_projectile,_hitIndex,_instigator,_hitPoint);
+params ["_vehicle", "_selection", "_newDamage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint", "", "_context"];
+TRACE_9("handleDamage",_vehicle,_selection,_newDamage,_source,_projectile,_hitIndex,_instigator,_hitPoint,_context);
 
 if (!local _vehicle) exitWith {};
 
@@ -32,6 +32,11 @@ private _currentDamage = if (_selection != "") then {
 } else {
     damage _vehicle
 };
+
+// Killing units via End key is an edge case (#10375)
+// This didn't matter pre-Arma 3 2.18 but now this goes through the event handler
+// TODO: Structural fire damage >= 1 in a single damage event could still be caught here and we don't want that, but we haven't found a better way to catch this, fire damage should be small most of the time anyway
+if (_context == 0 && {(abs (_newDamage - _currentDamage - 1)) < 0.001 && _projectile == "" && isNull _source && isNull _instigator}) exitWith {_newDamage};
 
 if !(_projectile in ["ace_ammoExplosion", "ACE_ammoExplosionLarge"]) then {
     // If an invalid hit, don't process it

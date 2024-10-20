@@ -37,15 +37,15 @@ if (isNil "_triggerConfig") exitWith {
     objNull
 };
 
-private _magazineTrigger = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> _triggerConfig;
-_triggerConfig = ConfigFile >> "ACE_Triggers" >> _triggerConfig;
+private _magazineTrigger = configFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> _triggerConfig;
+_triggerConfig = configFile >> "ACE_Triggers" >> _triggerConfig;
 
 if (isNil "_triggerConfig") exitWith {
     ERROR_1("Config not found in PlaceExplosive: %1",_this);
     objNull
 };
 
-private _ammo = getText(ConfigFile >> "CfgMagazines" >> _magazineClass >> "ammo");
+private _ammo = getText(configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
 if (isText(_magazineTrigger >> "ammo")) then {
     _ammo = getText (_magazineTrigger >> "ammo");
 };
