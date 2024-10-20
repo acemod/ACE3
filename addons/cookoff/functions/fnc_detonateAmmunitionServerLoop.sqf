@@ -87,6 +87,9 @@ if (_removeAmmoDuringCookoff) then {
     switch (true) do {
         // Turret magazines
         case (_magazineInfo isEqualType []): {
+            // The chosen magazine is not guaranteed to the be one selected by setMagazineTurretAmmo, so get the current ammo count first
+            _newAmmoCount = ((_object magazineTurretAmmo [_magazineClassname, _magazineInfo]) - _removed) max 0;
+
             // Remove loaded magazine
             if (_newAmmoCount <= 0) then {
                 [QEGVAR(common,removeMagazineTurret), [_object, _magazineClassname, _magazineInfo], _object, _magazineInfo] call CBA_fnc_turretEvent;
