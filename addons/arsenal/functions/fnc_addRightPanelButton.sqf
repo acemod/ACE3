@@ -26,7 +26,6 @@ params [["_items", [], [[]]], ["_tooltip", "", [""]], ["_picture", QPATHTOF(data
 if (isNil QGVAR(customRightPanelButtons)) then {
     GVAR(customRightPanelButtons) = [nil, nil, nil, nil, nil, nil, nil, nil, nil, nil];
 };
-_items = _items apply {_x call EFUNC(common,getConfigName)}; // sanitize to configCase, required for cache, this doesn't run constantly anyway
 
 private _position = -1;
 
@@ -57,7 +56,8 @@ if (!isNil "_currentButtonInPosition") then {
 };
 
 // If spot found, add items and return position
-_items = _items select {_x call FUNC(isMiscItem)}; // Only misc items can be added
+// Sanitize to configCase and drop anything that's not a misc item
+_items = _items apply {_x call EFUNC(common,getConfigName)} select {_x call FUNC(isMiscItem)};
 
 GVAR(customRightPanelButtons) set [_position, [_items, _picture, _tooltip, _moveOnOverwrite]];
 
