@@ -61,11 +61,6 @@ private _yawModifier = if (_yawChange == 0) then {
 } else {
     abs (_yawRate / _yawChange)
 };
-private _yawChangeDerivative = if (_timestep == 0) then {
-    0
-} else {
-    (_yawRateDifference - _lastYawRateDifference) / _timestep
-};
 drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], ASLToAGL getPosASLVisual _projectile, 0.75, 0.75, 0, format ["dP [%1] dY: [%2]", _desiredPitchChange, _desiredYawChange], 1, 0.025, "TahomaB"];
 drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,0,1,1], [0, 0, 1] vectorAdd ASLToAGL getPosASLVisual _projectile, 0.75, 0.75, 0, format ["pitch proportional [%1] yaw proportional [%2]", _pitchModifier, _yawModifier], 1, 0.025, "TahomaB"];
 #endif
@@ -74,4 +69,3 @@ TRACE_4("nlaw pitch/yaw info",_currentPitch,_lastPitch,_currentYaw,_lastYaw);
 TRACE_6("nlaw navigation",_yawChange,_desiredYawChange,_pitchChange,_desiredPitchChange,_yawRate,_pitchRate);
 
 _projectile vectorModelToWorldVisual [_yawChange + _desiredYawChange, 0, _pitchChange + _desiredPitchChange]
-
