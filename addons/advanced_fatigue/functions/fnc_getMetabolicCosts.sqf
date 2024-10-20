@@ -25,10 +25,10 @@ params ["_gearMass", "_terrainGradient", "_terrainFactor", "_speed"];
 private _duty = GVAR(animDuty);
 
 {
-    if (_x isEqualType 0) then {
-        _duty = _duty * _x;
+    _duty = if (_x isEqualType 0) then {
+        _duty * _x
     } else {
-        _duty = _duty * (ACE_player call _x);
+        _duty * (ACE_player call _x)
     };
 } forEach (values GVAR(dutyList));
 
