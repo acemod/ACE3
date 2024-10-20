@@ -14,7 +14,7 @@
  * Metabolic cost <NUMBER>
  *
  * Example:
- * [1, 840, 20, 1, 4] call ace_advanced_fatigue_fnc_getMetabolicCosts
+ * [840, 20, 1, 4] call ace_advanced_fatigue_fnc_getMetabolicCosts
  *
  * Public: No
  */
