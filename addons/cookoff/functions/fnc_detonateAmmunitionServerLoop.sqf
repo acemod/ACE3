@@ -72,7 +72,7 @@ _ammoCount = _ammoCount max 0;
 // Remove some ammo, which will be detonated
 private _removed = _ammoCount min floor (1 + random (6 / GVAR(ammoCookoffDuration)));
 
-_ammoCount = _ammoCount - _removed;
+_ammoCount = _ammoCount - (_removed * 1.6);
 
 if (_ammoCount <= 0) then {
     _magazines deleteAt _magazineIndex;
