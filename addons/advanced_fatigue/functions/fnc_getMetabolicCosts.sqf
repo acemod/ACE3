@@ -40,7 +40,7 @@ if (_speed > 2) then {
     private _graded = 2.1 * SIM_BODYMASS + 4 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2) + _terrainFactor * (SIM_BODYMASS + _gearMass) * (0.9 * (_speed ^ 2) + 0.66 * _speed * _terrainGradient);
     private _terrainImpact = abs ((_graded / _baseline) - 1);
     hintSilent format ["FwdAngle: %1 | SideAngle: %2 \n TerrainFactor: %3 | TerrainGradient: %4 \n TerrainImpact: %5 \n Speed: %6 | CarriedLoad: %7 \n Duty: %8 | Work: %9",
-        _fwdAngle toFixed 1,
+        _fwdAngle toFixed 1, //IGNORE_PRIVATE_WARNING ["_fwdAngle", "_sideAngle"]; // from mainLoop
         _sideAngle toFixed 1,
         _terrainFactor toFixed 2,
         _terrainGradient toFixed 1,

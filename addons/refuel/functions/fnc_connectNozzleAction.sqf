@@ -24,9 +24,6 @@ params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_startin
 
 private _bestPosASL = [];
 private _bestPosDistance = 1e38;
-private _viewPos = _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1])) vectorMultiply 3);
-private _modelVector = _startingPosASL vectorFromTo (_sink modelToWorldWorld [0,0,0]);
-private _modelVectorLow = _startingPosASL vectorFromTo (_sink modelToWorldWorld [0,0,-1]);
 
 {
     private _endPosASL = _x;
