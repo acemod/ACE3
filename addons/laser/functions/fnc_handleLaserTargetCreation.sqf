@@ -58,7 +58,7 @@ TRACE_1("params",_this);
         };
     };
     if (!_foundSource) then {
-        WARNING_1("Laser target doesn't have owner",_targetObject);
+        WARNING_1("Laser target %1 doesn't have owner",_targetObject);
     };
 
 }, _this] call CBA_fnc_execNextFrame;

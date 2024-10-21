@@ -26,7 +26,7 @@ private _attackProfileFunction = getText (configFile >> QGVAR(AttackProfiles) >>
 private _attackProfilePos = _this call (missionNamespace getVariable _attackProfileFunction);
 
 if ((isNil "_attackProfilePos") || {_attackProfilePos isEqualTo [0,0,0]}) exitWith {
-    ERROR_1("attack profile returned bad pos",_attackProfilePos);
+    // ERROR_2("attack profile [%1] returned bad pos %2",_attackProfileName,_attackProfilePos);
     [0,0,0]
 };
 

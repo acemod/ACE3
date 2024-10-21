@@ -37,7 +37,7 @@ _objects = _objects select {
         if (isClass (configFile >> "CfgVehicles" >> _classname)) then {
             true
         } else {
-            ERROR_2("Preset [%1] - Classname does not exist",_preset,_classname);
+            ERROR_2("Preset [%1] - Classname [%2] does not exist",_preset,_classname);
             false
         };
     } else {
