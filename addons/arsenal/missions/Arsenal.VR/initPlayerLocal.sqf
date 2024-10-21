@@ -137,7 +137,7 @@ for "_i" from 5 to 11 do {
 private _square = createVehicle ["VR_Area_01_square_1x1_grey_F", position _unit, [], 0, "NONE"];
 _square setPosASL getPosASL _unit;
 
-private _marker = createMarker [QGVAR(start), getPosWorld _unit];
+private _marker = createMarkerLocal [QGVAR(start), getPosWorld _unit];
 _marker setMarkerType "mil_start";
 
 // Init Arsenal
@@ -165,8 +165,8 @@ _unit addEventHandler ["AnimChanged", {
 private _markers = [];
 
 {
-    private _marker = createMarker [vehicleVarName _x, position _x];
-    _marker setMarkerType "mil_dot";
+    private _marker = createMarkerLocal [vehicleVarName _x, position _x];
+    _marker setMarkerTypeLocal "mil_dot";
     _marker setMarkerColor "ColorOrange";
 
     _markers pushBack _marker;
