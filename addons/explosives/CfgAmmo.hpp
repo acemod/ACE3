@@ -9,7 +9,7 @@ class CfgAmmo {
     // GVAR(size) = 0; is small size
     // GVAR(size) = 1; is large size
     class ClaymoreDirectionalMine_Remote_Ammo;
-    class ACE_ClaymoreDirectionalMine_Remote_Ammo: ClaymoreDirectionalMine_Remote_Ammo { // Wrapper class to avoid unintentional changes to third-party mods. Ref #10105 
+    class ACE_ClaymoreDirectionalMine_Remote_Ammo: ClaymoreDirectionalMine_Remote_Ammo { // Wrapper class to avoid unintentional changes to third-party mods. Ref #10105
         GVAR(magazine) = "ClaymoreDirectionalMine_Remote_Mag";
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0, 0, 0.038};
@@ -51,6 +51,10 @@ class CfgAmmo {
             frequency = 0;
             distance = 0;
         };
+    };
+    class ACE_FlareTripMineAir_Wire_Ammo: ACE_FlareTripMine_Wire_Ammo {
+        defaultMagazine = "ACE_FlareTripMineAir_Mag";
+        explosionEffects = "ACE_TripflareAirEffect";
     };
 
     class F_20mm_Red;
