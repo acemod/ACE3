@@ -48,17 +48,6 @@ if (GVAR(isProne)) then {
     _currentSpeed = _currentSpeed min 1.5;
 };
 
-// Get the current duty
-private _duty = GVAR(animDuty);
-
-{
-    if (_x isEqualType 0) then {
-        _duty = _duty * _x;
-    } else {
-        _duty = _duty * (ACE_player call _x);
-    };
-} forEach (values GVAR(dutyList));
-
 private _terrainGradient = abs _fwdAngle;
 private _terrainFactor = 1;
 private _gearMass = 0 max (((ACE_player getVariable [QEGVAR(movement,totalLoad), loadAbs ACE_player]) / 22.046 - UNDERWEAR_WEIGHT) * GVAR(loadFactor));
@@ -79,7 +68,7 @@ if (isNull objectParent ACE_player && {_currentSpeed > 0.1} && {isTouchingGround
     };
 
     // Add a scaling factor of 0.1 to reduce excessive stamina consumption on default settings (see #10361)
-    _currentWork = [_duty, _gearMass, _terrainGradient * GVAR(terrainGradientFactor) * 0.1, _terrainFactor, _currentSpeed] call FUNC(getMetabolicCosts);
+    _currentWork = [_gearMass, _terrainGradient * GVAR(terrainGradientFactor) * 0.1, _terrainFactor, _currentSpeed] call FUNC(getMetabolicCosts);
     _currentWork = _currentWork max REE;
 };
 
