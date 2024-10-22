@@ -7,7 +7,7 @@
  * 0: Aircraft config <OBJECT>
  *
  * Return Value:
- * None
+ * <ARRAY>
  *
  * Example:
  * [configOf _plane] call ace_markinglaser_fnc_findTurret
