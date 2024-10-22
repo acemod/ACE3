@@ -20,7 +20,7 @@
 //   treat other units, or else he won't do anything on his own.
 
 private _isMedic = [_this] call EFUNC(medical_treatment,isMedic);
-if (_isMedic && {!IS_UNCONSCIOUS(_this)} || {vehicle _this != _this}) exitWith {false};
+if (_isMedic && {!IS_UNCONSCIOUS(_this)} || {!isNull objectParent _this}) exitWith {false};
 
 // Search for a medic, prioritize unitReady
 private _medic = objNull;

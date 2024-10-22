@@ -109,7 +109,7 @@ private _posHeadRel = ACE_player selectionPosition "head";
 
 private _leanCoef = (_posHeadRel select 0) - 0.15; // 0.15 counters the base offset
 // Don't take leaning into account when weapon is lowered due to jiggling when walking side-ways (bandaid)
-if (abs _leanCoef < 0.15 || {vehicle ACE_player != ACE_player} || {weaponLowered ACE_player}) then {
+if (abs _leanCoef < 0.15 || {!isNull objectParent ACE_player} || {weaponLowered ACE_player}) then {
     _leanCoef = 0;
 };
 
@@ -144,7 +144,7 @@ if (ACE_player getVariable [QGVAR(dropMode), false]) then {
 
     _posFin = _posFin vectorAdd (AGLToASL (positionCameraToWorld _cameraOffset));
 
-    if (vehicle ACE_player != ACE_player) then {
+    if (!isNull objectParent ACE_player) then {
         // Counteract vehicle velocity including acceleration
         private _vectorDiff = (velocity (vehicle ACE_player)) vectorMultiply (time - (ACE_player getVariable [QGVAR(lastTick), time]) + 0.01);
         _posFin = _posFin vectorAdd _vectorDiff;

@@ -20,7 +20,7 @@ if (!alive ACE_player) exitWith {false};
 // Conditions: canInteract
 if !([ACE_player, ACE_player, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
 //make sure player is dismounted or in a static weapon:
-if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) exitWith {false};
+if ((!isNull objectParent ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) exitWith {false};
 //Check camera view (not in GUNNER)
 if !(cameraView in ["INTERNAL", "EXTERNAL"]) exitWith {false};
 //Exit if run recently (run every 1 seconds)
@@ -46,7 +46,7 @@ private _nearbyMen = (ACE_player nearObjects ["CAManBase", (GVAR(maxRange) + 2)]
 {
     if ((((eyePos _x) vectorDistance _playerEyePosASL) < GVAR(maxRange)) &&
             {alive _x} &&
-            {(_x == (vehicle _x)) || {(vehicle _x) isKindOf "StaticWeapon"}} &&
+            {(isNull objectParent _x) || {(vehicle _x) isKindOf "StaticWeapon"}} &&
             {GVAR(indicatorForSelf) || {_x != ACE_player}} &&
             {((lineIntersectsSurfaces [(eyePos _x), _playerEyePosASL, vehicle ACE_player, vehicle _x]) isEqualTo [])} &&
             {[_x] call EFUNC(common,isPlayer)}) then {

@@ -343,12 +343,18 @@
             <Russian>Не может быть выгружен</Russian>
             <Spanish>No puede ser descargado</Spanish>
         </Key>
+        <Key ID="STR_ACE_Cargo_checkSize">
+            <English>Check Cargo Size</English>
+            <Korean>화물 크기 확인</Korean>
+            <Japanese>貨物としての大きさを確認</Japanese>
+            <Russian>Проверить размер груза</Russian>
+        </Key>
         <Key ID="STR_ACE_Cargo_SizeMenu">
             <English>Cargo Size: %1</English>
             <German>Frachtgröße: %1</German>
             <Italian>Dimensione Carico: %1</Italian>
             <French>Encombrement fret: %1</French>
-            <Japanese>貨物のサイズ: %1</Japanese>
+            <Japanese>貨物の大きさ: %1</Japanese>
             <Korean>화물 크기: %1</Korean>
             <Russian>Размер груза: %1</Russian>
             <Spanish>Tamaño de carga: %1</Spanish>
@@ -414,7 +420,7 @@
             <English>Cargo Size</English>
             <German>Frachtgröße</German>
             <Italian>Dimensioni nel Carico</Italian>
-            <Japanese>貨物のサイズ</Japanese>
+            <Japanese>貨物の大きさ</Japanese>
             <Chinese>貨物的大小</Chinese>
             <Chinesesimp>货物的大小</Chinesesimp>
             <Polish>Wielkość ładunku</Polish>
@@ -519,7 +525,7 @@
         <Key ID="STR_ACE_Cargo_loadTimeCoefficient_description">
             <English>Modifies how long it takes to load/unload items.\nTime, in seconds, is the size of the item multiplied by this value.</English>
             <German>Gibt an, wie lange das Laden / Entladen von Gegenständen dauern soll.\nZeit in Sekunden, die mit der Größe des Gegenstandes multipliziert wird.</German>
-            <Japanese>貨物の積み込み/積み下ろしに掛かる時間を変更します。\n時間 (秒単位) は、貨物のサイズにこの値を掛けたものです。</Japanese>
+            <Japanese>貨物の積み込み/積み下ろしに掛かる時間を変更します。\n時間 (秒単位) は、貨物の大きさにこの値を掛けたものです。</Japanese>
             <Polish>Modyfikuje, jak długo zajmuje załadowywanie/wyładowywanie przedmiotów. \nCzasem, w sekundach, jest wielkość przedmiotu razy jego wartość.</Polish>
             <Italian>Modifica il tempo impiegato per caricare o scaricare gli oggetti.\nIl tempo, in secondi, equivale alla dimensione dell'oggetto moltiplicata per questo valore</Italian>
             <Russian>Изменяет время для загрузки/выгрузки предметов. \nВремя (сек) - это размер предмета, умноженный на это значение.</Russian>
@@ -602,6 +608,9 @@
             <French>Contrôler si les éléments de cargaison peuvent être déchargés via la méthode de déploiement.</French>
             <German>Steuert, ob Frachtgegenstände über die Aufbaumethode entladen werden können.</German>
             <Spanish>Controla si los objetos de la carga pueden ser descargados mediante el método de despliegue.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Cargo_checkSizeInteraction">
+            <English>Show Check Cargo Size Interaction</English>
         </Key>
     </Package>
 </Project>

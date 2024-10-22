@@ -24,7 +24,7 @@ PREP_RECOMPILE_END;
 ["CBA_loadoutGet", {
     params ["_unit", "_loadout", "_extendedInfo"];
 
-    if (_unit getVariable ["ACE_hasEarPlugsin", false]) then {
+    if (_unit getVariable ["ACE_hasEarPlugsIn", false]) then {
         _extendedInfo set ["ace_earplugs", true]
     };
 }] call CBA_fnc_addEventHandler;

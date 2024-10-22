@@ -57,15 +57,29 @@ class GVAR(positions) {
         {"Land_Benzina_schnell", {{592,7505,0},{804,1445,0},{3132,3129,0}}},
         {"Land_fs_feed_F", {{1920,4960,0},{5052,4703,1},{9456,9277,0}}},
         {"Land_FuelStation_01_pump_F", {{2378,6248,0},{7092,534,0}}},
-        {"Land_Ind_FuelStation_Feed_EP1", {{4788,5525,0}}}
+        {"Land_Ind_FuelStation_Feed_EP1", {{3920,4105,0},{4788,5525,0}}}
+    };
+    go_map_fjord[] = { /*  Fjord  */
+        {"Land_fs_feed_F", {{26,14296,0},{121,14298,0},{7480,1812,0}}},
+        {"Land_FuelStation_01_pump_F", {{66,14293,0}}},
+        {"Land_FuelStation_Feed_F", {{37,14301,0}}}
     };
     IslaPera[] = { /*  Isla Pera  */
         {"Land_fs_feed_F", {{1855,2866,0}}},
         {"Land_FuelStation_01_pump_malevil_F", {{3981,2065,0},{5306,8796,0},{9236,4287,0}}}
     };
+    egl_laghisola[] = { /*  Laghisola  */
+        {"Land_fs_feed_F", {{281,595,0},{1926,5751,0},{4904,6278,0}}},
+        {"Land_FuelStation_01_pump_F", {{1347,8907,0},{6478,2391,0}}}
+    };
     VTF_Lybor[] = { /*  Lybor  */
         {"Land_FuelStation_03_pump_F", {{3879,3823,0}}},
         {"Land_FuelStation_Feed_F", {{1831,2694,0},{2175,3323,0},{3304,2981,0},{4271,3024,0}}}
+    };
+    mehland[] = { /*  Mehland  */
+        {"Land_fs_feed_F", {{13469,9984,0},{16773,16454,0},{17389,14420,0},{17785,10415,0},{19155,15564,0},{19373,13170,0}}},
+        {"Land_FuelStation_01_pump_F", {{2122,15875,0},{2238,8505,0},{15134,19009,0},{17909,9856,1},{18595,8701,0},{18691,8629,1},{18947,15114,0}}},
+        {"Land_FuelStation_03_pump_F", {{4136,13875,0},{6356,12183,0},{7677,10989,2},{8880,17775,0},{13881,19437,1}}}
     };
     rof_mok[] = { /*  Mull of Kintyre, Scotland  */
         {"Land_A_FuelStation_Feed", {{12837,5124,1},{15271,17533,0},{19453,21896,0}}},
@@ -73,6 +87,7 @@ class GVAR(positions) {
         {"Land_Fuelstation", {{10284,18679,0}}},
         {"Land_Ind_FuelStation_Feed_EP1", {{9762,16325,0}}}
     };
+    FDF_Isle1_a[] = { /*  Podagorsk  */ {"Land_A_FuelStation_Feed", {{7980,10293,0},{8356,7555,0},{10930,6878,0},{11999,10476,0},{12692,6317,0}}}};
     pulau[] = { /*  Pulau  */
         {"Land_fs_feed_F", {{2368,3128,0},{4891,7168,0},{7358,7368,0}}},
         {"Land_FuelStation_Feed_F", {{5994,5789,0}}}
@@ -92,5 +107,10 @@ class GVAR(positions) {
         {"Land_FuelStation_01_pump_F", {{4565,1953,0}}},
         {"Land_FuelStation_01_pump_malevil_F", {{7072,3676,0}}},
         {"Land_FuelStation_Feed_F", {{4678,3971,0},{6391,5174,0}}}
+    };
+    yulakia[] = { /*  Yulakia v1.0beta6  */
+        {"Land_fs_feed_F", {{10424,6328,0}}},
+        {"Land_FuelStation_03_pump_F", {{5964,8016,0}}},
+        {"Land_Fuelstation_army", {{410,10339,0},{1892,2501,0},{4157,9653,0},{9629,2467,0},{10018,4642,0},{10696,7289,0},{11325,8200,0},{11647,7639,0}}}
     };
 };

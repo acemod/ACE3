@@ -49,7 +49,7 @@ if (_effectNumber == 0) exitWith { //empty array - false effect
 
 //if no change: skip sending publicVar and events
 private _effectBoolArray = [_effectNumber, count _statusReasons] call FUNC(binarizeNumber);
-TRACE_2("bitArray",_statusIndex,_effectBoolArray);
+TRACE_1("bitArray",_effectBoolArray);
 
 private _activeEffects = [];
 {

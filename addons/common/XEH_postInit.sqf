@@ -137,7 +137,7 @@
     params ["_unit", "_disable"];
 
     if (_disable) then {
-        private _features = ["AUTOTARGET", "TARGET", "WEAPONAIM"/*, "FIREWEAPON"*/, "RADIOPROTOCOL"]; // TODO: Uncomment in 2.18
+        private _features = ["AUTOTARGET", "TARGET", "WEAPONAIM", "FIREWEAPON", "RADIOPROTOCOL"];
 
         // Save current status
         _unit setVariable [QGVAR(featuresAiUAV), _features apply {[_x, _unit checkAIFeature _x]}];
@@ -294,7 +294,7 @@ call FUNC(checkFiles);
 
 
 //////////////////////////////////////////////////
-// Set up ace_settingsInitialized eventhandler
+// Set up CBA_settingsInitialized eventhandler
 //////////////////////////////////////////////////
 
 ["CBA_settingsInitialized", {
