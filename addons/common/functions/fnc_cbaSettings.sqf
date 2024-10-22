@@ -58,7 +58,7 @@ GVAR(settingsMovedToSQF) = [];
     if !(SLX_XEH_MACHINE select 8) then {WARNING("PostInit not finished");};
     INFO("Settings initialized.");
 
-    //Event that settings are safe to use:
+    //Event that settings are safe to use, kept for BWC
     ["ace_settingsInitialized", []] call CBA_fnc_localEvent;
 
     //Set init finished and run all delayed functions:

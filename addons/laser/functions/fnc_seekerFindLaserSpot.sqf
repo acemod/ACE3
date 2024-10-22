@@ -109,7 +109,6 @@ if (_spots isNotEqualTo []) then {
     private _c = 0;
     private _buckets = [];
     private _excludes = [];
-    private _bucketIndex = 0;
 
     // Put close points together into buckets
     while { count(_spots) != count(_excludes) && _c < (count _spots) } do {
@@ -178,7 +177,6 @@ if (_spots isNotEqualTo []) then {
         private _maxOwnerCount = -1;
 
         {
-            //IGNORE_PRIVATE_WARNING ["_x", "_y"];
             _y params ["_count", "_owner"];
             if (_count > _maxOwnerCount) then {
                 _maxOwnerCount = _count;

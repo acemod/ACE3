@@ -50,7 +50,6 @@ GVAR(objectRotationZ) = 0;
         private _text = [format ["Remove Object +$%1", _cost], "Remove Object"] select (_budget == -1);
 
         // Remove object action
-        //IGNORE_PRIVATE_WARNING ["_player"];
         private _removeAction = [
             QGVAR(removeObject),
             _text,

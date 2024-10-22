@@ -72,7 +72,7 @@ switch (_attackStage) do {
             _attackProfileStateParams set [0, STAGE_ATTACK_TERMINAL];
 
             _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2D _projectilePos]];
-            TRACE_2("New Stage: STAGE_ATTACK_TERMINAL",_distanceToTarget2d,_currentHeightOverTarget);
+            TRACE_2("New Stage: STAGE_ATTACK_TERMINAL",_timeToGo,_angleToTarget);
         };
     };
     case STAGE_SEEK_CRUISE: { // Slowly gain altitude while searching for target
