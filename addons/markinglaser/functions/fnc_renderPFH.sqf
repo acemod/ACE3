@@ -54,12 +54,12 @@ if (((currentVisionMode focusOn) != 1) || {EGVAR(laser,laserEmitters) isEqualTo 
     private _endPos = _laserPosASL vectorAdd (_smoothDir vectorMultiply LASER_MAX);
     private _intersects = [];
     while { _intersects isEqualTo [] } do {
-        drawLaser [_startPos, _smoothDir, [250, 0, 0, 1], [], 0, 1, LASER_MAX, true];
-        // Circumvent limit of drawLaser
-        if ((_startPos distance _laserPosASL) > 9999) exitWith {};
+        // drawLaser has an internal maximum distance it can draw, so we may need to draw multiple segments
+        drawLaser [_startPos, _smoothDir, [250, 0, 0, 1], [], 0, 1, LASER_MAX, true]; // Draw a segment
+        if ((_startPos distance _laserPosASL) > 9999) exitWith {}; // just exit loop if we've drawn far enough
         _intersects = lineIntersectsSurfaces [_startPos, _endPos, _aircraft];
-        if (_intersects isEqualTo []) then {
-            _startPos = _endPos;
+        if (_intersects isEqualTo []) then { // Check if we hit anything
+            _startPos = _endPos; // if we didn't then move up the startpos to where the last draw ended
             _endPos = _endPos vectorAdd (_smoothDir vectorMultiply LASER_MAX);
         };
     };
