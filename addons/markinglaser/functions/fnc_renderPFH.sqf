@@ -33,15 +33,20 @@ if (((currentVisionMode focusOn) != 1) || {EGVAR(laser,laserEmitters) isEqualTo 
         _cycle > 1/6
     }) then { continue };
 
-    private _targetObject = _aircraft getVariable [QEGVAR(laser,targetObject), objNull];
-    private _targetPosASL = getPosASL _targetObject;
-
     (_y call EFUNC(laser,findLaserSource)) params ["_laserPosASL", "_laserDir"];
 
     #ifdef DEBUG_MODE_FULL
+    private _targetObject = _aircraft getVariable [QEGVAR(laser,targetObject), objNull];
+    private _targetPosASL = getPosASL _targetObject;
+
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,1,1], (ASLToAGL _targetPosASL), 0.5, 0.5, 0, "Laser", 0.5, 0.025, "TahomaB"];
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,1,1], (ASLToAGL _laserPosASL), 0.5, 0.5, 0, "Origin", 0.5, 0.025, "TahomaB"];
     #endif
+
+    // If our camera is the laser source, offset it just a a bit so it isn't dead center
+    if (((AGLToASL positionCameraToWorld [0,0,0]) distance _laserPosASL) < 0.09) then {
+        _laserPosASL = AGLToASL positionCameraToWorld [-0.02, -0.05, 0];
+    };
 
     private _smoothing = _aircraft getVariable [QGVAR(smoothing), []];
     _smoothing pushBack _laserDir;
@@ -50,7 +55,7 @@ if (((currentVisionMode focusOn) != 1) || {EGVAR(laser,laserEmitters) isEqualTo 
     { _smoothDir = _smoothDir vectorAdd _x } forEach _smoothing;
     _smoothDir = _smoothDir vectorMultiply (1/count _smoothing);
 
-    private _startPos = _laserPosASL vectorAdd (_smoothDir vectorMultiply 0.25);
+    private _startPos = _laserPosASL vectorAdd (_smoothDir vectorMultiply 0.25); // go forward a bit so first drawLaser doesn't hit aircraft
     private _endPos = _laserPosASL vectorAdd (_smoothDir vectorMultiply LASER_MAX);
     private _intersects = [];
     while { _intersects isEqualTo [] } do {
@@ -63,5 +68,5 @@ if (((currentVisionMode focusOn) != 1) || {EGVAR(laser,laserEmitters) isEqualTo 
             _endPos = _endPos vectorAdd (_smoothDir vectorMultiply LASER_MAX);
         };
     };
-    drawLaser [_laserPosASL, _smoothDir, [250, 0, 0, 1], [], 0.5, 1, LASER_MAX, true];
+    drawLaser [_laserPosASL, _smoothDir, [250, 0, 0, 1], [], 0.5, 1, LASER_MAX, true]; // final draw from actual origin 
 } forEach EGVAR(laser,laserEmitters);
