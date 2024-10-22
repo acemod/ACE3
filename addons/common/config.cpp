@@ -75,3 +75,5 @@ class ACE_Tests {
     mapConfigs = QPATHTOF(dev\test_mapConfigs.sqf);
     cfgPatches = QPATHTOF(dev\test_cfgPatches.sqf);
 };
+
+#include "ACE_ExtensionsHashes.hpp"
