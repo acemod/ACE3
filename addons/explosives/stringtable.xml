@@ -1054,6 +1054,9 @@
             <Czech>Světlice na nástražném drátu</Czech>
             <Spanish>Bengala con cable trampa</Spanish>
         </Key>
+        <Key ID="STR_ACE_Explosives_TripFlareAir_Name">
+            <English>Tripwire Flare (Air)</English>
+        </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Description">
             <English>Type: Tripwire flare - Ignites a non-lethal flare when triggered.&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Ground</English>
             <Russian>Тип: Сигнальная растяжка - При срабатывании выпускает несмертельную сигнальную вспышку.&lt;br /&gt;Зарядов: 1&lt;br /&gt;Используется на: Земле</Russian>
@@ -1208,6 +1211,15 @@
             <Chinesesimp>定时爆炸的默认时间（单位：秒）</Chinesesimp>
             <Korean>초 단위로, 기본 폭발 타이머 시간을 정합니다</Korean>
             <Portuguese>Tempo padrão (em segundos) para o temporizador do explosivo.</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_Explosives_Tripflares">
+            <English>Tripflares</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripflareColour_DisplayName">
+            <English>Tripflare Colour</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripflareColour_Description">
+            <English>What colour the tripflare will be</English>
         </Key>
     </Package>
 </Project>
