@@ -75,11 +75,18 @@ private _oldCompats = [];
 
 if (_oldAddons isNotEqualTo []) then {
     _oldAddons = _oldAddons apply {format ["%1.pbo", _x]};
+    private _extraSources = _oldSources select {_x != _mainSource};
+    private _allSources = [_mainSource] + _extraSources;
 
     private _errorMsg = if (count _oldAddons > 3) then {
-        format ["The following files are outdated: %1, and %2 more.<br/>ACE Main version is %3 from %4.<br/>Loaded mods with outdated ACE files: %5", (_oldAddons select [0, 3]) joinString ", ", (count _oldAddons) - 3, _mainVersion, _mainSource, _oldSources joinString ", "];
+        format ["The following files are outdated: %1, and %2 more.<br/>ACE Main version is %3 from %4.<br/><br/>All mods with ACE files: %5", (_oldAddons select [0, 3]) joinString ", ", (count _oldAddons) - 3, _mainVersion, _mainSource, _allSources joinString ", "];
     } else {
-        format ["The following files are outdated: %1.<br/>ACE Main version is %2 from %3.<br/>Loaded mods with outdated ACE files: %4", _oldAddons joinString ", ", _mainVersion, _mainSource, _oldSources joinString ", "];
+        format ["The following files are outdated: %1.<br/>ACE Main version is %2 from %3.<br/><br/>All mods with ACE files: %4", _oldAddons joinString ", ", _mainVersion, _mainSource, _allSources joinString ", "];
+    };
+    if (_extraSources isNotEqualTo []) then {
+        _errorMsg = _errorMsg + "<br/><br/>Reason: Conflicting ACE installations (see list above).<br/><br/>Fix: Make sure to only load one version of ACE.";
+    } else {
+        _errorMsg = _errorMsg + "<br/><br/>Reason: Mismatched addon versions within the same installation, it is likely corrupted.<br/><br/>Fix: Repair ACE or update your repack.";
     };
 
     if (hasInterface) then {
@@ -149,7 +156,7 @@ if (isMultiplayer) then {
 
         private _fnc_check = {
             if (GVAR(clientVersion) != GVAR(serverVersion)) then {
-                private _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2. Server modDir: %3", GVAR(serverVersion), GVAR(clientVersion), GVAR(serverSource)];
+                private _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2.<br/>Server modDir: %3<br/><br/>Reason: Either client or server is outdated.<br/><br/>Fix: Make sure versions and distribution of both match.", GVAR(serverVersion), GVAR(clientVersion), GVAR(serverSource)];
 
                 // Check ACE install
                 call FUNC(checkFiles_diagnoseACE);
@@ -164,7 +171,30 @@ if (isMultiplayer) then {
             private _addons = GVAR(clientAddons) - GVAR(serverAddons);
 
             if (_addons isNotEqualTo []) then {
-                private _errorMsg = format ["Client/Server Addon Mismatch. Client has additional addons: %1. Server modDir: %2", _addons, GVAR(serverSource)];
+                private _errorMsg = if (count _addons > 3) then {
+                    format ["Client/Server Addon Mismatch. Client has additional addons: %1, and %2 more.<br/>Server modDir: %3", (_addons select [0, 3]) joinString ", ", (count _addons) - 3, GVAR(serverSource)];
+                } else {
+                    format ["Client/Server Addon Mismatch. Client has additional addons: %1.<br/>Server modDir: %2", _addons joinString ", ", GVAR(serverSource)];
+                };
+                private _additionalCompats = _addons select {(_x select [0, 10]) == "ace_compat"};
+                private _additionalComponents = _addons - _additionalCompats;
+                if (_additionalCompats isNotEqualTo []) then { // CDLC/content mod is loaded when it shouldn't be
+                    private _loadedModsInfo = getLoadedModsInfo;
+                    private _defaultModDirs = [_mainSource] + (_loadedModsInfo select {_x select 2} apply {_x select 1});
+                    private _additionalMods = [];
+                    { // O(n^fuckyou) loop. If you hit this then you're not going to play anyway. Suffer the stutter. Fix your mods. Stop using HostHavoc.
+                        {
+                            private _sourceModDir = configSourceMod (_cfgPatches >> _x);
+                            if !(_sourceModDir in _defaultModDirs) then {
+                                _additionalMods pushBackUnique (_loadedModsInfo select {_x select 1 == _sourceModDir} select 0 select 0);
+                            };
+                        } forEach (getArray (_cfgPatches >> _x >> "requiredAddons"));
+                    } forEach _additionalCompats;
+                    _errorMsg = _errorMsg + format ["<br/><br/>Additional compatibility is being loaded for: %1", _additionalMods joinString ", "];
+                    _errorMsg = _errorMsg + "<br/><br/>Reason: Client has extra mods requiring compats loaded (see list above).<br/><br/>Fix: Make sure your mod list matches. Check your server files if you're the administrator.";
+                } else { // Different ACE installation
+                    _errorMsg = _errorMsg + "<br/><br/>Reason: Client and Server have different ACE distributions.<br/><br/>Fix: Make sure you're using the same distribution.";
+                };
 
                 // Check ACE install
                 call FUNC(checkFiles_diagnoseACE);
