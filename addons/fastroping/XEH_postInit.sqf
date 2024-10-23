@@ -31,7 +31,7 @@
 
 
 if (isServer) then {
-    ["Helicopter", "init", {
+    ["Air", "init", {
         if (!GVAR(autoAddFRIES)) exitWith {};
         params ["_vehicle"];
         if (isNumber (configOf _vehicle >> QGVAR(enabled)) && {isNil {_vehicle getVariable [QGVAR(FRIES), nil]}}) then {
@@ -51,7 +51,7 @@ if (isServer) then {
 
 #ifdef DRAW_FASTROPE_INFO
 addMissionEventHandler ["Draw3D", {
-    if !(cursorObject isKindOf "Helicopter") exitWith {};
+    if !(cursorObject isKindOf "Air") exitWith {};
     private _config = configOf cursorObject;
     private _enabled = getNumber (_config >> QGVAR(enabled));
     drawIcon3D ["", [.5,.5,1,1], (ASLToAGL getPosASL cursorObject), 0.5, 0.5, 0, format ["%1 = %2", typeOf cursorObject, _enabled], 0.5, 0.025, "TahomaB"];
