@@ -60,7 +60,7 @@
             condition = QUOTE([ARR_2(_player,_target)] call FUNC(canFastRope)); \
             statement = QUOTE([ARR_2(_player,_target)] call FUNC(fastRope)); \
         }; \
-    }; 
+    } 
 
 
 class CfgVehicles {
@@ -89,10 +89,10 @@ class CfgVehicles {
 
     class Air;
     class Helicopter: Air {
-        MACRO_FRIES_SELFACTIONS
+        MACRO_FRIES_SELFACTIONS;
     };
 	class Plane: Air {
-        MACRO_FRIES_SELFACTIONS
+        MACRO_FRIES_SELFACTIONS;
     };
 
     class Helicopter_Base_F;
