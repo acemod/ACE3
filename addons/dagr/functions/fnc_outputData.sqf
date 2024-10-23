@@ -47,7 +47,7 @@ GVAR(outputPFH) = [{
     private _speed = speed (vehicle ACE_player);
     _speed = floor (_speed * 10) / 10;
     _speed = abs(_speed);
-    _dagrspeed = str _speed + "kph";
+    private _dagrspeed = str _speed + "kph";
 
     // Elevation
     private _elevation = getPosASL ACE_player;
