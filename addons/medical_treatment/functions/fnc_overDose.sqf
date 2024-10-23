@@ -18,7 +18,7 @@
 
 params ["_unit", "_classname"];
 
-private _medicationConfig = configFile >> "ace_medical_treatment" >> "Medication";
+private _medicationConfig = configFile >> QUOTE(ADDON) >> "Medication";
 private _onOverDose = getText (_medicationConfig >> "onOverDose");
 
 if (isClass _medicationConfig) then {
