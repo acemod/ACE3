@@ -10,8 +10,9 @@
  *
  * Return Value:
  * Array of medication counts <ARRAY of ARRAY>:
- *     Dose Count <NUMBER>
- *     Medication effectiveness (0-1) <NUMBER>
+ *   0: Medication Name <String>
+ *   1: Dose Count <NUMBER>
+ *   2: Medication effectiveness (0-1) <NUMBER>
  *
  * Example:
  * [player] call ace_medical_status_fnc_getAllMedicationCount
