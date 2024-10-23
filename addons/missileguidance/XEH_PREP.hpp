@@ -9,6 +9,7 @@ PREP(checkLos);
 PREP(dev_ProjectileCamera);
 
 PREP(onFired);
+PREP(onFiredDeferred);
 PREP(onIncomingMissile);
 
 PREP(guidancePFH);
