@@ -19,6 +19,22 @@ class CfgVehicles {
                     showDisabled = 0;
                     icon = QPATHTOF(UI\ACE_earplugs_x_ca.paa);
                 };
+                class ACE_PutOnEHP {
+                    displayName = CSTRING(ElectronicHearingProtection_On);
+                    condition = QUOTE([_player] call FUNC(canPutOnEHP));
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
+                    statement = QUOTE([ARR_2(_player,true)] call FUNC(putOnEHP));
+                    showDisabled = 0;
+                    icon = "\A3\Characters_F_Orange\Headgear\Data\UI\icon_H_EarProtectors_black_F_CA.paa";
+                };
+                class ACE_RemoveEHP {
+                    displayName = CSTRING(ElectronicHearingProtection_Off);
+                    condition = QUOTE(GVAR(EnableCombatDeafness) && {_player getVariable [ARR_2('ACE_hasEHP',false)]});
+                    exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting"};
+                    statement = QUOTE([ARR_2(_player,true)] call FUNC(removeEHP));
+                    showDisabled = 0;
+                    icon = "\A3\Characters_F_Orange\Headgear\Data\UI\icon_H_EarProtectors_black_F_CA.paa";
+                };
             };
         };
     };

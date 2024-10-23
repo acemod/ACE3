@@ -343,6 +343,30 @@
             <Spanish>Volumen cuando se utilizan protectores auditivos.</Spanish>
             <Korean>귀마개 사용 시의 볼륨입니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Name">
+            <English>Electronic Hearing Protection</English>
+            <German>Elektronischer Gehörschutz</German>
+        </Key>
+        <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Description">
+            <English>Electronic Hearing Protection protects the wearer from hearing damage without reducing situational awareness.</English>
+            <German>Elektronischer Gehörschutz schützt den Träger vor Hörschäden, ohne dass sein Situationsbewusstsein eingeschränkt wird.</German>
+        </Key>
+        <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_On">
+            <English>Put on Electronic Hearing Protection</English>
+            <German>Elektronischen Gehörschutz aufsetzen</German>
+        </Key>
+        <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Off">
+            <English>Take off Electronic Hearing Protection</English>
+            <German>Elektronischen Gehörschutz absetzen</German>
+        </Key>
+        <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Are_On">
+            <English>Electronic Hearing Protection put on</English>
+            <German>Elektronischer Gehörschutz aufgesetzt</German>
+        </Key>
+        <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Are_Off">
+            <English>Electronic Hearing Protection taken off</English>
+            <German>Elektronischer Gehörschutz abgesetzt</German>
+        </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
             <English>Unconscious Volume</English>
             <German>Lautstärke Bewusstlosigkeit</German>
