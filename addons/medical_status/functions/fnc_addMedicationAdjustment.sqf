@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: The Unit <OBJECT>
- * 1: Medication <STRING> 
+ * 1: Medication <STRING>
  * 2: Time in system for the adjustment to reach its peak <NUMBER>
  * 3: Duration the adjustment will have an effect <NUMBER>
  * 4: Heart Rate Adjust <NUMBER>
