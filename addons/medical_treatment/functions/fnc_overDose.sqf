@@ -13,6 +13,7 @@
  *
  * Example:
  * [player, "morphine"] call ace_medical_treatment_fnc_overDose
+ *
  * Public: No
  */
 
