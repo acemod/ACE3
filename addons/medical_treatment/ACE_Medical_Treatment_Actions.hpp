@@ -115,9 +115,11 @@ class GVAR(actions) {
         displayName = CSTRING(Inject_Morphine);
         displayNameProgress = CSTRING(Injecting_Morphine);
         icon = QPATHTOEF(medical_gui,ui\auto_injector.paa);
+        medicRequired = QGVAR(medicMorphine);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         category = "medication";
         items[] = {"ACE_morphine"};
+        treatmentLocations = QGVAR(locationMorphine);
         condition = "";
         treatmentTime = QGVAR(treatmentTimeAutoinjector);
         callbackSuccess = QFUNC(medication);
