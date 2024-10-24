@@ -34,10 +34,10 @@ if (_onOverDose == "") exitWith {
     [QEGVAR(medical,CriticalVitals), _unit] call CBA_fnc_localEvent;
 };
 
-if (isNil _onOverDose) then {
-    _onOverDose = compile _onOverDose;
+_onOverDose = if (missionNamespace isNil _onOverDose) then {
+    compile _onOverDose
 } else {
-    _onOverDose = missionNamespace getVariable _onOverDose;
+    missionNamespace getVariable _onOverDose
 };
 
 [_target, _className] call _onOverDose
