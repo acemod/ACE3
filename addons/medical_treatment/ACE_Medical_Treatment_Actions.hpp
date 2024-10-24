@@ -130,18 +130,14 @@ class GVAR(actions) {
     class Adenosine: Morphine {
         displayName = CSTRING(Inject_Adenosine);
         displayNameProgress = CSTRING(Injecting_Adenosine);
-        medicRequired = QGVAR(medicAdenosine);
         condition = QGVAR(advancedMedication);
         items[] = {"ACE_adenosine"};
-        treatmentLocations = QGVAR(locationAdenosine);
         litter[] = {{"ACE_MedicalLitter_adenosine"}};
     };
     class Epinephrine: Morphine {
         displayName = CSTRING(Inject_Epinephrine);
         displayNameProgress = CSTRING(Injecting_Epinephrine);
-        medicRequired = QGVAR(medicEpinephrine);
         items[] = {"ACE_epinephrine"};
-        treatmentLocations = QGVAR(locationEpinephrine);
         litter[] = {{"ACE_MedicalLitter_epinephrine"}};
     };
 
