@@ -1,11 +1,11 @@
 PREP(addInventoryActions);
 PREP(addMedicationAdjustment);
 PREP(adjustPainLevel);
+PREP(getAllMedicationCount);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
 PREP(getBloodVolumeChange);
 PREP(getCardiacOutput);
-PREP(getAllMedicationCount);
 PREP(getMedicationCount);
 PREP(handleKilled);
 PREP(handleKilledMission);

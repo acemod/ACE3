@@ -31,7 +31,7 @@ private _medDose = 0;
         private _timeInSystem = CBA_missionTime - _timeAdded;
         _medDose = _medDose + _dose;
         if (_getCount) then {
-            // just effectivness effective count, a medication will always start at 1 and only drop after reaching timeTilMaxEffect
+            // returns effective count, a medication will always start at 1 and only drop after reaching timeTilMaxEffect
             _effectivness = _effectivness + linearConversion [_timeTillMaxEffect, _maxTimeInSystem, _timeInSystem, 1, 0, true];
         } else {
             // as used in handleUnitVitals, a medication effectiveness will start low, ramp up to timeTillMaxEffect, and then drop off
@@ -42,4 +42,4 @@ private _medDose = 0;
 
 TRACE_5("getMedicationCount",_target,_medication,_getCount,_effectivness,_medDose);
 
-[_medication, _medDose, _effectivness]
+[_medDose, _effectivness]

@@ -24,4 +24,4 @@ params ["_target", ["_getCount", true]];
 
 private _medicationClasses = (_target getVariable [VAR_MEDICATIONS, []]) apply {_x select 0};
 _medicationClasses = _medicationClasses arrayIntersect _medicationClasses;
-_medicationClasses apply {[_target, _x, _getCount] call FUNC(getMedicationCount)} // return
+_medicationClasses apply [_x] + ([_target, _x, _getCount] call FUNC(getMedicationCount)) // return
