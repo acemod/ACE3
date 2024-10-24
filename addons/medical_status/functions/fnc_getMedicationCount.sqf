@@ -23,7 +23,7 @@
 
 params ["_target", "_medication", ["_getCount", true]];
 
-private _effectivness = 0;
+private _effectiveness = 0;
 private _medDose = 0;
 {
     _x params ["_xMed", "_timeAdded", "_timeTillMaxEffect", "_maxTimeInSystem", "", "", "", "_dose"];
