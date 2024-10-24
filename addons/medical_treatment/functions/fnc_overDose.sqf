@@ -4,7 +4,7 @@
  * Handles the overdose effects of a medication.
  *
  * Arguments:
- * 0: The patient <OBJECT>
+ * 0: Patient <OBJECT>
  * 1: Medication classname <STRING>
  *
  * Return Value:
@@ -23,8 +23,8 @@ private _onOverDose = getText (_medicationConfig >> "onOverDose");
 
 if (isClass _medicationConfig) then {
     _medicationConfig = _medicationConfig >> _classname;
-    if (isText (_medicationConfig >> "onOverDose")) then { 
-        _onOverDose = getText (_medicationConfig >> "onOverDose"); 
+    if (isText (_medicationConfig >> "onOverDose")) then {
+        _onOverDose = getText (_medicationConfig >> "onOverDose");
     };
 };
 TRACE_2("overdose",_classname,_onOverDose);
