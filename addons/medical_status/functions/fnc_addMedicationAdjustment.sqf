@@ -17,7 +17,7 @@
  * None
  *
  * Example:
- * [player, "Morphine", 1, 120, 60, -10, 0.8, -10] call ace_medical_status_fnc_addMedicationAdjustment
+ * [player, "Morphine", 120, 60, -10, 0.8, -10, 1] call ace_medical_status_fnc_addMedicationAdjustment
  *
  * Public: No
  */
