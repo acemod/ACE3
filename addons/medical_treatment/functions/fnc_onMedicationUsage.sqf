@@ -6,7 +6,7 @@
  * Arguments:
  * 0: The patient <OBJECT>
  * 1: Medication Treatment classname <STRING>
- * 2: Incompatible medication <ARRAY<STRING>>
+ * 2: Incompatible medication <ARRAY><STRING>
  *
  * Return Value:
  * None
