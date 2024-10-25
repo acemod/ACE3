@@ -91,7 +91,7 @@ class CfgVehicles {
     class Helicopter: Air {
         MACRO_FRIES_SELFACTIONS;
     };
-	class Plane: Air {
+    class Plane: Air {
         MACRO_FRIES_SELFACTIONS;
     };
 
