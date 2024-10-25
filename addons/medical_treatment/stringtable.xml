@@ -68,7 +68,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AdvancedPulse_DisplayName">
             <English>Advanced Pulse</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
+        <Key ID="STR_ACE_Medical_Treatment_AdvancedPulse_Description">
             <English>Makes Check Pulse action always give a numerical value</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrest">
