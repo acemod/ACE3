@@ -12,7 +12,7 @@
     "LIST",
     [LSTRING(AdvancedPulse_DisplayName), LSTRING(AdvancedPulse_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1], [ELSTRING(common,Disabled), ELSTRING(common,Enabled)], 1],
+    [[0, 1], [ELSTRING(common,Disabled), ELSTRING(common,Enabled)], 0],
     true
 ] call CBA_fnc_addSetting;
 
