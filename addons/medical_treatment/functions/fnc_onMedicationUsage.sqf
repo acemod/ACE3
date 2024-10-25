@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Patient <OBJECT>
  * 1: Medication Treatment classname <STRING>
- * 2: Incompatible medication <ARRAY><STRING>
+ * 2: Incompatible medication <ARRAY of <STRING, NUMBER>>
  *
  * Return Value:
  * None
@@ -33,9 +33,10 @@ if (_maxDose > 0) then {
         _maxDoseDeviation = _maxDoseDeviation + 1;
     };
 
-    if (_currentDose > _maxDose + (floor random _maxDoseDeviation)) then {
+    private _limit = _maxDose + (floor random _maxDoseDeviation);
+    if (_currentDose > _limit) then {
         TRACE_1("exceeded max dose",_currentDose);
-        [_target, _classname] call FUNC(overDose);
+        [_target, _classname, _currentDose, _limit, _classname] call FUNC(overDose);
     };
 };
 
@@ -44,6 +45,6 @@ if (_maxDose > 0) then {
     _x params ["_xMed", "_xLimit"];
     private _inSystem = [_target, _xMed] call EFUNC(medical_status,getMedicationCount);
     if (_inSystem > _xLimit) then {
-        [_target, _classname] call FUNC(overDose);
+        [_target, _classname, _inSystem, _xLimit, _xMed] call FUNC(overDose);
     };
 } forEach _incompatibleMedication;
