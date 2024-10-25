@@ -584,6 +584,7 @@ class ADDON {
             timeInSystem = 1800;
             timeTillMaxEffect = 30;
             maxDose = 4;
+            dose = 1;
             incompatibleMedication[] = {};
             viscosityChange = -10;
         };
@@ -595,6 +596,7 @@ class ADDON {
             timeInSystem = 120;
             timeTillMaxEffect = 10;
             maxDose = 9;
+            dose = 1;
             incompatibleMedication[] = {};
         };
         class Adenosine {
@@ -605,6 +607,7 @@ class ADDON {
             timeInSystem = 120;
             timeTillMaxEffect = 15;
             maxDose = 5;
+            dose = 1;
             incompatibleMedication[] = {};
         };
         class PainKillers {
@@ -615,6 +618,7 @@ class ADDON {
             timeInSystem = 420;
             timeTillMaxEffect = 60;
             maxDose = 5;
+            dose = 1;
             incompatibleMedication[] = {};
             viscosityChange = 5;
         };
