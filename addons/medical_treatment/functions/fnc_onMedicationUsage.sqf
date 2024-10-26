@@ -27,7 +27,7 @@ private _maxDose          = GET_NUMBER(_medicationConfig >> "maxDose",getNumber 
 
 if (_maxDose > 0) then {
     private _maxDoseDeviation = GET_NUMBER(_medicationConfig >> "maxDoseDeviation",getNumber (_defaultConfig >> "maxDoseDeviation"));
-    private _currentDose = [_target, _className] call EFUNC(medical_status,getMedicationCount) select 1;
+    private _currentDose = [_target, _className] call EFUNC(medical_status,getMedicationCount) select 0;
     // Because both {floor random 0} and {floor random 1} return 0
     if (_maxDoseDeviation > 0) then {
         _maxDoseDeviation = _maxDoseDeviation + 1;
@@ -43,7 +43,7 @@ if (_maxDose > 0) then {
 // Check incompatible medication (format [med,limit])
 {
     _x params ["_xMed", "_xLimit"];
-    private _inSystem = [_target, _xMed] call EFUNC(medical_status,getMedicationCount);
+    private _inSystem = ([_target, _xMed] call EFUNC(medical_status,getMedicationCount)) select 0;
     if (_inSystem > _xLimit) then {
         [_target, _classname, _inSystem, _xLimit, _xMed] call FUNC(overDose);
     };
