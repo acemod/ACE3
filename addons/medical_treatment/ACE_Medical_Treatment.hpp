@@ -572,7 +572,7 @@ class ADDON {
         maxDoseDeviation = 2;
         // The dose of the medication, to allow for multiple dose types of the same medication
         dose = 1;
-        // Function to execute upon overdose. Arguments passed to call back are 0: unit <OBJECT>, 1: medicationClassName <STRING>
+        // Function to execute upon overdose. Arguments passed to call back are 0: Patient <OBJECT>, 1: Medication classname <STRING>, 2: Medication dosage <NUMBER>, 3: Overdose threshold <NUMBER>, 4: Incompatible medication that caused overdose (can be the medication itself) <STRING> (default: "")
         onOverDose = "";
         // The viscosity of a fluid is a measure of its resistance to gradual deformation by shear stress or tensile stress. For liquids, it corresponds to the informal concept of "thickness". This value will increase/decrease the viscoty of the blood with the percentage given. Where 100 = max. Using the minus will decrease viscosity
         viscosityChange = 0;
