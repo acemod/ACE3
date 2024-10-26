@@ -348,6 +348,7 @@
             <Korean>화물 크기 확인</Korean>
             <Japanese>貨物としての大きさを確認</Japanese>
             <Russian>Проверить размер груза</Russian>
+            <French>Vérifier la taille de la cargaison</French>
         </Key>
         <Key ID="STR_ACE_Cargo_SizeMenu">
             <English>Cargo Size: %1</English>
