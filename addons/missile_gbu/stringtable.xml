@@ -8,6 +8,7 @@
             <Japanese>GBU-12 [ACE]</Japanese>
             <Korean>GBU-12 [ACE]</Korean>
             <Russian>GBU-12 [ACE]</Russian>
+            <French>GBU-12 [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_fab250">
             <English>FAB-250M-54 [ACE]</English>
@@ -16,6 +17,7 @@
             <Japanese>FAB-250M-54 [ACE]</Japanese>
             <Korean>FAB-250M-54 [ACE]</Korean>
             <Russian>ФАБ-250M-54 [ACE]</Russian>
+            <French>FAB-250M-54 [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_12_1x">
             <English>1x GBU-12 [ACE]</English>
@@ -24,6 +26,7 @@
             <Japanese>1x GBU-12 [ACE]</Japanese>
             <Korean>1x GBU-12 [ACE]</Korean>
             <Russian>1x GBU-12 [ACE]</Russian>
+            <French>1x GBU-12 [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_12_2x">
             <English>2x GBU-12 [ACE]</English>
@@ -32,6 +35,7 @@
             <Japanese>2x GBU-12 [ACE]</Japanese>
             <Korean>2x GBU-12 [ACE]</Korean>
             <Russian>2x GBU-12 [ACE]</Russian>
+            <French>2x GBU-12 [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_12_4x">
             <English>4x GBU-12 [ACE]</English>
@@ -40,6 +44,7 @@
             <Japanese>4x GBU-12 [ACE]</Japanese>
             <Korean>4x GBU-12 [ACE]</Korean>
             <Russian>4x GBU-12 [ACE]</Russian>
+            <French>4x GBU-12 [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_fab250_1x">
             <English>1x FAB-250M-54 [ACE]</English>
@@ -48,6 +53,7 @@
             <Japanese>1x FAB-250M-54 [ACE]</Japanese>
             <Korean>1x FAB-250M-54 [ACE]</Korean>
             <Russian>1x ФАБ-250M-54 [ACE]</Russian>
+            <French>1x FAB-250M-54 [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_fab250_2x">
             <English>2x FAB-250M-54 [ACE]</English>
@@ -56,6 +62,7 @@
             <Japanese>2x FAB-250M-54 [ACE]</Japanese>
             <Korean>2x FAB-250M-54 [ACE]</Korean>
             <Russian>2x ФАБ-250M-54 [ACE]</Russian>
+            <French>2x FAB-250M-54 [ACE]</French>
         </Key>
     </Package>
 </Project>
