@@ -156,7 +156,7 @@
             <Russian>Включает визуальную трассировку фрагментации и осколочных снарядов.</Russian>
             <Italian>Abilita il tracciamento visivo di effetti di frammentazione e spalling.</Italian>
             <Spanish>Habilitar trazado visual de los proyectiles generados por la fragmentación y el astillamiento.</Spanish>
-            <French></French>
+            <French>Active le suivi des éclats/explosions.</French>
         </Key>
         <Key ID="STR_ACE_Frag_HitSphereEnable">
             <English>Draw Event Spheres</English>
