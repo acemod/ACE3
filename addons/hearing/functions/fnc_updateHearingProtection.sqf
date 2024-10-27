@@ -66,7 +66,7 @@ if (_goggles != "") then {
 };
 
 // Unequip electronic hearing protection when gear has one built in
-if (_hasEHPOn && _hasBuiltInEHO) then {
+if (_hasEHPOn && _hasBuiltInEHP) then {
     [ACE_player, false] call FUNC(removeEHP);
 };
 
