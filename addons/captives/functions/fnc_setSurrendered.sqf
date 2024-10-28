@@ -39,7 +39,7 @@ if ((_unit getVariable [QGVAR(isSurrendering), false]) isEqualTo _state) exitWit
 };
 
 if (_state) then {
-    if ((vehicle _unit) != _unit) exitWith {WARNING("Cannot surrender while mounted");};
+    if (!isNull objectParent _unit) exitWith {WARNING("Cannot surrender while mounted");};
     if (_unit getVariable [QGVAR(isHandcuffed), false]) exitWith {WARNING("Cannot surrender while handcuffed");};
 
     _unit setVariable [QGVAR(isSurrendering), true, true];
@@ -57,7 +57,7 @@ if (_state) then {
     // fix anim on mission start (should work on dedicated servers)
     [{
         params ["_unit"];
-        if (_unit getVariable [QGVAR(isSurrendering), false] && {(vehicle _unit) == _unit}) then {
+        if (_unit getVariable [QGVAR(isSurrendering), false] && {isNull objectParent _unit}) then {
             //Adds an animation changed eh
             //If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
             private _animChangedEHID = _unit getVariable [QGVAR(surrenderAnimEHID), -1];
@@ -89,7 +89,7 @@ if (_state) then {
     if !(_unit call EFUNC(common,isAwake)) exitWith {};  //don't touch animations if unconscious
 
     //if we are in "hands up" animationState, crack it now
-    if (((vehicle _unit) == _unit) && {(animationState _unit) == "ACE_AmovPercMstpSsurWnonDnon"}) then {
+    if ((isNull objectParent _unit) && {(animationState _unit) == "ACE_AmovPercMstpSsurWnonDnon"}) then {
         [_unit, "ACE_AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);
     } else {
         //spin up a PFEH, to watching animationState for the next 20 seconds to make sure we don't enter "hands up"
@@ -102,7 +102,7 @@ if (_state) then {
                 [_pfID] call CBA_fnc_removePerFrameHandler;
             };
             //Only break animation if they are actualy the "hands up" animation (because we are using switchmove there won't be an transition)
-            if (((vehicle _unit) == _unit) && {(animationState _unit) == "ACE_AmovPercMstpSsurWnonDnon"}) exitWith {
+            if ((isNull objectParent _unit) && {(animationState _unit) == "ACE_AmovPercMstpSsurWnonDnon"}) exitWith {
                 [_pfID] call CBA_fnc_removePerFrameHandler;
                 //Break out of hands up animation loop
                 [_unit, "ACE_AmovPercMstpSsurWnonDnon_AmovPercMstpSnonWnonDnon", 2] call EFUNC(common,doAnimation);

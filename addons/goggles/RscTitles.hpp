@@ -1,6 +1,6 @@
-class RscTitles {
-    #include "define.hpp"
+class RscPicture;
 
+class RscTitles {
     class RscACE_Goggles_BaseTitle {
         idd = -1;
         onLoad = "uiNamespace setVariable ['ACE_Goggles_Display', _this select 0]";
@@ -19,6 +19,10 @@ class RscTitles {
         class controls {
             class gogglesImage: RscPicture {
                 idc = 10650;
+                x = "safeZoneX";
+                y = "safeZoneY";
+                w = "safeZoneW";
+                h = "safeZoneH";
             };
         };
     };
@@ -33,9 +37,17 @@ class RscTitles {
         class controls {
             class dirtImage: RscPicture {
                 idc = 10660;
+                x = "safeZoneX";
+                y = "safeZoneY";
+                w = "safeZoneW";
+                h = "safeZoneH";
             };
             class dustImage: RscPicture {
                 idc = 10662;
+                x = "safeZoneX";
+                y = "safeZoneY";
+                w = "safeZoneW";
+                h = "safeZoneH";
             };
         };
     };

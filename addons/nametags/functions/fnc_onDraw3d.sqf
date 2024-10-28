@@ -78,7 +78,6 @@ if (_enabledTagsCursor) then {
 if (_enabledTagsNearby) then {
     // Find valid targets and cache them
     private _targets = [[], {
-        //IGNORE_PRIVATE_WARNING ["_camPosAGL", "_maxDistance"];
         private _nearMen = _camPosAGL nearObjects ["CAManBase", _maxDistance + 7];
         _nearMen = _nearMen select {
             _x != ACE_player &&
@@ -88,7 +87,7 @@ if (_enabledTagsNearby) then {
             {!isObjectHidden _x}
         };
         private _crewMen = [];
-        if (vehicle ACE_player != ACE_player) then {
+        if (!isNull objectParent ACE_player) then {
             _crewMen = (crew vehicle ACE_player) select {
                 _x != ACE_player &&
                 {(side group _x) == (side group ACE_player)} &&
