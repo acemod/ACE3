@@ -6,7 +6,6 @@
             <Russian>ACE Медицина</Russian>
             <Polish>ACE Opcje medyczne</Polish>
             <Spanish>Médico ACE</Spanish>
-            <German>ACE-Medicsystem</German>
             <Czech>ACE Zdravotnické</Czech>
             <Portuguese>ACE Médico</Portuguese>
             <French>ACE Médical</French>
@@ -18,6 +17,24 @@
             <Turkish>ACE Medikal</Turkish>
             <Japanese>ACE 医療</Japanese>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_Category">
+            <English>ACE Medical Treatment</English>
+            <German>ACE-Medicsystem Behandlung</German>
+<!--            <Russian>ACE Медицина</Russian>             -->
+<!--            <Polish>ACE Opcje medyczne</Polish>         -->
+<!--            <Spanish>Médico ACE</Spanish>               -->
+<!--            <Czech>ACE Zdravotnické</Czech>             -->
+<!--            <Portuguese>ACE Médico</Portuguese>         -->
+<!--            <French>ACE Médical</French>                -->
+<!--            <Hungarian>ACE Orvosi Rendszer</Hungarian>  -->
+<!--            <Italian>ACE Medica</Italian>               -->
+<!--            <Korean>ACE 의료</Korean>                   -->
+<!--            <Chinesesimp>ACE 医疗</Chinesesimp>         -->
+<!--            <Chinese>ACE 醫療系統</Chinese>             -->
+<!--            <Turkish>ACE Medikal</Turkish>              -->
+<!--            <Japanese>ACE 医療</Japanese>               -->
+        </Key>
+
         <Key ID="STR_ACE_Medical_Interface_Category">
             <English>ACE Medical Interface</English>
             <Russian>ACE Медицина Интерфейс</Russian>
