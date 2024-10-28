@@ -100,8 +100,10 @@ class GVAR(actions) {
         displayNameProgress = CSTRING(Applying_Splint);
         category = "bandage";
         icon = QPATHTOEF(medical_gui,ui\splint.paa);
+        medicRequired = QGVAR(medicSplint);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         items[] = {"ACE_splint"};
+        treatmentLocations = QGVAR(locationSplint);
         treatmentTime = QGVAR(treatmentTimeSplint);
         callbackSuccess = QFUNC(splint);
         condition = QFUNC(canSplint);

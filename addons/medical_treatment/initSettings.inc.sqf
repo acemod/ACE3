@@ -155,6 +155,24 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(medicSplint),
+    "LIST",
+    [LSTRING(MedicSplint_DisplayName), LSTRING(MedicSplint_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(locationSplint),
+    "LIST",
+    [LSTRING(LocationSplint_DisplayName), LSTRING(LocationSplint_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(medicPAK),
     "LIST",
     [LSTRING(MedicPAK_DisplayName), LSTRING(MedicPAK_Description)],
