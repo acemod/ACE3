@@ -17,7 +17,7 @@
  * Public: No
  */
 
-params ["_waypointName","_waypointPosASL"];
+params ["_waypointName", "_waypointPosASL"];
 
 private _waypoints = ACE_player getVariable [QGVAR(waypoints), []];
 GVAR(currentWaypoint) = _waypoints pushBack [_waypointName, _waypointPosASL];
