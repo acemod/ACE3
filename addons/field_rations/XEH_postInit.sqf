@@ -74,26 +74,31 @@ if !(hasInterface) exitWith {};
     } forEach _subActions;
 
     // Add inventory context menu option to consume items
-    ["ACE_ItemCore", ["CONTAINER"], LSTRING(EatDrink), [], QPATHTOF(ui\icon_survival.paa),
-        [
-            {true},
-            {
-                params ["", "", "_item"];
-
-                XGVAR(enabled) && {
-                    private _config = configFile >> "CfgWeapons" >> _item;
-                    getNumber (_config >> QXGVAR(thirstQuenched)) > 0
-                    || {getNumber (_config >> QXGVAR(hungerSatiated)) > 0}
-                }
-            }
-        ],
+    private _eatOrDrinkCondition = [
+        {true},
         {
-            params ["_unit", "", "_item"];
-            private _itemConfig = configFile >> "CfgWeapons" >> _item;
-            [objNull, _unit, [_item, _itemConfig, false]] call FUNC(consumeItem);
-            false
+            params ["", "", "_item"];
+
+            XGVAR(enabled) && {
+                private _config = _item call CBA_fnc_getItemConfig;
+                getNumber (_config >> QXGVAR(thirstQuenched)) > 0
+                || {getNumber (_config >> QXGVAR(hungerSatiated)) > 0}
+            }
         }
-    ] call CBA_fnc_addItemContextMenuOption;
+    ];
+    private _eatOrDrinkStatement = {
+        params ["_unit", "", "_item"];
+        private _itemConfig = _item call CBA_fnc_getItemConfig;
+        private _isMagazine = _item isKindOf ["CA_Magazine", configFile >> "CfgMagazines"];
+        [objNull, _unit, [_item, _itemConfig, _isMagazine]] call FUNC(consumeItem);
+        false // Close context menu
+    };
+
+    {
+        [_x, ["CONTAINER"], LSTRING(EatDrink), [], QPATHTOF(ui\icon_survival.paa),
+            _eatOrDrinkCondition, _eatOrDrinkStatement
+        ] call CBA_fnc_addItemContextMenuOption;
+    } forEach ["ACE_ItemCore", "CA_Magazine"];
 
     // Add water source helpers when interaction menu is opened
     ["ace_interactMenuOpened", LINKFUNC(addWaterSourceInteractions)] call CBA_fnc_addEventHandler;
