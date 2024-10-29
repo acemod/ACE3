@@ -165,14 +165,20 @@ case (APP_MODE_WAYPOINTS): {
             private _2dDistanceKm = ((getPosASL ACE_player) distance2D _wpPos) / 1000;
             _wpListBox lbSetTextRight [_forEachIndex, (format ["%1km", _2dDistanceKm toFixed GVAR(waypointPrecision)])];
         } forEach _waypoints;
-
-        _currentIndex = (_currentIndex max 0) min ((count _waypoints) - 1);
+        
+        // Select last created waypoint
+        if ((count _waypoints) > (GVAR(prevWaypointsCount))) then {
+            _currentIndex = (count _waypoints) - 1;
+        } else {        
+            _currentIndex = (_currentIndex max 0) min ((count _waypoints) - 1);
+        };
         if ((lbCurSel _wpListBox) != _currentIndex) then {
             _wpListBox lbSetCurSel _currentIndex;
         };
-
+        
         //Reset focus to a dummy ctrl (top button), otherwise HOME/POS1 key goes to top of listBox and has keybind blocked
         ctrlSetFocus (_display displayCtrl IDC_TOPMENUBUTTON);
+        GVAR(prevWaypointsCount) = count _waypoints;
     };
 
 case (APP_MODE_SETUP): {
