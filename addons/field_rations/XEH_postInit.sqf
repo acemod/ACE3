@@ -89,7 +89,7 @@ if !(hasInterface) exitWith {};
     private _eatOrDrinkStatement = {
         params ["_unit", "", "_item"];
         private _itemConfig = _item call CBA_fnc_getItemConfig;
-        private _isMagazine = _item isKindOf ["CA_Magazine", configFile >> "CfgMagazines"];
+        private _isMagazine = isClass (configFile >> "CfgMagazines" >> _item);
         [objNull, _unit, [_item, _itemConfig, _isMagazine]] call FUNC(consumeItem);
         false // Close context menu
     };
