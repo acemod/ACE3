@@ -4,7 +4,8 @@
     [{
         params ["_projectile", "_posASL"];
 
-        // TODO: explain why we're doing we're checking shotInfo
+        // check if a projectile is blacklisted and that it will inflict damage when it explodes to avoid
+        // multiple events being sent from different clients for one explosion
         if (_projectile getVariable [QGVAR(blacklisted), false] || !(_projectile getShotInfo 5)) exitWith {};
 
         private _ammo = typeOf _projectile;
