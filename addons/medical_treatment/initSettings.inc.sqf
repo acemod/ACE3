@@ -158,7 +158,7 @@
     QGVAR(medicMorphine),
     "LIST",
     [LSTRING(MedicMorphine_DisplayName), LSTRING(MedicMorphine_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    LSTRING(Category),
     [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 0],
     true
 ] call CBA_fnc_addSetting;
@@ -167,7 +167,7 @@
     QGVAR(locationMorphine),
     "LIST",
     [LSTRING(LocationMorphine_DisplayName), LSTRING(LocationMorphine_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    LSTRING(Category),
     [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
     true
 ] call CBA_fnc_addSetting;
@@ -176,7 +176,7 @@
     QGVAR(medicAdenosine),
     "LIST",
     [LSTRING(MedicAdenosine_DisplayName), LSTRING(MedicAdenosine_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    LSTRING(Category),
     [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 0],
     true
 ] call CBA_fnc_addSetting;
@@ -185,7 +185,7 @@
     QGVAR(locationAdenosine),
     "LIST",
     [LSTRING(LocationAdenosine_DisplayName), LSTRING(LocationAdenosine_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    LSTRING(Category),
     [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
     true
 ] call CBA_fnc_addSetting;
