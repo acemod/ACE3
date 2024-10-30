@@ -86,6 +86,7 @@
             <German>Aktiviert &amp; kann Tod/Herzstillstand diagnostizieren [Direkt]</German>
             <Italian>Abilitato e può diagnosticare Morte/Arresto Cardiaco [Esplicito]</Italian>
             <French>Activé &amp; peut diagnostiquer la mort/l'arrêt cardiaque [Direct].</French>
+            <Spanish>Habilitado y poder diagnosticar Muerte/Parada cardíaca [Directamente]</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedMedication_DisplayName">
             <English>Advanced Medication</English>
@@ -4220,6 +4221,7 @@
             <German>%1 ist bewusstlos</German>
             <Italian>%1 è privo di sensi</Italian>
             <French>%1 est inconscient</French>
+            <Spanish>%1 está inconsciente</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_CardiacArrest">
             <English>%1 is not responsive, taking shallow gasps and convulsing</English>
@@ -4242,6 +4244,7 @@
             <German>%1 ist im Herzstillstand</German>
             <Italian>%1 è in arresto cardiaco</Italian>
             <French>%1 est en arrêt cardiaque</French>
+            <Spanish>%1 en parada cardíaca</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Dead">
             <English>%1 is not responsive, motionless and cold</English>
@@ -4264,6 +4267,7 @@
             <German>%1 ist tod</German>
             <Italian>%1 è morto</Italian>
             <French>%1 est mort</French>
+            <Spanish>%1 está muerto</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>

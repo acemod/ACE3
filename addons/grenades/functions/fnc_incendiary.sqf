@@ -44,21 +44,11 @@ if (isNull _projectile) exitWith {TRACE_1("null",_projectile);};
 private _position = position _projectile;
 
 // Alert nearby hostile AI
-private _nearLocalEnemies = [];
-
 {
-    {
-        if (local _x && {[_center, side group _x] call BIS_fnc_sideIsEnemy}) then { // WE WANT THE OBJECT'S SIDE HERE!
-            _nearLocalEnemies pushBackUnique _x;
-        };
-    } forEach crew _x;
-} forEach (_position nearObjects ALERT_NEAR_ENEMY_RANGE); //@todo replace with nearEntities in 2.18
-
-{
-    if (behaviour _x in ["SAFE", "AWARE"]) then {
+    if (local _x && {[_center, side group _x] call BIS_fnc_sideIsEnemy} && {behaviour _x in ["SAFE", "AWARE"]}) then { // WE WANT THE OBJECT'S SIDE HERE!
         _x setBehaviour "COMBAT";
     };
-} forEach _nearLocalEnemies;
+} forEach ([_position, ALERT_NEAR_ENEMY_RANGE, ALERT_NEAR_ENEMY_RANGE, 0, false] nearEntities [["CAManBase"], false, true, true]);
 
 // Fire particles
 private _fire = "#particlesource" createVehicleLocal _position;

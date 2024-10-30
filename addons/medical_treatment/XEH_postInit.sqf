@@ -72,7 +72,6 @@ if (["ace_trenches"] call EFUNC(common,isModLoaded)) then {
             LLSTRING(checkHeadstoneName),
             QPATHTOEF(medical_gui,ui\grave.paa),
             {
-                //IGNORE_PRIVATE_WARNING ["_target"];
                 [
                     [_target getVariable QGVAR(headstoneData)],
                     true
