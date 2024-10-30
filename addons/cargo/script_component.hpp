@@ -20,8 +20,5 @@
 
 #define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
 
-#define CARGO_DESTROY_FUEL_CHANCE 0.5
-#define CARGO_DESTROY_AMMO_CHANCE 0.8
-
 #define CARGO_TUMBLE_RANDOM_MUL 8
 #define CARGO_TUMBLE_TORQUE 500

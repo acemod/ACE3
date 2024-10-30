@@ -39,31 +39,6 @@
 [QGVAR(unloadedCargoOnKilled), {
     params ["_item", "_vehicle"];
 
-    // Remove invulernability from this addon
-    [_item, "blockDamage", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
-
-    // Check if item can take damage
-    if (isDamageAllowed _item) then {
-        // Random chance of destroying fuel and ammo storage
-        if (
-            random 1 < CARGO_DESTROY_FUEL_CHANCE &&
-            {getFuelCargo _item > 0 || {missionNamespace getVariable [QEGVAR(refuel,enabled), false] && {(_item call EFUNC(refuel,getFuel)) > 0}}}
-        ) then {
-            _item setDamage 1;
-        };
-
-        // If the item has ammunition, detonate it
-        if (["ace_cookoff"] call EFUNC(common,isModLoaded) && {random 1 < CARGO_DESTROY_AMMO_CHANCE} && {(_item call EFUNC(cookoff,getVehicleAmmo)) select 1 > 0}) then {
-            [QEGVAR(cookoff,cookOffBoxServer), _item] call CBA_fnc_serverEvent;
-        };
-
-        // Readd invulnerability for while, so that items aren't destroyed when being thrown
-        [_item, "blockDamage", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-
-        // Even though QGVAR(serverUnload) handles that on the server, make sure invulnerability from this addon is removed
-        [EFUNC(common,statusEffect_set), [_item, "blockDamage", QUOTE(ADDON), false], 2] call CBA_fnc_waitAndExecute;
-    };
-
     // Get direction from vehicle to item, so that item is thrown away from vehicle
     private _vectorDir = (getPosWorld _vehicle) vectorFromTo (getPosWorld _item);
 
