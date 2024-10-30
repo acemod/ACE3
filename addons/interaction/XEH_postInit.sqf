@@ -187,3 +187,7 @@ private _action = [
 {
     [_x, 0, ["ACE_MainActions"], _action, true] call EFUNC(interact_menu,addActionToClass);
 } forEach ["WeaponHolder", "WeaponHolderSimulated"];
+
+GVAR(throwablesCache) = createHashMap;
+GVAR(lastLethalThrowable) = "";
+GVAR(lastNonLethalThrowable) = "";
