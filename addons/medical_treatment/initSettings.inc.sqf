@@ -155,6 +155,24 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(medicMorphine),
+    "LIST",
+    [LSTRING(MedicMorphine_DisplayName), LSTRING(MedicMorphine_Description)],
+    LSTRING(Category),
+    [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(locationMorphine),
+    "LIST",
+    [LSTRING(LocationMorphine_DisplayName), LSTRING(LocationMorphine_Description)],
+    LSTRING(Category),
+    [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(medicSplint),
     "LIST",
     [LSTRING(MedicSplint_DisplayName), LSTRING(MedicSplint_Description)],
@@ -163,10 +181,28 @@
     true
 ] call CBA_fnc_addSetting;
 
+
 [
     QGVAR(locationSplint),
     "LIST",
     [LSTRING(LocationSplint_DisplayName), LSTRING(LocationSplint_Description)],
+    [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
+    true,
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(medicAdenosine),
+    "LIST",
+    [LSTRING(MedicAdenosine_DisplayName), LSTRING(MedicAdenosine_Description)],
+    LSTRING(Category),
+    [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(locationAdenosine),
+    "LIST",
+    [LSTRING(LocationAdenosine_DisplayName), LSTRING(LocationAdenosine_Description)],
     LSTRING(Category),
     [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
     true
