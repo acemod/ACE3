@@ -4,7 +4,8 @@
     [{
         params ["_projectile", "_posASL"];
 
-        if (_projectile getVariable [QGVAR(blacklisted), false]) exitWith {};
+        if (_projectile getVariable [QGVAR(blacklisted), false]
+            || !((getShotInfo _projectile)#5)) exitWith {};
 
         private _ammo = typeOf _projectile;
         if (GVAR(reflectionsEnabled)) then {
