@@ -7,7 +7,7 @@
  * 0: Item or magazine <STRING>
  * 1: Item config <CONFIG> (default: nil)
  * 2: Whether item is a magazine. If true, config should be passed as well <BOOL> (default: false)
- * 3: If this is being called from preStart. Determines if key will be set even if it's false. If true, config should be passed as well (default: false)
+ * 3: Skip setting false keys in the cache, mostly used for building it during preStart <BOOL> (default: false)
  *
  * Return Value:
  * True if class is a misc item, otherwise false <BOOL>
@@ -18,13 +18,13 @@
  * Public: No
 */
 
-params ["_item", "_config", ["_isMag", false], ["_inPreStart", false]];
-TRACE_4("",_item,_config,_isMag,_inPreStart);
+params ["_item", "_config", ["_isMag", false], ["_skipFalseKeys", false]];
+TRACE_4("",_item,_config,_isMag,_skipFalseKeys);
 
 private _cache = uiNamespace getVariable QGVAR(isMiscItemCache);
 private _return = _cache get _item;
 
-// Don't replace with getOrDefaultCall, we want the key to only be set if return is true or we are in a mission
+// Don't replace with getOrDefaultCall, we want the key to only be set if return is true or _skipFalseKeys is false
 if (isNil "_return") then {
     private _fnc_hasProperty = {getNumber (_config >> "ACE_asItem") == 1 || {getNumber (_config >> "ACE_isUnique") == 1}};
 
@@ -32,7 +32,7 @@ if (isNil "_return") then {
         case (_item isKindOf ["CBA_MiscItem", configFile >> "CfgWeapons"]): {true}; // CBA misc item, easy
         case (_isMag): _fnc_hasProperty; // Magazine misc item, also easy
 
-        if (!_inPreStart) then {
+        if (isNil "_config") then {
             _config = _item call CBA_fnc_getItemConfig;
         };
         private _itemType = getNumber (_config >> "ItemInfo" >> "type");
