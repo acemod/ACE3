@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Status Effect Name, this should match a corresponding event name <STRING>
  * 1: Send event globally <BOOL>
- * 2: Common Effect Reaons to pre-seed durring init <ARRAY>
+ * 2: Common Effect Reasons to pre-seed during init <ARRAY>
  * 3: Send event to JIP (requires sending event globally) <BOOL>
  *
  * Return Value:
