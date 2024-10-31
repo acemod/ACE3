@@ -60,7 +60,7 @@ if (_target isKindOf "CAManBase") then {
 
 _unit removeWeapon "ACE_FakePrimaryWeapon";
 
-[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // Prevent object from flipping inside buildings
 if (_inBuilding && {!_isClone}) then {
@@ -99,7 +99,7 @@ if (_UAVCrew isNotEqualTo []) then {
 };
 
 // Fixes not being able to move when in combat pace
-[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // Reset mass
 private _mass = _target getVariable [QGVAR(originalMass), 0];

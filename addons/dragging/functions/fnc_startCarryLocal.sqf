@@ -78,11 +78,11 @@ if (_target isKindOf "CAManBase") then {
     private _canRun = _weight call FUNC(canRun_carry);
 
     // Only force walking if we're overweight
-    [_unit, "forceWalk", QUOTE(ADDON), !_canRun] call EFUNC(common,statusEffect_set);
-    [_unit, "blockSprint", QUOTE(ADDON), _canRun] call EFUNC(common,statusEffect_set);
+    [_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), !_canRun] call EFUNC(common,statusEffect_set);
+    [_unit, QEGVAR(common,blockSprint), QUOTE(ADDON), _canRun] call EFUNC(common,statusEffect_set);
 };
 
-[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 // Prevents dragging and carrying at the same time
 _unit setVariable [QGVAR(isCarrying), true, true];

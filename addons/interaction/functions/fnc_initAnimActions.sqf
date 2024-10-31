@@ -73,8 +73,8 @@ private _statement = {
 
                         if (!isNull _object) then {
                             // Prevent items from taking damage when unloaded
-                            [_object, "blockDamage", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-                            [EFUNC(common,statusEffect_set), [_object, "blockDamage", QUOTE(ADDON), false], 2] call CBA_fnc_waitAndExecute;
+                            [_object, QEGVAR(common,blockDamage), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+                            [EFUNC(common,statusEffect_set), [_object, QEGVAR(common,blockDamage), QUOTE(ADDON), false], 2] call CBA_fnc_waitAndExecute;
 
                             _success = true;
                         } else {

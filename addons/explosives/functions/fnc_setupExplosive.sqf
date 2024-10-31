@@ -29,8 +29,8 @@ if (!isClass (configFile >> "CfgVehicles" >> _setupObjectClass)) exitWith {ERROR
 private _p3dModel = getText (configFile >> "CfgVehicles" >> _setupObjectClass >> "model");
 if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!
 
-[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 //Show mouse buttons:
 [localize LSTRING(PlaceAction), localize LSTRING(CancelAction), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
@@ -149,8 +149,8 @@ GVAR(TweakedAngle) = 0;
         [_pfID] call CBA_fnc_removePerFrameHandler;
         GVAR(pfeh_running) = false;
 
-        [_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
-        [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+        [_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+        [_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
         [] call EFUNC(interaction,hideMouseHint);
         [_unit, "DefaultAction", (_unit getVariable [QGVAR(placeActionEH), -1])] call EFUNC(common,removeActionEventHandler);
         [_unit, "zoomtemp", (_unit getVariable [QGVAR(cancelActionEH), -1])] call EFUNC(common,removeActionEventHandler);

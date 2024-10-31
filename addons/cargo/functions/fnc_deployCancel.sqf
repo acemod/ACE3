@@ -24,8 +24,8 @@ GVAR(deployPFH) = -1;
 params ["_unit"];
 
 // Enable running again
-[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // Delete placement dummy
 deleteVehicle GVAR(itemPreviewObject);

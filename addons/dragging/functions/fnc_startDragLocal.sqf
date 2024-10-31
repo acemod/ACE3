@@ -73,7 +73,7 @@ if (!GVAR(dragAndFire)) then {
 // Save the weapon so we can monitor if it changes
 _unit setVariable [QGVAR(currentWeapon), currentWeapon _unit];
 
-[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 // Can't play action that depends on weapon if it was added the same frame
 if !(_unit call EFUNC(common,isSwimming)) then {

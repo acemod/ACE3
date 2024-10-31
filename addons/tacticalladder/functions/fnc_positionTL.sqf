@@ -20,9 +20,9 @@
 
 params ["_unit", "_ladder"];
 
-// prevent the placing unit from running
-[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+// Prevent the placing unit from running
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 {
     _ladder animate [_x, 0];
@@ -42,8 +42,8 @@ GVAR(cancelTime) = CBA_missionTime + 1; // Workaround to prevent accidental canc
 GVAR(currentStep) = 3;
 GVAR(currentAngle) = 0;
 
-// add mouse buttons and hints
-//private _adjustText = format ["%1, +%2", localize LSTRING(Adjust), localize LSTRING(AdjustTilt)]; // Tilting disabled due to sinking, interaction point offset and unsuitable animation
+// Add mouse buttons and hints
+// private _adjustText = format ["%1, +%2", localize LSTRING(Adjust), localize LSTRING(AdjustTilt)]; // Tilting disabled due to sinking, interaction point offset and unsuitable animation
 [localize LSTRING(Deploy), localize LSTRING(Drop), /*_adjustText*/ localize LSTRING(Adjust)] call EFUNC(interaction,showMouseHint);
 
 _unit setVariable [QGVAR(Deploy), [

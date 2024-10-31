@@ -36,8 +36,8 @@ if (_vehicle == _unit) exitWith {
     [_unit, _magazineClass, _rounds] call EFUNC(csw,reload_handleReturnAmmo);
 };
 
-[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 private _dummy = [_unit, _magazineClass] call FUNC(createDummy);
 [_dummy, _unit] call FUNC(pickUpAmmo);
 

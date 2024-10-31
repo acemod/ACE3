@@ -36,7 +36,7 @@ if (isNull objectParent _playerUnit) then {
     removeAllContainers _playerUnit;
     _playerUnit linkItem  "ItemMap";
 
-    [_playerUnit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+    [_playerUnit, QEGVAR(common,forceWalk), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
     [] call FUNC(addMapFunction);
 };

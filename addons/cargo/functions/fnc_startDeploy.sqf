@@ -40,8 +40,8 @@ if (_classname isEqualType objNull) then {
 };
 
 // Prevent the placing unit from running
-[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 // Create a local preview object
 private _itemPreviewObject = createVehicleLocal [_classname, [0, 0, 0], [], 0, "CAN_COLLIDE"];

@@ -61,7 +61,7 @@ if (_item isEqualType objNull) then {
     };
 
     // Some objects below water will take damage over time, eventually becoming "water logged" and unfixable (because of negative z attach)
-    [_item, "blockDamage", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+    [_item, QEGVAR(common,blockDamage), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
     // Prevent UAVs from firing
     private _UAVCrew = _item call EFUNC(common,getVehicleUAVCrew);

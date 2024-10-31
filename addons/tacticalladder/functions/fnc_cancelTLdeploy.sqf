@@ -22,9 +22,9 @@ params ["_unit", "_key"];
 
 if (_key != 1 || {isNull GVAR(ladder)}) exitWith {};
 
-// enable running again
-[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+// Enable running again
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 detach GVAR(ladder);
 
@@ -32,9 +32,9 @@ GVAR(ladder) animate ["rotate", 0];
 
 {
     GVAR(ladder) animate [_x, 0];
-} forEach __ANIMS; //Don't "optimize" this to a count. See #6607
+} forEach __ANIMS; // Don't "optimize" this to a count. See #6607
 
-// remove mouse buttons and hint
+// Remove mouse buttons and hint
 call EFUNC(interaction,hideMouseHint);
 
 [_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(Common,removeActionEventHandler);

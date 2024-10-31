@@ -54,7 +54,7 @@
     _item setPosASL (AGLToASL _emptyPosAGL);
 
     // Let objects remain invulernable for a short while after placement
-    [EFUNC(common,statusEffect_set), [_item, "blockDamage", QUOTE(ADDON), false], 2] call CBA_fnc_waitAndExecute;
+    [EFUNC(common,statusEffect_set), [_item, QEGVAR(common,blockDamage), QUOTE(ADDON), false], 2] call CBA_fnc_waitAndExecute;
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(paradropItem), {

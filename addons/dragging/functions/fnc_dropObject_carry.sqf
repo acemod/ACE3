@@ -73,9 +73,9 @@ if (!isNil "_previousWeaponState") then {
     _unit setVariable [QGVAR(previousWeapon), nil, true];
 };
 
-[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
-[_unit, "blockSprint", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockSprint), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // Prevent object from flipping inside buildings
 if (_inBuilding && {!_isClone}) then {

@@ -59,7 +59,7 @@ if (_vehicle turretLocal [0]) then {
         TRACE_2("assemblyConfig present",_vehicle,_assemblyMode);
         // Disable vanilla assembly if assemblyMode enabled
         // Need to wait to allow setting object vars during assembly, but since this function runs 1 second after vehicle init, it can run immediately
-        [_vehicle, "disableWeaponAssembly", QUOTE(ADDON), _assemblyMode] call EFUNC(common,statusEffect_set);
+        [_vehicle, QEGVAR(common,disableWeaponAssembly), QUOTE(ADDON), _assemblyMode] call EFUNC(common,statusEffect_set);
     };
 };
 

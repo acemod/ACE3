@@ -86,7 +86,7 @@ if (_UAVCrew isNotEqualTo []) then {
 [LINKFUNC(dragObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
 
 // Fixes not being able to move when in combat pace
-[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 // API
 [QGVAR(startedDrag), [_unit, _target]] call CBA_fnc_localEvent;

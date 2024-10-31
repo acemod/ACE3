@@ -17,16 +17,16 @@
 
 params ["_unit"];
 
-// prevent the placing unit from running
-[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+// Prevent the placing unit from running
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 // create the sandbag
 private _sandBag = createVehicle ["ACE_SandbagObject_NoGeo", [0, 0, 0], [], 0, "NONE"];
 
 GVAR(sandBag) = _sandBag;
 
-// prevent collisions with sandbag
+// Prevent collisions with sandbag
 [QEGVAR(common,enableSimulationGlobal), [_sandBag, false]] call CBA_fnc_serverEvent;
 
 GVAR(deployDirection) = 0;
@@ -43,7 +43,7 @@ GVAR(deployPFH) = [{
     _sandBag setDir (GVAR(deployDirection) + getDir _unit);
 }, 0, [_unit, _sandBag]] call CBA_fnc_addPerFrameHandler;
 
-// add mouse button action and hint
+// Add mouse button action and hint
 [localize LSTRING(ConfirmDeployment), localize LSTRING(CancelDeployment), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
 
 _unit setVariable [QGVAR(Deploy), [

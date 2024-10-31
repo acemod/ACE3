@@ -27,8 +27,8 @@ GVAR(trenchPlacementData) = getArray (configFile >> "CfgVehicles" >> _trenchClas
 TRACE_1("",GVAR(trenchPlacementData));
 
 // prevent the placing unit from running
-[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 // create the trench
 private _trench = createVehicle [_noGeoModel, [0, 0, 0], [], 0, "NONE"];

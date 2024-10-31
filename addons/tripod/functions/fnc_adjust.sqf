@@ -25,7 +25,7 @@ GVAR(adjustPFH) = [{
 
     if (!(_unit getVariable [QGVAR(adjusting), false]) || {isNull _tripod} || {_unit distance _tripod > 5}) exitWith {
         call EFUNC(interaction,hideMouseHint);
-        [_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+        [_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
         [_unit, "DefaultAction", _unit getVariable [QGVAR(Adjust), -1]] call EFUNC(common,removeActionEventHandler);
 
@@ -38,7 +38,7 @@ GVAR(adjustPFH) = [{
     } forEach ["slide_down_tripod", "retract_leg_1", "retract_leg_2", "retract_leg_3"];
 }, 0, [_unit, _tripod]] call CBA_fnc_addPerFrameHandler;
 
-[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 // add mouse button action and hint
 [LLSTRING(Done), "", LLSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
 

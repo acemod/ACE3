@@ -36,9 +36,9 @@ if (EGVAR(medical,fractures) > 0) then {
         // Block sprint / force walking based on fracture setting and leg splint status
         private _hasLegSplint = (_fractures select 4) == -1 || {(_fractures select 5) == -1};
         if (EGVAR(medical,fractures) == 2) then {
-            [_unit, "blockSprint", QEGVAR(medical,fracture), _hasLegSplint] call EFUNC(common,statusEffect_set);
+            [_unit, QEGVAR(common,blockSprint), QEGVAR(medical,fracture), _hasLegSplint] call EFUNC(common,statusEffect_set);
         } else {
-            [_unit, "forceWalk", QEGVAR(medical,fracture), _hasLegSplint] call EFUNC(common,statusEffect_set);
+            [_unit, QEGVAR(common,forceWalk), QEGVAR(medical,fracture), _hasLegSplint] call EFUNC(common,statusEffect_set);
         };
 
         if ((_fractures select 2) == -1) then { _aimFracture = _aimFracture + 2; };

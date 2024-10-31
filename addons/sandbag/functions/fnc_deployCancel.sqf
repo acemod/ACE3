@@ -20,18 +20,18 @@ params ["_unit", "_key"];
 
 if (_key != 1 || {GVAR(deployPFH) == -1}) exitWith {};
 
-// enable running again
-[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+// Enable running again
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
-// delete placement dummy
+// Delete placement dummy
 deleteVehicle GVAR(sandBag);
 
-// remove deployment pfh
+// Remove deployment pfh
 [GVAR(deployPFH)] call CBA_fnc_removePerFrameHandler;
 GVAR(deployPFH) = -1;
 
-// remove mouse button actions
+// Remove mouse button actions
 call EFUNC(interaction,hideMouseHint);
 
 [_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(common,removeActionEventHandler);

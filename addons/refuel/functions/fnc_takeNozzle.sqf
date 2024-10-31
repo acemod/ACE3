@@ -70,7 +70,7 @@ params [
             if (count _attachPos == 1) then {
                 _attachPos = _attachPos select 0;
             } else {
-                // select closest hook
+                // Select closest hook
                 private _hookDistances = _attachPos apply {_unit distance (_source modelToWorld _x)};
                 _attachPos = _attachPos select (_hookDistances find selectMin _hookDistances);
             };
@@ -80,7 +80,7 @@ params [
             _nozzle setVariable [QGVAR(attachPos), _attachPos, true];
             _nozzle setVariable [QGVAR(source), _source, true];
 
-            [_source, "blockEngine", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+            [_source, QEGVAR(common,blockEngine), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
             _source setVariable [QGVAR(isConnected), true, true];
             _source setVariable [QGVAR(ownedNozzle), _nozzle, true];
 
@@ -95,13 +95,13 @@ params [
         _unit setVariable [QGVAR(nozzle), _nozzle, true];
         _unit setVariable [QGVAR(isRefueling), true];
 
-        // holster weapon
+        // Holster weapon
         _unit setVariable [QGVAR(selectedWeaponOnRefuel), currentWeapon _unit];
         _unit call EFUNC(common,fixLoweredRifleAnimation);
         _unit action ["SwitchWeapon", _unit, _unit, 299];
 
-        [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-        [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+        [_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+        [_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
         [_unit, _nozzle] call FUNC(startNozzleInHandsPFH);
     },

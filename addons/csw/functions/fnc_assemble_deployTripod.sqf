@@ -59,7 +59,7 @@
         };
 
         // Disable vanilla assembly until FUNC(initVehicle) runs and sets the definite value
-        [_cswTripod, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+        [_cswTripod, QEGVAR(common,disableWeaponAssembly), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
         private _posATL = _player getRelPos [2, 0];
         _posATL set [2, ((getPosATL _player) select 2) + 0.5];
@@ -70,7 +70,7 @@
 
         [_player, "PutDown"] call EFUNC(common,doGesture);
 
-        // drag after deploying
+        // Drag after deploying
         if ((missionNamespace getVariable [QGVAR(dragAfterDeploy), false]) && {["ace_dragging"] call EFUNC(common,isModLoaded)}) then {
             if ([_player, _cswTripod] call EFUNC(dragging,canCarry)) then {
                 TRACE_1("starting carry",_cswTripod);

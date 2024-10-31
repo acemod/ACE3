@@ -18,9 +18,9 @@
 
 params ["_unit", "_ladder"];
 
-// enable running again
-[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+// Enable running again
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 private _pos1 = getPosASL _ladder;
 private _pos2 = _ladder modelToWorldWorld (_ladder selectionPosition "check2");
@@ -29,7 +29,7 @@ if (lineIntersects [_pos1, _pos2, _ladder]) exitWith {false};
 
 detach _ladder;
 
-// remove mouse buttons and hint
+// Remove mouse buttons and hint
 call EFUNC(interaction,hideMouseHint);
 
 [_unit, "DefaultAction", _unit getVariable [QGVAR(Deploy), -1]] call EFUNC(common,removeActionEventHandler);

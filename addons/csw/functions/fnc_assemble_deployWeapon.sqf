@@ -83,7 +83,7 @@
             };
 
             // Disable vanilla assembly until FUNC(initVehicle) runs and sets the definite value
-            [_csw, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+            [_csw, QEGVAR(common,disableWeaponAssembly), QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
             _csw setDir _tripodDir;
             _csw setPosATL _tripodPos;

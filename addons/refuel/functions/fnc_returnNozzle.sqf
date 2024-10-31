@@ -48,7 +48,7 @@ if (isNull _nozzle || {_source != _nozzle getVariable QGVAR(source)}) exitWith {
         _source setVariable [QEGVAR(dragging,canCarry), _source getVariable [QGVAR(canCarryLast), false], true];
         _source setVariable [QEGVAR(dragging,canDrag),  _source getVariable [QGVAR(canDragLast),  false], true];
 
-        [_source, "blockEngine", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+        [_source, QEGVAR(common,blockEngine), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
     },
     "",
     localize LSTRING(ReturnAction),

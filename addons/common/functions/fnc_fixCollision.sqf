@@ -18,8 +18,8 @@
 // allowDamage requires local object
 if (!local _this) exitWith {};
 
-// prevent collision damage
-[_this, "blockDamage", "fixCollision", true] call FUNC(statusEffect_set);
+// Prevent collision damage
+[_this, QGVAR(blockDamage), "fixCollision", true] call FUNC(statusEffect_set);
 
-// re-allow damage after 2 seconds
-[{[_this, "blockDamage", "fixCollision", false] call FUNC(statusEffect_set);}, _this, 2] call CBA_fnc_waitAndExecute;
+// Re-allow damage after 2 seconds
+[{[_this, QGVAR(blockDamage), "fixCollision", false] call FUNC(statusEffect_set);}, _this, 2] call CBA_fnc_waitAndExecute;

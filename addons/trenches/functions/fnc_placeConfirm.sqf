@@ -17,15 +17,15 @@
 
 params ["_unit"];
 
-// enable running again
-[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+// Enable running again
+[_unit, QEGVAR(common,forceWalk), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, QEGVAR(common,blockThrow), QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
-// remove dig pfh
+// Remove dig pfh
 [GVAR(digPFH)] call CBA_fnc_removePerFrameHandler;
 GVAR(digPFH) = -1;
 
-// remove mouse button actions
+// Remove mouse button actions
 call EFUNC(interaction,hideMouseHint);
 
 [_unit, "DefaultAction", _unit getVariable [QGVAR(Dig), -1]] call EFUNC(common,removeActionEventHandler);
