@@ -27,7 +27,7 @@ if (isNull _object) exitWith {
 };
 
 // BWC: Status effect names used to not be prefixed
-if (_effectName in STATUS_EFFECTS_BWC) then {
+if (toLowerANSI _effectName in STATUS_EFFECTS_BWC) then {
     TRACE_1("Deprecated effect name used",_effectName);
     _effectName = format [QGVAR(%1), _effectName];
 };
