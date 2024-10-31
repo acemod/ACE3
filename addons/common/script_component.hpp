@@ -30,3 +30,6 @@
 ]
 
 #define DIG_SURFACE_WHITELIST ["grass", "grasstall_exp", "forest_exp", "snow"]
+
+// BWC: Status effect names used to not be prefixed
+#define STATUS_EFFECTS_BWC ["forceWalk", "blockSprint", "setCaptive", "blockDamage", "blockEngine", "blockThrow", "setHidden", "blockRadio", "blockSpeaking", "disableWeaponAssembly", "lockInventory"]

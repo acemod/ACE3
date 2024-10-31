@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * ["setCaptive", true, []] call ace_common_fnc_statusEffect_addType
+ * ["ace_common_setCaptive", true, []] call ace_common_fnc_statusEffect_addType
  *
  * Public: No
  */

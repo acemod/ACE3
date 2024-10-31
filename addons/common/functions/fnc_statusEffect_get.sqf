@@ -13,7 +13,7 @@
  *  1: reasons why it is set true (list of strings, count of 0 = false, 1+ = true) <ARRAY>
  *
  * Example:
- * [player, "forceWalk"] call ace_common_fnc_statusEffect_get
+ * [player, "ace_common_forceWalk"] call ace_common_fnc_statusEffect_get
  *
  * Public: Yes
  */
@@ -26,28 +26,34 @@ if (isNull _object) exitWith {
     [false, []]
 };
 
-[_object, false] call FUNC(statusEffect_resetVariables); //Check for mismatch
+// BWC: Status effect names used to not be prefixed
+if (_effectName in STATUS_EFFECTS_BWC) then {
+    TRACE_1("Deprecated effect name used",_effectName);
+    _effectName = format [QGVAR(%1), _effectName];
+};
 
-//List of reasons
+[_object, false] call FUNC(statusEffect_resetVariables); // Check for mismatch
+
+// List of reasons
 private _statusReasons = missionNamespace getVariable [(format [QGVAR(statusEffects_%1), _effectName]), []];
 if (_statusReasons isEqualTo []) exitWith {
     TRACE_1("no reasons - bad effect?",_statusReasons);
     [false, []]
 };
 
-//Get Effect Number
+// Get Effect Number
 private _effectVarName = format [QGVAR(effect_%1), _effectName];
 private _effectNumber = _object getVariable [_effectVarName, -1];
 TRACE_2("current",_effectVarName,_effectNumber);
 
-if (_effectNumber == -1) exitWith { //Nil array - no effect
+if (_effectNumber == -1) exitWith { // Nil array - no effect
     [false, []]
 };
-if (_effectNumber == 0) exitWith { //empty array - false effect
+if (_effectNumber == 0) exitWith { // Empty array - false effect
     [true, []]
 };
 
-//if no change: skip sending publicVar and events
+// If no change: skip sending publicVar and events
 private _effectBoolArray = [_effectNumber, count _statusReasons] call FUNC(binarizeNumber);
 TRACE_1("bitArray",_effectBoolArray);
 
@@ -58,5 +64,5 @@ private _activeEffects = [];
     };
 } forEach _effectBoolArray;
 
-//non-empty array - true effect
+// Mon-empty array - true effect
 [true, _activeEffects]
