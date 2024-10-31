@@ -456,6 +456,8 @@ class GVAR(display) {
                 };
             };
         };
-        class compass: EGVAR(common,CompassControl) {};
+        class compass: EGVAR(common,CompassControl) {
+            idc = IDC_COMPASS;
+        };
     };
 };
