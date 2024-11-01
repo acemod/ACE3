@@ -112,4 +112,28 @@ class CfgWeapons {
     class H_HelmetHBK_headset_base_F: H_HelmetHBK_base_F {
         HEARING_PROTECTION_PELTOR;
     };
+
+    // Military headgear with a both-ear headset (similar to the modern INVISIO X7) should have active earpro.
+    class H_Watchcap_blk: HelmetBase {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class H_Bandanna_khk;
+    class H_Bandanna_khk_hs: H_Bandanna_khk {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class H_Booniehat_khk;
+    class H_Booniehat_khk_hs: H_Booniehat_khk {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class H_Cap_oli;
+    class H_Cap_oli_hs: H_Cap_oli {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class H_MilCap_ocamo: HelmetBase {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class H_Shemag_olive;
+    class H_Shemag_olive_hs: H_Shemag_olive {
+        HEARING_PROTECTION_PELTOR;
+    };
 };
