@@ -12,7 +12,7 @@
  * Children actions <ARRAY>
  *
  * Example:
- * array = [player, true] call ace_interaction_fnc_getPassThrowableActions
+ * array = [player, target, true] call ace_interaction_fnc_getPassThrowableActions
  *
  * Public: No
  */

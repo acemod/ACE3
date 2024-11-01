@@ -4,8 +4,8 @@
  * Pass throwable to another unit.
  *
  * Arguments:
- * 0: Unit that passes the throwable <OBJECT>
- * 1: Unit to pass the throwable to <OBJECT>
+ * 0: Unit to pass the throwable to <OBJECT>
+ * 1: Unit that passes the throwable <OBJECT>
  * 2: Throwable classname <STRING>
  * 3: Play passing animation <BOOL> (default: true)
  *
