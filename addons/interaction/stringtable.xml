@@ -1273,8 +1273,8 @@
             <German>Nicht tödlich</German>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableHint">
-            <English>%1 passed you a %2 grenade.</English>
-            <German>%1 hat dir eine %2 Granate gegeben.</German>
+            <English>%1 passed you %2.</English>
+            <German>%1 hat dir %2 gegeben.</German>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableSetting">
             <English>Show "pass grenade" interaction</English>
