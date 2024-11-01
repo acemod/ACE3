@@ -46,7 +46,7 @@ class CfgWeapons {
 
     class HelmetBase;
     class H_Cap_headphones: HelmetBase {
-        HEARING_PROTECTION_EARMUFF;
+        HEARING_PROTECTION_PELTOR;
     };
 
     class H_Construction_earprot_base_F: HelmetBase {
