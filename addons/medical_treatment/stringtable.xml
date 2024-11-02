@@ -574,6 +574,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_Description">
             <English>Controls where Splints can be used.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
             <English>Allow Morphine</English>
         </Key>
