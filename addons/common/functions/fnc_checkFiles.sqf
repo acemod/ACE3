@@ -196,7 +196,7 @@ if (isMultiplayer) then {
 
             if (_additionalCompats isNotEqualTo []) exitWith { // CDLC/content mod with integrated compats is loaded when it shouldn't be
                 // Fix is easy
-                _fixMsg = format ["Fix: %1", "Make sure your mod list matches. Check your server files and '-mod=' parameter if you're the server administrator."];
+                private _fixMsg = format ["Fix: %1", "Make sure your mod list matches. Check your server files and '-mod=' parameter if you're the server administrator."];
 
                 private _additionalMods = [];
                 private _loadedModsInfo = getLoadedModsInfo;
