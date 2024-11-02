@@ -31,7 +31,7 @@
     [LSTRING(useLimbDamage_DisplayName), LSTRING(useLimbDamage_Description)],
     ELSTRING(medical,Category),
     [[0, 1, 2], [ELSTRING(common,Never), ELSTRING(common,aiOnly), ELSTRING(common,playersAndAI)], 0],
-    true
+    1
 ] call CBA_fnc_addSetting;
 
 [
@@ -40,7 +40,7 @@
     [LSTRING(limbDamageThreshold_DisplayName), LSTRING(limbDamageThreshold_Description)],
     ELSTRING(medical,Category),
     [0, 25, 5, 2],
-    true
+    1
 ] call CBA_fnc_addSetting;
 
 [
