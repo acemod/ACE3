@@ -32,6 +32,12 @@
             <Turkish>Bir oyuncunun bayılmadan önce alabileceği hasar miktarını belirler.</Turkish>
             <Korean>플레이어가 치명상으로 인해 기절까지 가기 전의 한계점을 정합니다. ("피해량 중첩"이 켜져있으면 죽기도 합니다)</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_LimbDamageThreshold_DisplayName">
+            <English>Limb Critical Damage Threshold</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_LimbDamageThreshold_Description">
+            <English>Sets the amount of damage a limb can receive before preventing more wounds from occuring</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Damage_AIDamageThreshold_DisplayName">
             <English>AI Critical Damage Threshold</English>
             <Japanese>AIのクリティカルダメージしきい値</Japanese>
