@@ -82,7 +82,7 @@ if (_oldAddons isNotEqualTo []) then {
 
     // Build the error message
     private _title = "[ACE] ERROR: OUTDATED FILES";
-    private _reasonMsg = ["Reason: Mismatched addon versions within the same installation, it is likely corrupted.", "Reason: Conflicting ACE installations (see list below)."] select _conflictingInstall;
+    private _reasonMsg = ["Reason: Mismatched addon versions within the same installation, it is likely corrupted.", "Reason: Conflicting ACE installations (listed below)."] select _conflictingInstall;
     private _fixMsg = ["Fix: Repair ACE or update your repack.", "Fix: Make sure to only load one version of ACE."] select _conflictingInstall;
 
     private _infoMsgLog = format ["The following files are outdated: %1.<br/>ACE Main version is %2 from folder ""%3"".<br/><br/>All mod folders with ACE files: %4", _oldAddons joinString ", ", _mainVersion, _mainSource, _allSources joinString ", "];
@@ -93,13 +93,13 @@ if (_oldAddons isNotEqualTo []) then {
     };
 
     // Log it
-    private _logMsg = format ["%1: %2%5%3%5%5%4", _title, _reasonMsg, _fixMsg, _infoMsgLog, endl];
+    private _logMsg = format ["%1: %2%5%5%3%5%5%4", _title, _reasonMsg, _fixMsg, _infoMsgLog, endl];
     _logMsg = _logMsg regexReplace ["<br\/>", endl];
     ERROR(_logMsg);
 
     // Display it
     if (hasInterface) then {
-        private _errorMsg = format ["%1<br/>%2<br/><br/>%3", _reasonMsg, _fixMsg, _infoMsg];
+        private _errorMsg = format ["%1<br/><br/>%2<br/><br/>%3", _reasonMsg, _fixMsg, _infoMsg];
         [_title, _errorMsg] call FUNC(errorMessage);
     };
 };
@@ -181,22 +181,34 @@ if (isMultiplayer) then {
         private _fnc_diagnose_addonMismatch = {
             private _title = "[ACE] ERROR: ADDON MISMATCH";
 
-            // We don't need to know what's happening to build info here
-            private _infoMsgLog = format ["Client has additional addons: %1.<br/>Server mod folder is named ""%2"".", _additionalAddons joinString ", ", GVAR(serverSource)]; // Build the whole thing so we can log it to RPT
-
-            private _infoMsg = if (count _additionalAddons > 3) then { // Truncate it for display
-                format ["Client has additional addons: %1, and %2 more.<br/>Server mod folder is named ""%3"".", (_additionalAddons select [0, 3]) joinString ", ", (count _additionalAddons) - 3, GVAR(serverSource)];
-            } else {
-                _infoMsgLog
-            };
-
             // Figure out why we have a mismatch and where it's coming from
             // Integrated compats are the usual culprit
             private _additionalCompats = _addons select {(_x select [0, 10]) == "ace_compat"};
+            _additionalAddons = _additionalAddons - _additionalCompats;
 
-            if (_additionalCompats isNotEqualTo []) exitWith { // CDLC/content mod with integrated compats is loaded when it shouldn't be
+            // Server most likely just uses a different ACE repack with some components removed
+            // Higher priority than compats, as we'll load compats for components as well
+            // Don't show compats in the error message, only components
+            if (_additionalAddons isNotEqualTo []) exitWith {
+                private _reasonMsg = format ["Reason: %1", "Client has ACE components not present on the server."];
+                private _fixMsg = format ["Fix: %1", "Make sure you're using ACE from the same Steam Workshop item or repository as the server."];
+
+                private _infoMsgLog = format ["Client has additional addons: %1.<br/>Server mod folder is named ""%2"".", _additionalAddons joinString ", ", GVAR(serverSource)]; // Build the whole thing so we can log it to RPT
+
+                private _infoMsg = if (count _additionalAddons > 3) then { // Truncate it for display
+                    format ["Client has additional addons: %1, and %2 more.<br/>Server mod folder is named ""%3"".", (_additionalAddons select [0, 3]) joinString ", ", (count _additionalAddons) - 3, GVAR(serverSource)];
+                } else {
+                    _infoMsgLog
+                };
+
+                [_title, _reasonMsg, _fixMsg, _infoMsg, _infoMsgLog] // return
+            };
+
+            // CDLC/content mod with integrated compats is loaded when it shouldn't be
+            // No need to show which addons, just show the mod that the compats are for
+            if (_additionalCompats isNotEqualTo []) exitWith {
                 // Fix is easy
-                private _fixMsg = format ["Fix: %1", "Make sure your mod list matches. Check your server files and '-mod=' parameter if you're the server administrator."];
+                private _fixMsg = format ["Fix: %1", "Make sure your mod list matches or add those mods to the server. Check your server files and '-mod=' parameter if you're the server administrator."];
 
                 private _additionalMods = [];
                 private _loadedModsInfo = getLoadedModsInfo;
@@ -211,19 +223,19 @@ if (isMultiplayer) then {
                     } forEach (getArray (_cfgPatches >> _x >> "requiredAddons"));
                 } forEach _additionalCompats;
 
-                private _reasonMsg = format ["Reason: %1", "Client has extra mods requiring compats loaded (see list below)"];
-                private _additionalModsString = format ["<br/><br/>Additional compatibility is being loaded for: %1", _additionalMods joinString ", "];
-                _infoMsg = _infoMsg + _additionalModsString;
-                _infoMsgLog = _infoMsgLog + _additionalModsString;
+                private _reasonMsg = format ["Reason: %1", "Client has extra mods requiring compats loaded (listed below)"];
+                private _infoMsg = format ["Additional compatibility is being loaded for: %1", _additionalMods joinString ", "];
 
-                [_title, _reasonMsg, _fixMsg, _infoMsg, _infoMsgLog] // return
+                [_title, _reasonMsg, _fixMsg, _infoMsg, _infoMsg] // return
             };
 
-            // Server most likely just uses a different ACE repack with some components removed
-            private _reasonMsg = format ["Reason: %1", "Client has ACE addons not present on the server."];
-            private _fixMsg = format ["Fix: %1", "Make sure you're using ACE from the same Steam Workshop item or repository as the server."];
-
-            [_title, _reasonMsg, _fixMsg, _infoMsg, _infoMsgLog] // return
+            [
+                _title,
+                "Reason: Exceptional combination of additional addons. Good job, you broke our error handling.",
+                "Fix: Open an issue on GitHub with your logs so we can add handling for this.",
+                "Have a cookie.",
+                "Unimplemented addon mismatch"
+            ] // default return
         };
 
         private _fnc_multiplayerCheck = {
@@ -246,13 +258,13 @@ if (isMultiplayer) then {
                 (call _errorBuilder) params ["_title", "_reasonMsg", "_fixMsg", "_infoMsg", "_infoMsgLog"];
 
                 // Log it
-                private _logMsg = format ["%1: %2%5%3%5%5%4", _title, _reasonMsg, _fixMsg, _infoMsgLog, endl];
+                private _logMsg = format ["%1: %2%5%5%3%5%5%4", _title, _reasonMsg, _fixMsg, _infoMsgLog, endl];
                 _logMsg = _logMsg regexReplace ["<br\/>", endl];
                 ERROR(_logMsg);
 
                 // Display it
                 if (hasInterface) then {
-                    private _errorMsg = format ["%1<br/>%2<br/><br/>%3", _reasonMsg, _fixMsg, _infoMsg];
+                    private _errorMsg = format ["%1<br/><br/>%2<br/><br/>%3", _reasonMsg, _fixMsg, _infoMsg];
                     [_title, _errorMsg] call FUNC(errorMessage);
                 };
 
