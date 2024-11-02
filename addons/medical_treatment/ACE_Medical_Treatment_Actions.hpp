@@ -115,9 +115,11 @@ class GVAR(actions) {
         displayName = CSTRING(Inject_Morphine);
         displayNameProgress = CSTRING(Injecting_Morphine);
         icon = QPATHTOEF(medical_gui,ui\auto_injector.paa);
+        medicRequired = QGVAR(medicMorphine);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         category = "medication";
         items[] = {"ACE_morphine"};
+        treatmentLocations = QGVAR(locationMorphine);
         condition = "";
         treatmentTime = QGVAR(treatmentTimeAutoinjector);
         callbackSuccess = QFUNC(medication);
@@ -128,8 +130,10 @@ class GVAR(actions) {
     class Adenosine: Morphine {
         displayName = CSTRING(Inject_Adenosine);
         displayNameProgress = CSTRING(Injecting_Adenosine);
+        medicRequired = QGVAR(medicAdenosine);
         condition = QGVAR(advancedMedication);
         items[] = {"ACE_adenosine"};
+        treatmentLocations = QGVAR(locationAdenosine);
         litter[] = {{"ACE_MedicalLitter_adenosine"}};
     };
     class Epinephrine: Morphine {
