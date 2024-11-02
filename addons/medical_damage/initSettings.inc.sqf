@@ -21,7 +21,7 @@
     "SLIDER",
     [LSTRING(partDamageCap_DisplayName), LSTRING(partDamageCap_Description)],
     ELSTRING(medical,Category),
-    [10, 60, 30, 0],
+    [30, 150, 60, 0],
     true
 ] call CBA_fnc_addSetting;
 
