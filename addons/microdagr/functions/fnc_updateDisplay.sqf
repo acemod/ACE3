@@ -166,7 +166,7 @@ case (APP_MODE_WAYPOINTS): {
             _wpListBox lbSetTextRight [_forEachIndex, (format ["%1km", _2dDistanceKm toFixed GVAR(waypointPrecision)])];
         } forEach _waypoints;
 
-        _currentIndex = (_currentIndex max 0) min (count _waypoints);
+        _currentIndex = (_currentIndex max 0) min ((count _waypoints) - 1);
         if ((lbCurSel _wpListBox) != _currentIndex) then {
             _wpListBox lbSetCurSel _currentIndex;
         };
