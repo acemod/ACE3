@@ -55,7 +55,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 
     // Check if current body part damage has reached the cap
     private _currentDamage = _bodyPartDamage select _bodyPartNToAdd;
-    private _damageLimit = (missionNamespace getVariable [QEGVAR(medical,limbDamageThreshold), 10]) * 4;
+    private _damageLimit = (missionNamespace getVariable [QEGVAR(medical,partDamageCap), 10]) * 4;
     if (_currentDamage >= _damageLimit) then {
         TRACE_1("damage cap reached for body part",_bodyPart);
         continue  // Skip further processing for this body part if cap is reached
