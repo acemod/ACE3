@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Item or magazine <STRING>
  * 1: Item config <CONFIG> (default: nil)
- * 2: Whether item is a magazine. If true, config should be passed as well <BOOL> (default: false)
+ * 2: Whether item is a magazine <BOOL> (default: false)
  * 3: Skip setting false keys in the cache, mostly used for building it during preStart <BOOL> (default: false)
  *
  * Return Value:
@@ -30,11 +30,13 @@ if (isNil "_return") then {
 
     _return = switch (true) do {
         case (_item isKindOf ["CBA_MiscItem", configFile >> "CfgWeapons"]): {true}; // CBA misc item, easy
-        case (_isMag): _fnc_hasProperty; // Magazine misc item, also easy
 
         if (isNil "_config") then {
             _config = _item call CBA_fnc_getItemConfig;
         };
+
+        case (_isMag): _fnc_hasProperty; // Magazine misc item, also easy
+
         private _itemType = getNumber (_config >> "ItemInfo" >> "type");
 
         case (_itemType in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]): {true}; // Special items: Med/Toolkits
