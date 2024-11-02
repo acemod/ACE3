@@ -848,7 +848,7 @@
             <Russian>Использовать урон конечностям</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_Description">
-            <English>Controls whether limb damage is taken into account for fatality and unconsciousness calculations.</English>
+            <English>Controls whether limb damage is taken into account for sum of trauma calculations.</English>
             <Russian>Определяет, учитывается ли повреждение конечностей при расчете смертности и потери сознания.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_DisplayName">
@@ -856,7 +856,7 @@
             <Russian>Порог повреждения конечностей</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_Description">
-            <English>Sets the amount of damage a limb can receive before going critical (leading to unconsciousness, or death if "Sum of Trauma" is enabled).\nDoes nothing if the "Use Limb Damage" setting is disabled.</English>
+            <English>Sets the amount of damage limbs can receive before going critical, leading to death. Must be over 0 for any effect.\nRequires the "Use Limb Damage" setting to be enabled and "Fatal Damage Source" to be set to "Sum of Trauma" or "Either".\nStacks multiplicatively with the overall unit Damage Threshold. Doesn't interact with fractures/limping at all.</English>
             <Russian>Устанавливает величину урона, который может получить конечность, прежде чем он станет критическим (приводит к потере сознания или смерти, если включена "Сумма травм").\nНичего не делает, если настройка "Использовать урон конечностям" отключена.</Russian>
         </Key>
     </Package>
