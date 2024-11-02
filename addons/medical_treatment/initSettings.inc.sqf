@@ -186,6 +186,7 @@
     QGVAR(locationSplint),
     "LIST",
     [LSTRING(LocationSplint_DisplayName), LSTRING(LocationSplint_Description)],
+    LSTRING(Category),
     [[0, 1, 2, 3, 4], [ELSTRING(common,Anywhere), ELSTRING(common,Vehicle), LSTRING(MedicalFacilities), LSTRING(VehiclesAndFacilities), ELSTRING(common,Disabled)], 0],
     true
 ] call CBA_fnc_addSetting;
