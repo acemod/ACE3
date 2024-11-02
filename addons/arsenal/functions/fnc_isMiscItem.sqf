@@ -44,7 +44,7 @@ if (isNil "_return") then {
         default {false}
     };
 
-    if (_return || !_inPreStart) then {
+    if (_return || !_skipFalseKeys) then {
         _cache set [_item, _return];
     };
 };
