@@ -5,6 +5,7 @@ PREP(explosion);
 PREP(firedNear);
 PREP(getAmmoLoudness);
 PREP(handleRespawn);
+PREP(handleVehicleKilled);
 PREP(moduleHearing);
 PREP(putInEarPlugs);
 PREP(putOnEHP);
