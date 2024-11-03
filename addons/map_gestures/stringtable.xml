@@ -11,7 +11,7 @@
             <German>Kartenzeichen</German>
             <Spanish>Gestos en mapa</Spanish>
             <French>Pointage sur carte</French>
-            <Japanese>マップ ジェスチャー</Japanese>
+            <Japanese>マップ ジェスチャ</Japanese>
             <Korean>지도 신호</Korean>
             <Chinesesimp>地图指示</Chinesesimp>
             <Chinese>地圖指示器</Chinese>
@@ -43,7 +43,7 @@
             <German>Aktiviert die Kartenzeichen.</German>
             <Spanish>Activar Gestos en Mapa</Spanish>
             <French>Active le pointage sur carte.</French>
-            <Japanese>マップ ジェスチャーを有効化</Japanese>
+            <Japanese>マップ ジェスチャを有効化</Japanese>
             <Korean>지도 신호 활성화</Korean>
             <Chinesesimp>启用地图指示</Chinesesimp>
             <Chinese>啟用地圖指示器</Chinese>
@@ -59,7 +59,7 @@
             <German>Maximale Reichweite der Kartenzeichen</German>
             <Spanish>Máx. dist. para gestos en mapa</Spanish>
             <French>Portée du pointage sur carte</French>
-            <Japanese>マップ ジェスチャーの最大範囲</Japanese>
+            <Japanese>マップ ジェスチャの最大範囲</Japanese>
             <Korean>지도 신호 최대 거리</Korean>
             <Chinesesimp>地图指示最大范围</Chinesesimp>
             <Chinese>地圖指示器最大範圍</Chinese>
@@ -75,7 +75,7 @@
             <German>Maximale Reichweite zwischen Spielern um Kartenzeichen anzuzeigen</German>
             <Spanish>Máxima distancia a la cual pueden verse el indicador de gestos</Spanish>
             <French>Définit le rayon au-delà duquel un joueur ne verra plus l'indicateur de pointage des autres joueurs.</French>
-            <Japanese>マップ ジェスチャーのインジケーターを表示可能なプレーヤー間の最大距離</Japanese>
+            <Japanese>マップ ジェスチャのインジケータを表示可能なプレーヤー間の最大範囲距離</Japanese>
             <Korean>플레이어간에 지도 신호 표시거리를 설정합니다.</Korean>
             <Chinesesimp>设定地图指示显示的最大范围距离</Chinesesimp>
             <Chinese>設定地圖指示器顯示的最大範圍距離</Chinese>
@@ -137,7 +137,7 @@
             <German>Farbe der Namenstexte neben der Kartenzeichen-Markierung.</German>
             <Spanish>Color de los nombres dibujados al lado del marcados de gestos.</Spanish>
             <French>Définit la couleur du texte pour le nom à côté du marqueur de pointage sur carte.</French>
-            <Japanese>マップ ジェスチャーに添えて表示される名前の文字色。</Japanese>
+            <Japanese>マップ ジェスチャに添えて表示される名前の文字色。</Japanese>
             <Korean>지도 색상에 표시되는 이름의 색상을 결정합니다.</Korean>
             <Chinesesimp>定义名称文字颜色。使其与地图指示颜色有所区别。</Chinesesimp>
             <Chinese>定義名稱文字顏色。使其與地圖指示器顏色有所區別</Chinese>
@@ -270,7 +270,7 @@
             <Russian>Показывать только союзные жесты</Russian>
             <Polish>Pokazuj jedynie sojusznicze gesty</Polish>
             <French>Afficher uniquement le pointage des alliés</French>
-            <Japanese>友軍のジェスチャーのみ表示</Japanese>
+            <Japanese>友軍のジェスチャのみ表示</Japanese>
             <Spanish>Mostrar sólo gestos de aliados</Spanish>
             <German>Nur Gesten befreundeter Einheiten zeigen</German>
             <Italian>Mostra solo gesti di alleati</Italian>
@@ -283,7 +283,7 @@
             <Russian>Показывать жесты только от игроков союзной стороны.</Russian>
             <French>Affiche uniquement les pointages effectués par des unités qui sont du même camp, ou d'un camp allié.</French>
             <Italian>Mostra solo gesti effettuati da unità che sono della stessa fazione o una fazione alleata.</Italian>
-            <Japanese>同じ陣営または味方陣営のユニットからのジェスチャーのみを表示します。</Japanese>
+            <Japanese>同じ陣営または味方陣営のユニットからのジェスチャのみを表示します。</Japanese>
             <Spanish>Muestra únicamente gestos de las unidades que son del mismo bando o de un bando aliado</Spanish>
             <Polish>Pokazuj tylko Gesty od jednostek z tej samej lub sojuszniczej strony</Polish>
             <German>Nur Gesten von Einheiten der selben oder einer verbündeten Seite zeigen.</German>
@@ -308,7 +308,7 @@
             <English>Max range between a Camera and players to show the map gesture indicator</English>
             <Russian>Устанавливает макс. дальность между игроком и камерой для отображения жестов на карте</Russian>
             <French>Définit le rayon au-delà duquel une caméra ne verra plus l'indicateur de pointage des autres joueurs.</French>
-            <Japanese>観戦カメラから確認可能なマップ ジェスチャーのインジケーターを表示するカメラとプレーヤー間の最大距離</Japanese>
+            <Japanese>観戦カメラから確認可能なマップ ジェスチャのインジケータを表示するカメラとプレーヤー間の最大距離</Japanese>
             <Spanish>Máxima distancia entre una cámara y los jugadores para mostrar el indicador de gestos en mapa</Spanish>
             <Italian>Distanza massima da cui videocamere (spettatore/zeus) può vedere i gesti di giocatori.</Italian>
             <Polish>Maksymalny zasięg pomiędzy kamerą a graczami do pokazania gestów na mapie</Polish>
@@ -334,7 +334,7 @@
             <English>Allows Spectator to See Map Gestures</English>
             <Russian>Позволяет наблюдателю видеть жесты на карте</Russian>
             <French>Permet aux spectateurs de voir le pointage des autres joueurs.</French>
-            <Japanese>観戦者からマップ ジェスチャーを表示できるようにします。</Japanese>
+            <Japanese>観戦者からマップ ジェスチャを表示できるようにします。</Japanese>
             <Italian>Permetti agli spettatori di vedere gesti in mappa</Italian>
             <Spanish>Permitir al espectador ver los gestos de mapa</Spanish>
             <Polish>Zezwól Obserwatorowi widzieć Gesty na mapie</Polish>
@@ -360,7 +360,7 @@
             <English>Allows Curator to See Map Gestures</English>
             <Russian>Позволяет куратору видеть жесты на карте</Russian>
             <French>Permet aux curateurs de voir le pointage des autres joueurs.</French>
-            <Japanese>キュレーターからマップ ジェスチャーを表示できるようにします。</Japanese>
+            <Japanese>キュレーターからマップ ジェスチャを表示できるようにします。</Japanese>
             <Spanish>Permitir al Curador ver los gestos de mapa</Spanish>
             <Italian>Permetti agli Zeus di vedere gesti in mappa</Italian>
             <Polish>Zezwól Zeusowi widzieć gesty na mapie</Polish>
@@ -473,7 +473,7 @@
             <German>Kartenzeichen - Gruppeneinstellungen</German>
             <Spanish>Gestos en mapas - Configuración de grupos</Spanish>
             <French>Pointage sur carte - réglages de groupe</French>
-            <Japanese>マップ ジェスチャー - グループ設定</Japanese>
+            <Japanese>マップ ジェスチャ - グループ設定</Japanese>
             <Korean>지도 신호 - 그룹 설정</Korean>
             <Chinesesimp>地图指示—队伍设定</Chinesesimp>
             <Chinese>地圖指示器 - 隊伍設定</Chinese>
@@ -488,7 +488,7 @@
             <German>ACE Kartenzeichen</German>
             <Spanish>ACE Gestos en mapa</Spanish>
             <French>ACE Pointage sur carte</French>
-            <Japanese>ACE マップ ジェスチャー</Japanese>
+            <Japanese>ACE マップ ジェスチャ</Japanese>
             <Korean>ACE 지도 신호</Korean>
             <Chinesesimp>ACE 地图指示</Chinesesimp>
             <Chinese>ACE 地圖指示器</Chinese>

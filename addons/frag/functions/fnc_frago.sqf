@@ -1,15 +1,14 @@
 #include "..\script_component.hpp"
 /*
- * Author: Jaynus, NouberNou
+ * Author: Jaynus, NouberNou, Lambda.Tiger
  * Server func to create the fragmentation for a round.
  *
  * Arguments:
- * 0: Last Position (ASL) <ARRAY>
- * 1: Velocity <ARRAY>
- * 2: Ammo Classname <STRING>
+ * 0: ASL position projetile is fragmenting at <ARRAY>
+ * 1: Projectile ammo classname <STRING>
  *
  * Return Value:
- * None
+ * The number of fragments created <NUMBER>
  *
  * Example:
  * [[], [], "handGrenade"] call ace_frag_fnc_frago
@@ -17,178 +16,132 @@
  * Public: No
  */
 
-#define FRAG_VEC_VAR 0.004
-#define MAX_FRAG_COUNT 50
+#define FRAG_VEC_VAR 0.008
 
 BEGIN_COUNTER(frago);
 
-params ["_lastPos", "_lastVel", "_shellType"];
-TRACE_3("frago",_lastPos,_lastVel,_shellType);
+params ["_fragPosASL", "_shellType"];
+TRACE_2("frago",_fragPosASL,_shellType);
 
 // Limit max frag count if there was a recent frag
-private _maxFrags = round (MAX_FRAG_COUNT * linearConversion [0.1, 1.5, (CBA_missionTime - GVAR(lastFragTime)), 0.1, 1, true]);
+private _maxFrags = round linearConversion [
+    ACE_FRAG_COUNT_MIN_TIME,
+    ACE_FRAG_COUNT_MAX_TIME,
+    (CBA_missionTime - GVAR(lastFragTime)),
+    ACE_FRAG_COUNT_MIN,
+    ACE_FRAG_COUNT_MAX,
+    true
+];
 TRACE_2("",_maxFrags,CBA_missionTime - GVAR(lastFragTime));
 GVAR(lastFragTime) = CBA_missionTime;
 
-private _fragTypes = [
-    QGVAR(tiny), QGVAR(tiny), QGVAR(tiny),
-    QGVAR(tiny_HD), QGVAR(tiny_HD), QGVAR(tiny_HD),
-    QGVAR(small), QGVAR(small), QGVAR(small), QGVAR(small),
-    QGVAR(small_HD), QGVAR(small_HD), QGVAR(small_HD), QGVAR(small_HD),
-    QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD), QGVAR(medium_HD)
-];
+_shellType call FUNC(getFragInfo) params ["_fragRange", "_fragVelocity", "_fragTypes", "_metalMassModifier"];
 
-private _warn = false;
-if (isArray (configFile >> "CfgAmmo" >> _shellType >> QGVAR(CLASSES))) then {
-    _fragTypes = getArray (configFile >> "CfgAmmo" >> _shellType >> QGVAR(CLASSES));
-} else {
-    _warn = true;
+private _fragPosAGL = ASLToAGL _fragPosASL;
+TRACE_5("fragValues",_fragPosASL,_fragPosAGL,_fragRange,_fragVelocity,_metalMassModifier);
+
+// Compile possible targets including units, vehicles, and crews
+private _targets = [_fragPosAGL, _fragRange, _fragRange, 0, false, _fragRange] nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], false, true, true];
+if (_targets isEqualTo []) exitWith {
+    TRACE_2("No nearby targets",_fragPosAGL,_fragRange);
+    0 // return
 };
-
-private _indirectHitRange = getNumber(configFile >> "CfgAmmo" >> _shellType >> "indirecthitrange");
-private _fragRange = 20 * _indirectHitRange * 4;
-// _c = 185; // grams of comp-b
-// _m = 210; // grams of fragmentating metal
-// _k = 3/5; // spherical K factor
-// _gC = 2843; // Gurney constant of comp-b in /ms
-
-// _c = 429; // grams of tritonal
-// _m = 496; // grams of fragmentating metal
-// _k = 1/2; // spherical K factor
-// _gC = 2320; // Gurney constant of tritonal in /ms
-
-private _c = getNumber (configFile >> "CfgAmmo" >> _shellType >> QGVAR(CHARGE));
-if (_c == 0) then {_c = 1; _warn = true;};
-private _m = getNumber (configFile >> "CfgAmmo" >> _shellType >> QGVAR(METAL));
-if (_m == 0) then {_m = 2; _warn = true;};
-private _k = getNumber (configFile >> "CfgAmmo" >> _shellType >> QGVAR(GURNEY_K));
-if (_k == 0) then {_k = 0.5; _warn = true;};
-private _gC = getNumber (configFile >> "CfgAmmo" >> _shellType >> QGVAR(GURNEY_C));
-if (_gC == 0) then {_gC = 2440; _warn = true;};
-
-if (_warn) then {
-    INFO_1("Ammo class %1 lacks proper explosive properties definitions for frag!",_shellType);
-};
-
-// Gunery equation is for a non-fragmenting metal, imperical value of 80% represents fragmentation
-private _fragPower = 0.8 * (((_m / _c) + _k) ^ - (1 / 2)) * _gC;
-
-private _atlPos = ASLtoATL _lastPos;
-
-private _fragPowerRandom = _fragPower * 0.5;
-if ((_atlPos select 2) < 0.5) then {
-    _lastPos vectorAdd [0, 0, 0.5];
-};
-
-private _objects = _atlPos nearEntities [["Car", "Motorcycle", "Tank", "StaticWeapon", "CAManBase", "Air", "Ship"], _fragRange];
-// Add unique crews in faster way
-{
-    {
-        _objects pushBackUnique _x;
-    } forEach (crew _x);
-} forEach _objects;
-TRACE_2("",_fragRange,count _objects);
+TRACE_3("",_fragRange,count _targets,_targets);
 
 private _fragCount = 0;
-
 private _fragArcs = [];
 _fragArcs set [360, 0];
 
-private _doRandom = true;
-if (_objects isNotEqualTo []) then {
-    if (GVAR(reflectionsEnabled)) then {
-        [_lastPos, _shellType] call FUNC(doReflections);
-    };
-    {
-        private _target = _x;
-        if (alive _target) then {
-            (boundingBox _target) params ["_boundingBoxA", "_boundingBoxB"];
+if (GVAR(reflectionsEnabled)) then {
+    [_fragPosASL, _shellType] call FUNC(doReflections);
+};
+{
+    private _target = _x;
+    if (getNumber ((configOf _target) >> "isPlayableLogic") == 0) then {
+        (boundingBox _target) params ["_boundingBoxA", "_boundingBoxB"];
 
-            private _cubic = ((abs (_boundingBoxA select 0)) + (_boundingBoxB select 0)) * ((abs (_boundingBoxA select 1)) + (_boundingBoxB select 1)) * ((abs (_boundingBoxA select 2)) + (_boundingBoxB select 2));
+        private _cubic = ((abs (_boundingBoxA select 0)) + (_boundingBoxB select 0)) * ((abs (_boundingBoxA select 1)) + (_boundingBoxB select 1)) * ((abs (_boundingBoxA select 2)) + (_boundingBoxB select 2));
 
-            if (_cubic <= 1) exitWith {};
-            // _doRandom = true;
+        if (_cubic <= 1) exitWith {};
 
-            private _targetVel = velocity _target;
-            private _targetPos = getPosASL _target;
-            private _distance = _targetPos vectorDistance _lastPos;
-            private _add = ((_boundingBoxB select 2) / 2) + ((((_distance - (_fragpower / 8)) max 0) / _fragPower) * 10);
+        private _targetVel = velocity _target;
+        private _targetPos = getPosASL _target;
+        private _distance = _target distance _fragPosAGL;
+        private _add = ((_boundingBoxB select 2) / 2) + ((((_distance - (_fragVelocity / 8)) max 0) / _fragVelocity) * 10);
 
-            _targetPos = _targetPos vectorAdd [
-            (_targetVel select 0) * (_distance / _fragPower),
-            (_targetVel select 1) * (_distance / _fragPower),
+        _targetPos = _targetPos vectorAdd [
+            (_targetVel select 0) * (_distance / _fragVelocity),
+            (_targetVel select 1) * (_distance / _fragVelocity),
             _add
-            ];
+        ];
 
-            private _baseVec = _lastPos vectorFromTo _targetPos;
+        private _baseVec = _fragPosASL vectorFromTo _targetPos;
 
-            private _dir = floor (_baseVec call CBA_fnc_vectDir);
-            private _currentCount = RETDEF(_fragArcs select _dir,0);
-            if (_currentCount < 10) then {
-                private _count = ceil (random (sqrt (_m / 1000)));
-                private _vecVar = FRAG_VEC_VAR;
-                if (!(_target isKindOf "Man")) then {
-                    ADD(_vecVar,(sqrt _cubic) / 2000);
-                    if ((crew _target) isEqualTo [] && {_count > 0}) then {
-                        _count = 0 max (_count / 2);
-                    };
+        private _dir = floor (_baseVec call CBA_fnc_vectDir);
+        private _currentCount = RETDEF(_fragArcs select _dir,0);
+        if (_currentCount < 10) then {
+            private _count = ceil (random _metalMassModifier);
+            private _vecVar = FRAG_VEC_VAR;
+            if !(_target isKindOf "CAManBase") then {
+                ADD(_vecVar,(sqrt _cubic) / 2000);
+                if ((crew _target) isEqualTo [] && {_count > 0}) then {
+                    _count = 0 max (_count / 2);
                 };
-                for "_i" from 1 to _count do {
-                    private _vec = _baseVec vectorDiff [
-                    (_vecVar / 2) + (random _vecVar),
-                    (_vecVar / 2) + (random _vecVar),
-                    (_vecVar / 2) + (random _vecVar)
-                    ];
-
-                    private _fp = _fragPower - (random (_fragPowerRandom));
-                    private _vel = _vec vectorMultiply _fp;
-
-                    private _fragObj = (selectRandom _fragTypes) createVehicleLocal [0,0,10000];
-                    // TRACE_4("targeted",_fp,typeOf _fragObj,_lastPos vectorDistance _targetPos,typeOf _x);
-                    _fragObj setPosASL _lastPos;
-                    _fragObj setVectorDir _vec;
-                    _fragObj setVelocity _vel;
-                    #ifdef DRAW_FRAG_INFO
-                    [ACE_player, _fragObj, [1,0,0,1]] call FUNC(dev_addTrack);
-                    #endif
-                    INC(_fragCount);
-                    INC(_currentCount);
-                };
-                _fragArcs set [_dir, _currentCount];
             };
-        };
-        if (_fragCount > _maxFrags) exitWith {};
-    } forEach _objects;
-    TRACE_1("targeted",_fragCount);
-    if (_fragCount > _maxFrags) exitWith {};
-    private _randomCount = ceil ((_maxFrags - _fragCount) * 0.35);
-    TRACE_1("",_randomCount);
-    private _sectorSize = 360 / (_randomCount max 1);
+            private _vecVarHalf = _vecVar / 2;
+            for "_i" from 1 to _count do {
+                private _vectorDir = _baseVec vectorDiff [
+                    _vecVarHalf - (random _vecVar),
+                    _vecVarHalf - (random _vecVar),
+                    _vecVarHalf - (random _vecVar)
+                ];
 
-    if (_doRandom) then {
-        for "_i" from 1 to _randomCount do {
-            // Distribute evenly
-            private _sectorOffset = 360 * (_i - 1) / (_randomCount max 1);
-            private _randomDir = random (_sectorSize);
-            _vec = [cos (_sectorOffset + _randomDir), sin (_sectorOffset + _randomDir), sin (30 - (random 45))];
+                private _fragObjSpeed = _fragVelocity * (1 - random 0.5);
+                private _fragObjVelocity = _vectorDir vectorMultiply _fragObjSpeed;
 
-            _fp = (_fragPower - (random (_fragPowerRandom)));
-
-            _vel = _vec vectorMultiply _fp;
-
-            _fragObj = (selectRandom _fragTypes) createVehicleLocal [0, 0, 10000];
-            _fragObj setPosASL _lastPos;
-            _fragObj setVectorDir _vec;
-            _fragObj setVelocity _vel;
-
-            #ifdef DRAW_FRAG_INFO
-            [ACE_player, _fragObj, [1,0.5,0,1]] call FUNC(dev_addTrack);
-            #endif
-            INC(_fragCount);
+                private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
+                _fragObj setVectorDir _vectorDir;
+                _fragObj setVelocity _fragObjVelocity;
+                #ifdef DEBUG_MODE_DRAW
+                [_fragObj, "green", true] call FUNC(dev_trackObj);
+                if (GVAR(dbgSphere)) then {
+                    [_targetPos, "(0.88,0.36,0.92,0.8)"] call FUNC(dev_sphereDraw);
+                };
+                #endif
+                INC(_fragCount);
+                INC(_currentCount);
+            };
+            _fragArcs set [_dir, _currentCount];
         };
     };
+    if (_fragCount > _maxFrags) exitWith {};
+} forEach _targets;
+TRACE_1("targeted",_fragCount);
+if (_fragCount > _maxFrags) exitWith {};
+private _randomCount = ceil ((_maxFrags - _fragCount) * 0.35);
+TRACE_1("",_randomCount);
+private _sectorSize = 360 / (_randomCount max 1);
+
+for "_i" from 1 to _randomCount do {
+    // Distribute evenly
+    private _sectorOffset = 360 * (_i - 1) / (_randomCount max 1);
+    private _randomDir = random (_sectorSize);
+    private _vectorDir = [cos (_sectorOffset + _randomDir), sin (_sectorOffset + _randomDir), sin (30 - (random 45))];
+
+    private _fragObjSpeed = _fragVelocity * (1 - random 0.5);
+    private _fragObjVelocity = _vectorDir vectorMultiply _fragObjSpeed;
+
+    private _fragObj = createVehicleLocal [selectRandom _fragTypes, _fragPosAGL, [], 0, "CAN_COLLIDE"];
+    _fragObj setVectorDir _vectorDir;
+    _fragObj setVelocity _fragObjVelocity;
+
+    #ifdef DEBUG_MODE_DRAW
+    [_fragObj, "blue", true] call FUNC(dev_trackObj);
+    #endif
+    INC(_fragCount);
 };
 
 TRACE_1("total created",_fragCount);
 
 END_COUNTER(frago);
+_fragCount // return

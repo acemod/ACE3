@@ -1,11 +1,11 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Helper function for ace_rearm; Gets magazines that should be loaded by csw
+ * Helper function for ace_rearm; Gets magazines that should be loaded by csw.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
- * 1: Specific Turret or pass bool to check all turrets <ARRAY><BOOL>(default: true)
+ * 0: CSW <OBJECT>
+ * 1: Specific Turret or pass bool to check all turrets <ARRAY|BOOL> (default: true)
  *
  * Return Value:
  * [0: compatible veh mags, 1: carry mags] <ARRAY>

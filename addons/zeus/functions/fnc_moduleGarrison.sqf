@@ -51,7 +51,7 @@ switch (false) do {
 private _units = units _unit;
 // Make sure all units are disembarked
 {
-    if (vehicle _x != _x && {!isPlayer _x}) then {
+    if (!isNull objectParent _x && {!isPlayer _x}) then {
         moveOut _x;
     };
 } forEach _units;

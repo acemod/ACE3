@@ -11,6 +11,7 @@
             <French>Affichage de notifications lors d'une rechargement par un ami</French>
             <Russian>Отображает уведомления о загрузке помощника</Russian>
             <Spanish>Mostrar notificaciones para recarga de compañero</Spanish>
+            <Portuguese>Mostrar notificações para Carregamento de Companheiro</Portuguese>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextDesc">
             <English>Displays notifications when an assistant loads a gunner's launcher.</English>
@@ -22,6 +23,7 @@
             <French>Affiche une notofication lorsqu'un assistant recharge l'arme du tireur.</French>
             <Russian>Отображает уведомления, когда помощник загружает пусковую установку стрелка.</Russian>
             <Spanish>Mostrar notificaciones cuando un asistente recarga el lanzador del tirador.</Spanish>
+            <Portuguese>Notifica quando um assistente carrega o lançador do atirador</Portuguese>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadLauncher">
             <English>Load launcher</English>
@@ -50,6 +52,7 @@
             <Korean>%1이(가) 당신의 발사기를 장전했습니다.</Korean>
             <Russian>%1 загружает Вашу установку</Russian>
             <Spanish>%1 está cargando tu lanzador</Spanish>
+            <Portuguese>%1 está carregando seu lançador</Portuguese>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingAborted">
             <English>%1 stopped loading your launcher</English>
@@ -61,6 +64,7 @@
             <Korean>%1이(가) 당신의 발사기 장전을 멈췄습니다.</Korean>
             <Russian>%1 прекратил загружать Вашу установку</Russian>
             <Spanish>%1 paró de cargar tu lanzador</Spanish>
+            <Portuguese>%1 parou de carregar seu lançador</Portuguese>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher...</English>
@@ -123,6 +127,7 @@
             <Korean>발사기를 장전할 수 없습니다.</Korean>
             <Russian>Не удалось загрузить пусковую установку</Russian>
             <Spanish>El lanzador no ha podido ser cargado</Spanish>
+            <Portuguese>O lançador não pôde ser carregado</Portuguese>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_featureDescription">
             <English>Buddy Loading</English>
@@ -134,6 +139,7 @@
             <Japanese>バディローディング</Japanese>
             <Russian>Перезарядка помощником</Russian>
             <Spanish>Cargado de Compañero</Spanish>
+            <Portuguese>Carregamento de Companheiro</Portuguese>
         </Key>
     </Package>
 </Project>

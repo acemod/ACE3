@@ -6,8 +6,8 @@
  *
  * Arguments:
  * 0: Source ID <STRING> (default: "")
- * 1: Show Hud Bool Array (8 to set, empty to remove) <ARRAY> (default: [])
- * - [hud, info, radar, compass, direction, menu, group, cursors]
+ * 1: Show Hud Bool Array (10 to set, empty to remove) <ARRAY> (default: [])
+ * - [hud, info, radar, compass, direction, menu, group, cursors, panels, kills]
  * - hud: Boolean - show scripted HUD (same as normal showHUD true/false)
  * - info: Boolean - show vehicle + soldier info (hides weapon info from the HUD as well)
  * - radar: Boolean - show vehicle radar
@@ -17,7 +17,8 @@
  * - group: Boolean - show group info bar (hides squad leader info bar)
  * - cursors: Boolean - show HUD weapon cursors (connected with scripted HUD)
  * - panels: Boolean - show vehicle panels / GPS
- * - ???: Boolean - Possibly related to changelog entry `Added: A new showKillConfirmations parameter for the showHud command`
+ * - kills: Boolean - show "x killed by y" systemChat messages
+ * - showIcon3D: is unsupported as it has inverted logic
  *
  * Return Value:
  * Resulting ShowHud Array <ARRAY>
@@ -51,12 +52,12 @@ if (_reason != "") then {
 };
 
 private _masks = values GVAR(showHudHash);
-private _resultMask = [];
+private _resultMask = []; //IGNORE_PRIVATE_WARNING ["_resultMask"];
 
 for "_index" from 0 to 9 do {
     private _set = true; //Default to true
     {
-        if (!(_x select _index)) exitWith {
+        if !(_x select _index) exitWith {
             _set = false; //Any false will make it false
         };
     } forEach _masks;
@@ -64,6 +65,6 @@ for "_index" from 0 to 9 do {
 };
 
 TRACE_2("showHud",_resultMask,keys GVAR(showHudHash));
-showHud _resultMask;
+showHUD _resultMask;
 
 _resultMask

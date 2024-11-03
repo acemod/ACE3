@@ -31,21 +31,21 @@ private _unitMoveListUnits = (_unitMoveList apply {_x select 0});
 {
     _x setVariable [QGVAR(garrisonMove_failSafe), nil, true];
     _x setVariable [QGVAR(garrisonMove_unitPosMemory), nil, true];
-} foreach _unitMoveListUnits;
+} forEach _unitMoveListUnits;
 
 // Avoid duplicate PFHs
 if (isNil QGVAR(garrison_moveUnitPFH)) then {
-    missionNameSpace setVariable [QGVAR(garrison_moveUnitPFH), true, true];
+    missionNamespace setVariable [QGVAR(garrison_moveUnitPFH), true, true];
 
     // PFH checking if the units have reached their destination
     [{
         params ["_args", "_pfhID"];
 
-        private _unitMoveList = missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []];
+        private _unitMoveList = missionNamespace getVariable [QGVAR(garrison_unitMoveList), []];
 
         // End PFH if all units are placed / unable to reach position
         if (_unitMoveList isEqualTo []) then {
-            missionNameSpace setVariable [QGVAR(garrison_moveUnitPFH), nil, true];
+            missionNamespace setVariable [QGVAR(garrison_moveUnitPFH), nil, true];
             LOG("garrisonMove PFH: PFH finished it's job | deleting PFH");
             _pfhID call CBA_fnc_removePerFrameHandler;
 
@@ -91,7 +91,7 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
 
                 } else {
                     private _unitPos = getPos _unit;
-                    if (surfaceisWater _unitPos) then {
+                    if (surfaceIsWater _unitPos) then {
                         _unitPos = getPosASL _unit;
                     } else {
                         _unitPos = getPosATL _unit;
@@ -120,6 +120,7 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                             };
 
                             case ((_unitPosTimer + 5) < CBA_missionTime && {_unitOldPos distance _unitPos < 0.5}) : {
+                                (_unit getVariable [QGVAR(garrisonMove_failSafe), [CBA_missionTime, 5]]) params ["_failSafeTimer", "_failSafeRemainingAttemps"];
                                 call _fnc_attemptFailed;
                             };
 
@@ -131,9 +132,9 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                         };
                     };
                 };
-            } foreach _unitMoveList;
+            } forEach _unitMoveList;
 
-            missionNameSpace setVariable [QGVAR(garrison_unitMoveList), _unitMoveList, true];
+            missionNamespace setVariable [QGVAR(garrison_unitMoveList), _unitMoveList, true];
         };
     }, 0.5, []] call CBA_fnc_addPerFrameHandler;
 };

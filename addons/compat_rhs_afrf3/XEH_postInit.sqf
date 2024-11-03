@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+if !(["ace_nametags"] call EFUNC(common,isModLoaded)) exitWith {};
+
 private _russianRankIcons = [
     QPATHTOEF(nametags,UI\icons_russia\private_gs.paa),
     QPATHTOEF(nametags,UI\icons_russia\corporal_gs.paa),

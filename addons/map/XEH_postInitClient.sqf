@@ -8,7 +8,7 @@ LOG(MSG_INIT);
 // Calculate the maximum zoom allowed for this map
 call FUNC(determineZoom);
 
-GVAR(flashlights) = [] call CBA_fnc_createNamespace;
+GVAR(flashlights) = createHashMap;
 
 ["CBA_settingsInitialized", {
     if (isMultiplayer && {GVAR(DefaultChannel) != -1}) then {
@@ -65,15 +65,22 @@ GVAR(flashlights) = [] call CBA_fnc_createNamespace;
 // hide clock on map if player has no watch
 GVAR(hasWatch) = true;
 
-["loadout", {
-    params ["_unit"];
-    if (isNull _unit) exitWith {
+[QGVAR(slotItemChanged), "SlotItemChanged", {
+    params ["", "_item", "_slot", "_assign"];
+
+    if (_slot != TYPE_WATCH) exitWith {};
+
+    GVAR(hasWatch) = _assign && {_item isKindOf ["ItemWatch", configFile >> "CfgWeapons"]};
+}] call CBA_fnc_addBISPlayerEventHandler;
+
+["unit", {
+    params ["_newPlayer"];
+
+    if (isNull _newPlayer) exitWith {
         GVAR(hasWatch) = true;
     };
-    GVAR(hasWatch) = false;
-    {
-        if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
-    } forEach (assignedItems _unit);
+
+    GVAR(hasWatch) = (_newPlayer getSlotItemName TYPE_WATCH) isKindOf ["ItemWatch", configFile >> "CfgWeapons"];
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 
@@ -109,6 +116,7 @@ GVAR(vehicleLightColor) = [1,1,1,0];
             compile _vehicleLightCondition
         };
     } else {
+        //IGNORE_PRIVATE_WARNING ["_vehicle", "_unit"];
         switch (true) do {
             case (_vehicle isKindOf "Tank");
             case (_vehicle isKindOf "Wheeled_APC_F"): { {true} };

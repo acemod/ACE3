@@ -19,8 +19,8 @@ This page describes how you can setup your development environment for ACE3, all
 
 **HEMTT:** _(recommended)_
 - [Windows] PowerShell v3.0+ _(pre-installed on Windows 8 or newer)_
-- [HEMTT](https://github.com/BrettMayson/HEMTT/releases) (>=v1.7.2) in project root _(Windows users can double-click `tools/setup.bat`)_
-    - `hemtt` (Linux) or `hemtt.exe` (Windows)
+- [HEMTT](https://hemtt.dev/installation) (>=v1.7.2)
+    - `hemtt` (Linux / MacOS) or `hemtt.exe` (Windows)
 
 **Mikero Tools:**
 - P-drive
@@ -50,7 +50,9 @@ _Replace `hemtt` with `hemtt.exe` on Windows. P-drive is **not** required for HE
 
 ### 4.1 Initial Setup
 
-Execute `tools\setup.bat` (double-click on Windows) or download [HEMTT](https://github.com/BrettMayson/HEMTT/releases/latest) and place the executable in project root (Windows and Linux - binarization supported only on Windows at this time).
+Install HEMTT using the instructions provided in [The HEMTT Book](https://hemtt.dev/installation).
+
+(Windows and Linux - binarization supported only on Windows at this time).
 
 #### 4.1.1 File Patching Setup
 
@@ -139,7 +141,7 @@ Different `make.py` command line options include:
 - `increment_patch` - increments _patch_ version number (ignored with `increment_minor` or `increment_major`)
 - `increment_minor` - increments _minor_ version number and resets _patch_ version number to `0` (ignored with `increment_major`)
 - `increment_major` - increments _major_ version number and resets _minor_ and _patch_ version numbers to `0`
-- `force` - force rebuild all PBOs, even those already present in the `release` directory (combined with `compile` it will also rebuild all extensions)
+- `force` - force rebuild all PBOs, even those already present in the `release` directory
 - `checkexternal` - check external references (incompatible only with `<component1> <component2>` and `force <component1> <component2>`)
 - `release` - create release packages/archives
 - `<component1> <component2>` - build only specified component(s) (incompatible with `release`)

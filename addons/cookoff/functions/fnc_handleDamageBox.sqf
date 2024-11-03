@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
- * Author: KoffeinFlummi, commy2
- * Handles all incoming damage for boxi
+ * Author: KoffeinFlummi, commy2, johnb43
+ * Handles all incoming damage for boxes.
  *
  * Arguments:
  * HandleDamage EH <ARRAY>
  *
  * Return Value:
- * Damage to be inflicted. <NUMBER>
+ * Damage to be inflicted (can be nil) <NUMBER>
  *
  * Example:
  * _this call ace_cookoff_fnc_handleDamageBox
@@ -15,58 +15,59 @@
  * Public: No
  */
 
-params ["_vehicle", "", "_damage", "_source", "_ammo", "_hitIndex", "_shooter"];
+// If cookoff for boxes is disabled, exit
+if (!GVAR(enableAmmobox) || {GVAR(ammoCookoffDuration) == 0}) exitWith {};
 
-// it's already dead, who cares?
-if (damage _vehicle >= 1) exitWith {};
+params ["_box", "_selection", "_damage", "_source", "_ammo", "_hitIndex", "_instigator", "_hitPoint", "", "_context"];
 
-// If cookoff is disabled exit
-if (_vehicle getVariable [QGVAR(enable), GVAR(enable)] in [0, false]) exitWith {};
+if (!local _box) exitWith {};
 
-// get hitpoint name
-private _hitpoint = "#structural";
+// If it's already dead, ignore
+if (!alive _box) exitWith {};
 
-if (_hitIndex != -1) then {
-    _hitpoint = toLowerANSI ((getAllHitPointsDamage _vehicle param [0, []]) select _hitIndex);
-};
-
-// get change in damage
-private _oldDamage = 0;
-
-if (_hitpoint isEqualTo "#structural") then {
-    _oldDamage = damage _vehicle;
+private _currentDamage = if (_selection != "") then {
+    _box getHitIndex _hitIndex
 } else {
-    _oldDamage = _vehicle getHitIndex _hitIndex;
+    damage _box
 };
 
-if (_hitpoint == "#structural" && _damage > 0.5) then {
-    // Almost always catch fire when hit by an explosive
-    if (IS_EXPLOSIVE_AMMO(_ammo)) then {
-        _vehicle call FUNC(cookOffBox);
-    } else {
-        // Need magazine to check for tracers
-        private _mag = "";
-        if (_source == _shooter) then {
-            _mag = currentMagazine _source;
-        } else {
-            _mag = _source currentMagazineTurret ([_shooter] call CBA_fnc_turretPath);
-        };
-        private _magCfg = configFile >> "CfgMagazines" >> _mag;
+// Killing units via End key is an edge case (#10375)
+// This didn't matter pre-Arma 3 2.18 but now this goes through the event handler
+// TODO: Structural fire damage >= 1 in a single damage event could still be caught here and we don't want that, but we haven't found a better way to catch this, fire damage should be small most of the time anyway
+if (_context == 0 && {(abs (_damage - _currentDamage - 1)) < 0.001 && _ammo == "" && isNull _source && isNull _instigator}) exitWith {_damage};
 
-        // Magazine could have changed during flight time (just ignore if so)
-        if (getText (_magCfg >> "ammo") == _ammo) then {
-            // If magazine's tracer density is high enough then low chance for cook off
-            private _tracers = getNumber (_magCfg >> "tracersEvery");
-            if (_tracers >= 1 && {_tracers <= 4}) then {
-                if (random 1 < _oldDamage*0.05) then {
-                    _vehicle call FUNC(cookOffBox);
-                };
-            };
-        };
+if !(_box getVariable [QGVAR(enableAmmoCookoff), true]) exitWith {};
+
+if !(_hitPoint == "" && {_damage > 0.5}) exitWith {}; // "" means structural damage
+
+private _ammoConfig = _ammo call CBA_fnc_getObjectConfig;
+
+// Catch fire when hit by an explosive or incendiary round
+if ((getNumber (_ammoConfig >> "explosive") >= 0.5) || {getNumber (_ammoConfig >> QEGVAR(vehicle_damage,incendiary)) > random 1}) then {
+    [QGVAR(cookOffBoxServer), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
+} else {
+    // There is a small chance of cooking a box off if it's shot by tracer ammo
+    if (random 1 >= _damage * 0.05) exitWith {};
+
+    // Need magazine to check for tracers
+    private _magazine = if (_source == _instigator) then {
+        currentMagazine _source
+    } else {
+        _source currentMagazineTurret (_source unitTurret _instigator)
     };
 
-    // prevent destruction, let cook-off handle it if necessary
-    _damage min 0.89
-} else {
-    _damage
+    private _configMagazine = configFile >> "CfgMagazines" >> _magazine;
+
+    // Magazine could have changed during flight time (just ignore if so)
+    if (getText (_configMagazine >> "ammo") == _ammo) then {
+        // If magazine's tracer density is high enough then low chance for cook off
+        private _tracers = getNumber (_configMagazine >> "tracersEvery");
+
+        if (_tracers >= 1 && {_tracers <= 4}) then {
+            [QGVAR(cookOffBoxServer), [_box, _source, _instigator]] call CBA_fnc_serverEvent;
+        };
+    };
 };
+
+// Prevent destruction, let cook-off handle it if necessary
+_damage min 0.89

@@ -31,10 +31,10 @@ GVAR(ELEVAT) = 0.01;
 
 HUNTIR_BACKGROUND_LAYER_ID cutText["","PLAIN"];
 
-closedialog 0;
+closeDialog 0;
 createDialog QGVAR(cam_dialog);
-uiNameSpace setVariable [QGVAR(monitor), findDisplay 18880];
-(uiNameSpace getVariable QGVAR(monitor)) displaySetEventHandler ["Keydown", QUOTE(_this call FUNC(keyPressed))];
+uiNamespace setVariable [QGVAR(monitor), findDisplay 18880];
+(uiNamespace getVariable QGVAR(monitor)) displaySetEventHandler ["Keydown", QUOTE(_this call FUNC(keyPressed))];
 
 ctrlSetText [4, "0X"];
 
@@ -68,8 +68,9 @@ GVAR(no_cams) sort true;
 } forEach GVAR(no_cams);
 [{
     //Close monitor if we no longer have the item:
-    if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNameSpace getVariable [QGVAR(monitor), displayNull])}) then {
+    if ((!([ACE_player, "ACE_HuntIR_monitor"] call EFUNC(common,hasItem))) && {!isNull (uiNamespace getVariable [QGVAR(monitor), displayNull])}) then {
         closeDialog 0;
+        [QGVAR(monitorClosed), [ACE_player]] call CBA_fnc_localEvent;
     };
 
     GVAR(nearHuntIRs) = ACE_player nearEntities ["ACE_HuntIR", HUNTIR_MAX_TRANSMISSION_RANGE];
@@ -104,32 +105,33 @@ GVAR(no_cams) sort true;
 
         GVAR(NV) = 0;
         setAperture -1;
-        closedialog 0;
-        titletext [" ", "BLACK IN", 4];
+        closeDialog 0;
+        titleText [" ", "BLACK IN", 4];
         ACE_player switchCamera "INTERNAL";
-        GVAR(cam) CameraEffect ["Terminate", "Back"];
-        CamDestroy GVAR(cam);
+        GVAR(cam) cameraEffect ["Terminate", "Back"];
+        camDestroy GVAR(cam);
         deleteVehicle GVAR(logic);
         if (player != ACE_player) then {
             player remoteControl ACE_player;
         };
+        [QGVAR(monitorClosed), [ACE_player]] call CBA_fnc_localEvent;
     };
 
     switch (GVAR(ZOOM)) do {
         case 0: {
-            GVAR(cam) camsetFOV 0.7;
+            GVAR(cam) camSetFov 0.7;
             GVAR(cam) camSetFocus [GVAR(pos) select 2, 1];
         };
         case 1: {
-            GVAR(cam) camsetFOV 0.35;
+            GVAR(cam) camSetFov 0.35;
             GVAR(cam) camSetFocus [(GVAR(pos) select 2)/2, 1];
         };
         case 2: {
-            GVAR(cam) camsetFOV 0.17;
+            GVAR(cam) camSetFov 0.17;
             GVAR(cam) camSetFocus [(GVAR(pos) select 2)/4, 1];
         };
         case 3: {
-            GVAR(cam) camsetFOV 0.1;
+            GVAR(cam) camSetFov 0.1;
             GVAR(cam) camSetFocus [(GVAR(pos) select 2)/8, 1];
         };
     };
@@ -137,7 +139,7 @@ GVAR(no_cams) sort true;
     GVAR(logic) setPosATL (GVAR(pos) vectorAdd [0, 0, -5]);
     GVAR(logic) setDir GVAR(ROTATE);
     GVAR(logic) setVectorUp [0.0001, 0.0001, 1];
-    GVAR(cam) CameraEffect ["internal", "BACK"];
+    GVAR(cam) cameraEffect ["internal", "BACK"];
     private _cam_coord_y = GVAR(ELEVAT) * cos(GVAR(ROTATE));
     private _cam_coord_x = GVAR(ELEVAT) * sin(GVAR(ROTATE));
     GVAR(cam) camSetRelPos [_cam_coord_x, _cam_coord_y, 2];

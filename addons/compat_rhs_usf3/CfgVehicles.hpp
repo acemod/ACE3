@@ -43,8 +43,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 302;
     };
 
-    class Truck_F;
-    class Truck_01_base_F: Truck_F {};
+    class Truck_01_base_F;
     class rhsusf_fmtv_base: Truck_01_base_F {
         EGVAR(refuel,fuelCapacity) = 219;
     };
@@ -55,8 +54,7 @@ class CfgVehicles {
         EGVAR(refuel,fuelCargo) = 900; // 45 jerrycans
     };
 
-    class rhsusf_HEMTT_A4_base: Truck_01_base_F {};
-    class rhsusf_M977A4_usarmy_wd: rhsusf_HEMTT_A4_base {};
+    class rhsusf_M977A4_usarmy_wd;
     class rhsusf_M977A4_AMMO_usarmy_wd: rhsusf_M977A4_usarmy_wd {
         EGVAR(rearm,defaultSupply) = 1200;
     };

@@ -21,7 +21,7 @@ TRACE_1("params",_unit);
 private _detonators = [_unit] call FUNC(getDetonators);
 private _children = [];
 {
-    private _config = ConfigFile >> "CfgWeapons" >> _x;
+    private _config = configFile >> "CfgWeapons" >> _x;
     _children pushBack
         [
             [

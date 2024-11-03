@@ -19,20 +19,21 @@
  */
 
 params ["_logic", "_units", "_activated"];
+// IGNORE_PRIVATE_WARNING["_explosive", "_side"];
 
 if (_activated) then {
-    _explosive = gettext (configOf _logic >> "explosive");
+    _explosive = getText (configOf _logic >> "explosive");
     if (_explosive != "") then {
-        _explosive = createvehicle [_explosive,position _logic,[],0,"none"];
-        _explosive attachto [_logic];
+        _explosive = createVehicle [_explosive,position _logic,[],0,"none"];
+        _explosive attachTo [_logic];
 
         // Added by ace_zeus to control if mines are revealed
         if (GVAR(revealMines) > MINE_REVEAL_NONE) then {
             //--- Reveal the mine to curator's side
             {
-                _side = (getassignedcuratorunit _x) call bis_fnc_objectSide;
-                _side revealmine _explosive;
-            } forEach (objectcurators _logic);
+                _side = (getAssignedCuratorUnit _x) call bis_fnc_objectSide;
+                _side revealMine _explosive;
+            } forEach (objectCurators _logic);
 
             if (GVAR(revealMines) == MINE_REVEAL_FULL) then {
                 //--- Mark minefields in the map
@@ -43,8 +44,8 @@ if (_activated) then {
         //--- Show hint to curator who placed the object
         [[["Curator","PlaceMines"],nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",_logic] call bis_fnc_mp;
 
-        waituntil {sleep 0.1; isnull _explosive || isnull _logic || !alive _logic};
-        if (isnull _logic) then {deletevehicle _explosive;} else {_explosive setdamage 1;};
-        deletevehicle _logic;
+        waitUntil {sleep 0.1; isNull _explosive || isNull _logic || !alive _logic};
+        if (isNull _logic) then {deleteVehicle _explosive;} else {_explosive setDamage 1;};
+        deleteVehicle _logic;
     };
 };

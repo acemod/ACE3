@@ -72,7 +72,7 @@ private _finalOwner = objNull;
 
         TRACE_1("",_laser);
         //Handle Weird Data Return - skips over this laser in the for loop
-        if ((_laser isEqualTo []) || {_laser isEqualTo [-1, -1]}) exitWith {WARNING_1("Bad Laser Return",_laser);};
+        if ((_laser isEqualTo []) || {_laser isEqualTo [-1, -1]}) exitWith {WARNING_1("Bad Laser Return %1",_laser);};
         _laser params [["_laserPos", [], [[]], 3], ["_laserDir", [], [[]], 3]];
 
         if (GVAR(dispersionCount) > 0) then {
@@ -109,13 +109,12 @@ if (_spots isNotEqualTo []) then {
     private _c = 0;
     private _buckets = [];
     private _excludes = [];
-    private _bucketIndex = 0;
 
     // Put close points together into buckets
     while { count(_spots) != count(_excludes) && _c < (count _spots) } do {
         scopeName "mainSearch";
         {
-            if (!(_forEachIndex in _excludes)) then {
+            if !(_forEachIndex in _excludes) then {
                 private _index = _buckets pushBack [_x, [_x]];
                 _excludes pushBack _forEachIndex;
                 _bucketPos = _x select 0;
@@ -124,7 +123,7 @@ if (_spots isNotEqualTo []) then {
             };
         } forEach _spots;
         {
-            if (!(_forEachIndex in _excludes)) then {
+            if !(_forEachIndex in _excludes) then {
                 private _testPos = (_x select 0);
                 if ((_testPos vectorDistanceSqr _bucketPos) <= 100) then {
                     _bucketList pushBack _x;
@@ -178,7 +177,6 @@ if (_spots isNotEqualTo []) then {
         private _maxOwnerCount = -1;
 
         {
-            //IGNORE_PRIVATE_WARNING ["_x", "_y"];
             _y params ["_count", "_owner"];
             if (_count > _maxOwnerCount) then {
                 _maxOwnerCount = _count;
@@ -192,10 +190,10 @@ END_COUNTER(seekerFindLaserSpot);
 
 #ifdef DRAW_LASER_INFO
 if (isNil "_finalPos") then {
-    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa", [0.9,1,0,1], (ASLtoAGL _posASL), 1, 1, 0, format ["Seeker: %1", _seekerCode], 0.5, 0.025, "TahomaB"];
+    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconMan_ca.paa", [0.9,1,0,1], (ASLToAGL _posASL), 1, 1, 0, format ["Seeker: %1", _seekerCode], 0.5, 0.025, "TahomaB"];
 } else {
-    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconManAT_ca.paa", [0.5,1,0,1], (ASLtoAGL _posASL), 1, 1, 0, format ["Seeker: %1", _seekerCode], 0.5, 0.025, "TahomaB"];
-    drawLine3D [ASLtoAGL _posASL, ASLtoAGL _finalPos, [0.5,1,0,1]];
+    drawIcon3D ["\A3\ui_f\data\map\vehicleicons\iconManAT_ca.paa", [0.5,1,0,1], (ASLToAGL _posASL), 1, 1, 0, format ["Seeker: %1", _seekerCode], 0.5, 0.025, "TahomaB"];
+    drawLine3D [ASLToAGL _posASL, ASLToAGL _finalPos, [0.5,1,0,1]];
 };
 #endif
 

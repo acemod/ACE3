@@ -117,6 +117,34 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "Extension: x64",
+            "command": "cargo",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "args": [
+                "make",
+                "move_x64_release"
+            ],
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
+            "label": "Extension: Release",
+            "command": "cargo",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "args": [
+                "make",
+                "release"
+            ],
+            "group": {
+                "kind": "build"
+            }
         }
     ]
 }

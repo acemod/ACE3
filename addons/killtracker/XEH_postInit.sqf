@@ -16,10 +16,11 @@
  * Public: No
  */
 
-if ((getText (missionconfigfile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QXGVAR(outputText)) exitWith {
+if ((getText (missionConfigFile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QXGVAR(outputText)) exitWith {
     TRACE_1("no mission debriefing config",_this);
 };
-if (!(["ace_medical"] call EFUNC(common,isModLoaded))) exitWith {
+
+if !(GETEGVAR(medical,enabled,false)) exitWith {
     WARNING("No ACE-Medical");
     XGVAR(outputText) = "No ACE-Medical";
 };
@@ -64,7 +65,7 @@ GVAR(killCount) = 0;
     private _killInfo = [];
 
     if (!isNull _killer) then {
-        if (!(_killer isKindof "CAManBase")) then { // If killer is a vehicle log the vehicle type
+        if !(_killer isKindOf "CAManBase") then { // If killer is a vehicle log the vehicle type
             _killInfo pushBack format [LLSTRING(Vehicle), getText ((configOf _killer) >> "displayName")];
         };
         if (isNull _instigator) then {
@@ -73,11 +74,11 @@ GVAR(killCount) = 0;
         };
     };
     private _unitIsPlayer = hasInterface && {_unit in [player, ace_player]}; // isPlayer check will fail at this point
-    private _killerIsPlayer = (!isNull _instigator) && {_unit != _instigator} && {[_instigator] call EFUNC(common,isPlayer)};
-    TRACE_2("",_unitIsPlayer,_killerIsPlayer);
+    private _instigatorIsPlayer = (!isNull _instigator) && {_unit != _instigator} && {[_instigator] call EFUNC(common,isPlayer)};
+    TRACE_2("",_unitIsPlayer,_instigatorIsPlayer);
 
     // Don't do anything if neither are players
-    if (!(_unitIsPlayer || _killerIsPlayer)) exitWith {};
+    if !(_unitIsPlayer || _instigatorIsPlayer) exitWith {};
 
     // Log firendly fire
     private _fnc_getSideFromConfig = {
@@ -89,7 +90,7 @@ GVAR(killCount) = 0;
             default {civilian};
         };
     };
-    if ((!isNull _instigator) && {_unit != _instigator} && {_instigator isKindOf "CAManBase"}) then {
+    if (!isNull _instigator && {_unit != _instigator} && {_instigator isKindOf "CAManBase"}) then {
         // Because of unconscious group switching/captives it's probably best to just use unit's config side
         private _unitSide = [_unit] call _fnc_getSideFromConfig;
         private _killerSide = [_instigator] call _fnc_getSideFromConfig;
@@ -110,23 +111,23 @@ GVAR(killCount) = 0;
 
     // If unit was player then send event to self
     if (_unitIsPlayer) then {
-        private _killerName = "Self?";
-        if ((!isNull _killer) && {_unit != _killer}) then {
-            if (_killerIsPlayer) then {
-                _killerName = [_killer, true, false] call EFUNC(common,getName);
+        private _instigatorName = "Self?";
+        if ((!isNull _instigator) && {_unit != _instigator}) then {
+            if (_instigatorIsPlayer) then {
+                _instigatorName = [_instigator, true, false] call EFUNC(common,getName);
             } else {
-                _killerName = _killer getVariable [QGVAR(aiName), ""]; // allow setting a custom AI name (e.g. VIP Target)
-                if (_killerName == "") then {
-                    _killerName = format ["*AI* - %1", getText ((configOf _killer) >> "displayName")];
+                _instigatorName = _instigator getVariable [QGVAR(aiName), ""]; // allow setting a custom AI name (e.g. VIP Target)
+                if (_instigatorName == "") then {
+                    _instigatorName = format ["*AI* - %1", getText ((configOf _instigator) >> "displayName")];
                 };
             };
         };
-        TRACE_3("send death event",_unit,_killerName,_killInfo);
-        [QGVAR(death), [_killerName, _killInfo]] call CBA_fnc_localEvent;
+        TRACE_3("send death event",_unit,_instigatorName,_killInfo);
+        [QGVAR(death), [_instigatorName, _killInfo]] call CBA_fnc_localEvent;
     };
 
-    // If killer was player then send event to killer
-    if (_killerIsPlayer) then {
+    // If shooter was player then send event to them (and optionally the whole crew)
+    if (_instigatorIsPlayer && {_unitIsPlayer || GVAR(trackAI)}) then {
         private _unitName = "";
         if (_unitIsPlayer) then {
             _unitName = [_unit, true, false] call EFUNC(common,getName); // should be same as profileName
@@ -136,9 +137,18 @@ GVAR(killCount) = 0;
                 _unitName = format ["*AI* - %1", getText ((configOf _unit) >> "displayName")];
             };
         };
-        if (_unitIsPlayer || GVAR(trackAI)) then {
-            TRACE_3("send kill event",_killer,_unitName,_killInfo);
-            [QGVAR(kill), [_unitName, _killInfo], _killer] call CBA_fnc_targetEvent;
+        TRACE_3("send kill event",_instigator,_unitName,_killInfo);
+        [QGVAR(kill), [_unitName, _killInfo], _instigator] call CBA_fnc_targetEvent;
+
+        if (GVAR(showCrewKills) && {!(_killer isKindOf "CAManBase")}) then {
+            private _crew = [driver _killer, gunner _killer, commander _killer] - [_instigator];
+            _crew = _crew select {[_x] call EFUNC(common,isPlayer)};
+            _crew = _crew arrayIntersect _crew;
+            TRACE_1("showCrewKills",_crew);
+            _killInfo = format [" - [<t color='#99ff99'>%1</t>, %2", localize "str_a3_rscdisplaygarage_tab_crew", _killInfo select [4]];
+            {
+                [QGVAR(kill), [_unitName, _killInfo], _x] call CBA_fnc_targetEvent;
+            } forEach _crew;
         };
     };
 }] call CBA_fnc_addEventHandler;

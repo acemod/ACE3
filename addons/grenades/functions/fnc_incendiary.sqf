@@ -1,11 +1,12 @@
 #include "..\script_component.hpp"
 /*
  * Author: commy2
- * Makes incendiary burn.
+ * Makes an incendiary grenade burn.
  *
  * Arguments:
- * 0: The grenade <OBJECT>
+ * 0: Incendiary grenade <OBJECT>
  * 1: Incendiary lifetime <OBJECT>
+ * 2: Instigator's side <SIDE>
  *
  * Return Value:
  * None
@@ -30,11 +31,11 @@
 #define PARTICLE_SMOKE_LIFTING 1
 #define PARTICLE_SMOKE_WIND_EFFECT 1
 
-#define EFFECT_SIZE 1
 #define ORIENTATION 5.4
 #define EXPANSION 1
 
 #define DESTRUCTION_RADIUS 1.8
+#define SEARCH_RADIUS 5
 
 params ["_projectile", "_timeToLive", "_center"];
 
@@ -42,24 +43,14 @@ if (isNull _projectile) exitWith {TRACE_1("null",_projectile);};
 
 private _position = position _projectile;
 
-// --- AI
-private _nearLocalEnemies = [];
-
+// Alert nearby hostile AI
 {
-    {
-        if (local _x && {[_center, side _x] call BIS_fnc_sideIsEnemy}) then { // WE WANT THE OBJECTS SIDE HERE!
-            _nearLocalEnemies pushBackUnique _x;
-        };
-    } forEach crew _x;
-} forEach (_position nearObjects ALERT_NEAR_ENEMY_RANGE);
-
-{
-    if (behaviour _x in ["SAFE", "AWARE"]) then {
+    if (local _x && {[_center, side group _x] call BIS_fnc_sideIsEnemy} && {behaviour _x in ["SAFE", "AWARE"]}) then { // WE WANT THE OBJECT'S SIDE HERE!
         _x setBehaviour "COMBAT";
     };
-} forEach _nearLocalEnemies;
+} forEach ([_position, ALERT_NEAR_ENEMY_RANGE, ALERT_NEAR_ENEMY_RANGE, 0, false] nearEntities [["CAManBase"], false, true, true]);
 
-// --- fire
+// Fire particles
 private _fire = "#particlesource" createVehicleLocal _position;
 
 _fire setParticleParams [
@@ -99,7 +90,7 @@ _fire setParticleRandom [PARTICLE_LIFE_TIME / 4, [0.15 * EFFECT_SIZE, 0.15 * EFF
 _fire setParticleFire [1.2,1.0,0.1];
 _fire setDropInterval (1 / PARTICLE_DENSITY);
 
-// --- smoke
+// Smoke particles
 private _smoke = "#particlesource" createVehicleLocal _position;
 
 _smoke setParticleParams [
@@ -137,7 +128,7 @@ _smoke setParticleParams [
 _smoke setParticleRandom [PARTICLE_SMOKE_LIFE_TIME / 2, [0.5 * EFFECT_SIZE, 0.5 * EFFECT_SIZE, 0.2 * EFFECT_SIZE], [0.3,0.3,0.5], 1, 0, [0,0,0,0.06], 0, 0];
 _smoke setDropInterval (1 / PARTICLE_SMOKE_DENSITY);
 
-// --- light
+// Light
 private _light = "#lightpoint" createVehicleLocal (_position vectorAdd [0,0,0.5]);
 
 _light setLightBrightness 1.0;
@@ -150,92 +141,72 @@ _light setLightDayLight false;
 
 _light lightAttachObject [_projectile, [0,0,0]];
 
-// --- sound
+// Sound
 private _sound = objNull;
 
 if (isServer) then {
     _sound = createSoundSource ["Sound_Fire", _position, [], 0];
     private _radius = 1.5 * getNumber (configOf _projectile >> "indirectHitRange");
     private _intensity = getNumber (configOf _projectile >> "hit");
-    [QEGVAR(fire,addFireSource), [_projectile, _radius, _intensity, _projectile, {CBA_missionTime < _this}, CBA_missionTime + _timeToLive]] call CBA_fnc_serverEvent;
+
+    [QEGVAR(fire,addFireSource), [_projectile, _radius, _intensity, _projectile, {
+        params ["_endTime", "_projectile"];
+
+        // If incendiary no longer exists, exit
+        if (isNull _projectile) exitWith {
+            false // return
+        };
+
+        // Need to get the position every time, as grenade might have been moved
+        private _position = position _projectile;
+
+        {
+            // Damage vehicles
+            [QGVAR(damageEngineAndWheels), [_x, _position], _x] call CBA_fnc_targetEvent;
+        } forEach (_position nearEntities ["Car", SEARCH_RADIUS]);
+
+        CBA_missionTime < _endTime // return
+    }, [CBA_missionTime + _timeToLive, _projectile]]] call CBA_fnc_serverEvent;
 };
 
 [{
     {deleteVehicle _x} forEach _this;
 }, [_fire, _smoke, _light, _sound], _timeToLive] call CBA_fnc_waitAndExecute;
 
-// --- damage
+// Damage
 {
-    if (local _x) then {
-        //systemChat format ["burn: %1", _x];
+    // Inflame fireplace, barrels etc.
+    _x inflame true;
 
-        // --- destroy nearby static weapons and ammo boxes
-        if (_x isKindOf "StaticWeapon" || {_x isKindOf "ACE_RepairItem_Base"}) then {
+    // Destroy nearby static weapons and ammo boxes
+    if (_x isKindOf "StaticWeapon" || {_x isKindOf "ACE_RepairItem_Base"}) then {
+        _x setDamage 1;
+
+        continue;
+    };
+
+    if (_x isKindOf "ReammoBox_F") then {
+        if (
+            (["ace_cookoff"] call EFUNC(common,isModLoaded)) &&
+            {EGVAR(cookoff,enableAmmobox)} &&
+            {EGVAR(cookoff,ammoCookoffDuration) != 0} &&
+            {_x getVariable [QEGVAR(cookoff,enableAmmoCookoff), true]}
+        ) then {
+            [QEGVAR(cookOff,cookOffBoxServer), _x] call CBA_fnc_serverEvent;
+        } else {
             _x setDamage 1;
         };
-        if (_x isKindOf "ReammoBox_F") then {
-            if (
-                "ace_cookoff" call EFUNC(common,isModLoaded) &&
-                {GETVAR(_x,EGVAR(cookoff,enableAmmoCookoff),EGVAR(cookoff,enableAmmobox))}
-            ) then {
-                _x call EFUNC(cookoff,cookOffBox);
-            } else {
-                _x setDamage 1;
-            };
-        };
 
-        // --- delete nearby ground weapon holders
-        if (_x isKindOf "WeaponHolder" || {_x isKindOf "WeaponHolderSimulated"}) then {
-            deleteVehicle _x;
-        };
-
-        // --- inflame fireplace, barrels etc.
-        _x inflame true;
+        continue;
     };
-} forEach (_position nearObjects DESTRUCTION_RADIUS);
 
-// --- damage local vehicle
-private _vehicle = _position nearestObject "Car";
-
-if (!local _vehicle) exitWith {};
-
-private _config = configOf _vehicle;
-
-// --- burn tyres
-private _fnc_isWheelHitPoint = {
-    params ["_selectionName"];
-
-    // wheels must use a selection named "wheel_X_Y_steering" for PhysX to work
-    _selectionName select [0, 6] == "wheel_" && {
-        _selectionName select [count _selectionName - 9] == "_steering"
-    } // return
-};
+    // Delete nearby ground weapon holders
+    if (_x isKindOf "WeaponHolder" || {_x isKindOf "WeaponHolderSimulated"}) then {
+        deleteVehicle _x;
+    };
+} forEach ((_position nearObjects DESTRUCTION_RADIUS) select {local _x && {isDamageAllowed _x}});
 
 {
-    private _wheelSelection = getText (_config >> "HitPoints" >> _x >> "name");
-
-    if (_wheelSelection call _fnc_isWheelHitPoint) then {
-        private _wheelPosition = _vehicle modelToWorld (_vehicle selectionPosition _wheelSelection);
-
-        if (_position distance _wheelPosition < EFFECT_SIZE * 2) then {
-            _vehicle setHit [_wheelSelection, 1];
-        };
-    };
-} forEach (getAllHitPointsDamage _vehicle param [0, []]);
-
-// --- burn car engine
-if (_vehicle isKindOf "Wheeled_APC_F") exitWith {};
-
-private _engineSelection = getText (_config >> "HitPoints" >> "HitEngine" >> "name");
-private _enginePosition = _vehicle modelToWorld (_vehicle selectionPosition _engineSelection);
-
-if (_position distance _enginePosition < EFFECT_SIZE * 2) then {
-    _vehicle setHit [_engineSelection, 1];
-
-    if ("ace_cookoff" call EFUNC(common,isModLoaded)) then {
-        private _enabled = _vehicle getVariable [QEGVAR(cookoff,enable), EGVAR(cookoff,enable)];
-        if (_enabled in [2, true] || {_enabled isEqualTo 1 && {fullCrew [_vehicle, "", false] findIf {isPlayer (_x select 0)} != -1}}) then {
-            _vehicle call EFUNC(cookoff,engineFire);
-        };
-    };
-};
+    // Damage vehicles (locality is checked in FUNC(damageEngineAndWheels))
+    [_x, _position] call FUNC(damageEngineAndWheels);
+} forEach (_position nearEntities ["Car", SEARCH_RADIUS]);

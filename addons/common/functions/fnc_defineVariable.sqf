@@ -24,7 +24,7 @@ params ["_name", "_value", "_defaultGlobal", "_category", ["_code", 0], ["_persi
 
 if (isNil "_defaultGlobal") exitWith {};
 
-if (!(_name isEqualType "")) exitwith {
+if !(_name isEqualType "") exitWith {
     [format ["Tried to the deinfe a variable with an invalid name: %1 Arguments: %2", _name, _this]] call FUNC(debug);
 };
 

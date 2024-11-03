@@ -74,7 +74,7 @@ private _validate_preset = {
         ERROR(_errorMsg);
         _valid = false;
     };
-    if (!((_this select 17) in ["ASM", "ICAO"])) then {
+    if !((_this select 17) in ["ASM", "ICAO"]) then {
         private _errorMsg = format ["Invalid atmosphere model: %1", _this select 17];
         ERROR(_errorMsg);
         _valid = false;

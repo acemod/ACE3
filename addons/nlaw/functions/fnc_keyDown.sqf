@@ -19,8 +19,8 @@
 TRACE_1("lock key down",GVAR(isLockKeyDown));
 
 if (!alive ACE_player) exitWith {};
-if (!([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {};
-if (!(ACE_player call CBA_fnc_canUseWeapon)) exitWith {};
+if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {};
+if !(ACE_player call CBA_fnc_canUseWeapon) exitWith {};
 if ((getNumber (configFile >> "CfgWeapons" >> (currentWeapon ACE_player) >> QGVAR(enabled))) == 0) exitWith {};
 if (GVAR(isLockKeyDown)) exitWith {ERROR("already running?");};
 
@@ -74,7 +74,7 @@ playSound "ACE_Sound_Click";
     _args set [1, _yaw];
     _args set [2, _pitch];
 
-    #ifdef DEBUG_MODE_FULL
+    #ifdef DRAW_NLAW_INFO
     hintSilent format ["Instantaneous\nYaw: %1\n Pitch: %2\nGVAR\nYaw: %3\nPitch: %4", _yawChange, _pitchChange, GVAR(yawChange), GVAR(pitchChange)];
     #endif
 }, .25, [CBA_missionTime, _yaw, _pitch, true]] call CBA_fnc_addPerFrameHandler;

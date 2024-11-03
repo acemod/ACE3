@@ -1,9 +1,10 @@
 [
-    QGVAR(convertExplosives), "CHECKBOX",
+    QGVAR(convertExplosives),
+    "CHECKBOX",
     [LSTRING(convertExplosives_DisplayName), LSTRING(convertExplosives_Description)],
     LSTRING(Settings_DisplayName),
     true,
-    true,
-    {},
-    true
+    1,
+    {[QGVAR(convertExplosives), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;

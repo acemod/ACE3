@@ -37,7 +37,7 @@ private _pos = if((count _this) > 2) then {
 
 // For non-self actions, exit if the action is too far away or ocluded
 private _distanceToBasePoint = 0; //This will be 0 for self/zeus/in-vehicle (used later to check sub action distance)
-if ((GVAR(openedMenuType) == 0) && {isNull (ACE_controlledUAV select 0)} && {vehicle ACE_player == ACE_player} && {isNull curatorCamera} &&
+if ((GVAR(openedMenuType) == 0) && {isNull (ACE_controlledUAV select 0)} && {isNull objectParent ACE_player} && {isNull curatorCamera} &&
     {
         private _headPos = ACE_player modelToWorldVisual (ACE_player selectionPosition "pilot");
         _distanceToBasePoint = _headPos distance _pos;
@@ -46,7 +46,7 @@ if ((GVAR(openedMenuType) == 0) && {isNull (ACE_controlledUAV select 0)} && {veh
 
         if ((_distanceToBasePoint > 1.2) && {!(_params select 4)}) exitWith {
             // If distance to action is greater than 1.2 m and check isn't disabled in params, check LOS
-            lineIntersects [AGLtoASL _headPos, AGLtoASL _pos, _object, ACE_player]
+            lineIntersects [AGLToASL _headPos, AGLToASL _pos, _object, ACE_player]
         };
         false
     }) exitWith {false};
@@ -91,7 +91,7 @@ if (_activeActionTree isEqualTo []) exitWith {false};
 BEGIN_COUNTER(fnc_renderMenus);
 
 if (count _pos > 2) then {
-    _sPos pushBack (((AGLtoASL _pos) vectorDiff GVAR(cameraPosASL)) vectorDotProduct GVAR(cameraDir));
+    _sPos pushBack (((AGLToASL _pos) vectorDiff GVAR(cameraPosASL)) vectorDotProduct GVAR(cameraDir));
 } else {
     _sPos pushBack 0;
 };

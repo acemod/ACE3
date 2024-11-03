@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
- * Author: commy2
- * Put weapon on safety, or take it off safety if safety is already put on.
+ * Author: commy2, johnb43
+ * Puts weapon on safety, or takes it off safety if safety is already put on.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  * 2: Muzzle <STRING>
- * 3: Show hint <BOOL>
+ * 3: Show hint <BOOL> (default: true)
  *
  * Return Value:
  * None
@@ -18,67 +18,79 @@
  * Public: No
  */
 
-params ["_unit", "_weapon", "_muzzle", ["_hint", true, [true]]];
+params ["_unit", "_weapon", "_muzzle", ["_hint", true]];
 
-private _safedWeapons = _unit getVariable [QGVAR(safedWeapons), []];
+private _safedWeapons = _unit getVariable QGVAR(safedWeapons);
 
-if (_weapon in _safedWeapons) exitWith {
-    _this call FUNC(unlockSafety);
+if (isNil "_safedWeapons") then {
+    _safedWeapons = createHashMap;
+
+    _unit setVariable [QGVAR(safedWeapons), _safedWeapons];
 };
 
-_safedWeapons pushBack _weapon;
+// See if the current weapon has locked muzzles
+private _safedWeaponMuzzles = _safedWeapons getOrDefault [_weapon, createHashMap, true];
 
-_unit setVariable [QGVAR(safedWeapons), _safedWeapons];
+// If muzzle is locked, unlock it (toggle)
+if (_muzzle in _safedWeaponMuzzles) exitWith {
+    [_unit, _weapon, _muzzle, _hint] call FUNC(unlockSafety);
+};
 
-if (_unit getVariable [QGVAR(actionID), -1] == -1) then {
+private _weaponSelected = currentWeapon _unit == _weapon;
+private _firemode = (_unit weaponState _muzzle) select 2;
+
+// This syntax of selectWeapon doesn't mess with gun lights and lasers
+if (_weaponSelected) then {
+    _unit selectWeapon [_weapon, _muzzle, _firemode];
+};
+
+// Store new muzzle & firemode
+_safedWeaponMuzzles set [_muzzle, _firemode];
+
+// Lock muzzle
+if (isNil {_unit getVariable QGVAR(actionID)}) then {
     _unit setVariable [QGVAR(actionID), [
         _unit, "DefaultAction", {
+            params ["", "_unit"];
+
             if (
-                [_this select 1] call CBA_fnc_canUseWeapon
-                && {
-                    if (currentMuzzle (_this select 1) in ((_this select 1) getVariable [QGVAR(safedWeapons), []])) then {
-                        if (inputAction "nextWeapon" > 0) exitWith {
-                            [_this select 1, currentWeapon (_this select 1), currentMuzzle (_this select 1)] call FUNC(unlockSafety);
+                _unit call CBA_fnc_canUseWeapon && {
+                    (weaponState _unit) params ["_currentWeapon", "_currentMuzzle"];
+
+                    // Block firing the muzzle in safe mode
+                    if (_currentMuzzle in ((_unit getVariable [QGVAR(safedWeapons), createHashMap]) getOrDefault [_currentWeapon, createHashMap])) then {
+                        if (inputAction "nextWeapon" > 0 || {inputAction "prevWeapon" > 0}) exitWith {
+                            [_unit, _currentWeapon, _currentMuzzle] call FUNC(unlockSafety);
+
                             false
                         };
+
                         true
-                    } else {false}
+                    } else {
+                        false
+                    }
                 }
             ) then {
-                // player hud
-                [false] call FUNC(setSafeModeVisual);
+                // Player HUD
+                false call FUNC(setSafeModeVisual);
+
                 true
             } else {
-                // player hud
-                [true] call FUNC(setSafeModeVisual);
+                // Player HUD
+                true call FUNC(setSafeModeVisual);
+
                 false
             };
         }, {}
     ] call EFUNC(common,addActionEventHandler)];
 };
 
-if (_muzzle isEqualType "") then {
-    private _laserEnabled = _unit isIRLaserOn _weapon || {_unit isFlashlightOn _weapon};
-
-    _unit selectWeapon _muzzle;
-
-    if (
-        _laserEnabled
-        && {
-            _muzzle == primaryWeapon _unit // prevent UGL switch
-            || {"" == primaryWeapon _unit} // Arma switches to primary weapon if exists
-        }
-    ) then {
-        {_unit action [_x, _unit]} forEach ["GunLightOn", "IRLaserOn"];
-    };
+// Play fire mode selector sound
+if (_weaponSelected) then {
+    [_unit, _weapon, _muzzle] call FUNC(playChangeFiremodeSound);
 };
 
-// play fire mode selector sound
-[_unit, _weapon, _muzzle] call FUNC(playChangeFiremodeSound);
-
-// show info box unless disabled
+// Show info box unless disabled
 if (_hint) then {
-    private _picture = getText (configFile >> "CfgWeapons" >> _weapon >> "picture");
-    [localize LSTRING(PutOnSafety), _picture] call EFUNC(common,displayTextPicture);
+    [LLSTRING(PutOnSafety), getText (configFile >> "CfgWeapons" >> _weapon >> "picture")] call EFUNC(common,displayTextPicture);
 };
-

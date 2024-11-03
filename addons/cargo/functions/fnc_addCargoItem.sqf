@@ -41,6 +41,8 @@ if (_item isEqualType "") then {
 TRACE_1("loaded",_loaded);
 
 // Invoke listenable event
-["ace_cargoAdded", [_item, _vehicle, _loaded]] call CBA_fnc_globalEvent;
+if (_loaded > 0) then {
+    ["ace_cargoAdded", [_item, _vehicle, _loaded]] call CBA_fnc_globalEvent;
+};
 
 _loaded // return

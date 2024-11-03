@@ -27,8 +27,8 @@ GVAR(trenchPlacementData) = getArray (configFile >> "CfgVehicles" >> _trenchClas
 TRACE_1("",GVAR(trenchPlacementData));
 
 // prevent the placing unit from running
-[_unit, "forceWalk", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_Trenches", true] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 // create the trench
 private _trench = createVehicle [_noGeoModel, [0, 0, 0], [], 0, "NONE"];
@@ -75,9 +75,9 @@ GVAR(digPFH) = [{
             _minzoffset = _minzoffset min ((getTerrainHeightASL _pos) - (_pos select 2));
             #ifdef DEBUG_MODE_FULL
                 _pos set [2, getTerrainHeightASL _pos];
-                _pos2 = +_pos;
+                private _pos2 = +_pos;
                 _pos2 set [2, getTerrainHeightASL _pos + 1];
-                drawLine3D [ASLtoAGL _pos, ASLtoAGL _pos2, [1,1,0,1]];
+                drawLine3D [ASLToAGL _pos, ASLToAGL _pos2, [1,1,0,1]];
             #endif
         };
     };
