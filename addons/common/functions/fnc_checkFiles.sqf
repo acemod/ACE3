@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: commy2, johnb432, LinkIsGrim
+ * Author: commy2, johnb43, LinkIsGrim
  * Compares version numbers of PBOs and DLLs. Logs and displays error message on any version/addon errors in multiplayer.
  *
  * Arguments:
@@ -267,7 +267,6 @@ if (isMultiplayer) then {
                     private _errorMsg = format ["%1<br/><br/>%2<br/><br/>%3", _reasonMsg, _fixMsg, _infoMsg];
                     [_title, _errorMsg] call FUNC(errorMessage);
                 };
-
             };
         };
 
