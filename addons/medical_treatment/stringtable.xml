@@ -65,11 +65,11 @@
             <Spanish>Habilita la comprobación del pulso, presión sanguinea y rsepuesta a las acciones del tratamiento en lugar de la acción de diagnóstico genérico. \n Cuando se deshabilita, la acción RCP solo se mostrará cuando realizar un RCP sea apropiado. \n Las acciones activadas de este ajuste son necesarias para determinar si una persona está inconsciente o en parada cardiaca.</Spanish>
             <Korean>맥박 확인, 혈압 확인, 반응 확인 등의 일반적인 진료행위를 추가합니다. \n 비활성화시 심폐소생술은 가능 할때만 표시됩니다. \n 해당 옵션은 인원이 기절한건지 아니면 심정지가 왔는지 구분할 때 쓰입니다.</Korean>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AdvancedPulse_DisplayName">
-            <English>Advanced Pulse</English>
+        <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
+            <English>Numerical Pulse</English>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AdvancedPulse_Description">
-            <English>Makes Check Pulse action always give a numerical value</English>
+        <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_Description">
+            <English>Makes Check Pulse action give a numerical value based on setting</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrest">
             <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest</English>

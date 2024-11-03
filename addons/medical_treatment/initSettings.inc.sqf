@@ -8,11 +8,11 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(advancedPulse),
+    QGVAR(numericalPulse),
     "LIST",
-    [LSTRING(AdvancedPulse_DisplayName), LSTRING(AdvancedPulse_Description)],
+    [LSTRING(numericalPulse_DisplayName), LSTRING(NumericalPulse_Description)],
     [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
-    [[0, 1], [ELSTRING(common,Disabled), ELSTRING(common,Enabled)], 0],
+    [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 0],
     true
 ] call CBA_fnc_addSetting;
 
