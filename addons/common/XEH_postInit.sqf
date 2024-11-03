@@ -473,21 +473,48 @@ addMissionEventHandler ["PlayerViewChanged", {
 GVAR(isReloading) = false;
 
 ["unit", {
-    params ["_newPlayer", "_oldPlayer"];
+    params ["_newPlayer"];
 
-    GVAR(isReloading) = ((weaponState _newPlayer) select 6) == 0; // Catch the new unit reloading
-    if (GVAR(isReloading)) then {
-        private _unitMovesInfo = getUnitMovesInfo _newPlayer; // 6 - gesture elapsed time, 7 - gesture duration
-        [{
-            if (_this isEqualTo ACE_player) exitWith { // player might switch units again before reload finished
-                GVAR(isReloading) = false
-            };
-        }, _newPlayer, (_unitMovesInfo select 7) - (_unitMovesInfo select 6)] call CBA_fnc_waitAndExecute;
-    };
+    // Catch the current unit reloading
+    private _weaponState = weaponState _newPlayer;
+    GVAR(isReloading) = (_weaponState select 6) != 0;
 
-    _oldPlayer call FUNC(removeReloadMutex);
-    _newPlayer call FUNC(addReloadMutex);
+    if (!GVAR(isReloading)) exitWith {};
+
+    // Wait until reload animation has finished
+    [{
+        ((_this select 0) weaponState (_this select 1)) select 6 == 0
+    }, {
+        // Player might switch units again before reload finishes
+        if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
+
+        GVAR(isReloading) = false
+    }, [_newPlayer, _weaponState select 1]] call CBA_fnc_waitUntilAndExecute;
 }, true] call CBA_fnc_addPlayerEventHandler;
+
+[QGVAR(magazineReloading), "MagazineReloading", {
+    params ["_unit", "", "_muzzle"];
+
+    // Wait until reload animation has started
+    [{
+        ((_this select 0) weaponState (_this select 1)) select 6 != 0
+    }, {
+        // Player might switch units before reload starts
+        if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
+
+        GVAR(isReloading) = true;
+
+        // Wait until reload animation has finished
+        [{
+            ((_this select 0) weaponState (_this select 1)) select 6 == 0
+        }, {
+            // Player might switch units before reload finishes
+            if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
+
+            GVAR(isReloading) = false
+        }, _this] call CBA_fnc_waitUntilAndExecute;
+    }, [_unit, _muzzle], 5] call CBA_fnc_waitUntilAndExecute;
+}] call CBA_fnc_addBISPlayerEventHandler;
 
 //////////////////////////////////////////////////
 // Start the sway loop
