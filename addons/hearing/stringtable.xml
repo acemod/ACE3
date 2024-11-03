@@ -367,6 +367,10 @@
             <English>Electronic Hearing Protection taken off</English>
             <German>Elektronischer Gehörschutz abgesetzt</German>
         </Key>
+        <Key ID="STR_ACE_Hearing_PutOrRemoveEHP">
+            <English>Put on/take off Electronic Hearing Protection</English>
+            <German>Elektronischer Gehörschutz aufsetzen/absetzen</German>
+        </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_DisplayName">
             <English>Unconscious Volume</English>
             <German>Lautstärke Bewusstlosigkeit</German>
