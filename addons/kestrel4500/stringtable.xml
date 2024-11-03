@@ -1,124 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Kestrel4500">
-        <Key ID="STR_ACE_Kestrel4500_Name">
-            <English>Kestrel 4500NV</English>
-            <German>Kestrel 4500NV</German>
-            <Spanish>Kestrel 4500NV</Spanish>
-            <French>Kestrel 4500NV</French>
-            <Polish>Kestrel 4500NV</Polish>
-            <Czech>Kestrel 4500NV</Czech>
-            <Italian>Kestrel 4500NV</Italian>
-            <Hungarian>Kestrel 4500NV</Hungarian>
-            <Portuguese>Kestrel 4500NV</Portuguese>
-            <Russian>Kestrel 4500NV</Russian>
-            <Japanese>ケストレル 4500NV</Japanese>
-            <Korean>케스트렐 4500NV</Korean>
-            <Chinesesimp>猎隼4500 测风仪</Chinesesimp>
-            <Chinese>獵隼4500測風儀</Chinese>
-            <Turkish>Kestrel 4500NV</Turkish>
-        </Key>
         <Key ID="STR_ACE_Kestrel4500_Description">
             <English>Kestrel 4500 Pocket Weather Tracker</English>
-            <Polish>Anemomentr skrzydełkowy Kestrel 4500</Polish>
-            <Russian>Карманная метеостанция Kestrel 4500NV</Russian>
-            <French>Station météo portable Kestrel 4500</French>
-            <Spanish>Estación meteorológica Kestrel 4500 </Spanish>
-            <German>Kestrel 4500 Taschenwettermessgerät</German>
-            <Italian>Kestrel 4500 Indicatore Meteorologico Tascabile</Italian>
-            <Portuguese>Kestrel 4500 Medidor Balístico Ativo</Portuguese>
-            <Hungarian>Kestrel 4500 kézi szél-és időjárásmérő</Hungarian>
             <Czech>Příruční meteostanice Kestrel 4500</Czech>
-            <Japanese>ケストレル 4500 携帯気象計</Japanese>
+            <French>Station météo portable Kestrel 4500</French>
+            <Spanish>Estación meteorológica Kestrel 4500</Spanish>
+            <Italian>Kestrel 4500 Indicatore Meteorologico Tascabile</Italian>
+            <Polish>Anemomentr skrzydełkowy Kestrel 4500</Polish>
+            <Portuguese>Kestrel 4500 Medidor Balístico Ativo</Portuguese>
+            <Russian>Карманная метеостанция Kestrel 4500NV</Russian>
+            <German>Kestrel 4500 Taschenwettermessgerät</German>
             <Korean>케스트렐 4500 휴대형 기상 관측기</Korean>
-            <Chinesesimp>猎隼4500 掌上型天气追踪仪</Chinesesimp>
+            <Japanese>ケストレル 4500 携帯気象計</Japanese>
             <Chinese>獵隼4500掌上型天氣追蹤儀</Chinese>
+            <Chinesesimp>猎隼4500 掌上型天气追踪仪</Chinesesimp>
             <Turkish>Kestrel 4500 Cep Hava Durumu Izleyicisi</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Kestrel4500_OpenKestrel">
-            <English>Open Kestrel 4500</English>
-            <Polish>Otwórz Kestrel 4500</Polish>
-            <Hungarian>Kestrel 4500 elővétele</Hungarian>
-            <Russian>Открыть Kestrel 4500NV</Russian>
-            <French>Ouvrir le Kestrel 4500</French>
-            <Italian>Accendi Kestrel 4500</Italian>
-            <Spanish>Abrir Kestrel 4500</Spanish>
-            <German>Kestrel 4500 öffnen</German>
-            <Portuguese>Abrir Kestrel 4500</Portuguese>
-            <Czech>Otevřít Kestrel 4500</Czech>
-            <Japanese>Kestrel 4500 を開く</Japanese>
-            <Korean>케스트렐 4500 열기</Korean>
-            <Chinesesimp>开启猎隼4500 测风仪</Chinesesimp>
-            <Chinese>開啟獵隼4500測風儀</Chinese>
-            <Turkish>Aç Kestrel 4500</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Kestrel4500_ShowKestrel">
-            <English>Show Kestrel 4500</English>
-            <Polish>Pokaż Kestrel 4500</Polish>
-            <Russian>Показать Kestrel 4500NV</Russian>
-            <French>Afficher le Kestrel 4500</French>
-            <Italian>Mostra Kestrel 4500</Italian>
-            <Spanish>Mostrar Kestrel 4500</Spanish>
-            <German>Kestrel 4500 anzeigen</German>
-            <Hungarian>Kestrel 4500 mutatása</Hungarian>
-            <Czech>Zobrazit Kestrel 4500</Czech>
-            <Portuguese>Mostrar Kestrel 4500</Portuguese>
-            <Japanese>ケストレル 4500 を見る</Japanese>
-            <Korean>케스트렐 4500 보이기</Korean>
-            <Chinesesimp>显示猎隼4500 测风仪</Chinesesimp>
-            <Chinese>顯示獵隼4500測風儀</Chinese>
-            <Turkish>Göster Kestrel 4500</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Kestrel4500_HideKestrel">
-            <English>Hide Kestrel 4500</English>
-            <Polish>Ukryj Kestrel 4500</Polish>
-            <Russian>Убрать Kestrel 4500NV</Russian>
-            <French>Cacher le Kestrel 4500</French>
-            <Italian>Nascondi Kestrel 4500</Italian>
-            <Spanish>Ocultar Kestrel 4500</Spanish>
-            <German>Kestrel 4500 wegstecken</German>
-            <Hungarian>Kestrel 4500 elrejtése</Hungarian>
-            <Czech>Skrýt Kestrel 4500</Czech>
-            <Portuguese>Ocultar Kestrel 4500</Portuguese>
-            <Japanese>Kestrel 4500 を隠す</Japanese>
-            <Korean>케스트렐 4500 숨기기</Korean>
-            <Chinesesimp>隐藏猎隼4500 测风仪</Chinesesimp>
-            <Chinese>隱藏獵隼4500測風儀</Chinese>
-            <Turkish>Gizle Kestrel 4500</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Kestrel4500_KestrelDialogKey">
-            <English>Open Kestrel 4500</English>
-            <Polish>Otwórz Kestrel 4500</Polish>
-            <Russian>Открыть Kestrel 4500NV</Russian>
-            <French>Ouvrir le Kestrel 4500</French>
-            <Italian>Apri Kestrel 4500</Italian>
-            <Spanish>Abrir Kestrel 4500</Spanish>
-            <German>Kestrel 4500 öffnen</German>
-            <Hungarian>Kestrel 4500 elővétele</Hungarian>
-            <Czech>Otevřít Kestrel 4500</Czech>
-            <Portuguese>Abrir Kestrel 4500</Portuguese>
-            <Japanese>ケストレル 4500 を開く</Japanese>
-            <Korean>케스트렐 4500 열기</Korean>
-            <Chinesesimp>开启猎隼4500 测风仪</Chinesesimp>
-            <Chinese>開啟獵隼4500測風儀</Chinese>
-            <Turkish>Aç Kestrel 4500</Turkish>
+            <Hungarian>Kestrel 4500 kézi szél-és időjárásmérő</Hungarian>
         </Key>
         <Key ID="STR_ACE_Kestrel4500_DisplayKestrelKey">
             <English>Show Kestrel 4500</English>
-            <Polish>Pokaż Kestrel 4500</Polish>
-            <Russian>Показать Kestrel 4500NV</Russian>
-            <French>Afficher le Kestrel 4500</French>
-            <Italian>Mostra Kestrel 4500</Italian>
-            <Spanish>Mostrar Kestrel 4500</Spanish>
-            <German>Kestrel 4500 anzeigen</German>
-            <Hungarian>Kestrel 4500 mutatása</Hungarian>
             <Czech>Zobrazit Kestrel 4500</Czech>
+            <French>Afficher le Kestrel 4500</French>
+            <Spanish>Mostrar Kestrel 4500</Spanish>
+            <Italian>Mostra Kestrel 4500</Italian>
+            <Polish>Pokaż Kestrel 4500</Polish>
             <Portuguese>Mostrar Kestrel 4500</Portuguese>
-            <Japanese>ケストレル 4500 を見る</Japanese>
+            <Russian>Показать Kestrel 4500NV</Russian>
+            <German>Kestrel 4500 anzeigen</German>
             <Korean>케스트렐 4500 숨기기</Korean>
-            <Chinesesimp>显示猎隼4500 测风仪</Chinesesimp>
+            <Japanese>ケストレル 4500 を見る</Japanese>
             <Chinese>顯示獵隼4500測風儀</Chinese>
+            <Chinesesimp>显示猎隼4500 测风仪</Chinesesimp>
             <Turkish>Göster Kestrel 4500</Turkish>
+            <Hungarian>Kestrel 4500 mutatása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_HideKestrel">
+            <English>Hide Kestrel 4500</English>
+            <Czech>Skrýt Kestrel 4500</Czech>
+            <French>Cacher le Kestrel 4500</French>
+            <Spanish>Ocultar Kestrel 4500</Spanish>
+            <Italian>Nascondi Kestrel 4500</Italian>
+            <Polish>Ukryj Kestrel 4500</Polish>
+            <Portuguese>Ocultar Kestrel 4500</Portuguese>
+            <Russian>Убрать Kestrel 4500NV</Russian>
+            <German>Kestrel 4500 wegstecken</German>
+            <Korean>케스트렐 4500 숨기기</Korean>
+            <Japanese>Kestrel 4500 を隠す</Japanese>
+            <Chinese>隱藏獵隼4500測風儀</Chinese>
+            <Chinesesimp>隐藏猎隼4500 测风仪</Chinesesimp>
+            <Turkish>Gizle Kestrel 4500</Turkish>
+            <Hungarian>Kestrel 4500 elrejtése</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_KestrelDialogKey">
+            <English>Open Kestrel 4500</English>
+            <Czech>Otevřít Kestrel 4500</Czech>
+            <French>Ouvrir le Kestrel 4500</French>
+            <Spanish>Abrir Kestrel 4500</Spanish>
+            <Italian>Apri Kestrel 4500</Italian>
+            <Polish>Otwórz Kestrel 4500</Polish>
+            <Portuguese>Abrir Kestrel 4500</Portuguese>
+            <Russian>Открыть Kestrel 4500NV</Russian>
+            <German>Kestrel 4500 öffnen</German>
+            <Korean>케스트렐 4500 열기</Korean>
+            <Japanese>ケストレル 4500 を開く</Japanese>
+            <Chinese>開啟獵隼4500測風儀</Chinese>
+            <Chinesesimp>开启猎隼4500 测风仪</Chinesesimp>
+            <Turkish>Aç Kestrel 4500</Turkish>
+            <Hungarian>Kestrel 4500 elővétele</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_Name">
+            <English>Kestrel 4500NV</English>
+            <Czech>Kestrel 4500NV</Czech>
+            <French>Kestrel 4500NV</French>
+            <Spanish>Kestrel 4500NV</Spanish>
+            <Italian>Kestrel 4500NV</Italian>
+            <Polish>Kestrel 4500NV</Polish>
+            <Portuguese>Kestrel 4500NV</Portuguese>
+            <Russian>Kestrel 4500NV</Russian>
+            <German>Kestrel 4500NV</German>
+            <Korean>케스트렐 4500NV</Korean>
+            <Japanese>ケストレル 4500NV</Japanese>
+            <Chinese>獵隼4500測風儀</Chinese>
+            <Chinesesimp>猎隼4500 测风仪</Chinesesimp>
+            <Turkish>Kestrel 4500NV</Turkish>
+            <Hungarian>Kestrel 4500NV</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_OpenKestrel">
+            <English>Open Kestrel 4500</English>
+            <Czech>Otevřít Kestrel 4500</Czech>
+            <French>Ouvrir le Kestrel 4500</French>
+            <Spanish>Abrir Kestrel 4500</Spanish>
+            <Italian>Accendi Kestrel 4500</Italian>
+            <Polish>Otwórz Kestrel 4500</Polish>
+            <Portuguese>Abrir Kestrel 4500</Portuguese>
+            <Russian>Открыть Kestrel 4500NV</Russian>
+            <German>Kestrel 4500 öffnen</German>
+            <Korean>케스트렐 4500 열기</Korean>
+            <Japanese>Kestrel 4500 を開く</Japanese>
+            <Chinese>開啟獵隼4500測風儀</Chinese>
+            <Chinesesimp>开启猎隼4500 测风仪</Chinesesimp>
+            <Turkish>Aç Kestrel 4500</Turkish>
+            <Hungarian>Kestrel 4500 elővétele</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Kestrel4500_ShowKestrel">
+            <English>Show Kestrel 4500</English>
+            <Czech>Zobrazit Kestrel 4500</Czech>
+            <French>Afficher le Kestrel 4500</French>
+            <Spanish>Mostrar Kestrel 4500</Spanish>
+            <Italian>Mostra Kestrel 4500</Italian>
+            <Polish>Pokaż Kestrel 4500</Polish>
+            <Portuguese>Mostrar Kestrel 4500</Portuguese>
+            <Russian>Показать Kestrel 4500NV</Russian>
+            <German>Kestrel 4500 anzeigen</German>
+            <Korean>케스트렐 4500 보이기</Korean>
+            <Japanese>ケストレル 4500 を見る</Japanese>
+            <Chinese>顯示獵隼4500測風儀</Chinese>
+            <Chinesesimp>显示猎隼4500 测风仪</Chinesesimp>
+            <Turkish>Göster Kestrel 4500</Turkish>
+            <Hungarian>Kestrel 4500 mutatása</Hungarian>
         </Key>
     </Package>
 </Project>

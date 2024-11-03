@@ -1,274 +1,274 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Slideshow">
-        <Key ID="STR_ACE_Slideshow_DisplayName">
-            <English>Slideshow</English>
-            <German>Diavorführung</German>
-            <French>Diaporama</French>
-            <Polish>Pokaz slajdów</Polish>
-            <Hungarian>Vetítés</Hungarian>
-            <Portuguese>Apresentação de Slides</Portuguese>
-            <Russian>Слайд-шоу</Russian>
-            <Czech>Prezentace</Czech>
-            <Spanish>Presentación de diapositivas</Spanish>
-            <Italian>Presentazione Diapositive</Italian>
-            <Japanese>スライドショー</Japanese>
-            <Korean>슬라이드 쇼</Korean>
-            <Chinese>幻燈片</Chinese>
-            <Chinesesimp>幻灯片</Chinesesimp>
-            <Turkish>Slayt</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Slideshow_Description">
-            <English>This module allows you to set up slide-shows on different objects. One module per image list. Only objects with hiddenSelection 0 are supported.</English>
-            <German>Dieses Modul erlaubt eine Diavorführung auf unterschiedlichen Objekten. Ein Modul, eine Bilderliste. Nur Objekte mit "hiddenSelection 0" werden unterstützt.</German>
-            <French>Ce module permet d'afficher des diaporamas sur différents objets. Un module par liste d'images.\nSeuls les objets avec le paramètre `HiddenSelection 0` sont supportés.</French>
-            <Polish>Ten moduł pozwala skonfigurować pokaz slajdów na różnych obiektach. Jeden moduł na jedną liste slajdów. Tylko obiekty z hiddenSelection 0 są wspierane.</Polish>
-            <Hungarian>Ez a modul lehetővé teszi a különböző objektumokon való vetítést. Egy modul/képlista. Csak "hiddenSelection 0"-t tartalmazó objektumok felelnek meg.</Hungarian>
-            <Portuguese>Este módulo permite que você monte apresentações de slides em diferentes objetos. Um módulo por lista de imagem. Somente objetos com hiddenSelection 0 são suportados.</Portuguese>
-            <Russian>Этот модуль позволяет вам устроить слайд-шоу на различных объектах. Один модуль на один список изображений. Поддерживаются только объекты с hiddenSelection 0.</Russian>
-            <Spanish>Este módulo permite configurar una presentación de diapositivas en diferentes objetos. Un módulo por lista de imágenes. Sólo son soportados objetos con hiddenSelection 0.</Spanish>
-            <Czech>Tento modul umožňuje nastavit prezentaci na různé objekty. Jeden modul na seznam s obrázky. Podporované jsou pouze objekty s hiddenSelection 0.</Czech>
-            <Italian>Questo modulo ti permette di creare una presentazione con diapositive su vari oggetti. Un modulo per ogni lista immagini. Solo oggetti con hiddenSelection 0 sono supportati.</Italian>
-            <Japanese>さまざまなオブジェクトへスライドショーを設定することができます。1つのモジュールは各画像リストになっています。オブジェクトが hiddenSelection 0へ対応している必要があります。</Japanese>
-            <Korean>이 모듈은 다른 물체에 대해 슬라이드 쇼를 놓을 수 있게 해줍니다. 한 모듈 당 한 이미지 목록만 가능합니다. 또한 hiddenSelection 0가 있는 물체만 지원됩니다.</Korean>
-            <Chinese>此模塊可讓圖片以幻燈片的形式顯示在物件上，每個模塊都能設定一串幻燈片清單，被設定的物件不能有隱藏部位(hiddenSelection)</Chinese>
-            <Chinesesimp>此模块可让图片以幻灯片的形式显示在物体上，每个模块都能设定一串幻灯片清单，被设定的物件不能有隐藏部位（hiddenSelection）</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Slideshow_Objects_DisplayName">
-            <English>Objects</English>
-            <German>Objekte</German>
-            <French>Objets</French>
-            <Polish>Obiekty</Polish>
-            <Hungarian>Objektumok</Hungarian>
-            <Portuguese>Objetos</Portuguese>
-            <Russian>Объекты</Russian>
-            <Czech>Objekty</Czech>
-            <Spanish>Objetos</Spanish>
-            <Italian>Oggetti</Italian>
-            <Japanese>オブジェクト</Japanese>
-            <Korean>물체</Korean>
-            <Chinese>物件</Chinese>
-            <Chinesesimp>物体</Chinesesimp>
-            <Turkish>Objeler</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Slideshow_Objects_Description">
-            <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple.</English>
-            <German>Objektnamen (können auch synchronisierte Objekte sein) auf denen die Diavorführung abgepielt wird. Werden ggf. durch Kommata getrennt.</German>
-            <French>Noms des objets (pouvant aussi être des objets synchronisés) sur lesquels le diaporama sera affiché, séparés par des virgules s'ils sont plusieurs.</French>
-            <Polish>Nazwy obiektów (mogą to też być zsynchronizowane obiekty) na których pokaz slajdów zostanie pokazany, oddzielony przecinkiem jeżeli jest ich więcej niż 1.</Polish>
-            <Hungarian>Objektum nevek (szinkronizált is lehet) amik a vetítésen megjelennek, több darab esetén vesszővel elválasztva.</Hungarian>
-            <Portuguese>Nomes dos objetos (também podem ser objetos sincronizados) em que a apresentação de slides será mostrada, separado por vírgulas se for mais de um.</Portuguese>
-            <Russian>Имена объектов (так же могут использоваться синхронизированные объекты), на которых будет отображаться слайд-шоу, разделенные запятыми.</Russian>
-            <Spanish>Los nombres de objetos (también pueden ser objetos sincronizados) de diapositivas se mostrarán en, separados por comas.</Spanish>
-            <Czech>Jména objektů (lze také použít synchronizované objekty) které se budou zobrazovat v prezentaci, oddělit čárkou pokud jich je více.</Czech>
-            <Italian>Nomi di oggetti (possono anche essere oggetti sincronizzati) che verranno usati per la presentazione di diapositive, separati da virgole se più di uno.</Italian>
-            <Japanese>スライドショーを表示するオブジェクト名 (オブジェクトとの同期も可)。複数ある場合はコンマで区切れます</Japanese>
-            <Korean>슬라이드 쇼가 보여질 물체(동기화 되는 물체도 가능합니다) 명칭, 다수의 경우 쉼표로 구분합니다.</Korean>
-            <Chinese>物件名稱 (也可使用同步線來設定)，幻燈片將會顯示在該物件上，如有多個物件，請以逗號作區隔</Chinese>
-            <Chinesesimp>物体名称（也可使用同步线来设定），幻灯片将会显示在该物件上，如有多个物件，请以逗号作区隔</Chinesesimp>
+        <Key ID="STR_ACE_Slideshow_Controllers_Description">
+            <English>Controller object names, separated by commas if multiple.</English>
+            <Czech>Jména kontrolních objektů, v případě více oddělená čárkami.</Czech>
+            <French>Noms des objets servant d'unité de commande, séparés par des virgules s'ils sont plusieurs.</French>
+            <Spanish>Nombres de objeto de controlador, separados por comas.</Spanish>
+            <Italian>Nomi di oggetti controllori, separati da virgole se multipli.</Italian>
+            <Polish>Nazwa obiektu - kontrolera, oddzielona przecinkami jeżeli jest ich więcej niż 1.</Polish>
+            <Portuguese>Nome dos objetos de controle, separado por vírgula se mais de um.</Portuguese>
+            <Russian>Имена объектов-контроллеров, разделенные запятыми.</Russian>
+            <German>Objekte die als Steuereinheit fungieren. Werden ggf. durch Kommata getrennt.</German>
+            <Korean>조종 장치 물체 명칭, 다수의 경우 쉼표로 구분됩니다.</Korean>
+            <Japanese>コントローラに指定するオブジェクト名を記入し、複数ある場合はコンマで区切れます。</Japanese>
+            <Chinese>指定是控制器的物件名稱，如有多個物件，請以逗號作區隔</Chinese>
+            <Chinesesimp>指定是控制器的物体名称，如有多个物件，请以逗号作区隔</Chinesesimp>
+            <Hungarian>Vezérlő objektum nevek, vesszővel elválasztva több darab esetén.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Controllers_DisplayName">
             <English>Controllers</English>
-            <German>Steuereinheit</German>
+            <Czech>Kontrolní objekty</Czech>
             <French>Commandes</French>
+            <Spanish>Controladores</Spanish>
+            <Italian>Controllori</Italian>
             <Polish>Kontroler</Polish>
-            <Hungarian>Vezérlők</Hungarian>
             <Portuguese>Controles</Portuguese>
             <Russian>Контроллеры</Russian>
-            <Spanish>Controladores</Spanish>
-            <Czech>Kontrolní objekty</Czech>
-            <Italian>Controllori</Italian>
-            <Japanese>コントローラ</Japanese>
+            <German>Steuereinheit</German>
             <Korean>조종 장치</Korean>
+            <Japanese>コントローラ</Japanese>
             <Chinese>控制器</Chinese>
             <Chinesesimp>控制器</Chinesesimp>
             <Turkish>Kontroller</Turkish>
+            <Hungarian>Vezérlők</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Slideshow_Controllers_Description">
-            <English>Controller object names, separated by commas if multiple.</English>
-            <German>Objekte die als Steuereinheit fungieren. Werden ggf. durch Kommata getrennt.</German>
-            <French>Noms des objets servant d'unité de commande, séparés par des virgules s'ils sont plusieurs.</French>
-            <Polish>Nazwa obiektu - kontrolera, oddzielona przecinkami jeżeli jest ich więcej niż 1.</Polish>
-            <Hungarian>Vezérlő objektum nevek, vesszővel elválasztva több darab esetén.</Hungarian>
-            <Portuguese>Nome dos objetos de controle, separado por vírgula se mais de um.</Portuguese>
-            <Russian>Имена объектов-контроллеров, разделенные запятыми.</Russian>
-            <Spanish>Nombres de objeto de controlador, separados por comas.</Spanish>
-            <Italian>Nomi di oggetti controllori, separati da virgole se multipli.</Italian>
-            <Japanese>コントローラに指定するオブジェクト名を記入し、複数ある場合はコンマで区切れます。</Japanese>
-            <Korean>조종 장치 물체 명칭, 다수의 경우 쉼표로 구분됩니다.</Korean>
-            <Chinese>指定是控制器的物件名稱，如有多個物件，請以逗號作區隔</Chinese>
-            <Chinesesimp>指定是控制器的物体名称，如有多个物件，请以逗号作区隔</Chinesesimp>
-            <Czech>Jména kontrolních objektů, v případě více oddělená čárkami.</Czech>
+        <Key ID="STR_ACE_Slideshow_Description">
+            <English>This module allows you to set up slide-shows on different objects. One module per image list. Only objects with hiddenSelection 0 are supported.</English>
+            <Czech>Tento modul umožňuje nastavit prezentaci na různé objekty. Jeden modul na seznam s obrázky. Podporované jsou pouze objekty s hiddenSelection 0.</Czech>
+            <French>Ce module permet d'afficher des diaporamas sur différents objets. Un module par liste d'images.\nSeuls les objets avec le paramètre `HiddenSelection 0` sont supportés.</French>
+            <Spanish>Este módulo permite configurar una presentación de diapositivas en diferentes objetos. Un módulo por lista de imágenes. Sólo son soportados objetos con hiddenSelection 0.</Spanish>
+            <Italian>Questo modulo ti permette di creare una presentazione con diapositive su vari oggetti. Un modulo per ogni lista immagini. Solo oggetti con hiddenSelection 0 sono supportati.</Italian>
+            <Polish>Ten moduł pozwala skonfigurować pokaz slajdów na różnych obiektach. Jeden moduł na jedną liste slajdów. Tylko obiekty z hiddenSelection 0 są wspierane.</Polish>
+            <Portuguese>Este módulo permite que você monte apresentações de slides em diferentes objetos. Um módulo por lista de imagem. Somente objetos com hiddenSelection 0 são suportados.</Portuguese>
+            <Russian>Этот модуль позволяет вам устроить слайд-шоу на различных объектах. Один модуль на один список изображений. Поддерживаются только объекты с hiddenSelection 0.</Russian>
+            <German>Dieses Modul erlaubt eine Diavorführung auf unterschiedlichen Objekten. Ein Modul, eine Bilderliste. Nur Objekte mit "hiddenSelection 0" werden unterstützt.</German>
+            <Korean>이 모듈은 다른 물체에 대해 슬라이드 쇼를 놓을 수 있게 해줍니다. 한 모듈 당 한 이미지 목록만 가능합니다. 또한 hiddenSelection 0가 있는 물체만 지원됩니다.</Korean>
+            <Japanese>さまざまなオブジェクトへスライドショーを設定することができます。1つのモジュールは各画像リストになっています。オブジェクトが hiddenSelection 0へ対応している必要があります。</Japanese>
+            <Chinese>此模塊可讓圖片以幻燈片的形式顯示在物件上，每個模塊都能設定一串幻燈片清單，被設定的物件不能有隱藏部位(hiddenSelection)</Chinese>
+            <Chinesesimp>此模块可让图片以幻灯片的形式显示在物体上，每个模块都能设定一串幻灯片清单，被设定的物件不能有隐藏部位（hiddenSelection）</Chinesesimp>
+            <Hungarian>Ez a modul lehetővé teszi a különböző objektumokon való vetítést. Egy modul/képlista. Csak "hiddenSelection 0"-t tartalmazó objektumok felelnek meg.</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Slideshow_Images_DisplayName">
-            <English>Images</English>
-            <German>Bilder</German>
-            <French>Images</French>
-            <Polish>Obrazy</Polish>
-            <Hungarian>Képek</Hungarian>
-            <Portuguese>Imagens</Portuguese>
-            <Russian>Изображения</Russian>
-            <Czech>Obrázky</Czech>
-            <Spanish>Imágenes</Spanish>
-            <Italian>Immagini</Italian>
-            <Japanese>画像</Japanese>
-            <Korean>사진</Korean>
-            <Chinese>圖片</Chinese>
-            <Chinesesimp>图片</Chinesesimp>
-            <Turkish>Resimler</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Slideshow_Images_Description">
-            <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
-            <German>Eine Liste von Bildern, die bei der Vorführung verwendet werden. (Durch Kommata getrennt, mit vollem Pfad angegeben (z.B Bilder\bild.paa)).</German>
-            <French>Liste des images qui seront utilisées dans le diaporama, séparées par des virgules, avec le chemin complet correctement formaté (p. ex. images\image.paa).</French>
-            <Polish>Lista obrazów, które zostaną użyte do pokazu slajdów, oddzielone przecinkiem, z poprawnym pełnym formatem ścieżki do obrazka (np. slajdy\obrazek.paa).</Polish>
-            <Hungarian>A képek listája amit a vetítés használni fog, vesszővel elválasztva, megfelelően formázott teljes útvonallal (pl. képek\kép.paa)</Hungarian>
-            <Portuguese>Lista das imagens que serão utilizadas na apresentação de slides, separadas por vírgula, com o caminho completo corretamente formatado (ex: imagens\imagem.paa).</Portuguese>
-            <Russian>Список изображений, которые будут использованы для слайд-шоу, разделенные запятыми, с полными путями в правильном формате (например, images\image.paa).</Russian>
-            <Spanish>Lista de imágenes que se utilizarán para la presentación de diapositivas, separadas por comas, con la ruta completa en formato correcto (ej. imágenes\image.paa).</Spanish>
-            <Czech>Seznam obrázků které budou použity v prezentaci, oddělené čárkami, s kompletní cestou ve správném formátu (např. image\image.paa).</Czech>
-            <Italian>Lista di immagini che verranno usate durante la presentazione, separate da virgole, con percorso completo formattato correttamente (es. images\image.paa)</Italian>
-            <Japanese>スライド ショーに使用される画像のリスト。完全パスで入力してください。コンマで区切ります。(例: images\image.paa)</Japanese>
-            <Korean>슬라이드 쇼에 쓰일 사진목록입니다, 쉼표로 구분됩니다, 경로설정을 정확히 하십시요. (예: 사진\사진.ppa)</Korean>
-            <Chinese>要做為幻燈片的圖片清單，每個圖片請已逗號區隔，並輸入完整路徑位址 (例如:images\image.paa)</Chinese>
-            <Chinesesimp>要做为幻灯片的图片清单，每个图片请已逗号区隔，并输入完整路径位址（例如：images\image.paa）</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Slideshow_Names_DisplayName">
-            <English>Interaction Names</English>
-            <French>Noms d'interaction</French>
-            <Polish>Nazwy interakcji</Polish>
-            <Hungarian>Interakciós nevek</Hungarian>
-            <Portuguese>Nomes de Interação</Portuguese>
-            <Russian>Интерактивные имена</Russian>
-            <Czech>Názvy interakcí</Czech>
-            <Spanish>Nombres de interacción</Spanish>
-            <Italian>Nomi Interazioni</Italian>
-            <German>Interaktionsnamen</German>
-            <Japanese>インタラクション名</Japanese>
-            <Korean>상호작용 명칭</Korean>
-            <Chinese>互動鍵名稱</Chinese>
-            <Chinesesimp>互动键名称</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Slideshow_Names_Description">
-            <English>List of names that will be used for interaction entries, separated by commas, in order of images.</English>
-            <French>Liste des noms qui seront utilisés pour les entrées d'interaction, séparés par des virgules, dans l'ordre des images.</French>
-            <Polish>Lista nazw, które zostaną użyte do nazwania wpisów interakcji, oddzielone przecinkiem, w kolejności obrazów.</Polish>
-            <Hungarian>Olyan nevek listája, melyek interakciós célra kellenek, vesszővel elválasztva, kép szerinti sorrendben.</Hungarian>
-            <Portuguese>Lista dos nomes que serão usados para entradas de interação, separados por vírgulas, na ordem das imagens.</Portuguese>
-            <Russian>Список имен, которые будут использованы при взаимодействии, разделенные запятыми, в порядке следования изображений.</Russian>
-            <Spanish>Lista de nombres que se utilizarán para las entradas de interacción, separados por comas, en el orden de las imágenes.</Spanish>
-            <Italian>Lista di nomi che verranno usati per le interazioni, separati da virgole, nell'ordine delle immagini.</Italian>
-            <German>Liste aller Namen, die für Interaktionseinträge genutzt werden. Mit Kommata getrennt, in Reihenfolge der Bilder.</German>
-            <Japanese>画像を操作できるインタラクション エントリ名の一覧を入力してください。コンマで区切り複数を指定できます。</Japanese>
-            <Korean>상호작용 메시지에 쓰일 명칭입니다, 쉼표로 구분합니다, 이미지의 순서입니다.</Korean>
-            <Chinese>設定互動鍵切換圖片時的按鈕名稱，多個按鈕請以逗號做區隔，有多少圖片就輸入多少個按鈕，以利切換圖片</Chinese>
-            <Chinesesimp>设定互动键切换图片时的按钮名称，多个按钮请以逗号做区隔，有多少图片就输入多少个按钮，以利切换图片</Chinesesimp>
-            <Czech>Seznam jmen které budou použity pro interakce, oddělené čárkami, v pořadí obrázků.</Czech>
-        </Key>
-        <Key ID="STR_ACE_Slideshow_SetName_DisplayName">
-            <English>Set Name</English>
-            <German>Name der Diavorführung</German>
-            <Polish>Ustaw nazwę</Polish>
-            <Japanese>名前設定</Japanese>
-            <French>Définir le nom</French>
-            <Italian>Imposta Nome</Italian>
-            <Chinese>設定名稱</Chinese>
-            <Chinesesimp>设定名称</Chinesesimp>
-            <Korean>이름 설정</Korean>
-            <Russian>Установить имя</Russian>
-            <Portuguese>Definir Nome</Portuguese>
-            <Czech>Jméno setu</Czech>
-            <Spanish>Definir nombre</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Slideshow_SetName_Description">
-            <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
-            <German>Name der für den Hauptinteraktionseintrag benutzt wird (um mehrere Diavorführungen voneinander zu trennen).</German>
-            <Polish>Nazwa, która będzie użyta w głównym menu interakcji (w celu rozróżnienia różnych slajdów). Domyślnie: "Slides"</Polish>
-            <Japanese>メイン インタラクション エントリで使われる名前を設定します。(複数のスライドショーを区別するため)。 デフォルト: "Slides"</Japanese>
-            <French>Nom qui sera utilisé pour l'entrée d'interaction principale (pour distinguer plusieurs diaporamas). Valeur par défaut : "Slides".</French>
-            <Italian>Nome che verrà utilizzato per le principali interazioni (per distinguere multiple diapositive). Predefinito: "Slides"</Italian>
-            <Chinese>設定該幻燈片的標題名稱 (用來區分多個不同標題的幻燈片) 預設名稱: "幻燈片"</Chinese>
-            <Chinesesimp>设定该幻灯片的标题名称（用来区分多个不同标题的幻灯片）预设名称："幻灯片"</Chinesesimp>
-            <Korean>상위 상호작용 이름 (여러 개의 슬라이드 쇼를 구분하기 위해 사용됨) 기본: "Slides"</Korean>
-            <Russian>Имя, которое будет использоваться для основных взаимодействий (для различения нескольких слайдов). По умолчанию: «Slides»</Russian>
-            <Portuguese>Nome que será usado para a entrada principal de interação (para separar vários slideshows). Padrão: "Slides"</Portuguese>
-            <Czech>Jméno, které bude použito pro hlavní interakci (pro rozlišení více prezentací). Standard: Snímky</Czech>
-            <Spanish>Nombre usado para la entrada principal de interacción (para distinguir entre diferentes diapositivas). Por defecto: "Diapositivas"</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
-            <English>Slide Duration</English>
-            <French>Durée de la diapositive</French>
-            <Polish>Czas trwania slajdów</Polish>
-            <Hungarian>Dia időtartam</Hungarian>
-            <Portuguese>Duração do Slide</Portuguese>
-            <Russian>Длительность слайда</Russian>
-            <Spanish>Duración de diapositiva</Spanish>
-            <Czech>Doba trvání snímku</Czech>
-            <Italian>Durata Diapositiva</Italian>
-            <German>Länge der Diavorführung pro Bild</German>
-            <Japanese>スライドの継続時間</Japanese>
-            <Korean>슬라이드 지속 시간</Korean>
-            <Chinese>幻燈片顯示時間</Chinese>
-            <Chinesesimp>幻灯片显示时间</Chinesesimp>
+        <Key ID="STR_ACE_Slideshow_DisplayName">
+            <English>Slideshow</English>
+            <Czech>Prezentace</Czech>
+            <French>Diaporama</French>
+            <Spanish>Presentación de diapositivas</Spanish>
+            <Italian>Presentazione Diapositive</Italian>
+            <Polish>Pokaz slajdów</Polish>
+            <Portuguese>Apresentação de Slides</Portuguese>
+            <Russian>Слайд-шоу</Russian>
+            <German>Diavorführung</German>
+            <Korean>슬라이드 쇼</Korean>
+            <Japanese>スライドショー</Japanese>
+            <Chinese>幻燈片</Chinese>
+            <Chinesesimp>幻灯片</Chinesesimp>
+            <Turkish>Slayt</Turkish>
+            <Hungarian>Vetítés</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Duration_Description">
             <English>Duration of each slide. Default: 0 (Automatic Transitions Disabled)</English>
+            <Czech>Doba trvání každého snímku. Výchozí: 0 (Automatické posouvání je zakázáno)</Czech>
             <French>Temps d'affichage de chaque diapositive. Valeur par défaut : 0 (transition automatique désactivée).</French>
+            <Spanish>Duración de cada diapositiva. Por defecto: 0 (Transiciones automáticas desactivadas)</Spanish>
+            <Italian>Durata di ogni diapositiva. Predefinito: 0 (Transizioni Automatiche Disabilitate)</Italian>
             <Polish>Czas trwania poszczególnych slajdów. Domyślnie: 0 (Automatyczne przejścia wyłączone)</Polish>
-            <Hungarian>A diák időtartama. Alapértelmezett: 0 (Automatikus váltás letiltva)</Hungarian>
             <Portuguese>Duração de cada slide. Padrão: 0 (Transição automática desabilitada)</Portuguese>
             <Russian>Длительность каждого слайда. По умолчанию: 0 (автоматический переход отключен)</Russian>
-            <Spanish>Duración de cada diapositiva. Por defecto: 0 (Transiciones automáticas desactivadas)</Spanish>
-            <Czech>Doba trvání každého snímku. Výchozí: 0 (Automatické posouvání je zakázáno)</Czech>
-            <Italian>Durata di ogni diapositiva. Predefinito: 0 (Transizioni Automatiche Disabilitate)</Italian>
             <German>Länge der Diavorführung pro Bild. Standard: 0 (Automatischer Wechsel deaktiviert)</German>
-            <Japanese>各スライドの継続時間。 デフォルト: 0 (自動的な切り替えは無効)</Japanese>
             <Korean>매 슬라이드의 지속 시간. 기본설정: 0 (자동 전환 비활성화)</Korean>
+            <Japanese>各スライドの継続時間。 デフォルト: 0 (自動的な切り替えは無効)</Japanese>
             <Chinese>每張幻燈片顯示的時間。 預設:0 (自動換圖已禁用)</Chinese>
             <Chinesesimp>每张幻灯片显示的时间。 预设：0（自动换图已禁用）</Chinesesimp>
+            <Hungarian>A diák időtartama. Alapértelmezett: 0 (Automatikus váltás letiltva)</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Slideshow_Selection_DisplayName">
-            <English>Texture Selection</English>
-            <Chinesesimp>纹理选择</Chinesesimp>
-            <Portuguese>텍스쳐 선택</Portuguese>
-            <Korean>텍스쳐 선택</Korean>
-            <German>Auswahl der Textur</German>
-            <Italian>Selezione della texture</Italian>
-            <Polish>Wybór Tekstury</Polish>
-            <Japanese>テクスチャの選択</Japanese>
-            <Russian>Выбор текстуры</Russian>
-            <Spanish>Selección de texturas</Spanish>
-            <French>Sélection de texture</French>
+        <Key ID="STR_ACE_Slideshow_Duration_DisplayName">
+            <English>Slide Duration</English>
+            <Czech>Doba trvání snímku</Czech>
+            <French>Durée de la diapositive</French>
+            <Spanish>Duración de diapositiva</Spanish>
+            <Italian>Durata Diapositiva</Italian>
+            <Polish>Czas trwania slajdów</Polish>
+            <Portuguese>Duração do Slide</Portuguese>
+            <Russian>Длительность слайда</Russian>
+            <German>Länge der Diavorführung pro Bild</German>
+            <Korean>슬라이드 지속 시간</Korean>
+            <Japanese>スライドの継続時間</Japanese>
+            <Chinese>幻燈片顯示時間</Chinese>
+            <Chinesesimp>幻灯片显示时间</Chinesesimp>
+            <Hungarian>Dia időtartam</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Slideshow_Selection_Description">
-            <English>Object texture selection. Default: 0</English>
-            <Chinesesimp>物体纹理选择（默认：0）</Chinesesimp>
-            <Portuguese>개체 텍스처 선택(기본값: 0)</Portuguese>
-            <Korean>물체의 텍스쳐를 선택합니다. 기본: 0</Korean>
-            <German>Auswahl der Objekttextur. Standard: 0</German>
-            <Italian>Selezione della texture dell'oggetto. Predefinito: 0</Italian>
-            <Polish>Wybór tekstury obiektu. Domyślnie: 0</Polish>
-            <Japanese>オブジェクトテクスチャの選択。 デフォルト: 0</Japanese>
-            <Russian>Выбор текстуры объекта. По умолчанию: 0</Russian>
-            <Spanish>Selección de textura de objeto. Defecto: 0</Spanish>
-            <French>Sélection de la texture de l'objet. Valeur par défaut : 0</French>
+        <Key ID="STR_ACE_Slideshow_Images_Description">
+            <English>List of images that will be used for the slide-show, separated by commas, with full path correctly formatted (eg. images\image.paa).</English>
+            <Czech>Seznam obrázků které budou použity v prezentaci, oddělené čárkami, s kompletní cestou ve správném formátu (např. image\image.paa).</Czech>
+            <French>Liste des images qui seront utilisées dans le diaporama, séparées par des virgules, avec le chemin complet correctement formaté (p. ex. images\image.paa).</French>
+            <Spanish>Lista de imágenes que se utilizarán para la presentación de diapositivas, separadas por comas, con la ruta completa en formato correcto (ej. imágenes\image.paa).</Spanish>
+            <Italian>Lista di immagini che verranno usate durante la presentazione, separate da virgole, con percorso completo formattato correttamente (es. images\image.paa)</Italian>
+            <Polish>Lista obrazów, które zostaną użyte do pokazu slajdów, oddzielone przecinkiem, z poprawnym pełnym formatem ścieżki do obrazka (np. slajdy\obrazek.paa).</Polish>
+            <Portuguese>Lista das imagens que serão utilizadas na apresentação de slides, separadas por vírgula, com o caminho completo corretamente formatado (ex: imagens\imagem.paa).</Portuguese>
+            <Russian>Список изображений, которые будут использованы для слайд-шоу, разделенные запятыми, с полными путями в правильном формате (например, images\image.paa).</Russian>
+            <German>Eine Liste von Bildern, die bei der Vorführung verwendet werden. (Durch Kommata getrennt, mit vollem Pfad angegeben (z.B Bilder\bild.paa)).</German>
+            <Korean>슬라이드 쇼에 쓰일 사진목록입니다, 쉼표로 구분됩니다, 경로설정을 정확히 하십시요. (예: 사진\사진.ppa)</Korean>
+            <Japanese>スライド ショーに使用される画像のリスト。完全パスで入力してください。コンマで区切ります。(例: images\image.paa)</Japanese>
+            <Chinese>要做為幻燈片的圖片清單，每個圖片請已逗號區隔，並輸入完整路徑位址 (例如:images\image.paa)</Chinese>
+            <Chinesesimp>要做为幻灯片的图片清单，每个图片请已逗号区隔，并输入完整路径位址（例如：images\image.paa）</Chinesesimp>
+            <Hungarian>A képek listája amit a vetítés használni fog, vesszővel elválasztva, megfelelően formázott teljes útvonallal (pl. képek\kép.paa)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_Images_DisplayName">
+            <English>Images</English>
+            <Czech>Obrázky</Czech>
+            <French>Images</French>
+            <Spanish>Imágenes</Spanish>
+            <Italian>Immagini</Italian>
+            <Polish>Obrazy</Polish>
+            <Portuguese>Imagens</Portuguese>
+            <Russian>Изображения</Russian>
+            <German>Bilder</German>
+            <Korean>사진</Korean>
+            <Japanese>画像</Japanese>
+            <Chinese>圖片</Chinese>
+            <Chinesesimp>图片</Chinesesimp>
+            <Turkish>Resimler</Turkish>
+            <Hungarian>Képek</Hungarian>
         </Key>
         <Key ID="STR_ACE_Slideshow_Interaction">
             <English>Slides</English>
+            <Czech>Snímky</Czech>
             <French>Diapositives</French>
+            <Spanish>Diapositivas</Spanish>
+            <Italian>Diapositive</Italian>
             <Polish>Slajdy</Polish>
-            <Hungarian>Diák</Hungarian>
             <Portuguese>Slides</Portuguese>
             <Russian>Слайды</Russian>
-            <Spanish>Diapositivas</Spanish>
-            <Czech>Snímky</Czech>
-            <Italian>Diapositive</Italian>
             <German>Dias</German>
-            <Japanese>スライド</Japanese>
             <Korean>슬라이드</Korean>
+            <Japanese>スライド</Japanese>
             <Chinese>幻燈片</Chinese>
             <Chinesesimp>幻灯片</Chinesesimp>
             <Turkish>Slaytlar</Turkish>
+            <Hungarian>Diák</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_Names_Description">
+            <English>List of names that will be used for interaction entries, separated by commas, in order of images.</English>
+            <Czech>Seznam jmen které budou použity pro interakce, oddělené čárkami, v pořadí obrázků.</Czech>
+            <French>Liste des noms qui seront utilisés pour les entrées d'interaction, séparés par des virgules, dans l'ordre des images.</French>
+            <Spanish>Lista de nombres que se utilizarán para las entradas de interacción, separados por comas, en el orden de las imágenes.</Spanish>
+            <Italian>Lista di nomi che verranno usati per le interazioni, separati da virgole, nell'ordine delle immagini.</Italian>
+            <Polish>Lista nazw, które zostaną użyte do nazwania wpisów interakcji, oddzielone przecinkiem, w kolejności obrazów.</Polish>
+            <Portuguese>Lista dos nomes que serão usados para entradas de interação, separados por vírgulas, na ordem das imagens.</Portuguese>
+            <Russian>Список имен, которые будут использованы при взаимодействии, разделенные запятыми, в порядке следования изображений.</Russian>
+            <German>Liste aller Namen, die für Interaktionseinträge genutzt werden. Mit Kommata getrennt, in Reihenfolge der Bilder.</German>
+            <Korean>상호작용 메시지에 쓰일 명칭입니다, 쉼표로 구분합니다, 이미지의 순서입니다.</Korean>
+            <Japanese>画像を操作できるインタラクション エントリ名の一覧を入力してください。コンマで区切り複数を指定できます。</Japanese>
+            <Chinese>設定互動鍵切換圖片時的按鈕名稱，多個按鈕請以逗號做區隔，有多少圖片就輸入多少個按鈕，以利切換圖片</Chinese>
+            <Chinesesimp>设定互动键切换图片时的按钮名称，多个按钮请以逗号做区隔，有多少图片就输入多少个按钮，以利切换图片</Chinesesimp>
+            <Hungarian>Olyan nevek listája, melyek interakciós célra kellenek, vesszővel elválasztva, kép szerinti sorrendben.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_Names_DisplayName">
+            <English>Interaction Names</English>
+            <Czech>Názvy interakcí</Czech>
+            <French>Noms d'interaction</French>
+            <Spanish>Nombres de interacción</Spanish>
+            <Italian>Nomi Interazioni</Italian>
+            <Polish>Nazwy interakcji</Polish>
+            <Portuguese>Nomes de Interação</Portuguese>
+            <Russian>Интерактивные имена</Russian>
+            <German>Interaktionsnamen</German>
+            <Korean>상호작용 명칭</Korean>
+            <Japanese>インタラクション名</Japanese>
+            <Chinese>互動鍵名稱</Chinese>
+            <Chinesesimp>互动键名称</Chinesesimp>
+            <Hungarian>Interakciós nevek</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_Objects_Description">
+            <English>Object names (can also be synchronized objects) slide-show will be displayed on, separated by commas if multiple.</English>
+            <Czech>Jména objektů (lze také použít synchronizované objekty) které se budou zobrazovat v prezentaci, oddělit čárkou pokud jich je více.</Czech>
+            <French>Noms des objets (pouvant aussi être des objets synchronisés) sur lesquels le diaporama sera affiché, séparés par des virgules s'ils sont plusieurs.</French>
+            <Spanish>Los nombres de objetos (también pueden ser objetos sincronizados) de diapositivas se mostrarán en, separados por comas.</Spanish>
+            <Italian>Nomi di oggetti (possono anche essere oggetti sincronizzati) che verranno usati per la presentazione di diapositive, separati da virgole se più di uno.</Italian>
+            <Polish>Nazwy obiektów (mogą to też być zsynchronizowane obiekty) na których pokaz slajdów zostanie pokazany, oddzielony przecinkiem jeżeli jest ich więcej niż 1.</Polish>
+            <Portuguese>Nomes dos objetos (também podem ser objetos sincronizados) em que a apresentação de slides será mostrada, separado por vírgulas se for mais de um.</Portuguese>
+            <Russian>Имена объектов (так же могут использоваться синхронизированные объекты), на которых будет отображаться слайд-шоу, разделенные запятыми.</Russian>
+            <German>Objektnamen (können auch synchronisierte Objekte sein) auf denen die Diavorführung abgepielt wird. Werden ggf. durch Kommata getrennt.</German>
+            <Korean>슬라이드 쇼가 보여질 물체(동기화 되는 물체도 가능합니다) 명칭, 다수의 경우 쉼표로 구분합니다.</Korean>
+            <Japanese>スライドショーを表示するオブジェクト名 (オブジェクトとの同期も可)。複数ある場合はコンマで区切れます</Japanese>
+            <Chinese>物件名稱 (也可使用同步線來設定)，幻燈片將會顯示在該物件上，如有多個物件，請以逗號作區隔</Chinese>
+            <Chinesesimp>物体名称（也可使用同步线来设定），幻灯片将会显示在该物件上，如有多个物件，请以逗号作区隔</Chinesesimp>
+            <Hungarian>Objektum nevek (szinkronizált is lehet) amik a vetítésen megjelennek, több darab esetén vesszővel elválasztva.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_Objects_DisplayName">
+            <English>Objects</English>
+            <Czech>Objekty</Czech>
+            <French>Objets</French>
+            <Spanish>Objetos</Spanish>
+            <Italian>Oggetti</Italian>
+            <Polish>Obiekty</Polish>
+            <Portuguese>Objetos</Portuguese>
+            <Russian>Объекты</Russian>
+            <German>Objekte</German>
+            <Korean>물체</Korean>
+            <Japanese>オブジェクト</Japanese>
+            <Chinese>物件</Chinese>
+            <Chinesesimp>物体</Chinesesimp>
+            <Turkish>Objeler</Turkish>
+            <Hungarian>Objektumok</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_Selection_Description">
+            <English>Object texture selection. Default: 0</English>
+            <French>Sélection de la texture de l'objet. Valeur par défaut : 0</French>
+            <Spanish>Selección de textura de objeto. Defecto: 0</Spanish>
+            <Italian>Selezione della texture dell'oggetto. Predefinito: 0</Italian>
+            <Polish>Wybór tekstury obiektu. Domyślnie: 0</Polish>
+            <Portuguese>개체 텍스처 선택(기본값: 0)</Portuguese>
+            <Russian>Выбор текстуры объекта. По умолчанию: 0</Russian>
+            <German>Auswahl der Objekttextur. Standard: 0</German>
+            <Korean>물체의 텍스쳐를 선택합니다. 기본: 0</Korean>
+            <Japanese>オブジェクトテクスチャの選択。 デフォルト: 0</Japanese>
+            <Chinesesimp>物体纹理选择（默认：0）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_Selection_DisplayName">
+            <English>Texture Selection</English>
+            <French>Sélection de texture</French>
+            <Spanish>Selección de texturas</Spanish>
+            <Italian>Selezione della texture</Italian>
+            <Polish>Wybór Tekstury</Polish>
+            <Portuguese>텍스쳐 선택</Portuguese>
+            <Russian>Выбор текстуры</Russian>
+            <German>Auswahl der Textur</German>
+            <Korean>텍스쳐 선택</Korean>
+            <Japanese>テクスチャの選択</Japanese>
+            <Chinesesimp>纹理选择</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_SetName_Description">
+            <English>Name that will be used for main interaction entry (to distinguish multiple slideshows). Default: "Slides"</English>
+            <Czech>Jméno, které bude použito pro hlavní interakci (pro rozlišení více prezentací). Standard: Snímky</Czech>
+            <French>Nom qui sera utilisé pour l'entrée d'interaction principale (pour distinguer plusieurs diaporamas). Valeur par défaut : "Slides".</French>
+            <Spanish>Nombre usado para la entrada principal de interacción (para distinguir entre diferentes diapositivas). Por defecto: "Diapositivas"</Spanish>
+            <Italian>Nome che verrà utilizzato per le principali interazioni (per distinguere multiple diapositive). Predefinito: "Slides"</Italian>
+            <Polish>Nazwa, która będzie użyta w głównym menu interakcji (w celu rozróżnienia różnych slajdów). Domyślnie: "Slides"</Polish>
+            <Portuguese>Nome que será usado para a entrada principal de interação (para separar vários slideshows). Padrão: "Slides"</Portuguese>
+            <Russian>Имя, которое будет использоваться для основных взаимодействий (для различения нескольких слайдов). По умолчанию: «Slides»</Russian>
+            <German>Name der für den Hauptinteraktionseintrag benutzt wird (um mehrere Diavorführungen voneinander zu trennen).</German>
+            <Korean>상위 상호작용 이름 (여러 개의 슬라이드 쇼를 구분하기 위해 사용됨) 기본: "Slides"</Korean>
+            <Japanese>メイン インタラクション エントリで使われる名前を設定します。(複数のスライドショーを区別するため)。 デフォルト: "Slides"</Japanese>
+            <Chinese>設定該幻燈片的標題名稱 (用來區分多個不同標題的幻燈片) 預設名稱: "幻燈片"</Chinese>
+            <Chinesesimp>设定该幻灯片的标题名称（用来区分多个不同标题的幻灯片）预设名称："幻灯片"</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Slideshow_SetName_DisplayName">
+            <English>Set Name</English>
+            <Czech>Jméno setu</Czech>
+            <French>Définir le nom</French>
+            <Spanish>Definir nombre</Spanish>
+            <Italian>Imposta Nome</Italian>
+            <Polish>Ustaw nazwę</Polish>
+            <Portuguese>Definir Nome</Portuguese>
+            <Russian>Установить имя</Russian>
+            <German>Name der Diavorführung</German>
+            <Korean>이름 설정</Korean>
+            <Japanese>名前設定</Japanese>
+            <Chinese>設定名稱</Chinese>
+            <Chinesesimp>设定名称</Chinesesimp>
         </Key>
     </Package>
 </Project>

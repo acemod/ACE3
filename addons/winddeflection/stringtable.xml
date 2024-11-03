@@ -1,223 +1,223 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="WindDeflection">
-        <Key ID="STR_ACE_WindDeflection_METER_WIND_CATEGORY">
-            <English>Wind Information</English>
-            <Polish>Informacje o wietrze</Polish>
-            <Spanish>Información del viento</Spanish>
-            <Russian>Информация о ветре</Russian>
-            <Czech>Informace o větru</Czech>
-            <French>Vent</French>
-            <German>Windinformationen</German>
-            <Hungarian>Szélinformáció</Hungarian>
-            <Italian>Informazioni sul vento</Italian>
-            <Portuguese>Informação do vento</Portuguese>
-            <Japanese>風の情報</Japanese>
-            <Korean>바람 정보</Korean>
-            <Chinesesimp>风力信息</Chinesesimp>
-            <Chinese>風力資訊</Chinese>
-            <Turkish>Rüzgar Bilgisi</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WindDeflection_METER_WIND_DIRECTION">
-            <English>Direction: %1</English>
-            <Polish>Kierunek: %1</Polish>
-            <Spanish>Dirección: %1</Spanish>
-            <Russian>Направление: %1°</Russian>
-            <Czech>Směr: %1</Czech>
-            <French>Direction : %1</French>
-            <German>Windrichtung: %1</German>
-            <Hungarian>Irány: %1</Hungarian>
-            <Italian>Direzione: %1°</Italian>
-            <Portuguese>Direção: %1</Portuguese>
-            <Japanese>風向: %1</Japanese>
-            <Korean>풍향: %1</Korean>
-            <Chinesesimp>风向：%1</Chinesesimp>
-            <Chinese>風向: %1</Chinese>
-            <Turkish>Yön: %1</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WindDeflection_METER_WIND_SPEED">
-            <English>Speed: %1 m/s</English>
-            <Polish>Prędkość: %1</Polish>
-            <Spanish>Velocidad: %1 m/s</Spanish>
-            <Russian>Скорость: %1 м/с</Russian>
-            <Czech>Rychlost: %1 m/s</Czech>
-            <French>Vitesse : %1 m/s</French>
-            <German>Geschwindigkeit: %1 m/s</German>
-            <Hungarian>Sebesség: %1 m/s</Hungarian>
-            <Italian>Velocità: %1 m/s</Italian>
-            <Portuguese>Velocidade: %1 m/s</Portuguese>
-            <Japanese>風速: %1 m/s</Japanese>
-            <Korean>풍속: %1 m/s</Korean>
-            <Chinesesimp>风速：%1 m/s</Chinesesimp>
-            <Chinese>風速: %1 m/s</Chinese>
-            <Turkish>Hız: %1 m/s</Turkish>
-        </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WEATHER_CATEGORY">
             <English>Weather Information</English>
-            <Polish>Informacje o pogodzie</Polish>
-            <Spanish>Información Meteorológica</Spanish>
-            <Russian>Информация о погоде</Russian>
             <Czech>Informace o počasí</Czech>
             <French>Météo</French>
-            <German>Wetterinformationen</German>
-            <Hungarian>Időjárás-Információ</Hungarian>
+            <Spanish>Información Meteorológica</Spanish>
             <Italian>Informazioni Meteo</Italian>
+            <Polish>Informacje o pogodzie</Polish>
             <Portuguese>Informação Meteorológica</Portuguese>
-            <Japanese>天候の情報</Japanese>
+            <Russian>Информация о погоде</Russian>
+            <German>Wetterinformationen</German>
             <Korean>기상 정보</Korean>
-            <Chinesesimp>天气信息</Chinesesimp>
+            <Japanese>天候の情報</Japanese>
             <Chinese>天氣資訊</Chinese>
+            <Chinesesimp>天气信息</Chinesesimp>
             <Turkish>Hava Durumu Bilgisi</Turkish>
+            <Hungarian>Időjárás-Információ</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_METER_WEATHER_HUMIDITY">
             <English>Humidity: %1%</English>
-            <Polish>Wilgotność: %1</Polish>
-            <Spanish>Humedad: %1%</Spanish>
-            <Russian>Влажность: %1%</Russian>
             <Czech>Vlhkost: %1%</Czech>
             <French>Humidité : %1%</French>
-            <German>Luftfeuchtigkeit: %1</German>
-            <Hungarian>Páratartalom: %1%</Hungarian>
+            <Spanish>Humedad: %1%</Spanish>
             <Italian>Umidità: %1%</Italian>
+            <Polish>Wilgotność: %1</Polish>
             <Portuguese>Umidade: %1%</Portuguese>
-            <Japanese>湿度: %1%</Japanese>
+            <Russian>Влажность: %1%</Russian>
+            <German>Luftfeuchtigkeit: %1</German>
             <Korean>습도: %1%</Korean>
-            <Chinesesimp>湿度：%1%</Chinesesimp>
+            <Japanese>湿度: %1%</Japanese>
             <Chinese>濕度: %1%</Chinese>
+            <Chinesesimp>湿度：%1%</Chinesesimp>
             <Turkish>Nem Oranı: %1%</Turkish>
+            <Hungarian>Páratartalom: %1%</Hungarian>
         </Key>
-        <Key ID="STR_ACE_WindDeflection_windDeflection_DisplayName">
-            <English>Wind Deflection</English>
-            <Polish>Wpływ wiatru</Polish>
-            <Spanish>Desviación por viento</Spanish>
-            <Czech>Účinky větru</Czech>
-            <German>Windablenkung</German>
-            <Portuguese>Desvio de vento</Portuguese>
-            <French>Déflexion due au vent</French>
-            <Hungarian>Szél-hárítás</Hungarian>
-            <Russian>Отклонение ветром</Russian>
-            <Italian>Deviazione del Vento</Italian>
-            <Japanese>風向の変化</Japanese>
-            <Korean>풍향 변화</Korean>
-            <Chinesesimp>弹道风偏</Chinesesimp>
-            <Chinese>風偏</Chinese>
-            <Turkish>Rüzgar Sapması</Turkish>
+        <Key ID="STR_ACE_WindDeflection_METER_WIND_CATEGORY">
+            <English>Wind Information</English>
+            <Czech>Informace o větru</Czech>
+            <French>Vent</French>
+            <Spanish>Información del viento</Spanish>
+            <Italian>Informazioni sul vento</Italian>
+            <Polish>Informacje o wietrze</Polish>
+            <Portuguese>Informação do vento</Portuguese>
+            <Russian>Информация о ветре</Russian>
+            <German>Windinformationen</German>
+            <Korean>바람 정보</Korean>
+            <Japanese>風の情報</Japanese>
+            <Chinese>風力資訊</Chinese>
+            <Chinesesimp>风力信息</Chinesesimp>
+            <Turkish>Rüzgar Bilgisi</Turkish>
+            <Hungarian>Szélinformáció</Hungarian>
         </Key>
-        <Key ID="STR_ACE_WindDeflection_deflectionModule_DisplayName">
-            <English>Wind Deflection</English>
-            <Polish>Wpływ wiatru</Polish>
-            <Spanish>Desviación por viento</Spanish>
-            <German>Windablenkung</German>
-            <Czech>Účinky větru</Czech>
-            <Portuguese>Desvio de vento</Portuguese>
-            <French>Déflexion due au vent</French>
-            <Hungarian>Szél-hárítás</Hungarian>
-            <Russian>Отклонение ветром</Russian>
-            <Italian>Deviazione del Vento</Italian>
-            <Japanese>風向の変化</Japanese>
-            <Korean>풍향 변화</Korean>
-            <Chinesesimp>弹道风偏</Chinesesimp>
-            <Chinese>風偏</Chinese>
-            <Turkish>Rüzgar Sapması</Turkish>
+        <Key ID="STR_ACE_WindDeflection_METER_WIND_DIRECTION">
+            <English>Direction: %1</English>
+            <Czech>Směr: %1</Czech>
+            <French>Direction : %1</French>
+            <Spanish>Dirección: %1</Spanish>
+            <Italian>Direzione: %1°</Italian>
+            <Polish>Kierunek: %1</Polish>
+            <Portuguese>Direção: %1</Portuguese>
+            <Russian>Направление: %1°</Russian>
+            <German>Windrichtung: %1</German>
+            <Korean>풍향: %1</Korean>
+            <Japanese>風向: %1</Japanese>
+            <Chinese>風向: %1</Chinese>
+            <Chinesesimp>风向：%1</Chinesesimp>
+            <Turkish>Yön: %1</Turkish>
+            <Hungarian>Irány: %1</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_METER_WIND_SPEED">
+            <English>Speed: %1 m/s</English>
+            <Czech>Rychlost: %1 m/s</Czech>
+            <French>Vitesse : %1 m/s</French>
+            <Spanish>Velocidad: %1 m/s</Spanish>
+            <Italian>Velocità: %1 m/s</Italian>
+            <Polish>Prędkość: %1</Polish>
+            <Portuguese>Velocidade: %1 m/s</Portuguese>
+            <Russian>Скорость: %1 м/с</Russian>
+            <German>Geschwindigkeit: %1 m/s</German>
+            <Korean>풍속: %1 m/s</Korean>
+            <Japanese>風速: %1 m/s</Japanese>
+            <Chinese>風速: %1 m/s</Chinese>
+            <Chinesesimp>风速：%1 m/s</Chinesesimp>
+            <Turkish>Hız: %1 m/s</Turkish>
+            <Hungarian>Sebesség: %1 m/s</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_deflectionModule_Description">
             <English>Enables wind deflection</English>
-            <Polish>Aktywuje wpływ wiatru na trajektorię lotu pocisków</Polish>
-            <Spanish>Activa la desviación por viento</Spanish>
-            <German>Aktiviert Windablenkung</German>
             <Czech>Umožňit vliv větru</Czech>
-            <Portuguese>Ativa o desvio de vento</Portuguese>
             <French>Active la déflexion due au vent.</French>
-            <Hungarian>Engedélyezi a szél-hárítást</Hungarian>
-            <Russian>Включает отклонение ветром</Russian>
+            <Spanish>Activa la desviación por viento</Spanish>
             <Italian>Abilita deviazione del vento</Italian>
-            <Japanese>風向の変化を有効化</Japanese>
+            <Polish>Aktywuje wpływ wiatru na trajektorię lotu pocisków</Polish>
+            <Portuguese>Ativa o desvio de vento</Portuguese>
+            <Russian>Включает отклонение ветром</Russian>
+            <German>Aktiviert Windablenkung</German>
             <Korean>풍향 변화를 적용합니다</Korean>
-            <Chinesesimp>开启弹道风偏效果</Chinesesimp>
+            <Japanese>風向の変化を有効化</Japanese>
             <Chinese>開啟風偏效果</Chinese>
+            <Chinesesimp>开启弹道风偏效果</Chinesesimp>
             <Turkish>Rüzgar sapmasını aktif et</Turkish>
+            <Hungarian>Engedélyezi a szél-hárítást</Hungarian>
         </Key>
-        <Key ID="STR_ACE_WindDeflection_vehicleEnabled_DisplayName">
-            <English>Vehicle Enabled</English>
-            <Polish>Włączone dla pojazdów</Polish>
-            <Spanish>Habilitada en vehículos</Spanish>
-            <German>Fahrzeuge aktiviert</German>
-            <Czech>Vozidla povolena</Czech>
-            <Portuguese>Ativado em veículos</Portuguese>
-            <French>Activer pour les véhicules</French>
-            <Hungarian>Jármű engedélyezve</Hungarian>
-            <Russian>Для техники</Russian>
-            <Italian>Abilita per Veicoli</Italian>
-            <Japanese>車両へ有効化</Japanese>
-            <Korean>차량 적용</Korean>
-            <Chinesesimp>给载具启用弹道风偏</Chinesesimp>
-            <Chinese>啟用風偏給載具</Chinese>
-            <Turkish>Araçlar da etkin</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WindDeflection_vehicleEnabled_Description">
-            <English>Enables wind deflection for static/vehicle gunners</English>
-            <Polish>Aktywuje wpływ wiatru na trajektorię lotu pocisków dla broni statycznej i na pojazdach</Polish>
-            <Spanish>Habilita la desviación por viento para artilleros estaticos/de vehículos</Spanish>
-            <German>Aktiviere Windablenkung für statische oder Fahrzeugschützen</German>
-            <Czech>Umožnit vliv větru pro střelce z vozidla/statiky</Czech>
-            <Portuguese>Ativa o desvio de vento para atiradores de estáticas e veículos</Portuguese>
-            <French>Active la déflexion due au vent pour les armes statiques et les mitrailleuses des véhicules.</French>
-            <Hungarian>Engedélyezi a szél-hárítást a statikus/jármű-lövészeknél</Hungarian>
-            <Russian>Включает отклонение ветром для стрелков стационарных орудий и техники</Russian>
-            <Italian>Abilita deviazione del vento per artiglieri di statiche/veicoli</Italian>
-            <Japanese>重火器や車両へ、風向の変化を有効化</Japanese>
-            <Korean>차량이나 거치식 무기 사수에게 풍향 변화를 적용합니다</Korean>
-            <Chinesesimp>使弹道风偏作用在固定式武器与载具炮手身上</Chinesesimp>
-            <Chinese>使風偏作用在固定式武器與載具砲手身上</Chinese>
-            <Turkish>Araç nişancıları için rüzgar sapmasını etkinleştirir.</Turkish>
-        </Key>
-        <Key ID="STR_ACE_WindDeflection_simulationInterval_DisplayName">
-            <English>Simulation Interval</English>
-            <Polish>Interwał symulacji</Polish>
-            <Spanish>Intervalo de simulación</Spanish>
-            <German>Simulationsintervall</German>
-            <Czech>Interval simulace</Czech>
-            <Portuguese>Intervalo de simulação</Portuguese>
-            <French>Intervalle de simulation</French>
-            <Hungarian>Szimulációs intervallum</Hungarian>
-            <Russian>Интервал симуляции</Russian>
-            <Italian>Intervallo Simulazione</Italian>
-            <Japanese>シミュレーションの間隔</Japanese>
-            <Chinesesimp>模拟间隔</Chinesesimp>
-            <Chinese>模擬間隔</Chinese>
-            <Korean>시뮬레이션 간격</Korean>
+        <Key ID="STR_ACE_WindDeflection_deflectionModule_DisplayName">
+            <English>Wind Deflection</English>
+            <Czech>Účinky větru</Czech>
+            <French>Déflexion due au vent</French>
+            <Spanish>Desviación por viento</Spanish>
+            <Italian>Deviazione del Vento</Italian>
+            <Polish>Wpływ wiatru</Polish>
+            <Portuguese>Desvio de vento</Portuguese>
+            <Russian>Отклонение ветром</Russian>
+            <German>Windablenkung</German>
+            <Korean>풍향 변화</Korean>
+            <Japanese>風向の変化</Japanese>
+            <Chinese>風偏</Chinese>
+            <Chinesesimp>弹道风偏</Chinesesimp>
+            <Turkish>Rüzgar Sapması</Turkish>
+            <Hungarian>Szél-hárítás</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_simulationInterval_Description">
             <English>Defines the interval between every calculation step</English>
-            <Polish>Określa interwał pomiędzy każdym krokiem kalkulacji</Polish>
-            <Spanish>Define el intervalo entre cada calculo</Spanish>
-            <German>Definiert das Intervall zwischen jedem Berechnungsschritt</German>
             <Czech>Určuje interval mezi každým výpočtem</Czech>
-            <Portuguese>Define o intervalo entre cada cálculo</Portuguese>
             <French>Définit l'intervalle entre chacune des étapes de calcul.</French>
-            <Hungarian>Megszabja a számítási lépések közötti intervallumot</Hungarian>
-            <Russian>Определяет временной интервал между расчетами</Russian>
+            <Spanish>Define el intervalo entre cada calculo</Spanish>
             <Italian>Definisce l'intervallo tra ogni passaggio di calcolo</Italian>
-            <Japanese>各計算に適用させる間隔を定義します</Japanese>
+            <Polish>Określa interwał pomiędzy każdym krokiem kalkulacji</Polish>
+            <Portuguese>Define o intervalo entre cada cálculo</Portuguese>
+            <Russian>Определяет временной интервал между расчетами</Russian>
+            <German>Definiert das Intervall zwischen jedem Berechnungsschritt</German>
             <Korean>매 계산마다의 간격을 정의합니다</Korean>
-            <Chinesesimp>定义每个计算之间的时间间隔</Chinesesimp>
+            <Japanese>各計算に適用させる間隔を定義します</Japanese>
             <Chinese>定義每個計算之間的時間間隔</Chinese>
+            <Chinesesimp>定义每个计算之间的时间间隔</Chinesesimp>
+            <Hungarian>Megszabja a számítási lépések közötti intervallumot</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_simulationInterval_DisplayName">
+            <English>Simulation Interval</English>
+            <Czech>Interval simulace</Czech>
+            <French>Intervalle de simulation</French>
+            <Spanish>Intervalo de simulación</Spanish>
+            <Italian>Intervallo Simulazione</Italian>
+            <Polish>Interwał symulacji</Polish>
+            <Portuguese>Intervalo de simulação</Portuguese>
+            <Russian>Интервал симуляции</Russian>
+            <German>Simulationsintervall</German>
+            <Korean>시뮬레이션 간격</Korean>
+            <Japanese>シミュレーションの間隔</Japanese>
+            <Chinese>模擬間隔</Chinese>
+            <Chinesesimp>模拟间隔</Chinesesimp>
+            <Hungarian>Szimulációs intervallum</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_vehicleEnabled_Description">
+            <English>Enables wind deflection for static/vehicle gunners</English>
+            <Czech>Umožnit vliv větru pro střelce z vozidla/statiky</Czech>
+            <French>Active la déflexion due au vent pour les armes statiques et les mitrailleuses des véhicules.</French>
+            <Spanish>Habilita la desviación por viento para artilleros estaticos/de vehículos</Spanish>
+            <Italian>Abilita deviazione del vento per artiglieri di statiche/veicoli</Italian>
+            <Polish>Aktywuje wpływ wiatru na trajektorię lotu pocisków dla broni statycznej i na pojazdach</Polish>
+            <Portuguese>Ativa o desvio de vento para atiradores de estáticas e veículos</Portuguese>
+            <Russian>Включает отклонение ветром для стрелков стационарных орудий и техники</Russian>
+            <German>Aktiviere Windablenkung für statische oder Fahrzeugschützen</German>
+            <Korean>차량이나 거치식 무기 사수에게 풍향 변화를 적용합니다</Korean>
+            <Japanese>重火器や車両へ、風向の変化を有効化</Japanese>
+            <Chinese>使風偏作用在固定式武器與載具砲手身上</Chinese>
+            <Chinesesimp>使弹道风偏作用在固定式武器与载具炮手身上</Chinesesimp>
+            <Turkish>Araç nişancıları için rüzgar sapmasını etkinleştirir.</Turkish>
+            <Hungarian>Engedélyezi a szél-hárítást a statikus/jármű-lövészeknél</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_vehicleEnabled_DisplayName">
+            <English>Vehicle Enabled</English>
+            <Czech>Vozidla povolena</Czech>
+            <French>Activer pour les véhicules</French>
+            <Spanish>Habilitada en vehículos</Spanish>
+            <Italian>Abilita per Veicoli</Italian>
+            <Polish>Włączone dla pojazdów</Polish>
+            <Portuguese>Ativado em veículos</Portuguese>
+            <Russian>Для техники</Russian>
+            <German>Fahrzeuge aktiviert</German>
+            <Korean>차량 적용</Korean>
+            <Japanese>車両へ有効化</Japanese>
+            <Chinese>啟用風偏給載具</Chinese>
+            <Chinesesimp>给载具启用弹道风偏</Chinesesimp>
+            <Turkish>Araçlar da etkin</Turkish>
+            <Hungarian>Jármű engedélyezve</Hungarian>
         </Key>
         <Key ID="STR_ACE_WindDeflection_windDeflection_Description">
             <English>Wind influence on projectiles trajectory</English>
-            <Polish>Wpływ wiatru na trajektorię lotu pocisków</Polish>
-            <Spanish>Influencia del viento en la trayectoria de proyectiles</Spanish>
-            <German>Windeinfluss auf die Geschossbahnen</German>
             <Czech>Vítr ovlivňuje trajektorii projektilu</Czech>
-            <Portuguese>Influência do vento na trajetória dos projéteis</Portuguese>
             <French>Le vent influe sur la trajectoire des projectiles.</French>
-            <Hungarian>Szél hatása a lövedékek röppályájára</Hungarian>
-            <Russian>Влияние втера на траекторию снарядов</Russian>
+            <Spanish>Influencia del viento en la trayectoria de proyectiles</Spanish>
             <Italian>Influenza del vento sulla traiettoria dei proiettili</Italian>
-            <Japanese>風を弾道へ影響させます</Japanese>
+            <Polish>Wpływ wiatru na trajektorię lotu pocisków</Polish>
+            <Portuguese>Influência do vento na trajetória dos projéteis</Portuguese>
+            <Russian>Влияние втера на траекторию снарядов</Russian>
+            <German>Windeinfluss auf die Geschossbahnen</German>
             <Korean>발사체의 궤도에 풍향 변화를 줍니다.</Korean>
-            <Chinesesimp>风力的大小会引响到弹道的轨迹</Chinesesimp>
+            <Japanese>風を弾道へ影響させます</Japanese>
             <Chinese>風力的大小會引響到彈道的軌跡</Chinese>
+            <Chinesesimp>风力的大小会引响到弹道的轨迹</Chinesesimp>
+            <Hungarian>Szél hatása a lövedékek röppályájára</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_WindDeflection_windDeflection_DisplayName">
+            <English>Wind Deflection</English>
+            <Czech>Účinky větru</Czech>
+            <French>Déflexion due au vent</French>
+            <Spanish>Desviación por viento</Spanish>
+            <Italian>Deviazione del Vento</Italian>
+            <Polish>Wpływ wiatru</Polish>
+            <Portuguese>Desvio de vento</Portuguese>
+            <Russian>Отклонение ветром</Russian>
+            <German>Windablenkung</German>
+            <Korean>풍향 변화</Korean>
+            <Japanese>風向の変化</Japanese>
+            <Chinese>風偏</Chinese>
+            <Chinesesimp>弹道风偏</Chinesesimp>
+            <Turkish>Rüzgar Sapması</Turkish>
+            <Hungarian>Szél-hárítás</Hungarian>
         </Key>
     </Package>
 </Project>
