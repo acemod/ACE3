@@ -1619,6 +1619,12 @@
             <Spanish>Tiempo restante</Spanish>
             <Portuguese>Tempo restante</Portuguese>
         </Key>
+        <Key ID="STR_ACE_Common_magneticDeclination">
+            <English>Realistic Compass Declination</English>
+        </Key>
+        <Key ID="STR_ACE_Common_magneticDeclinationooltip">
+            <English>Compass will point to magnetic north</English>
+        </Key>
         <Key ID="STR_ACE_Common_None">
             <English>None</English>
             <Czech>Žádná</Czech>
