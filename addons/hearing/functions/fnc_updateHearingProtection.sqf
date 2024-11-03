@@ -74,3 +74,5 @@ if (_hasEHPOn && _hasBuiltInEHP) then {
 if (_hasEHPOn || _hasBuiltInEHP) then {
     GVAR(damageCoefficent) = GVAR(damageCoefficent) * 0.25;
 };
+
+ACE_player setVariable ["ACE_hasBuiltInEHP", _hasBuiltInEHP];
