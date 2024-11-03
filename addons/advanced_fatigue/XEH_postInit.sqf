@@ -14,6 +14,8 @@ call FUNC(renderDebugLines);
 ["CBA_settingsInitialized", {
     if (!GVAR(enabled)) exitWith {};
 
+    [QEGVAR(ui,hideHud), LINKFUNC(updateStaminaBar)] call CBA_fnc_addEventHandler;
+
     ["baseline", {
         private _fatigue = ACE_player getVariable [QGVAR(aimFatigue), 0];
         switch (stance ACE_player) do {

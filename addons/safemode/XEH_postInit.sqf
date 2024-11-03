@@ -27,3 +27,19 @@ if (!hasInterface) exitWith {};
     // Player HUD
     !_weaponSafe call FUNC(setSafeModeVisual);
 }] call CBA_fnc_addPlayerEventHandler;
+
+// Variables are transferred from corpse to new body and EH above triggers on respawn, which desyncs safeties
+// Therefore, clear variables and remove mouse button input blocking upon respawn
+[QUOTE(ADDON), "Respawn", {
+    params ["_unit"];
+
+    _unit setVariable [QGVAR(safedWeapons), nil];
+
+    private _ehID = _unit getVariable QGVAR(actionID);
+
+    if (isNil "_ehID") exitWith {};
+
+    [_unit, "DefaultAction", _ehID] call EFUNC(common,removeActionEventHandler);
+
+    _unit setVariable [QGVAR(actionID), nil];
+}] call CBA_fnc_addBISPlayerEventHandler;

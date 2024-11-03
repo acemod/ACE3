@@ -30,7 +30,7 @@ if (ACE_player getVariable [QGVAR(dropMode), false]) then {
     };
 
     // Limit distance in vehicle
-    if (vehicle ACE_player != ACE_player) then {
+    if (!isNull objectParent ACE_player) then {
         ACE_player setVariable [QGVAR(dropDistance), (ACE_player getVariable [QGVAR(dropDistance), DROP_DISTANCE_DEFAULT]) min 0.5];
     };
 } else {

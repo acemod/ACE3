@@ -22,18 +22,17 @@ _args params ["", "_launchParams"];
 _launchParams params ["", "", "", "_attackProfileName"];
 
 private _attackProfileFunction = getText (configFile >> QGVAR(AttackProfiles) >> _attackProfileName >> "functionName");
-
 private _attackProfilePos = _this call (missionNamespace getVariable _attackProfileFunction);
 
 if ((isNil "_attackProfilePos") || {_attackProfilePos isEqualTo [0,0,0]}) exitWith {
-    ERROR_1("attack profile returned bad pos",_attackProfilePos);
+    // ERROR_2("attack profile [%1] returned bad pos %2",_attackProfileName,_attackProfilePos);
     [0,0,0]
 };
 
-#ifdef DRAW_GUIDANCE_INFO
-drawLine3D [(ASLtoAGL _attackProfilePos), (ASLtoAGL _seekerTargetPos), [0,1,1,1]];
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,0,1,1], ASLtoAGL _attackProfilePos, 0.5, 0.5, 0, _attackProfileName, 1, 0.025, "TahomaB"];
-#endif
+if (GVAR(debug_drawGuidanceInfo)) then {
+    drawLine3D [(ASLToAGL _attackProfilePos), (ASLToAGL _seekerTargetPos), [0,1,1,1]];
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,0,1,1], ASLToAGL _attackProfilePos, 0.5, 0.5, 0, _attackProfileName, 1, 0.025, "TahomaB"];
+};
 
 TRACE_2("return",_attackProfilePos,_attackProfileName);
 _attackProfilePos;

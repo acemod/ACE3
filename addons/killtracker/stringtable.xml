@@ -126,6 +126,8 @@
             <Italian>Mostra uccisioni del veicolo a membri dell'equipaggio</Italian>
             <Japanese>車両でのキルを乗員全員に表示する</Japanese>
             <Korean>다른 승무원에게 차량 처치 표시</Korean>
+            <French>Montrer les véhicules tués aux membres de l'équipage</French>
+            <Spanish>Mostrar bajas provocadas por el vehículo a otros miembros de la tripulación</Spanish>
         </Key>
         <Key ID="STR_ACE_KillTracker_showCrewKills_Description">
             <English>Show kills from a vehicle to driver, gunner and commander</English>
@@ -134,6 +136,8 @@
             <Italian>Mostra uccisioni del veicolo al pilota, artigliere e comandante</Italian>
             <Japanese>車両でのキルを操縦手、砲手、車長で共有して表示する</Japanese>
             <Korean>차량 처치를 운전수, 사수, 지휘관에게 보여줍니다</Korean>
+            <French>Montrer les véhicules tués au pilote, à l'artilleur et au commandant.</French>
+            <Spanish>Muestra las bajas de un vehículo al conductor, artillero y comandante</Spanish>
         </Key>
     </Package>
 </Project>

@@ -16,7 +16,13 @@
 params ["_display"];
 
 // Can be either a singular loadout or an array of loadouts
-private _extendedLoadout = call compile copyFromClipboard;
+private _extendedLoadout = if (isMultiplayer) then {
+    ("ace" callExtension ["clipboard:loadout", []]) params ["_loadout", "_code"];
+    if (_code != 0) exitWith {};
+    parseSimpleArray _loadout
+} else {
+    call compile copyFromClipboard
+};
 
 // If error, exit
 if (isNil "_extendedLoadout" || {!(_extendedLoadout isEqualType [])}) exitWith {

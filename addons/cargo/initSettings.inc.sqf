@@ -59,3 +59,10 @@ private _category = [ELSTRING(main,Category_Logistics), LSTRING(openMenu)];
     _category,
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(checkSizeInteraction),
+    "CHECKBOX",
+    LSTRING(checkSizeInteraction),
+    _category
+] call CBA_fnc_addSetting;

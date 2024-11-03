@@ -1,7 +1,9 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut, PabstMirror
+ * Author: BaerMitUmlaut, PabstMirror, johnb43
  * Applies healing to target.
+ * States that contain "needs" are states in which the medic is blocked, either temporairly (HR too high/low) or until resupplied, from treating.
+ * States that contain "wait" are states where the medic waits temporairly before continuing treatment.
  *
  * Arguments:
  * 0: Healer <OBJECT>
@@ -129,7 +131,7 @@ private _fnc_removeTourniquet = {
     // If no bandages available, wait
     // If check is done at the start of the scope, it will miss the edge case where the unit ran out of bandages just as they finished bandaging tourniqueted body part
     if !(([_healer, "@bandage"] call FUNC(itemCheck)) # 0) exitWith {
-        _treatmentEvent = "#waitForBandages"; // TODO: Medic can move onto another patient/should be flagged as out of supplies
+        _treatmentEvent = "#needsBandage";
     };
 
     // Otherwise keep bandaging
@@ -177,7 +179,7 @@ if (true) then {
 
         // Patient is not worth treating if bloodloss can't be stopped
         if !(_hasBandage || _hasTourniquet) exitWith {
-            _treatmentEvent = "#cantStabilise"; // TODO: Medic should be flagged as out of supplies
+            _treatmentEvent = "#needsBandageOrTourniquet";
         };
 
         // Bandage the heaviest bleeding body part
@@ -260,29 +262,24 @@ if (true) then {
     if (_canGiveIV) exitWith {
         _treatmentEvent = QEGVAR(medical_treatment,ivBagLocal);
         _treatmentTime = 5;
-        _treatmentArgs = [_target, _bodyPart, "SalineIV"];
+        _treatmentArgs = [_target, _bodyPart, "SalineIV", _healer];
         _treatmentItem = "@iv";
     };
 
-    private _fractures = GET_FRACTURES(_target);
+    // Leg fractures
+    private _index = (GET_FRACTURES(_target) select [4, 2]) find 1;
 
     if (
-        ((_fractures select 4) == 1) &&
-        {([_healer, "splint"] call FUNC(itemCheck)) # 0}
+        _index != -1 && {
+            // In case the unit doesn't have a splint, set state here
+            _treatmentEvent = "#needsSplint";
+
+            ([_healer, "splint"] call FUNC(itemCheck)) # 0
+        }
     ) exitWith {
         _treatmentEvent = QEGVAR(medical_treatment,splintLocal);
         _treatmentTime = 6;
-        _treatmentArgs = [_healer, _target, "leftleg"];
-        _treatmentItem = "splint";
-    };
-
-    if (
-        ((_fractures select 5) == 1) &&
-        {([_healer, "splint"] call FUNC(itemCheck)) # 0}
-    ) exitWith {
-        _treatmentEvent = QEGVAR(medical_treatment,splintLocal);
-        _treatmentTime = 6;
-        _treatmentArgs = [_healer, _target, "rightleg"];
+        _treatmentArgs = [_healer, _target, ALL_BODY_PARTS select (_index + 4)];
         _treatmentItem = "splint";
     };
 
@@ -291,26 +288,32 @@ if (true) then {
     if (_needsIV || {_doCPR && {_treatmentEvent == "#waitForIV"}}) exitWith {
         // If injured is in cardiac arrest and the healer is doing nothing else, start CPR
         if (_doCPR) exitWith {
-            _treatmentEvent = QEGVAR(medical_treatment,cprLocal); // TODO: Medic remains in this loop until injured is given enough IVs or dies
+            // Medic remains in this loop until injured is given enough IVs or dies
+            _treatmentEvent = QEGVAR(medical_treatment,cprLocal);
             _treatmentArgs = [_healer, _target];
             _treatmentTime = 15;
         };
 
         // If the injured needs IVs, but healer can't give it to them, have healder wait
         if (_needsIV) exitWith {
-            _treatmentEvent = "#needsIV"; // TODO: Medic can move onto another patient
+            _treatmentEvent = "#needsIV";
         };
     };
 
     // These checks are not exitWith, so that the medic can try to bandage up tourniqueted body parts
     if ((count (_target getVariable [VAR_MEDICATIONS, []])) >= 6) then {
-        _treatmentEvent = "#tooManyMeds"; // TODO: Medic can move onto another patient
+        _treatmentEvent = "#needsFewerMeds";
     };
 
     private _heartRate = GET_HEART_RATE(_target);
-    private _canGiveEpinephrine = !(_treatmentEvent in ["#tooManyMeds", "#waitForIV"]) &&
+    private _canGiveEpinephrine = !(_treatmentEvent in ["#needsFewerMeds", "#waitForIV"]) &&
                                   {IS_UNCONSCIOUS(_target) || {_heartRate <= 50}} &&
-                                  {([_healer, "epinephrine"] call FUNC(itemCheck)) # 0};
+                                  {
+                                      // In case the unit doesn't have a epinephrine injector, set state here
+                                      _treatmentEvent = "#needsEpinephrine";
+
+                                      ([_healer, "epinephrine"] call FUNC(itemCheck)) # 0
+                                  };
 
     // This allows for some multitasking
     if (_canGiveEpinephrine) then {
@@ -320,7 +323,7 @@ if (true) then {
         };
 
         if (_heartRate > 180) then {
-            _treatmentEvent = "#waitForSlowerHeart"; // TODO: Medic can move onto another patient, after X amount of time of high HR
+            _treatmentEvent = "#needsSlowerHeart";
             _canGiveEpinephrine = false;
         };
     };
@@ -348,15 +351,21 @@ if (true) then {
 
     // Otherwise, if the healer is either done or out of bandages, continue
     if (
-        !(_treatmentEvent in ["#tooManyMeds", "#waitForIV"]) &&
+        !(_treatmentEvent in ["#needsFewerMeds", "#waitForIV"]) &&
         {(GET_PAIN_PERCEIVED(_target) > 0.25) || {_heartRate >= 180}} &&
-        {([_healer, "morphine"] call FUNC(itemCheck)) # 0}
+        {
+            // In case the unit doesn't have a morphine injector, set state here
+            _treatmentEvent = "#needsMorphine";
+
+            ([_healer, "morphine"] call FUNC(itemCheck)) # 0
+        }
     ) exitWith {
         if (CBA_missionTime < (_target getVariable [QGVAR(nextMorphine), -1])) exitWith {
             _treatmentEvent = "#waitForMorphineToTakeEffect";
         };
+
         if (_heartRate < 60) exitWith {
-            _treatmentEvent = "#waitForFasterHeart"; // TODO: Medic can move onto another patient, after X amount of time of low HR
+            _treatmentEvent = "#needsFasterHeart";
         };
 
         // If all limbs are tourniqueted, bandage the one with the least amount of wounds, so that the tourniquet can be removed

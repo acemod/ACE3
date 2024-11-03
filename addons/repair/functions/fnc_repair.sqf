@@ -21,7 +21,7 @@
 params ["_caller", "_target", "_hitPoint", "_className"];
 TRACE_4("params",_caller,_target,_hitPoint,_className);
 
-private _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
+private _config = (configFile >> "ACE_Repair" >> "Actions" >> _className);
 if !(isClass _config) exitWith {false}; // or go for a default?
 
 private _engineerRequired = if (isNumber (_config >> "requiredEngineer")) then {
@@ -163,7 +163,7 @@ if (_currentWeapon == secondaryWeapon _caller) then {
 
 private _wpn = ["non", "rfl", "pst"] select (1 + ([primaryWeapon _caller, handgunWeapon _caller] find (currentWeapon _caller)));
 _callerAnim = [_callerAnim, "[wpn]", _wpn] call CBA_fnc_replace;
-if (vehicle _caller == _caller && {_callerAnim != ""}) then {
+if (isNull objectParent _caller && {_callerAnim != ""}) then {
     if (primaryWeapon _caller == "") then {
         _caller addWeapon "ACE_FakePrimaryWeapon";
     };

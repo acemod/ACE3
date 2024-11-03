@@ -68,7 +68,7 @@ GVAR(pfID) = [{
         if (_adjustDown) then {
             private _ctrl = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_MODECONTROLGROUP;
             private _pos = ctrlPosition _ctrl;
-            _pos set [1, (_pos select 1) + ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)];
+            _pos set [1, (_pos select 1) + ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25)];
             _ctrl ctrlSetPosition _pos;
             _ctrl ctrlCommit 0;
         };
@@ -101,7 +101,7 @@ GVAR(pfID) = [{
     private _defaultAttackProfile = getText (configFile >> "CfgAmmo" >> _ammo >> "ace_missileguidance" >> "defaultAttackProfile");
     private _vehicleLockMode = _vehicle getVariable [QEGVAR(missileguidance,attackProfile), _defaultAttackProfile];
 
-    _modeShort = if (_haveLock) then {
+    private _modeShort = if (_haveLock) then {
         getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "nameLocked");
     } else {
         getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "name");

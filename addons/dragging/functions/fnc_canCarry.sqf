@@ -18,7 +18,14 @@
 
 params ["_unit", "_target"];
 
-if !(alive _target && {_target getVariable [QGVAR(canCarry), false]} && {isNull objectParent _target}) exitWith {false};
+private _alive = alive _target;
+private _isPerson = _target isKindOf "CAManBase";
+
+if !(
+    (_alive || _isPerson)
+    && {_target getVariable [QGVAR(canCarry), false]}
+    && {isNull objectParent _target || {!isNull getCorpse _target}}
+) exitWith {false};
 
 if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 
@@ -26,16 +33,17 @@ if !([_unit, _target, []] call EFUNC(common,canInteractWith)) exitWith {false};
 // The fireman carry animation does not slow down for injured legs, so you could carry and run
 if ((_unit getHitPointDamage "HitLegs") >= 0.5) exitWith {false};
 
+// Units need to be unconscious or limping; Units also need to not be in ragdoll if alive, as that causes desync issues
+if (_isPerson) exitWith {
+    ((!_alive) && {missionNamespace getVariable [QGVAR(canMoveDead), true]}) ||
+    {(isAwake _target) && // not ragdolled if alive
+    {!(_target call EFUNC(common,isAwake)) ||
+    {_target getHitPointDamage "HitLegs" >= 0.5}}}
+};
+
 // Static weapons need to be empty for carrying (ignore UAV AI)
 if (_target isKindOf "StaticWeapon") exitWith {
     (crew _target) findIf {!unitIsUAV _x} == -1
-};
-
-// Units need to be unconscious or limping; Units also need to not be in ragdoll, as that causes desync issues
-if (_target isKindOf "CAManBase") exitWith {
-    isAwake _target && // not ragdolled
-    {lifeState _target == "INCAPACITATED" ||
-    {_target getHitPointDamage "HitLegs" >= 0.5}}
 };
 
 // Check max items for WeaponHolders

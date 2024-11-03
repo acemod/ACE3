@@ -12,6 +12,8 @@ GVAR(showHudHash) = createHashMap;
 GVAR(vehicleIconCache) = createHashMap; // for getVehicleIcon
 GVAR(wheelSelections) = createHashMap;
 
+GVAR(InteractionConditions) = createHashMap;
+
 GVAR(blockItemReplacement) = false;
 
 // Cache for FUNC(isModLoaded)

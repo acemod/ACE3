@@ -16,7 +16,6 @@
  */
 
 {
-    private _class = configName _x;
     private _result = [_x, false] call FUNC(parseConfigTag);
 
     if (_result isNotEqualTo []) then {
@@ -28,7 +27,6 @@
 } forEach ("true" configClasses (configFile >> "ACE_Tags"));
 
 {
-    private _class = configName _x;
     private _result = [_x, true] call FUNC(parseConfigTag);
 
     if (_result isNotEqualTo []) then {

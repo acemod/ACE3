@@ -221,7 +221,7 @@
             <Portuguese>Ativar Thor III</Portuguese>
             <Russian>Активировать Thor III</Russian>
             <Japanese>Thor III を使う</Japanese>
-            <Korean>Thor III 켜기</Korean>
+            <Korean>토르 III 켜기</Korean>
             <Chinesesimp>开启索尔三型</Chinesesimp>
             <Chinese>開啟索爾三型</Chinese>
             <Turkish>Thor III ü aç</Turkish>
@@ -238,7 +238,7 @@
             <Portuguese>Desativar Thor III</Portuguese>
             <Russian>Деактивировать Thor III</Russian>
             <Japanese>Thor III を止める</Japanese>
-            <Korean>Thor III 끄기</Korean>
+            <Korean>토르 III 끄기</Korean>
             <Chinesesimp>关闭索尔三型</Chinesesimp>
             <Chinese>關閉索爾三型</Chinese>
             <Turkish>Thor III ü kapat</Turkish>
@@ -847,7 +847,7 @@
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По умолчанию: Нет</Russian>
             <Italian>Richiedi specialisti esplosivi per disabilitare esplosivi? Predefinito: No</Italian>
             <Japanese>爆発物を無効にするために爆発物専門兵の特性を必要としますか? デフォルト: 不要</Japanese>
-            <Korean>폭발물을 해제하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
+            <Korean>폭발물을 해체하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
             <Chinesesimp>需要爆破专业兵才能拆除爆炸物？ 预设：否</Chinesesimp>
             <Chinese>需要炸彈專家才能拆除炸彈? 預設: 否</Chinese>
             <Turkish>Patlayıcı uzmanlarının patlayıcıları etkisiz hale getirmesini ister misiniz? Varsayılan: Hayır</Turkish>
@@ -880,7 +880,7 @@
             <Russian>Увеличивать время завершения действий для не-специалистов? По умолчанию: Нет</Russian>
             <Italian>Aumenta il tempo richiesto per completare azioni per non-specialisti? Predefinito: Si</Italian>
             <Japanese>専門兵以外がアクション完了するのに必要な時間を増加しますか? デフォルト: 有効</Japanese>
-            <Korean>비전문가가 폭발물을 해제 시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
+            <Korean>비전문가가 폭발물을 해체 시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
             <Chinesesimp>增加非专业人员相关操作的时间？ 预设：是</Chinesesimp>
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
         </Key>
@@ -896,7 +896,7 @@
             <Russian>Взрыв при разминировании?</Russian>
             <Italian>Detona se disarmati?</Italian>
             <Japanese>解除中に爆発するか?</Japanese>
-            <Korean>해제 시 폭발합니까?</Korean>
+            <Korean>해체 시 폭발합니까?</Korean>
             <Chinesesimp>拆除时引爆？</Chinesesimp>
             <Chinese>拆除時引爆?</Chinese>
         </Key>
@@ -912,7 +912,7 @@
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По умолчанию: Да</Russian>
             <Italian>Permettere ad alcuni esplosivi di esplodere quando si tenta il disinnesco? Predefinito: Si</Italian>
             <Japanese>特定の爆発物を解除中に爆発可能にしますか? デフォルト: 有効</Japanese>
-            <Korean>특정 폭발물이 해제 시 폭발하게 합니까? 기본설정: 예</Korean>
+            <Korean>특정 폭발물이 해체 시 폭발하게 합니까? 기본설정: 예</Korean>
             <Chinesesimp>启用后，某些爆炸物会在拆除时引爆？ 预设：是</Chinesesimp>
             <Chinese>啟用後, 某些炸彈會在拆除時引爆? 預設: 是</Chinese>
         </Key>

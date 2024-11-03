@@ -17,7 +17,7 @@ class vn_static_m2_high_base: StaticMGWeapon {
         };
     };
 
-    class ACE_CSW {
+    class ace_csw {
         enabled = 1;
         proxyWeapon = "vn_m2_v_01";
         magazineLocation = "_target selectionPosition 'mg1_magazine'";
@@ -31,7 +31,7 @@ class vn_static_m2_high_base: StaticMGWeapon {
 
 // M2 Browning - Low
 class vn_static_m2_low_base: vn_static_m2_high_base {
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         disassembleTurret = QEGVAR(csw,m3TripodLow);
     };
 };
@@ -45,7 +45,7 @@ class vn_static_m1919a6_base: vn_static_m2_low_base {
         };
     };
 
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         enabled = 1;
         proxyWeapon = "vn_m1919_v_01";
         magazineLocation = "_target selectionPosition 'mg1_magazine' vectorAdd [-0.3, 0, 0]";
@@ -66,7 +66,7 @@ class vn_static_m1919a4_high_base: vn_static_m1919a6_base {
         };
     };
 
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         enabled = 1;
         proxyWeapon = "vn_m1919_v_01";
         magazineLocation = "_target selectionPosition 'mg1_magazine'";
@@ -80,7 +80,7 @@ class vn_static_m1919a4_high_base: vn_static_m1919a6_base {
 
 // M1919A4 - Low
 class vn_static_m1919a4_low_base: vn_static_m1919a4_high_base {
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         disassembleTurret = QEGVAR(csw,m3TripodLow);
     };
 };
@@ -93,7 +93,7 @@ class vn_static_m60_high_base: vn_static_m2_low_base {
         };
     };
 
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         enabled = 1;
         proxyWeapon = "vn_m60_v_01";
         magazineLocation = "_target selectionPosition 'mg1_trigger'";
@@ -113,7 +113,7 @@ class vn_static_m60_low_base: vn_static_m60_high_base {
         };
     };
 
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         magazineLocation = "_target selectionPosition 'mg1_otochlaven_recoil'";
         disassembleTurret = QEGVAR(csw,m3TripodLow);
     };
@@ -131,7 +131,7 @@ class vn_static_tow_base: vn_static_at3_base {
         };
     };
 
-    class ACE_CSW {
+    class ace_csw {
         enabled = 1;
         proxyWeapon = "vn_missile_tow_launcher";
         magazineLocation = "_target selectionPosition 'magazine'";
@@ -145,7 +145,7 @@ class vn_static_tow_base: vn_static_at3_base {
 
 // DShKM - High
 class vn_static_dp28_high_base: vn_static_m2_high_base {
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         enabled = 0;
     };
 };
@@ -156,7 +156,7 @@ class vn_static_dshkm_high_01_base: vn_static_dp28_high_base {
         };
     };
 
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         enabled = 1;
         proxyWeapon = "vn_dshkm_v_01";
         magazineLocation = "_target selectionPosition 'mg1_boxmag'";
@@ -170,7 +170,7 @@ class vn_static_dshkm_high_01_base: vn_static_dp28_high_base {
 
 // DShKM - High, with AA sight
 class vn_static_dshkm_high_02_base: vn_static_dshkm_high_01_base {
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         disassembleWeapon = QGVAR(dshkm_AA_carry);
     };
 };
@@ -185,7 +185,7 @@ class vn_static_dshkm_low_01_base: vn_static_dshkm_high_01_base {
         };
     };
 
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         disassembleWeapon = QGVAR(dshkm_shield_carry);
         disassembleTurret = QEGVAR(csw,kordTripodLow);
     };
@@ -193,7 +193,7 @@ class vn_static_dshkm_low_01_base: vn_static_dshkm_high_01_base {
 
 // DShKM - Low
 class vn_static_dshkm_low_02_base: vn_static_dshkm_low_01_base {
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         disassembleWeapon = QGVAR(dshkm_carry);
     };
 };
@@ -206,7 +206,7 @@ class vn_static_rpd_high_base: vn_static_dp28_high_base {
         };
     };
 
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         enabled = 1;
         proxyWeapon = "vn_rpd_v_01";
         magazineLocation = "_target selectionPosition 'mg1_otochlaven_recoil'";
@@ -226,7 +226,7 @@ class vn_static_pk_high_base: vn_static_rpd_high_base {
         };
     };
 
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         enabled = 1;
         proxyWeapon = "vn_pk_v_01";
         magazineLocation = "_target selectionPosition 'mg1_otochlaven_recoil'";
@@ -246,7 +246,7 @@ class vn_static_pk_low_base: vn_static_pk_high_base {
         };
     };
 
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         disassembleTurret = QEGVAR(csw,kordTripodLow);
     };
 };
@@ -259,7 +259,7 @@ class vn_static_mg42_high_base: vn_static_rpd_high_base {
         };
     };
 
-    class ACE_CSW {
+    class ace_csw {
         enabled = 1;
         proxyWeapon = "vn_mg42_v_01";
         magazineLocation = "_target selectionPosition 'mg1_otochlaven_recoil'";
@@ -278,7 +278,7 @@ class vn_static_mg42_low_base: vn_static_mg42_high_base {
         };
     };
 
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         disassembleTurret = "";
     };
 };
@@ -294,7 +294,7 @@ class vn_static_sgm_high_base: vn_static_sgm_base {
         };
     };
 
-    class ACE_CSW {
+    class ace_csw {
         enabled = 1;
         proxyWeapon = "vn_sgm_v_01";
         magazineLocation = "_target selectionPosition 'mg1_otochlaven_recoil'";
@@ -308,7 +308,7 @@ class vn_static_sgm_high_base: vn_static_sgm_base {
 
 // SGM - Low
 class vn_static_sgm_low_base: vn_static_sgm_high_base {
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         disassembleWeapon = QGVAR(sgm_carry);
         disassembleTurret = QEGVAR(csw,kordTripodLow);
     };
@@ -316,25 +316,25 @@ class vn_static_sgm_low_base: vn_static_sgm_high_base {
 
 // SGM - Shield
 class vn_o_pl_static_sgm_low_01: vn_static_sgm_low_base {
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         disassembleWeapon = QGVAR(sgm_shield_carry);
         disassembleTurret = QEGVAR(csw,kordTripodLow);
     };
 };
 class vn_o_nva_65_static_sgm_low_01: vn_static_sgm_low_base {
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         disassembleWeapon = QGVAR(sgm_shield_carry);
         disassembleTurret = QEGVAR(csw,kordTripodLow);
     };
 };
 class vn_o_nva_static_sgm_low_01: vn_static_sgm_low_base {
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         disassembleWeapon = QGVAR(sgm_shield_carry);
         disassembleTurret = QEGVAR(csw,kordTripodLow);
     };
 };
 class vn_o_nva_navy_static_sgm_low_01: vn_static_sgm_low_base {
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         disassembleWeapon = QGVAR(sgm_shield_carry);
         disassembleTurret = QEGVAR(csw,kordTripodLow);
     };
@@ -351,7 +351,7 @@ class vn_static_mk18_base: StaticCannon {
         };
     };
 
-    class ACE_CSW {
+    class ace_csw {
         enabled = 1;
         proxyWeapon = "vn_mk18_v_01";
         magazineLocation = "_target selectionPosition 'mg1_magazine'";
@@ -378,7 +378,7 @@ class vn_static_mortar_m29_base: Mortar_01_base_F {
         };
     };
 
-    class ACE_CSW {
+    class ace_csw {
         enabled = 1;
         proxyWeapon = QGVAR(vn_mortar_m29);
         magazineLocation = "_target selectionPosition 'pohon'";
@@ -392,7 +392,7 @@ class vn_static_mortar_m29_base: Mortar_01_base_F {
 
 // M2 / Type 63 Mortar
 class vn_static_mortar_m2_base: vn_static_mortar_m29_base {
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         enabled = 1;
         proxyWeapon = QGVAR(vn_mortar_m2);
         magazineLocation = "_target selectionPosition 'pohon'";
@@ -406,7 +406,7 @@ class vn_static_mortar_m2_base: vn_static_mortar_m29_base {
 
 // Type 53 Mortar
 class vn_static_mortar_type53_base: vn_static_mortar_m29_base {
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         enabled = 1;
         proxyWeapon = QGVAR(vn_mortar_type53);
         magazineLocation = "_target selectionPosition 'pohon'";
@@ -430,7 +430,7 @@ class vn_static_h12_base: Mortar_01_base_F {
         };
     };
 
-    class ACE_CSW {
+    class ace_csw {
         enabled = 0;
     };
 };
@@ -441,7 +441,7 @@ class vn_static_m45_base: vn_static_m2_high_base {
     EGVAR(dragging,canCarry) = 0;
     EGVAR(dragging,canDrag) = 0;
 
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         enabled = 0;
     };
 };
@@ -450,7 +450,7 @@ class vn_static_zpu4_base: vn_static_m2_high_base {
     EGVAR(dragging,canCarry) = 0;
     EGVAR(dragging,canDrag) = 0;
 
-    class ACE_CSW: ACE_CSW {
+    class ace_csw: ace_csw {
         enabled = 0;
     };
 };
@@ -466,7 +466,7 @@ class vn_o_static_rsna75: StaticMGWeapon {
         };
     };
 
-    class ACE_CSW {
+    class ace_csw {
         enabled = 0;
     };
 };

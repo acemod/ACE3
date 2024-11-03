@@ -30,7 +30,10 @@ if (isNull (uiNamespace getVariable [QGVAR(display), displayNull])) then {
 };
 
 private _ctrlGroup = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl 1000;
-if (cameraView != "GUNNER") exitWith { // need to be in gunner mode, so we can check where the optics are aiming at
+
+// Need to be in gunner mode, so we can check where the optics are aiming at
+// However, if there are no optics, ignore the above
+if (!_invalidGunnerMem && {cameraView != "GUNNER"}) exitWith {
     _ctrlGroup ctrlShow false;
 };
 _ctrlGroup ctrlShow true;
@@ -40,7 +43,7 @@ BEGIN_COUNTER(pfeh);
 private _currentFireMode = (weaponState [_vehicle, _turret]) select 2;
 private _currentChargeMode = _fireModes find _currentFireMode;
 
-private _lookVector = (AGLtoASL (positionCameraToWorld [0,0,0])) vectorFromTo (AGLtoASL (positionCameraToWorld [0,0,1]));
+private _lookVector = (AGLToASL (positionCameraToWorld [0,0,0])) vectorFromTo (AGLToASL (positionCameraToWorld [0,0,1]));
 private _weaponDir = _vehicle weaponDirection (currentWeapon _vehicle);
 
 // Calc real azimuth/elevation
@@ -48,7 +51,7 @@ private _weaponDir = _vehicle weaponDirection (currentWeapon _vehicle);
 private _display = uiNamespace getVariable ["ACE_dlgArtillery", displayNull];
 private _useRealWeaponDir = if ((isNull (_display displayCtrl 173)) || {(_vehicle ammo (currentWeapon _vehicle)) == 0}) then {
     // With no ammo, distance display will be empty, but gun will still fire at wonky angle if aimed at ground
-    private _testSeekerPosASL = AGLtoASL (positionCameraToWorld [0,0,0]);
+    private _testSeekerPosASL = AGLToASL (positionCameraToWorld [0,0,0]);
     private _testPoint = _testSeekerPosASL vectorAdd (_lookVector vectorMultiply viewDistance);
     !((terrainIntersectASL [_testSeekerPosASL, _testPoint]) || {lineIntersects [_testSeekerPosASL, _testPoint, _vehicle]});
 } else {
@@ -81,8 +84,8 @@ private _ctrlCharge = (uiNamespace getVariable [QGVAR(display), displayNull]) di
 private _ctrlAzimuth = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_AZIMUTH;
 private _ctrlElevation = (uiNamespace getVariable [QGVAR(display), displayNull]) displayCtrl IDC_ELEVATION;
 
-_ctrlAzimuth ctrlSetText Format ["AZ: %1", [DEGTOMILS * _realAzimuth, 4, 0] call CBA_fnc_formatNumber];
-_ctrlElevation ctrlSetText Format ["EL: %1", [DEGTOMILS * _realElevation, 4, 0] call CBA_fnc_formatNumber];
+_ctrlAzimuth ctrlSetText format ["AZ: %1", [DEGTOMILS * _realAzimuth, 4, 0] call CBA_fnc_formatNumber];
+_ctrlElevation ctrlSetText format ["EL: %1", [DEGTOMILS * _realElevation, 4, 0] call CBA_fnc_formatNumber];
 _ctrlCharge ctrlSetText format ["CH: %1", _currentChargeMode];
 
 // avalible for other addons (mk6)
