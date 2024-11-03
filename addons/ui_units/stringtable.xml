@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="UI_Units">
+        <Key ID="STR_ACE_UI_Units_Module_DisplayName">
+            <English>Units</English>
+            <German>Maßeinheiten</German>
+        </Key>
+        <Key ID="STR_ACE_UI_Units_Speed_DisplayName">
+            <English>Speed</English>
+            <German>Geschwindigkeit</German>
+        </Key>
+        <Key ID="STR_ACE_UI_Units_Speed_Description">
+            <English>Units used to display Speed.</English>
+            <German>Maßeinheit, um Geschwindigkeit darzustellen.</German>
+        </Key>
+        <Key ID="STR_ACE_UI_Units_Alt_DisplayName">
+            <English>Altitude</English>
+            <German>Flughöhe</German>
+        </Key>
+        <Key ID="STR_ACE_UI_Units_Alt_Description">
+            <English>Units used to display Altitude.</English>
+            <German>Maßeinheit, um Flughöhe darzustellen.</German>
+        </Key>
+        <Key ID="STR_ACE_UI_Units_Land_DisplayName">
+            <English>Land Vehicles</English>
+            <German>Bodenfahrzeuge</German>
+        </Key>
+        <Key ID="STR_ACE_UI_Units_Speed_KMH">
+            <English>km/h</English>
+            <German>km/h</German>
+        </Key>
+        <Key ID="STR_ACE_UI_Units_Speed_MPH">
+            <English>mph</English>
+            <German>mph</German>
+        </Key>
+        <Key ID="STR_ACE_UI_Units_Speed_KNOT">
+            <English>kn</English>
+            <German>kn</German>
+        </Key>
+        <Key ID="STR_ACE_UI_Units_Speed_MS">
+            <English>m/s</English>
+            <German>m/s</German>
+        </Key>
+        <Key ID="STR_ACE_UI_Units_Alt_M">
+            <English>Meters</English>
+            <German>Meter</German>
+        </Key>
+        <Key ID="STR_ACE_UI_Units_Alt_F">
+            <English>Feet</English>
+            <German>Fuß</German>
+        </Key>
+    </Package>
+</Project>
