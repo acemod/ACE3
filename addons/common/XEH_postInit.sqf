@@ -481,9 +481,9 @@ GVAR(isReloading) = false;
 
     if (!GVAR(isReloading)) exitWith {};
 
-    // Wait until reload animation has finished
+    // Wait until reload animation has finished (if weapon is no longer available, it returns -1)
     [{
-        ((_this select 0) weaponState (_this select 1)) select 6 == 0
+        ((_this select 0) weaponState (_this select 1)) select 6 <= 0
     }, {
         // Player might switch units again before reload finishes
         if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
@@ -504,9 +504,9 @@ GVAR(isReloading) = false;
 
         GVAR(isReloading) = true;
 
-        // Wait until reload animation has finished
+        // Wait until reload animation has finished (if weapon is no longer available, it returns -1)
         [{
-            ((_this select 0) weaponState (_this select 1)) select 6 == 0
+            ((_this select 0) weaponState (_this select 1)) select 6 <= 0
         }, {
             // Player might switch units before reload finishes
             if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
