@@ -565,7 +565,7 @@ class ADDON {
         timeInSystem = 120;
         // How long until the maximum effect is reached
         timeTillMaxEffect = 30;
-        // How many of this type of medication can be in the system before the patient can possibly overdose?
+        // How many doses of this medication can be in the system before the patient can possibly overdose?
         maxDose = 4;
         // The number of doses over maxDose where there is a chance to overdose.
         // Example with maxDose = 4 and maxDoseDeviation = 2: Dose 4: Safe | Dose 5 and 6: Possible overdose | Dose 7: Guaranteed overdose
