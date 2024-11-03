@@ -37,7 +37,7 @@ private _heartRateOutput = LSTRING(Check_Pulse_Output_5);
 private _logOutput = LSTRING(Check_Pulse_None);
 
 if (_heartRate > 1) then {
-    if ([_medic,GVAR(numericalPulse)] call FUNC(isMedic)) then {
+    if ([_medic, GVAR(numericalPulse)] call FUNC(isMedic)) then {
         _heartRateOutput = LSTRING(Check_Pulse_Output_1);
         _logOutput = str round _heartRate;
     } else {
