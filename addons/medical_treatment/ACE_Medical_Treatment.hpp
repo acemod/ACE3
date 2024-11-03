@@ -570,7 +570,7 @@ class ADDON {
         // The number of doses over maxDose where there is a chance to overdose.
         // Example with maxDose = 4 and maxDoseDeviation = 2: Dose 4: Safe | Dose 5 and 6: Possible overdose | Dose 7: Guaranteed overdose
         maxDoseDeviation = 2;
-        // The dose of the medication, to allow for multiple dose types of the same medication
+        // The dose of the medication, to allow for different dose amounts of the same medication
         dose = 1;
         // Function to execute upon overdose. Arguments passed to call back are 0: Patient <OBJECT>, 1: Medication classname <STRING>, 2: Medication dosage <NUMBER>, 3: Overdose threshold <NUMBER>, 4: Incompatible medication that caused overdose (can be the medication itself) <STRING> (default: "")
         onOverDose = "";
