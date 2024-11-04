@@ -39,7 +39,6 @@ if (
         }] call CBA_fnc_waitUntilAndExecute;
     };
 
-    // 0.18 = average first person rifle shot
     GVAR(ehpTimeout) = CBA_missionTime + EHP_TIMEOUT;
 };
 
