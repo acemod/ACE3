@@ -20,6 +20,8 @@
 
 params ["_id", "_setting", ["_add", true], ["_fadeDuration", 0]];
 
+_id = toLowerANSI _id;
+
 // Save setting
 if (_add) then {
     GVAR(setHearingCapabilityMap) set [_id, _setting];
