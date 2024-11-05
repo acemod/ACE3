@@ -74,7 +74,7 @@ if (
 if (GVAR(clearTrauma) == 2) then {
     TRACE_2("clearTrauma - clearing trauma after bandage",_bodyPart,_openWounds);
     private _partIndex = ALL_BODY_PARTS find _bodyPart;
-    private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+    private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0,0,0,0,0,0,0]];
     private _newDam = (_bodyPartDamage select _partIndex) - _treatedDamage;
 
     // Prevent obscenely small damage from lack of floating precision

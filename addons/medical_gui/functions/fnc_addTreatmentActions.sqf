@@ -16,7 +16,7 @@
  */
 
 private _actionsConfig = configFile >> QEGVAR(medical_treatment,actions);
-private _actionPaths = ["ACE_Head", "ACE_Torso", "ACE_ArmLeft", "ACE_ArmRight", "ACE_LegLeft", "ACE_LegRight"];
+private _actionPaths = ["ACE_Head", "ACE_Neck", "ACE_Torso", "ACE_Chest", "ACE_ArmLeft", "ACE_ArmUpperLeft", "ACE_ArmRight", "ACE_ArmUpperRight", "ACE_LegLeft", "ACE_LegUpperLeft", "ACE_LegRight", "ACE_LegUpperRight"];
 
 private _fnc_statement = {
     params ["_target", "_player", "_args"];

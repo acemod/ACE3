@@ -2,16 +2,22 @@
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
-#define ALL_BODY_PARTS ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"]
-#define ALL_SELECTIONS ["head", "body", "hand_l", "hand_r", "leg_l", "leg_r"]
-#define ALL_HITPOINTS ["HitHead", "HitChest", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"]
+#define ALL_BODY_PARTS ["head", "neck", "chest", "body", "leftarm", "upperleftarm", "rightarm", "upperrightarm", "leftleg", "upperleftleg", "rightleg", "upperrightleg"]
+#define ALL_SELECTIONS ["head", "neck", "chest", "body", "hand_l", "uhand_l", "hand_r", "uhand_r", "leg_l", "uleg_l", "leg_r", "uleg_r"]
+#define ALL_HITPOINTS ["HitHead", "HitNeck", "HitChest", "HitAbdomen", "HitLeftArm", "HitRightArm", "HitLeftLeg", "HitRightLeg"]
 
 #define HITPOINT_INDEX_HEAD 0
-#define HITPOINT_INDEX_BODY 1
-#define HITPOINT_INDEX_LARM 2
-#define HITPOINT_INDEX_RARM 3
-#define HITPOINT_INDEX_LLEG 4
-#define HITPOINT_INDEX_RLEG 5
+#define HITPOINT_INDEX_NECK 1
+#define HITPOINT_INDEX_CHEST 2
+#define HITPOINT_INDEX_BODY 3
+#define HITPOINT_INDEX_LARM 4
+#define HITPOINT_INDEX_ULARM 5
+#define HITPOINT_INDEX_RARM 6
+#define HITPOINT_INDEX_URARM 7
+#define HITPOINT_INDEX_LLEG 8
+#define HITPOINT_INDEX_ULLEG 9
+#define HITPOINT_INDEX_RLEG 10
+#define HITPOINT_INDEX_URLEG 11
 
 // Damage threshold above which fatal organ damage can occur
 #define HEAD_DAMAGE_THRESHOLD EGVAR(medical,const_headDamageThreshold)
@@ -130,9 +136,9 @@
 #define DEFAULT_BANDAGE_REOPENING_MIN_DELAY 120
 #define DEFAULT_BANDAGE_REOPENING_MAX_DELAY 200
 
-#define DEFAULT_TOURNIQUET_VALUES [0,0,0,0,0,0]
+#define DEFAULT_TOURNIQUET_VALUES [0,0,0,0,0,0,0,0,0,0,0,0]
 
-#define DEFAULT_FRACTURE_VALUES [0,0,0,0,0,0]
+#define DEFAULT_FRACTURE_VALUES [0,0,0,0,0,0,0,0,0,0,0,0]
 
 // Triage colors, for consistency across UIs and functions
 #define TRIAGE_COLOR_NONE      0, 0, 0, 0.9

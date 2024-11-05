@@ -77,7 +77,7 @@ class GVAR(actions) {
         displayName = CSTRING(Apply_Tourniquet);
         displayNameProgress = CSTRING(Applying_Tourniquet);
         icon = QPATHTOEF(medical_gui,ui\tourniquet.paa);
-        allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
+        allowedSelections[] = {"LeftArm", "UpperLeftArm", "RightArm", "UpperRightArm", "LeftLeg", "UpperLeftLeg", "RightLeg", "UpperRightLeg"};
         items[] = {"ACE_tourniquet"};
         treatmentTime = QGVAR(treatmentTimeTourniquet);
         condition = QUOTE(!([ARR_2(_patient,_bodyPart)] call FUNC(hasTourniquetAppliedTo)));
@@ -100,7 +100,7 @@ class GVAR(actions) {
         displayNameProgress = CSTRING(Applying_Splint);
         category = "bandage";
         icon = QPATHTOEF(medical_gui,ui\splint.paa);
-        allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
+        allowedSelections[] = {"LeftArm", "UpperLeftArm", "RightArm", "UpperRightArm", "LeftLeg", "UpperLeftLeg", "RightLeg", "UpperRightLeg"};
         items[] = {"ACE_splint"};
         treatmentTime = QGVAR(treatmentTimeSplint);
         callbackSuccess = QFUNC(splint);
@@ -115,7 +115,7 @@ class GVAR(actions) {
         displayName = CSTRING(Inject_Morphine);
         displayNameProgress = CSTRING(Injecting_Morphine);
         icon = QPATHTOEF(medical_gui,ui\auto_injector.paa);
-        allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
+        allowedSelections[] = {"LeftArm", "UpperLeftArm", "RightArm", "UpperRightArm", "LeftLeg", "UpperLeftLeg", "RightLeg", "UpperRightLeg"};
         category = "medication";
         items[] = {"ACE_morphine"};
         condition = "";
@@ -159,7 +159,7 @@ class GVAR(actions) {
         displayName = CSTRING(Actions_Blood4_1000);
         displayNameProgress = CSTRING(Transfusing_Blood);
         icon = QPATHTOEF(medical_gui,ui\iv.paa);
-        allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
+        allowedSelections[] = {"LeftArm", "UpperLeftArm", "RightArm", "UpperRightArm", "LeftLeg", "UpperLeftLeg", "RightLeg", "UpperRightLeg"};
         allowSelfTreatment = QGVAR(allowSelfIV);
         category = "advanced";
         medicRequired = QGVAR(medicIV);
@@ -215,7 +215,7 @@ class GVAR(actions) {
         icon = "";
         category = "examine";
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
-        allowedSelections[] = {"Head", "Body"};
+        allowedSelections[] = {"Head", "Neck", "Chest", "Body"};
         medicRequired = 0;
         treatmentTime = 2.5;
         items[] = {};
@@ -239,7 +239,7 @@ class GVAR(actions) {
     class CheckBloodPressure: CheckPulse {
         displayName = CSTRING(Actions_CheckBloodPressure);
         displayNameProgress = CSTRING(Check_Bloodpressure_Content);
-        allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
+        allowedSelections[] = {"LeftUpperArm", "RightUpperArm", "LeftUpperLeg", "RightUpperLeg"};
         callbackSuccess = QFUNC(checkBloodPressure);
     };
     class CheckResponse: CheckPulse {
@@ -290,7 +290,7 @@ class GVAR(actions) {
         icon = "";
         category = "advanced";
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
-        allowedSelections[] = {"Body"};
+        allowedSelections[] = {"Chest"};
         allowSelfTreatment = 0;
         medicRequired = 0;
         treatmentTime = QGVAR(treatmentTimeCPR);

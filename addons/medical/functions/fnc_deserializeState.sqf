@@ -97,7 +97,7 @@ private _state = [_json] call CBA_fnc_parseJSON;
     [QEGVAR(medical,ivBags), nil],
     [QEGVAR(medical,triageLevel), 0],
     [QEGVAR(medical,triageCard), []],
-    [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]]
+    [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0,0,0,0,0,0,0]]
     // Offset needs to be converted
     // [VAR_MEDICATIONS, []]
 ];

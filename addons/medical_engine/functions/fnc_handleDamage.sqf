@@ -28,7 +28,6 @@ if (_structuralDamage) then {
 } else {
     _oldDamage = _unit getHitIndex _hitPointIndex;
 };
-
 // Damage can be disabled with old variable or via sqf command allowDamage
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
@@ -84,7 +83,7 @@ if (
     // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
     TRACE_5("Crash",_unit,_shooter,_instigator,_damage,_newDamage);
-    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPoint, _newDamage]], _unit, "vehiclecrash"]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitpoint, _newDamage]], _unit, "vehiclecrash"]] call CBA_fnc_localEvent;
 
     0
 };
@@ -104,13 +103,13 @@ if (
     _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
     _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
 
-    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPoint, _newDamage]], _shooter, "vehiclehit"]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitpoint, _newDamage]], _shooter, "vehiclehit"]] call CBA_fnc_localEvent;
 
     0
 };
 
 // Damages are stored for last iteration of the HandleDamage event (_context == 2)
-_unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage, _newDamage]];
+_unit setVariable [format [QGVAR($%1), _hitpoint], [_realDamage, _newDamage]];
 
 // Ref https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#HandleDamage
 // Context 2 means this is the last iteration of HandleDamage, so figure out which hitpoint took the most real damage and send wound event
@@ -124,22 +123,28 @@ if (_context == 2) then {
     // --- Head
     private _damageHead = [
         _unit getVariable [QGVAR($HitFace), [0,0]],
-        _unit getVariable [QGVAR($HitNeck), [0,0]],
         _unit getVariable [QGVAR($HitHead), [0,0]]
     ];
     _damageHead sort false;
     _damageHead = _damageHead select 0;
 
+    // --- Neck
+    private _damageNeck = _unit getVariable [QGVAR($HitHitNeck), [0,0]];
+
     // --- Body
     private _damageBody = [
         _unit getVariable [QGVAR($HitPelvis), [0,0]],
-        _unit getVariable [QGVAR($HitAbdomen), [0,0]],
-        _unit getVariable [QGVAR($HitDiaphragm), [0,0]],
-        _unit getVariable [QGVAR($HitChest), [0,0]]
-        // HitBody removed as it's a placeholder hitpoint and the high armor value (1000) throws the calculations off
+        _unit getVariable [QGVAR($HitAbdomen), [0,0]]
     ];
     _damageBody sort false;
     _damageBody = _damageBody select 0;
+
+    private _damageChest = [
+        _unit getVariable [QGVAR($HitDiaphragm), [0,0]],
+        _unit getVariable [QGVAR($HitChest), [0,0]]
+    ];
+    _damageChest sort false;
+    _damageChest = _damageChest select 0;
 
     // --- Arms and Legs
     private _damageLeftArm = _unit getVariable [QGVAR($HitLeftArm), [0,0]];
@@ -152,6 +157,8 @@ if (_context == 2) then {
     // _realDamage, priority, _newDamage, body part name
     private _allDamages = [
         [_damageHead select 0,       PRIORITY_HEAD,       _damageHead select 1,       "Head"],
+        [_damageNeck select 0,       PRIORITY_NECK,       _damageNeck select 1,       "Neck"],
+        [_damageChest select 0,       PRIORITY_CHEST,       _damageChest select 1,       "Chest"],
         [_damageBody select 0,       PRIORITY_BODY,       _damageBody select 1,       "Body"],
         [_damageLeftArm select 0,    PRIORITY_LEFT_ARM,   _damageLeftArm select 1,    "LeftArm"],
         [_damageRightArm select 0,   PRIORITY_RIGHT_ARM,  _damageRightArm select 1,   "RightArm"],
@@ -213,4 +220,4 @@ if (_context == 2) then {
 // Engine damage to these hitpoints controls blood visuals, limping, weapon sway
 // Handled in fnc_damageBodyPart, persist here
 // For all other hitpoints, we store our own damage values, so engine damage is unnecessary
-[0, _oldDamage] select (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"])
+[0, _oldDamage] select (_hitPoint in ["hithead","hitneck", "hitbody","hitChest", "hithands","hitlegs"])

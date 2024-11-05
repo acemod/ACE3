@@ -46,7 +46,7 @@ if (!_overrideInvuln && {!((isDamageAllowed _unit) && {_unit getVariable [QEGVAR
 };
 
 // Extension is case sensitive and expects this format (different from ALL_BODY_PARTS)
-_bodyPart = ["Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"] select _bodyPartIndex;
+_bodyPart = ["_Head", "_Neck", "_Chest", "_Body", "_LeftArm", "_LeftUpperArm", "_RightArm", "_RightUpperArm", "_LeftLeg", "_LeftUpperLeg", "_RightLeg", "_RightUpperLeg"] select _bodyPartIndex;
 
 if (!isNull _instigator) then {
     _unit setVariable [QEGVAR(medical,lastDamageSource), _instigator];
@@ -54,14 +54,14 @@ if (!isNull _instigator) then {
 };
 
 #ifdef DEBUG_TESTRESULTS
-private _startDmg = +(_unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]]);
+private _startDmg = +(_unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0,0,0,0,0,0,0]];);
 private _startPain = GET_PAIN(_unit);
 #endif
 
 [QEGVAR(medical,woundReceived), [_unit, [[_damageToAdd, _bodyPart, _damageToAdd]], _instigator, _typeOfDamage]] call CBA_fnc_localEvent;
 
 #ifdef DEBUG_TESTRESULTS
-private _endDmg = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+private _endDmg = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0,0,0,0,0,0,0]];
 private _endPain = GET_PAIN(_unit);
 private _typeOfDamageAdj = _typeOfDamage call EFUNC(medical_damage,getTypeOfDamage);
 private _config = configFile >> "ACE_Medical_Injuries" >> "damageTypes" >> _typeOfDamageAdj;

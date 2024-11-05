@@ -22,9 +22,9 @@ params ["_ctrlGroup", "_target", "_selectionN"];
 // Get tourniquets, damage, and blood loss for target
 private _tourniquets = GET_TOURNIQUETS(_target);
 private _fractures = GET_FRACTURES(_target);
-private _bodyPartDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [0, 0, 0, 0, 0, 0]];
+private _bodyPartDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
 private _damageThreshold = GET_DAMAGE_THRESHOLD(_target);
-private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
+private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 {
     private _partIndex = ALL_BODY_PARTS find _x;
@@ -61,7 +61,7 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
                 _ctrlBone ctrlSetTextColor [1, 0, 0, 1];
             };
             case -1: {
-                if (EGVAR(medical,fractures) in [2, 3]) then {
+                if (EGVAR(medical,fractures) in [4, 5, 6, 7]) then {
                     _ctrlBone ctrlShow true;
                     _ctrlBone ctrlSetTextColor [0, 0, 1, 1];
                 } else {
@@ -78,16 +78,16 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
     } else {
         private _damage = _bodyPartDamage select _forEachIndex;
         switch (true) do { // torso damage threshold doesn't need scaling
-            case (_forEachIndex > 3): { // legs: index 4 & 5
+            case (_forEachIndex > 7): { // legs: index 8,9,10,11
                 _damageThreshold = LIMPING_DAMAGE_THRESHOLD * 4;
             };
-            case (_forEachIndex > 1): { // arms: index 2 & 3
+            case (_forEachIndex > 3): { // arms: index 4,5,6,7
                 _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
             };
-            case (_forEachIndex == 0): { // head: index 0
-                _damageThreshold = _damageThreshold * 1.25;
+            case (_forEachIndex > 1): { // body
+                _damageThreshold = _damageThreshold * 1.5;
             };
-            default { // torso: index 1
+            default { //head and neck
                 _damageThreshold = _damageThreshold * 1.5
             };
         };
@@ -99,11 +99,17 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0];
     _ctrlBodyPart ctrlSetTextColor _bodyPartColor;
 } forEach [
     [IDC_BODY_HEAD, IDC_BODY_HEAD_S],
+    [IDC_BODY_NECK, IDC_BODY_NECK_S],
+    [IDC_BODY_CHEET, IDC_BODY_CHEST_S],
     [IDC_BODY_TORSO, IDC_BODY_TORSO_S],
     [IDC_BODY_ARMLEFT, IDC_BODY_ARMLEFT_S,  IDC_BODY_ARMLEFT_T,  IDC_BODY_ARMLEFT_B],
+    [IDC_BODY_ARMUPPERLEFT, IDC_BODY_ARMUPPERLEFT_S,  IDC_BODY_ARMUPPERLEFT_T,  IDC_BODY_ARMLUPPEREFT_B],
     [IDC_BODY_ARMRIGHT, IDC_BODY_ARMRIGHT_S, IDC_BODY_ARMRIGHT_T, IDC_BODY_ARMRIGHT_B],
+    [IDC_BODY_ARMUPPERRIGHT, IDC_BODY_ARMUPPERRIGHT_S, IDC_BODY_ARMUPPERRIGHT_T, IDC_BODY_ARMUPPERRIGHT_B],
     [IDC_BODY_LEGLEFT, IDC_BODY_LEGLEFT_S,  IDC_BODY_LEGLEFT_T,  IDC_BODY_LEGLEFT_B],
-    [IDC_BODY_LEGRIGHT, IDC_BODY_LEGRIGHT_S, IDC_BODY_LEGRIGHT_T, IDC_BODY_LEGRIGHT_B]
+    [IDC_BODY_LEGUPPERLEFT, IDC_BODY_LEGUPPERLEFT_S,  IDC_BODY_LEGUPPERLEFT_T,  IDC_BODY_LEGUPPERLEFT_B],
+    [IDC_BODY_LEGRIGHT, IDC_BODY_LEGRIGHT_S, IDC_BODY_LEGRIGHT_T, IDC_BODY_LEGRIGHT_B],
+    [IDC_BODY_LEGUPPERRIGHT, IDC_BODY_LEGUPPERRIGHT_S, IDC_BODY_LEGUPPERRIGHT_T, IDC_BODY_LEGUPPERRIGHT_B]
 ];
 
 [QGVAR(updateBodyImage), [_ctrlGroup, _target, _selectionN]] call CBA_fnc_localEvent;

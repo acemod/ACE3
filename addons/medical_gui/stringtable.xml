@@ -605,6 +605,12 @@
             <Chinese>頭部</Chinese>
             <Turkish>Kafa</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_Neck">
+            <English>Neck</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Chest">
+            <English>Chest</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_Torso">
             <English>Torso</English>
             <German>Torso</German>
@@ -637,6 +643,9 @@
             <Chinese>左手</Chinese>
             <Turkish>Sol Kol</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_LeftUpperArm">
+            <English>Upper Left Arm</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_RightArm">
             <English>Right Arm</English>
             <German>Rechter Arm</German>
@@ -652,6 +661,9 @@
             <Chinesesimp>右臂</Chinesesimp>
             <Chinese>右手</Chinese>
             <Turkish>Sağ Kol</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_RightUpperArm">
+            <English>Upper Right Arm</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_LeftLeg">
             <English>Left Leg</English>
@@ -669,6 +681,9 @@
             <Chinese>左腳</Chinese>
             <Turkish>Sol Bacak</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_LeftUpperLeg">
+            <English>Upper Left Leg</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_RightLeg">
             <English>Right Leg</English>
             <German>Rechtes Bein</German>
@@ -684,6 +699,9 @@
             <Chinesesimp>右腿</Chinesesimp>
             <Chinese>右腳</Chinese>
             <Turkish>Sağ Bacak</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_RightUpperLeg">
+            <English>Upper Right Leg</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectHead">
             <English>Select Head</English>
@@ -701,6 +719,9 @@
             <Chinese>選擇頭部</Chinese>
             <Turkish>Kafayı Seç</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectNeck">
+            <English>Select Neck</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectTorso">
             <English>Select Torso</English>
             <German>Wähle Torso</German>
@@ -716,6 +737,9 @@
             <Chinesesimp>选择躯干</Chinesesimp>
             <Chinese>選擇身體</Chinese>
             <Turkish>Gövdeyi Seç</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectChest">
+            <English>Select Chest</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectLeftArm">
             <English>Select Left Arm</English>
@@ -733,6 +757,9 @@
             <Chinese>選擇左手</Chinese>
             <Turkish>Sol Kolu Seç</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectUpperLeftArm">
+            <English>Select Upper Left Arm</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectRightArm">
             <English>Select Right Arm</English>
             <German>Wähle rechten Arm</German>
@@ -748,6 +775,9 @@
             <Chinesesimp>选择右臂</Chinesesimp>
             <Chinese>選擇右手</Chinese>
             <Turkish>Sağ Kolu Seç</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectRightUpperArm">
+            <English>Select Upper Right Arm</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectLeftLeg">
             <English>Select Left Leg</English>
@@ -765,6 +795,9 @@
             <Chinese>選擇左腳</Chinese>
             <Turkish>Sol Bacağı Seç</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectLeftUpperLeg">
+            <English>Select Upper Left Leg</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectRightLeg">
             <English>Select Right Leg</English>
             <German>Wähle rechtes Bein</German>
@@ -780,6 +813,9 @@
             <Chinesesimp>选择右腿</Chinesesimp>
             <Chinese>選擇右腳</Chinese>
             <Turkish>Sağ Bacağı Seç</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectRightUpperLeg">
+            <English>Select Upper Right Leg</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Small">
             <English>Small</English>

@@ -35,14 +35,26 @@ private _createdWounds = false;
 private _updateDamageEffects = false;
 private _painLevel = 0;
 private _criticalDamage = false;
-private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0,0,0,0,0,0,0]];
 private _bodyPartVisParams = [_unit, false, false, false, false]; // params array for EFUNC(medical_engine,updateBodyPartVisuals);
 
 // process wounds separately for each body part hit
 {   // forEach _allDamages
     _x params ["_damage", "_bodyPart"];
     _bodyPart = toLowerANSI _bodyPart;
-
+    if (_bodyPart == "head") then {
+    private _isNeck = (random 1) < 0.1; // 15% chance for neck damage
+    _bodyPart = if (_isNeck) then {"neck"} else {"head"};
+    };
+    if (_bodyPart in ["leftarm", "rightarm", "leftleg", "rightleg"]) then {
+    private _isUpper = (random 1) < 0.5;
+    switch (_bodyPart) do {
+        case "leftarm":  { _bodyPart = if (_isUpper) then {"upperleftarm"} else {"leftarm"}; };
+        case "rightarm": { _bodyPart = if (_isUpper) then {"upperrightarm"} else {"rightarm"}; };
+        case "leftleg":  { _bodyPart = if (_isUpper) then {"upperleftleg"} else {"leftleg"}; };
+        case "rightleg": { _bodyPart = if (_isUpper) then {"upperrightleg"} else {"rightleg"}; };
+        };
+    };
     // silently ignore structural damage
     if (_bodyPart == "#structural") then {continue};
 
@@ -90,7 +102,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         private _woundDamage = _dmgPerWound * _dmgMultiplier * random [0.9, 1, 1.1];
 
         _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _woundDamage];
-        _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
+        _bodyPartVisParams set [[1,1,1,2,2,2,3,3,3,4,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
 
         // Anything above this value is guaranteed worst wound possible
         private _worstDamage = 2;

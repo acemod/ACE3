@@ -51,6 +51,9 @@
             <Chinese>身體</Chinese>
             <Turkish>Gövde</Turkish>
         </Key>
+        <Key ID="STR_ACE_Interaction_Chest">
+            <English>Chest</English>
+        </Key>
         <Key ID="STR_ACE_Interaction_Head">
             <English>Head</English>
             <French>Tête</French>
@@ -85,6 +88,9 @@
             <Chinese>左手</Chinese>
             <Turkish>Sol Kol</Turkish>
         </Key>
+        <Key ID="STR_ACE_Interaction_ArmUpperLeft">
+            <English>Upper Left Arm</English>
+        </Key>
         <Key ID="STR_ACE_Interaction_ArmRight">
             <English>Right Arm</English>
             <German>Rechter Arm</German>
@@ -101,6 +107,9 @@
             <Chinesesimp>右手</Chinesesimp>
             <Chinese>右手</Chinese>
             <Turkish>Sağ Kol</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_ArmUpperRight">
+            <English>Upper Right Arm</English>
         </Key>
         <Key ID="STR_ACE_Interaction_LegLeft">
             <English>Left Leg</English>
@@ -119,6 +128,9 @@
             <Chinese>左腳</Chinese>
             <Turkish>Sol Bacak</Turkish>
         </Key>
+        <Key ID="STR_ACE_Interaction_LegUpperLeft">
+            <English>Upper Left Leg</English>
+        </Key>
         <Key ID="STR_ACE_Interaction_LegRight">
             <English>Right Leg</English>
             <German>Rechtes Bein</German>
@@ -135,6 +147,9 @@
             <Chinesesimp>右脚</Chinesesimp>
             <Chinese>右腳</Chinese>
             <Turkish>Sağ Bacak</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_LegUpperRight">
+            <English>Upper Right Leg</English>
         </Key>
         <Key ID="STR_ACE_Interaction_Weapon">
             <English>Weapon</English>
