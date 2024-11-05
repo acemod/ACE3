@@ -261,7 +261,7 @@ class CfgVehicles {
             class ACE_Weapon {
                 displayName = CSTRING(Weapon);
                 position = QUOTE(call DFUNC(getWeaponPos));
-                distance = 5;
+                distance = 1.5;
                 condition = "";
                 statement = "";
                 exceptions[] = {"isNotSwimming"};

@@ -220,4 +220,4 @@ if (_context == 2) then {
 // Engine damage to these hitpoints controls blood visuals, limping, weapon sway
 // Handled in fnc_damageBodyPart, persist here
 // For all other hitpoints, we store our own damage values, so engine damage is unnecessary
-[0, _oldDamage] select (_hitPoint in ["hithead", "hitneck", "hitbody", "hitchest", "hithands", "hitlegs"])
+[0, _oldDamage] select (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"])
