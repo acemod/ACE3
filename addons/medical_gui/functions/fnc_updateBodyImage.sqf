@@ -77,12 +77,20 @@ private _bodyPartBloodLoss = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
         [_bloodLoss] call FUNC(bloodLossToRGBA);
     } else {
         private _damage = _bodyPartDamage select _forEachIndex;
+        // _damageThreshold here indicates how close unit is to guaranteed death via sum of trauma, so use the same multipliers used in medical_damage/functions/fnc_determineIfFatal.sqf
+        // TODO: make multipliers for head and torso a macro in medical_engine/script_macros_medical.hpp
         switch (true) do { // torso damage threshold doesn't need scaling
             case (_forEachIndex > 7): { // legs: index 8,9,10,11
-                _damageThreshold = LIMPING_DAMAGE_THRESHOLD * 4;
-            };
+                if (EGVAR(medical,limbDamageThreshold) != 0 && {[false, !isPlayer _target, true] select EGVAR(medical,useLimbDamage)}) then { // Just indicate how close to the limping threshold we are
+                    _damageThreshold = _damageThreshold * EGVAR(medical,limbDamageThreshold);
+                } else {
+                    _damageThreshold = LIMPING_DAMAGE_THRESHOLD * 4;
             case (_forEachIndex > 3): { // arms: index 4,5,6,7
-                _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
+                if (EGVAR(medical,limbDamageThreshold) != 0 && {[false, !isPlayer _target, true] select EGVAR(medical,useLimbDamage)}) then { // Just indicate how close to the fracture threshold we are
+                    _damageThreshold = _damageThreshold * EGVAR(medical,limbDamageThreshold);
+                } else {
+                    _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
+                };
             };
             case (_forEachIndex > 1): { // body
                 _damageThreshold = _damageThreshold * 1.5;

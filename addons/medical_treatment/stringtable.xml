@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_Treatment">
+        <Key ID="STR_ACE_Medical_Treatment_Category">
+            <English>ACE Medical Treatment</English>
+            <German>ACE-Medicsystem Behandlung</German>
+            <Russian>ACE Медицина Лечение</Russian>
+            <Polish>ACE Opcje medyczne Leczenie</Polish>
+            <Spanish>Médico ACE Tratamiento</Spanish>
+            <Czech>ACE Zdravotnické Léčba</Czech>
+            <Portuguese>ACE Médico Tratamento</Portuguese>
+            <French>ACE Médical Traitement</French>
+            <Hungarian>ACE Orvosi Rendszer</Hungarian>
+            <Italian>ACE Medica Trattamento</Italian>
+            <Korean>ACE 의료 치료</Korean>
+            <Chinesesimp>ACE 医疗 治疗</Chinesesimp>
+            <Chinese>ACE 醫療系統 治療</Chinese>
+            <Turkish>ACE Medikal Tedavi</Turkish>
+            <Japanese>ACE 医療 治療</Japanese>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_SubCategory_Treatment">
             <English>Treatment</English>
             <German>Behandlung</German>
@@ -545,6 +562,42 @@
             <Turkish>Epinefrinin nerelerde kullanılabileceğini kontrol eder</Turkish>
             <Spanish>Controla donde puede sr usada la Epinefrina.</Spanish>
             <Korean>에피네프린을 사용할 수 있는 장소를 정합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicSplint_DisplayName">
+            <English>Allow Splint</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicSplint_Description">
+            <English>Training level required to use Splint.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationSplint_DisplayName">
+            <English>Locations Splint</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationSplint_Description">
+            <English>Controls where Splints can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
+            <English>Allow Morphine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_Description">
+            <English>Training level required to use Morphine.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_DisplayName">
+            <English>Locations Morphine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_Description">
+            <English>Controls where Morphine can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_DisplayName">
+            <English>Allow Adenosine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_Description">
+            <English>Training level required to use Adenosine.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_DisplayName">
+            <English>Locations Adenosine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_Description">
+            <English>Controls where Adenosine can be used.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_DisplayName">
             <English>Allow PAK</English>

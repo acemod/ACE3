@@ -8,6 +8,7 @@
             <Japanese>9k121 ヴィーフリ [ACE]</Japanese>
             <Korean>9K121 비흐르 [ACE]</Korean>
             <Russian>9k121 Вихрь [ACE]</Russian>
+            <French>9k121 Vikhr [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_VIKHR_1x">
             <English>1x 9k121 Vikhr [ACE]</English>
@@ -16,6 +17,7 @@
             <Japanese>1x 9k121 ヴィーフリ [ACE]</Japanese>
             <Korean>1x 9K121 비흐르 [ACE]</Korean>
             <Russian>1x 9k121 Вихрь [ACE]</Russian>
+            <French>1x 9k121 Vikhr [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_VIKHR_2x">
             <English>2x 9k121 Vikhr [ACE]</English>
@@ -24,6 +26,7 @@
             <Japanese>2x 9k121 ヴィーフリ [ACE]</Japanese>
             <Korean>2x 9K121 비흐르 [ACE]</Korean>
             <Russian>2x 9k121 Вихрь [ACE]</Russian>
+            <French>2x 9k121 Vikhr [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_VIKHR_3x">
             <English>3x 9k121 Vikhr [ACE]</English>
@@ -32,6 +35,7 @@
             <Japanese>3x 9k121 ヴィーフリ [ACE]</Japanese>
             <Korean>3x 9K121 비흐르 [ACE]</Korean>
             <Russian>3x 9k121 Вихрь [ACE]</Russian>
+            <French>3x 9k121 Vikhr [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_VIKHR_4x">
             <English>4x 9k121 Vikhr [ACE]</English>
@@ -40,6 +44,7 @@
             <Japanese>4x 9k121 ヴィーフリ [ACE]</Japanese>
             <Korean>4x 9K121 비흐르 [ACE]</Korean>
             <Russian>4x 9k121 Вихрь [ACE]</Russian>
+            <French>4x 9k121 Vikhr [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_VIKHR_6x">
             <English>6x 9k121 Vikhr [ACE]</English>
@@ -48,6 +53,7 @@
             <Japanese>6x 9k121 ヴィーフリ [ACE]</Japanese>
             <Korean>6x 9K121 비흐르 [ACE]</Korean>
             <Russian>6x 9k121 Вихрь [ACE]</Russian>
+            <French>6x 9k121 Vikhr [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_VIKHR_8x">
             <English>8x 9k121 Vikhr [ACE]</English>
@@ -56,6 +62,7 @@
             <Japanese>8x 9k121 ヴィーフリ [ACE]</Japanese>
             <Korean>8x 9K121 비흐르 [ACE]</Korean>
             <Russian>8x 9k121 Вихрь [ACE]</Russian>
+            <French>8x 9k121 Vikhr [ACE]</French>
         </Key>
     </Package>
 </Project>

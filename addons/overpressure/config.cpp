@@ -17,3 +17,4 @@ class CfgPatches {
 #include "CfgEventHandlers.hpp"
 #include "CfgWeapons.hpp"
 #include "ACE_Arsenal_Stats.hpp"
+#include "CfgEden.hpp"

@@ -20,7 +20,7 @@ params ["_unit"];
 private _painLevel = GET_PAIN_PERCEIVED(_unit);
 private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0,0,0,0,0,0,0]];
 
-_bodyPartDamage params ["_headDamage", "_neckDamage", "_chestDamage","_bodyDamage", "_leftArmDamage", "_leftUpperArmDamage", "_rightArmDamage", "_rightUpperArmDamage", "_leftLegDamage", "_leftUpperLegDamage", "_rightLegDamage", "_rightUpperLegDamage"];
+_bodyPartDamage params ["_headDamage", "_neckDamage", "_chestDamage","_bodyDamage"];
 
 // Exclude non penetrating body damage
 {
