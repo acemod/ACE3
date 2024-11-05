@@ -140,6 +140,8 @@
 
 #define DEFAULT_FRACTURE_VALUES [0,0,0,0,0,0,0,0,0,0,0,0]
 
+#define DEFAULT_DAMAGE_VALUES [0,0,0,0,0,0,0,0,0,0,0,0]
+
 // Triage colors, for consistency across UIs and functions
 #define TRIAGE_COLOR_NONE      0, 0, 0, 0.9
 #define TRIAGE_COLOR_MINIMAL   0, 0.5, 0, 0.9
@@ -181,6 +183,7 @@
 #define VAR_IN_PAIN           QEGVAR(medical,inPain)
 #define VAR_TOURNIQUET        QEGVAR(medical,tourniquets)
 #define VAR_FRACTURES         QEGVAR(medical,fractures)
+#define VAR_BODYPART_DAMAGE    QEGVAR(medical,bodyPartDamage)
 
 // - Unit Functions ---------------------------------------------------
 // Retrieval macros for common unit values
@@ -203,6 +206,7 @@
 #define GET_BANDAGED_WOUNDS(unit)   (unit getVariable [VAR_BANDAGED_WOUNDS, createHashMap])
 #define GET_STITCHED_WOUNDS(unit)   (unit getVariable [VAR_STITCHED_WOUNDS, createHashMap])
 #define GET_DAMAGE_THRESHOLD(unit)  (unit getVariable [QEGVAR(medical,damageThreshold), [EGVAR(medical,AIDamageThreshold),EGVAR(medical,playerDamageThreshold)] select (isPlayer unit)])
+#define GET_BODYPART_DAMAGE(unit)   (unit getVariable [VAR_BODYPART_DAMAGE, DEFAULT_DAMAGE_VALUES])
 
 // The following function calls are defined here just for consistency
 #define GET_BLOOD_LOSS(unit)        ([unit] call EFUNC(medical_status,getBloodLoss))
