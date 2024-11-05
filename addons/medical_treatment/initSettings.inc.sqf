@@ -11,7 +11,7 @@
     QGVAR(numericalPulse),
     "LIST",
     [LSTRING(numericalPulse_DisplayName), LSTRING(NumericalPulse_Description)],
-    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    LSTRING(Category),
     [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 1],
     true
 ] call CBA_fnc_addSetting;
