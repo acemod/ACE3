@@ -129,7 +129,7 @@ if (_context == 2) then {
     _damageHead = _damageHead select 0;
 
     // --- Neck
-    private _damageNeck = _unit getVariable [QGVAR($HitHitNeck), [0,0]];
+    private _damageNeck = _unit getVariable [QGVAR($HitNeck), [0,0]];
 
     // --- Body
     private _damageBody = [
