@@ -44,7 +44,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
     _bodyPart = toLowerANSI _bodyPart;
     if (_bodyPart == "head") then {
     private _isNeck = (random 1) < 0.1; // 15% chance for neck damage
-    _bodyPart = if (_isNeck) then {"neck"} else {"head"};
+        _bodyPart = if (_isNeck) then {"neck"} else {"head"};
     };
     if (_bodyPart in ["leftarm", "rightarm", "leftleg", "rightleg"]) then {
     private _isUpper = (random 1) < 0.5;
