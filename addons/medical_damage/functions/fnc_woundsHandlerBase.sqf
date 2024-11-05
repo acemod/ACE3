@@ -146,7 +146,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
             case (
                 _causeFracture
                 && {EGVAR(medical,fractures) > 0}
-                && {_bodyPartNToAdd > 1}
+                && {_bodyPartNToAdd > 3}
                 && {_woundDamage > FRACTURE_DAMAGE_THRESHOLD}
                 && {random 1 < (_fractureMultiplier * EGVAR(medical,fractureChance))}
             ): {
