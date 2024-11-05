@@ -27,7 +27,9 @@
     }, class] call CBA_fnc_waitUntilAndExecute
 
 #define PRIORITY_HEAD       3
+#define PRIORITY_NECK       3
 #define PRIORITY_BODY       4
+#define PRIORITY_CHEST      4
 #define PRIORITY_LEFT_ARM   (1 + random 1)
 #define PRIORITY_RIGHT_ARM  (1 + random 1)
 #define PRIORITY_LEFT_LEG   (1 + random 1)

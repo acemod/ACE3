@@ -174,7 +174,7 @@ if (GVAR(showDamageEntry)) then {
         private _damageThreshold = GET_DAMAGE_THRESHOLD(_target);
         switch (true) do {
             case (_selectionN > 7): { // legs: index 4 & 5
-                _if (!EGVAR(medical,useLimbDamage) || EGVAR(medical,limbDamageThreshold) == 0) then { // Just indicate how close to the limping threshold we are
+                if (!EGVAR(medical,useLimbDamage) || EGVAR(medical,limbDamageThreshold) == 0) then { // Just indicate how close to the limping threshold we are
                     _damageThreshold = LIMPING_DAMAGE_THRESHOLD * 4;
                 } else {
                     _damageThreshold = _damageThreshold * EGVAR(medical,limbDamageThreshold);
