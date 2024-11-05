@@ -173,21 +173,21 @@ if (GVAR(showDamageEntry)) then {
     if (_bodyPartDamage > 0) then {
         private _damageThreshold = GET_DAMAGE_THRESHOLD(_target);
         switch (true) do {
-            case (_selectionN > 7): { // legs: index 4 & 5
+            case (_selectionN > 7): { // legs: index 8 - 11
                 if (!EGVAR(medical,useLimbDamage) || EGVAR(medical,limbDamageThreshold) == 0) then { // Just indicate how close to the limping threshold we are
                     _damageThreshold = LIMPING_DAMAGE_THRESHOLD * 4;
                 } else {
                     _damageThreshold = _damageThreshold * EGVAR(medical,limbDamageThreshold);
                 };
             };
-            case (_selectionN > 3): { // arms: index 2 & 3
+            case (_selectionN > 3): { // arms: index 4-7
                 if (!EGVAR(medical,useLimbDamage) || EGVAR(medical,limbDamageThreshold) == 0) then { // Just indicate how close to the fracture threshold we are
                     _damageThreshold = FRACTURE_DAMAGE_THRESHOLD * 4;
                 } else {
                     _damageThreshold = _damageThreshold * EGVAR(medical,limbDamageThreshold);
                 };
             };
-            case (_selectionN > 1): { // chect and abdomen
+            case (_selectionN > 1): { // chest and abdomen
                 _damageThreshold = _damageThreshold * 1.5;
             };
             default { //head and neck
