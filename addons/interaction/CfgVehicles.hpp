@@ -173,7 +173,7 @@ class CfgVehicles {
             class ACE_Torso {
                 displayName = CSTRING(Torso);
                 selection = "spine1";
-                distance = 5;
+                distance = 1.5;
                 condition = "";
                 statement = "";
                 exceptions[] = {"isNotSwimming"};
@@ -181,7 +181,7 @@ class CfgVehicles {
             class ACE_Chest {
                 displayName = CSTRING(Chest);
                 selection = "spine3";
-                distance = 5;
+                distance = 1.5;
                 condition = "";
                 statement = "";
                 exceptions[] = {"isNotSwimming"};
@@ -189,7 +189,7 @@ class CfgVehicles {
             class ACE_Head {
                 displayName = CSTRING(Head);
                 selection = "pilot";
-                distance = 5;
+                distance = 1.5;
                 condition = "";
                 statement = "";
                 exceptions[] = {"isNotSwimming"};
@@ -197,7 +197,7 @@ class CfgVehicles {
             class ACE_ArmLeft {
                 displayName = CSTRING(ArmLeft);
                 selection = "LWrist";
-                distance = 5;
+                distance = 1.5;
                 condition = "";
                 statement = "";
                 exceptions[] = {"isNotSwimming"};
@@ -205,7 +205,7 @@ class CfgVehicles {
             class ACE_ArmUpperLeft {
                 displayName = CSTRING(ArmUpperLeft);
                 selection = "LeftForeArm";
-                distance = 5;
+                distance = 1.5;
                 condition = "";
                 statement = "";
                 exceptions[] = {"isNotSwimming"};
@@ -213,7 +213,7 @@ class CfgVehicles {
             class ACE_ArmRight {
                 displayName = CSTRING(ArmRight);
                 selection = "RWrist";
-                distance = 5;
+                distance = 1.5;
                 condition = "";
                 statement = "";
                 exceptions[] = {"isNotSwimming"};
@@ -221,7 +221,7 @@ class CfgVehicles {
             class ACE_ArmUpperRight {
                 displayName = CSTRING(ArmUpperRight);
                 selection = "RightForeArm";
-                distance = 5;
+                distance = 1.5;
                 condition = "";
                 statement = "";
                 exceptions[] = {"isNotSwimming"};
@@ -229,7 +229,7 @@ class CfgVehicles {
             class ACE_LegLeft {
                 displayName = CSTRING(LegLeft);
                 selection = "LeftFoot";
-                distance = 5;
+                distance = 1.5;
                 condition = "";
                 statement = "";
                 exceptions[] = {"isNotSwimming"};
@@ -237,7 +237,7 @@ class CfgVehicles {
             class ACE_LegUpperLeft {
                 displayName = CSTRING(LegUpperLeft);
                 selection = "LKnee";
-                distance = 5;
+                distance = 1.5;
                 condition = "";
                 statement = "";
                 exceptions[] = {"isNotSwimming"};
@@ -245,7 +245,7 @@ class CfgVehicles {
             class ACE_LegRight {
                 displayName = CSTRING(LegRight);
                 selection = "RightFoot";
-                distance = 5;
+                distance = 1.5;
                 condition = "";
                 statement = "";
                 exceptions[] = {"isNotSwimming"};
@@ -253,7 +253,7 @@ class CfgVehicles {
             class ACE_LegUpperRight {
                 displayName = CSTRING(LegUpperRight);
                 selection = "RKnee";
-                distance = 5;
+                distance = 1.5;
                 condition = "";
                 statement = "";
                 exceptions[] = {"isNotSwimming"};
