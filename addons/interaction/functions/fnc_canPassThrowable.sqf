@@ -10,7 +10,7 @@
  * 2: Throwable classname <STRING>
  *
  * Return Value:
- * Unit can pass throwables <BOOL>
+ * Unit can pass throwable <BOOL>
  *
  * Example:
  * [_target, _player, "HandGrenade"] call ace_interaction_fnc_canPassThrowable
