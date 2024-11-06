@@ -28,11 +28,11 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         };
         class Neck: Background {
             idc = IDC_BODY_NECK;
-            text = QPATHTOF(data\body_image\head.paa);
+            text = QPATHTOF(data\body_image\neck.paa);
         };
         class Chest: Background {
             idc = IDC_BODY_CHEST;
-            text = QPATHTOF(data\body_image\torso.paa);
+            text = QPATHTOF(data\body_image\chest.paa);
         };
         class Torso: Background {
             idc = IDC_BODY_TORSO;
@@ -44,7 +44,7 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         };
         class ArmUpperLeft: Background {
             idc = IDC_BODY_ARMUPPERLEFT;
-            text = QPATHTOF(data\body_image\arm_left.paa);
+            text = QPATHTOF(data\body_image\arm_upper_left.paa);
         };
         class ArmRight: Background {
             idc = IDC_BODY_ARMRIGHT;
@@ -52,7 +52,7 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         };
         class ArmUpperRight: Background {
             idc = IDC_BODY_ARMUPPERRIGHT;
-            text = QPATHTOF(data\body_image\arm_right.paa);
+            text = QPATHTOF(data\body_image\arm_upper_right.paa);
         };
         class LegLeft: Background {
             idc = IDC_BODY_LEGLEFT;
@@ -60,7 +60,7 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         };
         class LegUpperLeft: Background {
             idc = IDC_BODY_LEGUPPERLEFT;
-            text = QPATHTOF(data\body_image\leg_left.paa);
+            text = QPATHTOF(data\body_image\leg_upper_left.paa);
         };
         class LegRight: Background {
             idc = IDC_BODY_LEGRIGHT;
@@ -68,7 +68,7 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         };
         class LegUpperRight: Background {
             idc = IDC_BODY_LEGUPPERRIGHT;
-            text = QPATHTOF(data\body_image\leg_right.paa);
+            text = QPATHTOF(data\body_image\leg_upper_right.paa);
         };
         class ArmLeftB: Background {
             idc = IDC_BODY_ARMLEFT_B;
@@ -78,7 +78,7 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         };
         class ArmUpperLeftB: ArmLeftB {
             idc = IDC_BODY_ARMUPPERLEFT_B;
-            text = QPATHTOF(data\body_image\arm_left_b.paa);
+            text = QPATHTOF(data\body_image\arm_upper_left_b.paa);
         };
         class ArmRightB: ArmLeftB {
             idc = IDC_BODY_ARMRIGHT_B;
@@ -86,7 +86,7 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         };
         class ArmUpperRightB: ArmLeftB {
             idc = IDC_BODY_ARMUPPERRIGHT_B;
-            text = QPATHTOF(data\body_image\arm_right_b.paa);
+            text = QPATHTOF(data\body_image\arm_upper_right_b.paa);
         };
         class LegLeftB: ArmLeftB {
             idc = IDC_BODY_LEGLEFT_B;
@@ -94,7 +94,7 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         };
         class LegUpperLeftB: ArmLeftB {
             idc = IDC_BODY_LEGUPPERLEFT_B;
-            text = QPATHTOF(data\body_image\leg_left_b.paa);
+            text = QPATHTOF(data\body_image\leg_upper_left_b.paa);
         };
         class LegRightB: ArmLeftB {
             idc = IDC_BODY_LEGRIGHT_B;
@@ -102,25 +102,25 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         };
         class LegUpperRightB: ArmLeftB {
             idc = IDC_BODY_LEGUPPERRIGHT_B;
-            text = QPATHTOF(data\body_image\leg_right_b.paa);
+            text = QPATHTOF(data\body_image\leg_upper_right_b.paa);
         };
         class ArmLeftT: Background {
             idc = IDC_BODY_ARMLEFT_T;
-            text = QPATHTOF(data\body_image\arm_left_t.paa);
+            text = QPATHTOF(data\body_image\arm_lower_left_t.paa);
             colorText[] = {0, 0, 0.8, 1};
             show = 0;
         };
         class ArmRightT: ArmLeftT {
             idc = IDC_BODY_ARMRIGHT_T;
-            text = QPATHTOF(data\body_image\arm_right_t.paa);
+            text = QPATHTOF(data\body_image\arm_lower_right_t.paa);
         };
         class LegLeftT: ArmLeftT {
             idc = IDC_BODY_LEGLEFT_T;
-            text = QPATHTOF(data\body_image\leg_left_t.paa);
+            text = QPATHTOF(data\body_image\leg_lower_left_t.paa);
         };
         class LegRightT: ArmLeftT {
             idc = IDC_BODY_LEGRIGHT_T;
-            text = QPATHTOF(data\body_image\leg_right_t.paa);
+            text = QPATHTOF(data\body_image\leg_lower_right_t.paa);
         };
         class ArmUpperLeftT: ArmLeftT {
             idc = IDC_BODY_ARMUPPERLEFT_T;
@@ -146,13 +146,13 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         };
         class NeckS: Background {
             idc = IDC_BODY_NECK_S;
-            text = QPATHTOF(data\body_image\head_s.paa);
+            text = QPATHTOF(data\body_image\neck_s.paa);
             colorText[] = {1.0, 1.0, 1.0, 1.0};
             show = 0;
         };
         class ChestS: HeadS {
             idc = IDC_BODY_CHEST_S;
-            text = QPATHTOF(data\body_image\torso_s.paa);
+            text = QPATHTOF(data\body_image\chest_s.paa);
         };
         class TorsoS: HeadS {
             idc = IDC_BODY_TORSO_S;
@@ -176,19 +176,19 @@ class GVAR(BodyImage): RscControlsGroupNoScrollbars {
         };
         class ArmUpperLeftS: HeadS {
             idc = IDC_BODY_ARMUPPERLEFT_S;
-            text = QPATHTOF(data\body_image\arm_left_s.paa);
+            text = QPATHTOF(data\body_image\arm_upper_left_s.paa);
         };
         class ArmUpperRightS: HeadS {
             idc = IDC_BODY_ARMUPPERRIGHT_S;
-            text = QPATHTOF(data\body_image\arm_right_s.paa);
+            text = QPATHTOF(data\body_image\arm_upper_right_s.paa);
         };
         class LegUpperLeftS: HeadS {
             idc = IDC_BODY_LEGUPPERLEFT_S;
-            text = QPATHTOF(data\body_image\leg_left_s.paa);
+            text = QPATHTOF(data\body_image\leg_upper_left_s.paa);
         };
         class LegUpperRightS: HeadS {
             idc = IDC_BODY_LEGUPPERRIGHT_S;
-            text = QPATHTOF(data\body_image\leg_right_s.paa);
+            text = QPATHTOF(data\body_image\leg_upper_right_s.paa);
         };
     };
 };
@@ -517,15 +517,15 @@ class ACE_Medical_Menu {
             x = QUOTE(POS_X(20.0));
             y = QUOTE(POS_Y(11.7));
             w = QUOTE(POS_W(1.1));
-            h = QUOTE(POS_H(2.9));
+            h = QUOTE(POS_H(2.4));
         };
         class SelectLegLeft: SelectUpperLegLeft {
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 9);
             tooltip = CSTRING(SelectLeftUpperLeg);
             x = QUOTE(POS_X(20.0));
-            y = QUOTE(POS_Y(8.8));
+            y = QUOTE(POS_Y(8.4));
             w = QUOTE(POS_W(1.1));
-            h = QUOTE(POS_H(2.9));
+            h = QUOTE(POS_H(3.3));
         };
         class SelectUpperLegRight: SelectHead {
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 10);
@@ -533,7 +533,7 @@ class ACE_Medical_Menu {
             x = QUOTE(POS_X(18.9));
             y = QUOTE(POS_Y(11.7));
             w = QUOTE(POS_W(1.1));
-            h = QUOTE(POS_H(2.9));
+            h = QUOTE(POS_H(2.4));
         };
         class SelectLegRight: SelectUpperLegRight {
             onButtonClick = QUOTE(GVAR(selectedBodyPart) = 11);
@@ -541,7 +541,7 @@ class ACE_Medical_Menu {
             x = QUOTE(POS_X(18.9));
             y = QUOTE(POS_Y(8.8));
             w = QUOTE(POS_W(1.1));
-            h = QUOTE(POS_H(2.9));
+            h = QUOTE(POS_H(3.3));
         };
         class Injuries: TriageCard {
             idc = IDC_INJURIES;
