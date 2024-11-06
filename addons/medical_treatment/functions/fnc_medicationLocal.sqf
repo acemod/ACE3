@@ -21,7 +21,7 @@
 #define MORPHINE_PAIN_SUPPRESSION 0.6
 // 0.2625 = 0.6/0.8 * 0.35
 // 0.6 = basic medication morph. pain suppr., 0.8 = adv. medication morph. pain suppr., 0.35 = adv. medication painkillers. pain suppr.
-#define PAINKILLERS_PAIN_SUPPRESSION 0.2625 
+#define PAINKILLERS_PAIN_SUPPRESSION 0.2625
 
 params ["_patient", "_bodyPart", "_classname"];
 TRACE_3("medicationLocal",_patient,_bodyPart,_classname);

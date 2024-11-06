@@ -33,7 +33,7 @@ if (!alive _projectile || isNull _projectile || isNull _shooter) exitWith {
 };
 
 if (_showTrail) then {
-    drop ["\a3\data_f\kouleSvetlo", "", "Billboard",  100, 0.03, _projectile modelToWorld [0, 0, 0], 
+    drop ["\a3\data_f\kouleSvetlo", "", "Billboard",  100, 0.03, _projectile modelToWorld [0, 0, 0],
         [0, 0, 0], 0, 1.25, 1, 0.05, [0.5], [TRAIL_COLOUR(1)], [0], 0, 0, "", "", "", 0, false, -1, [TRAIL_COLOUR(10000)]];
 };
 
@@ -67,7 +67,7 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
         _stateParams set [4, _navigationParameters];
     };
     private _commandedAcceleration = [_args, _timestep, _seekerTargetPos, _profileAdjustedTargetPos, _targetData, _navigationParameters] call (missionNamespace getVariable _navigationFunction);
-    
+
     if (isNil "_commandedAcceleration") exitWith {
         systemChat format ["Error in %1 Missile Type %2 Seeker Pos %3", _navigationFunction, typeOf _projectile, _seekerTargetPos];
         ERROR_MSG_3("_commandedAcceleration is nil! Guidance cancelled [%1 %2 %3]",_navigationFunction,typeOf _projectile,_seekerTargetPos);
@@ -97,7 +97,7 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
 
         private _clampedPitch = (_pitchChange min _pitchRate) max -_pitchRate;
         private _clampedYaw = (_yawChange min _yawRate) max -_yawRate;
-        
+
         // controls are either on or off, no proportional
         if (_isBangBangGuidance) then {
             private _pitchSign = if (_clampedPitch == 0) then {
@@ -124,7 +124,7 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
         // bastardized version of direction stability https://en.wikipedia.org/wiki/Directional_stability#Steering_forces
         private _forceYaw = _stabilityCoefficient * _velocityAngleYaw + _clampedYaw;
         private _forcePitch = _stabilityCoefficient * _velocityAnglePitch + _clampedPitch;
-        
+
         _pitch = _pitch + _forcePitch * _timestep;
         _yaw = _yaw + _forceYaw * _timestep;
 
@@ -153,7 +153,7 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
                 _quaternion#1,
                 _quaternion#2
             ];
-            
+
             private _vectorReturn = _vector vectorAdd ((
                 _imaginary vectorCrossProduct (
                     (_imaginary vectorCrossProduct _vector) vectorAdd (
@@ -172,7 +172,7 @@ if ((_pitchRate != 0 || {_yawRate != 0}) && {_profileAdjustedTargetPos isNotEqua
 
         _temp = [sin (_pitch / 2), 0, 0, cos (_pitch / 2)];
         _quaternion = [_quaternion, _temp] call _multiplyQuat;
-        
+
         private _dir = [_quaternion, [0, 1, 0]] call _multiplyVector;
         private _up = [_quaternion, [0, 0, 1]] call _multiplyVector;
 
