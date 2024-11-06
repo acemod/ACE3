@@ -52,6 +52,10 @@ class CfgAmmo {
             distance = 0;
         };
     };
+    class ACE_FlareTripMineAir_Wire_Ammo: ACE_FlareTripMine_Wire_Ammo {
+        defaultMagazine = "ACE_FlareTripMineAir_Mag";
+        explosionEffects = "ACE_TripflareAirEffect";
+    };
 
     class F_20mm_Red;
     class ACE_TripFlare_FlareEffect: F_20mm_Red {

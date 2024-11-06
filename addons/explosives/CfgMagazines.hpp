@@ -44,6 +44,10 @@ class CfgMagazines {
         descriptionShort = CSTRING(TripFlare_Description);
         class Library {libTextDesc = CSTRING(TripFlare_Description);};
     };
+    class ACE_FlareTripMineAir_Mag: ACE_FlareTripMine_Mag {
+        ammo = "ACE_FlareTripMineAir_Wire_Ammo";
+        displayName = CSTRING(TripFlareAir_Name);
+    };
 
     class ClaymoreDirectionalMine_Remote_Mag: CA_Magazine {
         useAction = 0;
