@@ -1264,14 +1264,6 @@
             <English>Pass grenade</English>
             <German>Granate geben</German>
         </Key>
-        <Key ID="STR_ACE_Interaction_PassLethalThrowable">
-            <English>Lethal</English>
-            <German>Tödlich</German>
-        </Key>
-        <Key ID="STR_ACE_Interaction_PassNonLethalThrowable">
-            <English>Non-lethal</English>
-            <German>Nicht tödlich</German>
-        </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableHint">
             <English>%1 passed you %2.</English>
             <German>%1 hat dir %2 gegeben.</German>

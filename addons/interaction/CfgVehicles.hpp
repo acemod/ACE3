@@ -70,30 +70,11 @@ class CfgVehicles {
 
                 class ACE_PassThrowable {
                     displayName = CSTRING(PassThrowable);
-                    condition = QUOTE([ARR_2(_target,_player)] call FUNC(canPassThrowables));
-                    statement = "";
+                    condition = QUOTE([ARR_3(_target,_player,(currentThrowable _player) select 0)] call FUNC(canPassThrowable));
+                    statement = QUOTE([ARR_3(_target,_player,(currentThrowable _player) select 0)] call FUNC(passThrowable));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
-                    icon = "\a3\ui_f\data\gui\Rsc\RscDisplayArsenal\cargoThrow_ca.paa";
-
-                    class ACE_PassLethalThrowable {
-                        displayName = CSTRING(PassLethalThrowable);
-                        condition = QUOTE(([ARR_3(_target,_player,true)] call FUNC(getNextThrowable)) isNotEqualTo '');
-                        statement = QUOTE([ARR_4(_target,_player,[ARR_3(_target,_player,true)] call FUNC(getNextThrowable),true)] call FUNC(passThrowable));
-                        exceptions[] = {"isNotSwimming"};
-                        showDisabled = 0;
-                        icon = QPATHTOF(UI\throwables\throwables_lethal_ca.paa);
-                        insertChildren = QUOTE([ARR_3(_target,_player,true)] call FUNC(getPassThrowableActions));
-                    };
-                    class ACE_PassNonLethalThrowable {
-                        displayName = CSTRING(PassNonLethalThrowable);
-                        condition = QUOTE(([ARR_3(_target,_player,false)] call FUNC(getNextThrowable)) isNotEqualTo '');
-                        statement = QUOTE([ARR_4(_target,_player,[ARR_3(_target,_player,false)] call FUNC(getNextThrowable),true)] call FUNC(passThrowable));
-                        exceptions[] = {"isNotSwimming"};
-                        showDisabled = 0;
-                        icon = QPATHTOF(UI\throwables\throwables_nonlethal_ca.paa);
-                        insertChildren = QUOTE([ARR_3(_target,_player,false)] call FUNC(getPassThrowableActions));
-                    };
+                    modifierFunction = QUOTE(_this select 3 set [ARR_2(2,getText (configFile >> 'CfgMagazines' >> (currentThrowable (_this select 1)) select 0 >> 'picture'))];); // Set picture of the current grenade
                 };
 
                 class ACE_TeamManagement {

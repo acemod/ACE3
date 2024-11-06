@@ -13,7 +13,7 @@
  * None
  *
  * Example:
- * [_player, _target, "HandGrenade"] call ace_interaction_fnc_passThrowable
+ * [_target, _player, "HandGrenade"] call ace_interaction_fnc_passThrowable
  *
  * Public: No
  */
@@ -31,12 +31,6 @@ if (_animate) then {[_player, "PutDown"] call EFUNC(common,doGesture)};
 _player removeItem _throwable;
 _target addItem _throwable;
 
-if ([_throwable] call FUNC(isThrowableLethal)) then {
-    GVAR(lastLethalThrowable) = _throwable;
-} else {
-    GVAR(lastNonLethalThrowable) = _throwable;
-};
-
-([_throwable] call FUNC(getThrowableInfo)) params ["", "_displayName"];
+private _displayName = getText (configFile >> 'CfgMagazines' >> _throwable >> 'displayName');
 private _playerName = [_player] call EFUNC(common,getName);
 [QEGVAR(common,displayTextStructured), [[LSTRING(PassThrowableHint), _playerName, _displayName], 1.5, _target], [_target]] call CBA_fnc_targetEvent;
