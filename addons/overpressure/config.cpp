@@ -18,3 +18,4 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "ACE_Arsenal_Stats.hpp"
+#include "CfgEden.hpp"

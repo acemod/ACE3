@@ -61,7 +61,7 @@ GVAR(outputPFH) = [{
         default             { "000" + str(_yGrid2) };
     };
 
-    _dagrGrid2 = _xCoord2 + " " + _yCoord2;
+    private _dagrGrid2 = _xCoord2 + " " + _yCoord2;
 
     // Distance
     private _WPpos = [_dagrGrid2, true] call EFUNC(common,getMapPosFromGrid);
