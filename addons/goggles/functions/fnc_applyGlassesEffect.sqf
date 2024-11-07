@@ -56,7 +56,7 @@ if (_imagePath != "") then {
     };
 };
 
-if (GVAR(effects) in [2, 3]) then {
+if (GVAR(effects) in [2, 3] && GVAR(drawOverlay)) then {
     if (GETDIRT) then {
         call FUNC(applyDirtEffect);
     };
