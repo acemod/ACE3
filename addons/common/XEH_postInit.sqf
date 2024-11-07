@@ -373,7 +373,7 @@ GVAR(OldIsCamera) = false;
     ["ace_activeCameraChanged", [_player, GVAR(OldIsCamera)]] call CBA_fnc_localEvent;
 }, true] call CBA_fnc_addPlayerEventHandler;
 
-// Update veh audio attunation when player veh changes
+// Update vehicle audio attenuation when player vehicle changes
 GVAR(playerVehAttenuation) = 1;
 ["vehicle", {
     params ["_player", "_vehicle"];
