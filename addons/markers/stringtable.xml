@@ -227,7 +227,7 @@
             <Portuguese>Marcação de Tempo</Portuguese>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
-            <English>Watch Required</English>
+            <English>Watch, GPS or UAV Terminal Required</English>
             <Russian>Необходимы часы</Russian>
             <French>Une montre est requise.</French>
             <Japanese>時計が必要</Japanese>
