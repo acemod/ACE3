@@ -14,7 +14,7 @@
  * Example:
  * [player] call ace_medical_treatment_fnc_isMedic
  *
- * Public: Yes
+ * Public: No
  */
 
 params ["_unit", ["_medicN", 1]];
