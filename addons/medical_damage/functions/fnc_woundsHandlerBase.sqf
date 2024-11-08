@@ -44,15 +44,15 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
     _bodyPart = toLowerANSI _bodyPart;
     if (_bodyPart == "head") then {
     private _isNeck = (random 1) < 0.1; // 15% chance for neck damage
-        _bodyPart = if (_isNeck) then {"neck"} else {"head"};
+        _bodyPart = ["head", "neck"] select (_isNeck);
     };
     if (_bodyPart in ["leftarm", "rightarm", "leftleg", "rightleg"]) then {
     private _isUpper = (random 1) < 0.5;
     switch (_bodyPart) do {
-        case "leftarm":  { _bodyPart = if (_isUpper) then {"upperleftarm"} else {"leftarm"}; };
-        case "rightarm": { _bodyPart = if (_isUpper) then {"upperrightarm"} else {"rightarm"}; };
-        case "leftleg":  { _bodyPart = if (_isUpper) then {"upperleftleg"} else {"leftleg"}; };
-        case "rightleg": { _bodyPart = if (_isUpper) then {"upperrightleg"} else {"rightleg"}; };
+        case "leftarm":  { _bodyPart = ["leftarm", "upperleftarm"] select (_isUpper);};
+        case "rightarm": { _bodyPart = ["rightarm", "upperrightarm"] select (_isUpper);};
+        case "leftleg":  { _bodyPart = ["leftleg", "upperleftleg"] select (_isUpper);};
+        case "rightleg": { _bodyPart = ["rightleg", "upperrightleg"] select (_isUpper); };
         };
     };
     // silently ignore structural damage
