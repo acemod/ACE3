@@ -44,11 +44,11 @@ if (_ammoCount == 1) then {
 _unit setAmmo [_muzzle, 0];
 
 private _throwableType = getText (_config >> "ammo");
+private _ammoConfig = configFile >> "CfgAmmo" >> _throwableType;
 
 // Handle weird scripted grenades (RHS) which could cause unexpected behaviour
-private _nonInheritedCfg = configProperties [configFile >> "CfgAmmo" >> _throwableType, 'configName _x == QGVAR(replaceWith)', false];
-if ((count _nonInheritedCfg) == 1) then {
-    _throwableType = getText (_nonInheritedCfg select 0);
+if (inheritsFrom (_ammoConfig >> QGVAR(replaceWith)) isEqualTo _ammoConfig) then {
+    _throwableType = getText (_ammoConfig >> QGVAR(replaceWith));
 };
 
 // Create actual throwable globally
@@ -76,7 +76,7 @@ if (_showHint) then {
     private _displayNameShort = getText (_config >> "displayNameShort");
     private _picture = getText (_config >> "picture");
 
-    [[_displayNameShort, localize LSTRING(Primed)] joinString " ", _picture] call EFUNC(common,displayTextPicture);
+    [[_displayNameShort, LLSTRING(Primed)] joinString " ", _picture] call EFUNC(common,displayTextPicture);
 
     // Change controls hint for RMB
     call FUNC(updateControlsHint);
