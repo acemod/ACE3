@@ -237,8 +237,11 @@ class GVAR(actions) {
         displayName = CSTRING(Actions_CheckPulse);
         displayNameProgress = CSTRING(Check_Pulse_Content);
         allowedSelections[] = {"All"};
-        condition = QUOTE(GVAR(advancedDiagnose) != 0);
+        treatmentTime = QUOTE([ARR_2(2.5,15)] select GVAR(enableRealisticPulseChecking));
+        condition = QUOTE(GVAR(advancedDiagnose) != 0 && {!GVAR(enableRealisticPulseChecking) || {(_medic getSlotItemName TYPE_WATCH) isKindOf [ARR_2('ItemWatch',configFile >> 'CfgWeapons')]}});
         callbackSuccess = QFUNC(checkPulse);
+        callbackProgress = QFUNC(checkPulseProgress);
+        callbackFailure = QUOTE(QQGVAR(checkPulse) cutText [ARR_2('','PLAIN')]);
         animationMedicProne = "";
         animationMedicSelfProne = "";
     };
@@ -246,14 +249,21 @@ class GVAR(actions) {
         displayName = CSTRING(Actions_CheckBloodPressure);
         displayNameProgress = CSTRING(Check_Bloodpressure_Content);
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
+        treatmentTime = 15;
+        medicRequired = 1;
         callbackSuccess = QFUNC(checkBloodPressure);
+        callbackProgress = "";
+        callbackFailure = "";
     };
     class CheckResponse: CheckPulse {
         displayName = CSTRING(Check_Response);
         displayNameProgress = CSTRING(Check_Response_Content);
         allowedSelections[] = {"Head"};
+        treatmentTime = 2.5;
         allowSelfTreatment = 0;
         callbackSuccess = QFUNC(checkResponse);
+        callbackProgress = "";
+        callbackFailure = "";
     };
 
     // - Misc -----------------------------------------------------------------

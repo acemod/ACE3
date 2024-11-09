@@ -142,6 +142,12 @@
             <Spanish>Habilita el manejo de la medicación más avanzada y en profundidad. Tambien permite el uso de Adenosina.</Spanish>
             <Korean>더욱 더 확장된, 깊은 약물 치료를 활성화합니다. 또한 아데노신 기능을 활성화합니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_RealisticPulseChecking_DisplayName">
+            <English>Realistic Pulse Checking</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_RealisticPulseChecking_Description">
+            <English>Enables realistic pulse checking, which requires a watch.</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_DisplayName">
             <English>Advanced Bandages</English>
             <German>Erweiterte Bandagen</German>

@@ -26,6 +26,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(enableRealisticPulseChecking),
+    "CHECKBOX",
+    [LSTRING(RealisticPulseChecking_DisplayName), LSTRING(RealisticPulseChecking_Description)],
+    [ELSTRING(medical,Category), LSTRING(SubCategory_Treatment)],
+    true,
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(advancedBandages),
     "LIST",
     [LSTRING(AdvancedBandages_DisplayName), LSTRING(AdvancedBandages_Description)],
