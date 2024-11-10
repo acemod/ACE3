@@ -18,13 +18,13 @@ GVAR(isPlacing) = PLACE_CANCEL;
             params ["_flag", "_unit", "_item"];
             [_unit, _item, _flag] call FUNC(pickupFlag);
         },
-        {true},
+        {[_player, _target] call EFUNC(common,canInteractWith)},
         {},
         _item,
         [0, -0.45, 0.75],
         2
-    ] call ace_interact_menu_fnc_createAction;
-    [_flag, 0, [], _pickupFlag] call ace_interact_menu_fnc_addActionToObject;
+    ] call EFUNC(interact_menu,createAction);
+    [_flag, 0, [], _pickupFlag] call EFUNC(interact_menu,addActionToObject);
 }] call CBA_fnc_addEventHandler;
 
 private _cfgWeapons = configFile >> "CfgWeapons";
