@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Timi007
  * Attaches flag to the back of the unit and removes his flag item.

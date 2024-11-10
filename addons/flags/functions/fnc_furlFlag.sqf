@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Timi007
  * Stops carrying flag and adds flag item back to unit.

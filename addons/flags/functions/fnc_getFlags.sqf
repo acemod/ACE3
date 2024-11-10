@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Timi007
  * Get the placeable and carryable flags in the unit's inventory.
