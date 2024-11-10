@@ -8,6 +8,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(numericalPulse),
+    "LIST",
+    [LSTRING(numericalPulse_DisplayName), LSTRING(NumericalPulse_Description)],
+    LSTRING(Category),
+    [[0, 1, 2], [LSTRING(Anyone), LSTRING(Medics), LSTRING(Doctors)], 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(advancedMedication),
     "CHECKBOX",
     [LSTRING(AdvancedMedication_DisplayName), LSTRING(AdvancedMedication_Description)],
