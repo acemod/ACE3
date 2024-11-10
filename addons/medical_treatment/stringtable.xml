@@ -599,12 +599,6 @@
             <Chinesesimp>启用后，可以检查脉搏、血压和反应治疗，而不是通用诊断。\n禁用时，心肺复苏操作将仅在适当时显示。\n此设置操作启用后必须需要先确定一个人是失去知觉还是心脏骤停。</Chinesesimp>
             <Turkish>Genel Teşhis eylemi yerine Nabzı Kontrol Et, Kan Basıncını Kontrol Et ve Yanıtı Kontrol Et tedavi eylemlerini etkinleştirir. \ Devre dışı bırakıldığında, CPR eylemi yalnızca CPR gerçekleştirilmesi uygun olduğunda gösterilecektir.</Turkish>
         </Key>
-        <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
-            <English>Numerical Pulse</English>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_Description">
-            <English>Makes Check Pulse action give a numerical value based on setting</English>
-        </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrest">
             <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest</English>
             <French>Activé &amp; Diagnostic du décès/de l'arrêt cardiaque</French>
@@ -3548,6 +3542,12 @@
             <Chinesesimp>呼吸正常</Chinesesimp>
             <Turkish>Normal nefes alıyor</Turkish>
             <Hungarian>Normális légzés</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_Description">
+            <English>Makes Check Pulse action give a numerical value based on setting</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
+            <English>Numerical Pulse</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
             <English>Used to pack medium to large wounds and stem the bleeding</English>
