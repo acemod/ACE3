@@ -16,7 +16,7 @@ class CfgWeapons {
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\white_carry_icon.paa);
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 3;
+            mass = 6.6; // Assuming 300g
         };
     };
     class GVAR(red): GVAR(white) {
