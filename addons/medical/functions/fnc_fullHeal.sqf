@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Patient <OBJECT>
  * 1: Medic <OBJECT><OPTIONAL>
+ * 2: Log message <BOOL><OPTIONAL>
  *
  * Return Value:
  * None
@@ -16,7 +17,7 @@
  * Public: Yes
  */
 
-params [["_patient", objNull, [objNull]], ["_medic", objNull, [objNull]]];
+params [["_patient", objNull, [objNull]], ["_medic", objNull, [objNull]], ["_logMessage", true, [true]]];
 
 if (isNull _medic) then {
     _medic = _patient;
@@ -26,5 +27,5 @@ if (!alive _patient) exitWith {
     ERROR_2("fullHeal [medic %1][patient %2] Bad parameters",_medic,_patient);
 };
 
-[_medic, _patient] call EFUNC(medical_treatment,fullHeal);
+[_medic, _patient, _logMessage] call EFUNC(medical_treatment,fullHeal);
 nil
