@@ -82,6 +82,12 @@
             <Spanish>Habilita la comprobación del pulso, presión sanguinea y rsepuesta a las acciones del tratamiento en lugar de la acción de diagnóstico genérico. \n Cuando se deshabilita, la acción RCP solo se mostrará cuando realizar un RCP sea apropiado. \n Las acciones activadas de este ajuste son necesarias para determinar si una persona está inconsciente o en parada cardiaca.</Spanish>
             <Korean>맥박 확인, 혈압 확인, 반응 확인 등의 일반적인 진료행위를 추가합니다. \n 비활성화시 심폐소생술은 가능 할때만 표시됩니다. \n 해당 옵션은 인원이 기절한건지 아니면 심정지가 왔는지 구분할 때 쓰입니다.</Korean>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
+            <English>Numerical Pulse</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_Description">
+            <English>Makes Check Pulse action give a numerical value based on setting</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrest">
             <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest</English>
             <French>Activé &amp; Diagnostic du décès/de l'arrêt cardiaque</French>
@@ -562,6 +568,42 @@
             <Turkish>Epinefrinin nerelerde kullanılabileceğini kontrol eder</Turkish>
             <Spanish>Controla donde puede sr usada la Epinefrina.</Spanish>
             <Korean>에피네프린을 사용할 수 있는 장소를 정합니다.</Korean>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicSplint_DisplayName">
+            <English>Allow Splint</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicSplint_Description">
+            <English>Training level required to use Splint.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationSplint_DisplayName">
+            <English>Locations Splint</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationSplint_Description">
+            <English>Controls where Splints can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
+            <English>Allow Morphine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_Description">
+            <English>Training level required to use Morphine.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_DisplayName">
+            <English>Locations Morphine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_Description">
+            <English>Controls where Morphine can be used.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_DisplayName">
+            <English>Allow Adenosine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_Description">
+            <English>Training level required to use Adenosine.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_DisplayName">
+            <English>Locations Adenosine</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_Description">
+            <English>Controls where Adenosine can be used.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_DisplayName">
             <English>Allow PAK</English>
