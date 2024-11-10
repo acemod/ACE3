@@ -43,7 +43,7 @@ if (((currentVisionMode focusOn) != 1) || {EGVAR(laser,laserEmitters) isEqualTo 
     drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,1,1], (ASLToAGL _laserPosASL), 0.5, 0.5, 0, "Origin", 0.5, 0.025, "TahomaB"];
     #endif
 
-    // If our camera is the laser source, offset it just a a bit so it isn't dead center
+    // If our camera is the laser source, offset it just a bit so it isn't dead center
     if (((AGLToASL positionCameraToWorld [0,0,0]) distance _laserPosASL) < 0.09) then {
         _laserPosASL = AGLToASL positionCameraToWorld [-0.02, -0.05, 0];
     };
