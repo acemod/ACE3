@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, Glowbal
  * Callback when repair fails.
@@ -29,14 +29,20 @@ TRACE_5("params",_caller,_target,_selectionName,_className,_usersOfItems);
 if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
     _caller removeWeapon "ACE_FakePrimaryWeapon";
 };
-if (vehicle _caller == _caller && {!(_caller call EFUNC(common,isSwimming))}) then {
+
+_caller removeEventHandler ["AnimDone", _caller getVariable [QGVAR(repairLoopAnimEh), -1]];
+_caller setVariable [QGVAR(repairLoopAnimEh), nil];
+if (isNull objectParent _caller && {!(_caller call EFUNC(common,isSwimming))}) then {
     [_caller, _caller getVariable [QGVAR(repairPrevAnimCaller), ""], 2] call EFUNC(common,doAnimation);
 };
+_caller setVariable [QGVAR(repairCurrentAnimCaller), nil];
 _caller setVariable [QGVAR(repairPrevAnimCaller), nil];
 
-private _weaponSelect = (_caller getVariable [QGVAR(selectedWeaponOnrepair), ""]);
-if (_weaponSelect != "") then {
+private _weaponSelect = _caller getVariable QGVAR(selectedWeaponOnrepair);
+
+if (!isNil "_weaponSelect") then {
     _caller selectWeapon _weaponSelect;
+    _caller setVariable [QGVAR(selectedWeaponOnrepair), nil];
 } else {
     _caller action ["SwitchWeapon", _caller, _caller, 299];
 };
@@ -47,13 +53,13 @@ if (_weaponSelect != "") then {
 
 //Unclaim repair objects:
 {
-    TRACE_2("Releasing", _x, (typeOf _x));
+    TRACE_2("Releasing",_x,(typeOf _x));
     [objNull, _x, false] call EFUNC(common,claim);
 } forEach _claimedObjects;
 
 
 // Record specific callback
-private _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
+private _config = (configFile >> "ACE_Repair" >> "Actions" >> _className);
 
 private _callback = getText (_config >> "callbackFailure");
 if (isNil _callback) then {
@@ -61,7 +67,7 @@ if (isNil _callback) then {
 } else {
     _callback = missionNamespace getVariable _callback;
 };
-if (!(_callback isEqualType {})) then {_callback = {TRACE_1("callback was NOT code",_callback)};};
+if !(_callback isEqualType {}) then {_callback = {TRACE_1("callback was NOT code",_callback)};};
 
 _args call _callback;
 

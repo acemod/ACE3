@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Toggles the muzzle velocity data screen on/off
@@ -15,7 +15,7 @@
  * Public: No
  */
 
-if (!(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false])) exitWith {};
+if !(missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) exitWith {};
 
 if (ctrlVisible 16000) then {
     false call FUNC(show_muzzle_velocity_data);

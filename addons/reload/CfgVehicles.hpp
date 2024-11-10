@@ -14,16 +14,16 @@ class CfgVehicles {
 
         class ACE_Actions {
             class ACE_Weapon {
-                class GVAR(LinkBelt) {
-                    displayName = CSTRING(LinkBelt);
-                    distance = 2.0;
-                    condition = QUOTE(([ARR_2(_player, _target)] call FUNC(getAmmoToLinkBelt)) > 0);
-                    statement = QUOTE([ARR_2(_player, _target)] call FUNC(startLinkingBelt));
+                class GVAR(linkBelt) {
+                    displayName = CSTRING(linkBelt);
+                    distance = 2;
+                    condition = QUOTE(([ARR_2(_player,_target)] call FUNC(getAmmoToLinkBelt)) > 0);
+                    statement = QUOTE([ARR_2(_player,_target)] call FUNC(startLinkingBelt));
                     exceptions[] = {"isNotInside"};
                 };
-                class GVAR(CheckAmmo) {
+                class GVAR(checkAmmo) {
                     displayName = CSTRING(checkAmmo);
-                    distance = 2.0;
+                    distance = 2;
                     condition = QUOTE(call FUNC(canCheckAmmo));
                     statement = QUOTE(call FUNC(checkAmmo));
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
@@ -36,13 +36,56 @@ class CfgVehicles {
     class StaticWeapon: LandVehicle {
         class ACE_Actions {
             class ACE_MainActions {
-                class GVAR(CheckAmmo) {
+                class GVAR(checkAmmo) {
                     displayName = CSTRING(checkAmmo);
-                    distance = 2.0;
+                    distance = 2;
                     condition = QUOTE(call FUNC(canCheckAmmo));
                     statement = QUOTE(call FUNC(checkAmmo));
                     exceptions[] = {"isNotInside", "isNotSwimming", "isNotSitting"};
                 };
+            };
+        };
+
+        class ACE_SelfActions {
+            class GVAR(reloadTurret) {
+                displayName = "$STR_controls_tooltips_RELOAD_MAGAZINE";
+                condition = QUOTE(call FUNC(canSwapTurretMagazine));
+                statement = QUOTE(call FUNC(swapTurretMagazine));
+                icon = "\A3\ui_f\data\igui\cfg\simpletasks\types\rearm_ca.paa";
+            };
+        };
+    };
+
+    class Tank: LandVehicle {
+        class ACE_SelfActions {
+            class GVAR(reloadTurret) {
+                displayName = "$STR_controls_tooltips_RELOAD_MAGAZINE";
+                condition = QUOTE(call FUNC(canSwapTurretMagazine));
+                statement = QUOTE(call FUNC(swapTurretMagazine));
+                icon = "\A3\ui_f\data\igui\cfg\simpletasks\types\rearm_ca.paa";
+            };
+        };
+    };
+
+    class Car: LandVehicle {
+        class ACE_SelfActions {
+            class GVAR(reloadTurret) {
+                displayName = "$STR_controls_tooltips_RELOAD_MAGAZINE";
+                condition = QUOTE(call FUNC(canSwapTurretMagazine));
+                statement = QUOTE(call FUNC(swapTurretMagazine));
+                icon = "\A3\ui_f\data\igui\cfg\simpletasks\types\rearm_ca.paa";
+            };
+        };
+    };
+
+    class Air;
+    class Helicopter: Air {
+        class ACE_SelfActions {
+            class GVAR(reloadTurret) {
+                displayName = "$STR_controls_tooltips_RELOAD_MAGAZINE";
+                condition = QUOTE(call FUNC(canSwapTurretMagazine));
+                statement = QUOTE(call FUNC(swapTurretMagazine));
+                icon = "\A3\ui_f\data\igui\cfg\simpletasks\types\rearm_ca.paa";
             };
         };
     };

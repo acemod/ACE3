@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: joko // Jonas
  * Handle fire of local launchers. Called from the unified fired EH only for the local player.
@@ -15,26 +15,24 @@
  * Public: No
  */
 
-//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
-TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
+TRACE_8("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_gunner);
 
-// Bake variable name and check if the variable exists, call the caching function otherwise
-private _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
-private _var = if (isNil _varName) then {
-    [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
-} else {
-    missionNameSpace getVariable _varName;
-};
-_var params ["_backblastAngle","_backblastRange","_backblastDamage"];
-TRACE_3("cache",_backblastAngle,_backblastRange,_backblastDamage);
+// Retrieve backblast values
+private _bbValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
+
+_bbValues params ["_backblastAngle", "_backblastRange", "_backblastDamage", "_offset"];
+_backblastRange = _backblastRange * GVAR(backblastDistanceCoefficient);
+
+TRACE_4("cache",_backblastAngle,_backblastRange,_backblastDamage,_offset);
 
 if (_backblastDamage <= 0) exitWith {};
 
-private _position = getPosASL _projectile;
-private _direction = [0, 0, 0] vectorDiff (vectorDir _projectile);
+private _direction = (vectorDir _projectile) vectorMultiply -1;
+private _position = (getPosASL _projectile) vectorAdd (_direction vectorMultiply _offset);
 
 // Damage to others
-private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _backblastRange];
+private _affected = (ASLToAGL _position) nearEntities ["CAManBase", _backblastRange];
 
 // Let each client handle their own affected units
 ["ace_overpressure", [_unit, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;
@@ -45,18 +43,23 @@ private _distance = 2 * ([_position, _direction, _backblastRange, _unit] call FU
 TRACE_1("Distance",_distance);
 
 if (_distance < _backblastRange) then {
-    private _alpha = sqrt (1 - _distance / _backblastRange);
-    private _beta = sqrt 0.5;
+    TRACE_2("",isDamageAllowed _unit,_unit getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
 
-    private _damage = _alpha * _beta * _backblastDamage;
-    [_damage * 100] call BIS_fnc_bloodEffect;
+    // Skip damage if not allowed
+    if (isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) then {
+        private _alpha = sqrt (1 - _distance / _backblastRange);
+        private _beta = sqrt 0.5;
 
-    if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
-        [_unit, _damage, "body", "backblast", _unit] call EFUNC(medical,addDamageToUnit);
-    } else {
-        TRACE_1("",isDamageAllowed _unit);
-        if (!isDamageAllowed _unit) exitWith {}; // Skip damage if not allowed
-        _unit setDamage (damage _unit + _damage);
+        private _damage = _alpha * _beta * _backblastDamage;
+        TRACE_1("",_damage);
+
+        [_damage * 100] call BIS_fnc_bloodEffect;
+
+        if (GETEGVAR(medical,enabled,false)) then {
+            [_unit, _damage, "body", "backblast", _unit] call EFUNC(medical,addDamageToUnit);
+        } else {
+            _unit setDamage (damage _unit + _damage);
+        };
     };
 };
 

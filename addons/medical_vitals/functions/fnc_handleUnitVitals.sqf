@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Updates the vitals. Called from the statemachine's onState functions.
@@ -30,6 +30,9 @@ private _syncValues = (CBA_missionTime - _lastTimeValuesSynced) >= (10 + floor(r
 if (_syncValues) then {
     _unit setVariable [QGVAR(lastMomentValuesSynced), CBA_missionTime];
 };
+
+// Update SPO2 intake and usage since last update
+[_unit, _deltaT, _syncValues] call FUNC(updateOxygen);
 
 private _bloodVolume = GET_BLOOD_VOLUME(_unit) + ([_unit, _deltaT, _syncValues] call EFUNC(medical_status,getBloodVolumeChange));
 _bloodVolume = 0 max _bloodVolume min DEFAULT_BLOOD_VOLUME;
@@ -82,17 +85,17 @@ if (_adjustments isNotEqualTo []) then {
         private _timeInSystem = CBA_missionTime - _timeAdded;
         if (_timeInSystem >= _maxTimeInSystem) then {
             _deleted = true;
-            _adjustments set [_forEachIndex, objNull];
+            _adjustments deleteAt _forEachIndex;
         } else {
             private _effectRatio = (((_timeInSystem / _timeTillMaxEffect) ^ 2) min 1) * (_maxTimeInSystem - _timeInSystem) / _maxTimeInSystem;
             if (_hrAdjust != 0) then { _hrTargetAdjustment = _hrTargetAdjustment + _hrAdjust * _effectRatio; };
             if (_painAdjust != 0) then { _painSupressAdjustment = _painSupressAdjustment + _painAdjust * _effectRatio; };
             if (_flowAdjust != 0) then { _peripheralResistanceAdjustment = _peripheralResistanceAdjustment + _flowAdjust * _effectRatio; };
         };
-    } forEach _adjustments;
+    } forEachReversed _adjustments;
 
     if (_deleted) then {
-        _unit setVariable [VAR_MEDICATIONS, _adjustments - [objNull], true];
+        _unit setVariable [VAR_MEDICATIONS, _adjustments, true];
         _syncValues = true;
     };
 };

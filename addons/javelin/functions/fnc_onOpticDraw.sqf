@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus, PabstMirror
  * Main loop, handles scaning for targets and drawing the javelin optic
@@ -53,8 +53,21 @@ if ((_ammoCount == 0) || // No ammo loaded
     __JavelinIGUISeek ctrlSetTextColor __ColorGray;
 
     _fireDisabledEH = [_fireDisabledEH] call FUNC(enableFire);
-    _this set [0, diag_frameno];
+    _this set [0, diag_frameNo];
     _this set [4, _fireDisabledEH];
+
+    // Fix weapon being in top-attack when loading AP magazine (https://feedback.bistudio.com/T171012)
+    if ((_currentShooter == ACE_player) && {_currentMagazine == "Titan_AP"} && {currentWeaponMode ACE_player == "TopDown"}) then {
+        {
+            _x params ["_xIndex", "", "", "", "_xMode"];
+            if (_xMode == "Single") exitWith {
+                ACE_player action ["SwitchWeapon", _currentShooter, ACE_player, _xIndex];
+                __JavelinIGUITop ctrlSetTextColor __ColorGray;
+                __JavelinIGUIDir ctrlSetTextColor __ColorGreen;
+                TRACE_2("fix top-attack for AP",weaponState _currentShooter,_x);
+            };
+        } forEach (ACE_player weaponsInfo [_currentWeapon, true]);
+    };
 };
 
 
@@ -133,13 +146,13 @@ if (isNull _newTarget) then {
     _fireDisabledEH = [_fireDisabledEH] call FUNC(disableFire);
 } else {
     if ((!isNull _newTarget) && {_currentTarget != _newTarget}) then {
-        TRACE_1("New Target, reseting locking", _newTarget);
+        TRACE_1("New Target, reseting locking",_newTarget);
         _lockStartTime = CBA_missionTime;
         _currentTarget = _newTarget;
     };
 
     if ((CBA_missionTime - _lockStartTime) > __LOCKONTIME) then { // Lock on after 3 seconds
-        TRACE_2("LOCKED!", _currentTarget, _lockStartTime);
+        TRACE_2("LOCKED!",_currentTarget,_lockStartTime);
         __JavelinIGUISeek ctrlSetTextColor __ColorGreen;
         __JavelinIGUITargetingLines ctrlShow true;
 
@@ -181,7 +194,7 @@ if (isNull _newTarget) then {
 };
 
 // Save arguments for next run
-_this set [0, diag_frameno];
+_this set [0, diag_frameNo];
 _this set [1, _currentTarget];
 _this set [2, _lockStartTime];
 _this set [3, _soundNextPlayTime];

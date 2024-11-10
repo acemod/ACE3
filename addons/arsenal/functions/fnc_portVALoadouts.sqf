@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: alganthe
+ * Author: Alganthe, johnb43
  * Port VA loadouts to ACE Arsenal.
  *
  * Arguments:
@@ -9,34 +9,46 @@
  * Return Value:
  * None
  *
+ * Example:
+ * call ace_arsenal_fnc_portVALoadouts
+ *
  * Public: Yes
 */
 
-private _VALoadouts = +(profilenamespace getvariable ["bis_fnc_saveInventory_data",[]]);
-private _aceLoadouts = +(profileNamespace getVariable [QGVAR(saved_loadouts),[]]);
+private _unit = player;
 
-if (isNull player) exitWith {
-    [localize LSTRING(portLoadoutsPlayerError)] call BIS_fnc_error;
+// Need a player object to transfer loadouts
+if (isNull _unit) exitWith {
+    [LLSTRING(portLoadoutsPlayerError)] call BIS_fnc_error;
 };
+
+// Check if there are any VA loadouts
+private _VALoadouts = profileNamespace getVariable ["BIS_fnc_saveInventory_data", []];
 
 if (_VALoadouts isEqualTo []) exitWith {
-    [localize LSTRING(portLoadoutsLoadoutError)] call BIS_fnc_error;
+    [LLSTRING(portLoadoutsLoadoutError)] call BIS_fnc_error;
 };
 
-for "_i" from 0 to (count _VALoadouts - 1) step 2 do {
+private _aceLoadouts = +(profileNamespace getVariable [QGVAR(saved_loadouts),[]]);
+private _name = "";
+private _index = -1;
+
+// Go through all VA loadouts and save them as ACE Arsenal loadouts
+for "_i" from 0 to (count _VALoadouts) - 1 step 2 do {
     _name = _VALoadouts select _i;
-    _inventory = _VALoadouts select (_i + 1);
 
-    private _sameNameLoadoutsList = _aceLoadouts select {_x select 0 == _name};
-    [player, [profilenamespace, _name]] call bis_fnc_loadinventory;
+    // Load VA loadout onto player
+    [_unit, [profileNamespace, _name]] call BIS_fnc_loadInventory;
 
-    private _loadout = getUnitLoadout player;
+    // See if there is an already existing loadout with the same name
+    _index = _aceLoadouts findIf {(_x select 0) == _name};
 
-    if (count _sameNameLoadoutsList > 0) then {
-        _aceLoadouts set [_aceLoadouts find (_sameNameLoadoutsList select 0), [_name, _loadout]];
-
+    // If there is an already existing loadout with same name, overwrite it (in CBA extended loadout array)
+    if (_index != -1) then {
+        _aceLoadouts set [_index, [_name, [getUnitLoadout _unit, createHashMap]]];
     } else {
-        _aceLoadouts pushBack [_name, _loadout];
+        // Otherwise just add
+        _aceLoadouts pushBack [_name, [getUnitLoadout _unit, createHashMap]];
     };
 };
 

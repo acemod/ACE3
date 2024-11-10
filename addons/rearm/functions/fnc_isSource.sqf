@@ -1,11 +1,10 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: shukari
  * Returns if vehicle or object is a rearm source.
  *
  * Arguments:
- * 0: target <OBJECT>
- * 1: check for vanilla rearm vehicle <BOOL> (default: false)
+ * 0: Target <OBJECT>
  *
  * Return Value:
  * None
@@ -15,10 +14,7 @@
  *
  * Public: Yes
  */
-params [
-        ["_target", objNull, [objNull]],
-        ["_testVanillaRearm", false, [false]]
-    ];
+params [["_target", objNull, [objNull]]];
 
 if ((_target getVariable [QGVAR(currentSupply), 0]) < 0) exitWith {false};
 
@@ -27,4 +23,4 @@ private _vanillaCargoConfig = getNumber (_vehCfg >> "transportAmmo");
 private _rearmCargoConfig = getNumber (_vehCfg >> QGVAR(defaultSupply));
 private _supplyVehicle = _target getVariable [QGVAR(isSupplyVehicle), false];
 
-_rearmCargoConfig > 0 || {_supplyVehicle} || {_testVanillaRearm && _vanillaCargoConfig > 0}
+_rearmCargoConfig > 0 || {_supplyVehicle} || {_vanillaCargoConfig > 0}

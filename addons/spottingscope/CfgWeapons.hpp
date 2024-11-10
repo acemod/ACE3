@@ -9,6 +9,7 @@ class CfgWeapons {
         descriptionShort = "";
         picture = QPATHTOF(UI\w_spottingscope_ca.paa);
         model = QPATHTOF(data\ace_spottingscope.p3d);
+        ACE_isTool = 1;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 40;
@@ -25,11 +26,11 @@ class CfgWeapons {
 
             reticleDetailTextures[] = {
                 // start at > this magnification, reticleTexture, reticleTextureSize, reticleTextureNight (optional)
-                {0,  PATHTOF(data\ace_spottingscope_reticle_b1_ca.paa), 1,   PATHTOF(data\ace_spottingscope_reticle_b1_ca.paa)},
-                {9,  PATHTOF(data\ace_spottingscope_reticle_b2_ca.paa), 1/2, PATHTOF(data\ace_spottingscope_reticle_b2_ca.paa)},
-                {14, PATHTOF(data\ace_spottingscope_reticle_b3_ca.paa), 1/3, PATHTOF(data\ace_spottingscope_reticle_b3_ca.paa)},
-                {19, PATHTOF(data\ace_spottingscope_reticle_b4_ca.paa), 1/4, PATHTOF(data\ace_spottingscope_reticle_b4_ca.paa)},
-                {24, PATHTOF(data\ace_spottingscope_reticle_b5_ca.paa), 1/5, PATHTOF(data\ace_spottingscope_reticle_b5_ca.paa)}
+                {0,  QPATHTOF(data\ace_spottingscope_reticle_b1_ca.paa), 1,   QPATHTOF(data\ace_spottingscope_reticle_b1_ca.paa)},
+                {9,  QPATHTOF(data\ace_spottingscope_reticle_b2_ca.paa), "1/2", QPATHTOF(data\ace_spottingscope_reticle_b2_ca.paa)},
+                {14, QPATHTOF(data\ace_spottingscope_reticle_b3_ca.paa), "1/3", QPATHTOF(data\ace_spottingscope_reticle_b3_ca.paa)},
+                {19, QPATHTOF(data\ace_spottingscope_reticle_b4_ca.paa), "1/4", QPATHTOF(data\ace_spottingscope_reticle_b4_ca.paa)},
+                {24, QPATHTOF(data\ace_spottingscope_reticle_b5_ca.paa), "1/5", QPATHTOF(data\ace_spottingscope_reticle_b5_ca.paa)}
             };
             fadeReticleInterval[] = {10.5,9.5};
 

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Toggle speed limiter for Driver in Vehicle.
@@ -7,6 +7,7 @@
  * 0: Driver <OBJECT>
  * 1: Vehicle <OBJECT>
  * 2: Cruise Control <BOOL>
+ * 3: Preserve Speed Limit <BOOL>
  *
  * Return Value:
  * None
@@ -17,7 +18,7 @@
  * Public: No
  */
 
-params ["_driver", "_vehicle", ["_cruiseControl", false]];
+params ["_driver", "_vehicle", ["_cruiseControl", false], ["_preserveSpeedLimit", false]];
 
 if (GVAR(isSpeedLimiter)) exitWith {
     switch ([GVAR(isCruiseControl), _cruiseControl]) do {
@@ -26,7 +27,6 @@ if (GVAR(isSpeedLimiter)) exitWith {
             playSound "ACE_Sound_Click";
             _vehicle setCruiseControl [0, false];
             GVAR(isSpeedLimiter) = false;
-            GVAR(isCruiseControl) = false;
         };
         case [true, false]: {
             [localize LSTRING(On)] call EFUNC(common,displayTextStructured);
@@ -59,26 +59,30 @@ playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
 GVAR(isCruiseControl) = _cruiseControl;
 
-GVAR(speedLimit) = round (speed _vehicle max 5);
+if (!_preserveSpeedLimit) then {
+    GVAR(speedLimit) = round (speed _vehicle max 5);
+};
 GVAR(speedLimitInit) = true;
 
 [{
     params ["_args", "_idPFH"];
     _args params ["_driver", "_vehicle"];
 
+    private _role = _driver call EFUNC(common,getUavControlPosition);
     if (GVAR(isUAV)) then {
-        private _uavControl = UAVControl _vehicle;
-        if ((_uavControl select 0) != _driver || _uavControl select 1 != "DRIVER") then {
+        if (_role == "") then {
             GVAR(isSpeedLimiter) = false;
-            TRACE_1("UAV driver changed, disabling speedlimit",_vehicle);
-            _vehicle setCruiseControl [0, false];
+            TRACE_1("UAV controller changed, disabling speedlimit",_vehicle);
         };
     } else {
-        if (_driver != driver _vehicle) then {
+        if (_driver != driver _vehicle || {_role != ""}) then {
             GVAR(isSpeedLimiter) = false;
             TRACE_3("Vehicle driver changed, disabling speedlimit",_driver,driver _vehicle,_vehicle);
-            _vehicle setCruiseControl [0, false];
         };
+    };
+
+    if (call CBA_fnc_getActiveFeatureCamera != "") then {
+        GVAR(isSpeedLimiter) = false;
     };
 
     if (!GVAR(isSpeedLimiter)) exitWith {

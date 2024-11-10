@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain / Cyruz / diwako
  * Produces a casing matching the fired weapons caliber on the ground around the unit
@@ -20,26 +20,34 @@ params ["_unit", "", "", "", "_ammo"];
 
 if (!isNull objectParent _unit) exitWith {};
 
-private _modelPath = GVAR(cachedCasings) get _ammo;
 
-if (isNil "_modelPath") then {
+private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
     private _cartridge = getText (configFile >> "CfgAmmo" >> _ammo >> "cartridge");
-    //Default cartridge is a 5.56mm model
-    _modelPath = switch (_cartridge) do {
-        case "FxCartridge_9mm":     { "A3\Weapons_f\ammo\cartridge_small.p3d" };
-        case "FxCartridge_65":      { "A3\weapons_f\ammo\cartridge_65.p3d" };
-        case "FxCartridge_762":     { "A3\weapons_f\ammo\cartridge_762.p3d" };
-        case "FxCartridge_127":     { "A3\weapons_f\ammo\cartridge_127.p3d" };
-        case "FxCartridge_slug":    { "A3\weapons_f\ammo\cartridge_slug.p3d" };
-        case "":                    { "" };
-        default { "A3\Weapons_f\ammo\cartridge.p3d" };
+    if (_cartridge == "") then { // return (note: can't use exitWith)
+        ""
+    } else {
+        private _cartridgeConfig = configFile >> "CfgVehicles" >> _cartridge;
+
+        // if explicitly defined, use ACE's config
+        if (isText (_cartridgeConfig >> QGVAR(model))) exitWith {
+            getText (_cartridgeConfig >> QGVAR(model))
+        };
+        // use casing's default model
+        private _model = getText (_cartridgeConfig >> "model");
+        if ("a3\weapons_f\empty" in toLowerANSI _model) exitWith { "" };
+
+        // Add file extension if missing (fileExists needs file extension)
+        if ((_model select [count _model - 4]) != ".p3d") then {
+            _model = _model + ".p3d";
+        };
+
+        ["", _model] select (fileExists _model)
     };
-    GVAR(cachedCasings) set [_ammo, _modelPath];
-};
+}, true];
 
 if (_modelPath isEqualTo "") exitWith {};
 
-private _unitPos = getposASL _unit;
+private _unitPos = getPosASL _unit;
 // Distant shooters don't produce as many cases
 if ((AGLToASL positionCameraToWorld [0,0,0]) vectorDistance _unitPos > 100 && {random 1 < 0.9}) exitWith {};
 

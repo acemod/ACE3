@@ -1,11 +1,11 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Text statement for the explosion time stat.
  *
  * Arguments:
- * 0: Stats Array (not used) <ARRAY>
- * 1: Item Config <CONFIG>
+ * 0: Not used
+ * 1: Item config path <CONFIG>
  *
  * Return Value:
  * Stat Text <STRING>
@@ -17,17 +17,19 @@
  */
 
 params ["", "_config"];
+TRACE_1("statTextStatement_explosionTime",_config);
 
 private _ammoConfig = configFile >> "CfgAmmo" >> getText (_config >> "ammo");
 private _timeToLive = getNumber (_ammoConfig >> "timeToLive");
 private _explosionTime = getNumber (_ammoConfig >> "explosionTime");
 
+// Handle IR grenades
 if (_explosionTime > _timeToLive) exitWith {
-    "-" // Handle IR grenades
+    "-"
 };
 
 if (_explosionTime == -1) exitWith {
-    localize LSTRING(DetonatesOnImpact)
+    LLSTRING(DetonatesOnImpact)
 };
 
 format ["%1s", _explosionTime]

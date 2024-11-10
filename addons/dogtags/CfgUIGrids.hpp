@@ -5,13 +5,13 @@ class CfgUIGrids {
                 class Variables {
                     GVAR(grid)[] = {
                         {
-                            (safeZoneX + safeZoneW) - 12.9 * GUI_GRID_W,
-                            safeZoneY + 0.175 * safeZoneH,
-                            8 * GUI_GRID_W,
-                            8 * GUI_GRID_H
+                            QUOTE((safeZoneX + safeZoneW) - 12.9 * GUI_GRID_W),
+                            QUOTE(safeZoneY + 0.175 * safeZoneH),
+                            QUOTE(8 * GUI_GRID_W),
+                            QUOTE(8 * GUI_GRID_H)
                         },
-                        GUI_GRID_W,
-                        GUI_GRID_H
+                        QUOTE(GUI_GRID_W),
+                        QUOTE(GUI_GRID_H)
                     };
                 };
             };

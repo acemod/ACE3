@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Creates a carryable ammunition dummy object.
@@ -21,7 +21,7 @@ params ["_unit", "_magazineClass"];
 private _ammo = getText (configFile >> "CfgMagazines" >> _magazineClass >> "ammo");
 private _dummyName = getText (configFile >> "CfgAmmo" >> _ammo >> QGVAR(dummy));
 private _dummy = objNull;
-if !(_dummyName == "") then {
+if (_dummyName != "") then {
     _dummy = _dummyName createVehicle (position _unit);
 } else {
     _dummy = QGVAR(defaultCarriedObject) createVehicle (position _unit);

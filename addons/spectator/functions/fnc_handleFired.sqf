@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, AACO, SilentSpike
+ * Author: Nelson Duarte, AACO, kymckay
  * Function used to add projectiles to be drawn when a unit fires
  *
  * Arguments:
@@ -27,7 +27,7 @@ params [
 
 // Remove the EH when spectator is no longer active or unit is removed
 if (isNil QGVAR(entitiesToDraw) || {!(_unit in GVAR(entitiesToDraw))}) exitWith {
-    //USES_VARIABLES ["_thisEventHandler"]
+    //IGNORE_PRIVATE_WARNING ["_thisEventHandler"];
     _unit removeEventHandler ["Fired", _thisEventHandler];
     SETVAR(_unit,GVAR(firedEH),nil);
 };

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Publish a variable if it's different enough from the previously published value.
@@ -38,4 +38,4 @@ if (abs(_value - _oldValue) < _tolerance) exitWith {};
 _object setVariable [_varName, _value, true];
 _object setVariable [_oldVarName, _value];
 
-TRACE_2("Published variable:", _varName, _value);
+TRACE_2("Published variable:",_varName,_value);

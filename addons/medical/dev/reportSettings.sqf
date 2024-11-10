@@ -1,4 +1,4 @@
-#include "\z\ace\addons\medical\script_component.hpp"
+#include "..\script_component.hpp"
 // Dumps info on all non-default medical settings
 
 [{

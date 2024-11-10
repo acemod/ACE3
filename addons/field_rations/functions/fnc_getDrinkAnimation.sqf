@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Returns an appropriate animation for drinking directly from the given water source.
@@ -11,7 +11,7 @@
  * Animation <STRING>
  *
  * Example:
- * [_player, _source] call ace_field_rations_getDrinkAnimation
+ * [_player, _source] call ace_field_rations_fnc_getDrinkAnimation
  *
  * Public: No
  */

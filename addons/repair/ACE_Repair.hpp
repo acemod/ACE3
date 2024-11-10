@@ -3,10 +3,11 @@ class ACE_Repair {
         class ReplaceWheel {
             displayName = CSTRING(ReplaceWheel);
             displayNameProgress = CSTRING(ReplacingWheel);
+            forceDisplayName = 0;
 
             repairLocations[] = {"All"};
             requiredEngineer = QGVAR(engineerSetting_Wheel);
-            repairingTime = 10;
+            repairingTime = QGVAR(wheelChangeTime);
             repairingTimeSelfCoef = 1;
             items = QGVAR(wheelRepairRequiredItems);
             condition = QFUNC(canReplaceWheel);
@@ -21,6 +22,7 @@ class ACE_Repair {
             animationCallerProne = "Acts_carFixingWheel";
             animationCallerSelf = "Acts_carFixingWheel";
             animationCallerSelfProne = "Acts_carFixingWheel";
+            loopAnimation = 0;
             litter[] = {};
         };
         class RemoveWheel: ReplaceWheel {
@@ -30,12 +32,23 @@ class ACE_Repair {
             callbackSuccess = QFUNC(doRemoveWheel);
             claimObjects[] = {};
         };
+        class PatchWheel: ReplaceWheel {
+            displayName = CSTRING(PatchWheel);
+            displayNameProgress = CSTRING(PatchingWheel);
+            condition = QFUNC(canPatchWheel);
+            repairingTime = QFUNC(getPatchWheelTime);
+            callbackProgress = QFUNC(doPatchWheelProgress);
+            items = QGVAR(patchWheelRequiredItems);
+            requiredEngineer = QGVAR(engineerSetting_Wheel);
+            callbackSuccess = "";
+            claimObjects[] = {};
+        };
         class MiscRepair: ReplaceWheel {
             displayName = CSTRING(Repairing); // let's make empty string an auto generated string
             displayNameProgress = CSTRING(RepairingHitPoint);
             condition = QFUNC(canMiscRepair);
             requiredEngineer = QGVAR(engineerSetting_Repair);
-            repairingTime = 15;
+            repairingTime = QGVAR(miscRepairTime);
             callbackSuccess = QFUNC(doRepair);
             items = QGVAR(miscRepairRequiredItems);
             itemConsumed = QGVAR(consumeItem_ToolKit);
@@ -69,11 +82,14 @@ class ACE_Repair {
         class FullRepair: MiscRepair {
             displayName = CSTRING(fullRepair);
             displayNameProgress = CSTRING(fullyRepairing);
+            forceDisplayName = 1;
+            loopAnimation = 1;
             requiredEngineer = QGVAR(engineerSetting_fullRepair);
             repairLocations[] = {QGVAR(fullRepairLocation)};
-            repairingTime = 30;
-            condition = "-1 != ((getAllHitPointsDamage _target param [2,[]]) findIf {_x > 0})";
+            repairingTime = QFUNC(getFullRepairTime);
+            condition = "((getAllHitPointsDamage _target) select 2) findIf {_x > 0} != -1";
             callbackSuccess = QFUNC(doFullRepair);
+            callbackProgress = QFUNC(fullRepairProgress);
             items = QGVAR(fullRepairRequiredItems);
             itemConsumed = QGVAR(consumeItem_ToolKit);
         };

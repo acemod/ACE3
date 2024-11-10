@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Adds an explosive as a clacker item to the passed unit if the unit has the required item.
@@ -31,10 +31,10 @@ private _detonators = [_unit] call FUNC(getDetonators);
     if !(_x in _detonators) exitWith{
         _hasRequired = false;
     };
-} count _requiredItems;
+} forEach _requiredItems;
 
 if !(_hasRequired) exitWith {};
-private _config = ConfigFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> configName _config;
+private _config = configFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> configName _config;
 
 private _clacker = _unit getVariable [QGVAR(Clackers), []];
 GVAR(PlacedCount) = GVAR(PlacedCount) + 1;

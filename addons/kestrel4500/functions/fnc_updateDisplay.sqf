@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the Kestrel 4500 dialog text boxes.
@@ -10,6 +10,7 @@
  * None
  *
  * Example:
+ * None
  *
  * Public: No
  */

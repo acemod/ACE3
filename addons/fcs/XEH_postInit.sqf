@@ -6,7 +6,7 @@ GVAR(position) = [0,0,0];
 
 if (!hasInterface) exitWith {};
 
-#include "initKeybinds.sqf"
+#include "initKeybinds.inc.sqf"
 
 ["ace_infoDisplayChanged", {
     if (!isNull ((_this select 0) displayCtrl 1713151)) then {

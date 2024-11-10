@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Return a suitable position for the action point for the given target vehicle
@@ -14,7 +14,7 @@
  *
  * Public: No
  */
-// IGNORE_PRIVATE_WARNING(_target);
+//IGNORE_PRIVATE_WARNING ["_target"];
 
 private _bb = boundingBoxReal _target;
 (_bb select 0) params ["_bbX", "_bbY", "_bbZ"];

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Rocko, Ruthberg
  *
@@ -20,7 +20,7 @@ params ["_wire"];
 
 {
     _wire animate [_x, 1];
-} count WIRE_FAST;
+} forEach WIRE_FAST;
 
 [{
     params ["_args", "_idPFH"];
@@ -31,7 +31,7 @@ params ["_wire"];
         private _dir = getDir _wire;
         private _pos = getPosASL _wire;
 
-        private _wirecoil = "ACE_ConcertinaWireCoil" createvehicle [0, 0, 0];
+        private _wirecoil = "ACE_ConcertinaWireCoil" createVehicle [0, 0, 0];
 
         deleteVehicle _wire;
 

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, bux578, esteldunedain, commy2
  * Initializes the respawn module.

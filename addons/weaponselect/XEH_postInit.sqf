@@ -122,7 +122,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !((ACE_player != vehicle ACE_player) && {ACE_player == driver vehicle ACE_player} && {!isEngineOn vehicle ACE_player}) exitWith {false};
+    if !(!isNull objectParent ACE_player && {ACE_player == driver vehicle ACE_player} && {!isEngineOn vehicle ACE_player}) exitWith {false};
 
     // Statement
     vehicle ACE_player engineOn true;
@@ -135,7 +135,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !(ACE_player != vehicle ACE_player && {ACE_player == driver vehicle ACE_player} && {isEngineOn vehicle ACE_player}) exitWith {false};
+    if !(!isNull objectParent ACE_player && {ACE_player == driver vehicle ACE_player} && {isEngineOn vehicle ACE_player}) exitWith {false};
 
     // Statement
     vehicle ACE_player engineOn false;
@@ -148,7 +148,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !(ACE_player != vehicle ACE_player) exitWith {false};
+    if (isNull objectParent ACE_player) exitWith {false};
 
     // Statement
     [ACE_player, vehicle ACE_player, 0] call FUNC(selectWeaponVehicle);
@@ -161,7 +161,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !(ACE_player != vehicle ACE_player) exitWith {false};
+    if (isNull objectParent ACE_player) exitWith {false};
 
     // Statement
     [ACE_player, vehicle ACE_player, 1] call FUNC(selectWeaponVehicle);
@@ -174,7 +174,7 @@ if (!hasInterface) exitWith {};
     // Conditions: canInteract
     if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
-    if !(ACE_player != vehicle ACE_player) exitWith {false};
+    if (isNull objectParent ACE_player) exitWith {false};
 
     // Statement
     [ACE_player, vehicle ACE_player, 2] call FUNC(selectWeaponVehicle);
@@ -183,22 +183,22 @@ if (!hasInterface) exitWith {};
 {false},
 [0, [false, false, false]], false] call CBA_fnc_addKeybind; //Unbound (was 5 Key)
 
-["ACE3 Vehicles", QGVAR(FireSmokeLauncher), localize LSTRING(FireSmokeLauncher), {
-    // Conditions: canInteract
-    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
-    // Conditions: specific
-    if !(ACE_player != vehicle ACE_player && {ACE_player == commander vehicle ACE_player}) exitWith {false};
+// ["ACE3 Vehicles", QGVAR(FireSmokeLauncher), localize LSTRING(FireSmokeLauncher), {
+//     // Conditions: canInteract
+//     if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
+//     // Conditions: specific
+//     if !(ACE_player != vehicle ACE_player && {ACE_player == commander vehicle ACE_player}) exitWith {false};
 
-    // Statement
-    [vehicle ACE_player] call FUNC(fireSmokeLauncher);
-    true
-},
-{false},
-[10, [false, false, false]], false] call CBA_fnc_addKeybind; //9 Key
+//     // Statement
+//     [vehicle ACE_player] call FUNC(fireSmokeLauncher);
+//     true
+// },
+// {false},
+// [10, [false, false, false]], false] call CBA_fnc_addKeybind; //9 Key
 
 ["ACE3 Vehicles", QGVAR(CollisionLights), localize LSTRING(CollisionLights), {
     // Conditions: canInteract
-    if (!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))) exitWith {false};
+    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((ACE_player isEqualTo (vehicle ACE_player)) || {ACE_player != (driver (vehicle ACE_player))}) exitWith {false};
 
@@ -210,4 +210,4 @@ if (!hasInterface) exitWith {};
 [0, [false, false, false]]] call CBA_fnc_addKeybind;
 
 // Register fire event handler
-["ace_firedPlayer", DFUNC(throwGrenade)] call CBA_fnc_addEventHandler;
+["ace_firedPlayer", LINKFUNC(throwGrenade)] call CBA_fnc_addEventHandler;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the inventory opening.
@@ -23,7 +23,7 @@ TRACE_2("params",_unit,_container);
 if (_unit != ACE_player) exitWith {};
 
 if (GVAR(LockVehicleInventory) && //if setting not enabled
-        {(vehicle ACE_player) == ACE_player} && //Player dismounted
+        {isNull objectParent ACE_player} && //Player dismounted
         {(_container isKindOf "Car") || {(_container isKindOf "Tank") || {_container isKindOf "Helicopter"}}} && //container is a lockable veh
         {(locked _container) in [2,3]} && //Vehicle is locked
         {!([ACE_player, _container] call FUNC(hasKeyForVehicle))} //player doesn't have key
@@ -37,10 +37,10 @@ if (GVAR(LockVehicleInventory) && //if setting not enabled
         !isNull (findDisplay 602)
     },
     {
-        TRACE_1("car display open: closing", _this);
+        TRACE_1("car display open: closing",_this);
         (findDisplay 602) closeDisplay 0;
         [{
-            TRACE_1("Opening Player Inventory", _this);
+            TRACE_1("Opening Player Inventory",_this);
             ACE_player action ["Gear", objNull];
         }, []] call CBA_fnc_execNextFrame;
     }, []] call CBA_fnc_waitUntilAndExecute;

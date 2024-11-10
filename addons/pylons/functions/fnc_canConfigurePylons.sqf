@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: 654wak654
  * Checks if given unit can access the pylon configuration dialog for the given aircraft.

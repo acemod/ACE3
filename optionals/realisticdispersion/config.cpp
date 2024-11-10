@@ -11,6 +11,8 @@ class CfgPatches {
         authors[] = {"Ruthberg"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+        ACE_expectedModDir = "@ACE Realistic Dispersion";
+        ACE_expectedSteamID = "2202414018";
     };
 };
 

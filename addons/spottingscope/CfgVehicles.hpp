@@ -48,7 +48,7 @@ class CfgVehicles {
                     selection = "";
                     displayName = CSTRING(PickUp);
                     distance = 5;
-                    condition = QUOTE((alive _target) && (count (crew _target) == 0));
+                    condition = QUOTE((alive _target) && {(crew _target) isEqualTo []});
                     statement = QUOTE([ARR_2(_target,_player)] call FUNC(pickup));
                     showDisabled = 0;
                     exceptions[] = {};

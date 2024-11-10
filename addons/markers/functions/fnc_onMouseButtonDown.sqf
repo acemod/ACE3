@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: chris579
  * Triggered when a mouse button is pressed on the map.
@@ -37,5 +37,5 @@ if (_type == "marker" && {_marker find "_USER_DEFINED" != -1 && {_marker call FU
 
     GVAR(moving) = true;
     _marker setMarkerAlphaLocal 0.5;
-    [FUNC(movePFH), 0, [_marker, _ctrlMap, _originalPos, _originalAlpha]] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(movePFH), 0, [_marker, _ctrlMap, _originalPos, _originalAlpha]] call CBA_fnc_addPerFrameHandler;
 };

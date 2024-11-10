@@ -16,8 +16,17 @@
  */
 
 //Event for setting explosive placement angle/pitch:
-[QGVAR(place), {_this call FUNC(setPosition)}] call CBA_fnc_addEventHandler;
-[QGVAR(startDefuse), FUNC(startDefuse)] call CBA_fnc_addEventHandler;
+[QGVAR(place), {
+    params ["_explosive", "", "", "_unit"];
+
+    _this call FUNC(setPosition);
+
+    if (isServer) then {
+        private _owner = [objNull, _unit] select (missionNamespace getVariable [QGVAR(setShotParents), false]);
+        _explosive setShotParents [_owner, _unit];
+    };
+}] call CBA_fnc_addEventHandler;
+[QGVAR(startDefuse), LINKFUNC(startDefuse)] call CBA_fnc_addEventHandler;
 
 //When getting knocked out in medical, trigger deadman explosives:
 //Event is global, only run on server (ref: ace_medical_fnc_setUnconscious)
@@ -25,12 +34,13 @@ if (isServer) then {
     [QGVAR(detonate), {
         params ["_unit", "_explosive", "_delay"];
         TRACE_3("server detonate EH",_unit,_explosive,_delay);
-        _explosive setShotParents [_unit, _unit];
+        private _owner = [objNull, _unit] select (missionNamespace getVariable [QGVAR(setShotParents), false]);
+        _explosive setShotParents [_owner, _unit];
         [{
             params ["_explosive"];
             TRACE_1("exploding",_explosive);
             if (!isNull _explosive) then {
-                _explosive setDamage 1;
+                [QEGVAR(common,triggerAmmo), _explosive, _explosive] call CBA_fnc_targetEvent;
             };
         }, _explosive, _delay] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_addEventHandler;
@@ -38,15 +48,24 @@ if (isServer) then {
     ["ace_unconscious", {
         params ["_unit", "_isUnconscious"];
         if (!_isUnconscious) exitWith {};
-        TRACE_1("Knocked Out, Doing Deadman", _unit);
+        TRACE_1("Knocked Out, Doing Deadman",_unit);
         [_unit] call FUNC(onIncapacitated);
     }] call CBA_fnc_addEventHandler;
+
+    // Orient all Editor-placed SLAM (Bottom attack) mines facing upward
+    {
+        private _mine = _x;
+        if (typeOf _mine == "ACE_SLAMDirectionalMine_Magnetic_Ammo") then {
+            [_mine, MINE_PITCH_UP, 0] call CALLSTACK(BIS_fnc_setPitchBank);
+        };
+    } forEach allMines;
 };
 
 if (!hasInterface) exitWith {};
 
+#include "initKeybinds.inc.sqf"
+
 GVAR(PlacedCount) = 0;
-GVAR(excludedMines) = [];
 GVAR(Setup) = objNull;
 GVAR(pfeh_running) = false;
 GVAR(CurrentSpeedDial) = 0;

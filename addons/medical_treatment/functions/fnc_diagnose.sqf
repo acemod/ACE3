@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Action for diagnosing in basic medical
@@ -44,6 +44,8 @@ if (alive _patient) then {
     } else {
         _messages pushBack LSTRING(noPain);
     };
+} else {
+    _messages pushBack "";
 };
 
 [_messages, 3] call EFUNC(common,displayTextStructured);

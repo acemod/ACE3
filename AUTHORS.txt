@@ -6,24 +6,31 @@
 # request, preferably including an email address.
 
 # CORE TEAM
+BaerMitUmlaut
+Brett Mayson
 bux578 <github@jonathandavid.de>
 commy2
 Dahlgren
-Dani (TCVM) <baileydanyluk@gmail.com>
+Drofseh <drofseh.arma@gmail.com>
 esteldunedain <nicolas.d.badano@gmail.com>
 Felix Wiegand <koffeinflummi@gmail.com>
 Garth "L-H" de Wet <garthofhearts@gmail.com>
 Giallustio
 Glowbal
+Grim
 Janus
+johnb43
 jokoho482 <jokoho482@gmail.com>
 Jonpas <jonpas33@gmail.com>
 Kieran
+kymckay
 mharis001 <mhariszakar@gmail.com>
+MikeMF
+MiszczuZPolski
 NouberNou
 PabstMirror <pabstmirror@gmail.com>
 Ruthberg <ulteq@web.de>
-SilentSpike <SilentSpike100@gmail.com>
+tcvm <baileydanyluk@gmail.com>
 tpM
 veteran29
 ViperMaul
@@ -35,13 +42,15 @@ Walter Pearce <jaynus@gmail.com>
 11RDP-LoupVert <loupvert@11rdp.fr>
 654wak654 <ozanegitmen@gmail.com>
 [BIG]Bull
-ACCtomeek <tomeek99@gmail.com>
+Abogado "regiregi22"
+ACCtomeek
 adam3adam <br.ada@seznam.cz>
 Adanteh
 aeroson
 Aggr094 <bastards4glory@gmail.com>
 alef <alefor@gmail.com>
 Aleksey EpMAK Yermakov <epmak777@gmail.com>
+AleM
 Alganthe <alganthe@live.fr>
 Andrea "AtixNeon" Verano <veranoandrea88@gmail.com>
 Anthariel <Contact@storm-simulation.com>
@@ -50,14 +59,13 @@ Arcanum417 <lubos.len@gmail.com>
 Arkhir <wonsz666@gmail.com >
 ARV187 aka Spark23
 Asgar Serran <piechottaf@web.de>
-BaerMitUmlaut
 Bamse <bamsis@gmail.com>
 Barman75
 Bla1337
 BlackPixxel <blackpixxel96@gmail.com>
 BlackQwar
+Bluefield <tatsuyahayami1@gmail.com>
 Brakoviejo
-Brett Mayson
 Brisse <brisse@outlook.com>
 Brostrom.A | Evul <andreas.brostrom.ce@gmail.com>
 BullHorn <bullhorn7@gmail.com>
@@ -68,6 +76,7 @@ Clon1998 <ps.patti1998@gmail.com>
 Codingboy
 Coren <coren4@gmail.com>
 Crusty
+Cyruz143
 dabako <dabako@dabakoworld.de>
 dgibso29 <gibson@earringpranks.com>
 Dharma Bellamkonda <dharma.bellamkonda@gmail.com>
@@ -76,7 +85,6 @@ diwako
 dixon13 <dixonbegay@gmail.com>
 Drift_91
 Drill <drill87@gmail.com>
-Drofseh <drofseh@gmail.com>
 Dslyecxi <dslyecxi@gmail.com>
 Dudakov aka [OMCB]Kaban <dudakov.s@gmail.com>
 Eclipser <jms@modeemi.fi>
@@ -110,7 +118,9 @@ havena <silveredenis@gmail.com>
 Hawkins
 Head <brobergsebastian@gmail.com>
 Hybrid V
+Hypoxic <martini_a@outlook.com>
 JasperRab <jasper@jasperrab.eu>
+JDT
 john681611 <john681611@hotmail.com>
 JoramD
 Karneck <dschultz26@hotmail.com>
@@ -118,6 +128,8 @@ Kavinsky <nmunozfernandez@gmail.com>
 Keithen <Keithen.Neu@gmail.com>
 Kllrt <kllrtik@gmail.com>
 KokaKolaA3
+Krzyciu
+LAxemann
 legman <juicemelon@msn.com>
 Legolasindar "Viper" <legolasindar@gmail.com>
 licht-im-Norden87 <lichtimnorden87@gmail.com>
@@ -130,6 +142,7 @@ meat <p.humberdroz@gmail.com>
 Michail Nikolaev
 MikeMatrix <m.braun92@gmail.com>
 mjc4wilton <mjc4wilton@gmail.com>
+Mysteryjuju
 nic547 <nic547@outlook.com>
 nikolauska <nikolauska1@gmail.com>
 nomisum <nomisum@gmail.com>
@@ -143,10 +156,12 @@ PiZZADOX <509thParachuteInfantry@gmail.com>
 pokertour
 Professor <lukas.trneny@wo.cz>
 Pterolatypus <pterolatypus@gmail.com>
+QuantX
 QuickDagger
 rakowozz
 ramius86 <pasini86@hotmail.com>
 Raspu86
+RcINS
 Riccardo Petricca <petriccarcc@gmail.com>
 Robert Boklahánics <bokirobi@gmail.com>
 ruPaladin <happyworm24@rambler.ru>
@@ -162,13 +177,14 @@ Sniperwolf572 <tenga6@gmail.com>
 System98
 SzwedzikPL <szwedzikpl@gmail.com>
 Tachi <zaveruha007@gmail.com>
+tbeswick96
 Tessa Elieff <Fastroping Sound - CreativeCommons Attributions 3.0>
+ThomasAngel
 Timi007 <timi007@gmx.net>
 Toaster <jonathan.pereira@gmail.com>
 Tonic
 Tourorist <tourorist@gmail.com>
 Tuupertunut
-TyroneMF <TyroneMF@hotmail.com>
 Valentin Torikian <valentin.torikian@gmail.com>
 voiper
 VyMajoris(W-Cephei)<vycanismajoriscsa@gmail.com>
@@ -179,3 +195,4 @@ YetheSamartaka
 xrufix
 Zakant <Zakant@gmx.de>
 zGuba
+Zman6258

@@ -1,21 +1,20 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Get the cargo space left on object.
+ * Gets the object's remaining cargo space.
  *
  * Arguments:
- * 0: Object <OBJECT>
+ * 0: Holder object (vehicle) <OBJECT>
  *
  * Return Value:
  * Cargo space left <NUMBER>
  *
  * Example:
- * [object] call ace_cargo_fnc_getCargoSpaceLeft
+ * cursorObject call ace_cargo_fnc_getCargoSpaceLeft
  *
  * Public: No
  */
 
-params ["_object"];
-// TRACE_1("params",_object);
+params ["_vehicle"];
 
-(_object getVariable [QGVAR(space), getNumber (configOf _object >> QGVAR(space))]) max 0
+_vehicle getVariable [QGVAR(space), getNumber (configOf _vehicle >> QGVAR(space))]

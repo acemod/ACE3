@@ -2,7 +2,7 @@
 class CfgMagazines {
 
     class SmokeShell;
-    class Chemlight_Green: Smokeshell {
+    class Chemlight_Green: SmokeShell {
         ACE_Chemlight_Shield = "ACE_Chemlight_Shield_Green";
     };
 

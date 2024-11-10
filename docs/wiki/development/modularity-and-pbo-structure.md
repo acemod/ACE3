@@ -23,7 +23,7 @@ Main principles:
 - Anything that is 100% config should require Common and not Interaction.
 
 ```
-Main -> Common -> OptionsMenu -> Interaction -> Most things
+Main -> Common -> Interaction -> Most things
 
 Main -> Common -> Config things
 

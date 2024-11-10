@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Handles releasing the special vector keys.
@@ -22,7 +22,7 @@ private _fnc_setPFH = {
     };
 
     GVAR(currentMode) = _this;//
-    GVAR(holdKeyHandler) = [FUNC(onKeyHold), 0, _this] call CBA_fnc_addPerFrameHandler;
+    GVAR(holdKeyHandler) = [LINKFUNC(onKeyHold), 0, _this] call CBA_fnc_addPerFrameHandler;
 };
 
 switch (_this select 0) do {

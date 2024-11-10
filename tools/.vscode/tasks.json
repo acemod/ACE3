@@ -49,7 +49,29 @@
             },
             "args": [
                 "sqfvmChecker.py"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Validate headers",
+            "command": "${config:python.pythonPath}",
+            "options": {
+                "cwd": "${workspaceFolder}/docs/tools"
+            },
+            "args": [
+                "document_functions.py",
+                "--debug"
             ]
+        },
+        {
+            "label": "HEMTT check",
+            "command": "hemtt.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "args": [
+                "check"
+            ],
         },
         {
             "label": "Test All",
@@ -57,13 +79,15 @@
                 "Validate SQF",
                 "Validate Config",
                 "Validate Stringtables",
+                "Validate headers",
                 "Check Strings",
-                "SQFVM Checker"
+                "SQFVM Checker",
+                "HEMTT check"
             ],
             "group": {
                 "kind": "test",
                 "isDefault": true
-            },
+            }
         },
         {
             "label": "Build: make.py (pboProject)",
@@ -72,7 +96,22 @@
                 "cwd": "${workspaceFolder}/tools"
             },
             "args": [
-                "make.py", "ci"
+                "make.py",
+                "ci"
+            ],
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
+            "label": "Build: Hemtt",
+            "command": "hemtt.exe",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "args": [
+                "build",
+                "-v"
             ],
             "group": {
                 "kind": "build",
@@ -80,15 +119,32 @@
             }
         },
         {
-            "label": "Build: Hemtt Release",
-            "command": "hemtt.exe",
+            "label": "Extension: x64",
+            "command": "cargo",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
             "args": [
-                "build", "--release", "--ci"
+                "make",
+                "move_x64_release"
             ],
-            "group": "build"
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
+            "label": "Extension: Release",
+            "command": "cargo",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "args": [
+                "make",
+                "release"
+            ],
+            "group": {
+                "kind": "build"
+            }
         }
     ]
 }

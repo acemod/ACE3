@@ -1,11 +1,12 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Brandon (TCVM)
+ * Author: tcvm
  * Toggle speed limiter for Driver in Plane. Uses a simple PID controller to manage thrust
  *
  * Arguments:
  * 0: Driver <OBJECT>
  * 1: Vehicle <OBJECT>
+ * 2: Preserve Speed Limit <BOOL>
  *
  * Return Value:
  * None
@@ -20,7 +21,7 @@
 #define PID_D 0
 #define EPSILON 0.001
 
-params ["_driver", "_vehicle"];
+params ["_driver", "_vehicle", ["_preserveSpeedLimit", false]];
 
 if (GVAR(isSpeedLimiter)) exitWith {
     [localize LSTRING(Off)] call EFUNC(common,displayTextStructured);
@@ -31,9 +32,12 @@ if (GVAR(isSpeedLimiter)) exitWith {
 [localize LSTRING(On)] call EFUNC(common,displayTextStructured);
 playSound "ACE_Sound_Click";
 GVAR(isSpeedLimiter) = true;
+GVAR(isCruiseControl) = true; // enables SET/RESUME
 
-// Convert forward speed to KM/H. `speed _vehicle` isnt accurate enough for this controller to work well, so its easier to use M/S. The system assumes it is KM/H so we need the conversion
-GVAR(speedLimit) = (((velocityModelSpace _vehicle) select 1) * 3.6) max 5;
+if (!_preserveSpeedLimit) then {
+    // Convert forward speed to KM/H. `speed _vehicle` isnt accurate enough for this controller to work well, so its easier to use M/S. The system assumes it is KM/H so we need the conversion
+    GVAR(speedLimit) = (((velocityModelSpace _vehicle) select 1) * 3.6) max 5;
+};
 
 [{
     params ["_args", "_idPFH"];
@@ -43,8 +47,15 @@ GVAR(speedLimit) = (((velocityModelSpace _vehicle) select 1) * 3.6) max 5;
     // this will take into account game being pausesd
     private _deltaTime = CBA_missionTime - _lastTime;
 
-    if (_driver != driver _vehicle) then {
-        GVAR(isSpeedLimiter) = false;
+    private _role = _driver call EFUNC(common,getUavControlPosition);
+    if (GVAR(isUAV)) then {
+        if (_role != "DRIVER") then {
+            GVAR(isSpeedLimiter) = false;
+        };
+    } else {
+        if (_driver != currentPilot _vehicle || {_role != ""}) then {
+            GVAR(isSpeedLimiter) = false;
+        };
     };
 
     if (_throttleLogValue == 0) then {
@@ -57,6 +68,10 @@ GVAR(speedLimit) = (((velocityModelSpace _vehicle) select 1) * 3.6) max 5;
         // ARMA will allow an increment of one throttle unit per frame, so if there is a difference between our known throttle value and actual throttle value, the player must of changed it
         [localize LSTRING(Off)] call EFUNC(common,displayTextStructured);
         playSound "ACE_Sound_Click";
+        GVAR(isSpeedLimiter) = false;
+    };
+
+    if (call CBA_fnc_getActiveFeatureCamera != "") then {
         GVAR(isSpeedLimiter) = false;
     };
 

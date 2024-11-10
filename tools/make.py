@@ -40,6 +40,7 @@ if sys.version_info[0] == 2:
 
 import os
 import os.path
+import pathlib
 import shutil
 import platform
 import glob
@@ -241,13 +242,26 @@ def mikero_windows_registry(path, access=winreg.KEY_READ):
 
 def find_depbo_tools():
     """Use registry entries to find DePBO-based tools."""
+    # try running pboProject once if it's not in registry
+    try:
+        pboProject = mikero_windows_registry("pboProject")
+        print(f"pboProject found normally via registry")
+    except:
+        print(f"pboProject not in registry")
+        pboProject = shutil.which('pboProject')
+        if (pboProject is None):
+            print("pboProject not in sys path")
+        else:
+            print(f"pboProject startup")
+            ret = subprocess.call([pboProject, "-P"])
+
     requiredToolPaths = {"pboProject": None, "rapify": None, "MakePbo": None}
     failed = False
 
     for tool in requiredToolPaths:
         try:
             k = mikero_windows_registry(tool)
-            path = winreg.QueryValueEx(k, "exe")[0]           
+            path = winreg.QueryValueEx(k, "exe")[0]
         except FileNotFoundError:
             print_error("Could not find {}".format(tool))
             failed = True
@@ -268,13 +282,22 @@ def pboproject_settings():
     value_exclude = "thumbs.db,*.txt,*.h,*.dep,*.cpp,*.bak,*.png,*.log,*.pew,source,*.tga"
 
     try:
-        k = mikero_windows_registry(r"pboProject\Settings", access=winreg.KEY_SET_VALUE)
+        pbok = mikero_windows_registry(r"pboProject")
+        try:
+            k = winreg.OpenKey(pbok, "Settings", access=winreg.KEY_SET_VALUE)
+        except:
+            print_yellow("WARNING: creating pboProject\Settings reg manually")
+            print_yellow("This should have happened before running make.py")
+            k = winreg.CreateKeyEx(pbok, "Settings", access=winreg.KEY_SET_VALUE)
         winreg.SetValueEx(k, "m_exclude", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "m_exclude2", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "wildcard_exclude_from_pbo_normal", 0, winreg.REG_SZ, value_exclude)
         winreg.SetValueEx(k, "wildcard_exclude_from_pbo_unbinarised_missions", 0, winreg.REG_SZ, value_exclude)
     except:
         raise Exception("BadDePBO", "pboProject not installed correctly, make sure to run it at least once")
+    finally:
+        winreg.CloseKey(k)
+        winreg.CloseKey(pbok)
 
 
 def color(color):
@@ -466,6 +489,22 @@ def cleanup_optionals(mod):
     except:
         print_error("Cleaning Optionals Failed")
         raise
+
+# mikro tools (before 2023?) don't understand #pragma
+def toggle_config_pragmas(do_restore=False):
+        token_from = "//#pragma-backup-make.py " if do_restore else "#pragma "
+        token_to = "#pragma " if do_restore else "//#pragma-backup-make.py "
+        print_green(f"Checking configs for {token_from}")
+        for root, _dirs, files in os.walk(module_root):
+            for file in files:
+                if file.endswith(".cpp") or file.endswith(".hpp"):
+                    with open(os.path.join(root, file), "r", encoding="utf-8") as f:
+                        content = f.read()
+                    if (not token_from in content): continue
+                    print(f"- Replacing {token_from} in {os.path.join(root, file)}")
+                    content = re.sub(token_from, token_to, content)
+                    with open(os.path.join(root, file), "w", encoding="utf-8") as f:
+                        f.write(content)
 
 
 def purge(dir, pattern, friendlyPattern="files"):
@@ -877,6 +916,7 @@ Examples:
 
 
 If a file called $NOBIN$ is found in the module directory, that module will not be binarized.
+If preprocess.enabled = false is set in the addon.toml, that module's config will not be binarized.
 
 See the make.cfg file for additional build options.
 """)
@@ -1109,6 +1149,9 @@ See the make.cfg file for additional build options.
             optional_files = []
             copy_optionals_for_building(optionals_modules,optional_files)
 
+        # hide #pragma from pboProject's sensitive eyes
+        toggle_config_pragmas(False)
+
         # Get list of subdirs in make root.
         dirs = next(os.walk(module_root))[1]
 
@@ -1187,7 +1230,7 @@ See the make.cfg file for additional build options.
                         print_error("\nFailed to delete {}".format(os.path.join(obsolete_check_path,file)))
                         pass
 
-        # Always cleanup old sqfc    
+        # Always cleanup old sqfc
         for root, _dirs, files in os.walk(module_root_parent):
             for file in files:
                 if file.endswith(".sqfc"):
@@ -1293,15 +1336,23 @@ See the make.cfg file for additional build options.
             build_successful = False
             if build_tool == "pboproject":
                 try:
-                    nobinFilePath = os.path.join(work_drive, prefix, module, "$NOBIN$")
                     backup_config(module)
 
                     version_stamp_pboprefix(module,commit_id)
 
-                    if os.path.isfile(nobinFilePath):
+                    skipPreprocessing = False
+                    addonTomlPath = os.path.join(work_drive, prefix, module, "addon.toml")
+                    if os.path.isfile(addonTomlPath):
+                        with open(addonTomlPath, "r") as f:
+                            tomlFile = f.read()
+                            skipPreprocessing = "pboProject_noBinConfig = true".lower() in tomlFile.lower()
+
+                    if os.path.isfile(os.path.join(work_drive, prefix, module, "$NOBIN$")):
                         print_green("$NOBIN$ Found. Proceeding with non-binarizing!")
                         cmd = [makepboTool, "-P","-A","-X=*.backup", os.path.join(work_drive, prefix, module),os.path.join(module_root, release_dir, project,"addons")]
-
+                    elif skipPreprocessing:
+                        print_green("addon.toml set [pboProject_noBinConfig = true]. Proceeding with non-binerized config build!")
+                        cmd = [pboproject, "-B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
                     else:
                         cmd = [pboproject, "+B", "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S", "+Noisy", "+Clean", "-Warnings", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
@@ -1438,6 +1489,8 @@ See the make.cfg file for additional build options.
         copy_important_files(module_root_parent,os.path.join(release_dir, project))
         if (os.path.isdir(optionals_root)):
             cleanup_optionals(optionals_modules)
+        #restore #pragma
+        toggle_config_pragmas(True)
         if not version_update:
             restore_version_files()
 
@@ -1457,7 +1510,7 @@ See the make.cfg file for additional build options.
 
     if sqfc_compiling:
         print_blue("\nCleaning up sqfc...")
-        # cleanup all old sqfc    
+        # cleanup all old sqfc
         for root, _dirs, files in os.walk(module_root_parent):
             for file in files:
                 if file.endswith(".sqfc"):
@@ -1526,6 +1579,16 @@ See the make.cfg file for additional build options.
         if len(failedBuilds) > 0:
             for failedBuild in failedBuilds:
                 print("- {} build failed!".format(failedBuild))
+                failedBuild_path = pathlib.Path(
+                    "P:/temp").joinpath(f"{failedBuild}.packing.log")
+                if (failedBuild_path.exists()):
+                    print(f"  Log {failedBuild_path} tail:")
+                    with open(failedBuild_path) as failedBuild_file:
+                        lines = failedBuild_file.readlines()
+                        for index, line in enumerate(lines[-3:]):
+                            print(f"    {len(lines) + index -2}: {line}", end='')
+                else:
+                    print(f"  Log {failedBuild_path} does not exist")
         if len(missingFiles) > 0:
             for missingFile in missingFiles:
                 print("- {} not found!".format(missingFile))

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Attempt to fix PhysX collisions causing unreasonable impact forces and damage.

@@ -1,9 +1,8 @@
-#include "\z\ace\addons\huntir\script_component.hpp"
-#undef COMPONENT
-#define COMPONENT huntir_sub
+#define SUBCOMPONENT sub
+#include "..\script_component.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class SUBADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
@@ -12,6 +11,8 @@ class CfgPatches {
         author = ECSTRING(common,ACETeam);
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+
+        addonRootClass = QUOTE(ADDON);
     };
 };
 

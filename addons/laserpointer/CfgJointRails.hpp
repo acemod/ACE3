@@ -7,6 +7,15 @@ class asdg_FrontSideRail: asdg_SlotInfo {
     };
 };
 
+class SlotInfo;
+class PointerSlot: SlotInfo {
+    compatibleItems[] += {
+        "ACE_acc_pointer_red",
+        "ACE_acc_pointer_green_IR",
+        "ACE_acc_pointer_green"
+    };
+};
+
 class PointerSlot_Rail: PointerSlot {
     class compatibleItems {
         ACE_acc_pointer_red = 1;

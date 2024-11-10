@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike, Glowbal
+ * Author: kymckay, Glowbal
  * Assigns a medic role from the medical module to a unit
  *
  * Arguments:
@@ -21,7 +21,7 @@ params ["_logic"];
 
 if !(local _logic) exitWith {};
 
-if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+if !(GETEGVAR(medical,enabled,false)) then {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);
 } else {
     private _mouseOver = GETMVAR(bis_fnc_curatorObjectPlaced_mouseOver,[""]);
@@ -40,7 +40,7 @@ if !(["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
                 if (GETVAR(_unit,EGVAR(captives,isHandcuffed),false)) then {
                     [LSTRING(OnlyNonCaptive)] call FUNC(showMessage);
                 } else {
-                    if (!(GETVAR(_unit,EGVAR(medical,isMedicalFacility),false))) then {
+                    if !(GETVAR(_unit,EGVAR(medical,isMedicalFacility),false)) then {
                         _unit setVariable [QEGVAR(medical,isMedicalFacility), true, true];
                     };
                 };

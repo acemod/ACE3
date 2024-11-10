@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, PabstMirror
  * Adds a medication and it's effects
@@ -7,16 +7,18 @@
  * 0: The Unit <OBJECT>
  * 1: Medication <STRING>
  * 2: Time in system for the adjustment to reach its peak <NUMBER>
- * 3: Duration the adjustment will have an effect <NUMVER>
- * 4: Heart Rate Adjust <NUMVER>
- * 5: Pain Suppress Adjust <NUMVER>
- * 6: Flow Adjust <NUMVER>
+ * 3: Duration the adjustment will have an effect <NUMBER>
+ * 4: Heart Rate Adjust <NUMBER>
+ * 5: Pain Suppress Adjust <NUMBER>
+ * 6: Flow Adjust <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
  * [player, "Morphine", 120, 60, -10, 0.8, -10] call ace_medical_status_fnc_addMedicationAdjustment
+ *
+ * Public: No
  */
 params ["_unit", "_medication", "_timeToMaxEffect", "_maxTimeInSystem", "_hrAdjust", "_painAdjust", "_flowAdjust"];
 TRACE_7("addMedicationAdjustment",_unit,_medication,_timeToMaxEffect,_maxTimeInSystem,_hrAdjust,_painAdjust,_flowAdjust);

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support and esteldunedain
  * Confirms trench dig
@@ -18,8 +18,8 @@
 params ["_unit"];
 
 // enable running again
-[_unit, "forceWalk", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
-[_unit, "blockThrow", "ACE_Trenches", false] call EFUNC(common,statusEffect_set);
+[_unit, "forceWalk", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
+[_unit, "blockThrow", QUOTE(ADDON), false] call EFUNC(common,statusEffect_set);
 
 // remove dig pfh
 [GVAR(digPFH)] call CBA_fnc_removePerFrameHandler;
@@ -44,6 +44,8 @@ GVAR(trenchPlacementData) params ["_dx", "_dy", "_offset"];
 private _basePos = GVAR(trenchPos);
 private _angle = (GVAR(digDirection) + getDir _unit);
 
+[QGVAR(placed), [_unit, _trench]] call CBA_fnc_globalEvent;
+
 // _v1 forward from the player, _v2 to the right, _v3 points away from the ground
 private _v3 = surfaceNormal _basePos;
 private _v2 = [sin _angle, +cos _angle, 0] vectorCrossProduct _v3;
@@ -60,9 +62,9 @@ for [{private _ix = -_dx/2},{_ix <= _dx/2},{_ix = _ix + _dx/3}] do {
         _minzoffset = _minzoffset min ((getTerrainHeightASL _pos) - (_pos select 2));
         #ifdef DEBUG_MODE_FULL
             _pos set [2, getTerrainHeightASL _pos];
-            _pos2 = +_pos;
+            private _pos2 = +_pos;
             _pos2 set [2, getTerrainHeightASL _pos + 1];
-            drawLine3D [ASLtoAGL _pos, ASLtoAGL _pos2, [1,1,0,1]];
+            drawLine3D [ASLToAGL _pos, ASLToAGL _pos2, [1,1,0,1]];
         #endif
     };
 };

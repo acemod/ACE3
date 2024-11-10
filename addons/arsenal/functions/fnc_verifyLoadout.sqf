@@ -1,11 +1,11 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe
- * Verify the provided loadout.
+ * Author: Alganthe, johnb43
+ * Verify the provided loadout: Check what items do not exist and what items aren't available in current arsenal.
  *
  * Arguments:
- * 0: Loadout <ARRAY> (getUnitLoadout format)
+ * 0: Loadout <ARRAY> (CBA Extended Loadout or getUnitLoadout format)
  *
  * Return Value:
  * Verified loadout and missing / unavailable items list and count <ARRAY>
@@ -13,227 +13,97 @@
  * Public: No
 */
 
+#define NOT_IN_ARSENAL !(_name in GVAR(virtualItemsFlat))
+
 params ["_loadout"];
 
-private _weaponCfg = configFile >> "CfgWeapons";
-private _magCfg = configFile >> "CfgMagazines";
-private _vehcCfg = configFile >> "CfgVehicles";
-private _glassesCfg = configFile >> "CfgGlasses";
-private _weaponsArray = GVAR(virtualItems) select IDX_VIRT_WEAPONS;
-private _accsArray = GVAR(virtualItems) select IDX_VIRT_ATTACHEMENTS;
+private _extendedInfo = createHashMap;
 
-private _nullItemsAmount = 0;
-private _unavailableItemsAmount = 0;
+// Check if the provided loadout is a CBA extended loadout
+if (count _loadout == 2) then {
+    _extendedInfo = +(_loadout select 1); // Copy the hashmap to prevent events from modifiyng the profileNamespace extendedInfo
+    if (_extendedInfo isEqualType []) then { // Hashmaps are serialized as arrays, convert back to hashmap
+        _extendedInfo = createHashMapFromArray _extendedInfo;
+        _loadout set [1, _extendedInfo]; // Also fix source variable, technically not needed but doesn't hurt
+    };
+    _loadout = _loadout select 0;
+};
+
+private _name = "";
+private _itemArray = [];
 private _nullItemsList = [];
 private _unavailableItemsList = [];
+private _missingExtendedInfo = [];
 
-private _fnc_weaponCheck = {
-    params ["_dataPath"];
+// Search for all items and check their availability
+private _fnc_filterLoadout = {
+    _this apply {
+        if (_x isEqualType "" && {_x != ""}) then {
+            _name = _x call EFUNC(common,getConfigName);
 
-    if (count _dataPath != 0) then {
-        {
-            if (_x isEqualType "") then {
-
-                private _item = _x;
-
-                if (_item != "") then {
-                    if (isClass (_weaponCfg >> _item)) then {
-                        if !(CHECK_WEAPON_OR_ACC) then {
-
-                            _unavailableItemsList pushBackUnique _item;
-                            _dataPath set [_forEachIndex, ""];
-                            _unavailableItemsAmount = _unavailableItemsAmount + 1;
-                        };
-                    } else {
-
-                        _nullItemsList pushBackUnique _item;
-                        _dataPath set [_forEachIndex, ""];
-                        _nullItemsAmount = _nullItemsAmount + 1;
-                    };
-                };
-
+            // If item doesn't exist in config, "" is returned
+            if (_name == "") then {
+                _nullItemsList pushBack _x;
             } else {
-
-                if (count _x != 0) then {
-                    private _mag = _x select 0;
-
-                    if (isClass (_magCfg >> _mag)) then {
-                        if !(_mag in (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL)) then {
-
-                            _unavailableItemsList pushBackUnique _mag;
-                            _dataPath set [_forEachIndex, []];
-                            _unavailableItemsAmount = _unavailableItemsAmount + 1;
-                        };
-                    } else {
-
-                        _nullItemsList pushBackUnique _mag;
-                        _dataPath set [_forEachIndex, []];
-                        _nullItemsAmount = _nullItemsAmount + 1;
-                    };
-                };
-            };
-        } foreach _dataPath;
-    };
-};
-
-for "_dataIndex" from 0 to 9 do {
-    switch (_dataIndex) do {
-        case 0;
-        case 1;
-        case 2;
-        case 8: {
-            [_loadout select _dataIndex] call _fnc_weaponCheck;
-        };
-
-        case 3;
-        case 4;
-        case 5: {
-            private _containerArray = (_loadout select _dataIndex);
-
-            if (count _containerArray != 0) then {
-
-                _containerArray params ["_item", "_containerItems"];
-
-                if (isClass (_vehcCfg >> _item) || {isClass (_weaponCfg >> _item)}) then {
-                    if !(CHECK_CONTAINER) then {
-
-                        _unavailableItemsList pushBackUnique _item;
-                        _loadout set [_dataIndex, []];
-                        _unavailableItemsAmount = _unavailableItemsAmount + 1;
-                    } else {
-
-                        if (count _containerItems != 0) then {
-                            {
-                                private _currentIndex = _forEachIndex;
-
-                                switch (count _x) do {
-                                    case 2: {
-
-                                        if ((_x select 0) isEqualType "") then {
-
-                                            private _item = _x select 0;
-
-                                            if (CLASS_CHECK_ITEM) then {
-                                                if !(CHECK_CONTAINER_ITEMS) then {
-
-                                                    _unavailableItemsList pushBackUnique _item;
-                                                    ((_loadout select _dataIndex) select 1) set [_currentIndex, []];
-                                                    _unavailableItemsAmount = _unavailableItemsAmount + 1;
-                                                };
-                                            } else {
-
-                                                _nullItemsList pushBackUnique _item;
-                                                ((_loadout select _dataIndex) select 1) set [_currentIndex, []];
-                                                _nullItemsAmount = _nullItemsAmount + 1;
-                                            };
-                                        } else {
-
-                                            [(((_loadout select _dataIndex) select 1) select _currentIndex) select 0] call _fnc_weaponCheck;
-                                        };
-                                    };
-
-                                    case 3: {
-                                        private _item = _x select 0;
-
-                                        if (isClass (_magCfg >> _item)) then {
-                                            if !(
-                                                    _item in (GVAR(virtualItems) select IDX_VIRT_ITEMS_ALL) ||
-                                                    _item in (GVAR(virtualItems) select 15) ||
-                                                    _item in (GVAR(virtualItems) select 16)
-                                                ) then {
-
-                                                _unavailableItemsList pushBackUnique _item;
-                                                ((_loadout select _dataIndex) select 1) set [_currentIndex, []];
-                                                _unavailableItemsAmount = _unavailableItemsAmount + 1;
-                                            };
-                                        } else {
-
-                                            _nullItemsList pushBackUnique _item;
-                                            ((_loadout select _dataIndex) select 1) set [_currentIndex, []];
-                                            _nullItemsAmount = _nullItemsAmount + 1;
-                                        };
-                                    };
-                                };
-                            } foreach _containerItems;
+                // Check if item or its base weapon exist in the arsenal
+                if NOT_IN_ARSENAL then {
+                    _name = _name call FUNC(baseWeapon);
+                    if NOT_IN_ARSENAL then {
+                        // This could be a backpack
+                        private _temp = [_name, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
+                        if (_temp == "") then { // It's not
+                            _unavailableItemsList pushBack _name;
+                            _name = "";
+                        } else { // It is
+                            _name = _temp;
+                            // Check if it's available again
+                            if NOT_IN_ARSENAL then {
+                                _unavailableItemsList pushBack _name;
+                                _name = "";
+                            };
                         };
                     };
-                } else {
-
-                    _nullItemsList pushBackUnique _item;
-                    _loadout set [_dataIndex, []];
-                    _nullItemsAmount = _nullItemsAmount + 1;
                 };
             };
-        };
 
-        case 6: {
-            private _item = _loadout select _dataIndex;
-
-            if (_item != "") then {
-
-                if (isClass (_weaponCfg >> _item)) then {
-
-                    if !(_item in (GVAR(virtualItems) select IDX_VIRT_HEADGEAR)) then {
-
-                        _unavailableItemsList pushBackUnique _item;
-                        _loadout set [_dataIndex, ""];
-                        _unavailableItemsAmount = _unavailableItemsAmount + 1;
-                    };
-                } else {
-
-                    _nullItemsList pushBackUnique _item;
-                    _loadout set [_dataIndex, ""];
-                    _nullItemsAmount = _nullItemsAmount + 1;
+            _name
+        } else {
+            // Handle arrays
+            if (_x isEqualType []) then {
+                _itemArray = _x call _fnc_filterLoadout;
+                // If "" is given as a container, an error is thrown, therefore, filter out all unavailable/null containers
+                if (count _itemArray == 2 && {(_itemArray select 0) isEqualTo ""} && {(_itemArray select 1) isEqualType []}) then {
+                    _itemArray = [];
                 };
-            };
-        };
-
-        case 7: {
-            private _item = _loadout select _dataIndex;
-
-            if (_item != "") then {
-
-                if (isClass (_glassesCfg >> _item)) then {
-
-                    if !(_item in (GVAR(virtualItems) select IDX_VIRT_GOGGLES)) then {
-
-                        _unavailableItemsList pushBackUnique _item;
-                        _loadout set [_dataIndex, ""];
-                        _unavailableItemsAmount = _unavailableItemsAmount + 1;
-                    };
-                } else {
-
-                    _nullItemsList pushBackUnique _item;
-                    _loadout set [_dataIndex, ""];
-                    _nullItemsAmount = _nullItemsAmount + 1;
-                };
-            };
-        };
-
-        case 9: {
-            for "_subIndex" from 0 to 5 do {
-                private _item = (_loadout select _dataIndex) select _subIndex;
-
-                if (_item != "") then {
-
-                    if (isClass (_weaponCfg >> _item)) then {
-
-                        if !(CHECK_ASSIGNED_ITEMS) then {
-
-                            _unavailableItemsList pushBackUnique _item;
-                            (_loadout select _dataIndex) set [_subIndex, ""];
-                            _unavailableItemsAmount = _unavailableItemsAmount + 1;
-                        };
-                    } else {
-
-                        _nullItemsList pushBackUnique _item;
-                        (_loadout select _dataIndex) set [_subIndex, ""];
-                        _nullItemsAmount = _nullItemsAmount + 1;
-                    };
-                };
+                _itemArray
+            } else {
+                // All other types and empty strings
+                _x
             };
         };
     };
 };
 
-[_loadout, _nullItemsAmount, _unavailableItemsAmount, _nullItemsList, _unavailableItemsList]
+// Convert loadout to config case and replace null/unavailable items
+// Loadout might come from a different modpack, which might have different config naming
+_loadout = _loadout call _fnc_filterLoadout;
+
+{
+    private _class = _extendedInfo getOrDefault [_x, ""];
+    private _cache = missionNamespace getVariable (_x + "Cache");
+
+    // Previously voices were stored in lower case (speaker command returns lower case), so this is to make old loadouts compatible
+    if (_class != "" && {_x == QGVAR(voice)}) then {
+        _class = _class call EFUNC(common,getConfigName);
+    };
+    if (_class != "" && {!(_class in _cache)}) then {
+        _missingExtendedInfo pushBack [_x, _class];
+        _extendedInfo deleteAt _x;
+    };
+} forEach [QGVAR(insignia), QGVAR(face), QGVAR(voice)];
+
+// Raise event for 3rd party: mostly for handling extended info
+// Pass all items, including duplicates
+[QGVAR(loadoutVerified), [_loadout, _extendedInfo, _nullItemsList, _unavailableItemsList, _missingExtendedInfo]] call CBA_fnc_localEvent;
+
+[[_loadout, _extendedInfo], _nullItemsList arrayIntersect _nullItemsList, _unavailableItemsList arrayIntersect _unavailableItemsList, _missingExtendedInfo]

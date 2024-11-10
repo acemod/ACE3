@@ -12,7 +12,7 @@
             <Hungarian>Gránátkezelési mód váltása</Hungarian>
             <Italian>Cambia tipo di granata</Italian>
             <Portuguese>Alternar Modo de Granada</Portuguese>
-            <Japanese>投てき方法を切り替え</Japanese>
+            <Japanese>投擲方法を切り替え</Japanese>
             <Korean>투척 방법 전환</Korean>
             <Chinesesimp>切换投掷模式</Chinesesimp>
             <Chinese>切換投擲模式</Chinese>
@@ -103,6 +103,16 @@
             <Chinese>下丟投擲</Chinese>
             <Turkish>Bombayı Yere Bırak</Turkish>
         </Key>
+        <Key ID="STR_ACE_Grenades_RollGrenadeDisabled">
+            <English>Can't roll this grenade, switched to %1</English>
+            <Japanese>この手榴弾は転がせません、 %1 に切り替えます</Japanese>
+            <Russian>Эта граната не может быть брошена, переключитесь на %1</Russian>
+            <Korean>이 수류탄은 굴릴 수 없습니다. %1(으)로 전환되었습니다.</Korean>
+            <German>Granate kann nicht rollen, zu %1 gewechselt</German>
+            <Italian>Granata non può rotolare, cambiato a %1</Italian>
+            <French>Grenade ne peut pas rouler, passé à %1</French>
+            <Spanish>No se puede rodar esta granada, cambiando a %1</Spanish>
+        </Key>
         <Key ID="STR_ACE_Grenades_M84_Name">
             <English>M84 Stun Grenade</English>
             <German>M84 Blendgranate</German>
@@ -149,7 +159,7 @@
             <Italian>Anche conosciuta come flashbang. Causa accecamento immediato, sensazioni di sposatezza, mancanza d'equilibrio e disturbi al timpano.</Italian>
             <Portuguese>Também conhecida como flashbang. Causa uma clarão imediato, cegueira, surdez, zumbido e distúrbio no tímpano.</Portuguese>
             <Japanese>フラッシュバンとも知られています。即時に失明と難聴、耳鳴り、内耳障害を引き起こします。</Japanese>
-            <Korean>플래시뱅이라고도 알려져있습니다. 사용 즉시 섬광으로 인한 시력장애, 청각장애, 이명, 내이기관방해를 유발합니다.</Korean>
+            <Korean>플래시뱅이라고도 알려져 있습니다. 사용 즉시 섬광으로 인한 시력장애, 청각장애, 이명, 내이기관방해를 유발합니다.</Korean>
             <Chinesesimp>也被称为闪光弹，会造成暂时性失明，耳聋，耳鸣等效果。</Chinesesimp>
             <Chinese>也被稱為閃光彈，會造成暫時性失明，耳聾，耳鳴等效果</Chinese>
             <Turkish>Flashbang olarak da bilinir. Ani flaş körlüğü, sağırlık, kulak çınlaması ve iç kulak rahatsızlığına neden olur.</Turkish>
@@ -195,10 +205,10 @@
             <Italian>M127A1 Bengala (Bianco)</Italian>
             <Polish>Flara ręczna sygnałowa M127A1 (biała)</Polish>
             <Portuguese>M127A1 Sinalizador (Branco)</Portuguese>
-            <Russian>M127A1 Фальшфейер (Белый)</Russian>
+            <Russian>M127A1 Фальшфейер (белый)</Russian>
             <Spanish>Bengala M127A1 (Blanca)</Spanish>
             <French>M127A1 Feu à main (Blanc)</French>
-            <Japanese>M127A1 信号弾 (白)</Japanese>
+            <Japanese>M127A1 手持ち式信号弾 (白)</Japanese>
             <Korean>M127A1 수타식 신호탄 (하얀색)</Korean>
             <Chinesesimp>M127A1 手持式信号弹（白色）</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (白色)</Chinese>
@@ -212,10 +222,10 @@
             <Italian>M127A1 Bengala (Rosso)</Italian>
             <Polish>Flara ręczna sygnałowa M127A1 (czerwona)</Polish>
             <Portuguese>M127A1 Sinalizador (Vermelho)</Portuguese>
-            <Russian>M127A1 Фальшфейер (Красный)</Russian>
+            <Russian>M127A1 Фальшфейер (красный)</Russian>
             <Spanish>Bengala M127A1 (Roja)</Spanish>
             <French>M127A1 Feu à main (Rouge)</French>
-            <Japanese>M127A1 信号弾 (赤)</Japanese>
+            <Japanese>M127A1 手持ち式信号弾 (赤)</Japanese>
             <Korean>M127A1 수타식 신호탄 (빨간색)</Korean>
             <Chinesesimp>M127A1 手持式信号弹（红色）</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (紅色)</Chinese>
@@ -229,10 +239,10 @@
             <Italian>M127A1 Bengala (Verde)</Italian>
             <Polish>Flara ręczna sygnałowa M127A1 (zielona)</Polish>
             <Portuguese>M127A1 Sinalizador (Verde)</Portuguese>
-            <Russian>M127A1 Фальшфейер (Зелёный)</Russian>
+            <Russian>M127A1 Фальшфейер (зелёный)</Russian>
             <Spanish>Bengala M127A1 (Verde)</Spanish>
             <French>M127A1 Feu à main (Vert)</French>
-            <Japanese>M127A1 信号弾 (緑)</Japanese>
+            <Japanese>M127A1 手持ち式信号弾 (緑)</Japanese>
             <Korean>M127A1 수타식 신호탄 (초록색)</Korean>
             <Chinesesimp>M127A1 手持式信号弹（绿色）</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (綠色)</Chinese>
@@ -246,10 +256,10 @@
             <Italian>M127A1 Bengala (Giallo)</Italian>
             <Polish>Flara ręczna sygnałowa M127A1 (żółta)</Polish>
             <Portuguese>M127A1 Sinalizador (Amarelo)</Portuguese>
-            <Russian>M127A1 Фальшфейер (Жёлтый)</Russian>
+            <Russian>M127A1 Фальшфейер (жёлтый)</Russian>
             <Spanish>Bengala M127A1 (Amarilla)</Spanish>
             <French>M127A1 Feu à main (Jaune)</French>
-            <Japanese>M127A1 信号弾 (黄)</Japanese>
+            <Japanese>M127A1 手持ち式信号弾 (黄)</Japanese>
             <Korean>M127A1 수타식 신호탄 (노란색)</Korean>
             <Chinesesimp>M127A1 手持式信号弹（黄色）</Chinesesimp>
             <Chinese>M127A1 手持式信號彈 (黃色)</Chinese>
@@ -263,10 +273,10 @@
             <Italian>Bengala (Bianco)</Italian>
             <Polish>Flara ręczna (biała)</Polish>
             <Portuguese>Sinalizador de Mão (Branco)</Portuguese>
-            <Russian>Фальшфейер (Белый)</Russian>
+            <Russian>Фальшфейер (белый)</Russian>
             <Spanish>Bengala (Blanca)</Spanish>
             <French>Feu à main (Blanc)</French>
-            <Japanese>白の手持ち式信号弾</Japanese>
+            <Japanese>白色の手持ち式信号弾</Japanese>
             <Korean>하얀색 불꽃신호기</Korean>
             <Chinesesimp>白色手持式信号弹</Chinesesimp>
             <Chinese>白色手持式信號彈</Chinese>
@@ -280,10 +290,10 @@
             <Italian>Bengala (Rosso)</Italian>
             <Polish>Flara ręczna (czerwona)</Polish>
             <Portuguese>Sinalizador de Mão (Vermelho)</Portuguese>
-            <Russian>Фальшфейер (Красный)</Russian>
+            <Russian>Фальшфейер (красный)</Russian>
             <Spanish>Bengala (Roja)</Spanish>
             <French>Feu à main (Rouge)</French>
-            <Japanese>赤の手持ち式信号弾</Japanese>
+            <Japanese>赤色の手持ち式信号弾</Japanese>
             <Korean>빨간색 불꽃신호기</Korean>
             <Chinesesimp>红色手持式信号弹</Chinesesimp>
             <Chinese>紅色手持式信號彈</Chinese>
@@ -297,10 +307,10 @@
             <Italian>Bengala (Verde)</Italian>
             <Polish>Flara ręczna (zielona)</Polish>
             <Portuguese>Sinalizador de Mão (Verde)</Portuguese>
-            <Russian>Фальшфейер (Зелёный)</Russian>
+            <Russian>Фальшфейер (зелёный)</Russian>
             <Spanish>Bengala (Verde)</Spanish>
             <French>Feu à main (Vert)</French>
-            <Japanese>緑の手持ち式信号弾</Japanese>
+            <Japanese>緑色の手持ち式信号弾</Japanese>
             <Korean>초록색 불꽃신호기</Korean>
             <Chinesesimp>绿色手持式信号弹</Chinesesimp>
             <Chinese>綠色手持式信號彈</Chinese>
@@ -314,10 +324,10 @@
             <Italian>Bengala (Giallo)</Italian>
             <Polish>Flara ręczna (żółta)</Polish>
             <Portuguese>Sinalizador de Mão (Amarelo)</Portuguese>
-            <Russian>Фальшфейер (Жёлтый)</Russian>
+            <Russian>Фальшфейер (жёлтый)</Russian>
             <Spanish>Bengala (Amarilla)</Spanish>
             <French>Feu à main (Jaune)</French>
-            <Japanese>黄の手持ち式信号弾</Japanese>
+            <Japanese>黄色の手持ち式信号弾</Japanese>
             <Korean>노란색 불꽃신호기</Korean>
             <Chinesesimp>黄色手持式信号弹</Chinesesimp>
             <Chinese>黃色手持式信號彈</Chinese>
@@ -332,7 +342,7 @@
             <Italian>M127A1 (Bianco)</Italian>
             <Polish>M127A1 (biała)</Polish>
             <Portuguese>M127A1 (Branco)</Portuguese>
-            <Russian>M127A1 (Белый)</Russian>
+            <Russian>M127A1 (белый)</Russian>
             <Spanish>M127A1 (Blanca)</Spanish>
             <Japanese>M127A1 (白)</Japanese>
             <Korean>M127A1 (하양)</Korean>
@@ -349,7 +359,7 @@
             <Italian>M127A1 (Rosso)</Italian>
             <Polish>M127A1 (czerwona)</Polish>
             <Portuguese>M127A1 (Vermelho)</Portuguese>
-            <Russian>M127A1 (Красный)</Russian>
+            <Russian>M127A1 (красный)</Russian>
             <Spanish>M127A1 (Roja)</Spanish>
             <Japanese>M127A1 (赤)</Japanese>
             <Korean>M127A1 (빨강)</Korean>
@@ -366,7 +376,7 @@
             <Italian>M127A1 (Verde)</Italian>
             <Polish>M127A1 (zielona)</Polish>
             <Portuguese>M127A1 (Verde)</Portuguese>
-            <Russian>M127A1 (Зелёный)</Russian>
+            <Russian>M127A1 (зелёный)</Russian>
             <Spanish>M127A1 (Verde)</Spanish>
             <Japanese>M127A1 (緑)</Japanese>
             <Korean>M127A1 (초록)</Korean>
@@ -383,7 +393,7 @@
             <Italian>M127A1 (Giallo)</Italian>
             <Polish>M127A1 (żółta)</Polish>
             <Portuguese>M127A1 (Amarelo)</Portuguese>
-            <Russian>M127A1 (Жёлтый)</Russian>
+            <Russian>M127A1 (жёлтый)</Russian>
             <Spanish>M127A1 (Amarilla)</Spanish>
             <Japanese>M127A1 (黄)</Japanese>
             <Korean>M127A1 (노랑)</Korean>
@@ -394,7 +404,7 @@
         <Key ID="STR_ACE_Grenades_Incendiary_Name">
             <English>AN-M14 Incendiary Grenade</English>
             <German>AN-M14 Brandsatz</German>
-            <Russian>AN-M14 Зажигательная граната</Russian>
+            <Russian>AN-M14 зажигательная граната</Russian>
             <Japanese>AN-M14 焼夷手榴弾</Japanese>
             <Polish>Granat zapalający AN-M14</Polish>
             <Korean>AN-M14 소이 수류탄</Korean>
@@ -461,7 +471,7 @@
             <Polish>M583 Flara oświetlająca (Biała)</Polish>
             <Italian>M583 Granata con bengala (Bianca)</Italian>
             <Japanese>M583 照明弾 (白)</Japanese>
-            <Russian>M583 Осветит. ракета (Белая)</Russian>
+            <Russian>M583 Осветит. ракета (белая)</Russian>
             <Portuguese>M583 Sinalizador de Iluminação (Branco)</Portuguese>
             <Chinese>M583 照明彈（白色）</Chinese>
             <Chinesesimp>M583 照明弹（白色）</Chinesesimp>
@@ -477,7 +487,7 @@
             <Polish>M662 Flara oświetlająca (Czerwona)</Polish>
             <Italian>M662 Granata con bengala (Rossa)</Italian>
             <Japanese>M662 照明弾 (赤)</Japanese>
-            <Russian>M662 Осветит. ракета (Красная)</Russian>
+            <Russian>M662 Осветит. ракета (красная)</Russian>
             <Portuguese>M662 Sinalizador de Iluminação (Vermelho)</Portuguese>
             <Chinese>M662 照明彈（紅色）</Chinese>
             <Chinesesimp>M662 照明弹（红色）</Chinesesimp>
@@ -493,7 +503,7 @@
             <Polish>M661 Flara oświetlająca (Zielona)</Polish>
             <Italian>M661 Granata con bengala (Verde)</Italian>
             <Japanese>M661 照明弾 (緑)</Japanese>
-            <Russian>M661 Осветит. ракета (Зеленая)</Russian>
+            <Russian>M661 Осветит. ракета (зелёная)</Russian>
             <Portuguese>M661 Sinalizador de Iluminação (Verde)</Portuguese>
             <Chinese>M661 照明彈（綠色）</Chinese>
             <Chinesesimp>M661 照明弹（绿色）</Chinesesimp>
@@ -520,97 +530,111 @@
             <Korean>종류: 낙하식 적외선 조명탄</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_40mm_flare_ir">
-            <English>M992 Illumination IR Flare</English>
-            <German>M992 IR Leuchtfackel</German>
-            <Polish>M992 Oświetlająca flara IR</Polish>
-            <Italian>M992 Granata con infrarosso</Italian>
-            <Japanese>M992 赤外線照明弾</Japanese>
-            <Russian>M992 ИК-осветительная ракета</Russian>
-            <Portuguese>M992 Sinalizador de Iluminação Infravermelho</Portuguese>
+            <English>M992 Illumination Flare (IR)</English>
+            <German>M992 Leuchtfackel (IR)</German>
+            <Polish>M992 Flara oświetlająca (IR)</Polish>
+            <Italian>M992 Granata con bengala (Infrarosso)</Italian>
+            <Japanese>M992 照明弾 (赤外線)</Japanese>
+            <Russian>M992 Осветит. ракета (ИК)</Russian>
+            <Portuguese>M992 Sinalizador de Iluminação (Infravermelho)</Portuguese>
             <Chinese>M992 紅外線照明彈</Chinese>
             <Chinesesimp>M992 红外照明弹</Chinesesimp>
-            <French>M992 Fusée IR</French>
-            <Czech>M992 Infračervená světlice</Czech>
-            <Turkish>M992 Illumination IR Flare</Turkish>
-            <Spanish>M992 Bengala de iluminación infrarroja</Spanish>
-            <Korean>M992 적외선 조명탄</Korean>
+            <French>M992 Fusée éclairante (IR)</French>
+            <Czech>M992 Světlice (Infračervená)</Czech>
+            <Turkish>M992 Aydınlatma Fişeği (IR)</Turkish>
+            <Spanish>M992 Bengala de iluminación (Infrarroja)</Spanish>
+            <Korean>M992 조명탄 (적외선)</Korean>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Remote_Mag_Throwable">
             <English>Explosive Satchel (Throwable)</English>
-            <Russian>Ранец со взрывчаткой (Метательный)</Russian>
+            <Russian>Ранец со взрывчаткой (метательный)</Russian>
             <French>Charge en sacoche (lançable)</French>
-            <Japanese>梱包爆薬 (投てき仕様)</Japanese>
+            <Japanese>梱包爆薬 (投擲仕様)</Japanese>
             <Spanish>Carga de mochila explosiva (Lanzable)</Spanish>
             <Polish>Pakiet ładunków wybuchowych (Rzucany)</Polish>
             <German>Rucksackladung (Werfbar)</German>
+            <Italian>Carica da Demolizioni (Lanciabile)</Italian>
             <Chinesesimp>炸药包（可投掷）</Chinesesimp>
             <Korean>폭파 장약 (투척)</Korean>
+            <Portuguese>Sacola Explosiva (Arremessável)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_Description">
             <English>Type: Charge&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Things that need to die</English>
             <Russian>Тип: Взрывчатка&lt;br /&gt;Боеприпасы 1&lt;br /&gt;Применение: На предметах, которые должны быть уничтожены</Russian>
             <French>Type : Charge&lt;br /&gt;Munitions : 1&lt;br /&gt;Application : à balancer sur des trucs qui doivent mourir</French>
+            <Italian>Type: Carica&lt;br /&gt;Colpi: 1&lt;br /&gt;Usata su: cose che devono morire</Italian>
             <Japanese>種類: 爆薬&lt;br /&gt;弾数: 1&lt;br /&gt;次で使用: 破壊すべき物に</Japanese>
             <Spanish>Tipo: Carga&lt;br /&gt;Unidades: 1&lt;br /&gt;Usada: Cosas que necesitan morir</Spanish>
             <Polish>Typ: Ładunek&lt;br/&gt;Naboje: 1&lt;br/&gt;Użycie: Na rzeczach które mają zginąć</Polish>
             <German>Typ: Ladung &lt;br/&gt;Patronen:1&lt;br/&gt;Benutzt für: Dinge die Sterben müssen</German>
             <Chinesesimp>类型：炸药&lt;br /&gt;数量：1&lt;br /&gt;用于：需要死亡的事物</Chinesesimp>
             <Korean>종류: 장약&lt;br /&gt;갯수: 1&lt;br /&gt;사용처: 죽여야 할 곳에</Korean>
+            <Portuguese>Tipo: Carga&lt;br /&gt;Munições: 1&lt;br /&gt;Utilizada em: Coisas que devem morrer</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_SatchelCharge_LibText">
             <English>An explosive satchel that is throwable. 7 second fixed fuse</English>
             <Russian>Ранец со взрывчаткой. Детонация через 7 секунд</Russian>
             <French>Charge explosive lançable. Détonation après 7 secondes.</French>
-            <Japanese>投げられる梱包爆薬。起爆までの時間は 7 秒間</Japanese>
+            <Italian>Una carica da demolizioni lanciabile. Detona dopo 7 secondi fissi</Italian>
+            <Japanese>投げられる梱包爆薬。起爆まで7秒の固定時限信管付き。</Japanese>
             <Spanish>Carga de mochila explosiva que se puede lanzar. Espoleta fija de 7 segundos</Spanish>
             <Polish>Rzucany pakiet ładunków wybuchowych. 7 sekundowy zapalnik</Polish>
             <German>Werfbare Rucksackladung. 7 Sekunden Zeitzünder</German>
             <Chinesesimp>一个可投掷的炸药包。7秒定时引信</Chinesesimp>
             <Korean>던질 수 있는 폭파 장약입니다. 던지고 7초 후에 터집니다</Korean>
+            <Portuguese>Uma sacola explosiva que pode ser arremessada. Pavio de 7 segundos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_Remote_Mag_Throwable">
             <English>Explosive Charge (Throwable)</English>
-            <Russian>Заряд со взрывчаткой (Метательный)</Russian>
+            <Russian>Заряд со взрывчаткой (метательный)</Russian>
             <French>Charge explosive (lançable)</French>
-            <Japanese>爆薬ブロック (投てき仕様)</Japanese>
+            <Italian>Carica Esplosiva (Lanciabile)</Italian>
+            <Japanese>爆薬ブロック (投擲仕様)</Japanese>
             <Spanish>Carga explosiva (Lanzable)</Spanish>
             <Polish>Ładunek wybuchowy (Rzucany)</Polish>
             <German>Sprengladung (Werfbar)</German>
             <Chinesesimp>炸药块（可投掷）</Chinesesimp>
             <Korean>폭파 블럭 (투척)</Korean>
+            <Portuguese>Carga Explosiva (Arremessável)</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_DemoCharge_LibText">
             <English>An explosive charge that is throwable. 7 second fixed fuse</English>
             <Russian>Заряд со взрывчаткой. Детонация через 7 секунд</Russian>
             <French>Bloc explosif lançable. Détonation après 7 secondes.</French>
-            <Japanese>投げられる爆薬ブロック。起爆までの時間は 7 秒間</Japanese>
+            <Italian>Una carica esplosiva lanciabile. Detona dopo 7 secondi fissi</Italian>
+            <Japanese>投げられる爆薬ブロック。起爆まで7秒の固定時限信管付き。</Japanese>
             <Spanish>Carga explosiva que se puede lanzar. Espoleta fija de 7 segundos</Spanish>
             <Polish>Rzucany ładunkek wybuchowy. 7 sekundowy zapalnik</Polish>
             <German>Werfbare Sprengladung. 7 Sekunden Zeitzünder</German>
             <Chinesesimp>一个可投掷的炸药块。7秒定时引信</Chinesesimp>
             <Korean>던질 수 있는 폭파 블럭입니다. 던지고 7초 후에 터집니다</Korean>
+            <Portuguese>Uma carga explosiva que pode ser arremessada. Pavio de 7 segundos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_Convert_Fuse">
             <English>Convert to short fuse</English>
             <Russian>Применить фитиль</Russian>
             <French>Appliquer une mèche</French>
+            <Italian>Converti a spoletta corta</Italian>
             <Japanese>短信管へ変更</Japanese>
             <Spanish>Convertir a espoleta corta</Spanish>
             <Polish>Konwertuj na krótki zapalnik</Polish>
             <German>Zündschnur verkürzen</German>
             <Chinesesimp>切换为短引信</Chinesesimp>
             <Korean>단축 신관으로 바꾸기</Korean>
+            <Portuguese>Converter para pavio curto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_Remove_Fuse">
             <English>Remove short fuse</English>
             <Russian>Убрать фитиль</Russian>
             <French>Retirer la mèche</French>
+            <Italian>Rimuovi spoletta corta</Italian>
             <Japanese>短信管を削除</Japanese>
             <Spanish>Quitar espoleta corta</Spanish>
             <Polish>Usuń krótki zapalnik</Polish>
             <German>Kurze Zündschnur entfernen</German>
             <Chinesesimp>去除短引信</Chinesesimp>
             <Korean>단축 신관 제거하기</Korean>
+            <Portuguese>Remover pavio curto</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_Settings_DisplayName">
             <English>ACE Grenades</English>
@@ -632,23 +656,27 @@
             <English>Allow Explosive Conversion</English>
             <Russian>Разрешить фитили</Russian>
             <French>Autoriser les mèches (charges lançables)</French>
-            <Japanese>爆薬変更を許可</Japanese>
+            <Italian>Abilita conversione a lanciabili</Italian>
+            <Japanese>爆発物の変換を許可</Japanese>
             <Spanish>Permitir conversión de explosivos</Spanish>
             <Polish>Pozwól na konwersję ładunków wybuchowych</Polish>
             <German>Erlaube die Umwandlung von Sprengstoffen</German>
             <Chinesesimp>允许转换炸药</Chinesesimp>
-            <Korean>폭발물 변경 가능여부</Korean>
+            <Korean>폭발물 변환 가능여부</Korean>
+            <Portuguese>Permitir Conversão de Explosivos</Portuguese>
         </Key>
         <Key ID="STR_ACE_Grenades_convertExplosives_Description">
             <English>Allow converting explosives to throwables</English>
             <Russian>Разрешает преобразовывать взрывчатку в метательные снаряды</Russian>
             <French>Cette option permet de rendre les charges explosives lançables, à la manière des grenades.\nPour celà, ouvrir l'inventaire et double-cliquer sur les charges, afin de leur appliquer une mèche.\nLa mèche peut se retirer en suivant la même procédure.</French>
-            <Japanese>爆発物を投てき仕様へ交換できるようにします。</Japanese>
+            <Italian>Permette la conversione di certi esplosivi piazzabili a esplosivi lanciabili.</Italian>
+            <Japanese>このオプションを使用すると、爆発物が手榴弾のように投擲可能になります。\nこれを行うには、インベントリを開いて爆発物をダブルクリックして、爆発物を短信管に変更します。\n信管は同じ手順で取り外すことができます。</Japanese>
             <Spanish>Permitir convertir explosivos a lanzables</Spanish>
             <Polish>Zezwala na konwersje ładunków wybuchowych na rzucane wersje</Polish>
             <German>Erlaube die Umwandlung von Sprengstoffen in werfbare Ladungen</German>
             <Chinesesimp>允许将炸药转换为可投掷物</Chinesesimp>
-            <Korean>폭발물을 던질 수 있게 개조를 허락합니다</Korean>
+            <Korean>폭발물을 투척무기로 변환할 수 있도록 허용합니다.</Korean>
+            <Portuguese>Permitir conversão de explosivos em arremessáveis</Portuguese>
         </Key>
     </Package>
 </Project>

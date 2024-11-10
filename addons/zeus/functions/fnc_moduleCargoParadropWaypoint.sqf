@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the paradrop cargo scripted waypoint (Scheduled Environment)
@@ -22,8 +22,8 @@ TRACE_2("moduleCargoParadropWaypoint",_vehicleGroup,_wpPos);
 private _vehicle = vehicle leader _vehicleGroup;
 private _commander = driver _vehicle;
 private _cargo = _vehicle getVariable [QEGVAR(cargo,loaded), []];
-if (!(_vehicle isKindOf "Air")) exitWith {WARNING_1("not in a air vehicle",typeOf _vehicle); true};
-if (_cargo isEqualTo []) exitWith {WARNING_1("no cargo",_cargo); true};
+if !(_vehicle isKindOf "Air") exitWith {WARNING_1("not in a air vehicle %1",typeOf _vehicle); true};
+if (_cargo isEqualTo []) exitWith {WARNING_1("no cargo %1",_cargo); true};
 
 private _previousSpeedMode = speedMode _vehicleGroup;
 private _nextMoveUpdate = -1;
@@ -48,7 +48,7 @@ waitUntil {
 };
 TRACE_2("Finished primary movement",_vehicle distance2D _wpPos,_closeEnoughTicks);
 
-if ((!alive _vehicle) || {!alive _commander}) exitWith {TRACE_2("died",alive _vehicle, alive _commander); true};
+if ((!alive _vehicle) || {!alive _commander}) exitWith {TRACE_2("died",alive _vehicle,alive _commander); true};
 if (((getPos _vehicle) select 2) < 25) exitWith {TRACE_1("too low",getPos _vehicle); true};
 
 // Fly level and straight

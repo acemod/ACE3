@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, esteldunedain
  * Creates a tag and handle its destruction. Only execute on the server.
@@ -10,6 +10,7 @@
  * 3: Object it should be tied to <OBJECT>
  * 4: Unit that created the tag <OBJECT>
  * 5: Material of the tag <STRING> (Optional)
+ * 6: Vehicle Tag <BOOL> (Optional)
  *
  * Return Value:
  * Tag created <BOOL>
@@ -20,12 +21,20 @@
  * Public: No
  */
 
-params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit", ["_material","",[""]], ["_tagModel", "UserTexture1m_F", [""]]];
+params ["_tagPosASL", "_vectorDirAndUp", "_texture", "_object", "_unit", ["_material","",[""]], ["_tagModel", "UserTexture1m_F", [""]], ["_isVehicleTag", false, [false]]];
 TRACE_5("createTag:",_tagPosASL,_vectorDirAndUp,_texture,_object,_unit);
 
 if (_texture == "") exitWith {
     ERROR_1("%1 is not a valid tag texture.",_texture);
     false
+};
+
+if (_isVehicleTag) exitWith {
+    TRACE_3("tagging vehicle",_object,typeOf _object,_texture);
+    _object setObjectTextureGlobal [getText (configOf _object >> "selectionClan"), _texture];
+    _object setVariable [QGVAR(hasTag), true, true];
+    // if (_material != "") then { _object setObjectMaterialGlobal ["clan", _material] }; // ??
+    ["ace_tagCreated", [objNull, _texture, _object, _unit]] call CBA_fnc_globalEvent;
 };
 
 private _tag = createSimpleObject [_tagModel, _tagPosASL];
@@ -59,7 +68,7 @@ if (_object getVariable [QGVAR(testVar), false]) then {
         if (_selection == "" && _damage >= 1) then {
             {
                 deleteVehicle _x;
-            } foreach (_object getVariable [QGVAR(attachedTags), []]);
+            } forEach (_object getVariable [QGVAR(attachedTags), []]);
             _object setVariable [QGVAR(attachedTags), []];
         };
     }];

@@ -1,35 +1,37 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe
  * Accuracy bar statement.
  *
  * Arguments:
- * 0: stats array (ARRAY)
- * 1: item config path (CONFIG)
- * 2: Args
- *  2.1: Stat limits (ARRAY of BOOL)
- *  2.2: Bar limits (ARRAY of SCALAR)
+ * 0: Not used
+ * 1: Item config path <CONFIG>
+ * 2: Args <ARRAY>
+ * - 0: Stat limits <ARRAY of BOOLS>
+ * - 1: Bar limits <ARRAY of NUMBERS>
  *
  * Return Value:
- * Number
+ * <NUMBER>
  *
  * Public: No
 */
 
-params ["_stat", "_config", "_args"];
+params ["", "_config", "_args"];
 _args params ["_statMinMax", "_barLimits"];
 
-private _fireModes = getArray (_config >> "modes");
 private _dispersion = [];
 
 {
     if (getNumber (_config >> _x >> "showToPlayer") != 0) then {
         private _n = log (getNumber (_config >> _x >> "dispersion"));
 
-        if (!finite _n) then {_n = 0;};
+        if (!finite _n) then {
+            _n = 0;
+        };
+
         _dispersion pushBackUnique _n;
     };
-} foreach _fireModes;
+} forEach (getArray (_config >> "modes"));
 
 _dispersion sort true;
 

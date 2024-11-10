@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Converts Arma "Position" to ASL
@@ -20,5 +20,5 @@
 if (surfaceIsWater _this) then {
     _this
 } else {
-    ATLtoASL _this
+    ATLToASL _this
 };

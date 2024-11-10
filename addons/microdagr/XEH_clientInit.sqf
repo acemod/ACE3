@@ -35,7 +35,7 @@ private _closeCode = {
 }, ""] call CBA_fnc_addKeybind;
 
 //Add Eventhandler:
-[QEGVAR(vector,rangefinderData), {_this call FUNC(recieveRangefinderData)}] call CBA_fnc_addEventHandler;
+[QEGVAR(vector,rangefinderData), LINKFUNC(recieveRangefinderData)] call CBA_fnc_addEventHandler;
 
 //Global Variables to default:
 GVAR(gpsPositionASL) = [0,0,0];
@@ -53,5 +53,6 @@ GVAR(settingShowAllWaypointsOnMap) = true;
 GVAR(newWaypointPosition) = [];
 GVAR(currentWaypoint) = -1;
 GVAR(rangeFinderPositionASL) = [];
+GVAR(prevWaypointsCount) = 0;
 
 GVAR(mgrsGridZoneDesignator) = format ["%1 %2",EGVAR(common,MGRS_data) select 0, EGVAR(common,MGRS_data) select 1];

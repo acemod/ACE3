@@ -2,8 +2,8 @@
 class ace_explosion_reflection_##range##_##hit: ace_explosion_reflection_base {\
     indirectHitRange = range;\
     indirectHit = hit;\
-    dangerRadiusHit = range*3;\
-    suppressionRadiusHit = range*2;\
+    dangerRadiusHit = QUOTE(range*3);\
+    suppressionRadiusHit = QUOTE(range*2);\
 }
 
 #define ACE_EXPLOSION_RANGE(range)\

@@ -1,5 +1,5 @@
-#include "script_component.hpp"
- /*
+#include "..\script_component.hpp"
+/*
  * Author: PabstMirror
  * Modifies the fortify action, shows current budget.
  *

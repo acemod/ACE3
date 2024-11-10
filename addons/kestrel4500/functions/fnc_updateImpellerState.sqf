@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Updates the Kestrel 4500 Impeller state
@@ -10,6 +10,7 @@
  * None
  *
  * Example:
+ * call ace_kestrel4500_fnc_updateImpellerState
  *
  * Public: No
  */

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Handle the InventoryChanged event.
@@ -19,7 +19,7 @@
 params ["_unit"];
 
 if (_unit getVariable [QGVAR(isPlacing), false]) then {
-    if !("ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))) then {
+    if !(_unit call FUNC(hasEntrenchingTool)) then {
         [_unit] call FUNC(placeCancel);
     };
 };

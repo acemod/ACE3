@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Whether the passed unit has placed any explosives or has a clacker that was used when explosives were placed.
@@ -14,6 +14,5 @@
  *
  * Public: Yes
  */
-// IGNORE_PRIVATE_WARNING(_hasPlacedExplosives);
 
 (count (_this call FUNC(getPlacedExplosives)) > 0)

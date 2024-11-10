@@ -15,6 +15,6 @@ GVAR(laserEmitters) = createHashMap;
 GVAR(trackedLaserTargets) = [];
 GVAR(pfehID) = -1;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

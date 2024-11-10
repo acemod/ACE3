@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  *
@@ -37,6 +37,7 @@ switch (_this select 0) do {
     };
 
     case ("config"): {
+        //IGNORE_PRIVATE_WARNING ["ace_vector_configTemp"];
         GVAR(configTemp) = GVAR(configTemp) + 1;
         if (GVAR(configTemp) > 2) then {GVAR(configTemp) = 0};
 

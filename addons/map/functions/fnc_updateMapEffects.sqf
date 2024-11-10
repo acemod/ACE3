@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Rocko and esteldunedain
  * On map draw, updates the effects
@@ -21,7 +21,7 @@ private _mapCentre = _mapCtrl ctrlMapScreenToWorld [0.5, 0.5];
 
 if (GVAR(mapIllumination)) then {
     //get nearby lighting
-    private _light = [[ACE_player], FUNC(determineMapLight), missionNamespace, QGVAR(mapLight), 0.1] call EFUNC(common,cachedCall);
+    private _light = [ACE_player] call FUNC(determineMapLight);
 
     _light params ["_applyLighting", "_lightLevel"];
 
@@ -34,7 +34,7 @@ if (GVAR(mapShake)) then {
 
     // Only shake map while moving on foot
     private _speed = 0;
-    if ((alive ACE_player) && {vehicle ACE_player == ACE_player}) then {
+    if ((alive ACE_player) && {isNull objectParent ACE_player}) then {
         _speed = vectorMagnitude (velocity ACE_player);
     };
 

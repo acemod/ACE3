@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: MikeMatrix
  * Validate if an array is in the propper color format.
@@ -20,7 +20,7 @@ scopeName "main";
 params ["_colorArray"];
 
 if (isNil "_colorArray") exitWith {false};
-if (!(_colorArray isEqualType [])) exitWith {false};
+if !(_colorArray isEqualType []) exitWith {false};
 if (count _colorArray != 4) exitWith {false};
 
 {

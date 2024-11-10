@@ -1,5 +1,5 @@
 // by commy2
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 
 params ["_wall"];
 

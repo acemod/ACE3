@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Adds an IED to the cellphone list
@@ -29,10 +29,10 @@ private _hasRequired = true;
 private _detonators = [_unit] call FUNC(getDetonators);
 
 {
-    if !(_x in _detonators) exitWith{
+    if !(_x in _detonators) exitWith {
         _hasRequired = false;
     };
-} count _requiredItems;
+} forEach _requiredItems;
 
 private _code = "";
 while {true} do {

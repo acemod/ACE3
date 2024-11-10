@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Resets all effect numbers to 0 when an object respawns (but does not apply the effect event).

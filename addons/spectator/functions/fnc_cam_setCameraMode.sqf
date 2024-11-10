@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, AACO, SilentSpike
+ * Author: Nelson Duarte, AACO, kymckay
  * Function used to select the camera mode
  *
  * Intended to run even if new mode == old mode, as it handles focus
@@ -61,7 +61,12 @@ if (!isNull _focus || _newMode == MODE_FREE) then {
 
     if (_newMode == MODE_FREE) then {
         _camera cameraEffect ["Internal", "BACK"];
-        switchCamera GVAR(camAgentFree); // Fix draw3D while in free camera for case where player is perma-dead
+
+        // Waiting for correct client state avoids "Side" being spammed every frame in RPT
+        if (getClientStateNumber >= 10) then {
+            switchCamera GVAR(camAgentFree); // Fix draw3D while in free camera for case where player is perma-dead
+        };
+
         _camera setDir getDirVisual _camera;
 
         if (!isNull _focus) then {

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Show the resupplyable ammunition of all surrounding vehicles.
@@ -19,13 +19,20 @@
 params ["_truck", "_player"];
 
 private _vehicles = nearestObjects [_truck, ["AllVehicles"], GVAR(distance)];
-_vehicles = _vehicles select {(_x != _truck) && {!(_x isKindOf "CAManBase")} && {!(_x getVariable [QGVAR(disabled), false])}};
+_vehicles = _vehicles select {
+    _x != _truck
+    && {!(_x isKindOf "CAManBase")}
+    && {alive _x}
+    && {!(_x getVariable [QGVAR(disabled), false])}
+};
 
 private _cswCarryMagazines = [];
 private _vehicleActions = [];
 {
     private _vehicle = _x;
-
+    private _displayName = getText (configOf _vehicle >> "displayName");
+    private _distanceStr = (ACE_player distance _vehicle) toFixed 1;
+    private _actionName = format ["%1 (%2m)", _displayName, _distanceStr];
     // Array of magazines that can be rearmed in the vehicle
     private _needRearmMags = ([_vehicle] call FUNC(getNeedRearmMagazines)) apply {_x select 0};
 
@@ -45,14 +52,14 @@ private _vehicleActions = [];
 
     if (_magazineHelper isNotEqualTo []) then {
         private _icon = getText(configOf _vehicle >> "Icon");
-        if !((_icon select [0, 1]) == "\") then {
+        if ((_icon select [0, 1]) != "\") then {
             _icon = "";
         };
         if (GVAR(level) == 0) then {
             // [Level 0] adds a single action to rearm the entire vic
             private _action = [
                 _vehicle,
-                getText(configOf _vehicle >> "displayName"),
+                _actionName,
                 _icon,
                 {_this call FUNC(rearmEntireVehicle)},
                 {true},
@@ -79,7 +86,7 @@ private _vehicleActions = [];
 
             private _action = [
                 _vehicle,
-                getText(configOf _vehicle >> "displayName"),
+                _actionName,
                 _icon,
                 {},
                 {true},

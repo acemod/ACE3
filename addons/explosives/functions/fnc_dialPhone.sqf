@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Dials the number passed and detonates the explosive.
@@ -30,14 +30,20 @@ for "_i" from 1 to _ran do {
 };
 if (_unit == ace_player) then {
     ctrlSetText [1400,"Calling"];
-    [FUNC(dialingPhone), 0.25, [_unit,4,_arr,_code]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
+    [LINKFUNC(dialingPhone), 0.25, [_unit,4,_arr,_code]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
 } else {
     private _explosive = [_code] call FUNC(getSpeedDialExplosive);
     if ((count _explosive) > 0) then {
         [{
-            playSound3D [QUOTE(PATHTO_R(Data\Audio\Cellphone_Ring.wss)),objNull, false, getPosASL (_this select 1),3.16228,1,75];
-            (_this select 0) setVariable [QGVAR(Dialing), false, true];
-        }, [_unit,_explosive select 0], 0.25 * (count _arr - 4)] call CBA_fnc_waitAndExecute;
+            params ["_unit", "_item"];
+
+            if ([_unit, -1, (_item # 0), (_item # 2), "ACE_Cellphone"] call FUNC(checkDetonateHandlers)) then {
+                playSound3D [QUOTE(PATHTO_R(Data\Audio\Cellphone_Ring.wss)), objNull, false, (getPosASL (_item # 0)), 3.16228, 1, 75];
+            };
+
+            _unit setVariable [QGVAR(Dialing), false, true];
+        }, [_unit, _explosive], 0.25 * (count _arr - 4)] call CBA_fnc_waitAndExecute;
+
         [_explosive select 0,(0.25 * (count _arr - 1)) + (_explosive select 2), "ACE_Cellphone", _unit] call FUNC(startTimer);
     };
 };

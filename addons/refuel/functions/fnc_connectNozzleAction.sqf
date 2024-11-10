@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk et.al.
  * Calculates a connection for refueling.
@@ -24,9 +24,6 @@ params [["_unit", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_startin
 
 private _bestPosASL = [];
 private _bestPosDistance = 1e38;
-private _viewPos = _startingPosASL vectorAdd (((positionCameraToWorld [0,0,0]) vectorFromTo (positionCameraToWorld [0,0,1])) vectorMultiply 3);
-private _modelVector = _startingPosASL vectorFromTo (_sink modelToWorldWorld [0,0,0]);
-private _modelVectorLow = _startingPosASL vectorFromTo (_sink modelToWorldWorld [0,0,-1]);
 
 {
     private _endPosASL = _x;
@@ -62,16 +59,18 @@ if (_bestPosASL isEqualTo []) exitWith {
 //Move it out slightly, for visibility sake (better to look a little funny than be embedded//sunk in the hull and be useless)
 _bestPosASL = _bestPosASL vectorAdd ((_bestPosASL vectorFromTo _startingPosASL) vectorMultiply 0.05);
 
-private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
+private _attachPosModel = _sink worldToModel (ASLToAGL _bestPosASL);
 
 [
-    TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
+    GVAR(progressDuration),
     [_unit, _nozzle, _sink, _attachPosModel],
     {
         params ["_args"];
         _args params [["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_endPosTestOffset", [0,0,0], [[]], 3]];
         _unit setVariable [QGVAR(nozzle), nil, true];
         _unit setVariable [QGVAR(isRefueling), false];
+
+        private _source = _nozzle getVariable QGVAR(source);
 
         detach _nozzle;
         _nozzle attachTo [_sink, _endPosTestOffset];
@@ -111,25 +110,41 @@ private _attachPosModel = _sink worldToModel (ASLtoAGL _bestPosASL);
         _nozzle setVariable [QGVAR(isConnected), true, true];
         _sink setVariable [QGVAR(nozzle), _nozzle, true];
 
-        _source = _nozzle getVariable QGVAR(source);
-        private _fuel = [_source] call FUNC(getFuel);
-        if (_fuel == REFUEL_INFINITE_FUEL) then {
-            _source setVariable [QGVAR(fuelCounter), 0, true];
-        } else {
-            _source setVariable [QGVAR(fuelCounter), _fuel, true];
-        };
+        // Reset fuel counter
+        _source setVariable [QGVAR(fuelCounter), 0, true];
+
+        // Let other players access nozzle
+        [objNull, _nozzle] call EFUNC(common,claim);
 
         [_unit, _sink, _nozzle, _endPosTestOffset] call FUNC(refuel);
 
-        if ([_unit, _nozzle] call FUNC(canTurnOn)) then {
-            _unit setVariable [QGVAR(tempFuel), nil];
-            [_unit, _nozzle] call FUNC(turnOn);
-        } else {
-            [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayText);
+        private _canReceive = getNumber ((configOf _sink) >> QGVAR(canReceive)) == 1;
+        private _isContainer = ([_sink] call FUNC(getCapacity)) != REFUEL_DISABLED_FUEL;
+
+        // Decide if cargo or vehicle will be refueled
+        switch (true) do {
+            case (_canReceive && {!_isContainer || {_sink == _source}}): {
+                // is not a refueling vehicle or refueling vehicle tries to refuel itself
+                if ([_unit, _nozzle, false] call FUNC(canTurnOn)) then {
+                    [_unit, _nozzle, false] call FUNC(turnOn);
+                } else {
+                    [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayTextStructured);
+                };
+            };
+            case (!_canReceive && _isContainer): {
+                if ([_unit, _nozzle, true] call FUNC(canTurnOn)) then {
+                    [_unit, _nozzle, true] call FUNC(turnOn);
+                } else {
+                    [localize LSTRING(CouldNotTurnOn)] call EFUNC(common,displayTextStructured);
+                };
+            };
+            default {
+                /* Target is a refueling vehicle, let user manually decide if he wants to refuel cargo or vehicle itself */
+            };
         };
     },
     "",
-    localize LSTRING(ConnectAction),
+    localize ([LSTRING(ConnectAction), LSTRING(ConnectFuelCanisterAction)] select (_nozzle getVariable [QGVAR(jerryCan), false])),
     {true},
     [INTERACT_EXCEPTIONS]
 ] call EFUNC(common,progressBar);

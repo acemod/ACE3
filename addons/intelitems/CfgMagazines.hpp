@@ -2,20 +2,23 @@ class CfgMagazines {
     class CA_Magazine;
     class GVAR(base): CA_Magazine {
         count = 1;
-        mass = 1;
+        mass = 0.1;
         ACE_isUnique = 1;
         GVAR(intel) = 1;
         GVAR(control) = "";
+        scopeArsenal = 0;
     };
 
     class XGVAR(notepad): GVAR(base) {
         author = ECSTRING(common,ACETeam);
-        scope = 2; // Allows players to access from arsenal
+        scope = 2;
+        scopeArsenal = 2; // Allows players to access from arsenal
         displayName = CSTRING(Notepad_DisplayName);
         descriptionShort = CSTRING(Notepad_Description);
         picture = QPATHTOF(ui\notepad_ca.paa);
         model = "\a3\structures_f\items\documents\notepad_f.p3d";
         GVAR(control) = QGVAR(RscNotepad);
+        ACE_isTool = 1;
     };
 
     class XGVAR(document): GVAR(base) {

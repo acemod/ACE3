@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Auomatically deploy a helicopter filled with AI units.
@@ -18,7 +18,7 @@
  */
 params [["_vehicle", objNull, [objNull]], ["_deploySpecial", false, [true]], ["_createDeploymentGroup", true, [true]]];
 
-if (isNull _vehicle || {!(_vehicle isKindOf "Helicopter")}) exitWith {
+if (isNull _vehicle || {!(_vehicle isKindOf "Air")}) exitWith {
     if (hasInterface) then {
         // Note: BIS_fnc_guiMessage causes a CTD with call, so spawn is used instead.
         ["deployAI was called with an invalid or non-existant vehicle.", QFUNC(deployAI)] spawn BIS_fnc_guiMessage;

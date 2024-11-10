@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Adds a vanilla laser target to the tracker PFH and globaly turns it on
@@ -20,9 +20,9 @@ params ["_targetObject", "_vehicle"];
 TRACE_2("params",_targetObject,_vehicle);
 
 // Get the designator variables, or use defaults
-private _waveLength = _vehicle getVariable [QEGVAR(laser,waveLength), ACE_DEFAULT_LASER_WAVELENGTH];
-private _laserCode = _vehicle getVariable [QEGVAR(laser,code), ACE_DEFAULT_LASER_CODE];
-private _beamSpread = _vehicle getVariable [QEGVAR(laser,beamSpread), ACE_DEFAULT_LASER_BEAMSPREAD];
+private _waveLength = _vehicle getVariable [QGVAR(waveLength), ACE_DEFAULT_LASER_WAVELENGTH];
+private _laserCode = _vehicle getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
+private _beamSpread = _vehicle getVariable [QGVAR(beamSpread), ACE_DEFAULT_LASER_BEAMSPREAD];
 TRACE_3("codes",_waveLength,_laserCode,_beamSpread);
 
 // Laser method is the method ACE_Laser will use to determine from where to where it should project the designator cone
@@ -55,5 +55,5 @@ TRACE_1("",GVAR(trackedLaserTargets));
 
 if (GVAR(pfehID) == -1) then {
     TRACE_1("starting pfeh",count GVAR(trackedLaserTargets));
-    GVAR(pfehID) = [DFUNC(laserTargetPFH), 0, []] call CBA_fnc_addPerFrameHandler;
+    GVAR(pfehID) = [LINKFUNC(laserTargetPFH), 0, []] call CBA_fnc_addPerFrameHandler;
 };

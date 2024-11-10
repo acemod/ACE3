@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Loads a specified unit into any nearby vehicle, or _vehicle parameter.

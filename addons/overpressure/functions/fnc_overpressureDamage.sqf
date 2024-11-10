@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2 and esteldunedain
  * Calculate and apply backblast damage to potentially affected local units
@@ -23,18 +23,14 @@
 
 params ["_firer", "_posASL", "_direction", "_weapon", "_magazine", "_ammo"];
 
-// Bake variable name and check if the variable exists, call the caching function otherwise
-private _varName = format [QGVAR(values%1%2%3), _weapon, _ammo, _magazine];
-private _var = if (isNil _varName) then {
-    [_weapon, _ammo, _magazine] call FUNC(cacheOverPressureValues);
-} else {
-    missionNameSpace getVariable _varName;
-};
-_var params ["_overpressureAngle","_overpressureRange","_overpressureDamage"];
+// Retrieve overpressure values
+private _opValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
+
+_opValues params ["_overpressureAngle", "_overpressureRange", "_overpressureDamage"];
 TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
 
 {
-    if (local _x && {_x != _firer} && {vehicle _x == _x}) then {
+    if (local _x && {_x != _firer} && {isNull objectParent _x}) then {
         private _targetPositionASL = eyePos _x;
         private _relativePosition = _targetPositionASL vectorDiff _posASL;
         private _axisDistance = _relativePosition vectorDotProduct _direction;
@@ -46,20 +42,22 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
         TRACE_4("Affected:",_x,_axisDistance,_distance,_angle);
 
         if (_angle < _overpressureAngle && {_distance < _overpressureRange} && {!lineIntersects _line} && {!terrainIntersectASL _line2}) then {
+            TRACE_2("",isDamageAllowed _x,_x getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
 
-            private _alpha = sqrt (1 - _distance / _overpressureRange);
-            private _beta = sqrt (1 - _angle / _overpressureAngle);
-
-            private _damage = _alpha * _beta * _overpressureDamage;
-            TRACE_1("",_damage);
-
-            TRACE_1("",isDamageAllowed _x);
+            // Skip damage if not allowed
             if (isDamageAllowed _x && {_x getVariable [QEGVAR(medical,allowDamage), true]}) then {
+                private _alpha = sqrt (1 - _distance / _overpressureRange);
+                private _beta = sqrt (1 - _angle / _overpressureAngle);
+
+                private _damage = _alpha * _beta * _overpressureDamage;
+                TRACE_1("",_damage);
+
                 // If the target is the ACE_player
                 if (_x isEqualTo ACE_player) then {
-                    [_damage * 100] call BIS_fnc_bloodEffect
+                    [_damage * 100] call BIS_fnc_bloodEffect;
                 };
-                if (["ACE_Medical"] call EFUNC(common,isModLoaded)) then {
+
+                if (GETEGVAR(medical,enabled,false)) then {
                     [_x, _damage, "body", "backblast", _firer] call EFUNC(medical,addDamageToUnit);
                 } else {
                     _x setDamage (damage _x + _damage);
@@ -75,4 +73,4 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
             #endif
         };
     };
-} forEach ((ASLtoAGL _posASL) nearEntities ["CAManBase", _overpressureRange]);
+} forEach ((ASLToAGL _posASL) nearEntities ["CAManBase", _overpressureRange]);

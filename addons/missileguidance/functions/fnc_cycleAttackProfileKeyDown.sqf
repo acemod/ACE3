@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Cycles fire mode for any missileGuidance enabled ammo that has multiple attack profiles
@@ -18,14 +18,14 @@
 TRACE_1("cycle fire mode",_this);
 
 if (!alive ACE_player) exitWith {};
-if (!([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {};
+if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {};
 
 
 private _currentShooter = objNull;
 private _currentMagazine = "";
 private _turretPath = [];
 if (isNull (ACE_controlledUAV param [0, objNull])) then {
-    if (((vehicle ACE_player) == ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
+    if ((isNull objectParent ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
         _currentShooter = ACE_player;
         _currentMagazine = currentMagazine ACE_player;
     } else {
@@ -76,16 +76,15 @@ private _nextFireMode = _attackProfiles select _index;
 TRACE_4("",_currentFireMode,_nextFireMode,_index,_attackProfiles);
 
 
-private _currentFireMode = if (_useModeForAttackProfile) then {
+if (_useModeForAttackProfile) then {
     TRACE_2("setting fire mode",_weaponStateToken,_nextFireMode);
-    for "_weaponIndex" from 0 to 299 do {
-        ACE_player action ["SwitchWeapon", _currentShooter, ACE_player, _weaponIndex];
-        (weaponState _weaponStateToken) params ["_xWeapon", "", "_xMode"];
+    {
+        _x params ["_xIndex", "", "_xWeapon", "", "_xMode"];
         if ((_xWeapon == _weapon) && {(getText (configFile >> "CfgWeapons" >> _weapon >> _xMode >> QGVAR(attackProfile))) == _nextFireMode}) exitWith {
-            TRACE_2("Restoring",_weaponIndex,weaponState _currentShooter);
+            ACE_player action ["SwitchWeapon", _currentShooter, ACE_player, _xIndex];
+            TRACE_2("Restoring",weaponState _currentShooter,_x);
         };
-        if ((weaponState _weaponStateToken) isEqualTo ["","","","",0]) exitWith {ERROR_2("weaponState not found",_weapon,_nextFireMode);};
-    };
+    } forEach (ACE_player weaponsInfo [_weapon, false]);
 } else {
     TRACE_2("setVariable attackProfile",_currentShooter,_nextFireMode);
     _currentShooter setVariable [QGVAR(attackProfile), _nextFireMode, false];

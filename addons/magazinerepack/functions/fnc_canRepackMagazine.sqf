@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Checks if the given unit can repack magazines of the given type.
@@ -17,6 +17,9 @@
  */
 
 params ["_unit", "_magazine"];
+
+// Exit if repack is disabled for this magazine.
+if (getNumber (configFile >> "CfgMagazines" >> _magazine >> "ace_disableRepacking") == 1) exitWith {false};
 
 private _maxAmmoCount = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
 

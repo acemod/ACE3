@@ -27,11 +27,11 @@ class Tree {
 };
 
 class Legend {
-    x = SafeZoneX+SafeZoneW-.340;
-    y = SafeZoneY+SafeZoneH-.152;
+    x = "SafeZoneX+SafeZoneW-0.340";
+    y = "SafeZoneY+SafeZoneH-0.152";
     font = "RobotoCondensed";
-    w = .340;
-    h = .152;
+    w = 0.340;
+    h = 0.152;
     sizeEx = 0.039210;
     colorBackground[] = {0.906000, 0.901000, 0.880000, 0.5};
     color[] = {0, 0, 0, 0.75};

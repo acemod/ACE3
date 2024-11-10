@@ -6,7 +6,7 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 DFUNC(rearm_statement) = { // moved from config because of build problems
     TRACE_1("rearm_statement",_this);

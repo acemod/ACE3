@@ -1,19 +1,19 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
-* Author: PabstMirror
-* Cleans up existing viewport display and camera
-*
-* Arguments:
-* None
-*
-* Return Value:
-* None
-*
-* Example:
-* [] call ace_viewports_fnc_viewCleanup
-*
-* Public: No
-*/
+ * Author: PabstMirror
+ * Cleans up existing viewport display and camera
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [] call ace_viewports_fnc_viewCleanup
+ *
+ * Public: No
+ */
 
 TRACE_1("camCleanup",_this);
 

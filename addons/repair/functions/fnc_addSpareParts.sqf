@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Adds spare parts to the vehicle. Before SettingsInitialized only collect for later execution.

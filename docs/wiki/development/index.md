@@ -1,5 +1,5 @@
 ---
-title: Development Documentation
+title: Development
 layout: default
 group: subNav
 order: 1

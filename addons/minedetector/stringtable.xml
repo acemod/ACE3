@@ -6,7 +6,7 @@
             <French>Détecteur de métaux</French>
             <Russian>Детектор металла</Russian>
             <Czech>Detektor kovů</Czech>
-            <Japanese>地雷探知機</Japanese>
+            <Japanese>金属探知機</Japanese>
             <Polish>Wykrywacz metali</Polish>
             <German>Metalldetektor</German>
             <Korean>지뢰탐지기</Korean>
@@ -22,7 +22,7 @@
             <French>Détecteur de métaux</French>
             <Russian>Детектор металла</Russian>
             <Czech>Detektor kovů</Czech>
-            <Japanese>地雷探知機</Japanese>
+            <Japanese>金属探知機</Japanese>
             <Polish>Wykrywacz metali</Polish>
             <German>Metalldetektor</German>
             <Korean>지뢰탐지기</Korean>
@@ -69,7 +69,7 @@
             <English>Connect Headphones</English>
             <Russian>Подключить наушники</Russian>
             <Czech>Připojit sluchátka</Czech>
-            <Japanese>ヘッドホンへつなぐ</Japanese>
+            <Japanese>ヘッドホンに接続</Japanese>
             <Polish>Podłącz słuchawki</Polish>
             <German>Kopfhörer verbinden</German>
             <Korean>헤드폰에 연결</Korean>
@@ -85,7 +85,7 @@
             <English>Disconnect Headphones</English>
             <Russian>Отключить наушники</Russian>
             <Czech>Odpojit sluchátka</Czech>
-            <Japanese>ヘッドホンからはずす</Japanese>
+            <Japanese>ヘッドホンを切断</Japanese>
             <Polish>Odłącz słuchawki</Polish>
             <German>Kopfhörer trennen</German>
             <Korean>헤드폰 연결 끊기</Korean>
@@ -117,7 +117,7 @@
             <English>Headphones Disconnected</English>
             <Russian>Наушники отключены</Russian>
             <Czech>Sluchátka odpojena</Czech>
-            <Japanese>ヘッドホンから外しました</Japanese>
+            <Japanese>ヘッドホンを切断しました</Japanese>
             <Polish>Słuchawki odpięte</Polish>
             <German>Kopfhörer getrennt</German>
             <Korean>헤드폰 연결 끊김</Korean>

@@ -1,29 +1,25 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Glowbal, SilentSpike
- * Get the cargo size of an object.
+ * Author: Glowbal, kymckay
+ * Gets the cargo size of an object.
  *
  * Arguments:
- * 0: Item <OBJECT or STRING>
+ * 0: Item <STRING> or <OBJECT>
  *
  * Return Value:
  * Cargo size <NUMBER> (default: -1)
  *
  * Example:
- * [object] call ace_cargo_fnc_getSizeItem
+ * cursorObject call ace_cargo_fnc_getSizeItem
  *
  * Public: No
  */
 
 params ["_item"];
 
-// Virtual items are much easier to deal with
+// Default cargo size is -1 as 0 is a valid size
 if (_item isEqualType "") then {
-    CARGO_SIZE(_item)
+    GET_NUMBER(configFile >> "CfgVehicles" >> _item >> QGVAR(size),-1)
 } else {
-    if (isNil {_item getVariable QGVAR(size)}) then {
-        CARGO_SIZE(typeOf _item)
-    } else {
-        _item getVariable QGVAR(size)
-    };
+    _item getVariable [QGVAR(size), GET_NUMBER(configOf _item >> QGVAR(size),-1)]
 };

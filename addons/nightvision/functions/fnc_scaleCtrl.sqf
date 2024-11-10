@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, PabstMirror
  * Determines night vision source (player/vehicle) - Updates UI based on type.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Called from config. Returns true if the player is a gunner and the players current vehicle has a FCS.

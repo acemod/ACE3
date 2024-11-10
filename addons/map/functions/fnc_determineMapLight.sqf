@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Rocko and esteldunedain
  * Calculates the current map illumination for a given unit

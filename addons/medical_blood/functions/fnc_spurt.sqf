@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Sickboy
  * Spurts blood on the ground based on the direction and damage.
@@ -27,7 +27,7 @@ private _distanceBetweenDrops = DISTANCE_BETWEEN_DROPS * _damage;
 private _offset = OFFSET + _distanceBetweenDrops;
 private _position = _unit getPos [_offset, _direction];
 
-["blooddrop_2", _position, _direction] call FUNC(createBlood);
+["blooddrop_2", _position, _unit] call FUNC(createBlood);
 
 private _dropAmount = ceil (MAXIMUM_DROPS * _damage);
 TRACE_2("Spurting blood",_dropAmount,_damage);
@@ -35,6 +35,6 @@ TRACE_2("Spurting blood",_dropAmount,_damage);
 if (_dropAmount > 1) then {
     for "_i" from 2 to _dropAmount do {
         _position = _position getPos [_distanceBetweenDrops, _direction];
-        ["blooddrop_1", _position, _direction] call FUNC(createBlood);
+        ["blooddrop_1", _position, _unit] call FUNC(createBlood);
     };
 };

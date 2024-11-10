@@ -1,5 +1,5 @@
 ---
-title: ACE3 Feature documentation
+title: Features
 layout: default
 group: subNav
 order: 1
@@ -10,7 +10,7 @@ redirect_from: "/wiki/featurex"
 
 <div class="row">
     <div class="large-12 columns">
-        <h1>ACE3 Features</h1>
+        <h1>Features</h1>
         <p>Overviews and details of ACE3 features, their usage and implementations.</p>
     </div>
 </div>
@@ -19,7 +19,7 @@ redirect_from: "/wiki/featurex"
         <h2>General</h2>
         <nav>
             <ul>
-                {% assign feature_list = site.pages | sort: "title" %}
+                {% assign feature_list = site.pages | sort_natural: "title" %}
                 {% assign group = 'feature' %}
                 {% assign category = 'general' %}
                 {% include feature_list %}
@@ -30,7 +30,7 @@ redirect_from: "/wiki/featurex"
         <h2>Interaction</h2>
         <nav>
             <ul>
-                {% assign feature_list = site.pages | sort: "title" %}
+                {% assign feature_list = site.pages | sort_natural: "title" %}
                 {% assign group = 'feature' %}
                 {% assign category = 'interaction' %}
                 {% include feature_list %}
@@ -41,7 +41,7 @@ redirect_from: "/wiki/featurex"
         <h2>Realism</h2>
         <nav>
             <ul>
-                {% assign feature_list = site.pages | sort: "title" %}
+                {% assign feature_list = site.pages | sort_natural: "title" %}
                 {% assign group = 'feature' %}
                 {% assign category = 'realism' %}
                 {% include feature_list %}
@@ -52,7 +52,7 @@ redirect_from: "/wiki/featurex"
         <h2>Equipment</h2>
         <nav>
             <ul>
-                {% assign feature_list = site.pages | sort: "title" %}
+                {% assign feature_list = site.pages | sort_natural: "title" %}
                 {% assign group = 'feature' %}
                 {% assign category = 'equipment' %}
                 {% include feature_list %}

@@ -56,7 +56,7 @@
             <English>Extend</English>
             <German>Ausfahren</German>
             <Polish>Rozłóż</Polish>
-            <Portuguese>Extender</Portuguese>
+            <Portuguese>Estender</Portuguese>
             <Russian>Разложить</Russian>
             <Czech>Prodloužit</Czech>
             <Italian>Estendi</Italian>
@@ -72,14 +72,14 @@
             <English>+Ctrl tilt</English>
             <German>+Strg kippen</German>
             <Polish>+Ctrl nachyl</Polish>
-            <Portuguese>+Ctrl tilt</Portuguese>
+            <Portuguese>+Ctrl inclinar</Portuguese>
             <Russian>+Ctrl наклонить</Russian>
             <Czech>+Ctrl naklonit</Czech>
             <Spanish>+Ctrl inclinar</Spanish>
             <French>+Ctrl incliner</French>
             <Italian>+Ctrl per inclinare</Italian>
             <Japanese>+Ctrl で傾ける</Japanese>
-            <Korean>+컨트롤 키 기울이기</Korean>
+            <Korean>+컨트롤 키로 기울이기</Korean>
             <Chinesesimp>+Ctrl 倾斜</Chinesesimp>
             <Chinese>+Ctrl 傾斜</Chinese>
         </Key>
