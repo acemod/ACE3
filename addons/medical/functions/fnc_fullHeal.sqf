@@ -11,14 +11,18 @@
  * None
  *
  * Example:
- * [player, cursorObject] call ace_medical_fnc_fullHeal
+ * player call ace_medical_fnc_fullHeal
  *
  * Public: Yes
  */
 
-params [["_medic", objNull, [objNull]], ["_patient", objNull, [objNull]]];
+params [["_patient", objNull, [objNull]], ["_medic", objNull, [objNull]]];
 
-if (isNull _medic or !alive _patient) exitWith {
+if (isNull _medic) then {
+    _medic = _patient;
+};
+
+if (!alive _patient) exitWith {
     ERROR_2("fullHeal [medic %1][patient %2] Bad parameters",_medic,_patient);
 };
 
