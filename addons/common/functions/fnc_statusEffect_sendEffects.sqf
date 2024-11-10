@@ -21,7 +21,7 @@ TRACE_2("params",_object,_effectName);
 
 if (isNull _object) exitWith {};
 
-if (_effectName == "") exitWith { // recurse though all possible effects
+if (_effectName == "") exitWith { // Recurse through all possible effects
     {
         [_object, _x] call FUNC(statusEffect_sendEffects)
     } forEach (keys GVAR(statusEffects)); 
@@ -31,7 +31,7 @@ if (_effectName == "") exitWith { // recurse though all possible effects
 private _effectVarName = format [QGVAR(effect_%1), _effectName];
 private _effectNumber = _object getVariable [_effectVarName, -1];
 
-//We only do anything if the effect has been defined at some point in the game for this unit
+// We only do anything if the effect has been defined at some point in the game for this unit
 TRACE_2("checking if event is nil",_effectName,_effectNumber);
 if (_effectNumber != -1) then {
     (GVAR(statusEffects) get toLowerANSI _effectName) params ["_isGlobal", "_sendJIP", "_eventName"];
