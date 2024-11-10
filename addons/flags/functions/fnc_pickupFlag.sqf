@@ -18,7 +18,7 @@
  */
 
 params ["_unit", "_item", "_flag"];
-TRACE_3("Flag pickup", _unit, _item, _flag);
+TRACE_3("Flag pickup",_unit,_item,_flag);
 
 [_unit, "PutDown"] call EFUNC(common,doGesture);
 

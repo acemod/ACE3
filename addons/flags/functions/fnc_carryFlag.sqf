@@ -17,7 +17,7 @@
  */
 
 params ["_unit", "_item"];
-TRACE_2("Carry flag", _unit, _item);
+TRACE_2("Carry flag",_unit,_item);
 
 (GVAR(flagItemCache) get _item) params ["", "_texture"];
 _unit forceFlagTexture _texture;

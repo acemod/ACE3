@@ -18,7 +18,7 @@
  */
 
 params ["_player", "_item"];
-TRACE_2("Placing flag", _player, _item);
+TRACE_2("Placing flag",_player,_item);
 
 private _flag = "FlagChecked_F" createVehicle [0, 0, 0];
 
