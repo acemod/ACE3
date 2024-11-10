@@ -4,8 +4,8 @@
  * Fully heals the patient.
  *
  * Arguments:
- * 0: Medic <OBJECT>
- * 1: Patient <OBJECT>
+ * 0: Patient <OBJECT>
+ * 1: Medic <OBJECT><OPTIONAL>
  *
  * Return Value:
  * None
