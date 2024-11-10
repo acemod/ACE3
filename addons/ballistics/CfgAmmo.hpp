@@ -642,6 +642,7 @@ class CfgAmmo {
         ACE_dragModel = 1;
         ACE_muzzleVelocities[] = {296}; // Muzzle Velocity shift +1m/s at 70°F (21°C) (70°F: Temp vs MV chart zero), 295m/s at 15°C (ICAO: 15°C, 1013.25 hPa, 0%) according to 10Rnd_127x54_Mag initSpeed
         ACE_barrelLengths[] = {450}; // according to ASP-1 Kir barrel length, VKS: https://en.wikipedia.org/wiki/VKS_sniper_rifle
+        EGVAR(vehicle_damage,incendiary) = 0.2;
     };
     class B_127x99_Ball: BulletBase {
         timeToLive=10;
