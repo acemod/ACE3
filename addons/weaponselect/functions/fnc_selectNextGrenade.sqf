@@ -36,6 +36,8 @@ private _grenades = (throwables _unit) apply {_x select 0} select {_x in _grenad
 // abort if no grenades are available
 if (_grenades isEqualTo []) exitWith {false};
 
+_grenades = _grenades arrayIntersect _grenades;
+
 // get next grenade muzzle
 private _nextGrenadeIndex = (_grenades find _currentGrenade) + 1;
 
