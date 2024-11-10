@@ -29,8 +29,8 @@ if !([_target, _throwable] call CBA_fnc_canAddItem) exitWith {ERROR("Cannot add 
 private _allOccurrencesOfThrowable = (magazinesAmmoFull _player) select {(_x select 0) == _throwable};
 if (count _allOccurrencesOfThrowable isEqualTo 0) exitWith {ERROR("Throwable not in the inventory of player.")};
 
-private _cfgThrowable = configFile >> 'CfgMagazines' >> _throwable;
-if ((getNumber (_cfgThrowable >> 'count')) isEqualTo 1) then {
+private _cfgThrowable = configFile >> "CfgMagazines" >> _throwable;
+if ((getNumber (_cfgThrowable >> "count")) == 1) then {
     // Optimized and straightforward case, as most throwables only have an ammo count of 1
     _player removeItem _throwable;
     _target addItem _throwable;
@@ -54,6 +54,6 @@ if ((getNumber (_cfgThrowable >> 'count')) isEqualTo 1) then {
 
 if (_animate) then {[_player, "PutDown"] call EFUNC(common,doGesture)};
 
-private _displayName = getText (_cfgThrowable >> 'displayName');
 private _playerName = [_player] call EFUNC(common,getName);
+private _displayName = getText (_cfgThrowable >> "displayName");
 [QEGVAR(common,displayTextStructured), [[LSTRING(PassThrowableHint), _playerName, _displayName], 1.5, _target], [_target]] call CBA_fnc_targetEvent;
