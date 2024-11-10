@@ -5,20 +5,20 @@
  * Does not check if the throwable exists in the inventory of the player.
  *
  * Arguments:
- * 0: Unit to pass the throwable to <OBJECT>
- * 1: Unit that passes the throwable <OBJECT>
+ * 0: Unit that passes the throwable <OBJECT>
+ * 1: Unit to pass the throwable to <OBJECT>
  * 2: Throwable classname <STRING>
  *
  * Return Value:
  * Unit can pass throwable <BOOL>
  *
  * Example:
- * [_target, _player, "HandGrenade"] call ace_interaction_fnc_canPassThrowable
+ * [_player, _target, "HandGrenade"] call ace_interaction_fnc_canPassThrowable
  *
  * Public: No
  */
 
-params [["_target", objNull, [objNull]], ["_player", objNull, [objNull]], ["_throwable", "", [""]]];
+params ["_player", "_target", "_throwable"];
 
 if (!GVAR(enableThrowablePassing)) exitWith {false};
 if (_throwable isEqualTo "") exitWith {false};

@@ -70,11 +70,11 @@ class CfgVehicles {
 
                 class ACE_PassThrowable {
                     displayName = CSTRING(PassThrowable);
-                    condition = QUOTE([ARR_3(_target,_player,(currentThrowable _player) param [ARR_2(0,'')])] call FUNC(canPassThrowable));
-                    statement = QUOTE([ARR_3(_target,_player,(currentThrowable _player) param [ARR_2(0,'')])] call FUNC(passThrowable));
+                    condition = QUOTE([ARR_3(_player,_target,(currentThrowable _player) param [ARR_2(0,'')])] call FUNC(canPassThrowable));
+                    statement = QUOTE([ARR_3(_player,_target,(currentThrowable _player) param [ARR_2(0,'')])] call FUNC(passThrowable));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;
-                    modifierFunction = QUOTE(_this select 3 set [ARR_2(2,getText (configFile >> 'CfgMagazines' >> (currentThrowable (_this select 1)) param [ARR_2(0,'HandGrenade')] >> 'picture'))];); // Set picture of the current grenade
+                    modifierFunction = QUOTE(_this select 3 set [ARR_2(2,getText (configFile >> 'CfgMagazines' >> (currentThrowable (_this select 1)) param [ARR_2(0,'HandGrenade')] >> 'picture'))];); // Set picture of the current throwable
                 };
 
                 class ACE_TeamManagement {

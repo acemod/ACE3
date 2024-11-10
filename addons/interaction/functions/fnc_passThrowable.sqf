@@ -4,8 +4,8 @@
  * Pass throwable to another unit.
  *
  * Arguments:
- * 0: Unit to pass the throwable to <OBJECT>
- * 1: Unit that passes the throwable <OBJECT>
+ * 0: Unit that passes the throwable <OBJECT>
+ * 1: Unit to pass the throwable to <OBJECT>
  * 2: Throwable classname <STRING>
  * 3: Play passing animation <BOOL> (default: true)
  *
@@ -13,21 +13,19 @@
  * None
  *
  * Example:
- * [_target, _player, "HandGrenade"] call ace_interaction_fnc_passThrowable
+ * [_player, _target, "HandGrenade"] call ace_interaction_fnc_passThrowable
  *
  * Public: No
  */
 
-params [["_target", objNull, [objNull]], ["_player", objNull, [objNull]], ["_throwable", "", [""]], ["_animate", true, [true]]];
+params ["_player", "_target", "_throwable", ["_animate", true, [true]]];
 TRACE_4("Pass throwable params",_player,_target,_throwable,_animate);
 
-if (isNull _target) exitWith {ERROR("Target is null.")};
-if (isNull _player) exitWith {ERROR("Player is null.")};
 if (_throwable isEqualTo "") exitWith {ERROR("No throwable specified.")};
 if !([_target, _throwable] call CBA_fnc_canAddItem) exitWith {ERROR("Cannot add throwable to target due to lack of inventory space.")};
 
 private _allOccurrencesOfThrowable = (magazinesAmmoFull _player) select {(_x select 0) == _throwable};
-if (count _allOccurrencesOfThrowable isEqualTo 0) exitWith {ERROR("Throwable not in the inventory of player.")};
+if (_allOccurrencesOfThrowable isEqualTo []) exitWith {ERROR("Throwable not in the inventory of player.")};
 
 private _cfgThrowable = configFile >> "CfgMagazines" >> _throwable;
 if ((getNumber (_cfgThrowable >> "count")) == 1) then {
