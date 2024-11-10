@@ -21,6 +21,6 @@
 #define PLACE_APPROVE 1
 
 #define MIN_HEIGHT -0.5
-#define MAX_HEIGHT 2
+#define MAX_HEIGHT 1.5
 
 #define FLAG_PLACING_DISTANCE 2
