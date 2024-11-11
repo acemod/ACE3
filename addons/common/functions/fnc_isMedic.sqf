@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: The Unit <OBJECT>
- * 1: Medic level <NUMBER><OPTIONAL>
+ * 1: Medic level <NUMBER> (default: 1)
  *    - Only relevant if ace_medical is loaded
  *
  * Return Value:
