@@ -84,9 +84,11 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
             <English>Numerical Pulse</English>
+            <Russian>Числовое значение пульса</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_Description">
             <English>Makes Check Pulse action give a numerical value based on setting</English>
+            <Russian>Заставляет действие контрольного импульса выдавать числовое значение, основанное на настройке</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrest">
             <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest</English>
@@ -571,39 +573,51 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_DisplayName">
             <English>Allow Splint</English>
+            <Russian>Доступ к наложению шины</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_Description">
             <English>Training level required to use Splint.</English>
+            <Russian>Уровень подготовки, необходимый для использования шины.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_DisplayName">
             <English>Locations Splint</English>
+            <Russian>Места наложения шины</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_Description">
             <English>Controls where Splints can be used.</English>
+            <Russian>Контролирует, где можно использовать шины.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
             <English>Allow Morphine</English>
+            <Russian>Доступ к Морфину</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_Description">
             <English>Training level required to use Morphine.</English>
+            <Russian>Уровень подготовки, необходимый для использования Морфина.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_DisplayName">
             <English>Locations Morphine</English>
+            <Russian>Места использования Морфина</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_Description">
             <English>Controls where Morphine can be used.</English>
+            <Russian>Контролирует, где можно использовать Морфин.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_DisplayName">
             <English>Allow Adenosine</English>
+            <Russian>Доступ к Аденозину</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_Description">
             <English>Training level required to use Adenosine.</English>
+            <Russian>Уровень подготовки, необходимый для использования Аденозина</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_DisplayName">
             <English>Locations Adenosine</English>
+            <Russian>Места использования Аденозина</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_Description">
             <English>Controls where Adenosine can be used.</English>
+            <Russian>Контролирует, где можно использовать Аденозин.</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_DisplayName">
             <English>Allow PAK</English>

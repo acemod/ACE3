@@ -612,6 +612,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_checkSizeInteraction">
             <English>Show Check Cargo Size Interaction</English>
+            <Russian>Вкл. проверку размера груза</Russian>
         </Key>
     </Package>
 </Project>
