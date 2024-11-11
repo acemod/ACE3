@@ -34,7 +34,7 @@ if (!hasInterface) exitWith {};
         _args params ["_object"];
         if !(_object getVariable [QGVAR(enabled), false]) exitWith {};
         _object setVariable [QGVAR(smoothing), []];
-        _object setVariable [QGVAR(flashOffset), random 1]; // make flashes not syncronized
+        _object setVariable [QGVAR(flashOffset), random 1]; // make flashes not synchronized
 
         [] call LINKFUNC(onLaserOn);
     }] call CBA_fnc_addEventHandler;
