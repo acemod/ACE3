@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Patient <OBJECT>
- * 1: Medic <OBJECT><OPTIONAL>
- * 2: Log message <BOOL><OPTIONAL>
+ * 1: Medic <OBJECT> (default: objNull)
+ * 2: Log message <BOOL> (default: true)
  *
  * Return Value:
  * None
