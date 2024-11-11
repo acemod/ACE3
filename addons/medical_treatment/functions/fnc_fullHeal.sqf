@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Medic <OBJECT>
  * 1: Patient <OBJECT>
- * 2: Log message <BOOL><OPTIONAL>
+ * 2: Log message <BOOL> (default: true)
  *
  * Return Value:
  * None
