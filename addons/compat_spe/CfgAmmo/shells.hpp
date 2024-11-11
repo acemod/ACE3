@@ -81,3 +81,63 @@ class SPE_SprGr39_HE: SPE_ShellHE_base
     EGVAR(frag,gurney_k) = "1/2";
     EGVAR(frag,classes)[] = {"ACE_frag_large","ACE_frag_large_HD"};
 };
+
+//M10 HE
+class SPE_76mm_M7_M42_HE: SPE_ShellHE_base
+{
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 5840;
+    EGVAR(frag,charge) = 390;
+    EGVAR(frag,gurney_c) = 2440;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_medium_HD"};
+};
+
+//M18 HE
+class SPE_76mm_M1_HC_M42_HE: SPE_76mm_M7_M42_HE
+{
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 5840;
+    EGVAR(frag,charge) = 390;
+    EGVAR(frag,gurney_c) = 2440;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_medium_HD"};
+};
+
+//M4 Sherman HE
+class SPE_M48_HE: SPE_ShellHE_base
+{
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 6300;
+    EGVAR(frag,charge) = 666;
+    EGVAR(frag,gurney_c) = 2440;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_medium_HD"};
+};
+
+//M4 Sherman 105 HE
+class SPE_M101_M1_HE: SPE_ShellHE_base
+{
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 14850;
+    EGVAR(frag,charge) = 2180;
+    EGVAR(frag,gurney_c) = 2440;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_large","ACE_frag_large_HD"};
+};
+
+//M4 Sherman 76 HE
+class SPE_76mm_M1_M42_HE: SPE_76mm_M7_M42_HE
+{
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 5840;
+    EGVAR(frag,charge) = 390;
+    EGVAR(frag,gurney_c) = 2440;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_medium_HD"};
+};
