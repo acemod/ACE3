@@ -27,5 +27,4 @@ if (!alive _patient) exitWith {
     ERROR_2("fullHeal [medic %1][patient %2] Bad parameters",_medic,_patient);
 };
 
-[_medic, _patient, _logMessage] call EFUNC(medical_treatment,fullHeal);
-nil
+[_medic, _patient, _logMessage] call EFUNC(medical_treatment,fullHeal)
