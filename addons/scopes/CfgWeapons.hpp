@@ -173,20 +173,12 @@ class CfgWeapons {
         };
     };
 
-    class optic_DMS_weathered_F: optic_DMS {
-        class ItemInfo: ItemInfo {
-            class OpticsModes: OpticsModes {
-                class Snip: Snip {};
-            };
-        };
-    };
+    class optic_DMS_weathered_F: optic_DMS {};
 
     class optic_DMS_weathered_Kir_F: optic_DMS_weathered_F {
         class ItemInfo: ItemInfo {
             class OpticsModes: OpticsModes {
                 class Snip: Snip {
-                    // discreteDistance[] = {50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325, 350, 375, 400, 425, 450, 475, 500, 550, 600};
-                    // discreteDistanceInitIndex = 6;
                     discreteDistance[] = {100};
                     discreteDistanceInitIndex = 0;
                 };
