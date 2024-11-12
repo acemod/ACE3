@@ -71,7 +71,7 @@ class SPE_SprGr39_HE: SPE_ShellHE_base {
     EGVAR(frag,charge) = 1000;
     EGVAR(frag,gurney_c) = 2930;
     EGVAR(frag,gurney_k) = "1/2";
-    EGVAR(frag,classes)[] = {"ACE_frag_large","ACE_frag_large_HD"};
+    EGVAR(frag,classes)[] = {"ACE_frag_large", "ACE_frag_large_HD"};
 };
 
 // M10 HE
