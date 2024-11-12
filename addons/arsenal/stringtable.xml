@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Arsenal">
+        <Key ID="STR_ACE_Arsenal_DLCRequirement">
+            <English>DLC Required</English>
+            <Spanish>Requiere DLC</Spanish>
+            <French>DLC requis</French>
+            <German>DLC erforderlich</German>
+            <Polish>Wymagane DLC</Polish>
+            <Japanese>DLCが必要です</Japanese>
+            <Italian>DLC richiesto</Italian>
+            <Korean>DLC 필요</Korean>
+            <Chinese>需要DLC</Chinese>
+            <Chinesesimp>需要DLC</Chinesesimp>
+            <Russian>Требуется DLC</Russian>
+            <Portuguese>DLC necessário</Portuguese>
+            <Czech>Vyžadováno DLC</Czech>
+            <Turkish>DLC gereklidir</Turkish>
+        </Key>
         <Key ID="STR_ACE_Arsenal_buttonHideText">
             <English>Hide</English>
             <Spanish>Ocultar</Spanish>
