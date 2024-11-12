@@ -32,6 +32,7 @@
             <Portuguese>Ocultar</Portuguese>
             <Czech>Skrýt</Czech>
             <Turkish>Gizle</Turkish>
+        </Key>
         <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_DisplayName">
             <English>Add Compatible Items</English>
             <Czech>Přidat kompatibilní předměty</Czech>
