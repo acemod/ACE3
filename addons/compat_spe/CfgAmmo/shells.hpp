@@ -292,3 +292,14 @@ class SPE_M3_M67_HEAT: SPE_ShellHEAT_base {
     EGVAR(frag,gurney_k) = "1/2";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_large"};
 };
+
+// M8 Greyhound HE
+class SPE_S_37L57_M63: SPE_ShellHE_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 1420;
+    EGVAR(frag,charge) = 39;
+    EGVAR(frag,gurney_c) = 2440;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_small_HD"};
+};
