@@ -38,7 +38,7 @@ class SPE_SprGr42_KwK42_HE: SPE_ShellHE_base {
     EGVAR(frag,charge) = 725;
     EGVAR(frag,gurney_c) = 2930;
     EGVAR(frag,gurney_k) = "1/2";
-    EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_medium_HD"};
+    EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
 };
 
 // Panzer VI HE
