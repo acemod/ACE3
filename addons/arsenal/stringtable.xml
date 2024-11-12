@@ -1,38 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Arsenal">
-        <Key ID="STR_ACE_Arsenal_DLCRequirement">
-            <English>DLC Required</English>
-            <Spanish>Requiere DLC</Spanish>
-            <French>DLC requis</French>
-            <German>DLC erforderlich</German>
-            <Polish>Wymagane DLC</Polish>
-            <Japanese>DLCが必要です</Japanese>
-            <Italian>DLC richiesto</Italian>
-            <Korean>DLC 필요</Korean>
-            <Chinese>需要DLC</Chinese>
-            <Chinesesimp>需要DLC</Chinesesimp>
-            <Russian>Требуется DLC</Russian>
-            <Portuguese>DLC necessário</Portuguese>
-            <Czech>Vyžadováno DLC</Czech>
-            <Turkish>DLC gereklidir</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Arsenal_buttonHideText">
-            <English>Hide</English>
-            <Spanish>Ocultar</Spanish>
-            <French>Cacher</French>
-            <German>Verstecken</German>
-            <Polish>Ukryj</Polish>
-            <Japanese>隠す</Japanese>
-            <Italian>Nascondi</Italian>
-            <Korean>숨김</Korean>
-            <Chinese>隱藏</Chinese>
-            <Chinesesimp>隐藏</Chinesesimp>
-            <Russian>Спрятать</Russian>
-            <Portuguese>Ocultar</Portuguese>
-            <Czech>Skrýt</Czech>
-            <Turkish>Gizle</Turkish>
-        </Key>
         <Key ID="STR_ACE_Arsenal_AttributeAddCompatible_DisplayName">
             <English>Add Compatible Items</English>
             <Czech>Přidat kompatibilní předměty</Czech>
@@ -124,6 +92,22 @@
             <Chinese>無法開啟ACE虛擬軍火庫</Chinese>
             <Chinesesimp>无法开启 ACE 虚拟军火库</Chinesesimp>
             <Turkish>ACE Arsenal açılamıyor</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_DLCRequirement">
+            <English>DLC Required</English>
+            <Czech>Vyžadováno DLC</Czech>
+            <French>DLC requis</French>
+            <Spanish>Requiere DLC</Spanish>
+            <Italian>DLC richiesto</Italian>
+            <Polish>Wymagane DLC</Polish>
+            <Portuguese>DLC necessário</Portuguese>
+            <Russian>Требуется DLC</Russian>
+            <German>DLC erforderlich</German>
+            <Korean>DLC 필요</Korean>
+            <Japanese>DLCが必要です</Japanese>
+            <Chinese>需要DLC</Chinese>
+            <Chinesesimp>需要DLC</Chinesesimp>
+            <Turkish>DLC gereklidir</Turkish>
         </Key>
         <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
             <English>Detonates on impact</English>
