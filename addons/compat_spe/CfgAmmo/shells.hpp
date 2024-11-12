@@ -102,7 +102,7 @@ class SPE_76mm_M1_HC_M42_HE: SPE_76mm_M7_M42_HE
     EGVAR(frag,charge) = 390;
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "1/2";
-    EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_medium_HD"};
+    EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
 };
 
 //M4 Sherman 76 HE
