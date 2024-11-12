@@ -8,9 +8,8 @@ class SPE_50mm_SprGr38_HE: SPE_ShellHE_base {
     EGVAR(frag,gurney_k) = "1/2";
     EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_small_HD"};
 };
-//Panzer III N HE
-class SPE_SprGr34_K51_HE: SPE_ShellHE_base
-{
+// Panzer III N HE
+class SPE_SprGr34_K51_HE: SPE_ShellHE_base {
     EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 5740;
