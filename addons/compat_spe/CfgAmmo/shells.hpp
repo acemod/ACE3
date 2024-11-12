@@ -19,9 +19,8 @@ class SPE_SprGr34_K51_HE: SPE_ShellHE_base {
     EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
 };
 
-//Panzer IV, StuG III G HE
-class SPE_SprGr34_KWK40_HE: SPE_ShellHE_base
-{
+// Panzer IV, StuG III G HE
+class SPE_SprGr34_KWK40_HE: SPE_ShellHE_base {
     EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 5740;
