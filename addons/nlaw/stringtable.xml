@@ -1,53 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="NLAW">
-        <Key ID="STR_ACE_NLAW_trackTarget">
-            <English>NLAW Track Target (Hold)</English>
-            <German>NLAW Zielverfolgung</German>
-            <Italian>NLAW Traccia Bersaglio (Tieni Premuto)</Italian>
-            <Japanese>NLAW 目標追跡 (ホールド)</Japanese>
-            <Chinesesimp>NLAW 追踪目标（按住）</Chinesesimp>
-            <Chinese>次世代輕型反坦克導彈發射器追蹤目標 (按住)</Chinese>
-            <Polish>Śledzenie Celu NLAW (Przytrzymaj)</Polish>
-            <Korean>NLAW 목표 추적 (누름유지)</Korean>
-            <Russian>NLAW наведение на цель (удерживать)</Russian>
-            <Portuguese>NLAW Rastrear Alvo (Segurar)</Portuguese>
-            <French>NLAW suivre la cible (maintenir)</French>
-            <Czech>NLAW sledování cíle (držet)</Czech>
-            <Turkish>NLAW Track Target (Basılı Tut)</Turkish>
-            <Spanish>NLAW Seguir objetivo (Mantener)</Spanish>
-        </Key>
         <Key ID="STR_ACE_NLAW_directAttack">
             <English>Direct Attack</English>
-            <German>Direkter Angriff</German>
-            <Italian>Attacco Diretto</Italian>
-            <Japanese>ダイレクト アタック</Japanese>
-            <Chinesesimp>直射模式</Chinesesimp>
-            <Chinese>直射模式</Chinese>
-            <Polish>Bezpośredni atak</Polish>
-            <Korean>직사 타격</Korean>
-            <Russian>Прямая атака</Russian>
-            <Portuguese>Ataque Direto</Portuguese>
-            <French>Attaque directe</French>
             <Czech>Přímý útok</Czech>
-            <Turkish>Doğrudan Saldırı</Turkish>
+            <French>Attaque directe</French>
             <Spanish>Ataque directo</Spanish>
+            <Italian>Attacco Diretto</Italian>
+            <Polish>Bezpośredni atak</Polish>
+            <Portuguese>Ataque Direto</Portuguese>
+            <Russian>Прямая атака</Russian>
+            <German>Direkter Angriff</German>
+            <Korean>직사 타격</Korean>
+            <Japanese>ダイレクト アタック</Japanese>
+            <Chinese>直射模式</Chinese>
+            <Chinesesimp>直射模式</Chinesesimp>
+            <Turkish>Doğrudan Saldırı</Turkish>
         </Key>
         <Key ID="STR_ACE_NLAW_overflyTopAttack">
             <English>Overfly Top Attack</English>
-            <German>Überflugangriff</German>
-            <Italian>Attacco dall'alto</Italian>
-            <Japanese>オーバーフライ トップ アタック</Japanese>
-            <Chinesesimp>飞越攻顶模式</Chinesesimp>
-            <Chinese>攻頂模式</Chinese>
-            <Polish>Atak z góry</Polish>
-            <Korean>상부 타격</Korean>
-            <Russian>Атака сверху</Russian>
-            <Portuguese>Ataque por cima</Portuguese>
-            <French>Attaque par le haut</French>
             <Czech>Útok zvrchu při přeletu</Czech>
-            <Turkish>Yüksek Uçuş Saldırı</Turkish>
+            <French>Attaque par le haut</French>
             <Spanish>Ataque desde arriba</Spanish>
+            <Italian>Attacco dall'alto</Italian>
+            <Polish>Atak z góry</Polish>
+            <Portuguese>Ataque por cima</Portuguese>
+            <Russian>Атака сверху</Russian>
+            <German>Überflugangriff</German>
+            <Korean>상부 타격</Korean>
+            <Japanese>オーバーフライ トップ アタック</Japanese>
+            <Chinese>攻頂模式</Chinese>
+            <Chinesesimp>飞越攻顶模式</Chinesesimp>
+            <Turkish>Yüksek Uçuş Saldırı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_NLAW_trackTarget">
+            <English>NLAW Track Target (Hold)</English>
+            <Czech>NLAW sledování cíle (držet)</Czech>
+            <French>NLAW suivre la cible (maintenir)</French>
+            <Spanish>NLAW Seguir objetivo (Mantener)</Spanish>
+            <Italian>NLAW Traccia Bersaglio (Tieni Premuto)</Italian>
+            <Polish>Śledzenie Celu NLAW (Przytrzymaj)</Polish>
+            <Portuguese>NLAW Rastrear Alvo (Segurar)</Portuguese>
+            <Russian>NLAW наведение на цель (удерживать)</Russian>
+            <German>NLAW Zielverfolgung</German>
+            <Korean>NLAW 목표 추적 (누름유지)</Korean>
+            <Japanese>NLAW 目標追跡 (ホールド)</Japanese>
+            <Chinese>次世代輕型反坦克導彈發射器追蹤目標 (按住)</Chinese>
+            <Chinesesimp>NLAW 追踪目标（按住）</Chinesesimp>
+            <Turkish>NLAW Track Target (Basılı Tut)</Turkish>
         </Key>
     </Package>
 </Project>

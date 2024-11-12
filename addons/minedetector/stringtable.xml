@@ -1,133 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MineDetector">
-        <Key ID="STR_ACE_MineDetector_VMM3_Description">
-            <English>Metal detector</English>
-            <French>Détecteur de métaux</French>
-            <Russian>Детектор металла</Russian>
-            <Czech>Detektor kovů</Czech>
-            <Japanese>金属探知機</Japanese>
-            <Polish>Wykrywacz metali</Polish>
-            <German>Metalldetektor</German>
-            <Korean>지뢰탐지기</Korean>
-            <Italian>Metal detector</Italian>
-            <Chinesesimp>金属探测器</Chinesesimp>
-            <Chinese>金屬探測器</Chinese>
-            <Portuguese>Detector de Metais</Portuguese>
-            <Spanish>Detector de metales</Spanish>
-            <Turkish>Metal Dedektör</Turkish>
-        </Key>
-        <Key ID="STR_ACE_MineDetector_MetalDetector">
-            <English>Metal detector</English>
-            <French>Détecteur de métaux</French>
-            <Russian>Детектор металла</Russian>
-            <Czech>Detektor kovů</Czech>
-            <Japanese>金属探知機</Japanese>
-            <Polish>Wykrywacz metali</Polish>
-            <German>Metalldetektor</German>
-            <Korean>지뢰탐지기</Korean>
-            <Italian>Metal detector</Italian>
-            <Chinesesimp>金属探测器</Chinesesimp>
-            <Chinese>金屬探測器</Chinese>
-            <Portuguese>Detector de Metais</Portuguese>
-            <Spanish>Detector de metales</Spanish>
-            <Turkish>Metal Dedektör</Turkish>
-        </Key>
         <Key ID="STR_ACE_MineDetector_ActivateDetector">
             <English>Activate</English>
-            <French>Activer</French>
-            <Russian>Включить</Russian>
             <Czech>Aktivovat</Czech>
-            <Japanese>起動</Japanese>
+            <French>Activer</French>
+            <Spanish>Activar</Spanish>
+            <Italian>Attiva</Italian>
             <Polish>Aktywuj</Polish>
+            <Portuguese>Ativar</Portuguese>
+            <Russian>Включить</Russian>
             <German>Aktivieren</German>
             <Korean>작동</Korean>
-            <Italian>Attiva</Italian>
-            <Chinesesimp>启用探测器</Chinesesimp>
+            <Japanese>起動</Japanese>
             <Chinese>啟用探測器</Chinese>
-            <Portuguese>Ativar</Portuguese>
-            <Spanish>Activar</Spanish>
+            <Chinesesimp>启用探测器</Chinesesimp>
             <Turkish>Aktif</Turkish>
-        </Key>
-        <Key ID="STR_ACE_MineDetector_DeactivateDetector">
-            <English>Deactivate</English>
-            <French>Désactiver</French>
-            <Russian>Выключить</Russian>
-            <Czech>Deaktivovat</Czech>
-            <Japanese>停止</Japanese>
-            <Polish>Deaktywuj</Polish>
-            <German>Deaktivieren</German>
-            <Korean>끄기</Korean>
-            <Italian>Disattiva</Italian>
-            <Chinesesimp>停用探测器</Chinesesimp>
-            <Chinese>停用探測器</Chinese>
-            <Portuguese>Desativar</Portuguese>
-            <Spanish>Desactivar</Spanish>
-            <Turkish>Aktif Değil</Turkish>
         </Key>
         <Key ID="STR_ACE_MineDetector_ConnectHeadphones">
             <English>Connect Headphones</English>
-            <Russian>Подключить наушники</Russian>
             <Czech>Připojit sluchátka</Czech>
-            <Japanese>ヘッドホンに接続</Japanese>
+            <French>Connecter les écouteurs</French>
+            <Spanish>Conectar auriculares</Spanish>
+            <Italian>Connetti Auricolari</Italian>
             <Polish>Podłącz słuchawki</Polish>
+            <Portuguese>Conectar fones de ouvido</Portuguese>
+            <Russian>Подключить наушники</Russian>
             <German>Kopfhörer verbinden</German>
             <Korean>헤드폰에 연결</Korean>
-            <French>Connecter les écouteurs</French>
-            <Italian>Connetti Auricolari</Italian>
-            <Chinesesimp>连接耳机</Chinesesimp>
+            <Japanese>ヘッドホンに接続</Japanese>
             <Chinese>連接耳機</Chinese>
-            <Portuguese>Conectar fones de ouvido</Portuguese>
-            <Spanish>Conectar auriculares</Spanish>
+            <Chinesesimp>连接耳机</Chinesesimp>
             <Turkish>Kulaklığını Bağla</Turkish>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_DeactivateDetector">
+            <English>Deactivate</English>
+            <Czech>Deaktivovat</Czech>
+            <French>Désactiver</French>
+            <Spanish>Desactivar</Spanish>
+            <Italian>Disattiva</Italian>
+            <Polish>Deaktywuj</Polish>
+            <Portuguese>Desativar</Portuguese>
+            <Russian>Выключить</Russian>
+            <German>Deaktivieren</German>
+            <Korean>끄기</Korean>
+            <Japanese>停止</Japanese>
+            <Chinese>停用探測器</Chinese>
+            <Chinesesimp>停用探测器</Chinesesimp>
+            <Turkish>Aktif Değil</Turkish>
         </Key>
         <Key ID="STR_ACE_MineDetector_DisconnectHeadphones">
             <English>Disconnect Headphones</English>
-            <Russian>Отключить наушники</Russian>
             <Czech>Odpojit sluchátka</Czech>
-            <Japanese>ヘッドホンを切断</Japanese>
+            <French>Déconnecter les écouteurs</French>
+            <Spanish>Desconectar auriculares</Spanish>
+            <Italian>Disconnetti Auricolari</Italian>
             <Polish>Odłącz słuchawki</Polish>
+            <Portuguese>Desconectar fones de ouvido</Portuguese>
+            <Russian>Отключить наушники</Russian>
             <German>Kopfhörer trennen</German>
             <Korean>헤드폰 연결 끊기</Korean>
-            <French>Déconnecter les écouteurs</French>
-            <Italian>Disconnetti Auricolari</Italian>
-            <Chinesesimp>断开耳机</Chinesesimp>
+            <Japanese>ヘッドホンを切断</Japanese>
             <Chinese>斷開耳機</Chinese>
-            <Portuguese>Desconectar fones de ouvido</Portuguese>
-            <Spanish>Desconectar auriculares</Spanish>
+            <Chinesesimp>断开耳机</Chinesesimp>
             <Turkish>Kulaklığının Bağlantısını Kes</Turkish>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesConnected">
             <English>Headphones Connected</English>
-            <Russian>Наушники подключены</Russian>
             <Czech>Sluchátka připojena</Czech>
-            <Japanese>ヘッドホンに接続しました</Japanese>
+            <French>Écouteurs connectés</French>
+            <Spanish>Auriculares conectados</Spanish>
+            <Italian>Auricolari Connessi</Italian>
             <Polish>Słuchawki podpięte</Polish>
+            <Portuguese>Fones de ouvido conectados</Portuguese>
+            <Russian>Наушники подключены</Russian>
             <German>Kopfhörer verbunden</German>
             <Korean>헤드폰 연결됨</Korean>
-            <French>Écouteurs connectés</French>
-            <Italian>Auricolari Connessi</Italian>
-            <Chinesesimp>已连接耳机</Chinesesimp>
+            <Japanese>ヘッドホンに接続しました</Japanese>
             <Chinese>已連接耳機</Chinese>
-            <Portuguese>Fones de ouvido conectados</Portuguese>
-            <Spanish>Auriculares conectados</Spanish>
+            <Chinesesimp>已连接耳机</Chinesesimp>
             <Turkish>Kulaklık Bağlandı</Turkish>
         </Key>
         <Key ID="STR_ACE_MineDetector_HeadphonesDisconnected">
             <English>Headphones Disconnected</English>
-            <Russian>Наушники отключены</Russian>
             <Czech>Sluchátka odpojena</Czech>
-            <Japanese>ヘッドホンを切断しました</Japanese>
+            <French>Écouteurs déconnectés</French>
+            <Spanish>Auriculares desconectados</Spanish>
+            <Italian>Auricolari Disconnessi</Italian>
             <Polish>Słuchawki odpięte</Polish>
+            <Portuguese>Fones de ouvido conectados</Portuguese>
+            <Russian>Наушники отключены</Russian>
             <German>Kopfhörer getrennt</German>
             <Korean>헤드폰 연결 끊김</Korean>
-            <French>Écouteurs déconnectés</French>
-            <Italian>Auricolari Disconnessi</Italian>
-            <Chinesesimp>已断开耳机</Chinesesimp>
+            <Japanese>ヘッドホンを切断しました</Japanese>
             <Chinese>已斷開耳機</Chinese>
-            <Portuguese>Fones de ouvido conectados</Portuguese>
-            <Spanish>Auriculares desconectados</Spanish>
+            <Chinesesimp>已断开耳机</Chinesesimp>
             <Turkish>Kulaklık Çıkartıldı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_MetalDetector">
+            <English>Metal detector</English>
+            <Czech>Detektor kovů</Czech>
+            <French>Détecteur de métaux</French>
+            <Spanish>Detector de metales</Spanish>
+            <Italian>Metal detector</Italian>
+            <Polish>Wykrywacz metali</Polish>
+            <Portuguese>Detector de Metais</Portuguese>
+            <Russian>Детектор металла</Russian>
+            <German>Metalldetektor</German>
+            <Korean>지뢰탐지기</Korean>
+            <Japanese>金属探知機</Japanese>
+            <Chinese>金屬探測器</Chinese>
+            <Chinesesimp>金属探测器</Chinesesimp>
+            <Turkish>Metal Dedektör</Turkish>
+        </Key>
+        <Key ID="STR_ACE_MineDetector_VMM3_Description">
+            <English>Metal detector</English>
+            <Czech>Detektor kovů</Czech>
+            <French>Détecteur de métaux</French>
+            <Spanish>Detector de metales</Spanish>
+            <Italian>Metal detector</Italian>
+            <Polish>Wykrywacz metali</Polish>
+            <Portuguese>Detector de Metais</Portuguese>
+            <Russian>Детектор металла</Russian>
+            <German>Metalldetektor</German>
+            <Korean>지뢰탐지기</Korean>
+            <Japanese>金属探知機</Japanese>
+            <Chinese>金屬探測器</Chinese>
+            <Chinesesimp>金属探测器</Chinesesimp>
+            <Turkish>Metal Dedektör</Turkish>
         </Key>
     </Package>
 </Project>

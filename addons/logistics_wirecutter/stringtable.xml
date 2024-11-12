@@ -1,90 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Logistics_Wirecutter">
-        <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterName">
-            <English>Wirecutter</English>
-            <French>Pince coupante</French>
-            <German>Drahtschneider</German>
-            <Spanish>Cortador de cables</Spanish>
-            <Russian>Клещи-кусачки</Russian>
-            <Czech>Štípací kleště</Czech>
-            <Polish>Nożyce do cięcia drutu</Polish>
-            <Hungarian>Drótvágó</Hungarian>
-            <Italian>Trancia</Italian>
-            <Portuguese>Cortador de Arame</Portuguese>
-            <Japanese>ワイヤーカッター</Japanese>
-            <Korean>절단기</Korean>
-            <Chinesesimp>剪铁丝网钳</Chinesesimp>
-            <Chinese>剪鐵絲網鉗</Chinese>
-            <Turkish>Tel Makası</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterDescription">
-            <English>Wirecutter</English>
-            <German>Schneidet Draht.</German>
-            <Spanish>Cortador de cables</Spanish>
-            <Russian>Позволяют быстро перекусывать сеточные конструкции.</Russian>
-            <Czech>Štípací kleště</Czech>
-            <Polish>Służą do cięcia drutu i płotów</Polish>
-            <French>Pince coupante</French>
-            <Hungarian>Drótok, huzalok, és kábelek vágására alkalmas olló.</Hungarian>
-            <Italian>Tronchese per tagliare filo di metallo.</Italian>
-            <Portuguese>Cortador de Arame</Portuguese>
-            <Japanese>ワイヤーカッター</Japanese>
-            <Korean>절단기</Korean>
-            <Chinesesimp>剪铁丝网钳</Chinesesimp>
-            <Chinese>剪鐵絲網鉗</Chinese>
-            <Turkish>Tel Makası</Turkish>
-        </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CutFence">
             <English>Cut Fence</English>
-            <German>Zaun schneiden</German>
-            <Spanish>Cortar alambrado</Spanish>
-            <Polish>Przetnij płot</Polish>
             <Czech>Přestřihnout plot</Czech>
             <French>Cisailler l'obstacle</French>
-            <Portuguese>Cortar Cerca</Portuguese>
+            <Spanish>Cortar alambrado</Spanish>
             <Italian>Taglia</Italian>
-            <Hungarian>Drótkerítés átvágása</Hungarian>
+            <Polish>Przetnij płot</Polish>
+            <Portuguese>Cortar Cerca</Portuguese>
             <Russian>Разрезать забор</Russian>
-            <Japanese>フェンスを切断する</Japanese>
+            <German>Zaun schneiden</German>
             <Korean>철조망 자르기</Korean>
-            <Chinesesimp>剪断护栏</Chinesesimp>
+            <Japanese>フェンスを切断する</Japanese>
             <Chinese>剪斷護欄</Chinese>
+            <Chinesesimp>剪断护栏</Chinesesimp>
             <Turkish>Çiti/Teli Kes</Turkish>
+            <Hungarian>Drótkerítés átvágása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_CuttingFence">
             <English>Cutting Fences / Wires...</English>
-            <German>Zaun / Draht schneiden...</German>
-            <Spanish>Cortando alambrado / cables...</Spanish>
-            <Polish>Przecinanie płotu / drutów...</Polish>
             <Czech>Přestřihávám plot / dráty...</Czech>
             <French>Cisaillement de l'obstacle...</French>
-            <Portuguese>Cortando Cerca / Arame...</Portuguese>
+            <Spanish>Cortando alambrado / cables...</Spanish>
             <Italian>Sto tagliando...</Italian>
-            <Hungarian>Drótok elvágása...</Hungarian>
+            <Polish>Przecinanie płotu / drutów...</Polish>
+            <Portuguese>Cortando Cerca / Arame...</Portuguese>
             <Russian>Разрезаем забор / провода...</Russian>
-            <Japanese>フェンス/ワイヤを切断しています・・・</Japanese>
+            <German>Zaun / Draht schneiden...</German>
             <Korean>철망/철조망 자르는 중...</Korean>
-            <Chinesesimp>正在剪断护栏/刺网...</Chinesesimp>
+            <Japanese>フェンス/ワイヤを切断しています・・・</Japanese>
             <Chinese>剪斷護欄/刺網中...</Chinese>
+            <Chinesesimp>正在剪断护栏/刺网...</Chinesesimp>
             <Turkish>Kesiliyor Çit/Tel</Turkish>
+            <Hungarian>Drótok elvágása...</Hungarian>
         </Key>
         <Key ID="STR_ACE_Logistics_Wirecutter_FenceCut">
             <English>Fence cut</English>
-            <German>Zaun geschnitten</German>
-            <Spanish>Alambrado cortado</Spanish>
-            <Polish>Płot przecięty</Polish>
             <Czech>Plot přestřižen</Czech>
             <French>Obstacle cisaillé</French>
-            <Portuguese>Cerca cortada</Portuguese>
+            <Spanish>Alambrado cortado</Spanish>
             <Italian>Fatto!</Italian>
-            <Hungarian>Drótkerítés átvágva</Hungarian>
+            <Polish>Płot przecięty</Polish>
+            <Portuguese>Cerca cortada</Portuguese>
             <Russian>Забор разрезан</Russian>
-            <Japanese>フェンスを切断しました</Japanese>
+            <German>Zaun geschnitten</German>
             <Korean>절단됨</Korean>
-            <Chinesesimp>护栏已被剪断</Chinesesimp>
+            <Japanese>フェンスを切断しました</Japanese>
             <Chinese>護欄已被剪斷</Chinese>
+            <Chinesesimp>护栏已被剪断</Chinesesimp>
             <Turkish>Çit kesme</Turkish>
+            <Hungarian>Drótkerítés átvágva</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterDescription">
+            <English>Wirecutter</English>
+            <Czech>Štípací kleště</Czech>
+            <French>Pince coupante</French>
+            <Spanish>Cortador de cables</Spanish>
+            <Italian>Tronchese per tagliare filo di metallo.</Italian>
+            <Polish>Służą do cięcia drutu i płotów</Polish>
+            <Portuguese>Cortador de Arame</Portuguese>
+            <Russian>Позволяют быстро перекусывать сеточные конструкции.</Russian>
+            <German>Schneidet Draht.</German>
+            <Korean>절단기</Korean>
+            <Japanese>ワイヤーカッター</Japanese>
+            <Chinese>剪鐵絲網鉗</Chinese>
+            <Chinesesimp>剪铁丝网钳</Chinesesimp>
+            <Turkish>Tel Makası</Turkish>
+            <Hungarian>Drótok, huzalok, és kábelek vágására alkalmas olló.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Logistics_Wirecutter_wirecutterName">
+            <English>Wirecutter</English>
+            <Czech>Štípací kleště</Czech>
+            <French>Pince coupante</French>
+            <Spanish>Cortador de cables</Spanish>
+            <Italian>Trancia</Italian>
+            <Polish>Nożyce do cięcia drutu</Polish>
+            <Portuguese>Cortador de Arame</Portuguese>
+            <Russian>Клещи-кусачки</Russian>
+            <German>Drahtschneider</German>
+            <Korean>절단기</Korean>
+            <Japanese>ワイヤーカッター</Japanese>
+            <Chinese>剪鐵絲網鉗</Chinese>
+            <Chinesesimp>剪铁丝网钳</Chinesesimp>
+            <Turkish>Tel Makası</Turkish>
+            <Hungarian>Drótvágó</Hungarian>
         </Key>
     </Package>
 </Project>

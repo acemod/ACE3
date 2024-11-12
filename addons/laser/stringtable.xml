@@ -1,173 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Laser">
-        <Key ID="STR_ACE_Laser_laser">
-            <English>Laser</English>
-            <German>Laser</German>
-            <Polish>Laser</Polish>
-            <French>Laser</French>
-            <Russian>Лазер</Russian>
-            <Portuguese>Laser</Portuguese>
-            <Hungarian>Lézer</Hungarian>
-            <Spanish>Láser</Spanish>
-            <Czech>Laser</Czech>
-            <Italian>Laser</Italian>
-            <Japanese>レーザー</Japanese>
-            <Korean>레이저</Korean>
-            <Chinesesimp>激光</Chinesesimp>
-            <Chinese>雷射</Chinese>
-            <Turkish>Lazer</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Laser_dispersionCount_displayName">
-            <English>Laser Dispersion Simulation Count</English>
-            <Japanese>レーザーの分散シミュレート数</Japanese>
-            <German>Laserstreuung-Simulationszähler</German>
-            <Korean>레이저 분산 시뮬레이션 수</Korean>
-            <Polish>Wskaźnik poziomu rozproszenia wiązki lasera</Polish>
-            <French>Nombre de simulations pour la dispersion du laser</French>
-            <Italian>Contatore di Simulazione della Dispersione del Laser</Italian>
-            <Chinesesimp>激光色散模拟计数</Chinesesimp>
-            <Chinese>雷射散射模擬計算</Chinese>
-            <Russian>Число симуляций рассеивания лазерного луча</Russian>
-            <Portuguese>Contador da Simulação de Dispersão de Laser</Portuguese>
-            <Czech>Počet simulace disperze laseru</Czech>
-            <Spanish>Número de dispersión en la simulación del láser</Spanish>
-            <Turkish>Laser Dispersion Simulation Count</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Laser_laserCode">
-            <English>Laser Code</English>
-            <German>Lasercode</German>
-            <Polish>Kod lasera</Polish>
-            <French>Code laser</French>
-            <Russian>Лазерный код</Russian>
-            <Portuguese>Código do Laser</Portuguese>
-            <Hungarian>Lézerkód</Hungarian>
-            <Spanish>Código del láser</Spanish>
-            <Czech>Laser kód</Czech>
-            <Italian>Codice Laser</Italian>
-            <Japanese>レーザー コード</Japanese>
-            <Korean>레이저 코드</Korean>
-            <Chinesesimp>激光码</Chinesesimp>
-            <Chinese>雷射碼</Chinese>
-            <Turkish>Lazer Kod</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Laser_laserCodeUpOnes">
-            <English>Laser - Cycle Code Up - XXX#</English>
-            <German>Lasercode +XXX#</German>
-            <Polish>Laser - Następny kod - XXX#</Polish>
-            <French>Code laser +XXX#</French>
-            <Russian>Лазер - увеличить частоту - XXX#</Russian>
-            <Portuguese>Laser - Alternar Código para Cima - XXX#</Portuguese>
-            <Hungarian>Lézer - kódciklus növelése - XXX#</Hungarian>
-            <Spanish>Láser - Aumentar código - XXX#</Spanish>
-            <Czech>Laser - Kód +XXX#</Czech>
-            <Italian>Laser - Cicla Codice - XXX#</Italian>
-            <Japanese>レーザー - コードの数値を増やす - XXX#</Japanese>
-            <Korean>레이저 - 코드 순환 위 - XXX#</Korean>
-            <Chinesesimp>激光—循环切换激光码 上 - XXX#</Chinesesimp>
-            <Chinese>雷射 - 循環切換雷射碼 上 - XXX#</Chinese>
-            <Turkish>Lazer - Çevrim Kodu Yukarı - XXX#</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Laser_laserCodeUpTens">
-            <English>Laser - Cycle Code Up - XX#X</English>
-            <German>Lasercode +XX#X</German>
-            <Polish>Laser - Następny kod - XX#X</Polish>
-            <French>Code laser +XX#X</French>
-            <Russian>Лазер - увеличить частоту - XX#X</Russian>
-            <Portuguese>Laser - Alternar Código para Cima - XX#X</Portuguese>
-            <Hungarian>Lézer - kódciklus növelése - XX#X</Hungarian>
-            <Spanish>Láser - Aumentar código - 1##X</Spanish>
-            <Czech>Laser - Kód +XX#X</Czech>
-            <Italian>Laser - Cicla Codice - XX#X</Italian>
-            <Japanese>レーザー - コードの数値を増やす - XX#X</Japanese>
-            <Korean>레이저 - 코드 순환 위 - 1##X</Korean>
-            <Chinesesimp>激光—循环切换激光码 上 - XX#X</Chinesesimp>
-            <Chinese>雷射 - 循環切換雷射碼 上 - XX#X</Chinese>
-            <Turkish>Lazer - Çevrim Kodu Yukarı - XX#X</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Laser_laserCodeUpHundreds">
-            <English>Laser - Cycle Code Up - X#XX</English>
-            <German>Lasercode +X#XX</German>
-            <Polish>Laser - Następny kod - X#XX</Polish>
-            <French>Code laser +X#XX</French>
-            <Russian>Лазер - увеличить частоту - X#XX</Russian>
-            <Portuguese>Laser - Alternar Código para Cima - X#XX</Portuguese>
-            <Hungarian>Lézer - kódciklus növelése - X#XX</Hungarian>
-            <Spanish>Láser - Aumentar código - X#XX</Spanish>
-            <Czech>Laser - Kód +X#XX</Czech>
-            <Italian>Laser - Cicla Codice - X#XX</Italian>
-            <Japanese>レーザー - コードの数値を増やす - X#XX</Japanese>
-            <Korean>레이저 - 코드 순환 위 - X#XX</Korean>
-            <Chinesesimp>激光—循环切换激光码 上 - X#XX</Chinesesimp>
-            <Chinese>雷射 - 循環切換雷射碼 上 - X#XX</Chinese>
-            <Turkish>Lazer - Çevrim Kodu Yukarı - X#XX</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Laser_laserCodeDown">
-            <English>Laser - Cycle Code Down</English>
-            <German>Lasercode -</German>
-            <Polish>Laser - Poprzedni kod</Polish>
-            <French>Code laser -</French>
-            <Russian>Лазер - уменьшить частоту</Russian>
-            <Portuguese>Laser - Alternar Código para Baixo</Portuguese>
-            <Hungarian>Lézer - kódciklus csökkentése</Hungarian>
-            <Spanish>Láser - Reducir código</Spanish>
-            <Czech>Laser - Kód -</Czech>
-            <Italian>Laser - Cicla Codice giù</Italian>
-            <Japanese>レーザー - コードの数値を減らす</Japanese>
-            <Korean>레이저 - 코드 순환 아래</Korean>
-            <Chinesesimp>激光—循环切换激光码 下</Chinesesimp>
-            <Chinese>雷射 - 循環切換雷射碼 下</Chinese>
-            <Turkish>Lazer - Çevrim Kodu aşağı</Turkish>
+        <Key ID="STR_ACE_Laser_LSTOff">
+            <English>Laser Spot Tracker: Off</English>
+            <French>Traqueur laser : désactivé</French>
+            <Spanish>Rastreador del Puntero Láser: Off</Spanish>
+            <Italian>Tracciamento Designazioni Laser: Disattivato</Italian>
+            <Polish>Laserowe Śledzenie Punktu: Wył.</Polish>
+            <Portuguese>Rastreador a Laser: Desligado</Portuguese>
+            <Russian>Лазерный точечный трекер: выключен</Russian>
+            <German>Laserziel Verfolgung: Aus</German>
+            <Korean>레이저 스팟 추적기: 끔</Korean>
+            <Japanese>レーザースポットトラッカー: オフ</Japanese>
         </Key>
         <Key ID="STR_ACE_Laser_LSTOn">
             <English>Laser Spot Tracker: On</English>
-            <Japanese>レーザースポットトラッカー: オン</Japanese>
-            <Polish>Laserowe Śledzenie Punktu: Wł.</Polish>
-            <German>Laserziel Verfolgung: An</German>
-            <Italian>Tracciamento Designazioni Laser: Attivato</Italian>
-            <Korean>레이저 스팟 추적기: 켬</Korean>
             <French>Traqueur laser : activé</French>
+            <Spanish>Rastreador del Puntero Láser: On</Spanish>
+            <Italian>Tracciamento Designazioni Laser: Attivato</Italian>
+            <Polish>Laserowe Śledzenie Punktu: Wł.</Polish>
             <Portuguese>Rastreador a Laser: Ligado</Portuguese>
             <Russian>Лазерный точечный трекер: Включен</Russian>
-            <Spanish>Rastreador del Puntero Láser: On</Spanish>
+            <German>Laserziel Verfolgung: An</German>
+            <Korean>레이저 스팟 추적기: 켬</Korean>
+            <Japanese>レーザースポットトラッカー: オン</Japanese>
         </Key>
-        <Key ID="STR_ACE_Laser_LSTOff">
-            <English>Laser Spot Tracker: Off</English>
-            <Japanese>レーザースポットトラッカー: オフ</Japanese>
-            <Polish>Laserowe Śledzenie Punktu: Wył.</Polish>
-            <German>Laserziel Verfolgung: Aus</German>
-            <Italian>Tracciamento Designazioni Laser: Disattivato</Italian>
-            <Korean>레이저 스팟 추적기: 끔</Korean>
-            <French>Traqueur laser : désactivé</French>
-            <Portuguese>Rastreador a Laser: Desligado</Portuguese>
-            <Russian>Лазерный точечный трекер: выключен</Russian>
-            <Spanish>Rastreador del Puntero Láser: Off</Spanish>
+        <Key ID="STR_ACE_Laser_dispersionCount_displayName">
+            <English>Laser Dispersion Simulation Count</English>
+            <Czech>Počet simulace disperze laseru</Czech>
+            <French>Nombre de simulations pour la dispersion du laser</French>
+            <Spanish>Número de dispersión en la simulación del láser</Spanish>
+            <Italian>Contatore di Simulazione della Dispersione del Laser</Italian>
+            <Polish>Wskaźnik poziomu rozproszenia wiązki lasera</Polish>
+            <Portuguese>Contador da Simulação de Dispersão de Laser</Portuguese>
+            <Russian>Число симуляций рассеивания лазерного луча</Russian>
+            <German>Laserstreuung-Simulationszähler</German>
+            <Korean>레이저 분산 시뮬레이션 수</Korean>
+            <Japanese>レーザーの分散シミュレート数</Japanese>
+            <Chinese>雷射散射模擬計算</Chinese>
+            <Chinesesimp>激光色散模拟计数</Chinesesimp>
+            <Turkish>Laser Dispersion Simulation Count</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Laser_laser">
+            <English>Laser</English>
+            <Czech>Laser</Czech>
+            <French>Laser</French>
+            <Spanish>Láser</Spanish>
+            <Italian>Laser</Italian>
+            <Polish>Laser</Polish>
+            <Portuguese>Laser</Portuguese>
+            <Russian>Лазер</Russian>
+            <German>Laser</German>
+            <Korean>레이저</Korean>
+            <Japanese>レーザー</Japanese>
+            <Chinese>雷射</Chinese>
+            <Chinesesimp>激光</Chinesesimp>
+            <Turkish>Lazer</Turkish>
+            <Hungarian>Lézer</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Laser_laserCode">
+            <English>Laser Code</English>
+            <Czech>Laser kód</Czech>
+            <French>Code laser</French>
+            <Spanish>Código del láser</Spanish>
+            <Italian>Codice Laser</Italian>
+            <Polish>Kod lasera</Polish>
+            <Portuguese>Código do Laser</Portuguese>
+            <Russian>Лазерный код</Russian>
+            <German>Lasercode</German>
+            <Korean>레이저 코드</Korean>
+            <Japanese>レーザー コード</Japanese>
+            <Chinese>雷射碼</Chinese>
+            <Chinesesimp>激光码</Chinesesimp>
+            <Turkish>Lazer Kod</Turkish>
+            <Hungarian>Lézerkód</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Laser_laserCodeDown">
+            <English>Laser - Cycle Code Down</English>
+            <Czech>Laser - Kód -</Czech>
+            <French>Code laser -</French>
+            <Spanish>Láser - Reducir código</Spanish>
+            <Italian>Laser - Cicla Codice giù</Italian>
+            <Polish>Laser - Poprzedni kod</Polish>
+            <Portuguese>Laser - Alternar Código para Baixo</Portuguese>
+            <Russian>Лазер - уменьшить частоту</Russian>
+            <German>Lasercode -</German>
+            <Korean>레이저 - 코드 순환 아래</Korean>
+            <Japanese>レーザー - コードの数値を減らす</Japanese>
+            <Chinese>雷射 - 循環切換雷射碼 下</Chinese>
+            <Chinesesimp>激光—循环切换激光码 下</Chinesesimp>
+            <Turkish>Lazer - Çevrim Kodu aşağı</Turkish>
+            <Hungarian>Lézer - kódciklus csökkentése</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Laser_laserCodeUpHundreds">
+            <English>Laser - Cycle Code Up - X#XX</English>
+            <Czech>Laser - Kód +X#XX</Czech>
+            <French>Code laser +X#XX</French>
+            <Spanish>Láser - Aumentar código - X#XX</Spanish>
+            <Italian>Laser - Cicla Codice - X#XX</Italian>
+            <Polish>Laser - Następny kod - X#XX</Polish>
+            <Portuguese>Laser - Alternar Código para Cima - X#XX</Portuguese>
+            <Russian>Лазер - увеличить частоту - X#XX</Russian>
+            <German>Lasercode +X#XX</German>
+            <Korean>레이저 - 코드 순환 위 - X#XX</Korean>
+            <Japanese>レーザー - コードの数値を増やす - X#XX</Japanese>
+            <Chinese>雷射 - 循環切換雷射碼 上 - X#XX</Chinese>
+            <Chinesesimp>激光—循环切换激光码 上 - X#XX</Chinesesimp>
+            <Turkish>Lazer - Çevrim Kodu Yukarı - X#XX</Turkish>
+            <Hungarian>Lézer - kódciklus növelése - X#XX</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Laser_laserCodeUpOnes">
+            <English>Laser - Cycle Code Up - XXX#</English>
+            <Czech>Laser - Kód +XXX#</Czech>
+            <French>Code laser +XXX#</French>
+            <Spanish>Láser - Aumentar código - XXX#</Spanish>
+            <Italian>Laser - Cicla Codice - XXX#</Italian>
+            <Polish>Laser - Następny kod - XXX#</Polish>
+            <Portuguese>Laser - Alternar Código para Cima - XXX#</Portuguese>
+            <Russian>Лазер - увеличить частоту - XXX#</Russian>
+            <German>Lasercode +XXX#</German>
+            <Korean>레이저 - 코드 순환 위 - XXX#</Korean>
+            <Japanese>レーザー - コードの数値を増やす - XXX#</Japanese>
+            <Chinese>雷射 - 循環切換雷射碼 上 - XXX#</Chinese>
+            <Chinesesimp>激光—循环切换激光码 上 - XXX#</Chinesesimp>
+            <Turkish>Lazer - Çevrim Kodu Yukarı - XXX#</Turkish>
+            <Hungarian>Lézer - kódciklus növelése - XXX#</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Laser_laserCodeUpTens">
+            <English>Laser - Cycle Code Up - XX#X</English>
+            <Czech>Laser - Kód +XX#X</Czech>
+            <French>Code laser +XX#X</French>
+            <Spanish>Láser - Aumentar código - 1##X</Spanish>
+            <Italian>Laser - Cicla Codice - XX#X</Italian>
+            <Polish>Laser - Następny kod - XX#X</Polish>
+            <Portuguese>Laser - Alternar Código para Cima - XX#X</Portuguese>
+            <Russian>Лазер - увеличить частоту - XX#X</Russian>
+            <German>Lasercode +XX#X</German>
+            <Korean>레이저 - 코드 순환 위 - 1##X</Korean>
+            <Japanese>レーザー - コードの数値を増やす - XX#X</Japanese>
+            <Chinese>雷射 - 循環切換雷射碼 上 - XX#X</Chinese>
+            <Chinesesimp>激光—循环切换激光码 上 - XX#X</Chinesesimp>
+            <Turkish>Lazer - Çevrim Kodu Yukarı - XX#X</Turkish>
+            <Hungarian>Lézer - kódciklus növelése - XX#X</Hungarian>
         </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap">
             <English>Draw Laser on Map</English>
-            <Japanese>地図上にレーザーを表示する</Japanese>
-            <Polish>Rysuj Laser na Mapie</Polish>
-            <Korean>맵에 레이저 그리기</Korean>
-            <Chinesesimp>在地图上绘制激光</Chinesesimp>
-            <Russian>Отображать лазер на карте</Russian>
-            <Spanish>Dibujar láser en mapa</Spanish>
-            <German>Laser auf Karte zeichnen</German>
-            <Italian>Mostra Laser su Mappa</Italian>
             <French>Dessiner le laser sur la carte</French>
+            <Spanish>Dibujar láser en mapa</Spanish>
+            <Italian>Mostra Laser su Mappa</Italian>
+            <Polish>Rysuj Laser na Mapie</Polish>
             <Portuguese>Desenhar Laser no Mapa</Portuguese>
+            <Russian>Отображать лазер на карте</Russian>
+            <German>Laser auf Karte zeichnen</German>
+            <Korean>맵에 레이저 그리기</Korean>
+            <Japanese>地図上にレーザーを表示する</Japanese>
+            <Chinesesimp>在地图上绘制激光</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Laser_showLaserOnMap_tooltip">
             <English>Active laser designator's position will be drawn on the map</English>
-            <Japanese>アクティブな指示レーザーの位置が地図上に描画されます</Japanese>
-            <Polish>Pozycja aktywnego wskaźnika laserowego będzie rysowana na mapie.</Polish>
-            <Korean>지도에 능동 레이저 표시기의 위치가 그려집니다.</Korean>
-            <Chinesesimp>激活的激光指示器本身及其标记的点会在地图上显示</Chinesesimp>
-            <Russian>Точка, куда светит активный лазер, будет указана на карте</Russian>
-            <Spanish>La posición del designador láser activo será dibujada en el mapa</Spanish>
-            <German>Die Position des aktiven Lasermarkierers wird auf der Karte eingezeichnet</German>
-            <Italian>Mostra la posizione del proprio designatore laser sulla mappa</Italian>
             <French>Active la position du désignateur laser sur la carte.</French>
+            <Spanish>La posición del designador láser activo será dibujada en el mapa</Spanish>
+            <Italian>Mostra la posizione del proprio designatore laser sulla mappa</Italian>
+            <Polish>Pozycja aktywnego wskaźnika laserowego będzie rysowana na mapie.</Polish>
             <Portuguese>A posição do designador laser ativo será desenhada no mapa</Portuguese>
+            <Russian>Точка, куда светит активный лазер, будет указана на карте</Russian>
+            <German>Die Position des aktiven Lasermarkierers wird auf der Karte eingezeichnet</German>
+            <Korean>지도에 능동 레이저 표시기의 위치가 그려집니다.</Korean>
+            <Japanese>アクティブな指示レーザーの位置が地図上に描画されます</Japanese>
+            <Chinesesimp>激活的激光指示器本身及其标记的点会在地图上显示</Chinesesimp>
         </Key>
     </Package>
 </Project>
