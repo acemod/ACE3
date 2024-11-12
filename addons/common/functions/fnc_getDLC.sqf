@@ -48,7 +48,7 @@ private _whitelist = [
     "suitpack_scientist_02",
     "acc\acco_mrd" // Different model added by RF
 ];
-private _config = if (typeName _class == "CONFIG") then {
+private _config = if (_class isEqualType configNull) then {
     _class
 } else {
     if !(isNull _root) then {
