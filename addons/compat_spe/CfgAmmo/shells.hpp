@@ -117,9 +117,8 @@ class SPE_76mm_M1_M42_HE: SPE_76mm_M7_M42_HE
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_medium_HD"};
 };
 
-//M1 57mm AT gun
-class SPE_6pdr_mk10T_HE: SPE_ShellHE_base
-{
+// M1 57mm AT gun
+class SPE_6pdr_mk10T_HE: SPE_ShellHE_base {
     EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 2720;
