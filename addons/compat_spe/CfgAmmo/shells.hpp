@@ -238,7 +238,6 @@ class SPE_M61_M1_AP: SPE_Shell_base {
     EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
 };
 
-
 // M4 Sherman 105 HEAT
 class SPE_M101_M67_HEAT: SPE_ShellHEAT_base {
     EGVAR(frag,enabled) = 1;
@@ -250,7 +249,7 @@ class SPE_M101_M67_HEAT: SPE_ShellHEAT_base {
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_large"};
 };
 
-// M1 57mm AT gun
+// M1 57mm AT gun HE
 class SPE_6pdr_mk10T_HE: SPE_ShellHE_base {
     EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;
@@ -259,4 +258,37 @@ class SPE_6pdr_mk10T_HE: SPE_ShellHE_base {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "1/2";
     EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_small_HD"};
+};
+
+// M1 57mm AT gun AP
+class SPE_57mm_M86_APCBC: SPE_Shell_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 3290;
+    EGVAR(frag,charge) = 41;
+    EGVAR(frag,gurney_c) = 2440;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_small_HD"};
+};
+
+// M3 Howitzer HE
+class SPE_M3_M1_HE: SPE_ShellHE_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 18350;
+    EGVAR(frag,charge) = 2180;
+    EGVAR(frag,gurney_c) = 2750;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_large"};
+};
+
+// M3 Howitzer HEAT
+class SPE_M3_M67_HEAT: SPE_ShellHEAT_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 16620;
+    EGVAR(frag,charge) = 2180;
+    EGVAR(frag,gurney_c) = 2750;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_large"};
 };
