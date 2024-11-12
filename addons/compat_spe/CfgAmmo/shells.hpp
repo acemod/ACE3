@@ -126,5 +126,5 @@ class SPE_6pdr_mk10T_HE: SPE_ShellHE_base
     EGVAR(frag,charge) = 590;
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "1/2";
-    EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_small_HD"};
+    EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_small_HD"};
 };
