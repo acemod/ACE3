@@ -3,54 +3,54 @@
     <Package name="SpottingScope">
         <Key ID="STR_ACE_SpottingScope_DisplayName">
             <English>Spotting Scope</English>
-            <German>Teleskop</German>
-            <Russian>Зрительная труба</Russian>
-            <Polish>Teleskop</Polish>
-            <Spanish>Telescopio</Spanish>
-            <French>Longue-vue</French>
             <Czech>Zaměřovací dalekohled</Czech>
+            <French>Longue-vue</French>
+            <Spanish>Telescopio</Spanish>
             <Italian>Cannocchiale</Italian>
-            <Hungarian>Megfigyelő távcső</Hungarian>
+            <Polish>Teleskop</Polish>
             <Portuguese>Luneta de observador</Portuguese>
-            <Japanese>観測用スコープ</Japanese>
+            <Russian>Зрительная труба</Russian>
+            <German>Teleskop</German>
             <Korean>감적 망원경</Korean>
-            <Chinesesimp>观测镜</Chinesesimp>
+            <Japanese>観測用スコープ</Japanese>
             <Chinese>觀測鏡</Chinese>
+            <Chinesesimp>观测镜</Chinesesimp>
             <Turkish>Gözcü Dürbünü</Turkish>
+            <Hungarian>Megfigyelő távcső</Hungarian>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PickUp">
             <English>Pick up Spotting Scope</English>
-            <German>Teleskop aufnehmen</German>
-            <Russian>Поднять зрительная трубу</Russian>
-            <Polish>Zabierz teleskop</Polish>
-            <Spanish>Coger telescopio</Spanish>
-            <French>Récupérer la longue-vue</French>
             <Czech>Zvednout zaměřovací dalekohled</Czech>
+            <French>Récupérer la longue-vue</French>
+            <Spanish>Coger telescopio</Spanish>
             <Italian>Raccogli Cannocchiale</Italian>
-            <Hungarian>Mefgigy. távcső felvétele</Hungarian>
+            <Polish>Zabierz teleskop</Polish>
             <Portuguese>Pegar luneta de observador</Portuguese>
-            <Japanese>観測用スコープを拾う</Japanese>
+            <Russian>Поднять зрительная трубу</Russian>
+            <German>Teleskop aufnehmen</German>
             <Korean>감적 망원경 줍기</Korean>
-            <Chinesesimp>捡起观测镜</Chinesesimp>
+            <Japanese>観測用スコープを拾う</Japanese>
             <Chinese>撿起觀測鏡</Chinese>
+            <Chinesesimp>捡起观测镜</Chinesesimp>
             <Turkish>Gözcü Dürbününü al</Turkish>
+            <Hungarian>Mefgigy. távcső felvétele</Hungarian>
         </Key>
         <Key ID="STR_ACE_SpottingScope_PlaceDown">
             <English>Place Spotting Scope</English>
-            <German>Teleskop aufstellen</German>
-            <Russian>Установить зрительная трубу</Russian>
-            <Polish>Ustaw teleskop</Polish>
-            <Spanish>Colocar telescopio</Spanish>
-            <French>Placer la longue-vue</French>
             <Czech>Položit zaměřovací dalekohled</Czech>
+            <French>Placer la longue-vue</French>
+            <Spanish>Colocar telescopio</Spanish>
             <Italian>Posiziona Cannocchiale</Italian>
-            <Hungarian>Megfigy. távcső elhelyezése</Hungarian>
+            <Polish>Ustaw teleskop</Polish>
             <Portuguese>Colocar luneta de observador</Portuguese>
-            <Japanese>観測用スコープを置く</Japanese>
+            <Russian>Установить зрительная трубу</Russian>
+            <German>Teleskop aufstellen</German>
             <Korean>감적 망원경 놓기</Korean>
-            <Chinesesimp>放置观测镜</Chinesesimp>
+            <Japanese>観測用スコープを置く</Japanese>
             <Chinese>放置觀測鏡</Chinese>
+            <Chinesesimp>放置观测镜</Chinesesimp>
             <Turkish>Gözcü Dürbününü Yerleştir</Turkish>
+            <Hungarian>Megfigy. távcső elhelyezése</Hungarian>
         </Key>
     </Package>
 </Project>

@@ -1,124 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="FlashSuppressors">
-        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_H">
-            <English>Flash Suppressor (6.5 mm)</English>
-            <Hungarian>Lángrejtő (6,5 mm)</Hungarian>
-            <German>Mündungsfeuerdämpfer (6,5 mm)</German>
-            <Italian>Rompifiamma (6.5mm)</Italian>
-            <Portuguese>Supressor de Clarão (6,5mm)</Portuguese>
-            <Polish>Tłumik płomienia (6,5 mm)</Polish>
-            <Czech>Tlumič plamene (6,5 mm)</Czech>
-            <French>Cache-flamme (6,5 mm)</French>
-            <Russian>Пламегаситель (6,5 мм)</Russian>
-            <Spanish>Bocacha (6,5 mm)</Spanish>
-            <Japanese>消炎器 (6.5 mm)</Japanese>
-            <Korean>소염기 (6.5mm)</Korean>
-            <Chinesesimp>消焰器（6.5 mm）</Chinesesimp>
-            <Chinese>消光器 (6.5 mm)</Chinese>
-            <Turkish>Flash Suppressor (6.5 mm)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_B">
-            <English>Flash Suppressor (7.62 mm)</English>
-            <Hungarian>Lángrejtő (7,62 mm)</Hungarian>
-            <German>Mündungsfeuerdämpfer (7,62 mm)</German>
-            <Italian>Rompifiamma (7.62mm)</Italian>
-            <Portuguese>Supressor de Clarão (7,62mm)</Portuguese>
-            <Polish>Tłumik płomienia (7,62 mm)</Polish>
-            <Czech>Tlumič plamene (7,62 mm)</Czech>
-            <French>Cache-flamme (7,62 mm)</French>
-            <Russian>Пламегаситель (7,62 мм)</Russian>
-            <Spanish>Bocacha (7,62 mm)</Spanish>
-            <Japanese>消炎器 (7.62 mm)</Japanese>
-            <Korean>소염기 (7.62mm)</Korean>
-            <Chinesesimp>消焰器（7.62 mm）</Chinesesimp>
-            <Chinese>消光器 (7.62 毫米)</Chinese>
-            <Turkish>Flash Suppressor (7.62 mm)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_L">
-            <English>Flash Suppressor (5.56 mm)</English>
-            <Hungarian>Lángrejtő (5,56 mm)</Hungarian>
-            <German>Mündungsfeuerdämpfer (5,56 mm)</German>
-            <Italian>Rompifiamma (5.56mm)</Italian>
-            <Portuguese>Supressor de Clarão (5,56mm)</Portuguese>
-            <Polish>Tłumik płomienia (5,56 mm)</Polish>
-            <Czech>Tlumič plamene (5,56 mm)</Czech>
-            <French>Cache-flamme (5,56 mm)</French>
-            <Russian>Пламегаситель (5,56 мм)</Russian>
-            <Spanish>Bocacha (5,56 mm)</Spanish>
-            <Japanese>消炎器 (5.56 mm)</Japanese>
-            <Korean>소염기 (5.56mm)</Korean>
-            <Chinesesimp>消焰器（5.56 mm）</Chinesesimp>
-            <Chinese>消光器 (5.56 mm)</Chinese>
-            <Turkish>Flash Suppressor (5.56 mm)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_01">
-            <English>Flash Suppressor (.45 ACP)</English>
-            <Hungarian>Lángrejtő (.45 ACP)</Hungarian>
-            <German>Mündungsfeuerdämpfer (.45 ACP)</German>
-            <Italian>Rompifiamma (.45 ACP)</Italian>
-            <Portuguese>Supressor de Clarão (.45 ACP)</Portuguese>
-            <Polish>Tłumik płomienia (.45 ACP)</Polish>
-            <Czech>Tlumič plamene (.45 ACP)</Czech>
-            <French>Cache-flamme (.45 ACP)</French>
-            <Russian>Пламегаситель (.45 ACP)</Russian>
-            <Spanish>Bocacha (.45 ACP)</Spanish>
-            <Japanese>消炎器 (.45 ACP)</Japanese>
-            <Korean>소염기 (.45 ACP)</Korean>
-            <Chinesesimp>消焰器（.45 ACP）</Chinesesimp>
-            <Chinese>消光器 (.45 ACP)</Chinese>
-            <Turkish>Flash Suppressor (.45 ACP)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_02">
-            <English>Flash Suppressor (9 mm)</English>
-            <Hungarian>Lángrejtő (9 mm)</Hungarian>
-            <German>Mündungsfeuerdämpfer (9 mm)</German>
-            <Italian>Rompifiamma (9mm)</Italian>
-            <Portuguese>Supressor de Clarão (9mm)</Portuguese>
-            <Polish>Tłumik płomienia (9 mm)</Polish>
-            <Czech>Tlumič plamene (9 mm)</Czech>
-            <French>Cache-flamme (9 mm)</French>
-            <Russian>Пламегаситель (9 мм)</Russian>
-            <Spanish>Bocacha (9 mm)</Spanish>
-            <Japanese>消炎器 (9 mm)</Japanese>
-            <Korean>소염기 (9mm)</Korean>
-            <Chinesesimp>消焰器（9 mm）</Chinesesimp>
-            <Chinese>消光器 (9 毫米)</Chinese>
-            <Turkish>Flash Suppressor (9 mm)</Turkish>
-        </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_338">
             <English>Flash Suppressor (.338)</English>
-            <Hungarian>Lángrejtő (.338)</Hungarian>
-            <German>Mündungsfeuerdämpfer (.338)</German>
-            <Italian>Rompifiamma (.338)</Italian>
-            <Portuguese>Supressor de Clarão (.338)</Portuguese>
-            <Polish>Tłumik płomienia (.338)</Polish>
             <Czech>Tlumič plamene (.338)</Czech>
             <French>Cache-flamme (.338)</French>
-            <Russian>Пламегаситель (.338)</Russian>
             <Spanish>Bocacha (.338)</Spanish>
-            <Japanese>消炎器 (.338)</Japanese>
+            <Italian>Rompifiamma (.338)</Italian>
+            <Polish>Tłumik płomienia (.338)</Polish>
+            <Portuguese>Supressor de Clarão (.338)</Portuguese>
+            <Russian>Пламегаситель (.338)</Russian>
+            <German>Mündungsfeuerdämpfer (.338)</German>
             <Korean>소염기 (.338)</Korean>
-            <Chinesesimp>消焰器（.338）</Chinesesimp>
+            <Japanese>消炎器 (.338)</Japanese>
             <Chinese>消光器 (.338)</Chinese>
+            <Chinesesimp>消焰器（.338）</Chinesesimp>
             <Turkish>Flash Suppressor (.338)</Turkish>
+            <Hungarian>Lángrejtő (.338)</Hungarian>
         </Key>
         <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_93mmg">
             <English>Flash Suppressor (9.3 mm)</English>
-            <Hungarian>Lángrejtő (9,3 mm)</Hungarian>
-            <German>Mündungsfeuerdämpfer (9,3 mm)</German>
-            <Italian>Rompifiamma (9.3mm)</Italian>
-            <Portuguese>Supressor de Clarão (9,3mm)</Portuguese>
-            <Polish>Tłumik płomienia (9,3 mm)</Polish>
             <Czech>Tlumič plamene (9,3 mm)</Czech>
             <French>Cache-flamme (9,3 mm)</French>
-            <Russian>Пламегаситель (9,3 мм)</Russian>
             <Spanish>Bocacha (9,3 mm)</Spanish>
-            <Japanese>消炎器 (9.3 mm)</Japanese>
+            <Italian>Rompifiamma (9.3mm)</Italian>
+            <Polish>Tłumik płomienia (9,3 mm)</Polish>
+            <Portuguese>Supressor de Clarão (9,3mm)</Portuguese>
+            <Russian>Пламегаситель (9,3 мм)</Russian>
+            <German>Mündungsfeuerdämpfer (9,3 mm)</German>
             <Korean>소염기 (9.3mm)</Korean>
-            <Chinesesimp>消焰器（9.3 mm）</Chinesesimp>
+            <Japanese>消炎器 (9.3 mm)</Japanese>
             <Chinese>消光器 (9.3 毫米)</Chinese>
+            <Chinesesimp>消焰器（9.3 mm）</Chinesesimp>
             <Turkish>Flash Suppressor (9.3 mm)</Turkish>
+            <Hungarian>Lángrejtő (9,3 mm)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_B">
+            <English>Flash Suppressor (7.62 mm)</English>
+            <Czech>Tlumič plamene (7,62 mm)</Czech>
+            <French>Cache-flamme (7,62 mm)</French>
+            <Spanish>Bocacha (7,62 mm)</Spanish>
+            <Italian>Rompifiamma (7.62mm)</Italian>
+            <Polish>Tłumik płomienia (7,62 mm)</Polish>
+            <Portuguese>Supressor de Clarão (7,62mm)</Portuguese>
+            <Russian>Пламегаситель (7,62 мм)</Russian>
+            <German>Mündungsfeuerdämpfer (7,62 mm)</German>
+            <Korean>소염기 (7.62mm)</Korean>
+            <Japanese>消炎器 (7.62 mm)</Japanese>
+            <Chinese>消光器 (7.62 毫米)</Chinese>
+            <Chinesesimp>消焰器（7.62 mm）</Chinesesimp>
+            <Turkish>Flash Suppressor (7.62 mm)</Turkish>
+            <Hungarian>Lángrejtő (7,62 mm)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_H">
+            <English>Flash Suppressor (6.5 mm)</English>
+            <Czech>Tlumič plamene (6,5 mm)</Czech>
+            <French>Cache-flamme (6,5 mm)</French>
+            <Spanish>Bocacha (6,5 mm)</Spanish>
+            <Italian>Rompifiamma (6.5mm)</Italian>
+            <Polish>Tłumik płomienia (6,5 mm)</Polish>
+            <Portuguese>Supressor de Clarão (6,5mm)</Portuguese>
+            <Russian>Пламегаситель (6,5 мм)</Russian>
+            <German>Mündungsfeuerdämpfer (6,5 mm)</German>
+            <Korean>소염기 (6.5mm)</Korean>
+            <Japanese>消炎器 (6.5 mm)</Japanese>
+            <Chinese>消光器 (6.5 mm)</Chinese>
+            <Chinesesimp>消焰器（6.5 mm）</Chinesesimp>
+            <Turkish>Flash Suppressor (6.5 mm)</Turkish>
+            <Hungarian>Lángrejtő (6,5 mm)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_L">
+            <English>Flash Suppressor (5.56 mm)</English>
+            <Czech>Tlumič plamene (5,56 mm)</Czech>
+            <French>Cache-flamme (5,56 mm)</French>
+            <Spanish>Bocacha (5,56 mm)</Spanish>
+            <Italian>Rompifiamma (5.56mm)</Italian>
+            <Polish>Tłumik płomienia (5,56 mm)</Polish>
+            <Portuguese>Supressor de Clarão (5,56mm)</Portuguese>
+            <Russian>Пламегаситель (5,56 мм)</Russian>
+            <German>Mündungsfeuerdämpfer (5,56 mm)</German>
+            <Korean>소염기 (5.56mm)</Korean>
+            <Japanese>消炎器 (5.56 mm)</Japanese>
+            <Chinese>消光器 (5.56 mm)</Chinese>
+            <Chinesesimp>消焰器（5.56 mm）</Chinesesimp>
+            <Turkish>Flash Suppressor (5.56 mm)</Turkish>
+            <Hungarian>Lángrejtő (5,56 mm)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_01">
+            <English>Flash Suppressor (.45 ACP)</English>
+            <Czech>Tlumič plamene (.45 ACP)</Czech>
+            <French>Cache-flamme (.45 ACP)</French>
+            <Spanish>Bocacha (.45 ACP)</Spanish>
+            <Italian>Rompifiamma (.45 ACP)</Italian>
+            <Polish>Tłumik płomienia (.45 ACP)</Polish>
+            <Portuguese>Supressor de Clarão (.45 ACP)</Portuguese>
+            <Russian>Пламегаситель (.45 ACP)</Russian>
+            <German>Mündungsfeuerdämpfer (.45 ACP)</German>
+            <Korean>소염기 (.45 ACP)</Korean>
+            <Japanese>消炎器 (.45 ACP)</Japanese>
+            <Chinese>消光器 (.45 ACP)</Chinese>
+            <Chinesesimp>消焰器（.45 ACP）</Chinesesimp>
+            <Turkish>Flash Suppressor (.45 ACP)</Turkish>
+            <Hungarian>Lángrejtő (.45 ACP)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_FlashSuppressors_muzzle_mzls_smg_02">
+            <English>Flash Suppressor (9 mm)</English>
+            <Czech>Tlumič plamene (9 mm)</Czech>
+            <French>Cache-flamme (9 mm)</French>
+            <Spanish>Bocacha (9 mm)</Spanish>
+            <Italian>Rompifiamma (9mm)</Italian>
+            <Polish>Tłumik płomienia (9 mm)</Polish>
+            <Portuguese>Supressor de Clarão (9mm)</Portuguese>
+            <Russian>Пламегаситель (9 мм)</Russian>
+            <German>Mündungsfeuerdämpfer (9 mm)</German>
+            <Korean>소염기 (9mm)</Korean>
+            <Japanese>消炎器 (9 mm)</Japanese>
+            <Chinese>消光器 (9 毫米)</Chinese>
+            <Chinesesimp>消焰器（9 mm）</Chinesesimp>
+            <Turkish>Flash Suppressor (9 mm)</Turkish>
+            <Hungarian>Lángrejtő (9 mm)</Hungarian>
         </Key>
     </Package>
 </Project>

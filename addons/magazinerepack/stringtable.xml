@@ -3,207 +3,207 @@
     <Package name="MagazineRepack">
         <Key ID="STR_ACE_MagazineRepack_DisplayName">
             <English>Magazine Repack</English>
-            <German>Magazine umpacken</German>
-            <Italian>Riempimento Caricatori</Italian>
-            <Chinese>重新整理彈匣</Chinese>
-            <Chinesesimp>重新整理弹匣</Chinesesimp>
-            <Japanese>弾倉詰め替え</Japanese>
-            <Korean>탄약 채우기</Korean>
-            <Polish>Przepakowywanie magazynków</Polish>
-            <Russian>Перепаковка магазинов</Russian>
-            <Portuguese>Preenchimento de Carregador</Portuguese>
-            <French>Remplissage des chargeurs</French>
             <Czech>Přepáskování zásobníků</Czech>
-            <Turkish>Şarjör Yeniden Doldurma</Turkish>
+            <French>Remplissage des chargeurs</French>
             <Spanish>Reempaquetado de cargadores</Spanish>
-        </Key>
-        <Key ID="STR_ACE_MagazineRepack_timePerAmmo">
-            <English>Time per round</English>
-            <German>Zeit pro Patrone</German>
-            <Italian>Durata per proiettile</Italian>
-            <Chinese>每發所需時間</Chinese>
-            <Chinesesimp>每发所需时间</Chinesesimp>
-            <Japanese>弾薬毎の所要時間</Japanese>
-            <Korean>탄알 당 시간</Korean>
-            <Polish>Czas na nabój</Polish>
-            <Russian>Время на патрон</Russian>
-            <Portuguese>Tempo por projétil</Portuguese>
-            <French>Temps par cartouche</French>
-            <Czech>Čas na náboj</Czech>
-            <Turkish>Süre başına mermi</Turkish>
-            <Spanish>Tiempo por cartucho</Spanish>
-        </Key>
-        <Key ID="STR_ACE_MagazineRepack_timePerMagazine">
-            <English>Time per magazine</English>
-            <German>Zeit pro Magazin</German>
-            <Italian>Durata per caricatore</Italian>
-            <Chinese>每匣所需時間</Chinese>
-            <Chinesesimp>每匣所需时间</Chinesesimp>
-            <Japanese>弾倉毎の所要時間</Japanese>
-            <Korean>탄창 당 시간</Korean>
-            <Polish>Czas na magazynek</Polish>
-            <Russian>Время на магазин</Russian>
-            <Portuguese>Tempo por carregador</Portuguese>
-            <French>Temps par chargeur</French>
-            <Czech>Čas na zásobník</Czech>
-            <Turkish>Süre başına şarjör</Turkish>
-            <Spanish>Tiempo por cargador</Spanish>
-        </Key>
-        <Key ID="STR_ACE_MagazineRepack_timePerBeltLink">
-            <English>Time per belt link</English>
-            <German>Zeit pro Gurtglied</German>
-            <Italian>Durata per caricatore a nastro</Italian>
-            <Chinese>每彈鍊所需時間</Chinese>
-            <Chinesesimp>每弹炼所需时间</Chinesesimp>
-            <Japanese>ベルトリンク毎の所要時間</Japanese>
-            <Korean>탄띠 당 시간</Korean>
-            <Polish>Czas na taśmę</Polish>
-            <Russian>Время на звено ленты</Russian>
-            <Portuguese>Tempo por carregador de cinto</Portuguese>
-            <French>Temps par bande</French>
-            <Czech>Čas na článek pásu</Czech>
-            <Spanish>Tiempo por enganche de cinta</Spanish>
-        </Key>
-        <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
-            <English>Repack Magazines</English>
+            <Italian>Riempimento Caricatori</Italian>
+            <Polish>Przepakowywanie magazynków</Polish>
+            <Portuguese>Preenchimento de Carregador</Portuguese>
+            <Russian>Перепаковка магазинов</Russian>
             <German>Magazine umpacken</German>
-            <Spanish>Reorganizar cargadores</Spanish>
-            <French>Remplir les chargeurs</French>
-            <Polish>Przepakuj magazynki</Polish>
-            <Czech>Přepáskovat zásobníky</Czech>
-            <Italian>Riempi Caricatori</Italian>
-            <Portuguese>Preencher Carregadores</Portuguese>
-            <Hungarian>Újratárazás </Hungarian>
-            <Russian>Перепаковать магазины</Russian>
-            <Japanese>弾倉を詰め替え</Japanese>
-            <Korean>탄창 다시 채우기</Korean>
-            <Chinesesimp>重新整理弹匣</Chinesesimp>
+            <Korean>탄약 채우기</Korean>
+            <Japanese>弾倉詰め替え</Japanese>
             <Chinese>重新整理彈匣</Chinese>
-            <Turkish>Şarjörleri Yeniden Doldur</Turkish>
-        </Key>
-        <Key ID="STR_ACE_MagazineRepack_RepackingMagazine">
-            <English>Repacking Magazines...</English>
-            <German>Magazine umpacken...</German>
-            <Spanish>Reorganizando cargadores...</Spanish>
-            <French>Remplissage des chargeurs...</French>
-            <Polish>Przepakowywanie magazynków...</Polish>
-            <Czech>Přepáskovávám zásobník...</Czech>
-            <Italian>Riempendo i caricatori...</Italian>
-            <Portuguese>Preenchendo Carregadores...</Portuguese>
-            <Hungarian>Újratárazás...</Hungarian>
-            <Russian>Перепаковка магазинов...</Russian>
-            <Japanese>弾倉を詰め替えしています・・・</Japanese>
-            <Korean>다시 채우는 중...</Korean>
-            <Chinesesimp>正在整理弹匣 ...</Chinesesimp>
-            <Chinese>重新整理彈匣中 ...</Chinese>
-            <Turkish>Şarjör Yeniden Dolduruluyor...</Turkish>
-        </Key>
-        <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesDetail">
-            <English>%1 full mag(s) and %2 extra round(s)</English>
-            <German>%1 volle(s) Magazin(e) und %2 übrig gebliebene Patrone(n)</German>
-            <Spanish>%1 cargador(es) completo(s) y %2 bala(s) extra(s)</Spanish>
-            <French>%1 chargeur(s) plein(s) et %2 cartouche(s) en surplus.</French>
-            <Polish>Pełnych magazynków: %1.&lt;br/&gt;Dodatkowych naboi: %2.</Polish>
-            <Czech>%1 plný zásobník(y) a %2 munice navíc</Czech>
-            <Italian>%1 caricatore(i) pieno e %2 munizione(i) extra</Italian>
-            <Portuguese>%1 carregador(es) cheio(s) e %2 disparo(s) a mais</Portuguese>
-            <Hungarian>%1 teljes tár és %2 extra lőszer</Hungarian>
-            <Russian>%1 полных магазина(ов) и %2 патрона(ов)</Russian>
-            <Japanese>満装填した弾倉 %1 個と&lt;br/&gt;残 %2 発装填の弾倉</Japanese>
-            <Korean>%1개의 꽉찬 탄창과 %2발의 총알이 남았다</Korean>
-            <Chinesesimp>%1个满的弹匣与%2发额外子弹</Chinesesimp>
-            <Chinese>%1個滿的彈匣與%2發額外子彈</Chinese>
-            <Turkish>%1 Dolu şarjör ve %2  fazladan mermi</Turkish>
+            <Chinesesimp>重新整理弹匣</Chinesesimp>
+            <Turkish>Şarjör Yeniden Doldurma</Turkish>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackComplete">
             <English>Repacking Finished</English>
-            <French>Remplissage terminé.</French>
-            <German>Wiederverpacken fertig</German>
-            <Spanish>Reorganización finalizada</Spanish>
-            <Russian>Перепаковка завершена</Russian>
             <Czech>Páskování dokončeno</Czech>
-            <Polish>Przepakowywanie zakończone</Polish>
-            <Hungarian>Újratárazás befejezve</Hungarian>
+            <French>Remplissage terminé.</French>
+            <Spanish>Reorganización finalizada</Spanish>
             <Italian>Caricatori Riempiti</Italian>
+            <Polish>Przepakowywanie zakończone</Polish>
             <Portuguese>Preenchimento Completo</Portuguese>
-            <Japanese>詰め替えが完了しました。</Japanese>
+            <Russian>Перепаковка завершена</Russian>
+            <German>Wiederverpacken fertig</German>
             <Korean>탄창 채우기 끝남</Korean>
-            <Chinesesimp>整理完成</Chinesesimp>
+            <Japanese>詰め替えが完了しました。</Japanese>
             <Chinese>重整完成</Chinese>
+            <Chinesesimp>整理完成</Chinesesimp>
             <Turkish>Yeniden Doldurma Bitti</Turkish>
+            <Hungarian>Újratárazás befejezve</Hungarian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackInterrupted">
             <English>Repacking Interrupted</English>
-            <French>Remplissage interrompu.</French>
-            <German>Umpacken unterbrochen</German>
-            <Spanish>Reorganización interrumpida</Spanish>
-            <Russian>Перепаковка прервана</Russian>
             <Czech>Páskování přerušeno</Czech>
-            <Polish>Przepakowywanie przerwane</Polish>
-            <Hungarian>Újratárazás megszakítva</Hungarian>
+            <French>Remplissage interrompu.</French>
+            <Spanish>Reorganización interrumpida</Spanish>
             <Italian>Riempimento Interrotto</Italian>
+            <Polish>Przepakowywanie przerwane</Polish>
             <Portuguese>Preenchimento Interrompido</Portuguese>
-            <Japanese>詰め替えが中断されました。</Japanese>
+            <Russian>Перепаковка прервана</Russian>
+            <German>Umpacken unterbrochen</German>
             <Korean>탄창을 채우는 중 방해받음</Korean>
-            <Chinesesimp>弹匣整理被打断</Chinesesimp>
+            <Japanese>詰め替えが中断されました。</Japanese>
             <Chinese>重整被中斷</Chinese>
+            <Chinesesimp>弹匣整理被打断</Chinesesimp>
             <Turkish>Yeniden Doldurma Durduruldu</Turkish>
+            <Hungarian>Újratárazás megszakítva</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_RepackMagazines">
+            <English>Repack Magazines</English>
+            <Czech>Přepáskovat zásobníky</Czech>
+            <French>Remplir les chargeurs</French>
+            <Spanish>Reorganizar cargadores</Spanish>
+            <Italian>Riempi Caricatori</Italian>
+            <Polish>Przepakuj magazynki</Polish>
+            <Portuguese>Preencher Carregadores</Portuguese>
+            <Russian>Перепаковать магазины</Russian>
+            <German>Magazine umpacken</German>
+            <Korean>탄창 다시 채우기</Korean>
+            <Japanese>弾倉を詰め替え</Japanese>
+            <Chinese>重新整理彈匣</Chinese>
+            <Chinesesimp>重新整理弹匣</Chinesesimp>
+            <Turkish>Şarjörleri Yeniden Doldur</Turkish>
+            <Hungarian>Újratárazás</Hungarian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesCount">
             <English>%1 Full and %2 Partial</English>
-            <French>%1 chargeur(s) plein(s) et %2 chargeur(s) partiel(s).</French>
-            <German>%1 volle(s) Magazin(e) und %2 angefangene(s) Magazin(e)</German>
-            <Spanish>%1 Llenos y %2 Incompletos</Spanish>
-            <Russian>%1 полных и %2 неполных</Russian>
             <Czech>%1 plný a %2 částečně</Czech>
-            <Polish>Pełnych: %1.&lt;br/&gt;Częściowo pełnych: %2.</Polish>
-            <Hungarian>%1 teljes és %2 részleges</Hungarian>
+            <French>%1 chargeur(s) plein(s) et %2 chargeur(s) partiel(s).</French>
+            <Spanish>%1 Llenos y %2 Incompletos</Spanish>
             <Italian>%1 Pieno(i) e %2 Parziale(i)</Italian>
-            <Portuguese>%1 Total e %2 Parcial </Portuguese>
-            <Japanese>満装填した弾倉 %1 個と&lt;br/&gt;部分装填の弾倉 %2 個</Japanese>
+            <Polish>Pełnych: %1.&lt;br/&gt;Częściowo pełnych: %2.</Polish>
+            <Portuguese>%1 Total e %2 Parcial</Portuguese>
+            <Russian>%1 полных и %2 неполных</Russian>
+            <German>%1 volle(s) Magazin(e) und %2 angefangene(s) Magazin(e)</German>
             <Korean>꽉 찬 탄창:%1&lt;br/&gt;부분적으로 찬 탄창: %2</Korean>
-            <Chinesesimp>%1个满的与%2个部分的</Chinesesimp>
+            <Japanese>満装填した弾倉 %1 個と&lt;br/&gt;部分装填の弾倉 %2 個</Japanese>
             <Chinese>%1個滿的與%2個部分的</Chinese>
+            <Chinesesimp>%1个满的与%2个部分的</Chinesesimp>
             <Turkish>%1 Dolu ve %2 Partial</Turkish>
+            <Hungarian>%1 teljes és %2 részleges</Hungarian>
         </Key>
-        <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazines">
-            <English>Repack Loaded Magazines</English>
-            <Japanese>装填済みの弾倉も詰め替える</Japanese>
-            <French>Remplir le chargeur engagé</French>
-            <Russian>Перепаковать загруженные магазины</Russian>
-            <German>Geladene Magazine umpacken</German>
-            <Italian>Riempi caricatori pieni</Italian>
-            <Polish>Przepakuj załadowane magazynki</Polish>
-            <Chinesesimp>重新整理已上膛的弹匣</Chinesesimp>
-            <Korean>장전된 탄창에 총알 채우는 중</Korean>
-            <Spanish>Reorganizar cargadores llenos</Spanish>
-            <Portuguese>Preencher Carregadores Engajados</Portuguese>
+        <Key ID="STR_ACE_MagazineRepack_RepackedMagazinesDetail">
+            <English>%1 full mag(s) and %2 extra round(s)</English>
+            <Czech>%1 plný zásobník(y) a %2 munice navíc</Czech>
+            <French>%1 chargeur(s) plein(s) et %2 cartouche(s) en surplus.</French>
+            <Spanish>%1 cargador(es) completo(s) y %2 bala(s) extra(s)</Spanish>
+            <Italian>%1 caricatore(i) pieno e %2 munizione(i) extra</Italian>
+            <Polish>Pełnych magazynków: %1.&lt;br/&gt;Dodatkowych naboi: %2.</Polish>
+            <Portuguese>%1 carregador(es) cheio(s) e %2 disparo(s) a mais</Portuguese>
+            <Russian>%1 полных магазина(ов) и %2 патрона(ов)</Russian>
+            <German>%1 volle(s) Magazin(e) und %2 übrig gebliebene Patrone(n)</German>
+            <Korean>%1개의 꽉찬 탄창과 %2발의 총알이 남았다</Korean>
+            <Japanese>満装填した弾倉 %1 個と&lt;br/&gt;残 %2 発装填の弾倉</Japanese>
+            <Chinese>%1個滿的彈匣與%2發額外子彈</Chinese>
+            <Chinesesimp>%1个满的弹匣与%2发额外子弹</Chinesesimp>
+            <Turkish>%1 Dolu şarjör ve %2  fazladan mermi</Turkish>
+            <Hungarian>%1 teljes tár és %2 extra lőszer</Hungarian>
         </Key>
-        <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazinesHint">
-            <English>Repacking magazines, weapon unloaded</English>
-            <Japanese>弾倉の詰め替えのため 武器から弾薬を抜きました</Japanese>
-            <French>Remplissage des chargeurs, arme déchargée.</French>
-            <Russian>Перепаковка магазинов, оружие разряжено</Russian>
-            <German>Magazin umgepackt, Waffe entladen</German>
-            <Italian>Riempendo i caricatori, arma scarica</Italian>
-            <Polish>Przepakowywanie magazynków, broń rozładowana</Polish>
-            <Chinesesimp>重新整理弹匣，武器未上膛</Chinesesimp>
-            <Korean>탄창 다시 채우는 중, 무기에서 탄창 뺌</Korean>
-            <Spanish>Reorganizando cargadores, arma descargada</Spanish>
-            <Portuguese>Preenchendo carregadores, arma descarregada</Portuguese>
+        <Key ID="STR_ACE_MagazineRepack_RepackingMagazine">
+            <English>Repacking Magazines...</English>
+            <Czech>Přepáskovávám zásobník...</Czech>
+            <French>Remplissage des chargeurs...</French>
+            <Spanish>Reorganizando cargadores...</Spanish>
+            <Italian>Riempendo i caricatori...</Italian>
+            <Polish>Przepakowywanie magazynków...</Polish>
+            <Portuguese>Preenchendo Carregadores...</Portuguese>
+            <Russian>Перепаковка магазинов...</Russian>
+            <German>Magazine umpacken...</German>
+            <Korean>다시 채우는 중...</Korean>
+            <Japanese>弾倉を詰め替えしています・・・</Japanese>
+            <Chinese>重新整理彈匣中 ...</Chinese>
+            <Chinesesimp>正在整理弹匣 ...</Chinesesimp>
+            <Turkish>Şarjör Yeniden Dolduruluyor...</Turkish>
+            <Hungarian>Újratárazás...</Hungarian>
         </Key>
         <Key ID="STR_ACE_MagazineRepack_repackAnimation">
             <English>Repack Animation</English>
-            <German>Animation für Umpacken</German>
+            <French>Animation de remplissage des chargeurs</French>
+            <Spanish>Animación de reorganizar</Spanish>
             <Italian>Animazione per il riempimento</Italian>
             <Polish>Animacja przepakowywania</Polish>
+            <Portuguese>Animação de Preenchimento</Portuguese>
+            <Russian>Анимация перепаковки</Russian>
+            <German>Animation für Umpacken</German>
             <Korean>탄약 합치기 애니메이션</Korean>
             <Japanese>詰め替え時のアニメーション</Japanese>
             <Chinesesimp>整理动画</Chinesesimp>
-            <Russian>Анимация перепаковки</Russian>
-            <Spanish>Animación de reorganizar</Spanish>
-            <French>Animation de remplissage des chargeurs</French>
-            <Portuguese>Animação de Preenchimento</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazines">
+            <English>Repack Loaded Magazines</English>
+            <French>Remplir le chargeur engagé</French>
+            <Spanish>Reorganizar cargadores llenos</Spanish>
+            <Italian>Riempi caricatori pieni</Italian>
+            <Polish>Przepakuj załadowane magazynki</Polish>
+            <Portuguese>Preencher Carregadores Engajados</Portuguese>
+            <Russian>Перепаковать загруженные магазины</Russian>
+            <German>Geladene Magazine umpacken</German>
+            <Korean>장전된 탄창에 총알 채우는 중</Korean>
+            <Japanese>装填済みの弾倉も詰め替える</Japanese>
+            <Chinesesimp>重新整理已上膛的弹匣</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_repackLoadedMagazinesHint">
+            <English>Repacking magazines, weapon unloaded</English>
+            <French>Remplissage des chargeurs, arme déchargée.</French>
+            <Spanish>Reorganizando cargadores, arma descargada</Spanish>
+            <Italian>Riempendo i caricatori, arma scarica</Italian>
+            <Polish>Przepakowywanie magazynków, broń rozładowana</Polish>
+            <Portuguese>Preenchendo carregadores, arma descarregada</Portuguese>
+            <Russian>Перепаковка магазинов, оружие разряжено</Russian>
+            <German>Magazin umgepackt, Waffe entladen</German>
+            <Korean>탄창 다시 채우는 중, 무기에서 탄창 뺌</Korean>
+            <Japanese>弾倉の詰め替えのため 武器から弾薬を抜きました</Japanese>
+            <Chinesesimp>重新整理弹匣，武器未上膛</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_timePerAmmo">
+            <English>Time per round</English>
+            <Czech>Čas na náboj</Czech>
+            <French>Temps par cartouche</French>
+            <Spanish>Tiempo por cartucho</Spanish>
+            <Italian>Durata per proiettile</Italian>
+            <Polish>Czas na nabój</Polish>
+            <Portuguese>Tempo por projétil</Portuguese>
+            <Russian>Время на патрон</Russian>
+            <German>Zeit pro Patrone</German>
+            <Korean>탄알 당 시간</Korean>
+            <Japanese>弾薬毎の所要時間</Japanese>
+            <Chinese>每發所需時間</Chinese>
+            <Chinesesimp>每发所需时间</Chinesesimp>
+            <Turkish>Süre başına mermi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_timePerBeltLink">
+            <English>Time per belt link</English>
+            <Czech>Čas na článek pásu</Czech>
+            <French>Temps par bande</French>
+            <Spanish>Tiempo por enganche de cinta</Spanish>
+            <Italian>Durata per caricatore a nastro</Italian>
+            <Polish>Czas na taśmę</Polish>
+            <Portuguese>Tempo por carregador de cinto</Portuguese>
+            <Russian>Время на звено ленты</Russian>
+            <German>Zeit pro Gurtglied</German>
+            <Korean>탄띠 당 시간</Korean>
+            <Japanese>ベルトリンク毎の所要時間</Japanese>
+            <Chinese>每彈鍊所需時間</Chinese>
+            <Chinesesimp>每弹炼所需时间</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_MagazineRepack_timePerMagazine">
+            <English>Time per magazine</English>
+            <Czech>Čas na zásobník</Czech>
+            <French>Temps par chargeur</French>
+            <Spanish>Tiempo por cargador</Spanish>
+            <Italian>Durata per caricatore</Italian>
+            <Polish>Czas na magazynek</Polish>
+            <Portuguese>Tempo por carregador</Portuguese>
+            <Russian>Время на магазин</Russian>
+            <German>Zeit pro Magazin</German>
+            <Korean>탄창 당 시간</Korean>
+            <Japanese>弾倉毎の所要時間</Japanese>
+            <Chinese>每匣所需時間</Chinese>
+            <Chinesesimp>每匣所需时间</Chinesesimp>
+            <Turkish>Süre başına şarjör</Turkish>
         </Key>
     </Package>
 </Project>
