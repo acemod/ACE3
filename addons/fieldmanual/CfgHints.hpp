@@ -106,6 +106,14 @@ class CfgHints {
             description = CSTRING(Items_EarPlugs_Description);
             tip = "<a href='https://ace3.acemod.org/wiki/feature/hearing'>Hearing Wiki</a>";
         };
+        class ACE_EHP: ACE_FieldManual_Base {
+            logicalOrder = 10;
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_EHP' call FUNC(getItemName))};
+            displayName = "%14";
+            displayNameShort = CSTRING(Items_EHP_ShortName);
+            description = CSTRING(Items_EHP_Description);
+            tip = "<a href='https://ace3.acemod.org/wiki/feature/hearing'>Hearing Wiki</a>";
+        };
         class ACE_EntrenchingTool: ACE_FieldManual_Base {
             logicalOrder = 11;
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_EntrenchingTool' call FUNC(getItemName))};

@@ -50,6 +50,7 @@ GVAR(time3) = 0;
 GVAR(damageCoefficent) = 1;
 GVAR(volumeAttenuation) = 1;
 GVAR(lastPlayerVehicle) = objNull;
+GVAR(ehpTimeout) = -1;
 
 ["CBA_settingsInitialized", {
     TRACE_1("settingInit - client",GVAR(enableCombatDeafness));
@@ -97,6 +98,6 @@ GVAR(lastPlayerVehicle) = objNull;
         GVAR(deafnessPrior) = 0;
         GVAR(time3) = 0;
 
-        UPDATE_HEARING_EARPLUGS call FUNC(updateHearingProtection);
+        UPDATE_HEARING call FUNC(updateHearingProtection);
     }, true] call CBA_fnc_addPlayerEventHandler;
 }] call CBA_fnc_addEventHandler;

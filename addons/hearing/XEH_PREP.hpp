@@ -1,13 +1,16 @@
 PREP(addEarPlugs);
+PREP(canPutOnEHP);
 PREP(earRinging);
 PREP(explosion);
 PREP(firedNear);
 PREP(getAmmoLoudness);
 PREP(handleRespawn);
-PREP(hasEarPlugsIn);
+PREP(handleVehicleKilled);
 PREP(moduleHearing);
 PREP(putInEarPlugs);
+PREP(putOnEHP);
 PREP(removeEarPlugs);
+PREP(removeEHP);
 PREP(updateHearingProtection);
 PREP(updatePlayerVehAttenuation);
 PREP(updateVolume);

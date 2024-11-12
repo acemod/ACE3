@@ -23,3 +23,36 @@ class Extended_Respawn_EventHandlers {
         };
     };
 };
+
+class Extended_Killed_EventHandlers {
+    class Car {
+        class ADDON {
+            killed = QUOTE(_this call FUNC(handleVehicleKilled));
+        };
+    };
+    class Tank {
+        class ADDON {
+            killed = QUOTE(_this call FUNC(handleVehicleKilled));
+        };
+    };
+    class Motorcycle {
+        class ADDON {
+            killed = QUOTE(_this call FUNC(handleVehicleKilled));
+        };
+    };
+    class Helicopter {
+        class ADDON {
+            killed = QUOTE(_this call FUNC(handleVehicleKilled));
+        };
+    };
+    class Plane {
+        class ADDON {
+            killed = QUOTE(_this call FUNC(handleVehicleKilled));
+        };
+    };
+    class Ship_F {
+        class ADDON {
+            killed = QUOTE(_this call FUNC(handleVehicleKilled));
+        };
+    };
+};

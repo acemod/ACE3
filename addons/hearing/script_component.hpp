@@ -17,4 +17,14 @@
 #include "\z\ace\addons\main\script_macros.hpp"
 #include "\z\ace\addons\hearing\script_macros_hearingProtection.hpp"
 
-#define UPDATE_HEARING_EARPLUGS -1
+#define UPDATE_HEARING -1
+
+// Electronic hearing protection FX
+#define EHP_REDUCTION 0.125
+#define EHP_MIN_STRENGTH 0.07
+#define EHP_TIMEOUT 0.7
+#define EHP_FADE_IN 0.1
+
+// Vehicle explosion hearing damage
+#define VEHICLE_EXPLOSION_STRENGTH 200
+#define VEHICLE_EXPLOSION_BIG_STRENGTH 500

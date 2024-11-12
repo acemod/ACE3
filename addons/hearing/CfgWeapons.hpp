@@ -14,6 +14,18 @@ class CfgWeapons {
         };
     };
 
+    class ACE_EHP: ACE_ItemCore {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(ElectronicHearingProtection_Name);
+        descriptionShort = CSTRING(ElectronicHearingProtection_Description);
+        model = "\A3\Characters_F_Orange\Headgear\H_EarProtectors_F.p3d";
+        picture = "\A3\Characters_F_Orange\Headgear\Data\UI\icon_H_EarProtectors_black_F_CA.paa";
+        scope = 2;
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 8.4; // 380g, based on 3M Peltor
+        };
+    };
+
 
     class H_HelmetB;
     class H_HelmetCrew_B: H_HelmetB {
