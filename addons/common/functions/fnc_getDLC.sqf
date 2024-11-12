@@ -54,12 +54,7 @@ private _config = if (typeName _class == "CONFIG") then {
     if !(isNull _root) then {
         _root >> _class
     } else {
-        private _config = configNull;
-        {
-            _config = configFile >> _x >> _class;
-            if (isClass _config) exitWith {};
-        } forEach ["CfgWeapons","CfgVehicles","CfgGlasses","CfgMagazines"];
-        _config
+        _class call CBA_fnc_getItemConfig
     };
 };
 if (isNull _config || !(isClass _config)) exitWith {
