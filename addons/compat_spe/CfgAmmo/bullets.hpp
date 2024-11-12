@@ -33,5 +33,5 @@ class SPE_PzGr_FlaK_38_AP_T: SPE_Bullet_AP_base
     EGVAR(frag,charge) = 6;
     EGVAR(frag,gurney_c) = 2930;
     EGVAR(frag,gurney_k) = "1/2";
-    EGVAR(frag,classes)[] = {"ACE_frag_tiny","ACE_frag_small_HD"};
+    EGVAR(frag,classes)[] = {"ACE_frag_tiny", "ACE_frag_small_HD"};
 };
