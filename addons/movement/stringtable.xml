@@ -1,56 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Movement">
-        <Key ID="STR_ACE_Movement_UseImperial">
-            <English>Show weight in lb</English>
-            <German>Zeige Gewicht in Pfund</German>
-            <Spanish>Mostrar peso en libras</Spanish>
-            <French>Afficher le poids en lb</French>
-            <Polish>Pokaż ciężar w funtach</Polish>
-            <Czech>Zobrazit váhu v librách</Czech>
-            <Italian>Mostra peso in libbre</Italian>
-            <Portuguese>Mostrar peso em libras</Portuguese>
-            <Hungarian>Súly megjelenítése fontban.</Hungarian>
-            <Russian>Показывать вес в фунтах</Russian>
-            <Japanese>ポンドで重量を表示</Japanese>
-            <Korean>무게를 파운드(lb)로 보여줍니다</Korean>
-            <Chinesesimp>使用磅来显示重量</Chinesesimp>
-            <Chinese>使用磅來顯示重量</Chinese>
-            <Turkish>Ağırlığı lb olarak göster</Turkish>
+        <Key ID="STR_ACE_Movement_CanNotClimb">
+            <English>Can't climb here</English>
+            <Czech>Zde není možné vylézt</Czech>
+            <French>Impossible de grimper ici</French>
+            <Spanish>No se puede trepar aquí</Spanish>
+            <Italian>Non puoi arrampicarti qui</Italian>
+            <Polish>Nie możesz wspiąć się tutaj</Polish>
+            <Portuguese>Não pode subir aqui</Portuguese>
+            <Russian>Здесь невозможно взобраться</Russian>
+            <German>Kann hier nicht klettern</German>
+            <Korean>여기는 올라갈 수 없다</Korean>
+            <Japanese>ここは登れません</Japanese>
+            <Chinese>這裡無法攀爬</Chinese>
+            <Chinesesimp>这里无法攀爬</Chinesesimp>
+            <Turkish>Buraya tırmanamazsın</Turkish>
+            <Hungarian>Itt nem tudsz mászni</Hungarian>
         </Key>
         <Key ID="STR_ACE_Movement_Climb">
             <English>Climb</English>
-            <French>Grimper</French>
-            <German>Klettern</German>
-            <Polish>Wspinaczka</Polish>
-            <Spanish>Trepar</Spanish>
             <Czech>Vylézt</Czech>
-            <Russian>Взобраться</Russian>
-            <Hungarian>Mászás</Hungarian>
+            <French>Grimper</French>
+            <Spanish>Trepar</Spanish>
             <Italian>Arrampicati</Italian>
+            <Polish>Wspinaczka</Polish>
             <Portuguese>Subir</Portuguese>
-            <Japanese>よじ登る</Japanese>
+            <Russian>Взобраться</Russian>
+            <German>Klettern</German>
             <Korean>오르기</Korean>
-            <Chinesesimp>攀爬</Chinesesimp>
+            <Japanese>よじ登る</Japanese>
             <Chinese>攀爬</Chinese>
+            <Chinesesimp>攀爬</Chinesesimp>
             <Turkish>Tırman</Turkish>
+            <Hungarian>Mászás</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Movement_CanNotClimb">
-            <English>Can't climb here</English>
-            <French>Impossible de grimper ici</French>
-            <German>Kann hier nicht klettern</German>
-            <Polish>Nie możesz wspiąć się tutaj</Polish>
-            <Spanish>No se puede trepar aquí</Spanish>
-            <Czech>Zde není možné vylézt</Czech>
-            <Russian>Здесь невозможно взобраться</Russian>
-            <Hungarian>Itt nem tudsz mászni</Hungarian>
-            <Italian>Non puoi arrampicarti qui</Italian>
-            <Portuguese>Não pode subir aqui</Portuguese>
-            <Japanese>ここは登れません</Japanese>
-            <Chinesesimp>这里无法攀爬</Chinesesimp>
-            <Chinese>這裡無法攀爬</Chinese>
-            <Korean>여기는 올라갈 수 없다</Korean>
-            <Turkish>Buraya tırmanamazsın</Turkish>
+        <Key ID="STR_ACE_Movement_UseImperial">
+            <English>Show weight in lb</English>
+            <Czech>Zobrazit váhu v librách</Czech>
+            <French>Afficher le poids en lb</French>
+            <Spanish>Mostrar peso en libras</Spanish>
+            <Italian>Mostra peso in libbre</Italian>
+            <Polish>Pokaż ciężar w funtach</Polish>
+            <Portuguese>Mostrar peso em libras</Portuguese>
+            <Russian>Показывать вес в фунтах</Russian>
+            <German>Zeige Gewicht in Pfund</German>
+            <Korean>무게를 파운드(lb)로 보여줍니다</Korean>
+            <Japanese>ポンドで重量を表示</Japanese>
+            <Chinese>使用磅來顯示重量</Chinese>
+            <Chinesesimp>使用磅来显示重量</Chinesesimp>
+            <Turkish>Ağırlığı lb olarak göster</Turkish>
+            <Hungarian>Súly megjelenítése fontban.</Hungarian>
         </Key>
     </Package>
 </Project>

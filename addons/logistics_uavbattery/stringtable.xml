@@ -1,107 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Logistics_UAVbattery">
-        <Key ID="STR_ACE_Logistics_UAVbattery_Full">
-            <English>Drone is full</English>
-            <German>Drohne ist voll</German>
-            <Spanish>El VANT está lleno</Spanish>
-            <French>Le drone est chargé.</French>
-            <Polish>Dron jest naładowany</Polish>
-            <Hungarian>A drón fel van töltve</Hungarian>
-            <Czech>Dron je nabitý</Czech>
-            <Portuguese>O VANT está cheio</Portuguese>
-            <Italian>Il drone è carico</Italian>
-            <Russian>БПЛА полностью заряжен</Russian>
-            <Japanese>ドローンは充電完了</Japanese>
-            <Korean>무인기 충전 완료</Korean>
-            <Chinesesimp>无人机电池已充满</Chinesesimp>
-            <Chinese>無人載具電池已充滿</Chinese>
-            <Turkish>IHA Dolu</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Logistics_UAVbattery_NoBattery">
-            <English>You need a UAV Battery</English>
-            <German>Du brauchst eine UAV-Batterie</German>
-            <Spanish>Necesitas una batería para VANT</Spanish>
-            <French>Le drone nécessite une batterie.</French>
-            <Polish>Potrzebujesz baterii UAV</Polish>
-            <Hungarian>Szükséged van egy UAV akkumulátorra</Hungarian>
-            <Czech>Potřebuješ UAV baterii</Czech>
-            <Portuguese>Você precisa de uma bateria para VANTs</Portuguese>
-            <Italian>Ti serve una Batteria UAV</Italian>
-            <Russian>Требуется аккумулятор для БПЛА</Russian>
-            <Japanese>UAV バッテリーが必要です</Japanese>
-            <Korean>무인기 배터리가 필요합니다</Korean>
-            <Chinesesimp>你需要一个无人机电池</Chinesesimp>
-            <Chinese>你需要一個無人載具電池</Chinese>
-            <Turkish>UAV Bataryaya ihtiyacın var</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Logistics_UAVbattery_Recharge">
-            <English>Recharge</English>
-            <German>Aufladen</German>
-            <Spanish>Recargar</Spanish>
-            <French>Recharger</French>
-            <Polish>Naładuj</Polish>
-            <Hungarian>Feltöltés</Hungarian>
-            <Czech>Dobít</Czech>
-            <Portuguese>Recarregar</Portuguese>
-            <Italian>Ricarica</Italian>
-            <Russian>Зарядить</Russian>
-            <Japanese>充電</Japanese>
-            <Korean>재충전</Korean>
-            <Chinesesimp>充电</Chinesesimp>
-            <Chinese>充電</Chinese>
-            <Turkish>Şarj</Turkish>
+        <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Description">
+            <English>Used to refuel Carried UAV's</English>
+            <Czech>Používané k dobíjení UAV</Czech>
+            <French>Utilisée pour alimenter un drone en énergie.</French>
+            <Spanish>Usada para reabastecer el VANT transportado</Spanish>
+            <Italian>Usata per ricaricare le batterie di UAV portabili</Italian>
+            <Polish>Używana do naładowania baterii przenośnego UAV</Polish>
+            <Portuguese>Usada para reabastecer o VANT</Portuguese>
+            <Russian>Используется для зарядки переносных БПЛА</Russian>
+            <German>Verwendet zum Aufladen von tragbaren UAVs</German>
+            <Korean>무인기를 재충전 할 때 씁니다.</Korean>
+            <Japanese>運んでいる UAV を充電に使う</Japanese>
+            <Chinese>對可攜式無人載具進行充電</Chinese>
+            <Chinesesimp>对可携式无人机进行充电</Chinesesimp>
+            <Turkish>Used to refuel Carried UAV's</Turkish>
+            <Hungarian>Hordozható UAV-k feltöltéséhez való akkumulátor</Hungarian>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Name">
             <English>UAV Battery</English>
-            <German>UAV-Batterie</German>
-            <Spanish>Batería para VANT</Spanish>
-            <French>Batterie pour drone</French>
-            <Polish>Bateria UAV</Polish>
-            <Hungarian>UAV akkumulátor</Hungarian>
             <Czech>UAV baterie</Czech>
-            <Portuguese>Bateria para VANT</Portuguese>
+            <French>Batterie pour drone</French>
+            <Spanish>Batería para VANT</Spanish>
             <Italian>Batteria UAV</Italian>
+            <Polish>Bateria UAV</Polish>
+            <Portuguese>Bateria para VANT</Portuguese>
             <Russian>Аккумулятор БПЛА</Russian>
-            <Japanese>UAV バッテリー</Japanese>
+            <German>UAV-Batterie</German>
             <Korean>무인기 배터리</Korean>
-            <Chinesesimp>无人机电池</Chinesesimp>
+            <Japanese>UAV バッテリー</Japanese>
             <Chinese>無人載具電池</Chinese>
+            <Chinesesimp>无人机电池</Chinesesimp>
             <Turkish>UAV Batarya</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Description">
-            <English>Used to refuel Carried UAV's</English>
-            <German>Verwendet zum Aufladen von tragbaren UAVs</German>
-            <Spanish>Usada para reabastecer el VANT transportado</Spanish>
-            <French>Utilisée pour alimenter un drone en énergie.</French>
-            <Polish>Używana do naładowania baterii przenośnego UAV</Polish>
-            <Hungarian>Hordozható UAV-k feltöltéséhez való akkumulátor</Hungarian>
-            <Czech>Používané k dobíjení UAV</Czech>
-            <Portuguese>Usada para reabastecer o VANT</Portuguese>
-            <Italian>Usata per ricaricare le batterie di UAV portabili</Italian>
-            <Russian>Используется для зарядки переносных БПЛА</Russian>
-            <Japanese>運んでいる UAV を充電に使う</Japanese>
-            <Korean>무인기를 재충전 할 때 씁니다.</Korean>
-            <Chinesesimp>对可携式无人机进行充电</Chinesesimp>
-            <Chinese>對可攜式無人載具進行充電</Chinese>
-            <Turkish>Used to refuel Carried UAV's</Turkish>
+            <Hungarian>UAV akkumulátor</Hungarian>
         </Key>
         <Key ID="STR_ACE_Logistics_UAVbattery_Battery_Recharge">
             <English>Recharging...</English>
-            <German>Aufladen...</German>
-            <Spanish>Recargando...</Spanish>
-            <French>Rechargement...</French>
-            <Polish>Ładowanie...</Polish>
-            <Hungarian>Akku feltöltése...</Hungarian>
             <Czech>Dobíjení...</Czech>
-            <Portuguese>Recarregando...</Portuguese>
+            <French>Rechargement...</French>
+            <Spanish>Recargando...</Spanish>
             <Italian>Ricaricando...</Italian>
+            <Polish>Ładowanie...</Polish>
+            <Portuguese>Recarregando...</Portuguese>
             <Russian>Заряжается...</Russian>
-            <Japanese>充電しています・・・</Japanese>
-            <Chinesesimp>正在充电...</Chinesesimp>
-            <Chinese>充電中...</Chinese>
+            <German>Aufladen...</German>
             <Korean>충전 중...</Korean>
+            <Japanese>充電しています・・・</Japanese>
+            <Chinese>充電中...</Chinese>
+            <Chinesesimp>正在充电...</Chinesesimp>
             <Turkish>Şarj Oluyor</Turkish>
+            <Hungarian>Akku feltöltése...</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Logistics_UAVbattery_Full">
+            <English>Drone is full</English>
+            <Czech>Dron je nabitý</Czech>
+            <French>Le drone est chargé.</French>
+            <Spanish>El VANT está lleno</Spanish>
+            <Italian>Il drone è carico</Italian>
+            <Polish>Dron jest naładowany</Polish>
+            <Portuguese>O VANT está cheio</Portuguese>
+            <Russian>БПЛА полностью заряжен</Russian>
+            <German>Drohne ist voll</German>
+            <Korean>무인기 충전 완료</Korean>
+            <Japanese>ドローンは充電完了</Japanese>
+            <Chinese>無人載具電池已充滿</Chinese>
+            <Chinesesimp>无人机电池已充满</Chinesesimp>
+            <Turkish>IHA Dolu</Turkish>
+            <Hungarian>A drón fel van töltve</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Logistics_UAVbattery_NoBattery">
+            <English>You need a UAV Battery</English>
+            <Czech>Potřebuješ UAV baterii</Czech>
+            <French>Le drone nécessite une batterie.</French>
+            <Spanish>Necesitas una batería para VANT</Spanish>
+            <Italian>Ti serve una Batteria UAV</Italian>
+            <Polish>Potrzebujesz baterii UAV</Polish>
+            <Portuguese>Você precisa de uma bateria para VANTs</Portuguese>
+            <Russian>Требуется аккумулятор для БПЛА</Russian>
+            <German>Du brauchst eine UAV-Batterie</German>
+            <Korean>무인기 배터리가 필요합니다</Korean>
+            <Japanese>UAV バッテリーが必要です</Japanese>
+            <Chinese>你需要一個無人載具電池</Chinese>
+            <Chinesesimp>你需要一个无人机电池</Chinesesimp>
+            <Turkish>UAV Bataryaya ihtiyacın var</Turkish>
+            <Hungarian>Szükséged van egy UAV akkumulátorra</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Logistics_UAVbattery_Recharge">
+            <English>Recharge</English>
+            <Czech>Dobít</Czech>
+            <French>Recharger</French>
+            <Spanish>Recargar</Spanish>
+            <Italian>Ricarica</Italian>
+            <Polish>Naładuj</Polish>
+            <Portuguese>Recarregar</Portuguese>
+            <Russian>Зарядить</Russian>
+            <German>Aufladen</German>
+            <Korean>재충전</Korean>
+            <Japanese>充電</Japanese>
+            <Chinese>充電</Chinese>
+            <Chinesesimp>充电</Chinesesimp>
+            <Turkish>Şarj</Turkish>
+            <Hungarian>Feltöltés</Hungarian>
         </Key>
     </Package>
 </Project>

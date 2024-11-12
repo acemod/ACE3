@@ -1,226 +1,226 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Sandbag">
-        <Key ID="STR_ACE_Sandbag_sandbag_displayName">
-            <English>Sandbag</English>
-            <German>Sandsack</German>
-            <Russian>Мешок с песком</Russian>
-            <Polish>Worek z piaskiem</Polish>
-            <Spanish>Saco de arena</Spanish>
-            <French>Sac de sable</French>
-            <Czech>Pytel s pískem</Czech>
-            <Italian>Sacco di Sabbia</Italian>
-            <Hungarian>Homokzsák</Hungarian>
-            <Portuguese>Saco de Areia</Portuguese>
-            <Japanese>土のう</Japanese>
-            <Korean>모래주머니</Korean>
-            <Chinesesimp>沙包</Chinesesimp>
-            <Chinese>沙包</Chinese>
-            <Turkish>Kum Torbası</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Sandbag_sandbagEmpty_displayName">
-            <English>Sandbag (empty)</English>
-            <German>Sandsack (leer)</German>
-            <Russian>Мешок с песком (пустой)</Russian>
-            <Polish>Worek na piasek</Polish>
-            <Spanish>Saco de arena (vacio)</Spanish>
-            <French>Sac de sable (vide)</French>
-            <Czech>Pytel na písek (prázdný)</Czech>
-            <Italian>Sacco di Sabbia (vuoto)</Italian>
-            <Hungarian>Homokzsák (üres)</Hungarian>
-            <Portuguese>Saco de Areia (vazio)</Portuguese>
-            <Japanese>土のう (空)</Japanese>
-            <Korean>모래주머니(비어있음)</Korean>
-            <Chinesesimp>沙包（空）</Chinesesimp>
-            <Chinese>沙包 (空)</Chinese>
-            <Turkish>Kum Torbası (Boş)</Turkish>
-        </Key>
         <Key ID="STR_ACE_Sandbag_CANNOTSB">
             <English>Cannot build here</English>
-            <German>Nicht möglich</German>
-            <Russian>Установка на этом месте невозможна</Russian>
-            <Polish>Nie można tu budować</Polish>
-            <Spanish>No se puede construir aqui</Spanish>
-            <French>Impossible de construire ici.</French>
             <Czech>Zde nelze postavit</Czech>
+            <French>Impossible de construire ici.</French>
+            <Spanish>No se puede construir aqui</Spanish>
             <Italian>Impossibile costruire qui</Italian>
-            <Hungarian>Nem teheted ide</Hungarian>
+            <Polish>Nie można tu budować</Polish>
             <Portuguese>Não pode construir aqui</Portuguese>
-            <Japanese>ここでは作れません</Japanese>
+            <Russian>Установка на этом месте невозможна</Russian>
+            <German>Nicht möglich</German>
             <Korean>여기에 지을 수 없습니다</Korean>
-            <Chinesesimp>无法放置在此</Chinesesimp>
+            <Japanese>ここでは作れません</Japanese>
             <Chinese>無法放置在此</Chinese>
+            <Chinesesimp>无法放置在此</Chinesesimp>
             <Turkish>Buraya inşa edilemez</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Sandbag_PICKUPSB">
-            <English>Pick up Sandbag</English>
-            <German>Sandsack abbauen</German>
-            <Russian>Взять мешок с песком</Russian>
-            <Polish>Zabierz worek</Polish>
-            <Spanish>Coger saco de arena</Spanish>
-            <French>Prendre le sac de sable</French>
-            <Czech>Zvednout pytel</Czech>
-            <Italian>Prendi Sacco di Sabbia</Italian>
-            <Hungarian>Homokzsák felvétele</Hungarian>
-            <Portuguese>Pegar saco de areia</Portuguese>
-            <Japanese>土のうを拾う</Japanese>
-            <Korean>모래주머니 줍기</Korean>
-            <Chinesesimp>捡起沙包</Chinesesimp>
-            <Chinese>撿起沙包</Chinese>
-            <Turkish>Kum torbasını al</Turkish>
+            <Hungarian>Nem teheted ide</Hungarian>
         </Key>
         <Key ID="STR_ACE_Sandbag_CARRYSB">
             <English>Carry Sandbag</English>
-            <German>Sandsack tragen</German>
-            <Russian>Нести мешок с песком</Russian>
-            <Polish>Przenieś worek</Polish>
-            <Spanish>Portar saco de arena</Spanish>
-            <French>Porter le sac de sable</French>
             <Czech>Nést pytel</Czech>
+            <French>Porter le sac de sable</French>
+            <Spanish>Portar saco de arena</Spanish>
             <Italian>Trasporta Sacco di Sabbia</Italian>
-            <Hungarian>Homokzsák cipelése</Hungarian>
+            <Polish>Przenieś worek</Polish>
             <Portuguese>Carregar saco de areia</Portuguese>
-            <Japanese>土のうを運ぶ</Japanese>
+            <Russian>Нести мешок с песком</Russian>
+            <German>Sandsack tragen</German>
             <Korean>모래주머니 옮기기</Korean>
-            <Chinesesimp>搬运沙包</Chinesesimp>
+            <Japanese>土のうを運ぶ</Japanese>
             <Chinese>搬運沙包</Chinese>
+            <Chinesesimp>搬运沙包</Chinesesimp>
             <Turkish>Kum torbasını taşı</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Sandbag_ENDCARRYSB">
-            <English>End Carrying</English>
-            <German>Tragen beenden</German>
-            <Russian>Завершить переноску</Russian>
-            <Polish>Zostaw worek</Polish>
-            <Spanish>Dejar de portar</Spanish>
-            <French>Arrêter de porter</French>
-            <Czech>Položit</Czech>
-            <Italian>Termina Trasporto</Italian>
-            <Hungarian>Cipelés abbahagyása</Hungarian>
-            <Portuguese>Parar de carregar</Portuguese>
-            <Japanese>降ろす</Japanese>
-            <Korean>그만 옮기기</Korean>
-            <Chinesesimp>停止搬运</Chinesesimp>
-            <Chinese>停止搬運</Chinese>
-            <Turkish>Taşımayı bitir</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Sandbag_DropSandbag">
-            <English>Drop Sandbag</English>
-            <German>Sandsack ablegen</German>
-            <Russian>Положить мешок</Russian>
-            <Polish>Upuść worek</Polish>
-            <Spanish>Soltar saco de arena</Spanish>
-            <French>Lâcher le sac de sable</French>
-            <Czech>Odložit pytel</Czech>
-            <Italian>Lascia Sacco di Sabbia</Italian>
-            <Hungarian>Homokzsák eldobása</Hungarian>
-            <Portuguese>Derrubar saco de areia</Portuguese>
-            <Japanese>土のうを落とす</Japanese>
-            <Korean>여기에 놓기</Korean>
-            <Chinesesimp>放下沙包</Chinesesimp>
-            <Chinese>放下沙包</Chinese>
-            <Turkish>Kum Torbasını Bırak</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Sandbag_ConfirmDeployment">
-            <English>Confirm Deployment</English>
-            <German>Aufbauen</German>
-            <Russian>Подтвердить установку</Russian>
-            <Polish>Potwierdź rozłożenie</Polish>
-            <Spanish>Confirmar despliegue</Spanish>
-            <French>Confirmer l'installation</French>
-            <Czech>Potvrdit Položení</Czech>
-            <Italian>Conferma Posizionamento</Italian>
-            <Hungarian>Lerak</Hungarian>
-            <Portuguese>Confirmar implantação</Portuguese>
-            <Japanese>ここで作る</Japanese>
-            <Korean>설치 확인</Korean>
-            <Chinesesimp>确认部署</Chinesesimp>
-            <Chinese>確認佈署</Chinese>
-            <Turkish>Yerleştirmeyi Onayla</Turkish>
+            <Hungarian>Homokzsák cipelése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Sandbag_CancelDeployment">
             <English>Cancel Deployment</English>
-            <German>Abbrechen</German>
-            <Russian>Отменить установку</Russian>
-            <Polish>Anuluj rozłożenie</Polish>
-            <Spanish>Cancelar despliegue</Spanish>
-            <French>Annuler l'installation</French>
             <Czech>Zrušit Položení</Czech>
+            <French>Annuler l'installation</French>
+            <Spanish>Cancelar despliegue</Spanish>
             <Italian>Cancella Posizionamento</Italian>
-            <Hungarian>Visszavonás</Hungarian>
+            <Polish>Anuluj rozłożenie</Polish>
             <Portuguese>Cancelar implantação</Portuguese>
-            <Japanese>作るのを止める</Japanese>
+            <Russian>Отменить установку</Russian>
+            <German>Abbrechen</German>
             <Korean>설치 취소</Korean>
-            <Chinesesimp>取消部署</Chinesesimp>
+            <Japanese>作るのを止める</Japanese>
             <Chinese>取消佈署</Chinese>
+            <Chinesesimp>取消部署</Chinesesimp>
             <Turkish>Yerleştirmeyi İptal Et</Turkish>
+            <Hungarian>Visszavonás</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Sandbag_ConfirmDeployment">
+            <English>Confirm Deployment</English>
+            <Czech>Potvrdit Položení</Czech>
+            <French>Confirmer l'installation</French>
+            <Spanish>Confirmar despliegue</Spanish>
+            <Italian>Conferma Posizionamento</Italian>
+            <Polish>Potwierdź rozłożenie</Polish>
+            <Portuguese>Confirmar implantação</Portuguese>
+            <Russian>Подтвердить установку</Russian>
+            <German>Aufbauen</German>
+            <Korean>설치 확인</Korean>
+            <Japanese>ここで作る</Japanese>
+            <Chinese>確認佈署</Chinese>
+            <Chinesesimp>确认部署</Chinesesimp>
+            <Turkish>Yerleştirmeyi Onayla</Turkish>
+            <Hungarian>Lerak</Hungarian>
         </Key>
         <Key ID="STR_ACE_Sandbag_DeploySandbag">
             <English>Deploy Sandbag</English>
-            <German>Sandsack aufbauen</German>
-            <Russian>Установить мешок с песком</Russian>
-            <Polish>Rozłóż worek z piaskiem</Polish>
-            <Spanish>Desplegar saco de arena</Spanish>
-            <French>Installer un sac de sable</French>
             <Czech>Umístit pytel</Czech>
+            <French>Installer un sac de sable</French>
+            <Spanish>Desplegar saco de arena</Spanish>
             <Italian>Posiziona Sacco di Sabbia</Italian>
-            <Hungarian>Homokzsák lerakása</Hungarian>
+            <Polish>Rozłóż worek z piaskiem</Polish>
             <Portuguese>Implantar saco de areia</Portuguese>
-            <Japanese>土のうを設置</Japanese>
+            <Russian>Установить мешок с песком</Russian>
+            <German>Sandsack aufbauen</German>
             <Korean>모래주머니 설치</Korean>
-            <Chinesesimp>部署沙包</Chinesesimp>
+            <Japanese>土のうを設置</Japanese>
             <Chinese>佈署沙包</Chinese>
+            <Chinesesimp>部署沙包</Chinesesimp>
             <Turkish>Kum Torbasını Yerleştir</Turkish>
+            <Hungarian>Homokzsák lerakása</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Sandbag_SANDBOX">
-            <English>Sandbag Box</English>
-            <German>Sandsack Kiste</German>
-            <Russian>Ящик мешков с песком</Russian>
-            <Polish>Skrzynia worków na piasek</Polish>
-            <Spanish>Caja de sacos de arena</Spanish>
-            <French>Caisse de sacs de sable</French>
-            <Czech>Bedna na pytle s pískem</Czech>
-            <Italian>Scatola Sacchi di Sabbia</Italian>
-            <Hungarian>Homokzsákos láda</Hungarian>
-            <Portuguese>Caixa de saco de areia</Portuguese>
-            <Japanese>土のう入れ</Japanese>
-            <Korean>모래주머니 상자</Korean>
-            <Chinesesimp>沙包箱</Chinesesimp>
-            <Chinese>沙包箱</Chinese>
-            <Turkish>Kum Torbası Kutusu</Turkish>
+        <Key ID="STR_ACE_Sandbag_DropSandbag">
+            <English>Drop Sandbag</English>
+            <Czech>Odložit pytel</Czech>
+            <French>Lâcher le sac de sable</French>
+            <Spanish>Soltar saco de arena</Spanish>
+            <Italian>Lascia Sacco di Sabbia</Italian>
+            <Polish>Upuść worek</Polish>
+            <Portuguese>Derrubar saco de areia</Portuguese>
+            <Russian>Положить мешок</Russian>
+            <German>Sandsack ablegen</German>
+            <Korean>여기에 놓기</Korean>
+            <Japanese>土のうを落とす</Japanese>
+            <Chinese>放下沙包</Chinese>
+            <Chinesesimp>放下沙包</Chinesesimp>
+            <Turkish>Kum Torbasını Bırak</Turkish>
+            <Hungarian>Homokzsák eldobása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Sandbag_ENDCARRYSB">
+            <English>End Carrying</English>
+            <Czech>Položit</Czech>
+            <French>Arrêter de porter</French>
+            <Spanish>Dejar de portar</Spanish>
+            <Italian>Termina Trasporto</Italian>
+            <Polish>Zostaw worek</Polish>
+            <Portuguese>Parar de carregar</Portuguese>
+            <Russian>Завершить переноску</Russian>
+            <German>Tragen beenden</German>
+            <Korean>그만 옮기기</Korean>
+            <Japanese>降ろす</Japanese>
+            <Chinese>停止搬運</Chinese>
+            <Chinesesimp>停止搬运</Chinesesimp>
+            <Turkish>Taşımayı bitir</Turkish>
+            <Hungarian>Cipelés abbahagyása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Sandbag_NOSAND">
             <English>Here is no sand</English>
-            <German>Hier gibt es keinen Sand</German>
-            <Russian>Здесь нет песка</Russian>
-            <Polish>Tu nie ma piasku</Polish>
-            <Spanish>Aqui no hay arena</Spanish>
-            <French>Il n'y a pas de sable ici.</French>
             <Czech>Tady není písek</Czech>
+            <French>Il n'y a pas de sable ici.</French>
+            <Spanish>Aqui no hay arena</Spanish>
             <Italian>Qui non c'è Sabbia</Italian>
-            <Hungarian>Itt nincs homok</Hungarian>
+            <Polish>Tu nie ma piasku</Polish>
             <Portuguese>Aqui não tem areia</Portuguese>
-            <Japanese>ここに土はありません</Japanese>
+            <Russian>Здесь нет песка</Russian>
+            <German>Hier gibt es keinen Sand</German>
             <Korean>흙이 없습니다</Korean>
-            <Chinesesimp>这里没有沙</Chinesesimp>
+            <Japanese>ここに土はありません</Japanese>
             <Chinese>這裡沒有沙</Chinese>
+            <Chinesesimp>这里没有沙</Chinesesimp>
             <Turkish>Burada Kum Yok</Turkish>
+            <Hungarian>Itt nincs homok</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Sandbag_PICKUPSB">
+            <English>Pick up Sandbag</English>
+            <Czech>Zvednout pytel</Czech>
+            <French>Prendre le sac de sable</French>
+            <Spanish>Coger saco de arena</Spanish>
+            <Italian>Prendi Sacco di Sabbia</Italian>
+            <Polish>Zabierz worek</Polish>
+            <Portuguese>Pegar saco de areia</Portuguese>
+            <Russian>Взять мешок с песком</Russian>
+            <German>Sandsack abbauen</German>
+            <Korean>모래주머니 줍기</Korean>
+            <Japanese>土のうを拾う</Japanese>
+            <Chinese>撿起沙包</Chinese>
+            <Chinesesimp>捡起沙包</Chinesesimp>
+            <Turkish>Kum torbasını al</Turkish>
+            <Hungarian>Homokzsák felvétele</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Sandbag_SANDBOX">
+            <English>Sandbag Box</English>
+            <Czech>Bedna na pytle s pískem</Czech>
+            <French>Caisse de sacs de sable</French>
+            <Spanish>Caja de sacos de arena</Spanish>
+            <Italian>Scatola Sacchi di Sabbia</Italian>
+            <Polish>Skrzynia worków na piasek</Polish>
+            <Portuguese>Caixa de saco de areia</Portuguese>
+            <Russian>Ящик мешков с песком</Russian>
+            <German>Sandsack Kiste</German>
+            <Korean>모래주머니 상자</Korean>
+            <Japanese>土のう入れ</Japanese>
+            <Chinese>沙包箱</Chinese>
+            <Chinesesimp>沙包箱</Chinesesimp>
+            <Turkish>Kum Torbası Kutusu</Turkish>
+            <Hungarian>Homokzsákos láda</Hungarian>
         </Key>
         <Key ID="STR_ACE_Sandbag_ScrollAction">
             <English>Rotate</English>
-            <German>Drehen</German>
-            <Spanish>Girar</Spanish>
-            <French>Tourner</French>
-            <Italian>Rotazione</Italian>
             <Czech>Otočit</Czech>
-            <Hungarian>Forgatás</Hungarian>
+            <French>Tourner</French>
+            <Spanish>Girar</Spanish>
+            <Italian>Rotazione</Italian>
             <Polish>Obrót</Polish>
             <Portuguese>Rotaciona</Portuguese>
             <Russian>Bращать</Russian>
-            <Japanese>回転</Japanese>
+            <German>Drehen</German>
             <Korean>돌리기</Korean>
-            <Chinesesimp>旋转</Chinesesimp>
+            <Japanese>回転</Japanese>
             <Chinese>旋轉</Chinese>
+            <Chinesesimp>旋转</Chinesesimp>
             <Turkish>Yönlendir</Turkish>
+            <Hungarian>Forgatás</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Sandbag_sandbagEmpty_displayName">
+            <English>Sandbag (empty)</English>
+            <Czech>Pytel na písek (prázdný)</Czech>
+            <French>Sac de sable (vide)</French>
+            <Spanish>Saco de arena (vacio)</Spanish>
+            <Italian>Sacco di Sabbia (vuoto)</Italian>
+            <Polish>Worek na piasek</Polish>
+            <Portuguese>Saco de Areia (vazio)</Portuguese>
+            <Russian>Мешок с песком (пустой)</Russian>
+            <German>Sandsack (leer)</German>
+            <Korean>모래주머니(비어있음)</Korean>
+            <Japanese>土のう (空)</Japanese>
+            <Chinese>沙包 (空)</Chinese>
+            <Chinesesimp>沙包（空）</Chinesesimp>
+            <Turkish>Kum Torbası (Boş)</Turkish>
+            <Hungarian>Homokzsák (üres)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Sandbag_sandbag_displayName">
+            <English>Sandbag</English>
+            <Czech>Pytel s pískem</Czech>
+            <French>Sac de sable</French>
+            <Spanish>Saco de arena</Spanish>
+            <Italian>Sacco di Sabbia</Italian>
+            <Polish>Worek z piaskiem</Polish>
+            <Portuguese>Saco de Areia</Portuguese>
+            <Russian>Мешок с песком</Russian>
+            <German>Sandsack</German>
+            <Korean>모래주머니</Korean>
+            <Japanese>土のう</Japanese>
+            <Chinese>沙包</Chinese>
+            <Chinesesimp>沙包</Chinesesimp>
+            <Turkish>Kum Torbası</Turkish>
+            <Hungarian>Homokzsák</Hungarian>
         </Key>
     </Package>
 </Project>
