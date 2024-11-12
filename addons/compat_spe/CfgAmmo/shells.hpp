@@ -1,6 +1,5 @@
-//Panzer III J, L, M HE
-class SPE_50mm_SprGr38_HE: SPE_ShellHE_base
-{
+// Panzer III J, L, M HE
+class SPE_50mm_SprGr38_HE: SPE_ShellHE_base {
     EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 1820;
