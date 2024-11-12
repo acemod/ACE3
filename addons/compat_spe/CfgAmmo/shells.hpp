@@ -69,9 +69,8 @@ class SPE_105mm_StuH42_Gr38_HE: SPE_ShellHE_base
     EGVAR(frag,classes)[] = {"ACE_frag_large","ACE_frag_large_HD"};
 };
 
-//Nashorn HE
-class SPE_SprGr39_HE: SPE_ShellHE_base
-{
+// Nashorn HE
+class SPE_SprGr39_HE: SPE_ShellHE_base {
     EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 9400;
