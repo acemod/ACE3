@@ -8,12 +8,45 @@ class SPE_50mm_SprGr38_HE: SPE_ShellHE_base {
     EGVAR(frag,gurney_k) = "1/2";
     EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_small_HD"};
 };
+
+// Panzer III J, L, M APHE
+class SPE_50mm_PzGr39_AP: SPE_Shell_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 2050;
+    EGVAR(frag,charge) = 29;
+    EGVAR(frag,gurney_c) = 2930;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_small_HD"};
+};
 // Panzer III N HE
 class SPE_SprGr34_K51_HE: SPE_ShellHE_base {
     EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 5740;
     EGVAR(frag,charge) = 686;
+    EGVAR(frag,gurney_c) = 2930;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+};
+
+// Panzer III N AP
+class SPE_KGrRotPz_K51_AP: SPE_Shell_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 6800;
+    EGVAR(frag,charge) = 103;
+    EGVAR(frag,gurney_c) = 2930;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+};
+
+// Panzer III N HEAT
+class SPE_HLGr38c_K51_HEAT: SPE_ShellHEAT_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 4800;
+    EGVAR(frag,charge) = 876;
     EGVAR(frag,gurney_c) = 2930;
     EGVAR(frag,gurney_k) = "1/2";
     EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
@@ -30,12 +63,34 @@ class SPE_SprGr34_KWK40_HE: SPE_ShellHE_base {
     EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
 };
 
+// Panzer IV G AP
+class SPE_PzGr39_KWK40_AP: SPE_Shell_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 6800;
+    EGVAR(frag,charge) = 29;
+    EGVAR(frag,gurney_c) = 2930;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+};
+
 // Panzer V HE
 class SPE_SprGr42_KwK42_HE: SPE_ShellHE_base {
     EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 5740;
     EGVAR(frag,charge) = 725;
+    EGVAR(frag,gurney_c) = 2930;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+};
+
+// Panzer V AP
+class SPE_PzGr3942_KwK42_AP: SPE_Shell_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 6800;
+    EGVAR(frag,charge) = 29;
     EGVAR(frag,gurney_c) = 2930;
     EGVAR(frag,gurney_k) = "1/2";
     EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
@@ -52,11 +107,43 @@ class SPE_SprGr_KwK36_HE: SPE_ShellHE_base {
     EGVAR(frag,classes)[] = {"ACE_frag_large", "ACE_frag_large_HD"};
 };
 
+// Panzer VI AP
+class SPE_PzGr39_KwK36_AP: SPE_Shell_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 10200;
+    EGVAR(frag,charge) = 109;
+    EGVAR(frag,gurney_c) = 2930;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_large", "ACE_frag_large_HD"};
+};
+
 // StuH 42 HE
 class SPE_105mm_StuH42_Gr38_HE: SPE_ShellHE_base {
     EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 14810;
+    EGVAR(frag,charge) = 2530;
+    EGVAR(frag,gurney_c) = 2930;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_large", "ACE_frag_large_HD"};
+};
+// StuH 42 AP
+class SPE_105mm_Stuh42_PzGrRot_AP: SPE_Shell_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 14000;
+    EGVAR(frag,charge) = 305;
+    EGVAR(frag,gurney_c) = 2930;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_large", "ACE_frag_large_HD"};
+};
+
+// StuH 42 HEAT
+class SPE_105mm_StuH42_Gr39HlC_HEAT: SPE_ShellHEAT_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 12350;
     EGVAR(frag,charge) = 2530;
     EGVAR(frag,gurney_c) = 2930;
     EGVAR(frag,gurney_k) = "1/2";
@@ -69,6 +156,17 @@ class SPE_SprGr39_HE: SPE_ShellHE_base {
     EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 9400;
     EGVAR(frag,charge) = 1000;
+    EGVAR(frag,gurney_c) = 2930;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_large", "ACE_frag_large_HD"};
+};
+
+// Nashorn AP
+class SPE_PzGr43_AP: SPE_Shell_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 10160;
+    EGVAR(frag,charge) = 109;
     EGVAR(frag,gurney_c) = 2930;
     EGVAR(frag,gurney_k) = "1/2";
     EGVAR(frag,classes)[] = {"ACE_frag_large", "ACE_frag_large_HD"};
