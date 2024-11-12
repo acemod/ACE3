@@ -66,7 +66,7 @@ class SPE_105mm_StuH42_Gr38_HE: SPE_ShellHE_base
     EGVAR(frag,charge) = 2530;
     EGVAR(frag,gurney_c) = 2930;
     EGVAR(frag,gurney_k) = "1/2";
-    EGVAR(frag,classes)[] = {"ACE_frag_large","ACE_frag_large_HD"};
+    EGVAR(frag,classes)[] = {"ACE_frag_large", "ACE_frag_large_HD"};
 };
 
 // Nashorn HE
