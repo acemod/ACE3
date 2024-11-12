@@ -183,12 +183,34 @@ class SPE_76mm_M7_M42_HE: SPE_ShellHE_base {
     EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
 };
 
+// M10 AP
+class SPE_76mm_M7_M62_APHE: SPE_Shell_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 7000;
+    EGVAR(frag,charge) = 64;
+    EGVAR(frag,gurney_c) = 2440;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};   
+};
+
 // M18 HE
 class SPE_76mm_M1_HC_M42_HE: SPE_76mm_M7_M42_HE {
     EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 5840;
     EGVAR(frag,charge) = 390;
+    EGVAR(frag,gurney_c) = 2440;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+};
+
+// M18 and Sherman 76 AP
+class SPE_76mm_M1_M62_APHE: SPE_76mm_M7_M62_APHE {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 7000;
+    EGVAR(frag,charge) = 64;
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "1/2";
     EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
@@ -203,6 +225,29 @@ class SPE_76mm_M1_M42_HE: SPE_76mm_M7_M42_HE {
     EGVAR(frag,gurney_c) = 2440;
     EGVAR(frag,gurney_k) = "1/2";
     EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_medium_HD"};
+};
+
+//M4 Sherman 75 AP
+class SPE_M61_M1_AP: SPE_Shell_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 6790;
+    EGVAR(frag,charge) = 64;
+    EGVAR(frag,gurney_c) = 2440;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium", "ACE_frag_medium_HD"};
+};
+
+
+// M4 Sherman 105 HEAT
+class SPE_M101_M67_HEAT: SPE_ShellHEAT_base {
+    EGVAR(frag,enabled) = 1;
+    EGVAR(frag,force) = 1;
+    EGVAR(frag,metal) = 13140;
+    EGVAR(frag,charge) = 1610;
+    EGVAR(frag,gurney_c) = 2750;
+    EGVAR(frag,gurney_k) = "1/2";
+    EGVAR(frag,classes)[] = {"ACE_frag_medium","ACE_frag_large"};
 };
 
 // M1 57mm AT gun
