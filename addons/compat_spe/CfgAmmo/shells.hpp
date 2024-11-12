@@ -57,9 +57,8 @@ class SPE_SprGr_KwK36_HE: SPE_ShellHE_base
     EGVAR(frag,classes)[] = {"ACE_frag_large","ACE_frag_large_HD"};
 };
 
-//StuH 42 HE
-class SPE_105mm_StuH42_Gr38_HE: SPE_ShellHE_base
-{
+// StuH 42 HE
+class SPE_105mm_StuH42_Gr38_HE: SPE_ShellHE_base {
     EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 14810;
