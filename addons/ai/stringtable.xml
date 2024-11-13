@@ -1,109 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="AI">
+        <Key ID="STR_ACE_AI_AssignNVG_Description">
+            <English>Equips NVG in inventory during night time and unequips it during day time.\nDoes not add NVGs to inventory!</English>
+            <French>Equipe des JVN pendant la nuit et les déséquipe le jour.\nN'ajoute pas les JVN dans l'intenvaire !</French>
+            <Spanish>Equipa las gafas de visión nocturna en el inventario cuando es de noche, y las desequipa cuando es de día.\nNo añade las gafas al inventario!</Spanish>
+            <Italian>Equipaggia NVG dall'inventario durante la notte, e li mette nell'inventario durante il giorno.\nNon aggiunge NVG all'inventario se non sono presenti.</Italian>
+            <Polish>Zakłada NVG w nocy i zdejmuje je w ciągu dnia.\nNie dodaje NVG do ekwipunku!</Polish>
+            <Portuguese>Equipa o NVG do inventário durante a noite e desequipa durante o dia.\nNão adiciona NVGs ao inventário!</Portuguese>
+            <Russian>Экипирует ПНВ в ночное время и отключает его в дневное время.\nНе добавляет ПНВ в инвентарь!</Russian>
+            <German>Rüstet NVG nachts aus dem Inventar aus und entfernt es tagsüber.\nFügt keine NVGs zum Inventar hinzu!</German>
+            <Korean>야간에는 야투경을 소지품에 장착하고 주간에는 장착을 해제합니다.\n주의! 소지품에 야투경을 추가하는 것이 아닙니다!</Korean>
+            <Japanese>インベントリ内の暗視装置を夜間に装備し、日中は解除し収納します。\nこれはNVGをインベントリに追加しません。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_AI_AssignNVG_DisplayName">
+            <English>Auto-Equip NVGs</English>
+            <French>Equipement JVN automatique</French>
+            <Spanish>Auto equipar gafas de visión nocturna</Spanish>
+            <Italian>Equipaggia NVG in automatico</Italian>
+            <Polish>Automatyczne zakładanie NVG</Polish>
+            <Portuguese>Equipar NVGs automaticamente</Portuguese>
+            <Russian>Автоматическое оснащение ПНВ</Russian>
+            <German>Automatisch NVGs ausrüsten</German>
+            <Korean>야투경 자동 창착</Korean>
+            <Japanese>暗視装置の自動装備</Japanese>
+        </Key>
         <Key ID="STR_ACE_AI_DisplayName">
             <English>AI</English>
-            <Chinese>AI</Chinese>
+            <Czech>UI</Czech>
             <French>IA</French>
             <Spanish>IA</Spanish>
             <Italian>IA</Italian>
             <Polish>SI</Polish>
+            <Portuguese>IA</Portuguese>
             <Russian>ИИ</Russian>
             <German>KI</German>
-            <Czech>UI</Czech>
-            <Portuguese>IA</Portuguese>
             <Korean>AI</Korean>
-            <Chinesesimp>AI</Chinesesimp>
             <Japanese>AI</Japanese>
+            <Chinese>AI</Chinese>
+            <Chinesesimp>AI</Chinesesimp>
             <Turkish>AI</Turkish>
         </Key>
         <Key ID="STR_ACE_AI_GarrisonInvalidPosition">
             <English>Invalid position provided.</English>
-            <German>Ungültige Position</German>
+            <Czech>Pozice není validní.</Czech>
             <French>Position invalide fournie.</French>
-            <Japanese>位置が無効です。</Japanese>
+            <Spanish>Posición inválida proporcionada</Spanish>
             <Italian>Posizione invalida fornita.</Italian>
+            <Polish>Podano błędną pozycję.</Polish>
+            <Portuguese>Posição inválida fornecida.</Portuguese>
+            <Russian>Указана неверная позиция</Russian>
+            <German>Ungültige Position</German>
+            <Korean>위치가 잘못되었습니다.</Korean>
+            <Japanese>位置が無効です。</Japanese>
             <Chinese>提供的位置無效</Chinese>
             <Chinesesimp>提供的位置无效。</Chinesesimp>
-            <Korean>위치가 잘못되었습니다.</Korean>
-            <Polish>Podano błędną pozycję.</Polish>
-            <Russian>Указана неверная позиция</Russian>
-            <Portuguese>Posição inválida fornecida.</Portuguese>
-            <Spanish>Posición inválida proporcionada</Spanish>
-            <Czech>Pozice není validní.</Czech>
             <Turkish>Geçersiz Konum</Turkish>
+        </Key>
+        <Key ID="STR_ACE_AI_GarrisonNoBuilding">
+            <English>No building found.</English>
+            <Czech>Nenalezena žádná budova.</Czech>
+            <French>Aucun bâtiment trouvé.</French>
+            <Spanish>No se ha encontrado ningún edificio.</Spanish>
+            <Italian>Nessun edificio trovato.</Italian>
+            <Polish>Nie znaleziono budynku.</Polish>
+            <Portuguese>Nenhuma construção encontrada.</Portuguese>
+            <Russian>Здание не найдено</Russian>
+            <German>Kein Gebäude gefunden</German>
+            <Korean>건물이 없습니다.</Korean>
+            <Japanese>建物がありません。</Japanese>
+            <Chinese>沒找到建築物</Chinese>
+            <Chinesesimp>没找到建筑物。</Chinesesimp>
+            <Turkish>Bir yapı bulunamadı</Turkish>
         </Key>
         <Key ID="STR_ACE_AI_GarrisonNoUnits">
             <English>No units provided.</English>
-            <German>Keine Einheit ausgewählt</German>
+            <Czech>Nejsou k dispozici žádné jednotky.</Czech>
             <French>Aucune unité fournie.</French>
-            <Japanese>ユニットがありません。</Japanese>
+            <Spanish>No hay unidades proporcionadas.</Spanish>
             <Italian>Nessuna unità fornita.</Italian>
+            <Polish>Nie podano żadnych jednostek.</Polish>
+            <Portuguese>Nenhuma unidade fornecida.</Portuguese>
+            <Russian>Не указаны юниты</Russian>
+            <German>Keine Einheit ausgewählt</German>
+            <Korean>병력이 없습니다.</Korean>
+            <Japanese>ユニットがありません。</Japanese>
             <Chinese>找不到可用的單位</Chinese>
             <Chinesesimp>找不到可用的单位。</Chinesesimp>
-            <Korean>병력이 없습니다.</Korean>
-            <Polish>Nie podano żadnych jednostek.</Polish>
-            <Russian>Не указаны юниты</Russian>
-            <Portuguese>Nenhuma unidade fornecida.</Portuguese>
-            <Spanish>No hay unidades proporcionadas.</Spanish>
-            <Czech>Nejsou k dispozici žádné jednotky.</Czech>
             <Turkish>Hiçbir Birim Bulunamadı</Turkish>
         </Key>
         <Key ID="STR_ACE_AI_GarrisonNotEnoughPos">
             <English>There aren't enough positions to place all units.</English>
-            <German>Es gibt nicht genug Positionen, um alle Einheiten zu platzieren</German>
+            <Czech>Není dostatek pozic pro všechny jednotky.</Czech>
             <French>Il n'y a pas assez de positions pour placer toutes les unités.</French>
-            <Japanese>全ユニットを置くために十分な位置がありません。</Japanese>
+            <Spanish>No hay suficientes posiciones para colocar todas las unidades.</Spanish>
             <Italian>Non ci sono abbastanza posizioni per piazzare tutte le unità.</Italian>
+            <Polish>Nie ma wystarczającej ilości pozycji, aby umieścić wszystkie jednostki.</Polish>
+            <Portuguese>Não há posições suficientes para colocar todas as unidades.</Portuguese>
+            <Russian>Недостаточно позиций для размещения всех юнитов</Russian>
+            <German>Es gibt nicht genug Positionen, um alle Einheiten zu platzieren</German>
+            <Korean>모든 병력을 배치 할 공간이 없습니다.</Korean>
+            <Japanese>全ユニットを置くために十分な位置がありません。</Japanese>
             <Chinese>沒有足夠的位置能擺放所有單位</Chinese>
             <Chinesesimp>没有足够的位置能摆放所有单位。</Chinesesimp>
-            <Korean>모든 병력을 배치 할 공간이 없습니다.</Korean>
-            <Polish>Nie ma wystarczającej ilości pozycji, aby umieścić wszystkie jednostki.</Polish>
-            <Russian>Недостаточно позиций для размещения всех юнитов</Russian>
-            <Portuguese>Não há posições suficientes para colocar todas as unidades.</Portuguese>
-            <Spanish>No hay suficientes posiciones para colocar todas las unidades.</Spanish>
-            <Czech>Není dostatek pozic pro všechny jednotky.</Czech>
             <Turkish>Tüm birimleri yerleştirmek için yeterli konum yok.</Turkish>
-        </Key>
-        <Key ID="STR_ACE_AI_GarrisonNoBuilding">
-            <English>No building found.</English>
-            <German>Kein Gebäude gefunden</German>
-            <French>Aucun bâtiment trouvé.</French>
-            <Japanese>建物がありません。</Japanese>
-            <Italian>Nessun edificio trovato.</Italian>
-            <Chinese>沒找到建築物</Chinese>
-            <Chinesesimp>没找到建筑物。</Chinesesimp>
-            <Korean>건물이 없습니다.</Korean>
-            <Polish>Nie znaleziono budynku.</Polish>
-            <Russian>Здание не найдено</Russian>
-            <Portuguese>Nenhuma construção encontrada.</Portuguese>
-            <Spanish>No se ha encontrado ningún edificio.</Spanish>
-            <Czech>Nenalezena žádná budova.</Czech>
-            <Turkish>Bir yapı bulunamadı</Turkish>
-        </Key>
-        <Key ID="STR_ACE_AI_AssignNVG_DisplayName">
-            <English>Auto-Equip NVGs</English>
-            <Polish>Automatyczne zakładanie NVG</Polish>
-            <German>Automatisch NVGs ausrüsten</German>
-            <Italian>Equipaggia NVG in automatico</Italian>
-            <Korean>야투경 자동 창착</Korean>
-            <French>Equipement JVN automatique</French>
-            <Portuguese>Equipar NVGs automaticamente</Portuguese>
-            <Japanese>暗視装置の自動装備</Japanese>
-            <Russian>Автоматическое оснащение ПНВ</Russian>
-            <Spanish>Auto equipar gafas de visión nocturna</Spanish>
-        </Key>
-        <Key ID="STR_ACE_AI_AssignNVG_Description">
-            <English>Equips NVG in inventory during night time and unequips it during day time.\nDoes not add NVGs to inventory!</English>
-            <Polish>Zakłada NVG w nocy i zdejmuje je w ciągu dnia.\nNie dodaje NVG do ekwipunku!</Polish>
-            <German>Rüstet NVG nachts aus dem Inventar aus und entfernt es tagsüber.\nFügt keine NVGs zum Inventar hinzu!</German>
-            <Italian>Equipaggia NVG dall'inventario durante la notte, e li mette nell'inventario durante il giorno.\nNon aggiunge NVG all'inventario se non sono presenti.</Italian>
-            <Korean>야간에는 야투경을 소지품에 장착하고 주간에는 장착을 해제합니다.\n주의! 소지품에 야투경을 추가하는 것이 아닙니다!</Korean>
-            <French>Equipe des JVN pendant la nuit et les déséquipe le jour.\nN'ajoute pas les JVN dans l'intenvaire !</French>
-            <Portuguese>Equipa o NVG do inventário durante a noite e desequipa durante o dia.\nNão adiciona NVGs ao inventário!</Portuguese>
-            <Japanese>インベントリ内の暗視装置を夜間に装備し、日中は解除し収納します。\nこれはNVGをインベントリに追加しません。</Japanese>
-            <Russian>Экипирует ПНВ в ночное время и отключает его в дневное время.\nНе добавляет ПНВ в инвентарь!</Russian>
-            <Spanish>Equipa las gafas de visión nocturna en el inventario cuando es de noche, y las desequipa cuando es de día.\nNo añade las gafas al inventario!</Spanish>
         </Key>
     </Package>
 </Project>
