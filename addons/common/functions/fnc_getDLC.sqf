@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Classname <STRING> or Config <CONFIG>
- * 1: Config root <CONFIG> Searches if unspecified
+ * 1: Config root, searches if unspecified or null <CONFIG> (default: configNull)
  *
  * Return Value:
  * DLC Info <ARRAY>
@@ -18,7 +18,7 @@
  * Public: Yes
  */
 
-params ["_class", ["_root", configNull]];
+params [["_class", configNull, ["", configNull]], ["_root", configNull, [configNull]]];
 
 private _config = if (_class isEqualType configNull) then {
     _class
