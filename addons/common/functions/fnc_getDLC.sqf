@@ -13,7 +13,7 @@
  *   1: Steam ID <NUMBER>
  *
  * Example:
- * "launch_NLAW_F" call ace_arsenal_fnc_getDLC
+ * "launch_NLAW_F" call ace_common_fnc_getDLC
  *
  * Public: Yes
  */
