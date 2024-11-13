@@ -849,6 +849,18 @@
             <Chinese>顯示"給予彈匣"互動動作</Chinese>
             <Chinesesimp>显示"给予弹匣"互动动作</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Interaction_PassThrowable">
+            <English>Pass grenade</English>
+            <German>Granate geben</German>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassThrowableHint">
+            <English>%1 passed you %2.</English>
+            <German>%1 hat dir %2 gegeben.</German>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassThrowableSetting">
+            <English>Show "pass grenade" interaction</English>
+            <German>Zeige "Granate geben" Interaktion</German>
+        </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>
             <Czech>Pasažéři</Czech>
@@ -865,18 +877,6 @@
             <Chinesesimp>乘客</Chinesesimp>
             <Turkish>Yolcular</Turkish>
             <Hungarian>Utasok</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Interaction_PassThrowable">
-            <English>Pass grenade</English>
-            <German>Granate geben</German>
-        </Key>
-        <Key ID="STR_ACE_Interaction_PassThrowableHint">
-            <English>%1 passed you %2.</English>
-            <German>%1 hat dir %2 gegeben.</German>
-        </Key>
-        <Key ID="STR_ACE_Interaction_PassThrowableSetting">
-            <English>Show "pass grenade" interaction</English>
-            <German>Zeige "Granate geben" Interaktion</German>
         </Key>
         <Key ID="STR_ACE_Interaction_PullOutBody">
             <English>Pull out body</English>
