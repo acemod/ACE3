@@ -81,11 +81,6 @@ Those settings cannot be overwritten by mission makers and are exclusively playe
 
 ## 3. Shortcuts
 
-<div class="panel callout">
-    <h5>Note:</h5>
-    <p><kbd>Ctrl</kbd> + <kbd>V</kbd> does NOT work in multiplayer due to a BI safety, however <kbd>Ctrl</kbd> + <kbd>C</kbd> does since it's using the ACE3 clipboard extension.</p>
-</div>
-
 ### 3.1 Outside of search bars
 
 - <kbd>Ctrl</kbd> + <kbd>C</kbd>: Export current loadout to clipboard.
