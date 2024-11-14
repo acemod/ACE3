@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Patient <OBJECT>
  * 1: Medic <OBJECT> (default: objNull)
- * 2: Log message <BOOL> (default: true)
+ * 2: Write message to patient log <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -17,14 +17,14 @@
  * Public: Yes
  */
 
-params [["_patient", objNull, [objNull]], ["_medic", objNull, [objNull]], ["_logMessage", true, [true]]];
+params [["_patient", objNull, [objNull]], ["_medic", objNull, [objNull]], ["_logMessage", false, [false]]];
 
 if (isNull _medic) then {
     _medic = _patient;
 };
 
 if (!alive _patient) exitWith {
-    ERROR_2("fullHeal [medic %1][patient %2] Bad parameters",_medic,_patient);
+    ERROR_2("fullHeal [medic %1][patient %2] Patient is dead or null",_medic,_patient);
 };
 
 [_medic, _patient, _logMessage] call EFUNC(medical_treatment,fullHeal);
