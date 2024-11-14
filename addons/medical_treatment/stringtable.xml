@@ -3570,12 +3570,12 @@
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_Description">
             <English>Makes Check Pulse action give a numerical value based on setting</English>
             <Russian>Заставляет действие контрольного импульса выдавать числовое значение, основанное на настройке</Russian>
-            <Japanese>設定によって脈拍の確認アクションから得られる情報を数値化します</Japanese>
+            <Japanese>脈拍の確認アクションから得られる情報が数値化される医療レベルを設定します</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
             <English>Numerical Pulse</English>
             <Russian>Числовое значение пульса</Russian>
-            <Japanese>数値化された脈拍</Japanese>
+            <Japanese>脈拍の数値化</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
             <English>Used to pack medium to large wounds and stem the bleeding</English>
