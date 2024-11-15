@@ -863,7 +863,7 @@
             <Russian>Вертоятность того, что устранение заклинивания не сработает, и его придется повторить.</Russian>
             <German>Wahrscheinlichkeit, dass der Versuch eine Ladehemmung zu beheben fehl schlägt und erneut durchgeführt werden muss.</German>
             <Korean>기능고장 해결 시도시 실패할 확률이 있습니다. 이는 다시 기능고장 해결을 시도해야함을 의미합니다.</Korean>
-            <Japanese>弾詰まり解除アクションに失敗し、繰り返しが必要になる確率。</Japanese>
+            <Japanese>弾詰まり解除のアクションに失敗し、再実行が必要になる確率。</Japanese>
             <Chinese>清除卡彈時有可能會失敗，需要反覆進行清槍。</Chinese>
             <Chinesesimp>清除卡弹时有可能会失败，需要反覆进行清枪。</Chinesesimp>
             <Hungarian>Valószínűsége annak, hogy egy akadály eltávolítás művelet kudarcot vall, megismétlést igényel.</Hungarian>
