@@ -58,7 +58,7 @@
 
 #define IDC_BODY_GROUP      6000
 #define IDC_BODY_HEAD       6005
-#define IDC_BODY_NECK       6005
+#define IDC_BODY_NECK       6006
 #define IDC_BODY_TORSO      6010
 #define IDC_BODY_CHEST      6011
 #define IDC_BODY_ARMLEFT    6015
