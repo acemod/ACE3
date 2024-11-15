@@ -1282,5 +1282,11 @@
             <Chinese>飲用水補給</Chinese>
             <Chinesesimp>饮用水补给</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Field_Rations_ZeusUpdates_Description">
+            <English>If enabled, players will need to eat and drink while in Zeus.</English>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_ZeusUpdates_DisplayName">
+            <English>Update Hunger And Thirst In Zeus</English>
+        </Key>
     </Package>
 </Project>
