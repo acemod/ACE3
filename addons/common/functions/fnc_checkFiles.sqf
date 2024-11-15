@@ -179,6 +179,7 @@ if (isMultiplayer) then {
         };
 
         private _fnc_diagnose_addonMismatch = {
+            //IGNORE_PRIVATE_WARNING ["_additionalAddons", "_cfgPatches", "_addons", "_mainSource"];
             private _title = "[ACE] ERROR: ADDON MISMATCH";
 
             // Figure out why we have a mismatch and where it's coming from
