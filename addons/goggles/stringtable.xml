@@ -147,22 +147,6 @@
             <Chinesesimp>着色 + 效果</Chinesesimp>
             <Turkish>Ton + Efektler</Turkish>
         </Key>
-        <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
-            <English>Show Wipe Goggles self interaction</English>
-            <German>Zeige "Brille abwischen" im Selbstinteraktionsmenü</German>
-            <Polish>Pokaż interakcję Wyczyść Gogle</Polish>
-            <Italian>Mostra interazione automatica per la pulizia degli occhiali</Italian>
-            <Czech>Ukaž Vyčistit brýle v menu Interakce (vlastní)</Czech>
-            <Japanese>ゴーグル拭き取りのアクションを表示</Japanese>
-            <Chinese>在自我互動中顯示擦拭護目鏡的動作</Chinese>
-            <Chinesesimp>在自我互动中显示擦拭护目镜的动作</Chinesesimp>
-            <French>Afficher l'interaction "Essuyer les lunettes"</French>
-            <Portuguese>Mostra a auto-interação de limpar os óculos</Portuguese>
-            <Spanish>Mostrar limpiar gafas en menú de auto-interacción</Spanish>
-            <Turkish>Kendi etkileşim menüsün de gözlük camlarını silmeyi göster</Turkish>
-            <Russian>Показывать действие Протереть очки</Russian>
-            <Korean>자기상호작용에 고글 닦기 선택 보이기</Korean>
-        </Key>
         <Key ID="STR_ACE_Goggles_SettingDrawOverlay">
             <English>Show Goggles Overlay</English>
         </Key>
