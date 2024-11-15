@@ -33,7 +33,7 @@ if (isNull _config || !(isClass _config)) exitWith {
     ["", 0]
 };
 
-if (getNumber (_config >> "itemInfo" >> "type") == TYPE_UNIFORM) then {
+if (getNumber (_config >> "ItemInfo" >> "type") == TYPE_UNIFORM) then {
     _config = configFile >> "CfgVehicles" >> getText (_config >> "itemInfo" >> "uniformClass")
 };
 
