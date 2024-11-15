@@ -147,5 +147,8 @@
             <Chinesesimp>着色 + 效果</Chinesesimp>
             <Turkish>Ton + Efektler</Turkish>
         </Key>
+        <Key ID="STR_ACE_Goggles_SettingDrawOverlay">
+            <English>Show Goggles Overlay</English>
+        </Key>
     </Package>
 </Project>
