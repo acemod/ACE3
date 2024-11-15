@@ -13,8 +13,7 @@ class SPE_B_127x99_API: SPE_B_127x99_Ball {
 
 // FLAK
 class SPE_Bullet_AA_base;
-class SPE_SprGr_FlaK_38: SPE_Bullet_AA_base
-{
+class SPE_SprGr_FlaK_38: SPE_Bullet_AA_base {
     EGVAR(frag,enabled) = 1;
     EGVAR(frag,force) = 1;
     EGVAR(frag,metal) = 50;
