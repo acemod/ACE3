@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
  * Returns base damage value, penetration factor, and expected muzzle velocity of a given round, either from a cache or by reading the ammo config.
