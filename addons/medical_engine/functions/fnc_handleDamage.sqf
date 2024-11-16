@@ -158,7 +158,7 @@ if (_context == 2) then {
     private _allDamages = [
         [_damageHead select 0,       PRIORITY_HEAD,       _damageHead select 1,       "Head"],
         [_damageNeck select 0,       PRIORITY_NECK,       _damageNeck select 1,       "Neck"],
-        [_damageChest select 0,       PRIORITY_CHEST,       _damageChest select 1,       "Chest"],
+        [_damageChest select 0,      PRIORITY_CHEST,      _damageChest select 1,      "Chest"],
         [_damageBody select 0,       PRIORITY_BODY,       _damageBody select 1,       "Body"],
         [_damageLeftArm select 0,    PRIORITY_LEFT_ARM,   _damageLeftArm select 1,    "LeftArm"],
         [_damageRightArm select 0,   PRIORITY_RIGHT_ARM,  _damageRightArm select 1,   "RightArm"],
