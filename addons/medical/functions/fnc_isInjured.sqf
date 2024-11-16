@@ -4,7 +4,7 @@
  * Checks if a unit needs treatment.
  *
  * Arguments:
- * Unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Does unit need treatment <BOOL>
