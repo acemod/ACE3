@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
- * Author: commy2
- * Compares version numbers of PBOs and DLLs.
+ * Author: commy2, johnb43, LinkIsGrim
+ * Compares version numbers of PBOs and DLLs. Logs and displays error message on any version/addon errors in multiplayer.
  *
  * Arguments:
  * None
@@ -25,6 +25,7 @@ if (canSuspend) exitWith {
 ///////////////
 private _cfgPatches = configFile >> "CfgPatches";
 private _mainVersion = getText (_cfgPatches >> "ace_main" >> "versionStr");
+private _mainVersionAr = getArray (_cfgPatches >> "ace_main" >> "versionAr");
 private _mainSource = configSourceMod (_cfgPatches >> "ace_main");
 
 // CBA Versioning check - close main display if using incompatible version
@@ -75,18 +76,32 @@ private _oldCompats = [];
 
 if (_oldAddons isNotEqualTo []) then {
     _oldAddons = _oldAddons apply {format ["%1.pbo", _x]};
+    private _extraSources = _oldSources select {_x != _mainSource};
+    private _conflictingInstall = _extraSources isNotEqualTo [];
+    private _allSources = [_mainSource] + _extraSources;
 
-    private _errorMsg = if (count _oldAddons > 3) then {
-        format ["The following files are outdated: %1, and %2 more.<br/>ACE Main version is %3 from %4.<br/>Loaded mods with outdated ACE files: %5", (_oldAddons select [0, 3]) joinString ", ", (count _oldAddons) - 3, _mainVersion, _mainSource, _oldSources joinString ", "];
+    // Build the error message
+    private _title = "[ACE] ERROR: OUTDATED FILES";
+    private _reasonMsg = ["Reason: Mismatched addon versions within the same installation, it is likely corrupted.", "Reason: Conflicting ACE installations (listed below)."] select _conflictingInstall;
+    private _fixMsg = ["Fix: Repair ACE or update your repack.", "Fix: Make sure to only load one version of ACE."] select _conflictingInstall;
+
+    private _infoMsgLog = format ["The following files are outdated: %1.<br/>ACE Main version is %2 from folder ""%3"".<br/><br/>All mod folders with ACE files: %4", _oldAddons joinString ", ", _mainVersion, _mainSource, _allSources joinString ", "];
+    private _infoMsg = if (count _oldAddons > 3) then {
+        format ["The following files are outdated: %1, and %2 more.<br/>ACE Main version is %3 from folder ""%4"".<br/><br/>All mod folders with ACE files: %5", (_oldAddons select [0, 3]) joinString ", ", (count _oldAddons) - 3, _mainVersion, _mainSource, _allSources joinString ", "];
     } else {
-        format ["The following files are outdated: %1.<br/>ACE Main version is %2 from %3.<br/>Loaded mods with outdated ACE files: %4", _oldAddons joinString ", ", _mainVersion, _mainSource, _oldSources joinString ", "];
+        _infoMsgLog
     };
 
+    // Log it
+    private _logMsg = format ["%1: %2%5%5%3%5%5%4", _title, _reasonMsg, _fixMsg, _infoMsgLog, endl];
+    _logMsg = _logMsg regexReplace ["<br\/>", endl];
+    ERROR(_logMsg);
+
+    // Display it
     if (hasInterface) then {
-        ["[ACE] ERROR", _errorMsg] call FUNC(errorMessage);
+        private _errorMsg = format ["%1<br/><br/>%2<br/><br/>%3", _reasonMsg, _fixMsg, _infoMsg];
+        [_title, _errorMsg] call FUNC(errorMessage);
     };
-
-    ERROR(_errorMsg);
 };
 
 if (_oldCompats isNotEqualTo []) then {
@@ -137,51 +152,130 @@ if (isMultiplayer) then {
     if (isServer) then {
         // Send server's version of ACE to all clients
         GVAR(serverVersion) = _mainVersion;
+        GVAR(serverVersionAr) = _mainVersionAr;
         GVAR(serverAddons) = _addons;
         GVAR(serverSource) = _mainSource;
 
         publicVariable QGVAR(serverVersion);
+        publicVariable QGVAR(serverVersionAr);
         publicVariable QGVAR(serverAddons);
         publicVariable QGVAR(serverSource);
     } else {
         GVAR(clientVersion) = _mainVersion;
+        GVAR(clientVersionAr) = _mainVersionAr;
         GVAR(clientAddons) = _addons;
 
-        private _fnc_check = {
-            if (GVAR(clientVersion) != GVAR(serverVersion)) then {
-                private _errorMsg = format ["Client/Server Version Mismatch. Server: %1, Client: %2. Server modDir: %3", GVAR(serverVersion), GVAR(clientVersion), GVAR(serverSource)];
+        private _fnc_diagnose_versionMismatch = {
+            private _title = "[ACE] ERROR: VERSION MISMATCH";
+            private _fixMsg = format ["Fix: %1", "Make sure versions of server and client match. You may be using ACE from different Steam Workshop items, or just haven't updated properly."];
 
-                // Check ACE install
-                call FUNC(checkFiles_diagnoseACE);
+            // If versions don't match, someone's outdated, if it's not the client, then it's the server
+            private _clientIsOutdated = [GVAR(serverVersionAr), GVAR(clientVersionAr)] call CBA_versioning_fnc_version_compare;
+            private _reasonMsg = format ["Reason: %1", ["Reason: Server is outdated (client version is higher than server's).", "Reason: Client is outdated (client version is lower than server's)."] select _clientIsOutdated];
 
-                ERROR(_errorMsg);
+            private _infoMsg = format ["Server version is %1, Client version is %2.<br/>Server mod folder is named ""%3"".", GVAR(serverVersion), GVAR(clientVersion), GVAR(serverSource)];
 
-                if (hasInterface) then {
-                    ["[ACE] ERROR", _errorMsg] call FUNC(errorMessage);
+            [_title, _reasonMsg, _fixMsg, _infoMsg, _infoMsg] // return
+        };
+
+        private _fnc_diagnose_addonMismatch = {
+            //IGNORE_PRIVATE_WARNING ["_additionalAddons", "_cfgPatches", "_addons", "_mainSource"];
+            private _title = "[ACE] ERROR: ADDON MISMATCH";
+
+            // Figure out why we have a mismatch and where it's coming from
+            // Integrated compats are the usual culprit
+            private _additionalCompats = _addons select {(_x select [0, 10]) == "ace_compat"};
+            _additionalAddons = _additionalAddons - _additionalCompats;
+
+            // Server most likely just uses a different ACE repack with some components removed
+            // Higher priority than compats, as we'll load compats for components as well
+            // Don't show compats in the error message, only components
+            if (_additionalAddons isNotEqualTo []) exitWith {
+                private _reasonMsg = format ["Reason: %1", "Client has ACE components not present on the server."];
+                private _fixMsg = format ["Fix: %1", "Make sure you're using ACE from the same Steam Workshop item or repository as the server."];
+
+                private _infoMsgLog = format ["Client has additional addons: %1.<br/>Server mod folder is named ""%2"".", _additionalAddons joinString ", ", GVAR(serverSource)]; // Build the whole thing so we can log it to RPT
+
+                private _infoMsg = if (count _additionalAddons > 3) then { // Truncate it for display
+                    format ["Client has additional addons: %1, and %2 more.<br/>Server mod folder is named ""%3"".", (_additionalAddons select [0, 3]) joinString ", ", (count _additionalAddons) - 3, GVAR(serverSource)];
+                } else {
+                    _infoMsgLog
                 };
+
+                [_title, _reasonMsg, _fixMsg, _infoMsg, _infoMsgLog] // return
             };
 
-            private _addons = GVAR(clientAddons) - GVAR(serverAddons);
+            // CDLC/content mod with integrated compats is loaded when it shouldn't be
+            // No need to show which addons, just show the mod that the compats are for
+            if (_additionalCompats isNotEqualTo []) exitWith {
+                // Fix is easy
+                private _fixMsg = format ["Fix: %1", "Make sure your mod list matches or add those mods to the server. Check your server files and '-mod=' parameter if you're the server administrator."];
 
-            if (_addons isNotEqualTo []) then {
-                private _errorMsg = format ["Client/Server Addon Mismatch. Client has additional addons: %1. Server modDir: %2", _addons, GVAR(serverSource)];
+                private _additionalMods = [];
+                private _loadedModsInfo = getLoadedModsInfo;
+                private _defaultModDirs = [_mainSource] + (_loadedModsInfo select {_x select 2} apply {_x select 1}); // Skip ACE itself and anything vanilla
 
+                { // Evil O(n^infinityAndBeyond) loop, can't do much about it.
+                    { // Get the real mod name for the compats we're loading
+                        private _sourceModDir = configSourceMod (_cfgPatches >> _x);
+                        if !(_sourceModDir in _defaultModDirs) then {
+                            _additionalMods pushBackUnique (_loadedModsInfo select {_x select 1 == _sourceModDir} select 0 select 0);
+                        };
+                    } forEach (getArray (_cfgPatches >> _x >> "requiredAddons"));
+                } forEach _additionalCompats;
+
+                private _reasonMsg = format ["Reason: %1", "Client has extra mods requiring compats loaded (listed below)"];
+                private _infoMsg = format ["Additional compatibility is being loaded for: %1", _additionalMods joinString ", "];
+
+                [_title, _reasonMsg, _fixMsg, _infoMsg, _infoMsg] // return
+            };
+
+            [
+                _title,
+                "Reason: Exceptional combination of additional addons. Good job, you broke our error handling.",
+                "Fix: Open an issue on GitHub with your logs so we can add handling for this.",
+                "Have a cookie.",
+                "Unimplemented addon mismatch"
+            ] // default return
+        };
+
+        private _fnc_multiplayerCheck = {
+            // Check if we'll actually throw an error
+            private _versionMismatch = GVAR(clientVersion) != GVAR(serverVersion);
+            private _additionalAddons = GVAR(clientAddons) - GVAR(serverAddons);
+            private _addonMismatch = _additionalAddons isNotEqualTo [];
+
+            // Should have all possibilities
+            if (_versionMismatch || _addonMismatch) then {
                 // Check ACE install
                 call FUNC(checkFiles_diagnoseACE);
 
-                ERROR(_errorMsg);
+                // Build the error message
+                // Could be a simple select but leaving the switch so it's easier to expand later
+                private _errorBuilder = switch (true) do {
+                    case _versionMismatch: {_fnc_diagnose_versionMismatch};
+                    case _addonMismatch: {_fnc_diagnose_addonMismatch};
+                };
+                (call _errorBuilder) params ["_title", "_reasonMsg", "_fixMsg", "_infoMsg", "_infoMsgLog"];
 
+                // Log it
+                private _logMsg = format ["%1: %2%5%5%3%5%5%4", _title, _reasonMsg, _fixMsg, _infoMsgLog, endl];
+                _logMsg = _logMsg regexReplace ["<br\/>", endl];
+                ERROR(_logMsg);
+
+                // Display it
                 if (hasInterface) then {
-                    ["[ACE] ERROR", _errorMsg] call FUNC(errorMessage);
+                    private _errorMsg = format ["%1<br/><br/>%2<br/><br/>%3", _reasonMsg, _fixMsg, _infoMsg];
+                    [_title, _errorMsg] call FUNC(errorMessage);
                 };
             };
         };
 
         // Clients have to wait for the variables
         if (isNil QGVAR(serverVersion) || isNil QGVAR(serverAddons)) then {
-            GVAR(serverVersion) addPublicVariableEventHandler _fnc_check;
+            QGVAR(serverVersion) addPublicVariableEventHandler _fnc_multiplayerCheck;
         } else {
-            call _fnc_check;
+            call _fnc_multiplayerCheck;
         };
     };
 };
