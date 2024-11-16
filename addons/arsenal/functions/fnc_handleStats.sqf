@@ -164,7 +164,7 @@ private _fnc_handleStats = {
 
             _statsTextCtrl ctrlSetText _textStatementResult;
             _statsTextCtrl ctrlSetTextColor ([[1, 1, 1, 1], [0, 0, 0, 1]] select (_showBar));
-            
+
             //Height based on Text lines
             {
                 _x ctrlSetPositionH (ctrlTextHeight _statsTextCtrl);
@@ -186,7 +186,7 @@ private _fnc_handleStats = {
                 _statsTextCtrl
             ];
         };
-        
+
         {
             _x ctrlCommit 0;
         } forEach [

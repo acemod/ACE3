@@ -9,7 +9,7 @@ class CfgAmmo {
     // GVAR(size) = 0; is small size
     // GVAR(size) = 1; is large size
     class ClaymoreDirectionalMine_Remote_Ammo;
-    class ACE_ClaymoreDirectionalMine_Remote_Ammo: ClaymoreDirectionalMine_Remote_Ammo { // Wrapper class to avoid unintentional changes to third-party mods. Ref #10105 
+    class ACE_ClaymoreDirectionalMine_Remote_Ammo: ClaymoreDirectionalMine_Remote_Ammo { // Wrapper class to avoid unintentional changes to third-party mods. Ref #10105
         GVAR(magazine) = "ClaymoreDirectionalMine_Remote_Mag";
         GVAR(size) = 0;
         GVAR(defuseObjectPosition)[] = {0, 0, 0.038};
