@@ -13,17 +13,17 @@
     ["AllVehicles", "Killed", {
         params ["_vehicle", "", "", "_useEffects"];
 
-        if (_useEffects && {!isNull _vehicle} && {_vehicle getEntityInfo 13}) then {
+        if (_useEffects && {_vehicle getEntityInfo 13}) then {
             [QGVAR(addFireSource), [
                 _vehicle,
                 (boundingBoxReal [_vehicle, "FireGeometry"]) select 2,
                 BURN_MAX_INTENSITY,
                 QGVAR(wreck) + hashValue _vehicle,
-                {!isNull _this && {_this getEntityInfo 13}},
+                {_this getEntityInfo 13},
                 _vehicle
             ]] call CBA_fnc_serverEvent;
         };
-    }, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
+    }, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to excluded animals as well
 
     [QGVAR(playScream), {
         params ["_scream", "_source"];
