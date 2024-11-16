@@ -23,7 +23,7 @@
                 _vehicle
             ]] call CBA_fnc_serverEvent;
         };
-    }, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to excluded animals as well
+    }, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to exclude animals as well
 
     [QGVAR(playScream), {
         params ["_scream", "_source"];
