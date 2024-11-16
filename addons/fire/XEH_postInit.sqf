@@ -23,7 +23,7 @@
                 _vehicle
             ]] call CBA_fnc_serverEvent;
         };
-    }, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
+    }, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
 
     [QGVAR(playScream), {
         params ["_scream", "_source"];
