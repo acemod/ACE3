@@ -13,7 +13,7 @@
     ["AllVehicles", "Killed", {
         params ["_vehicle", "", "", "_useEffects"];
 
-        if (_useEffects) then {
+        if (_useEffects && {!isNull _vehicle} && {_vehicle getEntityInfo 13}) then {
             [QGVAR(addFireSource), [
                 _vehicle,
                 (boundingBoxReal [_vehicle, "FireGeometry"]) select 2,
