@@ -6,9 +6,9 @@ PREP(ai_handleFired);
 PREP(ai_handleGetIn);
 PREP(ai_reload);
 
-PREP(assemble_canDeployTripod);
+PREP(canDeployTripod);
 PREP(assemble_canDeployWeapon);
-PREP(assemble_canPickupTripod);
+PREP(canPickupTripod);
 PREP(assemble_canPickupWeapon);
 PREP(assemble_deployTripod);
 PREP(assemble_deployWeapon);
@@ -17,13 +17,12 @@ PREP(assemble_pickupTripod);
 PREP(assemble_pickupWeapon);
 
 PREP(canGetIn);
-PREP(getIn);
 
 PREP(getCarryMagazine);
 PREP(proxyWeapon);
 
-PREP(reload_actionsLoad);
-PREP(reload_actionsUnload);
+PREP(getLoadActions);
+PREP(getUnloadActions);
 PREP(reload_canLoadMagazine);
 PREP(reload_canUnloadMagazine);
 PREP(reload_getLoadableMagazines);
@@ -33,5 +32,5 @@ PREP(reload_handleRemoveTurretMag);
 PREP(reload_handleReturnAmmo);
 PREP(reload_loadMagazine);
 
-PREP(staticWeaponInit);
+PREP(initVehicle);
 PREP(staticWeaponInit_unloadExtraMags);

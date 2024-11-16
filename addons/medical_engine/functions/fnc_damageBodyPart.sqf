@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Damages a body part of a local unit. Does not kill the unit.
@@ -28,7 +28,7 @@ TRACE_3("damageBodyPart",_unit,_selection,_damage);
 
 _damage = [0, DAMAGED_MIN_THRESHOLD] select _damage;
 
-switch (toLower _selection) do {
+switch (toLowerANSI _selection) do {
     case ("head"): {
         _unit setHitPointDamage ["HitHead", _damage];
     };

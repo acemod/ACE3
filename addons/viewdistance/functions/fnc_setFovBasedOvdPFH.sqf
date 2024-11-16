@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Sets Object View Distance dynamically based on current Field of View, between Object View Distance (minimal value) and View Distance (maximum value) set before this PFH starts.
@@ -17,6 +17,7 @@
  */
 
 params ["", "_idPFH"];
+// IGNORE_PRIVATE_WARNING["ace_viewdistance_fovBasedPFHminimalViewDistance"];
 
 // Remove PFH and set Object View Distance back to what it was before
 if (GVAR(objectViewDistanceCoeff) < 6) exitWith {

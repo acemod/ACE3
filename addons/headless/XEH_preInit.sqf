@@ -6,14 +6,13 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 if (isServer) then {
     GVAR(headlessClients) = [];
     GVAR(inRebalance) = false;
     GVAR(endMissionCheckDelayed) = false;
-    GVAR(blacklistType) = [BLACKLIST_UAV];
-    [QXGVAR(headlessClientJoined), FUNC(handleConnectHC)] call CBA_fnc_addEventHandler;
+    [QXGVAR(headlessClientJoined), LINKFUNC(handleConnectHC)] call CBA_fnc_addEventHandler;
 };
 
 ADDON = true;

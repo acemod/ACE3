@@ -1,5 +1,5 @@
 #define DEBUG_MODE_FULL
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Reads a setting value from a module, set it and force it. Logs if the setting is missing from the module.
@@ -23,7 +23,7 @@ params ["_logic", "_settingName", "_moduleVariable"];
 
 // Check if the variable is already defined
 if (isNil _settingName) exitWith {
-    ERROR_1("readSettingFromModule - param [%1] is not an ace_setting", _settingName);
+    ERROR_1("readSettingFromModule - param [%1] is not an ace_setting",_settingName);
 };
 
 // Check if the parameter is defined in the module

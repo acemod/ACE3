@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Seb
  * Shows a UI to allow a unit to change its group ID.
@@ -21,7 +21,7 @@
 
     private _display = findDisplay 46 createDisplay QGVAR(groupNameDisplay);
     private _textCtrl = _display displayCtrl 451;
-    _textCtrl ctrlSetText (groupID group _unit);
+    _textCtrl ctrlSetText (groupId group _unit);
     _display setVariable [QGVAR(renamedGroup), group _unit];
     _display displayAddEventHandler ["Unload", {
         params ["_display", "_exitCode"];

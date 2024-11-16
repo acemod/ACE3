@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi
  * Adjusts the direction of a shell. Called from the unified fired EH only if the gunner is a player.
@@ -16,7 +16,7 @@
  */
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
-TRACE_10("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile, _vehicle, _gunner, _turret);
+TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_vehicle,_gunner,_turret);
 
 private _FCSMagazines = _vehicle getVariable [format ["%1_%2", QGVAR(Magazines), _turret], []];
 
@@ -41,7 +41,7 @@ if (_zeroDistance > 0) then {
     private _weaponCombo = [_weapon, _magazine, _ammo, _zeroDistance];
     if (_weaponCombo isNotEqualTo (_gunner getVariable [QGVAR(lastWeaponCombo), []])) then {
         private _airFriction = getNumber (configFile >> "CfgAmmo" >> _ammo >> "airFriction");
-        private _antiOffset = "ace_fcs" callExtension format ["%1,%2,%3,%4", _initSpeed, _airFriction, 0, _zeroDistance];
+        private _antiOffset = ("ace" callExtension ["fcs", [_initSpeed, _airFriction, 0, _zeroDistance]]) # 0;
         _antiOffset = parseNumber _antiOffset;
 
         _gunner setVariable [QGVAR(lastWeaponCombo), _weaponCombo];
@@ -50,7 +50,7 @@ if (_zeroDistance > 0) then {
     private _antiOffset = _gunner getVariable QGVAR(lastAntiOffset);
 
     _offset = _offset - _antiOffset;
-    TRACE_4("fired",_gunner, currentZeroing _gunner, _antiOffset, _offset);
+    TRACE_4("fired",_gunner,currentZeroing _gunner,_antiOffset,_offset);
 };
 
 [_projectile, (_vehicle getVariable format ["%1_%2", QGVAR(Azimuth), _turret]), _offset, 0] call EFUNC(common,changeProjectileDirection);
@@ -72,5 +72,5 @@ if (getNumber (configFile >> "CfgAmmo" >> _ammo >> QGVAR(Airburst)) == 1) then {
     if (_zeroing < 50) exitWith {};
     if (_zeroing > 1500) exitWith {};
 
-    [FUNC(handleAirBurstAmmunitionPFH), 0, [_vehicle, _projectile, _zeroing]] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(handleAirBurstAmmunitionPFH), 0, [_vehicle, _projectile, _zeroing]] call CBA_fnc_addPerFrameHandler;
 };

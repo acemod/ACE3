@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Toggles the target speed assist screen on/off
@@ -23,8 +23,8 @@ if (ctrlVisible 8000) then {
         [] call FUNC(calculate_target_speed_assist);
         private _targetSpeed = parseNumber(ctrlText 8007);
         if (_targetSpeed != 0) then {
-            ctrlSetText [330, Str(_targetSpeed)];
-            ctrlSetText [140050, Str(_targetSpeed)];
+            ctrlSetText [330, str(_targetSpeed)];
+            ctrlSetText [140050, str(_targetSpeed)];
             [] call FUNC(calculate_target_solution);
         };
     };

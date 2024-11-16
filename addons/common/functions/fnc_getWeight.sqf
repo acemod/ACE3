@@ -1,14 +1,14 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Returns the weight (from the loadAbs command) in lbs/kg (based on user option)
  *
  * Arguments:
  * 0: The Unit (usually the player) <OBJECT>
- * 1: Force a return type <SCALAR, BOOLEAN>
+ * 1: Return imperial units <NUMBER, BOOLEAN>
  *
  * Return Value:
- * The return value <NUMBER>
+ * Weight string <STRING>
  *
  * Example:
  * [player] call ace_common_fnc_getWeight

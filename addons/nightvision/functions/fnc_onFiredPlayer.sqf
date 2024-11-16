@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, Dslyecxi, PabstMirror
  * Change the blending when the player fires. Called from the unified fired EH only for the local player and his vehicle.
@@ -16,7 +16,7 @@
  */
 
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
-TRACE_7("firedEH:",_unit, _weapon, _muzzle, _mode, _ammo, _magazine, _projectile);
+TRACE_7("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile);
 
 if ((!GVAR(running))
     || {!GVAR(shutterEffects)}
@@ -38,16 +38,11 @@ private _visibleFire = getNumber (configFile >> "CfgAmmo" >> _ammo >> "visibleFi
 
 private _isTracer = call {
     if (getNumber (configFile >> "CfgAmmo" >> _ammo >> "nvgOnly") > 0) exitWith {false};
-    private _indexShot = (_unit ammo _weapon) + 1;
-    private _lastRoundsTracer = getNumber (configFile >> "CfgMagazines" >> _magazine >> "lastRoundsTracer");
-    if (_indexShot <= _lastRoundsTracer) exitWith {true};
-    private _tracersEvery = getNumber (configFile >> "CfgMagazines" >> _magazine >> "tracersEvery");
-    if (_tracersEvery == 0) exitWith {false};
-    (_indexShot - _lastRoundsTracer) % _tracersEvery == 0
+    _projectile getShotInfo 4 // 4=shownTracer
 };
 
 TRACE_3("",_ammo,_visibleFire,_isTracer);
-if ( _isTracer) then {
+if (_isTracer) then {
     _visibleFire = _visibleFire + 2;
 };
 
@@ -55,7 +50,7 @@ _visibleFire = _visibleFireCoef * _visibleFire;
 if (_ammo isKindOf "BulletBase") then {
     _visibleFire = _visibleFire min 5; // Prevent every shot from triggering with HMG
 };
-TRACE_1("final", _visibleFire);
+TRACE_1("final",_visibleFire);
 
 if (_visibleFire <= 1.5) exitWith {};
 if ((random (linearConversion [1, 4, GVAR(nvgGeneration), 10, 20])) > _visibleFire) exitWith {};

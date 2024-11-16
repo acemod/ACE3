@@ -1,17 +1,15 @@
 #include "script_component.hpp"
 
-[QGVAR(deployRopes), {
-    _this call FUNC(deployRopes);
-}] call CBA_fnc_addEventHandler;
+[QGVAR(deployRopes), LINKFUNC(deployRopes)] call CBA_fnc_addEventHandler;
 
 [QGVAR(startFastRope), {
-    [FUNC(fastRopeServerPFH), 0, _this] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(fastRopeServerPFH), 0, _this] call CBA_fnc_addPerFrameHandler;
 }] call CBA_fnc_addEventHandler;
 
 // Keybinds
 ["ACE3 Vehicles", QGVAR(fastRope), localize LSTRING(Interaction_fastRope), {
-    if ((vehicle ACE_player) == ACE_player) exitWith {false};
-    if (!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))) exitWith {false};
+    if (isNull objectParent ACE_player) exitWith {false};
+    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     if ([ACE_player, vehicle ACE_player] call FUNC(canFastRope)) then {
         [ACE_player, vehicle ACE_player] call FUNC(fastRope);
         true
@@ -21,8 +19,8 @@
 }, ""] call CBA_fnc_addKeybind;
 
 ["ACE3 Vehicles", QGVAR(cutRopes), localize LSTRING(Interaction_cutRopes), {
-    if ((vehicle ACE_player) == ACE_player) exitWith {false};
-    if (!([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith))) exitWith {false};
+    if (isNull objectParent ACE_player) exitWith {false};
+    if !([ACE_player, vehicle ACE_player, []] call EFUNC(common,canInteractWith)) exitWith {false};
     if ([vehicle ACE_player] call FUNC(canCutRopes)) then {
         [vehicle ACE_player] call FUNC(cutRopes);
         true
@@ -32,12 +30,31 @@
 }, {false}] call CBA_fnc_addKeybind;
 
 
+if (isServer) then {
+    ["Air", "init", {
+        if (!GVAR(autoAddFRIES)) exitWith {};
+        params ["_vehicle"];
+        if (isNumber (configOf _vehicle >> QGVAR(enabled)) && {isNil {_vehicle getVariable [QGVAR(FRIES), nil]}}) then {
+            [_vehicle] call FUNC(equipFRIES);
+        };
+    }, true, ["ACE_friesBase"], true] call CBA_fnc_addClassEventHandler;
+};
+
+// Handles the Vanilla respawn module
+[missionNamespace, "respawn", {
+    params ["_vehicle"];
+
+    if !(_vehicle getVariable [QGVAR(addFRIESOnRespawn), false]) exitWith {};
+
+    _vehicle call FUNC(equipFRIES);
+}] call BIS_fnc_addScriptedEventHandler;
+
 #ifdef DRAW_FASTROPE_INFO
 addMissionEventHandler ["Draw3D", {
-    if (!(cursorObject isKindOf "Helicopter")) exitWith {};
+    if !(cursorObject isKindOf "Air") exitWith {};
     private _config = configOf cursorObject;
     private _enabled = getNumber (_config >> QGVAR(enabled));
-    drawIcon3D ["", [.5,.5,1,1], (ASLtoAGL getPosASL cursorObject), 0.5, 0.5, 0, format ["%1 = %2", typeOf cursorObject, _enabled], 0.5, 0.025, "TahomaB"];
+    drawIcon3D ["", [.5,.5,1,1], (ASLToAGL getPosASL cursorObject), 0.5, 0.5, 0, format ["%1 = %2", typeOf cursorObject, _enabled], 0.5, 0.025, "TahomaB"];
     if (_enabled > 0) then {
         {
             private _hookAttachment = cursorObject getVariable [QGVAR(FRIES), cursorObject];

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, mharis001
  * Dynamically adds actions to nearby water sources when interact_menu is opened.
@@ -21,7 +21,7 @@ params ["_interactionType"];
 // Ignore when self-interaction, mounted vehicle interaction, or water source actions are disabled
 if (
     _interactionType != 0
-    || {vehicle ACE_player != ACE_player}
+    || {!isNull objectParent ACE_player}
     || {XGVAR(waterSourceActions) == 0}
 ) exitWith {};
 

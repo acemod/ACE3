@@ -3,7 +3,7 @@
 // Exit on Headless Client
 if !(hasInterface) exitWith {};
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Exit if module is disabled
     if (XGVAR(mode) == 0) exitWith {};
 
@@ -19,7 +19,7 @@ if !(hasInterface) exitWith {};
     };
 
     // Exit if third person view is not available
-    if (difficultyOption "thirdPersonView" == 0) exitWith {
+    if (difficultyOption "thirdPersonView" != 1) exitWith {
         WARNING("View Restriction is enabled, but 3rd person is disabled with server difficulty.");
     };
 

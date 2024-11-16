@@ -21,9 +21,6 @@
     <a href="https://acemod.org/discord">
         <img src="https://img.shields.io/badge/Discord-Join-darkviolet.svg?style=flat-square" alt="加入ACE3 Discord">
     </a>
-    <a href="https://circleci.com/gh/acemod/ACE3">
-        <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 建構狀態">
-    </a>
 </p>
 
 <p align="center">

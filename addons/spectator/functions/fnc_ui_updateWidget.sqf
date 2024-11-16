@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Nelson Duarte, SilentSpike
+ * Author: Nelson Duarte, kymckay
  * Updates spectator UI unit info widget
  *
  * Arguments:
@@ -31,7 +31,7 @@ if !(isPlayer _focus) then { _name = format ["%1: %2", localize "str_player_ai",
 private _unitTypePicture = "";
 private _vehicleTypePicture = "";
 private _vehiclePositionPicture = "";
-if (_focus != vehicle _focus) then {
+if (!isNull objectParent _focus) then {
     _vehicleTypePicture = getText (configOf vehicle _focus >> "Picture");
 
     _vehiclePositionPicture = switch (_focus) do {

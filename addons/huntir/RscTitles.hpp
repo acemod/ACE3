@@ -8,7 +8,7 @@ class RscTitles {
         fadeout = 1;
         duration = 1e+011;
         name=QGVAR(cam_rose);
-        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(cam_rose), _this select 0)]);
+        onLoad = QUOTE(uiNamespace setVariable [ARR_2(QQGVAR(cam_rose),_this select 0)]);
         class controls {
             class CHAR_N {
                 type = 0;

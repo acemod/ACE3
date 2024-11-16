@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Vanilla Killed EH, attempts to set correct source/killer for other killed event handlers (vanilla and XEH)
@@ -52,5 +52,8 @@ if (_unit == player) then {
     // Enable user input before respawn, in case mission is using respawnTemplates
     ["unconscious", false] call EFUNC(common,setDisableUserInputStatus);
 };
+
+// Remove status effects before respawn, in case mission is using spectator
+[_unit, false] call FUNC(setStatusEffects);
 
 ["ace_killed", [_unit, _causeOfDeath, _killer, _instigator]] call CBA_fnc_globalEvent;

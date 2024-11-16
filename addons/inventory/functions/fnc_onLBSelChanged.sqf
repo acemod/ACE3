@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Executed when the filter list box is changed.
@@ -12,19 +12,16 @@
  * None
  *
  * Example:
- * [CONTROL, 5] call ACE_inventory_fnc_onLBSelChanged
+ * [CONTROL, 5] call ace_inventory_fnc_onLBSelChanged
  *
  * Public: No
  */
 
 disableSerialization;
+
 params ["_filter", "_index"];
 
 GVAR(selectedFilterIndex) = _index;
 
-[{
-    disableSerialization;
-    params ["_display"];
-
-    [_display] call FUNC(forceItemListUpdate);
-}, [ctrlParent _filter]] call CBA_fnc_execNextFrame;
+// Force update
+[LINKFUNC(forceItemListUpdate), ctrlParent _filter] call CBA_fnc_execNextFrame;

@@ -1,16 +1,16 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Makes the unit heal itself.
  *
  * Arguments:
- * None
+ * Unit <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * call ACE_medical_ai_fnc_healSelf
+ * cursorObject call ace_medical_ai_fnc_healSelf
  *
  * Public: No
  */

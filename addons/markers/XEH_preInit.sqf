@@ -6,13 +6,13 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 // init marker types
 if (isNil QGVAR(MarkersCache)) then {
     GVAR(MarkersCache) = [];
 
-    private _config = configfile >> "CfgMarkers";
+    private _config = configFile >> "CfgMarkers";
 
     for "_a" from 0 to (count _config - 1) do {
         private _marker = _config select _a;
@@ -31,7 +31,7 @@ if (isNil QGVAR(MarkersCache)) then {
 if (isNil QGVAR(MarkerColorsCache)) then {
     GVAR(MarkerColorsCache) = [];
 
-    private _config = configfile >> "CfgMarkerColors";
+    private _config = configFile >> "CfgMarkerColors";
 
     for "_a" from 0 to (count _config - 1) do {
         private _marker = _config select _a;

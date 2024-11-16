@@ -20,7 +20,7 @@
 // Returns a text config entry as compiled code or variable from missionNamespace
 #define GET_FUNCTION(var,cfg) \
     private var = getText (cfg); \
-    if (isNil var) then { \
+    if (missionNamespace isNil var) then { \
         var = compile var; \
     } else { \
         var = missionNamespace getVariable var; \
@@ -55,4 +55,4 @@
 // Animations that would be played faster than this are instead skipped. (= Progress bar too quick for animation).
 #define ANIMATION_SPEED_MAX_COEFFICIENT 2.5
 
-#define MEDICAL_TREATMENT_ITEMS (call (uiNamespace getVariable [QGVAR(treatmentItems), {[]}]))
+#define MEDICAL_TREATMENT_ITEMS (keys (uiNamespace getVariable QGVAR(treatmentItems)))

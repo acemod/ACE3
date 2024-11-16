@@ -1,13 +1,13 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Checks for dragging conditions. If these are met, the unit will start dragging. Called from ace_dragging_fnc_startDrag.
  *
  * Arguments:
  * 0: Arguments <ARRAY>
- *  0.0: Unit <OBJECT>
- *  0.1: Target <OBJECT>
- *  0.2: Timeout <NUMBER>
+ * - 0: Unit <OBJECT>
+ * - 1: Target <OBJECT>
+ * - 2: Timeout <NUMBER>
  * 1: PFEH Id <NUMBER>
  *
  * Return Value:
@@ -32,22 +32,20 @@ if !(_unit getVariable [QGVAR(isDragging), false]) exitWith {
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-// Same as dragObjectPFH, checks if object is deleted, dead or target moved away from carrier (e.g. weapon disassembled)
-if (!alive _target || {_unit distance _target > 10}) then {
+// Drop if the target is destroyed or if the target moved away from carrier (e.g. weapon disassembled)
+if (!alive _target || {_unit distance _target > 10}) exitWith {
     TRACE_4("dead/distance",_unit,_target,_timeOut,CBA_missionTime);
     [_unit, _target] call FUNC(dropObject);
 
     _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
-// Timeout: Do nothing, quit. CBA_missionTime, because anim length is linked to ingame time
+// Timeout: Drop target. CBA_missionTime, because anim length is linked to ingame time
 if (CBA_missionTime > _timeOut) exitWith {
     TRACE_4("timeout",_unit,_target,_timeOut,CBA_missionTime);
-    _idPFH call CBA_fnc_removePerFrameHandler;
+    [_unit, _target] call FUNC(dropObject);
 
-    // Drop if in timeout
-    private _draggedObject = _unit getVariable [QGVAR(draggedObject), objNull];
-    [_unit, _draggedObject] call FUNC(dropObject);
+    _idPFH call CBA_fnc_removePerFrameHandler;
 };
 
 // Unit is ready to start dragging

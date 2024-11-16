@@ -88,10 +88,10 @@ if (!hasInterface) exitWith {};
     if (GVAR(effects) in [2, 3]) then {
 
         // Register fire event handler
-        ["ace_firedPlayer", DFUNC(handleFired)] call CBA_fnc_addEventHandler;
+        ["ace_firedPlayer", LINKFUNC(handleFired)] call CBA_fnc_addEventHandler;
 
         //Add Explosion XEH
-        ["CAManBase", "explosion", FUNC(handleExplosion)] call CBA_fnc_addClassEventHandler;
+        ["CAManBase", "explosion", LINKFUNC(handleExplosion)] call CBA_fnc_addClassEventHandler;
 
         GVAR(PostProcessEyes) = ppEffectCreate ["ColorCorrections", 1992];
         GVAR(PostProcessEyes) ppEffectAdjust [1, 1, 0, [0, 0, 0, 0], [0, 0, 0, 1], [1, 1, 1, 0]];

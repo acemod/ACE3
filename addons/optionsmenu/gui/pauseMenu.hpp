@@ -1,3 +1,5 @@
+#pragma hemtt suppress pw3_padded_arg file
+
 class RscDisplayEmpty;
 class GVAR(MainMenuHelperDumpDebug): RscDisplayEmpty {
     onLoad = QUOTE(\

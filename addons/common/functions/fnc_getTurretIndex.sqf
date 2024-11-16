@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Get the turret index of a units current turret.
@@ -24,7 +24,6 @@ scopeName "main";
 
 {
     if (_unit == (_vehicle turretUnit _x)) then {_x breakOut "main"};
-    nil
-} count allTurrets [_vehicle, true];
+} forEach allTurrets [_vehicle, true];
 
 []

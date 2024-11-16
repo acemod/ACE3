@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Author: SilentSpike
+Author: kymckay
 Crawl function headers to produce appropriate documentation of public functions.
 
 Supported header sections:
@@ -67,6 +67,10 @@ class FunctionFile:
         self.debug = debug
         self.lint_private = lint_private
 
+        for lineNumber, line in enumerate(self.header.splitlines()):
+            if (not (line.startswith(" * ") or line in ["", " *", "/*", "*/", " */"])):
+                self.feedback(f"header formating on line {lineNumber+1}: ({line})", 1)
+
         # Preemptively cut away the comment characters (and leading/trailing whitespace)
         self.header_text = "\n".join([x[3:].strip() for x in self.header.splitlines()])
 
@@ -107,7 +111,7 @@ class FunctionFile:
 
         # Process example
         if example_raw:
-            self.example = example_raw.strip()
+            self.example = self.process_example(example_raw)
 
         return self.errors
 
@@ -160,21 +164,36 @@ class FunctionFile:
             self.feedback("No blank line after arguments list", 1)
 
         arguments = []
+        expectedMainIndex = 0
+        expectedSubIndex = 0
         for argument in lines:
-            valid = re.match(r"^(\d+):\s(.+?)\<([\s\w,\|]+?)\>( )?(\s\(default: (.+)\))?$", argument)
+            valid = re.match(r"^(- ){0,1}(\d+):\s(.+?)\<([\s\w,\|]+?)\>( )?(\s\(default: (.+)\))?$", argument)
 
             if valid:
-                arg_index = valid.group(1)
-                arg_name = valid.group(2)
-                arg_types = valid.group(3)
-                arg_default = valid.group(6)
+                arg_isSubIndex = valid.group(1) is not None
+                arg_index = valid.group(2)
+                arg_name = valid.group(3)
+                arg_types = valid.group(4)
+                arg_default = valid.group(7)
                 arg_notes = []
 
-                if arg_index != str(len(arguments)):
-                    self.feedback("Argument index {} does not match listed order".format(arg_index), 1)
+                if arg_isSubIndex:
+                    expectedIndex = expectedSubIndex
+                    expectedSubIndex = expectedSubIndex + 1
+                else:
+                    expectedIndex = expectedMainIndex
+                    expectedMainIndex = expectedMainIndex + 1
+                    expectedSubIndex = 0
+
+                if int(arg_index) != expectedIndex:
+                    print(f"line|{argument}|")
+                    self.feedback(f"Argument index {arg_index} does not match listed order {expectedIndex}", 1)
 
                 if arg_default is None:
                     arg_default = ""
+
+                if ("SCALAR" in arg_types or "NUMVER" in arg_types):
+                    self.feedback("Bad Arg Type \"{}\"".format(arg_types), 1)
 
                 arguments.append([arg_index, arg_name, arg_types, arg_default, arg_notes])
             else:
@@ -204,6 +223,19 @@ class FunctionFile:
             return ["Malformed", ""]
 
         return [return_name, return_types]
+
+    def process_example(self, raw):
+        return_value = raw.strip()
+        if return_value == "None":
+            return return_value
+
+        path_match = re.match(r".*addons.(.*).functions.(.*).sqf", self.path)
+        expected_func = f"ace_{path_match.group(1)}_{path_match.group(2)}"
+        if (not expected_func.lower() in return_value.lower()) and ((not return_value.startswith("Handled by")) and (not return_value.startswith("Called By"))):
+            self.feedback(f"Malformed example {return_value} should contain func {expected_func}", 2)
+
+        return return_value
+
 
     def document(self, component):
         str_list = []
@@ -255,7 +287,7 @@ class FunctionFile:
             self.errors += 1
 
     def write(self, message, indent=2):
-        to_print = ["  "]*indent
+        to_print = ["  "] * indent
         to_print.append(message)
         print("".join(to_print))
 
@@ -307,6 +339,8 @@ def document_functions(addons_dir, components):
 
     return errors
 
+def getFunctionPath(func):
+    return func.path.casefold()
 
 def crawl_dir(addons_dir, directory, debug=False, lint_private=False):
     components = {}
@@ -328,7 +362,11 @@ def crawl_dir(addons_dir, directory, debug=False, lint_private=False):
                     if function.is_public() and not debug:
                         # Add functions to component key (initalise key if necessary)
                         component = os.path.basename(os.path.dirname(root))
-                        components.setdefault(component, []).append(function)
+
+                        # Sort functions alphabetically
+                        functions = components.setdefault(component, [])
+                        functions.append(function)
+                        functions.sort(key=getFunctionPath)
 
                         function.feedback("Publicly documented")
                 else:

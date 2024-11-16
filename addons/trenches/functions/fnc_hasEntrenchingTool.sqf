@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: veteran29
  * Checks if unit has entrenching tool.
@@ -23,4 +23,4 @@ private _uniqueItems = _unit call EFUNC(common,uniqueItems);
 _uniqueItems append weapons _unit;
 _uniqueItems pushBack backpack _unit;
 
-GVAR(entrenchingTools) findIf {_x in _uniqueItems} != -1 // return
+GVAR(entrenchingTools) findAny _uniqueItems != -1 // return

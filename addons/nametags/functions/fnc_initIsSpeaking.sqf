@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, PabstMirror
  * Starts up a PFEH to monitor the when players are talking.
@@ -41,14 +41,14 @@ switch (true) do {
         INFO("ACRE Detected.");
         DFUNC(isSpeaking) = {
             params ["_unit"];
-            ([_unit] call acre_api_fnc_isSpeaking) && {!(_unit getVariable ["ACE_isUnconscious", false])}
+            ([_unit] call acre_api_fnc_isSpeaking) && {_unit call EFUNC(common,isAwake)}
         };
     };
     case (["task_force_radio"] call EFUNC(common,isModLoaded)): {
         INFO("TFAR Detected.");
         DFUNC(isSpeaking) =     {
             params ["_unit"];
-            (_unit getVariable ["tf_isSpeaking", false]) && {!(_unit getVariable ["ACE_isUnconscious", false])}
+            (_unit getVariable ["tf_isSpeaking", false]) && {_unit call EFUNC(common,isAwake)}
         };
     };
     default {
@@ -65,7 +65,7 @@ switch (true) do {
 
         DFUNC(isSpeaking) = {
             params ["_unit"];
-            (_unit getVariable [QGVAR(isSpeakingInGame), false]) && {!(_unit getVariable ["ACE_isUnconscious", false])}
+            (_unit getVariable [QGVAR(isSpeakingInGame), false]) && {_unit call EFUNC(common,isAwake)}
         };
     };
 };

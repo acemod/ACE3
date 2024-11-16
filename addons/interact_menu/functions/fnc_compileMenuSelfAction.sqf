@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Compile the self action menu from config for an object's class
@@ -17,15 +17,14 @@
 
 params ["_target"];
 
-private _objectType = _target;
-if (_target isEqualType objNull) then {
-    _objectType = typeOf _target;
+private _objectType = if (_target isEqualType objNull) then {
+    typeOf _target
+} else {
+    _target call EFUNC(common,getConfigName)
 };
-private _namespace = GVAR(ActSelfNamespace);
 
 // Exit if the action menu is already compiled for this class
-if (!isNil {_namespace getVariable _objectType}) exitWith {};
-
+if (_objectType in GVAR(actSelfNamespace)) exitWith {};
 
 private _recurseFnc = {
     params ["_actionsCfg"];
@@ -84,8 +83,7 @@ private _recurseFnc = {
                     ];
             _actions pushBack _entry;
         };
-        nil
-    } count (configProperties [_actionsCfg, "isClass _x", true]);
+    } forEach (configProperties [_actionsCfg, "isClass _x", true]);
     _actions
 };
 
@@ -111,6 +109,7 @@ if (_objectType isKindOf "CAManBase") then {
 
 TRACE_1("Building ACE_SelfActions",_objectType);
 // Create a master action to base on self action
+//IGNORE_PRIVATE_WARNING ["_target"];
 private _actions = [
         [
             [
@@ -121,7 +120,7 @@ private _actions = [
                     // Dummy statement so it's not collapsed when there's no available actions
                     true
                 },
-                {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith)},
+                {[ACE_player, _target, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotHandcuffed", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith)},
                 {},
                 {},
                 "Spine3",
@@ -132,4 +131,4 @@ private _actions = [
         ]
     ];
 
-_namespace setVariable [_objectType, _actions];
+GVAR(ActSelfNamespace) set [_objectType, _actions];

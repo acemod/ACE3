@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Get the vehicle cargo positions. Codrivers and ffv positions are not listed.

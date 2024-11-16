@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Commy2 and esteldunedain
  * Make the player check the temperature of his weapon

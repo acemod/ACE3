@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: bux578
  * Creates markers for AI units for given sides.
@@ -27,7 +27,7 @@ GVAR(AllMarkerNames) = [];
     // delete markers
     {
         deleteMarkerLocal _x;
-    } count GVAR(AllMarkerNames);
+    } forEach GVAR(AllMarkerNames);
 
     // reset the array
     GVAR(AllMarkerNames) = [];
@@ -40,7 +40,7 @@ GVAR(AllMarkerNames) = [];
 
                 private _markerName = str _x;
 
-                private _marker = createMarkerLocal [_markerName, position _x];
+                createMarkerLocal [_markerName, position _x];
                 _markerName setMarkerTypeLocal "mil_triangle";
                 _markerName setMarkerShapeLocal "ICON";
                 _markerName setMarkerSizeLocal [0.5, 0.7];
@@ -58,8 +58,7 @@ GVAR(AllMarkerNames) = [];
                 };
 
                 GVAR(AllMarkerNames) pushBack _markerName;
-                nil
             };
-        } count allUnits;
+        } forEach allUnits;
     };
 }, 1.5, [_sidesToShow]] call CBA_fnc_addPerFrameHandler;

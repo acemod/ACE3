@@ -1,4 +1,3 @@
-
 class Extended_PreStart_EventHandlers {
     class ADDON {
         init = QUOTE(call COMPILE_SCRIPT(XEH_preStart));
@@ -20,5 +19,12 @@ class Extended_PostInit_EventHandlers {
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayInventory {
         ADDON = QUOTE(_this call FUNC(inventoryDisplayLoad));
+        GVAR(displayNameWeight) = QUOTE(_this call FUNC(displayNameWeight)); // separate to allow other mods to disable them individually
+    };
+};
+
+class Extended_DisplayUnload_EventHandlers {
+    class RscDisplayInventory {
+        ADDON = QUOTE(GVAR(unit) = ACE_player);
     };
 };

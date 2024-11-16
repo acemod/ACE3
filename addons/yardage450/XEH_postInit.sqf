@@ -1,6 +1,8 @@
 #include "script_component.hpp"
 
-#include "initKeybinds.sqf"
+if (!hasInterface) exitWith {};
+
+#include "initKeybinds.inc.sqf"
 
 GVAR(active) = false;
 

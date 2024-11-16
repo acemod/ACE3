@@ -1,10 +1,10 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Loads a magazine into a static weapon from a magazine carried by or next to the player.
+ * Loads a magazine into a CSW from a magazine carried by or next to the player.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: CSW <OBJECT>
  * 1: Turret <ARRAY>
  * 2: Unit Carried Magazine <STRING>
  * 3: Magazine source <OBJECT>
@@ -23,11 +23,12 @@ params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit"];
 TRACE_5("loadMagazine",_vehicle,_turret,_carryMag,_magSource,_unit);
 
 private _timeToLoad = 1;
-if (!isNull(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime")) then {
-    _timeToLoad = getNumber(configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime");
+private _config = configOf _vehicle >> QUOTE(ADDON) >> "ammoLoadTime";
+if (!isNull _config) then {
+    _timeToLoad = getNumber _config;
 };
 
-private _displayName = format [localize LSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
+private _displayName = format [LLSTRING(loadX), getText (configFile >> "CfgMagazines" >> _carryMag >> "displayName")];
 
 private _onFinish = {
     (_this select 0) params ["_vehicle", "_turret", "_carryMag", "_magSource", "_unit"];
@@ -47,12 +48,21 @@ private _onFinish = {
         };
     } forEach (if (_magSource isKindOf "CAManBase") then {magazinesAmmo _magSource} else {magazinesAmmoCargo _magSource});
 
-    if (_bestAmmoToSend == -1) exitWith {ERROR_2("No ammo [%1 - %2]?",_xMag,_bestAmmoToSend);};
+    if (_bestAmmoToSend == -1) exitWith {ERROR_2("No ammo [%1 - %2]?",_carryMag,_bestAmmoToSend);};
     [_magSource, _carryMag, _bestAmmoToSend] call EFUNC(common,removeSpecificMagazine);
     if (_bestAmmoToSend == 0) exitWith {};
 
-    TRACE_6("calling addTurretMag event",_vehicle,_turret,_magSource,_carryMag,_bestAmmoToSend, _unit);
-    [QGVAR(addTurretMag), [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend, _unit]] call CBA_fnc_globalEvent;
+    // Workaround for removeSpecificMagazine and WeaponHolders being deleted when empty, give back to the unit if the weapon holder was deleted
+    // TODO: Pass type and position of deleted object to create a new one
+    private _args = [_vehicle, _turret, _magSource, _carryMag, _bestAmmoToSend];
+
+    // If the source is set for deletion, give mag back to unit
+    if (_magSource getEntityInfo 14) then {
+        _args pushBack _unit;
+    };
+
+    TRACE_1("calling addTurretMag event",_args);
+    [QGVAR(addTurretMag), _args] call CBA_fnc_globalEvent;
 };
 
 

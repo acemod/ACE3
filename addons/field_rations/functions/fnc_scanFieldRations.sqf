@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
  * Caches all item classnames used as field rations
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * call acex_field_rations_fnc_scanFieldRations
+ * call ace_field_rations_fnc_scanFieldRations
  *
  * Public: No
  */
@@ -31,4 +31,4 @@ private _fnc_isFieldRationItem = toString {
     _list set [configName _x, ""];
 } forEach (_fnc_isFieldRationItem configClasses _cfgMagazines);
 
-uiNamespace setVariable [QXGVAR(fieldRationItems), compileFinal str _list];
+uiNamespace setVariable [QXGVAR(fieldRationItems), compileFinal _list];

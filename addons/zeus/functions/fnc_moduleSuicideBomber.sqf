@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Zeus module function to make unit a suicide bomber.
@@ -30,8 +30,9 @@
 #endif
 
 TRACE_1("params",_this);
+params ["_unit", "", "", "", "_autoSeek"];
 
-if (isNull (_this select 0)) exitWith {};
+if (isNull _unit) exitWith {};
 
 // Prevent another suicide bomber module being attached
 _unit setVariable [QGVAR(suicideBomber), true, true];
@@ -57,7 +58,7 @@ if (_autoSeek) then {
         LOG("Unit deleted or killed, PFH removed");
     };
 
-    if (!([_unit] call EFUNC(common,isAwake))) exitWith {};
+    if !([_unit] call EFUNC(common,isAwake)) exitWith {};
 
     // Detonation
     private _nearObjects = (_unit nearObjects _activationRadius) select {side _x == _activationSide && {_x != _unit} && {alive _x}};

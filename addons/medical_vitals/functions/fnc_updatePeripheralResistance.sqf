@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Update the peripheral resistance
@@ -20,4 +20,4 @@
 
 params ["_unit", "_peripheralResistanceAdjustment", "_deltaT", "_syncValue"];
 
-_unit setVariable [VAR_PERIPH_RES, 0 max (DEFAULT_PERIPH_RES + _peripheralResistanceAdjustment), _syncValue];
+_unit setVariable [VAR_PERIPH_RES, 1 max (DEFAULT_PERIPH_RES + _peripheralResistanceAdjustment), _syncValue];

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Convert between screen and 3d object coordinates
@@ -30,7 +30,7 @@ private _bottomRightY = 1;
 
 private _return = [];
 
-switch (toLower _func) do {
+switch (toLowerANSI _func) do {
     case ("2d"): {
         _array params ["_pointX", "_z", "_pointY"];
 

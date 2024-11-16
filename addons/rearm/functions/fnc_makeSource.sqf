@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: shukari (template from refuel makeSource)
  * Makes an object into a rearm source.

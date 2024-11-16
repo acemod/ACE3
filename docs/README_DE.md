@@ -18,9 +18,6 @@
     <a href="https://acemod.org/discord">
         <img src="https://img.shields.io/badge/Discord-Join-darkviolet.svg?style=flat-square" alt="ACE3 Discord">
     </a>
-    <a href="https://circleci.com/gh/acemod/ACE3">
-        <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 Build Status">
-    </a>
 </p>
 </p>
 <p align="center">
@@ -51,7 +48,7 @@ Die Mod ist **modular aufgebaut**. Beinahe jede PBO kann entfernt werden, sodass
 - Tragen und Ziehen
 - Waffen und Fahrzeuge tragen die Namen ihrer Vorbilder aus der echten Welt
 - Ein Feuerleitsystem (FLS) für Hubschrauber und Panzer
-- Viele Funktionen werden in C/C++ Erweiterungen berechnet
+- Viele Funktionen werden in Rust Erweiterungen berechnet
 - Rückstrahlzonen- und Überdrucksimulation
 - Einwegwaffen
 - Realistische G-Kräfte

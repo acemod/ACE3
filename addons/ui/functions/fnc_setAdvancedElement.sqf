@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Sets advanced visible element of the UI using displays and controls.
@@ -20,7 +20,9 @@
 
 params ["_element", "_show", ["_showHint", false, [true]], ["_force", false, [true]]];
 
-private _cachedElement = GVAR(configCache) getVariable _element;
+_element = toLowerANSI _element;
+
+private _cachedElement = GVAR(configCache) get _element;
 if (isNil "_cachedElement") exitWith {TRACE_1("nil element",_this)};
 
 if (!_force && {!GVAR(allowSelectiveUI)}) exitWith {
@@ -56,7 +58,7 @@ if (
 
 // Get setting from scripted API
 if (!_force) then {
-    private _setElement = GVAR(elementsSet) getVariable _element;
+    private _setElement = GVAR(elementsSet) get _element;
     if (!isNil "_setElement") then {
         _setElement params ["_sourceSet", "_showSet"];
         if (_showHint) then {
@@ -68,7 +70,7 @@ if (!_force) then {
 };
 
 private _displays = ((uiNamespace getVariable "IGUI_displays") + [findDisplay IDD_MISSION]) select {_idd == ctrlIDD _x};
-private _fade = [1, 0] select _show;
+private _fade = parseNumber !_show;
 
 // Disable/Enable elements
 private _success = false;

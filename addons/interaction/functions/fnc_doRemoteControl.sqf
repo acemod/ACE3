@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike, joko
+ * Author: kymckay, joko
  *
  * Arguments:
  * None
@@ -9,10 +9,11 @@
  * None
  *
  * Example:
- * call ace_interaction_fnc_onRemoteControl
+ * call ace_interaction_fnc_doRemoteControl
  *
  * Public: No
  */
+//IGNORE_PRIVATE_WARNING ["_target"];
 
 private _units = curatorSelected select 0;
 private _index = _units findIf {

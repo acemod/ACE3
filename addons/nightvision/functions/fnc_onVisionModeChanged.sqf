@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, Dslyecxi, PabstMirror
  * Disables turning on NVGs while the player aims down his sight.
@@ -21,7 +21,7 @@ TRACE_2("onVisionModeChanged",_unit,_visionMode);
 
 // Handle disableNVGsWithSights setting:
 if (GVAR(disableNVGsWithSights) && {(hmd _unit) != ""}) then {
-    if ((vehicle _unit == _unit)
+    if ((isNull objectParent _unit)
             || {isTurnedOut _unit}
             || {!([_unit] call EFUNC(common,hasHatch))
                 && {[_unit] call EFUNC(common,getTurretIndex) in ([vehicle _unit] call EFUNC(common,getTurretsFFV))}

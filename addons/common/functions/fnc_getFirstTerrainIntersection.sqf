@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Returns the the first intersection with an object between two positions. @todo rewrite using lineIntersectsSurfaces?

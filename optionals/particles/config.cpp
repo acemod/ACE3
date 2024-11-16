@@ -10,6 +10,8 @@ class CfgPatches {
         authors[] = {"BaerMitUmlaut"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+        ACE_expectedModDir = "@ACE Particles";
+        ACE_expectedSteamID = "2202413537";
     };
 };
 

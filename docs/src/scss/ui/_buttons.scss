@@ -1,0 +1,18 @@
+.button {
+    & > img {
+        margin-bottom: 0;
+    }
+
+    svg {
+        fill: #fff;
+    }
+
+    &--icon {
+        display: inline-flex;
+        flex-flow: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.25rem;
+    }
+}

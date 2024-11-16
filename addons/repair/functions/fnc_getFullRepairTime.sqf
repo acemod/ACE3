@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LinkIsGrim
  * Calculates the Full Repair time based on the amount of hitpoints to repair
@@ -21,14 +21,13 @@ params ["_engineer", "_vehicle"];
 private _allHitPointsDamage = getAllHitPointsDamage _vehicle;
 _allHitPointsDamage params ["_hitPoints", "", "_damageValues"];
 
-private _hitPointsToIgnore = [_vehicle] call FUNC(getHitPointsToIgnore);
+private _selectionsToIgnore = _vehicle call FUNC(getSelectionsToIgnore);
 
 private _repairsNeeded = 0;
 private _doExtraRepair = false;
 {
     if (_x <= 0) then {continue}; // skip hitpoints that don't need repairs
-    private _hitPoint = _hitPoints select _forEachIndex;
-    if (_hitPoint in _hitPointsToIgnore) then { // only add extra repair for ignore hitpoints if they're damaged
+    if (_forEachIndex in _selectionsToIgnore) then { // only add extra repair for ignore hitpoints if they're damaged
         _doExtraRepair = true;
         continue
     };

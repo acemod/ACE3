@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: bux578, commy2, akalegman
  * Checks if a unit is a player / curator controlled unit.

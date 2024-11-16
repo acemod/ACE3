@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike, Jonpas
+ * Author: kymckay, Jonpas
  * Function used to handle load event.
  *
  * Arguments:

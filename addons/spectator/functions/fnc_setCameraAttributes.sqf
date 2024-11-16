@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Sets the spectator camera attributes as desired. Local effect.
  * All values are optional and default to no change.
  *
@@ -88,7 +88,7 @@ if (!isNil QGVAR(camera)) then {
 
     // GVARs exits purely for pre-setting of these attributes
     if (!isNil "_position") then {
-        GVAR(camPos) = ATLtoASL _position;
+        GVAR(camPos) = ATLToASL _position;
     };
 
     if (!isNil "_direction") then {

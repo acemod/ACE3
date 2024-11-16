@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Removes the brackets around a code and returns the code as a string. It does nothing if the code is already a string.

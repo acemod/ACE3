@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles 3den attribute for vehicle ID markings
@@ -29,7 +29,7 @@ TRACE_2("",_vehicle,_text);
 if (!isServer) exitWith {};
 if (_text == "") exitWith {};
 private _clanSel = getText (configOf _vehicle >> "selectionClan");
-if (!(_clanSel in selectionNames _vehicle)) exitWith { TRACE_1("no tag",_clanSel); };
+if !(_clanSel in selectionNames _vehicle) exitWith {TRACE_1("no tag",_clanSel);};
 
 private _texture = [_text, _textSize, _textColor, "00000000", true] call FUNC(generateStencilTexture);
 TRACE_1("",_texture);

@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: joko, Jonas, SilentSpike
+ * Author: joko, Jonas, kymckay
  * Cache reserve parachute on player unit when their inventory changes and add it when they open their parachute
  *
  * Arguments:

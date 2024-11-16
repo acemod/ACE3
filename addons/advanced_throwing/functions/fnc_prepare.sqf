@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, Jonpas
  * Prepares throwable or selects the next.
@@ -21,7 +21,7 @@ TRACE_1("params",_unit);
 // Select next throwable if one already in hand
 if (_unit getVariable [QGVAR(inHand), false]) exitWith {
     TRACE_1("inHand",_unit);
-    if (!(_unit getVariable [QGVAR(primed), false])) then {
+    if !(_unit getVariable [QGVAR(primed), false]) then {
         TRACE_1("not primed",_unit);
         // Restore muzzle ammo (setAmmo 1 has no impact if no appliccable throwable in inventory)
         // selectNextGrenade relies on muzzles array (setAmmo 0 removes the muzzle from the array and current can't be found, cycles between 0 and 1 muzzles)
@@ -35,6 +35,11 @@ if (isNull (_unit getVariable [QGVAR(activeThrowable), objNull]) && {(currentThr
     TRACE_1("no throwables",_unit);
 };
 
+// Temporarily enable wind info, to aid in throwing smoke grenades effectively
+if (GVAR(enableTempWindInfo) && {!(missionNamespace getVariable [QEGVAR(weather,WindInfo), false])}) then {
+    [] call EFUNC(weather,displayWindInfo);
+    GVAR(tempWindInfo) = true;
+};
 
 _unit setVariable [QGVAR(inHand), true];
 

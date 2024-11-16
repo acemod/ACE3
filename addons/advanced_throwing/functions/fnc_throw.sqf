@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, Jonpas
  * Throw selected throwable.
@@ -20,7 +20,7 @@ TRACE_1("params",_unit);
 
 // Prime the throwable if it hasn't been cooking already
 // Next to proper simulation this also has to happen before delay for orientation of the throwable to be set
-if (!(_unit getVariable [QGVAR(primed), false])) then {
+if !(_unit getVariable [QGVAR(primed), false]) then {
     [_unit] call FUNC(prime);
 };
 
@@ -45,7 +45,7 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
     private _newVelocity = (_p1 vectorFromTo _p2) vectorMultiply _velocity;
 
     // Adjust for throwing from inside vehicles, where we have a vehicle-based velocity that can't be compensated for by a human
-    if (vehicle _unit != _unit) then {
+    if (!isNull objectParent _unit) then {
         _newVelocity = _newVelocity vectorAdd (velocity (vehicle _unit));
     };
 
@@ -89,7 +89,7 @@ GVAR(flightPath) = [];
 GVAR(flightRotation) = [];
 (_unit getVariable QGVAR(activeThrowable)) spawn {
     while {!isNull _this && {(getPosATL _this) select 2 > 0.05}} do {
-        GVAR(flightPath) pushBack [ASLtoAGL (getPosASL _this), vectorUp _this];
+        GVAR(flightPath) pushBack [ASLToAGL (getPosASL _this), vectorUp _this];
         sleep 0.05;
     };
 };

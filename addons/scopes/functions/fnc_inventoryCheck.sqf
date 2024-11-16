@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, Commy2, Ruthberg
  * Check if weapon optics changed and reset zeroing if needed

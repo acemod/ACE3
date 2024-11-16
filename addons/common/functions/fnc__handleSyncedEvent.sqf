@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus
  * Handles synced events being received. Server will log them, and server/client will execute them.
@@ -20,7 +20,7 @@
 params ["_name", "_args", "_ttl"];
 
 if !(_name in GVAR(syncedEvents)) exitWith {
-    ERROR_1("Synced event key [%1] not found (_handleSyncedEvent).", _name);
+    ERROR_1("Synced event key [%1] not found (_handleSyncedEvent).",_name);
     false
 };
 

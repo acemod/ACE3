@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: shukari
  * Returns if vehicle or object is a rearm source.

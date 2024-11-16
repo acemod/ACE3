@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ir0n1E
  * Calculate mass of weapon and items.
@@ -23,7 +23,7 @@ private _mass = getNumber (configFile >> "CfgWeapons" >> _weapon >> "WeaponSlots
 
 {
     _mass = _mass + getNumber (configFile >> "CfgWeapons" >> _x >> "ItemInfo" >> "mass");
-} foreach _items;
+} forEach _items;
 
 {
     _mass = _mass + getNumber (configFile >> "CfgMagazines" >> _x >> "mass");

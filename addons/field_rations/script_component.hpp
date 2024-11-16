@@ -34,4 +34,4 @@
 #define IDC_DRAINING_HUD_HUNGER_GROUP 7840
 #define IDC_DRAINING_HUD_HUNGER_ICON  7850
 
-#define FIELD_RATIONS_ITEMS (createHashMapFromArray (call (uiNamespace getVariable [QXGVAR(fieldRationItems), {createHashMap}])))
+#define FIELD_RATIONS_ITEMS (uiNamespace getVariable QXGVAR(fieldRationItems))

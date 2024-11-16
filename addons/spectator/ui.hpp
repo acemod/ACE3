@@ -82,7 +82,7 @@ class GVAR(display) {
             onMouseExit = QUOTE([true] call FUNC(ui_fadeList));
 
             x = "safeZoneX";
-            y = "safezoneY";
+            y = "safeZoneY";
             w = QUOTE(W_PART(13.5));
             h = QUOTE(H_PART(1.5));
 
@@ -98,7 +98,7 @@ class GVAR(display) {
         class CameraTypesGroup: RscControlsGroupNoScrollbars {
             idc = IDC_CAM_TYPES;
             x = QUOTE(X_PART(15.5));
-            y = QUOTE(safezoneY + safezoneH - H_PART(2.38));
+            y = QUOTE(safeZoneY + safeZoneH - H_PART(2.38));
             w = QUOTE(W_PART(8.6));
             h = 2.6;
             class controls {
@@ -245,8 +245,8 @@ class GVAR(display) {
         };
         class HelpBackground: RscText {
             idc = IDC_HELP_BACK;
-            x = QUOTE(safezoneX + safezoneW - W_PART(12));
-            y = QUOTE(safezoneY + safezoneH - H_PART(8));
+            x = QUOTE(safeZoneX + safeZoneW - W_PART(12));
+            y = QUOTE(safeZoneY + safeZoneH - H_PART(8));
             w = QUOTE(W_PART(12));
             h = QUOTE(H_PART(8));
             colorBackground[] = {0,0,0,0.75};
@@ -256,8 +256,8 @@ class GVAR(display) {
             disableOverflow = 0;
             rowHeight = QUOTE(H_PART(1));
             idc = IDC_HELP;
-            x = QUOTE(safezoneX + safezoneW - W_PART(12));
-            y = QUOTE(safezoneY + safezoneH - H_PART(12));
+            x = QUOTE(safeZoneX + safeZoneW - W_PART(12));
+            y = QUOTE(safeZoneY + safeZoneH - H_PART(12));
             w = QUOTE(W_PART(12));
             h = QUOTE(H_PART(12));
         };
@@ -456,6 +456,8 @@ class GVAR(display) {
                 };
             };
         };
-        class compass: EGVAR(common,CompassControl) {};
+        class compass: EGVAR(common,CompassControl) {
+            idc = IDC_COMPASS;
+        };
     };
 };

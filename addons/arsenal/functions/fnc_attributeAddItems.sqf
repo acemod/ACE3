@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: mharis001, johnb43
@@ -18,14 +18,23 @@
 
 params ["_controlsGroup"];
 
+forceUnicode 0; // handle non-ANSI characters
+
 private _category = lbCurSel (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_CATEGORY);
-private _filter = toLower ctrlText (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR);
+private _filter = ctrlText (_controlsGroup controlsGroupCtrl IDC_ATTRIBUTE_SEARCHBAR);
 private _configItems = uiNamespace getVariable QGVAR(configItems);
 private _magazineMiscItems = uiNamespace getVariable QGVAR(magazineMiscItems);
 private _attributeValue = uiNamespace getVariable [QGVAR(attributeValue), [[], 0]];
 _attributeValue params ["_attributeItems", "_attributeMode"];
 
 TRACE_3("Populating list",_category,_filter,_attributeValue);
+if (_filter != "") then {
+    _filter = _filter call EFUNC(common,escapeRegex);
+    _filter = ".*?" + (_filter splitString " " joinString ".*?") + ".*?/io";
+} else {
+    _filter = ".*?/io";
+};
+
 
 private _modeSymbol = [SYMBOL_ITEM_VIRTUAL, SYMBOL_ITEM_REMOVE] select _attributeMode;
 
@@ -37,6 +46,7 @@ private _cfgWeapons = configFile >> "CfgWeapons";
 private _cfgMagazines = configFile >> "CfgMagazines";
 private _cfgVehicles = configFile >> "CfgVehicles";
 private _cfgGlasses = configFile >> "CfgGlasses";
+private _dlcName = "";
 
 // Exit with current items (no specific category)
 if (_category == IDX_CAT_ALL) exitWith {
@@ -59,11 +69,17 @@ if (_category == IDX_CAT_ALL) exitWith {
         _displayName = getText (_config >> "displayName");
 
         // Add item if not filtered
-        if (_filter in (toLower _displayName) || {_filter in (toLower _x)}) then {
+        if (_displayName regexMatch _filter || {_x regexMatch _filter}) then {
             _index = _listbox lnbAddRow ["", _displayName, _modeSymbol];
             _listbox lnbSetData [[_index, 1], _x];
             _listbox lnbSetPicture [[_index, 0], getText (_config >> "picture")];
             _listbox lnbSetTooltip [[_index, 0], _x];
+
+            _dlcName = _config call EFUNC(common,getAddon);
+
+            if (_dlcName != "") then {
+                _listbox lnbSetPicture [[_index, 2], (modParams [_dlcName, ["logo"]]) param [0, ""]];
+            };
         };
     } forEach _attributeItems;
 
@@ -111,7 +127,7 @@ private _config = _cfgClass;
     _displayName = getText (_config >> _x >> "displayName");
 
     // Add item if not filtered
-    if (_filter in (toLower _displayName) || {_filter in (toLower _x)}) then {
+    if (_displayName regexMatch _filter || {_x regexMatch _filter}) then {
         // Change symbol and alpha if item already selected
         if (_x in _attributeItems) then {
             _symbol = _modeSymbol;
@@ -121,14 +137,25 @@ private _config = _cfgClass;
             _alpha = 0.5;
         };
 
-        _index = _listbox lnbAddRow ["", _displayName, _symbol];
+        _index = _listbox lnbAddRow ["", _displayName, "", _symbol];
         _listbox lnbSetData [[_index, 1], _x];
         _listbox lnbSetPicture [[_index, 0], getText (_config >> _x >> "picture")];
         _listbox lnbSetTooltip [[_index, 0], _x];
         _listbox lnbSetColor [[_index, 1], [1, 1, 1, _alpha]];
-        _listbox lnbSetColor [[_index, 2], [1, 1, 1, _alpha]];
+        _listbox lnbSetColor [[_index, 3], [1, 1, 1, _alpha]];
+
+        // Mod icon is in column 2
+        _dlcName = (_config >> _x) call EFUNC(common,getAddon);
+
+        if (_dlcName != "") then {
+            _listbox lnbSetPicture [[_index, 2], (modParams [_dlcName, ["logo"]]) param [0, ""]];
+            _listbox lnbSetPictureColor [[_index, 2], [1, 1, 1, _alpha]];
+        };
     };
 } forEach (keys _categoryItems);
 
 // Sort alphabetically
 _listbox lnbSort [1, false];
+
+// Reset unicode flag
+forceUnicode -1;

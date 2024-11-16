@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Not used
  * 1: Arguments <ARRAY>
- *  1.0: Arsenal display <DISPLAY>
+ * - 0: Arsenal display <DISPLAY>
  *
  * Return Value:
  * None
@@ -42,6 +42,10 @@ if (isNil QGVAR(defaultLoadoutsList)) then {
     };
 };
 
+if (isNil {profileNamespace getVariable QGVAR(saved_loadouts)}) then {
+    profileNamespace setVariable [QGVAR(saved_loadouts), []];
+};
+
 if (isNil QGVAR(virtualItems)) then {
     private _virtualItems = [
         [IDX_VIRT_WEAPONS, createHashMapFromArray [[IDX_VIRT_PRIMARY_WEAPONS, createHashMap], [IDX_VIRT_SECONDARY_WEAPONS, createHashMap], [IDX_VIRT_HANDGUN_WEAPONS, createHashMap]]],
@@ -57,43 +61,31 @@ if (isNil QGVAR(virtualItems)) then {
     GVAR(virtualItems) = _virtualItems;
 
     // Flatten out hashmaps for easy checking later
-    private _virtualItemsFlat = +_virtualItems;
-    private _weapons = _virtualItemsFlat deleteAt IDX_VIRT_WEAPONS;
-    private _attachments = _virtualItemsFlat deleteAt IDX_VIRT_ATTACHMENTS;
-
-    for "_index" from IDX_VIRT_ITEMS_ALL to IDX_VIRT_MISC_ITEMS do {
-        _virtualItemsFlat merge [_virtualItemsFlat deleteAt _index, true];
-    };
-
-    for "_index" from IDX_VIRT_PRIMARY_WEAPONS to IDX_VIRT_HANDGUN_WEAPONS do {
-        _virtualItemsFlat merge [_weapons deleteAt _index, true];
-    };
-
-    for "_index" from IDX_VIRT_OPTICS_ATTACHMENTS to IDX_VIRT_BIPOD_ATTACHMENTS do {
-        _virtualItemsFlat merge [_attachments deleteAt _index, true];
-    };
-
-    GVAR(virtualItemsFlat) = _virtualItemsFlat;
+    call FUNC(updateVirtualItemsFlat);
 };
 
+// Includes items not in the arsenal but equipped on player
 GVAR(virtualItemsFlatAll) = +GVAR(virtualItemsFlat);
 
 GVAR(currentFace) = face GVAR(center);
-GVAR(currentVoice) = speaker GVAR(center);
+GVAR(currentVoice) = (speaker GVAR(center)) call EFUNC(common,getConfigName);
 GVAR(currentInsignia) = GVAR(center) call BIS_fnc_getUnitInsignia;
 
 GVAR(currentAction) = "Stand";
 GVAR(shiftState) = false;
 
-GVAR(showStats) = true;
 GVAR(currentStatPage) = 0;
 GVAR(statsInfo) = [true, controlNull, nil, nil];
 
-GVAR(showActions) = true;
 GVAR(currentActionPage) = 0;
+GVAR(actionsInfo) = [controlNull, nil, nil];
 
 // Update current item list
 call FUNC(updateCurrentItemsList);
+
+// Setup favorites button text and switch to default mode defined by setting
+[_display, _display displayCtrl IDC_buttonFavorites] call FUNC(buttonFavorites);
+GVAR(favorites) = profileNamespace getVariable [QGVAR(favorites), createHashMap];
 
 // This takes care of unique inventory items and unique equipment (arsenal doesn't have items/equipment whitelisted)
 call FUNC(updateUniqueItemsList);
@@ -129,7 +121,7 @@ _mouseBlockCtrl ctrlEnable false;
 private _statsBoxCtrl = _display displayCtrl IDC_statsBox;
 _statsBoxCtrl ctrlSetPosition [
     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-    safezoneY + 1.8 * GRID_H,
+    safeZoneY + 1.8 * GRID_H,
     47 * GRID_W,
     11 * GRID_H
 ];
@@ -140,19 +132,11 @@ _statsBoxCtrl ctrlCommit 0;
 private _actionsBoxCtrl = _display displayCtrl IDC_actionsBox;
 _actionsBoxCtrl ctrlSetPosition [
     (0.5 - WIDTH_TOTAL / 2) + WIDTH_GAP,
-    safezoneY + 58.6 * GRID_H,
+    safeZoneY + 58.6 * GRID_H,
     47 * GRID_W,
     11 * GRID_H
 ];
 _actionsBoxCtrl ctrlCommit 0;
-
-// Disable import in MP
-if (isMultiplayer) then {
-    private _importButtonCtrl = _display displayCtrl IDC_buttonImport;
-    _importButtonCtrl ctrlEnable false;
-    _importButtonCtrl ctrlSetFade 0.6;
-    _importButtonCtrl ctrlCommit 0;
-};
 
 //--------------- Camera prep
 cutText ["", "PLAIN"];
@@ -212,7 +196,7 @@ if (is3DEN) then {
         _ctrl ctrlCommit 0;
     } forEach [IDC_buttonFace, IDC_buttonVoice, IDC_buttonInsignia];
 
-    _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
+    private _buttonCloseCtrl = _display displayCtrl IDC_menuBarClose;
     _buttonCloseCtrl ctrlSetText (localize "str_ui_debug_but_apply");
 } else {
     GVAR(centerNotPlayer) = GVAR(center) != player;
@@ -237,10 +221,12 @@ GVAR(currentLeftPanel) = nil;
 GVAR(currentRightPanel) = nil;
 GVAR(leftSearchbarFocus) = false;
 GVAR(rightSearchbarFocus) = false;
+GVAR(liveUpdateSearch) = false;
 GVAR(leftTabFocus) = false;
 GVAR(rightTabFocus) = false;
 GVAR(rightTabLnBFocus) = false;
 GVAR(ignoreFirstSortPanelCall) = false;
+GVAR(refreshing) = false;
 
 {
     private _panel = _display displayCtrl _x;
@@ -248,7 +234,15 @@ GVAR(ignoreFirstSortPanelCall) = false;
     _panel ctrlCommit 0;
 } forEach [IDC_leftTabContent, IDC_rightTabContent, IDC_rightTabContentListnBox];
 
-[_display, _display displayCtrl IDC_buttonPrimaryWeapon] call FUNC(fillLeftPanel);
+// Open left panel for current weapon, do some math
+GVAR(selectedWeaponType) = [primaryWeapon GVAR(center), secondaryWeapon GVAR(center), handgunWeapon GVAR(center), binocular GVAR(center)] find (currentWeapon GVAR(center));
+if (GVAR(selectedWeaponType) == -1) then {
+    GVAR(selectedWeaponType) = 0; // default to primary
+};
+
+private _leftPanelIDC = [IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun, IDC_buttonBinoculars] select GVAR(selectedWeaponType);
+
+[_display, _display displayCtrl _leftPanelIDC] call FUNC(fillLeftPanel);
 
 //--------------- Init camera
 if (isNil QGVAR(cameraPosition)) then {
@@ -276,4 +270,4 @@ showCinemaBorder false;
 
 //--------------- Reset camera pos
 [nil, [controlNull, 0, 0]] call FUNC(handleMouse);
-GVAR(camPosUpdateHandle) = addMissionEventHandler ["draw3D", {call FUNC(updateCamPos)}];
+GVAR(camPosUpdateHandle) = addMissionEventHandler ["Draw3D", {call FUNC(updateCamPos)}];

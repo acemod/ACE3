@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Checks the conditions for being able to remove handcuffs
@@ -21,4 +21,4 @@ params ["_unit", "_target"];
 //Unit is handcuffed and not currently being escorted
 _target getVariable [QGVAR(isHandcuffed), false] &&
 {isNull (attachedTo _target)} &&
-{(vehicle _target) == _target}
+{isNull objectParent _target}

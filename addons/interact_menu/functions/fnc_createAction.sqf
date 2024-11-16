@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Creates an isolated ACE action
@@ -26,8 +26,6 @@
  * Public: Yes
  */
 
-// IGNORE_PRIVATE_WARNING(_actionName,_displayName,_icon,_statement,_condition,_insertChildren,_customParams,_position,_distance,_params,_modifierFunction);
-
 if (!hasInterface) exitWith { [] };
 params [
     "_actionName",
@@ -49,7 +47,7 @@ _position = if (_position isEqualType "") then {
 } else {
     if (_position isEqualType []) then {
         // If the action is set to a array position, create the suitable code
-        compile format ["%1", _position];
+        compile str _position;
     } else {
         _position;
     };

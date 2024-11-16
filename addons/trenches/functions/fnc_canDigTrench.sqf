@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg, commy2, esteldunedain
  * Checks if a unit can dig a trench.

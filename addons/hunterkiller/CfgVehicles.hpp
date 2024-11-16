@@ -21,4 +21,8 @@ class CfgVehicles {
     class MBT_04_base_F: Tank_F {
         ADDON = 1;
     };
+    class Wheeled_APC_F;
+    class AFV_Wheeled_01_base_F: Wheeled_APC_F {
+        ADDON = 1;
+    };
 };

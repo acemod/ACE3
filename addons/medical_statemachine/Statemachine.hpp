@@ -46,7 +46,7 @@ class ACE_Medical_StateMachine {
         onStateEntered = QFUNC(enteredStateUnconscious);
         class DeathAI {
             targetState = "Dead";
-            condition = QUOTE(!(_this getVariable [ARR_2(QQGVAR(AIUnconsciousness), GVAR(AIUnconsciousness))]) && {!isPlayer _this});
+            condition = QUOTE(!(_this getVariable [ARR_2(QQGVAR(AIUnconsciousness),GVAR(AIUnconsciousness))]) && {!isPlayer _this});
         };
         class WakeUp {
             targetState = "Injured";

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe
@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Not used
  * 1: Arguments <ARRAY>
- *  1.0: Loadouts display <DISPLAY>
+ * - 0: Loadouts display <DISPLAY>
  *
  * Return Value:
  * None

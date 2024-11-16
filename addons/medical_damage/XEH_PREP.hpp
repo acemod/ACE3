@@ -11,3 +11,4 @@ PREP(woundsHandlerArmorPenetration);
 PREP(woundsHandlerBase);
 PREP(woundsHandlerBurning);
 PREP(woundsHandlerVehiclecrash);
+PREP(woundsHandlerVehiclehit);

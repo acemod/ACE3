@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Get a random fall animation for the unit.
@@ -25,6 +25,7 @@ if (_weapon == "") exitWith {
 
 if (_weapon == primaryWeapon _unit) exitWith {
     if (_unit call EFUNC(common,isPlayer)) then {
+        //IGNORE_PRIVATE_WARNING ["_velocity"]; // from upper scope
         private _isRunning = _velocity > 4;
 
         [

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
@@ -16,7 +16,7 @@
 
 params ["_control", "_curSel"];
 
-if (_curSel < 0) exitwith {};
+if (_curSel < 0) exitWith {};
 
 private _display = ctrlParent _control;
 private _item = _control lbData _curSel;
@@ -57,6 +57,9 @@ switch (_currentItemsIndex) do {
             };
         };
 
+        // Call event for compatibility
+        [QGVAR(weaponItemChanged), [primaryWeapon GVAR(center), _item, _itemIndex]] call CBA_fnc_localEvent;
+
         // Update currentItems
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_PRIMARY_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
         GVAR(currentItems) set [IDX_CURR_PRIMARY_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
@@ -66,7 +69,14 @@ switch (_currentItemsIndex) do {
     // Secondary weapon
     case IDX_CURR_SECONDARY_WEAPON_ITEMS: {
         private _currentItemInSlot = (GVAR(currentItems) select IDX_CURR_SECONDARY_WEAPON_ITEMS) select _itemIndex;
-        private _isDisposable = CBA_disposable_replaceDisposableLauncher && {!isNil {CBA_disposable_loadedLaunchers getVariable (secondaryWeapon GVAR(center))}};
+        private _isDisposable = CBA_disposable_replaceDisposableLauncher && {!isNil "CBA_disposable_loadedLaunchers"} &&
+            {
+                if (CBA_disposable_loadedLaunchers isEqualType createHashMap) then { // after CBA 3.18
+                    (secondaryWeapon GVAR(center)) in CBA_disposable_loadedLaunchers
+                } else {
+                    !isNil {CBA_disposable_loadedLaunchers getVariable (secondaryWeapon player)}
+                }
+            };
 
         // If removal
         if (_item == "") then {
@@ -101,6 +111,9 @@ switch (_currentItemsIndex) do {
                 };
             };
         };
+
+        // Call event for compatibility
+        [QGVAR(weaponItemChanged), [secondaryWeapon GVAR(center), _item, _itemIndex]] call CBA_fnc_localEvent;
 
         // Update currentItems
         if !(_isDisposable && {_itemIndex >= 4}) then {
@@ -141,17 +154,12 @@ switch (_currentItemsIndex) do {
             };
         };
 
+        // Call event for compatibility
+        [QGVAR(weaponItemChanged), [handgunWeapon GVAR(center), _item, _itemIndex]] call CBA_fnc_localEvent;
+
         // Update currentItems
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_HANDGUN_WEAPON) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
-
-        // https://feedback.bistudio.com/T173880
-        _primaryMagazine = _primaryMagazine param [0, ""];
-        private _handgunMagazines = handgunMagazine GVAR(center);
-
-        // Delete the first magazine (but keep one if both magazines are the same)
-        _handgunMagazines deleteAt (_handgunMagazines findIf {_x == _primaryMagazine});
-
-        GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine, _handgunMagazines param [0, ""]]];
+        GVAR(currentItems) set [IDX_CURR_HANDGUN_WEAPON_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
 
         [_display, _control, _curSel, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
     };
@@ -186,17 +194,12 @@ switch (_currentItemsIndex) do {
             };
         };
 
+        // Call event for compatibility
+        [QGVAR(weaponItemChanged), [binocular GVAR(center), _item, _itemIndex]] call CBA_fnc_localEvent;
+
         // Update currentItems
         (getUnitLoadout GVAR(center) select IDX_LOADOUT_BINO) params ["", "_muzzle", "_flashlight", "_optics", "_primaryMagazine", "_secondaryMagazine", "_bipod"];
-
-        // https://feedback.bistudio.com/T173880 (unsure if binocular weapons are affected by this)
-        _primaryMagazine = _primaryMagazine param [0, ""];
-        private _binocularMagazines = binocularMagazine GVAR(center);
-
-        // Delete the first magazine (but keep one if both magazines are the same)
-        _binocularMagazines deleteAt (_binocularMagazines findIf {_x == _primaryMagazine});
-
-        GVAR(currentItems) set [IDX_CURR_BINO_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine, _binocularMagazines param [0, ""]]];
+        GVAR(currentItems) set [IDX_CURR_BINO_ITEMS, [_muzzle, _flashlight, _optics, _bipod, _primaryMagazine param [0, ""], _secondaryMagazine param [0, ""]]];
 
         [_display, _control, _curSel, configFile >> ["CfgWeapons", "CfgMagazines"] select (_itemIndex >= 4) >> _item] call FUNC(itemInfo);
     };

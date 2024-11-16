@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Scans for nearby "Static" objects (buildings) and adds the UserActions to them.
@@ -23,7 +23,7 @@ if (!GVAR(addBuildingActions)) exitWith {};
 //Ignore self-interaction menu:
 if (_interactionType != 0) exitWith {};
 //Ignore when mounted:
-if ((vehicle ACE_player) != ACE_player) exitWith {};
+if (!isNull objectParent ACE_player) exitWith {};
 
 [{
     params ["_args", "_pfID"];

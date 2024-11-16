@@ -10,7 +10,7 @@
 #define POINTER_WIDTH_FACTOR (1/128)
 
 #define LEFT (0.5 - 8 * GUI_GRID_W)
-#define TOP (safezoneY + 1.6 * GUI_GRID_H)
+#define TOP (safeZoneY + 1.6 * GUI_GRID_H)
 #define WIDTH (16 * GUI_GRID_W)
 #define HEIGHT (0.5 * GUI_GRID_H)
 
@@ -19,6 +19,7 @@ class RscPicture;
 class RscControlsGroupNoScrollbars;
 
 class GVAR(CompassControl): RscControlsGroupNoScrollbars {
+    #pragma hemtt suppress pw3_padded_arg
     onLoad = QUOTE(\
         params ['_control'];\
         private _display = ctrlParent _control;\
@@ -58,6 +59,7 @@ class GVAR(CompassControl): RscControlsGroupNoScrollbars {
             h = QUOTE(HEIGHT);
         };
         class CompassGroup: RscControlsGroupNoScrollbars {
+            #pragma hemtt suppress pw3_padded_arg
             onLoad = QUOTE(\
                 params ['_control'];\
                 private _display = ctrlParent _control;\

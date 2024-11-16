@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_Aegis_RealisticNames">
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_APC_Tracked_02_medical_Name">
+            <English>BM-2T Stalker (Medical)</English>
+            <Czech>BM-2T Stalker (zdravotnický)</Czech>
+            <French>BM-2T Stalker (médical)</French>
+            <Spanish>BM-2T Stalker (médico)</Spanish>
+            <Italian>BM-2T Stalker (medico)</Italian>
+            <Polish>BM-2T Stalker (sprzęt medyczny)</Polish>
+            <Portuguese>BM-2T Stalker (médico)</Portuguese>
+            <Russian>БМ-2Т Сталкер (медицинский)</Russian>
+            <German>BM-2T Stalker (Medizin)</German>
+            <Korean>BM-2T 스토커 (의료)</Korean>
+            <Japanese>BM-2T ストーカー（医療）</Japanese>
+            <Chinese>BM-2T"潛行者"步兵戰車（醫療用）</Chinese>
+            <Chinesesimp>BM-2T "潜行者"（医疗）</Chinesesimp>
+            <Turkish>BM-2T Stalker (Sıhhiye)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_APC_Wheeled_01_medical_Name">
+            <English>Badger IFV (Medical)</English>
+            <Czech>Badger IFV (zdravotnický)</Czech>
+            <French>Badger IFV (médical)</French>
+            <Spanish>Badger IFV (médico)</Spanish>
+            <Italian>Badger IFV (medico)</Italian>
+            <Polish>Badger IFV (sprzęt medyczny)</Polish>
+            <Portuguese>Badger IFV (médico)</Portuguese>
+            <Russian>БМП Badger (медицинский)</Russian>
+            <German>SPz Badger (Medizin)</German>
+            <Korean>뱃져 보병전투차 (의료)</Korean>
+            <Japanese>バジャー IFV（医療）</Japanese>
+            <Chinese>"蜜獾"步兵戰車（醫療用）</Chinese>
+            <Chinesesimp>"蜜獾"（医疗）</Chinesesimp>
+            <Turkish>Badger IFV (Sıhhiye)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_Aegis_arifle_CTARS_tan_f">
+            <English>QBZ-95-1 LSW (Sand)</English>
+            <Czech>QBZ-95-1 LSW (Písková)</Czech>
+            <French>QBZ-95-1 LSW (Sable)</French>
+            <Spanish>QBZ-95-1 LSW (Arena)</Spanish>
+            <Italian>QBZ-95-1 LSW (Sabbia)</Italian>
+            <Polish>QBZ-95-1 LSW (Piaskowy)</Polish>
+            <Portuguese>QBZ-95-1 LSW (Deserto)</Portuguese>
+            <Russian>QBZ-95-1 LSW (Песочный)</Russian>
+            <German>QBZ-95-1 LSW (Sandfarben)</German>
+            <Korean>QBZ-95-1 LSW (모래)</Korean>
+            <Japanese>QBZ-95-1 LSW (サンド)</Japanese>
+            <Chinese>QBZ-95-1式輕機槍 (沙色)</Chinese>
+            <Chinesesimp>95-1式班用机枪（沙色）</Chinesesimp>
+            <Turkish>QBZ-95-1 LSW (Kum)</Turkish>
+            <Hungarian>QBZ-95-1 LSW (Homok)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_Aegis_arifle_CTAR_GL_tan_f">
+            <English>QBZ-95-1 GL (Sand)</English>
+            <Czech>QBZ-95-1 GL (Písková)</Czech>
+            <French>QBZ-95-1 GL (Sable)</French>
+            <Spanish>QBZ-95-1 GL (Arena)</Spanish>
+            <Italian>QBZ-95-1 GL (Sabbia)</Italian>
+            <Polish>QBZ-95-1 GL (Piaskowy)</Polish>
+            <Portuguese>QBZ-95-1 GL (Deserto)</Portuguese>
+            <Russian>QBZ-95-1 GL (Песочный)</Russian>
+            <German>QBZ-95-1 GL (Sandfarben)</German>
+            <Korean>QBZ-95-1 GL (모래)</Korean>
+            <Japanese>QBZ-95-1 GL (サンド)</Japanese>
+            <Chinese>QBZ-95-1榴弹发射器 (沙色)</Chinese>
+            <Chinesesimp>95-1榴弹发射器（沙色）</Chinesesimp>
+            <Turkish>QBZ-95-1 GL (Kum)</Turkish>
+            <Hungarian>QBZ-95-1 GL (Homok)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_Aegis_arifle_CTAR_tan_f">
+            <English>QBZ-95-1 (Sand)</English>
+            <Czech>QBZ-95-1 (Písková)</Czech>
+            <French>QBZ-95-1 (Sable)</French>
+            <Spanish>QBZ-95-1 (Arena)</Spanish>
+            <Italian>QBZ-95-1 (Sabbia)</Italian>
+            <Polish>QBZ-95-1 (Piaskowy)</Polish>
+            <Portuguese>QBZ-95-1 (Deserto)</Portuguese>
+            <Russian>QBZ-95-1 (Песочный)</Russian>
+            <German>QBZ-95-1 (Sandfarben)</German>
+            <Korean>QBZ-95-1 (모래)</Korean>
+            <Japanese>QBZ-95-1 (サンド)</Japanese>
+            <Chinese>QBZ-95-1式自動步槍 (沙色)</Chinese>
+            <Chinesesimp>95-1式自动步枪（沙色）</Chinesesimp>
+            <Turkish>QBZ-95-1 (Kum)</Turkish>
+            <Hungarian>QBZ-95-1 (Homok)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_LMG_03_khk_F">
+            <English>FN Minimi SPW (Khaki)</English>
+            <Czech>FN Minimi SPW (Khaki)</Czech>
+            <French>FN Minimi SPW (Kaki)</French>
+            <Spanish>FN Minimi SPW (Caqui)</Spanish>
+            <Italian>FN Minimi SPW (Cachi)</Italian>
+            <Polish>FN Minimi SPW (Khaki)</Polish>
+            <Portuguese>FN Minimi SPW (Cáqui)</Portuguese>
+            <Russian>FN Minimi SPW (хаки)</Russian>
+            <German>FN Minimi SPW (Khaki)</German>
+            <Korean>FN 미니미 SPW (카키)</Korean>
+            <Japanese>FN ミニミ SPW (カーキ)</Japanese>
+            <Chinese>FN Minimi班用自動機槍（卡其）</Chinese>
+            <Chinesesimp>FN Minimi 班用自动机枪（卡其色）</Chinesesimp>
+            <Turkish>FN Minimi SPW (Haki)</Turkish>
+            <Hungarian>FN Minimi SPW (Khaki)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_LMG_03_snd_F">
+            <English>FN Minimi SPW (Sand)</English>
+            <Czech>FN Minimi SPW (Písková)</Czech>
+            <French>FN Minimi SPW (Sable)</French>
+            <Spanish>FN Minimi SPW (Arena)</Spanish>
+            <Italian>FN Minimi SPW (Sabbia)</Italian>
+            <Polish>FN Minimi SPW (Piaskowy)</Polish>
+            <Portuguese>FN Minimi SPW (Deserto)</Portuguese>
+            <Russian>FN Minimi SPW (Песочный)</Russian>
+            <German>FN Minimi SPW (Sandfarben)</German>
+            <Korean>FN 미니미 SPW (모래)</Korean>
+            <Japanese>FN ミニミ SPW (サンド)</Japanese>
+            <Chinese>FN Minimi班用自動機槍 (沙色)</Chinese>
+            <Chinesesimp>FN Minimi 班用自动机枪（沙色）</Chinesesimp>
+            <Turkish>FN Minimi SPW (Kum)</Turkish>
+            <Hungarian>FN Minimi SPW (Homok)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_LMG_Mk200_khk_F">
+            <English>Stoner 99 LMG (Khaki)</English>
+            <Czech>Stoner 99 LMG (Khaki)</Czech>
+            <French>Stoner 99 LMG (Kaki)</French>
+            <Spanish>Stoner 99 LMG (Caqui)</Spanish>
+            <Italian>Stoner 99 LMG (Cachi)</Italian>
+            <Polish>Stoner 99 LMG (Khaki)</Polish>
+            <Portuguese>Stoner 99 LMG (Cáqui)</Portuguese>
+            <Russian>Stoner 99 LMG (хаки)</Russian>
+            <German>Stoner 99 LMG (Khaki)</German>
+            <Korean>스토너 99 LMG (카키)</Korean>
+            <Japanese>ストーナー99 LMG (カーキ)</Japanese>
+            <Chinese>斯通納99輕機槍（卡其）</Chinese>
+            <Chinesesimp>斯通纳99轻机枪（卡其色）</Chinesesimp>
+            <Turkish>Stoner 99 LMG (Haki)</Turkish>
+            <Hungarian>Stoner 99 Könnyűgéppuska (Khaki)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_LMG_Mk200_plain_F">
+            <English>Stoner 99 LMG (Sand)</English>
+            <Czech>Stoner 99 LMG (Písková)</Czech>
+            <French>Stoner 99 LMG (Sable)</French>
+            <Spanish>Stoner 99 LMG (Arena)</Spanish>
+            <Italian>Stoner 99 LMG (Sabbia)</Italian>
+            <Polish>Stoner 99 LMG (Piaskowy)</Polish>
+            <Portuguese>Stoner 99 LMG (Deserto)</Portuguese>
+            <Russian>Stoner 99 LMG (Песочный)</Russian>
+            <German>Stoner 99 LMG (Sandfarben)</German>
+            <Korean>스토너 99 LMG (모래)</Korean>
+            <Japanese>ストーナー99 LMG (サンド)</Japanese>
+            <Chinese>斯通納99輕機槍 (沙色)</Chinese>
+            <Chinesesimp>斯通纳99轻机枪（沙色）</Chinesesimp>
+            <Turkish>Stoner 99 LMG (Kum)</Turkish>
+            <Hungarian>Stoner 99 Könnyűgéppuska (Homok)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_LMG_Zafir_black_F">
+            <English>Negev NG7 (Black)</English>
+            <Czech>Negev NG7 (Černá)</Czech>
+            <French>Negev NG7 (Noir)</French>
+            <Spanish>Negev NG7 (Negro)</Spanish>
+            <Italian>Negev NG7 (Nero)</Italian>
+            <Polish>Negev NG7 (czarny)</Polish>
+            <Portuguese>Negev NG7 (Preto)</Portuguese>
+            <Russian>Negev NG7 (чёрный)</Russian>
+            <German>Negev NG7 (Schwarz)</German>
+            <Korean>네게브 NG7 (검정)</Korean>
+            <Japanese>ネゲフ NG7 (ブラック)</Japanese>
+            <Chinese>內蓋夫NG7機槍 (黑色)</Chinese>
+            <Chinesesimp>内格夫 NG7（黑色）</Chinesesimp>
+            <Turkish>Negev NG7 (Siyah)</Turkish>
+            <Hungarian>Negev NG7 (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_LMG_Zafir_ghex_F">
+            <English>Negev NG7 (Green Hex)</English>
+            <Czech>Negev NG7 (Zelený Hex)</Czech>
+            <French>Negev NG7 (Hex Verte)</French>
+            <Spanish>Negev NG7 (Verde Hex)</Spanish>
+            <Italian>Negev NG7 (Hex Verde)</Italian>
+            <Polish>Negev NG7 (Zielony Hex)</Polish>
+            <Portuguese>Negev NG7 (Verde Hex)</Portuguese>
+            <Russian>Negev NG7 (зелёный гекс)</Russian>
+            <German>Negev NG7 (Hex Grün)</German>
+            <Korean>네게브 NG7 (초록육각)</Korean>
+            <Japanese>ネゲフ NG7 (緑六角形迷彩)</Japanese>
+            <Chinese>內蓋夫NG7機槍 (綠色數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>内格夫 NG7（绿色蜂巢迷彩）</Chinesesimp>
+            <Turkish>Negev NG7 (Yeşil Hex)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_MMG_01_black_F">
+            <English>HK121 (Black)</English>
+            <Czech>HK121 (Černá)</Czech>
+            <French>HK121 (Noir)</French>
+            <Spanish>HK121 (Negro)</Spanish>
+            <Italian>HK121 (Nero)</Italian>
+            <Polish>HK121 (czarny)</Polish>
+            <Portuguese>HK121 (Preto)</Portuguese>
+            <Russian>HK121 (чёрный)</Russian>
+            <German>HK121 (Schwarz)</German>
+            <Korean>HK121 (검정)</Korean>
+            <Japanese>HK121 (ブラック)</Japanese>
+            <Chinese>HK121中型機槍 (黑色)</Chinese>
+            <Chinesesimp>HK121（黑色）</Chinesesimp>
+            <Turkish>HK121 (Siyah)</Turkish>
+            <Hungarian>HK121 (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_MMG_01_ghex_F">
+            <English>HK121 (Green Hex)</English>
+            <Czech>HK121 (Zelený Hex)</Czech>
+            <French>HK121 (Hex Verte)</French>
+            <Spanish>HK121 (Verde Hex)</Spanish>
+            <Italian>HK121 (Hex Verde)</Italian>
+            <Polish>HK121 (Zielony Hex)</Polish>
+            <Portuguese>HK121 (Verde Hex)</Portuguese>
+            <Russian>HK121 (зелёный гекс)</Russian>
+            <German>HK121 (Hex Grün)</German>
+            <Korean>HK121 (초록육각)</Korean>
+            <Japanese>HK121 (緑六角形迷彩)</Japanese>
+            <Chinese>HK121中型機槍 (綠色數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>HK121（绿色蜂巢迷彩）</Chinesesimp>
+            <Turkish>HK121 (Yeşil Hex)</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_MMG_02_khaki_F">
+            <English>LWMMG (Khaki)</English>
+            <Czech>LWMMG (Khaki)</Czech>
+            <French>LWMMG (Kaki)</French>
+            <Spanish>LWMMG (Caqui)</Spanish>
+            <Italian>LWMMG (Cachi)</Italian>
+            <Polish>LWMMG (Khaki)</Polish>
+            <Portuguese>LWMMG (Cáqui)</Portuguese>
+            <Russian>LWMMG (хаки)</Russian>
+            <German>LWMMG (Khaki)</German>
+            <Korean>LWMMG (카키)</Korean>
+            <Japanese>LWMMG (カーキ)</Japanese>
+            <Chinese>輕量化中型機槍（卡其）</Chinese>
+            <Chinesesimp>LWMMG（卡其色）</Chinesesimp>
+            <Turkish>LWMMG (Haki)</Turkish>
+            <Hungarian>LWMMG (Khaki)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_SMG_01_black_F">
+            <English>Vector SMG (Black)</English>
+            <Czech>Vector SMG (Černá)</Czech>
+            <French>Vector SMG (Noir)</French>
+            <Spanish>Vector SMG (Negro)</Spanish>
+            <Italian>Vector SMG (Nero)</Italian>
+            <Polish>Vector SMG (czarny)</Polish>
+            <Portuguese>Vector SMG (Preto)</Portuguese>
+            <Russian>Vector SMG (чёрный)</Russian>
+            <German>Vector SMG (Schwarz)</German>
+            <Korean>벡터 SMG (검정)</Korean>
+            <Japanese>ベクター SMG (ブラック)</Japanese>
+            <Chinese>"維克特"衝鋒槍 (黑色)</Chinese>
+            <Chinesesimp>Vector 冲锋枪（黑色）</Chinesesimp>
+            <Turkish>Vector SMG (Siyah)</Turkish>
+            <Hungarian>Vector SMG (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_SMG_01_khk_F">
+            <English>Vector SMG (Khaki)</English>
+            <Czech>Vector SMG (Khaki)</Czech>
+            <French>Vector SMG (Kaki)</French>
+            <Spanish>Vector SMG (Caqui)</Spanish>
+            <Italian>Vector SMG (Cachi)</Italian>
+            <Polish>Vector SMG (Khaki)</Polish>
+            <Portuguese>Vector SMG (Cáqui)</Portuguese>
+            <Russian>Vector SMG (хаки)</Russian>
+            <German>Vector SMG (Khaki)</German>
+            <Korean>벡터 SMG (카키)</Korean>
+            <Japanese>ベクター SMG (カーキ)</Japanese>
+            <Chinese>"維克特"衝鋒槍（卡其）</Chinese>
+            <Chinesesimp>Vector 冲锋枪（卡其色）</Chinesesimp>
+            <Turkish>Vector SMG (Haki)</Turkish>
+            <Hungarian>Vector SMG (Khaki)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_Mk20C_black_F">
+            <English>F2000 Tactical (Black)</English>
+            <Czech>F2000 Tactical (Černá)</Czech>
+            <French>F2000 Tactical (Noir)</French>
+            <Spanish>F2000 Tactical (Negro)</Spanish>
+            <Italian>F2000 Tactical (Nero)</Italian>
+            <Polish>F2000 Tactical (czarny)</Polish>
+            <Portuguese>F2000 Tactical (Preto)</Portuguese>
+            <Russian>F2000 Tactical (чёрный)</Russian>
+            <German>F2000 Tactical (Schwarz)</German>
+            <Korean>F2000 택티컬 (검정)</Korean>
+            <Japanese>F2000 タクティカル (ブラック)</Japanese>
+            <Chinese>F2000戰術型突擊步槍 (黑色)</Chinese>
+            <Chinesesimp>F2000 战术型（黑色）</Chinesesimp>
+            <Turkish>F2000 Tactical (Siyah)</Turkish>
+            <Hungarian>F2000 Tactical (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_Mk20C_hex_F">
+            <English>F2000 Tactical (Hex)</English>
+            <Czech>F2000 Tactical (Hex)</Czech>
+            <French>F2000 Tactical (Hex)</French>
+            <Spanish>F2000 Tactical (Hex)</Spanish>
+            <Italian>F2000 Tactical (Hex)</Italian>
+            <Polish>F2000 Tactical (hex)</Polish>
+            <Portuguese>F2000 Tactical (Hex)</Portuguese>
+            <Russian>F2000 Tactical (гекс)</Russian>
+            <German>F2000 Tactical (Hex)</German>
+            <Korean>F2000 택티컬 (육각)</Korean>
+            <Japanese>F2000 タクティカル (六角形迷彩)</Japanese>
+            <Chinese>F2000戰術型突擊步槍 (數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>F2000 战术型（蜂巢迷彩）</Chinesesimp>
+            <Turkish>F2000 Tactical (Hex)</Turkish>
+            <Hungarian>F2000 Tactical (Hex)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_Mk20_GL_black_F">
+            <English>F2000 EGLM (Black)</English>
+            <Czech>F2000 EGLM (Černá)</Czech>
+            <French>F2000 EGLM (Noir)</French>
+            <Spanish>F2000 EGLM (Negro)</Spanish>
+            <Italian>F2000 EGLM (Nero)</Italian>
+            <Polish>F2000 EGLM (czarny)</Polish>
+            <Portuguese>F2000 EGLM (Preto)</Portuguese>
+            <Russian>F2000 EGLM (чёрный)</Russian>
+            <German>F2000 EGLM (Schwarz)</German>
+            <Korean>F2000 EGLM (검정)</Korean>
+            <Japanese>F2000 EGLM (ブラック)</Japanese>
+            <Chinese>F2000突擊步槍 (黑色)</Chinese>
+            <Chinesesimp>F2000 EGLM（黑色）</Chinesesimp>
+            <Turkish>F2000 EGLM (Siyah)</Turkish>
+            <Hungarian>F2000 EGLM (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_Mk20_GL_hex_F">
+            <English>F2000 EGLM (Hex)</English>
+            <Czech>F2000 EGLM (Hex)</Czech>
+            <French>F2000 EGLM (Hex)</French>
+            <Spanish>F2000 EGLM (Hex)</Spanish>
+            <Italian>F2000 EGLM (Hex)</Italian>
+            <Polish>F2000 EGLM (hex)</Polish>
+            <Portuguese>F2000 EGLM (Hex)</Portuguese>
+            <Russian>F2000 EGLM (гекс)</Russian>
+            <German>F2000 EGLM (Hex)</German>
+            <Korean>F2000 EGLM (육각)</Korean>
+            <Japanese>F2000 EGLM (六角形迷彩)</Japanese>
+            <Chinese>F2000突擊步槍 (數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>F2000 EGLM（蜂巢迷彩）</Chinesesimp>
+            <Turkish>F2000 EGLM (Hex)</Turkish>
+            <Hungarian>F2000 EGLM (Hex)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_Mk20_black_F">
+            <English>F2000 (Black)</English>
+            <Czech>F2000 (Černá)</Czech>
+            <French>F2000 (Noir)</French>
+            <Spanish>F2000 (Negro)</Spanish>
+            <Italian>F2000 (Nero)</Italian>
+            <Polish>F2000 (czarny)</Polish>
+            <Portuguese>F2000 (Preto)</Portuguese>
+            <Russian>F2000 (чёрный)</Russian>
+            <German>F2000 (Schwarz)</German>
+            <Korean>F2000 (검정)</Korean>
+            <Japanese>F2000 (ブラック)</Japanese>
+            <Chinese>F2000突擊步槍 (黑色)</Chinese>
+            <Chinesesimp>F2000（黑色）</Chinesesimp>
+            <Turkish>F2000 (Siyah)</Turkish>
+            <Hungarian>F2000 (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_Mk20_hex_F">
+            <English>F2000 (Hex)</English>
+            <Czech>F2000 (Hex)</Czech>
+            <French>F2000 (Hex)</French>
+            <Spanish>F2000 (Hex)</Spanish>
+            <Italian>F2000 (Hex)</Italian>
+            <Polish>F2000 (hex)</Polish>
+            <Portuguese>F2000 (Hex)</Portuguese>
+            <Russian>F2000 (гекс)</Russian>
+            <German>F2000 (Hex)</German>
+            <Korean>F2000 (육각)</Korean>
+            <Japanese>F2000 (六角形迷彩)</Japanese>
+            <Chinese>F2000突擊步槍 (數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>F2000（蜂巢迷彩）</Chinesesimp>
+            <Turkish>F2000 (Hex)</Turkish>
+            <Hungarian>F2000 (Hex)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_TRG20_black_F">
+            <English>CTAR-21 (Black)</English>
+            <Czech>CTAR-21 (Černá)</Czech>
+            <French>CTAR-21 (Noir)</French>
+            <Spanish>CTAR-21 (Negro)</Spanish>
+            <Italian>CTAR-21 (Nero)</Italian>
+            <Polish>CTAR-21 (czarny)</Polish>
+            <Portuguese>CTAR-21 (Preto)</Portuguese>
+            <Russian>CTAR-21 (чёрный)</Russian>
+            <German>CTAR-21 (Schwarz)</German>
+            <Korean>CTAR-21 (검정)</Korean>
+            <Japanese>CTAR-21 (ブラック)</Japanese>
+            <Chinese>CTAR-21突擊步槍 (黑色)</Chinese>
+            <Chinesesimp>CTAR-21（黑色）</Chinesesimp>
+            <Turkish>CTAR-21 (Siyah)</Turkish>
+            <Hungarian>CTAR-21 (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_TRG21_GL_black_F">
+            <English>GTAR-21 EGLM (Black)</English>
+            <Czech>GTAR-21 EGLM (Černá)</Czech>
+            <French>GTAR-21 EGLM (Noir)</French>
+            <Spanish>GTAR-21 EGLM (Negro)</Spanish>
+            <Italian>GTAR-21 EGLM (Nero)</Italian>
+            <Polish>GTAR-21 EGLM (czarny)</Polish>
+            <Portuguese>GTAR-21 EGLM (Preto)</Portuguese>
+            <Russian>GTAR-21 EGLM (чёрный)</Russian>
+            <German>GTAR-21 EGLM (Schwarz)</German>
+            <Korean>GTAR-21 EGLM (검정)</Korean>
+            <Japanese>GTAR-21 EGLM (ブラック)</Japanese>
+            <Chinese>GTAR-21突擊步槍 (黑色)</Chinese>
+            <Chinesesimp>GTAR-21 EGLM（黑色）</Chinesesimp>
+            <Turkish>GTAR-21 EGLM (Siyah)</Turkish>
+            <Hungarian>GTAR-21 EGLM (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_arifle_TRG21_black_F">
+            <English>TAR-21 (Black)</English>
+            <Czech>TAR-21 (Černá)</Czech>
+            <French>TAR-21 (Noir)</French>
+            <Spanish>TAR-21 (Negro)</Spanish>
+            <Italian>TAR-21 (Nero)</Italian>
+            <Polish>TAR-21 (czarny)</Polish>
+            <Portuguese>TAR-21 (Preto)</Portuguese>
+            <Russian>TAR-21 (чёрный)</Russian>
+            <German>TAR-21 (Schwarz)</German>
+            <Korean>TAR-21 (검정)</Korean>
+            <Japanese>TAR-21 (ブラック)</Japanese>
+            <Chinese>TAR-21突擊步槍 (黑色)</Chinese>
+            <Chinesesimp>TAR-21（黑色）</Chinesesimp>
+            <Turkish>TAR-21 (Siyah)</Turkish>
+            <Hungarian>TAR-21 (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_DMR_01_black_F">
+            <English>VS-121 (Black)</English>
+            <Czech>VS-121 (Černá)</Czech>
+            <French>VS-121 (Noir)</French>
+            <Spanish>VS-121 (Negro)</Spanish>
+            <Italian>VS-121 (Nero)</Italian>
+            <Polish>VS-121 (czarny)</Polish>
+            <Portuguese>VS-121 (Preto)</Portuguese>
+            <Russian>VS-121 (чёрный)</Russian>
+            <German>VS-121 (Schwarz)</German>
+            <Korean>VS-121 (검정)</Korean>
+            <Japanese>VS-121 (ブラック)</Japanese>
+            <Chinese>VS-121狙擊步槍 (黑色)</Chinese>
+            <Chinesesimp>VS-121（黑色）</Chinesesimp>
+            <Turkish>VS-121 (Siyah)</Turkish>
+            <Hungarian>VS-121 (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_DMR_02_tna_F">
+            <English>Noreen "Bad News" ULR (Tropic)</English>
+            <Czech>Noreen "Bad News" ULR (Tropická kamufláž)</Czech>
+            <French>Noreen "Bad News" ULR (Tropique)</French>
+            <Spanish>Noreen "Bad News" ULR (Trópico)</Spanish>
+            <Italian>Noreen "Bad News" ULR (Tropico)</Italian>
+            <Polish>Noreen "Bad News" ULR (zwrotnik)</Polish>
+            <Portuguese>Noreen "Bad News" ULR (Trópico)</Portuguese>
+            <Russian>Noreen "Bad News" ULR (тропик)</Russian>
+            <German>Noreen "Bad News" ULR (Tropisch)</German>
+            <Korean>노린 "배드뉴스" ULR (열대)</Korean>
+            <Japanese>ノレーン "バッド ニュース" ULR (熱帯ジャングル迷彩)</Japanese>
+            <Chinese>諾琳"壞消息"極距狙擊步槍 (熱帶迷彩)</Chinese>
+            <Chinesesimp>诺琳 "坏消息" 极距狙击步枪（热带迷彩）</Chinesesimp>
+            <Turkish>Noreen "Bad News" ULR (Tropic)</Turkish>
+            <Hungarian>Noreen "Bad News" ULR (Tropikus)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_DMR_05_ghex_F">
+            <English>Cyrus (Green Hex)</English>
+            <Czech>Cyrus (Zelený Hex)</Czech>
+            <French>Cyrus (Hex Vert)</French>
+            <Spanish>Cyrus (Hex Verde)</Spanish>
+            <Italian>Cyrus (Hex Verde)</Italian>
+            <Polish>Cyrus (Zielony hex)</Polish>
+            <Portuguese>Cyrus (Verde Hex)</Portuguese>
+            <Russian>Cyrus (зелёный гекс)</Russian>
+            <German>Cyrus (Hex Grün)</German>
+            <Korean>사이러스 (초록육각)</Korean>
+            <Japanese>サイラス (緑六角形迷彩)</Japanese>
+            <Chinese>"居鲁士"狙擊步槍 (綠色數位蜂巢迷彩)</Chinese>
+            <Chinesesimp>"居鲁士"（绿色蜂巢迷彩）</Chinesesimp>
+            <Turkish>Cyrus (Yeşil Hex)</Turkish>
+            <Hungarian>Cyrus (Zöld Hex)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_DMR_06_black_F">
+            <English>M14 (Black)</English>
+            <Czech>M14 (Černá)</Czech>
+            <French>M14 (Noir)</French>
+            <Spanish>M14 (Negro)</Spanish>
+            <Italian>M14 (Nero)</Italian>
+            <Polish>M14 (czarny)</Polish>
+            <Portuguese>M14 (Preto)</Portuguese>
+            <Russian>M14 (чёрный)</Russian>
+            <German>M14 (Schwarz)</German>
+            <Korean>M14 (검정)</Korean>
+            <Japanese>M14 (ブラック)</Japanese>
+            <Chinese>M14 (黑色)</Chinese>
+            <Chinesesimp>M14（黑色）</Chinesesimp>
+            <Turkish>M14 (Siyah)</Turkish>
+            <Hungarian>M14 (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_EBR_blk_F">
+            <English>Mk14 Mod 1 EBR (Black)</English>
+            <Czech>Mk14 Mod 1 EBR (Černá)</Czech>
+            <French>Mk14 Mod 1 EBR (Noir)</French>
+            <Spanish>Mk14 Mod 1 EBR (Negro)</Spanish>
+            <Italian>Mk14 Mod 1 EBR (Nero)</Italian>
+            <Polish>Mk14 Mod 1 EBR (czarny)</Polish>
+            <Portuguese>Mk14 Mod 1 EBR (Preto)</Portuguese>
+            <Russian>Mk14 Mod 1 EBR (чёрный)</Russian>
+            <German>Mk14 Mod 1 EBR (Schwarz)</German>
+            <Korean>Mk.14 Mod 1 EBR (검정)</Korean>
+            <Japanese>Mk14 Mod 1 EBR (ブラック)</Japanese>
+            <Chinese>Mk14一型增強型戰鬥步槍 (黑色)</Chinese>
+            <Chinesesimp>Mk14 Mod 1 EBR（黑色）</Chinesesimp>
+            <Turkish>Mk14 Mod 1 EBR (Siyah)</Turkish>
+            <Hungarian>Mk14 Mod 1 EBR (Fekete)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_Aegis_RealisticNames_srifle_EBR_khk_F">
+            <English>Mk14 Mod 1 EBR (Khaki)</English>
+            <Czech>Mk14 Mod 1 EBR (Khaki)</Czech>
+            <French>Mk14 Mod 1 EBR (Kaki)</French>
+            <Spanish>Mk14 Mod 1 EBR (Caqui)</Spanish>
+            <Italian>Mk14 Mod 1 EBR (Cachi)</Italian>
+            <Polish>Mk14 Mod 1 EBR (Khaki)</Polish>
+            <Portuguese>Mk14 Mod 1 EBR (Cáqui)</Portuguese>
+            <Russian>Mk14 Mod 1 EBR (хаки)</Russian>
+            <German>Mk14 Mod 1 EBR (Khaki)</German>
+            <Korean>Mk.14 Mod 1 EBR (카키)</Korean>
+            <Japanese>Mk14 Mod 1 EBR (カーキ)</Japanese>
+            <Chinese>Mk14一型增強型戰鬥步槍（卡其）</Chinese>
+            <Chinesesimp>Mk14 Mod 1 EBR（卡其色）</Chinesesimp>
+            <Turkish>Mk14 Mod 1 EBR (Haki)</Turkish>
+            <Hungarian>Mk14 Mod 1 EBR (Khaki)</Hungarian>
+        </Key>
+    </Package>
+</Project>

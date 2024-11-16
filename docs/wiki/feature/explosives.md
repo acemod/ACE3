@@ -35,6 +35,7 @@ Enables attaching explosives to vehicles.
 - Interact with the explosive <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
 - Choose the arming method.
 - For clackers use Self Interaction `Explosives` &rarr; `Detonate` and choose the corresponding Firing Device.
+- Alternatively, use <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd> (ACE3 default key bind `Detonate All on Active Clacker`) to detonate all explosives tied to the `Active Detonator`, which can be changed via the `Set Active Detonator` interaction on the desired Clacker / Dead Man Switch.
 
 ### 2.3 Defusing explosives
 - A `Defusal Kit` is required.

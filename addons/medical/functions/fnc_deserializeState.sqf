@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Deserializes the medical state of a unit and applies it.
@@ -17,6 +17,11 @@
  */
 params [["_unit", objNull, [objNull]], ["_json", "{}", [""]]];
 
+// Don't run in scheduled environment
+if (canSuspend) exitWith {
+    [FUNC(deserializeState), _this] call CBA_fnc_directCall
+};
+
 if (isNull _unit) exitWith {};
 if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit) };
 
@@ -24,6 +29,7 @@ if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit) };
 if !(_unit getVariable [QGVAR(initialized), false]) exitWith {
     [QEGVAR(medical_status,initialized), {
         params ["_unit"];
+        //IGNORE_PRIVATE_WARNING ["_thisArgs", "_thisId", "_thisType"];
         _thisArgs params ["_target"];
 
         if (_unit == _target) then {

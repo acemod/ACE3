@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Adds custom text tag. Has to be executed on one machine only.
@@ -35,7 +35,7 @@ if (_text == "") exitWith { ERROR_1("bad text %1",_text); false };
 // Check required item exists
 if (!isClass (configFile >> "CfgWeapons" >> _requiredItem)) exitWith { ERROR_1("bad item %1",_requiredItem); false };
 // Get color from spray item used
-if (_textColor == "") then { 
+if (_textColor == "") then {
     _textColor = getText (configFile >> "CfgWeapons" >> _requiredItem >> QGVAR(textColor));
     if (_textColor == "") then { _textColor = "000000" };
 };

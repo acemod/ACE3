@@ -1,19 +1,19 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: commy2
- * Reload a launcher
+ * Author: commy2, johnb43, drofseh
+ * Start reloading a launcher, reload started by the unit who has the missile.
  *
  * Arguments:
- * 0: Unit with magazine <OBJECT>
- * 1: Unit with launcher <OBJECT>
- * 2: weapon name <STRING>
- * 3: missile name <STRING>
+ * 0: Unit executing the reload <OBJECT>
+ * 1: Unit equipped with the launcher <OBJECT>
+ * 2: Launcher name <STRING>
+ * 3: Missile name <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [bob, kevin, "weapon", "missile"] call ace_reloadlaunchers_fnc_load
+ * [player, cursorTarget, "launch_RPG32_F", "RPG32_F"] call ace_reloadlaunchers_fnc_load
  *
  * Public: No
  */
@@ -21,30 +21,67 @@
 params ["_unit", "_target", "_weapon", "_magazine"];
 TRACE_4("params",_unit,_target,_weapon,_magazine);
 
-private _reloadTime = if (isNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(buddyReloadTime))) then {
-    getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(buddyReloadTime))
+private _config = configFile >> "CfgWeapons" >> _weapon >> QGVAR(buddyReloadTime);
+
+private _reloadTime = if (isNumber _config) then {
+    getNumber _config
 } else {
-    2.5
+    getNumber (configFile >> "CfgWeapons" >> _weapon >> "magazineReloadTime") min 2.5
 };
 
-// do animation
+// Play animation
 [_unit] call EFUNC(common,goKneeling);
 
-// show progress bar
+// Notify unit that is being reloaded that reload has been started
+[QGVAR(reloadStarted), [_unit, _target], _target] call CBA_fnc_targetEvent;
 
+// Show progress bar
 private _onSuccess =  {
-    (_this select 0 select 0) removeMagazine (_this select 0 select 3);
-    [QGVAR(reloadLauncher), _this select 0, _this select 0 select 1] call CBA_fnc_targetEvent;
+    (_this select 0) params ["_unit", "_target", "_weapon", "_magazine"];
 
-    [localize LSTRING(LauncherLoaded)] call DEFUNC(common,displayTextStructured);
+    // Check if the unit has any of the same magazines and calculate max ammo
+    private _maxAmmo = 0;
+
+    {
+        _maxAmmo = _maxAmmo max (_x select 1);
+    } forEach (magazinesAmmo _unit select {(_x select 0) == _magazine});
+
+    // Check if the launcher can still be loaded; If possible, then try to remove magazine
+    if !(_maxAmmo > 0 && {[_unit, _target, _weapon, _magazine] call FUNC(canLoad)} && {[_unit, _magazine, _maxAmmo] call EFUNC(common,removeSpecificMagazine)}) exitWith {
+        // Notify unit that was being reloaded that reload has been stopped
+        [QGVAR(reloadAborted), [_unit, _target], _target] call CBA_fnc_targetEvent;
+
+        // Notify reloading unit about failure
+        if (GVAR(displayStatusText)) then {
+            [LSTRING(LauncherNotLoaded)] call EFUNC(common,displayTextStructured);
+        };
+    };
+
+    // Reload target's launcher
+    [QGVAR(reloadLauncher), [_unit, _target, _weapon, _magazine, _maxAmmo], _target] call CBA_fnc_targetEvent;
+
+    // Notify reloading unit about success
+    if (GVAR(displayStatusText)) then {
+        [LSTRING(LauncherLoaded)] call EFUNC(common,displayTextStructured);
+    };
 };
 
 private _onFailure = {
-    [localize ELSTRING(common,ActionAborted)] call DEFUNC(common,displayTextStructured);
+    (_this select 0) params ["_unit", "_target"];
+
+    // Notify unit that was being reloaded that reload has been stopped
+    [QGVAR(reloadAborted), [_unit, _target], _target] call CBA_fnc_targetEvent;
+
+    // Notify reloading unit about failure
+    if (GVAR(displayStatusText)) then {
+        [LSTRING(LauncherNotLoaded)] call EFUNC(common,displayTextStructured);
+    };
 };
 
 private _condition = {
-    (_this select 0) call DFUNC(canLoad) && {(_this select 0 select 0) distance (_this select 0 select 1) < 4}
+    (_this select 0) params ["_unit", "_target"];
+
+    (_this select 0) call FUNC(canLoad) && {_unit distance _target < 4}
 };
 
-[_reloadTime, [_unit, _target, _weapon, _magazine], _onSuccess, _onFailure, localize LSTRING(LoadingLauncher), _condition, ["isNotInside", "isNotSwimming"]] call EFUNC(common,progressBar);
+[_reloadTime, [_unit, _target, _weapon, _magazine], _onSuccess, _onFailure, LLSTRING(LoadingLauncher), _condition, ["isNotInside", "isNotSwimming"]] call EFUNC(common,progressBar);

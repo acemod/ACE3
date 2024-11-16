@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dslyecxi, Jonpas, SilentSpike
+ * Author: Dslyecxi, Jonpas, kymckay
  * Handles drawing the currently selected or cooked throwable.
  *
  * Arguments:
@@ -43,13 +43,10 @@ if ((!_primed) && {!((_throwableMag in (uniformItems ACE_player)) || {_throwable
 
 // Get correct throw power for primed grenade
 if (_primed) then {
-    private _ammoType = typeOf _activeThrowable;
-    _throwableMag = GVAR(ammoMagLookup) getVariable _ammoType;
-    if (isNil "_throwableMag") then {
-        // What we're trying to throw must not be a normal throwable because it is not in our lookup hash (e.g. 40mm smoke)
-        // Just use HandGrenade as it has an average initSpeed value
-        _throwableMag = "HandGrenade";
-    };
+    // If ammo type is not found:
+    // What we're trying to throw must not be a normal throwable because it is not in our lookup hash (e.g. 40mm smoke)
+    // Just use HandGrenade as it has an average initSpeed value
+    _throwableMag = (uiNamespace getVariable QGVAR(ammoMagLookup)) getOrDefault [typeOf _activeThrowable, "HandGrenade"];
 };
 
 // Some throwables have different classname for magazine and ammo
@@ -112,7 +109,7 @@ private _posHeadRel = ACE_player selectionPosition "head";
 
 private _leanCoef = (_posHeadRel select 0) - 0.15; // 0.15 counters the base offset
 // Don't take leaning into account when weapon is lowered due to jiggling when walking side-ways (bandaid)
-if (abs _leanCoef < 0.15 || {vehicle ACE_player != ACE_player} || {weaponLowered ACE_player}) then {
+if (abs _leanCoef < 0.15 || {!isNull objectParent ACE_player} || {weaponLowered ACE_player}) then {
     _leanCoef = 0;
 };
 
@@ -147,7 +144,7 @@ if (ACE_player getVariable [QGVAR(dropMode), false]) then {
 
     _posFin = _posFin vectorAdd (AGLToASL (positionCameraToWorld _cameraOffset));
 
-    if (vehicle ACE_player != ACE_player) then {
+    if (!isNull objectParent ACE_player) then {
         // Counteract vehicle velocity including acceleration
         private _vectorDiff = (velocity (vehicle ACE_player)) vectorMultiply (time - (ACE_player getVariable [QGVAR(lastTick), time]) + 0.01);
         _posFin = _posFin vectorAdd _vectorDiff;

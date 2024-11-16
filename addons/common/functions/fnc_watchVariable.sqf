@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Shows multiple watched variables on the main display (for easy debugging).
@@ -8,11 +8,11 @@
  * 1: Code to generate result (passed nothing, can return any) <CODE> (default: {})
  * 2: Array containing modifiers <ARRAY> (default: [])
  *   For Numbers:
- *     2.0: Show Delta change <BOOL> (default: true)
- *     2.1: Slider Min Value <NUMBER> (default: 0)
- *     2.1: Slider Max Value <NUMBER> (default: 0)
+ * - 0: Show Delta change <BOOL> (default: true)
+ * - 1: Slider Min Value <NUMBER> (default: 0)
+ * - 2: Slider Max Value <NUMBER> (default: 0)
  *   For Anything else:
- *     2.0: Number of structured text lines <NUMBER> (default: 1)
+ * + 0: Number of structured text lines <NUMBER> (default: 1)
  *
  * Return Value:
  * None
@@ -43,7 +43,7 @@ if (isNull (findDisplay 46)) exitWith {
     [{!isNull (findDisplay 46)}, {_this call FUNC(watchVariable);}, _this] call CBA_fnc_waitUntilAndExecute;
 };
 
-if (_code isEqualTo {}) then {TRACE_1("using title as code",_title); _code = compile _name;};
+if (_code isEqualTo {}) then {TRACE_1("using name as code",_name); _code = compile _name;};
 
 private _trackedDisplay = uiNamespace getVariable [QGVAR(watchVariableUI), displayNull];
 if (isNull _trackedDisplay) then {

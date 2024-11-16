@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Handle incapacitation due to damage and pain
@@ -20,7 +20,7 @@ params ["_unit"];
 private _painLevel = GET_PAIN_PERCEIVED(_unit);
 private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
 
-_bodyPartDamage params ["_headDamage", "_bodyDamage", "_leftArmDamage", "_rightArmDamage", "_leftLegDamage", "_rightLegDamage"];
+_bodyPartDamage params ["_headDamage", "_bodyDamage"];
 
 // Exclude non penetrating body damage
 {

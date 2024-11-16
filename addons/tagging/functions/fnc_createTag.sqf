@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut, esteldunedain
  * Creates a tag and handle its destruction. Only execute on the server.
@@ -68,7 +68,7 @@ if (_object getVariable [QGVAR(testVar), false]) then {
         if (_selection == "" && _damage >= 1) then {
             {
                 deleteVehicle _x;
-            } foreach (_object getVariable [QGVAR(attachedTags), []]);
+            } forEach (_object getVariable [QGVAR(attachedTags), []]);
             _object setVariable [QGVAR(attachedTags), []];
         };
     }];

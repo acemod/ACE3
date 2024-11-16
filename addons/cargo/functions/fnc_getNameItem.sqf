@@ -1,34 +1,34 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: JasperRab
  * Gets the name of the item, and alternatively the custom name if requested and available.
  *
  * Arguments:
- * 0: Target <OBJECT>
- * 1: Add custom name part <BOOL> (default: false)
+ * 0: Item <STRING> or <OBJECT> (default: "")
+ * 1: Add custom name <BOOL> (default: false)
  *
  * Return Value:
- * Item Name <STRING>
+ * Item name <STRING>
  *
  * Example:
- * [crate_7] call ace_cargo_fnc_getNameItem
+ * cursorObject call ace_cargo_fnc_getNameItem
  *
  * Public: Yes
  */
 
-params ["_object", ["_addCustomPart", false]];
+params [["_item", "", [objNull, ""]], ["_addCustomName", false, [false]]];
 
-private _displayName = if (_object isEqualType "") then {
-    getText (configFile >> "CfgVehicles" >> _object >> "displayName")
+private _displayName = if (_item isEqualType "") then {
+    getText (configFile >> "CfgVehicles" >> _item >> "displayName")
 } else {
-    getText ((configOf _object) >> "displayName")
+    getText (configOf _item >> "displayName")
 };
 
-if (_addCustomPart && {!(_object isEqualType "")}) then {
-    private _customPart = _object getVariable [QGVAR(customName), ""];
+if (_addCustomName && {_item isEqualType objNull}) then {
+    private _customName = _item getVariable [QGVAR(customName), ""];
 
-    if (_customPart isNotEqualTo "") then {
-        _displayName = _displayName + " [" + _customPart + "]";
+    if (_customName isNotEqualTo "") then {
+        _displayName = _displayName + " [" + _customName + "]";
     };
 };
 

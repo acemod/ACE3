@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Gets the optic classnames of all currently equipped weapons.
@@ -19,14 +19,4 @@
 
 params ["_unit"];
 
-private _optics = ["", "", ""];
-
-if (!(_unit isKindOf "CAManBase")) exitWith {_optics};
-
-{
-    if (count _x >= 2) then {
-        _optics set [_forEachIndex, _x select 2];
-    };
-} forEach [primaryWeaponItems _unit, secondaryWeaponItems _unit, handgunItems _unit];
-
-_optics
+[primaryWeaponItems _unit, secondaryWeaponItems _unit, handgunItems _unit] apply {_x select 2} // return

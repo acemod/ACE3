@@ -25,6 +25,8 @@ PREP(overheat);
 PREP(sendSpareBarrelsTemperaturesHint);
 PREP(setAmmoTemperature);
 PREP(setWeaponTemperature);
+PREP(statTextStatement_boltType);
+PREP(statTextStatement_allowSwapBarrel);
 PREP(swapBarrel);
 PREP(swapBarrelAssistant);
 PREP(swapBarrelCallback);

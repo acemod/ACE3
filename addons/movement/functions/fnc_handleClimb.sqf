@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Handles the climb animation finishing.  Called from "AnimDone" event handler.
@@ -24,5 +24,5 @@ private _pos = _unit modelToWorldVisual (_unit selectionPosition "camera");
 
 _pos = _pos vectorDiff (_unit selectionPosition "camera");
 
-_unit setPosASL (AGLtoASL _pos);
-TRACE_2("",AGLtoASL _pos,getPosASL _unit);
+_unit setPosASL (AGLToASL _pos);
+TRACE_2("",AGLToASL _pos,getPosASL _unit);

@@ -7,7 +7,15 @@ layout: compress
 <main>
     <div class="row">
         <div class="medium-8 columns">
-            <a href="{{site.baseUrl}}/news.html" class="button tiny"><i class="fa fa-chevron-left"></i>&nbsp;Back</a><br/>
+            <a href="{{site.baseUrl}}/news.html" class="button button--icon tiny">
+                <i class="icon icon--white" aria-hidden="true">
+                    <svg>
+                        <use href="/dist/icons.svg#chevronleft" />
+                    </svg>
+                </i>
+                <span>Back</span>
+            </a>
+            <br/>
             <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
                 <header>
                     <h1 itemprop="headline name">{{ page.title }}</h1>

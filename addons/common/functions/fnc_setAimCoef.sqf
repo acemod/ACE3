@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: xrufix, Glowbal
  * Handle set AimCoef calls. Will use the highest available setting.

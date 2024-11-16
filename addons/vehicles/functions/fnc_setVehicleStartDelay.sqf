@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: severgun
  * Set engine startup delay to specific vehicle.
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [hemmt, 3.2] call ace_vehicles_fnc_setVehicleStartDelay
+ * [hemtt, 3.2] call ace_vehicles_fnc_setVehicleStartDelay
  *
  * Public: Yes
  */

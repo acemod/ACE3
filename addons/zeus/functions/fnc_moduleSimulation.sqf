@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Fisher, SilentSpike
+ * Author: Fisher, kymckay
  * Toggle Simulation on object.
  *
  * Arguments:

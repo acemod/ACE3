@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Brett Mayson, johnb43
  * Create the internal sort arrays when needed for the first time.
@@ -63,7 +63,6 @@ private _sortListRightPanel = [
     []  // Misc 7
 ];
 
-//------------------------- Config handling
 private _class = "";
 private _displayName = "";
 private _statement = "";

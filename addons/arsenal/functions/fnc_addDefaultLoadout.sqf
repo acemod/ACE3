@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: 654wak654, johnb43
  * Adds a loadout to the "Default Loadouts" list.
@@ -20,8 +20,9 @@
 
 params [["_name", "", [""]], ["_loadout", [], [[]]], ["_global", false, [false]]];
 
-if (_global) then {
-    [QGVAR(addDefaultLoadout), [_name, _loadout]] call CBA_fnc_remoteEvent;
+if (_global) exitWith {
+    private _eventID = format [QGVAR(loadouts_%1), _name];
+    [QGVAR(addDefaultLoadout), [_name, _loadout], _eventID] call CBA_fnc_globalEventJIP;
 };
 
 private _extendedInfo = createHashMap;

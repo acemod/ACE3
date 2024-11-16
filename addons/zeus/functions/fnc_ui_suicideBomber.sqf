@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Initializes the "Suicide Bomber" Zeus module display.
@@ -65,7 +65,7 @@ private _fnc_onSelection = {
     params [["_activeCtrl", controlNull, [controlNull]]];
 
     private _display = ctrlParent _activeCtrl;
-    if (isNUll _display) exitWith {};
+    if (isNull _display) exitWith {};
 
     // Update button colours and scales
     {

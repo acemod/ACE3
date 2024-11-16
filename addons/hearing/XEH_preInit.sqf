@@ -6,19 +6,25 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ["CBA_loadoutSet", {
     params ["_unit", "_loadout", "_extendedInfo"];
+
     if (_extendedInfo getOrDefault ["ace_earplugs", false]) then {
         _unit setVariable ["ACE_hasEarPlugsIn", true, true];
-        [[true]] remoteExec [QFUNC(updateVolume), _unit];
+
+        // Only force update volume if unit is a player (including remote controlled)
+        if (_unit call EFUNC(common,isPlayer)) then {
+            [QGVAR(updateVolume), true, _unit] call CBA_fnc_targetEvent;
+        };
     };
 }] call CBA_fnc_addEventHandler;
 
 ["CBA_loadoutGet", {
     params ["_unit", "_loadout", "_extendedInfo"];
-    if (_unit getVariable ["ACE_hasEarPlugsin", false]) then {
+
+    if (_unit getVariable ["ACE_hasEarPlugsIn", false]) then {
         _extendedInfo set ["ace_earplugs", true]
     };
 }] call CBA_fnc_addEventHandler;

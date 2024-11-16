@@ -9,6 +9,6 @@ PREP_RECOMPILE_END;
 GVAR(cachedTags) = [];
 GVAR(itemActions) = createHashMap;
 
-#include "initSettings.sqf"
+#include "initSettings.inc.sqf"
 
 ADDON = true;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Unlocks the seat of an unconscious or dead unit after getting moved out or waking up.

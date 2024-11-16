@@ -1,11 +1,11 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Handle the animation for a unit for the dragging module.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Animaion <STRING>
+ * 1: Animation <STRING>
  *
  * Return Value:
  * None
@@ -17,6 +17,7 @@
 */
 
 params ["_unit", "_anim"];
+//IGNORE_PRIVATE_WARNING ["_thisArgs", "_thisID"];
 _thisArgs params ["_realUnit"];
 TRACE_4("params",_unit,_anim,_realUnit,_thisID);
 

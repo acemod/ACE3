@@ -75,11 +75,11 @@ class GVAR(sorts) {
         scope = 2;
         displayName = CSTRING(sortByProtectionBallistic);
         tabs[] = {{3,4,6}, {}};
-        statement = QUOTE([ARR_3(_this, 1000000, 1000)] call FUNC(sortStatement_protection));
+        statement = QUOTE([ARR_3(_this,1000000,1000)] call FUNC(sortStatement_protection));
     };
 
     class ACE_protectionExplosive: ACE_protectionBallistic {
         displayName = CSTRING(sortByProtectionExplosive);
-        statement = QUOTE([ARR_3(_this, 1000, 1000000)] call FUNC(sortStatement_protection));
+        statement = QUOTE([ARR_3(_this,1000,1000000)] call FUNC(sortStatement_protection));
     };
 };

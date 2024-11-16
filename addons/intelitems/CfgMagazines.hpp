@@ -2,7 +2,7 @@ class CfgMagazines {
     class CA_Magazine;
     class GVAR(base): CA_Magazine {
         count = 1;
-        mass = 1;
+        mass = 0.1;
         ACE_isUnique = 1;
         GVAR(intel) = 1;
         GVAR(control) = "";

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Destroys the given fence and replaces it with a destroyed fence if possible.
@@ -17,7 +17,7 @@
 
 params ["_fence"];
 
-private _fenceModel = toLower ((getModelInfo _fence)#0);
+private _fenceModel = toLowerANSI ((getModelInfo _fence)#0);
 
 // If fence cannot be replaced with destroyed model, just knock it over
 if !(_fenceModel in GVAR(replacements)) exitWith {

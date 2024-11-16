@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe, Brett Mayson
  * Statement to sort weapons by their accuracy.

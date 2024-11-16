@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Makes the player drink directly from the given water source.
@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [_player, _source] call ace_field_rations_drinkFromSource
+ * [_player, _source] call ace_field_rations_fnc_drinkFromSource
  *
  * Public: No
  */
@@ -46,7 +46,7 @@ private _fnc_onFailure = {
     _args params ["_player"];
 
     // Reset animation if needed
-    if (vehicle _player == _player && {!(_player call EFUNC(common,isSwimming))}) then {
+    if (isNull objectParent _player && {!(_player call EFUNC(common,isSwimming))}) then {
         private _previousAnim = _player getVariable [QGVAR(previousAnim), ""];
         if (_previousAnim != "") then {
             [_player, _previousAnim, 2] call EFUNC(common,doAnimation);

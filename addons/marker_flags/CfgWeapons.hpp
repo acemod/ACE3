@@ -14,7 +14,7 @@ class CfgWeapons {
         mapSize = 0.2;
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 1;
+            mass = 0.5;
         };
     };
 

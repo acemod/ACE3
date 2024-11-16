@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, Ruthberg (Based on ace_atragmx_fnc_calculate_solution)
  * Calculates elevation and windage
@@ -41,14 +41,14 @@ private _barometricPressure = _altitude call EFUNC(weather,calculateBarometricPr
 
 private _bulletPos = [0,0,-(_boreHeight / 100)];
 private _lastBulletPos = +_bulletPos;
-private _bulletVelocity = [0,Cos(_scopeBaseAngle) * _muzzleVelocity,Sin(_scopeBaseAngle) * _muzzleVelocity];
-private _gravity = [-sin (_bank) * cos(_scopeBaseAngle + _inclinationAngle) * -GRAVITY, 
-                    sin(_scopeBaseAngle + _inclinationAngle) * -GRAVITY, 
+private _bulletVelocity = [0,cos(_scopeBaseAngle) * _muzzleVelocity,sin(_scopeBaseAngle) * _muzzleVelocity];
+private _gravity = [-sin (_bank) * cos(_scopeBaseAngle + _inclinationAngle) * -GRAVITY,
+                    sin(_scopeBaseAngle + _inclinationAngle) * -GRAVITY,
                     cos (_bank) * cos(_scopeBaseAngle + _inclinationAngle) * -GRAVITY];
 
 private _useAB = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
 if (_useAB) then {
-    _bc = parseNumber(("ace_advanced_ballistics" callExtension format["atmosphericCorrection:%1:%2:%3:%4:%5", _bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel]));
+    _bc = parseNumber (("ace" callExtension ["ballistics:atmospheric_correction", [_bc, _temperature, _barometricPressure, _relativeHumidity, _atmosphereModel]]) select 0);
 };
 
 private _deltaT = 1 / 60;
@@ -58,7 +58,7 @@ while {(_TOF < 5) && {(_bulletPos # 1) < _targetRange}} do {
     private _trueSpeed = vectorMagnitude _trueVelocity;
 
     private _bulletAccel = if (_useAB) then {
-        private _drag = parseNumber(("ace_advanced_ballistics" callExtension format["retard:%1:%2:%3:%4", _dragModel, _bc, _trueSpeed, _temperature]));
+        private _drag = parseNumber (("ace" callExtension ["ballistics:retard", [_dragModel, _bc, _trueSpeed, _temperature]]) select 0);
         (vectorNormalized _trueVelocity) vectorMultiply (-1 * _drag);
     } else {
         _trueVelocity vectorMultiply (_trueSpeed * _airFriction);
@@ -95,7 +95,7 @@ if (_useAB && {(_bulletPos select 1) > 0}) then {
     };
     private _spinDeflection = _twistDirection * 0.0254 * 1.25 * (_stabilityFactor + 1.2) * _TOF ^ 1.83;
     private _spinDrift = - atan(_spinDeflection / (_bulletPos select 1));
-    private _windage = _windage + _spinDrift;
+    _windage = _windage + _spinDrift;
 };
 
 [17.453*_elevation, 17.453*_windage] // Convert to MRAD and return

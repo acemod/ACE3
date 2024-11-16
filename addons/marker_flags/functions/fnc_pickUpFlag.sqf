@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Brett Mayson, Timi007
  * Places a flag in front of the unit.
@@ -19,7 +19,7 @@
 
 params [["_flag", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_args", [""], [[]]]];
 _args params ["_item"];
-TRACE_3("pickupFlag",_unit,_flag,_itemName);
+TRACE_3("pickupFlag",_unit,_flag,_item);
 
 if (isNull _flag) exitWith {};
 

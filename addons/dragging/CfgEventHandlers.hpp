@@ -42,6 +42,13 @@ class Extended_Init_EventHandlers {
     class WeaponHolder {
         class ADDON {
             init = QUOTE(_this call FUNC(initObject));
+            exclude[] = {"GroundWeaponHolder_Scripted"};
+        };
+    };
+    class WeaponHolderSimulated {
+        class ADDON {
+            init = QUOTE(_this call FUNC(initObject));
+            exclude[] = {"WeaponHolderSimulated_Scripted"};
         };
     };
     class Land_Camping_Light_F {
