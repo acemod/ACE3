@@ -139,9 +139,9 @@ if !(hasInterface) exitWith {};
     ["CAManBase", "respawn", LINKFUNC(handleRespawn)] call CBA_fnc_addClassEventHandler;
 
     // Add status effect to block hunger/thirst updates
-    ["field_rations_blockUpdates", false, []] call EFUNC(common,statusEffect_addType);
+    ["field_rations_blockUpdates", false, [], false, QGVAR(blockUpdates)] call EFUNC(common,statusEffect_addType);
 
-    [QEGVAR(common,field_rations_blockUpdates), {
+    [QGVAR(blockUpdates), {
         params ["_object", "_set"];
         TRACE_2("blockUpdates EH",_object,_set);
         _object setVariable [QGVAR(blockUpdates), _set > 0];
