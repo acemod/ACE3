@@ -128,7 +128,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         // Create a new injury. Format [0:classComplex, 1:amountOf, 2:bleedingRate, 3:woundDamage]
         private _injury = [_classComplex, 1, _bleeding, _woundDamage];
 
-       if (_bodyPart in ["head", "body", "neck", "head"] && {_woundDamage > PENETRATION_THRESHOLD}) then {
+       if (_bodyPart in ["head", "body", "neck", "chest"] && {_woundDamage > PENETRATION_THRESHOLD}) then {
             _criticalDamage = true;
         };
         if ([_unit, _bodyPartNToAdd, _bodyPartDamage, _woundDamage] call FUNC(determineIfFatal)) then {
