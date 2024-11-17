@@ -79,6 +79,6 @@ private _penDepth = _penFactor * _impactSpeed;
 private _finalDamage = (_hit * ((_penDepth/_armorThickness) min 1)) / DAMAGE_SCALING_FACTOR;
 _damageData set [ENGINE_DAMAGE_INDEX, _finalDamage];
 
-TRACE_3("Armor penetration handled, passing damage", _finalDamage, _damageData, _allDamages);
+TRACE_3("Armor penetration handled, passing damage",_finalDamage,_damageData,_allDamages);
 
 _this // return
