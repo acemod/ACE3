@@ -10,7 +10,7 @@
  * Total blood loss of unit (litres/second) <NUMBER>
  *
  * Example:
- * [player] call ace_medical_fnc_getBloodLoss
+ * player call ace_medical_fnc_getBloodLoss
  *
  * Public: Yes
  */
