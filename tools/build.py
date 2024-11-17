@@ -3,6 +3,7 @@
 import os
 import sys
 import subprocess
+import shutil
 
 ######## GLOBALS #########
 MAINPREFIX = "z"
@@ -10,14 +11,13 @@ PREFIX = "ace_"
 ##########################
 
 def tryHemttBuild(projectpath):
-    hemttExe = os.path.join(projectpath, "hemtt.exe")
-    if os.path.isfile(hemttExe):
+    if shutil.which("hemtt"):
         os.chdir(projectpath)
-        ret = subprocess.call([hemttExe, "pack"], stderr=subprocess.STDOUT)
-        print("Using hemtt: {}".format(ret));
+        ret = subprocess.call(["hemtt", "pack"], stderr=subprocess.STDOUT)
+        print("Using hemtt: {}".format(ret))
         return True
     else:
-        print("hemtt not installed");
+        print("hemtt not installed")
     return False
     
 def mod_time(path):
