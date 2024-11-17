@@ -21,13 +21,13 @@ private _woundBleeding = GET_WOUND_BLEEDING(_unit);
 if (_woundBleeding == 0) exitWith {0};
 
 private _cardiacOutput = [_unit] call FUNC(getCardiacOutput);
-private _resistance = _unit getVariable [VAR_PERIPH_RES, DEFAULT_PERIPH_RES]; // Can use value directly since this is sum of default and adjustments
+private _resistance = _unit getVariable [VAR_PERIPH_RES, DEFAULT_PERIPH_RES]; // can use value directly since this is sum of default and adjustments
 
-// Even if heart stops blood will still flow slowly (gravity)
+// even if heart stops blood will still flow slowly (gravity)
 private _bloodLoss = (_woundBleeding * (_cardiacOutput max CARDIAC_OUTPUT_MIN) * (DEFAULT_PERIPH_RES / _resistance) * EGVAR(medical,bleedingCoefficient));
 
 private _eventArgs = [_unit, _bloodLoss]; // Pass by reference
 
 [QGVAR(getBloodLoss), _eventArgs] call CBA_fnc_localEvent;
 
-_eventArgs select 1 // Return
+_eventArgs select 1 // return
