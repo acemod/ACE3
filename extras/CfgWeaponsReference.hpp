@@ -95,7 +95,7 @@ class CfgWeapons
         ACE_barrelTwist=228.6;
         ACE_barrelLength=457.2;
     };
-    class arifle_SDAR_F: SDAR_base_F 
+    class arifle_SDAR_F: SDAR_base_F
     {
         ACE_barrelTwist=285.75;
         ACE_barrelLength=457.2;
@@ -345,7 +345,7 @@ class CfgWeapons
     class RH_fn57: Pistol_Base_F
     {
         ACE_barrelTwist=231.14;
-        ACE_barrelLength=121.92;	
+        ACE_barrelLength=121.92;
     };
     class RH_vp70: Pistol_Base_F
     {
@@ -357,13 +357,13 @@ class CfgWeapons
         ACE_barrelTwist=246.38;
         ACE_barrelLength=119.38;
     };
-    
+
     class RH_PDW: Rifle_Base_F
     {
         ACE_barrelTwist=177.8;
         ACE_barrelLength=254.0;
     };
-    
+
     class RH_hb: Rifle_Base_F
     {
         ACE_barrelTwist=203.2;
@@ -464,7 +464,7 @@ class CfgWeapons
         ACE_barrelTwist=285.75;
         ACE_barrelLength=508.0;
     };
-    
+
     class hlc_rifle_ak74: Rifle_Base_F
     {
         ACE_barrelTwist=199.898;
@@ -606,7 +606,7 @@ class CfgWeapons
         ACE_barrelTwist=304.8;
         ACE_barrelLength=558.8;
     };
-    
+
     class hlc_smg_mp5k_PDW: Rifle_Base_F
     {
         ACE_barrelTwist=254.0;
@@ -652,7 +652,7 @@ class CfgWeapons
         ACE_barrelTwist=254.0;
         ACE_barrelLength=226.06;
     };
-            
+
     class hgun_mas_usp_F: Pistol_Base_F
     {
         ACE_barrelTwist=406.4;
@@ -925,7 +925,7 @@ class CfgWeapons
         ACE_twistDirection=0;
         ACE_barrelLength=469.9;
     };
-    
+
     class BWA3_P8: Pistol_Base_F
     {
         ACE_barrelTwist=248.92;
@@ -971,7 +971,7 @@ class CfgWeapons
         ACE_barrelTwist=381.0;
         ACE_barrelLength=736.6;
     };
-    
+
     class Trixie_L131A1: Pistol_Base_F
     {
         ACE_barrelTwist=248.92;
@@ -1027,7 +1027,7 @@ class CfgWeapons
         ACE_barrelTwist=304.8;
         ACE_barrelLength=533.4;
     };
-        
+
     class Trixie_M110: Rifle_Base_F
     {
         ACE_barrelTwist=279.4;
@@ -1113,7 +1113,7 @@ class CfgWeapons
         ACE_barrelTwist=304.8;
         ACE_barrelLength=629.92;
     };
-    
+
     class rhs_weap_pya: Pistol_Base_F
     {
         ACE_barrelTwist=254.0;
@@ -1295,7 +1295,7 @@ class CfgWeapons
         ACE_barrelTwist=254.0;
         ACE_barrelLength=144.78;
     };
-    
+
     class CUP_hgun_Colt1911: Pistol_Base_F
     {
         ACE_barrelTwist=406.4;
@@ -1305,13 +1305,13 @@ class CfgWeapons
     {
         ACE_barrelTwist=0.0;
         ACE_twistDirection=0;
-        ACE_barrelLength=457.2;		
+        ACE_barrelLength=457.2;
     };
     class CUP_arifle_AK_Base: Rifle_Base_F
     {
         ACE_barrelTwist=240.03;
         ACE_barrelLength=414.02;
-    };	
+    };
     class CUP_arifle_AK107_Base: Rifle_Base_F
     {
         ACE_barrelTwist=199.898;
@@ -1331,7 +1331,7 @@ class CfgWeapons
     {
         ACE_barrelTwist=195.072;
         ACE_barrelLength=589.28;
-    };			
+    };
     class CUP_srifle_AS50: Rifle_Long_Base_F
     {
         ACE_barrelTwist=381.0;
@@ -1341,7 +1341,7 @@ class CfgWeapons
     {
         ACE_barrelTwist=279.4;
         ACE_barrelLength=685.8;
-    };	
+    };
     class CUP_smg_bizon: Rifle_Base_F
     {
         ACE_barrelTwist=240.03;
@@ -1351,12 +1351,12 @@ class CfgWeapons
     {
         ACE_barrelTwist=248.92;
         ACE_barrelLength=94.996;
-    };	
+    };
     class CUP_srifle_CZ750: Rifle_Long_Base_F
     {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=660.4;
-    };	
+    };
     class CUP_arifle_CZ805_Base: Rifle_Base_F
     {
         ACE_barrelTwist=304.8;
@@ -1376,7 +1376,7 @@ class CfgWeapons
     {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=558.8;
-    };	
+    };
     class CUP_hgun_Duty: Pistol_Base_F
     {
         ACE_barrelTwist=248.92;
@@ -1386,7 +1386,7 @@ class CfgWeapons
     {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=533.4;
-    };	
+    };
     class CUP_arifle_G36A: Rifle_Base_F
     {
         ACE_barrelTwist=177.8;
@@ -1411,32 +1411,32 @@ class CfgWeapons
     {
         ACE_barrelTwist=248.92;
         ACE_barrelLength=114.046;
-    };	
+    };
     class CUP_srifle_CZ550: Rifle_Base_F
     {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=599.999;
-    };	
+    };
     class CUP_srifle_ksvk: Rifle_Long_Base_F
     {
         ACE_barrelTwist=457.2;
         ACE_barrelLength=999.998;
-    };	
+    };
     class CUP_lmg_L7A2: Rifle_Long_Base_F
     {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=629.92;
-    };	
+    };
     class CUP_arifle_L85A2_Base: Rifle_Base_F
     {
         ACE_barrelTwist=177.8;
         ACE_barrelLength=518.16;
-    };	
+    };
     class CUP_lmg_L110A1: Rifle_Long_Base_F
     {
         ACE_barrelTwist=177.8;
         ACE_barrelLength=347.98;
-    };	
+    };
     class CUP_srifle_LeeEnfield: Rifle_Base_F
     {
         ACE_barrelTwist=254.0;
@@ -1471,7 +1471,7 @@ class CfgWeapons
     {
         ACE_barrelTwist=285.75;
         ACE_barrelLength=609.6;
-    };	
+    };
     class CUP_lmg_M60A4: Rifle_Long_Base_F
     {
         ACE_barrelTwist=304.8;
@@ -1507,22 +1507,22 @@ class CfgWeapons
         ACE_twistDirection=0;
         ACE_barrelTwist=0.0;
         ACE_barrelLength=469.9;
-    };	
+    };
     class CUP_hgun_Makarov: Pistol_Base_F
     {
         ACE_barrelTwist=240.03;
         ACE_barrelLength=93.472;
-    };	
+    };
     class CUP_hgun_MicroUzi: Pistol_Base_F
     {
         ACE_barrelTwist=248.92;
         ACE_barrelLength=127.0;
-    };	
+    };
     class CUP_lmg_Mk48_Base: Rifle_Long_Base_F
     {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=501.65;
-    };	
+    };
     class CUP_smg_MP5SD6: Rifle_Base_F
     {
         ACE_barrelTwist=254.0;
@@ -1532,7 +1532,7 @@ class CfgWeapons
     {
         ACE_barrelTwist=254.0;
         ACE_barrelLength=226.06;
-    };	
+    };
     class CUP_hgun_PB6P9: Rifle_Base_F
     {
         ACE_barrelTwist=240.03;
@@ -1542,7 +1542,7 @@ class CfgWeapons
     {
         ACE_barrelTwist=246.38;
         ACE_barrelLength=119.38;
-    };	
+    };
     class CUP_lmg_PKM: Rifle_Long_Base_F
     {
         ACE_barrelTwist=240.03;
@@ -1552,7 +1552,7 @@ class CfgWeapons
     {
         ACE_barrelTwist=240.03;
         ACE_barrelLength=657.86;
-    };	
+    };
     class CUP_hgun_TaurusTracker455: Pistol_Base_F
     {
         ACE_barrelTwist=304.8;
@@ -1593,19 +1593,19 @@ class CfgWeapons
     {
         ACE_barrelTwist=177.8;
         ACE_barrelLength=457.2;
-    };	
+    };
     class CUP_arifle_Mk17_CQC: Rifle_Base_F
-    {	
+    {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=330.2;
     };
     class CUP_arifle_Mk17_STD: Rifle_Base_F
-    {	
+    {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=406.4;
     };
     class CUP_arifle_Mk20: Rifle_Base_F
-    {	
+    {
         ACE_barrelTwist=304.8;
         ACE_barrelLength=508.0;
     };
@@ -1642,7 +1642,7 @@ class CfgWeapons
     class CUP_M240_veh_W: Rifle_Long_Base_F
     {
         ACE_barrelTwist=304.8;
-        ACE_barrelLength=629.92;		 	
+        ACE_barrelLength=629.92;
     };
     class CUP_PKT_W: MGun
     {
@@ -1689,7 +1689,7 @@ class CfgWeapons
         ACE_barrelTwist=177.8;
         ACE_barrelLength=317.5;
     };
-    
+
     class VTN_AK_BASE: Rifle_Base_F
     {
         ACE_barrelTwist=199.898;

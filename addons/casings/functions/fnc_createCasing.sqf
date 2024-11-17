@@ -35,7 +35,7 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
         // use casing's default model
         private _model = getText (_cartridgeConfig >> "model");
         if ("a3\weapons_f\empty" in toLowerANSI _model) exitWith { "" };
-        
+
         // Add file extension if missing (fileExists needs file extension)
         if ((_model select [count _model - 4]) != ".p3d") then {
             _model = _model + ".p3d";

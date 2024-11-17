@@ -170,7 +170,7 @@ case (APP_MODE_WAYPOINTS): {
         private _currWaypointsCount = count _waypoints;
         if (_currWaypointsCount > (GVAR(prevWaypointsCount))) then {
             _currentIndex = _currWaypointsCount - 1;
-        } else {        
+        } else {
             _currentIndex = (_currentIndex max 0) min (_currWaypointsCount - 1);
         };
         if ((lbCurSel _wpListBox) != _currentIndex) then {
