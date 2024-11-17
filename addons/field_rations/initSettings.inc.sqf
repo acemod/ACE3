@@ -108,5 +108,5 @@
     [LSTRING(ZeusUpdates_DisplayName), LSTRING(ZeusUpdates_Description)],
     LSTRING(DisplayName),
     false,
-    true
+    1
 ] call CBA_fnc_addSetting;
