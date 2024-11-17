@@ -10,7 +10,7 @@
  * Does unit need treatment <BOOL>
  *
  * Example:
- * ACE_player call ace_medical_fnc_isInjured
+ * player call ace_medical_fnc_isInjured
  *
  * Public: Yes
  */
