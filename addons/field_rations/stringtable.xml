@@ -1283,7 +1283,7 @@
             <Chinesesimp>饮用水补给</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ZeusUpdates_Description">
-            <English>If enabled, players will need to eat and drink while in Zeus.</English>
+            <English>If enabled, hunger and thirst will continue to increase while the Zeus interface is open.</English>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ZeusUpdates_DisplayName">
             <English>Update Hunger And Thirst In Zeus</English>
