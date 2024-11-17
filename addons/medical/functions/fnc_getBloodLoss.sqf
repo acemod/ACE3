@@ -4,7 +4,7 @@
  * Calculate the total blood loss of a unit.
  *
  * Arguments:
- * 0: The Unit <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Total blood loss of unit (litres/second) <NUMBER>
