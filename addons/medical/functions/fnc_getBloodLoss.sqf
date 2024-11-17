@@ -19,4 +19,4 @@ params [["_unit", objNull, [objNull]]];
 
 if (isNull _unit) exitWith {-1};
 
-_unit call EFUNC(medical_status,getBloodLoss)
+GET_BLOOD_LOSS(_unit)
