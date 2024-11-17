@@ -27,4 +27,4 @@ GVAR(ammoCache) getOrDefaultCall [_ammo, {
     private _typicalSpeed = getNumber (_ammoConfig >> "typicalSpeed");
     private _penFactor = _caliber * ARMOR_PENETRABILITY;
     [_hit, _penFactor, _typicalSpeed] // return
-}, true] // return
+}, true]
