@@ -4,7 +4,7 @@
  * Custom wounds handler for armor penetration. Calculates damage based on round material penetration and unit armor
  *
  * Arguments:
- * 0: Unit That Was Hit <OBJECT>
+ * 0: Unit that was hit <OBJECT>
  * 1: Damage done to each body part <ARRAY>
  * 2: Type of the damage done <STRING>
  * 3: Projectile classname <STRING> (default: "")
