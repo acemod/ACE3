@@ -29,7 +29,7 @@ private _config = if (_class isEqualType configNull) then {
         _class call CBA_fnc_getItemConfig
     };
 };
-if (isNull _config || !(isClass _config)) exitWith {
+if (isNull _config) exitWith {
     ["", 0]
 };
 
