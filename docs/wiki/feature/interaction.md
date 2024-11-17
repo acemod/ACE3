@@ -45,3 +45,6 @@ Some of the zeus actions are also available (while in zeus) in the interaction m
  - Open the interaction menu.
  - Select `Waypoints`.
  - From here you can modify the speed / formation / behavior of the units / groups that are moving to that waypoint.
+
+### 2.4 Passing a grenade
+- Using the "Pass grenade" action, you can pass the currently selected grenade or throwable (which will be thrown if you press <kbd>G</kbd>) to another unit.
