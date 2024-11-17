@@ -19,16 +19,12 @@
 
 params ["_ammo"];
 
-private _return = GVAR(ammoCache) get _ammo;
-if (isNil "_return") then {
+GVAR(ammoCache) getOrDefaultCall [_ammo, {
     TRACE_1("Cache miss",_ammo);
     private _ammoConfig = configFile >> "CfgAmmo" >> _ammo;
     private _hit = getNumber (_ammoConfig >> "hit");
     private _caliber = (getNumber (_ammoConfig >> "caliber"));
     private _typicalSpeed = getNumber (_ammoConfig >> "typicalSpeed");
     private _penFactor = _caliber * ARMOR_PENETRABILITY;
-    _return = [_hit, _penFactor, _typicalSpeed];
-    GVAR(ammoCache) set [_ammo, _return];
-};
-
-_return // return
+    [_hit, _penFactor, _typicalSpeed] // return
+}, true] // return
