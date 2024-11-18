@@ -1286,7 +1286,7 @@
             <English>If enabled, hunger and thirst will continue to increase while the Zeus interface is open.</English>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ZeusUpdates_DisplayName">
-            <English>Update Hunger And Thirst In Zeus</English>
+            <English>Update Hunger and Thirst in Zeus</English>
         </Key>
     </Package>
 </Project>
