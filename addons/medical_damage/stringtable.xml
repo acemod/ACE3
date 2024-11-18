@@ -854,7 +854,7 @@
             <Japanese>手足のダメージしきい値</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_partDamageCap_Description">
-            <English>Sets the amount of damage a body part can receive before preventing more wounds from occuring</English>
+            <English>Sets the amount of damage a body part can receive before preventing more wounds from occurring.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_partDamageCap_DisplayName">
             <English>Body Part Damage Cap</English>
