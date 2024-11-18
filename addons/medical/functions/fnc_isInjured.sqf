@@ -23,4 +23,5 @@ if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit); };
 private _fractures = GET_FRACTURES(_unit);
 
 ((_fractures select HITPOINT_INDEX_LARM) == 1) || {(_fractures select HITPOINT_INDEX_RARM) == 1} ||
+{GET_BLOOD_VOLUME(_unit) != DEFAULT_BLOOD_VOLUME} ||
 {_unit call EFUNC(medical_ai,isInjured)}
