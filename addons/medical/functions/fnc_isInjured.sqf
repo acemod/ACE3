@@ -17,7 +17,8 @@
 
 params [["_unit", objNull, [objNull]]];
 
-if !(alive _unit) exitWith {false};
+if (!alive _unit) exitWith { false };
+if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit); };
 
 private _fractures = GET_FRACTURES(_unit);
 
