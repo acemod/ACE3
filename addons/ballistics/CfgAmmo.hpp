@@ -546,7 +546,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={867};
         ACE_barrelLengths[]={736.6};
     };
-    class ACE_408_Ball: BulletBase {
+    class ACE_408_Ball: B_408_Ball {
         timeToLive=10;
         airFriction=-0.00065414;
         typicalSpeed=1067;
