@@ -1,128 +1,128 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Logistics_Rope">
-        <Key ID="STR_ACE_Logistics_Rope_descriptionShort">
-            <English>A twisted braid of fibers. Usually used for rappelling or towing.</English>
-            <Japanese>組み紐されたロープ。ラペリングやけん引に使用されます。</Japanese>
-            <French>Une corde en fibres torsadées. Généralement utilisée pour la descente en rappel ou le remorquage.</French>
-            <Russian>Витой канат. Обычно используется для спуска или буксирования.</Russian>
-            <German>Ein verdrehtes Geflecht aus Fasern. Wird normalerweise zum Abseilen oder Abschleppen verwendet.</German>
-            <Italian>Una Corda composta da fibre intrecciate. Usata per Fastroping o trainare veicoli.</Italian>
-            <Polish>Lina skręcona z włókien. Zwykle używana do zjazdów lub holowania.</Polish>
-            <Chinesesimp>编织绳。通常用于索降和牵引拖曳。</Chinesesimp>
-            <Korean>꼬아진 섬유입니다. 주로 레펠이나 견인에 사용됩니다.</Korean>
-            <Spanish>Malla trenzada de fibras. Normalmente utilizada para descolgarse desde ella o remolcar.</Spanish>
-            <Portuguese>Uma trança torcida de fibras. Normalmente usada para rapel ou reboque.</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Logistics_Rope_Rope_3_Display">
-            <English>Rope 3.2 meters</English>
-            <German>3.2 Meter Seil</German>
-            <French>Corde de 3,2 mètres</French>
-            <Polish>Lina, długość 3,2 m.</Polish>
-            <Russian>Канат 3.2 метра</Russian>
-            <Portuguese>Corda (3.2m)</Portuguese>
-            <Italian>Corda da 3.2 metri</Italian>
-            <Czech>Lano 3.2 metrů</Czech>
-            <Turkish>3.2 metre halat</Turkish>
-            <Spanish>Cuerda de 3.2 metros</Spanish>
-            <Japanese>ロープ (3.2 メートル)</Japanese>
-            <Chinesesimp>绳索（3.2米）</Chinesesimp>
-            <Korean>줄 (3.2m)</Korean>
-        </Key>
-        <Key ID="STR_ACE_Logistics_Rope_Rope_6_Display">
-            <English>Rope 6.2 meters</English>
-            <German>6.2 Meter Seil</German>
-            <French>Corde de 6,2 mètres</French>
-            <Polish>Lina, długość 6,2 m.</Polish>
-            <Russian>Канат 6.2 метров</Russian>
-            <Portuguese>Corda (6.2m)</Portuguese>
-            <Italian>Corda da 6.2 metri</Italian>
-            <Czech>Lano 6.2 metrů</Czech>
-            <Turkish>6.2 metre halat</Turkish>
-            <Spanish>Cuerda de 6.2 metros</Spanish>
-            <Japanese>ロープ (6.2 メートル)</Japanese>
-            <Chinesesimp>绳索（6.2米）</Chinesesimp>
-            <Korean>줄 (6.2m)</Korean>
-        </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_12_Display">
             <English>Rope 12.2 meters</English>
-            <German>12.2 Meter Seil</German>
+            <Czech>Lano 12.2 metrů</Czech>
             <French>Corde de 12,2 mètres</French>
-            <Japanese>ロープ (12.2 メートル)</Japanese>
+            <Spanish>Cuerda de 12.2 metros</Spanish>
+            <Italian>Corda da 12.2 metri</Italian>
             <Polish>Lina, długość 12,2 m.</Polish>
-            <Russian>Канат 12.2 метров</Russian>
             <Portuguese>Corda (12.2m)</Portuguese>
+            <Russian>Канат 12.2 метров</Russian>
+            <German>12.2 Meter Seil</German>
+            <Korean>줄 (12.2m)</Korean>
+            <Japanese>ロープ (12.2 メートル)</Japanese>
             <Chinese>繩索（12.2公尺長）</Chinese>
             <Chinesesimp>绳索（12.2米）</Chinesesimp>
-            <Italian>Corda da 12.2 metri</Italian>
-            <Czech>Lano 12.2 metrů</Czech>
             <Turkish>12.2 metre halat</Turkish>
-            <Spanish>Cuerda de 12.2 metros</Spanish>
-            <Korean>줄 (12.2m)</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_15_Display">
             <English>Rope 15.2 meters</English>
-            <German>15.2 Meter Seil</German>
+            <Czech>Lano 15.2 metrů</Czech>
             <French>Corde de 15,2 mètres</French>
-            <Japanese>ロープ (15.2 メートル)</Japanese>
+            <Spanish>Cuerda de 15.2 metros</Spanish>
+            <Italian>Corda da 15.2 metri</Italian>
             <Polish>Lina, długość 15,2 m.</Polish>
-            <Russian>Канат 15.2 метров</Russian>
             <Portuguese>Corda (15.2m)</Portuguese>
+            <Russian>Канат 15.2 метров</Russian>
+            <German>15.2 Meter Seil</German>
+            <Korean>줄 (15.2m)</Korean>
+            <Japanese>ロープ (15.2 メートル)</Japanese>
             <Chinese>繩索（15.2公尺長）</Chinese>
             <Chinesesimp>绳索（15.2米）</Chinesesimp>
-            <Italian>Corda da 15.2 metri</Italian>
-            <Czech>Lano 15.2 metrů</Czech>
             <Turkish>15.2 metre halat</Turkish>
-            <Spanish>Cuerda de 15.2 metros</Spanish>
-            <Korean>줄 (15.2m)</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_18_Display">
             <English>Rope 18.3 meters</English>
-            <German>18.3 Meter Seil</German>
+            <Czech>Lano 18.3 metrů</Czech>
             <French>Corde de 18,3 mètres</French>
-            <Japanese>ロープ (18.3 メートル)</Japanese>
+            <Spanish>Cuerda de 18.3 metros</Spanish>
+            <Italian>Corda da 18.3 metri</Italian>
             <Polish>Lina, długość 18,3 m.</Polish>
-            <Russian>Канат 18.3 метров</Russian>
             <Portuguese>Corda (18.3m)</Portuguese>
+            <Russian>Канат 18.3 метров</Russian>
+            <German>18.3 Meter Seil</German>
+            <Korean>줄 (18.3m)</Korean>
+            <Japanese>ロープ (18.3 メートル)</Japanese>
             <Chinese>繩索（18.3公尺長）</Chinese>
             <Chinesesimp>绳索（18.3米）</Chinesesimp>
-            <Italian>Corda da 18.3 metri</Italian>
-            <Czech>Lano 18.3 metrů</Czech>
             <Turkish>18.3 metre halat</Turkish>
-            <Spanish>Cuerda de 18.3 metros</Spanish>
-            <Korean>줄 (18.3m)</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_27_Display">
             <English>Rope 27.4 meters</English>
-            <German>27.4 Meter Seil</German>
+            <Czech>Lano 27.4 metrů</Czech>
             <French>Corde de 27,4 mètres</French>
-            <Japanese>ロープ (27.4 メートル)</Japanese>
+            <Spanish>Cuerda de 27.4 metros</Spanish>
+            <Italian>Corda da 27.4 metri</Italian>
             <Polish>Lina, długość 27,4 m.</Polish>
-            <Russian>Канат 27.4 метров</Russian>
             <Portuguese>Corda (27.4m)</Portuguese>
+            <Russian>Канат 27.4 метров</Russian>
+            <German>27.4 Meter Seil</German>
+            <Korean>줄 (27.4m)</Korean>
+            <Japanese>ロープ (27.4 メートル)</Japanese>
             <Chinese>繩索（27.4公尺長）</Chinese>
             <Chinesesimp>绳索（27.4米）</Chinesesimp>
-            <Italian>Corda da 27.4 metri</Italian>
-            <Czech>Lano 27.4 metrů</Czech>
             <Turkish>27.4 metre halat</Turkish>
-            <Spanish>Cuerda de 27.4 metros</Spanish>
-            <Korean>줄 (27.4m)</Korean>
         </Key>
         <Key ID="STR_ACE_Logistics_Rope_Rope_36_Display">
             <English>Rope 36.6 meters</English>
-            <German>36.6 Meter Seil</German>
+            <Czech>Lano 36.6 metrů</Czech>
             <French>Corde de 36,6 mètres</French>
-            <Japanese>ロープ (36.6 メートル)</Japanese>
+            <Spanish>Cuerda 36.6 metros</Spanish>
+            <Italian>Corda da 36.6 metri</Italian>
             <Polish>Lina, długość 36,6 m.</Polish>
-            <Russian>Канат 36.6 метров</Russian>
             <Portuguese>Corda (36.6m)</Portuguese>
+            <Russian>Канат 36.6 метров</Russian>
+            <German>36.6 Meter Seil</German>
+            <Korean>줄 (36.6m)</Korean>
+            <Japanese>ロープ (36.6 メートル)</Japanese>
             <Chinese>繩索（36.6公尺長）</Chinese>
             <Chinesesimp>绳索（36.6米）</Chinesesimp>
-            <Italian>Corda da 36.6 metri</Italian>
-            <Czech>Lano 36.6 metrů</Czech>
             <Turkish>36.6 metre halat</Turkish>
-            <Spanish>Cuerda 36.6 metros</Spanish>
-            <Korean>줄 (36.6m)</Korean>
+        </Key>
+        <Key ID="STR_ACE_Logistics_Rope_Rope_3_Display">
+            <English>Rope 3.2 meters</English>
+            <Czech>Lano 3.2 metrů</Czech>
+            <French>Corde de 3,2 mètres</French>
+            <Spanish>Cuerda de 3.2 metros</Spanish>
+            <Italian>Corda da 3.2 metri</Italian>
+            <Polish>Lina, długość 3,2 m.</Polish>
+            <Portuguese>Corda (3.2m)</Portuguese>
+            <Russian>Канат 3.2 метра</Russian>
+            <German>3.2 Meter Seil</German>
+            <Korean>줄 (3.2m)</Korean>
+            <Japanese>ロープ (3.2 メートル)</Japanese>
+            <Chinesesimp>绳索（3.2米）</Chinesesimp>
+            <Turkish>3.2 metre halat</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Logistics_Rope_Rope_6_Display">
+            <English>Rope 6.2 meters</English>
+            <Czech>Lano 6.2 metrů</Czech>
+            <French>Corde de 6,2 mètres</French>
+            <Spanish>Cuerda de 6.2 metros</Spanish>
+            <Italian>Corda da 6.2 metri</Italian>
+            <Polish>Lina, długość 6,2 m.</Polish>
+            <Portuguese>Corda (6.2m)</Portuguese>
+            <Russian>Канат 6.2 метров</Russian>
+            <German>6.2 Meter Seil</German>
+            <Korean>줄 (6.2m)</Korean>
+            <Japanese>ロープ (6.2 メートル)</Japanese>
+            <Chinesesimp>绳索（6.2米）</Chinesesimp>
+            <Turkish>6.2 metre halat</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Logistics_Rope_descriptionShort">
+            <English>A twisted braid of fibers. Usually used for rappelling or towing.</English>
+            <French>Une corde en fibres torsadées. Généralement utilisée pour la descente en rappel ou le remorquage.</French>
+            <Spanish>Malla trenzada de fibras. Normalmente utilizada para descolgarse desde ella o remolcar.</Spanish>
+            <Italian>Una Corda composta da fibre intrecciate. Usata per Fastroping o trainare veicoli.</Italian>
+            <Polish>Lina skręcona z włókien. Zwykle używana do zjazdów lub holowania.</Polish>
+            <Portuguese>Uma trança torcida de fibras. Normalmente usada para rapel ou reboque.</Portuguese>
+            <Russian>Витой канат. Обычно используется для спуска или буксирования.</Russian>
+            <German>Ein verdrehtes Geflecht aus Fasern. Wird normalerweise zum Abseilen oder Abschleppen verwendet.</German>
+            <Korean>꼬아진 섬유입니다. 주로 레펠이나 견인에 사용됩니다.</Korean>
+            <Japanese>組み紐されたロープ。ラペリングやけん引に使用されます。</Japanese>
+            <Chinesesimp>编织绳。通常用于索降和牵引拖曳。</Chinesesimp>
         </Key>
     </Package>
 </Project>

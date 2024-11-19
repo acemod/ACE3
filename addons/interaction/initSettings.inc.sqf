@@ -22,6 +22,13 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(enableThrowablePassing), "CHECKBOX",
+    LSTRING(PassThrowableSetting),
+    format ["ACE %1", LLSTRING(DisplayName)],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(disableNegativeRating), "CHECKBOX",
     [LSTRING(DisableNegativeRating_DisplayName), LSTRING(DisableNegativeRating_Description)],
     format ["ACE %1", LLSTRING(DisplayName)],
