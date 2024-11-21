@@ -497,23 +497,41 @@ GVAR(isReloading) = false;
 [QGVAR(magazineReloading), "MagazineReloading", {
     params ["_unit", "", "_muzzle"];
 
+    TRACE_2("Init magazine reloading",_unit,_muzzle);
+
     // Wait until reload animation has started
     [{
         ((_this select 0) weaponState (_this select 1)) select 6 != 0
     }, {
+        TRACE_2("Start magazine reloading",_this select 0,_this select 1);
+
         // Player might switch units before reload starts
         if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
 
         GVAR(isReloading) = true;
+        GVAR(magazineReloadPhase) = 0;
 
         // Wait until reload animation has finished (if weapon is no longer available, it returns -1)
         [{
-            ((_this select 0) weaponState (_this select 1)) select 6 <= 0
+            private _magazineReloadingPhase = ((_this select 0) weaponState (_this select 1)) select 6;
+
+            // Need to check the reloading phase, as if you interrupt reloading with a gesture, the phase will remain stuck at a value > 0
+            if (GVAR(magazineReloadPhase) == _magazineReloadingPhase) exitWith {
+                TRACE_2("Interrupted magazine reloading",_this select 0,_this select 1);
+
+                true
+            };
+
+            GVAR(magazineReloadPhase) = _magazineReloadingPhase;
+
+            _magazineReloadingPhase <= 0
         }, {
+            TRACE_2("End magazine reloading",_this select 0,_this select 1);
+
             // Player might switch units before reload finishes
             if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
 
-            GVAR(isReloading) = false
+            GVAR(isReloading) = false;
         }, _this] call CBA_fnc_waitUntilAndExecute;
     }, [_unit, _muzzle], 5] call CBA_fnc_waitUntilAndExecute;
 }] call CBA_fnc_addBISPlayerEventHandler;
