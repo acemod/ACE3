@@ -12,7 +12,7 @@
  * 4: Delay between smoke and fire enabled <BOOL> (default: true)
  * 5: Ammo detonation chance <NUMBER> (default: 0)
  * 6: Detonate after cook-off <BOOL> (default: false)
- * 7: Selection for fire source <STRING> (default: "")
+ * 7: Selection for fire source <STRING><ARRAY> (default: "")
  * 8: Can spawn fire ring <BOOL> (default: true)
  * 9: Can spawn fire jet <BOOL> (default: true)
  * 10: Maximum intensity <NUMBER> (default: MAX_COOKOFF_INTENSITY)
@@ -199,4 +199,4 @@ if (_delayBetweenSmokeAndFire) then {
 }, [_vehicle, _selections, _ammoDetonationChance, _detonateAfterCookoff, _source, _instigator, _fireSelection, _canRing, _canJet, _smokeJipID, _fireJipID], _delay] call CBA_fnc_waitAndExecute;
 
 // API
-[QGVAR(cookoff), [_vehicle, _intensity, _instigator, _smokeDelayEnabled, _ammoDetonationChance, _detonateAfterCookoff, _fireSelection, _canRing, _maxIntensity, _canJet]] call CBA_fnc_globalEvent;
+[QGVAR(cookoff), [_vehicle, _intensity, _instigator, _delayBetweenSmokeAndFire, _ammoDetonationChance, _detonateAfterCookoff, _fireSelection, _canRing, _maxIntensity, _canJet]] call CBA_fnc_globalEvent;

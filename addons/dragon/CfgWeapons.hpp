@@ -19,7 +19,7 @@ class CfgWeapons {
         descriptionShort = CSTRING(dragonDescription);
         scope = 2;
 
-        class ACE_CSW {
+        class ace_csw {
             type = "mount";
             deployTime = 2;
             pickupTime = 2;
@@ -75,7 +75,7 @@ class CfgWeapons {
         opticsZoomMin = 0.055;
         opticsZoomMax = 0.055;
         scope = 2;
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 2;
             pickupTime = 1;

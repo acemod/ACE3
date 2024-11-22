@@ -1,88 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Medical_AI">
-        <Key ID="STR_ACE_Medical_AI_enableFor_title">
-            <English>Medic AI</English>
-            <German>Sanitäts KI</German>
-            <Japanese>衛生兵AI</Japanese>
-            <Russian>ИИ Медик</Russian>
-            <French>Médecine IA</French>
-            <Portuguese>IA Médica</Portuguese>
-            <Chinesesimp>AI 医疗兵</Chinesesimp>
-            <Chinese>AI醫療兵</Chinese>
-            <Italian>IA Medica</Italian>
-            <Czech>Zdravotnická AI</Czech>
-            <Polish>Medyk AI</Polish>
-            <Spanish>Médico para IA</Spanish>
-            <Turkish>Medikal AI</Turkish>
-            <Korean>인공지능 의무병</Korean>
-        </Key>
         <Key ID="STR_ACE_Medical_AI_enableFor_desc">
             <English>AI will respond to injury and unconsciousness</English>
-            <German>KI reagiert auf Verletzungen und Bewusstlosigkeit</German>
-            <Japanese>AIが負傷者と無意識状態の人に対して行動するようになります。</Japanese>
-            <Russian>ИИ будет реагировать на травмы и потерю сознания</Russian>
-            <French>Les unités IA seront sensibles aux blessures, ainsi qu'à la perte de connaissance.</French>
-            <Portuguese>A IA irá responder a ferimentos e perdas de consciência</Portuguese>
-            <Chinesesimp>AI 对于受伤及无意识单位会有所反应</Chinesesimp>
-            <Chinese>AI對於受傷及無意識單位會有所反應</Chinese>
-            <Italian>L'intelligenza artificiale risponderà a lesioni e perdita di coscienza</Italian>
             <Czech>UI reaguje na zranění a bezvědomí</Czech>
-            <Polish>AI zareaguje na obrażenia i utratę przytomności</Polish>
+            <French>Les unités IA seront sensibles aux blessures, ainsi qu'à la perte de connaissance.</French>
             <Spanish>La IA responderá a heridas e inconsciencia</Spanish>
+            <Italian>L'intelligenza artificiale risponderà a lesioni e perdita di coscienza</Italian>
+            <Polish>AI zareaguje na obrażenia i utratę przytomności</Polish>
+            <Portuguese>A IA irá responder a ferimentos e perdas de consciência</Portuguese>
+            <Russian>ИИ будет реагировать на травмы и потерю сознания</Russian>
+            <German>KI reagiert auf Verletzungen und Bewusstlosigkeit</German>
             <Korean>인공지능이 기절이나 부상에 대응합니다</Korean>
+            <Japanese>AIが負傷者と無意識状態の人に対して行動するようになります。</Japanese>
+            <Chinese>AI對於受傷及無意識單位會有所反應</Chinese>
+            <Chinesesimp>AI 对于受伤及无意识单位会有所反应</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_AI_enableFor_title">
+            <English>Medic AI</English>
+            <Czech>Zdravotnická AI</Czech>
+            <French>Médecine IA</French>
+            <Spanish>Médico para IA</Spanish>
+            <Italian>IA Medica</Italian>
+            <Polish>Medyk AI</Polish>
+            <Portuguese>IA Médica</Portuguese>
+            <Russian>ИИ Медик</Russian>
+            <German>Sanitäts KI</German>
+            <Korean>인공지능 의무병</Korean>
+            <Japanese>衛生兵AI</Japanese>
+            <Chinese>AI醫療兵</Chinese>
+            <Chinesesimp>AI 医疗兵</Chinesesimp>
+            <Turkish>Medikal AI</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_AI_enabledFor_OnlyServerAndHC">
             <English>Only Server and HC</English>
-            <German>Nur Server und HC</German>
-            <Spanish>Sólo Server y HC</Spanish>
-            <Russian>Только сервер и HC</Russian>
-            <Japanese>サーバーとHCのみ</Japanese>
-            <Polish>Tylko serwer i HC</Polish>
-            <French>Seulement sur le serveur ou le HC</French>
-            <Italian>Solo Server e HC</Italian>
-            <Chinesesimp>只在服务器或无头客户端</Chinesesimp>
-            <Chinese>只在伺服器或無頭客戶端</Chinese>
-            <Korean>서버와 헤드리스 전용</Korean>
-            <Portuguese>Apenas Servidor e HC</Portuguese>
             <Czech>Pouze Server a HC</Czech>
+            <French>Seulement sur le serveur ou le HC</French>
+            <Spanish>Sólo Server y HC</Spanish>
+            <Italian>Solo Server e HC</Italian>
+            <Polish>Tylko serwer i HC</Polish>
+            <Portuguese>Apenas Servidor e HC</Portuguese>
+            <Russian>Только сервер и HC</Russian>
+            <German>Nur Server und HC</German>
+            <Korean>서버와 헤드리스 전용</Korean>
+            <Japanese>サーバーとHCのみ</Japanese>
+            <Chinese>只在伺服器或無頭客戶端</Chinese>
+            <Chinesesimp>只在服务器或无头客户端</Chinesesimp>
             <Turkish>Sadece Sunucu ve HC de</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Medical_AI_requireItems_title">
-            <English>Require Items</English>
-            <Polish>Wymagane Przedmioty</Polish>
-            <German>Erfordere Gegenstände</German>
-            <Italian>Richiede risorse mediche</Italian>
-            <Korean>아이템 필요</Korean>
-            <French>Items requis</French>
-            <Portuguese>Exigir Itens</Portuguese>
-            <Japanese>アイテムを要求</Japanese>
-            <Russian>Требуемые предметы</Russian>
-            <Spanish>Requerir Objetos</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Medical_AI_requireItems_desc">
-            <English>AI will only perform medical treatment if they have the necessary items in their inventory.</English>
-            <Polish>AI będzie wykonywać zabiegi medyczne tylko wtedy, gdy ma w ekwipunku niezbędne przedmioty.</Polish>
-            <German>Die KI führt nur dann medizinische Behandlungen durch, wenn sie die erforderlichen Gegenstände in ihrem Inventar hat.</German>
-            <Italian>L'IA effettua trattamenti medici solo se è equipaggiata delle risorse mediche necessarie.</Italian>
-            <Korean>소지품에 필요한 아이템이 있을 경우에만 인공지능이 치료를 진행합니다.</Korean>
-            <French>Les IA n'effectueront un traitement médical que si elles ont le matériel nécessaire dans leur inventaire.</French>
-            <Portuguese>A IA só irá realizar tratamento médico se tiver os itens necessários em seu inventário.</Portuguese>
-            <Japanese>AIのインベントリに必要なアイテムがある場合にのみ治療を実行します。</Japanese>
-            <Russian>Искусственный интеллект будет оказывать медицинскую помощь только в том случае, если в его инвентаре есть необходимые предметы.</Russian>
-            <Spanish>La IA sólo realizará el tratamiento médico en caso de que dispongan de los objetos necesarios en su inventario.</Spanish>
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_autoReplaceItems">
             <English>Auto Convert Items for AI</English>
-            <Polish>Automatyczna Konwersja Przedmiotów dla AI</Polish>
-            <Korean>인공지능 아이템 자동 변환</Korean>
             <French>Conversion automatique des items pour les IA</French>
-            <German>Automatische Konvertierung von Gegenständen der KI</German>
-            <Italian>Conversione automatica di risorse mediche per IA</Italian>
-            <Portuguese>Conversão automática de itens para IA</Portuguese>
-            <Japanese>AIのアイテムを自動変換</Japanese>
-            <Russian>Автоматическое преобразование элементов для ИИ</Russian>
             <Spanish>Auto Convertir Objetos para la IA</Spanish>
+            <Italian>Conversione automatica di risorse mediche per IA</Italian>
+            <Polish>Automatyczna Konwersja Przedmiotów dla AI</Polish>
+            <Portuguese>Conversão automática de itens para IA</Portuguese>
+            <Russian>Автоматическое преобразование элементов для ИИ</Russian>
+            <German>Automatische Konvertierung von Gegenständen der KI</German>
+            <Korean>인공지능 아이템 자동 변환</Korean>
+            <Japanese>AIのアイテムを自動変換</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_AI_requireItems_desc">
+            <English>AI will only perform medical treatment if they have the necessary items in their inventory.</English>
+            <French>Les IA n'effectueront un traitement médical que si elles ont le matériel nécessaire dans leur inventaire.</French>
+            <Spanish>La IA sólo realizará el tratamiento médico en caso de que dispongan de los objetos necesarios en su inventario.</Spanish>
+            <Italian>L'IA effettua trattamenti medici solo se è equipaggiata delle risorse mediche necessarie.</Italian>
+            <Polish>AI będzie wykonywać zabiegi medyczne tylko wtedy, gdy ma w ekwipunku niezbędne przedmioty.</Polish>
+            <Portuguese>A IA só irá realizar tratamento médico se tiver os itens necessários em seu inventário.</Portuguese>
+            <Russian>Искусственный интеллект будет оказывать медицинскую помощь только в том случае, если в его инвентаре есть необходимые предметы.</Russian>
+            <German>Die KI führt nur dann medizinische Behandlungen durch, wenn sie die erforderlichen Gegenstände in ihrem Inventar hat.</German>
+            <Korean>소지품에 필요한 아이템이 있을 경우에만 인공지능이 치료를 진행합니다.</Korean>
+            <Japanese>AIのインベントリに必要なアイテムがある場合にのみ治療を実行します。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Medical_AI_requireItems_title">
+            <English>Require Items</English>
+            <French>Items requis</French>
+            <Spanish>Requerir Objetos</Spanish>
+            <Italian>Richiede risorse mediche</Italian>
+            <Polish>Wymagane Przedmioty</Polish>
+            <Portuguese>Exigir Itens</Portuguese>
+            <Russian>Требуемые предметы</Russian>
+            <German>Erfordere Gegenstände</German>
+            <Korean>아이템 필요</Korean>
+            <Japanese>アイテムを要求</Japanese>
         </Key>
     </Package>
 </Project>

@@ -21,10 +21,10 @@ if (hasInterface) then {
         ["ACE_controlledUAV", {
             params ["_UAV", "_seatAI", "_turret", "_position"];
             TRACE_4("ACE_controlledUAV EH",_UAV,_seatAI,_turret,_position);
-            if (!isNull _seatAI) then {
-                [_seatAI] call FUNC(showVehicleHud);
-            } else {
+            if (isNull _seatAI) then {
                 [ace_player] call FUNC(showVehicleHud);
+            } else {
+                [_seatAI] call FUNC(showVehicleHud);
             };
         }] call CBA_fnc_addEventHandler;
     }] call CBA_fnc_addEventHandler;
@@ -69,7 +69,6 @@ if (hasInterface) then {
         _unit setVariable [QGVAR(laserSpotTrackerOn), false];
 
         private _condition = {
-            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
             (_player == driver _target)
             && {(_target getVariable [QGVAR(laserSpotTrackerOn), false])}
             && {[_player, _target, []] call EFUNC(common,canInteractWith)}
@@ -78,7 +77,6 @@ if (hasInterface) then {
         [_unit, 1, ["ACE_SelfActions"], _actionOff] call EFUNC(interact_menu,addActionToObject);
 
         private _condition = {
-            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
             (_player == driver _target)
             && {!(_target getVariable [QGVAR(laserSpotTrackerOn), false])}
             && {[_player, _target, []] call EFUNC(common,canInteractWith)}

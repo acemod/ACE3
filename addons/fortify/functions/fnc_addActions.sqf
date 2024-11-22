@@ -53,9 +53,9 @@ private _subActions = createHashMap;
 } forEach _objects;
 
 {
-    private _displayName = if (isLocalized _x) then { 
+    private _displayName = if (isLocalized _x) then {
         localize _x
-    } else { 
+    } else {
         if (isText (configFile >> "ACEX_Fortify_Presets" >> _x >> "displayName")) exitWith { getText (configFile >> "ACEX_Fortify_Presets" >> _x >> "displayName") };
         if (isText (missionConfigFile >> "ACEX_Fortify_Presets" >> _x >> "displayName")) exitWith { getText (missionConfigFile >> "ACEX_Fortify_Presets" >> _x >> "displayName") };
         _x

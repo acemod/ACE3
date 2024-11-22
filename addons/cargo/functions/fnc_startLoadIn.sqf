@@ -36,7 +36,7 @@ if (isNull _vehicle) exitWith {
 
 // Start progress bar
 if ([_item, _vehicle] call FUNC(canLoadItemIn)) then {
-    private _duration = GVAR(loadTimeCoefficient) * (_item call FUNC(getSizeItem));
+    private _duration = [_item, false] call FUNC(getDelayItem);
 
     // If load time is 0, don't show a progress bar
     if (_duration <= 0) exitWith {

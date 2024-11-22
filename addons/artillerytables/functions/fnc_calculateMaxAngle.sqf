@@ -24,8 +24,5 @@ TRACE_2("callExtension:artillery:find_max_angle",_muzzleVelocity,_airFriction);
     "ace" callExtension ["artillery:find_max_angle", [_muzzleVelocity, _airFriction]]
 ) params ["_data", "_code"];
 TRACE_1("",_code);
-(parseSimpleArray _data) params ["_bestAngle", "_bestDistance", ""];
-_returns = [deg _bestAngle * 6400 / 360, _bestDistance];
-_returns params ["_bestAngle", "_bestDistance"];
-
-_returns
+(parseSimpleArray _data) params ["_bestAngle", "_bestDistance"];
+[deg _bestAngle * 6400 / 360, _bestDistance] // return
