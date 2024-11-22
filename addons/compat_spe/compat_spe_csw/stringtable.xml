@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_SPE_CSW">
+        <Key ID="STR_ACE_Compat_SPE_CSW_100Rnd_762x63_Tracer">
+            <English>.30-06 100Rnd Belt (M2/Tracer)</English>
+            <Spanish>Cinta de .30-06 100Rnd (M2/Trazadora)</Spanish>
+            <Korean>.30-06구경 스프링필드 100발 들이 벨트 (M2 훈련용/예광탄)</Korean>
+            <Japanese>.30-06 100Rnd Belt (M2/Tracer)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_SPE_CSW_100Rnd_792x57_Tracer">
+            <English>7.92x57 100Rnd Belt (L.S./Tracer)</English>
+            <Spanish>Cinta de 7.92x57 100Rnd (L.S./Trazadora)</Spanish>
+            <Korean>7.92x57mm 100발 들이 벨트 (L.S. 훈련용/예광탄)</Korean>
+            <Japanese>7.92x57 100Rnd Belt (L.S./Tracer)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_SPE_CSW_50Rnd_762x63_Tracer">
+            <English>.30-06 50Rnd Belt (M2/Tracer)</English>
+            <Spanish>Cinta de .30-06 50Rnd (M2/Trazadora)</Spanish>
+            <Korean>.30-06구경 스프링필드 50발 들이 벨트 (M2 훈련용/예광탄)</Korean>
+            <Japanese>.30-06 50Rnd Belt (M2/Tracer)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_SPE_CSW_50Rnd_792x57_Tracer">
+            <English>7.92x57 50Rnd Gurttrommel (L.S./Tracer)</English>
+            <Spanish>Tambor de 7.92x57 50Rnd (L.S./Trazadora)</Spanish>
+            <Korean>7.92x57mm 50발 들이 벨트 (L.S. 훈련용/예광탄)</Korean>
+            <Japanese>7.92x57 50Rnd Gurttrommel (L.S./Tracer)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_SPE_CSW_alteringHeight">
+            <English>Altering Height...</English>
+            <Spanish>Cambiando Altura...</Spanish>
+            <Korean>높이 변경 중...</Korean>
+            <Japanese>高さを変更・・・</Japanese>
+        </Key>
+    </Package>
+</Project>

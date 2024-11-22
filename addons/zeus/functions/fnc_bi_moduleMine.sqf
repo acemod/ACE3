@@ -19,6 +19,7 @@
  */
 
 params ["_logic", "_units", "_activated"];
+// IGNORE_PRIVATE_WARNING["_explosive", "_side"];
 
 if (_activated) then {
     _explosive = getText (configOf _logic >> "explosive");

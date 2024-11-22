@@ -29,6 +29,7 @@ if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit) };
 if !(_unit getVariable [QGVAR(initialized), false]) exitWith {
     [QEGVAR(medical_status,initialized), {
         params ["_unit"];
+        //IGNORE_PRIVATE_WARNING ["_thisArgs", "_thisId", "_thisType"];
         _thisArgs params ["_target"];
 
         if (_unit == _target) then {

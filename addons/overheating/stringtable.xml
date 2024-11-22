@@ -1,944 +1,944 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Overheating">
-        <Key ID="STR_ACE_Overheating_DisplayName">
-            <English>Overheating</English>
-            <German>Heißlaufen</German>
-            <Spanish>Sobrecalentamiento</Spanish>
-            <Italian>Surriscaldamento</Italian>
-            <Chinese>過熱</Chinese>
-            <Chinesesimp>过热</Chinesesimp>
-            <Japanese>過熱</Japanese>
-            <Polish>Przegrzewanie</Polish>
-            <Russian>Перегрев</Russian>
-            <Portuguese>Super Aquecimento</Portuguese>
-            <Hungarian>Túlmelegedés</Hungarian>
-            <French>Surchauffe</French>
-            <Czech>Přehřívání</Czech>
-            <Korean>과열</Korean>
-        </Key>
-        <Key ID="STR_ACE_Overheating_enabled_displayName">
-            <English>Overheating Enabled</English>
-            <German>Überhitzung aktiviert</German>
-            <Spanish>Activado Sobrecalentamiento</Spanish>
-            <Portuguese>Superaquecimento ativado</Portuguese>
-            <French>Surchauffe activée</French>
-            <Russian>Перегрев включен</Russian>
-            <Czech>Přehřívání povoleno</Czech>
-            <Japanese>過熱を有効化</Japanese>
-            <Polish>Przegrzewanie włączone</Polish>
-            <Korean>과열 활성화</Korean>
-            <Italian>Surriscaldamento Abilitato</Italian>
-            <Chinesesimp>启用过热</Chinesesimp>
-            <Chinese>啟用過熱</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_enabled_description">
-            <English>Master enable for the overheating/jamming module</English>
-            <Spanish>Activación maestra para Sobrecalentamiento</Spanish>
-            <Portuguese>Chave mestra para o módulo de superaquecimento/emperramento</Portuguese>
-            <French>Active le module de surchauffe/d'enrayement.</French>
-            <Russian>Главный включатель для модуля перегрева/заклинивания</Russian>
-            <Japanese>過熱と弾詰まりモジュールを全て有効化します</Japanese>
-            <Polish>Główny włącznik modułu przegrzewania/zacinania się broni</Polish>
-            <German>Hauptschalter, um die Überhitzung-/Ladehemmung-Module zu aktivieren</German>
-            <Korean>과열/탄걸림 마스터 활성화</Korean>
-            <Italian>Abilitazione master per il modulo di surriscaldamento / inceppamento</Italian>
-            <Chinesesimp>启用枪管过热/干扰模块</Chinesesimp>
-            <Chinese>啟用槍管過熱/干擾模塊</Chinese>
-            <Czech>Hlavní přepínač pro modul přehřívání/zasekávání</Czech>
-        </Key>
-        <Key ID="STR_ACE_Overheating_heatCoef_displayName">
-            <English>Heating Coefficient</English>
-            <Japanese>過熱係数</Japanese>
-            <French>Coefficient de surchauffe</French>
-            <Italian>Coefficiente di riscaldamento</Italian>
-            <Russian>Коэф. нагрева</Russian>
-            <German>Erhitzungs-Koeffizient</German>
-            <Polish>Współczynnik nagrzewania</Polish>
-            <Chinesesimp>过热系数</Chinesesimp>
-            <Korean>과열 계수</Korean>
-            <Spanish>Coeficiente de calentamiento</Spanish>
-            <Portuguese>Coeficiente de aquecimento</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_heatCoef_description">
-            <English>Coefficient for the amount of heat a weapon generates per shot.\nHigher value increases heat.</English>
-            <Japanese>射撃毎に武器が生み出す熱量の係数を設定します。\n高い値であるほど熱量が増加します。</Japanese>
-            <French>Coefficient impactant la quantité de chaleur générée par l'arme à chaque tir.</French>
-            <Italian>Coefficiente che determina la quantità di calore generato da un'arma con ogni colpo sparato.\nValori alti accelerano il riscaldamento.</Italian>
-            <Russian>Коэффициент количества тепла, выделяемого оружием за выстрел. \nБольшие значения увеличивают нагрев.</Russian>
-            <German>Koeffizient für die Menge an Hitze, die eine Waffe pro Schuss erzeugt.\nHöhere Werte beschleunigen die Erhitzung.</German>
-            <Polish>Współczynnik wpływający na ilość ciepła generowanego przez broń przy każdym strzale.</Polish>
-            <Chinesesimp>武器每次射击产生的热量系数。\n数值越高，热量越高。</Chinesesimp>
-            <Korean>매 발사마다 만들어지는 열에 계수를 적용합니다.\n높은 계수는 더 많은 열을 발생시킵니다.</Korean>
-            <Spanish>Coeficiente para la cantidad de calor que genera un arma por disparo.\nValores más altos incrementan el calor</Spanish>
-            <Portuguese>Coeficiente da quantidade de calor que um armamento gera por disparo.\nValores mais altos potencializam o aquecimento.</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_coolingCoef_displayName">
-            <English>Cooling Coefficient</English>
-            <Chinesesimp>冷却系数</Chinesesimp>
-            <Korean>냉각 계수</Korean>
-            <German>Abkühlungskoeffizienten</German>
-            <Italian>Coefficiente di raffreddamento</Italian>
-            <Polish>Współczynnik chłodzenia</Polish>
-            <Japanese>冷却係数</Japanese>
-            <Russian>Коэф. остывания</Russian>
-            <Spanish>Coeficiente de enfriado</Spanish>
-            <French>Coefficient de refroidissement</French>
-            <Portuguese>Coeficiente de resfriamento</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_coolingCoef_description">
-            <English>Coefficient for how quickly a weapon cools down.\nHigher value increases cooling speed.</English>
-            <Chinesesimp>武器冷却速度系数。\n数值越高，冷却速度越快。</Chinesesimp>
-            <Korean>무기가 차가워지는 정도를 정합니다.\n높은 계수는 무기가 빨리 차가워지는데 관여합니다.</Korean>
-            <German>Koeffizient, der angibt, wie schnell eine Waffe abkühlt.\nEin höherer Wert erhöht die Abkühlgeschwindigkeit.</German>
-            <Italian>Coefficiente che determina la velocità di raffreddamento di un'arma.\nValori alti aumentano la velocità di raffreddamento.</Italian>
-            <Polish>Współczynnik szybkości chłodzenia broni.\nWiększa wartość zwiększa szybkość chłodzenia.</Polish>
-            <Japanese>武器の冷却速度の係数。\n値を大きくすると冷却速度が速くなります。</Japanese>
-            <Russian>Коэффициент скорости остывания орудия.\nЧем больше значение, тем быстрее остывает.</Russian>
-            <Spanish>Coeficiente para cómo de rápido se enfría un arma.\nValores más altos incrementan la velocidad de enfriamiento.</Spanish>
-            <French>Coefficient de rapidité de refroidissement de l'arme.\nUne valeur élevée augmente la vitesse de refroidissement.</French>
-            <Portuguese>Coeficiente que determina o quão rápido a arma resfria.\nValores mais altos potencializam o resfriamento.</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_suppressorCoef_displayName">
-            <English>Suppressor Coefficient</English>
-            <Chinesesimp>消音器系数</Chinesesimp>
-            <Korean>소음기 계수</Korean>
-            <German>Schalldämpfer-Koeffizient</German>
-            <Italian>Coefficiente di Silenziatore</Italian>
-            <Polish>Współczynnik tłumika</Polish>
-            <Japanese>サプレッサー係数</Japanese>
-            <Russian>Коэф. глушителя</Russian>
-            <Spanish>Coeficiente del silenciador</Spanish>
-            <French>Coefficient de suppresion</French>
-            <Portuguese>Coeficiente de supressão</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_suppressorCoef_description">
-            <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>
-            <Chinesesimp>附加了消音器后，产生的额外热量系数。\n数值越高，热量越高，0意味着消音器不产生额外热量。</Chinesesimp>
-            <Korean>소음기 장착 시 만들어 지는 열에 대한 계수를 적용합니다.\n높을 수록 온도가 높아집니다, 0으로 설정 시 추가적인 열을 얻지 않습니다.</Korean>
-            <German>Koeffizient, der angibt, wie viel zusätzliche Wärme durch das Anbringen eines Schalldämpfers hinzugefügt wird. Ein höherer Wert erhöht die Menge an Wärme, 0 bedeutet, dass keine zusätzliche Wärme durch den Schalldämpfer hinzukommt.</German>
-            <Italian>Coefficiente che determina quanto calore viene aggiunto dalla presenza di un silenziatore.\nValori alti aumentano il calore, 0 significa che un silenziatore non fa differenza.</Italian>
-            <Polish>Współczynnik określający, ile dodatkowego ciepła jest dodawane z założonego tłumika.\nWyższa wartość zwiększa ciepło, 0 oznacza brak dodatkowego ciepła z tłumika.</Polish>
-            <Japanese>サプレッサーを取り付けることで追加される熱量の係数。\n値が大きいほど熱が増加し、0はサプレッサーからの追加の熱がないことを意味します。</Japanese>
-            <Russian>Коэффициент указывающий как много дополнительного тепла будет выделяться прикреплённым глушителем.\nБольшее значение увеличивает выделение тепла, 0 - отсутствие дополнительного тепла.</Russian>
-            <Spanish>Coeficiente para cuanto calor adicional es añadido por tener un silenciador montado.\nValores más altos incrementan el calor. 0 significa que el silenciador no añade calor adicional.</Spanish>
-            <French>Coefficient d'ajout de chaleur lorsqu'un suppresseur est installé.\nUne valeur élevée augmente la chaleur, 0 signifique qu'aucune chaleur ne sera ajouté par le suppresseur.</French>
-        </Key>
-        <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
-            <English>Display Text on Jam</English>
-            <German>Zeige Text bei Ladehemmung</German>
-            <Spanish>Mostrar texto al encasquillarse</Spanish>
-            <Russian>Показывать текст, когда клинит оружие</Russian>
-            <Czech>Zobrazit upozornění při zaseknutí</Czech>
-            <Polish>Wyświetl tekst przy zacięciu broni</Polish>
-            <French>Afficher du texte si enrayé</French>
-            <Hungarian>Szöveges értesítés kijelzése a fegyver elakadásakor</Hungarian>
-            <Portuguese>Mostrar texto quando trava acontecer</Portuguese>
-            <Italian>Visualizza testo in caso di inceppamento</Italian>
-            <Japanese>弾詰まりを文章で表示</Japanese>
-            <Korean>탄걸림의 경우 화면에 표시</Korean>
-            <Chinesesimp>在卡弹时显示提示信息</Chinesesimp>
-            <Chinese>在卡彈時顯示提示訊息</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_DisplayTextOnJam_description">
-            <English>Display a notification whenever your weapon gets jammed</English>
-            <German>Zeige einen Hinweis, wenn die Waffe eine Ladehemmung hat.</German>
-            <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
-            <Russian>Показывать уведомление каждый раз, когда клинит Ваше оружие.</Russian>
-            <Czech>Zobrazí upozornění při zaseknutí zbraně</Czech>
-            <Polish>Wyświetl powiadomienie za każdym razem, kiedy Twoja broń ulegnie zacięciu</Polish>
-            <French>Affiche une notification lorsque votre arme est enrayée.</French>
-            <Hungarian>Egy szöveges értesítés jelenik meg, amikor a fegyver megakad</Hungarian>
-            <Portuguese>Mostra uma notificação quando sua arma sofre um travamento.</Portuguese>
-            <Italian>Visualizza una notifica quando tua arma si inceppa</Italian>
-            <Japanese>持っている武器が弾詰まりをすると、通知を表示します</Japanese>
-            <Korean>총알이 무기에 걸릴 경우 화면에 알림을 띄웁니다</Korean>
-            <Chinesesimp>当武器卡弹时显示提示信息</Chinesesimp>
-            <Chinese>當武器卡彈時顯示提示訊息</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_showParticleEffects_displayName">
-            <English>Overheating Particle Effects</English>
-            <German>Partikeleffekt bei Überhitzung</German>
-            <Polish>Efekty cząsteczkowe przegrzania</Polish>
-            <Italian>Effetti Particelle Surriscaldamento</Italian>
-            <Spanish>Efectos de partículas</Spanish>
-            <French>Effets de particules </French>
-            <Czech>Částicové efekty přehřívání</Czech>
-            <Portuguese>Efeito de partícula de superaquecimento</Portuguese>
-            <Russian>Эффект частиц при перегреве</Russian>
-            <Japanese>過熱の視覚効果</Japanese>
-            <Korean>과열 입자 효과</Korean>
-            <Chinesesimp>枪管过热特效</Chinesesimp>
-            <Chinese>槍管過熱特效</Chinese>
-            <Hungarian>Részecskék túlmelegedése</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Overheating_showParticleEffects_description">
-            <English>Show particle effects when weapon overheats</English>
-            <German>Zeige einen Partikeleffekt, wenn die Waffe überhitzt.</German>
-            <Polish>Pokaż efekty cząsteczkowe kiedy broń się przegrzeje</Polish>
-            <Italian>Mostra effetti particellari quando l'arma si surriscalda</Italian>
-            <Spanish>Muestra efectos de partículas cuando el arma del jugador se sobreacalienta</Spanish>
-            <French>Affiche des effets de particules lorsqu'une arme surchauffe.</French>
-            <Portuguese>Mostra efeitos de partícula quando a arma superaquece</Portuguese>
-            <Russian>Показывать эффект частиц, когда оружие перегревается</Russian>
-            <Czech>Zobrazit částicové efekty když se zbraň přehřije</Czech>
-            <Japanese>武器を過熱すると視覚表現を表示します</Japanese>
-            <Korean>무기가 과열되면 입자 효과를 보여줍니다</Korean>
-            <Chinesesimp>显示枪管过热特效</Chinesesimp>
-            <Chinese>顯示槍管過熱特效</Chinese>
-            <Hungarian>Fegyvertúlmelegedést okozó részecskehatások mutatása</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
-            <English>Overheating Particle Effects for Everyone</English>
-            <German>Zeige Partikeleffekt bei Überhitzung für jeden</German>
-            <Polish>Pokaż efekty cząsteczkowe dla wszystkich</Polish>
-            <Italian>Effetti Particellari Surriscaldamento per tutti</Italian>
-            <Spanish>Efectos de partículas para todos</Spanish>
-            <French>Effets de particules pour tout le monde</French>
-            <Czech>Částicové efekty přehřívání pro všechny</Czech>
-            <Portuguese>Efeito de partícula de superaquecimento para todos</Portuguese>
-            <Russian>Эффект частиц при перегреве для всех</Russian>
-            <Japanese>過熱の視覚表現を全員に</Japanese>
-            <Korean>모두에게 과열 입자 효과 적용</Korean>
-            <Chinesesimp>显示其他玩家的枪管过热特效</Chinesesimp>
-            <Chinese>顯示其他玩家的槍管過熱特效</Chinese>
-            <Hungarian>A részecskék túlmelegedésének hatása mindenki számára</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_description">
-            <English>Show particle effects when other players weapon overheats</English>
-            <German>Zeigt Partikeleffekt auch bei überhitzten Waffen von Mitspielern.</German>
-            <Polish>Pokazuje efekty cząsteczkowe kiedy broń innego gracza się przegrzeje</Polish>
-            <Italian>Mostra effetti particellari quando l'arma di altri giocatori si surriscalda</Italian>
-            <Spanish>Muestra efectos de partículas cuando el arma de jugadores cercanos se sobreacalienta</Spanish>
-            <French>Affiche les effets de particules lorsque les armes des autres joueurs surchauffent.</French>
-            <Portuguese>Mostra efeito de partículas quando a arma de outros jogadores superaquece</Portuguese>
-            <Russian>Показывать эффект частиц, когда оружие других игроков перегревается</Russian>
-            <Czech>Zobrazit částicové efekty když se zbraň přehřije jinému hráči</Czech>
-            <Japanese>他のプレイヤーの過熱の視覚表現を表示します</Japanese>
-            <Korean>모든 인원이 무기가 과열될 시 입자 효과가 나타납니다.</Korean>
-            <Chinesesimp>当其他玩家的武器过热时显示特效</Chinesesimp>
-            <Chinese>當其他玩家的武器過熱時顯示特效</Chinese>
-            <Hungarian>Mutassa a részecskehatásokat, amikor más játékosok fegyvere melegedik túl</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
-            <English>Overheating Dispersion</English>
-            <German>Streuung bei Überhitzung</German>
-            <Polish>Wpływ na rozrzut</Polish>
-            <Italian>Dispersione da Surriscaldamento</Italian>
-            <Spanish>Dispersión</Spanish>
-            <French>Dispersion</French>
-            <Portuguese>Dispersão de superaquecimento</Portuguese>
-            <Russian>Разброс при перегреве</Russian>
-            <Czech>Důsledky přehřátí zbraně</Czech>
-            <Japanese>過熱による精度の低下</Japanese>
-            <Korean>과열 명중률 저하</Korean>
-            <Chinesesimp>过热散射</Chinesesimp>
-            <Chinese>過熱散射</Chinese>
-            <Hungarian>Túlmelegedés diszperzió (szórás)</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Overheating_overheatingDispersion_description">
-            <English>Overheated weapons will be less accurate and have decreased muzzle velocity. Applys for all players.</English>
-            <German>Überhitzte Waffen sind weniger genau und verfügen über eine geringere Mündungsgeschwindigkeit. Wird bei allen Spielern angewendet.</German>
-            <Polish>Przegrzane bronie będą mniej celne oraz będą miały zmniejszoną prędkość pocisku. Wpływa na wszystkich graczy.</Polish>
-            <Italian>Armi surriscaldate saranno meno precise ed avranno una ridotta velocità alla volata. Applicato a tutti i giocatori.</Italian>
-            <Spanish>Las armas sobrecalentadas pierden precisión y tienen una velocidad de disparo reducida. Se aplica a todos los jugadores.</Spanish>
-            <French>Les armes surchauffées seront moins précises et auront une vitesse initiale moins élevée. S'applique à tous les joueurs.</French>
-            <Portuguese>Armas superaquecidas irão ser menos precisas e ter velocidade de disparo reduzidas. Aplica a todos os jogadores.</Portuguese>
-            <Russian>Перегретое оружие будет менее точным, а дульная скорость будет снижена. Применяется ко всем игрокам.</Russian>
-            <Czech>Přehřátá zbraň bude méně přesná a bude mít menší úsťovou rychlost. Platí pro všechny hráče.</Czech>
-            <Japanese>過熱は精度を減少させたり、初速を低下させます。これは全プレイヤーに適用します。</Japanese>
-            <Korean>무기 과열 시 무기의 명중률이 저하되고 총구속도가 감소합니다. 이는 모든 플레이어에게 적용됩니다.</Korean>
-            <Chinesesimp>过热的武器将会有打不准和减少射击初速的情况。适用于所有玩家</Chinesesimp>
-            <Chinese>過熱的武器將會有打不準和減少射擊初速的情況。適用於所有玩家</Chinese>
-            <Hungarian>A túlmelegedett fegyverek kevésbé lesznek pontosak és csökkent a lövés sebessége. Minden játékosra vonatkozik.</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_displayName">
-            <English>Distance for Effects and Dispersion</English>
-            <Japanese>エフェクトと分散の距離</Japanese>
-            <French>Distance des effets et de la dispersion</French>
-            <Italian>Distanza per effetti e dispersione</Italian>
-            <Russian>Дистанция для эффектов и разброса</Russian>
-            <German>Abstand für Effekte und Dispersion</German>
-            <Polish>Odległość efektów i rozproszenia</Polish>
-            <Chinesesimp>效果和扩散距离</Chinesesimp>
-            <Korean>효과와 분산 거리</Korean>
-            <Spanish>Distancia para Efectos y Dispersión</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_description">
-            <English>The distance, in meters, from the player within which overheating particle effects and dispersion are visible.</English>
-            <Japanese>プレイヤーが過熱パーティクルのエフェクトと分散を見えるようになる距離 (m) を設定します。</Japanese>
-            <French>Définit la distance en mètres, jusqu'à laquelle les effets de particules et la dispersion sont visibles.</French>
-            <Italian>La distanza in metri da cui sono visibili gli effetti particellari e la dispersione.</Italian>
-            <Russian>Дистанция в метрах, с которой видны эффекты частиц и разброса при перегреве.</Russian>
-            <German>Der Abstand in Metern vom Spieler, in dem Überhitzungspartikeleffekte und Dispersion sichtbar sind.</German>
-            <Polish>Określa odległość w metrach, do której widoczne są efekty cząsteczkowe i rozproszenie.</Polish>
-            <Chinesesimp>距离玩家的距离（米），在这个距离内可以看到过热的粒子效应和扩散。</Chinesesimp>
-            <Korean>미터 단위로, 과열 시 입자효과와 분산 정도가 플레이어로부터 얼마나 떨어진 곳까지 보여지는지를 결정합니다.</Korean>
-            <Spanish>La distancia, en metros, desde la cual los efectos de sobrecalentamiento de particulas y dispersión son visibles.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_overheatingRateOfFire_displayName">
-            <English>Heat Increases Fire Rate</English>
-            <Japanese>熱による連射速度上昇</Japanese>
-            <French>La chaleur augmente la cadence de tir</French>
-            <Italian>Calore aumenta la cadenza di tiro</Italian>
-            <Russian>Нагрев увеличивает темп стрельбы</Russian>
-            <German>Hitze erhöht die Feuerrate</German>
-            <Polish>Ciepło zwiększa szybkostrzelność</Polish>
-            <Chinesesimp>过热增加射速</Chinesesimp>
-            <Korean>과열 시 발사속도 증가</Korean>
-            <Spanish>Calentamiento incrementa la cadencia de tiro.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_overheatingRateOfFire_description">
-            <English>As weapons heat up, their rate of fire increases by up to 10%.</English>
-            <Japanese>武器が熱を帯び始めると、連射速度が 10% 上昇します。</Japanese>
-            <French>Lorsqu'une arme chauffe, sa cadence de tir peut augmenter jusqu'à 10%.</French>
-            <Russian>При нареве орудия, его темп стрельбы увеличивается до 10%.</Russian>
-            <German>Wenn sich Waffen erhitzen, erhöht sich ihre Feuerrate um bis zu 10%.</German>
-            <Italian>Quando le armi si surriscaldano, la loro cadenza di tiro può aumentare anche del 10%.</Italian>
-            <Polish>Gdy broń się nagrzewa, jej szybkostrzelność może wzrosnąć nawet o 10%.</Polish>
-            <Chinesesimp>随着武器的过热，其射速最多增加10%。</Chinesesimp>
-            <Korean>과열될수록 발사속도가 최대 10%까지 올라갑니다.</Korean>
-            <Spanish>Según se calienta el arma, su cadencia de tiro aumenta hasta un 10%.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_jamChanceCoef_displayName">
-            <English>Jam Chance Coefficient</English>
-            <Japanese>弾詰まり係数</Japanese>
-            <French>Coefficient du risque d'enrayement</French>
-            <Italian>Coefficiente di inceppamento</Italian>
-            <Russian>Шанс заклинивания оружия</Russian>
-            <German>Koeffizient für Ladehemmung</German>
-            <Polish>Szansa na zacięcie</Polish>
-            <Chinesesimp>卡弹概率系数</Chinesesimp>
-            <Korean>기능고장 확률 계수</Korean>
-            <Spanish>Coeficiente de posibilidad de encasquillamiento</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_jamChanceCoef_description">
-            <English>Coefficient for the chance that a weapon will jam from overheating.\nHigher value make jams more likely.\nSet to 0 to disable jamming.</English>
-            <Japanese>武器が過熱によって弾詰まりする確率係数を設定します。\n高い値では弾詰まりが起こりやすくなり、0 で弾詰まりが無効化されます。</Japanese>
-            <French>Coefficient modifiant les chances qu'une arme s'enraye à cause de la surchauffe.\nPlus la valeur est élevée, plus grand est le risque que l'arme s'enraye.\nDéfinir à 0 pour désactiver l'enrayement des armes.</French>
-            <Italian>Coefficiente della probabilità di inceppamento da surriscaldamento.\nValori alti aumentano la probabilità, 0 la disabilità.</Italian>
-            <Russian>Шанс заклинивания оружия от перегрева.\nБольшие значения повышают шанс заклинивания.\nУстановите 0 для отключения заклинивания.</Russian>
-            <German>Koeffizient für die Wahrscheinlichkeit, dass eine Waffe eine Ladehemmung hat.\Höhere Werte erhöhen die Wahrscheinlichkeit.\Auf 0 setzen, um Ladehemmungen zu deaktivieren.</German>
-            <Polish>Współczynnik zmieniający szansę na zacięcie się broni z powodu przegrzania.\nIm wyższa wartość, tym większe ryzyko zacięcia się broni.\nUstaw na 0, aby wyłączyć zacinanie się broni.</Polish>
-            <Chinesesimp>武器因过热而卡弹的概率系数。\n数值越高，卡住的可能性越大。\n设置为0以禁用卡弹。</Chinesesimp>
-            <Korean>과열로 인해 얼마나 고장나는지에 대한 계수를 정합니다.\n높을 수록 더 고장이 잘납니다.\n0으로 설정하면 고장이 일어나지 않습니다.</Korean>
-            <Spanish>Coeficiente de posibilidad de que un arma se encasquille debido al sobrecalentamiento.\nValores más altos hacen más posible que se encasquille.\n Establecer a 0 para deshabilitar el encasquillamiento.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_unJamOnReload_displayName">
-            <English>Unjam Weapon on Reload</English>
-            <German>Behebt Ladehemmung beim Nachladen</German>
-            <Spanish>Desencasquillar el arma al recargar.</Spanish>
-            <Polish>Usuń zacięcie przy przeładowaniu</Polish>
-            <French>Désenrayer l'arme au rechargement</French>
-            <Italian>Disinceppa l'arma quando si ricarica</Italian>
-            <Czech>Uvolnit zbraň při přebití</Czech>
-            <Portuguese>Desemperrar arma no recarregamento</Portuguese>
-            <Russian>Исправлять клин при перезарядке</Russian>
-            <Japanese>再装填による弾詰まり解消</Japanese>
-            <Korean>재장전 시 기능고장 해결</Korean>
-            <Chinesesimp>重装弹匣以解决卡弹</Chinesesimp>
-            <Chinese>重裝彈匣以解決卡彈</Chinese>
-            <Hungarian>Távolítsa el az akadályt újratöltéskor</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Overheating_unJamOnReload_description">
-            <English>Reloading clears a weapon jam.</English>
-            <German>Nachladen behebt eine Ladehemmung.</German>
-            <Spanish>Recargar el arma la desencasquilla.</Spanish>
-            <Polish>Przeładowywanie usuwa zacięcie</Polish>
-            <French>Les armes se désenrayent lors d'un rechargement.</French>
-            <Italian>L'arma si disinceppa quando si ricarica</Italian>
-            <Czech>Přebití uvolní zaseknutou zbraň.</Czech>
-            <Portuguese>Recarregar desemperra arma.</Portuguese>
-            <Russian>Перезарядка устраняет заклинивание оружия.</Russian>
-            <Japanese>再装填により、弾詰まりを除去します。</Japanese>
-            <Korean>기능고장이 재장전 시 해결됩니다.</Korean>
-            <Chinesesimp>利用重装弹匣来解决卡弹</Chinesesimp>
-            <Chinese>利用重裝彈匣來解決卡彈</Chinese>
-            <Hungarian>Az újratöltés megszünteti a fegyver elakadását.</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_displayName">
-            <English>Unjam on Barrel Swap</English>
-            <Japanese>銃身交換による弾詰まり解消</Japanese>
-            <French>Désenrayer l'arme au changement de canon</French>
-            <Russian>Замена ствола устраняет клин оружия</Russian>
-            <Italian>Disinceppa l'arma col cambio canna</Italian>
-            <Polish>Usuń zacięcie przy wymianie lufy</Polish>
-            <Chinesesimp>更换枪管清除卡弹</Chinesesimp>
-            <Korean>총열 교환 시 기능고장 해결</Korean>
-            <German>Ladehemmung beim Wechseln des Laufes beheben.</German>
-            <Spanish>Desencasquillar con el cambio de cañón</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_description">
-            <English>Controls whether swapping barrels clears a weapon jam.</English>
-            <Japanese>銃身を交換して弾詰まりの解消をできるようにします。</Japanese>
-            <French>Les armes se désenrayent lors d'un remplacement de canon.</French>
-            <Russian>Определяет, устраняет ли замена ствола заклинивание оружия.</Russian>
-            <German>Bestimmt, ob das Wechseln des Laufes eine Ladehemmung behebt.</German>
-            <Italian>Determina se la sostituzione della canna disinceppa l'arma.</Italian>
-            <Polish>Określa, czy wymiana lufy usuwa zacięcie się broni.</Polish>
-            <Chinesesimp>通过更换枪管，以便清除卡弹。</Chinesesimp>
-            <Korean>총열을 교체하면서 기능고장을 해결합니다.</Korean>
-            <Spanish>Controla si cambiar el cañón del arma la desencasquilla.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
-            <English>Chance of Unjam Failing</English>
-            <German>Wahrscheinlichkeit, dass Ladehemmung nicht behoben wird</German>
-            <Spanish>Probabilidad de falla al desencasquillar.</Spanish>
-            <Polish>Szansa na porażkę usuw. zacięcia</Polish>
-            <French>Risque d'échec du désenrayement</French>
-            <Italian>Probabilità di sbagliare a disinceppare l'arma</Italian>
-            <Czech>Šance, že uvolnění zbraně selže</Czech>
-            <Portuguese>Chance de falha de desemperramento</Portuguese>
-            <Russian>Шанс неудачи при устранении клина</Russian>
-            <Japanese>弾詰まりの除去を失敗する可能性</Japanese>
-            <Korean>기능고장 해결 시도 실패확률</Korean>
-            <Chinesesimp>解决卡弹失败机率</Chinesesimp>
-            <Chinese>解決卡彈失敗機率</Chinese>
-            <Hungarian>Akadály eltávolítás hibájának esélye</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Overheating_unJamFailChance_description">
-            <English>Probability that an unjam action might fail, requiring to be repeated.</English>
-            <German>Wahrscheinlichkeit, dass der Versuch eine Ladehemmung zu beheben fehl schlägt und erneut durchgeführt werden muss.</German>
-            <Spanish>Probabilidad de que el proceso de desencasquille falle, teniendo que repetirlo.</Spanish>
-            <Polish>Szansa na to, że przy przeładowaniu broni zacięcie nie zostanie usunięte, przez co czynność będzie musiała zostać powtórzona ponownie.</Polish>
-            <French>Probabilité qu'une action de désenrayement échoue, nécessitant de recommencer.</French>
-            <Italian>Probabilità casuale che si possa sbagliare a disinceppare l'arma. Richiedendo di ripetere il disinceppamento.</Italian>
-            <Portuguese>Probabilidade que uma ação de desemperramento falhe, tendo que ser repetida</Portuguese>
-            <Russian>Вертоятность того, что устранение заклинивания не сработает, и его придется повторить.</Russian>
-            <Czech>Pravděpodobnost, že uvolnění zbraně selže, je proto nutné tuto akci opakovat. </Czech>
-            <Japanese>弾詰まり解除アクションに失敗し、繰り返しが必要になる確率。</Japanese>
-            <Korean>기능고장 해결 시도시 실패할 확률이 있습니다. 이는 다시 기능고장 해결을 시도해야함을 의미합니다.</Korean>
-            <Chinesesimp>清除卡弹时有可能会失败，需要反覆进行清枪。</Chinesesimp>
-            <Chinese>清除卡彈時有可能會失敗，需要反覆進行清槍。</Chinese>
-            <Hungarian>Valószínűsége annak, hogy egy akadály eltávolítás művelet kudarcot vall, megismétlést igényel.</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Overheating_cookoffCoef_displayName">
-            <English>Overheating Cookoff Coefficient</English>
-            <Japanese>過熱暴発係数</Japanese>
-            <French>Coefficient de l'auto-inflammation</French>
-            <Italian>Coefficiente di auto-combustione</Italian>
-            <Russian>Коэф. возгорания при перегреве</Russian>
-            <German>Selbstzündungskoeffizient bei Überhitzung</German>
-            <Polish>Współczynnik samozapłonu</Polish>
-            <Chinesesimp>过热诱发系数</Chinesesimp>
-            <Korean>과열 쿡오프 계수</Korean>
-            <Spanish>Coeficiente para detonación inducida por calor debido a sobrecalentamiento</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_cookoffCoef_description">
-            <English>Coefficient for the heat required for cookoffs to occur.\nHigher values require more heat to cookoff.\nSet to 0 to disable cookoff.</English>
-            <Japanese>過熱によって暴発(コックオフ)が発生する確率の係数を設定します。\n高い値では暴発までに必要な過熱量が増加し、0 で暴発が無効化されます。</Japanese>
-            <French>Coefficient modifiant la quantité de chaleur requise pour que les munitions s'auto-inflamment dans la chambre de l'arme.\nPlus la valeur est élevée, plus l'arme doit être chaude pour que les munitions s'auto-inflamment.\nDéfinir sur 0 pour désactiver l'auto-inflammation.</French>
-            <Italian>Coefficiente che determina il calore richiesto per auto-incendiare munizioni/carburante.\nImpostare su 0 per disabilitare l'auto-combustione.</Italian>
-            <Russian>Коэффициент нагрева, при котором возникает возгорание.</Russian>
-            <German>Koeffizient für die zum Selbstzünden erforderliche Hitze.\nHöhere Werte erfordern mehr Hitze zum Selbstzünden.\nAuf 0 setzen, um das Selbstzünden zu deaktivieren.</German>
-            <Polish>Współczynnik modyfikujący ilość ciepła wymaganego do samozapłonu amunicji w komorze broni.\nIm wyższa wartość, tym gorętsza musi być broń, aby amunicja uległa samozapłonowi\nUstaw 0, aby wyłączyć samozapłon.</Polish>
-            <Chinesesimp>发生热诱发的过热系数。\n数值越高，热诱发所需要的过热值越高。\n设置为0禁用热诱发。</Chinesesimp>
-            <Korean>쿡오프가 되기 위해 얼마나 과열되는가를 결정합니다. \n높을 수록 쿡오프 되기위해 더 뜨거운 열을 필요로 합니다.\n 0으로 설정하면 쿡오프 현상이 없어집니다.</Korean>
-            <Spanish>Coeficiente para el calor requerido para que suceda la detonación inducida por calor.\nValores más altos requieren más calor para que se produzca.\nEstablecer a 0 para deshabilitar la detonación inducida por calor.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_SpareBarrelName">
-            <English>Spare barrel</English>
-            <German>Ersatzlauf</German>
-            <Spanish>Cañón de repuesto</Spanish>
-            <Polish>Zapasowa lufa</Polish>
-            <Czech>Náhradní hlaveň</Czech>
-            <French>Canon de rechange</French>
-            <Russian>Запасной ствол</Russian>
-            <Hungarian>Tartalék cső</Hungarian>
-            <Portuguese>Cano Reserva</Portuguese>
-            <Italian>Canna di ricambio</Italian>
-            <Japanese>予備銃身</Japanese>
-            <Korean>예비 총열</Korean>
-            <Chinesesimp>备用枪管</Chinesesimp>
-            <Chinese>備用槍管</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_SpareBarrelDescription">
-            <English>Use to swap barrel.</English>
-            <German>Benutzen, um Lauf zu wechseln.</German>
-            <Spanish>Permite intercambiar el cañón</Spanish>
-            <Polish>Umożliwia wymianę lufy</Polish>
-            <Czech>Používané k výměně hlavně</Czech>
-            <French>Utilisé pour changer de canon.</French>
-            <Russian>Используется для смены ствола.</Russian>
-            <Hungarian>Használd a cső kicseréléséhez.</Hungarian>
-            <Portuguese>Use para trocar o cano.</Portuguese>
-            <Italian>Usata per sostituire una canna bollente.</Italian>
-            <Japanese>銃身の交換に使用します。</Japanese>
-            <Korean>총열을 바꿀 때 사용합니다.</Korean>
-            <Chinesesimp>用来更换枪管</Chinesesimp>
-            <Chinese>用來更換槍管</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_WeaponJammed">
-            <English>Weapon jammed!</English>
-            <German>Ladehemmung!</German>
-            <Spanish>Arma encasquillada!</Spanish>
-            <Polish>Zacięcie!</Polish>
-            <Czech>Zbraň se zasekla!</Czech>
-            <French>Arme enrayée !</French>
-            <Russian>Оружие заклинило!</Russian>
-            <Hungarian>Megakadt a fegyver!</Hungarian>
-            <Portuguese>Arma travada!</Portuguese>
-            <Italian>Arma inceppata!</Italian>
-            <Japanese>武器が詰まった!</Japanese>
-            <Korean>기능고장!</Korean>
-            <Chinesesimp>武器卡弹！</Chinesesimp>
-            <Chinese>武器卡彈!</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_WeaponCookedOff">
-            <English>Weapon cooked off!</English>
-            <Japanese>武器が暴発した!</Japanese>
-            <French>Auto-inflammation des munitions !</French>
-            <Russian>Оружие сдетонировало!</Russian>
-            <German>Munition durchgezündet!</German>
-            <Italian>Munizione auto-incendiata!</Italian>
-            <Polish>Samozapłon amunicji!</Polish>
-            <Chinesesimp>武器发生热诱发！</Chinesesimp>
-            <Korean>쿡오프가 일어납니다!</Korean>
-            <Spanish>Arma disparada por sobrecalentamiento!</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_FailureToEject">
-            <English>Failure to eject.</English>
-            <Japanese>排莢に失敗しました。</Japanese>
-            <French>Défaut d'éjection.</French>
-            <Russian>Не удалось достать.</Russian>
-            <Italian>Mancata espulsione.</Italian>
-            <German>Hülse wurde nicht ausgeworfen.</German>
-            <Polish>Nie udało się wyrzucić łuski.</Polish>
-            <Chinesesimp>抛壳失败。</Chinesesimp>
-            <Korean>탄피가 약실에 낌.</Korean>
-            <Spanish>Fallo en la expulsión.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_FailureToExtract">
-            <English>Failure to extract.</English>
-            <Japanese>排出に失敗しました。</Japanese>
-            <French>Défaut d'extraction.</French>
-            <Italian>Mancata estrazione.</Italian>
-            <Russian>Не удалось извлечь.</Russian>
-            <German>Hülse wurde nicht ausgezogen.</German>
-            <Polish>Nie udało się wyjąć łuski.</Polish>
-            <Chinesesimp>抽壳失败。</Chinesesimp>
-            <Korean>탄피가 배출되지 않음.</Korean>
-            <Spanish>Fallo en la extracción.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_FailureToFeed">
-            <English>Failure to feed.</English>
-            <Japanese>給弾に失敗しました。</Japanese>
-            <French>Défaut d'alimentation.</French>
-            <Italian>Mancata alimentazione.</Italian>
-            <Russian>Не удалось подать.</Russian>
-            <German>Patrone wurde nicht zugeführt.</German>
-            <Polish>Nie udało się załadować naboju.</Polish>
-            <Chinesesimp>供弹失败。</Chinesesimp>
-            <Korean>탄이 장전 중 걸림.</Korean>
-            <Spanish>Fallo en la alimentación.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_FailureToFire">
-            <English>Failure to fire.</English>
-            <Japanese>撃発に失敗しました。</Japanese>
-            <French>Défaut de tir.</French>
-            <Russian>Не удалось выстрелить.</Russian>
-            <German>Patrone wurde nicht gezündet!</German>
-            <Italian>Mancato innesco.</Italian>
-            <Polish>Nie udało się strzelić.</Polish>
-            <Chinesesimp>未能开火。</Chinesesimp>
-            <Korean>발사가 되지 않음.</Korean>
-            <Spanish>Fallo al disparar.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_UnjamWeapon">
-            <English>Clear jam</English>
-            <German>Ladehemmung beheben</German>
-            <Spanish>Desencasquillar el arma</Spanish>
-            <Polish>Usuń zacięcie</Polish>
-            <Czech>Uvolnit zbraň</Czech>
-            <French>Désenrayer l'arme</French>
-            <Russian>Исправить клин оружия</Russian>
-            <Hungarian>Akadás elhárítása</Hungarian>
-            <Portuguese>Destravar arma</Portuguese>
-            <Italian>Disinceppa l'arma</Italian>
-            <Japanese>弾詰まりを解消する</Japanese>
-            <Korean>기능고장 해결</Korean>
-            <Chinesesimp>清除卡弹</Chinesesimp>
-            <Chinese>清除卡彈</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_WeaponUnjammed">
-            <English>Jam cleared</English>
-            <German>Ladehemmung behoben</German>
-            <Spanish>Arma desencasquillada</Spanish>
-            <Polish>Zacięcie usunięte</Polish>
-            <Czech>Zbraň uvolněna</Czech>
-            <French>Arme désenrayée.</French>
-            <Russian>Оружие исправлено</Russian>
-            <Hungarian>Akadás elhárítva</Hungarian>
-            <Portuguese>Arma destravada</Portuguese>
-            <Italian>Arma pronta al fuoco</Italian>
-            <Japanese>弾詰まりが解消した</Japanese>
-            <Korean>기능고장 해결됨</Korean>
-            <Chinesesimp>卡弹已清除</Chinesesimp>
-            <Chinese>卡彈已清除</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_WeaponUnjamFailed">
-            <English>Jam failed to clear</English>
-            <German>Ladehemmung nicht behoben</German>
-            <Spanish>Falló el desencasquillado</Spanish>
-            <Polish>Porażka przy usuwaniu zacięcia</Polish>
-            <French>Toujours enrayé !</French>
-            <Italian>Non si è disinceppata!</Italian>
-            <Czech>Zbraň se nepodařilo uvolnit</Czech>
-            <Portuguese>Falha no desemperramento</Portuguese>
-            <Russian>Не удалось исправить клин</Russian>
-            <Japanese>弾詰まりの解消に失敗した</Japanese>
-            <Korean>기능고장 해결 실패</Korean>
-            <Chinesesimp>卡弹未能清除</Chinesesimp>
-            <Chinese>卡彈未能清除</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_SwapBarrel">
-            <English>Swap barrel</English>
-            <German>Lauf wechseln</German>
-            <Spanish>Cambiar el cañón</Spanish>
-            <Polish>Wymień lufę</Polish>
-            <Czech>Vyměnit hlaveň</Czech>
-            <French>Remplacer le canon</French>
-            <Russian>Сменить ствол</Russian>
-            <Hungarian>Cső cserélése</Hungarian>
-            <Portuguese>Substituir cano</Portuguese>
-            <Italian>Sostiuisci la canna</Italian>
-            <Japanese>銃身を交換</Japanese>
-            <Korean>총열 교체</Korean>
-            <Chinesesimp>换枪管</Chinesesimp>
-            <Chinese>換槍管</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_SwappingBarrel">
-            <English>Swapping barrel...</English>
-            <German>Lauf wird gewechselt ...</German>
-            <Spanish>Cambiando el cañón...</Spanish>
-            <Polish>Wymienianie lufy...</Polish>
-            <Czech>Měním hlaveň...</Czech>
-            <French>Remplacement du canon...</French>
-            <Russian>Смена ствола...</Russian>
-            <Hungarian>Cső kicserélése folyamatban...</Hungarian>
-            <Portuguese>Substituindo cano...</Portuguese>
-            <Italian>Sostituendo la canna...</Italian>
-            <Japanese>銃身を交換しています・・・</Japanese>
-            <Korean>총열 교체 중...</Korean>
-            <Chinesesimp>正在更换枪管...</Chinesesimp>
-            <Chinese>換槍管中...</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_SwappedBarrel">
-            <English>Swapped barrel</English>
-            <German>Lauf gewechselt</German>
-            <Spanish>Cañón cambiado</Spanish>
-            <Polish>Lufa wymieniona</Polish>
-            <Czech>Hlaveň vyměněna</Czech>
-            <French>Canon remplacé.</French>
-            <Russian>Ствол заменён</Russian>
-            <Hungarian>Cső kicserélve</Hungarian>
-            <Portuguese>Cano substituído</Portuguese>
-            <Italian>Canna sostituita</Italian>
-            <Japanese>銃身を交換しました</Japanese>
-            <Korean>교체된 총열</Korean>
-            <Chinesesimp>完成换枪管</Chinesesimp>
-            <Chinese>完成換槍管</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_CheckTemperature">
-            <English>Check weapon temperature</English>
-            <German>Temperatur der Waffe prüfen</German>
-            <Spanish>Verificar temperatura del arma</Spanish>
-            <Polish>Sprawdź temperaturę broni</Polish>
-            <French>Vérifier la température de l'arme</French>
-            <Hungarian>Fegyver hőmérsékletének ellenőrzése</Hungarian>
-            <Czech>Zkontrolovat teplotu zbraně</Czech>
-            <Portuguese>Conferir temperatura da arma</Portuguese>
-            <Italian>Controlla la temperatura della canna</Italian>
-            <Russian>Проверить температуру оружия</Russian>
-            <Japanese>武器の温度を確認</Japanese>
-            <Korean>무기 온도 확인</Korean>
-            <Chinesesimp>检查枪管温度</Chinesesimp>
-            <Chinese>檢查槍管溫度</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_CheckTemperatureShort">
-            <English>Check weapon temperature</English>
-            <German>Waffentemperatur prüfen</German>
-            <Spanish>Verificar temperatura del arma</Spanish>
-            <Polish>Sprawdź temperaturę broni</Polish>
-            <Czech>Zkontrolovat teplotu zbraně</Czech>
-            <French>Vérifier la température</French>
-            <Hungarian>Fegyverhő ellenőrzése</Hungarian>
-            <Russian>Проверить температуру оружия</Russian>
-            <Portuguese>Conferir temperatura</Portuguese>
-            <Italian>Controlla la temperatura della canna</Italian>
-            <Japanese>武器の温度を確認</Japanese>
-            <Korean>무기 온도 확인</Korean>
-            <Chinesesimp>检查枪管温度</Chinesesimp>
-            <Chinese>檢查槍管溫度</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_CheckingTemperature">
-            <English>Checking temperature...</English>
-            <German>Prüfe Temperatur ...</German>
-            <Spanish>Verificando temperatura...</Spanish>
-            <Polish>Sprawdzanie temperatury...</Polish>
-            <French>Vérification de la température...</French>
-            <Hungarian>Hőmérséklet ellenőrzése...</Hungarian>
-            <Czech>Zjišťuju teplotu...</Czech>
-            <Portuguese>Conferindo temperatura...</Portuguese>
-            <Italian>Controllando la temperatura...</Italian>
-            <Russian>Проверка температуры...</Russian>
-            <Japanese>温度を測っています・・・</Japanese>
-            <Korean>무기 온도 확인 중...</Korean>
-            <Chinesesimp>正在检查枪管温度...</Chinesesimp>
-            <Chinese>檢查槍管溫度中...</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_CheckTemperatureSpareBarrelsShort">
-            <English>Check spare barrels temperatures</English>
-            <Spanish>Comprobar temperatura de los cañones de repuesto</Spanish>
-            <Portuguese>Verifica temperatura de canos reservas</Portuguese>
-            <French>Vérifier la température des canons de rechange</French>
-            <Russian>Проверить температуру запасных стволов</Russian>
-            <Czech>Zkontrolovat teplotu náhradní hlavně</Czech>
-            <Japanese>予備銃身の温度を確認</Japanese>
-            <Polish>Sprawdź temperaturę zapasowych luf</Polish>
-            <German>Temperatur der Wechselläufe prüfen</German>
-            <Korean>총열 온도 확인</Korean>
-            <Italian>Controlla la temperatura della canna di ricambio</Italian>
-            <Chinesesimp>检查备用枪管温度</Chinesesimp>
-            <Chinese>檢查備用槍管溫度</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
-            <English>Checking spare barrels temperatures...</English>
-            <Spanish>Comprobando temperatura de los cañones de repuesto</Spanish>
-            <Portuguese>Verificando temperatura de canos reservas</Portuguese>
-            <French>Vérification de la température des canons de rechange...</French>
-            <Russian>Проверка температуры запасных стволов...</Russian>
-            <Czech>Kontroluji teplotu náhradní hlavně...</Czech>
-            <Japanese>予備銃身の温度を測っています・・・</Japanese>
-            <Polish>Sprawdzanie temperatury zapasowych luf...</Polish>
-            <German>Prüfe Temperatur der Wechselläufe ...</German>
-            <Korean>총열 온도 확인 중...</Korean>
-            <Italian>Controllando la temperatura della canna di ricambio...</Italian>
-            <Chinesesimp>正在检查枪管温度...</Chinesesimp>
-            <Chinese>檢查槍管溫度中...</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_CoolWeaponWithItem">
-            <English>Cool weapon with...</English>
-            <Japanese>武器をアイテムで冷却</Japanese>
-            <French>Refroidir l'arme avec...</French>
-            <Russian>Охладить оружие с...</Russian>
-            <German>Waffe mit... kühlen</German>
-            <Italian>Raffredda arma con...</Italian>
-            <Polish>Schłódź broń za pomocą...</Polish>
-            <Chinesesimp>冷却武器...</Chinesesimp>
-            <Korean>무기 온도 낮추기</Korean>
-            <Spanish>Enfriar arma con...</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_CoolingWeaponWithItem">
-            <English>Cooling %1 with %2.</English>
-            <Japanese>%1 を %2 で冷ましています。</Japanese>
-            <French>Refroidissement du %1 avec %2...</French>
-            <Russian>Охлаждение %1 с %2.</Russian>
-            <German>Kühle %1 mit %2.</German>
-            <Italian>Raffredda %1 con %2</Italian>
-            <Polish>Chłodzenie %1 za pomocą %2.</Polish>
-            <Chinesesimp>冷却 %1 至 %2。</Chinesesimp>
-            <Korean>%1을 %2로 식히는 중.</Korean>
-            <Spanish>Enfriando %1 con %2.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_CoolWeaponWithWaterSource">
-            <English>Cool weapon in water source.</English>
-            <Japanese>水源で武器を冷却</Japanese>
-            <French>Refroidir l'arme dans la source d'eau.</French>
-            <Russian>Охладить оружие в воде.</Russian>
-            <German>Kühle Waffe aus Wasserquelle.</German>
-            <Italian>Raffredda arma in acqua.</Italian>
-            <Polish>Schłódź broń wodą.</Polish>
-            <Chinesesimp>用水源冷却武器。</Chinesesimp>
-            <Korean>물로 무기 식히기</Korean>
-            <Spanish>Enfriar arma con agua.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_CoolingWeaponWithWaterSource">
-            <English>Cooling weapon in water source.</English>
-            <Japanese>水源で武器を冷ましています・・・</Japanese>
-            <French>Refroidissement de l'arme dans la source d'eau...</French>
-            <Russian>Охлаждение оружия в воде.</Russian>
-            <German>Waffe wird aus Wasserquelle gekühlt.</German>
-            <Italian>Raffreddando arma con l'acqua.</Italian>
-            <Polish>Chłodzenie broni wodą.</Polish>
-            <Chinesesimp>在水源中冷却武器。</Chinesesimp>
-            <Korean>물로 무기 식히는 중.</Korean>
-            <Spanish>Enfriando arma con agua...</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_CoolWeaponNotEnoughWater">
-            <English>Container doesn't have enough water.</English>
-            <Japanese>水源には十分な水量がありません。</Japanese>
-            <French>Le récipient ne contient pas suffisamment d'eau.</French>
-            <Russian>Воды недостаточно для охлаждения.</Russian>
-            <German>Behälter beinhaltet nicht genug Wasser.</German>
-            <Italian>Contenitore non ha abbastanza acqua.</Italian>
-            <Polish>Zbiornik nie ma wystarczającej ilości wody</Polish>
-            <Chinesesimp>容器里的水不够。</Chinesesimp>
-            <Korean>물이 충분치 않습니다.</Korean>
-            <Spanish>El contenedor no tiene suficiente agua.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_CoolWeaponIsCool">
-            <English>Weapon is cool enough the water has stopped boiling.</English>
-            <Japanese>武器が冷え切り、水は沸騰を止めた。</Japanese>
-            <French>L'arme est suffisamment froide pour que l'eau ait cessé de bouillir.</French>
-            <Russian>Оружие достаточно холодное для прекращения кипения воды.</Russian>
-            <German>Waffe ist kalt genug, dass Wasser hat aufgehört zu kochen.</German>
-            <Italian>L'arma è abbastanza fredda, l'acqua ha smesso di bollire.</Italian>
-            <Polish>Broń jest wystarczająco schłodzona. Woda przestała się gotować.</Polish>
-            <Chinesesimp>武器已经冷却，水已经停止沸腾了。</Chinesesimp>
-            <Korean>물이 끓지 않는 걸 보아 무기가 식은듯 하다.</Korean>
-            <Spanish>El arma está lo suficientemente fría para no hacer hervir el agua.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overheating_Temperature">
-            <English>Temperature</English>
-            <German>Temperatur</German>
-            <Spanish>Temperatura</Spanish>
-            <Polish>Temperatura</Polish>
-            <French>Température</French>
-            <Hungarian>Hőmérséklet</Hungarian>
-            <Czech>Teplota</Czech>
-            <Portuguese>Temperatura</Portuguese>
-            <Italian>Temperatura</Italian>
-            <Russian>Температура</Russian>
-            <Japanese>温度</Japanese>
-            <Korean>온도</Korean>
-            <Chinesesimp>温度</Chinesesimp>
-            <Chinese>溫度</Chinese>
-        </Key>
         <Key ID="STR_ACE_Overheating_BarrelCool">
             <English>Cool Spare Barrel/s</English>
-            <Spanish>Cañon/es de repuesto frio/s</Spanish>
-            <Portuguese>Cano/s reserva/s frio/s</Portuguese>
-            <French>Canon(s) de rechange froid(s).</French>
-            <Russian>Прохладные</Russian>
             <Czech>Studená náhradní hlaveň</Czech>
-            <Japanese>予備銃身は冷たい</Japanese>
+            <French>Canon(s) de rechange froid(s).</French>
+            <Spanish>Cañon/es de repuesto frio/s</Spanish>
+            <Italian>Canna/e di Ricambio Fredda</Italian>
             <Polish>Zimne zapasowe lufy</Polish>
+            <Portuguese>Cano/s reserva/s frio/s</Portuguese>
+            <Russian>Прохладные</Russian>
             <German>Kalte Wechselläufe</German>
             <Korean>차가운 예비 총열</Korean>
-            <Italian>Canna/e di Ricambio Fredda</Italian>
-            <Chinesesimp>备用枪管温度正常</Chinesesimp>
+            <Japanese>予備銃身は冷たい</Japanese>
             <Chinese>備用槍管溫度正常</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_BarrelWarm">
-            <English>Warm Spare Barrel/s</English>
-            <Spanish>Cañon/es de repuesto templado/s</Spanish>
-            <Portuguese>Cano/s reserva/s morno/s</Portuguese>
-            <French>Canon(s) de rechange tiède(s).</French>
-            <Russian>Теплые</Russian>
-            <Czech>Teplá náhradní hlaveň</Czech>
-            <Japanese>予備銃身は温かい</Japanese>
-            <Polish>Ciepłe zapasowe lufy</Polish>
-            <German>Warme Wechselläufe</German>
-            <Korean>따뜻한 예비 총열</Korean>
-            <Italian>Canna/e di Ricambio Calda</Italian>
-            <Chinesesimp>备用枪管温度偏温</Chinesesimp>
-            <Chinese>備用槍管溫度偏溫</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_BarrelHot">
-            <English>Hot Spare Barrel/s</English>
-            <Spanish>Cañon/es de repuesto caliente/s</Spanish>
-            <Portuguese>Cano/s reserva/s quente/s</Portuguese>
-            <French>Canon(s) de rechange chaud(s).</French>
-            <Russian>Горячие</Russian>
-            <Czech>Horká náhradní hlaveň</Czech>
-            <Japanese>予備銃身は熱い</Japanese>
-            <Polish>Gorące zapasowe lufy</Polish>
-            <German>Heiße Wechselläufe</German>
-            <Korean>뜨거운 예비 총열</Korean>
-            <Italian>Canna/e di Ricambio Molto Calda</Italian>
-            <Chinesesimp>备用枪管温度偏热</Chinesesimp>
-            <Chinese>備用槍管溫度偏熱</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Overheating_BarrelVeryHot">
-            <English>Very Hot Spare Barrel/s</English>
-            <Spanish>Cañon/es de repuesto muy caliente/s</Spanish>
-            <Portuguese>Cano/s reserva/s muito quente/s</Portuguese>
-            <French>Canon(s) de rechange très chaud(s).</French>
-            <Russian>Очень горячие</Russian>
-            <Czech>Velmi horká náhradní hlaveň</Czech>
-            <Japanese>予備銃身はとても熱い</Japanese>
-            <Polish>Bardzo gorące zapasowe lufy</Polish>
-            <German>Sehr heiße Wechselläufe</German>
-            <Korean>매우 뜨거운 예비 총열</Korean>
-            <Italian>Canna/e di Ricambio Bollente</Italian>
-            <Chinesesimp>备用枪管温度过热</Chinesesimp>
-            <Chinese>備用槍管溫度過熱</Chinese>
+            <Chinesesimp>备用枪管温度正常</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_BarrelExtremelyHot">
             <English>Extremely Hot Spare Barrel/s</English>
-            <Spanish>Cañon/es de repuesto extremadamente caliente/s</Spanish>
-            <Portuguese>Cano/s reserva/s extremamente quente/s</Portuguese>
-            <French>Canon(s) de rechange extrêmement chaud(s).</French>
-            <Russian>Запредельно горячие</Russian>
             <Czech>Extrémně horká náhradní hlaveň</Czech>
-            <Japanese>予備銃身は極めて熱い</Japanese>
+            <French>Canon(s) de rechange extrêmement chaud(s).</French>
+            <Spanish>Cañon/es de repuesto extremadamente caliente/s</Spanish>
+            <Italian>Canna/e di Ricambio Rovente</Italian>
             <Polish>Ekstremalnie gorące zapasowe lufy</Polish>
+            <Portuguese>Cano/s reserva/s extremamente quente/s</Portuguese>
+            <Russian>Запредельно горячие</Russian>
             <German>Extrem heiße Wechselläufe</German>
             <Korean>엄청나게 뜨거운 예비 총열</Korean>
-            <Italian>Canna/e di Ricambio Rovente</Italian>
-            <Chinesesimp>备用枪管温度非常热</Chinesesimp>
+            <Japanese>予備銃身は極めて熱い</Japanese>
             <Chinese>備用槍管溫度超級熱</Chinese>
+            <Chinesesimp>备用枪管温度非常热</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Overheating_statBoltType">
-            <English>Bolt Type</English>
-            <Italian>Tipo di otturatore</Italian>
-            <Japanese>遊底(ボルト)形式</Japanese>
-            <Korean>노리쇠 방식</Korean>
-            <Russian>Тип болта</Russian>
-            <French>Type d'obturateur</French>
-            <German>Art des Verschlusses</German>
-            <Spanish>Tipo de Cerrojo</Spanish>
+        <Key ID="STR_ACE_Overheating_BarrelHot">
+            <English>Hot Spare Barrel/s</English>
+            <Czech>Horká náhradní hlaveň</Czech>
+            <French>Canon(s) de rechange chaud(s).</French>
+            <Spanish>Cañon/es de repuesto caliente/s</Spanish>
+            <Italian>Canna/e di Ricambio Molto Calda</Italian>
+            <Polish>Gorące zapasowe lufy</Polish>
+            <Portuguese>Cano/s reserva/s quente/s</Portuguese>
+            <Russian>Горячие</Russian>
+            <German>Heiße Wechselläufe</German>
+            <Korean>뜨거운 예비 총열</Korean>
+            <Japanese>予備銃身は熱い</Japanese>
+            <Chinese>備用槍管溫度偏熱</Chinese>
+            <Chinesesimp>备用枪管温度偏热</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Overheating_statBoltType_openBolt">
-            <English>Open Bolt</English>
-            <Italian>Otturatore Aperto</Italian>
-            <Japanese>オープンボルト</Japanese>
-            <Korean>오픈 볼트</Korean>
-            <Russian>Открыть болт</Russian>
-            <French>Obturateur ouvert</French>
-            <German>Offener Verschluss</German>
-            <Spanish>Cerrojo Abierto</Spanish>
+        <Key ID="STR_ACE_Overheating_BarrelVeryHot">
+            <English>Very Hot Spare Barrel/s</English>
+            <Czech>Velmi horká náhradní hlaveň</Czech>
+            <French>Canon(s) de rechange très chaud(s).</French>
+            <Spanish>Cañon/es de repuesto muy caliente/s</Spanish>
+            <Italian>Canna/e di Ricambio Bollente</Italian>
+            <Polish>Bardzo gorące zapasowe lufy</Polish>
+            <Portuguese>Cano/s reserva/s muito quente/s</Portuguese>
+            <Russian>Очень горячие</Russian>
+            <German>Sehr heiße Wechselläufe</German>
+            <Korean>매우 뜨거운 예비 총열</Korean>
+            <Japanese>予備銃身はとても熱い</Japanese>
+            <Chinese>備用槍管溫度過熱</Chinese>
+            <Chinesesimp>备用枪管温度过热</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Overheating_statBoltType_closedBolt">
-            <English>Closed Bolt</English>
-            <Italian>Otturatore Chiuso</Italian>
-            <Japanese>クローズドボルト</Japanese>
-            <Korean>클로즈드 볼트</Korean>
-            <Russian>Закрыть болт</Russian>
-            <French>Obturateur fermé</French>
-            <German>Geschlossener Verschluss</German>
-            <Spanish>Cerrojo Cerrado</Spanish>
+        <Key ID="STR_ACE_Overheating_BarrelWarm">
+            <English>Warm Spare Barrel/s</English>
+            <Czech>Teplá náhradní hlaveň</Czech>
+            <French>Canon(s) de rechange tiède(s).</French>
+            <Spanish>Cañon/es de repuesto templado/s</Spanish>
+            <Italian>Canna/e di Ricambio Calda</Italian>
+            <Polish>Ciepłe zapasowe lufy</Polish>
+            <Portuguese>Cano/s reserva/s morno/s</Portuguese>
+            <Russian>Теплые</Russian>
+            <German>Warme Wechselläufe</German>
+            <Korean>따뜻한 예비 총열</Korean>
+            <Japanese>予備銃身は温かい</Japanese>
+            <Chinese>備用槍管溫度偏溫</Chinese>
+            <Chinesesimp>备用枪管温度偏温</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CheckTemperature">
+            <English>Check weapon temperature</English>
+            <Czech>Zkontrolovat teplotu zbraně</Czech>
+            <French>Vérifier la température de l'arme</French>
+            <Spanish>Verificar temperatura del arma</Spanish>
+            <Italian>Controlla la temperatura della canna</Italian>
+            <Polish>Sprawdź temperaturę broni</Polish>
+            <Portuguese>Conferir temperatura da arma</Portuguese>
+            <Russian>Проверить температуру оружия</Russian>
+            <German>Temperatur der Waffe prüfen</German>
+            <Korean>무기 온도 확인</Korean>
+            <Japanese>武器の温度を確認</Japanese>
+            <Chinese>檢查槍管溫度</Chinese>
+            <Chinesesimp>检查枪管温度</Chinesesimp>
+            <Hungarian>Fegyver hőmérsékletének ellenőrzése</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CheckTemperatureShort">
+            <English>Check weapon temperature</English>
+            <Czech>Zkontrolovat teplotu zbraně</Czech>
+            <French>Vérifier la température</French>
+            <Spanish>Verificar temperatura del arma</Spanish>
+            <Italian>Controlla la temperatura della canna</Italian>
+            <Polish>Sprawdź temperaturę broni</Polish>
+            <Portuguese>Conferir temperatura</Portuguese>
+            <Russian>Проверить температуру оружия</Russian>
+            <German>Waffentemperatur prüfen</German>
+            <Korean>무기 온도 확인</Korean>
+            <Japanese>武器の温度を確認</Japanese>
+            <Chinese>檢查槍管溫度</Chinese>
+            <Chinesesimp>检查枪管温度</Chinesesimp>
+            <Hungarian>Fegyverhő ellenőrzése</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CheckTemperatureSpareBarrelsShort">
+            <English>Check spare barrels temperatures</English>
+            <Czech>Zkontrolovat teplotu náhradní hlavně</Czech>
+            <French>Vérifier la température des canons de rechange</French>
+            <Spanish>Comprobar temperatura de los cañones de repuesto</Spanish>
+            <Italian>Controlla la temperatura della canna di ricambio</Italian>
+            <Polish>Sprawdź temperaturę zapasowych luf</Polish>
+            <Portuguese>Verifica temperatura de canos reservas</Portuguese>
+            <Russian>Проверить температуру запасных стволов</Russian>
+            <German>Temperatur der Wechselläufe prüfen</German>
+            <Korean>총열 온도 확인</Korean>
+            <Japanese>予備銃身の温度を確認</Japanese>
+            <Chinese>檢查備用槍管溫度</Chinese>
+            <Chinesesimp>检查备用枪管温度</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CheckingSpareBarrelsTemperatures">
+            <English>Checking spare barrels temperatures...</English>
+            <Czech>Kontroluji teplotu náhradní hlavně...</Czech>
+            <French>Vérification de la température des canons de rechange...</French>
+            <Spanish>Comprobando temperatura de los cañones de repuesto</Spanish>
+            <Italian>Controllando la temperatura della canna di ricambio...</Italian>
+            <Polish>Sprawdzanie temperatury zapasowych luf...</Polish>
+            <Portuguese>Verificando temperatura de canos reservas</Portuguese>
+            <Russian>Проверка температуры запасных стволов...</Russian>
+            <German>Prüfe Temperatur der Wechselläufe ...</German>
+            <Korean>총열 온도 확인 중...</Korean>
+            <Japanese>予備銃身の温度を測っています・・・</Japanese>
+            <Chinese>檢查槍管溫度中...</Chinese>
+            <Chinesesimp>正在检查枪管温度...</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CheckingTemperature">
+            <English>Checking temperature...</English>
+            <Czech>Zjišťuju teplotu...</Czech>
+            <French>Vérification de la température...</French>
+            <Spanish>Verificando temperatura...</Spanish>
+            <Italian>Controllando la temperatura...</Italian>
+            <Polish>Sprawdzanie temperatury...</Polish>
+            <Portuguese>Conferindo temperatura...</Portuguese>
+            <Russian>Проверка температуры...</Russian>
+            <German>Prüfe Temperatur ...</German>
+            <Korean>무기 온도 확인 중...</Korean>
+            <Japanese>温度を測っています・・・</Japanese>
+            <Chinese>檢查槍管溫度中...</Chinese>
+            <Chinesesimp>正在检查枪管温度...</Chinesesimp>
+            <Hungarian>Hőmérséklet ellenőrzése...</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolWeaponIsCool">
+            <English>Weapon is cool enough the water has stopped boiling.</English>
+            <French>L'arme est suffisamment froide pour que l'eau ait cessé de bouillir.</French>
+            <Spanish>El arma está lo suficientemente fría para no hacer hervir el agua.</Spanish>
+            <Italian>L'arma è abbastanza fredda, l'acqua ha smesso di bollire.</Italian>
+            <Polish>Broń jest wystarczająco schłodzona. Woda przestała się gotować.</Polish>
+            <Russian>Оружие достаточно холодное для прекращения кипения воды.</Russian>
+            <German>Waffe ist kalt genug, dass Wasser hat aufgehört zu kochen.</German>
+            <Korean>물이 끓지 않는 걸 보아 무기가 식은듯 하다.</Korean>
+            <Japanese>武器が冷え切り、水は沸騰を止めた。</Japanese>
+            <Chinesesimp>武器已经冷却，水已经停止沸腾了。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolWeaponNotEnoughWater">
+            <English>Container doesn't have enough water.</English>
+            <French>Le récipient ne contient pas suffisamment d'eau.</French>
+            <Spanish>El contenedor no tiene suficiente agua.</Spanish>
+            <Italian>Contenitore non ha abbastanza acqua.</Italian>
+            <Polish>Zbiornik nie ma wystarczającej ilości wody</Polish>
+            <Russian>Воды недостаточно для охлаждения.</Russian>
+            <German>Behälter beinhaltet nicht genug Wasser.</German>
+            <Korean>물이 충분치 않습니다.</Korean>
+            <Japanese>水源には十分な水量がありません。</Japanese>
+            <Chinesesimp>容器里的水不够。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolWeaponWithItem">
+            <English>Cool weapon with...</English>
+            <French>Refroidir l'arme avec...</French>
+            <Spanish>Enfriar arma con...</Spanish>
+            <Italian>Raffredda arma con...</Italian>
+            <Polish>Schłódź broń za pomocą...</Polish>
+            <Russian>Охладить оружие с...</Russian>
+            <German>Waffe mit... kühlen</German>
+            <Korean>무기 온도 낮추기</Korean>
+            <Japanese>武器をアイテムで冷却</Japanese>
+            <Chinesesimp>冷却武器...</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolWeaponWithWaterSource">
+            <English>Cool weapon in water source.</English>
+            <French>Refroidir l'arme dans la source d'eau.</French>
+            <Spanish>Enfriar arma con agua.</Spanish>
+            <Italian>Raffredda arma in acqua.</Italian>
+            <Polish>Schłódź broń wodą.</Polish>
+            <Russian>Охладить оружие в воде.</Russian>
+            <German>Kühle Waffe aus Wasserquelle.</German>
+            <Korean>물로 무기 식히기</Korean>
+            <Japanese>水源で武器を冷却</Japanese>
+            <Chinesesimp>用水源冷却武器。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolingWeaponWithItem">
+            <English>Cooling %1 with %2.</English>
+            <French>Refroidissement du %1 avec %2...</French>
+            <Spanish>Enfriando %1 con %2.</Spanish>
+            <Italian>Raffredda %1 con %2</Italian>
+            <Polish>Chłodzenie %1 za pomocą %2.</Polish>
+            <Russian>Охлаждение %1 с %2.</Russian>
+            <German>Kühle %1 mit %2.</German>
+            <Korean>%1을 %2로 식히는 중.</Korean>
+            <Japanese>%1 を %2 で冷ましています。</Japanese>
+            <Chinesesimp>冷却 %1 至 %2。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_CoolingWeaponWithWaterSource">
+            <English>Cooling weapon in water source.</English>
+            <French>Refroidissement de l'arme dans la source d'eau...</French>
+            <Spanish>Enfriando arma con agua...</Spanish>
+            <Italian>Raffreddando arma con l'acqua.</Italian>
+            <Polish>Chłodzenie broni wodą.</Polish>
+            <Russian>Охлаждение оружия в воде.</Russian>
+            <German>Waffe wird aus Wasserquelle gekühlt.</German>
+            <Korean>물로 무기 식히는 중.</Korean>
+            <Japanese>水源で武器を冷ましています・・・</Japanese>
+            <Chinesesimp>在水源中冷却武器。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_DisplayName">
+            <English>Overheating</English>
+            <Czech>Přehřívání</Czech>
+            <French>Surchauffe</French>
+            <Spanish>Sobrecalentamiento</Spanish>
+            <Italian>Surriscaldamento</Italian>
+            <Polish>Przegrzewanie</Polish>
+            <Portuguese>Super Aquecimento</Portuguese>
+            <Russian>Перегрев</Russian>
+            <German>Heißlaufen</German>
+            <Korean>과열</Korean>
+            <Japanese>過熱</Japanese>
+            <Chinese>過熱</Chinese>
+            <Chinesesimp>过热</Chinesesimp>
+            <Hungarian>Túlmelegedés</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_DisplayTextOnJam_description">
+            <English>Display a notification whenever your weapon gets jammed</English>
+            <Czech>Zobrazí upozornění při zaseknutí zbraně</Czech>
+            <French>Affiche une notification lorsque votre arme est enrayée.</French>
+            <Spanish>Mostrar notificación cada vez que el arma se encasquille</Spanish>
+            <Italian>Visualizza una notifica quando tua arma si inceppa</Italian>
+            <Polish>Wyświetl powiadomienie za każdym razem, kiedy Twoja broń ulegnie zacięciu</Polish>
+            <Portuguese>Mostra uma notificação quando sua arma sofre um travamento.</Portuguese>
+            <Russian>Показывать уведомление каждый раз, когда клинит Ваше оружие.</Russian>
+            <German>Zeige einen Hinweis, wenn die Waffe eine Ladehemmung hat.</German>
+            <Korean>총알이 무기에 걸릴 경우 화면에 알림을 띄웁니다</Korean>
+            <Japanese>持っている武器が弾詰まりをすると、通知を表示します</Japanese>
+            <Chinese>當武器卡彈時顯示提示訊息</Chinese>
+            <Chinesesimp>当武器卡弹时显示提示信息</Chinesesimp>
+            <Hungarian>Egy szöveges értesítés jelenik meg, amikor a fegyver megakad</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_DisplayTextOnJam_displayName">
+            <English>Display Text on Jam</English>
+            <Czech>Zobrazit upozornění při zaseknutí</Czech>
+            <French>Afficher du texte si enrayé</French>
+            <Spanish>Mostrar texto al encasquillarse</Spanish>
+            <Italian>Visualizza testo in caso di inceppamento</Italian>
+            <Polish>Wyświetl tekst przy zacięciu broni</Polish>
+            <Portuguese>Mostrar texto quando trava acontecer</Portuguese>
+            <Russian>Показывать текст, когда клинит оружие</Russian>
+            <German>Zeige Text bei Ladehemmung</German>
+            <Korean>탄걸림의 경우 화면에 표시</Korean>
+            <Japanese>弾詰まりを文章で表示</Japanese>
+            <Chinese>在卡彈時顯示提示訊息</Chinese>
+            <Chinesesimp>在卡弹时显示提示信息</Chinesesimp>
+            <Hungarian>Szöveges értesítés kijelzése a fegyver elakadásakor</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_FailureToEject">
+            <English>Failure to eject.</English>
+            <French>Défaut d'éjection.</French>
+            <Spanish>Fallo en la expulsión.</Spanish>
+            <Italian>Mancata espulsione.</Italian>
+            <Polish>Nie udało się wyrzucić łuski.</Polish>
+            <Russian>Не удалось достать.</Russian>
+            <German>Hülse wurde nicht ausgeworfen.</German>
+            <Korean>탄피가 약실에 낌.</Korean>
+            <Japanese>排莢に失敗しました。</Japanese>
+            <Chinesesimp>抛壳失败。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_FailureToExtract">
+            <English>Failure to extract.</English>
+            <French>Défaut d'extraction.</French>
+            <Spanish>Fallo en la extracción.</Spanish>
+            <Italian>Mancata estrazione.</Italian>
+            <Polish>Nie udało się wyjąć łuski.</Polish>
+            <Russian>Не удалось извлечь.</Russian>
+            <German>Hülse wurde nicht ausgezogen.</German>
+            <Korean>탄피가 배출되지 않음.</Korean>
+            <Japanese>排出に失敗しました。</Japanese>
+            <Chinesesimp>抽壳失败。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_FailureToFeed">
+            <English>Failure to feed.</English>
+            <French>Défaut d'alimentation.</French>
+            <Spanish>Fallo en la alimentación.</Spanish>
+            <Italian>Mancata alimentazione.</Italian>
+            <Polish>Nie udało się załadować naboju.</Polish>
+            <Russian>Не удалось подать.</Russian>
+            <German>Patrone wurde nicht zugeführt.</German>
+            <Korean>탄이 장전 중 걸림.</Korean>
+            <Japanese>給弾に失敗しました。</Japanese>
+            <Chinesesimp>供弹失败。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_FailureToFire">
+            <English>Failure to fire.</English>
+            <French>Défaut de tir.</French>
+            <Spanish>Fallo al disparar.</Spanish>
+            <Italian>Mancato innesco.</Italian>
+            <Polish>Nie udało się strzelić.</Polish>
+            <Russian>Не удалось выстрелить.</Russian>
+            <German>Patrone wurde nicht gezündet!</German>
+            <Korean>발사가 되지 않음.</Korean>
+            <Japanese>撃発に失敗しました。</Japanese>
+            <Chinesesimp>未能开火。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_SpareBarrelDescription">
+            <English>Use to swap barrel.</English>
+            <Czech>Používané k výměně hlavně</Czech>
+            <French>Utilisé pour changer de canon.</French>
+            <Spanish>Permite intercambiar el cañón</Spanish>
+            <Italian>Usata per sostituire una canna bollente.</Italian>
+            <Polish>Umożliwia wymianę lufy</Polish>
+            <Portuguese>Use para trocar o cano.</Portuguese>
+            <Russian>Используется для смены ствола.</Russian>
+            <German>Benutzen, um Lauf zu wechseln.</German>
+            <Korean>총열을 바꿀 때 사용합니다.</Korean>
+            <Japanese>銃身の交換に使用します。</Japanese>
+            <Chinese>用來更換槍管</Chinese>
+            <Chinesesimp>用来更换枪管</Chinesesimp>
+            <Hungarian>Használd a cső kicseréléséhez.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_SpareBarrelName">
+            <English>Spare barrel</English>
+            <Czech>Náhradní hlaveň</Czech>
+            <French>Canon de rechange</French>
+            <Spanish>Cañón de repuesto</Spanish>
+            <Italian>Canna di ricambio</Italian>
+            <Polish>Zapasowa lufa</Polish>
+            <Portuguese>Cano Reserva</Portuguese>
+            <Russian>Запасной ствол</Russian>
+            <German>Ersatzlauf</German>
+            <Korean>예비 총열</Korean>
+            <Japanese>予備銃身</Japanese>
+            <Chinese>備用槍管</Chinese>
+            <Chinesesimp>备用枪管</Chinesesimp>
+            <Hungarian>Tartalék cső</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_SwapBarrel">
+            <English>Swap barrel</English>
+            <Czech>Vyměnit hlaveň</Czech>
+            <French>Remplacer le canon</French>
+            <Spanish>Cambiar el cañón</Spanish>
+            <Italian>Sostiuisci la canna</Italian>
+            <Polish>Wymień lufę</Polish>
+            <Portuguese>Substituir cano</Portuguese>
+            <Russian>Сменить ствол</Russian>
+            <German>Lauf wechseln</German>
+            <Korean>총열 교체</Korean>
+            <Japanese>銃身を交換</Japanese>
+            <Chinese>換槍管</Chinese>
+            <Chinesesimp>换枪管</Chinesesimp>
+            <Hungarian>Cső cserélése</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_SwappedBarrel">
+            <English>Swapped barrel</English>
+            <Czech>Hlaveň vyměněna</Czech>
+            <French>Canon remplacé.</French>
+            <Spanish>Cañón cambiado</Spanish>
+            <Italian>Canna sostituita</Italian>
+            <Polish>Lufa wymieniona</Polish>
+            <Portuguese>Cano substituído</Portuguese>
+            <Russian>Ствол заменён</Russian>
+            <German>Lauf gewechselt</German>
+            <Korean>교체된 총열</Korean>
+            <Japanese>銃身を交換しました</Japanese>
+            <Chinese>完成換槍管</Chinese>
+            <Chinesesimp>完成换枪管</Chinesesimp>
+            <Hungarian>Cső kicserélve</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_SwappingBarrel">
+            <English>Swapping barrel...</English>
+            <Czech>Měním hlaveň...</Czech>
+            <French>Remplacement du canon...</French>
+            <Spanish>Cambiando el cañón...</Spanish>
+            <Italian>Sostituendo la canna...</Italian>
+            <Polish>Wymienianie lufy...</Polish>
+            <Portuguese>Substituindo cano...</Portuguese>
+            <Russian>Смена ствола...</Russian>
+            <German>Lauf wird gewechselt ...</German>
+            <Korean>총열 교체 중...</Korean>
+            <Japanese>銃身を交換しています・・・</Japanese>
+            <Chinese>換槍管中...</Chinese>
+            <Chinesesimp>正在更换枪管...</Chinesesimp>
+            <Hungarian>Cső kicserélése folyamatban...</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_Temperature">
+            <English>Temperature</English>
+            <Czech>Teplota</Czech>
+            <French>Température</French>
+            <Spanish>Temperatura</Spanish>
+            <Italian>Temperatura</Italian>
+            <Polish>Temperatura</Polish>
+            <Portuguese>Temperatura</Portuguese>
+            <Russian>Температура</Russian>
+            <German>Temperatur</German>
+            <Korean>온도</Korean>
+            <Japanese>温度</Japanese>
+            <Chinese>溫度</Chinese>
+            <Chinesesimp>温度</Chinesesimp>
+            <Hungarian>Hőmérséklet</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_UnjamWeapon">
+            <English>Clear jam</English>
+            <Czech>Uvolnit zbraň</Czech>
+            <French>Désenrayer l'arme</French>
+            <Spanish>Desencasquillar el arma</Spanish>
+            <Italian>Disinceppa l'arma</Italian>
+            <Polish>Usuń zacięcie</Polish>
+            <Portuguese>Destravar arma</Portuguese>
+            <Russian>Исправить клин оружия</Russian>
+            <German>Ladehemmung beheben</German>
+            <Korean>기능고장 해결</Korean>
+            <Japanese>弾詰まりを解消する</Japanese>
+            <Chinese>清除卡彈</Chinese>
+            <Chinesesimp>清除卡弹</Chinesesimp>
+            <Hungarian>Akadás elhárítása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_WeaponCookedOff">
+            <English>Weapon cooked off!</English>
+            <French>Auto-inflammation des munitions !</French>
+            <Spanish>Arma disparada por sobrecalentamiento!</Spanish>
+            <Italian>Munizione auto-incendiata!</Italian>
+            <Polish>Samozapłon amunicji!</Polish>
+            <Russian>Оружие сдетонировало!</Russian>
+            <German>Munition durchgezündet!</German>
+            <Korean>쿡오프가 일어납니다!</Korean>
+            <Japanese>武器が暴発した!</Japanese>
+            <Chinesesimp>武器发生热诱发！</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_WeaponJammed">
+            <English>Weapon jammed!</English>
+            <Czech>Zbraň se zasekla!</Czech>
+            <French>Arme enrayée !</French>
+            <Spanish>Arma encasquillada!</Spanish>
+            <Italian>Arma inceppata!</Italian>
+            <Polish>Zacięcie!</Polish>
+            <Portuguese>Arma travada!</Portuguese>
+            <Russian>Оружие заклинило!</Russian>
+            <German>Ladehemmung!</German>
+            <Korean>기능고장!</Korean>
+            <Japanese>武器が詰まった!</Japanese>
+            <Chinese>武器卡彈!</Chinese>
+            <Chinesesimp>武器卡弹！</Chinesesimp>
+            <Hungarian>Megakadt a fegyver!</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_WeaponUnjamFailed">
+            <English>Jam failed to clear</English>
+            <Czech>Zbraň se nepodařilo uvolnit</Czech>
+            <French>Toujours enrayé !</French>
+            <Spanish>Falló el desencasquillado</Spanish>
+            <Italian>Non si è disinceppata!</Italian>
+            <Polish>Porażka przy usuwaniu zacięcia</Polish>
+            <Portuguese>Falha no desemperramento</Portuguese>
+            <Russian>Не удалось исправить клин</Russian>
+            <German>Ladehemmung nicht behoben</German>
+            <Korean>기능고장 해결 실패</Korean>
+            <Japanese>弾詰まりの解消に失敗した</Japanese>
+            <Chinese>卡彈未能清除</Chinese>
+            <Chinesesimp>卡弹未能清除</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_WeaponUnjammed">
+            <English>Jam cleared</English>
+            <Czech>Zbraň uvolněna</Czech>
+            <French>Arme désenrayée.</French>
+            <Spanish>Arma desencasquillada</Spanish>
+            <Italian>Arma pronta al fuoco</Italian>
+            <Polish>Zacięcie usunięte</Polish>
+            <Portuguese>Arma destravada</Portuguese>
+            <Russian>Оружие исправлено</Russian>
+            <German>Ladehemmung behoben</German>
+            <Korean>기능고장 해결됨</Korean>
+            <Japanese>弾詰まりが解消した</Japanese>
+            <Chinese>卡彈已清除</Chinese>
+            <Chinesesimp>卡弹已清除</Chinesesimp>
+            <Hungarian>Akadás elhárítva</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_cookoffCoef_description">
+            <English>Coefficient for the heat required for cookoffs to occur.\nHigher values require more heat to cookoff.\nSet to 0 to disable cookoff.</English>
+            <French>Coefficient modifiant la quantité de chaleur requise pour que les munitions s'auto-inflamment dans la chambre de l'arme.\nPlus la valeur est élevée, plus l'arme doit être chaude pour que les munitions s'auto-inflamment.\nDéfinir sur 0 pour désactiver l'auto-inflammation.</French>
+            <Spanish>Coeficiente para el calor requerido para que suceda la detonación inducida por calor.\nValores más altos requieren más calor para que se produzca.\nEstablecer a 0 para deshabilitar la detonación inducida por calor.</Spanish>
+            <Italian>Coefficiente che determina il calore richiesto per auto-incendiare munizioni/carburante.\nImpostare su 0 per disabilitare l'auto-combustione.</Italian>
+            <Polish>Współczynnik modyfikujący ilość ciepła wymaganego do samozapłonu amunicji w komorze broni.\nIm wyższa wartość, tym gorętsza musi być broń, aby amunicja uległa samozapłonowi\nUstaw 0, aby wyłączyć samozapłon.</Polish>
+            <Russian>Коэффициент нагрева, при котором возникает возгорание.</Russian>
+            <German>Koeffizient für die zum Selbstzünden erforderliche Hitze.\nHöhere Werte erfordern mehr Hitze zum Selbstzünden.\nAuf 0 setzen, um das Selbstzünden zu deaktivieren.</German>
+            <Korean>쿡오프가 되기 위해 얼마나 과열되는가를 결정합니다. \n높을 수록 쿡오프 되기위해 더 뜨거운 열을 필요로 합니다.\n 0으로 설정하면 쿡오프 현상이 없어집니다.</Korean>
+            <Japanese>過熱によって暴発(コックオフ)が発生する確率の係数を設定します。\n高い値では暴発までに必要な過熱量が増加し、0 で暴発が無効化されます。</Japanese>
+            <Chinesesimp>发生热诱发的过热系数。\n数值越高，热诱发所需要的过热值越高。\n设置为0禁用热诱发。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_cookoffCoef_displayName">
+            <English>Overheating Cookoff Coefficient</English>
+            <French>Coefficient de l'auto-inflammation</French>
+            <Spanish>Coeficiente para detonación inducida por calor debido a sobrecalentamiento</Spanish>
+            <Italian>Coefficiente di auto-combustione</Italian>
+            <Polish>Współczynnik samozapłonu</Polish>
+            <Russian>Коэф. возгорания при перегреве</Russian>
+            <German>Selbstzündungskoeffizient bei Überhitzung</German>
+            <Korean>과열 쿡오프 계수</Korean>
+            <Japanese>過熱暴発係数</Japanese>
+            <Chinesesimp>过热诱发系数</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_coolingCoef_description">
+            <English>Coefficient for how quickly a weapon cools down.\nHigher value increases cooling speed.</English>
+            <French>Coefficient de rapidité de refroidissement de l'arme.\nUne valeur élevée augmente la vitesse de refroidissement.</French>
+            <Spanish>Coeficiente para cómo de rápido se enfría un arma.\nValores más altos incrementan la velocidad de enfriamiento.</Spanish>
+            <Italian>Coefficiente che determina la velocità di raffreddamento di un'arma.\nValori alti aumentano la velocità di raffreddamento.</Italian>
+            <Polish>Współczynnik szybkości chłodzenia broni.\nWiększa wartość zwiększa szybkość chłodzenia.</Polish>
+            <Portuguese>Coeficiente que determina o quão rápido a arma resfria.\nValores mais altos potencializam o resfriamento.</Portuguese>
+            <Russian>Коэффициент скорости остывания орудия.\nЧем больше значение, тем быстрее остывает.</Russian>
+            <German>Koeffizient, der angibt, wie schnell eine Waffe abkühlt.\nEin höherer Wert erhöht die Abkühlgeschwindigkeit.</German>
+            <Korean>무기가 차가워지는 정도를 정합니다.\n높은 계수는 무기가 빨리 차가워지는데 관여합니다.</Korean>
+            <Japanese>武器の冷却速度の係数。\n値を大きくすると冷却速度が速くなります。</Japanese>
+            <Chinesesimp>武器冷却速度系数。\n数值越高，冷却速度越快。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_coolingCoef_displayName">
+            <English>Cooling Coefficient</English>
+            <French>Coefficient de refroidissement</French>
+            <Spanish>Coeficiente de enfriado</Spanish>
+            <Italian>Coefficiente di raffreddamento</Italian>
+            <Polish>Współczynnik chłodzenia</Polish>
+            <Portuguese>Coeficiente de resfriamento</Portuguese>
+            <Russian>Коэф. остывания</Russian>
+            <German>Abkühlungskoeffizienten</German>
+            <Korean>냉각 계수</Korean>
+            <Japanese>冷却係数</Japanese>
+            <Chinesesimp>冷却系数</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_enabled_description">
+            <English>Master enable for the overheating/jamming module</English>
+            <Czech>Hlavní přepínač pro modul přehřívání/zasekávání</Czech>
+            <French>Active le module de surchauffe/d'enrayement.</French>
+            <Spanish>Activación maestra para Sobrecalentamiento</Spanish>
+            <Italian>Abilitazione master per il modulo di surriscaldamento / inceppamento</Italian>
+            <Polish>Główny włącznik modułu przegrzewania/zacinania się broni</Polish>
+            <Portuguese>Chave mestra para o módulo de superaquecimento/emperramento</Portuguese>
+            <Russian>Главный включатель для модуля перегрева/заклинивания</Russian>
+            <German>Hauptschalter, um die Überhitzung-/Ladehemmung-Module zu aktivieren</German>
+            <Korean>과열/탄걸림 마스터 활성화</Korean>
+            <Japanese>過熱と弾詰まりモジュールを全て有効化します</Japanese>
+            <Chinese>啟用槍管過熱/干擾模塊</Chinese>
+            <Chinesesimp>启用枪管过热/干扰模块</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_enabled_displayName">
+            <English>Overheating Enabled</English>
+            <Czech>Přehřívání povoleno</Czech>
+            <French>Surchauffe activée</French>
+            <Spanish>Activado Sobrecalentamiento</Spanish>
+            <Italian>Surriscaldamento Abilitato</Italian>
+            <Polish>Przegrzewanie włączone</Polish>
+            <Portuguese>Superaquecimento ativado</Portuguese>
+            <Russian>Перегрев включен</Russian>
+            <German>Überhitzung aktiviert</German>
+            <Korean>과열 활성화</Korean>
+            <Japanese>過熱を有効化</Japanese>
+            <Chinese>啟用過熱</Chinese>
+            <Chinesesimp>启用过热</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_heatCoef_description">
+            <English>Coefficient for the amount of heat a weapon generates per shot.\nHigher value increases heat.</English>
+            <French>Coefficient impactant la quantité de chaleur générée par l'arme à chaque tir.</French>
+            <Spanish>Coeficiente para la cantidad de calor que genera un arma por disparo.\nValores más altos incrementan el calor</Spanish>
+            <Italian>Coefficiente che determina la quantità di calore generato da un'arma con ogni colpo sparato.\nValori alti accelerano il riscaldamento.</Italian>
+            <Polish>Współczynnik wpływający na ilość ciepła generowanego przez broń przy każdym strzale.</Polish>
+            <Portuguese>Coeficiente da quantidade de calor que um armamento gera por disparo.\nValores mais altos potencializam o aquecimento.</Portuguese>
+            <Russian>Коэффициент количества тепла, выделяемого оружием за выстрел. \nБольшие значения увеличивают нагрев.</Russian>
+            <German>Koeffizient für die Menge an Hitze, die eine Waffe pro Schuss erzeugt.\nHöhere Werte beschleunigen die Erhitzung.</German>
+            <Korean>매 발사마다 만들어지는 열에 계수를 적용합니다.\n높은 계수는 더 많은 열을 발생시킵니다.</Korean>
+            <Japanese>射撃毎に武器が生み出す熱量の係数を設定します。\n高い値であるほど熱量が増加します。</Japanese>
+            <Chinesesimp>武器每次射击产生的热量系数。\n数值越高，热量越高。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_heatCoef_displayName">
+            <English>Heating Coefficient</English>
+            <French>Coefficient de surchauffe</French>
+            <Spanish>Coeficiente de calentamiento</Spanish>
+            <Italian>Coefficiente di riscaldamento</Italian>
+            <Polish>Współczynnik nagrzewania</Polish>
+            <Portuguese>Coeficiente de aquecimento</Portuguese>
+            <Russian>Коэф. нагрева</Russian>
+            <German>Erhitzungs-Koeffizient</German>
+            <Korean>과열 계수</Korean>
+            <Japanese>過熱係数</Japanese>
+            <Chinesesimp>过热系数</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_jamChanceCoef_description">
+            <English>Coefficient for the chance that a weapon will jam from overheating.\nHigher value make jams more likely.\nSet to 0 to disable jamming.</English>
+            <French>Coefficient modifiant les chances qu'une arme s'enraye à cause de la surchauffe.\nPlus la valeur est élevée, plus grand est le risque que l'arme s'enraye.\nDéfinir à 0 pour désactiver l'enrayement des armes.</French>
+            <Spanish>Coeficiente de posibilidad de que un arma se encasquille debido al sobrecalentamiento.\nValores más altos hacen más posible que se encasquille.\n Establecer a 0 para deshabilitar el encasquillamiento.</Spanish>
+            <Italian>Coefficiente della probabilità di inceppamento da surriscaldamento.\nValori alti aumentano la probabilità, 0 la disabilità.</Italian>
+            <Polish>Współczynnik zmieniający szansę na zacięcie się broni z powodu przegrzania.\nIm wyższa wartość, tym większe ryzyko zacięcia się broni.\nUstaw na 0, aby wyłączyć zacinanie się broni.</Polish>
+            <Russian>Шанс заклинивания оружия от перегрева.\nБольшие значения повышают шанс заклинивания.\nУстановите 0 для отключения заклинивания.</Russian>
+            <German>Koeffizient für die Wahrscheinlichkeit, dass eine Waffe eine Ladehemmung hat.\Höhere Werte erhöhen die Wahrscheinlichkeit.\Auf 0 setzen, um Ladehemmungen zu deaktivieren.</German>
+            <Korean>과열로 인해 얼마나 고장나는지에 대한 계수를 정합니다.\n높을 수록 더 고장이 잘납니다.\n0으로 설정하면 고장이 일어나지 않습니다.</Korean>
+            <Japanese>武器が過熱によって弾詰まりする確率係数を設定します。\n高い値では弾詰まりが起こりやすくなり、0 で弾詰まりが無効化されます。</Japanese>
+            <Chinesesimp>武器因过热而卡弹的概率系数。\n数值越高，卡住的可能性越大。\n设置为0以禁用卡弹。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_jamChanceCoef_displayName">
+            <English>Jam Chance Coefficient</English>
+            <French>Coefficient du risque d'enrayement</French>
+            <Spanish>Coeficiente de posibilidad de encasquillamiento</Spanish>
+            <Italian>Coefficiente di inceppamento</Italian>
+            <Polish>Szansa na zacięcie</Polish>
+            <Russian>Шанс заклинивания оружия</Russian>
+            <German>Koeffizient für Ladehemmung</German>
+            <Korean>기능고장 확률 계수</Korean>
+            <Japanese>弾詰まり係数</Japanese>
+            <Chinesesimp>卡弹概率系数</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_overheatingDispersion_description">
+            <English>Overheated weapons will be less accurate and have decreased muzzle velocity. Applys for all players.</English>
+            <Czech>Přehřátá zbraň bude méně přesná a bude mít menší úsťovou rychlost. Platí pro všechny hráče.</Czech>
+            <French>Les armes surchauffées seront moins précises et auront une vitesse initiale moins élevée. S'applique à tous les joueurs.</French>
+            <Spanish>Las armas sobrecalentadas pierden precisión y tienen una velocidad de disparo reducida. Se aplica a todos los jugadores.</Spanish>
+            <Italian>Armi surriscaldate saranno meno precise ed avranno una ridotta velocità alla volata. Applicato a tutti i giocatori.</Italian>
+            <Polish>Przegrzane bronie będą mniej celne oraz będą miały zmniejszoną prędkość pocisku. Wpływa na wszystkich graczy.</Polish>
+            <Portuguese>Armas superaquecidas irão ser menos precisas e ter velocidade de disparo reduzidas. Aplica a todos os jogadores.</Portuguese>
+            <Russian>Перегретое оружие будет менее точным, а дульная скорость будет снижена. Применяется ко всем игрокам.</Russian>
+            <German>Überhitzte Waffen sind weniger genau und verfügen über eine geringere Mündungsgeschwindigkeit. Wird bei allen Spielern angewendet.</German>
+            <Korean>무기 과열 시 무기의 명중률이 저하되고 총구속도가 감소합니다. 이는 모든 플레이어에게 적용됩니다.</Korean>
+            <Japanese>過熱は精度を減少させたり、初速を低下させます。これは全プレイヤーに適用します。</Japanese>
+            <Chinese>過熱的武器將會有打不準和減少射擊初速的情況。適用於所有玩家</Chinese>
+            <Chinesesimp>过热的武器将会有打不准和减少射击初速的情况。适用于所有玩家</Chinesesimp>
+            <Hungarian>A túlmelegedett fegyverek kevésbé lesznek pontosak és csökkent a lövés sebessége. Minden játékosra vonatkozik.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_overheatingDispersion_displayName">
+            <English>Overheating Dispersion</English>
+            <Czech>Důsledky přehřátí zbraně</Czech>
+            <French>Dispersion</French>
+            <Spanish>Dispersión</Spanish>
+            <Italian>Dispersione da Surriscaldamento</Italian>
+            <Polish>Wpływ na rozrzut</Polish>
+            <Portuguese>Dispersão de superaquecimento</Portuguese>
+            <Russian>Разброс при перегреве</Russian>
+            <German>Streuung bei Überhitzung</German>
+            <Korean>과열 명중률 저하</Korean>
+            <Japanese>過熱による精度の低下</Japanese>
+            <Chinese>過熱散射</Chinese>
+            <Chinesesimp>过热散射</Chinesesimp>
+            <Hungarian>Túlmelegedés diszperzió (szórás)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_overheatingRateOfFire_description">
+            <English>As weapons heat up, their rate of fire increases by up to 10%.</English>
+            <French>Lorsqu'une arme chauffe, sa cadence de tir peut augmenter jusqu'à 10%.</French>
+            <Spanish>Según se calienta el arma, su cadencia de tiro aumenta hasta un 10%.</Spanish>
+            <Italian>Quando le armi si surriscaldano, la loro cadenza di tiro può aumentare anche del 10%.</Italian>
+            <Polish>Gdy broń się nagrzewa, jej szybkostrzelność może wzrosnąć nawet o 10%.</Polish>
+            <Russian>При нареве орудия, его темп стрельбы увеличивается до 10%.</Russian>
+            <German>Wenn sich Waffen erhitzen, erhöht sich ihre Feuerrate um bis zu 10%.</German>
+            <Korean>과열될수록 발사속도가 최대 10%까지 올라갑니다.</Korean>
+            <Japanese>武器が熱を帯び始めると、連射速度が 10% 上昇します。</Japanese>
+            <Chinesesimp>随着武器的过热，其射速最多增加10%。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_overheatingRateOfFire_displayName">
+            <English>Heat Increases Fire Rate</English>
+            <French>La chaleur augmente la cadence de tir</French>
+            <Spanish>Calentamiento incrementa la cadencia de tiro.</Spanish>
+            <Italian>Calore aumenta la cadenza di tiro</Italian>
+            <Polish>Ciepło zwiększa szybkostrzelność</Polish>
+            <Russian>Нагрев увеличивает темп стрельбы</Russian>
+            <German>Hitze erhöht die Feuerrate</German>
+            <Korean>과열 시 발사속도 증가</Korean>
+            <Japanese>熱による連射速度上昇</Japanese>
+            <Chinesesimp>过热增加射速</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_description">
+            <English>The distance, in meters, from the player within which overheating particle effects and dispersion are visible.</English>
+            <French>Définit la distance en mètres, jusqu'à laquelle les effets de particules et la dispersion sont visibles.</French>
+            <Spanish>La distancia, en metros, desde la cual los efectos de sobrecalentamiento de particulas y dispersión son visibles.</Spanish>
+            <Italian>La distanza in metri da cui sono visibili gli effetti particellari e la dispersione.</Italian>
+            <Polish>Określa odległość w metrach, do której widoczne są efekty cząsteczkowe i rozproszenie.</Polish>
+            <Russian>Дистанция в метрах, с которой видны эффекты частиц и разброса при перегреве.</Russian>
+            <German>Der Abstand in Metern vom Spieler, in dem Überhitzungspartikeleffekte und Dispersion sichtbar sind.</German>
+            <Korean>미터 단위로, 과열 시 입자효과와 분산 정도가 플레이어로부터 얼마나 떨어진 곳까지 보여지는지를 결정합니다.</Korean>
+            <Japanese>プレイヤーが過熱パーティクルのエフェクトと分散を見えるようになる距離 (m) を設定します。</Japanese>
+            <Chinesesimp>距离玩家的距离（米），在这个距离内可以看到过热的粒子效应和扩散。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_particleEffectsAndDispersionDistance_displayName">
+            <English>Distance for Effects and Dispersion</English>
+            <French>Distance des effets et de la dispersion</French>
+            <Spanish>Distancia para Efectos y Dispersión</Spanish>
+            <Italian>Distanza per effetti e dispersione</Italian>
+            <Polish>Odległość efektów i rozproszenia</Polish>
+            <Russian>Дистанция для эффектов и разброса</Russian>
+            <German>Abstand für Effekte und Dispersion</German>
+            <Korean>효과와 분산 거리</Korean>
+            <Japanese>エフェクトと分散の距離</Japanese>
+            <Chinesesimp>效果和扩散距离</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_description">
+            <English>Show particle effects when other players weapon overheats</English>
+            <Czech>Zobrazit částicové efekty když se zbraň přehřije jinému hráči</Czech>
+            <French>Affiche les effets de particules lorsque les armes des autres joueurs surchauffent.</French>
+            <Spanish>Muestra efectos de partículas cuando el arma de jugadores cercanos se sobreacalienta</Spanish>
+            <Italian>Mostra effetti particellari quando l'arma di altri giocatori si surriscalda</Italian>
+            <Polish>Pokazuje efekty cząsteczkowe kiedy broń innego gracza się przegrzeje</Polish>
+            <Portuguese>Mostra efeito de partículas quando a arma de outros jogadores superaquece</Portuguese>
+            <Russian>Показывать эффект частиц, когда оружие других игроков перегревается</Russian>
+            <German>Zeigt Partikeleffekt auch bei überhitzten Waffen von Mitspielern.</German>
+            <Korean>모든 인원이 무기가 과열될 시 입자 효과가 나타납니다.</Korean>
+            <Japanese>他のプレイヤーの過熱の視覚表現を表示します</Japanese>
+            <Chinese>當其他玩家的武器過熱時顯示特效</Chinese>
+            <Chinesesimp>当其他玩家的武器过热时显示特效</Chinesesimp>
+            <Hungarian>Mutassa a részecskehatásokat, amikor más játékosok fegyvere melegedik túl</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_showParticleEffectsForEveryone_displayName">
+            <English>Overheating Particle Effects for Everyone</English>
+            <Czech>Částicové efekty přehřívání pro všechny</Czech>
+            <French>Effets de particules pour tout le monde</French>
+            <Spanish>Efectos de partículas para todos</Spanish>
+            <Italian>Effetti Particellari Surriscaldamento per tutti</Italian>
+            <Polish>Pokaż efekty cząsteczkowe dla wszystkich</Polish>
+            <Portuguese>Efeito de partícula de superaquecimento para todos</Portuguese>
+            <Russian>Эффект частиц при перегреве для всех</Russian>
+            <German>Zeige Partikeleffekt bei Überhitzung für jeden</German>
+            <Korean>모두에게 과열 입자 효과 적용</Korean>
+            <Japanese>過熱の視覚表現を全員に</Japanese>
+            <Chinese>顯示其他玩家的槍管過熱特效</Chinese>
+            <Chinesesimp>显示其他玩家的枪管过热特效</Chinesesimp>
+            <Hungarian>A részecskék túlmelegedésének hatása mindenki számára</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_showParticleEffects_description">
+            <English>Show particle effects when weapon overheats</English>
+            <Czech>Zobrazit částicové efekty když se zbraň přehřije</Czech>
+            <French>Affiche des effets de particules lorsqu'une arme surchauffe.</French>
+            <Spanish>Muestra efectos de partículas cuando el arma del jugador se sobreacalienta</Spanish>
+            <Italian>Mostra effetti particellari quando l'arma si surriscalda</Italian>
+            <Polish>Pokaż efekty cząsteczkowe kiedy broń się przegrzeje</Polish>
+            <Portuguese>Mostra efeitos de partícula quando a arma superaquece</Portuguese>
+            <Russian>Показывать эффект частиц, когда оружие перегревается</Russian>
+            <German>Zeige einen Partikeleffekt, wenn die Waffe überhitzt.</German>
+            <Korean>무기가 과열되면 입자 효과를 보여줍니다</Korean>
+            <Japanese>武器を過熱すると視覚表現を表示します</Japanese>
+            <Chinese>顯示槍管過熱特效</Chinese>
+            <Chinesesimp>显示枪管过热特效</Chinesesimp>
+            <Hungarian>Fegyvertúlmelegedést okozó részecskehatások mutatása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_showParticleEffects_displayName">
+            <English>Overheating Particle Effects</English>
+            <Czech>Částicové efekty přehřívání</Czech>
+            <French>Effets de particules</French>
+            <Spanish>Efectos de partículas</Spanish>
+            <Italian>Effetti Particelle Surriscaldamento</Italian>
+            <Polish>Efekty cząsteczkowe przegrzania</Polish>
+            <Portuguese>Efeito de partícula de superaquecimento</Portuguese>
+            <Russian>Эффект частиц при перегреве</Russian>
+            <German>Partikeleffekt bei Überhitzung</German>
+            <Korean>과열 입자 효과</Korean>
+            <Japanese>過熱の視覚効果</Japanese>
+            <Chinese>槍管過熱特效</Chinese>
+            <Chinesesimp>枪管过热特效</Chinesesimp>
+            <Hungarian>Részecskék túlmelegedése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType">
             <English>Barrel Type</English>
-            <Italian>Tipo di Canna</Italian>
-            <Japanese>銃身形式</Japanese>
-            <Korean>총열 방식</Korean>
-            <Russian>Тип ствола</Russian>
             <French>Type de canon</French>
-            <German>Lauftyp</German>
             <Spanish>Tipo de Cañón</Spanish>
+            <Italian>Tipo di Canna</Italian>
+            <Russian>Тип ствола</Russian>
+            <German>Lauftyp</German>
+            <Korean>총열 방식</Korean>
+            <Japanese>銃身形式</Japanese>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_nonRemoveable">
             <English>Non-Removeable</English>
-            <Italian>Non-Rimovibile</Italian>
-            <Japanese>取り外し不可</Japanese>
-            <Korean>제거 불가</Korean>
-            <Russian>Несъемный</Russian>
             <French>Inamovible</French>
-            <German>Nicht entfernbar</German>
             <Spanish>No-Desmontable</Spanish>
+            <Italian>Non-Rimovibile</Italian>
+            <Russian>Несъемный</Russian>
+            <German>Nicht entfernbar</German>
+            <Korean>제거 불가</Korean>
+            <Japanese>取り外し不可</Japanese>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_removeable">
             <English>Quick Change</English>
-            <Italian>Cambio Rapido</Italian>
-            <Japanese>即時交換可</Japanese>
-            <Korean>신속 교체</Korean>
-            <Russian>Быстросъемный</Russian>
             <French>Changement rapide</French>
-            <German>Schnellwechsel</German>
             <Spanish>Cambiado Rápido</Spanish>
+            <Italian>Cambio Rapido</Italian>
+            <Russian>Быстросъемный</Russian>
+            <German>Schnellwechsel</German>
+            <Korean>신속 교체</Korean>
+            <Japanese>即時交換可</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Overheating_statBoltType">
+            <English>Bolt Type</English>
+            <French>Type d'obturateur</French>
+            <Spanish>Tipo de Cerrojo</Spanish>
+            <Italian>Tipo di otturatore</Italian>
+            <Russian>Тип болта</Russian>
+            <German>Art des Verschlusses</German>
+            <Korean>노리쇠 방식</Korean>
+            <Japanese>遊底(ボルト)形式</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Overheating_statBoltType_closedBolt">
+            <English>Closed Bolt</English>
+            <French>Obturateur fermé</French>
+            <Spanish>Cerrojo Cerrado</Spanish>
+            <Italian>Otturatore Chiuso</Italian>
+            <Russian>Закрыть болт</Russian>
+            <German>Geschlossener Verschluss</German>
+            <Korean>클로즈드 볼트</Korean>
+            <Japanese>クローズドボルト</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Overheating_statBoltType_openBolt">
+            <English>Open Bolt</English>
+            <French>Obturateur ouvert</French>
+            <Spanish>Cerrojo Abierto</Spanish>
+            <Italian>Otturatore Aperto</Italian>
+            <Russian>Открыть болт</Russian>
+            <German>Offener Verschluss</German>
+            <Korean>오픈 볼트</Korean>
+            <Japanese>オープンボルト</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Overheating_suppressorCoef_description">
+            <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>
+            <French>Coefficient d'ajout de chaleur lorsqu'un suppresseur est installé.\nUne valeur élevée augmente la chaleur, 0 signifique qu'aucune chaleur ne sera ajouté par le suppresseur.</French>
+            <Spanish>Coeficiente para cuanto calor adicional es añadido por tener un silenciador montado.\nValores más altos incrementan el calor. 0 significa que el silenciador no añade calor adicional.</Spanish>
+            <Italian>Coefficiente che determina quanto calore viene aggiunto dalla presenza di un silenziatore.\nValori alti aumentano il calore, 0 significa che un silenziatore non fa differenza.</Italian>
+            <Polish>Współczynnik określający, ile dodatkowego ciepła jest dodawane z założonego tłumika.\nWyższa wartość zwiększa ciepło, 0 oznacza brak dodatkowego ciepła z tłumika.</Polish>
+            <Russian>Коэффициент указывающий как много дополнительного тепла будет выделяться прикреплённым глушителем.\nБольшее значение увеличивает выделение тепла, 0 - отсутствие дополнительного тепла.</Russian>
+            <German>Koeffizient, der angibt, wie viel zusätzliche Wärme durch das Anbringen eines Schalldämpfers hinzugefügt wird. Ein höherer Wert erhöht die Menge an Wärme, 0 bedeutet, dass keine zusätzliche Wärme durch den Schalldämpfer hinzukommt.</German>
+            <Korean>소음기 장착 시 만들어 지는 열에 대한 계수를 적용합니다.\n높을 수록 온도가 높아집니다, 0으로 설정 시 추가적인 열을 얻지 않습니다.</Korean>
+            <Japanese>サプレッサーを取り付けることで追加される熱量の係数。\n値が大きいほど熱が増加し、0はサプレッサーからの追加の熱がないことを意味します。</Japanese>
+            <Chinesesimp>附加了消音器后，产生的额外热量系数。\n数值越高，热量越高，0意味着消音器不产生额外热量。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_suppressorCoef_displayName">
+            <English>Suppressor Coefficient</English>
+            <French>Coefficient de suppresion</French>
+            <Spanish>Coeficiente del silenciador</Spanish>
+            <Italian>Coefficiente di Silenziatore</Italian>
+            <Polish>Współczynnik tłumika</Polish>
+            <Portuguese>Coeficiente de supressão</Portuguese>
+            <Russian>Коэф. глушителя</Russian>
+            <German>Schalldämpfer-Koeffizient</German>
+            <Korean>소음기 계수</Korean>
+            <Japanese>サプレッサー係数</Japanese>
+            <Chinesesimp>消音器系数</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_unJamFailChance_description">
+            <English>Probability that an unjam action might fail, requiring to be repeated.</English>
+            <Czech>Pravděpodobnost, že uvolnění zbraně selže, je proto nutné tuto akci opakovat.</Czech>
+            <French>Probabilité qu'une action de désenrayement échoue, nécessitant de recommencer.</French>
+            <Spanish>Probabilidad de que el proceso de desencasquille falle, teniendo que repetirlo.</Spanish>
+            <Italian>Probabilità casuale che si possa sbagliare a disinceppare l'arma. Richiedendo di ripetere il disinceppamento.</Italian>
+            <Polish>Szansa na to, że przy przeładowaniu broni zacięcie nie zostanie usunięte, przez co czynność będzie musiała zostać powtórzona ponownie.</Polish>
+            <Portuguese>Probabilidade que uma ação de desemperramento falhe, tendo que ser repetida</Portuguese>
+            <Russian>Вертоятность того, что устранение заклинивания не сработает, и его придется повторить.</Russian>
+            <German>Wahrscheinlichkeit, dass der Versuch eine Ladehemmung zu beheben fehl schlägt und erneut durchgeführt werden muss.</German>
+            <Korean>기능고장 해결 시도시 실패할 확률이 있습니다. 이는 다시 기능고장 해결을 시도해야함을 의미합니다.</Korean>
+            <Japanese>弾詰まり解除のアクションに失敗し、再実行が必要になる確率。</Japanese>
+            <Chinese>清除卡彈時有可能會失敗，需要反覆進行清槍。</Chinese>
+            <Chinesesimp>清除卡弹时有可能会失败，需要反覆进行清枪。</Chinesesimp>
+            <Hungarian>Valószínűsége annak, hogy egy akadály eltávolítás művelet kudarcot vall, megismétlést igényel.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_unJamFailChance_displayName">
+            <English>Chance of Unjam Failing</English>
+            <Czech>Šance, že uvolnění zbraně selže</Czech>
+            <French>Risque d'échec du désenrayement</French>
+            <Spanish>Probabilidad de falla al desencasquillar.</Spanish>
+            <Italian>Probabilità di sbagliare a disinceppare l'arma</Italian>
+            <Polish>Szansa na porażkę usuw. zacięcia</Polish>
+            <Portuguese>Chance de falha de desemperramento</Portuguese>
+            <Russian>Шанс неудачи при устранении клина</Russian>
+            <German>Wahrscheinlichkeit, dass Ladehemmung nicht behoben wird</German>
+            <Korean>기능고장 해결 시도 실패확률</Korean>
+            <Japanese>弾詰まりの除去を失敗する可能性</Japanese>
+            <Chinese>解決卡彈失敗機率</Chinese>
+            <Chinesesimp>解决卡弹失败机率</Chinesesimp>
+            <Hungarian>Akadály eltávolítás hibájának esélye</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_unJamOnReload_description">
+            <English>Reloading clears a weapon jam.</English>
+            <Czech>Přebití uvolní zaseknutou zbraň.</Czech>
+            <French>Les armes se désenrayent lors d'un rechargement.</French>
+            <Spanish>Recargar el arma la desencasquilla.</Spanish>
+            <Italian>L'arma si disinceppa quando si ricarica</Italian>
+            <Polish>Przeładowywanie usuwa zacięcie</Polish>
+            <Portuguese>Recarregar desemperra arma.</Portuguese>
+            <Russian>Перезарядка устраняет заклинивание оружия.</Russian>
+            <German>Nachladen behebt eine Ladehemmung.</German>
+            <Korean>기능고장이 재장전 시 해결됩니다.</Korean>
+            <Japanese>再装填により、弾詰まりを除去します。</Japanese>
+            <Chinese>利用重裝彈匣來解決卡彈</Chinese>
+            <Chinesesimp>利用重装弹匣来解决卡弹</Chinesesimp>
+            <Hungarian>Az újratöltés megszünteti a fegyver elakadását.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_unJamOnReload_displayName">
+            <English>Unjam Weapon on Reload</English>
+            <Czech>Uvolnit zbraň při přebití</Czech>
+            <French>Désenrayer l'arme au rechargement</French>
+            <Spanish>Desencasquillar el arma al recargar.</Spanish>
+            <Italian>Disinceppa l'arma quando si ricarica</Italian>
+            <Polish>Usuń zacięcie przy przeładowaniu</Polish>
+            <Portuguese>Desemperrar arma no recarregamento</Portuguese>
+            <Russian>Исправлять клин при перезарядке</Russian>
+            <German>Behebt Ladehemmung beim Nachladen</German>
+            <Korean>재장전 시 기능고장 해결</Korean>
+            <Japanese>再装填による弾詰まり解消</Japanese>
+            <Chinese>重裝彈匣以解決卡彈</Chinese>
+            <Chinesesimp>重装弹匣以解决卡弹</Chinesesimp>
+            <Hungarian>Távolítsa el az akadályt újratöltéskor</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_description">
+            <English>Controls whether swapping barrels clears a weapon jam.</English>
+            <French>Les armes se désenrayent lors d'un remplacement de canon.</French>
+            <Spanish>Controla si cambiar el cañón del arma la desencasquilla.</Spanish>
+            <Italian>Determina se la sostituzione della canna disinceppa l'arma.</Italian>
+            <Polish>Określa, czy wymiana lufy usuwa zacięcie się broni.</Polish>
+            <Russian>Определяет, устраняет ли замена ствола заклинивание оружия.</Russian>
+            <German>Bestimmt, ob das Wechseln des Laufes eine Ladehemmung behebt.</German>
+            <Korean>총열을 교체하면서 기능고장을 해결합니다.</Korean>
+            <Japanese>銃身を交換して弾詰まりの解消をできるようにします。</Japanese>
+            <Chinesesimp>通过更换枪管，以便清除卡弹。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overheating_unJamOnSwapBarrel_displayName">
+            <English>Unjam on Barrel Swap</English>
+            <French>Désenrayer l'arme au changement de canon</French>
+            <Spanish>Desencasquillar con el cambio de cañón</Spanish>
+            <Italian>Disinceppa l'arma col cambio canna</Italian>
+            <Polish>Usuń zacięcie przy wymianie lufy</Polish>
+            <Russian>Замена ствола устраняет клин оружия</Russian>
+            <German>Ladehemmung beim Wechseln des Laufes beheben.</German>
+            <Korean>총열 교환 시 기능고장 해결</Korean>
+            <Japanese>銃身交換による弾詰まり解消</Japanese>
+            <Chinesesimp>更换枪管清除卡弹</Chinesesimp>
         </Key>
     </Package>
 </Project>

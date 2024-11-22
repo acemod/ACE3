@@ -73,8 +73,6 @@ if (_button != 0) exitWith {
     false // return
 };
 
-private _handled = false;
-
 // If releasing
 if (_dir != 1) then {
     if (GVAR(mapTool_isDragging) || GVAR(mapTool_isRotating)) then {

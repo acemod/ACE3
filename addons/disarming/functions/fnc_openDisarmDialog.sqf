@@ -23,7 +23,7 @@ params ["_caller", "_target"];
 
 //Sanity Checks
 if (_caller != ACE_player) exitWith {ERROR("Player isn't caller?");};
-if !([_player, _target] call FUNC(canPlayerDisarmUnit)) exitWith {ERROR("Can't Disarm Unit");};
+if !([_caller, _target] call FUNC(canPlayerDisarmUnit)) exitWith {ERROR("Can't Disarm Unit");};
 if (dialog) then {ERROR("Dialog open when trying to open disarm dialog"); closeDialog 0;};
 
 disableSerialization;

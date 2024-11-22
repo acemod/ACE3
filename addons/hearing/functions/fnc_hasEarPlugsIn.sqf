@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-_unit getVariable ["ACE_hasEarPlugsin", false]
+_unit getVariable ["ACE_hasEarPlugsIn", false]
