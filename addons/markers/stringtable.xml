@@ -435,7 +435,7 @@
             <Russian>Необходимы часы</Russian>
             <German>Uhr, GPS oder UAV Terminal benötigt</German>
             <Korean>시계 필요함</Korean>
-            <Japanese>時計が必要</Japanese>
+            <Japanese>時計 か GPS または UAVターミナル が必要</Japanese>
             <Chinesesimp>需要手表</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampUTCMinutesOffset">
