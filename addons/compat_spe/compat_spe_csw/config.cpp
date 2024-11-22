@@ -23,7 +23,22 @@ class CfgPatches {
     };
 };
 
-#include "ACE_CSW_Groups.hpp"
-// Todo: https://github.com/acemod/ACE3/pull/9292#discussion_r1327738181
-// #include "CfgVehicles.hpp"
-// #include "CfgWeapons.hpp"
+#include "CfgMagazines.hpp"
+#include "CfgMagazineGroups.hpp"
+#include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"
+
+class CfgFunctions {
+    class SPE_WEAPONS_STATIC {
+        class SPE_Weapons_Static {
+            OVERWRITE_FUNC(alter_height);
+            OVERWRITE_FUNC(can_alter_height);
+            OVERWRITE_FUNC(can_assemble_weapon);
+            OVERWRITE_FUNC(can_disassemble_weapon);
+            OVERWRITE_FUNC(can_prepare_ammo);
+            OVERWRITE_FUNC(can_Reload);
+            OVERWRITE_FUNC(can_resupply_ammo);
+            OVERWRITE_FUNC(can_unload_ammo);
+        };
+    };
+};

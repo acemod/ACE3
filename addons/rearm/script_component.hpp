@@ -35,7 +35,7 @@
     _unit action ["SwitchWeapon", _unit, _unit, 299];
 
 #define REARM_UNHOLSTER_WEAPON \
-    _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRearm); \
+    private _weaponSelect = _unit getVariable QGVAR(selectedWeaponOnRearm); \
     if (!isNil "_weaponSelect") then { \
         TRACE_2("REARM_UNHOLSTER_WEAPON",_unit,_weaponSelect); \
         _unit selectWeapon _weaponSelect; \

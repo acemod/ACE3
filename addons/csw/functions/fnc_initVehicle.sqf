@@ -76,7 +76,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
 
     private _ammoActionPath = [];
     private _magazineLocation = getText (_configOf >> QUOTE(ADDON) >> "magazineLocation");
-    private _condition = { //IGNORE_PRIVATE_WARNING ["_target", "_player"];
+    private _condition = {
         // If magazine handling is enabled or weapon assembly/disassembly is enabled we enable ammo handling
         if ((GVAR(ammoHandling) == 0) && {!([false, true, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 3]))}) exitWith { false };
         [_player, _target, ["isNotSwimming", "isNotSitting"]] call EFUNC(common,canInteractWith)
@@ -97,9 +97,17 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
     };
 
     if (["ace_reload"] call EFUNC(common,isModLoaded)) then {
-        // move reload's check ammo action to the ammo handling point (remove and re-add)
         [_typeOf, 0, ["ACE_MainActions", QEGVAR(reload,CheckAmmo)]] call EFUNC(interact_menu,removeActionFromClass);
-        private _checkAmmoAction = [QGVAR(checkAmmo), LELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), EFUNC(reload,canCheckAmmo)] call EFUNC(interact_menu,createAction);
+
+        // Replace existing check ammo interaction with one that takes into account if the magazine actions are available
+        private _checkAmmoAction = [QEGVAR(reload,CheckAmmo), LELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), {
+            if !((GVAR(ammoHandling) == 0) && {!([false, true, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 3]))}) exitWith { false };
+            _this call EFUNC(reload,canCheckAmmo)
+        }] call EFUNC(interact_menu,createAction);
+        [_typeOf, 0, ["ACE_MainActions"], _checkAmmoAction] call EFUNC(interact_menu,addActionToClass);
+
+        // Add another check ammo action to the ammo handling point
+        _checkAmmoAction = [QGVAR(checkAmmo), LELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), EFUNC(reload,canCheckAmmo)] call EFUNC(interact_menu,createAction);
         [_typeOf, 0, _ammoActionPath, _checkAmmoAction] call EFUNC(interact_menu,addActionToClass);
     };
 };

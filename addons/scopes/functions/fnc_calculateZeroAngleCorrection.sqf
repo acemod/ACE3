@@ -42,9 +42,7 @@ private _vanillaZero = parseNumber (("ace" callExtension ["ballistics:replicate_
     _vanillaZero = 0;
 #endif
 
-private _trueZero = if (!_advancedBallistics) then {
-    parseNumber (("ace" callExtension ["ballistics:zero_vanilla", [_newZeroRange, _initSpeed, _airFriction, _boreHeight]]) select 0)
-} else {
+private _trueZero = if (_advancedBallistics) then {
     // Get Weapon and Ammo Configurations
     private _AmmoCacheEntry = uiNamespace getVariable format[QEGVAR(advanced_ballistics,%1), _ammo];
     if (isNil "_AmmoCacheEntry") then {
@@ -81,6 +79,8 @@ private _trueZero = if (!_advancedBallistics) then {
             _atmosphereModel
         ]]) select 0
     )
+} else {
+    parseNumber (("ace" callExtension ["ballistics:zero_vanilla", [_newZeroRange, _initSpeed, _airFriction, _boreHeight]]) select 0)
 };
 
 private _zeroAngleCorrection = _trueZero - _vanillaZero;

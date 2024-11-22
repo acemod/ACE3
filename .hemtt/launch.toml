@@ -21,6 +21,12 @@ dlc = [
     "Western Sahara",
 ]
 
+[rf]
+extends = "default"
+dlc = [
+    "Reaction Forces"
+]
+
 [rhs]
 extends = "default"
 workshop = [

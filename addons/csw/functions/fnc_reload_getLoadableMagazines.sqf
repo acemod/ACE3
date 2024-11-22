@@ -59,7 +59,6 @@ private _return = [];
     {
         private _weapon = _x;
         {
-            //IGNORE_PRIVATE_WARNING ["_x", "_y"];
             private _carryMag = _x;
             private _magSource = _y;
             private _carryGroup = _magGroupsConfig >> _carryMag;

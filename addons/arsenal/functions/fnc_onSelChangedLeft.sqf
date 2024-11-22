@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
-#include "..\defines.hpp"
 #include "\a3\ui_f\hpp\defineResincl.inc"
+#include "..\defines.hpp"
 /*
  * Author: Alganthe, johnb43
  * Handles selection changes on the left panel.
@@ -33,6 +33,7 @@ private _fnc_clearCurrentWeaponMags = {
 
     // If nothing was selected, remove all magazines from the current weapon
     if (_item != "") then {
+        //IGNORE_PRIVATE_WARNING ["_compatibleMags"];
         _compatibleMagsCurrentWeapon = _compatibleMagsCurrentWeapon - _compatibleMags;
     };
 

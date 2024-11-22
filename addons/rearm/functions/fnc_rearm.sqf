@@ -45,6 +45,7 @@ private _magazineDisplayName = _magazineClass call FUNC(getMagazineName);
     "",
     format [localize LSTRING(RearmAction), getText(configOf _target >> "displayName"), _magazineDisplayName],
     {
+        //IGNORE_PRIVATE_WARNING ["_player"];
         param [0] params ["_target", "_unit"];
         _player distance _target <= GVAR(distance);
     },

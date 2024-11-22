@@ -92,7 +92,7 @@ private _maxMagazineAmmo = getNumber (configFile >> "CfgMagazines" >> _magazine 
 // If there is still remaining ammo to add, try add it after having iterated through all containers
 if (!_removeAmmo && _count > 0) then {
     {
-        while {_count > 0 && {_x canAdd [_magazine, 1/* 2.18 , true*/]}} do {
+        while {_count > 0 && {_x canAdd _magazine}} do {
             _x addMagazineAmmoCargo [_magazine, 1, _count];
 
             _count = _count - _maxMagazineAmmo;
