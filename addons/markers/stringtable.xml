@@ -426,14 +426,14 @@
             <Chinesesimp>UTC时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
-            <English>Watch Required</English>
+            <English>Watch, GPS or UAV Terminal Required</English>
             <French>Une montre est requise.</French>
             <Spanish>Reloj requerido</Spanish>
             <Italian>Necessario orologio</Italian>
             <Polish>Wymagany zegarek</Polish>
             <Portuguese>Relógio necessário</Portuguese>
             <Russian>Необходимы часы</Russian>
-            <German>Uhr benötigt</German>
+            <German>Uhr, GPS oder UAV Terminal benötigt</German>
             <Korean>시계 필요함</Korean>
             <Japanese>時計が必要</Japanese>
             <Chinesesimp>需要手表</Chinesesimp>
