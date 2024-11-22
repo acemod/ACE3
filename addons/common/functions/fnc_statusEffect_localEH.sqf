@@ -4,7 +4,7 @@
  * Handles locality switch, runs a respawn check and then reapplies all effect events.
  *
  * Arguments:
- * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
+ * 0: Vehicle that it will be attached to (player or vehicle) <OBJECT>
  * 1: isLocal <BOOL>
  *
  * Return Value:

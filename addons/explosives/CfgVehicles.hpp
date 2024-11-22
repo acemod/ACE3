@@ -364,7 +364,6 @@ class CfgVehicles {
         author = ECSTRING(common,aceteam);
         ammo = "ACE_SLAMDirectionalMine_Magnetic_Ammo";
         displayName = CSTRING(Module_SLAMBottomAttack_DisplayName);
-        // TODO: Find a way to place the mine laying down instead of standing up
     };
 
     class APERSTripMine: MineBase {};
@@ -372,6 +371,18 @@ class CfgVehicles {
         author = ECSTRING(common,aceteam);
         ammo = "ACE_FlareTripMine_Wire_Ammo";
         displayName = CSTRING(TripFlare_Name);
+    };
+
+    class Claymore_F: MineBase {
+        ammo = "ACE_ClaymoreDirectionalMine_Remote_Ammo";
+    };
+
+    class APERSBoundingMine: MineBase {
+        ammo = "ACE_APERSBoundingMine_Range_Ammo";
+    };
+
+    class DemoCharge_F: MineBase {
+        ammo = "ACE_DemoCharge_Remote_Ammo";
     };
 
     class IEDUrbanBig_F;

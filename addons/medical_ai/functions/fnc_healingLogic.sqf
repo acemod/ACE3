@@ -262,7 +262,7 @@ if (true) then {
     if (_canGiveIV) exitWith {
         _treatmentEvent = QEGVAR(medical_treatment,ivBagLocal);
         _treatmentTime = 5;
-        _treatmentArgs = [_target, _bodyPart, "SalineIV"];
+        _treatmentArgs = [_target, _bodyPart, "SalineIV", _healer];
         _treatmentItem = "@iv";
     };
 

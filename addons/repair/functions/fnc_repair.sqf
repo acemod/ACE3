@@ -163,7 +163,7 @@ if (_currentWeapon == secondaryWeapon _caller) then {
 
 private _wpn = ["non", "rfl", "pst"] select (1 + ([primaryWeapon _caller, handgunWeapon _caller] find (currentWeapon _caller)));
 _callerAnim = [_callerAnim, "[wpn]", _wpn] call CBA_fnc_replace;
-if (vehicle _caller == _caller && {_callerAnim != ""}) then {
+if (isNull objectParent _caller && {_callerAnim != ""}) then {
     if (primaryWeapon _caller == "") then {
         _caller addWeapon "ACE_FakePrimaryWeapon";
     };

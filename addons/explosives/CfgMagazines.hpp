@@ -87,7 +87,7 @@ class CfgMagazines {
                 displayName = CSTRING(SLAME_Magnetic);
                 digDistance = 0;
                 ammo = "ACE_SLAMDirectionalMine_Magnetic_Ammo";
-                pitch = 90;
+                pitch = MINE_PITCH_UP;
             };
             class IRSensor {
                 displayName = CSTRING(SLAME_IRSensor);
