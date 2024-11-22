@@ -35,7 +35,7 @@
 
         {
             private _config = configFile >> QEGVAR(missileguidance,AttackProfiles) >> _x;
-            if (getText (_config >> "name") != "" || getText (_config >> "lockedName") != "" || _hudFnc != "") exitWith {
+            if (getText (_config >> "name") != "" || getText (_config >> "nameLocked") != "" || _hudFnc != "") exitWith {
                 _hasAttackMode = true;
                 breakTo "cond";
             }
@@ -62,7 +62,7 @@
         private _modes = createHashMap;
         {
             private _config = configFile >> QEGVAR(missileguidance,AttackProfiles) >> _x;
-            _modes set [_x, [getText (_config >> "name"), getText (_config >> "lockedName")]];
+            _modes set [_x, [getText (_config >> "name"), getText (_config >> "nameLocked")]];
         } forEach _attackProfiles;
         
         _magazineDetails set [_magazine, [_modes, _defaultAttackProfile, _hudFnc, _ammoConfig]];
