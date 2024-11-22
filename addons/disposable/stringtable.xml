@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Disposable">
+        <Key ID="STR_ACE_Disposable_PreloadedMissileDummy">
+            <English>Preloaded Missile Dummy</English>
+            <Czech>Přednabitá maketa rakety</Czech>
+            <French>Missile inerte préchargé</French>
+            <Spanish>Precargado misil inerte</Spanish>
+            <Italian>Missile inerte precaricato</Italian>
+            <Polish>Wstępnie załadowana atrapa pocisku</Polish>
+            <Portuguese>Míssil inerte pré-carregado</Portuguese>
+            <Russian>Предзаряженная ракетная болванка</Russian>
+            <German>Vorgeladene Racketennachbildung</German>
+            <Korean>더미 미사일을 미리 장전하기</Korean>
+            <Japanese>仮置きのミサイルをあらかじめ装填</Japanese>
+            <Chinese>預裝訓練導彈</Chinese>
+            <Chinesesimp>预装训练导弹</Chinesesimp>
+            <Hungarian>Előtöltött műrakéta</Hungarian>
+        </Key>
         <Key ID="STR_ACE_Disposable_UsedTube">
             <English>Used Tube</English>
-            <German>Benutze Einwegwaffe</German>
-            <French>Tube utilisé</French>
             <Czech>Použitý odpalovač</Czech>
-            <Polish>Zużyta rura</Polish>
+            <French>Tube utilisé</French>
             <Spanish>Lanzador utilizado</Spanish>
-            <Hungarian>Elhasznált kilövőcső</Hungarian>
-            <Russian>Отстрелянная труба</Russian>
             <Italian>Lanciatore usato</Italian>
+            <Polish>Zużyta rura</Polish>
             <Portuguese>Tubo utilizado</Portuguese>
-            <Japanese>使用済み</Japanese>
+            <Russian>Отстрелянная труба</Russian>
+            <German>Benutze Einwegwaffe</German>
             <Korean>사용한 발사관</Korean>
+            <Japanese>使用済み</Japanese>
             <Chinese>使用過的火箭筒</Chinese>
             <Chinesesimp>使用过的火箭筒</Chinesesimp>
             <Turkish>Kullanılmış Tüp</Turkish>
+            <Hungarian>Elhasznált kilövőcső</Hungarian>
         </Key>
         <Key ID="STR_ACE_Disposable_UsedTubeDescription">
             <English>Used disposable rocket launcher</English>
-            <German>Benutzter Einweg-Raketenwerfer</German>
-            <French>Lance-roquette à usage unique déjà utilisé</French>
             <Czech>Použitý raketomet</Czech>
-            <Polish>Zużyta rura granatnika jednorazowego użytku</Polish>
+            <French>Lance-roquette à usage unique déjà utilisé</French>
             <Spanish>Lanzador desechable utilizado</Spanish>
-            <Hungarian>Elhasznált eldobható rakétavető</Hungarian>
-            <Russian>Отстрелянная одноразовая пусковая установка</Russian>
             <Italian>Lanciarazzi monouso già utilizzato</Italian>
+            <Polish>Zużyta rura granatnika jednorazowego użytku</Polish>
             <Portuguese>Lança foguetes descartável utilizado</Portuguese>
-            <Japanese>使い終わったロケット ランチャーの筒部分</Japanese>
+            <Russian>Отстрелянная одноразовая пусковая установка</Russian>
+            <German>Benutzter Einweg-Raketenwerfer</German>
             <Korean>사용한 일회용 발사관</Korean>
+            <Japanese>使い終わったロケット ランチャーの筒部分</Japanese>
             <Chinese>使用過的一次性火箭發射器</Chinese>
             <Chinesesimp>使用过的一次性火箭发射器</Chinesesimp>
             <Turkish>Tek Kullanımlık Roket Atar</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Disposable_PreloadedMissileDummy">
-            <English>Preloaded Missile Dummy</English>
-            <German>Vorgeladene Racketennachbildung</German>
-            <French>Missile inerte préchargé</French>
-            <Czech>Přednabitá maketa rakety</Czech>
-            <Polish>Wstępnie załadowana atrapa pocisku</Polish>
-            <Spanish>Precargado misil inerte</Spanish>
-            <Hungarian>Előtöltött műrakéta</Hungarian>
-            <Russian>Предзаряженная ракетная болванка</Russian>
-            <Italian>Missile inerte precaricato</Italian>
-            <Portuguese>Míssil inerte pré-carregado</Portuguese>
-            <Japanese>仮置きのミサイルをあらかじめ装填</Japanese>
-            <Korean>더미 미사일을 미리 장전하기</Korean>
-            <Chinese>預裝訓練導彈</Chinese>
-            <Chinesesimp>预装训练导弹</Chinesesimp>
+            <Hungarian>Elhasznált eldobható rakétavető</Hungarian>
         </Key>
     </Package>
 </Project>

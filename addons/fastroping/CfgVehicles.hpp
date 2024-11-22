@@ -1,3 +1,68 @@
+#define MACRO_FRIES_SELFACTIONS \
+    class ACE_SelfActions { \
+        class ACE_prepareFRIES { \
+            displayName = CSTRING(Interaction_prepareFRIES); \
+            condition = QUOTE([_target] call FUNC(canPrepareFRIES)); \
+            statement = QUOTE([_target] call FUNC(prepareFRIES)); \
+        }; \
+        class ACE_stowFRIES { \
+            displayName = CSTRING(Interaction_stowFRIES); \
+            condition = QUOTE([_target] call FUNC(canStowFRIES)); \
+            statement = QUOTE([_target] call FUNC(stowFRIES)); \
+        }; \
+        class ACE_deployRopes3 { \
+            displayName = CSTRING(Interaction_deployRopes3); \
+            condition = QUOTE([ARR_3(_target,_player,'ACE_rope3')] call FUNC(canDeployRopes)); \
+            statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope3')])] call CBA_fnc_serverEvent); \
+        }; \
+        class ACE_deployRopes6 { \
+            displayName = CSTRING(Interaction_deployRopes6); \
+            condition = QUOTE([ARR_3(_target,_player,'ACE_rope6')] call FUNC(canDeployRopes)); \
+            statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope6')])] call CBA_fnc_serverEvent); \
+        }; \
+        class ACE_deployRopes12 { \
+            displayName = CSTRING(Interaction_deployRopes12); \
+            condition = QUOTE([ARR_3(_target,_player,'ACE_rope12')] call FUNC(canDeployRopes)); \
+            statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope12')])] call CBA_fnc_serverEvent); \
+        }; \
+        class ACE_deployRopes15 { \
+            displayName = CSTRING(Interaction_deployRopes15); \
+            condition = QUOTE([ARR_3(_target,_player,'ACE_rope15')] call FUNC(canDeployRopes)); \
+            statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope15')])] call CBA_fnc_serverEvent); \
+        }; \
+        class ACE_deployRopes18 { \
+            displayName = CSTRING(Interaction_deployRopes18); \
+            condition = QUOTE([ARR_3(_target,_player,'ACE_rope18')] call FUNC(canDeployRopes)); \
+            statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope18')])] call CBA_fnc_serverEvent); \
+        }; \
+        class ACE_deployRopes27 { \
+            displayName = CSTRING(Interaction_deployRopes27); \
+            condition = QUOTE([ARR_3(_target,_player,'ACE_rope27')] call FUNC(canDeployRopes)); \
+            statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope27')])] call CBA_fnc_serverEvent); \
+        }; \
+        class ACE_deployRopes36 { \
+            displayName = CSTRING(Interaction_deployRopes36); \
+            condition = QUOTE([ARR_4(_target,_player,'ACE_rope36',true)] call FUNC(canDeployRopes)); \
+            statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope36')])] call CBA_fnc_serverEvent); \
+        }; \
+        class ACE_cutRopes { \
+            displayName = CSTRING(Interaction_cutRopes); \
+            condition = QUOTE([_target] call FUNC(canCutRopes)); \
+            statement = QUOTE(true); \
+            class confirmCutRopes { \
+                displayName = ECSTRING(common,confirm); \
+                condition = QUOTE([_target] call FUNC(canCutRopes)); \
+                statement = QUOTE([_target] call FUNC(cutRopes)); \
+            }; \
+        }; \
+        class ACE_fastRope { \
+            displayName = CSTRING(Interaction_fastRope); \
+            condition = QUOTE([ARR_2(_player,_target)] call FUNC(canFastRope)); \
+            statement = QUOTE([ARR_2(_player,_target)] call FUNC(fastRope)); \
+        }; \
+    }
+
+
 class CfgVehicles {
     class Logic;
     class Module_F: Logic {
@@ -24,69 +89,10 @@ class CfgVehicles {
 
     class Air;
     class Helicopter: Air {
-        class ACE_SelfActions {
-            class ACE_prepareFRIES {
-                displayName = CSTRING(Interaction_prepareFRIES);
-                condition = QUOTE([_target] call FUNC(canPrepareFRIES));
-                statement = QUOTE([_target] call FUNC(prepareFRIES));
-            };
-            class ACE_stowFRIES {
-                displayName = CSTRING(Interaction_stowFRIES);
-                condition = QUOTE([_target] call FUNC(canStowFRIES));
-                statement = QUOTE([_target] call FUNC(stowFRIES));
-            };
-            class ACE_deployRopes3 {
-                displayName = CSTRING(Interaction_deployRopes3);
-                condition = QUOTE([ARR_3(_target,_player,'ACE_rope3')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope3')])] call CBA_fnc_serverEvent);
-            };
-            class ACE_deployRopes6 {
-                displayName = CSTRING(Interaction_deployRopes6);
-                condition = QUOTE([ARR_3(_target,_player,'ACE_rope6')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope6')])] call CBA_fnc_serverEvent);
-            };
-            class ACE_deployRopes12 {
-                displayName = CSTRING(Interaction_deployRopes12);
-                condition = QUOTE([ARR_3(_target,_player,'ACE_rope12')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope12')])] call CBA_fnc_serverEvent);
-            };
-            class ACE_deployRopes15 {
-                displayName = CSTRING(Interaction_deployRopes15);
-                condition = QUOTE([ARR_3(_target,_player,'ACE_rope15')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope15')])] call CBA_fnc_serverEvent);
-            };
-            class ACE_deployRopes18 {
-                displayName = CSTRING(Interaction_deployRopes18);
-                condition = QUOTE([ARR_3(_target,_player,'ACE_rope18')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope18')])] call CBA_fnc_serverEvent);
-            };
-            class ACE_deployRopes27 {
-                displayName = CSTRING(Interaction_deployRopes27);
-                condition = QUOTE([ARR_3(_target,_player,'ACE_rope27')] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope27')])] call CBA_fnc_serverEvent);
-            };
-            class ACE_deployRopes36 {
-                displayName = CSTRING(Interaction_deployRopes36);
-                condition = QUOTE([ARR_4(_target,_player,'ACE_rope36',true)] call FUNC(canDeployRopes));
-                statement = QUOTE([ARR_2(QQGVAR(deployRopes),[ARR_3(_target,_player,'ACE_rope36')])] call CBA_fnc_serverEvent);
-            };
-            class ACE_cutRopes {
-                displayName = CSTRING(Interaction_cutRopes);
-                condition = QUOTE([_target] call FUNC(canCutRopes));
-                // should not be empty to work with EGVAR(interact_menu,consolidateSingleChild) setting
-                statement = QUOTE(true);
-                class confirmCutRopes {
-                    displayName = ECSTRING(common,confirm);
-                    condition = QUOTE([_target] call FUNC(canCutRopes));
-                    statement = QUOTE([_target] call FUNC(cutRopes));
-                };
-            };
-            class ACE_fastRope {
-                displayName = CSTRING(Interaction_fastRope);
-                condition = QUOTE([ARR_2(_player,_target)] call FUNC(canFastRope));
-                statement = QUOTE([ARR_2(_player,_target)] call FUNC(fastRope));
-            };
-        };
+        MACRO_FRIES_SELFACTIONS;
+    };
+    class Plane: Air {
+        MACRO_FRIES_SELFACTIONS;
     };
 
     class Helicopter_Base_F;

@@ -80,6 +80,7 @@ if (GVAR(interactionParadrop)) then {
         _damageStr = ((_damage * 100) toFixed 0) + "%";
 
         if (_itemSize >= 0) then {
+            //IGNORE_PRIVATE_WARNING ["ace_cargo_interactionParadrop"];
             _index = if (GVAR(interactionParadrop)) then {
                 _ctrl lbAdd format ["%1. %2 (%3s)", _forEachIndex + 1, _displayName, GVAR(paradropTimeCoefficent) * _itemSize]
             } else {

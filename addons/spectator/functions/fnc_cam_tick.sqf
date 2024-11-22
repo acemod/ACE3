@@ -58,22 +58,22 @@ if (_cameraMode != MODE_FREE) then {
 _camTarget = GVAR(camFocus);
 
 // Focus get in / out of vehicle state
-if !(isNull _camTarget) then {
+if (isNull _camTarget) then {
+    GVAR(camTargetInVehicle) = false;
+} else {
     private _targetInVeh = GVAR(camTargetInVehicle);
 
     if (GVAR(camHasTarget)) then {
-        if (!_targetInVeh && { vehicle _camTarget != _camTarget }) then {
+        if (!_targetInVeh && { !isNull objectParent _camTarget }) then {
             [_camTarget] call FUNC(cam_setTarget);
             GVAR(camTargetInVehicle) = true;
         };
 
-        if (_targetInVeh && { vehicle _camTarget == _camTarget }) then {
+        if (_targetInVeh && { isNull objectParent _camTarget }) then {
             [_camTarget] call FUNC(cam_setTarget);
             GVAR(camTargetInVehicle) = false;
         };
     };
-} else {
-    GVAR(camTargetInVehicle) = false;
 };
 
 // Camera lights
