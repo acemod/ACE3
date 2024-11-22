@@ -814,7 +814,7 @@
             <Russian>%1 передал вам магазин %2.</Russian>
             <German>%1 hat dir ein %2 Magazin gegeben.</German>
             <Korean>%1에게서 %2탄창을 받았다</Korean>
-            <Japanese>%1 は あなたに弾倉 %2 を渡した。</Japanese>
+            <Japanese>%1 は あなたに %2 の弾倉を渡した。</Japanese>
             <Chinese>%1給你%2彈匣</Chinese>
             <Chinesesimp>%1给你%2弹匣</Chinesesimp>
         </Key>
@@ -845,9 +845,24 @@
             <Russian>Показывать действие "передать магазин"</Russian>
             <German>Zeige "Magazine geben" Interaktion</German>
             <Korean>'탄창 건네기'를 상호작용에서 보여줌</Korean>
-            <Japanese>弾倉を渡すをインタラクションに表示</Japanese>
+            <Japanese>"弾倉を渡す"をインタラクションに表示</Japanese>
             <Chinese>顯示"給予彈匣"互動動作</Chinese>
             <Chinesesimp>显示"给予弹匣"互动动作</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassThrowable">
+            <English>Pass grenade</English>
+            <German>Granate geben</German>
+            <Japanese>手榴弾を渡す</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassThrowableHint">
+            <English>%1 passed you %2.</English>
+            <German>%1 hat dir %2 gegeben.</German>
+            <Japanese>%1 は あなたに %2 を渡した。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassThrowableSetting">
+            <English>Show "pass grenade" interaction</English>
+            <German>Zeige "Granate geben" Interaktion</German>
+            <Japanese>"手榴弾を渡す"をインタラクションに表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>

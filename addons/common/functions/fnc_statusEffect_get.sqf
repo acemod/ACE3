@@ -4,7 +4,7 @@
  * Retrives list of current status effects
  *
  * Arguments:
- * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
+ * 0: Vehicle that it will be attached to (player or vehicle) <OBJECT>
  * 1: Effect Name <STRING>
  *
  * Return Value:

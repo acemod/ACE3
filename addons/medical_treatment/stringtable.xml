@@ -3081,10 +3081,12 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_Description">
             <English>Controls where Adenosine can be used.</English>
             <Russian>Контролирует, где можно использовать Аденозин.</Russian>
+            <Japanese>アデノシンが使える場所を制御します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_DisplayName">
             <English>Locations Adenosine</English>
             <Russian>Места использования Аденозина</Russian>
+            <Japanese>アデノシンの使用可能な場所</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
             <English>Controls where epinephrine can be used.</English>
@@ -3147,10 +3149,12 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_Description">
             <English>Controls where Morphine can be used.</English>
             <Russian>Контролирует, где можно использовать Морфин.</Russian>
+            <Japanese>モルヒネが使える場所を制御します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_DisplayName">
             <English>Locations Morphine</English>
             <Russian>Места использования Морфина</Russian>
+            <Japanese>モルヒネの使用可能な場所</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
@@ -3188,10 +3192,12 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_Description">
             <English>Controls where Splints can be used.</English>
             <Russian>Контролирует, где можно использовать шины.</Russian>
+            <Japanese>添え木が使える場所を制御します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_DisplayName">
             <English>Locations Splint</English>
             <Russian>Места наложения шины</Russian>
+            <Japanese>添え木の使用可能な場所</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a surgical kit can be used.</English>
@@ -3275,10 +3281,12 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_Description">
             <English>Training level required to use Adenosine.</English>
             <Russian>Уровень подготовки, необходимый для использования Аденозина</Russian>
+            <Japanese>アデノシンの使用に必要な医療スキルのレベルを設定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_DisplayName">
             <English>Allow Adenosine</English>
             <Russian>Доступ к Аденозину</Russian>
+            <Japanese>アデノシンの許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use epinephrine.</English>
@@ -3345,10 +3353,12 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_Description">
             <English>Training level required to use Morphine.</English>
             <Russian>Уровень подготовки, необходимый для использования Морфина.</Russian>
+            <Japanese>モルヒネの使用に必要な医療スキルのレベルを設定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
             <English>Allow Morphine</English>
             <Russian>Доступ к Морфину</Russian>
+            <Japanese>モルヒネの許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
@@ -3386,10 +3396,12 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_Description">
             <English>Training level required to use Splint.</English>
             <Russian>Уровень подготовки, необходимый для использования шины.</Russian>
+            <Japanese>添え木の使用に必要な医療スキルのレベルを設定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_DisplayName">
             <English>Allow Splint</English>
             <Russian>Доступ к наложению шины</Russian>
+            <Japanese>添え木の許可</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
@@ -3558,10 +3570,12 @@
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_Description">
             <English>Makes Check Pulse action give a numerical value based on setting</English>
             <Russian>Заставляет действие контрольного импульса выдавать числовое значение, основанное на настройке</Russian>
+            <Japanese>脈拍の確認アクションから得られる情報が数値化されるようになる医療レベルを設定します</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
             <English>Numerical Pulse</English>
             <Russian>Числовое значение пульса</Russian>
+            <Japanese>脈拍の数値化</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
             <English>Used to pack medium to large wounds and stem the bleeding</English>

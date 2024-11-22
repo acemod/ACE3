@@ -17,6 +17,10 @@
             <Chinesesimp>护目镜</Chinesesimp>
             <Turkish>Gözlük</Turkish>
         </Key>
+        <Key ID="STR_ACE_Goggles_SettingDrawOverlay">
+            <English>Show Goggles Overlay</English>
+            <Japanese>ゴーグルのオーバーレイを表示する</Japanese>
+        </Key>
         <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
             <English>Show Wipe Goggles self interaction</English>
             <Czech>Ukaž Vyčistit brýle v menu Interakce (vlastní)</Czech>
@@ -28,7 +32,7 @@
             <Russian>Показывать действие Протереть очки</Russian>
             <German>Zeige "Brille abwischen" im Selbstinteraktionsmenü</German>
             <Korean>자기상호작용에 고글 닦기 선택 보이기</Korean>
-            <Japanese>ゴーグル拭き取りのアクションを表示</Japanese>
+            <Japanese>ゴーグルを拭うセルフ・インタラクションを表示する</Japanese>
             <Chinese>在自我互動中顯示擦拭護目鏡的動作</Chinese>
             <Chinesesimp>在自我互动中显示擦拭护目镜的动作</Chinesesimp>
             <Turkish>Kendi etkileşim menüsün de gözlük camlarını silmeyi göster</Turkish>
@@ -60,7 +64,7 @@
             <Russian>Вкл. эффект очков от 3-го лица</Russian>
             <German>Brilleneffekt in dritter Person anzeigen</German>
             <Korean>3인칭 시에도 고글 효과를 보이게 하기</Korean>
-            <Japanese>三人称視点でもゴーグルによる効果を表示</Japanese>
+            <Japanese>三人称視点でもゴーグルによるエフェクトを表示する</Japanese>
             <Chinese>在第三人稱視角顯示護目鏡效果</Chinese>
             <Chinesesimp>在第三人称视角显示护目镜效果</Chinesesimp>
             <Turkish>Gözlük efektlerini 3. şahıs görünümün de göster</Turkish>
@@ -77,7 +81,7 @@
             <Russian>Протереть очки</Russian>
             <German>Brille abwischen</German>
             <Korean>고글 닦기</Korean>
-            <Japanese>ゴーグルを拭く</Japanese>
+            <Japanese>ゴーグルを拭う</Japanese>
             <Chinese>擦拭護目鏡</Chinese>
             <Chinesesimp>擦拭护目镜</Chinesesimp>
             <Turkish>Gözlük Camlarını Sil</Turkish>
@@ -94,7 +98,7 @@
             <Russian>Эффект очков</Russian>
             <German>Brilleneffekt</German>
             <Korean>고글 효과</Korean>
-            <Japanese>ゴーグルによる効果</Japanese>
+            <Japanese>ゴーグルによるエフェクト</Japanese>
             <Chinese>護目鏡效果</Chinese>
             <Chinesesimp>护目镜效果</Chinesesimp>
             <Turkish>Gözlük efektleri</Turkish>
@@ -110,7 +114,7 @@
             <Russian>Эффекты</Russian>
             <German>Effekte</German>
             <Korean>효과</Korean>
-            <Japanese>エフェクト</Japanese>
+            <Japanese>エフェクトのみ</Japanese>
             <Chinese>影響</Chinese>
             <Chinesesimp>影响</Chinesesimp>
             <Turkish>Efektler</Turkish>

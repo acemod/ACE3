@@ -23,3 +23,11 @@
     false, // default value
     0 // isGlobal
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(drawOverlay), "CHECKBOX",
+    LSTRING(DrawOverlay),
+    localize LSTRING(SettingsName),
+    true,
+    0
+] call CBA_fnc_addSetting;
