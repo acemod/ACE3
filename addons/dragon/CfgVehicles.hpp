@@ -107,7 +107,7 @@ class CfgVehicles {
         soundGetIn[] = {"A3\sounds_f\dummysound",0.00031622776,1,5};
         armorStructural = 10.0;
 
-        class ace_csw {
+        class ACE_CSW {
             disassembleTo = QGVAR(super);
         };
 

@@ -71,13 +71,8 @@ pub fn find_solution(
             return (-1.0, -1.0, -1.0);
         }
         let radicand = radicand.sqrt();
-        let mut angle_root =
+        let angle_root =
             (muzzle_velocity.mul_add(*muzzle_velocity, radicand) / (GRAVITY * range_to_hit)).atan();
-        if angle_root > max_elev || angle_root < min_elev {
-            angle_root = (muzzle_velocity.mul_add(*muzzle_velocity, -radicand)
-                / (GRAVITY * range_to_hit))
-                .atan();
-        }
         if angle_root > max_elev || angle_root < min_elev {
             return (-1.0, -1.0, -1.0);
         }

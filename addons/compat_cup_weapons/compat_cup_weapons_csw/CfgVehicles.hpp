@@ -19,7 +19,7 @@ class CfgVehicles {
             magazineLocation = "_target selectionPosition 'otochlaven'";
             proxyWeapon = "CUP_proxy_mortar_82mm";
             disassembleWeapon = "CUP_2b14_carry";
-            disassembleTurret = QEGVAR(csw,mortarBaseplate);
+            disassembleTurret = "ace_csw_mortarBaseplate";
             desiredAmmo = 1;
             ammoLoadTime = 3;
             ammoUnloadTime = 3;
@@ -29,14 +29,14 @@ class CfgVehicles {
     class CUP_M252_base: CUP_2b14_82mm_Base {
         class ace_csw: ace_csw {
             disassembleWeapon = "CUP_m252_carry";
-            disassembleTurret = QEGVAR(csw,mortarBaseplate);
+            disassembleTurret = "ace_csw_mortarBaseplate";
         };
     };
 
     class CUP_L16A2_base: CUP_M252_base {
         class ace_csw: ace_csw {
             disassembleWeapon = "CUP_l16a2_carry";
-            disassembleTurret = QEGVAR(csw,mortarBaseplate);
+            disassembleTurret = "ace_csw_mortarBaseplate";
         };
     };
 
@@ -47,7 +47,7 @@ class CfgVehicles {
             proxyWeapon = "CUP_proxy_m2";
             magazineLocation = "_target selectionPosition 'magazine'";
             disassembleWeapon = "CUP_m2_carry";
-            disassembleTurret = QEGVAR(csw,m3Tripod);
+            disassembleTurret = "ace_csw_m3Tripod";
             desiredAmmo = 100;
             ammoLoadTime = 10;
             ammoUnloadTime = 8;
@@ -57,7 +57,7 @@ class CfgVehicles {
     class CUP_M2StaticMG_MiniTripod_base: CUP_M2StaticMG_base {
         class ace_csw: ace_csw {
             enabled = 1;
-            disassembleTurret = QEGVAR(csw,m3TripodLow);
+            disassembleTurret = "ace_csw_m3TripodLow";
         };
     };
 
@@ -67,7 +67,7 @@ class CfgVehicles {
             proxyWeapon = "CUP_proxy_DSHKM";
             magazineLocation = "_target selectionPosition 'otocvez'";
             disassembleWeapon = "CUP_DSHKM_carry";
-            disassembleTurret = QEGVAR(csw,kordTripod);
+            disassembleTurret = "ace_csw_kordTripod";
             desiredAmmo = 100;
             ammoLoadTime = 10;
             ammoUnloadTime = 8;
@@ -87,7 +87,7 @@ class CfgVehicles {
             proxyWeapon = "CUP_proxy_KORD";
             magazineLocation = "_target selectionPosition 'magazine'";
             disassembleWeapon = "CUP_KORD_carry";
-            disassembleTurret = QEGVAR(csw,kordTripod);
+            disassembleTurret = "ace_csw_kordTripod";
             desiredAmmo = 100;
             ammoLoadTime = 10;
             ammoUnloadTime = 8;
@@ -97,7 +97,7 @@ class CfgVehicles {
     class CUP_KORD_MiniTripod_Base: CUP_KORD_Base {
         class ace_csw: ace_csw {
             enabled = 1;
-            disassembleTurret = QEGVAR(csw,kordTripodLow);
+            disassembleTurret = "ace_csw_kordTripodLow";
         };
     };
 
@@ -108,7 +108,7 @@ class CfgVehicles {
             proxyWeapon = "CUP_proxy_AGS30";
             magazineLocation = "_target selectionPosition 'otochlaven'";
             disassembleWeapon = "CUP_AGS30_carry";
-            disassembleTurret = QEGVAR(csw,sag30Tripod);
+            disassembleTurret = "ace_csw_sag30Tripod";
             desiredAmmo = 29;
             ammoLoadTime = 10;
             ammoUnloadTime = 8;
@@ -121,7 +121,7 @@ class CfgVehicles {
             proxyWeapon = "CUP_proxy_MK19";
             magazineLocation = "_target selectionPosition 'otochlaven'";
             disassembleWeapon = "CUP_MK19_carry";
-            disassembleTurret = QEGVAR(csw,m3TripodLow);
+            disassembleTurret = "ace_csw_m3TripodLow";
             desiredAmmo = 48;
             ammoLoadTime = 10;
             ammoUnloadTime = 8;
@@ -148,7 +148,7 @@ class CfgVehicles {
             proxyWeapon = "CUP_proxy_TOW";
             magazineLocation = "_target selectionPosition 'otochlaven'";
             disassembleWeapon = "CUP_TOW_carry";
-            disassembleTurret = QEGVAR(csw,m220Tripod);
+            disassembleTurret = "ace_csw_m220Tripod";
             desiredAmmo = 1;
             ammoLoadTime = 8;
             ammoUnloadTime = 5;
@@ -167,7 +167,7 @@ class CfgVehicles {
             proxyWeapon = "CUP_proxy_SPG9";
             magazineLocation = "_target selectionPosition 'handle'";
             disassembleWeapon = "CUP_SPG9_carry";
-            disassembleTurret = QEGVAR(csw,spg9Tripod);
+            disassembleTurret = "ace_csw_spg9Tripod";
             desiredAmmo = 1;
             ammoLoadTime = 5;
             ammoUnloadTime = 3;

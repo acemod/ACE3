@@ -30,7 +30,7 @@ _opValues params ["_overpressureAngle", "_overpressureRange", "_overpressureDama
 TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
 
 {
-    if (local _x && {_x != _firer} && {isNull objectParent _x}) then {
+    if (local _x && {_x != _firer} && {vehicle _x == _x}) then {
         private _targetPositionASL = eyePos _x;
         private _relativePosition = _targetPositionASL vectorDiff _posASL;
         private _axisDistance = _relativePosition vectorDotProduct _direction;
@@ -42,7 +42,7 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
         TRACE_4("Affected:",_x,_axisDistance,_distance,_angle);
 
         if (_angle < _overpressureAngle && {_distance < _overpressureRange} && {!lineIntersects _line} && {!terrainIntersectASL _line2}) then {
-            TRACE_2("",isDamageAllowed _x,_x getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
+            TRACE_2("",isDamageAllowed _unit,_unit getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
 
             // Skip damage if not allowed
             if (isDamageAllowed _x && {_x getVariable [QEGVAR(medical,allowDamage), true]}) then {

@@ -8,18 +8,12 @@
 #define WIDTH_SINGLE ((WIDTH_TOTAL - 7 * WIDTH_GAP) / 6)
 
 // IDDs
-#ifndef IDD_MISSION
 #define IDD_MISSION 46
-#endif
 #define IDD_RSCDISPLAYCURATOR 312
 #define IDD_DISPLAY3DEN 313
 
-#ifndef IDC_OK
 #define IDC_OK 1 // emulate "OK" button
-#endif
-#ifndef IDC_CANCEL
 #define IDC_CANCEL 2 // emulate "Cancel" button
-#endif
 
 // Sorting
 #define ASCENDING 0
@@ -440,7 +434,7 @@ if (!isNil QGVAR(customRightPanelButtons)) then {\
                 _ctrl ctrlCommit 0;\
             };\
             if (isNull (_display displayCtrl (61 + _plusId))) then {\
-                private _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Button), 61 + _plusId];\
+                _ctrl = _display ctrlCreate [QGVAR(customArsenalButton_Button), 61 + _plusId];\
                 _ctrl ctrlSetPosition [\
                     safeZoneW + safeZoneX - 10 * GRID_W,\
                     safeZoneY + (88 + (10 * _forEachIndex)) * GRID_H\

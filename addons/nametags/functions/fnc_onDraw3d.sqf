@@ -44,10 +44,10 @@ if (_enabledTagsCursor) then {
     private _target = cursorTarget;
     if !(_target isKindOf "CAManBase") then {
         // When cursorTarget is on a vehicle show the nametag for the commander.
-        if (_target in allUnitsUAV) then {
-            _target = objNull;
-        } else {
+        if !(_target in allUnitsUAV) then {
             _target = effectiveCommander _target;
+        } else {
+            _target = objNull;
         };
     };
     if (isNull _target) exitWith {};
@@ -87,7 +87,7 @@ if (_enabledTagsNearby) then {
             {!isObjectHidden _x}
         };
         private _crewMen = [];
-        if (!isNull objectParent ACE_player) then {
+        if (vehicle ACE_player != ACE_player) then {
             _crewMen = (crew vehicle ACE_player) select {
                 _x != ACE_player &&
                 {(side group _x) == (side group ACE_player)} &&

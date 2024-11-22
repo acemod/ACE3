@@ -19,15 +19,13 @@ params ["_unit"];
 
 if !(_unit getVariable [QGVAR(inHand), false]) exitWith {false};
 
-private _vehicle = objectParent _unit;
-
-if (!isNull _vehicle) exitWith {
+if (!isNull objectParent _unit) exitWith {
     private _startPos = eyePos _unit;
     private _aimLinePos = AGLToASL (positionCameraToWorld [0, 0, 1]);
     private _intersections = lineIntersectsSurfaces [_startPos, _aimLinePos, _unit, objNull, false];
     //TRACE_1("Intersections",_intersections);
 
-    _intersections findIf {_vehicle in (_x select 3)} == -1
+    (_intersections select {(vehicle _unit) in (_x select 3)}) isEqualTo []
 };
 
 true

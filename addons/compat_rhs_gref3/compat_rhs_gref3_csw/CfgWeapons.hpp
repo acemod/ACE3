@@ -7,7 +7,7 @@ class CfgWeapons {
     };
 
     class GVAR(dshkm_carry): Launcher_Base_F {
-        class ace_csw {
+        class ACE_CSW {
             type = "weapon";
             deployTime = 4;
             pickupTime = 4;

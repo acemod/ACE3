@@ -76,11 +76,13 @@
 GVAR(vehicleAction) = [
     QGVAR(openMenu), LLSTRING(openMenu), "",
     {
+        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         GVAR(interactionVehicle) = _target;
         GVAR(interactionParadrop) = false;
         createDialog QGVAR(menu);
     },
     {
+        //IGNORE_PRIVATE_WARNING ["_target", "_player"];
         GVAR(enable) &&
         {alive _target} &&
         {locked _target < 2} &&
@@ -94,10 +96,12 @@ GVAR(vehicleAction) = [
 GVAR(objectActions) = [
     [QGVAR(renameObject), LELSTRING(common,rename), "\a3\Modules_F_Curator\Data\iconMissionName_ca.paa",
         {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
             GVAR(interactionVehicle) = _target;
             createDialog QGVAR(renameMenu);
         },
         {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
             GVAR(enable) &&
             {GVAR(enableRename)} &&
             {alive _target} &&
@@ -107,24 +111,13 @@ GVAR(objectActions) = [
             {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)}
         }
     ] call EFUNC(interact_menu,createAction),
-    [QGVAR(checkSize), LLSTRING(checkSize), "\a3\ui_f\data\igui\cfg\simpletasks\types\box_ca.paa",
-        {
-            [format [LLSTRING(SizeMenu), _target call FUNC(getSizeItem)], 3] call EFUNC(common,displayTextStructured);
-        },
-        {
-            (GVAR(enable) && GVAR(checkSizeInteraction)) && {
-                (alive _target) &&
-                {_target getVariable [QGVAR(canLoad), getNumber (configOf _target >> QGVAR(canLoad)) == 1]} &&
-                {[_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)} &&
-                {[_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew)}
-            }
-        }
-    ] call EFUNC(interact_menu,createAction),
     [QGVAR(load), LLSTRING(loadObject), "a3\ui_f\data\IGUI\Cfg\Actions\loadVehicle_ca.paa",
         {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
             [_player, _target] call FUNC(startLoadIn);
         },
         {
+            //IGNORE_PRIVATE_WARNING ["_target", "_player"];
             GVAR(enable) &&
             {alive _target} &&
             {locked _target < 2} &&

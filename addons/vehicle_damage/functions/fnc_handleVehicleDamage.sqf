@@ -75,14 +75,14 @@ if (isNil "_multHit") then {
         _ignoreHit = true;
     } else {
         // If the hitpoint isnt in the old array then that means that the time expired and a new array should be generated
-        if (_hitPointInOldArray) then {
-            _vehicle setVariable [QGVAR(hitTime), [CBA_missionTime, _source, [_hitPoint]]];
-        } else {
+        if (!_hitPointInOldArray) then {
             private _oldHitPoints = _multHit select 2;
             _oldHitPoints pushBack _hitPoint;
             _vehicle setVariable [QGVAR(hitTime), [CBA_missionTime, _source, _oldHitPoints]];
 
             _ignoreBailCheck = true;
+        } else {
+            _vehicle setVariable [QGVAR(hitTime), [CBA_missionTime, _source, [_hitPoint]]];
         };
     };
 };

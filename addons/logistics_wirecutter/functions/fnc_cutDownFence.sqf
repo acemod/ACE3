@@ -63,7 +63,7 @@ if !(_unit call EFUNC(common,isSwimming)) then {
 
         !isNull _fence
         && {damage _fence < 1}
-        && {HAS_WIRECUTTER(_unit)}
+        && {HAS_WIRECUTTER(_player)}
     },
     ["isNotSwimming"]
 ] call EFUNC(common,progressBar);

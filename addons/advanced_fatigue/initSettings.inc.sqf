@@ -43,7 +43,7 @@
     "SLIDER",
     [LSTRING(PerformanceFactor), LSTRING(PerformanceFactor_Description)],
     LSTRING(DisplayName),
-    [0, MAX_PERFORMANCE_FACTOR, 1, 2],
+    [0, 10, 1, 2],
     1,
     {
         // Recalculate values if the setting is changed mid-mission

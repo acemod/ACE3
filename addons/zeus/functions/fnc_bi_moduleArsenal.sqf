@@ -19,7 +19,6 @@
 */
 
 params ["_logic", "", "_activated"];
-// IGNORE_PRIVATE_WARNING["_error", "_unit"];
 
 if (_activated && local _logic) then {
     _unit = _logic getVariable ["bis_fnc_curatorAttachObject_object",objNull];

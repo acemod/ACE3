@@ -46,6 +46,7 @@ private _scopeBaseAngle = if !(missionNamespace getVariable [QEGVAR(advanced_bal
     parseNumber (("ace" callExtension ["ballistics:zero_advanced", [
         _zeroRange,
         _muzzleVelocity,
+        _airFriction,
         _boreHeight,
         _temperature,
         _barometricPressure,

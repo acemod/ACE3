@@ -1,12 +1,10 @@
 #include "..\script_component.hpp"
 /*
- * Author: marc_book, commy2, DartRuffian
+ * Author: marc_book, edited by commy2
  * Checks if a unit is an engineer.
  *
  * Arguments:
- * 0: Unit to be checked <OBJECT>
- * 1: Engineer level <NUMBER> (default: 1)
- *    - Only relevant if ace_repair is loaded
+ * 0: unit to be checked <OBJECT>
  *
  * Return Value:
  * is the unit an engineer <BOOL>
@@ -17,11 +15,10 @@
  * Public: Yes
  */
 
-params ["_unit", ["_engineerN", 1]];
+params ["_unit"];
 
 private _isEngineer = _unit getVariable ["ACE_isEngineer", _unit getUnitTrait "engineer"];
+//Handle ace_repair modules setting this to a number
+if (_isEngineer isEqualType 0) then {_isEngineer = _isEngineer > 0};
 
-// Convert boolean to number
-_isEngineer = [0, 1, 2] select _isEngineer;
-
-_isEngineer >= _engineerN
+_isEngineer

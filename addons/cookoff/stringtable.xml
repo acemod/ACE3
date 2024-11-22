@@ -1,192 +1,180 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="CookOff">
-        <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
-            <English>Ammo cook-off duration multiplier</English>
-            <French>Coefficient de durée d'explosion des munitions</French>
-            <Spanish>Multiplicador de la duración de la detonación inducida por calor de la munición</Spanish>
-            <Italian>Coefficiente di durata esplisioni di munizioni</Italian>
-            <Russian>Увеличение продолжительности детонации боеприпасов.</Russian>
-            <German>Fahrzeug Munitionsdurchzündung Dauer-Multiplikator</German>
-            <Korean>탄약 유폭 시간 계수</Korean>
-            <Japanese>弾薬の誘爆の持続時間倍率</Japanese>
-        </Key>
-        <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
-            <English>Multiplier for how long ammunition cook-off lasts, for both vehicles and ammo boxes.\nSetting to 0 will disable ammo cook-off for both vehicles and ammo boxes.</English>
-            <French>Coefficient de durée d'explosion des munitions pour les véhicules et les caisses.\nLa valeur 0 désactive les explosions des véhicules et des caisses.</French>
-            <Spanish>Multiplicador de la duración de la detonación inducida por calor de la munición, tanto para los vehículos como para las cajas de munición.\nEstablecerlo a 0 deshabilita la detonación inducida por calor tanto para los vehículos como para las cajas de munición.</Spanish>
-            <Italian>Coefficiente della durata di esplosioni delle munizioni, sia per veicoli che casse.\nImpostarlo su 0 disabilita esplosioni di veicoli e casse.</Italian>
-            <Russian>Увеличение продолжительности детонации боеприпасов. Это влияет как на боеприпасы в технике, так и на ящики с боеприпасами. \nУстановка значения 0 отключает детонацию боеприпасов.</Russian>
-            <German>Multiplikator der Munitionsdurchzündungs-Dauer, gilt für Fahrzeuge und Munitionskisten.\nIhn auf 0 zu setzen wird Durchzünden deaktivieren.</German>
-            <Korean>차량과 탄약 상자 모두에 대해 탄약 유폭이 지속되는 시간에 대한 계수입니다.\n0으로 설정하면 차량과 탄약 상자 모두에 대해 탄약 유폭이 비활성화됩니다.</Korean>
-            <Japanese>弾薬の誘爆の持続時間をどのくらいの長さにするかの倍率。車両弾薬と弾薬箱どちらにも影響します。\n0に設定すると弾薬の誘爆が無効化されます。</Japanese>
-        </Key>
         <Key ID="STR_ACE_CookOff_category_displayName">
             <English>ACE Cook-off</English>
-            <Czech>ACE Vznícení munice</Czech>
-            <French>ACE Auto-inflammation</French>
             <Spanish>ACE Detonación inducida por calor</Spanish>
             <Italian>ACE Esplosioni di Munizioni</Italian>
-            <Polish>ACE Samozapłon</Polish>
-            <Portuguese>ACE Cook off</Portuguese>
-            <Russian>ACE Детонация</Russian>
-            <German>ACE Durchzündung</German>
-            <Korean>ACE 유폭</Korean>
-            <Japanese>ACE 誘爆</Japanese>
             <Chinese>ACE 殉爆效果</Chinese>
             <Chinesesimp>ACE 殉爆效果</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_CookOff_cookoffDuration_name">
-            <English>Vehicle cook-off fire duration multiplier</English>
-            <French>Coefficient de durée d'incendie du véhicule</French>
-            <Spanish>Multiplicador de la duración del incendio en vehículos por la detonación inducida por calor</Spanish>
-            <Italian>Coefficiente di durata incendio dei veicoli</Italian>
-            <Russian>Увел. продолжительности горения техники</Russian>
-            <German>Fahrzeugbrand Dauer-Multiplikator</German>
-            <Korean>차량 유폭 화재 지속 시간 계수</Korean>
-            <Japanese>車両の誘爆火災の持続時間倍率</Japanese>
-        </Key>
-        <Key ID="STR_ACE_CookOff_cookoffDuration_tooltip">
-            <English>Multiplier for how long vehicle cook-off fire lasts.\nSetting to 0 will disable vehicle cook-off fire.</English>
-            <French>Coefficient de durée des feux de véhicules.\nLa valeur 0 désactive les feux de véhicules.</French>
-            <Spanish>Multiplicador de la duración del incendio en vehículos por la detonación inducida por calor.\nEstablecerlo a 0 deshabilita el incendio a causa de la detonación inducida por calor.</Spanish>
-            <Italian>Coefficiente di durata degli incendi dei veicoli.\nImpostarlo su 0 disabilita incendi dei veicoli.</Italian>
-            <Russian>Увел. продолжительности горения техники. \nУстановка значения на 0 выключает возгорание техники.</Russian>
-            <German>Multiplikator der Fahrzeugbrand Dauer.\nIhn auf 0 zu setzen wird Munitionsbrände deaktivieren.</German>
-            <Korean>차량 유폭 화재가 지속되는 시간에 대한 계수입니다.\n0으로 설정하면 차량 쿸오프 화재가 비활성화됩니다.</Korean>
-            <Japanese>車両の誘爆火災の持続時間をどのくらいの長さにするかの倍率。\n0に設定すると車両の誘爆火災が無効化されます。</Japanese>
-        </Key>
-        <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_name">
-            <English>Destroy vehicles after cook-off</English>
-            <French>Destruction des véhicules après auto-inflammation</French>
-            <Spanish>Destruir vehículos tras la detonación inducida por calor</Spanish>
-            <Italian>Distruggi Veicoli dopo Esplosione Munizioni</Italian>
-            <Polish>Zniszcz Pojazdy po Zakończeniu Samozapłonu</Polish>
-            <Portuguese>Destruir veículos após cozinhamento</Portuguese>
-            <Russian>Уничтожать технику после детонации</Russian>
-            <German>Zerstöre Fahrzeuge nach der Durchzündung</German>
-            <Korean>유폭 후 차량 파괴</Korean>
-            <Japanese>誘爆後に車両を破壊する</Japanese>
-            <Chinesesimp>殉爆发生后摧毁载具</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip">
-            <English>Controls whether vehicles will always be destroyed after cooking off.</English>
-            <French>Contrôle si les véhicules seront toujours détruits après l'auto-inflammation.</French>
-            <Spanish>Controla si los vehículos siempre será destruidos despues de la detonación inducida por calor.</Spanish>
-            <Italian>Determina se veicoli saranno sempre distrutti dall'esplosione delle munizioni.</Italian>
-            <Polish>Kontroluje, czy pojazdy będą zawsze niszczone po samozapłonie.</Polish>
-            <Portuguese>Define se os veículos serão sempre destruídos após cozinhamento.</Portuguese>
-            <Russian>Определяет, всегда ли транспортные средства будут уничтожаться после детонации.</Russian>
-            <German>Steuert, ob Fahrzeuge nach dem Durchzünden immer zerstört werden.</German>
-            <Korean>유폭 후 차량이 항상 파괴되는지 여부를 조정합니다.</Korean>
-            <Japanese>誘爆の終了後に車両を必ず完全破壊するかどうかを設定します。</Japanese>
-        </Key>
-        <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
-            <English>Enable vehicle ammo cook-off</English>
-            <French>Permet l'explosion des munitions des véhicules</French>
-            <Spanish>Habilitar detonación inducida por calor de la munición del vehículo</Spanish>
-            <Italian>Abilita esplosioni delle munizioni dei veicoli</Italian>
-            <Russian>Вкл. детонацию боеприпасов в технике.</Russian>
-            <German>Aktiviert Fahrzeug Munitionsdurchzündung</German>
-            <Korean>차량 내 탄약 유폭 활성화</Korean>
-            <Japanese>車両弾薬の誘爆を有効化</Japanese>
-        </Key>
-        <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
-            <English>Enables cooking off of vehicle ammunition. Fires ammunition projectiles while vehicle has ammunition remaining.\nThis doesn't include fire effects.</English>
-            <French>Permet l'explosion des munitions du véhicule. Tire des morceaux de munitions si le véhicule a encore des munitions restantes.\nIl n'y a pas d'effets de feu.</French>
-            <Spanish>Habilita la detonación inducida por calor de la munición del vehículo. Dispara la munición del vehículo mientras el vehículo disponga de munición restante.\nEsto no incluye los efectos a causa de incendio.</Spanish>
-            <Italian>Abilita l'esplosione delle munizioni dei veicoli. Spara via pezzi di munizioni se il veicolo ha ancora munizioni rimanenti.\nNon include gli effetti di fuoco.</Italian>
-            <Russian>Вкл. детонацию боеприпасов на технике. Боеприпасы и боеголовки, которые остаются заряженными на транспортном средстве, будут приведены в действие. \nЭто не включает эффекты пожара.</Russian>
-            <German>Aktiviert Durchzündung von Fahrzeugmunition. Schleudert Munitionsfragmente umher wenn das Fahrzeug noch Munition an Bord hat.\nBrandeffekte sind nicht mit einbegriffen.</German>
-            <Korean>차량 내 탄약 유폭을 활성화합니다. 차량에 탄약이 남아 있는 동안 탄약 발사체를 발사합니다.\n여기엔 화재 효과가 포함되지 않습니다.</Korean>
-            <Japanese>車両弾薬の誘爆を有効化します。車両に積載されたままの弾薬と弾頭が発射されます。\nこれには火災エフェクトは含まれません。</Japanese>
-        </Key>
-        <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
-            <English>Enable ammo box cook-off</English>
-            <Czech>Povolit vynícení munice v krabicích</Czech>
-            <French>Auto-inflammation des caisses de munitions</French>
-            <Spanish>Habilitar detonación inducida por calor en las cajas de munición</Spanish>
-            <Italian>Abilita esplosione casse munizioni</Italian>
-            <Polish>Aktywuj samozapłon skrzyń z amunicją</Polish>
-            <Portuguese>Permitir cozinhar caixas de munição</Portuguese>
-            <Russian>Разрешить детонацию ящиков с боеприпасами</Russian>
-            <German>Durchzündung für Munitionskisten ermöglichen</German>
-            <Korean>탄약 상자 유폭 현상 활성화</Korean>
-            <Japanese>弾薬箱の誘爆を有効化</Japanese>
-            <Chinese>開啟彈藥箱殉爆效果</Chinese>
-            <Chinesesimp>开启弹药箱殉爆效果</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
-            <English>Enables cooking off of ammo boxes.\nThis doesn't include fire effects.</English>
-            <French>Permet l'explosion des caisses de munitions.\nN'inclut pas les effets de feu.</French>
-            <Spanish>Habilita la detonación inducida por calor de las cajas de munición.\nEsto no incluye los efectos a causa de incendio.</Spanish>
-            <Italian>Abilita esplosioni delle casse di munizioni.\nNon include effetti di fuoco.</Italian>
-            <Russian>Вкл. детонацию ящика с боеприпасами. \nЭто не включает эффекты огня.</Russian>
-            <German>Aktiviert Munitionskisten Durchzündung.\nBrandeffekte sind nicht mit einbegriffen.</German>
-            <Korean>탄약 상자 유폭을 활성화합니다.\n여기엔 화재 효과가 포함되지 않습니다.</Korean>
-            <Japanese>弾薬箱の誘爆を有効化します。\nこれには火災エフェクトは含まれません。</Japanese>
+            <Japanese>ACE 誘爆</Japanese>
+            <Korean>ACE 유폭</Korean>
+            <German>ACE Durchzündung</German>
+            <French>ACE Auto-inflammation</French>
+            <Polish>ACE Samozapłon</Polish>
+            <Russian>ACE Детонация</Russian>
+            <Portuguese>ACE Cook off</Portuguese>
+            <Czech>ACE Vznícení munice</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_name">
             <English>Enable vehicle cook-off fire</English>
-            <French>Permettre l'incendie du véhicule</French>
-            <Spanish>Habilitar incendio en vehículos a causa de la detonación inducida por calor</Spanish>
-            <Italian>Abilita incendio dei veicoli</Italian>
-            <Russian>Вкл. возгорание техники</Russian>
-            <German>Aktiviert Fahrzeug Munitionsbrand</German>
-            <Korean>차량 유폭 화재를 활성화합니다</Korean>
             <Japanese>車両の誘爆火災を有効化</Japanese>
+            <Russian>Вкл. возгорание техники</Russian>
+            <Korean>차량 유폭 화재를 활성화합니다</Korean>
+            <Italian>Abilita incendio dei veicoli</Italian>
+            <German>Aktiviert Fahrzeug Munitionsbrand</German>
+            <French>Permettre l'incendie du véhicule</French>
         </Key>
         <Key ID="STR_ACE_CookOff_enableFire_tooltip">
             <English>Enables vehicle cook-off fire effects.\nThis doesn't include ammunition detonations.</English>
-            <French>Permet d'obtenir des effets de feu de véhicule à partir de munitions qui explosent.\nCela n'inclut pas les effets d'explosion.</French>
-            <Spanish>Habilita los efectos del incendio en vehículos por la detonación inducida por calor.\nEsto no incluye las detonaciones de munición.</Spanish>
-            <Italian>Abilita effetti di incendio del veicolo dovuto all'esplosione delle munizioni.\nQuesto non include gli effetti di esplosione.</Italian>
-            <Russian>Вкл. эффект горения техники. \nНе включает детонацию боекомплекта</Russian>
-            <German>Aktiviert Fahrzeug Brandeffekte durch Durchzündung.\nExplosionseffekte sind nicht mit einbegriffen.</German>
-            <Korean>차량 유폭 효과를 활성화합니다.\n여기엔 탄약 유폭이 포함되지 않습니다.</Korean>
             <Japanese>車両の誘爆火災エフェクトを有効化します。\nこれには弾薬の爆発は含まれません。</Japanese>
+            <Russian>Вкл. эффект горения техники. \nНе включает детонацию боекомплекта</Russian>
+            <Korean>차량 유폭 효과를 활성화합니다.\n여기엔 탄약 유폭이 포함되지 않습니다.</Korean>
+            <Italian>Abilita effetti di incendio del veicolo dovuto all'esplosione delle munizioni.\nQuesto non include gli effetti di esplosione.</Italian>
+            <German>Aktiviert Fahrzeug Brandeffekte durch Durchzündung.\nExplosionseffekte sind nicht mit einbegriffen.</German>
+            <French>Permet d'obtenir des effets de feu de véhicule à partir de munitions qui explosent.\nCela n'inclut pas les effets d'explosion.</French>
+        </Key>
+        <Key ID="STR_ACE_CookOff_cookoffDuration_name">
+            <English>Vehicle cook-off fire duration multiplier</English>
+            <Japanese>車両の誘爆火災の持続時間倍率</Japanese>
+            <Russian>Увел. продолжительности горения техники</Russian>
+            <Korean>차량 유폭 화재 지속 시간 계수</Korean>
+            <Italian>Coefficiente di durata incendio dei veicoli</Italian>
+            <German>Fahrzeugbrand Dauer-Multiplikator</German>
+            <French>Coefficient de durée d'incendie du véhicule</French>
+        </Key>
+        <Key ID="STR_ACE_CookOff_cookoffDuration_tooltip">
+            <English>Multiplier for how long vehicle cook-off fire lasts.\nSetting to 0 will disable vehicle cook-off fire.</English>
+            <Japanese>車両の誘爆火災の持続時間をどのくらいの長さにするかの倍率。\n0に設定すると車両の誘爆火災が無効化されます。</Japanese>
+            <Russian>Увел. продолжительности горения техники. \nУстановка значения на 0 выключает возгорание техники.</Russian>
+            <Korean>차량 유폭 화재가 지속되는 시간에 대한 계수입니다.\n0으로 설정하면 차량 쿸오프 화재가 비활성화됩니다.</Korean>
+            <Italian>Coefficiente di durata degli incendi dei veicoli.\nImpostarlo su 0 disabilita incendi dei veicoli.</Italian>
+            <German>Multiplikator der Fahrzeugbrand Dauer.\nIhn auf 0 zu setzen wird Munitionsbrände deaktivieren.</German>
+            <French>Coefficient de durée des feux de véhicules.\nLa valeur 0 désactive les feux de véhicules.</French>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_name">
             <English>Vehicle cook-off fire probability multiplier</English>
-            <French>Probabilité d'incendies de véhicules</French>
-            <Spanish>Multiplicador de la probabilidad de incendio a causa de la detonación inducida por calor</Spanish>
-            <Italian>Probabilità di incendio dei veicoli</Italian>
-            <Russian>Возможность усиления пожара при детонации техники</Russian>
-            <German>Fahrzeug Munitionsbrand Wahrscheinlichkeit-Multiplikator</German>
-            <Korean>차량 유폭 화재 확률 계수</Korean>
             <Japanese>車両の誘爆火災の可能性倍率</Japanese>
+            <Russian>Возможность усиления пожара при детонации техники</Russian>
+            <Korean>차량 유폭 화재 확률 계수</Korean>
+            <Italian>Probabilità di incendio dei veicoli</Italian>
+            <German>Fahrzeug Munitionsbrand Wahrscheinlichkeit-Multiplikator</German>
+            <French>Probabilité d'incendies de véhicules</French>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_tooltip">
-            <English>Multiplier for vehicle cook-off fire probability. Higher value results in higher cook-off fire probability.\nSetting to 0 will disable vehicle cook-off fire.</English>
-            <French>Coefficient de probabilité des incendies de véhicules.\nLes valeurs élevées augmentent la probabilité des incendies.\nLa valeur 0 désactive les incendies de véhicules.</French>
-            <Spanish>Multiplicador de la probabilidad de incendio a causa de la detonación inducida por calor. Valores más altos resultan en mayor probabilidad de incendio a causa de la detonación inducida por calor.\nEstablecerlo a 0 deshabilita el incendio a causa de la detonación inducida por calor.</Spanish>
-            <Italian>Coefficiente di probabilità degli incendi dei veicoli.\nValori maggiori aumentano la probabilità di incendi.\nImpostarlo su 0 disabilita incendi dei veicoli.</Italian>
-            <Russian>Увел. вероятности возникновения возгорания техники. Большое значение указывает на высокую вероятность детонации. \nУстановка значения 0 предотвращает возгорание техники.</Russian>
-            <German>Multiplikator der Fahrzeugbrand Wahrscheinlichkeit.\nHöhere Werte erhöhen die Wahrscheinlichkeit.\nEin Null-Wert wird Munitionsbrände deaktivieren.</German>
-            <Korean>차량 유폭 화재 확률에 대한 계수입니다. 값이 높을 수록 유폭 확률이 높아집니다.\n0으로 설정하면 차량 유폭 화재가 비활성화됩니다.</Korean>
+            <English>Multiplier for vehicle cook-off fire probability. Higher value results in higher cook-off probability.\nSetting to 0 will disable vehicle cook-off fire.</English>
             <Japanese>車両の誘爆火災がどのくらいの可能性で発生するかの倍率。高い数値は高い誘爆の可能性につながります。\n0に設定すると車両の誘爆火災が無効化されます。</Japanese>
+            <Russian>Увел. вероятности возникновения возгорания техники. Большое значение указывает на высокую вероятность детонации. \nУстановка значения 0 предотвращает возгорание техники.</Russian>
+            <Korean>차량 유폭 화재 확률에 대한 계수입니다. 값이 높을 수록 유폭 확률이 높아집니다.\n0으로 설정하면 차량 유폭 화재가 비활성화됩니다.</Korean>
+            <Italian>Coefficiente di probabilità degli incendi dei veicoli.\nValori maggiori aumentano la probabilità di incendi.\nImpostarlo su 0 disabilita incendi dei veicoli.</Italian>
+            <German>Multiplikator der Fahrzeugbrand Wahrscheinlichkeit.\nHöhere Werte erhöhen die Wahrscheinlichkeit.\nEin Null-Wert wird Munitionsbrände deaktivieren.</German>
+            <French>Coefficient de probabilité des incendies de véhicules.\nLes valeurs élevées augmentent la probabilité des incendies.\nLa valeur 0 désactive les incendies de véhicules.</French>
+        </Key>
+        <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_name">
+            <English>Destroy vehicles after cook-off</English>
+            <Korean>유폭 후 차량 파괴</Korean>
+            <Chinesesimp>殉爆发生后摧毁载具</Chinesesimp>
+            <Russian>Уничтожать технику после детонации</Russian>
+            <Spanish>Destruir vehículos tras la detonación inducida por calor</Spanish>
+            <Japanese>誘爆後に車両を破壊する</Japanese>
+            <Polish>Zniszcz Pojazdy po Zakończeniu Samozapłonu</Polish>
+            <German>Zerstöre Fahrzeuge nach der Durchzündung</German>
+            <Italian>Distruggi Veicoli dopo Esplosione Munizioni</Italian>
+            <French>Destruction des véhicules après auto-inflammation</French>
+            <Portuguese>Destruir veículos após cozinhamento</Portuguese>
+        </Key>
+        <Key ID="STR_ACE_CookOff_destroyVehicleAfterCookoff_tooltip">
+            <English>Controls whether vehicles will always be destroyed after cooking off.</English>
+            <Japanese>誘爆の終了後に車両を必ず完全破壊するかどうかを設定します。</Japanese>
+            <Polish>Kontroluje, czy pojazdy będą zawsze niszczone po samozapłonie.</Polish>
+            <German>Steuert, ob Fahrzeuge nach dem Durchzünden immer zerstört werden.</German>
+            <Italian>Determina se veicoli saranno sempre distrutti dall'esplosione delle munizioni.</Italian>
+            <Korean>유폭 후 차량이 항상 파괴되는지 여부를 조정합니다.</Korean>
+            <French>Contrôle si les véhicules seront toujours détruits après l'auto-inflammation.</French>
+            <Portuguese>Define se os veículos serão sempre destruídos após cozinhamento.</Portuguese>
+            <Russian>Определяет, всегда ли транспортные средства будут уничтожаться после детонации.</Russian>
+            <Spanish>Controla si los vehículos siempre será destruidos despues de la detonación inducida por calor.</Spanish>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableAmmoCookoff_name">
+            <English>Enable vehicle ammo cook-off</English>
+            <Japanese>車両弾薬の誘爆を有効化</Japanese>
+            <Russian>Вкл. детонацию боеприпасов в технике.</Russian>
+            <Korean>차량 내 탄약 유폭 활성화</Korean>
+            <Italian>Abilita esplosioni delle munizioni dei veicoli</Italian>
+            <German>Aktiviert Fahrzeug Munitionsdurchzündung</German>
+            <French>Permet l'explosion des munitions des véhicules</French>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableAmmoCookoff_tooltip">
+            <English>Enables cooking off of vehicle ammunition. Fires ammunition projectiles while vehicle has ammunition remaining.\nThis doesn't include fire effects.</English>
+            <Japanese>車両弾薬の誘爆を有効化します。車両に積載されたままの弾薬と弾頭が発射されます。\nこれには火災エフェクトは含まれません。</Japanese>
+            <Russian>Вкл. детонацию боеприпасов на технике. Боеприпасы и боеголовки, которые остаются заряженными на транспортном средстве, будут приведены в действие. \nЭто не включает эффекты пожара.</Russian>
+            <Korean>차량 내 탄약 유폭을 활성화합니다. 차량에 탄약이 남아 있는 동안 탄약 발사체를 발사합니다.\n여기엔 화재 효과가 포함되지 않습니다.</Korean>
+            <Italian>Abilita l'esplosione delle munizioni dei veicoli. Spara via pezzi di munizioni se il veicolo ha ancora munizioni rimanenti.\nNon include gli effetti di fuoco.</Italian>
+            <German>Aktiviert Durchzündung von Fahrzeugmunition. Schleudert Munitionsfragmente umher wenn das Fahrzeug noch Munition an Bord hat.\nBrandeffekte sind nicht mit einbegriffen.</German>
+            <French>Permet l'explosion des munitions du véhicule. Tire des morceaux de munitions si le véhicule a encore des munitions restantes.\nIl n'y a pas d'effets de feu.</French>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableBoxCookoff_name">
+            <English>Enable ammo box cook-off</English>
+            <Spanish>Habilitar detonación inducida por calor en las cajas de munición</Spanish>
+            <Japanese>弾薬箱の誘爆を有効化</Japanese>
+            <German>Durchzündung für Munitionskisten ermöglichen</German>
+            <Korean>탄약 상자 유폭 현상 활성화</Korean>
+            <Polish>Aktywuj samozapłon skrzyń z amunicją</Polish>
+            <French>Auto-inflammation des caisses de munitions</French>
+            <Italian>Abilita esplosione casse munizioni</Italian>
+            <Chinese>開啟彈藥箱殉爆效果</Chinese>
+            <Chinesesimp>开启弹药箱殉爆效果</Chinesesimp>
+            <Russian>Разрешить детонацию ящиков с боеприпасами</Russian>
+            <Portuguese>Permitir cozinhar caixas de munição</Portuguese>
+            <Czech>Povolit vynícení munice v krabicích</Czech>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableBoxCookoff_tooltip">
+            <English>Enables cooking off of ammo boxes.\nThis doesn't include fire effects.</English>
+            <Japanese>弾薬箱の誘爆を有効化します。\nこれには火災エフェクトは含まれません。</Japanese>
+            <Russian>Вкл. детонацию ящика с боеприпасами. \nЭто не включает эффекты огня.</Russian>
+            <Korean>탄약 상자 유폭을 활성화합니다.\n여기엔 화재 효과가 포함되지 않습니다.</Korean>
+            <Italian>Abilita esplosioni delle casse di munizioni.\nNon include effetti di fuoco.</Italian>
+            <German>Aktiviert Munitionskisten Durchzündung.\nBrandeffekte sind nicht mit einbegriffen.</German>
+            <French>Permet l'explosion des caisses de munitions.\nN'inclut pas les effets de feu.</French>
+        </Key>
+        <Key ID="STR_ACE_CookOff_ammoCookoffDuration_name">
+            <English>Ammo cook-off duration multiplier</English>
+            <Japanese>弾薬の誘爆の持続時間倍率</Japanese>
+            <Russian>Увеличение продолжительности детонации боеприпасов.</Russian>
+            <Korean>탄약 유폭 시간 계수</Korean>
+            <Italian>Coefficiente di durata esplisioni di munizioni</Italian>
+            <German>Fahrzeug Munitionsdurchzündung Dauer-Multiplikator</German>
+            <French>Coefficient de durée d'explosion des munitions</French>
+        </Key>
+        <Key ID="STR_ACE_CookOff_ammoCookoffDuration_tooltip">
+            <English>Multiplier for how long ammunition cook-off lasts, for both vehicles and ammo boxes.\nSetting to 0 will disable ammo cook-off for both vehicles and ammo boxes.</English>
+            <Japanese>弾薬の誘爆の持続時間をどのくらいの長さにするかの倍率。車両弾薬と弾薬箱どちらにも影響します。\n0に設定すると弾薬の誘爆が無効化されます。</Japanese>
+            <Russian>Увеличение продолжительности детонации боеприпасов. Это влияет как на боеприпасы в технике, так и на ящики с боеприпасами. \nУстановка значения 0 отключает детонацию боеприпасов.</Russian>
+            <Korean>차량과 탄약 상자 모두에 대해 탄약 유폭이 지속되는 시간에 대한 계수입니다.\n0으로 설정하면 차량과 탄약 상자 모두에 대해 탄약 유폭이 비활성화됩니다.</Korean>
+            <Italian>Coefficiente della durata di esplosioni delle munizioni, sia per veicoli che casse.\nImpostarlo su 0 disabilita esplosioni di veicoli e casse.</Italian>
+            <German>Multiplikator der Munitionsdurchzündungs-Dauer, gilt für Fahrzeuge und Munitionskisten.\nIhn auf 0 zu setzen wird Durchzünden deaktivieren.</German>
+            <French>Coefficient de durée d'explosion des munitions pour les véhicules et les caisses.\nLa valeur 0 désactive les explosions des véhicules et des caisses.</French>
         </Key>
         <Key ID="STR_ACE_CookOff_removeAmmoDuringCookoff_name">
             <English>Enable ammo removal during cook-off</English>
+            <Japanese>誘爆による弾薬の除去を有効化</Japanese>
             <French>Retirer les munitions durant l'auto-inflammation</French>
-            <Spanish>Habilita/Deshabilita ka eliminación de munición durante la detonación inducida por calor</Spanish>
+            <German>Aktiviert/Deaktiviert Entfernung der Munition beim Durchzünden</German>
             <Italian>Abilita rimozione munizioni dopo l'esplosione</Italian>
             <Polish>Włącz/Wyłącz usuwanie amunicji podczas samozapłonu</Polish>
-            <Russian>Вкл. удаление боеприпасов из-за детонации</Russian>
-            <German>Aktiviert/Deaktiviert Entfernung der Munition beim Durchzünden</German>
-            <Korean>유폭 시 탄약 제거 활성화/비활성화</Korean>
-            <Japanese>誘爆による弾薬の除去を有効化</Japanese>
             <Chinesesimp>启用/禁用殉爆过程中的弹药移除功能</Chinesesimp>
+            <Korean>유폭 시 탄약 제거 활성화/비활성화</Korean>
+            <Russian>Вкл. удаление боеприпасов из-за детонации</Russian>
+            <Spanish>Habilita/Deshabilita ka eliminación de munición durante la detonación inducida por calor</Spanish>
         </Key>
         <Key ID="STR_ACE_CookOff_removeAmmoDuringCookoff_tooltip">
             <English>Removes all ammo during cook-off.</English>
             <French>Retire des munitions des véhicules durant une auto-inflammation.</French>
-            <Spanish>Elimina la munición cuando se produce la detonación inducida por calor.</Spanish>
-            <Italian>Rimuovi le munizioni dal veicolo durante le esplosioni.</Italian>
-            <Russian>Все боеприпасы уничтожаются путем подрыва.</Russian>
             <German>Entfernt Munition während dem Durchzünden der Munition eines Fahrzeuges.</German>
-            <Korean>유폭 중 모든 탄약을 제거합니다.</Korean>
             <Japanese>誘爆によって全ての弾薬を除去します。</Japanese>
+            <Russian>Все боеприпасы уничтожаются путем подрыва.</Russian>
+            <Korean>유폭 중 모든 탄약을 제거합니다.</Korean>
+            <Italian>Rimuovi le munizioni dal veicolo durante le esplosioni.</Italian>
         </Key>
     </Package>
 </Project>

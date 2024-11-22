@@ -102,7 +102,7 @@ private _fnc_iterateThroughConfig = {
             _hitPointHash set [_configName, ["slat", abs getNumber (_config >> "minimalHit")]];
         };
 
-        TRACE_6("found gun/turret/era/slat/misc",_isGun,_isTurret,_isEra,_isSlat,_isMisc,_hitPointHash);
+        TRACE_6("found gun/turret/era/slat/misc",_isGun,_isTurret,_isEra,_isSlat,_isMisc,_hash);
     } else {
         {
             _x call _fnc_iterateThroughConfig;

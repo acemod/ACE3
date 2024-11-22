@@ -38,11 +38,16 @@ private _visibleFire = getNumber (configFile >> "CfgAmmo" >> _ammo >> "visibleFi
 
 private _isTracer = call {
     if (getNumber (configFile >> "CfgAmmo" >> _ammo >> "nvgOnly") > 0) exitWith {false};
-    _projectile getShotInfo 4 // 4=shownTracer
+    private _indexShot = (_unit ammo _weapon) + 1;
+    private _lastRoundsTracer = getNumber (configFile >> "CfgMagazines" >> _magazine >> "lastRoundsTracer");
+    if (_indexShot <= _lastRoundsTracer) exitWith {true};
+    private _tracersEvery = getNumber (configFile >> "CfgMagazines" >> _magazine >> "tracersEvery");
+    if (_tracersEvery == 0) exitWith {false};
+    (_indexShot - _lastRoundsTracer) % _tracersEvery == 0
 };
 
 TRACE_3("",_ammo,_visibleFire,_isTracer);
-if (_isTracer) then {
+if ( _isTracer) then {
     _visibleFire = _visibleFire + 2;
 };
 

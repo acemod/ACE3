@@ -68,6 +68,7 @@ private _logAll = false; // logs all possible weapon magazines (even if not used
 } forEach _staticWeaponConfigs;
 
 {
+    //IGNORE_PRIVATE_WARNING ["_x", "_y"];
     INFO_2("[%1] has no carry variant - Used in %2",_x,_y);
 } forEach _hash;
 

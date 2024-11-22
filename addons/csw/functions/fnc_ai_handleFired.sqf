@@ -12,8 +12,6 @@
  * Public: No
  */
 
-if (GVAR(ammoHandling) != 2) exitWith {};
-
 params ["_vehicle", "_weapon", "", "", "", "_magazine", "", "_gunner"];
 TRACE_4("firedEH:",_vehicle,_weapon,_magazine,_gunner);
 

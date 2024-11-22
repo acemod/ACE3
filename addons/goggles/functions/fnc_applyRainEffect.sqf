@@ -52,7 +52,6 @@ if (GVAR(RainLastLevel) != rain) then {
         GVAR(RainDrops) setParticleClass "ACERainEffect";
         GVAR(RainDrops) setDropInterval (0.07 * (1.1 - GVAR(RainLastLevel)));
         GVAR(RainDrops) attachTo [vehicle _unit, [0,0,0]];
-        [QGVAR(effect), [_unit, "rain"]] call CBA_fnc_localEvent;
     };
 } else {
     if (GVAR(RainLastLevel) > 0.05) then {

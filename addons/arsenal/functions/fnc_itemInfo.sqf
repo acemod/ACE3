@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
-#include "\a3\ui_f\hpp\defineResincl.inc"
 #include "..\defines.hpp"
+#include "\a3\ui_f\hpp\defineResincl.inc"
 /*
  * Author: Alganthe, johnb43
  * Update arsenal's info box.

@@ -15,6 +15,7 @@
  * Public: No
  */
 
+private _deleted = false;
 {
     _y params ["_bullet","_caliber","_bulletTraceVisible"];
 

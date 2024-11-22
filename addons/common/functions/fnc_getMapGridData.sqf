@@ -22,7 +22,7 @@ GVAR(mapGridData) = [];
 //--- Extract grid values from world config (Borrowed from BIS_fnc_gridToPos)
 private _cfgGrid = configFile >> "CfgWorlds" >> worldName >> "Grid";
 private _offsetX = getNumber (_cfgGrid >> "offsetX");
-// private _offsetY = getNumber (_cfgGrid >> "offsetY");
+private _offsetY = getNumber (_cfgGrid >> "offsetY");
 private _zoomMax = 1e38;
 private _formatX = "";
 private _formatY = "";

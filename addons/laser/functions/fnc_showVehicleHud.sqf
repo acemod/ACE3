@@ -101,7 +101,7 @@ GVAR(pfID) = [{
     private _defaultAttackProfile = getText (configFile >> "CfgAmmo" >> _ammo >> "ace_missileguidance" >> "defaultAttackProfile");
     private _vehicleLockMode = _vehicle getVariable [QEGVAR(missileguidance,attackProfile), _defaultAttackProfile];
 
-    private _modeShort = if (_haveLock) then {
+    _modeShort = if (_haveLock) then {
         getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "nameLocked");
     } else {
         getText (configFile >> QEGVAR(missileguidance,AttackProfiles) >> _vehicleLockMode >> "name");

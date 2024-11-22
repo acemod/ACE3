@@ -38,14 +38,13 @@ The vehicle events will also have the following local variables available `_gunn
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|
 |`ace_unconscious` | [_unit, _state(BOOL)] | Global | Listen | Unit's unconscious state changed |
-|`ace_placedInBodyBag` | [_target, _bodyBag, _isGrave, _medic] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted, target could be a bodybag) |
-|`ace_placedInGrave` | [_target, _grave, _medic] | Global | Listen | Target placed into a grave, _grave will be objNull if `Create Grave Markers` is disabled Note: (Target will soon be deleted) |
+|`ace_placedInBodyBag` | [_target, _bodyBag, _isGrave] | Global | Listen | Target placed into a bodybag Note: (Target will soon be deleted, target could be a bodybag) |
+|`ace_placedInGrave` | [_target, _grave] | Global | Listen | Target placed into a grave, _grave will be objNull if `Create Grave Markers` is disabled Note: (Target will soon be deleted) |
 |`ace_treatmentStarted` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem, _createLitter] | Local | Listen | Treatment action has started (local on the _caller) |
 |`ace_treatmentSucceded` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem, _createLitter] | Local | Listen | Treatment action is completed (local on the _caller) |
 |`ace_treatmentFailed` | [_caller, _target, _selectionName, _className, _itemUser, _usedItem, _createLitter] | Local | Listen | Treatment action has been interrupted (local on the _caller) |
 |`ace_medical_handleUnitVitals` | [_unit, _deltaT] | Local | Listen | Vitals update ran for unit, _deltaT is the time elapsed since the previous vitals update (local to _unit) |
 |`ace_medical_treatment_bandaged` | [_medic, _patient, _bodyPart, _className, _itemUser, _usedItem, _createLitter, _bandageEffectiveness] | Local | Listen | _medic has bandaged _patient, the array can be modified to change treatment parameters (local to _medic) |
-|`ace_medical_overdose` | [_unit, _medication, _medicationDose, _overdoseThreshold, _incompatibleMed] | Local | Listen | _unit has overdosed on _medication by _overdoseThreshold - _medicationDose, overdoseThreshold was determined by _incompatibleMed (can be _medication itself or mixed incompatible medication) |
 
 ### 2.3 Interaction Menu (`ace_interact_menu`)
 MenuType: 0 = Interaction, 1 = Self Interaction
@@ -174,12 +173,6 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 |---------- |------------|----------|------|-------------|
 | `ace_dragging_cloneCreated` | [_clone, _corpse] | Local | Listen | Called when a clone used for dragging/carrying corpses is created
 | `ace_dragging_cloneDeleted` | [_clone, _corpse] | Local | Listen | Called when a clone used for dragging/carrying corpses is deleted
-| `ace_dragging_setupCarry` | [_unit, _target] | Local | Listen | Called when the unit starts the carrying animation for the target
-| `ace_dragging_startedCarry` | [_unit, _target] | Local | Listen | Called when the unit starts successfully carrying the target. This event is called after `ace_dragging_setupCarry`.
-| `ace_dragging_stoppedCarry` | [_unit, _target, _loadCargo] | Local | Listen | Called when the unit stops carrying the target. `_loadCargo` says if the target is being loaded as cargo/person or not.
-| `ace_dragging_setupDrag` | [_unit, _target] | Local | Listen | Called when the unit starts the dragging animation for the target
-| `ace_dragging_startedDrag` | [_unit, _target] | Local | Listen | Called when the unit starts successfully dragging the target. This event is called after `ace_dragging_setupDrag`.
-| `ace_dragging_stoppedDrag` | [_unit, _target] | Local | Listen | Called when the unit stops dragging the target
 
 ### 2.19 HuntIR (`ace_huntir`)
 

@@ -71,6 +71,3 @@ if (_UAVCrew isNotEqualTo []) then {
 
 // Check everything
 [LINKFUNC(carryObjectPFH), 0.5, [_unit, _target, CBA_missionTime]] call CBA_fnc_addPerFrameHandler;
-
-// API
-[QGVAR(startedCarry), [_unit, _target]] call CBA_fnc_localEvent;

@@ -16,7 +16,7 @@ version:
 
 To convert a static weapon into a crew served weapon, you need to create the following:
 
-- A proxy weapon (optional)
+- A proxy weapon
 - A carryable weapon that can be mounted on a tripod
 - Carryable weapon magazines
 - The CSW config in the static weapon
@@ -26,8 +26,6 @@ For the following examples, we are going to assume you are modifying your existi
 ### 1.1 Proxy Weapon
 
 Because the magazine loading time is already handled by the ACE interaction, a proxy weapon with a very low loading time is used. It automatically replaces the default weapon of the turret when CSW is enabled.
-
-A proxy weapon isn't required for a CSW to work. If a CSW uses the default weapons, the reload times will just be longer.
 
 ```cpp
 class CfgWeapons {
@@ -138,7 +136,7 @@ class CfgVehicles {
     class prefix_hmg: StaticMGWeapon {
         class ACE_CSW {
             enabled = 1; // Enables ACE CSW for this weapon              
-            proxyWeapon = "prefix_hmg_weapon_proxy"; // The proxy weapon created above. This can also be a function name that returns a proxy weapon - passed [_vehicle, _turret, _currentWeapon, _needed, _emptyWeapon]
+            proxyWeapon = "prefix_hmg_weapon_proxy"; // The proxy weapon created above
             magazineLocation = "_target selectionPosition 'magazine'"; // Ammo handling interaction point location
             disassembleWeapon = "prefix_hmg_carry";  // Carryable weapon created above
             disassembleTurret = "ace_csw_m3Tripod";  // Which static tripod will appear when weapon is disassembled

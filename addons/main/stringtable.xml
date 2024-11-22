@@ -3,36 +3,36 @@
     <Package name="Main">
         <Key ID="STR_ACE_Main_Category_Logistics">
             <English>ACE Logistics</English>
-            <Czech>ACE Logistika</Czech>
-            <French>ACE Logistique</French>
-            <Spanish>ACE Logística</Spanish>
-            <Italian>ACE Logistica</Italian>
+            <German>ACE Logistik</German>
             <Polish>ACE Logistyka</Polish>
             <Portuguese>Logísticas ACE</Portuguese>
             <Russian>ACE: Логистика</Russian>
-            <German>ACE Logistik</German>
-            <Korean>ACE 병참</Korean>
+            <Czech>ACE Logistika</Czech>
+            <Spanish>ACE Logística</Spanish>
+            <Italian>ACE Logistica</Italian>
+            <French>ACE Logistique</French>
             <Japanese>ACE ロジスティクス</Japanese>
-            <Chinese>ACE 後勤</Chinese>
             <Chinesesimp>ACE 后勤</Chinesesimp>
+            <Chinese>ACE 後勤</Chinese>
+            <Korean>ACE 병참</Korean>
             <Turkish>ACE Lojistik</Turkish>
         </Key>
         <Key ID="STR_ACE_Main_URL">
             <English>https://ace3.acemod.org/</English>
-            <Czech>https://ace3.acemod.org/</Czech>
-            <French>https://ace3.acemod.org/</French>
-            <Spanish>https://ace3.acemod.org/</Spanish>
-            <Italian>https://ace3.acemod.org/</Italian>
+            <German>https://ace3.acemod.org/</German>
             <Polish>https://ace3.acemod.org/</Polish>
             <Portuguese>https://ace3.acemod.org/</Portuguese>
             <Russian>https://ace3.acemod.org/</Russian>
-            <German>https://ace3.acemod.org/</German>
+            <Czech>https://ace3.acemod.org/</Czech>
+            <Spanish>https://ace3.acemod.org/</Spanish>
+            <Italian>https://ace3.acemod.org/</Italian>
+            <French>https://ace3.acemod.org/</French>
             <Korean>https://ace3.acemod.org/</Korean>
             <Japanese>https://ace3.acemod.org/</Japanese>
-            <Chinese>https://ace3.acemod.org/</Chinese>
             <Chinesesimp>https://ace3.acemod.org/</Chinesesimp>
-            <Turkish>https://ace3.acemod.org/</Turkish>
+            <Chinese>https://ace3.acemod.org/</Chinese>
             <Hungarian>https://ace3.acemod.org/</Hungarian>
+            <Turkish>https://ace3.acemod.org/</Turkish>
         </Key>
     </Package>
 </Project>

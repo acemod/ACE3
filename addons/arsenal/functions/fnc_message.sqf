@@ -25,7 +25,6 @@ if (!isNil "_handle") then {
 };
 
 _handle = [_display, _messageBoxCtrl, time + 5, _message, FADE_DELAY] spawn {
-    //IGNORE_PRIVATE_WARNING ["_thisScript"];
     disableSerialization;
 
     params ["_display", "_control", "_timer", "_message", "_delay"];

@@ -120,7 +120,6 @@ if (isNil QGVAR(garrison_moveUnitPFH)) then {
                             };
 
                             case ((_unitPosTimer + 5) < CBA_missionTime && {_unitOldPos distance _unitPos < 0.5}) : {
-                                (_unit getVariable [QGVAR(garrisonMove_failSafe), [CBA_missionTime, 5]]) params ["_failSafeTimer", "_failSafeRemainingAttemps"];
                                 call _fnc_attemptFailed;
                             };
 

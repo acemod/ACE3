@@ -18,7 +18,7 @@
 
 params ["_playerUnit"];
 
-if (isNull objectParent _playerUnit) then {
+if (vehicle _playerUnit == _playerUnit) then {
     [GVAR(switchableSides)] call FUNC(markAiOnMap);
 
     _playerUnit setVariable [QGVAR(IsPlayerUnit), true, true];

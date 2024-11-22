@@ -13,7 +13,6 @@
  *
  * Public: No
  */
-//IGNORE_PRIVATE_WARNING ["_target"];
 
 private _units = curatorSelected select 0;
 private _index = _units findIf {

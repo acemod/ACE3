@@ -30,9 +30,8 @@
 #endif
 
 TRACE_1("params",_this);
-params ["_unit", "", "", "", "_autoSeek"];
 
-if (isNull _unit) exitWith {};
+if (isNull (_this select 0)) exitWith {};
 
 // Prevent another suicide bomber module being attached
 _unit setVariable [QGVAR(suicideBomber), true, true];

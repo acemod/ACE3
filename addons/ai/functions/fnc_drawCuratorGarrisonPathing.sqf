@@ -16,7 +16,6 @@
  */
 
 if (isNull findDisplay 312) exitWith {
-    //IGNORE_PRIVATE_WARNING ["_thisEventHandler"];
     removeMissionEventHandler ["Draw3D", _thisEventHandler];
 };
 

@@ -36,6 +36,6 @@ params ["_gunPos", "_targetPos", "_adjustEast", "_adjustNorth", "_adjustUp", "_m
 
 private _resultPos = [_adjustEast + _targetPos select 0, _adjustNorth + _targetPos select 1, _adjustUp + _targetPos select 2];
 
-private _returns = [_gunPos, _resultPos, _muzzleVelocity, _highAngle, _airFriction, _temperature, _airDensity, _windDir, _windSpeed] call FUNC(calculateSolution);
+private _returns = ["_gunPos", "_resultPos", "_muzzleVelocity", "_highAngle", "_airFriction", "_temperature", "_airDensity", "_windDir", "_windSpeed"] call FUNC(calculateSolution);
 
 _returns

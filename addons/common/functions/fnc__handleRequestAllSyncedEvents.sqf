@@ -18,6 +18,7 @@
 params ["_client"];
 
 {
+    //IGNORE_PRIVATE_WARNING ["_x", "_y"];
     _y params ["", "_eventlog"];
     ["ACEs", [_x, _eventLog], _client] call CBA_fnc_targetEvent;
     false

@@ -22,8 +22,9 @@
     _this call FUNC(setPosition);
 
     if (isServer) then {
-        private _owner = [objNull, _unit] select (missionNamespace getVariable [QGVAR(setShotParents), false]);
-        _explosive setShotParents [_owner, _unit];
+        if (missionNamespace getVariable [QGVAR(setShotParents), true]) then {
+            _explosive setShotParents [_unit, _unit];
+        };
     };
 }] call CBA_fnc_addEventHandler;
 [QGVAR(startDefuse), LINKFUNC(startDefuse)] call CBA_fnc_addEventHandler;
@@ -34,8 +35,9 @@ if (isServer) then {
     [QGVAR(detonate), {
         params ["_unit", "_explosive", "_delay"];
         TRACE_3("server detonate EH",_unit,_explosive,_delay);
-        private _owner = [objNull, _unit] select (missionNamespace getVariable [QGVAR(setShotParents), false]);
-        _explosive setShotParents [_owner, _unit];
+        if (missionNamespace getVariable [QGVAR(setShotParents), true]) then {
+            _explosive setShotParents [_unit, _unit];
+        };
         [{
             params ["_explosive"];
             TRACE_1("exploding",_explosive);
@@ -51,14 +53,6 @@ if (isServer) then {
         TRACE_1("Knocked Out, Doing Deadman",_unit);
         [_unit] call FUNC(onIncapacitated);
     }] call CBA_fnc_addEventHandler;
-
-    // Orient all Editor-placed SLAM (Bottom attack) mines facing upward
-    {
-        private _mine = _x;
-        if (typeOf _mine == "ACE_SLAMDirectionalMine_Magnetic_Ammo") then {
-            [_mine, MINE_PITCH_UP, 0] call CALLSTACK(BIS_fnc_setPitchBank);
-        };
-    } forEach allMines;
 };
 
 if (!hasInterface) exitWith {};

@@ -19,7 +19,7 @@
 
 params [["_flag", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_args", [""], [[]]]];
 _args params ["_item"];
-TRACE_3("pickupFlag",_unit,_flag,_item);
+TRACE_3("pickupFlag",_unit,_flag,_itemName);
 
 if (isNull _flag) exitWith {};
 

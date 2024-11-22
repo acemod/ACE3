@@ -116,6 +116,3 @@ if (_mass > 1) then {
     _target setVariable [QGVAR(originalMass), _mass, true];
     [QEGVAR(common,setMass), [_target, 1e-12]] call CBA_fnc_globalEvent; // Force global sync
 };
-
-// API
-[QGVAR(setupDrag), [_unit, _target]] call CBA_fnc_localEvent;

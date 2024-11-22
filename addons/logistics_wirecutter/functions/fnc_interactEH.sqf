@@ -23,7 +23,7 @@ params ["_interactionType"];
 // If player somehow gets a wirecutter during keyDown, they will just have to reopen menu
 if (
     _interactionType != 0
-    || {!isNull objectParent ACE_player}
+    || {vehicle ACE_player != ACE_player}
     || {!HAS_WIRECUTTER(ACE_player)}
 ) exitWith {};
 

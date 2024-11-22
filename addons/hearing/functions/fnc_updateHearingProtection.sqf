@@ -4,13 +4,13 @@
  * Updates the hearing protection and volume attenuation for player on earbuds/helmet change.
  *
  * Arguments:
- * 0: Slot <NUMBER>
+ * None
  *
  * Return Value:
  * None
  *
  * Example:
- * UPDATE_HEARING_EARPLUGS call ace_hearing_fnc_updateHearingProtection
+ * call ace_hearing_fnc_updateHearingProtection
  *
  * Public: No
  */
@@ -21,11 +21,6 @@ if (isNull ACE_player) exitWith {
     GVAR(damageCoefficent) = 0;
     GVAR(volumeAttenuation) = 1;
 };
-
-params ["_slot"];
-TRACE_1("",_slot);
-
-if !(_slot in [UPDATE_HEARING_EARPLUGS, TYPE_GOGGLE, TYPE_HEADGEAR]) exitWith {};
 
 // Handle Earplugs
 private _hasEarPlugsIn = ACE_player call FUNC(hasEarPlugsIn);

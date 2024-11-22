@@ -36,10 +36,8 @@ if (_safedWeaponMuzzles isEqualTo createHashMap) then {
     };
 };
 
-private _weaponSelected = currentWeapon _unit == _weapon;
-
 // Let engine handle switching to next firemode/muzzle
-if (_weaponSelected && {inputAction "nextWeapon" == 0} && {inputAction "prevWeapon" == 0}) then {
+if (inputAction "nextWeapon" == 0 && {inputAction "prevWeapon" == 0}) then {
     // This syntax of selectWeapon doesn't mess with gun lights and lasers
     _unit selectWeapon [_weapon, _muzzle, _firemode];
 
@@ -48,9 +46,7 @@ if (_weaponSelected && {inputAction "nextWeapon" == 0} && {inputAction "prevWeap
 };
 
 // Player HUD
-if (_weaponSelected) then {
-    true call FUNC(setSafeModeVisual);
-};
+true call FUNC(setSafeModeVisual);
 
 // Show info box unless disabled
 if (_hint) then {

@@ -24,7 +24,7 @@ TRACE_1("Explosives interactEH",_interactionType);
 // If player somehow gets a defusal kit during keyDown, they will just have to reopen menu
 if (
     _interactionType != 0
-    || {!isNull objectParent ACE_player}
+    || {vehicle ACE_player != ACE_player}
     || {(ACE_player call EFUNC(common,uniqueItems)) findAny GVAR(defusalKits) == -1}
 ) exitWith {};
 

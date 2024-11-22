@@ -25,10 +25,7 @@ _seekerStateParams params ["_memoryPointGunnerOptics", "_animationSourceBody", "
 private _shooterPos = AGLToASL (_shooter modelToWorldVisual (_shooter selectionPosition _memoryPointGunnerOptics));
 private _projPos = getPosASL _projectile;
 
-private _lookDirection = if (_shooter isKindOf "CAManBase" || {_shooter isKindOf "StaticWeapon"}) then {
-    _shooterPos = eyePos _shooter;
-    _shooter weaponDirection _weapon
-} else {
+private _lookDirection = if !(_shooter isKindOf "CAManBase" || {_shooter isKindOf "StaticWeapon"}) then {
     private _finalLookDirection = if (_usePilotCamera) then {
         _shooterPos = _shooter modelToWorldVisualWorld getPilotCameraPosition _shooter;
         private _trackingTarget = getPilotCameraTarget _shooter;
@@ -46,6 +43,9 @@ private _lookDirection = if (_shooter isKindOf "CAManBase" || {_shooter isKindOf
         _shooter vectorModelToWorldVisual ([1, _gBody, _gGun] call CBA_fnc_polar2vect);
     };
     _finalLookDirection
+} else {
+    _shooterPos = eyePos _shooter;
+    _shooter weaponDirection _weapon
 };
 
 private _distanceToProj = _shooterPos vectorDistance _projPos;

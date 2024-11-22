@@ -27,18 +27,9 @@ if (!alive ACE_player) exitWith {
 private _velocity = velocity ACE_player;
 private _normal = surfaceNormal (getPosWorld ACE_player);
 private _movementVector = vectorNormalized _velocity;
+private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
 private _fwdAngle = asin (_movementVector select 2);
-private _sideAngle = if ((getPosATL ACE_player) select 2 > 0.01) then {
-    0 // ignore terrain normal if not touching it
-} else {
-    private _sideVector = vectorNormalized (_movementVector vectorCrossProduct _normal);
-    asin (_sideVector select 2);
-};
-if (GVAR(isSwimming)) then { // ignore when floating
-    _fwdAngle = 0;
-    _sideAngle = 0;
-};
-
+private _sideAngle = asin (_sideVector select 2);
 
 private _currentWork = REE;
 private _currentSpeed = (vectorMagnitude _velocity) min 6;
@@ -47,6 +38,17 @@ private _currentSpeed = (vectorMagnitude _velocity) min 6;
 if (GVAR(isProne)) then {
     _currentSpeed = _currentSpeed min 1.5;
 };
+
+// Get the current duty
+private _duty = GVAR(animDuty);
+
+{
+    if (_x isEqualType 0) then {
+        _duty = _duty * _x;
+    } else {
+        _duty = _duty * (ACE_player call _x);
+    };
+} forEach (values GVAR(dutyList));
 
 private _terrainGradient = abs _fwdAngle;
 private _terrainFactor = 1;
@@ -60,15 +62,14 @@ if (isNull objectParent ACE_player && {_currentSpeed > 0.1} && {isTouchingGround
         };
 
         // Used to simulate the unevenness/roughness of the terrain
-        if (_sideAngle != 0) then {
+        if ((getPosATL ACE_player) select 2 < 0.01) then {
             private _sideGradient = abs (_sideAngle / 45) min 1;
 
             _terrainFactor = 1 + _sideGradient ^ 4;
         };
     };
 
-    // Add a scaling factor of 0.1 to reduce excessive stamina consumption on default settings (see #10361)
-    _currentWork = [_gearMass, _terrainGradient * GVAR(terrainGradientFactor) * 0.1, _terrainFactor, _currentSpeed] call FUNC(getMetabolicCosts);
+    _currentWork = [_duty, _gearMass, _terrainGradient * GVAR(terrainGradientFactor), _terrainFactor, _currentSpeed] call FUNC(getMetabolicCosts);
     _currentWork = _currentWork max REE;
 };
 
@@ -90,7 +91,7 @@ private _muscleFactor = sqrt _muscleIntegrity;
 private _ae1PathwayPowerFatigued = GVAR(ae1PathwayPower) * sqrt (GVAR(ae1Reserve) / AE1_MAXRESERVE) * _oxygen * _muscleFactor;
 private _ae2PathwayPowerFatigued = GVAR(ae2PathwayPower) * sqrt (GVAR(ae2Reserve) / AE2_MAXRESERVE) * _oxygen * _muscleFactor;
 private _aePathwayPowerFatigued  = _ae1PathwayPowerFatigued + _ae2PathwayPowerFatigued;
-// private _anPathwayPowerFatigued  = GVAR(anPathwayPower) * sqrt (GVAR(anReserve) / AN_MAXRESERVE) * _oxygen * _muscleIntegrity; // not used
+private _anPathwayPowerFatigued  = GVAR(anPathwayPower) * sqrt (GVAR(anReserve) / AN_MAXRESERVE) * _oxygen * _muscleIntegrity;
 
 // Calculate how much power is consumed from each reserve
 private _ae1Power = _currentWork min _ae1PathwayPowerFatigued;

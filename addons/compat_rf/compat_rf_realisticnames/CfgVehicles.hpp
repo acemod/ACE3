@@ -66,7 +66,7 @@ class CfgVehicles {
     class C_Truck_01_water_rf: B_Truck_01_fuel_F {
         displayName = SUBCSTRING(truck_01_water_Name);
     };
-
+    
     // Typhoon
     class O_Truck_03_fuel_F;
     class C_Truck_03_water_rf: O_Truck_03_fuel_F {

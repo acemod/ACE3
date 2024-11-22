@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
-#include "\a3\ui_f\hpp\defineResincl.inc"
 #include "..\defines.hpp"
+#include "\a3\ui_f\hpp\defineResincl.inc"
 /*
  * Author: LinkIsGrim
  * Add or remove item(s) to favorites when LShift is pressed

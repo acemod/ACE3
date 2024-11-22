@@ -11,7 +11,7 @@
  * 1: Action name <STRING>
  *
  * Example:
- * ["ACE_TapShoulderRight", "VulcanPinch"] call ace_interact_menu_fnc_splitPath
+ * [[path]] call ACE_interact_menu_fnc_splitPath
  *
  * Public: No
  */
@@ -20,6 +20,12 @@ private _parentPath = [];
 
 _parentPath append _this;
 
-private _actionName = (_parentPath deleteAt [-1]) param [0, ""];
+private _count = count _this;
+
+private _actionName = if (_count > 0) then {
+    _parentPath deleteAt (_count - 1) // TODO: replace with _parentPath deleteAt [-1] and drop _count in 2.18
+} else {
+    ""
+};
 
 [_parentPath, _actionName]

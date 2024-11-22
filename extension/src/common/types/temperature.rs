@@ -1,4 +1,4 @@
-use arma_rs::{FromArma, FromArmaError};
+use arma_rs::FromArma;
 
 #[derive(Debug, Clone, Copy, PartialEq)]
 pub struct Temperature(f64);
@@ -35,35 +35,25 @@ impl Temperature {
 }
 
 impl FromArma for Temperature {
-    fn from_arma(s: String) -> Result<Self, FromArmaError> {
+    fn from_arma(s: String) -> Result<Self, String> {
         if s.is_empty() {
-            return Err(FromArmaError::InvalidValue(
-                "unexpected empty string".into(),
-            ));
+            return Err(String::from("unexpected empty string"));
         }
         match s.chars().next().unwrap() {
             'c' => {
-                let temp = s[1..]
-                    .parse::<f64>()
-                    .map_err(|e| FromArmaError::InvalidValue(format!("{e}")))?;
+                let temp = s[1..].parse::<f64>().map_err(|e| format!("{e}"))?;
                 Ok(Self::new_celsius(temp))
             }
             'f' => {
-                let temp = s[1..]
-                    .parse::<f64>()
-                    .map_err(|e| FromArmaError::InvalidValue(format!("{e}")))?;
+                let temp = s[1..].parse::<f64>().map_err(|e| format!("{e}"))?;
                 Ok(Self::new_fahrenheit(temp))
             }
             'k' => {
-                let temp = s[1..]
-                    .parse::<f64>()
-                    .map_err(|e| FromArmaError::InvalidValue(format!("{e}")))?;
+                let temp = s[1..].parse::<f64>().map_err(|e| format!("{e}"))?;
                 Ok(Self::new_kelvin(temp))
             }
             _ => {
-                let temp = s
-                    .parse::<f64>()
-                    .map_err(|e| FromArmaError::InvalidValue(format!("{e}")))?;
+                let temp = s.parse::<f64>().map_err(|e| format!("{e}"))?;
                 Ok(Self::new_celsius(temp))
             }
         }
