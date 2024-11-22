@@ -21,9 +21,7 @@ TRACE_2("params",_unit,_reason);
 
 if !(_unit getVariable [QGVAR(inHand), false]) exitWith {};
 
-#ifdef DEBUG_MODE_FULL
-    systemChat format ["Exit Throw Mode: %1", _reason];
-#endif
+TRACE_1("Exit Throw Mode",_reason);
 
 private _activeThrowable = _unit getVariable [QGVAR(activeThrowable), objNull];
 if !(_unit getVariable [QGVAR(primed), false]) then {
