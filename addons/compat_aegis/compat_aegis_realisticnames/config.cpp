@@ -10,6 +10,10 @@ class CfgPatches {
             "A3_Aegis_Armor_F_Aegis_APC_Wheeled_01",
             "A3_Aegis_Armor_F_Aegis_APC_Tracked_02",
             "A3_Aegis_Armor_F_Aegis_APC_Tracked_03",
+            "A3_Aegis_Weapons_F_Aegis",
+            "A3_Aegis_Weapons_F_Aegis_Rifles_CTAR",
+            "A3_Aegis_Weapons_F_Aegis_Machineguns_LMG_03",
+            "A3_Aegis_Weapons_F_Aegis_Rifles_SPAR_02",
             "ace_realisticnames"
         };
         skipWhenMissingDependencies = 1;
@@ -24,3 +28,4 @@ class CfgPatches {
 };
 
 #include "CfgVehicles.hpp"
+#include "CfgWeapons.hpp"

@@ -3,7 +3,9 @@
     LSTRING(effects_displayName),
     localize LSTRING(SettingsName),
     [[0, 1, 2, 3], [ELSTRING(common,Disabled), LSTRING(effects_tintOnly), LSTRING(enabled_tintAndEffects), LSTRING(effects_effectsOnly)], 2],
-    0
+    0,
+    {[QGVAR(effects), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -20,4 +22,12 @@
     localize LSTRING(SettingsName),
     false, // default value
     0 // isGlobal
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(drawOverlay), "CHECKBOX",
+    LSTRING(DrawOverlay),
+    localize LSTRING(SettingsName),
+    true,
+    0
 ] call CBA_fnc_addSetting;

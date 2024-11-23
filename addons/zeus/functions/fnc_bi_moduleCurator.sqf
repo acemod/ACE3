@@ -20,6 +20,9 @@
  */
 
 params ["_logic", "_units", "_activated"];
+// IGNORE_PRIVATE_WARNING["_logic", "_ownerVarArray", "_player", "_addonsList", "_serverCommand", "_isAdmin", "_addons"];
+// IGNORE_PRIVATE_WARNING["_adminVar", "_forced", "_addonsType", "_name", "_forced", "_addonsType", "_letters", "_isCurator"];
+// IGNORE_PRIVATE_WARNING["_ownerUID", "_birdType", "_bird", "_cfgPatches", "_ownerVar", "_paramAddons", "_respawn", "_class"];
 
 if (_activated) then {
 

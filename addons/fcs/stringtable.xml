@@ -1,101 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="FCS">
-        <Key ID="STR_ACE_FCS_LaseTarget">
-            <English>Lase Target / Measure Distance</English>
-            <German>Ziel anlasern / Entfernung messen</German>
-            <French>SCT - Illuminer la cible/Mesurer la distance</French>
-            <Polish>Naświetl cel / Zmierz odległość</Polish>
-            <Czech>Označit cíl / Změřit vzdálenost</Czech>
-            <Spanish>Iluminar objetivo / Medir distancia</Spanish>
-            <Russian>Подсветить цель / Замерить расстояние</Russian>
-            <Hungarian>Célpont lézerezése / Távolság Bemérése</Hungarian>
-            <Italian>Telemetra bersaglio / Rileva distanza</Italian>
-            <Portuguese>Marcar com laser / Medir Distância</Portuguese>
-            <Japanese>レーザー ターゲット / 計測距離</Japanese>
-            <Korean>목표까지 거리를 레이저로 취득</Korean>
-            <Chinesesimp>激光照射目标/测量距离</Chinesesimp>
-            <Chinese>雷射指示目標 / 測量距離</Chinese>
-        </Key>
-        <Key ID="STR_ACE_FCS_ZeroedTo">
-            <English>Zeroed To</English>
-            <German>Genullt auf</German>
-            <Spanish>Ajustado a</Spanish>
-            <Polish>Wyzerowany na</Polish>
-            <Czech>Nastaveno na</Czech>
-            <French>Zéroté à</French>
-            <Russian>Выставлено на</Russian>
-            <Hungarian>Nullázási táv</Hungarian>
-            <Portuguese>Fixado em</Portuguese>
-            <Italian>Azzerato a</Italian>
-            <Japanese>次にゼロイン</Japanese>
-            <Korean>영점 조절</Korean>
-            <Chinesesimp>已归零到</Chinesesimp>
-            <Chinese>歸零到</Chinese>
+        <Key ID="STR_ACE_FCS_AdjustRangeDown">
+            <English>Adjust FCS Range (Down)</English>
+            <Czech>Nastavit FCS Náměr (Dolů)</Czech>
+            <French>SCT - Réduire la portée</French>
+            <Spanish>Ajustar distancia del FCS (abajo)</Spanish>
+            <Italian>Riduci la portata dell'FCS</Italian>
+            <Polish>Zmniejsz zasięg SKO</Polish>
+            <Portuguese>Ajustar distância do FCS (Abaixo)</Portuguese>
+            <Russian>Диапазон СУО (ниже)</Russian>
+            <German>Entfernung des FLS verringern</German>
+            <Korean>사통장치 거리 조정 (아래로)</Korean>
+            <Japanese>FCS 距離を調節 (下げ)</Japanese>
+            <Chinese>調整火控系統距離 (下)</Chinese>
+            <Chinesesimp>调整火控系统距离（下调）</Chinesesimp>
+            <Hungarian>FCS tartomány állítása (Le)</Hungarian>
         </Key>
         <Key ID="STR_ACE_FCS_AdjustRangeUp">
             <English>Adjust FCS Range (Up)</English>
-            <German>Entfernung des FLS erhöhen</German>
-            <Polish>Zwiększ zasięg SKO</Polish>
-            <Spanish>Ajustar distancia del FCS (arriba)</Spanish>
             <Czech>Nastavit FCS Náměr (Nahoru)</Czech>
             <French>SCT - Augmenter la portée</French>
-            <Hungarian>FCS tartomány állítása (Fel)</Hungarian>
-            <Portuguese>Ajustar distância do FCS (Acima)</Portuguese>
+            <Spanish>Ajustar distancia del FCS (arriba)</Spanish>
             <Italian>Aumenta la portata dell'FCS</Italian>
+            <Polish>Zwiększ zasięg SKO</Polish>
+            <Portuguese>Ajustar distância do FCS (Acima)</Portuguese>
             <Russian>Диапазон СУО (выше)</Russian>
-            <Japanese>FCS 距離を調節 (上げ)</Japanese>
+            <German>Entfernung des FLS erhöhen</German>
             <Korean>사통장치 거리 조정 (위로)</Korean>
-            <Chinesesimp>调整火控系统距离（上调）</Chinesesimp>
+            <Japanese>FCS 距離を調節 (上げ)</Japanese>
             <Chinese>調整火控系統距離 (上)</Chinese>
-        </Key>
-        <Key ID="STR_ACE_FCS_AdjustRangeDown">
-            <English>Adjust FCS Range (Down)</English>
-            <German>Entfernung des FLS verringern</German>
-            <Polish>Zmniejsz zasięg SKO</Polish>
-            <Spanish>Ajustar distancia del FCS (abajo)</Spanish>
-            <Czech>Nastavit FCS Náměr (Dolů)</Czech>
-            <French>SCT - Réduire la portée</French>
-            <Hungarian>FCS tartomány állítása (Le)</Hungarian>
-            <Portuguese>Ajustar distância do FCS (Abaixo)</Portuguese>
-            <Italian>Riduci la portata dell'FCS</Italian>
-            <Russian>Диапазон СУО (ниже)</Russian>
-            <Japanese>FCS 距離を調節 (下げ)</Japanese>
-            <Korean>사통장치 거리 조정 (아래로)</Korean>
-            <Chinesesimp>调整火控系统距离（下调）</Chinesesimp>
-            <Chinese>調整火控系統距離 (下)</Chinese>
-        </Key>
-        <Key ID="STR_ACE_FCS_ResetFCS">
-            <English>Reset FCS</English>
-            <German>FLS zurücksetzen</German>
-            <Spanish>Reiniciar FCS</Spanish>
-            <French>Réinitialiser le SCT</French>
-            <Polish>Resetuj SKO</Polish>
-            <Czech>Resetovat FCS</Czech>
-            <Hungarian>FCS visszaállítása</Hungarian>
-            <Portuguese>Reiniciar FCS</Portuguese>
-            <Italian>Azzeramento dell'FCS</Italian>
-            <Russian>Обнулить СУО</Russian>
-            <Japanese>FCS を初期化</Japanese>
-            <Korean>사통장치 초기화</Korean>
-            <Chinesesimp>重置火控系统</Chinesesimp>
-            <Chinese>重置火控系統</Chinese>
+            <Chinesesimp>调整火控系统距离（上调）</Chinesesimp>
+            <Hungarian>FCS tartomány állítása (Fel)</Hungarian>
         </Key>
         <Key ID="STR_ACE_FCS_HasBeenReset">
             <English>FCS has been reset.</English>
-            <German>FLS wurde zurückgesetzt.</German>
-            <Spanish>FCS reiniciado</Spanish>
-            <French>SCT réinitialisé</French>
-            <Polish>SKO został zresetowany.</Polish>
             <Czech>FCS byl resetován.</Czech>
-            <Hungarian>FCS visszaállítva.</Hungarian>
-            <Portuguese>FCS reiniciado.</Portuguese>
+            <French>SCT réinitialisé</French>
+            <Spanish>FCS reiniciado</Spanish>
             <Italian>L'FCS è stato azzerato</Italian>
+            <Polish>SKO został zresetowany.</Polish>
+            <Portuguese>FCS reiniciado.</Portuguese>
             <Russian>СУО обнулен.</Russian>
-            <Japanese>FCS は初期化されました</Japanese>
+            <German>FLS wurde zurückgesetzt.</German>
             <Korean>사통장치 초기화됨</Korean>
-            <Chinesesimp>火控系统已被重置</Chinesesimp>
+            <Japanese>FCS は初期化されました</Japanese>
             <Chinese>火控系統已被重置</Chinese>
+            <Chinesesimp>火控系统已被重置</Chinesesimp>
+            <Hungarian>FCS visszaállítva.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_FCS_LaseTarget">
+            <English>Lase Target / Measure Distance</English>
+            <Czech>Označit cíl / Změřit vzdálenost</Czech>
+            <French>SCT - Illuminer la cible/Mesurer la distance</French>
+            <Spanish>Iluminar objetivo / Medir distancia</Spanish>
+            <Italian>Telemetra bersaglio / Rileva distanza</Italian>
+            <Polish>Naświetl cel / Zmierz odległość</Polish>
+            <Portuguese>Marcar com laser / Medir Distância</Portuguese>
+            <Russian>Подсветить цель / Замерить расстояние</Russian>
+            <German>Ziel anlasern / Entfernung messen</German>
+            <Korean>목표까지 거리를 레이저로 취득</Korean>
+            <Japanese>レーザー ターゲット / 計測距離</Japanese>
+            <Chinese>雷射指示目標 / 測量距離</Chinese>
+            <Chinesesimp>激光照射目标/测量距离</Chinesesimp>
+            <Hungarian>Célpont lézerezése / Távolság Bemérése</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_FCS_ResetFCS">
+            <English>Reset FCS</English>
+            <Czech>Resetovat FCS</Czech>
+            <French>Réinitialiser le SCT</French>
+            <Spanish>Reiniciar FCS</Spanish>
+            <Italian>Azzeramento dell'FCS</Italian>
+            <Polish>Resetuj SKO</Polish>
+            <Portuguese>Reiniciar FCS</Portuguese>
+            <Russian>Обнулить СУО</Russian>
+            <German>FLS zurücksetzen</German>
+            <Korean>사통장치 초기화</Korean>
+            <Japanese>FCS を初期化</Japanese>
+            <Chinese>重置火控系統</Chinese>
+            <Chinesesimp>重置火控系统</Chinesesimp>
+            <Hungarian>FCS visszaállítása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_FCS_ZeroedTo">
+            <English>Zeroed To</English>
+            <Czech>Nastaveno na</Czech>
+            <French>Zéroté à</French>
+            <Spanish>Ajustado a</Spanish>
+            <Italian>Azzerato a</Italian>
+            <Polish>Wyzerowany na</Polish>
+            <Portuguese>Fixado em</Portuguese>
+            <Russian>Выставлено на</Russian>
+            <German>Genullt auf</German>
+            <Korean>영점 조절</Korean>
+            <Japanese>次にゼロイン</Japanese>
+            <Chinese>歸零到</Chinese>
+            <Chinesesimp>已归零到</Chinesesimp>
+            <Hungarian>Nullázási táv</Hungarian>
         </Key>
     </Package>
 </Project>

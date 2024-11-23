@@ -122,7 +122,7 @@ for "_i" from 0 to _length do { // intentionally inclusive
         private _missionObjects = nearestObjects [_origin2D, ["All"], _testRadius, true];
         _missionObjects = _missionObjects select { !(_x isKindOf "Logic") };
         if (_missionObjects isNotEqualTo []) then {
-            _missionObjects = _missionObjects apply {typeOf _x}; 
+            _missionObjects = _missionObjects apply {typeOf _x};
             if (_force) then {
                 WARNING_1("blocking missionObjects %1",_missionObjects);
             } else {

@@ -8,12 +8,18 @@
 #define WIDTH_SINGLE ((WIDTH_TOTAL - 7 * WIDTH_GAP) / 6)
 
 // IDDs
+#ifndef IDD_MISSION
 #define IDD_MISSION 46
+#endif
 #define IDD_RSCDISPLAYCURATOR 312
 #define IDD_DISPLAY3DEN 313
 
+#ifndef IDC_OK
 #define IDC_OK 1 // emulate "OK" button
+#endif
+#ifndef IDC_CANCEL
 #define IDC_CANCEL 2 // emulate "Cancel" button
+#endif
 
 // Sorting
 #define ASCENDING 0
