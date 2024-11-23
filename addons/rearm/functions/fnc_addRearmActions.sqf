@@ -52,7 +52,7 @@ private _vehicleActions = [];
 
     if (_magazineHelper isNotEqualTo []) then {
         private _icon = getText(configOf _vehicle >> "Icon");
-        if !((_icon select [0, 1]) == "\") then {
+        if ((_icon select [0, 1]) != "\") then {
             _icon = "";
         };
         if (GVAR(level) == 0) then {

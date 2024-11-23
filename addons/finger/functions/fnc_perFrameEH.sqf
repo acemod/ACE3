@@ -19,12 +19,11 @@ if (!alive ACE_player) then {GVAR(fingersHash) = createHashMap};
 // Conditions: canInteract
 if !([ACE_player, ACE_player, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) then {GVAR(fingersHash) = createHashMap};
 // Make sure player is dismounted or in a static weapon:
-if ((ACE_player != vehicle ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) then {GVAR(fingersHash) = createHashMap};
+if ((!isNull objectParent ACE_player) && {!((vehicle ACE_player) isKindOf "StaticWeapon")}) then {GVAR(fingersHash) = createHashMap};
 
 private _iconBaseSize = GVAR(sizeCoef) * BASE_SIZE * 0.10713 * (call EFUNC(common,getZoom));
 
 {
-    //IGNORE_PRIVATE_WARNING ["_x", "_y"];
     _y params ["_lastTime", "_pos", "_name", "_sourceUnit"];
     private _timeLeftToShow = _lastTime + FP_TIMEOUT - diag_tickTime;
     if (_timeLeftToShow <= 0) then {

@@ -68,6 +68,15 @@ class CfgVehicles {
                     };
                 };
 
+                class ACE_PassThrowable {
+                    displayName = CSTRING(PassThrowable);
+                    condition = QUOTE([ARR_3(_player,_target,(currentThrowable _player) param [ARR_2(0,'')])] call FUNC(canPassThrowable));
+                    statement = QUOTE([ARR_3(_player,_target,(currentThrowable _player) param [ARR_2(0,'')])] call FUNC(passThrowable));
+                    exceptions[] = {"isNotSwimming"};
+                    showDisabled = 0;
+                    modifierFunction = QUOTE(_this select 3 set [ARR_2(2,getText (configFile >> 'CfgMagazines' >> (currentThrowable (_this select 1)) param [ARR_2(0,'HandGrenade')] >> 'picture'))];); // Set picture of the current throwable
+                };
+
                 class ACE_TeamManagement {
                     displayName = CSTRING(TeamManagement);
                     condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {GVAR(EnableTeamManagement)});
@@ -109,7 +118,7 @@ class CfgVehicles {
                         modifierFunction = QUOTE([ARR_3('YELLOW','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                     };
                     class ACE_AssignTeamMain {
-                        displayName = "$str_assign_main";
+                        displayName = "$STR_assign_main";
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'MAIN'});
                         statement = QUOTE([ARR_3(_target,'MAIN',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};

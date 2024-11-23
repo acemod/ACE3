@@ -50,7 +50,7 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
     };
 
     // Calculate torque of thrown grenade
-    private _config = configFile >> "CfgAmmo" >> typeOf _activeThrowable;
+    private _config = configOf _activeThrowable;
     private _torqueDir = getArray (_config >> QGVAR(torqueDirection));
     _torqueDir = if (_torqueDir isEqualTypeArray [0,0,0]) then { vectorNormalized _torqueDir } else { [0,0,0] };
     private _torqueMag = getNumber (_config >> QGVAR(torqueMagnitude));

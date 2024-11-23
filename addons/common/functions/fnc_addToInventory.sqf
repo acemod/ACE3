@@ -30,16 +30,16 @@ private _weaponHolder = _unit;
 
 switch (_container) do {
     case "vest": {
-        _canAdd = [_unit, _classname, 1, false, true, false] call CBA_fnc_canAddItem;
+        _canAdd = (vestContainer _unit) canAdd _classname;
     };
     case "backpack": {
-        _canAdd = [_unit, _classname, 1, false, false, true] call CBA_fnc_canAddItem;
+        _canAdd = (backpackContainer _unit) canAdd _classname;
     };
     case "uniform": {
-        _canAdd = [_unit, _classname, 1, true, false, false] call CBA_fnc_canAddItem;
+        _canAdd = (uniformContainer _unit) canAdd _classname;
     };
     default {
-        _canAdd = [_unit, _classname] call CBA_fnc_canAddItem;
+        _canAdd = _unit canAdd [_classname, 1, true];
         if (_canAdd) then {
             switch (_type select 1) do {
                 case "primary": {
@@ -56,21 +56,6 @@ switch (_container) do {
                 };
             };
         };
-    };
-};
-
-if (_type select 0 == "magazine") then {
-    private _configAmmoCount = getNumber (configFile >> "CfgMagazines" >> _classname >> "count");
-
-    // https://feedback.bistudio.com/T74244
-    // When adding throwables with the addXXXCargo(Global) commands, they don't show up in the throwables list
-    // If a throwable has more than 1 ammo count, adding it with addItem(XXX) commands also renders the throwable unusable
-    if (_configAmmoCount == 1 && {_ammoCount in [-1, 1]} && {_classname call BIS_fnc_isThrowable}) then { // TODO: replace with https://community.bistudio.com/wiki/isThrowable in 2.18
-        _type set [0, "item"];
-    };
-
-    if (_ammoCount == -1) then {
-        _ammoCount = _configAmmoCount;
     };
 };
 
@@ -94,16 +79,10 @@ switch (_type select 0) do {
                         _unit addWeaponGlobal _classname;
                     } else {
                         {
-                            _x params ["_parameters", "_container"];
-
-                            if (_parameters call CBA_fnc_canAddItem) exitWith {
-                                _container addWeaponCargoGlobal [_classname, 1]; // addWeaponGlobal will replace the weapon currently in a slot
+                            if (_x canAdd _classname) exitWith {
+                                _x addWeaponCargoGlobal [_classname, 1];
                             };
-                        } forEach [
-                            [[_unit, _classname, 1, false, false, true], backpackContainer _unit],
-                            [[_unit, _classname, 1, false, true, false], vestContainer _unit],
-                            [[_unit, _classname, 1, true, false, false], uniformContainer _unit]
-                        ];
+                        } forEach [backpackContainer _unit, vestContainer _unit, uniformContainer _unit];
                     };
                 };
             };
@@ -121,6 +100,10 @@ switch (_type select 0) do {
     };
 
     case "magazine": {
+        if (_ammoCount == -1) then {
+            _ammoCount = getNumber (configFile >> "CfgMagazines" >> _classname >> "count");
+        };
+
         if (_canAdd) then {
             _addedToUnit = true;
 

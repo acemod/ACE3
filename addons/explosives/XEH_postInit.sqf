@@ -22,9 +22,8 @@
     _this call FUNC(setPosition);
 
     if (isServer) then {
-        if (missionNamespace getVariable [QGVAR(setShotParents), true]) then {
-            _explosive setShotParents [_unit, _unit];
-        };
+        private _owner = [objNull, _unit] select (missionNamespace getVariable [QGVAR(setShotParents), false]);
+        _explosive setShotParents [_owner, _unit];
     };
 }] call CBA_fnc_addEventHandler;
 [QGVAR(startDefuse), LINKFUNC(startDefuse)] call CBA_fnc_addEventHandler;
@@ -35,9 +34,8 @@ if (isServer) then {
     [QGVAR(detonate), {
         params ["_unit", "_explosive", "_delay"];
         TRACE_3("server detonate EH",_unit,_explosive,_delay);
-        if (missionNamespace getVariable [QGVAR(setShotParents), true]) then {
-            _explosive setShotParents [_unit, _unit];
-        };
+        private _owner = [objNull, _unit] select (missionNamespace getVariable [QGVAR(setShotParents), false]);
+        _explosive setShotParents [_owner, _unit];
         [{
             params ["_explosive"];
             TRACE_1("exploding",_explosive);

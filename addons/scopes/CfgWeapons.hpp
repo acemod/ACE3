@@ -173,6 +173,19 @@ class CfgWeapons {
         };
     };
 
+    class optic_DMS_weathered_F: optic_DMS {};
+
+    class optic_DMS_weathered_Kir_F: optic_DMS_weathered_F {
+        class ItemInfo: ItemInfo {
+            class OpticsModes: OpticsModes {
+                class Snip: Snip {
+                    discreteDistance[] = {100};
+                    discreteDistanceInitIndex = 0;
+                };
+            };
+        };
+    };
+
     class optic_AMS_base: ItemCore {
         ACE_ScopeHeightAboveRail = 3.8933;
         ACE_ScopeAdjust_Vertical[] = {0, 16};

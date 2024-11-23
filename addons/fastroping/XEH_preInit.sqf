@@ -9,9 +9,9 @@ PREP_RECOMPILE_END;
 #include "initSettings.inc.sqf"
 
 if (isServer) then {
-    ["Helicopter", "Deleted", LINKFUNC(unequipFRIES)] call CBA_fnc_addClassEventHandler;
+    ["Air", "Deleted", LINKFUNC(unequipFRIES)] call CBA_fnc_addClassEventHandler;
 };
 
-["Helicopter", "Killed", LINKFUNC(unequipFRIES)] call CBA_fnc_addClassEventHandler;
+["Air", "Killed", LINKFUNC(unequipFRIES)] call CBA_fnc_addClassEventHandler;
 
 ADDON = true;
