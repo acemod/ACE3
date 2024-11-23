@@ -579,8 +579,8 @@ class GVAR(type_RBS70) {
 class GVAR(type_Redeye) {
     enabled = 0;
 
-    pitchRate = 27;          // Minium flap deflection for guidance
-    yawRate = 27;            // Maximum flap deflection for guidance
+    pitchRate = 40;          // Minium flap deflection for guidance
+    yawRate = 40;            // Maximum flap deflection for guidance
 
     canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -594,8 +594,9 @@ class GVAR(type_Redeye) {
     defaultSeekerLockMode = "LOBL";
     seekerLockModes[] = { "LOBL" };
 
-    defaultNavigationType = "ProportionalNavigation";
-    navigationTypes[] = { "ProportionalNavigation" };
+    defaultNavigationType = "LineOfSight";
+    navigationTypes[] = { "LineOfSight" };
+    navigationGain = 3;
 
     seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
     seekerAngle = 45;           // Angle from the shooter's view that can track the missile
