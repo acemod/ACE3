@@ -109,6 +109,7 @@ if (_objectType isKindOf "CAManBase") then {
 
 TRACE_1("Building ACE_SelfActions",_objectType);
 // Create a master action to base on self action
+//IGNORE_PRIVATE_WARNING ["_target"];
 private _actions = [
         [
             [

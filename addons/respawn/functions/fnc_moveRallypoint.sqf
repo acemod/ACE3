@@ -39,7 +39,7 @@ _position set [2, 0];
 [localize LSTRING(Deploy)] call EFUNC(common,displayTextStructured);
 
 [{
-    params ["_rallypoint", "_unit", "_position"];
+    params ["_rallypoint", "_unit", "_position", "_side"];
 
     _rallypoint setPosATL _position;
     _unit reveal _rallypoint;
@@ -49,4 +49,4 @@ _position set [2, 0];
     ["ace_rallypointMoved", [_rallypoint, _side, _position]] call CBA_fnc_globalEvent;
 
     [localize LSTRING(Deployed)] call EFUNC(common,displayTextStructured);
-}, [_rallypoint, _unit, _position], 5] call CBA_fnc_waitAndExecute;
+}, [_rallypoint, _unit, _position, _side], 5] call CBA_fnc_waitAndExecute;

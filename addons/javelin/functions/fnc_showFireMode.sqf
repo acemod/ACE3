@@ -14,11 +14,12 @@
  *
  * Public: No
  */
+//IGNORE_PRIVATE_WARNING ["_currentShooter"]; // from upper scope
 
-(if (((vehicle ACE_player) == ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
+(if ((isNull objectParent ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
     weaponState ACE_player
 } else {
-    _turretPath = if (ACE_player == (driver _currentShooter)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
+    private _turretPath = if (ACE_player == (driver _currentShooter)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
     weaponState [vehicle ACE_player, _turretPath]
 }) params ["_weapon", "", "_mode"];
 

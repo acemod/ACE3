@@ -32,7 +32,7 @@ private _losDelta = (vectorNormalized _attackProfileDirection) vectorDiff (vecto
 private _losRate = if (_timestep == 0) then {
     0
 } else {
-    1 * (vectorMagnitude _losDelta) / _timestep; 
+    1 * (vectorMagnitude _losDelta) / _timestep;
 };
 
 private _lateralAcceleration = _navigationGain * _losRate;

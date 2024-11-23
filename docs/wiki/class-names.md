@@ -232,6 +232,7 @@ ACE_bodyBag | Bodybag | ACE_ItemCore |
 ACE_bodyBagObject | Bodybag (packed) | |
 ACE_epinephrine | Epinephrine auto injector | ACE_ItemCore |
 ACE_morphine | Morphine auto injector | ACE_ItemCore |
+ACE_painkillers | Painkillers | ACE_ItemCore |
 ACE_packingBandage | Packing Bandage | ACE_ItemCore |
 ACE_personalAidKit | Personal Aid Kit | ACE_ItemCore |
 ACE_plasmaIV | Plasma IV (1000ml) | ACE_ItemCore |

@@ -1,211 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
-        <Key ID="STR_ACE_Frag_Module_DisplayName">
-            <English>Fragmentation Simulation</English>
-            <Polish>Symulacja fragmentacji</Polish>
-            <Spanish>Simulación de fragmentación</Spanish>
-            <German>Splittersimulation</German>
-            <Czech>Simulace fragmentů</Czech>
-            <Portuguese>Simulação de fragmentação</Portuguese>
-            <French>Simulation de la fragmentation</French>
-            <Hungarian>Repesz-szimuláció</Hungarian>
-            <Russian>Симуляция осколков</Russian>
-            <Italian>Simulazione Frammentazione</Italian>
-            <Japanese>破片シミュレーション</Japanese>
-            <Korean>파편화 시뮬레이션</Korean>
-            <Chinesesimp>破片模拟</Chinesesimp>
-            <Chinese>模擬碎片</Chinese>
+        <Key ID="STR_ACE_Frag_Debug">
+            <English>Debug</English>
+            <French>Debug</French>
+            <Spanish>Debug</Spanish>
+            <Italian>Debug</Italian>
+            <Russian>Отладка</Russian>
+            <Korean>디버그</Korean>
+            <Japanese>デバッグ</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Frag_DrawHitBox">
+            <English>Draw Hitboxes</English>
+            <French>Afficher les hitboxes</French>
+            <Spanish>Dibujar hitboxes</Spanish>
+            <Italian>Visualizza hitbox</Italian>
+            <Russian>Изобразить хитбоксы</Russian>
+            <Korean>히트박스 그리기</Korean>
+            <Japanese>ヒットボックスを描画</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Frag_DrawHitBox_Desc">
+            <English>Draw hitboxes on objects that were targeted.</English>
+            <French>Affiche les hitboxes sur les cibles potentielles de fragmentation.</French>
+            <Spanish>Dibuja hitboxes en objetos que son seguidos.</Spanish>
+            <Italian>Visualizza hitbox su potenziali bersagli della frammentazione.</Italian>
+            <Russian>Изобразить хитбоксы на объектах, которые были нацелены.</Russian>
+            <German>Splitter-/Explosions-Debugging</German>
+            <Korean>타겟팅된 오브젝트에 히트박스를 그립니다.</Korean>
+            <Japanese>被弾した物体のヒットボックスを描画します。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Frag_EnableDebugTrace">
+            <English>Frag/Spall Debug Tracing</English>
+            <French>Suivi du débogage des éclats/explosions</French>
+            <Spanish>Trazado Debug de Fragmentación/Astillamiento</Spanish>
+            <Italian>Traccia Frag/Spall per Debug</Italian>
+            <Russian>Отладка трассировки фрагментации/осколков</Russian>
+            <German>Splitter-/Explosions-Debug-Verfolgung</German>
+            <Korean>파열/파편 디버그 추적</Korean>
+            <Japanese>フラグとスポールの追跡デバッグ</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
+            <English>Enables visual tracing of fragmentation and spalling rounds.</English>
+            <French>Active le suivi des éclats/explosions.</French>
+            <Spanish>Habilitar trazado visual de los proyectiles generados por la fragmentación y el astillamiento.</Spanish>
+            <Italian>Abilita il tracciamento visivo di effetti di frammentazione e spalling.</Italian>
+            <Russian>Включает визуальную трассировку фрагментации и осколочных снарядов.</Russian>
+            <German>Splitter-/Explosions-Debugging</German>
+            <Korean>파열과 파편의 시각적 추적을 활성화합니다.</Korean>
+            <Japanese>フラグメンテーションとスポーリングによって発生した破片飛翔体の動きを視覚的に追跡できる機能を有効化します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Frag_EnableFrag">
             <English>Fragmentation Simulation</English>
-            <Polish>Symulacja fragmentacji</Polish>
-            <Spanish>Simulación de fragmentación</Spanish>
-            <German>Splittersimulation</German>
             <Czech>Simulace fragmentů</Czech>
-            <Portuguese>Simulação de fragmentação</Portuguese>
             <French>Simulation de la fragmentation</French>
-            <Hungarian>Repesz-szimuláció</Hungarian>
-            <Russian>Симуляция осколков</Russian>
+            <Spanish>Simulación de fragmentación</Spanish>
             <Italian>Simulazione Frammentazione</Italian>
-            <Japanese>破片シミュレーション</Japanese>
-            <Korean>파편화 시뮬레이션</Korean>
-            <Chinesesimp>破片模拟</Chinesesimp>
+            <Polish>Symulacja fragmentacji</Polish>
+            <Portuguese>Simulação de fragmentação</Portuguese>
+            <Russian>Симуляция осколков</Russian>
+            <German>Splittersimulation</German>
+            <Korean>파열 시뮬레이션</Korean>
+            <Japanese>フラグメンテーション シミュレーション</Japanese>
             <Chinese>模擬碎片</Chinese>
+            <Chinesesimp>破片模拟</Chinesesimp>
+            <Hungarian>Repesz-szimuláció</Hungarian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableFrag_Desc">
             <English>Enable the ACE Fragmentation Simulation</English>
-            <Spanish>Activa la simulación de fragmentación ACE</Spanish>
-            <Polish>Aktywuje symulację fragmentacji ACE</Polish>
-            <German>Aktiviere die ACE-Splittersimulation</German>
             <Czech>Povolit ACE simulaci fragmentů</Czech>
-            <Portuguese>Ativa a simulação de fragmentação do ACE</Portuguese>
             <French>Active la simulation de la fragmentation ACE.</French>
-            <Hungarian>Az ACE repesz-szimuláció engedélyezése</Hungarian>
-            <Russian>Включить симуляцию осколков ACE</Russian>
+            <Spanish>Activa la simulación de fragmentación ACE</Spanish>
             <Italian>Abilita la Simulazione Frammentazione di ACE</Italian>
-            <Japanese>ACE 破片シミュレーションを有効化</Japanese>
-            <Korean>ACE 파편화 시뮬레이션을 적용합니다.</Korean>
-            <Chinesesimp>启用 ACE 破片模拟</Chinesesimp>
+            <Polish>Aktywuje symulację fragmentacji ACE</Polish>
+            <Portuguese>Ativa a simulação de fragmentação do ACE</Portuguese>
+            <Russian>Включить симуляцию осколков ACE</Russian>
+            <German>Aktiviere die ACE-Splittersimulation</German>
+            <Korean>ACE 파열 시뮬레이션을 적용합니다.</Korean>
+            <Japanese>ACE フラグメンテーション シミュレーションを有効化</Japanese>
             <Chinese>啟用ACE模擬碎片</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Frag_EnableSpall">
-            <English>Spalling Simulation</English>
-            <Spanish>Simulación de astillamiento</Spanish>
-            <Polish>Symulacja odprysków</Polish>
-            <German>Explosionssimulation</German>
-            <Czech>Simulace úlomků</Czech>
-            <Portuguese>Simulação de estilhaços</Portuguese>
-            <French>Simulation d'éclat</French>
-            <Hungarian>Pattogzás-szimuláció</Hungarian>
-            <Russian>Симуляция обломков</Russian>
-            <Italian>Simulazione Spalling</Italian>
-            <Japanese>剥離シミュレーション</Japanese>
-            <Korean>탄환파편 시뮬레이션</Korean>
-            <Chinesesimp>模拟剥落</Chinesesimp>
-            <Chinese>模擬剝落</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Frag_EnableSpall_Desc">
-            <English>Enable the ACE Spalling Simulation</English>
-            <Spanish>Activa la simulación de astillamiento ACE</Spanish>
-            <Polish>Aktywuje symulację odprysków ACE</Polish>
-            <German>Aktiviere ACE-Explosionssimulation</German>
-            <Czech>Povolit ACE simulaci úlomků</Czech>
-            <Portuguese>Ativa a simulação de estilhaços do ACE</Portuguese>
-            <French>Active la simulation d'éclat ACE.</French>
-            <Hungarian>Az ACE pattogzás-szimuláció engedélyezése</Hungarian>
-            <Russian>Включить симуляцию обломков ACE</Russian>
-            <Italian>Abilita la Simulazione Spalling di ACE</Italian>
-            <Japanese>ACE 剥離シミュレーションを有効化</Japanese>
-            <Korean>ACE 탄환파편 시뮬레이션을 적용합니다.</Korean>
-            <Chinesesimp>启用 ACE 模拟剥落</Chinesesimp>
-            <Chinese>啟用ACE模擬剝落</Chinese>
+            <Chinesesimp>启用 ACE 破片模拟</Chinesesimp>
+            <Hungarian>Az ACE repesz-szimuláció engedélyezése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Frag_EnableReflections">
             <English>Explosion Reflections Simulation</English>
-            <Polish>Symulacja odbicia eksplozji</Polish>
-            <Italian>Simulazione Riflessi Esplosioni</Italian>
-            <German>Druckwellensimulation</German>
-            <Spanish>Activar simulación de reflexiones</Spanish>
+            <Czech>Simulace odrazu exploze</Czech>
             <French>Simulation de la réflexion des explosions</French>
+            <Spanish>Activar simulación de reflexiones</Spanish>
+            <Italian>Simulazione Riflessi Esplosioni</Italian>
+            <Polish>Symulacja odbicia eksplozji</Polish>
             <Portuguese>Simulação de reflexo de explosão</Portuguese>
             <Russian>Cимуляция отражения взрывов ACE</Russian>
-            <Japanese>爆発反射シミュレーション</Japanese>
+            <German>Druckwellensimulation</German>
             <Korean>폭발 반사 시뮬레이션</Korean>
-            <Chinesesimp>模拟爆炸反射</Chinesesimp>
+            <Japanese>爆風反射シミュレーション</Japanese>
             <Chinese>模擬爆炸反射</Chinese>
-            <Czech>Simulace odrazu exploze</Czech>
+            <Chinesesimp>模拟爆炸反射</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_EnableReflections_Desc">
             <English>Enable the ACE Explosion Reflection Simulation</English>
-            <Polish>Włącz symulację odbicia eksplozji ACE</Polish>
-            <Italian>Abilita la Simulazione Riflessi Esplosioni di ACE</Italian>
-            <German>Aktiviere die ACE-Druckwellensimulation</German>
-            <Spanish>Activa la simulación de reflexiones para las explosiones.</Spanish>
+            <Czech>Povolit ACE simulaci odrazu exploze</Czech>
             <French>Active la simulation de la réflexion des explosions ACE.</French>
+            <Spanish>Activa la simulación de reflexiones para las explosiones.</Spanish>
+            <Italian>Abilita la Simulazione Riflessi Esplosioni di ACE</Italian>
+            <Polish>Włącz symulację odbicia eksplozji ACE</Polish>
             <Portuguese>Ativa a simulação de reflexo de explosão do ACE</Portuguese>
             <Russian>Включить симуляцию отражения взрывов ACE</Russian>
-            <Japanese>ACE 爆発反射シミュレーションを有効化</Japanese>
+            <German>Aktiviere die ACE-Druckwellensimulation</German>
             <Korean>ACE 폭발 반사 시뮬레이션을 적용합니다.</Korean>
-            <Chinesesimp>启用 ACE 模拟爆炸反射</Chinesesimp>
+            <Japanese>ACE 爆風反射シミュレーションを有効化</Japanese>
             <Chinese>啟用ACE模擬爆炸反射</Chinese>
-            <Czech>Povolit ACE simulaci odrazu exploze</Czech>
+            <Chinesesimp>启用 ACE 模拟爆炸反射</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Frag_MaxTrack">
-            <English>Maximum Projectiles Tracked</English>
-            <Spanish>Máximos proyectiles rastreados</Spanish>
-            <Polish>Maks. liczba śledzonych pocisków</Polish>
-            <German>Maximalzahl der verfolgten Projektile</German>
-            <Czech>Maximální počet sledovaných projektilů</Czech>
-            <Portuguese>Máximo de projéteis rastreados</Portuguese>
-            <French>Nombre maximum de projectiles suivis</French>
-            <Hungarian>Maximum követett repeszek</Hungarian>
-            <Russian>Макс. количество отслеживаемых снарядов</Russian>
-            <Italian>Numero massimo di Proiettili Tracciati</Italian>
-            <Japanese>飛翔体最大追跡数</Japanese>
-            <Korean>최대 발사체 추적수</Korean>
-            <Chinesesimp>最大破片粒子追踪数量</Chinesesimp>
-            <Chinese>最大碎片/剝落粒子追蹤數量</Chinese>
+        <Key ID="STR_ACE_Frag_EnableSpall">
+            <English>Spalling Simulation</English>
+            <Czech>Simulace úlomků</Czech>
+            <French>Simulation d'éclat</French>
+            <Spanish>Simulación de astillamiento</Spanish>
+            <Italian>Simulazione Spalling</Italian>
+            <Polish>Symulacja odprysków</Polish>
+            <Portuguese>Simulação de estilhaços</Portuguese>
+            <Russian>Симуляция обломков</Russian>
+            <German>Explosionssimulation</German>
+            <Korean>파편 시뮬레이션</Korean>
+            <Japanese>スポーリング シミュレーション</Japanese>
+            <Chinese>模擬剝落</Chinese>
+            <Chinesesimp>模拟剥落</Chinesesimp>
+            <Hungarian>Pattogzás-szimuláció</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Frag_MaxTrack_Desc">
-            <English>This setting controls the maximum amount of projectiles the fragmentation and spalling system will track at any given time. If more projectiles are fired, they will not be tracked. Lower this setting if you do not want FPS drops at high-count projectile scenarios ( &gt;200 rounds in the air at once)</English>
-            <Spanish>Este ajuste controla la cantidad máxima de proyectiles del sistema de fragmentación y astillamiento de los que se hará un seguimiento en cualquier momento dado. Si se disparan más proyectiles, no serán rastreados. Baja esta opción si no deseas una bajada de FPS en escenarios con muchos proyectiles (&gt;200 proyectiles en el aire a la vez)</Spanish>
-            <Polish>To ustawienie kontroluje maksymalną ilość pocisków, jakie fragmentacja i odpryski symulują w danym momencie. Jeżeli więcej pocisków będzie wystrzelonych, wtedy nie będą one śledzone. Zmniejsz tą opcję jeżeli nie chcesz odczuwać spadków FPS podczas ciężkiej wymiany ognia (więcej niż 200 pocisków w powietrzu na raz).</Polish>
-            <German>Diese Einstellung steuert die maximale Anzahl an Projektilen, die das Splitter- und Explosionssystem gleichzeitig verfolgen wird. Wenn mehr Projektile abgefeuert werden, werden sie nicht verfolgt werden. Diese Einstellung zu verringern, kann FPS-Einbrüche bei Szenarien mit vielen Projektilen verhindern (&gt;200 Objekte gleichzeitig in der Luft)</German>
-            <Czech>Toto nastavení kontroluje maximální množství projektilů z fragmentace a úlomků, která jsou sledována v dané době. Pokud je vystřeleno více projektilů, tak nebudou sledovány. Snižte toto nastavení pokud si nepřejete propady FPS v situacích, kde je velké množství projektilů ( &gt;200 nábojů najednou ve vzduchu)</Czech>
-            <Portuguese>Esta definição controla a quantidade máxima de projéteis que o sistema de fragmentação e estilhaçamento irá acompanhar em qualquer momento. Se mais projéteis são disparados, eles não serão rastreados. Diminua essa configuração se você não quiser que o FPS caia em cenários com alta contagem de projéteis (&gt; 200 projéteis no ar ao mesmo tempo)</Portuguese>
-            <French>Ce paramètre contrôle le nombre maximum de projectiles et d'éclats résultant de la fragmentation, que le système peut suivre à chaque instant.\nSi plus de projectiles sont générés, ils ne seront pas pris en compte. Baissez ce réglage si vous ne voulez pas de chute de FPS en cas de nombre important de projectiles (&gt;200 éclats en même temps).</French>
-            <Hungarian>Ez a beállítás szabályozza a repeszeződés és pattogzás által kilőtt objektumok követett számát. Ha több ez a szám, ezek az objektumok nem lesznek követve. Csökkentsd ezt a beállítást, ha nem akarsz lassulásokat magas-törmelékmennyiségű helyzetekben (200+ repesz a levegőben egyszerre)</Hungarian>
-            <Russian>Эта настройка контролирует максимальное количество снарядов, которок отслеживает система осколков и обломков в каждый момент времени. /nСнаряды, выстреленные сверх этого числа, отслеживаться не будут. Уменьшите это значение, если вы не хотите падения FPS при большом количестве снарядов в одной перестрелке (&gt; 200 одновременно летящих снарядов)</Russian>
-            <Italian>Questo parametro controlla il numero massimo di proiettili che la frammentazione e il sistema di spalling tracciano in ogni momento. Se vengono sparati ulteriori proiettili, non verranno tracciati. Abbassa questo parametro se non vuoi cali di FPS in scenari con molti proiettili (&gt;200 proiettili in aria contemporaneamente)</Italian>
-            <Japanese>この設定では、断片化および剥離システムが常に追跡する飛翔体の最大量を制御します。 この値より多くの飛翔体が発射された場合、それらは追跡されません。 弾数が多いシナリオでFPSを低下させたくない場合は、この設定を下げてください。 (一度に200発以上が空中に発射されます)</Japanese>
-            <Korean>이 설정은 탄환파편 및 파편 시스템으로 인해 생긴 발사체의 수를 결정합니다. 만약 더 많은 발사체가 나올 경우 정해진 수 이외에는 추적하지 않습니다. 이 설정을 낮춤으로써 파편이 많은 시나리오를 실행할때 더욱 원활히 진행할 수 있습니다 (한 번에 200개 이하)</Korean>
-            <Chinesesimp>设定在指定时间内，系统最大可追踪的破片粒子数量。如有更多的碎片在这之后产生，这些粒子将不会被追踪。如果你想要维持好的帧数，此设定勿调的过高。（ &gt;一次200颗粒子）</Chinesesimp>
-            <Chinese>設定在指定時間內，系統最大可追蹤的碎片/剝落粒子數量。如有更多的碎片在這之後產生，這些粒子將不會被追蹤。如果你想要維持好的幀數，此設定勿調的過高。( &gt;一次200顆粒子)</Chinese>
+        <Key ID="STR_ACE_Frag_EnableSpall_Desc">
+            <English>Enable the ACE Spalling Simulation</English>
+            <Czech>Povolit ACE simulaci úlomků</Czech>
+            <French>Active la simulation d'éclat ACE.</French>
+            <Spanish>Activa la simulación de astillamiento ACE</Spanish>
+            <Italian>Abilita la Simulazione Spalling di ACE</Italian>
+            <Polish>Aktywuje symulację odprysków ACE</Polish>
+            <Portuguese>Ativa a simulação de estilhaços do ACE</Portuguese>
+            <Russian>Включить симуляцию обломков ACE</Russian>
+            <German>Aktiviere ACE-Explosionssimulation</German>
+            <Korean>ACE 파편 시뮬레이션을 적용합니다.</Korean>
+            <Japanese>ACE スポーリング シミュレーションを有効化</Japanese>
+            <Chinese>啟用ACE模擬剝落</Chinese>
+            <Chinesesimp>启用 ACE 模拟剥落</Chinesesimp>
+            <Hungarian>Az ACE pattogzás-szimuláció engedélyezése</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Frag_MaxTrackPerFrame">
-            <English>Maximum Projectiles Per Frame</English>
-            <Spanish>Máximos proyectiles por cuadro</Spanish>
-            <German>Maximale Anzahl an Projektilen pro Frame</German>
-            <Polish>Maks. liczba pocisków na klatkę</Polish>
-            <Czech>Maximální počet projektilů za jeden snímek</Czech>
-            <Portuguese>Projéteis máximos por quadro</Portuguese>
-            <French>Nombre maximal de projectiles par image</French>
-            <Hungarian>Maximum repesz/képkocka</Hungarian>
-            <Russian>Макс. количество снарядов за кадр</Russian>
-            <Italian>Numero massimo di proiettili per Frame</Italian>
-            <Japanese>フレームごとの飛翔体最大数</Japanese>
-            <Korean>프레임 당 최대 발사체 수</Korean>
-            <Chinesesimp>每帧最大破片粒子数量</Chinesesimp>
-            <Chinese>每一幀數(FPS)最大碎片/剝落粒子數量</Chinese>
+        <Key ID="STR_ACE_Frag_HitSphereEnable">
+            <English>Draw Event Spheres</English>
+            <French>Visualiser les sphères d'événements</French>
+            <Spanish>Dibujar Esferas de Eventos</Spanish>
+            <Italian>Visualizza sfere eventi</Italian>
+            <Russian>Изобразить сферы событий</Russian>
+            <Korean>이벤트 구체 그리기</Korean>
+            <Japanese>イベントを球体として描画</Japanese>
         </Key>
-        <Key ID="STR_ACE_Frag_MaxTrackPerFrame_Desc">
-            <English>The number of spall track calculations to perform in any given frame. This helps spread the FPS impact of tracking spall rounds across multiple frames, limiting its impact even further.</English>
-            <Polish>Ilość obliczeń wykonywanych przez symulację odprysków w danej klatce. Ta opcja pomaga rozprzestrzenić obliczenia odprysków na więcej klatek, zmniejszając spadek FPS jeszcze bardziej.</Polish>
-            <German>Gibt die Anzahl der Explosionverfolgungsberechnungen an, die gleichzeitig ausgeführt werden. Das kann dabei helfen den FPS-Einfluss abzuschwächen, wenn Teile über mehrere Frames hinweg verfolgt werden.</German>
-            <Spanish>El número de cálculos de esquirlas que se hará en cualquier cuadro. Esto ayuda a dispersar el impacto en FPS del seguimiento de esquirlas de balas a través de múltiples cuadros, lo que limita aún más su impacto.</Spanish>
-            <Czech>Počet úlomků v daném snímku. Toto pomáhá rozšířit FPS dopad sledovaného úlomku napříč více snímky, omezuje jeho vliv ještě více.</Czech>
-            <Portuguese>O número de cálculos por estilhaço rastreado para executar em qualquer quadro. Isso ajuda a distribuir o impacto no FPS do rastreamento de estilhaço em vários quadros, o que limita o seu impacto ainda mais.</Portuguese>
-            <French>Le nombre de calculs de suivi à effectuer pour chaque image. Cela aide à répartir l'impact des calculs sur plusieurs images, limitant ainsi encore davantage l'impact sur les FPS.</French>
-            <Hungarian>A lepattogzási útvonalak számításának darabjai képkockánként. Ez eloszlatja az FPS-megszakadást több képkockára, ezzel csökkentve a súlyosságát.</Hungarian>
-            <Russian>Число обрабатываемых осколков за кадр. Это позволяет распределить нагрузку по отслеживанию осколков между несколькими кадрами, чтобы предотвратить падение FPS.</Russian>
-            <Italian>Il numero di calcoli per tracciamento di spalling ad ogni frame. Questo aiuta a distribuire l'impatto del tracciamento dello spalling su più frame, riducendolo ulteriormente.</Italian>
-            <Japanese>任意のフレームごとに追跡される剥離飛翔体の数。剥離による飛翔体を追跡することによるFPSへの影響を複数フレームに分散させ抑えることが出来ます。</Japanese>
-            <Korean>가능한 프레임마다 파편을 추적 및 계산합니다. 여러 프레임에 걸쳐 파편난 발사체를 추적하여 FPS에 도움을 줍니다. 이를 제한함으로써 더욱 큰 효과를 볼 수 있습니다.</Korean>
-            <Chinesesimp>设定在每一帧数内，系统最大可追踪的破片粒子数量。此设定可有效帮助系统减低计算压力。</Chinesesimp>
-            <Chinese>設定在每一幀數內，系統最大可追蹤的碎片/剝落粒子數量。此設定可有效幫助系統減低計算壓力</Chinese>
+        <Key ID="STR_ACE_Frag_HitSphereEnable_Desc">
+            <English>Draw color coded spheres at any event for tracked rounds.</English>
+            <French>Affiche des sphères de couleur sur chaque événement d'un fragment tracé.</French>
+            <Spanish>Dibujar esferas codificadas por color en cualquier evento para proyectiles seguidos.</Spanish>
+            <Italian>Visualizza sfere colorate su ogni evento di un frammento tracciato.</Italian>
+            <Russian>Изобразить цветные сферы на любом событии для отслеживаемых раундов.</Russian>
+            <Korean>모든 이벤트에서 추적된 파편을 위한 색상으로 구분하는 구체를 그립니다.</Korean>
+            <Japanese>追跡中の飛翔体に発生した全てのイベントを色付けた球体として描画します。</Japanese>
         </Key>
-        <Key ID="STR_ACE_Frag_EnableDebugTrace">
-            <English>(SP Only) Frag/Spall Debug Tracing</English>
-            <Spanish>(Solo SP) Seguimiento de depuración de Fragmentación/Astillamiento </Spanish>
-            <Polish>(Tylko SP) Wizualny debug odł./odpr.</Polish>
-            <Czech>(Pouze SP) Debug sledování Frag/Úlomků</Czech>
-            <German>(nur SP) Splitter-/Explosions-Debug-Verfolgung</German>
-            <Portuguese>(Somente SP) Depuração de fragmentação e estilhaços traçantes</Portuguese>
-            <French>(SP uniquement) Fragmentation/éclat debug</French>
-            <Hungarian>(Csak SP) Repesz/Pattogzás debug követés</Hungarian>
-            <Russian>(Только для одиночной игры) Отслеживаение/отладка осколков</Russian>
-            <Italian>(Solo SP) Debug Tracciamento Frag/Spall</Italian>
-            <Japanese>(SP のみ) 破片/剥離のデバッグ用表示</Japanese>
-            <Korean>(싱글플레이 전용) 탄환파편/파편 디버그 추적화</Korean>
-            <Chinesesimp>（仅单人）追踪显示破片粒子</Chinesesimp>
-            <Chinese>(僅在單人模式) 碎片/剝落除錯追蹤</Chinese>
+        <Key ID="STR_ACE_Frag_Module_DisplayName">
+            <English>Fragmentation Simulation</English>
+            <Czech>Simulace fragmentů</Czech>
+            <French>Simulation de la fragmentation</French>
+            <Spanish>Simulación de fragmentación</Spanish>
+            <Italian>Simulazione Frammentazione</Italian>
+            <Polish>Symulacja fragmentacji</Polish>
+            <Portuguese>Simulação de fragmentação</Portuguese>
+            <Russian>Симуляция осколков</Russian>
+            <German>Splittersimulation</German>
+            <Korean>파열 시뮬레이션</Korean>
+            <Japanese>破片シミュレーション</Japanese>
+            <Chinese>模擬碎片</Chinese>
+            <Chinesesimp>破片模拟</Chinesesimp>
+            <Hungarian>Repesz-szimuláció</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
-            <English>(SP Only) Requires a mission/editor restart. Enables visual tracing of fragmentation and spalling rounds in SP game mode only.</English>
-            <Spanish>(Solo SP) Requiere un reinicio misión/editor. Permite el seguimiento visual de la fragmentación y astillamientos de los proyectiles en modo SP.</Spanish>
-            <Polish>(Tylko SP) Wymaga restartu misji/edytora. Aktywuje wizualne śledzenie odłamków oraz odprysków w trybie gry Single Player.</Polish>
-            <German>(nur SP) Splitter-/Explosions-Debugging</German>
-            <Czech>(Pouze SP) Vyžaduje restart mise/editoru. Aktivuje vizuální stopování fragmentace a úlomů pouze v režimu jednoho hráče.</Czech>
-            <Portuguese>(Somente SP) Requer um reinício de missão / editor. Habilita o rastreamento visual de projéteis de fragmentação e estilhaçamento apenas no modo de jogo SP.</Portuguese>
-            <French>(SP seulement) Requiert un redémarrage de mission ou de l'éditeur. Active les traceurs visuels de fragmentation et d'éclats en mode solo seulement.</French>
-            <Hungarian>(Csak SP) Küldetés/Editor újraindítás szükséges. Engedélyezi a repeszek és pattogzó lövedékek vizuális nyomkövetését, csak egyjátékos módok alatt.</Hungarian>
-            <Russian>(Только для одиночной игры) Требует перезапуска миссии/редактора. Включает визуальные следы от осколков и обломков в режиме одиночной игры.</Russian>
-            <Italian>(Solo SP) Richiede un restart editor/missione. Abilita il tracciamento visivo di schegge da frammentazione/spalling in modalità Giocatore Singolo.</Italian>
-            <Japanese>(SP のみ) ミッションとエディタの再起動が必要です。有効化すると、シングルプレイでのみ破片と剥離の飛翔体が見えるようになります。</Japanese>
-            <Chinesesimp>（仅单人）激活后，只有在单人模式下才可观察到破片粒子的移动轨迹。</Chinesesimp>
-            <Chinese>(僅在單人模式) 讓你在單人模式下可觀察到碎片/剝落粒子的移動軌跡</Chinese>
-            <Korean>(SP 전용) 임무 / 편집자가 다시 시작해야합니다. SP 게임 모드에서만 파편화 및 탄환파편의 시각적 추적을 가능하게 합니다.</Korean>
+        <Key ID="STR_ACE_Frag_SpallIntensity">
+            <English>Spalling Intensity</English>
+            <French>Intensité de l'écaillage</French>
+            <Spanish>Intensidad del astillamiento</Spanish>
+            <Italian>Intensità dello spalling</Italian>
+            <Russian>Интенсивность обрушения</Russian>
+            <Korean>파편 강도</Korean>
+            <Japanese>スポーリング強度</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Frag_SpallIntensity_Desc">
+            <English>Modifier to increase or decrease the number and intensity of spalling events. Increasing this value may cause performance degradation.</English>
+            <French>Modificateur permettant d'augmenter ou de diminuer le nombre et l'intensité des événements d'écaillage. L'augmentation de cette valeur peut entraîner une dégradation des performances.</French>
+            <Spanish>Modificador para aumentar o disminuir el número y la intensidad de los eventos de astillamiento. Aumentar este valor puede producir una degradación en el rendimiento.</Spanish>
+            <Italian>Modificatore per il numero e intensità di spalling simulato, ovvero la frammentazione interna ad un veicolo colpito. Valori alti possono causare una degradazione della performance.</Italian>
+            <Russian>Модификатор для увеличения или уменьшения количества и интенсивности событий обрушения. Увеличение этого значения может привести к ухудшению производительности.</Russian>
+            <Korean>파편 이벤트 수와 강도를 늘리거나 줄입니다. 이 값을 늘리면 성능이 저하될 수 있습니다.</Korean>
+            <Japanese>スポーリング現象が発生する数と強度を増減することが出来ます。この値を大きくすることはパフォーマンスの低下につながる可能性があります。</Japanese>
         </Key>
     </Package>
 </Project>

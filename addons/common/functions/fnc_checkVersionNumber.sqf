@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: commy2, johnb43
+ * Author: commy2, johnb43, Timi007
  * Compares version numbers from loaded addons.
  *
  * Arguments:
@@ -32,8 +32,37 @@ private _cfgPatches = configFile >> "CfgPatches";
 private _versions = [];
 
 {
-    (getText (_cfgPatches >> _x >> "version") splitString ".") params [["_major", "0"], ["_minor", "0"]];
-    private _version = parseNumber _major + parseNumber _minor / 100;
+    // Determine the version of the addon. Parse it into a floating point number for comparison. Only major and minor are used.
+    // If no version is found or a parsing error occurs, the version is zero.
+    private _addonCfgPatches = _cfgPatches >> _x;
+    private _versionCfg = _addonCfgPatches >> "version";
+    private _version = switch (true) do {
+        // Normal case. Version is defined as a floating point number -> MAJOR.MINOR
+        case (isNumber _versionCfg): {
+            getNumber _versionCfg
+        };
+        // Addon Builder converts the version into a string if it is an invalid float -> "MAJOR.MINOR.PATCH"
+        case (isText _versionCfg): {
+            (getText _versionCfg splitString ".") params [["_major", "0"], ["_minor", "0"]];
+
+            parseNumber _major + parseNumber _minor / 100
+        };
+        // Fallback 1 (maybe versionAr is defined)
+        case (isArray (_addonCfgPatches >> "versionAr")): {
+            (getArray (_addonCfgPatches >> "versionAr")) params [["_major", 0], ["_minor", 0]];
+
+            _major + _minor / 100
+        };
+        // Fallback 2 (maybe versionStr is defined)
+        case (isText (_addonCfgPatches >> "versionStr")): {
+            (getText (_addonCfgPatches >> "versionStr") splitString ".") params [["_major", "0"], ["_minor", "0"]];
+
+            parseNumber _major + parseNumber _minor / 100
+        };
+        // No version found
+        default { 0 };
+    };
+
     _versions pushBack _version;
 } forEach _files;
 
@@ -155,7 +184,7 @@ private _fnc_check = {
 
 // Wait for server to send the servers files and version numbers
 if (isNil "ACE_Version_ServerVersions") then {
-    ACE_Version_ServerVersions addPublicVariableEventHandler _fnc_check;
+    "ACE_Version_ServerVersions" addPublicVariableEventHandler _fnc_check;
 } else {
     call _fnc_check;
 };

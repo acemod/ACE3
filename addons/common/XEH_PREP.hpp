@@ -78,6 +78,7 @@ PREP(getFirstObjectIntersection);
 PREP(getFirstTerrainIntersection);
 PREP(getGunner);
 PREP(getInPosition);
+PREP(getItemReplacements);
 PREP(getLocalUnits);
 PREP(getMapData);
 PREP(getMapGridData);
@@ -271,7 +272,6 @@ PREP(addActionEventHandler);
 PREP(addActionMenuEventHandler);
 PREP(addExplosionEventHandler);
 PREP(addMapMarkerCreatedEventHandler);
-PREP(addPlayerEH);
 
 PREP(removeActionEventHandler);
 PREP(removeActionMenuEventHandler);
