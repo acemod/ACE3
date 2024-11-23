@@ -20,7 +20,7 @@
 // Returns a text config entry as compiled code or variable from missionNamespace
 #define GET_FUNCTION(var,cfg) \
     private var = getText (cfg); \
-    if (isNil var) then { \
+    if (missionNamespace isNil var) then { \
         var = compile var; \
     } else { \
         var = missionNamespace getVariable var; \

@@ -246,7 +246,7 @@ if (_worldName in ["kunduz"]) exitWith {
 // Values are not based on any RL reference since the snow terrain textures persists regardless the date
 _cfgPath = _cfgPath >> "RainParticles";
 if (
-    "winter" in _worldName || 
+    "winter" in _worldName ||
     {"snow" in getText (_cfgPath >> "rainDropTexture")} ||
     {getNumber (_cfgPath >> "snow") != 0}
 ) exitWith {

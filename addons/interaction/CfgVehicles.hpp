@@ -68,6 +68,15 @@ class CfgVehicles {
                     };
                 };
 
+                class ACE_PassThrowable {
+                    displayName = CSTRING(PassThrowable);
+                    condition = QUOTE([ARR_3(_player,_target,(currentThrowable _player) param [ARR_2(0,'')])] call FUNC(canPassThrowable));
+                    statement = QUOTE([ARR_3(_player,_target,(currentThrowable _player) param [ARR_2(0,'')])] call FUNC(passThrowable));
+                    exceptions[] = {"isNotSwimming"};
+                    showDisabled = 0;
+                    modifierFunction = QUOTE(_this select 3 set [ARR_2(2,getText (configFile >> 'CfgMagazines' >> (currentThrowable (_this select 1)) param [ARR_2(0,'HandGrenade')] >> 'picture'))];); // Set picture of the current throwable
+                };
+
                 class ACE_TeamManagement {
                     displayName = CSTRING(TeamManagement);
                     condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {GVAR(EnableTeamManagement)});
@@ -109,7 +118,7 @@ class CfgVehicles {
                         modifierFunction = QUOTE([ARR_3('YELLOW','PATHTOF(UI\team\team_white_ca.paa)',_this select 3)] call FUNC(modifyTeamManagementAction));
                     };
                     class ACE_AssignTeamMain {
-                        displayName = "$str_assign_main";
+                        displayName = "$STR_assign_main";
                         condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canJoinTeam) && {assignedTeam _target != 'MAIN'});
                         statement = QUOTE([ARR_3(_target,'MAIN',true)] call DFUNC(joinTeam));
                         exceptions[] = {"isNotSwimming"};
@@ -164,7 +173,7 @@ class CfgVehicles {
                 };
                 class GVAR(Gear) {
                     displayName = "$STR_ACTION_GEAR";
-                    condition = QUOTE(!(lifeState _target in [ARR_2('HEALTHY','INJURED')]) && {isNull objectParent _target});
+                    condition = QUOTE(!(_target call EFUNC(common,isAwake)) && {isNull objectParent _target});
                     statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
                     icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
                 };
@@ -256,7 +265,7 @@ class CfgVehicles {
                 class ACE_remoteTeamManagement {
                     displayName = CSTRING(Squad);
                     icon = QPATHTOF(UI\team\team_management_ca.paa);
-                    condition = QUOTE(GVAR(remoteTeamManagement));
+                    condition = QUOTE(GVAR(remoteTeamManagement) && {_player == leader _player});
                     exceptions[] = {"isNotSwimming", "isNotInside", "isNotSitting", "isNotOnLadder", "isNotRefueling"};
                     insertChildren = QUOTE(call FUNC(addSquadChildren));
                 };

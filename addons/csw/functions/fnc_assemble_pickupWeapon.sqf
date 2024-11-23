@@ -21,13 +21,17 @@
     TRACE_2("assemble_pickupWeapon",_vehicle,_player);
 
     private _weaponConfig = configOf _vehicle >> QUOTE(ADDON);
-    private _carryWeaponClassname = getText (_weaponConfig >> "disassembleWeapon");
+    private _componentClasses = _vehicle getVariable QGVAR(componentClasses);
+
+    (if (!isNil "_componentClasses") then {
+        _componentClasses
+    } else {
+        [getText (_weaponConfig >> "disassembleTurret"), getText (_weaponConfig >> "disassembleWeapon")]
+    }) params ["_turretClassname", "_carryWeaponClassname"];
 
     if (!isClass (configFile >> "CfgWeapons" >> _carryWeaponClassname)) exitWith {
         ERROR_1("bad weapon classname [%1]",_carryWeaponClassname);
     };
-
-    private _turretClassname = getText (_weaponConfig >> "disassembleTurret");
 
     // Turret classname can equal nothing if the deploy bag is the "whole" weapon. e.g Kornet, Metis, other ATGMs
     if ((_turretClassname != "") && {!isClass (configFile >> "CfgVehicles" >> _turretClassname)}) exitWith {

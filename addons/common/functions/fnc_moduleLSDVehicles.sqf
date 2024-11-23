@@ -24,7 +24,7 @@ if (isNil QGVAR(LSD_Vehicles)) then {
 };
 
 {
-    _hSCount = count (getArray (configOf _x >> "hiddenSelections"));
+    private _hSCount = count (getArray (configOf _x >> "hiddenSelections"));
     if (_hSCount > 0) then {
         GVAR(LSD_Vehicles) pushBack [_x, _hSCount];
     };

@@ -1,90 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Vector">
-        <Key ID="STR_ACE_Vector_VectorName">
-            <English>Vector 21 Nite</English>
-            <German>Vector 21 Nite</German>
-            <Spanish>Vector 21 Nite</Spanish>
-            <French>Vector 21 Nite</French>
-            <Polish>Vector 21 Nite</Polish>
-            <Czech>Vector 21 Nite</Czech>
-            <Italian>Vector 21 Nite</Italian>
-            <Hungarian>Vector 21 Nite</Hungarian>
-            <Portuguese>Vector 21 Nite</Portuguese>
-            <Russian>Vector 21 Nite</Russian>
-            <Japanese>ベクター 21 ナイト</Japanese>
-            <Korean>벡터 21 야간투시</Korean>
-            <Chinesesimp>Vector 21 Nite</Chinesesimp>
-            <Chinese>Vector 21 Nite</Chinese>
-            <Turkish>Vector 21 Nite</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Vector_VectorDayName">
-            <English>Vector 21</English>
-            <German>Vector 21</German>
-            <Spanish>Vector 21</Spanish>
-            <French>Vector 21</French>
-            <Polish>Vector 21</Polish>
-            <Czech>Vector 21</Czech>
-            <Italian>Vector 21</Italian>
-            <Hungarian>Vector 21</Hungarian>
-            <Portuguese>Vector 21</Portuguese>
-            <Russian>Vector 21</Russian>
-            <Japanese>ベクター 21</Japanese>
-            <Korean>벡터 21</Korean>
-            <Chinesesimp>Vector 21</Chinesesimp>
-            <Chinese>Vector 21</Chinese>
-            <Turkish>Vector 21</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Vector_VectorDescription">
-            <English>Rangefinder</English>
-            <German>Laserentfernungsmesser</German>
-            <Spanish>Telémetro</Spanish>
-            <French>Télémètre</French>
-            <Polish>Dalmierz laserowy</Polish>
-            <Czech>Dálkoměr</Czech>
-            <Italian>Telemetro</Italian>
-            <Hungarian>Távolságmérő</Hungarian>
-            <Portuguese>Medidor de Distância</Portuguese>
-            <Russian>Дальномер</Russian>
-            <Japanese>測距儀</Japanese>
-            <Korean>거리측정기</Korean>
-            <Chinesesimp>测距仪</Chinesesimp>
-            <Chinese>測距儀</Chinese>
-            <Turkish>Menzil Bulucu</Turkish>
-        </Key>
         <Key ID="STR_ACE_Vector_AzimuthKey">
             <English>Vector - Azimuth Key</English>
-            <German>Vector - Azimuth-Taste</German>
-            <Spanish>Vector - Tecla de acimut</Spanish>
-            <French>Vector - Touche azimuth</French>
-            <Polish>Vector - Azymut</Polish>
             <Czech>Vector - Zobrazit azimut</Czech>
+            <French>Vector - Touche azimuth</French>
+            <Spanish>Vector - Tecla de acimut</Spanish>
             <Italian>Vector - Tasto Azimuth</Italian>
+            <Polish>Vector - Azymut</Polish>
             <Portuguese>Vector - Tecla de Azimute</Portuguese>
-            <Hungarian>Vector - Irányszög gomb</Hungarian>
             <Russian>Vector – Азимут</Russian>
-            <Japanese>ベクター - 方位角キー</Japanese>
+            <German>Vector - Azimuth-Taste</German>
             <Korean>벡터 - 방위각 키</Korean>
-            <Chinesesimp>Vector—方位按键</Chinesesimp>
+            <Japanese>ベクター - 方位角キー</Japanese>
             <Chinese>Vector - 方位按鍵</Chinese>
+            <Chinesesimp>Vector—方位按键</Chinesesimp>
             <Turkish>Vector - Azimuth Tuşu</Turkish>
+            <Hungarian>Vector - Irányszög gomb</Hungarian>
         </Key>
         <Key ID="STR_ACE_Vector_DistanceKey">
             <English>Vector - Distance Key</English>
-            <German>Vector - Entfernungs-Taste</German>
-            <Spanish>Vector - Tecla de distancia</Spanish>
-            <French>Vector - Touche distance</French>
-            <Polish>Vector - Odległość</Polish>
             <Czech>Vector - Zobrazit vzdálenost</Czech>
+            <French>Vector - Touche distance</French>
+            <Spanish>Vector - Tecla de distancia</Spanish>
             <Italian>Vector - Tasto Distanza</Italian>
+            <Polish>Vector - Odległość</Polish>
             <Portuguese>Vector - Tecla de Distância</Portuguese>
-            <Hungarian>Vector - Távolság gomb</Hungarian>
             <Russian>Vector – Расстояние</Russian>
-            <Japanese>ベクター - 距離キー</Japanese>
+            <German>Vector - Entfernungs-Taste</German>
             <Korean>벡터 - 거리 키</Korean>
-            <Chinesesimp>Vector—距离按键</Chinesesimp>
+            <Japanese>ベクター - 距離キー</Japanese>
             <Chinese>Vector - 距離按鍵</Chinese>
+            <Chinesesimp>Vector—距离按键</Chinesesimp>
             <Turkish>Vector - Mesafe Tuşu</Turkish>
+            <Hungarian>Vector - Távolság gomb</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Vector_VectorDayName">
+            <English>Vector 21</English>
+            <Czech>Vector 21</Czech>
+            <French>Vector 21</French>
+            <Spanish>Vector 21</Spanish>
+            <Italian>Vector 21</Italian>
+            <Polish>Vector 21</Polish>
+            <Portuguese>Vector 21</Portuguese>
+            <Russian>Vector 21</Russian>
+            <German>Vector 21</German>
+            <Korean>벡터 21</Korean>
+            <Japanese>ベクター 21</Japanese>
+            <Chinese>Vector 21</Chinese>
+            <Chinesesimp>Vector 21</Chinesesimp>
+            <Turkish>Vector 21</Turkish>
+            <Hungarian>Vector 21</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Vector_VectorDescription">
+            <English>Rangefinder</English>
+            <Czech>Dálkoměr</Czech>
+            <French>Télémètre</French>
+            <Spanish>Telémetro</Spanish>
+            <Italian>Telemetro</Italian>
+            <Polish>Dalmierz laserowy</Polish>
+            <Portuguese>Medidor de Distância</Portuguese>
+            <Russian>Дальномер</Russian>
+            <German>Laserentfernungsmesser</German>
+            <Korean>거리측정기</Korean>
+            <Japanese>測距儀</Japanese>
+            <Chinese>測距儀</Chinese>
+            <Chinesesimp>测距仪</Chinesesimp>
+            <Turkish>Menzil Bulucu</Turkish>
+            <Hungarian>Távolságmérő</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Vector_VectorName">
+            <English>Vector 21 Nite</English>
+            <Czech>Vector 21 Nite</Czech>
+            <French>Vector 21 Nite</French>
+            <Spanish>Vector 21 Nite</Spanish>
+            <Italian>Vector 21 Nite</Italian>
+            <Polish>Vector 21 Nite</Polish>
+            <Portuguese>Vector 21 Nite</Portuguese>
+            <Russian>Vector 21 Nite</Russian>
+            <German>Vector 21 Nite</German>
+            <Korean>벡터 21 야간투시</Korean>
+            <Japanese>ベクター 21 ナイト</Japanese>
+            <Chinese>Vector 21 Nite</Chinese>
+            <Chinesesimp>Vector 21 Nite</Chinesesimp>
+            <Turkish>Vector 21 Nite</Turkish>
+            <Hungarian>Vector 21 Nite</Hungarian>
         </Key>
     </Package>
 </Project>

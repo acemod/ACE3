@@ -42,8 +42,8 @@ private _barometricPressure = _altitude call EFUNC(weather,calculateBarometricPr
 private _bulletPos = [0,0,-(_boreHeight / 100)];
 private _lastBulletPos = +_bulletPos;
 private _bulletVelocity = [0,cos(_scopeBaseAngle) * _muzzleVelocity,sin(_scopeBaseAngle) * _muzzleVelocity];
-private _gravity = [-sin (_bank) * cos(_scopeBaseAngle + _inclinationAngle) * -GRAVITY, 
-                    sin(_scopeBaseAngle + _inclinationAngle) * -GRAVITY, 
+private _gravity = [-sin (_bank) * cos(_scopeBaseAngle + _inclinationAngle) * -GRAVITY,
+                    sin(_scopeBaseAngle + _inclinationAngle) * -GRAVITY,
                     cos (_bank) * cos(_scopeBaseAngle + _inclinationAngle) * -GRAVITY];
 
 private _useAB = missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false];
