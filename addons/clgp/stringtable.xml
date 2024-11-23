@@ -10,14 +10,14 @@
         <Key ID="STR_ACE_CLGP_copperhead_dial_GuidanceDelay">
             <English>Guidance Delay</English>
         </Key>
+        <Key ID="STR_ACE_CLGP_pike_magazine_descriptionShort">
+            <English>Semi-Active Laser Guided 40mm Grenade</English>
+        </Key>
         <Key ID="STR_ACE_CLGP_pike_magazine_displayName">
             <English>40mm Pike</English>
         </Key>
         <Key ID="STR_ACE_CLGP_pike_magazine_displayNameShort">
             <English>Pike SALH</English>
-        </Key>
-        <Key ID="STR_ACE_CLGP_pike_magazine_descriptionShort">
-            <English>Semi-Active Laser Guided 40mm Grenade</English>
         </Key>
     </Package>
 </Project>
