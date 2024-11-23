@@ -98,7 +98,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     };
 } else {
     if (GVAR(debug_drawGuidanceInfo)) then {
-        _seekerTypeName = "DOPPLER - EXT";
+        _seekerTypeName = "DOPPLER - EXT"; //IGNORE_PRIVATE_WARNING ["_seekerTypeName"]; // from doSeekerSearch
     };
     // External radar homing
     // if the target is in the remote targets for the side, whoever the donor is will "datalink" the target for the hellfire.
