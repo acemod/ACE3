@@ -6,20 +6,32 @@ PREP_RECOMPILE_START;
 #include "XEH_PREP.hpp"
 PREP_RECOMPILE_END;
 
-GVAR(blackList) = [];
-GVAR(traceFrags) = false;
+GVAR(spallMaterialCache) = uiNamespace getVariable QGVAR(spallMaterialCache);
+GVAR(spallInfoCache) = createHashMap;
+GVAR(shouldSpallCache) = createHashMap;
+GVAR(nextSpallAllowTime) = -1;
 
-GVAR(spallHPData) = [];
-GVAR(spallIsTrackingCount) = 0;
-
-GVAR(traceID) = -1;
-GVAR(traces) = [];
-GVAR(tracesStarted) = false;
-
-GVAR(lastIterationIndex) = 0;
-GVAR(objects) = [];
-GVAR(arguments) = [];
+GVAR(shouldFragCache) = createHashMap;
+GVAR(fragInfoCache) = createHashMap;
+GVAR(lastFragTime) = -1;
 
 #include "initSettings.inc.sqf"
+
+GVAR(dev_trackLines) = createHashMap;
+GVAR(dev_hitBoxes) = createHashMap;
+GVAR(dev_eventSpheres) = [];
+GVAR(dev_drawPFEH) = -1;
+
+#ifdef DEBUG_MODE_DRAW
+#include "initSettingsDebug.inc.sqf"
+#else
+GVAR(debugOptions) = false;
+GVAR(dbgSphere) = false;
+GVAR(drawHitBox) = false;
+#endif
+
+if (isServer) then {
+    [QGVAR(frag_eh), LINKFUNC(frago)] call CBA_fnc_addEventHandler;
+};
 
 ADDON = true;

@@ -20,6 +20,7 @@
  *
  * Public: No
  */
+
 params ["_unit", "", "_muzzle", "", "_ammo"];
 TRACE_1("Fired",_this);
 

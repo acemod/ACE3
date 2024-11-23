@@ -488,8 +488,8 @@ class GVAR(type_Paveway) {
     defaultSeekerLockMode = "LOAL";
     seekerLockModes[] = { "LOAL" };
 
-    defaultNavigationType = "ProportionalNavigation";
-    navigationTypes[] = { "ProportionalNavigation" };
+    defaultNavigationType = "Direct";
+    navigationTypes[] = { "Direct" };
 
     seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
     seekerAngle = 60;           // Angle from the shooter's view that can track the missile

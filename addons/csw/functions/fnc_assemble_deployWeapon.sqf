@@ -49,7 +49,7 @@
 
     private _onFinish = {
         params ["_args"];
-        _args params ["_tripod", "_player", "_assembledClassname", "", "_carryWeaponInfo"];
+        _args params ["_tripod", "_player", "_assembledClassname", "_tripodClassname", "_carryWeaponClassname", "_carryWeaponInfo"];
         TRACE_3("deployWeapon finish",_tripod,_player,_assembledClassname);
 
         private _secondaryWeaponMagazines = _tripod getVariable [QGVAR(secondaryWeaponMagazines), []];
@@ -61,10 +61,11 @@
         _tripodPos set [2, (_tripodPos select 2) + 0.1];
         // Delay a frame so tripod has a chance to be deleted
         [{
-            params ["_assembledClassname", "_tripodDir", "_tripodPos", "_player", "_carryWeaponInfo", "_secondaryWeaponMagazines"];
+            params ["_assembledClassname", "_componentClasses", "_tripodDir", "_tripodPos", "_player", "_carryWeaponInfo", "_secondaryWeaponMagazines"];
             private _csw = createVehicle [_assembledClassname, [0, 0, 0], [], 0, "NONE"];
             // Assembly mode: [0=disabled, 1=enabled, 2=enabled&unload, 3=default]
             _csw setVariable [QGVAR(assemblyMode), 2, true]; // Explicitly set advanced assembly mode + unload, and broadcast
+            _csw setVariable [QGVAR(componentClasses), _componentClasses, true];
 
             {
                 // Magazines
@@ -91,12 +92,12 @@
             };
             [QGVAR(deployWeaponSucceeded), [_csw]] call CBA_fnc_localEvent;
             TRACE_2("csw placed",_csw,_assembledClassname);
-        }, [_assembledClassname, _tripodDir, _tripodPos, _player, _carryWeaponInfo, _secondaryWeaponMagazines]] call CBA_fnc_execNextFrame;
+        }, [_assembledClassname, [_tripodClassname, _carryWeaponClassname], _tripodDir, _tripodPos, _player, _carryWeaponInfo, _secondaryWeaponMagazines]] call CBA_fnc_execNextFrame;
     };
 
     private _onFailure = {
         params ["_args"];
-        _args params ["", "_player", "", "_carryWeaponClassname", "_carryWeaponInfo"];
+        _args params ["", "_player", "", "", "_carryWeaponClassname", "_carryWeaponInfo"];
         TRACE_2("deployWeapon failure",_player,_carryWeaponClassname);
 
         // Add weapon back
@@ -115,5 +116,5 @@
         alive _tripod
     };
 
-    [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _carryWeaponClassname, _carryWeaponInfo], _onFinish, _onFailure, LLSTRING(AssembleCSW_progressBar), _condition] call EFUNC(common,progressBar);
+    [TIME_PROGRESSBAR(_deployTime), [_tripod, _player, _assembledClassname, _tripodClassname, _carryWeaponClassname, _carryWeaponInfo], _onFinish, _onFailure, LLSTRING(AssembleCSW_progressBar), _condition] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;

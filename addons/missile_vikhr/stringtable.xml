@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="MISSILE_VIKHR">
+        <Key ID="STR_ACE_MISSILE_VIKHR_1x">
+            <English>1x 9k121 Vikhr [ACE]</English>
+            <French>1x 9k121 Vikhr [ACE]</French>
+            <Spanish>1x 9k121 Vikhr [ACE]</Spanish>
+            <Italian>1x 9k121 Vikhr [ACE]</Italian>
+            <Russian>1x 9k121 Вихрь [ACE]</Russian>
+            <Korean>1x 9K121 비흐르 [ACE]</Korean>
+            <Japanese>1x 9k121 ヴィーフリ [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_VIKHR_2x">
+            <English>2x 9k121 Vikhr [ACE]</English>
+            <French>2x 9k121 Vikhr [ACE]</French>
+            <Spanish>2x 9k121 Vikhr [ACE]</Spanish>
+            <Italian>2x 9k121 Vikhr [ACE]</Italian>
+            <Russian>2x 9k121 Вихрь [ACE]</Russian>
+            <Korean>2x 9K121 비흐르 [ACE]</Korean>
+            <Japanese>2x 9k121 ヴィーフリ [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_VIKHR_3x">
+            <English>3x 9k121 Vikhr [ACE]</English>
+            <French>3x 9k121 Vikhr [ACE]</French>
+            <Spanish>3x 9k121 Vikhr [ACE]</Spanish>
+            <Italian>3x 9k121 Vikhr [ACE]</Italian>
+            <Russian>3x 9k121 Вихрь [ACE]</Russian>
+            <Korean>3x 9K121 비흐르 [ACE]</Korean>
+            <Japanese>3x 9k121 ヴィーフリ [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_VIKHR_4x">
+            <English>4x 9k121 Vikhr [ACE]</English>
+            <French>4x 9k121 Vikhr [ACE]</French>
+            <Spanish>4x 9k121 Vikhr [ACE]</Spanish>
+            <Italian>4x 9k121 Vikhr [ACE]</Italian>
+            <Russian>4x 9k121 Вихрь [ACE]</Russian>
+            <Korean>4x 9K121 비흐르 [ACE]</Korean>
+            <Japanese>4x 9k121 ヴィーフリ [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_VIKHR_6x">
+            <English>6x 9k121 Vikhr [ACE]</English>
+            <French>6x 9k121 Vikhr [ACE]</French>
+            <Spanish>6x 9k121 Vikhr [ACE]</Spanish>
+            <Italian>6x 9k121 Vikhr [ACE]</Italian>
+            <Russian>6x 9k121 Вихрь [ACE]</Russian>
+            <Korean>6x 9K121 비흐르 [ACE]</Korean>
+            <Japanese>6x 9k121 ヴィーフリ [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_VIKHR_8x">
+            <English>8x 9k121 Vikhr [ACE]</English>
+            <French>8x 9k121 Vikhr [ACE]</French>
+            <Spanish>8x 9k121 Vikhr [ACE]</Spanish>
+            <Italian>8x 9k121 Vikhr [ACE]</Italian>
+            <Russian>8x 9k121 Вихрь [ACE]</Russian>
+            <Korean>8x 9K121 비흐르 [ACE]</Korean>
+            <Japanese>8x 9k121 ヴィーフリ [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_VIKHR_9k121">
+            <English>9k121 Vikhr [ACE]</English>
+            <French>9k121 Vikhr [ACE]</French>
+            <Spanish>9k121 Vikhr [ACE]</Spanish>
+            <Italian>9k121 Vikhr [ACE]</Italian>
+            <Russian>9k121 Вихрь [ACE]</Russian>
+            <Korean>9K121 비흐르 [ACE]</Korean>
+            <Japanese>9k121 ヴィーフリ [ACE]</Japanese>
+        </Key>
+    </Package>
+</Project>
