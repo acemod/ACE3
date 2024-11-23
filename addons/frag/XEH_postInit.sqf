@@ -4,7 +4,9 @@
     [{
         params ["_projectile", "_posASL"];
 
-        if (_projectile getVariable [QGVAR(blacklisted), false]) exitWith {};
+        // check if a projectile is blacklisted and that it will inflict damage when it explodes to avoid
+        // multiple events being sent from different clients for one explosion
+        if (_projectile getVariable [QGVAR(blacklisted), false] || !(_projectile getShotInfo 5)) exitWith {};
 
         private _ammo = typeOf _projectile;
         if (GVAR(reflectionsEnabled)) then {
@@ -14,13 +16,13 @@
             // only let a unit make a frag event once per second
             private _shotParents = getShotParents _projectile;
             private _instigator = _shotParents select !isNull (_shotParents#1);
-            if (CBA_missionTime < (_instigator getVariable [QGVAR(nextFragEvent), -1])) exitWith {};
+            if (CBA_missionTime < (_instigator getVariable [QGVAR(nextFragEvent), -1])) exitWith { TRACE_1("skip",typeOf _instigator) };
             _instigator setVariable [QGVAR(nextFragEvent), CBA_missionTime + ACE_FRAG_FRAG_UNIT_HOLDOFF];
 
             // Wait a frame to make sure it doesn't target the dead
             [{
                 [QGVAR(frag_eh), _this] call CBA_fnc_serverEvent
-            }, [_posASL, _ammo, [objNull, _instigator]]] call CBA_fnc_execNextFrame;
+            }, [_posASL, _ammo]] call CBA_fnc_execNextFrame;
         };
     }] call EFUNC(common,addExplosionEventHandler);
 
@@ -32,8 +34,6 @@
     [QGVAR(dev_clearTraces), LINKFUNC(dev_clearTraces)] call CBA_fnc_addEventHandler;
 
     if (!hasInterface) exitWith {};
-    ["ace_firedPlayerVehicleNonLocal", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
-    ["ace_firedPlayerNonLocal", LINKFUNC(dev_fired)] call CBA_fnc_addEventHandler;
     GVAR(dev_drawPFEH) = [LINKFUNC(dev_drawTrace), 0] call CBA_fnc_addPerFrameHandler;
     ["ace_interact_menu_newControllableObject", {
         params ["_type"];

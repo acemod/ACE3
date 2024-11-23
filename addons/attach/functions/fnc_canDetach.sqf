@@ -19,7 +19,7 @@
 params ["_attachToVehicle", "_unit"];
 TRACE_2("params",_attachToVehicle,_unit);
 
-if ((vehicle _unit) != _unit) exitWith {false};
+if (!isNull objectParent _unit) exitWith {false};
 
 private _attachedList = _attachToVehicle getVariable [QGVAR(attached), []];
 if ((count _attachedList) == 0) exitWith {false};

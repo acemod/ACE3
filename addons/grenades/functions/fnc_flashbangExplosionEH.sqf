@@ -113,7 +113,7 @@ if (["ace_hearing"] call EFUNC(common,isModLoaded) && {_strength > 0} && {EGVAR(
 };
 
 // Add ace_medical pain effect
-if (GETEGVAR(medical,enabled,false) && {_strength > 0.1} && {isDamageAllowed _unit} && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) then {
+if (GETEGVAR(medical,enabled,false) && {_strength > 0.1} && {isDamageAllowed ACE_player} && {ACE_player getVariable [QEGVAR(medical,allowDamage), true]}) then {
     [ACE_player, _strength / 2] call EFUNC(medical,adjustPainLevel);
 };
 

@@ -36,24 +36,14 @@ if (!GVAR(spallEnabled) || {!(_ammo call FUNC(shouldSpall))}) exitWith {
 };
 
 private _hitPartEventHandler = _projectile addEventHandler ["HitPart", {
-    params ["_projectile", "_hitObject", "", "_posASL", "_velocity"];
-
-    // get rid of _shot parents starting after v2.18 is released and instead use the instigator EH parameter
-    // The "explode" EH does not get the same parameter
-    private _instigator = (getShotParents _projectile)#1;
+    params ["_projectile", "_objectHit", "", "_posASL", "_velocity", "_surfNorm", "", "" ,"_surfType"];
     private _ammo = typeOf _projectile;
+    private _vectorUp = vectorUp _projectile;
 
-    /*
-        * Wait a frame to see what happens to the round, may result in
-        * multiple hits / slowdowns getting shunted to the first hit
-    */
-    [{
-        // only let a unit make a spall once per ACE_FRAG_SPALL_UNIT_HOLDOFF
-        if (CBA_missionTime < (_this#5) getVariable [QGVAR(nextSpallEvent), -1]) exitWith {};
-
-        _this call FUNC(doSpall);
-    }, [_hitObject, _ammo, _projectile, _posASL, _velocity, _instigator]] call CBA_fnc_execNextFrame;
+    // Wait a frame to see what happens to the round
+    [LINKFUNC(doSpallHitPart), [_projectile, _objectHit, _posASL, _velocity, _surfNorm, _surfType, _ammo, _vectorUp]] call CBA_fnc_execNextFrame;
 }];
-_projectile setVariable [QGVAR(hitPartEventHandler), _hitPartEventHandler];
+private _penetratedEventHandler = _projectile addEventHandler ["Penetrated",LINKFUNC(doSpallPenetrate)];
+_projectile setVariable [QGVAR(hitPartEventHandler), [_hitPartEventHandler, _penetratedEventHandler]];
 
 TRACE_1("firedExit",_ammo);

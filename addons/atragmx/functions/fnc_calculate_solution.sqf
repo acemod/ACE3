@@ -155,7 +155,7 @@ while {_TOF < 15 && (_bulletPos select 1) < _targetRange} do {
                 _windage2 = - atan(_windDrift / _trueRange);
                 _lead = (_targetSpeed * _TOF) / (tan(MRAD_TO_DEG(1)) * _trueRange);
             };
-            _kineticEnergy = 0.5 * (_bulletMass / 1000 * (_bulletSpeed ^ 2));
+            private _kineticEnergy = 0.5 * (_bulletMass / 1000 * (_bulletSpeed ^ 2));
             _kineticEnergy = _kineticEnergy * 0.737562149;
 
             if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (_bulletPos select 1) > 0) then {
@@ -191,7 +191,7 @@ if (_targetRange != 0) then {
     _lead = (_targetSpeed * _TOF) / (tan(MRAD_TO_DEG(1)) * _targetRange);
 };
 
-_kineticEnergy = 0.5 * (_bulletMass / 1000 * (_bulletSpeed ^ 2));
+private _kineticEnergy = 0.5 * (_bulletMass / 1000 * (_bulletSpeed ^ 2));
 _kineticEnergy = _kineticEnergy * 0.737562149;
 
 if ((missionNamespace getVariable [QEGVAR(advanced_ballistics,enabled), false]) && (_bulletPos select 1) > 0) then {

@@ -1,138 +1,199 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
-        <Key ID="STR_ACE_Frag_Module_DisplayName">
-            <English>Fragmentation Simulation</English>
-            <Polish>Symulacja fragmentacji</Polish>
-            <Spanish>Simulación de fragmentación</Spanish>
-            <German>Splittersimulation</German>
-            <Czech>Simulace fragmentů</Czech>
-            <Portuguese>Simulação de fragmentação</Portuguese>
-            <French>Simulation de la fragmentation</French>
-            <Hungarian>Repesz-szimuláció</Hungarian>
-            <Russian>Симуляция осколков</Russian>
-            <Italian>Simulazione Frammentazione</Italian>
-            <Japanese>破片シミュレーション</Japanese>
-            <Korean>파편화 시뮬레이션</Korean>
-            <Chinesesimp>破片模拟</Chinesesimp>
-            <Chinese>模擬碎片</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Frag_EnableFrag">
-            <English>Fragmentation Simulation</English>
-            <Polish>Symulacja fragmentacji</Polish>
-            <Spanish>Simulación de fragmentación</Spanish>
-            <German>Splittersimulation</German>
-            <Czech>Simulace fragmentů</Czech>
-            <Portuguese>Simulação de fragmentação</Portuguese>
-            <French>Simulation de la fragmentation</French>
-            <Hungarian>Repesz-szimuláció</Hungarian>
-            <Russian>Симуляция осколков</Russian>
-            <Italian>Simulazione Frammentazione</Italian>
-            <Japanese>破片シミュレーション</Japanese>
-            <Korean>파편화 시뮬레이션</Korean>
-            <Chinesesimp>破片模拟</Chinesesimp>
-            <Chinese>模擬碎片</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Frag_EnableFrag_Desc">
-            <English>Enable the ACE Fragmentation Simulation</English>
-            <Spanish>Activa la simulación de fragmentación ACE</Spanish>
-            <Polish>Aktywuje symulację fragmentacji ACE</Polish>
-            <German>Aktiviere die ACE-Splittersimulation</German>
-            <Czech>Povolit ACE simulaci fragmentů</Czech>
-            <Portuguese>Ativa a simulação de fragmentação do ACE</Portuguese>
-            <French>Active la simulation de la fragmentation ACE.</French>
-            <Hungarian>Az ACE repesz-szimuláció engedélyezése</Hungarian>
-            <Russian>Включить симуляцию осколков ACE</Russian>
-            <Italian>Abilita la Simulazione Frammentazione di ACE</Italian>
-            <Japanese>ACE 破片シミュレーションを有効化</Japanese>
-            <Korean>ACE 파편화 시뮬레이션을 적용합니다.</Korean>
-            <Chinesesimp>启用 ACE 破片模拟</Chinesesimp>
-            <Chinese>啟用ACE模擬碎片</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Frag_EnableSpall">
-            <English>Spalling Simulation</English>
-            <Spanish>Simulación de astillamiento</Spanish>
-            <Polish>Symulacja odprysków</Polish>
-            <German>Explosionssimulation</German>
-            <Czech>Simulace úlomků</Czech>
-            <Portuguese>Simulação de estilhaços</Portuguese>
-            <French>Simulation d'éclat</French>
-            <Hungarian>Pattogzás-szimuláció</Hungarian>
-            <Russian>Симуляция обломков</Russian>
-            <Italian>Simulazione Spalling</Italian>
-            <Japanese>剥離シミュレーション</Japanese>
-            <Korean>탄환파편 시뮬레이션</Korean>
-            <Chinesesimp>模拟剥落</Chinesesimp>
-            <Chinese>模擬剝落</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Frag_EnableSpall_Desc">
-            <English>Enable the ACE Spalling Simulation</English>
-            <Spanish>Activa la simulación de astillamiento ACE</Spanish>
-            <Polish>Aktywuje symulację odprysków ACE</Polish>
-            <German>Aktiviere ACE-Explosionssimulation</German>
-            <Czech>Povolit ACE simulaci úlomků</Czech>
-            <Portuguese>Ativa a simulação de estilhaços do ACE</Portuguese>
-            <French>Active la simulation d'éclat ACE.</French>
-            <Hungarian>Az ACE pattogzás-szimuláció engedélyezése</Hungarian>
-            <Russian>Включить симуляцию обломков ACE</Russian>
-            <Italian>Abilita la Simulazione Spalling di ACE</Italian>
-            <Japanese>ACE 剥離シミュレーションを有効化</Japanese>
-            <Korean>ACE 탄환파편 시뮬레이션을 적용합니다.</Korean>
-            <Chinesesimp>启用 ACE 模拟剥落</Chinesesimp>
-            <Chinese>啟用ACE模擬剝落</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Frag_EnableReflections">
-            <English>Explosion Reflections Simulation</English>
-            <Polish>Symulacja odbicia eksplozji</Polish>
-            <Italian>Simulazione Riflessi Esplosioni</Italian>
-            <German>Druckwellensimulation</German>
-            <Spanish>Activar simulación de reflexiones</Spanish>
-            <French>Simulation de la réflexion des explosions</French>
-            <Portuguese>Simulação de reflexo de explosão</Portuguese>
-            <Russian>Cимуляция отражения взрывов ACE</Russian>
-            <Japanese>爆発反射シミュレーション</Japanese>
-            <Korean>폭발 반사 시뮬레이션</Korean>
-            <Chinesesimp>模拟爆炸反射</Chinesesimp>
-            <Chinese>模擬爆炸反射</Chinese>
-            <Czech>Simulace odrazu exploze</Czech>
-        </Key>
-        <Key ID="STR_ACE_Frag_EnableReflections_Desc">
-            <English>Enable the ACE Explosion Reflection Simulation</English>
-            <Polish>Włącz symulację odbicia eksplozji ACE</Polish>
-            <Italian>Abilita la Simulazione Riflessi Esplosioni di ACE</Italian>
-            <German>Aktiviere die ACE-Druckwellensimulation</German>
-            <Spanish>Activa la simulación de reflexiones para las explosiones.</Spanish>
-            <French>Active la simulation de la réflexion des explosions ACE.</French>
-            <Portuguese>Ativa a simulação de reflexo de explosão do ACE</Portuguese>
-            <Russian>Включить симуляцию отражения взрывов ACE</Russian>
-            <Japanese>ACE 爆発反射シミュレーションを有効化</Japanese>
-            <Korean>ACE 폭발 반사 시뮬레이션을 적용합니다.</Korean>
-            <Chinesesimp>启用 ACE 模拟爆炸反射</Chinesesimp>
-            <Chinese>啟用ACE模擬爆炸反射</Chinese>
-            <Czech>Povolit ACE simulaci odrazu exploze</Czech>
-        </Key>
         <Key ID="STR_ACE_Frag_Debug">
             <English>Debug</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_EnableDebugTrace">
-            <English>Frag/Spall Debug Tracing</English>
-            <German>Splitter-/Explosions-Debug-Verfolgung</German>
-        </Key>
-        <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
-            <English>Enables visual tracing of fragmentation and spalling rounds.</English>
-            <German>Splitter-/Explosions-Debugging</German>
-        </Key>
-        <Key ID="STR_ACE_Frag_HitSphereEnable">
-            <English>Draw Event Spheres</English>
-        </Key>
-        <Key ID="STR_ACE_Frag_HitSphereEnable_Desc">
-            <English>Draw color coded spheres at any event for tracked rounds.</English>
+            <French>Debug</French>
+            <Spanish>Debug</Spanish>
+            <Italian>Debug</Italian>
+            <Russian>Отладка</Russian>
+            <Korean>디버그</Korean>
+            <Japanese>デバッグ</Japanese>
         </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox">
             <English>Draw Hitboxes</English>
+            <French>Afficher les hitboxes</French>
+            <Spanish>Dibujar hitboxes</Spanish>
+            <Italian>Visualizza hitbox</Italian>
+            <Russian>Изобразить хитбоксы</Russian>
+            <Korean>히트박스 그리기</Korean>
+            <Japanese>ヒットボックスを描画</Japanese>
         </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox_Desc">
             <English>Draw hitboxes on objects that were targeted.</English>
+            <French>Affiche les hitboxes sur les cibles potentielles de fragmentation.</French>
+            <Spanish>Dibuja hitboxes en objetos que son seguidos.</Spanish>
+            <Italian>Visualizza hitbox su potenziali bersagli della frammentazione.</Italian>
+            <Russian>Изобразить хитбоксы на объектах, которые были нацелены.</Russian>
+            <German>Splitter-/Explosions-Debugging</German>
+            <Korean>타겟팅된 오브젝트에 히트박스를 그립니다.</Korean>
+            <Japanese>被弾した物体のヒットボックスを描画します。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Frag_EnableDebugTrace">
+            <English>Frag/Spall Debug Tracing</English>
+            <French>Suivi du débogage des éclats/explosions</French>
+            <Spanish>Trazado Debug de Fragmentación/Astillamiento</Spanish>
+            <Italian>Traccia Frag/Spall per Debug</Italian>
+            <Russian>Отладка трассировки фрагментации/осколков</Russian>
+            <German>Splitter-/Explosions-Debug-Verfolgung</German>
+            <Korean>파열/파편 디버그 추적</Korean>
+            <Japanese>フラグとスポールの追跡デバッグ</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
+            <English>Enables visual tracing of fragmentation and spalling rounds.</English>
+            <French>Active le suivi des éclats/explosions.</French>
+            <Spanish>Habilitar trazado visual de los proyectiles generados por la fragmentación y el astillamiento.</Spanish>
+            <Italian>Abilita il tracciamento visivo di effetti di frammentazione e spalling.</Italian>
+            <Russian>Включает визуальную трассировку фрагментации и осколочных снарядов.</Russian>
+            <German>Splitter-/Explosions-Debugging</German>
+            <Korean>파열과 파편의 시각적 추적을 활성화합니다.</Korean>
+            <Japanese>フラグメンテーションとスポーリングによって発生した破片飛翔体の動きを視覚的に追跡できる機能を有効化します。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Frag_EnableFrag">
+            <English>Fragmentation Simulation</English>
+            <Czech>Simulace fragmentů</Czech>
+            <French>Simulation de la fragmentation</French>
+            <Spanish>Simulación de fragmentación</Spanish>
+            <Italian>Simulazione Frammentazione</Italian>
+            <Polish>Symulacja fragmentacji</Polish>
+            <Portuguese>Simulação de fragmentação</Portuguese>
+            <Russian>Симуляция осколков</Russian>
+            <German>Splittersimulation</German>
+            <Korean>파열 시뮬레이션</Korean>
+            <Japanese>フラグメンテーション シミュレーション</Japanese>
+            <Chinese>模擬碎片</Chinese>
+            <Chinesesimp>破片模拟</Chinesesimp>
+            <Hungarian>Repesz-szimuláció</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Frag_EnableFrag_Desc">
+            <English>Enable the ACE Fragmentation Simulation</English>
+            <Czech>Povolit ACE simulaci fragmentů</Czech>
+            <French>Active la simulation de la fragmentation ACE.</French>
+            <Spanish>Activa la simulación de fragmentación ACE</Spanish>
+            <Italian>Abilita la Simulazione Frammentazione di ACE</Italian>
+            <Polish>Aktywuje symulację fragmentacji ACE</Polish>
+            <Portuguese>Ativa a simulação de fragmentação do ACE</Portuguese>
+            <Russian>Включить симуляцию осколков ACE</Russian>
+            <German>Aktiviere die ACE-Splittersimulation</German>
+            <Korean>ACE 파열 시뮬레이션을 적용합니다.</Korean>
+            <Japanese>ACE フラグメンテーション シミュレーションを有効化</Japanese>
+            <Chinese>啟用ACE模擬碎片</Chinese>
+            <Chinesesimp>启用 ACE 破片模拟</Chinesesimp>
+            <Hungarian>Az ACE repesz-szimuláció engedélyezése</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Frag_EnableReflections">
+            <English>Explosion Reflections Simulation</English>
+            <Czech>Simulace odrazu exploze</Czech>
+            <French>Simulation de la réflexion des explosions</French>
+            <Spanish>Activar simulación de reflexiones</Spanish>
+            <Italian>Simulazione Riflessi Esplosioni</Italian>
+            <Polish>Symulacja odbicia eksplozji</Polish>
+            <Portuguese>Simulação de reflexo de explosão</Portuguese>
+            <Russian>Cимуляция отражения взрывов ACE</Russian>
+            <German>Druckwellensimulation</German>
+            <Korean>폭발 반사 시뮬레이션</Korean>
+            <Japanese>爆風反射シミュレーション</Japanese>
+            <Chinese>模擬爆炸反射</Chinese>
+            <Chinesesimp>模拟爆炸反射</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Frag_EnableReflections_Desc">
+            <English>Enable the ACE Explosion Reflection Simulation</English>
+            <Czech>Povolit ACE simulaci odrazu exploze</Czech>
+            <French>Active la simulation de la réflexion des explosions ACE.</French>
+            <Spanish>Activa la simulación de reflexiones para las explosiones.</Spanish>
+            <Italian>Abilita la Simulazione Riflessi Esplosioni di ACE</Italian>
+            <Polish>Włącz symulację odbicia eksplozji ACE</Polish>
+            <Portuguese>Ativa a simulação de reflexo de explosão do ACE</Portuguese>
+            <Russian>Включить симуляцию отражения взрывов ACE</Russian>
+            <German>Aktiviere die ACE-Druckwellensimulation</German>
+            <Korean>ACE 폭발 반사 시뮬레이션을 적용합니다.</Korean>
+            <Japanese>ACE 爆風反射シミュレーションを有効化</Japanese>
+            <Chinese>啟用ACE模擬爆炸反射</Chinese>
+            <Chinesesimp>启用 ACE 模拟爆炸反射</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Frag_EnableSpall">
+            <English>Spalling Simulation</English>
+            <Czech>Simulace úlomků</Czech>
+            <French>Simulation d'éclat</French>
+            <Spanish>Simulación de astillamiento</Spanish>
+            <Italian>Simulazione Spalling</Italian>
+            <Polish>Symulacja odprysków</Polish>
+            <Portuguese>Simulação de estilhaços</Portuguese>
+            <Russian>Симуляция обломков</Russian>
+            <German>Explosionssimulation</German>
+            <Korean>파편 시뮬레이션</Korean>
+            <Japanese>スポーリング シミュレーション</Japanese>
+            <Chinese>模擬剝落</Chinese>
+            <Chinesesimp>模拟剥落</Chinesesimp>
+            <Hungarian>Pattogzás-szimuláció</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Frag_EnableSpall_Desc">
+            <English>Enable the ACE Spalling Simulation</English>
+            <Czech>Povolit ACE simulaci úlomků</Czech>
+            <French>Active la simulation d'éclat ACE.</French>
+            <Spanish>Activa la simulación de astillamiento ACE</Spanish>
+            <Italian>Abilita la Simulazione Spalling di ACE</Italian>
+            <Polish>Aktywuje symulację odprysków ACE</Polish>
+            <Portuguese>Ativa a simulação de estilhaços do ACE</Portuguese>
+            <Russian>Включить симуляцию обломков ACE</Russian>
+            <German>Aktiviere ACE-Explosionssimulation</German>
+            <Korean>ACE 파편 시뮬레이션을 적용합니다.</Korean>
+            <Japanese>ACE スポーリング シミュレーションを有効化</Japanese>
+            <Chinese>啟用ACE模擬剝落</Chinese>
+            <Chinesesimp>启用 ACE 模拟剥落</Chinesesimp>
+            <Hungarian>Az ACE pattogzás-szimuláció engedélyezése</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Frag_HitSphereEnable">
+            <English>Draw Event Spheres</English>
+            <French>Visualiser les sphères d'événements</French>
+            <Spanish>Dibujar Esferas de Eventos</Spanish>
+            <Italian>Visualizza sfere eventi</Italian>
+            <Russian>Изобразить сферы событий</Russian>
+            <Korean>이벤트 구체 그리기</Korean>
+            <Japanese>イベントを球体として描画</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Frag_HitSphereEnable_Desc">
+            <English>Draw color coded spheres at any event for tracked rounds.</English>
+            <French>Affiche des sphères de couleur sur chaque événement d'un fragment tracé.</French>
+            <Spanish>Dibujar esferas codificadas por color en cualquier evento para proyectiles seguidos.</Spanish>
+            <Italian>Visualizza sfere colorate su ogni evento di un frammento tracciato.</Italian>
+            <Russian>Изобразить цветные сферы на любом событии для отслеживаемых раундов.</Russian>
+            <Korean>모든 이벤트에서 추적된 파편을 위한 색상으로 구분하는 구체를 그립니다.</Korean>
+            <Japanese>追跡中の飛翔体に発生した全てのイベントを色付けた球体として描画します。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Frag_Module_DisplayName">
+            <English>Fragmentation Simulation</English>
+            <Czech>Simulace fragmentů</Czech>
+            <French>Simulation de la fragmentation</French>
+            <Spanish>Simulación de fragmentación</Spanish>
+            <Italian>Simulazione Frammentazione</Italian>
+            <Polish>Symulacja fragmentacji</Polish>
+            <Portuguese>Simulação de fragmentação</Portuguese>
+            <Russian>Симуляция осколков</Russian>
+            <German>Splittersimulation</German>
+            <Korean>파열 시뮬레이션</Korean>
+            <Japanese>破片シミュレーション</Japanese>
+            <Chinese>模擬碎片</Chinese>
+            <Chinesesimp>破片模拟</Chinesesimp>
+            <Hungarian>Repesz-szimuláció</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Frag_SpallIntensity">
+            <English>Spalling Intensity</English>
+            <French>Intensité de l'écaillage</French>
+            <Spanish>Intensidad del astillamiento</Spanish>
+            <Italian>Intensità dello spalling</Italian>
+            <Russian>Интенсивность обрушения</Russian>
+            <Korean>파편 강도</Korean>
+            <Japanese>スポーリング強度</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Frag_SpallIntensity_Desc">
+            <English>Modifier to increase or decrease the number and intensity of spalling events. Increasing this value may cause performance degradation.</English>
+            <French>Modificateur permettant d'augmenter ou de diminuer le nombre et l'intensité des événements d'écaillage. L'augmentation de cette valeur peut entraîner une dégradation des performances.</French>
+            <Spanish>Modificador para aumentar o disminuir el número y la intensidad de los eventos de astillamiento. Aumentar este valor puede producir una degradación en el rendimiento.</Spanish>
+            <Italian>Modificatore per il numero e intensità di spalling simulato, ovvero la frammentazione interna ad un veicolo colpito. Valori alti possono causare una degradazione della performance.</Italian>
+            <Russian>Модификатор для увеличения или уменьшения количества и интенсивности событий обрушения. Увеличение этого значения может привести к ухудшению производительности.</Russian>
+            <Korean>파편 이벤트 수와 강도를 늘리거나 줄입니다. 이 값을 늘리면 성능이 저하될 수 있습니다.</Korean>
+            <Japanese>スポーリング現象が発生する数と強度を増減することが出来ます。この値を大きくすることはパフォーマンスの低下につながる可能性があります。</Japanese>
         </Key>
     </Package>
 </Project>

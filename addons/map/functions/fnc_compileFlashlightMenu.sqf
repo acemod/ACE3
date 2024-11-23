@@ -30,6 +30,7 @@ _unitLight params ["_flashlight", ""];
     private _displayName = getText (_cfg >> "displayName");
     private _icon = getText (_cfg >> "picture");
 
+    //IGNORE_PRIVATE_WARNING ["_player"];
     private _statement = if (_flashlight == _x) then {
         _displayName = format [localize LSTRING(turnLightOff), _displayName];
         {[_player, ""] call FUNC(switchFlashlight)}
