@@ -18,6 +18,7 @@
 params ["", "_args", "_seekerStateParams"];
 _args params ["", "", "", "", "", "_targetData"];
 (_seekerStateParams select 0) params ["_attackPosition"];
+//IGNORE_PRIVATE_WARNING ["_projectile"];
 
 _targetData set [0, (getPosASL _projectile) vectorFromTo _attackPosition];
 _targetData set [2, (getPosASL _projectile) distance _attackPosition];
