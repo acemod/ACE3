@@ -47,7 +47,7 @@ if (!_isDLC) exitWith {
 
 private _name = switch (_id) do {
     case "1021790": { "Enoch" };
-    case "3951810": { "Expansion" };
+    case "395180": { "Expansion" };
     case "304380": { "Heli" };
     case "601670": { "Jets" };
     case "288520": { "Kart" };
