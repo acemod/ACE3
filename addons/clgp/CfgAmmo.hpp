@@ -5,6 +5,12 @@ class CfgAmmo {
         hit = 1200;
         indirectHit = 200;
         indirectHitRange = 4;
+        EGVAR(frag,skip) = 0;
+        EGVAR(frag,charge) = 9979;
+        EGVAR(frag,metal) = 36000;
+        EGVAR(frag,gurney_c) = 2440;
+        EGVAR(frag,gurney_k) = "1/2";
+        EGVAR(frag,classes)[] = {QEGVAR(frag,large), QEGVAR(frag,large), QEGVAR(frag,large_HD), QEGVAR(frag,large), QEGVAR(frag,huge), QEGVAR(frag,huge_HD), QEGVAR(frag,huge)};
 
         GVAR(artilleryDrag) = 1;
         GVAR(deployCondition) = QFUNC(copperhead_deployCondition);
@@ -15,7 +21,6 @@ class CfgAmmo {
         muzzleEffect = "";
         airFriction = 0;
 
-        EGVAR(frag,skip) = 1; // don't frag because this is a scripted ammo
         class Eventhandlers {
             fired = QUOTE(call FUNC(submunition_ammoFired));
         };
@@ -39,11 +44,16 @@ class CfgAmmo {
         hit = 1200;
         indirectHit = 200;
         indirectHitRange = 4;
-        // todo frag
+        EGVAR(frag,skip) = 0;
+        EGVAR(frag,charge) = 9979;
+        EGVAR(frag,metal) = 36000;
+        EGVAR(frag,gurney_c) = 2440;
+        EGVAR(frag,gurney_k) = "1/2";
+        EGVAR(frag,classes)[] = {QEGVAR(frag,large), QEGVAR(frag,large), QEGVAR(frag,large_HD), QEGVAR(frag,large), QEGVAR(frag,huge), QEGVAR(frag,huge_HD), QEGVAR(frag,huge)};
 
-        maneuvrability = 10;
+        maneuvrability = 0;
         airFriction = 0; // note: works differently from shellsim (v^3...)
-        sideAirFriction = 0;
+        sideAirFriction = 0; // -----ToDo-----
 
         artilleryLock = 0; // would keep shell pointed towards velocity, but disables manuverability and airfric
 
@@ -95,7 +105,6 @@ class CfgAmmo {
         submunitionCount = 1;
         submunitionConeAngle = 0;
         triggerTime = 0.1;
-        EGVAR(frag,skip) = 1; // don't frag because this is a scripted ammo
         class Eventhandlers {
             fired = QUOTE(call FUNC(submunition_ammoFired));
         };

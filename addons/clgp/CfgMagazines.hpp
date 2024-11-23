@@ -20,6 +20,6 @@ class CfgMagazines {
         count = 1;
         // model = QPATHTOF(data\ace_pike_ammo.p3d); // just use default pouch
         initSpeed = 50;
-        mass = 17; // ~1.7 Pounds
+        mass = 12; // ~1.7 Pounds, but high density
     };
 };
