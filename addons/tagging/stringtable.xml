@@ -59,7 +59,7 @@
             <Russian>Действие, выполняемое при выборе главного пункта меню маркировки.</Russian>
             <German>Aktion, die am Haupt-Interaktionspunkt ausgeführt werden soll.</German>
             <Korean>상호작용 시 표시할 낙서를 고릅니다.</Korean>
-            <Japanese>メインのインタラクションポイント(タグ)を選択した際に行われるアクション。</Japanese>
+            <Japanese>上層にある"タグ"のインタラクションを選択した際に行われるアクション。</Japanese>
             <Chinese>直接噴漆在互動選單瞄準的點上。</Chinese>
             <Chinesesimp>直接喷漆在互动菜单瞄准的点上。</Chinesesimp>
         </Key>

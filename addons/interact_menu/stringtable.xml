@@ -282,7 +282,7 @@
             <Russian>Добавляет действия открывания дверей и залезания на лестницы для зданий. (Примечание: возможно падение производительности при открытии меню взаимодействия, особенно в городах)</Russian>
             <German>Fügt Aktionen zum Türöffnen oder für eine Leiter zum Besteigen von Gebäuden hinzu. (Hinweis: Verschlechtert die Leistung wenn das Interaktionsmenü geöffnet wird. Insbesondere in Städten)</German>
             <Korean>건물의 문을 열거나 사다리에 오르는 상호작용 행동을 추가합니다. (주의: 상호작용 메뉴를 열 경우 성능하락이 있을 수 있음, 특히 마을 내부에서)</Korean>
-            <Japanese>建物にドアを開閉したり梯子を昇降するためのインタラクション アクションを追加します。\n(注: 街中でインタラクション メニューを開く際には特に描画パフォーマンスに影響を及ぼします)</Japanese>
+            <Japanese>建物にドアを開閉したり梯子を昇降するためのインタラクション アクションを追加します。\n(注: インタラクション メニューを開く際には描画パフォーマンスに影響を及ぼします。街中などでは顕著です)</Japanese>
             <Chinese>增加互動選單的功能在可開啟的門與建築物的梯子上。(注意: 此功能有可能會降低系統效能，特別是在城鎮區更明顯)</Chinese>
             <Chinesesimp>增加互动菜单的功能在可开启的门与建筑物的梯子上。（注意：此功能有可能会降低系统效能，特别是在城镇区更明显）</Chinesesimp>
             <Turkish>Binalara kapıları açmak ve merdivenleri monte etmek için etkileşim eylemleri ekler. (Not: Etkileşim menüsünü açarken, özellikle şehirlerde bir performansı etkiler)</Turkish>
