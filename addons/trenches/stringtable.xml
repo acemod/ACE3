@@ -137,7 +137,7 @@
             <Portuguese>Cavar trincheira grande</Portuguese>
             <Russian>Вырыть большой окоп</Russian>
             <German>Grabe großen Schützengraben</German>
-            <Korean>대형참호 파기</Korean>
+            <Korean>대형 참호 파기</Korean>
             <Japanese>大型の塹壕を掘る</Japanese>
             <Chinese>蓋大掩體</Chinese>
             <Chinesesimp>挖掘大掩体</Chinesesimp>
@@ -153,7 +153,7 @@
             <Portuguese>Cavar trincheira pequena</Portuguese>
             <Russian>Вырыть малый окоп</Russian>
             <German>Grabe kleinen Schützengraben</German>
-            <Korean>소형참호 파기</Korean>
+            <Korean>소형 참호 파기</Korean>
             <Japanese>小型塹壕を掘る</Japanese>
             <Chinese>蓋小掩體</Chinese>
             <Chinesesimp>挖掘小掩体</Chinesesimp>
@@ -185,7 +185,7 @@
             <Portuguese>Trincheira pessoal grande</Portuguese>
             <Russian>Большой персональный окоп</Russian>
             <German>Großer Schützengraben</German>
-            <Korean>대형 참호</Korean>
+            <Korean>대형 개인참호</Korean>
             <Japanese>大型の個人用塹壕</Japanese>
             <Chinese>大型個人掩體</Chinese>
             <Chinesesimp>大型个人掩体</Chinesesimp>
@@ -342,7 +342,7 @@
             <Portuguese>Duração de Escavamento de Trincheira Pequena</Portuguese>
             <Russian>Время копания малого окопа</Russian>
             <German>Kleiner Graben - Aushebungsdauer</German>
-            <Korean>소형참호 건설 시간</Korean>
+            <Korean>소형 참호 건설 시간</Korean>
             <Japanese>小型塹壕造成の所要時間</Japanese>
             <Chinesesimp>小型战壕挖掘时间</Chinesesimp>
         </Key>
@@ -368,7 +368,7 @@
             <Portuguese>Duração de Remoção de Trincheira Pequena</Portuguese>
             <Russian>Время удаления малого окопа</Russian>
             <German>Kleiner Graben - Aufschüttdauer</German>
-            <Korean>소형참호 제거 시간</Korean>
+            <Korean>소형 참호 제거 시간</Korean>
             <Japanese>小型塹壕撤去の所要時間</Japanese>
             <Chinesesimp>小型战壕回填时间</Chinesesimp>
         </Key>
