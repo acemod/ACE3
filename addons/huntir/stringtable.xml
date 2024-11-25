@@ -256,7 +256,7 @@
             <Turkish>HuntIR Ekranı</Turkish>
             <Hungarian>HuntIR Monitor</Hungarian>
         </Key>
-        <Key ID="ㅁ">
+        <Key ID="STR_ACE_HuntIR_ALT">
             <English>Altitude:</English>
             <Chinese>高度:</Chinese>
             <Chinesesimp>高度：</Chinesesimp>
