@@ -209,7 +209,7 @@
             <Portuguese>Atraso de detonação</Portuguese>
             <Russian>Задержка детонации</Russian>
             <German>Detonationsverzögerung</German>
-            <Korean>신관 시간</Korean>
+            <Korean>신관 작동 시간</Korean>
             <Japanese>信管設定時間</Japanese>
             <Chinesesimp>引信时间</Chinesesimp>
         </Key>
@@ -946,7 +946,7 @@
             <Portuguese>O seguinte loadout foi apagado:</Portuguese>
             <Russian>Удален комплект экипировки:</Russian>
             <German>Folgende Ausrüstung wurde entfernt:</German>
-            <Korean>다음 로드아웃이 삭제됨 :</Korean>
+            <Korean>다음 로드아웃이 삭제됨:</Korean>
             <Japanese>装備を削除しました:</Japanese>
             <Chinese>以下的裝備已被刪除:</Chinese>
             <Chinesesimp>以下的负载已被删除：</Chinesesimp>
@@ -1026,7 +1026,7 @@
             <Portuguese>O seguinte loadout não é mais público:</Portuguese>
             <Russian>Этот комплект экипировки больше не публичный:</Russian>
             <German>Folgende Ausrüstung ist nicht mehr öffentlich:</German>
-            <Korean>다음 로드아웃이 더이상 공용이 아님:</Korean>
+            <Korean>다음 로드아웃이 더 이상 공용이 아님:</Korean>
             <Japanese>装備を非公開にしました:</Japanese>
             <Chinese>以下的裝備已不再被分享:</Chinese>
             <Chinesesimp>以下的负载已不再被分享：</Chinesesimp>
