@@ -21,7 +21,7 @@
 params ["_target", "_player", "", "_actionData"];
 
 private _backpack = backpackContainer _target;
-private _actionText = format ["STR_ACTION_OPEN_BAG", getText (configOf _backpack >> "displayName")];
+private _actionText = format [localize "STR_ACTION_OPEN_BAG", getText (configOf _backpack >> "displayName")];
 TRACE_3("",_target,_backpack,_actionText);
 
 _actionData set [1, _actionText];
