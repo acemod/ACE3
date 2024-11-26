@@ -720,6 +720,9 @@
             <Turkish>Menzilde Değil</Turkish>
             <Hungarian>Hatótávolságon kívül</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Interaction_OpenBackpack">
+            <English>Open %1</English>
+        </Key>
         <Key ID="STR_ACE_Interaction_OpenBox">
             <English>Open</English>
             <Czech>Otevřít</Czech>

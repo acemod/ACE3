@@ -251,6 +251,15 @@ class CfgVehicles {
                 statement = QUOTE([ARR_3(_player,_target,1)] call DFUNC(tapShoulder));
                 exceptions[] = {"isNotSwimming"};
             };
+            class ACE_OpenBackpack {
+                displayName = CSTRING(OpenBackpack);
+                position = QUOTE(call DFUNC(getBackpackPos));
+                distance = 1.50;
+                condition = QUOTE(!isNull backpackContainer _target);
+                statement = QUOTE(_player action [ARR_2('Gear',backpackContainer _target)]);
+                modifierFunction = QUOTE(call FUNC(modifyOpenBackpackAction));
+                exceptions[] = {"isNotSwimming"};
+            };
         };
 
         class ACE_SelfActions {
