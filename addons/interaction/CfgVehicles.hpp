@@ -252,7 +252,7 @@ class CfgVehicles {
                 exceptions[] = {"isNotSwimming"};
             };
             class ACE_OpenBackpack {
-                displayName = CSTRING(OpenBackpack);
+                displayName = "$STR_ACTION_OPEN_BAG";
                 position = QUOTE(call DFUNC(getBackpackPos));
                 distance = 1.50;
                 condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canOpenBackpack));
