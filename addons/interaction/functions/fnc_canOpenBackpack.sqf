@@ -23,5 +23,5 @@ private _backpackContainer = backpackContainer _target;
 !isNull _backpackContainer &&
 {!lockedInventory _backpackContainer} &&
 {maxLoad _backpackContainer > 0} &&
-{getNumber (_backpackConfig >> "disableInventory") != 1} &&
+{getNumber (configOf _backpackContainer >> "disableInventory") != 1} &&
 {!(_target isKindOf QEGVAR(dragging,clone))}
