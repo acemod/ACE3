@@ -93,6 +93,22 @@
             <Chinesesimp>无法开启 ACE 虚拟军火库</Chinesesimp>
             <Turkish>ACE Arsenal açılamıyor</Turkish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_DLCRequirement">
+            <English>DLC Required</English>
+            <Czech>Vyžadováno DLC</Czech>
+            <French>DLC requis</French>
+            <Spanish>Requiere DLC</Spanish>
+            <Italian>DLC richiesto</Italian>
+            <Polish>Wymagane DLC</Polish>
+            <Portuguese>DLC necessário</Portuguese>
+            <Russian>Требуется DLC</Russian>
+            <German>DLC erforderlich</German>
+            <Korean>DLC 필요</Korean>
+            <Japanese>DLCが必要です</Japanese>
+            <Chinese>需要DLC</Chinese>
+            <Chinesesimp>需要DLC</Chinesesimp>
+            <Turkish>DLC gereklidir</Turkish>
+        </Key>
         <Key ID="STR_ACE_Arsenal_DetonatesOnImpact">
             <English>Detonates on impact</English>
             <French>Détonation à l'impact</French>
