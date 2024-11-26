@@ -17,6 +17,5 @@
 
 //IGNORE_PRIVATE_WARNING ["_target"];
 
-private _position = _target selectionPosition ["spine3", "Memory"];
-_position = _position vectorAdd [0, -0.2, 0.05];
-_position
+private _position = _target selectionPosition "spine3";
+(((_target selectionPosition "rightshoulder" vectorDiff _position) vectorCrossProduct (_target selectionPosition "leftshoulder" vectorDiff _position)) vectorMultiply 4) vectorAdd _position;
