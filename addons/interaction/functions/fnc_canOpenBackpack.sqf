@@ -18,7 +18,7 @@
 
 params ["_player", "_target"];
 
-private _backpackContainer = backPackContainer _target;
+private _backpackContainer = backpackContainer _target;
 
 !isNull _backpackContainer &&
 {!lockedInventory _backpackContainer} &&
