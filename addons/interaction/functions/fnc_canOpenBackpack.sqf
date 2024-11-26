@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: DartRuffian
- * Opens a unit's backpack.
+ * Checks if the player can open a unit's backpack.
  *
  * Arguments:
  * 0: Target <OBJECT>
