@@ -20,7 +20,6 @@ PREP(canInteractWithVehicleCrew);
 PREP(getDown);
 PREP(sendAway);
 PREP(canOpenBackpack);
-PREP(openBackpack);
 PREP(modifyOpenBackpackAction);
 PREP(canJoinGroup);
 PREP(modifyJoinGroupAction);
