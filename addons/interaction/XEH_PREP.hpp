@@ -19,6 +19,7 @@ PREP(canInteractWithCivilian);
 PREP(canInteractWithVehicleCrew);
 PREP(getDown);
 PREP(sendAway);
+PREP(openBackpack);
 PREP(modifyOpenBackpackAction);
 PREP(canJoinGroup);
 PREP(modifyJoinGroupAction);

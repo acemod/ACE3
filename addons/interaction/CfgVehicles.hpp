@@ -256,7 +256,7 @@ class CfgVehicles {
                 position = QUOTE(call DFUNC(getBackpackPos));
                 distance = 1.50;
                 condition = QUOTE(!isNull backpackContainer _target);
-                statement = QUOTE(_player action [ARR_2('Gear',backpackContainer _target)]);
+                statement = QUOTE([ARR_2(_player,_target)] call DFUNC(openBackpack));
                 modifierFunction = QUOTE(call FUNC(modifyOpenBackpackAction));
                 exceptions[] = {"isNotSwimming"};
             };
