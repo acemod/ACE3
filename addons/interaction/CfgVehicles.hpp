@@ -254,7 +254,7 @@ class CfgVehicles {
             class ACE_OpenBackpack {
                 displayName = "$STR_ACTION_OPEN_BAG";
                 position = QUOTE(call DFUNC(getBackpackPos));
-                distance = 1.50;
+                distance = 3.0;
                 condition = QUOTE([ARR_2(_player,_target)] call DFUNC(canOpenBackpack));
                 statement = QUOTE(_player action [ARR_2('OpenBag',_target)]);
                 modifierFunction = QUOTE(call FUNC(modifyOpenBackpackAction));
