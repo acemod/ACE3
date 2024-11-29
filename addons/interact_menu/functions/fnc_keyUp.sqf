@@ -41,10 +41,11 @@ if (GVAR(actionSelected)) then {
     // Use global variable this for action condition and action code
     private _savedThis = this;
     this = GVAR(selectedTarget);
-
-    if ([_target, _player, _actionData select 6] call (_actionData select 4)) then {
+    // Define _actionParams so its accessible within the statement/condition
+    private _actionParams = _actionData select 6; 
+    if ([_target, _player, _actionParams] call (_actionData select 4)) then {
         // Call the statement
-        [_target, _player, _actionData select 6] call (_actionData select 3);
+        [_target, _player, _actionParams] call (_actionData select 3);
 
         // Clear the conditions caches again if the action was performed
         [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;
