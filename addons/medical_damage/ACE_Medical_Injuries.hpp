@@ -12,7 +12,7 @@ class ACE_Medical_Injuries {
         };
         // Occur when an entire structure or part of it is forcibly pulled away, such as the loss of a permanent tooth or an ear lobe. Explosions, gunshots, and animal bites may cause avulsions.
         class Avulsion {
-            bleeding = 0.1;
+            bleeding = 0.07;
             pain = 1.0;
             causeLimping = 1;
         };
@@ -23,7 +23,7 @@ class ACE_Medical_Injuries {
         };
         // Occur when a heavy object falls onto a person, splitting the skin and shattering or tearing underlying structures.
         class Crush {
-            bleeding = 0.05;
+            bleeding = 0.04;
             pain = 0.8;
             causeLimping = 1;
             causeFracture = 1;
@@ -40,7 +40,7 @@ class ACE_Medical_Injuries {
         };
         // Also called velocity wounds, they are caused by an object entering the body at a high speed, typically a bullet or small peices of shrapnel.
         class VelocityWound {
-            bleeding = 0.2;
+            bleeding = 0.15;
             pain = 0.9;
             causeLimping = 1;
             causeFracture = 1;
@@ -137,6 +137,12 @@ class ACE_Medical_Injuries {
                 GVAR(woundsHandlerExplosion) = QFUNC(woundsHandlerExplosion);
             };
             class Avulsion {
+                weighting[] = {{1, 1}, {0.8, 0}};
+            };
+            class VelocityWound {
+                weighting[] = {{1, 1}, {0.8, 0}};
+            };
+            class PunctureWound {
                 weighting[] = {{1, 1}, {0.8, 0}};
             };
             class Cut {
