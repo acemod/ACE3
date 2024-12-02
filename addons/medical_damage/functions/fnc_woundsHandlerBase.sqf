@@ -109,7 +109,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         // Anything above this value is guaranteed worst wound possible
         private _worstDamage = 2;
 
-        #define LARGE_WOUND_THRESHOLD 0.9
+        #define LARGE_WOUND_THRESHOLD 0.5
 
         // Config specifies bleeding and pain for worst possible wound
         // Worse wound correlates to higher damage, damage is not capped at 1
