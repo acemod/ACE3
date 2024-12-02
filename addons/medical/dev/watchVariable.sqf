@@ -150,9 +150,8 @@ GVAR(dev_watchVariableRunning) = true;
     };
     _return pushBack format ["Adjusts: [HR %1][PS %2][PR %3]", _hrTargetAdjustment toFixed 2, _painSupressAdjustment toFixed 2, _peripheralResistanceAdjustment toFixed 2];
     {
-        private _medicationCount = [_unit, _x, true] call EFUNC(medical_status,getMedicationCount);
-        private _medicationEffectiveness = [_unit, _x, false] call EFUNC(medical_status,getMedicationCount);
-        _return pushBack format ["-%1: C: %2 - E: %3", _x, _medicationCount toFixed 2, _medicationEffectiveness toFixed 2];
+        ([_unit, _x, false] call EFUNC(medical_status,getMedicationCount)) params ["_medicationDose", "_medicationEffectiveness"];
+        _return pushBack format ["-%1: D: %2 - E: %3", _x, _medicationDose toFixed 2, _medicationEffectiveness toFixed 2];
     } forEach _uniqueMedications;
     _return pushBack "------- Medications Raw: -------";
     _return append _rawMedications;

@@ -3,497 +3,497 @@
     <Package name="Compat_SOG">
         <Key ID="STR_ACE_Compat_SOG_Action_DigIn">
             <English>Dig in</English>
-            <Polish>Zakop</Polish>
-            <German>Eingraben</German>
-            <Italian>Trincerati</Italian>
-            <Japanese>掘る</Japanese>
-            <Korean>땅파기</Korean>
-            <Chinesesimp>挖掘</Chinesesimp>
-            <Russian>Закопать</Russian>
-            <Spanish>Enterrarse</Spanish>
-            <Portuguese>Escavar</Portuguese>
             <French>Creuser</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_HE">
-            <English>M49A2 60mm HE</English>
-            <German>M49A2 60mm HE</German>
-            <Italian>M49A2 60mm HE</Italian>
-            <Japanese>M49A2 60mm 榴弾</Japanese>
-            <Polish>M49A2 60mm HE</Polish>
-            <Korean>M49A2 60mm 고폭</Korean>
-            <Chinesesimp>M49A2 60 mm 高爆弹</Chinesesimp>
-            <Russian>M49A2 60 мм ОФ</Russian>
-            <Spanish>M49A2 60mm HE</Spanish>
-            <Portuguese>M49A2 60mm HE</Portuguese>
-            <French>M49A2 60mm HE</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_WP">
-            <English>M302 60mm WP</English>
-            <German>M302 60mm Weißer Phosphor</German>
-            <Italian>M302 60mm Fosforo Bianco</Italian>
-            <Japanese>M302 60mm 白リン弾</Japanese>
-            <Polish>M302 60mm WP</Polish>
-            <Korean>M302 60mm 백린</Korean>
-            <Chinesesimp>M302 60 mm 白磷弹</Chinesesimp>
-            <Russian>M302 60 мм Фосфорная</Russian>
-            <Spanish>M302 60mm WP</Spanish>
-            <Portuguese>M302 60mm WP</Portuguese>
-            <French>M302 60mm Phosphore Blanc</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_Lume">
-            <English>M83 60mm Lume</English>
-            <German>M83 60mm Leuchtpatrone</German>
-            <Italian>M83 60mm Illuminante</Italian>
-            <Japanese>M83 60mm 照明弾</Japanese>
-            <Polish>M83 60mm ILUM</Polish>
-            <Korean>M83 60mm 조명</Korean>
-            <Chinesesimp>M83 60 mm 照明弹</Chinesesimp>
-            <Russian>M83 60 мм Осветительная</Russian>
-            <Spanish>M83 60mm Iluminación</Spanish>
-            <Portuguese>M83 60mm Iluminação</Portuguese>
-            <French>M83 60 mm Eclairant</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_HE">
-            <English>M374 81mm HE</English>
-            <German>M374 81mm HE</German>
-            <Italian>M374 81mm HE</Italian>
-            <Japanese>M374 81mm 榴弾</Japanese>
-            <Polish>M374 81mm HE</Polish>
-            <Korean>M374 81mm 고폭</Korean>
-            <Chinesesimp>M374 81 mm 高爆弹</Chinesesimp>
-            <Russian>M374 81 мм ОФ</Russian>
-            <Spanish>M374 81mm HE</Spanish>
-            <Portuguese>M374 81mm HE</Portuguese>
-            <French>M374 81mm HE</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_WP">
-            <English>M375 81mm WP</English>
-            <German>M375 81mm Weißer Phosphor</German>
-            <Italian>M375 81mm Fosforo Bianco</Italian>
-            <Japanese>M375 81mm 白リン弾</Japanese>
-            <Polish>M375 81mm WP</Polish>
-            <Korean>M375 81mm 백린</Korean>
-            <Chinesesimp>M375 81 mm 白磷弹</Chinesesimp>
-            <Russian>M375 81 мм Фосфорная</Russian>
-            <Spanish>M375 81mm WP</Spanish>
-            <Portuguese>M375 81mm WP</Portuguese>
-            <French>M375 81mm Phosphore Blanc</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Lume">
-            <English>M301A3 81mm Lume</English>
-            <German>M301A3 81mm Leuchtpatrone</German>
-            <Italian>M301A3 81mm Illuminante</Italian>
-            <Japanese>M301A3 81mm 照明弾</Japanese>
-            <Polish>M301A3 81mm ILUM</Polish>
-            <Korean>M301A3 81mm 조명</Korean>
-            <Chinesesimp>M301A3 81 mm 照明弹</Chinesesimp>
-            <Russian>M301A3 81 мм Осветительная</Russian>
-            <Spanish>M301A3 81mm Iluminación</Spanish>
-            <Portuguese>M301A3 81mm Iluminação</Portuguese>
-            <French>M301A3 81mm Eclairant</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Smoke">
-            <English>M57 81mm Smoke</English>
-            <German>M57 81mm Nebelpatrone</German>
-            <Italian>M57 81mm Fumogeno</Italian>
-            <Japanese>M57 81mm 発煙弾</Japanese>
-            <Polish>M57 81mm Dymny</Polish>
-            <Korean>M57 81mm 연막</Korean>
-            <Chinesesimp>M57 81 mm 烟雾弹</Chinesesimp>
-            <Russian>M57 81 мм Дымовая</Russian>
-            <Spanish>M57 81mm Smoke</Spanish>
-            <Portuguese>M57 81mm Fumígena</Portuguese>
-            <French>M57 81mm Fumigène</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_HE">
-            <English>O-832D 82mm HE</English>
-            <German>O-832D 82mm HE</German>
-            <Italian>O-832D 82mm HE</Italian>
-            <Japanese>O-832D 82mm 榴弾</Japanese>
-            <Polish>O-832D 82mm HE</Polish>
-            <Korean>O-832D 82mm 고폭</Korean>
-            <Chinesesimp>O-832D 82 mm 高爆弹</Chinesesimp>
-            <Russian>О-832Д 82 мм ОФ</Russian>
-            <Spanish>O-832D 82mm HE</Spanish>
-            <Portuguese>O-832D 82mm HE</Portuguese>
-            <French>O-832D 82mm HE</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_WP">
-            <English>D-832 82mm WP</English>
-            <German>D-832 82mm Weißer Phosphor</German>
-            <Italian>D-832 82mm Fosforo Bianco</Italian>
-            <Japanese>D-832 82mm 白リン弾</Japanese>
-            <Polish>D-832 82mm WP</Polish>
-            <Korean>D-832 82mm 백린</Korean>
-            <Chinesesimp>D-832 82 mm 白磷弹</Chinesesimp>
-            <Russian>Д-832 82 мм Фосфорная</Russian>
-            <Spanish>D-832 82mm WP</Spanish>
-            <Portuguese>D-832 82mm WP</Portuguese>
-            <French>D-832 82mm Phosphore Blanc</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_Lume">
-            <English>S-832S 82mm Lume</English>
-            <German>S-832S 82mm Leuchtpatrone</German>
-            <Italian>S-832S 82mm Illuminante</Italian>
-            <Japanese>S-832S 82mm 照明弾</Japanese>
-            <Polish>S-832S 82mm ILUM</Polish>
-            <Korean>S-832S 82mm 조명</Korean>
-            <Chinesesimp>S-832S 82 mm 照明弹</Chinesesimp>
-            <Russian>С-832С 82 мм Осветительная</Russian>
-            <Spanish>S-832S 82mm Iluminación</Spanish>
-            <Portuguese>S-832S 82mm Iluminação</Portuguese>
-            <French>S-832S 82mm Eclairant</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Box_60mm_HE">
-            <English>[ACE] M49A2 60mm HE Box</English>
-            <German>[ACE] M49A2 60mm HE Box</German>
-            <Italian>[ACE] Scatola M49A2 60mm HE</Italian>
-            <Japanese>[ACE] M49A2 60mm 榴弾入り弾薬箱</Japanese>
-            <Polish>[ACE] Skrzynia M49A2 60mm HE</Polish>
-            <Korean>[ACE] M49A2 60mm 고폭 상자</Korean>
-            <Chinesesimp>[ACE] M49A2 60 mm 高爆弹弹药箱</Chinesesimp>
-            <Russian>[ACE] Коробка M49A2 60 мм ОФ</Russian>
-            <Spanish>[ACE] M49A2 60mm Caja de HE</Spanish>
-            <Portuguese>[ACE] M49A2 60mm Caixa de HE</Portuguese>
-            <French>[ACE] Scatola M49A2 60mm HE</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Box_60mm_WP">
-            <English>[ACE] M302 60mm WP Box</English>
-            <German>[ACE] M302 60mm Weißer Phosphor Box</German>
-            <Italian>[ACE] Scatola M302 60mm Fosforo Bianco</Italian>
-            <Japanese>[ACE] M302 60mm 白リン弾入り弾薬箱</Japanese>
-            <Polish>[ACE] Skrzynia M302 60mm WP</Polish>
-            <Korean>[ACE] M302 60mm 백린 상자</Korean>
-            <Chinesesimp>[ACE] M302 60 mm 白磷弹弹药箱</Chinesesimp>
-            <Russian>[ACE] Коробка M302 60 мм Фосфорных</Russian>
-            <Spanish>[ACE] M302 60mm Caja de WP</Spanish>
-            <Portuguese>[ACE] M302 60mm Caixa de WP</Portuguese>
-            <French>[ACE] M302 60mm Phosphore Blanc Box</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Box_60mm_Lume">
-            <English>[ACE] M83 60mm Lume Box</English>
-            <German>[ACE] M83 60mm Leuchtpatrone Box</German>
-            <Italian>[ACE] Scatola M83 60mm Illuminanti</Italian>
-            <Japanese>[ACE] M83 60mm 照明弾弾入り弾薬箱</Japanese>
-            <Polish>[ACE] Skrzynia ILUM M83 60mm</Polish>
-            <Korean>[ACE] M83 60mm 조명 상자</Korean>
-            <Chinesesimp>[ACE] M83 60 mm 照明弹弹药箱</Chinesesimp>
-            <Russian>[ACE] Коробка M83 60 мм Осветительных</Russian>
-            <Spanish>[ACE] M83 60mm Caja de Iluminación</Spanish>
-            <Portuguese>[ACE] M83 60mm Caixa de Iluminação</Portuguese>
-            <French>[ACE] M83 60mm Eclairant Box</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Box_81mm_HE">
-            <English>[ACE] M374 81mm HE Box</English>
-            <German>[ACE] M374 81mm HE Box</German>
-            <Italian>[ACE] Scatola M374 81mm HE</Italian>
-            <Japanese>[ACE] M374 81mm 榴弾入り弾薬箱</Japanese>
-            <Polish>[ACE] Skrzynia M374 81mm HE</Polish>
-            <Korean>[ACE] M374 81mm 고폭 상자</Korean>
-            <Chinesesimp>[ACE] M374 81 mm 高爆弹弹药箱</Chinesesimp>
-            <Russian>[ACE] Коробка M374 81 мм ОФ</Russian>
-            <Spanish>[ACE] M374 81mm Caja de HE</Spanish>
-            <Portuguese>[ACE] M374 81mm Caixa de HE</Portuguese>
-            <French>[ACE] Scatola M374 81mm HE</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Box_81mm_WP">
-            <English>[ACE] M375 81mm WP Box</English>
-            <German>[ACE] M375 81mm Weißer Phosphor Box</German>
-            <Italian>[ACE] Scatola M375 81mm Fosforo Bianco</Italian>
-            <Japanese>[ACE] M375 81mm 白リン弾入り弾薬箱</Japanese>
-            <Polish>[ACE] Skrzynia M375 81mm WP</Polish>
-            <Korean>[ACE] M375 81mm 백린 상자</Korean>
-            <Chinesesimp>[ACE] M375 81 mm 白磷弹弹药箱</Chinesesimp>
-            <Russian>[ACE] Коробка M375 81 мм Фосфорных</Russian>
-            <Spanish>[ACE] M375 81mm Caja de WP</Spanish>
-            <Portuguese>[ACE] M375 81mm Caixa de WP</Portuguese>
-            <French>[ACE] M375 81mm Phosphore Blanc Box</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Box_81mm_Lume">
-            <English>[ACE] M301A3 81mm Lume Box</English>
-            <German>[ACE] M301A3 81mm Leuchtpatrone Box</German>
-            <Italian>[ACE] Scatola M301A3 81mm Illuminanti</Italian>
-            <Japanese>[ACE] M301A1 81mm 照明弾入り弾薬箱</Japanese>
-            <Polish>[ACE] Skrzynia M301A3 81mm ILUM</Polish>
-            <Korean>[ACE] M301A3 81mm 조명 상자</Korean>
-            <Chinesesimp>[ACE] M301A3 81 mm 照明弹弹药箱</Chinesesimp>
-            <Russian>[ACE] Коробка M301A3 81 мм Осветительных</Russian>
-            <Spanish>[ACE] M301A3 81mm Caja de Iluminación</Spanish>
-            <Portuguese>[ACE] M301A3 81mm Caixa de Iluminação</Portuguese>
-            <French>[ACE] M301A3 81mm Eclairant Box</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Box_81mm_Smoke">
-            <English>[ACE] M57 81mm Smoke Box</English>
-            <German>[ACE] M57 81mm Nebelpatrone Box</German>
-            <Italian>[ACE] Scatola M57 81mm Fumogeni</Italian>
-            <Japanese>[ACE] M57 81mm 煙幕弾入り弾薬箱</Japanese>
-            <Polish>[ACE] Skrzynia M57 81mm Dymny</Polish>
-            <Korean>[ACE] M57 81mm 연막 상자</Korean>
-            <Chinesesimp>[ACE] M57 81 mm 烟雾弹弹药箱</Chinesesimp>
-            <Russian>[ACE] Коробка M57 81 мм Дымовых</Russian>
-            <Spanish>[ACE] M57 81mm Caja de Humo</Spanish>
-            <Portuguese>[ACE] M57 81mm Caixa de Fumígena</Portuguese>
-            <French>[ACE] M57 81mm Fumigène Box</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Box_82mm_HE">
-            <English>[ACE] O-832D 82mm HE Box</English>
-            <German>[ACE] O-832D 82mm HE Box</German>
-            <Italian>[ACE] Scatola O-832D 82mm HE</Italian>
-            <Japanese>[ACE] O-832D 82mm 榴弾入り弾薬箱</Japanese>
-            <Polish>[ACE] Skrzynia O-832D 82mm HE</Polish>
-            <Korean>[ACE] O-832D 82mm 고폭 상자</Korean>
-            <Chinesesimp>[ACE] O-832D 82 mm 高爆弹弹药箱</Chinesesimp>
-            <Russian>[ACE] Коробка О-832Д 82 мм ОФ</Russian>
-            <Spanish>[ACE] O-832D 82mm Caja de HE</Spanish>
-            <Portuguese>[ACE] O-832D 82mm Caixa de HE</Portuguese>
-            <French>[ACE] Scatola O-832D 82mm HE</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Box_82mm_WP">
-            <English>[ACE] D-832 82mm WP Box</English>
-            <German>[ACE] D-832 82mm Weißer Phosphor Box</German>
-            <Italian>[ACE] Scatola D-832 82mm Fosforo Bianco</Italian>
-            <Japanese>[ACE] D-832 82mm 白リン弾入り弾薬箱</Japanese>
-            <Polish>[ACE] Skrzynia D-832 82mm WP</Polish>
-            <Korean>[ACE] D-832 82mm 백린 상자</Korean>
-            <Chinesesimp>[ACE] D-832 82 mm 白磷弹弹药箱</Chinesesimp>
-            <Russian>[ACE] Коробка Д-832 82 мм Фосфорных</Russian>
-            <Spanish>[ACE] D-832 82mm Caja de WP</Spanish>
-            <Portuguese>[ACE] D-832 82mm Caixa de WP</Portuguese>
-            <French>[ACE] D-832 82mm Phosphore Blanc Box</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_Box_82mm_Lume">
-            <English>[ACE] S-832S 82mm Lume Box</English>
-            <German>[ACE] S-832S 82mm Leuchtpatrone Box</German>
-            <Italian>[ACE] Scatola S-832S 82mm Illuminanti</Italian>
-            <Japanese>[ACE] S-832S 82mm 照明弾入り弾薬箱</Japanese>
-            <Polish>[ACE] Skrzynia S-832S 82mm ILUM</Polish>
-            <Korean>[ACE] S-832S 82mm 조명 상자</Korean>
-            <Chinesesimp>[ACE] S-832S 82 mm 照明弹弹药箱</Chinesesimp>
-            <Russian>[ACE] Коробка С-832С 82 мм Осветительных</Russian>
-            <Spanish>[ACE] S-832S 82mm Caja de Iluminación</Spanish>
-            <Portuguese>[ACE] S-832S 82mm Caixa de Iluminação</Portuguese>
-            <French>[ACE] S-832S 82mm Eclairant Box</French>
+            <Spanish>Enterrarse</Spanish>
+            <Italian>Trincerati</Italian>
+            <Polish>Zakop</Polish>
+            <Portuguese>Escavar</Portuguese>
+            <Russian>Закопать</Russian>
+            <German>Eingraben</German>
+            <Korean>땅파기</Korean>
+            <Japanese>掘る</Japanese>
+            <Chinesesimp>挖掘</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderhole">
             <English>Dig Spiderhole</English>
-            <German>Schützenloch graben</German>
-            <Italian>Scava buco di ragno</Italian>
-            <Japanese>蛸壺壕を掘る</Japanese>
-            <Polish>Wykop Lisią Norę</Polish>
-            <Korean>개인호 파기</Korean>
-            <Chinesesimp>挖掘散兵坑</Chinesesimp>
-            <Russian>Выкопать паучью дыру</Russian>
-            <Spanish>Excavar Agujero de araña</Spanish>
-            <Portuguese>Escavar buraco de aranha</Portuguese>
             <French>Creuser un trou d'araignée</French>
+            <Spanish>Excavar Agujero de araña</Spanish>
+            <Italian>Scava buco di ragno</Italian>
+            <Polish>Wykop Lisią Norę</Polish>
+            <Portuguese>Escavar buraco de aranha</Portuguese>
+            <Russian>Выкопать паучью дыру</Russian>
+            <German>Schützenloch graben</German>
+            <Korean>개인호 파기</Korean>
+            <Japanese>蛸壺壕を掘る</Japanese>
+            <Chinesesimp>挖掘散兵坑</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderholeAngled">
             <English>Dig Spiderhole (Angled Cover)</English>
-            <German>Schützenloch graben (Abgeschrägte Abdeckung)</German>
-            <Italian>Scava buco di ragno (Coperchio Angolato)</Italian>
-            <Japanese>蛸壺壕 (屋根) を掘る</Japanese>
-            <Polish>Wykop Lisią Norę (z dachem)</Polish>
-            <Korean>개인호 파기 (각진 엄폐)</Korean>
-            <Chinesesimp>挖掘带斜盖散兵坑</Chinesesimp>
-            <Russian>Выкопать крытую паучью дыру</Russian>
-            <Spanish>Excavar Agujero de araña (Cubierta inclinada)</Spanish>
-            <Portuguese>Escavar buraco de aranha (Cobertura inclinada)</Portuguese>
             <French>Creuser un trou d'araignée (couverture d'angle)</French>
+            <Spanish>Excavar Agujero de araña (Cubierta inclinada)</Spanish>
+            <Italian>Scava buco di ragno (Coperchio Angolato)</Italian>
+            <Polish>Wykop Lisią Norę (z dachem)</Polish>
+            <Portuguese>Escavar buraco de aranha (Cobertura inclinada)</Portuguese>
+            <Russian>Выкопать крытую паучью дыру</Russian>
+            <German>Schützenloch graben (Abgeschrägte Abdeckung)</German>
+            <Korean>개인호 파기 (각진 엄폐)</Korean>
+            <Japanese>蛸壺壕 (屋根) を掘る</Japanese>
+            <Chinesesimp>挖掘带斜盖散兵坑</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_Action_DigSpiderholeDual">
             <English>Dig Spiderhole (Dual)</English>
-            <German>Großes Schützenloch graben</German>
-            <Italian>Scava buco di ragno (Doppio)</Italian>
-            <Japanese>蛸壺壕 (2人用) を掘る</Japanese>
-            <Polish>Wykop Lisią Norę (podwójną)</Polish>
-            <Korean>개인호 파기 (2인용)</Korean>
-            <Chinesesimp>挖掘双人散兵坑</Chinesesimp>
-            <Russian>Выкопать двойную паучью дыру</Russian>
-            <Spanish>Excavar Agujero de araña (Doble)</Spanish>
-            <Portuguese>Escavar buraco de aranha (Duplo)</Portuguese>
             <French>Creuser un trou d'araignée (double)</French>
+            <Spanish>Excavar Agujero de araña (Doble)</Spanish>
+            <Italian>Scava buco di ragno (Doppio)</Italian>
+            <Polish>Wykop Lisią Norę (podwójną)</Polish>
+            <Portuguese>Escavar buraco de aranha (Duplo)</Portuguese>
+            <Russian>Выкопать двойную паучью дыру</Russian>
+            <German>Großes Schützenloch graben</German>
+            <Korean>개인호 파기 (2인용)</Korean>
+            <Japanese>蛸壺壕 (2人用) を掘る</Japanese>
+            <Chinesesimp>挖掘双人散兵坑</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_SOG_CSW_M1919A4">
-            <English>[CSW] M1919A4 Gun Bag</English>
-            <German>[CSW] M1919A4 Waffentasche</German>
-            <Italian>[CSW] Borsa per Mitra M1919A4</Italian>
-            <Japanese>[CSW] M1919A4 ガン バッグ</Japanese>
-            <Polish>[CSW] Torba na M1919A4</Polish>
-            <Korean>[CSW] M1919A4 총가방</Korean>
-            <Chinesesimp>[班组] M1919A4 枪袋</Chinesesimp>
-            <Russian>[CSW] Сумка с M1919A4</Russian>
-            <Spanish>[CSW] M1919A4 Bolsa para arma</Spanish>
-            <Portuguese>[CSW] Bolsa para M1919A4</Portuguese>
-            <French>[CSW] M1919A4 Gun Bag</French>
+        <Key ID="STR_ACE_Compat_SOG_Box_60mm_HE">
+            <English>[ACE] M49A2 60mm HE Box</English>
+            <French>[ACE] Scatola M49A2 60mm HE</French>
+            <Spanish>[ACE] M49A2 60mm Caja de HE</Spanish>
+            <Italian>[ACE] Scatola M49A2 60mm HE</Italian>
+            <Polish>[ACE] Skrzynia M49A2 60mm HE</Polish>
+            <Portuguese>[ACE] M49A2 60mm Caixa de HE</Portuguese>
+            <Russian>[ACE] Коробка M49A2 60 мм ОФ</Russian>
+            <German>[ACE] M49A2 60mm HE Box</German>
+            <Korean>[ACE] M49A2 60mm 고폭 상자</Korean>
+            <Japanese>[ACE] M49A2 60mm 榴弾入り弾薬箱</Japanese>
+            <Chinesesimp>[ACE] M49A2 60 mm 高爆弹弹药箱</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_SOG_CSW_M1919A6">
-            <English>[CSW] M1919A6 Gun Bag</English>
-            <German>[CSW] M1919A6 Waffentasche</German>
-            <Italian>[CSW] Borsa per Mitra M1919A6</Italian>
-            <Japanese>[CSW] M1919A6 ガン バッグ</Japanese>
-            <Polish>[CSW] Torba na M1919A6</Polish>
-            <Korean>[CSW] M1919A6 총가방</Korean>
-            <Chinesesimp>[班组] M1919A6 枪袋</Chinesesimp>
-            <Russian>[CSW] Сумка с M1919A6</Russian>
-            <Spanish>[CSW] M1919A6 Bolsa para arma</Spanish>
-            <Portuguese>[CSW] Bolsa para M1919A6</Portuguese>
-            <French>[CSW] M1919A6 Gun Bag</French>
+        <Key ID="STR_ACE_Compat_SOG_Box_60mm_Lume">
+            <English>[ACE] M83 60mm Lume Box</English>
+            <French>[ACE] M83 60mm Eclairant Box</French>
+            <Spanish>[ACE] M83 60mm Caja de Iluminación</Spanish>
+            <Italian>[ACE] Scatola M83 60mm Illuminanti</Italian>
+            <Polish>[ACE] Skrzynia ILUM M83 60mm</Polish>
+            <Portuguese>[ACE] M83 60mm Caixa de Iluminação</Portuguese>
+            <Russian>[ACE] Коробка M83 60 мм Осветительных</Russian>
+            <German>[ACE] M83 60mm Leuchtpatrone Box</German>
+            <Korean>[ACE] M83 60mm 조명 상자</Korean>
+            <Japanese>[ACE] M83 60mm 照明弾弾入り弾薬箱</Japanese>
+            <Chinesesimp>[ACE] M83 60 mm 照明弹弹药箱</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_SOG_CSW_M60">
-            <English>[CSW] M60 Gun Bag</English>
-            <German>[CSW] M60 Waffentasche</German>
-            <Italian>[CSW] Borsa per Mitra M60</Italian>
-            <Japanese>[CSW] M60 ガン バッグ</Japanese>
-            <Polish>[CSW] Torba na M60</Polish>
-            <Korean>[CSW] M60 총가방</Korean>
-            <Chinesesimp>[班组] M60 枪袋</Chinesesimp>
-            <Russian>[CSW] Сумка с M60</Russian>
-            <Spanish>[CSW] M60 Bolsa para arma</Spanish>
-            <Portuguese>[CSW] Bolsa para M60</Portuguese>
-            <French>[CSW] M60 Gun Bag</French>
+        <Key ID="STR_ACE_Compat_SOG_Box_60mm_WP">
+            <English>[ACE] M302 60mm WP Box</English>
+            <French>[ACE] M302 60mm Phosphore Blanc Box</French>
+            <Spanish>[ACE] M302 60mm Caja de WP</Spanish>
+            <Italian>[ACE] Scatola M302 60mm Fosforo Bianco</Italian>
+            <Polish>[ACE] Skrzynia M302 60mm WP</Polish>
+            <Portuguese>[ACE] M302 60mm Caixa de WP</Portuguese>
+            <Russian>[ACE] Коробка M302 60 мм Фосфорных</Russian>
+            <German>[ACE] M302 60mm Weißer Phosphor Box</German>
+            <Korean>[ACE] M302 60mm 백린 상자</Korean>
+            <Japanese>[ACE] M302 60mm 白リン弾入り弾薬箱</Japanese>
+            <Chinesesimp>[ACE] M302 60 mm 白磷弹弹药箱</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_SOG_CSW_DSHKM_Shield">
-            <English>[CSW] DShK (Shield) Gun Bag</English>
-            <German>[CSW] DShK (Schutzschild) Waffentasche</German>
-            <Italian>[CSW] Borsa per Mitra DShK (con scudo)</Italian>
-            <Japanese>[CSW] DShK (防盾) ガン バッグ</Japanese>
-            <Polish>[CSW] Torba na DShK (z tarczą) </Polish>
-            <Korean>[CSW] DShK (방패) 총가방</Korean>
-            <Chinesesimp>[班组] DShK（防盾）枪袋</Chinesesimp>
-            <Russian>[CSW] Сумка с ДШК (со щитом)</Russian>
-            <Spanish>[CSW] DShK (Apantallada) Bolsa para arma</Spanish>
-            <Portuguese>[CSW] Bolsa para DShK (Escudo)</Portuguese>
-            <French>[CSW] DShK (Shield) Gun Bag</French>
+        <Key ID="STR_ACE_Compat_SOG_Box_81mm_HE">
+            <English>[ACE] M374 81mm HE Box</English>
+            <French>[ACE] Scatola M374 81mm HE</French>
+            <Spanish>[ACE] M374 81mm Caja de HE</Spanish>
+            <Italian>[ACE] Scatola M374 81mm HE</Italian>
+            <Polish>[ACE] Skrzynia M374 81mm HE</Polish>
+            <Portuguese>[ACE] M374 81mm Caixa de HE</Portuguese>
+            <Russian>[ACE] Коробка M374 81 мм ОФ</Russian>
+            <German>[ACE] M374 81mm HE Box</German>
+            <Korean>[ACE] M374 81mm 고폭 상자</Korean>
+            <Japanese>[ACE] M374 81mm 榴弾入り弾薬箱</Japanese>
+            <Chinesesimp>[ACE] M374 81 mm 高爆弹弹药箱</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_81mm_Lume">
+            <English>[ACE] M301A3 81mm Lume Box</English>
+            <French>[ACE] M301A3 81mm Eclairant Box</French>
+            <Spanish>[ACE] M301A3 81mm Caja de Iluminación</Spanish>
+            <Italian>[ACE] Scatola M301A3 81mm Illuminanti</Italian>
+            <Polish>[ACE] Skrzynia M301A3 81mm ILUM</Polish>
+            <Portuguese>[ACE] M301A3 81mm Caixa de Iluminação</Portuguese>
+            <Russian>[ACE] Коробка M301A3 81 мм Осветительных</Russian>
+            <German>[ACE] M301A3 81mm Leuchtpatrone Box</German>
+            <Korean>[ACE] M301A3 81mm 조명 상자</Korean>
+            <Japanese>[ACE] M301A1 81mm 照明弾入り弾薬箱</Japanese>
+            <Chinesesimp>[ACE] M301A3 81 mm 照明弹弹药箱</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_81mm_Smoke">
+            <English>[ACE] M57 81mm Smoke Box</English>
+            <French>[ACE] M57 81mm Fumigène Box</French>
+            <Spanish>[ACE] M57 81mm Caja de Humo</Spanish>
+            <Italian>[ACE] Scatola M57 81mm Fumogeni</Italian>
+            <Polish>[ACE] Skrzynia M57 81mm Dymny</Polish>
+            <Portuguese>[ACE] M57 81mm Caixa de Fumígena</Portuguese>
+            <Russian>[ACE] Коробка M57 81 мм Дымовых</Russian>
+            <German>[ACE] M57 81mm Nebelpatrone Box</German>
+            <Korean>[ACE] M57 81mm 연막 상자</Korean>
+            <Japanese>[ACE] M57 81mm 煙幕弾入り弾薬箱</Japanese>
+            <Chinesesimp>[ACE] M57 81 mm 烟雾弹弹药箱</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_81mm_WP">
+            <English>[ACE] M375 81mm WP Box</English>
+            <French>[ACE] M375 81mm Phosphore Blanc Box</French>
+            <Spanish>[ACE] M375 81mm Caja de WP</Spanish>
+            <Italian>[ACE] Scatola M375 81mm Fosforo Bianco</Italian>
+            <Polish>[ACE] Skrzynia M375 81mm WP</Polish>
+            <Portuguese>[ACE] M375 81mm Caixa de WP</Portuguese>
+            <Russian>[ACE] Коробка M375 81 мм Фосфорных</Russian>
+            <German>[ACE] M375 81mm Weißer Phosphor Box</German>
+            <Korean>[ACE] M375 81mm 백린 상자</Korean>
+            <Japanese>[ACE] M375 81mm 白リン弾入り弾薬箱</Japanese>
+            <Chinesesimp>[ACE] M375 81 mm 白磷弹弹药箱</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_82mm_HE">
+            <English>[ACE] O-832D 82mm HE Box</English>
+            <French>[ACE] Scatola O-832D 82mm HE</French>
+            <Spanish>[ACE] O-832D 82mm Caja de HE</Spanish>
+            <Italian>[ACE] Scatola O-832D 82mm HE</Italian>
+            <Polish>[ACE] Skrzynia O-832D 82mm HE</Polish>
+            <Portuguese>[ACE] O-832D 82mm Caixa de HE</Portuguese>
+            <Russian>[ACE] Коробка О-832Д 82 мм ОФ</Russian>
+            <German>[ACE] O-832D 82mm HE Box</German>
+            <Korean>[ACE] O-832D 82mm 고폭 상자</Korean>
+            <Japanese>[ACE] O-832D 82mm 榴弾入り弾薬箱</Japanese>
+            <Chinesesimp>[ACE] O-832D 82 mm 高爆弹弹药箱</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_82mm_Lume">
+            <English>[ACE] S-832S 82mm Lume Box</English>
+            <French>[ACE] S-832S 82mm Eclairant Box</French>
+            <Spanish>[ACE] S-832S 82mm Caja de Iluminación</Spanish>
+            <Italian>[ACE] Scatola S-832S 82mm Illuminanti</Italian>
+            <Polish>[ACE] Skrzynia S-832S 82mm ILUM</Polish>
+            <Portuguese>[ACE] S-832S 82mm Caixa de Iluminação</Portuguese>
+            <Russian>[ACE] Коробка С-832С 82 мм Осветительных</Russian>
+            <German>[ACE] S-832S 82mm Leuchtpatrone Box</German>
+            <Korean>[ACE] S-832S 82mm 조명 상자</Korean>
+            <Japanese>[ACE] S-832S 82mm 照明弾入り弾薬箱</Japanese>
+            <Chinesesimp>[ACE] S-832S 82 mm 照明弹弹药箱</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Box_82mm_WP">
+            <English>[ACE] D-832 82mm WP Box</English>
+            <French>[ACE] D-832 82mm Phosphore Blanc Box</French>
+            <Spanish>[ACE] D-832 82mm Caja de WP</Spanish>
+            <Italian>[ACE] Scatola D-832 82mm Fosforo Bianco</Italian>
+            <Polish>[ACE] Skrzynia D-832 82mm WP</Polish>
+            <Portuguese>[ACE] D-832 82mm Caixa de WP</Portuguese>
+            <Russian>[ACE] Коробка Д-832 82 мм Фосфорных</Russian>
+            <German>[ACE] D-832 82mm Weißer Phosphor Box</German>
+            <Korean>[ACE] D-832 82mm 백린 상자</Korean>
+            <Japanese>[ACE] D-832 82mm 白リン弾入り弾薬箱</Japanese>
+            <Chinesesimp>[ACE] D-832 82 mm 白磷弹弹药箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_DSHKM_AA">
             <English>[CSW] DShK (AA) Gun Bag</English>
-            <German>[CSW] DShK (AA) Waffentasche</German>
-            <Italian>[CSW] Borsa per Mitra DShK (AA)</Italian>
-            <Japanese>[CSW] DShK (対空) ガン バッグ</Japanese>
-            <Polish>[CSW] Torba na DShK (AA) </Polish>
-            <Korean>[CSW] DShK (대공) 총가방</Korean>
-            <Chinesesimp>[班组] DShK（高）枪袋</Chinesesimp>
-            <Russian>[CSW] Сумка с ДШК (зенитный)</Russian>
-            <Spanish>[CSW] DShK (AA) Bolsa para arma</Spanish>
-            <Portuguese>[CSW] Bolsa para DShK (AA)</Portuguese>
             <French>[CSW] DShK (AA) Gun Bag</French>
+            <Spanish>[CSW] DShK (AA) Bolsa para arma</Spanish>
+            <Italian>[CSW] Borsa per Mitra DShK (AA)</Italian>
+            <Polish>[CSW] Torba na DShK (AA)</Polish>
+            <Portuguese>[CSW] Bolsa para DShK (AA)</Portuguese>
+            <Russian>[CSW] Сумка с ДШК (зенитный)</Russian>
+            <German>[CSW] DShK (AA) Waffentasche</German>
+            <Korean>[CSW] DShK (대공) 총가방</Korean>
+            <Japanese>[CSW] DShK (対空) ガン バッグ</Japanese>
+            <Chinesesimp>[班组] DShK（高）枪袋</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_SOG_CSW_RPD">
-            <English>[CSW] RPD Gun Bag</English>
-            <German>[CSW] RPD Waffentasche</German>
-            <Italian>[CSW] Borsa per Mitra RPD</Italian>
-            <Japanese>[CSW] RPD ガン バッグ</Japanese>
-            <Polish>[CSW] Torba na RPD</Polish>
-            <Korean>[CSW] RPD 총가방</Korean>
-            <Chinesesimp>[班组] RPD 枪袋</Chinesesimp>
-            <Russian>[CSW] Сумка с РПД</Russian>
-            <Spanish>[CSW] RPD Bolsa para arma</Spanish>
-            <Portuguese>[CSW] Bolsa para RPD</Portuguese>
-            <French>[CSW] RPD Gun Bag</French>
+        <Key ID="STR_ACE_Compat_SOG_CSW_DSHKM_Shield">
+            <English>[CSW] DShK (Shield) Gun Bag</English>
+            <French>[CSW] DShK (Shield) Gun Bag</French>
+            <Spanish>[CSW] DShK (Apantallada) Bolsa para arma</Spanish>
+            <Italian>[CSW] Borsa per Mitra DShK (con scudo)</Italian>
+            <Polish>[CSW] Torba na DShK (z tarczą)</Polish>
+            <Portuguese>[CSW] Bolsa para DShK (Escudo)</Portuguese>
+            <Russian>[CSW] Сумка с ДШК (со щитом)</Russian>
+            <German>[CSW] DShK (Schutzschild) Waffentasche</German>
+            <Korean>[CSW] DShK (방패) 총가방</Korean>
+            <Japanese>[CSW] DShK (防盾) ガン バッグ</Japanese>
+            <Chinesesimp>[班组] DShK（防盾）枪袋</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_SOG_CSW_PK">
-            <English>[CSW] PK Gun Bag</English>
-            <German>[CSW] PK Waffentasche</German>
-            <Italian>[CSW] Borsa per Mitra PK</Italian>
-            <Japanese>[CSW] PK ガン バッグ</Japanese>
-            <Polish>[CSW] Torba na PK</Polish>
-            <Korean>[CSW] PK 총가방</Korean>
-            <Chinesesimp>[班组] PK 枪袋</Chinesesimp>
-            <Russian>[CSW] Сумка с ПК</Russian>
-            <Spanish>[CSW] PK Bolsa para arma</Spanish>
-            <Portuguese>[CSW] Bolsa para PK</Portuguese>
-            <French>[CSW] PK Sac d'armes</French>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M1919A4">
+            <English>[CSW] M1919A4 Gun Bag</English>
+            <French>[CSW] M1919A4 Gun Bag</French>
+            <Spanish>[CSW] M1919A4 Bolsa para arma</Spanish>
+            <Italian>[CSW] Borsa per Mitra M1919A4</Italian>
+            <Polish>[CSW] Torba na M1919A4</Polish>
+            <Portuguese>[CSW] Bolsa para M1919A4</Portuguese>
+            <Russian>[CSW] Сумка с M1919A4</Russian>
+            <German>[CSW] M1919A4 Waffentasche</German>
+            <Korean>[CSW] M1919A4 총가방</Korean>
+            <Japanese>[CSW] M1919A4 ガン バッグ</Japanese>
+            <Chinesesimp>[班组] M1919A4 枪袋</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_SOG_CSW_MG42">
-            <English>[CSW] MG42 Gun Bag</English>
-            <German>[CSW] MG42 Waffentasche</German>
-            <Italian>[CSW] Borsa per Mitra MG42</Italian>
-            <Japanese>[CSW] MG42 ガン バッグ</Japanese>
-            <Polish>[CSW] Torba na MG42</Polish>
-            <Korean>[CSW] MG42 총가방</Korean>
-            <Chinesesimp>[班组] MG42 枪袋</Chinesesimp>
-            <Russian>[CSW] Сумка с MG42</Russian>
-            <Spanish>[CSW] MG42 Bolsa para arma</Spanish>
-            <Portuguese>[CSW] Bolsa para MG42</Portuguese>
-            <French>[CSW] MG42 Sac d'armes</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_CSW_SGM">
-            <English>[CSW] SGM Gun Bag</English>
-            <German>[CSW] SGM Waffentasche</German>
-            <Italian>[CSW] Borsa per Mitra SGM</Italian>
-            <Japanese>[CSW] SGM ガン バッグ</Japanese>
-            <Polish>[CSW] Torba na SGM</Polish>
-            <Korean>[CSW] SGM 총가방</Korean>
-            <Chinesesimp>[班组] SGM 枪袋</Chinesesimp>
-            <Russian>[CSW] Сумка с СГМ</Russian>
-            <Spanish>[CSW] SGM Bolsa para arma</Spanish>
-            <Portuguese>[CSW] Bolsa para SGM</Portuguese>
-            <French>[CSW] SGM Sac d'armes</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_CSW_SGM_Shield">
-            <English>[CSW] SGM (Shield) Gun Bag</English>
-            <German>[CSW] SGM (Schutzschild) Waffentasche</German>
-            <Italian>[CSW] Borsa per Mitra SGM (con scudo)</Italian>
-            <Japanese>[CSW] SGM (防盾) ガン バッグ</Japanese>
-            <Polish>[CSW] Torba na SGM (z tarczą) </Polish>
-            <Korean>[CSW] SGM (방패) 총가방</Korean>
-            <Chinesesimp>[班组] SGM（防盾）枪袋</Chinesesimp>
-            <Russian>[CSW] Сумка с СГМ (со щитом)</Russian>
-            <Spanish>[CSW] SGM (Apantallada) Bolsa para arma</Spanish>
-            <Portuguese>[CSW] Bolsa para SGM (Escudo)</Portuguese>
-            <French>[CSW] SGM Sac d'armes (avec bouclier)</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_CSW_Mk18">
-            <English>[CSW] Mk18 Gun Bag</English>
-            <German>[CSW] Mk18 Waffentasche</German>
-            <Italian>[CSW] Borsa per GMG Mk18</Italian>
-            <Japanese>[CSW] Mk18 ガン バッグ</Japanese>
-            <Polish>[CSW] Torba na Mk18</Polish>
-            <Korean>[CSW] Mk18 총가방</Korean>
-            <Chinesesimp>[班组] Mk18 枪袋</Chinesesimp>
-            <Russian>[CSW] Сумка с Mk18</Russian>
-            <Spanish>[CSW] Mk18 Bolsa para arma</Spanish>
-            <Portuguese>[CSW] Bolsa para Mk18</Portuguese>
-            <French>[CSW] Mk18 Sac d'armes</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_SOG_CSW_M29">
-            <English>[CSW] M29 Mortar Tube</English>
-            <German>[CSW] M29 Mörserrohr</German>
-            <Italian>[CSW] Tubo di Mortaio M29</Italian>
-            <Japanese>[CSW] M29 発射筒</Japanese>
-            <Polish>[CSW] M29 Rura od moździerza</Polish>
-            <Korean>[CSW] M29 박격포 포신</Korean>
-            <Chinesesimp>[班组] M29 迫击炮炮管</Chinesesimp>
-            <Russian>[CSW] Сумка с миномётом M29</Russian>
-            <Spanish>[CSW] M29 Tubo de Mortero</Spanish>
-            <Portuguese>[CSW] M29 Tubo de Morteiro</Portuguese>
-            <French>[CSW] Tube de mortier M29</French>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M1919A6">
+            <English>[CSW] M1919A6 Gun Bag</English>
+            <French>[CSW] M1919A6 Gun Bag</French>
+            <Spanish>[CSW] M1919A6 Bolsa para arma</Spanish>
+            <Italian>[CSW] Borsa per Mitra M1919A6</Italian>
+            <Polish>[CSW] Torba na M1919A6</Polish>
+            <Portuguese>[CSW] Bolsa para M1919A6</Portuguese>
+            <Russian>[CSW] Сумка с M1919A6</Russian>
+            <German>[CSW] M1919A6 Waffentasche</German>
+            <Korean>[CSW] M1919A6 총가방</Korean>
+            <Japanese>[CSW] M1919A6 ガン バッグ</Japanese>
+            <Chinesesimp>[班组] M1919A6 枪袋</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_M2">
             <English>[CSW] M2 Mortar Tube</English>
-            <German>[CSW] M2 Mörserrohr</German>
-            <Italian>[CSW] Tubo di Mortaio M2</Italian>
-            <Japanese>[CSW] M2 底盤</Japanese>
-            <Polish>[CSW] M2 Rura od moździerza</Polish>
-            <Korean>[CSW] M2 박격포 포신</Korean>
-            <Chinesesimp>[班组] M2 迫击炮炮管</Chinesesimp>
-            <Russian>[CSW] Сумка с миномётом M2</Russian>
+            <French>[CSW] Tube de mortier M2</French>
             <Spanish>[CSW] M2 Tubo de mortero</Spanish>
+            <Italian>[CSW] Tubo di Mortaio M2</Italian>
+            <Polish>[CSW] M2 Rura od moździerza</Polish>
             <Portuguese>[CSW] M2 Tubo de Morteiro</Portuguese>
-            <French>[CSW] Tube de mortier M2 </French>
+            <Russian>[CSW] Сумка с миномётом M2</Russian>
+            <German>[CSW] M2 Mörserrohr</German>
+            <Korean>[CSW] M2 박격포 포신</Korean>
+            <Japanese>[CSW] M2 底盤</Japanese>
+            <Chinesesimp>[班组] M2 迫击炮炮管</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M29">
+            <English>[CSW] M29 Mortar Tube</English>
+            <French>[CSW] Tube de mortier M29</French>
+            <Spanish>[CSW] M29 Tubo de Mortero</Spanish>
+            <Italian>[CSW] Tubo di Mortaio M29</Italian>
+            <Polish>[CSW] M29 Rura od moździerza</Polish>
+            <Portuguese>[CSW] M29 Tubo de Morteiro</Portuguese>
+            <Russian>[CSW] Сумка с миномётом M29</Russian>
+            <German>[CSW] M29 Mörserrohr</German>
+            <Korean>[CSW] M29 박격포 포신</Korean>
+            <Japanese>[CSW] M29 発射筒</Japanese>
+            <Chinesesimp>[班组] M29 迫击炮炮管</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_M60">
+            <English>[CSW] M60 Gun Bag</English>
+            <French>[CSW] M60 Gun Bag</French>
+            <Spanish>[CSW] M60 Bolsa para arma</Spanish>
+            <Italian>[CSW] Borsa per Mitra M60</Italian>
+            <Polish>[CSW] Torba na M60</Polish>
+            <Portuguese>[CSW] Bolsa para M60</Portuguese>
+            <Russian>[CSW] Сумка с M60</Russian>
+            <German>[CSW] M60 Waffentasche</German>
+            <Korean>[CSW] M60 총가방</Korean>
+            <Japanese>[CSW] M60 ガン バッグ</Japanese>
+            <Chinesesimp>[班组] M60 枪袋</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_MG42">
+            <English>[CSW] MG42 Gun Bag</English>
+            <French>[CSW] MG42 Sac d'armes</French>
+            <Spanish>[CSW] MG42 Bolsa para arma</Spanish>
+            <Italian>[CSW] Borsa per Mitra MG42</Italian>
+            <Polish>[CSW] Torba na MG42</Polish>
+            <Portuguese>[CSW] Bolsa para MG42</Portuguese>
+            <Russian>[CSW] Сумка с MG42</Russian>
+            <German>[CSW] MG42 Waffentasche</German>
+            <Korean>[CSW] MG42 총가방</Korean>
+            <Japanese>[CSW] MG42 ガン バッグ</Japanese>
+            <Chinesesimp>[班组] MG42 枪袋</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_Mk18">
+            <English>[CSW] Mk18 Gun Bag</English>
+            <French>[CSW] Mk18 Sac d'armes</French>
+            <Spanish>[CSW] Mk18 Bolsa para arma</Spanish>
+            <Italian>[CSW] Borsa per GMG Mk18</Italian>
+            <Polish>[CSW] Torba na Mk18</Polish>
+            <Portuguese>[CSW] Bolsa para Mk18</Portuguese>
+            <Russian>[CSW] Сумка с Mk18</Russian>
+            <German>[CSW] Mk18 Waffentasche</German>
+            <Korean>[CSW] Mk18 총가방</Korean>
+            <Japanese>[CSW] Mk18 ガン バッグ</Japanese>
+            <Chinesesimp>[班组] Mk18 枪袋</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_PK">
+            <English>[CSW] PK Gun Bag</English>
+            <French>[CSW] PK Sac d'armes</French>
+            <Spanish>[CSW] PK Bolsa para arma</Spanish>
+            <Italian>[CSW] Borsa per Mitra PK</Italian>
+            <Polish>[CSW] Torba na PK</Polish>
+            <Portuguese>[CSW] Bolsa para PK</Portuguese>
+            <Russian>[CSW] Сумка с ПК</Russian>
+            <German>[CSW] PK Waffentasche</German>
+            <Korean>[CSW] PK 총가방</Korean>
+            <Japanese>[CSW] PK ガン バッグ</Japanese>
+            <Chinesesimp>[班组] PK 枪袋</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_RPD">
+            <English>[CSW] RPD Gun Bag</English>
+            <French>[CSW] RPD Gun Bag</French>
+            <Spanish>[CSW] RPD Bolsa para arma</Spanish>
+            <Italian>[CSW] Borsa per Mitra RPD</Italian>
+            <Polish>[CSW] Torba na RPD</Polish>
+            <Portuguese>[CSW] Bolsa para RPD</Portuguese>
+            <Russian>[CSW] Сумка с РПД</Russian>
+            <German>[CSW] RPD Waffentasche</German>
+            <Korean>[CSW] RPD 총가방</Korean>
+            <Japanese>[CSW] RPD ガン バッグ</Japanese>
+            <Chinesesimp>[班组] RPD 枪袋</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_SGM">
+            <English>[CSW] SGM Gun Bag</English>
+            <French>[CSW] SGM Sac d'armes</French>
+            <Spanish>[CSW] SGM Bolsa para arma</Spanish>
+            <Italian>[CSW] Borsa per Mitra SGM</Italian>
+            <Polish>[CSW] Torba na SGM</Polish>
+            <Portuguese>[CSW] Bolsa para SGM</Portuguese>
+            <Russian>[CSW] Сумка с СГМ</Russian>
+            <German>[CSW] SGM Waffentasche</German>
+            <Korean>[CSW] SGM 총가방</Korean>
+            <Japanese>[CSW] SGM ガン バッグ</Japanese>
+            <Chinesesimp>[班组] SGM 枪袋</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_CSW_SGM_Shield">
+            <English>[CSW] SGM (Shield) Gun Bag</English>
+            <French>[CSW] SGM Sac d'armes (avec bouclier)</French>
+            <Spanish>[CSW] SGM (Apantallada) Bolsa para arma</Spanish>
+            <Italian>[CSW] Borsa per Mitra SGM (con scudo)</Italian>
+            <Polish>[CSW] Torba na SGM (z tarczą)</Polish>
+            <Portuguese>[CSW] Bolsa para SGM (Escudo)</Portuguese>
+            <Russian>[CSW] Сумка с СГМ (со щитом)</Russian>
+            <German>[CSW] SGM (Schutzschild) Waffentasche</German>
+            <Korean>[CSW] SGM (방패) 총가방</Korean>
+            <Japanese>[CSW] SGM (防盾) ガン バッグ</Japanese>
+            <Chinesesimp>[班组] SGM（防盾）枪袋</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_SOG_CSW_Type53">
             <English>[CSW] Type 53 Mortar Tube</English>
-            <German>[CSW] Typ 53 Mörserrohr</German>
-            <Italian>[CSW] Tubo di Mortaio Type 53</Italian>
-            <Japanese>[CSW] 53 式 発射筒</Japanese>
-            <Polish>[CSW] Type 53 Rura od moździerza</Polish>
-            <Korean>[CSW] 53식 박격포 포신</Korean>
-            <Chinesesimp>[班组] 53式迫击炮炮管</Chinesesimp>
-            <Russian>[CSW] Сумка с миномётом Type 53</Russian>
-            <Spanish>[CSW] Type 53 Tubo de mortero</Spanish>
-            <Portuguese>[CSW] Type 53 Tubo de Morteiro</Portuguese>
             <French>[CSW] Tube de mortier Type 53</French>
+            <Spanish>[CSW] Type 53 Tubo de mortero</Spanish>
+            <Italian>[CSW] Tubo di Mortaio Type 53</Italian>
+            <Polish>[CSW] Type 53 Rura od moździerza</Polish>
+            <Portuguese>[CSW] Type 53 Tubo de Morteiro</Portuguese>
+            <Russian>[CSW] Сумка с миномётом Type 53</Russian>
+            <German>[CSW] Typ 53 Mörserrohr</German>
+            <Korean>[CSW] 53식 박격포 포신</Korean>
+            <Japanese>[CSW] 53 式 発射筒</Japanese>
+            <Chinesesimp>[班组] 53式迫击炮炮管</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_HE">
+            <English>M49A2 60mm HE</English>
+            <French>M49A2 60mm HE</French>
+            <Spanish>M49A2 60mm HE</Spanish>
+            <Italian>M49A2 60mm HE</Italian>
+            <Polish>M49A2 60mm HE</Polish>
+            <Portuguese>M49A2 60mm HE</Portuguese>
+            <Russian>M49A2 60 мм ОФ</Russian>
+            <German>M49A2 60mm HE</German>
+            <Korean>M49A2 60mm 고폭</Korean>
+            <Japanese>M49A2 60mm 榴弾</Japanese>
+            <Chinesesimp>M49A2 60 mm 高爆弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_Lume">
+            <English>M83 60mm Lume</English>
+            <French>M83 60 mm Eclairant</French>
+            <Spanish>M83 60mm Iluminación</Spanish>
+            <Italian>M83 60mm Illuminante</Italian>
+            <Polish>M83 60mm ILUM</Polish>
+            <Portuguese>M83 60mm Iluminação</Portuguese>
+            <Russian>M83 60 мм Осветительная</Russian>
+            <German>M83 60mm Leuchtpatrone</German>
+            <Korean>M83 60mm 조명</Korean>
+            <Japanese>M83 60mm 照明弾</Japanese>
+            <Chinesesimp>M83 60 mm 照明弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_60mm_WP">
+            <English>M302 60mm WP</English>
+            <French>M302 60mm Phosphore Blanc</French>
+            <Spanish>M302 60mm WP</Spanish>
+            <Italian>M302 60mm Fosforo Bianco</Italian>
+            <Polish>M302 60mm WP</Polish>
+            <Portuguese>M302 60mm WP</Portuguese>
+            <Russian>M302 60 мм Фосфорная</Russian>
+            <German>M302 60mm Weißer Phosphor</German>
+            <Korean>M302 60mm 백린</Korean>
+            <Japanese>M302 60mm 白リン弾</Japanese>
+            <Chinesesimp>M302 60 mm 白磷弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_HE">
+            <English>M374 81mm HE</English>
+            <French>M374 81mm HE</French>
+            <Spanish>M374 81mm HE</Spanish>
+            <Italian>M374 81mm HE</Italian>
+            <Polish>M374 81mm HE</Polish>
+            <Portuguese>M374 81mm HE</Portuguese>
+            <Russian>M374 81 мм ОФ</Russian>
+            <German>M374 81mm HE</German>
+            <Korean>M374 81mm 고폭</Korean>
+            <Japanese>M374 81mm 榴弾</Japanese>
+            <Chinesesimp>M374 81 mm 高爆弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Lume">
+            <English>M301A3 81mm Lume</English>
+            <French>M301A3 81mm Eclairant</French>
+            <Spanish>M301A3 81mm Iluminación</Spanish>
+            <Italian>M301A3 81mm Illuminante</Italian>
+            <Polish>M301A3 81mm ILUM</Polish>
+            <Portuguese>M301A3 81mm Iluminação</Portuguese>
+            <Russian>M301A3 81 мм Осветительная</Russian>
+            <German>M301A3 81mm Leuchtpatrone</German>
+            <Korean>M301A3 81mm 조명</Korean>
+            <Japanese>M301A3 81mm 照明弾</Japanese>
+            <Chinesesimp>M301A3 81 mm 照明弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_Smoke">
+            <English>M57 81mm Smoke</English>
+            <French>M57 81mm Fumigène</French>
+            <Spanish>M57 81mm Smoke</Spanish>
+            <Italian>M57 81mm Fumogeno</Italian>
+            <Polish>M57 81mm Dymny</Polish>
+            <Portuguese>M57 81mm Fumígena</Portuguese>
+            <Russian>M57 81 мм Дымовая</Russian>
+            <German>M57 81mm Nebelpatrone</German>
+            <Korean>M57 81mm 연막</Korean>
+            <Japanese>M57 81mm 発煙弾</Japanese>
+            <Chinesesimp>M57 81 mm 烟雾弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_81mm_WP">
+            <English>M375 81mm WP</English>
+            <French>M375 81mm Phosphore Blanc</French>
+            <Spanish>M375 81mm WP</Spanish>
+            <Italian>M375 81mm Fosforo Bianco</Italian>
+            <Polish>M375 81mm WP</Polish>
+            <Portuguese>M375 81mm WP</Portuguese>
+            <Russian>M375 81 мм Фосфорная</Russian>
+            <German>M375 81mm Weißer Phosphor</German>
+            <Korean>M375 81mm 백린</Korean>
+            <Japanese>M375 81mm 白リン弾</Japanese>
+            <Chinesesimp>M375 81 mm 白磷弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_HE">
+            <English>O-832D 82mm HE</English>
+            <French>O-832D 82mm HE</French>
+            <Spanish>O-832D 82mm HE</Spanish>
+            <Italian>O-832D 82mm HE</Italian>
+            <Polish>O-832D 82mm HE</Polish>
+            <Portuguese>O-832D 82mm HE</Portuguese>
+            <Russian>О-832Д 82 мм ОФ</Russian>
+            <German>O-832D 82mm HE</German>
+            <Korean>O-832D 82mm 고폭</Korean>
+            <Japanese>O-832D 82mm 榴弾</Japanese>
+            <Chinesesimp>O-832D 82 mm 高爆弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_Lume">
+            <English>S-832S 82mm Lume</English>
+            <French>S-832S 82mm Eclairant</French>
+            <Spanish>S-832S 82mm Iluminación</Spanish>
+            <Italian>S-832S 82mm Illuminante</Italian>
+            <Polish>S-832S 82mm ILUM</Polish>
+            <Portuguese>S-832S 82mm Iluminação</Portuguese>
+            <Russian>С-832С 82 мм Осветительная</Russian>
+            <German>S-832S 82mm Leuchtpatrone</German>
+            <Korean>S-832S 82mm 조명</Korean>
+            <Japanese>S-832S 82mm 照明弾</Japanese>
+            <Chinesesimp>S-832S 82 mm 照明弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_SOG_Magazine_82mm_WP">
+            <English>D-832 82mm WP</English>
+            <French>D-832 82mm Phosphore Blanc</French>
+            <Spanish>D-832 82mm WP</Spanish>
+            <Italian>D-832 82mm Fosforo Bianco</Italian>
+            <Polish>D-832 82mm WP</Polish>
+            <Portuguese>D-832 82mm WP</Portuguese>
+            <Russian>Д-832 82 мм Фосфорная</Russian>
+            <German>D-832 82mm Weißer Phosphor</German>
+            <Korean>D-832 82mm 백린</Korean>
+            <Japanese>D-832 82mm 白リン弾</Japanese>
+            <Chinesesimp>D-832 82 mm 白磷弹</Chinesesimp>
         </Key>
     </Package>
 </Project>

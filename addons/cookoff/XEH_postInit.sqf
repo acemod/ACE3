@@ -17,7 +17,7 @@ if (isServer) then {
     {
         deleteVehicle _x;
     } forEach ((_this select 0) getVariable [QGVAR(effects), []]);
-}, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
+}, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to exclude animals as well
 
 ["ReammoBox_F", "Deleted", {
     {
@@ -58,7 +58,7 @@ if (isServer) then {
             random [MIN_AMMO_DETONATION_START_DELAY, (MIN_AMMO_DETONATION_START_DELAY + MAX_AMMO_DETONATION_START_DELAY) / 2, MAX_AMMO_DETONATION_START_DELAY]
         ]] call CBA_fnc_serverEvent;
     };
-}, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
+}, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to exclude animals as well
 
 if (hasInterface) then {
     // Plays a sound locally, so that different sounds can be used for various distances

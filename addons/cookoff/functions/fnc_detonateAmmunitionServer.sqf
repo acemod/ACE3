@@ -39,16 +39,12 @@ if (_object getVariable [QGVAR(isAmmoDetonating), false]) exitWith {};
 
 _object setVariable [QGVAR(isAmmoDetonating), true, true];
 
-_object setVariable [QGVAR(cookoffMagazines), _object call FUNC(getVehicleAmmo)];
+// Make sure that virtual magazines have been reset
+_object setVariable [QGVAR(virtualMagazines), nil];
 
-// TODO: When setMagazineTurretAmmo and magazineTurretAmmo are fixed (https://feedback.bistudio.com/T79689),
-// we can add gradual ammo removal during cook-off
-if (GVAR(removeAmmoDuringCookoff)) then {
-    clearMagazineCargoGlobal _object;
-
-    {
-        [QEGVAR(common,removeMagazinesTurret), [_object, _x select 0, _x select 1], _object, _x select 1] call CBA_fnc_turretEvent;
-    } forEach (magazinesAllTurrets _object);
+// Save the vehicle's ammo, so it won't be removed during cook-off
+if (!GVAR(removeAmmoDuringCookoff)) then {
+    _object setVariable [QGVAR(cookoffMagazines), [_object, true] call FUNC(getVehicleAmmo)];
 };
 
 [LINKFUNC(detonateAmmunitionServerLoop), [_object, _destroyWhenFinished, _source, _instigator], _initialDelay] call CBA_fnc_waitAndExecute;
