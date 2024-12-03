@@ -1,21 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="HitReactions">
+        <Key ID="STR_ACE_HitReactions_minDamageToTrigger_Description">
+            <English>If a unit takes more damage than this setting's value whilst moving on foot, they will fall over.\nIf set to -1 the mechanic is turned off.</English>
+            <Russian>Если при передвижении пешком юнит получит больше урона, чем указано в этой настройке,то он упадет.\nЕсли установлено значение -1, механика отключается.</Russian>
+            <Korean>유닛이 도보로 이동하는 동안 이 설정 값보다 많은 대미지를 입으면 넘어집니다.\n-1로 설정하면 이 기능은 꺼집니다.</Korean>
+            <Japanese>徒歩で移動中のユニットが設定値を超えるダメージを受けると転倒します。\n-1に設定することでこの機能を無効化できます。</Japanese>
+        </Key>
         <Key ID="STR_ACE_HitReactions_minDamageToTrigger_displayName">
             <English>Min Damage to trigger falling</English>
+            <Czech>Minimum škody pro aktivaci spadnutí</Czech>
+            <French>Dommages minimaux pour faire tomber le joueur</French>
+            <Spanish>Daño mínimo para provocar la caída</Spanish>
             <Italian>Danno Minimo per far cadere</Italian>
+            <Polish>Minimalne obrażenie, żeby aktywować spadanie</Polish>
+            <Portuguese>Dano Mínimo para ativar queda</Portuguese>
+            <Russian>Мин. урон для активации падения</Russian>
+            <German>Mindestschaden, um Sturz auszulösen</German>
+            <Korean>넘어지는 최소 대미지</Korean>
+            <Japanese>転倒が発生するダメージの最低値</Japanese>
             <Chinese>觸發倒下前最低需受到多少傷害</Chinese>
             <Chinesesimp>触发倒下前最低需受到多少伤害</Chinesesimp>
-            <Japanese>崩れ落ちるまでの最低損傷値</Japanese>
-            <Korean>넘어질 때 발생하는 최소 피해량</Korean>
-            <German>Mindestschaden, um Sturz auszulösen</German>
-            <Polish>Minimalne obrażenie, żeby aktywować spadanie</Polish>
-            <Russian>Мин. урон для активации падения</Russian>
-            <Portuguese>Dano Mínimo para ativar queda</Portuguese>
-            <French>Dommages minimaux pour faire tomber le joueur</French>
-            <Czech>Minimum škody pro aktivaci spadnutí</Czech>
             <Turkish>Düşmeyi tetikleyen min hasar</Turkish>
-            <Spanish>Daño mínimo para provocar la caída</Spanish>
+        </Key>
+        <Key ID="STR_ACE_HitReactions_weaponDropChanceArmHitAI_displayName">
+            <English>AI Weapon Drop Chance (Arm Hit)</English>
+            <French>Probabilité de l'IA de lâcher l'arme (coup au bras)</French>
+            <Spanish>Probabilidad de IA de Soltar el Arma (Impacto en Brazo)</Spanish>
+            <Italian>Probabilità dell'IA di far cadere l'arma (colpo al braccio)</Italian>
+            <Portuguese>Probabilidade da IA de largar a arma após tiro no braço</Portuguese>
+            <Russian>Шанс выпадения оружия у ИИ (попадание в руку)</Russian>
+            <German>KI-Wahrscheinlichkeit, die Waffe fallen zu lassen (Arm Treffer)</German>
+            <Korean>인공지능이 무기를 떨굴 확률 (팔 피격)</Korean>
+            <Japanese>AIが武器を落とす確率 (腕部への被弾)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_HitReactions_weaponDropChanceArmHitPlayer_displayName">
+            <English>Player Weapon Drop Chance (Arm Hit)</English>
+            <French>Probabilité de lâcher l'arme (coup au bras)</French>
+            <Spanish>Probabilidad del Jugador de Soltar el Arma (Impacto en Brazo)</Spanish>
+            <Italian>Probabilità dei giocatori di far cadere l'arma (colpo al braccio)</Italian>
+            <Portuguese>Probabilidade do jogador de largar a arma após tiro no braço</Portuguese>
+            <Russian>Шанс выпадения оружия у игрока (попадание в руку)</Russian>
+            <German>Spieler Wahrscheinlichkeit, die Waffe fallen zu lassen (Arm Treffer)</German>
+            <Korean>플레이어가 무기를 떨굴 확률 (팔 피격)</Korean>
+            <Japanese>プレイヤーが武器を落とす確率 (腕部への被弾)</Japanese>
         </Key>
     </Package>
 </Project>

@@ -20,11 +20,7 @@
 params ["", "", "_parameters"];
 _parameters params ["_unit"];
 
-private _namespace = EGVAR(interact_menu,ActNamespace);
-private _actionTrees = _namespace getVariable typeOf _unit;
-if (isNil "_actionTrees") then {
-    _actionTrees = [];
-};
+private _actionTrees = EGVAR(interact_menu,ActNamespace) getOrDefault [typeOf _unit, []];
 
 private _actions = [];
 

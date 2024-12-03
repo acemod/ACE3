@@ -34,14 +34,12 @@ if (_zIndex < 5) then {
         _zAng = 90;
     };
     for "_i" from 0 to _radi do {
-        private _test = true;
         private _vec = [1, ((_i * _split) + _rand) % 360, _zAng] call CBA_fnc_polar2vect;
         for "_x" from 1 to _distanceCount do {
             private _testPos = _pos vectorAdd (_vec vectorMultiply _x);
             // drop ["\a3\data_f\Cl_basic","","Billboard",1,15,ASLtoATL _testPos,[0,0,0],1,1.275,1.0,0.0,[1],[[1,0,0,1]],[0],0.0,2.0,"","",""];
             private _res = lineIntersectsWith [_pos, _testPos];
             if (count _res > 0) exitWith {
-                _test = false;
                 _nlos pushBack _lastPos;
                 // {
                     // _x addEventHandler ["HandleDamage", { diag_log text format ["this: %1", _this]; }];
@@ -65,7 +63,7 @@ if (_zIndex < 5) then {
     while {count _nlos != count _excludes && {_c < (count _nlos)}} do {
         scopeName "mainSearch";
         {
-            if (!(_forEachIndex in _excludes)) then {
+            if !(_forEachIndex in _excludes) then {
                 private _index = _buckets pushBack [_x, [_x]];
                 _excludes pushBack _forEachIndex;
                 _bucketPos = _x;
@@ -74,8 +72,8 @@ if (_zIndex < 5) then {
             };
         } forEach _nlos;
         {
-            if (!(_forEachIndex in _excludes)) then {
-                _testPos = _x;
+            if !(_forEachIndex in _excludes) then {
+                private _testPos = _x;
                 if (_testPos vectorDistanceSqr _bucketPos <= 30) then {
                     _bucketList pushBack _x;
                     _excludes pushBack _forEachIndex;
@@ -120,7 +118,7 @@ if (_zIndex < 5) then {
     // _dirvec = _pos vectorFromTo ((player modelToWorldVisualWorld (player selectionPosition "Spine3")));
     // _dirvec = _dirvec vectorMultiply 100;
     // _can setVelocity _dirvec;
-    [DFUNC(doExplosions), 0, [_explosions, 0]] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(doExplosions), 0, [_explosions, 0]] call CBA_fnc_addPerFrameHandler;
     [_pfhID] call CBA_fnc_removePerFrameHandler;
 };
 END_COUNTER(fnc_findReflections);

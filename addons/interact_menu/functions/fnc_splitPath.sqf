@@ -11,19 +11,15 @@
  * 1: Action name <STRING>
  *
  * Example:
- * [[path]] call ACE_interact_menu_fnc_splitPath
+ * ["ACE_TapShoulderRight", "VulcanPinch"] call ace_interact_menu_fnc_splitPath
  *
  * Public: No
  */
 
 private _parentPath = [];
-for [{private _i = 0},{_i < (count _this) - 1},{_i = _i + 1}] do {
-    _parentPath pushBack (_this select _i);
-};
-private _actionName = if (count _this > 0) then {
-    _this select ((count _this) - 1);
-} else {
-    ""
-};
+
+_parentPath append _this;
+
+private _actionName = (_parentPath deleteAt [-1]) param [0, ""];
 
 [_parentPath, _actionName]

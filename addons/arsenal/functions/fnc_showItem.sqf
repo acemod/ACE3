@@ -72,6 +72,6 @@ if (_nextAction != GVAR(currentAction)) then {
     GVAR(currentAction) = _nextAction;
 };
 
-if (!(GVAR(currentAction) in ["Civil", "Salute"])) then {
+if !(GVAR(currentAction) in ["Civil", "Salute"]) then {
     GVAR(center) selectWeapon ([primaryWeapon GVAR(center), secondaryWeapon GVAR(center), handgunWeapon GVAR(center), binocular GVAR(center)] select GVAR(selectedWeaponType)); // select correct weapon, prevents floating weapons
 };

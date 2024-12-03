@@ -1,9 +1,9 @@
 #include "..\script_component.hpp"
 /*
- * Author: commy2, kymckay
+ * Author: commy2, kymckay, LinkIsGrim
  * HandleDamage EH where wound events are raised based on incoming damage.
  * Be aware that for each source of damage, the EH can fire multiple times (once for each hitpoint).
- * We store these incoming damages and compare them on our final hitpoint: "ace_hdbracket".
+ * We store these incoming damages and compare them on last iteration of the event (_context == 2).
  *
  * Arguments:
  * Handle damage EH
@@ -13,15 +13,16 @@
  *
  * Public: No
  */
-params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator", "_hitpoint"];
+params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator", "_hitpoint", "_directHit", "_context"];
 
 // HD sometimes triggers for remote units - ignore.
 if !(local _unit) exitWith {nil};
 
 // Get missing meta info
 private _oldDamage = 0;
+private _structuralDamage = _context == 0;
 
-if (_hitPoint isEqualTo "") then {
+if (_structuralDamage) then {
     _hitPoint = "#structural";
     _oldDamage = damage _unit;
 } else {
@@ -31,28 +32,35 @@ if (_hitPoint isEqualTo "") then {
 // Damage can be disabled with old variable or via sqf command allowDamage
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
+// Killing units via End key is an edge case (#10375)
+// This didn't matter pre-Arma 3 2.18 but now this goes through the event handler
+// TODO: Structural fire damage >= 1 in a single damage event could still be caught here and we don't want that, but we haven't found a better way to catch this, fire damage should be small most of the time anyway
 private _newDamage = _damage - _oldDamage;
+if (_structuralDamage && {(abs (_newDamage - 1)) < 0.001 && _ammo == "" && isNull _shooter && isNull _instigator}) exitWith {_damage};
 
-// Happens occasionally for vehiclehit events (see line 80 onwards)
-// Just exit early to save some frametime
-if (_newDamage == 0 && {_hitpoint isNotEqualTo "ace_hdbracket"}) exitWith {_oldDamage};
+// _newDamage == 0 happens occasionally for vehiclehit events (see line 80 onwards), just exit early to save some frametime
+// context 4 is engine "bleeding". For us, it's just a duplicate event for #structural which we can ignore without any issues
+if (_context != 2 && {_context == 4 || _newDamage == 0}) exitWith {
+    TRACE_4("Skipping engine bleeding or zero damage",_ammo,_newDamage,_directHit,_context);
+    _oldDamage
+};
 
 // Get scaled armor value of hitpoint and calculate damage before armor
 // We scale using passThrough to handle explosive-resistant armor properly (#9063)
 // We need realDamage to determine which limb was hit correctly
 [_unit, _hitpoint] call FUNC(getHitpointArmor) params ["_armor", "_armorScaled"];
 private _realDamage = _newDamage * _armor;
-if (_hitPoint isNotEqualTo "#structural") then {
+if (!_structuralDamage) then {
     private _armorCoef = _armor/_armorScaled;
     private _damageCoef = linearConversion [0, 1, GVAR(damagePassThroughEffect), 1, _armorCoef];
     _newDamage = _newDamage * _damageCoef;
 };
-TRACE_4("Received hit",_hitpoint,_ammo,_newDamage,_realDamage);
+TRACE_6("Received hit",_hitpoint,_ammo,_newDamage,_realDamage,_directHit,_context);
 
-// Drowning doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
+// Drowning doesn't fire the EH for each hitpoint and never triggers _context=2 (LastHitPoint)
 // Damage occurs in consistent increments
 if (
-    _hitPoint isEqualTo "#structural" &&
+    _structuralDamage &&
     {getOxygenRemaining _unit <= 0.5} &&
     {_damage isEqualTo (_oldDamage + 0.005)}
 ) exitWith {
@@ -64,14 +72,14 @@ if (
 
 // Faster than (vehicle _unit), also handles dead units
 private _vehicle = objectParent _unit;
+private _inVehicle = !isNull _vehicle;
+private _environmentDamage = _ammo == "";
 
-// Crashing a vehicle doesn't fire the EH for each hitpoint so the "ace_hdbracket" code never runs
+// Crashing a vehicle doesn't fire the EH for each hitpoint and never triggers _context=2 (LastHitPoint)
 // It does fire the EH multiple times, but this seems to scale with the intensity of the crash
 if (
     EGVAR(medical,enableVehicleCrashes) &&
-    {_hitPoint isEqualTo "#structural"} &&
-    {_ammo isEqualTo ""} &&
-    {!isNull _vehicle} &&
+    {_environmentDamage && _inVehicle && _structuralDamage} &&
     {vectorMagnitude (velocity _vehicle) > 5}
     // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
@@ -83,17 +91,14 @@ if (
 
 // Receiving explosive damage inside a vehicle doesn't trigger for each hitpoint
 // This is the case for mines, explosives, artillery, and catasthrophic vehicle explosions
-// Triggers twice, but that doesn't matter as damage is low
 if (
-    _hitPoint isEqualTo "#structural" &&
-    {!isNull _vehicle} &&
-    {_ammo isNotEqualTo ""} &&
+    (!_environmentDamage && _inVehicle && _structuralDamage) &&
     {
         private _ammoCfg = configFile >> "CfgAmmo" >> _ammo;
         GET_NUMBER(_ammoCfg >> "explosive",0) > 0 ||
         {GET_NUMBER(_ammoCfg >> "indirectHit",0) > 0}
     }
-) exitwith {
+) exitWith {
     TRACE_5("Vehicle hit",_unit,_shooter,_instigator,_damage,_newDamage);
 
     _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
@@ -104,9 +109,13 @@ if (
     0
 };
 
-// This hitpoint is set to trigger last, evaluate all the stored damage values
-// to determine where wounds are applied
-if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
+// Damages are stored for last iteration of the HandleDamage event (_context == 2)
+_unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage, _newDamage]];
+
+// Ref https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#HandleDamage
+// Context 2 means this is the last iteration of HandleDamage, so figure out which hitpoint took the most real damage and send wound event
+// Don't exit, as the last iteration can be one of the hitpoints that we need to keep _oldDamage for
+if (_context == 2) then {
     _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
     _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
 
@@ -157,10 +166,14 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
 
     // Environmental damage sources all have empty ammo string
     // No explicit source given, we infer from differences between them
-    if (_ammo isEqualTo "") then {
+    if (_environmentDamage) then {
         // Any collision with terrain/vehicle/object has a shooter
         // Check this first because burning can happen at any velocity
-        if !(isNull _shooter) then {
+        if (isNull _shooter) then {
+            // Anything else is almost guaranteed to be fire damage
+            _ammo = "fire";
+            TRACE_5("Fire Damage",_unit,_shooter,_instigator,_damage,_allDamages);
+        } else {
             /*
               If shooter != unit then they hit unit, otherwise it could be:
                - Unit hitting anything at speed
@@ -175,10 +188,6 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
                 _ammo = "collision";
                 TRACE_5("Collision",_unit,_shooter,_instigator,_damage,_allDamages);
             };
-        } else {
-            // Anything else is almost guaranteed to be fire damage
-            _ammo = "fire";
-            TRACE_5("Fire Damage",_unit,_shooter,_instigator,_damage,_allDamages);
         };
     };
 
@@ -199,16 +208,9 @@ if (_hitPoint isEqualTo "ace_hdbracket") exitWith {
         QGVAR($HitLeftArm),QGVAR($HitRightArm),QGVAR($HitLeftLeg),QGVAR($HitRightLeg),
         QGVAR($#structural)
     ];
-
-    0
 };
-
-// Damages are stored for "ace_hdbracket" event triggered last
-_unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage, _newDamage]];
 
 // Engine damage to these hitpoints controls blood visuals, limping, weapon sway
 // Handled in fnc_damageBodyPart, persist here
-if (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"]) exitWith {_oldDamage};
-
-// We store our own damage values so engine damage is unnecessary
-0
+// For all other hitpoints, we store our own damage values, so engine damage is unnecessary
+[0, _oldDamage] select (_hitPoint in ["hithead", "hitbody", "hithands", "hitlegs"])

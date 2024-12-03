@@ -15,23 +15,27 @@
  * Public: No
  */
 
-//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
-TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_vehicle,_gunner,_turret);
+//IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
+TRACE_8("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_gunner);
 
 // Retrieve overpressure values
 private _opValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
 
 _opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
+
 TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
 
 if (_dangerZoneDamage <= 0) exitWith {};
+
+private _unitOverpressureRangeAttribute = _unit getVariable [QGVAR(distance), GVAR(overpressureDistanceCoefficient)];
+_dangerZoneRange = _dangerZoneRange * _unitOverpressureRangeAttribute;
 
 // The weapon produces overpressure, calculate
 private _position = getPosASL _projectile;
 private _direction = vectorDir _projectile;
 
 // Damage to others
-private _affected = (ASLtoAGL _position) nearEntities ["CAManBase", _dangerZoneRange];
+private _affected = (ASLToAGL _position) nearEntities ["CAManBase", _dangerZoneRange];
 
 // Let each client handle their own affected units
 ["ace_overpressure", [_unit, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;

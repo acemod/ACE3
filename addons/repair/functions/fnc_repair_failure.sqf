@@ -32,15 +32,17 @@ if (primaryWeapon _caller == "ACE_FakePrimaryWeapon") then {
 
 _caller removeEventHandler ["AnimDone", _caller getVariable [QGVAR(repairLoopAnimEh), -1]];
 _caller setVariable [QGVAR(repairLoopAnimEh), nil];
-if (vehicle _caller == _caller && {!(_caller call EFUNC(common,isSwimming))}) then {
+if (isNull objectParent _caller && {!(_caller call EFUNC(common,isSwimming))}) then {
     [_caller, _caller getVariable [QGVAR(repairPrevAnimCaller), ""], 2] call EFUNC(common,doAnimation);
 };
 _caller setVariable [QGVAR(repairCurrentAnimCaller), nil];
 _caller setVariable [QGVAR(repairPrevAnimCaller), nil];
 
-private _weaponSelect = (_caller getVariable [QGVAR(selectedWeaponOnrepair), ""]);
-if (_weaponSelect != "") then {
+private _weaponSelect = _caller getVariable QGVAR(selectedWeaponOnrepair);
+
+if (!isNil "_weaponSelect") then {
     _caller selectWeapon _weaponSelect;
+    _caller setVariable [QGVAR(selectedWeaponOnrepair), nil];
 } else {
     _caller action ["SwitchWeapon", _caller, _caller, 299];
 };
@@ -57,7 +59,7 @@ if (_weaponSelect != "") then {
 
 
 // Record specific callback
-private _config = (ConfigFile >> "ACE_Repair" >> "Actions" >> _className);
+private _config = (configFile >> "ACE_Repair" >> "Actions" >> _className);
 
 private _callback = getText (_config >> "callbackFailure");
 if (isNil _callback) then {
@@ -65,7 +67,7 @@ if (isNil _callback) then {
 } else {
     _callback = missionNamespace getVariable _callback;
 };
-if (!(_callback isEqualType {})) then {_callback = {TRACE_1("callback was NOT code",_callback)};};
+if !(_callback isEqualType {}) then {_callback = {TRACE_1("callback was NOT code",_callback)};};
 
 _args call _callback;
 

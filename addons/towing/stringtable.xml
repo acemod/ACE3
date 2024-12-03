@@ -1,148 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Towing">
-        <Key ID="STR_ACE_Towing_displayName">
-            <English>Towing</English>
-            <Japanese>けん引</Japanese>
-            <French>Remorquage</French>
-            <Italian>Traino</Italian>
-            <Russian>Буксирование</Russian>
-            <German>Abschleppen</German>
-            <Polish>Holowanie</Polish>
-            <Chinesesimp>牵引</Chinesesimp>
-            <Korean>견인</Korean>
-            <Spanish>Remolcado</Spanish>
+        <Key ID="STR_ACE_Towing_Setting_addRopeToVehicleInventory_DisplayName">
+            <English>Add Tow Rope to Vehicle Inventory</English>
+            <French>Ajouter une corde à l'inventaire des véhicules</French>
+            <Spanish>Añadir cuerda de remolcado al inventario del vehículo</Spanish>
+            <Italian>Aggiungi corde di traino all'inventario dei veicoli</Italian>
+            <Polish>Dodaj linkę holowniczą do ekwipunku pojazdów</Polish>
+            <Portuguese>Adicionar corda de reboque ao inventário do veículo</Portuguese>
+            <Russian>Добавить буксировочный трос в инвентарь машин</Russian>
+            <German>Abschleppseil zum Fahrzeuginventar hinzufügen</German>
+            <Korean>차량 소지품에 견인줄 추가</Korean>
+            <Japanese>車両のインベントリに牽引ロープを追加する</Japanese>
         </Key>
         <Key ID="STR_ACE_Towing_attach">
             <English>Attach Tow Rope</English>
-            <Japanese>けん引ロープを取り付け</Japanese>
             <French>Attacher la corde de remorquage</French>
+            <Spanish>Sujetar cuerda de remolcado</Spanish>
             <Italian>Attacca la corda di traino</Italian>
+            <Polish>Przypnij linkę holowniczą</Polish>
+            <Portuguese>Fixar corda de reboque</Portuguese>
             <Russian>Прикрепить буксировочный канат</Russian>
             <German>Abschleppseil befestigen</German>
-            <Polish>Przypnij linkę holowniczą</Polish>
-            <Chinesesimp>系上牵引绳</Chinesesimp>
             <Korean>견인줄 부착</Korean>
-            <Spanish>Sujetar cuerda de remolcado</Spanish>
+            <Japanese>けん引ロープを取り付け</Japanese>
+            <Chinesesimp>系上牵引绳</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Towing_canceled">
             <English>Attaching Cancelled</English>
-            <Japanese>取り付けを中止しました</Japanese>
             <French>Attachage annulé</French>
+            <Spanish>Sujección cancelada</Spanish>
             <Italian>Attaccamento interrotto</Italian>
+            <Polish>Przyczepianie anulowane</Polish>
+            <Portuguese>Reboque cancelado</Portuguese>
             <Russian>Прикрепление отменено</Russian>
             <German>Befestigen Abgebrochen</German>
-            <Polish>Przyczepianie anulowane</Polish>
-            <Chinesesimp>取消系上绳索</Chinesesimp>
             <Korean>견인 취소됨</Korean>
-            <Spanish>Sujección cancelada</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Towing_start3">
-            <English>Attach Tow Rope (3.2m)</English>
-            <Japanese>けん引ロープ (3.2m) を取り付け</Japanese>
-            <French>Attacher la corde (3,2 m)</French>
-            <Italian>Attacca corda di traino (3,2m)</Italian>
-            <Russian>Прикрепить буксировочный канат (3.2м)</Russian>
-            <German>Befestige Seil (3.2m)</German>
-            <Polish>Przypnij linkę holowniczą (3,2m)</Polish>
-            <Chinesesimp>系上牵引绳（3.2米）</Chinesesimp>
-            <Korean>견인줄 부착(3.2M)</Korean>
-            <Spanish>Sujetar cuerda de remolcado (3.2m)</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Towing_start6">
-            <English>Attach Tow Rope (6.2m)</English>
-            <Japanese>けん引ロープ (6.2m) を取り付け</Japanese>
-            <French>Attacher la corde (6,2 m)</French>
-            <Italian>Attacca corda di traino (6,2m)</Italian>
-            <Russian>Прикрепить буксировочный канат (6.2м)</Russian>
-            <German>Befestige Seil (6.2m)</German>
-            <Polish>Przypnij linkę holowniczą (6,2m)</Polish>
-            <Chinesesimp>系上牵引绳（6.2米）</Chinesesimp>
-            <Korean>견인줄 부착(6.2M)</Korean>
-            <Spanish>Sujetar cuerda de remolcado (6.2m)</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Towing_start12">
-            <English>Attach Tow Rope (12.2m)</English>
-            <Japanese>けん引ロープ (12.2m) を取り付け</Japanese>
-            <French>Attacher la corde (12,2 m)</French>
-            <Italian>Attacca corda di traino (12,2m)</Italian>
-            <Russian>Прикрепить буксировочный канат (12.2м)</Russian>
-            <German>Befestige Seil (12.2m)</German>
-            <Polish>Przypnij linkę holowniczą (12,2m)</Polish>
-            <Chinesesimp>系上牵引绳（12.2米）</Chinesesimp>
-            <Korean>견인줄 부착(12.2M)</Korean>
-            <Spanish>Sujetar cuerda de remolcado (12.2m)</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Towing_start15">
-            <English>Attach Tow Rope (15.2m)</English>
-            <Japanese>けん引ロープ (15.2m) を取り付け</Japanese>
-            <French>Attacher la corde (15,2 m)</French>
-            <Italian>Attacca corda di traino (15,2m)</Italian>
-            <Russian>Прикрепить буксировочный канат (15.2м)</Russian>
-            <German>Befestige Seil (15.2m)</German>
-            <Polish>Przypnij linkę holowniczą (15,2m)</Polish>
-            <Chinesesimp>系上牵引绳（15.2米）</Chinesesimp>
-            <Korean>견인줄 부착(15.2M)</Korean>
-            <Spanish>Sujetar cuerda de remolcado (15.2m)</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Towing_start18">
-            <English>Attach Tow Rope (18.3m)</English>
-            <Japanese>けん引ロープ (18.3m) を取り付け</Japanese>
-            <French>Attacher la corde (18,3 m)</French>
-            <Italian>Attacca corda di traino (18,3m)</Italian>
-            <Russian>Прикрепить буксировочный канат (18.3м)</Russian>
-            <German>Befestige Seil (18.3m)</German>
-            <Polish>Przypnij linkę holowniczą (18,3m)</Polish>
-            <Chinesesimp>系上牵引绳（18.3米）</Chinesesimp>
-            <Korean>견인줄 부착(18.2M)</Korean>
-            <Spanish>Sujetar cuerda de remolcado (18.3m)</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Towing_start27">
-            <English>Attach Tow Rope (27.4m)</English>
-            <Japanese>けん引ロープ (27.4m) を取り付け</Japanese>
-            <French>Attacher la corde (27,4 m)</French>
-            <Italian>Attacca corda di traino (27,4m)</Italian>
-            <Russian>Прикрепить буксировочный канат (27.4м)</Russian>
-            <German>Befestige Seil (27.4m)</German>
-            <Polish>Przypnij linkę holowniczą (27,4m)</Polish>
-            <Chinesesimp>系上牵引绳（27.4米）</Chinesesimp>
-            <Korean>견인줄 부착(27.4M)</Korean>
-            <Spanish>Sujetar cuerda de remolcado (27.4m)</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Towing_start36">
-            <English>Attach Tow Rope (36.6m)</English>
-            <Japanese>けん引ロープ (36.6m) を取り付け</Japanese>
-            <French>Attacher la corde (36,6 m)</French>
-            <Italian>Attacca corda di traino (36,6m)</Italian>
-            <Russian>Прикрепить буксировочный канат (36.6м)</Russian>
-            <German>Befestige Seil (36.6m)</German>
-            <Polish>Przypnij linkę holowniczą (36,6m)</Polish>
-            <Chinesesimp>系上牵引绳（36.6米）</Chinesesimp>
-            <Korean>견인줄 부착(36.6M)</Korean>
-            <Spanish>Sujetar cuerda de remolcado (36.6m)</Spanish>
+            <Japanese>取り付けを中止しました</Japanese>
+            <Chinesesimp>取消系上绳索</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Towing_detach">
             <English>Detach Tow Rope</English>
-            <Japanese>けん引ロープを外す</Japanese>
             <French>Détacher la corde</French>
+            <Spanish>Desmontar cuerda de remolcado</Spanish>
             <Italian>Stacca corda di traino</Italian>
+            <Polish>Odepnij linkę holowniczą</Polish>
+            <Portuguese>Soltar corda de reboque</Portuguese>
             <Russian>Отцепить буксировочный канат</Russian>
             <German>Entferne Abschleppseil</German>
-            <Polish>Odepnij linkę holowniczą</Polish>
-            <Chinesesimp>解开牵引绳</Chinesesimp>
             <Korean>견인줄 분리</Korean>
-            <Spanish>Desmontar cuerda de remolcado</Spanish>
+            <Japanese>けん引ロープを外す</Japanese>
+            <Chinesesimp>解开牵引绳</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Towing_Setting_addRopeToVehicleInventory_DisplayName">
-            <English>Add Tow Rope to Vehicle Inventory</English>
-            <Russian>Добавить буксировочный трос в инвентарь машин</Russian>
-            <Polish>Dodaj linkę holowniczą do ekwipunku pojazdów</Polish>
-            <Italian>Aggiungi corde di traino all'inventario dei veicoli</Italian>
-            <Korean>차량 소지품에 견인줄 추가</Korean>
-            <Spanish>Añadir cuerda de remolcado al inventario del vehículo</Spanish>
-            <Japanese>車両のインベントリに牽引ロープを追加する</Japanese>
-            <German>Abschleppseil zum Fahrzeuginventar hinzufügen</German>
-            <French>Ajouter une corde à l'inventaire des véhicules</French>
+        <Key ID="STR_ACE_Towing_displayName">
+            <English>Towing</English>
+            <French>Remorquage</French>
+            <Spanish>Remolcado</Spanish>
+            <Italian>Traino</Italian>
+            <Polish>Holowanie</Polish>
+            <Portuguese>Rebocando</Portuguese>
+            <Russian>Буксирование</Russian>
+            <German>Abschleppen</German>
+            <Korean>견인</Korean>
+            <Japanese>けん引</Japanese>
+            <Chinesesimp>牵引</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Towing_start12">
+            <English>Attach Tow Rope (12.2m)</English>
+            <French>Attacher la corde (12,2 m)</French>
+            <Spanish>Sujetar cuerda de remolcado (12.2m)</Spanish>
+            <Italian>Attacca corda di traino (12,2m)</Italian>
+            <Polish>Przypnij linkę holowniczą (12,2m)</Polish>
+            <Portuguese>Fixar corda de reboque (12,2m)</Portuguese>
+            <Russian>Прикрепить буксировочный канат (12.2м)</Russian>
+            <German>Befestige Seil (12.2m)</German>
+            <Korean>견인줄 부착(12.2M)</Korean>
+            <Japanese>けん引ロープ (12.2m) を取り付け</Japanese>
+            <Chinesesimp>系上牵引绳（12.2米）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Towing_start15">
+            <English>Attach Tow Rope (15.2m)</English>
+            <French>Attacher la corde (15,2 m)</French>
+            <Spanish>Sujetar cuerda de remolcado (15.2m)</Spanish>
+            <Italian>Attacca corda di traino (15,2m)</Italian>
+            <Polish>Przypnij linkę holowniczą (15,2m)</Polish>
+            <Portuguese>Fixar corda de reboque (15,2m)</Portuguese>
+            <Russian>Прикрепить буксировочный канат (15.2м)</Russian>
+            <German>Befestige Seil (15.2m)</German>
+            <Korean>견인줄 부착(15.2M)</Korean>
+            <Japanese>けん引ロープ (15.2m) を取り付け</Japanese>
+            <Chinesesimp>系上牵引绳（15.2米）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Towing_start18">
+            <English>Attach Tow Rope (18.3m)</English>
+            <French>Attacher la corde (18,3 m)</French>
+            <Spanish>Sujetar cuerda de remolcado (18.3m)</Spanish>
+            <Italian>Attacca corda di traino (18,3m)</Italian>
+            <Polish>Przypnij linkę holowniczą (18,3m)</Polish>
+            <Portuguese>Fixar corda de reboque (18,3m)</Portuguese>
+            <Russian>Прикрепить буксировочный канат (18.3м)</Russian>
+            <German>Befestige Seil (18.3m)</German>
+            <Korean>견인줄 부착(18.2M)</Korean>
+            <Japanese>けん引ロープ (18.3m) を取り付け</Japanese>
+            <Chinesesimp>系上牵引绳（18.3米）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Towing_start27">
+            <English>Attach Tow Rope (27.4m)</English>
+            <French>Attacher la corde (27,4 m)</French>
+            <Spanish>Sujetar cuerda de remolcado (27.4m)</Spanish>
+            <Italian>Attacca corda di traino (27,4m)</Italian>
+            <Polish>Przypnij linkę holowniczą (27,4m)</Polish>
+            <Portuguese>Fixar corda de reboque (27,4m)</Portuguese>
+            <Russian>Прикрепить буксировочный канат (27.4м)</Russian>
+            <German>Befestige Seil (27.4m)</German>
+            <Korean>견인줄 부착(27.4M)</Korean>
+            <Japanese>けん引ロープ (27.4m) を取り付け</Japanese>
+            <Chinesesimp>系上牵引绳（27.4米）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Towing_start3">
+            <English>Attach Tow Rope (3.2m)</English>
+            <French>Attacher la corde (3,2 m)</French>
+            <Spanish>Sujetar cuerda de remolcado (3.2m)</Spanish>
+            <Italian>Attacca corda di traino (3,2m)</Italian>
+            <Polish>Przypnij linkę holowniczą (3,2m)</Polish>
+            <Portuguese>Fixar corda de reboque (3,2m)</Portuguese>
+            <Russian>Прикрепить буксировочный канат (3.2м)</Russian>
+            <German>Befestige Seil (3.2m)</German>
+            <Korean>견인줄 부착(3.2M)</Korean>
+            <Japanese>けん引ロープ (3.2m) を取り付け</Japanese>
+            <Chinesesimp>系上牵引绳（3.2米）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Towing_start36">
+            <English>Attach Tow Rope (36.6m)</English>
+            <French>Attacher la corde (36,6 m)</French>
+            <Spanish>Sujetar cuerda de remolcado (36.6m)</Spanish>
+            <Italian>Attacca corda di traino (36,6m)</Italian>
+            <Polish>Przypnij linkę holowniczą (36,6m)</Polish>
+            <Portuguese>Fixar corda de reboque (36,6m)</Portuguese>
+            <Russian>Прикрепить буксировочный канат (36.6м)</Russian>
+            <German>Befestige Seil (36.6m)</German>
+            <Korean>견인줄 부착(36.6M)</Korean>
+            <Japanese>けん引ロープ (36.6m) を取り付け</Japanese>
+            <Chinesesimp>系上牵引绳（36.6米）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Towing_start6">
+            <English>Attach Tow Rope (6.2m)</English>
+            <French>Attacher la corde (6,2 m)</French>
+            <Spanish>Sujetar cuerda de remolcado (6.2m)</Spanish>
+            <Italian>Attacca corda di traino (6,2m)</Italian>
+            <Polish>Przypnij linkę holowniczą (6,2m)</Polish>
+            <Portuguese>Fixar corda de reboque (6,2m)</Portuguese>
+            <Russian>Прикрепить буксировочный канат (6.2м)</Russian>
+            <German>Befestige Seil (6.2m)</German>
+            <Korean>견인줄 부착(6.2M)</Korean>
+            <Japanese>けん引ロープ (6.2m) を取り付け</Japanese>
+            <Chinesesimp>系上牵引绳（6.2米）</Chinesesimp>
         </Key>
     </Package>
 </Project>

@@ -1,71 +1,82 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Checks hitpoint damage and determines if a vehicle should cookoff.
+ * Checks hitpoint damage and determines if a vehicle should cook off.
  *
  * Arguments:
- * 0: The vehicle <OBJECT>
+ * 0: Vehicle <OBJECT>
  * 1: Chance of fire <NUMBER>
  * 2: Intensity of cookoff <NUMBER>
- * 3: Person who instigated cookoff <OBJECT> (default: objNull)
- * 4: Part of vehicle which got hit <STRING> (default: "")
- * 5: Whether or not the vehicle can spawn ring-fire effect <BOOL> (default: false)
- * 6: Can Jet <BOOL> (default: true)
+ * 3: Source of damage <OBJECT>
+ * 4: Person who caused damage <OBJECT>
+ * 5: Part of vehicle which got hit <STRING> (default: "")
+ * 6: Whether or not the vehicle can spawn ring-fire effect <BOOL> (default: false)
+ * 7: Whether or not the vehicle can spawn jet-fire effect <BOOL> (default: true)
  *
  * Return Value:
- * If cooked off
+ * If vehicle started or already cooking off <BOOL>
  *
  * Example:
- * [tank2, 0.1, 5] call ace_vehicle_damage_fnc_handleCookoff;
+ * [cursorObject, 0.1, 5, player, player] call ace_vehicle_damage_fnc_handleCookoff
  *
  * Public: No
  */
 
-params ["_vehicle", "_chanceOfFire", "_intensity", ["_injurer", objNull], ["_hitPart", ""], ["_canRing", false], ["_canJet", true]];
+params ["_vehicle", "_chanceOfFire", "_intensity", "_source", "_instigator", ["_hitPart", ""], ["_canRing", true], ["_canJet", true]];
+TRACE_8("handleCookoff",_vehicle,_chanceOfFire,_intensity,_source,_instigator,_hitPart,_canRing,_canJet);
 
-private _alreadyCookingOff = _vehicle getVariable [QGVAR(cookingOff), false];
+// Ignore if the vehicle is already cooking off
+if (_vehicle getVariable [QEGVAR(cookoff,isCookingOff), false]) exitWith {
+    TRACE_3("already cooking off",_vehicle,_chanceOfFire,_intensity);
 
-if (!_alreadyCookingOff && { _chanceOfFire >= random 1 }) exitWith {
-    private _configOf = configOf _vehicle;
-    private _fireDetonateChance = [_configOf >> QGVAR(detonationDuringFireProb), "number", 0] call CBA_fnc_getConfigEntry;
-    if (_canRing) then {
-        _canRing = ([_configOf >> QGVAR(canHaveFireRing), "number", 0] call CBA_fnc_getConfigEntry) == 1;
-    };
-
-    if (_canJet) then {
-        _canJet = ([_configOf >> QEGVAR(cookoff,canHaveFireJet), "number", 1] call CBA_fnc_getConfigEntry) == 1;
-    };
-
-    private _delayWithSmoke = _chanceOfFire < random 1;
-    private _detonateAfterCookoff = (_fireDetonateChance / 4) > random 1;
-
-    private _source = "";
-    if (_hitPart == "engine") then {
-        _source = ["hit_engine_point", "HitPoints"];
-    };
-
-    // sending nil for _maxIntensity (9th param) to use default value in ace_cookoff_fnc_cookOff
-    [QEGVAR(cookOff,cookOff), [_vehicle, _intensity, _injurer, _delayWithSmoke, _fireDetonateChance, _detonateAfterCookoff, _source, _canRing, nil, _canJet]] call CBA_fnc_localEvent;
-    _vehicle setVariable [QGVAR(cookingOff), true];
-    LOG_4("Cooking-off [%1] with a chance-of-fire [%2] - Delayed Smoke | Detonate after cookoff [%3 | %4]",_vehicle,_chanceOfFire,_delayWithSmoke,_detonateAfterCookoff);
-    [_vehicle] spawn FUNC(abandon);
-    LOG_1("[%1] is on fire is bailing",_vehicle);
-
-    // cant setVehicleAmmo 0 here because it removes FFV unit's ammo
-    if (GVAR(removeAmmoDuringCookoff)) then {
-        private _ammo = [_vehicle] call EFUNC(cookoff,getVehicleAmmo);
-        _ammo params ["_magazines"];
-        TRACE_1("removing magazines",_magazines);
-        {
-            _x params ["_magazine"];
-            _vehicle removeMagazines _magazine;
-        } forEach _magazines;
-    };
-    true
+    true // return
 };
 
-// Avoid RPT spam
-if (_alreadyCookingOff) exitWith { true };
+_chanceOfFire = _chanceOfFire * EGVAR(cookoff,probabilityCoef);
 
-LOG_2("[%1] No Cook-off - Chance of fire [%2]",_vehicle,_chanceOfFire);
-false
+// Failure to cook off
+if (_chanceOfFire == 0 || {_chanceOfFire < random 1}) exitWith {
+    TRACE_3("no cook-off",_vehicle,_chanceOfFire,_intensity);
+
+    false // return
+};
+
+// Vehicle will cook off
+private _configOf = configOf _vehicle;
+private _fireDetonateChance = getNumber (_configOf >> QGVAR(detonationDuringFireProb));
+
+if (_canRing) then {
+    _canRing = getNumber (_configOf >> QGVAR(canHaveFireRing)) == 1;
+};
+
+if (_canJet) then {
+    _canJet = getNumber (_configOf >> QEGVAR(cookoff,canHaveFireJet)) == 1;
+};
+
+private _delaySmoke = _chanceOfFire < random 1;
+private _detonateAfterCookoff = (_fireDetonateChance / 4) > random 1;
+
+private _sourceHitpoint = "";
+
+// Passed to the selectionPosition command in cookoff
+if (_hitPart == "engine") then {
+    private _hitPoints = getAllHitPointsDamage _vehicle;
+
+    if (_hitPoints isEqualTo []) exitWith {};
+
+    // Get hitpoint for engine
+    private _index = (_hitPoints select 0) findIf {_x == "hitengine"};
+
+    if (_index == -1) exitWith {};
+
+    // Get corresponding selection
+    _sourceHitpoint = [(_hitPoints select 1) select _index, "HitPoints", "AveragePoint"];
+};
+
+[QEGVAR(cookOff,cookOffServer), [_vehicle, _intensity, _source, _instigator, _delaySmoke, _fireDetonateChance, _detonateAfterCookoff, _sourceHitpoint, _canRing, _canJet]] call CBA_fnc_serverEvent;
+TRACE_4("cooking-off",_vehicle,_chanceOfFire,_delaySmoke,_detonateAfterCookoff);
+
+// Abandon vehicle
+_vehicle call FUNC(abandon);
+
+true // return

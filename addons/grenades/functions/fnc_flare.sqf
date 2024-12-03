@@ -4,7 +4,7 @@
  * Makes flare shine.
  *
  * Arguments:
- * 0: The flare <OBJECT>
+ * 0: Flare <OBJECT>
  * 1: Color of flare <ARRAY>
  * 2: Intensity of flare <NUMBER>
  * 3: Flare lifetime <OBJECT>
@@ -34,6 +34,5 @@ _light setLightFlareMaxDistance 1000;
 _light setLightDayLight true;
 
 _light lightAttachObject [_projectile, [0,0,0]];
-//_light attachTo [_projectile, [0,0,0]];
 
 [{deleteVehicle _this}, _light, _timeToLive] call CBA_fnc_waitAndExecute;

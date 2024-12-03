@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Glowbal, Ruthberg
+ * Author: Glowbal, Ruthberg, Brett Mayson
  *
  * Handles advanced ballistics for (BulletBase) projectiles. Called from the unified fired EH only for players.
  *
@@ -19,7 +19,7 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_vehicle", "_gunner", "_turret"];
 TRACE_10("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_vehicle,_gunner,_turret);
 
-if (!(_ammo isKindOf "BulletBase")) exitWith {};
+if !(_ammo isKindOf "BulletBase") exitWith {};
 if (!alive _projectile) exitWith {};
 if (underwater _unit) exitWith {};
 
@@ -43,14 +43,11 @@ if (_abort) then {
     };
     if (ACE_player distance _unit > _maxRange && {ACE_player distance ((getPosASL _unit) vectorAdd ((vectorNormalized _bulletVelocity) vectorMultiply _maxRange)) > _maxRange}) exitWith {};
 
-    private _ammoCount = (_unit ammo _muzzle) + 1;
-    private _tracersEvery = getNumber(configFile >> "CfgMagazines" >> _magazine >> "tracersEvery");
-    private _lastRoundsTracer = getNumber(configFile >> "CfgMagazines" >> _magazine >> "lastRoundsTracer");
-    if (_ammoCount <= _lastRoundsTracer || {_tracersEvery > 0 && {(_ammoCount - _lastRoundsTracer) % _tracersEvery == 0}}) exitWith { _abort = false };
+    if (_projectile getShotInfo 4) exitWith { _abort = false }; // 4=shownTracer
 
     if (GVAR(bulletTraceEnabled) && {_muzzleVelocity > BULLET_TRACE_MIN_VELOCITY} && {cameraView == "GUNNER"}) then {
         if (currentWeapon ACE_player == binocular ACE_player) exitWith { _abort = false };
-        if (currentWeapon ACE_player == primaryWeapon ACE_player && {count primaryWeaponItems ACE_player > 2}) then {
+        if (currentWeapon ACE_player == primaryWeapon ACE_player) then {
             private _opticsName = (primaryWeaponItems ACE_player) select 2;
             private _opticType = getNumber(configFile >> "CfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
             if (_opticType == 2) exitWith { _abort = false };
@@ -62,11 +59,11 @@ if (_abort) exitWith {};
 // Get Weapon and Ammo Configurations
 private _AmmoCacheEntry = uiNamespace getVariable format[QGVAR(%1), _ammo];
 if (isNil "_AmmoCacheEntry") then {
-     _AmmoCacheEntry = _ammo call FUNC(readAmmoDataFromConfig);
+    _AmmoCacheEntry = _ammo call FUNC(readAmmoDataFromConfig);
 };
 private _WeaponCacheEntry = uiNamespace getVariable format[QGVAR(%1), _weapon];
 if (isNil "_WeaponCacheEntry") then {
-     _WeaponCacheEntry = _weapon call FUNC(readWeaponDataFromConfig);
+    _WeaponCacheEntry = _weapon call FUNC(readWeaponDataFromConfig);
 };
 
 _AmmoCacheEntry params ["_airFriction", "_caliber", "_bulletLength", "_bulletMass", "_transonicStabilityCoef", "_dragModel", "_ballisticCoefficients", "_velocityBoundaries", "_atmosphereModel", "_ammoTempMuzzleVelocityShifts", "_muzzleVelocityTable", "_barrelLengthTable", "_muzzleVelocityVariationSD"];
@@ -103,7 +100,7 @@ if (GVAR(bulletTraceEnabled) && {_muzzleVelocity > BULLET_TRACE_MIN_VELOCITY} &&
     if (currentWeapon ACE_player == binocular ACE_player) then {
         _bulletTraceVisible = true;
     } else {
-        if (currentWeapon ACE_player == primaryWeapon ACE_player && count primaryWeaponItems ACE_player > 2) then {
+        if (currentWeapon ACE_player == primaryWeapon ACE_player) then {
             private _opticsName = (primaryWeaponItems ACE_player) select 2;
             private _opticType = getNumber(configFile >> "CfgWeapons" >> _opticsName >> "ItemInfo" >> "opticType");
             _bulletTraceVisible = _opticType == 2;
@@ -120,8 +117,26 @@ if (_caliber * _bulletLength * _bulletMass * _barrelTwist > 0) then {
     _stabilityFactor = [_caliber, _bulletLength, _bulletMass, _barrelTwist, _muzzleVelocity, _temperature, _barometricPressure] call FUNC(calculateStabilityFactor);
 };
 
-GVAR(currentbulletID) = (GVAR(currentbulletID) + 1) % 10000;
-
-"ace_advanced_ballistics" callExtension format["new:%1:%2:%3:%4:%5:%6:%7:%8:%9:%10:%11:%12:%13:%14:%15:%16:%17:%18", GVAR(currentbulletID), _ammoCount, _airFriction, _ballisticCoefficients, _velocityBoundaries, _atmosphereModel, _dragModel, _stabilityFactor, _twistDirection, _transonicStabilityCoef, getPosASL _projectile, _bulletVelocity, EGVAR(common,mapLatitude), EGVAR(weather,currentTemperature), EGVAR(common,mapAltitude), EGVAR(weather,currentHumidity), EGVAR(weather,currentOvercast), CBA_missionTime toFixed 6];
-
-GVAR(allBullets) pushBack [_projectile, _caliber, _bulletTraceVisible, GVAR(currentbulletID)];
+("ace" callExtension [
+    "ballistics:bullet:new", [
+        _ammoCount,
+        _airFriction,
+        _ballisticCoefficients,
+        _velocityBoundaries,
+        _atmosphereModel,
+        _dragModel,
+        _stabilityFactor,
+        _twistDirection,
+        _transonicStabilityCoef,
+        _bulletVelocity,
+        EGVAR(common,mapLatitude),
+        EGVAR(weather,currentTemperature),
+        EGVAR(common,mapAltitude),
+        EGVAR(weather,currentHumidity),
+        EGVAR(weather,currentOvercast),
+        CBA_missionTime toFixed 6
+    ]
+]) params ["_id", "_code"];
+if (_code == 0) then {
+    GVAR(allBullets) set [_id, [_projectile, _caliber, _bulletTraceVisible]];
+};

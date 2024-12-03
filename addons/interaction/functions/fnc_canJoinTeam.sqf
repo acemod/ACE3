@@ -18,7 +18,6 @@
 
 params ["_unit", "_target"];
 
-alive _target
-&& {!(_target getVariable ["ACE_isUnconscious", false])}
+_target call EFUNC(common,isAwake)
 && {!([_target] call EFUNC(common,isPlayer))}
 && {_target in units group _unit}

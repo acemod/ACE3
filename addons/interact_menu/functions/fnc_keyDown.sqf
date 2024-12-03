@@ -36,7 +36,7 @@ if (_isTextEditing) then {
 if (
     _isTextEditing ||
     {(isNull curatorCamera) && {
-        !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith))
+        !([ACE_player, objNull, ["isNotInside","isNotDragging", "isNotCarrying", "isNotSwimming", "notOnMap", "isNotEscorting", "isNotSurrendering", "isNotHandcuffed", "isNotSitting", "isNotOnLadder", "isNotRefueling"]] call EFUNC(common,canInteractWith))
     }
 }) exitWith {false};
 
@@ -62,7 +62,7 @@ GVAR(openedMenuType) = _menuType;
 GVAR(lastTimeSearchedActions) = -1000;
 GVAR(ParsedTextCached) = [];
 
-GVAR(useCursorMenu) = (vehicle ACE_player != ACE_player) ||
+GVAR(useCursorMenu) = (!isNull objectParent ACE_player) ||
                       (!(isNull (ACE_controlledUAV select 0))) ||
                       visibleMap ||
                       (!isNull curatorCamera) ||
@@ -84,8 +84,8 @@ if (GVAR(useCursorMenu)) then {
     } else {
         createDialog QGVAR(cursorMenu);
     };
-    (finddisplay 91919) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
-    (finddisplay 91919) displayAddEventHandler ["KeyDown", {
+    (findDisplay 91919) displayAddEventHandler ["KeyUp", {[_this,'keyup'] call CBA_events_fnc_keyHandler}];
+    (findDisplay 91919) displayAddEventHandler ["KeyDown", {
         // Handle the escape key being pressed with menu open:
         if ((_this select [1,4]) isEqualTo [1,false,false,false]) exitWith { // escape key with no modifiers
             [displayNull] call FUNC(handleEscapeMenu);
@@ -102,8 +102,8 @@ if (GVAR(useCursorMenu)) then {
     _ctrl ctrlCommit 0;
 
     // handles Mouse moving and LMB in cursor mode when action on keyrelease is disabled
-    ((finddisplay 91919) displayctrl 9922) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];
-    ((finddisplay 91919) displayctrl 9922) ctrlAddEventHandler ["MouseButtonDown", DFUNC(handleMouseButtonDown)];
+    ((findDisplay 91919) displayCtrl 9922) ctrlAddEventHandler ["MouseMoving", DFUNC(handleMouseMovement)];
+    ((findDisplay 91919) displayCtrl 9922) ctrlAddEventHandler ["MouseButtonDown", DFUNC(handleMouseButtonDown)];
     setMousePosition [0.5, 0.5];
 } else {
     if (uiNamespace getVariable [QGVAR(cursorMenuOpened),false]) then {
@@ -111,25 +111,25 @@ if (GVAR(useCursorMenu)) then {
     };
 };
 
-GVAR(selfMenuOffset) = (AGLtoASL (positionCameraToWorld [0, 0, 2])) vectorDiff (AGLtoASL (positionCameraToWorld [0, 0, 0]));
+GVAR(selfMenuOffset) = (AGLToASL (positionCameraToWorld [0, 0, 2])) vectorDiff (AGLToASL (positionCameraToWorld [0, 0, 0]));
 
 //Auto expand the first level when self, mounted vehicle or zeus (skips the first animation as there is only one choice)
 if (GVAR(openedMenuType) == 0) then {
     if (isNull curatorCamera) then {
-        if (!(isNull (ACE_controlledUAV select 0))) then {
-            GVAR(menuDepthPath) = [["ACE_SelfActions", (ACE_controlledUAV select 0)]];
-            GVAR(expanded) = true;
-            GVAR(expandedTime) = diag_tickTime;
-            GVAR(lastPath) = +GVAR(menuDepthPath);
-            GVAR(startHoverTime) = -1000;
-        } else {
-            if (vehicle ACE_player != ACE_player) then {
+        if (isNull (ACE_controlledUAV select 0)) then {
+            if (!isNull objectParent ACE_player) then {
                 GVAR(menuDepthPath) = [["ACE_SelfActions", (vehicle ACE_player)]];
                 GVAR(expanded) = true;
                 GVAR(expandedTime) = diag_tickTime;
                 GVAR(lastPath) = +GVAR(menuDepthPath);
                 GVAR(startHoverTime) = -1000;
             };
+        } else {
+            GVAR(menuDepthPath) = [["ACE_SelfActions", (ACE_controlledUAV select 0)]];
+            GVAR(expanded) = true;
+            GVAR(expandedTime) = diag_tickTime;
+            GVAR(lastPath) = +GVAR(menuDepthPath);
+            GVAR(startHoverTime) = -1000;
         };
     } else {
         GVAR(menuDepthPath) = [["ACE_ZeusActions", (getAssignedCuratorLogic player)]];

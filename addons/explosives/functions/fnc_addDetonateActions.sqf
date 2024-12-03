@@ -19,33 +19,44 @@
 params ["_unit", "_detonator"];
 TRACE_2("params",_unit,_detonator);
 
-private _range = getNumber (ConfigFile >> "CfgWeapons" >> _detonator >> QGVAR(Range));
+private _detonatorConfig = configFile >> "CfgWeapons" >> _detonator;
+private _range = getNumber (_detonatorConfig >> QGVAR(Range));
 
 private _result = [_unit] call FUNC(getPlacedExplosives);
 private _children = [];
 private _explosivesList = [];
 {
     if (!isNull(_x select 0)) then {
-        private _required = getArray (ConfigFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
+        private _required = getArray (configFile >> "ACE_Triggers" >> (_x select 4) >> "requires");
         if (_detonator in _required) then {
-            private _item = ConfigFile >> "CfgMagazines" >> (_x select 3);
+            private _item = configFile >> "CfgMagazines" >> (_x select 3);
 
             _explosivesList pushBack _x;
 
-            _children pushBack
+            // Prevent consolidated detonate actions from having the same icon as consolidated place actions of the same explosive type
+            private _icon = if (
+                EGVAR(interact_menu,consolidateSingleChild) &&
+                {_detonator == GVAR(activeTrigger)} &&
+                {count (_result select {(_x select 4) == getText (_detonatorConfig >> QGVAR(triggerType))}) < 2}
+            ) then {
+                getText (_detonatorConfig >> "picture")
+            } else {
+                getText (_item >> "picture")
+            };
+
+            _children pushBack [
                 [
-                    [
-                        format ["Explosive_%1", _forEachIndex],
-                        _x select 2,
-                        getText(_item >> "picture"),
-                        {(_this select 2) call FUNC(detonateExplosive);},
-                        {true},
-                        {},
-                        [_unit,_range,_x,_detonator]
-                    ] call EFUNC(interact_menu,createAction),
-                    [],
-                    _unit
-                ];
+                    format ["Explosive_%1", _forEachIndex],
+                    _x select 2,
+                    _icon,
+                    {(_this select 2) call FUNC(detonateExplosive);},
+                    {true},
+                    {},
+                    [_unit,_range,_x,_detonator]
+                ] call EFUNC(interact_menu,createAction),
+                [],
+                _unit
+            ];
         };
     };
 } forEach _result;
@@ -53,7 +64,7 @@ private _explosivesList = [];
 // If the detonator is not active, is a clacker and has assigned explosives, generate an interaction to make it the active detonator for use with the "trigger all" keybind
 if (
     _detonator != GVAR(activeTrigger) &&
-    {_detonator != "Cellphone"} && 
+    {_detonator != "Cellphone"} &&
     {
         _explosivesList isNotEqualTo [] ||
         {_detonator == "ACE_DeadManSwitch" && {_unit getVariable [QGVAR(deadmanInvExplosive), ""] != ""}}
@@ -81,7 +92,7 @@ if (_detonator != "ACE_DeadManSwitch") then {
             [
                 "Explosive_All",
                 LLSTRING(DetonateAll),
-                getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
+                getText (_detonatorConfig >> "picture"),
                 {(_this select 2) call FUNC(detonateExplosiveAll);},
                 {true},
                 {},
@@ -92,19 +103,6 @@ if (_detonator != "ACE_DeadManSwitch") then {
         ];
     };
 } else {
-    //Add action to detonate all explosives (including the inventory explosive):
-    _children pushBack [
-        [
-            "Explosive_All_Deadman",
-            LLSTRING(DetonateAll),
-            getText (configFile >> "CfgWeapons" >> _detonator >> "picture"),
-            {[_player] call FUNC(onIncapacitated)},
-            {true}
-        ] call EFUNC(interact_menu,createAction),
-        [],
-        _unit
-    ];
-
     //Adds actions for the explosives you can connect to the deadman switch.
     private _connectedInventoryExplosive = _unit getVariable [QGVAR(deadmanInvExplosive), ""];
     if ((_connectedInventoryExplosive != "") && {!(_connectedInventoryExplosive in (magazines _unit))}) then {
@@ -113,14 +111,26 @@ if (_detonator != "ACE_DeadManSwitch") then {
     };
 
     _connectedInventoryExplosive = _unit getVariable [QGVAR(deadmanInvExplosive), ""];
+
+    //Add action to detonate all explosives (including the inventory explosive):
+    if (_connectedInventoryExplosive != "" || {count _explosivesList > 1}) then {
+        _children pushBack [
+            [
+                "Explosive_All_Deadman",
+                LLSTRING(DetonateAll),
+                getText (_detonatorConfig >> "picture"),
+                {[_player] call FUNC(onIncapacitated)},
+                {true}
+            ] call EFUNC(interact_menu,createAction),
+            [],
+            _unit
+        ];
+    };
+
     if (_connectedInventoryExplosive != "") then {
         //Add the disconnect action
         private _magConfig = configFile >> "CfgMagazines" >> _connectedInventoryExplosive;
-        private _name = if ((getText (_magConfig >> "displayNameShort")) != "") then {
-            getText (_magConfig >> "displayNameShort")
-        } else {
-            getText(_magConfig >> "displayName")
-        };
+        private _name = getText (_magConfig >> "displayName");
         private _picture = getText (_magConfig >> "picture");
 
         _children pushBack [
@@ -144,16 +154,12 @@ if (_detonator != "ACE_DeadManSwitch") then {
         private _procressedMags = [];
         {
             private _mag = _x;
-            if (!(_mag in _procressedMags)) then {
+            if !(_mag in _procressedMags) then {
                 _procressedMags pushBack _x;
                 private _magConfig = configFile >> "CfgMagazines" >> _mag;
                 private _supportedTriggers = getArray (_magConfig >> "ACE_Triggers" >> "SupportedTriggers");
                 if (({_x == "DeadmanSwitch"} count _supportedTriggers) == 1) then { //case insensitive search
-                    private _name = if ((getText (_magConfig >> "displayNameShort")) != "") then {
-                        getText (_magConfig >> "displayNameShort")
-                    } else {
-                        getText(_magConfig >> "displayName")
-                    };
+                    private _name = getText (_magConfig >> "displayName");
                     private _picture = getText (_magConfig >> "picture");
 
                     _children pushBack [

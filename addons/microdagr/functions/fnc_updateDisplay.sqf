@@ -24,7 +24,7 @@ if (isNull _display) exitWith {ERROR("No Display");};
 private _daylight = [] call EFUNC(common,ambientBrightness);
 (_display displayCtrl IDC_MICRODAGRSHELL) ctrlSetTextColor [_daylight, _daylight, _daylight, 1];
 
-(_display displayCtrl IDC_CLOCKTEXT) ctrlSetText ([daytime, "HH:MM"] call bis_fnc_timeToString);
+(_display displayCtrl IDC_CLOCKTEXT) ctrlSetText ([dayTime, "HH:MM"] call bis_fnc_timeToString);
 
 private _waypoints = [] call FUNC(deviceGetWaypoints);
 
@@ -61,7 +61,7 @@ case (APP_MODE_INFODISPLAY): {
             private _dayString = if ((date select 2) < 10) then {"0" + str (date select 2)} else {str (date select 2)};
 
             (_display displayCtrl IDC_MODEDISPLAY_TIMEDISPLAYGREEN1) ctrlSetText format ["%1-%2-%3", _yearString, _monthSring, _dayString]; //"18-Feb-2010";
-            (_display displayCtrl IDC_MODEDISPLAY_TIMEDISPLAYGREEN2) ctrlSetText ([daytime, "HH:MM:SS"] call bis_fnc_timeToString);
+            (_display displayCtrl IDC_MODEDISPLAY_TIMEDISPLAYGREEN2) ctrlSetText ([dayTime, "HH:MM:SS"] call bis_fnc_timeToString);
         } else {
             private _targetPosName = "";
             private _targetPosLocationASL = [];
@@ -166,13 +166,20 @@ case (APP_MODE_WAYPOINTS): {
             _wpListBox lbSetTextRight [_forEachIndex, (format ["%1km", _2dDistanceKm toFixed GVAR(waypointPrecision)])];
         } forEach _waypoints;
 
-        _currentIndex = (_currentIndex max 0) min (count _waypoints);
+        // Select last created waypoint
+        private _currWaypointsCount = count _waypoints;
+        if (_currWaypointsCount > (GVAR(prevWaypointsCount))) then {
+            _currentIndex = _currWaypointsCount - 1;
+        } else {
+            _currentIndex = (_currentIndex max 0) min (_currWaypointsCount - 1);
+        };
         if ((lbCurSel _wpListBox) != _currentIndex) then {
             _wpListBox lbSetCurSel _currentIndex;
         };
 
         //Reset focus to a dummy ctrl (top button), otherwise HOME/POS1 key goes to top of listBox and has keybind blocked
         ctrlSetFocus (_display displayCtrl IDC_TOPMENUBUTTON);
+        GVAR(prevWaypointsCount) = _currWaypointsCount;
     };
 
 case (APP_MODE_SETUP): {

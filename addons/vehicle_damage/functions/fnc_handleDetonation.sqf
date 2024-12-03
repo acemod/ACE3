@@ -1,38 +1,59 @@
 #include "..\script_component.hpp"
 /*
- * Author: tcvm
- * Checks hitpoint damage and determines if a vehicle should cookoff.
+ * Author: tcvm, johnb43
+ * Checks hitpoint damage and determines if a vehicle should detonate its ammo.
  *
  * Arguments:
- * 0: The vehicle <OBJECT>
+ * 0: Vehicle <OBJECT>
  * 1: Chance of detonation <NUMBER>
- * 2: Vehicle ammo array <ARRAY>
- * 3: How much explosive ammo is inside vehicle <NUMBER>
- * 4: How much non-explosive ammo inside vehicle <NUMBER>
- * 5: Person who instigated damage <OBJECT> (default: objNull)
+ * 2: If the vehicle should be knocked out <BOOL>
+ * 3: If the crew should be injured <BOOL>
+ * 4: Source of damage <OBJECT>
+ * 5: Person who caused damage <OBJECT>
  *
  * Return Value:
- * Detonated <BOOL>
+ * None
  *
  * Example:
- * [tank2, 0.5] call ace_vehicle_damage_fnc_handleDetonation;
+ * [cursorObject, 0.5, true, player, player] call ace_vehicle_damage_fnc_handleDetonation
  *
  * Public: No
  */
 
-params ["_vehicle", "_chanceOfDetonate", "_vehicleAmmo", "_explosiveAmmoCount", "_nonExplosiveAmmoCount", ["_injurer", objNull]];
-private _alreadyDetonating = _vehicle getVariable [QGVAR(detonating), false];
-private _isKnockedOut = _explosiveAmmoCount > 0;
+params ["_vehicle", "_chanceToDetonate", "_knockOut", "_injureCrew", "_source", "_instigator"];
 
-if (!_alreadyDetonating && { _chanceOfDetonate >= random 1 }) exitWith {
-    [_vehicle, _injurer, _vehicleAmmo] call FUNC(detonate);
-    LOG_2("Detonating [%1] with a chance-to-detonate [%2]",_vehicle,_chanceOfDetonate);
-    _vehicle setVariable [QGVAR(detonating), true];
-    _isKnockedOut
+// Ignore if the vehicle is already detonating ammo
+if (_vehicle getVariable [QEGVAR(cookoff,isAmmoDetonating), false]) exitWith {
+    TRACE_2("already detonating",_vehicle,_chanceToDetonate);
+
+    if (_knockOut) then {
+        [_vehicle, _source, _instigator] call FUNC(knockOut);
+    };
+
+    _knockOut // return
 };
 
-// Avoid RPT spam
-if (_alreadyDetonating) exitWith { _isKnockedOut };
+// Failure to detonate
+if (_chanceToDetonate == 0 || {_chanceToDetonate < random 1}) exitWith {
+    TRACE_2("no detonation",_vehicle,_chanceToDetonate);
 
-LOG_2("[%1] No Detonation - Chance of detonation [%2]",_vehicle,_chanceOfDetonate);
-false
+    false // return
+};
+
+// Vehicle will be detonated
+if (_injureCrew) then {
+    {
+        [QGVAR(medicalDamage), [_x, _source, _instigator], _x] call CBA_fnc_targetEvent;
+    } forEach (crew _vehicle);
+};
+
+TRACE_2("detonation",_vehicle,_chanceToDetonate);
+
+// Detonate the vehicle
+[QEGVAR(cookoff,detonateAmmunitionServer), [_vehicle, false, _source, _instigator]] call CBA_fnc_serverEvent;
+
+if (_knockOut) then {
+    [_vehicle, _source, _instigator] call FUNC(knockOut);
+};
+
+_knockOut // return

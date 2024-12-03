@@ -42,7 +42,7 @@ for "_i" from 0 to count _newItems - 1 do {
     private _replacements = [];
 
     // Determine replacement items: direct replacements, ...
-    private _directReplacements = GVAR(itemReplacements) getVariable _item;
+    private _directReplacements = GVAR(itemReplacements) get _item;
     if (!isNil "_directReplacements") then {
         _doReplace = true;
         _replacements append _directReplacements;
@@ -50,7 +50,7 @@ for "_i" from 0 to count _newItems - 1 do {
 
     // ... item type replacements ...
     private _type = getNumber (_cfgWeapons >> _item >> "ItemInfo" >> "type");
-    private _typeReplacements = GVAR(itemReplacements) getVariable ("$" + str _type);
+    private _typeReplacements = GVAR(itemReplacements) get ("$" + str _type);
     if (!isNil "_typeReplacements") then {
         _doReplace = true;
         _replacements append _typeReplacements;
@@ -59,7 +59,7 @@ for "_i" from 0 to count _newItems - 1 do {
     // ... and inherited replacements
     {
         if (_item isKindOf [_x, _cfgWeapons]) then {
-            private _inheritedReplacements = GVAR(itemReplacements) getVariable _x;
+            private _inheritedReplacements = GVAR(itemReplacements) get _x;
             if (!isNil "_inheritedReplacements") then {
                 _doReplace = true;
                 _replacements append _inheritedReplacements;

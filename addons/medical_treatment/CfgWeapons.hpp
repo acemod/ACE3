@@ -7,14 +7,12 @@ class CfgWeapons {
     class MedikitItem;
 
     class FirstAidKit: ItemCore {
-        type = 0;
         ACE_isMedicalItem = 1;
         class ItemInfo: InventoryFirstAidKitItem_Base_F {
             mass = 4;
         };
     };
     class Medikit: ItemCore {
-        type = 0;
         ACE_isMedicalItem = 1;
         class ItemInfo: MedikitItem {
             mass = 60;
@@ -309,5 +307,18 @@ class CfgWeapons {
         hiddenSelections[] = {"camo"};
         hiddenSelectionsTextures[] = {QPATHTOF(data\bodybagItem_white_co.paa)};
         GVAR(bodyBagObject) = "ACE_bodyBagObject_white";
+    };
+
+    // Since base game doesn't support misc. items, this is needed to filling inventories in the editor
+    class ACE_painkillers_Item: ACE_ItemCore {
+        displayName = CSTRING(painkillers_Display);
+        author = ECSTRING(common,ACETeam);
+        scope = 2;
+        scopeArsenal = 0;
+        descriptionShort = CSTRING(painkillers_Desc_Short);
+        picture = QPATHTOF(ui\painkillers_ca.paa);
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 1;
+        };
     };
 };

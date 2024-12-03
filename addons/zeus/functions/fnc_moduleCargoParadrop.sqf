@@ -30,13 +30,13 @@ TRACE_4("moduleCargoParadrop placed",_logic,typeOf _vehicle,_pilot,typeOf _pilot
 
 deleteVehicle _logic; // cleanup logic now, we just needed it to get the attached vehicle
 
-if (!(missionNamespace getVariable [QEGVAR(cargo,enable), false])) exitWith {
+if !(missionNamespace getVariable [QEGVAR(cargo,enable), false]) exitWith {
     [LSTRING(RequiresAddon)] call FUNC(showMessage);
 };
 if (isNull _vehicle) exitWith {
     [LSTRING(NothingSelected)] call FUNC(showMessage);
 };
-if (!(_vehicle isKindOf "Air")) exitWith {
+if !(_vehicle isKindOf "Air") exitWith {
     [format ["%1 %2", localize "str_dn_aircraft", localize "str_msg_no_veh_select"]] call FUNC(showMessage);
 };
 if ((!alive _vehicle) || {!alive _pilot}) exitWith {
@@ -62,7 +62,7 @@ if ((_vehicle getVariable [QEGVAR(cargo,loaded), []]) isEqualTo []) exitWith {
 
     [_group] call CBA_fnc_clearWaypoints;
 
-    private _wp = _group addWaypoint [ASLtoAGL _mousePosASL, 0];
+    private _wp = _group addWaypoint [ASLToAGL _mousePosASL, 0];
     _wp setWaypointType "SCRIPTED";
     _wp setWaypointScript QPATHTOF(functions\DOUBLES(fnc,moduleCargoParadropWaypoint).sqf);
 

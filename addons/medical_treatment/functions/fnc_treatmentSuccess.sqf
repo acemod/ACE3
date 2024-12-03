@@ -50,4 +50,4 @@ _args call _callbackSuccess;
 if (_createLitter) then { _args call FUNC(createLitter); };
 
 // Emit local event for medical API
-["ace_treatmentSucceded", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem]] call CBA_fnc_localEvent;
+["ace_treatmentSucceded", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem, _createLitter]] call CBA_fnc_localEvent;

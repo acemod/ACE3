@@ -16,7 +16,7 @@ private _inherited = [];
     private _config = _x;
     private _configEnabled = (getNumber (_config >> QUOTE(ADDON) >> "enabled")) == 1;
     if (_configEnabled) then {
-        private _configExplicit = (count configProperties [_config, "configName _x == 'ace_csw'", false]) == 1;
+        private _configExplicit = (count configProperties [_config, toString {configName _x == QUOTE(ADDON)}, false]) == 1;
         if (_configExplicit) then {
             _explicitBases  pushBack (configName _config);
             _inherited pushBack [];
@@ -43,8 +43,8 @@ private _inherited = [];
 
 INFO("------ Logging static magazines with no carry version -------");
 private _hash = createHashMap;
-// private _logAll = true; // logs all possible weapon magazines (even if not used in a static weapon)
-private _logAll = false;
+private _logAll = false; // logs all possible weapon magazines (even if not used in a static weapon) when set to true
+
 {
     private _vehicleType = configName _x;
     private _turretConfig = [_vehicleType, [0]] call CBA_fnc_getTurret;
@@ -68,7 +68,6 @@ private _logAll = false;
 } forEach _staticWeaponConfigs;
 
 {
-    //IGNORE_PRIVATE_WARNING ["_x", "_y"];
     INFO_2("[%1] has no carry variant - Used in %2",_x,_y);
 } forEach _hash;
 

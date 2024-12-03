@@ -134,5 +134,5 @@ The jerry can will now have a volume of 200 liters.
 
 | Name  | Arguments | Global? | Added in |
 | ------------- | ------------- | ----- | ------------- |
-| ace_refuel_sourceInitialized | Fuel source (OBJECT), items (BOOL or ARRAY) | Yes | 3.16.0 |
+| ace_refuel_sourceInitialized | Fuel source (OBJECT) | Yes | 3.16.0 |
 | ace_refuel_jerryCanInitalized | Jerry can (OBJECT) | Yes | 3.16.0 |

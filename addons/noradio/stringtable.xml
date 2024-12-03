@@ -3,47 +3,48 @@
     <Package name="NoRadio">
         <Key ID="STR_ACE_NoRadio_DisplayName">
             <English>No Radio</English>
-            <Chinesesimp>去无线电</Chinesesimp>
-            <German>Kein Funkgerät</German>
-            <Italian>Nessuna Radio</Italian>
-            <Korean>음소거</Korean>
-            <Polish>Brak Radia</Polish>
-            <Japanese>無線無効化</Japanese>
-            <Russian>Нет рации</Russian>
-            <Spanish>No Radio</Spanish>
             <French>Pas de radio</French>
+            <Spanish>No Radio</Spanish>
+            <Italian>Nessuna Radio</Italian>
+            <Polish>Brak Radia</Polish>
+            <Portuguese>Sem Rádio</Portuguese>
+            <Russian>Нет рации</Russian>
+            <German>Kein Funkgerät</German>
+            <Korean>음소거</Korean>
+            <Japanese>無線無効化</Japanese>
+            <Chinesesimp>去无线电</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_NoRadio_setting">
             <English>Mute Player</English>
-            <German>Spieler stummschalten</German>
+            <Czech>Ztlumit hráče</Czech>
+            <French>Joueur en sourdine</French>
+            <Spanish>Ensordecer jugador</Spanish>
             <Italian>Muta Giocatore</Italian>
+            <Polish>Wycisz Gracza</Polish>
+            <Portuguese>Silenciar Jogador</Portuguese>
+            <Russian>Заглушить игрока</Russian>
+            <German>Spieler stummschalten</German>
+            <Korean>플레이어 음소거</Korean>
+            <Japanese>プレイヤーをミュート</Japanese>
             <Chinese>玩家靜音</Chinese>
             <Chinesesimp>玩家静音</Chinesesimp>
-            <Japanese>プレイヤーをミュート</Japanese>
-            <Polish>Wycisz Gracza</Polish>
-            <Russian>Заглушить игрока</Russian>
-            <Portuguese>Silenciar Jogador</Portuguese>
-            <French>Joueur en sourdine</French>
-            <Czech>Ztlumit hráče</Czech>
             <Turkish>Oyuncuyu Sustur</Turkish>
-            <Spanish>Ensordecer jugador</Spanish>
-            <Korean>플레이어 음소거</Korean>
         </Key>
         <Key ID="STR_ACE_NoRadio_setting_tooltip">
             <English>Mutes the controlled player avatar.</English>
-            <German>Schaltet eigenen Spieleravatar stumm.</German>
+            <Czech>Vypne hlas charakteru hráče.</Czech>
+            <French>Met en sourdine l'avatar du joueur.</French>
+            <Spanish>Ensordecer el avatar del jugador controlado</Spanish>
             <Italian>Muta l'avatar del giocatore controllato.</Italian>
+            <Polish>Wycisza awatar kontrolowany przez gracza</Polish>
+            <Portuguese>Silencia o avatar do Jogador controlado</Portuguese>
+            <Russian>Заглушить контролируемого игрока</Russian>
+            <German>Schaltet eigenen Spieleravatar stumm.</German>
+            <Korean>플레이어 아바타를 음소거합니다</Korean>
+            <Japanese>プレイヤーに操作されているキャラをミュートします。</Japanese>
             <Chinese>靜音玩家所控制的角色</Chinese>
             <Chinesesimp>静音玩家所控制的角色。</Chinesesimp>
-            <Japanese>プレイヤーに操作されているキャラをミュートします。</Japanese>
-            <Polish>Wycisza awatar kontrolowany przez gracza</Polish>
-            <Russian>Заглушить контролируемого игрока</Russian>
-            <Portuguese>Silencia o avatar do Jogador controlado</Portuguese>
-            <French>Met en sourdine l'avatar du joueur.</French>
-            <Czech>Vypne hlas charakteru hráče.</Czech>
             <Turkish>Oyuncuları Susturur</Turkish>
-            <Spanish>Ensordecer el avatar del jugador controlado</Spanish>
-            <Korean>플레이어 아바타를 음소거합니다</Korean>
         </Key>
     </Package>
 </Project>

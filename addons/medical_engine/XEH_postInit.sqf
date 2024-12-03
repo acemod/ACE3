@@ -6,27 +6,51 @@
     [_new] call FUNC(updateDamageEffects); // Run on new controlled unit to update QGVAR(aimFracture)
 }, true] call CBA_fnc_addPlayerEventHandler;
 
-
 ["CAManBase", "init", {
     params ["_unit"];
 
-    // Check if last hit point is our dummy.
-    private _allHitPoints = getAllHitPointsDamage _unit param [0, []];
-    reverse _allHitPoints;
-    while {(_allHitPoints param [0, ""]) select [0,1] == "#"} do { WARNING_1("Ignoring Reflector hitpoint %1",_allHitPoints deleteAt 0); };
+    if (unitIsUAV _unit) exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
+    if (getNumber (configOf _unit >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit);};
 
-    if (_allHitPoints param [0, ""] != "ACE_HDBracket") then {
-        if (unitIsUAV _unit) exitWith {TRACE_1("ignore UAV AI",typeOf _unit);};
-        if (getNumber ((configOf _unit) >> "isPlayableLogic") == 1) exitWith {TRACE_1("ignore logic unit",typeOf _unit)};
+    private _allHitPoints = getAllHitPointsDamage _unit param [0, []];
+    if ((GVAR(customHitpoints) arrayIntersect _allHitPoints) isNotEqualTo GVAR(customHitpoints)) exitWith {
         ERROR_1("Bad hitpoints for unit type ""%1""",typeOf _unit);
-    } else {
-        // Calling this function inside curly brackets allows the usage of
-        // "exitWith", which would be broken with "HandleDamage" otherwise.
-        _unit setVariable [
-            QEGVAR(medical,HandleDamageEHID),
-            _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
-        ];
     };
+
+    // Calling this function inside curly brackets allows the usage of
+    // "exitWith", which would be broken with "HandleDamage" otherwise.
+    _unit setVariable [
+        QEGVAR(medical,HandleDamageEHID),
+        _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
+    ];
+
+    // Fires where healer is local
+    _unit addEventHandler ["HandleHeal", {
+        params ["_injured", "_healer", "_isMedic", "_atVehicle"];
+
+        AISFinishHeal [_injured, _healer, _isMedic];
+
+        // AI stay in healing loop if they have healing items available (they try to heal once every second)
+        if (isNull _atVehicle && {!isNil {TYPE_FIRST_AID_KIT call EFUNC(common,getItemReplacements)} || {!isNil {TYPE_MEDIKIT call EFUNC(common,getItemReplacements)}}}) then {
+            // Replace the items (if possible) so that the unit can't heal
+            _healer call EFUNC(common,replaceRegisteredItems);
+        } else {
+            // If there are no replacements available, interrupt healing command by forcing the unit to leave and rejoin the group
+            if (_healer call EFUNC(common,isPlayer)) exitWith {};
+
+            // This resets their command/action
+            private _assignedTeam = assignedTeam _healer;
+            private _groupInfo = [group _healer, groupId _healer];
+            [_healer] joinSilent grpNull; // If unit doesn't leave group first, it will take the lowest Id when joinAsSilent is run, regardless of parameters
+            _healer joinAsSilent _groupInfo;
+
+            if (_assignedTeam != "") then {
+                _healer assignTeam _assignedTeam;
+            };
+        };
+
+        true
+    }];
 }, nil, [IGNORE_BASE_UAVPILOTS], true] call CBA_fnc_addClassEventHandler;
 
 #ifdef DEBUG_MODE_FULL
@@ -88,7 +112,7 @@
     };
 }] call CBA_fnc_addEventHandler;
 
-["CAManBase", "deleted", {
+["CAManBase", "Deleted", {
     params ["_unit"];
     TRACE_3("unit deleted",_unit,objectParent _unit,local _unit);
     if ((!isNull objectParent _unit) && {local objectParent _unit}) then {

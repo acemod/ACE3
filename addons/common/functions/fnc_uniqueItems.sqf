@@ -28,10 +28,12 @@ private _fnc_getItems = {
     _inventoryItems append ((getItemCargo vestContainer _target) select 0);
     _inventoryItems append ((getItemCargo backpackContainer _target) select 0);
 
-    _items set [0, _inventoryItems];
-    _items set [1, magazines _target];
+    private _magazines = magazines _target;
 
-    _items arrayIntersect _items
+    _items set [0, _inventoryItems arrayIntersect _inventoryItems];
+    _items set [1, _magazines arrayIntersect _magazines];
+
+    _items
 };
 
 // Cache items list if unit is ACE_player

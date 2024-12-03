@@ -48,10 +48,10 @@ while {(_closeInMax - _closeInMin) > 0.01} do {
     {
         if (_doesIntersect) exitWith {};
         private _startingPosShifted = _startingPosition vectorAdd _x;
-        private _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLtoASL _startingPosShifted};
+        private _startASL = if (surfaceIsWater _startingPosShifted) then {_startingPosShifted} else {ATLToASL _startingPosShifted};
         {
             private _endPosShifted = _endPosTest vectorAdd _x;
-            private _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLtoASL _endPosShifted};
+            private _endASL = if (surfaceIsWater _startingPosShifted) then {_endPosShifted} else {ATLToASL _endPosShifted};
 
             #ifdef DRAW_ATTACH_SCAN
                 [{
@@ -100,7 +100,7 @@ private _dirAndUp = [[[0,1,0],[0,0,1]], -_yaw, 0, _roll] call BIS_fnc_transformV
 
 // Transform dir and up vector from player model to world, then to model-space of _attachToVehicle
 private _dir = _unit vectorModelToWorldVisual _dirAndUp#0;
-_dir = _attachToVehicle vectorWorldToModelVisual _dir; 
+_dir = _attachToVehicle vectorWorldToModelVisual _dir;
 
 private _up = _unit vectorModelToWorldVisual _dirAndUp#1;
 _up = _attachToVehicle vectorWorldToModelVisual _up;

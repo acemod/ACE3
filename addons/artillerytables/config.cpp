@@ -14,13 +14,6 @@ class CfgPatches {
     };
 };
 
-class ACE_Extensions {
-    class ace_artillerytables {
-        windows = 1;
-        client = 1;
-    };
-};
-
 #include "CfgEventHandlers.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"

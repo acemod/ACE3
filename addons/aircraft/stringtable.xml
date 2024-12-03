@@ -1,181 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Aircraft">
-        <Key ID="STR_ACE_Aircraft_gatling_20mm_Name">
-            <English>XM301</English>
-            <German>XM301</German>
-            <Spanish>XM301</Spanish>
-            <Polish>XM301</Polish>
-            <Czech>XM301</Czech>
-            <French>XM301</French>
-            <Russian>XM301</Russian>
-            <Hungarian>XM301</Hungarian>
-            <Portuguese>XM301</Portuguese>
-            <Italian>XM301</Italian>
-            <Japanese>XM301</Japanese>
-            <Korean>XM301</Korean>
-            <Chinese>XM301</Chinese>
-            <Chinesesimp>XM301</Chinesesimp>
-            <Turkish>XM301</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_OpenCargoRamp">
-            <English>Open Cargo Door</English>
-            <German>Laderampe öffnen</German>
-            <Spanish>Abrir compuerta de carga</Spanish>
-            <French>Ouvrir la rampe</French>
-            <Polish>Otwórz drzwi ładowni</Polish>
-            <Czech>Otevřít nákladní prostor</Czech>
-            <Hungarian>Rakodórámpa nyitása</Hungarian>
-            <Russian>Открыть грузовой отсек</Russian>
-            <Italian>Apri la rampa di carico</Italian>
-            <Portuguese>Abrir porta de carga</Portuguese>
-            <Japanese>貨物室ドアを 開く</Japanese>
-            <Korean>화물칸 개방</Korean>
-            <Chinese>開啟貨艙門</Chinese>
-            <Chinesesimp>开启货舱门</Chinesesimp>
-            <Turkish>Kargo kapısını aç</Turkish>
-        </Key>
         <Key ID="STR_ACE_Aircraft_CloseCargoRamp">
             <English>Close Cargo Door</English>
-            <German>Laderampe schließen</German>
-            <Spanish>Cerrar compuerta de carga</Spanish>
-            <French>Fermer la rampe</French>
-            <Polish>Zamknij drzwi ładowni</Polish>
             <Czech>Zavřít nákladní prostor</Czech>
-            <Hungarian>Rakodórámpa zárása</Hungarian>
-            <Russian>Закрыть грузовой отсек</Russian>
+            <French>Fermer la rampe</French>
+            <Spanish>Cerrar compuerta de carga</Spanish>
             <Italian>Chiudi la rampa di carico</Italian>
+            <Polish>Zamknij drzwi ładowni</Polish>
             <Portuguese>Fechar porta de carga</Portuguese>
-            <Japanese>貨物室ドアを 閉じる</Japanese>
+            <Russian>Закрыть грузовой отсек</Russian>
+            <German>Laderampe schließen</German>
             <Korean>화물칸 폐쇄</Korean>
+            <Japanese>貨物室ドアを 閉じる</Japanese>
             <Chinese>關閉貨艙門</Chinese>
             <Chinesesimp>关闭货舱门</Chinesesimp>
             <Turkish>Kargo kapısını kapat</Turkish>
+            <Hungarian>Rakodórámpa zárása</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Aircraft_GatlingDescriptionHEI">
-            <English>30mm High-Explosive Incendiary</English>
-            <Spanish>30mm Alto Explosivo Incendiaria</Spanish>
-            <Chinese>30毫米高爆燃燒彈</Chinese>
-            <Chinesesimp>30 mm 高爆燃烧</Chinesesimp>
-            <French>30 mm High-Explosive Incendiary</French>
-            <Polish>30mm Odłamkowo-Burzące - Zapalające</Polish>
-            <Turkish>30mm Yüksek Patlayıcı </Turkish>
-            <German>30mm Hochexplosiv/Brandladung</German>
-            <Italian>30mm Esplosivo/Incendiario</Italian>
-            <Japanese>30mm 焼夷榴弾</Japanese>
-            <Czech>30mm Tříštivo-trhavá zápalná střela</Czech>
-            <Russian>30мм Осколочно-Фугасный Зажигательный</Russian>
-            <Korean>30mm 고폭소이탄</Korean>
-            <Portuguese>30mm Alto-Explosivo Incendiária</Portuguese>
+        <Key ID="STR_ACE_Aircraft_DroneFollowDistance">
+            <English>Follow Distance</English>
+            <French>Distance de suivi</French>
+            <Spanish>Distancia de Seguimiento</Spanish>
+            <Italian>Distanza di seguimento</Italian>
+            <Russian>Расстояние отслеживания</Russian>
+            <German>Folge-Entfernung</German>
+            <Korean>따라가는 거리</Korean>
+            <Japanese>追跡距離</Japanese>
         </Key>
-        <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortHEI">
-            <English>30mm HEI</English>
-            <Spanish>30mm AEI</Spanish>
-            <Chinese>30毫米高爆燃燒</Chinese>
-            <Chinesesimp>30mm 高爆燃烧</Chinesesimp>
-            <Italian>30mm HEI</Italian>
-            <French>30 mm HEI</French>
-            <Polish>30mm OB-Z</Polish>
-            <Turkish>30mm HEI</Turkish>
-            <German>30mm HEB</German>
-            <Japanese>30mm HEI</Japanese>
-            <Czech>30mm HEI</Czech>
-            <Russian>30мм ОФЗ</Russian>
-            <Korean>30mm HEI</Korean>
-            <Portuguese>30mm AEI</Portuguese>
+        <Key ID="STR_ACE_Aircraft_DroneFollowHint">
+            <English>Following unit within %1m</English>
+            <French>Suivre l'unité jusqu'à %1m</French>
+            <Spanish>Seguir unidad a %1m</Spanish>
+            <Italian>Seguendo unità entro %1m</Italian>
+            <Russian>Отслеживание в пределах %1m</Russian>
+            <German>Folgt Einheit bis zu %1m</German>
+            <Korean>%1m 이내로 유닛을 따라갑니다</Korean>
+            <Japanese>%1m 間隔で 目標を追跡します</Japanese>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionAP">
             <English>30mm DU Armor Piercing</English>
-            <Spanish>30mm UE Perforante de Blindaje</Spanish>
-            <Chinese>30毫米貧化鈾穿甲彈 </Chinese>
-            <Chinesesimp>30 mm 贫铀穿甲</Chinesesimp>
+            <Czech>30mm Protipancéřová střela z ochuzeného Uranu</Czech>
             <French>30 mm UA Armor Piercing</French>
+            <Spanish>30mm UE Perforante de Blindaje</Spanish>
             <Italian>30mm AP Uranio Impoverito</Italian>
             <Polish>30mm Zubożony Uran - Przebijające</Polish>
-            <Turkish>30mm DU Zırh Delici</Turkish>
-            <German>30mm abgereichertes panzerbrechendes Uraniumgeschoss</German>
-            <Japanese>30mm 劣化ウラン徹甲弾</Japanese>
-            <Czech>30mm Protipancéřová střela z ochuzeného Uranu</Czech>
-            <Russian>30мм ОУ Бронебойный Снаряд</Russian>
-            <Korean>30mm 열화우라늄 철갑탄</Korean>
             <Portuguese>30mm DU Perfurante de Blindagem</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortAP">
-            <English>30mm DU AP</English>
-            <Spanish>30mm UE AP</Spanish>
-            <Chinese>30毫米貧鈾穿甲</Chinese>
-            <Chinesesimp>30mm 贫铀穿甲</Chinesesimp>
-            <French>30 mm UA AP</French>
-            <Italian>30mm AP-UI</Italian>
-            <Polish>30mm ZU-P</Polish>
-            <Turkish>30mm DU AP</Turkish>
-            <German>30mm DU-PB</German>
-            <Japanese>30mm DU AP</Japanese>
-            <Czech>30 mm DU AP</Czech>
-            <Russian>30мм ОУ БС</Russian>
-            <Korean>30mm DU AP</Korean>
-            <Portuguese>30mm DU AP</Portuguese>
+            <Russian>30мм ОУ Бронебойный Снаряд</Russian>
+            <German>30mm abgereichertes panzerbrechendes Uraniumgeschoss</German>
+            <Korean>30mm 열화우라늄 철갑탄</Korean>
+            <Japanese>30mm 劣化ウラン徹甲弾</Japanese>
+            <Chinese>30毫米貧化鈾穿甲彈</Chinese>
+            <Chinesesimp>30 mm 贫铀穿甲</Chinesesimp>
+            <Turkish>30mm DU Zırh Delici</Turkish>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionCM41">
             <English>30mm Combat Mix 4:1 DU:HEI</English>
-            <Spanish>30mm Mezcla de Combate 4:1 UE:AEI</Spanish>
-            <Chinese>30毫米戰鬥混合彈4:1 穿甲:高爆</Chinese>
-            <Chinesesimp>30mm 战斗混合 穿甲/高爆 4:1</Chinesesimp>
+            <Czech>30mm Bojový Mix 4:1 DU:HEI</Czech>
             <French>30 mm Mix de Combat 4:1 UA:HEI</French>
+            <Spanish>30mm Mezcla de Combate 4:1 UE:AEI</Spanish>
             <Italian>30mm Misto 4:1 UI:HEI</Italian>
             <Polish>30mm Mieszanka bojowa 4:1 ZU:OB-Z</Polish>
-            <Turkish>30mm Combat Mix 4:1 DU:HEI</Turkish>
-            <German>30mm Kampfmischung 4:1 DU:HEB</German>
-            <Japanese>30mm コンバット ミックス 4:1 劣化ウラン徹甲弾:焼夷榴弾</Japanese>
-            <Czech>30mm Bojový Mix 4:1 DU:HEI</Czech>
-            <Russian>30мм Смешанное боепитание 4:1 ОУ:ОФЗ</Russian>
-            <Korean>30mm 4:1 열화:고폭소이</Korean>
             <Portuguese>30mm Mix de Combate 4:1 DU:AEI</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM41">
-            <English>30mm CM 4:1</English>
-            <Spanish>30mm MC 4:1</Spanish>
-            <Chinese>30毫米 穿高混合 4:1</Chinese>
-            <Chinesesimp>30mm 穿爆混合 4:1</Chinesesimp>
-            <French>30 mm MdC 4:1</French>
-            <Italian>30mm Misto 4:1</Italian>
-            <Polish>30mm MB 4:1</Polish>
-            <Turkish>30mm CM 4:1</Turkish>
-            <German>30mm KM 4:1</German>
-            <Japanese>30mm CM 4:1</Japanese>
-            <Czech>30mm BM 4:1</Czech>
-            <Russian>30мм СБ 4:1</Russian>
-            <Korean>30mm CM 4:1</Korean>
+            <Russian>30мм Смешанное боепитание 4:1 ОУ:ОФЗ</Russian>
+            <German>30mm Kampfmischung 4:1 DU:HEB</German>
+            <Korean>30mm 열화우라늄:고폭소이 4:1 혼합</Korean>
+            <Japanese>30mm コンバット ミックス 4:1 劣化ウラン徹甲弾:焼夷榴弾</Japanese>
+            <Chinese>30毫米戰鬥混合彈4:1 穿甲:高爆</Chinese>
+            <Chinesesimp>30mm 战斗混合 穿甲/高爆 4:1</Chinesesimp>
+            <Turkish>30mm Combat Mix 4:1 DU:HEI</Turkish>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionCM51">
             <English>30mm Combat Mix 5:1 DU:HEI</English>
-            <Spanish>30mm Mezcla de Combate 5:1 UE:AEI</Spanish>
-            <Chinese>30毫米戰鬥混合彈5:1 穿甲:高爆</Chinese>
-            <Chinesesimp>30 mm 战斗混合 穿甲/高爆 5:1</Chinesesimp>
+            <Czech>30mm Bojový Mix 5:1 DU:HEI</Czech>
             <French>30 mm Mix de Combat 5:1 UA:HEI</French>
+            <Spanish>30mm Mezcla de Combate 5:1 UE:AEI</Spanish>
             <Italian>30mm Misto 5:1 UI:HEI</Italian>
             <Polish>30mm Mieszanka bojowa 5:1 ZU:OB-Z</Polish>
-            <Turkish>30mm Combat Mix 5:1 DU:HEI</Turkish>
-            <German>30mm Kampfmischung 5:1 DU:HEB</German>
-            <Japanese>30mm コンバット ミックス 5:1 劣化ウラン徹甲弾:焼夷榴弾</Japanese>
-            <Czech>30mm Bojový Mix 5:1 DU:HEI</Czech>
             <Russian>30мм Смешанное боепитание 5:1 ОУ:ОФЗ</Russian>
-            <Korean>30mm 5:1 열화:고폭소이</Korean>
+            <German>30mm Kampfmischung 5:1 DU:HEB</German>
+            <Korean>30mm 열화우라늄:고폭소이 5:1 혼합</Korean>
+            <Japanese>30mm コンバット ミックス 5:1 劣化ウラン徹甲弾:焼夷榴弾</Japanese>
+            <Chinese>30毫米戰鬥混合彈5:1 穿甲:高爆</Chinese>
+            <Chinesesimp>30 mm 战斗混合 穿甲/高爆 5:1</Chinesesimp>
+            <Turkish>30mm Combat Mix 5:1 DU:HEI</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Aircraft_GatlingDescriptionHEI">
+            <English>30mm High-Explosive Incendiary</English>
+            <Czech>30mm Tříštivo-trhavá zápalná střela</Czech>
+            <French>30 mm High-Explosive Incendiary</French>
+            <Spanish>30mm Alto Explosivo Incendiaria</Spanish>
+            <Italian>30mm Esplosivo/Incendiario</Italian>
+            <Polish>30mm Odłamkowo-Burzące - Zapalające</Polish>
+            <Portuguese>30mm Alto-Explosivo Incendiária</Portuguese>
+            <Russian>30мм Осколочно-Фугасный Зажигательный</Russian>
+            <German>30mm Hochexplosiv/Brandladung</German>
+            <Korean>30mm 고폭소이탄</Korean>
+            <Japanese>30mm 焼夷榴弾</Japanese>
+            <Chinese>30毫米高爆燃燒彈</Chinese>
+            <Chinesesimp>30 mm 高爆燃烧</Chinesesimp>
+            <Turkish>30mm Yüksek Patlayıcı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortAP">
+            <English>30mm DU AP</English>
+            <Czech>30 mm DU AP</Czech>
+            <French>30 mm UA AP</French>
+            <Spanish>30mm UE AP</Spanish>
+            <Italian>30mm AP-UI</Italian>
+            <Polish>30mm ZU-P</Polish>
+            <Portuguese>30mm DU AP</Portuguese>
+            <Russian>30мм ОУ БС</Russian>
+            <German>30mm DU-PB</German>
+            <Korean>30mm DU AP</Korean>
+            <Japanese>30mm DU AP</Japanese>
+            <Chinese>30毫米貧鈾穿甲</Chinese>
+            <Chinesesimp>30mm 贫铀穿甲</Chinesesimp>
+            <Turkish>30mm DU AP</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM41">
+            <English>30mm CM 4:1</English>
+            <Czech>30mm BM 4:1</Czech>
+            <French>30 mm MdC 4:1</French>
+            <Spanish>30mm MC 4:1</Spanish>
+            <Italian>30mm Misto 4:1</Italian>
+            <Polish>30mm MB 4:1</Polish>
+            <Russian>30мм СБ 4:1</Russian>
+            <German>30mm KM 4:1</German>
+            <Korean>30mm 4:1 혼합</Korean>
+            <Japanese>30mm CM 4:1</Japanese>
+            <Chinese>30毫米 穿高混合 4:1</Chinese>
+            <Chinesesimp>30mm 穿爆混合 4:1</Chinesesimp>
+            <Turkish>30mm CM 4:1</Turkish>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortCM51">
             <English>30mm CM 5:1</English>
-            <Spanish>30mm MC 5:1</Spanish>
-            <Chinese>30毫米 穿高混合 5:1</Chinese>
-            <Chinesesimp>30mm 穿爆混合 5:1</Chinesesimp>
+            <Czech>30mm BM 5:1</Czech>
             <French>30 mm MdC 5:1</French>
+            <Spanish>30mm MC 5:1</Spanish>
             <Italian>30mm Misto 5:1</Italian>
             <Polish>30mm MB 5:1</Polish>
-            <Turkish>30mm CM 5:1</Turkish>
-            <German>30mm KM 5:1</German>
-            <Japanese>30mm CM 5:1</Japanese>
-            <Czech>30mm BM 5:1</Czech>
             <Russian>30мм СБ 5:1</Russian>
-            <Korean>30mm CM 5:1</Korean>
+            <German>30mm KM 5:1</German>
+            <Korean>30mm 5:1 혼합</Korean>
+            <Japanese>30mm CM 5:1</Japanese>
+            <Chinese>30毫米 穿高混合 5:1</Chinese>
+            <Chinesesimp>30mm 穿爆混合 5:1</Chinesesimp>
+            <Turkish>30mm CM 5:1</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Aircraft_GatlingDescriptionShortHEI">
+            <English>30mm HEI</English>
+            <Czech>30mm HEI</Czech>
+            <French>30 mm HEI</French>
+            <Spanish>30mm AEI</Spanish>
+            <Italian>30mm HEI</Italian>
+            <Polish>30mm OB-Z</Polish>
+            <Portuguese>30mm AEI</Portuguese>
+            <Russian>30мм ОФЗ</Russian>
+            <German>30mm HEB</German>
+            <Korean>30mm HEI</Korean>
+            <Japanese>30mm HEI</Japanese>
+            <Chinese>30毫米高爆燃燒</Chinese>
+            <Chinesesimp>30mm 高爆燃烧</Chinesesimp>
+            <Turkish>30mm HEI</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Aircraft_OpenCargoRamp">
+            <English>Open Cargo Door</English>
+            <Czech>Otevřít nákladní prostor</Czech>
+            <French>Ouvrir la rampe</French>
+            <Spanish>Abrir compuerta de carga</Spanish>
+            <Italian>Apri la rampa di carico</Italian>
+            <Polish>Otwórz drzwi ładowni</Polish>
+            <Portuguese>Abrir porta de carga</Portuguese>
+            <Russian>Открыть грузовой отсек</Russian>
+            <German>Laderampe öffnen</German>
+            <Korean>화물칸 개방</Korean>
+            <Japanese>貨物室ドアを 開く</Japanese>
+            <Chinese>開啟貨艙門</Chinese>
+            <Chinesesimp>开启货舱门</Chinesesimp>
+            <Turkish>Kargo kapısını aç</Turkish>
+            <Hungarian>Rakodórámpa nyitása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Aircraft_gatling_20mm_Name">
+            <English>XM301</English>
+            <Czech>XM301</Czech>
+            <French>XM301</French>
+            <Spanish>XM301</Spanish>
+            <Italian>XM301</Italian>
+            <Polish>XM301</Polish>
+            <Portuguese>XM301</Portuguese>
+            <Russian>XM301</Russian>
+            <German>XM301</German>
+            <Korean>XM301</Korean>
+            <Japanese>XM301</Japanese>
+            <Chinese>XM301</Chinese>
+            <Chinesesimp>XM301</Chinesesimp>
+            <Turkish>XM301</Turkish>
+            <Hungarian>XM301</Hungarian>
         </Key>
     </Package>
 </Project>

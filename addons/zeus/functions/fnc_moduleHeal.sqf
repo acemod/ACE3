@@ -43,7 +43,7 @@ switch (false) do {
 };
 
 // Heal validated target
-if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+if (GETEGVAR(medical,enabled,false)) then {
     TRACE_1("healing with ace_medical",_unit);
     [QEGVAR(medical_treatment,fullHealLocal), [_unit], _unit] call CBA_fnc_targetEvent;
 } else {

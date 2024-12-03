@@ -76,7 +76,7 @@ if (_medic isNotEqualTo player || {!_isInZeus}) then {
     };
 
     // Determine the animation length
-    private _animDuration = GVAR(animDurations) getVariable _medicAnim;
+    private _animDuration = GVAR(animDurations) get toLowerANSI _medicAnim;
     if (isNil "_animDuration") then {
         WARNING_2("animation [%1] for [%2] has no duration defined",_medicAnim,_classname);
         _animDuration = 10;
@@ -97,7 +97,7 @@ if (_medic isNotEqualTo player || {!_isInZeus}) then {
     };
 
     // Play treatment animation for medic and determine the ending animation
-    if (vehicle _medic == _medic && {_medicAnim != ""}) then {
+    if (isNull objectParent _medic && {_medicAnim != ""}) then {
         // Speed up animation based on treatment time (but cap max to prevent odd animiations/cam shake)
         private _animRatio = _animDuration / _treatmentTime;
         TRACE_3("setAnimSpeedCoef",_animRatio,_animDuration,_treatmentTime);
@@ -155,9 +155,9 @@ if (_callbackProgress isEqualTo {}) then {
     _callbackProgress = {true};
 };
 
-[_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem] call _callbackStart;
+[_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem, _createLitter] call _callbackStart;
 
-["ace_treatmentStarted", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem]] call CBA_fnc_localEvent;
+["ace_treatmentStarted", [_medic, _patient, _bodyPart, _classname, _itemUser, _usedItem, _createLitter]] call CBA_fnc_localEvent;
 
 [
     _treatmentTime,

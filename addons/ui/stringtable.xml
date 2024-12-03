@@ -1,721 +1,735 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="UI">
-        <Key ID="STR_ACE_UI_Category">
-            <English>User Interface</English>
-            <Czech>Uživatelské rozhraní</Czech>
-            <Portuguese>Interface do usuário</Portuguese>
-            <French>Interface Utilisateur</French>
-            <Russian>Интерфейс</Russian>
-            <Japanese>ユーザ インタフェース</Japanese>
-            <Polish>Interfejs użytkownika</Polish>
-            <German>Benutzeroberfläche</German>
-            <Korean>사용자 인터페이스</Korean>
-            <Italian>Interfaccia Utente</Italian>
-            <Chinesesimp>用户界面</Chinesesimp>
-            <Chinese>使用者介面</Chinese>
-            <Spanish>Interfaz de usuario</Spanish>
-            <Turkish>Kullanıcı Arayüzü</Turkish>
-        </Key>
-        <Key ID="STR_ACE_UI_ModuleName">
-            <English>User Interface</English>
-            <Czech>Uživatelské rozhraní</Czech>
-            <Portuguese>Interface do usuário</Portuguese>
-            <French>Interface Utilisateur</French>
-            <Russian>Пользовательский интерфейс</Russian>
-            <Japanese>ユーザ インタフェース</Japanese>
-            <Polish>Interfejs użytkownika</Polish>
-            <German>Benutzeroberfläche</German>
-            <Korean>사용자 인터페이스</Korean>
-            <Italian>Interfaccia Utente</Italian>
-            <Chinesesimp>用户界面</Chinesesimp>
-            <Chinese>使用者介面</Chinese>
-            <Spanish>Interfaz de usuario</Spanish>
-            <Turkish>Kullanıcı Arayüzü</Turkish>
-        </Key>
-        <Key ID="STR_ACE_UI_ModuleDescription">
-            <English>This module allows toggling visible user interface parts.</English>
-            <Portuguese>Este módulo permite ligar ou desligar partes da interface do usuário</Portuguese>
-            <French>Ce module permet d'activer ou de désactiver certains éléments de l'Interface Utilisateur (IU).</French>
-            <Russian>Этот модуль позволяет переключать видимость элементов пользовательского интерфейса.</Russian>
-            <Japanese>このモジュールではユーザ インタフェースの表示部位の表示状態を切り替えることができます。</Japanese>
-            <Polish>Moduł ten pozwala zmienić stan widoczności poszczególnych elementów UI.</Polish>
-            <German>Dieses Modul erlaubt es, Teile der Benutzeroberfläche (UI) an- oder auszuschalten.</German>
-            <Korean>이 모듈은 사용자 인터페이스의 부분을 토글하는 것을 가능케 해줍니다.</Korean>
-            <Italian>Questo modulo consente di selezionare quali parti dell'interfaccia utente sono visibili.</Italian>
-            <Chinesesimp>此模块允许你调整用户界面的任何一个控件</Chinesesimp>
-            <Chinese>此模塊允許你調整使用者介面的任何一個元件</Chinese>
-            <Czech>Tento modul umožňuje přepínání viditelných částí uživatelského rozhraní.</Czech>
-            <Spanish>Este módulo permite activar la visibilidad de apartados de la interfaz</Spanish>
-        </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI">
             <English>Allow Selective UI</English>
             <Czech>Povolit selektivní UI</Czech>
-            <Portuguese>Permitir IU Selecionável</Portuguese>
             <French>Autoriser la personnalisation de l'IU</French>
-            <Russian>Вкл. настраиваемый интерфейс</Russian>
-            <Japanese>選択性UIを許可</Japanese>
+            <Spanish>Permitir IU selectiva</Spanish>
+            <Italian>Permette l'UI Selettiva</Italian>
             <Polish>Zezwól na selektywne UI</Polish>
+            <Portuguese>Permitir IU Selecionável</Portuguese>
+            <Russian>Вкл. настраиваемый интерфейс</Russian>
             <German>Erlaube selektives UI</German>
             <Korean>선택적 사용자 인터페이스 허가</Korean>
-            <Italian>Permette l'UI Selettiva</Italian>
-            <Chinesesimp>允许调整用户界面</Chinesesimp>
+            <Japanese>選択性UIを許可</Japanese>
             <Chinese>允許調整使用者介面</Chinese>
-            <Spanish>Permitir IU selectiva</Spanish>
+            <Chinesesimp>允许调整用户界面</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_UI_AllowSelectiveUI_Description">
             <English>Allow client to modify their UI.</English>
             <Czech>Povolit klientovi měnit jeho UI</Czech>
-            <Portuguese>Permite o cliente modificar sua IU.</Portuguese>
             <French>Permet aux clients de modifier leur Interface Utilisateur.</French>
-            <Russian>Позволить клиентам изменять их пользовательский интерфейс.</Russian>
-            <Japanese>クライアントがユーザ インタフェースを編集できるようにします。</Japanese>
+            <Spanish>Permitir al cliente modificar su interfaz.</Spanish>
+            <Italian>Permette al client di modificare la propria UI.</Italian>
             <Polish>Zezwól klientowi na modyfikację UI.</Polish>
+            <Portuguese>Permite o cliente modificar sua IU.</Portuguese>
+            <Russian>Позволить клиентам изменять их пользовательский интерфейс.</Russian>
             <German>Erlaube Clients, ihr UI zu modifizieren.</German>
             <Korean>클라이언트가 자신의 사용자 인터페이스를 사용하는 것을 허가합니다</Korean>
-            <Italian>Permette al client di modificare la propria UI.</Italian>
-            <Chinesesimp>允许客户端自行调整用户界面</Chinesesimp>
+            <Japanese>クライアントがユーザ インタフェースを編集できるようにします。</Japanese>
             <Chinese>允許客戶端自行調整使用者介面</Chinese>
-            <Spanish>Permitir al cliente modificar su interfaz.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_UI_SoldierVehicleWeaponInfo">
-            <English>Soldier/Vehicle/Weapon Information</English>
-            <Czech>Informace o Vojákovi/Vozidlu/Zbrani</Czech>
-            <Portuguese>Informação de Soldado/Veículo/Armamento</Portuguese>
-            <French>Information soldat/véhicule/arme</French>
-            <Russian>Информация о солдате/технике/оружии</Russian>
-            <Japanese>兵士/車両/武器の情報</Japanese>
-            <Polish>Informacje o żołnierzu/pojeździe/broni</Polish>
-            <German>Soldat/Fahrzeug/Waffe Information</German>
-            <Korean>병사/차량/무기 정보</Korean>
-            <Italian>Informazioni Soldato/Veicolo/Arma</Italian>
-            <Chinesesimp>士兵/载具/武器信息栏</Chinesesimp>
-            <Chinese>士兵/載具/武器資訊欄</Chinese>
-            <Spanish>Información de soldado / vehículo / arma</Spanish>
-        </Key>
-        <Key ID="STR_ACE_UI_VehicleRadar">
-            <English>Vehicle Radar</English>
-            <Czech>Radar vozidla</Czech>
-            <Portuguese>Radar de Veículo</Portuguese>
-            <French>Radar de véhicule</French>
-            <Russian>Радар в технике</Russian>
-            <Japanese>車両のレーダー</Japanese>
-            <Polish>Radar w pojeździe</Polish>
-            <German>Fahrzeugradar</German>
-            <Korean>차량 레이더</Korean>
-            <Italian>Radar Veicolo</Italian>
-            <Chinesesimp>载具雷达</Chinesesimp>
-            <Chinese>載具雷達</Chinese>
-            <Spanish>Radar de vehículos</Spanish>
-            <Turkish>Araç Radarı</Turkish>
-        </Key>
-        <Key ID="STR_ACE_UI_VehicleCompass">
-            <English>Vehicle Compass</English>
-            <Czech>Kompas vozidla</Czech>
-            <Portuguese>Bússola de Veículo</Portuguese>
-            <French>Boussole de véhicule</French>
-            <Russian>Компас в технике</Russian>
-            <Japanese>車両のコンパス</Japanese>
-            <Polish>Kompas w pojeździe</Polish>
-            <German>Fahrzeugkompass</German>
-            <Korean>차량 나침반</Korean>
-            <Italian>Bussola Veicolo</Italian>
-            <Chinesesimp>载具指南针</Chinesesimp>
-            <Chinese>載具指北針</Chinese>
-            <Spanish>Brújula del vehículo</Spanish>
-            <Turkish>Araç Pusulası</Turkish>
-        </Key>
-        <Key ID="STR_ACE_UI_CommandMenu">
-            <English>Command Menu</English>
-            <Czech>Menu rozkazů</Czech>
-            <Portuguese>Menu de Comando</Portuguese>
-            <French>Menu de commandement</French>
-            <Russian>Командное меню</Russian>
-            <Japanese>指揮メニュー</Japanese>
-            <Polish>Menu dowodzenia</Polish>
-            <German>Kommandomenü</German>
-            <Korean>지휘 메뉴</Korean>
-            <Italian>Menù di Comando</Italian>
-            <Chinesesimp>指挥菜单</Chinesesimp>
-            <Chinese>指揮選單</Chinese>
-            <Spanish>Menú de Comando</Spanish>
-            <Turkish>Komut Menüsü</Turkish>
-        </Key>
-        <Key ID="STR_ACE_UI_GroupBar">
-            <English>Group Bar</English>
-            <Czech>Panel skupiny</Czech>
-            <Portuguese>Barra de Grupo</Portuguese>
-            <French>Barre de groupe</French>
-            <Russian>Панель командира</Russian>
-            <Japanese>グループ バー</Japanese>
-            <Polish>Pasek grupy</Polish>
-            <German>Gruppenleiste</German>
-            <Korean>그룹 막대</Korean>
-            <Italian>Barra del Gruppo</Italian>
-            <Chinesesimp>小队状态栏</Chinesesimp>
-            <Chinese>小隊狀態欄</Chinese>
-            <Spanish>Barra de grupo</Spanish>
-            <Turkish>Grup Göstergesi</Turkish>
-        </Key>
-        <Key ID="STR_ACE_UI_devWatermark">
-            <English>Development Build Watermark</English>
-            <Russian>Водяной знак Development Build</Russian>
-            <Spanish>Marca de agua para compilación de desarrollo</Spanish>
-            <French>Filigrane version de développement</French>
-            <Polish>Znak wodny wersji deweloperskiej</Polish>
-            <Japanese>開発ビルドでの透かしマーク</Japanese>
-            <German>Wasserzeichen für Entwicklungsversion</German>
-            <Italian>Filigrana per versione in fase di sviluppo</Italian>
-            <Chinesesimp>开发建设水印</Chinesesimp>
-            <Korean>개발용 빌드 워터마크</Korean>
-        </Key>
-        <Key ID="STR_ACE_UI_WeaponName">
-            <English>Weapon Name</English>
-            <Czech>Název zbraně</Czech>
-            <Portuguese>Nome do Armamento</Portuguese>
-            <French>Nom de l'arme</French>
-            <Russian>Название оружия</Russian>
-            <Japanese>武器名</Japanese>
-            <Polish>Nazwa broni</Polish>
-            <German>Waffenname</German>
-            <Korean>무기 이름</Korean>
-            <Italian>Nome Arma</Italian>
-            <Chinesesimp>武器名称</Chinesesimp>
-            <Chinese>武器名稱</Chinese>
-            <Spanish>Nombre del arma</Spanish>
-            <Turkish>Silah Ismi</Turkish>
-        </Key>
-        <Key ID="STR_ACE_UI_WeaponNameBackground">
-            <English>Weapon Name Background</English>
-            <Czech>Název zbraně v pozadí</Czech>
-            <Portuguese>Fundo do Nome do Armamento</Portuguese>
-            <French>Fond pour le nom de l'arme</French>
-            <Russian>Фон названия оружия</Russian>
-            <Japanese>武器名の背景</Japanese>
-            <Polish>Tło nazwy broni</Polish>
-            <German>Waffenname Hintergrund</German>
-            <Korean>무기 이름 배경</Korean>
-            <Italian>Sfondo Nome Arma</Italian>
-            <Chinesesimp>武器名称背景</Chinesesimp>
-            <Chinese>武器名稱背景</Chinese>
-            <Spanish>Fondo de nombre de arma</Spanish>
-        </Key>
-        <Key ID="STR_ACE_UI_FiringMode">
-            <English>Firing Mode</English>
-            <Czech>Režim palby</Czech>
-            <Portuguese>Modo de Disparo</Portuguese>
-            <French>Mode de tir</French>
-            <Russian>Режим стрельбы</Russian>
-            <Japanese>射撃モード</Japanese>
-            <Polish>Tryb ognia</Polish>
-            <German>Feuermodus</German>
-            <Korean>사격 모드</Korean>
-            <Italian>Modalità di Fuoco</Italian>
-            <Chinesesimp>射击模式</Chinesesimp>
-            <Chinese>射擊模式</Chinese>
-            <Spanish>Modo de disparo</Spanish>
-            <Turkish>Ateşleme Modu</Turkish>
-        </Key>
-        <Key ID="STR_ACE_UI_AmmoType">
-            <English>Ammo Type</English>
-            <Czech>Typ munice</Czech>
-            <Portuguese>Tipo de Munição</Portuguese>
-            <French>Type de munitions</French>
-            <Russian>Тип боеприпасов</Russian>
-            <Japanese>弾種</Japanese>
-            <Polish>Typ amunicji</Polish>
-            <German>Munitionstyp</German>
-            <Korean>탄종</Korean>
-            <Italian>Tipo Munizioni</Italian>
-            <Chinesesimp>弹药类型</Chinesesimp>
-            <Chinese>彈藥類型</Chinese>
-            <Spanish>Tipo de munición</Spanish>
-            <Turkish>Mermi Türü</Turkish>
+            <Chinesesimp>允许客户端自行调整用户界面</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_UI_AmmoCount">
             <English>Ammo Count</English>
             <Czech>Počet munice</Czech>
-            <Portuguese>Quantidade de Munição</Portuguese>
             <French>Nombre de munitions</French>
-            <Russian>Количество боеприпасов</Russian>
-            <Japanese>弾数</Japanese>
+            <Spanish>Cantidad de munición</Spanish>
+            <Italian>Contatore Munizioni</Italian>
             <Polish>Ilość amunicji</Polish>
+            <Portuguese>Quantidade de Munição</Portuguese>
+            <Russian>Количество боеприпасов</Russian>
             <German>Munitionsanzahl</German>
             <Korean>탄약수</Korean>
-            <Italian>Contatore Munizioni</Italian>
-            <Chinesesimp>弹药数量</Chinesesimp>
+            <Japanese>弾数</Japanese>
             <Chinese>彈藥數量</Chinese>
-            <Spanish>Cantidad de munición</Spanish>
+            <Chinesesimp>弹药数量</Chinesesimp>
             <Turkish>Mermi Sayısı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_UI_AmmoType">
+            <English>Ammo Type</English>
+            <Czech>Typ munice</Czech>
+            <French>Type de munitions</French>
+            <Spanish>Tipo de munición</Spanish>
+            <Italian>Tipo Munizioni</Italian>
+            <Polish>Typ amunicji</Polish>
+            <Portuguese>Tipo de Munição</Portuguese>
+            <Russian>Тип боеприпасов</Russian>
+            <German>Munitionstyp</German>
+            <Korean>탄종</Korean>
+            <Japanese>弾種</Japanese>
+            <Chinese>彈藥類型</Chinese>
+            <Chinesesimp>弹药类型</Chinesesimp>
+            <Turkish>Mermi Türü</Turkish>
+        </Key>
+        <Key ID="STR_ACE_UI_Category">
+            <English>User Interface</English>
+            <Czech>Uživatelské rozhraní</Czech>
+            <French>Interface Utilisateur</French>
+            <Spanish>Interfaz de usuario</Spanish>
+            <Italian>Interfaccia Utente</Italian>
+            <Polish>Interfejs użytkownika</Polish>
+            <Portuguese>Interface do usuário</Portuguese>
+            <Russian>Интерфейс</Russian>
+            <German>Benutzeroberfläche</German>
+            <Korean>사용자 인터페이스</Korean>
+            <Japanese>ユーザ インタフェース</Japanese>
+            <Chinese>使用者介面</Chinese>
+            <Chinesesimp>用户界面</Chinesesimp>
+            <Turkish>Kullanıcı Arayüzü</Turkish>
+        </Key>
+        <Key ID="STR_ACE_UI_CommandMenu">
+            <English>Command Menu</English>
+            <Czech>Menu rozkazů</Czech>
+            <French>Menu de commandement</French>
+            <Spanish>Menú de Comando</Spanish>
+            <Italian>Menù di Comando</Italian>
+            <Polish>Menu dowodzenia</Polish>
+            <Portuguese>Menu de Comando</Portuguese>
+            <Russian>Командное меню</Russian>
+            <German>Kommandomenü</German>
+            <Korean>지휘 메뉴</Korean>
+            <Japanese>指揮メニュー</Japanese>
+            <Chinese>指揮選單</Chinese>
+            <Chinesesimp>指挥菜单</Chinesesimp>
+            <Turkish>Komut Menüsü</Turkish>
+        </Key>
+        <Key ID="STR_ACE_UI_Disabled">
+            <English>Cannot modify a forced User Interface element.</English>
+            <Czech>Nelze upravit prvek vynuceného uživatelského rozhraní.</Czech>
+            <French>Impossible de modifier un élément forcé de l'Interface Utilisateur.</French>
+            <Spanish>No se puede modificar un elemento forzado de la Interfaz del Usuario</Spanish>
+            <Italian>Impossibile modificare un elemento forzato dell'Interfaccia Utente.</Italian>
+            <Polish>Nie można modyfikować wymuszonego elementu interfejsu użytkownika.</Polish>
+            <Portuguese>Não é possível modificar um elemento forçado da interface do usuário.</Portuguese>
+            <Russian>Невозможно изменить зафиксированный элемент пользовательского интерфейса.</Russian>
+            <German>Gesperrte UI-Elemente können nicht modifiziert werden.</German>
+            <Korean>강제 사용자 인터페이스는 변경하실 수 없습니다.</Korean>
+            <Japanese>ユーザ インタフェース要素の強制はできません。</Japanese>
+            <Chinese>無法編輯已被鎖定的使用者介面元件</Chinese>
+            <Chinesesimp>无法编辑已被锁定的用户界面控件</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_UI_Disallowed">
+            <English>Modifying User Interface is disabled.</English>
+            <Czech>Změna uživatelského rozhraní je zakázána.</Czech>
+            <French>La personnalisation de l'Interface Utilisateur est désactivée.</French>
+            <Spanish>La modificación de la interfaz de usuario está desactivada.</Spanish>
+            <Italian>La modifica dell'Interfaccia Utente è disabilitata.</Italian>
+            <Polish>Modyfikacja interfejsu użytkownika jest wyłączona.</Polish>
+            <Portuguese>A modificação da interface do usuário está desabilitada.</Portuguese>
+            <Russian>Изменение пользовательского интерфейса запрещено.</Russian>
+            <German>Die Modifizierung des UI ist deaktiviert.</German>
+            <Korean>사용자 인터페이스 변경이 비활성화 되어 있습니다.</Korean>
+            <Japanese>ユーザ インタフェースの変更は無効化されています。</Japanese>
+            <Chinese>自定使用者介面功能已關閉</Chinese>
+            <Chinesesimp>自定用户界面功能已关闭</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_UI_EnableSpeedIndicator">
+            <English>Enable movement speed indicator</English>
+            <French>Indicateur de vitesse de déplacement</French>
+            <Spanish>Habilitar indicador de velocidad de movimiento</Spanish>
+            <Italian>Attiva Indicatore di Velocità</Italian>
+            <Polish>Włącz wskaźnik prędkości poruszania</Polish>
+            <Portuguese>Habilitar indicador de velocidade de movimento</Portuguese>
+            <Russian>Вкл. индикатор скорости передвижения</Russian>
+            <German>Aktiviere Bewegungsgeschwindigkeits-Indikator</German>
+            <Korean>이동 속도 표시기 활성화</Korean>
+            <Japanese>移動速度インジケータを有効化</Japanese>
+            <Chinesesimp>启用移动速度指示器</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_UI_EnableSpeedIndicator_Description">
+            <English>Enables movement speed indicator for player character.</English>
+            <French>Affiche un indicateur permettant de visualiser la vitesse de déplacement du personnage.</French>
+            <Spanish>Habilita el indicador de velocidad de movimiento para el personaje del jugador.</Spanish>
+            <Italian>Attiva Indicatore di Velocità del Giocatore</Italian>
+            <Polish>Włącza wskaźnik prędkości poruszania się dla postaci gracza.</Polish>
+            <Portuguese>Habilita o indicador de velocidade de movimento do personagem do jogador.</Portuguese>
+            <Russian>Включает индикатор скорости передвижения персонажа игрока.</Russian>
+            <German>Aktiviere den Bewegungsgeschwindigkeits-Indikator des Spielers.</German>
+            <Korean>플레이어 캐릭터를 위한 이동속도 표시기를 활성화합니다.</Korean>
+            <Japanese>プレイヤー キャラの移動速度を表示します。</Japanese>
+            <Chinesesimp>为玩家角色启用移动速度指示器。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_UI_FiringMode">
+            <English>Firing Mode</English>
+            <Czech>Režim palby</Czech>
+            <French>Mode de tir</French>
+            <Spanish>Modo de disparo</Spanish>
+            <Italian>Modalità di Fuoco</Italian>
+            <Polish>Tryb ognia</Polish>
+            <Portuguese>Modo de Disparo</Portuguese>
+            <Russian>Режим стрельбы</Russian>
+            <German>Feuermodus</German>
+            <Korean>사격 모드</Korean>
+            <Japanese>射撃モード</Japanese>
+            <Chinese>射擊模式</Chinese>
+            <Chinesesimp>射击模式</Chinesesimp>
+            <Turkish>Ateşleme Modu</Turkish>
+        </Key>
+        <Key ID="STR_ACE_UI_GroupBar">
+            <English>Group Bar</English>
+            <Czech>Panel skupiny</Czech>
+            <French>Barre de groupe</French>
+            <Spanish>Barra de grupo</Spanish>
+            <Italian>Barra del Gruppo</Italian>
+            <Polish>Pasek grupy</Polish>
+            <Portuguese>Barra de Grupo</Portuguese>
+            <Russian>Панель командира</Russian>
+            <German>Gruppenleiste</German>
+            <Korean>그룹 막대</Korean>
+            <Japanese>グループ バー</Japanese>
+            <Chinese>小隊狀態欄</Chinese>
+            <Chinesesimp>小队状态栏</Chinesesimp>
+            <Turkish>Grup Göstergesi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerAmmoCount">
+            <English>Gunner Ammo Count</English>
+            <Czech>Počet zásobníků zbraně vozidla</Czech>
+            <French>Nombre de munitions (tireur)</French>
+            <Spanish>Cantidad de munición de artillero</Spanish>
+            <Italian>Contatore Munizioni Artigliere</Italian>
+            <Polish>Ilość amunicji strzelca</Polish>
+            <Portuguese>Quantidade de Munição do fuzileiro</Portuguese>
+            <Russian>Количество боеприпасов наводчика</Russian>
+            <German>Richtschütze Munitionsanzahl</German>
+            <Korean>사수 탄약 수량</Korean>
+            <Japanese>射手用の弾数</Japanese>
+            <Chinese>砲手彈藥數量</Chinese>
+            <Chinesesimp>炮手弹药数量</Chinesesimp>
+            <Turkish>Nişancı Mermi Sayısı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerAmmoType">
+            <English>Gunner Ammo Type</English>
+            <Czech>Typ munice zbraně vozidla</Czech>
+            <French>Type de munitions (tireur)</French>
+            <Spanish>Tipo de munición de artillero</Spanish>
+            <Italian>Tipo Munizioni Artigliere</Italian>
+            <Polish>Typ amunicji strzelca</Polish>
+            <Portuguese>Tipo de Munição do fuzileiro</Portuguese>
+            <Russian>Тип боеприпасов наводчика</Russian>
+            <German>Richtschütze Munitionstyp</German>
+            <Korean>사수 탄종</Korean>
+            <Japanese>射手用の弾種</Japanese>
+            <Chinese>砲手彈藥類型</Chinese>
+            <Chinesesimp>炮手弹药类型</Chinesesimp>
+            <Turkish>Nişancı Mermi Türü</Turkish>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerFiringMode">
+            <English>Gunner Firing Mode</English>
+            <Czech>Režim palby zbraně vozidla</Czech>
+            <French>Mode de tir (tireur)</French>
+            <Spanish>Modo de fuego de artillero</Spanish>
+            <Italian>Modalità di Fuoco Artigliere</Italian>
+            <Polish>Tryb ognia strzelca</Polish>
+            <Portuguese>Modo de disparo do fuzileiro</Portuguese>
+            <Russian>Режим стрельбы наводчика</Russian>
+            <German>Richtschütze Feuermodus</German>
+            <Korean>사수 사격 모드</Korean>
+            <Japanese>射手用の発射モード</Japanese>
+            <Chinese>砲手射擊模式</Chinese>
+            <Chinesesimp>炮手射击模式</Chinesesimp>
+            <Turkish>Nişancı Ateşleme Modu</Turkish>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerLaunchableCount">
+            <English>Gunner Launchable Count</English>
+            <Czech>Počet odpalitelných granátů vozidla</Czech>
+            <French>Nombre d'objets lançables (tireur)</French>
+            <Spanish>Cantidad de lanzadores de artillero</Spanish>
+            <Italian>Contatore Missili Artigliere</Italian>
+            <Polish>Ilość rakiet strzelca</Polish>
+            <Portuguese>Quantidade de Arremessável do fuzileiro</Portuguese>
+            <Russian>Кол-во снарядов ПУ наводчика</Russian>
+            <German>Richtschütze Raketenanzahl</German>
+            <Korean>사수 발사체 수량</Korean>
+            <Japanese>射手用ランチャーの弾数</Japanese>
+            <Chinese>砲手發射物數量</Chinese>
+            <Chinesesimp>炮手发射物数量</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerLaunchableName">
+            <English>Gunner Launchable Type</English>
+            <Czech>Typ odpalitelných granátů vozidla</Czech>
+            <French>Type d'objet lançable (tireur)</French>
+            <Spanish>Tipo de lanzador de artillero</Spanish>
+            <Italian>Tipo Lanciabile Artigliere</Italian>
+            <Polish>Typ rakiet strzelca</Polish>
+            <Portuguese>Tipo de Arremessável do fuzileiro</Portuguese>
+            <Russian>Тип пусковой установки наводчика</Russian>
+            <German>Richtschütze Raketentyp</German>
+            <Korean>사수 발사체 종류</Korean>
+            <Japanese>射手用ランチャーの種類</Japanese>
+            <Chinese>砲手發射物類型</Chinese>
+            <Chinesesimp>炮手发射物类型</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerMagCount">
+            <English>Gunner Magazine Count</English>
+            <Czech>Počet munice zbraně vozidla</Czech>
+            <French>Nombre de chargeurs (tireur)</French>
+            <Spanish>Cantidad de cargadores de artillero</Spanish>
+            <Italian>Contatore Caricatori Artigliere</Italian>
+            <Polish>Ilość magazynków strzelca</Polish>
+            <Portuguese>Quantidade de Carregadores do fuzileiro</Portuguese>
+            <Russian>Количество магазинов наводчика</Russian>
+            <German>Richtschütze Magazinanzahl</German>
+            <Korean>사수 탄창 수량</Korean>
+            <Japanese>射手用の弾倉数</Japanese>
+            <Chinese>砲手彈匣數量</Chinese>
+            <Chinesesimp>炮手弹匣数量</Chinesesimp>
+            <Turkish>Nişancı Şarjör Sayısı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerWeaponLowerInfoBackground">
+            <English>Gunner Weapon Lower Info Background</English>
+            <Czech>Nižší pozadí panelu s informacemi o zbrani vozidla</Czech>
+            <French>Fond pour la barre d'informations inférieure (tireur)</French>
+            <Spanish>Fondo de información inferior de armamento de artillero</Spanish>
+            <Italian>Sfondo Informazioni Arma Artigliere Bassa</Italian>
+            <Polish>Tło dolnej części informacji o broni strzelca</Polish>
+            <Portuguese>Informações na parte de baixo do fundo do Armamento do fuzileiro</Portuguese>
+            <Russian>Фон информации об орудии наводчика снизу</Russian>
+            <German>Hintergrund der unteren Waffen-Info-Leiste (Richtschütze)</German>
+            <Korean>사수 무기 상세 정보 배경</Korean>
+            <Japanese>射手用武器名下部の情報表示の背景</Japanese>
+            <Chinese>砲手武器底部資訊欄背景</Chinese>
+            <Chinesesimp>炮手武器底部信息栏背景</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerWeaponName">
+            <English>Gunner Weapon Name</English>
+            <Czech>Jméno zbraně vozidla</Czech>
+            <French>Nom de l'arme (tireur)</French>
+            <Spanish>Nombre de arma de artillero</Spanish>
+            <Italian>Nome Arma Artigliere</Italian>
+            <Polish>Nazwa broni strzelca</Polish>
+            <Portuguese>Nome da arma do fuzileiro</Portuguese>
+            <Russian>Название орудия наводчика</Russian>
+            <German>Richtschütze Waffenname</German>
+            <Korean>사수 무기 명칭</Korean>
+            <Japanese>射手用の武器名</Japanese>
+            <Chinese>砲手武器名稱</Chinese>
+            <Chinesesimp>炮手武器名称</Chinesesimp>
+            <Turkish>Nişancı Silah Ismi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerWeaponNameBackground">
+            <English>Gunner Weapon Name Background</English>
+            <Czech>Pozadí jména zbraně vozidla</Czech>
+            <French>Fond pour le nom de l'arme (tireur)</French>
+            <Spanish>Fondo de nombre de arma de artillero</Spanish>
+            <Italian>Sfondo Nome Arma Artigliere</Italian>
+            <Polish>Tło nazwy broni strzelca</Polish>
+            <Portuguese>Fundo do nome da arma do fuzileiro</Portuguese>
+            <Russian>Фон названия орудия наводчика</Russian>
+            <German>Richtschütze Waffenname Hintergrund</German>
+            <Korean>사수 무기 명칭 배경</Korean>
+            <Japanese>射手用の武器名の背景</Japanese>
+            <Chinese>砲手武器名稱背景</Chinese>
+            <Chinesesimp>炮手武器名称背景</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_UI_GunnerZeroing">
+            <English>Gunner Zeroing</English>
+            <Czech>Náměr zbraně vozidla</Czech>
+            <French>Zérotage (tireur)</French>
+            <Spanish>Calibracion de mira de artillero</Spanish>
+            <Italian>Azzeramento Artigliere</Italian>
+            <Polish>Wyzerowanie broni strzelca</Polish>
+            <Portuguese>Zerar a mira do fuzileiro</Portuguese>
+            <Russian>Дальность стрельбы наводчика</Russian>
+            <German>Richtschütze Nullung</German>
+            <Korean>사수 영점</Korean>
+            <Japanese>射手用ゼロイン</Japanese>
+            <Chinese>砲手歸零距離</Chinese>
+            <Chinesesimp>炮手归零距离</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_UI_HideDefaultActionIcon">
+            <English>Hide Default Action Icon</English>
+            <French>Masquer l'icône d'action par défaut</French>
+            <Spanish>Ocultar el icono de acción por defecto</Spanish>
+            <Italian>Nascondi Icona dell'Interazione Standard</Italian>
+            <Polish>Ukryj domyślną ikonę akcji</Polish>
+            <Portuguese>Esconder ícone padrão de ação</Portuguese>
+            <Russian>Спрятать иконку действия по умолчанию</Russian>
+            <German>Standardaktionssymbol ausblenden</German>
+            <Korean>기본 행동 아이콘 숨기기</Korean>
+            <Japanese>デフォルトのアクションアイコンを非表示</Japanese>
+            <Chinesesimp>隐藏默认动作标识</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_UI_HideDefaultActionIcon_Description">
+            <English>Hides the icon shown automatically when something is in front of the cursor. Requires a game restart.\nWarning: Does not remove the action itself! It is advisable to unbind 'Use default action' key to prevent unwanted interactions.</English>
+            <French>Cache l'icône qui s'affiche automatiquement lorsque quelque chose est devant le curseur. Nécessite un redémarrage du jeu.\nAvertissement : l'action n'est pas supprimée ! Il est recommandé d'annuler l'affectation du bouton 'Utiliser l'action par défaut' afin d'éviter des interactions indésirables.</French>
+            <Spanish>Oculta el icono que se muestra automáticamente cuando algo se sitúa enfrente del cursor. Requiere reinicio del juego.\nAdvertencia: No elimina la propia acción! Es recomendable desactivar la tecla "Usar acción por defecto" para prevenir interacciones no deseadas.</Spanish>
+            <Italian>Nasconde l'icona mostrata in automatico quando qualcosa è davanti al cursore. La modifica richiede un riavvio del gioco.\nAttenzione: Non rimuovere l'azione stessa! È consigliato rimuovere solo il tasto dall'assegnazione 'Usa Azione Standard' per impedire interazioni non volute.</Italian>
+            <Polish>Ukrywa ikonę wyświetlaną automatycznie, gdy coś znajduje się przed kursorem. Wymaga ponownego uruchomienia gry.\nOstrzeżenie: Nie usuwa samej akcji! Zaleca się usunięcia przypisania klawisza „Użyj domyślnej akcji”, aby zapobiec niechcianym interakcjom.</Polish>
+            <Portuguese>Esconde o ícone mostrado automaticamente quando algo está a frente do cursor. É preciso reiniciar o jogo.\nAviso: Não remove a ação em si! É recomendado desvincular a tecla de "Usar ação padrão" para previnir interações indesejadas.</Portuguese>
+            <Russian>Прячет иконку, которая показывается автоматически когда что-то находиться перед курсором. Требует рестарта игры.\nВнимание: не убирает само действие! Рекомендуется убрать комбинацию клавиш с настройки "Выполнить действие по умолчанию" чтобы предостеречься от нежеланных действий.</Russian>
+            <German>Blendet das Symbol aus, das automatisch angezeigt wird, wenn sich etwas vor dem Cursor befindet. Erfordert einen Neustart des Spiels.\nWarnung: Die Aktion selbst wird nicht entfernt! Es empfiehlt sich, die Belegung der Taste 'Standardaktion verwenden' aufzuheben, um unerwünschte Interaktionen zu verhindern.</German>
+            <Korean>커서 앞에 무언가가 있을 때 자동으로 표시되는 아이콘을 숨깁니다. 게임을 재시작해야 합니다\n경고: 작업 자체를 제거하지 않습니다! 원하지 않는 상호작용을 방지하려면 '기본 행동' 키를 삭제하는 것이 좋습니다.</Korean>
+            <Japanese>カーソルの前に何かがあるときに自動的に表示されるアイコンを非表示にします。 ゲームを再起動する必要があります。\n警告:アクション自体は削除されません! 誤って実行することを防ぐために、'標準アクション'キーのバインドを解除することをお勧めします。</Japanese>
+            <Chinesesimp>隐藏屏幕面前有物体时自动显示的动作标识。需要重新启动游戏。\n警告：不会删除动作本身！建议同时取消对“使用默认动作”键的绑定，以防止不必要的互动。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_UI_MagCount">
             <English>Magazine Count</English>
             <Czech>Počet zásobníků</Czech>
-            <Portuguese>Quantidade de Carregadores</Portuguese>
             <French>Nombre de chargeurs</French>
-            <Russian>Количество магазинов</Russian>
-            <Japanese>弾倉数</Japanese>
+            <Spanish>Recuento de cargadores</Spanish>
+            <Italian>Contatore Caricatori</Italian>
             <Polish>Ilość magazynków</Polish>
+            <Portuguese>Quantidade de Carregadores</Portuguese>
+            <Russian>Количество магазинов</Russian>
             <German>Magazinanzahl</German>
             <Korean>탄창수</Korean>
-            <Italian>Contatore Caricatori</Italian>
-            <Chinesesimp>弹匣数量</Chinesesimp>
+            <Japanese>弾倉数</Japanese>
             <Chinese>彈匣數量</Chinese>
-            <Spanish>Recuento de cargadores</Spanish>
+            <Chinesesimp>弹匣数量</Chinesesimp>
             <Turkish>Şarjör Sayısı</Turkish>
         </Key>
-        <Key ID="STR_ACE_UI_ThrowableName">
-            <English>Throwable Type</English>
-            <Czech>Typ granátů apod.</Czech>
-            <Portuguese>Tipo de Arremessável</Portuguese>
-            <French>Type d'objet lançable</French>
-            <Russian>Тип гранаты</Russian>
-            <Japanese>投擲物の種類</Japanese>
-            <Polish>Typ granatu</Polish>
-            <German>Wurfobjekt-Typ</German>
-            <Korean>투척물 종류</Korean>
-            <Italian>Tipo di Lanciabile</Italian>
-            <Chinesesimp>投掷物类型</Chinesesimp>
-            <Chinese>投擲物類型</Chinese>
-            <Spanish>Tipo arrojable</Spanish>
-            <Turkish>Fırlatılabilir Türü</Turkish>
+        <Key ID="STR_ACE_UI_ModuleDescription">
+            <English>This module allows toggling visible user interface parts.</English>
+            <Czech>Tento modul umožňuje přepínání viditelných částí uživatelského rozhraní.</Czech>
+            <French>Ce module permet d'activer ou de désactiver certains éléments de l'Interface Utilisateur (IU).</French>
+            <Spanish>Este módulo permite activar la visibilidad de apartados de la interfaz</Spanish>
+            <Italian>Questo modulo consente di selezionare quali parti dell'interfaccia utente sono visibili.</Italian>
+            <Polish>Moduł ten pozwala zmienić stan widoczności poszczególnych elementów UI.</Polish>
+            <Portuguese>Este módulo permite ligar ou desligar partes da interface do usuário</Portuguese>
+            <Russian>Этот модуль позволяет переключать видимость элементов пользовательского интерфейса.</Russian>
+            <German>Dieses Modul erlaubt es, Teile der Benutzeroberfläche (UI) an- oder auszuschalten.</German>
+            <Korean>이 모듈은 사용자 인터페이스의 부분을 토글하는 것을 가능케 해줍니다.</Korean>
+            <Japanese>このモジュールではユーザ インタフェースの表示部位の表示状態を切り替えることができます。</Japanese>
+            <Chinese>此模塊允許你調整使用者介面的任何一個元件</Chinese>
+            <Chinesesimp>此模块允许你调整用户界面的任何一个控件</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_UI_ThrowableCount">
-            <English>Throwable Count</English>
-            <Czech>Počet granátů apod.</Czech>
-            <Portuguese>Quantidade de Arremessável</Portuguese>
-            <French>Nombre d'objets lançables</French>
-            <Russian>Количество гранат</Russian>
-            <Japanese>投擲物の残数</Japanese>
-            <Polish>Ilość granatów</Polish>
-            <German>Wurfobjekt-Anzahl</German>
-            <Korean>투척물 개수</Korean>
-            <Italian>Contatore Lanciabili</Italian>
-            <Chinesesimp>投掷物数量</Chinesesimp>
-            <Chinese>投擲物數量</Chinese>
-            <Spanish>Cantidad arrojable</Spanish>
-            <Turkish>Fırlatılabilir Sayısı</Turkish>
+        <Key ID="STR_ACE_UI_ModuleName">
+            <English>User Interface</English>
+            <Czech>Uživatelské rozhraní</Czech>
+            <French>Interface Utilisateur</French>
+            <Spanish>Interfaz de usuario</Spanish>
+            <Italian>Interfaccia Utente</Italian>
+            <Polish>Interfejs użytkownika</Polish>
+            <Portuguese>Interface do usuário</Portuguese>
+            <Russian>Пользовательский интерфейс</Russian>
+            <German>Benutzeroberfläche</German>
+            <Korean>사용자 인터페이스</Korean>
+            <Japanese>ユーザ インタフェース</Japanese>
+            <Chinese>使用者介面</Chinese>
+            <Chinesesimp>用户界面</Chinesesimp>
+            <Turkish>Kullanıcı Arayüzü</Turkish>
         </Key>
-        <Key ID="STR_ACE_UI_Zeroing">
-            <English>Zeroing</English>
-            <Czech>Náměr</Czech>
-            <Portuguese>Zerar a mira</Portuguese>
-            <French>Zérotage</French>
-            <Russian>Дальность стрельбы</Russian>
-            <Japanese>ゼロイン</Japanese>
-            <Polish>Wyzerowanie broni</Polish>
-            <German>Nullung</German>
-            <Korean>영점</Korean>
-            <Italian>Azzeramento</Italian>
-            <Chinesesimp>归零距离</Chinesesimp>
-            <Chinese>歸零距離</Chinese>
-            <Spanish>Reducción a cero</Spanish>
-            <Turkish>Sıfırlama</Turkish>
+        <Key ID="STR_ACE_UI_RequiresSoldierVehicleWeaponInfo">
+            <English>Requires Soldier/Vehicle/Weapon Information.</English>
+            <Czech>Vyžaduje informace o Vojákovi/Vozidlu/Zbrani</Czech>
+            <French>Requiert l'option "Information soldat/véhicule/arme".</French>
+            <Spanish>Requiere información de Soldado/Vehículo.</Spanish>
+            <Italian>Richiede informazioni Soldato/Veicolo/Arma.</Italian>
+            <Polish>Wymaga informacji o żołnierzu/pojeździe/broni.</Polish>
+            <Portuguese>Requer informações de Soldado/Veículo/Armamento</Portuguese>
+            <Russian>Требуется информация о солдате/технике/оружии.</Russian>
+            <German>Benötigt Soldat/Fahrzeug/Waffe Information.</German>
+            <Korean>병사/차량/무기의 정보가 필요합니다.</Korean>
+            <Japanese>兵士/車両/武器の情報 の表示が必要です。</Japanese>
+            <Chinese>需要士兵/載具/武器的資訊.</Chinese>
+            <Chinesesimp>需要士兵/载具/武器的信息。</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_UI_WeaponLowerInfoBackground">
-            <English>Weapon Lower Info Background</English>
-            <Portuguese>Informações na parte de baixo do fundo do Armamento</Portuguese>
-            <French>Fond pour la barre d'informations inférieure de l'arme</French>
-            <Russian>Фон информации об оружии снизу</Russian>
-            <Japanese>武器名下部の情報表示の背景</Japanese>
-            <Polish>Tło dolnej części informacji o broni</Polish>
-            <German>Hintergrund der unteren Waffen-Info-Leiste</German>
-            <Korean>무기 상세 정보 배경</Korean>
-            <Italian>Sfondo Informazioni Arma Bassa</Italian>
-            <Chinesesimp>武器底部信息栏背景</Chinesesimp>
-            <Chinese>武器底部資訊欄背景</Chinese>
-            <Spanish>Fondo de información inferior de arma</Spanish>
-            <Czech>Nižší pozadí panulu s informacemi o zbrani</Czech>
-        </Key>
-        <Key ID="STR_ACE_UI_Stance">
-            <English>Stance</English>
-            <Czech>Postoj</Czech>
-            <Portuguese>Postura</Portuguese>
-            <French>Posture</French>
-            <Russian>Стойка</Russian>
-            <Japanese>姿勢</Japanese>
-            <Polish>Postura</Polish>
-            <German>Haltung</German>
-            <Korean>자세</Korean>
-            <Italian>Postura</Italian>
-            <Chinesesimp>姿态</Chinesesimp>
-            <Chinese>姿態</Chinese>
-            <Spanish>Postura</Spanish>
-            <Turkish>Duruş</Turkish>
+        <Key ID="STR_ACE_UI_SoldierVehicleWeaponInfo">
+            <English>Soldier/Vehicle/Weapon Information</English>
+            <Czech>Informace o Vojákovi/Vozidlu/Zbrani</Czech>
+            <French>Information soldat/véhicule/arme</French>
+            <Spanish>Información de soldado / vehículo / arma</Spanish>
+            <Italian>Informazioni Soldato/Veicolo/Arma</Italian>
+            <Polish>Informacje o żołnierzu/pojeździe/broni</Polish>
+            <Portuguese>Informação de Soldado/Veículo/Armamento</Portuguese>
+            <Russian>Информация о солдате/технике/оружии</Russian>
+            <German>Soldat/Fahrzeug/Waffe Information</German>
+            <Korean>병사/차량/무기 정보</Korean>
+            <Japanese>兵士/車両/武器の情報</Japanese>
+            <Chinese>士兵/載具/武器資訊欄</Chinese>
+            <Chinesesimp>士兵/载具/武器信息栏</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_UI_StaminaBar">
             <English>Stamina Bar</English>
             <Czech>Panel výdrže</Czech>
-            <Portuguese>Barra de Energia</Portuguese>
             <French>Barre d'endurance</French>
-            <Russian>Полоса выносливости</Russian>
-            <Japanese>スタミナバー</Japanese>
+            <Spanish>Barra de resistencia</Spanish>
+            <Italian>Barra Stamina</Italian>
             <Polish>Pasek staminy</Polish>
+            <Portuguese>Barra de Energia</Portuguese>
+            <Russian>Полоса выносливости</Russian>
             <German>Ausdaueranzeige</German>
             <Korean>지구력 막대</Korean>
-            <Italian>Barra Stamina</Italian>
-            <Chinesesimp>体力栏</Chinesesimp>
+            <Japanese>スタミナバー</Japanese>
             <Chinese>體力欄</Chinese>
-            <Spanish>Barra de resistencia</Spanish>
+            <Chinesesimp>体力栏</Chinesesimp>
             <Turkish>Yorulma Çubuğu</Turkish>
         </Key>
-        <Key ID="STR_ACE_UI_GunnerWeaponName">
-            <English>Gunner Weapon Name</English>
-            <Portuguese>Nome da arma do fuzileiro</Portuguese>
-            <French>Nom de l'arme (tireur)</French>
-            <Russian>Название орудия наводчика</Russian>
-            <Japanese>射手用の武器名</Japanese>
-            <Polish>Nazwa broni strzelca</Polish>
-            <German>Richtschütze Waffenname</German>
-            <Korean>사수 무기 명칭</Korean>
-            <Italian>Nome Arma Artigliere</Italian>
-            <Chinesesimp>炮手武器名称</Chinesesimp>
-            <Chinese>砲手武器名稱</Chinese>
-            <Czech>Jméno zbraně vozidla</Czech>
-            <Turkish>Nişancı Silah Ismi</Turkish>
-            <Spanish>Nombre de arma de artillero</Spanish>
+        <Key ID="STR_ACE_UI_Stance">
+            <English>Stance</English>
+            <Czech>Postoj</Czech>
+            <French>Posture</French>
+            <Spanish>Postura</Spanish>
+            <Italian>Postura</Italian>
+            <Polish>Postura</Polish>
+            <Portuguese>Postura</Portuguese>
+            <Russian>Стойка</Russian>
+            <German>Haltung</German>
+            <Korean>자세</Korean>
+            <Japanese>姿勢</Japanese>
+            <Chinese>姿態</Chinese>
+            <Chinesesimp>姿态</Chinesesimp>
+            <Turkish>Duruş</Turkish>
         </Key>
-        <Key ID="STR_ACE_UI_GunnerWeaponNameBackground">
-            <English>Gunner Weapon Name Background</English>
-            <Portuguese>Fundo do nome da arma do fuzileiro</Portuguese>
-            <French>Fond pour le nom de l'arme (tireur)</French>
-            <Russian>Фон названия орудия наводчика</Russian>
-            <Japanese>射手用の武器名の背景</Japanese>
-            <Polish>Tło nazwy broni strzelca</Polish>
-            <German>Richtschütze Waffenname Hintergrund</German>
-            <Korean>사수 무기 명칭 배경</Korean>
-            <Italian>Sfondo Nome Arma Artigliere</Italian>
-            <Chinesesimp>炮手武器名称背景</Chinesesimp>
-            <Chinese>砲手武器名稱背景</Chinese>
-            <Czech>Pozadí jména zbraně vozidla</Czech>
-            <Spanish>Fondo de nombre de arma de artillero</Spanish>
+        <Key ID="STR_ACE_UI_ThrowableCount">
+            <English>Throwable Count</English>
+            <Czech>Počet granátů apod.</Czech>
+            <French>Nombre d'objets lançables</French>
+            <Spanish>Cantidad arrojable</Spanish>
+            <Italian>Contatore Lanciabili</Italian>
+            <Polish>Ilość granatów</Polish>
+            <Portuguese>Quantidade de Arremessável</Portuguese>
+            <Russian>Количество гранат</Russian>
+            <German>Wurfobjekt-Anzahl</German>
+            <Korean>투척물 개수</Korean>
+            <Japanese>投擲物の残数</Japanese>
+            <Chinese>投擲物數量</Chinese>
+            <Chinesesimp>投掷物数量</Chinesesimp>
+            <Turkish>Fırlatılabilir Sayısı</Turkish>
         </Key>
-        <Key ID="STR_ACE_UI_GunnerFiringMode">
-            <English>Gunner Firing Mode</English>
-            <Portuguese>Modo de disparo do fuzileiro</Portuguese>
-            <French>Mode de tir (tireur)</French>
-            <Russian>Режим стрельбы наводчика</Russian>
-            <Japanese>射手用の発射モード</Japanese>
-            <Polish>Tryb ognia strzelca</Polish>
-            <German>Richtschütze Feuermodus</German>
-            <Korean>사수 사격 모드</Korean>
-            <Italian>Modalità di Fuoco Artigliere</Italian>
-            <Chinesesimp>炮手射击模式</Chinesesimp>
-            <Chinese>砲手射擊模式</Chinese>
-            <Czech>Režim palby zbraně vozidla</Czech>
-            <Turkish>Nişancı Ateşleme Modu</Turkish>
-            <Spanish>Modo de fuego de artillero</Spanish>
+        <Key ID="STR_ACE_UI_ThrowableName">
+            <English>Throwable Type</English>
+            <Czech>Typ granátů apod.</Czech>
+            <French>Type d'objet lançable</French>
+            <Spanish>Tipo arrojable</Spanish>
+            <Italian>Tipo di Lanciabile</Italian>
+            <Polish>Typ granatu</Polish>
+            <Portuguese>Tipo de Arremessável</Portuguese>
+            <Russian>Тип гранаты</Russian>
+            <German>Wurfobjekt-Typ</German>
+            <Korean>투척물 종류</Korean>
+            <Japanese>投擲物の種類</Japanese>
+            <Chinese>投擲物類型</Chinese>
+            <Chinesesimp>投掷物类型</Chinesesimp>
+            <Turkish>Fırlatılabilir Türü</Turkish>
         </Key>
-        <Key ID="STR_ACE_UI_GunnerAmmoType">
-            <English>Gunner Ammo Type</English>
-            <Portuguese>Tipo de Munição do fuzileiro</Portuguese>
-            <French>Type de munitions (tireur)</French>
-            <Russian>Тип боеприпасов наводчика</Russian>
-            <Japanese>射手用の弾種</Japanese>
-            <Polish>Typ amunicji strzelca</Polish>
-            <German>Richtschütze Munitionstyp</German>
-            <Korean>사수 탄종</Korean>
-            <Italian>Tipo Munizioni Artigliere</Italian>
-            <Chinesesimp>炮手弹药类型</Chinesesimp>
-            <Chinese>砲手彈藥類型</Chinese>
-            <Czech>Typ munice zbraně vozidla</Czech>
-            <Turkish>Nişancı Mermi Türü</Turkish>
-            <Spanish>Tipo de munición de artillero</Spanish>
+        <Key ID="STR_ACE_UI_VehicleAltitude">
+            <English>Vehicle Altitude</English>
+            <Czech>Výška vozidla</Czech>
+            <French>Altitude du véhicule</French>
+            <Spanish>Altitud del vehículo</Spanish>
+            <Italian>Altitudine Veicolo</Italian>
+            <Polish>Wysokościomierz radarowy</Polish>
+            <Portuguese>Altitude do Veículo</Portuguese>
+            <Russian>Высота полета</Russian>
+            <German>Fahrzeughöhe</German>
+            <Korean>차량 고도</Korean>
+            <Japanese>車両の高度計</Japanese>
+            <Chinese>載具高度</Chinese>
+            <Chinesesimp>载具高度</Chinesesimp>
+            <Turkish>Araç Yüksekliği</Turkish>
         </Key>
-        <Key ID="STR_ACE_UI_GunnerAmmoCount">
-            <English>Gunner Ammo Count</English>
-            <Portuguese>Quantidade de Munição do fuzileiro</Portuguese>
-            <French>Nombre de munitions (tireur)</French>
-            <Russian>Количество боеприпасов наводчика</Russian>
-            <Japanese>射手用の弾数</Japanese>
-            <Polish>Ilość amunicji strzelca</Polish>
-            <German>Richtschütze Munitionsanzahl</German>
-            <Korean>사수 탄약 수량</Korean>
-            <Italian>Contatore Munizioni Artigliere</Italian>
-            <Chinesesimp>炮手弹药数量</Chinesesimp>
-            <Chinese>砲手彈藥數量</Chinese>
-            <Czech>Počet zásobníků zbraně vozidla</Czech>
-            <Turkish>Nişancı Mermi Sayısı</Turkish>
-            <Spanish>Cantidad de munición de artillero</Spanish>
+        <Key ID="STR_ACE_UI_VehicleCompass">
+            <English>Vehicle Compass</English>
+            <Czech>Kompas vozidla</Czech>
+            <French>Boussole de véhicule</French>
+            <Spanish>Brújula del vehículo</Spanish>
+            <Italian>Bussola Veicolo</Italian>
+            <Polish>Kompas w pojeździe</Polish>
+            <Portuguese>Bússola de Veículo</Portuguese>
+            <Russian>Компас в технике</Russian>
+            <German>Fahrzeugkompass</German>
+            <Korean>차량 나침반</Korean>
+            <Japanese>車両のコンパス</Japanese>
+            <Chinese>載具指北針</Chinese>
+            <Chinesesimp>载具指南针</Chinesesimp>
+            <Turkish>Araç Pusulası</Turkish>
         </Key>
-        <Key ID="STR_ACE_UI_GunnerMagCount">
-            <English>Gunner Magazine Count</English>
-            <Portuguese>Quantidade de Carregadores do fuzileiro</Portuguese>
-            <French>Nombre de chargeurs (tireur)</French>
-            <Russian>Количество магазинов наводчика</Russian>
-            <Japanese>射手用の弾倉数</Japanese>
-            <Polish>Ilość magazynków strzelca</Polish>
-            <German>Richtschütze Magazinanzahl</German>
-            <Korean>사수 탄창 수량</Korean>
-            <Italian>Contatore Caricatori Artigliere</Italian>
-            <Chinesesimp>炮手弹匣数量</Chinesesimp>
-            <Chinese>砲手彈匣數量</Chinese>
-            <Czech>Počet munice zbraně vozidla</Czech>
-            <Turkish>Nişancı Şarjör Sayısı</Turkish>
-            <Spanish>Cantidad de cargadores de artillero</Spanish>
+        <Key ID="STR_ACE_UI_VehicleDamage">
+            <English>Vehicle Damage</English>
+            <Czech>Poškození vozidla</Czech>
+            <French>Dégâts du véhicule</French>
+            <Spanish>Daño vehicular</Spanish>
+            <Italian>Danni Veicolo</Italian>
+            <Polish>Uszkodzenia pojazdu</Polish>
+            <Portuguese>Dano do Veículo</Portuguese>
+            <Russian>Повреждение техники</Russian>
+            <German>Fahrzeugschaden</German>
+            <Korean>차량 피해</Korean>
+            <Japanese>車両の損傷状態</Japanese>
+            <Chinese>載具傷害</Chinese>
+            <Chinesesimp>载具伤害</Chinesesimp>
+            <Turkish>Araç Hasarı</Turkish>
         </Key>
-        <Key ID="STR_ACE_UI_GunnerLaunchableName">
-            <English>Gunner Launchable Type</English>
-            <Portuguese>Tipo de Arremessável do fuzileiro</Portuguese>
-            <French>Type d'objet lançable (tireur)</French>
-            <Russian>Тип пусковой установки наводчика</Russian>
-            <Japanese>射手用ランチャーの種類</Japanese>
-            <Polish>Typ rakiet strzelca</Polish>
-            <German>Richtschütze Raketentyp</German>
-            <Korean>사수 발사체 종류</Korean>
-            <Italian>Tipo Lanciabile Artigliere</Italian>
-            <Chinesesimp>炮手发射物类型</Chinesesimp>
-            <Chinese>砲手發射物類型</Chinese>
-            <Czech>Typ odpalitelných granátů vozidla</Czech>
-            <Spanish>Tipo de lanzador de artillero</Spanish>
+        <Key ID="STR_ACE_UI_VehicleFuelBar">
+            <English>Vehicle Fuel Bar</English>
+            <Czech>Ukazatel paliva</Czech>
+            <French>Barre d'essence du véhicule</French>
+            <Spanish>Barra de combustible del vehículo</Spanish>
+            <Italian>Barra Carburante Veicolo</Italian>
+            <Polish>Pasek paliwa</Polish>
+            <Portuguese>Barra de Combustível do Veículo</Portuguese>
+            <Russian>Полоса топлива</Russian>
+            <German>Fahrzeug-Treibstoffleiste</German>
+            <Korean>차량 연료 막대</Korean>
+            <Japanese>車両の燃料計</Japanese>
+            <Chinese>載具燃料欄</Chinese>
+            <Chinesesimp>载具燃料栏</Chinesesimp>
+            <Turkish>Araç Yakıt Göstergesi</Turkish>
         </Key>
-        <Key ID="STR_ACE_UI_GunnerLaunchableCount">
-            <English>Gunner Launchable Count</English>
-            <Portuguese>Quantidade de Arremessável do fuzileiro</Portuguese>
-            <French>Nombre d'objets lançables (tireur)</French>
-            <Russian>Кол-во снарядов ПУ наводчика</Russian>
-            <Japanese>射手用ランチャーの弾数</Japanese>
-            <Polish>Ilość rakiet strzelca</Polish>
-            <German>Richtschütze Raketenanzahl</German>
-            <Korean>사수 발사체 수량</Korean>
-            <Italian>Contatore Missili Artigliere</Italian>
-            <Chinesesimp>炮手发射物数量</Chinesesimp>
-            <Chinese>砲手發射物數量</Chinese>
-            <Czech>Počet odpalitelných granátů vozidla</Czech>
-            <Spanish>Cantidad de lanzadores de artillero</Spanish>
-        </Key>
-        <Key ID="STR_ACE_UI_GunnerZeroing">
-            <English>Gunner Zeroing</English>
-            <Portuguese>Zerar a mira do fuzileiro</Portuguese>
-            <French>Zérotage (tireur)</French>
-            <Russian>Дальность стрельбы наводчика</Russian>
-            <Japanese>射手用ゼロイン</Japanese>
-            <Polish>Wyzerowanie broni strzelca</Polish>
-            <German>Richtschütze Nullung</German>
-            <Korean>사수 영점</Korean>
-            <Italian>Azzeramento Artigliere</Italian>
-            <Chinesesimp>炮手归零距离</Chinesesimp>
-            <Chinese>砲手歸零距離</Chinese>
-            <Czech>Náměr zbraně vozidla</Czech>
-            <Spanish>Calibracion de mira de artillero</Spanish>
-        </Key>
-        <Key ID="STR_ACE_UI_GunnerWeaponLowerInfoBackground">
-            <English>Gunner Weapon Lower Info Background</English>
-            <Portuguese>Informações na parte de baixo do fundo do Armamento do fuzileiro</Portuguese>
-            <French>Fond pour la barre d'informations inférieure (tireur)</French>
-            <Russian>Фон информации об орудии наводчика снизу</Russian>
-            <Japanese>射手用武器名下部の情報表示の背景</Japanese>
-            <Polish>Tło dolnej części informacji o broni strzelca</Polish>
-            <German>Hintergrund der unteren Waffen-Info-Leiste (Richtschütze)</German>
-            <Korean>사수 무기 상세 정보 배경</Korean>
-            <Italian>Sfondo Informazioni Arma Artigliere Bassa</Italian>
-            <Chinesesimp>炮手武器底部信息栏背景</Chinesesimp>
-            <Chinese>砲手武器底部資訊欄背景</Chinese>
-            <Czech>Nižší pozadí panelu s informacemi o zbrani vozidla</Czech>
-            <Spanish>Fondo de información inferior de armamento de artillero</Spanish>
+        <Key ID="STR_ACE_UI_VehicleInfoBackground">
+            <English>Vehicle Info Background</English>
+            <Czech>Info o vozidle v pozadí</Czech>
+            <French>Fond pour les informations du véhicule</French>
+            <Spanish>Fondo de información del vehículo</Spanish>
+            <Italian>Sfondo Informazioni Veicolo</Italian>
+            <Polish>Tło informacji o pojeździe</Polish>
+            <Portuguese>Fundo das informações do veículo</Portuguese>
+            <Russian>Фон информации о технике</Russian>
+            <German>Fahrzeug Info Hintergrund</German>
+            <Korean>차량 정보 배경</Korean>
+            <Japanese>車両状態の背景</Japanese>
+            <Chinese>載具資訊欄背景</Chinese>
+            <Chinesesimp>载具信息栏背景</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_UI_VehicleName">
             <English>Vehicle Name</English>
             <Czech>Název vozidla</Czech>
-            <Portuguese>Nome do Veículo</Portuguese>
             <French>Nom du véhicule</French>
-            <Russian>Название техники</Russian>
-            <Japanese>車両名</Japanese>
+            <Spanish>Nombre del vehiculo</Spanish>
+            <Italian>Nome Veicolo</Italian>
             <Polish>Nazwa pojazdu</Polish>
+            <Portuguese>Nome do Veículo</Portuguese>
+            <Russian>Название техники</Russian>
             <German>Fahrzeugname</German>
             <Korean>차량 명칭</Korean>
-            <Italian>Nome Veicolo</Italian>
-            <Chinesesimp>载具名称</Chinesesimp>
+            <Japanese>車両名</Japanese>
             <Chinese>載具名稱</Chinese>
-            <Spanish>Nombre del vehiculo</Spanish>
+            <Chinesesimp>载具名称</Chinesesimp>
             <Turkish>Araç Ismi</Turkish>
         </Key>
         <Key ID="STR_ACE_UI_VehicleNameBackground">
             <English>Vehicle Name Background</English>
             <Czech>Název vozidla v pozadí</Czech>
-            <Portuguese>Fundo do Nome do Veículo</Portuguese>
             <French>Fond pour le nom du véhicule</French>
-            <Russian>Фон названия техники</Russian>
-            <Japanese>車両名の背景</Japanese>
+            <Spanish>Fondo del nombre del vehículo</Spanish>
+            <Italian>Sfondo Nome Veicolo</Italian>
             <Polish>Tło nazwy pojazdu</Polish>
+            <Portuguese>Fundo do Nome do Veículo</Portuguese>
+            <Russian>Фон названия техники</Russian>
             <German>Fahrzeugname Hintergrund</German>
             <Korean>차량 명칭 배경</Korean>
-            <Italian>Sfondo Nome Veicolo</Italian>
-            <Chinesesimp>载具名称背景</Chinesesimp>
+            <Japanese>車両名の背景</Japanese>
             <Chinese>載具名稱背景</Chinese>
-            <Spanish>Fondo del nombre del vehículo</Spanish>
+            <Chinesesimp>载具名称背景</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_UI_VehicleFuelBar">
-            <English>Vehicle Fuel Bar</English>
-            <Czech>Ukazatel paliva</Czech>
-            <Portuguese>Barra de Combustível do Veículo</Portuguese>
-            <French>Barre d'essence du véhicule</French>
-            <Russian>Полоса топлива</Russian>
-            <Japanese>車両の燃料計</Japanese>
-            <Polish>Pasek paliwa</Polish>
-            <German>Fahrzeug-Treibstoffleiste</German>
-            <Korean>차량 연료 막대</Korean>
-            <Italian>Barra Carburante Veicolo</Italian>
-            <Chinesesimp>载具燃料栏</Chinesesimp>
-            <Chinese>載具燃料欄</Chinese>
-            <Spanish>Barra de combustible del vehículo</Spanish>
-            <Turkish>Araç Yakıt Göstergesi</Turkish>
+        <Key ID="STR_ACE_UI_VehicleRadar">
+            <English>Vehicle Radar</English>
+            <Czech>Radar vozidla</Czech>
+            <French>Radar de véhicule</French>
+            <Spanish>Radar de vehículos</Spanish>
+            <Italian>Radar Veicolo</Italian>
+            <Polish>Radar w pojeździe</Polish>
+            <Portuguese>Radar de Veículo</Portuguese>
+            <Russian>Радар в технике</Russian>
+            <German>Fahrzeugradar</German>
+            <Korean>차량 레이더</Korean>
+            <Japanese>車両のレーダー</Japanese>
+            <Chinese>載具雷達</Chinese>
+            <Chinesesimp>载具雷达</Chinesesimp>
+            <Turkish>Araç Radarı</Turkish>
         </Key>
         <Key ID="STR_ACE_UI_VehicleSpeed">
             <English>Vehicle Speed</English>
             <Czech>Rychlost vozidla</Czech>
-            <Portuguese>Velocidade do Veículo</Portuguese>
             <French>Vitesse du véhicule</French>
-            <Russian>Скорость техники</Russian>
-            <Japanese>車両の速度計</Japanese>
+            <Spanish>Velocidad del vehículo</Spanish>
+            <Italian>Velocità Veicolo</Italian>
             <Polish>Prędkościomierz</Polish>
+            <Portuguese>Velocidade do Veículo</Portuguese>
+            <Russian>Скорость техники</Russian>
             <German>Fahrzeuggeschwindigkeit</German>
             <Korean>차량 속도</Korean>
-            <Italian>Velocità Veicolo</Italian>
-            <Chinesesimp>载具速度</Chinesesimp>
+            <Japanese>車両の速度計</Japanese>
             <Chinese>載具速度</Chinese>
-            <Spanish>Velocidad del vehículo</Spanish>
+            <Chinesesimp>载具速度</Chinesesimp>
             <Turkish>Araç Hızı</Turkish>
         </Key>
-        <Key ID="STR_ACE_UI_VehicleAltitude">
-            <English>Vehicle Altitude</English>
-            <Czech>Výška vozidla</Czech>
-            <Portuguese>Altitude do Veículo</Portuguese>
-            <French>Altitude du véhicule</French>
-            <Russian>Высота полета</Russian>
-            <Japanese>車両の高度計</Japanese>
-            <Polish>Wysokościomierz radarowy</Polish>
-            <German>Fahrzeughöhe</German>
-            <Korean>차량 고도</Korean>
-            <Italian>Altitudine Veicolo</Italian>
-            <Chinesesimp>载具高度</Chinesesimp>
-            <Chinese>載具高度</Chinese>
-            <Spanish>Altitud del vehículo</Spanish>
-            <Turkish>Araç Yüksekliği</Turkish>
+        <Key ID="STR_ACE_UI_WeaponLowerInfoBackground">
+            <English>Weapon Lower Info Background</English>
+            <Czech>Nižší pozadí panulu s informacemi o zbrani</Czech>
+            <French>Fond pour la barre d'informations inférieure de l'arme</French>
+            <Spanish>Fondo de información inferior de arma</Spanish>
+            <Italian>Sfondo Informazioni Arma Bassa</Italian>
+            <Polish>Tło dolnej części informacji o broni</Polish>
+            <Portuguese>Informações na parte de baixo do fundo do Armamento</Portuguese>
+            <Russian>Фон информации об оружии снизу</Russian>
+            <German>Hintergrund der unteren Waffen-Info-Leiste</German>
+            <Korean>무기 상세 정보 배경</Korean>
+            <Japanese>武器名下部の情報表示の背景</Japanese>
+            <Chinese>武器底部資訊欄背景</Chinese>
+            <Chinesesimp>武器底部信息栏背景</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_UI_VehicleDamage">
-            <English>Vehicle Damage</English>
-            <Czech>Poškození vozidla</Czech>
-            <Portuguese>Dano do Veículo</Portuguese>
-            <French>Dégâts du véhicule</French>
-            <Russian>Повреждение техники</Russian>
-            <Japanese>車両の損傷状態</Japanese>
-            <Polish>Uszkodzenia pojazdu</Polish>
-            <German>Fahrzeugschaden</German>
-            <Korean>차량 피해</Korean>
-            <Italian>Danni Veicolo</Italian>
-            <Chinesesimp>载具伤害</Chinesesimp>
-            <Chinese>載具傷害</Chinese>
-            <Spanish>Daño vehicular</Spanish>
-            <Turkish>Araç Hasarı</Turkish>
+        <Key ID="STR_ACE_UI_WeaponName">
+            <English>Weapon Name</English>
+            <Czech>Název zbraně</Czech>
+            <French>Nom de l'arme</French>
+            <Spanish>Nombre del arma</Spanish>
+            <Italian>Nome Arma</Italian>
+            <Polish>Nazwa broni</Polish>
+            <Portuguese>Nome do Armamento</Portuguese>
+            <Russian>Название оружия</Russian>
+            <German>Waffenname</German>
+            <Korean>무기 이름</Korean>
+            <Japanese>武器名</Japanese>
+            <Chinese>武器名稱</Chinese>
+            <Chinesesimp>武器名称</Chinesesimp>
+            <Turkish>Silah Ismi</Turkish>
         </Key>
-        <Key ID="STR_ACE_UI_VehicleInfoBackground">
-            <English>Vehicle Info Background</English>
-            <Czech>Info o vozidle v pozadí</Czech>
-            <Portuguese>Fundo das informações do veículo</Portuguese>
-            <French>Fond pour les informations du véhicule</French>
-            <Russian>Фон информации о технике</Russian>
-            <Japanese>車両状態の背景</Japanese>
-            <Polish>Tło informacji o pojeździe</Polish>
-            <German>Fahrzeug Info Hintergrund</German>
-            <Korean>차량 정보 배경</Korean>
-            <Italian>Sfondo Informazioni Veicolo</Italian>
-            <Chinesesimp>载具信息栏背景</Chinesesimp>
-            <Chinese>載具資訊欄背景</Chinese>
-            <Spanish>Fondo de información del vehículo</Spanish>
+        <Key ID="STR_ACE_UI_WeaponNameBackground">
+            <English>Weapon Name Background</English>
+            <Czech>Název zbraně v pozadí</Czech>
+            <French>Fond pour le nom de l'arme</French>
+            <Spanish>Fondo de nombre de arma</Spanish>
+            <Italian>Sfondo Nome Arma</Italian>
+            <Polish>Tło nazwy broni</Polish>
+            <Portuguese>Fundo do Nome do Armamento</Portuguese>
+            <Russian>Фон названия оружия</Russian>
+            <German>Waffenname Hintergrund</German>
+            <Korean>무기 이름 배경</Korean>
+            <Japanese>武器名の背景</Japanese>
+            <Chinese>武器名稱背景</Chinese>
+            <Chinesesimp>武器名称背景</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_UI_RequiresSoldierVehicleWeaponInfo">
-            <English>Requires Soldier/Vehicle/Weapon Information.</English>
-            <Czech>Vyžaduje informace o Vojákovi/Vozidlu/Zbrani</Czech>
-            <Portuguese>Requer informações de Soldado/Veículo/Armamento</Portuguese>
-            <French>Requiert l'option "Information soldat/véhicule/arme".</French>
-            <Russian>Требуется информация о солдате/технике/оружии.</Russian>
-            <Japanese>兵士/車両/武器の情報 の表示が必要です。</Japanese>
-            <Polish>Wymaga informacji o żołnierzu/pojeździe/broni.</Polish>
-            <German>Benötigt Soldat/Fahrzeug/Waffe Information.</German>
-            <Korean>병사/차량/무기의 정보가 필요합니다.</Korean>
-            <Italian>Richiede informazioni Soldato/Veicolo/Arma.</Italian>
-            <Chinesesimp>需要士兵/载具/武器的信息。</Chinesesimp>
-            <Chinese>需要士兵/載具/武器的資訊.</Chinese>
-            <Spanish>Requiere información de Soldado/Vehículo.</Spanish>
+        <Key ID="STR_ACE_UI_Zeroing">
+            <English>Zeroing</English>
+            <Czech>Náměr</Czech>
+            <French>Zérotage</French>
+            <Spanish>Reducción a cero</Spanish>
+            <Italian>Azzeramento</Italian>
+            <Polish>Wyzerowanie broni</Polish>
+            <Portuguese>Zerar a mira</Portuguese>
+            <Russian>Дальность стрельбы</Russian>
+            <German>Nullung</German>
+            <Korean>영점</Korean>
+            <Japanese>ゼロイン</Japanese>
+            <Chinese>歸零距離</Chinese>
+            <Chinesesimp>归零距离</Chinesesimp>
+            <Turkish>Sıfırlama</Turkish>
         </Key>
-        <Key ID="STR_ACE_UI_Disallowed">
-            <English>Modifying User Interface is disabled.</English>
-            <Czech>Změna uživatelského rozhraní je zakázána.</Czech>
-            <Portuguese>A modificação da interface do usuário está desabilitada.</Portuguese>
-            <French>La personnalisation de l'Interface Utilisateur est désactivée.</French>
-            <Russian>Изменение пользовательского интерфейса запрещено.</Russian>
-            <Japanese>ユーザ インターフェースの変更は無効化されています。</Japanese>
-            <Polish>Modyfikacja interfejsu użytkownika jest wyłączona.</Polish>
-            <German>Die Modifizierung des UI ist deaktiviert.</German>
-            <Korean>사용자 인터페이스 변경이 비활성화 되어 있습니다.</Korean>
-            <Italian>La modifica dell'Interfaccia Utente è disabilitata.</Italian>
-            <Chinesesimp>自定用户界面功能已关闭</Chinesesimp>
-            <Chinese>自定使用者介面功能已關閉</Chinese>
-            <Spanish>La modificación de la interfaz de usuario está desactivada.</Spanish>
+        <Key ID="STR_ACE_UI_devWatermark">
+            <English>Development Build Watermark</English>
+            <French>Filigrane version de développement</French>
+            <Spanish>Marca de agua para compilación de desarrollo</Spanish>
+            <Italian>Filigrana per versione in fase di sviluppo</Italian>
+            <Polish>Znak wodny wersji deweloperskiej</Polish>
+            <Portuguese>Marca d'agua de versão de desenvolvimento</Portuguese>
+            <Russian>Водяной знак Development Build</Russian>
+            <German>Wasserzeichen für Entwicklungsversion</German>
+            <Korean>개발용 빌드 워터마크</Korean>
+            <Japanese>開発ビルドでの透かしマーク</Japanese>
+            <Chinesesimp>开发建设水印</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_UI_Disabled">
-            <English>Cannot modify a forced User Interface element.</English>
-            <Portuguese>Não é possível modificar um elemento forçado da interface do usuário.</Portuguese>
-            <French>Impossible de modifier un élément forcé de l'Interface Utilisateur.</French>
-            <Russian>Невозможно изменить зафиксированный элемент пользовательского интерфейса.</Russian>
-            <Japanese>ユーザ インターフェース要素の強制はできません。</Japanese>
-            <Polish>Nie można modyfikować wymuszonego elementu interfejsu użytkownika.</Polish>
-            <German>Gesperrte UI-Elemente können nicht modifiziert werden.</German>
-            <Korean>강제 사용자 인터페이스는 변경하실 수 없습니다.</Korean>
-            <Italian>Impossibile modificare un elemento forzato dell'Interfaccia Utente.</Italian>
-            <Chinesesimp>无法编辑已被锁定的用户界面控件</Chinesesimp>
-            <Chinese>無法編輯已被鎖定的使用者介面元件</Chinese>
-            <Czech>Nelze upravit prvek vynuceného uživatelského rozhraní.</Czech>
-            <Spanish>No se puede modificar un elemento forzado de la Interfaz del Usuario</Spanish>
-        </Key>
-        <Key ID="STR_ACE_UI_EnableSpeedIndicator">
-            <English>Enable movement speed indicator</English>
-            <Polish>Włącz wskaźnik prędkości poruszania</Polish>
-            <Japanese>移動速度インジケータを有効化</Japanese>
-            <French>Indicateur de vitesse de déplacement</French>
-            <Russian>Вкл. индикатор скорости передвижения</Russian>
-            <German>Aktiviere Bewegungsgeschwindigkeits-Indikator</German>
-            <Italian>Attiva Indicatore di Velocità</Italian>
-            <Chinesesimp>启用移动速度指示器</Chinesesimp>
-            <Korean>이동 속도 표시기 활성화</Korean>
-            <Spanish>Habilitar indicador de velocidad de movimiento</Spanish>
-        </Key>
-        <Key ID="STR_ACE_UI_EnableSpeedIndicator_Description">
-            <English>Enables movement speed indicator for player character.</English>
-            <Polish>Włącza wskaźnik prędkości poruszania się dla postaci gracza.</Polish>
-            <Japanese>プレイヤー キャラの移動速度を表示します。</Japanese>
-            <French>Affiche un indicateur permettant de visualiser la vitesse de déplacement du personnage.</French>
-            <Russian>Включает индикатор скорости передвижения персонажа игрока.</Russian>
-            <German>Aktiviere den Bewegungsgeschwindigkeits-Indikator des Spielers.</German>
-            <Italian>Attiva Indicatore di Velocità del Giocatore</Italian>
-            <Chinesesimp>为玩家角色启用移动速度指示器。</Chinesesimp>
-            <Korean>플레이어 캐릭터를 위한 이동속도 표시기를 활성화합니다.</Korean>
-            <Spanish>Habilita el indicador de velocidad de movimiento para el personaje del jugador.</Spanish>
-        </Key>
-        <Key ID="STR_ACE_UI_HideDefaultActionIcon">
-            <English>Hide Default Action Icon</English>
-            <Japanese>デフォルトのアクションアイコンを非表示</Japanese>
-            <Polish>Ukryj domyślną ikonę akcji</Polish>
-            <Korean>기본 행동 아이콘 숨기기</Korean>
-            <Chinesesimp>隐藏默认动作标识</Chinesesimp>
-            <Russian>Спрятать иконку действия по умолчанию</Russian>
-            <Spanish>Ocultar el icono de acción por defecto</Spanish>
-            <German>Standardaktionssymbol ausblenden</German>
-            <French>Masquer l'icône d'action par défaut</French>
-            <Italian>Nascondi Icona dell'Interazione Standard</Italian>
-        </Key>
-        <Key ID="STR_ACE_UI_HideDefaultActionIcon_Description">
-            <English>Hides the icon shown automatically when something is in front of the cursor. Requires a game restart.\nWarning: Does not remove the action itself! It is advisable to unbind 'Use default action' key to prevent unwanted interactions.</English>
-            <Japanese>カーソルの前に何かがあるときに自動的に表示されるアイコンを非表示にします。 ゲームを再起動する必要があります。\n警告:アクション自体は削除されません! 誤って実行することを防ぐために、'標準アクション'キーのバインドを解除することをお勧めします。</Japanese>
-            <Polish>Ukrywa ikonę wyświetlaną automatycznie, gdy coś znajduje się przed kursorem. Wymaga ponownego uruchomienia gry.\nOstrzeżenie: Nie usuwa samej akcji! Zaleca się usunięcia przypisania klawisza „Użyj domyślnej akcji”, aby zapobiec niechcianym interakcjom.</Polish>
-            <Korean>커서 앞에 무언가가 있을 때 자동으로 표시되는 아이콘을 숨깁니다. 게임을 재시작해야 합니다\n경고: 작업 자체를 제거하지 않습니다! 원하지 않는 상호작용을 방지하려면 '기본 행동' 키를 삭제하는 것이 좋습니다.</Korean>
-            <Chinesesimp>隐藏屏幕面前有物体时自动显示的动作标识。需要重新启动游戏。\n警告：不会删除动作本身！建议同时取消对“使用默认动作”键的绑定，以防止不必要的互动。</Chinesesimp>
-            <Russian>Прячет иконку, которая показывается автоматически когда что-то находиться перед курсором. Требует рестарта игры.\nВнимание: не убирает само действие! Рекомендуется убрать комбинацию клавиш с настройки "Выполнить действие по умолчанию" чтобы предостеречься от нежеланных действий.</Russian>
-            <Spanish>Oculta el icono que se muestra automáticamente cuando algo se sitúa enfrente del cursor. Requiere reinicio del juego.\nAdvertencia: No elimina la propia acción! Es recomendable desactivar la tecla "Usar acción por defecto" para prevenir interacciones no deseadas.</Spanish>
-            <German>Blendet das Symbol aus, das automatisch angezeigt wird, wenn sich etwas vor dem Cursor befindet. Erfordert einen Neustart des Spiels.\nWarnung: Die Aktion selbst wird nicht entfernt! Es empfiehlt sich, die Belegung der Taste 'Standardaktion verwenden' aufzuheben, um unerwünschte Interaktionen zu verhindern.</German>
-            <French>Cache l'icône qui s'affiche automatiquement lorsque quelque chose est devant le curseur. Nécessite un redémarrage du jeu.\nAvertissement : l'action n'est pas supprimée ! Il est recommandé d'annuler l'affectation du bouton 'Utiliser l'action par défaut' afin d'éviter des interactions indésirables.</French>
-            <Italian>Nasconde l'icona mostrata in automatico quando qualcosa è davanti al cursore. La modifica richiede un riavvio del gioco.\nAttenzione: Non rimuovere l'azione stessa! È consigliato rimuovere solo il tasto dall'assegnazione 'Usa Azione Standard' per impedire interazioni non volute.</Italian>
+        <Key ID="STR_ACE_UI_hideHud">
+            <English>Hide all UI</English>
+            <French>Cacher toute l'interface utilisateur.</French>
+            <Spanish>Ocultar toda la IU</Spanish>
+            <Italian>Nascondi tutta l'IU</Italian>
+            <Russian>Скрыть весь интерфейс</Russian>
+            <Korean>모든 UI 숨기기</Korean>
+            <Japanese>全てのUIを隠す</Japanese>
         </Key>
     </Package>
 </Project>

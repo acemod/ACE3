@@ -21,7 +21,7 @@ params ["_medic", "_patient", "_bodyPart"];
 
 private _heartRate = 0;
 
-if (!([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo))) then {
+if !([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo)) then {
     _heartRate = switch (true) do {
         case (alive _patient): {
             GET_HEART_RATE(_patient)
@@ -37,7 +37,7 @@ private _heartRateOutput = LSTRING(Check_Pulse_Output_5);
 private _logOutput = LSTRING(Check_Pulse_None);
 
 if (_heartRate > 1) then {
-    if (_medic call FUNC(isMedic)) then {
+    if ([_medic, GVAR(numericalPulse)] call FUNC(isMedic)) then {
         _heartRateOutput = LSTRING(Check_Pulse_Output_1);
         _logOutput = str round _heartRate;
     } else {

@@ -4,9 +4,9 @@
     [ELSTRING(common,Enabled), LSTRING(Enabled_Description)],
     LSTRING(DisplayName),
     false,
-    true,
-    {},
-    true // Needs restart
+    1,
+    {[QXGVAR(enabled), _this] call EFUNC(common,cbaSettings_settingChanged)},
+    true // Needs mission restart
 ] call CBA_fnc_addSetting;
 
 [
@@ -100,4 +100,13 @@
     LSTRING(DisplayName),
     [[-1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8], [LSTRING(Dynamic), "0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", 0], 0],
     false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(zeusUpdates),
+    "CHECKBOX",
+    [LSTRING(ZeusUpdates_DisplayName), LSTRING(ZeusUpdates_Description)],
+    LSTRING(DisplayName),
+    false,
+    1
 ] call CBA_fnc_addSetting;

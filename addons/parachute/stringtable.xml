@@ -1,151 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Parachute">
-        <Key ID="STR_ACE_Parachute_showAltimeter">
-            <English>Altimeter</English>
-            <French>Altimètre</French>
-            <German>Höhenmesser</German>
-            <Czech>Výškoměr</Czech>
-            <Polish>Wysokościomierz</Polish>
-            <Spanish>Altímetro</Spanish>
-            <Hungarian>Magasságmérő</Hungarian>
-            <Russian>Высотомер</Russian>
-            <Italian>Altimetro</Italian>
-            <Portuguese>Altímetro</Portuguese>
-            <Japanese>高度計</Japanese>
-            <Korean>고도계</Korean>
-            <Chinesesimp>高度计</Chinesesimp>
-            <Chinese>高度計</Chinese>
-            <Turkish>Altimetre</Turkish>
+        <Key ID="STR_ACE_Parachute_AltimeterDescription">
+            <English>Used to show height, descent rate and the time.</English>
+            <Czech>Používané k zjištění výšky, rychlosti sestupu a času.</Czech>
+            <French>Permet d'afficher la hauteur, la vitesse de chute et l'heure.</French>
+            <Spanish>Utilizado para mostrar altura, tasa de descenso y hora.</Spanish>
+            <Italian>Usato per mostrare l'altitudine, la velocità di discesa e l'ora.</Italian>
+            <Polish>Używany przez spadochroniarzy, pokazuje wysokość, prędkość opadania oraz czas.</Polish>
+            <Portuguese>Usado para mostrar altura, taxa de descida e o tempo.</Portuguese>
+            <Russian>Используется для определения высоты, скорости снижения и времени.</Russian>
+            <German>Zeigt Höhe, Fallgeschwindigkeit und Uhrzeit.</German>
+            <Korean>높이, 하강속도 그리고 시간을 보여줍니다.</Korean>
+            <Japanese>高度や降下率、時間を見るのに使います。</Japanese>
+            <Chinese>用於顯示高度，下降率和時間</Chinese>
+            <Chinesesimp>用于显示高度，下降率和时间。</Chinesesimp>
+            <Turkish>Yüksekliği, alçalma hızını ve zamanı göstermek için kullanılır.</Turkish>
+            <Hungarian>Mutatja a magasságot, a zuhanási sebességet, és az időt.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Parachute_AltimeterDisplayName">
             <English>Altimeter Watch</English>
-            <French>Montre altimètre</French>
-            <German>Höhenmesser</German>
             <Czech>Hodinky s Výškoměrem</Czech>
-            <Polish>Zegarek z wysokościomierzem</Polish>
+            <French>Montre altimètre</French>
             <Spanish>Reloj altímetro</Spanish>
-            <Hungarian>Magasságmérős karóra</Hungarian>
-            <Russian>Часы с высотомером</Russian>
             <Italian>Controlla l'altimetro</Italian>
+            <Polish>Zegarek z wysokościomierzem</Polish>
             <Portuguese>Relógio Altímetro</Portuguese>
-            <Japanese>時計型高度計</Japanese>
+            <Russian>Часы с высотомером</Russian>
+            <German>Höhenmesser</German>
             <Korean>고도계 시계</Korean>
-            <Chinesesimp>高度计手表</Chinesesimp>
+            <Japanese>時計型高度計</Japanese>
             <Chinese>高度計手錶</Chinese>
+            <Chinesesimp>高度计手表</Chinesesimp>
             <Turkish>Altimetre Saati</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Parachute_AltimeterDescription">
-            <English>Used to show height, descent rate and the time.</English>
-            <French>Permet d'afficher la hauteur, la vitesse de chute et l'heure.</French>
-            <German>Zeigt Höhe, Fallgeschwindigkeit und Uhrzeit.</German>
-            <Czech>Používané k zjištění výšky, rychlosti sestupu a času.</Czech>
-            <Polish>Używany przez spadochroniarzy, pokazuje wysokość, prędkość opadania oraz czas.</Polish>
-            <Spanish>Utilizado para mostrar altura, tasa de descenso y hora.</Spanish>
-            <Hungarian>Mutatja a magasságot, a zuhanási sebességet, és az időt.</Hungarian>
-            <Russian>Используется для определения высоты, скорости снижения и времени.</Russian>
-            <Italian>Usato per mostrare l'altitudine, la velocità di discesa e l'ora.</Italian>
-            <Portuguese>Usado para mostrar altura, taxa de descida e o tempo.</Portuguese>
-            <Japanese>高度や降下率、時間を見るのに使います。</Japanese>
-            <Korean>높이, 하강속도 그리고 시간을 보여줍니다.</Korean>
-            <Chinesesimp>用于显示高度，下降率和时间。</Chinesesimp>
-            <Chinese>用於顯示高度，下降率和時間</Chinese>
-            <Turkish>Yüksekliği, alçalma hızını ve zamanı göstermek için kullanılır.</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Parachute_NonSteerableParachute">
-            <English>Non-Steerable Parachute</English>
-            <German>Ungelenkter Fallschirm</German>
-            <Spanish>Paracaídas no dirigible</Spanish>
-            <French>Parachute non manœuvrable</French>
-            <Polish>Niesterowalny spadochron</Polish>
-            <Czech>Neříditelný padák</Czech>
-            <Hungarian>Irányíthatatlan ejtőernyő</Hungarian>
-            <Russian>Неуправляемый парашют</Russian>
-            <Italian>Paracadute non manovrabile</Italian>
-            <Portuguese>Paraquedas não controlável</Portuguese>
-            <Japanese>非操作型パラシュート</Japanese>
-            <Korean>비조종 낙하산</Korean>
-            <Chinesesimp>非可操控降落伞</Chinesesimp>
-            <Chinese>非可操控降落傘</Chinese>
-            <Turkish>Yönlendirilemez Paraşüt</Turkish>
+            <Hungarian>Magasságmérős karóra</Hungarian>
         </Key>
         <Key ID="STR_ACE_Parachute_CutParachute">
             <English>Cut Parachute</English>
-            <German>Fallschirm abschneiden</German>
-            <French>Couper le parachute</French>
-            <Polish>Odetnij spadochron</Polish>
-            <Hungarian>Ejtőernyő elvágása</Hungarian>
-            <Portuguese>Cortar para-quedas</Portuguese>
-            <Russian>Обрезать стропы</Russian>
             <Czech>Odžíznout padák</Czech>
+            <French>Couper le parachute</French>
             <Spanish>Cortar paracaídas</Spanish>
             <Italian>Taglia Paracadute</Italian>
-            <Japanese>パラシュートを切断</Japanese>
+            <Polish>Odetnij spadochron</Polish>
+            <Portuguese>Cortar para-quedas</Portuguese>
+            <Russian>Обрезать стропы</Russian>
+            <German>Fallschirm abschneiden</German>
             <Korean>낙하산 자르기</Korean>
-            <Chinesesimp>剪断降落伞</Chinesesimp>
+            <Japanese>パラシュートを切断</Japanese>
             <Chinese>剪斷降落傘</Chinese>
+            <Chinesesimp>剪断降落伞</Chinesesimp>
             <Turkish>Paraşütü Kes</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Parachute_ReserveParachute">
-            <English>Reserve Parachute</English>
-            <German>Reserve Fallschirm</German>
-            <French>Parachute de secours</French>
-            <Polish>Spadochron awaryjny</Polish>
-            <Hungarian>Tartalék ejtőernyő</Hungarian>
-            <Portuguese>Paraquedas de reserva</Portuguese>
-            <Russian>Запасной парашют</Russian>
-            <Czech>Záložní padák</Czech>
-            <Spanish>Paracaídas de reserva</Spanish>
-            <Italian>Paracadute di Riserva</Italian>
-            <Japanese>予備パラシュート</Japanese>
-            <Korean>예비 낙하산</Korean>
-            <Chinesesimp>备用降落伞</Chinesesimp>
-            <Chinese>備用降落傘</Chinese>
-            <Turkish>Yedek Paraşüt</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Parachute_HideAltimeter">
-            <English>Hide Freefall Altimeter</English>
-            <German>Freifall-Höhenmesser verstecken</German>
-            <Japanese>降下時に高度計を非表示</Japanese>
-            <Italian>Nascondi Altimetro in Caduta Libera</Italian>
-            <Chinese>隱藏自由落體高度計</Chinese>
-            <Chinesesimp>隐藏自由落体高度计</Chinesesimp>
-            <Polish>Schowaj wysokościomierz podczas swobodnego opadania</Polish>
-            <Russian>Убрать высотомер при падении</Russian>
-            <Portuguese>Esconder Altímetro de queda livre</Portuguese>
-            <French>Masquer l'altimètre en chute libre</French>
-            <Czech>Schovat výškoměr v GUI při volném pádu</Czech>
-            <Spanish>Ocultar altímetro de caída libre</Spanish>
-            <Turkish>Serbest Düşüş Altimetresini Gizle</Turkish>
-            <Korean>강하 시 고도계 숨기기</Korean>
-        </Key>
-        <Key ID="STR_ACE_Parachute_HideAltimeter_tooltip">
-            <English>Hides the altitude and speed shown while free falling or parachuting.</English>
-            <German>Blendet den Höhen- und Geschwindigkeitsmesser während des Fallschirmspringens aus.</German>
-            <Japanese>自由降下時とパラシュート中に高度と速度を非表示にします。</Japanese>
-            <Italian>Nasconde l'altitudine e la velocità mostrate durante la caduta libera o paracadutandosi.</Italian>
-            <Chinese>在自由落體時或開傘下隱藏自由落體高度計</Chinese>
-            <Chinesesimp>在自由落体时或开伞下隐藏自由落体高度计。</Chinesesimp>
-            <Polish>Chowa wysokość i prędkość pokazywaną podczas swobodnego opadania lub spadania ze spadochronem.</Polish>
-            <Russian>Скрывает показания высоты и скорости при свободном падении или прыжках с парашютом.</Russian>
-            <Portuguese>Esconde a altitude e velocidade enquanto estiver em queda livre ou saltando de paraquedas.</Portuguese>
-            <French>Cache l'altitude et la vitesse affichées, lors d'une chute libre ou d'un parachutage.</French>
-            <Czech>Schová výšku a rychlost v GUI při volném pádu a při použití padáku.</Czech>
-            <Spanish>Oculta la altitud y la velocidad que se muestran en caída libre o en paracaídas.</Spanish>
-            <Turkish>Serbest düşme veya paraşütle atlama sırasında gösterilen yüksekliği ve hızı gizler.</Turkish>
-            <Korean>강하 시 고도와 속도를 보여주지 않습니다.</Korean>
+            <Hungarian>Ejtőernyő elvágása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Parachute_FailureChance">
             <English>Parachute Failure Chance</English>
-            <Russian>Вероятность отказа парашюта</Russian>
             <French>Chance de défaillance du parachute</French>
-            <Japanese>開傘失敗率</Japanese>
-            <Polish>Szansa na nieotwarcie się spadochronu</Polish>
-            <German>Wahrscheinlichkeit, dass ein Fallschirm sich nicht öffnet</German>
-            <Italian>Probabilità che l'apertura del paracadute fallisca</Italian>
-            <Chinesesimp>开伞失败率</Chinesesimp>
-            <Korean>낙하산 펼치기 실패 확률</Korean>
             <Spanish>Probabilidad de fallo de paracaidas</Spanish>
+            <Italian>Probabilità che l'apertura del paracadute fallisca</Italian>
+            <Polish>Szansa na nieotwarcie się spadochronu</Polish>
+            <Portuguese>Probabilidade de falha do paraquedas</Portuguese>
+            <Russian>Вероятность отказа парашюта</Russian>
+            <German>Wahrscheinlichkeit, dass ein Fallschirm sich nicht öffnet</German>
+            <Korean>낙하산 펼치기 실패 확률</Korean>
+            <Japanese>開傘失敗率</Japanese>
+            <Chinesesimp>开伞失败率</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Parachute_HideAltimeter">
+            <English>Hide Freefall Altimeter</English>
+            <Czech>Schovat výškoměr v GUI při volném pádu</Czech>
+            <French>Masquer l'altimètre en chute libre</French>
+            <Spanish>Ocultar altímetro de caída libre</Spanish>
+            <Italian>Nascondi Altimetro in Caduta Libera</Italian>
+            <Polish>Schowaj wysokościomierz podczas swobodnego opadania</Polish>
+            <Portuguese>Esconder Altímetro de queda livre</Portuguese>
+            <Russian>Убрать высотомер при падении</Russian>
+            <German>Freifall-Höhenmesser verstecken</German>
+            <Korean>강하 시 고도계 숨기기</Korean>
+            <Japanese>降下時に高度計を非表示</Japanese>
+            <Chinese>隱藏自由落體高度計</Chinese>
+            <Chinesesimp>隐藏自由落体高度计</Chinesesimp>
+            <Turkish>Serbest Düşüş Altimetresini Gizle</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Parachute_HideAltimeter_tooltip">
+            <English>Hides the altitude and speed shown while free falling or parachuting.</English>
+            <Czech>Schová výšku a rychlost v GUI při volném pádu a při použití padáku.</Czech>
+            <French>Cache l'altitude et la vitesse affichées, lors d'une chute libre ou d'un parachutage.</French>
+            <Spanish>Oculta la altitud y la velocidad que se muestran en caída libre o en paracaídas.</Spanish>
+            <Italian>Nasconde l'altitudine e la velocità mostrate durante la caduta libera o paracadutandosi.</Italian>
+            <Polish>Chowa wysokość i prędkość pokazywaną podczas swobodnego opadania lub spadania ze spadochronem.</Polish>
+            <Portuguese>Esconde a altitude e velocidade enquanto estiver em queda livre ou saltando de paraquedas.</Portuguese>
+            <Russian>Скрывает показания высоты и скорости при свободном падении или прыжках с парашютом.</Russian>
+            <German>Blendet den Höhen- und Geschwindigkeitsmesser während des Fallschirmspringens aus.</German>
+            <Korean>강하 시 고도와 속도를 보여주지 않습니다.</Korean>
+            <Japanese>自由降下時とパラシュート中に高度と速度を非表示にします。</Japanese>
+            <Chinese>在自由落體時或開傘下隱藏自由落體高度計</Chinese>
+            <Chinesesimp>在自由落体时或开伞下隐藏自由落体高度计。</Chinesesimp>
+            <Turkish>Serbest düşme veya paraşütle atlama sırasında gösterilen yüksekliği ve hızı gizler.</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Parachute_NonSteerableParachute">
+            <English>Non-Steerable Parachute</English>
+            <Czech>Neříditelný padák</Czech>
+            <French>Parachute non manœuvrable</French>
+            <Spanish>Paracaídas no dirigible</Spanish>
+            <Italian>Paracadute non manovrabile</Italian>
+            <Polish>Niesterowalny spadochron</Polish>
+            <Portuguese>Paraquedas não controlável</Portuguese>
+            <Russian>Неуправляемый парашют</Russian>
+            <German>Ungelenkter Fallschirm</German>
+            <Korean>비조종 낙하산</Korean>
+            <Japanese>非操作型パラシュート</Japanese>
+            <Chinese>非可操控降落傘</Chinese>
+            <Chinesesimp>非可操控降落伞</Chinesesimp>
+            <Turkish>Yönlendirilemez Paraşüt</Turkish>
+            <Hungarian>Irányíthatatlan ejtőernyő</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Parachute_ReserveParachute">
+            <English>Reserve Parachute</English>
+            <Czech>Záložní padák</Czech>
+            <French>Parachute de secours</French>
+            <Spanish>Paracaídas de reserva</Spanish>
+            <Italian>Paracadute di Riserva</Italian>
+            <Polish>Spadochron awaryjny</Polish>
+            <Portuguese>Paraquedas de reserva</Portuguese>
+            <Russian>Запасной парашют</Russian>
+            <German>Reserve Fallschirm</German>
+            <Korean>예비 낙하산</Korean>
+            <Japanese>予備パラシュート</Japanese>
+            <Chinese>備用降落傘</Chinese>
+            <Chinesesimp>备用降落伞</Chinesesimp>
+            <Turkish>Yedek Paraşüt</Turkish>
+            <Hungarian>Tartalék ejtőernyő</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Parachute_showAltimeter">
+            <English>Altimeter</English>
+            <Czech>Výškoměr</Czech>
+            <French>Altimètre</French>
+            <Spanish>Altímetro</Spanish>
+            <Italian>Altimetro</Italian>
+            <Polish>Wysokościomierz</Polish>
+            <Portuguese>Altímetro</Portuguese>
+            <Russian>Высотомер</Russian>
+            <German>Höhenmesser</German>
+            <Korean>고도계</Korean>
+            <Japanese>高度計</Japanese>
+            <Chinese>高度計</Chinese>
+            <Chinesesimp>高度计</Chinesesimp>
+            <Turkish>Altimetre</Turkish>
+            <Hungarian>Magasságmérő</Hungarian>
         </Key>
     </Package>
 </Project>

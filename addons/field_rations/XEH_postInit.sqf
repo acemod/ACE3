@@ -2,7 +2,7 @@
 
 if !(hasInterface) exitWith {};
 
-["ace_settingsInitialized", {
+["CBA_settingsInitialized", {
     // Exit if not enabled
     if (!XGVAR(enabled)) exitWith {};
 
@@ -74,32 +74,37 @@ if !(hasInterface) exitWith {};
     } forEach _subActions;
 
     // Add inventory context menu option to consume items
-    ["ACE_ItemCore", ["CONTAINER"], LSTRING(EatDrink), [], QPATHTOF(ui\icon_survival.paa),
-        [
-            {true},
-            {
-                params ["", "", "_item"];
-
-                XGVAR(enabled) && {
-                    private _config = configFile >> "CfgWeapons" >> _item;
-                    getNumber (_config >> QXGVAR(thirstQuenched)) > 0
-                    || {getNumber (_config >> QXGVAR(hungerSatiated)) > 0}
-                }
-            }
-        ],
+    private _eatOrDrinkCondition = [
+        {true},
         {
-            params ["_unit", "", "_item"];
-            private _itemConfig = configFile >> "CfgWeapons" >> _item;
-            [objNull, _unit, [_item, _itemConfig, false]] call FUNC(consumeItem);
-            false
+            params ["", "", "_item"];
+
+            XGVAR(enabled) && {
+                private _config = _item call CBA_fnc_getItemConfig;
+                getNumber (_config >> QXGVAR(thirstQuenched)) > 0
+                || {getNumber (_config >> QXGVAR(hungerSatiated)) > 0}
+            }
         }
-    ] call CBA_fnc_addItemContextMenuOption;
+    ];
+    private _eatOrDrinkStatement = {
+        params ["_unit", "", "_item"];
+        private _itemConfig = _item call CBA_fnc_getItemConfig;
+        private _isMagazine = isClass (configFile >> "CfgMagazines" >> _item);
+        [objNull, _unit, [_item, _itemConfig, _isMagazine]] call FUNC(consumeItem);
+        false // Close context menu
+    };
+
+    {
+        [_x, ["CONTAINER"], LSTRING(EatDrink), [], QPATHTOF(ui\icon_survival.paa),
+            _eatOrDrinkCondition, _eatOrDrinkStatement
+        ] call CBA_fnc_addItemContextMenuOption;
+    } forEach ["ACE_ItemCore", "CA_Magazine"];
 
     // Add water source helpers when interaction menu is opened
     ["ace_interactMenuOpened", LINKFUNC(addWaterSourceInteractions)] call CBA_fnc_addEventHandler;
 
     // Add status modifiers
-    if (["ace_medical"] call EFUNC(common,isModLoaded)) then {
+    if (GETEGVAR(medical,enabled,false)) then {
         [0, {
             if (_this getVariable [QEGVAR(medical,isBleeding), false]) exitWith {
                 0.5
@@ -132,6 +137,15 @@ if !(hasInterface) exitWith {};
 
     // Add respawn eventhandler to reset necessary variables, done through script so only added if field rations is enabled
     ["CAManBase", "respawn", LINKFUNC(handleRespawn)] call CBA_fnc_addClassEventHandler;
+
+    // Add status effect to block hunger/thirst updates
+    ["field_rations_blockUpdates", false, [], false, QGVAR(blockUpdates)] call EFUNC(common,statusEffect_addType);
+
+    [QGVAR(blockUpdates), {
+        params ["_object", "_set"];
+        TRACE_2("blockUpdates EH",_object,_set);
+        _object setVariable [QGVAR(blockUpdates), _set > 0];
+    }] call CBA_fnc_addEventHandler;
 
     // Start update loop
     [LINKFUNC(update), CBA_missionTime + MP_SYNC_INTERVAL, 1] call CBA_fnc_waitAndExecute;

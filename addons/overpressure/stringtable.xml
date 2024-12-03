@@ -3,79 +3,99 @@
     <Package name="Overpressure">
         <Key ID="STR_ACE_Overpressure_DisplayName">
             <English>Overpressure</English>
-            <Chinesesimp>超压</Chinesesimp>
-            <German>Überdruck</German>
-            <Italian>Sovrapressione</Italian>
-            <Korean>과중압력</Korean>
-            <Polish>Nadciśnienie</Polish>
-            <Japanese>過圧</Japanese>
-            <Russian>Перегрузка</Russian>
-            <Spanish>Sobrepresiòn</Spanish>
             <French>Surpression</French>
+            <Spanish>Sobrepresiòn</Spanish>
+            <Italian>Sovrapressione</Italian>
+            <Polish>Nadciśnienie</Polish>
+            <Russian>Перегрузка</Russian>
+            <German>Überdruck</German>
+            <Korean>과중압력</Korean>
+            <Japanese>超過圧力</Japanese>
+            <Chinesesimp>超压</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_displayName">
+            <English>Backblast Distance Coefficient</English>
+            <French>Multiplicateur de distance de réflexion</French>
+            <Spanish>Coeficiente de Distancia de Fogonazo</Spanish>
+            <Italian>Coefficiente distanza di svampata</Italian>
+            <Russian>Коэффициент расстояния рекативной струи</Russian>
+            <German>Rückstrahl-Entfernung Multiplikator</German>
+            <Korean>후폭풍 거리 계수</Korean>
+            <Japanese>後方噴射の距離係数</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Overpressure_backblastDistanceCoefficient_toolTip">
+            <English>Scales the backblast effect</English>
+            <French>Multiplicateur de distance de réflexion</French>
+            <Spanish>Escala el efecto del fogonazo</Spanish>
+            <Italian>Scala l'effetto delle svampate dei lanciarazzi</Italian>
+            <Russian>Масштабирует эффект реактивной струи</Russian>
+            <German>Skaliert den Rückstrahl-Effekt</German>
+            <Korean>후폭풍 효과의 스케일을 조정합니다</Korean>
+            <Japanese>無反動砲による後方噴射の影響範囲の大きさ</Japanese>
         </Key>
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_displayName">
             <English>Overpressure Distance Coefficient</English>
-            <German>Überdruckentfernungskoeffizient</German>
-            <Japanese>過圧の距離係数</Japanese>
-            <Korean>과중압력 거리 계수</Korean>
-            <Polish>Mnożnik dystansu nadciśnienia</Polish>
-            <French>Coefficient de distance pour la surpression</French>
-            <Italian>Coefficente Distanza Sovrapressione</Italian>
-            <Chinesesimp>超压影响距离系数</Chinesesimp>
-            <Chinese>高壓影響距離係數</Chinese>
-            <Russian>Коэф. избыточного давления</Russian>
-            <Portuguese>Coeficiente de Distância de Sobrepressão</Portuguese>
-            <Hungarian>Túlnyomás-távolság együtthatója</Hungarian>
             <Czech>Koeficient vzdálenosti přetlaku</Czech>
+            <French>Coefficient de distance pour la surpression</French>
             <Spanish>Coeficiente de distancia de sobrepresión</Spanish>
+            <Italian>Coefficiente Distanza Sovrapressione</Italian>
+            <Polish>Mnożnik dystansu nadciśnienia</Polish>
+            <Portuguese>Coeficiente de Distância de Sobrepressão</Portuguese>
+            <Russian>Коэф. избыточного давления</Russian>
+            <German>Überdruckentfernungskoeffizient</German>
+            <Korean>과중압력 거리 계수</Korean>
+            <Japanese>超過圧力の距離係数</Japanese>
+            <Chinese>高壓影響距離係數</Chinese>
+            <Chinesesimp>超压影响距离系数</Chinesesimp>
+            <Hungarian>Túlnyomás-távolság együtthatója</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overpressure_distanceCoefficient_toolTip">
-            <English>Scales the overpressure effect [Default: 1]</English>
-            <German>Stellt den Koeffizient für die Überdruckentfernung ein [Standard: 1]</German>
-            <Japanese>過圧効果の範囲 [デフォルト: 1]</Japanese>
-            <Korean>과중압력의 효과 크기 [기본설정: 1]</Korean>
-            <Polish>Skaluje efekt nadciśnienia [Domyślne: 1]</Polish>
-            <French>Ajuste l'effet de surpression. Valeur par défaut : 1.</French>
-            <Italian>Scala l'effetto di sovrapressione [Predefinito: 1]</Italian>
-            <Chinesesimp>超压影响的范围 [预设：1]</Chinesesimp>
-            <Chinese>高壓影響的範圍 [預設: 1]</Chinese>
-            <Russian>Степень зависимости избыточного давления от расстояния [По умолчанию: 1]</Russian>
-            <Portuguese>Escala o efeito de sobrepressão [Padrão: 1]</Portuguese>
-            <Hungarian>Állítja a túlnyomás hatását [Alapértelmezett: 1]</Hungarian>
-            <Czech>Nastavuje jak velký je efekt přetlaku [Standard: 1]</Czech>
-            <Spanish>Escala el efecto de sobrepresión [Predeterminado: 1]</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Overpressure_statBackblastRange">
-            <English>Backblast range</English>
-            <German>Rückstrahlzone</German>
-            <Japanese>後方噴射の範囲</Japanese>
-            <Chinesesimp>向后喷射的范围</Chinesesimp>
-            <Chinese>後方尾焰的範圍</Chinese>
-            <Italian>Raggio della fiammata [lanciarazzi]</Italian>
-            <Polish>Zasięg backblast'u</Polish>
-            <Russian>Дальность реактивной струи</Russian>
-            <Portuguese>Alcance do Sopro de Disparo</Portuguese>
-            <Hungarian>Utóhatás távolsága</Hungarian>
-            <French>Portée du backblast</French>
-            <Czech>Dosah zpětné tlakové vlny (backblast)</Czech>
-            <Spanish>Alcance del cono de fuego</Spanish>
-            <Korean>후폭풍 거리</Korean>
+            <English>Scales the overpressure effect</English>
+            <Czech>Nastavuje jak velký je efekt přetlaku</Czech>
+            <French>Ajuste l'effet de surpression</French>
+            <Spanish>Escala el efecto de sobrepresión</Spanish>
+            <Italian>Scala l'effetto di sovrapressione</Italian>
+            <Polish>Skaluje efekt nadciśnienia</Polish>
+            <Portuguese>Escala o efeito de sobrepressão</Portuguese>
+            <Russian>Степень зависимости избыточного давления от расстояния</Russian>
+            <German>Stellt den Koeffizient für die Überdruckentfernung ein</German>
+            <Korean>과중압력의 효과 크기</Korean>
+            <Japanese>火砲による超過圧力の影響範囲の大きさ</Japanese>
+            <Chinese>高壓影響的範圍</Chinese>
+            <Chinesesimp>超压影响的范围</Chinesesimp>
+            <Hungarian>Állítja a túlnyomás hatását</Hungarian>
         </Key>
         <Key ID="STR_ACE_Overpressure_statBackblastAngle">
             <English>Backblast angle</English>
-            <German>Rückstrahlwinkel</German>
-            <Japanese>後方噴射の角度</Japanese>
-            <Chinesesimp>向后喷射的角度</Chinesesimp>
-            <Chinese>後方尾焰的角度</Chinese>
+            <Czech>Úhel zpětné tlakové vlny (backblast)</Czech>
+            <French>Angle du souffle</French>
+            <Spanish>Ángulo del cono de fuego</Spanish>
             <Italian>Angolo della fiammata [lanciarazzi]</Italian>
             <Polish>Kąt backblast'u</Polish>
-            <Russian>Угол реактивной струи</Russian>
             <Portuguese>Ângulo do Sopro de Disparo</Portuguese>
-            <Hungarian>Utóhatás aránya</Hungarian>
-            <French>Angle du backblast</French>
-            <Czech>Úhel zpětné tlakové vlny (backblast)</Czech>
-            <Spanish>Ángulo del cono de fuego</Spanish>
+            <Russian>Угол реактивной струи</Russian>
+            <German>Rückstrahlwinkel</German>
             <Korean>후폭풍 각도</Korean>
+            <Japanese>後方噴射角度</Japanese>
+            <Chinese>後方尾焰的角度</Chinese>
+            <Chinesesimp>向后喷射的角度</Chinesesimp>
+            <Hungarian>Utóhatás aránya</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Overpressure_statBackblastRange">
+            <English>Backblast range</English>
+            <Czech>Dosah zpětné tlakové vlny (backblast)</Czech>
+            <French>Portée du souffle</French>
+            <Spanish>Alcance del cono de fuego</Spanish>
+            <Italian>Raggio della fiammata [lanciarazzi]</Italian>
+            <Polish>Zasięg backblast'u</Polish>
+            <Portuguese>Alcance do Sopro de Disparo</Portuguese>
+            <Russian>Дальность реактивной струи</Russian>
+            <German>Rückstrahlzone</German>
+            <Korean>후폭풍 거리</Korean>
+            <Japanese>後方噴射範囲</Japanese>
+            <Chinese>後方尾焰的範圍</Chinese>
+            <Chinesesimp>向后喷射的范围</Chinesesimp>
+            <Hungarian>Utóhatás távolsága</Hungarian>
         </Key>
     </Package>
 </Project>

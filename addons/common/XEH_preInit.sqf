@@ -10,6 +10,9 @@ PREP_RECOMPILE_END;
 GVAR(syncedEvents) = createHashMap;
 GVAR(showHudHash) = createHashMap;
 GVAR(vehicleIconCache) = createHashMap; // for getVehicleIcon
+GVAR(wheelSelections) = createHashMap;
+
+GVAR(InteractionConditions) = createHashMap;
 
 GVAR(blockItemReplacement) = false;
 
@@ -30,9 +33,7 @@ ACE_COUNTERS = [];
 // Load ace_settings into CBA Settings
 [] call FUNC(cbaSettings);
 
-GVAR(statusEffect_Names) = [];
-GVAR(statusEffect_isGlobal) = [];
-GVAR(statusEffect_sendJIP) = [];
+GVAR(statusEffects) = createHashMap;
 
 GVAR(setHearingCapabilityMap) = [];
 

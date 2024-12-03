@@ -1,118 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Compat_CUP_Weapons_CSW">
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_AGS30_displayName">
-            <English>[CSW] AGS30 Belt</English>
-            <Japanese>[CSW] AGS30 ベルト</Japanese>
-            <Russian>[CSW] Лента AGS 30</Russian>
-            <Korean>[CSW] AGS-30 벨트</Korean>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_MK19_displayName">
-            <English>[CSW] MK19 Belt</English>
-            <Japanese>[CSW] Mk19 ベルト</Japanese>
-            <Russian>[CSW] Лента Mk19</Russian>
-            <Korean>[CSW] Mk.19 벨트</Korean>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_TOW_displayName">
-            <English>[CSW] TOW Tube</English>
-            <Japanese>[CSW] TOW チューブ</Japanese>
-            <Russian>[CSW] Туба TOW</Russian>
-            <Korean>[CSW] TOW 튜브</Korean>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_TOW2_displayName">
-            <English>[CSW] TOW2 Tube</English>
-            <Japanese>[CSW] TOW2 チューブ</Japanese>
-            <Russian>[CSW] Туба TOW-2</Russian>
-            <Korean>[CSW] TOW2 튜브</Korean>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_PG9_displayName">
-            <English>[CSW] PG-9 Round</English>
-            <Japanese>[CSW] PG-9 砲弾</Japanese>
-            <Russian>[CSW] Снаряд ПГ-9</Russian>
-            <Korean>[CSW] PG-9 대전차고폭탄</Korean>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_OG9_displayName">
-            <English>[CSW] OG-9 Round</English>
-            <Japanese>[CSW] OG-9 砲弾</Japanese>
-            <Russian>[CSW] Снаряд OГ-9</Russian>
-            <Korean>[CSW] OG-9 고폭파편탄</Korean>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M1HE_displayName">
-            <English>[CSW] M1 HE</English>
-            <Japanese>[CSW] M1 榴弾</Japanese>
-            <Russian>[CSW] M1 HE</Russian>
-            <Korean>[CSW] M1 고폭탄</Korean>
-            <French>[CSW] M1 HE</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M84Smoke_displayName">
-            <English>[CSW] M84 Smoke</English>
-            <Japanese>[CSW] M84 白煙弾</Japanese>
-            <Russian>[CSW] M84 Дымовая</Russian>
-            <Korean>[CSW] M84 연막탄</Korean>
-            <French>[CSW] M84 Fumigène</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M60A2_displayName">
-            <English>[CSW] M60A2 WP</English>
-            <Japanese>[CSW] M60A2 白リン弾</Japanese>
-            <Russian>[CSW] M60A2 WP</Russian>
-            <Korean>[CSW] M60A2 백린연막탄</Korean>
-            <French>[CSW] M60A2 WP</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M67AT_displayName">
-            <English>[CSW] M67 AT Laser Guided</English>
-            <Japanese>[CSW] M67 対戦車レーザー誘導弾</Japanese>
-            <Russian>[CSW] M67 AT Laser Guided</Russian>
-            <Korean>[CSW] M67 레이저유도 대전차탄</Korean>
-            <French>[CSW] M67 AT Guidé laser</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M314Illum_displayName">
-            <English>[CSW] M314 Illumination</English>
-            <Japanese>[CSW] M314 照明弾</Japanese>
-            <Russian>[CSW] M314 Осветительная</Russian>
-            <Korean>[CSW] M314 조명탄</Korean>
-            <French>[CSW] M314 Illumination</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_3OF56_displayName">
-            <English>[CSW] 3OF56 HE</English>
-            <Japanese>[CSW] 3OF56 榴弾</Japanese>
-            <Russian>[CSW] 3OF56 HE</Russian>
-            <Korean>[CSW] 3OF56 고폭탄</Korean>
-            <French>[CSW] 3OF56 HE</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_3OF69M_displayName">
-            <English>[CSW] 3OF69M Laser Guided</English>
-            <Japanese>[CSW] 3OF69M レーザー誘導弾</Japanese>
-            <Russian>[CSW] 3OF69M Laser Guided</Russian>
-            <Korean>[CSW] 3OF69M 레이저유도탄</Korean>
-            <French>[CSW] 3OF69M Guidé laser</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_122mmWP_displayName">
-            <English>[CSW] 122mm WP</English>
-            <Japanese>[CSW] 122mm 白リン弾</Japanese>
-            <Russian>[CSW] 122mm WP</Russian>
-            <Korean>[CSW] 122mm 백린탄</Korean>
-            <French>[CSW] 122mm WP</French>
-        </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_122mmSmoke_displayName">
-            <English>[CSW] D-462 Smoke</English>
-            <Japanese>[CSW] D-462 白煙弾</Japanese>
-            <Russian>[CSW] D-462 Дымовая</Russian>
-            <Korean>[CSW] D-462 연막탄</Korean>
-            <French>[CSW] D-462 Fumigène</French>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_122mmAT_displayName">
+            <English>[CSW] BK-6M HEAT</English>
+            <French>[CSW] BK-6M HEAT</French>
+            <Spanish>[CSW] BK-6M HEAT</Spanish>
+            <Italian>[CSW] BK-6M HEAT</Italian>
+            <Russian>[CSW] BK-6M HEAT</Russian>
+            <German>[CSW] BK-6M HEAT</German>
+            <Korean>[CSW] BK-6M 대전차고폭탄</Korean>
+            <Japanese>[CSW] BK-6M HEAT弾</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_122mmIllum_displayName">
             <English>[CSW] S-463 Illumination</English>
-            <Japanese>[CSW] S-463 照明弾</Japanese>
-            <Russian>[CSW] S-463 Осветительная</Russian>
-            <Korean>[CSW] S-463 조명탄</Korean>
             <French>[CSW] S-463 Eclairante</French>
+            <Spanish>[CSW] Iluminación S-463</Spanish>
+            <Italian>[CSW] S-463 Illuminante</Italian>
+            <Russian>[CSW] S-463 Осветительная</Russian>
+            <German>[CSW] S-463 Beleuchtung</German>
+            <Korean>[CSW] S-463 조명탄</Korean>
+            <Japanese>[CSW] S-463 照明弾</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_122mmAT_displayName">
-            <English>[CSW] BK-6M HEAT</English>
-            <Japanese>[CSW] BK-6M HEAT弾</Japanese>
-            <Russian>[CSW] BK-6M HEAT</Russian>
-            <Korean>[CSW] BK-6M 대전차고폭탄</Korean>
-            <French>[CSW] BK-6M HEAT</French>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_122mmSmoke_displayName">
+            <English>[CSW] D-462 Smoke</English>
+            <French>[CSW] D-462 Fumigène</French>
+            <Spanish>[CSW] Humo D-462</Spanish>
+            <Italian>[CSW] D-462 Fumogeno</Italian>
+            <Russian>[CSW] D-462 Дымовая</Russian>
+            <German>[CSW] D-462 Rauch</German>
+            <Korean>[CSW] D-462 연막탄</Korean>
+            <Japanese>[CSW] D-462 白煙弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_122mmWP_displayName">
+            <English>[CSW] 122mm WP</English>
+            <French>[CSW] 122mm WP</French>
+            <Spanish>[CSW] WP de 122mm</Spanish>
+            <Italian>[CSW] 122mm WP</Italian>
+            <Russian>[CSW] 122mm WP</Russian>
+            <German>[CSW] 122mm WP</German>
+            <Korean>[CSW] 122mm 백린탄</Korean>
+            <Japanese>[CSW] 122mm 白リン弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_3OF56_displayName">
+            <English>[CSW] 3OF56 HE</English>
+            <French>[CSW] 3OF56 HE</French>
+            <Spanish>[CSW] HE de 3OF56</Spanish>
+            <Italian>[CSW] 3OF56 HE</Italian>
+            <Russian>[CSW] 3OF56 HE</Russian>
+            <German>[CSW] 3OF56 HE</German>
+            <Korean>[CSW] 3OF56 고폭탄</Korean>
+            <Japanese>[CSW] 3OF56 榴弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_3OF69M_displayName">
+            <English>[CSW] 3OF69M Laser Guided</English>
+            <French>[CSW] 3OF69M Guidé laser</French>
+            <Spanish>[CSW] 3OF69M Guiado por Láser</Spanish>
+            <Italian>[CSW] 3OF69M Laserguidato</Italian>
+            <Russian>[CSW] 3OF69M Laser Guided</Russian>
+            <German>[CSW] 3OF69M Lasergelenkt</German>
+            <Korean>[CSW] 3OF69M 레이저유도탄</Korean>
+            <Japanese>[CSW] 3OF69M レーザー誘導弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_AGS30_displayName">
+            <English>[CSW] AGS30 Belt</English>
+            <French>[CSW] Ceinture AGS30</French>
+            <Spanish>[CSW] Cinta de AGS30</Spanish>
+            <Italian>[CSW] Nastro AGS30</Italian>
+            <Portuguese>[CSW] Cinto de AGS30</Portuguese>
+            <Russian>[CSW] Лента AGS 30</Russian>
+            <German>[CSW] AGS30 Gurt</German>
+            <Korean>[CSW] AGS-30 벨트</Korean>
+            <Japanese>[CSW] AGS30 ベルト</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M1HE_displayName">
+            <English>[CSW] M1 HE</English>
+            <French>[CSW] M1 HE</French>
+            <Spanish>[CSW] HE de M1</Spanish>
+            <Italian>[CSW] M1 HE</Italian>
+            <Russian>[CSW] M1 HE</Russian>
+            <German>[CSW] M1 HE</German>
+            <Korean>[CSW] M1 고폭탄</Korean>
+            <Japanese>[CSW] M1 榴弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M314Illum_displayName">
+            <English>[CSW] M314 Illumination</English>
+            <French>[CSW] M314 Illumination</French>
+            <Spanish>[CSW] Iluminación M314</Spanish>
+            <Italian>[CSW] M314 Illuminante</Italian>
+            <Russian>[CSW] M314 Осветительная</Russian>
+            <German>[CSW] M314 Beleuchtung</German>
+            <Korean>[CSW] M314 조명탄</Korean>
+            <Japanese>[CSW] M314 照明弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M60A2_displayName">
+            <English>[CSW] M60A2 WP</English>
+            <French>[CSW] M60A2 WP</French>
+            <Spanish>[CSW] M60A2 WP</Spanish>
+            <Italian>[CSW] M60A2 WP</Italian>
+            <Russian>[CSW] M60A2 WP</Russian>
+            <German>[CSW] M60A2 WP</German>
+            <Korean>[CSW] M60A2 백린연막탄</Korean>
+            <Japanese>[CSW] M60A2 白リン弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M67AT_displayName">
+            <English>[CSW] M67 AT Laser Guided</English>
+            <French>[CSW] M67 AT Guidé laser</French>
+            <Spanish>[CSW] AT Guiado por Láser M67</Spanish>
+            <Italian>[CSW] M67 AT Laserguidato</Italian>
+            <Russian>[CSW] M67 AT Laser Guided</Russian>
+            <German>[CSW] M67 AT Lasergelenkt</German>
+            <Korean>[CSW] M67 레이저유도 대전차탄</Korean>
+            <Japanese>[CSW] M67 対戦車レーザー誘導弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_M84Smoke_displayName">
+            <English>[CSW] M84 Smoke</English>
+            <French>[CSW] M84 Fumigène</French>
+            <Spanish>[CSW] Humo M84</Spanish>
+            <Italian>[CSW] M84 Fumogeno</Italian>
+            <Portuguese>[CSW] M84 Fumígeno</Portuguese>
+            <Russian>[CSW] M84 Дымовая</Russian>
+            <German>[CSW] M84 Rauch</German>
+            <Korean>[CSW] M84 연막탄</Korean>
+            <Japanese>[CSW] M84 白煙弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_MK19_displayName">
+            <English>[CSW] MK19 Belt</English>
+            <French>[CSW] Ceinture MK19</French>
+            <Spanish>[CSW] Cinta de MK19</Spanish>
+            <Italian>[CSW] Nastro MK19</Italian>
+            <Portuguese>[CSW] Cinto de MK19</Portuguese>
+            <Russian>[CSW] Лента Mk19</Russian>
+            <German>[CSW] MK19 Gurt</German>
+            <Korean>[CSW] Mk.19 벨트</Korean>
+            <Japanese>[CSW] Mk19 ベルト</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_OG9_displayName">
+            <English>[CSW] OG-9 Round</English>
+            <French>[CSW] Projectile OG-9.</French>
+            <Spanish>[CSW] Carga de OG-9</Spanish>
+            <Italian>[CSW] Razzo OG-9</Italian>
+            <Portuguese>[CSW] Cartucho OG-9</Portuguese>
+            <Russian>[CSW] Снаряд OГ-9</Russian>
+            <German>[CSW] OG-9 Rakete</German>
+            <Korean>[CSW] OG-9 고폭파편탄</Korean>
+            <Japanese>[CSW] OG-9 砲弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_PG9_displayName">
+            <English>[CSW] PG-9 Round</English>
+            <French>[CSW] Projectile PG-9</French>
+            <Spanish>[CSW] Carga de PG-9</Spanish>
+            <Italian>[CSW] Razzo PG-9</Italian>
+            <Portuguese>[CSW] Cartucho PG-9</Portuguese>
+            <Russian>[CSW] Снаряд ПГ-9</Russian>
+            <German>[CSW] PG-9 Rakete</German>
+            <Korean>[CSW] PG-9 대전차고폭탄</Korean>
+            <Japanese>[CSW] PG-9 砲弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_TOW2_displayName">
+            <English>[CSW] TOW2 Tube</English>
+            <French>[CSW] Tube TOW2</French>
+            <Spanish>[CSW] Tubo de TOW2</Spanish>
+            <Italian>[CSW] Tubo TOW2</Italian>
+            <Portuguese>[CSW] Tubo de TOW2</Portuguese>
+            <Russian>[CSW] Туба TOW-2</Russian>
+            <German>[CSW] TOW2 Rohr</German>
+            <Korean>[CSW] TOW2 튜브</Korean>
+            <Japanese>[CSW] TOW2 チューブ</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_CUP_Weapons_CSW_mag_TOW_displayName">
+            <English>[CSW] TOW Tube</English>
+            <French>[CSW] Tube TOW</French>
+            <Spanish>[CSW] Tubo de TOW</Spanish>
+            <Italian>[CSW] Tubo TOW</Italian>
+            <Portuguese>[CSW] Tubo de TOW</Portuguese>
+            <Russian>[CSW] Туба TOW</Russian>
+            <German>[CSW] TOW Rohr</German>
+            <Korean>[CSW] TOW 튜브</Korean>
+            <Japanese>[CSW] TOW チューブ</Japanese>
         </Key>
     </Package>
 </Project>

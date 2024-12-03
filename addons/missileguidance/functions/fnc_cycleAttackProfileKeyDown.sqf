@@ -18,14 +18,14 @@
 TRACE_1("cycle fire mode",_this);
 
 if (!alive ACE_player) exitWith {};
-if (!([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith))) exitWith {};
+if !([ACE_player, objNull, ["isNotInside"]] call EFUNC(common,canInteractWith)) exitWith {};
 
 
 private _currentShooter = objNull;
 private _currentMagazine = "";
 private _turretPath = [];
 if (isNull (ACE_controlledUAV param [0, objNull])) then {
-    if (((vehicle ACE_player) == ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
+    if ((isNull objectParent ACE_player) || {ACE_player call CBA_fnc_canUseWeapon}) then {
         _currentShooter = ACE_player;
         _currentMagazine = currentMagazine ACE_player;
     } else {
@@ -76,7 +76,7 @@ private _nextFireMode = _attackProfiles select _index;
 TRACE_4("",_currentFireMode,_nextFireMode,_index,_attackProfiles);
 
 
-private _currentFireMode = if (_useModeForAttackProfile) then {
+if (_useModeForAttackProfile) then {
     TRACE_2("setting fire mode",_weaponStateToken,_nextFireMode);
     {
         _x params ["_xIndex", "", "_xWeapon", "", "_xMode"];

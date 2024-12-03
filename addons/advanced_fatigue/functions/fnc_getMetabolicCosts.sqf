@@ -1,54 +1,84 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut
- * Calculates the current metabolic costs for a unit.
+ * Author: BaerMitUmlaut, ulteq
+ * Calculates the current metabolic costs.
  * Calculation is done according to the Pandolf/Wojtowicz formulas.
  *
  * Arguments:
- * 0: Unit <OBJECT>
- * 1: Speed <NUMBER>
+ * 0: Mass of unit <NUMBER>
+ * 1: Terrain gradient <NUMBER>
+ * 2: Terrain factor <NUMBER>
+ * 3: Speed <NUMBER>
  *
  * Return Value:
  * Metabolic cost <NUMBER>
  *
  * Example:
- * [player, 3.3] call ace_advanced_fatigue_fnc_getMetabolicCosts
+ * [840, 20, 1, 4] call ace_advanced_fatigue_fnc_getMetabolicCosts
  *
  * Public: No
  */
-params ["_unit", "_velocity"];
 
-private _gearMass = ((_unit getVariable [QEGVAR(movement,totalLoad), loadAbs _unit]) / 22.046) * GVAR(loadFactor);
+params ["_gearMass", "_terrainGradient", "_terrainFactor", "_speed"];
 
-private _terrainAngle = asin (1 - ((surfaceNormal getPosASL _unit) select 2));
-private _terrainGradient = (_terrainAngle / 45 min 1) * 5 * GVAR(terrainGradientFactor);
+// Get the current duty
 private _duty = GVAR(animDuty);
 
 {
-    if (_x isEqualType 0) then {
-        _duty = _duty * _x;
+    _duty = if (_x isEqualType 0) then {
+        _duty * _x
     } else {
-        _duty = _duty * (_unit call _x);
+        _duty * (ACE_player call _x)
     };
 } forEach (values GVAR(dutyList));
 
-if (GVAR(isSwimming)) then {
-    _terrainGradient = 0;
-};
-
 // Metabolic cost for walking and running is different
-if (_velocity > 2) then {
+if (_speed > 2) then {
     // Running
+    #ifdef DEBUG_MODE_FULL
+    private _baseline = 2.1 * SIM_BODYMASS + 4 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2) + (SIM_BODYMASS + _gearMass) * 0.9 * (_speed ^ 2);
+    private _graded = 2.1 * SIM_BODYMASS + 4 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2) + _terrainFactor * (SIM_BODYMASS + _gearMass) * (0.9 * (_speed ^ 2) + 0.66 * _speed * _terrainGradient);
+    private _terrainImpact = abs ((_graded / _baseline) - 1);
+    hintSilent format ["FwdAngle: %1 | SideAngle: %2 \n TerrainFactor: %3 | TerrainGradient: %4 \n TerrainImpact: %5 \n Speed: %6 | CarriedLoad: %7 \n Duty: %8 | Work: %9",
+        _fwdAngle toFixed 1, //IGNORE_PRIVATE_WARNING ["_fwdAngle", "_sideAngle"]; // from mainLoop
+        _sideAngle toFixed 1,
+        _terrainFactor toFixed 2,
+        _terrainGradient toFixed 1,
+        _terrainImpact toFixed 2,
+        _speed toFixed 2,
+        _gearMass toFixed 1,
+        _duty toFixed 2,
+        round (_graded * BIOMECH_EFFICIENCY * _duty)
+    ];
+    #endif
+
     (
-        2.10 * SIM_BODYMASS
+        2.1 * SIM_BODYMASS
         + 4 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2)
-        + (SIM_BODYMASS + _gearMass) * (0.9 * (_velocity ^ 2) + 0.66 * _velocity * _terrainGradient)
-    ) * 0.23 * _duty
+        + _terrainFactor * (SIM_BODYMASS + _gearMass) * (0.9 * (_speed ^ 2) + 0.66 * _speed * _terrainGradient)
+    ) * BIOMECH_EFFICIENCY * _duty
 } else {
     // Walking
+    #ifdef DEBUG_MODE_FULL
+    private _baseline = 1.05 * SIM_BODYMASS + 2 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2) + (SIM_BODYMASS + _gearMass) * 1.15 * (_speed ^ 2);
+    private _graded = 1.05 * SIM_BODYMASS + 2 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2) + _terrainFactor * (SIM_BODYMASS + _gearMass) * (1.15 * (_speed ^ 2) + 0.66 * _speed * _terrainGradient);
+    private _terrainImpact = abs ((_graded / _baseline) - 1);
+    hintSilent format ["FwdAngle: %1 | SideAngle: %2 \n TerrainFactor: %3 | TerrainGradient: %4 \n TerrainImpact: %5 \n Speed: %6 | CarriedLoad: %7 \n Duty: %8 | Work: %9",
+        _fwdAngle toFixed 1,
+        _sideAngle toFixed 1,
+        _terrainFactor toFixed 2,
+        _terrainGradient toFixed 1,
+        _terrainImpact toFixed 2,
+        _speed toFixed 2,
+        _gearMass toFixed 1,
+        _duty toFixed 2,
+        round (_graded * BIOMECH_EFFICIENCY * _duty)
+    ];
+    #endif
+
     (
         1.05 * SIM_BODYMASS
         + 2 * (SIM_BODYMASS + _gearMass) * ((_gearMass / SIM_BODYMASS) ^ 2)
-        + (SIM_BODYMASS + _gearMass) * (1.15 * (_velocity ^ 2) + 0.66 * _velocity * _terrainGradient)
-    ) * 0.23 * _duty
+        + _terrainFactor * (SIM_BODYMASS + _gearMass) * (1.15 * (_speed ^ 2) + 0.66 * _speed * _terrainGradient)
+    ) * BIOMECH_EFFICIENCY * _duty
 };

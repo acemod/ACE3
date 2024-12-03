@@ -17,7 +17,7 @@
 
 params ["_class"];
 
-private _actionTrees = GVAR(ActSelfNamespace) getVariable _class;
+private _actionTrees = GVAR(ActSelfNamespace) get _class;
 private _rootNode = [_actionTrees, ["ACE_SelfActions"]] call FUNC(findActionNode);
 private _rootActions = _rootNode select 1;
 private _settingCategoryPrefix = format ["ACE %1 - ", LELSTRING(Interaction,InteractionMenuSelf)];

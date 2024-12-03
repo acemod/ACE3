@@ -1,520 +1,520 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interact_Menu">
-        <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
-            <English>Always display cursor for self interaction</English>
-            <German>Immer den Mauszeiger für Selbst-Interaktionen anzeigen.</German>
-            <Spanish>Mostrar siempre el cursor para la interacción propia</Spanish>
-            <Russian>Показывать курсор (взаимодействия с собой)</Russian>
-            <Czech>Zobrazit kurzor v menu pro vlastní interakci</Czech>
-            <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
-            <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
-            <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
-            <Italian>Mostra sempre il cursore per le autointerazioni</Italian>
-            <Portuguese>Sempre mostrar cursor para interação pessoal</Portuguese>
-            <Japanese>セルフ インタラクションへ常にカーソルを表示</Japanese>
-            <Korean>자기상호작용 시 항상 커서를 보이기</Korean>
-            <Chinesesimp>自我互动时永远显示光标</Chinesesimp>
-            <Chinese>自我互動時永遠顯示游標</Chinese>
-            <Turkish>Kendi kendine etkileşim için daima imleci göster</Turkish>
+        <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
+            <English>Do action when releasing menu key</English>
+            <Czech>Provést akci při pustění klávesy menu</Czech>
+            <French>Action au relâchement des touches</French>
+            <Spanish>Realizar la acción al soltar la tecla menu</Spanish>
+            <Italian>Esegui l'azione quando rilasci il tasto menu</Italian>
+            <Polish>Wykonuj akcje po puszczeniu klawisza menu</Polish>
+            <Portuguese>Execute a ação quando soltar a tecla de menu</Portuguese>
+            <Russian>Выполнять при отпускании кнопки меню</Russian>
+            <German>Aktion nach Loslassen der Taste ausführen</German>
+            <Korean>메뉴 키를 놓을 때 행동하기</Korean>
+            <Japanese>キーを離した時にアクションを実行</Japanese>
+            <Chinese>當放開選單鍵後就執行動作</Chinese>
+            <Chinesesimp>当放开菜单键后就执行动作</Chinesesimp>
+            <Turkish>Menü tuşunu bırakırken işlem yap</Turkish>
+            <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorInteraction">
             <English>Always display cursor for interaction</English>
-            <Spanish>Mostrar siempre el cursor para la interacción</Spanish>
+            <Czech>Zobrazit kurzor v menu pro interakci</Czech>
             <French>Toujours afficher le curseur pour les interactions</French>
+            <Spanish>Mostrar siempre el cursor para la interacción</Spanish>
             <Italian>Mostra sempre il cursore per le interazioni</Italian>
             <Polish>Zawsze wyświetlaj kursor dla interakcji</Polish>
-            <Russian>Показывать курсор (взаимодействие)</Russian>
-            <Czech>Zobrazit kurzor v menu pro interakci</Czech>
-            <German>Immer den Mauszeiger für Fremd-Interaktionen anzeigen</German>
-            <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
             <Portuguese>Sempre mostrar cursor para interação</Portuguese>
-            <Japanese>インタラクションへ常にカーソルを表示</Japanese>
+            <Russian>Показывать курсор (взаимодействие)</Russian>
+            <German>Immer den Mauszeiger für Fremd-Interaktionen anzeigen</German>
             <Korean>상호작용 시 항상 커서를 보이기</Korean>
-            <Chinesesimp>互动时永远显示光标</Chinesesimp>
+            <Japanese>カーソルを常に表示</Japanese>
             <Chinese>互動時永遠顯示游標</Chinese>
+            <Chinesesimp>互动时永远显示光标</Chinesesimp>
             <Turkish>Etkileşim için her zaman imleci göster</Turkish>
+            <Hungarian>Mindig legyen a cselekvés kurzorja látható</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Interact_Menu_UseListMenu">
-            <English>Display interaction menus as lists</English>
-            <Spanish>Mostrar los menus de interacción como listas</Spanish>
-            <Russian>Меню взаимодействий в виде списка</Russian>
-            <French>Afficher le menu d'interaction sous forme de liste</French>
-            <Italian>Mostra il menù di interazione come lista</Italian>
-            <Polish>Wyświetlaj menu interakcji jako listę</Polish>
-            <Czech>Zobrazit menu interakce jako seznam</Czech>
-            <German>Interaktionsmenü in Listen anzeigen</German>
-            <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
-            <Portuguese>Mostrar menu de interação como listas</Portuguese>
-            <Japanese>インタラクションメニューを一覧表示</Japanese>
-            <Korean>상호작용메뉴를 리스트화 해서 보이기</Korean>
-            <Chinesesimp>以列表方式显示互动表单</Chinesesimp>
-            <Chinese>以列表方式顯示互動表單</Chinese>
-            <Turkish>Etkileşim menülerini listeler halinde görüntüle</Turkish>
+        <Key ID="STR_ACE_Interact_Menu_AlwaysUseCursorSelfInteraction">
+            <English>Always display cursor for self interaction</English>
+            <Czech>Zobrazit kurzor v menu pro vlastní interakci</Czech>
+            <French>Toujours afficher le curseur pour les interactions sur soi-même</French>
+            <Spanish>Mostrar siempre el cursor para la interacción propia</Spanish>
+            <Italian>Mostra sempre il cursore per le autointerazioni</Italian>
+            <Polish>Zawsze wyświetlaj kursor dla własnej interakcji</Polish>
+            <Portuguese>Sempre mostrar cursor para interação pessoal</Portuguese>
+            <Russian>Показывать курсор (взаимодействия с собой)</Russian>
+            <German>Immer den Mauszeiger für Selbst-Interaktionen anzeigen.</German>
+            <Korean>자기상호작용 시 항상 커서를 보이기</Korean>
+            <Japanese>カーソルを常に表示</Japanese>
+            <Chinese>自我互動時永遠顯示游標</Chinese>
+            <Chinesesimp>自我互动时永远显示光标</Chinesesimp>
+            <Turkish>Kendi kendine etkileşim için daima imleci göster</Turkish>
+            <Hungarian>Mindig legyen a saját cselekvés kurzorja látható</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Interact_Menu_InteractKey">
-            <English>Interact Key</English>
-            <German>Fremdinteraktionsmenü-Taste</German>
-            <Spanish>Tecla de interacción</Spanish>
-            <Russian>Клавиша взаимодействия</Russian>
-            <Czech>Klávesa pro interakci</Czech>
-            <Polish>Klawisz interakcji</Polish>
-            <French>Touche d'interaction</French>
-            <Hungarian>Cselekvő gomb</Hungarian>
-            <Italian>Tasto interazione</Italian>
-            <Portuguese>Tecla de Interação</Portuguese>
-            <Japanese>インタラクション キー</Japanese>
-            <Korean>상호작용 키</Korean>
-            <Chinesesimp>互动键</Chinesesimp>
-            <Chinese>互動鍵</Chinese>
-            <Turkish>Etkileşim Tuşu</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
-            <English>Self Interaction Key</English>
-            <German>Eigeninteraktionsmenü-Taste</German>
-            <Spanish>Tecla de interacción propia</Spanish>
-            <Russian>Клавиша взаимодействия (с собой)</Russian>
-            <Czech>Klávesa pro vlastní interakci</Czech>
-            <Polish>Klawisz własnej interakcji</Polish>
-            <French>Touche d'interaction personnelle</French>
-            <Hungarian>Saját cselekvő gomb</Hungarian>
-            <Italian>Tasto autointerazioni</Italian>
-            <Portuguese>Tecla de Interação Pessoal</Portuguese>
-            <Japanese>セルフ インタラクション キー</Japanese>
-            <Korean>자기상호작용 키</Korean>
-            <Chinesesimp>自我互动键</Chinesesimp>
-            <Chinese>自我互動鍵</Chinese>
-            <Turkish>Kendi Etkileşimim Tuşu</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
-            <English>Self Actions</English>
-            <German>Selbst-Aktionen</German>
-            <Spanish>Acciones propias</Spanish>
-            <Russian>Действия с собой</Russian>
-            <Czech>Vlastní akce</Czech>
-            <Polish>Własne akcje</Polish>
-            <French>Interaction personnelle</French>
-            <Hungarian>Saját cselekvések</Hungarian>
-            <Italian>Autointerazioni</Italian>
-            <Portuguese>Ações Pessoais</Portuguese>
-            <Japanese>自分へのアクション</Japanese>
-            <Korean>자기 동작</Korean>
-            <Chinesesimp>自我动作</Chinesesimp>
-            <Chinese>自我動作</Chinese>
-            <Turkish>Kendi Etkileşimim</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
-            <English>Vehicle Actions</English>
-            <German>Fahrzeug-Aktionen</German>
-            <Spanish>Acciones de vehículo</Spanish>
-            <Russian>Действия на транспорте</Russian>
-            <Czech>Interakce s vozidly</Czech>
-            <Polish>Akcje pojazdu</Polish>
-            <French>Interaction véhicule</French>
-            <Hungarian>Járműves cselekvések</Hungarian>
-            <Italian>Interazioni su veicoli</Italian>
-            <Portuguese>Ações de Veículos</Portuguese>
-            <Japanese>車両へのアクション</Japanese>
-            <Korean>차량 동작</Korean>
-            <Chinesesimp>载具动作</Chinesesimp>
-            <Chinese>載具動作</Chinese>
-            <Turkish>Araç Etkileşimi</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_ZeusActionsRoot">
-            <English>Zeus Actions</English>
-            <German>Zeus-Aktionen</German>
-            <Polish>Akcje Zeusa</Polish>
-            <Czech>Akce Zeuse</Czech>
-            <Spanish>Acciones Zeus</Spanish>
-            <French>Actions Zeus</French>
-            <Hungarian>Zeus cselekvések</Hungarian>
-            <Portuguese>Ações do Zeus</Portuguese>
-            <Russian>Действия Зевса</Russian>
-            <Italian>Interazioni Zeus</Italian>
-            <Japanese>Zeusでのアクション</Japanese>
-            <Korean>제우스 동작</Korean>
-            <Chinesesimp>宙斯操作</Chinesesimp>
-            <Chinese>宙斯操作</Chinese>
-            <Turkish>Zeus Etkileşimi</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
-            <English>Interaction - Text Max</English>
-            <Polish>Interakcja - Tekst max</Polish>
-            <Czech>Interakce - Text Max</Czech>
-            <French>Interaction - Texte max</French>
-            <German>Interaktionstextfarbe Max</German>
-            <Italian>Interazioni - Testo Massimo</Italian>
-            <Russian>Взаимодействие - Текст Макс.</Russian>
-            <Spanish>Interacción - Texto al max.</Spanish>
-            <Hungarian>Cselekvés - Szöveg max.</Hungarian>
-            <Portuguese>Interação - Max. de Texto</Portuguese>
-            <Japanese>インタラクション - 文字の色</Japanese>
-            <Korean>상호작용 - 문자색깔</Korean>
-            <Chinesesimp>互动—文字颜色最大值</Chinesesimp>
-            <Chinese>互動 - 文字最大化</Chinese>
-            <Turkish>Etkileşim - Maksimum Metin</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
-            <English>Interaction - Text Min</English>
-            <Polish>Interakcja - Tekst min</Polish>
-            <Czech>Interakce - Text Min</Czech>
-            <French>Interaction - Texte min</French>
-            <German>Interaktionstextfarbe Min</German>
-            <Italian>Interazioni - Testo Minimo</Italian>
-            <Russian>Взаимодействие - Текст Мин.</Russian>
-            <Spanish>Interacción - Texto al min.</Spanish>
-            <Hungarian>Cselekvés - Szöveg min.</Hungarian>
-            <Portuguese>Interação - Min. de Texto</Portuguese>
-            <Japanese>インタラクション - 文字の背景色</Japanese>
-            <Korean>상호작용 - 문자배경색</Korean>
-            <Chinesesimp>互动—文字颜色最小值</Chinesesimp>
-            <Chinese>互動 - 文字最小化</Chinese>
-            <Turkish>Etkileşim - Minumum Metin </Turkish>
+        <Key ID="STR_ACE_Interact_Menu_Category_InteractionMenu">
+            <English>Interaction Menu</English>
+            <Czech>Menu interakce</Czech>
+            <French>Menu d'interaction</French>
+            <Spanish>Menú de interacción</Spanish>
+            <Italian>Menù Interazioni</Italian>
+            <Polish>Menu interakcji</Polish>
+            <Portuguese>Menu de interação</Portuguese>
+            <Russian>Меню взаимодействия</Russian>
+            <German>Interaktionsmenü</German>
+            <Korean>상호작용 메뉴</Korean>
+            <Japanese>インタラクション メニュー</Japanese>
+            <Chinese>互動選單</Chinese>
+            <Chinesesimp>互动菜单</Chinesesimp>
+            <Turkish>Etkileşim Menüsü</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMax">
             <English>Interaction - Shadow Max</English>
-            <Polish>Interakcja - Cień max</Polish>
             <Czech>Interakce - Stín Max</Czech>
             <French>Interaction - Ombre max</French>
-            <German>Interaktionstextschatten Max</German>
-            <Italian>Interazioni - Ombra Massima</Italian>
-            <Russian>Взаимодействие - Тень Макс.</Russian>
             <Spanish>Interacción - Sombras al max.</Spanish>
-            <Hungarian>Cselekvés - Árnyék max.</Hungarian>
+            <Italian>Interazioni - Ombra Massima</Italian>
+            <Polish>Interakcja - Cień max</Polish>
             <Portuguese>Interação - Max. de Sombra</Portuguese>
-            <Japanese>インタラクション - 文字への影の色</Japanese>
+            <Russian>Взаимодействие - Тень Макс.</Russian>
+            <German>Interaktionstextschatten Max</German>
             <Korean>상호작용 - 문자그림자색</Korean>
-            <Chinesesimp>互动—阴影最大值</Chinesesimp>
+            <Japanese>インタラクション - 文字の影色の最大値</Japanese>
             <Chinese>互動 - 陰影最大化</Chinese>
+            <Chinesesimp>互动—阴影最大值</Chinesesimp>
             <Turkish>Etkileşim - Maksimum Gölge</Turkish>
+            <Hungarian>Cselekvés - Árnyék max.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_ColorShadowMin">
             <English>Interaction - Shadow Min</English>
-            <Polish>Interakcja - Cień min</Polish>
             <Czech>Interakce - Stín Min</Czech>
             <French>Interaction - Ombre min</French>
-            <German>Interaktionstextschatten Min</German>
-            <Italian>Interazioni - Ombra Minima</Italian>
-            <Russian>Взаимодействие - Тень Мин.</Russian>
             <Spanish>Interacción - Sombras al min.</Spanish>
-            <Hungarian>Cselekvés - Árnyék min.</Hungarian>
+            <Italian>Interazioni - Ombra Minima</Italian>
+            <Polish>Interakcja - Cień min</Polish>
             <Portuguese>Interação - Min. de Sombra</Portuguese>
-            <Japanese>インタラクション - 文字への影の最低色</Japanese>
+            <Russian>Взаимодействие - Тень Мин.</Russian>
+            <German>Interaktionstextschatten Min</German>
             <Korean>상호작용 - 문자그림자배경색</Korean>
-            <Chinesesimp>互动—阴影最小值</Chinesesimp>
+            <Japanese>インタラクション - 文字の影色の最低値</Japanese>
             <Chinese>互動 - 陰影最小化</Chinese>
+            <Chinesesimp>互动—阴影最小值</Chinesesimp>
             <Turkish>Etkileşim - Minumum Gölge</Turkish>
+            <Hungarian>Cselekvés - Árnyék min.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorTextMax">
+            <English>Interaction - Text Max</English>
+            <Czech>Interakce - Text Max</Czech>
+            <French>Interaction - Texte max</French>
+            <Spanish>Interacción - Texto al max.</Spanish>
+            <Italian>Interazioni - Testo Massimo</Italian>
+            <Polish>Interakcja - Tekst max</Polish>
+            <Portuguese>Interação - Max. de Texto</Portuguese>
+            <Russian>Взаимодействие - Текст Макс.</Russian>
+            <German>Interaktionstextfarbe Max</German>
+            <Korean>상호작용 - 문자색깔</Korean>
+            <Japanese>インタラクション - 文字の表示色の最大値</Japanese>
+            <Chinese>互動 - 文字最大化</Chinese>
+            <Chinesesimp>互动—文字颜色最大值</Chinesesimp>
+            <Turkish>Etkileşim - Maksimum Metin</Turkish>
+            <Hungarian>Cselekvés - Szöveg max.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ColorTextMin">
+            <English>Interaction - Text Min</English>
+            <Czech>Interakce - Text Min</Czech>
+            <French>Interaction - Texte min</French>
+            <Spanish>Interacción - Texto al min.</Spanish>
+            <Italian>Interazioni - Testo Minimo</Italian>
+            <Polish>Interakcja - Tekst min</Polish>
+            <Portuguese>Interação - Min. de Texto</Portuguese>
+            <Russian>Взаимодействие - Текст Мин.</Russian>
+            <German>Interaktionstextfarbe Min</German>
+            <Korean>상호작용 - 문자배경색</Korean>
+            <Japanese>インタラクション - 文字の表示色の最低値</Japanese>
+            <Chinese>互動 - 文字最小化</Chinese>
+            <Chinesesimp>互动—文字颜色最小值</Chinesesimp>
+            <Turkish>Etkileşim - Minumum Metin</Turkish>
+            <Hungarian>Cselekvés - Szöveg min.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_InteractKey">
+            <English>Interact Key</English>
+            <Czech>Klávesa pro interakci</Czech>
+            <French>Touche d'interaction</French>
+            <Spanish>Tecla de interacción</Spanish>
+            <Italian>Tasto interazione</Italian>
+            <Polish>Klawisz interakcji</Polish>
+            <Portuguese>Tecla de Interação</Portuguese>
+            <Russian>Клавиша взаимодействия</Russian>
+            <German>Fremdinteraktionsmenü-Taste</German>
+            <Korean>상호작용 키</Korean>
+            <Japanese>インタラクション キー</Japanese>
+            <Chinese>互動鍵</Chinese>
+            <Chinesesimp>互动键</Chinesesimp>
+            <Turkish>Etkileşim Tuşu</Turkish>
+            <Hungarian>Cselekvő gomb</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_SelectorColor">
+            <English>Selector Color</English>
+            <Czech>Barva selektoru</Czech>
+            <French>Couleur du sélecteur</French>
+            <Spanish>Selector de color</Spanish>
+            <Italian>Colore Selettore</Italian>
+            <Polish>Kolor wybierającego</Polish>
+            <Portuguese>Cor do Seletor</Portuguese>
+            <Russian>Цвет селектора</Russian>
+            <German>Farbauswahl</German>
+            <Korean>색상 선택</Korean>
+            <Japanese>セレクターの色</Japanese>
+            <Chinese>選單的顏色</Chinese>
+            <Chinesesimp>菜单颜色</Chinesesimp>
+            <Turkish>Seçici Renk</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_SelfActionsRoot">
+            <English>Self Actions</English>
+            <Czech>Vlastní akce</Czech>
+            <French>Interaction personnelle</French>
+            <Spanish>Acciones propias</Spanish>
+            <Italian>Autointerazioni</Italian>
+            <Polish>Własne akcje</Polish>
+            <Portuguese>Ações Pessoais</Portuguese>
+            <Russian>Действия с собой</Russian>
+            <German>Selbst-Aktionen</German>
+            <Korean>자기 동작</Korean>
+            <Japanese>自分へのアクション</Japanese>
+            <Chinese>自我動作</Chinese>
+            <Chinesesimp>自我动作</Chinesesimp>
+            <Turkish>Kendi Etkileşimim</Turkish>
+            <Hungarian>Saját cselekvések</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_SelfInteractKey">
+            <English>Self Interaction Key</English>
+            <Czech>Klávesa pro vlastní interakci</Czech>
+            <French>Touche d'interaction personnelle</French>
+            <Spanish>Tecla de interacción propia</Spanish>
+            <Italian>Tasto autointerazioni</Italian>
+            <Polish>Klawisz własnej interakcji</Polish>
+            <Portuguese>Tecla de Interação Pessoal</Portuguese>
+            <Russian>Клавиша взаимодействия (с собой)</Russian>
+            <German>Eigeninteraktionsmenü-Taste</German>
+            <Korean>자기상호작용 키</Korean>
+            <Japanese>セルフ・インタラクション キー</Japanese>
+            <Chinese>自我互動鍵</Chinese>
+            <Chinesesimp>自我互动键</Chinesesimp>
+            <Turkish>Kendi Etkileşimim Tuşu</Turkish>
+            <Hungarian>Saját cselekvő gomb</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_UseListMenu">
+            <English>Display interaction menus as lists</English>
+            <Czech>Zobrazit menu interakce jako seznam</Czech>
+            <French>Afficher le menu d'interaction sous forme de liste</French>
+            <Spanish>Mostrar los menus de interacción como listas</Spanish>
+            <Italian>Mostra il menù di interazione come lista</Italian>
+            <Polish>Wyświetlaj menu interakcji jako listę</Polish>
+            <Portuguese>Mostrar menu de interação como listas</Portuguese>
+            <Russian>Меню взаимодействий в виде списка</Russian>
+            <German>Interaktionsmenü in Listen anzeigen</German>
+            <Korean>상호작용메뉴를 리스트화 해서 보이기</Korean>
+            <Japanese>メニューをリストで表示</Japanese>
+            <Chinese>以列表方式顯示互動表單</Chinese>
+            <Chinesesimp>以列表方式显示互动表单</Chinesesimp>
+            <Turkish>Etkileşim menülerini listeler halinde görüntüle</Turkish>
+            <Hungarian>Cselekvő menük listaként való megjelenítése</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_VehicleActionsRoot">
+            <English>Vehicle Actions</English>
+            <Czech>Interakce s vozidly</Czech>
+            <French>Interaction véhicule</French>
+            <Spanish>Acciones de vehículo</Spanish>
+            <Italian>Interazioni su veicoli</Italian>
+            <Polish>Akcje pojazdu</Polish>
+            <Portuguese>Ações de Veículos</Portuguese>
+            <Russian>Действия на транспорте</Russian>
+            <German>Fahrzeug-Aktionen</German>
+            <Korean>차량 동작</Korean>
+            <Japanese>車両へのアクション</Japanese>
+            <Chinese>載具動作</Chinese>
+            <Chinesesimp>载具动作</Chinesesimp>
+            <Turkish>Araç Etkileşimi</Turkish>
+            <Hungarian>Járműves cselekvések</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_ZeusActionsRoot">
+            <English>Zeus Actions</English>
+            <Czech>Akce Zeuse</Czech>
+            <French>Actions Zeus</French>
+            <Spanish>Acciones Zeus</Spanish>
+            <Italian>Interazioni Zeus</Italian>
+            <Polish>Akcje Zeusa</Polish>
+            <Portuguese>Ações do Zeus</Portuguese>
+            <Russian>Действия Зевса</Russian>
+            <German>Zeus-Aktionen</German>
+            <Korean>제우스 동작</Korean>
+            <Japanese>Zeusのアクション</Japanese>
+            <Chinese>宙斯操作</Chinese>
+            <Chinesesimp>宙斯操作</Chinesesimp>
+            <Turkish>Zeus Etkileşimi</Turkish>
+            <Hungarian>Zeus cselekvések</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_addBuildingActions">
+            <English>Show actions for buildings</English>
+            <Czech>Zobrazit akci pro budovy</Czech>
+            <French>Afficher les actions pour les bâtiments</French>
+            <Spanish>Mostrar acciones para edificios</Spanish>
+            <Italian>Mostra azioni per edifici</Italian>
+            <Polish>Pokazuj akcje dla budynków</Polish>
+            <Portuguese>Mostrar ações para edifícios</Portuguese>
+            <Russian>Показывать действия для зданий</Russian>
+            <German>Zeige Aktionen für Gebäude</German>
+            <Korean>건물에 행동을 취함</Korean>
+            <Japanese>建物へアクションを表示</Japanese>
+            <Chinese>顯示建築物可用的動作</Chinese>
+            <Chinesesimp>显示建筑物可用的动作</Chinesesimp>
+            <Turkish>Binalar için eylemleri göster</Turkish>
+            <Hungarian>Cselekvések mutatása épületeknél</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_addBuildingActionsDescription">
+            <English>Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)</English>
+            <Czech>Přidá možnost interakce pro otevření dvěří a umistňovat žebříky na budovy. (Poznámka: Použití této možnosti snižuje výkon při otevírání pomocí interakčního menu, zejména ve velkých městech.)</Czech>
+            <French>Ajoute des interactions pour ouvrir les portes et les échelles des bâtiments.\nNote : l'ouverture du menu en ville dégrade les performances.</French>
+            <Spanish>Añade las acciones de interacción para la apertura de puertas y montaje de escaleras en los edificios. (Nota: Hay un coste de rendimiento al abrir el menú de interacción, especialmente en las ciudades)</Spanish>
+            <Italian>Aggiunge interazioni per l'apertura delle porte e piazzamento di scale su edifici. (Nota: C'è un costo in performance quando si apre il Menù Interazioni, soprattutto in città)</Italian>
+            <Polish>Dodaje opcje interakcji dla otwierania drzwi oraz wchodzenia po drabinach do budynków. Uwaga: Użycie tej opcji może spowodować spadek wydajności menu interakcji, szczególnie w dużych miastach.</Polish>
+            <Portuguese>Adiciona ações de interações para abrir portas e montar escadas em edifícios. (Nota: Existe um custo de performance quando aberto o menu de interação, especialmente em cidades)</Portuguese>
+            <Russian>Добавляет действия открывания дверей и залезания на лестницы для зданий. (Примечание: возможно падение производительности при открытии меню взаимодействия, особенно в городах)</Russian>
+            <German>Fügt Aktionen zum Türöffnen oder für eine Leiter zum Besteigen von Gebäuden hinzu. (Hinweis: Verschlechtert die Leistung wenn das Interaktionsmenü geöffnet wird. Insbesondere in Städten)</German>
+            <Korean>건물의 문을 열거나 사다리에 오르는 상호작용 행동을 추가합니다. (주의: 상호작용 메뉴를 열 경우 성능하락이 있을 수 있음, 특히 마을 내부에서)</Korean>
+            <Japanese>建物にドアを開閉したり梯子を昇降するためのインタラクション アクションを追加します。\n(注: インタラクション メニューを開く際には描画パフォーマンスに影響を及ぼします。街中などでは顕著です)</Japanese>
+            <Chinese>增加互動選單的功能在可開啟的門與建築物的梯子上。(注意: 此功能有可能會降低系統效能，特別是在城鎮區更明顯)</Chinese>
+            <Chinesesimp>增加互动菜单的功能在可开启的门与建筑物的梯子上。（注意：此功能有可能会降低系统效能，特别是在城镇区更明显）</Chinesesimp>
+            <Turkish>Binalara kapıları açmak ve merdivenleri monte etmek için etkileşim eylemleri ekler. (Not: Etkileşim menüsünü açarken, özellikle şehirlerde bir performansı etkiler)</Turkish>
+            <Hungarian>Cselekvéseket engedélyez ajtók kinyitására és létrák mászására. (Figyelem: ez teljesítményvesztéssel járhat a menü megnyitásakor, főleg városokban)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_background">
+            <English>Interaction menu background</English>
+            <Czech>Pozadí menu interakce</Czech>
+            <French>Arrière-plan du menu d'interaction</French>
+            <Spanish>Fondo del menú de interacción</Spanish>
+            <Italian>Sfondo Menù Interazioni</Italian>
+            <Polish>Tło menu interakcji</Polish>
+            <Portuguese>Fundo do menu de interação</Portuguese>
+            <Russian>Фон меню взаимодействия</Russian>
+            <German>Interaktionsmenü-Hintergrund</German>
+            <Korean>상호작용 메뉴 배경</Korean>
+            <Japanese>メニューの背景</Japanese>
+            <Chinese>互動選單背景</Chinese>
+            <Chinesesimp>互动菜单背景</Chinesesimp>
+            <Turkish>Etkileşim menüsü arka planı</Turkish>
+            <Hungarian>Cselekvő menü háttere</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
+            <English>Black</English>
+            <Czech>Tmavý</Czech>
+            <French>Noir</French>
+            <Spanish>Negro</Spanish>
+            <Italian>Nero</Italian>
+            <Polish>Przyciemnienie ekranu</Polish>
+            <Portuguese>Preto</Portuguese>
+            <Russian>Черный</Russian>
+            <German>Schwarz</German>
+            <Korean>까맣게</Korean>
+            <Japanese>背景を暗くする</Japanese>
+            <Chinese>黑色</Chinese>
+            <Chinesesimp>黑色</Chinesesimp>
+            <Turkish>Siyah</Turkish>
+            <Hungarian>Fekete</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
+            <English>Blur screen</English>
+            <Czech>Rozmazaný obraz</Czech>
+            <French>Flouter l'écran</French>
+            <Spanish>Pantalla de desenfoque</Spanish>
+            <Italian>Sfoca schermo</Italian>
+            <Polish>Rozmycie ekranu</Polish>
+            <Portuguese>Desfoque de tela</Portuguese>
+            <Russian>Размытый</Russian>
+            <German>Verschwommenes Bild</German>
+            <Korean>화면 흐리게</Korean>
+            <Japanese>背景をぼかす</Japanese>
+            <Chinese>模糊畫面</Chinese>
+            <Chinesesimp>模糊画面</Chinesesimp>
+            <Turkish>Bulanık Ekran</Turkish>
+            <Hungarian>Kép elmosása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
+            <English>Blur the background while the interaction menu is open.</English>
+            <Czech>Rozmazat obraz při otevřeném interakčním menu.</Czech>
+            <French>Floute l'arrière-plan durant l'ouverture du menu d'interaction.</French>
+            <Spanish>Desenfocar el fondo mientras el menú de interacción está abierto.</Spanish>
+            <Italian>Sfoca lo sfondo mentre il Menù Interazioni è aperto.</Italian>
+            <Polish>Rozmywa lub przyciemnia tło na czas otwarcia menu interakcji</Polish>
+            <Portuguese>Desfocar o fundo enquanto o menu de interação está aberto.</Portuguese>
+            <Russian>Размыть фон, пока открыто меню взаимодействия.</Russian>
+            <German>Den Hintergrund verschwimmen lassen, während das Interaktionsmenü geöffnet ist.</German>
+            <Korean>상호작용 메뉴가 열릴 시 배경을 흐릿하게 처리합니다.</Korean>
+            <Japanese>インタラクション メニューを開いたときに背景をぼかします。</Japanese>
+            <Chinese>當互動選單開啟時，模糊背景畫面</Chinese>
+            <Chinesesimp>当互动菜单开启时，模糊背景画面。</Chinesesimp>
+            <Turkish>Etkileşim menüsü açıkken arka planı bulanıklaştırın.</Turkish>
+            <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild">
+            <English>Consolidate single child actions</English>
+            <French>Combiner les sous-actions uniques</French>
+            <Spanish>Consolidar acciones hijo únicas</Spanish>
+            <Italian>Combina sotto-azioni singole</Italian>
+            <Polish>Połącz akcje podrzędne</Polish>
+            <Portuguese>Consolidar sub-ações únicas</Portuguese>
+            <Russian>Объединять ед. дочерные действия</Russian>
+            <German>Untergeordnete Aktionen zusammenfassen</German>
+            <Korean>하위 동작 통합</Korean>
+            <Japanese>1個のみの子アクションを統合</Japanese>
+            <Chinesesimp>整合子操作</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild_Description">
+            <English>Combines parent action with only one child action together.</English>
+            <French>Lorsqu'un menu ne contient qu'une seule sous-action, elle est combinée avec son menu parent.</French>
+            <Spanish>Combina acciones padre con una única accion hijo de forma conjunta</Spanish>
+            <Italian>Combina interazioni con una sola sotto-azione in una singola interazione.</Italian>
+            <Polish>Gdy menu zawiera tylko jedną akcję podrzędną, łączy ją z akcją nadrzędną.</Polish>
+            <Portuguese>Quando um menu contém apenas uma subação, ele é combinado com seu menu pai.</Portuguese>
+            <Russian>Объединять родительское действие с единственным дочерним действием в одно.</Russian>
+            <German>Übergeordnete Aktionen mit nur einer Unteraktion zusammenfassen.</German>
+            <Korean>대분류로 나뉜 행동을 한눈에 보여줍니다</Korean>
+            <Japanese>アクションが1個のみの子アクションを親アクションと結合し表示を整理します。</Japanese>
+            <Chinesesimp>主操作与子操作集成显示。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_cursorKeepCentered">
             <English>Keep cursor centered</English>
+            <Czech>Udržuj kurzor na středu</Czech>
             <French>Garder le curseur au centre</French>
+            <Spanish>Mantener el cursor centrado</Spanish>
+            <Italian>Mantieni il cursore centrato</Italian>
+            <Polish>Utrzymaj kursor wyśrodkowany</Polish>
+            <Portuguese>Manter o cursor centralizado</Portuguese>
             <Russian>Центрировать курсор</Russian>
             <German>Mauszeiger zentriert halten</German>
-            <Hungarian>Kurzor középen tartása</Hungarian>
-            <Polish>Utrzymaj kursor wyśrodkowany</Polish>
-            <Spanish>Mantener el cursor centrado</Spanish>
-            <Czech>Udržuj kurzor na středu</Czech>
-            <Portuguese>Manter o cursor centralizado</Portuguese>
-            <Italian>Mantieni il cursore centrato</Italian>
-            <Japanese>常にカーソルを中央にする</Japanese>
             <Korean>커서를 항상 가운데에 둡니다</Korean>
-            <Chinesesimp>保持光标在中心点</Chinesesimp>
+            <Japanese>カーソルを常に中心にする</Japanese>
             <Chinese>保持游標在中心點</Chinese>
+            <Chinesesimp>保持光标在中心点</Chinesesimp>
             <Turkish>İmleci Ortada tut</Turkish>
+            <Hungarian>Kurzor középen tartása</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_cursorKeepCenteredDescription">
             <English>Keeps cursor centered and pans the option menu around. Useful if screen size is limited.</English>
             <Czech>Udržuje kurzor na středu. Užitečné, pokud je velikost obrazovky omezena.</Czech>
             <French>Garde le curseur au milieu de l'écran, et dispose le menu des options tout autour. Utile si la taille de l'écran est limitée.</French>
+            <Spanish>Mantiene el cursor centrado y despliega los menús alrededor. Útil si el tamaño de la pantalla es limitado.</Spanish>
+            <Italian>Mantieni il cursore centrato e sposta il menù intorno. Utile se lo schermo è piccolo.</Italian>
+            <Polish>Utrzymuje kursor na środku ekranu, zamiast tego ruch myszą powoduje przesuwanie menu interakcji. Użyteczne w przypadku kiedy rozmiar ekranu jest ograniczony.</Polish>
+            <Portuguese>Manter o cursor centralizado e mover o menu de opções. Útil caso o tamanho da tela seja limitado.</Portuguese>
             <Russian>Центрирует курсор и двигает само меню опций. Полезно при ограниченном размере экрана.</Russian>
             <German>Hält den Mauszeiger zentriert und verschiebt das Menü beim Bewegen. Nützlich bei kleinen Bildschirmen.</German>
-            <Hungarian>Középen tartja a kurzort, és a menüelemeket mozgatja. Hasznos lehetőség korlátozott képméretnél.</Hungarian>
-            <Polish>Utrzymuje kursor na środku ekranu, zamiast tego ruch myszą powoduje przesuwanie menu interakcji. Użyteczne w przypadku kiedy rozmiar ekranu jest ograniczony.</Polish>
-            <Spanish>Mantiene el cursor centrado y despliega los menús alrededor. Útil si el tamaño de la pantalla es limitado.</Spanish>
-            <Portuguese>Manter o cursor centralizado e mover o menu de opções. Útil caso o tamanho da tela seja limitado.</Portuguese>
-            <Italian>Mantieni il cursore centrato e sposta il menù intorno. Utile se lo schermo è piccolo.</Italian>
-            <Japanese>常にカーソルを中央へ表示させ、オプション メニューが移動します。画面の大きさが制限されている時に使いやすくなります。</Japanese>
             <Korean>커서를 항상 가운데에 두고 메뉴를 움직입니다. 화면의 크기가 제한되있을 때 유용합니다.</Korean>
-            <Chinesesimp>保持光标在中心点并平移周遭的选项菜单。这对在屏幕尺寸有限的玩家很有用！</Chinesesimp>
+            <Japanese>カーソルを常に中心に表示し、オプション メニューを移動させます。画面の大きさが制限されている時に便利です。</Japanese>
             <Chinese>保持游標在中心點並平移周遭的選項選單。這對在螢幕尺寸有限的玩家很有用!</Chinese>
+            <Chinesesimp>保持光标在中心点并平移周遭的选项菜单。这对在屏幕尺寸有限的玩家很有用！</Chinesesimp>
             <Turkish>İmleci ortalanmış halde tutar ve seçenek menüsünü kaydırır. Ekran boyutu sınırlıysa kullanışlıdır.</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_ActionOnKeyRelease">
-            <English>Do action when releasing menu key</English>
-            <German>Aktion nach Loslassen der Taste ausführen</German>
-            <Polish>Wykonuj akcje po puszczeniu klawisza menu</Polish>
-            <Czech>Provést akci při pustění klávesy menu</Czech>
-            <French>Action au relâchement des touches</French>
-            <Russian>Выполнять при отпускании кнопки меню</Russian>
-            <Spanish>Realizar la acción al soltar la tecla menu</Spanish>
-            <Portuguese>Execute a ação quando soltar a tecla de menu</Portuguese>
-            <Hungarian>Cselekvés végrehajtása a menügomb elengedésekor</Hungarian>
-            <Italian>Esegui l'azione quando rilasci il tasto menu</Italian>
-            <Japanese>メニュー キーを離した時にアクションを実行</Japanese>
-            <Korean>메뉴 키를 놓을 때 행동하기</Korean>
-            <Chinesesimp>当放开菜单键后就执行动作</Chinesesimp>
-            <Chinese>當放開選單鍵後就執行動作</Chinese>
-            <Turkish>Menü tuşunu bırakırken işlem yap</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_textSize">
-            <English>Interaction Text Size</English>
-            <Czech>Velikost textu interakce</Czech>
-            <German>Menü-Schriftgröße</German>
-            <French>Taille du texte d'interaction</French>
-            <Russian>Размер текста (меню взаимодействия)</Russian>
-            <Spanish>Tamaño del texto de interacción</Spanish>
-            <Polish>Rozmiar tekstu interakcji</Polish>
-            <Portuguese>Tamanho do texto de interação</Portuguese>
-            <Hungarian>Cselekvő szöveg mérete</Hungarian>
-            <Italian>Dimensione del testo d'interazione</Italian>
-            <Japanese>インタラクション文字の大きさ</Japanese>
-            <Korean>상호작용 - 문자크기</Korean>
-            <Chinesesimp>互动菜单文字大小</Chinesesimp>
-            <Chinese>互動選單文字大小</Chinese>
-            <Turkish>Etkileşim Metni Boyutu</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_shadowSetting">
-            <English>Interaction Text Shadow</English>
-            <Czech>Stín textu interakce</Czech>
-            <German>Menü-Hintergrundschatten</German>
-            <French>Ombre du texte d'interaction</French>
-            <Russian>Тень от текста (меню взаимодействия)</Russian>
-            <Spanish>Sombra del texto de interacción</Spanish>
-            <Polish>Cień tekstu interakcji</Polish>
-            <Portuguese>Sombra do texto de interação</Portuguese>
-            <Hungarian>Cselekvő szöveg árnyéka</Hungarian>
-            <Italian>Ombra del testo d'interazione</Italian>
-            <Japanese>インタラクション文字へ影</Japanese>
-            <Korean>상호작용 - 문자그림자</Korean>
-            <Chinesesimp>互动菜单文字阴影</Chinesesimp>
-            <Chinese>互動選單文字陰影</Chinese>
-            <Turkish>Etkileşim Metni Gölgesi</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_shadowSettingDescription">
-            <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
-            <Czech>Umožňuje změnit stíny textu v menu interakce. Barva stínu je u tahu písma ignorována.</Czech>
-            <German>Stellt den Hintergrundschatten ein. Die Einstellung 'Kontur' ignoriert die Farbe des Schattens.</German>
-            <French>Permet de régler l'ombre du texte. Le contour ne prend pas en compte la couleur des ombres.</French>
-            <Russian>Дает возможность изменять тень, отбрасываемую текстом. Контур не зависит от выбранного цвета тени.</Russian>
-            <Spanish>Permite contolar la sombra del texto. El contorno ignora los colores personalizados de la sombra.</Spanish>
-            <Polish>Pozwala kontrolować cień tekstu. Kontury ignorują niestandardowe kolory cienia.</Polish>
-            <Portuguese>Permite controlar a sombra do texto. Contorno ignora sombras com cores customizadas.</Portuguese>
-            <Hungarian>Hozzáférést biztosít a szöveg árnyékának kezeléséhez. A körvonal nem veszi figyelembe az egyedi árnyékszíneket.</Hungarian>
-            <Italian>Permette di controllare l'ombra del testo. L'impostazione "Contorno" ignora il colore dell'ombra.</Italian>
-            <Japanese>文字への影を設定します。縁取りは設定された影の色を無視します。</Japanese>
-            <Korean>문자의 그림자를 조절하는 것을 가능케 합니다. 외곽선은 임의의 그림자색을 무시합니다.</Korean>
-            <Chinesesimp>允许控制文字阴影。轮廓部分则会忽略自定义的阴影颜色。</Chinesesimp>
-            <Chinese>允許控制文字陰影。輪廓部分則會忽略自定義的陰影顏色</Chinese>
-            <Turkish>Metin gölgesinin kontrolüne izin verir. Dış çizgi, özel gölge renklerini yok sayar.</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_shadowOutline">
-            <English>Outline</English>
-            <Czech>Kontura</Czech>
-            <German>Kontur</German>
-            <French>Contour</French>
-            <Russian>Контур</Russian>
-            <Spanish>Contorno</Spanish>
-            <Polish>Kontur</Polish>
-            <Portuguese>Contorno</Portuguese>
-            <Hungarian>Körvonal</Hungarian>
-            <Italian>Contorno</Italian>
-            <Japanese>縁取り</Japanese>
-            <Korean>외곽선</Korean>
-            <Chinesesimp>只显示轮廓</Chinesesimp>
-            <Chinese>只顯示輪廓</Chinese>
-            <Turkish>Dış Çizgi</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_background">
-            <English>Interaction menu background</English>
-            <Polish>Tło menu interakcji</Polish>
-            <Spanish>Fondo del menú de interacción</Spanish>
-            <Czech>Pozadí menu interakce</Czech>
-            <German>Interaktionsmenü-Hintergrund</German>
-            <Portuguese>Fundo do menu de interação</Portuguese>
-            <French>Arrière-plan du menu d'interaction</French>
-            <Hungarian>Cselekvő menü háttere</Hungarian>
-            <Russian>Фон меню взаимодействия</Russian>
-            <Italian>Sfondo Menù Interazioni</Italian>
-            <Japanese>インタラクションメニューの背景</Japanese>
-            <Korean>상호작용 메뉴 배경</Korean>
-            <Chinesesimp>互动菜单背景</Chinesesimp>
-            <Chinese>互動選單背景</Chinese>
-            <Turkish>Etkileşim menüsü arka planı</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_blurScreenDesc">
-            <English>Blur the background while the interaction menu is open.</English>
-            <Polish>Rozmywa lub przyciemnia tło na czas otwarcia menu interakcji</Polish>
-            <Spanish>Desenfocar el fondo mientras el menú de interacción está abierto.</Spanish>
-            <Czech>Rozmazat obraz při otevřeném interakčním menu.</Czech>
-            <German>Den Hintergrund verschwimmen lassen, während das Interaktionsmenü geöffnet ist.</German>
-            <Portuguese>Desfocar o fundo enquanto o menu de interação está aberto.</Portuguese>
-            <French>Floute l'arrière-plan durant l'ouverture du menu d'interaction.</French>
-            <Hungarian>A háttér elmosása a cselekvő menü használata alatt.</Hungarian>
-            <Russian>Размыть фон, пока открыто меню взаимодействия.</Russian>
-            <Italian>Sfoca lo sfondo mentre il Menù Interazioni è aperto.</Italian>
-            <Japanese>インタラクションメニューを開いたとき、背景をぼかします。</Japanese>
-            <Korean>상호작용 메뉴가 열릴 시 배경을 흐릿하게 처리합니다.</Korean>
-            <Chinesesimp>当互动菜单开启时，模糊背景画面。</Chinesesimp>
-            <Chinese>當互動選單開啟時，模糊背景畫面</Chinese>
-            <Turkish>Etkileşim menüsü açıkken arka planı bulanıklaştırın.</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_backgroundBlur">
-            <English>Blur screen</English>
-            <Polish>Rozmycie ekranu</Polish>
-            <Spanish>Pantalla de desenfoque</Spanish>
-            <Czech>Rozmazaný obraz</Czech>
-            <German>Verschwommenes Bild</German>
-            <Portuguese>Desfoque de tela</Portuguese>
-            <French>Flouter l'écran</French>
-            <Hungarian>Kép elmosása</Hungarian>
-            <Russian>Размытый</Russian>
-            <Italian>Sfoca schermo</Italian>
-            <Japanese>背景をぼかす</Japanese>
-            <Korean>화면 흐리게</Korean>
-            <Chinesesimp>模糊画面</Chinesesimp>
-            <Chinese>模糊畫面</Chinese>
-            <Turkish>Bulanık Ekran</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_backgroundBlack">
-            <English>Black</English>
-            <Polish>Przyciemnienie ekranu</Polish>
-            <Spanish>Negro</Spanish>
-            <Czech>Tmavý</Czech>
-            <Portuguese>Preto</Portuguese>
-            <German>Schwarz</German>
-            <French>Noir</French>
-            <Hungarian>Fekete</Hungarian>
-            <Russian>Черный</Russian>
-            <Italian>Nero</Italian>
-            <Japanese>背景を黒くする</Japanese>
-            <Korean>까맣게</Korean>
-            <Chinesesimp>黑色</Chinesesimp>
-            <Chinese>黑色</Chinese>
-            <Turkish>Siyah</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_addBuildingActions">
-            <English>Show actions for buildings</English>
-            <German>Zeige Aktionen für Gebäude</German>
-            <Polish>Pokazuj akcje dla budynków</Polish>
-            <Czech>Zobrazit akci pro budovy</Czech>
-            <Spanish>Mostrar acciones para edificios</Spanish>
-            <French>Afficher les actions pour les bâtiments</French>
-            <Hungarian>Cselekvések mutatása épületeknél</Hungarian>
-            <Portuguese>Mostrar ações para edifícios</Portuguese>
-            <Russian>Показывать действия для зданий</Russian>
-            <Italian>Mostra azioni per edifici</Italian>
-            <Japanese>建物へアクションを表示</Japanese>
-            <Korean>건물에 행동을 취함</Korean>
-            <Chinesesimp>显示建筑物可用的动作</Chinesesimp>
-            <Chinese>顯示建築物可用的動作</Chinese>
-            <Turkish>Binalar için eylemleri göster</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_addBuildingActionsDescription">
-            <English>Adds interaction actions for opening doors and mounting ladders on buildings. (Note: There is a performance cost when opening interaction menu, especially in towns)</English>
-            <German>Fügt Aktionen zum Türöffnen oder für eine Leiter zum Besteigen von Gebäuden hinzu. (Hinweis: Verschlechtert die Leistung wenn das Interaktionsmenü geöffnet wird. Insbesondere in Städten) </German>
-            <Polish>Dodaje opcje interakcji dla otwierania drzwi oraz wchodzenia po drabinach do budynków. Uwaga: Użycie tej opcji może spowodować spadek wydajności menu interakcji, szczególnie w dużych miastach.</Polish>
-            <Czech>Přidá možnost interakce pro otevření dvěří a umistňovat žebříky na budovy. (Poznámka: Použití této možnosti snižuje výkon při otevírání pomocí interakčního menu, zejména ve velkých městech.) </Czech>
-            <Spanish>Añade las acciones de interacción para la apertura de puertas y montaje de escaleras en los edificios. (Nota: Hay un coste de rendimiento al abrir el menú de interacción, especialmente en las ciudades)</Spanish>
-            <French>Ajoute des interactions pour ouvrir les portes et les échelles des bâtiments.\nNote : l'ouverture du menu en ville dégrade les performances.</French>
-            <Hungarian>Cselekvéseket engedélyez ajtók kinyitására és létrák mászására. (Figyelem: ez teljesítményvesztéssel járhat a menü megnyitásakor, főleg városokban)</Hungarian>
-            <Portuguese>Adiciona ações de interações para abrir portas e montar escadas em edifícios. (Nota: Existe um custo de performance quando aberto o menu de interação, especialmente em cidades)</Portuguese>
-            <Russian>Добавляет действия открывания дверей и залезания на лестницы для зданий. (Примечание: возможно падение производительности при открытии меню взаимодействия, особенно в городах)</Russian>
-            <Italian>Aggiunge interazioni per l'apertura delle porte e piazzamento di scale su edifici. (Nota: C'è un costo in performance quando si apre il Menù Interazioni, soprattutto in città)</Italian>
-            <Japanese>建物にドアを開閉したり梯子を昇降するためのインタラクション アクションを追加します。\n(注: 街中でインタラクション メニューを開く際には特に描画パフォーマンスに影響を及ぼします)</Japanese>
-            <Korean>건물의 문을 열거나 사다리에 오르는 상호작용 행동을 추가합니다. (주의: 상호작용 메뉴를 열 경우 성능하락이 있을 수 있음, 특히 마을 내부에서)</Korean>
-            <Chinesesimp>增加互动菜单的功能在可开启的门与建筑物的梯子上。（注意：此功能有可能会降低系统效能，特别是在城镇区更明显）</Chinesesimp>
-            <Chinese>增加互動選單的功能在可開啟的門與建築物的梯子上。(注意: 此功能有可能會降低系統效能，特別是在城鎮區更明顯)</Chinese>
-            <Turkish>Binalara kapıları açmak ve merdivenleri monte etmek için etkileşim eylemleri ekler. (Not: Etkileşim menüsünü açarken, özellikle şehirlerde bir performansı etkiler)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Interact_Menu_Category_InteractionMenu">
-            <English>Interaction Menu</English>
-            <German>Interaktionsmenü</German>
-            <Polish>Menu interakcji</Polish>
-            <Portuguese>Menu de interação</Portuguese>
-            <Russian>Меню взаимодействия</Russian>
-            <Czech>Menu interakce</Czech>
-            <Spanish>Menú de interacción</Spanish>
-            <Italian>Menù Interazioni</Italian>
-            <French>Menu d'interaction</French>
-            <Japanese>インタラクションメニュー</Japanese>
-            <Korean>상호작용 메뉴</Korean>
-            <Chinesesimp>互动菜单</Chinesesimp>
-            <Chinese>互動選單</Chinese>
-            <Turkish>Etkileşim Menüsü</Turkish>
+            <Hungarian>Középen tartja a kurzort, és a menüelemeket mozgatja. Hasznos lehetőség korlátozott képméretnél.</Hungarian>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed">
             <English>Interaction Animation Speed</English>
-            <German>Interaktionsmenü Animationsgeschwindigkeit</German>
-            <Polish>Szybkość animacji interakcji</Polish>
-            <Russian>Скорость анимации меню взаимодействия</Russian>
-            <Portuguese>Velocidade da animação de interação</Portuguese>
             <Czech>Rychlost animace interakce</Czech>
-            <Italian>Velocità di Animazione delle Interazioni</Italian>
-            <Spanish>Velocidad de animación del menú de interacción</Spanish>
             <French>Vitesse de l'animation d'interaction</French>
-            <Japanese>インタラクションのアニメーション速度</Japanese>
+            <Spanish>Velocidad de animación del menú de interacción</Spanish>
+            <Italian>Velocità di Animazione delle Interazioni</Italian>
+            <Polish>Szybkość animacji interakcji</Polish>
+            <Portuguese>Velocidade da animação de interação</Portuguese>
+            <Russian>Скорость анимации меню взаимодействия</Russian>
+            <German>Interaktionsmenü Animationsgeschwindigkeit</German>
             <Korean>상호작용 움직임 속도</Korean>
-            <Chinesesimp>互动菜单动画速度</Chinesesimp>
+            <Japanese>アニメーション速度</Japanese>
             <Chinese>互動選單動畫速度</Chinese>
+            <Chinesesimp>互动菜单动画速度</Chinesesimp>
             <Turkish>Etkileşim Animasyon Hızı</Turkish>
         </Key>
         <Key ID="STR_ACE_Interact_Menu_menuAnimationSpeed_Description">
             <English>Makes menu animations faster and decreases the time needed to hover to show sub actions</English>
-            <German>Beschleunigt die Menüanmimationen und folglich das Öffnen eines Submenüs. </German>
-            <Polish>Przyśpiesza animacje menu interakcji oraz czas wymagany do pokazania podmenu</Polish>
-            <Russian>Ускоряет анимацию меню и уменьшает задержку при наведении мыши для раскрытия подменю</Russian>
-            <Portuguese>Faz com que as animações do menu de interação sejam mais rápidas, diminuindo a necessidade de esperar para mostrar as ações</Portuguese>
             <Czech>Zrychlí animaci menu a sníží tak čas potřebný pro plné zobrazení podmenu</Czech>
-            <Italian>Rende le animazioni del Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
-            <Spanish>Hace la animación del menú más rápida, reduciendo el tiempo necesario para abrir sub-acciones.</Spanish>
             <French>Rend les animations du menu plus rapide, et réduit le temps nécessaire à l'affichage des sous menus d'action.</French>
-            <Japanese>メニューのアニメーションを高速化し、サブアクションを表示するためのホバーに必要な時間を短縮します。</Japanese>
-            <Chinesesimp>使菜单的动画速度更快，并减少子选项显现出来的时间</Chinesesimp>
-            <Chinese>使選單的動畫速度更快，並減少子選項顯現出來的時間</Chinese>
+            <Spanish>Hace la animación del menú más rápida, reduciendo el tiempo necesario para abrir sub-acciones.</Spanish>
+            <Italian>Rende le animazioni del Menù più veloci e diminuisce il tempo richiesto per mostrare sotto-azioni</Italian>
+            <Polish>Przyśpiesza animacje menu interakcji oraz czas wymagany do pokazania podmenu</Polish>
+            <Portuguese>Faz com que as animações do menu de interação sejam mais rápidas, diminuindo a necessidade de esperar para mostrar as ações</Portuguese>
+            <Russian>Ускоряет анимацию меню и уменьшает задержку при наведении мыши для раскрытия подменю</Russian>
+            <German>Beschleunigt die Menüanmimationen und folglich das Öffnen eines Submenüs.</German>
             <Korean>상호작용을 표시하기 위해 메뉴 애니메이션을 빠르게 만들고 마우스를 가져오는 데 필요한 시간을 줄입니다.</Korean>
+            <Japanese>メニューのアニメーションを高速化し、サブアクションを表示するために必要なホバーにかかる時間を短縮します。</Japanese>
+            <Chinese>使選單的動畫速度更快，並減少子選項顯現出來的時間</Chinese>
+            <Chinesesimp>使菜单的动画速度更快，并减少子选项显现出来的时间</Chinesesimp>
             <Turkish>Menü animasyonlarını daha hızlı hale getirir ve alt eylemleri göstermek için fareyle üzerine gelmek için gereken süreyi azaltır</Turkish>
         </Key>
-        <Key ID="STR_ACE_Interact_Menu_SelectorColor">
-            <English>Selector Color</English>
-            <German>Farbauswahl</German>
-            <Japanese>セレクターの色</Japanese>
-            <Chinesesimp>菜单颜色</Chinesesimp>
-            <Chinese>選單的顏色</Chinese>
-            <Italian>Colore Selettore</Italian>
-            <Polish>Kolor wybierającego</Polish>
-            <Russian>Цвет селектора</Russian>
-            <Portuguese>Cor do Seletor</Portuguese>
-            <French>Couleur du sélecteur</French>
-            <Czech>Barva selektoru</Czech>
-            <Spanish>Selector de color</Spanish>
-            <Turkish>Seçici Renk</Turkish>
-            <Korean>색상 선택</Korean>
+        <Key ID="STR_ACE_Interact_Menu_shadowOutline">
+            <English>Outline</English>
+            <Czech>Kontura</Czech>
+            <French>Contour</French>
+            <Spanish>Contorno</Spanish>
+            <Italian>Contorno</Italian>
+            <Polish>Kontur</Polish>
+            <Portuguese>Contorno</Portuguese>
+            <Russian>Контур</Russian>
+            <German>Kontur</German>
+            <Korean>외곽선</Korean>
+            <Japanese>縁取り</Japanese>
+            <Chinese>只顯示輪廓</Chinese>
+            <Chinesesimp>只显示轮廓</Chinesesimp>
+            <Turkish>Dış Çizgi</Turkish>
+            <Hungarian>Körvonal</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild">
-            <English>Consolidate single child actions</English>
-            <Russian>Объединять ед. дочерные действия</Russian>
-            <Japanese>子アクションを統合</Japanese>
-            <Spanish>Consolidar acciones hijo únicas</Spanish>
-            <French>Combiner les sous-actions uniques</French>
-            <German>Untergeordnete Aktionen zusammenfassen</German>
-            <Italian>Combina sotto-azioni singole</Italian>
-            <Polish>Połącz akcje podrzędne</Polish>
-            <Chinesesimp>整合子操作</Chinesesimp>
-            <Korean>하위 동작 통합</Korean>
-            <Portuguese>Consolidar sub-ações únicas</Portuguese>
+        <Key ID="STR_ACE_Interact_Menu_shadowSetting">
+            <English>Interaction Text Shadow</English>
+            <Czech>Stín textu interakce</Czech>
+            <French>Ombre du texte d'interaction</French>
+            <Spanish>Sombra del texto de interacción</Spanish>
+            <Italian>Ombra del testo d'interazione</Italian>
+            <Polish>Cień tekstu interakcji</Polish>
+            <Portuguese>Sombra do texto de interação</Portuguese>
+            <Russian>Тень от текста (меню взаимодействия)</Russian>
+            <German>Menü-Hintergrundschatten</German>
+            <Korean>상호작용 - 문자그림자</Korean>
+            <Japanese>文字の影表示</Japanese>
+            <Chinese>互動選單文字陰影</Chinese>
+            <Chinesesimp>互动菜单文字阴影</Chinesesimp>
+            <Turkish>Etkileşim Metni Gölgesi</Turkish>
+            <Hungarian>Cselekvő szöveg árnyéka</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Interact_Menu_consolidateSingleChild_Description">
-            <English>Combines parent action with only one child action together.</English>
-            <Russian>Объединять родительское действие с единственным дочерним действием в одно.</Russian>
-            <Japanese>親アクションと子アクションの一つを統合して表示します。</Japanese>
-            <Spanish>Combina acciones padre con una única accion hijo de forma conjunta</Spanish>
-            <French>Lorsqu'un menu ne contient qu'une seule sous-action, elle est combinée avec son menu parent.</French>
-            <Italian>Combina interazioni con una sola sotto-azione in una singola interazione.</Italian>
-            <German>Übergeordnete Aktionen mit nur einer Unteraktion zusammenfassen.</German>
-            <Polish>Gdy menu zawiera tylko jedną akcję podrzędną, łączy ją z akcją nadrzędną.</Polish>
-            <Chinesesimp>主操作与子操作集成显示。</Chinesesimp>
-            <Korean>대분류로 나뉜 행동을 한눈에 보여줍니다</Korean>
-            <Portuguese>Quando um menu contém apenas uma subação, ele é combinado com seu menu pai.</Portuguese>
+        <Key ID="STR_ACE_Interact_Menu_shadowSettingDescription">
+            <English>Allows controlling the text's shadow. Outline ignores custom shadow colors.</English>
+            <Czech>Umožňuje změnit stíny textu v menu interakce. Barva stínu je u tahu písma ignorována.</Czech>
+            <French>Permet de régler l'ombre du texte. Le contour ne prend pas en compte la couleur des ombres.</French>
+            <Spanish>Permite contolar la sombra del texto. El contorno ignora los colores personalizados de la sombra.</Spanish>
+            <Italian>Permette di controllare l'ombra del testo. L'impostazione "Contorno" ignora il colore dell'ombra.</Italian>
+            <Polish>Pozwala kontrolować cień tekstu. Kontury ignorują niestandardowe kolory cienia.</Polish>
+            <Portuguese>Permite controlar a sombra do texto. Contorno ignora sombras com cores customizadas.</Portuguese>
+            <Russian>Дает возможность изменять тень, отбрасываемую текстом. Контур не зависит от выбранного цвета тени.</Russian>
+            <German>Stellt den Hintergrundschatten ein. Die Einstellung 'Kontur' ignoriert die Farbe des Schattens.</German>
+            <Korean>문자의 그림자를 조절하는 것을 가능케 합니다. 외곽선은 임의의 그림자색을 무시합니다.</Korean>
+            <Japanese>文字に影を表示します。縁取りは設定された影の色を無視します。</Japanese>
+            <Chinese>允許控制文字陰影。輪廓部分則會忽略自定義的陰影顏色</Chinese>
+            <Chinesesimp>允许控制文字阴影。轮廓部分则会忽略自定义的阴影颜色。</Chinesesimp>
+            <Turkish>Metin gölgesinin kontrolüne izin verir. Dış çizgi, özel gölge renklerini yok sayar.</Turkish>
+            <Hungarian>Hozzáférést biztosít a szöveg árnyékának kezeléséhez. A körvonal nem veszi figyelembe az egyedi árnyékszíneket.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interact_Menu_textSize">
+            <English>Interaction Text Size</English>
+            <Czech>Velikost textu interakce</Czech>
+            <French>Taille du texte d'interaction</French>
+            <Spanish>Tamaño del texto de interacción</Spanish>
+            <Italian>Dimensione del testo d'interazione</Italian>
+            <Polish>Rozmiar tekstu interakcji</Polish>
+            <Portuguese>Tamanho do texto de interação</Portuguese>
+            <Russian>Размер текста (меню взаимодействия)</Russian>
+            <German>Menü-Schriftgröße</German>
+            <Korean>상호작용 - 문자크기</Korean>
+            <Japanese>文字の大きさ</Japanese>
+            <Chinese>互動選單文字大小</Chinese>
+            <Chinesesimp>互动菜单文字大小</Chinesesimp>
+            <Turkish>Etkileşim Metni Boyutu</Turkish>
+            <Hungarian>Cselekvő szöveg mérete</Hungarian>
         </Key>
     </Package>
 </Project>

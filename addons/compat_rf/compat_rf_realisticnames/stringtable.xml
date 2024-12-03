@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_RF_RealisticNames">
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_blk_Name">
+            <English>ASh-12 (Black)</English>
+            <French>ASh-12 (Noir)</French>
+            <Spanish>ASh-12 (Negro)</Spanish>
+            <Italian>ASh-12 (Nero)</Italian>
+            <German>ASh-12 (Schwarz)</German>
+            <Korean>ASh-12 (검정)</Korean>
+            <Japanese>ASh-12 (ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_desert_Name">
+            <English>ASh-12 (Desert)</English>
+            <French>ASh-12 (Désert )</French>
+            <Spanish>ASh-12 (Desierto)</Spanish>
+            <Italian>ASh-12 (Deserto)</Italian>
+            <German>ASh-12 (Wüste)</German>
+            <Korean>ASh-12 (사막)</Korean>
+            <Japanese>ASh-12 (砂漠迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_blk_Name">
+            <English>ASh-12 GL (Black)</English>
+            <French>ASh-12 GL (Noir)</French>
+            <Spanish>ASh-12 GL (Negro)</Spanish>
+            <Italian>ASh-12 GL (Nero)</Italian>
+            <German>ASh-12 GL (Schwarz)</German>
+            <Korean>ASh-12 GL (검정)</Korean>
+            <Japanese>ASh-12 GL (ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_desert_Name">
+            <English>ASh-12 GL (Desert)</English>
+            <French>ASh-12 GL (Désert)</French>
+            <Spanish>ASh-12 GL (Desierto)</Spanish>
+            <Italian>ASh-12 GL (Deserto)</Italian>
+            <German>ASh-12 GL (Wüste)</German>
+            <Korean>ASh-12 GL (사막)</Korean>
+            <Japanese>ASh-12 GL (砂漠迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_urban_Name">
+            <English>ASh-12 GL (Urban)</English>
+            <French>ASh-12 GL (Urbain)</French>
+            <Spanish>ASh-12 GL (Urbano)</Spanish>
+            <Italian>ASh-12 GL (Urbano)</Italian>
+            <German>ASh-12 GL (Urban)</German>
+            <Korean>ASh-12 GL (도심)</Korean>
+            <Japanese>ASh-12 GL (市街地迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_gl_wood_Name">
+            <English>ASh-12 GL (Woodland)</English>
+            <French>ASh-12 GL (Woodland)</French>
+            <Spanish>ASh-12 GL (Boscoso)</Spanish>
+            <Italian>ASh-12 GL (Boschivo)</Italian>
+            <German>ASh-12 GL (Grünes Tarnmuster)</German>
+            <Korean>ASh-12 GL (수풀)</Korean>
+            <Japanese>ASh-12 GL (森林迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_blk_Name">
+            <English>ASh-12 LR (Black)</English>
+            <French>ASh-12 LR (Noir)</French>
+            <Spanish>ASh-12 LR (Negro)</Spanish>
+            <Italian>ASh-12 LR (Nero)</Italian>
+            <German>ASh-12 LR (Schwarz)</German>
+            <Korean>ASh-12 LR (검정)</Korean>
+            <Japanese>ASh-12 LR (ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_desert_Name">
+            <English>ASh-12 LR (Desert)</English>
+            <French>ASh-12 LR (Désert)</French>
+            <Spanish>ASh-12 LR (Desierto)</Spanish>
+            <Italian>ASh-12 LR (Deserto)</Italian>
+            <German>ASh-12 LR (Wüste)</German>
+            <Korean>ASh-12 LR (사막)</Korean>
+            <Japanese>ASh-12 LR (砂漠迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_urban_Name">
+            <English>ASh-12 LR (Urban)</English>
+            <French>ASh-12 LR (Urbain)</French>
+            <Spanish>ASh-12 LR (Urbano)</Spanish>
+            <Italian>ASh-12 LR (Urbano)</Italian>
+            <German>ASh-12 LR (Urban)</German>
+            <Korean>ASh-12 LR (도심)</Korean>
+            <Japanese>ASh-12 LR (市街地迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_lr_wood_Name">
+            <English>ASh-12 LR (Woodland)</English>
+            <French>ASh-12 LR (Woodland)</French>
+            <Spanish>ASh-12 LR (Boscoso)</Spanish>
+            <Italian>ASh-12 LR (Boschivo)</Italian>
+            <German>ASh-12 LR (Grünes Tarnmuster)</German>
+            <Korean>ASh-12 LR (수풀)</Korean>
+            <Japanese>ASh-12 LR (森林迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_urban_Name">
+            <English>ASh-12 (Urban)</English>
+            <French>ASh-12 (Urbain)</French>
+            <Spanish>ASh-12 (Urbano)</Spanish>
+            <Italian>ASh-12 (Urbano)</Italian>
+            <German>ASh-12 (Urban)</German>
+            <Korean>ASh-12 (도심)</Korean>
+            <Japanese>ASh-12 (市街地迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ash12_wood_Name">
+            <English>ASh-12 (Woodland)</English>
+            <French>ASh-12 (Woodland)</French>
+            <Spanish>ASh-12 (Boscoso)</Spanish>
+            <Italian>ASh-12 (Boschivo)</Italian>
+            <German>ASh-12 (Grünes Tarnmuster)</German>
+            <Korean>ASh-12 (수풀)</Korean>
+            <Japanese>ASh-12 (森林迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_commando_Name">
+            <English>RSG60</English>
+            <French>RSG60</French>
+            <Spanish>RSG60</Spanish>
+            <Italian>RSG60</Italian>
+            <German>RSG60</German>
+            <Korean>RSG60</Korean>
+            <Japanese>RSG60</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_Name">
+            <English>Desert Eagle Mark XIX L5</English>
+            <French>Desert Eagle Mark XIX L5</French>
+            <Spanish>Desert Eagle Mark XIX L5</Spanish>
+            <Italian>Desert Eagle Mark XIX L5</Italian>
+            <German>Desert Eagle Mark XIX L5</German>
+            <Korean>데저트 이글 마크 XIX L5</Korean>
+            <Japanese>デザートイーグル Mark XIX L5</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_bronze_Name">
+            <English>Desert Eagle Mark XIX L5 (Bronze)</English>
+            <French>Desert Eagle Mark XIX L5 (Bronze)</French>
+            <Spanish>Desert Eagle Mark XIX L5 (Bronce)</Spanish>
+            <Italian>Desert Eagle Mark XIX L5 (Bronzo)</Italian>
+            <German>Desert Eagle Mark XIX L5 (Bronze)</German>
+            <Korean>데저트 이글 마크 XIX L5 (브론즈)</Korean>
+            <Japanese>デザートイーグル Mark XIX L5 (ブロンズ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_classic_Name">
+            <English>Desert Eagle Mark XIX L5 (Classic)</English>
+            <French>Desert Eagle Mark XIX L5 (Classique)</French>
+            <Spanish>Desert Eagle Mark XIX L5 (Clasica)</Spanish>
+            <Italian>Desert Eagle Mark XIX L5 (Classico)</Italian>
+            <German>Desert Eagle Mark XIX L5 (Klassisch)</German>
+            <Korean>데저트 이글 마크 XIX L5 (클래식)</Korean>
+            <Japanese>デザートイーグル Mark XIX L5 (クラシック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_copper_Name">
+            <English>Desert Eagle Mark XIX L5 (Copper)</English>
+            <French>Desert Eagle Mark XIX L5 (Cuivre)</French>
+            <Spanish>Desert Eagle Mark XIX L5 (Cobre)</Spanish>
+            <Italian>Desert Eagle Mark XIX L5 (Rame)</Italian>
+            <German>Desert Eagle Mark XIX L5 (Kupfer)</German>
+            <Korean>데저트 이글 마크 XIX L5 (구리)</Korean>
+            <Japanese>デザートイーグル Mark XIX L5 (カッパー)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_gold_Name">
+            <English>Desert Eagle Mark XIX L5 (Gold)</English>
+            <French>Desert Eagle Mark XIX L5 (Or)</French>
+            <Spanish>Desert Eagle Mark XIX L5 (Oro)</Spanish>
+            <Italian>Desert Eagle Mark XIX L5 (Oro)</Italian>
+            <German>Desert Eagle Mark XIX L5 (Gold)</German>
+            <Korean>데저트 이글 마크 XIX L5 (금색)</Korean>
+            <Japanese>デザートイーグル Mark XIX L5 (ゴールド)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_dmr_01_black_Name">
+            <English>VS-121 (Black)</English>
+            <French>VS-121 (Noir)</French>
+            <Spanish>VS-121 (Negro)</Spanish>
+            <Italian>VS-121 (Nero)</Italian>
+            <German>VS-121 (Schwarz)</German>
+            <Korean>VS-121 (검정)</Korean>
+            <Japanese>VS-121 (ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_dmr_01_tan_Name">
+            <English>VS-121 (Tan)</English>
+            <French>VS-121 (Marron)</French>
+            <Spanish>VS-121 (Tan)</Spanish>
+            <Italian>VS-121 (Marroncino)</Italian>
+            <German>VS-121 (Hellbraun)</German>
+            <Korean>VS-121 (황갈)</Korean>
+            <Japanese>VS-121 (タン)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_base_Name">
+            <English>H225 Super Puma (Transport)</English>
+            <French>H225 Super Puma (Transport )</French>
+            <Spanish>H225 Super Puma (Transporte)</Spanish>
+            <Italian>H225 Super Puma (Trasporto)</Italian>
+            <German>H225 Super Puma (Transport)</German>
+            <Korean>H225 슈퍼 퓨마 (비무장)</Korean>
+            <Japanese>H225 シュペル ピューマ (輸送型)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_civ_base_Name">
+            <English>H225 Super Puma (Civilian)</English>
+            <French>H225 Super Puma (Civil)</French>
+            <Spanish>H225 Super Puma (Civil)</Spanish>
+            <Italian>H225 Super Puma (Civile)</Italian>
+            <German>H225 Super Puma (Zivil)</German>
+            <Korean>H225 슈퍼 퓨마 (비무장)</Korean>
+            <Japanese>H225 シュペル ピューマ (民生型)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_base_Name">
+            <English>H215 Super Puma (Transport)</English>
+            <French>H215 Super Puma (Transport)</French>
+            <Spanish>H215 Super Puma (Transporte)</Spanish>
+            <Italian>H215 Super Puma (Trasporto)</Italian>
+            <German>H215 Super Puma (Transport)</German>
+            <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
+            <Japanese>H215 シュペル ピューマ (輸送型)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_civ_base_Name">
+            <English>H215 Super Puma (Civilian)</English>
+            <French>H215 Super Puma (Civil)</French>
+            <Spanish>H215 Super Puma (Civil)</Spanish>
+            <Italian>H215 Super Puma (Civile)</Italian>
+            <German>H215 Super Puma (Zivil)</German>
+            <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
+            <Japanese>H215 シュペル ピューマ (民生型)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_military_base_Name">
+            <English>H215 Super Puma (Unarmed)</English>
+            <French>H215 Super Puma (non armé)</French>
+            <Spanish>H215 Super Puma (Desarmado)</Spanish>
+            <Italian>H215 Super Puma (Disarmato)</Italian>
+            <German>H215 Super Puma (Unbewaffnet)</German>
+            <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
+            <Japanese>H215 シュペル ピューマ (非武装)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_base_Name">
+            <English>H225M Super Cougar SOCAT</English>
+            <French>H225M Super Cougar SOCAT</French>
+            <Spanish>H225M Super Cougar SOCAT</Spanish>
+            <Italian>H225M Super Cougar SOCAT</Italian>
+            <German>H225M Super Cougar SOCAT</German>
+            <Korean>H225M 슈퍼 쿠거 SOCAT</Korean>
+            <Japanese>H225M シュペル クーガー SOCAT</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_02_nato_Name">
+            <English>H225M Super Cougar SOCAT</English>
+            <French>H225M Super Cougar SOCAT</French>
+            <Spanish>H225M Super Cougar SOCAT</Spanish>
+            <Italian>H225M Super Cougar SOCAT</Italian>
+            <German>H225M Super Cougar SOCAT</German>
+            <Korean>H225M 슈퍼 쿠거 SOCAT</Korean>
+            <Japanese>H225M シュペル クーガー SOCAT</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_03_base_Name">
+            <English>H225M Super Cougar</English>
+            <French>H225M Super Cougar</French>
+            <Spanish>H225M Super Cougar</Spanish>
+            <Italian>H225M Super Cougar</Italian>
+            <German>H225M Super Cougar</German>
+            <Korean>H225M 슈퍼 쿠거</Korean>
+            <Japanese>H225M シュペル クーガー</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_base_Name">
+            <English>H225 Super Puma SAR</English>
+            <French>H225 Super Puma SAR</French>
+            <Spanish>H225 Super Puma SAR</Spanish>
+            <Italian>H225 Super Puma SAR</Italian>
+            <German>H225 Super Puma SAR</German>
+            <Korean>H225 슈퍼 퓨마 SAR</Korean>
+            <Japanese>H225 シュペル ピューマ 捜索救難型</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_04_military_base_Name">
+            <English>H225M Super Cougar (Unarmed)</English>
+            <French>H225M Super Cougar (Non armé)</French>
+            <Spanish>H225M Super Cougar (Desarmado)</Spanish>
+            <Italian>H225M Super Cougar (Disarmato)</Italian>
+            <German>H225M Super Cougar (Unbewaffnet)</German>
+            <Korean>H225M 슈퍼 쿠거 (비무장)</Korean>
+            <Japanese>H225M シュペル クーガー (非武装)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_Name">
+            <English>Glock 19X</English>
+            <French>Glock 19X</French>
+            <Spanish>Glock 19X</Spanish>
+            <Italian>Glock 19X</Italian>
+            <German>Glock 19X</German>
+            <Korean>글록 19X</Korean>
+            <Japanese>グロック 19X</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_Name">
+            <English>Glock 19X Auto</English>
+            <French>Glock 19X Auto</French>
+            <Spanish>Glock 19X Auto</Spanish>
+            <Italian>Glock 19X Auto</Italian>
+            <German>Glock 19X Auto</German>
+            <Korean>글록 19X 기관권총</Korean>
+            <Japanese>グロック 19X オート</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_khk_Name">
+            <English>Glock 19X Auto (Khaki)</English>
+            <French>Glock 19X Auto (Khaki)</French>
+            <Spanish>Glock 19X Auto (Caqui)</Spanish>
+            <Italian>Glock 19X Auto (Cachi)</Italian>
+            <German>Glock 19X Auto (Khaki)</German>
+            <Korean>글록 19X 기관권총 (카키)</Korean>
+            <Japanese>グロック 19X オート (カーキ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_auto_tan_Name">
+            <English>Glock 19X Auto (Tan)</English>
+            <French>Glock 19X Auto (Marron)</French>
+            <Spanish>Glock 19X Auto (Tan)</Spanish>
+            <Italian>Glock 19X Auto (Marroncino)</Italian>
+            <German>Glock 19X Auto (Hellbraun)</German>
+            <Korean>글록 19X 기관권총 (황갈)</Korean>
+            <Japanese>グロック 19X オート (タン)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_khk_Name">
+            <English>Glock 19X (Khaki)</English>
+            <French>Glock 19X (Khaki)</French>
+            <Spanish>Glock 19X (Caqui)</Spanish>
+            <Italian>Glock 19X (Cachi)</Italian>
+            <German>Glock 19X (Khaki)</German>
+            <Korean>글록 19X (카키)</Korean>
+            <Japanese>グロック 19X (カーキ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_glock19_tan_Name">
+            <English>Glock 19X (Tan)</English>
+            <French>Glock 19X (Marron)</French>
+            <Spanish>Glock 19X (Tan)</Spanish>
+            <Italian>Glock 19X (Marroncino)</Italian>
+            <German>Glock 19X (Hellbraun)</German>
+            <Korean>글록 19X (황갈)</Korean>
+            <Japanese>グロック 19X (タン)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_blk_Name">
+            <English>HERA H6 (Black)</English>
+            <French>HERA H6 (Noir)</French>
+            <Spanish>HERA H6 (Negro)</Spanish>
+            <Italian>HERA H6 (Nero)</Italian>
+            <German>HERA H6 (Schwarz)</German>
+            <Korean>헤라 H6 (검정)</Korean>
+            <Japanese>HERA H6 (ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_digi_Name">
+            <English>HERA H6 (Digital)</English>
+            <French>HERA H6 (Digital)</French>
+            <Spanish>HERA H6 (Digital)</Spanish>
+            <Italian>HERA H6 (Digitale)</Italian>
+            <German>HERA H6 (Digital)</German>
+            <Korean>헤라 H6 (AAF 디지털)</Korean>
+            <Japanese>HERA H6 (AAF迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_gold_Name">
+            <English>HERA H6 (Gold)</English>
+            <French>HERA H6 (Or)</French>
+            <Spanish>HERA H6 (Oro)</Spanish>
+            <Italian>HERA H6 (Oro)</Italian>
+            <German>HERA H6 (Gold)</German>
+            <Korean>헤라 H6 (금색)</Korean>
+            <Japanese>HERA H6 (ゴールド)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_oli_Name">
+            <English>HERA H6 (Olive)</English>
+            <French>HERA H6 (Olive)</French>
+            <Spanish>HERA H6 (Oliva)</Spanish>
+            <Italian>HERA H6 (Oliva)</Italian>
+            <German>HERA H6 (Olivgrün)</German>
+            <Korean>헤라 H6 (올리브)</Korean>
+            <Japanese>HERA H6 (オリーブ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_h6_tan_Name">
+            <English>HERA H6 (Tan)</English>
+            <French>HERA H6 (Marron)</French>
+            <Spanish>HERA H6 (Tan)</Spanish>
+            <Italian>HERA H6 (Marroncino)</Italian>
+            <German>HERA H6 (Hellbraun)</German>
+            <Korean>헤라 H6 (황갈)</Korean>
+            <Japanese>HERA H6 (タン)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_Name">
+            <English>AW159 Wildcat ASW</English>
+            <French>AW159 Wildcat ASW</French>
+            <Spanish>AW159 Wildcat ASW</Spanish>
+            <Italian>AW159 Wildcat ASW</Italian>
+            <German>AW159 Wildcat ASW</German>
+            <Korean>AW159 와일드캣 ASW</Korean>
+            <Japanese>AW159 ワイルドキャット ASW</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_heli_light_03_unarmed_Name">
+            <English>AW159 Wildcat ASW (Unarmed)</English>
+            <French>AW159 Wildcat ASW (non armé)</French>
+            <Spanish>AW159 Wildcat ASW (Desarmado)</Spanish>
+            <Italian>AW159 Wildcat ASW (Disarmato)</Italian>
+            <German>AW159 Wildcat ASW (Unbewaffnet)</German>
+            <Korean>AW159 와일드캣 ASW (비무장)</Korean>
+            <Japanese>AW159 ワイルドキャット ASW (非武装)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_desert_Name">
+            <English>C-More Railway (Red, Desert)</English>
+            <French>C-More Railway (Rouge, Désert)</French>
+            <Spanish>C-More Railway (Rojo, Desierto)</Spanish>
+            <Italian>C-More Railway (Rosso, Desert)</Italian>
+            <German>C-More Railway (Rot, Wüste)</German>
+            <Korean>씨모어 레일웨이 (빨강, 사막)</Korean>
+            <Japanese>C-More レイルウェイ (グリーン、砂漠迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_desert_Name">
+            <English>C-More Railway (Green, Desert)</English>
+            <French>C-More Railway (Vert, Désert)</French>
+            <Spanish>C-More Railway (Verde, Desierto)</Spanish>
+            <Italian>C-More Railway (Verde, Deserto)</Italian>
+            <German>C-More Railway (Grün, Wüste)</German>
+            <Korean>씨모어 레일웨이 (녹색, 사막)</Korean>
+            <Japanese>C-More レイルウェイ (グリーン、砂漠迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_wood_Name">
+            <English>C-More Railway (Green, Woodland)</English>
+            <French>C-More Railway (Vert, Woodland)</French>
+            <Spanish>C-More Railway (Verde, Boscoso)</Spanish>
+            <Italian>C-More Railway (Verde, Boschivo)</Italian>
+            <German>C-More Railway (Grün, Grünes Tarnmuster)</German>
+            <Korean>씨모어 레일웨이 (녹색, 수풀 위장)</Korean>
+            <Japanese>C-More レイルウェイ (グリーン、森林迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_wood_Name">
+            <English>C-More Railway (Red, Woodland)</English>
+            <French>C-More Railway (Rouge, Woodland)</French>
+            <Spanish>C-More Railway (Rojo, Boscoso)</Spanish>
+            <Italian>C-More Railway (Rosso, Boschivo)</Italian>
+            <German>C-More Railway (Rot, Grünes Tarnmuster)</German>
+            <Korean>씨모어 레일웨이 (빨강, 수풀)</Korean>
+            <Japanese>C-More レイルウェイ (グリーン、森林迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_mrd_khk_Name">
+            <English>EOTech MRDS (Khaki)</English>
+            <French>EOTech MRDS (Khaki)</French>
+            <Spanish>EOTech MRDS (Caqui)</Spanish>
+            <Italian>EOTech MRDS (Cachi)</Italian>
+            <German>EOTech MRDS (Khaki)</German>
+            <Korean>이오텍 MRDS (카키)</Korean>
+            <Japanese>EOTech MRDS (カーキ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_mrd_tan_Name">
+            <English>EOTech MRDS (Tan)</English>
+            <French>EOTech MRDS (Marron)</French>
+            <Spanish>EOTech MRDS (Tan)</Spanish>
+            <Italian>EOTech MRDS (Marroncino)</Italian>
+            <German>EOTech MRDS (Hellbraun)</German>
+            <Korean>이오텍 MRDS (황갈)</Korean>
+            <Japanese>EOTech MRDS (タン)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_rds_Name">
+            <English>Aimpoint Micro R-1</English>
+            <French>Aimpoint Micro R-1</French>
+            <Spanish>Aimpoint Micro R-1</Spanish>
+            <Italian>Aimpoint Micro R-1</Italian>
+            <German>Aimpoint Micro R-1</German>
+            <Korean>에임포인트 마이크로 R-1</Korean>
+            <Japanese>Aimpoint マイクロ R-1</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_Name">
+            <English>Vortex Spitfire Prism</English>
+            <French>Vortex Spitfire Prism</French>
+            <Spanish>Vortex Spitfire Prism</Spanish>
+            <Italian>Vortex Spitfire Prism</Italian>
+            <German>Vortex Spitfire Prism</German>
+            <Korean>버텍스 스핏파이어 프리즘</Korean>
+            <Japanese>Vortex スピットファイア プリズム</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_khk_Name">
+            <English>Vortex Spitfire Prism (Khaki)</English>
+            <French>Vortex Spitfire Prism (Khaki)</French>
+            <Spanish>Vortex Spitfire Prism (Caqui)</Spanish>
+            <Italian>Vortex Spitfire Prism (Cachi)</Italian>
+            <German>Vortex Spitfire Prism (Khaki)</German>
+            <Korean>버텍스 스핏파이어 프리즘 (카키)</Korean>
+            <Japanese>Vortex スピットファイア プリズム (カーキ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_pistol_Name">
+            <English>Vortex Spitfire Prism (Pistol)</English>
+            <French>Vortex Spitfire Prism (Pistol)</French>
+            <Spanish>Vortex Spitfire Prism (Pistola)</Spanish>
+            <Italian>Vortex Spitfire Prism (Pistola)</Italian>
+            <German>Vortex Spitfire Prism (Pistole)</German>
+            <Korean>버텍스 스핏파이어 프리즘 (권총용)</Korean>
+            <Japanese>Vortex スピットファイア プリズム (ピストル用)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_vrco_tan_Name">
+            <English>Vortex Spitfire Prism (Tan)</English>
+            <French>Vortex Spitfire Prism (Marron)</French>
+            <Spanish>Vortex Spitfire Prism (Tan)</Spanish>
+            <Italian>Vortex Spitfire Prism (Marroncino)</Italian>
+            <German>Vortex Spitfire Prism (Hellbraun)</German>
+            <Korean>버텍스 스핏파이어 프리즘 (황갈)</Korean>
+            <Japanese>Vortex スピットファイア プリズム (タン)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_Fuel_Name">
+            <English>Ram 1500 (Fuel)</English>
+            <French>Ram 1500 (Carburant)</French>
+            <Spanish>Ram 1500 (Combustible)</Spanish>
+            <Italian>Ram 1500 (Carburante)</Italian>
+            <German>Ram 1500 (Treibstoff)</German>
+            <Korean>램 1500 (연료)</Korean>
+            <Japanese>ラム 1500 (燃料)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_Name">
+            <English>Ram 1500</English>
+            <French>Ram 1500</French>
+            <Spanish>Ram 1500</Spanish>
+            <Italian>Ram 1500</Italian>
+            <German>Ram 1500</German>
+            <Korean>램 1500</Korean>
+            <Japanese>ラム 1500</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_aa_Name">
+            <English>Ram 1500 (AA)</English>
+            <French>Ram 1500 (AA)</French>
+            <Spanish>Ram 1500 (AA)</Spanish>
+            <Italian>Ram 1500 (AA)</Italian>
+            <German>Ram 1500 (AA)</German>
+            <Korean>램 1500 (대공)</Korean>
+            <Japanese>ラム 1500 (対空)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_comms_Name">
+            <English>Ram 1500 (Comms)</English>
+            <French>Ram 1500 (Communication)</French>
+            <Spanish>Ram 1500 (Comunicaciones)</Spanish>
+            <Italian>Ram 1500 (Comunicazioni)</Italian>
+            <German>Ram 1500 (Kommunikation)</German>
+            <Korean>램 1500 (통신)</Korean>
+            <Japanese>ラム 1500 (通信)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_covered_Name">
+            <English>Ram 1500 (Covered)</English>
+            <French>Ram 1500 (couvert)</French>
+            <Spanish>Ram 1500 (Cubierto)</Spanish>
+            <Italian>Ram 1500 (Coperto)</Italian>
+            <German>Ram 1500 (Abgedeckt)</German>
+            <Korean>램 1500 (커버)</Korean>
+            <Japanese>ラム 1500 (カバー)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_hmg_Name">
+            <English>Ram 1500 (HMG)</English>
+            <French>Ram 1500 (HMG)</French>
+            <Spanish>Ram 1500 (HMG)</Spanish>
+            <Italian>Ram 1500 (HMG)</Italian>
+            <German>Ram 1500 (HMG)</German>
+            <Korean>램 1500 (중기관총)</Korean>
+            <Japanese>ラム 1500 (HMG)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mmg_Name">
+            <English>Ram 1500 (MMG)</English>
+            <French>Ram 1500 (MMG)</French>
+            <Spanish>Ram 1500 (MMG)</Spanish>
+            <Italian>Ram 1500 (MMG)</Italian>
+            <German>Ram 1500 (MMG)</German>
+            <Korean>램 1500 (중형기관총)</Korean>
+            <Japanese>ラム 1500 (MMG)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mrl_Name">
+            <English>Ram 1500 (MRL)</English>
+            <French>Ram 1500 (MRL)</French>
+            <Spanish>Ram 1500 (MRL)</Spanish>
+            <Italian>Ram 1500 (MRL)</Italian>
+            <German>Ram 1500 (MRL)</German>
+            <Korean>램 1500 (다연장로켓)</Korean>
+            <Japanese>ラム 1500 (MRL)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_repair_Name">
+            <English>Ram 1500 (Repair)</English>
+            <French>Ram 1500 (Réparation)</French>
+            <Spanish>Ram 1500 (Reparaciones)</Spanish>
+            <Italian>Ram 1500 (Riparazioni)</Italian>
+            <German>Ram 1500 (Instandsetzung)</German>
+            <Korean>램 1500 (정비)</Korean>
+            <Japanese>ラム 1500 (修理)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_service_Name">
+            <English>Ram 1500 (Services)</English>
+            <French>Ram 1500 (Dépannage)</French>
+            <Spanish>Ram 1500 (Servicios)</Spanish>
+            <Italian>Ram 1500 (Servizi)</Italian>
+            <German>Ram 1500 (Pannenhilfe)</German>
+            <Korean>램 1500 (서비스)</Korean>
+            <Japanese>ラム 1500 (サービス)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_water_Name">
+            <English>Ram 1500 (Water)</English>
+            <French>Ram 1500 (eau)</French>
+            <Spanish>Ram 1500 (Agua)</Spanish>
+            <Italian>Ram 1500 (Acqua)</Italian>
+            <German>Ram 1500 (Wasser)</German>
+            <Korean>램 1500 (급수)</Korean>
+            <Japanese>ラム 1500 (給水)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_Name">
+            <English>Drone40 Scout</English>
+            <French>Drone40 Scout</French>
+            <Spanish>Drone40 Scout</Spanish>
+            <Italian>Drone40 Scout</Italian>
+            <German>Drone40 Scout</German>
+            <Korean>드론40 정찰</Korean>
+            <Japanese>ドローン40 偵察型</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_base_Name">
+            <English>Drone40</English>
+            <French>Drone40</French>
+            <Spanish>Drone40</Spanish>
+            <Italian>Drone40</Italian>
+            <German>Drone40</German>
+            <Korean>드론40</Korean>
+            <Japanese>ドローン40</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_blue_Name">
+            <English>Drone40 Smoke (Blue)</English>
+            <French>Drone40 Fumée (Bleu)</French>
+            <Spanish>Drone40 Humo (Azul)</Spanish>
+            <Italian>Drone40 Smoke (Blu)</Italian>
+            <German>Drone40 Smoke (Blau)</German>
+            <Korean>드론40 연막 (청색)</Korean>
+            <Japanese>ドローン40 発煙弾 (青)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_green_Name">
+            <English>Drone40 Smoke (Green)</English>
+            <French>Drone40 Fumée (Vert)</French>
+            <Spanish>Drone40 Humo (Verde)</Spanish>
+            <Italian>Drone40 Smoke (Verde)</Italian>
+            <German>Drone40 Smoke (Grün)</German>
+            <Korean>드론40 연막 (녹색)</Korean>
+            <Japanese>ドローン40 発煙弾 (緑)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_he_Name">
+            <English>Drone40 HE</English>
+            <French>Drone40 HE</French>
+            <Spanish>Drone40 HE</Spanish>
+            <Italian>Drone40 HE</Italian>
+            <German>Drone40 HE</German>
+            <Korean>드론40 고폭</Korean>
+            <Japanese>ドローン40 榴弾</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_orange_Name">
+            <English>Drone40 Smoke (Orange)</English>
+            <French>Drone40 Fumée (Orange)</French>
+            <Spanish>Drone40 Humo (Naranja)</Spanish>
+            <Italian>Drone40 Smoke (Arancione)</Italian>
+            <German>Drone40 Smoke (Orange)</German>
+            <Korean>드론40 연막 (주황색)</Korean>
+            <Japanese>ドローン40 発煙弾 (橙)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_red_Name">
+            <English>Drone40 Smoke (Red)</English>
+            <French>Drone40 Fumée (Rouge)</French>
+            <Spanish>Drone40 Humo (Rojo)</Spanish>
+            <Italian>Drone40 Smoke (Rosso)</Italian>
+            <German>Drone40 Smoke (Rot)</German>
+            <Korean>드론40 연막 (적색)</Korean>
+            <Japanese>ドローン40 発煙弾 (赤)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_rc40_white_Name">
+            <English>Drone40 Smoke (White)</English>
+            <French>Drone40 Fumée (Blanc)</French>
+            <Spanish>Drone40 Humo (Blanco)</Spanish>
+            <Italian>Drone40 Smoke (Bianco)</Italian>
+            <German>Drone40 Smoke (Weiß)</German>
+            <Korean>드론40 연막 (백색)</Korean>
+            <Japanese>ドローン40 発煙弾 (白)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_smg_01_black_Name">
+            <English>Vector SMG (Black)</English>
+            <French>Vector SMG (Noir)</French>
+            <Spanish>Vector SMG (Negro)</Spanish>
+            <Italian>Vector SMG (Nero)</Italian>
+            <German>Vector SMG (Schwarz)</German>
+            <Korean>벡터 SMG (검정)</Korean>
+            <Japanese>ベクター SMG (ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_01_water_Name">
+            <English>HEMTT Fire Truck</English>
+            <French>HEMTT anti-incendie</French>
+            <Spanish>HEMTT (camión de bomberos)</Spanish>
+            <Italian>HEMTT Autobotte</Italian>
+            <Polish>HEMTT (wersja pożarnicza)</Polish>
+            <Portuguese>HEMTT contra incêndio</Portuguese>
+            <Russian>Пожарная машина HEMTT</Russian>
+            <German>HEMTT-Löschfahrzeug</German>
+            <Korean>HEMTT 소방트럭</Korean>
+            <Japanese>HEMTT 消防車</Japanese>
+            <Chinesesimp>HEMTT 消防卡车</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_water_Name">
+            <English>Typhoon Water</English>
+            <French>Typhoon Water</French>
+            <Spanish>Typhoon Water</Spanish>
+            <Italian>Typhoon Acqua</Italian>
+            <German>Typhoon Water</German>
+            <Korean>타이푼 급수</Korean>
+            <Japanese>タイフーン 給水</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_twinmortar_Name">
+            <English>AMOS Container</English>
+            <French>AMOS Container</French>
+            <Spanish>Contenedor AMOS</Spanish>
+            <Italian>AMOS Container</Italian>
+            <German>AMOS Container</German>
+            <Korean>AMOS 컨테이너</Korean>
+            <Japanese>AMOS コンテナ</Japanese>
+        </Key>
+    </Package>
+</Project>

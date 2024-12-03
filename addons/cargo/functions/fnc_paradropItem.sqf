@@ -63,7 +63,7 @@ if (_item isEqualType objNull) then {
     [QGVAR(serverUnload), [_object, _posBehindVehicleAGL]] call CBA_fnc_serverEvent;
 } else {
     _object = createVehicle [_item, _posBehindVehicleAGL, [], 0, "NONE"];
-    _object setPosASL (AGLtoASL _posBehindVehicleAGL);
+    _object setPosASL (AGLToASL _posBehindVehicleAGL);
 };
 
 [QEGVAR(common,setVelocity), [_object, (velocity _vehicle) vectorAdd ((vectorNormalized (vectorDir _vehicle)) vectorMultiply -5)], _object] call CBA_fnc_targetEvent;
@@ -100,14 +100,26 @@ if (_item isEqualType objNull) then {
 
 // Create smoke effect when crate landed
 [{
-    (_this select 0) params ["_object"];
+    params ["_object", "_pfhID"];
 
     if (isNull _object) exitWith {
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+        _pfhID call CBA_fnc_removePerFrameHandler;
     };
 
     if (getPos _object select 2 < 1) exitWith {
-        [_this select 1] call CBA_fnc_removePerFrameHandler;
+        _pfhID call CBA_fnc_removePerFrameHandler;
+
+        // Reenable UAV crew
+        private _UAVCrew = _object getVariable [QGVAR(isUAV), []];
+
+        if (_UAVCrew isNotEqualTo []) then {
+            // Reenable AI
+            {
+                [_x, false] call EFUNC(common,disableAiUAV);
+            } forEach _UAVCrew;
+
+            _object setVariable [QGVAR(isUAV), nil, true];
+        };
 
         if ((GVAR(disableParadropEffectsClasstypes) findIf {_object isKindOf _x}) == -1) then {
             private _smoke = "SmokeshellYellow" createVehicle [0, 0, 0];

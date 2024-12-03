@@ -1,63 +1,64 @@
 #include "script_component.hpp"
 
-[QGVAR(engineFire), LINKFUNC(engineFire)] call CBA_fnc_addEventHandler;
-[QGVAR(cookOff), {
-    params ["_vehicle"];
-    if (local _vehicle) then {
-        _this call FUNC(cookOff);
-    };
-}] call CBA_fnc_addEventHandler;
-[QGVAR(cookOffEffect), LINKFUNC(cookOffEffect)] call CBA_fnc_addEventHandler;
+[QGVAR(cookOffBoxLocal), LINKFUNC(cookOffBoxLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(cookOffLocal), LINKFUNC(cookOffLocal)] call CBA_fnc_addEventHandler;
+[QGVAR(engineFireLocal), LINKFUNC(engineFireLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(smoke), LINKFUNC(smoke)] call CBA_fnc_addEventHandler;
-[QGVAR(cookOffBox), LINKFUNC(cookOffBox)] call CBA_fnc_addEventHandler;
 
-// handle cleaning up effects when vehicle is deleted mid-cookoff
-[QGVAR(addCleanupHandlers), {
-    params ["_vehicle"];
+if (isServer) then {
+    [QGVAR(cookOffBoxServer), LINKFUNC(cookOffBoxServer)] call CBA_fnc_addEventHandler;
+    [QGVAR(cookOffServer), LINKFUNC(cookOffServer)] call CBA_fnc_addEventHandler;
+    [QGVAR(detonateAmmunitionServer), LINKFUNC(detonateAmmunitionServer)] call CBA_fnc_addEventHandler;
+    [QGVAR(engineFireServer), LINKFUNC(engineFireServer)] call CBA_fnc_addEventHandler;
+};
 
-    // Don't add a new EH if cookoff is run multiple times
-    if ((_vehicle getVariable [QGVAR(deletedEH), -1]) == -1) then {
-        private _deletedEH = _vehicle addEventHandler ["Deleted", {
-            params ["_vehicle"];
+// Handle cleaning up effects when objects are deleted mid cook-off
+["AllVehicles", "Deleted", {
+    {
+        deleteVehicle _x;
+    } forEach ((_this select 0) getVariable [QGVAR(effects), []]);
+}, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to exclude animals as well
 
-            [QGVAR(cleanupEffects), [_vehicle]] call CBA_fnc_localEvent;
-        }];
+["ReammoBox_F", "Deleted", {
+    {
+        deleteVehicle _x;
+    } forEach ((_this select 0) getVariable [QGVAR(effects), []]);
+}, true, [], true] call CBA_fnc_addClassEventHandler;
 
-        _vehicle setVariable [QGVAR(deletedEH), _deletedEH];
-    };
-}] call CBA_fnc_addEventHandler;
-
+// Raised when the flames have subsided or after the ammo of a box has finished cooking off
 [QGVAR(cleanupEffects), {
-    params ["_vehicle", ["_effects", []]];
+    params ["_object"];
 
-    _effects = _effects + (_vehicle getVariable [QGVAR(effects), []]);
-    if (_effects isNotEqualTo []) then {
-         { deleteVehicle _x } count _effects;
-    };
+    {
+        deleteVehicle _x;
+    } forEach (_object getVariable [QGVAR(effects), []]);
+
+    _object setVariable [QGVAR(effects), nil];
 }] call CBA_fnc_addEventHandler;
 
+// Ammo box damage handling
 ["ReammoBox_F", "init", {
-    (_this select 0) addEventHandler ["HandleDamage", {
-        if ((_this select 0) getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmobox)]) then {
-            _this call FUNC(handleDamageBox);
-        };
-    }];
-}, nil, nil, true] call CBA_fnc_addClassEventHandler;
+    // Calling this function inside curly brackets allows the usage of "exitWith", which would be broken with "HandleDamage" otherwise
+    (_this select 0) addEventHandler ["HandleDamage", {_this call FUNC(handleDamageBox)}];
+}, true, [], true] call CBA_fnc_addClassEventHandler;
 
-// secondary explosions
-["AllVehicles", "killed", {
+// Vehicle ammo cook-off (secondary explosions)
+["AllVehicles", "Killed", {
+    if (!GVAR(enableAmmoCookoff) || {GVAR(ammoCookoffDuration) == 0}) exitWith {};
+
     params ["_vehicle", "", "", "_useEffects"];
-    if (
-        _useEffects &&
-        _vehicle getVariable [QGVAR(enableAmmoCookoff), GVAR(enableAmmoCookoff)]
-    ) then {
-        if (GVAR(ammoCookoffDuration) == 0) exitWith {};
-        ([_vehicle] call FUNC(getVehicleAmmo)) params ["_mags", "_total"];
 
-        private _delay = (random MAX_AMMO_DETONATION_START_DELAY) max MIN_AMMO_DETONATION_START_DELAY;
-        [FUNC(detonateAmmunition), [_vehicle, _mags, _total], _delay] call CBA_fnc_waitAndExecute;
+    if (_useEffects && {_vehicle getVariable [QGVAR(enableAmmoCookoff), true]}) then {
+        // We don't need to pass source and instigator, as vehicle is already dead
+        [QGVAR(detonateAmmunitionServer), [
+            _vehicle,
+            false,
+            objNull,
+            objNull,
+            random [MIN_AMMO_DETONATION_START_DELAY, (MIN_AMMO_DETONATION_START_DELAY + MAX_AMMO_DETONATION_START_DELAY) / 2, MAX_AMMO_DETONATION_START_DELAY]
+        ]] call CBA_fnc_serverEvent;
     };
-}, nil, ["Man","StaticWeapon"]] call CBA_fnc_addClassEventHandler;
+}, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to exclude animals as well
 
 if (hasInterface) then {
     // Plays a sound locally, so that different sounds can be used for various distances
@@ -68,7 +69,7 @@ if (hasInterface) then {
 
         private _distance = _object distance (positionCameraToWorld [0, 0, 0]);
 
-        TRACE_3("",_object,_sound,_maxDistance);
+        TRACE_2("",_object,_sound);
 
         // 3 classes of distances: close, mid and far, each having different sound files
         private _classDistance = switch (true) do {
@@ -94,6 +95,6 @@ if (hasInterface) then {
         if (!fileExists _sound) exitWith {};
 
         // Obeys speed of sound and takes doppler effects into account
-        playSound3D [_sound, objNull, insideBuilding _object >= 0.5, getPosASL _object, _volume, _pitch + (random 0.2) - 0.1, _maxDistance, 0, true];
+        playSound3D [_sound, objNull, false, getPosASL _object, _volume, _pitch + (random 0.2) - 0.1, _maxDistance, 0, true];
     }] call CBA_fnc_addEventHandler;
 };

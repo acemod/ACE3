@@ -27,14 +27,12 @@ private _filteredMags = magazinesAmmoFull _player select {
 
 //select magazine with most ammo
 private _magToPass = _filteredMags select 0;
-private _magToPassIndex = 0;
 {
     _x params ["_className", "_ammoCount"];
     if (_ammoCount > (_magToPass select 1)) then {
         _magToPass = _x;
-        _magToPassIndex = _forEachIndex;
     };
-} foreach _filteredMags;
+} forEach _filteredMags;
 
 //remove the magazine from _player and add it to _target
 _magToPass params ["_magToPassClassName", "_magToPassAmmoCount"];

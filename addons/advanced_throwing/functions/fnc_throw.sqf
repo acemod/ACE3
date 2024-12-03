@@ -20,7 +20,7 @@ TRACE_1("params",_unit);
 
 // Prime the throwable if it hasn't been cooking already
 // Next to proper simulation this also has to happen before delay for orientation of the throwable to be set
-if (!(_unit getVariable [QGVAR(primed), false])) then {
+if !(_unit getVariable [QGVAR(primed), false]) then {
     [_unit] call FUNC(prime);
 };
 
@@ -50,7 +50,7 @@ if (!(_unit getVariable [QGVAR(primed), false])) then {
     };
 
     // Calculate torque of thrown grenade
-    private _config = configFile >> "CfgAmmo" >> typeOf _activeThrowable;
+    private _config = configOf _activeThrowable;
     private _torqueDir = getArray (_config >> QGVAR(torqueDirection));
     _torqueDir = if (_torqueDir isEqualTypeArray [0,0,0]) then { vectorNormalized _torqueDir } else { [0,0,0] };
     private _torqueMag = getNumber (_config >> QGVAR(torqueMagnitude));
@@ -89,7 +89,7 @@ GVAR(flightPath) = [];
 GVAR(flightRotation) = [];
 (_unit getVariable QGVAR(activeThrowable)) spawn {
     while {!isNull _this && {(getPosATL _this) select 2 > 0.05}} do {
-        GVAR(flightPath) pushBack [ASLtoAGL (getPosASL _this), vectorUp _this];
+        GVAR(flightPath) pushBack [ASLToAGL (getPosASL _this), vectorUp _this];
         sleep 0.05;
     };
 };
