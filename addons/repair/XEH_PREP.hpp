@@ -9,6 +9,7 @@ PREP(canRepair);
 PREP(canRepairTrack);
 PREP(canReplaceTrack);
 PREP(canReplaceWheel);
+PREP(canFullRepair);
 PREP(doFullRepair);
 PREP(doPatchWheelProgress);
 PREP(doRemoveTrack);
