@@ -85,7 +85,7 @@ The Gurney constant for explosive force. You can find a list of common explosive
 
 The velocity shape factor for the explosive configuration. You should choose it based on the general configuration of explosives/metal in the warhead. Most grenades for example are a sphere. Artillery and aircraft bombs are a cylinder. Mines generally a flat plate. Below is a list of the three common shapes and their factors.
 
-| Shape    | Factor |
+| Shape    | Velocity Factor |
 | -------- | ------ |
 | Sphere   | 3/5    |
 | Cylinder | 1/2    |
