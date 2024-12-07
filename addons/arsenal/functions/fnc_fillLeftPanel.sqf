@@ -94,7 +94,7 @@ private _selectedItem = if (_idxVirt != -1) then { // Items
                 _lbAdd = _ctrlPanel lbAdd _displayName;
                 _ctrlPanel lbSetData [_lbAdd, _x];
                 _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _x]];
-                _ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture] select GVAR(enableModIcons)];
+                _ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture, ""] select GVAR(enableModIcons)];
             } forEach GVAR(faceCache); // HashMap, not array
 
             GVAR(currentFace)

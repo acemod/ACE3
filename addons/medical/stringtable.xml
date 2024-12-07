@@ -108,7 +108,7 @@
             <Portuguese>Controla o efeito de uso de talas para tratar fraturas.\nQuando desabilitado, ferimentos não causam fraturas.</Portuguese>
             <Russian>Управляет эффектом использования шин для лечения переломов.\nПри отключении травмы не вызывают переломов.</Russian>
             <German>Kontrolliert den Effekt wenn Schienen verwendet werden, um Knochenbrüche zu behandeln.\nWenn diese Einstellung nicht aktiviert ist, verursachen Verletzungen keine Knochenbrüche.</German>
-            <Korean>부목이 골절을 어떻게 치료할 지 결정합니다\n비활성화 시 골절이 일어나지 않습니다.</Korean>
+            <Korean>부목이 골절을 어떻게 치료할 지 결정합니다.\n비활성화 시 골절이 일어나지 않습니다.</Korean>
             <Japanese>骨折の治療に添え木を使用した際の効果を設定します。\n無効にすると、骨折しません。</Japanese>
             <Chinese>控制是否讓固定版能夠治療骨折。\n當停用時，受傷時不會導致骨折發生。</Chinese>
             <Chinesesimp>控制是否让固定板能够治疗骨折。 \n当停用时，受伤时不会导致骨折发生。</Chinesesimp>
@@ -266,7 +266,7 @@
             <Portuguese>Selecione quais unidades o sistema médico avançado será habilitado</Portuguese>
             <Russian>Выберите, на кого будет распространяться усложненная система медицины</Russian>
             <German>Wähle aus, welche Einheiten unter das erweiterte Sanitätssystem fallen</German>
-            <Korean>어느 인원에게 고급 의료 시스템을 적용시킬지 선택하십시요.</Korean>
+            <Korean>어느 인원에게 고급 의료 시스템을 적용시킬지 선택하십시오.</Korean>
             <Japanese>選択されたユニットが、高度な医療システムを使えるようになります</Japanese>
             <Chinese>選擇進階醫療系統影響的對象</Chinese>
             <Chinesesimp>选择进阶医疗系统影响的物体</Chinesesimp>
@@ -300,7 +300,7 @@
             <Portuguese>As unidades recebem dano de uma batida de veículo?</Portuguese>
             <Russian>Должны ли юниты получать повреждения от аварий на транспорте?</Russian>
             <German>Verursacht ein Fahrzeugunfall Verletzungen</German>
-            <Korean>차량 사고시 인원들이 부상을 입습니까?</Korean>
+            <Korean>차량 사고 시 인원들이 부상을 입습니까?</Korean>
             <Japanese>ユニットが車両の衝突による負傷を受けるようにしますか?</Japanese>
             <Chinese>設定人員是否會因為載具衝撞別的物件而產生傷害?</Chinese>
             <Chinesesimp>设定人员是否会因为载具冲撞别的物体而产生伤害？</Chinesesimp>
@@ -366,7 +366,7 @@
             <Portuguese>Estável</Portuguese>
             <Russian>После стабилизации</Russian>
             <German>Stabil</German>
-            <Korean>안정된</Korean>
+            <Korean>안정됨</Korean>
             <Japanese>安定下</Japanese>
             <Chinese>穩定狀態下</Chinese>
             <Chinesesimp>稳定状态下</Chinesesimp>
