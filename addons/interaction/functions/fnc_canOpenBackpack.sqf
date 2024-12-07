@@ -4,8 +4,8 @@
  * Checks if the player can open a unit's backpack.
  *
  * Arguments:
- * 0: Player <OBJECT>
- * 1: Target <OBJECT>
+ * 0: Target <OBJECT>
+ * 1: Player <OBJECT>
  *
  * Return Value:
  * None
@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params ["_player", "_target"];
+params ["_target", "_player"];
 
 private _backpackContainer = backpackContainer _target;
 
