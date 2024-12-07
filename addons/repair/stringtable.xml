@@ -496,7 +496,7 @@
             <Portuguese>Aviônica</Portuguese>
             <Russian>Авионику</Russian>
             <German>Avionik</German>
-            <Korean>항공 전자</Korean>
+            <Korean>항공 전자 기기</Korean>
             <Japanese>アビオニクス</Japanese>
             <Chinese>航電系統</Chinese>
             <Chinesesimp>航电系统</Chinesesimp>
@@ -512,7 +512,7 @@
             <Portuguese>Carroceria</Portuguese>
             <Russian>Кузов</Russian>
             <German>Fahrgestell</German>
-            <Korean>몸체</Korean>
+            <Korean>차체</Korean>
             <Japanese>車体</Japanese>
             <Chinese>車身</Chinese>
             <Chinesesimp>车身</Chinesesimp>
@@ -664,7 +664,7 @@
             <Portuguese>Estabilizador Horizontal Esquerdo</Portuguese>
             <Russian>Левый горизонтальный стабилизатор</Russian>
             <German>Linkes Höhenleitwerk</German>
-            <Korean>왼쪽 수평안정판</Korean>
+            <Korean>왼쪽 수평안정기</Korean>
             <Japanese>左側水平安定装置</Japanese>
             <Chinese>左側懸掛穩定</Chinese>
             <Chinesesimp>左侧悬挂稳定</Chinesesimp>
@@ -680,7 +680,7 @@
             <Portuguese>Estabilizador Horizontal Direito</Portuguese>
             <Russian>Правый горизонтальный стабилизатор</Russian>
             <German>Rechtes Höhenleitwerk</German>
-            <Korean>오른쪽 수평안정판</Korean>
+            <Korean>오른쪽 수평안정기</Korean>
             <Japanese>右側水平安定装置</Japanese>
             <Chinese>右側懸掛穩定</Chinese>
             <Chinesesimp>右侧悬挂稳定</Chinesesimp>
@@ -713,7 +713,7 @@
             <Portuguese>Roda Traseira Esquerda</Portuguese>
             <Russian>Левое заднее колесо</Russian>
             <German>Linkes Hinterrad</German>
-            <Korean>왼쪽 뒤쪽 바퀴</Korean>
+            <Korean>왼쪽 뒷바퀴</Korean>
             <Japanese>左後輪</Japanese>
             <Chinese>左後輪</Chinese>
             <Chinesesimp>左后轮</Chinesesimp>
@@ -729,7 +729,7 @@
             <Portuguese>Segunda Roda Dianteira Esquerda</Portuguese>
             <Russian>Второе переднее левое колесо</Russian>
             <German>Zweites linkes Vorderrad</German>
-            <Korean>왼쪽 두번째 바퀴</Korean>
+            <Korean>왼쪽 두 번째 앞바퀴</Korean>
             <Japanese>左第二前輪</Japanese>
             <Chinese>第二左前輪</Chinese>
             <Chinesesimp>第二左前轮</Chinesesimp>
@@ -842,7 +842,7 @@
             <Portuguese>Tubo de Pitot</Portuguese>
             <Russian>Кокпит</Russian>
             <German>Pitotrohr</German>
-            <Korean>동압관</Korean>
+            <Korean>피토관</Korean>
             <Japanese>ピトー管</Japanese>
             <Chinese>空速管</Chinese>
             <Chinesesimp>空速管</Chinesesimp>
@@ -858,7 +858,7 @@
             <Portuguese>Roda Traseira Direita</Portuguese>
             <Russian>Правое заднее колесо</Russian>
             <German>Rechtes Hinterrad</German>
-            <Korean>오른쪽 뒤쪽 바퀴</Korean>
+            <Korean>오른쪽 뒷바퀴</Korean>
             <Japanese>右後輪</Japanese>
             <Chinese>右後輪</Chinese>
             <Chinesesimp>右后轮</Chinesesimp>
@@ -874,7 +874,7 @@
             <Portuguese>Segunda Roda Dianteira Direita</Portuguese>
             <Russian>Второе правое переднее колесо</Russian>
             <German>Zweites rechtes Vorderrad</German>
-            <Korean>오른쪽 두번째 바퀴</Korean>
+            <Korean>오른쪽 두 번째 앞바퀴</Korean>
             <Japanese>右第二前輪</Japanese>
             <Chinese>第二右前輪</Chinese>
             <Chinesesimp>第二右前轮</Chinesesimp>
@@ -955,7 +955,7 @@
             <Portuguese>Arranque</Portuguese>
             <Russian>Стартер</Russian>
             <German>Anlasser</German>
-            <Korean>점화기</Korean>
+            <Korean>시동 장치</Korean>
             <Japanese>スターター</Japanese>
             <Chinese>發動機</Chinese>
             <Chinesesimp>发动机</Chinesesimp>
@@ -1035,7 +1035,7 @@
             <Portuguese>Rotor de Cauda</Portuguese>
             <Russian>Рулевой винт</Russian>
             <German>Heckrotor</German>
-            <Korean>꼬리 로터</Korean>
+            <Korean>테일 로터</Korean>
             <Japanese>テールローター</Japanese>
             <Chinese>尾槳</Chinese>
             <Chinesesimp>尾桨</Chinesesimp>
@@ -1052,7 +1052,7 @@
             <Portuguese>Estabilizador Vertical</Portuguese>
             <Russian>Вертикальный стабилизатор</Russian>
             <German>Seitenleitwerk</German>
-            <Korean>수직 안정판</Korean>
+            <Korean>수직안정기</Korean>
             <Japanese>垂直安定装置</Japanese>
             <Chinese>垂直穩定</Chinese>
             <Chinesesimp>垂直稳定</Chinesesimp>
@@ -1485,7 +1485,7 @@
             <Portuguese>Mostra uma notificação quando você repara um veículo</Portuguese>
             <Russian>Отображать оповещение каждый раз, когда вы ремонтируете транспорт</Russian>
             <German>Zeige eine Nachricht, wann immer du ein Fahrzeug reparierst</German>
-            <Korean>수리시 화면에 글자로 알림이 뜹니다</Korean>
+            <Korean>수리 시 화면에 글자로 알림이 뜹니다</Korean>
             <Japanese>車両の修理を始めると、画面に通知を出します</Japanese>
             <Chinese>每當維修載具時顯示通知</Chinese>
             <Chinesesimp>每当维修载具时显示通知</Chinesesimp>
@@ -1500,7 +1500,7 @@
             <Portuguese>Mostrar texto quando reparar</Portuguese>
             <Russian>Отображать текст при ремонте</Russian>
             <German>Zeige Text bei Reperatur an</German>
-            <Korean>수리시 화면에 글자 표시</Korean>
+            <Korean>수리 시 화면에 글자 표시</Korean>
             <Japanese>修理時に文章で通知する</Japanese>
             <Chinese>顯示維修文本</Chinese>
             <Chinesesimp>显示维修文本</Chinesesimp>
@@ -2266,7 +2266,7 @@
             <Portuguese>Instalação e veículo de reparo</Portuguese>
             <Russian>Только у ремонтного транспорта или ремонтных сооружений</Russian>
             <German>Reperatureinrichtung oder Reperaturfahrzeug</German>
-            <Korean>수리 시설혹은 차량</Korean>
+            <Korean>수리 시설 혹은 차량</Korean>
             <Japanese>修理施設または車両のみ</Japanese>
             <Chinese>維修設施或載具旁</Chinese>
             <Chinesesimp>维修设施或载具旁</Chinesesimp>
