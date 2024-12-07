@@ -4,14 +4,14 @@
  * Checks if the player can open a unit's backpack.
  *
  * Arguments:
- * 0: Target <OBJECT>
- * 1: Player <OBJECT>
+ * 0: Player <OBJECT>
+ * 1: Target <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [cursorObject, player] call ace_interaction_fnc_canOpenBackpack
+ * [player, cursorObject] call ace_interaction_fnc_canOpenBackpack
  *
  * Public: No
  */
