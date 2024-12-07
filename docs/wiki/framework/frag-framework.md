@@ -30,7 +30,7 @@ class CfgAmmo {
         ace_frag_metal = 210;  // Amount of metal being fragmented (grams) - information below
         ace_frag_charge = 185;  // Amount of explosive filler (grams) - information below
         ace_frag_gurney_c = 2843;  // Gurney velocity constant for explosive type - information below
-        ace_frag_gurney_k = 3/5;  // Gurney shape factor - information below
+        ace_frag_gurney_k = 3/5;  // Gurney velocity shape factor - information below
         ace_frag_classes[] = {"ACE_frag_large"};  // Type of fragments - information below
         ace_frag_skip = 0;  // (Optional) Skip fragmentation for this ammo type (0-disabled, 1-enabled) - information below
         ace_frag_force = 1;  // (Optional) Force fragmentation system (0-disabled, 1-enabled) - information below
@@ -79,13 +79,13 @@ The Gurney constant for explosive force. You can find a list of common explosive
 
 †A rule of thumb from literature is that the Gurney constant is given as 0.338 times the detonation velocity.
 
-### 2.4 Gurney shape factor
+### 2.4 Gurney velocity shape factor
 
 `ace_frag_gurney_k`
 
-The shape factor for the explosive configuration. You should choose it based on the general configuration of explosives/metal in the warhead. Most grenades for example are a sphere. Artillery and aircraft bombs are a cylinder. Mines generally a flat plate. Below is a list of the three common shapes and their factors.
+The velocity shape factor for the explosive configuration. You should choose it based on the general configuration of explosives/metal in the warhead. Most grenades for example are a sphere. Artillery and aircraft bombs are a cylinder. Mines generally a flat plate. Below is a list of the three common shapes and their factors.
 
-| Shape    | Factor |
+| Shape    | Velocity Factor |
 | -------- | ------ |
 | Sphere   | 3/5    |
 | Cylinder | 1/2    |
