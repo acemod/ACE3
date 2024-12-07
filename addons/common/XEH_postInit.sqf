@@ -483,14 +483,29 @@ GVAR(isReloading) = false;
 
     if (!GVAR(isReloading)) exitWith {};
 
+    GVAR(magazineReloadPhase) = 0;
+
     // Wait until reload animation has finished (if weapon is no longer available, it returns -1)
     [{
-        ((_this select 0) weaponState (_this select 1)) select 6 <= 0
+        private _magazineReloadingPhase = ((_this select 0) weaponState (_this select 1)) select 6;
+
+        // Need to check the reloading phase, as if you interrupt reloading with a gesture, the phase will remain stuck at a value > 0
+        if (GVAR(magazineReloadPhase) == _magazineReloadingPhase) exitWith {
+            TRACE_2("Interrupted magazine reloading",_this select 0,_this select 1);
+
+            true
+        };
+
+        GVAR(magazineReloadPhase) = _magazineReloadingPhase;
+
+        _magazineReloadingPhase <= 0
     }, {
-        // Player might switch units again before reload finishes
+        TRACE_2("End magazine reloading",_this select 0,_this select 1);
+
+        // Player might switch units before reload finishes
         if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
 
-        GVAR(isReloading) = false
+        GVAR(isReloading) = false;
     }, [_newPlayer, _weaponState select 1]] call CBA_fnc_waitUntilAndExecute;
 }, true] call CBA_fnc_addPlayerEventHandler;
 
