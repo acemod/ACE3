@@ -99,6 +99,10 @@ if (_removeAmmoDuringCookoff) then {
         };
         // Inventory magazines
         case (_magazineInfo isEqualTo false): {
+            if (!alive _object) exitWith {
+                TRACE_1("clearing cargo mags from dead object",alive _object);
+                clearMagazineCargoGlobal _object;
+            };
             // Remove selected magazine
             _object addMagazineAmmoCargo [_magazineClassname, -1, _ammoCount];
 

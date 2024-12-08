@@ -43,7 +43,7 @@ _object setVariable [QGVAR(isAmmoDetonating), true, true];
 _object setVariable [QGVAR(virtualMagazines), nil];
 
 // Save the vehicle's ammo, so it won't be removed during cook-off
-if (!GVAR(removeAmmoDuringCookoff)) then {
+if (!alive _object || !GVAR(removeAmmoDuringCookoff)) then {
     _object setVariable [QGVAR(cookoffMagazines), [_object, true] call FUNC(getVehicleAmmo)];
 };
 

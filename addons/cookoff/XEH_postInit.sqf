@@ -1,5 +1,7 @@
 #include "script_component.hpp"
 
+GVAR(flareHash) = createHashMap;
+
 [QGVAR(cookOffBoxLocal), LINKFUNC(cookOffBoxLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(cookOffLocal), LINKFUNC(cookOffLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(engineFireLocal), LINKFUNC(engineFireLocal)] call CBA_fnc_addEventHandler;
