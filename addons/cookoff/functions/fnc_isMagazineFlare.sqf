@@ -15,12 +15,10 @@
  * Public: No
  */
 
-GVAR(flareHash) getOrDefaultCall [_this, {
-
 params ["_magazine"];
 
-private _configAmmo = configFile >> "CfgAmmo" >> getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
+GVAR(flareHash) getOrDefaultCall [_magazine, {
+    private _configAmmo = configFile >> "CfgAmmo" >> getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
 
-getNumber (_configAmmo >> "intensity") != 0 || {getNumber (_configAmmo >> QEGVAR(grenades,flare)) == 1}
-
+    getNumber (_configAmmo >> "intensity") != 0 || {getNumber (_configAmmo >> QEGVAR(grenades,flare)) == 1}
 }, true]
