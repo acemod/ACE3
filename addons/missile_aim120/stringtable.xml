@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="MISSILE_AIM120">
+        <Key ID="STR_ACE_MISSILE_AIM120_a">
+            <English>AIM-120A [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_a_1x">
+            <English>1x AIM-120A [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_aim120">
+            <English>AIM-120 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_c">
+            <English>AIM-120C [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_c_1x">
+            <English>1x AIM-120C [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_c_2x">
+            <English>2x AIM-120C [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_d">
+            <English>AIM-120D [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_d_1x">
+            <English>1x AIM-120D [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_d_2x">
+            <English>2x AIM-120D [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_direct">
+            <English>Direct</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_loft">
+            <English>Loft</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_r77">
+            <English>R-77 [ACE]</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_r77_1x">
+            <English>1x R-77 [ACE]</English>
+        </Key>
+    </Package>
+</Project>
