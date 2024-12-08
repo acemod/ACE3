@@ -35,8 +35,8 @@ private _explosivesList = [];
 
             // Prevent consolidated detonate actions from having the same icon as consolidated place actions of the same explosive type
             private _icon = if (
-                EGVAR(interact_menu,consolidateSingleChild) && 
-                {_detonator == GVAR(activeTrigger)} && 
+                EGVAR(interact_menu,consolidateSingleChild) &&
+                {_detonator == GVAR(activeTrigger)} &&
                 {count (_result select {(_x select 4) == getText (_detonatorConfig >> QGVAR(triggerType))}) < 2}
             ) then {
                 getText (_detonatorConfig >> "picture")
