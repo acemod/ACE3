@@ -101,6 +101,10 @@ class CfgVehicles {
         EGVAR(refuel,fuelCapacity) = 360;
     };
 
+    class RHS_BM21_MSV_01: RHS_Ural_BaseTurret {
+        EGVAR(overpressure,noReflection) = 1;
+    };
+
     class RHS_Ural_Base: RHS_Ural_BaseTurret {};
     class RHS_Ural_MSV_Base: RHS_Ural_Base {};
     class RHS_Ural_Support_MSV_Base_01: RHS_Ural_MSV_Base {};
