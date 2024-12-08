@@ -25,3 +25,4 @@ if !(alive _this) exitWith {false};
     ((_fractures select 4) == 1) || {(_fractures select 5) == 1}
 }
 || { GET_TOURNIQUETS(_this) isNotEqualTo DEFAULT_TOURNIQUET_VALUES }
+|| {GET_BLOOD_VOLUME(_this) < BLOOD_VOLUME_CLASS_2_HEMORRHAGE}
