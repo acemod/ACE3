@@ -19,8 +19,10 @@ params ["_unit"];
 
 if (!GVAR(enabled)) exitWith {currentZeroing _unit};
 
-private _weaponIndex = [_unit, currentWeapon _unit] call EFUNC(common,getWeaponIndex);
+private _currentWeapon = currentWeapon _unit;
+private _weaponIndex = [_unit, _currentWeapon] call EFUNC(common,getWeaponIndex);
 if (_weaponIndex < 0) exitWith { currentZeroing _unit };
+
 if (GVAR(simplifiedZeroing)) exitWith {
     if !(GVAR(canAdjustElevation) select _weaponIndex) exitWith {currentZeroing _unit};
     private _adjustment = _unit getVariable [QGVAR(Adjustment), [[0, 0, 0], [0, 0, 0], [0, 0, 0]]];
@@ -40,8 +42,7 @@ private _opticConfig = if (_optic != "") then {
     if (_local) then {
         (configFile >> "CfgWeapons" >> (GVAR(Guns) select _weaponIndex))
     } else {
-        private _gun = currentWeapon _unit;
-        (configFile >> "CfgWeapons" >> _gun)
+        (configFile >> "CfgWeapons" >> _currentWeapon)
     };
 };
 
