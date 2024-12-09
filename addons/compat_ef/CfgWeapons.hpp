@@ -25,4 +25,13 @@ class CfgWeapons {
     class EF_H_MCH_FullCamo_Des: EF_H_MCH {
         HEARING_PROTECTION_PELTOR;
     };
+
+    // -- ace_overpressure --
+    class autocannon_30mm;
+    class EF_autocannon_50mm_AAV9: autocannon_30mm {
+        EGVAR(overpressure,priority) = 1;
+        EGVAR(overpressure,angle) = 90;
+        EGVAR(overpressure,range) = 5;
+        EGVAR(overpressure,damage) = 0.3;
+    };
 };
