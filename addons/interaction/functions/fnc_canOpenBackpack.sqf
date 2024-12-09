@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [player, cursorObject] call ace_interaction_fnc_canOpenBackpack
+ * [cursorObject, player] call ace_interaction_fnc_canOpenBackpack
  *
  * Public: No
  */
