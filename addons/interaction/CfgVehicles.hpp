@@ -255,7 +255,7 @@ class CfgVehicles {
                 displayName = "$STR_ACTION_OPEN_BAG";
                 position = QUOTE(call DFUNC(getBackpackPos));
                 distance = 3.0;
-                condition = QUOTE([ARR_2(_target,_player)] call DFUNC(canOpenBackpack));
+                condition = QUOTE(call DFUNC(canOpenBackpack));
                 statement = QUOTE(_player action [ARR_2('OpenBag',_target)]);
                 modifierFunction = QUOTE(call FUNC(modifyOpenBackpackAction));
                 exceptions[] = {"isNotSwimming"};
