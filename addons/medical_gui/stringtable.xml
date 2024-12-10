@@ -786,6 +786,51 @@
             <Chinesesimp>没有呼吸</Chinesesimp>
             <Turkish>Solunum yok</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_Neck">
+            <English>Neck</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Chest">
+            <English>Chest</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Torso">
+            <English>Torso</English>
+            <German>Torso</German>
+            <Russian>Торс</Russian>
+            <French>Torse</French>
+            <Polish>Tors</Polish>
+            <Portuguese>Torso</Portuguese>
+            <Czech>Trup</Czech>
+            <Spanish>Torso</Spanish>
+            <Italian>Torso</Italian>
+            <Japanese>胴体</Japanese>
+            <Korean>몸통</Korean>
+            <Chinesesimp>躯干</Chinesesimp>
+            <Chinese>身體</Chinese>
+            <Turkish>Gövde</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_LeftArm">
+            <English>Lower Left Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_LeftUpperArm">
+            <English>Upper Left Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_RightArm">
+            <English>Lower Right Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_RightUpperArm">
+            <English>Upper Right Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_LeftLeg">
+            <English>Lower Left Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_LeftUpperLeg">
+            <English>Upper Left Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_RightLeg">
+            <English>Lower Right Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_RightUpperLeg">
+            <English>Upper Right Leg</English>
         <Key ID="STR_ACE_Medical_GUI_OVERVIEW">
             <English>OVERVIEW</English>
             <Czech>PŘEHLED</Czech>
@@ -882,6 +927,51 @@
             <Chinesesimp>有未完全处理的 %1 伤口</Chinesesimp>
             <Turkish>% 1 Yarım Açık yara var</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectNeck">
+            <English>Select Neck</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectTorso">
+            <English>Select Torso</English>
+            <German>Wähle Torso</German>
+            <Russian>Выбрать торс</Russian>
+            <Spanish>Seleccionar Torso</Spanish>
+            <French>Sélectionner le torse</French>
+            <Polish>Wybierz tors</Polish>
+            <Portuguese>Selecionar Torso</Portuguese>
+            <Czech>Vybrat Trup</Czech>
+            <Italian>Seleziona Torso</Italian>
+            <Japanese>胴体を選択</Japanese>
+            <Korean>몸통 선택</Korean>
+            <Chinesesimp>选择躯干</Chinesesimp>
+            <Chinese>選擇身體</Chinese>
+            <Turkish>Gövdeyi Seç</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectChest">
+            <English>Select Chest</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectLeftArm">
+            <English>Select Lower Left Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectUpperLeftArm">
+            <English>Select Upper Left Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectRightArm">
+            <English>Select Lower Right Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectRightUpperArm">
+            <English>Select Upper Right Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectLeftLeg">
+            <English>Select Lower Left Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectLeftUpperLeg">
+            <English>Select Upper Left Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectRightLeg">
+            <English>Select Lower Right Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectRightUpperLeg">
+            <English>Select Upper Right Leg</English>
         <Key ID="STR_ACE_Medical_GUI_PartialX">
             <English>Partial %1</English>
             <Czech>Parciální %1</Czech>

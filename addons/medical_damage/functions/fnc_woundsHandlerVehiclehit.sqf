@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Pterolatypus, LinkIsGrim
- * Custom wound handler for vehicle hits and explosions, sends damage to a random hitpoint
+ * Custom wound handler for vehicle hits and vehicleexplosions, sends damage to a random hitpoint
  *
  * Arguments:
  * 0: Unit That Was Hit <OBJECT>

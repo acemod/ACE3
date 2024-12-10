@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Interaction">
+        <Key ID="STR_ACE_Interaction_DisplayName">
+            <English>Interaction</English>
+            <German>Interaktion</German>
+            <Italian>Interazione</Italian>
+            <Chinese>互動</Chinese>
+            <Chinesesimp>互动菜单</Chinesesimp>
+            <Japanese>インタラクション</Japanese>
+            <Korean>상호작용</Korean>
+            <Polish>Interakcja</Polish>
+            <Russian>Взаимодействие</Russian>
+            <Portuguese>Interação</Portuguese>
+            <French>Interaction</French>
+            <Czech>Interakce</Czech>
+            <Spanish>Interacción</Spanish>
+            <Turkish>Etkileşim</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_MainAction">
+            <English>Interactions</English>
+            <German>Interaktionen</German>
+            <Spanish>Interacciones</Spanish>
+            <Czech>Interakce</Czech>
+            <Polish>Interakcje</Polish>
+            <French>Interactions</French>
+            <Russian>Взаимодействия</Russian>
+            <Hungarian>Cselekvések</Hungarian>
+            <Italian>Interazioni</Italian>
+            <Portuguese>Interações</Portuguese>
+            <Japanese>インタラクション</Japanese>
+            <Korean>상호작용</Korean>
+            <Chinesesimp>互动</Chinesesimp>
+            <Chinese>互動</Chinese>
+            <Turkish>Etkileşimler</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Torso">
+            <English>Torso</English>
+            <French>Torse</French>
+            <German>Torso</German>
+            <Spanish>Torso</Spanish>
+            <Czech>Trup</Czech>
+            <Polish>Tors</Polish>
+            <Russian>Торс</Russian>
+            <Hungarian>Testtörzs</Hungarian>
+            <Italian>Torso</Italian>
+            <Portuguese>Torso</Portuguese>
+            <Japanese>胴体</Japanese>
+            <Korean>몸통</Korean>
+            <Chinesesimp>身体</Chinesesimp>
+            <Chinese>身體</Chinese>
+            <Turkish>Gövde</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Chest">
+            <English>Chest</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Head">
+            <English>Head</English>
+            <French>Tête</French>
+            <German>Kopf</German>
+            <Spanish>Cabeza</Spanish>
+            <Czech>Hlava</Czech>
+            <Polish>Głowa</Polish>
+            <Russian>Голова</Russian>
+            <Hungarian>Fej</Hungarian>
+            <Italian>Testa</Italian>
+            <Portuguese>Cabeça</Portuguese>
+            <Japanese>頭部</Japanese>
+            <Korean>머리</Korean>
+            <Chinesesimp>头部</Chinesesimp>
+            <Chinese>頭部</Chinese>
+            <Turkish>Kafa</Turkish>
+        </Key>
         <Key ID="STR_ACE_Interaction_ArmLeft">
             <English>Left Arm</English>
             <Czech>Levá paže</Czech>
@@ -18,6 +88,9 @@
             <Turkish>Sol Kol</Turkish>
             <Hungarian>Bal kar</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Interaction_ArmUpperLeft">
+            <English>Upper Left Arm</English>
+        </Key>
         <Key ID="STR_ACE_Interaction_ArmRight">
             <English>Right Arm</English>
             <Czech>Pravá paže</Czech>
@@ -34,6 +107,66 @@
             <Chinesesimp>右手</Chinesesimp>
             <Turkish>Sağ Kol</Turkish>
             <Hungarian>Jobb kar</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Interaction_ArmUpperRight">
+            <English>Upper Right Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_LegLeft">
+            <English>Left Leg</English>
+            <German>Linkes Bein</German>
+            <Spanish>Pierna izquierda</Spanish>
+            <Czech>Levá noha</Czech>
+            <Polish>Lewa noga</Polish>
+            <French>Jambe gauche</French>
+            <Russian>Левая нога</Russian>
+            <Hungarian>Bal láb</Hungarian>
+            <Italian>Gamba sinistra</Italian>
+            <Portuguese>Perna Esquerda</Portuguese>
+            <Japanese>左足</Japanese>
+            <Korean>왼다리</Korean>
+            <Chinesesimp>左脚</Chinesesimp>
+            <Chinese>左腳</Chinese>
+            <Turkish>Sol Bacak</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_LegUpperLeft">
+            <English>Upper Left Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_LegRight">
+            <English>Right Leg</English>
+            <German>Rechtes Bein</German>
+            <Spanish>Pierna derecha</Spanish>
+            <Czech>Pravá noha</Czech>
+            <Polish>Prawa noga</Polish>
+            <French>Jambe droite</French>
+            <Russian>Правая нога</Russian>
+            <Hungarian>Jobb láb</Hungarian>
+            <Italian>Gamba destra</Italian>
+            <Portuguese>Perna Direita</Portuguese>
+            <Japanese>右足</Japanese>
+            <Korean>오른다리</Korean>
+            <Chinesesimp>右脚</Chinesesimp>
+            <Chinese>右腳</Chinese>
+            <Turkish>Sağ Bacak</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Interaction_LegUpperRight">
+            <English>Upper Right Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_Weapon">
+            <English>Weapon</English>
+            <French>Arme</French>
+            <German>Waffe</German>
+            <Spanish>Arma</Spanish>
+            <Czech>Zbraň</Czech>
+            <Polish>Broń</Polish>
+            <Russian>Оружие</Russian>
+            <Hungarian>Fegyver</Hungarian>
+            <Italian>Arma</Italian>
+            <Portuguese>Arma</Portuguese>
+            <Japanese>武器</Japanese>
+            <Korean>무기</Korean>
+            <Chinesesimp>武器</Chinesesimp>
+            <Chinese>武器</Chinese>
+            <Turkish>Silah</Turkish>
         </Key>
         <Key ID="STR_ACE_Interaction_AssignTeamBlue">
             <English>Assign Blue</English>
