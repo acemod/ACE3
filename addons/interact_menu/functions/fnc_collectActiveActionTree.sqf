@@ -28,7 +28,7 @@ private _player = ACE_player;
 if ((_origActionData select 10) isNotEqualTo {}) then {
     // It should, so make a copy and pass it to the modifierFunction
     _origActionData = +_origActionData;
-    private _actionParams = _origActionData select 6;
+    private _actionParams = _origActionData select 6; // Define _actionParams so its accessible within the statement/condition
     [_target, ACE_player, _actionParams, _origActionData] call (_origActionData select 10);
 };
 
