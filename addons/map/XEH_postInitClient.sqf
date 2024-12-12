@@ -65,22 +65,15 @@ GVAR(flashlights) = createHashMap;
 // hide clock on map if player has no watch
 GVAR(hasWatch) = true;
 
-[QGVAR(slotItemChanged), "SlotItemChanged", {
-    params ["", "_item", "_slot", "_assign"];
-
-    if (_slot != TYPE_WATCH) exitWith {};
-
-    GVAR(hasWatch) = _assign && {_item isKindOf ["ItemWatch", configFile >> "CfgWeapons"]};
-}] call CBA_fnc_addBISPlayerEventHandler;
-
-["unit", {
-    params ["_newPlayer"];
-
-    if (isNull _newPlayer) exitWith {
+["loadout", {
+    params ["_unit"];
+    if (isNull _unit) exitWith {
         GVAR(hasWatch) = true;
     };
-
-    GVAR(hasWatch) = (_newPlayer getSlotItemName TYPE_WATCH) isKindOf ["ItemWatch", configFile >> "CfgWeapons"];
+    GVAR(hasWatch) = false;
+    {
+        if (_x isKindOf ["ItemWatch", configFile >> "CfgWeapons"]) exitWith {GVAR(hasWatch) = true;};
+    } forEach (assignedItems _unit);
 }, true] call CBA_fnc_addPlayerEventHandler;
 
 

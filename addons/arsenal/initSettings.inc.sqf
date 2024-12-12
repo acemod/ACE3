@@ -10,10 +10,10 @@ private _category = LLSTRING(settingCategory);
 
 [
     QGVAR(enableModIcons),
-    "LIST",
+    "CHECKBOX",
     [LSTRING(modIconsSetting), LSTRING(modIconsTooltip)],
     _category,
-    [[0, 1, 2], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(DLCRequirement)], 1]
+    true
 ] call CBA_fnc_addSetting;
 
 [

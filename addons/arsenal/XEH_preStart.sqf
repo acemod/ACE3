@@ -9,6 +9,5 @@ uiNamespace setVariable [QGVAR(baseWeaponNameCache), createHashMap];
 uiNamespace setVariable [QGVAR(addListBoxItemCache), createHashMap];
 uiNamespace setVariable [QGVAR(rightPanelCache), createHashMap];
 uiNamespace setVariable [QGVAR(sortCache), createHashMap];
-uiNamespace setVariable [QGVAR(isMiscItemCache), createHashMap];
 
 call FUNC(scanConfig);

@@ -137,7 +137,7 @@
     params ["_unit", "_disable"];
 
     if (_disable) then {
-        private _features = ["AUTOTARGET", "TARGET", "WEAPONAIM", "FIREWEAPON", "RADIOPROTOCOL"];
+        private _features = ["AUTOTARGET", "TARGET", "WEAPONAIM"/*, "FIREWEAPON"*/, "RADIOPROTOCOL"]; // TODO: Uncomment in 2.18
 
         // Save current status
         _unit setVariable [QGVAR(featuresAiUAV), _features apply {[_x, _unit checkAIFeature _x]}];
@@ -216,9 +216,7 @@ if (isServer) then {
 [QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(addWeaponItem), {(_this select 0) addWeaponItem [(_this select 1), (_this select 2)]}] call CBA_fnc_addEventHandler;
 [QGVAR(addMagazineTurret), {(_this select 0) addMagazineTurret (_this select 1)}] call CBA_fnc_addEventHandler;
-[QGVAR(removeMagazineTurret), {(_this select 0) removeMagazineTurret [_this select 1, _this select 2]}] call CBA_fnc_addEventHandler;
 [QGVAR(removeMagazinesTurret), {(_this select 0) removeMagazinesTurret [_this select 1, _this select 2]}] call CBA_fnc_addEventHandler;
-[QGVAR(setMagazineTurretAmmo), {(_this select 0) setMagazineTurretAmmo [_this select 1, _this select 2, _this select 3]}] call CBA_fnc_addEventHandler;
 [QGVAR(triggerAmmo), {triggerAmmo _this}] call CBA_fnc_addEventHandler;
 
 [QGVAR(setVanillaHitPointDamage), {
@@ -296,7 +294,7 @@ call FUNC(checkFiles);
 
 
 //////////////////////////////////////////////////
-// Set up CBA_settingsInitialized eventhandler
+// Set up ace_settingsInitialized eventhandler
 //////////////////////////////////////////////////
 
 ["CBA_settingsInitialized", {

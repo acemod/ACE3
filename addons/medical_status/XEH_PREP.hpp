@@ -1,7 +1,6 @@
 PREP(addInventoryActions);
 PREP(addMedicationAdjustment);
 PREP(adjustPainLevel);
-PREP(getAllMedicationCount);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
 PREP(getBloodVolumeChange);

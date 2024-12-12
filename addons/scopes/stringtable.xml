@@ -391,7 +391,6 @@
         </Key>
         <Key ID="STR_ACE_Scopes_inScopeAdjustment_displayName">
             <English>Show adjustment UI in scope</English>
-            <French>Afficher l'IU de réglage du réticule dans la lunette de visée</French>
             <Spanish>Mostrar IU de ajuste en el visor</Spanish>
             <Italian>Mostra UI delle manopole nel mirino</Italian>
             <Russian>Показать интерфейс настройки в области видимости.</Russian>

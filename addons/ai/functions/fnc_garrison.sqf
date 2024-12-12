@@ -23,7 +23,7 @@
 
 params [["_startingPos",[0,0,0], [[]], 3], ["_buildingTypes", ["Building"], [[]]], ["_unitsArray", [], [[]]], ["_fillingRadius", 50, [0]], ["_fillingType", 0, [0]], ["_topDownFilling", false, [true]], ["_teleport", false, [true]]];
 
-TRACE_6("fnc_garrison: Start",_startingPos,_buildingTypes,count _unitsArray,_fillingRadius,_fillingTYpe,_topDownFilling);
+TRACE_6("fnc_garrison: Start",_startingPos,_buldingTypes,count _unitsArray,_fillingRadius,_fillingTYpe,_topDownFilling);
 
 _unitsArray = _unitsArray select {alive _x && {!isPlayer _x}};
 private _currentUnitMoveList = missionNamespace getVariable [QGVAR(garrison_unitMoveList), []];

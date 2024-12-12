@@ -90,7 +90,7 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
     _projectile setMissileTarget _target;
 } else {
     if (GVAR(debug_drawGuidanceInfo)) then {
-        _seekerTypeName = "MWR - EXT"; //IGNORE_PRIVATE_WARNING ["_seekerTypeName"]; // from doSeekerSearch
+        _seekerTypeName = "MWR - EXT";
     };
     // External radar homing
     // if the target is in the remote targets for the side, whoever the donor is will "datalink" the target for the hellfire.

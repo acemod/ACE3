@@ -143,6 +143,12 @@ private _sortCache = uiNamespace getVariable QGVAR(sortCache);
 private _faceCache = uiNamespace getVariable QGVAR(faceCache);
 private _insigniaCache = uiNamespace getVariable QGVAR(insigniaCache);
 
+private _countColumns = if (_right) then {
+    count lnbGetColumnsPosition _panel
+} else {
+    0
+};
+
 private _for = if (_right) then {
     for "_i" from 0 to (lnbSize _panel select 0) - 1
 } else {

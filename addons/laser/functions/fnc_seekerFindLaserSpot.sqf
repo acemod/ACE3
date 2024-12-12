@@ -109,6 +109,7 @@ if (_spots isNotEqualTo []) then {
     private _c = 0;
     private _buckets = [];
     private _excludes = [];
+    private _bucketIndex = 0;
 
     // Put close points together into buckets
     while { count(_spots) != count(_excludes) && _c < (count _spots) } do {

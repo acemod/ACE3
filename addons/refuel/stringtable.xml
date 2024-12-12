@@ -588,6 +588,7 @@
             <Korean>연료 재급유 시작 (컨테이너)</Korean>
             <Japanese>給油を始める (コンテナ)</Japanese>
         </Key>
+        <!-- REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL are used here -->
         <Key ID="STR_ACE_Refuel_fuelCargo_edenDesc">
             <English>The fuel volume available for refueling (-1 disable, -10 if infinite)</English>
             <Czech>Objem paliva k tankování (-1 pro vypnutí, -10 pro nekonečno)</Czech>

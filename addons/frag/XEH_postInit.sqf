@@ -4,9 +4,7 @@
     [{
         params ["_projectile", "_posASL"];
 
-        // check if a projectile is blacklisted and that it will inflict damage when it explodes to avoid
-        // multiple events being sent from different clients for one explosion
-        if (_projectile getVariable [QGVAR(blacklisted), false] || !(_projectile getShotInfo 5)) exitWith {};
+        if (_projectile getVariable [QGVAR(blacklisted), false]) exitWith {};
 
         private _ammo = typeOf _projectile;
         if (GVAR(reflectionsEnabled)) then {
@@ -14,9 +12,9 @@
         };
         if (GVAR(enabled) && _ammo call FUNC(shouldFrag)) then {
             // only let a unit make a frag event once per second
-            private _shotParents = getShotParents _projectile;
-            private _instigator = _shotParents select !isNull (_shotParents#1);
-            if (CBA_missionTime < (_instigator getVariable [QGVAR(nextFragEvent), -1])) exitWith { TRACE_1("skip",typeOf _instigator) };
+
+            private _instigator = _shotParents select !isNull ((getShotParents _projectile)#1);
+            if (CBA_missionTime < (_instigator getVariable [QGVAR(nextFragEvent), -1])) exitWith {};
             _instigator setVariable [QGVAR(nextFragEvent), CBA_missionTime + ACE_FRAG_FRAG_UNIT_HOLDOFF];
 
             // Wait a frame to make sure it doesn't target the dead

@@ -70,7 +70,7 @@ private _ctrl = _display ctrlCreate ["RscPicture", IDC_SCREEN_RETICLE, _ctrlScre
 
 
 // Add dummy idcs for dist/angle from engine
-// 151=Dist, 156=Heading, 182=Pitch,
+// 151=Dist, 156=Heading, 182=Pitch, 
 private _ctrl = _display ctrlCreate ["RscText", 151]; // IDC_IGUI_WEAPON_DISTANCE
 _ctrl ctrlSetPosition [-1, -1, 0, 0];
 _ctrl ctrlCommit 0;

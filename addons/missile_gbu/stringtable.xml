@@ -3,7 +3,6 @@
     <Package name="MISSILE_GBU">
         <Key ID="STR_ACE_MISSILE_GBU_12">
             <English>GBU-12 [ACE]</English>
-            <French>GBU-12 [ACE]</French>
             <Spanish>GBU-12 [ACE]</Spanish>
             <Italian>GBU-12 [ACE]</Italian>
             <Russian>GBU-12 [ACE]</Russian>
@@ -12,7 +11,6 @@
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_12_1x">
             <English>1x GBU-12 [ACE]</English>
-            <French>1x GBU-12 [ACE]</French>
             <Spanish>1x GBU-12 [ACE]</Spanish>
             <Italian>1x GBU-12 [ACE]</Italian>
             <Russian>1x GBU-12 [ACE]</Russian>
@@ -21,7 +19,6 @@
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_12_2x">
             <English>2x GBU-12 [ACE]</English>
-            <French>2x GBU-12 [ACE]</French>
             <Spanish>2x GBU-12 [ACE]</Spanish>
             <Italian>2x GBU-12 [ACE]</Italian>
             <Russian>2x GBU-12 [ACE]</Russian>
@@ -30,7 +27,6 @@
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_12_4x">
             <English>4x GBU-12 [ACE]</English>
-            <French>4x GBU-12 [ACE]</French>
             <Spanish>4x GBU-12 [ACE]</Spanish>
             <Italian>4x GBU-12 [ACE]</Italian>
             <Russian>4x GBU-12 [ACE]</Russian>
@@ -39,7 +35,6 @@
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_fab250">
             <English>FAB-250M-54 [ACE]</English>
-            <French>FAB-250M-54 [ACE]</French>
             <Spanish>FAB-250M-54 [ACE]</Spanish>
             <Italian>FAB-250M-54 [ACE]</Italian>
             <Russian>ФАБ-250M-54 [ACE]</Russian>
@@ -48,7 +43,6 @@
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_fab250_1x">
             <English>1x FAB-250M-54 [ACE]</English>
-            <French>1x FAB-250M-54 [ACE]</French>
             <Spanish>1x FAB-250M-54 [ACE]</Spanish>
             <Italian>1x FAB-250M-54 [ACE]</Italian>
             <Russian>1x ФАБ-250M-54 [ACE]</Russian>
@@ -57,7 +51,6 @@
         </Key>
         <Key ID="STR_ACE_MISSILE_GBU_fab250_2x">
             <English>2x FAB-250M-54 [ACE]</English>
-            <French>2x FAB-250M-54 [ACE]</French>
             <Spanish>2x FAB-250M-54 [ACE]</Spanish>
             <Italian>2x FAB-250M-54 [ACE]</Italian>
             <Russian>2x ФАБ-250M-54 [ACE]</Russian>

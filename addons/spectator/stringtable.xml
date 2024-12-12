@@ -78,6 +78,7 @@
             <Chinesesimp>ACE 旁观者</Chinesesimp>
             <Turkish>ACE Izleyici</Turkish>
         </Key>
+        <!-- Interface strings -->
         <Key ID="STR_ACE_Spectator_TooltipEngineer">
             <English>Engineer</English>
             <Czech>Inženýr</Czech>
@@ -316,6 +317,7 @@
             <Chinesesimp>上个单位</Chinesesimp>
             <Turkish>Önceki Takım</Turkish>
         </Key>
+        <!-- Controls -->
         <Key ID="STR_ACE_Spectator_uiIcons">
             <English>Icons</English>
             <Czech>Ikony</Czech>

@@ -15,8 +15,7 @@
  * Public: No
  */
 params ["_args", "_timestep", "_seekerTargetPos", "_profileAdjustedTargetPos", "_targetData", "_navigationParams"];
-_args params ["_firedEH", "", "_flightParams"];
-_firedEH params ["","","","","","","_projectile"];
+_args params ["", "", "_flightParams"];
 _targetData params ["", "_targetDir", "_distance"];
 _flightParams params ["_pitchRate", "_yawRate"];
 

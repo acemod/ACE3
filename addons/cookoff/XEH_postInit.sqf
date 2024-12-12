@@ -1,7 +1,5 @@
 #include "script_component.hpp"
 
-GVAR(flareHash) = createHashMap;
-
 [QGVAR(cookOffBoxLocal), LINKFUNC(cookOffBoxLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(cookOffLocal), LINKFUNC(cookOffLocal)] call CBA_fnc_addEventHandler;
 [QGVAR(engineFireLocal), LINKFUNC(engineFireLocal)] call CBA_fnc_addEventHandler;
@@ -19,7 +17,7 @@ if (isServer) then {
     {
         deleteVehicle _x;
     } forEach ((_this select 0) getVariable [QGVAR(effects), []]);
-}, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to exclude animals as well
+}, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
 
 ["ReammoBox_F", "Deleted", {
     {
@@ -60,7 +58,7 @@ if (isServer) then {
             random [MIN_AMMO_DETONATION_START_DELAY, (MIN_AMMO_DETONATION_START_DELAY + MAX_AMMO_DETONATION_START_DELAY) / 2, MAX_AMMO_DETONATION_START_DELAY]
         ]] call CBA_fnc_serverEvent;
     };
-}, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to exclude animals as well
+}, true, ["CAManBase", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler;
 
 if (hasInterface) then {
     // Plays a sound locally, so that different sounds can be used for various distances

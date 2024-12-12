@@ -40,7 +40,9 @@ private _hitPartEventHandler = _projectile addEventHandler ["HitPart", {
     private _ammo = typeOf _projectile;
     private _vectorUp = vectorUp _projectile;
 
-    // Wait a frame to see what happens to the round
+    /*
+        * Wait a frame to see what happens to the round
+    */
     [LINKFUNC(doSpallHitPart), [_projectile, _objectHit, _posASL, _velocity, _surfNorm, _surfType, _ammo, _vectorUp]] call CBA_fnc_execNextFrame;
 }];
 private _penetratedEventHandler = _projectile addEventHandler ["Penetrated",LINKFUNC(doSpallPenetrate)];

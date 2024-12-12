@@ -21,6 +21,9 @@ params ["_player", "_newVehicle"];
 if (isNull _newVehicle) exitWith {};
 if !(_newVehicle isKindOf "Mortar_01_base_F") exitWith {};
 
+private _tubeWeaponName = (weapons _newVehicle) select 0;
+private _fireModes = getArray (configFile >> "CfgWeapons" >> _tubeWeaponName >> "modes");
+
 // Restore last firemode
 private _lastSavedWeaponsInfo = _newVehicle getVariable QGVAR(lastFireMode);
 

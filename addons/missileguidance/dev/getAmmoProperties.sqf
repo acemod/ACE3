@@ -9,7 +9,7 @@ private _attackProfiles = createHashMap;
     private _seekerType = getText (_x >> QUOTE(ADDON) >> "defaultSeekerType");
     private _navigationType = getText (_x >> QUOTE(ADDON) >> "defaultNavigationType");
     private _attackProfile = getText (_x >> QUOTE(ADDON) >> "defaultAttackProfile");
-
+ 
     private _seekers = _seekerTypes getOrDefault [_seekerType, []];
     private _navigations = _navigationTypes getOrDefault [_navigationType, []];
     private _attacks = _attackProfiles getOrDefault [_attackProfile, []];

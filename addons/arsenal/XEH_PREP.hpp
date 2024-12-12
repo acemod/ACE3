@@ -51,7 +51,6 @@ PREP(handleSearchInputChanged);
 PREP(handleSearchModeToggle);
 PREP(handleStats);
 PREP(initBox);
-PREP(isMiscItem);
 PREP(itemInfo);
 PREP(loadoutsChangeTab);
 PREP(message);

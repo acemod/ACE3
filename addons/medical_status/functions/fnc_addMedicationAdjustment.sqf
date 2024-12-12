@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut, PabstMirror, Cplhardcore
+ * Author: BaerMitUmlaut, PabstMirror
  * Adds a medication and it's effects
  *
  * Arguments:
@@ -11,18 +11,17 @@
  * 4: Heart Rate Adjust <NUMBER>
  * 5: Pain Suppress Adjust <NUMBER>
  * 6: Flow Adjust <NUMBER>
- * 7: Dose of medication <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "Morphine", 120, 60, -10, 0.8, -10, 1] call ace_medical_status_fnc_addMedicationAdjustment
+ * [player, "Morphine", 120, 60, -10, 0.8, -10] call ace_medical_status_fnc_addMedicationAdjustment
  *
  * Public: No
  */
-params ["_unit", "_medication", "_timeToMaxEffect", "_maxTimeInSystem", "_hrAdjust", "_painAdjust", "_flowAdjust", "_dose"];
-TRACE_8("addMedicationAdjustment",_unit,_medication,_timeToMaxEffect,_maxTimeInSystem,_hrAdjust,_painAdjust,_flowAdjust,_dose);
+params ["_unit", "_medication", "_timeToMaxEffect", "_maxTimeInSystem", "_hrAdjust", "_painAdjust", "_flowAdjust"];
+TRACE_7("addMedicationAdjustment",_unit,_medication,_timeToMaxEffect,_maxTimeInSystem,_hrAdjust,_painAdjust,_flowAdjust);
 
 if (_maxTimeInSystem <= 0) exitWith { WARNING_1("bad value for _maxTimeInSystem - %1",_this); };
 _timeToMaxEffect = _timeToMaxEffect max 1;
@@ -30,5 +29,6 @@ _timeToMaxEffect = _timeToMaxEffect max 1;
 
 private _adjustments = _unit getVariable [VAR_MEDICATIONS, []];
 
-_adjustments pushBack [_medication, CBA_missionTime, _timeToMaxEffect, _maxTimeInSystem, _hrAdjust, _painAdjust, _flowAdjust, _dose];
+_adjustments pushBack [_medication, CBA_missionTime, _timeToMaxEffect, _maxTimeInSystem, _hrAdjust, _painAdjust, _flowAdjust];
+
 _unit setVariable [VAR_MEDICATIONS, _adjustments, true];

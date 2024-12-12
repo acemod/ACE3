@@ -32,4 +32,4 @@ if (_displayHint) then {
 // Force an immediate volume update
 true call FUNC(updateVolume);
 
-UPDATE_HEARING_EARPLUGS call FUNC(updateHearingProtection);
+call FUNC(updateHearingProtection);

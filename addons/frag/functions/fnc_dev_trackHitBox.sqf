@@ -53,6 +53,8 @@ if (GVAR(dbgSphere) && _addSphere && {isNull objectParent _object}) then {
 // create an optimized outline
 _upperPoint params ["_x1","_y1","_z1"];
 _lowerPoint params ["_x2","_y2","_z2"];
+private _p1 = _upperPoint;
+private _p7 = _lowerPoint;
 private _points = [
     _upperPoint,
     [_x1, _y2, _z1],

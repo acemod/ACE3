@@ -885,6 +885,7 @@
             <Turkish>Kalibre: 9.3x64 mm Tracer&lt;br /&gt;Mermi: 10&lt;br /&gt;Kullanıyor: Cyrus</Turkish>
             <Hungarian>Kaliber: 9,3x64 mm nyomkövető&lt;br /&gt;Lövedékek: 10&lt;br /&gt;Használható: Cyrus</Hungarian>
         </Key>
+        <!-- 9.3x64 mm 10Rnd -->
         <Key ID="STR_ACE_Ballistics_10Rnd_93x64_DMR_05_Mag_TracerName">
             <English>9.3 mm 10Rnd Tracer Mag</English>
             <Czech>9.3 mm 10náb. Svítící Zásobník</Czech>
@@ -1037,6 +1038,7 @@
             <Chinesesimp>#00 鹿弹（8.38 mm）</Chinesesimp>
             <Turkish>#00 Irisaçma</Turkish>
         </Key>
+        <!-- Shotguns -->
         <Key ID="STR_ACE_Ballistics_12Gauge_Pellets_No00_Buck_NameShort">
             <English>#00 Buckshot</English>
             <Czech>#00 Broky velké</Czech>
@@ -1313,6 +1315,7 @@
             <Turkish>Kalibre: .338 Norma Magnum Tracer&lt;br /&gt;Mermi: 130&lt;br /&gt;Kullanıyor: SPMG</Turkish>
             <Hungarian>Kaliber: .338 Norma Magnum nyomkövető&lt;br /&gt;Lövedékek: 130&lt;br /&gt;Használható: SPMG</Hungarian>
         </Key>
+        <!-- .338 Norma Magnum -->
         <Key ID="STR_ACE_Ballistics_130Rnd_338_Mag_TracerName">
             <English>.338 NM 130Rnd Tracer Belt</English>
             <Czech>.338 NM 130náb. Svítící Pás</Czech>
@@ -1466,6 +1469,7 @@
             <Turkish>Kalibre: 9.3x64 mm Tracer&lt;br /&gt;Mermi: 150&lt;br /&gt;Kullanıyor: Navid</Turkish>
             <Hungarian>Kaliber: 9,3x64 mm nyomkövető&lt;br /&gt;Lövedékek: 150&lt;br /&gt;Használható: Navid</Hungarian>
         </Key>
+        <!-- 9.3x64 mm 150Rnd Belt-->
         <Key ID="STR_ACE_Ballistics_150Rnd_93x64_Mag_TracerName">
             <English>9.3 mm 150Rnd Tracer Belt</English>
             <Czech>9.3 mm 150náb. Svítící Pás</Czech>
@@ -1737,6 +1741,7 @@
             <Turkish>Kalibre: 6.5x47 mm (HPBT Scenar)&lt;br /&gt;Mermi: 20&lt;br /&gt;Kullanıyor: QBU-88</Turkish>
             <Hungarian>Kaliber: 6,5x47 mm (HPBT Scenar)&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: QBU-88</Hungarian>
         </Key>
+        <!-- QBU -->
         <Key ID="STR_ACE_Ballistics_20Rnd_65x47_Scenar_mag_Name">
             <English>6.5x47 mm 20Rnd Mag (HPBT Scenar)</English>
             <Czech>6.5x47 mm 20náb. Zásobník (HPBT Scenar)</Czech>
@@ -2043,6 +2048,7 @@
             <Turkish>Kalibre: 7.62x51 mm Tracer&lt;br /&gt;Mermi: 20&lt;br /&gt;Kullanıyor: Mk18 ABR</Turkish>
             <Hungarian>Kaliber: 7,62x51 mm Nyomjelző&lt;br /&gt;Lövedékek: 20&lt;br /&gt;Használható: Mk18 ABR</Hungarian>
         </Key>
+        <!-- 7.62x51 mm -->
         <Key ID="STR_ACE_Ballistics_20Rnd_762x51_mag_TracerName">
             <English>7.62 mm 20Rnd Mag (Tracer)</English>
             <Czech>7.62 mm 20náb. Svítící Zásobník</Czech>
@@ -2563,6 +2569,7 @@
             <Turkish>Kalibre: 5.56x45 mm Tracer IR-DIM&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Turkish>
             <Hungarian>Kaliber: 5,56x45 mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: TRG-20, TRG-21/EGLM, Mk20/C/EGLM, SDAR</Hungarian>
         </Key>
+        <!-- 5.56x45 mm -->
         <Key ID="STR_ACE_Ballistics_30Rnd_556x45_mag_Tracer_DimName">
             <English>5.56 mm 30rnd Tracer IR-DIM Mag</English>
             <Czech>5.56 mm 30náb. Svítící IR-DIM Zásobník</Czech>
@@ -2819,6 +2826,7 @@
             <Turkish>Kalibre: 6.5x39 mm Tracer IR-DIM&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: Katiba</Turkish>
             <Hungarian>Kaliber: 6,5x39 mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: Katiba</Hungarian>
         </Key>
+        <!-- KATIBA -->
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_green_mag_Tracer_DimName">
             <English>6.5 mm 30Rnd Tracer IR-DIM Mag</English>
             <Czech>6.5 mm 30náb. Svítící IR-DIM Zásobník</Czech>
@@ -2972,6 +2980,7 @@
             <Turkish>Kalibre: 6.5x39 mm Tracer IR-DIM&lt;br /&gt;Mermi: 30&lt;br /&gt;Kullanıyor: MX/C/M/SW/3GL</Turkish>
             <Hungarian>Kaliber: 6,5x39 mm Nyomjelző IR-DIM&lt;br /&gt;Lövedékek: 30&lt;br /&gt;Használható: MX/C/M/SW/3GL</Hungarian>
         </Key>
+        <!-- MX -->
         <Key ID="STR_ACE_Ballistics_30Rnd_65x39_caseless_mag_Tracer_DimName">
             <English>6.5 mm 30Rnd Tracer IR-DIM Mag</English>
             <Czech>6.5 mm 30náb. Svítící IR-DIM Zásobník</Czech>

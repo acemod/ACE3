@@ -31,7 +31,7 @@ params ["_angle", "_targetHeight", "_muzzleVelocity", ["_airFriction", 0], ["_cr
 //MK6_82mm_AIR_FRICTION == -0.0001
 
 if (_airFriction != 0) then {
-    _muzzleVelocity = [_muzzleVelocity, _temperature] call FUNC(calculateMuzzleVelocity);
+    _muzzleVelocity = [_muzzleVelocity, _temperature, _atmosphericDensity] call FUNC(calculateMuzzleVelocity);
 };
 
 private _atmosphericDensityRatio = _atmosphericDensity / 1.225;

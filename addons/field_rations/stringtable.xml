@@ -309,7 +309,7 @@
             <Portuguese>Bebendo de %1...</Portuguese>
             <Russian>Выпивание из %1...</Russian>
             <German>Trinke von %1...</German>
-            <Korean>%1(으)로 마시는 중...</Korean>
+            <Korean>%1 으로 부터 마시는 중...</Korean>
             <Japanese>%1 から飲んでいます・・・</Japanese>
             <Chinese>飲用%1的水中...</Chinese>
             <Chinesesimp>从%1饮用中...</Chinesesimp>
@@ -1281,16 +1281,6 @@
             <Japanese>水資源量</Japanese>
             <Chinese>飲用水補給</Chinese>
             <Chinesesimp>饮用水补给</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Field_Rations_ZeusUpdates_Description">
-            <English>If enabled, hunger and thirst will continue to increase while the Zeus interface is open.</English>
-            <Japanese>有効化すると、空腹と渇きはZeusインタフェイスを開いている間も継続して進行します。</Japanese>
-            <Korean>활성화 시 제우스 인터페이스가 열려 있는 동안 허기와 갈증이 계속 증가합니다.</Korean>
-        </Key>
-        <Key ID="STR_ACE_Field_Rations_ZeusUpdates_DisplayName">
-            <English>Update Hunger and Thirst in Zeus</English>
-            <Japanese>Zeus時に空腹と渇きを進行させる</Japanese>
-            <Korean>제우스의 허기와 갈증 업데이트</Korean>
         </Key>
     </Package>
 </Project>

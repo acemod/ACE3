@@ -1007,6 +1007,7 @@
             <Chinese>互動時間係數</Chinese>
             <Chinesesimp>交互时间系数</Chinesesimp>
         </Key>
+        <!-- Used in rearm to remove the [CSW] prefix from magazine names, so adjust when necessary -->
         <Key ID="STR_ACE_CSW_regex">
             <English>^\[CSW\]</English>
             <Czech>^\[CSW\]</Czech>

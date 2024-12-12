@@ -23,13 +23,8 @@ params ["_nextMpSync"];
 // Access global variable once
 private _player = ACE_player;
 
-// Exit if player is not alive, a virtual unit, or is in Zeus interface (if setting is enabled)
-if (
-    !alive _player ||
-    {_player isKindOf "VirtualMan_F"} ||
-    {!GVAR(zeusUpdates) && {!isNull findDisplay 312}} ||
-    {_player getVariable [QGVAR(blockUpdates), false]}
-) exitWith {
+// Exit if player is not alive or a virtual unit
+if (!alive _player || {_player isKindOf "VirtualMan_F"}) exitWith {
     [LINKFUNC(update), _nextMpSync, 1] call CBA_fnc_waitAndExecute;
     QGVAR(hud) cutFadeOut 0.5;
 };
@@ -40,7 +35,7 @@ private _hunger = _player getVariable [QXGVAR(hunger), 0];
 
 // Determine base change based on work multiplier
 private _currentWork = 1;
-if (isNull objectParent _player && {isTouchingGround _player}) then {
+if (vehicle _player == _player && {isTouchingGround _player}) then {
     private _speed = vectorMagnitude velocity _player;
     _currentWork = linearConversion [2, 7, _speed, 1, 2, true];
 };

@@ -103,6 +103,7 @@ if (!hasInterface) exitWith {};
         _ctrlButtonCancel
     ];
 
+    private _ctrlRscMessageBoxPos = ctrlPosition _ctrlRscMessageBox;
     private _ctrlRscMessageBoxPosH = _bottomPosY + (_ctrlButtonOKPos select 3);
 
     _ctrlRscMessageBox ctrlSetPosition [

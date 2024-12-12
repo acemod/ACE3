@@ -912,6 +912,7 @@
             <Turkish>[ACE] Çeşitli Nesneler</Turkish>
             <Hungarian>[ACE] Egyéb tárgyak</Hungarian>
         </Key>
+        <!-- These are cardinal directions, in case you didn't guess. -->
         <Key ID="STR_ACE_Common_N">
             <English>N</English>
             <Czech>S</Czech>

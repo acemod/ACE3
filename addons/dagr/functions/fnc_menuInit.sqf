@@ -198,11 +198,11 @@ GVAR(menuRun) = true;
                 GVAR(vectorConnected) = false;
                 GVAR(displaySelection) = "WP";
                 switch (GVAR(selection)) do {
-                    case 0: { GVAR(wp_info) = GVAR(wp0); };
-                    case 1: { GVAR(wp_info) = GVAR(wp1); };
-                    case 2: { GVAR(wp_info) = GVAR(wp2); };
-                    case 3: { GVAR(wp_info) = GVAR(wp3); };
-                    case 4: { GVAR(wp_info) = GVAR(wp4); };
+                    case 0: { DAGR_WP_INFO = GVAR(wp0); };
+                    case 1: { DAGR_WP_INFO = GVAR(wp1); };
+                    case 2: { DAGR_WP_INFO = GVAR(wp2); };
+                    case 3: { DAGR_WP_INFO = GVAR(wp3); };
+                    case 4: { DAGR_WP_INFO = GVAR(wp4); };
                 };
                 if (!GVAR(busy)) then {
                     GVAR(showInfoUpdating) = true;

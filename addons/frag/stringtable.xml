@@ -3,7 +3,6 @@
     <Package name="Frag">
         <Key ID="STR_ACE_Frag_Debug">
             <English>Debug</English>
-            <French>Debug</French>
             <Spanish>Debug</Spanish>
             <Italian>Debug</Italian>
             <Russian>Отладка</Russian>
@@ -12,7 +11,6 @@
         </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox">
             <English>Draw Hitboxes</English>
-            <French>Afficher les hitboxes</French>
             <Spanish>Dibujar hitboxes</Spanish>
             <Italian>Visualizza hitbox</Italian>
             <Russian>Изобразить хитбоксы</Russian>
@@ -21,7 +19,6 @@
         </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox_Desc">
             <English>Draw hitboxes on objects that were targeted.</English>
-            <French>Affiche les hitboxes sur les cibles potentielles de fragmentation.</French>
             <Spanish>Dibuja hitboxes en objetos que son seguidos.</Spanish>
             <Italian>Visualizza hitbox su potenziali bersagli della frammentazione.</Italian>
             <Russian>Изобразить хитбоксы на объектах, которые были нацелены.</Russian>
@@ -31,7 +28,6 @@
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>Frag/Spall Debug Tracing</English>
-            <French>Suivi du débogage des éclats/explosions</French>
             <Spanish>Trazado Debug de Fragmentación/Astillamiento</Spanish>
             <Italian>Traccia Frag/Spall per Debug</Italian>
             <Russian>Отладка трассировки фрагментации/осколков</Russian>
@@ -41,7 +37,6 @@
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
             <English>Enables visual tracing of fragmentation and spalling rounds.</English>
-            <French>Active le suivi des éclats/explosions.</French>
             <Spanish>Habilitar trazado visual de los proyectiles generados por la fragmentación y el astillamiento.</Spanish>
             <Italian>Abilita il tracciamento visivo di effetti di frammentazione e spalling.</Italian>
             <Russian>Включает визуальную трассировку фрагментации и осколочных снарядов.</Russian>
@@ -145,7 +140,6 @@
         </Key>
         <Key ID="STR_ACE_Frag_HitSphereEnable">
             <English>Draw Event Spheres</English>
-            <French>Visualiser les sphères d'événements</French>
             <Spanish>Dibujar Esferas de Eventos</Spanish>
             <Italian>Visualizza sfere eventi</Italian>
             <Russian>Изобразить сферы событий</Russian>
@@ -154,7 +148,6 @@
         </Key>
         <Key ID="STR_ACE_Frag_HitSphereEnable_Desc">
             <English>Draw color coded spheres at any event for tracked rounds.</English>
-            <French>Affiche des sphères de couleur sur chaque événement d'un fragment tracé.</French>
             <Spanish>Dibujar esferas codificadas por color en cualquier evento para proyectiles seguidos.</Spanish>
             <Italian>Visualizza sfere colorate su ogni evento di un frammento tracciato.</Italian>
             <Russian>Изобразить цветные сферы на любом событии для отслеживаемых раундов.</Russian>
@@ -179,7 +172,6 @@
         </Key>
         <Key ID="STR_ACE_Frag_SpallIntensity">
             <English>Spalling Intensity</English>
-            <French>Intensité de l'écaillage</French>
             <Spanish>Intensidad del astillamiento</Spanish>
             <Italian>Intensità dello spalling</Italian>
             <Russian>Интенсивность обрушения</Russian>
@@ -188,7 +180,6 @@
         </Key>
         <Key ID="STR_ACE_Frag_SpallIntensity_Desc">
             <English>Modifier to increase or decrease the number and intensity of spalling events. Increasing this value may cause performance degradation.</English>
-            <French>Modificateur permettant d'augmenter ou de diminuer le nombre et l'intensité des événements d'écaillage. L'augmentation de cette valeur peut entraîner une dégradation des performances.</French>
             <Spanish>Modificador para aumentar o disminuir el número y la intensidad de los eventos de astillamiento. Aumentar este valor puede producir una degradación en el rendimiento.</Spanish>
             <Italian>Modificatore per il numero e intensità di spalling simulato, ovvero la frammentazione interna ad un veicolo colpito. Valori alti possono causare una degradazione della performance.</Italian>
             <Russian>Модификатор для увеличения или уменьшения количества и интенсивности событий обрушения. Увеличение этого значения может привести к ухудшению производительности.</Russian>

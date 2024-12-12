@@ -87,7 +87,7 @@ if (_enabledTagsNearby) then {
             {!isObjectHidden _x}
         };
         private _crewMen = [];
-        if (!isNull objectParent ACE_player) then {
+        if (vehicle ACE_player != ACE_player) then {
             _crewMen = (crew vehicle ACE_player) select {
                 _x != ACE_player &&
                 {(side group _x) == (side group ACE_player)} &&

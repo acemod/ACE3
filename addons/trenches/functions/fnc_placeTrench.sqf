@@ -75,7 +75,7 @@ GVAR(digPFH) = [{
             _minzoffset = _minzoffset min ((getTerrainHeightASL _pos) - (_pos select 2));
             #ifdef DEBUG_MODE_FULL
                 _pos set [2, getTerrainHeightASL _pos];
-                private _pos2 = +_pos;
+                _pos2 = +_pos;
                 _pos2 set [2, getTerrainHeightASL _pos + 1];
                 drawLine3D [ASLToAGL _pos, ASLToAGL _pos2, [1,1,0,1]];
             #endif

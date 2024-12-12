@@ -22,14 +22,20 @@
 
 params ["_original"];
 
-private _string = reverse _original;
+// @todo, 2.02 reverse command will support STRING types
+private _string = toArray _original;
+reverse _string;
+_string = toString _string;
 
 if (_string select [0, 1] != "]") exitWith {_original};
 
 private _timestampLength = (_string find "[") + 1;
 _string = _string select [0, _timestampLength];
 
-_string = reverse _string;
+// @todo
+_string = toArray _string;
+reverse _string;
+_string = toString _string;
 
 if (_string select [0, 1] != "[") exitWith {_original};
 
@@ -58,7 +64,7 @@ while {_keepCheckingDigits} do {
 };
 
 if (_validTimestamp) then {
-    (_original select [0, count _original - _timestampLength]) trim [" ", 2] // return
+    [_original select [0, count _original - _timestampLength], " "] call CBA_fnc_rightTrim // return
 } else {
     _original // return
 }

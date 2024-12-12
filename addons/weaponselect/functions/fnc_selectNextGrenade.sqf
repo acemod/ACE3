@@ -28,15 +28,19 @@ if (_currentGrenade isEqualTo []) then {
 
 _currentGrenade = _currentGrenade select 0;
 
-private _grenadeType = [GVAR(GrenadesAll), GVAR(GrenadesFrag), GVAR(GrenadesNonFrag)] select _type;
+// get available magazines for that unit
+private _magazines = magazines _unit;
 
-// This is faster than checking magazines
-private _grenades = (throwables _unit) apply {_x select 0} select {_x in _grenadeType};
+private _grenades = [];
+
+{
+    if (_x in _magazines) then {
+        _grenades pushBack _x;
+    };
+} forEach ([GVAR(GrenadesAll), GVAR(GrenadesFrag), GVAR(GrenadesNonFrag)] select _type);
 
 // abort if no grenades are available
 if (_grenades isEqualTo []) exitWith {false};
-
-_grenades = _grenades arrayIntersect _grenades;
 
 // get next grenade muzzle
 private _nextGrenadeIndex = (_grenades find _currentGrenade) + 1;
@@ -48,6 +52,24 @@ if (_nextGrenadeIndex >= count _grenades) then {
 
 private _nextGrenade = _grenades select _nextGrenadeIndex;
 
-[_nextGrenade, {_x == _nextGrenade} count (magazines _unit)] call FUNC(displayGrenadeTypeAndNumber);
+// abort if the same grenade would be selected
+if (_currentGrenade == _nextGrenade) exitWith {false};
 
-_unit selectThrowable _nextGrenade // return
+// current best method to select a grenade: remove all grenades except the one you want to select, then add them back
+private _uniformGrenades =  uniformItems  _unit select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
+private _vestGrenades =     vestItems     _unit select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
+private _backpackGrenades = backpackItems _unit select {_x in GVAR(GrenadesAll) && {_x != _nextGrenade}};
+
+// remove all grenades except those we are switching to --> this breaks the selector
+{_unit removeItemFromUniform  _x} forEach _uniformGrenades;
+{_unit removeItemFromVest     _x} forEach _vestGrenades;
+{_unit removeItemFromBackpack _x} forEach _backpackGrenades;
+
+// readd grenades
+{_unit addItemToUniform  _x} forEach _uniformGrenades;
+{_unit addItemToVest     _x} forEach _vestGrenades;
+{_unit addItemToBackpack _x} forEach _backpackGrenades;
+
+[_nextGrenade, {_x == _nextGrenade} count _magazines] call FUNC(displayGrenadeTypeAndNumber);
+
+true

@@ -38,7 +38,7 @@ private _closingRate = vectorMagnitude velocity _projectile;
 private _timeToGo = (_projectilePos distance _seekerTargetPos) / _closingRate;
 
 // we could do stuff like desired attack angle, but I'm not going that far today
-private _los = vectorNormalized (_seekerTargetPos vectorDiff _projectilePos);
+private _los = vectorNormalized (_seekerTargetPos vectorDiff _projectilePos); 
 
 private _angleToTarget = acos ((vectorDir _projectile) vectorCos _los);
 private _atMinRotationAngle = _angleToTarget >= (0.5 * _pitchRate * _timeToGo);

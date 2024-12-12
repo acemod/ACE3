@@ -97,7 +97,8 @@ GVAR(TweakedAngle) = 0;
             private _intersectObject = ((lineIntersectsSurfaces [eyePos _unit, _testPos, _unit]) param [0, objNull]) param [3, objNull];
             if (_intersectObject isNotEqualTo objNull) exitWith {_attachVehicle = _intersectObject};
         } forEach [[0,0], [-1,-1], [1,-1], [-1,1], [1,1]];
-        if ((!isNull _attachVehicle) && {[PLACE_RANGE_MIN] call _testPositionIsValid}) then {
+        if ((!isNull _attachVehicle) && {[PLACE_RANGE_MIN] call _testPositionIsValid} &&
+                {(_attachVehicle isKindOf "Car") || {_attachVehicle isKindOf "Tank"} || {_attachVehicle isKindOf "Air"} || {_attachVehicle isKindOf "Ship"}}) then {
             private _min = PLACE_RANGE_MIN;
             private _max = PLACE_RANGE_MAX;
             for "_index" from 0 to 6 do {

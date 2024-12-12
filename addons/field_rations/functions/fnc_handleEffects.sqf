@@ -29,13 +29,9 @@ if !(_player call EFUNC(common,isAwake)) exitWith {};
 
 // Set unit unconscious (chance based on how high thirst/hunger are)
 if (
-    GETEGVAR(medical,enabled,false) &&
+    GETEGVAR(medical,enabled,false) && 
     {(_thirst > 85 || {_hunger > 85}) && {random 1 < linearConversion [85, 100, _thirst max _hunger, 0.05, 0.1, true]}}
 ) exitWith {
-    if (_player getVariable [QGVAR(nextUnconsciousTime), CBA_missionTime] > CBA_missionTime) exitWith {};
-
-    _player setVariable [QGVAR(nextUnconsciousTime), CBA_missionTime + 15];
-
     [_player, true, 5, true] call EFUNC(medical,setUnconscious);
 };
 
