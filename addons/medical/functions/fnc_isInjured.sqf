@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
  * Author: DartRuffian
- * Checks if a unit needs treatment.
+ * Checks if a unit is injured.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Does unit need treatment <BOOL>
+ * Is unit injured <BOOL>
  *
  * Example:
  * player call ace_medical_fnc_isInjured
@@ -18,10 +18,8 @@
 params [["_unit", objNull, [objNull]]];
 
 if (!alive _unit) exitWith { false };
-if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit); };
 
 private _fractures = GET_FRACTURES(_unit);
 
 ((_fractures select HITPOINT_INDEX_LARM) == 1) || {(_fractures select HITPOINT_INDEX_RARM) == 1} ||
-{GET_BLOOD_VOLUME(_unit) != DEFAULT_BLOOD_VOLUME} ||
 {_unit call EFUNC(medical_ai,isInjured)}
