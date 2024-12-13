@@ -972,6 +972,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectRightUpperLeg">
             <English>Select Upper Right Leg</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_PartialX">
             <English>Partial %1</English>
             <Czech>Parciální %1</Czech>
