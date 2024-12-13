@@ -103,9 +103,10 @@ if (GVAR(openedMenuType) >= 0) then {
 
                 // Check the action conditions
                 private _actionData = GVAR(selectedAction) select 0;
-                if ([_target, _player, _actionData select 6] call (_actionData select 4)) then {
+                private _actionParams = _actionData select 6; // Define _actionParams so its accessible within the statement/condition
+                if ([_target, _player, _actionParams] call (_actionData select 4)) then {
                     // Call the statement
-                    [_target, _player, _actionData select 6] call (_actionData select 3);
+                    [_target, _player, _actionParams] call (_actionData select 3);
 
                     // Clear the conditions caches again if the action was performed
                     [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;
