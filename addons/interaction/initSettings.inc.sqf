@@ -78,3 +78,10 @@
     [[0, 1, 2], [ELSTRING(common,Never), LSTRING(interactWithEnemyCrew_allowCSW), ELSTRING(common,Always)], 0],
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableLauncherTaking), "CHECKBOX",
+    LSTRING(takeLauncherSetting),
+    format ["ACE %1", LLSTRING(DisplayName)],
+    true
+] call CBA_fnc_addSetting;

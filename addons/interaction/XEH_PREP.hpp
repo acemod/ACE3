@@ -39,6 +39,8 @@ PREP(pullOutBody);
 PREP(canRenameGroup);
 PREP(renameGroupUI);
 PREP(renameGroup);
+PREP(canTakeLauncher);
+PREP(takeLauncher);
 
 // Weapon Attachments
 PREP(getWeaponAttachmentsActions);
