@@ -23,5 +23,6 @@ params ["_player", "_target", "_launcher"];
 if (!GVAR(enableLauncherTaking)) exitWith {false};
 if (_launcher isEqualTo "") exitWith {false};
 if ((!isNull objectParent _target) && {(vehicle _player) isNotEqualTo (vehicle _target)}) exitWith {false};
-private _hasLauncher = secondaryWeapon _target;
+private _hasLauncher = secondaryWeapon _player;
 if (_hasLauncher != "") exitWith {false};
+true
