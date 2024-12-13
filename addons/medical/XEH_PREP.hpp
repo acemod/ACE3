@@ -4,5 +4,6 @@ PREP(deserializeState);
 PREP(fullHeal);
 PREP(getBloodLoss);
 PREP(isInjured);
+PREP(isInStableCondition);
 PREP(serializeState);
 PREP(setUnconscious);
