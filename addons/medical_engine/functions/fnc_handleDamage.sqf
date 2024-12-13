@@ -39,6 +39,7 @@ if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), t
 private _newDamage = _damage - _oldDamage;
 if (_structuralDamage && {(abs (_newDamage - 1)) < 0.001 && _ammo == "" && isNull _shooter && isNull _instigator} && {_unit isNil QGVAR(blockInstaKill)}) exitWith {
     TRACE_1("unit killed by curator or engine",_unit);
+
     _damage
 };
 
@@ -47,10 +48,12 @@ if (_structuralDamage && {(abs (_newDamage - 1)) < 0.001 && _ammo == "" && isNul
 // Leverage this to block insta-kills on the same frame (see above)
 if (_context != 2 && {_context == 4 || _newDamage == 0}) exitWith {
     TRACE_4("Skipping engine bleeding or zero damage, blocking insta kills until next frame",_ammo,_newDamage,_directHit,_context);
+
     if (_unit isNil QGVAR(blockInstaKill)) then {
         _unit setVariable [QGVAR(blockInstaKill), true];
         [{_this setVariable [QGVAR(blockInstaKill), nil]}, _unit] call CBA_fnc_execNextFrame;
-    }
+    };
+
     _oldDamage
 };
 
