@@ -612,8 +612,8 @@ class GVAR(type_Redeye) {
 class GVAR(type_Sidewinder) {
     enabled = 0;
 
-    pitchRate = 25;          // Minium flap deflection for guidance
-    yawRate = 25;            // Maximum flap deflection for guidance
+    pitchRate = 35;          // Minium flap deflection for guidance
+    yawRate = 35;            // Maximum flap deflection for guidance
 
     canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
