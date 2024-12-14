@@ -7,7 +7,7 @@
  * Arguments:
  * 0: Unit that passes the launcher <OBJECT>
  * 1: Unit to pass the launcher to <OBJECT>
- * 2: launcher classname <STRING>
+ * 2: Launcher classname <STRING>
  *
  * Return Value:
  * Unit can pass launcher <BOOL>
@@ -18,11 +18,11 @@
  * Public: No
  */
 
-params ["_player", "_target", "_launcher"];
-
-if (!GVAR(enableLauncherTaking)) exitWith {false};
-if (_launcher isEqualTo "") exitWith {false};
-if ((!isNull objectParent _target) && {(vehicle _player) isNotEqualTo (vehicle _target)}) exitWith {false};
-private _hasLauncher = secondaryWeapon _player;
-if (_hasLauncher != "") exitWith {false};
-true
+params ["_player", "_target"];
+if (GVAR(enableLauncherTaking) &&
+secondaryWeapon _target != "" &&
+secondaryWeapon _player == "" &&
+isNull objectParent _target &&
+isNull objectParent _player &&
+side _target == side _player) exitWith {true};
+false

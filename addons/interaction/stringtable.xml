@@ -1432,7 +1432,19 @@
             <English>Allow people to take Launchers</English>
         </Key>
         <Key ID="STR_ACE_Interaction_PassLauncherHint">
+            <English>%1 is taking your %2 off your back</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_GaveLauncherHint">
+            <English>%1 took your %2 off your back</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_TookLauncherHint">
             <English>You took %1's %2</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_PassingLauncher">
+            <English>Taking Launcher</English>
+        </Key>
+        <Key ID="STR_ACE_Interaction_takeLauncherTime">
+            <English>How long it takes to take a launcher</English>
         </Key>
     </Package>
 </Project>

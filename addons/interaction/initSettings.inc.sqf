@@ -85,3 +85,12 @@
     format ["ACE %1", LLSTRING(DisplayName)],
     true
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(launcherTime),
+    "SLIDER",
+    LSTRING(takeLauncherTime),
+    format ["ACE %1", LLSTRING(DisplayName)],
+    [1, 20, 5, 0],
+    true
+] call CBA_fnc_addSetting;
