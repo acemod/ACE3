@@ -36,7 +36,7 @@ if (_totalTime - _elapsedTime > ([_patient, _patient, _bodyPart] call FUNC(getSt
 private _stitched = [_patient, _bodyPart] call FUNC(stitchWound);
 
 if (!_stitched) exitWith {
-    ERROR_1("failed to stitch wound on unit - %1", _unit);
+    ERROR_1("failed to stitch wound on unit - %1",_unit);
     false
 };
 
