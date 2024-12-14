@@ -35,7 +35,10 @@ if (_totalTime - _elapsedTime > ([_patient, _patient, _bodyPart] call FUNC(getSt
 // Stitch the first possible wound on the body part
 private _stitched = [_patient, _bodyPart] call FUNC(stitchWound);
 
-if (!_stitched) exitWith {false};
+if (!_stitched) exitWith {
+    ERROR_1("failed to stitch wound on unit - %1", _unit);
+    false
+};
 
 // Consume a suture for the next wound if one exists, stop stitching if none are left
 if (GVAR(consumeSurgicalKit) == 2 && {_bandagedWoundsOnPart isNotEqualTo []}) then {
