@@ -37,7 +37,7 @@ if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), t
 // TODO: Structural fire damage >= 1 in a single damage event could still be caught here and we don't want that, but we haven't found a better way to catch this, fire damage should be small most of the time anyway
 // Also triggers for catastrophic vehicle explosions which would kill crew outright, check for blocking
 private _newDamage = _damage - _oldDamage;
-if (_structuralDamage && {(abs (_newDamage - 1)) < 0.001 && _ammo == "" && isNull _shooter && isNull _instigator} && {_unit isNil QGVAR(blockInstaKill)}) exitWith {
+if (_structuralDamage && {(abs (_newDamage - 1)) < 0.001 && _ammo == "" && isNull _shooter && isNull _instigator} && {_unit isEqualTo (_unit getVariable [QGVAR(blockInstaKill), objNull])}) exitWith {
     TRACE_1("unit killed by curator or engine",_unit);
 
     _damage
@@ -50,7 +50,7 @@ if (_context != 2 && {_context == 4 || _newDamage == 0}) exitWith {
     TRACE_4("Skipping engine bleeding or zero damage, blocking insta kills until next frame",_ammo,_newDamage,_directHit,_context);
 
     if (_unit isNil QGVAR(blockInstaKill)) then {
-        _unit setVariable [QGVAR(blockInstaKill), true];
+        _unit setVariable [QGVAR(blockInstaKill), _unit];
         [{_this setVariable [QGVAR(blockInstaKill), nil]}, _unit] call CBA_fnc_execNextFrame;
     };
 
