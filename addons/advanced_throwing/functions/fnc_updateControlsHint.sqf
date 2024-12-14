@@ -19,14 +19,14 @@ if (!GVAR(showMouseControls)) exitWith {};
 
 private _primed = ACE_player getVariable [QGVAR(primed), false];
 
-private _mmb = [localize LSTRING(ChangeMode), localize LSTRING(Extend)] select (ACE_player getVariable [QGVAR(dropMode), false]);
+private _mmb = [LLSTRING(ChangeMode), LLSTRING(Extend)] select (ACE_player getVariable [QGVAR(dropMode), false]);
 
 if (!_primed) then {
-    _mmb = [_mmb, localize LSTRING(Cook)] joinString " / ";
+    _mmb = [_mmb, LLSTRING(Cook)] joinString " / ";
 };
 
 [
-    localize LSTRING(Throw),
-    [localize ELSTRING(common,Cancel), ""] select _primed,
+    LLSTRING(Throw),
+    [LELSTRING(common,Cancel), ""] select _primed,
     _mmb
 ] call EFUNC(interaction,showMouseHint);

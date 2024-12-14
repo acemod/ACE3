@@ -4,13 +4,13 @@ class CfgVehicles {
     class Pickup_01_base_rf: Offroad_01_unarmed_base_F {
         EXGVAR(field_rations,offset)[] = {-0.04, -2.45, -0.9};
     };
-    
+
     // Enable Water Source by Default
     class C_IDAP_Pickup_rf;
     class C_IDAP_Pickup_water_rf: C_IDAP_Pickup_rf {
         EXGVAR(field_rations,waterSupply) = 500;
     };
-    
+
     class O_Truck_03_fuel_F;
     class C_Truck_03_water_rf: O_Truck_03_fuel_F {
         EXGVAR(field_rations,waterSupply) = 10000;

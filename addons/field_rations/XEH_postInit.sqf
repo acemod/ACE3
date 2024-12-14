@@ -138,6 +138,15 @@ if !(hasInterface) exitWith {};
     // Add respawn eventhandler to reset necessary variables, done through script so only added if field rations is enabled
     ["CAManBase", "respawn", LINKFUNC(handleRespawn)] call CBA_fnc_addClassEventHandler;
 
+    // Add status effect to block hunger/thirst updates
+    ["field_rations_blockUpdates", false, [], false, QGVAR(blockUpdates)] call EFUNC(common,statusEffect_addType);
+
+    [QGVAR(blockUpdates), {
+        params ["_object", "_set"];
+        TRACE_2("blockUpdates EH",_object,_set);
+        _object setVariable [QGVAR(blockUpdates), _set > 0];
+    }] call CBA_fnc_addEventHandler;
+
     // Start update loop
     [LINKFUNC(update), CBA_missionTime + MP_SYNC_INTERVAL, 1] call CBA_fnc_waitAndExecute;
 
