@@ -15,7 +15,7 @@
  *    3: Wound Damage <NUMBER>
  *
  * Example:
- * [player, "head"] call ace_medical_fnc_getOpenWounds
+ * [player, "head"] call ace_medical_fnc_getStitchedWounds
  *
  * Public: Yes
  */
