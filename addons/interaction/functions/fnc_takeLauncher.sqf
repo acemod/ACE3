@@ -7,7 +7,7 @@
  * 0: Unit that passes the launcher <OBJECT>
  * 1: Unit to pass the launcher to <OBJECT>
  * 2: Launcher classname <STRING>
- * 3: Play passing animation <BOOL> (default: true)
+ *
  *
  * Return Value:
  * None
@@ -17,20 +17,23 @@
  *
  * Public: No
  */
-params ["_player", "_target", "_launcher", ["_animate", true, [true]]];
-TRACE_4("Take launcher params",_player,_target,_launcher,_animate);
+params ["_player", "_target", "_launcher"];
+TRACE_3("Take launcher params",_player,_target,_launcher);
+
 private _playerName = [_player] call EFUNC(common,getName);
-_displayName = getText (_cfgWeapons >> "displayName");
+private _cfgWeapons = configFile >> "CfgWeapons" >> _launcher;
+private _displayName = getText (_cfgWeapons >> "displayName");
 [QEGVAR(common,displayTextStructured), [[LSTRING(TakingLauncherHint), _playerName, _displayName], 1.5, _target], [_target]] call CBA_fnc_targetEvent;
-params ["_player", "_target", "_launcher", ["_animate", true, [true]]];
+
 if (_launcher isEqualTo "") exitWith {ERROR("No launcher specified.")};
 if (secondaryWeapon _player != "") exitWith {ERROR("Cannot add launcher to target due to lack of inventory space.")};
 [_player, _target, 0] call FUNC(tapShoulder);
 [GVAR(LauncherTime), 
-    [_player, _target, _launcher, [_animate, true, [true]], _displayName], 
+    [_player, _target, _launcher, _displayName], 
     {
-        params ["_player", "_target", "_launcher", ["_animate", true, [true]], "_displayName"];
-        private _cfgWeapons = configFile >> "CfgWeapons" >> _launcher;
+        params ["_args"];
+        _args params ["_player", "_target", "_launcher", "_displayName"];
+        TRACE_4("launcher params",_player,_target,_launcher,_displayName);
         private _attachments = _target weaponAccessories _launcher;
         private _launcherState = _target weaponState _launcher;
         private _launcherAmmo = _launcherState select 3;
@@ -41,7 +44,7 @@ if (secondaryWeapon _player != "") exitWith {ERROR("Cannot add launcher to targe
         {_player addSecondaryWeaponItem _x;} forEach _attachments;
         _player addWeaponItem [_launcher, [_launcherAmmo, _launcherAmmoCount], true];
 
-        if (_animate) then {[_player, "PutDown"] call EFUNC(common,doGesture)};
+        [_player, "PutDown"] call EFUNC(common,doGesture);
 
         private _playerName = [_player] call EFUNC(common,getName);
         private _targetName = [_target] call EFUNC(common,getName);
