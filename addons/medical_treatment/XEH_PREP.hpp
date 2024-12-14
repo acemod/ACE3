@@ -58,6 +58,7 @@ PREP(scanMedicalItems);
 PREP(setTriageStatus);
 PREP(splint);
 PREP(splintLocal);
+PREP(stitchWound);
 PREP(surgicalKitProgress);
 PREP(surgicalKitStart);
 PREP(tourniquet);
