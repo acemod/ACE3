@@ -73,7 +73,7 @@ _patient setVariable [VAR_OXYGEN_DEMAND, 0, true];
 _patient setVariable [QEGVAR(medical,ivBags), nil, true];
 
 // Damage storage
-_patient setVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0], true];
+_patient setVariable [VAR_BODYPART_DAMAGE, DEFAULT_BODYPART_DAMAGE_VALUES, true];
 
 // wakeup needs to be done after achieving stable vitals, but before manually reseting unconc var
 if IS_UNCONSCIOUS(_patient) then {

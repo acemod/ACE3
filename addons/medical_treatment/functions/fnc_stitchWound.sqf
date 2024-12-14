@@ -55,20 +55,8 @@ if (_stitchedIndex == -1) then {
 };
 
 if (GVAR(clearTrauma) == 1) then {
-    private _partIndex = ALL_BODY_PARTS find _bodyPart;
-    TRACE_2("clearTrauma - clearing trauma after stitching",_bodyPart,_treatedWound);
-    private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), []];
-    _bodyPartDamage set [_partIndex, (_bodyPartDamage select _partIndex) - (_treatedDamageOf * _treatedAmountOf)];
-    _patient setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
-    TRACE_2("clearTrauma - healed damage",_bodyPart,_treatedDamageOf);
-
-    switch (_bodyPart) do {
-        case "head": { [_patient, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-        case "body": { [_patient, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-        case "leftarm";
-        case "rightarm": { [_patient, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-        default { [_patient, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
-    };
+    TRACE_2("trauma - clearing trauma after stitching",_bodyPart,_treatedWound);
+    [_unit, _bodyPart, -(_treatedDamageOf * _treatedAmountOf)] call FUNC(addTrauma);
 };
 
 _patient setVariable [VAR_BANDAGED_WOUNDS, _bandagedWounds, true];
