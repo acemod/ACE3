@@ -34,16 +34,40 @@ if (secondaryWeapon _player != "") exitWith {ERROR("Cannot add launcher to targe
         params ["_args"];
         _args params ["_player", "_target", "_launcher", "_displayName"];
         TRACE_4("launcher params",_player,_target,_launcher,_displayName);
-        private _attachments = _target weaponAccessories _launcher;
-        private _launcherState = _target weaponState _launcher;
-        private _launcherAmmo = _launcherState select 3;
-        private _launcherAmmoCount = _launcherState select 4;
+        fn_getWeaponStates =
+        {
+	        params ["_target", "_launcher"];
+	        private _origState = weaponState _target select [0,3];
+	        private _muzzles = [_launcher] + (getArray (configFile >> "CfgWeapons" >> _launcher >> "muzzles") select { _x != "this" });
+	        private _states = [];
 
-        _target removeWeapon _launcher;
+	        {
+	        	_target selectWeapon _x;
+	        	_states pushBack weaponState _target;
+	        } forEach _muzzles;
+
+	        _target selectWeapon _origState;
+	        _states;
+        };
+
+
+        private _result = [_target, _launcher] call fn_getWeaponStates;
+        private _attachments = _target weaponAccessories _launcher;
+        private _launcherAmmo = _result apply { _x select 3 };
+        private _launcherAmmoCount = _result apply { _x select 4 };
+        private _launcherMuzzle = _result apply { _x select 1 };
         [_player, _launcher] call CBA_fnc_addWeaponWithoutItems;
         {_player addSecondaryWeaponItem _x;} forEach _attachments;
-        _player addWeaponItem [_launcher, [_launcherAmmo, _launcherAmmoCount], true];
+        for "_i" from 0 to (count _launcherMuzzle - 1) do {
+            private _muzzle = _launcherMuzzle select _i;
+            private _ammo = _launcherAmmo select _i;
+            private _count = _launcherAmmoCount select _i;
+            _player addWeaponItem [_launcher, [_ammo, _count, _muzzle]];
 
+        };
+        
+        {_player addWeaponItem [_launcher, [_launcherAmmo, _launcherAmmoCount, _launcherMuzzle], true];} forEach _result;
+        _target removeWeapon _launcher;
         [_player, "PutDown"] call EFUNC(common,doGesture);
 
         private _playerName = [_player] call EFUNC(common,getName);
