@@ -20,12 +20,12 @@
 params ["_patient", "_bodyPart", ["_treatedWound", []]];
 
 private _bandagedWounds = GET_BANDAGED_WOUNDS(_patient);
-private _bandagedWoundsOnPart = _bandagedWounds get _bodyPart;
+private _bandagedWoundsOnPart = _bandagedWounds getOrDefault [_bodyPart, []];
 
 // Get the first stitchable wound from bandaged wounds, or make sure the passed wound exists
 private _bandagedIndex = (count _bandagedWoundsOnPart) - 1;
 if (_treatedWound isEqualTo []) then {
-    _treatedWound = _bandagedWoundsOnPart select -1;
+    _treatedWound = _bandagedWoundsOnPart param [_bandagedIndex, _treatedWound];
 } else {
     _bandagedIndex = _bandagedWoundsOnPart find _treatedWound;
 };
