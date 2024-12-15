@@ -3,7 +3,7 @@
     "LIST",
     [LSTRING(AdvancedDiagnose_DisplayName), LSTRING(AdvancedDiagnose_Description)],
     LSTRING(Category),
-    [[0, 1, 2, 3], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrest), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrestDirect)], 1],
+    [[0, 1, 2, 3], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrest), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrestDirect)], 2],
     true
 ] call CBA_fnc_addSetting;
 
