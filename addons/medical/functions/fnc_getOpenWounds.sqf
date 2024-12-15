@@ -20,7 +20,27 @@
  * Public: Yes
  */
 
-params ["_unit", "_bodyPart"];
+params [["_unit", objNull, [objNull]], ["_bodyPart", "", [""]]];
+
+if (isNull _unit) exitWith {
+    ERROR("getOpenWounds - bad call, null unit");
+
+    []
+};
+
+if !(_unit isKindOf "CAManBase") exitWith {
+    ERROR_2("getOpenWounds - bad call, unit %1 is not child of CAManBase - type %2",_unit,typeOf _unit);
+
+    []
+};
+
+_bodyPart = toLowerANSI _bodyPart;
+
+if !(_bodyPart in ALL_BODY_PARTS) exitWith {
+    ERROR_2("getOpenWounds - bad call, invalid body part %1, expected one of %2",_bodyPart,ALL_BODY_PARTS);
+
+    []
+};
 
 private _openWounds = [];
 
