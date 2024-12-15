@@ -3,42 +3,55 @@
     <Package name="MISSILE_AIM120">
         <Key ID="STR_ACE_MISSILE_AIM120_a">
             <English>AIM-120A [ACE]</English>
+            <French>AIM-120A [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_a_1x">
             <English>1x AIM-120A [ACE]</English>
+            <French>1x AIM-120A [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_aim120">
             <English>AIM-120 [ACE]</English>
+            <French>AIM-120 [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_c">
             <English>AIM-120C [ACE]</English>
+            <French>AIM-120C [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_c_1x">
             <English>1x AIM-120C [ACE]</English>
+            <French>1x AIM-120C [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_c_2x">
             <English>2x AIM-120C [ACE]</English>
+            <French>2x AIM-120C [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_d">
             <English>AIM-120D [ACE]</English>
+            <French>AIM-120D [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_d_1x">
             <English>1x AIM-120D [ACE]</English>
+            <French>1x AIM-120D [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_d_2x">
             <English>2x AIM-120D [ACE]</English>
+            <French>2x AIM-120D [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_direct">
             <English>Direct</English>
+            <French>Direct</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_loft">
             <English>Loft</English>
+            <French>Loft</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_r77">
             <English>R-77 [ACE]</English>
+            <French>R-77 [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_r77_1x">
             <English>1x R-77 [ACE]</English>
+            <French>1x R-77 [ACE]</French>
         </Key>
     </Package>
 </Project>
