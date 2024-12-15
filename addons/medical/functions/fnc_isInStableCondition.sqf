@@ -1,7 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: DartRuffian
- * Checks if a unit is in stable condition.
+ * Checks if a unit is in stable condition (stable vitals, awake, and not bleeding). 
+ * Unit shouldn't require further treatment if true and not injured.
  *
  * Arguments:
  * 0: Unit <OBJECT>
