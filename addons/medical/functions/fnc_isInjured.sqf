@@ -1,7 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: DartRuffian
- * Checks if a unit is injured.
+ * Checks if a unit is injured (bleeding, fractured limbs, low blood, etc).
+ * Unit may still require further treatment even if false.
  *
  * Arguments:
  * 0: Unit <OBJECT>
