@@ -4,7 +4,7 @@
  * Returns magnetic heading (0..360)
  *
  * Arguments:
- * 0: Object or Bearing <OBJECT><NUMBER>
+ * 0: Object or Bearing <OBJECT><NUMBER> (default: ACE_player)
  *
  * Return Value:
  * Compass Bearing <NUMBER>
@@ -15,7 +15,7 @@
  * Public: Yes
  */
 
-params [["_source", ace_player, [objNull, 0]]];
+params [["_source", ACE_player, [objNull, 0]]];
 
 [
     (if (_source isEqualType 0) then { _source } else { getDir _source })

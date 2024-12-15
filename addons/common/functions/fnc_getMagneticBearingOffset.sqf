@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+
 TRACE_1("",GVAR(magneticDeclination));
 
 if (!GVAR(magneticDeclination)) exitWith {
