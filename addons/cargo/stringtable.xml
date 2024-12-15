@@ -276,6 +276,7 @@
             <Russian>Вкл. проверку размера груза</Russian>
             <Japanese>貨物の大きさを確認のインタラクションを表示</Japanese>
             <Korean>화물 크기 확인 상호작용 표시</Korean>
+            <French>Vérification de la taille de la charge</French>
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
             <English>Custom name has been cleared.</English>

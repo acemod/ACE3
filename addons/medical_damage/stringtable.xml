@@ -848,24 +848,28 @@
             <Russian>Устанавливает величину урона, который могут получить конечности, прежде чем урон станет критическим, что приведет к смерти. Для любого эффекта должно быть больше 0.\nТребуется, чтобы настройка "Использовать урон конечностям" была включена, а "Причина смертельного урона" была установлена на "Совокупность травмы" или "Оба".\nУмножается с общим порогом повреждения. Никак не взаимодействует с переломами или хроманием.</Russian>
             <Japanese>致命的状態となり死亡する前に手足が受けられるダメージの量を設定します。\n効果の発動には0より大きい数字に設定する必要があります。\n"手足のダメージを使用" 設定を有効化した上で "致命ダメージの原因" を "外傷の合計" または "どちらか" に設定する必要があります。\nユニット全体のダメージしきい値に対して乗算的に上乗せされます。 骨折や足の引きずり(跛行)とは無関係です。</Japanese>
             <Korean>치명적인 상태가 되어 죽음에 이르기 전까지 사지에 받는 피해량을 설정합니다. 효과가 생기려면 값이 0보다 커야 합니다.\n"사지 피해 사용" 설정을 활성화하고 "치명상의 원인"을 "외상 중첩" 또는 "둘 다"로 설정해야 합니다.\n전체 유닛 피해량 임계값과 곱해져서 누적됩니다. 골절/절뚝거림과는 전혀 상관 없습니다.</Korean>
+            <French>Définit la quantité de dégâts que les membres peuvent subir avant que les dégâts ne deviennent critiques et entraînent la mort. Doit être supérieur à 0 pour avoir un effet.\nIl faut que le paramètre « Utiliser les dommages aux membres » soit activé et que le paramètre « Cause des dommages mortels » soit réglé sur « Cumul des blessures » ou « Les deux ».\nMultiplie avec le seuil de dommages totaux. N'interagit en aucune façon avec les fractures ou les boiteries.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_DisplayName">
             <English>Limb Damage Threshold</English>
             <Russian>Порог повреждения конечностей</Russian>
             <Japanese>手足のダメージしきい値</Japanese>
             <Korean>사지 피해량 임계값</Korean>
+            <French>Seuil de dommages aux membres</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_Description">
             <English>Controls whether limb damage is taken into account for sum of trauma calculations.</English>
             <Russian>Определяет, учитывается ли повреждение конечностей при расчете совокупности травм.</Russian>
             <Japanese>"外傷の合計" の計算に手足のダメージを考慮するかどうかを制御します。</Japanese>
             <Korean>외상 중첩을 계산할 때 사지 피해량을 고려할지 여부를 제어합니다.</Korean>
+            <French>Détermine si les blessures aux membres sont incluses dans le calcul des totaux des blessures.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_DisplayName">
             <English>Use Limb Damage</English>
             <Russian>Использовать урон конечностям</Russian>
             <Japanese>手足のダメージを使用</Japanese>
             <Korean>사지 피해 사용</Korean>
+            <French>Utiliser les dommages aux membres</French>
         </Key>
     </Package>
 </Project>
