@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: LinkInsGrim
+ * Author: LinkIsGrim
  * Returns a copy of unit's stitched wounds on a body part.
  *
  * Arguments:
