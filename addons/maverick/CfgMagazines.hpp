@@ -12,7 +12,7 @@ class CfgMagazines {
 
     class PylonRack_Missile_AGM_02_x1: magazine_Missile_AGM_02_x1 {};
     class PylonRack_Missile_AGM_02_x2: magazine_Missile_AGM_02_x1 {};
-    
+
     // Optical Mavericks
     class GVAR(D_magazine): 6Rnd_Missile_AGM_02_F {
         ammo = QGVAR(D);
@@ -62,7 +62,7 @@ class CfgMagazines {
         displayName = CSTRING(g_mag_x3);
         pylonWeapon = QGVAR(G_Launcher);
     };
-    
+
     class GVAR(G_PylonRack_x1): PylonRack_Missile_AGM_02_x1 {
         ammo = QGVAR(G);
         author = "Dani (TCVM)";

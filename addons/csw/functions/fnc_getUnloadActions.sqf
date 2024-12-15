@@ -32,7 +32,6 @@ private _statement = {
         TIME_PROGRESSBAR(_timeToUnload),
         [_target, _turretPath, _player, _carryMag, _vehMag],
         {
-            //IGNORE_PRIVATE_WARNING ["_player"];
             (_this select 0) params ["_target", "_turretPath", "", "_carryMag", "_vehMag"];
             TRACE_5("unload progressBar finish",_target,_turretPath,_carryMag,_vehMag,_player);
             [QGVAR(removeTurretMag), [_target, _turretPath, _carryMag, _vehMag, _player]] call CBA_fnc_globalEvent;
@@ -47,7 +46,7 @@ private _statement = {
 private _condition = {
     params ["_target", "_player", "_args"];
     _args params ["_vehMag", "_turretPath", "_carryMag"];
-    
+
     [_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew) &&
     {[_target, _turretPath, _player, _carryMag, _vehMag] call FUNC(reload_canUnloadMagazine)}
 };

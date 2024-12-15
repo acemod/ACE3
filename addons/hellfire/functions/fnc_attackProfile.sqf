@@ -48,7 +48,7 @@ private _closingRate = vectorMagnitude velocity _projectile;
 private _timeToGo = ((_projectilePos distance2D _seekerTargetPos) - 500) / _closingRate;
 
 // we could do stuff like desired attack angle, but I'm not going that far today
-private _los = _projectilePos vectorFromTo _seekerTargetPos; 
+private _los = _projectilePos vectorFromTo _seekerTargetPos;
 
 _flightParams params ["_pitchRate", "_yawRate"];
 
@@ -72,18 +72,18 @@ switch (_attackStage) do {
             _attackProfileStateParams set [0, STAGE_ATTACK_TERMINAL];
 
             _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2D _projectilePos]];
-            TRACE_2("New Stage: STAGE_ATTACK_TERMINAL",_distanceToTarget2d,_currentHeightOverTarget);
+            TRACE_2("New Stage: STAGE_ATTACK_TERMINAL",_timeToGo,_angleToTarget);
         };
     };
     case STAGE_SEEK_CRUISE: { // Slowly gain altitude while searching for target
         _missileStateData params ["_heightBeforeStateSwitch", "_initialDistanceToTarget"];
-        
+
         // Before 4000 cruise at 5.7 degrees up, then level out
         _returnTargetPos set [2, _heightBeforeStateSwitch + (_initialDistanceToTarget * sin 5.7)];
-        
+
         if (_seekerTargetPos isNotEqualTo [0,0,0]) then {
             _attackProfileStateParams set [0, STAGE_ATTACK_CRUISE];
-            
+
             _attackProfileStateParams set [2, [_projectilePos select 2, _seekerTargetPos distance2D _projectilePos]];
             TRACE_1("New Stage: STAGE_ATTACK_CRUISE",_distanceFromLaunch2d);
         };

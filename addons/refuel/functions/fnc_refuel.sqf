@@ -64,11 +64,11 @@ if (_maxFuelTank == 0) then {
     private _fueling = _nozzle getVariable [QGVAR(isRefueling), false];
     if (_fueling) then {
         private _refuelContainer = _nozzle getVariable [QGVAR(refuelContainer), false];
-        
+
         // Use special cargo refuel rate when refueling containers
         // TODO: Add flow dedicated input/output flow rates for every container and use the lower of the two instead
         if (_refuelContainer) then {_rate = GVAR(cargoRate)};
-    
+
         // Calculate rate using mission time to take time acceleration and pause into account
         private _addedFuel = _rate * (CBA_missionTime - (_nozzle getVariable [QGVAR(lastTickMissionTime), CBA_missionTime]));
         _nozzle setVariable [QGVAR(lastTickMissionTime), CBA_missionTime];
@@ -85,14 +85,14 @@ if (_maxFuelTank == 0) then {
                 _fuelInSource = _fuelInSource - _addedFuel;
             };
         };
-        
+
         private _fuelInSink = (if (_refuelContainer) then {
             [_sink] call FUNC(getFuel)
         } else {
             // How full the gas tank is. We keep our own record, since `fuel _sink` doesn't update quick enough
             (_nozzle getVariable [QGVAR(tempFuel), fuel _sink]) * _maxFuelTank
         }) + _addedFuel;
-        
+
         // Add fuel to target while being sure not to put too much into sink
         private _maxFuelContainer = [_sink] call FUNC(getCapacity);
         private _maxFuel = [_maxFuelTank, _maxFuelContainer] select _refuelContainer;
@@ -105,7 +105,7 @@ if (_maxFuelTank == 0) then {
             _finished = true;
             [LSTRING(Hint_Completed), 2, _unit] call EFUNC(common,displayTextStructured);
         };
-        
+
         if (_refuelContainer) then {
             [_sink, _fuelInSink] call FUNC(setFuel);
         } else {
@@ -113,7 +113,7 @@ if (_maxFuelTank == 0) then {
             [QEGVAR(common,setFuel), [_sink, _fillRatio], _sink] call CBA_fnc_targetEvent;
             _nozzle setVariable [QGVAR(tempFuel), _fillRatio];
         };
-        
+
         // Increment fuel counter
         _source setVariable [QGVAR(fuelCounter), (_source getVariable [QGVAR(fuelCounter), 0]) + _addedFuel, true];
 

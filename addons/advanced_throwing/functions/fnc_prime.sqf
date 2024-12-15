@@ -23,18 +23,32 @@ _unit setVariable [QGVAR(primed), true];
 
 // Remove item before cooking to prevent weaponselect showing more throwables than there actually are in inventory
 private _throwableMag = (currentThrowable _unit) select 0;
-_unit removeItem _throwableMag;
+private _config = configFile >> "CfgMagazines" >> _throwableMag;
 
-private _throwableType = getText (configFile >> "CfgMagazines" >> _throwableMag >> "ammo");
-private _muzzle = _unit getVariable [QGVAR(activeMuzzle), ""];
+(_unit getVariable [QGVAR(activeMuzzle), ["", -1]]) params ["_muzzle", "_ammoCount"];
 
-// Set muzzle ammo to 0 to block vanilla throwing (can only be 0 or 1), removeItem above resets it
+// If there is 1 "round" left in the grenade, remove it from the player's inventory
+if (_ammoCount == 1) then {
+    // Grenade has ammo set to 0, so remove that one specifically
+    [_unit, _throwableMag, 0] call EFUNC(common,removeSpecificMagazine);
+
+    // Get ammo count of new magazine
+    _unit setVariable [QGVAR(activeMuzzle), [_muzzle, _unit ammo _muzzle]];
+} else {
+    if (_ammoCount > 1 && {getNumber (_config >> "count") > 1}) then {
+        _unit setVariable [QGVAR(activeMuzzle), [_muzzle, _ammoCount - 1]];
+    };
+};
+
+// Set muzzle ammo to 0 to block vanilla throwing, removing magazine above resets it
 _unit setAmmo [_muzzle, 0];
 
+private _throwableType = getText (_config >> "ammo");
+private _ammoConfig = configFile >> "CfgAmmo" >> _throwableType;
+
 // Handle weird scripted grenades (RHS) which could cause unexpected behaviour
-private _nonInheritedCfg = configProperties [configFile >> "CfgAmmo" >> _throwableType, 'configName _x == QGVAR(replaceWith)', false];
-if ((count _nonInheritedCfg) == 1) then {
-    _throwableType = getText (_nonInheritedCfg select 0);
+if (inheritsFrom (_ammoConfig >> QGVAR(replaceWith)) isEqualTo _ammoConfig) then {
+    _throwableType = getText (_ammoConfig >> QGVAR(replaceWith));
 };
 
 // Create actual throwable globally
@@ -59,10 +73,10 @@ deleteVehicle _activeThrowableOld;
 
 if (_showHint) then {
     // Show primed hint
-    private _displayNameShort = getText (configFile >> "CfgMagazines" >> _throwableMag >> "displayNameShort");
-    private _picture = getText (configFile >> "CfgMagazines" >> _throwableMag >> "picture");
+    private _displayNameShort = getText (_config >> "displayNameShort");
+    private _picture = getText (_config >> "picture");
 
-    [[_displayNameShort, localize LSTRING(Primed)] joinString " ", _picture] call EFUNC(common,displayTextPicture);
+    [[_displayNameShort, LLSTRING(Primed)] joinString " ", _picture] call EFUNC(common,displayTextPicture);
 
     // Change controls hint for RMB
     call FUNC(updateControlsHint);

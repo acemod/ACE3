@@ -29,15 +29,14 @@ private _fnc_color = {
 
 private _units = (units group _player) - [_player];
 
-//IGNORE_PRIVATE_WARNING ["_target"];
 private _subActions = [];
-_subActions pushBack (["drop", localize "str_a3_endgame_notifications_title_drop", "\a3\ui_f\data\igui\cfg\actions\ico_off_ca.paa", 
+_subActions pushBack (["drop", localize "str_a3_endgame_notifications_title_drop", "\a3\ui_f\data\igui\cfg\actions\ico_off_ca.paa",
     {[_target] joinSilent grpNull}, {true}] call EFUNC(interact_menu,createAction));
 
 {
     private _icon = [QPATHTOF(UI\team\team_white_ca.paa), _x call _fnc_color];
     private _name = localize format ["str_assign_%1", _x];
-    _subActions pushBack ([_x, _name, _icon, 
+    _subActions pushBack ([_x, _name, _icon,
         {[_target, _this#2] call FUNC(joinTeam)}, {assignedTeam _target != _this#2}, {}, _x] call EFUNC(interact_menu,createAction));
 } forEach ["RED", "GREEN", "BLUE", "YELLOW", "MAIN"];
 

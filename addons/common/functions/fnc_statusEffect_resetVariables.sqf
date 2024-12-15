@@ -4,7 +4,7 @@
  * Resets all effect numbers to 0 when an object respawns (but does not apply the effect event).
  *
  * Arguments:
- * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
+ * 0: Vehicle that it will be attached to (player or vehicle) <OBJECT>
  *
  * Return Value:
  * None
@@ -39,6 +39,6 @@ if (_object == _objectRef) exitWith {};
         TRACE_2("forced reset defined array on object mismatch",_x,_effectNumber);
         _object setVariable [_effectVarName, 0, true]; //This always resets to 0 (not -1/nil)!
     };
-} forEach GVAR(statusEffect_Names);
+} forEach GVAR(statusEffects);
 
 _object setVariable [QGVAR(statusEffect_object), _object, true];
