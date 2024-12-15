@@ -17,6 +17,9 @@
 
 params [["_unit", objNull, [objNull]]];
 
-if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit) };
+if (!local _unit) exitWith {
+    ERROR_1("unit [%1] is not local",_unit);
+    -1
+};
 
 GET_BLOOD_LOSS(_unit)
