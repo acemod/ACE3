@@ -26,7 +26,7 @@ private _displayName = getText (_cfgWeapons >> "displayName");
 [QEGVAR(common,displayTextStructured), [[LSTRING(TakingLauncherHint), _playerName, _displayName], 1.5, _target], [_target]] call CBA_fnc_targetEvent;
 
 if (_launcher isEqualTo "") exitWith {ERROR("No launcher specified.")};
-if (secondaryWeapon _player != "") exitWith {ERROR("Cannot add launcher to target due to lack of inventory space.")};
+if (secondaryWeapon _player isNotEqualTo "") exitWith {ERROR("Cannot add launcher to target due to lack of inventory space.")};
 [_player, _target, 0] call FUNC(tapShoulder);
 [GVAR(LauncherTime), 
     [_player, _target, _launcher, _displayName], 
