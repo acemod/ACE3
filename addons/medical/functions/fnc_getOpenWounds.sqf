@@ -49,6 +49,6 @@ private _openWounds = [];
     if (_xAmount > 0) then { // bandaged wounds are open wounds with count 0, skip those
         _openWounds pushBack +_x; // manual deep copy so modification doesn't affect unit state
     };
-} forEach (GET_OPEN_WOUNDS(_patient) getOrDefault [_bodyPart, []]);
+} forEach (GET_OPEN_WOUNDS(_unit) getOrDefault [_bodyPart, []]);
 
 _openWounds

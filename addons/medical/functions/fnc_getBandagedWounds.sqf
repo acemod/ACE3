@@ -46,6 +46,6 @@ private _bandagedWounds = [];
 
 {
     _bandagedWounds pushBack +_x; // manual deep copy so modification doesn't affect unit state
-} forEach (GET_OPEN_WOUNDS(_patient) getOrDefault [_bodyPart, []]);
+} forEach (GET_OPEN_WOUNDS(_unit) getOrDefault [_bodyPart, []]);
 
 _bandagedWounds

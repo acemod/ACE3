@@ -46,6 +46,6 @@ private _stitchedWounds = [];
 
 {
     _stitchedWounds pushBack +_x; // manual deep copy so modification doesn't affect unit state
-} forEach (GET_STITCHED_WOUNDS(_patient) getOrDefault [_bodyPart, []]);
+} forEach (GET_STITCHED_WOUNDS(_unit) getOrDefault [_bodyPart, []]);
 
 _stitchedWounds
