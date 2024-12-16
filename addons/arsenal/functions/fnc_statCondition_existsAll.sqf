@@ -8,7 +8,10 @@
  * 1: Item config path <CONFIG>
  *
  * Return Value:
- * Stat Text <STRING>
+ * Show stat <BOOL>
+ *
+ * Example:
+ * ["ACE_maxZeroing", _config] call ace_arsenal_fnc_statConditionExistsAll
  *
  * Public: Yes
 */

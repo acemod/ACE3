@@ -10,6 +10,9 @@
  * Return Value:
  * Stat Text <STRING>
  *
+ * Example:
+ * ["ACE_hasEHP", _config] call ace_arsenal_fnc_statTextStatement_yesno
+ *
  * Public: Yes
 */
 
