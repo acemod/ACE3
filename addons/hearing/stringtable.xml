@@ -397,6 +397,9 @@
             <Chinese>聽力保護</Chinese>
             <Chinesesimp>听力保护</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Hearing_statEHP">
+            <English>ELECTRONIC</English>
+        </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>
             <Czech>Hlasitost během ztráty vědomí.</Czech>

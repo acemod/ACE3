@@ -11,6 +11,8 @@ PREP(putInEarPlugs);
 PREP(putOnEHP);
 PREP(removeEarPlugs);
 PREP(removeEHP);
+PREP(statBarStatement_hearingProtection);
+PREP(statTextStatement_hearingProtection);
 PREP(updateHearingProtection);
 PREP(updatePlayerVehAttenuation);
 PREP(updateVolume);
