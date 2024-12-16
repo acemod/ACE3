@@ -11,7 +11,7 @@
  * Show stat <BOOL>
  *
  * Example:
- * ["ACE_maxZeroing", _config] call ace_arsenal_fnc_statConditionExistsAny
+ * ["ACE_maxZeroing", _config] call ace_arsenal_fnc_statCondition_existsAny
  *
  * Public: Yes
 */
