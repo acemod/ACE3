@@ -285,7 +285,7 @@
             <Japanese>聴覚の保護</Japanese>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EHP_Description">
-            <English>%3Electronic Hearing Protection (EHP)%4 helps prevent hearing damage from repeat loud noises near a soldier. Differently from %3Ear Plugs%4, volume is only reduced when necessary. EHP can also be built-in to certain types of %3Headgear%4 and %3Facewear.%4&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Put on Electronic Hearing Protection%4.</English>
+            <English>%3Electronic Hearing Protection (EHP)%4 helps prevent hearing damage from repeat loud noises near a soldier. Differently from %3Ear Plugs%4, volume is only reduced when necessary. %3EHP%4 can also be built-in to certain types of %3Headgear%4 and %3Facewear%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Put on Electronic Hearing Protection%4.</English>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EHP_ShortName">
             <English>Protect Your Hearing, Electronically</English>
