@@ -41,9 +41,9 @@ private _partIndex = ALL_BODY_PARTS find toLowerANSI _bodyPart;
 private _defaultConfig = configFile >> QUOTE(ADDON) >> "IV";
 private _ivConfig = _defaultConfig >> _classname;
 
-private _volume     = GET_NUMBER(_ivConfig >> "volume",getNumber (_defaultConfig >> "volume"));
-private _type       = GET_STRING(_ivConfig >> "type",getText (_defaultConfig >> "type"));
-private _rateCoef   = GET_NUMBER(_ivConfig >> "volume",getNumber (_defaultConfig >> "rateCoef"));
+private _volume   = GET_NUMBER(_ivConfig >> "volume",getNumber (_defaultConfig >> "volume"));
+private _type     = GET_STRING(_ivConfig >> "type",getText (_defaultConfig >> "type"));
+private _rateCoef = GET_NUMBER(_ivConfig >> "volume",getNumber (_defaultConfig >> "rateCoef"));
 
 // Add IV bag to patient's ivBags array
 private _ivBags = _patient getVariable [QEGVAR(medical,ivBags), []];
