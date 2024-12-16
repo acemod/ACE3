@@ -56,7 +56,7 @@ if (_stitchedIndex == -1) then {
 
 if (GVAR(clearTrauma) == 1) then {
     TRACE_2("trauma - clearing trauma after stitching",_bodyPart,_treatedWound);
-    [_unit, _bodyPart, -(_treatedDamageOf * _treatedAmountOf)] call FUNC(addTrauma);
+    [_patient, _bodyPart, -(_treatedDamageOf * _treatedAmountOf)] call FUNC(addTrauma);
 };
 
 _patient setVariable [VAR_BANDAGED_WOUNDS, _bandagedWounds, true];
