@@ -1795,9 +1795,11 @@
         </Key>
         <Key ID="STR_ACE_Common_magneticDeclination">
             <English>Realistic Compass Declination</English>
+            <French>Déclinaison réaliste de la boussole</French>
         </Key>
         <Key ID="STR_ACE_Common_magneticDeclinationooltip">
             <English>Compass will point to magnetic north</English>
+            <French>La boussole indique le nord magnétique</French>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
