@@ -11,6 +11,8 @@
  *    0: IV volume remaining, in liters <STRING>
  *    1: IV type (blood, saline, plasma, etc) <STRING>
  *    2: Body part IV is attached to <STRING>
+ *    3: IV classname <STRING>
+ *    4: IV flow rate coef <NUMBER>
  *
  * Example:
  * player call ace_medical_fnc_getIVs
