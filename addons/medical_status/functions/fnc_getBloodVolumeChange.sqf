@@ -37,7 +37,7 @@ if (!isNil {_unit getVariable QEGVAR(medical,ivBags)}) then {
         if (_bagVolumeRemaining < 0.01) then {
             []
         } else {
-            [_bagVolumeRemaining, _type, _bodyPart]
+            [_bagVolumeRemaining, _type, _bodyPart, _classname]
         };
     };
 
