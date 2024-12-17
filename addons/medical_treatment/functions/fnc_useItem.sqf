@@ -10,7 +10,7 @@
  * 2: Items <ARRAY>
  *
  * Return Value:
- * User and Item and Litter Created<ARRAY>
+ * User and Item and Litter Created <ARRAY>
  *
  * Example:
  * [player, cursorObject, ["bandage"]] call ace_medical_treatment_fnc_useItem
