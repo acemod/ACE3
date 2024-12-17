@@ -1,3 +1,21 @@
+#include "..\script_component.hpp"
+/*
+ * Author: LinkIsGrim
+ * Update unit state and status variables
+ *
+ * Arguments:
+ * 0: The Unit <OBJECT>
+ * 1: Sync value? <BOOL>
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, false] call ace_medical_vitals_fnc_updateState
+ *
+ * Public: No
+ */
+
 params ["_unit", "_syncValues"];
 
 private _bloodVolume = GET_BLOOD_VOLUME(_unit);
