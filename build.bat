@@ -70,5 +70,9 @@ echo .
 pause
 
 hemtt.exe ln sort
+
+push.bat
+
 hemtt.exe release
+
 pause
