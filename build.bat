@@ -71,7 +71,7 @@ pause
 
 hemtt.exe ln sort
 
-push.bat
+call push.bat
 
 hemtt.exe release
 
