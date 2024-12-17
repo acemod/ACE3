@@ -212,6 +212,7 @@ PREP(unloadPerson);
 PREP(unloadPersonLocal);
 PREP(unloadUnitWeapon);
 PREP(unmuteUnit);
+PREP(updatePlayerVehAttenuation);
 PREP(useItem);
 PREP(useMagazine);
 PREP(watchVariable);
