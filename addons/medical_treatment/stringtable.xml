@@ -569,18 +569,18 @@
             <Turkish>Gelişmiş Bandajlar</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_EnabledCanReopen">
-            <English>Enabled &amp; Can Reopen</English>
-            <Czech>Zapnuto &amp; Úrazy se mohou znovu otevřít</Czech>
-            <French>Activé &amp; peuvent se rouvrir</French>
+            <English>Enabled & Can Reopen</English>
+            <Czech>Zapnuto & Úrazy se mohou znovu otevřít</Czech>
+            <French>Activé & peuvent se rouvrir</French>
             <Spanish>Habilitada y pueden reabrirse</Spanish>
             <Italian>Attivi e possono riaprirsi</Italian>
-            <Polish>Aktywne &amp; możliwe ponowne otwarcie</Polish>
+            <Polish>Aktywne & możliwe ponowne otwarcie</Polish>
             <Portuguese>Habilitado e pode reabrir</Portuguese>
             <Russian>Включено и может открыться заново</Russian>
             <German>Aktiviert und können sich wieder öffnen</German>
             <Korean>활성화 및 붕대 풀림 구현</Korean>
-            <Japanese>有効 &amp; 再開放</Japanese>
-            <Chinesesimp>已启用 &amp; 可以伤口开裂</Chinesesimp>
+            <Japanese>有効 & 再開放</Japanese>
+            <Chinesesimp>已启用 & 可以伤口开裂</Chinesesimp>
             <Turkish>Etkinleştirildi ve Yeniden Açılabilir</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_Description">
@@ -600,27 +600,27 @@
             <Turkish>Genel Teşhis eylemi yerine Nabzı Kontrol Et, Kan Basıncını Kontrol Et ve Yanıtı Kontrol Et tedavi eylemlerini etkinleştirir. \ Devre dışı bırakıldığında, CPR eylemi yalnızca CPR gerçekleştirilmesi uygun olduğunda gösterilecektir.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrest">
-            <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest</English>
-            <French>Activé &amp; Diagnostic du décès/de l'arrêt cardiaque</French>
+            <English>Enabled & Can Diagnose Death/Cardiac Arrest</English>
+            <French>Activé & Diagnostic du décès/de l'arrêt cardiaque</French>
             <Spanish>Habilitado y poder diagnosticar Muerte/Parada cardíaca</Spanish>
             <Italian>Abilitato e può diagnosticare Morte/Arresto Cardiaco</Italian>
             <Polish>Włączone i pozwala zdiagnozować Śmierć/Zatrzymanie Akcji Serca</Polish>
             <Portuguese>Habilitado e permite diagnosticar morte/parada cardíaca</Portuguese>
             <Russian>Включено и может диагностировать смерть/остановку сердца</Russian>
-            <German>Aktiviert &amp; kann Tod/Herzstillstand diagnostizieren</German>
+            <German>Aktiviert & kann Tod/Herzstillstand diagnostizieren</German>
             <Korean>활성화 및 사망/심정지 진찰 가능</Korean>
-            <Japanese>有効 &amp; 死亡/心停止状態を診断可能</Japanese>
-            <Chinesesimp>已启用 &amp; 可以诊断死亡/心搏骤停</Chinesesimp>
+            <Japanese>有効 & 死亡/心停止状態を診断可能</Japanese>
+            <Chinesesimp>已启用 & 可以诊断死亡/心搏骤停</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DiagnoseCardiacArrestDirect">
-            <English>Enabled &amp; Can Diagnose Death/Cardiac Arrest [Directly]</English>
-            <French>Activé &amp; peut diagnostiquer la mort/l'arrêt cardiaque [Direct].</French>
+            <English>Enabled & Can Diagnose Death/Cardiac Arrest [Directly]</English>
+            <French>Activé & peut diagnostiquer la mort/l'arrêt cardiaque [Direct].</French>
             <Spanish>Habilitado y poder diagnosticar Muerte/Parada cardíaca [Directamente]</Spanish>
             <Italian>Abilitato e può diagnosticare Morte/Arresto Cardiaco [Esplicito]</Italian>
             <Russian>Включено и может диагностировать смерть/остановку сердца [Напрямую]</Russian>
-            <German>Aktiviert &amp; kann Tod/Herzstillstand diagnostizieren [Direkt]</German>
+            <German>Aktiviert & kann Tod/Herzstillstand diagnostizieren [Direkt]</German>
             <Korean>활성화 및 사망/심정지 진찰 가능 [직접]</Korean>
-            <Japanese>有効 &amp; 死亡/心停止状態を診断可能 [直接的に]</Japanese>
+            <Japanese>有効 & 死亡/心停止状態を診断可能 [直接的に]</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
             <English>Advanced Diagnose</English>
@@ -4767,9 +4767,9 @@
             <Hungarian>Sebészeti készlet használata</Hungarian>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_VehiclesAndFacilities">
-            <English>Vehicles &amp; Facilities</English>
+            <English>Vehicles & Facilities</English>
             <Czech>Zdravotnická zařízení a vozidla</Czech>
-            <French>Véhicules &amp; installations sanitaires</French>
+            <French>Véhicules & installations sanitaires</French>
             <Spanish>Vehículos e instalaciones médicas</Spanish>
             <Italian>Veicoli e strutture</Italian>
             <Polish>Pojazdy i Obiekty</Polish>
@@ -4777,9 +4777,9 @@
             <Russian>Техника и госпитали</Russian>
             <German>Fahrzeuge und Einrichtungen</German>
             <Korean>의료 차량 및 시설</Korean>
-            <Japanese>車両 &amp; 施設</Japanese>
+            <Japanese>車両 & 施設</Japanese>
             <Chinese>車輛與設施</Chinese>
-            <Chinesesimp>载具&amp;设施</Chinesesimp>
+            <Chinesesimp>载具&设施</Chinesesimp>
             <Turkish>Araçlar ve Tesisler</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_VeryLightlyWounded">

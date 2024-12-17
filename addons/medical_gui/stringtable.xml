@@ -283,20 +283,20 @@
             <Turkish>Sürükle / Taşı</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EXAMINE_TREATMENT">
-            <English>EXAMINE &amp; TREATMENT</English>
-            <Czech>VYŠETŘENÍ &amp; LÉČBA</Czech>
-            <French>EXAMENS &amp; TRAITEMENTS</French>
-            <Spanish>EXAMINAR &amp; TRATAMIENTO</Spanish>
-            <Italian>ESAMINA &amp; TRATTA</Italian>
-            <Polish>BADANIE &amp; LECZENIE</Polish>
-            <Portuguese>EXAMINAR &amp; TRATAMENTO</Portuguese>
+            <English>EXAMINE & TREATMENT</English>
+            <Czech>VYŠETŘENÍ & LÉČBA</Czech>
+            <French>EXAMENS & TRAITEMENTS</French>
+            <Spanish>EXAMINAR & TRATAMIENTO</Spanish>
+            <Italian>ESAMINA & TRATTA</Italian>
+            <Polish>BADANIE & LECZENIE</Polish>
+            <Portuguese>EXAMINAR & TRATAMENTO</Portuguese>
             <Russian>ОСМОТР И ЛЕЧЕНИЕ</Russian>
-            <German>Untersuchung &amp; Behandlung</German>
+            <German>Untersuchung & Behandlung</German>
             <Korean>검사 / 치료</Korean>
             <Japanese>診断と治療</Japanese>
-            <Chinese>檢查 &amp; 治療</Chinese>
-            <Chinesesimp>检查 &amp; 治疗</Chinesesimp>
-            <Turkish>MUAYENE &amp; TEDAVİ</Turkish>
+            <Chinese>檢查 & 治療</Chinese>
+            <Chinesesimp>检查 & 治疗</Chinesesimp>
+            <Turkish>MUAYENE & TEDAVİ</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_EnableActions_Description">
             <English>Enables medical actions for the Interaction Menu and selects their style.</English>
