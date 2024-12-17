@@ -1,3 +1,5 @@
+PREP(consumeIVs);
+PREP(consumeMedications);
 PREP(handleUnitVitals);
 PREP(scanConfig);
 PREP(updateHeartRate);
