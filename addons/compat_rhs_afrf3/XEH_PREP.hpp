@@ -1,2 +1,0 @@
-PREP(onCut);
-PREP(onPrepare);
