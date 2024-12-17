@@ -14,7 +14,7 @@
  * Public: No
  */
 
-#define INSTAKILL_BLOCKED(unit) (unit isNotEqualTo (unit getVariable [QGVAR(blockInstaKill), objNull]))
+#define INSTAKILL_BLOCKED(unit) (unit isEqualTo (unit getVariable [QGVAR(blockInstaKill), objNull]))
 
 params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator", "_hitpoint", "_directHit", "_context"];
 
