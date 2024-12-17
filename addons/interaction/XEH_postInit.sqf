@@ -127,7 +127,7 @@ GVAR(isOpeningDoor) = false;
     GVAR(isOpeningDoor) = false;
     true
 },
-[57, [false, true, false]], false] call CBA_fnc_addKeybind; //Key CTRL+Space
+[0, [false, false, false]], false] call CBA_fnc_addKeybind; // false
 
 ["ACE3 Common", QGVAR(tapShoulder), localize LSTRING(TapShoulder), {
     // Conditions: canInteract
@@ -143,7 +143,7 @@ GVAR(isOpeningDoor) = false;
     true
 },
 {false},
-[20, [true, false, false]], false] call CBA_fnc_addKeybind;
+[0, [false, false, false]], false] call CBA_fnc_addKeybind; // false
 
 ["isNotSwimming", {!(_this call EFUNC(common,isSwimming))}] call EFUNC(common,addCanInteractWithCondition);
 ["isNotOnLadder", {getNumber (configFile >> "CfgMovesMaleSdr" >> "States" >> animationState (_this select 0) >> "ACE_isLadder") != 1}] call EFUNC(common,addCanInteractWithCondition);

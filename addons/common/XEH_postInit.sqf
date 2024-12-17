@@ -598,7 +598,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     true
 },
 {false},
-[0xC7, [false, false, false]], false] call CBA_fnc_addKeybind;  //Home Key
+[0, [false, false, false]], false] call CBA_fnc_addKeybind;  // false
 
 ["ACE3 Equipment", QGVAR(closeDevice), LLSTRING(closeHandheldDevice), {
     [] call FUNC(deviceKeyFindValidIndex);
@@ -607,7 +607,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     true
 },
 {false},
-[0xC7, [false, true, false]], false] call CBA_fnc_addKeybind;  //CTRL + Home Key
+[0, [false, false, false]], false] call CBA_fnc_addKeybind;  // false
 
 ["ACE3 Equipment", QGVAR(cycleDevice), LLSTRING(cycleHandheldDevices), {
     [1] call FUNC(deviceKeyFindValidIndex);
@@ -618,7 +618,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     true
 },
 {false},
-[0xC7, [true, false, false]], false] call CBA_fnc_addKeybind;  //SHIFT + Home Key
+[0, [false, false, false]], false] call CBA_fnc_addKeybind;  // false
 
 
 ["ACE3 Weapons", QGVAR(unloadWeapon), LSTRING(unloadWeapon), {
@@ -644,7 +644,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     [_unit, _weapon, _muzzle, _magazine, _ammo, false] call FUNC(unloadUnitWeapon);
 
     true
-}, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; // Alt + R
+}, {false}, [0, [false, false, false]], false] call CBA_fnc_addKeybind; // false
 
 ["CBA_loadoutSet", {
     params ["_unit", "_loadout"];
