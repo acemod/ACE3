@@ -7,7 +7,7 @@ class EGVAR(arsenal,stats) {
         displayName = CSTRING(statHearingProtection);
         showBar = 1;
         condition = QUOTE([ARR_2(_this select 0,_this select 1)] call EFUNC(arsenal,statCondition_existsAny));
-        barStatement = QUOTE([ARR_3(_this select 0,_this select 1,[ARR_3([ARR_2(0,1)],[ARR_2(0.01,1)],false)])] call FUNC(statBarStatement_hearingProtection));
+        barStatement = QUOTE([ARR_2(_this select 0,_this select 1)] call FUNC(statBarStatement_hearingProtection));
         showText = 1;
         textStatement = QUOTE(_this select 1 call FUNC(statTextStatement_hearingProtection));
         tabs[] = {{6, 7}, {}};

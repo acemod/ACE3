@@ -6,7 +6,6 @@
  * Arguments:
  * 0: Stats <ARRAY>
  * 1: Item config path <CONFIG>
- * 2: Args for configExtreme <ARRAY>
  *
  * Return Value:
  * Bar statement <NUMBER>
@@ -20,4 +19,4 @@ if (getNumber (_config >> (_stats # 1)) == 1) exitWith {
     1
 };
 
-[_stats select 0, _config, _args] call EFUNC(arsenal,statBarStatement_default)
+[_stats select 0, _config, [[0, 1], [0.01, 1], false]] call EFUNC(arsenal,statBarStatement_default)
