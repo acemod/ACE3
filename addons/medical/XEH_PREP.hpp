@@ -4,6 +4,7 @@ PREP(deserializeState);
 PREP(fullHeal);
 PREP(getBandagedWounds);
 PREP(getBloodLoss);
+PREP(getIVs);
 PREP(getOpenWounds);
 PREP(getStitchedWounds);
 PREP(isInjured);
