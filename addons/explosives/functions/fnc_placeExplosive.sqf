@@ -55,18 +55,11 @@ _triggerSpecificVars pushBack _triggerConfig;
 if (isNumber (_magazineTrigger >> "digDistance")) then {
     private _digDistance = getNumber (_magazineTrigger >> "digDistance");
 
-    //Get Surface Type:
-    private _canDigDown = true;
-
     // If dig distance is negative (=> placed closer towards the sky), ignore digging requirements
-    if (_digDistance < 0) then {
-        private _surfaceType = surfaceType _pos;
-        if ((_surfaceType select [0,1]) == "#") then {_surfaceType = _surfaceType select [1, 99];};
-        if ((_surfaceType != "") || {isClass (configFile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron")}) then {
-            private _soundEnviron = getText (configFile >> "CfgSurfaces" >> _surfaceType >> "soundEnviron");
-            TRACE_2("Dig Down Surface",_surfaceType,_soundEnviron);
-            _canDigDown = !(_soundEnviron in ["road", "tarmac", "concrete", "concrete_int", "int_concrete", "concrete_ext"]);
-        };
+    private _canDigDown = if (_digDistance >= 0) then {
+        [_pos] call EFUNC(common,canDig)
+    } else {
+        true
     };
 
     //Don't dig down if pos ATL is high (in a building or A2 road)
