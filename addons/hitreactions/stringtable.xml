@@ -6,6 +6,7 @@
             <Russian>Если при передвижении пешком юнит получит больше урона, чем указано в этой настройке,то он упадет.\nЕсли установлено значение -1, механика отключается.</Russian>
             <Korean>유닛이 도보로 이동하는 동안 이 설정 값보다 많은 대미지를 입으면 넘어집니다.\n-1로 설정하면 이 기능은 꺼집니다.</Korean>
             <Japanese>徒歩で移動中のユニットが設定値を超えるダメージを受けると転倒します。\n-1に設定することでこの機能を無効化できます。</Japanese>
+            <French>Si une unité subit plus de dégâts que la valeur de ce paramètre alors qu'elle se déplace à pied, elle tombera à la renverse.\nSi le paramètre est réglé sur -1 le mécanisme est désactivé.</French>
         </Key>
         <Key ID="STR_ACE_HitReactions_minDamageToTrigger_displayName">
             <English>Min Damage to trigger falling</English>

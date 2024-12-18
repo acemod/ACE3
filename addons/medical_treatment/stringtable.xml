@@ -3596,6 +3596,7 @@
             <Russian>Заставляет действие контрольного импульса выдавать числовое значение, основанное на настройке</Russian>
             <Japanese>脈拍の確認アクションから得られる情報が数値化されるようになる医療レベルを設定します</Japanese>
             <Korean>설정에 따라 맥박 확인 행동을 통해 숫자로 표시된 값을 제공합니다.</Korean>
+            <French>L'action de vérification du pouls fournit une valeur numérique, en fonction de vos paramètres.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
             <English>Numerical Pulse</English>
