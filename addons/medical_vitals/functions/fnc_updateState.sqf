@@ -39,6 +39,7 @@ if (_inPain isNotEqualTo IS_IN_PAIN(_unit)) then {
 };
 
 private _heartRate = GET_HEART_RATE(_unit);
+private _woundBloodLoss = GET_WOUND_BLEEDING(_unit);
 private _bloodPressure = _unit getVariable [VAR_BLOOD_PRESS, [80, 120]];
 
 _bloodPressure params ["_bloodPressureL", "_bloodPressureH"];

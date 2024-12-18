@@ -36,7 +36,7 @@ private _consumedMedications = [];
     private _timeInSystem = CBA_missionTime - _timeAdded;
     if (_timeInSystem >= _maxTimeInSystem) then {
         _syncValues = true;
-        _adjustments deleteAt _forEachIndex;
+        _medications deleteAt _forEachIndex;
     } else {
         private _effectRatio = (((_timeInSystem / _timeTillMaxEffect) ^ 2) min 1) * (_maxTimeInSystem - _timeInSystem) / _maxTimeInSystem;
 
