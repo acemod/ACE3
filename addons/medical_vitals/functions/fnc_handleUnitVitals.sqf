@@ -61,11 +61,8 @@ _syncValues = [_unit, _deltaT, _syncValues] call FUNC(consumeMedications);
 // Update blood presure
 [_unit, _syncValues] call FUNC(updateBloodPressure);
 
-// Consume IVs
-[_unit, _deltaT] call FUNC(consumeIVs);
-
 // Update statemachine and status variables
-_unit call FUNC(updateState);
+[_unit, _syncValues] call FUNC(updateState);
 
 END_COUNTER(Vitals);
 
