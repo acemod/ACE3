@@ -110,6 +110,7 @@
             <Portuguese>OS %3Sacos de Cadáver%4 são utilizados para transportar cadáveres. Eles podem ser arrastados e embarcados em veículos.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Aproxime-se de um cadáver.&lt;br/&gt;%2Utilize [%3%13%4] ou [%3%15%4] e selecione %3Colocar cadáver dentro do saco%4.</Portuguese>
             <Korean>%3시체 운반용 부대%4는 시체를 운반하는 데 사용되며, 차량으로 끌고 가서 적재할 수 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2시체에 접근하십시오.&lt;br/&gt;%2[%3%13%4] 또는 [%3%15%4]를 사용하여 %3시체 운반용 부대에 담기%4를 선택하십시오.</Korean>
             <Japanese>%3遺体袋%4は、遺体の輸送に使用されます。引きずって車両に積み込むことができます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2遺体に近寄る。&lt;br/&gt;%2[%3%13%4] または [%3%15%4] を使って%3遺体袋に入れる%4を選択して使用します。</Japanese>
+            <French>%3Les sacs mortuaires%4 sont utilisés pour transporter les cadavres. Ils peuvent être traînés et chargés dans des véhicules.&lt;br/&gt;&lt;br/&gt;%3Utilisation:%4&lt;br/&gt;%2Approchez-vous d'un cadavre.&lt;br/&gt;Utilisez [%3%13%4] ou [%3%15%4] et sélectionnez %3Placer le corps dans le sac mortuaire%4.</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_BodyBag_ShortName">
             <English>Bring Out Your Dead</English>
