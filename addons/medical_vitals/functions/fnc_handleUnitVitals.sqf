@@ -34,26 +34,11 @@ if (_syncValues) then {
 // Update SPO2 intake and usage since last update
 [_unit, _deltaT, _syncValues] call FUNC(updateOxygen);
 
-private _bleeding = -_deltaT * GET_BLOOD_LOSS(_unit);
-private _ivChange = [_unit, _deltaT, _syncValues] call FUNC(consumeIVs);
+// Update blood volume
+[_unit, _deltaT, _syncValues] call FUNC(updateBloodVolume);
 
-private _bloodVolume = GET_BLOOD_VOLUME(_unit) + _bleeding + _ivChange;
-_bloodVolume = 0 max _bloodVolume min DEFAULT_BLOOD_VOLUME;
-
-// @todo: replace this and the rest of the setVariable with EFUNC(common,setApproximateVariablePublic)
-_unit setVariable [VAR_BLOOD_VOL, _bloodVolume, _syncValues];
-
-// Handle pain due tourniquets, that have been applied more than 120 s ago
-private _tourniquetPain = 0;
-private _tourniquets = GET_TOURNIQUETS(_unit);
-{
-    if (_x > 0 && {CBA_missionTime - _x > 120}) then {
-        _tourniquetPain = _tourniquetPain max (CBA_missionTime - _x - 120) * 0.001;
-    };
-} forEach _tourniquets;
-if (_tourniquetPain > 0) then {
-    [_unit, _tourniquetPain] call EFUNC(medical_status,adjustPainLevel);
-};
+// Update pain (currently only tourniquets)
+[_unit, _syncValues] call FUNC(updatePain);
 
 // Consume medications
 _syncValues = [_unit, _deltaT, _syncValues] call FUNC(consumeMedications);
