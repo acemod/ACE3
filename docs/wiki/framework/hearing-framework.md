@@ -17,8 +17,9 @@ version:
 ```cpp
 class CfgWeapons {
     class MyHelmet {
-         ace_hearing_protection = 0.80;  // Protection against deafening (0 to 1, higher means more protection)
-         ace_hearing_lowerVolume = 0.60;  // Muffling of the sound (0 to 1, higher means more muffling)
+        ace_hearing_protection = 0.80;  // Protection against deafening (0 to 1, higher means more protection)
+        ace_hearing_lowerVolume = 0.60; // Muffling of the sound (0 to 1, higher means more muffling)
+        ace_hearing_hasEHP = 1;         // Is electronic hearing protection (0 to disable, 1 to enable)
     };
 };
 ```
