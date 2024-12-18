@@ -137,8 +137,22 @@ class CfgWeapons {
     class arifle_XMS_Base_Sand_lxWS: arifle_XMS_Base_lxWS {
         displayName = SUBCSTRING(XMS_Sand_Name);
     };
+    class arifle_XMS_lxWS;
+    class arifle_XMS_Camo_lxWS: arifle_XMS_lxWS {
+        displayName = SUBCSTRING(XMS_Camo_Name);
+    };
+    class arifle_XMS_Gray_lxWS: arifle_XMS_lxWS {
+        displayName = SUBCSTRING(XMS_Gray_Name);
+    };
+
     class arifle_XMS_GL_lxWS: arifle_XMS_Base_lxWS {
         displayName = SUBCSTRING(XMS_GL_Name);
+    };
+    class arifle_XMS_GL_Camo_lxWS: arifle_XMS_GL_lxWS {
+        displayName = SUBCSTRING(XMS_GL_Camo_Name);
+    };
+    class arifle_XMS_GL_Gray_lxWS: arifle_XMS_GL_lxWS {
+        displayName = SUBCSTRING(XMS_GL_Gray_Name);
     };
     class arifle_XMS_GL_khk_lxWS: arifle_XMS_GL_lxWS {
         displayName = SUBCSTRING(XMS_GL_Khaki_Name);
@@ -149,6 +163,12 @@ class CfgWeapons {
     class arifle_XMS_Shot_lxWS: arifle_XMS_Base_lxWS {
         displayName = SUBCSTRING(XMS_SG_Name);
     };
+    class arifle_XMS_Shot_Camo_lxWS: arifle_XMS_Shot_lxWS {
+        displayName = SUBCSTRING(XMS_SG_Camo_Name);
+    };
+    class arifle_XMS_Shot_Gray_lxWS: arifle_XMS_Shot_lxWS {
+        displayName = SUBCSTRING(XMS_SG_Gray_Name);
+    };
     class arifle_XMS_Shot_khk_lxWS: arifle_XMS_Shot_lxWS {
         displayName = SUBCSTRING(XMS_SG_Khaki_Name);
     };
@@ -157,6 +177,12 @@ class CfgWeapons {
     };
     class arifle_XMS_M_lxWS: arifle_XMS_Base_lxWS {
         displayName = SUBCSTRING(XMS_SW_Name);
+    };
+    class arifle_XMS_M_Camo_lxWS: arifle_XMS_M_lxWS {
+        displayName = SUBCSTRING(XMS_SW_Camo_Name);
+    };
+    class arifle_XMS_M_Gray_lxWS: arifle_XMS_M_lxWS {
+        displayName = SUBCSTRING(XMS_SW_Gray_Name);
     };
     class arifle_XMS_M_khk_lxWS: arifle_XMS_M_lxWS {
         displayName = SUBCSTRING(XMS_SW_Khaki_Name);
