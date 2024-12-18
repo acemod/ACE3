@@ -19,11 +19,10 @@
 params ["_unit", "_syncValues"];
 
 // Handle pain due tourniquets, that have been applied more than 120 s ago
-private _tourniquets = GET_TOURNIQUETS(_unit);
+private _activeTourniquets = GET_TOURNIQUETS(_unit) - [0];
+if (_activeTourniquets isEqualTo []) exitWith {};
 
 private _oldestTourniquetTime = selectMin _tourniquets;
-if (_oldestTourniquetTime == 0) exitWith {};
-
 private _tourniquetPainSeconds = CBA_missionTime - _oldestTourniquetTime - TOURNIQUET_MIN_TIME_FOR_PAIN;
 if (_tourniquetPainSeconds <= 0) exitWith {};
 
