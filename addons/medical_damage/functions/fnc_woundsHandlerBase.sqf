@@ -199,8 +199,6 @@ if (_createdWounds) then {
     _unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
     _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
 
-    [_unit] call EFUNC(medical_status,updateWoundBloodLoss);
-
     _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 
     [QEGVAR(medical,injured), [_unit, _painLevel]] call CBA_fnc_localEvent;
