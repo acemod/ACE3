@@ -19,4 +19,10 @@
 
 params ["", "_patient", "_bodyPart"];
 
-count (GET_BANDAGED_WOUNDS(_patient) getOrDefault [_bodyPart, []]) * GVAR(woundStitchTime)
+private _woundCount = 0;
+{
+    _x params ["", "_amountOf"];
+    _woundCount = _woundCount + (ceil _amountOf);
+} forEach (GET_BANDAGED_WOUNDS(_patient) getOrDefault [_bodyPart, []]);
+
+_woundCount * GVAR(woundStitchTime) // return

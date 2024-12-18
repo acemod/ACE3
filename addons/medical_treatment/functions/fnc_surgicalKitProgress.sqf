@@ -32,9 +32,17 @@ if (_bandagedWoundsOnPart isEqualTo []) exitWith {false};
 // Not enough time has elapsed to stitch a wound
 if (_totalTime - _elapsedTime > ([_patient, _patient, _bodyPart] call FUNC(getStitchTime)) - GVAR(woundStitchTime)) exitWith {true};
 
-// Remove the first stitchable wound from the bandaged wounds
-private _treatedWound = _bandagedWoundsOnPart deleteAt (count _bandagedWoundsOnPart - 1);
+// Reduce the first stitchable wound from the bandaged wounds
+private _treatedWound = _bandagedWoundsOnPart select 0;
 _treatedWound params ["_treatedID", "_treatedAmountOf", "", "_treatedDamageOf"];
+
+if (_treatedAmountOf - 1 <= 0) then {
+    _bandagedWoundsOnPart deleteAt 0;
+} else {
+    _treatedWound set [1, _treatedAmountOf - 1];
+};
+
+_treatedAmountOf = _treatedAmountOf min 1;
 
 // Check if we need to add a new stitched wound or increase the amount of an existing one
 private _stitchedWounds = GET_STITCHED_WOUNDS(_patient);
@@ -46,6 +54,8 @@ private _woundIndex = _stitchedWoundsOnPart findIf {
 };
 
 if (_woundIndex == -1) then {
+    _treatedWound = +_treatedWound;
+    _treatedWound set [1, _treatedAmountOf];
     _stitchedWoundsOnPart pushBack _treatedWound;
 } else {
     private _wound = _stitchedWoundsOnPart select _woundIndex;
