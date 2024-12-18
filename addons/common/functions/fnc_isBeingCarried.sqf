@@ -1,18 +1,18 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Returns if a target is being carried. (from ace_dragging)
+ * Returns if an object is being carried. (from ace_dragging)
  *
  * Arguments:
- * 0: Target Unit <OBJECT>
+ * 0: Object <OBJECT>
  *
  * Return Value:
  * Is being carried <BOOL>
  *
  * Example:
- * [bob] call ace_medical_status_fnc_isBeingCarried
+ * bob call ace_common_fnc_isBeingCarried
  *
- * Public: No
+ * Public: Yes
  */
 
 params ["_target"];

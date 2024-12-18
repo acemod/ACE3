@@ -11,8 +11,6 @@ PREP(handleKilled);
 PREP(handleKilledMission);
 PREP(hasStableVitals);
 PREP(initUnit);
-PREP(isBeingCarried);
-PREP(isBeingDragged);
 PREP(isInStableCondition);
 PREP(setCardiacArrestState);
 PREP(setDead);

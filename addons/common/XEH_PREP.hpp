@@ -125,6 +125,8 @@ PREP(hideUnit);
 PREP(interpolateFromArray);
 PREP(inTransitionAnim);
 PREP(isAwake);
+PREP(isBeingCarried);
+PREP(isBeingDragged);
 PREP(isEngineer);
 PREP(isEOD);
 PREP(isInBuilding);
