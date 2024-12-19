@@ -32,27 +32,30 @@ if (!EGVAR(medical,alternateArmorPenetration) || _ammo isEqualTo "") exitWith {_
 private _damageData = (_allDamages select 0); // selection specific
 _damageData params ["_engineDamage", "_bodyPart", "_realDamage"];
 
-private _armorLevelStep = [4, 2] select (_bodyPart == "head");
-private _armor = (_realDamage/_engineDamage) - _armorLevelStep;
+private _armorLevelStep = [2, 4] select (_bodyPart == "body");
+private _armor = (_realDamage/_engineDamage) - 2; // remove base armor
 
 // There's no need to calculate penetration if there is no armor to begin with, base damage handling is good enough in this case
-if (_armor <= 0) exitWith {
+if (_armor <= _armorLevelStep) exitWith {
+    TRACE_3("skipping no armor",_armor,_bodyPart,_armorLevelStep);
     _this // return
 };
 
 // Cap at Armor Level V
-private _armorLevel = 0 max (round ((_armor - _armorLevelStep) / _armorLevelStep)) min 5;
+// Jumping from no armor to armor level 1 is 2 steps
+private _armorLevel = 0 max (floor ((_armor - (_armorLevelStep * 2)) / _armorLevelStep)) min 4;
+TRACE_3("gotArmorLevel",_armorLevel,_armor,_armorLevelStep);
 
 // Armor RHA equivalent, non-linear, ref \a3\Data_F\Penetration\armour_plate/thin/medium/heavy.bisurf
 // Divided by 2 to keep inline with vanilla caliber values
-// Excedent armor over the cap gets added as a small bonus to thickness, up to the armor level V cap
-private _armorThickness = (_armor - (_armorLevel + 1) * _armorLevelStep) + ([
-    0,
+private _armorThickness = [
     6,
     15,
+    21,
     40,
     55
-] select _armorLevel);
+] select _armorLevel;
+TRACE_1("gotArmorThickness",_armorThickness);
 
 // See (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber),
 // _penFactor is ammo "caliber" * RHA penetrability, armor plates according to BI are just made of RHA with different thickness
