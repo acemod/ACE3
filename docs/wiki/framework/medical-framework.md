@@ -224,7 +224,6 @@ Custom wound handlers should follow the same spec as the built-in handler:
 | 0  | Unit that was hit | Object | Required |
 | 1  | Array of damage dealt to each body part | Array | Required |
 | 2  | Type of damage | String | Required |
-| 3  | Ammo | String | Optional |
 | **R** | Parameters to be passed to the next handler in the list, e.g. `_this` or a modified copy of it. Return `[]` to prevent further handling. | Array | Required |
 
 The damage elements are sorted in descending order according to how much damage was dealt to each body part _before armor was taken into account_, but the actual damage values are _after armor_.
