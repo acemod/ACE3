@@ -25,10 +25,9 @@ private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
 if (_typeOfDamage in GVAR(damageTypeDetails)) then {
     (GVAR(damageTypeDetails) get _typeOfDamage) params ["", "", "_woundHandlers"];
 
-    private _damageData = [_unit, _allDamages, _typeOfDamage, _ammo];
+    private _damageData = [_unit, _allDamages, _typeOfDamage];
     {
         _damageData = _damageData call _x;
-        _damageData pushBackUnique _ammo; // readd ammo if it was dropped from return, BWC for not breaking #9217. pushBackUnique is faster than checking and appending manually
         TRACE_1("Wound handler returned",_damageData);
 
         // If invalid return, exit
