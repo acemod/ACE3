@@ -28,12 +28,18 @@ if (_typeOfDamage in GVAR(damageTypeDetails)) then {
     private _damageData = [_unit, _allDamages, _typeOfDamage, _ammo];
 
     {
-        _damageData = _damageData call _x;
-        TRACE_1("Wound handler returned",_damageData);
+        _x params ["_handlerName", "_handlerCode"];
+        _damageData = _damageData call _handlerCode;
+        TRACE_2("Wound handler returned",_damageData,_handlerName);
+
+        if ((count _damageData) == 3) then {
+            ERROR_1("Wound handler '%1' missing _ammo in return, readding. This will be deprecated in the future, check Medical Framework wiki.",_handlerName);
+            _damageData pushBack _ammo;
+        };
 
         // If invalid return, exit
         if (isNil "_damageData" || {!(_damageData isEqualType [])} || {(count _damageData) < 4}) exitWith {
-            TRACE_1("Return invalid, skipping wound handling",_damageData);
+            TRACE_2("Return invalid, skipping wound handling",_damageData,_handlerName);
         };
     } forEach _woundHandlers;
 };
