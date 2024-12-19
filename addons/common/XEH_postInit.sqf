@@ -375,6 +375,15 @@ GVAR(OldIsCamera) = false;
     ["ace_activeCameraChanged", [_player, GVAR(OldIsCamera)]] call CBA_fnc_localEvent;
 }, true] call CBA_fnc_addPlayerEventHandler;
 
+// Update vehicle audio attenuation when player vehicle changes
+GVAR(playerVehAttenuation) = 1;
+["vehicle", {
+    params ["_player", "_vehicle"];
+    TRACE_2("vehicle change",_player,_vehicle);
+    _this call FUNC(updatePlayerVehAttenuation);
+}, true] call CBA_fnc_addPlayerEventHandler;
+["turret", LINKFUNC(updatePlayerVehAttenuation), false] call CBA_fnc_addPlayerEventHandler;
+
 // Add event handler for UAV control change
 ACE_controlledUAV = [objNull, objNull, [], ""];
 addMissionEventHandler ["PlayerViewChanged", {
