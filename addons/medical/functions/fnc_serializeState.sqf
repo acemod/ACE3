@@ -44,7 +44,7 @@ private _state = [] call CBA_fnc_createNamespace;
     [QEGVAR(medical,ivBags), nil],
     [QEGVAR(medical,triageLevel), 0],
     [QEGVAR(medical,triageCard), []],
-    [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]]
+    [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0,0,0,0,0,0,0]]
     // Time needs to be converted
     // [VAR_MEDICATIONS, []]
 ];
