@@ -10,7 +10,7 @@
  *    1: Body part <STRING>
  *    2: Real damage <NUMBER>
  * 2: Type of the damage done <STRING>
- * 3: Projectile classname <STRING> (default: "")
+ * 3: Ammo <STRING>
  *
  * Return Value:
  * None
@@ -24,13 +24,22 @@
 // This gets close to vanilla values on FMJ ammo
 #define DAMAGE_SCALING_FACTOR 10
 
-params ["_unit", "_allDamages", "_typeOfDamage", ["_ammo", ""]];
-TRACE_3("woundsHandlerArmorPenetration",_unit,_allDamages,_typeOfDamage);
+params ["_unit", "_allDamages", "_typeOfDamage", "_ammo"];
+TRACE_4("woundsHandlerArmorPenetration",_unit,_allDamages,_typeOfDamage,_ammo);
 
-if (!EGVAR(medical,alternateArmorPenetration) || _ammo isEqualTo "") exitWith {_this};
+if (!EGVAR(medical,alternateArmorPenetration)) exitWith {_this};
 
 private _damageData = (_allDamages select 0); // selection specific
 _damageData params ["_engineDamage", "_bodyPart", "_realDamage"];
+
+private _ammoData = _ammo call FUNC(getAmmoData);
+
+// See (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber),
+// _penFactor is ammo "caliber" * RHA penetrability, armor plates according to BI are just made of RHAe material
+_ammoData params ["_hit", "_penFactor", "_typicalSpeed"];
+
+// Skip bad ammo
+if (_hit <= 0) exitWith {_this};
 
 private _armorLevelStep = [2, 4] select (_bodyPart == "body");
 private _armor = (_realDamage/_engineDamage) - 2; // remove base armor
@@ -57,13 +66,10 @@ private _armorThickness = [
 ] select _armorLevel;
 TRACE_1("gotArmorThickness",_armorThickness);
 
-// See (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber),
-// _penFactor is ammo "caliber" * RHA penetrability, armor plates according to BI are just made of RHA with different thickness
-([_ammo] call FUNC(getAmmoData)) params ["_hit", "_penFactor", "_typicalSpeed"];
-
 // Impact damage is hit * (impactSpeed / typicalSpeed): https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#typicalSpeed
 // Impact damage is already lowered by engine based on hit angle, so speed and therefore penetration are also naturally lowered
-private _impactSpeed = (_realDamage/_hit) * _typicalSpeed;
+// Assume typicalSpeed < 1 means no damage dropoff
+private _impactSpeed = (_realDamage/_hit) * (_typicalSpeed max 1);
 
 private _penDepth = _penFactor * _impactSpeed;
 
