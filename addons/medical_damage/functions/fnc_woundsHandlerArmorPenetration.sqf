@@ -52,7 +52,7 @@ if (_armor <= _armorLevelStep) exitWith {
 
 // Cap at Armor Level V
 // Jumping from no armor to armor level 1 is 2 steps
-private _armorLevel = 0 max (floor ((_armor - (_armorLevelStep * 2)) / _armorLevelStep)) min 4;
+private _armorLevel = 0 max (round ((_armor - (_armorLevelStep * 2)) / _armorLevelStep)) min 4;
 TRACE_3("gotArmorLevel",_armorLevel,_armor,_armorLevelStep);
 
 // Armor RHA equivalent, non-linear, ref \a3\Data_F\Penetration\armour_plate/thin/medium/heavy.bisurf
