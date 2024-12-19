@@ -38,7 +38,7 @@ if (_rags != _prevRags) then {
     _armor = 0;
 
     {
-        _armor = _armor + [_x, _hitpoint] call FUNC(getItemArmor);
+        _armor = _armor + ([_x, _hitpoint] call FUNC(getItemArmor));
     } forEach _gear;
 
     // Armor should be at least 1 to prevent dividing by 0
