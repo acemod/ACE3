@@ -18,7 +18,7 @@
 
 params ["_unit", "_syncValues"];
 
-// Handle pain due tourniquets, that have been applied more than 120 s ago
+// Handle pain due to tourniquets, that have been applied more than 120 s ago
 private _activeTourniquets = GET_TOURNIQUETS(_unit) - [0];
 if (_activeTourniquets isEqualTo []) exitWith {};
 
