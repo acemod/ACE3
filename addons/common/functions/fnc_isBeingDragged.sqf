@@ -1,18 +1,18 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Returns if a target is being dragged. (from ace_dragging)
+ * Returns if an object is being dragged. (from ace_dragging)
  *
  * Arguments:
- * 0: Target Unit <OBJECT>
+ * 0: Object <OBJECT>
  *
  * Return Value:
  * Is being dragged <BOOL>
  *
  * Example:
- * [bob] call ace_medical_status_fnc_isBeingDragged
+ * bob call ace_common_fnc_isBeingDragged
  *
- * Public: No
+ * Public: Yes
  */
 
 params ["_target"];
