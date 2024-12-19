@@ -28,7 +28,7 @@ private _bloodVolumeChange = 0;
 private _consumedIVs = [];
 
 {
-    _x params ["_bagVolumeRemaining", "_type", "_bodyPartIndex", "_classname", "_rateCoef"];
+    _x params ["_bagVolumeRemaining", "_type", "_bodyPartIndex", "_treatment", "_rateCoef", "_item"];
 
     if (_tourniquets select _bodyPartIndex > 0) then {
         continue
@@ -36,7 +36,7 @@ private _consumedIVs = [];
 
     private _bagChange = (_deltaT * EGVAR(medical,ivFlowRate) * IV_CHANGE_PER_SECOND * _rateCoef) min _bagVolumeRemaining; // absolute value of the change in miliLiters
     _bagVolumeRemaining = _bagVolumeRemaining - _bagChange;
-    _consumedIVs pushBack [_type, _classname, _bagChange];
+    _consumedIVs pushBack [_type, _treatment, _bagChange];
 
     if (_type in ["Blood", "Plasma", "Saline"]) then {
         _bloodVolumeChange = _bloodVolumeChange + (_bagChange / 1000);
