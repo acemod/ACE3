@@ -6,6 +6,9 @@
  * Arguments:
  * 0: Unit that was hit <OBJECT>
  * 1: Damage done to each body part <ARRAY>
+ *    0: Engine damage <NUMBER>
+ *    1: Body part <STRING>
+ *    2: Real damage <NUMBER>
  * 2: Type of the damage done <STRING>
  * 3: Projectile classname <STRING> (default: "")
  *
@@ -18,51 +21,38 @@
  * Public: No
  */
 
-// armor 2 with passthrough 0.8
-#define SCALED_UNPROTECTED_VALUE 4
-#define ENGINE_DAMAGE_INDEX 0
-
 // This gets close to vanilla values on FMJ ammo
 #define DAMAGE_SCALING_FACTOR 10
-
-// Based off #9216 armor values for vanilla vests
-#define ARMOR_LEVEL_1_CAP 12
-#define ARMOR_LEVEL_2_CAP 14
-#define ARMOR_LEVEL_3_CAP 16
-#define ARMOR_LEVEL_4_CAP 20
 
 params ["_unit", "_allDamages", "_typeOfDamage", ["_ammo", ""]];
 TRACE_3("woundsHandlerArmorPenetration",_unit,_allDamages,_typeOfDamage);
 
-if !(EGVAR(medical,alternateArmorPenetration) && {_ammo isNotEqualTo ""}) exitWith {_this};
+if (!EGVAR(medical,alternateArmorPenetration) || _ammo isEqualTo "") exitWith {_this};
 
 private _damageData = (_allDamages select 0); // selection specific
-_damageData params ["_engineDamage", "", "_realDamage"];
+_damageData params ["_engineDamage", "_bodyPart", "_realDamage"];
 
-private _armor = (_realDamage/_engineDamage) - SCALED_UNPROTECTED_VALUE;
-// There's no need to calculate penetration if there is no armor to begin with, vanilla damage handling is good enough in this case
+private _armorLevelStep = [4, 2] select (_bodyPart == "head");
+private _armor = (_realDamage/_engineDamage) - _armorLevelStep;
+
+// There's no need to calculate penetration if there is no armor to begin with, base damage handling is good enough in this case
 if (_armor <= 0) exitWith {
     _this // return
 };
 
+// Cap at Armor Level V
+private _armorLevel = 0 max (round ((_armor - _armorLevelStep) / _armorLevelStep)) min 5;
+
 // Armor RHA equivalent, non-linear, ref \a3\Data_F\Penetration\armour_plate/thin/medium/heavy.bisurf
 // Divided by 2 to keep inline with vanilla caliber values
-// Excedent armor over the cap gets added as a small bonus to thickness
-private _armorThickness = _armor/2;
-switch (true) do {
-    case (_armor >= ARMOR_LEVEL_4_CAP): {
-        _armorThickness = 55 - (ARMOR_LEVEL_4_CAP - _armor);
-    };
-    case (_armor >= ARMOR_LEVEL_3_CAP): {
-        _armorThickness = 40 - (ARMOR_LEVEL_3_CAP - _armor);
-    };
-    case (_armor >= ARMOR_LEVEL_2_CAP): {
-        _armorThickness = 15 - (ARMOR_LEVEL_2_CAP - _armor);
-    };
-    case (_armor >= ARMOR_LEVEL_1_CAP): {
-        _armorThickness = 6 - (ARMOR_LEVEL_1_CAP - _armor);
-    };
-};
+// Excedent armor over the cap gets added as a small bonus to thickness, up to the armor level V cap
+private _armorThickness = (_armor - (_armorLevel + 1) * _armorLevelStep) + ([
+    0,
+    6,
+    15,
+    40,
+    55
+] select _armorLevel);
 
 // See (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber),
 // _penFactor is ammo "caliber" * RHA penetrability, armor plates according to BI are just made of RHA with different thickness
@@ -74,10 +64,9 @@ private _impactSpeed = (_realDamage/_hit) * _typicalSpeed;
 
 private _penDepth = _penFactor * _impactSpeed;
 
-// We want to base damage on the round's energy and armor penetration exclusively, so we'll use the config value to get damage
-// There's only so much damage a round can do, limited by its energy
+// Max damage is the config value, go down from there based on armor penetration
 private _finalDamage = (_hit * ((_penDepth/_armorThickness) min 1)) / DAMAGE_SCALING_FACTOR;
-_damageData set [ENGINE_DAMAGE_INDEX, _finalDamage];
+_damageData set [0, _finalDamage];
 
 TRACE_3("Armor penetration handled, passing damage",_finalDamage,_damageData,_allDamages);
 
