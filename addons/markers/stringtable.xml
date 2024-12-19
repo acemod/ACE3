@@ -426,16 +426,16 @@
             <Chinesesimp>UTC时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampTooltipNoWatch">
-            <English>Watch Required</English>
+            <English>Watch, GPS or UAV Terminal Required</English>
             <French>Une montre est requise.</French>
             <Spanish>Reloj requerido</Spanish>
             <Italian>Necessario orologio</Italian>
             <Polish>Wymagany zegarek</Polish>
             <Portuguese>Relógio necessário</Portuguese>
             <Russian>Необходимы часы</Russian>
-            <German>Uhr benötigt</German>
-            <Korean>시계 필요함</Korean>
-            <Japanese>時計が必要</Japanese>
+            <German>Uhr, GPS oder UAV Terminal benötigt</German>
+            <Korean>시계, GPS 또는 무인기 단말이 필요함</Korean>
+            <Japanese>時計 か GPS または UAVターミナル が必要</Japanese>
             <Chinesesimp>需要手表</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampUTCMinutesOffset">
@@ -458,7 +458,7 @@
             <Polish>Zmień przesunięcie minut dla sygnatury czasowej UTC</Polish>
             <Russian>Изменить минутное смещение для времени UTC</Russian>
             <German>Ändere den Minutenversatz für den UTC-Zeitstempel</German>
-            <Korean>UTC 타임 스탬프의 분 오프셋을 변경하십시오</Korean>
+            <Korean>UTC 타임스탬프의 분 단위 오프셋을 변경합니다</Korean>
             <Japanese>UTCタイムスタンプの分オフセットを変更します</Japanese>
             <Chinesesimp>更改UTC时间戳的分钟偏移量</Chinesesimp>
         </Key>
@@ -482,7 +482,7 @@
             <Polish>Zmień przesunięcie czasu dla sygnatury czasowej UTC</Polish>
             <Russian>Измените смещение времени для метки времени UTC</Russian>
             <German>Ändere die Zeitverschiebung für den UTC-Zeitstempel</German>
-            <Korean>UTC 타임 스탬프의 시간 오프셋을 변경하십시오</Korean>
+            <Korean>UTC 타임스탬프의 시간 단위 오프셋을 변경합니다</Korean>
             <Japanese>UTCタイムスタンプの時オフセットを変更します</Japanese>
             <Chinesesimp>更改UTC时间戳的时间偏移量</Chinesesimp>
         </Key>
