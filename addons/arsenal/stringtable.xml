@@ -952,6 +952,9 @@
             <Chinesesimp>反转摄影机控制</Chinesesimp>
             <Turkish>Kamera kontrollerini ters çevir</Turkish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_unavailableItemsTooltip">
+            <English>Unavailable Items Tooltip</English>
+        </Key>
         <Key ID="STR_ACE_Arsenal_loadoutDeleted">
             <English>The following loadout was deleted:</English>
             <Czech>Tato sada vybavení byla smazána:</Czech>
