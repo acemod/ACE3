@@ -37,6 +37,7 @@ GVAR(isUsingMagnification) = false;
 
     ["unit", {
         // Call manually to update existing value
+        GVAR(playerHMD) = hmd ace_player;
         [] call FUNC(refreshGoggleType);
     }, true] call CBA_fnc_addPlayerEventHandler;
 
