@@ -25,14 +25,14 @@ private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
 if (_typeOfDamage in GVAR(damageTypeDetails)) then {
     (GVAR(damageTypeDetails) get _typeOfDamage) params ["", "", "_woundHandlers"];
 
-    private _damageData = [_unit, _allDamages, _typeOfDamage];
+    private _damageData = [_unit, _allDamages, _typeOfDamage, _ammo];
 
     {
         _damageData = _damageData call _x;
         TRACE_1("Wound handler returned",_damageData);
 
         // If invalid return, exit
-        if (isNil "_damageData" || {!(_damageData isEqualType [])} || {(count _damageData) < 3}) exitWith {
+        if (isNil "_damageData" || {!(_damageData isEqualType [])} || {(count _damageData) < 4}) exitWith {
             TRACE_1("Return invalid, skipping wound handling",_damageData);
         };
     } forEach _woundHandlers;
