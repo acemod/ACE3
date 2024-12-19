@@ -48,6 +48,7 @@ GVAR(armorCache) getOrDefaultCall [_this joinString "$", {
 
         // Scale armor using passthrough to fix explosive-resistant & stupid armor (#9063)
         // Skip scaling for uniforms and items that don't cover the hitpoint to prevent infinite armor
+        private _armorLevelStep = [4, 2] select (_itemType == TYPE_HEADGEAR);
         if (_itemType != TYPE_UNIFORM && (_armor > _armorLevelStep * 6)) then {
             private _passThroughEffect = [1, 0.6] select (_itemType == TYPE_VEST);
             _armor = (log (_armor / (_passThrough ^ _passThroughEffect))) * 10;
