@@ -872,10 +872,10 @@
             <French>Utiliser les dommages aux membres</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_DisplayName">
-            <English>Use Alternate Armor Penetration</English>
+            <English>Use Custom Armor Penetration</English>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_Description">
-            <English>Controls whether ammo material penetration ("caliber") is taken into account for damage handling.</English>
+            <English>Controls whether ammo material penetration is taken into account for damage handling.</English>
         </Key>
     </Package>
 </Project>
