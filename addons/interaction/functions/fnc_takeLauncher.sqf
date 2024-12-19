@@ -36,18 +36,18 @@ if (secondaryWeapon _player isNotEqualTo "") exitWith {ERROR("Cannot add launche
         TRACE_4("launcher params",_player,_target,_launcher,_displayName);
         fn_getWeaponStates =
         {
-	        params ["_target", "_launcher"];
-	        private _origState = weaponState _target select [0,3];
-	        private _muzzles = [_launcher] + (getArray (configFile >> "CfgWeapons" >> _launcher >> "muzzles") select { _x != "this" });
-	        private _states = [];
+            params ["_target", "_launcher"];
+            private _origState = weaponState _target select [0,3];
+            private _muzzles = [_launcher] + (getArray (configFile >> "CfgWeapons" >> _launcher >> "muzzles") select { _x != "this" });
+            private _states = [];
 
-	        {
-	        	_target selectWeapon _x;
-	        	_states pushBack weaponState _target;
-	        } forEach _muzzles;
+            {
+                _target selectWeapon _x;
+                _states pushBack weaponState _target;
+            } forEach _muzzles;
 
-	        _target selectWeapon _origState;
-	        _states;
+            _target selectWeapon _origState;
+            _states;
         };
 
 
