@@ -29,11 +29,9 @@ INFO("showing shot info");
     }, {
         params ["", "_shootPos", "_lastPos"];
         private _mkrB = createMarker [format ["shotInfo-%1-%2",_shootPos,_lastPos], _lastPos];
-        _mkrB setMarkerType "mil_dot";
-        _mkrB setMarkerColor "ColorGreen";
-        _mkrB setMarkerSize [0.5,0.5];
-        private _diff = _lastPos vectorDiff _shootPos;
-        _mkrB setMarkerText format ["%1", _diff apply {round _x}];
+        _mkrB setMarkerTypeLocal "mil_dot";
+        _mkrB setMarkerColorLocal "ColorGreen";
+        _mkrB setMarkerSizeLocal [0.5,0.5];
 
         private _dist2d = _shootPos distance2D _lastPos;
         private _dir = _shootPos getDir _lastPos;
@@ -42,7 +40,7 @@ INFO("showing shot info");
     }, [_proj, _shootPos, [0,0,0], _submunitionAmmo]] call CBA_fnc_waitUntilAndExecute;
 
     private _mkrA = createMarker [format ["shotInfo-%1",_shootPos], _shootPos];
-    _mkrA setMarkerType "mil_dot";
-    _mkrA setMarkerColor "ColorRed";
+    _mkrA setMarkerTypeLocal "mil_dot";
+    _mkrA setMarkerColorLocal "ColorRed";
     _mkrA setMarkerSize [0.5,0.5];
 }] call CBA_fnc_addClassEventHandler;

@@ -26,6 +26,7 @@
 #define SCANNING_PERIOD 1
 
 #ifdef DEBUG_MODE_FULL
+    #undef SCANNING_PERIOD
     #define SCANNING_PERIOD 0
 #endif
 

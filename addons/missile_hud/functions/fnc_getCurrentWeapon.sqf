@@ -18,7 +18,7 @@
  */
 
 params ["_unit", "_vehicle", "_turretPath"];
-TRACE_2("registerElement",_condition,_generator);
+TRACE_3("getCurrentWeapon",_unit,_vehicle,_turretPath);
 
 private _currentWeapon = if (_unit isEqualTo _vehicle) then {
     currentWeapon _unit

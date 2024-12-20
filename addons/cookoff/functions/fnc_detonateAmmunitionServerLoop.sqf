@@ -118,7 +118,7 @@ if (_removeAmmoDuringCookoff) then {
             _magazineIndex = _virtualAmmo findIf {(_x select 0) == _magazineClassname};
 
             if (_magazineIndex == -1) exitWith {
-                TRACE_1("no virtual magazine",_magazineClass);
+                TRACE_1("no virtual magazine",_magazineClassname);
             };
 
             if (_newAmmoCount <= 0) then {
