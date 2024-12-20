@@ -571,10 +571,6 @@
             <English>Ram 1500 (RCWS)</English>
             <Japanese>ラム 1500 (RCWS)</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_rocket_Name">
-            <English>Ram 1500 (Rocket)</English>
-            <Japanese>ラム 1500 (ロケット)</Japanese>
-        </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_repair_Name">
             <English>Ram 1500 (Repair)</English>
             <French>Ram 1500 (Réparation)</French>
@@ -583,6 +579,10 @@
             <German>Ram 1500 (Instandsetzung)</German>
             <Korean>램 1500 (정비)</Korean>
             <Japanese>ラム 1500 (修理)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_rocket_Name">
+            <English>Ram 1500 (Rocket)</English>
+            <Japanese>ラム 1500 (ロケット)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_service_Name">
             <English>Ram 1500 (Services)</English>

@@ -1,41 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MISSILE_AIM9">
-        <Key ID="STR_ACE_MISSILE_AIM9_m">
-            <English>AIM-9M [ACE]</English>
-            <Japanese>AIM-9M [ACE]</Japanese>
-        </Key>
-        <Key ID="STR_ACE_MISSILE_AIM9_x">
-            <English>AIM-9X [ACE]</English>
-            <Japanese>AIM-9X [ACE]</Japanese>
-        </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_aim132">
             <English>AIM-132 [ACE]</English>
             <Japanese>AIM-132 [ACE]</Japanese>
-        </Key>
-        <Key ID="STR_ACE_MISSILE_AIM9_r73">
-            <English>R-73 [ACE]</English>
-            <Japanese>R-73 [ACE]</Japanese>
-        </Key>
-        <Key ID="STR_ACE_MISSILE_AIM9_r74">
-            <English>R-74 [ACE]</English>
-            <Japanese>R-74 [ACE]</Japanese>
-        </Key>
-        <Key ID="STR_ACE_MISSILE_AIM9_m_1x">
-            <English>1x AIM-9M [ACE]</English>
-            <Japanese>1x AIM-9M [ACE]</Japanese>
-        </Key>
-        <Key ID="STR_ACE_MISSILE_AIM9_m_2x">
-            <English>2x AIM-9M [ACE]</English>
-            <Japanese>2x AIM-9M [ACE]</Japanese>
-        </Key>
-        <Key ID="STR_ACE_MISSILE_AIM9_x_1x">
-            <English>1x AIM-9X [ACE]</English>
-            <Japanese>1x AIM-9X [ACE]</Japanese>
-        </Key>
-        <Key ID="STR_ACE_MISSILE_AIM9_x_2x">
-            <English>2x AIM-9X [ACE]</English>
-            <Japanese>2x AIM-9X [ACE]</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_aim132_1x">
             <English>1x AIM-132 [ACE]</English>
@@ -49,9 +17,29 @@
             <English>4x AIM-132 [ACE]</English>
             <Japanese>4x AIM-132 [ACE]</Japanese>
         </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_m">
+            <English>AIM-9M [ACE]</English>
+            <Japanese>AIM-9M [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_m_1x">
+            <English>1x AIM-9M [ACE]</English>
+            <Japanese>1x AIM-9M [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_m_2x">
+            <English>2x AIM-9M [ACE]</English>
+            <Japanese>2x AIM-9M [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_r73">
+            <English>R-73 [ACE]</English>
+            <Japanese>R-73 [ACE]</Japanese>
+        </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_r73_1x">
             <English>1x R-73 [ACE]</English>
             <Japanese>1x R-73 [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_r74">
+            <English>R-74 [ACE]</English>
+            <Japanese>R-74 [ACE]</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM9_r74_1x">
             <English>1x R-74 [ACE]</English>
@@ -60,6 +48,18 @@
         <Key ID="STR_ACE_MISSILE_AIM9_r74_2x">
             <English>2x R-74 [ACE]</English>
             <Japanese>2x R-74 [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_x">
+            <English>AIM-9X [ACE]</English>
+            <Japanese>AIM-9X [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_x_1x">
+            <English>1x AIM-9X [ACE]</English>
+            <Japanese>1x AIM-9X [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_x_2x">
+            <English>2x AIM-9X [ACE]</English>
+            <Japanese>2x AIM-9X [ACE]</Japanese>
         </Key>
     </Package>
 </Project>

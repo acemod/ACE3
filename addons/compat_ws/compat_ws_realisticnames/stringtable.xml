@@ -328,6 +328,18 @@
             <Korean>벡터 R5 카빈 (뱀 위장)</Korean>
             <Japanese>ヴェクター R5 カービン (ヘビ柄迷彩)</Japanese>
         </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Camo_Name">
+            <English>XMS (Camo)</English>
+            <Japanese>XMS (迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Camo_Name">
+            <English>XMS GL (Camo)</English>
+            <Japanese>XMS GL (迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Gray_Name">
+            <English>XMS GL (Gray)</English>
+            <Japanese>XMS GL (グレー)</Japanese>
+        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Khaki_Name">
             <English>XMS GL (Khaki)</English>
             <French>XMS GL (kaki)</French>
@@ -352,14 +364,6 @@
             <Japanese>XMS GL</Japanese>
             <Chinesesimp>XMS GL</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Camo_Name">
-            <English>XMS GL (Camo)</English>
-            <Japanese>XMS GL (迷彩)</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Gray_Name">
-            <English>XMS GL (Gray)</English>
-            <Japanese>XMS GL (グレー)</Japanese>
-        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Sand_Name">
             <English>XMS GL (Sand)</English>
             <French>XMS GL (sable)</French>
@@ -371,6 +375,10 @@
             <Korean>XMS GL (모래)</Korean>
             <Japanese>XMS GL (サンド)</Japanese>
             <Chinesesimp>XMS GL（沙色）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Gray_Name">
+            <English>XMS (Gray)</English>
+            <Japanese>XMS (グレー)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Khaki_Name">
             <English>XMS (Khaki)</English>
@@ -396,13 +404,13 @@
             <Japanese>XMS</Japanese>
             <Chinesesimp>XMS</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Camo_Name">
-            <English>XMS (Camo)</English>
-            <Japanese>XMS (迷彩)</Japanese>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Camo_Name">
+            <English>XMS SG (Camo)</English>
+            <Japanese>XMS SG (迷彩)</Japanese>
         </Key>
-        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Gray_Name">
-            <English>XMS (Gray)</English>
-            <Japanese>XMS (グレー)</Japanese>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Gray_Name">
+            <English>XMS SG (Gray)</English>
+            <Japanese>XMS SG (グレー)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Khaki_Name">
             <English>XMS SG (Khaki)</English>
@@ -428,14 +436,6 @@
             <Japanese>XMS SG</Japanese>
             <Chinesesimp>XMS SG</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Camo_Name">
-            <English>XMS SG (Camo)</English>
-            <Japanese>XMS SG (迷彩)</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Gray_Name">
-            <English>XMS SG (Gray)</English>
-            <Japanese>XMS SG (グレー)</Japanese>
-        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Sand_Name">
             <English>XMS SG (Sand)</English>
             <French>XMS SG (sable)</French>
@@ -447,6 +447,14 @@
             <Korean>XMS SG (모래)</Korean>
             <Japanese>XMS SG (サンド)</Japanese>
             <Chinesesimp>XMS SG（沙色）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Camo_Name">
+            <English>XMS SW (Camo)</English>
+            <Japanese>XMS SW (迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Gray_Name">
+            <English>XMS SW (Gray)</English>
+            <Japanese>XMS SW (グレー)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Khaki_Name">
             <English>XMS SW (Khaki)</English>
@@ -472,14 +480,6 @@
             <Japanese>XMS SW</Japanese>
             <Chinesesimp>XMS SW</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Camo_Name">
-            <English>XMS SW (Camo)</English>
-            <Japanese>XMS SW (迷彩)</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Gray_Name">
-            <English>XMS SW (Gray)</English>
-            <Japanese>XMS SW (グレー)</Japanese>
-        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Sand_Name">
             <English>XMS SW (Sand)</English>
             <French>XMS SW (sable)</French>
@@ -503,6 +503,14 @@
             <Korean>XMS (모래)</Korean>
             <Japanese>XMS (サンド)</Japanese>
             <Chinesesimp>XMS（沙色）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_camo_Name">
+            <English>C-More Railway (Red, Camo)</English>
+            <Japanese>C-More レイルウェイ (レッド、迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_grn_camo_Name">
+            <English>C-More Railway (Green, Camo)</English>
+            <Japanese>C-More レイルウェイ (グリーン、迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_tracked_02_Name">
             <English>BM-2T Stalker (Bumerang-BM)</English>
@@ -557,14 +565,6 @@
             <German>Otokar ARMA (Unbewaffnet)</German>
             <Korean>오토카 아르마 APC (비무장)</Korean>
             <Japanese>オトカ アルマ (非武装)</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_camo_Name">
-            <English>C-More Railway (Red, Camo)</English>
-            <Japanese>C-More レイルウェイ (レッド、迷彩)</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_grn_camo_Name">
-            <English>C-More Railway (Green, Camo)</English>
-            <Japanese>C-More レイルウェイ (グリーン、迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_arco_hex_Name">
             <English>ELCAN SpecterOS (Hex)</English>
