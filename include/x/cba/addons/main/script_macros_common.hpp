@@ -1335,7 +1335,7 @@ Author:
 
 /* -------------------------------------------
 Macro: DEFAULT_PARAM()
-    DEPRECATED - Use param/params commands added in Arma 3 1.48
+    DEPRECATED - Use param/params commands added in Arma 3 1.48 - Will not work with HEMTT 1.13.2+
 
     Getting a default function parameter. This may be used together with <PARAMS_n()> to have a mix of required and
     optional parameters.
