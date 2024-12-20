@@ -1,6 +1,7 @@
 PREP(addInventoryActions);
 PREP(addMedicationAdjustment);
 PREP(adjustPainLevel);
+PREP(getAllMedicationCount);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
 PREP(getBloodVolumeChange);
@@ -10,8 +11,6 @@ PREP(handleKilled);
 PREP(handleKilledMission);
 PREP(hasStableVitals);
 PREP(initUnit);
-PREP(isBeingCarried);
-PREP(isBeingDragged);
 PREP(isInStableCondition);
 PREP(setCardiacArrestState);
 PREP(setDead);

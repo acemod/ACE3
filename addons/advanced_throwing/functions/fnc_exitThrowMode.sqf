@@ -21,9 +21,7 @@ TRACE_2("params",_unit,_reason);
 
 if !(_unit getVariable [QGVAR(inHand), false]) exitWith {};
 
-#ifdef DEBUG_MODE_FULL
-    systemChat format ["Exit Throw Mode: %1", _reason];
-#endif
+TRACE_1("Exit Throw Mode",_reason);
 
 private _activeThrowable = _unit getVariable [QGVAR(activeThrowable), objNull];
 if !(_unit getVariable [QGVAR(primed), false]) then {
@@ -38,13 +36,13 @@ if !(_unit getVariable [QGVAR(primed), false]) then {
     [QEGVAR(common,setShotParents), [_activeThrowable, _unit, _instigator]] call CBA_fnc_serverEvent;
 };
 
-// Restore muzzle ammo (setAmmo 1 has no impact if no appliccable throwable in inventory)
-_unit setAmmo [_unit getVariable [QGVAR(activeMuzzle), ""], 1];
+// Restore muzzle ammo (setAmmo has no impact if no applicable throwable in inventory)
+_unit setAmmo (_unit getVariable [QGVAR(activeMuzzle), ["", -1]]);
 
 _unit setVariable [QGVAR(inHand), false];
 _unit setVariable [QGVAR(primed), false];
 _unit setVariable [QGVAR(activeThrowable), objNull];
-_unit setVariable [QGVAR(activeMuzzle), ""];
+_unit setVariable [QGVAR(activeMuzzle), ["", -1]];
 _unit setVariable [QGVAR(throwType), THROW_TYPE_DEFAULT];
 _unit setVariable [QGVAR(throwSpeed), THROW_SPEED_DEFAULT];
 _unit setVariable [QGVAR(dropMode), false];
