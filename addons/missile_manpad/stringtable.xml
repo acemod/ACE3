@@ -3,15 +3,19 @@
     <Package name="MISSILE_MANPAD">
         <Key ID="STR_ACE_MISSILE_MANPAD_stinger">
             <English>FIM-92 Stinger [ACE]</English>
+            <Japanese>FIM-92 スティンガー [ACE]</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_MANPAD_rim116">
             <English>RIM-116 [ACE]</English>
+            <Japanese>RIM-116 [ACE]</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_MANPAD_rim116_21x">
             <English>21x RIM-116 [ACE]</English>
+            <Japanese>21x RIM-116 [ACE]</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_MANPAD_stinger_4x">
             <English>4x FIM-92 Stinger [ACE]</English>
+            <Japanese>4x FIM-92 スティンガー [ACE]</Japanese>
         </Key>
     </Package>
 </Project>
