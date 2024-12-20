@@ -406,7 +406,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_statEHP">
             <English>ELECTRONIC</English>
-            <Japanese>電子</Japanese>
+            <Japanese>電子聴覚保護</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>
