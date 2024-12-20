@@ -4,38 +4,47 @@
         <Key ID="STR_ACE_MISSILE_SAM_essm">
             <English>Mk-29 ESSM</English>
             <French>Mk-29 ESSM</French>
+            <Japanese>Mk-29 ESSM</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_SAM_essm_missile">
             <English>RIM-162 ESSM</English>
             <French>RIM-162 ESSM</French>
+            <Japanese>RIM-162 ESSM</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_SAM_essm_operator">
             <English>Mk-29 Operator</English>
             <French>Mk-29 Operator</French>
+            <Japanese>Mk-29 操作員</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_SAM_patriot">
             <English>MIM-104 Patriot</English>
             <French>MIM-104 Patriot</French>
+            <Japanese>MIM-104 ペトリオット</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_SAM_patriot_missile">
             <English>Patriot Missile</English>
             <French>Patriot Missile</French>
+            <Japanese>ペトリオット ミサイル</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_SAM_patriot_operator">
             <English>MIM-104 Operator</English>
             <French>MIM-104 Operator</French>
+            <Japanese>MIM-104 操作員</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_SAM_s400">
             <English>S-400</English>
             <French>S-400</French>
+            <Japanese>S-400</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_SAM_s400_missile">
             <English>S-400 Missile</English>
             <French>S-400 Missile</French>
+            <Japanese>S-400 ミサイル</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_SAM_s400_operator">
             <English>S-400 Operator</English>
             <French>S-400 Operator</French>
+            <Japanese>S-400 操作員</Japanese>
         </Key>
     </Package>
 </Project>
