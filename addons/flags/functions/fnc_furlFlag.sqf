@@ -17,10 +17,9 @@
 
 params ["_unit"];
 
-// Stop carrying flag and add flag item to unit.
-_item = _unit getVariable [QGVAR(carryingFlag), ""];
-_unit setVariable [QGVAR(carryingFlag), nil, true];
+private _item = _unit getVariable [QGVAR(carryingFlag), ""];
 
+_unit setVariable [QGVAR(carryingFlag), nil, true];
 _unit forceFlagTexture ""; // Remove flag
 
 [_unit, _item] call EFUNC(common,addToInventory);
