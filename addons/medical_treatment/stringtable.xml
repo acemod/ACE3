@@ -971,6 +971,9 @@
             <Chinesesimp>优先消耗医疗兵装备</Chinesesimp>
             <Turkish>İlk Sıhhiyenin Ekipmanı</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedicIfMedic">
+            <English>Medic's Equipment First [If medic role]</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
             <Czech>Prvně pacientovo vybavení</Czech>
