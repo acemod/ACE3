@@ -8,6 +8,6 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
-GVAR(flagItemCache) = createHashMap;
+GVAR(flagItemCache) = +(uiNamespace getVariable [QGVAR(flagItemCache), createHashMap]);
 
 ADDON = true;

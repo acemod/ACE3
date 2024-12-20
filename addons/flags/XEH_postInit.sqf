@@ -26,15 +26,3 @@ GVAR(isPlacing) = PLACE_CANCEL;
     ] call EFUNC(interact_menu,createAction);
     [_flag, 0, [], _pickupFlag] call EFUNC(interact_menu,addActionToObject);
 }] call CBA_fnc_addEventHandler;
-
-private _cfgWeapons = configFile >> "CfgWeapons";
-private _flagItems = (call (uiNamespace getVariable [QGVAR(allFlagItems), {[]}])) apply {_cfgWeapons >> _x};
-{
-    private _name = configName _x;
-    private _displayName = getText (_x >> "displayName");
-    private _texture = getText (_x >> QGVAR(texture));
-    private _actionIconPlace = getText (_x >> QGVAR(actionIconPlace));
-    private _actionIconCarry = getText (_x >> QGVAR(actionIconCarry));
-
-    GVAR(flagItemCache) set [_name, [_displayName, _texture, _actionIconPlace, _actionIconCarry]];
-} forEach _flagItems;
