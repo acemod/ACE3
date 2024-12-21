@@ -7,6 +7,7 @@
             <Spanish>Debug</Spanish>
             <Italian>Debug</Italian>
             <Russian>Отладка</Russian>
+            <German>Debug</German>
             <Korean>디버그</Korean>
             <Japanese>デバッグ</Japanese>
         </Key>
@@ -16,6 +17,7 @@
             <Spanish>Dibujar hitboxes</Spanish>
             <Italian>Visualizza hitbox</Italian>
             <Russian>Изобразить хитбоксы</Russian>
+            <German>Zeige Hitboxen</German>
             <Korean>히트박스 그리기</Korean>
             <Japanese>ヒットボックスを描画</Japanese>
         </Key>
@@ -25,7 +27,7 @@
             <Spanish>Dibuja hitboxes en objetos que son seguidos.</Spanish>
             <Italian>Visualizza hitbox su potenziali bersagli della frammentazione.</Italian>
             <Russian>Изобразить хитбоксы на объектах, которые были нацелены.</Russian>
-            <German>Splitter-/Explosions-Debugging</German>
+            <German>Zeige Hitboxen von Zielobjekten</German>
             <Korean>타겟팅된 오브젝트에 히트박스를 그립니다.</Korean>
             <Japanese>被弾した物体のヒットボックスを描画します。</Japanese>
         </Key>
@@ -45,7 +47,7 @@
             <Spanish>Habilitar trazado visual de los proyectiles generados por la fragmentación y el astillamiento.</Spanish>
             <Italian>Abilita il tracciamento visivo di effetti di frammentazione e spalling.</Italian>
             <Russian>Включает визуальную трассировку фрагментации и осколочных снарядов.</Russian>
-            <German>Splitter-/Explosions-Debugging</German>
+            <German>Aktiviert die visuelle Verfolgung von Splittern.</German>
             <Korean>파열과 파편의 시각적 추적을 활성화합니다.</Korean>
             <Japanese>フラグメンテーションとスポーリングによって発生した破片飛翔体の動きを視覚的に追跡できる機能を有効化します。</Japanese>
         </Key>
@@ -183,6 +185,7 @@
             <Spanish>Intensidad del astillamiento</Spanish>
             <Italian>Intensità dello spalling</Italian>
             <Russian>Интенсивность обрушения</Russian>
+            <German>Intensität der Abplatzungen</German>
             <Korean>파편 강도</Korean>
             <Japanese>スポーリング強度</Japanese>
         </Key>
@@ -192,6 +195,7 @@
             <Spanish>Modificador para aumentar o disminuir el número y la intensidad de los eventos de astillamiento. Aumentar este valor puede producir una degradación en el rendimiento.</Spanish>
             <Italian>Modificatore per il numero e intensità di spalling simulato, ovvero la frammentazione interna ad un veicolo colpito. Valori alti possono causare una degradazione della performance.</Italian>
             <Russian>Модификатор для увеличения или уменьшения количества и интенсивности событий обрушения. Увеличение этого значения может привести к ухудшению производительности.</Russian>
+            <German>Ein Modifikator, der die Anzahl und Intensität von Abplatzungen erhöht oder verringert. Eine Erhöhung dieses Wertes kann zu Leistungseinbußen führen.</German>
             <Korean>파편 이벤트 수와 강도를 늘리거나 줄입니다. 이 값을 늘리면 성능이 저하될 수 있습니다.</Korean>
             <Japanese>スポーリング現象が発生する数と強度を増減することが出来ます。この値を大きくすることはパフォーマンスの低下につながる可能性があります。</Japanese>
         </Key>
