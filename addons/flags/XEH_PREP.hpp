@@ -6,3 +6,4 @@ PREP(getFlags);
 PREP(handleScrollWheel);
 PREP(pickupFlag);
 PREP(placeFlag);
+PREP(scanConfig);
