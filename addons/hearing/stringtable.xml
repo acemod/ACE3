@@ -133,6 +133,36 @@
             <Turkish>Kulak Tıkacı Tak</Turkish>
             <Hungarian>Füldugó berakva</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Are_Off">
+            <English>Electronic Hearing Protection taken off</English>
+            <German>Elektronischer Gehörschutz abgesetzt</German>
+            <Japanese>電子聴覚保護具を外しました</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Are_On">
+            <English>Electronic Hearing Protection put on</English>
+            <German>Elektronischer Gehörschutz aufgesetzt</German>
+            <Japanese>電子聴覚保護具を装着しました</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Description">
+            <English>Electronic Hearing Protection protects the wearer from hearing damage without reducing situational awareness.</English>
+            <German>Elektronischer Gehörschutz schützt den Träger vor Hörschäden, ohne dass sein Situationsbewusstsein eingeschränkt wird.</German>
+            <Japanese>電子聴覚保護具は状況認識力を低下させることなく、装着者の聴覚障害を防ぐことができる。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Name">
+            <English>Electronic Hearing Protection</English>
+            <German>Elektronischer Gehörschutz</German>
+            <Japanese>電子聴覚保護具</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Off">
+            <English>Take off Electronic Hearing Protection</English>
+            <German>Elektronischen Gehörschutz absetzen</German>
+            <Japanese>電子聴覚保護具を外す</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_On">
+            <English>Put on Electronic Hearing Protection</English>
+            <German>Elektronischen Gehörschutz aufsetzen</German>
+            <Japanese>電子聴覚保護具を装着</Japanese>
+        </Key>
         <Key ID="STR_ACE_Hearing_EnableCombatDeafness_Description">
             <English>Reduces the hearing ability as the player takes hearing damage</English>
             <Czech>Snižuje schopnost sluchu pokud dojde k jeho poškození hlasitou a blízkou střelbou</Czech>
@@ -212,6 +242,11 @@
             <Chinesesimp>你没有耳塞</Chinesesimp>
             <Turkish>Kulak Tıkacın Yok</Turkish>
             <Hungarian>Nincsen füldugód</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Hearing_PutOrRemoveEHP">
+            <English>Put on/take off Electronic Hearing Protection</English>
+            <German>Elektronischer Gehörschutz aufsetzen/absetzen</German>
+            <Japanese>電子聴覚保護具の着脱</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_PutOrRemoveEarplugs">
             <English>Put/take out earplugs</English>
@@ -319,12 +354,14 @@
             <Russian>Изменяет степень глухоты, вызываемой взрывами.\nУстановка значения 0 отключает повреждение слуха при взрыве.</Russian>
             <Korean>폭발로 인한 청력 상실 정도를 변경합니다.\n0으로 설정하면 폭발에도 청력을 온전히 유지할 수 있습니다.</Korean>
             <Japanese>爆発による聴力低下の程度を変更します。\n0に設定することで爆発による聴力低下を無効化できます。</Japanese>
+            <French>Modifie le degré de surdité causé par les explosions.\nLa valeur 0 désactive les dégâts auditifs causés par les explosions.</French>
         </Key>
         <Key ID="STR_ACE_Hearing_explosionDeafnessCoefficient_DisplayName">
             <English>Explosion Deafness Coefficient</English>
             <Russian>Коэффициент оглушения при взрыве</Russian>
             <Korean>폭발 난청 계수</Korean>
             <Japanese>爆発による難聴発生係数</Japanese>
+            <French>Coefficient de surdité à l'explosion</French>
         </Key>
         <Key ID="STR_ACE_Hearing_heavyWeaponUnits">
             <English>Only units with heavy weapons</English>
@@ -366,6 +403,10 @@
             <Japanese>聴覚保護</Japanese>
             <Chinese>聽力保護</Chinese>
             <Chinesesimp>听力保护</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Hearing_statEHP">
+            <English>ELECTRONIC</English>
+            <Japanese>電子聴覚保護</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>

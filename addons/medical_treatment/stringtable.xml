@@ -903,7 +903,7 @@
             <Portuguese>Permite o uso de Kit Cirúrgico em si mesmo.</Portuguese>
             <Russian>Включает использование хирургического набора на себе.</Russian>
             <German>Ermöglicht die Benutzung des Operations-Sets, um sich selbst zu nähen.</German>
-            <Korean>봉합키트를 사용자 본인에게 쓸 수 있는지를 정합니다.</Korean>
+            <Korean>봉합 키트를 사용자 본인에게 쓸 수 있는지를 정합니다.</Korean>
             <Japanese>手術キットを使い自らを縫合できるようにします。</Japanese>
             <Chinese>啟用是否能自己使用手術包來縫合自己的傷口。</Chinese>
             <Chinesesimp>启用是否能够使用手术包进行自我缝合。</Chinesesimp>
@@ -918,7 +918,7 @@
             <Portuguese>Auto-Cirurgia</Portuguese>
             <Russian>Зашитие своей раны</Russian>
             <German>Selbstnähen</German>
-            <Korean>봉합키트 자가 사용</Korean>
+            <Korean>봉합 키트 자가 사용</Korean>
             <Japanese>自己縫合</Japanese>
             <Chinese>自我縫合</Chinese>
             <Chinesesimp>自我缝合</Chinesesimp>
@@ -970,6 +970,9 @@
             <Chinese>優先使用醫療兵的醫療物資</Chinese>
             <Chinesesimp>优先消耗医疗兵装备</Chinesesimp>
             <Turkish>İlk Sıhhiyenin Ekipmanı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedicIfMedic">
+            <English>Medic's Equipment First [If medic role]</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
@@ -2512,7 +2515,7 @@
             <Polish>Co powinno zostać zużyte po zastosowaniu.</Polish>
             <Russian>Контролирует, следует ли израсходовать Хирургический набор или нить после использования</Russian>
             <German>Legt fest, ob etwas nach der Anwendung verwendet werden soll.</German>
-            <Korean>봉합키트를 1회성 소모품으로 설정할 지 여부를 결정합니다.</Korean>
+            <Korean>봉합 키트를 1회성 소모품으로 설정할 지 여부를 결정합니다.</Korean>
             <Japanese>使用後に何を消費するか設定します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_DisplayName">
@@ -2525,7 +2528,7 @@
             <Portuguese>Kit Cirúrgico Consumível</Portuguese>
             <Russian>Израсходовать Хирургический набор</Russian>
             <German>Verbrauche Operations-Set</German>
-            <Korean>봉합키트 소모</Korean>
+            <Korean>봉합 키트 소모</Korean>
             <Japanese>手術キットの消費</Japanese>
             <Chinese>手術包為消耗品</Chinese>
             <Chinesesimp>手术包是否被消耗</Chinesesimp>
@@ -3082,11 +3085,15 @@
             <English>Controls where Adenosine can be used.</English>
             <Russian>Контролирует, где можно использовать Аденозин.</Russian>
             <Japanese>アデノシンが使える場所を制御します。</Japanese>
+            <Korean>아데노신을 사용할 수 있는 장소를 정합니다.</Korean>
+            <French>Contrôle où l'Adénosine peut être utilisée.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_DisplayName">
             <English>Locations Adenosine</English>
             <Russian>Места использования Аденозина</Russian>
             <Japanese>アデノシンの使用可能な場所</Japanese>
+            <Korean>아데노신 사용 장소</Korean>
+            <French>Lieux d'utilisation de l'adénosine</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
             <English>Controls where epinephrine can be used.</English>
@@ -3150,11 +3157,15 @@
             <English>Controls where Morphine can be used.</English>
             <Russian>Контролирует, где можно использовать Морфин.</Russian>
             <Japanese>モルヒネが使える場所を制御します。</Japanese>
+            <Korean>모르핀을 사용할 수 있는 장소를 정합니다.</Korean>
+            <French>Contrôle où la morphine peut être utilisée.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_DisplayName">
             <English>Locations Morphine</English>
             <Russian>Места использования Морфина</Russian>
             <Japanese>モルヒネの使用可能な場所</Japanese>
+            <Korean>모르핀 사용 장소</Korean>
+            <French>Lieux d'utilisation de la morphine</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
@@ -3193,11 +3204,15 @@
             <English>Controls where Splints can be used.</English>
             <Russian>Контролирует, где можно использовать шины.</Russian>
             <Japanese>添え木が使える場所を制御します。</Japanese>
+            <Korean>부목을 사용할 수 있는 장소를 정합니다.</Korean>
+            <French>Contrôle l'endroit où les attelles peuvent être utilisées.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_DisplayName">
             <English>Locations Splint</English>
             <Russian>Места наложения шины</Russian>
             <Japanese>添え木の使用可能な場所</Japanese>
+            <Korean>부목 사용 장소</Korean>
+            <French>Emplacement des attelles</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a surgical kit can be used.</English>
@@ -3209,7 +3224,7 @@
             <Portuguese>Controle onde o Kit Cirúrgico pode ser utilizado.</Portuguese>
             <Russian>Контролирует, где можно использовать Хирургический набор</Russian>
             <German>Legt fest, wo ein Operations-Set genutzt werden kann.</German>
-            <Korean>봉합키트를 사용할 수 있는 장소를 정합니다.</Korean>
+            <Korean>봉합 키트를 사용할 수 있는 장소를 정합니다.</Korean>
             <Japanese>手術キットが使える場所を制御します。</Japanese>
             <Chinese>控制何處能使用手術包</Chinese>
             <Chinesesimp>控制何地能使用手术包</Chinesesimp>
@@ -3225,7 +3240,7 @@
             <Portuguese>Locais para Kit Cirúrgico</Portuguese>
             <Russian>Места использования Хирургического набора</Russian>
             <German>Orte für Operations-Set</German>
-            <Korean>봉합키트 사용 장소</Korean>
+            <Korean>봉합 키트 사용 장소</Korean>
             <Japanese>手術キットの使用可能な場所</Japanese>
             <Chinese>手術包使用地點</Chinese>
             <Chinesesimp>手术包使用地点</Chinesesimp>
@@ -3282,11 +3297,15 @@
             <English>Training level required to use Adenosine.</English>
             <Russian>Уровень подготовки, необходимый для использования Аденозина</Russian>
             <Japanese>アデノシンの使用に必要な医療スキルのレベルを設定します。</Japanese>
+            <Korean>아데노신을 사용하는데 필요한 등급을 정합니다.</Korean>
+            <French>Niveau de formation requis pour utiliser l'Adénosine.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_DisplayName">
             <English>Allow Adenosine</English>
             <Russian>Доступ к Аденозину</Russian>
             <Japanese>アデノシンの許可</Japanese>
+            <Korean>아데노신 사용 허가</Korean>
+            <French>Autoriser l'adénosine</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use epinephrine.</English>
@@ -3354,11 +3373,15 @@
             <English>Training level required to use Morphine.</English>
             <Russian>Уровень подготовки, необходимый для использования Морфина.</Russian>
             <Japanese>モルヒネの使用に必要な医療スキルのレベルを設定します。</Japanese>
+            <Korean>모르핀을 사용하는데 필요한 등급을 정합니다.</Korean>
+            <French>Niveau de formation requis pour l'utilisation de la morphine.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
             <English>Allow Morphine</English>
             <Russian>Доступ к Морфину</Russian>
             <Japanese>モルヒネの許可</Japanese>
+            <Korean>모르핀 사용 허가</Korean>
+            <French>Autoriser la morphine</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
@@ -3397,11 +3420,15 @@
             <English>Training level required to use Splint.</English>
             <Russian>Уровень подготовки, необходимый для использования шины.</Russian>
             <Japanese>添え木の使用に必要な医療スキルのレベルを設定します。</Japanese>
+            <Korean>부목을 사용하는데 필요한 등급을 정합니다.</Korean>
+            <French>Niveau de formation requis pour l'utilisation de l'attelle.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_DisplayName">
             <English>Allow Splint</English>
             <Russian>Доступ к наложению шины</Russian>
             <Japanese>添え木の許可</Japanese>
+            <Korean>부목 사용 허가</Korean>
+            <French>Accès aux attelles</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
@@ -3413,7 +3440,7 @@
             <Portuguese>É necessária uma qualificação médica para usar Kit Cirúrgico</Portuguese>
             <Russian>Уровень медицинской подготовки, необходимый для использования Хирургического набора.</Russian>
             <German>'Fähigkeiten-Level', das benötigt wird um ein Operations-Set zu nutzen.</German>
-            <Korean>봉합키트를 사용하는데 필요한 등급을 정합니다.</Korean>
+            <Korean>봉합 키트를 사용하는데 필요한 등급을 정합니다.</Korean>
             <Japanese>手術キットの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Chinese>要受過多少程度的醫療訓練才能使用手術包。</Chinese>
             <Chinesesimp>使用手术包所需的医疗水平。</Chinesesimp>
@@ -3429,7 +3456,7 @@
             <Portuguese>Permitir Kit Cirúrgico</Portuguese>
             <Russian>Доступ к Хирургическому набору</Russian>
             <German>Erlaube Operations-Set</German>
-            <Korean>봉합키트 사용 허가</Korean>
+            <Korean>봉합 키트 사용 허가</Korean>
             <Japanese>手術キットを許可</Japanese>
             <Chinese>允許使用手術包</Chinese>
             <Chinesesimp>允许使用手术包</Chinesesimp>
@@ -3571,11 +3598,15 @@
             <English>Makes Check Pulse action give a numerical value based on setting</English>
             <Russian>Заставляет действие контрольного импульса выдавать числовое значение, основанное на настройке</Russian>
             <Japanese>脈拍の確認アクションから得られる情報が数値化されるようになる医療レベルを設定します</Japanese>
+            <Korean>설정에 따라 맥박 확인 행동을 통해 숫자로 표시된 값을 제공합니다.</Korean>
+            <French>L'action de vérification du pouls fournit une valeur numérique, en fonction de vos paramètres.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
             <English>Numerical Pulse</English>
             <Russian>Числовое значение пульса</Russian>
             <Japanese>脈拍の数値化</Japanese>
+            <Korean>맥박 수치</Korean>
+            <French>Pouls numérique</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
             <English>Used to pack medium to large wounds and stem the bleeding</English>
@@ -4732,7 +4763,7 @@
             <Portuguese>Usar Kit Cirúrgico</Portuguese>
             <Russian>Использовать хирургический набор</Russian>
             <German>Operationsset benutzen</German>
-            <Korean>봉합키트 사용하기</Korean>
+            <Korean>봉합 키트 사용하기</Korean>
             <Japanese>手術キットを使う</Japanese>
             <Chinese>使用手術包</Chinese>
             <Chinesesimp>使用手术包</Chinesesimp>
