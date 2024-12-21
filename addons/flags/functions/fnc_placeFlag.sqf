@@ -12,7 +12,7 @@
  * Nothing
  *
  * Example:
- * [player, "ace_flags_white"] call ace_flags_fnc_pickupFlag
+ * [player, "ace_flags_white"] call ace_flags_fnc_placeFlag
  *
  * Public: No
  */
@@ -20,15 +20,14 @@
 params ["_player", "_item"];
 TRACE_2("Placing flag",_player,_item);
 
-private _flag = "FlagChecked_F" createVehicle [0, 0, 0];
+(GVAR(flagItemCache) get _item) params ["_flagName", "_texture", "_carrierClass"];
 
 // Set flag start height
 GVAR(objectHeight) = MIN_HEIGHT;
 
 GVAR(isPlacing) = PLACE_WAITING;
 
-(GVAR(flagItemCache) get _item) params ["_flagName", "_texture"];
-
+private _flag = _carrierClass createVehicle [0, 0, 0];
 _flag setFlagTexture _texture;
 
 // Add info dialog for the player which show the controls
@@ -71,7 +70,7 @@ private _mouseClickID = [_player, "DefaultAction", {
         };
     };
 
-    private _pos = ((eyePos _player) vectorAdd ((getCameraViewDirection _player) vectorMultiply FLAG_PLACING_DISTANCE));
+    private _pos = (eyePos _player) vectorAdd ((getCameraViewDirection _player) vectorMultiply FLAG_PLACING_DISTANCE);
     // Adjust height of flag with the scroll wheel
     _pos set [2, ((getPosWorld _player) select 2) + GVAR(objectHeight)];
 

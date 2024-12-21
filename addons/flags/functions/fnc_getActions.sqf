@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Timi007
- * Gets the child actions for placing and carring flags.
+ * Gets the child actions for placing and carrying flags.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -20,7 +20,7 @@ params ["_player"];
 private _actions = [];
 
 {
-    (GVAR(flagItemCache) get _x) params ["_flagName", "_texture", "_actionIconPlace", "_actionIconCarry"];
+    (GVAR(flagItemCache) get _x) params ["_flagName", "", "", "_actionIconPlace", "_actionIconCarry"];
 
     // Place flag
     _actions pushBack [

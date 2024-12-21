@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Timi007
- * Checks if the unit is carrying a flag.
+ * Checks if the unit carries a flag.
  *
  * Arguments:
  * 0: Unit <OBJECT>
