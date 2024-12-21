@@ -8,19 +8,19 @@
             </Key>
             <Key ID="STR_ACE_Flags_AllowPlacingFlags">
                 <English>Allow placing flags</English>
-                <German>Erlaube Flaggen zu platzieren</German>
+                <German>Erlaube das Platzieren von Flaggen</German>
             </Key>
             <Key ID="STR_ACE_Flags_AllowPlacingFlagsTooltip">
                 <English>Adds the actions to place flags when the corresponding item is in the inventory.</English>
-                <German>Fügt Aktionen zum Platzieren von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
+                <German>Fügt Aktionen für das Platzieren von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
             </Key>
             <Key ID="STR_ACE_Flags_AllowCarryingFlags">
                 <English>Allow carrying flags</English>
-                <German>Erlaube Flaggen zu tragen</German>
+                <German>Erlaube das Tragen von Flaggen</German>
             </Key>
             <Key ID="STR_ACE_Flags_AllowCarryingFlagsTooltip">
                 <English>Adds the actions to carry flags when the corresponding item is in the inventory.</English>
-                <German>Fügt Aktionen zum Tragen von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
+                <German>Fügt Aktionen für das Tragen von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
             </Key>
         </Container>
         <Container name="displayNames">
