@@ -1798,12 +1798,14 @@
             <French>Déclinaison réaliste de la boussole</French>
             <German>Realistische Missweisung des Kompasses</German>
             <Japanese>現実的なコンパス偏角</Japanese>
+            <Russian>Реалистичный компасса</Russian>
         </Key>
         <Key ID="STR_ACE_Common_magneticDeclinationooltip">
             <English>Compass will point to magnetic north</English>
             <French>La boussole indique le nord magnétique</French>
             <German>Der Kompass zeigt nach missweisend Nord</German>
             <Japanese>コンパスが磁北を指すようになります</Japanese>
+            <Russian>Компас будет указывать на северный магнитный полюс</Russian>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
