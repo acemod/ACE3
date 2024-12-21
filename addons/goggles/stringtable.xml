@@ -22,6 +22,7 @@
             <Japanese>ゴーグルのオーバーレイを表示する</Japanese>
             <Korean>고글 오버레이 표시</Korean>
             <French>Afficher la superposition des lunettes</French>
+            <Russian>Показать оверлей очков</Russian>
         </Key>
         <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
             <English>Show Wipe Goggles self interaction</English>
