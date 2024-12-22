@@ -1287,12 +1287,14 @@
             <Japanese>有効化すると、空腹と渇きはZeusインタフェイスを開いている間も継続して進行します。</Japanese>
             <Korean>활성화 시 제우스 인터페이스가 열려 있는 동안 허기와 갈증이 계속 증가합니다.</Korean>
             <French>Si cette option est activée, la faim et la soif continueront d'augmenter tant que l'interface Zeus sera ouverte.</French>
+            <Russian>Если эта функция включена, чувство голода и жажды будет продолжать усиливаться, пока открыт интерфейс Zeus.</Russian>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ZeusUpdates_DisplayName">
             <English>Update Hunger and Thirst in Zeus</English>
             <Japanese>Zeus時に空腹と渇きを進行させる</Japanese>
             <Korean>제우스의 허기와 갈증 업데이트</Korean>
             <French>Mise à jour Faim et soif dans Zeus</French>
+            <Russian>Обновление голода и жажды в Zeus</Russian>
         </Key>
     </Package>
 </Project>
