@@ -42,7 +42,13 @@ TRACE_1("clearConditionCaches: tourniquetRemove",_nearPlayers);
 
 // Add tourniquet item to medic or patient
 if (_medic call EFUNC(common,isPlayer)) then {
+<<<<<<< HEAD
     private _receiver = [_patient, _medic, _medic] select GVAR(allowSharedEquipment);
+=======
+    private _allowSharedEquipment = GVAR(allowSharedEquipment);
+    if (_allowSharedEquipment == 3) then { _allowSharedEquipment = [0, 1] select ([_medic] call FUNC(isMedic)) };
+    private _receiver = [_patient, _medic, _medic] select _allowSharedEquipment;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
     [_receiver, "ACE_tourniquet"] call EFUNC(common,addToInventory);
 } else {
     // If the medic is AI, only return tourniquet if enabled

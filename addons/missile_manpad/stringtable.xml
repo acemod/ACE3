@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="MISSILE_MANPAD">
+        <Key ID="STR_ACE_MISSILE_MANPAD_stinger">
+            <English>FIM-92 Stinger [ACE]</English>
+            <Japanese>FIM-92 スティンガー [ACE]</Japanese>
+            <Russian>FIM-92 Stinger [ACE]</Russian>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_MANPAD_rim116">
+            <English>RIM-116 [ACE]</English>
+            <Japanese>RIM-116 [ACE]</Japanese>
+            <Russian>RIM-116 [ACE]</Russian>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_MANPAD_rim116_21x">
+            <English>21x RIM-116 [ACE]</English>
+            <Japanese>21x RIM-116 [ACE]</Japanese>
+            <Russian>21x RIM-116 [ACE]</Russian>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_MANPAD_stinger_4x">
+            <English>4x FIM-92 Stinger [ACE]</English>
+            <Japanese>4x FIM-92 スティンガー [ACE]</Japanese>
+            <Russian>4x FIM-92 Stinger [ACE]</Russian>
+        </Key>
+    </Package>
+</Project>

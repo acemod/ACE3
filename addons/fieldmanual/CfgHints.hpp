@@ -106,22 +106,43 @@ class CfgHints {
             description = CSTRING(Items_EarPlugs_Description);
             tip = "<a href='https://ace3.acemod.org/wiki/feature/hearing'>Hearing Wiki</a>";
         };
+<<<<<<< HEAD
         class ACE_EntrenchingTool: ACE_FieldManual_Base {
             logicalOrder = 11;
+=======
+        class ACE_EHP: ACE_FieldManual_Base {
+            logicalOrder = 11;
+            arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_EHP' call FUNC(getItemName))};
+            displayName = "%14";
+            displayNameShort = CSTRING(Items_EHP_ShortName);
+            description = CSTRING(Items_EHP_Description);
+            tip = "<a href='https://ace3.acemod.org/wiki/feature/hearing'>Hearing Wiki</a>";
+        };
+        class ACE_EntrenchingTool: ACE_FieldManual_Base {
+            logicalOrder = 12;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_EntrenchingTool' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_EntrenchingTool_ShortName);
             description = CSTRING(Items_EntrenchingTool_Description);
         };
         class ACE_Flashlights: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 12;
+=======
+            logicalOrder = 13;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             displayName = CSTRING(Items_Flashlights_DisplayName);
             displayNameShort = CSTRING(Items_Flashlights_ShortName);
             description = CSTRING(Items_Flashlights_Description);
             tip = "<a href='https://ace3.acemod.org/wiki/feature/flashlights'>Flashlights Wiki</a>";
         };
         class ACE_FortifyTool: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 13;
+=======
+            logicalOrder = 14;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_Fortify' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_FortifyTool_ShortName);
@@ -129,7 +150,11 @@ class CfgHints {
             tip = "<a href='https://ace3.acemod.org/wiki/feature/fortify'>Fortify Wiki</a>";
         };
         class ACE_HuntIR_Monitor: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 14;
+=======
+            logicalOrder = 15;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_HuntIR_monitor' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_HuntIR_Monitor_ShortName);
@@ -137,14 +162,22 @@ class CfgHints {
             tip = "<a href='https://ace3.acemod.org/wiki/feature/huntir'>HuntIR Wiki</a>";
         };
         class ACE_IR_Strobe: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 15;
+=======
+            logicalOrder = 16;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_IR_Strobe_Item' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_IR_Strobe_ShortName);
             description = CSTRING(Items_IR_Strobe_Description);
         };
         class ACE_Kestrel4500: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 16;
+=======
+            logicalOrder = 17;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_Kestrel4500' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_Kestrel4500_ShortName);
@@ -152,7 +185,11 @@ class CfgHints {
             tip = "<a href='https://ace3.acemod.org/wiki/feature/kestrel4500'>Kestrel 4500 Wiki</a>";
         };
         class ACE_Lockpick: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 17;
+=======
+            logicalOrder = 18;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_key_lockpick' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_Lockpick_ShortName);
@@ -160,14 +197,22 @@ class CfgHints {
             tip = "<a href='https://ace3.acemod.org/wiki/framework/vehiclelock-framework.html'>Vehicle Lock Wiki</a>";
         };
         class ACE_MapTools: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 18;
+=======
+            logicalOrder = 19;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_MapTools' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_MapTools_ShortName);
             description = CSTRING(Items_MapTools_Description);
         };
         class ACE_MicroDAGR: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 19;
+=======
+            logicalOrder = 20;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_microDAGR' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_MicroDAGR_ShortName);
@@ -176,20 +221,32 @@ class CfgHints {
         };
         // Combine all range tables under one roof [mortar, artillery, rifle]
         class ACE_RangeTables: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 20;
+=======
+            logicalOrder = 21;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             displayName = CSTRING(Items_RangeTables_DisplayName);
             displayNameShort = CSTRING(Items_RangeTables_ShortName);
             description = CSTRING(Items_RangeTables_Description);
             tip = "<a href='https://ace3.acemod.org/wiki/feature/rangecard'>Rangecard Wiki</a>";
         };
         class ACE_Ropes: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 21;
+=======
+            logicalOrder = 22;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             displayName = CSTRING(Items_Ropes_DisplayName);
             displayNameShort = CSTRING(Items_Ropes_ShortName);
             description = CSTRING(Items_Ropes_Description);
         };
         class ACE_Sandbag: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 22;
+=======
+            logicalOrder = 23;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_Sandbag_empty' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_Sandbag_ShortName);
@@ -197,7 +254,11 @@ class CfgHints {
             tip = "<a href='https://ace3.acemod.org/wiki/feature/sandbags'>Sandbag Wiki</a>";
         };
         class ACE_SpareBarrels: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 23;
+=======
+            logicalOrder = 24;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_SpareBarrel_Item' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_SpareBarrels_ShortName);
@@ -205,14 +266,22 @@ class CfgHints {
             tip = "<a href='https://ace3.acemod.org/wiki/feature/overheating'>Overheating Wiki</a>";
         };
         class ACE_SprayPaint: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 24;
+=======
+            logicalOrder = 25;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             displayName = CSTRING(Items_SprayPaint_DisplayName);
             displayNameShort = CSTRING(Items_SprayPaint_ShortName);
             description = CSTRING(Items_SprayPaint_Description);
             tip = "<a href='https://ace3.acemod.org/wiki/feature/tagging'>Tagging Wiki</a>";
         };
         class ACE_Tripod: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 25;
+=======
+            logicalOrder = 26;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_Tripod' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_Tripod_ShortName);
@@ -220,7 +289,11 @@ class CfgHints {
             tip = "<a href='https://ace3.acemod.org/wiki/feature/tripod'>Tripod Wiki</a>";
         };
         class ACE_UAVBattery: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 26;
+=======
+            logicalOrder = 27;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_UAVBattery' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_UAVBattery_ShortName);
@@ -228,14 +301,22 @@ class CfgHints {
             tip = "<a href='https://ace3.acemod.org/wiki/feature/logistics-uavbattery'>UAV Battery Wiki</a>";
         };
         class ACE_VehicleKey: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 27;
+=======
+            logicalOrder = 28;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             displayName = CSTRING(Items_VehicleKey_DisplayName);
             displayNameShort = CSTRING(Items_VehicleKey_ShortName);
             description = CSTRING(Items_VehicleKey_Description);
             tip = "<a href='https://ace3.acemod.org/wiki/framework/vehiclelock-framework.html'>Vehicle Lock Wiki</a>";
         };
         class ACE_Wirecutter: ACE_FieldManual_Base {
+<<<<<<< HEAD
             logicalOrder = 28;
+=======
+            logicalOrder = 29;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
             arguments[] = {BASE_ARGUMENTS, QUOTE('ACE_wirecutter' call FUNC(getItemName))};
             displayName = "%14";
             displayNameShort = CSTRING(Items_Wirecutter_ShortName);

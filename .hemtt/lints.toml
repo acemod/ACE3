@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+[config.file_type]
+options.allow_no_extension = true
+
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 [sqf.banned_commands]
 options.ignore = [
     "addPublicVariableEventHandler", # Alt syntax is broken, we are using main syntax

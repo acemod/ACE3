@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ////////////////////////////////////////////////////////////////////
 //DeRap: acc\Data\optics.rvmat
 //Produced from mikero's Dos Tools Dll version 9.90
@@ -29,10 +30,35 @@ class Stage1
 		up[] = {0.0,1.0,0.0};
 		dir[] = {0.0,0.0,0.0};
 		pos[] = {0.0,0.0,0.0};
+=======
+class StageTI
+{
+	texture="a3\data_f\default_ti_ca.paa";
+};
+ambient[]={0,0,0,1};
+diffuse[]={0,0,0,1};
+forcedDiffuse[]={0,0,0,1};
+emmisive[]={0,0,0,1};
+specular[]={1,1,1,1};
+specularPower=500;
+PixelShaderID="Super";
+VertexShaderID="Super";
+class Stage1
+{
+	texture="a3\weapons_f\acc\data\optics_nohq.paa";
+	uvSource="tex1";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 	};
 };
 class Stage2
 {
+<<<<<<< HEAD
 	texture = "#(argb,8,8,3)color(0.5,0.5,0.5,0.5,DT)";
 	uvSource = "tex";
 	class uvTransform
@@ -41,10 +67,21 @@ class Stage2
 		up[] = {0.0,1.0,0.0};
 		dir[] = {0.0,0.0,0.0};
 		pos[] = {0.0,0.0,0.0};
+=======
+	texture="#(argb,8,8,3)color(0.5,0.5,0.5,0.5,DT)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 	};
 };
 class Stage3
 {
+<<<<<<< HEAD
 	texture = "#(argb,8,8,3)color(0,0,0,0.0,MC)";
 	uvSource = "tex";
 	class uvTransform
@@ -53,10 +90,21 @@ class Stage3
 		up[] = {0.0,1.0,0.0};
 		dir[] = {0.0,0.0,0.0};
 		pos[] = {0.0,0.0,0.0};
+=======
+	texture="#(argb,8,8,3)color(0,0,0,0.0,MC)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 	};
 };
 class Stage4
 {
+<<<<<<< HEAD
 	texture = "a3\weapons_f\acc\data\optics_as.paa";
 	uvSource = "tex1";
 	class uvTransform
@@ -65,10 +113,21 @@ class Stage4
 		up[] = {0.0,1.0,0.0};
 		dir[] = {0.0,0.0,0.0};
 		pos[] = {0.0,0.0,0.0};
+=======
+	texture="a3\weapons_f\acc\data\optics_as.paa";
+	uvSource="tex1";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 	};
 };
 class Stage5
 {
+<<<<<<< HEAD
 	texture = "#(argb,8,8,3)color(1,1,1,0.0,SMDI)";
 	uvSource = "tex1";
 	class uvTransform
@@ -77,10 +136,21 @@ class Stage5
 		up[] = {0.0,1.0,0.0};
 		dir[] = {0.0,0.0,0.0};
 		pos[] = {0.0,0.0,0.0};
+=======
+	texture="#(argb,8,8,3)color(1,1,1,0.0,SMDI)";
+	uvSource="tex1";
+	class uvTransform
+	{
+		aside[]={1,0,0};
+		up[]={0,1,0};
+		dir[]={0,0,0};
+		pos[]={0,0,0};
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 	};
 };
 class Stage6
 {
+<<<<<<< HEAD
 	texture = "#(ai,64,64,1)fresnel(0.915,0.38)";
 	uvSource = "none";
 };
@@ -88,4 +158,13 @@ class Stage7
 {
 	texture = "a3\data_f\env_land_optic_co.paa";
 	uvSource = "none";
+=======
+	texture="#(ai,64,64,1)fresnel(0.915,0.38)";
+	uvSource="none";
+};
+class Stage7
+{
+	texture="a3\data_f\env_land_optic_co.paa";
+	uvSource="none";
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 };

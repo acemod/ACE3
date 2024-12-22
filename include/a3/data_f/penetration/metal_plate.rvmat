@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ////////////////////////////////////////////////////////////////////
 //DeRap: Penetration\metal_plate.rvmat
 //Produced from mikero's Dos Tools Dll version 9.90
@@ -16,3 +17,14 @@ specular[] = {0,0,0,1};
 specularPower = 1;
 PixelShaderID = "Normal";
 VertexShaderID = "Basic";
+=======
+surfaceInfo="A3\data_f\Penetration\metal_plate.bisurf";
+ambient[]={0.69999999,0.80000001,0.77999997,1};
+diffuse[]={0.69999999,0.80000001,0.77999997,1};
+forcedDiffuse[]={0,0,0,0};
+emmisive[]={0,0,0,1};
+specular[]={0,0,0,1};
+specularPower=1;
+PixelShaderID="Normal";
+VertexShaderID="Basic";
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673

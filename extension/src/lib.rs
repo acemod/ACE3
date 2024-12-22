@@ -1,5 +1,9 @@
 #![deny(clippy::all)]
 #![deny(missing_debug_implementations)]
+<<<<<<< HEAD
+=======
+#![allow(static_mut_refs)]
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 
 //! ACE3 Extension for quick maths and OS APIs
 

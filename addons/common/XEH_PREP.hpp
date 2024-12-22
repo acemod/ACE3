@@ -125,6 +125,11 @@ PREP(hideUnit);
 PREP(interpolateFromArray);
 PREP(inTransitionAnim);
 PREP(isAwake);
+<<<<<<< HEAD
+=======
+PREP(isBeingCarried);
+PREP(isBeingDragged);
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 PREP(isEngineer);
 PREP(isEOD);
 PREP(isInBuilding);

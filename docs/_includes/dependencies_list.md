@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% if include.component == "advanced_fatigue" %}
 - `ace_common`
 {% endif %}
@@ -176,3 +177,6 @@
 - `ace_common`
 {% endif %}
 
+=======
+Placeholder - generated in CI.
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673

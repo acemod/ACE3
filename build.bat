@@ -1,4 +1,5 @@
 @echo off
+<<<<<<< HEAD
 if not "%1"=="am_admin" (
     powershell -Command "Start-Process -Verb RunAs -FilePath '%0' -ArgumentList 'am_admin'"
     exit /b
@@ -73,4 +74,7 @@ call push.bat
 
 hemtt.exe release
 
+=======
+hemtt.exe build
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 pause

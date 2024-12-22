@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #include "\A3\ui_f\hpp\defineResincl.inc"
+=======
+#include "\a3\ui_f\hpp\defineResincl.inc"
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 
 //--- RscDisplayCurator
 #define IDC_RSCDISPLAYCURATOR_CREATEBACKGROUND		15505

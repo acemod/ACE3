@@ -1,0 +1,66 @@
+ambient[]={1.000000,1.000000,1.000000,1.000000};
+diffuse[]={1.000000,1.000000,1.000000,1.000000};
+forcedDiffuse[]={0.000000,0.000000,0.000000,0.000000};
+emmisive[]={0.000000,0.000000,0.000000,1.000000};
+specular[]={0.7000000,0.700000,0.700000,1.000000};
+specularPower=20.000000;
+PixelShaderID="Super";
+VertexShaderID="Super";
+class Stage1 {
+    texture="z\ace\addons\yardage450\data\bushnell_nohq.paa";
+    uvSource="tex";
+    class uvTransform {
+        aside[]={1.000000,0.000000,0.000000};
+        up[]={0.000000,1.000000,0.000000};
+        dir[]={0.000000,0.000000,0.000000};
+        pos[]={0.000000,0.000000,0.000000};
+    };
+};
+class Stage2 {
+    texture="a3\weapons_f\data\detailmaps\plast_dt.paa";
+    uvSource="tex";
+    class uvTransform {
+        aside[]={3.0000,0.000000,0.000000};
+        up[]={0.000000,3.0000,0.000000};
+        dir[]={0.000000,0.000000,0.000000};
+        pos[]={0.000000,0.000000,0.000000};
+    };
+};
+class Stage3 {
+    texture="#(argb,8,8,3)color(0,0,0,0)";
+    uvSource="tex";
+    class uvTransform {
+        aside[]={1.000000,0.000000,0.000000};
+        up[]={0.000000,1.000000,0.000000};
+        dir[]={0.000000,0.000000,0.000000};
+        pos[]={0.000000,0.000000,0.000000};
+    };
+};
+class Stage4 {
+    texture="z\ace\addons\yardage450\data\bushnell_as.paa";
+    uvSource="tex";
+    class uvTransform {
+        aside[]={1.000000,0.000000,0.000000};
+        up[]={0.000000,1.000000,0.000000};
+        dir[]={0.000000,0.000000,0.000000};
+        pos[]={0.000000,0.000000,0.000000};
+    };
+};
+class Stage5 {
+    texture="z\ace\addons\yardage450\data\bushnell_smdi.paa";
+    uvSource="tex";
+    class uvTransform {
+        aside[]={1.000000,0.000000,0.000000};
+        up[]={0.000000,1.000000,0.000000};
+        dir[]={0.000000,0.000000,0.000000};
+        pos[]={0.000000,0.000000,0.000000};
+    };
+};
+class Stage6 {
+    texture="#(ai,64,64,1)fresnel(2,2)";
+    uvSource="none";
+};
+class Stage7 {
+    texture="a3\data_f\env_land_co.paa";
+    uvSource="none";
+};

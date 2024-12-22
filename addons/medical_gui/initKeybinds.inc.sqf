@@ -34,7 +34,11 @@
     if (CBA_missionTime - GVAR(lastOpenedOn) > 0.5) exitWith {
         [objNull] call FUNC(openMenu);
     };
+<<<<<<< HEAD
 }, [0, [false, false, false]], false, 0] call CBA_fnc_addKeybind; // false
+=======
+}, [DIK_H, [false, false, false]], false, 0] call CBA_fnc_addKeybind;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 
 ["ACE3 Common", QGVAR(peekMedicalInfoKey), LLSTRING(PeekMedicalInfo), {
     // Conditions: canInteract
@@ -52,4 +56,8 @@
         }] call CBA_fnc_waitUntilAndExecute;
     };
     GVAR(peekLastOpenedOn) = CBA_missionTime;
+<<<<<<< HEAD
 }, [0, [false, false, false]], false, 0] call CBA_fnc_addKeybind; // false
+=======
+}, [DIK_H, [false, true, false]], false, 0] call CBA_fnc_addKeybind;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673

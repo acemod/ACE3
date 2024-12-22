@@ -4,6 +4,10 @@ release/*
 releases/*
 .vscode/*
 hemtt
+<<<<<<< HEAD
+=======
+hemtt.exe
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 .hemttout
 tools/temp
 *.cache

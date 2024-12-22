@@ -11,8 +11,11 @@ PREP(handleKilled);
 PREP(handleKilledMission);
 PREP(hasStableVitals);
 PREP(initUnit);
+<<<<<<< HEAD
 PREP(isBeingCarried);
 PREP(isBeingDragged);
+=======
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 PREP(isInStableCondition);
 PREP(setCardiacArrestState);
 PREP(setDead);

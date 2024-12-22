@@ -129,6 +129,10 @@ ace_nextmodeclass
 ace_modedescription
 ace_hearing_protection
 ace_hearing_lowerVolume
+<<<<<<< HEAD
+=======
+ace_hearing_hasEHP
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 ```
 
 

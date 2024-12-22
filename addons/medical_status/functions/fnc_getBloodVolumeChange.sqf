@@ -26,7 +26,11 @@ if (!isNil {_unit getVariable QEGVAR(medical,ivBags)}) then {
     private _tourniquets = GET_TOURNIQUETS(_unit);
 
     _bloodBags = _bloodBags apply {
+<<<<<<< HEAD
         _x params ["_bagVolumeRemaining", "_type", "_bodyPart", "_classname", "_rateCoef"];
+=======
+        _x params ["_bagVolumeRemaining", "_type", "_bodyPart", "_treatment", "_rateCoef", "_item"];
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 
         if (_tourniquets select _bodyPart == 0) then {
             private _bagChange = (_deltaT * EGVAR(medical,ivFlowRate) * IV_CHANGE_PER_SECOND * _rateCoef) min _bagVolumeRemaining; // absolute value of the change in miliLiters
@@ -37,7 +41,11 @@ if (!isNil {_unit getVariable QEGVAR(medical,ivBags)}) then {
         if (_bagVolumeRemaining < 0.01) then {
             []
         } else {
+<<<<<<< HEAD
             [_bagVolumeRemaining, _type, _bodyPart, _classname, _rateCoef]
+=======
+            [_bagVolumeRemaining, _type, _bodyPart, _treatment, _rateCoef, _item]
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
         };
     };
 

@@ -473,6 +473,7 @@ addMissionEventHandler ["PlayerViewChanged", {
 //////////////////////////////////////////////////
 
 GVAR(isReloading) = false;
+<<<<<<< HEAD
 GVAR(reloadMutex_lastMagazines) = [];
 // When reloading, the new magazine is removed from inventory, an animation plays and then the old magazine is added
 // If the animation is interrupted, the new magazine will be lost
@@ -526,6 +527,86 @@ GVAR(reloadMutex_lastMagazines) = [];
     GVAR(reloadMutex_lastMagazines) = _mags;
 }, true] call CBA_fnc_addPlayerEventHandler;
 
+=======
+
+["unit", {
+    params ["_newPlayer"];
+
+    // Catch the current unit reloading
+    private _weaponState = weaponState _newPlayer;
+    GVAR(isReloading) = (_weaponState select 6) != 0;
+
+    if (!GVAR(isReloading)) exitWith {};
+
+    GVAR(magazineReloadPhase) = 0;
+
+    // Wait until reload animation has finished (if weapon is no longer available, it returns -1)
+    [{
+        private _magazineReloadingPhase = ((_this select 0) weaponState (_this select 1)) select 6;
+
+        // Need to check the reloading phase, as if you interrupt reloading with a gesture, the phase will remain stuck at a value > 0
+        if (GVAR(magazineReloadPhase) == _magazineReloadingPhase) exitWith {
+            TRACE_2("Interrupted magazine reloading",_this select 0,_this select 1);
+
+            true
+        };
+
+        GVAR(magazineReloadPhase) = _magazineReloadingPhase;
+
+        _magazineReloadingPhase <= 0
+    }, {
+        TRACE_2("End magazine reloading",_this select 0,_this select 1);
+
+        // Player might switch units before reload finishes
+        if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
+
+        GVAR(isReloading) = false;
+    }, [_newPlayer, _weaponState select 1]] call CBA_fnc_waitUntilAndExecute;
+}, true] call CBA_fnc_addPlayerEventHandler;
+
+[QGVAR(magazineReloading), "MagazineReloading", {
+    params ["_unit", "", "_muzzle"];
+
+    TRACE_2("Init magazine reloading",_unit,_muzzle);
+
+    // Wait until reload animation has started
+    [{
+        ((_this select 0) weaponState (_this select 1)) select 6 != 0
+    }, {
+        TRACE_2("Start magazine reloading",_this select 0,_this select 1);
+
+        // Player might switch units before reload starts
+        if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
+
+        GVAR(isReloading) = true;
+        GVAR(magazineReloadPhase) = 0;
+
+        // Wait until reload animation has finished (if weapon is no longer available, it returns -1)
+        [{
+            private _magazineReloadingPhase = ((_this select 0) weaponState (_this select 1)) select 6;
+
+            // Need to check the reloading phase, as if you interrupt reloading with a gesture, the phase will remain stuck at a value > 0
+            if (GVAR(magazineReloadPhase) == _magazineReloadingPhase) exitWith {
+                TRACE_2("Interrupted magazine reloading",_this select 0,_this select 1);
+
+                true
+            };
+
+            GVAR(magazineReloadPhase) = _magazineReloadingPhase;
+
+            _magazineReloadingPhase <= 0
+        }, {
+            TRACE_2("End magazine reloading",_this select 0,_this select 1);
+
+            // Player might switch units before reload finishes
+            if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
+
+            GVAR(isReloading) = false;
+        }, _this] call CBA_fnc_waitUntilAndExecute;
+    }, [_unit, _muzzle], 5] call CBA_fnc_waitUntilAndExecute;
+}] call CBA_fnc_addBISPlayerEventHandler;
+
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 //////////////////////////////////////////////////
 // Start the sway loop
 //////////////////////////////////////////////////
@@ -598,7 +679,11 @@ GVAR(deviceKeyCurrentIndex) = -1;
     true
 },
 {false},
+<<<<<<< HEAD
 [0, [false, false, false]], false] call CBA_fnc_addKeybind;  // false
+=======
+[0xC7, [false, false, false]], false] call CBA_fnc_addKeybind;  //Home Key
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 
 ["ACE3 Equipment", QGVAR(closeDevice), LLSTRING(closeHandheldDevice), {
     [] call FUNC(deviceKeyFindValidIndex);
@@ -607,7 +692,11 @@ GVAR(deviceKeyCurrentIndex) = -1;
     true
 },
 {false},
+<<<<<<< HEAD
 [0, [false, false, false]], false] call CBA_fnc_addKeybind;  // false
+=======
+[0xC7, [false, true, false]], false] call CBA_fnc_addKeybind;  //CTRL + Home Key
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 
 ["ACE3 Equipment", QGVAR(cycleDevice), LLSTRING(cycleHandheldDevices), {
     [1] call FUNC(deviceKeyFindValidIndex);
@@ -618,7 +707,11 @@ GVAR(deviceKeyCurrentIndex) = -1;
     true
 },
 {false},
+<<<<<<< HEAD
 [0, [false, false, false]], false] call CBA_fnc_addKeybind;  // false
+=======
+[0xC7, [true, false, false]], false] call CBA_fnc_addKeybind;  //SHIFT + Home Key
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 
 
 ["ACE3 Weapons", QGVAR(unloadWeapon), LSTRING(unloadWeapon), {
@@ -644,7 +737,11 @@ GVAR(deviceKeyCurrentIndex) = -1;
     [_unit, _weapon, _muzzle, _magazine, _ammo, false] call FUNC(unloadUnitWeapon);
 
     true
+<<<<<<< HEAD
 }, {false}, [0, [false, false, false]], false] call CBA_fnc_addKeybind; // false
+=======
+}, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; // Alt + R
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 
 ["CBA_loadoutSet", {
     params ["_unit", "_loadout"];

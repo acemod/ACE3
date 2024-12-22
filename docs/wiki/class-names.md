@@ -161,6 +161,10 @@ ACE_gunbag_Tan | Gunbag | Backpack |
 Class Name | In-Game Name | Type   |
 ---------- | --------- | ---------
 ACE_EarPlugs | Earplugs | ACE_ItemCore |
+<<<<<<< HEAD
+=======
+ACE_EHP | Electronic Hearing Protection | ACE_ItemCore |
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 
 ### HuntIR
 `Added in 3.1.1`

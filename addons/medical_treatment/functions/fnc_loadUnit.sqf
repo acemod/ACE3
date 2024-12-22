@@ -24,11 +24,19 @@ if (_patient call EFUNC(common,isAwake)) exitWith {
     [[LSTRING(CanNotLoad), _patient call EFUNC(common,getName)]] call EFUNC(common,displayTextStructured);
 };
 
+<<<<<<< HEAD
 if (_patient call EFUNC(medical_status,isBeingCarried)) then {
     [_medic, _patient] call EFUNC(dragging,dropObject_carry);
 };
 
 if (_patient call EFUNC(medical_status,isBeingDragged)) then {
+=======
+if (_patient call EFUNC(common,isBeingCarried)) then {
+    [_medic, _patient] call EFUNC(dragging,dropObject_carry);
+};
+
+if (_patient call EFUNC(common,isBeingDragged)) then {
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
     [_medic, _patient] call EFUNC(dragging,dropObject);
 };
 

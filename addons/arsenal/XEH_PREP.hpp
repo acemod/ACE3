@@ -93,6 +93,11 @@ PREP(sortStatement_mod);
 PREP(sortStatement_protection);
 PREP(sortStatement_rateOfFire);
 PREP(sortStatement_scopeMag);
+<<<<<<< HEAD
+=======
+PREP(statCondition_existsAll);
+PREP(statCondition_existsAny);
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 PREP(statBarStatement_accuracy);
 PREP(statBarStatement_default);
 PREP(statBarStatement_impact);
@@ -107,6 +112,10 @@ PREP(statTextStatement_rateOfFire);
 PREP(statTextStatement_scopeMag);
 PREP(statTextStatement_scopeVisionMode);
 PREP(statTextStatement_smokeChemTTL);
+<<<<<<< HEAD
+=======
+PREP(statTextStatement_yesno);
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 PREP(updateCamPos);
 PREP(updateRightPanel);
 PREP(updateCurrentItemsList);

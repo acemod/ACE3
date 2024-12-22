@@ -50,7 +50,11 @@ _patient setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
     };
 } forEach GET_TOURNIQUETS(_patient);
 _patient setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
+<<<<<<< HEAD
 _patient setVariable [QGVAR(occludedMedications), nil, true];
+=======
+_patient setVariable [QEGVAR(medical,occludedMedications), nil, true];
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 
 // Wounds and Injuries
 _patient setVariable [VAR_OPEN_WOUNDS, createHashMap, true];

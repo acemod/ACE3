@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ////////////////////////////////////////////////////////////////////
 //DeRap: Penetration\tyre.rvmat
 //Produced from mikero's Dos Tools Dll version 9.90
@@ -10,3 +11,8 @@
 surfaceInfo = "A3\data_f\Penetration\tyre.bisurf";
 diffuse[] = {0.1,0.1,0.1,1};
 ambient[] = {0.1,0.1,0.1,1};
+=======
+surfaceInfo="A3\data_f\Penetration\tyre.bisurf";
+diffuse[]={0.1,0.1,0.1,1};
+ambient[]={0.1,0.1,0.1,1};
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673

@@ -19,7 +19,11 @@ GVAR(showNamesTime) = -10;
     false
 },
 {false},
+<<<<<<< HEAD
 [0, [false, false, false]], false] call CBA_fnc_addKeybind; // false
+=======
+[29, [false, false, false]], false] call CBA_fnc_addKeybind; //LeftControl Key
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 
 // Wait until the colors are defined before starting to draw the nametags
 ["CBA_settingsInitialized", {

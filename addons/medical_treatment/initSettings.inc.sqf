@@ -85,7 +85,11 @@
     "LIST",
     [LSTRING(AllowSharedEquipment_DisplayName), LSTRING(AllowSharedEquipment_Description)],
     LSTRING(Category),
+<<<<<<< HEAD
     [[0, 1, 2], [LSTRING(AllowSharedEquipment_PriorityPatient), LSTRING(AllowSharedEquipment_PriorityMedic), ELSTRING(common,No)], 0],
+=======
+    [[0, 1, 3, 2], [LSTRING(AllowSharedEquipment_PriorityPatient), LSTRING(AllowSharedEquipment_PriorityMedic), LSTRING(AllowSharedEquipment_PriorityMedicIfMedic), ELSTRING(common,No)], 0],
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
     true
 ] call CBA_fnc_addSetting;
 

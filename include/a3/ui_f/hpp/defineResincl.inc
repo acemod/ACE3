@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+// This file was modified from the original to remove 3 duplicate defines
+// check for changes when updating includes
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 #ifndef _RESINCL_HPP
 #define _RESINCL_HPP
 
@@ -1674,8 +1679,13 @@ enum
 #define IDC_MULTI_FULL_FILTER         151
 #define IDC_MULTI_TYPE_FILTER         152
 #define IDC_MP_NEXT_SESSION           153
+<<<<<<< HEAD
 #define IDC_MULTI_BATTLEYE_FILTER     154
 #define IDC_MULTI_EXPANSIONS_FILTER   155
+=======
+// #define IDC_MULTI_BATTLEYE_FILTER     154
+// #define IDC_MULTI_EXPANSIONS_FILTER   155
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 #define IDC_MULTI_FAVORITE_COLUMN     156
 #define IDC_MULTI_FAVORITE_ICON       157
 #define IDC_MULTI_SERVER_COUNT        158
@@ -1697,7 +1707,11 @@ enum
 #define IDC_MP_QUICK_BEST_SERVER      112
 #define IDC_MP_QUICK_FIND_SERVER      113
 #define IDC_MP_QUICK_SHOW_SERVERS     114
+<<<<<<< HEAD
 #define IDC_MP_QUICK_SHOW_SERVERS     114
+=======
+// #define IDC_MP_QUICK_SHOW_SERVERS     114
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 #define IDC_MP_QUICK_MODE_TITLE       115
 #define IDC_MP_QUICK_MODE_PICTURE     116
 #define IDC_MP_QUICK_MODE_DESCRIPTION 117

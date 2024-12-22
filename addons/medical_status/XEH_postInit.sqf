@@ -3,6 +3,11 @@
 // Handle pain changes on injury
 [QEGVAR(medical,injured), LINKFUNC(adjustPainLevel)] call CBA_fnc_addEventHandler;
 
+<<<<<<< HEAD
+=======
+// Update wound bleeding on injury
+[QEGVAR(medical,injured), LINKFUNC(updateWoundBloodLoss)] call CBA_fnc_addEventHandler;
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 
 // Add inventory and open backpack actions to units
 [QGVAR(addInventoryActions), LINKFUNC(addInventoryActions)] call CBA_fnc_addEventHandler;

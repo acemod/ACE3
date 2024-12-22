@@ -49,7 +49,11 @@ if (_treatmentTime == 0) exitWith {false};
 private _userAndItem = if (GET_NUMBER_ENTRY(_config >> "consumeItem") == 1) then {
     [_medic, _patient, getArray (_config >> "items")] call FUNC(useItem);
 } else {
+<<<<<<< HEAD
     [objNull, ""]; // Treatment does not require items to be consumed
+=======
+    [objNull, "", false]; // Treatment does not require items to be consumed
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
 };
 
 _userAndItem params ["_itemUser", "_usedItem", "_createLitter"];

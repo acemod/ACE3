@@ -1796,10 +1796,20 @@
         <Key ID="STR_ACE_Common_magneticDeclination">
             <English>Realistic Compass Declination</English>
             <French>Déclinaison réaliste de la boussole</French>
+<<<<<<< HEAD
+=======
+            <Japanese>現実的なコンパス偏角</Japanese>
+            <Russian>Реалистичный компасса</Russian>
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
         </Key>
         <Key ID="STR_ACE_Common_magneticDeclinationooltip">
             <English>Compass will point to magnetic north</English>
             <French>La boussole indique le nord magnétique</French>
+<<<<<<< HEAD
+=======
+            <Japanese>コンパスが磁北を指すようになります</Japanese>
+            <Russian>Компас будет указывать на северный магнитный полюс</Russian>
+>>>>>>> 5285ec4585ab6754993bc5c5f10c5a71e15c9673
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
