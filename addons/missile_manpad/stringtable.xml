@@ -5,21 +5,25 @@
             <English>FIM-92 Stinger [ACE]</English>
             <Japanese>FIM-92 スティンガー [ACE]</Japanese>
             <Russian>FIM-92 Stinger [ACE]</Russian>
+            <German>FIM-92 Stinger [ACE]</German>
         </Key>
         <Key ID="STR_ACE_MISSILE_MANPAD_rim116">
             <English>RIM-116 [ACE]</English>
             <Japanese>RIM-116 [ACE]</Japanese>
             <Russian>RIM-116 [ACE]</Russian>
+            <German>RIM-116 [ACE]</German>
         </Key>
         <Key ID="STR_ACE_MISSILE_MANPAD_rim116_21x">
             <English>21x RIM-116 [ACE]</English>
             <Japanese>21x RIM-116 [ACE]</Japanese>
             <Russian>21x RIM-116 [ACE]</Russian>
+            <German>21x RIM-116 [ACE]</German>
         </Key>
         <Key ID="STR_ACE_MISSILE_MANPAD_stinger_4x">
             <English>4x FIM-92 Stinger [ACE]</English>
             <Japanese>4x FIM-92 スティンガー [ACE]</Japanese>
             <Russian>4x FIM-92 Stinger [ACE]</Russian>
+            <German>4x FIM-92 Stinger [ACE]</German>
         </Key>
     </Package>
 </Project>
