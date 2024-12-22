@@ -854,7 +854,7 @@
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_DisplayName">
             <English>Limb Damage Threshold</English>
             <Russian>Порог повреждения конечностей</Russian>
-            <German>Schwellenwert für Gliedmaßenschaden</German>
+            <German>Schwelle für Gliedmaßenschaden</German>
             <Japanese>手足のダメージしきい値</Japanese>
             <Korean>사지 피해량 임계값</Korean>
             <French>Seuil de dommages aux membres</French>
