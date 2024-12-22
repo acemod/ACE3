@@ -862,7 +862,7 @@
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_Description">
             <English>Controls whether limb damage is taken into account for sum of trauma calculations.</English>
             <Russian>Определяет, учитывается ли повреждение конечностей при расчете совокупности травм.</Russian>
-            <German>Steuert, ob Gliedmaßenschäden bei der Berechnung der Summe aller Traumata berücksichtigt werden.</German>
+            <German>Legt fest, ob Gliedmaßenschäden bei der Berechnung der Summe aller Traumata berücksichtigt werden.</German>
             <Japanese>"外傷の合計" の計算に手足のダメージを考慮するかどうかを制御します。</Japanese>
             <Korean>외상 중첩을 계산할 때 사지 피해량을 고려할지 여부를 제어합니다.</Korean>
             <French>Contrôle si les dommages aux membres sont pris en compte dans les calculs de la somme des traumatismes.</French>
