@@ -11,4 +11,5 @@ timeout /t 2 /nobreak
 
 git push
 
+pause
 cls
