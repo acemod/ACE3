@@ -974,6 +974,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedicIfMedic">
             <English>Medic's Equipment First [If medic role]</English>
             <Russian>Сначала медикаменты врача [Если медик]</Russian>
+            <German>Ausrüstung des Sanitäters zuerst [Wenn Sanitäter]</German>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
