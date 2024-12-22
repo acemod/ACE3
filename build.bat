@@ -28,7 +28,6 @@ robocopy "%ROOTDIR%\addons\finger" "%ROOTDIR%\addonsx\finger" /s /move
 robocopy "%ROOTDIR%\addons\fonts" "%ROOTDIR%\addonsx\fonts" /s /move
 robocopy "%ROOTDIR%\addons\fortify" "%ROOTDIR%\addonsx\fortify" /s /move
 robocopy "%ROOTDIR%\addons\frag" "%ROOTDIR%\addonsx\frag" /s /move
-robocopy "%ROOTDIR%\addons\hitreactions" "%ROOTDIR%\addonsx\hitreactions" /s /move
 robocopy "%ROOTDIR%\addons\interact_menu" "%ROOTDIR%\addonsx\interact_menu" /s /move
 robocopy "%ROOTDIR%\addons\interaction" "%ROOTDIR%\addonsx\interaction" /s /move
 robocopy "%ROOTDIR%\addons\magazinerepack" "%ROOTDIR%\addonsx\magazinerepack" /s /move
@@ -52,10 +51,8 @@ robocopy "%ROOTDIR%\addons\missionmodules" "%ROOTDIR%\addonsx\missionmodules" /s
 robocopy "%ROOTDIR%\addons\modules" "%ROOTDIR%\addonsx\modules" /s /move
 robocopy "%ROOTDIR%\addons\nametags" "%ROOTDIR%\addonsx\nametags" /s /move
 robocopy "%ROOTDIR%\addons\optionsmenu" "%ROOTDIR%\addonsx\optionsmenu" /s /move
-robocopy "%ROOTDIR%\addons\spectator" "%ROOTDIR%\addonsx\spectator" /s /move
 robocopy "%ROOTDIR%\addons\ui" "%ROOTDIR%\addonsx\ui" /s /move
 robocopy "%ROOTDIR%\addons\weaponselect" "%ROOTDIR%\addonsx\weaponselect" /s /move
-robocopy "%ROOTDIR%\addons\zeus" "%ROOTDIR%\addonsx\zeus" /s /move
 
 rd /s /q "%ROOTDIR%\.hemttout"
 rd /s /q "%ROOTDIR%\addons"
