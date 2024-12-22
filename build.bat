@@ -67,10 +67,10 @@ echo Press Enter to build ACE3
 echo .
 pause
 
-hemtt.exe ln sort
+hemtt ln sort
 
 call push.bat
 
-hemtt.exe release
+hemtt release
 
 pause
