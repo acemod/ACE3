@@ -353,8 +353,8 @@
             <Chinesesimp>XMS GL</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Camo_Name">
-            <English>XMS GL (Camo)</English>
-            <Japanese>XMS GL (迷彩)</Japanese>
+            <English>XMS GL (Stripes)</English>
+            <Japanese>XMS GL (縞模様迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Gray_Name">
             <English>XMS GL (Gray)</English>
@@ -397,8 +397,8 @@
             <Chinesesimp>XMS</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Camo_Name">
-            <English>XMS (Camo)</English>
-            <Japanese>XMS (迷彩)</Japanese>
+            <English>XMS (Stripes)</English>
+            <Japanese>XMS (縞模様迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Gray_Name">
             <English>XMS (Gray)</English>
@@ -429,8 +429,8 @@
             <Chinesesimp>XMS SG</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Camo_Name">
-            <English>XMS SG (Camo)</English>
-            <Japanese>XMS SG (迷彩)</Japanese>
+            <English>XMS SG (Stripes)</English>
+            <Japanese>XMS SG (縞模様迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Gray_Name">
             <English>XMS SG (Gray)</English>
@@ -473,8 +473,8 @@
             <Chinesesimp>XMS SW</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Camo_Name">
-            <English>XMS SW (Camo)</English>
-            <Japanese>XMS SW (迷彩)</Japanese>
+            <English>XMS SW (Stripes)</English>
+            <Japanese>XMS SW (縞模様迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Gray_Name">
             <English>XMS SW (Gray)</English>
