@@ -559,12 +559,12 @@
             <Japanese>オトカ アルマ (非武装)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_camo_Name">
-            <English>C-More Railway (Red, Camo)</English>
-            <Japanese>C-More レイルウェイ (レッド、迷彩)</Japanese>
+            <English>C-More Railway (Red, Stripe)</English>
+            <Japanese>C-More レイルウェイ (レッド、縞模様)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_grn_camo_Name">
-            <English>C-More Railway (Green, Camo)</English>
-            <Japanese>C-More レイルウェイ (グリーン、迷彩)</Japanese>
+            <English>C-More Railway (Green, Stripe)</English>
+            <Japanese>C-More レイルウェイ (グリーン、縞模様)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_arco_hex_Name">
             <English>ELCAN SpecterOS (Hex)</English>
