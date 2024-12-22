@@ -20,7 +20,7 @@ GVAR(tempWindInfo) = false;
     [ACE_player] call FUNC(prepare);
 
     true
-}, {false}, [34, [true, false, false]], false] call CBA_fnc_addKeybind; // Shift + G
+}, {false}, [0, [false, false, false]], false] call CBA_fnc_addKeybind; // false
 
 ["ACE3 Weapons", QGVAR(dropModeToggle), LLSTRING(DropModeToggle), {
     // Condition
@@ -33,7 +33,7 @@ GVAR(tempWindInfo) = false;
     ACE_player setVariable [QGVAR(throwType), THROW_TYPE_DEFAULT]; // Reset for consistency when opening
     call FUNC(updateControlsHint); // Change controls hint for MMB
     true
-}, {false}, [34, [false, true, false]], false] call CBA_fnc_addKeybind; // Ctrl + G
+}, {false}, [0, [false, false, false]], false] call CBA_fnc_addKeybind; // false
 
 ["ACE3 Weapons", QGVAR(dropModeHold), LLSTRING(DropModeHold), {
     // Condition

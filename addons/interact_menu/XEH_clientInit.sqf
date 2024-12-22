@@ -60,7 +60,7 @@ GVAR(ParsedTextCached) = [];
     // Statement
     [1] call FUNC(keyDown)
 },{[1,false] call FUNC(keyUp)},
-[219, [false, true, false]], false] call CBA_fnc_addKeybind; //Left Windows Key + Ctrl/Strg
+[219, [true, false, false]], false] call CBA_fnc_addKeybind; //Left Windows Key + Shift
 
 
 ["ACE3 Common", QGVAR(InteractKey_Toggle),

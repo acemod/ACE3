@@ -68,4 +68,4 @@ GVAR(elementsSet) = createHashMap;
     true
 },
 {false},
-[DIK_F12, [false, true, false]], false] call CBA_fnc_addKeybind; // ctrl+f12
+[0, [false, false, false]], false] call CBA_fnc_addKeybind; // false

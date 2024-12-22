@@ -105,13 +105,13 @@
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_BodyBag_Description">
             <English>%3Body Bags%4 are used to transport dead bodies. They can be dragged and loaded into vehicles.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Approach a dead body.&lt;br/&gt;%2Use [%3%13%4] or [%3%15%4] and select %3Place Body In Bodybag%4.</English>
+            <French>%3Les sacs mortuaires%4 sont utilisés pour transporter les cadavres. Ils peuvent être traînés et chargés dans des véhicules.&lt;br/&gt;&lt;br/&gt;%3Utilisation:%4&lt;br/&gt;%2Approchez-vous d'un cadavre.&lt;br/&gt;Utilisez [%3%13%4] ou [%3%15%4] et sélectionnez %3Placer le corps dans le sac mortuaire%4.</French>
             <Spanish>Las %3Bolsas para Cadáveres%4 se usan para transportar cadáveres. Pueden ser arrastradas y cargadas en vehículos. &lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Acercarse a un cadáver.&lt;br/&gt;%2Usar [%3%13%4] o [%3%15%4] y seleccionar %3Colocar cuerpo en la Bolsa para Cadáveres%4.</Spanish>
             <Italian>%3Sacche per cadaveri%4 sono usate per trasportare i morti. Possono essere trascinate e caricate su veicoli.&lt;br/&gt;&lt;br/&gt;%3Utilizzo:%4&lt;br/&gt;%2Avvicinati ad un morto.&lt;br/&gt;%2Usa [%3%13%4] o [%3%15%4] e seleziona %3Metti il corpo nella sacca per cadaveri%4.</Italian>
             <Polish>%3Worki na Zwłoki%4 są używane do transportu ciał. Worki mogą być przeciągane i ładowanie do pojazdów.&lt;br/&gt;&lt;br/&gt;%3Użycie:%4&lt;br/&gt;%2Podejdź do martwego ciała.&lt;br/&gt;%2Użyj [%3%13%4] lub [%3%15%4] i wybierz %3Umieść Ciało w Worku na Zwłoki%4.</Polish>
             <Portuguese>OS %3Sacos de Cadáver%4 são utilizados para transportar cadáveres. Eles podem ser arrastados e embarcados em veículos.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Aproxime-se de um cadáver.&lt;br/&gt;%2Utilize [%3%13%4] ou [%3%15%4] e selecione %3Colocar cadáver dentro do saco%4.</Portuguese>
             <Korean>%3시체 운반용 부대%4는 시체를 운반하는 데 사용되며, 차량으로 끌고 가서 적재할 수 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2시체에 접근하십시오.&lt;br/&gt;%2[%3%13%4] 또는 [%3%15%4]를 사용하여 %3시체 운반용 부대에 담기%4를 선택하십시오.</Korean>
             <Japanese>%3遺体袋%4は、遺体の輸送に使用されます。引きずって車両に積み込むことができます。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2遺体に近寄る。&lt;br/&gt;%2[%3%13%4] または [%3%15%4] を使って%3遺体袋に入れる%4を選択して使用します。</Japanese>
-            <French>%3Les sacs mortuaires%4 sont utilisés pour transporter les cadavres. Ils peuvent être traînés et chargés dans des véhicules.&lt;br/&gt;&lt;br/&gt;%3Utilisation:%4&lt;br/&gt;%2Approchez-vous d'un cadavre.&lt;br/&gt;Utilisez [%3%13%4] ou [%3%15%4] et sélectionnez %3Placer le corps dans le sac mortuaire%4.</French>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_BodyBag_ShortName">
             <English>Bring Out Your Dead</English>
@@ -269,6 +269,14 @@
             <Chinesesimp>物品</Chinesesimp>
             <Turkish>Eşyalar</Turkish>
         </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EHP_Description">
+            <English>%3Electronic Hearing Protection (EHP)%4 helps prevent hearing damage from repeat loud noises near a soldier. Differently from %3Ear Plugs%4, volume is only reduced when necessary. %3EHP%4 can also be built-in to certain types of %3Headgear%4 and %3Facewear%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Put on Electronic Hearing Protection%4.</English>
+            <Japanese>%3電子聴覚保護装置%4は、兵士の近くで繰り返される大きな騒音による聴覚障害を防ぐのに役立ちます。%3耳栓%4とは異なり、音量は必要な場合にのみ下げられます。 %3電子聴覚保護装置%4は、特定の種類の%3ヘッドギア%4および%3フェイスウェア%4に組み込まれていることがあります。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%12%4] を使って%3装備%4を選択します。&lt;br/&gt;%2電子聴覚保護装置を装着%4することで使用できます。</Japanese>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EHP_ShortName">
+            <English>Protect Your Hearing, Electronically</English>
+            <Japanese>聴覚を保護。電子的に。</Japanese>
+        </Key>
         <Key ID="STR_ACE_FieldManual_Items_EarPlugs_Description">
             <English>%3Ear Plugs%4 help prevent hearing damage from repeat loud noises near a soldier. Insert %3Ear Plugs%4 to lower volume of a soldier's environment and prevent %3Combat Deafness%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Insert %3Ear Plugs%4.</English>
             <Spanish>Los %3Tapones de oídos%4 ayudan a prevenir el daño auditivo de ruidos altos repetidos cerca de un soldado. Inserta los %3Tapones de oídos%4 para reducir el volumen del entorno del soldado y prevenir la %3Sordera de Combate%4.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Equipamiento%4.&lt;br/&gt;%2Insertar %3Tapones de oídos%4.</Spanish>
@@ -286,16 +294,6 @@
             <Russian>Защитите свой слух</Russian>
             <Korean>청력을 보호합니다</Korean>
             <Japanese>聴覚の保護</Japanese>
-        </Key>
-        <Key ID="STR_ACE_FieldManual_Items_EHP_Description">
-            <English>%3Electronic Hearing Protection (EHP)%4 helps prevent hearing damage from repeat loud noises near a soldier. Differently from %3Ear Plugs%4, volume is only reduced when necessary. %3EHP%4 can also be built-in to certain types of %3Headgear%4 and %3Facewear%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Put on Electronic Hearing Protection%4.</English>
-            <Japanese>%3電子聴覚保護装置%4は、兵士の近くで繰り返される大きな騒音による聴覚障害を防ぐのに役立ちます。%3耳栓%4とは異なり、音量は必要な場合にのみ下げられます。 %3電子聴覚保護装置%4は、特定の種類の%3ヘッドギア%4および%3フェイスウェア%4に組み込まれていることがあります。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%12%4] を使って%3装備%4を選択します。&lt;br/&gt;%2電子聴覚保護装置を装着%4することで使用できます。</Japanese>
-            <Korean>%3전자 청력 보호구 (EHP)%4는 병사 근처에서 큰 소음이 반복되는 것으로 인한 청력 손상을 예방하는 데 도움을 줍니다. %3귀마개%4와는 달리 음량은 필요할 때만 줄어듭니다. %3EHP%4는 특정한 유형의 %3헤드기어%4 및 %3페이스웨어%4에 내장되어 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2[%3%12%4]를 사용하여 %3장비%4를 선택하십시오.&lt;br/&gt;%2%3전자 청력 보호구%4를 착용하십시오.</Korean>
-        </Key>
-        <Key ID="STR_ACE_FieldManual_Items_EHP_ShortName">
-            <English>Protect Your Hearing, Electronically</English>
-            <Japanese>聴覚を保護。電子的に。</Japanese>
-            <Korean>전자적으로 청력을 보호합니다</Korean>
         </Key>
         <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_Description">
             <English>The %3Entrenching Tool%4 allows soldiers to dig trenches to help defend their position. The soldier must be on soil in order to dig a trench.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip an %3Entrenching Tool%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select the type of trench you wish to build.</English>
