@@ -816,7 +816,7 @@
             <Italian>KamAZ Munizioni</Italian>
             <German>KamAZ Munition</German>
             <Korean>카마즈 탄약</Korean>
-            <Japanese>KamAZ 弾薬</Japanese>
+            <Japanese>KamAZ (弾薬)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_cargo_Name">
             <English>KamAZ Cargo</English>
@@ -825,7 +825,7 @@
             <Italian>KamAZ Carico</Italian>
             <German>KamAZ Fracht</German>
             <Korean>카마즈 화물</Korean>
-            <Japanese>KamAZ 貨物</Japanese>
+            <Japanese>KamAZ (貨物)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_flatbed_Name">
             <English>KamAZ Flatbed</English>
@@ -834,7 +834,7 @@
             <Italian>KamAZ Pianale</Italian>
             <German>KamAZ Flachbett</German>
             <Korean>카마즈 플랫베드</Korean>
-            <Japanese>KamAZ 平台</Japanese>
+            <Japanese>KamAZ (平台)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_racing_Name">
             <English>KamAZ Racing</English>
@@ -843,7 +843,7 @@
             <Italian>KamAZ da corsa</Italian>
             <German>KamAZ Rennlaster</German>
             <Korean>카마즈 경주용</Korean>
-            <Japanese>KamAZ レース仕様</Japanese>
+            <Japanese>KamAZ (レース仕様)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_repair_Name">
             <English>KamAZ Repair</English>
@@ -852,7 +852,7 @@
             <Italian>KamAZ Riparazione</Italian>
             <German>KamAZ Instandsetzung</German>
             <Korean>카마즈 정비</Korean>
-            <Japanese>KamAZ 修理</Japanese>
+            <Japanese>KamAZ (修理)</Japanese>
         </Key>
     </Package>
 </Project>
