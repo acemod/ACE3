@@ -1,9 +1,0 @@
-PREP(canCheckAmmo);
-PREP(canCheckAmmoSelf);
-PREP(canSwapTurretMagazine);
-PREP(getAmmoToLinkBelt);
-PREP(checkAmmo);
-PREP(displayAmmo);
-PREP(onTake);
-PREP(startLinkingBelt);
-PREP(swapTurretMagazine);
