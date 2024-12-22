@@ -59,6 +59,7 @@ rd /s /q "%ROOTDIR%\addons"
 rd /s /q "%ROOTDIR%\optionals"
 rd /s /q "%ROOTDIR%\release"
 robocopy "%ROOTDIR%\addonsx" "%ROOTDIR%\addons" /s /move
+rd /s /q "%ROOTDIR%\addonsx"
 
 cls
 echo .
