@@ -122,7 +122,7 @@
             <Polish>Symulacja odprysków</Polish>
             <Portuguese>Simulação de estilhaços</Portuguese>
             <Russian>Симуляция обломков</Russian>
-            <German>Explosionssimulation</German>
+            <German>Simulation von Spreng- und Wurfstücken</German>
             <Korean>파편 시뮬레이션</Korean>
             <Japanese>スポーリング シミュレーション</Japanese>
             <Chinese>模擬剝落</Chinese>
@@ -138,7 +138,7 @@
             <Polish>Aktywuje symulację odprysków ACE</Polish>
             <Portuguese>Ativa a simulação de estilhaços do ACE</Portuguese>
             <Russian>Включить симуляцию обломков ACE</Russian>
-            <German>Aktiviere ACE-Explosionssimulation</German>
+            <German>Aktiviere die ACE Simulation von Spreng- und Wurfstücken</German>
             <Korean>ACE 파편 시뮬레이션을 적용합니다.</Korean>
             <Japanese>ACE スポーリング シミュレーションを有効化</Japanese>
             <Chinese>啟用ACE模擬剝落</Chinese>
@@ -185,7 +185,7 @@
             <Spanish>Intensidad del astillamiento</Spanish>
             <Italian>Intensità dello spalling</Italian>
             <Russian>Интенсивность обрушения</Russian>
-            <German>Intensität der Abplatzungen</German>
+            <German>Intensität der Wurfstücke</German>
             <Korean>파편 강도</Korean>
             <Japanese>スポーリング強度</Japanese>
         </Key>
@@ -195,7 +195,7 @@
             <Spanish>Modificador para aumentar o disminuir el número y la intensidad de los eventos de astillamiento. Aumentar este valor puede producir una degradación en el rendimiento.</Spanish>
             <Italian>Modificatore per il numero e intensità di spalling simulato, ovvero la frammentazione interna ad un veicolo colpito. Valori alti possono causare una degradazione della performance.</Italian>
             <Russian>Модификатор для увеличения или уменьшения количества и интенсивности событий обрушения. Увеличение этого значения может привести к ухудшению производительности.</Russian>
-            <German>Ein Modifikator, der die Anzahl und Intensität von Abplatzungen erhöht oder verringert. Eine Erhöhung dieses Wertes kann zu Leistungseinbußen führen.</German>
+            <German>Ein Modifikator, der die Anzahl und Intensität der Wurfstücke erhöht oder verringert. Eine Erhöhung dieses Wertes kann zu Leistungseinbußen führen.</German>
             <Korean>파편 이벤트 수와 강도를 늘리거나 줄입니다. 이 값을 늘리면 성능이 저하될 수 있습니다.</Korean>
             <Japanese>スポーリング現象が発生する数と強度を増減することが出来ます。この値を大きくすることはパフォーマンスの低下につながる可能性があります。</Japanese>
         </Key>
