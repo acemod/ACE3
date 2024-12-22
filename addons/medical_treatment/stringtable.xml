@@ -966,7 +966,7 @@
             <Russian>Сначала медикаменты врача</Russian>
             <German>Ausrüstung des Sanitäters zuerst</German>
             <Korean>치료자의 의료물자 먼저 사용</Korean>
-            <Japanese>救護者の装備を優先</Japanese>
+            <Japanese>救護者装備を優先</Japanese>
             <Chinese>優先使用醫療兵的醫療物資</Chinese>
             <Chinesesimp>优先消耗医疗兵装备</Chinesesimp>
             <Turkish>İlk Sıhhiyenin Ekipmanı</Turkish>
@@ -974,6 +974,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedicIfMedic">
             <English>Medic's Equipment First [If medic role]</English>
             <Russian>Сначала медикаменты врача [Если медик]</Russian>
+            <Japanese>救護者装備を優先 [衛生兵の場合]</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
@@ -986,7 +987,7 @@
             <Russian>Сначала медикаменты пациента</Russian>
             <German>Ausrüstung des Patienten zuerst</German>
             <Korean>환자의 의료물자 먼저 사용</Korean>
-            <Japanese>患者の装備を優先</Japanese>
+            <Japanese>患者装備を優先</Japanese>
             <Chinese>優先使用患者的醫療物資</Chinese>
             <Chinesesimp>优先消耗伤员装备</Chinesesimp>
             <Turkish>Önce Hastanın Ekipmanı</Turkish>
