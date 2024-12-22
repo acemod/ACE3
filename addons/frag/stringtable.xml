@@ -37,7 +37,7 @@
             <Spanish>Trazado Debug de Fragmentación/Astillamiento</Spanish>
             <Italian>Traccia Frag/Spall per Debug</Italian>
             <Russian>Отладка трассировки фрагментации/осколков</Russian>
-            <German>Splitter-/Explosions-Debug-Verfolgung</German>
+            <German>Debug-Verfolgung von Splitter und Wurfstücke</German>
             <Korean>파열/파편 디버그 추적</Korean>
             <Japanese>フラグとスポールの追跡デバッグ</Japanese>
         </Key>
@@ -47,7 +47,7 @@
             <Spanish>Habilitar trazado visual de los proyectiles generados por la fragmentación y el astillamiento.</Spanish>
             <Italian>Abilita il tracciamento visivo di effetti di frammentazione e spalling.</Italian>
             <Russian>Включает визуальную трассировку фрагментации и осколочных снарядов.</Russian>
-            <German>Aktiviert die visuelle Verfolgung von Splittern.</German>
+            <German>Aktiviert die visuelle Verfolgung von Splittern und Wurfstücken.</German>
             <Korean>파열과 파편의 시각적 추적을 활성화합니다.</Korean>
             <Japanese>フラグメンテーションとスポーリングによって発生した破片飛翔体の動きを視覚的に追跡できる機能を有効化します。</Japanese>
         </Key>
@@ -151,6 +151,7 @@
             <Spanish>Dibujar Esferas de Eventos</Spanish>
             <Italian>Visualizza sfere eventi</Italian>
             <Russian>Изобразить сферы событий</Russian>
+            <German>Visualisiere Ereigniskugeln</German>
             <Korean>이벤트 구체 그리기</Korean>
             <Japanese>イベントを球体として描画</Japanese>
         </Key>
@@ -160,6 +161,7 @@
             <Spanish>Dibujar esferas codificadas por color en cualquier evento para proyectiles seguidos.</Spanish>
             <Italian>Visualizza sfere colorate su ogni evento di un frammento tracciato.</Italian>
             <Russian>Изобразить цветные сферы на любом событии для отслеживаемых раундов.</Russian>
+            <German>Zeige bei jedem Ereignis farbige Kugeln für verfolgte Wurfstücke.</German>
             <Korean>모든 이벤트에서 추적된 파편을 위한 색상으로 구분하는 구체를 그립니다.</Korean>
             <Japanese>追跡中の飛翔体に発生した全てのイベントを色付けた球体として描画します。</Japanese>
         </Key>
