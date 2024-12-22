@@ -923,7 +923,7 @@
             <Italian>Determina se la sostituzione della canna disinceppa l'arma.</Italian>
             <Polish>Określa, czy wymiana lufy usuwa zacięcie się broni.</Polish>
             <Russian>Определяет, устраняет ли замена ствола заклинивание оружия.</Russian>
-            <German>Bestimmt, ob das Wechseln des Laufes eine Ladehemmung behebt.</German>
+            <German>Legt fest, ob ein Laufwechsel Ladehemmungen behebt.</German>
             <Korean>총열을 교체하면서 기능고장을 해결합니다.</Korean>
             <Japanese>銃身を交換して弾詰まりの解消をできるようにします。</Japanese>
             <Chinesesimp>通过更换枪管，以便清除卡弹。</Chinesesimp>
@@ -935,7 +935,7 @@
             <Italian>Disinceppa l'arma col cambio canna</Italian>
             <Polish>Usuń zacięcie przy wymianie lufy</Polish>
             <Russian>Замена ствола устраняет клин оружия</Russian>
-            <German>Ladehemmung beim Wechseln des Laufes beheben.</German>
+            <German>Ladehemmung beim Laufwechsel beheben</German>
             <Korean>총열 교환 시 기능고장 해결</Korean>
             <Japanese>銃身交換による弾詰まり解消</Japanese>
             <Chinesesimp>更换枪管清除卡弹</Chinesesimp>

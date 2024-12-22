@@ -745,7 +745,7 @@
             <Polish>Zezwalaj na pakowanie nieprzytomnych osób do worka na ciało.</Polish>
             <Portuguese>Permite colocar um paciente inconsciente em um saco de cadáver.</Portuguese>
             <Russian>Разрешает упаковывать пациентов без сознания в мешки для трупов.</Russian>
-            <German>Aktiviert, Bewusstlose in Leichensack zu legen.</German>
+            <German>Erlaubt es, Bewusstlose in Leichensäcke zu legen.</German>
             <Korean>기절 상태의 인원을 시체 운반용 부대에 옮겨 담을 수 있는 지를 정합니다.</Korean>
             <Japanese>無意識状態のプレイヤーを遺体袋へ入れることが出来る様にします。</Japanese>
             <Chinesesimp>能够将昏迷的伤员装入尸袋中。</Chinesesimp>
@@ -758,7 +758,7 @@
             <Polish>Nieprzytomni w worku na ciało</Polish>
             <Portuguese>Permitir inconscientes em sacos de cadáver</Portuguese>
             <Russian>Упаковка без сознания в мешки для трупов</Russian>
-            <German>Erlaube Benutzung des Leichensackes mit bewusstlosen Personen</German>
+            <German>Erlaube Bewusstlose in Leichensäcken zu legen</German>
             <Korean>기절 인원 시체 운반용 부대에 옮기기</Korean>
             <Japanese>無意識者の遺体袋への収容許可</Japanese>
             <Chinesesimp>允许昏迷者装入尸袋</Chinesesimp>
@@ -2559,7 +2559,7 @@
             <Polish>Konwertuj przedmioty z vanili</Polish>
             <Portuguese>Converter itens vanilla</Portuguese>
             <Russian>Преобразовывать ванильные медикаменты</Russian>
-            <German>Standard Arma-Equipment in ACE-Items umwandeln</German>
+            <German>Umwandlung von Arma-Equipment</German>
             <Korean>바닐라 아이템 전환</Korean>
             <Japanese>バニラアイテムの変換</Japanese>
             <Chinese>轉換原版物品</Chinese>
@@ -3139,7 +3139,7 @@
             <Polish>Kontroluje w jakich miejscach można robić transfuzje IV.</Polish>
             <Portuguese>Controla onde as transfusões IV podem ser realizadas.</Portuguese>
             <Russian>Контролирует, где можно использовать внутревенное переливание.</Russian>
-            <German>Kontrolliert, wo IV-Transfusionen durchgeführt werden können.</German>
+            <German>Legt fest, wo IV-Transfusionen verabreicht werden können.</German>
             <Korean>수액용기를 사용할 수 있는 장소를 정합니다.</Korean>
             <Japanese>IV 輸液を行える場所を制御します。</Japanese>
             <Chinesesimp>控制何地可以静脉输液</Chinesesimp>
@@ -3152,7 +3152,7 @@
             <Polish>Miejsca do transfuzji IV</Polish>
             <Portuguese>Locais para transfusão IV</Portuguese>
             <Russian>Места внутривенного переливания</Russian>
-            <German>Orte an denen IV-Transfusionen angelegt werden können</German>
+            <German>Orte für IV-Transfusionen</German>
             <Korean>수액용기 사용 장소</Korean>
             <Japanese>IV輸液の可能な場所</Japanese>
             <Chinesesimp>静脉输液地点</Chinesesimp>

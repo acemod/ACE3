@@ -32,7 +32,7 @@
             <Italian>Probabilità dell'IA di far cadere l'arma (colpo al braccio)</Italian>
             <Portuguese>Probabilidade da IA de largar a arma após tiro no braço</Portuguese>
             <Russian>Шанс выпадения оружия у ИИ (попадание в руку)</Russian>
-            <German>KI-Wahrscheinlichkeit, die Waffe fallen zu lassen (Arm Treffer)</German>
+            <German>KI-Wahrscheinlichkeit für Waffenabwurf (Armtreffer)</German>
             <Korean>인공지능이 무기를 떨굴 확률 (팔 피격)</Korean>
             <Japanese>AIが武器を落とす確率 (腕部への被弾)</Japanese>
         </Key>
@@ -43,7 +43,7 @@
             <Italian>Probabilità dei giocatori di far cadere l'arma (colpo al braccio)</Italian>
             <Portuguese>Probabilidade do jogador de largar a arma após tiro no braço</Portuguese>
             <Russian>Шанс выпадения оружия у игрока (попадание в руку)</Russian>
-            <German>Spieler Wahrscheinlichkeit, die Waffe fallen zu lassen (Arm Treffer)</German>
+            <German>Spieler-Wahrscheinlichkeit für Waffenabwurf (Armtreffer)</German>
             <Korean>플레이어가 무기를 떨굴 확률 (팔 피격)</Korean>
             <Japanese>プレイヤーが武器を落とす確率 (腕部への被弾)</Japanese>
         </Key>
