@@ -190,7 +190,7 @@
             <Polish>Możliwość chwilowej utraty słuchu przy głośnych wystrzałach i jednoczesnym braku włożonych stoperów</Polish>
             <Portuguese>Ativar surdez em combate?</Portuguese>
             <Russian>Уменьшает возможность игрока слышать звуки при повреждении органов слуха</Russian>
-            <German>Verringert das Hörvermögen wenn der Spieler einen Hörschaden davonträg</German>
+            <German>Verringert das Hörvermögen, wenn der Spieler Hörschäden erleidet</German>
             <Korean>청력에 손상을 입으면 듣는 소리가 감소합니다.</Korean>
             <Japanese>プレイヤーが聴覚にダメージを受けると聴力が低下します</Japanese>
             <Chinese>當玩家聽力受損時降低聽力能力?</Chinese>
@@ -373,6 +373,7 @@
         <Key ID="STR_ACE_Hearing_explosionDeafnessCoefficient_Description">
             <English>Changes how much deafness explosions cause.\nSetting to 0 will disable explosion hearing damage.</English>
             <Russian>Изменяет степень глухоты, вызываемой взрывами.\nУстановка значения 0 отключает повреждение слуха при взрыве.</Russian>
+            <German>Ändert den Grad der Taubheit, den Explosionen verursachen.\nEin Wert von 0 deaktiviert von Explosionen verursachte Hörschäden.</German>
             <Korean>폭발로 인한 청력 상실 정도를 변경합니다.\n0으로 설정하면 폭발에도 청력을 온전히 유지할 수 있습니다.</Korean>
             <Japanese>爆発による聴力低下の程度を変更します。\n0に設定することで爆発による聴力低下を無効化できます。</Japanese>
             <French>Modifie le degré de surdité causé par les explosions.\nLa valeur 0 désactive les dégâts auditifs causés par les explosions.</French>
@@ -380,6 +381,7 @@
         <Key ID="STR_ACE_Hearing_explosionDeafnessCoefficient_DisplayName">
             <English>Explosion Deafness Coefficient</English>
             <Russian>Коэффициент оглушения при взрыве</Russian>
+            <German>Koeffizient für Taubheit bei Explosionen</German>
             <Korean>폭발 난청 계수</Korean>
             <Japanese>爆発による難聴発生係数</Japanese>
             <French>Coefficient de surdité à l'explosion</French>
@@ -427,6 +429,7 @@
         </Key>
         <Key ID="STR_ACE_Hearing_statEHP">
             <English>ELECTRONIC</English>
+            <German>ELEKTRONISCH</German>
             <Japanese>電子聴覚保護</Japanese>
             <Russian>ЭЛЕКТРОННЫЙ</Russian>
             <French>ELECTRONIQUE</French>
