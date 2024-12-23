@@ -974,6 +974,7 @@
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedicIfMedic">
             <English>Medic's Equipment First [If medic role]</English>
             <Russian>Сначала медикаменты врача [Если медик]</Russian>
+            <French>Équipement de l'infirmier d'abord [Si l'infirmier joue un rôle].</French>
             <German>Ausrüstung des Sanitäters zuerst [Wenn Sanitäter]</German>
             <Japanese>救護者装備を優先 [衛生兵の場合]</Japanese>
             <Korean>치료자의 의료물자 먼저 사용 [의무병일 경우]</Korean>
