@@ -54,7 +54,10 @@
             <Japanese>2x AIM-9M [ACE]</Japanese>
             <Russian>2x AIM-9M [ACE]</Russian>
             <French>2x AIM-9M [ACE]</French>
+            <German>2x AIM-9M [ACE]</German>
+            <Korean>2x AIM-9M 사이드와인더 [ACE]</Korean>
         </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_x_1x">
             <English>1x AIM-9X [ACE]</English>
             <Japanese>1x AIM-9X [ACE]</Japanese>
             <Russian>1x AIM-9X [ACE]</Russian>
