@@ -532,6 +532,7 @@
             <German>Legt die Grenze für starke Schmerzen fest, oberhalb derer eine Person bei erlittenem Schaden bewusstlos werden kann.</German>
             <Korean>사람이 데미지를 입었을 때 의식불명 상태가 될 수 있는 심각한 고통의 한계점을 설정합니다.</Korean>
             <Japanese>激しい痛みのしきい値を設定します。このしきい値を超えた状態でダメージを受けると意識を失う可能性があります。</Japanese>
+            <Chinesesimp>设定重度疼痛的阈值, 疼痛超过这个值时再次受到伤害可能会导致昏迷</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_DisplayName">
             <English>Pain Unconscious Threshold</English>
@@ -544,6 +545,7 @@
             <German>Schmerz-Bewusstlosigkeit-Grenze</German>
             <Korean>고통 기절 한계점</Korean>
             <Japanese>無意識状態に陥る痛みのしきい値</Japanese>
+            <Chinesesimp>疼痛昏迷阈值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
             <English>Sets the amount of damage a player can receive before going unconscious (and dying if "Sum of Trauma" is enabled).</English>
@@ -850,6 +852,7 @@
             <Japanese>致命的状態となり死亡する前に手足が受けられるダメージの量を設定します。\n効果の発動には0より大きい数字に設定する必要があります。\n"手足のダメージを使用" 設定を有効化した上で "致命ダメージの原因" を "外傷の合計" または "どちらか" に設定する必要があります。\nユニット全体のダメージしきい値に対して乗算的に上乗せされます。 骨折や足の引きずり(跛行)とは無関係です。</Japanese>
             <Korean>치명적인 상태가 되어 죽음에 이르기 전까지 사지에 받는 피해량을 설정합니다. 효과가 생기려면 값이 0보다 커야 합니다.\n"사지 피해 사용" 설정을 활성화하고 "치명상의 원인"을 "외상 중첩" 또는 "둘 다"로 설정해야 합니다.\n전체 유닛 피해량 임계값과 곱해져서 누적됩니다. 골절/절뚝거림과는 전혀 상관 없습니다.</Korean>
             <French>Définit la quantité de dégâts que les membres peuvent recevoir avant de devenir critiques et d'entraîner la mort. Doit être supérieur à 0 pour avoir un effet.\nIl faut que le paramètre « Utiliser les dommages aux membres » soit activé et que « Cause de blessure mortelle » soit réglé sur « Somme des traumatismes » ou « Les deux ».\nS'empile de façon multiplicative avec le seuil de dégâts de l'unité globale. N'interagit pas du tout avec les fractures et le boitement.</French>
+            <Chinesesimp>设置四肢可以承受的伤害, 超过时将导致致命伤. 必须大于0才能产生效果\n需要启用"四肢伤害计入创伤总和", 并且"致命伤来源"设置为"创伤总和"或"二者之一"\n与临界伤害阈值乘法叠加. 和骨折/跛脚无关</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_DisplayName">
             <English>Limb Damage Threshold</English>
@@ -858,6 +861,7 @@
             <Japanese>手足のダメージしきい値</Japanese>
             <Korean>사지 피해량 임계값</Korean>
             <French>Seuil de dommages aux membres</French>
+            <Chinesesimp>四肢伤害阈值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_Description">
             <English>Controls whether limb damage is taken into account for sum of trauma calculations.</English>
@@ -874,6 +878,7 @@
             <Japanese>手足のダメージを使用</Japanese>
             <Korean>사지 피해 사용</Korean>
             <French>Utiliser les dommages aux membres</French>
+            <Chinesesimp>四肢伤害计入创伤总和</Chinesesimp>
         </Key>
     </Package>
 </Project>
