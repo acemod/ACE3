@@ -26,7 +26,9 @@ if (_medic isEqualTo player && {!isNull findDisplay 312}) exitWith {
 
 scopeName "Main";
 
-private _useOrder = [[_patient, _medic], [_medic, _patient], [_medic]] select GVAR(allowSharedEquipment);
+private _allowSharedEquipment = GVAR(allowSharedEquipment);
+if (_allowSharedEquipment == 3) then { _allowSharedEquipment = [0, 1] select ([_medic] call FUNC(isMedic)) };
+private _useOrder = [[_patient, _medic], [_medic, _patient], [_medic]] select _allowSharedEquipment;
 
 {
     private _unit = _x;

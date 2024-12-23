@@ -138,6 +138,8 @@
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_camo_Name">
             <English>Desert Eagle Mark XIX L5 (Camo)</English>
+            <Japanese>デザートイーグル Mark XIX L5 (迷彩)</Japanese>
+            <Korean>데저트 이글 마크 XIX L5 (위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_classic_Name">
             <English>Desert Eagle Mark XIX L5 (Classic)</English>
@@ -398,7 +400,7 @@
             <Italian>C-More Railway (Rosso, Desert)</Italian>
             <German>C-More Railway (Rot, Wüste)</German>
             <Korean>씨모어 레일웨이 (빨강, 사막)</Korean>
-            <Japanese>C-More レイルウェイ (グリーン、砂漠迷彩)</Japanese>
+            <Japanese>C-More レイルウェイ (レッド、砂漠迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_desert_Name">
             <English>C-More Railway (Green, Desert)</English>
@@ -425,7 +427,7 @@
             <Italian>C-More Railway (Rosso, Boschivo)</Italian>
             <German>C-More Railway (Rot, Grünes Tarnmuster)</German>
             <Korean>씨모어 레일웨이 (빨강, 수풀)</Korean>
-            <Japanese>C-More レイルウェイ (グリーン、森林迷彩)</Japanese>
+            <Japanese>C-More レイルウェイ (レッド、森林迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_mrd_khk_Name">
             <English>EOTech MRDS (Khaki)</English>
@@ -546,6 +548,8 @@
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_minigun_Name">
             <English>Ram 1500 (Minigun)</English>
+            <Japanese>ラム 1500 (ミニガン)</Japanese>
+            <Korean>램 1500 (미니건)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mmg_Name">
             <English>Ram 1500 (MMG)</English>
@@ -567,9 +571,13 @@
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_rcws_Name">
             <English>Ram 1500 (RCWS)</English>
+            <Japanese>ラム 1500 (RCWS)</Japanese>
+            <Korean>램 1500 (무인포탑)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_rocket_Name">
             <English>Ram 1500 (Rocket)</English>
+            <Japanese>ラム 1500 (ロケット)</Japanese>
+            <Korean>램 1500 (로켓)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_repair_Name">
             <English>Ram 1500 (Repair)</English>
@@ -689,11 +697,13 @@
             <Russian>Пожарная машина HEMTT</Russian>
             <German>HEMTT-Löschfahrzeug</German>
             <Korean>HEMTT 소방트럭</Korean>
-            <Japanese>HEMTT 消防車</Japanese>
+            <Japanese>HEMTT (消防車)</Japanese>
             <Chinesesimp>HEMTT 消防卡车</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_cargo_Name">
             <English>Typhoon Cargo</English>
+            <Japanese>タイフーン (貨物)</Japanese>
+            <Korean>타이푼 화물</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_water_Name">
             <English>Typhoon Water</English>
@@ -702,7 +712,7 @@
             <Italian>Typhoon Acqua</Italian>
             <German>Typhoon Water</German>
             <Korean>타이푼 급수</Korean>
-            <Japanese>タイフーン 給水</Japanese>
+            <Japanese>タイフーン (給水車)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_twinmortar_Name">
             <English>AMOS Container</English>
