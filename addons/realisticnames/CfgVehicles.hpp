@@ -174,7 +174,6 @@ class CfgVehicles {
     class I_APC_tracked_03_cannon_F: I_APC_tracked_03_base_F {
         displayName = CSTRING(APC_tracked_03_cannon_Name);
     };
-	
     class I_E_APC_tracked_03_base_F;
     class I_E_APC_tracked_03_cannon_F: I_E_APC_tracked_03_base_F {
         displayName = CSTRING(APC_tracked_03_cannon_Name);
