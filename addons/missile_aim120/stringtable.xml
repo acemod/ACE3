@@ -6,6 +6,7 @@
             <French>AIM-120A [ACE]</French>
             <Japanese>AIM-120A [ACE]</Japanese>
             <Russian>AIM-120A [ACE]</Russian>
+            <German>AIM-120A [ACE]</German>
             <Korean>AIM-120A 암람 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_a_1x">
@@ -13,6 +14,7 @@
             <French>1x AIM-120A [ACE]</French>
             <Japanese>1x AIM-120A [ACE]</Japanese>
             <Russian>1x AIM-120A [ACE]</Russian>
+            <German>1x AIM-120A [ACE]</German>
             <Korean>1x AIM-120A 암람 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_aim120">
@@ -20,6 +22,7 @@
             <French>AIM-120 [ACE]</French>
             <Japanese>AIM-120 [ACE]</Japanese>
             <Russian>AIM-120 [ACE]</Russian>
+            <German>AIM-120 [ACE]</German>
             <Korean>AIM-120 암람 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_c">
@@ -27,6 +30,7 @@
             <French>AIM-120C [ACE]</French>
             <Japanese>AIM-120C [ACE]</Japanese>
             <Russian>AIM-120C [ACE]</Russian>
+            <German>AIM-120C [ACE]</German>
             <Korean>AIM-120C 암람 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_c_1x">
@@ -34,6 +38,7 @@
             <French>1x AIM-120C [ACE]</French>
             <Japanese>1x AIM-120C [ACE]</Japanese>
             <Russian>1x AIM-120C [ACE]</Russian>
+            <German>1x AIM-120C [ACE]</German>
             <Korean>1x AIM-120C 암람 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_c_2x">
@@ -41,6 +46,7 @@
             <French>2x AIM-120C [ACE]</French>
             <Japanese>2x AIM-120C [ACE]</Japanese>
             <Russian>2x AIM-120C [ACE]</Russian>
+            <German>2x AIM-120C [ACE]</German>
             <Korean>2x AIM-120C 암람 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_d">
@@ -48,6 +54,7 @@
             <French>AIM-120D [ACE]</French>
             <Japanese>AIM-120D [ACE]</Japanese>
             <Russian>AIM-120D [ACE]</Russian>
+            <German>AIM-120D [ACE]</German>
             <Korean>AIM-120D 암람 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_d_1x">
@@ -55,6 +62,7 @@
             <French>1x AIM-120D [ACE]</French>
             <Japanese>1x AIM-120D [ACE]</Japanese>
             <Russian>1x AIM-120D [ACE]</Russian>
+            <German>1x AIM-120D [ACE]</German>
             <Korean>1x AIM-120D 암람 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_d_2x">
@@ -62,6 +70,7 @@
             <French>2x AIM-120D [ACE]</French>
             <Japanese>2x AIM-120D [ACE]</Japanese>
             <Russian>2x AIM-120D [ACE]</Russian>
+            <German>2x AIM-120D [ACE]</German>
             <Korean>2x AIM-120D 암람 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_direct">
@@ -69,6 +78,7 @@
             <French>Direct</French>
             <Japanese>ダイレクト</Japanese>
             <Russian>Прямой</Russian>
+            <German>Direct</German>
             <Korean>다이렉트</Korean>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_loft">
@@ -76,6 +86,7 @@
             <French>Loft</French>
             <Japanese>ロフト</Japanese>
             <Russian>Сверху</Russian>
+            <German>Loft</German>
             <Korean>로프트</Korean>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_r77">
@@ -83,6 +94,7 @@
             <French>R-77 [ACE]</French>
             <Japanese>R-77 [ACE]</Japanese>
             <Russian>R-77 [ACE]</Russian>
+            <German>R-77 [ACE]</German>
             <Korean>R-77 빔펠 [ACE]</Korean>
         </Key>
         <Key ID="STR_ACE_MISSILE_AIM120_r77_1x">
@@ -90,6 +102,7 @@
             <French>1x R-77 [ACE]</French>
             <Japanese>1x R-77 [ACE]</Japanese>
             <Russian>1x R-77 [ACE]</Russian>
+            <German>1x R-77 [ACE]</German>
             <Korean>1x R-77 빔펠 [ACE]</Korean>
         </Key>
     </Package>
