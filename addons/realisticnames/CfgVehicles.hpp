@@ -174,6 +174,11 @@ class CfgVehicles {
     class I_APC_tracked_03_cannon_F: I_APC_tracked_03_base_F {
         displayName = CSTRING(APC_tracked_03_cannon_Name);
     };
+	
+    class I_E_APC_tracked_03_base_F;
+    class I_E_APC_tracked_03_cannon_F: I_E_APC_tracked_03_base_F {
+        displayName = CSTRING(APC_tracked_03_cannon_Name);
+    };
 
     // Wheeled apcs
     class B_APC_Wheeled_01_base_F;
@@ -267,11 +272,32 @@ class CfgVehicles {
     class I_Truck_02_box_F: Truck_02_box_base_F {
         displayName = CSTRING(Truck_02_box_Name);
     };
+    class I_E_Truck_02_transport_F: Truck_02_transport_base_F {
+        displayName = CSTRING(Truck_02_transport_Name);
+    };
+    class I_E_Truck_02_F: Truck_02_base_F {
+        displayName = CSTRING(Truck_02_covered_Name);
+    };
+    class I_E_Truck_02_ammo_F: Truck_02_Ammo_base_F {
+        displayName = CSTRING(Truck_02_ammo_Name);
+    };
+    class I_E_Truck_02_fuel_F: Truck_02_fuel_base_F {
+        displayName = CSTRING(Truck_02_fuel_Name);
+    };
+    class I_E_Truck_02_box_F: Truck_02_box_base_F {
+        displayName = CSTRING(Truck_02_box_Name);
+    };
     class Truck_02_MRL_base_F;
     class I_Truck_02_MRL_F: Truck_02_MRL_base_F {
         displayName = CSTRING(Truck_02_MRL_Name);
     };
+    class I_E_Truck_02_MRL_F: Truck_02_MRL_base_F {
+        displayName = CSTRING(Truck_02_MRL_Name);
+    };
     class I_Truck_02_medical_F: Truck_02_medical_base_F {
+        displayName = CSTRING(Truck_02_medical_Name);
+    };
+    class I_E_Truck_02_medical_F: Truck_02_medical_base_F {
         displayName = CSTRING(Truck_02_medical_Name);
     };
     class C_Truck_02_transport_F: Truck_02_transport_base_F {
@@ -383,9 +409,15 @@ class CfgVehicles {
     class I_Heli_light_03_unarmed_F: Heli_light_03_unarmed_base_F {
         displayName = CSTRING(Heli_light_03_unarmed_Name);
     };
+    class I_E_Heli_light_03_unarmed_F: Heli_light_03_unarmed_base_F {
+        displayName = CSTRING(Heli_light_03_unarmed_Name);
+    };
 
     class Heli_light_03_dynamicLoadout_base_F;
     class I_Heli_light_03_dynamicLoadout_F: Heli_light_03_dynamicLoadout_base_F {
+        displayName = CSTRING(Heli_light_03_Name);
+    };
+    class I_E_Heli_light_03_dynamicLoadout_F: Heli_light_03_dynamicLoadout_base_F {
         displayName = CSTRING(Heli_light_03_Name);
     };
 
