@@ -97,7 +97,7 @@ class CfgVehicles {
     class Pickup_comms_base_rf: Pickup_service_base_rf {
         displayName = SUBCSTRING(pickup_01_comms_Name);
     };
-    class Pickup_repair_ig_base_rf: Pickup_repair_base_rf {
+    class Pickup_repair_ig_base_rf: Pickup_service_base_old_rf {
         displayName = SUBCSTRING(pickup_01_repair_Name);
     };
     class Pickup_covered_base_rf: Pickup_service_base_rf {

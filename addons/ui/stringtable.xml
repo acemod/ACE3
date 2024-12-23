@@ -374,7 +374,7 @@
             <Portuguese>Quantidade de Carregadores</Portuguese>
             <Russian>Количество магазинов</Russian>
             <German>Magazinanzahl</German>
-            <Korean>탄창수</Korean>
+            <Korean>탄창 수</Korean>
             <Japanese>弾倉数</Japanese>
             <Chinese>彈匣數量</Chinese>
             <Chinesesimp>弹匣数量</Chinesesimp>
@@ -728,6 +728,7 @@
             <Spanish>Ocultar toda la IU</Spanish>
             <Italian>Nascondi tutta l'IU</Italian>
             <Russian>Скрыть весь интерфейс</Russian>
+            <German>Gesamte Benutzeroberfläche ausblenden</German>
             <Korean>모든 UI 숨기기</Korean>
             <Japanese>全てのUIを隠す</Japanese>
         </Key>
