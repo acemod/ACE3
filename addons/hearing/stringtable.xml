@@ -140,6 +140,7 @@
             <Russian>Электронная защита слуха снята</Russian>
             <French>Protection auditive électronique retirée.</French>
             <Korean>전자 청력 보호구 벗음</Korean>
+            <Chinesesimp>降噪耳机已摘下</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Are_On">
             <English>Electronic Hearing Protection put on</English>
@@ -148,6 +149,7 @@
             <Russian>Электронная защита слуха надета</Russian>
             <French>Protection auditive électronique mise en place</French>
             <Korean>전자 청력 보호구 씀</Korean>
+            <Chinesesimp>降噪耳机已佩戴</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Description">
             <English>Electronic Hearing Protection protects the wearer from hearing damage without reducing situational awareness.</English>
@@ -156,6 +158,7 @@
             <Russian>Электронная защита органов слуха защищает пользователя от повреждения слуха, не снижая при этом его осведомленности о ситуации.</Russian>
             <French>Les protections auditives électroniques protègent le porteur contre les lésions auditives sans limiter sa conscience de la situation.</French>
             <Korean>전자 청력 보호구는 상황 인식을 저하시키지 않으면서 착용자의 청력 손상을 예방합니다.</Korean>
+            <Chinesesimp>降噪耳机可保护佩戴者免受听力损害，同时又不会降低态势感知能力。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Name">
             <English>Electronic Hearing Protection</English>
@@ -164,6 +167,7 @@
             <Russian>Электронная защита слуха</Russian>
             <French>Protection électronique de l'ouïe</French>
             <Korean>전자 청력 보호구</Korean>
+            <Chinesesimp>降噪耳机</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_Off">
             <English>Take off Electronic Hearing Protection</English>
@@ -172,6 +176,7 @@
             <Russian>Снять электронную защиту слуха</Russian>
             <French>Retirer les protections auditives électroniques</French>
             <Korean>전자 청력 보호구 벗기</Korean>
+            <Chinesesimp>摘下降噪耳机</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_ElectronicHearingProtection_On">
             <English>Put on Electronic Hearing Protection</English>
@@ -180,6 +185,7 @@
             <Russian>Надеть электронную защиту слуха</Russian>
             <French>Mettre les protections auditives électroniques</French>
             <Korean>전자 청력 보호구 쓰기</Korean>
+            <Chinesesimp>戴上降噪耳机</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_EnableCombatDeafness_Description">
             <English>Reduces the hearing ability as the player takes hearing damage</English>
@@ -268,6 +274,7 @@
             <Russian>Надеть/снять электронную защиту слуха</Russian>
             <French>Mettre/enlever une protection auditive électronique</French>
             <Korean>전자 청력 보호구 토글</Korean>
+            <Chinesesimp>戴上/摘下降噪耳机</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_PutOrRemoveEarplugs">
             <English>Put/take out earplugs</English>
@@ -279,6 +286,7 @@
             <German>Ohrstöpsel einsetzen/herausnehmen</German>
             <Korean>귀마개 토글</Korean>
             <Japanese>耳栓の着脱</Japanese>
+            <Chinesesimp>戴上/摘下耳塞</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_autoAddEarplugsToUnits_Description">
             <English>Add the `ACE_EarPlugs` item to all units that have loud weapons. Can disable if using custom loadouts.</English>
@@ -377,6 +385,7 @@
             <Korean>폭발로 인한 청력 상실 정도를 변경합니다.\n0으로 설정하면 폭발에도 청력을 온전히 유지할 수 있습니다.</Korean>
             <Japanese>爆発による聴力低下の程度を変更します。\n0に設定することで爆発による聴力低下を無効化できます。</Japanese>
             <French>Modifie le degré de surdité causé par les explosions.\nLa valeur 0 désactive les dégâts auditifs causés par les explosions.</French>
+            <Chinesesimp>爆炸会导致多大程度的听力损伤.\n设置为0时爆炸将不会导致听力损伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_explosionDeafnessCoefficient_DisplayName">
             <English>Explosion Deafness Coefficient</English>
@@ -385,6 +394,7 @@
             <Korean>폭발 난청 계수</Korean>
             <Japanese>爆発による難聴発生係数</Japanese>
             <French>Coefficient de surdité à l'explosion</French>
+            <Chinesesimp>爆炸听力损伤系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_heavyWeaponUnits">
             <English>Only units with heavy weapons</English>
@@ -396,6 +406,7 @@
             <German>Nur Einheiten mit schweren Waffen</German>
             <Korean>중화기를 가진 유닛만 해당</Korean>
             <Japanese>重火器を装備したユニットのみ</Japanese>
+            <Chinesesimp>装备重型武器的单位</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_statHearingLowerVolume">
             <English>Volume muffling</English>
@@ -434,6 +445,7 @@
             <Russian>ЭЛЕКТРОННЫЙ</Russian>
             <French>ELECTRONIQUE</French>
             <Korean>전자 청력 보호</Korean>
+            <Chinesesimp>降噪耳机</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_unconsciousnessVolume_Description">
             <English>Volume when unconscious.</English>
