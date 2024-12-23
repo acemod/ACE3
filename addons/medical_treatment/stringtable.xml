@@ -975,6 +975,7 @@
             <English>Medic's Equipment First [If medic role]</English>
             <Russian>Сначала медикаменты врача [Если медик]</Russian>
             <German>Ausrüstung des Sanitäters zuerst [Wenn Sanitäter]</German>
+            <Korean>치료자의 의료물자 먼저 사용 [의무병일 경우]</Korean>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
@@ -1672,7 +1673,7 @@
             <Portuguese>Sangue O- , utilizado em casos raros para rapidamente repor o sangue. Uso habitual ocorre durante o transporte ou em estações de tratamento.</Portuguese>
             <Russian>Кровь I группы, резус-отрицательная, применяется по жизненным показаниям для возмещения объема потерянной крови на догоспитальном этапе оказания медицинской помощи.</Russian>
             <German>O Negative Blutinfusion wird nur in seltenen Fällen verwendet, um den Bluthaushalt des Patienten zu ergänzen. Wird in der Regel wärend der Transportphase durchgeführt.</German>
-            <Korean>O형 혈액 투여는 매우 엄격하고 드문 혈액 보급의 경우에 쓰이는데 주로 치료의 운송단계에서 사용됩니다.</Korean>
+            <Korean>O Rh- 혈액은 일반적으로 의료 후송 단계에서 혈액 공급을 보충하기 위한 엄격하고 드물게 사용되는 혈액입니다.</Korean>
             <Japanese>血液型O-の輸血は、厳密かつ稀な事象において行われる。通常、医療の搬送段階で血液を補充するために使用される。</Japanese>
             <Chinese>O型陰性注射用血液, 在緊急情況時使用, 用於補充傷者流失的血液</Chinese>
             <Chinesesimp>O型负值注射用血液，在紧急情况时使用, 用于补充伤者流失的血液</Chinesesimp>

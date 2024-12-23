@@ -1799,6 +1799,7 @@
             <German>Realistische Missweisung des Kompasses</German>
             <Japanese>現実的なコンパス偏角</Japanese>
             <Russian>Реалистичный компасса</Russian>
+            <Korean>현실적인 나침반 편각</Korean>
         </Key>
         <Key ID="STR_ACE_Common_magneticDeclinationooltip">
             <English>Compass will point to magnetic north</English>
@@ -1806,6 +1807,7 @@
             <German>Der Kompass zeigt nach missweisend Nord</German>
             <Japanese>コンパスが磁北を指すようになります</Japanese>
             <Russian>Компас будет указывать на северный магнитный полюс</Russian>
+            <Korean>나침반이 자북을 가리키게 됩니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
