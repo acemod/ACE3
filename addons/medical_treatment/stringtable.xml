@@ -2915,7 +2915,7 @@
             <Russian>Введение аденозина...</Russian>
             <German>Adenosin injizieren...</German>
             <Korean>아데노신 주사 중...</Korean>
-            <Japanese>アドネシンを投与しています・・・</Japanese>
+            <Japanese>アデノシンを注射しています・・・</Japanese>
             <Chinese>腺苷注射中...</Chinese>
             <Chinesesimp>正在注射腺苷...</Chinesesimp>
             <Turkish>Adenosin Enjekte Ediliyor...</Turkish>
@@ -2931,7 +2931,7 @@
             <Russian>Введение атропина...</Russian>
             <German>Atropin injizieren...</German>
             <Korean>아트로핀 주사 중...</Korean>
-            <Japanese>アトロピンを投与しています・・・</Japanese>
+            <Japanese>アトロピンを注射しています・・・</Japanese>
             <Chinese>阿托品注射中 ...</Chinese>
             <Chinesesimp>正在注射阿托品...</Chinesesimp>
             <Turkish>Atropin Enjekte Ediliyor...</Turkish>
@@ -2948,7 +2948,7 @@
             <Russian>Введение адреналина...</Russian>
             <German>Epinephrin injizieren...</German>
             <Korean>에피네프린 주사 중...</Korean>
-            <Japanese>アドレナリンを投与しています・・・</Japanese>
+            <Japanese>アドレナリンを注射しています・・・</Japanese>
             <Chinese>腎上腺素注射中...</Chinese>
             <Chinesesimp>正在注射肾上腺素...</Chinesesimp>
             <Turkish>Epinefrin Enjekte Ediliyor...</Turkish>
@@ -2965,7 +2965,7 @@
             <Russian>Введение морфина...</Russian>
             <German>Morphin injizieren...</German>
             <Korean>모르핀 주사 중...</Korean>
-            <Japanese>モルヒネを投与しています・・・</Japanese>
+            <Japanese>モルヒネを注射しています・・・</Japanese>
             <Chinese>嗎啡注射中...</Chinese>
             <Chinesesimp>正在注射吗啡...</Chinesesimp>
             <Turkish>Morfin Enjekte Ediliyor ...</Turkish>
@@ -4364,7 +4364,7 @@
             <Russian>Переливание крови...</Russian>
             <German>Bluttransfusion...</German>
             <Korean>혈액 수혈 중...</Korean>
-            <Japanese>血液を投与しています・・・</Japanese>
+            <Japanese>血液を輸液しています・・・</Japanese>
             <Chinese>輸血液中 ...</Chinese>
             <Chinesesimp>正在输入血液...</Chinesesimp>
             <Turkish>Kan Veriliyor...</Turkish>
@@ -4381,7 +4381,7 @@
             <Russian>Переливание плазмы...</Russian>
             <German>Plasmatransfusion...</German>
             <Korean>혈장 수혈 중...</Korean>
-            <Japanese>血漿を投与しています・・・</Japanese>
+            <Japanese>血漿を輸液しています・・・</Japanese>
             <Chinese>輸血漿中 ...</Chinese>
             <Chinesesimp>正在输入血浆...</Chinesesimp>
             <Turkish>Plasma Veriliyor...</Turkish>
@@ -4398,7 +4398,7 @@
             <Russian>Переливание физраствора...</Russian>
             <German>Salzlösungtransfusion...</German>
             <Korean>생리식염수 수혈 중...</Korean>
-            <Japanese>生理食塩水を投与しています・・・</Japanese>
+            <Japanese>生理食塩水を輸液しています・・・</Japanese>
             <Chinese>施打生理食鹽水中 ...</Chinese>
             <Chinesesimp>正在输入生理盐水...</Chinesesimp>
             <Turkish>Serum Veriliyor...</Turkish>
