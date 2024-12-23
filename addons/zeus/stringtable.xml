@@ -222,7 +222,7 @@
             <Portuguese>Adicionar Arsenal Completo</Portuguese>
             <Russian>Добавить весь Арсенал</Russian>
             <German>Füge ganzes Arsenal hinzu</German>
-            <Korean>아스날 놓기</Korean>
+            <Korean>전체 기존 아스널 추가</Korean>
             <Japanese>BI 武器庫を追加</Japanese>
             <Chinese>增加完整的虛擬軍火庫到物件上</Chinese>
             <Chinesesimp>增加完整的虚拟军火库到物体上</Chinesesimp>
@@ -483,7 +483,7 @@
             <Portuguese>Construção por construção</Portuguese>
             <Russian>Здание за зданием</Russian>
             <German>Gebäude nach Gebäude</German>
-            <Korean>건물에서 건물로</Korean>
+            <Korean>건물마다</Korean>
             <Japanese>建物ごとに</Japanese>
             <Chinese>一棟填滿後再換下一棟</Chinese>
             <Chinesesimp>一栋填满后再换下一栋</Chinesesimp>
@@ -904,7 +904,7 @@
             <Portuguese>Remover Arsenal</Portuguese>
             <Russian>Убрать Арсенал</Russian>
             <German>Entferne Arsenal</German>
-            <Korean>아스날 제거</Korean>
+            <Korean>전체 기존 아스널 제거</Korean>
             <Japanese>BI 武器庫を削除</Japanese>
             <Chinese>移除物件上的虛擬軍火庫</Chinese>
             <Chinesesimp>移除物体上的虚拟军火库</Chinesesimp>
@@ -951,7 +951,7 @@
             <Portuguese>Definir como engenheiro</Portuguese>
             <Russian>Назначить инженера</Russian>
             <German>Engineer zuweisen</German>
-            <Korean>엔지니어 지정</Korean>
+            <Korean>공병 임명</Korean>
             <Japanese>工兵に割り当て</Japanese>
             <Chinese>指派工程師</Chinese>
             <Chinesesimp>指派工程师</Chinesesimp>
@@ -968,7 +968,7 @@
             <Portuguese>Habilidade do engenheiro</Portuguese>
             <Russian>Инженерное мастерство</Russian>
             <German>Ingenieur Fähigkeit</German>
-            <Korean>기술자의 기술</Korean>
+            <Korean>공병의 숙련도</Korean>
             <Japanese>工兵のスキル</Japanese>
             <Chinese>工程師技能</Chinese>
             <Chinesesimp>工程师技能</Chinesesimp>
@@ -1480,7 +1480,7 @@
             <Portuguese>Desguarnecer grupo</Portuguese>
             <Russian>Вывести группу из здания</Russian>
             <German>Garnisionsgruppe auflösen</German>
-            <Korean>주둔해제</Korean>
+            <Korean>그룹 주둔 해제</Korean>
             <Japanese>グループの駐屯解除</Japanese>
             <Chinese>解除駐軍駐守狀態</Chinese>
             <Chinesesimp>解除驻军驻守状态</Chinesesimp>

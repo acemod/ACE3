@@ -355,10 +355,12 @@
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Camo_Name">
             <English>XMS GL (Camo)</English>
             <Japanese>XMS GL (迷彩)</Japanese>
+            <Korean>XMS GL (위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Gray_Name">
             <English>XMS GL (Gray)</English>
             <Japanese>XMS GL (グレー)</Japanese>
+            <Korean>XMS GL (회색)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Sand_Name">
             <English>XMS GL (Sand)</English>
@@ -399,10 +401,12 @@
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Camo_Name">
             <English>XMS (Camo)</English>
             <Japanese>XMS (迷彩)</Japanese>
+            <Korean>XMS (위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Gray_Name">
             <English>XMS (Gray)</English>
             <Japanese>XMS (グレー)</Japanese>
+            <Korean>XMS (회색)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Khaki_Name">
             <English>XMS SG (Khaki)</English>
@@ -431,10 +435,12 @@
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Camo_Name">
             <English>XMS SG (Camo)</English>
             <Japanese>XMS SG (迷彩)</Japanese>
+            <Korean>XMS SG (위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Gray_Name">
             <English>XMS SG (Gray)</English>
             <Japanese>XMS SG (グレー)</Japanese>
+            <Korean>XMS SG (회색)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Sand_Name">
             <English>XMS SG (Sand)</English>
@@ -475,10 +481,12 @@
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Camo_Name">
             <English>XMS SW (Camo)</English>
             <Japanese>XMS SW (迷彩)</Japanese>
+            <Korean>XMS SW (위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Gray_Name">
             <English>XMS SW (Gray)</English>
             <Japanese>XMS SW (グレー)</Japanese>
+            <Korean>XMS SW (회색)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Sand_Name">
             <English>XMS SW (Sand)</English>
@@ -561,10 +569,12 @@
         <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_camo_Name">
             <English>C-More Railway (Red, Camo)</English>
             <Japanese>C-More レイルウェイ (レッド、迷彩)</Japanese>
+            <Korean>씨모어 레일웨이 (빨강/위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_grn_camo_Name">
             <English>C-More Railway (Green, Camo)</English>
             <Japanese>C-More レイルウェイ (グリーン、迷彩)</Japanese>
+            <Korean>씨모어 레일웨이 (초록/위장)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_arco_hex_Name">
             <English>ELCAN SpecterOS (Hex)</English>
