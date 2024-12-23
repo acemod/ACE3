@@ -355,7 +355,7 @@
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Camo_Name">
             <English>XMS GL (Stripes)</English>
             <Japanese>XMS GL (縞模様迷彩)</Japanese>
-            <Korean>XMS GL (위장)</Korean>
+            <Korean>XMS GL (줄무늬)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Gray_Name">
             <English>XMS GL (Gray)</English>
@@ -401,7 +401,7 @@
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Camo_Name">
             <English>XMS (Stripes)</English>
             <Japanese>XMS (縞模様迷彩)</Japanese>
-            <Korean>XMS (위장)</Korean>
+            <Korean>XMS (줄무늬)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Gray_Name">
             <English>XMS (Gray)</English>
@@ -435,7 +435,7 @@
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Camo_Name">
             <English>XMS SG (Stripes)</English>
             <Japanese>XMS SG (縞模様迷彩)</Japanese>
-            <Korean>XMS SG (위장)</Korean>
+            <Korean>XMS SG (줄무늬)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Gray_Name">
             <English>XMS SG (Gray)</English>
@@ -481,7 +481,7 @@
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Camo_Name">
             <English>XMS SW (Stripes)</English>
             <Japanese>XMS SW (縞模様迷彩)</Japanese>
-            <Korean>XMS SW (위장)</Korean>
+            <Korean>XMS SW (줄무늬)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Gray_Name">
             <English>XMS SW (Gray)</English>
@@ -567,14 +567,14 @@
             <Japanese>オトカ アルマ (非武装)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_camo_Name">
-            <English>C-More Railway (Red, Stripe)</English>
+            <English>C-More Railway (Red, Stripes)</English>
             <Japanese>C-More レイルウェイ (レッド、縞模様)</Japanese>
-            <Korean>씨모어 레일웨이 (빨강/위장)</Korean>
+            <Korean>씨모어 레일웨이 (빨강/줄무늬)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_grn_camo_Name">
-            <English>C-More Railway (Green, Stripe)</English>
+            <English>C-More Railway (Green, Stripes)</English>
             <Japanese>C-More レイルウェイ (グリーン、縞模様)</Japanese>
-            <Korean>씨모어 레일웨이 (초록/위장)</Korean>
+            <Korean>씨모어 레일웨이 (초록/줄무늬)</Korean>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_arco_hex_Name">
             <English>ELCAN SpecterOS (Hex)</English>
