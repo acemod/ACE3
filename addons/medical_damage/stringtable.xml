@@ -870,6 +870,7 @@
             <Japanese>"外傷の合計" の計算に手足のダメージを考慮するかどうかを制御します。</Japanese>
             <Korean>외상 중첩을 계산할 때 사지 피해량을 고려할지 여부를 제어합니다.</Korean>
             <French>Contrôle si les dommages aux membres sont pris en compte dans les calculs de la somme des traumatismes.</French>
+            <Chinesesimp>控制四肢伤害是否计入创伤总和计算</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_DisplayName">
             <English>Use Limb Damage</English>
