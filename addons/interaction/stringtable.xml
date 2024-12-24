@@ -448,6 +448,7 @@
             <German>Weiss beitreten</German>
             <Korean>백팀 참여</Korean>
             <Japanese>ホワイトに参加</Japanese>
+            <Chinesesimp>加入白组</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
