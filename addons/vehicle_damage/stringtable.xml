@@ -12,6 +12,7 @@
             <German>Aktiviert den Erweiterten Fahrzeugsschaden (Experimentell)</German>
             <Korean>고급 자동차 피해 활성화 (실험용)</Korean>
             <Japanese>車(Car)に対しての高度なダメージ計算を有効化します (試験的機能)</Japanese>
+            <Chinesesimp>对轻型轮式车辆启用高级车辆损坏(测试阶段)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_carDamage_setting_enable">
             <English>Enable advanced car damage</English>
@@ -24,6 +25,7 @@
             <German>Aktiviert erweiterten Autoschaden</German>
             <Korean>고급 자동차 피해 활성화</Korean>
             <Japanese>高度な車ダメージを有効化</Japanese>
+            <Chinesesimp>启用高级车辆损坏</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Vehicle_Damage_category_displayName">
             <English>ACE Advanced Vehicle Damage</English>
@@ -64,6 +66,7 @@
             <German>Aktiviert den Erweiterten Fahrzeugsschaden</German>
             <Korean>고급 차량 피해 활성화</Korean>
             <Japanese>乗り物(Vehicle)に対しての高度なダメージ計算を有効化します</Japanese>
+            <Chinesesimp>启用高级载具损坏</Chinesesimp>
         </Key>
     </Package>
 </Project>

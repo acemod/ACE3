@@ -27,6 +27,7 @@
             <German>Folge-Entfernung</German>
             <Korean>따라가는 거리</Korean>
             <Japanese>追跡距離</Japanese>
+            <Chinesesimp>跟随距离</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Aircraft_DroneFollowHint">
             <English>Following unit within %1m</English>
@@ -37,6 +38,7 @@
             <German>Folgt Einheit bis zu %1m</German>
             <Korean>%1m 이내로 유닛을 따라갑니다</Korean>
             <Japanese>%1m 間隔で 目標を追跡します</Japanese>
+            <Chinesesimp>在%1m内跟随单位</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Aircraft_GatlingDescriptionAP">
             <English>30mm DU Armor Piercing</English>

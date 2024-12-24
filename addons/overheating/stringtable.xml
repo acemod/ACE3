@@ -776,6 +776,7 @@
             <German>Lauftyp</German>
             <Korean>총열 방식</Korean>
             <Japanese>銃身形式</Japanese>
+            <Chinesesimp>枪管类型</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_nonRemoveable">
             <English>Non-Removeable</English>
@@ -786,6 +787,7 @@
             <German>Nicht entfernbar</German>
             <Korean>제거 불가</Korean>
             <Japanese>取り外し不可</Japanese>
+            <Chinesesimp>无法移除</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_removeable">
             <English>Quick Change</English>
@@ -796,6 +798,7 @@
             <German>Schnellwechsel</German>
             <Korean>신속 교체</Korean>
             <Japanese>即時交換可</Japanese>
+            <Chinesesimp>快速更换</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType">
             <English>Bolt Type</English>
@@ -806,6 +809,7 @@
             <German>Art des Verschlusses</German>
             <Korean>노리쇠 방식</Korean>
             <Japanese>遊底(ボルト)形式</Japanese>
+            <Chinesesimp>枪机类型</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_closedBolt">
             <English>Closed Bolt</English>
@@ -816,6 +820,7 @@
             <German>Geschlossener Verschluss</German>
             <Korean>클로즈드 볼트</Korean>
             <Japanese>クローズドボルト</Japanese>
+            <Chinesesimp>闭膛</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_openBolt">
             <English>Open Bolt</English>
@@ -826,6 +831,7 @@
             <German>Offener Verschluss</German>
             <Korean>오픈 볼트</Korean>
             <Japanese>オープンボルト</Japanese>
+            <Chinesesimp>开膛</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_description">
             <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>

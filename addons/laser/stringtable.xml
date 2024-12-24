@@ -12,6 +12,7 @@
             <German>Laserziel Verfolgung: Aus</German>
             <Korean>레이저 스팟 추적기: 끔</Korean>
             <Japanese>レーザースポットトラッカー: オフ</Japanese>
+            <Chinesesimp>激光点跟踪器: 关</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Laser_LSTOn">
             <English>Laser Spot Tracker: On</English>
@@ -24,6 +25,7 @@
             <German>Laserziel Verfolgung: An</German>
             <Korean>레이저 스팟 추적기: 켬</Korean>
             <Japanese>レーザースポットトラッカー: オン</Japanese>
+            <Chinesesimp>激光点跟踪器: 开</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Laser_dispersionCount_displayName">
             <English>Laser Dispersion Simulation Count</English>

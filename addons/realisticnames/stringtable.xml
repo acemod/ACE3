@@ -2237,6 +2237,7 @@
             <German>KamAS Wasser</German>
             <Korean>카마즈 급수</Korean>
             <Japanese>KamAZ (給水車)</Japanese>
+            <Chinesesimp>"卡玛兹"（水箱）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_ammo_Name">
             <English>Typhoon Ammo</English>
@@ -3771,6 +3772,7 @@
             <German>Type 115 (Schwarz)</German>
             <Korean>115식 보총 (검정)</Korean>
             <Japanese>Type 115 (ブラック)</Japanese>
+            <Chinesesimp>Type 115 (黑色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_ghex_Name">
             <English>Type 115 (Green Hex)</English>
@@ -3782,6 +3784,7 @@
             <German>Type 115 (Hex Grün)</German>
             <Korean>115식 보총 (초록육각)</Korean>
             <Japanese>Type 115 (緑六角形迷彩)</Japanese>
+            <Chinesesimp>Type 115 (绿色蜂巢迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_hex_Name">
             <English>Type 115 (Hex)</English>
@@ -3793,6 +3796,7 @@
             <German>Type 115 (Hex)</German>
             <Korean>115식 보총 (육각)</Korean>
             <Japanese>Type 115 (六角形迷彩)</Japanese>
+            <Chinesesimp>Type 115 (蜂巢迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_flashlight_Name">
             <English>UTG Defender 126</English>
@@ -3804,6 +3808,7 @@
             <German>UTG Defender 126</German>
             <Korean>UTG 디펜더 126</Korean>
             <Japanese>UTG ディフェンダー 126</Japanese>
+            <Chinesesimp>UTG防御者126</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_ACPC2_Name">
             <English>Custom Covert II</English>
@@ -5032,6 +5037,7 @@
             <German>EOTech MRDS (Schwarz)</German>
             <Korean>이오텍 MRDS (검정)</Korean>
             <Japanese>EOTech MRDS (ブラック)</Japanese>
+            <Chinesesimp>EOTech MRDS (黑色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_01_Name">
             <English>CZ 581</English>
@@ -5054,6 +5060,7 @@
             <German>CZ 581 (Abgesägt)</German>
             <Korean>CZ 581 (소드오프)</Korean>
             <Japanese>CZ 581 (ソードオフ)</Japanese>
+            <Chinesesimp>CZ 581 (截短)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_01_Name">
             <English>VS-121</English>

@@ -233,6 +233,7 @@
             <German>Pfeil Runter</German>
             <Korean>화살표(아래)</Korean>
             <Japanese>矢印 (下)</Japanese>
+            <Chinesesimp>向下的箭头</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_left">
             <English>Left Arrow</English>
@@ -244,6 +245,7 @@
             <German>Pfeil Links</German>
             <Korean>화살표(왼쪽)</Korean>
             <Japanese>矢印 (左)</Japanese>
+            <Chinesesimp>向左的箭头</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_right">
             <English>Right Arrow</English>
@@ -255,6 +257,7 @@
             <German>Pfeil Rechts</German>
             <Korean>화살표(오른쪽)</Korean>
             <Japanese>矢印 (右)</Japanese>
+            <Chinesesimp>向右的箭头</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Tagging_arrow_up">
             <English>Up Arrow</English>
@@ -266,6 +269,7 @@
             <German>Pfeil Hoch</German>
             <Korean>화살표(위)</Korean>
             <Japanese>矢印 (上)</Japanese>
+            <Chinesesimp>向上的箭头</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Tagging_circle">
             <English>Circle</English>
@@ -277,6 +281,7 @@
             <German>Kreis</German>
             <Korean>원</Korean>
             <Japanese>丸</Japanese>
+            <Chinesesimp>圆圈</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Tagging_cross">
             <English>Cross</English>
@@ -288,6 +293,7 @@
             <German>Kreuz</German>
             <Korean>십자</Korean>
             <Japanese>十字</Japanese>
+            <Chinesesimp>十字</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Tagging_descSpraypaint">
             <English>A can of spray paint for tagging walls.</English>
@@ -314,6 +320,7 @@
             <German>Diamant</German>
             <Korean>마름모</Korean>
             <Japanese>菱形</Japanese>
+            <Chinesesimp>菱形</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Tagging_square">
             <English>Square</English>
@@ -325,6 +332,7 @@
             <German>Quadrat</German>
             <Korean>사각형</Korean>
             <Japanese>四角</Japanese>
+            <Chinesesimp>方形</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Tagging_square_filled">
             <English>Filled Square</English>
@@ -336,6 +344,7 @@
             <German>Gefülltes Quadrat</German>
             <Korean>채워진 사각형</Korean>
             <Japanese>四角 (塗りつぶし)</Japanese>
+            <Chinesesimp>实心方形</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Tagging_stencilVehicle">
             <English>Vehicle ID Marking</English>
@@ -347,6 +356,7 @@
             <German>Fahrzeug ID Markierung</German>
             <Korean>차량 ID 마킹</Korean>
             <Japanese>車両IDマーキング</Japanese>
+            <Chinesesimp>载具ID标记</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Tagging_stencilVehicle_tooltip">
             <English>Replaces clan tag with stenciled text</English>
@@ -358,6 +368,7 @@
             <German>Ersetzt das Clan-Tag durch Schablonentext</German>
             <Korean>클랜 태그를 스텐실 텍스트로 바꿉니다.</Korean>
             <Japanese>部隊タグをステンシルテキストに置き換える</Japanese>
+            <Chinesesimp>用模板文字代替战队徽标</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle">
             <English>Triangle</English>
@@ -369,6 +380,7 @@
             <German>Dreieck</German>
             <Korean>삼각형</Korean>
             <Japanese>三角</Japanese>
+            <Chinesesimp>三角形</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Tagging_triangle_inverted">
             <English>Triangle Inverted</English>
@@ -380,6 +392,7 @@
             <German>Invertiertes Dreieck</German>
             <Korean>역삼각형</Korean>
             <Japanese>三角 (反転)</Japanese>
+            <Chinesesimp>倒过来的三角形</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Tagging_x">
             <English>X</English>

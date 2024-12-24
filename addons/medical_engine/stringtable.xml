@@ -38,6 +38,7 @@
             <German>Steuert den Effekt des „Durchschlagens“ von Panzerung auf den Gesamtschaden. Macht hohe Panzerungswerte, wie sie in GL-Westen verwendet werden, weniger effektiv.\nVerwende 0% für das Panzerungsverhalten vor 3.16.0.\nÄndere den Wert nur, wenn du weißt, was du tust!</German>
             <Korean>최종 데미지에 대한 방어구의 'PassThrough' 효과를 조정합니다. GL 리그에 사용되는 것과 같은 높은 방호값을 덜 효과적으로 만듭니다\n3.16.0 이전의 방어구 동작에는 0%를 사용하십시오.\n당신이 뭘 하고 있는지 알고 있는 경우에만 이걸 설정하세요!</Korean>
             <Japanese>ボディアーマーの'passThrough'値が最終的な身体ダメージに与える影響を調整します。擲弾兵リグで使用されるような高い装甲値では効果が低くなります。\n3.16.0以前の挙動にするには0%にしてください。\nこれが何かわからない場合は変更しないことをお勧めします。</Japanese>
+            <Chinesesimp>控制Config中PassThrough对最终伤害产生的影响. 使高装甲值护甲(像是原版榴弹胸挂)减伤效果降低\n使用0%来获得3.16.0之前的护甲效果\n除非你知道在干什么, 否则不要更改这个选项!</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Engine_damagePassThroughEffect_displayName">
             <English>Armor PassThrough Effect</English>
@@ -50,6 +51,7 @@
             <German>Effekt des Panzerungsdurchschlags</German>
             <Korean>방어구 PassThrough 효과</Korean>
             <Japanese>装甲貫通効果</Japanese>
+            <Chinesesimp>护甲PassThrough效果更改</Chinesesimp>
         </Key>
     </Package>
 </Project>

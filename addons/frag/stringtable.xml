@@ -10,6 +10,7 @@
             <German>Debug</German>
             <Korean>디버그</Korean>
             <Japanese>デバッグ</Japanese>
+            <Chinesesimp>开发者模式</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox">
             <English>Draw Hitboxes</English>
@@ -20,6 +21,7 @@
             <German>Zeige Hitboxen</German>
             <Korean>히트박스 그리기</Korean>
             <Japanese>ヒットボックスを描画</Japanese>
+            <Chinesesimp>显示碰撞箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox_Desc">
             <English>Draw hitboxes on objects that were targeted.</English>
@@ -30,6 +32,7 @@
             <German>Zeige Hitboxen von Zielobjekten</German>
             <Korean>타겟팅된 오브젝트에 히트박스를 그립니다.</Korean>
             <Japanese>被弾した物体のヒットボックスを描画します。</Japanese>
+            <Chinesesimp>在破片的目标物体上显示碰撞箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>Frag/Spall Debug Tracing</English>
@@ -40,6 +43,7 @@
             <German>Debug-Verfolgung von Splittern und Wurfstücken</German>
             <Korean>파열/파편 디버그 추적</Korean>
             <Japanese>フラグとスポールの追跡デバッグ</Japanese>
+            <Chinesesimp>破片/剥落绘制轨迹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
             <English>Enables visual tracing of fragmentation and spalling rounds.</English>
@@ -50,6 +54,7 @@
             <German>Aktiviert die visuelle Verfolgung von Splittern und Wurfstücken.</German>
             <Korean>파열과 파편의 시각적 추적을 활성화합니다.</Korean>
             <Japanese>フラグメンテーションとスポーリングによって発生した破片飛翔体の動きを視覚的に追跡できる機能を有効化します。</Japanese>
+            <Chinesesimp>启用破片以及物体剥落产生的破片的轨迹绘制</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_EnableFrag">
             <English>Fragmentation Simulation</English>
@@ -154,6 +159,7 @@
             <German>Visualisiere Ereigniskugeln</German>
             <Korean>이벤트 구체 그리기</Korean>
             <Japanese>イベントを球体として描画</Japanese>
+            <Chinesesimp>绘制命中球体指示</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_HitSphereEnable_Desc">
             <English>Draw color coded spheres at any event for tracked rounds.</English>
@@ -164,6 +170,7 @@
             <German>Zeige bei jedem Ereignis farbige Kugeln für verfolgte Wurfstücke.</German>
             <Korean>모든 이벤트에서 추적된 파편을 위한 색상으로 구분하는 구체를 그립니다.</Korean>
             <Japanese>追跡中の飛翔体に発生した全てのイベントを色付けた球体として描画します。</Japanese>
+            <Chinesesimp>在破片命中物体的位置上绘制一个带有颜色的提示球</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_Module_DisplayName">
             <English>Fragmentation Simulation</English>
@@ -190,6 +197,7 @@
             <German>Intensität der Wurfstücke</German>
             <Korean>파편 강도</Korean>
             <Japanese>スポーリング強度</Japanese>
+            <Chinesesimp>剥落效果强度</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_SpallIntensity_Desc">
             <English>Modifier to increase or decrease the number and intensity of spalling events. Increasing this value may cause performance degradation.</English>
@@ -200,6 +208,7 @@
             <German>Ein Modifikator, der die Anzahl und Intensität der Wurfstücke erhöht oder verringert. Eine Erhöhung dieses Wertes kann zu Leistungseinbußen führen.</German>
             <Korean>파편 이벤트 수와 강도를 늘리거나 줄입니다. 이 값을 늘리면 성능이 저하될 수 있습니다.</Korean>
             <Japanese>スポーリング現象が発生する数と強度を増減することが出来ます。この値を大きくすることはパフォーマンスの低下につながる可能性があります。</Japanese>
+            <Chinesesimp>增加或降低剥落破片的数量和强度. 增加可能会降低FPS</Chinesesimp>
         </Key>
     </Package>
 </Project>

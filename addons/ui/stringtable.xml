@@ -731,6 +731,7 @@
             <German>Gesamte Benutzeroberfläche ausblenden</German>
             <Korean>모든 UI 숨기기</Korean>
             <Japanese>全てのUIを隠す</Japanese>
+            <Chinesesimp>隐藏所有UI</Chinesesimp>
         </Key>
     </Package>
 </Project>

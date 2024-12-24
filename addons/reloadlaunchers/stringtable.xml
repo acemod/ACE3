@@ -29,6 +29,7 @@
             <German>Panzerabwehr konnte nicht geladen werden</German>
             <Korean>발사기를 장전할 수 없습니다.</Korean>
             <Japanese>ランチャーを装填できませんでした</Japanese>
+            <Chinesesimp>发射器无法装填</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadLauncher">
             <English>Load launcher</English>
@@ -75,6 +76,7 @@
             <German>%1 hat aufgehört, deine Panzerabwehr zu laden</German>
             <Korean>%1이(가) 당신의 발사기 장전을 멈췄습니다.</Korean>
             <Japanese>%1 がランチャーの装填を中断しました</Japanese>
+            <Chinesesimp>%1已停止给你的发射器装填弹药</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_LoadingLauncher">
             <English>Loading launcher...</English>
@@ -104,6 +106,7 @@
             <German>%1 lädt deine Panzerabwehr</German>
             <Korean>%1이(가) 당신의 발사기를 장전했습니다.</Korean>
             <Japanese>%1 がランチャーを装填しています</Japanese>
+            <Chinesesimp>%1正在给你的发射器装填弹药</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextDesc">
             <English>Displays notifications when an assistant loads a gunner's launcher.</English>
@@ -116,6 +119,7 @@
             <German>Zeigt Benachrichtigungen an, wenn ein Assistent den Werfer eines Richtschützen lädt.</German>
             <Korean>부사수가 사수의 발사기를 장전할 때 알림을 표시합니다.</Korean>
             <Japanese>助手が射手のランチャーを装填した際に通知を表示します。</Japanese>
+            <Chinesesimp>当其他人给别人的发射器装填弹药时显示提示</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextName">
             <English>Display notifications for buddy loading</English>
@@ -128,6 +132,7 @@
             <German>Buddy Nachlade Nachricht anzeigen</German>
             <Korean>동료의 장전에 대한 알림 표시</Korean>
             <Japanese>バディローディング時の通知表示</Japanese>
+            <Chinesesimp>显示协助装填提示</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_featureDescription">
             <English>Buddy Loading</English>
@@ -140,6 +145,7 @@
             <German>Nachladen durch Kamerad</German>
             <Korean>부사수 장전 중</Korean>
             <Japanese>バディローディング</Japanese>
+            <Chinesesimp>协助装填</Chinesesimp>
         </Key>
     </Package>
 </Project>

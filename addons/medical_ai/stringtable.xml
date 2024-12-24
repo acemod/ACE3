@@ -59,6 +59,7 @@
             <German>Automatische Konvertierung von Gegenständen der KI</German>
             <Korean>인공지능 아이템 자동 변환</Korean>
             <Japanese>AIのアイテムを自動変換</Japanese>
+            <Chinesesimp>自动向AI转换物品</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_desc">
             <English>AI will only perform medical treatment if they have the necessary items in their inventory.</English>
@@ -71,6 +72,7 @@
             <German>Die KI führt nur dann medizinische Behandlungen durch, wenn sie die erforderlichen Gegenstände in ihrem Inventar hat.</German>
             <Korean>소지품에 필요한 아이템이 있을 경우에만 인공지능이 치료를 진행합니다.</Korean>
             <Japanese>AIのインベントリに必要なアイテムがある場合にのみ治療を実行します。</Japanese>
+            <Chinesesimp>仅当AI物品栏中有所需物品时才会进行医疗</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_AI_requireItems_title">
             <English>Require Items</English>
@@ -83,6 +85,7 @@
             <German>Erfordere Gegenstände</German>
             <Korean>아이템 필요</Korean>
             <Japanese>アイテムを要求</Japanese>
+            <Chinesesimp>所需物品</Chinesesimp>
         </Key>
     </Package>
 </Project>

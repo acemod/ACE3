@@ -11,6 +11,7 @@
                 <German>AGM-65 Maverick D</German>
                 <Korean>AGM-65 매버릭 D</Korean>
                 <Japanese>AGM-65 マーベリック D</Japanese>
+                <Chinesesimp>AGM-65"小牛"空地D型</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Maverick_d_mag_x1">
                 <English>AGM-65 Maverick D [ACE]</English>
@@ -21,6 +22,7 @@
                 <German>AGM-65 Maverick D [ACE]</German>
                 <Korean>AGM-65 매버릭 D [ACE]</Korean>
                 <Japanese>AGM-65 マーベリック D [ACE]</Japanese>
+                <Chinesesimp>AGM-65"小牛"空地D型 [ACE]</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Maverick_d_mag_x3">
                 <English>3x AGM-65 Maverick D [ACE]</English>
@@ -31,6 +33,7 @@
                 <German>3x AGM-65 Maverick D [ACE]</German>
                 <Korean>3x AGM-65 매버릭 D [ACE]</Korean>
                 <Japanese>3x AGM-65 マーベリック D [ACE]</Japanese>
+                <Chinesesimp>3x AGM-65"小牛"空地D型 [ACE]</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Maverick_g">
                 <English>AGM-65 Maverick G</English>
@@ -41,6 +44,7 @@
                 <German>AGM-65 Maverick G</German>
                 <Korean>AGM-65 매버릭 G</Korean>
                 <Japanese>AGM-65 マーベリック G</Japanese>
+                <Chinesesimp>AGM-65"小牛"空地G型</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x1">
                 <English>AGM-65 Maverick G [ACE]</English>
@@ -51,6 +55,7 @@
                 <German>AGM-65 Maverick G [ACE]</German>
                 <Korean>AGM-65 매버릭 G [ACE]</Korean>
                 <Japanese>AGM-65 マーベリック G [ACE]</Japanese>
+                <Chinesesimp>AGM-65"小牛"空地G型 [ACE]</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x2">
                 <English>2x AGM-65 Maverick G [ACE]</English>
@@ -61,6 +66,7 @@
                 <German>2x AGM-65 Maverick G [ACE]</German>
                 <Korean>2x AGM-65 매버릭 G [ACE]</Korean>
                 <Japanese>2x AGM-65 マーベリック G [ACE]</Japanese>
+                <Chinesesimp>2x AGM-65"小牛"空地G型 [ACE]</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Maverick_g_mag_x3">
                 <English>3x AGM-65 Maverick G [ACE]</English>
@@ -71,6 +77,7 @@
                 <German>3x AGM-65 Maverick G [ACE]</German>
                 <Korean>3x AGM-65 매버릭 G [ACE]</Korean>
                 <Japanese>3x AGM-65 マーベリック G [ACE]</Japanese>
+                <Chinesesimp>3x AGM-65"小牛"空地G型 [ACE]</Chinesesimp>
             </Key>
             <Key ID="STR_ACE_Maverick_kh25ml_mag_descr">
                 <English>Kh-25ML, Laser Guided Air-to-Ground-Missile</English>
