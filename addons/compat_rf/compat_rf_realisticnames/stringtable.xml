@@ -192,7 +192,7 @@
             <Spanish>H225 Super Puma (Transporte)</Spanish>
             <Italian>H225 Super Puma (Trasporto)</Italian>
             <German>H225 Super Puma (Transport)</German>
-            <Korean>H225 슈퍼 퓨마 (비무장)</Korean>
+            <Korean>H225 슈퍼 퓨마 (수송)</Korean>
             <Japanese>H225 シュペル ピューマ (輸送型)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_civ_base_Name">
@@ -201,7 +201,7 @@
             <Spanish>H225 Super Puma (Civil)</Spanish>
             <Italian>H225 Super Puma (Civile)</Italian>
             <German>H225 Super Puma (Zivil)</German>
-            <Korean>H225 슈퍼 퓨마 (비무장)</Korean>
+            <Korean>H225 슈퍼 퓨마 (민간)</Korean>
             <Japanese>H225 シュペル ピューマ (民生型)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_base_Name">
@@ -210,7 +210,7 @@
             <Spanish>H215 Super Puma (Transporte)</Spanish>
             <Italian>H215 Super Puma (Trasporto)</Italian>
             <German>H215 Super Puma (Transport)</German>
-            <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
+            <Korean>H215 슈퍼 퓨마 (수송)</Korean>
             <Japanese>H215 シュペル ピューマ (輸送型)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_civ_base_Name">
@@ -219,7 +219,7 @@
             <Spanish>H215 Super Puma (Civil)</Spanish>
             <Italian>H215 Super Puma (Civile)</Italian>
             <German>H215 Super Puma (Zivil)</German>
-            <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
+            <Korean>H215 슈퍼 퓨마 (민간)</Korean>
             <Japanese>H215 シュペル ピューマ (民生型)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_military_base_Name">
