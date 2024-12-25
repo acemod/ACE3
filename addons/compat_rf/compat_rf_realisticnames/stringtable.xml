@@ -399,7 +399,7 @@
             <Spanish>C-More Railway (Rojo, Desierto)</Spanish>
             <Italian>C-More Railway (Rosso, Desert)</Italian>
             <German>C-More Railway (Rot, Wüste)</German>
-            <Korean>씨모어 레일웨이 (빨강, 사막)</Korean>
+            <Korean>씨모어 레일웨이 (빨강, 사막 위장)</Korean>
             <Japanese>C-More レイルウェイ (レッド、砂漠迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_desert_Name">
@@ -408,7 +408,7 @@
             <Spanish>C-More Railway (Verde, Desierto)</Spanish>
             <Italian>C-More Railway (Verde, Deserto)</Italian>
             <German>C-More Railway (Grün, Wüste)</German>
-            <Korean>씨모어 레일웨이 (녹색, 사막)</Korean>
+            <Korean>씨모어 레일웨이 (녹색, 사막 위장)</Korean>
             <Japanese>C-More レイルウェイ (グリーン、砂漠迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_wood_Name">
@@ -426,7 +426,7 @@
             <Spanish>C-More Railway (Rojo, Boscoso)</Spanish>
             <Italian>C-More Railway (Rosso, Boschivo)</Italian>
             <German>C-More Railway (Rot, Grünes Tarnmuster)</German>
-            <Korean>씨모어 레일웨이 (빨강, 수풀)</Korean>
+            <Korean>씨모어 레일웨이 (빨강, 수풀 위장)</Korean>
             <Japanese>C-More レイルウェイ (レッド、森林迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_mrd_khk_Name">
