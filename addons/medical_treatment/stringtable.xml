@@ -12,7 +12,7 @@
             <Russian>Перелить пакет крови (1000 мл)</Russian>
             <German>Bluttransfusion IV (1000ml)</German>
             <Korean>IV 혈액 수혈 (1000ml)</Korean>
-            <Japanese>血液(1000ml) をIV(静脈注射)投与</Japanese>
+            <Japanese>血液 IV (1000ml) を投与</Japanese>
             <Chinese>輸血液 (1000毫升)</Chinese>
             <Chinesesimp>静脉输血（1000毫升）</Chinesesimp>
             <Turkish>Kan IV (1000ml) Ver</Turkish>
@@ -29,7 +29,7 @@
             <Russian>Перелить пакет крови (250 мл)</Russian>
             <German>Bluttransfusion IV (250ml)</German>
             <Korean>IV 혈액 수혈 (250ml)</Korean>
-            <Japanese>血液(250ml) をIV(静脈注射)投与</Japanese>
+            <Japanese>血液 IV (250ml) を投与</Japanese>
             <Chinese>輸血液 (250毫升)</Chinese>
             <Chinesesimp>静脉输血（250毫升）</Chinesesimp>
             <Turkish>Kan IV (250ml) Ver</Turkish>
@@ -46,7 +46,7 @@
             <Russian>Перелить пакет крови (500 мл)</Russian>
             <German>Bluttransfusion IV (500ml)</German>
             <Korean>IV 혈액 수혈 (500ml)</Korean>
-            <Japanese>血液(500ml) をIV(静脈注射)投与</Japanese>
+            <Japanese>血液 IV (500ml) を投与</Japanese>
             <Chinese>輸血液 (500毫升)</Chinese>
             <Chinesesimp>静脉输血（500毫升）</Chinesesimp>
             <Turkish>Kan IV (500ml) Ver</Turkish>
@@ -215,7 +215,7 @@
             <Russian>Перелить пакет плазмы (1000 мл)</Russian>
             <German>Plasmatransfusion IV (1000ml)</German>
             <Korean>IV 혈장 수혈 (1000ml)</Korean>
-            <Japanese>血漿(1000ml) をIV(静脈注射)投与</Japanese>
+            <Japanese>血漿 IV (1000ml) を投与</Japanese>
             <Chinese>輸血漿 (1000毫升)</Chinese>
             <Chinesesimp>静脉注射血浆（1000毫升）</Chinesesimp>
             <Turkish>Plasma IV (1000ml) Ver</Turkish>
@@ -232,7 +232,7 @@
             <Russian>Перелить пакет плазмы (250 мл)</Russian>
             <German>Plasmatransfusion IV (250ml)</German>
             <Korean>IV 혈장 수혈 (250ml)</Korean>
-            <Japanese>血漿(250ml) をIV(静脈注射)投与</Japanese>
+            <Japanese>血漿 IV (250ml) を投与</Japanese>
             <Chinese>輸血漿 (250毫升)</Chinese>
             <Chinesesimp>静脉注射血浆（250毫升）</Chinesesimp>
             <Turkish>Plasma IV (250ml) Ver</Turkish>
@@ -249,7 +249,7 @@
             <Russian>Перелить пакет плазмы (500 мл)</Russian>
             <German>Plasmatransfusion IV (500ml)</German>
             <Korean>IV 혈장 수혈 (500ml)</Korean>
-            <Japanese>血漿(500ml) をIV(静脈注射)投与</Japanese>
+            <Japanese>血漿 IV (500ml) を投与</Japanese>
             <Chinese>輸血漿 (500毫升)</Chinese>
             <Chinesesimp>静脉注射血浆（500毫升）</Chinesesimp>
             <Turkish>Plasma IV (500ml) Ver</Turkish>
@@ -299,7 +299,7 @@
             <Russian>Перелить пакет физраствора (1000 мл)</Russian>
             <German>Kochsalzlösung IV (1000ml)</German>
             <Korean>IV 생리식염수 수혈 (1000ml)</Korean>
-            <Japanese>生理食塩液(1000ml) をIV(静脈注射)投与</Japanese>
+            <Japanese>生理食塩液 IV (1000ml) を投与</Japanese>
             <Chinese>注射生理食鹽水 (1000毫升)</Chinese>
             <Chinesesimp>静脉注射生理盐水（1000毫升）</Chinesesimp>
             <Turkish>Serum IV (1000ml) Ver</Turkish>
@@ -316,7 +316,7 @@
             <Russian>Перелить пакет физраствора (250 мл)</Russian>
             <German>Kochsalzlösung IV (250ml)</German>
             <Korean>IV 생리식염수 수혈 (250ml)</Korean>
-            <Japanese>生理食塩液(250ml) をIV(静脈注射)投与</Japanese>
+            <Japanese>生理食塩液 IV (250ml) を投与</Japanese>
             <Chinese>注射生理食鹽水 (250毫升)</Chinese>
             <Chinesesimp>静脉注射生理盐水（250毫升）</Chinesesimp>
             <Turkish>Serum IV (250ml) Ver</Turkish>
@@ -333,7 +333,7 @@
             <Russian>Перелить пакет физраствора (500 мл)</Russian>
             <German>Kochsalzlösung IV (500ml)</German>
             <Korean>IV 생리식염수 수혈 (500ml)</Korean>
-            <Japanese>生理食塩液(500ml) をIV(静脈注射)投与</Japanese>
+            <Japanese>生理食塩液 IV (500ml) を投与</Japanese>
             <Chinese>注射生理食鹽水 (500毫升)</Chinese>
             <Chinesesimp>静脉注射生理盐水（500毫升）</Chinesesimp>
             <Turkish>Serum IV (500ml) Ver</Turkish>
