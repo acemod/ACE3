@@ -41,12 +41,11 @@ if (_maxDose > 0) then {
 };
 
 // Check incompatible medication (format [med,limit])
-if (_incompatibleMedication isNotEqualTo []) then {
-	{
-		_x params ["_xMed", "_xLimit"];
-		private _inSystem = ([_target, _xMed] call EFUNC(medical_status,getMedicationCount)) select 0;
-		if (_inSystem > _xLimit) then {
-			[_target, _classname, _inSystem, _xLimit, _xMed] call FUNC(overDose);
-		};
-	} forEach _incompatibleMedication;
-};
+if (typeName _array != "ARRAY" || _incompatibleMedication isEqualTo []) exitWith {};
+{
+	_x params ["_xMed", "_xLimit"];
+	private _inSystem = ([_target, _xMed] call EFUNC(medical_status,getMedicationCount)) select 0;
+	if (_inSystem > _xLimit) then {
+		[_target, _classname, _inSystem, _xLimit, _xMed] call FUNC(overDose);
+	};
+} forEach _incompatibleMedication;
