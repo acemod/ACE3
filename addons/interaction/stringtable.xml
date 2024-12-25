@@ -1002,6 +1002,7 @@
             <Spanish>Interacción con animaciones</Spanish>
             <Italian>Interazione con animazioni</Italian>
             <Russian>Взаимодействие с анимациями</Russian>
+            <German>Interaktion mit Animationen</German>
             <Korean>애니메이션 있는 상호작용</Korean>
             <Japanese>車両アニメーションベースのインタラクション</Japanese>
         </Key>
@@ -1340,6 +1341,7 @@
             <Spanish>Limita algunas interacciones en vehículos tripulador por facciones enemigas.</Spanish>
             <Italian>Limita alcune interazioni su veicoli con nemici a bordo.</Italian>
             <Russian>Ограничьте некоторые взаимодействия на транспортных средствах, управляемых вражеской стороной.</Russian>
+            <German>Beschränkt einige Interaktionen auf Fahrzeuge, die von feindlichen Fraktionen besetzt sind.</German>
             <Korean>적 진영이 탑승한 차량과의 일부 상호작용을 제한합니다.</Korean>
             <Japanese>敵性力の乗員が乗っている車両へのインタラクションを一部制限します。</Japanese>
         </Key>
@@ -1349,6 +1351,7 @@
             <Spanish>Interactuar Con Tripulación Enemiga</Spanish>
             <Italian>Interazioni con equipaggio nemico</Italian>
             <Russian>Взаимодействие с вражеским экипажем</Russian>
+            <German>Interaktion mit feindlicher Besatzung</German>
             <Korean>적 승무원과의 상호작용</Korean>
             <Japanese>敵乗員がいる状態でのインタラクト</Japanese>
         </Key>
@@ -1358,6 +1361,7 @@
             <Spanish>Permitir para Armas Estáticas</Spanish>
             <Italian>Permetti con armi statiche</Italian>
             <Russian>Разрешить использование статического оружия</Russian>
+            <German>Erlaube für statische Waffen</German>
             <Korean>고정화기 허용</Korean>
             <Japanese>固定火器での許可</Japanese>
         </Key>
@@ -1380,6 +1384,7 @@
             <Spanish>Permite abandonar y cambiar el color del equipo de cualquier unidad en la escuadra del jugador</Spanish>
             <Italian>Permetti di cambiare il colore o rimuovere una qualsiasi unità della propria squadra</Italian>
             <Russian>Позволяет сбрасывать и менять командные цвета любого подразделения в отряде игрока</Russian>
+            <German>Erlaubt das Ändern der Teamfarbe einer beliebigen Einheit in der Gruppe des Spielers</German>
             <Korean>플레이어 분대의 모든 유닛을 삭제하고 팀 색상 변경하는 것을 허용합니다.</Korean>
             <Japanese>プレイヤー分隊内の任意のユニットにチームからの脱退と色の変更を許可します</Japanese>
         </Key>
@@ -1389,6 +1394,7 @@
             <Spanish>Gestión Remota de Escuadra</Spanish>
             <Italian>Gestione squadra da remoto</Italian>
             <Russian>Дистанционное управление отрядом</Russian>
+            <German>Fernverwaltung von Gruppen</German>
             <Korean>분대 원격 관리</Korean>
             <Japanese>遠隔分隊管理</Japanese>
         </Key>

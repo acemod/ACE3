@@ -7,6 +7,7 @@
             <Spanish>Debug</Spanish>
             <Italian>Debug</Italian>
             <Russian>Отладка</Russian>
+            <German>Debug</German>
             <Korean>디버그</Korean>
             <Japanese>デバッグ</Japanese>
         </Key>
@@ -16,6 +17,7 @@
             <Spanish>Dibujar hitboxes</Spanish>
             <Italian>Visualizza hitbox</Italian>
             <Russian>Изобразить хитбоксы</Russian>
+            <German>Zeige Hitboxen</German>
             <Korean>히트박스 그리기</Korean>
             <Japanese>ヒットボックスを描画</Japanese>
         </Key>
@@ -25,7 +27,7 @@
             <Spanish>Dibuja hitboxes en objetos que son seguidos.</Spanish>
             <Italian>Visualizza hitbox su potenziali bersagli della frammentazione.</Italian>
             <Russian>Изобразить хитбоксы на объектах, которые были нацелены.</Russian>
-            <German>Splitter-/Explosions-Debugging</German>
+            <German>Zeige Hitboxen von Zielobjekten</German>
             <Korean>타겟팅된 오브젝트에 히트박스를 그립니다.</Korean>
             <Japanese>被弾した物体のヒットボックスを描画します。</Japanese>
         </Key>
@@ -35,7 +37,7 @@
             <Spanish>Trazado Debug de Fragmentación/Astillamiento</Spanish>
             <Italian>Traccia Frag/Spall per Debug</Italian>
             <Russian>Отладка трассировки фрагментации/осколков</Russian>
-            <German>Splitter-/Explosions-Debug-Verfolgung</German>
+            <German>Debug-Verfolgung von Splittern und Wurfstücken</German>
             <Korean>파열/파편 디버그 추적</Korean>
             <Japanese>フラグとスポールの追跡デバッグ</Japanese>
         </Key>
@@ -45,7 +47,7 @@
             <Spanish>Habilitar trazado visual de los proyectiles generados por la fragmentación y el astillamiento.</Spanish>
             <Italian>Abilita il tracciamento visivo di effetti di frammentazione e spalling.</Italian>
             <Russian>Включает визуальную трассировку фрагментации и осколочных снарядов.</Russian>
-            <German>Splitter-/Explosions-Debugging</German>
+            <German>Aktiviert die visuelle Verfolgung von Splittern und Wurfstücken.</German>
             <Korean>파열과 파편의 시각적 추적을 활성화합니다.</Korean>
             <Japanese>フラグメンテーションとスポーリングによって発生した破片飛翔体の動きを視覚的に追跡できる機能を有効化します。</Japanese>
         </Key>
@@ -120,7 +122,7 @@
             <Polish>Symulacja odprysków</Polish>
             <Portuguese>Simulação de estilhaços</Portuguese>
             <Russian>Симуляция обломков</Russian>
-            <German>Explosionssimulation</German>
+            <German>Simulation von Spreng- und Wurfstücken</German>
             <Korean>파편 시뮬레이션</Korean>
             <Japanese>スポーリング シミュレーション</Japanese>
             <Chinese>模擬剝落</Chinese>
@@ -136,7 +138,7 @@
             <Polish>Aktywuje symulację odprysków ACE</Polish>
             <Portuguese>Ativa a simulação de estilhaços do ACE</Portuguese>
             <Russian>Включить симуляцию обломков ACE</Russian>
-            <German>Aktiviere ACE-Explosionssimulation</German>
+            <German>Aktiviere die ACE Simulation von Spreng- und Wurfstücken</German>
             <Korean>ACE 파편 시뮬레이션을 적용합니다.</Korean>
             <Japanese>ACE スポーリング シミュレーションを有効化</Japanese>
             <Chinese>啟用ACE模擬剝落</Chinese>
@@ -149,6 +151,7 @@
             <Spanish>Dibujar Esferas de Eventos</Spanish>
             <Italian>Visualizza sfere eventi</Italian>
             <Russian>Изобразить сферы событий</Russian>
+            <German>Visualisiere Ereigniskugeln</German>
             <Korean>이벤트 구체 그리기</Korean>
             <Japanese>イベントを球体として描画</Japanese>
         </Key>
@@ -158,6 +161,7 @@
             <Spanish>Dibujar esferas codificadas por color en cualquier evento para proyectiles seguidos.</Spanish>
             <Italian>Visualizza sfere colorate su ogni evento di un frammento tracciato.</Italian>
             <Russian>Изобразить цветные сферы на любом событии для отслеживаемых раундов.</Russian>
+            <German>Zeige bei jedem Ereignis farbige Kugeln für verfolgte Wurfstücke.</German>
             <Korean>모든 이벤트에서 추적된 파편을 위한 색상으로 구분하는 구체를 그립니다.</Korean>
             <Japanese>追跡中の飛翔体に発生した全てのイベントを色付けた球体として描画します。</Japanese>
         </Key>
@@ -183,6 +187,7 @@
             <Spanish>Intensidad del astillamiento</Spanish>
             <Italian>Intensità dello spalling</Italian>
             <Russian>Интенсивность обрушения</Russian>
+            <German>Intensität der Wurfstücke</German>
             <Korean>파편 강도</Korean>
             <Japanese>スポーリング強度</Japanese>
         </Key>
@@ -192,6 +197,7 @@
             <Spanish>Modificador para aumentar o disminuir el número y la intensidad de los eventos de astillamiento. Aumentar este valor puede producir una degradación en el rendimiento.</Spanish>
             <Italian>Modificatore per il numero e intensità di spalling simulato, ovvero la frammentazione interna ad un veicolo colpito. Valori alti possono causare una degradazione della performance.</Italian>
             <Russian>Модификатор для увеличения или уменьшения количества и интенсивности событий обрушения. Увеличение этого значения может привести к ухудшению производительности.</Russian>
+            <German>Ein Modifikator, der die Anzahl und Intensität der Wurfstücke erhöht oder verringert. Eine Erhöhung dieses Wertes kann zu Leistungseinbußen führen.</German>
             <Korean>파편 이벤트 수와 강도를 늘리거나 줄입니다. 이 값을 늘리면 성능이 저하될 수 있습니다.</Korean>
             <Japanese>スポーリング現象が発生する数と強度を増減することが出来ます。この値を大きくすることはパフォーマンスの低下につながる可能性があります。</Japanese>
         </Key>
