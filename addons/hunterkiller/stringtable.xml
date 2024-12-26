@@ -51,7 +51,7 @@
             <German>Überschreibe</German>
             <Korean>오버라이드</Korean>
             <Japanese>オーバーライド</Japanese>
-            <Chinesesimp>超控</Chinesesimp>
+            <Chinesesimp>超越控制</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_HunterKiller_override_description">
             <English>Force other turret to slew onto your viewpoint</English>
