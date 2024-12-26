@@ -62,15 +62,6 @@ if (isServer) then {
     };
 }, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to exclude animals as well
 
-// Compat for Reaction Forces CDLC: Extinguish cook-off
-[missionNamespace, "lxRF_water_droppedOnVehicle", {
-    params ["_vehicle"];
-
-    if (_vehicle getVariable [QGVAR(isAmmoDetonating), false]) then {
-        _vehicle setVariable [QGVAR(interruptAmmoCookoff), true, true];
-    };
-}] call BIS_fnc_addScriptedEventHandler;
-
 if (hasInterface) then {
     // Plays a sound locally, so that different sounds can be used for various distances
     [QGVAR(playCookoffSound), {

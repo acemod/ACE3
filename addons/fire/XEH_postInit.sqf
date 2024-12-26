@@ -34,15 +34,6 @@
         };
     }] call CBA_fnc_addEventHandler;
 
-    // Compat for Reaction Forces CDLC: Extinguish burning units
-    [missionNamespace, "lxRF_water_droppedOnUnit", {
-        params ["_unit"];
-
-        if (_unit call FUNC(isBurning)) then {
-            _unit setVariable [QGVAR(intensity), nil, true];
-        };
-    }] call BIS_fnc_addScriptedEventHandler;
-
     if (!isServer) exitWith {};
 
     GVAR(fireSources) = createHashMap;
