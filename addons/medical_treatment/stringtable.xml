@@ -299,7 +299,7 @@
             <Russian>Перелить пакет физраствора (1000 мл)</Russian>
             <German>Kochsalzlösung IV (1000ml)</German>
             <Korean>IV 생리식염수 수혈 (1000ml)</Korean>
-            <Japanese>生理食塩水 IV (1000ml) を投与</Japanese>
+            <Japanese>生理食塩液 IV (1000ml) を投与</Japanese>
             <Chinese>注射生理食鹽水 (1000毫升)</Chinese>
             <Chinesesimp>静脉注射生理盐水（1000毫升）</Chinesesimp>
             <Turkish>Serum IV (1000ml) Ver</Turkish>
@@ -316,7 +316,7 @@
             <Russian>Перелить пакет физраствора (250 мл)</Russian>
             <German>Kochsalzlösung IV (250ml)</German>
             <Korean>IV 생리식염수 수혈 (250ml)</Korean>
-            <Japanese>生理食塩水 IV (250ml) を投与</Japanese>
+            <Japanese>生理食塩液 IV (250ml) を投与</Japanese>
             <Chinese>注射生理食鹽水 (250毫升)</Chinese>
             <Chinesesimp>静脉注射生理盐水（250毫升）</Chinesesimp>
             <Turkish>Serum IV (250ml) Ver</Turkish>
@@ -333,7 +333,7 @@
             <Russian>Перелить пакет физраствора (500 мл)</Russian>
             <German>Kochsalzlösung IV (500ml)</German>
             <Korean>IV 생리식염수 수혈 (500ml)</Korean>
-            <Japanese>生理食塩水 IV (500ml) を投与</Japanese>
+            <Japanese>生理食塩液 IV (500ml) を投与</Japanese>
             <Chinese>注射生理食鹽水 (500毫升)</Chinese>
             <Chinesesimp>静脉注射生理盐水（500毫升）</Chinesesimp>
             <Turkish>Serum IV (500ml) Ver</Turkish>
@@ -447,7 +447,7 @@
             <Russian>%1 провёл переливание</Russian>
             <German>%1 hat eine Infusion verabreicht</German>
             <Korean>%1 (이)가 IV를 실시했다</Korean>
-            <Japanese>%1 がIVを投与した</Japanese>
+            <Japanese>%1 が輸液をIV(静脈注射)で投与した</Japanese>
             <Chinese>%1 已經給予靜脈注射液</Chinese>
             <Chinesesimp>%1 已进行静脉注射</Chinesesimp>
             <Turkish>% 1 IV verildi</Turkish>
@@ -842,7 +842,7 @@
             <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
             <German>Erlaube Bluttransfusionen an sich selbst zu benutzen</German>
             <Korean>수액용기를 사용자 본인에게 쓸 수 있는지를 정합니다.</Korean>
-            <Japanese>自らに対して IV 輸液を可能にします。</Japanese>
+            <Japanese>自らに対しての輸液IV(静脈注射)を可能にします。</Japanese>
             <Chinese>啟用是否能對自己注射點滴</Chinese>
             <Chinesesimp>启用是否能够自我静脉输液</Chinesesimp>
         </Key>
@@ -857,7 +857,7 @@
             <Russian>Внутривенное переливание на себе</Russian>
             <German>Eigennutzung von Bluttransfusionen</German>
             <Korean>수액용기 자가 사용</Korean>
-            <Japanese>自己 IV 輸液</Japanese>
+            <Japanese>輸液の自己投与</Japanese>
             <Chinese>自我注射點滴</Chinese>
             <Chinesesimp>自我静脉输液</Chinesesimp>
         </Key>
@@ -1659,7 +1659,7 @@
             <Russian>Пакет крови для возмещения объёма потерянной крови</Russian>
             <German>Blut IV, um den Bluthaushalt des Patienten wiederherzustellen.</German>
             <Korean>혈액 IV, 환자에게 혈액을 공급합니다.</Korean>
-            <Japanese>血液 IVは患者の血液量を回復させます。</Japanese>
+            <Japanese>血液静脈注射(IV)は患者の血液量を回復させます。</Japanese>
             <Chinese>血液, 用於補充傷者流失的血液</Chinese>
             <Chinesesimp>血液，用于补充伤者流失的血液</Chinesesimp>
             <Turkish>Kan IV, bir hastanın kanını geri enjekte etmek için</Turkish>
@@ -1676,7 +1676,7 @@
             <Russian>Кровь I группы, резус-отрицательная, применяется по жизненным показаниям для возмещения объема потерянной крови на догоспитальном этапе оказания медицинской помощи.</Russian>
             <German>O Negative Blutinfusion wird nur in seltenen Fällen verwendet, um den Bluthaushalt des Patienten zu ergänzen. Wird in der Regel wärend der Transportphase durchgeführt.</German>
             <Korean>O Rh- 혈액은 일반적으로 의료 후송 단계에서 혈액 공급을 보충하기 위한 엄격하고 드물게 사용되는 혈액입니다.</Korean>
-            <Japanese>血液型O-の輸血は、厳密かつ稀な事象において行われる。通常、医療の搬送段階で血液を補充するために使用される。</Japanese>
+            <Japanese>血液型O-の血液は通常、搬送中の医療現場で血液を補充するために厳密かつ稀な状況で使用される。</Japanese>
             <Chinese>O型陰性注射用血液, 在緊急情況時使用, 用於補充傷者流失的血液</Chinese>
             <Chinesesimp>O型负值注射用血液，在紧急情况时使用, 用于补充伤者流失的血液</Chinesesimp>
             <Hungarian>Nullás vércsoportú, Rh-negatív vér-infúzió, melyet kritikus és ritka helyzetekben vérutánpótlásra használnak, jellemzően az orvosi ellátás szállítási fázisa közben.</Hungarian>
@@ -2915,7 +2915,7 @@
             <Russian>Введение аденозина...</Russian>
             <German>Adenosin injizieren...</German>
             <Korean>아데노신 주사 중...</Korean>
-            <Japanese>アドネシンを投与しています・・・</Japanese>
+            <Japanese>アデノシンを注射しています・・・</Japanese>
             <Chinese>腺苷注射中...</Chinese>
             <Chinesesimp>正在注射腺苷...</Chinesesimp>
             <Turkish>Adenosin Enjekte Ediliyor...</Turkish>
@@ -2931,7 +2931,7 @@
             <Russian>Введение атропина...</Russian>
             <German>Atropin injizieren...</German>
             <Korean>아트로핀 주사 중...</Korean>
-            <Japanese>アトロピンを投与しています・・・</Japanese>
+            <Japanese>アトロピンを注射しています・・・</Japanese>
             <Chinese>阿托品注射中 ...</Chinese>
             <Chinesesimp>正在注射阿托品...</Chinesesimp>
             <Turkish>Atropin Enjekte Ediliyor...</Turkish>
@@ -2948,7 +2948,7 @@
             <Russian>Введение адреналина...</Russian>
             <German>Epinephrin injizieren...</German>
             <Korean>에피네프린 주사 중...</Korean>
-            <Japanese>アドレナリンを投与しています・・・</Japanese>
+            <Japanese>アドレナリンを注射しています・・・</Japanese>
             <Chinese>腎上腺素注射中...</Chinese>
             <Chinesesimp>正在注射肾上腺素...</Chinesesimp>
             <Turkish>Epinefrin Enjekte Ediliyor...</Turkish>
@@ -2965,7 +2965,7 @@
             <Russian>Введение морфина...</Russian>
             <German>Morphin injizieren...</German>
             <Korean>모르핀 주사 중...</Korean>
-            <Japanese>モルヒネを投与しています・・・</Japanese>
+            <Japanese>モルヒネを注射しています・・・</Japanese>
             <Chinese>嗎啡注射中...</Chinese>
             <Chinesesimp>正在注射吗啡...</Chinesesimp>
             <Turkish>Morfin Enjekte Ediliyor ...</Turkish>
@@ -3144,7 +3144,7 @@
             <Russian>Контролирует, где можно использовать внутревенное переливание.</Russian>
             <German>Legt fest, wo IV-Transfusionen verabreicht werden können.</German>
             <Korean>수액용기를 사용할 수 있는 장소를 정합니다.</Korean>
-            <Japanese>IV 輸液を行える場所を制御します。</Japanese>
+            <Japanese>輸液IV(静脈注射)を行える場所を制御します。</Japanese>
             <Chinesesimp>控制何地可以静脉输液</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_DisplayName">
@@ -3157,7 +3157,7 @@
             <Russian>Места внутривенного переливания</Russian>
             <German>Orte für IV-Transfusionen</German>
             <Korean>수액용기 사용 장소</Korean>
-            <Japanese>IV輸液の可能な場所</Japanese>
+            <Japanese>輸液IV(静脈注射)の可能な場所</Japanese>
             <Chinesesimp>静脉输液地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_Description">
@@ -3363,7 +3363,7 @@
             <Russian>Уровень навыка, требуемый для осуществления внутривенного переливания.</Russian>
             <German>'Fähigkeiten-Level', das benötigt wird, um Blut zu transfundieren.</German>
             <Korean>수액용기를 사용하는데 필요한 등급을 정합니다.</Korean>
-            <Japanese>IV 輸液を行うのに必要な医療スキルのレベルを設定します。</Japanese>
+            <Japanese>輸液IV(静脈注射)を行うのに必要な医療スキルのレベルを設定します。</Japanese>
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
             <Chinesesimp>静脉输液所需的医疗水平。</Chinesesimp>
         </Key>
@@ -3378,7 +3378,7 @@
             <Russian>Доступ к внутривенному переливанию</Russian>
             <German>Erlaube Bluttransfusionen</German>
             <Korean>수액용기 사용 허가</Korean>
-            <Japanese>IV 輸液の制限</Japanese>
+            <Japanese>輸液IV(静脈注射)の制限</Japanese>
             <Chinese>允許操作點滴</Chinese>
             <Chinesesimp>允许静脉输液</Chinesesimp>
         </Key>
@@ -3795,7 +3795,7 @@
             <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
             <German>Volumenerweiterungsmittel (künstliches Blutvolumen)</German>
             <Korean>혈액량을 늘리기위한 보조수단 입니다.</Korean>
-            <Japanese>血液量の増加を補助します。</Japanese>
+            <Japanese>血液量を増加させるための成分が含まれている。</Japanese>
             <Chinese>可快速得到血液補充</Chinese>
             <Chinesesimp>可快速得到血液补充</Chinesesimp>
             <Hungarian>Egy térfogatnövelő vérkiegészítmény.</Hungarian>
@@ -3811,7 +3811,7 @@
             <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
             <German>Volumenerweiterungsmittel (künstliches Blutvolumen)</German>
             <Korean>혈액량을 늘리기위한 보조수단 입니다.</Korean>
-            <Japanese>血液量の増加を補助します。</Japanese>
+            <Japanese>血液量を増加させるための成分が含まれている。</Japanese>
             <Chinese>可快速得到血液補充</Chinese>
             <Chinesesimp>可快速得到血液补充</Chinesesimp>
             <Hungarian>Egy térfogatnövelő vérkiegészítmény.</Hungarian>
@@ -3910,7 +3910,7 @@
             <Russian>Физраствор для в/в вливания (1000 мл)</Russian>
             <German>Kochsalzlösung (1000ml)</German>
             <Korean>생리식염수 IV (1000ml)</Korean>
-            <Japanese>生理食塩水 IV (1000ml)</Japanese>
+            <Japanese>生理食塩液 IV (1000ml)</Japanese>
             <Chinese>點滴 (食鹽水 1000毫升)</Chinese>
             <Chinesesimp>生理盐水（1000毫升）</Chinesesimp>
             <Turkish>Serum IV (1000ml)</Turkish>
@@ -3927,7 +3927,7 @@
             <Russian>Физраствор для в/в вливания (250 мл)</Russian>
             <German>Kochsalzlösung (250ml)</German>
             <Korean>생리식염수 IV (250ml)</Korean>
-            <Japanese>生理食塩水 IV (250ml)</Japanese>
+            <Japanese>生理食塩液 IV (250ml)</Japanese>
             <Chinese>點滴 (食鹽水 250毫升)</Chinese>
             <Chinesesimp>生理盐水（250毫升）</Chinesesimp>
             <Turkish>Serum IV (250ml)</Turkish>
@@ -3944,7 +3944,7 @@
             <Russian>Физраствор для в/в вливания (500 мл)</Russian>
             <German>Kochsalzlösung (500ml)</German>
             <Korean>생리식염수 IV (500ml)</Korean>
-            <Japanese>生理食塩水 IV (500ml)</Japanese>
+            <Japanese>生理食塩液 IV (500ml)</Japanese>
             <Chinese>點滴 (食鹽水 500毫升)</Chinese>
             <Chinesesimp>生理盐水（500毫升）</Chinesesimp>
             <Turkish>Serum IV (500ml)</Turkish>
@@ -3961,7 +3961,7 @@
             <Russian>Пакет физраствора для возмещения объёма потерянной крови</Russian>
             <German>Kochsalzlösung, ein medizinisches Volumenersatzmittel</German>
             <Korean>생리식염수, 환자의 혈액량을 보충할때 쓰입니다</Korean>
-            <Japanese>生理食塩水 IVは患者の血液量を回復させます。</Japanese>
+            <Japanese>生理食塩液静脈注射(IV)は患者の血液量を回復させます。</Japanese>
             <Chinese>生理食鹽水, 用於恢復傷者血液</Chinese>
             <Chinesesimp>生理盐水，用于恢复伤者血液</Chinesesimp>
             <Hungarian>0,9%-os sósvíz-infúzió, a páciens vérmennyiségének helyreállítására</Hungarian>
@@ -4022,7 +4022,7 @@
             <Russian>Нет капельницы</Russian>
             <German>Kein IV</German>
             <Korean>수혈 없음</Korean>
-            <Japanese>IV なし</Japanese>
+            <Japanese>IV(静脈注射) なし</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_NoPain">
             <English>No pain</English>
@@ -4313,7 +4313,7 @@
             <Russian>Перелить кровь</Russian>
             <German>Bluttransfusion</German>
             <Korean>혈액 수혈</Korean>
-            <Japanese>血液を投与</Japanese>
+            <Japanese>血液を輸液</Japanese>
             <Chinese>輸血液</Chinese>
             <Chinesesimp>输入血液</Chinesesimp>
             <Turkish>Kan Ver</Turkish>
@@ -4330,7 +4330,7 @@
             <Russian>Перелить плазму</Russian>
             <German>Plasmatransfusion</German>
             <Korean>혈장 수혈</Korean>
-            <Japanese>血漿を投与</Japanese>
+            <Japanese>血漿を輸液</Japanese>
             <Chinese>輸血漿</Chinese>
             <Chinesesimp>输入血浆</Chinesesimp>
             <Turkish>Plasma Ver</Turkish>
@@ -4347,7 +4347,7 @@
             <Russian>Перелить физраствор</Russian>
             <German>Salzlösungstransfusion</German>
             <Korean>생리식염수 수혈</Korean>
-            <Japanese>生理食塩水を投与</Japanese>
+            <Japanese>生理食塩液を輸液</Japanese>
             <Chinese>注射生理食鹽水</Chinese>
             <Chinesesimp>输入生理盐水</Chinesesimp>
             <Turkish>Serum Ver</Turkish>
@@ -4364,7 +4364,7 @@
             <Russian>Переливание крови...</Russian>
             <German>Bluttransfusion...</German>
             <Korean>혈액 수혈 중...</Korean>
-            <Japanese>血液を投与しています・・・</Japanese>
+            <Japanese>血液を輸液しています・・・</Japanese>
             <Chinese>輸血液中 ...</Chinese>
             <Chinesesimp>正在输入血液...</Chinesesimp>
             <Turkish>Kan Veriliyor...</Turkish>
@@ -4381,7 +4381,7 @@
             <Russian>Переливание плазмы...</Russian>
             <German>Plasmatransfusion...</German>
             <Korean>혈장 수혈 중...</Korean>
-            <Japanese>血漿を投与しています・・・</Japanese>
+            <Japanese>血漿を輸液しています・・・</Japanese>
             <Chinese>輸血漿中 ...</Chinese>
             <Chinesesimp>正在输入血浆...</Chinesesimp>
             <Turkish>Plasma Veriliyor...</Turkish>
@@ -4398,7 +4398,7 @@
             <Russian>Переливание физраствора...</Russian>
             <German>Salzlösungtransfusion...</German>
             <Korean>생리식염수 수혈 중...</Korean>
-            <Japanese>生理食塩水を投与しています・・・</Japanese>
+            <Japanese>生理食塩液を輸液しています・・・</Japanese>
             <Chinese>施打生理食鹽水中 ...</Chinese>
             <Chinesesimp>正在输入生理盐水...</Chinesesimp>
             <Turkish>Serum Veriliyor...</Turkish>
@@ -5230,7 +5230,7 @@
             <Russian>Принимается кровь [%1 мл]</Russian>
             <German>Erhalte Blut IV [%1ml]</German>
             <Korean>혈액 IV로 [%1ml] 수혈중</Korean>
-            <Japanese>血液 IV [%1ml] を投与中</Japanese>
+            <Japanese>血液をIV(静脈注射)投与中 [%1ml]</Japanese>
             <Chinese>接收血液靜脈注射液中 [%1毫升]</Chinese>
             <Chinesesimp>正在接受血液静脉注射 [%1毫升]</Chinesesimp>
             <Hungarian>Vér Infúzióra kötve [%1ml]</Hungarian>
@@ -5246,7 +5246,7 @@
             <Russian>Принимается плазма [%1 мл]</Russian>
             <German>Erhalte Plasma IV [%1ml]</German>
             <Korean>혈장 IV로 [%1ml] 수혈중</Korean>
-            <Japanese>プラズマ IV [%1ml] を投与中</Japanese>
+            <Japanese>血漿をIV(静脈注射)投与中 [%1ml]</Japanese>
             <Chinese>接收血漿靜脈注射液中 [%1毫升]</Chinese>
             <Chinesesimp>正在接受血浆静脉注射 [%1毫升]</Chinesesimp>
             <Hungarian>Plazma Infúzióra kötve [%1ml]</Hungarian>
@@ -5262,7 +5262,7 @@
             <Russian>Принимается физраствор [%1 мл]</Russian>
             <German>Erhalte Saline IV [%1ml]</German>
             <Korean>생리식염수 IV로 [%1ml] 수혈중</Korean>
-            <Japanese>生理食塩水 IV [%1ml] を投与中</Japanese>
+            <Japanese>生理食塩液をIV(静脈注射)投与中 [%1ml]</Japanese>
             <Chinese>接收生理鹽水靜脈注射液中 [%1毫升]</Chinese>
             <Chinesesimp>正在接受生理盐水静脉注射 [%1毫升]</Chinesesimp>
             <Hungarian>Saline Infúzióra kötve [%1ml]</Hungarian>
