@@ -555,7 +555,7 @@
             <Italian>Fattore di Oscillazione su Bipode</Italian>
             <Portuguese>Fator de balanço de mira em posição de tiro</Portuguese>
             <Russian>Коэф. колебания прицела при развертывании</Russian>
-            <German>Verwacklungsfaktor, wenn Zweibein aufgestellt ist.</German>
+            <German>Verwacklungsfaktor bei aufgestelltem Zweibein</German>
             <Korean>거치 시 손떨림 정도</Korean>
             <Japanese>接地展開時の手ぶれ係数</Japanese>
         </Key>
@@ -1135,7 +1135,7 @@
             <Italian>Fattore di Oscillazione Appoggiato</Italian>
             <Portuguese>Fator de balanço de mira em repouso</Portuguese>
             <Russian>Коэф. колебания прицела в состоянии покоя</Russian>
-            <German>Verwacklungsfaktor, wenn aufgelegt</German>
+            <German>Verwacklungsfaktor beim Auflegen</German>
             <Korean>휴식 시 손떨림 정도</Korean>
             <Japanese>静止依託時の手ぶれ係数</Japanese>
         </Key>
@@ -1796,10 +1796,18 @@
         <Key ID="STR_ACE_Common_magneticDeclination">
             <English>Realistic Compass Declination</English>
             <French>Déclinaison réaliste de la boussole</French>
+            <German>Realistische Missweisung des Kompasses</German>
+            <Japanese>現実的なコンパス偏角</Japanese>
+            <Russian>Реалистичный компасса</Russian>
+            <Korean>현실적인 나침반 편각</Korean>
         </Key>
         <Key ID="STR_ACE_Common_magneticDeclinationooltip">
             <English>Compass will point to magnetic north</English>
             <French>La boussole indique le nord magnétique</French>
+            <German>Der Kompass zeigt nach missweisend Nord</German>
+            <Japanese>コンパスが磁北を指すようになります</Japanese>
+            <Russian>Компас будет указывать на северный магнитный полюс</Russian>
+            <Korean>나침반이 자북을 가리키게 됩니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
