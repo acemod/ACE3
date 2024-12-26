@@ -66,8 +66,8 @@ if (isServer) then {
 [missionNamespace, "lxRF_water_droppedOnVehicle", {
     params ["_vehicle"];
 
-    if (_vehicle getVariable [QGVAR(enableAmmoCookoff), true]) then {
-        _vehicle setVariable [QGVAR(enableAmmoCookoff), false, true];
+    if (_vehicle getVariable [QGVAR(isAmmoDetonating), false]) then {
+        _vehicle setVariable [QGVAR(interruptAmmoCookoff), true, true];
     };
 }] call BIS_fnc_addScriptedEventHandler;
 
