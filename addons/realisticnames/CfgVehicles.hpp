@@ -21,6 +21,9 @@ class CfgVehicles {
     class I_static_AT_F: AT_01_base_F {
         displayName = CSTRING(static_AT_Name);
     };
+    class I_E_Static_AT_F: I_static_AT_F {
+        displayName = CSTRING(static_AT_Name);
+    };
 
     class AA_01_base_F;
     class B_static_AA_F: AA_01_base_F {
@@ -30,6 +33,9 @@ class CfgVehicles {
         displayName = CSTRING(static_AA_Name);
     };
     class I_static_AA_F: AA_01_base_F {
+        displayName = CSTRING(static_AA_Name);
+    };
+    class I_E_Static_AA_F: I_static_AA_F {
         displayName = CSTRING(static_AA_Name);
     };
 
