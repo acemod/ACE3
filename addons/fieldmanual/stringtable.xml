@@ -295,6 +295,16 @@
             <Korean>청력을 보호합니다</Korean>
             <Japanese>聴覚の保護</Japanese>
         </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EHP_Description">
+            <English>%3Electronic Hearing Protection (EHP)%4 helps prevent hearing damage from repeat loud noises near a soldier. Differently from %3Ear Plugs%4, volume is only reduced when necessary. %3EHP%4 can also be built-in to certain types of %3Headgear%4 and %3Facewear%4.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Put on Electronic Hearing Protection%4.</English>
+            <Japanese>%3電子聴覚保護装置%4は、兵士の近くで繰り返される大きな騒音による聴覚障害を防ぐのに役立ちます。%3耳栓%4とは異なり、音量は必要な場合にのみ下げられます。 %3電子聴覚保護装置%4は、特定の種類の%3ヘッドギア%4および%3フェイスウェア%4に組み込まれていることがあります。&lt;br/&gt;&lt;br/&gt;%3使用方法:%4&lt;br/&gt;%2[%3%12%4] を使って%3装備%4を選択します。&lt;br/&gt;%2電子聴覚保護装置を装着%4することで使用できます。</Japanese>
+            <Korean>%3전자 청력 보호구 (EHP)%4는 병사 근처에서 큰 소음이 반복되는 것으로 인한 청력 손상을 예방하는 데 도움을 줍니다. %3귀마개%4와는 달리 음량은 필요할 때만 줄어듭니다. %3EHP%4는 특정한 유형의 %3헤드기어%4 및 %3페이스웨어%4에 내장되어 있습니다.&lt;br/&gt;&lt;br/&gt;%3사용 방법:%4&lt;br/&gt;%2[%3%12%4]를 사용하여 %3장비%4를 선택하십시오.&lt;br/&gt;%2%3전자 청력 보호구%4를 착용하십시오.</Korean>
+        </Key>
+        <Key ID="STR_ACE_FieldManual_Items_EHP_ShortName">
+            <English>Protect Your Hearing, Electronically</English>
+            <Japanese>聴覚を保護。電子的に。</Japanese>
+            <Korean>전자적으로 청력을 보호합니다</Korean>
+        </Key>
         <Key ID="STR_ACE_FieldManual_Items_EntrenchingTool_Description">
             <English>The %3Entrenching Tool%4 allows soldiers to dig trenches to help defend their position. The soldier must be on soil in order to dig a trench.&lt;br/&gt;&lt;br/&gt;%3Usage:%4&lt;br/&gt;%2Equip an %3Entrenching Tool%4.&lt;br/&gt;%2Use [%3%12%4] and select %3Equipment%4.&lt;br/&gt;%2Select the type of trench you wish to build.</English>
             <Spanish>La %3Pala de Trincheras%4 permite a los soldados excavar trincheras para ayudarles a defender su posición. El soldado debe estar sobre tierra para poder excavar una trinchera.&lt;br/&gt;&lt;br/&gt;%3Uso:%4&lt;br/&gt;%2Equipar la %3Pala de Trincheras%4.&lt;br/&gt;%2Usar [%3%12%4] y seleccionar %3Equipamiento%4.&lt;br/&gt;%2Seleccionar el tipo de trinchera que quieres construir.</Spanish>

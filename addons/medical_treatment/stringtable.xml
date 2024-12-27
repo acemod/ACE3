@@ -3103,6 +3103,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_Description">
             <English>Controls where Adenosine can be used.</English>
+<<<<<<< HEAD
             <French>Contrôle où l'Adénosine peut être utilisée.</French>
             <Russian>Контролирует, где можно использовать Аденозин.</Russian>
             <Korean>아데노신을 사용할 수 있는 장소를 정합니다.</Korean>
@@ -3114,6 +3115,23 @@
             <Russian>Места использования Аденозина</Russian>
             <Korean>아데노신 사용 장소</Korean>
             <Japanese>アデノシンの使用可能な場所</Japanese>
+=======
+            <Russian>Контролирует, где можно использовать Аденозин.</Russian>
+            <German>Legt fest, wo Adenosin benutzt werden kann.</German>
+            <Japanese>アデノシンが使える場所を制御します。</Japanese>
+            <Korean>아데노신을 사용할 수 있는 장소를 정합니다.</Korean>
+            <French>Contrôle où l'Adénosine peut être utilisée.</French>
+            <Chinesesimp>控制何地能使用腺苷</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_DisplayName">
+            <English>Locations Adenosine</English>
+            <Russian>Места использования Аденозина</Russian>
+            <German>Orte für Adenosin</German>
+            <Japanese>アデノシンの使用可能な場所</Japanese>
+            <Korean>아데노신 사용 장소</Korean>
+            <French>Lieux d'utilisation de l'adénosine</French>
+            <Chinesesimp>腺苷使用地点</Chinesesimp>
+>>>>>>> update
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
             <English>Controls where epinephrine can be used.</English>
@@ -3175,6 +3193,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_Description">
             <English>Controls where Morphine can be used.</English>
+<<<<<<< HEAD
             <French>Contrôle où la morphine peut être utilisée.</French>
             <Russian>Контролирует, где можно использовать Морфин.</Russian>
             <Korean>모르핀을 사용할 수 있는 장소를 정합니다.</Korean>
@@ -3186,6 +3205,23 @@
             <Russian>Места использования Морфина</Russian>
             <Korean>모르핀 사용 장소</Korean>
             <Japanese>モルヒネの使用可能な場所</Japanese>
+=======
+            <Russian>Контролирует, где можно использовать Морфин.</Russian>
+            <German>Legt fest, wo Morphin benutzt werden kann.</German>
+            <Japanese>モルヒネが使える場所を制御します。</Japanese>
+            <Korean>모르핀을 사용할 수 있는 장소를 정합니다.</Korean>
+            <French>Contrôle où la morphine peut être utilisée.</French>
+            <Chinesesimp>控制何地能使用吗啡</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_DisplayName">
+            <English>Locations Morphine</English>
+            <Russian>Места использования Морфина</Russian>
+            <German>Orte für Morphin</German>
+            <Japanese>モルヒネの使用可能な場所</Japanese>
+            <Korean>모르핀 사용 장소</Korean>
+            <French>Lieux d'utilisation de la morphine</French>
+            <Chinesesimp>吗啡使用地点</Chinesesimp>
+>>>>>>> update
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
@@ -3222,6 +3258,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_Description">
             <English>Controls where Splints can be used.</English>
+<<<<<<< HEAD
             <French>Contrôle l'endroit où les attelles peuvent être utilisées.</French>
             <Russian>Контролирует, где можно использовать шины.</Russian>
             <Korean>부목을 사용할 수 있는 장소를 정합니다.</Korean>
@@ -3233,6 +3270,23 @@
             <Russian>Места наложения шины</Russian>
             <Korean>부목 사용 장소</Korean>
             <Japanese>添え木の使用可能な場所</Japanese>
+=======
+            <Russian>Контролирует, где можно использовать шины.</Russian>
+            <German>Legt fest, wo eine Schiene benutzt werden kann.</German>
+            <Japanese>添え木が使える場所を制御します。</Japanese>
+            <Korean>부목을 사용할 수 있는 장소를 정합니다.</Korean>
+            <French>Contrôle l'endroit où les attelles peuvent être utilisées.</French>
+            <Chinesesimp>控制何地能使用骨折夹板</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_LocationSplint_DisplayName">
+            <English>Locations Splint</English>
+            <Russian>Места наложения шины</Russian>
+            <German>Orte für Schiene</German>
+            <Japanese>添え木の使用可能な場所</Japanese>
+            <Korean>부목 사용 장소</Korean>
+            <French>Emplacement des attelles</French>
+            <Chinesesimp>骨折夹板使用地点</Chinesesimp>
+>>>>>>> update
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a surgical kit can be used.</English>
@@ -3315,6 +3369,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_Description">
             <English>Training level required to use Adenosine.</English>
+<<<<<<< HEAD
             <French>Niveau de formation requis pour utiliser l'Adénosine.</French>
             <Russian>Уровень подготовки, необходимый для использования Аденозина</Russian>
             <Korean>아데노신을 사용하는데 필요한 등급을 정합니다.</Korean>
@@ -3326,6 +3381,23 @@
             <Russian>Доступ к Аденозину</Russian>
             <Korean>아데노신 사용 허가</Korean>
             <Japanese>アデノシンの許可</Japanese>
+=======
+            <Russian>Уровень подготовки, необходимый для использования Аденозина</Russian>
+            <German>'Fähigkeiten-Level', das benötigt wird, um Adenosin zu benutzen.</German>
+            <Japanese>アデノシンの使用に必要な医療スキルのレベルを設定します。</Japanese>
+            <Korean>아데노신을 사용하는데 필요한 등급을 정합니다.</Korean>
+            <French>Niveau de formation requis pour utiliser l'Adénosine.</French>
+            <Chinesesimp>使用腺苷所需的医疗水平。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_DisplayName">
+            <English>Allow Adenosine</English>
+            <Russian>Доступ к Аденозину</Russian>
+            <German>Erlaube Adenosin</German>
+            <Japanese>アデノシンの許可</Japanese>
+            <Korean>아데노신 사용 허가</Korean>
+            <French>Autoriser l'adénosine</French>
+            <Chinesesimp>允许使用腺苷</Chinesesimp>
+>>>>>>> update
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use epinephrine.</English>
@@ -3391,6 +3463,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_Description">
             <English>Training level required to use Morphine.</English>
+<<<<<<< HEAD
             <French>Niveau de formation requis pour l'utilisation de la morphine.</French>
             <Russian>Уровень подготовки, необходимый для использования Морфина.</Russian>
             <Korean>모르핀을 사용하는데 필요한 등급을 정합니다.</Korean>
@@ -3402,6 +3475,23 @@
             <Russian>Доступ к Морфину</Russian>
             <Korean>모르핀 사용 허가</Korean>
             <Japanese>モルヒネの許可</Japanese>
+=======
+            <Russian>Уровень подготовки, необходимый для использования Морфина.</Russian>
+            <German>'Fähigkeiten-Level', das benötigt wird, um Morphin zu benutzen.</German>
+            <Japanese>モルヒネの使用に必要な医療スキルのレベルを設定します。</Japanese>
+            <Korean>모르핀을 사용하는데 필요한 등급을 정합니다.</Korean>
+            <French>Niveau de formation requis pour l'utilisation de la morphine.</French>
+            <Chinesesimp>使用吗啡所需的医疗水平。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
+            <English>Allow Morphine</English>
+            <Russian>Доступ к Морфину</Russian>
+            <German>Erlaube Morphin</German>
+            <Japanese>モルヒネの許可</Japanese>
+            <Korean>모르핀 사용 허가</Korean>
+            <French>Autoriser la morphine</French>
+            <Chinesesimp>允许使用吗啡</Chinesesimp>
+>>>>>>> update
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
@@ -3438,6 +3528,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_Description">
             <English>Training level required to use Splint.</English>
+<<<<<<< HEAD
             <French>Niveau de formation requis pour l'utilisation de l'attelle.</French>
             <Russian>Уровень подготовки, необходимый для использования шины.</Russian>
             <Korean>부목을 사용하는데 필요한 등급을 정합니다.</Korean>
@@ -3449,6 +3540,23 @@
             <Russian>Доступ к наложению шины</Russian>
             <Korean>부목 사용 허가</Korean>
             <Japanese>添え木の許可</Japanese>
+=======
+            <Russian>Уровень подготовки, необходимый для использования шины.</Russian>
+            <German>'Fähigkeiten-Level', das benötigt wird, um eine Schiene zu benutzen.</German>
+            <Japanese>添え木の使用に必要な医療スキルのレベルを設定します。</Japanese>
+            <Korean>부목을 사용하는데 필요한 등급을 정합니다.</Korean>
+            <French>Niveau de formation requis pour l'utilisation de l'attelle.</French>
+            <Chinesesimp>使用骨折夹板所需的医疗水平。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_MedicSplint_DisplayName">
+            <English>Allow Splint</English>
+            <Russian>Доступ к наложению шины</Russian>
+            <German>Erlaube Schiene</German>
+            <Japanese>添え木の許可</Japanese>
+            <Korean>부목 사용 허가</Korean>
+            <French>Accès aux attelles</French>
+            <Chinesesimp>允许使用骨折夹板</Chinesesimp>
+>>>>>>> update
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
@@ -3616,6 +3724,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_Description">
             <English>Makes Check Pulse action give a numerical value based on setting</English>
+<<<<<<< HEAD
             <French>L'action de vérification du pouls fournit une valeur numérique, en fonction de vos paramètres.</French>
             <Russian>Заставляет действие контрольного импульса выдавать числовое значение, основанное на настройке</Russian>
             <Korean>설정에 따라 맥박 확인 행동을 통해 숫자로 표시된 값을 제공합니다.</Korean>
@@ -3627,6 +3736,23 @@
             <Russian>Числовое значение пульса</Russian>
             <Korean>맥박 수치</Korean>
             <Japanese>脈拍の数値化</Japanese>
+=======
+            <Russian>Заставляет действие контрольного импульса выдавать числовое значение, основанное на настройке</Russian>
+            <German>Die Aktion "Puls überprüfen" liefert einen numerischen Wert abhängig von der Einstellung</German>
+            <Japanese>脈拍の確認アクションから得られる情報が数値化されるようになる医療レベルを設定します</Japanese>
+            <Korean>설정에 따라 맥박 확인 행동을 통해 숫자로 표시된 값을 제공합니다.</Korean>
+            <French>L'action de vérification du pouls fournit une valeur numérique, en fonction de vos paramètres.</French>
+            <Chinesesimp>检查心率后会显示心率数值</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
+            <English>Numerical Pulse</English>
+            <Russian>Числовое значение пульса</Russian>
+            <German>Numerischer Puls</German>
+            <Japanese>脈拍の数値化</Japanese>
+            <Korean>맥박 수치</Korean>
+            <French>Pouls numérique</French>
+            <Chinesesimp>显示心率数值</Chinesesimp>
+>>>>>>> update
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
             <English>Used to pack medium to large wounds and stem the bleeding</English>
