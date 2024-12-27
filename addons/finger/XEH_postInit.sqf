@@ -21,4 +21,4 @@ if (!hasInterface) exitWith {};
     _this call FUNC(keyPress);
 },
 {false},
-[20, [false, false, false]], true] call CBA_fnc_addKeybind; // T
+[41, [true, false, false]], true] call CBA_fnc_addKeybind; // Shift + Tilda (hold)

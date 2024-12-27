@@ -80,7 +80,7 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[0, [false, false, false]], false] call CBA_fnc_addKeybind; // 0
+[7, [false, false, false]], false] call CBA_fnc_addKeybind; //6 Key
 
 ["ACE3 Weapons", QGVAR(SelectGrenadeOther), localize LSTRING(SelectGrenadeOther), {
     // Conditions: canInteract
@@ -93,7 +93,7 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[0, [false, false, false]], false] call CBA_fnc_addKeybind; // 0
+[8, [false, false, false]], false] call CBA_fnc_addKeybind; //7 Key
 
 ["ACE3 Weapons", QGVAR(HolsterWeapon), localize LSTRING(HolsterWeapon), {
     // Conditions: canInteract
@@ -116,7 +116,7 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[0, [false, false, false]], false] call CBA_fnc_addKeybind; // 0
+[11, [false, false, false]], false] call CBA_fnc_addKeybind; //0 Key
 
 ["ACE3 Vehicles", QGVAR(EngineOn), localize LSTRING(EngineOn), {
     // Conditions: canInteract
@@ -129,7 +129,7 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[0, [false, false, false]], false] call CBA_fnc_addKeybind; // 0
+[3, [false, false, false]], false] call CBA_fnc_addKeybind; //2 Key
 
 ["ACE3 Vehicles", QGVAR(EngineOff), localize LSTRING(EngineOff), {
     // Conditions: canInteract
@@ -142,7 +142,7 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[0, [false, false, false]], false] call CBA_fnc_addKeybind; // 0
+[2, [false, false, false]], false] call CBA_fnc_addKeybind; //1 Key
 
 ["ACE3 Vehicles", QGVAR(SelectMainGunNew), localize LSTRING(SelectMainGun), {
     // Conditions: canInteract
@@ -194,7 +194,7 @@ if (!hasInterface) exitWith {};
 //     true
 // },
 // {false},
-// [0, [false, false, false]], false] call CBA_fnc_addKeybind; // 0
+// [10, [false, false, false]], false] call CBA_fnc_addKeybind; //9 Key
 
 ["ACE3 Vehicles", QGVAR(CollisionLights), localize LSTRING(CollisionLights), {
     // Conditions: canInteract
@@ -207,7 +207,7 @@ if (!hasInterface) exitWith {};
     true
 },
 {false},
-[0, [false, false, false]]] call CBA_fnc_addKeybind; // 0
+[0, [false, false, false]]] call CBA_fnc_addKeybind;
 
 // Register fire event handler
 ["ace_firedPlayer", LINKFUNC(throwGrenade)] call CBA_fnc_addEventHandler;

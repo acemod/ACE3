@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="HuntIR">
+        <Key ID="STR_ACE_HuntIR_CAM">
+            <English>Camera:</English>
+            <Czech>Kamera:</Czech>
+            <French>Caméra :</French>
+            <Spanish>Camara:</Spanish>
+            <Italian>Telecamera:</Italian>
+            <Polish>Kamera:</Polish>
+            <Portuguese>Câmera:</Portuguese>
+            <Russian>Камера:</Russian>
+            <German>Kamera:</German>
+            <Korean>카메라:</Korean>
+            <Japanese>カメラ:</Japanese>
+            <Chinese>攝影機:</Chinese>
+            <Chinesesimp>摄像头：</Chinesesimp>
+            <Turkish>Kamera:</Turkish>
+            <Hungarian>Kamera:</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_ESC">
+            <English>Press ESC to quit camera</English>
+            <Czech>Stiskni ESC pro opustění kamery</Czech>
+            <French>Appuyez sur ESC pour quitter la camera.</French>
+            <Spanish>Pulsar ESC para salir de la camara</Spanish>
+            <Italian>Premi ESC per uscire dalla telecamera</Italian>
+            <Polish>Wciśnij ESC by wyjść z widoku kamery</Polish>
+            <Portuguese>Pressione ESC para sair da câmera</Portuguese>
+            <Russian>Нажмите ESC чтобы выйти из режима камеры</Russian>
+            <German>Zum Verlassen ESC drücken</German>
+            <Korean>ESC를 눌러 카메라 나가기</Korean>
+            <Japanese>ESC を押しカメラを抜ける</Japanese>
+            <Chinese>按下ESC退出攝影機</Chinese>
+            <Chinesesimp>按下 ESC 退出摄像头</Chinesesimp>
+            <Turkish>ESC'ye basarak çıkış yap</Turkish>
+            <Hungarian>Nyomj ESC-ket a kamerából való kilépéshez</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_HELP">
+            <English>Help</English>
+            <Czech>Nápověda</Czech>
+            <French>Aide</French>
+            <Spanish>Ayuda</Spanish>
+            <Italian>Aiuto</Italian>
+            <Polish>Pomoc</Polish>
+            <Portuguese>Ajuda</Portuguese>
+            <Russian>Помощь</Russian>
+            <German>Hilfe</German>
+            <Korean>도움말</Korean>
+            <Japanese>ヘルプ</Japanese>
+            <Chinese>幫助</Chinese>
+            <Chinesesimp>帮助</Chinesesimp>
+            <Turkish>Yardım</Turkish>
+            <Hungarian>Súgó</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_HELP_CAM">
+            <English>W/S - Select camera</English>
+            <Czech>W/S - Výběr kamery</Czech>
+            <French>Z/S - Sélectionner la caméra</French>
+            <Spanish>W/S - Seleccionar camara</Spanish>
+            <Italian>W/S - Seleziona telecamera</Italian>
+            <Polish>W/S - wybór kamery</Polish>
+            <Portuguese>W/S - Seleciona câmera</Portuguese>
+            <Russian>W/S - Выбрать камеру</Russian>
+            <German>W/S - Wähle Kamera</German>
+            <Korean>W/S - 카메라 선택</Korean>
+            <Japanese>W/S - カメラを選択</Japanese>
+            <Chinese>W/S - 切換攝影機</Chinese>
+            <Chinesesimp>W/S—切换摄像头</Chinesesimp>
+            <Turkish>W/S- Kamerayı seç</Turkish>
+            <Hungarian>W/S - Kamera váltás</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_HELP_ELV">
+            <English>Up/Down - Elevate/lower camera</English>
+            <Czech>Nahoru/Dolu - Zvýšít/snížit úhel pohledu kamery</Czech>
+            <French>Haut/Bas - Monter/descendre la caméra</French>
+            <Spanish>Up/Down - Subir/bajar camara</Spanish>
+            <Italian>Su/Giù - Alza/abbassa telecamera</Italian>
+            <Polish>Góra/Dół - obrót kamery w pionie</Polish>
+            <Portuguese>Acima/Abaixo - Eleva/Abaixa a câmera</Portuguese>
+            <Russian>Вверх/Вниз - Поднять/опустить камеру</Russian>
+            <German>Hoch/Runter - Neige Kamera</German>
+            <Korean>상/하 카메라 올리기/내리기</Korean>
+            <Japanese>Up/Down - カメラの角度</Japanese>
+            <Chinese>上/下 - 上升/下降攝影機</Chinese>
+            <Chinesesimp>上/下—上升/下降摄像头</Chinesesimp>
+            <Turkish>Yukarı/Asağı- Kamerayı yukarı aşağı oynat</Turkish>
+            <Hungarian>Fel/Le - Kamera döntése/süllyesztése</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_HELP_EXIT">
+            <English>Esc - Exit help</English>
+            <Czech>Esc - Ukončit pomoc</Czech>
+            <French>Esc - Sortir de l'aide</French>
+            <Spanish>Esc - Salir del menú de ayuda</Spanish>
+            <Italian>Esc - Aiuto dal Menù</Italian>
+            <Polish>Esc - wyjście z ekranu Pomocy</Polish>
+            <Portuguese>Esc - Sai do Ajuda</Portuguese>
+            <Russian>Esc - Выйти из помощи</Russian>
+            <German>ESC - Hilfe verlassen</German>
+            <Korean>Esc - 도움말 나가기</Korean>
+            <Japanese>Esc - ヘルプを閉じる</Japanese>
+            <Chinese>Esc - 離開幫助</Chinese>
+            <Chinesesimp>Esc—离开帮助</Chinesesimp>
+            <Turkish>Esc- Çıkış Yardım</Turkish>
+            <Hungarian>Exit - Kilépés a súgóból</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_HELP_MOD">
+            <English>N - Cycle IT modes</English>
+            <Czech>N - Změna režimů kamery</Czech>
+            <French>N - Changement de modes IT</French>
+            <Spanish>N - Cambiar modos de IT</Spanish>
+            <Italian>N - Cambia modalità IT</Italian>
+            <Polish>N - wybór trybu IT</Polish>
+            <Portuguese>N - Troca modo IT</Portuguese>
+            <Russian>N - Режимы камеры</Russian>
+            <German>N - Sichtmodi</German>
+            <Korean>N - IT모드 순환</Korean>
+            <Japanese>N - IT モードを変更</Japanese>
+            <Chinese>N - 切換熱顯模式</Chinese>
+            <Chinesesimp>N—切换热显模式</Chinesesimp>
+            <Turkish>N- IT modülünü değiştir</Turkish>
+            <Hungarian>N - Hőkép módok</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_HELP_RES">
+            <English>R - Reset camera</English>
+            <Czech>R - Reset kamery</Czech>
+            <French>R - Reset de la caméra</French>
+            <Spanish>R - Reiniciar camara</Spanish>
+            <Italian>R - Azzera telecamera</Italian>
+            <Polish>R - resetuj kamerę</Polish>
+            <Portuguese>R - Redefine a câmera</Portuguese>
+            <Russian>R - Сбросить настройки камеры</Russian>
+            <German>R - Kamera zurücksetzen</German>
+            <Korean>R - 카메라 초기화</Korean>
+            <Japanese>R - カメラを初期化</Japanese>
+            <Chinese>R - 重置攝影機</Chinese>
+            <Chinesesimp>R—重置摄像头</Chinesesimp>
+            <Turkish>R- Kamerayı sıfırla</Turkish>
+            <Hungarian>R - Kamera visszaállítása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_HELP_ROT">
+            <English>Left/Right - Rotate camera</English>
+            <Czech>Levá/Pravá - Rotace kamery</Czech>
+            <French>Gauche/Droite - Rotation de la caméra</French>
+            <Spanish>Left/Right - Rotar camara</Spanish>
+            <Italian>Sinistra/Destra - Ruota telecamera</Italian>
+            <Polish>Lewo/Prawo - obrót kamery w poziomie</Polish>
+            <Portuguese>Esquerda/Direita - Rotaciona câmera</Portuguese>
+            <Russian>Влево/Вправо - Вращать камеру</Russian>
+            <German>Links/Rechts - Rotiere Kamera</German>
+            <Korean>좌/우 - 카메라 돌리기</Korean>
+            <Japanese>Left/Right - カメラの回転</Japanese>
+            <Chinese>左/右 - 旋轉攝影機</Chinese>
+            <Chinesesimp>左/右—旋转摄像头</Chinesesimp>
+            <Turkish>Sol/Sağ Kamerayı döndür</Turkish>
+            <Hungarian>Jobb/Bal - Kamera forgatás</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_HELP_ZOOM">
+            <English>A/D - Cycle zoom</English>
+            <Czech>A/D - Změna přiblížení</Czech>
+            <French>Q/D - Changement de zoom</French>
+            <Spanish>A/D - Cambiar zoom</Spanish>
+            <Italian>A/D - Cambia zoom</Italian>
+            <Polish>A/D - powiększenie</Polish>
+            <Portuguese>A/D - Troca zoom</Portuguese>
+            <Russian>A/D - Приближение</Russian>
+            <German>A/D - Zoom</German>
+            <Korean>A/D - 줌 전환</Korean>
+            <Japanese>A/D - 倍率の変更</Japanese>
+            <Chinese>A/D - 切換放大倍率</Chinese>
+            <Chinesesimp>A/D—切换放大倍率</Chinesesimp>
+            <Turkish>A/D Uzaklığı değiştir</Turkish>
+            <Hungarian>A/D - Nagyítás</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_TIME">
+            <English>Recording Time:</English>
+            <Czech>Čas nahrávání:</Czech>
+            <French>Temps d'enregistrement :</French>
+            <Spanish>Tiempo de grabación:</Spanish>
+            <Italian>Tempo di Registrazione:</Italian>
+            <Polish>Czas nagrywania:</Polish>
+            <Portuguese>Tempo de gravação:</Portuguese>
+            <Russian>Время записи:</Russian>
+            <German>Aufnahmezeit:</German>
+            <Korean>녹화시간:</Korean>
+            <Japanese>記録時間:</Japanese>
+            <Chinese>記錄時間:</Chinese>
+            <Chinesesimp>记录时间：</Chinesesimp>
+            <Turkish>Kayıt süresi:</Turkish>
+            <Hungarian>Felvételi idő:</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_TransportBox_DisplayName">
+            <English>HuntIR Transport Box</English>
+            <Czech>Transportní bedna HuntIR</Czech>
+            <French>Boite de transport HuntIR</French>
+            <Spanish>Caja de transporte de HuntIR</Spanish>
+            <Italian>Cassa di Trasporto HuntIR</Italian>
+            <Polish>Skrzynia HuntIR</Polish>
+            <Portuguese>Caixa de transporte do HuntIR</Portuguese>
+            <Russian>Ящик с HuntIR</Russian>
+            <German>HuntIR Transportkiste</German>
+            <Korean>헌트IR 운반함</Korean>
+            <Japanese>HuntIR 輸送箱</Japanese>
+            <Chinese>高空戰術成像器運輸箱</Chinese>
+            <Chinesesimp>高空战术摄像头运输箱</Chinesesimp>
+            <Turkish>HuntIR Taşıma Kutusu</Turkish>
+            <Hungarian>HuntIR Transport Box</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_activateMonitor">
+            <English>Activate HuntIR monitor</English>
+            <Czech>Zapnout HuntIR monitor</Czech>
+            <French>Allumer l'écran du HuntIR</French>
+            <Spanish>Activar monitor HuntIR</Spanish>
+            <Italian>Attiva il monitor HuntIR</Italian>
+            <Polish>Włącz odbiornik HuntIR</Polish>
+            <Portuguese>Ativar monitor do HuntIR</Portuguese>
+            <Russian>Включить HuntIR монитор</Russian>
+            <German>HuntIR Monitor aktivieren</German>
+            <Korean>헌트IR 모니터 켜기</Korean>
+            <Japanese>HuntIR を起動する</Japanese>
+            <Chinese>開啟高空戰術成像器顯示面板</Chinese>
+            <Chinesesimp>开启高空战术摄像头显示面板</Chinesesimp>
+            <Turkish>HuntIR Ekranı Aktif</Turkish>
+            <Hungarian>HuntIR monitor aktiválása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_magazine_displayName">
+            <English>HuntIR Round</English>
+            <Czech>HuntIR náboj</Czech>
+            <French>Projectile HuntIR</French>
+            <Spanish>Proyectil HuntIR</Spanish>
+            <Italian>Colpo HuntIR</Italian>
+            <Polish>Nabój HuntIR</Polish>
+            <Portuguese>Cartucho HuntIR</Portuguese>
+            <Russian>HuntIR снаряд</Russian>
+            <German>HuntIR Granate</German>
+            <Korean>헌트IR 유탄</Korean>
+            <Japanese>HuntIR弾</Japanese>
+            <Chinese>高空戰術成像器彈藥</Chinese>
+            <Chinesesimp>高空战术摄像头弹药</Chinesesimp>
+            <Turkish>HuntIR Mermisi</Turkish>
+            <Hungarian>HuntIR lövedék</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_monitor_displayName">
+            <English>HuntIR Monitor</English>
+            <Czech>HuntIR Monitor</Czech>
+            <French>Ecran HuntIR</French>
+            <Spanish>Monitor HuntIR</Spanish>
+            <Italian>Monitor HuntIR</Italian>
+            <Polish>Odbiornik HuntIR</Polish>
+            <Portuguese>Monitor HuntIR</Portuguese>
+            <Russian>HuntIR монитор</Russian>
+            <German>HuntIR Monitor</German>
+            <Korean>헌트IR 모니터</Korean>
+            <Japanese>HuntIR モニター</Japanese>
+            <Chinese>高空戰術成像器顯示面板</Chinese>
+            <Chinesesimp>高空战术摄像头显示面板</Chinesesimp>
+            <Turkish>HuntIR Ekranı</Turkish>
+            <Hungarian>HuntIR Monitor</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_HuntIR_ALT">
+            <English>Altitude:</English>
+            <Chinese>高度:</Chinese>
+            <Chinesesimp>高度：</Chinesesimp>
+            <Czech>Výška:</Czech>
+            <French>Altitude :</French>
+            <German>Höhe:</German>
+            <Hungarian>Magasság:</Hungarian>
+            <Italian>Altitudine:</Italian>
+            <Japanese>高度:</Japanese>
+            <Korean>고도:</Korean>
+            <Polish>Wysokość:</Polish>
+            <Portuguese>Altitude:</Portuguese>
+            <Russian>Высота:</Russian>
+            <Spanish>Altitud:</Spanish>
+            <Turkish>Yükseklik:</Turkish>
+        </Key>
+    </Package>
+</Project>

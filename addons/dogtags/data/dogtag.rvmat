@@ -1,0 +1,82 @@
+class StageTI {
+    texture = "a3\data_f\default_glass_ti_ca.paa";
+};
+ambient[] = {1,1,1,1};
+diffuse[] = {1,1,1,1};
+forcedDiffuse[] = {0,0,0,0};
+emmisive[] = {0,0,0,1};
+specular[] = {0.3,0.3,0.3,1};
+specularPower = 50;
+PixelShaderID = "Super";
+VertexShaderID = "Super";
+class Stage1 {
+    texture = "z\ace\addons\dogtags\data\dogtag_nohq.paa";
+    uvSource = "tex";
+    class uvTransform {
+        aside[] = {1,0,0};
+        up[] = {0,1,0};
+        dir[] = {0,0,1};
+        pos[] = {0,0,0};
+    };
+};
+class Stage2 {
+    texture = "#(argb,8,8,3)color(0.5,0.5,0.5,1,DT)";
+    uvSource = "tex";
+    class uvTransform {
+        aside[] = {1,0,0};
+        up[] = {0,1,0};
+        dir[] = {0,0,1};
+        pos[] = {0,0,0};
+    };
+};
+class Stage3 {
+    texture = "#(argb,8,8,3)color(0,0,0,0,MC)";
+    uvSource = "tex";
+    class uvTransform {
+        aside[] = {1,0,0};
+        up[] = {0,1,0};
+        dir[] = {0,0,1};
+        pos[] = {0,0,0};
+    };
+};
+class Stage4 {
+    texture = "#(argb,8,8,3)color(1,1,1,1,AS)";
+    uvSource = "tex";
+    class uvTransform {
+        aside[] = {1,0,0};
+        up[] = {0,1,0};
+        dir[] = {0,0,1};
+        pos[] = {0,0,0};
+    };
+};
+class Stage5 {
+    texture = "#(argb,8,8,3)color(0,0.6,1,1,SMDI)";
+    uvSource = "tex";
+    class uvTransform {
+        aside[] = {1,0,0};
+        up[] = {0,1,0};
+        dir[] = {0,0,1};
+        pos[] = {0,0,0};
+    };
+};
+class Stage6 {
+    texture = "#(ai,32,128,1)fresnel(0.85,0.36)";
+    uvSource = "tex";
+    class uvTransform {
+        aside[] = {1,0,0};
+        up[] = {0,1,0};
+        dir[] = {0,0,1};
+        pos[] = {0,0,0};
+    };
+};
+class Stage7 {
+    useWorldEnvMap = "true";
+    texture = "a3\data_f\env_interier_car_ca.paa";
+    uvSource = "tex";
+    class uvTransform {
+        aside[] = {1,0,0};
+        up[] = {0,1,0};
+        dir[] = {0,0,1};
+        pos[] = {0,0,0};
+    };
+};
