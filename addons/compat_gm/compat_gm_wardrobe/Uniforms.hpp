@@ -1,6 +1,6 @@
 // CfgWeapons
 
-// Sleves
+// Sleeves
 
 class gm_ge_bgs_uniform_special_80_base;
 class gm_ge_bgs_uniform_special_rolled_80_base;

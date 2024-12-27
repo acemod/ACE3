@@ -8,7 +8,7 @@
 
 #define HELMET_VARIANT(side,var1,var2)\
 class CN01(side,var1,var2) : base_class_up { class PVAR(wardrobe) : EGVAR(wardrobe,base_H_visor_up)   { modifiableTo[] = { Q(CN02(side,var1,var2)) }; }; };\
-class CN02(side,var1,var2) : base_class_dn { class PVAR(wardrobe) : EGVAR(wardrobe,base_H_visor_down) { modifiableTo[] = { Q(CN01(side,var1,var2)) }; }; };\
+class CN02(side,var1,var2) : base_class_dn { class PVAR(wardrobe) : EGVAR(wardrobe,base_H_visor_down) { modifiableTo[] = { Q(CN01(side,var1,var2)) }; }; };
 
 
 // Base classes in CfgWeapons.hpp

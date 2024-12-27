@@ -7,7 +7,7 @@ class vn_b_uniform_base;
 
 #define UNIFORM_BASE_B(class1,class2)\
 class class1: vn_b_uniform_base { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_down) { modifiableTo[] = { Q(class2) }; }; };\
-class class2: vn_b_uniform_base { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_up) { modifiableTo[] = { Q(class1) }; }; };\
+class class2: vn_b_uniform_base { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_up) { modifiableTo[] = { Q(class1) }; }; };
 
 #define B_U(div,var,camo) vn_b_uniform_##div##_##var##_##camo
 
@@ -49,7 +49,7 @@ UNIFORM_BASE_B(vn_b_uniform_seal_01_07,vn_b_uniform_seal_02_07)
 // macv 05 and 04 have inconsistency between them -> different uniform maxLoad. This likely will cause the player to loose items when the uniform is filled to the brim. Difference is 1lb which translates to 16~17x ace bandages or 1x 1l blood
 #define B_U_PAIR_SET(camo)\
 B_U_PAIR(macv,02,03,camo)\
-B_U_PAIR(macv,05,04,camo)\
+B_U_PAIR(macv,05,04,camo)
 
 B_U_PAIR_SET(TIGER)
 B_U_PAIR_SET(TIGER_GREEN)

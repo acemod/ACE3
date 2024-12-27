@@ -5,7 +5,7 @@ class Uniform_Base;
 // Macros
 #define UNIFORM_BASE(class1,class2)\
 class class1: Uniform_Base { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_down) { modifiableTo[] = { Q(class2) }; }; };\
-class class2: Uniform_Base { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_up) { modifiableTo[] = { Q(class1) }; }; };\
+class class2: Uniform_Base { class PVAR(wardrobe) : EGVAR(wardrobe,base_U_sleeves_up) { modifiableTo[] = { Q(class1) }; }; };
 
 // Simple Variants
 UNIFORM_BASE(U_C_FirefighterFatigues_RF,U_C_FirefighterFatigues_RolledUp_RF)

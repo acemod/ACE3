@@ -13,7 +13,7 @@ class GVAR(base)
     // Gesture
     gesture = "Gear";
 
-    // These will be read from the Target Class, so for example, the uniformclass with the rolled up sleaves, it should say "Roll Up Sleves"
+    // These will be read from the Target Class, so for example, the uniformclass with the rolled up sleaves, it should say "Roll Up Sleeves"
     alternativePicture = "";
     alternativeDisplayName = "";
 
