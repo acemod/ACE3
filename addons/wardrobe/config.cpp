@@ -18,7 +18,7 @@ class CfgPatches {
 
         // Required addons, used for setting load order.
         // When any of the addons is missing, pop-up warning will appear when launching the game.
-        requiredAddons[] = {QPVAR(main),"cba_main", "ace_interact_menu"};
+        requiredAddons[] = {"cba_main", "ace_interact_menu"};
 
 		// Optional. If this is 1, if any of requiredAddons[] entry is missing in your game the entire config will be ignored and return no error (but in rpt) so useful to make a compat Mod (Since Arma 3 2.14)
 		skipWhenMissingDependencies = 1;
@@ -35,6 +35,11 @@ class CfgPatches {
 #include "CfgFunctions.hpp"
 #include "XEH\CfgXEH.hpp"
 
+#include "Baseclass.hpp"
+
 #include "CfgVehicles.hpp"
 
-#include "Baseclass.hpp"
+class CfgWeapons
+{
+    #include "compat_vanilla\Uniforms.hpp"
+};

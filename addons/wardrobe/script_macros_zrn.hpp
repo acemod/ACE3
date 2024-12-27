@@ -2,6 +2,7 @@
     #define _ZRN_DEBUG_
 #endif
 
+
 // CBA Settings
 #define SET(var1) TRIPLES(ADDON,set,var1)
 #define QSET(var1) Q(SET(var1))
@@ -10,14 +11,10 @@
 #define QESET(var1,var2) Q(ESET(var1,var2))
 #define QQESET(var1,var2) QQ(ESET(var1,var2))
 
+
 // Stringtable.xml - use LSTRING() instead
-// #define XML(var1) TRIPLES(STR,ADDON,var1)
-// #define QXML(var1) Q(XML(var1))
 #define SETLSTRING(key) [LSTRING(DOUBLES(set,key)),LSTRING(TRIPLES(set,key,desc))]
 
-// hashMapObjects
-#define OGET(var1) (_self get Q(var1))
-#define OSET(var1,var2) (_self set [Q(var1), var2])
 
 // Quotes
 #ifndef QUOTE
@@ -31,6 +28,7 @@
 #define QPREFIX Q(PREFIX)
 #define QCOMPONENT Q(COMPONENT)
 
+
 // Prefix Function
 #define PFUNC(var1) TRIPLES(PREFIX,fnc,var1)
 #define QPFUNC(var1) QUOTE(PFUNC(var1))
@@ -42,17 +40,12 @@
 #define QPVAR(var1) QUOTE(PVAR(var1))
 #define QQPVAR(var1) QUOTE(QPVAR(var1))
 
-// Component Variables
-#define CVAR(var1) DOUBLES(COMPONENT,var1)
-#define QCVAR(var1) QUOTE(CVAR(var1))
-#define QQCVAR(var1) QUOTE(QCVAR(var1))
 
 // missionNamespace set/get Variables
-
 #define SETMGVAR(name,value) (missionNamespace setVariable [QGVAR(name),value])
 #define SETMGVAR_PUBLIC(name,value,public) (missionNamespace setVariable [QGVAR(name),value,public])
-
 #define GETMGVAR(name,default) (missionNamespace getVariable [QGVAR(name),default])
+
 
 // CfgPatches Stuff
 #ifndef PREFIX_BEAUTIFIED
@@ -74,17 +67,8 @@
 #define QPATH_TO_ADDON(var1) QUOTE(\MAINPREFIX\PREFIX\addons\COMPONENT\var1)
 #define QQPATH_TO_ADDON(var1) Q(QUOTE(\MAINPREFIX\PREFIX\addons\COMPONENT\var1))
 
+
 // Debug
-// Doesnt seem to work currently 
-#ifdef _ZRN_DEBUG_
-    #define _DEBUG_POSTINIT_ postInit = 1;
-    #define _DEBUG_PREINIT_ preInit = 1;
-#else
-    #define _DEBUG_POSTINIT_ postInit = 0;
-    #define _DEBUG_PREINIT_ preInit = 0;
-#endif
-
-
 #define DEBUG_HEADER format [QUOTE([PREFIX][COMPONENT](%1)),_fnc_scriptName]
 
 #define ZRN_LOG_MSG(MSG) diag_log (DEBUG_HEADER + " " + QUOTE(MSG))
@@ -110,9 +94,6 @@
     #define ZRN_LOG_7(A,B,C,D,E,F,G) diag_log (DEBUG_HEADER + (format [' A: %1 - B: %2 - C: %3 - D: %4 - E: %5 - F: %6 - H: %7',RETNIL(A),RETNIL(B),RETNIL(C),RETNIL(D),RETNIL(E),RETNIL(F),RETNIL(G)]))
     #define ZRN_LOG_8(A,B,C,D,E,F,G,H) diag_log (DEBUG_HEADER + (format [' A: %1 - B: %2 - C: %3 - D: %4 - E: %5 - F: %6 - H: %7 - I: %8',RETNIL(A),RETNIL(B),RETNIL(C),RETNIL(D),RETNIL(E),RETNIL(F),RETNIL(G),RETNIL(H)]))
 
-    #define ZRN_LOG_HMO(var1) { if ('#' in _x || 'Meth' in _x) then {continue}; diag_log (DEBUG_HEADER + (format [' %3 - %1 - %2', _x, _y, Q(MSG)])) } forEach var1;
-    #define ZRN_LOG_MSG_HMO(MSG,var1) { if ('#' in _x || 'Meth' in _x) then {continue}; diag_log (DEBUG_HEADER + (format [' %3 - %1 - %2', _x, _y, Q(MSG)])) } forEach var1;
-
 #else
     #define ZRN_SCRIPTNAME(var1)
 
@@ -134,6 +115,4 @@
     #define ZRN_LOG_7(A,B,C,D,E,F,G)
     #define ZRN_LOG_8(A,B,C,D,E,F,G,H)
 
-    #define ZRN_LOG_HMO(var1)
-    #define ZRN_LOG_MSG_HMO(MSG,var1)
 #endif

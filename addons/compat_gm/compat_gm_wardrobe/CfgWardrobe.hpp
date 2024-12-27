@@ -1,3 +1,4 @@
+// Import Base Classes
 class EGVAR(wardrobe,base);
 
 class EGVAR(wardrobe,base_H_visor_up);

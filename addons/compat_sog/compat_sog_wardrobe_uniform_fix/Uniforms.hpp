@@ -6,7 +6,7 @@ class CfgWeapons
     class vn_b_uniform_base;
     // creating the macro
     #define S_70(className)\
-    class className : vn_b_uniform_base { class ItemInfo : ItemInfo { containerClass = "Supply70"; }; };\
+    class className : vn_b_uniform_base { class ItemInfo : ItemInfo { containerClass = "Supply70"; }; };
 
     S_70(vn_b_uniform_macv_04_01)
     S_70(vn_b_uniform_macv_04_02)

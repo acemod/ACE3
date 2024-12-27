@@ -1,10 +1,10 @@
 class GVAR(base) 
 {
     modifiableTo[] = {""};
-
-    // WIP
-    modifiableToWithDependency = "";
-    dependency = "";
+    // ## WIP ##
+    // describes the components of the current item.
+    // When the current wearable is being changed into something, that does not have these 
+    components[] = {};
 
     // Supports Multiple Sounds, will pick one by random.
     sound[] = {"click"}; // I need a better default Sound
