@@ -29,6 +29,7 @@
             <German>Gurt wurde angehängt</German>
             <Korean>탄띠가 연결되었습니다</Korean>
             <Japanese>ベルトがリンクされた</Japanese>
+            <Chinesesimp>弹链已连接</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Reload_BeltNotLinked">
             <English>Belt could not be linked</English>
@@ -41,6 +42,7 @@
             <German>Gurt konnte nicht angehängt werden</German>
             <Korean>탄띠를 연결할 수 없습니다</Korean>
             <Japanese>ベルトはリンクされなかった</Japanese>
+            <Chinesesimp>弹链无法连接</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Reload_LinkBelt">
             <English>Link belt</English>
