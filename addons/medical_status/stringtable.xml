@@ -46,6 +46,7 @@
             <German>Chance für einen Spieler, seine Waffe fallen zu lassen, wenn er bewusstlos wird.\nHat keine Auswirkung auf die KI.</German>
             <Korean>플레이어가 기절할 때 무기를 떨어뜨릴 확률입니다.\nAI는 영향을 받지 않습니다.</Korean>
             <Japanese>プレーヤーが意識を失ったときに武器を落とす可能性。\nAI には影響しません。</Japanese>
+            <Chinesesimp>玩家在进入昏迷时把武器扔地上的概率\n对AI无效</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_DisplayName">
             <English>Weapon Drop Chance</English>
@@ -58,6 +59,7 @@
             <German>Wahrscheinlichkeit, die Waffe fallen zu lassen</German>
             <Korean>무기 떨어뜨릴 확률</Korean>
             <Japanese>武器を落とす確率</Japanese>
+            <Chinesesimp>丢失武器概率</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_Description">
             <English>Controls how quickly fluid flows out of IV Bags. The IV Bag volume change is calculated as:\ntime interval (s) * iv change per second (4.1667 mL/s) * flow rate (this coefficient).</English>

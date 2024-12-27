@@ -3453,6 +3453,7 @@
             <German>Luft</German>
             <Korean>항공</Korean>
             <Japanese>航空</Japanese>
+            <Chinesesimp>对空</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_armor">
             <English>Armor</English>
@@ -3465,6 +3466,7 @@
             <German>Panzerung</German>
             <Korean>기갑</Korean>
             <Japanese>機甲</Japanese>
+            <Chinesesimp>对装甲</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_concealment">
             <English>Smoke</English>
@@ -3477,6 +3479,7 @@
             <German>Rauch</German>
             <Korean>연막탄</Korean>
             <Japanese>発煙弾</Japanese>
+            <Chinesesimp>烟雾</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_illumination">
             <English>Illum</English>
@@ -3489,6 +3492,7 @@
             <German>Leuchtmittel</German>
             <Korean>조명탄</Korean>
             <Japanese>照明弾</Japanese>
+            <Chinesesimp>照明弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_infantry">
             <English>Inf</English>
@@ -3501,6 +3505,7 @@
             <German>Infanterie</German>
             <Korean>보병</Korean>
             <Japanese>歩兵</Japanese>
+            <Chinesesimp>步兵</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsageShort_lightVehicle">
             <English>Veh</English>
@@ -3513,6 +3518,7 @@
             <German>Fahrzeug</German>
             <Korean>차량</Korean>
             <Japanese>車両</Japanese>
+            <Chinesesimp>载具</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_ammoUsage_ai">
             <English>AI Usage</English>
@@ -3525,6 +3531,7 @@
             <German>KI Verwendet</German>
             <Korean>인공지능 사용</Korean>
             <Japanese>AIの使用</Japanese>
+            <Chinesesimp>AI使用场景</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Ballistics_statBallisticCoef">
             <English>Ballistic coefficient</English>

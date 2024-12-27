@@ -525,6 +525,7 @@
             <German>Verabreiche Schmerztabletten</German>
             <Korean>진통제 투여</Korean>
             <Japanese>鎮痛剤を投与</Japanese>
+            <Chinesesimp>嗑片止疼药</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administering_Painkillers">
             <English>Administering Painkillers...</English>
@@ -535,6 +536,7 @@
             <German>Verabreiche Schmerztablette...</German>
             <Korean>진통제 투여 중...</Korean>
             <Japanese>鎮痛剤を投与しています・・・</Japanese>
+            <Chinesesimp>正在服用止痛药</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.\nAdditionally, the reopening of bandaged wounds can also be enabled.</English>
@@ -621,6 +623,7 @@
             <German>Aktiviert &amp; kann Tod/Herzstillstand diagnostizieren [Direkt]</German>
             <Korean>활성화 및 사망/심정지 진찰 가능 [직접]</Korean>
             <Japanese>有効 &amp; 死亡/心停止状態を診断可能 [直接的に]</Japanese>
+            <Chinesesimp>已启用 &amp; 可以诊断死亡/心搏骤停(直接显示结果)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
             <English>Advanced Diagnose</English>
@@ -774,6 +777,7 @@
             <German>Erlaubt das Graben von Gräbern um Leichen zu entsorgen.</German>
             <Korean>시체를 처리하기 위해 무덤을 파는 것을 허용합니다.</Korean>
             <Japanese>墓を掘って死体を処理できるようになります。</Japanese>
+            <Chinesesimp>允许挖掘一个坟墓来处理尸体</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_DisplayName">
             <English>Allow Grave Digging</English>
@@ -786,6 +790,7 @@
             <German>Erlaube Graben von Gräbern</German>
             <Korean>무덤 파기 허용</Korean>
             <Japanese>墓掘りを許可</Japanese>
+            <Chinesesimp>允许挖坟</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_graveOnlyDead">
             <English>Only if dead</English>
@@ -798,6 +803,7 @@
             <German>Nur wenn tot</German>
             <Korean>죽었을 때에만</Korean>
             <Japanese>死体のみ</Japanese>
+            <Chinesesimp>仅允许对尸体使用</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_Description">
             <English>Enables the creation of litter upon treatment.</English>
@@ -978,6 +984,7 @@
             <German>Ausrüstung des Sanitäters zuerst [Wenn Sanitäter]</German>
             <Japanese>救護者装備を優先 [衛生兵の場合]</Japanese>
             <Korean>치료자의 의료물자 먼저 사용 [의무병일 경우]</Korean>
+            <Chinesesimp>提供医疗者的装备优先(如果是医疗兵)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
@@ -2327,6 +2334,7 @@
             <German>%1 ist im Herzstillstand</German>
             <Korean>%1은(는) 심정지 상태입니다</Korean>
             <Japanese>%1 は心停止している</Japanese>
+            <Chinesesimp>%1的心脏没在跳动</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Content">
             <English>You check response of patient</English>
@@ -2366,6 +2374,7 @@
             <German>%1 ist tod</German>
             <Korean>%1은(는) 사망했습니다</Korean>
             <Japanese>%1 は死亡している</Japanese>
+            <Chinesesimp>%1已经似了</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Responsive">
             <English>%1 is responsive</English>
@@ -2410,6 +2419,7 @@
             <German>%1 ist bewusstlos</German>
             <Korean>%1은(는) 의식불명입니다</Korean>
             <Japanese>%1 は意識がない</Japanese>
+            <Chinesesimp>%1没有意识</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
@@ -2522,6 +2532,7 @@
             <German>Legt fest, ob etwas nach der Anwendung verwendet werden soll.</German>
             <Korean>봉합 키트를 1회성 소모품으로 설정할 지 여부를 결정합니다.</Korean>
             <Japanese>使用後に何を消費するか設定します。</Japanese>
+            <Chinesesimp>在使用后什么会被消耗</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_DisplayName">
             <English>Consume Surgical Kit</English>
@@ -2611,6 +2622,7 @@
             <German>Grabe ein Grab für den Leichnam</German>
             <Korean>시체를 위해 무덤 파기</Korean>
             <Japanese>墓を掘る</Japanese>
+            <Chinesesimp>将此单位埋入土中</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_DiggingGrave">
             <English>Digging grave for body...</English>
@@ -2623,6 +2635,7 @@
             <German>Grab für Leichnam ausheben ...</German>
             <Korean>시체를 위한 무덤 파는 중...</Korean>
             <Japanese>墓を掘っています</Japanese>
+            <Chinesesimp>正在挖坟</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Doctors">
             <English>Doctors</English>
@@ -2717,6 +2730,7 @@
             <German>Erstellt Grabmale beim Graben von Gräbern.</German>
             <Korean>무덤을 파낼 때 무덤 마커를 표시할 수 있습니다.</Korean>
             <Japanese>墓を掘った際、墓標を作成できるようにします。</Japanese>
+            <Chinesesimp>挖坟时创建坟墓位置的地图标记</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_GraveDiggingMarker_DisplayName">
             <English>Create Grave Markers</English>
@@ -2729,6 +2743,7 @@
             <German>Erstelle Grabmal</German>
             <Korean>무덤 마커 생성</Korean>
             <Japanese>墓標を作成</Japanese>
+            <Chinesesimp>创建坟墓地图标记</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -3093,6 +3108,7 @@
             <Japanese>アデノシンが使える場所を制御します。</Japanese>
             <Korean>아데노신을 사용할 수 있는 장소를 정합니다.</Korean>
             <French>Contrôle où l'Adénosine peut être utilisée.</French>
+            <Chinesesimp>控制何地能使用腺苷</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_DisplayName">
             <English>Locations Adenosine</English>
@@ -3101,6 +3117,7 @@
             <Japanese>アデノシンの使用可能な場所</Japanese>
             <Korean>아데노신 사용 장소</Korean>
             <French>Lieux d'utilisation de l'adénosine</French>
+            <Chinesesimp>腺苷使用地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
             <English>Controls where epinephrine can be used.</English>
@@ -3167,6 +3184,7 @@
             <Japanese>モルヒネが使える場所を制御します。</Japanese>
             <Korean>모르핀을 사용할 수 있는 장소를 정합니다.</Korean>
             <French>Contrôle où la morphine peut être utilisée.</French>
+            <Chinesesimp>控制何地能使用吗啡</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_DisplayName">
             <English>Locations Morphine</English>
@@ -3175,6 +3193,7 @@
             <Japanese>モルヒネの使用可能な場所</Japanese>
             <Korean>모르핀 사용 장소</Korean>
             <French>Lieux d'utilisation de la morphine</French>
+            <Chinesesimp>吗啡使用地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
@@ -3216,6 +3235,7 @@
             <Japanese>添え木が使える場所を制御します。</Japanese>
             <Korean>부목을 사용할 수 있는 장소를 정합니다.</Korean>
             <French>Contrôle l'endroit où les attelles peuvent être utilisées.</French>
+            <Chinesesimp>控制何地能使用骨折夹板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_DisplayName">
             <English>Locations Splint</English>
@@ -3224,6 +3244,7 @@
             <Japanese>添え木の使用可能な場所</Japanese>
             <Korean>부목 사용 장소</Korean>
             <French>Emplacement des attelles</French>
+            <Chinesesimp>骨折夹板使用地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a surgical kit can be used.</English>
@@ -3311,6 +3332,7 @@
             <Japanese>アデノシンの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Korean>아데노신을 사용하는데 필요한 등급을 정합니다.</Korean>
             <French>Niveau de formation requis pour utiliser l'Adénosine.</French>
+            <Chinesesimp>使用腺苷所需的医疗水平。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_DisplayName">
             <English>Allow Adenosine</English>
@@ -3319,6 +3341,7 @@
             <Japanese>アデノシンの許可</Japanese>
             <Korean>아데노신 사용 허가</Korean>
             <French>Autoriser l'adénosine</French>
+            <Chinesesimp>允许使用腺苷</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use epinephrine.</English>
@@ -3389,6 +3412,7 @@
             <Japanese>モルヒネの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Korean>모르핀을 사용하는데 필요한 등급을 정합니다.</Korean>
             <French>Niveau de formation requis pour l'utilisation de la morphine.</French>
+            <Chinesesimp>使用吗啡所需的医疗水平。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
             <English>Allow Morphine</English>
@@ -3397,6 +3421,7 @@
             <Japanese>モルヒネの許可</Japanese>
             <Korean>모르핀 사용 허가</Korean>
             <French>Autoriser la morphine</French>
+            <Chinesesimp>允许使用吗啡</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
@@ -3438,6 +3463,7 @@
             <Japanese>添え木の使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Korean>부목을 사용하는데 필요한 등급을 정합니다.</Korean>
             <French>Niveau de formation requis pour l'utilisation de l'attelle.</French>
+            <Chinesesimp>使用骨折夹板所需的医疗水平。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_DisplayName">
             <English>Allow Splint</English>
@@ -3446,6 +3472,7 @@
             <Japanese>添え木の許可</Japanese>
             <Korean>부목 사용 허가</Korean>
             <French>Accès aux attelles</French>
+            <Chinesesimp>允许使用骨折夹板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
@@ -3618,6 +3645,7 @@
             <Japanese>脈拍の確認アクションから得られる情報が数値化されるようになる医療レベルを設定します</Japanese>
             <Korean>설정에 따라 맥박 확인 행동을 통해 숫자로 표시된 값을 제공합니다.</Korean>
             <French>L'action de vérification du pouls fournit une valeur numérique, en fonction de vos paramètres.</French>
+            <Chinesesimp>检查心率后会显示心率数值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
             <English>Numerical Pulse</English>
@@ -3626,6 +3654,7 @@
             <Japanese>脈拍の数値化</Japanese>
             <Korean>맥박 수치</Korean>
             <French>Pouls numérique</French>
+            <Chinesesimp>显示心率数值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
             <English>Used to pack medium to large wounds and stem the bleeding</English>
@@ -3690,6 +3719,7 @@
             <Korean>시체를 검은 시체가방에 놓기</Korean>
             <Japanese>遺体袋 (黒) に入れる</Japanese>
             <Turkish>Vücudu siyah ceset torbasına yerleştir</Turkish>
+            <Chinesesimp>将单位装入黑色尸袋</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagBlue">
             <English>Place body in blue bodybag</English>
@@ -3703,6 +3733,7 @@
             <Korean>시체를 파란 시체가방에 놓기</Korean>
             <Japanese>遺体袋 (青) に入れる</Japanese>
             <Turkish>Vücudu mavi ceset torbasına yerleştir</Turkish>
+            <Chinesesimp>将单位装入蓝色尸袋</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagWhite">
             <English>Place body in white bodybag</English>
@@ -3716,6 +3747,7 @@
             <Korean>시체를 흰 시체가방에 놓기</Korean>
             <Japanese>遺体袋 (白) に入れる</Japanese>
             <Turkish>Vücudu beyaz ceset torbasına yerleştir</Turkish>
+            <Chinesesimp>将单位装入白色尸袋</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlacingInBodyBag">
             <English>Placing body in bodybag...</English>
@@ -4023,6 +4055,7 @@
             <German>Kein IV</German>
             <Korean>수혈 없음</Korean>
             <Japanese>IV(静脈注射) なし</Japanese>
+            <Chinesesimp>没有静脉注射</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_NoPain">
             <English>No pain</English>
@@ -4034,6 +4067,7 @@
             <German>Kein Schmerz</German>
             <Korean>고통 없음</Korean>
             <Japanese>痛みはない</Japanese>
+            <Chinesesimp>没有疼痛</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Pain">
             <English>In pain</English>
@@ -4194,6 +4228,7 @@
             <German>Chirurgisches Nahtmaterial zum Nähen von Wunden.</German>
             <Korean>상처를 꿰메는 수술용 봉합술.</Korean>
             <Japanese>傷害縫合用の外科糸付縫合針。</Japanese>
+            <Chinesesimp>用于缝合伤口的手术缝合线</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Use">
             <English>Surgical Suture for stitching injuries.</English>
@@ -4206,6 +4241,7 @@
             <German>Chirurgisches Nahtmaterial zum Nähen von Wunden.</German>
             <Korean>상처를 꿰메는 수술용 봉합술.</Korean>
             <Japanese>傷害縫合用の外科糸付縫合針。</Japanese>
+            <Chinesesimp>用于缝合伤口的手术缝合线</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Display">
             <English>Suture</English>
@@ -4218,6 +4254,7 @@
             <German>Naht</German>
             <Korean>봉합술</Korean>
             <Japanese>糸付縫合針</Japanese>
+            <Chinesesimp>缝合线</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_Description">
             <English>Modifies how long a PAK takes to apply.\nThe treatment time is based on the total body part damage multiplied by this coefficient, with a minimum of 10 seconds.</English>
@@ -4508,6 +4545,7 @@
             <German>Dauer von Behandlungen als Zeus wird mit diesem Koeffizienten multipliziert.</German>
             <Korean>제우스일 때 모든 치료 시간에 이 계수를 곱합니다.</Korean>
             <Japanese>Zeus操作中は、すべての治療時間にこの係数を掛けます。</Japanese>
+            <Chinesesimp>宙斯的医疗时间乘数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_DisplayName">
             <English>Zeus Treatment Time Coefficient</English>
@@ -4518,6 +4556,7 @@
             <German>Zeit-Koeffizient für Zeus Behandlungen</German>
             <Korean>제우스 치료 시간 계수</Korean>
             <Japanese>Zeus治療時間係数</Japanese>
+            <Chinesesimp>宙斯医疗时间系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_Description">
             <English>Time, in seconds, required to dig a grave for a body.</English>
@@ -4530,6 +4569,7 @@
             <German>Zeit (in Sekunden), die benötigt wird, um ein Grab für einen Leichnam auszuheben.</German>
             <Korean>시신의 무덤을 파는 데 필요한 시간(초 단위).</Korean>
             <Japanese>遺体の墓を掘るのに掛かる時間。 (秒単位)</Japanese>
+            <Chinesesimp>挖掘坟墓所需时间(秒)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_DisplayName">
             <English>Grave Digging Time</English>
@@ -4542,6 +4582,7 @@
             <German>Zeit zum Graben von Gräbern</German>
             <Korean>무덤 파는 시간</Korean>
             <Japanese>墓掘りの所要時間</Japanese>
+            <Chinesesimp>挖坟时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_Description">
             <English>Time, in seconds, required to administer an IV bag.</English>
@@ -4906,6 +4947,7 @@
             <German>Bestimmt, wie wirksam Bandagen beim Verschließen von Wunden sind.</German>
             <Korean>붕대가 상처를 치료하는 데 얼마나 효과적으로 지속되는지 결정합니다.</Korean>
             <Japanese>包帯が傷をふさぐのにどれだけ効果的かを定義します。</Japanese>
+            <Chinesesimp>绷带在包扎伤口时会多有效</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_DisplayName">
             <English>Bandage Effectiveness Coefficient</English>
@@ -4918,6 +4960,7 @@
             <German>Verbandswirksamkeitskoeffizient</German>
             <Korean>붕대 효과 계수</Korean>
             <Japanese>包帯有効性係数</Japanese>
+            <Chinesesimp>绷带有效值系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_Description">
             <English>If enabled, bandages can close different types of wounds on the same body part.\nBandaging multiple injuries will scale bandaging time accordingly.</English>
@@ -4930,6 +4973,7 @@
             <German>Wenn diese Option aktiviert ist, können Verbände verschiedene Arten von Wunden am selben Körperteil schließen.\nBeim Verbinden mehrerer Verletzungen wird die Verbandszeit entsprechend skaliert.</German>
             <Korean>활성화된 경우 붕대로 동일한 신체 부위에 있는 다른 유형의 상처를 막을 수 있습니다.\n여러 부상을 붕대로 감으면 붕대 감는 시간이 그만큼 늘어납니다.</Korean>
             <Japanese>有効にすると、体の同じ部分にある別の種類の傷を一つの包帯で閉じることができます。\n複数の傷に包帯を巻くと、それに応じて包帯時間が変動します。</Japanese>
+            <Chinesesimp>如果启用, 一次包扎动作可以包扎同一身体部位的多个不同类型的伤口\n包扎时间也会相应改变</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_DisplayName">
             <English>Bandage Rollover</English>
@@ -4942,6 +4986,7 @@
             <German>Verbandüberschlag</German>
             <Korean>붕대 모두 감기</Korean>
             <Japanese>包帯の繰り越し</Japanese>
+            <Chinesesimp>包扎多个伤口</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bodybagWhileStillAlive">
             <English>The body twitched and may not be dead!</English>
@@ -4967,6 +5012,7 @@
             <German>Überprüfe Name auf dem Grabstein</German>
             <Korean>묘비 이름 확인</Korean>
             <Japanese>墓石の名前を確認</Japanese>
+            <Chinesesimp>检查墓碑上的名字</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_diagnoseAlive">
             <English>alive</English>
@@ -5132,6 +5178,7 @@
             <Japanese>医療品</Japanese>
             <Turkish>Tıbbi Ürünler</Turkish>
             <Hungarian>Orvosi felszerelés</Hungarian>
+            <Chinesesimp>医疗物品</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_noBloodloss">
             <English>He hasn't lost blood</English>
@@ -5192,6 +5239,7 @@
             <German>Rezeptfreies Analgetikum zur Bekämpfung leichter bis mittelschwerer Schmerzen.</German>
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
+            <Chinesesimp>非处方止疼药, 用于缓解轻至中度疼痛</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Use">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
@@ -5202,6 +5250,7 @@
             <German>Rezeptfreies Analgetikum zur Bekämpfung leichter bis mittelschwerer Schmerzen.</German>
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
+            <Chinesesimp>非处方止疼药, 用于缓解轻至中度疼痛</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Display">
             <English>Painkillers</English>

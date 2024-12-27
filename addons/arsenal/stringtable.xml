@@ -463,6 +463,7 @@
             <German>Wechseln Sie zwischen der Anzeige aller Elemente oder Ihrer Favoriten.\nDoppelklicken Sie bei gedrückter Umschalttaste, um ein Element hinzuzufügen oder zu entfernen.</German>
             <Korean>모든 아이템을 표시하거나 즐겨찾기를 표시할 때 전환합니다\nShift 키를 누른 상태에서 두 번 클릭하여 아이템을 추가하거나 제거합니다.</Korean>
             <Japanese>アイテムをすべて表示するかお気に入りのみを表示するかを切り替えます。\nアイテムをお気に入りに追加または削除するには、Shiftキーを押しながらダブルクリックします。</Japanese>
+            <Chinesesimp>切换显示所有物品或收藏物品\n按住shift双击左键可将某物品加入或移出收藏</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonHideText">
             <English>Hide</English>
@@ -664,6 +665,7 @@
             <German>Suche\nSTRG + Click für Live-Aktualisierung während des Schreibens</German>
             <Korean>검색\nCtrl + 클릭으로 실시간 검색 결과를 활성화</Korean>
             <Japanese>検索\nCTRL + クリックで検索結果の即時表示を有効化</Japanese>
+            <Chinesesimp>CTRL+左键启用即时显示搜索结果</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_buttonSharePrivateText">
             <English>Private</English>
@@ -740,6 +742,7 @@
             <German>Standardmäßig auf Favoriten eingestellt</German>
             <Korean>즐겨찾기 기본값</Korean>
             <Japanese>お気に入りを標準に</Japanese>
+            <Chinesesimp>默认仅显示收藏物品</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_defaultToFavoritesTooltip">
             <English>Controls whether the ACE Arsenal defaults to showing all items or favorites.</English>
@@ -752,6 +755,7 @@
             <German>Steuert, ob das ACE Arsenal standardmäßig alle Gegenstände oder nur Favoriten anzeigt.</German>
             <Korean>ACE 아스널이 기본적으로 모든 아이템 또는 즐겨찾기를 표시할 지 여부를 조정합니다.</Korean>
             <Japanese>ACE 武器庫が標準ですべてのアイテムを表示するか、お気に入りを表示するかを制御します。</Japanese>
+            <Chinesesimp>切换显示所有物品或仅显示收藏物品</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_enableIdentityTabsSettings">
             <English>Enable the faces / voices / insignias tabs</English>
@@ -843,6 +847,7 @@
             <German>Favoritenfarbe</German>
             <Korean>즐겨찾기 색상</Korean>
             <Japanese>お気に入りの色</Japanese>
+            <Chinesesimp>收藏物品颜色</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_favoritesColorTooltip">
             <English>Highlight color for favorited items.</English>
@@ -855,6 +860,7 @@
             <German>Hervorhebungsfarbe für Lieblingsgegenstände.</German>
             <Korean>즐겨찾기한 아이템을 색상으로 강조합니다.</Korean>
             <Japanese>お気に入りアイテムのハイライト色。</Japanese>
+            <Chinesesimp>高亮收藏物品的颜色</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_fontHeightSetting">
             <English>Panel font height</English>
@@ -1059,6 +1065,7 @@
             <German>Gesicht Speichern</German>
             <Korean>얼굴 저장</Korean>
             <Japanese>顔の保存</Japanese>
+            <Chinesesimp>保存脸模</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveInsigniaSetting">
             <English>Save Insignia</English>
@@ -1071,6 +1078,7 @@
             <German>Insignia Speichern</German>
             <Korean>계급장 저장</Korean>
             <Japanese>バッジ(記章)の保存</Japanese>
+            <Chinesesimp>保存徽章</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutsSaveVoiceSetting">
             <English>Save Voice</English>
@@ -1083,6 +1091,7 @@
             <German>Stimme Speichern</German>
             <Korean>목소리 저장</Korean>
             <Japanese>声の保存</Japanese>
+            <Chinesesimp>保存声音</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_modIconsSetting">
             <English>Enable mod icons</English>
@@ -1317,6 +1326,7 @@
             <German>Aufsteigend</German>
             <Korean>오름차순</Korean>
             <Japanese>昇順</Japanese>
+            <Chinesesimp>升序</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_sortByAccuracyText">
             <English>Sort by accuracy</English>
@@ -1455,6 +1465,7 @@
             <German>Absteigend</German>
             <Korean>내림차순</Korean>
             <Japanese>降順</Japanese>
+            <Chinesesimp>降序</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_statIlluminators">
             <English>Illuminators</English>
@@ -1466,6 +1477,7 @@
             <German>Leuchtmittel</German>
             <Korean>조명</Korean>
             <Japanese>イルミネーター</Japanese>
+            <Chinesesimp>照明</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_statMagCount">
             <English>Ammo count</English>
@@ -1478,6 +1490,7 @@
             <German>Munitionszahl</German>
             <Korean>장탄 수</Korean>
             <Japanese>弾薬数</Japanese>
+            <Chinesesimp>弹药数量</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_statMagnification">
             <English>Magnification</English>
@@ -1599,6 +1612,7 @@
             <German>Thermal und in Primärwaffe integriert</German>
             <Korean>열화상과 주무기 내장</Korean>
             <Japanese>熱画像装置内蔵・プライマリに内蔵</Japanese>
+            <Chinesesimp>热成像&amp;主镜内置</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_statVisionMode_supPrim">
             <English>Primary supported</English>
@@ -1639,6 +1653,7 @@
             <German>Thermal integriert</German>
             <Korean>열화상 내장</Korean>
             <Japanese>熱画像装置内蔵</Japanese>
+            <Chinesesimp>内置热成像</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Arsenal_tabDefaultLoadoutsText">
             <English>Default loadouts</English>
