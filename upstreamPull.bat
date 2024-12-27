@@ -1,6 +1,6 @@
 @echo off
 
-git rebase --continue
-git rebase -i master origin/updates
+git rebase -i --continue
+::git rebase -i origin/updates master
 
 pause
