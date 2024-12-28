@@ -12,6 +12,7 @@
             <German>Rüstet NVG nachts aus dem Inventar aus und entfernt es tagsüber.\nFügt keine NVGs zum Inventar hinzu!</German>
             <Korean>야간에는 야투경을 소지품에 장착하고 주간에는 장착을 해제합니다.\n주의! 소지품에 야투경을 추가하는 것이 아닙니다!</Korean>
             <Japanese>インベントリ内の暗視装置を夜間に装備し、日中は解除し収納します。\nこれはNVGをインベントリに追加しません。</Japanese>
+            <Chinesesimp>在夜晚自动佩戴夜视仪, 在白天自动摘下来\n不会将夜视仪添加进物品栏中!</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_AI_AssignNVG_DisplayName">
             <English>Auto-Equip NVGs</English>
@@ -24,6 +25,7 @@
             <German>Automatisch NVGs ausrüsten</German>
             <Korean>야투경 자동 창착</Korean>
             <Japanese>暗視装置の自動装備</Japanese>
+            <Chinesesimp>自动佩戴夜视仪</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_AI_DisplayName">
             <English>AI</English>
