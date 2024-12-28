@@ -8,7 +8,7 @@ class GVAR(base)
 
     // Supports Multiple Sounds, will pick one by random.
     sound[] = {"click"}; // I need a better default Sound
-    sound_timing = 1;    // [0..1] 0 at the start of the action, 0.5 half way during the duration of the action - always, if completed or not. 1 at the end, only when completed.
+    sound_timing = 0;    // [0..1] 0 at the start of the action, 0.5 half way during the duration of the action - always, if completed or not. 1 at the end, only when completed.
 
     // Gesture
     gesture = "Gear";
@@ -35,5 +35,5 @@ class GVAR(base_U_jacket_closed) : GVAR(base) { alternativeDisplayName = CSTRING
 
 
 // Common Base Class for Helmets with a Visor that can be flipped up or down
-class GVAR(base_H_visor_up)   : GVAR(base) { gesture ="gestureNod"; sound[] = {""}; soundEnd[] = {"click"}; alternativeDisplayName = CSTRING(visorUp); };
-class GVAR(base_H_visor_down) : GVAR(base) { gesture ="gestureNod"; sound[] = {""}; soundEnd[] = {"click"}; alternativeDisplayName = CSTRING(visorDown); };
+class GVAR(base_H_visor_up)   : GVAR(base) { duration = 0.3; gesture ="gestureNod"; sound[] = {"click"}; sound_timing = 1; alternativeDisplayName = CSTRING(visorUp); };
+class GVAR(base_H_visor_down) : GVAR(base) { duration = 0.3; gesture ="gestureNod"; sound[] = {"click"}; sound_timing = 1; alternativeDisplayName = CSTRING(visorDown); };

@@ -35,13 +35,24 @@ private _replaceCode = switch ( _typeNumber ) do {
     case TYPE_BACKPACK: { _additionalParams = "BACKPACK"; FUNC(replace_uniform)  };
 };
 
-private _duration     = getNumber (_cfg_tgt>> Q(ADDON) >> "duration") max 1;
+private _duration     = getNumber (_cfg_tgt>> Q(ADDON) >> "duration");
 // Plays Random Sound At the Beginning
 private _sound = [_cfg_tgt >> Q(ADDON) >> "sound"] call FUNC(getCfgDataRandom);
 private _sound_timing = getNumber (_cfg_tgt>> Q(ADDON) >> "sound_timing") max 0 min 1;
-// TODO - refactor sound playing
-if (_sound != "") then { [QGVAR(EH_say3d), [_player, _sound]] call CBA_fnc_globalEvent; };
 
+private _params_soundEnd = false;
+
+if (_sound != "") then {
+    if  (_sound_timing < 1) then {
+        [
+            CBA_fnc_globalEvent ,
+            [QGVAR(EH_say3d), [_player, _sound]],
+            _sound_timing * _duration
+        ] call CBA_fnc_waitAndExecute;
+    } else {
+        _params_soundEnd = [ QGVAR(EH_say3d), [ _player, _sound] ];
+    };
+};
 
 private _notify_img = getText (_cfg_tgt >> "picture");
 if !(".paa" in _notify_img) then { _notify_img = [_notify_img,"paa"] joinString "." };
@@ -51,7 +62,6 @@ private _params_replace = [_player, _cfg_origin, _cfg_tgt, _additionalParams ];
 
 // Dart made a PR to CBA to impove depricated Functions. I plan to use these once cba gets updated.
 // [ [ _player ], [ _sound, 50 ] ] call CBA_fnc_globalSay;
-private _params_soundEnd = [ QGVAR(EH_say3d), [ _player, [ _cfg_tgt >> Q(ADDON) >> "soundEnd" ] call FUNC(getCfgDataRandom), DISTANCE, 0.95 + random 0.1 ] ];
 
 if ( _duration > 1 ) then {
 
@@ -65,9 +75,7 @@ if ( _duration > 1 ) then {
 
             _params_replace call _replaceCode;
             _params_notify call CBA_fnc_notify;
-            _params_soundEnd call CBA_fnc_globalEvent;
-            
-            
+            if (_params_soundEnd isNotEqualTo false) then { _params_soundEnd call CBA_fnc_globalEvent; };
         }
         // * 3: On Failure: Code called or STRING raised as event. <CODE, STRING>
         ,{}   
@@ -75,7 +83,7 @@ if ( _duration > 1 ) then {
     ] call ace_common_fnc_progressBar;
 
 } else {
-    [ _replaceCode,        _params_replace,  1.0 ] call CBA_fnc_waitAndExecute;
-    [ CBA_fnc_globalEvent, _params_soundEnd, 1.0 ] call CBA_fnc_waitAndExecute;
-    [ CBA_fnc_notify,      _params_notify,   1.2 ] call CBA_fnc_waitAndExecute;
+    [ _replaceCode,        _params_replace,  _duration * 1.0 ] call CBA_fnc_waitAndExecute;
+    [ CBA_fnc_notify,      _params_notify,   _duration * 1.2 ] call CBA_fnc_waitAndExecute;
+    if (_params_soundEnd isNotEqualTo false) then { [ CBA_fnc_globalEvent, _params_soundEnd, _duration * 1.0 ] call CBA_fnc_waitAndExecute; };
 };
