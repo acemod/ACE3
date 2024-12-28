@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut
- * Handles a plane turning its marking laser off.
+ * Author: BaerMitUmlaut, PabstMirror
+ * Starts render PFEH
  *
  * Arguments:
  * 0: Aircraft <OBJECT>
@@ -10,37 +10,13 @@
  * None
  *
  * Example:
- * [plane] call ace_markinglaser_fnc_onLaserOn
+ * [] call ace_markinglaser_fnc_onLaserOn
  *
  * Public: No
  */
 
-params ["_aircraft"];
+if (GVAR(pfEH) != -1) exitWith {};
+if (((currentVisionMode focusOn) != 1) || {EGVAR(laser,laserEmitters) isEqualTo []}) exitWith {};
 
-// Start PFHs if this is the first laser
-if (local _aircraft && {GVAR(updatePFH) == -1}) then {
-    GVAR(updatePFH) = [LINKFUNC(updatePFH), 1, []] call CBA_fnc_addPerFrameHandler;
-
-    // Make sure update is called before first render
-    [] call FUNC(updatePFH);
-};
-
-if (hasInterface && {GVAR(renderPFH) == -1}) then {
-    GVAR(renderPFH) = [LINKFUNC(renderPFH), 0, []] call CBA_fnc_addPerFrameHandler;
-};
-
-GVAR(lasers) pushBack _aircraft;
-if (local _aircraft) then {
-    GVAR(localLasers) pushBack _laser;
-
-    // Mark aircraft for JIPs
-    _aircraft setVariable [QGVAR(laserOn), true, true];
-};
-
-if (isServer) then {
-    private _killedEH = _aircraft addMPEventHandler ["MPKilled", {
-        params ["_aircraft"];
-        [QGVAR(laserOff), [_aircraft]] call CBA_fnc_globalEvent;
-    }];
-    _aircraft setVariable [QGVAR(killedEH), _killedEH];
-};
+GVAR(pfEH) = [LINKFUNC(renderPFH), 0, []] call CBA_fnc_addPerFrameHandler;
+TRACE_1("start PFEH",GVAR(pfEH));

@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: BaerMitUmlaut
+ * Author: BaerMitUmlaut, PabstMirror
  * Renders all marking lasers.
  *
  * Arguments:
@@ -15,80 +15,58 @@
  * Public: No
  */
 
-if (GVAR(lasers) isEqualTo []) exitWith {};
-
-#ifndef DEBUG_MODE_FULL
-private _controlledUnit = [ACE_player, ACE_controlledUAV # 1] select (unitIsUAV cameraOn);
-if (currentVisionMode _controlledUnit != 1 && {
-    (!isNull curatorCamera) && {
-        (_curator getVariable ["BIS_fnc_curatorVisionModes_current", 0]) != 0
-    }
-}) exitWith {};
-#endif
+if (((currentVisionMode focusOn) != 1) || {EGVAR(laser,laserEmitters) isEqualTo []}) exitWith {
+    GVAR(pfEH) call CBA_fnc_removePerFrameHandler;
+    GVAR(pfEH) = -1;
+    TRACE_1("end PFEH",GVAR(pfEH));
+};
 
 {
-    private _aircraft = _x;
-    private _gimbalLimits = _aircraft getVariable [QGVAR(gimbalLimits), []];
+    _y params ["_aircraft", "", "_laserMethod"];
 
-    // Get laser direction vector
-    private _vector = if (_aircraft getVariable QGVAR(useTurret)) then {
-        [_aircraft] call FUNC(getTurretVector)
-    } else {
-        [_aircraft] call FUNC(getPilotCamVector)
+    private _currentMode = _aircraft getVariable [QGVAR(laserMode), MODE_OFF];
+    if (_currentMode == MODE_OFF) then { continue };
+    if (_laserMethod != QEFUNC(laser,findLaserSource)) then { continue }; // Normal vanilla laserTarget func
+
+    if ((_currentMode == MODE_FLASH) && {
+        private _cycle = (CBA_missionTime + (_aircraft getVariable [QGVAR(flashOffset), 0])) % (1/3);
+        _cycle > 1/6
+    }) then { continue };
+
+    (_y call EFUNC(laser,findLaserSource)) params ["_laserPosASL", "_laserDir"];
+
+    #ifdef DEBUG_MODE_FULL
+    private _targetObject = _aircraft getVariable [QEGVAR(laser,targetObject), objNull];
+    private _targetPosASL = getPosASL _targetObject;
+
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,1,1], (ASLToAGL _targetPosASL), 0.5, 0.5, 0, "Laser", 0.5, 0.025, "TahomaB"];
+    drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [1,0,1,1], (ASLToAGL _laserPosASL), 0.5, 0.5, 0, "Origin", 0.5, 0.025, "TahomaB"];
+    #endif
+
+    // If our camera is the laser source, offset it just a bit so it isn't dead center
+    if (((AGLToASL positionCameraToWorld [0,0,0]) distance _laserPosASL) < 0.09) then {
+        _laserPosASL = AGLToASL positionCameraToWorld [-0.02, -0.05, 0];
     };
 
-    // Turn off laser if gimbal limit is reached
-    // 0.1 is added to calculated values, seems to be slightly inaccurate
-    _gimbalLimits params ["_minDir", "_maxDir", "_minElev", "_maxElev"];
-    private _modelVector = _aircraft vectorWorldToModelVisual _vector;
-    private _dir = _modelVector # 0 atan2 _modelVector # 1;
-    if (_dir < _minDir - 0.1 || {_dir > _maxDir + 0.1}) then {
-        continue;
-    };
+    private _smoothing = _aircraft getVariable [QGVAR(smoothing), []];
+    _smoothing pushBack _laserDir;
+    if (count _smoothing > 5) then { _smoothing deleteAt 0 };
+    private _smoothDir = [0,0,0];
+    { _smoothDir = _smoothDir vectorAdd _x } forEach _smoothing;
+    _smoothDir = _smoothDir vectorMultiply (1/count _smoothing);
 
-    private _elevation = _modelVector # 2 atan2 vectorMagnitude [_modelVector # 0, _modelVector # 1, 0];
-    if (_elevation < _minElev - 0.1 || {_elevation > _maxElev + 0.1}) then {
-        continue;
-    };
-
-    private _origin = [0, 0, 0];
-    if (_aircraft == cameraOn && {cameraView == "GUNNER"}) then {
-        _origin = AGLToASL positionCameraToWorld [0, 0, 0];
-    } else {
-        private _originPoint = _aircraft getVariable [QGVAR(laserOrigin), ""];
-        _origin = _aircraft modelToWorldVisualWorld (_aircraft selectionPosition _originPoint);
-    };
-
-    // Check if laser hits object or ground
-    private _startPos = _origin vectorAdd (_vector vectorMultiply 0.25);
-    private _endPos = _startPos vectorAdd (_vector vectorMultiply LASER_MAX);
+    private _startPos = _laserPosASL vectorAdd (_smoothDir vectorMultiply 0.25); // go forward a bit so first drawLaser doesn't hit aircraft
+    private _endPos = _laserPosASL vectorAdd (_smoothDir vectorMultiply LASER_MAX);
     private _intersects = [];
     while { _intersects isEqualTo [] } do {
+        // drawLaser has an internal maximum distance it can draw, so we may need to draw multiple segments
+        drawLaser [_startPos, _smoothDir, [250, 0, 0, 1], [], 0, 1, LASER_MAX, true]; // Draw a segment
+        if ((_startPos distance _laserPosASL) > 9999) exitWith {}; // just exit loop if we've drawn far enough
         _intersects = lineIntersectsSurfaces [_startPos, _endPos, _aircraft];
-        drawLaser [
-            +_startPos,
-            _vector,
-            [250, 0, 0, 1],
-            [],
-            0,
-            1,
-            LASER_MAX,
-            true
-        ];
-        // Circumvent limit of drawLaser
-        if (_intersects isEqualTo []) then {
-            _startPos = _endPos;
-            _endPos = _endPos vectorAdd (_vector vectorMultiply LASER_MAX);
+        if (_intersects isEqualTo []) then { // Check if we hit anything
+            _startPos = _endPos; // if we didn't then move up the startpos to where the last draw ended
+            _endPos = _endPos vectorAdd (_smoothDir vectorMultiply LASER_MAX);
         };
     };
-    drawLaser [
-        _startPos,
-        _vector,
-        [250, 0, 0, 1],
-        [],
-        0.5,
-        1,
-        LASER_MAX,
-        true
-    ];
-} forEach GVAR(lasers);
+    drawLaser [_laserPosASL, _smoothDir, [250, 0, 0, 1], [], 0.5, 1, LASER_MAX, true]; // final draw from actual origin 
+} forEach EGVAR(laser,laserEmitters);
