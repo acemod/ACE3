@@ -18,6 +18,8 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_InitPost_EventHandlers {
     class Air {
-        ADDON = QUOTE(call FUNC(onAircraftInit));
+        class ADDON {
+            init = QUOTE(_this call FUNC(onAircraftInit));
+        };
     };
 };
