@@ -27,7 +27,7 @@ params ["_unit"];
 TRACE_2("params",_unit,typeOf _unit);
 
 // Exit if the unit already has earplugs (in ears (persistence scenarios) or inventory)
-if (_unit call FUNC(hasEarPlugsIn) || {[_unit, "ACE_EarPlugs"] call EFUNC(common,hasItem)}) exitWith {};
+if ((_unit getVariable ["ACE_hasEarPlugsIn", false]) || {[_unit, "ACE_EarPlugs"] call EFUNC(common,hasItem)}) exitWith {};
 
 // Add earplugs if enabled for everyone or if the unit has a rocket launcher
 if (GVAR(autoAddEarplugsToUnits) == 2 || {(secondaryWeapon _unit) != ""}) exitWith {

@@ -33,11 +33,9 @@ ACE_COUNTERS = [];
 // Load ace_settings into CBA Settings
 [] call FUNC(cbaSettings);
 
-GVAR(statusEffect_Names) = [];
-GVAR(statusEffect_isGlobal) = [];
-GVAR(statusEffect_sendJIP) = [];
+GVAR(statusEffects) = createHashMap;
 
-GVAR(setHearingCapabilityMap) = [];
+GVAR(setHearingCapabilityMap) = createHashMap;
 
 [] call FUNC(setupLocalUnitsHandler); // Add local units event handlers (ace_common_localUnits)
 
