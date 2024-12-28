@@ -7,12 +7,9 @@ class CfgFunctions
             file = PATH_TO_FUNC;
 
             class postInit { postInit = 1; };
-            class say3d {};
 
             class clearOnClose {};
             class checkItem {};
-            class getCfgDataRandom {};
-
         };
 
         class ace_intel
@@ -64,6 +61,24 @@ class CfgFunctions
             class cache_set {};
 
             class cache_clear {};
+        };
+
+        class config
+        {
+            file = PATH_TO_FUNC_SUB(config);
+            class getCfgDataRandom {};
+        };
+
+        class debug
+        {
+            file = PATH_TO_FUNC_SUB(debug);
+            class getAllWardrobeItems {};
+        };
+
+        class effects
+        {
+            file = PATH_TO_FUNC_SUB(effects);
+            class say3d {};
         };
     };
 };
