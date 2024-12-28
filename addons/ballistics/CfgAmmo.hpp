@@ -546,7 +546,7 @@ class CfgAmmo {
         ACE_muzzleVelocities[]={867};
         ACE_barrelLengths[]={736.6};
     };
-    class ACE_408_Ball: BulletBase {
+    class ACE_408_Ball: B_408_Ball {
         timeToLive=10;
         airFriction=-0.00065414;
         typicalSpeed=1067;
@@ -629,19 +629,20 @@ class CfgAmmo {
     class B_127x33_Ball: BulletBase {
         tracerScale = 1.3; //1.2;
     };
-    class B_127x54_Ball: BulletBase {
-        airFriction=-0.00019568;
-        tracerScale = 1.3;//
-        ACE_caliber=12.954;
-        ACE_bulletLength=64.516;
-        ACE_bulletMass=48.6;
-        ACE_ammoTempMuzzleVelocityShifts[]={-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619};
-        ACE_ballisticCoefficients[]={1.050};
-        ACE_velocityBoundaries[]={};
-        ACE_standardAtmosphere="ASM";
-        ACE_dragModel=1;
-        ACE_muzzleVelocities[]={300};
-        ACE_barrelLengths[]={436.88};
+    class B_127x54_Ball: BulletBase { // Russian 12.7x55mm subsonic Патрон СЦ-130 ПТ2 (STs130PT2) https://memo-randum.net/katalog/boepripasy/patrony/patron-sts-130-pt2/
+        airFriction = -0.00037716; // based on MV 295m/s and G1 BC 0.519
+        tracerScale = 1.3; // B_127x54_Ball 1.5
+        ACE_caliber = 13.01; // https://en.wikipedia.org/wiki/12.7%C3%9755mm_STs-130
+        ACE_bulletLength = 63.75; // average length 63.5, 64mm
+        ACE_bulletMass = 48.2;
+        ACE_ammoTempMuzzleVelocityShifts[] = {-2.655, -2.547, -2.285, -2.012, -1.698, -1.280, -0.764, -0.153, 0.596, 1.517, 2.619}; // default ACE_ammoTempMuzzleVelocityShifts values /10. Muzzle velocity shift 0 at 70°F (21°C), -1m/s at 15°C
+        ACE_ballisticCoefficients[] = {0.519}; // based on time of flight 1.0798s at 300m: G1 ICAO 0.519 (Strelok Pro and EBC V2), unknown measurement conditions https://memo-randum.net/katalog/boepripasy/patrony/patron-sts-130-pt2/
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 1;
+        ACE_muzzleVelocities[] = {296}; // Muzzle Velocity shift +1m/s at 70°F (21°C) (70°F: Temp vs MV chart zero), 295m/s at 15°C (ICAO: 15°C, 1013.25 hPa, 0%) according to 10Rnd_127x54_Mag initSpeed
+        ACE_barrelLengths[] = {450}; // according to ASP-1 Kir barrel length, VKS: https://en.wikipedia.org/wiki/VKS_sniper_rifle
+        EGVAR(vehicle_damage,incendiary) = 0.2;
     };
     class B_127x99_Ball: BulletBase {
         timeToLive=10;
