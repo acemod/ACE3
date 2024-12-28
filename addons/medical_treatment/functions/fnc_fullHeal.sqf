@@ -22,7 +22,7 @@
  * Public: No
  */
 
-params ["_medic", "_patient", "", "", "", "", ["_logMessage", true]];
+params ["_medic", "_patient", "", "", "", "", "", ["_logMessage", true]];
 TRACE_3("fullHeal",_medic,_patient,_logMessage);
 
 if (_logMessage) then {
