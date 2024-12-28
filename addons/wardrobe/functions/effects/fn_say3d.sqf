@@ -1,4 +1,4 @@
-#include "../script_component.hpp"
+#include "../../script_component.hpp"
 
 /*
 * Author: Zorn
@@ -24,7 +24,7 @@ if (_sound isEqualType [] && {_sound#0 == ""} || {_sound isEqualType "" && {_sou
 
 _sound params [
 "_className",
-["_distance",        100,               [0]         ],
+["_distance",        25,                [0]         ],
 ["_pitch",           0.95 + random 0.1, [0]         ],
 ["_isSpeech",        false,             [false, 0]  ],
 ["_offSet",          0,                 [0]         ],
