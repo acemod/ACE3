@@ -35,7 +35,7 @@ class CfgWeapons {
         ace_overpressure_angle = 90;    // Cone in which the damage is applied (in degrees from the muzzle of the cannon towards the side)
         ace_overpressure_range = 50;    // Range in meters in which the damage is applied
         ace_overpressure_damage = 0.85; // Damage multiplier
-        ace_overpressure_offset = 1;    // Offset from the projectile origin forward, to where the overpressure should originate from
+        ace_overpressure_offset = 1;    // Offset from the projectile origin forwards, to where the overpressure should originate from
     };
 };
 ```
@@ -59,7 +59,7 @@ class CfgWeapons {
 ```cpp
 class CfgVehicles {
     class MyClosedMLRS {
-        ace_overpressure_noReflection = 1; // Prevents backblast reflection to the gunner in light vehicles like Vanilla MLRS Trucks, which are otherwise counted as "open" by ace_hearing_fnc_updatePlayerVehAttenuation
+        ace_overpressure_noReflection = 1; // Prevents backblast reflection to the gunner in light vehicles like Vanilla MLRS Trucks, which are otherwise counted as "open" by ace_common_fnc_updatePlayerVehAttenuation
     };
 };
 ```
