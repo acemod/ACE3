@@ -60,14 +60,11 @@ if !(".paa" in _notify_img) then { _notify_img = [_notify_img,"paa"] joinString 
 private _params_notify = [[ _notify_img, 4], [getText (_cfg_tgt >> "displayName")], true ];
 private _params_replace = [_player, _cfg_origin, _cfg_tgt, _additionalParams ];
 
-// Dart made a PR to CBA to impove depricated Functions. I plan to use these once cba gets updated.
-// [ [ _player ], [ _sound, 50 ] ] call CBA_fnc_globalSay;
-
 if ( _duration > 1 ) then {
 
     [
-        _duration               // * 0: Total Time (in game "time" seconds) <NUMBER>
-        ,[_replaceCode, _params_replace, _params_soundEnd, _params_notify] // * 1: Arguments, passed to condition, fail and finish <ARRAY>
+        _duration                                                           // * 0: Total Time (in game "time" seconds) <NUMBER>
+        ,[_replaceCode, _params_replace, _params_soundEnd, _params_notify]  // * 1: Arguments, passed to condition, fail and finish <ARRAY>
         // * 2: On Finish: Code called or STRING raised as event. <CODE, STRING>
         ,{
             params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];

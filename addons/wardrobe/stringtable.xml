@@ -1,38 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ace">
     <Package name="wardrobe">
-        <Container name="meta">
-            <Key ID="STR_wardrobe_author">
-                <Original>OverlordZorn[CVO]</Original>
-                <English>OverlordZorn[CVO]</English>
-            </Key>
-        </Container>
         <Container name="CBA_Settings_Categories">
             <Key ID="STR_ace_wardrobe_set_cat_main">
                 <Original>ACE Wardrobe</Original>
                 <English>ACE Wardrobe</English>
+                <German>ACE Gaderobe</German>
             </Key>
         </Container>
         <Container name="CBA_Settings">
             <Key ID="STR_ace_wardrobe_set_enable">
                 <Original>Enable</Original>
+                <English>Enable</English>
+                <German>Aktivieren</German>
             </Key>
             <Key ID="STR_ace_wardrobe_set_enable_desc">
-                <English>When Enabled, will let the player use the Wardrobe Actions.</English>
+                <English>When Enabled, will let the player use the Wardrobe actions.</English>
             </Key>
         </Container>
         <Container name="Action">
             <Key ID="STR_ace_wardrobe_actionTitle">
                 <Original>Wardrobe</Original>
                 <English>Wardrobe</English>
+                <German>Gaderobe</German>
             </Key>
             <Key ID="STR_ace_wardrobe_glovesOff">
-                <Original>Take Gloves Off</Original>
-                <English>Take Gloves Off</English>
+                <Original>Take gloves off</Original>
+                <English>Take gloves off</English>
             </Key>
             <Key ID="STR_ace_wardrobe_glovesOn">
-                <Original>Wear Gloves</Original>
-                <English>Wear Gloves</English>
+                <Original>Wear gloves</Original>
+                <English>Wear gloves</English>
             </Key>
             <Key ID="STR_ace_wardrobe_jacketClose">
                 <Original>Close Jacket</Original>
@@ -43,20 +41,20 @@
                 <English>Open Jacket</English>
             </Key>
             <Key ID="STR_ace_wardrobe_sleevesDown">
-                <Original>Roll sleeves Down</Original>
-                <English>Roll sleeves Down</English>
+                <Original>Roll sleeves down</Original>
+                <English>Roll sleeves down</English>
             </Key>
             <Key ID="STR_ace_wardrobe_sleevesUp">
-                <Original>Roll sleeves Up</Original>
-                <English>Roll sleeves Up</English>
+                <Original>Roll sleeves up</Original>
+                <English>Roll sleeves up</English>
             </Key>
             <Key ID="STR_ace_wardrobe_visorDown">
-                <Original>Visor Down</Original>
-                <English>Visor Down</English>
+                <Original>Visor down</Original>
+                <English>Visor down</English>
             </Key>
             <Key ID="STR_ace_wardrobe_visorUp">
-                <Original>Visor Up</Original>
-                <English>Visor Up</English>
+                <Original>Visor up</Original>
+                <English>Visor up</English>
             </Key>
         </Container>
     </Package>

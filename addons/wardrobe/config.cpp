@@ -1,23 +1,23 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-	class ADDON {
-		name = COMPONENT_NAME;
-		author = ECSTRING(common,ACETeam);
+    class ADDON {
+        name = COMPONENT_NAME;
+        author = ECSTRING(common,ACETeam);
         authors[] = {"OverlordZorn [CVO]"};
         url = ECSTRING(main,URL);
 
-		VERSION_CONFIG;
+        VERSION_CONFIG;
         requiredVersion = REQUIRED_VERSION;
 
         requiredAddons[] = {
             "ace_interact_menu"
         };
-		skipWhenMissingDependencies = 1;
+        skipWhenMissingDependencies = 1;
 
         units[] = {};
         weapons[] = {};
-	};
+    };
 };
 
 #include "CfgFunctions.hpp"
