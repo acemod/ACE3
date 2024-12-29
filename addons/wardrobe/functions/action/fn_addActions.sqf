@@ -20,17 +20,16 @@ params ["_unit"];
 
 
 private _modifiableItems = [_unit] call FUNC(getItems_modifiable_current);
-diag_log format ['[CVO](debug)(fn_addActions) _modifiableItems: %1', _modifiableItems];
 private _actions = [];
-
 {
-    private _params = [_x];
-    private _cfg = [_x] call CBA_fnc_getItemConfig;
+    private _cfg = _x#0;
+    private _className = configName _cfg;
+    private _params = [_cfg, _x#1];
 
     diag_log format ['[CVO](debug)(fn_addActions) _cfg: %1', _cfg];
 
     private _aceAction = [
-        _x                                      // * 0: Action name <STRING>
+        _className                              // * 0: Action name <STRING>
         ,getText (_cfg >> "displayName")        //  * 1: Name of the action shown in the menu <STRING>
         ,getText (_cfg >> "picture")            //  * 2: Icon <STRING> "\A3\ui_f\data\igui\cfg\simpleTasks\types\backpack_ca.paa"
         ,{}                                     //  * 3: Statement <CODE>

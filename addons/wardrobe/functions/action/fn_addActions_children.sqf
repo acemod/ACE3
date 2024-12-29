@@ -16,23 +16,19 @@
 */
 
 params ["_target", "_player", "_actionParams"];
+_actionParams params ["_cfg_origin", "_newItems"];
 
-_actionParams params ["_modifiableItem"];
-
-private _cfg_origin = [_modifiableItem] call CBA_fnc_getItemConfig;
-
-private _newItems = [_cfg_origin >> QPVAR(wardrobe) >> "modifiableTo"] call BIS_fnc_getCfgDataArray;
 
 private _actions = [];
 
 {
-    private _targetItem = _x;
-    private _cfg_target = [_targetItem] call CBA_fnc_getItemConfig;
+    private _cfg_target = _x;
+    private _className_target = configName _cfg_target;
 
     private _params = [_cfg_origin, _cfg_target];
 
     private _aceAction = [
-        _targetItem                             //  * 0: Action name <STRING>
+        _className_target                           //  * 0: Action name <STRING>
         ,[_cfg_target] call FUNC(getAction_Name)    //  * 1: Name of the action shown in the menu <STRING>
         ,[_cfg_target] call FUNC(getAction_Icon)    //  * 2: Icon <STRING> "\A3\ui_f\data\igui\cfg\simpleTasks\types\backpack_ca.paa"
         ,FUNC(replace)                          //  * 3: Statement <CODE>

@@ -5,17 +5,17 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=517;
+	toggles=1541;
 	class ItemIDProvider
 	{
 		nextID=202;
 	};
 	class Camera
 	{
-		pos[]={10.292682,7.7905149,-9.2390032};
-		dir[]={0.76574892,-0.31659395,-0.55981857};
-		up[]={0.2555781,0.94856107,-0.18684632};
-		aside[]={-0.59017646,0,-0.8072741};
+		pos[]={3.673414,13.197466,-29.890484};
+		dir[]={0.56360948,-0.37021363,0.73846245};
+		up[]={0.22461432,0.92893893,0.29429838};
+		aside[]={0.79494452,-8.312054e-08,-0.60671729};
 	};
 };
 binarizationWanted=0;
@@ -71,9 +71,6 @@ randomSeed=4540948;
 class ScenarioData
 {
 	author="Overlord Zorn";
-};
-class CustomAttributes
-{
 };
 class Mission
 {

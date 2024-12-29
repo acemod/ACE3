@@ -9,7 +9,10 @@ class CfgFunctions
             class postInit { postInit = 1; };
 
             class clearOnClose {};
-            class checkItem {};
+            class isModifiable {};
+
+            class compare_components {};
+            class canModifyTo {};
         };
 
         class ace_intel
@@ -26,6 +29,8 @@ class CfgFunctions
             class getItems_all {};
             class getItems_modifiable_all {};
             class getItems_modifiable_current {};
+            
+            class getItems_modifiableTo {};
             
         };
 

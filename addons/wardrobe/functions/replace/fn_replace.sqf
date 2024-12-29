@@ -25,6 +25,10 @@ _actionParams params ["_cfg_origin", "_cfg_tgt"];
 
 private _typeNumber = getNumber (_cfg_origin >> "ItemInfo" >> "type");
 
+// Remove / Add Missing/Surplus Items.
+[_cfg_origin, _cfg_tgt] call FUNC(compare_components) params ["_missing", "_surplus"];
+systemChat format ["%1 - %2", _missing, _surplus];
+
 private _additionalParams = "";
 
 private _replaceCode = switch ( _typeNumber ) do {
@@ -60,6 +64,9 @@ if !(".paa" in _notify_img) then { _notify_img = [_notify_img,"paa"] joinString 
 private _params_notify = [[ _notify_img, 4], [getText (_cfg_tgt >> "displayName")], true ];
 private _params_replace = [_player, _cfg_origin, _cfg_tgt, _additionalParams ];
 
+
+// Im considering removing the progressbar tbh. just causes alot of issues without a real need for it.
+
 if ( _duration > 1 ) then {
 
     [
@@ -76,11 +83,13 @@ if ( _duration > 1 ) then {
         }
         // * 3: On Failure: Code called or STRING raised as event. <CODE, STRING>
         ,{}   
-        ,""                     // * 4: Localized Title <STRING> (default: "")
+        ,""                                                                 // * 4: Localized Title <STRING> (default: "")
     ] call ace_common_fnc_progressBar;
 
 } else {
+
     [ _replaceCode,        _params_replace,  _duration * 1.0 ] call CBA_fnc_waitAndExecute;
     [ CBA_fnc_notify,      _params_notify,   _duration * 1.2 ] call CBA_fnc_waitAndExecute;
     if (_params_soundEnd isNotEqualTo false) then { [ CBA_fnc_globalEvent, _params_soundEnd, _duration * 1.0 ] call CBA_fnc_waitAndExecute; };
+
 };

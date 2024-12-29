@@ -15,10 +15,4 @@
 * Public: No
 */
 
-[
-    "allWardrobeItems",
-    {
-        ["CfgWeapons"] apply { ( Q([_x] call FUNC(checkItem)) configClasses (configFile >> _x) ) apply { configName _x } }
-    }
-] call FUNC(cache_get);
-
+["CfgWeapons"] apply { ( Q([_x] call FUNC(isModifiable)) configClasses (configFile >> _x) ) apply { configName _x } }
