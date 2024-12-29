@@ -9,13 +9,21 @@
             </Key>
         </Container>
         <Container name="CBA_Settings">
-            <Key ID="STR_ace_wardrobe_set_enable">
-                <Original>Enable</Original>
-                <English>Enable</English>
-                <German>Aktivieren</German>
+            <Key ID="STR_ace_wardrobe_set_enable_action">
+                <Original>Enable ACE Interaction</Original>
+                <English>Enable ACE Interaction</English>
+                <German>Aktivieren ACE Interaction</German>
             </Key>
-            <Key ID="STR_ace_wardrobe_set_enable_desc">
-                <English>When Enabled, will let the player use the Wardrobe actions.</English>
+            <Key ID="STR_ace_wardrobe_set_enable_action_desc">
+                <English>When Enabled, will let the player use the Wardrobe related Ace Interactions.</English>
+            </Key>
+            <Key ID="STR_ace_wardrobe_set_enable_contexMenu">
+                <Original>Enable CBA Context Menu</Original>
+                <English>Enable </English>
+                <German>Aktiviere CBA Context Menu</German>
+            </Key>
+            <Key ID="STR_ace_wardrobe_set_enable_contexMenu_desc">
+                <English>When Enabled, will let the player use the Wardrobe related CBA Context Menu Options.&lt;br/&gt;Can be enabled at any time, but requires restart to disable. </English>
             </Key>
         </Container>
         <Container name="Action">

@@ -17,7 +17,7 @@
 
 params ["_player"];
 
-missionNamespace getVariable [QSET(enable), false]
+missionNamespace getVariable [QSET(enable_action), false]
 &&
 { 
     count ([_player] call FUNC(getItems_modifiable_current)) > 0
