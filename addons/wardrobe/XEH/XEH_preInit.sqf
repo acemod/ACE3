@@ -38,7 +38,7 @@ QSET(test) -> "ADDON_set_test"
     false                                       //    _needRestart - Setting will be marked as needing mission restart after being changed. (optional, default false) <BOOL>
 ] call CBA_fnc_addSetting;
 
-/* - I dont think there's going to be a way to make this work propperly.
+/* - I dont think there's going to be a way to make this work properly.
 [
     QSET(enable_contextMenu),                   //    _setting     - Unique setting name. Matches resulting variable name <STRING>
     "CHECKBOX",                                 //    _settingType - Type of setting. Can be "CHECKBOX", "EDITBOX", "LIST", "SLIDER" or "COLOR" <STRING>
