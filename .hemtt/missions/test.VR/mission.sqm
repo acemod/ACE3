@@ -5,17 +5,17 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1541;
+	toggles=517;
 	class ItemIDProvider
 	{
-		nextID=202;
+		nextID=203;
 	};
 	class Camera
 	{
-		pos[]={3.673414,13.197466,-29.890484};
-		dir[]={0.56360948,-0.37021363,0.73846245};
-		up[]={0.22461432,0.92893893,0.29429838};
-		aside[]={0.79494452,-8.312054e-08,-0.60671729};
+		pos[]={11.851013,13.197466,-25.312586};
+		dir[]={0.28843617,-0.51576251,0.80672157};
+		up[]={0.17364158,0.85673237,0.4856551};
+		aside[]={0.94162649,-3.1082891e-08,-0.33667031};
 	};
 };
 binarizationWanted=0;
@@ -26,7 +26,8 @@ addons[]=
 	"ace_realisticnames",
 	"ace_ballistics",
 	"A3_Characters_F",
-	"A3_Soft_F_Exp_Offroad_02"
+	"A3_Soft_F_Exp_Offroad_02",
+	"A3_Weapons_F_Ammoboxes"
 };
 class AddonsMetaData
 {
@@ -95,7 +96,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			dataType="Object";
@@ -246,6 +247,22 @@ class Mission
 				};
 				nAttributes=1;
 			};
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={18.822828,5,-13.759856};
+				angles[]={-0,1.0776811,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=202;
+			type="B_AssaultPack_blk";
 		};
 	};
 };
