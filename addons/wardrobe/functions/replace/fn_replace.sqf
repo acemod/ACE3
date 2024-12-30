@@ -25,12 +25,11 @@ private _duration = getNumber (_cfg_tgt>> Q(ADDON) >> "duration");
 [ _unit, getText (_cfg_tgt >> Q(ADDON) >> "gesture") ] call ace_common_fnc_doGesture;
 
 
-
 // Remove / Add Missing/Surplus Items.
 [_cfg_origin, _cfg_tgt] call FUNC(compare_components) params ["_missing", "_surplus"];
 { [_unit, _x, true] call CBA_fnc_addItem; } forEach _surplus;
 { [_unit, _x] call CBA_fnc_removeItem;    } forEach _missing;
-if (_sound != "") then { [ CBA_fnc_globalEvent, [QGVAR(EH_say3d), [_unit, _sound]], _sound_timing * _duration ] call CBA_fnc_waitAndExecute; };
+
 
 // Replace the Main Item.
 private _additionalParams = "";
@@ -47,6 +46,8 @@ private _replaceCode = switch ( getNumber (_cfg_origin >> "ItemInfo" >> "type") 
 // Plays Random Sound At the Beginning
 private _sound_timing = getNumber (_cfg_tgt>> Q(ADDON) >> "sound_timing") max 0 min 1;
 private _sound = [_cfg_tgt >> Q(ADDON) >> "sound"] call FUNC(getCfgDataRandom);
+if (_sound != "") then { [ CBA_fnc_globalEvent, [QGVAR(EH_say3d), [_unit, _sound]], _sound_timing * _duration ] call CBA_fnc_waitAndExecute; };
+
 
 // Notification
 private _notify_img = getText (_cfg_tgt >> "picture");
