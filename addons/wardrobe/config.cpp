@@ -31,3 +31,5 @@ class CfgWeapons
 {
     #include "compat_vanilla\Uniforms.hpp"
 };
+
+#include "CfgSounds.hpp"
