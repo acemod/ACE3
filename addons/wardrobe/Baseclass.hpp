@@ -1,4 +1,4 @@
-
+#define CN_SOUND(base,dur) Q(TRIPLES(ADDON,base,dur))
 
 class GVAR(base) 
 {
@@ -9,8 +9,7 @@ class GVAR(base)
     components[] = {};
 
     // Supports Multiple Sounds, will pick one by random.
-    #define SOUND(base,dur) Q(TRIPLES(ADDON,base,dur))
-    sound[] = {SOUND(fabric,06),SOUND(fabric,07),SOUND(fabric,16),SOUND(fabric,20),SOUND(fabric,25)};
+    sound[] = {CN_SOUND(fabric,06),CN_SOUND(fabric,07),CN_SOUND(fabric,16),CN_SOUND(fabric,20),CN_SOUND(fabric,25)};
     sound_timing = 0;    // [0..1] 0 at the start of the action, 0.5 half way during the duration of the action - always, if completed or not. 1 at the end, only when completed.
 
     // Gesture
@@ -38,5 +37,5 @@ class GVAR(base_U_jacket_closed) : GVAR(base) { alternativeDisplayName = CSTRING
 
 
 // Common Base Class for Helmets with a Visor that can be flipped up or down
-class GVAR(base_H_visor_up)   : GVAR(base) { duration = 0.5; gesture ="gestureNod"; sound[] = {SOUND(helmet_visor,05)}; sound_timing = 0; alternativeDisplayName = CSTRING(visorUp); };
-class GVAR(base_H_visor_down) : GVAR(base) { duration = 0.5; gesture ="gestureNod"; sound[] = {SOUND(helmet_visor,05)}; sound_timing = 0; alternativeDisplayName = CSTRING(visorDown); };
+class GVAR(base_H_visor_up)   : GVAR(base) { duration = 0.3; gesture ="gestureNod"; sound[] = {CN_SOUND(helmet_visor,05)}; sound_timing = 0; alternativeDisplayName = CSTRING(visorUp); };
+class GVAR(base_H_visor_down) : GVAR(base) { duration = 0.3; gesture ="gestureNod"; sound[] = {CN_SOUND(helmet_visor,05)}; sound_timing = 0; alternativeDisplayName = CSTRING(visorDown); };
