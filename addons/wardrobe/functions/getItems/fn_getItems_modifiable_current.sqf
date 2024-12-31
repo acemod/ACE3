@@ -45,7 +45,7 @@ private _code = {
     
 
 // Cleanup Cache once the interaction menu is closed
-["items_modifiable_current"] call FUNC(clearOnClose);
+["items_modifiable_current"] call FUNC(clearOnClosed_InteractionMenu);
 [
     "items_modifiable_current",
     _code

@@ -21,7 +21,7 @@ params [
 
 
 // Cleanup Cache once the interaction menu is closed
-["items_all"] call FUNC(clearOnClose);
+["items_all"] call FUNC(clearOnClosed_InteractionMenu);
 [
     "items_all",
     {

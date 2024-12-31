@@ -8,7 +8,6 @@ class CfgFunctions
 
             class postInit { postInit = 1; };
 
-            class clearOnClose {};
             class isModifiable {};
 
             class compare_components {};
@@ -66,6 +65,9 @@ class CfgFunctions
             class cache_set {};
 
             class cache_clear {};
+
+            class clearOnClosed_InteractionMenu {};
+            class clearOnClosed_Inventory {};
         };
 
         class config
