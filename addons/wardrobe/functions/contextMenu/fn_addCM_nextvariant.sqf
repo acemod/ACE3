@@ -103,17 +103,17 @@ The most efficient variant i can think of would be following.
 */
 
 [
-    "#ALL",                     // filter items
-    "CLOTHES",                  // filter slots
-    "Switch to next Variant",   // Display Name
-    [],                         // Color
-    "",                         // Icon
+    "#ALL",                                     // filter items
+    "CLOTHES",                                  // filter slots
+    "Switch to next Variant",                   // Display Name
+    [],                                         // Color
+    PATH_TO_ADDON(data\wardrobe_logo.paa),    // Icon
     [
-        {true},                 // Condition Enable action
-        {true}                  // Condition Show Action
+        {true},                                 // Condition Enable action
+        {true}                                  // Condition Show Action
     ],
-    FUNC(do_nextVariant),       // statement
-    false,                      // consume Item
-    []                          // Params
+    FUNC(do_nextVariant),                       // statement
+    false,                                      // consume Item
+    []                                          // Params
 ] call CBA_fnc_addItemContextMenuOption;
 
