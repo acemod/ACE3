@@ -2,7 +2,7 @@
 
 /*
 * Author: Zorn
-* Function to Execute the Next Variant Context Menu Action.
+* Function to Request the Next Variant Context Menu Action.
 *
 * Arguments:
 *
@@ -25,8 +25,16 @@ if (_cfg_tgt isEqualTo false) exitWith { diag_log format ['[CVO](debug)(fn_do_ne
 
 private _canModifyTo = [_unit, _current_cfg, _cfg_tgt] call FUNC(canModifyTo);
 
-if !(_canModifyTo) exitWith {[["Can not switch to:"], [getText (_cfg_tgt >> "displayName")], ["Due to missing components"] ,true ] call CBA_fnc_notify /* error hint to player: cannot switch to next variant, try again */ };
-
+if !(_canModifyTo) exitWith {
+    // error hint to player: cannot switch to next variant, try again
+    // TODO: Stringtable XML
+    [
+        ["Can not switch to:"],
+        [getText (_cfg_tgt >> "displayName")],
+        ["Due to missing components"],
+        true
+    ] call CBA_fnc_notify;
+}; 
 
 
 [_unit, _unit, [_current_cfg, _cfg_tgt]] call FUNC(replace); 

@@ -76,13 +76,23 @@ class CfgFunctions
             file = PATH_TO_FUNC_SUB(debug);
 
             class getAllWardrobeItems {};
+            class compare_container_maxLoad {};
         };
 
         class effects
         {
             file = PATH_TO_FUNC_SUB(effects);
-            
+
             class say3d {};
+        };
+        class contextMenu
+        {
+            file = PATH_TO_FUNC_SUB(contextMenu);
+
+            class enable_contextMenu {};
+            class addCM_nextvariant {};
+            class do_nextVariant {};
+            class getNextVariant {};
         };
     };
 };

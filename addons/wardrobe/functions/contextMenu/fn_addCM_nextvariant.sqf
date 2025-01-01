@@ -92,7 +92,6 @@ Examples:
 
 
 /*
-
 To make this work i would need to add a Menu Option for each individual modfifiable item AND its potential variants.
 
 The most efficient variant i can think of would be following.
@@ -101,14 +100,20 @@ The most efficient variant i can think of would be following.
 3. Check if they are already established (GVAR(contextMenu_hashmap) classname, config)
 4. For every new modifiable Item, create a ContextMenuOption for each of its variant
 - could make an event handler, everytime the inventory gets opened, it scans the wearables, if they are modifiable, (and not already established) adds the option for those items
-
 */
 
-/*
+[
+    "#ALL",                     // filter items
+    "CLOTHES",                  // filter slots
+    "Switch to next Variant",   // Display Name
+    [],                         // Color
+    "",                         // Icon
     [
-        "#ALL",
-        "CLOTHES",
-    ] call CBA_fnc_addItemContextMenuOption;
+        {true},                 // Condition Enable action
+        {true}                  // Condition Show Action
+    ],
+    FUNC(do_nextVariant),       // statement
+    false,                      // consume Item
+    []                          // Params
+] call CBA_fnc_addItemContextMenuOption;
 
-
-*/

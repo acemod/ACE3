@@ -35,7 +35,7 @@ if (_history_cfg isEqualTo "404") then {
 
 
 private _remaining = _modifiableTo_cfg - _history_cfg;
-_history_cfg pushbackUnique _cfg_current;
+_history_cfg pushBackUnique _cfg_current;
 
 // Returns ether a random remaining item or alternatively, a random one from the complete array.
 if (count _remaining > 0) then {

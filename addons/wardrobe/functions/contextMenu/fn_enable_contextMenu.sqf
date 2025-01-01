@@ -18,9 +18,7 @@
 
 params [["_enable", true, [true]]];
 
-
-if (missionNamespace getVariable [QGVAR(contextmenu_enabled), false]) then {
+if (_enable && {!(missionNamespace getVariable [QGVAR(contextmenu_enabled), false])}) then {
     missionNamespace setVariable [QGVAR(contextmenu_enabled), true];
-
-
+    [] call FUNC(addCM_nextvariant);
 };
