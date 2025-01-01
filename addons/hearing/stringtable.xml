@@ -139,6 +139,7 @@
             <Japanese>電子聴覚保護具を外しました</Japanese>
             <Russian>Электронная защита слуха снята</Russian>
             <French>Protection auditive électronique retirée.</French>
+            <Italian>Protezione uditiva elettronica rimossa</Italian>
             <Korean>전자 청력 보호구 벗음</Korean>
             <Chinesesimp>降噪耳机已摘下</Chinesesimp>
         </Key>
@@ -148,6 +149,7 @@
             <Japanese>電子聴覚保護具を装着しました</Japanese>
             <Russian>Электронная защита слуха надета</Russian>
             <French>Protection auditive électronique mise en place</French>
+            <Italian>Protezione uditiva elettronica inserita</Italian>
             <Korean>전자 청력 보호구 씀</Korean>
             <Chinesesimp>降噪耳机已佩戴</Chinesesimp>
         </Key>
@@ -157,6 +159,7 @@
             <Japanese>電子聴覚保護具は状況認識力を低下させることなく、装着者の聴覚障害を防ぐことができる。</Japanese>
             <Russian>Электронная защита органов слуха защищает пользователя от повреждения слуха, не снижая при этом его осведомленности о ситуации.</Russian>
             <French>Les protections auditives électroniques protègent le porteur contre les lésions auditives sans limiter sa conscience de la situation.</French>
+            <Italian>Protezione uditiva elettronica protegge l'utente da danni all'udito senza ridurre la sua situational awareness.</Italian>
             <Korean>전자 청력 보호구는 상황 인식을 저하시키지 않으면서 착용자의 청력 손상을 예방합니다.</Korean>
             <Chinesesimp>降噪耳机可保护佩戴者免受听力损害，同时又不会降低态势感知能力。</Chinesesimp>
         </Key>
@@ -166,6 +169,7 @@
             <Japanese>電子聴覚保護具</Japanese>
             <Russian>Электронная защита слуха</Russian>
             <French>Protection électronique de l'ouïe</French>
+            <Italian>Protezione uditiva elettronica</Italian>
             <Korean>전자 청력 보호구</Korean>
             <Chinesesimp>降噪耳机</Chinesesimp>
         </Key>
@@ -175,6 +179,7 @@
             <Japanese>電子聴覚保護具を外す</Japanese>
             <Russian>Снять электронную защиту слуха</Russian>
             <French>Retirer les protections auditives électroniques</French>
+            <Italian>Levati la protezione uditiva elettronica</Italian>
             <Korean>전자 청력 보호구 벗기</Korean>
             <Chinesesimp>摘下降噪耳机</Chinesesimp>
         </Key>
@@ -184,6 +189,7 @@
             <Japanese>電子聴覚保護具を装着</Japanese>
             <Russian>Надеть электронную защиту слуха</Russian>
             <French>Mettre les protections auditives électroniques</French>
+            <Italian>Indossa la protezione uditiva elettronica</Italian>
             <Korean>전자 청력 보호구 쓰기</Korean>
             <Chinesesimp>戴上降噪耳机</Chinesesimp>
         </Key>
@@ -273,6 +279,7 @@
             <Japanese>電子聴覚保護具の着脱</Japanese>
             <Russian>Надеть/снять электронную защиту слуха</Russian>
             <French>Mettre/enlever une protection auditive électronique</French>
+            <Italian>Inserisci/Rimuovi la protezione uditiva elettronica</Italian>
             <Korean>전자 청력 보호구 토글</Korean>
             <Chinesesimp>戴上/摘下降噪耳机</Chinesesimp>
         </Key>
@@ -385,6 +392,7 @@
             <Korean>폭발로 인한 청력 상실 정도를 변경합니다.\n0으로 설정하면 폭발에도 청력을 온전히 유지할 수 있습니다.</Korean>
             <Japanese>爆発による聴力低下の程度を変更します。\n0に設定することで爆発による聴力低下を無効化できます。</Japanese>
             <French>Modifie le degré de surdité causé par les explosions.\nLa valeur 0 désactive les dégâts auditifs causés par les explosions.</French>
+            <Italian>Modifica quanto danno all'udito causano le esplosioni.\nSe impostato su 0 le esplosioni non causeranno danni all'udito.</Italian>
             <Chinesesimp>爆炸会导致多大程度的听力损伤.\n设置为0时爆炸将不会导致听力损伤</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_explosionDeafnessCoefficient_DisplayName">
@@ -394,6 +402,7 @@
             <Korean>폭발 난청 계수</Korean>
             <Japanese>爆発による難聴発生係数</Japanese>
             <French>Coefficient de surdité à l'explosion</French>
+            <Italian>Coefficiente di danno da esplosioni</Italian>
             <Chinesesimp>爆炸听力损伤系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Hearing_heavyWeaponUnits">
@@ -444,6 +453,7 @@
             <Japanese>電子聴覚保護</Japanese>
             <Russian>ЭЛЕКТРОННЫЙ</Russian>
             <French>ELECTRONIQUE</French>
+            <Italian>ELETTRONICA</Italian>
             <Korean>전자 청력 보호</Korean>
             <Chinesesimp>降噪耳机</Chinesesimp>
         </Key>
