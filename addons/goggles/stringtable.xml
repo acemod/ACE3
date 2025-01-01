@@ -22,6 +22,7 @@
             <Japanese>ゴーグルのオーバーレイを表示する</Japanese>
             <Korean>고글 오버레이 표시</Korean>
             <French>Afficher la superposition des lunettes</French>
+            <Italian>Mostra Overlay degli Occhiali</Italian>
             <Russian>Показать оверлей очков</Russian>
             <German>Zeige Schutzbrillenoberfläche</German>
         </Key>
@@ -30,7 +31,7 @@
             <Czech>Ukaž Vyčistit brýle v menu Interakce (vlastní)</Czech>
             <French>Afficher l'interaction "Essuyer les lunettes"</French>
             <Spanish>Mostrar limpiar gafas en menú de auto-interacción</Spanish>
-            <Italian>Mostra interazione automatica per la pulizia degli occhiali</Italian>
+            <Italian>Mostra autointerazione per la pulizia degli occhiali</Italian>
             <Polish>Pokaż interakcję Wyczyść Gogle</Polish>
             <Portuguese>Mostra a auto-interação de limpar os óculos</Portuguese>
             <Russian>Показывать действие Протереть очки</Russian>

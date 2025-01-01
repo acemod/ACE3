@@ -981,6 +981,7 @@
             <English>Medic's Equipment First [If medic role]</English>
             <Russian>Сначала медикаменты врача [Если медик]</Russian>
             <French>Équipement de l'infirmier d'abord [Si l'infirmier joue un rôle].</French>
+            <Italian>Prima le risorse del medico [Se ruolo medico]</Italian>
             <German>Ausrüstung des Sanitäters zuerst [Wenn Sanitäter]</German>
             <Japanese>救護者装備を優先 [衛生兵の場合]</Japanese>
             <Korean>치료자의 의료물자 먼저 사용 [의무병일 경우]</Korean>
@@ -3108,6 +3109,7 @@
             <Japanese>アデノシンが使える場所を制御します。</Japanese>
             <Korean>아데노신을 사용할 수 있는 장소를 정합니다.</Korean>
             <French>Contrôle où l'Adénosine peut être utilisée.</French>
+            <Italian>Controlla dove si può usare l'Adenosina.</Italian>
             <Chinesesimp>控制何地能使用腺苷</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_DisplayName">
@@ -3117,6 +3119,7 @@
             <Japanese>アデノシンの使用可能な場所</Japanese>
             <Korean>아데노신 사용 장소</Korean>
             <French>Lieux d'utilisation de l'adénosine</French>
+            <Italian>Luoghi Adenosina</Italian>
             <Chinesesimp>腺苷使用地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
@@ -3184,6 +3187,7 @@
             <Japanese>モルヒネが使える場所を制御します。</Japanese>
             <Korean>모르핀을 사용할 수 있는 장소를 정합니다.</Korean>
             <French>Contrôle où la morphine peut être utilisée.</French>
+            <Italian>Controlla dove si può usare la Morfina.</Italian>
             <Chinesesimp>控制何地能使用吗啡</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_DisplayName">
@@ -3193,6 +3197,7 @@
             <Japanese>モルヒネの使用可能な場所</Japanese>
             <Korean>모르핀 사용 장소</Korean>
             <French>Lieux d'utilisation de la morphine</French>
+            <Italian>Luoghi Morfina</Italian>
             <Chinesesimp>吗啡使用地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
@@ -3235,6 +3240,7 @@
             <Japanese>添え木が使える場所を制御します。</Japanese>
             <Korean>부목을 사용할 수 있는 장소를 정합니다.</Korean>
             <French>Contrôle l'endroit où les attelles peuvent être utilisées.</French>
+            <Italian>Controlla dove si possono applicare Gessature.</Italian>
             <Chinesesimp>控制何地能使用骨折夹板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_DisplayName">
@@ -3244,6 +3250,7 @@
             <Japanese>添え木の使用可能な場所</Japanese>
             <Korean>부목 사용 장소</Korean>
             <French>Emplacement des attelles</French>
+            <Italian>Luoghi Gessature</Italian>
             <Chinesesimp>骨折夹板使用地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
@@ -3332,6 +3339,7 @@
             <Japanese>アデノシンの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Korean>아데노신을 사용하는데 필요한 등급을 정합니다.</Korean>
             <French>Niveau de formation requis pour utiliser l'Adénosine.</French>
+            <Italian>Formazione richiesta per iniettare Adenosina.</Italian>
             <Chinesesimp>使用腺苷所需的医疗水平。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_DisplayName">
@@ -3341,6 +3349,7 @@
             <Japanese>アデノシンの許可</Japanese>
             <Korean>아데노신 사용 허가</Korean>
             <French>Autoriser l'adénosine</French>
+            <Italian>Permetti Adenosina</Italian>
             <Chinesesimp>允许使用腺苷</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
@@ -3412,6 +3421,7 @@
             <Japanese>モルヒネの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Korean>모르핀을 사용하는데 필요한 등급을 정합니다.</Korean>
             <French>Niveau de formation requis pour l'utilisation de la morphine.</French>
+            <Italian>Formazione richiesta per iniettare Morfina.</Italian>
             <Chinesesimp>使用吗啡所需的医疗水平。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
@@ -3421,6 +3431,7 @@
             <Japanese>モルヒネの許可</Japanese>
             <Korean>모르핀 사용 허가</Korean>
             <French>Autoriser la morphine</French>
+            <Italian>Permetti Morfina</Italian>
             <Chinesesimp>允许使用吗啡</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
@@ -3463,6 +3474,7 @@
             <Japanese>添え木の使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Korean>부목을 사용하는데 필요한 등급을 정합니다.</Korean>
             <French>Niveau de formation requis pour l'utilisation de l'attelle.</French>
+            <Italian>Formazione richiesta per applicare Gessature.</Italian>
             <Chinesesimp>使用骨折夹板所需的医疗水平。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_DisplayName">
@@ -3472,6 +3484,7 @@
             <Japanese>添え木の許可</Japanese>
             <Korean>부목 사용 허가</Korean>
             <French>Accès aux attelles</French>
+            <Italian>Permetti Gessature</Italian>
             <Chinesesimp>允许使用骨折夹板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
@@ -3645,6 +3658,7 @@
             <Japanese>脈拍の確認アクションから得られる情報が数値化されるようになる医療レベルを設定します</Japanese>
             <Korean>설정에 따라 맥박 확인 행동을 통해 숫자로 표시된 값을 제공합니다.</Korean>
             <French>L'action de vérification du pouls fournit une valeur numérique, en fonction de vos paramètres.</French>
+            <Italian>L'azione di controllare il polso darà un risultato numerico a seconda di questo settaggio.</Italian>
             <Chinesesimp>检查心率后会显示心率数值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
@@ -3654,6 +3668,7 @@
             <Japanese>脈拍の数値化</Japanese>
             <Korean>맥박 수치</Korean>
             <French>Pouls numérique</French>
+            <Italian>Frequenza Cardiaca Numerica</Italian>
             <Chinesesimp>显示心率数值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
