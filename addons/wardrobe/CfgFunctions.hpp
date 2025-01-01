@@ -9,7 +9,6 @@ class CfgFunctions
             class postInit { postInit = 1; };
 
             class isModifiable {};
-
             class compare_components {};
             class canModifyTo {};
         };
@@ -28,7 +27,6 @@ class CfgFunctions
             class getItems_all {};
             class getItems_modifiable_all {};
             class getItems_modifiable_current {};
-            
             class getItems_modifiableTo {};
             
         };
@@ -50,7 +48,6 @@ class CfgFunctions
             class addActions {};
             class addActions_condition {};
             class addActions_children {};
-
             class getAction_Name {};
             class getAction_Icon {};
         };
@@ -60,12 +57,9 @@ class CfgFunctions
             file = PATH_TO_FUNC_SUB(cache);
 
             class cache_db {};
-
             class cache_get {};
             class cache_set {};
-
             class cache_clear {};
-
             class clearOnClosed_InteractionMenu {};
             class clearOnClosed_Inventory {};
         };
@@ -73,18 +67,21 @@ class CfgFunctions
         class config
         {
             file = PATH_TO_FUNC_SUB(config);
+
             class getCfgDataRandom {};
         };
 
         class debug
         {
             file = PATH_TO_FUNC_SUB(debug);
+
             class getAllWardrobeItems {};
         };
 
         class effects
         {
             file = PATH_TO_FUNC_SUB(effects);
+            
             class say3d {};
         };
     };
