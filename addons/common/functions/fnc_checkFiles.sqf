@@ -137,26 +137,28 @@ if (hasInterface) then {
     };
 
     // Check for correct hash
-    if (isFilePatchingEnabled) exitWith {};
-    {
-        private _extName = configName _x;
-        private _extensionType = "dll";
-        if (productVersion select 7 == "x64") then { _extensionType = format ["%1_x64", _extensionType]; };
-        private _expectedHash = getText (_x >> _extensionType);
-
-        private _extensionHash = "";
+    if (GVAR(checkExtensions)) then {
         {
-            if ((_x getOrDefault ["name", ""]) == _extName) exitWith {
-                _extensionHash = _x getOrDefault ["hash", ""];
-            };
-        } forEach allExtensions;
+            private _extName = configName _x;
+            private _extensionType = "dll";
+            if (productVersion select 7 == "x64") then { _extensionType = format ["%1_x64", _extensionType]; };
+            private _expectedHash = getText (_x >> _extensionType);
 
-        if (_extensionHash != _expectedHash) then {
-            private _errorMsg = format ["Extension %1 wrong version [%2 vs %3].", _extName, _extensionHash, _expectedHash];
-            ERROR(_errorMsg);
-            ["[ACE] ERROR", _errorMsg] call FUNC(errorMessage);
-        };
-    } forEach ("true" configClasses (configFile >> "ACE_ExtensionsHashes"));
+            private _extensionHash = "";
+            {
+                if ((_x getOrDefault ["name", ""]) == _extName) exitWith {
+                    _extensionHash = _x getOrDefault ["hash", ""];
+                };
+            } forEach allExtensions;
+            TRACE_3("",_extName,_expectedHash,_extensionHash);
+
+            if (_extensionHash != _expectedHash) then {
+                private _errorMsg = format ["Extension %1 wrong version [%2 vs %3].", _extName, _extensionHash, _expectedHash];
+                ERROR(_errorMsg);
+                ["[ACE] ERROR", _errorMsg] call FUNC(errorMessage);
+            };
+        } forEach ("true" configClasses (configFile >> "ACE_ExtensionsHashes"));
+    };
 };
 
 ///////////////
