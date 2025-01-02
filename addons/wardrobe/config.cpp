@@ -23,13 +23,9 @@ class CfgPatches {
 #include "CfgFunctions.hpp"
 #include "XEH\CfgXEH.hpp"
 
+#include "CfgVehicles.hpp"
+#include "CfgSounds.hpp"
+
 #include "Baseclass.hpp"
 
-#include "CfgVehicles.hpp"
-
-class CfgWeapons
-{
-    #include "compat_vanilla\Uniforms.hpp"
-};
-
-#include "CfgSounds.hpp"
+#include "compat_vanilla\Wardrobe.hpp"
