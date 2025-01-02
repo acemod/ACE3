@@ -4,41 +4,33 @@
 class None;
 class G_WirelessEarpiece_base_F;
 class G_EyeProtectors_base_F;
-class G_Sport_Blackred;
-
 
 // Common Components
 class G_Lowprofile : None { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Balaclava_lowprofile" }; components[] = {"G_Lowprofile"}; }; };
-class G_Combat : None { class PVAR(wardrobe) : EGVAR(wardrobe,base)  { modifiableTo[] = { "G_Balaclava_combat"), "G_Balaclava_TI_G_blk_F"), "G_Balaclava_TI_G_tna_F") }; components[] = {"G_Combat"}; }; };
+class G_Combat : None { class PVAR(wardrobe) : EGVAR(wardrobe,base)  { modifiableTo[] = { "G_Balaclava_combat", "G_Balaclava_TI_G_blk_F", "G_Balaclava_TI_G_tna_F" }; components[] = {"G_Combat"}; }; };
 
 class G_Aviator : None { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Bandanna_aviator" }; components[] = {"G_Aviator"}; }; };
 class G_Shades_Black : None { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Bandanna_shades" }; components[] = {"G_Shades_Black"}; }; };
 
+
 // Balaclava, black
-class G_Balaclava_blk : None { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Balaclava_lowprofile"), "G_Balaclava_combat") }; components[] = {"G_Balaclava_blk"}; }; };
+class G_Balaclava_blk : None { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Balaclava_lowprofile", "G_Balaclava_combat" }; components[] = {"G_Balaclava_blk"}; }; };
 class G_Balaclava_combat : G_Balaclava_blk { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Balaclava_blk" }; components[] = {"G_Balaclava_blk","G_Combat"}; }; };
 class G_Balaclava_lowprofile : G_Balaclava_blk { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Balaclava_blk" }; components[] = {"G_Balaclava_blk","G_Lowprofile"}; }; };
-
 
 // Stealth Balaclava, black
 class G_Balaclava_TI_blk_F : None { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Balaclava_TI_G_blk_F" }; components[] = {"G_Balaclava_TI_blk_F"}; }; };
 class G_Balaclava_TI_G_blk_F : G_Balaclava_TI_blk_F { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Balaclava_TI_blk_F" }; components[] = {"G_Balaclava_TI_blk_F","G_Combat"}; }; };
 
-
 // Stealth Balaclava, green(tanoa)
 class G_Balaclava_TI_tna_F : G_Balaclava_TI_blk_F { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Balaclava_TI_G_tna_F" }; components[] = {"G_Balaclava_TI_tna_F"}; }; };
 class G_Balaclava_TI_G_tna_F : G_Balaclava_TI_tna_F { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Balaclava_TI_tna_F" }; components[] = {"G_Balaclava_TI_tna_F","G_Combat"}; }; };
 
-
-
 // Bandana, Black
 G_Bandanna_blk : G_Balaclava_blk { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Bandanna_aviator" }; components[] = {"G_Bandanna_blk"}; }; };
-
 G_Bandanna_shades : G_Bandanna_blk { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Bandanna_blk", "G_Shades_Black" }; components[] = {"G_Shades_Black", "G_Bandanna_blk"}; }; };
 G_Bandanna_sport : G_Bandanna_shades { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Bandanna_blk", "G_Sport_Blackred" }; components[] = {"G_Sport_Blackred", "G_Bandanna_blk"}; }; };
 G_Bandanna_aviator : G_Bandanna_shades { class PVAR(wardrobe) : EGVAR(wardrobe,base) { modifiableTo[] = { "G_Bandanna_blk", "G_Aviator" }; components[] = {"G_Aviator", "G_Bandanna_blk"}; }; };
-
-
 
 
 // Eye Protector
