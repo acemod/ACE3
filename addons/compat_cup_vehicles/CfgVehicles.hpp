@@ -324,6 +324,7 @@ class CfgVehicles {
         };
     };
     class CUP_GAZ_Vodnik_Base: Wheeled_APC_F {
+        EGVAR(vehicle_damage,engineDetonationProb) = 0;
         EGVAR(vehicle_damage,engineFireProb) = 0.1;
     };
     class CUP_GAZ_Vodnik_AGS_Base: CUP_GAZ_Vodnik_Base {
