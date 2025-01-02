@@ -26,15 +26,6 @@ if (_replaceNow) then { _duration = 0; };
 [ _unit, getText (_cfg_tgt >> Q(ADDON) >> "gesture") ] call ace_common_fnc_doGesture;
 
 
-// Remove / Add Missing/Surplus Items.
-
-[_cfg_origin, _cfg_tgt] call FUNC(compare_components) params ["_missing", "_surplus"];
-{
-    if (configName _cfg_tgt != _x) then { [_unit, _x, true] call CBA_fnc_addItem; };
-} forEach _surplus;   
-{
-    if (configName _cfg_origin != _x) then { [_unit, _x] call CBA_fnc_removeItem; };
-} forEach _missing;
 
 
 // Replace the Main Item.
@@ -48,15 +39,25 @@ private _replaceCode = switch ( _typeNumber ) do {
     default {
         // CfgGlasses items do not have a ItemInfo Subclass and therefore, not TypeNumber.
         switch (true) do {
-            case ("CfgGlasses" in str _cfg_origin) : { FUNC(replace_facewear) };
+            case (isClass (configFile >> "CfgGlasses" >> configName _cfg_origin)) : { FUNC(replace_facewear) };
             default { false };
         };
     };
 };
 
+
 if (_replaceCode isEqualType true) exitWith {ZRN_LOG_MSG_2(replacecode undefined,_typeNumber,_replaceCode);};
 
 [ _replaceCode,        [_unit, _cfg_origin, _cfg_tgt, _additionalParams ],  _duration * 1.0 ] call CBA_fnc_waitAndExecute;
+
+// Remove / Add Missing/Surplus Items.
+[_cfg_origin, _cfg_tgt] call FUNC(compare_components) params ["_missing", "_surplus"];
+{
+    if (configName _cfg_tgt != _x) then { [_unit, _x, true] call CBA_fnc_addItem; };
+} forEach _surplus;   
+{
+    if (configName _cfg_origin != _x) then { [_unit, _x] call CBA_fnc_removeItem; };
+} forEach _missing;
 
 
 // Plays Random Sound At the Beginning
