@@ -4,7 +4,7 @@
  * Produces a casing matching the reloaded and dropped magazine
  *
  * Arguments:
- * 0: unit - Object the event handler is assigned to <OBJECT>
+ * 0: unit - Object the reloaded event handler is assigned to <OBJECT>
  * 4: Old magazine (can be nil) - <ARRAY>
  *
  * Return Value:
@@ -33,7 +33,7 @@ private _modelPath = GVAR(cachedMagazines) getOrDefaultCall [_mag, {
 
 if (_modelPath isEqualTo "") exitWith {};
 
-private _unitPos = getposASL _unit;
+private _unitPos = getPosASL _unit;
 private _weapDir = _unit weaponDirection currentWeapon _unit;
 private _ejectDir = _weapDir vectorCrossProduct [0, 0, 1];
 private _pos = _unitPos
