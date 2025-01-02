@@ -27,20 +27,35 @@ if (_replaceNow) then { _duration = 0; };
 
 
 // Remove / Add Missing/Surplus Items.
+
 [_cfg_origin, _cfg_tgt] call FUNC(compare_components) params ["_missing", "_surplus"];
-{ [_unit, _x, true] call CBA_fnc_addItem; } forEach _surplus;
-{ [_unit, _x] call CBA_fnc_removeItem;    } forEach _missing;
+{
+    if (configName _cfg_tgt != _x) then { [_unit, _x, true] call CBA_fnc_addItem; };
+} forEach _surplus;   
+{
+    if (configName _cfg_origin != _x) then { [_unit, _x] call CBA_fnc_removeItem; };
+} forEach _missing;
 
 
 // Replace the Main Item.
 private _additionalParams = "";
-private _replaceCode = switch ( getNumber (_cfg_origin >> "ItemInfo" >> "type") ) do {
-    case TYPE_GOGGLE:   {                                 FUNC(replace_facewear) };
+private _typeNumber = getNumber (_cfg_origin >> "ItemInfo" >> "type");
+private _replaceCode = switch ( _typeNumber ) do {
     case TYPE_HEADGEAR: {                                 FUNC(replace_headgear) };
     case TYPE_UNIFORM:  { _additionalParams = "UNIFORM";  FUNC(replace_uniform)  };
     case TYPE_VEST:     { _additionalParams = "VEST";     FUNC(replace_uniform)  };
     case TYPE_BACKPACK: { _additionalParams = "BACKPACK"; FUNC(replace_uniform)  };
+    default {
+        // CfgGlasses items do not have a ItemInfo Subclass and therefore, not TypeNumber.
+        switch (true) do {
+            case ("CfgGlasses" in str _cfg_origin) : { FUNC(replace_facewear) };
+            default { false };
+        };
+    };
 };
+
+if (_replaceCode isEqualType true) exitWith {ZRN_LOG_MSG_2(replacecode undefined,_typeNumber,_replaceCode);};
+
 [ _replaceCode,        [_unit, _cfg_origin, _cfg_tgt, _additionalParams ],  _duration * 1.0 ] call CBA_fnc_waitAndExecute;
 
 

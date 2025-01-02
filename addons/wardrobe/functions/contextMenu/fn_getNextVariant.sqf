@@ -47,7 +47,8 @@ private _return = if (count _remaining > 0) then {
 } else {
     _history_cfg = []; // _history_cfg select { !(_x in _modifiableTo_cfg) };
     missionNamespace setVariable [QGVAR(variant_history_cfg), [] ];
-    selectRandom _modifiableTo_cfg
+    _history_cfg pushBackUnique _cfg_current;
+    selectRandom _modifiableTo_cfg;
 };
 
 _history_cfg pushBackUnique _return;
