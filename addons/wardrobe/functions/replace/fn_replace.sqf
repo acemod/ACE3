@@ -15,11 +15,12 @@
 * Public: No
 */
 
-params ["_target", "_unit", "_actionParams"];
+params ["_target", "_unit", "_actionParams", ["_replaceNow", false, [true]]];
 _actionParams params ["_cfg_origin", "_cfg_tgt"];
 
 // Duration of the "animation"
 private _duration = getNumber (_cfg_tgt>> Q(ADDON) >> "duration");
+if (_replaceNow) then { _duration = 0; };
 
 // Animation/Gestures
 [ _unit, getText (_cfg_tgt >> Q(ADDON) >> "gesture") ] call ace_common_fnc_doGesture;

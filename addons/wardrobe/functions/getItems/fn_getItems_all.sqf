@@ -16,15 +16,16 @@
 */
 
 params [
-    ["_player",   objNull,    [objNull]]
+    ["_unit",   objNull,    [objNull]],
+    ["_cache",    true,       [true]   ]
 ];
 
 
-// Cleanup Cache once the interaction menu is closed
-["items_all"] call FUNC(clearOnClosed_InteractionMenu);
-[
-    "items_all",
-    {
-        flatten getUnitLoadout _player select { _x isEqualType "" && { _x != ""}};
-    }
-] call FUNC(cache_get);
+private _code = { flatten getUnitLoadout _unit select { _x isEqualType "" && { _x != ""}}; };
+
+private _caching = {
+    ["items_all"] call FUNC(clearOnClosed_InteractionMenu);
+    ["items_all", _code] call FUNC(cache_get);   // returns the result
+};
+
+if (_cache) then _caching else _code;

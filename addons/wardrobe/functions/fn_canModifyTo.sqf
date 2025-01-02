@@ -15,10 +15,10 @@
 * Public: No
 */
 
-params ["_unit", "_cfg_origin", "_cfg_target"];
+params ["_unit", "_cfg_origin", "_cfg_target", ["_cache", true, [true]]];
 
 [_cfg_origin, _cfg_target] call FUNC(compare_components) params ["_missing", "_surplus"];
 
-private _currentItems = [_unit] call FUNC(getItems_all);
+private _currentItems = [_unit, _cache] call FUNC(getItems_all);
 
 count ( _missing select { ! (_x in _currentItems) } ) == 0

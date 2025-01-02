@@ -16,7 +16,8 @@
 */
 
 params [
-    ["_unit",   objNull,    [objNull]]
+    ["_unit",   objNull,    [objNull]],
+    ["_cache",    true,       [true]   ]
 ];
 
 
@@ -43,11 +44,9 @@ private _code = {
     { count (_x#1) > 0 }
 };
 
+private _caching = {
+    ["items_modifiable_all"] call FUNC(clearOnClosed_InteractionMenu);
+    ["items_modifiable_all", _code] call FUNC(cache_get);   // returns the result
+};
 
-
-// Cleanup Cache once the interaction menu is closed
-["items_modifiable_all"] call FUNC(clearOnClosed_InteractionMenu);
-[
-    "items_modifiable_all",
-    _code
-] call FUNC(cache_get);
+if (_cache) then _caching else _code;

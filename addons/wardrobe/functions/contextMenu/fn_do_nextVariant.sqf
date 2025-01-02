@@ -23,7 +23,7 @@ private _cfg_tgt = [ _current_cfg ] call FUNC(getNextVariant);
 
 if (_cfg_tgt isEqualTo false) exitWith { diag_log format ['[CVO](debug)(fn_do_nextVariant) "": %1', ""]; };
 
-private _canModifyTo = [_unit, _current_cfg, _cfg_tgt] call FUNC(canModifyTo);
+private _canModifyTo = [_unit, _current_cfg, _cfg_tgt, false] call FUNC(canModifyTo);
 
 if !(_canModifyTo) exitWith {
     // error hint to player: cannot switch to next variant, try again
@@ -31,10 +31,10 @@ if !(_canModifyTo) exitWith {
     [
         ["Can not switch to:"],
         [getText (_cfg_tgt >> "displayName")],
-        ["Due to missing components"],
+        ["missing components"],
         true
     ] call CBA_fnc_notify;
 }; 
 
 
-[_unit, _unit, [_current_cfg, _cfg_tgt]] call FUNC(replace); 
+[_unit, _unit, [_current_cfg, _cfg_tgt], true] call FUNC(replace); 
