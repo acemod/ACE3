@@ -42,9 +42,9 @@ if (isNull (ACE_controlledUAV param [0, objNull])) then {
 TRACE_2("",_currentShooter,_currentWeapon);
 private _currentWeaponCfg = configFile >> "CfgWeapons" >> _currentWeapon;
 if (
-    (getNumber (_currentWeaponCfg  >> "laser") == 0) && 
-    { 
-        !(_currentShooter getVariable [QGVAR(hasLaserSpotTracker), false])  && 
+    (getNumber (_currentWeaponCfg  >> "laser") == 0) &&
+    {
+        !(_currentShooter getVariable [QGVAR(hasLaserSpotTracker), false])  &&
         {(getNumber (_currentWeaponCfg >> QGVAR(canSelect))) == 0}
     }
 ) exitWith {false};

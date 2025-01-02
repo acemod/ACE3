@@ -44,8 +44,8 @@ GVAR(outputPFH) = [{
     private _dagrGrid = format ["%1 %2", (_gridArrayX select [0,4]), (_gridArrayY select [0,4])];
 
     // WP Grid
-    private _xGrid2 = floor (DAGR_WP_INFO / 10000);
-    private _yGrid2 = DAGR_WP_INFO - _xGrid2 * 10000;
+    private _xGrid2 = floor (GVAR(wp_info) / 10000);
+    private _yGrid2 = GVAR(wp_info) - _xGrid2 * 10000;
 
     private _xCoord2 = switch true do {
         case (_xGrid2 >= 1000): { "" + str(_xGrid2) };
@@ -61,7 +61,7 @@ GVAR(outputPFH) = [{
         default             { "000" + str(_yGrid2) };
     };
 
-    _dagrGrid2 = _xCoord2 + " " + _yCoord2;
+    private _dagrGrid2 = _xCoord2 + " " + _yCoord2;
 
     // Distance
     private _WPpos = [_dagrGrid2, true] call EFUNC(common,getMapPosFromGrid);
