@@ -56,20 +56,9 @@ if (!isNil "_currentButtonInPosition") then {
 };
 
 // If spot found, add items and return position
-private _cfgWeapons = configFile >> "CfgWeapons";
-private _cfgMagazines = configFile >> "CfgMagazines";
-private _configItemInfo = "";
+// Sanitize to configCase and drop anything that's not a misc item
+_items = _items apply {_x call EFUNC(common,getConfigName)} select {_x call FUNC(isMiscItem)};
 
-_items = _items select {
-    _configItemInfo = _cfgWeapons >> _x >> "ItemInfo";
-
-    _x isKindOf ["CBA_MiscItem", _cfgWeapons] && {getNumber (_configItemInfo >> "type") in [TYPE_MUZZLE, TYPE_OPTICS, TYPE_FLASHLIGHT, TYPE_BIPOD]} ||
-    {getNumber (_configItemInfo >> "type") in [TYPE_FIRST_AID_KIT, TYPE_MEDIKIT, TYPE_TOOLKIT]} ||
-    {getText (_cfgWeapons >> _x >> "simulation") == "ItemMineDetector"} ||
-    {getNumber (_cfgMagazines >> _x >> "ACE_isUnique") == 1} ||
-    {getNumber (_cfgMagazines >> _x >> "ACE_asItem") == 1}
-};
-
-GVAR(customRightPanelButtons) set [_position, [_items apply {_x call EFUNC(common,getConfigName)}, _picture, _tooltip, _moveOnOverwrite]];
+GVAR(customRightPanelButtons) set [_position, [_items, _picture, _tooltip, _moveOnOverwrite]];
 
 _position

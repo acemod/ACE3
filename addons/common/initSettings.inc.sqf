@@ -103,6 +103,16 @@ private _categorySway = [_category, LSTRING(subcategory_sway)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(magneticDeclination),
+    "CHECKBOX",
+    [LSTRING(magneticDeclination), LSTRING(magneticDeclinationooltip)],
+    _category,
+    false,
+    1,
+    {call FUNC(getMagneticBearingOffset)}
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(enableSway),
     "CHECKBOX",
     [LSTRING(enableSway), LSTRING(enableSway_Description)],

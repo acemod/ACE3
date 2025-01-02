@@ -7,6 +7,7 @@
     if ((GVAR(enabledFor) == 1) && {!isServer} && {hasInterface}) exitWith {}; // 1: Don't Run on non-hc Clients
 
     ["ace_firedNonPlayer", {
+        //IGNORE_PRIVATE_WARNING ["_unit"];
         _unit setVariable [QGVAR(lastFired), CBA_missionTime];
     }] call CBA_fnc_addEventHandler;
 

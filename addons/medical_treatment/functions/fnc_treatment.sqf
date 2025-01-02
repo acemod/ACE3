@@ -49,7 +49,7 @@ if (_treatmentTime == 0) exitWith {false};
 private _userAndItem = if (GET_NUMBER_ENTRY(_config >> "consumeItem") == 1) then {
     [_medic, _patient, getArray (_config >> "items")] call FUNC(useItem);
 } else {
-    [objNull, ""]; // Treatment does not require items to be consumed
+    [objNull, "", false]; // Treatment does not require items to be consumed
 };
 
 _userAndItem params ["_itemUser", "_usedItem", "_createLitter"];
@@ -97,7 +97,7 @@ if (_medic isNotEqualTo player || {!_isInZeus}) then {
     };
 
     // Play treatment animation for medic and determine the ending animation
-    if (vehicle _medic == _medic && {_medicAnim != ""}) then {
+    if (isNull objectParent _medic && {_medicAnim != ""}) then {
         // Speed up animation based on treatment time (but cap max to prevent odd animiations/cam shake)
         private _animRatio = _animDuration / _treatmentTime;
         TRACE_3("setAnimSpeedCoef",_animRatio,_animDuration,_treatmentTime);

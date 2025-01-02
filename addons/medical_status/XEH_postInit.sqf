@@ -3,13 +3,15 @@
 // Handle pain changes on injury
 [QEGVAR(medical,injured), LINKFUNC(adjustPainLevel)] call CBA_fnc_addEventHandler;
 
+// Update wound bleeding on injury
+[QEGVAR(medical,injured), LINKFUNC(updateWoundBloodLoss)] call CBA_fnc_addEventHandler;
 
 // Add inventory and open backpack actions to units
 [QGVAR(addInventoryActions), LINKFUNC(addInventoryActions)] call CBA_fnc_addEventHandler;
 // apply to all living and dead now
 {
     [QGVAR(addInventoryActions), _x] call CBA_fnc_localEvent;
-} forEach (allUnits + allDeadMen); 
+} forEach (allUnits + allDeadMen);
 // apply to all future units
 ["CAManBase", "init", LINKFUNC(addInventoryActions), true, [], false] call CBA_fnc_addClassEventHandler;
 // Respawn is called locally

@@ -26,7 +26,7 @@ if (GVAR(Protractor)) exitWith {
     true
 };
 if (weaponLowered ACE_player) exitWith { false };
-if (vehicle ACE_player != ACE_player) exitWith { false };
+if (!isNull objectParent ACE_player) exitWith { false };
 if (currentWeapon ACE_player != primaryWeapon ACE_player) exitWith { false };
 
 2 cutText ["", "PLAIN"];
