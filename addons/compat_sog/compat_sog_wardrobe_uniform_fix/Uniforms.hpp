@@ -4,6 +4,7 @@ class ItemInfo;
 class className: vn_b_uniform_base {\
     class ItemInfo: ItemInfo {\
         containerClass = "Supply70";\
+        mass = 70;\
     };\
 };
 
