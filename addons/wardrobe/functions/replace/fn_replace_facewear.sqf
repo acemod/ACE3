@@ -15,9 +15,6 @@
 * Public: No
 */
 
-ZRN_LOG_MSG_1(init,_this);
-
 params ["_player", "_cfg_origin", "_cfg_tgt"];
-
 removeGoggles _player;
 _player addGoggles configName _cfg_tgt;

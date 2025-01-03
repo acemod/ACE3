@@ -15,4 +15,4 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
-#include "\z\ace\addons\wardrobe\script_macros_zrn.hpp"
+#include "\z\ace\addons\wardrobe\script_macros_wardrobe.hpp"

@@ -46,7 +46,7 @@ private _replaceCode = switch ( _typeNumber ) do {
 };
 
 
-if (_replaceCode isEqualType true) exitWith {ZRN_LOG_MSG_2(replacecode undefined,_typeNumber,_replaceCode);};
+if (_replaceCode isEqualType false) exitWith {ERROR_2(replacecode undefined,_typeNumber,_replaceCode);};
 
 [ _replaceCode,        [_unit, _cfg_origin, _cfg_tgt, _additionalParams ],  _duration * 1.0 ] call CBA_fnc_waitAndExecute;
 
