@@ -22,12 +22,6 @@ _actionParams params ["_cfg_origin", "_cfg_tgt"];
 private _duration = getNumber (_cfg_tgt>> Q(ADDON) >> "duration");
 if (_replaceNow) then { _duration = 0; };
 
-// Animation/Gestures
-[ _unit, getText (_cfg_tgt >> Q(ADDON) >> "gesture") ] call ace_common_fnc_doGesture;
-
-
-
-
 // Replace the Main Item.
 private _additionalParams = "";
 private _typeNumber = getNumber (_cfg_origin >> "ItemInfo" >> "type");
@@ -45,8 +39,7 @@ private _replaceCode = switch ( _typeNumber ) do {
     };
 };
 
-
-if (_replaceCode isEqualType false) exitWith {ERROR_2(replacecode undefined,_typeNumber,_replaceCode);};
+if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,configName _cfg_origin); };
 
 [ _replaceCode,        [_unit, _cfg_origin, _cfg_tgt, _additionalParams ],  _duration * 1.0 ] call CBA_fnc_waitAndExecute;
 
@@ -59,6 +52,9 @@ if (_replaceCode isEqualType false) exitWith {ERROR_2(replacecode undefined,_typ
     if (configName _cfg_origin != _x) then { [_unit, _x] call CBA_fnc_removeItem; };
 } forEach _missing;
 
+
+// Animation/Gestures
+[ _unit, getText (_cfg_tgt >> Q(ADDON) >> "gesture") ] call ace_common_fnc_doGesture;
 
 // Plays Random Sound At the Beginning
 private _sound_timing = getNumber (_cfg_tgt>> Q(ADDON) >> "sound_timing") max 0 min 1;
