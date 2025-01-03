@@ -1209,5 +1209,8 @@
             <Turkish>Zamanlayıcı</Turkish>
             <Hungarian>Időzítő</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Explosives_apersToePopper">
+            <English>APERS Mine (Toe-Popper)</English>
+        </Key>
     </Package>
 </Project>
