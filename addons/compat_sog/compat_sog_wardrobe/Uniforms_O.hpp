@@ -2,12 +2,12 @@ class vn_o_uniform_base;
 
 #define UNIFORM_BASE_O(class1,class2)\
 class class1: vn_o_uniform_base {\
-    class ace_wardrobe : EGVAR(wardrobe,base_U_sleeves_down) {\
+    class ace_wardrobe: EGVAR(wardrobe,base_U_sleeves_down) {\
         modifiableTo[] = { Q(class2) };\
     };\
 };\
 class class2: vn_o_uniform_base {\
-    class ace_wardrobe : EGVAR(wardrobe,base_U_sleeves_up) {\
+    class ace_wardrobe: EGVAR(wardrobe,base_U_sleeves_up) {\
         modifiableTo[] = { Q(class1) };\
     };\
 };

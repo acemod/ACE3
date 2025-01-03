@@ -1,8 +1,8 @@
 class ItemInfo;
 
 #define S_70(className)\
-class className : vn_b_uniform_base {\
-    class ItemInfo : ItemInfo {\
+class className: vn_b_uniform_base {\
+    class ItemInfo: ItemInfo {\
         containerClass = "Supply70";\
     };\
 };
