@@ -6,8 +6,8 @@
 
 
 #define HELMET_VARIANT(color)\
-class CN(color): H_HelmetHeavy_Black_RF { class ace_wardrobe: EGVAR(wardrobe,base_H_visor_down) { modifiableTo[] = { Q(CN_VU(color)) }; }; };\
-class CN_VU(color): H_HelmetHeavy_VisorUp_Black_RF { class ace_wardrobe: EGVAR(wardrobe,base_H_visor_up){ modifiableTo[] = { Q(CN(color)) }; }; };\
+class CN(color): H_HelmetHeavy_Black_RF { class ace_wardrobe: EGVAR(wardrobe,base_H_visor_down) { modifiableTo[] = { QUOTE(CN_VU(color)) }; }; };\
+class CN_VU(color): H_HelmetHeavy_VisorUp_Black_RF { class ace_wardrobe: EGVAR(wardrobe,base_H_visor_up){ modifiableTo[] = { QUOTE(CN(color)) }; }; };\
 
 
 // Base Classes

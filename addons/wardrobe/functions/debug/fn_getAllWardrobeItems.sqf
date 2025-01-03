@@ -18,6 +18,6 @@
 params [["_asConfig", false, [true]]];
 
 [
-    ["CfgWeapons", "CfgGlasses"] apply { ( Q([_x] call FUNC(isModifiable)) configClasses (configFile >> _x) ) apply { configName _x } },
-    ["CfgWeapons", "CfgGlasses"] apply { ( Q([_x] call FUNC(isModifiable)) configClasses (configFile >> _x) ) }    
+    ["CfgWeapons", "CfgGlasses"] apply { ( QUOTE([_x] call FUNC(isModifiable)) configClasses (configFile >> _x) ) apply { configName _x } },
+    ["CfgWeapons", "CfgGlasses"] apply { ( QUOTE([_x] call FUNC(isModifiable)) configClasses (configFile >> _x) ) }    
 ] select _asConfig

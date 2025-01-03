@@ -2,7 +2,7 @@
 
 // MACROS
 #define CN(version,color) lxWS_H_turban_##version##_##color
-#define QCN(version,color) Q(CN(version,color))
+#define QCN(version,color) QUOTE(CN(version,color))
 
 #define COLORGROUP(COLOR)\
 class CN(01,COLOR): lxWS_H_turban_01_black {\

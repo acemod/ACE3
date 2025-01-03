@@ -19,7 +19,7 @@ params ["_target", "_unit", "_actionParams", ["_replaceNow", false, [true]]];
 _actionParams params ["_cfg_origin", "_cfg_tgt"];
 
 // Duration of the "animation"
-private _duration = getNumber (_cfg_tgt>> Q(ADDON) >> "duration");
+private _duration = getNumber (_cfg_tgt>> QADDON >> "duration");
 if (_replaceNow) then { _duration = 0; };
 
 // Replace the Main Item.
@@ -33,7 +33,7 @@ private _replaceCode = switch ( _typeNumber ) do {
     default {
         // CfgGlasses items do not have a ItemInfo Subclass and therefore, not TypeNumber.
         switch (true) do {
-            case (isclass (configFile >> "CfgGlasses" >> configName _cfg_origin)): { FUNC(replace_facewear) };
+            case (isClass (configFile >> "CfgGlasses" >> configName _cfg_origin)): { FUNC(replace_facewear) };
             default { false };
         };
     };
@@ -54,11 +54,11 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 
 
 // Animation/Gestures
-[ _unit, getText (_cfg_tgt >> Q(ADDON) >> "gesture") ] call ace_common_fnc_doGesture;
+[ _unit, getText (_cfg_tgt >> QADDON >> "gesture") ] call ace_common_fnc_doGesture;
 
 // Plays Random Sound At the Beginning
-private _sound_timing = getNumber (_cfg_tgt>> Q(ADDON) >> "sound_timing") max 0 min 1;
-private _sound = [_cfg_tgt >> Q(ADDON) >> "sound"] call FUNC(getCfgDataRandom);
+private _sound_timing = getNumber (_cfg_tgt>> QADDON >> "sound_timing") max 0 min 1;
+private _sound = [_cfg_tgt >> QADDON >> "sound"] call FUNC(getCfgDataRandom);
 if (_sound != "") then { [ CBA_fnc_globalEvent, [QGVAR(EH_say3d), [_unit, _sound]], _sound_timing * _duration ] call CBA_fnc_waitAndExecute; };
 
 

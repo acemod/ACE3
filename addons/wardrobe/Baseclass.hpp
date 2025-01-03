@@ -1,4 +1,4 @@
-#define CN_SOUND(base,dur) Q(TRIPLES(ADDON,base,dur))
+#define CN_SOUND(base,dur) QUOTE(TRIPLES(ADDON,base,dur))
 
 class GVAR(base) {
     modifiableTo[] = {""};

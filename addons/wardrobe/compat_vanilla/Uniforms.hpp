@@ -5,12 +5,12 @@ class Uniform_Base;
 #define UNIFORM_BASE(class1,class2)\
 class class1: Uniform_Base {\
     class ace_wardrobe: EGVAR(wardrobe,base_U_sleeves_down) {\
-        modifiableTo[] = { Q(class2) };\
+        modifiableTo[] = { QUOTE(class2) };\
     };\
 };\
 class class2: Uniform_Base {\
     class ace_wardrobe: EGVAR(wardrobe,base_U_sleeves_up) {\
-        modifiableTo[] = { Q(class1) };\
+        modifiableTo[] = { QUOTE(class1) };\
     };\
 };
 
