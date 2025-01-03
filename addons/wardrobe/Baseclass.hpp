@@ -1,7 +1,6 @@
 #define CN_SOUND(base,dur) Q(TRIPLES(ADDON,base,dur))
 
-class GVAR(base) 
-{
+class GVAR(base) {
     modifiableTo[] = {""};
     // ## WIP ##
     // describes the components of the current item.

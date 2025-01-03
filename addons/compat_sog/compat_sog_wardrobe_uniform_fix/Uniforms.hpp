@@ -7,8 +7,7 @@ class className: vn_b_uniform_base {\
     };\
 };
 
-class CfgWeapons
-{
+class CfgWeapons {
     class vn_b_uniform_base;
 
     S_70(vn_b_uniform_macv_04_01)

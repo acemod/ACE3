@@ -6,8 +6,7 @@ class EGVAR(wardrobe,base_H_visor_down);
 class EGVAR(wardrobe,base_U_sleeves_up);
 class EGVAR(wardrobe,base_U_sleeves_down);
 
-class CfgWeapons
-{
+class CfgWeapons {
     // Base Classes
     class vn_b_headgear_base;
     class vn_o_headgear_base;

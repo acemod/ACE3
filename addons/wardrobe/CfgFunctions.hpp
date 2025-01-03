@@ -2,8 +2,7 @@ class CfgFunctions
 {
     class ADDON
     {
-        class COMPONENT
-        {
+        class COMPONENT {
             file = PATH_TO_FUNC;
 
             class postInit { postInit = 1; };
@@ -13,16 +12,14 @@ class CfgFunctions
             class canModifyTo {};
         };
 
-        class ace_intel
-        {
+        class ace_intel {
             file = PATH_TO_FUNC_SUB(ace_intel);
             class getMagIDs {};
             class getIndexFromMagID {};
             class setIndexForMagID {};
         };
 
-        class getItems
-        {
+        class getItems {
             file = PATH_TO_FUNC_SUB(getItems);
             class getItems_all {};
             class getItems_modifiable_all {};
@@ -31,8 +28,7 @@ class CfgFunctions
             
         };
 
-        class replace
-        {
+        class replace {
             file = PATH_TO_FUNC_SUB(replace);
 
             class replace {};
@@ -41,8 +37,7 @@ class CfgFunctions
             class replace_uniform  {};
         };
 
-        class action
-        {
+        class action {
             file = PATH_TO_FUNC_SUB(action);
 
             class addActions {};
@@ -52,8 +47,7 @@ class CfgFunctions
             class getAction_Icon {};
         };
 
-        class cache
-        {
+        class cache {
             file = PATH_TO_FUNC_SUB(cache);
 
             class cache_db {};
@@ -64,29 +58,25 @@ class CfgFunctions
             class clearOnClosed_Inventory {};
         };
 
-        class config
-        {
+        class config {
             file = PATH_TO_FUNC_SUB(config);
 
             class getCfgDataRandom {};
         };
 
-        class debug
-        {
+        class debug {
             file = PATH_TO_FUNC_SUB(debug);
 
             class getAllWardrobeItems {};
             class compare_container_maxLoad {};
         };
 
-        class effects
-        {
+        class effects {
             file = PATH_TO_FUNC_SUB(effects);
 
             class say3d {};
         };
-        class contextMenu
-        {
+        class contextMenu {
             file = PATH_TO_FUNC_SUB(contextMenu);
 
             class enable_contextMenu {};

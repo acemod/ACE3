@@ -1,10 +1,8 @@
-class CfgWeapons
-{
+class CfgWeapons {
     #include "Uniforms.hpp"
 };
 
 
-class CfgGlasses
-{
+class CfgGlasses {
     #include "Facewear.hpp"
 };
