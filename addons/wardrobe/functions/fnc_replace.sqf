@@ -66,5 +66,3 @@ if (_sound != "") then { [ CBA_fnc_globalEvent, [QGVAR(EH_say3d), [_unit, _sound
 private _notify_img = getText (_cfg_tgt >> "picture");
 if !(".paa" in _notify_img) then { _notify_img = [_notify_img,"paa"] joinString "." };
 [ CBA_fnc_notify,      [[ _notify_img, 4], [getText (_cfg_tgt >> "displayName")], true ],   _duration * 1.2 ] call CBA_fnc_waitAndExecute;
-
-

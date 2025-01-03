@@ -19,4 +19,3 @@ params [ ["_cfg", configNull, [configNull] ] ];
 
 private _altDispIcon = getText (_cfg >> QADDON >> "alternativePicture");
 if (_altDispIcon isEqualTo "") then { getText (_cfg >> "picture") } else { _altDispIcon }
-
