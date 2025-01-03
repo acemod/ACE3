@@ -28,4 +28,4 @@ class CfgPatches {
 
 #include "Baseclass.hpp"
 
-#include "compat_vanilla\Wardrobe.hpp"
+#include "CfgWardrobe.hpp"
