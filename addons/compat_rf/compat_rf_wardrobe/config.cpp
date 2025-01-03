@@ -10,7 +10,7 @@ class CfgPatches {
         VERSION_CONFIG;
         addonRootClass = QUOTE(ADDON);
         requiredAddons[] = {
-            QPVAR(wardrobe),
+            "ace_wardrobe",
             "RF_Data_Loadorder"
         };
         skipWhenMissingDependencies = 1;

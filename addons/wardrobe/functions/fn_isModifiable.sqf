@@ -22,4 +22,4 @@ params [
 
 if (isNull _cfg) exitWith {false};
 // Checks if the config has the property without it being inherited(!)
-count ( Q(configName _x  isEqualTo QQPVAR(wardrobe)) configClasses _cfg ) > 0
+count ( Q(configName _x  isEqualTo ""ace_wardrobe"") configClasses _cfg ) > 0

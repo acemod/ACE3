@@ -14,12 +14,6 @@
 
 #define QADDON Q(ADDON)
 
-// Prefix Variables
-#define PVAR(var1) DOUBLES(PREFIX,var1)
-#define QPVAR(var1) QUOTE(PVAR(var1))
-#define QQPVAR(var1) QUOTE(QPVAR(var1))
-
 // Paths
 #define PATH_TO_FUNC QUOTE(\MAINPREFIX\PREFIX\addons\COMPONENT\functions)
 #define PATH_TO_FUNC_SUB(var1) QUOTE(\MAINPREFIX\PREFIX\addons\COMPONENT\functions\var1)
-#define PATH_TO_ADDON(var1) QUOTE(\MAINPREFIX\PREFIX\addons\COMPONENT\var1)

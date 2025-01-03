@@ -17,8 +17,8 @@
 
 params ["_cfg_origin", "_cfg_tgt"];
 
-private _current = getArray (_cfg_origin >> QPVAR(wardrobe) >> "components");
-private _needed  = getArray (_cfg_tgt    >> QPVAR(wardrobe) >> "components");
+private _current = getArray (_cfg_origin >> "ace_wardrobe" >> "components");
+private _needed  = getArray (_cfg_tgt    >> "ace_wardrobe" >> "components");
 
 private _missing = []; 
 
