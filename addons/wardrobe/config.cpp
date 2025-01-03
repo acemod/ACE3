@@ -21,7 +21,7 @@ class CfgPatches {
 };
 
 #include "CfgFunctions.hpp"
-#include "XEH\CfgXEH.hpp"
+#include "CfgEventHandlers.hpp"
 
 #include "CfgVehicles.hpp"
 #include "CfgSounds.hpp"
