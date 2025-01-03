@@ -2,54 +2,54 @@
 <Project name="ACE">
     <Package name="Wardrobe">
         <Container name="CBA_Settings_Categories">
-            <Key ID="STR_ace_wardrobe_set_cat_main">
+            <Key ID="STR_ACE_Wardrobe_set_cat_main">
                 <English>ACE Wardrobe</English>
                 <German>ACE Gaderobe</German>
             </Key>
         </Container>
         <Container name="CBA_Settings">
-            <Key ID="STR_ace_wardrobe_set_enable_action">
+            <Key ID="STR_ACE_Wardrobe_set_enable_action">
                 <English>Enable ACE Interaction</English>
                 <German>Aktivieren ACE Interaction</German>
             </Key>
-            <Key ID="STR_ace_wardrobe_set_enable_action_desc">
+            <Key ID="STR_ACE_Wardrobe_set_enable_action_desc">
                 <English>When Enabled, will let the player use the Wardrobe related Ace Interactions.</English>
             </Key>
-            <Key ID="STR_ace_wardrobe_set_enable_contexMenu">
+            <Key ID="STR_ACE_Wardrobe_set_enable_contexMenu">
                 <English>Enable </English>
                 <German>Aktiviere CBA Context Menu</German>
             </Key>
-            <Key ID="STR_ace_wardrobe_set_enable_contexMenu_desc">
+            <Key ID="STR_ACE_Wardrobe_set_enable_contexMenu_desc">
                 <English>When Enabled, will let the player use the Wardrobe related CBA Context Menu Options.&lt;br/&gt;Can be enabled at any time, but requires restart to disable. </English>
             </Key>
         </Container>
         <Container name="Action">
-            <Key ID="STR_ace_wardrobe_actionTitle">
+            <Key ID="STR_ACE_Wardrobe_actionTitle">
                 <English>Wardrobe</English>
                 <German>Gaderobe</German>
             </Key>
-            <Key ID="STR_ace_wardrobe_glovesOff">
+            <Key ID="STR_ACE_Wardrobe_glovesOff">
                 <English>Take gloves off</English>
             </Key>
-            <Key ID="STR_ace_wardrobe_glovesOn">
+            <Key ID="STR_ACE_Wardrobe_glovesOn">
                 <English>Wear gloves</English>
             </Key>
-            <Key ID="STR_ace_wardrobe_jacketClose">
+            <Key ID="STR_ACE_Wardrobe_jacketClose">
                 <English>Close Jacket</English>
             </Key>
-            <Key ID="STR_ace_wardrobe_jacketOpen">
+            <Key ID="STR_ACE_Wardrobe_jacketOpen">
                 <English>Open Jacket</English>
             </Key>
-            <Key ID="STR_ace_wardrobe_sleevesDown">
+            <Key ID="STR_ACE_Wardrobe_sleevesDown">
                 <English>Roll sleeves down</English>
             </Key>
-            <Key ID="STR_ace_wardrobe_sleevesUp">
+            <Key ID="STR_ACE_Wardrobe_sleevesUp">
                 <English>Roll sleeves up</English>
             </Key>
-            <Key ID="STR_ace_wardrobe_visorDown">
+            <Key ID="STR_ACE_Wardrobe_visorDown">
                 <English>Visor down</English>
             </Key>
-            <Key ID="STR_ace_wardrobe_visorUp">
+            <Key ID="STR_ACE_Wardrobe_visorUp">
                 <English>Visor up</English>
             </Key>
         </Container>
