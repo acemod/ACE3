@@ -6,8 +6,16 @@ class vn_b_uniform_base;
 
 
 #define UNIFORM_BASE_B(class1,class2)\
-class class1: vn_b_uniform_base { class ace_wardrobe : EGVAR(wardrobe,base_U_sleeves_down) { modifiableTo[] = { Q(class2) }; }; };\
-class class2: vn_b_uniform_base { class ace_wardrobe : EGVAR(wardrobe,base_U_sleeves_up) { modifiableTo[] = { Q(class1) }; }; };
+class class1: vn_b_uniform_base {\
+    class ace_wardrobe : EGVAR(wardrobe,base_U_sleeves_down) {\
+        modifiableTo[] = { Q(class2) };\
+    };\
+};\
+class class2: vn_b_uniform_base {\
+    class ace_wardrobe : EGVAR(wardrobe,base_U_sleeves_up) {\
+        modifiableTo[] = { Q(class1) };\
+    };\
+};
 
 #define B_U(div,var,camo) vn_b_uniform_##div##_##var##_##camo
 

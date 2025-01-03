@@ -7,8 +7,16 @@
 
 
 #define HELMET_VARIANT(side,var1,var2)\
-class CN01(side,var1,var2) : base_class_up { class ace_wardrobe : EGVAR(wardrobe,base_H_visor_up)   { modifiableTo[] = { Q(CN02(side,var1,var2)) }; }; };\
-class CN02(side,var1,var2) : base_class_dn { class ace_wardrobe : EGVAR(wardrobe,base_H_visor_down) { modifiableTo[] = { Q(CN01(side,var1,var2)) }; }; };
+class CN01(side,var1,var2) : base_class_up {\
+    class ace_wardrobe : EGVAR(wardrobe,base_H_visor_up) {\
+        modifiableTo[] = { Q(CN02(side,var1,var2)) };\
+    };\
+};\
+class CN02(side,var1,var2) : base_class_dn {\
+    class ace_wardrobe : EGVAR(wardrobe,base_H_visor_down) {\
+        modifiableTo[] = { Q(CN01(side,var1,var2)) };\
+    };\
+};
 
 
 // Base classes in CfgWeapons.hpp
@@ -43,5 +51,13 @@ HELMET_VARIANT(b,svh4,05)
 HELMET_VARIANT(b,svh4,06)
 
 // Special Case zsh3
-class vn_o_helmet_zsh3_01 :  vn_o_headgear_base  { class ace_wardrobe : EGVAR(wardrobe,base_H_visor_up)   { modifiableTo[] = { Q(vn_o_helmet_zsh3_02) }; }; };
-class vn_o_helmet_zsh3_02 :  vn_o_helmet_zsh3_01 { class ace_wardrobe : EGVAR(wardrobe,base_H_visor_down) { modifiableTo[] = { Q(vn_o_helmet_zsh3_01) }; }; };
+class vn_o_helmet_zsh3_01 : vn_o_headgear_base {
+    class ace_wardrobe : EGVAR(wardrobe,base_H_visor_up) {
+        modifiableTo[] = { Q(vn_o_helmet_zsh3_02) };
+    }; 
+};
+class vn_o_helmet_zsh3_02 : vn_o_helmet_zsh3_01 {
+    class ace_wardrobe : EGVAR(wardrobe,base_H_visor_down) {
+        modifiableTo[] = { Q(vn_o_helmet_zsh3_01) };
+    }; 
+};

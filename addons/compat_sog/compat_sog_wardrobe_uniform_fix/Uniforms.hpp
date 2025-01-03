@@ -2,9 +2,8 @@ class ItemInfo;
 
 class CfgWeapons
 {
-    // Importing the parent class for the uniforms we want to change, so we can inherit from it.
     class vn_b_uniform_base;
-    // creating the macro
+
     #define S_70(className)\
     class className : vn_b_uniform_base { class ItemInfo : ItemInfo { containerClass = "Supply70"; }; };
 

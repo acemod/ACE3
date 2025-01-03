@@ -12,20 +12,60 @@
 #define CN(variation,color) vn_b_boonie_##variation##_##color
 
 // Base Boonie
-#define CAMO_BASE 01
-class CN(02,CAMO_BASE) : vn_b_headgear_base { class ace_wardrobe : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) }; }; };
-class CN(01,CAMO_BASE) : CN(02,CAMO_BASE)   { class ace_wardrobe : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) }; }; };
-class CN(03,CAMO_BASE) : CN(02,CAMO_BASE)   { class ace_wardrobe : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) }; }; };
-class CN(04,CAMO_BASE) : CN(02,CAMO_BASE)   { class ace_wardrobe : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(05,CAMO_BASE)) }; }; };
-class CN(05,CAMO_BASE) : CN(02,CAMO_BASE)   { class ace_wardrobe : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)) }; }; };
+#define CAMO_BASE 01\
+class CN(02,CAMO_BASE) : vn_b_headgear_base {\
+    class ace_wardrobe : EGVAR(wardrobe,base) {\
+        modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) };\
+    };\
+};\
+class CN(01,CAMO_BASE) : CN(02,CAMO_BASE) {\
+    class ace_wardrobe : EGVAR(wardrobe,base) {\
+        modifiableTo[] = { Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) };\
+    };\
+};\
+class CN(03,CAMO_BASE) : CN(02,CAMO_BASE)   {\
+    class ace_wardrobe : EGVAR(wardrobe,base) {\
+        modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) };\
+    };\
+};\
+class CN(04,CAMO_BASE) : CN(02,CAMO_BASE) {\
+    class ace_wardrobe : EGVAR(wardrobe,base) {\
+        modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(05,CAMO_BASE)) };\
+    };\
+};\
+class CN(05,CAMO_BASE) : CN(02,CAMO_BASE)   {\
+    class ace_wardrobe : EGVAR(wardrobe,base) {\
+        modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)) };\
+    };\
+};
 
 
 #define CN_COLORS(CAMO)\
-class CN(02,CAMO) : CN(02,01)   { class ace_wardrobe : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO)), Q(CN(03,CAMO)), Q(CN(04,CAMO)), Q(CN(05,CAMO)) }; }; };\
-class CN(01,CAMO) : CN(02,CAMO) { class ace_wardrobe : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(02,CAMO)), Q(CN(03,CAMO)), Q(CN(04,CAMO)), Q(CN(05,CAMO)) }; }; };\
-class CN(03,CAMO) : CN(02,CAMO) { class ace_wardrobe : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO)), Q(CN(02,CAMO)), Q(CN(04,CAMO)), Q(CN(05,CAMO)) }; }; };\
-class CN(04,CAMO) : CN(02,CAMO) { class ace_wardrobe : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO)), Q(CN(02,CAMO)), Q(CN(03,CAMO)), Q(CN(05,CAMO)) }; }; };\
-class CN(05,CAMO) : CN(02,CAMO) { class ace_wardrobe : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(01,CAMO)), Q(CN(02,CAMO)), Q(CN(03,CAMO)), Q(CN(04,CAMO)) }; }; };\
+class CN(02,CAMO) : CN(02,01) {\
+    class ace_wardrobe : EGVAR(wardrobe,base) {\
+        modifiableTo[] = { Q(CN(01,CAMO)), Q(CN(03,CAMO)), Q(CN(04,CAMO)), Q(CN(05,CAMO)) };\
+    };\
+};\
+class CN(01,CAMO) : CN(02,CAMO) {\
+    class ace_wardrobe : EGVAR(wardrobe,base) {\
+        modifiableTo[] = { Q(CN(02,CAMO)), Q(CN(03,CAMO)), Q(CN(04,CAMO)), Q(CN(05,CAMO)) };\
+    };\
+};\
+class CN(03,CAMO) : CN(02,CAMO) {\
+    class ace_wardrobe : EGVAR(wardrobe,base) {\
+        modifiableTo[] = { Q(CN(01,CAMO)), Q(CN(02,CAMO)), Q(CN(04,CAMO)), Q(CN(05,CAMO)) };\
+    };\
+};\
+class CN(04,CAMO) : CN(02,CAMO) {\
+    class ace_wardrobe : EGVAR(wardrobe,base) {\
+        modifiableTo[] = { Q(CN(01,CAMO)), Q(CN(02,CAMO)), Q(CN(03,CAMO)), Q(CN(05,CAMO)) };\
+    };\
+};\
+class CN(05,CAMO) : CN(02,CAMO) {\
+    class ace_wardrobe : EGVAR(wardrobe,base) {\
+        modifiableTo[] = { Q(CN(01,CAMO)), Q(CN(02,CAMO)), Q(CN(03,CAMO)), Q(CN(04,CAMO)) };\
+    };\
+};
 
 CN_COLORS(02)
 CN_COLORS(03)
@@ -36,10 +76,22 @@ CN_COLORS(05)
 // Base classes in CfgWeapons.hpp
 // 06-08 anzac
 
-#define BOONIE_ANZAC(VAR)
-class CN(06,VAR) : CN(02,01)  { class ace_wardrobe : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(07,VAR)), Q(CN(08,VAR)) }; }; };
-class CN(07,VAR) : CN(06,VAR) { class ace_wardrobe : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(06,VAR)), Q(CN(08,VAR)) }; }; };
-class CN(08,VAR) : CN(06,VAR) { class ace_wardrobe : EGVAR(wardrobe,base) { modifiableTo[] = { Q(CN(06,VAR)), Q(CN(07,VAR)) }; }; };
+#define BOONIE_ANZAC(VAR)\
+class CN(06,VAR) : CN(02,01) {\
+    class ace_wardrobe : EGVAR(wardrobe,base) {\
+        modifiableTo[] = { Q(CN(07,VAR)), Q(CN(08,VAR)) };\
+    };\
+};\
+class CN(07,VAR) : CN(06,VAR) {\
+    class ace_wardrobe : EGVAR(wardrobe,base) {\
+        modifiableTo[] = { Q(CN(06,VAR)), Q(CN(08,VAR)) };\
+    };\
+};\
+class CN(08,VAR) : CN(06,VAR) {\
+    class ace_wardrobe : EGVAR(wardrobe,base) {\
+        modifiableTo[] = { Q(CN(06,VAR)), Q(CN(07,VAR)) };\
+    };\
+};
 
 BOONIE_ANZAC(01)
 BOONIE_ANZAC(02)
