@@ -1,5 +1,4 @@
 // Duration in this case is 10th of secounds. so 10 -> 1 sec, 15 -> 1.5sec, ...
-
 #define ENTRY(base,dur)\
 class GVAR(DOUBLES(base,dur))\
 {\
@@ -10,10 +9,9 @@ class GVAR(DOUBLES(base,dur))\
     titlesStructured = 0;\
 };
 
-
 class CfgSounds
 {
-	sounds[] = {}; // OFP required it filled, now it can be empty or absent depending on the game's version
+	sounds[] = {};
     ENTRY(fabric,06)
     ENTRY(fabric,07)
     ENTRY(fabric,16)
