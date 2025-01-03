@@ -3,8 +3,6 @@
 class vn_b_uniform_base;
 
 // Macros
-
-
 #define UNIFORM_BASE_B(class1,class2)\
 class class1: vn_b_uniform_base {\
     class ace_wardrobe : EGVAR(wardrobe,base_U_sleeves_down) {\
@@ -18,7 +16,6 @@ class class2: vn_b_uniform_base {\
 };
 
 #define B_U(div,var,camo) vn_b_uniform_##div##_##var##_##camo
-
 #define B_U_PAIR(div,down,up,camo) UNIFORM_BASE_B(B_U(div,down,camo),B_U(div,up,camo))
 
 

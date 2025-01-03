@@ -1,11 +1,15 @@
 class ItemInfo;
 
+#define S_70(className)\
+class className : vn_b_uniform_base {\
+    class ItemInfo : ItemInfo {\
+        containerClass = "Supply70";\
+    };\
+};
+
 class CfgWeapons
 {
     class vn_b_uniform_base;
-
-    #define S_70(className)\
-    class className : vn_b_uniform_base { class ItemInfo : ItemInfo { containerClass = "Supply70"; }; };
 
     S_70(vn_b_uniform_macv_04_01)
     S_70(vn_b_uniform_macv_04_02)
