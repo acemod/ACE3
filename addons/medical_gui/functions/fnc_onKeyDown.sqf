@@ -72,20 +72,38 @@ switch (true) do {
     case (_keyPressed == DIK_W && {GVAR(selectedBodyPart) != 0}): {
         GVAR(selectedBodyPart) = 0;
     };
-    case (_keyPressed == DIK_S && {GVAR(selectedBodyPart != 1)}): {
+    case (_keyPressed == DIK_W && {GVAR(selectedBodyPart) != 1}): {
         GVAR(selectedBodyPart) = 1;
     };
-    case (_keyPressed == DIK_D && {GVAR(selectedBodyPart) != 2}): {
+    case (_keyPressed == DIK_S && {GVAR(selectedBodyPart != 2)}): {
         GVAR(selectedBodyPart) = 2;
     };
-    case (_keyPressed == DIK_A && {GVAR(selectedBodyPart) != 3}): {
+    case (_keyPressed == DIK_S && {GVAR(selectedBodyPart != 3)}): {
         GVAR(selectedBodyPart) = 3;
     };
-    case (_keyPressed == DIK_X && {GVAR(selectedBodyPart) != 4}): {
+    case (_keyPressed == DIK_D && {GVAR(selectedBodyPart) != 4}): {
         GVAR(selectedBodyPart) = 4;
     };
-    case (_keyPressed == DIK_Z && {GVAR(selectedBodyPart) != 5}): {
+    case (_keyPressed == DIK_D && {GVAR(selectedBodyPart) != 5}): {
         GVAR(selectedBodyPart) = 5;
+    };
+    case (_keyPressed == DIK_A && {GVAR(selectedBodyPart) != 6}): {
+        GVAR(selectedBodyPart) = 6;
+    };
+    case (_keyPressed == DIK_A && {GVAR(selectedBodyPart) != 7}): {
+        GVAR(selectedBodyPart) = 7;
+    };
+    case (_keyPressed == DIK_X && {GVAR(selectedBodyPart) != 8}): {
+        GVAR(selectedBodyPart) = 8;
+    };
+    case (_keyPressed == DIK_X && {GVAR(selectedBodyPart) != 9}): {
+        GVAR(selectedBodyPart) = 9;
+    };
+    case (_keyPressed == DIK_Z && {GVAR(selectedBodyPart) != 10}): {
+        GVAR(selectedBodyPart) = 10;
+    };
+    case (_keyPressed == DIK_Z && {GVAR(selectedBodyPart) != 11}): {
+        GVAR(selectedBodyPart) = 11;
     };
 
     default {
