@@ -22,7 +22,7 @@
 params ["_unit", "_updateHead", "_updateBody", "_updateArms", "_updateLegs"];
 TRACE_5("updateBodyPartVisuals",_unit,_updateHead,_updateBody,_updateArms,_updateLegs);
 
-private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+private _bodyPartDamage = GET_BODYPART_DAMAGE(_unit);
 
 if (_updateHead) then {
     [_unit, "head", (_bodyPartDamage select 0) > VISUAL_BODY_DAMAGE_THRESHOLD] call FUNC(damageBodyPart);

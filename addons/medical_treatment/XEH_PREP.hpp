@@ -1,6 +1,7 @@
 PREP(addLoadPatientActions);
 PREP(addToLog);
 PREP(addToTriageCard);
+PREP(addTrauma);
 PREP(bandage);
 PREP(bandageLocal);
 PREP(bodyCleanupLoop);
@@ -58,6 +59,7 @@ PREP(scanMedicalItems);
 PREP(setTriageStatus);
 PREP(splint);
 PREP(splintLocal);
+PREP(stitchWound);
 PREP(surgicalKitProgress);
 PREP(surgicalKitStart);
 PREP(tourniquet);

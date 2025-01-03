@@ -24,6 +24,6 @@ private _bodyPartDamage = 0;
 
 {
     _bodyPartDamage = _bodyPartDamage + _x;
-} forEach (_patient getVariable [QEGVAR(medical,bodyPartDamage), []]);
+} forEach GET_BODYPART_DAMAGE(_patient);
 
 10 max (((_bodyPartDamage * DAMAGE_SCALING_FACTOR) min 180) * GVAR(timeCoefficientPAK))
