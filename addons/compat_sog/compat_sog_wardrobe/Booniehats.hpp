@@ -12,31 +12,32 @@
 #define CN(variation,color) vn_b_boonie_##variation##_##color
 
 // Base Boonie
-#define CAMO_BASE 01\
-class CN(02,CAMO_BASE) : vn_b_headgear_base {\
-    class ace_wardrobe : EGVAR(wardrobe,base) {\
-        modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) };\
-    };\
-};\
-class CN(01,CAMO_BASE) : CN(02,CAMO_BASE) {\
-    class ace_wardrobe : EGVAR(wardrobe,base) {\
-        modifiableTo[] = { Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) };\
-    };\
-};\
-class CN(03,CAMO_BASE) : CN(02,CAMO_BASE)   {\
-    class ace_wardrobe : EGVAR(wardrobe,base) {\
-        modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) };\
-    };\
-};\
-class CN(04,CAMO_BASE) : CN(02,CAMO_BASE) {\
-    class ace_wardrobe : EGVAR(wardrobe,base) {\
-        modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(05,CAMO_BASE)) };\
-    };\
-};\
-class CN(05,CAMO_BASE) : CN(02,CAMO_BASE)   {\
-    class ace_wardrobe : EGVAR(wardrobe,base) {\
-        modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)) };\
-    };\
+#define CAMO_BASE 01
+
+class CN(02,CAMO_BASE) : vn_b_headgear_base {
+    class ace_wardrobe : EGVAR(wardrobe,base) {
+        modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) };
+    };
+};
+class CN(01,CAMO_BASE) : CN(02,CAMO_BASE) {
+    class ace_wardrobe : EGVAR(wardrobe,base) {
+        modifiableTo[] = { Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) };
+    };
+};
+class CN(03,CAMO_BASE) : CN(02,CAMO_BASE)   {
+    class ace_wardrobe : EGVAR(wardrobe,base) {
+        modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(04,CAMO_BASE)), Q(CN(05,CAMO_BASE)) };
+    };
+};
+class CN(04,CAMO_BASE) : CN(02,CAMO_BASE) {
+    class ace_wardrobe : EGVAR(wardrobe,base) {
+        modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(05,CAMO_BASE)) };
+    };
+};
+class CN(05,CAMO_BASE) : CN(02,CAMO_BASE)   {
+    class ace_wardrobe : EGVAR(wardrobe,base) {
+        modifiableTo[] = { Q(CN(01,CAMO_BASE)), Q(CN(02,CAMO_BASE)), Q(CN(03,CAMO_BASE)), Q(CN(04,CAMO_BASE)) };
+    };
 };
 
 
