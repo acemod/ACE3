@@ -15,7 +15,7 @@ class CfgPatches {
         };
         skipWhenMissingDependencies = 1;
 
-        requiredVersion = 2.02;
+        requiredVersion = REQUIRED_VERSION;
        
         units[] = {};
         weapons[] = {};
