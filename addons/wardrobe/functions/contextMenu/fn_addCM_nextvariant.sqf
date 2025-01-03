@@ -107,7 +107,7 @@ The most efficient variant i can think of would be following.
     "CLOTHES",                                  // filter slots
     "Switch to next Variant",                   // Display Name
     [],                                         // Color
-    PATH_TO_ADDON(data\wardrobe_logo.paa),    // Icon
+    QPATHTOF(data\wardrobe_logo.paa),    // Icon
     [
         {true},                                 // Condition Enable action
         {true}                                  // Condition Show Action
