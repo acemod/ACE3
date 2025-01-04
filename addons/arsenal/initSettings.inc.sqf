@@ -17,6 +17,14 @@ private _category = LLSTRING(settingCategory);
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(unavailableItemsTooltip),
+    "CHECKBOX",
+    LLSTRING(unavailableItemsTooltip),
+    _category,
+    false
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(fontHeight),
     "SLIDER",
     [LSTRING(fontHeightSetting), LSTRING(fontHeightTooltip)],
