@@ -166,6 +166,7 @@ PREP(rscObjectHelper);
 PREP(runAfterSettingsInit);
 PREP(runTests);
 PREP(sanitizeString);
+PREP(say3D);
 PREP(sendRequest);
 PREP(serverLog);
 PREP(setAimCoef);

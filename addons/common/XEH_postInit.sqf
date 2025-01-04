@@ -681,4 +681,7 @@ GVAR(deviceKeyCurrentIndex) = -1;
     };
 }] call CBA_fnc_addEventHandler;
 
+[ QGVAR(EH_say3d), FUNC(say3d) ] call CBA_fnc_addEventHandler;
+
+
 GVAR(commonPostInited) = true;
