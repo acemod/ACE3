@@ -9,7 +9,7 @@
         </Container>
         <Container name="CBA_Settings">
             <Key ID="STR_ACE_Wardrobe_set_enable_action">
-                <English>Enable ACE Interaction</English>
+                <English>ACE Interaction</English>
                 <German>Aktivieren ACE Interaction</German>
             </Key>
             <Key ID="STR_ACE_Wardrobe_set_enable_action_desc">
