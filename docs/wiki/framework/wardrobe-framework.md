@@ -17,7 +17,7 @@ version:
 
 ## 2. Config
 
-- Only directly defined Subclasses will be taken into account. An fully inherited subclass will be ignored and will not provide an Interaction.
+- Only directly defined Subclasses will be taken into account. A fully inherited subclass will be ignored and will not provide an Interaction.
 
 ## 2.1 Properties
 
@@ -104,8 +104,8 @@ class ACE_Tags {
 
 ### 2.2 Tags in description.ext
 
-Tags can also be configured in description.ext like shown above.
-File Paths will be relative to your mission, if you want to define Tags inside description.ext but use Addon paths for `Texture`/`Material`/`TagModel` you need to prefix the path with `@`.
+Tags can also be configured in `description.ext` like shown above.
+File Paths will be relative to your mission, if you want to define Tags inside `description.ext` but use Addon paths for `Texture`/`Material`/`TagModel` you need to prefix the path with `@`.
 
 This is how above config would look when using Addon paths from description.ext:
 
