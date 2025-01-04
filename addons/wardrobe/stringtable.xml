@@ -12,15 +12,9 @@
                 <English>ACE Interaction</English>
                 <German>Aktivieren ACE Interaction</German>
             </Key>
-            <Key ID="STR_ACE_Wardrobe_set_enable_action_desc">
-                <English>When Enabled, will let the player use the Wardrobe related Ace Interactions.</English>
-            </Key>
             <Key ID="STR_ACE_Wardrobe_set_enable_contexMenu">
                 <English>CBA Context Menu</English>
                 <German>Aktiviere CBA Context Menu</German>
-            </Key>
-            <Key ID="STR_ACE_Wardrobe_set_enable_contexMenu_desc">
-                <English>When Enabled, will let the player use the Wardrobe related CBA Context Menu Options.&lt;br/&gt;Can be enabled at any time, but requires restart to disable. </English>
             </Key>
         </Container>
         <Container name="Action">

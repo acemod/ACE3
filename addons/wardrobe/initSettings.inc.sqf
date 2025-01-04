@@ -1,7 +1,7 @@
 [
     QSET(enable_action),
     "CHECKBOX",
-    SETLSTRING(enable_action),
+    LSTRING(enable_action),
     [LSTRING(set_cat_main)],
     true,
     1,
@@ -12,7 +12,7 @@
 [
     QSET(enable_contextMenu),
     "CHECKBOX",
-    SETLSTRING(enable_contextMenu),
+    LSTRING(enable_contextMenu),
     [LSTRING(set_cat_main)],
     true,
     1,
