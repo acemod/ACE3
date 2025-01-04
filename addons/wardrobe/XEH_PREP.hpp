@@ -1,4 +1,3 @@
-PREP(postInit);
 PREP(isModifiable);
 PREP(compare_components);
 PREP(canModifyTo);
