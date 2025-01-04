@@ -14,6 +14,8 @@ PREP_RECOMPILE_END;
 GVAR(thirstModifiers) = [];
 GVAR(hungerModifiers) = [];
 
+GVAR(cacheP3Ds) = +(uiNamespace getVariable QGVAR(cacheP3Ds)); // cache built at preStart
+
 // Custom Arsenal Tab
 if (["ace_arsenal"] call EFUNC(common,isModLoaded)) then {
     [keys FIELD_RATIONS_ITEMS, LLSTRING(DisplayName), ARSENAL_CATEGORY_ICON, -1, true] call EFUNC(arsenal,addRightPanelButton);
