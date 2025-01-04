@@ -8,7 +8,7 @@
  * 0: The first argument <STRING>
  *
  * Return Value:
- * none
+ * None
  *
  * Example:
  * ["tag_myDataEntry"] call ace_wardrobe_fnc_clearOnClosed_InteractionMenu

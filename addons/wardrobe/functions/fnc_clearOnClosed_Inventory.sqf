@@ -8,7 +8,7 @@
  * 0: Key <STRING>
  *
  * Return Value:
- * none
+ * None
  *
  * Example:
  * ["tag_myKeyName"] call ace_wardrobe_fnc_clearOnClosed_Inventory

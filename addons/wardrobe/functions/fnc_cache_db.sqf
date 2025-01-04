@@ -5,7 +5,7 @@
  * Function to retrieve the Cache Database (Hashmap).
  *
  * Arguments:
- * none
+ * None
  *
  * Return Value:
  * Cache Database <HASHMAP>

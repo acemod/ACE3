@@ -5,10 +5,10 @@
  * Function to create the CBA ContextMenu Option to switch to the (randomly choosen) next Variant of the current Version.
  *
  * Arguments:
- * none
+ * None
  *
  * Return Value:
- * none
+ * None
  *
  * Example:
  * [] call ace_wardrobe_fnc_addCM_nextvariant

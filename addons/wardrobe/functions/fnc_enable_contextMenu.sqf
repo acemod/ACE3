@@ -8,7 +8,7 @@
  * 0: CBA Setting Value <BOOL>
  *
  * Return Value:
- * none
+ * None
  *
  * Example:
  * [true] call ace_wardrobe_fnc_enable_contextMenu

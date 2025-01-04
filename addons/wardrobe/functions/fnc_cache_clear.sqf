@@ -8,7 +8,7 @@
  * 0: Key <STRING>
  *
  * Return Value:
- * none
+ * None
  *
  * Example:
  * ["myKey"] call ace_wardrobe_fnc_cache_clear

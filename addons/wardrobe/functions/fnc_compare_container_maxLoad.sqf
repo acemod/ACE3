@@ -5,10 +5,10 @@
  * This function will compare the maxLoad of all modifiable Items with its modifiableTo Variants and will provide an RPT output.
  *
  * Arguments:
- * none
+ * None
  *
  * Return Value:
- * none
+ * None
  *
  * Example:
  * [] call ace_wardrobe_fnc_compare_container_maxLoad

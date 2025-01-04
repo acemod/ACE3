@@ -17,7 +17,7 @@
  * - 4: Simulate Speed of Sound <BOOL>   (default: false)
  *
  * Return Value:
- * none
+ * None
  *
  * Example:
  * [player, "ace_horny_bonk"] call ace_wardrobe_fnc_say3d

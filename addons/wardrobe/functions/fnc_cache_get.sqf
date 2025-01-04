@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Key <STRING>
- * 1: Code to run when there is no value stored <CODE> (optional)
+ * 1: Code to run when there is no value stored (optional) <CODE>
  *
  * Return Value:
  * Return <ANY> or "404" if no entry found and no code provided

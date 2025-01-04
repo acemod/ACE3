@@ -10,7 +10,7 @@
  * 2: Desired Variant <CONFIG>
  *
  * Return Value:
- * none
+ * None
  *
  * Example:
  * [_player, _cfg_origin, _cfg_tgt] call ace_wardrobe_fnc_replace_facewear

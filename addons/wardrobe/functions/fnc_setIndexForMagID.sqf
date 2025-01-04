@@ -9,7 +9,7 @@
  * 1: Index <NUMBER>
  *
  * Return Value:
- * none
+ * None
  *
  * Example:
  * [_magID, _index] call ace_wardrobe_fnc_setIndexForMagID

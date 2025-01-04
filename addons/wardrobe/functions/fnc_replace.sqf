@@ -13,7 +13,7 @@
  * 3: Replace Now?  <BOOL>
  *
  * Return Value:
- * none
+ * None
  *
  * Example:
  * _this call ace_wardrobe_fnc_replace

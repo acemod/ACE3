@@ -11,7 +11,7 @@
  * 2: Type of Wearable Container <STRING>
  *
  * Return Value:
- * none
+ * None
  *
  * Example:
  * [_player, _cfg_origin, _cfg_tgt, _case] call ace_wardrobe_fnc_replace_uniform
