@@ -1,23 +1,25 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* Function to retrieve all Wardrobe Items.
-*
-* Arguments:
-*
-* Return Value:
-* Nested Array of Classnames that have the wardrobe properties. One Entry per Cfg Group (currently just CfgWeapons)
-*
-* Example:
-* [] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Debug - Function to retrieve all existing Wardrobe items.
+ *
+ * Arguments:
+ * 0: Return as Config? <BOOL>
+ *
+ * Return Value:
+ * Array Wardobe Items, ether as Classname or as Config <ARRAY>
+ *
+ * Example:
+ * [true] call ace_wardrobe_fnc_getAllWardrobeItems;
+ * [this, flatten ([] call ace_wardrobe_fnc_getAllWardrobeItems)] call ace_arsenal_fnc_initBox;
+ *
+ * Public: Yes
+ */
+
 
 params [["_asConfig", false, [true]]];
 
-[
-    ["CfgWeapons", "CfgGlasses"] apply { ( QUOTE([_x] call FUNC(isModifiable)) configClasses (configFile >> _x) ) apply { configName _x } },
-    ["CfgWeapons", "CfgGlasses"] apply { ( QUOTE([_x] call FUNC(isModifiable)) configClasses (configFile >> _x) ) }    
-] select _asConfig
+private _return = ["CfgWeapons", "CfgGlasses"] apply { ( QUOTE([_x] call FUNC(isModifiable)) configClasses (configFile >> _x) ) };
+
+if (_asConfig) then { _return apply { configName _x } } else { _return }

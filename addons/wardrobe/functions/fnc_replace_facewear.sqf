@@ -1,19 +1,22 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* Function to replace a persons goggles/facewear.
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Function to replace a persons goggles/facewear.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Current Variant <CONFIG>
+ * 2: Desired Variant <CONFIG>
+ *
+ * Return Value:
+ * none
+ *
+ * Example:
+ * [_player, _cfg_origin, _cfg_tgt] call ace_wardrobe_fnc_replace_facewear
+ *
+ * Public: No
+ */
 
 params ["_player", "_cfg_origin", "_cfg_tgt"];
 removeGoggles _player;

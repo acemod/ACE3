@@ -1,20 +1,20 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* Function to request the clearing of the cache on closing of the menu
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
-// Cleanup Cache once the inventory is closed
+ * Author: OverlordZorn
+ * Function to request the clearing of the cache once the Inventory Window gets closed.
+ *
+ * Arguments:
+ * 0: Key <STRING>
+ *
+ * Return Value:
+ * none
+ *
+ * Example:
+ * ["tag_myKeyName"] call ace_wardrobe_fnc_clearOnClosed_Inventory
+ *
+ * Public: yes
+ */
 
 params [ ["_key", "", [""]] ];
 
@@ -33,3 +33,5 @@ if (_queue isEqualTo "404") then {
 };
 
 _queue pushBackUnique _key;
+
+nil

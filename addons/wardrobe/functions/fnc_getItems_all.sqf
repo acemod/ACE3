@@ -1,19 +1,21 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* Retrieves a list of items on the user - will be cached for the duration of the interaction.
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Retrieves a list of all items of unit - can be cached for the duration of the ace interaction.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Cache Return? <BOOL>
+ *
+ * Return Value:
+ * All Items of the Unit <ARRAY>
+ *
+ * Example:
+ * [player, false] call ace_wardrobe_fnc_getItems_all
+ *
+ * Public: No
+ */
 
 params [
     ["_unit",   objNull,    [objNull]],

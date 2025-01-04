@@ -1,20 +1,21 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* This function creates children for every modifiable Item.
-* Each Modifiable Item will have its own children in regard of the items it can be changed towards.
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call cvo_fnc_sth
-*
-* Public: Yes
-*/
+ * Author: OverlordZorn
+ * This function creates children for the main wardrobe action - one for every modifiable Item.
+ * Each Modifiable Item will have its own children in regard of the items it can be changed towards.
+ *
+ * Arguments:
+ * 0: The Unit who's wearable shall be changed - usually the player themselves <OBJECT>
+ *
+ * Return Value:
+ * Array of ACE Child Actions <ARRAY>
+ *
+ * Example:
+ * [_player] call ace_wardrobe_fnc_addActions
+ *
+ * Public: No
+ */
 
 params ["_unit"];
 
@@ -25,8 +26,6 @@ private _actions = [];
     private _cfg = _x#0;
     private _className = configName _cfg;
     private _params = [_cfg, _x#1];
-
-    diag_log format ['[CVO](debug)(fn_addActions) _cfg: %1', _cfg];
 
     private _aceAction = [
         _className                              // * 0: Action name <STRING>

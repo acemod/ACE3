@@ -1,19 +1,20 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* This Function checks if the Target Item has an Alternative String for the Action, if not, it returns the displayName property
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * This Function checks if the Target Item has an Alternative String for the Action, if not, it returns the displayName property
+ *
+ * Arguments:
+ * 0: Desired Variant <CONFIG>
+ *
+ * Return Value:
+ * The return value <BOOL>
+ *
+ * Example:
+ * ['something', player] call ace_wardrobe_fnc_getAction_Name
+ *
+ * Public: No
+ */
 
 params [ ["_cfg", configNull, [configNull] ] ];
 

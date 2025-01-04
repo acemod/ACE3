@@ -1,19 +1,20 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* Function to check if the player has an item that can be modified.
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Condition check: Is wardrobe enabled & if the player has an item that can be modified
+ *
+ * Arguments:
+ * 0: _player from the Ace Action <STRING>
+ *
+ * Return Value:
+ * condition <BOOL>
+ *
+ * Example:
+ * [_player] call ace_wardrobe_fnc_addActions_condition
+ *
+ * Public: No
+ */
 
 params ["_player"];
 

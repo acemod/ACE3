@@ -1,19 +1,20 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* Function to activate the Wardrobe related CBA Context Menu Options
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * CBA Setting - On Setting Changed - Function to activate the Wardrobe related CBA Context Menu Options
+ *
+ * Arguments:
+ * 0: CBA Setting Value <BOOL>
+ *
+ * Return Value:
+ * none
+ *
+ * Example:
+ * [true] call ace_wardrobe_fnc_enable_contextMenu
+ *
+ * Public: No
+ */
 
 
 params [["_enable", true, [true]]];

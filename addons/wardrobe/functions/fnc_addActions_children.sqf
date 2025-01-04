@@ -1,19 +1,24 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* Function to create the sub-children for each modifiable item
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Function to create the ace action children, one for each possible variant of the current item.
+ *
+ * Arguments:
+ * 0: target <OBJECT>
+ * 1: player <OBJECT>
+ * 2: Multiple input types <STRING|ARRAY|CODE>
+ * - 0: Current Variant <Config>
+ * - 1: Array of Configs Possible Variants <ARRAY>
+ *
+ * Return Value:
+ * Array of ACE Child Actions <ARRAY>
+ *
+ * Example:
+ * _this call ace_wardrobe_fnc_addActions_children
+ *
+ * Public: No
+ */
 
 params ["_target", "_player", "_actionParams"];
 _actionParams params ["_cfg_origin", "_newItems"];

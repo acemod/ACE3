@@ -1,19 +1,21 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* This function sets the data-index for a magID
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Sets the data-index for a magID
+ *
+ * Arguments:
+ * 0: Magazine ID <STRING>
+ * 1: Index <NUMBER>
+ *
+ * Return Value:
+ * none
+ *
+ * Example:
+ * [_magID, _index] call ace_wardrobe_fnc_setIndexForMagID
+ *
+ * Public: No
+ */
 
 params [
     ["_magID",  "", [""] ],

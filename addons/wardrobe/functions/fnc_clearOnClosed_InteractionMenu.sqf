@@ -1,20 +1,20 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* Function to request the clearing of the cache on closing of the menu
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
-// Cleanup Cache once the interaction menu is closed
+ * Author: OverlordZorn
+ * Function to request the clearing of the cache on closing of the menu
+ *
+ * Arguments:
+ * 0: The first argument <STRING>
+ *
+ * Return Value:
+ * none
+ *
+ * Example:
+ * ["tag_myDataEntry"] call ace_wardrobe_fnc_clearOnClosed_InteractionMenu
+ *
+ * Public: yes
+ */
 
 params [ ["_key", "", [""]] ];
 
@@ -37,3 +37,5 @@ if (_queue isEqualTo "404") then {
 };
 
 _queue pushBackUnique _key;
+
+nil

@@ -53,5 +53,13 @@
                 <English>Visor up</English>
             </Key>
         </Container>
+        <Container name="CBA Context Menu">
+            <Key ID="STR_ACE_Wardrobe_cannotSwitchTo">
+                <English>Cannot switch to</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_missingComponents">
+                <English>due to missing components</English>
+            </Key>
+        </Container>
     </Package>
 </Project>

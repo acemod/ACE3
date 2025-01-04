@@ -1,19 +1,23 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* Function to replace a persons Uniform while maintaining the content of the uniform.
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Function to replace a persons Uniform while maintaining the content of the uniform.
+ *
+ * Arguments:
+ * 0: Unit <Object>
+ * 1: Current Variant <CONFIG>
+ * 2: Desired Variant <CONFIG>
+ * 2: Type of Wearable Container <STRING>
+ *
+ * Return Value:
+ * none
+ *
+ * Example:
+ * [_player, _cfg_origin, _cfg_tgt, _case] call ace_wardrobe_fnc_replace_uniform
+ *
+ * Public: No
+ */
 
 params ["_player", "_cfg_origin", "_cfg_tgt", "_case"];
 
@@ -39,7 +43,7 @@ switch (_case) do {
     case "UNIFORM":  { _loadout # 0 # 3 set [0, configName _cfg_tgt]; };
     case "VEST":     { _loadout # 0 # 4 set [0, configName _cfg_tgt]; };
     case "BACKPACK": { _loadout # 0 # 5 set [0, configName _cfg_tgt]; };
-    default { diag_log format ['[CVO](debug)(fn_replace_uniform) Failed! - _case: %1', _case]; };
+    default { ERROR_1("Case undefined: %1",_case); };
 };
 
 // Apply new Loadout

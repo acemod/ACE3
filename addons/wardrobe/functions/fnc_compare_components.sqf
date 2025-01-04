@@ -1,19 +1,23 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* Function to compare the components of the current and target wearables.
-*
-* Arguments:
-*
-* Return Value:
-* Nested Array - [[missing components], [surplus components]]
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Function to compare the components of the current and target wearables.
+ *
+ * Arguments:
+ * 0: current variant <CONFIG>
+ * 1: desired variant <CONFIG>
+ *
+ * Return Value:
+ * Nested array <ARRAY>
+ * - Array of configs of missing components
+ * - Array of configs of surplus components
+ *
+ * Example:
+ * [_cfg_origin, _cfg_tgt] call ace_wardrobe_fnc_compare_components
+ *
+ * Public: No
+ */
 
 params ["_cfg_origin", "_cfg_tgt"];
 

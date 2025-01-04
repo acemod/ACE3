@@ -1,19 +1,23 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* Function to store a value into under a key into the addons cache
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Function to store a value behind a key into the addons cache
+ *
+ * Arguments:
+ * 0: Key <STRING>
+ * 1: Value <ANY>
+ *
+ * Return Value:
+ * success <BOOL>
+ *
+ * Example:
+ * ['tag_myKey', ["some","data"]] call ace_wardrobe_fnc_cache_set
+ *
+ * Public: Yes
+ */
+
+
 
 params [ ["_key", "", [""] ], ["_value", "404"] ];
 

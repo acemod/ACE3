@@ -1,20 +1,27 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* Function to replace a persons Headgear/Helmet slot.
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Function to replace a persons Headgear/Helmet slot.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Current Variant <CONFIG>
+ * 2: Desired Variant <CONFIG>
+ *
+ * Return Value:
+ * none
+ *
+ * Example:
+ * [_player, _cfg_origin, _cfg_tgt] call ace_wardrobe_fnc_replace_headgear
+ *
+ * Public: No
+ */
 
 params ["_player", "_cfg_origin", "_cfg_tgt"];
 removeHeadgear _player;
 _player addHeadgear configName _cfg_tgt;
+
+
+
+

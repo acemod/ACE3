@@ -1,19 +1,22 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* function to return the magazine ID's of certain magazines
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Function to return the magazine ID's of certain magazines
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Classname <STRING>
+ *
+ * Return Value:
+ * Strings of Magazines IDs <ARRAY>
+ *
+ * Example:
+ * [_unit, _className] call ace_wardrobe_fnc_getMagIDs;
+ *
+ * Public: No
+ */
+
 
 params [
     ["_unit",       objNull,    [objNull]       ],

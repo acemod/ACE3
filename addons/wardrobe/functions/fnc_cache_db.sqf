@@ -1,21 +1,21 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* [Description]
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Function to retrieve the Cache Database (Hashmap).
+ *
+ * Arguments:
+ * none
+ *
+ * Return Value:
+ * Cache Database <HASHMAP>
+ *
+ * Example:
+ * [] call ace_wardrobe_fnc_cache_db
+ *
+ * Public: No
+ */
 
-// Retrieve hashmap
 
 private _map = missionNamespace getVariable [QGVAR(cache), "404"];
 

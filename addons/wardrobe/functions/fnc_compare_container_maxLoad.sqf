@@ -1,19 +1,20 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* This function will compare the maxLoad of all modifiable Items with its modifiableTo Variants and will provide an RPT output.
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * This function will compare the maxLoad of all modifiable Items with its modifiableTo Variants and will provide an RPT output.
+ *
+ * Arguments:
+ * none
+ *
+ * Return Value:
+ * none
+ *
+ * Example:
+ * [] call ace_wardrobe_fnc_compare_container_maxLoad
+ *
+ * Public: yes
+ */
 
 // TODO
 

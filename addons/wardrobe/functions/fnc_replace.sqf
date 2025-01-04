@@ -1,19 +1,25 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* function to removes the modifiableItem and replaces it with the target item
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Ace Action Statement - Removes the modifiableItem and replaces it with the target item
+ *
+ * Arguments:
+ * 0: Action Target <OBJECT>
+ * 1: Action Player <OBJECT>
+ * 2: Action Params <ARRAY>
+ * - 0: Current Variant <CONFIG>
+ * - 0: Desired Variant <CONFIG>
+ * 3: Replace Now?  <BOOL>
+ *
+ * Return Value:
+ * none
+ *
+ * Example:
+ * _this call ace_wardrobe_fnc_replace
+ *
+ * Public: No
+ */
 
 params ["_target", "_unit", "_actionParams", ["_replaceNow", false, [true]]];
 _actionParams params ["_cfg_origin", "_cfg_tgt"];
@@ -66,3 +72,5 @@ if (_sound != "") then { [ CBA_fnc_globalEvent, [QGVAR(EH_say3d), [_unit, _sound
 private _notify_img = getText (_cfg_tgt >> "picture");
 if !(".paa" in _notify_img) then { _notify_img = [_notify_img,"paa"] joinString "." };
 [ CBA_fnc_notify,      [[ _notify_img, 4], [getText (_cfg_tgt >> "displayName")], true ],   _duration * 1.2 ] call CBA_fnc_waitAndExecute;
+
+nil

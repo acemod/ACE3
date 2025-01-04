@@ -1,19 +1,21 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* Function to retrieve modifiable items. Cached Array for the duration of the interaction menu.
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Function to retrieve modifiable items of a unit. Can be cached for the duration of the interaction menu.
+ *
+ * Arguments:
+ * 0: Unit <OBJECT>
+ * 1: Cache Return? <BOOL>
+ *
+ * Return Value:
+ * modifiable Items of the Unit <ARRAY>
+ *
+ * Example:
+ * [player, false] call ace_wardrobe_fnc_getItems_modifiable_all
+ *
+ * Public: Yes
+ */
 
 params [
     ["_unit",   objNull,    [objNull]],

@@ -1,19 +1,23 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* function to retrieve a value from the database. returns "404" if not stored or, when provided will execute the alternative code and store said result.
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * To retrieve a value from the database. returns "404" if not stored or, when provided, will execute the alternative code and return and store said result
+ *
+ * Arguments:
+ * 0: Key <STRING>
+ * 1: Code to run when there is no value stored <CODE> (optional)
+ *
+ * Return Value:
+ * Return <ANY> or "404" if no entry found and no code provided
+ * 
+ *
+ * Example:
+ * ["tag_loadout", { getUnitLoadout player }] call ace_wardrobe_fnc_cache_get
+ *
+ * Public: Yes
+ */
+
 
 params [ [ "_key", "", [""] ], [ "_else", "404", [{}] ] ];
 

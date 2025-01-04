@@ -1,19 +1,21 @@
 #include "../script_component.hpp"
 
 /*
-* Author: Zorn
-* function to check if the this item is modifiable - returns boolean
-*
-* Arguments:
-*
-* Return Value:
-* None
-*
-* Example:
-* ['something', player] call prefix_component_fnc_functionname
-*
-* Public: No
-*/
+ * Author: OverlordZorn
+ * Function to check if the provided wearable Item (Config) item is defined as a modifiable Wardrobe Item.
+ * Will not return true on fully inherited "ace_wardrobe" subclass
+ *
+ * Arguments:
+ * 0: Wearable Item <Config>
+ *
+ * Return Value:
+ * The return value <BOOL>
+ *
+ * Example:
+ * [_cfg] call ace_wardrobe_fnc_isModifiable
+ *
+ * Public: No
+ */
 
 params [
     ["_cfg",        configNull,         [configNull]       ]
