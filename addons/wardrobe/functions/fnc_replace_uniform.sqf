@@ -36,6 +36,10 @@ if (_hasDocument) then { _hasDocument = [_player, "acex_intelitems_document" ] c
 if (_hasNotepad)  then { _hasNotepad  = [_player, "acex_intelitems_notepad" ]  call FUNC(getMagIDs) apply { [_x] call FUNC(getIndexFromMagID) } };
 if (_hasPhoto)    then { _hasPhoto    = [_player, "acex_intelitems_photo" ]    call FUNC(getMagIDs) apply { [_x] call FUNC(getIndexFromMagID) } };
 
+// ACE Overheating
+private _hasSpareBarrel = _magazineDetails findIf { _x#0 == "ACE_SpareBarrel" } > -1;
+if (_hasSpareBarrel) then { _hasSpareBarrel = [_player, "ACE_SpareBarrel" ] call FUNC(getMagIDs) apply { [_x] call FUNC(getIndexFromMagID) } };
+
 
 //// Replace Wearable
 // Change Wearable
@@ -54,3 +58,6 @@ switch (_case) do {
 if (_hasDocument isEqualType []) then { { [_x, _hasDocument # _forEachIndex] call FUNC(setIndexForMagID); } forEach ( [_player, "acex_intelitems_document" ] call FUNC(getMagIDs) ); };
 if (_hasNotepad  isEqualType []) then { { [_x, _hasNotepad  # _forEachIndex] call FUNC(setIndexForMagID); } forEach ( [_player, "acex_intelitems_notepad"  ] call FUNC(getMagIDs) ); };
 if (_hasPhoto    isEqualType []) then { { [_x, _hasPhoto    # _forEachIndex] call FUNC(setIndexForMagID); } forEach ( [_player, "acex_intelitems_photo"    ] call FUNC(getMagIDs) ); };
+
+// ACE Overheating
+if (_hasSpareBarrel isEqualType []) then { { [_x, _hasSpareBarrel # _forEachIndex] call FUNC(setIndexForMagID); } forEach ( [_player, "ACE_SpareBarrel" ] call FUNC(getMagIDs) ); };
