@@ -323,4 +323,40 @@ class CfgVehicles {
             "hitera_r16", "hitera_r17", "hitera_r18", "hitera_r19", "hitera_r20"
         };
     };
+    class CUP_GAZ_Vodnik_Base: Wheeled_APC_F {
+        EGVAR(vehicle_damage,engineDetonationProb) = 0;
+        EGVAR(vehicle_damage,engineFireProb) = 0.1;
+    };
+    class CUP_GAZ_Vodnik_AGS_Base: CUP_GAZ_Vodnik_Base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,hullFireProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretFireProb) = 0;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(vehicle_damage,canHaveFireJet) = 0;
+    };
+    class CUP_GAZ_Vodnik_Unarmed_base: CUP_GAZ_Vodnik_Base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,hullFireProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretFireProb) = 0;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(vehicle_damage,canHaveFireJet) = 0;
+    };
+    class CUP_GAZ_Vodnik_MedEvac_Base: CUP_GAZ_Vodnik_Base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,hullFireProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretFireProb) = 0;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(vehicle_damage,canHaveFireJet) = 0;
+    };
+    class CUP_O_GAZ_Vodnik_PK_RU: CUP_GAZ_Vodnik_Base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,hullFireProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretFireProb) = 0;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(vehicle_damage,canHaveFireJet) = 0;
+    };
 };

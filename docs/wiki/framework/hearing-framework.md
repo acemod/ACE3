@@ -25,3 +25,12 @@ class CfgWeapons {
 ```
 
 The protection/muffling is a multiplier and not an absolute value, you can still be deafened/muffled with a value of 1.
+
+```cpp
+class CfgAmmo {
+    class MyAmmo {
+        ace_hearing_hearingDamageFactor = 0;    // Allows to tune how much hearing damage the ammo causes when being fired/exploding (default: 1)
+                                                // Example: Removing hearing damage from throwables such as Molotovs
+    };
+};
+```

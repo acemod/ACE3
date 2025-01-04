@@ -32,11 +32,6 @@ if (_distance > 100) exitWith {
 private _ammoConfig = configOf _projectile;
 private _hit = getNumber (_ammoConfig >> "hit");
 if (_hit < 0.5) exitWith { TRACE_1("ignore smoke/flare",_hit) };
-private _explosive = getNumber (_ammoConfig >> "explosive");
-
-private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
-
-TRACE_4("",typeOf _projectile,_distance,_explosive,_vehAttenuation);
 
 (if (isArray (_ammoConfig >> "soundHit1")) then {
     getArray (_ammoConfig >> "soundHit1")
@@ -48,9 +43,16 @@ if (_distance > _maxDistance) exitWith {
     TRACE_2("too far away",_distance,_maxDistance);
 };
 
+private _explosive = getNumber (_ammoConfig >> "explosive");
+private _hearingDamageFactor = [_ammoConfig >> QGVAR(hearingDamageFactor), "NUMBER", 1] call CBA_fnc_getConfigEntry;
+
+private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
+
+TRACE_5("",typeOf _projectile,_distance,_explosive,_hearingDamageFactor,_vehAttenuation);
+
 // Tone down _maxDistance to bring strength back to similar levels as a large burst of a loud weapon
-private _strength = _vehAttenuation * _explosive * _volume * (_maxDistance / 2) / _distance^2;
-TRACE_6("strength",_vehAttenuation,_explosive,_volume,_maxDistance,_distance,_strength);
+private _strength = _vehAttenuation * _explosive * _hearingDamageFactor * _volume * (_maxDistance / 2) / _distance^2;
+TRACE_7("strength",_vehAttenuation,_explosive,_hearingDamageFactor,_volume,_maxDistance,_distance,_strength);
 
 // Call immediately, as it will get picked up later by the update thread anyway
 (_strength * GVAR(explosionDeafnessCoefficient)) call FUNC(earRinging);
