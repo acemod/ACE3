@@ -35,7 +35,7 @@ private _categorySway = [_category, LSTRING(subcategory_sway)];
     [LSTRING(checkExtensions_DisplayName)],
     _category,
     false,
-    true
+    1
 ] call CBA_fnc_addSetting;
 
 [
