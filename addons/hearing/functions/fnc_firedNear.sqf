@@ -53,9 +53,10 @@ TRACE_6("mag",_magazine,_weapon,_muzzle,_ammo,_firer,_gunner);
 
 private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
 private _loudness = _magazine call FUNC(getAmmoLoudness);
+private _hearingDamageFactor = [configFile >> "CfgAmmo" >> _ammo >> QGVAR(hearingDamageFactor), "NUMBER", 1] call CBA_fnc_getConfigEntry;
 
 _loudness = _loudness * _audibleFireCoef;
-private _strength = _vehAttenuation * (_loudness - (_loudness / 50 * _distance)); // linear drop off
+private _strength = _hearingDamageFactor * _vehAttenuation * (_loudness - (_loudness / 50 * _distance)); // linear drop off
 
 TRACE_1("result",_strength);
 
