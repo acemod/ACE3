@@ -1,3 +1,4 @@
+/*
 class CfgFunctions
 {
     class ADDON
@@ -86,3 +87,4 @@ class CfgFunctions
         };
     };
 };
+*/
