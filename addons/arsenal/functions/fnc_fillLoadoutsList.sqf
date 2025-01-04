@@ -104,6 +104,10 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         } else {
             if (_unavailableItemsList isNotEqualTo []) then {
                 _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]]; // Gray
+
+                if (GVAR(unavailableItemsTooltip)) then {
+                    _contentPanelCtrl lnbSetTooltip [[_newRow, 0], format ["Missing Items: %1", _unavailableItemsList arrayIntersect _unavailableItemsList]]; 
+                };
             };
         };
 
