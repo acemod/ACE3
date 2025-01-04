@@ -19,8 +19,8 @@
 
 
 params [
-    ["_unit",       objNull,    [objNull]       ],
-    ["_className",  "",         [""]            ]
+    ["_unit", objNull, [objNull]],
+    ["_className", "", [""]]
 ];
 
 if ( _className == "" || { _unit isEqualTo objNull } ) exitWith {};

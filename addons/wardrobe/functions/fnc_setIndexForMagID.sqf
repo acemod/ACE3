@@ -18,8 +18,8 @@
  */
 
 params [
-    ["_magID",  "", [""] ],
-    ["_index",  0,  [0]  ]
+    ["_magID", "", [""]],
+    ["_index", 0, [0]]
 ];
 
 if (_index == -1) exitWith {};

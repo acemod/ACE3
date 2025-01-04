@@ -18,7 +18,7 @@
  */
 
 params [
-    ["_cfg",        configNull,         [configNull]       ]
+    ["_cfg", configNull, [configNull]]
 ];
 
 

@@ -1,3 +1,5 @@
+// TO BE DELETED ONCE https://github.com/acemod/ACE3/pull/10619 has merged
+
 #include "../script_component.hpp"
 
 /*
