@@ -1,8 +1,9 @@
 #define CN_SOUND(base,dur) QUOTE(TRIPLES(ADDON,base,dur))
 
 class GVAR(base) {
+
     modifiableTo[] = {""};
-    // ## WIP ##
+
     // describes the components of the current item.
     // When the current wearable is being changed into something, that does not have these 
     components[] = {};
