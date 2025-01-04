@@ -26,19 +26,19 @@
  */
 
 params [
-    ["_source", objNull, [objNull]   ],
-    ["_sound",  [""],    ["", []]   ]
+    ["_source", objNull, [objNull]],
+    ["_sound", [""], ["", []]]
 ];
 
 if (_sound isEqualType [] && {_sound#0 == ""} || {_sound isEqualType "" && {_sound == ""}}) exitWith {};
 
 _sound params [
-"_className",
-["_distance",        50,                [0]         ],
-["_pitch",           0.95 + random 0.1, [0]         ],
-["_isSpeech",        false,             [false, 0]  ],
-["_offSet",          0,                 [0]         ],
-["_simSpeedOfSound", false,             [false]     ]
+    "_className",
+    ["_distance", 50, [0]],
+    ["_pitch", 0.95 + random 0.1, [0]],
+    ["_isSpeech", false, [false, 0]],
+    ["_offSet", 0, [0]],
+    ["_simSpeedOfSound", false, [false]]
 ];
 
 
