@@ -3,7 +3,7 @@
 #include "XEH_PREP.hpp"
 
 private _waterSourceData = createHashMapFromArray [
-    ["misc_wellpump.p3d", [0, 0, 0]] // [11899, 9150, 0] on chenarus
+    ["misc_wellpump.p3d", [0, 0, 0]] // [11899, 9150, 0] on Chernarus
 ];
 
 // Fill water source arrays from CfgVehicles
