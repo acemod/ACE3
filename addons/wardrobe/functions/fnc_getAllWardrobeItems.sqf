@@ -20,6 +20,6 @@
 
 params [["_asConfig", false, [true]]];
 
-private _return = ["CfgWeapons", "CfgGlasses"] apply { ( QUOTE([_x] call FUNC(isModifiable)) configClasses (configFile >> _x) ) };
+private _return = flatten ( ["CfgWeapons", "CfgGlasses"] apply { ( QUOTE([_x] call FUNC(isModifiable)) configClasses (configFile >> _x) ) } );
 
-if (_asConfig) then { _return apply { configName _x } } else { _return }
+if (_asConfig) then { _return } else { _return apply { configName _x } }
