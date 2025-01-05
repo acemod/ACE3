@@ -48,7 +48,7 @@ private _consumedMedications = [];
     };
 } forEachReversed _medications;
 
-(GVAR(deferredEvents) getOrDefault [_unit, [], true]) pushBack ([QEGVAR(medical,consumeMedications), [_unit, _consumedMedications]]);
+(GVAR(deferredEvents) getOrDefault [hashValue _unit, [], true]) pushBack ([QEGVAR(medical,consumeMedications), [_unit, _consumedMedications]]);
 
 if (_syncValues) then {
     _unit setVariable [VAR_MEDICATIONS, _medications, true]

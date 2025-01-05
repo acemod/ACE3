@@ -49,7 +49,7 @@ private _consumedIVs = [];
     };
 } forEachReversed _ivBags;
 
-(GVAR(deferredEvents) getOrDefault [_unit, [], true]) pushBack ([QEGVAR(medical,consumedIVs), [_unit, _consumedIVs]]);
+(GVAR(deferredEvents) getOrDefault [hashValue _unit, [], true]) pushBack ([QEGVAR(medical,consumedIVs), [_unit, _consumedIVs]]);
 
 if (_ivBags isEqualTo []) then {
     _unit setVariable [QEGVAR(medical,ivBags), nil, true];

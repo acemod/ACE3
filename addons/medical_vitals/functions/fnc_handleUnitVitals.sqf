@@ -54,9 +54,9 @@ END_COUNTER(Vitals);
 //placed outside the counter as 3rd-party code may be called from these events
 {
     _x call CBA_fnc_localEvent;
-} forEach (GVAR(deferredEvents) getOrDefault [_unit, []]);
+} forEach (GVAR(deferredEvents) getOrDefault [hashValue _unit, []]);
 
-GVAR(deferredEvents) deleteAt _unit;
+GVAR(deferredEvents) deleteAt hashValue _unit;
 
 [QEGVAR(medical,handleUnitVitals), [_unit, _deltaT]] call CBA_fnc_localEvent;
 
