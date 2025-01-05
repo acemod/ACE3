@@ -35,8 +35,6 @@ PREP(getCfgDataRandom);
 // Debug
 PREP(getAllWardrobeItems);
 PREP(compare_container_maxLoad);
-// Effects
-PREP(say3d); // TO BE DELETED ONCE https://github.com/acemod/ACE3/pull/10619 has merged
 // CBA Context Menu
 PREP(enable_contextMenu);
 PREP(addCM_nextvariant);
