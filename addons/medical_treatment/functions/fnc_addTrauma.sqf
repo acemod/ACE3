@@ -20,7 +20,7 @@
 params ["_unit", "_bodyPart", "_trauma"];
 
 private _partIndex = ALL_BODY_PARTS find _bodyPart;
-private _bodyPartDamage = GET_BODYPART_DAMAGE(_unit) select _partIndex;
+private _bodyPartDamage = GET_BODYPART_DAMAGE(_unit);
 private _newDam = (_bodyPartDamage select _partIndex) + _trauma;
 
 // Prevent obscenely small damage from lack of floating precision
