@@ -22,7 +22,7 @@ if (alive _vehicle) exitWith {};
 
 TRACE_2("handleDamageEjectIfDestroyed",typeOf _vehicle,_this);
 
-if (!IS_EXPLOSIVE_AMMO(_ammo)) then {
+if (IS_INEXPLOSIVE_AMMO(_ammo)) then {
     {
         if (alive _x) then {
             moveOut _x;

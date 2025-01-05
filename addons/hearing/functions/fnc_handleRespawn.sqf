@@ -27,10 +27,14 @@ private _respawn = [0] call BIS_fnc_missionRespawnType;
 
 // If respawn is not group or side:
 if (_respawn <= 3) then {
-    // Remove earplugs if they have them:
+    // Remove earplugs & EHP if they have them
     if (_unit getVariable ["ACE_hasEarPlugsIn", false]) then {
         TRACE_1("had EarPlugs in - removing",_unit);
         _unit setVariable ["ACE_hasEarPlugsIn", false, true];
+    };
+    if (_unit getVariable ["ACE_hasEHP", false]) then {
+        TRACE_1("had EHP on - removing",_unit);
+        _unit setVariable ["ACE_hasEHP", false, true];
     };
 };
 
