@@ -12,7 +12,7 @@
             ["_distance", 50, [0]],
             ["_pitch", 0.95 + random 0.1, [0]]
         ];
-        _source say3D [_className, _distance, _pitch, _isSpeech, _offSet, _simSpeedOfSound];
+        _source say3D [_className, _distance, _pitch];
         nil
     }
 ] call CBA_fnc_addEventHandler;
