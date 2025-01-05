@@ -958,8 +958,11 @@
             <Chinesesimp>反转摄影机控制</Chinesesimp>
             <Turkish>Kamera kontrollerini ters çevir</Turkish>
         </Key>
+        <Key ID="STR_ACE_Arsenal_unavailableItemsSetting">
+            <English>Show missing / unavailable items</English>
+        </Key>
         <Key ID="STR_ACE_Arsenal_unavailableItemsTooltip">
-            <English>Unavailable Items Tooltip</English>
+            <English>Show missing / unavailable items when hovering over a loadout</English>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutDeleted">
             <English>The following loadout was deleted:</English>
@@ -1096,6 +1099,9 @@
             <Japanese>声の保存</Japanese>
             <Chinesesimp>保存声音</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Arsenal_missingItems">
+            <English>Missing items:\n%1</English>
+        </Key>
         <Key ID="STR_ACE_Arsenal_modIconsSetting">
             <English>Enable mod icons</English>
             <Czech>Zapnout ikony modů</Czech>
@@ -1127,6 +1133,9 @@
             <Chinese>在左面板中顯示/隱藏模組圖示</Chinese>
             <Chinesesimp>在左面板中显示/隐藏模组图示</Chinesesimp>
             <Turkish>Sol panel de mod ikonlarını göster/gizle</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_unavailableItems">
+            <English>Unavailable items:\n%1</English>
         </Key>
         <Key ID="STR_ACE_Arsenal_noVirtualItems">
             <English>No virtual items available</English>
