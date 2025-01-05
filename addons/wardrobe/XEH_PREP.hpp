@@ -15,6 +15,8 @@ PREP(replace);
 PREP(replace_headgear);
 PREP(replace_facewear);
 PREP(replace_uniform);
+// Compat
+PREP(spareBarrel_updateMagIDs);
 // Ace Actions
 PREP(addActions);
 PREP(addActions_condition);
