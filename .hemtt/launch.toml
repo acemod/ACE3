@@ -51,6 +51,7 @@ workshop = [
 ]
 mission = "Wardrobe.VR"
 dlc = [
-    "Reaction Forces",
-    "Western Sahara"
+#    "Western Sahara",    
+#    "Reaction Forces"    
+#    "S.O.G. Prairie Fire"
 ]
