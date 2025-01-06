@@ -13,7 +13,17 @@ class CfgGlasses {
     };
 };
 
+
+
+
+
 class CfgWeapons {
+
+    class ItemCore;
+    class HelmetBase: ItemCore {
+        class ItemInfo;
+    };
+
     #include "Turbans.hpp"
 
     // Cap (Ion) Forward and Reversed
@@ -30,29 +40,32 @@ class CfgWeapons {
     };
 
     // Helmets
-    class HelmetBase;
     class H_PASGT_basic_base_F;
 
     //// RF Helmets with Glasses
     class lxWS_H_PASGT_goggles_UN_F: HelmetBase {
+        MASS(32)
         class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_on) {
             modifiableTo[] = { "lxWS_H_PASGT_basic_UN_F" };
             components[] = {"G_Combat_lxWS"};
         };
     };  
     class lxWS_H_PASGT_goggles_black_F: lxWS_H_PASGT_goggles_UN_F {
+        MASS(32)
         class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_on) {
             modifiableTo[] = { "H_PASGT_basic_black_F" };
             components[] = {"G_Combat_lxWS"};
         };
     };  
     class lxWS_H_PASGT_goggles_olive_F: lxWS_H_PASGT_goggles_UN_F {
+        MASS(32)
         class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_on) {
             modifiableTo[] = { "H_PASGT_basic_olive_F" };
             components[] = {"G_Combat_lxWS"};
         };
     };  
     class lxWS_H_PASGT_goggles_white_F: lxWS_H_PASGT_goggles_UN_F {
+        MASS(32)
         class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_on) {
             modifiableTo[] = { "H_PASGT_basic_white_F" };
             components[] = {"G_Combat_lxWS"};

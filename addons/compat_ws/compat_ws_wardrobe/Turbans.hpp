@@ -47,6 +47,9 @@ class H_turban_02_mask_black_lxws: H_Shemag_khk {
     class ace_wardrobe: EGVAR(wardrobe,base) {
         modifiableTo[] = { QCN(01,black), QCN(02,black), QCN(03,black), QCN(04,black) };
         components[] = { "lxWS_H_bmask_base" };
+        ItemInfo: ItemInfo {
+            mass = 26;
+        };
     };
 };
 class lxWS_H_turban_01_black: H_Shemag_khk {
