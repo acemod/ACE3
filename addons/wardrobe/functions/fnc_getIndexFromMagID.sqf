@@ -20,6 +20,6 @@ params [
     ["_magazineID", "", [""] ]
 ];
 
-if !(_magazineID in allVariables ace_intelItems_intelMap) exitWith { -1 };
+if !(_magazineID in allVariables EGVAR(intelItems,intelMap)) exitWith { -1 };
 
-ace_intelItems_intelMap getVariable _magazineID
+EGVAR(intelItems,intelMap) getVariable _magazineID

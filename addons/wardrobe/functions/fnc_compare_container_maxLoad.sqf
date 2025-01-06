@@ -2,7 +2,7 @@
 
 /*
  * Author: OverlordZorn
- * This function will compare the maxLoad of all modifiable Items with its modifiableTo Variants and will provide an RPT output.
+ * WIP - This function will compare the maxLoad of all modifiable Items with its modifiableTo Variants and will provide an RPT output.
  *
  * Arguments:
  * None

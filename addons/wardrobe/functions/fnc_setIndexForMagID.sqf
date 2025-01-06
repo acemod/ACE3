@@ -24,4 +24,4 @@ params [
 
 if (_index == -1) exitWith {};
 
-ace_intelItems_intelMap setVariable [_magID, _index, true];
+EGVAR(intelItems,intelMap) setVariable [_magID, _index, true];

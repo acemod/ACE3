@@ -33,6 +33,5 @@ PREP(getAllWardrobeItems);
 PREP(compare_container_maxLoad);
 // CBA Context Menu
 PREP(enable_contextMenu);
-PREP(addCM_nextvariant);
 PREP(do_nextVariant);
 PREP(getNextVariant);

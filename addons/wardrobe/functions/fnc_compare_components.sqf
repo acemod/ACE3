@@ -10,8 +10,8 @@
  *
  * Return Value:
  * Nested array <ARRAY>
- * - Array of configs of missing components
- * - Array of configs of surplus components
+ * - configs of missing components <ARRAY>
+ * - configs of surplus components <ARRAY>
  *
  * Example:
  * [_cfg_origin, _cfg_tgt] call ace_wardrobe_fnc_compare_components
@@ -26,7 +26,12 @@ private _needed  = getArray (_cfg_tgt    >> "ace_wardrobe" >> "components");
 
 private _missing = []; 
 
-{ if (_x in _current) then { _current = _current - [_x] } else { _missing pushBack _x }; } forEach _needed;
+{
+    if (_x in _current) then {
+        _current = _current - [_x]
+    } else {
+        _missing pushBack _x
+    };
+} forEach _needed;
 
-//[[missing components], [surplus components]]
 [_missing, _current]

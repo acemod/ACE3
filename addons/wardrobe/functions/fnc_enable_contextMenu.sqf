@@ -21,5 +21,19 @@ params [["_enable", true, [true]]];
 
 if (_enable && {!(missionNamespace getVariable [QGVAR(contextmenu_enabled), false])}) then {
     missionNamespace setVariable [QGVAR(contextmenu_enabled), true];
-    [] call FUNC(addCM_nextvariant);
+
+    [
+        "#ALL",
+        "CLOTHES",
+        "Switch to next Variant",
+        [],
+        QPATHTOF(data\wardrobe_logo.paa),
+        [
+            {true},
+            {true}
+        ],
+        FUNC(do_nextVariant),
+        false,
+        []
+    ] call CBA_fnc_addItemContextMenuOption;
 };
