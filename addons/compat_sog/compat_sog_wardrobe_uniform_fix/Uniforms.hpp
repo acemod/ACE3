@@ -7,10 +7,10 @@ class className: vn_b_uniform_base {\
 };
 
 class CfgWeapons {
-	class Uniform_Base;
-	class vn_b_uniform_base: Uniform_Base {
-		class ItemInfo;
-	};
+    class Uniform_Base;
+    class vn_b_uniform_base: Uniform_Base {
+        class ItemInfo;
+    };
 
     S_70(vn_b_uniform_macv_04_01)
     S_70(vn_b_uniform_macv_04_02)
@@ -27,9 +27,9 @@ class CfgWeapons {
     //// US Headgear
     // Helmets with Combat Goggles
     class vn_b_helmet_m1_01_01;
-	class vn_b_helmet_m1_14_01: vn_b_helmet_m1_01_01 {
-		class ItemInfo;
-	};
+    class vn_b_helmet_m1_14_01: vn_b_helmet_m1_01_01 {
+        class ItemInfo;
+    };
 
     class vn_b_helmet_m1_20_01: vn_b_helmet_m1_14_01 {
         MASS(12)
@@ -41,9 +41,9 @@ class CfgWeapons {
 
     // Crew Helmets with Goggles
     class vn_b_headgear_base;
-	class vn_b_helmet_t56_01_01: vn_b_headgear_base {
-		class ItemInfo;
-	};
+    class vn_b_helmet_t56_01_01: vn_b_headgear_base {
+        class ItemInfo;
+    };
     class vn_b_helmet_t56_02_01: vn_b_helmet_t56_01_01 {
         MASS(12)
     };
@@ -62,9 +62,9 @@ class CfgWeapons {
 
     // NVA Gear usually has the Goggles Version be the parent version of the non-goggle version, meaning we have to "reset" the children to their previous mass.
     class H_Booniehat_khk;
-	class vn_o_headgear_base: H_Booniehat_khk {
-		class ItemInfo;
-	};
+    class vn_o_headgear_base: H_Booniehat_khk {
+        class ItemInfo;
+    };
     // NVA Pilot Helmet with Goggles
     class vn_o_helmet_shl61_01: vn_o_headgear_base {
         MASS(12)
@@ -84,9 +84,9 @@ class CfgWeapons {
 
 
     // NVA Pith helmet with Crew Goggles
-	class vn_o_helmet_nva_01: vn_o_headgear_base {
-		class ItemInfo;
-	};
+    class vn_o_helmet_nva_01: vn_o_headgear_base {
+        class ItemInfo;
+    };
     class vn_o_helmet_nva_05: vn_o_helmet_nva_01 {
         MASS(12)
     };

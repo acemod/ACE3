@@ -39,14 +39,14 @@ class gm_ge_headgear_psh77_up_oli: gm_ge_headgear_psh77_up_base {
 
 #define GM_Helmet_Glasses(classWith,classWithout,baseWith,baseWithout,goggles)\
 class classWith: baseWith {\
-    class ace_wardrobe : EGVAR(wardrobe,base_H_goggles_on) {\
+    class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_on) {\
         modifiableTo[] = { QUOTE(classWithout) };\
         components[] = { QUOTE(goggles) };\
     };\
     MASS(11)\
 };\
 class classWithout: baseWithout {\
-    class ace_wardrobe : EGVAR(wardrobe,base_H_goggles_off) {\
+    class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_off) {\
         modifiableTo[] = { QUOTE(classWith) };\
     };\
 };
@@ -93,7 +93,7 @@ class gm_ge_headgear_sidecap_80_base: gm_ge_headgear_sidecap_base {
 // Helmet Only
 class gm_ge_headgear_m62_base;
 class gm_ge_headgear_m62_net: gm_ge_headgear_m62_base {
-    class ace_wardrobe : EGVAR(wardrobe,base) {
+    class ace_wardrobe: EGVAR(wardrobe,base) {
         modifiableTo[] = {"gm_ge_headgear_hgm_ge_headgear_sidecap_80_m62_oliat_80_oli", "gm_ge_headgear_hat_80_m62_oli"};
         components[] = {"gm_ge_headgear_m62_net"};
     };
@@ -101,13 +101,13 @@ class gm_ge_headgear_m62_net: gm_ge_headgear_m62_base {
 
 // Hats only
 class gm_ge_headgear_hat_80_oli: gm_ge_headgear_hat_80_base {
-    class ace_wardrobe : EGVAR(wardrobe,base) {
+    class ace_wardrobe: EGVAR(wardrobe,base) {
         modifiableTo[] = {"gm_ge_headgear_hat_80_m62_oli"};
         components[] = {"gm_ge_headgear_hat_80_oli"};
     };
 };
 class gm_ge_headgear_sidecap_80_oli: gm_ge_headgear_sidecap_80_base {
-    class ace_wardrobe : EGVAR(wardrobe,base) {
+    class ace_wardrobe: EGVAR(wardrobe,base) {
         modifiableTo[] = {"gm_ge_headgear_sidecap_80_m62_oli"};
         components[] = {"gm_ge_headgear_sidecap_80_oli"};
     };
@@ -115,14 +115,14 @@ class gm_ge_headgear_sidecap_80_oli: gm_ge_headgear_sidecap_80_base {
 
 // Hats + Helmets
 class gm_ge_headgear_hat_80_m62_oli: gm_ge_headgear_hat_80_base {
-    class ace_wardrobe : EGVAR(wardrobe,base) {
+    class ace_wardrobe: EGVAR(wardrobe,base) {
         modifiableTo[] = {"gm_ge_headgear_hat_80_oli","gm_ge_headgear_m62_net"};
         components[] = {"gm_ge_headgear_hat_80_oli","gm_ge_headgear_m62_net"};
     };
     MASS(20)
 };
 class gm_ge_headgear_sidecap_80_m62_oli: gm_ge_headgear_sidecap_80_base {
-    class ace_wardrobe : EGVAR(wardrobe,base) {
+    class ace_wardrobe: EGVAR(wardrobe,base) {
         modifiableTo[] = {"gm_ge_headgear_sidecap_80_oli","gm_ge_headgear_m62_net"};
         components[] = {"gm_ge_headgear_sidecap_80_oli","gm_ge_headgear_m62_net"};
     };
