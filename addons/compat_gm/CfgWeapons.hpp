@@ -151,15 +151,13 @@ class CfgWeapons {
         HEARING_PROTECTION_PELTOR;
     };
 
+    class gm_ge_headgear_hat_beanie_base;
     class gm_ge_headgear_hat_beanie_crew_blk: gm_ge_headgear_hat_beanie_base {
         HEARING_PROTECTION_PELTOR;
     };
 
     class gm_xx_headgear_headwrap_01_base;
     class gm_xx_headgear_headwrap_crew_01_oli: gm_xx_headgear_headwrap_01_base {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class gm_xx_headgear_headwrap_crew_01_m84: gm_xx_headgear_headwrap_01_base {
         HEARING_PROTECTION_PELTOR;
     };
     class gm_xx_headgear_headwrap_crew_01_m84: gm_xx_headgear_headwrap_01_base {
