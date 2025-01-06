@@ -8,6 +8,7 @@
 // 01 green 02 tiger 03 black 04 spray 05 tiger green 06 erdl brown 07 leopard 08 erdl
 // 09 gray <- Fuck this - inheritance is fucking horrible as fuck.
 
+
 // Macros
 #define CN(variation,color) vn_b_boonie_##variation##_##color
 #define QCN(variation,color) QUOTE(CN(variation,color))
@@ -78,22 +79,34 @@ CN_COLORS(05)
 // Base classes in CfgWeapons.hpp
 // 06-08 anzac
 
-#define BOONIE_ANZAC(VAR)\
-class CN(06,VAR): CN(02,01) {\
-    class ace_wardrobe: EGVAR(wardrobe,base) {\
-        modifiableTo[] = { QCN(07,VAR), QCN(08,VAR) };\
-    };\
-};\
-class CN(07,VAR): CN(06,VAR) {\
-    class ace_wardrobe: EGVAR(wardrobe,base) {\
-        modifiableTo[] = { QCN(06,VAR), QCN(08,VAR) };\
-    };\
-};\
-class CN(08,VAR): CN(06,VAR) {\
-    class ace_wardrobe: EGVAR(wardrobe,base) {\
-        modifiableTo[] = { QCN(06,VAR), QCN(07,VAR) };\
-    };\
+class CN(06,01): CN(02,01) {
+    class ace_wardrobe: EGVAR(wardrobe,base) {
+        modifiableTo[] = { QCN(07,01), QCN(08,01) };
+    };
+};
+class CN(07,01): CN(06,01) {
+    class ace_wardrobe: EGVAR(wardrobe,base) {
+        modifiableTo[] = { QCN(06,VAR), QCN(08,01) };
+    };
+};
+class CN(08,01): CN(06,01) {
+    class ace_wardrobe: EGVAR(wardrobe,base) {
+        modifiableTo[] = { QCN(06,01), QCN(07,01) };
+    };
 };
 
-BOONIE_ANZAC(01)
-BOONIE_ANZAC(02)
+class CN(06,02): CN(06,01) {
+    class ace_wardrobe: EGVAR(wardrobe,base) {
+        modifiableTo[] = { QCN(07,02), QCN(08,02) };
+    };
+};
+class CN(07,02): CN(06,01) {
+    class ace_wardrobe: EGVAR(wardrobe,base) {
+        modifiableTo[] = { QCN(06,02), QCN(08,02) };
+    };
+};
+class CN(08,02): CN(06,01) {
+    class ace_wardrobe: EGVAR(wardrobe,base) {
+        modifiableTo[] = { QCN(06,02), QCN(07,02) };
+    };
+};
