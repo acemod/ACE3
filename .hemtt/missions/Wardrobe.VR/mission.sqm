@@ -8,14 +8,14 @@ class EditorData
 	toggles=517;
 	class ItemIDProvider
 	{
-		nextID=203;
+		nextID=204;
 	};
 	class Camera
 	{
-		pos[]={6.6224675,9.7580004,-22.782627};
-		dir[]={0.80753577,-0.42340663,0.4107419};
-		up[]={0.3774308,0.90591747,0.19197531};
-		aside[]={0.45338005,3.1408854e-07,-0.89136314};
+		pos[]={10.529591,7.5298214,-21.69327};
+		dir[]={0.82719439,-0.34348413,0.44482145};
+		up[]={0.30256075,0.93913782,0.16270162};
+		aside[]={0.47363219,2.9360672e-07,-0.8807708};
 	};
 };
 binarizationWanted=0;
@@ -27,13 +27,14 @@ addons[]=
 	"ace_ballistics",
 	"A3_Characters_F",
 	"A3_Soft_F_Exp_Offroad_02",
-	"A3_Weapons_F_Ammoboxes"
+	"A3_Weapons_F_Ammoboxes",
+	"ace_intelitems"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=4;
+		items=5;
 		class Item0
 		{
 			className="A3_Weapons_F";
@@ -62,6 +63,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
+		class Item4
+		{
+			className="ace_intelitems";
+			name="ACE3 - Intel Items";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
+		};
 	};
 };
 dlcs[]=
@@ -72,6 +80,9 @@ randomSeed=4540948;
 class ScenarioData
 {
 	author="Overlord Zorn";
+};
+class CustomAttributes
+{
 };
 class Mission
 {
@@ -96,7 +107,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=5;
+		items=6;
 		class Item0
 		{
 			dataType="Object";
@@ -263,6 +274,38 @@ class Mission
 			};
 			id=202;
 			type="B_AssaultPack_blk";
+		};
+		class Item5
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={17.528999,5.0073819,-17.298};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=203;
+			type="acex_intelitems_document";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ace_intelitems_data";
+					expression="[_this, _value] call ace_intelitems_fnc_setObjectData";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="Funny Bean Toast Man struck again.";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 };
