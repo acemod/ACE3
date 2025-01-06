@@ -10,6 +10,9 @@ class EGVAR(wardrobe,base_U_sleeves_down);
 class EGVAR(wardrobe,base_U_gloves_on);
 class EGVAR(wardrobe,base_U_gloves_off);
 
+class EGVAR(wardrobe,base_H_goggles_on);
+class EGVAR(wardrobe,base_H_goggles_off);
+
 class CfgWeapons {
     #include "Helmets.hpp"
     #include "Uniforms.hpp"
