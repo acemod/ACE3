@@ -28,11 +28,23 @@
             <Key ID="STR_ACE_Wardrobe_glovesOn">
                 <English>Wear gloves</English>
             </Key>
+            <Key ID="STR_ACE_Wardrobe_gogglesOff">
+                <English>Take goggles off</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_gogglesOn">
+                <English>Put goggles on</English>
+            </Key>
             <Key ID="STR_ACE_Wardrobe_jacketClose">
                 <English>Close Jacket</English>
             </Key>
             <Key ID="STR_ACE_Wardrobe_jacketOpen">
                 <English>Open Jacket</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_maskOff">
+                <English>Take mask off</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_maskOn">
+                <English>Put mask on</English>
             </Key>
             <Key ID="STR_ACE_Wardrobe_sleevesDown">
                 <English>Roll sleeves down</English>
@@ -45,18 +57,6 @@
             </Key>
             <Key ID="STR_ACE_Wardrobe_visorUp">
                 <English>Visor up</English>
-            </Key>
-            <Key ID="STR_ACE_Wardrobe_maskOn">
-                <English>Put mask on</English>
-            </Key>
-            <Key ID="STR_ACE_Wardrobe_maskOff">
-                <English>Take mask off</English>
-            </Key>
-            <Key ID="STR_ACE_Wardrobe_gogglesOn">
-                <English>Put goggles on</English>
-            </Key>
-            <Key ID="STR_ACE_Wardrobe_gogglesOff">
-                <English>Take goggles off</English>
             </Key>
         </Container>
         <Container name="CBA Context Menu">
