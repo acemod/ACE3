@@ -28,7 +28,7 @@ class CN(04,COLOR): lxWS_H_turban_04_black {\
 
 
 #define COLORGROUP_SPECIAL(COLOR)\
-class CN(02,COLOR): lxWS_H_turban_02_black {\
+class CN(02,COLOR): lxWS_H_turban_02_green {\
     class ace_wardrobe: EGVAR(wardrobe,base) {\
         modifiableTo[] = { QCN(03,COLOR) };\
     };\
