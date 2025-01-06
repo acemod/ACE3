@@ -46,8 +46,7 @@ private _replaceCode = switch ( _typeNumber ) do {
 };
 
 if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,configName _cfg_origin); };
-
-[ _replaceCode, [_unit, _cfg_origin, _cfg_tgt, _additionalParams ], _duration * 1.0 ] call CBA_fnc_waitAndExecute;
+[ _replaceCode, [_unit, _cfg_origin, _cfg_tgt, _additionalParams ], _duration] call CBA_fnc_waitAndExecute;
 
 //// Handle Components
 // Add Surplus
@@ -79,13 +78,18 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 [ _unit, getText (_cfg_tgt >> QADDON >> "gesture") ] call ace_common_fnc_doGesture;
 
 // Plays Random Sound At the Beginning
-private _sound_timing = getNumber (_cfg_tgt>> QADDON >> "sound_timing") max 0 min 1;
 private _sound = [_cfg_tgt >> QADDON >> "sound"] call FUNC(getCfgDataRandom);
-if (_sound != "") then { [ CBA_fnc_globalEvent, [QGVAR(EH_say3d), [_unit, _sound]], _sound_timing * _duration ] call CBA_fnc_waitAndExecute; };
+if (_sound != "") then {
+    [
+        CBA_fnc_globalEvent,
+        [QGVAR(EH_say3d), [_unit,_sound]],
+        (getNumber (_cfg_tgt>> QADDON >> "sound_timing") max 0 min 1) * _duration
+    ] call CBA_fnc_waitAndExecute;
+};
 
 // Notification
 private _notify_img = getText (_cfg_tgt >> "picture");
 if !(".paa" in _notify_img) then { _notify_img = [_notify_img,"paa"] joinString "." };
-[ CBA_fnc_notify,      [[ _notify_img, 4], [getText (_cfg_tgt >> "displayName")], true ],   _duration * 1.2 ] call CBA_fnc_waitAndExecute;
+[ CBA_fnc_notify, [[ _notify_img, 4], [getText (_cfg_tgt >> "displayName")], true ], _duration * 1.2 ] call CBA_fnc_waitAndExecute;
 
 nil

@@ -89,28 +89,28 @@ class H_turban_02_mask_snake_lxws: H_turban_02_mask_black_lxws {
         components[] = {"H_bmask_snake_lxws"};
     };
 };
-class H_turban_02_mask_hex_lxws: H_turban_02_mask_black_lxws    {
+class H_turban_02_mask_hex_lxws: H_turban_02_mask_black_lxws {
     class ace_wardrobe: EGVAR(wardrobe,base) {
         modifiableTo[] = { QCN(01,sand), QCN(02,sand), QCN(03,sand), QCN(04,sand), "H_turban_02_mask_snake_lxws" };
         components[] = {"lxWS_H_bmask_hex"};
     };
 };
-class lxWS_H_turban_01_sand: lxWS_H_turban_01_black             {
+class lxWS_H_turban_01_sand: lxWS_H_turban_01_black {
     class ace_wardrobe: EGVAR(wardrobe,base) {
         modifiableTo[] = { QCN(02,sand), QCN(03,sand), QCN(04,sand), "H_turban_02_mask_snake_lxws", "H_turban_02_mask_hex_lxws" };
     };
 };
-class lxWS_H_turban_02_sand: lxWS_H_turban_02_black             {
+class lxWS_H_turban_02_sand: lxWS_H_turban_02_black {
     class ace_wardrobe: EGVAR(wardrobe,base) {
         modifiableTo[] = { QCN(01,sand), QCN(03,sand), QCN(04,sand), "H_turban_02_mask_snake_lxws", "H_turban_02_mask_hex_lxws" };
     };
 };
-class lxWS_H_turban_03_sand: lxWS_H_turban_03_black             {
+class lxWS_H_turban_03_sand: lxWS_H_turban_03_black {
     class ace_wardrobe: EGVAR(wardrobe,base) {
         modifiableTo[] = { QCN(01,sand), QCN(02,sand), QCN(04,sand), "H_turban_02_mask_snake_lxws", "H_turban_02_mask_hex_lxws" };
     };
 };
-class lxWS_H_turban_04_sand: lxWS_H_turban_04_black             {
+class lxWS_H_turban_04_sand: lxWS_H_turban_04_black {
     class ace_wardrobe: EGVAR(wardrobe,base) {
         modifiableTo[] = { QCN(01,sand), QCN(02,sand), QCN(03,sand), "H_turban_02_mask_snake_lxws", "H_turban_02_mask_hex_lxws" };
     };

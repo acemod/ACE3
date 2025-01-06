@@ -8,11 +8,6 @@ class className: vn_b_uniform_base {\
     };\
 };
 
-#define MASS(var)\
-class ItemInfo: ItemInfo {\
-    mass = var;\
-};
-
 class CfgWeapons {
     class vn_b_uniform_base;
 
