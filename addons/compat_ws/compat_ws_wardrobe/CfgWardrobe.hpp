@@ -10,7 +10,7 @@ class CfgWeapons {
     };
     class H_Cap_headphones_ion_lxws: lxWS_H_CapB_rvs_blk_ION {
         class ace_wardrobe: EGVAR(wardrobe,base) {
-            modifiableTo[] = { "lxWS_H_CapB_rvs_blk_ION"   };
+            modifiableTo[] = { "lxWS_H_CapB_rvs_blk_ION" };
         };
     };
 
