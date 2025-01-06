@@ -46,6 +46,18 @@
             <Key ID="STR_ACE_Wardrobe_visorUp">
                 <English>Visor up</English>
             </Key>
+            <Key ID="STR_ACE_Wardrobe_maskOn">
+                <English>Put mask on</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_maskOff">
+                <English>Take mask off</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_gogglesOn">
+                <English>Put goggles on</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_gogglesOff">
+                <English>Take goggles off</English>
+            </Key>
         </Container>
         <Container name="CBA Context Menu">
             <Key ID="STR_ACE_Wardrobe_cannotSwitchTo">

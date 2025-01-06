@@ -3,3 +3,8 @@ The problem is, that the rolled up version are both 1 lb (0.453 kg) lighter and 
 
 If we would ignore this, the player would run into situations where they would lose items by simply rolling up their sleeves.
 To counter this, I increased the maxLoad of those items by 1 lb to be aligned with their counterpart.
+
+
+Addition:
+This also adjusts helmets with combat goggles due to a weight discrepancy.
+

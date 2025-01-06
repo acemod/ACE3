@@ -38,7 +38,6 @@ class GVAR(base_U_gloves_off): GVAR(base) {
     alternativeDisplayName = CSTRING(glovesOff);
 };
 
-
 // Common Base Class for Uniforms who are open/closed in the front
 class GVAR(base_U_jacket_open): GVAR(base) {
     alternativeDisplayName = CSTRING(jacketOpen); 
@@ -46,7 +45,6 @@ class GVAR(base_U_jacket_open): GVAR(base) {
 class GVAR(base_U_jacket_closed): GVAR(base) {
     alternativeDisplayName = CSTRING(jacketClose);
 };
-
 
 // Common Base Class for Helmets with a Visor that can be flipped up or down
 class GVAR(base_H_visor_up): GVAR(base) {
@@ -67,4 +65,15 @@ class GVAR(base_H_visor_down): GVAR(base) {
     sound_timing = 0;
 
     alternativeDisplayName = CSTRING(visorDown);
+};
+
+// Common Base Class for Headgear with goggles that can be used as a facewear item.
+class GVAR(base_H_goggles_on): GVAR(base) {
+    gesture ="GestureWipeFace";
+    alternativeDisplayName = CSTRING(gogglesOn);
+};
+
+class GVAR(base_H_goggles_off): GVAR(base) {
+    gesture ="GestureWipeFace";
+    alternativeDisplayName = CSTRING(gogglesOff);
 };

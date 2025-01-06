@@ -11,7 +11,8 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
 
         requiredAddons[] = {
-            "ace_interact_menu"
+            "ace_interact_menu",
+            "ace_goggles"
         };
         skipWhenMissingDependencies = 1;
 
