@@ -26,8 +26,6 @@ addons[]=
 	"ace_realisticnames",
 	"ace_ballistics",
 	"A3_Characters_F",
-	"gm_characters_ge_characters",
-	"ace_compat_gm_wardrobe",
 	"A3_Soft_F_Exp_Offroad_02",
 	"A3_Weapons_F_Ammoboxes",
 	"ace_intelitems",
@@ -37,7 +35,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=8;
+		items=6;
 		class Item0
 		{
 			className="A3_Weapons_F";
@@ -61,33 +59,19 @@ class AddonsMetaData
 		};
 		class Item3
 		{
-			className="gm_characters_ge_characters";
-			name="gm_characters_ge_characters";
-			author="Global Mobilization";
-			url="global-mobilization.com";
-		};
-		class Item4
-		{
-			className="ace_compat_gm";
-			name="ACE3 - GM Compatibility";
-			author="ACE-Team";
-			url="https://ace3.acemod.org/";
-		};
-		class Item5
-		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item6
+		class Item4
 		{
 			className="ace_intelitems";
 			name="ACE3 - Intel Items";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item7
+		class Item5
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
@@ -98,7 +82,6 @@ class AddonsMetaData
 };
 dlcs[]=
 {
-	"gm",
 	"Expansion"
 };
 randomSeed=4540948;
