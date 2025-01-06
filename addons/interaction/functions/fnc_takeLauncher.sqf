@@ -41,7 +41,7 @@ if (secondaryWeapon _player isNotEqualTo "") exitWith {ERROR("Cannot add launche
 
         _target removeWeapon _launcher;
 
-        [_player, _launcher, true, _magazines] call ace_common_fnc_addWeapon;
+        [_player, _launcher, true, _magazines] call EFUNC(common,addWeapon);
 
         // Add attachments
         {
