@@ -2,7 +2,6 @@ PREP(isModifiable);
 PREP(compare_components);
 PREP(canModifyTo);
 // ace_intel
-PREP(getMagIDs);
 PREP(getIndexFromMagID);
 PREP(setIndexForMagID);
 // getItems

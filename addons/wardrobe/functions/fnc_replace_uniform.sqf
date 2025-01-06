@@ -33,13 +33,13 @@ private _loadout = [_player] call CBA_fnc_getLoadout;
 private _hasDocument = _magazineDetails findIf { _x#0 == "acex_intelitems_document" } > -1;
 private _hasNotepad =  _magazineDetails findIf { _x#0 == "acex_intelitems_notepad" } > -1;
 private _hasPhoto =    _magazineDetails findIf { _x#0 == "acex_intelitems_photo" } > -1;
-if (_hasDocument) then { _hasDocument = [_player, "acex_intelitems_document"] call FUNC(getMagIDs) apply { [_x] call FUNC(getIndexFromMagID) } };
-if (_hasNotepad)  then { _hasNotepad  = [_player, "acex_intelitems_notepad"]  call FUNC(getMagIDs) apply { [_x] call FUNC(getIndexFromMagID) } };
-if (_hasPhoto)    then { _hasPhoto    = [_player, "acex_intelitems_photo"]    call FUNC(getMagIDs) apply { [_x] call FUNC(getIndexFromMagID) } };
+if (_hasDocument) then { _hasDocument = [_player, "acex_intelitems_document"] call CBA_fnc_getMagazineIndex apply { [_x] call FUNC(getIndexFromMagID) } };
+if (_hasNotepad)  then { _hasNotepad  = [_player, "acex_intelitems_notepad"]  call CBA_fnc_getMagazineIndex apply { [_x] call FUNC(getIndexFromMagID) } };
+if (_hasPhoto)    then { _hasPhoto    = [_player, "acex_intelitems_photo"]    call CBA_fnc_getMagazineIndex apply { [_x] call FUNC(getIndexFromMagID) } };
 
 // ACE Overheating
 private _hasSpareBarrel = _magazineDetails findIf { _x#0 == "ACE_SpareBarrel" } > -1;
-if (_hasSpareBarrel) then { _hasSpareBarrel = [_player, "ACE_SpareBarrel" ] call FUNC(getMagIDs) };
+if (_hasSpareBarrel) then { _hasSpareBarrel = [_player, "ACE_SpareBarrel" ] call CBA_fnc_getMagazineIndex };
 
 
 //// Replace Wearable
@@ -58,12 +58,12 @@ switch (_case) do {
 //// Handle Special Cases - Post Replace
 
 // ACE Intel Items
-if (_hasDocument isEqualType []) then { { [_x, _hasDocument # _forEachIndex] call FUNC(setIndexForMagID); } forEach ( [_player, "acex_intelitems_document"] call FUNC(getMagIDs) ); };
-if (_hasNotepad isEqualType [])  then { { [_x, _hasNotepad # _forEachIndex]  call FUNC(setIndexForMagID); } forEach ( [_player, "acex_intelitems_notepad"]  call FUNC(getMagIDs) ); };
-if (_hasPhoto isEqualType [])    then { { [_x, _hasPhoto # _forEachIndex]    call FUNC(setIndexForMagID); } forEach ( [_player, "acex_intelitems_photo"]    call FUNC(getMagIDs) ); };
+if (_hasDocument isEqualType []) then { { [_x, _hasDocument # _forEachIndex] call FUNC(setIndexForMagID); } forEach ( [_player, "acex_intelitems_document"] call CBA_fnc_getMagazineIndex ); };
+if (_hasNotepad isEqualType [])  then { { [_x, _hasNotepad # _forEachIndex]  call FUNC(setIndexForMagID); } forEach ( [_player, "acex_intelitems_notepad"]  call CBA_fnc_getMagazineIndex ); };
+if (_hasPhoto isEqualType [])    then { { [_x, _hasPhoto # _forEachIndex]    call FUNC(setIndexForMagID); } forEach ( [_player, "acex_intelitems_photo"]    call CBA_fnc_getMagazineIndex ); };
 
 // ACE Overheating
 if (_hasSpareBarrel isEqualType [] ) then {
-    private _SpareBarrel_new_MagIDs = [_player, "ACE_SpareBarrel"] call FUNC(getMagIDs);
+    private _SpareBarrel_new_MagIDs = [_player, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
     [QGVAR(EH_updateMagIDs), [_hasSpareBarrel, _SpareBarrel_new_MagIDs]] call CBA_fnc_serverEvent;
 };
