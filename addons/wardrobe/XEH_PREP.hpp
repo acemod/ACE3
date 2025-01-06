@@ -11,9 +11,8 @@ PREP(getItems_modifiable_current);
 PREP(getItems_modifiableTo);
 // Replace
 PREP(replace);
-PREP(replace_headgear);
-PREP(replace_facewear);
-PREP(replace_uniform);
+PREP(replace_other);
+PREP(replace_container);
 // Compat
 PREP(spareBarrel_updateMagIDs);
 // Ace Actions

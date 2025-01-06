@@ -18,6 +18,15 @@
  * Public: No
  */
 
-params ["_player", "_cfg_origin", "_cfg_tgt"];
-removeGoggles _player;
-_player addGoggles configName _cfg_tgt;
+params ["_player", "_cfg_origin", "_cfg_tgt", "_additionalParams"];
+
+switch (_additionalParams) do {
+    case "HEADGEAR": {
+        removeHeadgear _player;
+        _player addHeadgear configName _cfg_tgt;
+    };
+    case "FACEWEAR": {
+        removeGoggles _player;
+        _player addGoggles configName _cfg_tgt;
+    };
+};

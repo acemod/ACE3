@@ -32,14 +32,14 @@ if (_replaceNow) then { _duration = 0; };
 private _additionalParams = "";
 private _typeNumber = getNumber (_cfg_origin >> "ItemInfo" >> "type");
 private _replaceCode = switch ( _typeNumber ) do {
-    case TYPE_HEADGEAR: {                                 FUNC(replace_headgear) };
-    case TYPE_UNIFORM:  { _additionalParams = "UNIFORM";  FUNC(replace_uniform)  };
-    case TYPE_VEST:     { _additionalParams = "VEST";     FUNC(replace_uniform)  };
-    case TYPE_BACKPACK: { _additionalParams = "BACKPACK"; FUNC(replace_uniform)  };
+    case TYPE_HEADGEAR: { _additionalParams = "HEADGEAR"; FUNC(replace_other) };
+    case TYPE_UNIFORM:  { _additionalParams = "UNIFORM";  FUNC(replace_container)  };
+    case TYPE_VEST:     { _additionalParams = "VEST";     FUNC(replace_container)  };
+    case TYPE_BACKPACK: { _additionalParams = "BACKPACK"; FUNC(replace_container)  };
     default {
         // CfgGlasses items do not have a ItemInfo Subclass and therefore, not TypeNumber.
         switch (true) do {
-            case (isClass (configFile >> "CfgGlasses" >> configName _cfg_origin)): { FUNC(replace_facewear) };
+            case (isClass (configFile >> "CfgGlasses" >> configName _cfg_origin)): { _additionalParams = "FACEWEAR"; FUNC(replace_other) };
             default { false };
         };
     };
