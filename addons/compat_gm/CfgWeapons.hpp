@@ -123,6 +123,9 @@ class CfgWeapons {
     class gm_ge_headgear_beret_crew_grn_mechinf: gm_ge_headgear_beret_crew_grn {
         HEARING_PROTECTION_PELTOR;
     };
+    class gm_ge_headgear_beret_crew_grn_infantry: gm_ge_headgear_beret_crew_grn {
+        HEARING_PROTECTION_PELTOR;
+    };
     class gm_ge_headgear_beret_crew_red_militarypolice: gm_ge_headgear_beret_crew_red {
         HEARING_PROTECTION_PELTOR;
     };
@@ -135,6 +138,9 @@ class CfgWeapons {
     class gm_ge_headgear_beret_crew_bdx_paratrooper: gm_ge_headgear_beret_crew_bdx {
         HEARING_PROTECTION_PELTOR;
     };
+    class gm_ge_headgear_beret_crew_bdx_lrrp: gm_ge_headgear_beret_crew_bdx {
+        HEARING_PROTECTION_PELTOR;
+    };
     class gm_ge_headgear_beret_crew_blk_recon: gm_ge_headgear_beret_crew_blk {
         HEARING_PROTECTION_PELTOR;
     };
@@ -142,6 +148,48 @@ class CfgWeapons {
         HEARING_PROTECTION_PELTOR;
     };
     class gm_ge_headgear_beret_crew_red_signals: gm_ge_headgear_beret_crew_red {
+        HEARING_PROTECTION_PELTOR;
+    };
+
+    class gm_ge_bgs_headgear_beret_crew_grn: gm_ge_headgear_beret_crew_grn {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class gm_ge_bgs_headgear_beret_crew_grn_sf: gm_ge_headgear_beret_crew_grn {
+        HEARING_PROTECTION_PELTOR;
+    };
+
+    class gm_ge_headgear_hat_beanie_crew_blk: gm_ge_headgear_hat_beanie_base {
+        HEARING_PROTECTION_PELTOR;
+    };
+
+    class gm_xx_headgear_headwrap_01_base;
+    class gm_xx_headgear_headwrap_crew_01_oli: gm_xx_headgear_headwrap_01_base {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class gm_xx_headgear_headwrap_crew_01_m84: gm_xx_headgear_headwrap_01_base {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class gm_xx_headgear_headwrap_crew_01_m84: gm_xx_headgear_headwrap_01_base {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class gm_xx_headgear_headwrap_crew_01_grn: gm_xx_headgear_headwrap_01_base {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class gm_xx_headgear_headwrap_crew_01_smp: gm_xx_headgear_headwrap_01_base {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class gm_xx_headgear_headwrap_crew_01_blk: gm_xx_headgear_headwrap_01_base {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class gm_xx_headgear_headwrap_crew_01_flk: gm_xx_headgear_headwrap_01_base {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class gm_xx_headgear_headwrap_crew_01_trp: gm_xx_headgear_headwrap_01_base {
+        HEARING_PROTECTION_PELTOR;
+    };
+
+    class gm_ge_headgear_beret_crew_base;
+    class gm_ge_headgear_beret_crew_blk: gm_ge_headgear_beret_crew_base {
         HEARING_PROTECTION_PELTOR;
     };
 };
