@@ -47,18 +47,34 @@ private _replaceCode = switch ( _typeNumber ) do {
 
 if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,configName _cfg_origin); };
 
-[ _replaceCode,        [_unit, _cfg_origin, _cfg_tgt, _additionalParams ],  _duration * 1.0 ] call CBA_fnc_waitAndExecute;
+[ _replaceCode, [_unit, _cfg_origin, _cfg_tgt, _additionalParams ], _duration * 1.0 ] call CBA_fnc_waitAndExecute;
 
-// Remove / Add Missing/Surplus Items.
+//// Handle Components
+// Add Surplus
 [_cfg_origin, _cfg_tgt] call FUNC(compare_components) params ["_missing", "_surplus"];
 {
-    if (configName _cfg_tgt != _x) then { [_unit, _x, true] call CBA_fnc_addItem; };
+    if (configName _cfg_tgt != _x) then {
+        if ( isClass (configFile >> "CfgGlasses" >> _x) && { goggles _unit == "" } ) then {
+            _unit addGoggles _x;
+        } else {
+            [_unit, _x, true] call CBA_fnc_addItem;
+        };
+    };
 } forEach _surplus;   
+
+// Remove Missing
 {
-    if (configName _cfg_origin != _x) then { [_unit, _x] call CBA_fnc_removeItem; };
+    if (configName _cfg_origin != _x) then {
+
+        switch (true) do {
+            case (goggles _unit == _x): { removeGoggles _unit; };
+            default { [_unit, _x] call CBA_fnc_removeItem; };
+        };
+    };
 } forEach _missing;
 
 
+//// Handle Effects
 // Animation/Gestures
 [ _unit, getText (_cfg_tgt >> QADDON >> "gesture") ] call ace_common_fnc_doGesture;
 
@@ -66,7 +82,6 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 private _sound_timing = getNumber (_cfg_tgt>> QADDON >> "sound_timing") max 0 min 1;
 private _sound = [_cfg_tgt >> QADDON >> "sound"] call FUNC(getCfgDataRandom);
 if (_sound != "") then { [ CBA_fnc_globalEvent, [QGVAR(EH_say3d), [_unit, _sound]], _sound_timing * _duration ] call CBA_fnc_waitAndExecute; };
-
 
 // Notification
 private _notify_img = getText (_cfg_tgt >> "picture");
