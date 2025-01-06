@@ -22,7 +22,7 @@
 params [ [ "_key", "", [""] ], [ "_else", "404", [{}] ] ];
 
 if (_else isEqualTo "404") then {
-    [] call FUNC(cache_db) getOrDefault [_key, "404"];
+    GVAR(cache) getOrDefault [_key, "404"];
 } else {
-    [] call FUNC(cache_db) getOrDefaultCall [_key, _else, true];
+    GVAR(cache) getOrDefaultCall [_key, _else, true];
 };

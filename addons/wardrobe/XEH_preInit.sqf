@@ -8,4 +8,6 @@ PREP_RECOMPILE_END;
 
 #include "initSettings.inc.sqf"
 
+missionNamespace setVariable [QGVAR(cache), createHashMap];
+
 ADDON = true;

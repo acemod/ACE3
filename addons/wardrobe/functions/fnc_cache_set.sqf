@@ -21,10 +21,8 @@
 
 params [ ["_key", "", [""] ], ["_value", "404"] ];
 
-private _db = [] call FUNC(cache_db);
-
 if (_value isEqualTo "404") exitWith { false };
 
-_db set [_key, _value];
+GVAR(cache) set [_key, _value];
 
 true
