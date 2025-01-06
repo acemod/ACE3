@@ -26,7 +26,6 @@ PREP(cache_get);
 PREP(cache_set);
 PREP(cache_clear);
 PREP(clearOnClosed_InteractionMenu);
-PREP(clearOnClosed_Inventory);
 // Config
 PREP(getCfgDataRandom);
 // Debug
