@@ -48,7 +48,7 @@ class GVAR(base_U_jacket_closed): GVAR(base) {
 
 // Common Base Class for Helmets with a Visor that can be flipped up or down
 class GVAR(base_H_visor_up): GVAR(base) {
-    duration = 0.3;
+    duration = 0.25;
     gesture ="gestureNod";
 
     sound[] = {CN_SOUND(helmet_visor,05)};
@@ -58,7 +58,7 @@ class GVAR(base_H_visor_up): GVAR(base) {
 };
 
 class GVAR(base_H_visor_down): GVAR(base) {
-    duration = 0.3;
+    duration = 0.25;
     gesture ="gestureNod";
 
     sound[] = {CN_SOUND(helmet_visor,05)};
