@@ -24,7 +24,6 @@ PREP(getAction_Icon);
 // Cache
 PREP(cache_get);
 PREP(cache_set);
-PREP(cache_clear);
 PREP(clearOnClosed_InteractionMenu);
 // Config
 PREP(getCfgDataRandom);

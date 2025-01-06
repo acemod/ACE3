@@ -27,7 +27,7 @@ if (_queue isEqualTo "404") then {
         {
             if (_this isNotEqualTo [1]) exitWith {};
 
-            { [_x] call FUNC(cache_clear) } forEach ( missionNamespace getVariable [QGVAR(menu_clear_queue), [] ] );
+            { GVAR(cache) deleteAt _x } forEach ( missionNamespace getVariable [QGVAR(menu_clear_queue), [] ] );
 
             missionNamespace setVariable [QGVAR(menu_clear_queue), nil ];
             [_thisType, _thisId] call CBA_fnc_removeEventHandler;
