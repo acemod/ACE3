@@ -43,7 +43,7 @@ workshop = [
 ]
 
 [Wardrobe]
-extends = "default"
+extends = "rhs"
 workshop = [
     "2369477168", # Advanced Developer Tools
     "1779063631", # ZEN
@@ -52,6 +52,7 @@ workshop = [
 mission = "Wardrobe.VR"
 dlc = [
 #    "Western Sahara",    
-#    "Reaction Forces"    
-#    "S.O.G. Prairie Fire"
+#    "Reaction Forces", 
+#    "S.O.G. Prairie Fire",
+#    "gm"
 ]
