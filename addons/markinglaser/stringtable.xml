@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Markinglaser">
+        <Key ID="STR_ACE_Markinglaser_Name">
+            <English>IR marking laser</English>
+            <German>IR Markierungslaser</German>
+        </Key>
+        <Key ID="STR_ACE_Markinglaser_Flashing">
+            <English>Blinking</English>
+            <German>Blinken</German>
+        </Key>
         <Key ID="STR_ACE_Markinglaser_ToggleLaser">
             <English>Toggle IR marking laser</English>
             <German>IR Markierungslaser umschalten</German>

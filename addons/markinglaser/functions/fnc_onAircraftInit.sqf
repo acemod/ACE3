@@ -42,3 +42,27 @@ if (_turretData isEqualTo []) then {
     _turretData params ["_turretPath"];
     _aircraft setVariable [QGVAR(turretInfo), _turretPath];
 };
+
+
+TRACE_1("Add interaction",_aircraft);
+private _condition = {
+    if !(_target getVariable [QGVAR(enabled), false]) exitWith {false};
+    private _controlledUnit = [ACE_player, ACE_controlledUAV # 1] select (unitIsUAV _target);
+    private _turretInfo = _target getVariable [QGVAR(turretInfo), []];
+    private _canTurnOn = _controlledUnit == _target turretUnit _turretInfo;
+    _canTurnOn
+};
+
+private _getChildren = {
+    private _statement = {
+        _target setVariable [QGVAR(laserMode), _actionParams, true];
+    };
+    private _current = _target getVariable [QGVAR(laserMode), 0];
+    [[MODE_OFF, LELSTRING(common,disabled)], [MODE_ON, LELSTRING(common,enabled)], [MODE_FLASH, LLSTRING(Flashing)]] apply {
+        _x params ["_mode", "_text"];
+        if (_current == _mode) then { _text = ">" + _text };
+        [[str _mode, _text, "", _statement, {true}, {}, _mode] call EFUNC(interact_menu,createAction), [], _target]
+    }
+};
+private _actionBase = [QGVAR(actionBase), LLSTRING(Name), "", {}, _condition, _getChildren] call EFUNC(interact_menu,createAction);
+private _basePath = [_aircraft, 1, ["ACE_SelfActions"], _actionBase] call EFUNC(interact_menu,addActionToObject);
