@@ -15,18 +15,18 @@ version:
 
 ## 1. Overview
 
-The Wardrobe Addon gives the player the opportunity to change/modify their current wearables into different variants of these.
+The Wardrobe Addon gives the player the opportunity to change/modify their current wearables into different variants.
 
-For example, if a uniform has a normal variant and a "Rolled-Up Sleeves" variant, the player will be able to use ether an ACE Self Interaction or utilize the CBA Context Menu in their Inventory.
+For example, if a uniform has a normal variant and a "Rolled-Up Sleeves" variant, the player will be able to use ether an ACE Self Interaction or the CBA Context Menu in the Inventory.
 
-Since there is no common pattern in terms of class inheritence, not even within the same DLC, each possbile variant has to be defined within the classes config properties.
+Since there is no reliable, common pattern in terms of class inheritence, not even within the same DLC, each possbile variant has to be defined individually within the classes config properties.
 
 ### 1.1 Components
 
-Components are an optional assistance to define a group of variants where one or more variants have components that are merged into another.
-For example, Western Saharah comes with turbans in different variations. Those can be interchanged to and from each other without any restriction. But there are also the the variants which utilize the balistic facemasks. In this case, the balistic facemask would be defined as a component and the turban with the the facemask would also be defined having the ballistic facemask as a component.
+Components are an optional assistance to define a group of variants where a variant is made of one or more components.
+For example, a bandanna with sunglasses would have the the bandanna and the sunglasses as components, while the bandanna and sunglasses themself only have themselves as a component.
 
-If the player switches from the variant with the mask to a turban variant without a mask, the mask, being a component that is no longer needed, will be deposited into the players inventory (or on the floor when full) and the turban will be changed in to the desired variant.
+If the player switches from a variant with more components to a variant with less components, the surplus components will be deposited in their inventory. Vise Versa, if the player wants to change from a variant with less components to a variant with more components, they are required to have the missing components in their inventory, which will be removed on conversion.
 
 More examples can be found below.
 
@@ -274,11 +274,15 @@ class CfgGlasses {
 };
 ```
 
-## 4. Sounds
+## 4. Addon Settings
+
+
+
+## 5. Sounds
 
 The following CfgSounds classes are integrated in ace_wardrobe and are the default sounds for the `ace_wardrobe_base` and `ace_wardrobe_base_H_visor_up`/`ace_wardrobe_base_H_visor_down` base classes.
 
-### 4.1 Integrated Sounds
+### 5.1 Integrated Sounds
 
 The number at the end of the classnames indicates the length of the file in 1/10th seconds.
 10 -> 1 sec, 15 -> 1.5sec, ...
@@ -289,3 +293,8 @@ The number at the end of the classnames indicates the length of the file in 1/10
 - `ace_wardrobe_fabric_20`
 - `ace_wardrobe_fabric_25`
 - `ace_wardrobe_helmet_visor_05`
+
+## 6. Compatibility
+Currently, ace_IntelItems and ace_overheating (spare barrels) are being directly supported.
+
+If an addon or mod utilizes a magazines magazineID to handle additional data about an items carried by the player, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new magazineIDs for all magazines on the player.
