@@ -84,7 +84,7 @@ class G_Balaclava_TI_G_tna_F: G_Balaclava_TI_tna_F {
 // Bandana, Black
 class G_Bandanna_blk: G_Balaclava_blk {
     class ace_wardrobe: EGVAR(wardrobe,base) {
-        modifiableTo[] = { "G_Bandanna_aviator", "G_Bandanna_sport", "G_Bandanna_aviator" };
+        modifiableTo[] = { "G_Bandanna_aviator", "G_Bandanna_sport", "G_Bandanna_shades" };
         components[] = { "G_Bandanna_blk" };
     };
 };

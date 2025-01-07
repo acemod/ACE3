@@ -30,7 +30,7 @@ class GVAR(base_U_sleeves_down): GVAR(base) {
     alternativeDisplayName = CSTRING(sleevesDown);
 };
 
-// Common Base Class for Uniforms with Sleeves Up/Down Variants
+// Common Base Class for Uniforms with Gloves On/Off Variants
 class GVAR(base_U_gloves_on): GVAR(base) {
     alternativeDisplayName = CSTRING(glovesOn); 
 };
