@@ -1,5 +1,5 @@
 ace_markinglaser
 ===================
 
-Adds a marking laser for aircraft.
+Adds an IR marking laser for aircraft.
 
