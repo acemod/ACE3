@@ -68,12 +68,12 @@ class CN(05,CAMO): CN(02,CAMO) {\
     class ace_wardrobe: EGVAR(wardrobe,base) {\
         modifiableTo[] = { QCN(01,CAMO), QCN(02,CAMO), QCN(03,CAMO), QCN(04,CAMO) };\
     };\
-};
+}
 
-CN_COLORS(02)
-CN_COLORS(03)
-CN_COLORS(04)
-CN_COLORS(05)
+CN_COLORS(02);
+CN_COLORS(03);
+CN_COLORS(04);
+CN_COLORS(05);
 
 
 // Base classes in CfgWeapons.hpp

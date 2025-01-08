@@ -28,9 +28,9 @@ private _loadout = [_player] call CBA_fnc_getLoadout;
 
 //// Handle Special Cases - Pre Replace
 // ACE Intel Items
-INTEL_PRE(_hasDocument,acex_intelitems_document)
-INTEL_PRE(_hasNotepad,acex_intelitems_notepad)
-INTEL_PRE(_hasPhoto,acex_intelitems_photo)
+INTEL_PRE(_hasDocument,acex_intelitems_document);
+INTEL_PRE(_hasNotepad,acex_intelitems_notepad);
+INTEL_PRE(_hasPhoto,acex_intelitems_photo);
 
 // ACE Overheating
 private _hasSpareBarrel = _magazineDetails findIf { _x#0 == "ACE_SpareBarrel" } > -1;
@@ -52,9 +52,9 @@ switch (_case) do {
 
 //// Handle Special Cases - Post Replace
 // ACE Intel Items
-INTEL_POST(_hasDocument,acex_intelitems_document)
-INTEL_POST(_hasNotepad,acex_intelitems_notepad)
-INTEL_POST(_hasPhoto,acex_intelitems_photo)
+INTEL_POST(_hasDocument,acex_intelitems_document);
+INTEL_POST(_hasNotepad,acex_intelitems_notepad);
+INTEL_POST(_hasPhoto,acex_intelitems_photo);
 
 // ACE Overheating
 if (_hasSpareBarrel isEqualType [] ) then {

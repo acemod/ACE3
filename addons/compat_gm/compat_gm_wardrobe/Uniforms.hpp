@@ -150,8 +150,6 @@ class gm_ge_uniform_soldier_rolled_90_flk: gm_ge_uniform_soldier_90_base {
 };
 
 
-
-
 // Gloves
 
 class gm_gc_uniform_soldier_80_base;
@@ -214,5 +212,3 @@ class gm_xx_uniform_soldier_bdu_nogloves_80_oli: gm_ge_army_uniform_soldier_bdu_
         modifiableTo[] = { "gm_xx_uniform_soldier_bdu_80_oli", "gm_xx_uniform_soldier_bdu_rolled_80_oli" };
     };
 };
-
-

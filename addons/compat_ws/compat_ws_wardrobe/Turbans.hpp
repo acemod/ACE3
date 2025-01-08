@@ -24,7 +24,7 @@ class CN(04,COLOR): lxWS_H_turban_04_black {\
     class ace_wardrobe: EGVAR(wardrobe,base) {\
         modifiableTo[] = { QCN(01,COLOR), QCN(02,COLOR), QCN(03,COLOR) };\
     };\
-};
+}
 
 
 #define COLORGROUP_SPECIAL(COLOR)\
@@ -37,7 +37,7 @@ class CN(03,COLOR): lxWS_H_turban_03_black {\
     class ace_wardrobe: EGVAR(wardrobe,base) {\
         modifiableTo[] = { QCN(02,COLOR) };\
     };\
-};
+}
 
 
 // BASECLASS
@@ -76,15 +76,15 @@ class lxWS_H_turban_04_black: lxWS_H_turban_01_black {
 };
 
 // VARIATIONS
-COLORGROUP(blue)
-COLORGROUP(blue_una)
-COLORGROUP(green)
-COLORGROUP(red)
-COLORGROUP(gray)
-COLORGROUP(yellow)
+COLORGROUP(blue);
+COLORGROUP(blue_una);
+COLORGROUP(green);
+COLORGROUP(red);
+COLORGROUP(gray);
+COLORGROUP(yellow);
 
 // Special Variations
-COLORGROUP_SPECIAL(green_pattern)
+COLORGROUP_SPECIAL(green_pattern);
 
 
 // Super Special Manual blabla

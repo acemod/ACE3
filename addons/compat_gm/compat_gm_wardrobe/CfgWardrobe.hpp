@@ -17,4 +17,3 @@ class CfgWeapons {
     #include "Helmets.hpp"
     #include "Uniforms.hpp"
 };
-

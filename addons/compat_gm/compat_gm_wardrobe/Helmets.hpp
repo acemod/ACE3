@@ -43,13 +43,13 @@ class classWith: baseWith {\
         modifiableTo[] = { QUOTE(classWithout) };\
         components[] = { QUOTE(goggles) };\
     };\
-    MASS(11)\
+    MASS(11);\
 };\
 class classWithout: baseWithout {\
     class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_off) {\
         modifiableTo[] = { QUOTE(classWith) };\
     };\
-};
+}
 
 
 class gm_ge_headgear_m92_base;
@@ -63,12 +63,12 @@ class gm_ge_headgear_m92_cover_glasses_base: gm_ge_headgear_m92_base {
     class ItemInfo;
 };
 
-GM_Helmet_Glasses(gm_ge_headgear_m92_cover_glasses_win,gm_ge_headgear_m92_cover_win,gm_ge_headgear_m92_cover_glasses_base,gm_ge_headgear_m92_cover_base,gm_ge_facewear_dustglasses)
-GM_Helmet_Glasses(gm_ge_headgear_m92_cover_glasses_oli,gm_ge_headgear_m92_cover_oli,gm_ge_headgear_m92_cover_glasses_base,gm_ge_headgear_m92_cover_base,gm_ge_facewear_dustglasses)
-GM_Helmet_Glasses(gm_ge_headgear_m92_cover_glasses_blk,gm_ge_headgear_m92_cover_blk,gm_ge_headgear_m92_cover_glasses_base,gm_ge_headgear_m92_cover_base,gm_ge_facewear_dustglasses)
+GM_Helmet_Glasses(gm_ge_headgear_m92_cover_glasses_win,gm_ge_headgear_m92_cover_win,gm_ge_headgear_m92_cover_glasses_base,gm_ge_headgear_m92_cover_base,gm_ge_facewear_dustglasses);
+GM_Helmet_Glasses(gm_ge_headgear_m92_cover_glasses_oli,gm_ge_headgear_m92_cover_oli,gm_ge_headgear_m92_cover_glasses_base,gm_ge_headgear_m92_cover_base,gm_ge_facewear_dustglasses);
+GM_Helmet_Glasses(gm_ge_headgear_m92_cover_glasses_blk,gm_ge_headgear_m92_cover_blk,gm_ge_headgear_m92_cover_glasses_base,gm_ge_headgear_m92_cover_base,gm_ge_facewear_dustglasses);
 
-GM_Helmet_Glasses(gm_ge_headgear_m92_glasses_trp,gm_ge_headgear_m92_trp,gm_ge_headgear_m92_glasses_base,gm_ge_headgear_m92_base,gm_ge_facewear_dustglasses)
-GM_Helmet_Glasses(gm_ge_headgear_m92_glasses_flk,gm_ge_headgear_m92_flk,gm_ge_headgear_m92_glasses_base,gm_ge_headgear_m92_base,gm_ge_facewear_dustglasses)
+GM_Helmet_Glasses(gm_ge_headgear_m92_glasses_trp,gm_ge_headgear_m92_trp,gm_ge_headgear_m92_glasses_base,gm_ge_headgear_m92_base,gm_ge_facewear_dustglasses);
+GM_Helmet_Glasses(gm_ge_headgear_m92_glasses_flk,gm_ge_headgear_m92_flk,gm_ge_headgear_m92_glasses_base,gm_ge_headgear_m92_base,gm_ge_facewear_dustglasses);
 
 
 class gm_headgear_armored_base;
@@ -76,7 +76,7 @@ class gm_ge_headgear_m38_72_base;
 class gm_ge_headgear_m38_72_goggles_base: gm_headgear_armored_base {
     class ItemInfo;
 };
-GM_Helmet_Glasses(gm_ge_bgs_headgear_m38_72_goggles_bgr,gm_ge_bgs_headgear_m38_72_bgr,gm_ge_headgear_m38_72_goggles_base,gm_ge_headgear_m38_72_base,gm_ge_facewear_acidgoggles)
+GM_Helmet_Glasses(gm_ge_bgs_headgear_m38_72_goggles_bgr,gm_ge_bgs_headgear_m38_72_bgr,gm_ge_headgear_m38_72_goggles_base,gm_ge_headgear_m38_72_base,gm_ge_facewear_acidgoggles);
 
 // Caps with M62 Helmets
 // Base Classes
@@ -119,12 +119,12 @@ class gm_ge_headgear_hat_80_m62_oli: gm_ge_headgear_hat_80_base {
         modifiableTo[] = {"gm_ge_headgear_hat_80_oli","gm_ge_headgear_m62_net"};
         components[] = {"gm_ge_headgear_hat_80_oli","gm_ge_headgear_m62_net"};
     };
-    MASS(20)
+    MASS(20);
 };
 class gm_ge_headgear_sidecap_80_m62_oli: gm_ge_headgear_sidecap_80_base {
     class ace_wardrobe: EGVAR(wardrobe,base) {
         modifiableTo[] = {"gm_ge_headgear_sidecap_80_oli","gm_ge_headgear_m62_net"};
         components[] = {"gm_ge_headgear_sidecap_80_oli","gm_ge_headgear_m62_net"};
     };
-    MASS(20)
+    MASS(20);
 };
