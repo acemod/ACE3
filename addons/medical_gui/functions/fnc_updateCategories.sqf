@@ -26,7 +26,7 @@ params ["_display"];
     };
     _ctrl ctrlEnable _enable;
 
-    if (!_enable && (EGVAR(medical_treatment,holsterRequired) == 1)) then {
+    if (!_enable && ((EGVAR(medical_treatment,holsterRequired) > 0) && currentWeapon ace_player isNotEqualTo "")) then {
         _ctrl ctrlSetTooltip LSTRING(needToHolster);
     } else {
         _ctrl ctrlSetTooltip "";
