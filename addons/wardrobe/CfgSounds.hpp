@@ -6,15 +6,15 @@ class GVAR(DOUBLES(base,dur)) {\
     titles[] = { 0, "" };\
     forceTitles = 0;\
     titlesStructured = 0;\
-};
+}
 
 class CfgSounds {
     sounds[] = {};
-    ENTRY(fabric,06)
-    ENTRY(fabric,07)
-    ENTRY(fabric,16)
-    ENTRY(fabric,20)
-    ENTRY(fabric,25)
+    ENTRY(fabric,06);
+    ENTRY(fabric,07);
+    ENTRY(fabric,16);
+    ENTRY(fabric,20);
+    ENTRY(fabric,25);
 
-    ENTRY(helmet_visor,05)
+    ENTRY(helmet_visor,05);
 };
