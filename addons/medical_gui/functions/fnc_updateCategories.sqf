@@ -27,7 +27,7 @@ params ["_display"];
     _ctrl ctrlEnable _enable;
 
     if (!_enable && ((EGVAR(medical_treatment,holsterRequired) > 0) && currentWeapon ace_player isNotEqualTo "")) then {
-        _ctrl ctrlSetTooltip LSTRING(needToHolster);
+        _ctrl ctrlSetTooltip LLSTRING(needToHolster);
     };
 
     private _selectedColor = [
