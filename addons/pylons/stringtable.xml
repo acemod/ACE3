@@ -101,7 +101,7 @@
             <Portuguese>&lt;vazio&gt;</Portuguese>
             <Russian>&lt;пусто&gt;</Russian>
             <German>&lt;leer&gt;</German>
-            <Korean>&lt;비어있음&gt;</Korean>
+            <Korean>&lt;비어 있음&gt;</Korean>
             <Japanese>&lt;空&gt;</Japanese>
             <Chinese>&lt;空&gt;</Chinese>
             <Chinesesimp>&lt;空&gt;</Chinesesimp>
@@ -237,7 +237,7 @@
             <Portuguese>Substituindo pylon %1 de %2...</Portuguese>
             <Russian>Замена пилона %1 из %2...</Russian>
             <German>Ersetze Außenlaststation %1 von insgesamt %2</German>
-            <Korean>교체중 (%2 -&gt; %1)</Korean>
+            <Korean>%2개 중 %1번 무장창 교체 중...</Korean>
             <Japanese>%2 個中 %1 番目のパイロンを交換しています・・・</Japanese>
             <Chinese>共有%2個派龍架，正在整補%1號派龍架中...</Chinese>
             <Chinesesimp>共有%2个发射架，正在整装%1号挂架...</Chinesesimp>

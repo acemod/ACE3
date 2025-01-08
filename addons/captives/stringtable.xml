@@ -12,6 +12,7 @@
             <German>Augen verbinden</German>
             <Korean>포로 눈 가리기</Korean>
             <Japanese>目隠しをする</Japanese>
+            <Chinesesimp>使用眼罩</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
@@ -122,7 +123,7 @@
             <Portuguese>Sincronizar uma unidade para deixá-la algemada.</Portuguese>
             <Russian>Синхронизируйте с юнитами, чтобы связать им руки.</Russian>
             <German>Synchronisiere eine Einheit, um sie in Handschellen zu legen.</German>
-            <Korean>수갑을 채우기 위해 동기화합니다.</Korean>
+            <Korean>수갑을 채우게 할 유닛을 동기화합니다.</Korean>
             <Japanese>同期されたユニットを拘束させます。</Japanese>
             <Chinese>使單位戴上手銬</Chinese>
             <Chinesesimp>使单位戴上手铐</Chinesesimp>
@@ -235,7 +236,7 @@
             <Portuguese>Pode algemar o próprio lado</Portuguese>
             <Russian>Можно связывать руки союзникам</Russian>
             <German>Kann Kameraden fesseln</German>
-            <Korean>자기편을 포박 할 수 있습니다.</Korean>
+            <Korean>자기 편을 포박 할 수 있습니다.</Korean>
             <Japanese>自陣営を拘束可能に</Japanese>
             <Chinese>可以銬住同陣營隊友</Chinese>
             <Chinesesimp>可以铐住同阵营队友</Chinesesimp>
@@ -311,7 +312,7 @@
             <Portuguese>Sincroniza uma unidade para fazer com que ela se renda.</Portuguese>
             <Russian>Синхронизируйте с юнитами, чтобы заставить их сдаться.</Russian>
             <German>Einheit synchronisieren, um sie kapitulieren zu lassen.</German>
-            <Korean>투항시키기 위해 동기화합니다.</Korean>
+            <Korean>투항시키려 할 유닛을 동기화합니다.</Korean>
             <Japanese>同期されたユニットを投降させます。</Japanese>
             <Chinese>同步此模塊到一個單位，使該單位投降</Chinese>
             <Chinesesimp>同步此模块到一个单位，使该单位投降</Chinesesimp>
@@ -379,6 +380,7 @@
             <German>Augenbinde entfernen</German>
             <Korean>눈가리개 풀기</Korean>
             <Japanese>目隠しを外す</Japanese>
+            <Chinesesimp>移除眼罩</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>
@@ -441,7 +443,7 @@
             <Portuguese>Parar de se render</Portuguese>
             <Russian>Прекратить сдаваться</Russian>
             <German>Den Kampf erneut aufnehmen</German>
-            <Korean>투항하는것을 멈춤</Korean>
+            <Korean>투항하는 것을 멈춤</Korean>
             <Japanese>投降をやめる</Japanese>
             <Chinese>停止投降</Chinese>
             <Chinesesimp>停止投降</Chinesesimp>

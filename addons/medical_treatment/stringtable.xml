@@ -299,7 +299,7 @@
             <Russian>Перелить пакет физраствора (1000 мл)</Russian>
             <German>Kochsalzlösung IV (1000ml)</German>
             <Korean>IV 생리식염수 수혈 (1000ml)</Korean>
-            <Japanese>生理食塩水 IV (1000ml) を投与</Japanese>
+            <Japanese>生理食塩液 IV (1000ml) を投与</Japanese>
             <Chinese>注射生理食鹽水 (1000毫升)</Chinese>
             <Chinesesimp>静脉注射生理盐水（1000毫升）</Chinesesimp>
             <Turkish>Serum IV (1000ml) Ver</Turkish>
@@ -316,7 +316,7 @@
             <Russian>Перелить пакет физраствора (250 мл)</Russian>
             <German>Kochsalzlösung IV (250ml)</German>
             <Korean>IV 생리식염수 수혈 (250ml)</Korean>
-            <Japanese>生理食塩水 IV (250ml) を投与</Japanese>
+            <Japanese>生理食塩液 IV (250ml) を投与</Japanese>
             <Chinese>注射生理食鹽水 (250毫升)</Chinese>
             <Chinesesimp>静脉注射生理盐水（250毫升）</Chinesesimp>
             <Turkish>Serum IV (250ml) Ver</Turkish>
@@ -333,7 +333,7 @@
             <Russian>Перелить пакет физраствора (500 мл)</Russian>
             <German>Kochsalzlösung IV (500ml)</German>
             <Korean>IV 생리식염수 수혈 (500ml)</Korean>
-            <Japanese>生理食塩水 IV (500ml) を投与</Japanese>
+            <Japanese>生理食塩液 IV (500ml) を投与</Japanese>
             <Chinese>注射生理食鹽水 (500毫升)</Chinese>
             <Chinesesimp>静脉注射生理盐水（500毫升）</Chinesesimp>
             <Turkish>Serum IV (500ml) Ver</Turkish>
@@ -447,7 +447,7 @@
             <Russian>%1 провёл переливание</Russian>
             <German>%1 hat eine Infusion verabreicht</German>
             <Korean>%1 (이)가 IV를 실시했다</Korean>
-            <Japanese>%1 がIVを投与した</Japanese>
+            <Japanese>%1 が輸液をIV(静脈注射)で投与した</Japanese>
             <Chinese>%1 已經給予靜脈注射液</Chinese>
             <Chinesesimp>%1 已进行静脉注射</Chinesesimp>
             <Turkish>% 1 IV verildi</Turkish>
@@ -525,6 +525,7 @@
             <German>Verabreiche Schmerztabletten</German>
             <Korean>진통제 투여</Korean>
             <Japanese>鎮痛剤を投与</Japanese>
+            <Chinesesimp>嗑片止疼药</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Administering_Painkillers">
             <English>Administering Painkillers...</English>
@@ -535,6 +536,7 @@
             <German>Verabreiche Schmerztablette...</German>
             <Korean>진통제 투여 중...</Korean>
             <Japanese>鎮痛剤を投与しています・・・</Japanese>
+            <Chinesesimp>正在服用止痛药</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedBandages_Description">
             <English>Enables treatment actions for different bandage types instead of the generic Bandage action.\nAdditionally, the reopening of bandaged wounds can also be enabled.</English>
@@ -621,6 +623,7 @@
             <German>Aktiviert &amp; kann Tod/Herzstillstand diagnostizieren [Direkt]</German>
             <Korean>활성화 및 사망/심정지 진찰 가능 [직접]</Korean>
             <Japanese>有効 &amp; 死亡/心停止状態を診断可能 [直接的に]</Japanese>
+            <Chinesesimp>已启用 &amp; 可以诊断死亡/心搏骤停(直接显示结果)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AdvancedDiagnose_DisplayName">
             <English>Advanced Diagnose</English>
@@ -745,7 +748,7 @@
             <Polish>Zezwalaj na pakowanie nieprzytomnych osób do worka na ciało.</Polish>
             <Portuguese>Permite colocar um paciente inconsciente em um saco de cadáver.</Portuguese>
             <Russian>Разрешает упаковывать пациентов без сознания в мешки для трупов.</Russian>
-            <German>Aktiviert, Bewusstlose in Leichensack zu legen.</German>
+            <German>Erlaubt es, Bewusstlose in Leichensäcke zu legen.</German>
             <Korean>기절 상태의 인원을 시체 운반용 부대에 옮겨 담을 수 있는 지를 정합니다.</Korean>
             <Japanese>無意識状態のプレイヤーを遺体袋へ入れることが出来る様にします。</Japanese>
             <Chinesesimp>能够将昏迷的伤员装入尸袋中。</Chinesesimp>
@@ -758,7 +761,7 @@
             <Polish>Nieprzytomni w worku na ciało</Polish>
             <Portuguese>Permitir inconscientes em sacos de cadáver</Portuguese>
             <Russian>Упаковка без сознания в мешки для трупов</Russian>
-            <German>Erlaube Benutzung des Leichensackes mit bewusstlosen Personen</German>
+            <German>Erlaube Bewusstlose in Leichensäcken zu legen</German>
             <Korean>기절 인원 시체 운반용 부대에 옮기기</Korean>
             <Japanese>無意識者の遺体袋への収容許可</Japanese>
             <Chinesesimp>允许昏迷者装入尸袋</Chinesesimp>
@@ -774,6 +777,7 @@
             <German>Erlaubt das Graben von Gräbern um Leichen zu entsorgen.</German>
             <Korean>시체를 처리하기 위해 무덤을 파는 것을 허용합니다.</Korean>
             <Japanese>墓を掘って死体を処理できるようになります。</Japanese>
+            <Chinesesimp>允许挖掘一个坟墓来处理尸体</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_DisplayName">
             <English>Allow Grave Digging</English>
@@ -786,6 +790,7 @@
             <German>Erlaube Graben von Gräbern</German>
             <Korean>무덤 파기 허용</Korean>
             <Japanese>墓掘りを許可</Japanese>
+            <Chinesesimp>允许挖坟</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowGraveDigging_graveOnlyDead">
             <English>Only if dead</English>
@@ -798,6 +803,7 @@
             <German>Nur wenn tot</German>
             <Korean>죽었을 때에만</Korean>
             <Japanese>死体のみ</Japanese>
+            <Chinesesimp>仅允许对尸体使用</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowLitterCreation_Description">
             <English>Enables the creation of litter upon treatment.</English>
@@ -842,7 +848,7 @@
             <Russian>Позволяет использовать внутривенные переливания на себе</Russian>
             <German>Erlaube Bluttransfusionen an sich selbst zu benutzen</German>
             <Korean>수액용기를 사용자 본인에게 쓸 수 있는지를 정합니다.</Korean>
-            <Japanese>自らに対して IV 輸液を可能にします。</Japanese>
+            <Japanese>自らに対しての輸液IV(静脈注射)を可能にします。</Japanese>
             <Chinese>啟用是否能對自己注射點滴</Chinese>
             <Chinesesimp>启用是否能够自我静脉输液</Chinesesimp>
         </Key>
@@ -857,7 +863,7 @@
             <Russian>Внутривенное переливание на себе</Russian>
             <German>Eigennutzung von Bluttransfusionen</German>
             <Korean>수액용기 자가 사용</Korean>
-            <Japanese>自己 IV 輸液</Japanese>
+            <Japanese>輸液の自己投与</Japanese>
             <Chinese>自我注射點滴</Chinese>
             <Chinesesimp>自我静脉输液</Chinesesimp>
         </Key>
@@ -903,7 +909,7 @@
             <Portuguese>Permite o uso de Kit Cirúrgico em si mesmo.</Portuguese>
             <Russian>Включает использование хирургического набора на себе.</Russian>
             <German>Ermöglicht die Benutzung des Operations-Sets, um sich selbst zu nähen.</German>
-            <Korean>봉합키트를 사용자 본인에게 쓸 수 있는지를 정합니다.</Korean>
+            <Korean>봉합 키트를 사용자 본인에게 쓸 수 있는지를 정합니다.</Korean>
             <Japanese>手術キットを使い自らを縫合できるようにします。</Japanese>
             <Chinese>啟用是否能自己使用手術包來縫合自己的傷口。</Chinese>
             <Chinesesimp>启用是否能够使用手术包进行自我缝合。</Chinesesimp>
@@ -918,7 +924,7 @@
             <Portuguese>Auto-Cirurgia</Portuguese>
             <Russian>Зашитие своей раны</Russian>
             <German>Selbstnähen</German>
-            <Korean>봉합키트 자가 사용</Korean>
+            <Korean>봉합 키트 자가 사용</Korean>
             <Japanese>自己縫合</Japanese>
             <Chinese>自我縫合</Chinese>
             <Chinesesimp>自我缝合</Chinesesimp>
@@ -966,10 +972,20 @@
             <Russian>Сначала медикаменты врача</Russian>
             <German>Ausrüstung des Sanitäters zuerst</German>
             <Korean>치료자의 의료물자 먼저 사용</Korean>
-            <Japanese>救護者の装備を優先</Japanese>
+            <Japanese>救護者装備を優先</Japanese>
             <Chinese>優先使用醫療兵的醫療物資</Chinese>
             <Chinesesimp>优先消耗医疗兵装备</Chinesesimp>
             <Turkish>İlk Sıhhiyenin Ekipmanı</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityMedicIfMedic">
+            <English>Medic's Equipment First [If medic role]</English>
+            <Russian>Сначала медикаменты врача [Если медик]</Russian>
+            <French>Équipement de l'infirmier d'abord [Si l'infirmier joue un rôle].</French>
+            <Italian>Prima le risorse del medico [Se ruolo medico]</Italian>
+            <German>Ausrüstung des Sanitäters zuerst [Wenn Sanitäter]</German>
+            <Japanese>救護者装備を優先 [衛生兵の場合]</Japanese>
+            <Korean>치료자의 의료물자 먼저 사용 [의무병일 경우]</Korean>
+            <Chinesesimp>提供医疗者的装备优先(如果是医疗兵)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowSharedEquipment_PriorityPatient">
             <English>Patient's Equipment First</English>
@@ -982,7 +998,7 @@
             <Russian>Сначала медикаменты пациента</Russian>
             <German>Ausrüstung des Patienten zuerst</German>
             <Korean>환자의 의료물자 먼저 사용</Korean>
-            <Japanese>患者の装備を優先</Japanese>
+            <Japanese>患者装備を優先</Japanese>
             <Chinese>優先使用患者的醫療物資</Chinese>
             <Chinesesimp>优先消耗伤员装备</Chinesesimp>
             <Turkish>Önce Hastanın Ekipmanı</Turkish>
@@ -1651,7 +1667,7 @@
             <Russian>Пакет крови для возмещения объёма потерянной крови</Russian>
             <German>Blut IV, um den Bluthaushalt des Patienten wiederherzustellen.</German>
             <Korean>혈액 IV, 환자에게 혈액을 공급합니다.</Korean>
-            <Japanese>血液 IVは患者の血液量を回復させます。</Japanese>
+            <Japanese>血液静脈注射(IV)は患者の血液量を回復させます。</Japanese>
             <Chinese>血液, 用於補充傷者流失的血液</Chinese>
             <Chinesesimp>血液，用于补充伤者流失的血液</Chinesesimp>
             <Turkish>Kan IV, bir hastanın kanını geri enjekte etmek için</Turkish>
@@ -1667,8 +1683,8 @@
             <Portuguese>Sangue O- , utilizado em casos raros para rapidamente repor o sangue. Uso habitual ocorre durante o transporte ou em estações de tratamento.</Portuguese>
             <Russian>Кровь I группы, резус-отрицательная, применяется по жизненным показаниям для возмещения объема потерянной крови на догоспитальном этапе оказания медицинской помощи.</Russian>
             <German>O Negative Blutinfusion wird nur in seltenen Fällen verwendet, um den Bluthaushalt des Patienten zu ergänzen. Wird in der Regel wärend der Transportphase durchgeführt.</German>
-            <Korean>O형 혈액 투여는 매우 엄격하고 드문 혈액 보급의 경우에 쓰이는데 주로 치료의 운송단계에서 사용됩니다.</Korean>
-            <Japanese>血液型O-の輸血は、厳密かつ稀な事象において行われる。通常、医療の搬送段階で血液を補充するために使用される。</Japanese>
+            <Korean>O Rh- 혈액은 일반적으로 의료 후송 단계에서 혈액 공급을 보충하기 위한 엄격하고 드물게 사용되는 혈액입니다.</Korean>
+            <Japanese>血液型O-の血液は通常、搬送中の医療現場で血液を補充するために厳密かつ稀な状況で使用される。</Japanese>
             <Chinese>O型陰性注射用血液, 在緊急情況時使用, 用於補充傷者流失的血液</Chinese>
             <Chinesesimp>O型负值注射用血液，在紧急情况时使用, 用于补充伤者流失的血液</Chinesesimp>
             <Hungarian>Nullás vércsoportú, Rh-negatív vér-infúzió, melyet kritikus és ritka helyzetekben vérutánpótlásra használnak, jellemzően az orvosi ellátás szállítási fázisa közben.</Hungarian>
@@ -2319,6 +2335,7 @@
             <German>%1 ist im Herzstillstand</German>
             <Korean>%1은(는) 심정지 상태입니다</Korean>
             <Japanese>%1 は心停止している</Japanese>
+            <Chinesesimp>%1的心脏没在跳动</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Content">
             <English>You check response of patient</English>
@@ -2358,6 +2375,7 @@
             <German>%1 ist tod</German>
             <Korean>%1은(는) 사망했습니다</Korean>
             <Japanese>%1 は死亡している</Japanese>
+            <Chinesesimp>%1已经似了</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_Responsive">
             <English>%1 is responsive</English>
@@ -2402,6 +2420,7 @@
             <German>%1 ist bewusstlos</German>
             <Korean>%1은(는) 의식불명입니다</Korean>
             <Japanese>%1 は意識がない</Japanese>
+            <Chinesesimp>%1没有意识</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Check_Response_You_Checked">
             <English>You checked %1</English>
@@ -2512,8 +2531,9 @@
             <Polish>Co powinno zostać zużyte po zastosowaniu.</Polish>
             <Russian>Контролирует, следует ли израсходовать Хирургический набор или нить после использования</Russian>
             <German>Legt fest, ob etwas nach der Anwendung verwendet werden soll.</German>
-            <Korean>봉합키트를 1회성 소모품으로 설정할 지 여부를 결정합니다.</Korean>
+            <Korean>봉합 키트를 1회성 소모품으로 설정할 지 여부를 결정합니다.</Korean>
             <Japanese>使用後に何を消費するか設定します。</Japanese>
+            <Chinesesimp>在使用后什么会被消耗</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_ConsumeSurgicalKit_DisplayName">
             <English>Consume Surgical Kit</English>
@@ -2525,7 +2545,7 @@
             <Portuguese>Kit Cirúrgico Consumível</Portuguese>
             <Russian>Израсходовать Хирургический набор</Russian>
             <German>Verbrauche Operations-Set</German>
-            <Korean>봉합키트 소모</Korean>
+            <Korean>봉합 키트 소모</Korean>
             <Japanese>手術キットの消費</Japanese>
             <Chinese>手術包為消耗品</Chinese>
             <Chinesesimp>手术包是否被消耗</Chinesesimp>
@@ -2554,7 +2574,7 @@
             <Polish>Konwertuj przedmioty z vanili</Polish>
             <Portuguese>Converter itens vanilla</Portuguese>
             <Russian>Преобразовывать ванильные медикаменты</Russian>
-            <German>Standard Arma-Equipment in ACE-Items umwandeln</German>
+            <German>Umwandlung von Arma-Equipment</German>
             <Korean>바닐라 아이템 전환</Korean>
             <Japanese>バニラアイテムの変換</Japanese>
             <Chinese>轉換原版物品</Chinese>
@@ -2603,6 +2623,7 @@
             <German>Grabe ein Grab für den Leichnam</German>
             <Korean>시체를 위해 무덤 파기</Korean>
             <Japanese>墓を掘る</Japanese>
+            <Chinesesimp>将此单位埋入土中</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_DiggingGrave">
             <English>Digging grave for body...</English>
@@ -2615,6 +2636,7 @@
             <German>Grab für Leichnam ausheben ...</German>
             <Korean>시체를 위한 무덤 파는 중...</Korean>
             <Japanese>墓を掘っています</Japanese>
+            <Chinesesimp>正在挖坟</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Doctors">
             <English>Doctors</English>
@@ -2709,6 +2731,7 @@
             <German>Erstellt Grabmale beim Graben von Gräbern.</German>
             <Korean>무덤을 파낼 때 무덤 마커를 표시할 수 있습니다.</Korean>
             <Japanese>墓を掘った際、墓標を作成できるようにします。</Japanese>
+            <Chinesesimp>挖坟时创建坟墓位置的地图标记</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_GraveDiggingMarker_DisplayName">
             <English>Create Grave Markers</English>
@@ -2721,6 +2744,7 @@
             <German>Erstelle Grabmal</German>
             <Korean>무덤 마커 생성</Korean>
             <Japanese>墓標を作成</Japanese>
+            <Chinesesimp>创建坟墓地图标记</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HeavilyWounded">
             <English>Heavily wounded</English>
@@ -2907,7 +2931,7 @@
             <Russian>Введение аденозина...</Russian>
             <German>Adenosin injizieren...</German>
             <Korean>아데노신 주사 중...</Korean>
-            <Japanese>アドネシンを投与しています・・・</Japanese>
+            <Japanese>アデノシンを注射しています・・・</Japanese>
             <Chinese>腺苷注射中...</Chinese>
             <Chinesesimp>正在注射腺苷...</Chinesesimp>
             <Turkish>Adenosin Enjekte Ediliyor...</Turkish>
@@ -2923,7 +2947,7 @@
             <Russian>Введение атропина...</Russian>
             <German>Atropin injizieren...</German>
             <Korean>아트로핀 주사 중...</Korean>
-            <Japanese>アトロピンを投与しています・・・</Japanese>
+            <Japanese>アトロピンを注射しています・・・</Japanese>
             <Chinese>阿托品注射中 ...</Chinese>
             <Chinesesimp>正在注射阿托品...</Chinesesimp>
             <Turkish>Atropin Enjekte Ediliyor...</Turkish>
@@ -2940,7 +2964,7 @@
             <Russian>Введение адреналина...</Russian>
             <German>Epinephrin injizieren...</German>
             <Korean>에피네프린 주사 중...</Korean>
-            <Japanese>アドレナリンを投与しています・・・</Japanese>
+            <Japanese>アドレナリンを注射しています・・・</Japanese>
             <Chinese>腎上腺素注射中...</Chinese>
             <Chinesesimp>正在注射肾上腺素...</Chinesesimp>
             <Turkish>Epinefrin Enjekte Ediliyor...</Turkish>
@@ -2957,7 +2981,7 @@
             <Russian>Введение морфина...</Russian>
             <German>Morphin injizieren...</German>
             <Korean>모르핀 주사 중...</Korean>
-            <Japanese>モルヒネを投与しています・・・</Japanese>
+            <Japanese>モルヒネを注射しています・・・</Japanese>
             <Chinese>嗎啡注射中...</Chinese>
             <Chinesesimp>正在注射吗啡...</Chinesesimp>
             <Turkish>Morfin Enjekte Ediliyor ...</Turkish>
@@ -3081,12 +3105,22 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_Description">
             <English>Controls where Adenosine can be used.</English>
             <Russian>Контролирует, где можно использовать Аденозин.</Russian>
+            <German>Legt fest, wo Adenosin benutzt werden kann.</German>
             <Japanese>アデノシンが使える場所を制御します。</Japanese>
+            <Korean>아데노신을 사용할 수 있는 장소를 정합니다.</Korean>
+            <French>Contrôle où l'Adénosine peut être utilisée.</French>
+            <Italian>Controlla dove si può usare l'Adenosina.</Italian>
+            <Chinesesimp>控制何地能使用腺苷</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationAdenosine_DisplayName">
             <English>Locations Adenosine</English>
             <Russian>Места использования Аденозина</Russian>
+            <German>Orte für Adenosin</German>
             <Japanese>アデノシンの使用可能な場所</Japanese>
+            <Korean>아데노신 사용 장소</Korean>
+            <French>Lieux d'utilisation de l'adénosine</French>
+            <Italian>Luoghi Adenosina</Italian>
+            <Chinesesimp>腺苷使用地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationEpinephrine_Description">
             <English>Controls where epinephrine can be used.</English>
@@ -3097,7 +3131,7 @@
             <Polish>Kontroluje, gdzie można stosować epinefrynę.</Polish>
             <Portuguese>Controla onde Epinefrina pode ser utilizada.</Portuguese>
             <Russian>Контролирует, где можно использовать Адреналин.</Russian>
-            <German>Legt fest, wo Epinephrin genutzt werden kann.</German>
+            <German>Legt fest, wo Epinephrin benutzt werden kann.</German>
             <Korean>에피네프린을 사용할 수 있는 장소를 정합니다.</Korean>
             <Japanese>アドレナリンが使える場所を制御します。</Japanese>
             <Chinese>控制何處能使用腎上腺素</Chinese>
@@ -3128,9 +3162,9 @@
             <Polish>Kontroluje w jakich miejscach można robić transfuzje IV.</Polish>
             <Portuguese>Controla onde as transfusões IV podem ser realizadas.</Portuguese>
             <Russian>Контролирует, где можно использовать внутревенное переливание.</Russian>
-            <German>Kontrolliert, wo IV-Transfusionen durchgeführt werden können.</German>
+            <German>Legt fest, wo IV-Transfusionen verabreicht werden können.</German>
             <Korean>수액용기를 사용할 수 있는 장소를 정합니다.</Korean>
-            <Japanese>IV 輸液を行える場所を制御します。</Japanese>
+            <Japanese>輸液IV(静脈注射)を行える場所を制御します。</Japanese>
             <Chinesesimp>控制何地可以静脉输液</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationIV_DisplayName">
@@ -3141,20 +3175,30 @@
             <Polish>Miejsca do transfuzji IV</Polish>
             <Portuguese>Locais para transfusão IV</Portuguese>
             <Russian>Места внутривенного переливания</Russian>
-            <German>Orte an denen IV-Transfusionen angelegt werden können</German>
+            <German>Orte für IV-Transfusionen</German>
             <Korean>수액용기 사용 장소</Korean>
-            <Japanese>IV輸液の可能な場所</Japanese>
+            <Japanese>輸液IV(静脈注射)の可能な場所</Japanese>
             <Chinesesimp>静脉输液地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_Description">
             <English>Controls where Morphine can be used.</English>
             <Russian>Контролирует, где можно использовать Морфин.</Russian>
+            <German>Legt fest, wo Morphin benutzt werden kann.</German>
             <Japanese>モルヒネが使える場所を制御します。</Japanese>
+            <Korean>모르핀을 사용할 수 있는 장소를 정합니다.</Korean>
+            <French>Contrôle où la morphine peut être utilisée.</French>
+            <Italian>Controlla dove si può usare la Morfina.</Italian>
+            <Chinesesimp>控制何地能使用吗啡</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationMorphine_DisplayName">
             <English>Locations Morphine</English>
             <Russian>Места использования Морфина</Russian>
+            <German>Orte für Morphin</German>
             <Japanese>モルヒネの使用可能な場所</Japanese>
+            <Korean>모르핀 사용 장소</Korean>
+            <French>Lieux d'utilisation de la morphine</French>
+            <Italian>Luoghi Morfina</Italian>
+            <Chinesesimp>吗啡使用地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationPAK_Description">
             <English>Controls where a PAK can be used.</English>
@@ -3165,7 +3209,7 @@
             <Polish>Kontroluje, gdzie można korzystać z apteczek osobistych.</Polish>
             <Portuguese>Controla onde o KPS pode ser utilizado.</Portuguese>
             <Russian>Контролирует, где можно использовать Аптечку.</Russian>
-            <German>Kontrolliert, wo ein Erste-Hilfe-Set benutzt werden kann.</German>
+            <German>Legt fest, wo ein Erste-Hilfe-Set benutzt werden kann.</German>
             <Korean>개인응급키트을 사용할 수 있는 장소를 정합니다.</Korean>
             <Japanese>PAKが使える場所を制御します。</Japanese>
             <Chinese>控制何處能使用個人急救包</Chinese>
@@ -3192,12 +3236,22 @@
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_Description">
             <English>Controls where Splints can be used.</English>
             <Russian>Контролирует, где можно использовать шины.</Russian>
+            <German>Legt fest, wo eine Schiene benutzt werden kann.</German>
             <Japanese>添え木が使える場所を制御します。</Japanese>
+            <Korean>부목을 사용할 수 있는 장소를 정합니다.</Korean>
+            <French>Contrôle l'endroit où les attelles peuvent être utilisées.</French>
+            <Italian>Controlla dove si possono applicare Gessature.</Italian>
+            <Chinesesimp>控制何地能使用骨折夹板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSplint_DisplayName">
             <English>Locations Splint</English>
             <Russian>Места наложения шины</Russian>
+            <German>Orte für Schiene</German>
             <Japanese>添え木の使用可能な場所</Japanese>
+            <Korean>부목 사용 장소</Korean>
+            <French>Emplacement des attelles</French>
+            <Italian>Luoghi Gessature</Italian>
+            <Chinesesimp>骨折夹板使用地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_LocationSurgicalKit_Description">
             <English>Controls where a surgical kit can be used.</English>
@@ -3208,8 +3262,8 @@
             <Polish>Kontroluje, gdzie można użyć Zestawu Chirurgicznego.</Polish>
             <Portuguese>Controle onde o Kit Cirúrgico pode ser utilizado.</Portuguese>
             <Russian>Контролирует, где можно использовать Хирургический набор</Russian>
-            <German>Legt fest, wo ein Operations-Set genutzt werden kann.</German>
-            <Korean>봉합키트를 사용할 수 있는 장소를 정합니다.</Korean>
+            <German>Legt fest, wo ein Operations-Set benutzt werden kann.</German>
+            <Korean>봉합 키트를 사용할 수 있는 장소를 정합니다.</Korean>
             <Japanese>手術キットが使える場所を制御します。</Japanese>
             <Chinese>控制何處能使用手術包</Chinese>
             <Chinesesimp>控制何地能使用手术包</Chinesesimp>
@@ -3225,7 +3279,7 @@
             <Portuguese>Locais para Kit Cirúrgico</Portuguese>
             <Russian>Места использования Хирургического набора</Russian>
             <German>Orte für Operations-Set</German>
-            <Korean>봉합키트 사용 장소</Korean>
+            <Korean>봉합 키트 사용 장소</Korean>
             <Japanese>手術キットの使用可能な場所</Japanese>
             <Chinese>手術包使用地點</Chinese>
             <Chinesesimp>手术包使用地点</Chinesesimp>
@@ -3281,12 +3335,22 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_Description">
             <English>Training level required to use Adenosine.</English>
             <Russian>Уровень подготовки, необходимый для использования Аденозина</Russian>
+            <German>'Fähigkeiten-Level', das benötigt wird, um Adenosin zu benutzen.</German>
             <Japanese>アデノシンの使用に必要な医療スキルのレベルを設定します。</Japanese>
+            <Korean>아데노신을 사용하는데 필요한 등급을 정합니다.</Korean>
+            <French>Niveau de formation requis pour utiliser l'Adénosine.</French>
+            <Italian>Formazione richiesta per iniettare Adenosina.</Italian>
+            <Chinesesimp>使用腺苷所需的医疗水平。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicAdenosine_DisplayName">
             <English>Allow Adenosine</English>
             <Russian>Доступ к Аденозину</Russian>
+            <German>Erlaube Adenosin</German>
             <Japanese>アデノシンの許可</Japanese>
+            <Korean>아데노신 사용 허가</Korean>
+            <French>Autoriser l'adénosine</French>
+            <Italian>Permetti Adenosina</Italian>
+            <Chinesesimp>允许使用腺苷</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicEpinephrine_Description">
             <English>Training level required to use epinephrine.</English>
@@ -3297,7 +3361,7 @@
             <Polish>Poziom wyszkolenia wymagany do korzystania z epinefryny.</Polish>
             <Portuguese>É necessária uma qualificação médica para usar epinefrina.</Portuguese>
             <Russian>Уровень подготовки, необходимый для использования Адреналина.</Russian>
-            <German>'Fähigkeiten-Level', das benötigt wird, um Epinephrin zu nutzen.</German>
+            <German>'Fähigkeiten-Level', das benötigt wird, um Epinephrin zu benutzen.</German>
             <Korean>에피네프린을 사용하는데 필요한 등급을 정합니다.</Korean>
             <Japanese>アドレナリンの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Chinese>要受過何種程度的醫療訓練才可以使用腎上腺素</Chinese>
@@ -3331,7 +3395,7 @@
             <Russian>Уровень навыка, требуемый для осуществления внутривенного переливания.</Russian>
             <German>'Fähigkeiten-Level', das benötigt wird, um Blut zu transfundieren.</German>
             <Korean>수액용기를 사용하는데 필요한 등급을 정합니다.</Korean>
-            <Japanese>IV 輸液を行うのに必要な医療スキルのレベルを設定します。</Japanese>
+            <Japanese>輸液IV(静脈注射)を行うのに必要な医療スキルのレベルを設定します。</Japanese>
             <Chinese>要有何種醫療水準才可注射點滴。</Chinese>
             <Chinesesimp>静脉输液所需的医疗水平。</Chinesesimp>
         </Key>
@@ -3346,19 +3410,29 @@
             <Russian>Доступ к внутривенному переливанию</Russian>
             <German>Erlaube Bluttransfusionen</German>
             <Korean>수액용기 사용 허가</Korean>
-            <Japanese>IV 輸液の制限</Japanese>
+            <Japanese>輸液IV(静脈注射)の制限</Japanese>
             <Chinese>允許操作點滴</Chinese>
             <Chinesesimp>允许静脉输液</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_Description">
             <English>Training level required to use Morphine.</English>
             <Russian>Уровень подготовки, необходимый для использования Морфина.</Russian>
+            <German>'Fähigkeiten-Level', das benötigt wird, um Morphin zu benutzen.</German>
             <Japanese>モルヒネの使用に必要な医療スキルのレベルを設定します。</Japanese>
+            <Korean>모르핀을 사용하는데 필요한 등급을 정합니다.</Korean>
+            <French>Niveau de formation requis pour l'utilisation de la morphine.</French>
+            <Italian>Formazione richiesta per iniettare Morfina.</Italian>
+            <Chinesesimp>使用吗啡所需的医疗水平。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicMorphine_DisplayName">
             <English>Allow Morphine</English>
             <Russian>Доступ к Морфину</Russian>
+            <German>Erlaube Morphin</German>
             <Japanese>モルヒネの許可</Japanese>
+            <Korean>모르핀 사용 허가</Korean>
+            <French>Autoriser la morphine</French>
+            <Italian>Permetti Morfina</Italian>
+            <Chinesesimp>允许使用吗啡</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicPAK_Description">
             <English>Training level required to use a PAK.</English>
@@ -3369,7 +3443,7 @@
             <Polish>Poziom wyszkolenia wymagany do korzystania z apteczek osobistych.</Polish>
             <Portuguese>É necessária uma qualificação médica para usar KPS</Portuguese>
             <Russian>Уровень подготовки, необходимый для использования Аптечки.</Russian>
-            <German>'Fähigkeiten-Level', das benötigt wird, um ein Erste-Hilfe-Set zu nutzen.</German>
+            <German>'Fähigkeiten-Level', das benötigt wird, um ein Erste-Hilfe-Set zu benutzen.</German>
             <Korean>개인응급키트을 사용하는 데 필요한 등급을 정합니다.</Korean>
             <Japanese>PAKの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Chinese>要受過何種程度的醫療訓練才可以使用個人急救包</Chinese>
@@ -3396,12 +3470,22 @@
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_Description">
             <English>Training level required to use Splint.</English>
             <Russian>Уровень подготовки, необходимый для использования шины.</Russian>
+            <German>'Fähigkeiten-Level', das benötigt wird, um eine Schiene zu benutzen.</German>
             <Japanese>添え木の使用に必要な医療スキルのレベルを設定します。</Japanese>
+            <Korean>부목을 사용하는데 필요한 등급을 정합니다.</Korean>
+            <French>Niveau de formation requis pour l'utilisation de l'attelle.</French>
+            <Italian>Formazione richiesta per applicare Gessature.</Italian>
+            <Chinesesimp>使用骨折夹板所需的医疗水平。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSplint_DisplayName">
             <English>Allow Splint</English>
             <Russian>Доступ к наложению шины</Russian>
+            <German>Erlaube Schiene</German>
             <Japanese>添え木の許可</Japanese>
+            <Korean>부목 사용 허가</Korean>
+            <French>Accès aux attelles</French>
+            <Italian>Permetti Gessature</Italian>
+            <Chinesesimp>允许使用骨折夹板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_MedicSurgicalKit_Description">
             <English>Training level required to use a surgical kit.</English>
@@ -3412,8 +3496,8 @@
             <Polish>Poziom wyszkolenia wymagany do korzystania z Zestawu Chirurgicznego.</Polish>
             <Portuguese>É necessária uma qualificação médica para usar Kit Cirúrgico</Portuguese>
             <Russian>Уровень медицинской подготовки, необходимый для использования Хирургического набора.</Russian>
-            <German>'Fähigkeiten-Level', das benötigt wird um ein Operations-Set zu nutzen.</German>
-            <Korean>봉합키트를 사용하는데 필요한 등급을 정합니다.</Korean>
+            <German>'Fähigkeiten-Level', das benötigt wird um ein Operations-Set zu benutzen.</German>
+            <Korean>봉합 키트를 사용하는데 필요한 등급을 정합니다.</Korean>
             <Japanese>手術キットの使用に必要な医療スキルのレベルを設定します。</Japanese>
             <Chinese>要受過多少程度的醫療訓練才能使用手術包。</Chinese>
             <Chinesesimp>使用手术包所需的医疗水平。</Chinesesimp>
@@ -3429,7 +3513,7 @@
             <Portuguese>Permitir Kit Cirúrgico</Portuguese>
             <Russian>Доступ к Хирургическому набору</Russian>
             <German>Erlaube Operations-Set</German>
-            <Korean>봉합키트 사용 허가</Korean>
+            <Korean>봉합 키트 사용 허가</Korean>
             <Japanese>手術キットを許可</Japanese>
             <Chinese>允許使用手術包</Chinese>
             <Chinesesimp>允许使用手术包</Chinesesimp>
@@ -3570,12 +3654,22 @@
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_Description">
             <English>Makes Check Pulse action give a numerical value based on setting</English>
             <Russian>Заставляет действие контрольного импульса выдавать числовое значение, основанное на настройке</Russian>
+            <German>Die Aktion "Puls überprüfen" liefert einen numerischen Wert abhängig von der Einstellung</German>
             <Japanese>脈拍の確認アクションから得られる情報が数値化されるようになる医療レベルを設定します</Japanese>
+            <Korean>설정에 따라 맥박 확인 행동을 통해 숫자로 표시된 값을 제공합니다.</Korean>
+            <French>L'action de vérification du pouls fournit une valeur numérique, en fonction de vos paramètres.</French>
+            <Italian>L'azione di controllare il polso darà un risultato numerico a seconda di questo settaggio.</Italian>
+            <Chinesesimp>检查心率后会显示心率数值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_NumericalPulse_DisplayName">
             <English>Numerical Pulse</English>
             <Russian>Числовое значение пульса</Russian>
+            <German>Numerischer Puls</German>
             <Japanese>脈拍の数値化</Japanese>
+            <Korean>맥박 수치</Korean>
+            <French>Pouls numérique</French>
+            <Italian>Frequenza Cardiaca Numerica</Italian>
+            <Chinesesimp>显示心率数值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Packing_Bandage_Desc_Short">
             <English>Used to pack medium to large wounds and stem the bleeding</English>
@@ -3640,6 +3734,7 @@
             <Korean>시체를 검은 시체가방에 놓기</Korean>
             <Japanese>遺体袋 (黒) に入れる</Japanese>
             <Turkish>Vücudu siyah ceset torbasına yerleştir</Turkish>
+            <Chinesesimp>将单位装入黑色尸袋</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagBlue">
             <English>Place body in blue bodybag</English>
@@ -3653,6 +3748,7 @@
             <Korean>시체를 파란 시체가방에 놓기</Korean>
             <Japanese>遺体袋 (青) に入れる</Japanese>
             <Turkish>Vücudu mavi ceset torbasına yerleştir</Turkish>
+            <Chinesesimp>将单位装入蓝色尸袋</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlaceInBodyBagWhite">
             <English>Place body in white bodybag</English>
@@ -3666,6 +3762,7 @@
             <Korean>시체를 흰 시체가방에 놓기</Korean>
             <Japanese>遺体袋 (白) に入れる</Japanese>
             <Turkish>Vücudu beyaz ceset torbasına yerleştir</Turkish>
+            <Chinesesimp>将单位装入白色尸袋</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_PlacingInBodyBag">
             <English>Placing body in bodybag...</English>
@@ -3745,7 +3842,7 @@
             <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
             <German>Volumenerweiterungsmittel (künstliches Blutvolumen)</German>
             <Korean>혈액량을 늘리기위한 보조수단 입니다.</Korean>
-            <Japanese>血液量の増加を補助します。</Japanese>
+            <Japanese>血液量を増加させるための成分が含まれている。</Japanese>
             <Chinese>可快速得到血液補充</Chinese>
             <Chinesesimp>可快速得到血液补充</Chinesesimp>
             <Hungarian>Egy térfogatnövelő vérkiegészítmény.</Hungarian>
@@ -3761,7 +3858,7 @@
             <Russian>Дополнительный препарат, применяемый при возмещении объема крови.</Russian>
             <German>Volumenerweiterungsmittel (künstliches Blutvolumen)</German>
             <Korean>혈액량을 늘리기위한 보조수단 입니다.</Korean>
-            <Japanese>血液量の増加を補助します。</Japanese>
+            <Japanese>血液量を増加させるための成分が含まれている。</Japanese>
             <Chinese>可快速得到血液補充</Chinese>
             <Chinesesimp>可快速得到血液补充</Chinesesimp>
             <Hungarian>Egy térfogatnövelő vérkiegészítmény.</Hungarian>
@@ -3860,7 +3957,7 @@
             <Russian>Физраствор для в/в вливания (1000 мл)</Russian>
             <German>Kochsalzlösung (1000ml)</German>
             <Korean>생리식염수 IV (1000ml)</Korean>
-            <Japanese>生理食塩水 IV (1000ml)</Japanese>
+            <Japanese>生理食塩液 IV (1000ml)</Japanese>
             <Chinese>點滴 (食鹽水 1000毫升)</Chinese>
             <Chinesesimp>生理盐水（1000毫升）</Chinesesimp>
             <Turkish>Serum IV (1000ml)</Turkish>
@@ -3877,7 +3974,7 @@
             <Russian>Физраствор для в/в вливания (250 мл)</Russian>
             <German>Kochsalzlösung (250ml)</German>
             <Korean>생리식염수 IV (250ml)</Korean>
-            <Japanese>生理食塩水 IV (250ml)</Japanese>
+            <Japanese>生理食塩液 IV (250ml)</Japanese>
             <Chinese>點滴 (食鹽水 250毫升)</Chinese>
             <Chinesesimp>生理盐水（250毫升）</Chinesesimp>
             <Turkish>Serum IV (250ml)</Turkish>
@@ -3894,7 +3991,7 @@
             <Russian>Физраствор для в/в вливания (500 мл)</Russian>
             <German>Kochsalzlösung (500ml)</German>
             <Korean>생리식염수 IV (500ml)</Korean>
-            <Japanese>生理食塩水 IV (500ml)</Japanese>
+            <Japanese>生理食塩液 IV (500ml)</Japanese>
             <Chinese>點滴 (食鹽水 500毫升)</Chinese>
             <Chinesesimp>生理盐水（500毫升）</Chinesesimp>
             <Turkish>Serum IV (500ml)</Turkish>
@@ -3911,7 +4008,7 @@
             <Russian>Пакет физраствора для возмещения объёма потерянной крови</Russian>
             <German>Kochsalzlösung, ein medizinisches Volumenersatzmittel</German>
             <Korean>생리식염수, 환자의 혈액량을 보충할때 쓰입니다</Korean>
-            <Japanese>生理食塩水 IVは患者の血液量を回復させます。</Japanese>
+            <Japanese>生理食塩液静脈注射(IV)は患者の血液量を回復させます。</Japanese>
             <Chinese>生理食鹽水, 用於恢復傷者血液</Chinese>
             <Chinesesimp>生理盐水，用于恢复伤者血液</Chinesesimp>
             <Hungarian>0,9%-os sósvíz-infúzió, a páciens vérmennyiségének helyreállítására</Hungarian>
@@ -3972,7 +4069,8 @@
             <Russian>Нет капельницы</Russian>
             <German>Kein IV</German>
             <Korean>수혈 없음</Korean>
-            <Japanese>IV なし</Japanese>
+            <Japanese>IV(静脈注射) なし</Japanese>
+            <Chinesesimp>没有静脉注射</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_NoPain">
             <English>No pain</English>
@@ -3984,6 +4082,7 @@
             <German>Kein Schmerz</German>
             <Korean>고통 없음</Korean>
             <Japanese>痛みはない</Japanese>
+            <Chinesesimp>没有疼痛</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Status_Pain">
             <English>In pain</English>
@@ -4144,6 +4243,7 @@
             <German>Chirurgisches Nahtmaterial zum Nähen von Wunden.</German>
             <Korean>상처를 꿰메는 수술용 봉합술.</Korean>
             <Japanese>傷害縫合用の外科糸付縫合針。</Japanese>
+            <Chinesesimp>用于缝合伤口的手术缝合线</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Desc_Use">
             <English>Surgical Suture for stitching injuries.</English>
@@ -4156,6 +4256,7 @@
             <German>Chirurgisches Nahtmaterial zum Nähen von Wunden.</German>
             <Korean>상처를 꿰메는 수술용 봉합술.</Korean>
             <Japanese>傷害縫合用の外科糸付縫合針。</Japanese>
+            <Chinesesimp>用于缝合伤口的手术缝合线</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_Suture_Display">
             <English>Suture</English>
@@ -4168,6 +4269,7 @@
             <German>Naht</German>
             <Korean>봉합술</Korean>
             <Japanese>糸付縫合針</Japanese>
+            <Chinesesimp>缝合线</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TimeCoefficientPAK_Description">
             <English>Modifies how long a PAK takes to apply.\nThe treatment time is based on the total body part damage multiplied by this coefficient, with a minimum of 10 seconds.</English>
@@ -4263,7 +4365,7 @@
             <Russian>Перелить кровь</Russian>
             <German>Bluttransfusion</German>
             <Korean>혈액 수혈</Korean>
-            <Japanese>血液を投与</Japanese>
+            <Japanese>血液を輸液</Japanese>
             <Chinese>輸血液</Chinese>
             <Chinesesimp>输入血液</Chinesesimp>
             <Turkish>Kan Ver</Turkish>
@@ -4280,7 +4382,7 @@
             <Russian>Перелить плазму</Russian>
             <German>Plasmatransfusion</German>
             <Korean>혈장 수혈</Korean>
-            <Japanese>血漿を投与</Japanese>
+            <Japanese>血漿を輸液</Japanese>
             <Chinese>輸血漿</Chinese>
             <Chinesesimp>输入血浆</Chinesesimp>
             <Turkish>Plasma Ver</Turkish>
@@ -4297,7 +4399,7 @@
             <Russian>Перелить физраствор</Russian>
             <German>Salzlösungstransfusion</German>
             <Korean>생리식염수 수혈</Korean>
-            <Japanese>生理食塩水を投与</Japanese>
+            <Japanese>生理食塩液を輸液</Japanese>
             <Chinese>注射生理食鹽水</Chinese>
             <Chinesesimp>输入生理盐水</Chinesesimp>
             <Turkish>Serum Ver</Turkish>
@@ -4314,7 +4416,7 @@
             <Russian>Переливание крови...</Russian>
             <German>Bluttransfusion...</German>
             <Korean>혈액 수혈 중...</Korean>
-            <Japanese>血液を投与しています・・・</Japanese>
+            <Japanese>血液を輸液しています・・・</Japanese>
             <Chinese>輸血液中 ...</Chinese>
             <Chinesesimp>正在输入血液...</Chinesesimp>
             <Turkish>Kan Veriliyor...</Turkish>
@@ -4331,7 +4433,7 @@
             <Russian>Переливание плазмы...</Russian>
             <German>Plasmatransfusion...</German>
             <Korean>혈장 수혈 중...</Korean>
-            <Japanese>血漿を投与しています・・・</Japanese>
+            <Japanese>血漿を輸液しています・・・</Japanese>
             <Chinese>輸血漿中 ...</Chinese>
             <Chinesesimp>正在输入血浆...</Chinesesimp>
             <Turkish>Plasma Veriliyor...</Turkish>
@@ -4348,7 +4450,7 @@
             <Russian>Переливание физраствора...</Russian>
             <German>Salzlösungtransfusion...</German>
             <Korean>생리식염수 수혈 중...</Korean>
-            <Japanese>生理食塩水を投与しています・・・</Japanese>
+            <Japanese>生理食塩液を輸液しています・・・</Japanese>
             <Chinese>施打生理食鹽水中 ...</Chinese>
             <Chinesesimp>正在输入生理盐水...</Chinesesimp>
             <Turkish>Serum Veriliyor...</Turkish>
@@ -4458,6 +4560,7 @@
             <German>Dauer von Behandlungen als Zeus wird mit diesem Koeffizienten multipliziert.</German>
             <Korean>제우스일 때 모든 치료 시간에 이 계수를 곱합니다.</Korean>
             <Japanese>Zeus操作中は、すべての治療時間にこの係数を掛けます。</Japanese>
+            <Chinesesimp>宙斯的医疗时间乘数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeCoeffZeus_DisplayName">
             <English>Zeus Treatment Time Coefficient</English>
@@ -4468,6 +4571,7 @@
             <German>Zeit-Koeffizient für Zeus Behandlungen</German>
             <Korean>제우스 치료 시간 계수</Korean>
             <Japanese>Zeus治療時間係数</Japanese>
+            <Chinesesimp>宙斯医疗时间系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_Description">
             <English>Time, in seconds, required to dig a grave for a body.</English>
@@ -4480,6 +4584,7 @@
             <German>Zeit (in Sekunden), die benötigt wird, um ein Grab für einen Leichnam auszuheben.</German>
             <Korean>시신의 무덤을 파는 데 필요한 시간(초 단위).</Korean>
             <Japanese>遺体の墓を掘るのに掛かる時間。 (秒単位)</Japanese>
+            <Chinesesimp>挖掘坟墓所需时间(秒)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeGrave_DisplayName">
             <English>Grave Digging Time</English>
@@ -4492,6 +4597,7 @@
             <German>Zeit zum Graben von Gräbern</German>
             <Korean>무덤 파는 시간</Korean>
             <Japanese>墓掘りの所要時間</Japanese>
+            <Chinesesimp>挖坟时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeIV_Description">
             <English>Time, in seconds, required to administer an IV bag.</English>
@@ -4732,7 +4838,7 @@
             <Portuguese>Usar Kit Cirúrgico</Portuguese>
             <Russian>Использовать хирургический набор</Russian>
             <German>Operationsset benutzen</German>
-            <Korean>봉합키트 사용하기</Korean>
+            <Korean>봉합 키트 사용하기</Korean>
             <Japanese>手術キットを使う</Japanese>
             <Chinese>使用手術包</Chinese>
             <Chinesesimp>使用手术包</Chinesesimp>
@@ -4856,6 +4962,7 @@
             <German>Bestimmt, wie wirksam Bandagen beim Verschließen von Wunden sind.</German>
             <Korean>붕대가 상처를 치료하는 데 얼마나 효과적으로 지속되는지 결정합니다.</Korean>
             <Japanese>包帯が傷をふさぐのにどれだけ効果的かを定義します。</Japanese>
+            <Chinesesimp>绷带在包扎伤口时会多有效</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageEffectiveness_DisplayName">
             <English>Bandage Effectiveness Coefficient</English>
@@ -4868,6 +4975,7 @@
             <German>Verbandswirksamkeitskoeffizient</German>
             <Korean>붕대 효과 계수</Korean>
             <Japanese>包帯有効性係数</Japanese>
+            <Chinesesimp>绷带有效值系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_Description">
             <English>If enabled, bandages can close different types of wounds on the same body part.\nBandaging multiple injuries will scale bandaging time accordingly.</English>
@@ -4880,6 +4988,7 @@
             <German>Wenn diese Option aktiviert ist, können Verbände verschiedene Arten von Wunden am selben Körperteil schließen.\nBeim Verbinden mehrerer Verletzungen wird die Verbandszeit entsprechend skaliert.</German>
             <Korean>활성화된 경우 붕대로 동일한 신체 부위에 있는 다른 유형의 상처를 막을 수 있습니다.\n여러 부상을 붕대로 감으면 붕대 감는 시간이 그만큼 늘어납니다.</Korean>
             <Japanese>有効にすると、体の同じ部分にある別の種類の傷を一つの包帯で閉じることができます。\n複数の傷に包帯を巻くと、それに応じて包帯時間が変動します。</Japanese>
+            <Chinesesimp>如果启用, 一次包扎动作可以包扎同一身体部位的多个不同类型的伤口\n包扎时间也会相应改变</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bandageRollover_DisplayName">
             <English>Bandage Rollover</English>
@@ -4892,6 +5001,7 @@
             <German>Verbandüberschlag</German>
             <Korean>붕대 모두 감기</Korean>
             <Japanese>包帯の繰り越し</Japanese>
+            <Chinesesimp>包扎多个伤口</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_bodybagWhileStillAlive">
             <English>The body twitched and may not be dead!</English>
@@ -4917,6 +5027,7 @@
             <German>Überprüfe Name auf dem Grabstein</German>
             <Korean>묘비 이름 확인</Korean>
             <Japanese>墓石の名前を確認</Japanese>
+            <Chinesesimp>检查墓碑上的名字</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_diagnoseAlive">
             <English>alive</English>
@@ -5082,6 +5193,7 @@
             <Japanese>医療品</Japanese>
             <Turkish>Tıbbi Ürünler</Turkish>
             <Hungarian>Orvosi felszerelés</Hungarian>
+            <Chinesesimp>医疗物品</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_noBloodloss">
             <English>He hasn't lost blood</English>
@@ -5142,6 +5254,7 @@
             <German>Rezeptfreies Analgetikum zur Bekämpfung leichter bis mittelschwerer Schmerzen.</German>
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
+            <Chinesesimp>非处方止疼药, 用于缓解轻至中度疼痛</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Desc_Use">
             <English>Over-the-counter analgesic used to combat light to moderate pain experiences.</English>
@@ -5152,6 +5265,7 @@
             <German>Rezeptfreies Analgetikum zur Bekämpfung leichter bis mittelschwerer Schmerzen.</German>
             <Korean>가벼운 통증부터 중간 정도의 통증을 퇴치하는 데 사용되는 일반의약품 진통제입니다.</Korean>
             <Japanese>軽度から中程度の痛みに対処するために使用される市販の鎮痛薬。</Japanese>
+            <Chinesesimp>非处方止疼药, 用于缓解轻至中度疼痛</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_painkillers_Display">
             <English>Painkillers</English>
@@ -5180,7 +5294,7 @@
             <Russian>Принимается кровь [%1 мл]</Russian>
             <German>Erhalte Blut IV [%1ml]</German>
             <Korean>혈액 IV로 [%1ml] 수혈중</Korean>
-            <Japanese>血液 IV [%1ml] を投与中</Japanese>
+            <Japanese>血液をIV(静脈注射)投与中 [%1ml]</Japanese>
             <Chinese>接收血液靜脈注射液中 [%1毫升]</Chinese>
             <Chinesesimp>正在接受血液静脉注射 [%1毫升]</Chinesesimp>
             <Hungarian>Vér Infúzióra kötve [%1ml]</Hungarian>
@@ -5196,7 +5310,7 @@
             <Russian>Принимается плазма [%1 мл]</Russian>
             <German>Erhalte Plasma IV [%1ml]</German>
             <Korean>혈장 IV로 [%1ml] 수혈중</Korean>
-            <Japanese>プラズマ IV [%1ml] を投与中</Japanese>
+            <Japanese>血漿をIV(静脈注射)投与中 [%1ml]</Japanese>
             <Chinese>接收血漿靜脈注射液中 [%1毫升]</Chinese>
             <Chinesesimp>正在接受血浆静脉注射 [%1毫升]</Chinesesimp>
             <Hungarian>Plazma Infúzióra kötve [%1ml]</Hungarian>
@@ -5212,7 +5326,7 @@
             <Russian>Принимается физраствор [%1 мл]</Russian>
             <German>Erhalte Saline IV [%1ml]</German>
             <Korean>생리식염수 IV로 [%1ml] 수혈중</Korean>
-            <Japanese>生理食塩水 IV [%1ml] を投与中</Japanese>
+            <Japanese>生理食塩液をIV(静脈注射)投与中 [%1ml]</Japanese>
             <Chinese>接收生理鹽水靜脈注射液中 [%1毫升]</Chinese>
             <Chinesesimp>正在接受生理盐水静脉注射 [%1毫升]</Chinesesimp>
             <Hungarian>Saline Infúzióra kötve [%1ml]</Hungarian>

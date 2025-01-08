@@ -496,7 +496,7 @@
             <Portuguese>Aviônica</Portuguese>
             <Russian>Авионику</Russian>
             <German>Avionik</German>
-            <Korean>항공 전자</Korean>
+            <Korean>항공 전자 기기</Korean>
             <Japanese>アビオニクス</Japanese>
             <Chinese>航電系統</Chinese>
             <Chinesesimp>航电系统</Chinesesimp>
@@ -512,7 +512,7 @@
             <Portuguese>Carroceria</Portuguese>
             <Russian>Кузов</Russian>
             <German>Fahrgestell</German>
-            <Korean>몸체</Korean>
+            <Korean>차체</Korean>
             <Japanese>車体</Japanese>
             <Chinese>車身</Chinese>
             <Chinesesimp>车身</Chinesesimp>
@@ -664,7 +664,7 @@
             <Portuguese>Estabilizador Horizontal Esquerdo</Portuguese>
             <Russian>Левый горизонтальный стабилизатор</Russian>
             <German>Linkes Höhenleitwerk</German>
-            <Korean>왼쪽 수평안정판</Korean>
+            <Korean>왼쪽 수평안정기</Korean>
             <Japanese>左側水平安定装置</Japanese>
             <Chinese>左側懸掛穩定</Chinese>
             <Chinesesimp>左侧悬挂稳定</Chinesesimp>
@@ -680,7 +680,7 @@
             <Portuguese>Estabilizador Horizontal Direito</Portuguese>
             <Russian>Правый горизонтальный стабилизатор</Russian>
             <German>Rechtes Höhenleitwerk</German>
-            <Korean>오른쪽 수평안정판</Korean>
+            <Korean>오른쪽 수평안정기</Korean>
             <Japanese>右側水平安定装置</Japanese>
             <Chinese>右側懸掛穩定</Chinese>
             <Chinesesimp>右侧悬挂稳定</Chinesesimp>
@@ -713,7 +713,7 @@
             <Portuguese>Roda Traseira Esquerda</Portuguese>
             <Russian>Левое заднее колесо</Russian>
             <German>Linkes Hinterrad</German>
-            <Korean>왼쪽 뒤쪽 바퀴</Korean>
+            <Korean>왼쪽 뒷바퀴</Korean>
             <Japanese>左後輪</Japanese>
             <Chinese>左後輪</Chinese>
             <Chinesesimp>左后轮</Chinesesimp>
@@ -729,7 +729,7 @@
             <Portuguese>Segunda Roda Dianteira Esquerda</Portuguese>
             <Russian>Второе переднее левое колесо</Russian>
             <German>Zweites linkes Vorderrad</German>
-            <Korean>왼쪽 두번째 바퀴</Korean>
+            <Korean>왼쪽 두 번째 앞바퀴</Korean>
             <Japanese>左第二前輪</Japanese>
             <Chinese>第二左前輪</Chinese>
             <Chinesesimp>第二左前轮</Chinesesimp>
@@ -842,7 +842,7 @@
             <Portuguese>Tubo de Pitot</Portuguese>
             <Russian>Кокпит</Russian>
             <German>Pitotrohr</German>
-            <Korean>동압관</Korean>
+            <Korean>피토관</Korean>
             <Japanese>ピトー管</Japanese>
             <Chinese>空速管</Chinese>
             <Chinesesimp>空速管</Chinesesimp>
@@ -858,7 +858,7 @@
             <Portuguese>Roda Traseira Direita</Portuguese>
             <Russian>Правое заднее колесо</Russian>
             <German>Rechtes Hinterrad</German>
-            <Korean>오른쪽 뒤쪽 바퀴</Korean>
+            <Korean>오른쪽 뒷바퀴</Korean>
             <Japanese>右後輪</Japanese>
             <Chinese>右後輪</Chinese>
             <Chinesesimp>右后轮</Chinesesimp>
@@ -874,7 +874,7 @@
             <Portuguese>Segunda Roda Dianteira Direita</Portuguese>
             <Russian>Второе правое переднее колесо</Russian>
             <German>Zweites rechtes Vorderrad</German>
-            <Korean>오른쪽 두번째 바퀴</Korean>
+            <Korean>오른쪽 두 번째 앞바퀴</Korean>
             <Japanese>右第二前輪</Japanese>
             <Chinese>第二右前輪</Chinese>
             <Chinesesimp>第二右前轮</Chinesesimp>
@@ -955,7 +955,7 @@
             <Portuguese>Arranque</Portuguese>
             <Russian>Стартер</Russian>
             <German>Anlasser</German>
-            <Korean>점화기</Korean>
+            <Korean>시동 장치</Korean>
             <Japanese>スターター</Japanese>
             <Chinese>發動機</Chinese>
             <Chinesesimp>发动机</Chinesesimp>
@@ -1035,7 +1035,7 @@
             <Portuguese>Rotor de Cauda</Portuguese>
             <Russian>Рулевой винт</Russian>
             <German>Heckrotor</German>
-            <Korean>꼬리 로터</Korean>
+            <Korean>테일 로터</Korean>
             <Japanese>テールローター</Japanese>
             <Chinese>尾槳</Chinese>
             <Chinesesimp>尾桨</Chinesesimp>
@@ -1052,7 +1052,7 @@
             <Portuguese>Estabilizador Vertical</Portuguese>
             <Russian>Вертикальный стабилизатор</Russian>
             <German>Seitenleitwerk</German>
-            <Korean>수직 안정판</Korean>
+            <Korean>수직안정기</Korean>
             <Japanese>垂直安定装置</Japanese>
             <Chinese>垂直穩定</Chinese>
             <Chinesesimp>垂直稳定</Chinesesimp>
@@ -1141,6 +1141,7 @@
             <German>Rad flicken</German>
             <Korean>바퀴 수리</Korean>
             <Japanese>タイヤを補修する</Japanese>
+            <Chinesesimp>补胎</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_PatchingWheel">
             <English>Patching Wheel...</English>
@@ -1152,6 +1153,7 @@
             <German>Rad flicken...</German>
             <Korean>바퀴 수리 중...</Korean>
             <Japanese>タイヤを補修しています・・・</Japanese>
+            <Chinesesimp>正在补胎...</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_RemoveTrack">
             <English>Remove Track</English>
@@ -1485,7 +1487,7 @@
             <Portuguese>Mostra uma notificação quando você repara um veículo</Portuguese>
             <Russian>Отображать оповещение каждый раз, когда вы ремонтируете транспорт</Russian>
             <German>Zeige eine Nachricht, wann immer du ein Fahrzeug reparierst</German>
-            <Korean>수리시 화면에 글자로 알림이 뜹니다</Korean>
+            <Korean>수리 시 화면에 글자로 알림이 뜹니다</Korean>
             <Japanese>車両の修理を始めると、画面に通知を出します</Japanese>
             <Chinese>每當維修載具時顯示通知</Chinese>
             <Chinesesimp>每当维修载具时显示通知</Chinesesimp>
@@ -1500,7 +1502,7 @@
             <Portuguese>Mostrar texto quando reparar</Portuguese>
             <Russian>Отображать текст при ремонте</Russian>
             <German>Zeige Text bei Reperatur an</German>
-            <Korean>수리시 화면에 글자 표시</Korean>
+            <Korean>수리 시 화면에 글자 표시</Korean>
             <Japanese>修理時に文章で通知する</Japanese>
             <Chinese>顯示維修文本</Chinese>
             <Chinesesimp>显示维修文本</Chinesesimp>
@@ -1549,6 +1551,7 @@
             <German>Rad</German>
             <Korean>바퀴</Korean>
             <Japanese>タイヤ</Japanese>
+            <Chinesesimp>轮胎</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_WheelRepairRequiredItems_Description">
             <English>Items required to remove/replace wheels.</English>
@@ -1818,6 +1821,7 @@
             <German>Erlaube Radwechsel</German>
             <Korean>바퀴 교체 허용</Korean>
             <Japanese>タイヤ交換の許可</Japanese>
+            <Chinesesimp>允许更换轮胎</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_engineerSetting_anyone">
             <English>Anyone</English>
@@ -1940,6 +1944,7 @@
             <German>Zeit in Sekunden, um eine Reparatur abzuschließen.</German>
             <Korean>수리를 완료하는 시간(초 단위)</Korean>
             <Japanese>修理完了までの所要時間 (秒単位)</Japanese>
+            <Chinesesimp>完成维修所需的时间(秒)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_miscRepairTime_name">
             <English>Part Repair Time</English>
@@ -1951,6 +1956,7 @@
             <German>Teilreparaturzeit</German>
             <Korean>부품 수리 시간</Korean>
             <Japanese>部分修理所要時間</Japanese>
+            <Chinesesimp>部分维修所需时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_moduleDescription">
             <English>Provides a repair system for all types of vehicles.</English>
@@ -1992,6 +1998,7 @@
             <German>Wer kann Radflicken durchführen?</German>
             <Korean>누가 바퀴를 수리할 수 있습니까?</Korean>
             <Japanese>誰がタイヤの補修を出来るようにしますか?</Japanese>
+            <Chinesesimp>谁可以补胎</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelEnabled_name">
             <English>Allow Wheel Patching</English>
@@ -2003,6 +2010,7 @@
             <German>Erlaube Radflicken</German>
             <Korean>바퀴 수리 허용</Korean>
             <Japanese>タイヤ補修を許可</Japanese>
+            <Chinesesimp>允许补胎</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelLocation_Description">
             <English>Where the wheel can be patched.</English>
@@ -2014,6 +2022,7 @@
             <German>Wo das Rad geflickt werden kann.</German>
             <Korean>바퀴를 수리할 수 있는 곳입니다.</Korean>
             <Japanese>タイヤを補修することが出来る場所。</Japanese>
+            <Chinesesimp>允许补胎的地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelLocation_DisplayName">
             <English>Wheel Patch Location</English>
@@ -2025,6 +2034,7 @@
             <German>Räder Flick Ort</German>
             <Korean>바퀴 수리 장소</Korean>
             <Japanese>タイヤ補修可能な場所</Japanese>
+            <Chinesesimp>补胎地点</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_Description">
             <English>Maximum damage to which a wheel can be patched.\n0% means all damage can be repaired.</English>
@@ -2036,6 +2046,7 @@
             <German>Maximales Level, bis zu dem ein Rad geflickt werden kann.\n0% bedeutet, dass das Rad vollständig repariert werden kann.</German>
             <Korean>바퀴를 수리할 수 있는 최대 레벨입니다.</Korean>
             <Japanese>タイヤをのダメージ補修できる最大の度合い。/n 0%は、すべてのダメージが修復可能であることを意味します。</Japanese>
+            <Chinesesimp>允许补胎时轮胎所能承受的最大损伤\n0%意味着所有损伤都能补</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_DisplayName">
             <English>Patch Wheel Threshold</English>
@@ -2047,6 +2058,7 @@
             <German>Rad flicken Schwellenwert</German>
             <Korean>바퀴 수리 한계점</Korean>
             <Japanese>タイヤ補修しきい値</Japanese>
+            <Chinesesimp>补胎伤害阈值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelOnGround">
             <English>On the ground</English>
@@ -2058,6 +2070,7 @@
             <German>Auf dem Boden</German>
             <Korean>지면 위</Korean>
             <Japanese>地上</Japanese>
+            <Chinesesimp>在地上</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelOnVehicle">
             <English>On a vehicle</English>
@@ -2069,6 +2082,7 @@
             <German>An einem Fahrzeug</German>
             <Korean>차량</Korean>
             <Japanese>車両上</Japanese>
+            <Chinesesimp>在车里</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelRequiredItems_Description">
             <English>Items required to patch a wheel.</English>
@@ -2080,6 +2094,7 @@
             <German>Gegenstänge, die zum Reifenflicken benötigt werden.</German>
             <Korean>바퀴를 수리하기 위해 아이템이 필요합니다.</Korean>
             <Japanese>タイヤ補修にアイテムを必要とします。</Japanese>
+            <Chinesesimp>补胎所需的工具</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelRequiredItems_DisplayName">
             <English>Wheel Patch Requirements</English>
@@ -2091,6 +2106,7 @@
             <German>Bedingungen für die Radflicken</German>
             <Korean>바퀴 수리 아이템 필요</Korean>
             <Japanese>タイヤ補修の要求</Japanese>
+            <Chinesesimp>补胎工具需求</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelTime_Description">
             <English>Time it takes to patch a wheel by 5%.</English>
@@ -2102,6 +2118,7 @@
             <German>Zeit, die benötigt wird, um ein Rad um 5 % zu flicken.</German>
             <Korean>바퀴를 5% 수리하는 데 걸리는 시간(초 단위)</Korean>
             <Japanese>タイヤを5%補修するのに掛かる時間。</Japanese>
+            <Chinesesimp>补胎5%所需的时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelTime_DisplayName">
             <English>Wheel Patch Time</English>
@@ -2113,6 +2130,7 @@
             <German>Zeit um Räder zu flicken</German>
             <Korean>바퀴 수리 시간</Korean>
             <Japanese>タイヤ補修所要時間</Japanese>
+            <Chinesesimp>补胎时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_repairDamageThreshold_Engineer_description">
             <English>Maximum damage to which a part can be repaired by an engineer above the minimum level required for the repair.\n0% means all damage can be repaired.</English>
@@ -2229,6 +2247,7 @@
             <German>Ändert, wie lange es dauert, eine vollständige Reparatur durchzuführen.\nDie Reparaturzeit basiert auf der Menge der erforderlichen Reparaturen für jedes Teil, einschließlich derjenigen, die normalerweise nicht zugänglich sind.</German>
             <Korean>전체적인 수리를 수행하는 데 걸리는 시간을 수정합니다.\n수리 시간은 일반적으로 접근할 수 없는 부품을 포함하여 각 부품에 필요한 수리 시간을 기준으로 합니다.</Korean>
             <Japanese>完全修復に掛かる時間を変更します。\n修理所要時間は、通常アクセスできない部品も含め、各部品に必要な修理量に基づいて決定されます。</Japanese>
+            <Chinesesimp>更改完全维修所需时间\n取决于各零件所需的维修时间总和, 包括一些平常无法维修到的地方</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_timeCoefficientFullRepair_name">
             <English>Full Repair Time Coefficient</English>
@@ -2240,6 +2259,7 @@
             <German>Vollständiger Reparaturzeitkoeffizient</German>
             <Korean>전체 수리 시간 계수</Korean>
             <Japanese>完全修理所要時間係数</Japanese>
+            <Chinesesimp>完全维修时间系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_useAnywhere">
             <English>Anywhere</English>
@@ -2266,7 +2286,7 @@
             <Portuguese>Instalação e veículo de reparo</Portuguese>
             <Russian>Только у ремонтного транспорта или ремонтных сооружений</Russian>
             <German>Reperatureinrichtung oder Reperaturfahrzeug</German>
-            <Korean>수리 시설혹은 차량</Korean>
+            <Korean>수리 시설 혹은 차량</Korean>
             <Japanese>修理施設または車両のみ</Japanese>
             <Chinese>維修設施或載具旁</Chinese>
             <Chinesesimp>维修设施或载具旁</Chinesesimp>
@@ -2281,6 +2301,7 @@
             <German>Zeit in Sekunden, um ein Rad zu entfernen oder zu wechseln.</German>
             <Korean>바퀴를 제거하거나 교체하는 데 걸리는 시간(초 단위)</Korean>
             <Japanese>タイヤの取り外しまたは交換に掛かる時間。 (秒単位)</Japanese>
+            <Chinesesimp>移除或更换轮胎所需的时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_wheelChangeTime_name">
             <English>Wheel Change Time</English>
@@ -2292,6 +2313,7 @@
             <German>Radwechselzeit</German>
             <Korean>바퀴 교체 시간</Korean>
             <Japanese>タイヤ交換所要時間</Japanese>
+            <Chinesesimp>换胎时间</Chinesesimp>
         </Key>
     </Package>
 </Project>
