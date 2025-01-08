@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
-        <Key ID="STR_ACE_Frag_Debug">
-            <English>Debug</English>
-            <French>Debug</French>
-            <Spanish>Debug</Spanish>
-            <Italian>Debug</Italian>
-            <Russian>Отладка</Russian>
-            <German>Debug</German>
-            <Korean>디버그</Korean>
-            <Japanese>デバッグ</Japanese>
-            <Chinesesimp>开发者模式</Chinesesimp>
-        </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox">
             <English>Draw Hitboxes</English>
             <French>Afficher les hitboxes</French>

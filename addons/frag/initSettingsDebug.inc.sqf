@@ -4,7 +4,7 @@ private _category = format ["ACE %1", LLSTRING(Module_DisplayName)];
     QGVAR(debugOptions),
     "CHECKBOX",
     [LSTRING(EnableDebugTrace), LSTRING(EnableDebugTrace_Desc)],
-    [_category, LSTRING(Debug)],
+    [_category, ELSTRING(common,Debug)],
     true
 ] call CBA_fnc_addSetting;
 
@@ -12,7 +12,7 @@ private _category = format ["ACE %1", LLSTRING(Module_DisplayName)];
     QGVAR(dbgSphere),
     "CHECKBOX",
     [LSTRING(HitSphereEnable), LSTRING(HitSphereEnable_Desc)],
-    [_category, LSTRING(Debug)],
+    [_category, ELSTRING(common,Debug)],
     false
 ] call CBA_fnc_addSetting;
 
@@ -20,6 +20,6 @@ private _category = format ["ACE %1", LLSTRING(Module_DisplayName)];
     QGVAR(drawHitBox),
     "CHECKBOX",
     [LSTRING(DrawHitBox), LSTRING(DrawHitBox_Desc)],
-    [_category, LSTRING(Debug)],
+    [_category, ELSTRING(common,Debug)],
     true
 ] call CBA_fnc_addSetting;

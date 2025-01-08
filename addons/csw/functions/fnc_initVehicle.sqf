@@ -18,7 +18,7 @@
 params ["_vehicle"];
 if (!alive _vehicle) exitWith { WARNING_1("%1 not alive",_vehicle); };
 if (!simulationEnabled _vehicle) exitWith {
-    [{simulationEnabled _this}, FUNC(initVehicle), _vehicle] call CBA_fnc_waitUntilAndExecute;
+    [{simulationEnabled _this}, LINKFUNC(initVehicle), _vehicle] call CBA_fnc_waitUntilAndExecute;
 };
 
 private _typeOf = typeOf _vehicle;
