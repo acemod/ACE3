@@ -3,24 +3,20 @@
 class CfgPatches {
     class SUBADDON {
         name = COMPONENT_NAME;
-        author = ECSTRING(common,ACETeam);
-        authors[] = {"OverlordZorn [CVO]"};
-        url = ECSTRING(main,URL);
-        
-        VERSION_CONFIG;
-        addonRootClass = QUOTE(ADDON);
+        units[] = {};
+        weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "ace_wardrobe",
             "Characters_f_lxWS_headgear"
         };
         skipWhenMissingDependencies = 1;
-
-        requiredVersion = REQUIRED_VERSION;
-       
-        units[] = {};
-        weapons[] = {};
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"OverlordZorn [CVO]"};
+        url = ECSTRING(main,URL);
+        VERSION_CONFIG;
+        addonRootClass = QUOTE(ADDON);
     };
 };
-
 
 #include "CfgWardrobe.hpp"
