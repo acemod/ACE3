@@ -28,8 +28,6 @@ params ["_display"];
 
     if (!_enable && ((EGVAR(medical_treatment,holsterRequired) > 0) && currentWeapon ace_player isNotEqualTo "")) then {
         _ctrl ctrlSetTooltip LSTRING(needToHolster);
-    } else {
-        _ctrl ctrlSetTooltip "";
     };
 
     private _selectedColor = [
