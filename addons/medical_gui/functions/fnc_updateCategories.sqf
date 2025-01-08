@@ -26,6 +26,12 @@ params ["_display"];
     };
     _ctrl ctrlEnable _enable;
 
+    if (!_enable && (EGVAR(medical_treatment,holsterRequired) == 1)) then {
+        _ctrl ctrlSetTooltip LSTRING(needToHolster);
+    } else {
+        _ctrl ctrlSetTooltip "";
+    };
+
     private _selectedColor = [
         profileNamespace getVariable ["GUI_BCG_RGB_R", 0.13],
         profileNamespace getVariable ["GUI_BCG_RGB_G", 0.54],
