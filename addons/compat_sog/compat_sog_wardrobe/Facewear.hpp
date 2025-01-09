@@ -100,4 +100,5 @@ class vn_o_acc_goggles_03: vn_glasses_base {
         modifiableTo[] = { "vn_o_acc_km32_01", "vn_o_acc_goggles_02" };
         components[] = { "vn_o_acc_km32_01", "vn_o_acc_goggles_02"};
     };
+    mass = 4;
 };

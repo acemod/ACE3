@@ -19,7 +19,10 @@ class CN02(side,var1,var2): base_class_dn {\
 }
 
 
-// Base classes in CfgWeapons.hpp
+class vn_b_helmet_m1_01_01: vn_b_headgear_base {
+    class ItemInfo;
+};
+
 
 // Parent Version aph6 & svh4
 #define base_class_up vn_b_headgear_base
@@ -67,11 +70,11 @@ class vn_o_helmet_zsh3_02: vn_o_helmet_zsh3_01 {
 };
 
 // Helmets with/without Goggles
-class vn_b_helmet_m1_01_01;
 class vn_b_helmet_m1_14_01: vn_b_helmet_m1_01_01 {
     class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_off) {
         modifiableTo[] = { "vn_b_helmet_m1_20_01" };
     };
+    
 };
 class vn_b_helmet_m1_14_02: vn_b_helmet_m1_14_01 {
     class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_off) {
@@ -84,12 +87,14 @@ class vn_b_helmet_m1_20_01 : vn_b_helmet_m1_14_01 {
         modifiableTo[] = { "vn_b_helmet_m1_14_01" };
         components[] = {"vn_b_acc_goggles_01"};
     };
+    MASS(12);
 };
 class vn_b_helmet_m1_20_02 : vn_b_helmet_m1_20_01 {
     class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_on) {
         modifiableTo[] = { "vn_b_helmet_m1_14_02" };
         components[] = {"vn_b_acc_goggles_01"};
     };
+    MASS(12);
 };
 
 
@@ -100,12 +105,13 @@ class vn_o_helmet_shl61_01: vn_o_headgear_base {
         modifiableTo[] = { "vn_o_helmet_shl61_02" };
         components[] = {"vn_o_acc_goggles_02"};
     };
+    MASS(12);
 };   
 // Without Goggles
 class vn_o_helmet_shl61_02: vn_o_helmet_shl61_01 {
     class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_off) {
         modifiableTo[] = { "vn_o_helmet_shl61_01" };
-    };
+    };MASS(10);
 };
 
 
@@ -114,12 +120,14 @@ class vn_b_helmet_t56_01_01: vn_b_headgear_base {
     class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_off) {
         modifiableTo[] = { "vn_b_helmet_t56_02_01" };
     };
+    class ItemInfo;
 };
 class vn_b_helmet_t56_02_01: vn_b_helmet_t56_01_01 {
     class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_on) {
         modifiableTo[] = { "vn_b_helmet_t56_01_01" };
         components[] = {"vn_b_acc_goggles_01"};
     };
+    MASS(12);
 };
 
 class vn_b_helmet_t56_01_02: vn_b_helmet_t56_01_01 {
@@ -132,6 +140,7 @@ class vn_b_helmet_t56_02_02: vn_b_helmet_t56_02_01 {
         modifiableTo[] = { "vn_b_helmet_t56_01_02" };
         components[] = {"vn_b_acc_goggles_01"};
     };
+    MASS(12);
 };
 
 class vn_b_helmet_t56_01_03: vn_b_helmet_t56_01_01 {
@@ -144,6 +153,7 @@ class vn_b_helmet_t56_02_03: vn_b_helmet_t56_02_01 {
         modifiableTo[] = { "vn_b_helmet_t56_01_03" };
         components[] = {"vn_b_acc_goggles_01"};
     };
+    MASS(12);
 };
 
 
@@ -166,10 +176,12 @@ class vn_o_helmet_nva_01: vn_o_headgear_base {
     class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_off) {
         modifiableTo[] = { "vn_o_helmet_nva_05" };
     };
+    class ItemInfo;
 };
 class vn_o_helmet_nva_05: vn_o_helmet_nva_01  {
     class ace_wardrobe: EGVAR(wardrobe,base_H_goggles_on) {
         modifiableTo[] = { "vn_o_helmet_nva_01" };
         components[] = {"vn_o_acc_goggles_02"};
     };
+    MASS(12);
 };
