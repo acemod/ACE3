@@ -26,7 +26,16 @@ params ["_display"];
     };
     _ctrl ctrlEnable _enable;
 
-    if (!_enable && ((EGVAR(medical_treatment,holsterRequired) > 0) && currentWeapon ACE_player isNotEqualTo "")) then {
+    if (!_enable 
+    && {isNull findDisplay 312} 
+    && {!(
+        EGVAR(medical_treatment,holsterRequired) == 0
+        || {!isNull objectParent ACE_player} // medic is in a vehicle, so weapon is considered holstered
+        || {!isNull objectParent GVAR(target)} // patient is in a vehicle, ^
+        || {(EGVAR(medical_treatment,holsterRequired) in [2,4]) && {_category == "examine"}} // if examine bypass is on
+        || {currentWeapon ACE_player isEqualTo ""} // weapon is holstered
+        || {(EGVAR(medical_treatment,holsterRequired) <= 2) && {weaponLowered ACE_player}} // if just lowered is allowed
+    )}) then {
         _ctrl ctrlSetTooltip LLSTRING(needToHolster);
     };
 
