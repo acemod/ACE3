@@ -39,7 +39,7 @@ More examples can be found below.
 
 ## 2. Config
 
-Only directly defined Subclasses will be taken into account. A fully inherited subclass will be ignored and will not provide any interaction. The ace_wardrobe properties are to be found as a subclass of the item itself. Multiple base configs are designed at root of `configFile`.
+Only directly defined Subclasses will be taken into account. A fully inherited subclass will be ignored and will not provide any interaction. The `ace_wardrobe` properties are to be found as a subclass of the item itself. Multiple base configs are designed at root of `configFile`.
 
 ## 2.1 Properties
 
