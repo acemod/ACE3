@@ -2,7 +2,7 @@
 
 /*
  * Author: OverlordZorn
- * Function to replace a persons goggles/facewear.
+ * Function to replace a person's goggles/facewear.
  *
  * Arguments:
  * 0: Unit <OBJECT>
