@@ -210,28 +210,28 @@ class CfgWeapons {
     class lxWS_H_turban_01_black: H_Shemag_khk {
         class ace_wardrobe: ace_wardrobe_base {
             modifiableTo[] = { "lxWS_H_turban_02_black", "lxWS_H_turban_03_black", "lxWS_H_turban_04_black", "H_turban_02_mask_black_lxws" };
-            components[] = { }; // not required to be defined since it empty array get inherited from the base parent.
+            components[] = { }; // not needed when empty - only shown as an examlpe for how/when to use components
         };
     };
     // WS Turban Variant 2
     class lxWS_H_turban_02_black: lxWS_H_turban_01_black {
         class ace_wardrobe: ace_wardrobe_base {
             modifiableTo[] = { "lxWS_H_turban_01_black", "lxWS_H_turban_03_black", "lxWS_H_turban_04_black", "H_turban_02_mask_black_lxws" };
-            components[] = { }; // not required to be defined since it empty array get inherited from the base parent.
+            components[] = { }; // not needed when empty - only shown as an examlpe for how/when to use components
         };
     };
     // WS Turban Variant 3
     class lxWS_H_turban_03_black: lxWS_H_turban_01_black {
         class ace_wardrobe: ace_wardrobe_base {
             modifiableTo[] = { "lxWS_H_turban_01_black", "lxWS_H_turban_02_black", "lxWS_H_turban_04_black", "H_turban_02_mask_black_lxws" };
-            components[] = { }; // not required to be defined since it empty array get inherited from the base parent.
+            components[] = { }; // not needed when empty - only shown as an examlpe for how/when to use components
         };
     };
     // WS Turban Variant 4
     class lxWS_H_turban_04_black: lxWS_H_turban_01_black {
         class ace_wardrobe: ace_wardrobe_base {
             modifiableTo[] = { "lxWS_H_turban_01_black", "lxWS_H_turban_02_black", "lxWS_H_turban_03_black", "H_turban_02_mask_black_lxws" };
-            components[] = { }; // not required to be defined since it empty array get inherited from the base parent.
+            components[] = { }; // not needed when empty - only shown as an examlpe for how/when to use components
         };
     };
 };
