@@ -8,7 +8,7 @@
  * 0: magazine ID <STRING>
  *
  * Return Value:
- * The return value <BOOL>
+ * The return value <NUMBER>
  *
  * Example:
  * [_magID] call ace_wardrobe_fnc_getIndexFromMagID

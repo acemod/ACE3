@@ -199,7 +199,7 @@ class CfgWeapons {
     // BASECLASS
     class H_Shemag_khk;
     
-    // WS Turban with Balistic Mask
+    // WS Turban with Ballistic Mask
     class H_turban_02_mask_black_lxws: H_Shemag_khk {
         class ace_wardrobe: ace_wardrobe_base {
             modifiableTo[] = { "lxWS_H_turban_01_black", "lxWS_H_turban_02_black", "lxWS_H_turban_03_black", "lxWS_H_turban_04_black" };
@@ -280,7 +280,7 @@ class CfgGlasses {
 
 ## 5. Sounds
 
-The following CfgSounds classes are integrated in ace_wardrobe and are the default sounds for the `ace_wardrobe_base` and `ace_wardrobe_base_H_visor_up`/`ace_wardrobe_base_H_visor_down` base classes.
+The following `CfgSounds` classes are integrated in `ace_wardrobe` and are the default sounds for the `ace_wardrobe_base` and `ace_wardrobe_base_H_visor_up`/`ace_wardrobe_base_H_visor_down` base classes.
 
 ### 5.1 Integrated Sounds
 
@@ -295,6 +295,6 @@ The number at the end of the classnames indicates the length of the file in 1/10
 - `ace_wardrobe_helmet_visor_05`
 
 ## 6. Compatibility
-Currently, ace_IntelItems and ace_overheating (spare barrels) are being directly supported.
+Currently, `ace_IntelItems` and `ace_overheating` (spare barrels) are being directly supported.
 
-If an addon or mod utilizes a magazines magazineID to handle additional data about an items carried by the player, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new magazineIDs for all magazines on the player.
+If an addon or mod utilizes a magazine's `magazineID` to handle additional data about items carried by the player, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new `magazineID`s for all magazines on the player.
