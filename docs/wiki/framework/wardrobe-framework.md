@@ -46,14 +46,14 @@ Only directly defined Subclasses will be taken into account. A fully inherited s
 
 | Class Property |  Data Type | Description |
 | -------------- |  ----------- | ----------- |
-| modifiableTo[] | Array of Classnames | possible Variants this item can be turned into. |
-| components[] | Array of Classnames  | Components the current variant contains within itself | 
-| sound[]  | Array of CfgSound Entries | to be chosen by random when the action is performed |
-| sound_timing | Number 0..1 | defines the point time relative to the duration when the sound is played |
-| gesture | String of Classname | Gesture to be played when the action is performed |
-| alternativePicture | String of path to icon | to be used instead of target variant picture |
-| alternativeDisplayName | String | Will be used instead of the target variants displayname |
-| duration | Number in seconds | Duration of action. Items are being replaced at the end. |
+| `modifiableTo[]` | Array of Classnames | possible Variants this item can be turned into. |
+| `components[]` | Array of Classnames  | Components the current variant contains within itself | 
+| `sound[]` | Array of CfgSound Entries | to be chosen by random when the action is performed |
+| `sound_timing` | Number 0..1 | defines the point time relative to the duration when the sound is played |
+| `gesture` | String of Classname | Gesture to be played when the action is performed |
+| `alternativePicture` | String of path to icon | to be used instead of target variant picture |
+| `alternativeDisplayName` | String | Will be used instead of the target variants displayname |
+| `duration` | Number in seconds | Duration of action. Items are being replaced at the end. |
 
 ### 2.2 Base Classes
 
