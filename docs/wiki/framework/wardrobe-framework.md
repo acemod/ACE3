@@ -32,7 +32,7 @@ More examples can be found below.
 
 ### 1.2 Config Guidelines
 
-- An Container (Uniform, Vest, Backpack) should never change its maxLoad, unless there is a really good reason for it. This will result in the loss of items.
+- A Container (Uniform, Vest, Backpack) should never change its `maxLoad`, unless there is a really good reason for it. This will result in the loss of items.
 - Variants should never "magically" add/remove parts of themselves, unless its handled through a component.
 - There should not be a difference in weight between the different variants unless compoents get added/removed.
   - For Example: `Mass of Helmet with Goggles = Mass of Helmet + Mass of Goggles.`
