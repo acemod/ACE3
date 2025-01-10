@@ -776,6 +776,7 @@
             <German>Lauftyp</German>
             <Korean>총열 방식</Korean>
             <Japanese>銃身形式</Japanese>
+            <Chinesesimp>枪管类型</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_nonRemoveable">
             <English>Non-Removeable</English>
@@ -786,6 +787,7 @@
             <German>Nicht entfernbar</German>
             <Korean>제거 불가</Korean>
             <Japanese>取り外し不可</Japanese>
+            <Chinesesimp>无法移除</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_statBarrelType_removeable">
             <English>Quick Change</English>
@@ -796,6 +798,7 @@
             <German>Schnellwechsel</German>
             <Korean>신속 교체</Korean>
             <Japanese>即時交換可</Japanese>
+            <Chinesesimp>快速更换</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType">
             <English>Bolt Type</English>
@@ -806,6 +809,7 @@
             <German>Art des Verschlusses</German>
             <Korean>노리쇠 방식</Korean>
             <Japanese>遊底(ボルト)形式</Japanese>
+            <Chinesesimp>枪机类型</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_closedBolt">
             <English>Closed Bolt</English>
@@ -816,6 +820,7 @@
             <German>Geschlossener Verschluss</German>
             <Korean>클로즈드 볼트</Korean>
             <Japanese>クローズドボルト</Japanese>
+            <Chinesesimp>闭膛</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_statBoltType_openBolt">
             <English>Open Bolt</English>
@@ -826,6 +831,7 @@
             <German>Offener Verschluss</German>
             <Korean>오픈 볼트</Korean>
             <Japanese>オープンボルト</Japanese>
+            <Chinesesimp>开膛</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Overheating_suppressorCoef_description">
             <English>Coefficient for how much additional heat is added from having a suppressor attached.\nHigher value increases heat, 0 means no additional heat from the suppressor.</English>
@@ -861,8 +867,8 @@
             <Polish>Szansa na to, że przy przeładowaniu broni zacięcie nie zostanie usunięte, przez co czynność będzie musiała zostać powtórzona ponownie.</Polish>
             <Portuguese>Probabilidade que uma ação de desemperramento falhe, tendo que ser repetida</Portuguese>
             <Russian>Вертоятность того, что устранение заклинивания не сработает, и его придется повторить.</Russian>
-            <German>Wahrscheinlichkeit, dass der Versuch eine Ladehemmung zu beheben fehl schlägt und erneut durchgeführt werden muss.</German>
-            <Korean>기능고장 해결 시도시 실패할 확률이 있습니다. 이는 다시 기능고장 해결을 시도해야함을 의미합니다.</Korean>
+            <German>Wahrscheinlichkeit, dass der Versuch eine Ladehemmung zu beheben fehlschlägt und erneut durchgeführt werden muss.</German>
+            <Korean>기능고장 해결 시도 시 실패할 확률이 있습니다. 이는 다시 기능고장 해결을 시도해야함을 의미합니다.</Korean>
             <Japanese>弾詰まり解除のアクションに失敗し、再実行が必要になる確率。</Japanese>
             <Chinese>清除卡彈時有可能會失敗，需要反覆進行清槍。</Chinese>
             <Chinesesimp>清除卡弹时有可能会失败，需要反覆进行清枪。</Chinesesimp>
@@ -923,7 +929,7 @@
             <Italian>Determina se la sostituzione della canna disinceppa l'arma.</Italian>
             <Polish>Określa, czy wymiana lufy usuwa zacięcie się broni.</Polish>
             <Russian>Определяет, устраняет ли замена ствола заклинивание оружия.</Russian>
-            <German>Bestimmt, ob das Wechseln des Laufes eine Ladehemmung behebt.</German>
+            <German>Legt fest, ob ein Laufwechsel Ladehemmungen behebt.</German>
             <Korean>총열을 교체하면서 기능고장을 해결합니다.</Korean>
             <Japanese>銃身を交換して弾詰まりの解消をできるようにします。</Japanese>
             <Chinesesimp>通过更换枪管，以便清除卡弹。</Chinesesimp>
@@ -935,7 +941,7 @@
             <Italian>Disinceppa l'arma col cambio canna</Italian>
             <Polish>Usuń zacięcie przy wymianie lufy</Polish>
             <Russian>Замена ствола устраняет клин оружия</Russian>
-            <German>Ladehemmung beim Wechseln des Laufes beheben.</German>
+            <German>Ladehemmung beim Laufwechsel beheben</German>
             <Korean>총열 교환 시 기능고장 해결</Korean>
             <Japanese>銃身交換による弾詰まり解消</Japanese>
             <Chinesesimp>更换枪管清除卡弹</Chinesesimp>

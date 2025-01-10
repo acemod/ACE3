@@ -4,18 +4,17 @@ class vn_magazine;
 class vn_mine_m18_mag: vn_magazine {
     useAction = 0;
 
-    displayNameShort = ""; // Every explosive inherits this and it breaks naming in the placing menu
-
     EGVAR(explosives,placeable) = 1;
     EGVAR(explosives,setupObject) = QEXPLOSIVES_PLACE(m18);
 
     class ACE_Triggers {
-        SupportedTriggers[] = {"Command", "MK16_Transmitter"};
+        SupportedTriggers[] = {"Command", "MK16_Transmitter", "Timer"};
         class Command {
             digDistance = -0.05;
             fuseTime = 0.5;
         };
         class MK16_Transmitter: Command {};
+        class Timer: Command {};
     };
 };
 // Claymore (Proximity)
@@ -24,18 +23,6 @@ class vn_mine_m18_range_mag: vn_mine_m18_mag {
         SupportedTriggers[] = {"PressurePlate"};
         class PressurePlate {
             digDistance = -0.05;
-        };
-    };
-};
-
-// Claymore (Fuse)
-class vn_mine_m18_fuze10_mag: vn_mine_m18_mag {
-    class ACE_Triggers: ACE_Triggers {
-        class Command: Command {
-            fuseTime = 10;
-        };
-        class MK16_Transmitter: MK16_Transmitter {
-            fuseTime = 10;
         };
     };
 };
@@ -64,17 +51,9 @@ class vn_mine_m18_x3_range_mag: vn_mine_m18_x3_mag {
 };
 
 // WP Claymore (Remote)
+class vn_mine_m18_fuze10_mag;
 class vn_mine_m18_wp_mag: vn_mine_m18_fuze10_mag {
     EGVAR(explosives,setupObject) = QEXPLOSIVES_PLACE(m18_wp);
-
-     class ACE_Triggers {
-        SupportedTriggers[] = {"Command", "MK16_Transmitter"};
-        class Command {
-            digDistance = -0.05;
-            fuseTime = 0.5;
-        };
-        class MK16_Transmitter: Command {};
-    };
 };
 
 // WP Claymore (Proximity)
@@ -83,18 +62,6 @@ class vn_mine_m18_wp_range_mag: vn_mine_m18_wp_mag {
         SupportedTriggers[] = {"PressurePlate"};
         class PressurePlate {
             digDistance = -0.05;
-        };
-    };
-};
-
-// WP Claymore (Fuse)
-class vn_mine_m18_wp_fuze10_mag: vn_mine_m18_wp_mag {
-    class ACE_Triggers: ACE_Triggers {
-        class Command: Command {
-            fuseTime = 10;
-        };
-        class MK16_Transmitter: MK16_Transmitter {
-            fuseTime = 10;
         };
     };
 };

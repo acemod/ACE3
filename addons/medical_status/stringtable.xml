@@ -46,6 +46,7 @@
             <German>Chance für einen Spieler, seine Waffe fallen zu lassen, wenn er bewusstlos wird.\nHat keine Auswirkung auf die KI.</German>
             <Korean>플레이어가 기절할 때 무기를 떨어뜨릴 확률입니다.\nAI는 영향을 받지 않습니다.</Korean>
             <Japanese>プレーヤーが意識を失ったときに武器を落とす可能性。\nAI には影響しません。</Japanese>
+            <Chinesesimp>玩家在进入昏迷时把武器扔地上的概率\n对AI无效</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Status_DropWeaponUnconsciousChance_DisplayName">
             <English>Weapon Drop Chance</English>
@@ -58,6 +59,7 @@
             <German>Wahrscheinlichkeit, die Waffe fallen zu lassen</German>
             <Korean>무기 떨어뜨릴 확률</Korean>
             <Japanese>武器を落とす確率</Japanese>
+            <Chinesesimp>丢失武器概率</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Status_IvFlowRate_Description">
             <English>Controls how quickly fluid flows out of IV Bags. The IV Bag volume change is calculated as:\ntime interval (s) * iv change per second (4.1667 mL/s) * flow rate (this coefficient).</English>
@@ -70,7 +72,7 @@
             <Russian>Определяет, насколько быстро подействуют эффекты внутривенного переливания как:\nвременной интервал (s) * изменение внутривенного вливания в секунду (4,1667 мл/с) * скорость потока (этот коэффициент).</Russian>
             <German>Wie schnell der Effekt der Transfusion eintritt</German>
             <Korean>수액용기에서 액체가 얼마나 빠르게 흘러들어가는지를 제어합니다. 수액용기 부피 변화는 다음과 같이 계산됩니다:\n시간 간격 (초) x 초 당 수액 변화량(4.1667mL/s) x 흘러들어가는 양 (해당 계수).</Korean>
-            <Japanese>IV 輸液パックから輸液が流出する速度を制御します。 IV 輸液バッグの容量変化は次のように計算されます:\n時間間隔(秒) x 点滴速度毎秒(4.1667 mL/秒) x 流量(この係数)</Japanese>
+            <Japanese>輸液IV(静脈注射)バッグから輸液が流出する速度を制御します。 輸液IV(静脈注射)バッグの容量変化は次のように計算されます:\n時間間隔(秒) x 点滴速度毎秒(4.1667 mL/秒) x 流量(この係数)</Japanese>
             <Chinese>控制從點滴輸入人體的液體流量多快。點滴的體積更改是以\n時間間隔（單位秒）乘上點滴每秒速度（4.1667毫升/秒）乘上流量（該係數）。</Chinese>
             <Chinesesimp>控制从点滴输入人体的液体流量多快。静脉输液袋容积变化的计算方法是：\n时间间隔（秒）x点滴每秒速度（4.1667毫升/秒）x流量（该系数）。</Chinesesimp>
             <Turkish>IV Torbalardan sıvının ne kadar hızlı aktığını kontrol eder. IV Torba hacim değişikliği şu şekilde hesaplanır: zaman aralıkları iv saniye başına değişim (4.1667 mL / s) akış hızı (bu katsayı).</Turkish>
@@ -86,7 +88,7 @@
             <Russian>Скорость внутривенного переливания</Russian>
             <German>Transfusions Fließrate</German>
             <Korean>수혈 속도</Korean>
-            <Japanese>IV 輸液の流量</Japanese>
+            <Japanese>輸液IV(静脈注射)の流量</Japanese>
             <Chinese>點滴輸血流量</Chinese>
             <Chinesesimp>点滴输血流量</Chinesesimp>
             <Turkish>IV Transfüzyon Akış Hızı</Turkish>
