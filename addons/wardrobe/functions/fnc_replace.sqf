@@ -10,7 +10,7 @@
  * 2: Action Params <ARRAY>
  * - 0: Current Variant <CONFIG>
  * - 0: Desired Variant <CONFIG>
- * 3: Replace Now?  <BOOL>
+ * 3: Replace Now? <BOOL> (default: false)
  *
  * Return Value:
  * None
