@@ -158,11 +158,11 @@ class ace_wardrobe_base_H_goggles_off: ace_wardrobe_base {
 
 ### 3.1 Linear Example
 
-- first, we import the wardrobe base classes `ace_wardrobe_base_U_sleeves_down` and `ace_wardrobe_base_U_sleeves_up` at the root of `configFile`.
-- The uniform we would like to configure is part of CfgWeapons and inherits from `Uniform_Base`.
-- Then we edit the desired classes and create the `ace_wardrobe` subclass by inheriting from the partent base classes.
+- First, we import the wardrobe base classes `ace_wardrobe_base_U_sleeves_down` and `ace_wardrobe_base_U_sleeves_up` at the root of `configFile`.
+- The uniform we would like to configure is part of `CfgWeapons` and inherits from `Uniform_Base`.
+- Then we edit the desired classes and create the `ace_wardrobe` subclass by inheriting from the parent base classes.
 - Afterwards, we define which variants this class can be modified to.
-- This Example does not require the use of components since we're not adding or removing anything.
+- This example does not require the use of components since we're not adding or removing anything.
 ```cpp
 // config.cpp
 class ace_wardrobe_base_U_sleeves_down;
@@ -188,7 +188,7 @@ class CfgWeapons {
     };
 };
 ```
-### 3.2 Complex Example with partial use of components
+### 3.2 Complex example with partial use of components
 
 
 ```cpp
