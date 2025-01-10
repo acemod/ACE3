@@ -19,7 +19,7 @@ The Wardrobe Addon gives the player the opportunity to change/modify their curre
 
 For example, if a uniform has a normal variant and a "Rolled-Up Sleeves" variant, the player will be able to use ether an ACE Self Interaction or the CBA Context Menu in the Inventory.
 
-Since there is no reliable, common pattern in terms of class inheritence, not even within the same DLC, each possbile variant has to be defined individually within the classes config properties.
+Since there is no reliable, common pattern in terms of class inheritance, not even within the same DLC, each possible variant has to be defined individually within the classes' config properties.
 
 ### 1.1 Components
 
