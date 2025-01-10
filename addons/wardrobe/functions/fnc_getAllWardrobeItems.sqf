@@ -5,7 +5,7 @@
  * Debug - Function to retrieve all existing Wardrobe items.
  *
  * Arguments:
- * 0: Return as Config? <BOOL>
+ * 0: Return as Config? <BOOL> (default: false)
  *
  * Return Value:
  * Array Wardobe Items, ether as Classname or as Config <ARRAY>
