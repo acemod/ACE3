@@ -33,7 +33,7 @@ INTEL_PRE(_hasNotepad,acex_intelitems_notepad);
 INTEL_PRE(_hasPhoto,acex_intelitems_photo);
 
 // ACE Overheating
-private _hasSpareBarrel = _magazineDetails findIf { _x#0 == "ACE_SpareBarrel" } > -1;
+private _hasSpareBarrel = _magazineDetails findIf { _x#0 isEqualTo "ACE_SpareBarrel" } > -1;
 if (_hasSpareBarrel) then { _hasSpareBarrel = [_player, "ACE_SpareBarrel" ] call CBA_fnc_getMagazineIndex };
 
 
