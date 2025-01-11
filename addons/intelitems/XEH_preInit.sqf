@@ -27,7 +27,7 @@ if (hasInterface) then {
     GVAR(controlsGroups) = [];
 
     // Hash to track controls group positions on map between closing
-    GVAR(controlsData) = [] call CBA_fnc_hashCreate;
+    GVAR(controlsData) = createHashMap;
 };
 
 ADDON = true;
