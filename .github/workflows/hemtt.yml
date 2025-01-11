@@ -34,8 +34,8 @@ jobs:
         xcopy /e /h /q pullrequest\addons addons\
         xcopy /e /h /q pullrequest\optionals optionals\
         xcopy /e /h /q pullrequest\include include\
-        xcopy /y /h /q pullrequest\ace.dll ace.dll
-        xcopy /y /h /q pullrequest\ace_x64.dll ace_x64.dll
+        xcopy /y /h /q /-i pullrequest\ace.dll ace.dll
+        xcopy /y /h /q /-i pullrequest\ace_x64.dll ace_x64.dll
     - name: Run HEMTT build
       run: hemtt build
     - name: Rename build folder
