@@ -94,9 +94,15 @@ private _seatDistOrig = (getPosASL _player) distance _seat;
         _seatsClaimed set [_seatPos, objNull];
         _seat setVariable [QGVAR(seatsClaimed), _seatsClaimed, true];
 
-        // Unclaim if no one else sitting on it, but pass ownership if someone remains
-        private _newOwner = _seatsClaimed param [_seatsClaimed findIf {!isNull _x}, objNull];
-        [_newOwner, _seat] call EFUNC(common,claim);
+        // Unclaim...
+        [objNull, _seat] call EFUNC(common,claim);
+
+        // ...but have a remaining unit reclaim ownership immediately
+        private _index = _seatsClaimed findIf {!isNull _x};
+
+        if (_index == -1) exitWith {};
+
+        [_seatsClaimed select _index, _seat] call EFUNC(common,claim);
     };
 
     // Stand up if chair gets deleted or moved
