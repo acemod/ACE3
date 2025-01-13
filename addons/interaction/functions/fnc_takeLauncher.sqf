@@ -52,8 +52,8 @@ if (secondaryWeapon _player isNotEqualTo "") exitWith {ERROR("Cannot add launche
 
         private _playerName = [_player] call EFUNC(common,getName);
         private _targetName = [_target] call EFUNC(common,getName);
-        [QEGVAR(common,displayTextStructured), [[LSTRING(GaveLauncherHint), _playerName, _displayName], 1.5, _target], [_target]] call CBA_fnc_targetEvent;
-        [QEGVAR(common,displayTextStructured), [[LSTRING(TookLauncherHint), _targetName, _displayName], 1.5, _player], [_player]] call CBA_fnc_targetEvent;
+        [QEGVAR(common,displayTextStructured), [[LSTRING(GaveLauncherHint), _playerName, _displayName], 1.5, _target], _target] call CBA_fnc_targetEvent;
+        [QEGVAR(common,displayTextStructured), [[LSTRING(TookLauncherHint), _targetName, _displayName], 1.5, _player], _player] call CBA_fnc_targetEvent;
         [_player, _target, 0] call FUNC(tapShoulder);
     }, 
     {}, LLSTRING(PassingLauncher)] call EFUNC(common,progressBar);
