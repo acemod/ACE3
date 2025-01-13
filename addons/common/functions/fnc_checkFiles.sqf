@@ -138,6 +138,8 @@ if (hasInterface) then {
 
     // Check for correct hash
     if (GVAR(checkExtensions)) then {
+        private _allExtensions = allExtensions;
+
         {
             private _extName = configName _x;
             private _extensionType = "dll";
@@ -149,7 +151,7 @@ if (hasInterface) then {
                 if ((_x getOrDefault ["name", ""]) == _extName) exitWith {
                     _extensionHash = _x getOrDefault ["hash", ""];
                 };
-            } forEach allExtensions;
+            } forEach _allExtensions;
             TRACE_3("",_extName,_expectedHash,_extensionHash);
 
             if (_extensionHash != _expectedHash) then {
