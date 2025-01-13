@@ -24,5 +24,5 @@ secondaryWeapon _target != "" &&
 secondaryWeapon _player == "" &&
 isNull objectParent _target &&
 isNull objectParent _player &&
-side _target == side _player) exitWith {true};
+side (group _target) == side (group _player)) exitWith {true};
 false
