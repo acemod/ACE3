@@ -16,8 +16,6 @@
  */
 
 if (GETBROKEN) exitWith { true };
-scopeName "main";
-
 private _unit = ACE_player;
 private _config = configFile >> "CfgGlasses" >> goggles _unit;
 
@@ -25,6 +23,8 @@ if !(_unit call FUNC(isGogglesVisible)) exitWith {
     ["ace_glassesCracked", [_unit]] call CBA_fnc_localEvent;
     true
 };
+
+scopeName "main";
 
 private _effects = GETGLASSES(_unit);
 _effects set [BROKEN, true];
