@@ -97,7 +97,7 @@ class CfgVehicles {
 
     class Helicopter_Base_F;
     class ACE_friesBase: Helicopter_Base_F {
-        destrType = "";
+        destrType = "DestructNo";
         class Turrets {};
         class ACE_Actions {};
         class ACE_SelfActions {};

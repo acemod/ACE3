@@ -26,7 +26,7 @@
 
 [
     QGVAR(drawOverlay), "CHECKBOX",
-    LSTRING(DrawOverlay),
+    LSTRING(SettingDrawOverlay),
     localize LSTRING(SettingsName),
     true,
     0

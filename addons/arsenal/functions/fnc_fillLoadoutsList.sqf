@@ -101,9 +101,21 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
         // Change color on loadout lines that have items that aren't available or don't exist
         if (_nullItemsList isNotEqualTo []) then {
             _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]]; // Red
+
+            if (GVAR(showUnavailableItems) == 2) then {
+                _contentPanelCtrl lnbSetTooltip [[_newRow, 0], format [LLSTRING(missingItems), (_nullItemsList arrayIntersect _nullItemsList) joinString endl]];
+            };
         } else {
             if (_unavailableItemsList isNotEqualTo []) then {
                 _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]]; // Gray
+
+                if (GVAR(showUnavailableItems) > 0) then {
+                    private _itemDisplayNames = _unavailableItemsList arrayIntersect _unavailableItemsList;
+                    if (GVAR(showUnavailableItems) != 2) then { // Prettify
+                         _itemDisplayNames = _itemDisplayNames apply {getText (_x call CBA_fnc_getItemConfig >> "displayName")};
+                    };
+                    _contentPanelCtrl lnbSetTooltip [[_newRow, 0], format [LLSTRING(unavailableItems), _itemDisplayNames joinString endl]];
+                };
             };
         };
 
@@ -148,9 +160,21 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
             // Change color on loadout lines that have items that aren't available or don't exist
             if (_nullItemsList isNotEqualTo []) then {
                 _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 0, 0, 0.8]]; // Red
+
+                if (GVAR(showUnavailableItems) == 2) then {
+                    _contentPanelCtrl lnbSetTooltip [[_newRow, 0], format [LLSTRING(missingItems), (_nullItemsList arrayIntersect _nullItemsList) joinString endl]];
+                };
             } else {
                 if (_unavailableItemsList isNotEqualTo []) then {
                     _contentPanelCtrl lnbSetColor [[_newRow, 1], [1, 1, 1, 0.25]]; // Gray
+
+                    if (GVAR(showUnavailableItems) > 0) then {
+                        private _itemDisplayNames = _unavailableItemsList arrayIntersect _unavailableItemsList;
+                        if (GVAR(showUnavailableItems) != 2) then { // Prettify
+                            _itemDisplayNames = _itemDisplayNames apply {getText (_x call CBA_fnc_getItemConfig >> "displayName")};
+                        };
+                        _contentPanelCtrl lnbSetTooltip [[_newRow, 0], format [LLSTRING(unavailableItems), _itemDisplayNames joinString endl]];
+                    };
                 };
             };
         };

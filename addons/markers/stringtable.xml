@@ -301,6 +301,7 @@
             <German>"MS" - Milisekunden (von 0 bis 59)</German>
             <Korean>"MS" - 밀리초 (0부터 59까지)</Korean>
             <Japanese>"MM" - ミリ秒 (0から59)</Japanese>
+            <Chinesesimp>"MM" - 毫秒(0到59)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampFormatDescription5">
             <English>"mmm" - Milliseconds (from 0 to 999)</English>
@@ -312,6 +313,7 @@
             <German>"mmm" - Milisekunden (von 0 bis 999)</German>
             <Korean>"mmm" - 밀리초 (0부터 999까지)</Korean>
             <Japanese>"mmm" - ミリ秒 (0から599)</Japanese>
+            <Chinesesimp>"mmm" - 毫秒(0到999)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Markers_TimestampHourFormat">
             <English>Timestamp Hour Format</English>
@@ -434,7 +436,7 @@
             <Portuguese>Relógio necessário</Portuguese>
             <Russian>Необходимы часы</Russian>
             <German>Uhr, GPS oder UAV Terminal benötigt</German>
-            <Korean>시계 필요함</Korean>
+            <Korean>시계, GPS 또는 무인기 단말이 필요함</Korean>
             <Japanese>時計 か GPS または UAVターミナル が必要</Japanese>
             <Chinesesimp>需要手表</Chinesesimp>
         </Key>
@@ -458,7 +460,7 @@
             <Polish>Zmień przesunięcie minut dla sygnatury czasowej UTC</Polish>
             <Russian>Изменить минутное смещение для времени UTC</Russian>
             <German>Ändere den Minutenversatz für den UTC-Zeitstempel</German>
-            <Korean>UTC 타임 스탬프의 분 오프셋을 변경하십시오</Korean>
+            <Korean>UTC 타임스탬프의 분 단위 오프셋을 변경합니다</Korean>
             <Japanese>UTCタイムスタンプの分オフセットを変更します</Japanese>
             <Chinesesimp>更改UTC时间戳的分钟偏移量</Chinesesimp>
         </Key>
@@ -482,7 +484,7 @@
             <Polish>Zmień przesunięcie czasu dla sygnatury czasowej UTC</Polish>
             <Russian>Измените смещение времени для метки времени UTC</Russian>
             <German>Ändere die Zeitverschiebung für den UTC-Zeitstempel</German>
-            <Korean>UTC 타임 스탬프의 시간 오프셋을 변경하십시오</Korean>
+            <Korean>UTC 타임스탬프의 시간 단위 오프셋을 변경합니다</Korean>
             <Japanese>UTCタイムスタンプの時オフセットを変更します</Japanese>
             <Chinesesimp>更改UTC时间戳的时间偏移量</Chinesesimp>
         </Key>

@@ -41,7 +41,8 @@ if (
     {private _posASL = getPosWorld _object; surfaceIsWater _posASL && {(_posASL select 2) < 0}} || // Underwater is not very reliable, so use model center instead
     {GVAR(ammoCookoffDuration) == 0} ||
     {!([GVAR(enableAmmoCookoff), GVAR(enableAmmobox)] select (_object isKindOf "ReammoBox_F"))} ||
-    {!(_object getVariable [QGVAR(enableAmmoCookoff), true])}
+    {!(_object getVariable [QGVAR(enableAmmoCookoff), true])} ||
+    {_object getVariable [QGVAR(interruptAmmoCookoff), false]} // QGVAR(interruptAmmoCookoff) stops the current cook-off (allowing future ones), whereas QGVAR(enableAmmoCookoff) disables it entirely
 ) exitWith {
     // Box cook-off fire ends after the ammo has detonated (vehicle cook-off fire does not depend on the ammo detonation)
     if (_object isKindOf "ReammoBox_F") then {
@@ -63,6 +64,7 @@ if (
     // Reset variables, so the object can detonate its ammo again
     _object setVariable [QGVAR(cookoffMagazines), nil];
     _object setVariable [QGVAR(virtualMagazines), nil];
+    _object setVariable [QGVAR(interruptAmmoCookoff), nil, true];
     _object setVariable [QGVAR(isAmmoDetonating), nil, true];
 
     // If done, destroy the object if necessary
@@ -99,6 +101,10 @@ if (_removeAmmoDuringCookoff) then {
         };
         // Inventory magazines
         case (_magazineInfo isEqualTo false): {
+            if (!alive _object) exitWith {
+                TRACE_1("clearing cargo mags from dead object",alive _object);
+                clearMagazineCargoGlobal _object;
+            };
             // Remove selected magazine
             _object addMagazineAmmoCargo [_magazineClassname, -1, _ammoCount];
 
@@ -114,7 +120,7 @@ if (_removeAmmoDuringCookoff) then {
             _magazineIndex = _virtualAmmo findIf {(_x select 0) == _magazineClassname};
 
             if (_magazineIndex == -1) exitWith {
-                TRACE_1("no virtual magazine",_magazineClass);
+                TRACE_1("no virtual magazine",_magazineClassname);
             };
 
             if (_newAmmoCount <= 0) then {

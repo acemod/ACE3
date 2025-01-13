@@ -4,7 +4,9 @@ class CBA_Extended_EventHandlers;
 
 class CfgVehicles {
     class C_man_1;
-    class GVAR(clone): C_man_1 {};
+    class GVAR(clone): C_man_1 {
+        scope = 1;
+    };
 
     // Static weapons
     class LandVehicle;
@@ -344,6 +346,11 @@ class CfgVehicles {
         GVAR(dragPosition)[] = {0,1,0};
     };
     class Land_BarrelWater_F: Items_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition)[] = {0,1,0};
+    };
+    class Land_BarrelWater_grey_F: Items_base_F {
         EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canDrag) = 1;
         GVAR(dragPosition)[] = {0,1,0};

@@ -179,6 +179,7 @@
             <German>Das Sanitätsmenü ist deaktiviert</German>
             <Korean>의료 메뉴가 비활성화되었습니다</Korean>
             <Japanese>医療メニューは無効になっています</Japanese>
+            <Chinesesimp>医疗菜单已被关闭</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_MenuSetting">
             <English>"%1" menu</English>
@@ -222,7 +223,7 @@
             <Portuguese>Adicionar Arsenal Completo</Portuguese>
             <Russian>Добавить весь Арсенал</Russian>
             <German>Füge ganzes Arsenal hinzu</German>
-            <Korean>아스날 놓기</Korean>
+            <Korean>전체 기존 아스널 추가</Korean>
             <Japanese>BI 武器庫を追加</Japanese>
             <Chinese>增加完整的虛擬軍火庫到物件上</Chinese>
             <Chinesesimp>增加完整的虚拟军火库到物体上</Chinesesimp>
@@ -483,7 +484,7 @@
             <Portuguese>Construção por construção</Portuguese>
             <Russian>Здание за зданием</Russian>
             <German>Gebäude nach Gebäude</German>
-            <Korean>건물에서 건물로</Korean>
+            <Korean>건물마다</Korean>
             <Japanese>建物ごとに</Japanese>
             <Chinese>一棟填滿後再換下一棟</Chinese>
             <Chinesesimp>一栋填满后再换下一栋</Chinesesimp>
@@ -741,7 +742,7 @@
             <Portuguese>Muda: aimingShake, aimingSpeed, reloadSpeed</Portuguese>
             <Russian>Изменяет: aimingShake, aimingSpeed, reloadSpeed</Russian>
             <German>Ändert: aimingShake, aimingSpeed, reloadSpeed</German>
-            <Korean>변화: 조준시 흔들림, 조준 속도, 재장전 속도</Korean>
+            <Korean>변화: 조준 시 흔들림, 조준 속도, 재장전 속도</Korean>
             <Japanese>変更: aimingShake, aimingSpeed, reloadSpeed</Japanese>
             <Chinese>改變: 手晃幅度，瞄準速度， 重新裝填速度</Chinese>
             <Chinesesimp>改变：手晃幅度，瞄准速度， 重新装填速度</Chinesesimp>
@@ -819,6 +820,7 @@
             <German>Grabenlinie legen</German>
             <Korean>참호라인 깔기</Korean>
             <Japanese>塹壕溝線を敷設</Japanese>
+            <Chinesesimp>铺设战壕</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLayTrenchline_Tooltip">
             <English>+SHIFT to force (Can only lay N/S or E/W)</English>
@@ -830,6 +832,7 @@
             <German>+SHIFT zum Erzwingen (Kann nur nach N/S oder E/W legen)</German>
             <Korean>+ Shift 키로 강제하기 (동서남북 방향으로만 깔 수 있음)</Korean>
             <Japanese>+SHIFTキー で強制的に敷設 (北/南または東/西方向にのみ配置可能)</Japanese>
+            <Chinesesimp>+SHIFT 来强制铺设(只能在南北和东西朝向铺设)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleLoadIntoCargo_DisplayName">
             <English>Load into Cargo</English>
@@ -904,7 +907,7 @@
             <Portuguese>Remover Arsenal</Portuguese>
             <Russian>Убрать Арсенал</Russian>
             <German>Entferne Arsenal</German>
-            <Korean>아스날 제거</Korean>
+            <Korean>전체 기존 아스널 제거</Korean>
             <Japanese>BI 武器庫を削除</Japanese>
             <Chinese>移除物件上的虛擬軍火庫</Chinese>
             <Chinesesimp>移除物体上的虚拟军火库</Chinesesimp>
@@ -951,7 +954,7 @@
             <Portuguese>Definir como engenheiro</Portuguese>
             <Russian>Назначить инженера</Russian>
             <German>Engineer zuweisen</German>
-            <Korean>엔지니어 지정</Korean>
+            <Korean>공병 임명</Korean>
             <Japanese>工兵に割り当て</Japanese>
             <Chinese>指派工程師</Chinese>
             <Chinesesimp>指派工程师</Chinesesimp>
@@ -968,7 +971,7 @@
             <Portuguese>Habilidade do engenheiro</Portuguese>
             <Russian>Инженерное мастерство</Russian>
             <German>Ingenieur Fähigkeit</German>
-            <Korean>기술자의 기술</Korean>
+            <Korean>공병의 숙련도</Korean>
             <Japanese>工兵のスキル</Japanese>
             <Chinese>工程師技能</Chinese>
             <Chinesesimp>工程师技能</Chinesesimp>
@@ -1079,6 +1082,7 @@
             <German>Schwarz-Weiß</German>
             <Korean>흑색 열원</Korean>
             <Japanese>黒=熱源</Japanese>
+            <Chinesesimp>黑热模式</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_ForceInterface_Tooltip">
             <English>Forces the spectator interface preventing the player from closing it with the Escape key</English>
@@ -1089,6 +1093,7 @@
             <German>Erzwingt die Zuschauer-Ansicht und verhindert dass der Spieler sie mit der Esc-Taste schließen kann</German>
             <Korean>플레이어가 Esc 키로 관전자 인터페이스를 닫지 못하도록 강제로 관전자 인터페이스를 설정합니다.</Korean>
             <Japanese>観戦インターフェイスを強制し、ユーザがEscキーでも閉じられないようにします。</Japanese>
+            <Chinesesimp>禁止使用ESC关闭观察者界面</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer">
             <English>Hide player</English>
@@ -1099,6 +1104,7 @@
             <German>Spieler ausblenden</German>
             <Korean>플레이어 숨기기</Korean>
             <Japanese>プレイヤーを隠す</Japanese>
+            <Chinesesimp>隐藏玩家</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_HidePlayer_Tooltip">
             <English>Hides the player by making them invisible, invulnerable, muted, and removing them from their group</English>
@@ -1109,6 +1115,7 @@
             <German>Blendet den Spieler aus, macht ihn unsichtbar, unverwundbar, stumm und entfernt ihn von seiner Gruppe</German>
             <Korean>플레이어를 투명, 무적, 음소거화하고 그룹에서 제거하여 숨깁니다.</Korean>
             <Japanese>透明化、無敵化、ミュート、グループからの除外を行いプレーヤーを隠します</Japanese>
+            <Chinesesimp>将玩家隐藏, 并设为无敌 静音, 并从小队内移除</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_SpectableSides_Tooltip">
             <English>Sets the sides that are available to spectate</English>
@@ -1119,6 +1126,7 @@
             <German>Bestimmt die Seiten denen man zuschauen kann</German>
             <Korean>관전 가능한 진영을 설정합니다.</Korean>
             <Japanese>指定の陣営を観戦可能に設定します</Japanese>
+            <Chinesesimp>设置可以观察的阵营</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSpectator_WhiteHot">
             <English>White Hot</English>
@@ -1129,6 +1137,7 @@
             <German>Weiß-Schwarz</German>
             <Korean>백색 열원</Korean>
             <Japanese>白=熱源</Japanese>
+            <Chinesesimp>白热</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ModuleSuicideBomber_ActivationRadius">
             <English>Activation Radius</English>
@@ -1480,7 +1489,7 @@
             <Portuguese>Desguarnecer grupo</Portuguese>
             <Russian>Вывести группу из здания</Russian>
             <German>Garnisionsgruppe auflösen</German>
-            <Korean>주둔해제</Korean>
+            <Korean>그룹 주둔 해제</Korean>
             <Japanese>グループの駐屯解除</Japanese>
             <Chinese>解除駐軍駐守狀態</Chinese>
             <Chinesesimp>解除驻军驻守状态</Chinesesimp>
@@ -1511,6 +1520,7 @@
             <German>Aus Frachtraum ausladen</German>
             <Korean>화물 내리기</Korean>
             <Japanese>貨物室から降ろす</Japanese>
+            <Chinesesimp>从货舱卸载</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_None">
             <English>None</English>
@@ -1822,6 +1832,7 @@
             <German>Alle wechseln</German>
             <Korean>전부 토글</Korean>
             <Japanese>全てを切り替え</Japanese>
+            <Chinesesimp>切换所有</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Zeus_ToggleTarget">
             <English>Toggle Target</English>

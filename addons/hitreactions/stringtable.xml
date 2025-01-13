@@ -3,7 +3,10 @@
     <Package name="HitReactions">
         <Key ID="STR_ACE_HitReactions_minDamageToTrigger_Description">
             <English>If a unit takes more damage than this setting's value whilst moving on foot, they will fall over.\nIf set to -1 the mechanic is turned off.</English>
+            <French>Si une unité subit plus de dégâts que la valeur de ce paramètre alors qu'elle se déplace à pied, elle tombera à la renverse.\nSi le paramètre est réglé sur -1 le mécanisme est désactivé.</French>
+            <Italian>Un'unità in movimento appiedato cadrà se riceve danni maggiori di questo settaggio.\nSe impostato su -1, la meccanica sarà disabilitata.</Italian>
             <Russian>Если при передвижении пешком юнит получит больше урона, чем указано в этой настройке,то он упадет.\nЕсли установлено значение -1, механика отключается.</Russian>
+            <German>Wenn eine Einheit zu Fuß mehr Schaden als diesen Wert erleidet, stürzt sie.\nBei einem Wert von -1, ist diese Mechanik ausgeschaltet.</German>
             <Korean>유닛이 도보로 이동하는 동안 이 설정 값보다 많은 대미지를 입으면 넘어집니다.\n-1로 설정하면 이 기능은 꺼집니다.</Korean>
             <Japanese>徒歩で移動中のユニットが設定値を超えるダメージを受けると転倒します。\n-1に設定することでこの機能を無効化できます。</Japanese>
         </Key>
@@ -30,7 +33,7 @@
             <Italian>Probabilità dell'IA di far cadere l'arma (colpo al braccio)</Italian>
             <Portuguese>Probabilidade da IA de largar a arma após tiro no braço</Portuguese>
             <Russian>Шанс выпадения оружия у ИИ (попадание в руку)</Russian>
-            <German>KI-Wahrscheinlichkeit, die Waffe fallen zu lassen (Arm Treffer)</German>
+            <German>KI-Wahrscheinlichkeit für Waffenabwurf (Armtreffer)</German>
             <Korean>인공지능이 무기를 떨굴 확률 (팔 피격)</Korean>
             <Japanese>AIが武器を落とす確率 (腕部への被弾)</Japanese>
         </Key>
@@ -41,7 +44,7 @@
             <Italian>Probabilità dei giocatori di far cadere l'arma (colpo al braccio)</Italian>
             <Portuguese>Probabilidade do jogador de largar a arma após tiro no braço</Portuguese>
             <Russian>Шанс выпадения оружия у игрока (попадание в руку)</Russian>
-            <German>Spieler Wahrscheinlichkeit, die Waffe fallen zu lassen (Arm Treffer)</German>
+            <German>Spieler-Wahrscheinlichkeit für Waffenabwurf (Armtreffer)</German>
             <Korean>플레이어가 무기를 떨굴 확률 (팔 피격)</Korean>
             <Japanese>プレイヤーが武器を落とす確率 (腕部への被弾)</Japanese>
         </Key>

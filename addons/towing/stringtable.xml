@@ -12,6 +12,7 @@
             <German>Abschleppseil zum Fahrzeuginventar hinzufügen</German>
             <Korean>차량 소지품에 견인줄 추가</Korean>
             <Japanese>車両のインベントリに牽引ロープを追加する</Japanese>
+            <Chinesesimp>将牵引绳加入到载具库存</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Towing_attach">
             <English>Attach Tow Rope</English>

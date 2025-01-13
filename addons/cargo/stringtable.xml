@@ -58,6 +58,7 @@
             <German>%1 wird in %2 geladen...</German>
             <Korean>%1을(를) %2에 싣는 중...</Korean>
             <Japanese>%1 を %2 に積み込んでいます・・・</Japanese>
+            <Chinesesimp>正在将%1装入%2</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_ModuleSettings_enable">
             <English>Enable Cargo</English>
@@ -171,6 +172,7 @@
             <German>Frachtgröße: %1</German>
             <Korean>화물 크기: %1</Korean>
             <Japanese>貨物の大きさ: %1</Japanese>
+            <Chinesesimp>货物大小: %1</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadedItem">
             <English>Unloaded&lt;br/&gt;%1 from&lt;br/&gt;%2</English>
@@ -213,6 +215,7 @@
             <German>Kann nicht entladen werden</German>
             <Korean>하역할 수가 없습니다</Korean>
             <Japanese>荷降ろし不可能です</Japanese>
+            <Chinesesimp>无法被卸载</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_UnloadingItem">
             <English>Unloading %1 from %2...</English>
@@ -223,6 +226,7 @@
             <German>%1 wird von %2 entladen...</German>
             <Korean>%1을(를) %2(으)로부터 내리는 중...</Korean>
             <Japanese>%1 を %2 から降ろしています・・・</Japanese>
+            <Chinesesimp>正在将%1从%2中卸载</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_cargoMenu">
             <English>Cargo Menu</English>
@@ -263,18 +267,27 @@
             <German>Steuert, ob Objekte nach dem Entladen getragen oder gezogen werden.</German>
             <Korean>화물 아이템을 내린 후 들거나 끌지 여부를 결정합니다.</Korean>
             <Japanese>荷降ろし後、貨物を運ぶか引きずるかを制御する。</Japanese>
+            <Chinesesimp>货物被卸载后被拿起或是被拖拽</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_checkSize">
             <English>Check Cargo Size</English>
             <French>Vérifier la taille de la cargaison</French>
+            <Italian>Controlla spazio del carico</Italian>
             <Russian>Проверить размер груза</Russian>
+            <German>Prüfe Frachtgröße</German>
             <Korean>화물 크기 확인</Korean>
             <Japanese>貨物の大きさを確認</Japanese>
+            <Chinesesimp>检查货物尺寸</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_checkSizeInteraction">
             <English>Show Check Cargo Size Interaction</English>
+            <French>Afficher l'interaction de confirmation de la taille de la cargaison</French>
+            <Italian>Mostra interazione di controllo dello spazio del carico</Italian>
             <Russian>Вкл. проверку размера груза</Russian>
+            <German>Zeige Interaktion zum Prüfen der Frachtgröße</German>
+            <Korean>화물 크기 확인 상호작용 표시</Korean>
             <Japanese>貨物の大きさを確認のインタラクションを表示</Japanese>
+            <Chinesesimp>显示检查货物尺寸选项</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
             <English>Custom name has been cleared.</English>
@@ -324,6 +337,7 @@
             <German>Aufstellen</German>
             <Korean>배치하기</Korean>
             <Japanese>配置する</Japanese>
+            <Chinesesimp>部署</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_enableDeploy">
             <English>Enable deploy</English>
@@ -334,6 +348,7 @@
             <German>Aktiviere Aufbauen</German>
             <Korean>배치 활성화</Korean>
             <Japanese>配置機能を有効化</Japanese>
+            <Chinesesimp>启用部署</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_enableDeploy_description">
             <English>Controls whether cargo items can be unloaded via the deploy method.</English>
@@ -344,6 +359,7 @@
             <German>Steuert, ob Frachtgegenstände über die Aufbaumethode entladen werden können.</German>
             <Korean>배치 방법을 통해 화물 아이템을 내릴 수 있는지 여부를 제어합니다.</Korean>
             <Japanese>配置機能を介して貨物アイテムを降ろすことが出来るかどうかを制御します。</Japanese>
+            <Chinesesimp>是否允许使用部署选项卸载货物</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_labelSpace">
             <English>Cargo space left: %1</English>

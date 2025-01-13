@@ -392,7 +392,7 @@
             <Polish>Szana na śmierć przy śmiertelej ranie</Polish>
             <Portuguese>Chance de Morte por Ferimento Fatal</Portuguese>
             <Russian>Вероятность смерти от смертельной травмы</Russian>
-            <German>Tödliche Verletzung - Wahrscheinlichkeit des Todes</German>
+            <German>Sterbewahrscheinlichkeit bei tödlichen Verletzungen</German>
             <Korean>치명상 사망 확률</Korean>
             <Japanese>致命傷による死亡確率</Japanese>
             <Chinesesimp>致命伤死亡概率</Chinesesimp>
@@ -532,6 +532,7 @@
             <German>Legt die Grenze für starke Schmerzen fest, oberhalb derer eine Person bei erlittenem Schaden bewusstlos werden kann.</German>
             <Korean>사람이 데미지를 입었을 때 의식불명 상태가 될 수 있는 심각한 고통의 한계점을 설정합니다.</Korean>
             <Japanese>激しい痛みのしきい値を設定します。このしきい値を超えた状態でダメージを受けると意識を失う可能性があります。</Japanese>
+            <Chinesesimp>设定重度疼痛的阈值, 疼痛超过这个值时再次受到伤害可能会导致昏迷</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PainUnconsciousThreshold_DisplayName">
             <English>Pain Unconscious Threshold</English>
@@ -544,6 +545,7 @@
             <German>Schmerz-Bewusstlosigkeit-Grenze</German>
             <Korean>고통 기절 한계점</Korean>
             <Japanese>無意識状態に陥る痛みのしきい値</Japanese>
+            <Chinesesimp>疼痛昏迷阈值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_PlayerDamageThreshold_Description">
             <English>Sets the amount of damage a player can receive before going unconscious (and dying if "Sum of Trauma" is enabled).</English>
@@ -555,7 +557,7 @@
             <Portuguese>Define a quantidade de dano que um jogador pode receber antes de ficar inconsciente.</Portuguese>
             <Russian>Устанавливает количество урона, которое может получить игрок, прежде чем потеряет сознание (и умирает, если включена функция "Сумма травм").</Russian>
             <German>Legt die Höhe des Schadens fest, den ein Spieler erhalten kann, bevor er ohnmächtig wird (oder stirbt, wenn "Summe aller Traumata" aktiviert ist).</German>
-            <Korean>플레이어가 치명상으로 인해 기절까지 가기 전의 한계점을 정합니다. ("피해량 중첩"이 켜져있으면 죽기도 합니다)</Korean>
+            <Korean>플레이어가 치명상으로 인해 기절까지 가기 전의 한계점을 정합니다. ("외상 중첩"이 켜져있으면 죽기도 합니다)</Korean>
             <Japanese>プレイヤーが無意識状態に陥るまでに受けられるダメージ量を設定します。\n("外傷の合計"が有効な場合は死亡するまでに受けられるダメージ量)</Japanese>
             <Chinese>設定玩家在無意識前能承受多少傷害。</Chinese>
             <Chinesesimp>设置玩家在昏迷前可以承受的伤害量（如果启用了“创伤总和”，则会死亡）。</Chinesesimp>
@@ -822,7 +824,7 @@
             <Portuguese>Soma do trauma</Portuguese>
             <Russian>Совокупность травмы</Russian>
             <German>Summe aller Traumata</German>
-            <Korean>피해량 중첩</Korean>
+            <Korean>외상 중첩</Korean>
             <Japanese>外傷の合計</Japanese>
             <Chinese>外部創傷累計</Chinese>
             <Chinesesimp>创伤总和</Chinesesimp>
@@ -845,23 +847,43 @@
         </Key>
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_Description">
             <English>Sets the amount of damage limbs can receive before going critical, leading to death. Must be over 0 for any effect.\nRequires the "Use Limb Damage" setting to be enabled and "Fatal Damage Source" to be set to "Sum of Trauma" or "Either".\nStacks multiplicatively with the overall unit Damage Threshold. Doesn't interact with fractures/limping at all.</English>
+            <French>Définit la quantité de dégâts que les membres peuvent recevoir avant de devenir critiques et d'entraîner la mort. Doit être supérieur à 0 pour avoir un effet.\nIl faut que le paramètre « Utiliser les dommages aux membres » soit activé et que « Cause de blessure mortelle » soit réglé sur « Somme des traumatismes » ou « Les deux ».\nS'empile de façon multiplicative avec le seuil de dégâts de l'unité globale. N'interagit pas du tout avec les fractures et le boitement.</French>
+            <Italian>Imposta la quantità di danni che possono ricevere gli arti prima di causare la morte.\nDeve essere superiore a 0 per avere effetto.\nRichiede l'abilitazione di "Usa danni agli arti" e l'impostazione di "Fonte di danni letali" su "Somma dei traumi" o "Entrambi".\nL'effetto si cumula con la rispettiva soglia di danni critici. Non interagisce con fratture/zoppicamento in alcun modo.</Italian>
             <Russian>Устанавливает величину урона, который могут получить конечности, прежде чем урон станет критическим, что приведет к смерти. Для любого эффекта должно быть больше 0.\nТребуется, чтобы настройка "Использовать урон конечностям" была включена, а "Причина смертельного урона" была установлена на "Совокупность травмы" или "Оба".\nУмножается с общим порогом повреждения. Никак не взаимодействует с переломами или хроманием.</Russian>
+            <German>Legt die Menge an Gliedmaßenschaden fest, bevor sie kritisch werden und zum Tod führen. Muss über 0 liegen, um einen Effekt zu bewirken.\nDie Einstellung "Verwende Gliedmaßenschaden" muss aktiviert und "Quelle für tödlichen Schaden" muss auf "Summe aller Traumata" oder "Beide" eingestellt sein.\nStapelt sich multiplikativ mit der Gesamtschadensschwelle der Einheit. Interagiert nicht mit Brüchen/Humpeln.</German>
+            <Korean>치명적인 상태가 되어 죽음에 이르기 전까지 사지에 받는 피해량을 설정합니다. 효과가 생기려면 값이 0보다 커야 합니다.\n"사지 피해 사용" 설정을 활성화하고 "치명상의 원인"을 "외상 중첩" 또는 "둘 다"로 설정해야 합니다.\n전체 유닛 피해량 임계값과 곱해져서 누적됩니다. 골절/절뚝거림과는 전혀 상관 없습니다.</Korean>
             <Japanese>致命的状態となり死亡する前に手足が受けられるダメージの量を設定します。\n効果の発動には0より大きい数字に設定する必要があります。\n"手足のダメージを使用" 設定を有効化した上で "致命ダメージの原因" を "外傷の合計" または "どちらか" に設定する必要があります。\nユニット全体のダメージしきい値に対して乗算的に上乗せされます。 骨折や足の引きずり(跛行)とは無関係です。</Japanese>
+            <Chinesesimp>设置四肢可以承受的伤害, 超过时将导致致命伤. 必须大于0才能产生效果\n需要启用"四肢伤害计入创伤总和", 并且"致命伤来源"设置为"创伤总和"或"二者之一"\n与临界伤害阈值乘法叠加. 和骨折/跛脚无关</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_limbDamageThreshold_DisplayName">
             <English>Limb Damage Threshold</English>
+            <French>Seuil de dommages aux membres</French>
+            <Italian>Soglia dei danni critici agli arti</Italian>
             <Russian>Порог повреждения конечностей</Russian>
+            <German>Schwelle für Gliedmaßenschaden</German>
+            <Korean>사지 피해량 임계값</Korean>
             <Japanese>手足のダメージしきい値</Japanese>
+            <Chinesesimp>四肢伤害阈值</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_Description">
             <English>Controls whether limb damage is taken into account for sum of trauma calculations.</English>
+            <French>Contrôle si les dommages aux membres sont pris en compte dans les calculs de la somme des traumatismes.</French>
+            <Italian>Determina se danni agli arti vengono presi in considerazione per il calcolo della somma dei traumi.</Italian>
             <Russian>Определяет, учитывается ли повреждение конечностей при расчете совокупности травм.</Russian>
+            <German>Legt fest, ob Gliedmaßenschäden bei der Berechnung der Summe aller Traumata berücksichtigt werden.</German>
+            <Korean>외상 중첩을 계산할 때 사지 피해량을 고려할지 여부를 제어합니다.</Korean>
             <Japanese>"外傷の合計" の計算に手足のダメージを考慮するかどうかを制御します。</Japanese>
+            <Chinesesimp>控制四肢伤害是否计入创伤总和计算</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_uselimbDamage_DisplayName">
             <English>Use Limb Damage</English>
+            <French>Utiliser les dommages aux membres</French>
+            <Italian>Usa danni agli arti</Italian>
             <Russian>Использовать урон конечностям</Russian>
+            <German>Verwende Gliedmaßenschaden</German>
+            <Korean>사지 피해 사용</Korean>
             <Japanese>手足のダメージを使用</Japanese>
+            <Chinesesimp>四肢伤害计入创伤总和</Chinesesimp>
         </Key>
     </Package>
 </Project>
