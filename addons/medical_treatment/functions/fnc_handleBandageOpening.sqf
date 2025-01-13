@@ -124,7 +124,7 @@ if (random 1 <= _reopeningChance * GVAR(woundReopenChance)) then {
                 // Re-add trauma and damage visuals
                 if (GVAR(clearTrauma) == 2) then {
                     private _injuryDamage = (_selectedInjury select 4) * _impact;
-                    private _bodyPartDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+                    private _bodyPartDamage = _target getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0,0,0,0,0,0,0]];
                     private _newDam = (_bodyPartDamage select _partIndex) + _injuryDamage;
                     _bodyPartDamage set [_partIndex, _newDam];
 
