@@ -62,13 +62,10 @@ class CfgVehicles {
         EGVAR(dragging,carryDirection) = 180;
     };
     class WoodChair: FoldChair {
-        EXGVAR(sitting,canSit) = 1;
-        EXGVAR(sitting,sitDirection) = 180;
         EXGVAR(sitting,sitPosition)[] = {0, 0, 0};
         EXGVAR(sitting,interactPosition)[] = {0, 0, 0.45};
     };
     class Park_bench1: WoodChair {
-        EXGVAR(sitting,canSit) = 1;
         EXGVAR(sitting,sitPosition)[] = {{0.45, 0, -0.3}, {-0.45, 0, -0.3}};
         EXGVAR(sitting,interactPosition)[] = {{0.45, 0, 0.2}, {-0.45, 0, 0.2}};
     };
@@ -79,18 +76,7 @@ class CfgVehicles {
         EXGVAR(sitting,sitDirection) = 180;
         EXGVAR(sitting,sitPosition)[] = {0, 0, 0};
         EXGVAR(sitting,interactPosition)[] = {0, 0, 0.45};
-    };
-    class CUP_ch_mod_d: CUP_armchair {
-        EXGVAR(sitting,canSit) = 1;
-        EXGVAR(sitting,sitDirection) = 180;
-        EXGVAR(sitting,sitPosition)[] = {0, 0, 0};
-        EXGVAR(sitting,interactPosition)[] = {0, 0, 0.45};
-    };
-    class CUP_ch_mod_e: CUP_armchair {
-        EXGVAR(sitting,canSit) = 1;
-        EXGVAR(sitting,sitDirection) = 180;
-        EXGVAR(sitting,sitPosition)[] = {0, 0, 0};
-        EXGVAR(sitting,interactPosition)[] = {0, 0, 0.45};
+        EGVAR(interaction,replaceTerrainObject) = 1;
     };
 
     class Small_Items_EP1;
@@ -116,10 +102,11 @@ class CfgVehicles {
     class Land_stand_waterl_EP1: House_EP1 {
         EXGVAR(field_rations,waterSupply) = 250;
         EXGVAR(field_rations,offset)[] = {0, -0.33, 0.4};
+
+        EGVAR(interaction,replaceTerrainObject) = 1;
         EXGVAR(sitting,canSit) = 1;
         EXGVAR(sitting,sitDirection) = 180;
         EXGVAR(sitting,sitPosition)[] = {{-0.4, -0.8, -0.9}, {0.4, -0.8, -0.9}};
         EXGVAR(sitting,interactPosition)[] = {{-0.4, -0.75, 0.3}, {0.4, -0.75, 0.3}};
     };
-
 };
