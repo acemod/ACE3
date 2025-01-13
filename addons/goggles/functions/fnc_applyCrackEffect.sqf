@@ -15,7 +15,6 @@
  * Public: Yes
  */
 
-if ([] call FUNC(externalCamera)) exitWith { false };
 if (GETBROKEN) exitWith { true };
 
 private _unit = ACE_player;
@@ -32,7 +31,7 @@ _effects set [BROKEN, true];
 SETGLASSES(_unit,_effects);
 
 if (getText (_config >> "ACE_OverlayCracked") != "") then {
-
+    if ([] call FUNC(externalCamera)) exitWith { false };
     if (isNull (GLASSDISPLAY)) then {
         GVAR(GogglesLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false, false];
     };
