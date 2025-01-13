@@ -5,6 +5,7 @@ class CfgVehicles {
         EXGVAR(sitting,sitDirection) = 90;
         EXGVAR(sitting,sitPosition)[] = {{0, 0.45, -0.7}, {0, -0.45, -0.7}};
         EXGVAR(sitting,interactPosition)[] = {{0, 0.45, 0.3}, {0, -0.45, 0.3}};
+        EGVAR(interaction,replaceTerrainObject) = 1;
     };
 
     class CUP_basin_a;
@@ -13,36 +14,42 @@ class CfgVehicles {
         EXGVAR(sitting,sitDirection) = 180;
         EXGVAR(sitting,sitPosition)[] = {{0.35, 0, 0}, {-0.35, 0, 0}};
         EXGVAR(sitting,interactPosition)[] = {{0.35, 0, 0.45}, {-0.35, 0, 0.45}};
+        EGVAR(interaction,replaceTerrainObject) = 1;
     };
     class CUP_ch_mod_h: CUP_basin_a {
         EXGVAR(sitting,canSit) = 1;
         EXGVAR(sitting,sitDirection) = 180;
         EXGVAR(sitting,sitPosition)[] = {0, 0, 0};
         EXGVAR(sitting,interactPosition)[] = {0, 0, 0.4};
+        EGVAR(interaction,replaceTerrainObject) = 1;
     };
     class CUP_kitchen_chair_a: CUP_basin_a {
         EXGVAR(sitting,canSit) = 1;
         EXGVAR(sitting,sitDirection) = 180;
         EXGVAR(sitting,sitPosition)[] = {0, 0, 0};
         EXGVAR(sitting,interactPosition)[] = {0, 0, 0.45};
+        EGVAR(interaction,replaceTerrainObject) = 1;
     };
     class CUP_lobby_chair: CUP_basin_a {
         EXGVAR(sitting,canSit) = 1;
         EXGVAR(sitting,sitDirection) = 180;
         EXGVAR(sitting,sitPosition)[] = {0, 0, 0};
         EXGVAR(sitting,interactPosition)[] = {0, 0, 0.45};
+        EGVAR(interaction,replaceTerrainObject) = 1;
     };
     class CUP_office_chair: CUP_basin_a {
         EXGVAR(sitting,canSit) = 1;
         EXGVAR(sitting,sitDirection) = 180;
         EXGVAR(sitting,sitPosition)[] = {0, 0, -0.4};
         EXGVAR(sitting,interactPosition)[] = {0, 0, 0};
+        EGVAR(interaction,replaceTerrainObject) = 1;
     };
     class CUP_ch_office_B: CUP_basin_a {
         EXGVAR(sitting,canSit) = 1;
         EXGVAR(sitting,sitDirection) = 180;
         EXGVAR(sitting,sitPosition)[] = {0, 0, 0};
         EXGVAR(sitting,interactPosition)[] = {0, 0, 0.45};
+        EGVAR(interaction,replaceTerrainObject) = 1;
     };
 
     class Thing;
