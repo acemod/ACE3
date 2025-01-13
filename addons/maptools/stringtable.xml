@@ -13,8 +13,8 @@
             <German>Ausrichten</German>
             <Korean>맞춤 기준:</Korean>
             <Japanese>向きを合わせる</Japanese>
-            <Hungarian>Állítása</Hungarian>
             <Chinesesimp>对齐到</Chinesesimp>
+            <Hungarian>Állítása</Hungarian>
         </Key>
         <Key ID="STR_ACE_MapTools_Description">
             <English>The Map Tools allow you to measure distances and angles on the map.</English>
@@ -292,8 +292,8 @@
             <German>Am Kompass</German>
             <Korean>나침반으로</Korean>
             <Japanese>方位磁石に</Japanese>
-            <Hungarian>Iránytűhöz</Hungarian>
             <Chinesesimp>指南针</Chinesesimp>
+            <Hungarian>Iránytűhöz</Hungarian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToMapToolLabel">
             <English>To Maptool</English>
@@ -318,8 +318,8 @@
             <German>Nach Norden</German>
             <Korean>북쪽으로</Korean>
             <Japanese>北に</Japanese>
-            <Hungarian>Északhoz</Hungarian>
             <Chinesesimp>正北</Chinesesimp>
+            <Hungarian>Északhoz</Hungarian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardAcrylicLabel">
             <English>To Plotting Board Acrylic</English>
