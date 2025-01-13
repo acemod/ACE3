@@ -12,7 +12,7 @@ if (!hasInterface) exitWith {};
     // Initialize all seats
     {
         _x call FUNC(addSitActions);
-    } forEach (uiNamespace getVariable [QGVAR(seats), []]);
+    } forEach keys (uiNamespace getVariable [QGVAR(seats), []]);
 
     // Add interaction menu exception
     ["isNotSitting", {isNil {(_this select 0) getVariable QGVAR(sittingStatus)}}] call EFUNC(common,addCanInteractWithCondition);
