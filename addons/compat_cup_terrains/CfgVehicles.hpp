@@ -109,4 +109,20 @@ class CfgVehicles {
         EGVAR(dragging,carryPosition)[] = {0, 0.75, 0.5};
         EGVAR(dragging,carryDirection) = 270;
     };
+
+    class Land_stand_waterl_EP1: House_EP1 {
+        EXGVAR(field_rations,waterSupply) = 250;
+        EXGVAR(field_rations,offset)[] = {0, -0.33, 0.4};
+    };
+
+    class Land_pumpa: House {
+        EXGVAR(field_rations,waterSupply) = -10;
+        EXGVAR(field_rations,offset)[] = {0.3, 0, 0.68};
+    };
+
+    class Thing;
+    class Land_Barrel_water: Thing {
+        EXGVAR(field_rations,waterSupply) = 160;
+        EXGVAR(field_rations,offset)[] = {0, 0, 0.25};
+    };
 };
