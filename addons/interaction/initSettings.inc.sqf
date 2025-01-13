@@ -83,7 +83,8 @@
     QGVAR(enableLauncherTaking), "CHECKBOX",
     LSTRING(takeLauncherSetting),
     format ["ACE %1", LLSTRING(DisplayName)],
-    true
+    false,
+    1
 ] call CBA_fnc_addSetting;
 
 [
