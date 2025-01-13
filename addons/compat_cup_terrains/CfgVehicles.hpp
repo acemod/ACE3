@@ -1,12 +1,4 @@
 class CfgVehicles {
-    class House_EP1;
-    class Land_stand_waterl_EP1: House_EP1 {
-        EXGVAR(sitting,canSit) = 1;
-        EXGVAR(sitting,sitDirection) = 180;
-        EXGVAR(sitting,sitPosition)[] = {{-0.4, -0.8, -0.9}, {0.4, -0.8, -0.9}};
-        EXGVAR(sitting,interactPosition)[] = {{-0.4, -0.75, 0.3}, {0.4, -0.75, 0.3}};
-    };
-
     class Thing_EP1;
     class Land_Bench_EP1: Thing_EP1 {
         EXGVAR(sitting,canSit) = 1;
@@ -54,6 +46,10 @@ class CfgVehicles {
     };
 
     class Thing;
+    class Land_Barrel_water: Thing {
+        EXGVAR(field_rations,waterSupply) = 160;
+        EXGVAR(field_rations,offset)[] = {0, 0, 0.25};
+    };
     class FoldChair: Thing {
         EXGVAR(sitting,canSit) = 1;
         EXGVAR(sitting,sitDirection) = 180;
@@ -110,19 +106,20 @@ class CfgVehicles {
         EGVAR(dragging,carryDirection) = 270;
     };
 
-    class Land_stand_waterl_EP1: House_EP1 {
-        EXGVAR(field_rations,waterSupply) = 250;
-        EXGVAR(field_rations,offset)[] = {0, -0.33, 0.4};
-    };
-
+    class House;
     class Land_pumpa: House {
         EXGVAR(field_rations,waterSupply) = -10;
         EXGVAR(field_rations,offset)[] = {0.3, 0, 0.68};
     };
 
-    class Thing;
-    class Land_Barrel_water: Thing {
-        EXGVAR(field_rations,waterSupply) = 160;
-        EXGVAR(field_rations,offset)[] = {0, 0, 0.25};
+    class House_EP1;
+    class Land_stand_waterl_EP1: House_EP1 {
+        EXGVAR(field_rations,waterSupply) = 250;
+        EXGVAR(field_rations,offset)[] = {0, -0.33, 0.4};
+        EXGVAR(sitting,canSit) = 1;
+        EXGVAR(sitting,sitDirection) = 180;
+        EXGVAR(sitting,sitPosition)[] = {{-0.4, -0.8, -0.9}, {0.4, -0.8, -0.9}};
+        EXGVAR(sitting,interactPosition)[] = {{-0.4, -0.75, 0.3}, {0.4, -0.75, 0.3}};
     };
+
 };
