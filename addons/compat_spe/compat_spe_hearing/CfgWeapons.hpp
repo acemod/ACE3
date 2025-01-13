@@ -141,5 +141,4 @@ class CfgWeapons {
     class H_SPE_GER_ST_Tanker_Cap: H_SPE_GER_Fieldcap {
         HEARING_PROTECTION_EARMUFF;
     };
-
 };
