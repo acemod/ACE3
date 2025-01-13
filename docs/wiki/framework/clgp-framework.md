@@ -1,6 +1,6 @@
 ---
 layout: wiki
-title: CLGP Framework
+title: Missile CLGP Framework
 description: Explains how to set-up ammo for the cannon-launched-guided-projectile system.
 group: framework
 parent: wiki
@@ -26,7 +26,7 @@ class CfgAmmo {
         ace_clgp_artilleryDrag = 1;
         submunitionAmmo = "x_missle";
         class Eventhandlers {
-            fired = "call ace_clgp_fnc_submunition_ammoFired"; // need to add the EH yourself to all ammos
+            fired = "call ace_missile_clgp_fnc_submunition_ammoFired"; // need to add the EH yourself to all ammos
         };
     };
 
@@ -38,11 +38,11 @@ class CfgAmmo {
 
 ### 2.2 Configs
 
-`ace_clgp_deployCondition`
+`ace_missile_clgp_deployCondition`
 - A function that will trigger the ammo when returning true, passed `[_projectile, _guidanceArgs]`
 - Is optional, can just use normal submuntion triggers
 
-`ace_clgp_artilleryDrag`
+`ace_missile_clgp_artilleryDrag`
 - Optional (Leave undefined (or set to -1) to ignore)
 - Used as a coefficient on drag from ace_artilleryTables's advancedCorrections
 - Value of 0 is valid and will not apply drag but still keep nose pointed correctly (for unpowered missiles)

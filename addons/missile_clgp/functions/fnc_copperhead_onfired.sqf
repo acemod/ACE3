@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_clgp_fnc_copperhead_onfired
+ * [] call ace_missile_clgp_fnc_copperhead_onfired
  *
  * Public: No
  */

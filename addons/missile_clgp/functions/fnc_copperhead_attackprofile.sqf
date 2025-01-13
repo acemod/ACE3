@@ -12,7 +12,7 @@
  * Missile Aim PosASL <ARRAY>
  *
  * Example:
- * [[1,2,3], [], []] call ace_clgp_fnc_copperhead_attackProfile
+ * [[1,2,3], [], []] call ace_missile_clgp_fnc_copperhead_attackProfile
  *
  * Public: No
  */

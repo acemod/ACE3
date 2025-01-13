@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [x, 2, 2] call ace_clgp_fnc_submunition_applyDrag
+ * [x, 2, 2] call ace_missile_clgp_fnc_submunition_applyDrag
  *
  * Public: No
  */

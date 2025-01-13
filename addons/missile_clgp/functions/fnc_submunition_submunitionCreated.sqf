@@ -11,7 +11,7 @@
  * Nothing
  *
  * Example:
- * [a,b] call ace_clgp_fnc_submunition_submunitionCreated
+ * [a,b] call ace_missile_clgp_fnc_submunition_submunitionCreated
  *
  * Public: No
  */

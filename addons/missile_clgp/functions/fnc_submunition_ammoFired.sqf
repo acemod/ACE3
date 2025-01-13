@@ -10,7 +10,7 @@
  * Nothing
  *
  * Example:
- * [] call ace_clgp_fnc_submunition_ammoFired
+ * [] call ace_missile_clgp_fnc_submunition_ammoFired
  *
  * Public: No
  */

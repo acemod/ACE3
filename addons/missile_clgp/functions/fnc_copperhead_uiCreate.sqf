@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [vehicle, player] call ace_clgp_fnc_copperhead_uiCreate
+ * [vehicle, player] call ace_missile_clgp_fnc_copperhead_uiCreate
  *
  * Public: No
  */

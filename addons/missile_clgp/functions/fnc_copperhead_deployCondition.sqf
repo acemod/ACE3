@@ -10,7 +10,7 @@
  * <BOOL>
  *
  * Example:
- * [any, vehicle player] call ace_clgp_fnc_copperhead_deployCondition
+ * [any, vehicle player] call ace_missile_clgp_fnc_copperhead_deployCondition
  *
  * Public: No
  */

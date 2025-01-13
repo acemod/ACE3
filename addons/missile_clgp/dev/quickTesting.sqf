@@ -8,7 +8,7 @@
     systemChat format ["recompile took [%1 ms]", (1000 * (_end - _start)) toFixed 1];
 
     if (productVersion #4 == "Diag") then {
-        call compile "diag_mergeConfigFile ['P:\z\ace\addons\clgp\config.cpp']";
+        call compile "diag_mergeConfigFile ['P:\z\ace\addons\missile_clgp\config.cpp']";
     };
     false
 }, {false}, [59, [false, false, false]], false] call CBA_fnc_addKeybind; // F1 Key
