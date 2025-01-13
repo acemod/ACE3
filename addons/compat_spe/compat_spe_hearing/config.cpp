@@ -1,36 +1,27 @@
 #include "script_component.hpp"
+#include "\z\ace\addons\hearing\script_macros_hearingProtection.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class SUBADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "ace_common",
             "ww2_spe_assets_c_weapons_infantryweapons_c",
             "ww2_spe_assets_c_vehicles_staticweapons_c",
             "ww2_spe_assets_c_vehicles_weapons_c",
             "ww2_spe_core_f_system_staticweapons_f",
-            "ww2_spe_core_c_core_c_eventhandlers"
+            "ww2_spe_core_c_core_c_eventhandlers",
+            "ace_hearing"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {
-            "sancron",
-            "nomisum",
-            "coldfront15/Henderson",
-            "BrettMayson"
-        };
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+
+        addonRootClass = QUOTE(ADDON);
     };
 };
 
-#include "ACE_Medical_Injuries.hpp"
-#include "CfgAmmo.hpp"
-#include "CfgEventHandlers.hpp"
-#include "CfgGlasses.hpp"
-#include "CfgMagazines.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
