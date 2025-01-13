@@ -852,32 +852,32 @@
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowable">
             <English>Pass grenade</English>
-            <German>Granate geben</German>
-            <Japanese>手榴弾を渡す</Japanese>
-            <Korean>수류탄 건네주기</Korean>
             <French>Donner une grenade</French>
             <Italian>Passa granata</Italian>
             <Russian>Передать гранаты</Russian>
+            <German>Granate geben</German>
+            <Korean>수류탄 건네주기</Korean>
+            <Japanese>手榴弾を渡す</Japanese>
             <Chinesesimp>给予投掷物</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableHint">
             <English>%1 passed you %2.</English>
-            <German>%1 hat dir %2 gegeben.</German>
-            <Japanese>%1 は あなたに %2 を渡した。</Japanese>
-            <Korean>%1 님이 %2을(를) 건네주었습니다.</Korean>
             <French>%1 vous a donné %2</French>
             <Italian>%1 ti ha passato una granata %2.</Italian>
             <Russian>%1 передал вам %2.</Russian>
+            <German>%1 hat dir %2 gegeben.</German>
+            <Korean>%1 님이 %2을(를) 건네주었습니다.</Korean>
+            <Japanese>%1 は あなたに %2 を渡した。</Japanese>
             <Chinesesimp>%1给你了%2</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableSetting">
             <English>Show "pass grenade" interaction</English>
-            <German>Zeige "Granate geben" Interaktion</German>
-            <Japanese>"手榴弾を渡す"をインタラクションに表示</Japanese>
-            <Korean>"수류탄 건네주기" 상호작용 표시</Korean>
             <French>Afficher l'interaction « Donner une grenade »</French>
             <Italian>Mostra l'interazione "passa granata"</Italian>
             <Russian>Показывать действие "передать гранату"</Russian>
+            <German>Zeige "Granate geben" Interaktion</German>
+            <Korean>"수류탄 건네주기" 상호작용 표시</Korean>
+            <Japanese>"手榴弾を渡す"をインタラクションに表示</Japanese>
             <Chinesesimp>显示"给予投掷物"选项</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">

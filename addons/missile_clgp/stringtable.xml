@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="MISSILE_CLGP">
+        <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_descriptionShort">
+            <English>Semi-Active Laser Guided 40mm Grenade</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayName">
+            <English>40mm Pike</English>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayNameShort">
+            <English>Pike SALH</English>
+        </Key>
+    </Package>
+</Project>
