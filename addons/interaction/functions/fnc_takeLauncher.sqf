@@ -23,7 +23,7 @@ TRACE_3("Take launcher params",_player,_target,_launcher);
 private _playerName = [_player] call EFUNC(common,getName);
 private _cfgWeapons = configFile >> "CfgWeapons" >> _launcher;
 private _displayName = getText (_cfgWeapons >> "displayName");
-[QEGVAR(common,displayTextStructured), [[LSTRING(TakingLauncherHint), _playerName, _displayName], 1.5, _target], [_target]] call CBA_fnc_targetEvent;
+[QEGVAR(common,displayTextStructured), [[LSTRING(TakingLauncherHint), _playerName, _displayName], 1.5, _target], _target] call CBA_fnc_targetEvent;
 
 if (_launcher isEqualTo "") exitWith {ERROR("No launcher specified.")};
 if (secondaryWeapon _player isNotEqualTo "") exitWith {ERROR("Cannot add launcher to target due to lack of inventory space.")};
