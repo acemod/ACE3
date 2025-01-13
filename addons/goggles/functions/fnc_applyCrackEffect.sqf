@@ -16,6 +16,7 @@
  */
 
 if (GETBROKEN) exitWith { true };
+scopeName "main";
 
 private _unit = ACE_player;
 private _config = configFile >> "CfgGlasses" >> goggles _unit;
@@ -31,7 +32,9 @@ _effects set [BROKEN, true];
 SETGLASSES(_unit,_effects);
 
 if (getText (_config >> "ACE_OverlayCracked") != "") then {
-    if ([] call FUNC(externalCamera)) exitWith { false };
+    if ([] call FUNC(externalCamera)) exitWith {
+        false breakout "main";
+    };
     if (isNull (GLASSDISPLAY)) then {
         GVAR(GogglesLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false, false];
     };
