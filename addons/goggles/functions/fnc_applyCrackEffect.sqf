@@ -33,7 +33,7 @@ SETGLASSES(_unit,_effects);
 
 if (getText (_config >> "ACE_OverlayCracked") != "") then {
     if ([] call FUNC(externalCamera)) exitWith {
-        false breakout "main";
+        false breakOut "main";
     };
     if (isNull (GLASSDISPLAY)) then {
         GVAR(GogglesLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false, false];
