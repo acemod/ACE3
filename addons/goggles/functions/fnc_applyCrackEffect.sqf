@@ -16,6 +16,7 @@
  */
 
 if (GETBROKEN) exitWith { true };
+
 private _unit = ACE_player;
 private _config = configFile >> "CfgGlasses" >> goggles _unit;
 
