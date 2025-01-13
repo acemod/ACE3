@@ -92,5 +92,5 @@
     LSTRING(takeLauncherTime),
     format ["ACE %1", LLSTRING(DisplayName)],
     [1, 20, 5, 0],
-    true
+    1
 ] call CBA_fnc_addSetting;
