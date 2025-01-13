@@ -1693,5 +1693,8 @@
             <Japanese>重篤な外傷</Japanese>
             <Chinesesimp>慢性创伤</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_needToHolster">
+            <English>You must holster your weapon first!</English>
+        </Key>
     </Package>
 </Project>

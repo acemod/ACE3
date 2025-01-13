@@ -27,6 +27,12 @@ dlc = [
     "Reaction Forces"
 ]
 
+[gm]
+extends = "default"
+dlc = [
+    "Global Mobilization - Cold War Germany"
+]
+
 [rhs]
 extends = "default"
 workshop = [

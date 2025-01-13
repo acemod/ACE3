@@ -65,3 +65,10 @@ class Land_vn_fuelcan: Land_vn_object_c_base {
     EGVAR(cargo,canLoad) = 1;
     EGVAR(cargo,noRename) = 1;
 };
+
+// M149
+class Land_vn_b_prop_m149: Land_vn_object_b_base {
+    XEH_INHERITED;
+    EXGVAR(field_rations,waterSupply) = 1514.16; // 400 US gallons
+    EXGVAR(field_rations,offset)[] = {0, -0.3, -0.3};
+};

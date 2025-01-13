@@ -25,6 +25,7 @@ class CfgPatches {
 
 #include "ACE_Triggers.hpp"
 #include "ACE_Arsenal_Stats.hpp"
+#include "ACE_Medical_Injuries.hpp"
 
 // UI stuff
 class RscText;

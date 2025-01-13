@@ -7,6 +7,7 @@ if (!hasInterface) exitWith {};
 // Init variables
 GVAR(mapGpsShow) = true;
 GVAR(mapGpsNextUpdate) = -1;
+GVAR(lastDrawnLine) = "";
 
 GVAR(mapTool_Shown) = 0;
 GVAR(mapTool_pos) = [0, 0];
@@ -47,6 +48,12 @@ GVAR(plottingBoard_markers) = createHashMap;
 
 addMissionEventHandler ["MarkerCreated", {
     [_this, false] call FUNC(handlePlottingBoardMarkers);
+
+    // Cache last user-drawn polyline marker
+    private _marker = _this select 0;
+    if ((markerPolyline _marker) isNotEqualTo []) then {
+        GVAR(lastDrawnLine) = _marker;
+    };
 }];
 
 addMissionEventHandler ["MarkerDeleted", {

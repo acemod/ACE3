@@ -13,7 +13,7 @@ class CfgPatches {
             "CAStructures_E_Ind_Ind_FuelStation",
             "CAStructures_PMC_FuelStation",
             "CUP_Buildings_Config",
-            "ace_refuel" // not a sub-component because it's all this compat does
+            "ace_common"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);

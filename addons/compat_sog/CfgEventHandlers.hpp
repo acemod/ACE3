@@ -44,7 +44,7 @@ class Extended_InitPost_EventHandlers {
     };
     class vn_bicycle_base {
         class ADDON {
-            init = QUOTE(call FUNC(disableCookoff));
+            init = QUOTE(call EFUNC(cookoff,disableCookoff));
         };
     };
 };
