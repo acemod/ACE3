@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="MISSILE_CLGP">
-        <Key ID="STR_ACE_MISSILE_CLGP_copperhead_action">
-            <English>Configure M712 Shell</English>
-        </Key>
-        <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_FlightProfile">
-            <English>Flight Profile</English>
-        </Key>
-        <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_GuidanceDelay">
-            <English>Guidance Delay</English>
-        </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_descriptionShort">
             <English>Semi-Active Laser Guided 40mm Grenade</English>
         </Key>
