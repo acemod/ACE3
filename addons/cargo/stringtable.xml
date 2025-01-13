@@ -281,12 +281,12 @@
         </Key>
         <Key ID="STR_ACE_Cargo_checkSizeInteraction">
             <English>Show Check Cargo Size Interaction</English>
-            <Russian>Вкл. проверку размера груза</Russian>
-            <German>Zeige Interaktion zum Prüfen der Frachtgröße</German>
-            <Japanese>貨物の大きさを確認のインタラクションを表示</Japanese>
-            <Korean>화물 크기 확인 상호작용 표시</Korean>
             <French>Afficher l'interaction de confirmation de la taille de la cargaison</French>
             <Italian>Mostra interazione di controllo dello spazio del carico</Italian>
+            <Russian>Вкл. проверку размера груза</Russian>
+            <German>Zeige Interaktion zum Prüfen der Frachtgröße</German>
+            <Korean>화물 크기 확인 상호작용 표시</Korean>
+            <Japanese>貨物の大きさを確認のインタラクションを表示</Japanese>
             <Chinesesimp>显示检查货物尺寸选项</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Cargo_clearedCustomName">
