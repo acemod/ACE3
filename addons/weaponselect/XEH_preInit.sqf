@@ -16,7 +16,7 @@ private _cfgAmmo = configFile >> "CfgAmmo";
 private _cfgThrow = configFile >> "CfgWeapons" >> "Throw";
 
 {
-    private _magazines = getArray (_cfgThrow >> _x >> "magazines");
+    private _magazines = (getArray (_cfgThrow >> _x >> "magazines")) apply {_x call EFUNC(common,getConfigName)};
 
     GVAR(GrenadesAll) append _magazines;
 
