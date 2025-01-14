@@ -3,12 +3,15 @@
     <Package name="MISSILE_CLGP">
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_descriptionShort">
             <English>Semi-Active Laser Guided 40mm Grenade</English>
+            <Japanese>セミアクティブレーザー誘導40mmグレネード</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayName">
             <English>40mm Pike</English>
+            <Japanese>40mm パイク</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayNameShort">
             <English>Pike SALH</English>
+            <Japanese>パイク SALH</Japanese>
         </Key>
     </Package>
 </Project>
