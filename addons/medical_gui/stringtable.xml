@@ -1593,6 +1593,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_needToHolster">
             <English>You must holster your weapon first!</English>
+            <Chinesesimp>你必须先收起武器!</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showBleeding_Description">
             <English>Display if the patient is bleeding, optionally with rate</English>
