@@ -958,13 +958,6 @@
             <Chinesesimp>反转摄影机控制</Chinesesimp>
             <Turkish>Kamera kontrollerini ters çevir</Turkish>
         </Key>
-        <Key ID="STR_ACE_Arsenal_unavailableItemsSetting">
-            <English>Show missing / unavailable items</English>
-            <Korean>누락/사용 불가 아이템 표시</Korean>
-        </Key>
-        <Key ID="STR_ACE_Arsenal_unavailableItemsTooltip">
-            <English>Show missing / unavailable items when hovering over a loadout</English>
-            <Korean>로드아웃 위에 마우스 커서를 올리면 누락되거나 사용할 수 없는 아이템을 표시합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Arsenal_loadoutDeleted">
             <English>The following loadout was deleted:</English>
@@ -1789,10 +1782,6 @@
             <Korean>사용 불가 아이템:\n%1</Korean>
             <Japanese>利用できないアイテム:\n%1</Japanese>
         </Key>
-        <Key ID="STR_ACE_Arsenal_unavailableItemsSetting">
-            <English>Show missing / unavailable items</English>
-            <Korean>누락/사용 불가 아이템 표시</Korean>
-            <Japanese>存在しない/利用できないアイテムを表示</Japanese>
         </Key>
         <Key ID="STR_ACE_Arsenal_unavailableItemsTooltip">
             <English>Show missing / unavailable items when hovering over a loadout</English>
