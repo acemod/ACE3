@@ -4,30 +4,37 @@
         <Key ID="STR_ACE_Markinglaser_Name">
             <English>IR marking laser</English>
             <German>IR Markierungslaser</German>
+            <Korean>적외선 마크 레이저</Korean>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Flashing">
             <English>Blinking</English>
             <German>Blinken</German>
+            <Korean>깜빡이기</Korean>
         </Key>
         <Key ID="STR_ACE_Markinglaser_ToggleLaser">
             <English>Toggle IR marking laser</English>
             <German>IR Markierungslaser umschalten</German>
+            <Korean>적외선 마크 레이저 전환</Korean>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Attribute_Enabled_DisplayName">
             <English>Equip with IR marking laser</English>
             <German>Mit IR Markierungslaser ausstatten</German>
+            <Korean>적외선 마크 레이저 장착</Korean>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Attribute_Enabled_Tooltip">
             <English>Equips the aircraft's main turret or pilot camera with an IR marking laser.</English>
             <German>Rüstet das Hauptgeschütz oder die Pilotenkamera des Luftfahrzeugs mit einem IR Markierungslaser aus.</German>
+            <Korean>항공기의 주포탑이나 조종사 카메라에 적외선 마크 레이저를 장착합니다.</Korean>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Setting_Enabled_DisplayName">
             <English>Enable IR marking lasers for aircraft</English>
             <German>IR Markierungslaser für Luftfahrzeuge aktivieren</German>
+            <Korean>항공기에 적외선 마크 레이저 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Setting_Enabled_Description">
             <English>Enables the usage of IR marking lasers for aircraft.</English>
             <German>Ermöglicht die Nutzung von IR Markierungslasern für Luftfahrzeuge.</German>
+            <Korean>항공기에 적외선 마크 레이저 사용을 활성화합니다.</Korean>
         </Key>
     </Package>
 </Project>
