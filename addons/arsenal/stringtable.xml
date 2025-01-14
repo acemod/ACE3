@@ -1781,7 +1781,6 @@
             <Korean>사용 불가 아이템:\n%1</Korean>
             <Japanese>利用できないアイテム:\n%1</Japanese>
         </Key>
-        </Key>
         <Key ID="STR_ACE_Arsenal_unavailableItemsTooltip">
             <English>Show missing / unavailable items when hovering over a loadout</English>
             <Korean>로드아웃 위에 마우스 커서를 올리면 누락되거나 사용할 수 없는 아이템을 표시합니다.</Korean>
