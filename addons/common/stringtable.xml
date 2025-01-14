@@ -411,6 +411,7 @@
         </Key>
         <Key ID="STR_ACE_Common_checkExtensions_DisplayName">
             <English>Check Extensions</English>
+            <Chinesesimp>检查DLL扩展文件</Chinesesimp>
             <Korean>확장 프로그램 검사</Korean>
         </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_Description">

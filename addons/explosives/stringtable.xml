@@ -10,6 +10,7 @@
             <German>Standardzünder</German>
             <Korean>격발기 활성</Korean>
             <Japanese>選択中の点火装置</Japanese>
+            <Chinesesimp>当前引爆装置</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_AttachAction">
             <English>Attach</English>
@@ -104,6 +105,7 @@
             <German>Standardzünder wechseln</German>
             <Korean>격발기 활성 전환</Korean>
             <Japanese>点火装置を切り替え</Japanese>
+            <Chinesesimp>切换引爆装置</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_DeadManSwitch_description">
             <English>Used to remotely trigger explosives when released.</English>
@@ -248,6 +250,7 @@
             <German>Alle auf Standardzünder zünden</German>
             <Korean>활성화된 격발기의 모든 것을 폭파</Korean>
             <Japanese>選択した点火装置を全て起爆</Japanese>
+            <Chinesesimp>引爆当前引爆装置的全部</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
@@ -914,6 +917,7 @@
             <German>Als Standardzünder wählen</German>
             <Korean>격발기 활성 설정</Korean>
             <Japanese>この点火装置を選択</Japanese>
+            <Chinesesimp>设置为当前引爆装置</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_SetTime">
             <English>Set Time</English>
@@ -1093,6 +1097,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_apersToePopper">
             <English>APERS Mine (Toe-Popper)</English>
+            <Chinesesimp>反人员地雷 (脚尖毁灭者)</Chinesesimp>
             <Korean>대인지뢰 (발목지뢰형)</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_cellphone_description">
