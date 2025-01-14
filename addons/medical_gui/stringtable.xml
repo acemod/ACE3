@@ -1593,6 +1593,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_needToHolster">
             <English>You must holster your weapon first!</English>
+            <Japanese>先に武器をしまう必要があります!</Japanese>
             <French>Vous devez d'abord rengainer votre arme !</French>
             <Chinesesimp>你必须先收起武器!</Chinesesimp>
             <Polish>무기를 먼저 집어넣어야 합니다!</Polish>
