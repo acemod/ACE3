@@ -24,7 +24,7 @@
 #define ENGINE_FIRE_TIME 240
 #define MIN_TIME_BETWEEN_FLAMES 5
 #define MAX_TIME_BETWEEN_FLAMES 15
-#define MAX_TIME_BETWEEN_AMMO_DET 25
+#define MAX_TIME_BETWEEN_AMMO_DET 35
 #define MAX_COOKOFF_INTENSITY 10
 
 #define MIN_AMMO_DETONATION_START_DELAY 1 // Min time to wait before a vehicle's ammo starts to cookoff

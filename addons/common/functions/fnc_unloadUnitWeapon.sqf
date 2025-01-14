@@ -94,7 +94,7 @@ if (!_skipAnim) then {
         };
     };
 
-    playSound3D [_unloadSound, _unit];
+    playSound3D [_unloadSound, _unit,false,getPosASL _unit,0.5,1,15];
 };
 
 // Remove magazine from weapon and add it to inventory

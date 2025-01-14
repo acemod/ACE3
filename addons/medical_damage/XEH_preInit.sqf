@@ -18,6 +18,9 @@ addMissionEventHandler ["Loaded",{
 }];
 */
 
+// Used for armor penetration calculation
+GVAR(ammoCache) = createHashMap;
+
 [QEGVAR(medical,woundReceived), LINKFUNC(woundReceived)] call CBA_fnc_addEventHandler;
 
 ADDON = true;

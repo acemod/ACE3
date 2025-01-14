@@ -9,6 +9,7 @@ PREP_RECOMPILE_END;
 #include "initSettings.inc.sqf"
 
 GVAR(initializedStaticTypes) = [];
+GVAR(initializedVehicleTypes) = [];
 
 ADDON = true;
 

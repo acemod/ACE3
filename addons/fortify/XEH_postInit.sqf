@@ -47,7 +47,7 @@ GVAR(objectRotationZ) = 0;
     if (_side isEqualTo side group ace_player) then {
         private _budget = [_side] call FUNC(getBudget);
         private _cost = [_side, typeOf _object] call FUNC(getCost);
-        private _text = [format ["Remove Object +$%1", _cost], "Remove Object"] select (_budget == -1);
+        private _text = [format ["%1 +$%2", LLSTRING(Budget), _cost], LLSTRING(Budget)] select (_budget == -1);
 
         // Remove object action
         private _removeAction = [
@@ -56,13 +56,41 @@ GVAR(objectRotationZ) = 0;
             "",
             {
                 params ["_target", "_player", "_params"];
-                _params params ["_side"];
-                TRACE_2("deleting placed object",_target,_params);
-                [QXGVAR(objectDeleted), [_player, _side, _target]] call CBA_fnc_globalEvent;
-                deleteVehicle _target;
-                _params call FUNC(updateBudget);
+                _params params ["_side", "_cost"];
+
+                private _totalTime = (_cost * GVAR(timeCostCoefficient) + GVAR(timeMin)) / 2; // [WOG] remove twice faster than build. time = (Ax + b) / 2
+                
+                _target setVariable [QGVAR(removeStarted), true, true];
+
+                [
+                    _totalTime,
+                    [_player, _target, _side, _cost],
+                    {
+                        params ["_args"];
+                        _args params ["_player", "_target", "_side", "_cost"];
+                        TRACE_2("deleting placed object",_target,_params);
+                        [QXGVAR(objectDeleted), [_player, _side, _target]] call CBA_fnc_globalEvent;
+                        deleteVehicle _target;
+                        [_side, _cost] call FUNC(updateBudget);
+                    },
+                    {
+                        params ["_args"];
+                        _args params ["", "_target"];
+                        _target setVariable [QGVAR(removeStarted), false, true];
+                    },
+                    LLSTRING(removeProgressBarTitle),
+                    {
+                        params ["_args"];
+                        _args params ["", "_target"];
+                        alive _target;
+                    }
+                ] call EFUNC(common,progressBar);
             },
-            {(missionNamespace getVariable [QGVAR(fortifyAllowed), true]) && {"ACE_Fortify" in (_player call EFUNC(common,uniqueItems))}},
+            {
+                (missionNamespace getVariable [QGVAR(fortifyAllowed), true]) &&
+                {"ACE_Fortify" in (_player call EFUNC(common,uniqueItems))} &&
+                !(_target getVariable [QGVAR(removeStarted), false])
+            },
             {},
             [_side, _cost],
             {[0, 0, 0]},

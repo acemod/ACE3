@@ -28,6 +28,6 @@ if (_event isEqualTo true) then { // this is actually needed as 3rd arg may not 
     _target removeWeapon QGVAR(dummyStatic);
     TRACE_2("added sight",_target weaponsTurret [0],_target animationPhase "optic_hide");
 } else {
-    _unit removeWeapon QGVAR(sight);
+    _unit removeWeapon "ACE_M47_Daysight";
     [QGVAR(attachSight), [_target, _unit, true]] call CBA_fnc_globalEvent;
 };

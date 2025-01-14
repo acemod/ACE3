@@ -30,3 +30,4 @@ class RscEdit;
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
 #include "RscDisplayMainMap.hpp"
+#include "drawRadius_GUI.hpp"

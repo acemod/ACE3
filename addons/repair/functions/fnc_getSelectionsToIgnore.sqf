@@ -53,7 +53,7 @@ private _processedSelections = [];
         continue
     };
 
-    if ("glass" in _hitpoint) then { // skip glass
+    if (("glass" in _hitpoint) && !(_vehicle isKindOf "helicopter")) then { // skip glass
         TRACE_3("Skipping glass",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping glass, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
@@ -74,6 +74,7 @@ private _processedSelections = [];
     };
 
     private _armorComponent = "";
+
     if (_selection == "") then { // some hitpoints have empty selection but defined armor component (mostly RHS)
         {
             private _turretHitpointCfg = ([_vehCfg, _x] call CBA_fnc_getTurret) >> "HitPoints";
@@ -117,7 +118,7 @@ private _processedSelections = [];
         continue
     };
 
-    if !(getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends") in ["", "0"]) then { // skip depends hitpoints, should be normalized by engine
+    if (!(getText (_vehCfg >> "HitPoints" >> _hitpoint >> "depends") in ["", "0"]) && !(_vehicle isKindOf "helicopter")) then { // skip depends hitpoints, should be normalized by engine
         TRACE_3("Skipping depends hitpoint",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping depends hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
@@ -134,7 +135,7 @@ private _processedSelections = [];
         continue
     };
 
-    if (ANY_OF(_hitpointGroups,ANY_OF(_x select 1,_x == _hitpoint))) then { // skip child hitpoints
+    if (ANY_OF(_hitpointGroups,ANY_OF(_x select 1,_x == _hitpoint)) && !(_vehicle isKindOf "helicopter")) then { // skip child hitpoints
         TRACE_3("Skipping child hitpoint",_hitpoint,_forEachIndex,_selection);
         /*#ifdef DEBUG_MODE_FULL
         systemChat format ["Skipping child hitpoint, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];

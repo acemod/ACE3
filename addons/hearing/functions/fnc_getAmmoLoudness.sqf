@@ -38,7 +38,7 @@ GVAR(cacheAmmoLoudness) getOrDefaultCall [_magazine, {
     };
 
     private _hearingDamageFactor = [_ammoConfig >> QGVAR(hearingDamageFactor), "NUMBER", 1] call CBA_fnc_getConfigEntry;
-    private _loudness = _hearingDamageFactor * (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;
+    private _loudness = _hearingDamageFactor * (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 7;
     TRACE_6("building cache",_ammo,_magazine,_initSpeed,_caliber,_hearingDamageFactor,_loudness);
 
     _loudness

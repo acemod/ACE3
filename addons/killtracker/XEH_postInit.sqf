@@ -16,9 +16,9 @@
  * Public: No
  */
 
-if ((getText (missionConfigFile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QXGVAR(outputText)) exitWith {
-    TRACE_1("no mission debriefing config",_this);
-};
+// if ((getText (missionconfigfile >> "CfgDebriefingSections" >> QUOTE(XADDON) >> "variable")) != QXGVAR(outputText)) exitWith {
+//     TRACE_1("no mission debriefing config",_this);
+// };
 
 if !(GETEGVAR(medical,enabled,false)) exitWith {
     WARNING("No ACE-Medical");

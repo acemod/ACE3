@@ -20,4 +20,4 @@ params ["_target", "_unit"];
 
 (alive _target)
 && {!(_target getVariable [QGVAR(sightAttached), ((typeOf _target) == QGVAR(staticAssembled))])}
-&& {QGVAR(sight) in (weapons _unit)}
+&& {"ACE_M47_Daysight" in (weapons _unit)}

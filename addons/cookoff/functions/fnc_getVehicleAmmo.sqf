@@ -74,11 +74,11 @@ if (isNil "_virtualAmmo") then {
         _virtualAmmo pushBack ["2000Rnd_65x39_belt", 2000, false, true];
         _totalAmmo = _totalAmmo + 2000;
 
-        _virtualAmmo pushBack ["20Rnd_105mm_HEAT_MP", 100, true, true];
-        _totalAmmo = _totalAmmo + 100;
+        _virtualAmmo pushBack ["20Rnd_105mm_HEAT_MP", 6, true, true];
+        _totalAmmo = _totalAmmo + 6;
 
-        _virtualAmmo pushBack ["SatchelCharge_Remote_Mag", 10, true, true];
-        _totalAmmo = _totalAmmo + 10;
+        _virtualAmmo pushBack ["SatchelCharge_Remote_Mag", 3, true, true];
+        _totalAmmo = _totalAmmo + 3;
     };
 
     if (_setVirtualAmmoCount) then {

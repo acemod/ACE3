@@ -5,10 +5,9 @@ class CfgAmmo {
     class Rocket_03_AP_F;
 
     class GVAR(penetrator_super): ammo_Penetrator_Base {
-        caliber = 60;
+        caliber = 38;
         warheadName = "HEAT";
-        hit = 460;
-        fuseDistance = 75;
+        hit = 298;
     };
 
     class GVAR(dragonBase): Rocket_03_AP_F {
@@ -16,25 +15,38 @@ class CfgAmmo {
         scope = 1;
         aiAmmoUsageFlags = "128+512";
         model = QPATHTOF(models\dragon.p3d);
-        maxSpeed = 200;
-        thrust = 300;
-        initTime = 0.151;
+        maxSpeed = 120;
+        thrust = 0;
+        initTime = 0;
         thrustTime = 0;
-        sideAirFriction = 0.05;
+        sideAirFriction = 0.5;
         effectsMissile = "missile2";
         effectFlare = "";
         airFriction = 0.5;
-        fuseDistance = 75;
+        fuseDistance = 15;
         whistleDist = 2;
 
-        hit = 100;
+        hit = 110;
         indirectHit = 9;
-        indirectHitRange = 1;
+        indirectHitRange = 1.5;
         explosive = 0.8;
-        timeToLive = 60;
+        timeToLive = 20;
         cost = 500;
         simulationStep = 0.005;
         maxControlRange = 1500;
+
+        trackOversteer = 0.95;
+        trackLead = 0.9;
+        maneuvrability = 10;
+        manualControl = 0;
+        deflecting = 0;
+
+        soundHit[] = {"A3\Sounds_F\arsenal\weapons\Launchers\NLAW\NLAW_Hit", 1.77828, 1, 1500};
+        soundSetExplosion[] = {"RocketsMedium_Exp_SoundSet", "RocketsMedium_Tail_SoundSet", "Explosion_Debris_SoundSet"};
+        soundFly[] = {QPATHTOF(sounds\rocket_fly.wss), 1, 1, 600};
+        CraterEffects = "ATRocketCrater";
+        explosionEffects = "ATRocketExplosion";
+        effectsMissileInit = "RocketBackEffectsNLAW";
 
         EGVAR(vehicle_damage,incendiary) = 1.0;
 

@@ -65,6 +65,7 @@
         _posATL set [2, ((getPosATL _player) select 2) + 0.5];
 
         _cswTripod setDir (direction _player);
+        _cswTripod setCenterOfMass ((getCenterOfMass _cswTripod) vectorAdd [0,0,-0.3]);
         _cswTripod setPosATL _posATL;
         _cswTripod setVectorUp (surfaceNormal _posATL);
 

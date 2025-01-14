@@ -124,6 +124,22 @@ if (
     0
 };
 
+// Kill units in wrecks
+if (
+    !alive _vehicle &&
+    _inVehicle && {!(_vehicle isKindOf "StaticWeapon")}
+) exitWith {
+
+    private _damages = [];
+    {
+      _damages pushBack [1, ALL_BODY_PARTS select _forEachIndex, 1]
+    } forEach ALL_HITPOINTS;
+    TRACE_6("Vehicle explosion",_unit,_shooter,_instigator,_damage,_newDamage,_damages);
+    [QEGVAR(medical,woundReceived), [_unit, _damages, _unit, _ammo]] call CBA_fnc_localEvent;
+
+    0
+};
+
 // Damages are stored for last iteration of the HandleDamage event (_context == 2)
 _unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage, _newDamage]];
 

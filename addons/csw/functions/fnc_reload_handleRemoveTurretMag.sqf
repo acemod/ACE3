@@ -67,4 +67,10 @@ if ((_magsInWeapon isEqualTo []) && {_ammoInFirstMag > _ammoRemoved}) then {
 };
 
 TRACE_3("Returning ammo",_unloadTo,_carryMag,_ammoRemoved);
-[QGVAR(returnAmmo), [_unloadTo, _carryMag, _ammoRemoved], _unloadTo] call CBA_fnc_targetEvent;
+if (_vehicle isKindOf "StaticWeapon") then {
+    [QGVAR(returnAmmo), [_unloadTo, _carryMag, _ammoRemoved], _unloadTo] call CBA_fnc_targetEvent;
+} else {
+    // Unload mags to vehicle
+    _vehicle setVariable [QGVAR(container), _vehicle, true];
+    [QGVAR(returnAmmo), [_vehicle, _carryMag, _ammoRemoved], _vehicle] call CBA_fnc_targetEvent;
+};

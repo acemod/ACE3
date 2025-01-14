@@ -135,6 +135,16 @@
             <Chinesesimp>设防：限制建造区</Chinesesimp>
             <Turkish>Inşa Etme : Bölgede Inşa Etmeyi Limitle</Turkish>
         </Key>
+        <Key ID="STR_ACE_Fortify_removeProgressBarTitle">
+            <English>Demolition</English>
+            <Russian>Снос</Russian>
+            <Spanish>Demolición</Spanish>
+        </Key>
+        <Key ID="STR_ACE_Fortify_remove">
+            <English>Remove Object</English>
+            <Russian>Снести объект</Russian>
+            <Spanish>Quitar objeto</Spanish>
+        </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMap">
             <English>Create map markers</English>
             <French>Créer des marqueurs sur carte</French>

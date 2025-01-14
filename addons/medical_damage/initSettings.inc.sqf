@@ -1,4 +1,13 @@
 [
+    QEGVAR(medical,alternateArmorPenetration),
+    "CHECKBOX",
+    [LSTRING(AlternateArmorPenetration_DisplayName), LSTRING(AlternateArmorPenetration_Description)],
+    ELSTRING(medical,Category),
+    false,
+    true
+] call CBA_fnc_addSetting;
+
+[
     QEGVAR(medical,fatalDamageSource),
     "LIST",
     [LSTRING(fatalDamageSource_DisplayName), LSTRING(fatalDamageSource_Description)],

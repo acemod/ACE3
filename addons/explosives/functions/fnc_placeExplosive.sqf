@@ -71,7 +71,9 @@ if (isNumber (_magazineTrigger >> "digDistance")) then {
     };
 };
 
-private _explosive = createVehicle [_ammo, _pos, [], 0, "NONE"];
+private _wogCorrection = getNumber (_magazineTrigger >> "wog_correction");
+private _posCorrected = [_pos select 0, _pos select 1, (_pos select 2) + _wogCorrection];
+private _explosive = createVehicle [_ammo, _posCorrected, [], 0, "NONE"];
 _explosive setPosATL _pos;
 
 if (!isNull _attachedTo) then {

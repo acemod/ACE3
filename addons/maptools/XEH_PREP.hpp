@@ -7,7 +7,7 @@ PREP(handleMouseMove);
 PREP(isInsideMapTool);
 PREP(openMapGpsUpdate);
 PREP(updateMapToolMarkers);
-
+PREP(mapToolDrawRadiusMarker);
 PREP(canUsePlottingBoard);
 PREP(isInsidePlottingBoard);
 PREP(handlePlottingBoardMarkers);

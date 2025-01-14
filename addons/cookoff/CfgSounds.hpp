@@ -1,4 +1,4 @@
-#define VOLUME 2
+#define VOLUME 1.9
 #define PITCH 1
 
 #define SHOTSOUND(type,dist,N,maxDistance)\

@@ -38,7 +38,7 @@ private _nearSupplies = ((_vehicle nearSupplies 10) select {
 } forEach ((+_nearSupplies) select {(everyContainer _x) isNotEqualTo []});
 
 // add caller to list of sources
-_nearSupplies = [_player] + _nearSupplies;
+_nearSupplies = [_player, _vehicle] + _nearSupplies;
 
 {
     private _xSource = _x;

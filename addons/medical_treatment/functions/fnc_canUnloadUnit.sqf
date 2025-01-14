@@ -18,5 +18,5 @@
 
 params ["_unloader", "_target"];
 
-!isNull objectParent _target &&
+alive objectParent _target && !isNull objectParent _target &&
 {!(lifeState _target in ["HEALTHY", "INJURED"])}

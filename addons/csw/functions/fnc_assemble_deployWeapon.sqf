@@ -86,6 +86,7 @@
             [_csw, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
             _csw setDir _tripodDir;
+            _csw setCenterOfMass ((getCenterOfMass _csw) vectorAdd [0,0,-0.3]);
             _csw setPosATL _tripodPos;
             if ((_tripodPos select 2) < 0.5) then {
                 _csw setVectorUp (surfaceNormal _tripodPos);

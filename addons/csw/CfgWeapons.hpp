@@ -43,6 +43,7 @@ class CfgWeapons {
         displayName = CSTRING(kordTripodFolded_displayName);
         author = ECSTRING(common,ACETeam);
         scope = 2;
+        scopeArsenal = 0;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = QPATHTOF(UI\Tripod_Icon.paa);
@@ -69,6 +70,7 @@ class CfgWeapons {
         displayName = CSTRING(m220TripodFolded_displayName);
         author = ECSTRING(common,ACETeam);
         scope = 2;
+        scopeArsenal = 0;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = QPATHTOF(UI\Tripod_Icon.paa);
@@ -87,6 +89,7 @@ class CfgWeapons {
         displayName = CSTRING(spg9_TripodFolded);
         author = ECSTRING(common,ACETeam);
         scope = 2;
+        scopeArsenal = 0;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = QPATHTOF(UI\Tripod_Icon.paa);
@@ -105,6 +108,7 @@ class CfgWeapons {
         displayName = CSTRING(sag30TripodFolded_displayName);
         author = ECSTRING(common,ACETeam);
         scope = 2;
+        scopeArsenal = 0;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = QPATHTOF(UI\Tripod_Icon.paa);
@@ -123,6 +127,7 @@ class CfgWeapons {
         displayName = CSTRING(mortarBaseplateBag_displayName);
         author = ECSTRING(common,ACETeam);
         scope = 2;
+        scopeArsenal = 0;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = QPATHTOF(UI\Tripod_Icon.paa); // todo
@@ -144,6 +149,7 @@ class CfgWeapons {
         displayName = CSTRING(StaticATBag_displayName);
         author = ECSTRING(common,ACETeam);
         scope = 2;
+        scopeArsenal = 0;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = QPATHTOF(UI\StaticAT_Icon.paa);
@@ -175,6 +181,7 @@ class CfgWeapons {
         displayName = CSTRING(StaticHMGBag_displayName);
         author = ECSTRING(common,ACETeam);
         scope = 2;
+        scopeArsenal = 0;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = QPATHTOF(UI\StaticHGMG_Icon.paa);
@@ -191,6 +198,7 @@ class CfgWeapons {
         };
         displayName = CSTRING(StaticM2ShieldBag_displayName);
         author = ECSTRING(common,ACETeam);
+        scopeArsenal = 0;
         picture = QPATHTOF(UI\StaticM2Shield_Icon_ca.paa);
     };
 
@@ -210,6 +218,7 @@ class CfgWeapons {
         displayName = CSTRING(StaticGMGBag_displayName);
         author = ECSTRING(common,ACETeam);
         scope = 2;
+        scopeArsenal = 0;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = QPATHTOF(UI\StaticHGMG_Icon.paa);
@@ -230,6 +239,7 @@ class CfgWeapons {
         displayName = CSTRING(mk6MortarBag_displayName);
         author = ECSTRING(common,ACETeam);
         scope = 2;
+        scopeArsenal = 0;
         model = QPATHTOEF(apl,ACE_CSW_Bag.p3d);
         modes[] = {};
         picture = QPATHTOF(UI\StaticMortarTube_Icon.paa);

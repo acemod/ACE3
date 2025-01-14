@@ -4,6 +4,7 @@ on:
   push:
     branches:
     - master
+    - wog-release
   workflow_dispatch:
 
 concurrency:
