@@ -31,7 +31,7 @@ _currentGrenade = _currentGrenade select 0;
 private _grenadeType = [GVAR(GrenadesAll), GVAR(GrenadesFrag), GVAR(GrenadesNonFrag)] select _type;
 
 // This is faster than checking magazines
-private _grenades = (throwables _unit) apply {_x select 0} select {_x in _grenadeType};
+private _grenades = (throwables _unit) apply {_x select 0} select {private _i = _x; _grenadeType findIf {_x == _i} != -1};
 
 // abort if no grenades are available
 if (_grenades isEqualTo []) exitWith {false};
