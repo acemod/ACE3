@@ -1130,10 +1130,6 @@
             <Chinesesimp>在左面板中显示/隐藏模组图示</Chinesesimp>
             <Turkish>Sol panel de mod ikonlarını göster/gizle</Turkish>
         </Key>
-        <Key ID="STR_ACE_Arsenal_unavailableItems">
-            <English>Unavailable items:\n%1</English>
-            <Korean>사용 불가 아이템:\n%1</Korean>
-        </Key>
         <Key ID="STR_ACE_Arsenal_noVirtualItems">
             <English>No virtual items available</English>
             <Czech>Není dostupný žádný virtuální předmět</Czech>
