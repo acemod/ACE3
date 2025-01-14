@@ -4,30 +4,37 @@
         <Key ID="STR_ACE_Markinglaser_Name">
             <English>IR marking laser</English>
             <German>IR Markierungslaser</German>
+            <French>Laser de marquage IR</French>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Flashing">
             <English>Blinking</English>
             <German>Blinken</German>
+            <French>Clignotant</French>
         </Key>
         <Key ID="STR_ACE_Markinglaser_ToggleLaser">
             <English>Toggle IR marking laser</English>
             <German>IR Markierungslaser umschalten</German>
+            <French>Marquage IR Commutation du laser</French>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Attribute_Enabled_DisplayName">
             <English>Equip with IR marking laser</English>
             <German>Mit IR Markierungslaser ausstatten</German>
+            <French>Équipé d'un laser de marquage IR</French>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Attribute_Enabled_Tooltip">
             <English>Equips the aircraft's main turret or pilot camera with an IR marking laser.</English>
             <German>Rüstet das Hauptgeschütz oder die Pilotenkamera des Luftfahrzeugs mit einem IR Markierungslaser aus.</German>
+            <French>Équiper la tourelle principale de l'aéronef ou la caméra du pilote d'un laser de marquage IR.</French>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Setting_Enabled_DisplayName">
             <English>Enable IR marking lasers for aircraft</English>
             <German>IR Markierungslaser für Luftfahrzeuge aktivieren</German>
+            <French>Permettre l'utilisation de lasers de marquage IR pour les aéronefs</French>
         </Key>
         <Key ID="STR_ACE_Markinglaser_Setting_Enabled_Description">
             <English>Enables the usage of IR marking lasers for aircraft.</English>
             <German>Ermöglicht die Nutzung von IR Markierungslasern für Luftfahrzeuge.</German>
+            <French>Permet d'utiliser les lasers de marquage IR des aéronefs.</French>
         </Key>
     </Package>
 </Project>
