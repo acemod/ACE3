@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Jonpas
- * Stands up the player.
+ * Makes the player stand up.
  *
  * Arguments:
  * Player <OBJECT>
@@ -39,14 +39,19 @@ _player setVariable [QGVAR(sittingStatus), nil];
 
 ["ace_stoodUp", [_player, _seat, _seatPos]] call CBA_fnc_localEvent;
 
-if (isNull _seat) exitWith {};
+if (!alive _seat) exitWith {};
 
 // Allow sitting on this seat again
 private _seatsClaimed = _seat getVariable [QGVAR(seatsClaimed), []];
-_seatsClaimed set [_seatPos, false];
+_seatsClaimed set [_seatPos, objNull];
 _seat setVariable [QGVAR(seatsClaimed), _seatsClaimed, true];
 
-// Unclaim if no one else sitting on it
-if (_seatsClaimed find true == -1) then {
-    [objNull, _seat] call EFUNC(common,claim);
-};
+// Unclaim...
+[objNull, _seat] call EFUNC(common,claim);
+
+// ...but have a remaining unit reclaim ownership immediately
+private _index = _seatsClaimed findIf {!isNull _x};
+
+if (_index == -1) exitWith {};
+
+[_seatsClaimed select _index, _seat] call EFUNC(common,claim);

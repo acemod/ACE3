@@ -188,6 +188,9 @@
             <Turkish>VS-50 Anti-Personel Mayını</Turkish>
             <Hungarian>VS-50 gyalogsági taposóakna</Hungarian>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_APERSMine_ToePopper_Name">
+            <English>VS-50 Anti-Personnel Mine (Toe-Popper)</English>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_APERSTripwireMine_Name">
             <English>PMR-3 Anti-Personnel Tripwire Mine</English>
             <Czech>PMR-3 Protipěchotní mina (drát)</Czech>
