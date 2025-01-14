@@ -5,16 +5,19 @@
             <English>Semi-Active Laser Guided 40mm Grenade</English>
             <Korean>반능동 레이저 유도 40mm 유탄</Korean>
             <Chinesesimp>半主动激光制导40mm榴弹</Chinesesimp>
+            <French>Grenade semi-active à guidage laser de 40 mm</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayName">
             <English>40mm Pike</English>
             <Korean>40mm 파이크</Korean>
             <Chinesesimp>40mm Pike</Chinesesimp>
+            <French>40mm Pike</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayNameShort">
             <English>Pike SALH</English>
             <Korean>파이크 반능동 레이저 유도 유탄</Korean>
             <Chinesesimp>Pike SALH</Chinesesimp>
+            <French>Pike SALH</French>
         </Key>
     </Package>
 </Project>
