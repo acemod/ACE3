@@ -23,7 +23,7 @@
     };
 
     // Check conditions: canInteract and canOpenMenu
-    if !([ACE_player, _target, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, _target, ["isNotInside", "isNotSwimming", "isNotEscorting", "isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
     if !([ACE_player, _target] call FUNC(canOpenMenu)) exitWith {false};
 
     // Statement
