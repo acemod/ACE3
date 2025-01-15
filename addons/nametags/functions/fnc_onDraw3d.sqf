@@ -55,7 +55,7 @@ if (_enabledTagsCursor) then {
     if (_target != ACE_player &&
         {(side group _target) == (side group ACE_player)} &&
         {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
-        {lineIntersectsSurfaces [_camPosASL, eyePos _target, ACE_player, _target] isEqualTo []} &&
+        {lineIntersectsSurfaces [_camPosASL, eyePos _target, ACE_player, _target, true, 1, "GEOM", "NONE"] isEqualTo []} &&
         {!isObjectHidden _target}) then {
 
         private _distance = ACE_player distance _target;
