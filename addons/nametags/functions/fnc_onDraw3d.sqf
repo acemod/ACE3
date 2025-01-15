@@ -83,7 +83,7 @@ if (_enabledTagsNearby) then {
             _x != ACE_player &&
             {(side group _x) == (side group ACE_player)} &&
             {GVAR(showNamesForAI) || {[_x] call EFUNC(common,isPlayer)}} &&
-            {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x] isEqualTo []} &&
+            {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x, true, 1, "GEOM", "NONE"] isEqualTo []} &&
             {!isObjectHidden _x}
         };
         private _crewMen = [];
