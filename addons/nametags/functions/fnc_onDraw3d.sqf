@@ -40,7 +40,7 @@ if !((_camPosAGL select 0) isEqualType 0) exitWith {}; // handle RHS / bugged ve
 private _camPosASL = AGLToASL _camPosAGL;
 
 // Show nametag for the unit behind the cursor or its commander
-if (_enabledTagsCursor) then {
+if (_enabledTagsCursor || {GVAR(showCursorTagForVehicles)}) then {
     private _target = cursorTarget;
     if !(_target isKindOf "CAManBase") then {
         // When cursorTarget is on a vehicle show the nametag for the commander.
