@@ -19,10 +19,9 @@
  */
 
 params ["_player", "_target"];
-if (GVAR(enableLauncherTaking) &&
+GVAR(enableLauncherTaking) &&
 secondaryWeapon _target != "" &&
 secondaryWeapon _player == "" &&
 isNull objectParent _target &&
 isNull objectParent _player &&
-side (group _target) == side (group _player)) exitWith {true};
-false
+side (group _target) == side (group _player);
