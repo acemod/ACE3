@@ -29,10 +29,10 @@ if (EGVAR(medical,fractures) > 0) then {
         _isLimping = true;
     };
     private _aimFracture = 0;
-    if ((_fractures select 4) == 1) then { _aimFracture = _aimFracture + 4; };
-    if ((_fractures select 5) == 1) then { _aimFracture = _aimFracture + 4; };
-    if ((_fractures select 6) == 1) then { _aimFracture = _aimFracture + 4; };
-    if ((_fractures select 7) == 1) then { _aimFracture = _aimFracture + 4; };
+    if ((_fractures select 4) == 1) then { _aimFracture = _aimFracture + 2; };
+    if ((_fractures select 5) == 1) then { _aimFracture = _aimFracture + 2; };
+    if ((_fractures select 6) == 1) then { _aimFracture = _aimFracture + 2; };
+    if ((_fractures select 7) == 1) then { _aimFracture = _aimFracture + 2; };
 
     if (EGVAR(medical,fractures) in [4, 5, 6, 7]) then { // the limp with a splint will still cause effects
         // Block sprint / force walking based on fracture setting and leg splint status
@@ -43,10 +43,10 @@ if (EGVAR(medical,fractures) > 0) then {
             [_unit, "forceWalk", QEGVAR(medical,fracture), _hasLegSplint] call EFUNC(common,statusEffect_set);
         };
 
-        if ((_fractures select 4) == 1) then { _aimFracture = _aimFracture + 4; };
-        if ((_fractures select 5) == 1) then { _aimFracture = _aimFracture + 4; };
-        if ((_fractures select 6) == 1) then { _aimFracture = _aimFracture + 4; };
-        if ((_fractures select 7) == 1) then { _aimFracture = _aimFracture + 4; };
+        if ((_fractures select 4) == 1) then { _aimFracture = _aimFracture + 2; };
+        if ((_fractures select 5) == 1) then { _aimFracture = _aimFracture + 2; };
+        if ((_fractures select 6) == 1) then { _aimFracture = _aimFracture + 2; };
+        if ((_fractures select 7) == 1) then { _aimFracture = _aimFracture + 2; };
     };
     _unit setVariable [QGVAR(aimFracture), _aimFracture, false]; // local only var, used in ace_medical's postInit to set ACE_setCustomAimCoef
 };
