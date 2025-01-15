@@ -7,6 +7,7 @@
             <Chinesesimp>半主动激光制导40mm榴弹</Chinesesimp>
             <Japanese>セミアクティブレーザー誘導40mmグレネード</Japanese>
             <French>Grenade semi-active à guidage laser de 40 mm</French>
+            <Russian>Полуактивная 40-мм граната с лазерным наведением</Russian>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayName">
             <English>40mm Pike</English>
@@ -14,6 +15,7 @@
             <Chinesesimp>40mm Pike</Chinesesimp>
             <Japanese>40mm パイク</Japanese>
             <French>40mm Pike</French>
+            <Russian>40мм pike</Russian>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayNameShort">
             <English>Pike SALH</English>
@@ -21,6 +23,7 @@
             <Chinesesimp>Pike SALH</Chinesesimp>
             <Japanese>パイク SALH</Japanese>
             <French>Pike SALH</French>
+            <Russian>Pike SALH</Russian>
         </Key>
     </Package>
 </Project>
