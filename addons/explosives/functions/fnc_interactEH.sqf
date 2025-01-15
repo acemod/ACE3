@@ -35,7 +35,7 @@ if (
 
     if (!EGVAR(interact_menu,keyDown)) then {
         TRACE_1("Cleaning defuse helpers",count _addedHelpers);
-        {deleteVehicle _x} forEach _addedHelpers;
+        deleteVehicle _addedHelpers;
         [_pfhID] call CBA_fnc_removePerFrameHandler;
     } else {
         // Prevent Rare Error when ending mission with interact key down
