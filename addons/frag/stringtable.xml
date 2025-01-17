@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Frag">
-        <Key ID="STR_ACE_Frag_Debug">
-            <English>Debug</English>
-            <French>Debug</French>
-            <Spanish>Debug</Spanish>
-            <Italian>Debug</Italian>
-            <Russian>Отладка</Russian>
-            <Korean>디버그</Korean>
-            <Japanese>デバッグ</Japanese>
-        </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox">
             <English>Draw Hitboxes</English>
             <French>Afficher les hitboxes</French>
             <Spanish>Dibujar hitboxes</Spanish>
             <Italian>Visualizza hitbox</Italian>
             <Russian>Изобразить хитбоксы</Russian>
+            <German>Zeige Hitboxen</German>
             <Korean>히트박스 그리기</Korean>
             <Japanese>ヒットボックスを描画</Japanese>
+            <Chinesesimp>显示碰撞箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_DrawHitBox_Desc">
             <English>Draw hitboxes on objects that were targeted.</English>
@@ -25,9 +18,10 @@
             <Spanish>Dibuja hitboxes en objetos que son seguidos.</Spanish>
             <Italian>Visualizza hitbox su potenziali bersagli della frammentazione.</Italian>
             <Russian>Изобразить хитбоксы на объектах, которые были нацелены.</Russian>
-            <German>Splitter-/Explosions-Debugging</German>
+            <German>Zeige Hitboxen von Zielobjekten</German>
             <Korean>타겟팅된 오브젝트에 히트박스를 그립니다.</Korean>
             <Japanese>被弾した物体のヒットボックスを描画します。</Japanese>
+            <Chinesesimp>在破片的目标物体上显示碰撞箱</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace">
             <English>Frag/Spall Debug Tracing</English>
@@ -35,9 +29,10 @@
             <Spanish>Trazado Debug de Fragmentación/Astillamiento</Spanish>
             <Italian>Traccia Frag/Spall per Debug</Italian>
             <Russian>Отладка трассировки фрагментации/осколков</Russian>
-            <German>Splitter-/Explosions-Debug-Verfolgung</German>
+            <German>Debug-Verfolgung von Splittern und Wurfstücken</German>
             <Korean>파열/파편 디버그 추적</Korean>
             <Japanese>フラグとスポールの追跡デバッグ</Japanese>
+            <Chinesesimp>破片/剥落绘制轨迹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_EnableDebugTrace_Desc">
             <English>Enables visual tracing of fragmentation and spalling rounds.</English>
@@ -45,9 +40,10 @@
             <Spanish>Habilitar trazado visual de los proyectiles generados por la fragmentación y el astillamiento.</Spanish>
             <Italian>Abilita il tracciamento visivo di effetti di frammentazione e spalling.</Italian>
             <Russian>Включает визуальную трассировку фрагментации и осколочных снарядов.</Russian>
-            <German>Splitter-/Explosions-Debugging</German>
+            <German>Aktiviert die visuelle Verfolgung von Splittern und Wurfstücken.</German>
             <Korean>파열과 파편의 시각적 추적을 활성화합니다.</Korean>
             <Japanese>フラグメンテーションとスポーリングによって発生した破片飛翔体の動きを視覚的に追跡できる機能を有効化します。</Japanese>
+            <Chinesesimp>启用破片以及物体剥落产生的破片的轨迹绘制</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_EnableFrag">
             <English>Fragmentation Simulation</English>
@@ -120,7 +116,7 @@
             <Polish>Symulacja odprysków</Polish>
             <Portuguese>Simulação de estilhaços</Portuguese>
             <Russian>Симуляция обломков</Russian>
-            <German>Explosionssimulation</German>
+            <German>Simulation von Spreng- und Wurfstücken</German>
             <Korean>파편 시뮬레이션</Korean>
             <Japanese>スポーリング シミュレーション</Japanese>
             <Chinese>模擬剝落</Chinese>
@@ -136,7 +132,7 @@
             <Polish>Aktywuje symulację odprysków ACE</Polish>
             <Portuguese>Ativa a simulação de estilhaços do ACE</Portuguese>
             <Russian>Включить симуляцию обломков ACE</Russian>
-            <German>Aktiviere ACE-Explosionssimulation</German>
+            <German>Aktiviere die ACE Simulation von Spreng- und Wurfstücken</German>
             <Korean>ACE 파편 시뮬레이션을 적용합니다.</Korean>
             <Japanese>ACE スポーリング シミュレーションを有効化</Japanese>
             <Chinese>啟用ACE模擬剝落</Chinese>
@@ -149,8 +145,10 @@
             <Spanish>Dibujar Esferas de Eventos</Spanish>
             <Italian>Visualizza sfere eventi</Italian>
             <Russian>Изобразить сферы событий</Russian>
+            <German>Visualisiere Ereigniskugeln</German>
             <Korean>이벤트 구체 그리기</Korean>
             <Japanese>イベントを球体として描画</Japanese>
+            <Chinesesimp>绘制命中球体指示</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_HitSphereEnable_Desc">
             <English>Draw color coded spheres at any event for tracked rounds.</English>
@@ -158,8 +156,10 @@
             <Spanish>Dibujar esferas codificadas por color en cualquier evento para proyectiles seguidos.</Spanish>
             <Italian>Visualizza sfere colorate su ogni evento di un frammento tracciato.</Italian>
             <Russian>Изобразить цветные сферы на любом событии для отслеживаемых раундов.</Russian>
+            <German>Zeige bei jedem Ereignis farbige Kugeln für verfolgte Wurfstücke.</German>
             <Korean>모든 이벤트에서 추적된 파편을 위한 색상으로 구분하는 구체를 그립니다.</Korean>
             <Japanese>追跡中の飛翔体に発生した全てのイベントを色付けた球体として描画します。</Japanese>
+            <Chinesesimp>在破片命中物体的位置上绘制一个带有颜色的提示球</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_Module_DisplayName">
             <English>Fragmentation Simulation</English>
@@ -183,8 +183,10 @@
             <Spanish>Intensidad del astillamiento</Spanish>
             <Italian>Intensità dello spalling</Italian>
             <Russian>Интенсивность обрушения</Russian>
+            <German>Intensität der Wurfstücke</German>
             <Korean>파편 강도</Korean>
             <Japanese>スポーリング強度</Japanese>
+            <Chinesesimp>剥落效果强度</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Frag_SpallIntensity_Desc">
             <English>Modifier to increase or decrease the number and intensity of spalling events. Increasing this value may cause performance degradation.</English>
@@ -192,8 +194,10 @@
             <Spanish>Modificador para aumentar o disminuir el número y la intensidad de los eventos de astillamiento. Aumentar este valor puede producir una degradación en el rendimiento.</Spanish>
             <Italian>Modificatore per il numero e intensità di spalling simulato, ovvero la frammentazione interna ad un veicolo colpito. Valori alti possono causare una degradazione della performance.</Italian>
             <Russian>Модификатор для увеличения или уменьшения количества и интенсивности событий обрушения. Увеличение этого значения может привести к ухудшению производительности.</Russian>
+            <German>Ein Modifikator, der die Anzahl und Intensität der Wurfstücke erhöht oder verringert. Eine Erhöhung dieses Wertes kann zu Leistungseinbußen führen.</German>
             <Korean>파편 이벤트 수와 강도를 늘리거나 줄입니다. 이 값을 늘리면 성능이 저하될 수 있습니다.</Korean>
             <Japanese>スポーリング現象が発生する数と強度を増減することが出来ます。この値を大きくすることはパフォーマンスの低下につながる可能性があります。</Japanese>
+            <Chinesesimp>增加或降低剥落破片的数量和强度. 增加可能会降低FPS</Chinesesimp>
         </Key>
     </Package>
 </Project>
