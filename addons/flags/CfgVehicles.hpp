@@ -5,7 +5,7 @@ class CfgVehicles {
             class ACE_Equipment {
                 class ADDON {
                     displayName = CSTRING(ActionCategory);
-                    insertChildren = QUOTE(_this call FUNC(getActions));
+                    insertChildren = QUOTE(call FUNC(getActions));
                     icon = QPATHTOF(data\icons\place\white_place_icon.paa);
 
                     class GVAR(furlFlag) {
