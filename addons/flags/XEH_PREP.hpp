@@ -1,9 +1,9 @@
-PREP(carriesFlag);
 PREP(carryFlag);
 PREP(furlFlag);
 PREP(getActions);
 PREP(getFlags);
 PREP(handleScrollWheel);
+PREP(isCarryingFlag);
 PREP(pickupFlag);
 PREP(placeFlag);
 PREP(scanConfig);

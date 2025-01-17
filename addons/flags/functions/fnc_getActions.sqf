@@ -50,7 +50,7 @@ private _actions = [];
                 params ["_player", "", "_item"];
                 [_player, _item] call FUNC(carryFlag);
             },
-            {GVAR(enableCarrying) && {!([_player] call FUNC(carriesFlag))}}, // Should not carry flag already
+            {GVAR(enableCarrying) && {!([_player] call FUNC(isCarryingFlag))}}, // Should not carry flag already
             {},
             _x
         ] call EFUNC(interact_menu,createAction),

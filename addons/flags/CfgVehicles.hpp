@@ -10,7 +10,7 @@ class CfgVehicles {
 
                     class GVAR(furlFlag) {
                         displayName = CSTRING(Furl);
-                        condition = QUOTE(_player call FUNC(carriesFlag));
+                        condition = QUOTE(_player call FUNC(isCarryingFlag));
                         statement = QUOTE(_player call FUNC(furlFlag));
                         icon = QPATHTOF(data\icons\carry\white_furl_icon.paa);
                     };

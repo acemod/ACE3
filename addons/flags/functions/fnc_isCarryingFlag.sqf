@@ -10,7 +10,7 @@
  * Unit is carrying a flag <BOOLEAN>
  *
  * Example:
- * [player] call ace_flags_fnc_carriesFlag
+ * [player] call ace_flags_fnc_isCarryingFlag
  *
  * Public: No
  */
