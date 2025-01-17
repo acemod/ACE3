@@ -25,6 +25,10 @@ TRACE_3("Flag pickup",_unit,_item,_flag);
 [{
     params ["_unit", "_item", "_flag"];
 
+    // Unit could not be available anymore or
+    // flag could have been picked up by other player
+    if (isNull _unit || isNull _flag) exitWith {};
+
     [_unit, _item] call EFUNC(common,addToInventory);
     deleteVehicle _flag;
 }, [_unit, _item, _flag], 0.7] call CBA_fnc_waitAndExecute;
