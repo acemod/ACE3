@@ -1,7 +1,8 @@
 private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(SettingCategory)];
 
 [
-    QGVAR(enablePlacing), "CHECKBOX",
+    QGVAR(enablePlacing),
+    "CHECKBOX",
     [LSTRING(AllowPlacingFlags), LSTRING(AllowPlacingFlagsTooltip)],
     _category,
     true,
@@ -9,7 +10,8 @@ private _category = [LELSTRING(common,categoryUncategorized), LLSTRING(SettingCa
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(enableCarrying), "CHECKBOX",
+    QGVAR(enableCarrying),
+    "CHECKBOX",
     [LSTRING(AllowCarryingFlags), LSTRING(AllowCarryingFlagsTooltip)],
     _category,
     true,
