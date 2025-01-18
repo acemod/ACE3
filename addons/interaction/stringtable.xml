@@ -137,23 +137,6 @@
             <Turkish>Lider ol</Turkish>
             <Hungarian>Vezetés átvétele</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Interaction_CancelSelection">
-            <English>Cancel</English>
-            <Czech>Zrušit</Czech>
-            <French>Annuler</French>
-            <Spanish>Cancelar</Spanish>
-            <Italian>Annulla</Italian>
-            <Polish>Anuluj</Polish>
-            <Portuguese>Cancelar</Portuguese>
-            <Russian>Отменить</Russian>
-            <German>Abbrechen</German>
-            <Korean>취소</Korean>
-            <Japanese>中止</Japanese>
-            <Chinese>取消</Chinese>
-            <Chinesesimp>取消</Chinesesimp>
-            <Turkish>Iptal</Turkish>
-            <Hungarian>Mégse</Hungarian>
-        </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
             <Czech>TANCUJ!</Czech>
