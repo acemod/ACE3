@@ -170,7 +170,7 @@ if (isServer) then {
 };
 
 [{
-    {deleteVehicle _x} forEach _this;
+    deleteVehicle _this;
 }, [_fire, _smoke, _light, _sound], _timeToLive] call CBA_fnc_waitAndExecute;
 
 // Damage
