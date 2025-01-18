@@ -1591,6 +1591,14 @@
             <Japanese>身体部位の輪郭表示の色</Japanese>
             <Chinesesimp>身体部位轮廓颜色</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_needToHolster">
+            <English>You must holster your weapon first!</English>
+            <Japanese>先に武器をしまう必要があります!</Japanese>
+            <French>Vous devez d'abord rengainer votre arme !</French>
+            <Chinesesimp>你必须先收起武器!</Chinesesimp>
+            <Polish>무기를 먼저 집어넣어야 합니다!</Polish>
+            <Russian>Сначала ты должен убрать свое оружие!</Russian>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_showBleeding_Description">
             <English>Display if the patient is bleeding, optionally with rate</English>
             <French>Indique si le patient saigne, éventuellement avec le taux de saignement</French>

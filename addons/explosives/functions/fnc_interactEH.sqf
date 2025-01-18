@@ -35,7 +35,7 @@ if (
 
     if (!EGVAR(interact_menu,keyDown)) then {
         TRACE_1("Cleaning defuse helpers",count _addedHelpers);
-        {deleteVehicle _x} forEach _addedHelpers;
+        deleteVehicle _addedHelpers;
         [_pfhID] call CBA_fnc_removePerFrameHandler;
     } else {
         // Prevent Rare Error when ending mission with interact key down
@@ -45,10 +45,9 @@ if (
 
         // Rescan if player has moved more than 5 meters from last position
         if (_playerPos distanceSqr _setPosition > 25) then {
-            private _cfgAmmo = configFile >> "CfgAmmo";
             {
-                if (_x distanceSqr _player < 225 && {!(_x in _minesHelped)} && {!(_x in GVAR(excludedMines))} && {getModelInfo _x select 0 isNotEqualTo "empty.p3d"}) then {
-                    private _config = _cfgAmmo >> typeOf _x;
+                if (!(_x in _minesHelped) && {!(_x in GVAR(excludedMines))} && {getModelInfo _x select 0 isNotEqualTo "empty.p3d"}) then {
+                    private _config = configOf _x;
                     private _size = getNumber (_config >> QGVAR(size));
                     private _defuseClass = ["ACE_DefuseObject", "ACE_DefuseObject_Large"] select (_size == 1);
                     private _defusePos = getArray (_config >> QGVAR(defuseObjectPosition));
@@ -64,10 +63,10 @@ if (
                     _addedHelpers pushBack _helper;
                     _minesHelped pushBack _x;
                 };
-            } forEach allMines;
+            } forEach (nearestMines [_player, [], 15, false, false]);
 
             _args set [0, _playerPos];
         };
     };
     END_COUNTER(interactEH);
-}, 0.5, [getPosASL ACE_player vectorAdd [-100, 0, 0], [], []]] call CBA_fnc_addPerFrameHandler;
+}, 0.5, [[0, 0, -100], [], []]] call CBA_fnc_addPerFrameHandler;

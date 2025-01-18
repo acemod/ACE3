@@ -396,8 +396,8 @@
             <German>Wie lange Auftank-Interaktionen in Sekunden dauern.</German>
             <Korean>연료 재보급 상호작용에 걸리는 시간(초)입니다.</Korean>
             <Japanese>燃料補給に掛かる時間。 (秒単位)</Japanese>
-            <Turkish>Saniye biriminde yakıt ikmali etkileşimlerinin süresi.</Turkish>
             <Chinesesimp>加油动作持续时间(秒)</Chinesesimp>
+            <Turkish>Saniye biriminde yakıt ikmali etkileşimlerinin süresi.</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_progressDuration_DisplayName">
             <English>Pump/Hose Interaction Time</English>
@@ -409,8 +409,8 @@
             <German>Interaktionszeit zwischen Pumpe und Schlauch</German>
             <Korean>펌프/호스 상호작용 시간</Korean>
             <Japanese>ポンプ/ホースのインタラクション所要時間</Japanese>
-            <Turkish>Pompa/Hortum Etkileşim Süresi</Turkish>
             <Chinesesimp>加油动作所需时间</Chinesesimp>
+            <Turkish>Pompa/Hortum Etkileşim Süresi</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_Description">
             <English>How fast should a fuel source's tank be filled?</English>

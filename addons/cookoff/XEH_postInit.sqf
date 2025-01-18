@@ -16,24 +16,18 @@ if (isServer) then {
 
 // Handle cleaning up effects when objects are deleted mid cook-off
 ["AllVehicles", "Deleted", {
-    {
-        deleteVehicle _x;
-    } forEach ((_this select 0) getVariable [QGVAR(effects), []]);
+    deleteVehicle ((_this select 0) getVariable [QGVAR(effects), []]);
 }, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to exclude animals as well
 
 ["ReammoBox_F", "Deleted", {
-    {
-        deleteVehicle _x;
-    } forEach ((_this select 0) getVariable [QGVAR(effects), []]);
+    deleteVehicle ((_this select 0) getVariable [QGVAR(effects), []]);
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 // Raised when the flames have subsided or after the ammo of a box has finished cooking off
 [QGVAR(cleanupEffects), {
     params ["_object"];
 
-    {
-        deleteVehicle _x;
-    } forEach (_object getVariable [QGVAR(effects), []]);
+    deleteVehicle (_object getVariable [QGVAR(effects), []]);
 
     _object setVariable [QGVAR(effects), nil];
 }] call CBA_fnc_addEventHandler;

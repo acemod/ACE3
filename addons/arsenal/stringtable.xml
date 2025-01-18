@@ -1093,6 +1093,14 @@
             <Japanese>声の保存</Japanese>
             <Chinesesimp>保存声音</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Arsenal_missingItems">
+            <English>Missing items:\n%1</English>
+            <Korean>누락 아이템:\n%1</Korean>
+            <Japanese>存在しないアイテム:\n%1</Japanese>
+            <Chinesesimp>缺失物品:\n%1</Chinesesimp>
+            <French>Éléments manquants:\n%1</French>
+            <Russian>Недостающие предметы:\n%1</Russian>
+        </Key>
         <Key ID="STR_ACE_Arsenal_modIconsSetting">
             <English>Enable mod icons</English>
             <Czech>Zapnout ikony modů</Czech>
@@ -1746,7 +1754,7 @@
             <Russian>Комплекты экипировки, опубликованные вами и другими игроками</Russian>
             <German>Ausrüstungen, die von dir und anderen Spielern geteilt wurden</German>
             <Korean>플레이어들이 공유하는 로드아웃</Korean>
-            <Japanese>自分か他人によって共有された装備です</Japanese>
+            <Japanese>自分や他人によって共有された装備です</Japanese>
             <Chinese>由你與其他玩家分享的裝備配置</Chinese>
             <Chinesesimp>你和其他玩家分享的负载配置</Chinesesimp>
             <Turkish>Senin veya diğer kişiler tarafından paylaşılan kıyafetler</Turkish>
@@ -1766,6 +1774,30 @@
             <Chinese>工具</Chinese>
             <Chinesesimp>工具</Chinesesimp>
             <Turkish>Araçlar</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_unavailableItems">
+            <English>Unavailable items:\n%1</English>
+            <Korean>사용 불가 아이템:\n%1</Korean>
+            <Japanese>利用できないアイテム:\n%1</Japanese>
+            <Chinesesimp>不可用物品:\n%1</Chinesesimp>
+            <French>Articles indisponibles:\n%1</French>
+            <Russian>Недоступные предметы:\n%1</Russian>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_unavailableItemsSetting">
+            <English>Show missing / unavailable items</English>
+            <Korean>누락/사용 불가 아이템 표시</Korean>
+            <Japanese>存在しない/利用できないアイテムを表示</Japanese>
+            <Chinesesimp>显示缺失/不可用物品</Chinesesimp>
+            <French>Afficher les éléments manquants ou indisponibles</French>
+            <Russian>Показать отсутствующие / недоступные предметы</Russian>
+        </Key>
+        <Key ID="STR_ACE_Arsenal_unavailableItemsTooltip">
+            <English>Show missing / unavailable items when hovering over a loadout</English>
+            <Korean>로드아웃 위에 마우스 커서를 올리면 누락되거나 사용할 수 없는 아이템을 표시합니다.</Korean>
+            <Japanese>装備にカーソルを重ねた時に存在しない/利用できないアイテムを表示します</Japanese>
+            <Chinesesimp>鼠标悬停在负载上时显示缺失/不可用物品</Chinesesimp>
+            <French>Afficher les éléments manquants / indisponibles au survol d'un chargement</French>
+            <Russian>Показать отсутствующие / недоступные предметы при наведении курсора мыши на комплект</Russian>
         </Key>
     </Package>
 </Project>

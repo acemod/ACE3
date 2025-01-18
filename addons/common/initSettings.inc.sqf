@@ -30,6 +30,15 @@ private _categorySway = [_category, LSTRING(subcategory_sway)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(checkExtensions),
+    "CHECKBOX",
+    [LSTRING(checkExtensions_DisplayName)],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(settingFeedbackIcons),
     "LIST",
     [LSTRING(SettingFeedbackIconsName), LSTRING(SettingFeedbackIconsDesc)],
