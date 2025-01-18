@@ -12,7 +12,7 @@ class CfgWeapons {
         picture = QPATHTOF(data\pictures\white_item.paa);
 
         GVAR(texture) = "\a3\data_f\flags\flag_white_co.paa";
-        GVAR(carrier) = "FlagChecked_F";
+        GVAR(carrier) = QGVAR(carrier_white);
         GVAR(actionIconPlace) = QPATHTOF(data\icons\place\white_place_icon.paa);
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\white_carry_icon.paa);
 
@@ -25,6 +25,7 @@ class CfgWeapons {
         picture = QPATHTOF(data\pictures\red_item.paa);
 
         GVAR(texture) = "\a3\data_f\flags\flag_red_co.paa";
+        GVAR(carrier) = QGVAR(carrier_red);
         GVAR(actionIconPlace) = QPATHTOF(data\icons\place\red_place_icon.paa);
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\red_carry_icon.paa);
     };
@@ -33,6 +34,7 @@ class CfgWeapons {
         picture = QPATHTOF(data\pictures\blue_item.paa);
 
         GVAR(texture) = "\a3\data_f\flags\Flag_blue_co.paa";
+        GVAR(carrier) = QGVAR(carrier_blue);
         GVAR(actionIconPlace) = QPATHTOF(data\icons\place\blue_place_icon.paa);
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\blue_carry_icon.paa);
     };
@@ -41,6 +43,7 @@ class CfgWeapons {
         picture = QPATHTOF(data\pictures\green_item.paa);
 
         GVAR(texture) = "\a3\data_f\flags\flag_green_co.paa";
+        GVAR(carrier) = QGVAR(carrier_green);
         GVAR(actionIconPlace) = QPATHTOF(data\icons\place\green_place_icon.paa);
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\green_carry_icon.paa);
     };
@@ -49,6 +52,7 @@ class CfgWeapons {
         picture = QPATHTOF(data\pictures\yellow_item.paa);
 
         GVAR(texture) = QPATHTOF(data\Flag_yellow_co.paa);
+        GVAR(carrier) = QGVAR(carrier_yellow);
         GVAR(actionIconPlace) = QPATHTOF(data\icons\place\yellow_place_icon.paa);
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\yellow_carry_icon.paa);
     };
@@ -57,6 +61,7 @@ class CfgWeapons {
         picture = QPATHTOF(data\pictures\orange_item.paa);
 
         GVAR(texture) = QPATHTOF(data\flag_orange_co.paa);
+        GVAR(carrier) = QGVAR(carrier_orange);
         GVAR(actionIconPlace) = QPATHTOF(data\icons\place\orange_place_icon.paa);
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\orange_carry_icon.paa);
     };
@@ -65,6 +70,7 @@ class CfgWeapons {
         picture = QPATHTOF(data\pictures\purple_item.paa);
 
         GVAR(texture) = QPATHTOF(data\flag_purple_co.paa);
+        GVAR(carrier) = QGVAR(carrier_purple);
         GVAR(actionIconPlace) = QPATHTOF(data\icons\place\purple_place_icon.paa);
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\purple_carry_icon.paa);
     };
@@ -73,6 +79,7 @@ class CfgWeapons {
         picture = QPATHTOF(data\pictures\black_item.paa);
 
         GVAR(texture) = QPATHTOF(data\flag_black_co.paa);
+        GVAR(carrier) = QGVAR(carrier_black);
         GVAR(actionIconPlace) = QPATHTOF(data\icons\place\black_place_icon.paa);
         GVAR(actionIconCarry) = QPATHTOF(data\icons\carry\black_carry_icon.paa);
     };

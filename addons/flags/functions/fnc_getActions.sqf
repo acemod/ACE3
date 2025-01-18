@@ -28,11 +28,14 @@ private _actions = [];
             QGVAR(place_) + _x,
             format [LLSTRING(Place), _flagName],
             _actionIconPlace,
-            {
+            { // Statement
                 params ["_player", "", "_item"];
                 [_player, _item] call FUNC(placeFlag);
             },
-            {GVAR(enablePlacing)},
+            { // Condition
+                GVAR(enablePlacing) &&
+                {[_player, objNull, ["isNotSwimming", "isNotOnLadder"]] call EFUNC(common,canInteractWith)}
+            },
             {},
             _x
         ] call EFUNC(interact_menu,createAction),
@@ -46,11 +49,15 @@ private _actions = [];
             QGVAR(carry_) + _x,
             format [LLSTRING(Carry), _flagName],
             _actionIconCarry,
-            {
+            { // Statement
                 params ["_player", "", "_item"];
                 [_player, _item] call FUNC(carryFlag);
             },
-            {GVAR(enableCarrying) && {!([_player] call FUNC(isCarryingFlag))}}, // Should not carry flag already
+            { // Condition
+                GVAR(enableCarrying) &&
+                {!([_player] call FUNC(isCarryingFlag))} &&
+                {[_player, objNull, ["isNotSwimming", "isNotOnLadder"]] call EFUNC(common,canInteractWith)}
+            },
             {},
             _x
         ] call EFUNC(interact_menu,createAction),

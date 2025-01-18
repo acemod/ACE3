@@ -20,7 +20,7 @@
 params ["_player", "_item"];
 TRACE_2("Placing flag",_player,_item);
 
-(GVAR(flagItemCache) get _item) params ["_flagName", "_texture", "_carrierClass"];
+(GVAR(flagItemCache) get _item) params ["_flagName", "", "_carrierClass"];
 
 // Set flag start height
 GVAR(objectHeight) = MIN_HEIGHT;
@@ -28,7 +28,6 @@ GVAR(objectHeight) = MIN_HEIGHT;
 GVAR(isPlacing) = PLACE_WAITING;
 
 private _flag = _carrierClass createVehicle [0, 0, 0];
-_flag setFlagTexture _texture;
 
 // Add info dialog for the player which show the controls
 private _placeFlagText = format [LLSTRING(Place), _flagName];

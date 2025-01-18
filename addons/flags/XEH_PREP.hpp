@@ -4,6 +4,8 @@ PREP(getActions);
 PREP(getFlags);
 PREP(handleScrollWheel);
 PREP(isCarryingFlag);
+PREP(modifyPickupAction);
 PREP(pickupFlag);
 PREP(placeFlag);
 PREP(scanConfig);
+PREP(setFlagTexture);

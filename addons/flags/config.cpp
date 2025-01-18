@@ -3,7 +3,16 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        units[] = {};
+        units[] = {
+            QGVAR(carrier_white),
+            QGVAR(carrier_red),
+            QGVAR(carrier_blue),
+            QGVAR(carrier_green),
+            QGVAR(carrier_yellow),
+            QGVAR(carrier_orange),
+            QGVAR(carrier_purple),
+            QGVAR(carrier_black)
+        };
         weapons[] = {
             QGVAR(white),
             QGVAR(red),
