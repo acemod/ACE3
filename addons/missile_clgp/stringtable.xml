@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="MISSILE_CLGP">
+        <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_descriptionShort">
+            <English>Semi-Active Laser Guided 40mm Grenade</English>
+            <Korean>반능동 레이저 유도 40mm 유탄</Korean>
+            <Chinesesimp>半主动激光制导40mm榴弹</Chinesesimp>
+            <Japanese>セミアクティブレーザー誘導40mmグレネード</Japanese>
+            <French>Grenade semi-active à guidage laser de 40 mm</French>
+            <Russian>Полуактивная 40-мм граната с лазерным наведением</Russian>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayName">
+            <English>40mm Pike</English>
+            <Korean>40mm 파이크</Korean>
+            <Chinesesimp>40mm Pike</Chinesesimp>
+            <Japanese>40mm パイク</Japanese>
+            <French>40mm Pike</French>
+            <Russian>40мм pike</Russian>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayNameShort">
+            <English>Pike SALH</English>
+            <Korean>파이크 반능동 레이저 유도 유탄</Korean>
+            <Chinesesimp>Pike SALH</Chinesesimp>
+            <Japanese>パイク SALH</Japanese>
+            <French>Pike SALH</French>
+            <Russian>Pike SALH</Russian>
+        </Key>
+    </Package>
+</Project>

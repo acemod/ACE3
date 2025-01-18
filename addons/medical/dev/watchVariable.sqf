@@ -59,7 +59,7 @@ GVAR(dev_watchVariableRunning) = true;
     _return pushBack format [" - [Pain: %1] [Suppress: %2]", _pain toFixed 3, _painSuppress toFixed 3];
 
     // Damage:
-    private _damage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+    private _damage = GET_BODYPART_DAMAGE(_unit);
     private _limping = ["", "[<t color ='#FFCC22'> Limping </t>]"] select (_unit getVariable [QEGVAR(medical,isLimping), false]);
     _return pushBack format ["BodyPartDamage: [H: %1] [B: %2]", (_damage select 0) toFixed 2, (_damage select 1) toFixed 2];
     _return pushBack format ["[LA:%1] [RA: %2] [LL:%3] [RL: %4]", (_damage select 2) toFixed 2, (_damage select 3) toFixed 2, (_damage select 4) toFixed 2, (_damage select 5) toFixed 2];
@@ -150,9 +150,8 @@ GVAR(dev_watchVariableRunning) = true;
     };
     _return pushBack format ["Adjusts: [HR %1][PS %2][PR %3]", _hrTargetAdjustment toFixed 2, _painSupressAdjustment toFixed 2, _peripheralResistanceAdjustment toFixed 2];
     {
-        private _medicationCount = [_unit, _x, true] call EFUNC(medical_status,getMedicationCount);
-        private _medicationEffectiveness = [_unit, _x, false] call EFUNC(medical_status,getMedicationCount);
-        _return pushBack format ["-%1: C: %2 - E: %3", _x, _medicationCount toFixed 2, _medicationEffectiveness toFixed 2];
+        ([_unit, _x, false] call EFUNC(medical_status,getMedicationCount)) params ["_medicationDose", "_medicationEffectiveness"];
+        _return pushBack format ["-%1: D: %2 - E: %3", _x, _medicationDose toFixed 2, _medicationEffectiveness toFixed 2];
     } forEach _uniqueMedications;
     _return pushBack "------- Medications Raw: -------";
     _return append _rawMedications;

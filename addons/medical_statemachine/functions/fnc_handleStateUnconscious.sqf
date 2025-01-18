@@ -36,7 +36,7 @@ if (EGVAR(medical,spontaneousWakeUpChance) > 0) then {
 
         private _wakeUpCheckInterval = SPONTANEOUS_WAKE_UP_INTERVAL;
         if (EGVAR(medical,spontaneousWakeUpEpinephrineBoost) > 1) then {
-            private _epiEffectiveness = [_unit, "Epinephrine", false] call EFUNC(medical_status,getMedicationCount);
+            private _epiEffectiveness = ([_unit, "Epinephrine", false] call EFUNC(medical_status,getMedicationCount)) select 1;
             _wakeUpCheckInterval = _wakeUpCheckInterval * linearConversion [0, 1, _epiEffectiveness, 1, 1 / EGVAR(medical,spontaneousWakeUpEpinephrineBoost), true];
             TRACE_2("epiBoost",_epiEffectiveness,_wakeUpCheckInterval);
         };

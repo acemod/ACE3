@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="MISSILE_AIM9">
+        <Key ID="STR_ACE_MISSILE_AIM9_aim132">
+            <English>AIM-132 [ACE]</English>
+            <French>AIM-132 [ACE]</French>
+            <Italian>AIM-132 [ACE]</Italian>
+            <Russian>AIM-132 [ACE]</Russian>
+            <German>AIM-132 [ACE]</German>
+            <Korean>AIM-132 아스람 [ACE]</Korean>
+            <Japanese>AIM-132 [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_aim132_1x">
+            <English>1x AIM-132 [ACE]</English>
+            <French>1x AIM-132 [ACE]</French>
+            <Italian>1x AIM-132 [ACE]</Italian>
+            <Russian>1x AIM-132 [ACE]</Russian>
+            <German>1x AIM-132 [ACE]</German>
+            <Korean>1x AIM-132 아스람 [ACE]</Korean>
+            <Japanese>1x AIM-132 [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_aim132_2x">
+            <English>2x AIM-132 [ACE]</English>
+            <French>2x AIM-132 [ACE]</French>
+            <Italian>2x AIM-132 [ACE]</Italian>
+            <Russian>2x AIM-132 [ACE]</Russian>
+            <German>2x AIM-132 [ACE]</German>
+            <Korean>2x AIM-132 아스람 [ACE]</Korean>
+            <Japanese>2x AIM-132 [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_aim132_4x">
+            <English>4x AIM-132 [ACE]</English>
+            <French>4x AIM-132 [ACE]</French>
+            <Italian>4x AIM-132 [ACE]</Italian>
+            <Russian>4x AIM-132 [ACE]</Russian>
+            <German>4x AIM-132 [ACE]</German>
+            <Korean>4x AIM-132 아스람 [ACE]</Korean>
+            <Japanese>4x AIM-132 [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_m">
+            <English>AIM-9M [ACE]</English>
+            <French>AIM-9M [ACE]</French>
+            <Italian>AIM-9M [ACE]</Italian>
+            <Russian>AIM-9M [ACE]</Russian>
+            <German>AIM-9M [ACE]</German>
+            <Korean>AIM-9M 사이드와인더 [ACE]</Korean>
+            <Japanese>AIM-9M [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_m_1x">
+            <English>1x AIM-9M [ACE]</English>
+            <French>1x AIM-9M [ACE]</French>
+            <Italian>1x AIM-9M [ACE]</Italian>
+            <Russian>1x AIM-9M [ACE]</Russian>
+            <German>1x AIM-9M [ACE]</German>
+            <Korean>1x AIM-9M 사이드와인더 [ACE]</Korean>
+            <Japanese>1x AIM-9M [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_m_2x">
+            <English>2x AIM-9M [ACE]</English>
+            <French>2x AIM-9M [ACE]</French>
+            <Italian>2x AIM-9M [ACE]</Italian>
+            <Russian>2x AIM-9M [ACE]</Russian>
+            <German>2x AIM-9M [ACE]</German>
+            <Korean>2x AIM-9M 사이드와인더 [ACE]</Korean>
+            <Japanese>2x AIM-9M [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_r73">
+            <English>R-73 [ACE]</English>
+            <French>R-73 [ACE]</French>
+            <Italian>R-73 [ACE]</Italian>
+            <Russian>R-73 [ACE]</Russian>
+            <German>R-73 [ACE]</German>
+            <Korean>R-73 빔펠 [ACE]</Korean>
+            <Japanese>R-73 [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_r73_1x">
+            <English>1x R-73 [ACE]</English>
+            <French>1x R-73 [ACE]</French>
+            <Italian>1x R-73 [ACE]</Italian>
+            <Russian>1x R-73 [ACE]</Russian>
+            <German>1x R-73 [ACE]</German>
+            <Korean>1x R-73 빔펠 [ACE]</Korean>
+            <Japanese>1x R-73 [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_r74">
+            <English>R-74 [ACE]</English>
+            <French>R-74 [ACE]</French>
+            <Italian>R-74 [ACE]</Italian>
+            <Russian>R-74 [ACE]</Russian>
+            <German>R-74 [ACE]</German>
+            <Korean>R-74 빔펠 [ACE]</Korean>
+            <Japanese>R-74 [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_r74_1x">
+            <English>1x R-74 [ACE]</English>
+            <French>1x R-74 [ACE]</French>
+            <Italian>1x R-74 [ACE]</Italian>
+            <Russian>1x R-74 [ACE]</Russian>
+            <German>1x R-74 [ACE]</German>
+            <Korean>1x R-74 빔펠 [ACE]</Korean>
+            <Japanese>1x R-74 [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_r74_2x">
+            <English>2x R-74 [ACE]</English>
+            <French>2x R-74 [ACE]</French>
+            <Italian>2x R-74 [ACE]</Italian>
+            <Russian>2x R-74 [ACE]</Russian>
+            <German>2x R-74 [ACE]</German>
+            <Korean>2x R-74 빔펠 [ACE]</Korean>
+            <Japanese>2x R-74 [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_x">
+            <English>AIM-9X [ACE]</English>
+            <French>AIM-9X [ACE]</French>
+            <Italian>AIM-9X [ACE]</Italian>
+            <Russian>AIM-9X [ACE]</Russian>
+            <German>AIM-9X [ACE]</German>
+            <Korean>AIM-9X 사이드와인더 [ACE]</Korean>
+            <Japanese>AIM-9X [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_x_1x">
+            <English>1x AIM-9X [ACE]</English>
+            <French>1x AIM-9X [ACE]</French>
+            <Italian>1x AIM-9X [ACE]</Italian>
+            <Russian>1x AIM-9X [ACE]</Russian>
+            <German>1x AIM-9X [ACE]</German>
+            <Korean>1x AIM-9X 사이드와인더 [ACE]</Korean>
+            <Japanese>1x AIM-9X [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM9_x_2x">
+            <English>2x AIM-9X [ACE]</English>
+            <French>2x AIM-9X [ACE]</French>
+            <Italian>2x AIM-9X [ACE]</Italian>
+            <Russian>2x AIM-9X [ACE]</Russian>
+            <German>2x AIM-9X [ACE]</German>
+            <Korean>2x AIM-9X 사이드와인더 [ACE]</Korean>
+            <Japanese>2x AIM-9X [ACE]</Japanese>
+        </Key>
+    </Package>
+</Project>

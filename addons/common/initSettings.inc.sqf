@@ -30,6 +30,15 @@ private _categorySway = [_category, LSTRING(subcategory_sway)];
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(checkExtensions),
+    "CHECKBOX",
+    [LSTRING(checkExtensions_DisplayName)],
+    _category,
+    false,
+    1
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(settingFeedbackIcons),
     "LIST",
     [LSTRING(SettingFeedbackIconsName), LSTRING(SettingFeedbackIconsDesc)],
@@ -100,6 +109,16 @@ private _categorySway = [_category, LSTRING(subcategory_sway)];
     _category,
     [[0, 1, 2], [LSTRING(None), LSTRING(progressBarInfoPercentage), LSTRING(progressBarInfoTime)], 2],
     0
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(magneticDeclination),
+    "CHECKBOX",
+    [LSTRING(magneticDeclination), LSTRING(magneticDeclinationooltip)],
+    _category,
+    false,
+    1,
+    {call FUNC(getMagneticBearingOffset)}
 ] call CBA_fnc_addSetting;
 
 [
