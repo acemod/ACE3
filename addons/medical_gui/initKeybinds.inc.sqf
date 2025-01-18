@@ -23,7 +23,7 @@
     };
 
     // Check conditions: canInteract and canOpenMenu
-    if !([ACE_player, _target, ["isNotInside", "isNotSwimming", "isNotEscorting", "isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, _target, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
     if !([ACE_player, _target] call FUNC(canOpenMenu)) exitWith {false};
 
     // Statement
@@ -38,7 +38,7 @@
 
 ["ACE3 Common", QGVAR(peekMedicalInfoKey), LLSTRING(PeekMedicalInfo), {
     // Conditions: canInteract
-    if !([ACE_player, objNull, ["isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
+    if !([ACE_player, objNull, ["isNotInside", "isNotSwimming", "isNotEscorting", "isNotDragging", "isNotCarrying", "isNotOnLadder"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
     // Statement
     [ACE_player, -1] call FUNC(displayPatientInformation);
