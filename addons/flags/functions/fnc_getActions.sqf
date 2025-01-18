@@ -25,7 +25,7 @@ private _actions = [];
     // Place flag
     _actions pushBack [
         [
-            "place_" + _x,
+            QGVAR(place_) + _x,
             format [LLSTRING(Place), _flagName],
             _actionIconPlace,
             {
@@ -43,7 +43,7 @@ private _actions = [];
     // Carry flag
     _actions pushBack [
         [
-            "carry_" + _x,
+            QGVAR(carry_) + _x,
             format [LLSTRING(Carry), _flagName],
             _actionIconCarry,
             {
