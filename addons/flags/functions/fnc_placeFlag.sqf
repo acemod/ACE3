@@ -61,8 +61,8 @@ private _mouseClickID = [_player, "DefaultAction", {
 
             _player removeItem _item;
 
-            private _jipID = [QGVAR(flagPlaced), [_player, _item, _flag]] call CBA_fnc_globalEventJIP;
-            [_jipID, _flag] call CBA_fnc_removeGlobalEventJIP;
+            // Provide hook
+            [QGVAR(placed), [_player, _flag, _item]] call CBA_fnc_localEvent;
         } else {
             // Action is canceled
             deleteVehicle _flag;
