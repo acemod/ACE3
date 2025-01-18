@@ -43,7 +43,7 @@ if (
     {random 1 < linearConversion [CONSEQ_THRESHOLD_SEVERE, 100, _thirst max _hunger, 0.05, 0.1, true]}}
 ) exitWith {
     if (XGVAR(nearDepletedConsequence) == 1) then { // Set unit unconscious with a 45s cooldown
-        if (_player getVariable [QGVAR(nextUnconsciousTime), CBA_missionTime] > CBA_missionTime) then {
+        if (_player getVariable [QGVAR(nextUnconsciousTime), CBA_missionTime] >= CBA_missionTime) then {
             _player setVariable [QGVAR(nextUnconsciousTime), CBA_missionTime + 45];
             [_player, true, 5, true] call EFUNC(medical,setUnconscious);
         };
