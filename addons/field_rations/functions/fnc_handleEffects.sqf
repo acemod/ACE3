@@ -49,7 +49,7 @@ if (
         };
     } else { // Add pain
         if (ACE_Player getVariable [QEGVAR(medical,pain), 0] < 0.1) then {
-            [ACE_Player, 0.1] call ace_medical_fnc_adjustPainLevel;
+            [ACE_Player, 0.1] call EFUNC(medical,adjustPainLevel);
         };
     };
 };
