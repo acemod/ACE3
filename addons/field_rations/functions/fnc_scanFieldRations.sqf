@@ -36,7 +36,7 @@ private _magsMissingItemProperty = [];
 } forEach (_fnc_isFieldRationItem configClasses _cfgMagazines);
 
 if (_magsMissingItemProperty isNotEqualTo []) then {
-    WARNING_1("[ACE] field_rations - the following magazines are valid rations but do not have item property - %1", _magsMissingItemProperty joinString ", ");
+    WARNING_1("[ACE] field_rations - the following magazines are valid rations but do not have item property - %1",_magsMissingItemProperty joinString ", ");
 };
 
 uiNamespace setVariable [QXGVAR(fieldRationItems), compileFinal _list];
