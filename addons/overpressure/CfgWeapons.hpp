@@ -101,7 +101,7 @@ class CfgWeapons {
 
     class rockets_230mm_GAT: RocketPods {
         GVAR(damage) = 0.85;
-        GVAR(offset) = 1;
+        GVAR(offset) = 0.5;
     };
 
     // Vehicle cannons, forward-facing overpressure
