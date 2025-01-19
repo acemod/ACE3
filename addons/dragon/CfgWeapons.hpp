@@ -36,7 +36,7 @@ class CfgWeapons {
         EGVAR(overpressure,angle) = 60;
         EGVAR(overpressure,range) = 10;
         EGVAR(overpressure,damage) = 0.85;
-        EGVAR(overpressure,offset) = -0.4;
+        EGVAR(overpressure,offset) = 0.4;
 
         initSpeed = 120;
 

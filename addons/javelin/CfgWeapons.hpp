@@ -25,7 +25,7 @@ class CfgWeapons {
         EGVAR(overpressure,angle) = 30;
         EGVAR(overpressure,range) = 2;
         EGVAR(overpressure,damage) = 0.5;
-        EGVAR(overpressure,offset) = -0.5;
+        EGVAR(overpressure,offset) = 0.5;
     };
 
     class Launcher_Base_F;
