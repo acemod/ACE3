@@ -30,7 +30,7 @@ private _fnc_isFieldRationItem = toString {
 private _magsMissingItemProperty = [];
 {
     _list set [configName _x, ""];
-    if (getNumber (_x >> "ACE_asItem") == 0 && {getNumber (_x >> "ACE_isUnique") == 0} then {
+    if (getNumber (_x >> "ACE_asItem") == 0 && {getNumber (_x >> "ACE_isUnique") == 0}) then {
         _magsMissingItemProperty pushBack configName _x;
     };
 } forEach (_fnc_isFieldRationItem configClasses _cfgMagazines);
