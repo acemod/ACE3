@@ -76,6 +76,5 @@ private _progressText = if (isNull _sourceConfig) then {
     _fnc_onSuccess,
     _fnc_onFailure,
     _progressText,
-    _fnc_condition,
-    ["isNotInside"]
+    _fnc_condition
 ] call EFUNC(common,progressBar);

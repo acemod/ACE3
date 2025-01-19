@@ -15,7 +15,7 @@ if !(hasInterface) exitWith {};
     };
 
     // Compile water source actions
-    GVAR(mainAction) = [
+    private _mainAction = [
         QGVAR(waterSource),
         LLSTRING(WaterSource),
         QPATHTOF(ui\icon_water_tap.paa),
@@ -38,7 +38,7 @@ if !(hasInterface) exitWith {};
         [false, false, false, false, true]
     ] call EFUNC(interact_menu,createAction);
 
-    GVAR(subActions) = [
+    private _subActions = [
         [
             QGVAR(checkWater),
             LLSTRING(CheckWater),
@@ -68,10 +68,10 @@ if !(hasInterface) exitWith {};
     ];
 
     // Add water source actions to helper
-    [QGVAR(helper), 0, [], GVAR(mainAction)] call EFUNC(interact_menu,addActionToClass);
+    [QGVAR(helper), 0, [], _mainAction] call EFUNC(interact_menu,addActionToClass);
     {
         [QGVAR(helper), 0, [QGVAR(waterSource)], _x] call EFUNC(interact_menu,addActionToClass);
-    } forEach GVAR(subActions);
+    } forEach _subActions;
 
     // Add inventory context menu option to consume items
     private _eatOrDrinkCondition = [

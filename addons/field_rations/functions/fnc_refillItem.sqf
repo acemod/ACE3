@@ -78,6 +78,5 @@ private _fnc_condition = {
     _fnc_onSuccess,
     _fnc_onFailure,
     LLSTRING(Refilling),
-    _fnc_condition,
-    ["isNotInside"]
+    _fnc_condition
 ] call EFUNC(common,progressBar);

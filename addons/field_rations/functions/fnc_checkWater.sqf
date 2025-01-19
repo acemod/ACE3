@@ -34,7 +34,5 @@ params ["_player", "_source"];
         };
     },
     {},
-    LLSTRING(CheckingWater),
-    {true},
-    ["isNotInside"]
+    LLSTRING(CheckingWater)
 ] call EFUNC(common,progressBar);
