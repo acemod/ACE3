@@ -9,8 +9,8 @@ parent: wiki
 mod: ace
 version:
   major: 3
-  minor: 18
-  patch: 2
+  minor: 19
+  patch: 0
 ---
 
 ## 1. Pike
