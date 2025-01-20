@@ -21,7 +21,7 @@ TRACE_8("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_gunn
 // Retrieve overpressure values
 private _opValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
 
-_opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage"];
+_opValues params ["_dangerZoneAngle", "_dangerZoneRange", "_dangerZoneDamage", "_offset"];
 
 TRACE_3("cache",_dangerZoneAngle,_dangerZoneRange,_dangerZoneDamage);
 
@@ -33,6 +33,11 @@ _dangerZoneRange = _dangerZoneRange * _unitOverpressureRangeAttribute;
 // The weapon produces overpressure, calculate
 private _position = getPosASL _projectile;
 private _direction = vectorDir _projectile;
+
+// Offset overpressure origin position along the barrel
+if (_offset != 0) then {
+    _position = _position vectorAdd (_direction vectorMultiply _offset);
+};
 
 // Damage to others
 private _affected = (ASLToAGL _position) nearEntities ["CAManBase", _dangerZoneRange];

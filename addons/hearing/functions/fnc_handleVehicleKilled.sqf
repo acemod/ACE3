@@ -56,7 +56,7 @@ private _powerCoef = getNumber (_cfg >> "fuelExplosionPower");
 // Number + coef mechanics found through extensive testing
 if (_explosionPower > 6.25 * _powerCoef) then {
     // Calculate effective strength for player
-    private _vehAttenuation = [GVAR(playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
+    private _vehAttenuation = [EGVAR(common,playerVehAttenuation), 1] select (isNull objectParent ACE_player || {isTurnedOut ACE_player});
 
     private _effect = getText (_cfg >> "explosionEffect");
     private _strength = [VEHICLE_EXPLOSION_STRENGTH, VEHICLE_EXPLOSION_BIG_STRENGTH] select (toLower _effect in ["fuelexplosionbig", "fuelcapacitorexplosion"]);

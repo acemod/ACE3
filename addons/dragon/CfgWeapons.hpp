@@ -33,9 +33,10 @@ class CfgWeapons {
     };
 
     class GVAR(superStatic): missiles_titan_static {
-        EGVAR(overpressure,angle) = 90;
-        EGVAR(overpressure,range) = 30;
+        EGVAR(overpressure,angle) = 60;
+        EGVAR(overpressure,range) = 10;
         EGVAR(overpressure,damage) = 0.85;
+        EGVAR(overpressure,offset) = 0.4;
 
         initSpeed = 120;
 
