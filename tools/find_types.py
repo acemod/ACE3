@@ -6,6 +6,15 @@ from pathlib import Path
 import re
 
 def find_types(root_dir: Path) -> tuple[Counter, Counter]:
+    """Collects the types used in the function header.
+
+    Args:
+        root_dir (Path): The path to the root directory where the search is started.
+
+    Returns:
+        tuple[Counter, Counter]: A collection for all types found inside < >
+            and a collection where the found types are filtered to find the unique types.
+    """
     # Search for types (<TYPE>) in function header
     type_regex = re.compile(r".*\*.*<(.*?)>")
     # Split by or, of or comma and trim whitespace left and right
