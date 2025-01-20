@@ -5,9 +5,9 @@
  *
  * Arguments:
  * 0: The unit that will be put in an unconscious state <OBJECT>
- * 1: Set unconsciouns <BOOL> (default: true)
- * 2: Minimum unconscious time (set to 0 to ignore) <NUMBER> (optional, default: 0)
- * 3: Force wakeup at given time if vitals are stable <BOOL> (optional, default: false)
+ * 1: Set unconscious <BOOL> (default: true)
+ * 2: Minimum unconscious time (set to 0 to ignore) <NUMBER> (default: 0)
+ * 3: Force wakeup at given time if vitals are stable <BOOL> (default: false)
  *
  * Return Value:
  * Success? <BOOL>
