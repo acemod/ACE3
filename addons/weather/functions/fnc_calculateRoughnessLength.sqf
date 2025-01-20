@@ -4,10 +4,10 @@
  * Calculates the terrain roughness length at a given world position
  *
  * Arguments:
- * world position <posASL>
+ * World position ASL <ARRAY>
  *
  * Return Value:
- * roughness length <NUMBER>
+ * Roughness length <NUMBER>
  *
  * Example:
  * (getPosASL player) call ace_weather_fnc_calculateRoughnessLength
