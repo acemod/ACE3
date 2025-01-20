@@ -2,7 +2,7 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: commy2, Glowbal, PabstMirror
- * Draw progress bar and execute given function if succesful.
+ * Draw progress bar and execute given function if successful.
  * Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
  *
  * Arguments:

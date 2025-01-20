@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
  * Author: bux578
- * Returns all turret indecies of door gunners.
+ * Returns all turret indices of door gunners.
  *
  * Arguments:
  * 0: Vehicle <OBJECT>
  *
  * Return Value:
- * All turret indecies of the Vehicle <ARRAY>
+ * All turret indices of the Vehicle <ARRAY>
  *
  * Example:
  * [car] call ace_common_fnc_getDoorTurrets
