@@ -4,7 +4,7 @@
  * Removes the brackets around a code and returns the code as a string. It does nothing if the code is already a string.
  *
  * Arguments:
- * 0: Code <CODE, STRING>
+ * 0: Code <CODE or STRING>
  *
  * Return Value:
  * Code <STRING>

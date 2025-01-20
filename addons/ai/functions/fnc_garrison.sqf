@@ -4,7 +4,7 @@
  * Garrison function used to garrison AI inside buildings.
  *
  * Arguments:
- * 0: The building(s) nearest this position are used <POSITION>
+ * 0: The building(s) nearest this position are used <ARRAY>
  * 1: Limit the building search to those type of building <ARRAY>
  * 2: Units that will be garrisoned <ARRAY>
  * 3: Radius to fill building(s) <NUMBER> (default: 50)

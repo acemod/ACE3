@@ -4,7 +4,7 @@
  * Adds sit actions.
  *
  * Arguments:
- * 0: Seat <OBJECT/STRING>
+ * 0: Seat <OBJECT or STRING>
  *
  * Return Value:
  * None

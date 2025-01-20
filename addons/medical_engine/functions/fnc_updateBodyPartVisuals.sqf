@@ -5,10 +5,10 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Update Head <BOOLEAN>
- * 2: Update Body <BOOLEAN>
- * 3: Update Arms <BOOLEAN>
- * 4: Update Legs <BOOLEAN>
+ * 1: Update Head <BOOL>
+ * 2: Update Body <BOOL>
+ * 3: Update Arms <BOOL>
+ * 4: Update Legs <BOOL>
  *
  * Return Value:
  * None

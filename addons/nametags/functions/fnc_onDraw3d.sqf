@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: <N/A>
+ * Author: N/A
  * Draws names and icons.
  *
  * Arguments:
