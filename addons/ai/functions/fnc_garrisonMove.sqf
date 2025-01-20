@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Array of arrays <ARRAY>
  *    0: Unit needing to be placed <OBJECT>
- *    1: Position the unit need to be placed at <POSITION>
+ *    1: Position the unit need to be placed at <ARRAY>
  *
  * Return Value:
  * Nothing
