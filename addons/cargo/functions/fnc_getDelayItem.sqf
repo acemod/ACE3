@@ -4,7 +4,7 @@
  * Gets the delay duration an item should take to load/unload.
  *
  * Arguments:
- * 0: Item <OBJECT> or <TEXT>
+ * 0: Item <OBJECT or STRING>
  * 1: If delay is for paradrop context <BOOLEAN>
  *
  * Return Value:
