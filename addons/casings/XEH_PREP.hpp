@@ -1,1 +1,2 @@
 PREP(createCasing);
+PREP(createMagazine);
