@@ -46,6 +46,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QXGVAR(nearDepletedConsequence),
+    "LIST",
+    LSTRING(NearDepletedConsequence_DisplayName),
+    LSTRING(DisplayName),
+    [[0, 1], [LSTRING(NearDepletedConsequence_Pain), LSTRING(NearDepletedConsequence_Unconsciousness)], 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QXGVAR(waterSourceActions),
     "LIST",
     [LSTRING(WaterSourceActions_DisplayName), LSTRING(WaterSourceActions_Description)],
