@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * IVs <ARRAY of ARRAY>:
+ * IVs <ARRAY of ARRAYs>:
  *    0: IV volume remaining, in liters <STRING>
  *    1: IV type (blood, saline, plasma, etc) <STRING>
  *    2: IV body part <STRING>
