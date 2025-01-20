@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Item <OBJECT or STRING>
- * 1: If delay is for paradrop context <BOOLEAN>
+ * 1: If delay is for paradrop context <BOOL>
  *
  * Return Value:
  * Item load/unload duration <NUMBER>

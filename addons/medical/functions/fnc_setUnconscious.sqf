@@ -10,7 +10,7 @@
  * 3: Force wakeup at given time if vitals are stable <BOOL> (optional, default: false)
  *
  * Return Value:
- * Success? <BOOLEAN>
+ * Success? <BOOL>
  *
  * Example:
  * [bob, true] call ace_medical_fnc_setUnconscious;

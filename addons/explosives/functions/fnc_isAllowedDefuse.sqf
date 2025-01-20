@@ -7,7 +7,7 @@
  * 0: Mine <OBJECT>
  *
  * Return Value:
- * Allowed <BOOLEAN>
+ * Allowed <BOOL>
  *
  * Example:
  * [_mine] call ace_explosives_fnc_isAllowedDefuse

@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Connect? <BOOLEAN>
+ * 1: Connect? <BOOL>
  *
  * Return Value:
  * None
