@@ -262,7 +262,7 @@
             <Turkish>Yalnızca Tuşa Basmada</Turkish>
             <Hungarian>Csak gombnyomásra</Hungarian>
         </Key>
-        <Key ID="STR_ACE_NameTags_MaxAlpha">
+        <Key ID="STR_ACE_NameTags_PlayerNamesMaxAlpha">
             <English>Player tags transparency</English>
             <Czech>Průhlednost jmenovek</Czech>
             <French>Transparence des noms</French>
