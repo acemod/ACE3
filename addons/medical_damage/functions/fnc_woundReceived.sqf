@@ -22,18 +22,26 @@ params ["_unit", "_allDamages", "_shooter", "_ammo"];
 
 private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
 
-if (_typeOfDamage in GVAR(damageTypeDetails)) then {
-    (GVAR(damageTypeDetails) get _typeOfDamage) params ["", "", "_woundHandlers"];
+if !(_typeOfDamage in GVAR(damageTypeDetails)) exitWith {};
 
-    private _damageData = [_unit, _allDamages, _typeOfDamage];
+(GVAR(damageTypeDetails) get _typeOfDamage) params ["", "", "_woundHandlers"];
 
-    {
-        _damageData = _damageData call _x;
-        TRACE_1("Wound handler returned",_damageData);
+private _damageData = [_unit, _allDamages, _typeOfDamage, _ammo];
+private _originalCount = count _damageData;
 
-        // If invalid return, exit
-        if (isNil "_damageData" || {!(_damageData isEqualType [])} || {(count _damageData) < 3}) exitWith {
-            TRACE_1("Return invalid, skipping wound handling",_damageData);
-        };
-    } forEach _woundHandlers;
-};
+{
+    _x params ["_handlerName", "_handlerCode"];
+    _damageData = _damageData call _handlerCode;
+    TRACE_2("Wound handler returned",_damageData,_handlerName);
+
+    if ((count _damageData) == (_originalCount - 1)) then {
+        ERROR_1("Wound handler '%1' missing latest param in return, readding. This will be deprecated in the future, check Medical Framework wiki.",_handlerName);
+        _damageData pushBack _ammo;
+    };
+
+    // If invalid return, log an error and exit
+    if (isNil "_damageData" || {!(_damageData isEqualType [])} || {(count _damageData) < _originalCount}) then {
+        ERROR_2("Return for handler '%1' invalid - '%2', skipping wound handling",_damageData,_handlerName);
+        break
+    };
+} forEach _woundHandlers;
