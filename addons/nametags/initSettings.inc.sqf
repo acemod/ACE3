@@ -55,6 +55,14 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(playerNamesSortDistance), "CHECKBOX",
+    [LSTRING(playerNamesSortDistance_DisplayName), LSTRING(playerNamesSortDistance_Description)],
+    format ["ACE %1", localize LSTRING(Module_DisplayName)],
+    true,
+    0
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(playerNamesMaxAlpha), "SLIDER",
     LSTRING(playerNamesMaxAlpha),
     format ["ACE %1", localize LSTRING(Module_DisplayName)],
