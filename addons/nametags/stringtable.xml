@@ -278,12 +278,6 @@
             <Chinesesimp>玩家名称标签透明度</Chinesesimp>
             <Turkish>Oyuncu etiketlerinde şeffaflık</Turkish>
         </Key>
-        <Key ID="STR_ACE_NameTags_PlayerNamesSortDistance_Description">
-            <English>Sorts player names so closer player names are drawn first. Default: true</English>
-        </Key>
-        <Key ID="STR_ACE_NameTags_PlayerNamesSortDistance_DisplayName">
-            <English>Sort names by distance</English>
-        </Key>
         <Key ID="STR_ACE_NameTags_PlayerNamesViewDistance_Description">
             <English>Distance in meters at which player names are shown. Default: 5</English>
             <Czech>Vzdálenost v metrech pro zobrazení jména. Výchozí: 5</Czech>

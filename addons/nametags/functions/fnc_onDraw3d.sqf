@@ -22,7 +22,7 @@ if ((isNull ACE_player) || {!alive ACE_player} || {!isNull (findDisplay 49)}) ex
 
 private _flags = [[], DFUNC(getCachedFlags), ACE_player, QGVAR(flagsCache), 2] call EFUNC(common,cachedCall);
 
-_flags params ["_drawName", "_drawRank", "_enabledTagsNearby", "_enabledTagsCursor", "_maxDistance", "_sortByDistance"];
+_flags params ["_drawName", "_drawRank", "_enabledTagsNearby", "_enabledTagsCursor", "_maxDistance"];
 
 private _onKeyPressAlphaMax = 1;
 if (GVAR(showPlayerNames) == 3) then {
@@ -78,13 +78,7 @@ if (_enabledTagsCursor) then {
 if (_enabledTagsNearby) then {
     // Find valid targets and cache them
     private _targets = [[], {
-        private _nearMen = call ([
-            {_camPosAGL nearObjects ["CAManBase", _maxDistance + 7]},
-            {
-                private _unsortedObjects = nearestObjects [_camPosAGL, ["CAManBase"], _maxDistance + 7];
-                reverse _unsortedObjects;
-                _unsortedObjects;
-            }] select _sortByDistance);
+        private _nearMen = nearestObjects [_camPosAGL, ["CAManBase"], _maxDistance + 7];
         _nearMen = _nearMen select {
             _x != ACE_player &&
             {(side group _x) == (side group ACE_player)} &&
@@ -144,7 +138,7 @@ if (_enabledTagsNearby) then {
                 [ACE_player, _target, _alpha, _distance * 0.026, _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
             };
         };
-    } forEach _targets;
+    } forEachReversed _targets;
 };
 
 END_COUNTER(GVAR(onDraw3d));

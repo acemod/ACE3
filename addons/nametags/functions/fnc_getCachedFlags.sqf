@@ -51,7 +51,6 @@ switch (GVAR(showPlayerNames)) do {
 };
 
 private _maxDistance = GVAR(playerNamesViewDistance);
-private _sortByDistance = GVAR(playerNamesSortDistance);
 if (GVAR(ambientBrightnessAffectViewDist) != 0) then {
     private _ambientBrightness = [] call EFUNC(common,ambientBrightness);
     if (currentVisionMode ace_player != 0) then {
@@ -60,4 +59,4 @@ if (GVAR(ambientBrightnessAffectViewDist) != 0) then {
     _maxDistance = _maxDistance * linearConversion [0, 1, _ambientBrightness, 1 - GVAR(ambientBrightnessAffectViewDist), 1, true];
 };
 
-[_drawName, GVAR(showPlayerRanks),_enabledTagsNearby,_enabledTagsCursor,_maxDistance,_sortByDistance]
+[_drawName, GVAR(showPlayerRanks),_enabledTagsNearby,_enabledTagsCursor,_maxDistance]
