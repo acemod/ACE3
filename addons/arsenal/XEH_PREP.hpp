@@ -80,6 +80,7 @@ PREP(removeStat);
 PREP(removeVirtualItems);
 PREP(renameDefaultLoadout);
 PREP(replaceUniqueItemsLoadout);
+PREP(recoverInvalidContainers);
 PREP(saveLoadout);
 PREP(scanConfig);
 PREP(showItem);
