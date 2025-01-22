@@ -332,14 +332,8 @@ switch (GVAR(currentLeftPanel)) do {
                 _loadout set [IDX_LOADOUT_UNIFORM, [_item, GVAR(currentItems) select IDX_CURR_UNIFORM_ITEMS]];
                 GVAR(center) setUnitLoadout _loadout;
 
-                private _uniformItems = uniformItems GVAR(center);
-                private _index = count _uniformItems - 1;
-
                 // Remove any items that can't fit in the container (this prevents overloading)
-                while {loadUniform GVAR(center) > 1 && {_index >= 0}} do {
-                    GVAR(center) removeItemFromUniform (_uniformItems select _index);
-                    DEC(_index);
-                };
+                [GVAR(center), 1] call FUNC(preventOverfilling);
 
                 GVAR(currentItems) set [IDX_CURR_UNIFORM, _item];
 
@@ -373,14 +367,8 @@ switch (GVAR(currentLeftPanel)) do {
                 _loadout set [IDX_LOADOUT_VEST, [_item, GVAR(currentItems) select IDX_CURR_VEST_ITEMS]];
                 GVAR(center) setUnitLoadout _loadout;
 
-                private _vestItems = vestItems GVAR(center);
-                private _index = count _vestItems - 1;
-
                 // Remove any items that can't fit in the container (this prevents overloading)
-                while {loadVest GVAR(center) > 1 && {_index >= 0}} do {
-                    GVAR(center) removeItemFromVest (_vestItems select _index);
-                    DEC(_index);
-                };
+                [GVAR(center), 2] call FUNC(preventOverfilling);
 
                 GVAR(currentItems) set [IDX_CURR_VEST, _item];
 
@@ -414,14 +402,8 @@ switch (GVAR(currentLeftPanel)) do {
                 _loadout set [IDX_LOADOUT_BACKPACK, [_item, GVAR(currentItems) select IDX_CURR_BACKPACK_ITEMS]];
                 GVAR(center) setUnitLoadout _loadout;
 
-                private _backpackItems = backpackItems GVAR(center);
-                private _index = count _backpackItems - 1;
-
                 // Remove any items that can't fit in the container (this prevents overloading)
-                while {loadBackpack GVAR(center) > 1 && {_index >= 0}} do {
-                    GVAR(center) removeItemFromBackpack (_backpackItems select _index);
-                    DEC(_index);
-                };
+                [GVAR(center), 3] call FUNC(preventOverfilling);
 
                 GVAR(currentItems) set [IDX_CURR_BACKPACK, _item];
 

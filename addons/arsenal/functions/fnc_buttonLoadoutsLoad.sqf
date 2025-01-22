@@ -52,24 +52,7 @@ if (_backpack select 0 == "") then {
 [GVAR(center), _extendedLoadout, true] call CBA_fnc_setLoadout;
 
 // Prevent overloading of inventory containers
-private _uniformItems = uniformItems GVAR(center);
-private _index = count _uniformItems - 1;
-while {loadUniform GVAR(center) > 1 && {_index >= 0}} do {
-    GVAR(center) removeItemFromUniform (_uniformItems select _index);
-    DEC(_index);
-};
-private _vestItems = vestItems GVAR(center);
-_index = count _vestItems - 1;
-while {loadVest GVAR(center) > 1 && {_index >= 0}} do {
-    GVAR(center) removeItemFromVest (_vestItems select _index);
-    DEC(_index);
-};
-private _backpackItems = backpackItems GVAR(center);
-_index = count _backpackItems - 1;
-while {loadBackpack GVAR(center) > 1 && {_index >= 0}} do {
-    GVAR(center) removeItemFromBackpack (_backpackItems select _index);
-    DEC(_index);
-};
+GVAR(center) call FUNC(preventOverfilling);
 
 // Update current item list and unique items
 [true] call FUNC(refresh);
