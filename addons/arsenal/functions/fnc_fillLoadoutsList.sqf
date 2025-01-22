@@ -68,7 +68,19 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
         // If not in cache, get info and cache it
         if (isNil "_loadoutCachedInfo") then {
-            _loadoutCachedInfo = [_loadoutData] call FUNC(verifyLoadout);
+            // Run verification in "recover" mode to salvage invalid containers, replacing them with those currently being worn
+            _loadoutCachedInfo = [_loadoutData, true] call FUNC(verifyLoadout);
+            {
+                _x params ["_containerIdx", "_wornContainer"];
+
+                if ((_loadoutCachedInfo#0#0#_containerIdx isNotEqualTo []) && {_loadoutCachedInfo#0#0#_containerIdx#0 == ""}) then {
+                    if (_wornContainer == "") then {
+                        (_loadoutCachedInfo#0#0) set [_containerIdx, []];
+                    } else {
+                        (_loadoutCachedInfo#0#0#_containerIdx) set [0, _wornContainer];
+                    };
+                };
+            } forEach [[3, uniform GVAR(center)], [4, vest GVAR(center)], [5, backpack GVAR(center)]];
             _contentPanelCtrl setVariable [_loadoutNameAndTab, _loadoutCachedInfo];
 
             _loadoutCachedInfo params ["", "_nullItemsList", "_unavailableItemsList", "_missingExtendedInfo"];
