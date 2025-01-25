@@ -17,7 +17,7 @@
 params ["_unit", ["_container", 0]];
 
 // Remove excess items from uniform
-if (_container == 0 || {_container == 1}) then {
+if (_container in [0, 1]) then {
     private _uniformItems = uniformItems _unit;
     private _index = count _uniformItems - 1;
     while {loadUniform _unit > 1 && {_index >= 0}} do {
@@ -27,7 +27,7 @@ if (_container == 0 || {_container == 1}) then {
 };
 
 // Remove excess items from vest
-if (_container == 0 || {_container == 2}) then {
+if (_container in [0, 2]) then {
     private _vestItems = vestItems _unit;
     private _index = count _vestItems - 1;
     while {loadVest _unit > 1 && {_index >= 0}} do {
@@ -37,7 +37,7 @@ if (_container == 0 || {_container == 2}) then {
 };
 
 // Remove excess items from backpack
-if (_container == 0 || {_container == 3}) then {
+if (_container in [0, 3]) then {
     private _backpackItems = backpackItems _unit;
     private _index = count _backpackItems - 1;
     while {loadBackpack _unit > 1 && {_index >= 0}} do {
