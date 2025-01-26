@@ -3,7 +3,7 @@
 /*
  * Author: mrschick
  * Attempts to recover a loadout with invalid containers by substituting them for the currently worn containers.
- * It is meant to be passed a loadout modified by [loadout, true] call ace_arsenal_fnc_verifyLoadout, nested in the format: [[_loadout, _extendedInfo], _nullItemsList, _unavailableItemsList, _missingExtendedInfo]
+ * It is meant to be passed a loadout modified by `[loadout, true] call ace_arsenal_fnc_verifyLoadout`, nested in the format: `[[_loadout, _extendedInfo], _nullItemsList, _unavailableItemsList, _missingExtendedInfo]`
  *
  * Arguments:
  * 0: Unit from which to get valid (worn) containers <OBJECT>
