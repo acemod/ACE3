@@ -487,5 +487,13 @@
             <Chinese>昏迷時音量</Chinese>
             <Chinesesimp>无意识时音量</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Hearing_EnableNoiseDucking_Description">
+            <English>Reduces volume of impulse noises like shots and explosions when wearing electronic hearing protection</English>
+            <German>Blendet Impulsgeräusche wie Schüsse oder Explosionen beim Tragen von elektronischem Gehörschutz aus</German>
+        </Key>
+        <Key ID="STR_ACE_Hearing_EnableNoiseDucking_DisplayName">
+            <English>Enable Noise Ducking Effect</English>
+            <German>Aktiviere Geräuschunterdrückungseffekt</German>
+        </Key>
     </Package>
 </Project>
