@@ -49,7 +49,7 @@ private _consumedIVs = [];
     };
 } forEachReversed _ivBags;
 
-(GVAR(deferredEvents) getOrDefault [hashValue _unit, [], true]) pushBack ([QEGVAR(medical,consumedIVs), [_unit, _consumedIVs]]);
+[QEGVAR(medical,consumedIVs), [_unit, _consumedIVs]] call CBA_fnc_localEvent;
 
 if (_ivBags isEqualTo []) then {
     _unit setVariable [QEGVAR(medical,ivBags), nil, true];

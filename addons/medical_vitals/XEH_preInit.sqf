@@ -9,6 +9,5 @@ PREP_RECOMPILE_END;
 #include "initSettings.inc.sqf"
 
 GVAR(oxygenSupplyConditionCache) = uiNamespace getVariable QGVAR(oxygenSupplyConditionCache);
-GVAR(deferredEvents) = createHashMap;
 
 ADDON = true;
