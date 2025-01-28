@@ -188,6 +188,14 @@
             <Turkish>VS-50 Anti-Personel Mayını</Turkish>
             <Hungarian>VS-50 gyalogsági taposóakna</Hungarian>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_APERSMine_ToePopper_Name">
+            <English>VS-50 Anti-Personnel Mine (Toe-Popper)</English>
+            <Japanese>VS-50 対人地雷 (トウポッパー)</Japanese>
+            <Chinesesimp>VS-50 反人员地雷 (脚尖毁灭者)</Chinesesimp>
+            <Korean>VS-50 대인지뢰 (발목지뢰형)</Korean>
+            <French>VS-50 Mine antipersonnel (Toe-Popper)</French>
+            <Russian>VS-50 противопехотная мина (Toe-Popper)</Russian>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_APERSTripwireMine_Name">
             <English>PMR-3 Anti-Personnel Tripwire Mine</English>
             <Czech>PMR-3 Protipěchotní mina (drát)</Czech>
@@ -5026,6 +5034,7 @@
             <German>EOTech MRDS</German>
             <Korean>이오텍 MRDS</Korean>
             <Japanese>EOTech MRDS</Japanese>
+            <Chinesesimp>EOTech MRDS</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_black_Name">
             <English>EOTech MRDS (Black)</English>
@@ -5049,6 +5058,7 @@
             <German>CZ 581</German>
             <Korean>CZ 581</Korean>
             <Japanese>CZ 581</Japanese>
+            <Chinesesimp>CZ 581</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_sawedoff_01_Name">
             <English>CZ 581 (Sawed-Off)</English>

@@ -220,7 +220,7 @@ if (true) then {
     private _canGiveIV = _needsIV &&
                          {_healer call EFUNC(medical_treatment,isMedic)} &&
                          {([_healer, "@iv"] call FUNC(itemCheck)) # 0}; // Has IVs
-    private _doCPR = IN_CRDC_ARRST(_target) && {EGVAR(medical_treatment,cprSuccessChanceMin) > 0};
+    private _doCPR = IN_CRDC_ARRST(_target) && {EGVAR(medical_treatment,cprSuccessChanceMax) > 0};
 
     // If in cardiac arrest, first add some blood to injured if necessary, then do CPR (doing CPR when not enough blood is suboptimal if you have IVs)
     // If healer has no IVs, allow AI to do CPR to keep injured alive

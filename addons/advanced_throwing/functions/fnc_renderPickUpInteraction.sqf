@@ -58,7 +58,7 @@
         } forEach _addedPickUpHelpers;
     } else {
         TRACE_1("Cleaning Pick Up Helpers",count _addedPickUpHelpers);
-        {deleteVehicle _x} forEach _addedPickUpHelpers;
+        deleteVehicle _addedPickUpHelpers;
         [_idPFH] call CBA_fnc_removePerFrameHandler;
     };
 }, 0, [(getPosASL ACE_player) vectorAdd [-100, 0, 0], [], [], []]] call CBA_fnc_addPerFrameHandler;

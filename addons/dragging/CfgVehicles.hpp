@@ -350,6 +350,11 @@ class CfgVehicles {
         GVAR(canDrag) = 1;
         GVAR(dragPosition)[] = {0,1,0};
     };
+    class Land_BarrelWater_grey_F: Items_base_F {
+        EGVAR(interaction,replaceTerrainObject) = 1;
+        GVAR(canDrag) = 1;
+        GVAR(dragPosition)[] = {0,1,0};
+    };
     class Land_Bucket_F: Items_base_F {
         EGVAR(interaction,replaceTerrainObject) = 1;
         GVAR(canCarry) = 1;
