@@ -8,7 +8,7 @@ order: 7
 mod: ace
 version:
   major: 3
-  minor: 0
+  minor: 19
   patch: 0
 ---
 
