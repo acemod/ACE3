@@ -35,7 +35,7 @@ TRACE_1("Starting wirecuter interact PFH",_interactionType);
     _args params ["_setPosition", "_addedHelpers", "_fencesHelped"];
 
     if (!EGVAR(interact_menu,keyDown)) then {
-        {deleteVehicle _x} forEach _addedHelpers;
+        deleteVehicle _addedHelpers;
         [_pfhID] call CBA_fnc_removePerFrameHandler;
     } else {
         // Prevent rare error when ending mission with interact key down

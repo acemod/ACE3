@@ -12,6 +12,7 @@
             <German>Augen verbinden</German>
             <Korean>포로 눈 가리기</Korean>
             <Japanese>目隠しをする</Japanese>
+            <Chinesesimp>使用眼罩</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_CableTie">
             <English>Cable Tie</English>
@@ -379,6 +380,7 @@
             <German>Augenbinde entfernen</German>
             <Korean>눈가리개 풀기</Korean>
             <Japanese>目隠しを外す</Japanese>
+            <Chinesesimp>移除眼罩</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Captives_SetCaptive">
             <English>Take Prisoner</English>

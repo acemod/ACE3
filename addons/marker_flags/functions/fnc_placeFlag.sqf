@@ -32,7 +32,7 @@ GVAR(objectHeight) = MAX_HEIGHT;
 GVAR(isPlacing) = PLACE_WAITING;
 
 // Add info dialog for the player which show the controls
-[LLSTRING(ActionPlace), LLSTRING(ActionCancel), LLSTRING(ActionAdjustHeight)] call EFUNC(interaction,showMouseHint);
+[LLSTRING(ActionPlace), LELSTRING(common,Cancel), LLSTRING(ActionAdjustHeight)] call EFUNC(interaction,showMouseHint);
 
 private _mouseClickID = [_player, "DefaultAction", {
     GVAR(isPlacing) isEqualTo PLACE_WAITING

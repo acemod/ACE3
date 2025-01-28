@@ -35,7 +35,7 @@ private _createdWounds = false;
 private _updateDamageEffects = false;
 private _painLevel = 0;
 private _criticalDamage = false;
-private _bodyPartDamage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
+private _bodyPartDamage = GET_BODYPART_DAMAGE(_unit);
 private _bodyPartVisParams = [_unit, false, false, false, false]; // params array for EFUNC(medical_engine,updateBodyPartVisuals);
 
 // process wounds separately for each body part hit
@@ -197,9 +197,7 @@ if (_updateDamageEffects) then {
 
 if (_createdWounds) then {
     _unit setVariable [VAR_OPEN_WOUNDS, _openWounds, true];
-    _unit setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
-
-    [_unit] call EFUNC(medical_status,updateWoundBloodLoss);
+    _unit setVariable [VAR_BODYPART_DAMAGE, _bodyPartDamage, true];
 
     _bodyPartVisParams call EFUNC(medical_engine,updateBodyPartVisuals);
 

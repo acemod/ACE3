@@ -380,6 +380,12 @@ class CfgVehicles {
     class APERSBoundingMine: MineBase {
         ammo = "ACE_APERSBoundingMine_Range_Ammo";
     };
+    class APERSMine;
+    class ACE_APERSMine_ToePopper: APERSMine {
+        author = ECSTRING(common,aceteam);
+        ammo = "ACE_APERSMine_ToePopper_Ammo";
+        displayName = CSTRING(apersToePopper);
+    };
 
     class DemoCharge_F: MineBase {
         ammo = "ACE_DemoCharge_Remote_Ammo";

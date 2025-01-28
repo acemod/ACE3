@@ -65,4 +65,8 @@ private _name = switch (_id) do {
     default { "" };
 };
 
+if !(_id isEqualType 0) then {
+    _id = parseNumber _id;
+};
+
 [_name, _id]

@@ -15,9 +15,7 @@
  * Public: No
  */
 
-{
-    deleteVehicle _x;
-} forEach GVAR(dev_eventSpheres);
+deleteVehicle GVAR(dev_eventSpheres);
 
 GVAR(dev_eventSpheres) = [];
 
