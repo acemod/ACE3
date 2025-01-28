@@ -26,6 +26,7 @@ TRACE_2("adding",_strength * GVAR(damageCoefficent),GVAR(deafnessDV));
 // Handle volume reduction by electronic hearing protection
 if (
     _strength >= EHP_MIN_STRENGTH
+    && GVAR(enableNoiseDucking)
     && {ACE_player getVariable ["ACE_hasEHP", false] || {ACE_player getVariable ["ACE_hasBuiltInEHP", false]}}
 ) then {
     if (GVAR(ehpTimeout) == -1) then {

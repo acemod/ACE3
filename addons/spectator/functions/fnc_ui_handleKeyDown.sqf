@@ -105,7 +105,7 @@ if (_key == DIK_PGDN) exitWith {
 // Handle spectate lights
 if (_key == DIK_L) exitWith {
     if (GVAR(camLight)) then {
-        { deleteVehicle _x; } forEach GVAR(camLights);
+        deleteVehicle GVAR(camLights);
         GVAR(camLights) = [];
     } else {
         private _cameraLight = "#lightpoint" createVehicleLocal getPosASL GVAR(camera);
