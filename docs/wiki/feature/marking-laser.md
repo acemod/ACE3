@@ -15,7 +15,7 @@ version:
 
 ## 1. Overview
 
-Equips aircraft with a high power IR marking laser (visible in NVGs)
+Equips aircraft with a high-power IR marking laser (visible in NVGs)
 
 ### 1.1 Usage
 
