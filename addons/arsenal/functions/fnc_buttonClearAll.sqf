@@ -66,5 +66,7 @@ for "_lbIndex" from 0 to (lbSize _ctrlList) - 1 do {
 // Update load bar
 (_display displayCtrl IDC_loadIndicatorBar) progressSetPosition 0;
 
+[QGVAR(cargoChanged), [_display, _item, _addOrRemove, GVAR(shiftState)]] call CBA_fnc_localEvent;
+
 // Refresh availibility of items based on space remaining in container
 [_ctrlList, _container, false] call FUNC(updateRightPanel);
