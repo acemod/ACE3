@@ -2,7 +2,7 @@
 layout: wiki
 title: Marking Laser
 component: markinglaser
-description: NV Visible Laser from Aircraft
+description: NV-Visible Laser from Aircraft
 group: feature
 category: realism
 parent: wiki
