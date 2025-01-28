@@ -32,5 +32,5 @@ private _carrierItemMapping = createHashMap;
     _carrierItemMapping set [_carrier, _name];
 } forEach _flagItems;
 
-uiNamespace setVariable [QGVAR(flagItemCache), _flagItemCache];
-uiNamespace setVariable [QGVAR(carrierItemMapping), _carrierItemMapping];
+uiNamespace setVariable [QGVAR(flagItemCache), compileFinal _flagItemCache];
+uiNamespace setVariable [QGVAR(carrierItemMapping), compileFinal _carrierItemMapping];
