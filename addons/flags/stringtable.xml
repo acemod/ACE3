@@ -5,86 +5,106 @@
             <Key ID="STR_ACE_Flags_SettingCategory">
                 <English>Flags</English>
                 <German>Flaggen</German>
+                <French>Drapeaux</French>
             </Key>
             <Key ID="STR_ACE_Flags_AllowPlacingFlags">
                 <English>Allow placing flags</English>
                 <German>Erlaube das Platzieren von Flaggen</German>
+                <French>Permettre de placer des drapeaux</French>
             </Key>
             <Key ID="STR_ACE_Flags_AllowPlacingFlagsTooltip">
                 <English>Adds the actions to place flags if the corresponding item is in the inventory.</English>
                 <German>Fügt Aktionen für das Platzieren von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
+                <French>Ajoute des actions pour placer des drapeaux lorsque l'objet en question est dans l'inventaire.</French>
             </Key>
             <Key ID="STR_ACE_Flags_AllowCarryingFlags">
                 <English>Allow carrying flags</English>
                 <German>Erlaube das Tragen von Flaggen</German>
+                <French>Autoriser le port de drapeaux</French>
             </Key>
             <Key ID="STR_ACE_Flags_AllowCarryingFlagsTooltip">
                 <English>Adds the actions to carry flags if the corresponding item is in the inventory.</English>
                 <German>Fügt Aktionen für das Tragen von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
+                <French>Ajoute des actions pour porter des drapeaux lorsque l'objet en question est dans l'inventaire.</French>
             </Key>
         </Container>
         <Container name="displayNames">
             <Key ID="STR_ACE_Flags_White">
                 <English>Flag (White)</English>
                 <German>Flagge (Weiß)</German>
+                <French>Drapeau (Blanc)</French>
             </Key>
             <Key ID="STR_ACE_Flags_Red">
                 <English>Flag (Red)</English>
                 <German>Flagge (Rot)</German>
+                <French>Drapeau (Rouge)</French>
             </Key>
             <Key ID="STR_ACE_Flags_Blue">
                 <English>Flag (Blue)</English>
                 <German>Flagge (Blau)</German>
+                <French>Drapeau (Bleu)</French>
             </Key>
             <Key ID="STR_ACE_Flags_Green">
                 <English>Flag (Green)</English>
                 <German>Flagge (Grün)</German>
+                <French>Drapeau (Vert)</French>
             </Key>
             <Key ID="STR_ACE_Flags_Yellow">
                 <English>Flag (Yellow)</English>
                 <German>Flagge (Gelb)</German>
+                <French>Drapeau (Jaune)</French>
             </Key>
             <Key ID="STR_ACE_Flags_Orange">
                 <English>Flag (Orange)</English>
                 <German>Flagge (Orange)</German>
+                <French>Drapeau (Orange)</French>
             </Key>
             <Key ID="STR_ACE_Flags_Purple">
                 <English>Flag (Purple)</English>
                 <German>Flagge (Violett)</German>
+                <French>Drapeau (Violet)</French>
             </Key>
             <Key ID="STR_ACE_Flags_Black">
                 <English>Flag (Black)</English>
                 <German>Flagge (Schwarz)</German>
+                <French>Drapeau (Noir)</French>
             </Key>
             <Key ID="STR_ACE_Flags_Description">
                 <English>Can be carried or placed. Flags are used to mark a specific point in terrain or units.</English>
                 <German>Kann getragen oder platziert werden. Flaggen werden zur Kennzeichnung von bestimmten Geländepunkte oder Einheiten eingesetzt.</German>
+                <French>Ils peuvent être transportés ou placés. Les drapeaux sont utilisés pour marquer un point spécifique du terrain ou des unités.</French>
             </Key>
         </Container>
         <Container name="actions">
             <Key ID="STR_ACE_Flags_ActionCategory">
                 <English>Flags</English>
                 <German>Flaggen</German>
+                <French>Drapeaux</French>
             </Key>
             <Key ID="STR_ACE_Flags_Carry">
                 <English>Carry %1</English>
                 <German>%1 tragen</German>
+                <French>Portage %1</French>
             </Key>
             <Key ID="STR_ACE_Flags_Furl">
                 <English>Furl Flag</English>
                 <German>Flagge einrollen</German>
+                <French>Enrouler le drapeau</French>
             </Key>
             <Key ID="STR_ACE_Flags_Place">
                 <English>Place %1</English>
                 <German>%1 platzieren</German>
+                <French>Placer %1</French>
             </Key>
             <Key ID="STR_ACE_Flags_Pickup">
                 <English>Pickup %1</English>
                 <German>%1 aufnehmen</German>
+                <French>Ramasseur %1</French>
             </Key>
             <Key ID="STR_ACE_Flags_AdjustHeight">
                 <English>Adjust height</English>
                 <German>Höhe anpassen</German>
+                <French>Ajuster la hauteur</French>
             </Key>
         </Container>
     </Package>

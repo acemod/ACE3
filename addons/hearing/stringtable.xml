@@ -490,10 +490,12 @@
         <Key ID="STR_ACE_Hearing_EnableNoiseDucking_Description">
             <English>Reduces volume of impulse noises like shots and explosions when wearing electronic hearing protection</English>
             <German>Blendet Impulsgeräusche wie Schüsse oder Explosionen beim Tragen von elektronischem Gehörschutz aus</German>
+            <French>Réduit le volume des bruits d'impulsion tels que les coups de feu et les explosions lorsque l'on porte une protection auditive électronique.</French>
         </Key>
         <Key ID="STR_ACE_Hearing_EnableNoiseDucking_DisplayName">
             <English>Enable Noise Ducking Effect</English>
             <German>Aktiviere Geräuschunterdrückungseffekt</German>
+            <French>Activer l'effet de réduction du bruit</French>
         </Key>
     </Package>
 </Project>
