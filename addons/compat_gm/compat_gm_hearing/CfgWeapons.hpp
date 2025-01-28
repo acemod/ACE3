@@ -100,26 +100,26 @@ class CfgWeapons {
         HEARING_PROTECTION_PELTOR;
     };
 
-    class gm_xx_headgear_headwrap_01_base;
-    class gm_xx_headgear_headwrap_crew_01_oli: gm_xx_headgear_headwrap_01_base {
+    class gm_xx_headgear_headwrap_crew_01_base;
+    class gm_xx_headgear_headwrap_crew_01_oli: gm_xx_headgear_headwrap_crew_01_base {
         HEARING_PROTECTION_PELTOR;
     };
-    class gm_xx_headgear_headwrap_crew_01_m84: gm_xx_headgear_headwrap_01_base {
+    class gm_xx_headgear_headwrap_crew_01_m84: gm_xx_headgear_headwrap_crew_01_base {
         HEARING_PROTECTION_PELTOR;
     };
-    class gm_xx_headgear_headwrap_crew_01_grn: gm_xx_headgear_headwrap_01_base {
+    class gm_xx_headgear_headwrap_crew_01_grn: gm_xx_headgear_headwrap_crew_01_base {
         HEARING_PROTECTION_PELTOR;
     };
-    class gm_xx_headgear_headwrap_crew_01_smp: gm_xx_headgear_headwrap_01_base {
+    class gm_xx_headgear_headwrap_crew_01_smp: gm_xx_headgear_headwrap_crew_01_base {
         HEARING_PROTECTION_PELTOR;
     };
-    class gm_xx_headgear_headwrap_crew_01_blk: gm_xx_headgear_headwrap_01_base {
+    class gm_xx_headgear_headwrap_crew_01_blk: gm_xx_headgear_headwrap_crew_01_base {
         HEARING_PROTECTION_PELTOR;
     };
-    class gm_xx_headgear_headwrap_crew_01_flk: gm_xx_headgear_headwrap_01_base {
+    class gm_xx_headgear_headwrap_crew_01_flk: gm_xx_headgear_headwrap_crew_01_base {
         HEARING_PROTECTION_PELTOR;
     };
-    class gm_xx_headgear_headwrap_crew_01_trp: gm_xx_headgear_headwrap_01_base {
+    class gm_xx_headgear_headwrap_crew_01_trp: gm_xx_headgear_headwrap_crew_01_base {
         HEARING_PROTECTION_PELTOR;
     };
 };
