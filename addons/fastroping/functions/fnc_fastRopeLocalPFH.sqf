@@ -50,6 +50,9 @@ if (isNull attachedTo _unit) exitWith {
         playSound QGVAR(Thud);
     };
 
+    // Holster weapon
+    [_unit] call EFUNC(weaponselect,putWeaponAway);
+
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;
 };
 
