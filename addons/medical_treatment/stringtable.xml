@@ -4696,7 +4696,7 @@
             <Chinesesimp>止血带治疗时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_Description">
-            <English>Time, in seconds, required to apply/remove a tourniquet.. For a Meidc or Doctor</English>
+            <English>Time, in seconds, required to apply/remove a tourniquet. For a Medic or Doctor</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_DisplayName">
             <English>Skilled Tourniquet Treatment Time</English>
