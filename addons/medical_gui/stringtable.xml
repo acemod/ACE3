@@ -1596,7 +1596,7 @@
             <Japanese>先に武器をしまう必要があります!</Japanese>
             <French>Vous devez d'abord rengainer votre arme !</French>
             <Chinesesimp>你必须先收起武器!</Chinesesimp>
-            <Polish>무기를 먼저 집어넣어야 합니다!</Polish>
+            <Korean>무기를 먼저 집어넣어야 합니다!</Korean>
             <Russian>Сначала ты должен убрать свое оружие!</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showBleeding_Description">
