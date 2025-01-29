@@ -4500,7 +4500,7 @@
             <Chinesesimp>自动注射器治疗时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_Description">
-            <English>Time, in seconds, required to administer medication using an autoinjector. For a Meidc or Doctor</English>
+            <English>Time, in seconds, required to administer medication using an autoinjector. For a Medic or Doctor</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_DisplayName">
             <English>Skilled Autoinjector Treatment Time</English>
