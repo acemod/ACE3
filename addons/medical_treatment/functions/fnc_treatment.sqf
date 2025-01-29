@@ -30,7 +30,7 @@ if !(_this call FUNC(canTreat)) exitWith {false};
 private _config = configFile >> QGVAR(actions) >> _classname;
 
 // Get treatment time from config, exit if treatment time is zero
-private _treatmentTimeConfig = ["treatmentTime", "treatmentTimeTrained"] select ([_medic] call ace_medical_treatment_fnc_isMedic);
+private _treatmentTimeConfig = ["treatmentTime", "treatmentTimeTrained"] select ([_medic] call FUNC(isMedic));
 private _treatmentTime = if (isText (_config >> _treatmentTimeConfig)) then {
     GET_FUNCTION(_treatmentTime,_config >> _treatmentTimeConfig);
 
