@@ -31,7 +31,7 @@ private _renderedUnits = 0;
         _weaponHolder hideObject false;
 
         // Don't update orientation if not on screen, always update for player
-        if (_x == player || {!(worldToScreen ASLToAGL getPosWorld _weaponHolder isEqualTo [])}) then {
+        if (_x == player || {worldToScreen ASLToAGL getPosWorld _weaponHolder isNotEqualTo []}) then {
             private _lShoulder = _x selectionPosition "leftshoulder";
             private _rShoulder = _x selectionPosition "rightshoulder";
             private _lUpLeg    = _x selectionPosition "leftupleg";

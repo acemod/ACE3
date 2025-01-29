@@ -24,7 +24,7 @@ EGVAR(scopes,guns) set [0, ""];
 
 ACE_player removeWeapon (_oldPrimary param [0, ""]);
 
-if !(_newPrimary isEqualTo []) then {
+if (_newPrimary isNotEqualTo []) then {
     _newPrimary params ["_weapon"];
 
     // addWeapon is going to eat a mag for each muzzle before we can fill the weapon with addWeaponItem
@@ -38,7 +38,7 @@ if !(_newPrimary isEqualTo []) then {
     ACE_player addWeapon _weapon;
 
     // Readd lost magazines
-    if !(count _oldPrimaryMagazine == 0) then {
+    if (count _oldPrimaryMagazine != 0) then {
         {
             private _container = _x;
             private _before = _containerMags#_forEachIndex;
@@ -71,7 +71,7 @@ if !(_newPrimary isEqualTo []) then {
     }, {
         params ["_oldAdjustment", "_newAdjustement"];
 
-        if !(_newAdjustement isEqualTo [0, 0, 0]) then {
+        if (_newAdjustement isNotEqualTo [0, 0, 0]) then {
             private _scopeAdjustmentParams = [ACE_player];
             _scopeAdjustmentParams append _newAdjustement;
             _scopeAdjustmentParams call EFUNC(scopes,applyScopeAdjustment);

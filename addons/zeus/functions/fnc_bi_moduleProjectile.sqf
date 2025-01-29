@@ -39,7 +39,7 @@ if (_activated) then {
     _ammo = _logic getVariable ["type",getText (configOf _logic >> "ammo")];
     if (_ammo != "") then {
         _cfgAmmo = configFile >> "cfgammo" >> _ammo;
-        //if !(isclass _cfgAmmo) exitwith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};
+        //if !(isclass _cfgAmmo) exitWith {["CfgAmmo class '%1' not found.",_ammo] call bis_fnc_error;};
         // It seems BI broke this part...
         // _dirVar = _fnc_scriptname + typeof _logic;
         // _logic setdir (missionnamespace getvariable [_dirVar,direction _logic]); //--- Restore custom direction

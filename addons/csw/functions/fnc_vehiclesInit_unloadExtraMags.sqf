@@ -73,7 +73,7 @@ TRACE_1("Remove all loaded magazines",_magsToRemove);
 } forEach _magsToRemove;
 
 TRACE_1("Re-add the starting mag",_loadedMagazineInfo);
-if (!(_loadedMagazineInfo isEqualTo [])) then {
+if (_loadedMagazineInfo isNotEqualTo []) then {
     _vehicle addMagazineTurret _loadedMagazineInfo;
 };
 

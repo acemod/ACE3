@@ -562,7 +562,7 @@ Good:
 
 ```sqf
 _return = obj getvariable "varName";
-if (isnil "_return") exitwith {};
+if (isnil "_return") exitWith {};
 ```
 
 ### 6.12. Global Variables
