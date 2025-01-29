@@ -16,7 +16,7 @@ class GVAR(actions) {
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
 
         treatmentTime = QFUNC(getBandageTime);
-        treatmentTimeSelfCoef = 1; // todo: this isn't used anywhere, remove?
+        treatmentTimeTrained = QFUNC(getBandageTime);
 
         callbackStart = "";
         callbackProgress = "";
@@ -80,6 +80,7 @@ class GVAR(actions) {
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         items[] = {"ACE_tourniquet"};
         treatmentTime = QGVAR(treatmentTimeTourniquet);
+        treatmentTimeTrained = QGVAR(treatmentTimeTrainedTourniquet);
         condition = QUOTE(!([ARR_2(_patient,_bodyPart)] call FUNC(hasTourniquetAppliedTo)));
         callbackSuccess = QFUNC(tourniquet);
         litter[] = {};
@@ -105,6 +106,7 @@ class GVAR(actions) {
         items[] = {"ACE_splint"};
         treatmentLocations = QGVAR(locationSplint);
         treatmentTime = QGVAR(treatmentTimeSplint);
+        treatmentTimeTrained = QGVAR(treatmentTimeTrainedSplint);
         callbackSuccess = QFUNC(splint);
         condition = QFUNC(canSplint);
         litter[] = {
@@ -124,6 +126,7 @@ class GVAR(actions) {
         treatmentLocations = QGVAR(locationMorphine);
         condition = "";
         treatmentTime = QGVAR(treatmentTimeAutoinjector);
+        treatmentTimeTrained = QGVAR(treatmentTimeTrainedAutoinjector);
         callbackSuccess = QFUNC(medication);
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
@@ -156,6 +159,7 @@ class GVAR(actions) {
         medicRequired = 0;
         items[] = {"ACE_painkillers"};
         treatmentTime = 4;
+        treatmentTimeTrained = 4;
         sounds[] = {{QPATHTO_R(sounds\Pills.ogg),1,1,50}};
         litter[] = {{"Land_PainKillers_F"}}; // just use BI's model as litter
     };
@@ -170,6 +174,7 @@ class GVAR(actions) {
         category = "advanced";
         medicRequired = QGVAR(medicIV);
         treatmentTime = QGVAR(treatmentTimeIV);
+        treatmentTimeTrained = QGVAR(treatmentTimeTrainedIV);
         items[] = {"ACE_bloodIV"};
         treatmentLocations = QGVAR(locationIV);
         condition = "";
@@ -224,6 +229,7 @@ class GVAR(actions) {
         allowedSelections[] = {"Head", "Body"};
         medicRequired = 0;
         treatmentTime = 2.5;
+        treatmentTimeTrained = 2.5;
         items[] = {};
         condition = QUOTE(GVAR(advancedDiagnose) == 0);
         callbackSuccess = QFUNC(diagnose);
@@ -266,6 +272,7 @@ class GVAR(actions) {
         allowSelfTreatment = 0;
         medicRequired = 0;
         treatmentTime = QGVAR(treatmentTimeBodyBag);
+        treatmentTimeTrained = QGVAR(treatmentTimeBodyBag);
         items[] = {"ACE_bodyBag"};
         condition = QFUNC(canPlaceInBodyBag);
         callbackSuccess = QFUNC(placeInBodyBag);
@@ -285,6 +292,7 @@ class GVAR(actions) {
         displayNameProgress = CSTRING(DiggingGrave);
         icon = QPATHTOEF(medical_gui,ui\grave.paa);
         treatmentTime = QGVAR(treatmentTimeGrave);
+        treatmentTimeTrained = QGVAR(treatmentTimeGrave);
         condition = QFUNC(canDigGrave);
         callbackSuccess = QFUNC(placeInGrave);
         items[] = {};
@@ -300,6 +308,7 @@ class GVAR(actions) {
         allowSelfTreatment = 0;
         medicRequired = 0;
         treatmentTime = QGVAR(treatmentTimeCPR);
+        treatmentTimeTrained = QGVAR(treatmentTimeCPR);
         items[] = {};
         condition = QFUNC(canCPR);
         callbackSuccess = QFUNC(cprSuccess);
@@ -323,6 +332,7 @@ class GVAR(actions) {
         allowSelfTreatment = QGVAR(allowSelfStitch);
         medicRequired = QGVAR(medicSurgicalKit);
         treatmentTime = QFUNC(getStitchTime);
+        treatmentTimeTrained = QFUNC(getStitchTime);
         condition = QFUNC(canStitch);
         callbackSuccess = "";
         callbackStart = QFUNC(surgicalKitStart);
@@ -342,6 +352,7 @@ class GVAR(actions) {
         allowSelfTreatment = QGVAR(allowSelfPAK);
         medicRequired = QGVAR(medicPAK);
         treatmentTime = QFUNC(getHealTime);
+        treatmentTimeTrained = QFUNC(getHealTime);
         callbackSuccess = QFUNC(fullHeal);
         consumeItem = QGVAR(consumePAK);
         animationMedic = "AinvPknlMstpSlayW[wpn]Dnon_medicOther";
