@@ -19,8 +19,10 @@
 params ["_unit", "_item"];
 TRACE_2("Carry flag",_unit,_item);
 
-(GVAR(flagItemCache) get _item) params ["", "_texture"];
+(GVAR(flagItemCache) get _item) params ["", "_texture", "", "", "", "_mass"];
 _unit forceFlagTexture _texture;
 
 _unit setVariable [QGVAR(carryingFlag), _item, true];
 _unit removeItem _item;
+
+[_unit, _unit, _mass] call EFUNC(movement,addLoadToUnitContainer);
