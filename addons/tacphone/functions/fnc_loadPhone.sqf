@@ -72,7 +72,18 @@ if (ace_tacphone_app_selected isEqualTo "") then {
         private _coordY = _startY + (_row * _spacingY);
         
         _app ctrlSetPosition [_coordX, _coordY, 0.1, 0.1];
-        _appLabel ctrlSetPosition [_coordX+0.035, _coordY+0.06, 0.1, 0.1];
+        _appLabel ctrlSetPosition [_coordX+0.025, _coordY+0.06, 0.1, 0.1];
+        
+        _app setVariable ["ace_tacphone_appClassname",_classname];
+        
+        _app ctrlAddEventHandler ["MouseButtonClick",{
+            params ["_control", "_button", "_xPos", "_yPos", "_shift", "_ctrl", "_alt"];
+            private _appClassname = _control getVariable ["ace_tacphone_appClassname",""];
+            if (_appClassname isNotEqualTo "") then {
+                ["ace_tacphone_loadApp",[_appClassname]] call CBA_fnc_localEvent;
+                ace_tacphone_app_selected = _appClassname;
+            };	
+        }];
         
         _app ctrlCommit 0;
         _appLabel ctrlCommit 0;
