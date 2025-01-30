@@ -57,7 +57,7 @@ if (ace_tacphone_app_selected isEqualTo "") then {
     private _startY = (1-HEIGHT)/2;
         
     {
-        _x params ["_displayName","_displayNameShort","_picture","_statement"];
+        _x params ["_classname", "_displayName","_displayNameShort","_picture"];
         
         private _column = _forEachIndex mod _columns;
         private _row = floor (_forEachIndex/_columns);	
