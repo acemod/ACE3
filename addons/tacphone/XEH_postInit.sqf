@@ -16,6 +16,6 @@
     if (_code isEqualTo "") exitWith {}; // Incorrect function name
     [_display] call _code;
 
-    ctrlDelete GVAR(home_background);
+    [{ctrlDelete GVAR(home_background);}, []] call CBA_fnc_execNextFrame;
 
 }] call CBA_fnc_addEventHandler;
