@@ -3,7 +3,7 @@
 #include "initKeybinds.inc.sqf"
 
 [QGVAR(loadApp),{
-    params ["_classname"];
+    params ["_classname","_display"];
 
     private _cfg = configFile >> QGVAR(apps) >> _classname;
     if (isNull _cfg) then {
@@ -14,8 +14,8 @@
     
     private _code = missionNamespace getVariable [_function,""];
     if (_code isEqualTo "") exitWith {}; // Incorrect function name
-    call _code;
-    
+    [_display] call _code;
+
     ctrlDelete GVAR(home_background);
 
 }] call CBA_fnc_addEventHandler;

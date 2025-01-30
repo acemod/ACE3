@@ -4,21 +4,23 @@
  * Loads BFT application
  *
  * Arguments:
- * None
+ * 0: Tacphone Display <DISPLAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_tacphone_fnc_loadBFT
+ * [_display] call ace_tacphone_fnc_loadBFT
  *
  * Public: No
  */
 
+params ["_display"];
+
 if !(isNil QGVAR(map)) then {ctrlDelete GVAR(map)}; // Clean up any accidents
 
-GVAR(map) = _emptyDisplay ctrlCreate [QGVAR(mapControl), -1];
-GVAR(map) ctrlMapSetPosition [(1-WIDTH)/2, (1-HEIGHT)/2, WIDTH, HEIGHT]; 
+GVAR(map) = _display ctrlCreate [QGVAR(mapControl), -1];
+GVAR(map) ctrlMapSetPosition [(1-PHONE_WIDTH)/2, (1-PHONE_HEIGHT)/2, PHONE_WIDTH, PHONE_HEIGHT]; 
 GVAR(map) ctrlCommit 0;
 private _plrPos = GVAR(map) ctrlMapWorldToScreen position player;
 
