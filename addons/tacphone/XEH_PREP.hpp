@@ -1,2 +1,2 @@
-PREP(loadPhone)
-PREP(loadBFT)
+PREP(loadPhone);
+PREP(loadBFT);
