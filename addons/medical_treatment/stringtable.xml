@@ -4664,7 +4664,7 @@
             <Chinesesimp>夹板治疗时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_Description">
-            <English>Time, in seconds, required to apply a splint. For a Medic or Doctor</English>
+            <English>Time, in seconds, required for a Medic or Doctor to apply a splint.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_DisplayName">
             <English>Skilled Splint Treatment Time</English>
