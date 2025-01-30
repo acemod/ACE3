@@ -26,6 +26,9 @@ private _plrPos = GVAR(map) ctrlMapWorldToScreen position player;
 
 GVAR(map) ctrlAddEventHandler ["Draw", {
     params ["_ctrl"];
+    /*
+        Move to separate function. Group drawing & unit drawing should be separate.
+    */
     _ctrl drawIcon ["\A3\ui_f\data\map\markers\nato\b_air.paa", [1,0,0,1], getPosASLVisual player, 20, 20, 0, "boobies!!", 0, -1]
 }];
 
@@ -34,6 +37,6 @@ GVAR(map) ctrlAddEventHandler ["MouseButtonDblClick", {
     private _worldPos = (_control ctrlMapScreenToWorld [_xPos, _yPos]);
     
     /*
-        Create map marker menu.
+        Create map marker menu. Should be separate function.
     */
 }];
