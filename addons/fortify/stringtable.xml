@@ -16,6 +16,10 @@
             <Chinesesimp>预算</Chinesesimp>
             <Turkish>Bütçe</Turkish>
         </Key>
+        <Key ID="STR_ACE_Fortify_Remove">
+            <English>Remove</English>
+            <Russian>Удалить</Russian>
+        </Key>
         <Key ID="STR_ACE_Fortify_Confirm">
             <English>Confirm Deployment</English>
             <Czech>Potvrdit Položení</Czech>
