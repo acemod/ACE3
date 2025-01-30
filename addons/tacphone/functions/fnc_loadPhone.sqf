@@ -42,7 +42,8 @@ if (ace_tacphone_app_selected isEqualTo "") then {
     ace_tacphone_home_background ctrlCommit 0;
     
     private _apps = "getNumber (_x >> 'scope') > 0" configClasses (configFile >> "ace_tacphone_apps");
-    _apps apply {[getText (_x >> "displayName"), getText (_x >> "displayNameShort"), getText (_x >> "icon")]};
+    _apps = _apps + ("getNumber (_x >> 'scope') > 0" configClasses (missionConfigFile >> "ace_tacphone_apps"));
+    _apps = _apps apply {[configName _x, getText (_x >> "displayName"), getText (_x >> "displayNameShort"), getText (_x >> "icon")]};
     
     private _page = 0;
     
