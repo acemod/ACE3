@@ -82,9 +82,9 @@ GVAR(objectRotationZ) = 0;
                         _args params ["", "_target"];
                         alive _target;
                     }
-                ] call ACEFUNC(common,progressBar);
+                ] call EFUNC(common,progressBar);
             },
-            {(missionNamespace getVariable [QGVAR(fortifyAllowed), true]) && 
+            {(missionNamespace getVariable [QGVAR(fortifyAllowed), true]) &&
               {"ACE_Fortify" in (_player call EFUNC(common,uniqueItems))} &&
               {!(_target getVariable [QGVAR(removeStarted), false])}},
             {},
