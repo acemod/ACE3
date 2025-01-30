@@ -24,8 +24,7 @@ This is absolutely not even slightly feature complete nor organised.
 */
 
 private _emptyDisplay = findDisplay 46 createDisplay "RscDisplayEmpty";
-ace_tacphone_phoneCtrlGroup = _emptyDisplay ctrlCreate ["RscControlsGroup",-1];
-ace_tacphone_background = _emptyDisplay ctrlCreate ["RscPicture", -1, ace_tacphone_phoneCtrlGroup];
+ace_tacphone_background = _emptyDisplay ctrlCreate ["RscPicture", -1];
 
 #define WIDTH 0.75
 #define HEIGHT 0.5
@@ -37,14 +36,14 @@ ace_tacphone_background ctrlCommit 0;
 ace_tacphone_app_selected = "";
 
 if (ace_tacphone_app_selected isEqualTo "") then {
-    ace_tacphone_home_background = _emptyDisplay ctrlCreate ["RscPicture", -1, ace_tacphone_phoneCtrlGroup];
+    ace_tacphone_home_background = _emptyDisplay ctrlCreate ["RscPicture", -1];
     ace_tacphone_home_background ctrlSetPosition [(1-WIDTH)/2, (1-HEIGHT)/2, WIDTH, HEIGHT];
     ace_tacphone_home_background ctrlSetText "#(rgb,1,1,1)color(0.1,0.1,0.1,1)";
     ace_tacphone_home_background ctrlCommit 0;
 };
 
 if (ace_tacphone_app_selected == "map") then {
-    ace_tacphone_map = _emptyDisplay ctrlCreate ["ace_tacphone_mapControl", -1, ace_tacphone_phoneCtrlGroup];
+    ace_tacphone_map = _emptyDisplay ctrlCreate ["ace_tacphone_mapControl", -1];
     ace_tacphone_map ctrlMapSetPosition [(1-WIDTH)/2, (1-HEIGHT)/2, WIDTH, HEIGHT]; 
     ace_tacphone_map ctrlCommit 0;
     private _plrPos = ace_tacphone_map ctrlMapWorldToScreen position player;
