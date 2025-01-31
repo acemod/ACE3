@@ -28,8 +28,8 @@ _background ctrlSetPosition [0, 0, (ctrlPosition GVAR(home_appsection))#2, (ctrl
 _background ctrlSetText /*"#(rgb,1,1,1)color(0.1,0.1,0.1,1)"*/ QPATHTOF(data\background_banana.paa);
 _background ctrlCommit 0;
 
-private _apps = "getNumber (_x >> 'scope') > 0" configClasses (configFile >> QEGVAR(tacphone,apps));
-_apps = _apps + ("getNumber (_x >> 'scope') > 0" configClasses (missionConfigFile >> QEGVAR(tacphone,apps)));
+private _apps = "getNumber (_x >> 'scope') > 1" configClasses (configFile >> QEGVAR(tacphone,apps));
+_apps = _apps + ("getNumber (_x >> 'scope') > 1" configClasses (missionConfigFile >> QEGVAR(tacphone,apps)));
 _apps = _apps apply {[configName _x, getText (_x >> "displayName"), getText (_x >> "displayNameShort"), getText (_x >> "icon")]};
 
 private _page = 0;
