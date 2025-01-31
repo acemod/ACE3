@@ -2,7 +2,7 @@
 
 #include "initKeybinds.inc.sqf"
 
-[QGVAR(loadApp),{
+[QGVAR(loadApp), {
     params ["_classname","_display"];
 
     private _cfg = configFile >> QGVAR(apps) >> _classname;
