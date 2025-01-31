@@ -32,7 +32,7 @@ private _apps = "getNumber (_x >> 'scope') > 1" configClasses (configFile >> QEG
 _apps = _apps + ("getNumber (_x >> 'scope') > 1" configClasses (missionConfigFile >> QEGVAR(tacphone,apps)));
 _apps = _apps apply {[configName _x, getText (_x >> "displayName"), getText (_x >> "displayNameShort"), getText (_x >> "icon")]};
 
-private _page = 0;
+private _page = missionNamespace getVariable [QGVAR(home_pageNo),0];
 
 private _columns = 5;
 private _rows = 3;
