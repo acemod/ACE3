@@ -15,9 +15,13 @@
  * Public: No
  */
 params ["_firedEH", "", "", "", "_stateParams"];
-_firedEH params ["_shooter","_weapon","","","","","_projectile"];
-_stateParams params ["", "_seekerStateParams"];
+_firedEH params ["_shooter","_weapon","","","","","_projectile", "_gunner"];
 
+if !(_gunner call EFUNC(common,isPlayer)) then {
+    // AI shot - save shot info (ToDo: Handle offset for optics/launch dir?)
+    // _stateParams params ["", "_seekerStateParams"];
+    _stateParams set [1, [getPosASLVisual _projectile, vectorNormalized velocity _projectile]];
+};
 private _source = vehicle _shooter;
 
 private _controlled = _source getVariable [QGVAR(mclos_projectiles), []];
