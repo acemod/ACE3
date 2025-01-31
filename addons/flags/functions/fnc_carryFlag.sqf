@@ -25,4 +25,6 @@ _unit forceFlagTexture _texture;
 _unit setVariable [QGVAR(carryingFlag), _item, true];
 _unit removeItem _item;
 
-[_unit, _unit, _mass] call EFUNC(movement,addLoadToUnitContainer);
+if ("ace_movement" call EFUNC(common,isModLoaded)) then {
+    [_unit, _unit, _mass] call EFUNC(movement,addLoadToUnitContainer);
+};
