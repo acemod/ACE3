@@ -24,5 +24,5 @@ _unit forceFlagTexture ""; // Remove flag
 
 [_unit, _item] call EFUNC(common,addToInventory);
 
-(GVAR(flagItemCache) get _item) param ["", "", "", "", "", "_mass"];
+private _mass = (GVAR(flagItemCache) get _item) select 5;
 [_unit, _unit, -_mass] call EFUNC(movement,addLoadToUnitContainer);
