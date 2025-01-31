@@ -6,9 +6,9 @@
     params ["_classname","_display"];
 
     private _getAppConfig = {
-        private _cfg = configFile >> QGVAR(apps) >> _this;
+        private _cfg = missionConfigFile >> QGVAR(apps) >> _this;
         if (isNull _cfg) then {
-            _cfg = missionConfigFile >> QGVAR(apps) >> _this;
+            _cfg = configFile >> QGVAR(apps) >> _this;
         };
         _cfg // Might be configNull if no app was actually found
     };
