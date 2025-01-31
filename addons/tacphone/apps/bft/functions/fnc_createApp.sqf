@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_tacphone_homescreen_fnc_createApp
+ * [] call ace_tacphone_bft_fnc_createApp
  *
  * Public: No
  */
