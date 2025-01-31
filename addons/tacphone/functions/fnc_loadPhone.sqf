@@ -37,7 +37,7 @@ if (GVAR(app_selected) isEqualTo "") then {
     GVAR(home_background) ctrlSetPosition [(1-PHONE_WIDTH)/2, (1-PHONE_HEIGHT)/2, PHONE_WIDTH, PHONE_HEIGHT];
     GVAR(home_background) ctrlSetText /*"#(rgb,1,1,1)color(0.1,0.1,0.1,1)"*/ QPATHTOF(data\background_banana.paa);
     GVAR(home_background) ctrlCommit 0;
-    GVAR(home_background) ctrlAddEventHandler ["Destroy",{
+    GVAR(home_background) ctrlAddEventHandler ["Destroy", {
         {
             _x params ["_app","_appLabel"];
             ctrlDelete _app;
