@@ -12,4 +12,8 @@ class CfgWeapons {
         lockingTargetSound[] = {"",0,1};
         lockedTargetSound[] = {"",0,1};
     };
+
+#ifdef CREATE_MOCK_PLATFORMS
+#include "dev\mock_weapons.hpp"
+#endif
 };

@@ -40,4 +40,8 @@ class CfgMagazines {
         count = 24;
         pylonWeapon = QGVAR(dagr);
     };
+
+#ifdef CREATE_MOCK_PLATFORMS
+#include "dev\mock_magazines.hpp"
+#endif
 };
