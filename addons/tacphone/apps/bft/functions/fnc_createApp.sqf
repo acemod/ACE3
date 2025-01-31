@@ -24,7 +24,7 @@ GVAR(appsection) ctrlSetPosition [(1-PHONE_WIDTH)/2, (1-PHONE_HEIGHT)/2, PHONE_W
 GVAR(appsection) ctrlCommit 0;
 
 _map = _display ctrlCreate [QEGVAR(tacphone,mapControl), -1, GVAR(appsection)];
-_map ctrlMapSetPosition [0, 0, (ctrlPosition GVAR(home_appsection))#2, (ctrlPosition GVAR(home_appsection))#3]; 
+_map ctrlMapSetPosition [0, 0, (ctrlPosition GVAR(appsection))#2, (ctrlPosition GVAR(appsection))#3]; 
 _map ctrlCommit 0;
 private _plrPos = _map ctrlMapWorldToScreen position player;
 
