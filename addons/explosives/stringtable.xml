@@ -1063,11 +1063,11 @@
         </Key>
         <Key ID="STR_ACE_Explosives_apersToePopper">
             <English>APERS Mine (Toe-Popper)</English>
-            <Japanese>対人地雷 (トウポッパー)</Japanese>
-            <Chinesesimp>反人员地雷 (脚尖毁灭者)</Chinesesimp>
-            <Korean>대인지뢰 (발목지뢰형)</Korean>
             <French>Mine APERS (Toe-Popper)</French>
             <Russian>APERS мина (Toe-Topper)</Russian>
+            <Korean>대인지뢰 (발목지뢰형)</Korean>
+            <Japanese>対人地雷 (トウポッパー)</Japanese>
+            <Chinesesimp>反人员地雷 (脚尖毁灭者)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_cellphone_description">
             <English>Used to remotely trigger explosives</English>
