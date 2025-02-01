@@ -18,7 +18,5 @@
 params ["_display"];
 
 systemChat "Group Management closed";
-[{
-    // All app icons are children of appsection so we'll be deleting them too
-    ctrlDelete GVAR(appsection);
-}, []] call CBA_fnc_execNextFrame;
+// We simply clear out the app section
+ctrlDelete GVAR(appsection);

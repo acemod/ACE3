@@ -15,16 +15,16 @@
  * Public: No
  */
 
-params ["_display"];
+params ["_display", "_appSection"];
 
-GVAR(home_appsection) = _display ctrlCreate ["RscControlsGroupNoScrollbars", -1];
+private _fullSize = [0, 0, (ctrlPosition _appSection)#2, (ctrlPosition _appSection)#3];
 
-//#TODO this should be [0,0, (ctrlPosition _parent)#2, (ctrlPosition_parent)#3] and the parent gives us a controlsgroup to insert our things into
-GVAR(home_appsection) ctrlSetPosition [(1-PHONE_WIDTH)/2, (1-PHONE_HEIGHT)/2, PHONE_WIDTH, PHONE_HEIGHT];
-GVAR(home_appsection) ctrlCommit 0;
+GVAR(appsection) = _display ctrlCreate ["RscControlsGroupNoScrollbars", -1, _appSection];
+GVAR(appsection) ctrlSetPosition _fullSize;
+GVAR(appsection) ctrlCommit 0;
 
-private _background = _display ctrlCreate ["RscPicture", -1, GVAR(home_appsection)];
-_background ctrlSetPosition [0, 0, (ctrlPosition GVAR(home_appsection))#2, (ctrlPosition GVAR(home_appsection))#3];
+private _background = _display ctrlCreate ["RscPicture", -1, GVAR(appsection)];
+_background ctrlSetPosition _fullSize;
 _background ctrlSetText /*"#(rgb,1,1,1)color(0.1,0.1,0.1,1)"*/ QPATHTOF(data\background_banana.paa);
 _background ctrlCommit 0;
 
@@ -47,8 +47,8 @@ GVAR(home_background_apps) = [];
     private _column = _forEachIndex mod _columns;
     private _row = floor (_forEachIndex/_columns);    
         
-    private _app = _display ctrlCreate ["RscActivePicture", -1, GVAR(home_appsection)];
-    private _appLabel = _display ctrlCreate ["RscText", -1, GVAR(home_appsection)];
+    private _app = _display ctrlCreate ["RscActivePicture", -1, GVAR(appsection)];
+    private _appLabel = _display ctrlCreate ["RscText", -1, GVAR(appsection)];
     
     GVAR(home_background_apps) pushBack [_app,_appLabel];
     
@@ -70,7 +70,7 @@ GVAR(home_background_apps) = [];
         private _display = _control getVariable [QEGVAR(tacphone,display),displayNull];
 
         if (_appClassname isNotEqualTo "") then {
-            [QEGVAR(tacphone,loadApp),[_appClassname,_display]] call CBA_fnc_localEvent;
+            [_display, _appClassname] call EFUNC(tacphone,switchToApp);
         };
     }];
     
