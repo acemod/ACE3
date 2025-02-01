@@ -1,1 +1,2 @@
 PREP(loadPhone);
+PREP(switchToApp);

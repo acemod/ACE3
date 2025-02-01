@@ -18,7 +18,8 @@
 params ["_display"];
 
 systemChat "Homescreen closed";
-[{
-    // All app icons are children of appsection so we'll be deleting them too
-    ctrlDelete GVAR(home_appsection);
-}, []] call CBA_fnc_execNextFrame;
+
+//#TODO when "Back to previous app" functionality is implemented, we want to just ctrlShow hide the appsection, then in createApp we can re-show the existing control
+
+// We simply clear out the app section
+ctrlDelete GVAR(appsection);
