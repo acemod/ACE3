@@ -31,11 +31,11 @@
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_alteringHeight">
             <English>Altering Height...</English>
+            <French>Modification de la hauteur...</French>
             <Spanish>Cambiando Altura...</Spanish>
             <Italian>Cambiando alzo...</Italian>
             <Korean>높이 변경 중...</Korean>
             <Japanese>高さを変更・・・</Japanese>
-            <French>Modification de la hauteur...</French>
         </Key>
     </Package>
 </Project>
