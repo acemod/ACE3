@@ -493,6 +493,7 @@
             <French>Réduit le volume des bruits d'impulsion tels que les coups de feu et les explosions lorsque l'on porte une protection auditive électronique.</French>
             <Japanese>電子聴覚保護具を装着しているときに、銃声や爆発音などの衝撃音の音量を低減します</Japanese>
             <Korean>전자 청력 보호구를 착용하면 총성이나 폭발음과 같은 충격음의 볼륨이 감소합니다.</Korean>
+            <Russian>При ношении электронных средств защиты органов слуха снижается громкость импульсных шумов, таких как выстрелы и взрывы</Russian>
         </Key>
         <Key ID="STR_ACE_Hearing_EnableNoiseDucking_DisplayName">
             <English>Enable Noise Ducking Effect</English>
@@ -500,6 +501,7 @@
             <French>Activer l'effet de réduction du bruit</French>
             <Japanese>ノイズダッキング効果を有効化</Japanese>
             <Korean>잡음 제거 효과 활성화</Korean>
+            <Russian>Включить эффект подавления шума</Russian>
         </Key>
     </Package>
 </Project>
