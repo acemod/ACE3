@@ -28,5 +28,6 @@ if (!local _unit) exitWith {};
 if (_isRespawn) then {
     TRACE_1("reseting all vars on respawn",_isRespawn);
 
-    _unit setVariable [QGVAR(intensity), 0, true];
+    _unit setVariable [QGVAR(intensity), nil, true];
+    _unit setVariable [QGVAR(stopDropRoll). nil. true];
 };
