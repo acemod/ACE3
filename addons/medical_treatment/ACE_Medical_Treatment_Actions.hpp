@@ -227,7 +227,6 @@ class GVAR(actions) {
         allowedSelections[] = {"Head", "Body"};
         medicRequired = 0;
         treatmentTime = 2.5;
-        treatmentTimeTrained = 2.5;
         items[] = {};
         condition = QUOTE(GVAR(advancedDiagnose) == 0);
         callbackSuccess = QFUNC(diagnose);
