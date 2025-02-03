@@ -10,7 +10,6 @@ class EGVAR(medical_treatment,actions) {
         allowSelfTreatment = 1;
         medicRequired = 0;
         treatmentTime = 5;
-        treatmentTimeTrained = 5;
         items[] = {};
         condition = QFUNC(medical_canPatDown);
         callbackSuccess = QFUNC(medical_success);
