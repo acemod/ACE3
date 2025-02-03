@@ -288,7 +288,6 @@ class GVAR(actions) {
         displayNameProgress = CSTRING(DiggingGrave);
         icon = QPATHTOEF(medical_gui,ui\grave.paa);
         treatmentTime = QGVAR(treatmentTimeGrave);
-        treatmentTimeTrained = QGVAR(treatmentTimeGrave);
         condition = QFUNC(canDigGrave);
         callbackSuccess = QFUNC(placeInGrave);
         items[] = {};
