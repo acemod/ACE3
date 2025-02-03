@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Unit to check for overfill <OBJECT>
- * 1: Which container to check (0: all, 1: uniform, 2: vest, 3: backpack) <NUMBER>
+ * 1: Which container to check. If unit, will go through all containers starting from uniform <OBJECT>
  *
  * Return Value:
  * None
@@ -14,37 +14,21 @@
  * Public: No
 */
 
-params ["_unit", ["_container", 0]];
+params ["_unit", ["_container", objNull]];
 
-// Remove excess items from uniform
-if (_container in [0, 1]) then {
-    private _uniformItems = uniformItems _unit;
-    private _containerObject = uniformContainer _unit;
-    private _index = count _uniformItems - 1;
-    while {loadUniform _unit > 1 && {_index >= 0}} do {
-        _containerObject addItemCargoGlobal [(_uniformItems select _index), -1];
-        DEC(_index);
-    };
+if (isNull _container || _container isEqualTo _unit) then {
+    _container = [uniformContainer _unit, vestContainer _unit, backpackContainer _unit];
+} else {
+    _container = [_container];
 };
 
-// Remove excess items from vest
-if (_container in [0, 2]) then {
-    private _vestItems = vestItems _unit;
-    private _containerObject = vestContainer _unit;
-    private _index = count _vestItems - 1;
-    while {loadVest _unit > 1 && {_index >= 0}} do {
-        _containerObject addItemCargoGlobal [(_vestItems select _index), -1];
-        DEC(_index);
-    };
-};
+{
+    private _currentContainer = _x;
+    {
+        _currentContainer addItemCargoGlobal [_x, -1];
 
-// Remove excess items from backpack
-if (_container in [0, 3]) then {
-    private _backpackItems = backpackItems _unit;
-    private _containerObject = backpackContainer _unit;
-    private _index = count _backpackItems - 1;
-    while {loadBackpack _unit > 1 && {_index >= 0}} do {
-        _containerObject addItemCargoGlobal [(_backpackItems select _index), -1];
-        DEC(_index);
-    };
-};
+        if (load _currentContainer <= 1) then {
+            break;
+        };
+    } forEachReversed (itemCargo _currentContainer);
+} forEach (_container select {load _x > 1});
