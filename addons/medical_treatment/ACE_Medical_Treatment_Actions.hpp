@@ -326,7 +326,6 @@ class GVAR(actions) {
         allowSelfTreatment = QGVAR(allowSelfStitch);
         medicRequired = QGVAR(medicSurgicalKit);
         treatmentTime = QFUNC(getStitchTime);
-        treatmentTimeTrained = QFUNC(getStitchTime);
         condition = QFUNC(canStitch);
         callbackSuccess = "";
         callbackStart = QFUNC(surgicalKitStart);
@@ -346,7 +345,6 @@ class GVAR(actions) {
         allowSelfTreatment = QGVAR(allowSelfPAK);
         medicRequired = QGVAR(medicPAK);
         treatmentTime = QFUNC(getHealTime);
-        treatmentTimeTrained = QFUNC(getHealTime);
         callbackSuccess = QFUNC(fullHeal);
         consumeItem = QGVAR(consumePAK);
         animationMedic = "AinvPknlMstpSlayW[wpn]Dnon_medicOther";
