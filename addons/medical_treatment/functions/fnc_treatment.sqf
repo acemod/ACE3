@@ -43,7 +43,6 @@ private _treatmentTime = if (isText (_config >> _treatmentTimeConfig)) then {
     getNumber (_config >> _treatmentTimeConfig);
 };
 
-
 if (_treatmentTime == 0) exitWith {false};
 
 // Consume one of the treatment items if needed
