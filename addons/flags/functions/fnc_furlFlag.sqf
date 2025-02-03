@@ -23,3 +23,8 @@ _unit setVariable [QGVAR(carryingFlag), nil, true];
 _unit forceFlagTexture ""; // Remove flag
 
 [_unit, _item] call EFUNC(common,addToInventory);
+
+if ("ace_movement" call EFUNC(common,isModLoaded)) then {
+    private _mass = (GVAR(flagItemCache) get _item) select 5;
+    [_unit, _unit, -_mass] call EFUNC(movement,addLoadToUnitContainer);
+};
