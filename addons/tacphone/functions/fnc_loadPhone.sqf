@@ -31,6 +31,23 @@ private _phoneHeight = PHONE_HEIGHT+0.1;
 _background ctrlSetPosition [(1-_phoneWidth)/2, (1-_phoneHeight)/2, _phoneWidth, _phoneHeight];
 _background ctrlSetText "#(rgb,1,1,1)color(0.3,0.3,0.3,1)";
 _background ctrlCommit 0;
+_background ctrlAddEventHandler ["Destroy",{
+    params ["_control"];
+
+    private _getAppConfig = {
+        private _cfg = missionConfigFile >> QGVAR(apps) >> _this;
+        if (isNull _cfg) then {
+            _cfg = configFile >> QGVAR(apps) >> _this;
+        };
+        _cfg // Might be configNull if no app was actually found
+    };
+
+    private _appCfg = GVAR(app_selected) call _getAppConfig;
+    private _function = getText (_appCfg >> QGVAR(onClose));
+    private _code = missionNamespace getVariable [_function, ""];
+    if (_code isEqualTo "") exitWith {};
+    [ctrlParent GVAR(appsection), GVAR(appsection)] call _code;
+}];
 
 // This will be the container, in which all apps content will be created. The phone itself has no control over its contents (besides deleting all of it)
 //#TODO this should not be a global variable, for one it doesn't serialize in missionNamespace, second it prevents us from having multiple phone displays open at the same time
