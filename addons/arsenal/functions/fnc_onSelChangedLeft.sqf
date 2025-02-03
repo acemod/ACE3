@@ -333,7 +333,7 @@ switch (GVAR(currentLeftPanel)) do {
                 GVAR(center) setUnitLoadout _loadout;
 
                 // Remove any items that can't fit in the container (this prevents overloading)
-                [GVAR(center), 1] call FUNC(preventOverfilling);
+                [GVAR(center), uniformContainer GVAR(center)] call FUNC(preventOverfilling);
 
                 GVAR(currentItems) set [IDX_CURR_UNIFORM, _item];
 
@@ -368,7 +368,7 @@ switch (GVAR(currentLeftPanel)) do {
                 GVAR(center) setUnitLoadout _loadout;
 
                 // Remove any items that can't fit in the container (this prevents overloading)
-                [GVAR(center), 2] call FUNC(preventOverfilling);
+                [GVAR(center), vestContainer GVAR(center)] call FUNC(preventOverfilling);
 
                 GVAR(currentItems) set [IDX_CURR_VEST, _item];
 
@@ -403,7 +403,7 @@ switch (GVAR(currentLeftPanel)) do {
                 GVAR(center) setUnitLoadout _loadout;
 
                 // Remove any items that can't fit in the container (this prevents overloading)
-                [GVAR(center), 3] call FUNC(preventOverfilling);
+                [GVAR(center), backpackContainer GVAR(center)] call FUNC(preventOverfilling);
 
                 GVAR(currentItems) set [IDX_CURR_BACKPACK, _item];
 
