@@ -16,7 +16,6 @@ class GVAR(actions) {
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
 
         treatmentTime = QFUNC(getBandageTime);
-        treatmentTimeTrained = QFUNC(getBandageTime);
 
         callbackStart = "";
         callbackProgress = "";
