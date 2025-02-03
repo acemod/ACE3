@@ -4500,7 +4500,7 @@
             <Chinesesimp>自动注射器治疗时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_Description">
-            <English>Time, in seconds, required for a Medic or Doctor to administer medication using an autoinjector.</English>
+            <English>Time, in seconds, required for a unit exceeding required training level to administer medication using an autoinjector.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_DisplayName">
             <English>Skilled Autoinjector Treatment Time</English>
@@ -4632,7 +4632,7 @@
             <Chinesesimp>静脉输液袋治疗时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_Description">
-            <English>Time, in seconds, required for a Medic or Doctor to administer an IV bag.</English>
+            <English>Time, in seconds, required for a unit exceeding required training level to administer an IV bag.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_DisplayName">
             <English>Skilled IV Bag Treatment Time</English>
@@ -4664,7 +4664,7 @@
             <Chinesesimp>夹板治疗时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_Description">
-            <English>Time, in seconds, required for a Medic or Doctor to apply a splint.</English>
+            <English>Time, in seconds, required for a unit exceeding required training level to apply a splint.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_DisplayName">
             <English>Skilled Splint Treatment Time</English>
@@ -4696,7 +4696,7 @@
             <Chinesesimp>止血带治疗时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_Description">
-            <English>Time, in seconds, required for a Medic or Doctor to apply or remove a tourniquet.</English>
+            <English>Time, in seconds, required for a unit exceeding required training level to apply or remove a tourniquet.</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_DisplayName">
             <English>Skilled Tourniquet Treatment Time</English>
