@@ -4499,6 +4499,12 @@
             <Japanese>自動注射器の所要時間</Japanese>
             <Chinesesimp>自动注射器治疗时间</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_Description">
+            <English>Time, in seconds, required for a unit exceeding required training level to administer medication using an autoinjector.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_DisplayName">
+            <English>Skilled Autoinjector Treatment Time</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_Description">
             <English>Time, in seconds, required to put a patient in a body bag.</English>
             <French>Définit le temps nécessaire à la mise en housse d'un corps (en secondes).</French>
@@ -4625,6 +4631,12 @@
             <Japanese>点滴の所要時間</Japanese>
             <Chinesesimp>静脉输液袋治疗时间</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_Description">
+            <English>Time, in seconds, required for a unit exceeding required training level to administer an IV bag.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_DisplayName">
+            <English>Skilled IV Bag Treatment Time</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
             <English>Time, in seconds, required to apply a splint.</English>
             <French>Définit le temps nécessaire à l'application d'une attelle (en secondes).</French>
@@ -4651,6 +4663,12 @@
             <Japanese>添え木の所要時間</Japanese>
             <Chinesesimp>夹板治疗时间</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_Description">
+            <English>Time, in seconds, required for a unit exceeding required training level to apply a splint.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_DisplayName">
+            <English>Skilled Splint Treatment Time</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
             <English>Time, in seconds, required to apply/remove a tourniquet.</English>
             <French>Définit le temps nécessaire à l'application ou au retrait d'un garrot (en secondes).</French>
@@ -4676,6 +4694,12 @@
             <Korean>지혈대 사용 시간</Korean>
             <Japanese>止血帯の所要時間</Japanese>
             <Chinesesimp>止血带治疗时间</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_Description">
+            <English>Time, in seconds, required for a unit exceeding required training level to apply or remove a tourniquet.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_DisplayName">
+            <English>Skilled Tourniquet Treatment Time</English>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TriageCard_NoEntry">
             <English>No entries on this triage card.</English>
