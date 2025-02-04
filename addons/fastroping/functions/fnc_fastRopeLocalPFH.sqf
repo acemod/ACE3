@@ -58,6 +58,7 @@ if (isNull attachedTo _unit) exitWith {
             params ["_unit", "_weapon"];
             // Abort if the unit already selected a different weapon
             if (currentWeapon _unit != "") exitWith {};
+            if (!([_unit] call EFUNC(common,isAwake))) exitWith {};
             _unit selectWeapon _weapon;
         }, [_unit, _currentWeapon], 2] call CBA_fnc_waitAndExecute;
     };
