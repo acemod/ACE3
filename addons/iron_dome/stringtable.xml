@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="IRON_DOME">
+        <Key ID="STR_ACE_IRON_DOME_category">
+            <English>ACE Iron Dome</English>
+        </Key>
+        <Key ID="STR_ACE_IRON_DOME_enable_description">
+            <English>Enable the Iron Dome system</English>
+        </Key>
+        <Key ID="STR_ACE_IRON_DOME_launchAcceptableAngle_description">
+            <English>How many degrees offset the launcher can be before firing</English>
+        </Key>
+        <Key ID="STR_ACE_IRON_DOME_launchAcceptableAngle_setting">
+            <English>Launch Acceptable Angle</English>
+        </Key>
+        <Key ID="STR_ACE_IRON_DOME_launchAcceptableElevation_description">
+            <English>The minimum number of degrees the launcher has to be pointing up/down before firing</English>
+        </Key>
+        <Key ID="STR_ACE_IRON_DOME_launchAcceptableElevation_setting">
+            <English>Launch Acceptable Elevation</English>
+        </Key>
+        <Key ID="STR_ACE_IRON_DOME_proximityFuseFailureChance_description">
+            <English>Chance for proximity fuse to fail to destroy target</English>
+        </Key>
+        <Key ID="STR_ACE_IRON_DOME_proximityFuseFailureChance_setting">
+            <English>Proximity Fuse Failure Chance</English>
+        </Key>
+        <Key ID="STR_ACE_IRON_DOME_proximityFuseRange_description">
+            <English>How close the interceptor has to be to the target in order to detonate</English>
+        </Key>
+        <Key ID="STR_ACE_IRON_DOME_proximityFuseRange_setting">
+            <English>Proximity Fuse Range</English>
+        </Key>
+        <Key ID="STR_ACE_IRON_DOME_targetRecycleTime_description">
+            <English>How many seconds until another launcher can consider firing at the target</English>
+        </Key>
+        <Key ID="STR_ACE_IRON_DOME_targetRecycleTime_setting">
+            <English>Target Recycle Time</English>
+        </Key>
+        <Key ID="STR_ACE_IRON_DOME_timeBetweenLaunches_description">
+            <English>Minimum number of seconds between each launch of an interceptor for a single launcher</English>
+        </Key>
+        <Key ID="STR_ACE_IRON_DOME_timeBetweenLaunches_setting">
+            <English>Time Between Launches</English>
+        </Key>
+    </Package>
+</Project>
