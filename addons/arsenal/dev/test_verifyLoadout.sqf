@@ -79,7 +79,7 @@ private _items_B_Soldier_F = (flatten (_loadout_B_Soldier_F select 0)) select {_
 private _test_allItemsAvailable = ["All items available - expect no change",
     [ // test params
         _loadout_B_Soldier_F, // input loadout
-        _loadout_B_Soldier_F, // expected loadout
+        _loadout_B_Soldier_F // expected loadout
     ],
     [ // setup params (BeforeEach)
         _items_B_Soldier_F, // available items
