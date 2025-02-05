@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Kingsley
  * Deploys the object to the player for them to move it around.
@@ -38,7 +38,6 @@ private _lmb = LLSTRING(confirm);
 if (_budget > -1) then {_lmb = _lmb + format [" -$%1", _cost];};
 private _rmb = localize ELSTRING(Common,Cancel);
 private _wheel = LLSTRING(rotate);
-private _xAxis = localize "str_disp_conf_xaxis";
 private _icons = [["alt", localize "str_3den_display3den_entitymenu_movesurface_text"], ["shift", localize "str_disp_conf_xaxis" + " " + _wheel], ["control", localize "str_disp_conf_yaxis" + " " + _wheel]];
 [_lmb, _rmb, _wheel, _icons] call EFUNC(interaction,showMouseHint);
 
@@ -70,6 +69,7 @@ private _mouseClickID = [_player, "DefaultAction", {GVAR(isPlacing) == PLACE_WAI
             [_unit, _object] call FUNC(deployConfirm);
         } else {
             TRACE_1("deleting object",_object);
+            [QGVAR(onDeployStop), [_unit, _object, _cost]] call CBA_fnc_localEvent;
             deleteVehicle _object;
         };
     };

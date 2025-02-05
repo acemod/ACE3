@@ -18,16 +18,18 @@
 //////////////////////////////////////////////////
 
 //Status Effect EHs:
-[QGVAR(setStatusEffect), {_this call FUNC(statusEffect_set)}] call CBA_fnc_addEventHandler;
-["forceWalk", false, ["ace_advanced_fatigue", "ACE_SwitchUnits", "ACE_Attach", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_Sandbag", "ACE_refuel", "ACE_rearm", "ACE_Trenches", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
-["blockSprint", false, ["ace_advanced_fatigue", "ace_medical_fracture"]] call FUNC(statusEffect_addType);
-["setCaptive", true, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered)]] call FUNC(statusEffect_addType);
-["blockDamage", false, ["fixCollision", "ACE_cargo"]] call FUNC(statusEffect_addType);
-["blockEngine", false, ["ACE_Refuel"]] call FUNC(statusEffect_addType);
-["blockThrow", false, ["ACE_Attach", "ACE_concertina_wire", "ACE_dragging", "ACE_Explosives", "ACE_Ladder", "ACE_rearm", "ACE_refuel", "ACE_Sandbag", "ACE_Trenches", "ACE_tripod"]] call FUNC(statusEffect_addType);
+[QGVAR(setStatusEffect), LINKFUNC(statusEffect_set)] call CBA_fnc_addEventHandler;
+["forceWalk", false, ["ace_advanced_fatigue", "ace_attach", "ace_dragging", "ace_explosives", QEGVAR(medical,fracture), "ace_rearm", "ace_refuel", "ace_sandbag", "ace_switchunits", "ace_tacticalladder", "ace_trenches"]] call FUNC(statusEffect_addType);
+["blockSprint", false, ["ace_advanced_fatigue", "ace_dragging", QEGVAR(medical,fracture)]] call FUNC(statusEffect_addType);
+["setCaptive", true, [QEGVAR(captives,handcuffed), QEGVAR(captives,surrendered)]] call FUNC(statusEffect_addType);
+["blockDamage", false, ["fixCollision", "ace_cargo"]] call FUNC(statusEffect_addType);
+["blockEngine", false, ["ace_refuel"]] call FUNC(statusEffect_addType);
+["blockThrow", false, ["ace_attach", "ace_concertina_wire", "ace_dragging", "ace_explosives", "ace_rearm", "ace_refuel", "ace_sandbag", "ace_tacticalladder", "ace_trenches", "ace_tripod"]] call FUNC(statusEffect_addType);
 ["setHidden", true, ["ace_unconscious"]] call FUNC(statusEffect_addType);
-["blockRadio", false, [QEGVAR(captives,Handcuffed), QEGVAR(captives,Surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
+["blockRadio", false, [QEGVAR(captives,handcuffed), QEGVAR(captives,surrendered), "ace_unconscious"]] call FUNC(statusEffect_addType);
 ["blockSpeaking", false, ["ace_unconscious"]] call FUNC(statusEffect_addType);
+["disableWeaponAssembly", false, ["ace_common", QGVAR(lockVehicle), "ace_csw"]] call FUNC(statusEffect_addType);
+["lockInventory", true, [], true] call FUNC(statusEffect_addType);
 
 [QGVAR(forceWalk), {
     params ["_object", "_set"];
@@ -94,7 +96,7 @@
         _object setVariable ["acre_sys_core_isDisabled", _set > 0, true];
     };
     if (["task_force_radio"] call FUNC(isModLoaded)) then {
-        _object setVariable ["tf_voiceVolume", [1, 0] select (_set > 0), true];
+        _object setVariable ["tf_voiceVolume", parseNumber (_set == 0), true];
     };
 }] call CBA_fnc_addEventHandler;
 
@@ -120,6 +122,41 @@
     _object setMass _mass;
 }] call CBA_fnc_addEventHandler;
 
+[QGVAR(disableWeaponAssembly), {
+    params ["_object", "_set"];
+    _object enableWeaponDisassembly (_set < 1);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(lockInventory), {
+    params ["_object", "_set"];
+    TRACE_2("lockInventory EH",_object,_set);
+    _object lockInventory (_set > 0);
+}] call CBA_fnc_addEventHandler;
+
+[QGVAR(disableAiUAV), {
+    params ["_unit", "_disable"];
+
+    if (_disable) then {
+        private _features = ["AUTOTARGET", "TARGET", "WEAPONAIM", "FIREWEAPON", "RADIOPROTOCOL"];
+
+        // Save current status
+        _unit setVariable [QGVAR(featuresAiUAV), _features apply {[_x, _unit checkAIFeature _x]}];
+
+        {
+            _unit enableAIFeature [_x, false];
+        } forEach _features;
+    } else {
+        // Restore previous status
+        private _features = _unit getVariable [QGVAR(featuresAiUAV), []];
+
+        {
+            _unit enableAIFeature [_x select 0, _x select 1];
+        } forEach _features;
+
+        _unit setVariable [QGVAR(featuresAiUAV), nil];
+    };
+}] call CBA_fnc_addEventHandler;
+
 //Add a fix for BIS's zeus remoteControl module not reseting variables on DC when RC a unit
 //This variable is used for isPlayer checks
 if (isServer) then {
@@ -128,12 +165,11 @@ if (isServer) then {
         private _zeusLogic = getAssignedCuratorLogic _dcPlayer;
         if ((!isNil "_zeusLogic") && {!isNull _zeusLogic}) then {
             {
-                if ((_x getvariable ["bis_fnc_moduleRemoteControl_owner", objnull]) isEqualTo _dcPlayer) exitWith {
-                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`", [_x] call FUNC(getName), _dcPlayer, _x);
+                if ((_x getVariable ["bis_fnc_moduleRemoteControl_owner", objNull]) isEqualTo _dcPlayer) exitWith {
+                    INFO_3("[%1] DC - Was Zeus [%2] while controlling unit [%3] - manually clearing `bis_fnc_moduleRemoteControl_owner`",[_x] call FUNC(getName),_dcPlayer,_x);
                     _x setVariable ["bis_fnc_moduleRemoteControl_owner", nil, true];
                 };
-                nil
-            } count (curatorEditableObjects  _zeusLogic);
+            } forEach (curatorEditableObjects _zeusLogic);
         };
     }];
 };
@@ -144,9 +180,9 @@ if (isServer) then {
     INFO_2("Headbug Used: Name: %1, Animation: %2",_profileName,_animation);
 }] call CBA_fnc_addEventHandler;
 
-[QGVAR(fixCollision), FUNC(fixCollision)] call CBA_fnc_addEventHandler;
-[QGVAR(fixFloating), FUNC(fixFloating)] call CBA_fnc_addEventHandler;
-[QGVAR(fixPosition), FUNC(fixPosition)] call CBA_fnc_addEventHandler;
+[QGVAR(fixCollision), LINKFUNC(fixCollision)] call CBA_fnc_addEventHandler;
+[QGVAR(fixFloating), LINKFUNC(fixFloating)] call CBA_fnc_addEventHandler;
+[QGVAR(fixPosition), LINKFUNC(fixPosition)] call CBA_fnc_addEventHandler;
 
 ["ace_loadPersonEvent", LINKFUNC(loadPersonLocal)] call CBA_fnc_addEventHandler;
 ["ace_unloadPersonEvent", LINKFUNC(unloadPersonLocal)] call CBA_fnc_addEventHandler;
@@ -154,10 +190,16 @@ if (isServer) then {
 [QGVAR(lockVehicle), {
     _this setVariable [QGVAR(lockStatus), locked _this];
     _this lock 2;
+    if ([] isNotEqualTo getArray (configOf _this >> "assembleInfo" >> "dissasembleTo")) then {
+        [_this, "disableWeaponAssembly", QGVAR(lockVehicle), true] call FUNC(statusEffect_set);
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(unlockVehicle), {
     _this lock (_this getVariable [QGVAR(lockStatus), locked _this]);
+    if ([] isNotEqualTo getArray (configOf _this >> "assembleInfo" >> "dissasembleTo")) then {
+        [_this, "disableWeaponAssembly", QGVAR(lockVehicle), false] call FUNC(statusEffect_set);
+    };
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(setDir), {(_this select 0) setDir (_this select 1)}] call CBA_fnc_addEventHandler;
@@ -173,6 +215,11 @@ if (isServer) then {
 [QGVAR(switchMove), {(_this select 0) switchMove (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(setVectorDirAndUp), {(_this select 0) setVectorDirAndUp (_this select 1)}] call CBA_fnc_addEventHandler;
 [QGVAR(addWeaponItem), {(_this select 0) addWeaponItem [(_this select 1), (_this select 2)]}] call CBA_fnc_addEventHandler;
+[QGVAR(addMagazineTurret), {(_this select 0) addMagazineTurret (_this select 1)}] call CBA_fnc_addEventHandler;
+[QGVAR(removeMagazineTurret), {(_this select 0) removeMagazineTurret [_this select 1, _this select 2]}] call CBA_fnc_addEventHandler;
+[QGVAR(removeMagazinesTurret), {(_this select 0) removeMagazinesTurret [_this select 1, _this select 2]}] call CBA_fnc_addEventHandler;
+[QGVAR(setMagazineTurretAmmo), {(_this select 0) setMagazineTurretAmmo [_this select 1, _this select 2, _this select 3]}] call CBA_fnc_addEventHandler;
+[QGVAR(triggerAmmo), {triggerAmmo _this}] call CBA_fnc_addEventHandler;
 
 [QGVAR(setVanillaHitPointDamage), {
     params ["_object", "_hitPointAnddamage"];
@@ -190,8 +237,8 @@ if (isServer) then {
 }] call CBA_fnc_addEventHandler;
 
 // Request framework
-[QGVAR(requestCallback), FUNC(requestCallback)] call CBA_fnc_addEventHandler;
-[QGVAR(receiveRequest), FUNC(receiveRequest)] call CBA_fnc_addEventHandler;
+[QGVAR(requestCallback), LINKFUNC(requestCallback)] call CBA_fnc_addEventHandler;
+[QGVAR(receiveRequest), LINKFUNC(receiveRequest)] call CBA_fnc_addEventHandler;
 
 [QGVAR(systemChatGlobal), {systemChat _this}] call CBA_fnc_addEventHandler;
 
@@ -200,10 +247,13 @@ if (isServer) then {
     [QGVAR(enableSimulationGlobal), {(_this select 0) enableSimulationGlobal (_this select 1)}] call CBA_fnc_addEventHandler;
     [QGVAR(setShotParents), {(_this select 0) setShotParents [_this select 1, _this select 2]}] call CBA_fnc_addEventHandler;
     ["ace_setOwner", {(_this select 0) setOwner (_this select 1)}] call CBA_fnc_addEventHandler;
-    [QGVAR(serverLog), FUNC(serverLog)] call CBA_fnc_addEventHandler;
+    [QGVAR(serverLog), LINKFUNC(serverLog)] call CBA_fnc_addEventHandler;
     [QGVAR(claimSafe), LINKFUNC(claimSafeServer)] call CBA_fnc_addEventHandler;
 };
 
+["CBA_SettingChanged", {
+    ["ace_settingChanged", _this] call CBA_fnc_localEvent;
+}] call CBA_fnc_addEventHandler;
 
 //////////////////////////////////////////////////
 // Set up remote execution
@@ -217,14 +267,14 @@ if (!isServer) then {
         ["ACEa", [player]] call CBA_fnc_serverEvent;
     }] call CBA_fnc_addEventHandler;
 } else {
-    ["ACEa", FUNC(_handleRequestAllSyncedEvents)] call CBA_fnc_addEventHandler;
+    ["ACEa", LINKFUNC(_handleRequestAllSyncedEvents)] call CBA_fnc_addEventHandler;
 };
 
-["ACEe", FUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
-["ACEs", FUNC(_handleRequestSyncedEvent)] call CBA_fnc_addEventHandler;
+["ACEe", LINKFUNC(_handleSyncedEvent)] call CBA_fnc_addEventHandler;
+["ACEs", LINKFUNC(_handleRequestSyncedEvent)] call CBA_fnc_addEventHandler;
 
 if (isServer) then {
-    [FUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
+    [LINKFUNC(syncedEventPFH), 0.5, []] call CBA_fnc_addPerFrameHandler;
 };
 
 
@@ -246,7 +296,7 @@ call FUNC(checkFiles);
 
 
 //////////////////////////////////////////////////
-// Set up ace_settingsInitialized eventhandler
+// Set up CBA_settingsInitialized eventhandler
 //////////////////////////////////////////////////
 
 ["CBA_settingsInitialized", {
@@ -342,7 +392,7 @@ addMissionEventHandler ["PlayerViewChanged", {
         private _position = [player] call FUNC(getUavControlPosition);
         private _seatAI = objNull;
         private _turret = [];
-        switch (toLower _position) do {
+        switch (toLowerANSI _position) do {
             case (""): {
                 _UAV = objNull; // set to objNull if not actively controlling
             };
@@ -373,8 +423,8 @@ addMissionEventHandler ["PlayerViewChanged", {
 // Eventhandlers for player controlled machines
 //////////////////////////////////////////////////
 
-[QGVAR(displayTextStructured), {_this call FUNC(displayTextStructured)}] call CBA_fnc_addEventHandler;
-[QGVAR(displayTextPicture), {_this call FUNC(displayTextPicture)}] call CBA_fnc_addEventHandler;
+[QGVAR(displayTextStructured), LINKFUNC(displayTextStructured)] call CBA_fnc_addEventHandler;
+[QGVAR(displayTextPicture), LINKFUNC(displayTextPicture)] call CBA_fnc_addEventHandler;
 
 ["ace_unconscious", {
     params ["_unit", "_isUnconscious"];
@@ -384,7 +434,7 @@ addMissionEventHandler ["PlayerViewChanged", {
     };
 }] call CBA_fnc_addEventHandler;
 
-["ace_useItem", DFUNC(useItem)] call CBA_fnc_addEventHandler;
+["ace_useItem", LINKFUNC(useItem)] call CBA_fnc_addEventHandler;
 
 
 //////////////////////////////////////////////////
@@ -402,11 +452,11 @@ addMissionEventHandler ["PlayerViewChanged", {
     params ["_unit", "_target"];
 
     // Players can always interact with himself if not boarded
-    vehicle _unit == _unit ||
+    isNull objectParent _unit ||
     // Players can always interact with his vehicle
-    {vehicle _unit == _target} ||
+    {objectParent _unit isEqualTo _target} ||
     // Players can always interact with passengers of the same vehicle
-    {_unit != _target && {vehicle _unit == vehicle _target}} ||
+    {_unit isNotEqualTo _target && {!isNull objectParent _target} && {objectParent _unit isEqualTo objectParent _target}} ||
     // Players can always interact with connected UAV
     {!(isNull (ACE_controlledUAV select 0))}
 }] call FUNC(addCanInteractWithCondition);
@@ -415,7 +465,7 @@ addMissionEventHandler ["PlayerViewChanged", {
 
 ["isNotUnconscious", {
     params ["_unit"];
-    lifeState _unit != "INCAPACITATED"
+    lifeState _unit isNotEqualTo "INCAPACITATED"
 }] call FUNC(addCanInteractWithCondition);
 
 //////////////////////////////////////////////////
@@ -423,58 +473,114 @@ addMissionEventHandler ["PlayerViewChanged", {
 //////////////////////////////////////////////////
 
 GVAR(isReloading) = false;
-GVAR(reloadMutex_lastMagazines) = [];
-// When reloading, the new magazine is removed from inventory, an animation plays and then the old magazine is added
-// If the animation is interrupted, the new magazine will be lost
-["loadout", {
-    params ["_unit", "_newLoadout"];
-    private _mags = magazines _unit;
-    // if our magazine count dropped by 1, we might be reloading
-    if ((count GVAR(reloadMutex_lastMagazines)) - (count _mags) == 1) then {
-        private _weapon = currentWeapon _unit;
-        private _muzzle = currentMuzzle _unit;
-        if (_weapon == "") exitWith {};
-        private _wpnMzlConfig = configFile >> "CfgWeapons" >> _weapon;
-        if (_muzzle != _weapon) then { _wpnMzlConfig = _wpnMzlConfig >> _muzzle; };
 
-        private _compatMags = [_wpnMzlConfig] call CBA_fnc_compatibleMagazines;
-        private _lastCompatMagCount = {_x in _compatMags} count GVAR(reloadMutex_lastMagazines);
-        private _curCompatMagCount = {_x in _compatMags} count _mags;
-        TRACE_3("",_wpnMzlConfig,_lastCompatMagCount,_curCompatMagCount);
-        if (_lastCompatMagCount - _curCompatMagCount != 1) exitWith {}; // check if magazines for our specific muzzle dropped by 1
+["unit", {
+    params ["_newPlayer"];
 
-        private _gesture = getText (_wpnMzlConfig >> "reloadAction");
-        if (_gesture == "") exitWith {}; //Ignore weapons with no reload gesture (binoculars)
-        private _isLauncher = _weapon isKindOf ["Launcher", configFile >> "CfgWeapons"];
-        private _duration = 0;
-        if (_isLauncher) then {
-            _duration = getNumber (configfile >> "CfgMovesMaleSdr" >> "States" >> _gesture >> "speed");
-        };
-        if (_duration == 0) then {
-            _duration = getNumber (configfile >> "CfgGesturesMale" >> "States" >> _gesture >> "speed");
+    // Catch the current unit reloading
+    private _weaponState = weaponState _newPlayer;
+    GVAR(isReloading) = (_weaponState select 6) != 0;
+
+    if (!GVAR(isReloading)) exitWith {};
+
+    GVAR(magazineReloadPhase) = 0;
+
+    // Wait until reload animation has finished (if weapon is no longer available, it returns -1)
+    [{
+        private _magazineReloadingPhase = ((_this select 0) weaponState (_this select 1)) select 6;
+
+        // Need to check the reloading phase, as if you interrupt reloading with a gesture, the phase will remain stuck at a value > 0
+        if (GVAR(magazineReloadPhase) == _magazineReloadingPhase) exitWith {
+            TRACE_2("Interrupted magazine reloading",_this select 0,_this select 1);
+
+            true
         };
 
-        if (_duration != 0) then {
-            _duration = if (_duration < 0) then { abs _duration } else { 1 / _duration };
-        } else {
-            _duration = 6;
-        };
+        GVAR(magazineReloadPhase) = _magazineReloadingPhase;
 
-        TRACE_2("Reloading, blocking gestures",_weapon,_duration);
-        GVAR(reloadingETA) = CBA_missionTime + _duration;
+        _magazineReloadingPhase <= 0
+    }, {
+        TRACE_2("End magazine reloading",_this select 0,_this select 1);
 
-        if (!GVAR(isReloading)) then {
-            GVAR(isReloading) = true;
+        // Player might switch units before reload finishes
+        if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
 
-            [{
-                CBA_missionTime > GVAR(reloadingETA)
-            },{
-                GVAR(isReloading) = false;
-            }] call CBA_fnc_waitUntilAndExecute;
-        };
-    };
-    GVAR(reloadMutex_lastMagazines) = _mags;
+        GVAR(isReloading) = false;
+    }, [_newPlayer, _weaponState select 1]] call CBA_fnc_waitUntilAndExecute;
 }, true] call CBA_fnc_addPlayerEventHandler;
+
+[QGVAR(magazineReloading), "MagazineReloading", {
+    params ["_unit", "", "_muzzle"];
+
+    TRACE_2("Init magazine reloading",_unit,_muzzle);
+
+    // Wait until reload animation has started
+    [{
+        ((_this select 0) weaponState (_this select 1)) select 6 != 0
+    }, {
+        TRACE_2("Start magazine reloading",_this select 0,_this select 1);
+
+        // Player might switch units before reload starts
+        if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
+
+        GVAR(isReloading) = true;
+        GVAR(magazineReloadPhase) = 0;
+
+        // Wait until reload animation has finished (if weapon is no longer available, it returns -1)
+        [{
+            private _magazineReloadingPhase = ((_this select 0) weaponState (_this select 1)) select 6;
+
+            // Need to check the reloading phase, as if you interrupt reloading with a gesture, the phase will remain stuck at a value > 0
+            if (GVAR(magazineReloadPhase) == _magazineReloadingPhase) exitWith {
+                TRACE_2("Interrupted magazine reloading",_this select 0,_this select 1);
+
+                true
+            };
+
+            GVAR(magazineReloadPhase) = _magazineReloadingPhase;
+
+            _magazineReloadingPhase <= 0
+        }, {
+            TRACE_2("End magazine reloading",_this select 0,_this select 1);
+
+            // Player might switch units before reload finishes
+            if ((_this select 0) isNotEqualTo ACE_player) exitWith {};
+
+            GVAR(isReloading) = false;
+        }, _this] call CBA_fnc_waitUntilAndExecute;
+    }, [_unit, _muzzle], 5] call CBA_fnc_waitUntilAndExecute;
+}] call CBA_fnc_addBISPlayerEventHandler;
+
+//////////////////////////////////////////////////
+// Start the sway loop
+//////////////////////////////////////////////////
+["CBA_settingsInitialized", {
+    ["multiplier", {
+        switch (true) do {
+            case (isWeaponRested ACE_player): {
+                GVAR(swayFactor) * GVAR(restedSwayFactor)
+            };
+            case (isWeaponDeployed ACE_player): {
+                GVAR(swayFactor) * GVAR(deployedSwayFactor)
+            };
+            default {
+                GVAR(swayFactor)
+            };
+        };
+    }, QUOTE(ADDON)] call FUNC(addSwayFactor);
+
+    [{
+        // frame after settingsInitialized to ensure all other addons have added their factors
+        if (GVAR(enableSway)) then {
+            call FUNC(swayLoop);
+        };
+        // check for pre-3.16 sway factors being added
+        if (!isNil {missionNamespace getVariable "ACE_setCustomAimCoef"}) then {
+            WARNING("ACE_setCustomAimCoef no longer supported - use ace_common_fnc_addSwayFactor");
+            WARNING_1("source: %1",(missionNamespace getVariable "ACE_setCustomAimCoef") apply {_x});
+        };
+    }] call CBA_fnc_execNextFrame;
+}] call CBA_fnc_addEventHandler;
 
 //////////////////////////////////////////////////
 // Set up PlayerJIP eventhandler
@@ -483,7 +589,7 @@ GVAR(reloadMutex_lastMagazines) = [];
 // Lastly, do JIP events
 // JIP Detection and event trigger. Run this at the very end, just in case anything uses it
 // Note: usage of player is most likely on purpose
-if (didJip) then {
+if (didJIP) then {
     // We are jipping! Get ready and wait, and throw the event
     [{
         if(!isNull player && GVAR(settingsInitFinished)) then {
@@ -538,5 +644,41 @@ GVAR(deviceKeyCurrentIndex) = -1;
 },
 {false},
 [0xC7, [true, false, false]], false] call CBA_fnc_addKeybind;  //SHIFT + Home Key
+
+
+["ACE3 Weapons", QGVAR(unloadWeapon), LSTRING(unloadWeapon), {
+    private _unit = ACE_player;
+
+    // Conditions
+    if !([_unit, objNull, ["isNotInside"]] call FUNC(canInteractWith)) exitWith {false};
+
+    if !(_unit call CBA_fnc_canUseWeapon) exitWith {false};
+
+    (weaponState _unit) params ["_weapon", "_muzzle", "", "_magazine", "_ammo"];
+
+    // Check if there is any ammo
+    if (_ammo < 1) exitWith {false};
+
+    // Check if the unit has a weapon
+    if (_weapon == "") exitWith {false};
+
+    // Check if the unit has a weapon selected
+    if !(_weapon in [primaryWeapon _unit, handgunWeapon _unit, secondaryWeapon _unit]) exitWith {false};
+
+    // Statement
+    [_unit, _weapon, _muzzle, _magazine, _ammo, false] call FUNC(unloadUnitWeapon);
+
+    true
+}, {false}, [19, [false, false, true]], false] call CBA_fnc_addKeybind; // Alt + R
+
+["CBA_loadoutSet", {
+    params ["_unit", "_loadout"];
+    _loadout params ["_primaryWeaponArray"];
+
+    if ((_primaryWeaponArray param [0, ""]) == "ACE_FakePrimaryWeapon") then {
+        TRACE_1("Ignoring fake gun",_primaryWeaponArray);
+        _loadout set [0, []];
+    };
+}] call CBA_fnc_addEventHandler;
 
 GVAR(commonPostInited) = true;

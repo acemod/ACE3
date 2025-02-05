@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Adds sit actions.
@@ -14,6 +14,11 @@
  *
  * Public: No
  */
+
+// Only run this after the settings are initialized
+if !(EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addSitActions), _this];
+};
 
 params ["_seat"];
 
@@ -69,3 +74,4 @@ if !((_sitPosition select 0) isEqualType []) then {
     [_type, 0, _menuType, _sitAction] call EFUNC(interact_menu,addActionToClass);
 } forEach _sitPosition;
 
+nil // return

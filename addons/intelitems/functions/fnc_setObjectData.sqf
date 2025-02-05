@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, mharis001
  * Sets the intel data for an object. Used by 3DEN and Zeus attributes.

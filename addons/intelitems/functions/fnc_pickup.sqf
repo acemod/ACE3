@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, mharis001
  * Picks up an intel object by converting it into a unique magazine.

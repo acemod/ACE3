@@ -42,7 +42,7 @@ class RscTitles {
                 x="SafeZoneX + 0.001";
                 y="SafeZoneY + 0.001";
                 w=0.2;
-                h=0.2*4/3;
+                h="0.2*4/3";
                 size=0.034;
                 sizeEx=0.027;
                 text="";

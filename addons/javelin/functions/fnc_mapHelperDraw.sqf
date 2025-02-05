@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Handles the map helper's draw event
@@ -18,14 +18,14 @@
  */
 
 if (isNil QGVAR(arguments)) then {
-    TRACE_1("Starting optic draw", _this);
+    TRACE_1("Starting optic draw",_this);
 
     // reset shooter var:
     private _currentShooter = if (ACE_player call CBA_fnc_canUseWeapon) then {ACE_player} else {vehicle ACE_player};
     _currentShooter setVariable ["ace_missileguidance_target", nil, false];
 
     GVAR(arguments) = [
-        diag_frameno,       // Last run frame
+        diag_frameNo,       // Last run frame
         objNull,            // currentTargetObject
         0,                  // Lock Start Time
         0,                  // Next Sound timer
@@ -37,7 +37,7 @@ if (isNil QGVAR(arguments)) then {
     [{
         if (isNull (uiNamespace getVariable ["ACE_RscOptics_javelin", displayNull])) exitWith {true};
         GVAR(arguments) params ["_lastRunFrame"];
-        (diag_frameno < _lastRunFrame) || {diag_frameno > (_lastRunFrame + 1)}
+        (diag_frameNo < _lastRunFrame) || {diag_frameNo > (_lastRunFrame + 1)}
     }, {
         TRACE_1("old/null display - ending optic draw",_this);
         private _fireDisabledEH = GVAR(arguments) param [4, -1];

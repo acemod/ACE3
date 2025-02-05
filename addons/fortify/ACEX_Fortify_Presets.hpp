@@ -64,4 +64,26 @@ class ACEX_Fortify_Presets {
             {"Land_BagFence_01_long_green_F", 10}
         };
     };
+    class bigCombo {
+        displayName = CSTRING(bigCombo);
+        objects[] = {
+            {"Land_BagBunker_Tower_F", 50, "big"},
+            {"Land_BagBunker_Large_F", 100, "big"},
+            {"Land_BagBunker_Small_F", 25, "big"},
+            {"Land_Cargo_Patrol_V1_F", 100, "big"},
+            {"Land_BagFence_Round_F", 5, "big"},
+            {"Land_BagFence_Short_F", 5, "big"},
+            {"Land_BagFence_Long_F", 10, "big"},
+            {"Land_PillboxBunker_01_big_F", 100, "bigGreen"},
+            {"Land_PillboxWall_01_3m_F", 10, "bigGreen"},
+            {"Land_PillboxWall_01_6m_F", 15, "bigGreen"},
+            {"Land_PillboxBunker_01_hex_F", 50, "bigGreen"},
+            {"Land_PillboxBunker_01_rectangle_F", 50, "bigGreen"},
+            {"Land_Plank_01_8m_F", 10, "bigGreen"},
+            {"Land_Plank_01_4m_F", 5, "bigGreen"},
+            {"Land_BagFence_01_round_green_F", 5, "bigGreen"},
+            {"Land_BagFence_01_short_green_F", 5, "bigGreen"},
+            {"Land_BagFence_01_long_green_F", 10, "bigGreen"}
+        };
+    };
 };

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas, GitHawk
  * Checks if unit can check fuel.
@@ -23,4 +23,4 @@ params [["_unit", objNull, [objNull]], ["_source", objNull, [objNull]]];
     {!local _unit} ||
     {!alive _source} ||
     {([_unit, _source] call EFUNC(interaction,getInteractionDistance)) > REFUEL_ACTION_DISTANCE} ||
-    {(_source call FUNC(getFuel) == REFUEL_INFINITE_FUEL)})
+    {(_source call FUNC(getCapacity)) in [REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL]})

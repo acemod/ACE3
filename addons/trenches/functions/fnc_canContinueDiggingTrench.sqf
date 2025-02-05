@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: SzwedzikPL
  * Checks if a unit can continue digging a trench
@@ -18,7 +18,7 @@
 
 params ["_trench", "_unit"];
 
-if !("ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))) exitWith {false};
+if !(_unit call FUNC(hasEntrenchingTool)) exitWith {false};
 if ((_trench getVariable [QGVAR(progress), 1]) >= 1) exitWith {false};
 
 // Prevent removing/digging trench by more than one person

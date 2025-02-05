@@ -34,14 +34,14 @@ class CfgVehicles {
                     class GVAR(connectHeadphones) {
                         displayName = CSTRING(ConnectHeadphones);
                         condition = QUOTE(call FUNC(canConnectHeadphones));
-                        statement = QUOTE([ARR_2(ACE_player, true)] call FUNC(connectHeadphones));
+                        statement = QUOTE([ARR_2(ACE_player,true)] call FUNC(connectHeadphones));
                         icon = ""; //TODO
                         exceptions[] = {};
                     };
                     class GVAR(disconnectHeadphones) {
                         displayName = CSTRING(DisconnectHeadphones);
                         condition = QUOTE(call FUNC(canDisconnectHeadphones));
-                        statement = QUOTE([ARR_2(ACE_player, false)] call FUNC(connectHeadphones));
+                        statement = QUOTE([ARR_2(ACE_player,false)] call FUNC(connectHeadphones));
                         icon = ""; //TODO
                         exceptions[] = {};
                     };

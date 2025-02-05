@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, mharis001
  * Initializes the Zeus attributes display for intel objects.

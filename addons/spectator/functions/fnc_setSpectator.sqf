@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: SilentSpike
+ * Author: kymckay
  * Enter/exit spectator mode for the local player
  *
  * Client will be able to communicate in ACRE/TFAR as appropriate

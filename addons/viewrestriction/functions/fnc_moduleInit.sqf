@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Jonpas
  * Initializes the View Restriction module.
@@ -10,6 +10,8 @@
  *
  * Return Value:
  * None
+ *
+ * Public: No
  */
 
 params ["_logic", "_units", "_activated"];

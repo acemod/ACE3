@@ -1,10 +1,10 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * hint retun value of given function every frame
  *
  * Arguments:
- * <CODE>
+ * 0: Code to monitor <CODE>
  *
  * Return Value:
  * None

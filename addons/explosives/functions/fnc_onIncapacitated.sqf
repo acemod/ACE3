@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Detonates all attached deadman's switched triggered explosives.
@@ -37,7 +37,7 @@ TRACE_2("placed",_deadman,_range);
 //Handle deadman connected to explosive in inventory
 private _connectedInventoryExplosive = _unit getVariable [QGVAR(deadmanInvExplosive), ""];
 if (_connectedInventoryExplosive != "") then {
-    if (!(_connectedInventoryExplosive in (magazines _unit))) exitWith {};
+    if !(_connectedInventoryExplosive in (magazines _unit)) exitWith {};
 
     //Remove mag and reset variable
     _unit removeMagazine _connectedInventoryExplosive;

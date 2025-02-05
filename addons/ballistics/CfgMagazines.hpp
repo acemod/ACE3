@@ -592,10 +592,6 @@ class CfgMagazines {
     };
 
     class 5Rnd_127x108_Mag;
-    class 5Rnd_127x108_APDS_Mag: 5Rnd_127x108_Mag {
-        initSpeed = 820;
-    };
-
     class ACE_5Rnd_127x99_Mag: 5Rnd_127x108_Mag {
         author = ECSTRING(common,ACETeam);
         ammo = "B_127x99_Ball";
@@ -723,7 +719,7 @@ class CfgMagazines {
     };
 
     class 10Rnd_127x54_Mag: CA_Magazine {
-        initSpeed = 300;
+        initSpeed = 295; // according to ACE_muzzleVelocities ICAO conditions (15°C, 1013.25hPa, 0%)
     };
 
     class 150Rnd_556x45_Drum_Mag_F: CA_Magazine {

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2, Jonpas
  * Fixes position of an object. E.g. moves object above ground and adjusts to terrain slope. Requires local object.

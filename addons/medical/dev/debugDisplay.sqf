@@ -1,4 +1,4 @@
-#include "\z\ace\addons\medical\script_component.hpp"
+#include "..\script_component.hpp"
 
 [{!isNull findDisplay 46}, {
     INFO("Creating Debug Display");

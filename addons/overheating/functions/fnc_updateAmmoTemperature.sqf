@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: drofseh
  * Update temperature of the round in the chamber and determine if a cookoff should occur.

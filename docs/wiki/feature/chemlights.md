@@ -22,3 +22,18 @@ version:
 
 ### 1.1 Chemlights
 Adds throwable chemlights in the colors white, red, green and yellow. Additionally "Hi" chemlights are added that emit a brighter glow.
+
+| Chemlight             | Illumination Length |
+|-----------------------|---------------------|
+| Chemlight (Red)       | 12 Hours            |
+| Chemlight (Green)     | 12 Hours            |
+| Chemlight (Yellow)    | 12 Hours            |
+| Chemlight (Orange)    | 12 Hours            |
+| Chemlight (White)     | 8 Hours             |
+| Chemlight (Blue)      | 8 Hours             |
+| Chemlight (Hi White)  | 30 Minutes          |
+| Chemlight (Hi Blue)   | 30 Minutes          |
+| Chemlight (Hi Red)    | 30 Minutes          |
+| Chemlight (Hi Green)  | 30 Minutes          |
+| Chemlight (Hi Yellow) | 30 Minutes          |
+| Chemlight (Hi Orange) | 30 Minutes          |

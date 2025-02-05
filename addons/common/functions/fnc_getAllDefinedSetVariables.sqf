@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Returns an 2d array of all variables that have been set on the object
@@ -35,7 +35,6 @@ private _return = [];
             _return pushBack [_x select 0, typeName _val, _val, _x select 2, _x select 5];
         };
     };
-    false
-} count GVAR(OBJECT_VARIABLES_STORAGE);
+} forEach GVAR(OBJECT_VARIABLES_STORAGE);
 
 _return

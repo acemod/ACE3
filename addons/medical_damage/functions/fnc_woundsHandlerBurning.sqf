@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Pterolatypus
  * Custom wound handler for burns. Stores up small damage events until there's enough to create a wound.
@@ -37,7 +37,7 @@ TRACE_3("woundsHandlerBurning",_unit,_allDamages,_typeOfDamage);
         [{
             params ["_unit"];
 
-            _bodyPart = selectRandom ["body", "leftleg", "rightleg"];
+            private _bodyPart = selectRandom ["body", "leftleg", "rightleg"];
             private _storedDamage = _unit getVariable [QGVAR(storedBurnDamage), 0];
             [QEGVAR(medical,woundReceived), [_unit, [[_storedDamage, _bodyPart, _storedDamage]], _unit, "burn"]] call CBA_fnc_localEvent;
             _unit setVariable [QGVAR(storedBurnDamage), 0, true];

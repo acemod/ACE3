@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet, Ruthberg, edited by commy2 for better MP and eventual AI support, esteldunedain
  * Continue process of digging trench.
@@ -48,6 +48,8 @@ private _fnc_onFinish = {
     private _progress = _trench getVariable [QGVAR(progress), 0];
     _trench setVariable [QGVAR(progress), _progress, true];
 
+    [QGVAR(finished), [_unit, _trench]] call CBA_fnc_globalEvent;
+
     // Reset animation
     [_unit, "", 1] call EFUNC(common,doAnimation);
 };
@@ -65,7 +67,7 @@ private _fnc_onFailure = {
 };
 private _fnc_condition = {
     (_this select 0) params ["_unit"];
-    "ACE_EntrenchingTool" in (_unit call EFUNC(common,uniqueItems))
+    _unit call FUNC(hasEntrenchingTool)
 };
 [(_digTimeLeft + 0.5), [_unit, _trench], _fnc_onFinish, _fnc_onFailure, localize LSTRING(DiggingTrench), _fnc_condition] call EFUNC(common,progressBar);
 
@@ -79,7 +81,7 @@ if(_actualProgress == 0) then {
         _cutterPos set [2, getTerrainHeightASL _cutterPos];
         _trenchGrassCutter setPosASL _cutterPos;
         deleteVehicle _trenchGrassCutter;
-    } foreach getArray (configOf _trench >> QGVAR(grassCuttingPoints));
+    } forEach getArray (configOf _trench >> QGVAR(grassCuttingPoints));
 };
 
 private _progressLeft = (_actualProgress * 10) + 1;

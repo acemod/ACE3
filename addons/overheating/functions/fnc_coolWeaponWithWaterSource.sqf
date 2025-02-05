@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001, Glowbal, PabstMirror, drofseh
  * Cool a weapon with an AceX water source.
@@ -37,7 +37,7 @@ private _fnc_onFinish = {
         ] call CBA_fnc_notify;
     };
 
-    [_player, _player, currentWeapon _player] call ace_overheating_fnc_checkTemperature;
+    [_player, _player, currentWeapon _player] call FUNC(checkTemperature);
     GVAR(coolingWeaponWithWaterSource) = false;
 };
 
@@ -59,8 +59,8 @@ private _fnc_condition = {
         };
 
         //Cool the weapon down
-        private _barrelMass = ([_weapon] call FUNC(getWeaponData)) select 7;
-        _temperature = [_temperature, _barrelMass, 20] call FUNC(calculateCooling);
+        private _weaponData = [_weapon] call FUNC(getWeaponData);
+        _temperature = [_temperature, _weaponData select 7, 20, _weaponData select 6] call FUNC(calculateCooling);
         [_player, _tempVarName, _temperature, TEMP_TOLERANCE] call EFUNC(common,setApproximateVariablePublic);
 
 /* // to be added when licence compatible audio can be found or recorded

@@ -1,0 +1,889 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_WS_RealisticNames">
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Name">
+            <English>AA12</English>
+            <French>AA12</French>
+            <Spanish>AA12</Spanish>
+            <Italian>AA12</Italian>
+            <Russian>AA12</Russian>
+            <German>AA12</German>
+            <Korean>AA-12</Korean>
+            <Japanese>AA12</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Snake_Name">
+            <English>AA12 (Snake)</English>
+            <French>AA12 (Serpent)</French>
+            <Spanish>AA12 (Serpiente)</Spanish>
+            <Italian>AA12 (Serpe)</Italian>
+            <Russian>AA12 (Змея)</Russian>
+            <German>AA12 (Schlange)</German>
+            <Korean>AA-12 (뱀 위장)</Korean>
+            <Japanese>AA12 (ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Tan_Name">
+            <English>AA12 (Sand)</English>
+            <French>AA12 (Sable)</French>
+            <Spanish>AA12 (Arena)</Spanish>
+            <Italian>AA12 (Sabbia)</Italian>
+            <Russian>AA12 (Песочный)</Russian>
+            <German>AA12 (Sand)</German>
+            <Korean>AA-12 (모래)</Korean>
+            <Japanese>AA12 (サンド)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Black_Name">
+            <English>Mk14 Mod 1 EBR (Black)</English>
+            <French>Mk14 Mod 1 EBR (Noir)</French>
+            <Spanish>Mk14 Mod 1 EBR (Negra)</Spanish>
+            <Italian>Mk14 Mod 1 EBR (Nero)</Italian>
+            <Russian>Mk14 Mod 1 EBR (Черный)</Russian>
+            <German>Mk14 Mod 1 EBR (Schwarz)</German>
+            <Korean>Mk.14 Mod 1 EBR (검정)</Korean>
+            <Japanese>Mk14 Mod 1 EBR (ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_EBR_Snake_Name">
+            <English>Mk14 Mod 1 EBR (Snake)</English>
+            <French>Mk14 Mod 1 EBR (Serpent)</French>
+            <Spanish>Mk14 Mod 1 EBR (Serpiente)</Spanish>
+            <Italian>Mk14 Mod 1 EBR (Serpe)</Italian>
+            <Russian>Mk14 Mod 1 EBR (Змея)</Russian>
+            <German>Mk14 Mod 1 EBR (Schlange)</German>
+            <Korean>Mk.14 Mod 1 EBR (뱀 위장)</Korean>
+            <Japanese>Mk14 Mod 1 EBR (ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Camo_Name">
+            <English>GLX 160 (Camo)</English>
+            <French>GLX 160 (Camo)</French>
+            <Spanish>GLX 160 (Camo)</Spanish>
+            <Italian>GLX-160 (Mimetica)</Italian>
+            <Russian>GLX 160 (Камуфляж)</Russian>
+            <German>GLX 160 (Tarn)</German>
+            <Korean>GLX-160 (위장)</Korean>
+            <Japanese>GLX 160 (AAF迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_GreenHex_Name">
+            <English>GLX 160 (Green Hex)</English>
+            <French>GLX 160 (Vert Hex)</French>
+            <Spanish>GLX 160 (Hex Verde)</Spanish>
+            <Italian>GLX-160 (Hex Verde)</Italian>
+            <Russian>GLX 160 (Зеленый Гекс)</Russian>
+            <German>GLX 160 (Grün Hex)</German>
+            <Korean>GLX-160 (초록육각)</Korean>
+            <Japanese>GLX 160 (緑六角形迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Hex_Name">
+            <English>GLX 160 (Hex)</English>
+            <French>GLX 160 (Hex)</French>
+            <Spanish>GLX 160 (Hex)</Spanish>
+            <Italian>GLX-160 (Hex)</Italian>
+            <Russian>GLX 160 (Гекс)</Russian>
+            <German>GLX 160 (Hex)</German>
+            <Korean>GLX-160 (육각)</Korean>
+            <Japanese>GLX 160 (六角形迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Name">
+            <English>GLX 160</English>
+            <French>GLX 160</French>
+            <Spanish>GLX 160</Spanish>
+            <Italian>GLX-160</Italian>
+            <Russian>GLX 160</Russian>
+            <German>GLX 160</German>
+            <Korean>GLX-160</Korean>
+            <Japanese>GLX 160</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Snake_Name">
+            <English>GLX 160 (Snake)</English>
+            <French>GLX 160 (Serpent)</French>
+            <Spanish>GLX 160 (Serpiente)</Spanish>
+            <Italian>GLX-160 (Serpe)</Italian>
+            <Russian>GLX 160 (Змея)</Russian>
+            <German>GLX 160 (Schlange)</German>
+            <Korean>GLX-160 (뱀 위장)</Korean>
+            <Japanese>GLX 160 (ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Tan_Name">
+            <English>GLX 160 (Sand)</English>
+            <French>GLX 160 (Sable)</French>
+            <Spanish>GLX 160 (Arena)</Spanish>
+            <Italian>GLX-160 (Sabbia)</Italian>
+            <Russian>GLX 160 (Песочный)</Russian>
+            <German>GLX 160 (Sand)</German>
+            <Korean>GLX-160 (모래)</Korean>
+            <Japanese>GLX 160 (サンド)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Name">
+            <English>Galil ARM</English>
+            <French>Galil ARM</French>
+            <Spanish>Galil ARM</Spanish>
+            <Italian>Galil ARM</Italian>
+            <Russian>Galil ARM</Russian>
+            <German>Galil ARM</German>
+            <Korean>갈릴 ARM</Korean>
+            <Japanese>ガリル ARM</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Galat_Old_Name">
+            <English>Galil ARM (Old)</English>
+            <French>Galil ARM (Ancien)</French>
+            <Spanish>Galil ARM (Vieja)</Spanish>
+            <Italian>Galil ARM (Vecchio)</Italian>
+            <Russian>Galil ARM (Старый)</Russian>
+            <German>Galil ARM (Alt)</German>
+            <Korean>갈릴 ARM (낡음)</Korean>
+            <Japanese>ガリル ARM (古びた)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_AAF_Name">
+            <English>Vektor SS-77 (Camo)</English>
+            <French>Vektor SS-77 (Camo)</French>
+            <Spanish>Vektor SS-77 (Camo)</Spanish>
+            <Italian>Vektor SS-77 (Mimetica)</Italian>
+            <Russian>Vektor SS-77 (Камуфляж)</Russian>
+            <German>Vektor SS-77 (Tarn)</German>
+            <Korean>벡터 SS-77 (위장)</Korean>
+            <Japanese>ヴェクター SS-77 (AAF迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Name">
+            <English>Vektor SS-77 Compact</English>
+            <French>Vektor SS-77 Compacte</French>
+            <Spanish>Vektor SS-77 Compacta</Spanish>
+            <Italian>Vektor SS-77 Compatto</Italian>
+            <Russian>Vektor SS-77 Compact</Russian>
+            <German>Vektor SS-77 Kompakt</German>
+            <Korean>벡터 SS-77 단축형</Korean>
+            <Japanese>ヴェクター SS-77 コンパクト</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Compact_Snake_Name">
+            <English>Vektor SS-77 Compact (Snake)</English>
+            <French>Vektor SS-77 Compacte (Serpent)</French>
+            <Spanish>Vektor SS-77 Compacta (Serpiente)</Spanish>
+            <Italian>Vektor SS-77 Compatto (Serpe)</Italian>
+            <Russian>Vektor SS-77 Compact (змея)</Russian>
+            <German>Vektor SS-77 Compact (Schlange)</German>
+            <Korean>벡터 SS-77 단축형 (뱀 위장)</Korean>
+            <Japanese>ヴェクター SS-77 コンパクト (ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Desert_Name">
+            <English>Vektor SS-77 (Desert)</English>
+            <French>Vektor SS-77 (Désert)</French>
+            <Spanish>Vektor SS-77 (Desierto)</Spanish>
+            <Italian>Vektor SS-77 (Deserto)</Italian>
+            <Russian>Vektor SS-77 (песочныйt)</Russian>
+            <German>Vektor SS-77 (Wüste)</German>
+            <Korean>벡터 SS-77 (사막)</Korean>
+            <Japanese>ヴェクター SS-77 (砂漠迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_GreenHex_Name">
+            <English>Vektor SS-77 (Green Hex)</English>
+            <French>Vektor SS-77 (VertHex)</French>
+            <Spanish>Vektor SS-77 (Hex Verde)</Spanish>
+            <Italian>Vektor SS-77 (Hex Verde)</Italian>
+            <Russian>Vektor SS-77 (зеленый гекс)</Russian>
+            <German>Vektor SS-77 (Grün Hex)</German>
+            <Korean>벡터 SS-77 (초록육각)</Korean>
+            <Japanese>ヴェクター SS-77 (緑六角形迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Hex_Name">
+            <English>Vektor SS-77 (Hex)</English>
+            <French>Vektor SS-77 (Hex)</French>
+            <Spanish>Vektor SS-77 (Hex)</Spanish>
+            <Italian>Vektor SS-77 (Hex)</Italian>
+            <Russian>Vektor SS-77 (гекс)</Russian>
+            <German>Vektor SS-77 (Hex)</German>
+            <Korean>벡터 SS-77 (육각)</Korean>
+            <Japanese>ヴェクター SS-77 (六角形迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_S77_Name">
+            <English>Vektor SS-77</English>
+            <French>Vektor SS-77</French>
+            <Spanish>Vektor SS-77</Spanish>
+            <Italian>Vektor SS-77</Italian>
+            <Russian>Vektor SS-77</Russian>
+            <German>Vektor SS-77</German>
+            <Korean>벡터 SS-77</Korean>
+            <Japanese>ヴェクター SS-77</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Camo_Name">
+            <English>FN FAL 50.00 (Jungle)</English>
+            <French>FN FAL 50.00 (Jungle)</French>
+            <Spanish>FN FAL 50.00 (Jungla)</Spanish>
+            <Italian>FN FAL 50,00 (Giungla)</Italian>
+            <Russian>FN FAL 50.00 (джунгли)</Russian>
+            <German>FN FAL 50,00 (Dschungel)</German>
+            <Korean>FN FAL 50.00 (정글)</Korean>
+            <Japanese>FN FAL 50.00 (熱帯迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Desert_Name">
+            <English>FN FAL 50.00 (Desert)</English>
+            <French>FN FAL 50.00 (Désert)</French>
+            <Spanish>FN FAL 50.00 (Desierto)</Spanish>
+            <Italian>FN FAL 50.00 (Deserto)</Italian>
+            <Russian>FN FAL 50.00 (песочный)</Russian>
+            <German>FN FAL 50.00 (Wüstet)</German>
+            <Korean>FN FAL 50.00 (사막)</Korean>
+            <Japanese>FN FAL 50.00 (砂漠迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Name">
+            <English>FN FAL 50.00 GL</English>
+            <French>FN FAL 50.00 GL</French>
+            <Spanish>FN FAL 50.00 GL</Spanish>
+            <Italian>FN FAL 50.00 GL</Italian>
+            <Russian>FN FAL 50.00 GL</Russian>
+            <German>FN FAL 50.00 GL</German>
+            <Korean>FN FAL 50.00 GL</Korean>
+            <Japanese>FN FAL 50.00 GL</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_GL_Wood_Name">
+            <English>FN FAL 50.00 GL (Wood)</English>
+            <French>FN FAL 50.00 GL (Bois)</French>
+            <Spanish>FN FAL 50.00 GL (Madera)</Spanish>
+            <Italian>FN FAL 50.00 GL (Legno)</Italian>
+            <Russian>FN FAL 50.00 GL (лесной)</Russian>
+            <German>FN FAL 50.00 GL (Holz)</German>
+            <Korean>FN FAL 50.00 GL (목재)</Korean>
+            <Japanese>FN FAL 50.00 GL (木製)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Name">
+            <English>FN FAL 50.00</English>
+            <French>FN FAL 50.00</French>
+            <Spanish>FN FAL 50.00</Spanish>
+            <Italian>FN FAL 50.00</Italian>
+            <Russian>FN FAL 50.00</Russian>
+            <German>FN FAL 50.00</German>
+            <Korean>FN FAL 50.00</Korean>
+            <Japanese>FN FAL 50.00</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Para_Name">
+            <English>FN FAL OSW Para</English>
+            <French>FN FAL OSW Para</French>
+            <Spanish>FN FAL OSW Paracaidista</Spanish>
+            <Italian>FN FAL OSW Para</Italian>
+            <German>FN FAL OSW Fallschirmjäger</German>
+            <Korean>FN FAL OSW 파라</Korean>
+            <Japanese>FN FAL OSW パラ</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Para_Snake_Name">
+            <English>FN FAL OSW Para (Snake)</English>
+            <French>FN FAL OSW Para (Serpent)</French>
+            <Spanish>FN FAL OSW Paracaidista (Serpiente)</Spanish>
+            <Italian>FN FAL OSW Para (Serpe)</Italian>
+            <German>FN FAL OSW Fallschirmjäger (Schlange)</German>
+            <Korean>FN FAL OSW 파라 (뱀 위장)</Korean>
+            <Japanese>FN FAL OSW パラ (ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_SLR_Wood_Name">
+            <English>FN FAL 50.00 (Wood)</English>
+            <French>FN FAL 50.00 (Bois)</French>
+            <Spanish>FN FAL 50.00 (Madera)</Spanish>
+            <Italian>FN FAL 50.00 (Legno)</Italian>
+            <Russian>FN FAL 50.00 (лесной)</Russian>
+            <German>FN FAL 50.00 (Holz)</German>
+            <Korean>FN FAL 50.00 (목재)</Korean>
+            <Japanese>FN FAL 50.00 (木製)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R4_Name">
+            <English>Vektor R4</English>
+            <French>Vektor R4</French>
+            <Spanish>Vektor R4</Spanish>
+            <Italian>Vektor R4</Italian>
+            <Russian>Vektor R4</Russian>
+            <German>Vektor R4</German>
+            <Korean>벡터 R4</Korean>
+            <Japanese>ヴェクター R4</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Name">
+            <English>Vektor R5 Carbine GL</English>
+            <French>Vektor R5 Carbine GL</French>
+            <Spanish>Vektor R5 Carabina GL</Spanish>
+            <Italian>Vektor R5 Carabina GL</Italian>
+            <Russian>Vektor R5 Carbine GL</Russian>
+            <German>Vektor R5 Carbine GL</German>
+            <Korean>벡터 R5 카빈 GL</Korean>
+            <Japanese>ヴェクター R5 カービン GL</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_GL_Snake_Name">
+            <English>Vektor R5 Carbine GL (Snake)</English>
+            <French>Vektor R5 Carbine GL (Serpent)</French>
+            <Spanish>Vektor R5 Carabina GL (Serpiente)</Spanish>
+            <Italian>Vektor R5 Carabina GL (Serpe)</Italian>
+            <Russian>Vektor R5 Carbine GL (Змея)</Russian>
+            <German>Vektor R5 Carbine GL (Schlange)</German>
+            <Korean>벡터 R5 카빈 GL (뱀 위장)</Korean>
+            <Japanese>ヴェクター R5 カービン GL (ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Name">
+            <English>Vektor R5 Carbine</English>
+            <French>Vektor R5 Carbine</French>
+            <Spanish>Vektor R5 Carabina</Spanish>
+            <Italian>Vektor R5 Carabina</Italian>
+            <Russian>Vektor R5 Carbine</Russian>
+            <German>Vektor R5 Carbine</German>
+            <Korean>벡터 R5 카빈</Korean>
+            <Japanese>ヴェクター R5 カービン</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_Velko_R5_Snake_Name">
+            <English>Vektor R5 Carbine (Snake)</English>
+            <French>Vektor R5 Carbine (Serpent)</French>
+            <Spanish>Vektor R5 Carabina (Serpiente)</Spanish>
+            <Italian>Vektor R5 Carabina (Serpe)</Italian>
+            <Russian>Vektor R5 Carbine (Змея)</Russian>
+            <German>Vektor R5 Carbine (Schlange)</German>
+            <Korean>벡터 R5 카빈 (뱀 위장)</Korean>
+            <Japanese>ヴェクター R5 カービン (ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Camo_Name">
+            <English>XMS (Stripes)</English>
+            <French>XMS (Rayé)</French>
+            <Italian>XMS (Strisce)</Italian>
+            <Korean>XMS (줄무늬 위장)</Korean>
+            <Japanese>XMS (縞模様迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Camo_Name">
+            <English>XMS GL (Stripes)</English>
+            <French>XMS GL (Rayé)</French>
+            <Italian>XMS GL (Strisce)</Italian>
+            <Korean>XMS GL (줄무늬 위장)</Korean>
+            <Japanese>XMS GL (縞模様迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Gray_Name">
+            <English>XMS GL (Gray)</English>
+            <French>XMS GL (Gris)</French>
+            <Italian>XMS GL (Grigio)</Italian>
+            <Korean>XMS GL (회색)</Korean>
+            <Japanese>XMS GL (グレー)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Khaki_Name">
+            <English>XMS GL (Khaki)</English>
+            <French>XMS GL (Kaki)</French>
+            <Spanish>XMS GL (caqui)</Spanish>
+            <Italian>XMS GL (Cachi)</Italian>
+            <Portuguese>XMS GL (Cáqui)</Portuguese>
+            <Russian>XMS GL (хаки)</Russian>
+            <German>XMS GL (khaki)</German>
+            <Korean>XMS GL (카키)</Korean>
+            <Japanese>XMS GL (カーキ)</Japanese>
+            <Chinesesimp>XMS GL（卡其色）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Name">
+            <English>XMS GL</English>
+            <French>XMS GL</French>
+            <Spanish>XMS GL</Spanish>
+            <Italian>XMS GL</Italian>
+            <Portuguese>XMS GL</Portuguese>
+            <Russian>XMS GL</Russian>
+            <German>XMS GL</German>
+            <Korean>XMS GL</Korean>
+            <Japanese>XMS GL</Japanese>
+            <Chinesesimp>XMS GL</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Sand_Name">
+            <English>XMS GL (Sand)</English>
+            <French>XMS GL (Sable)</French>
+            <Spanish>XMS GL (arena)</Spanish>
+            <Italian>XMS GL (Sabbia)</Italian>
+            <Portuguese>XMS GL (Areia)</Portuguese>
+            <Russian>XMS GL (песочный)</Russian>
+            <German>XMS GL (Sand)</German>
+            <Korean>XMS GL (모래)</Korean>
+            <Japanese>XMS GL (サンド)</Japanese>
+            <Chinesesimp>XMS GL（沙色）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Gray_Name">
+            <English>XMS (Gray)</English>
+            <French>XMS (Gris)</French>
+            <Italian>XMS (Grigio)</Italian>
+            <Korean>XMS (회색)</Korean>
+            <Japanese>XMS (グレー)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Khaki_Name">
+            <English>XMS (Khaki)</English>
+            <French>XMS (Kaki)</French>
+            <Spanish>XMS (caqui)</Spanish>
+            <Italian>XMS (Cachi)</Italian>
+            <Portuguese>XMS (Cáqui)</Portuguese>
+            <Russian>XMS (хаки)</Russian>
+            <German>XMS (khaki)</German>
+            <Korean>XMS (카키)</Korean>
+            <Japanese>XMS (カーキ)</Japanese>
+            <Chinesesimp>XMS（卡其色）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Name">
+            <English>XMS</English>
+            <French>XMS</French>
+            <Spanish>XMS</Spanish>
+            <Italian>XMS</Italian>
+            <Portuguese>XMS</Portuguese>
+            <Russian>XMS</Russian>
+            <German>XMS</German>
+            <Korean>XMS</Korean>
+            <Japanese>XMS</Japanese>
+            <Chinesesimp>XMS</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Camo_Name">
+            <English>XMS SG (Stripes)</English>
+            <French>XMS SG (Rayé)</French>
+            <Italian>XMS SG (Strisce)</Italian>
+            <Korean>XMS SG (줄무늬 위장)</Korean>
+            <Japanese>XMS SG (縞模様迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Gray_Name">
+            <English>XMS SG (Gray)</English>
+            <French>XMS SG (Gris)</French>
+            <Italian>XMS SG (Grigio)</Italian>
+            <Korean>XMS SG (회색)</Korean>
+            <Japanese>XMS SG (グレー)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Khaki_Name">
+            <English>XMS SG (Khaki)</English>
+            <French>XMS SG (Kaki)</French>
+            <Spanish>XMS SG (caqui)</Spanish>
+            <Italian>XMS SG (Cachi)</Italian>
+            <Portuguese>XMS SG (Cáqui)</Portuguese>
+            <Russian>XMS SG (хаки)</Russian>
+            <German>XMS SG (khaki)</German>
+            <Korean>XMS SG (카키)</Korean>
+            <Japanese>XMS SG (カーキ)</Japanese>
+            <Chinesesimp>XMS SG（卡其色）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Name">
+            <English>XMS SG</English>
+            <French>XMS SG</French>
+            <Spanish>XMS SG</Spanish>
+            <Italian>XMS SG</Italian>
+            <Portuguese>XMS SG</Portuguese>
+            <Russian>XMS SG</Russian>
+            <German>XMS SG</German>
+            <Korean>XMS SG</Korean>
+            <Japanese>XMS SG</Japanese>
+            <Chinesesimp>XMS SG</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Sand_Name">
+            <English>XMS SG (Sand)</English>
+            <French>XMS SG (Sable)</French>
+            <Spanish>XMS SG (arena)</Spanish>
+            <Italian>XMS SG (Sabbia)</Italian>
+            <Portuguese>XMS SG (Areia)</Portuguese>
+            <Russian>XMS SG (песочный)</Russian>
+            <German>XMS SG (Sand)</German>
+            <Korean>XMS SG (모래)</Korean>
+            <Japanese>XMS SG (サンド)</Japanese>
+            <Chinesesimp>XMS SG（沙色）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Camo_Name">
+            <English>XMS SW (Stripes)</English>
+            <French>XMS SW (Rayé)</French>
+            <Italian>XMS SW (Strisce)</Italian>
+            <Korean>XMS SW (줄무늬 위장)</Korean>
+            <Japanese>XMS SW (縞模様迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Gray_Name">
+            <English>XMS SW (Gray)</English>
+            <French>XMS SW (Gris)</French>
+            <Italian>XMS SW (Grigio)</Italian>
+            <Korean>XMS SW (회색)</Korean>
+            <Japanese>XMS SW (グレー)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Khaki_Name">
+            <English>XMS SW (Khaki)</English>
+            <French>XMS SW (Kaki)</French>
+            <Spanish>XMS SW (caqui)</Spanish>
+            <Italian>XMS SW (Cachi)</Italian>
+            <Portuguese>XMS SW (Cáqui)</Portuguese>
+            <Russian>XMS SW (хаки)</Russian>
+            <German>XMS SW (khaki)</German>
+            <Korean>XMS SW (카키)</Korean>
+            <Japanese>XMS SW (カーキ)</Japanese>
+            <Chinesesimp>XMS SW（卡其色）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Name">
+            <English>XMS SW</English>
+            <French>XMS SW</French>
+            <Spanish>XMS SW</Spanish>
+            <Italian>XMS SW</Italian>
+            <Portuguese>XMS SW</Portuguese>
+            <Russian>XMS SW</Russian>
+            <German>XMS SW</German>
+            <Korean>XMS SW</Korean>
+            <Japanese>XMS SW</Japanese>
+            <Chinesesimp>XMS SW</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Sand_Name">
+            <English>XMS SW (Sand)</English>
+            <French>XMS SW (Sable)</French>
+            <Spanish>XMS SW (arena)</Spanish>
+            <Italian>XMS SW (Sabbia)</Italian>
+            <Portuguese>XMS SW (Areia)</Portuguese>
+            <Russian>XMS SW (песочный)</Russian>
+            <German>XMS SW (Sand)</German>
+            <Korean>XMS SW (모래)</Korean>
+            <Japanese>XMS SW (サンド)</Japanese>
+            <Chinesesimp>XMS SW（沙色）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Sand_Name">
+            <English>XMS (Sand)</English>
+            <French>XMS (Sable)</French>
+            <Spanish>XMS (arena)</Spanish>
+            <Italian>XMS (Sabbia)</Italian>
+            <Portuguese>XMS (Areia)</Portuguese>
+            <Russian>XMS (песочный)</Russian>
+            <German>XMS (Sand)</German>
+            <Korean>XMS (모래)</Korean>
+            <Japanese>XMS (サンド)</Japanese>
+            <Chinesesimp>XMS（沙色）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_camo_Name">
+            <English>C-More Railway (Red, Stripes)</English>
+            <French>C-More Railway (Rouge, Rayé)</French>
+            <Italian>C-More Railway (Rosso, Strisce)</Italian>
+            <Korean>씨모어 레일웨이 (빨강/줄무늬 위장)</Korean>
+            <Japanese>C-More レイルウェイ (レッド、縞模様迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_grn_camo_Name">
+            <English>C-More Railway (Green, Stripes)</English>
+            <French>C-More Railway (Vert, Rayé)</French>
+            <Italian>C-More Railway (Verde, Strisce)</Italian>
+            <Korean>씨모어 레일웨이 (초록/줄무늬 위장)</Korean>
+            <Japanese>C-More レイルウェイ (グリーン、縞模様迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_tracked_02_Name">
+            <English>BM-2T Stalker (Bumerang-BM)</English>
+            <French>BM-2T Stalker (Boomerang-BM)</French>
+            <Spanish>BM-2T Stalker (Bumerang-BM)</Spanish>
+            <Italian>BM-2T Stalker (Bumerang-BM)</Italian>
+            <German>BM-2T Stalker (Bumerang-BM)</German>
+            <Korean>BM-2T 스토커 (부메랑-BM)</Korean>
+            <Japanese>BM-2T ストーカー (ブーメランク-BM)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_atgm_Name">
+            <English>Badger IFV (ATGM)</English>
+            <French>Badger IFV (ATGM)</French>
+            <Spanish>Badger IFV (ATGM)</Spanish>
+            <Italian>Badger IFV (ATGM)</Italian>
+            <German>Badger IFV (PzAbw)</German>
+            <Korean>뱃져 보병전투차 (대전차미사일)</Korean>
+            <Japanese>バジャー IFV (ATGM)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_command_Name">
+            <English>Badger IFV (Command)</English>
+            <French>Badger IFV (Commandement)</French>
+            <Spanish>Badger IFV (Comandancia)</Spanish>
+            <Italian>Badger IFV (Comando)</Italian>
+            <German>Badger IFV (Kommando)</German>
+            <Korean>뱃져 보병전투차 (지휘)</Korean>
+            <Japanese>バジャー IFV (指揮)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_01_mortar_Name">
+            <English>Badger IFV (Mortar)</English>
+            <French>Badger IFV (mortier)</French>
+            <Spanish>Badger IFV (Mortero)</Spanish>
+            <Italian>Badger IFV (Mortaio)</Italian>
+            <German>Badger IFV (Mörser)</German>
+            <Korean>뱃져 보병전투차 (자주박격포)</Korean>
+            <Japanese>バジャー IFV (迫撃砲)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_02_hmg_Name">
+            <English>Otokar ARMA (HMG)</English>
+            <French>Otokar ARMA (HMG)</French>
+            <Spanish>Otokar ARMA (HMG)</Spanish>
+            <Italian>Otokar ARMA (HMG)</Italian>
+            <German>Otokar ARMA (HMG)</German>
+            <Korean>오토카 아르마 APC (중기관총)</Korean>
+            <Japanese>オトカ アルマ (HMG)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_wheeled_02_unarmed_Name">
+            <English>Otokar ARMA (Unarmed)</English>
+            <French>Otokar ARMA (non armé)</French>
+            <Spanish>Otokar ARMA (Desarmado)</Spanish>
+            <Italian>Otokar ARMA (Disarmato)</Italian>
+            <German>Otokar ARMA (Unbewaffnet)</German>
+            <Korean>오토카 아르마 APC (비무장)</Korean>
+            <Japanese>オトカ アルマ (非武装)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_arco_hex_Name">
+            <English>ELCAN SpecterOS (Hex)</English>
+            <French>ELCAN SpecterOS (Hex)</French>
+            <Spanish>ELCAN SpecterOS (Hex)</Spanish>
+            <Italian>ELCAN SpecterOS (Hex)</Italian>
+            <German>ELCAN SpecterOS (Hex)</German>
+            <Korean>엘칸 스펙터OS (육각)</Korean>
+            <Japanese>ELCAN SpecterOS (六角形迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_dms_snake_Name">
+            <English>Burris XTR II (Snake)</English>
+            <French>Burris XTR II (Serpent)</French>
+            <Spanish>Burris XTR II (Serpiente)</Spanish>
+            <Italian>Burris XTR II (Serpe)</Italian>
+            <German>Burris XTR II (Schlange)</German>
+            <Korean>버리스 XTR II (뱀 위장)</Korean>
+            <Japanese>Burris XTR II (ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_gm6_snake_Name">
+            <English>GM6 Lynx (Snake)</English>
+            <French>GM6 Lynx (Serpent)</French>
+            <Spanish>GM6 Lynx (Serpiente)</Spanish>
+            <Italian>GM6 Lynx (Serpe)</Italian>
+            <German>GM6 Lynx (Schlange)</German>
+            <Korean>GM6 링스 (뱀 위장)</Korean>
+            <Japanese>GM6 リンクス (ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_arid_Name">
+            <English>Leupold Mark 4 HAMR (Arid)</English>
+            <French>Leupold Mark 4 HAMR (Aride)</French>
+            <Spanish>Leupold Mark 4 HAMR (Árida)</Spanish>
+            <Italian>Leupold Mark 4 HAMR (Arido)</Italian>
+            <German>Leupold Mark 4 HAMR (Trocken)</German>
+            <Korean>류폴드 마크 4 HAMR (건조)</Korean>
+            <Japanese>Leupold Mark 4 HAMR (乾燥地帯迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_lush_Name">
+            <English>Leupold Mark 4 HAMR (Lush)</English>
+            <French>Leupold Mark 4 HAMR (Vert)</French>
+            <Spanish>Leupold Mark 4 HAMR (Exuberante)</Spanish>
+            <Italian>Leupold Mark 4 HAMR (Verdeggiante)</Italian>
+            <German>Leupold Mark 4 HAMR (Grün)</German>
+            <Korean>류폴드 마크 4 HAMR (초목)</Korean>
+            <Japanese>Leupold Mark 4 HAMR (緑地迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_sand_Name">
+            <English>Leupold Mark 4 HAMR (Sand)</English>
+            <French>Leupold Mark 4 HAMR (Sable)</French>
+            <Spanish>Leupold Mark 4 HAMR (Arena)</Spanish>
+            <Italian>Leupold Mark 4 HAMR (Sabbia)</Italian>
+            <German>Leupold Mark 4 HAMR (Sand)</German>
+            <Korean>류폴드 마크 4 HAMR (모래)</Korean>
+            <Japanese>Leupold Mark 4 HAMR (サンド)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_hamr_snake_Name">
+            <English>Leupold Mark 4 HAMR (Snake)</English>
+            <French>Leupold Mark 4 HAMR (Serpent)</French>
+            <Spanish>Leupold Mark 4 HAMR (Serpiente)</Spanish>
+            <Italian>Leupold Mark 4 HAMR (Serpe)</Italian>
+            <German>Leupold Mark 4 HAMR (Schlange)</German>
+            <Korean>류폴드 마크 4 HAMR (뱀 위장)</Korean>
+            <Japanese>Leupold Mark 4 HAMR (ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_light_02_armed_Name">
+            <English>Ka-60 Kasatka (UP)</English>
+            <French>Ka-60 Kasatka (UP)</French>
+            <Spanish>Ka-60 Kasatka (UP)</Spanish>
+            <Italian>Ka-60 Kasatka (UP)</Italian>
+            <German>Ka-60 Kasatka (UP)</German>
+            <Korean>Ka-60 카사트카 (UP)</Korean>
+            <Japanese>Ka-60 カサートカ (UP)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_light_02_unarmed_Name">
+            <English>Ka-60 Kasatka (UP, Unarmed)</English>
+            <French>Ka-60 Kasatka (UP, non armé)</French>
+            <Spanish>Ka-60 Kasatka (UP, Desarmado)</Spanish>
+            <Italian>Ka-60 Kasatka (UP, Disarmato)</Italian>
+            <German>Ka-60 Kasatka (UP, Unbewaffnet)</German>
+            <Korean>Ka-60 카사트카 (UP, 비무장))</Korean>
+            <Japanese>Ka-60 カサートカ (UP、非武装)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_heli_transport_02_Name">
+            <English>AW101 Merlin</English>
+            <French>AW101 Merlin</French>
+            <Spanish>AW101 Merlin</Spanish>
+            <Italian>AW101 Merlin</Italian>
+            <German>AW101 Merlin</German>
+            <Korean>AW101 멀린</Korean>
+            <Japanese>AW101 マーリン</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_holosight_snake_Name">
+            <English>EOTech XPS3 (Snake)</English>
+            <French>EOTech XPS3 (Serpent)</French>
+            <Spanish>EOTech XPS3 (Serpiente)</Spanish>
+            <Italian>EOTech XPS3 (Serpe)</Italian>
+            <German>EOTech XPS3 (Schlange)</German>
+            <Korean>이오텍 XPS3 (뱀 위장)</Korean>
+            <Japanese>EOTech XPS3 (ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_holosight_snake_smg_Name">
+            <English>EOTech XPS3 SMG (Snake)</English>
+            <French>EOTech XPS3 SMG (Serpent)</French>
+            <Spanish>EOTech XPS3 SMG (Serpiente)</Spanish>
+            <Italian>EOTech XPS3 SMG (Serpe)</Italian>
+            <German>EOTech XPS3 SMG (Schlange)</German>
+            <Korean>이오텍 XPS3 SMG (뱀 위장)</Korean>
+            <Japanese>EOTech XPS3 SMG (ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_arid_Name">
+            <English>Aimpoint Micro R-1 (High, Arid)</English>
+            <French>Aimpoint Micro R-1 (Hoch, Arid</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Árido)</Spanish>
+            <Italian>Aimpoint Micro R-1 (Alto, Arido)</Italian>
+            <German>Aimpoint Micro R-1 (Hoch, Trocken)</German>
+            <Korean>에임포인트 마이크로 R-1 (높음, 건조)</Korean>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、乾燥地帯迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_black_Name">
+            <English>Aimpoint Micro R-1 (High, Black)</English>
+            <French>Aimpoint Micro R-1 (Haut, Noir)</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Negro)</Spanish>
+            <Italian>Aimpoint Micro R-1 (Alto, Nero)</Italian>
+            <German>Aimpoint Micro R-1 (Hoch, Schwarz)</German>
+            <Korean>에임포인트 마이크로 R-1 (높음, 검정)</Korean>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_black_sand_Name">
+            <English>Aimpoint Micro R-1 (High, Black/Sand)</English>
+            <French>Aimpoint Micro R-1 (Haut, Noir/Sable)</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Negro/Arena)</Spanish>
+            <Italian>Aimpoint Micro R-1 (Alto, Nero/Sabbia)</Italian>
+            <German>Aimpoint Micro R-1 (Hoch, Schwarz/Sand)</German>
+            <Korean>에임포인트 마이크로 R-1 (높음, 검정/모래)</Korean>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、ブラック/サンド)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_khaki_Name">
+            <English>Aimpoint Micro R-1 (High, Khaki)</English>
+            <French>Aimpoint Micro R-1 (Haut, Kaki)</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Caqui)</Spanish>
+            <Italian>Aimpoint Micro R-1 (Alto, Cachi)</Italian>
+            <German>Aimpoint Micro R-1 (Hoch, Khaki)</German>
+            <Korean>에임포인트 마이크로 R-1 (높음, 카키)</Korean>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、カーキ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_lush_Name">
+            <English>Aimpoint Micro R-1 (High, Lush)</English>
+            <French>Aimpoint Micro R-1 (Haute, Vert)</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Exuberante)</Spanish>
+            <Italian>Aimpoint Micro R-1 (Alto, Verdeggiante)</Italian>
+            <German>Aimpoint Micro R-1 (Hoch, Grün)</German>
+            <Korean>에임포인트 마이크로 R-1 (높음, 초목)</Korean>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、緑地迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_sand_Name">
+            <English>Aimpoint Micro R-1 (High, Sand)</English>
+            <French>Aimpoint Micro R-1 (Haut, Sable)</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Arena)</Spanish>
+            <Italian>Aimpoint Micro R-1 (Alto, Sabbia)</Italian>
+            <German>Aimpoint Micro R-1 (Hoch, Sand)</German>
+            <Korean>에임포인트 마이크로 R-1 (높음, 모래)</Korean>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、サンド)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_high_snake_Name">
+            <English>Aimpoint Micro R-1 (High, Snake)</English>
+            <French>Aimpoint Micro R-1 (Haut, Serpent)</French>
+            <Spanish>Aimpoint Micro R-1 (Alto, Serpiente)</Spanish>
+            <Italian>Aimpoint Micro R-1 (Alto, Serpe)</Italian>
+            <German>Aimpoint Micro R-1 (Hoch, Schlange)</German>
+            <Korean>에임포인트 마이크로 R-1 (높음, 뱀 위장)</Korean>
+            <Japanese>Aimpoint マイクロ R-1 (ハイマウント、ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_arid_Name">
+            <English>Aimpoint Micro R-1 (Low, Arid)</English>
+            <French>Aimpoint Micro R-1 (Bas, Arid)</French>
+            <Spanish>Aimpoint Micro R-1 (Bajo, Árido)</Spanish>
+            <Italian>Aimpoint Micro R-1 (Basso, Arido)</Italian>
+            <German>Aimpoint Micro R-1 (Tief, Trocken)</German>
+            <Korean>에임포인트 마이크로 R-1 (낮음, 건조)</Korean>
+            <Japanese>Aimpoint マイクロ R-1 (ローマウント、乾燥地帯迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_black_Name">
+            <English>Aimpoint Micro R-1 (Low, Black)</English>
+            <French>Aimpoint Micro R-1 (Bas, Noir)</French>
+            <Spanish>Aimpoint Micro R-1 (Bajo, Negro)</Spanish>
+            <Italian>Aimpoint Micro R-1 (Basso, Nero)</Italian>
+            <German>Aimpoint Micro R-1 (Tief, Schwarz)</German>
+            <Korean>에임포인트 마이크로 R-1 (낮음, 검정)</Korean>
+            <Japanese>Aimpoint マイクロ R-1 (ローマウント、ブラック)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_khaki_Name">
+            <English>Aimpoint Micro R-1 (Low, Khaki)</English>
+            <French>Aimpoint Micro R-1 (Bas, Kaki)</French>
+            <Spanish>Aimpoint Micro R-1 (Bajo, Caqui)</Spanish>
+            <Italian>Aimpoint Micro R-1 (Basso, Cachi)</Italian>
+            <German>Aimpoint Micro R-1 (Tief, Khaki)</German>
+            <Korean>에임포인트 마이크로 R-1 (낮음, 카키)</Korean>
+            <Japanese>Aimpoint マイクロ R-1 (ローマウント、カーキ)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_lush_Name">
+            <English>Aimpoint Micro R-1 (Low, Lush)</English>
+            <French>Aimpoint Micro R-1 (Bas, Vert)</French>
+            <Spanish>Aimpoint Micro R-1 (Low, Lush)</Spanish>
+            <Italian>Aimpoint Micro R-1 (Basso, Verdeggiante)</Italian>
+            <German>Aimpoint Micro R-1 (Tief, Grün)</German>
+            <Korean>에임포인트 마이크로 R-1 (낮음, 초목)</Korean>
+            <Japanese>Aimpoint マイクロ R-1 (ローマウント、緑地迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_sand_Name">
+            <English>Aimpoint Micro R-1 (Low, Sand)</English>
+            <French>Aimpoint Micro R-1 ( Bas, Sable )</French>
+            <Spanish>Aimpoint Micro R-1 (Bajo, Arena)</Spanish>
+            <Italian>Aimpoint Micro R-1 (Basso, Sabbia)</Italian>
+            <German>Aimpoint Micro R-1 (Tief, Sand)</German>
+            <Korean>에임포인트 마이크로 R-1 (낮음, 모래)</Korean>
+            <Japanese>Aimpoint マイクロ R-1 (ローマウント、サンド)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_r1_low_snake_Name">
+            <English>Aimpoint Micro R-1 (Low, Snake)</English>
+            <French>Aimpoint Micro R-1 (Bas, Serpent)</French>
+            <Spanish>Aimpoint Micro R-1 (Bajo, Serpiente)</Spanish>
+            <Italian>Aimpoint Micro R-1 (Basso, Serpe)</Italian>
+            <German>Aimpoint Micro R-1 (Tief, Schlange)</German>
+            <Korean>에임포인트 마이크로 R-1 (낮음, 뱀 위장)</Korean>
+            <Japanese>Aimpoint マイクロ R-1 (ローマウント、ヘビ柄迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_rpg32_tan_Name">
+            <English>RPG-32 (Sand)</English>
+            <French>RPG-32 (Sable)</French>
+            <Spanish>RPG-32 (Arena)</Spanish>
+            <Italian>RPG-32 (Sabbia)</Italian>
+            <German>RPG-32 (Sand)</German>
+            <Korean>RPG-32 (모래)</Korean>
+            <Japanese>RPG-32 (サンド)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_aa_Name">
+            <English>KamAZ (Zu-23-2)</English>
+            <French>KamAZ (Zu-23-2)</French>
+            <Spanish>KamAZ (Zu-23-2)</Spanish>
+            <Italian>KamAZ (Zu-23-2)</Italian>
+            <German>KamAZ (Zu-23-2)</German>
+            <Korean>카마즈 (ZU-23-2)</Korean>
+            <Japanese>KamAZ (Zu-23-2)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_ammo_Name">
+            <English>KamAZ Ammo</English>
+            <French>KamAZ Munitions</French>
+            <Spanish>KamAZ Municiones</Spanish>
+            <Italian>KamAZ Munizioni</Italian>
+            <German>KamAZ Munition</German>
+            <Korean>카마즈 탄약</Korean>
+            <Japanese>KamAZ (弾薬)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_cargo_Name">
+            <English>KamAZ Cargo</English>
+            <French>KamAZ Cargo</French>
+            <Spanish>KamAZ Carga</Spanish>
+            <Italian>KamAZ Carico</Italian>
+            <German>KamAZ Fracht</German>
+            <Korean>카마즈 화물</Korean>
+            <Japanese>KamAZ (貨物)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_flatbed_Name">
+            <English>KamAZ Flatbed</English>
+            <French>KamAZ Flatbed</French>
+            <Spanish>KamAZ Flatbed</Spanish>
+            <Italian>KamAZ Pianale</Italian>
+            <German>KamAZ Flachbett</German>
+            <Korean>카마즈 플랫베드</Korean>
+            <Japanese>KamAZ (平台)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_racing_Name">
+            <English>KamAZ Racing</English>
+            <French>KamAZ de course</French>
+            <Spanish>KamAZ Carreras</Spanish>
+            <Italian>KamAZ da corsa</Italian>
+            <German>KamAZ Rennlaster</German>
+            <Korean>카마즈 경주용</Korean>
+            <Japanese>KamAZ (レース仕様)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_repair_Name">
+            <English>KamAZ Repair</English>
+            <French>KamAZ Réparation</French>
+            <Spanish>KamAZ Reparaciones</Spanish>
+            <Italian>KamAZ Riparazione</Italian>
+            <German>KamAZ Instandsetzung</German>
+            <Korean>카마즈 정비</Korean>
+            <Japanese>KamAZ (修理)</Japanese>
+        </Key>
+    </Package>
+</Project>

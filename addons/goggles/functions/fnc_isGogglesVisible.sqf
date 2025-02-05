@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Determines if goggles are visible on passed unit.

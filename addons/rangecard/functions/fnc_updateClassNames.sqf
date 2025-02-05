@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Authors: Ruthberg
  * Updates the ammo and weapon class names

@@ -116,12 +116,12 @@ class controlsBackground {
 
         colorRocks[] = {0.50, 0.50, 0.50, 0.50};
 
-        class hospital: Hospital {color[] = {0,0,0,0.25};};
-        class church: Church {color[] = {0,0,0,0.25};};
-        class lighthouse: Lighthouse {color[] = {0,0,0,0.25};};
+        class Hospital: Hospital {color[] = {0,0,0,0.25};};
+        class church: church {color[] = {0,0,0,0.25};};
+        class Lighthouse: Lighthouse {color[] = {0,0,0,0.25};};
         class power: power {color[] = {0,0,0,0.25};};
-        class fuelstation: Fuelstation {color[] = {0,0,0,0.25};};
-        class transmitter: Transmitter {color[] =  {0,0,0,0.25};};
+        class Fuelstation: Fuelstation {color[] = {0,0,0,0.25};};
+        class Transmitter: Transmitter {color[] =  {0,0,0,0.25};};
 
     };
     class MapCompass: RscMapControlEmpty {

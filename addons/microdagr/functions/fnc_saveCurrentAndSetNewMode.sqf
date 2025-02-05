@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Saves the current mode and sets a new mode
@@ -22,7 +22,7 @@ private _display = uiNamespace getVariable [[QGVAR(RscTitleDisplay), QGVAR(Dialo
 
 if (isNull _display) exitWith {LOG("No Display");};
 
-if (GVAR(currentApplicationPage) == 2) then {
+if (GVAR(currentApplicationPage) == APP_MODE_MAP) then {
     private _theMap = [_display displayCtrl IDC_MAPDETAILS, _display displayCtrl IDC_MAPPLAIN] select (!GVAR(mapShowTexture));
     private _mapCtrlPos = ctrlPosition _theMap;
 
@@ -32,7 +32,7 @@ if (GVAR(currentApplicationPage) == 2) then {
     GVAR(mapZoom) = (ctrlMapScale _theMap) * _mapSize;
 
     //Hit button again, toggle map modes:
-    if (_newMode == 2) then {
+    if (_newMode == APP_MODE_MAP) then {
         if (GVAR(mapShowTexture)) then {
             GVAR(mapShowTexture) = false;
         } else {

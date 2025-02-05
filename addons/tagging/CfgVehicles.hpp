@@ -53,6 +53,17 @@ class CfgVehicles {
         };
     };
 
+    class LandVehicle;
+    class Car: LandVehicle {
+        GVAR(canTag) = 1;
+    };
+    class Tank: LandVehicle {
+        GVAR(canTag) = 1;
+    };
+    class Air;
+    class Helicopter: Air {
+        GVAR(canTag) = 1;
+    };
 
     class Item_Base_F;
     class ACE_Item_SpraypaintBlack: Item_Base_F {
@@ -83,6 +94,18 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_SpraypaintBlue,1);
         };
     };
+    class ACE_Item_SpraypaintYellow: ACE_Item_SpraypaintBlack {
+        displayName = CSTRING(SpraypaintYellow);
+        class TransportItems {
+            MACRO_ADDITEM(ACE_SpraypaintYellow,1);
+        };
+    };
+    class ACE_Item_SpraypaintWhite: ACE_Item_SpraypaintBlack {
+        displayName = CSTRING(SpraypaintWhite);
+        class TransportItems {
+            MACRO_ADDITEM(ACE_SpraypaintWhite,1);
+        };
+    };
 
     class Box_NATO_Support_F;
     class ACE_Box_Misc: Box_NATO_Support_F {
@@ -91,6 +114,8 @@ class CfgVehicles {
             MACRO_ADDITEM(ACE_SpraypaintRed,5);
             MACRO_ADDITEM(ACE_SpraypaintBlue,5);
             MACRO_ADDITEM(ACE_SpraypaintGreen,5);
+            MACRO_ADDITEM(ACE_SpraypaintYellow,5);
+            MACRO_ADDITEM(ACE_SpraypaintWhite,5);
         };
     };
 };

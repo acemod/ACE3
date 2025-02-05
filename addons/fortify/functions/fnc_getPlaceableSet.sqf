@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Kingsley
  * Gets placeable object classnames and values.
@@ -20,7 +20,7 @@ TRACE_1("getPlaceableSet",_preset);
 
 private _config = missionConfigFile >> "ACEX_Fortify_Presets" >> _preset;
 if (!isClass _config) then {
-    _config = configfile >> "ACEX_Fortify_Presets" >> _preset;
+    _config = configFile >> "ACEX_Fortify_Presets" >> _preset;
 };
 if (!isClass _config) exitWith {
     private _msg = format ["Could not find [%1]", _preset];
@@ -30,17 +30,18 @@ if (!isClass _config) exitWith {
 
 private _objects = getArray (_config >> "objects");
 
-// Attemp to filter bad input
+// Attempt to filter bad input
 _objects = _objects select {
-    if ((_x  isEqualTypeParams ["", 0])) then {
+    if ((_x isEqualTypeParams ["", 0]) || {_x isEqualTypeParams ["", 0, ""]}) then {
         _x params [["_classname", "#", [""]], ["_cost", -1, [0]]];
         if (isClass (configFile >> "CfgVehicles" >> _classname)) then {
             true
         } else {
-            ERROR_2("Preset [%1] - Classname does not exist",_preset,_classname);
+            ERROR_2("Preset [%1] - Classname [%2] does not exist",_preset,_classname);
+            false
         };
     } else {
-        ERROR_2("Preset [%1] - Bad data in objects array %2",_preset,_x);
+        ERROR_2("Preset [%1] - Bad data [%2] in objects array %2",_preset,_x);
         false
     };
 };

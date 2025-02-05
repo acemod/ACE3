@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Nou
  * Update distance when rangefinder laser is on
@@ -15,14 +15,26 @@
  * Public: No
  */
 
-private _laserCode = ACE_player getVariable[QGVAR(code), ACE_DEFAULT_LASER_CODE];
-if (!isNil "_laserCode") then {
-    __LaserDesignatorIGUI_LaserCode ctrlSetText format["Code: %1", [_laserCode, 4, 0, false] call CBA_fnc_formatNumber];
+params ["_ctrl"];
+
+private _display = ctrlParent _ctrl;
+
+private _currentShooter = ACE_controlledUAV param [0, objNull];
+if (isNull _currentShooter) then {
+    if (ACE_player call CBA_fnc_canUseWeapon) then {
+        _currentShooter = ACE_player;
+    } else {
+        _currentShooter = objectParent ACE_player;
+    };
 };
 
-if (! (ctrlShown __LaserDesignatorIGUI_LaserOn) ) then {
-    // TODO: hide distance
-    __LaserDesignatorIGUI_ACE_Distance ctrlSetText "----";
-} else {
-    __LaserDesignatorIGUI_ACE_Distance ctrlSetText (ctrlText __LaserDesignatorIGUI_CA_Distance);
+private _laserCode = _currentShooter getVariable [QGVAR(code), ACE_DEFAULT_LASER_CODE];
+private _ctrlLaserCode = _display displayCtrl IDC_LASERDESIGNATOR_LASERCODE;
+_ctrlLaserCode ctrlSetText format ["Code: %1", [_laserCode, 4, 0, false] call CBA_fnc_formatNumber];
+
+private _ctrlDistanceACE = _display displayCtrl IDC_LASERDESIGNATOR_ACEDISTANCE;
+if (!isLaserOn _currentShooter) exitWith {
+    _ctrlDistanceACE ctrlSetText "----";
 };
+
+_ctrlDistanceACE ctrlSetText (ctrlText (_display displayCtrl IDC_LASERDESIGNATOR_DISTANCE));

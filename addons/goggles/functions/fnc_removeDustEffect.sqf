@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
  * Removes dust from the glasses.
@@ -16,5 +16,5 @@
  */
 
 if (!isNull (GETUVAR(GVAR(DisplayEffects),displayNull))) then {
-    (GETUVAR(GVAR(DisplayEffects),displayNull) displayCtrl 10662) ctrlSetText "";
+    (GETUVAR(GVAR(DisplayEffects),displayNull) displayCtrl IDC_GOGGLESEFFECTS_DUST) ctrlSetText "";
 };

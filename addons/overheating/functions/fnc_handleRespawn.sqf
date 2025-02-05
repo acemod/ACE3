@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: 10Dozen
  * Handle respawn events and clears list of jammed weapons.

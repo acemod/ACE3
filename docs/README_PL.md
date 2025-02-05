@@ -2,7 +2,7 @@
     <img src="https://github.com/acemod/ACE3/blob/master/extras/assets/logo/black/ACE3-Logo.jpg" width="480">
 </p>
 <p align="center">
-    <a href="https://github.com/acemod/ACE3/releases">
+    <a href="https://github.com/acemod/ACE3/releases/latest">
         <img src="https://img.shields.io/badge/Wersja-0.0.0-blue.svg?style=flat-square" alt="ACE3 Wersja">
     </a>
     <a href="https://github.com/acemod/ACE3/issues">
@@ -14,11 +14,8 @@
     <a href="https://github.com/acemod/ACE3/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/Licencja-GPLv2-red.svg?style=flat-square" alt="ACE3 Licencja">
     </a>
-    <a href="https://acemod.org/slack">
-        <img src="https://acemod.org/slackbadge.svg?label=Slack&style=flat-square" alt="ACE3 Slack">
-    </a>
-    <a href="https://circleci.com/gh/acemod/ACE3">
-        <img src="https://circleci.com/gh/acemod/ACE3.svg?style=svg" alt="ACE3 Build Status">
+    <a href="https://acemod.org/discord">
+        <img src="https://img.shields.io/badge/Discord-Join-darkviolet.svg?style=flat-square" alt="ACE3 Discord">
     </a>
 </p>
 <p align="center"><sup><strong>Wymaga najnowszej wersji <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>. Odwiedź nas na <a href="https://www.facebook.com/ACE3Mod">Facebook</a> | <a href="https://www.youtube.com/c/ACE3Mod">YouTube</a> | <a href="https://twitter.com/ACE3Mod">Twitter</a> | <a href="http://www.reddit.com/r/arma/search?q=ACE&restrict_sr=on&sort=new&t=all">Reddit</a></strong></sup></p>
@@ -46,7 +43,7 @@ Modyfikacja ta jest **budowana modułowo**, dzięki temu prawie każdy dostarczo
 - Przeciąganie i przenoszenie
 - Realistyczne nazwy pojazdów i broni
 - System kontroli ognia (SKO) dla pojazdów opancerzonych oraz śmigłowców
-- Realistyczna balistyka/SKO obliczana w rozszerzeniach C/C++
+- Realistyczna balistyka/SKO obliczana w rozszerzeniach Rust
 - Symulacja strefy backblastu i podciśnienia
 - Jednorazowe wyrzutnie
 - Realistyczne siły G

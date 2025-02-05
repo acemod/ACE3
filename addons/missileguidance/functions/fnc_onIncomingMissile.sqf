@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus / nou
  * Handles AI shooting a locking missile

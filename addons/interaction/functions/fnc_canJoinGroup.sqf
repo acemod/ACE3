@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Checks if the unit can join a group
@@ -18,7 +18,6 @@
 
 params ["_unit", "_target"];
 
-alive _target
-&& {!(_target getVariable ["ACE_isUnconscious", false])}
+_target call EFUNC(common,isAwake)
 && {side group _unit == side group _target}
 && {group _unit != group _target} // return

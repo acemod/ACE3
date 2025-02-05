@@ -1,15 +1,15 @@
 /*
  * Author: commy2
- * Check if Object is Overlapping
+ * Checks if an object is overlapping another object.
  *
  * Arguments:
  * 0: Object <OBJECT>
  *
  * Return Value:
- * Boolean <BOOL>
+ * If object is overlapping another <BOOL>
  *
  * Example:
- * [player] call ace_dragging_fnc_isObjectOnObject
+ * [player] call ace_dragging_fnc_isObjectOnObject;
  *
  * Public: No
  */

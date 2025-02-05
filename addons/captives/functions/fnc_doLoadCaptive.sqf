@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Unit loads the target object into a vehicle. (logic same as canLoadCaptive)
@@ -27,7 +27,7 @@ if (isNull _target && {_unit getVariable [QGVAR(isEscorting), false]}) then {
         };
     } forEach (attachedObjects _unit);
 };
-if (isNull _target || {(vehicle _target) != _target} || {!(_target getVariable [QGVAR(isHandcuffed), false])}) exitWith {WARNING("");};
+if (isNull _target || {!isNull objectParent _target} || {!(_target getVariable [QGVAR(isHandcuffed), false])}) exitWith {WARNING("");};
 
 if (isNull _vehicle) then {
     // Looking at a captive unit, get nearest vehicle with valid seat:

@@ -1,4 +1,3 @@
-class ctrlMapEmpty;
 class GVAR(DisableMouse_Dialog) {
     idd = -1;
     movingEnable = 0;
@@ -9,10 +8,10 @@ class GVAR(DisableMouse_Dialog) {
         class Background: ctrlMapEmpty {
             idc = 101;
             fade = 1;
-            x = "safezoneXAbs";
-            y = "safezoneY";
-            w = "safezoneWAbs";
-            h = "safezoneH";
+            x = "safeZoneXAbs";
+            y = "safeZoneY";
+            w = "safeZoneWAbs";
+            h = "safeZoneH";
         };
     };
 };

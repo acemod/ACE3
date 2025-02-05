@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: KoffeinFlummi, Ruthberg
  * Applies the adjustment for the current scope
@@ -42,6 +42,10 @@ if (cameraView == "GUNNER") then {
         _pitch = _pitch + _elevationDifference;
         _yaw = _yaw + _windageDifference;
         [_unit, _pitch, _bank, _yaw] call EFUNC(common,setPitchBankYaw);
+    };
+
+    if (GVAR(inScopeAdjustment)) then {
+        [] call FUNC(showZeroing);
     };
 } else {
     [] call FUNC(showZeroing);

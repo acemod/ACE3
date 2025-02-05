@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Gets the bore height of the weapon & optic combination with the given weapon index

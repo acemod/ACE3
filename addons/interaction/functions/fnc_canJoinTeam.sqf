@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Checks if the player can join a team
@@ -18,7 +18,6 @@
 
 params ["_unit", "_target"];
 
-alive _target
-&& {!(_target getVariable ["ACE_isUnconscious", false])}
+_target call EFUNC(common,isAwake)
 && {!([_target] call EFUNC(common,isPlayer))}
 && {_target in units group _unit}

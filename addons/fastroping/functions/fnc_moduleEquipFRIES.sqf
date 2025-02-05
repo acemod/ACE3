@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Equips synched helicopters with a FRIES.
@@ -22,5 +22,4 @@ private _synchedUnits = synchronizedObjects _module;
         _x = vehicle _x;
     };
     [_x] call FUNC(equipFRIES);
-    false
-} count _synchedUnits;
+} forEach _synchedUnits;

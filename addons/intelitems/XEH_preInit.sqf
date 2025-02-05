@@ -18,8 +18,8 @@ if (isServer) then {
     GVAR(intelData) = [true] call CBA_fnc_createNamespace;
     publicVariable QGVAR(intelData);
 
-    [QGVAR(handleMagIndex), FUNC(handleMagIndex)] call CBA_fnc_addEventHandler;
-    [QGVAR(setObjectData), FUNC(setObjectData)] call CBA_fnc_addEventHandler;
+    [QGVAR(handleMagIndex), LINKFUNC(handleMagIndex)] call CBA_fnc_addEventHandler;
+    [QGVAR(setObjectData), LINKFUNC(setObjectData)] call CBA_fnc_addEventHandler;
 };
 
 if (hasInterface) then {
@@ -27,7 +27,7 @@ if (hasInterface) then {
     GVAR(controlsGroups) = [];
 
     // Hash to track controls group positions on map between closing
-    GVAR(controlsData) = [] call CBA_fnc_hashCreate;
+    GVAR(controlsData) = createHashMap;
 };
 
 ADDON = true;

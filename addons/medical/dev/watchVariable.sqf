@@ -1,4 +1,4 @@
-#include "\z\ace\addons\medical\script_component.hpp"
+#include "..\script_component.hpp"
 
 if (missionNamespace getVariable [QGVAR(dev_watchVariableRunning), false]) exitWith {};
 GVAR(dev_watchVariableRunning) = true;
@@ -10,10 +10,10 @@ GVAR(dev_watchVariableRunning) = true;
     if (!isNull _display) exitWith {"Paused"};
 
     private _unit = cursorTarget;
-    if (!(_unit isKindOf "CAManBase")) then {_unit = cursorObject};
-    if (!(_unit isKindOf "CAManBase")) then {_unit = ACE_player};
+    if !(_unit isKindOf "CAManBase") then {_unit = cursorObject};
+    if !(_unit isKindOf "CAManBase") then {_unit = ACE_player};
     if ((_unit != ACE_player) && {IS_UNCONSCIOUS(ACE_player)}) then {_unit = ACE_player};
-    if (!(_unit isKindOf "CAManBase")) exitWith {"No Unit?"};
+    if !(_unit isKindOf "CAManBase") exitWith {"No Unit?"};
 
     private _return = [];
 
@@ -28,7 +28,7 @@ GVAR(dev_watchVariableRunning) = true;
     _return pushBack format ["<t color='#%1'>State: %2</t>", _color, _targetState];
     private _hasStableVitals = ["N", "Y"] select ([_unit] call EFUNC(medical_status,hasStableVitals));
     private _hasStableCondition = ["N", "Y"] select ([_unit] call EFUNC(medical_status,isInStableCondition));
-    private _unconcFlag = if IS_UNCONSCIOUS(_unit) then {"[<t color='#BBFFBB'>U</t>]"} else {""};
+    private _unconcFlag = ["", "[<t color='#BBFFBB'>U</t>]"] select IS_UNCONSCIOUS(_unit);
     private _timeLeft = _unit getVariable [QEGVAR(medical_statemachine,cardiacArrestTimeLeft), -1];
     private _cardiactArrestFlag = if IN_CRDC_ARRST(_unit) then {format ["[<t color='#BBBBFF'>CA</t> %1]", _timeLeft toFixed 1]} else {""};
     _return pushBack format ["[StableVitals: %1] [StableCon: %2] %3 %4", _hasStableVitals, _hasStableCondition, _unconcFlag, _cardiactArrestFlag];
@@ -38,7 +38,7 @@ GVAR(dev_watchVariableRunning) = true;
     private _woundBleeding = GET_WOUND_BLEEDING(_unit);
     private _bloodLoss = GET_BLOOD_LOSS(_unit);
     private _hemorrhage = GET_HEMORRHAGE(_unit);
-    private _isBleeding = if (IS_BLEEDING(_unit)) then {"<t color ='#FF9999'>Bleeding</t>"} else {""};
+    private _isBleeding = ["", "[<t color ='#FF9999'>Bleeding</t>]"] select IS_BLEEDING(_unit);
     private _secondsToHeartstop = if (_bloodLoss != 0) then {format ["[<t color ='#FF9999'>Time Left:</t> %1 sec]", (((_bloodVolume - BLOOD_VOLUME_CLASS_4_HEMORRHAGE) max 0) / _bloodLoss) toFixed 0]} else {""};
     _return pushBack format ["Blood: %1 [Hemorrhage: %2] %3", _bloodVolume toFixed 3, _hemorrhage, _isBleeding];
     _return pushBack format [" - [W: %1 T: %2] %3", _woundBleeding toFixed 4, _bloodLoss toFixed 4, _secondsToHeartstop];
@@ -59,8 +59,8 @@ GVAR(dev_watchVariableRunning) = true;
     _return pushBack format [" - [Pain: %1] [Suppress: %2]", _pain toFixed 3, _painSuppress toFixed 3];
 
     // Damage:
-    private _damage = _unit getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
-    private _limping = if (_unit getVariable [QEGVAR(medical,isLimping), false]) then {"[<t color ='#FFCC22'> Limping </t>]"} else {""};
+    private _damage = GET_BODYPART_DAMAGE(_unit);
+    private _limping = ["", "[<t color ='#FFCC22'> Limping </t>]"] select (_unit getVariable [QEGVAR(medical,isLimping), false]);
     _return pushBack format ["BodyPartDamage: [H: %1] [B: %2]", (_damage select 0) toFixed 2, (_damage select 1) toFixed 2];
     _return pushBack format ["[LA:%1] [RA: %2] [LL:%3] [RL: %4]", (_damage select 2) toFixed 2, (_damage select 3) toFixed 2, (_damage select 4) toFixed 2, (_damage select 5) toFixed 2];
 
@@ -68,8 +68,8 @@ GVAR(dev_watchVariableRunning) = true;
     _return pushBack format ["[HHnd:%1] [HLeg: %2] %3", (_unit getHitPointDamage "HitHands") toFixed 2, (_unit getHitPointDamage "HitLegs") toFixed 2, _limping];
 
     private _fractures = GET_FRACTURES(_unit);
-    private _canSprint = if (isSprintAllowed _unit) then {""} else {"[<t color ='#FFCC22'>Sprint Blocked</t>]"};
-    private _forceWalk = if (isForcedWalk _unit) then {"[<t color ='#FF9922'>Forced Walking</t>]"} else {""};
+    private _canSprint = ["[<t color ='#FFCC22'>Sprint Blocked</t>]", ""] select (isSprintAllowed _unit);
+    private _forceWalk = ["", "[<t color ='#FF9922'>Forced Walking</t>]"] select (isForcedWalk _unit);
     _return pushBack format ["Fractures: %1 %2%3", _fractures, _canSprint, _forceWalk];
 
 
@@ -95,24 +95,33 @@ GVAR(dev_watchVariableRunning) = true;
     _return pushBack "------- Open Wounds: -------";
     private _wounds = GET_OPEN_WOUNDS(_unit);
     {
-        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
-        _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        private _bodyPart = _x;
+        {
+            _x params ["_xClassID", "_xAmountOf", "_xBleeding", "_xDamage"];
+            _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", _bodyPart, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        } forEach _y;
     } forEach _wounds;
 
     // Bandaged Wounds:
     _return pushBack "------- Bandaged Wounds: -------";
     private _wounds = GET_BANDAGED_WOUNDS(_unit);
     {
-        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
-        _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        private _bodyPart = _x;
+        {
+            _x params ["_xClassID", "_xAmountOf", "_xBleeding", "_xDamage"];
+            _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", _bodyPart, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        } forEach _y;
     } forEach _wounds;
 
     // Stitched Wounds:
     _return pushBack "------- Stitched Wounds: -------";
     private _wounds = GET_STITCHED_WOUNDS(_unit);
     {
-        _x params ["_xClassID", "_xBodyPartN", "_xAmountOf", "_xBleeding", "_xDamage"];
-        _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", ALL_SELECTIONS select _xBodyPartN, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        private _bodyPart = _x;
+        {
+            _x params ["_xClassID", "_xAmountOf", "_xBleeding", "_xDamage"];
+            _return pushBack format ["%1: [%2] [x%3] [Bld: %4] [Dmg: %5]", _bodyPart, _xClassID, _xAmountOf toFixed 1, _xBleeding toFixed 4, _xDamage toFixed 2];
+        } forEach _y;
     } forEach _wounds;
 
     // IVs:
@@ -141,9 +150,8 @@ GVAR(dev_watchVariableRunning) = true;
     };
     _return pushBack format ["Adjusts: [HR %1][PS %2][PR %3]", _hrTargetAdjustment toFixed 2, _painSupressAdjustment toFixed 2, _peripheralResistanceAdjustment toFixed 2];
     {
-        private _medicationCount = [_unit, _x, true] call EFUNC(medical_status,getMedicationCount);
-        private _medicationEffectiveness = [_unit, _x, false] call EFUNC(medical_status,getMedicationCount);
-        _return pushBack format ["-%1: C: %2 - E: %3", _x, _medicationCount toFixed 2, _medicationEffectiveness toFixed 2];
+        ([_unit, _x, false] call EFUNC(medical_status,getMedicationCount)) params ["_medicationDose", "_medicationEffectiveness"];
+        _return pushBack format ["-%1: D: %2 - E: %3", _x, _medicationDose toFixed 2, _medicationEffectiveness toFixed 2];
     } forEach _uniqueMedications;
     _return pushBack "------- Medications Raw: -------";
     _return append _rawMedications;

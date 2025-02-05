@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Updates the category buttons based currently avaiable treatments.
@@ -21,12 +21,37 @@ params ["_display"];
     _x params ["_idc", "_category"];
 
     private _ctrl = _display displayCtrl _idc;
-    private _enable = GVAR(actions) findIf {_category == _x select 1 && {call (_x select 2)}} > -1;
+    private _enable = if (_category == "triage") then { true } else {
+        GVAR(actions) findIf {_category == _x select 1 && {call (_x select 2)}} > -1
+    };
     _ctrl ctrlEnable _enable;
 
+    if (!_enable 
+    && {isNull findDisplay 312} 
+    && {!(
+        EGVAR(medical_treatment,holsterRequired) == 0
+        || {!isNull objectParent ACE_player} // medic is in a vehicle, so weapon is considered holstered
+        || {!isNull objectParent GVAR(target)} // patient is in a vehicle, ^
+        || {(EGVAR(medical_treatment,holsterRequired) in [2,4]) && {_category == "examine"}} // if examine bypass is on
+        || {currentWeapon ACE_player isEqualTo ""} // weapon is holstered
+        || {(EGVAR(medical_treatment,holsterRequired) <= 2) && {weaponLowered ACE_player}} // if just lowered is allowed
+    )}) then {
+        _ctrl ctrlSetTooltip LLSTRING(needToHolster);
+    };
+
+    private _selectedColor = [
+        profileNamespace getVariable ["GUI_BCG_RGB_R", 0.13],
+        profileNamespace getVariable ["GUI_BCG_RGB_G", 0.54],
+        profileNamespace getVariable ["GUI_BCG_RGB_B", 0.21],
+        profileNamespace getVariable ["GUI_BCG_RGB_A", 0.8]
+    ];
     private _color = [[0.4, 0.4, 0.4, 1], [1, 1, 1, 1]] select _enable;
+    _color = [_color, _selectedColor] select (GVAR(selectedCategory) isEqualTo _category);
     _ctrl ctrlSetTextColor _color;
+    _color set [-1, 0.8]; // Mouseover change
+    _ctrl ctrlSetActiveColor _color;
 } forEach [
+    [IDC_TRIAGE, "triage"],
     [IDC_EXAMINE, "examine"],
     [IDC_BANDAGE, "bandage"],
     [IDC_MEDICATION, "medication"],

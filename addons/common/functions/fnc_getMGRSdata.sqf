@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: VKing
  * Gets the current map's MGRS grid zone designator and 100km square.

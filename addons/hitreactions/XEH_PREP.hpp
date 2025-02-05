@@ -1,4 +1,3 @@
-
+PREP(checkWeaponDrop);
 PREP(fallDown);
 PREP(getRandomAnimation);
-PREP(throwWeapon);

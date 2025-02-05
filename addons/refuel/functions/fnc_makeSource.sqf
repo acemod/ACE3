@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dystopian
  * Makes an object into a refuel source.
@@ -25,24 +25,46 @@ if !(EGVAR(common,settingsInitFinished)) exitWith {
     EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(makeSource), _this];
 };
 
+if (!GVAR(enabled)) exitWith {};
+
 params [
     ["_source", objNull, [objNull]],
     ["_fuelCargo", 0, [0]],
     ["_hooks", nil, [[]]]
 ];
-TRACE_3("makeSource",_source,_fuelCargo,_hooks);
 
-private _fuelCargoConfig = getNumber (configOf _source >> QGVAR(fuelCargo));
+private _fuelCargoConfig = _source call FUNC(getFuelCargo);
+
+TRACE_4("makeSource",_source,_fuelCargo,_hooks,_fuelCargoConfig);
 
 if (
     isNull _source
     || {_fuelCargo < 0 && {!(_fuelCargo in [REFUEL_INFINITE_FUEL, REFUEL_DISABLED_FUEL])}}
-    || {_fuelCargo != 0 && {_fuelCargo == _fuelCargoConfig}}
 ) exitWith {};
 
-[_source, _fuelCargo] call FUNC(setFuel);
+// We might be removing fuel from an object that in config doesn't have fuel, but was given fuel via this function prior
+if (_fuelCargo == REFUEL_DISABLED_FUEL && {_fuelCargoConfig == REFUEL_DISABLED_FUEL}) exitWith {
+    if (isNil {_source getVariable QGVAR(currentFuelCargo)}) exitWith {};
+
+    _source setVariable [QGVAR(currentFuelCargo), nil, true];
+    _source setVariable [QGVAR(capacity), REFUEL_DISABLED_FUEL, true];
+
+    private _jipID = _source getVariable QGVAR(initSource_jipID);
+
+    if (isNil "_jipID") exitWith {};
+
+    _jipID call CBA_fnc_removeGlobalEventJIP;
+
+    _source setVariable [QGVAR(initSource_jipID), nil];
+};
+
+private _capacity = if (_fuelCargo < 0) then {_fuelCargo} else {_fuelCargoConfig max _fuelCargo};
+
+_source setVariable [QGVAR(capacity), _capacity, true];
 
 if (_fuelCargo == REFUEL_DISABLED_FUEL) exitWith {};
+
+[_source, _fuelCargo] call FUNC(setFuel);
 
 if (
     !isNil "_hooks"
@@ -52,9 +74,11 @@ if (
     _source setVariable [QGVAR(hooks), _hooks, true];
 };
 
-// check if menu already exists
-if (_fuelCargoConfig != 0 || {!isNil {_source getVariable QGVAR(initSource_jipID)}}) exitWith {};
+// only add if menu doesn't already exist
+if (_fuelCargoConfig != REFUEL_DISABLED_FUEL || {!isNil {_source getVariable QGVAR(initSource_jipID)}}) exitWith {};
 
 private _jipID = [QGVAR(initSource), [_source]] call CBA_fnc_globalEventJIP;
 [_jipID, _source] call CBA_fnc_removeGlobalEventJIP;
 _source setVariable [QGVAR(initSource_jipID), _jipID];
+
+[QGVAR(sourceInitialized), [_source]] call CBA_fnc_globalEvent;

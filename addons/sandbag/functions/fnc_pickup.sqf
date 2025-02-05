@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Pick up sandbag
@@ -29,12 +29,12 @@ _unit setVariable [QGVAR(isUsingSandbag), true];
 
     if (isNull _sandbag) exitWith {};
 
-    deletevehicle _sandbag;
+    deleteVehicle _sandbag;
 
     // Force physx update
     {
         _x setPosASL (getPosASL _x);
-    } count (_unit nearObjects ["ACE_SandbagObject", 5]);
+    } forEach (_unit nearObjects ["ACE_SandbagObject", 5]);
 
     [_unit, "ACE_Sandbag_empty"] call EFUNC(common,addToInventory);
 }, [_unit, _sandbag], 1.5] call CBA_fnc_waitAndExecute;

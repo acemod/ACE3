@@ -24,6 +24,9 @@ Offers different trigger types, like clackers and dead man switches.
 ### 1.3 Attach explosives to vehicles
 Enables attaching explosives to vehicles.
 
+### 1.4 Explosive with Scripted Damage
+APERS/VS-50 `(Toe-Popper)` variant will only do damage to a unit's legs (if ace medical is enabled).
+
 ## 2. Usage
 
 ### 2.1 Placing explosives
@@ -35,6 +38,7 @@ Enables attaching explosives to vehicles.
 - Interact with the explosive <kbd>⊞&nbsp;Win</kbd> (ACE3 default key bind `Interact Key`).
 - Choose the arming method.
 - For clackers use Self Interaction `Explosives` &rarr; `Detonate` and choose the corresponding Firing Device.
+- Alternatively, use <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd> (ACE3 default key bind `Detonate All on Active Clacker`) to detonate all explosives tied to the `Active Detonator`, which can be changed via the `Set Active Detonator` interaction on the desired Clacker / Dead Man Switch.
 
 ### 2.3 Defusing explosives
 - A `Defusal Kit` is required.

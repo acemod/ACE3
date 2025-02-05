@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Checks if the given unit is bleeding. Handles both ACE Medical and Vanilla.
@@ -17,7 +17,7 @@
 
 params ["_unit"];
 
-if (GVAR(useAceMedical)) exitWith {
+if (GETEGVAR(medical,enabled,false)) exitWith {
     IS_BLEEDING(_unit);
 };
 

@@ -54,6 +54,7 @@ class CfgWeapons {
         model = "\A3\weapons_F\ammo\mag_univ.p3d";
         picture = QPATHTOF(UI\ace_chemlight_shield_x_ca.paa);
         scope = 2;
+        ACE_isTool = 1;
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 1;
         };

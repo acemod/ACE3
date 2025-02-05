@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Called by repair action / progress bar. Raise events to set the new hitpoint damage.
@@ -7,6 +7,7 @@
  * 0: Unit that does the repairing <OBJECT>
  * 1: Vehicle to repair <OBJECT>
  * 2: Selected hitpointIndex <NUMBER>
+ * 3: Repair action classname <STRING>
  *
  * Return Value:
  * None
@@ -17,10 +18,11 @@
  * Public: No
  */
 
-params ["_unit", "_vehicle", "_hitPointIndex"];
-TRACE_3("params",_unit,_vehicle,_hitPointIndex);
+params ["_unit", "_vehicle", "_hitPointIndex", "_action"];
+TRACE_4("params",_unit,_vehicle,_hitPointIndex,_action);
 
-private _postRepairDamageMin = [_unit] call FUNC(getPostRepairDamage);
+// override minimum damage if doing full repair
+private _postRepairDamageMin = [_unit, _action isEqualTo "fullRepair"] call FUNC(getPostRepairDamage);
 
 (getAllHitPointsDamage _vehicle) params ["_allHitPoints"];
 private _hitPointClassname = _allHitPoints select _hitPointIndex;
@@ -33,7 +35,7 @@ private _hitPointNewDamage = (_hitPointCurDamage - 0.5) max _postRepairDamageMin
 
 if (_hitPointNewDamage < _hitPointCurDamage) then {
     // raise event to set the new hitpoint damage
-    TRACE_3("repairing main point", _vehicle, _hitPointIndex, _hitPointNewDamage);
+    TRACE_3("repairing main point",_vehicle,_hitPointIndex,_hitPointNewDamage);
     [QGVAR(setVehicleHitPointDamage), [_vehicle, _hitPointIndex, _hitPointNewDamage], _vehicle] call CBA_fnc_targetEvent;
     _hitPointCurDamage = _hitPointNewDamage;
 };
@@ -55,7 +57,7 @@ if (isArray _hitpointGroupConfig) then {
                     private _subPointCurDamage = _vehicle getHitIndex _hitPointIndex;
                     private _subPointNewDamage = (_subPointCurDamage - 0.5) max _postRepairDamageMin;
                     if (_subPointNewDamage < _subPointCurDamage) then {
-                        TRACE_3("repairing sub point", _vehicle, _subHitIndex, _subPointNewDamage);
+                        TRACE_3("repairing sub point",_vehicle,_subHitIndex,_subPointNewDamage);
                         [QGVAR(setVehicleHitPointDamage), [_vehicle, _subHitIndex, _subPointNewDamage], _vehicle] call CBA_fnc_targetEvent;
                     };
                 };

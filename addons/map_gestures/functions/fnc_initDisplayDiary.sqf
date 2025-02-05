@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Dslyecxi, MikeMatrix, joko // Jonas
  * Bind all required EventHandlers to Player map.

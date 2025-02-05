@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: alganthe
  * Garrison function used to garrison AI inside buildings.
@@ -7,8 +7,8 @@
  * 0: The building(s) nearest this position are used <POSITION>
  * 1: Limit the building search to those type of building <ARRAY>
  * 2: Units that will be garrisoned <ARRAY>
- * 3: Radius to fill building(s) <SCALAR> (default: 50)
- * 4: 0: even filling, 1: building by building, 2: random filling <SCALAR> (default: 0)
+ * 3: Radius to fill building(s) <NUMBER> (default: 50)
+ * 4: 0: even filling, 1: building by building, 2: random filling <NUMBER> (default: 0)
  * 5: True to fill building(s) from top to bottom <BOOL> (default: false) (note: only works with filling mode 0 and 1)
  * 6: Teleport units <BOOL> (default: false)
 
@@ -23,17 +23,17 @@
 
 params [["_startingPos",[0,0,0], [[]], 3], ["_buildingTypes", ["Building"], [[]]], ["_unitsArray", [], [[]]], ["_fillingRadius", 50, [0]], ["_fillingType", 0, [0]], ["_topDownFilling", false, [true]], ["_teleport", false, [true]]];
 
-TRACE_6("fnc_garrison: Start",_startingPos,_buldingTypes,count _unitsArray,_fillingRadius,_fillingTYpe,_topDownFilling);
+TRACE_6("fnc_garrison: Start",_startingPos,_buildingTypes,count _unitsArray,_fillingRadius,_fillingTYpe,_topDownFilling);
 
 _unitsArray = _unitsArray select {alive _x && {!isPlayer _x}};
-private _currentUnitMoveList = missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []];
+private _currentUnitMoveList = missionNamespace getVariable [QGVAR(garrison_unitMoveList), []];
 
 if (_startingPos isEqualTo [0,0,0]) exitWith {
     TRACE_1("fnc_garrison: StartingPos error",_startingPos);
     [LSTRING(GarrisonInvalidPosition)] call EFUNC(common,displayTextStructured);
 };
 
-if (count _unitsArray == 0 || {isNull (_unitsArray select 0)}) exitWith {
+if (_unitsArray isEqualTo [] || {isNull (_unitsArray select 0)}) exitWith {
     TRACE_1("fnc_garrison: Units error",_unitsArray);
     [LSTRING(GarrisonNoUnits)] call EFUNC(common,displayTextStructured);
 };
@@ -43,7 +43,7 @@ if (_fillingRadius >= 50) then {
     _buildings = [_buildings] call CBA_fnc_shuffle;
 };
 
-if (count _buildings == 0) exitWith {
+if (_buildings isEqualTo []) exitWith {
     TRACE_1("fnc_garrison: Building error",_buildings);
     [LSTRING(GarrisonNoBuilding)] call EFUNC(common,displayTextStructured);
 };
@@ -57,38 +57,38 @@ if (_topDownFilling) then {
         // Those reverse are necessary, as dumb as it is there's no better way to sort those subarrays in sqf
         {
             reverse _x;
-        } foreach _buildingPos;
+        } forEach _buildingPos;
 
         _buildingPos sort false;
 
         {
             reverse _x;
-        } foreach _buildingPos;
+        } forEach _buildingPos;
 
         _buildingsIndex pushBack _buildingPos;
-    } foreach _buildings;
+    } forEach _buildings;
 } else {
     {
         _buildingsIndex pushBack (_x buildingPos -1);
-    } foreach _buildings;
+    } forEach _buildings;
 };
 
 // Remove buildings without positions
 {
     _buildingsIndex deleteAt (_buildingsIndex find _x);
-} foreach (_buildingsIndex select {count _x == 0});
+} forEach (_buildingsIndex select {count _x == 0});
 
 //Remove positions units are already pathing to
 _buildingsIndex = _buildingsIndex apply {
     _x select {
         private _testedPos = _x;
-        ({(_x select 1) isEqualTo _testedPos} count (missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []])) == 0
+        ({(_x select 1) isEqualTo _testedPos} count (missionNamespace getVariable [QGVAR(garrison_unitMoveList), []])) == 0
     }
 };
 
 // Warn the user that there's not enough positions to place all units
 private _count = 0;
-{_count = _count + count _x} foreach _buildingsIndex;
+{_count = _count + count _x} forEach _buildingsIndex;
 if ( (count _unitsArray) - _count > 0) then {
     TRACE_4("fnc_garrison: Not enough spots to place all units",_unitsArray,count _unitsArray,_count,((count _unitsArray) - _count > 0));
     [LSTRING(GarrisonNotEnoughPos)] call EFUNC(common,displayTextStructured);
@@ -104,7 +104,7 @@ private _fnc_comparePos = {
     params ["_nearestUnits", "_pos"];
     ({
         if (surfaceIsWater getPos _x) then {
-            floor ((getPosASL _x) select 2) == floor ((AGLtoASL _pos) select 2)
+            floor ((getPosASL _x) select 2) == floor ((AGLToASL _pos) select 2)
         } else {
             floor ((getPosATL _x) select 2) == floor (_pos select 2)
         };
@@ -128,7 +128,7 @@ switch (_fillingType) do {
             } else {
                 private _pos = _building select 0;
                 private _nearestUnits = (_pos nearEntities ["CAManBase", 2]);
-                LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits, {floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
+                LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits,{floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
 
                 if (count _nearestUnits  > 0 && {[_nearestUnits, _pos] call _fnc_comparePos}) then {
                     LOG(format [ARR_2("fnc_garrison: Unit present | removing position | %1 positions remaining for this building",count (_buildingsIndex select (_buildingsIndex find _building)) - 1)]);
@@ -141,7 +141,7 @@ switch (_fillingType) do {
                     if (_teleport) then {
                         doStop _unit;
                         if (_posSurface) then {
-                            _unit setPosASL (AGLtoASL _pos);
+                            _unit setPosASL (AGLToASL _pos);
                         } else {
                             _unit setPosATL _pos;
                         };
@@ -177,7 +177,7 @@ switch (_fillingType) do {
             } else {
                 private _pos = _building select 0;
                 private _nearestUnits = (_pos nearEntities ["CAManBase", 2]);
-                LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits, {floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
+                LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits,{floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
 
                 if (count _nearestUnits  > 0 && {[_nearestUnits, _pos] call _fnc_comparePos}) then {
                     LOG(format [ARR_2("fnc_garrison: Unit present | removing position | %1 positions remaining for this building",count (_buildingsIndex select (_buildingsIndex find _building)) - 1)]);
@@ -190,7 +190,7 @@ switch (_fillingType) do {
                     if (_teleport) then {
                         doStop _unit;
                         if (_posSurface) then {
-                            _unit setPosASL (AGLtoASL _pos);
+                            _unit setPosASL (AGLToASL _pos);
                         } else {
                             _unit setPosATL _pos;
                         };
@@ -224,7 +224,7 @@ switch (_fillingType) do {
             } else {
                 private _pos = selectRandom _building;
                 private _nearestUnits = (_pos nearEntities ["CAManBase", 2]);
-                LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits, {floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
+                LOG(format [ARR_3("fnc_garrison: Unit detection | %1 units nearby | %2 units within height",count _nearestUnits,{floor ((getPos _x) select 2) == floor (_pos select 2)} count _nearestUnits)]);
 
                 if (count _nearestUnits  > 0 && {[_nearestUnits, _pos] call _fnc_comparePos}) then {
                     LOG(format [ARR_2("fnc_garrison: Unit present | removing position | %1 positions remaining for this building",count (_buildingsIndex select (_buildingsIndex find _building)) - 1)]);
@@ -237,7 +237,7 @@ switch (_fillingType) do {
                     if (_teleport) then {
                         doStop _unit;
                         if (_posSurface) then {
-                            _unit setPosASL (AGLtoASL _pos);
+                            _unit setPosASL (AGLToASL _pos);
                         } else {
                             _unit setPosATL _pos;
                         };
@@ -258,10 +258,10 @@ switch (_fillingType) do {
     };
 };
 
-TRACE_1(format [ARR_2("fnc_garrison: while loop ended | %1 units ready to be treated by PFH",count _unitMoveList)], _teleport);
+TRACE_1(format [ARR_2("fnc_garrison: while loop ended | %1 units ready to be treated by PFH",count _unitMoveList)],_teleport);
 
 // Update the unit list and remove duplicate positions and units
-private _garrison_unitMoveList = missionNameSpace getVariable [QGVAR(garrison_unitMoveList), []];
+private _garrison_unitMoveList = missionNamespace getVariable [QGVAR(garrison_unitMoveList), []];
 
 _garrison_unitMoveList = _garrison_unitMoveList select {
     _x params ["_testedUnit", "_testedPos"];
@@ -270,7 +270,7 @@ _garrison_unitMoveList = _garrison_unitMoveList select {
 
 _garrison_unitMoveList append _unitMoveList;
 
-missionNameSpace setVariable [QGVAR(garrison_unitMoveList), _garrison_unitMoveList, true];
+missionNamespace setVariable [QGVAR(garrison_unitMoveList), _garrison_unitMoveList, true];
 
 if (_teleport) then {
     [QGVAR(AISection), [_placedUnits, ["PATH"], false], _placedUnits] call CBA_fnc_targetEvent;
@@ -279,5 +279,5 @@ if (_teleport) then {
     [_unitMoveList] call FUNC(garrisonMove);
 };
 
-TRACE_1(format [ARR_3("fnc_garrison: End | %1 units left | %2 buildings left", count _unitsArray, count _buildingsIndex)], _unitsArray);
+TRACE_1(format [ARR_3("fnc_garrison: End | %1 units left | %2 buildings left",count _unitsArray,count _buildingsIndex)],_unitsArray);
 _unitsArray

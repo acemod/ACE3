@@ -2,6 +2,7 @@
 // interaction menu
 PREP(addPassengerActions);
 PREP(addPassengersActions);
+PREP(getBackpackPos);
 PREP(getInteractionDistance);
 PREP(getVehiclePos);
 PREP(getVehiclePosComplex);
@@ -13,16 +14,22 @@ PREP(showMouseHint);
 PREP(hideMouseHint);
 
 // interaction with units
+PREP(addSquadChildren);
 PREP(canInteractWithCivilian);
+PREP(canInteractWithVehicleCrew);
 PREP(getDown);
 PREP(sendAway);
+PREP(canOpenBackpack);
+PREP(modifyOpenBackpackAction);
 PREP(canJoinGroup);
 PREP(modifyJoinGroupAction);
 PREP(modifyTeamManagementAction);
 PREP(canJoinTeam);
 PREP(joinTeam);
 PREP(canPassMagazine);
+PREP(canPassThrowable);
 PREP(passMagazine);
+PREP(passThrowable);
 PREP(canBecomeLeader);
 PREP(doBecomeLeader);
 PREP(doRemoteControl);
@@ -53,4 +60,5 @@ PREP(push);
 
 // misc
 PREP(canFlip);
+PREP(initAnimActions);
 PREP(replaceTerrainObject);

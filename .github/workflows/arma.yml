@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@master
+      uses: actions/checkout@v4
     - name: Validate SQF
       run: python3 tools/sqf_validator.py
     - name: Validate Config
@@ -22,27 +22,27 @@ jobs:
       run: python3 tools/check_strings.py
     - name: Check for BOM
       uses: arma-actions/bom-check@master
-
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout the source code
-      uses: actions/checkout@master
-    - name: Lint (sqflint)
-      uses: arma-actions/sqflint@master
-      continue-on-error: true # No failure due to many false-positives
+      with:
+        path: 'addons'
+    - name: Validate function headers
+      run: python3 docs/tools/document_functions.py --debug
 
   build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout the source code
-      uses: actions/checkout@master
-    - name: Build using HEMTT
-      uses: arma-actions/hemtt@master
+      uses: actions/checkout@v4
+    - name: Setup HEMTT
+      uses: arma-actions/hemtt@v1
       with:
-        command: build --release --ci
+        annotate: false
+    - name: Run HEMTT build
+      run: hemtt build
+    - name: Rename build folder
+      run: mv .hemttout/build .hemttout/@ace
     - name: Upload Artifact
-      uses: actions/upload-artifact@v2-preview
+      uses: actions/upload-artifact@v4
       with:
         name: ace3-${{ github.sha }}-nobin
-        path: releases/ace3_*.zip
+        path: .hemttout/@*
+        include-hidden-files: true # Because .hemttout is a hidden directory

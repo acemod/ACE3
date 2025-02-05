@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal, esteldunedain, mharis001
  * Handles cleaning up litter objects that have reached the end of their lifetime.

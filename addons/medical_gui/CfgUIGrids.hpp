@@ -5,13 +5,13 @@ class CfgUIGrids {
                 class Variables {
                     GVAR(patientInfo)[] = {
                         {
-                            PATIENT_INFO_IGUI_BASE_X,
-                            PATIENT_INFO_IGUI_BASE_Y,
-                            POS_W(9),
-                            POS_H(20)
+                            QUOTE(PATIENT_INFO_IGUI_BASE_X),
+                            QUOTE(PATIENT_INFO_IGUI_BASE_Y),
+                            QUOTE(POS_W(9)),
+                            QUOTE(POS_H(20))
                         },
-                        GUI_GRID_W,
-                        GUI_GRID_H
+                        QUOTE(GUI_GRID_W),
+                        QUOTE(GUI_GRID_H)
                     };
                 };
             };

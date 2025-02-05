@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Update total wound bleeding based on open wounds and tourniquets
@@ -21,9 +21,12 @@ params ["_unit"];
 private _tourniquets = GET_TOURNIQUETS(_unit);
 private _bodyPartBleeding = [0,0,0,0,0,0];
 {
-    _x params ["", "_bodyPart", "_amountOf", "_bleeeding"];
-    if (_tourniquets select _bodyPart == 0) then {
-        _bodyPartBleeding set [_bodyPart, (_bodyPartBleeding select _bodyPart) + (_amountOf * _bleeeding)];
+    private _partIndex = ALL_BODY_PARTS find _x;
+    if (_tourniquets select _partIndex == 0) then {
+        {
+            _x params ["", "_amountOf", "_bleeeding"];
+            _bodyPartBleeding set [_partIndex, (_bodyPartBleeding select _partIndex) + (_amountOf * _bleeeding)];
+        } forEach _y;
     };
 } forEach GET_OPEN_WOUNDS(_unit);
 

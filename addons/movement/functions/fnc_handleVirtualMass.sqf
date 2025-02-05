@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Recalculate the units loadCoef to emulate a mass added to uniform, vest or backpack.

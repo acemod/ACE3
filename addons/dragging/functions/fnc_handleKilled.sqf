@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
- * Handle death of the dragger
+ * Handle death of the dragger/carrier.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [_unit] call ace_dragging_fnc_handleKilled;
+ * [player] call ace_dragging_fnc_handleKilled;
  *
  * Public: No
 */

@@ -1,8 +1,8 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
  * Author: mharis001
- * Handles changing the mode in 3DEN attribute.
+ * Handles changing the mode in 3DEN's ace arsenal attribute.
  *
  * Arguments:
  * 0: Attribute controls group <CONTROL>

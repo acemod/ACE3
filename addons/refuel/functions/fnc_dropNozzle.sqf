@@ -1,10 +1,10 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Detaches the fuel nozzle, drops it and removes player variables.
  *
  * Arguments:
- * 0: Unit <OBJECT> (optional)
+ * 0: Unit <OBJECT> (default: objNull)
  * 1: Nozzle <OBJECT>
  * 2: Disconnect Only <BOOL>
  *
@@ -23,6 +23,9 @@ TRACE_3("dropNozzle",_unit,_nozzle,_disconnectOnly);
 
 detach _nozzle;
 _nozzle setVariable [QGVAR(isRefueling), false, true];
+
+// Remove claim on nozzle
+[objNull, _nozzle] call EFUNC(common,claim);
 
 if (_disconnectOnly) exitWith {};
 _nozzle setVelocity [0, 0, 0];

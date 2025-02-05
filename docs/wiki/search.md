@@ -16,13 +16,9 @@ parent: wiki
     <div class="small-12 columns">
         <div id="liveSearch" class="contentSearch">
             <div class="contentSearch-wrapper row">
-                <!--<div class="small-12 medium-8 columns">-->
                 <div class="small-12 columns">
                     <input type="search" class="contentSearch-field" name="searchTerm" placeholder="Search &hellip;"/>
                 </div>
-                <!--<div class="hide-for-small-only medium-4 columns">
-                    <a href="#" class="contentSearch-button button tiny"><i class="fa fa-search"></i>&nbsp;Search</a>
-                </div>-->
             </div>
         </div>
     </div>

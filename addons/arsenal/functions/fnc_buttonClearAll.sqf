@@ -1,7 +1,7 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe
+ * Author: Alganthe, johnb43
  * Clear the current container.
  *
  * Arguments:
@@ -15,48 +15,56 @@
 
 params ["_display"];
 
-// Clear container
-switch (GVAR(currentLeftPanel)) do {
+// Clear chosen container, reset currentItems for that container and get relevant container
+private _container = switch (GVAR(currentLeftPanel)) do {
+    // Uniform
     case IDC_buttonUniform: {
-        {GVAR(center) removeItemFromUniform _x} foreach (uniformItems GVAR(center));
-        GVAR(currentItems) set [15, []];
+        private _container = uniformContainer GVAR(center);
+
+        // Remove everything (backpacks need special command for this)
+        clearWeaponCargoGlobal _container;
+        clearMagazineCargoGlobal _container;
+        clearItemCargoGlobal _container;
+        clearBackpackCargoGlobal _container;
+
+        GVAR(currentItems) set [IDX_CURR_UNIFORM_ITEMS, []];
+
+        _container
     };
+    // Vest
     case IDC_buttonVest: {
-        {GVAR(center) removeItemFromVest _x} foreach (vestItems GVAR(center));
-        GVAR(currentItems) set [16, []];
+        private _container = vestContainer GVAR(center);
+
+        // Remove everything (backpacks need special command for this)
+        clearWeaponCargoGlobal _container;
+        clearMagazineCargoGlobal _container;
+        clearItemCargoGlobal _container;
+        clearBackpackCargoGlobal _container;
+
+        GVAR(currentItems) set [IDX_CURR_VEST_ITEMS, []];
+
+        _container
     };
+    // Backpack
     case IDC_buttonBackpack: {
-        {GVAR(center) removeItemFromBackpack _x} foreach (backpackItems GVAR(center));
-        GVAR(currentItems) set [17, []];
+        // Remove everything
+        clearAllItemsFromBackpack GVAR(center);
+
+        GVAR(currentItems) set [IDX_CURR_BACKPACK_ITEMS, []];
+
+        backpackContainer GVAR(center)
     };
 };
 
 // Clear number of owned items
 private _ctrlList = _display displayCtrl IDC_rightTabContentListnBox;
 
-for "_l" from 0 to (lbSize _ctrlList - 1) do {
-    _ctrlList lnbSetText [[_l, 2], str 0];
+for "_lbIndex" from 0 to (lbSize _ctrlList) - 1 do {
+    _ctrlList lnbSetText [[_lbIndex, 2], "0"];
 };
-
-private _removeAllCtrl = _display displayCtrl IDC_buttonRemoveAll;
-_removeAllCtrl ctrlSetFade 1;
-_removeAllCtrl ctrlCommit FADE_DELAY;
 
 // Update load bar
-private _loadIndicatorBarCtrl = _display displayCtrl IDC_loadIndicatorBar;
-_loadIndicatorBarCtrl progressSetPosition 0;
+(_display displayCtrl IDC_loadIndicatorBar) progressSetPosition 0;
 
-private _maxLoad = switch (GVAR(currentLeftPanel)) do {
-    case IDC_buttonUniform: {
-        gettext (configfile >> "CfgWeapons" >> uniform GVAR(center) >> "ItemInfo" >> "containerClass")
-    };
-    case IDC_buttonVest: {
-        gettext (configfile >> "CfgWeapons" >> vest GVAR(center) >> "ItemInfo" >> "containerClass")
-    };
-    case IDC_buttonBackpack: {
-        backpack GVAR(center)
-    };
-};
-
-private _control = _display displayCtrl IDC_rightTabContentListnBox;
-[_control, _maxLoad] call FUNC(updateRightPanel);
+// Refresh availibility of items based on space remaining in container
+[_ctrlList, _container, false] call FUNC(updateRightPanel);

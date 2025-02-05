@@ -42,3 +42,8 @@ Adds a more realistic repair system.
 - Amount repaired is based on settings and training level
 - Using the interaction system select the hitpoint to repair
 
+### 2.3 Patching Wheels
+
+- Ensure the settings allow you to patch the wheel with your current engineer level and equipment
+- Interact with the damaged wheel, either on a vehicle or on the ground
+

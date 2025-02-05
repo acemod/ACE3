@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk
  * Take a fuel nozzle either from a fuel truck/station or from the ground.
@@ -22,7 +22,7 @@ params [
 ];
 
 [
-    TIME_PROGRESSBAR(REFUEL_PROGRESS_DURATION),
+    GVAR(progressDuration),
     [_unit, _object],
     {
         params ["_args"];
@@ -32,16 +32,22 @@ params [
 
         private _source = _object;
         private _nozzle = _object;
-        if (typeOf _object isEqualTo QGVAR(fuelNozzle) || {_object getVariable [QGVAR(jerryCan), false]}) then { // func is called on muzzle either connected or on ground
+        if (typeOf _object isEqualTo QGVAR(fuelNozzle) || {_object getVariable [QGVAR(jerryCan), false]}) then { // func is called on nozzle either connected or on ground
             _source = _nozzle getVariable QGVAR(source);
             if (_nozzle getVariable [QGVAR(jerryCan), false]) then {
                 _nozzle attachTo [_unit, [0,1,0], "pelvis"];
             } else {
                 _nozzle attachTo [_unit, [-0.02,0.05,-0.12], "righthandmiddle1"];
             };
+
+            // Don't allow other players to take nozzle
+            [_unit, _nozzle] call EFUNC(common,claim);
         } else { // func is called on fuel truck
             _nozzle = QGVAR(fuelNozzle) createVehicle [0,0,0];
             _nozzle attachTo [_unit, [-0.02,0.05,-0.12], "righthandmiddle1"];
+
+            // Don't allow other players to take nozzle
+            [_unit, _nozzle] call EFUNC(common,claim);
 
             private _ropeTarget = _source;
             if !(_source isKindOf "AllVehicles") then {
@@ -69,14 +75,21 @@ params [
                 _attachPos = _attachPos select (_hookDistances find selectMin _hookDistances);
             };
             private _hoseLength = _source getVariable [QGVAR(hoseLength), GVAR(hoseLength)];
-            private _rope = ropeCreate [_ropeTarget, _attachPos, _nozzle, [0, -0.20, 0.12], _hoseLength];
+            private _rope = ropeCreate [_ropeTarget, _attachPos, _nozzle, [0, -0.20, 0.12], _hoseLength, [], [], QGVAR(fuelHose)];
             _nozzle setVariable [QGVAR(rope), _rope, true];
             _nozzle setVariable [QGVAR(attachPos), _attachPos, true];
             _nozzle setVariable [QGVAR(source), _source, true];
 
-            [_source, "blockEngine", "ACE_Refuel", true] call EFUNC(common,statusEffect_set);
+            [_source, "blockEngine", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
             _source setVariable [QGVAR(isConnected), true, true];
             _source setVariable [QGVAR(ownedNozzle), _nozzle, true];
+
+            // Prevent moving the fuel source while the hose is out
+            _source setVariable [QGVAR(canCarryLast), _source getVariable [QEGVAR(dragging,canCarry), false], true];
+            _source setVariable [QGVAR(canDragLast),  _source getVariable [QEGVAR(dragging,canDrag),  false], true];
+
+            _source setVariable [QEGVAR(dragging,canCarry), false, true];
+            _source setVariable [QEGVAR(dragging,canDrag), false, true];
         };
 
         _unit setVariable [QGVAR(nozzle), _nozzle, true];
@@ -87,13 +100,13 @@ params [
         _unit call EFUNC(common,fixLoweredRifleAnimation);
         _unit action ["SwitchWeapon", _unit, _unit, 299];
 
-        [_unit, "forceWalk", "ACE_refuel", true] call EFUNC(common,statusEffect_set);
-        [_unit, "blockThrow", "ACE_refuel", true] call EFUNC(common,statusEffect_set);
+        [_unit, "forceWalk", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
+        [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
         [_unit, _nozzle] call FUNC(startNozzleInHandsPFH);
     },
     {},
-    localize LSTRING(TakeNozzleAction),
+    localize ([LSTRING(TakeNozzleAction), LSTRING(TakeFuelCanisterAction)] select (_object getVariable [QGVAR(jerryCan), false])),
     {true},
     [INTERACT_EXCEPTIONS_REFUELING]
 ] call EFUNC(common,progressBar);

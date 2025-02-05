@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Shows/Hides the truing drop controls
@@ -21,9 +21,9 @@ GVAR(showTruingDrop) = _this;
 
 if (_this) then {
     if (GVAR(currentUnit) == 2) then {
-        ctrlSetText [18000, format["ZR=%1meters", Round(GVAR(workingMemory) select 2)]];
+        ctrlSetText [18000, format["ZR=%1meters", round(GVAR(workingMemory) select 2)]];
     } else {
-        ctrlSetText [18000, format["ZR=%1yards", Round((GVAR(workingMemory) select 2) * 1.0936133)]];
+        ctrlSetText [18000, format["ZR=%1yards", round((GVAR(workingMemory) select 2) * 1.0936133)]];
     };
     private _dropUnit = GVAR(currentScopeUnit);
     if (_dropUnit == 3) then {

@@ -21,16 +21,27 @@ GVAR(ppeffectRadialBlur) = -1;
 GVAR(ppeffectColorCorrect) = -1;
 GVAR(ppeffectBlur) = -1;
 
+if (isNil QGVAR(const_MaxBrightness)) then { GVAR(const_MaxBrightness) = 0; };
+if (isNil QGVAR(const_MinBrightness)) then { GVAR(const_MinBrightness) = -6; };
+
 GVAR(isUsingMagnification) = false;
 
 ["CBA_settingsInitialized", {
     TRACE_4("settingsInitialized",GVAR(disableNVGsWithSights),GVAR(fogScaling),GVAR(noiseScaling),GVAR(effectScaling));
 
     ["visionMode", LINKFUNC(onVisionModeChanged), false] call CBA_fnc_addPlayerEventHandler;
-    ["loadout", LINKFUNC(onLoadoutChanged), true] call CBA_fnc_addPlayerEventHandler;
     ["cameraView", LINKFUNC(onCameraViewChanged), true] call CBA_fnc_addPlayerEventHandler;
     ["vehicle", LINKFUNC(refreshGoggleType), false] call CBA_fnc_addPlayerEventHandler;
     ["turret", LINKFUNC(refreshGoggleType), true] call CBA_fnc_addPlayerEventHandler;
+    ["ACE_controlledUAV", LINKFUNC(refreshGoggleType)] call CBA_fnc_addEventHandler;
+
+    ["unit", {
+        // Call manually to update existing value
+        GVAR(playerHMD) = hmd ace_player;
+        [] call FUNC(refreshGoggleType);
+    }, true] call CBA_fnc_addPlayerEventHandler;
+
+    [QGVAR(slotItemChanged), "SlotItemChanged", LINKFUNC(onSlotItemChanged)] call CBA_fnc_addBISPlayerEventHandler;
 
     // handle only brightness if effects are disabled
     GVAR(ppEffectNVGBrightness) = ppEffectCreate ["ColorCorrections", 1236];
@@ -60,7 +71,7 @@ if (!isNil QGVAR(serverPriorFog)) then {[] call FUNC(nonDedicatedFix);}; // If v
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting", "isNotRefueling"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((currentVisionMode ACE_player != 1)) exitWith {false};
-    if (!(missionNamespace getVariable [QGVAR(allowBrightnessControl), true])) exitWith {false}; // just a mission setVar (not ace_setting)
+    if !(missionNamespace getVariable [QGVAR(allowBrightnessControl), true]) exitWith {false}; // just a mission setVar (not ace_setting)
 
     // Statement
     [ACE_player, 1] call FUNC(changeNVGBrightness);
@@ -72,7 +83,7 @@ if (!isNil QGVAR(serverPriorFog)) then {[] call FUNC(nonDedicatedFix);}; // If v
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSitting", "isNotRefueling"]] call EFUNC(common,canInteractWith)) exitWith {false};
     // Conditions: specific
     if ((currentVisionMode ACE_player != 1)) exitWith {false};
-    if (!(missionNamespace getVariable [QGVAR(allowBrightnessControl), true])) exitWith {false}; // just a mission setVar (not ace_setting)
+    if !(missionNamespace getVariable [QGVAR(allowBrightnessControl), true]) exitWith {false}; // just a mission setVar (not ace_setting)
 
     // Statement
     [ACE_player, -1] call FUNC(changeNVGBrightness);
@@ -93,4 +104,3 @@ WARNING("Debug mouse wheel action enabled, this should NOT be in a final release
     };
 }] call CBA_fnc_addDisplayHandler;
 #endif
-

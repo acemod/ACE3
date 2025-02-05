@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, mharis001
  * Creates an intel controls group.
@@ -44,7 +44,7 @@ private _ctrlContent = _controlsGroup controlsGroupCtrl IDC_CONTENT;
 _ctrlContent ctrlSetText GET_DATA(_index);
 
 // Restore position of controls group (center if not saved)
-private _position = [GVAR(controlsData), _index] call CBA_fnc_hashGet;
+private _position = GVAR(controlsData) get _index;
 
 if (isNil "_position") then {
     ctrlPosition _controlsGroup params ["", "", "_posW", "_posH"];

@@ -9,11 +9,10 @@ class RscTitles {
     class GVAR(menuBackground) {
         idd = -1;
         onLoad = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(menuBackground)),_this select 0)]);
-        onUnload = QUOTE(uiNamespace setVariable [ARR_2(QUOTE(QGVAR(menuBackground)),displayNull)]);
         fadeIn = 0.25;
         fadeOut = 0.25;
         movingEnable = 0;
-        duration = 10e10;
+        duration = QUOTE(10e10);
         name = QGVAR(menuBackground);
         class controls {};
         class controlsBackground {
@@ -29,10 +28,10 @@ class RscTitles {
                 size = 1;
                 colorBackground[] = {0, 0, 0, 0.65};
                 colorText[] = {0, 0, 0, 0};
-                x = "safezoneX";
-                y = "safezoneY";
-                w = "safezoneW";
-                h = "safezoneH";
+                x = "safeZoneX";
+                y = "safeZoneY";
+                w = "safeZoneW";
+                h = "safeZoneH";
             };
         };
     };

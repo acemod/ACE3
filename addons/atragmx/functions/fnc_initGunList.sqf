@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Ruthberg
  * Inits the gun list from user profile
@@ -15,7 +15,7 @@
  * Public: No
  */
 
-LOG_2("Trying to load gunlist from profile [Version: %1][Count: %2]", profileNamespace getVariable [ARR_2(QGVAR(profileNamespaceVersion), 'none')], count (profileNamespace getVariable [ARR_2(QGVAR(gunList), [])]));
+LOG_2("Trying to load gunlist from profile [Version: %1][Count: %2]",profileNamespace getVariable [ARR_2(QGVAR(profileNamespaceVersion),'none')],count (profileNamespace getVariable [ARR_2(QGVAR(gunList),[])]));
 
 private _resetGunList = true;
 if ((profileNamespace getVariable ["ACE_ATragMX_profileNamespaceVersion", 0]) == ATRAGMX_PROFILE_NAMESPACE_VERSION && {count (profileNamespace getVariable ["ACE_ATragMX_gunList", []]) > 0}) then {
@@ -23,7 +23,7 @@ if ((profileNamespace getVariable ["ACE_ATragMX_profileNamespaceVersion", 0]) ==
     _resetGunList = false;
     {
         // Verify each gun has correct param type
-        if (!(_x isEqualTypeArray ["", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "", [], [], false])) exitWith {
+        if !(_x isEqualTypeArray ["", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, "", [], [], false]) exitWith {
             _resetGunList = true;
         };
     } forEach GVAR(gunList);
@@ -32,12 +32,13 @@ if ((profileNamespace getVariable ["ACE_ATragMX_profileNamespaceVersion", 0]) ==
 if (_resetGunList) then {
     WARNING("Reseting Profile Gunlist");
     // Profile Name, Muzzle Velocity, Zero Range, Scope Base Angle, AirFriction, Bore Height, Scope Unit, Scope Click Unit, Scope Click Number, Maximum Elevation, Dialed Elevation, Dialed Windage, Mass, Bullet Diameter, Rifle Twist, BC, Drag Model, Atmosphere Model, Muzzle Velocity vs. Temperature Interpolation, C1 Ballistic Coefficient vs. Distance Interpolation, Persistent
-    GVAR(gunList) =  [["12.7x108mm"        ,  812, 100, 0.0958029, -0.00063800, 8.89, 0, 2, 10, 120, 0, 0, 48.28, 12.7, 38.10, 0.630, 1, "ASM" , [[-15,793],[0,800],[10,807],[15,812],[25,826],[30,835],[35,846]]       , [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]], true],
+    GVAR(gunList) =  [["12.7x108mm"        ,  820, 100, 0.0946366, -0.00065098, 8.89, 0, 2, 10, 120, 0, 0, 48.28, 12.7, 38.10, 0.630, 1, "ASM" , [[-15,801],[0,808],[10,815],[15,820],[25,834],[30,843],[35,854]]       , [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]], true],
+                      ["12.7x108mm APDS"   , 1060, 100, 0.0766151, -0.00036000, 8.89, 0, 2, 10, 120, 0, 0, 27.95, 11.08, 38.10, 1.052, 1, "ICAO" , [[-15,1041],[0,1048],[10,1055],[15,1060],[25,1074],[30,1083],[35,1094]]       , [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]], true],
 
                       ["12.7x99mm AMAX"    ,  852, 100, 0.0907214, -0.00037397, 8.89, 0, 2, 10, 120, 0, 0, 48.60, 12.7, 38.10, 1.050, 1, "ASM" , [[-15,833],[0,840],[10,847],[15,852],[25,866],[30,875],[35,886]]       , [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]], true],
                       ["12.7x99mm"         ,  892, 100, 0.0879633, -0.00058679, 8.89, 0, 2, 10, 120, 0, 0, 41.92, 12.7, 38.10, 0.670, 1, "ASM" , [[-15,873],[0,880],[10,887],[15,892],[25,906],[30,915],[35,926]]       , [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]], true],
 
-                      ["12.7x54mm"         ,  299, 100, 0.3567550, -0.00019568, 6.60, 0, 2, 10, 120, 0, 0, 48.60, 12.7, 24.13, 1.050, 1, "ASM" , [[-15,297],[0,298],[10,299],[15,299],[25,301],[30,302],[35,303]]       , [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]], true],
+                      ["12.7x54mm"         ,  295, 100, 0.3681230, -0.00037716, 6.35, 0, 2, 10, 120, 0, 0, 48.20, 11.9, 25.00, 0.519, 1, "ICAO" , [[-15,293],[0,294],[10,295],[15,295],[25,297],[30,298],[35,299]]       , [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]], true],
 
                       [".50 Beowulf"       ,  549, 100, 0.1468500, -0.00209809, 6.60, 0, 2, 10, 120, 0, 0, 21.64, 12.7, 50.80, 0.210, 1, "ASM" , [[-15,547],[0,548],[10,549],[15,549],[25,551],[30,552],[35,553]]       , [[0,0],[0,0],[0,0],[0,0],[0,0],[0,0],[0,0]], true],
 

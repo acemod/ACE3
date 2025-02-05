@@ -1,5 +1,5 @@
 #define DEBUG_MODE_FULL
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Change the value of an existing setting if it was not previously forced. Force if neccesary.
@@ -29,8 +29,8 @@ if (!_broadcastChanges) exitWith {
     ERROR_1("Setting [%1] - SetSetting no longer supports non-global settings",_name);
 };
 
-if ([_settingName, "mission"] call CBA_settings_fnc_isForced) then {
-    WARNING_1("Setting [%1] - Already mission forced - Ignoring",_settingName);
+if ([_name, "mission"] call CBA_settings_fnc_isForced) then {
+    WARNING_1("Setting [%1] - Already mission forced - Ignoring",_name);
 };
 
 [QGVAR(setSetting), [_name, _value], (format [QGVAR(setSetting_%1), _name])] call CBA_fnc_globalEventJIP;

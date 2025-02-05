@@ -4,7 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {"ACE_EarPlugs"};
+        weapons[] = {"ACE_EarPlugs", "ACE_EHP"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_interaction"};
         author = ECSTRING(common,ACETeam);
@@ -18,6 +18,5 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgSounds.hpp"
 #include "CfgWeapons.hpp"
-#include "CfgAmmo.hpp"
 #include "ACE_Settings.hpp"
 #include "ACE_Arsenal_Stats.hpp"

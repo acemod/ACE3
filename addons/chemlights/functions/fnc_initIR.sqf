@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: voiper
  * Spawn IR marker for dummy IR physX object.

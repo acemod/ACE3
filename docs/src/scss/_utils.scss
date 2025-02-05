@@ -5,3 +5,20 @@
 .hidden {
     display: none;
 }
+
+.flex {
+    display: flex;
+}
+
+.gap-1 {
+    gap: 0.25rem;
+}
+.gap-2 {
+    gap: 0.5rem;
+}
+.items-center {
+    align-items: center;
+}
+.leading-none {
+    line-height: 1;
+}

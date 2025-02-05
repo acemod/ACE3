@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: GitHawk, Jonpas
  * Returns all magazines a turret of a vehicle object can hold according to config.

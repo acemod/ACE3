@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: jaynus
  * Receives either requests for synchronization from clients, or the synchronization data from the server.
@@ -27,7 +27,7 @@ if (isServer) then {
     params ["_eventName", "_client"];
 
     if !(_eventName in GVAR(syncedEvents)) exitWith {
-        ERROR_1("Request for synced event - key [%1] not found.", _eventName);
+        ERROR_1("Request for synced event - key [%1] not found.",_eventName);
         false
     };
 
@@ -43,8 +43,7 @@ if (isServer) then {
     {
         _x params ["", "_eventArgs","_ttl"];
         [_eventName, _eventArgs, _ttl] call FUNC(_handleSyncedEvent);
-        false
-    } count _eventLog;
+    } forEach _eventLog;
 
     INFO_1("[%1] synchronized",_eventName);
 };

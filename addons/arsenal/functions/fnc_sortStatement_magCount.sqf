@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Brett Mayson
  * Statement to sort magazines by their ammo count.

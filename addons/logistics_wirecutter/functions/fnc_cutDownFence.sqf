@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: gpgpgpgp, commy2, PabstMirror, mharis001
  * Starts cutting down a fence. Triggers global "ace_wireCuttingStarted" event.
@@ -22,7 +22,10 @@ TRACE_2("Fence cutting started",_unit,_fence);
 if (_unit != ACE_player) exitWith {};
 
 // Get cut time based on if unit is a engineer
-private _cutTime = if (_unit call EFUNC(common,isEngineer)) then {CUT_TIME_ENGINEER} else {CUT_TIME_DEFAULT};
+private _cutTime = [
+    CUT_TIME_DEFAULT,
+    CUT_TIME_ENGINEER
+] select (_unit call EFUNC(common,isEngineer));
 
 if !(_unit call EFUNC(common,isSwimming)) then {
     [_unit, "AinvPknlMstpSnonWnonDr_medic5", 0] call EFUNC(common,doAnimation);
@@ -60,7 +63,7 @@ if !(_unit call EFUNC(common,isSwimming)) then {
 
         !isNull _fence
         && {damage _fence < 1}
-        && {HAS_WIRECUTTER(_player)}
+        && {HAS_WIRECUTTER(_unit)}
     },
     ["isNotSwimming"]
 ] call EFUNC(common,progressBar);

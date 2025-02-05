@@ -1,0 +1,29 @@
+name = "ACE3"
+prefix = "ace"
+author = "ACE-Team"
+mainprefix = "z"
+
+[files]
+include = [
+    "*.dll",
+    "*.so",
+    "mod.cpp",
+    "README*.md",  # Translated READMEs get moved to root in a hook (virtual file system)
+    "AUTHORS.txt",
+    "LICENSE",
+    "logo_ace3_ca.paa",
+    "meta.cpp",
+]
+
+[version]
+git_hash = 0
+
+# Unused in HEMTT v1.11 or higher, kept for backwards compatibility
+[asc]
+enabled = true
+exclude = [
+    ".inc.sqf",
+    "/dev/",
+    "common/functions/fnc_dummy.sqf",
+    "zeus/functions/fnc_zeusAttributes.sqf",
+]

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: chris579
  * Checks whether the player can move markers.
@@ -16,6 +16,8 @@
  */
 
 params [["_marker",""]];
+
+if ((markerShape _marker) == "POLYLINE") exitWith { false };
 
 switch (GVAR(moveRestriction)) do {
     case MOVE_RESTRICTION_NOBODY: {false};

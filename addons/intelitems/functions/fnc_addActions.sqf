@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: mharis001
  * Returns children actions for intel items in the player's inventory.
@@ -20,7 +20,6 @@ params ["_player"];
 private _actions = [];
 
 private _cfgMagazines = configFile >> "CfgMagazines";
-private _magazines = magazines _player;
 
 private _openIndices = GVAR(controlsGroups) apply {_x getVariable QGVAR(index)};
 
@@ -53,6 +52,6 @@ private _openIndices = GVAR(controlsGroups) apply {_x getVariable QGVAR(index)};
             };
         } forEach _magazineIds;
     };
-} forEach (_magazines arrayIntersect _magazines);
+} forEach ([_player, 2] call EFUNC(common,uniqueItems));
 
 _actions

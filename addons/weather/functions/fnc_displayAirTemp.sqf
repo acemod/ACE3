@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: LorenLuke
  * Displays an abstracted depiction of air temperature to a unit.
@@ -17,7 +17,7 @@
  */
 
 params ["_apparent_temperature", "_bias"];
-TRACE_2("displayAirTemp",_apparent_temperature, _bias);
+TRACE_2("displayAirTemp",_apparent_temperature,_bias);
 
 private _temperature1 = floor(_apparent_temperature + (_bias select 0) - (random 2));
 private _temperature2 = floor(_apparent_temperature + (_bias select 1) + (random 2));

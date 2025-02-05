@@ -1,12 +1,13 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe
- * Fill  left panel.
+ * Author: Alganthe, johnb43, LinkIsGrim
+ * Fills left panel.
  *
  * Arguments:
  * 0: Arsenal display <DISPLAY>
  * 1: Tab control <CONTROL>
+ * 2: Animate panel refresh <BOOL>
  *
  * Return Value:
  * None
@@ -14,192 +15,131 @@
  * Public: No
 */
 
-params ["_display", "_control"];
+params ["_display", "_control", ["_animate", true]];
 
 private _ctrlIDC = ctrlIDC _control;
+private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
+private _idxVirt = GVAR(idxMap) getOrDefault [_ctrlIDC, -1, true];
 
+// Fade old control background
 if (!isNil QGVAR(currentLeftPanel)) then {
     private _previousCtrlBackground  = _display displayCtrl (GVAR(currentLeftPanel) - 1);
     _previousCtrlBackground ctrlSetFade 1;
-    _previousCtrlBackground ctrlCommit FADE_DELAY;
+    _previousCtrlBackground ctrlCommit ([0, FADE_DELAY] select _animate);
+
+    // When switching tabs, clear searchbox
+    if (GVAR(currentLeftPanel) != _ctrlIDC) then {
+        (_display displayCtrl IDC_leftSearchbar) ctrlSetText "";
+        (_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
+    };
 };
 
+// Show new control background
 private _ctrlBackground = _display displayCtrl (_ctrlIDC - 1);
-private _ctrlPanel = _display displayCtrl IDC_leftTabContent;
 _ctrlBackground ctrlSetFade 0;
-_ctrlBackground ctrlCommit FADE_DELAY;
+_ctrlBackground ctrlCommit ([0, FADE_DELAY] select _animate);
 
 // Force a "refresh" animation of the panel
-_ctrlPanel ctrlSetFade 1;
-_ctrlPanel ctrlCommit 0;
-_ctrlPanel ctrlSetFade 0;
-_ctrlPanel ctrlCommit FADE_DELAY;
+if (_animate) then {
+    _ctrlPanel ctrlSetFade 1;
+    _ctrlPanel ctrlCommit 0;
+    _ctrlPanel ctrlSetFade 0;
+    _ctrlPanel ctrlCommit FADE_DELAY;
+};
 
 _ctrlPanel lbSetCurSel -1;
+// Purge old data
+lbClear _ctrlPanel;
 
-// Handle icons and filling
-switch true do {
-    case (_ctrlIDC in [IDC_buttonPrimaryWeapon, IDC_buttonHandgun, IDC_buttonSecondaryWeapon]) : {
-        // Purge old data
-        lbClear _ctrlPanel;
-        private _addEmpty = _ctrlPanel lbadd format [" <%1>",localize "str_empty"];
-        _ctrlPanel lbsetvalue [_addEmpty, -1];
-
-        {
-            ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-        } foreach ((GVAR(virtualItems) select IDX_VIRT_WEAPONS) select ([IDC_buttonPrimaryWeapon, IDC_buttonSecondaryWeapon, IDC_buttonHandgun] find _ctrlIDC));
-    };
-
-    case (_ctrlIDC in [IDC_buttonUniform, IDC_buttonVest, IDC_buttonBackpack]) : {
-
-        lbClear _ctrlPanel;
-        private _addEmpty = _ctrlPanel lbadd format [" <%1>",localize "str_empty"];
-        _ctrlPanel lbsetvalue [_addEmpty, -1];
-
-        // Filling
-        switch (_ctrlIDC) do {
-            case IDC_buttonUniform : {
-                {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select IDX_VIRT_UNIFORM);
-            };
-
-            case IDC_buttonVest : {
-                {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select IDX_VIRT_VEST);
-            };
-
-            case IDC_buttonBackpack : {
-                {
-                    ["CfgVehicles", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select IDX_VIRT_BACKPACK);
-            };
-        };
-    };
-
-    default {
-        GVAR(currentRightPanel) = nil;
-
-        lbClear _ctrlPanel;
-
-        if !(_ctrlIDC in [IDC_buttonFace, IDC_buttonVoice]) then {
-            private _addEmpty = _ctrlPanel lbadd format [" <%1>",localize "str_empty"];
-            _ctrlPanel lbsetvalue [_addEmpty, -1];
-        };
-
-        switch (_ctrlIDC) do {
-            case IDC_buttonHeadgear: {
-                {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select IDX_VIRT_HEADGEAR);
-            };
-            case IDC_buttonGoggles : {
-                {
-                    ["CfgGlasses", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select IDX_VIRT_GOGGLES);
-            };
-            case IDC_buttonNVG : {
-                {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 8);
-            };
-            case IDC_buttonBinoculars : {
-                {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 9);
-            };
-            case IDC_buttonMap : {
-                {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 10);
-            };
-            case IDC_buttonCompass : {
-                {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 11);
-            };
-            case IDC_buttonRadio : {
-                {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 12);
-            };
-            case IDC_buttonWatch : {
-                {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 13);
-            };
-            case IDC_buttonGPS : {
-                {
-                    ["CfgWeapons", _x, _ctrlPanel] call FUNC(addListBoxItem);
-                } foreach (GVAR(virtualItems) select 14);
-            };
-            case IDC_buttonFace : {
-                {
-                    {
-                        if (
-                            getnumber (_x >> "disabled") == 0 &&
-                            {getText (_x >> "head") != ""} &&
-                            {configName _x != "Default"}
-                        ) then {
-                            private _configName = configName _x;
-                            private _displayName = getText (_x >> "displayName");
-                            private _lbAdd = _ctrlPanel lbAdd _displayName;
-                            _ctrlPanel lbSetData [_lbAdd, _configName];
-                            _ctrlPanel lbSetTooltip [_lbAdd,format ["%1\n%2",_displayName, _configName]];
-                            _x call ADDMODICON;
-                        };
-                    } foreach ("true" configClasses _x);
-                } foreach ("true" configClasses (configfile >> "cfgfaces"));
-            };
-            case IDC_buttonVoice : {
-                private _voices = (configProperties [(configFile >> "CfgVoice"), "isClass _x && {getNumber (_x >> 'scope') == 2}", true]) - [(configfile >> "CfgVoice" >> "NoVoice")];
-                {
-                    ["CfgVoice", configName _x, _ctrlPanel, "icon"] call FUNC(addListBoxItem);
-                } foreach _voices;
-            };
-            case IDC_buttonInsignia : {
-                {
-                    ["CfgUnitInsignia", configName _x, _ctrlPanel, "texture"] call FUNC(addListBoxItem);
-                } foreach ("true" configClasses (configFile >> "CfgUnitInsignia"));
-
-                {
-                    private _displayName = getText (_x >> "displayName");
-                    private _className = configName _x;
-                    private _lbAdd =  _ctrlPanel lbAdd _displayName;
-
-                    _ctrlPanel lbSetData [_lbAdd, _className];
-                    _ctrlPanel lbSetPicture [_lbAdd, getText (_x >> "texture")];
-                    _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
-                } foreach ("true" configClasses (missionConfigFile >> "CfgUnitInsignia"));
-            };
-        };
-    };
+// For every left tab except faces and voices, add "Empty" entry
+if !(_ctrlIDC in [IDC_buttonFace, IDC_buttonVoice]) then {
+    private _addEmpty = _ctrlPanel lbAdd format [" <%1>", localize "str_empty"];
+    _ctrlPanel lbSetValue [_addEmpty, -1];
 };
 
-// Done
-if (GVAR(currentLeftPanel) != _ctrlIDC) then {
-    (_display displayCtrl IDC_leftSearchbar) ctrlSetText "";
-    (_display displayCtrl IDC_rightSearchbar) ctrlSetText "";
+// Don't reset the current right panel for weapons, binos and containers
+if !(_idxVirt in [IDX_VIRT_PRIMARY_WEAPONS, IDX_VIRT_SECONDARY_WEAPONS, IDX_VIRT_HANDGUN_WEAPONS, IDX_VIRT_BINO, IDX_VIRT_UNIFORM, IDX_VIRT_VEST, IDX_VIRT_BACKPACK]) then {
+    GVAR(currentRightPanel) = nil;
 };
-
 GVAR(currentLeftPanel) = _ctrlIDC;
+
+// Add items to the listbox
+private _selectedItem = if (_idxVirt != -1) then { // Items
+    private _configParent = switch (_idxVirt) do {
+        case IDX_VIRT_GOGGLES: {"CfgGlasses"};
+        case IDX_VIRT_BACKPACK: {"CfgVehicles"};
+        default {"CfgWeapons"};
+    };
+
+    private _items = if (_idxVirt < IDX_VIRT_HEADGEAR) then {
+        keys ((GVAR(virtualItems) get IDX_VIRT_WEAPONS) get _idxVirt)
+    } else {
+        keys (GVAR(virtualItems) get _idxVirt)
+    };
+
+    {
+        [_configParent, _x, _ctrlPanel] call FUNC(addListBoxItem);
+    } forEach _items;
+
+    GVAR(currentItems) select _idxVirt
+} else { // Special cases
+    switch (_ctrlIDC) do {
+        // Faces
+        case IDC_buttonFace: {
+            private _lbAdd = -1; // micro-optimization
+            // Faces need to be added like this because their config path is
+            // configFile >> "CfgFaces" >> face category >> className
+            {
+                _y params ["_displayName", "_modPicture"];
+                _lbAdd = _ctrlPanel lbAdd _displayName;
+                _ctrlPanel lbSetData [_lbAdd, _x];
+                _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _x]];
+                _ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture, ""] select GVAR(enableModIcons)];
+            } forEach GVAR(faceCache); // HashMap, not array
+
+            GVAR(currentFace)
+        };
+        // Voices
+        case IDC_buttonVoice: {
+            {
+                ["CfgVoice", _x, _ctrlPanel, "icon"] call FUNC(addListBoxItem);
+            } forEach (keys GVAR(voiceCache));
+
+            GVAR(currentVoice)
+        };
+        // Insignia
+        case IDC_buttonInsignia: {
+            {
+                ["CfgUnitInsignia", _x, _ctrlPanel, "texture", _y] call FUNC(addListBoxItem);
+            } forEach GVAR(insigniaCache);
+
+            GVAR(currentInsignia)
+        };
+        // Unknown
+        default {
+            WARNING_1("Unknown arsenal left panel with IDC %1, update ace_arsenal_idxMap and relevant macros if adding a new tab",_ctrlIDC);
+            ""
+        };
+    };
+};
+
+// Trigger event
 [QGVAR(leftPanelFilled), [_display, _ctrlIDC, GVAR(currentRightPanel)]] call CBA_fnc_localEvent;
 
 // Sort
-private _sortLeftCtrl = _display displayCtrl IDC_sortLeftTab;
-[_display, _control, _sortLeftCtrl] call FUNC(fillSort);
+[_display, _control, _display displayCtrl IDC_sortLeftTab, _display displayCtrl IDC_sortLeftTabDirection] call FUNC(fillSort);
 
-//Select current item
-private _itemsToCheck = ((GVAR(currentItems) select [0,15]) + [GVAR(currentFace), GVAR(currentVoice), GVAR(currentInsignia)]) apply {tolower _x};
+// Try to select previously selected item again, otherwise select first item ("Empty")
+if (_selectedItem != "") then {
+    private _index = 0;
 
-for "_lbIndex" from 0 to (lbSize _ctrlPanel - 1) do {
-    private _currentData = _ctrlPanel lbData _lbIndex;
-
-    if ((_currentData isNotEqualTo "") && {tolower _currentData in _itemsToCheck}) exitWith {
-        _ctrlPanel lbSetCurSel _lbIndex;
+    for "_lbIndex" from 0 to (lbSize _ctrlPanel) - 1 do {
+        if ((_ctrlPanel lbData _lbIndex) == _selectedItem) exitWith {
+            _index = _lbIndex;
+        };
     };
-};
-if (lbCurSel _ctrlPanel < 0) then {
+
+    _ctrlPanel lbSetCurSel _index;
+} else {
     _ctrlPanel lbSetCurSel 0;
 };

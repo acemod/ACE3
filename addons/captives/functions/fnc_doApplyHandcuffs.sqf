@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror
  * Checks the conditions for being able to apply handcuffs
@@ -23,4 +23,6 @@ playSound3D [QUOTE(PATHTO_R(sounds\cable_tie_zipping.ogg)), objNull, false, (get
 
 [QGVAR(setHandcuffed), [_target, true, _unit], [_target]] call CBA_fnc_targetEvent;
 
-_unit removeItem "ACE_CableTie";
+private _cuffs = (_unit call EFUNC(common,uniqueItems)) arrayIntersect GVAR(restraints);
+
+_unit removeItem (_cuffs#0);

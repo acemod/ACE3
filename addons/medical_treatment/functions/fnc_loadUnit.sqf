@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Glowbal
  * Loads an unconscious or dead patient in the given or nearest vehicle.
@@ -24,11 +24,11 @@ if (_patient call EFUNC(common,isAwake)) exitWith {
     [[LSTRING(CanNotLoad), _patient call EFUNC(common,getName)]] call EFUNC(common,displayTextStructured);
 };
 
-if (_patient call EFUNC(medical_status,isBeingCarried)) then {
+if (_patient call EFUNC(common,isBeingCarried)) then {
     [_medic, _patient] call EFUNC(dragging,dropObject_carry);
 };
 
-if (_patient call EFUNC(medical_status,isBeingDragged)) then {
+if (_patient call EFUNC(common,isBeingDragged)) then {
     [_medic, _patient] call EFUNC(dragging,dropObject);
 };
 
@@ -52,7 +52,6 @@ if (isNull _vehicle) exitWith { TRACE_1("no vehicle found",_vehicle); };
     private _vehicleName = getText (configOf _vehicle >> "displayName");
     [[LSTRING(LoadedInto), _patientName, _vehicleName], 3] call EFUNC(common,displayTextStructured);
 }, [_patient, _vehicle], 3, {
-    params ["_unit", "_emptyPos"];
+    params ["_unit", "_vehicle"];
     WARNING_3("loadPerson failed to load %1[local %2] -> %3 ",_unit,local _unit,_vehicle);
 }] call CBA_fnc_waitUntilAndExecute;
-

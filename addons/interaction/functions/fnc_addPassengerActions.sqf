@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Mount unit actions inside passenger submenu.
@@ -20,11 +20,7 @@
 params ["", "", "_parameters"];
 _parameters params ["_unit"];
 
-private _namespace = EGVAR(interact_menu,ActNamespace);
-private _actionTrees = _namespace getVariable typeOf _unit;
-if (isNil "_actionTrees") then {
-    _actionTrees = [];
-};
+private _actionTrees = EGVAR(interact_menu,ActNamespace) getOrDefault [typeOf _unit, []];
 
 private _actions = [];
 
@@ -33,7 +29,6 @@ private _actions = [];
     _x params ["_actionData", "_children"];
 
     _actions pushBack [_actionData, _children, _unit];
-    false
-} count (_actionTrees select 0 select 1);
+} forEach (_actionTrees select 0 select 1);
 
 _actions

@@ -1,10 +1,10 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Called on unit initialization. Adds earplugs if the unit is equipped with either a really loud primary weapon or a rocket launcher.
  *
  * Arguments:
- * 0: A Soldier <Object>
+ * 0: Unit <Object>
  *
  * Return Value:
  * None
@@ -15,49 +15,62 @@
  * Public: No
  */
 
+// Only run this after the settings are initialized
+if (!EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [LINKFUNC(addEarPlugs), _this];
+};
+
+// Exit if hearing is disabled or if autoAdd is disabled
+if (!GVAR(enableCombatDeafness) || {GVAR(autoAddEarplugsToUnits) == 0}) exitWith {};
+
 params ["_unit"];
 TRACE_2("params",_unit,typeOf _unit);
 
-// only run this after the settings are initialized
-if !(EGVAR(common,settingsInitFinished)) exitWith {
-    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addEarPlugs), _this];
-};
+// Exit if the unit already has earplugs (in ears (persistence scenarios) or inventory)
+if ((_unit getVariable ["ACE_hasEarPlugsIn", false]) || {[_unit, "ACE_EarPlugs"] call EFUNC(common,hasItem)}) exitWith {};
 
-// Exit if hearing is disabled OR autoAdd is disabled OR soldier has earplugs already in (persistence scenarios)
-if (!GVAR(enableCombatDeafness) || {!GVAR(autoAddEarplugsToUnits)} || {[_unit] call FUNC(hasEarPlugsIn)}) exitWith {};
-
-// add earplugs if the soldier has a rocket launcher
-if ((secondaryWeapon _unit) != "") exitWith {
+// Add earplugs if enabled for everyone or if the unit has a rocket launcher
+if (GVAR(autoAddEarplugsToUnits) == 2 || {(secondaryWeapon _unit) != ""}) exitWith {
     TRACE_1("has launcher - adding",_unit);
     _unit addItem "ACE_EarPlugs";
 };
 
-// otherwise add earplugs if the soldier has a big rifle
-if ((primaryWeapon _unit) == "") exitWith {};
+// Otherwise add earplugs if the unit has a big rifle
+private _weapon = primaryWeapon _unit;
 
-(primaryWeaponMagazine _unit) params [["_magazine", ""]];
-if (_magazine == "") exitWith {};
+if (_weapon == "") exitWith {};
 
-private _initSpeed = getNumber (configFile >> "CfgMagazines" >> _magazine >> "initSpeed");
-private _ammo = getText (configFile >> "CfgMagazines" >> _magazine >> "ammo");
-private _count = getNumber (configFile >> "CfgMagazines" >> _magazine >> "count");
-
-private _caliber = getNumber (configFile >> "CfgAmmo" >> _ammo >> "ACE_caliber");
-_caliber = call {
-    if (_ammo isKindOf ["ShellBase", (configFile >> "CfgAmmo")]) exitWith { 80 };
-    if (_ammo isKindOf ["RocketBase", (configFile >> "CfgAmmo")]) exitWith { 200 };
-    if (_ammo isKindOf ["MissileBase", (configFile >> "CfgAmmo")]) exitWith { 600 };
-    if (_ammo isKindOf ["SubmunitionBase", (configFile >> "CfgAmmo")]) exitWith { 80 };
-    if (_caliber <= 0) then { 6.5 } else { _caliber };
+if (isNil QGVAR(cacheMaxAmmoLoudness)) then {
+    GVAR(cacheMaxAmmoLoudness) = createHashMap;
 };
-private _loudness = (_caliber ^ 1.25 / 10) * (_initspeed / 1000) / 5;
 
-//If unit has a machine gun boost effective loudness 50%
-if (_count >= 50) then {_loudness = _loudness * 1.5};
+// Cache maximum loudness for future calls
+private _maxLoudness = GVAR(cacheMaxAmmoLoudness) getOrDefaultCall [_weapon, {
+    // Get the weapon's compatible magazines, so that all magazines are cached
+    // From all the loudness factors, take the max
+    private _maxLoudness = selectMax ((compatibleMagazines _weapon) apply {_x call FUNC(getAmmoLoudness)});
 
-TRACE_2("primaryWeapon",_unit,_loudness);
+    // ace_gunbag_fnc_isMachineGun
+    private _config = _weapon call CBA_fnc_getItemConfig;
 
-if (_loudness > 0.2) then {
+    // Definition of a machine gun by BIS_fnc_itemType
+    private _cursor = getText (_config >> "cursor");
+
+    if (toLowerANSI _cursor in ["", "emptycursor"]) then {
+        _cursor = getText (_config >> "cursorAim");
+    };
+
+    // If unit has a machine gun boost effective loudness 50%
+    if (_cursor == "MG") then {
+        _maxLoudness = _maxLoudness * 1.5;
+    };
+
+    _maxLoudness
+}, true];
+
+TRACE_3("primaryWeapon",_unit,_weapon,_maxLoudness);
+
+if (_maxLoudness > 0.2) then {
     TRACE_1("loud gun - adding",_unit);
     _unit addItem "ACE_EarPlugs";
 };

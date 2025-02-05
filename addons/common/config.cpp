@@ -4,7 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {"ACE_Box_Misc", "ACE_bananaItem", "ACE_Flag_Black", "ACE_Flag_White"};
-        weapons[] = {"ACE_ItemCore","ACE_FakePrimaryWeapon", "ACE_Banana"};
+        weapons[] = {"ACE_ItemCore", "ACE_FakePrimaryWeapon", "ACE_Banana"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_main","ace_modules"};
         author = CSTRING(ACETeam);
@@ -17,6 +17,7 @@ class CfgPatches {
 #include "CfgEden.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgLocationTypes.hpp"
+#include "CfgGesturesMale.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgMoves.hpp"
 #include "CfgSounds.hpp"
@@ -58,6 +59,8 @@ class ACE_Rsc_Control_Base {
     h = 0;
 };
 
+class ctrlMapEmpty;
+
 #include "ACE_Settings.hpp"
 #include "define.hpp"
 #include "ProgressScreen.hpp"
@@ -67,10 +70,10 @@ class ACE_Rsc_Control_Base {
 #include "CompassControl.hpp"
 #include "CfgUIGrids.hpp"
 
-class ACE_Extensions {};
-
 class ACE_Tests {
     vehicleTransportInventory = QPATHTOF(dev\test_vehicleInventory.sqf);
     mapConfigs = QPATHTOF(dev\test_mapConfigs.sqf);
     cfgPatches = QPATHTOF(dev\test_cfgPatches.sqf);
 };
+
+#include "ACE_ExtensionsHashes.hpp"

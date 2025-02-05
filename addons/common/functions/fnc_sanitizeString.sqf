@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain, based on Killzone-Kid code
  * Removes quotation marks to avoid exploits and optionally html tags from text to avoid conflicts with structured text.
@@ -47,7 +47,6 @@ private _array = [];
             _array pushBack _x;
         };
     };
-    false
-} count toArray _string;
+} forEach toArray _string;
 
 toString _array // return

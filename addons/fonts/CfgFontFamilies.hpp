@@ -34,4 +34,9 @@ class CfgFontFamilies {
         spaceWidth = 0.5;
         spacing = 0.065;
     };
+    class ACE_Stencil {
+        fonts[] = {
+            QPATHTOF(SairaStencilOne\ace_stencil64)
+        };
+    };
 };

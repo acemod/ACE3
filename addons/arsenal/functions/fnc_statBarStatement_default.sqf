@@ -1,21 +1,24 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Alganthe
  * Generic bar statement for stats.
  *
  * Arguments:
- * 0: stat (STRING)
- * 1: item config path (CONFIG)
- * 2: Args for configExtreme
- *  2.1: Stat limits (ARRAY of BOOL)
- *  2.2: Bar limits (ARRAY of SCALAR)
- *  2.3: Evaluate as a logarithmic number (BOOL)
+ * 0: Stat <STRING>
+ * 1: Item config path <CONFIG>
+ * 2: Args for configExtreme <ARRAY>
+ * - 0: Stat limits <ARRAY of BOOLS>
+ * - 1: Bar limits <ARRAY of NUMBERS>
+ * - 2: Evaluate as a logarithmic number <BOOL>
  *
  * Return Value:
- * Number
+ * Bar statement <NUMBER>
+ *
+ * Example:
+ * ["ACE_maxZeroing", _config, [[0, 2500], [0.01, 1], false]] call ace_arsenal_fnc_statBarStatement_default
  *
  * Public: Yes
-*/
+ */
 
 params ["_stat", "_config", "_args"];
 _args params ["_statMinMax", "_barLimits", "_configExtremeBool"];

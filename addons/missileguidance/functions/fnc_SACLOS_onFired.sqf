@@ -1,6 +1,6 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Sets up SACLOS state arrays (called from missileGuidance's onFired).
  *
  * Arguments:
@@ -32,4 +32,3 @@ _seekerStateParams set [2, _animationSourceGun];
 _seekerStateParams set [3, _usePilotCamera || { (_shooter isKindOf "Plane") && hasPilotCamera _shooter }];
 
 if ((_shooter isKindOf "Plane") && !hasPilotCamera _shooter) then { WARNING("SACLOS fired from planes without pilot camera unsupported!"); };
-

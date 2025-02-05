@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: NouberNou and esteldunedain
  * Render all available nearby interactions
@@ -38,7 +38,7 @@ if (GVAR(openedMenuType) >= 0) then {
     private _closestSelection = -1;
     {
         _x params ["", "_sPos"];
-        private _distanceFromCursor = _cursorScreenPos distance2d _sPos;
+        private _distanceFromCursor = _cursorScreenPos distance2D _sPos;
         if ((_distanceFromCursor < 0.1118) && {_distanceFromCursor < _closestDistance}) then {
             _closestDistance = _distanceFromCursor;
             _closestSelection = _forEachIndex;
@@ -103,9 +103,10 @@ if (GVAR(openedMenuType) >= 0) then {
 
                 // Check the action conditions
                 private _actionData = GVAR(selectedAction) select 0;
-                if ([_target, _player, _actionData select 6] call (_actionData select 4)) then {
+                private _actionParams = _actionData select 6; // Define _actionParams so its accessible within the statement/condition
+                if ([_target, _player, _actionParams] call (_actionData select 4)) then {
                     // Call the statement
-                    [_target, _player, _actionData select 6] call (_actionData select 3);
+                    [_target, _player, _actionParams] call (_actionData select 3);
 
                     // Clear the conditions caches again if the action was performed
                     [QGVAR(clearConditionCaches), []] call CBA_fnc_localEvent;

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: 654wak654
  * Loads selected pylon configuration from either config or profileNamespace.

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Drops a backback. Also returns the ground wepaon holder object of the dropped backpack.

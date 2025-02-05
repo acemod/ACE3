@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: BaerMitUmlaut
  * Handles the hear beat sound.
@@ -16,7 +16,7 @@
  */
 
 if (EGVAR(common,OldIsCamera)) exitWith {
-    TRACE_2("Ending heart beat effect - scripted camera",_heartRate,EGVAR(common,OldIsCamera));
+    TRACE_2("Ending heart beat effect - scripted camera",GET_HEART_RATE(ACE_player),EGVAR(common,OldIsCamera));
     GVAR(heartBeatEffectRunning) = false;
 };
 

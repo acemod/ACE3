@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: commy2
  * Called by repair action / progress bar. Raise events to set the new hitpoint damage.

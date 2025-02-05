@@ -9,7 +9,7 @@ class CfgWeapons {
     // GM6 Lynx
     class GM6_base_F: Rifle_Long_Base_F {};
     class srifle_GM6_F: GM6_base_F {
-        ACE_barrelLength = 730;
+        ACE_barrelLength = 730; // GM6 Lynx barrel length https://gm6lynx.com/
         ACE_barrelTwist = 381.0;
         initSpeed = -1.0;
         magazineWell[] += {
@@ -66,8 +66,8 @@ class CfgWeapons {
     // ASP-1 Kir
     class DMR_04_base_F: Rifle_Long_Base_F {};
     class srifle_DMR_04_F: DMR_04_base_F {
-        ACE_barrelLength = 450.088;
-        ACE_barrelTwist = 203.2;
+        ACE_barrelLength = 450;
+        ACE_barrelTwist = 250; // 10" (254mm), without datas and from a gyroscopic stability analyse tool (EBC V2), 10" seems the best gyroscopic stability compromise
         initSpeed = -1.0;
     };
 

@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: PabstMirror, mharis001
  * Dynamically adds "Cut Fence" actions to nearby fences when interact_menu is opened.
@@ -23,7 +23,7 @@ params ["_interactionType"];
 // If player somehow gets a wirecutter during keyDown, they will just have to reopen menu
 if (
     _interactionType != 0
-    || {vehicle ACE_player != ACE_player}
+    || {!isNull objectParent ACE_player}
     || {!HAS_WIRECUTTER(ACE_player)}
 ) exitWith {};
 
@@ -35,7 +35,7 @@ TRACE_1("Starting wirecuter interact PFH",_interactionType);
     _args params ["_setPosition", "_addedHelpers", "_fencesHelped"];
 
     if (!EGVAR(interact_menu,keyDown)) then {
-        {deleteVehicle _x} forEach _addedHelpers;
+        deleteVehicle _addedHelpers;
         [_pfhID] call CBA_fnc_removePerFrameHandler;
     } else {
         // Prevent rare error when ending mission with interact key down

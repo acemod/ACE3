@@ -14,6 +14,6 @@ body > footer {
     }
 
     a {
-        color: lighten($primary-color, 28%);
+        color: $primary-color-lighter;
     }
 }

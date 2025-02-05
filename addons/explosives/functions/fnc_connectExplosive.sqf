@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: VKing
  * Add preplaced explosives to a unit's detonator.

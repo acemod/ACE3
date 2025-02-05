@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: esteldunedain
  * Handler function for finding position and direction of a vanilla laser.
@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Vehicle (shooter of laser) <OBJECT>
  * 6: Method Args <ARRAY>
- *      0: Laser Source selection on Vehicle <STRING>
+ * - 0: Laser Source selection on Vehicle <STRING>
  *
  * Return Value:
  * [position, direction] <ARRAY>

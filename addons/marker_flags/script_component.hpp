@@ -15,3 +15,12 @@
 #endif
 
 #include "\z\ace\addons\main\script_macros.hpp"
+
+#define PLACE_WAITING -1
+#define PLACE_CANCEL 0
+#define PLACE_APPROVE 1
+
+#define MIN_HEIGHT -0.3
+#define MAX_HEIGHT 0.4
+
+#define FLAG_PLACING_DISTANCE 2

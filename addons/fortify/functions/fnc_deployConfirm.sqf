@@ -1,4 +1,4 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
 /*
  * Author: Kingsley
  * Confirms the deployment.
@@ -20,10 +20,10 @@ params ["_unit", "_object"];
 TRACE_2("deployConfirm",_unit,_object);
 
 private _side = side group _unit;
-private _cost = [_side, typeOf _object] call FUNC(getCost);
+private _typeOf = typeOf _object;
+private _cost = [_side, _typeOf] call FUNC(getCost);
 [_side, -_cost] call FUNC(updateBudget);
 
-private _typeOf = typeOf _object;
 private _posASL = getPosASL _object;
 private _vectorUp = vectorUp _object;
 private _vectorDir = vectorDir _object;
@@ -35,10 +35,10 @@ private _totalTime = _cost * GVAR(timeCostCoefficient) + GVAR(timeMin); // time 
 
 private _perframeCheck = {
     params ["_args", "_elapsedTime", "_totalTime", "_errorCode"];
-    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp"];
+    _args params ["_unit", "_side", "_typeOf", "_posASL", "_vectorDir", "_vectorUp", "_cost"];
 
     // Animation loop (required for longer constructions)
-    if (animationState _unit isNotEqualTo "AinvPknlMstpSnonWnonDnon_medic4") then {
+    if (_totalTime != 0 && {animationState _unit != "AinvPknlMstpSnonWnonDnon_medic4"}) then {
         // Perform animation
         [_unit, "AinvPknlMstpSnonWnonDnon_medic4"] call EFUNC(common,doAnimation);
     };
@@ -49,10 +49,9 @@ private _perframeCheck = {
 
 [
     _totalTime,
-    [_unit, _side, _typeOf, _posASL, _vectorDir, _vectorUp],
+    [_unit, _side, _typeOf, _posASL, _vectorDir, _vectorUp, _cost],
     QGVAR(deployFinished),
     QGVAR(deployCanceled),
     LLSTRING(progressBarTitle),
     _perframeCheck
 ] call EFUNC(common,progressBar);
-

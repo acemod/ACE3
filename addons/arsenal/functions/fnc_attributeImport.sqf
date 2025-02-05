@@ -1,7 +1,8 @@
-#include "script_component.hpp"
+#include "..\script_component.hpp"
+#include "..\defines.hpp"
 /*
  * Author: mharis001
- * Handles importing items list from clipboard into 3DEN attribute.
+ * Handles importing items list from clipboard into 3DEN's ace arsenal attribute.
  *
  * Arguments:
  * 0: Attribute controls group <CONTROL>
@@ -15,8 +16,6 @@
  * Public: No
  */
 
-params ["_controlsGroup"];
-
 private _importList = call compile copyFromClipboard;
 
 // Verify import list is in correct format
@@ -24,23 +23,17 @@ if (isNil "_importList" || {!(_importList isEqualType [])} || {!(_importList isE
     playSound ["3DEN_notificationWarning", true];
 };
 
-// Ensure imported items are in scanned config array and classname case is correct
-private _configItems = +(uiNamespace getVariable [QGVAR(configItems), []]);
-private _configItemsFlat = _configItems select [2, 16];
-_configItemsFlat append (_configItems select 0);
-_configItemsFlat append (_configItems select 1);
+params ["_controlsGroup"];
 
-private _filteredList = [];
+// Convert all items to config case
+_importList = _importList apply {_x call EFUNC(common,getConfigName)};
 
-{
-    private _item = _x;
-    {
-        private _index = _x findIf {_x == _item};
-        if (_index > -1) then {
-            _filteredList pushBackUnique (_x select _index);
-        };
-    } forEach _configItemsFlat;
-} forEach _importList;
+// Remove any invalid/non-existing items
+_importList = _importList - [""];
+
+// Ensure imported items are in scanned config array
+private _configItemsFlat = uiNamespace getVariable QGVAR(configItemsFlat);
+private _filteredList = _importList select {_x in _configItemsFlat};
 
 private _attributeValue = uiNamespace getVariable [QGVAR(attributeValue), [[], 0]];
 _attributeValue set [0, _filteredList];
