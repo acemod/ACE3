@@ -66,7 +66,7 @@ INFO_2("Starting Terrain Extension [cells: %1] [world: %2]",_gridCells,worldName
             private _volume = (_bb#1#0 - _bb#0#0) * (_bb#1#1 - _bb#0#1) * _height;
 
             (_height > 0.3) && {_volume > 10}
-        } count (_windSource nearObjects ["Building", 50]);
+        } count (_gridCenter nearObjects ["Building", 50]);
         private _gridTreeCount = count nearestTerrainObjects [_windSource, ["TREE"], 50, false];
         private _roughnessIndex = _gridBuildingCount + round (_gridTreeCount / 9);
 
