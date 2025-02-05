@@ -66,6 +66,10 @@ for "_i" from 0 to (count _cfgWeapons)-1 do {
                 _WeaponCacheEntry params ["_barrelTwist", "_twistDirection", "_barrelLength"];
 
                 private _barrelVelocityShift = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, _vanillaInitialSpeed] call FUNC(calculateBarrelLengthVelocityShift);
+                if (_barrelLength > 0) then {
+                    private _shiftedMV = [_barrelLength, _muzzleVelocityTable, _barrelLengthTable, 0] call FUNC(calculateBarrelLengthVelocityShift);
+                    if (_shiftedMV == 0) then { ERROR_2("%1:%2 has length set but invalid mags",_weapon,_magazine)};
+                };
                 private _abInitialSpeed = _vanillaInitialSpeed + _barrelVelocityShift;
                 // --------------------------------------------------
 
