@@ -883,16 +883,19 @@
             <English>Consequence of extreme thirst/hunger (over 85%)</English>
             <German>Folge von extremen Durst/Hunger (über 85%)</German>
             <Italian>Conseguenze di sete/fame estrema (oltre 85%)</Italian>
+            <French>Conséquences d'une soif ou d'une faim extrême (plus de 85 %)</French>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Pain">
             <English>Pain</English>
             <German>Schmerzen</German>
             <Italian>Dolore</Italian>
+            <French>Douleur</French>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Unconsciousness">
             <English>Fainting</English>
             <German>Ohnmacht</German>
             <Italian>Svenimenti</Italian>
+            <French>Évanouissement</French>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NoWaterRemaining">
             <English>There is no water left.</English>
