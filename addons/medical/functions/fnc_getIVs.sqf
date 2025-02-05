@@ -44,7 +44,7 @@ private _ivBags = [];
         _bagVolume,
         _bagType,
         ALL_BODY_PARTS select _bodyPartIndex,
-        treatment,
+        _treatment,
         _rateCoef,
         _bagItem
     ];
