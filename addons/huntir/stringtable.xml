@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="HuntIR">
+        <Key ID="STR_ACE_HuntIR_ALT">
+            <English>Altitude:</English>
+            <Czech>Výška:</Czech>
+            <French>Altitude :</French>
+            <Spanish>Altitud:</Spanish>
+            <Italian>Altitudine:</Italian>
+            <Polish>Wysokość:</Polish>
+            <Portuguese>Altitude:</Portuguese>
+            <Russian>Высота:</Russian>
+            <German>Höhe:</German>
+            <Korean>고도:</Korean>
+            <Japanese>高度:</Japanese>
+            <Chinese>高度:</Chinese>
+            <Chinesesimp>高度：</Chinesesimp>
+            <Turkish>Yükseklik:</Turkish>
+            <Hungarian>Magasság:</Hungarian>
+        </Key>
         <Key ID="STR_ACE_HuntIR_CAM">
             <English>Camera:</English>
             <Czech>Kamera:</Czech>
@@ -233,7 +250,7 @@
             <Russian>HuntIR снаряд</Russian>
             <German>HuntIR Granate</German>
             <Korean>헌트IR 유탄</Korean>
-            <Japanese>HuntIR弾</Japanese>
+            <Japanese>HuntIR 弾</Japanese>
             <Chinese>高空戰術成像器彈藥</Chinese>
             <Chinesesimp>高空战术摄像头弹药</Chinesesimp>
             <Turkish>HuntIR Mermisi</Turkish>
@@ -255,23 +272,6 @@
             <Chinesesimp>高空战术摄像头显示面板</Chinesesimp>
             <Turkish>HuntIR Ekranı</Turkish>
             <Hungarian>HuntIR Monitor</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_HuntIR_ALT">
-            <English>Altitude:</English>
-            <Chinese>高度:</Chinese>
-            <Chinesesimp>高度：</Chinesesimp>
-            <Czech>Výška:</Czech>
-            <French>Altitude :</French>
-            <German>Höhe:</German>
-            <Hungarian>Magasság:</Hungarian>
-            <Italian>Altitudine:</Italian>
-            <Japanese>高度:</Japanese>
-            <Korean>고도:</Korean>
-            <Polish>Wysokość:</Polish>
-            <Portuguese>Altitude:</Portuguese>
-            <Russian>Высота:</Russian>
-            <Spanish>Altitud:</Spanish>
-            <Turkish>Yükseklik:</Turkish>
         </Key>
     </Package>
 </Project>

@@ -72,27 +72,8 @@ if (
 };
 
 if (GVAR(clearTrauma) == 2) then {
-    TRACE_2("clearTrauma - clearing trauma after bandage",_bodyPart,_openWounds);
-    private _partIndex = ALL_BODY_PARTS find _bodyPart;
-    private _bodyPartDamage = _patient getVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]];
-    private _newDam = (_bodyPartDamage select _partIndex) - _treatedDamage;
-
-    // Prevent obscenely small damage from lack of floating precision
-    if (_newDam < 0.05) then {
-        _bodyPartDamage set [_partIndex, 0];
-    } else {
-        _bodyPartDamage set [_partIndex, _newDam];
-    };
-    _patient setVariable [QEGVAR(medical,bodyPartDamage), _bodyPartDamage, true];
-    TRACE_2("clearTrauma - healed damage",_partIndex,_treatedDamage);
-
-    switch (_bodyPart) do {
-        case "head": { [_patient, true, false, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-        case "body": { [_patient, false, true, false, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-        case "leftarm";
-        case "rightarm": { [_patient, false, false, true, false] call EFUNC(medical_engine,updateBodyPartVisuals); };
-        default { [_patient, false, false, false, true] call EFUNC(medical_engine,updateBodyPartVisuals); };
-    };
+    TRACE_2("trauma - clearing trauma after bandage",_bodyPart,_woundsOnPart);
+    [_patient, _bodyPart, -_treatedDamage] call FUNC(addTrauma);
 };
 
 // Reset treatment condition cache for nearby players if we stopped all bleeding

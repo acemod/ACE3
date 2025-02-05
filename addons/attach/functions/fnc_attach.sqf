@@ -56,7 +56,7 @@ if (_unit == _attachToVehicle) then {  //Self Attachment
     [{[localize LSTRING(PlaceAction), ""] call EFUNC(interaction,showMouseHint)}, []] call CBA_fnc_execNextFrame;
     _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
 
-    private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", localize LSTRING(CancelAction)], {GVAR(placeAction) = PLACE_CANCEL}];
+    private _actionID = _unit addAction [format ["<t color='#FF0000'>%1</t>", LELSTRING(common,Cancel)], {GVAR(placeAction) = PLACE_CANCEL}];
 
     //Display to show virtual object:
     private _model = getText (configFile >> "CfgAmmo" >> _itemVehClass >> "model");

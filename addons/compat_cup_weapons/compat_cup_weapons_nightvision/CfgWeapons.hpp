@@ -4,8 +4,8 @@
     EGVAR(nightvision,generation) = 3; \
     modelOptics = ""
 
-#define NVG_MONO_PRESET(GEN) \
-    EGVAR(nightvision,eyeCups) = 1; \
+#define NVG_MONO_PRESET(GEN,EYE) \
+    EGVAR(nightvision,eyeCups) = EYE; \
     EGVAR(nightvision,border) = QPATHTOEF(nightvision,data\nvg_mask_4096.paa); \
     EGVAR(nightvision,bluRadius) = 0.13; \
     EGVAR(nightvision,generation) = GEN; \
@@ -24,17 +24,17 @@ class CfgWeapons {
     class NVGoggles;
     // Monocular
     class CUP_NVG_PVS7: NVGoggles {
-        NVG_MONO_PRESET(3);
+        NVG_MONO_PRESET(3,1);
         NVG_GREEN_PRESET;
     };
     class CUP_NVG_HMNVS: NVGoggles {
-        NVG_MONO_PRESET(3);
+        NVG_MONO_PRESET(3,0);
         NVG_GREEN_PRESET;
     };
 
     // Binocular
     class CUP_NVG_PVS14: NVGoggles {
-        NVG_MONO_PRESET(3);
+        NVG_MONO_PRESET(3,0);
         NVG_GREEN_PRESET;
     };
     class CUP_NVG_PVS15_black: NVGoggles {
@@ -78,7 +78,7 @@ class CfgWeapons {
 
     // Gen4s
     class CUP_NVG_1PN138: NVGoggles {
-        NVG_MONO_PRESET(4);
+        NVG_MONO_PRESET(4,0);
         NVG_GREEN_PRESET;
     };
     class CUP_NVG_GPNVG_black: NVGoggles {

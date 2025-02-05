@@ -404,7 +404,7 @@
             <Russian>Проверка аддонов</Russian>
             <German>Überprüfe PBOs</German>
             <Korean>PBO 검사</Korean>
-            <Japanese>PBOを検査</Japanese>
+            <Japanese>PBO(アドオン)を検査</Japanese>
             <Chinese>檢查PBO檔</Chinese>
             <Chinesesimp>检查 PBO</Chinesesimp>
             <Hungarian>PBO-k ellenőrzése</Hungarian>
@@ -452,7 +452,7 @@
             <Portuguese>Ação de Checar PBO</Portuguese>
             <Russian>Действие при проверке PBO</Russian>
             <German>PBO Überprüfung</German>
-            <Korean>PBO 검사</Korean>
+            <Korean>PBO 검사 행동</Korean>
             <Japanese>PBO検査の挙動</Japanese>
             <Chinese>檢查PBO動作</Chinese>
             <Chinesesimp>检查 PBO 动作</Chinesesimp>
@@ -547,6 +547,17 @@
             <Chinese>確認</Chinese>
             <Chinesesimp>确认</Chinesesimp>
             <Turkish>Onayla</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Common_Debug">
+            <English>Debug</English>
+            <French>Debug</French>
+            <Spanish>Debug</Spanish>
+            <Italian>Debug</Italian>
+            <Russian>Отладка</Russian>
+            <German>Debug</German>
+            <Korean>디버그</Korean>
+            <Japanese>デバッグ</Japanese>
+            <Chinesesimp>开发者模式</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_DeployedSwayFactor">
             <English>Deployed sway factor</English>
@@ -1751,6 +1762,14 @@
             <Japanese>ACE 未分類</Japanese>
             <Chinesesimp>ACE 未分类</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Common_checkExtensions_DisplayName">
+            <English>Check Extensions</English>
+            <French>Vérifier les extensions</French>
+            <Russian>Проверка расширений (библиотек DLL)</Russian>
+            <Korean>확장 프로그램 검사</Korean>
+            <Japanese>拡張(DLL)を検査</Japanese>
+            <Chinesesimp>检查DLL扩展文件</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
             <Czech>Zavřít ruční zařízení</Czech>
@@ -1803,20 +1822,20 @@
             <English>Realistic Compass Declination</English>
             <French>Déclinaison réaliste de la boussole</French>
             <Italian>Declinazione magnetica realistica</Italian>
-            <German>Realistische Missweisung des Kompasses</German>
-            <Japanese>現実的なコンパス偏角</Japanese>
             <Russian>Реалистичный компасса</Russian>
+            <German>Realistische Missweisung des Kompasses</German>
             <Korean>현실적인 나침반 편각</Korean>
+            <Japanese>現実的なコンパス偏角</Japanese>
             <Chinesesimp>真实的指南针偏角</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_magneticDeclinationooltip">
             <English>Compass will point to magnetic north</English>
             <French>La boussole indique le nord magnétique</French>
             <Italian>La bussola indicherà il nord magnetico</Italian>
-            <German>Der Kompass zeigt nach missweisend Nord</German>
-            <Japanese>コンパスが磁北を指すようになります</Japanese>
             <Russian>Компас будет указывать на северный магнитный полюс</Russian>
+            <German>Der Kompass zeigt nach missweisend Nord</German>
             <Korean>나침반이 자북을 가리키게 됩니다.</Korean>
+            <Japanese>コンパスが磁北を指すようになります</Japanese>
             <Chinesesimp>指南针指向磁北极</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
