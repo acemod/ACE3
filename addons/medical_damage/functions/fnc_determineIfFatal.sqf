@@ -40,12 +40,12 @@ if (EGVAR(medical,fatalDamageSource) in [0, 2]) then {
 if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
     // Sum of trauma to critical areas can be fatal (e.g. many small hits)
     private _damageThreshold = GET_DAMAGE_THRESHOLD(_unit);
-    private _headThreshhold = 1.25 * _damageThreshold;
-    private _bodyThreshhold = 1.5 * _damageThreshold;
+    private _headThreshold = 1.25 * _damageThreshold;
+    private _bodyThreshold = 1.5 * _damageThreshold;
 
     _bodyPartDamage params ["_headDamage", "_bodyDamage"];
 
-    private _vitalDamage = ((_headDamage - _headThreshhold) max 0) + ((_bodyDamage - _bodyThreshhold) max 0);
+    private _vitalDamage = ((_headDamage - _headThreshold) max 0) + ((_bodyDamage - _bodyThreshold) max 0);
 
     // Sum of trauma to the limbs can also be fatal (shock) but this should take much more damage at default (5x as much)
     if ([false, !isPlayer _unit, true] select EGVAR(medical,useLimbDamage)) then {
