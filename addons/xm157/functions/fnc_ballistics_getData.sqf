@@ -54,7 +54,7 @@ if ((_weaponInfo isEqualTo []) && {_magazineClass != ""}) then {
         if (_initSpeedCoef > 0) then {
             _initSpeed = _initSpeedCoef;
         };
-        _initSpeed
+        _muzzleVelocity = _initSpeed
     };
 
     // Scope Base Angle
