@@ -67,7 +67,7 @@ INFO_2("Starting Terrain Extension [cells: %1] [world: %2]",_gridCells,worldName
 
             (_height > 0.3) && {_volume > 10}
         } count (_gridCenter nearObjects ["Building", 50]);
-        private _gridTreeCount = count nearestTerrainObjects [_windSource, ["TREE"], 50, false];
+        private _gridTreeCount = count nearestTerrainObjects [_gridCenter, ["TREE"], 50, false];
         private _roughnessIndex = _gridBuildingCount + round (_gridTreeCount / 9);
 
         "ace" callExtension ["ballistics:map:set", [GVAR(currentGrid), _gridHeight, _roughnessIndex, surfaceIsWater _gridCenter]];
