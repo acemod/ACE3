@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Draw progress bar and execute given function if succesful.
+ * Draw progress bar and execute given function if successful.
  * Finish/Failure/Conditional are all passed [args, elapsedTime, totalTime, errorCode]
  *
  * Arguments:

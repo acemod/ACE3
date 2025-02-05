@@ -4,7 +4,7 @@
  * Called when listbox selection changes.  Updates the rangetable with new values.
  *
  * Arguments:
- * 0: Elevation Mode (true = high,false=low) <BOOL><OPTIONAL>
+ * 0: Elevation Mode (true = high,false=low) <BOOL> (optional)
  *
  * Return Value:
  * None

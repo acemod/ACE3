@@ -7,10 +7,10 @@
  * 0: Unit the action should be assigned to <OBJECT>
  * 1: Menu title of the action <STRING>
  * 2: Name of the action, e.g. "DefaultAction" <STRING>
- * 3: Condition <CODE, STRING>
- * 4: Code to execute by the action <CODE, STRING>
- * 5: Condition for the menu action <CODE, STRING>
- * 6: Code to execute from the menu <CODE, STRING>
+ * 3: Condition <CODE or STRING>
+ * 4: Code to execute by the action <CODE or STRING>
+ * 5: Condition for the menu action <CODE or STRING>
+ * 6: Code to execute from the menu <CODE or STRING>
  * 7: Priority of the action (default: 0) <NUMBER>
  *
  * Return Value:

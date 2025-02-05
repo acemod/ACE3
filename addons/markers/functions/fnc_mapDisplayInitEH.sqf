@@ -4,7 +4,7 @@
  * Handles XEH DisplayLoad for the various map displays (RscDiary)
  *
  * Arguments:
- * 0: Map Display (idd 12,37,52,53) <Display>
+ * 0: Map Display (idd 12,37,52,53) <DISPLAY>
  *
  * Return Value:
  * None

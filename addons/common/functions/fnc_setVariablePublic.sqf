@@ -7,7 +7,7 @@
  * 0: Object the variable should be assigned to <OBJECT>
  * 1: Name of the variable <STRING>
  * 2: Value of the variable <ANY>
- * 3: Embargo delay <NUMBER> (Optional. Default: 1)
+ * 3: Embargo delay <NUMBER> (default: 1)
  *
  * Return Value:
  * None
