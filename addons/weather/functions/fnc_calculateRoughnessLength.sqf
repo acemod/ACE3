@@ -18,7 +18,7 @@
 // Source: http://es.ucsc.edu/~jnoble/wind/extrap/index.html
 #define ROUGHNESS_LENGTHS [0.0002, 0.0005, 0.0024, 0.03, 0.055, 0.1, 0.2, 0.4, 0.8, 1.6]
 
-private _windSource = ASLtoAGL (_this vectorDiff ((vectorNormalized wind) vectorMultiply 25));
+private _windSource = ASLToAGL (_this vectorDiff ((vectorNormalized wind) vectorMultiply 25));
 private _nearBuildingCount = {
     private _bb = boundingBoxReal [_x, "ViewGeometry"];
     private _height = _bb#1#2 - _bb#0#2;
