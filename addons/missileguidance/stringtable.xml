@@ -235,5 +235,17 @@
             <Turkish>Gelişmiş Füze Güdüm Sistemi</Turkish>
             <Hungarian>Fejlett rakétairányító</Hungarian>
         </Key>
+        <Key ID="STR_ACE_MissileGuidance_mclosDown">
+            <English>MCLOS Down</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_mclosLeft">
+            <English>MCLOS Left</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_mclosRight">
+            <English>MCLOS Right</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_mclosUp">
+            <English>MCLOS Up</English>
+        </Key>
     </Package>
 </Project>
