@@ -23,26 +23,22 @@ if (!isNull objectParent _unit) exitWith {};
 
 private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
     private _cartridge = getText (configFile >> "CfgAmmo" >> _ammo >> "cartridge");
-    if (_cartridge == "") then { // return (note: can't use exitWith)
-        ""
-    } else {
+    private _model = switch (true) do {
+        case (_cartridge == ""): { "" };
+
         private _cartridgeConfig = configFile >> "CfgVehicles" >> _cartridge;
+        private _modelOverride = getText (_cartridgeConfig >> QGVAR(model));
 
-        // if explicitly defined, use ACE's config
-        if (isText (_cartridgeConfig >> QGVAR(model))) exitWith {
-            getText (_cartridgeConfig >> QGVAR(model))
-        };
-        // use casing's default model
-        private _model = getText (_cartridgeConfig >> "model");
-        if ("a3\weapons_f\empty" in toLowerANSI _model) exitWith { "" };
-
-        // Add file extension if missing (fileExists needs file extension)
-        if ((_model select [count _model - 4]) != ".p3d") then {
-            _model = _model + ".p3d";
-        };
-
-        ["", _model] select (fileExists _model)
+        case (_modelOverride != ""): { _modelOverride }; // Use the override if non-empty
+        default { getText (_cartridgeConfig >> "model") } // Use the casing's default model
     };
+
+    // Add file extension if missing (fileExists needs file extension)
+    if ((_model select [count _model - 4]) != ".p3d") then {
+        _model = _model + ".p3d";
+    };
+
+    ["", _model] select (!("a3\weapons_f\empty" in toLowerANSI _model) && fileExists _model)
 }, true];
 
 if (_modelPath isEqualTo "") exitWith {};
