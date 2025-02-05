@@ -883,16 +883,19 @@
             <English>Consequence of extreme thirst/hunger (over 85%)</English>
             <German>Folge von extremen Durst/Hunger (über 85%)</German>
             <Italian>Conseguenze di sete/fame estrema (oltre 85%)</Italian>
+            <Korean>극심한 허기 및 갈증으로 인한 증상 (85% 이상)</Korean>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Pain">
             <English>Pain</English>
             <German>Schmerzen</German>
             <Italian>Dolore</Italian>
+            <Korean>고통</Korean>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Unconsciousness">
             <English>Fainting</English>
             <German>Ohnmacht</German>
             <Italian>Svenimenti</Italian>
+            <Korean>기절</Korean>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NoWaterRemaining">
             <English>There is no water left.</English>
