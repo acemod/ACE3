@@ -4642,7 +4642,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_DisplayName">
             <English>Skilled IV Bag Treatment Time</English>
-            <Korean>필요한 의료 레벨 이상인 유닛이 수액용기로 수액을 투여하는 데 걸리는 시간(초)입니다.</Korean>
+            <Korean>숙련도에 따른 수액용기 투여 시간</Korean>
             <French>Temps de traitement des poches IV par un personnel qualifié</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
