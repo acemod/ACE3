@@ -69,7 +69,7 @@ if (isNull _holder) exitWith {
 //Make sure only one drop operation at a time (using PFEH system as a queue)
 if (_holder getVariable [QGVAR(holderInUse), false]) exitWith {
     [{
-        _this call FUNC(disarmDropItems);
+        call FUNC(disarmDropItems);
     }, _this] call CBA_fnc_execNextFrame;
 };
 _holder setVariable [QGVAR(holderInUse), true];

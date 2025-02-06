@@ -54,7 +54,7 @@ private _icon = "";
             {true},
             {
                 if (EGVAR(interact_menu,selectedTarget) isEqualTo _target) then {
-                    _this call FUNC(addPassengerActions)
+                    call FUNC(addPassengerActions)
                 } else {
                     [] // not selected, don't waste time on actions
                 };

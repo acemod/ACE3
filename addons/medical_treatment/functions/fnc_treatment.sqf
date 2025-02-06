@@ -25,7 +25,7 @@ if (uiNamespace getVariable [QEGVAR(interact_menu,cursorMenuOpened), false]) exi
     [FUNC(treatment), _this] call CBA_fnc_execNextFrame;
 };
 
-if !(_this call FUNC(canTreat)) exitWith {false};
+if !(call FUNC(canTreat)) exitWith {false};
 
 private _config = configFile >> QGVAR(actions) >> _classname;
 

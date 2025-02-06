@@ -69,7 +69,7 @@ GVAR(ehpTimeout) = -1;
         params ["_player", "_vehicle"];
 
         TRACE_2("vehicle change",_player,_vehicle);
-        _this call FUNC(updatePlayerVehAttenuation);
+        call FUNC(updatePlayerVehAttenuation);
 
         if (!isNull GVAR(lastPlayerVehicle)) then {
             private _firedEH = GVAR(lastPlayerVehicle) getVariable [QGVAR(firedEH), -1];
