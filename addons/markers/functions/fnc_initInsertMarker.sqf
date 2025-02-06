@@ -68,7 +68,7 @@
     // Install MapDrawEH on current map
     if !((ctrlIDD _mapDisplay) in GVAR(mapDisplaysWithDrawEHs)) then {
         GVAR(mapDisplaysWithDrawEHs) pushBack (ctrlIDD _mapDisplay);
-        _mapCtrl ctrlAddEventHandler ["Draw", {_this call FUNC(mapDrawEH)}]; // @todo check if persistent
+        _mapCtrl ctrlAddEventHandler ["Draw", {call FUNC(mapDrawEH)}]; // @todo check if persistent
     };
 
     ////////////////////
@@ -248,7 +248,7 @@
             };
         };
 
-        _channel ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedChannel)}];
+        _channel ctrlAddEventHandler ["LBSelChanged", {call FUNC(onLBSelChangedChannel)}];
 
         _offsetButtons = 9 * _posH + 10 * BORDER;
     } else {
@@ -297,7 +297,7 @@
 
     //Update now and add eventHandler:
     [_aceShapeLB, _curSelShape] call FUNC(onLBSelChangedShape);
-    _aceShapeLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedShape)}];
+    _aceShapeLB ctrlAddEventHandler ["LBSelChanged", {call FUNC(onLBSelChangedShape)}];
 
     ////////////////////
     // init marker color lb
@@ -319,7 +319,7 @@
 
     //Update now and add eventHandler:
     [_aceColorLB, _curSelColor] call FUNC(onLBSelChangedColor);
-    _aceColorLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedColor)}];
+    _aceColorLB ctrlAddEventHandler ["LBSelChanged", {call FUNC(onLBSelChangedColor)}];
 
     ////////////////////
     // init marker angle slider
@@ -336,8 +336,8 @@
 
     //Update now and add eventHandler:
     [_aceAngleSlider, _curSelAngle] call FUNC(onSliderPosChangedAngle);
-    _aceAngleSlider ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedAngle)}];
-    _aceAngleSlider ctrlAddEventHandler ["MouseButtonUp", {_this call FUNC(onSliderMouseButtonUpAngle)}];
+    _aceAngleSlider ctrlAddEventHandler ["SliderPosChanged", {call FUNC(onSliderPosChangedAngle)}];
+    _aceAngleSlider ctrlAddEventHandler ["MouseButtonUp", {call FUNC(onSliderMouseButtonUpAngle)}];
 
     ////////////////////
     // init marker scale slider
@@ -354,6 +354,6 @@
 
     //Update now and add eventHandler:
     [_aceScaleSlider, _curSelScale] call FUNC(onSliderPosChangedScale);
-    _aceScaleSlider ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedScale)}];
-    _aceScaleSlider ctrlAddEventHandler ["MouseButtonUp", {_this call FUNC(onSliderMouseButtonUpScale)}];
+    _aceScaleSlider ctrlAddEventHandler ["SliderPosChanged", {call FUNC(onSliderPosChangedScale)}];
+    _aceScaleSlider ctrlAddEventHandler ["MouseButtonUp", {call FUNC(onSliderMouseButtonUpScale)}];
 }, _this] call CBA_fnc_execNextFrame;

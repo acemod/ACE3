@@ -4501,10 +4501,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to administer medication using an autoinjector.</English>
+            <Korean>필요한 의료 레벨 이상인 유닛이 자동주사기로 약물을 투여하는 데 걸리는 시간(초)입니다.</Korean>
             <French>Temps, en secondes, nécessaire à une unité dépassant le niveau de formation requis pour administrer un médicament à l'aide d'un auto-injecteur.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_DisplayName">
             <English>Skilled Autoinjector Treatment Time</English>
+            <Korean>숙련도에 따른 자동주사기 투여 시간</Korean>
             <French>Temps d'administration de l'auto-injecteur en fonction du niveau de compétence</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeBodyBag_Description">
@@ -4635,10 +4637,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to administer an IV bag.</English>
+            <Korean>필요한 의료 레벨 이상인 유닛이 수액용기로 수액을 투여하는 데 걸리는 시간(초)입니다.</Korean>
             <French>Temps, en secondes, nécessaire à une unité dépassant le niveau de formation requis pour administrer une poche de perfusion.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_DisplayName">
             <English>Skilled IV Bag Treatment Time</English>
+            <Korean>필요한 의료 레벨 이상인 유닛이 수액용기로 수액을 투여하는 데 걸리는 시간(초)입니다.</Korean>
             <French>Temps de traitement des poches IV par un personnel qualifié</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeSplint_Description">
@@ -4669,10 +4673,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to apply a splint.</English>
+            <Korean>필요한 의료 레벨 이상인 유닛이 부목을 적용하는 데 걸리는 시간(초)입니다.</Korean>
             <French>Temps, en secondes, nécessaire à une unité dépassant le niveau de formation requis pour poser une attelle.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_DisplayName">
             <English>Skilled Splint Treatment Time</English>
+            <Korean>숙련도에 따른 부목 적용 시간</Korean>
             <French>Temps de pose de l'attelle en fonction du niveau de compétence</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTourniquet_Description">
@@ -4703,10 +4709,12 @@
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to apply or remove a tourniquet.</English>
+            <Korean>필요한 의료 레벨 이상인 유닛이 지혈대를 묶거나 제거하는 데 걸리는 시간(초)입니다.</Korean>
             <French>Temps, en secondes, nécessaire à une unité dépassant le niveau de formation requis pour poser ou retirer un garrot.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_DisplayName">
             <English>Skilled Tourniquet Treatment Time</English>
+            <Korean>숙련도에 따른 지혈대 적용 시간</Korean>
             <French>Temps d'application du garrot en fonction de la compétence</French>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TriageCard_NoEntry">
