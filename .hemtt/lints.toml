@@ -1,6 +1,12 @@
 [config.file_type]
 options.allow_no_extension = true
 
+[stringtables.usage]
+options.ignore = [
+    "str_ace_repair_hit",
+]
+options.ignore_unused = true
+
 [sqf.banned_commands]
 options.ignore = [
     "addPublicVariableEventHandler", # Alt syntax is broken, we are using main syntax
