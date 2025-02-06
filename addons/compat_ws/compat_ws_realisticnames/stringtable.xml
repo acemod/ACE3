@@ -331,24 +331,24 @@
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Camo_Name">
             <English>XMS (Stripes)</English>
+            <French>XMS (Rayé)</French>
             <Italian>XMS (Strisce)</Italian>
             <Korean>XMS (줄무늬 위장)</Korean>
             <Japanese>XMS (縞模様迷彩)</Japanese>
-            <French>XMS (Rayé)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Camo_Name">
             <English>XMS GL (Stripes)</English>
+            <French>XMS GL (Rayé)</French>
             <Italian>XMS GL (Strisce)</Italian>
             <Korean>XMS GL (줄무늬 위장)</Korean>
             <Japanese>XMS GL (縞模様迷彩)</Japanese>
-            <French>XMS GL (Rayé)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Gray_Name">
             <English>XMS GL (Gray)</English>
+            <French>XMS GL (Gris)</French>
             <Italian>XMS GL (Grigio)</Italian>
             <Korean>XMS GL (회색)</Korean>
             <Japanese>XMS GL (グレー)</Japanese>
-            <French>XMS GL (Gris)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Khaki_Name">
             <English>XMS GL (Khaki)</English>
@@ -388,10 +388,10 @@
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Gray_Name">
             <English>XMS (Gray)</English>
+            <French>XMS (Gris)</French>
             <Italian>XMS (Grigio)</Italian>
             <Korean>XMS (회색)</Korean>
             <Japanese>XMS (グレー)</Japanese>
-            <French>XMS (Gris)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Khaki_Name">
             <English>XMS (Khaki)</English>
@@ -419,17 +419,17 @@
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Camo_Name">
             <English>XMS SG (Stripes)</English>
+            <French>XMS SG (Rayé)</French>
             <Italian>XMS SG (Strisce)</Italian>
             <Korean>XMS SG (줄무늬 위장)</Korean>
             <Japanese>XMS SG (縞模様迷彩)</Japanese>
-            <French>XMS SG (Rayé)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Gray_Name">
             <English>XMS SG (Gray)</English>
+            <French>XMS SG (Gris)</French>
             <Italian>XMS SG (Grigio)</Italian>
             <Korean>XMS SG (회색)</Korean>
             <Japanese>XMS SG (グレー)</Japanese>
-            <French>XMS SG (Gris)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Khaki_Name">
             <English>XMS SG (Khaki)</English>
@@ -469,17 +469,17 @@
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Camo_Name">
             <English>XMS SW (Stripes)</English>
+            <French>XMS SW (Rayé)</French>
             <Italian>XMS SW (Strisce)</Italian>
             <Korean>XMS SW (줄무늬 위장)</Korean>
             <Japanese>XMS SW (縞模様迷彩)</Japanese>
-            <French>XMS SW (Rayé)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Gray_Name">
             <English>XMS SW (Gray)</English>
+            <French>XMS SW (Gris)</French>
             <Italian>XMS SW (Grigio)</Italian>
             <Korean>XMS SW (회색)</Korean>
             <Japanese>XMS SW (グレー)</Japanese>
-            <French>XMS SW (Gris)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Khaki_Name">
             <English>XMS SW (Khaki)</English>
@@ -531,17 +531,17 @@
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_camo_Name">
             <English>C-More Railway (Red, Stripes)</English>
+            <French>C-More Railway (Rouge, Rayé)</French>
             <Italian>C-More Railway (Rosso, Strisce)</Italian>
             <Korean>씨모어 레일웨이 (빨강/줄무늬 위장)</Korean>
             <Japanese>C-More レイルウェイ (レッド、縞模様迷彩)</Japanese>
-            <French>C-More Railway (Rouge, Rayé)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_grn_camo_Name">
             <English>C-More Railway (Green, Stripes)</English>
+            <French>C-More Railway (Vert, Rayé)</French>
             <Italian>C-More Railway (Verde, Strisce)</Italian>
             <Korean>씨모어 레일웨이 (초록/줄무늬 위장)</Korean>
             <Japanese>C-More レイルウェイ (グリーン、縞模様迷彩)</Japanese>
-            <French>C-More Railway (Vert, Rayé)</French>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_tracked_02_Name">
             <English>BM-2T Stalker (Bumerang-BM)</English>

@@ -23,7 +23,7 @@ class CfgMagazines {
     class ACE_150Rnd_556x45_Drum_tracer_yellow: 150Rnd_556x45_Drum_Mag_tracer_F {
         ammo = "B_556x45_Ball_tracer_yellow";
         STRINGS(150Rnd_556x45_Drum_tracer_yellow);
-        descriptionShort = CSTRING(150Rnd_556x45_Drum_tracer_green_description);
+        descriptionShort = CSTRING(150Rnd_556x45_Drum_tracer_yellow_description);
     };
 
     class 200Rnd_556x45_Box_F;
@@ -196,7 +196,7 @@ class CfgMagazines {
     class ACE_20Rnd_762x51_Mag_tracer_yellow: ACE_20Rnd_762x51_Mag_tracer {
         ammo = "B_762x51_tracer_yellow";
         STRINGS(20Rnd_762x51_Mag_tracer_yellow);
-        descriptionShort = CSTRING(20Rnd_762x51_Mag_tracer_green_description);
+        descriptionShort = CSTRING(20Rnd_762x51_Mag_tracer_yellow_description);
     };
 
     // 7.62x54 (Russian)

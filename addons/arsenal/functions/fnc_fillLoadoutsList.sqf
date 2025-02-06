@@ -68,7 +68,9 @@ if (GVAR(currentLoadoutsTab) != IDC_buttonSharedLoadouts) then {
 
         // If not in cache, get info and cache it
         if (isNil "_loadoutCachedInfo") then {
-            _loadoutCachedInfo = [_loadoutData] call FUNC(verifyLoadout);
+            // Run verification in "recover" mode to salvage invalid containers, replacing them with those currently being worn
+            _loadoutCachedInfo = [_loadoutData, true] call FUNC(verifyLoadout);
+            _loadoutCachedInfo = [GVAR(center), _loadoutCachedInfo] call FUNC(recoverInvalidContainers);
             _contentPanelCtrl setVariable [_loadoutNameAndTab, _loadoutCachedInfo];
 
             _loadoutCachedInfo params ["", "_nullItemsList", "_unavailableItemsList", "_missingExtendedInfo"];
