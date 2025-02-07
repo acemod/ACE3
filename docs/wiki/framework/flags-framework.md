@@ -37,7 +37,7 @@ class CfgWeapons {
         ace_flags_actionIconCarry = "\addon_prefix\data\pictures\my_flag_carry_icon.paa"; // Path to the icon for the carry action. Do not overwrite for default white icon (inherited by ace_flags_white).
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
-            mass = 6.6; // Item/Flag mass. We're assuming 300g.
+            mass = 6.6; // (Optional) Overwrite default item/flag mass. We're assuming 300g.
         };
     };
 };
@@ -45,7 +45,7 @@ class CfgWeapons {
 
 ### 1.2 Add the carrier
 
-Each flag item requires a flag carrier. This is the object that is placed. Inherit from an existing flag carrier, so that the pickup action is shown and the flag texture is set as defined in the item config. 
+Each flag item requires a flag carrier. This is the object that is placed. Inherit from an existing flag carrier, so that the pickup action is shown and the flag texture is set as defined in the corresponding item config. 
 
 ```cpp
 class CfgVehicles {
