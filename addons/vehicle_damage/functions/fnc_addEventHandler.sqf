@@ -38,7 +38,7 @@ _vehicle allowCrewInImmobile true;
     TRACE_1("added eh",_vehicle);
 
     _vehicle setVariable [QGVAR(hitHash), createHashMap];
-    _vehicle setVariable [QGVAR(handleDamage), _vehicle addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]];
+    _vehicle setVariable [QGVAR(handleDamage), _vehicle addEventHandler ["HandleDamage", {call FUNC(handleDamage)}]];
 }, _vehicle] call CBA_fnc_execNextFrame;
 
 private _typeOf = typeOf _vehicle;

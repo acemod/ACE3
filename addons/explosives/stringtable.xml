@@ -45,40 +45,6 @@
             <Chinesesimp>断开</Chinesesimp>
             <Turkish>Bloke Edilmiş</Turkish>
         </Key>
-        <Key ID="STR_ACE_Explosives_Cancel">
-            <English>Cancel</English>
-            <Czech>Zrušit</Czech>
-            <French>Annuler</French>
-            <Spanish>Cancelar</Spanish>
-            <Italian>Annulla</Italian>
-            <Polish>Anuluj</Polish>
-            <Portuguese>Cancelar</Portuguese>
-            <Russian>Отмена</Russian>
-            <German>Abbrechen</German>
-            <Korean>취소</Korean>
-            <Japanese>中止</Japanese>
-            <Chinese>取消</Chinese>
-            <Chinesesimp>取消</Chinesesimp>
-            <Turkish>Iptal</Turkish>
-            <Hungarian>Mégsem</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Explosives_CancelAction">
-            <English>Cancel</English>
-            <Czech>Zrušit</Czech>
-            <French>Annuler</French>
-            <Spanish>Cancelar</Spanish>
-            <Italian>Annulla</Italian>
-            <Polish>Anuluj</Polish>
-            <Portuguese>Cancelar</Portuguese>
-            <Russian>Отмена</Russian>
-            <German>Abbrechen</German>
-            <Korean>취소</Korean>
-            <Japanese>中止</Japanese>
-            <Chinese>取消</Chinese>
-            <Chinesesimp>取消</Chinesesimp>
-            <Turkish>Iptal</Turkish>
-            <Hungarian>Mégsem</Hungarian>
-        </Key>
         <Key ID="STR_ACE_Explosives_Clear">
             <English>Clear</English>
             <Czech>Čistý</Czech>
@@ -1097,11 +1063,11 @@
         </Key>
         <Key ID="STR_ACE_Explosives_apersToePopper">
             <English>APERS Mine (Toe-Popper)</English>
-            <Japanese>対人地雷 (トウポッパー)</Japanese>
-            <Chinesesimp>反人员地雷 (脚尖毁灭者)</Chinesesimp>
-            <Korean>대인지뢰 (발목지뢰형)</Korean>
             <French>Mine APERS (Toe-Popper)</French>
             <Russian>APERS мина (Toe-Topper)</Russian>
+            <Korean>대인지뢰 (발목지뢰형)</Korean>
+            <Japanese>対人地雷 (トウポッパー)</Japanese>
+            <Chinesesimp>反人员地雷 (脚尖毁灭者)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_cellphone_description">
             <English>Used to remotely trigger explosives</English>

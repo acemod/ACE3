@@ -28,7 +28,7 @@ GVAR(mousePos) = [0.5, 0.5];
 //Allow panning the lastStillPosition while mapShake is active
 GVAR(rightMouseButtonLastPos) = [];
 
-_control ctrlAddEventHandler ["Draw", {_this call FUNC(updateMapEffects)}];
+_control ctrlAddEventHandler ["Draw", {call FUNC(updateMapEffects)}];
 _control ctrlAddEventHandler ["MouseMoving", {
     params ["_control", "_x", "_y"];
     if (GVAR(isShaking) && {count GVAR(rightMouseButtonLastPos) == 2}) then {

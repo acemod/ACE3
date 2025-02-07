@@ -30,7 +30,7 @@
             private _name = getText (_config >> "displayName");
             private _picture = getText (_config >> "picture");
 
-            private _action = [_x, format ["%1 (%2)", _name, _totalCount - count (_magazines - [_x])], _picture, {[{_this call FUNC(setupExplosive)}, _this] call CBA_fnc_execNextFrame}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
+            private _action = [_x, format ["%1 (%2)", _name, _totalCount - count (_magazines - [_x])], _picture, {[{call FUNC(setupExplosive)}, _this] call CBA_fnc_execNextFrame}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
             _actions pushBack [_action, [], _player];
         };
     } forEach (_magazines arrayIntersect _magazines);
