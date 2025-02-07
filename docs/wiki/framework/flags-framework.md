@@ -32,9 +32,11 @@ class CfgWeapons {
 
         ace_flags_texture = "\addon_prefix\data\flags\my_flag.paa"; // Path to the flag texture
         ace_flags_carrier = "TAG_Carrier_MyFlag"; // Classname of the corresponding vehicle that gets placed.
-
-        ace_flags_actionIconPlace = "\addon_prefix\data\icons\my_flag_place_icon.paa"; // Path to the icon for the place action. Do not overwrite for default white icon (inherited by ace_flags_white).
-        ace_flags_actionIconCarry = "\addon_prefix\data\pictures\my_flag_carry_icon.paa"; // Path to the icon for the carry action. Do not overwrite for default white icon (inherited by ace_flags_white).
+        
+        // Path to the icon for the place action. Do not overwrite for default white icon (inherited by ace_flags_white).
+        ace_flags_actionIconPlace = "\addon_prefix\data\icons\my_flag_place_icon.paa";
+        // Path to the icon for the carry action. Do not overwrite for default white icon (inherited by ace_flags_white).
+        ace_flags_actionIconCarry = "\addon_prefix\data\pictures\my_flag_carry_icon.paa";
 
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 6.6; // (Optional) Overwrite default item/flag mass. We're assuming 300g.
