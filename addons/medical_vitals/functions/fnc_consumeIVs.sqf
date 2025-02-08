@@ -34,7 +34,7 @@ private _consumedIVs = [];
         continue
     };
 
-    private _bagChange = (_deltaT * EGVAR(medical,ivFlowRate) * IV_CHANGE_PER_SECOND * _rateCoef) min _bagVolumeRemaining; // absolute value of the change in miliLiters
+    private _bagChange = (_deltaT * EGVAR(medical,ivFlowRate) * IV_CHANGE_PER_SECOND * _rateCoef) min _bagVolumeRemaining; // absolute value of the change in milliliters
     _bagVolumeRemaining = _bagVolumeRemaining - _bagChange;
     _consumedIVs pushBack [_type, _treatment, _bagChange];
 
