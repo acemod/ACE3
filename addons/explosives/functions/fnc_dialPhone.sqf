@@ -43,17 +43,17 @@ if (_unit == ace_player) then {
     ctrlSetText [1400,"Calling"];
     [LINKFUNC(dialingPhone), 0.25, [_unit,4,_arr,_explosive,_ringtonePath,_ringtoneDuration]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
 } else {
-	if ((count _explosive) > 0) then {
-		private _waitTime = 0.25 * _ringtoneDuration;
-		[{
-			params ["_unit", "_item", "_ringtonePath"];
-			if ([_unit, -1, (_item # 0), (_item # 2), "ACE_Cellphone"] call FUNC(checkDetonateHandlers)) then {
-				playSound3D [_ringtonePath, objNull, false, (getPosASL (_item # 0)), 3.16228, 1, 75];
-			};
+    if ((count _explosive) > 0) then {
+        private _waitTime = 0.25 * _ringtoneDuration;
+        [{
+            params ["_unit", "_item", "_ringtonePath"];
+            if ([_unit, -1, (_item # 0), (_item # 2), "ACE_Cellphone"] call FUNC(checkDetonateHandlers)) then {
+                playSound3D [_ringtonePath, objNull, false, (getPosASL (_item # 0)), 3.16228, 1, 75];
+            };
 
-			_unit setVariable [QGVAR(Dialing), false, true];
-		}, [_unit, _explosive, _ringtonePath], _waitTime] call CBA_fnc_waitAndExecute;
+            _unit setVariable [QGVAR(Dialing), false, true];
+        }, [_unit, _explosive, _ringtonePath], _waitTime] call CBA_fnc_waitAndExecute;
 
-		[_explosive select 0,(_waitTime + 2) + (_explosive select 2), "ACE_Cellphone", _unit] call FUNC(startTimer);
-	};
+        [_explosive select 0,(_waitTime + 2) + (_explosive select 2), "ACE_Cellphone", _unit] call FUNC(startTimer);
+    };
 };
