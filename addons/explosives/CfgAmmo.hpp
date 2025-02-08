@@ -103,7 +103,11 @@ class CfgAmmo {
         indirectHit = 500;
         indirectHitRange = 7;
     };
-    class PipeBombBase;
+
+	class PipeBombCore;
+	class PipeBombBase : PipeBombCore {
+		GVAR(ringtones)[] = {{QPATHTOF(Data\Audio\Cellphone_Ring.wss),0.75}};
+	};
     class SatchelCharge_Remote_Ammo: PipeBombBase {
         GVAR(magazine) = "SatchelCharge_Remote_Mag";
         GVAR(size) = 0;
