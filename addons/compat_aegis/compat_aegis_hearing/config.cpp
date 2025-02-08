@@ -8,7 +8,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "A3_Aegis_Characters_F_Aegis_Headgear"
+            "A3_Aegis_Characters_F_Aegis_Headgear",
             "ace_hearing"
         };
         skipWhenMissingDependencies = 1;
