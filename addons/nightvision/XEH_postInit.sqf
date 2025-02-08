@@ -38,6 +38,11 @@ GVAR(isUsingMagnification) = false;
     ["unit", {
         // Call manually to update existing value
         GVAR(playerHMD) = hmd ace_player;
+
+        // Fix overlay not being present when switching units
+        [false] call FUNC(setupDisplayEffects);
+        [true] call FUNC(setupDisplayEffects);
+
         [] call FUNC(refreshGoggleType);
     }, true] call CBA_fnc_addPlayerEventHandler;
 
