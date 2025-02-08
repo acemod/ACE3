@@ -22,7 +22,7 @@ params ["_unit", "_syncValues"];
 private _activeTourniquets = GET_TOURNIQUETS(_unit) - [0];
 if (_activeTourniquets isEqualTo []) exitWith {};
 
-private _oldestTourniquetTime = selectMin _activeTourniquets ;
+private _oldestTourniquetTime = selectMin _activeTourniquets;
 private _tourniquetPainSeconds = CBA_missionTime - _oldestTourniquetTime - TOURNIQUET_MIN_TIME_FOR_PAIN;
 if (_tourniquetPainSeconds <= 0) exitWith {};
 
