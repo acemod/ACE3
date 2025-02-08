@@ -39,7 +39,7 @@ private _entries = [];
         } else {
             // Runs in preInit
             // In case function doesn't exist yet, wrap in extra layer
-            _entries pushBack (compile format ["call %1", _entryResult]);
+            _entries pushBack [_entryName, (compile format ["call %1", _entryResult])];
         };
     };
 } forEach configProperties [_config, "isText _x", false];
