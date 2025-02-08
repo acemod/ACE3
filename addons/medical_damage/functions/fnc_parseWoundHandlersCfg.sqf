@@ -22,6 +22,7 @@ private _entries = [];
 
 {
     private _entryResult = getText _x;
+    private _entryName = configName _x;
 
     if (_entryResult != "") then {
         if (ADDON) then {
@@ -30,15 +31,15 @@ private _entries = [];
 
             if (!isNil "_entryResult") then {
                 if (_entryResult isEqualType {}) then {
-                    _entries pushBack _entryResult;
+                    _entries pushBack [_entryName, _entryResult];
                 } else {
-                    ERROR_2("Wound handler '%1' needs to be a function, but is of type %2.",configName _x,toLowerANSI typeName _entryResult);
+                    ERROR_2("Wound handler '%1' needs to be a function, but is of type %2.",_entryName,toLowerANSI typeName _entryResult);
                 };
             };
         } else {
             // Runs in preInit
             // In case function doesn't exist yet, wrap in extra layer
-            _entries pushBack (compile format ["call %1", _entryResult]);
+            _entries pushBack [_entryName, (compile format ["call %1", _entryResult])];
         };
     };
 } forEach configProperties [_config, "isText _x", false];
