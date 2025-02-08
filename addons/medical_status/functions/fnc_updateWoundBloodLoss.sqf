@@ -26,7 +26,7 @@ private _bodyPartBleeding = [0,0,0,0,0,0];
         private _partBleeding = 0;
         {
             _x params ["", "_amountOf", "_bleeeding"];
-            _partBleeding = _partBleeding + (_amountOf * _bleeding);
+            _partBleeding = _partBleeding + (_amountOf * _bleeeding);
         } forEach _y;
         _bodyPartBleeding set [_partIndex, _partBleeding];
     };
