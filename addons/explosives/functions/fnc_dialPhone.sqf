@@ -27,7 +27,7 @@ for "_i" from 1 to _ran do {
     _arr = _arr + ['.','..','...',''];
 };
 
-private _explosive = [_code] call ACE_explosives_fnc_getSpeedDialExplosive;
+private _explosive = [_code] call FUNC(getSpeedDialExplosive);
 
 private _explosiveType = typeOf (_explosive select 0);
 private _ringtone = GVAR(iedRingtonesHash) getOrDefault [_explosiveType,getArray (configFile >> "CfgAmmo" >> _explosiveType >> QGVAR(ringtones)),true];
@@ -47,13 +47,13 @@ if (_unit == ace_player) then {
 		private _waitTime = 0.25 * _ringtoneDuration;
 		[{
 			params ["_unit", "_item", "_ringtonePath"];
-			if ([_unit, -1, (_item # 0), (_item # 2), "ACE_Cellphone"] call ACE_explosives_fnc_checkDetonateHandlers) then {
+			if ([_unit, -1, (_item # 0), (_item # 2), "ACE_Cellphone"] call FUNC(checkDetonateHandlers)) then {
 				playSound3D [_ringtonePath, objNull, false, (getPosASL (_item # 0)), 3.16228, 1, 75];
 			};
 
-			_unit setVariable ["ACE_explosives_Dialing", false, true];
+			_unit setVariable [QGVAR(Dialing), false, true];
 		}, [_unit, _explosive, _ringtonePath], _waitTime] call CBA_fnc_waitAndExecute;
 
-		[_explosive select 0,(_waitTime + 2) + (_explosive select 2), "ACE_Cellphone", _unit] call ACE_explosives_fnc_startTimer;
+		[_explosive select 0,(_waitTime + 2) + (_explosive select 2), "ACE_Cellphone", _unit] call FUNC(startTimer);
 	};
 };
