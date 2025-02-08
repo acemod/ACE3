@@ -11,6 +11,7 @@
             <German>ACE Abschüsse</German>
             <Korean>ACE 킬트래커</Korean>
             <Japanese>ACE キル追跡</Japanese>
+            <Chinesesimp>ACE 击杀追踪器</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_KillTracker_FriendlyFire">
             <English>Friendly Fire</English>
@@ -93,6 +94,7 @@
             <German>Legt fest, ob getötete KIs während des Endbildschirms der Mission in den Abschüssen angezeigt werden.</German>
             <Korean>사후강평 중 살해된 AI가 킬트래킹에 표시되는지 여부를 정의합니다.</Korean>
             <Japanese>キルしたAIをミッション終了デブリーフィング画面に表示させるかどうかを定義します。</Japanese>
+            <Chinesesimp>任务结束时被击杀的AI是否会显示</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_KillTracker_TrackAI_DisplayName">
             <English>Track AI units killed by player</English>
@@ -104,6 +106,7 @@
             <German>Zähle vom Spieler getöteten KI-Einheiten</German>
             <Korean>플레이어가 죽인 AI 트래킹</Korean>
             <Japanese>プレイヤーがキルしたAIユニットを追跡</Japanese>
+            <Chinesesimp>记录被玩家击杀的AI</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_KillTracker_Vehicle">
             <English>Vehicle: %1</English>
@@ -128,6 +131,7 @@
             <German>Zeige Abschüsse des Fahrzeugs dem Fahrer, Richtschützen und Kommandanten an</German>
             <Korean>차량 처치를 운전수, 사수, 지휘관에게 보여줍니다</Korean>
             <Japanese>車両でのキルを操縦手、砲手、車長で共有して表示する</Japanese>
+            <Chinesesimp>将载具取得的击杀计入驾驶员, 炮手和车长</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_KillTracker_showCrewKills_DisplayName">
             <English>Show vehicle kills to other crew members</English>
@@ -138,6 +142,7 @@
             <German>Zeige der Fahrzeugbesatzung die Abschüsse des Fahrzeugs</German>
             <Korean>다른 승무원에게 차량 처치 표시</Korean>
             <Japanese>車両でのキルを乗員全員に表示する</Japanese>
+            <Chinesesimp>将载具取得的击杀计入乘员</Chinesesimp>
         </Key>
     </Package>
 </Project>
