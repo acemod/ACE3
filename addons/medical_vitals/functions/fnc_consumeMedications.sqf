@@ -22,7 +22,7 @@ params ["_unit", "_deltaT", "_syncValues"];
 private _medications = _unit getVariable [VAR_MEDICATIONS, []];
 
 if (_medications isEqualTo []) exitWith {
-    [0, 0, 0, false]
+    false // return
 };
 
 private _hrTargetAdjustment = 0;
