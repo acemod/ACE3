@@ -25,7 +25,7 @@ private _bodyPartBleeding = [0,0,0,0,0,0];
     if (_tourniquets select _partIndex == 0) then {
         private _partBleeding = 0;
         {
-            _x params ["", "_amountOf", "_bleeeding"];
+            _x params ["", "_amountOf", "_bleeding"];
             _partBleeding = _partBleeding + (_amountOf * _bleeding);
         } forEach _y;
         _bodyPartBleeding set [_partIndex, _partBleeding];
