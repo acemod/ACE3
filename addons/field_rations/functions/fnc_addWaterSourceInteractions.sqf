@@ -48,7 +48,7 @@ TRACE_1("Starting interact PFH",_interactionType);
 
                     if (_waterRemaining != REFILL_WATER_DISABLED) then {
                         private _offset = [_x] call FUNC(getActionOffset);
-                        if (_offset isEqualTo [0,0,0]) then {
+                        if (_offset isEqualTo [0, 0, 0]) then {
                             if !(_x getVariable [QGVAR(waterSourceActionsAdded), false]) then {
                                 private _vehicle = _x;
                                 _vehicle setVariable [QGVAR(waterSource), _vehicle];
