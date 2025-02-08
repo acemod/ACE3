@@ -55,6 +55,7 @@ class CfgAmmo {
         ACE_explodeOnDefuse = 0.02;  // (Optional) Add a chance for the explosive to detonate after being disarmed (in percent)
         ACE_explosives_defuseObjectPosition[] = {-1.415, 0, 0.12};  // (Optional) The position relative to the model where the defuse helper object will be attached and thus the interaction point will be rendered
         ACE_explosives_size = 0;  // (Optional) Setting to 1 will use a defusal action with a larger radius (useful for large mines or mines with a wide pressure plane trigger area)
+        ACE_explosives_ringtones[] = {{"\z\addons\explosives\Data\Audio\Cellphone_Ring.wss",0.75}};  // (Optional) Defines ringtone(s) IEDs for ACE explosives, each entry includes a sound file path and its duration in seconds. Shold be in array of [path,duration]
     };
 };
 ```
