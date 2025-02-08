@@ -377,11 +377,7 @@ GVAR(OldIsCamera) = false;
 
 // Update vehicle audio attenuation when player vehicle changes
 GVAR(playerVehAttenuation) = 1;
-["vehicle", {
-    params ["_player", "_vehicle"];
-    TRACE_2("vehicle change",_player,_vehicle);
-    _this call FUNC(updatePlayerVehAttenuation);
-}, true] call CBA_fnc_addPlayerEventHandler;
+["vehicle", LINKFUNC(updatePlayerVehAttenuation), true] call CBA_fnc_addPlayerEventHandler;
 ["turret", LINKFUNC(updatePlayerVehAttenuation), false] call CBA_fnc_addPlayerEventHandler;
 
 // Add event handler for UAV control change

@@ -12,9 +12,9 @@
     if (GVAR(overpressureDistanceCoefficient) > 0 || {GVAR(backblastDistanceCoefficient) > 0}) then {
         ["ace_firedPlayerVehicle", { //IGNORE_PRIVATE_WARNING ["_weapon"];
             if (getNumber (configFile >> "CfgWeapons" >> _weapon >> QGVAR(backblast)) == 1) then {
-                _this call FUNC(firedEHBB);
+                call FUNC(firedEHBB);
             } else {
-                _this call FUNC(firedEHOP);
+                call FUNC(firedEHOP);
             };
         }] call CBA_fnc_addEventHandler;
     };
