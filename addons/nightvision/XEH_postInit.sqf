@@ -40,8 +40,11 @@ GVAR(isUsingMagnification) = false;
         GVAR(playerHMD) = hmd ace_player;
 
         // Fix overlay not being present when switching units
-        [false] call FUNC(setupDisplayEffects);
-        [true] call FUNC(setupDisplayEffects);
+        if (GVAR(running)) then {
+            TRACE_1("restarting effects",CBA_missionTime);
+            [false] call FUNC(setupDisplayEffects);
+            [true] call FUNC(setupDisplayEffects);
+        };
 
         [] call FUNC(refreshGoggleType);
     }, true] call CBA_fnc_addPlayerEventHandler;
