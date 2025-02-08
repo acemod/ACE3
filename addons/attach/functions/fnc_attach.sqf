@@ -22,7 +22,7 @@ _args params [["_itemClassname","", [""]]];
 TRACE_4("params",_attachToVehicle,_unit,_itemClassname,_silentScripted);
 
 //Sanity Check (_unit has item in inventory, not over attach limit)
-if ((_itemClassname == "") || {(!_silentScripted) && {!(_this call FUNC(canAttach))}}) exitWith {ERROR("Tried to attach, but check failed");};
+if ((_itemClassname == "") || {(!_silentScripted) && {!(call FUNC(canAttach))}}) exitWith {ERROR("Tried to attach, but check failed");};
 
 private _itemVehClass = getText (configFile >> "CfgWeapons" >> _itemClassname >> "ACE_Attachable");
 private _onAttachText = getText (configFile >> "CfgWeapons" >> _itemClassname >> "displayName");
