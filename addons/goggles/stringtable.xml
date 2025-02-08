@@ -19,12 +19,12 @@
         </Key>
         <Key ID="STR_ACE_Goggles_SettingDrawOverlay">
             <English>Show Goggles Overlay</English>
-            <Japanese>ゴーグルのオーバーレイを表示する</Japanese>
-            <Korean>고글 오버레이 표시</Korean>
             <French>Afficher la superposition des lunettes</French>
             <Italian>Mostra Overlay degli Occhiali</Italian>
             <Russian>Показать оверлей очков</Russian>
             <German>Zeige Schutzbrillenoberfläche</German>
+            <Korean>고글 오버레이 표시</Korean>
+            <Japanese>ゴーグルのオーバーレイを表示する</Japanese>
         </Key>
         <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
             <English>Show Wipe Goggles self interaction</English>

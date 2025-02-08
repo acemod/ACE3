@@ -25,7 +25,7 @@ if (isNil "_water") then {
     private _configOf = configOf _source;
     if (isNull _configOf) then {
         // Check the p3d name against list
-        _water = if ((getModelInfo _source select 0) in GVAR(waterSourceP3ds)) then {REFILL_WATER_INFINITE} else {REFILL_WATER_DISABLED};
+        _water = [REFILL_WATER_DISABLED, REFILL_WATER_INFINITE] select ((getModelInfo _source select 0) in GVAR(cacheP3Ds));
     } else {
         // Check for waterSupply entry since we have valid typeOf
         _water = getNumber (_configOf >> QXGVAR(waterSupply));

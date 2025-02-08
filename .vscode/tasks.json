@@ -81,7 +81,6 @@
                 "Validate Stringtables",
                 "Validate headers",
                 "Check Strings",
-                "SQFVM Checker",
                 "HEMTT check"
             ],
             "group": {
@@ -119,7 +118,7 @@
             }
         },
         {
-            "label": "Extension: x64",
+            "label": "Extension: make move_x64_release",
             "command": "cargo",
             "options": {
                 "cwd": "${workspaceFolder}"
@@ -133,7 +132,7 @@
             }
         },
         {
-            "label": "Extension: Release",
+            "label": "Extension: make release",
             "command": "cargo",
             "options": {
                 "cwd": "${workspaceFolder}"

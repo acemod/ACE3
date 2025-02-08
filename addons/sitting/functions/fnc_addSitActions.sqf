@@ -15,6 +15,11 @@
  * Public: No
  */
 
+// Only run this after the settings are initialized
+if !(EGVAR(common,settingsInitFinished)) exitWith {
+    EGVAR(common,runAtSettingsInitialized) pushBack [FUNC(addSitActions), _this];
+};
+
 params ["_seat"];
 
 private _type = _seat;
@@ -59,8 +64,8 @@ if !((_sitPosition select 0) isEqualType []) then {
         format [QGVAR(Sit_%1), _forEachIndex],
         LLSTRING(Sit),
         QUOTE(PATHTOF(UI\sit_ca.paa)),
-        {_this call FUNC(sit)},
-        {_this call FUNC(canSit)},
+        {call FUNC(sit)},
+        {call FUNC(canSit)},
         {},
         _forEachIndex,
         _menuPosition,
@@ -69,3 +74,4 @@ if !((_sitPosition select 0) isEqualType []) then {
     [_type, 0, _menuType, _sitAction] call EFUNC(interact_menu,addActionToClass);
 } forEach _sitPosition;
 
+nil // return

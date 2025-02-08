@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Refuel">
-        <Key ID="STR_ACE_Refuel_Cancel">
-            <English>Cancel</English>
-            <Czech>Zrušit</Czech>
-            <French>Annuler</French>
-            <Spanish>Cancelar</Spanish>
-            <Italian>Cancella</Italian>
-            <Polish>Anuluj</Polish>
-            <Portuguese>Cancelar</Portuguese>
-            <Russian>Отменить</Russian>
-            <German>Abbrechen</German>
-            <Korean>취소</Korean>
-            <Japanese>中止</Japanese>
-            <Chinese>取消</Chinese>
-            <Chinesesimp>取消</Chinesesimp>
-            <Turkish>Iptal</Turkish>
-        </Key>
         <Key ID="STR_ACE_Refuel_CheckFuel">
             <English>Check remaining fuel</English>
             <Czech>Zkontrolovat zůstatek paliva</Czech>
@@ -396,8 +380,8 @@
             <German>Wie lange Auftank-Interaktionen in Sekunden dauern.</German>
             <Korean>연료 재보급 상호작용에 걸리는 시간(초)입니다.</Korean>
             <Japanese>燃料補給に掛かる時間。 (秒単位)</Japanese>
-            <Turkish>Saniye biriminde yakıt ikmali etkileşimlerinin süresi.</Turkish>
             <Chinesesimp>加油动作持续时间(秒)</Chinesesimp>
+            <Turkish>Saniye biriminde yakıt ikmali etkileşimlerinin süresi.</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_progressDuration_DisplayName">
             <English>Pump/Hose Interaction Time</English>
@@ -409,8 +393,8 @@
             <German>Interaktionszeit zwischen Pumpe und Schlauch</German>
             <Korean>펌프/호스 상호작용 시간</Korean>
             <Japanese>ポンプ/ホースのインタラクション所要時間</Japanese>
-            <Turkish>Pompa/Hortum Etkileşim Süresi</Turkish>
             <Chinesesimp>加油动作所需时间</Chinesesimp>
+            <Turkish>Pompa/Hortum Etkileşim Süresi</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_Description">
             <English>How fast should a fuel source's tank be filled?</English>

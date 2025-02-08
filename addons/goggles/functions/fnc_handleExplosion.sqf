@@ -25,27 +25,6 @@ if (GETBROKEN) exitWith {true};
 
 private _config = configFile >> "CfgGlasses" >> goggles _unit;
 
-if ((_this select 1) call FUNC(GetExplosionIndex) < getNumber (_config >> "ACE_Resistance")) exitWith {true};
+if ((_this select 1) call FUNC(getExplosionIndex) < getNumber (_config >> "ACE_Resistance")) exitWith {true};
 
-if !([_unit] call FUNC(isGogglesVisible)) exitWith {
-    ["ace_glassesCracked", [_unit]] call CBA_fnc_localEvent;
-    true
-};
-
-private _effects = GETGLASSES(_unit);
-_effects set [BROKEN, true];
-
-SETGLASSES(_unit,_effects);
-
-if (getText (_config >> "ACE_OverlayCracked") != "") then {
-    if (call FUNC(ExternalCamera)) exitWith {};
-
-    if (isNull (GLASSDISPLAY)) then {
-        GVAR(GogglesLayer) cutRsc ["RscACE_Goggles", "PLAIN", 1, false, false];
-    };
-
-    (GLASSDISPLAY displayCtrl IDC_GOGGLES_OVERLAY) ctrlSetText getText (_config >> "ACE_OverlayCracked");
-};
-
-["ace_glassesCracked", [_unit]] call CBA_fnc_localEvent;
-true
+[] call FUNC(applyCrackEffect);

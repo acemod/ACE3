@@ -30,7 +30,7 @@ private _magazines = magazines _player;
     if (getText (_config >> "ACE_Attachable") != "") then {
         private _displayName = getText (_config >> "displayName");
         private _picture = getText (_config >> "picture");
-        private _action = [_x, _displayName, _picture, {[{_this call FUNC(attach)}, _this] call CBA_fnc_execNextFrame}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
+        private _action = [_x, _displayName, _picture, {[{call FUNC(attach)}, _this] call CBA_fnc_execNextFrame}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
         _actions pushBack [_action, [], _target];
     };
 } forEach (_magazines arrayIntersect _magazines);
@@ -40,7 +40,7 @@ private _magazines = magazines _player;
     if (getText (_config >> "ACE_Attachable") != "") then {
         private _displayName = getText (_config >> "displayName");
         private _picture = getText (_config >> "picture");
-        private _action = [_x, _displayName, _picture, {[{_this call FUNC(attach)}, _this] call CBA_fnc_execNextFrame}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
+        private _action = [_x, _displayName, _picture, {[{call FUNC(attach)}, _this] call CBA_fnc_execNextFrame}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
         _actions pushBack [_action, [], _target];
     };
 } forEach (_player call EFUNC(common,uniqueItems));
