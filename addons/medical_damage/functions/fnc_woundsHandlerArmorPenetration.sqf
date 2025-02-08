@@ -29,17 +29,15 @@ TRACE_4("woundsHandlerArmorPenetration",_unit,_allDamages,_typeOfDamage,_ammo);
 
 if (!EGVAR(medical,alternateArmorPenetration)) exitWith {_this};
 
-private _damageData = (_allDamages select 0); // selection specific
-_damageData params ["_engineDamage", "_bodyPart", "_realDamage"];
-
-private _ammoData = _ammo call FUNC(getAmmoData);
-
 // See (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber),
 // _penFactor is ammo "caliber" * RHA penetrability, armor plates according to BI are just made of RHAe material
-_ammoData params ["_hit", "_penFactor", "_typicalSpeed"];
+(_ammo call FUNC(getAmmoData)) params ["_hit", "_penFactor", "_typicalSpeed"];
 
 // Skip bad ammo
 if (_hit <= 0) exitWith {_this};
+
+private _damageData = _allDamages select 0; // selection specific
+_damageData params ["_engineDamage", "_bodyPart", "_realDamage"];
 
 private _armorLevelStep = [2, 4] select (_bodyPart == "body");
 private _armor = (_realDamage/_engineDamage) - 2; // remove base armor
