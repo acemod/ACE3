@@ -88,7 +88,7 @@ GVAR(fragInfoCache) getOrDefaultCall [_ammo, {
     * 3: _metalMassModified - mass of fragmenting metal modified for frag count
     */
     [
-        80 * _indirectHitRange,
+        20 * _indirectHitRange,
         ACE_FRAG_IMPERIC_VELOCITY_CONSTANT * _gurneyConstant * sqrt (_chargeMass / (_metalMass + _chargeMass * _geometryCoefficient)),
         _fragTypes,
         sqrt (_metalMass / 1000)
