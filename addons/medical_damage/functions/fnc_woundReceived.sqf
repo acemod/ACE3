@@ -42,6 +42,6 @@ private _originalCount = count _damageData;
     // If invalid return, log an error and exit
     if (isNil "_damageData" || {!(_damageData isEqualType [])} || {(count _damageData) < _originalCount}) then {
         ERROR_2("Return for handler '%1' invalid - '%2', skipping wound handling",_damageData,_handlerName);
-        break
+        break;
     };
 } forEach _woundHandlers;
