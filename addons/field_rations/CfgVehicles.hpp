@@ -97,7 +97,6 @@ class CfgVehicles {
     class Truck_02_water_base_F;
     class C_IDAP_Truck_02_water_F: Truck_02_water_base_F {
         XGVAR(waterSupply) = 10000;
-        XGVAR(offset)[] = {-0.03, -3.72, -1.05};
     };
 
     class Item_Base_F;
