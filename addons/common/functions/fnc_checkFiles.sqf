@@ -230,7 +230,7 @@ if (isMultiplayer) then {
             // No need to show which addons, just show the mod that the compats are for
             if (_additionalCompats isNotEqualTo []) exitWith {
                 // Fix is easy
-                private _fixMsg = format ["Fix: %1", "Make sure your mod list matches or add those mods to the server. Check your server files and '-mod=' parameter if you're the server administrator."];
+                private _fixMsg = format ["Fix: %1", "Make sure your mod list matches or add those mods to the server.<br/><br/>If you're the server administrator, repair the mods below, check your server mod files and '-mod=' parameter."];
 
                 private _additionalMods = [];
                 private _loadedModsInfo = getLoadedModsInfo;
@@ -246,7 +246,7 @@ if (isMultiplayer) then {
                 } forEach _additionalCompats;
 
                 private _reasonMsg = format ["Reason: %1", "Client has extra mods requiring compats loaded (listed below)"];
-                private _infoMsg = format ["Additional compatibility is being loaded for: %1", _additionalMods joinString ", "];
+                private _infoMsg = format ["Additional compatibility is being loaded for:<br/>%1", _additionalMods joinString ", "];
 
                 [_title, _reasonMsg, _fixMsg, _infoMsg, _infoMsg] // return
             };
