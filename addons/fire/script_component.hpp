@@ -41,3 +41,6 @@
 #define BURN_PROPAGATE_UPDATE 1
 #define BURN_PROPAGATE_DISTANCE 2
 #define BURN_THRESHOLD_INTENSE 3
+
+// Ignore UAV/Drone AI Base Classes
+#define IGNORE_BASE_UAVPILOTS "B_UAV_AI", "O_UAV_AI", "UAV_AI_base_F"

@@ -224,6 +224,22 @@
             <Chinesesimp>启用战斗性耳聋？</Chinesesimp>
             <Hungarian>Harci süketség engedélyezése?</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Hearing_EnableNoiseDucking_Description">
+            <English>Reduces volume of impulse noises like shots and explosions when wearing electronic hearing protection</English>
+            <French>Réduit le volume des bruits d'impulsion tels que les coups de feu et les explosions lorsque l'on porte une protection auditive électronique.</French>
+            <Russian>При ношении электронных средств защиты органов слуха снижается громкость импульсных шумов, таких как выстрелы и взрывы</Russian>
+            <German>Blendet Impulsgeräusche wie Schüsse oder Explosionen beim Tragen von elektronischem Gehörschutz aus</German>
+            <Korean>전자 청력 보호구를 착용하면 총성이나 폭발음과 같은 충격음의 볼륨이 감소합니다.</Korean>
+            <Japanese>電子聴覚保護具を装着しているときに、銃声や爆発音などの衝撃音の音量を低減します</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Hearing_EnableNoiseDucking_DisplayName">
+            <English>Enable Noise Ducking Effect</English>
+            <French>Activer l'effet de réduction du bruit</French>
+            <Russian>Включить эффект подавления шума</Russian>
+            <German>Aktiviere Geräuschunterdrückungseffekt</German>
+            <Korean>잡음 제거 효과 활성화</Korean>
+            <Japanese>ノイズダッキング効果を有効化</Japanese>
+        </Key>
         <Key ID="STR_ACE_Hearing_Module_Description">
             <English>Controls combat deafness and ear ringing. When activated, players can be deafened when a gun is fired in their vicinity or an explosion takes place without hearing protection</English>
             <Czech>Ztráta sluchu je možná ve chvíly, kdy se v bezprostřední blízkosti střílí z velkorážní zbraně nebo při bombardování a osoba je  bez ochrany sluchu (např. špunty). Tento modul umožňuje tuto věc povolit nebo zakázat.</Czech>
@@ -486,14 +502,6 @@
             <Japanese>無意識状態時音量</Japanese>
             <Chinese>昏迷時音量</Chinese>
             <Chinesesimp>无意识时音量</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Hearing_EnableNoiseDucking_Description">
-            <English>Reduces volume of impulse noises like shots and explosions when wearing electronic hearing protection</English>
-            <German>Blendet Impulsgeräusche wie Schüsse oder Explosionen beim Tragen von elektronischem Gehörschutz aus</German>
-        </Key>
-        <Key ID="STR_ACE_Hearing_EnableNoiseDucking_DisplayName">
-            <English>Enable Noise Ducking Effect</English>
-            <German>Aktiviere Geräuschunterdrückungseffekt</German>
         </Key>
     </Package>
 </Project>

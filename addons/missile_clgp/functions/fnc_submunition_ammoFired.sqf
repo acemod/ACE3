@@ -39,7 +39,7 @@ if (_deployCondition != "") then {
     [{
         params ["_projectile", "", "_deployCondition"];
         if (isNull _projectile) exitWith { true };
-        _this call _deployCondition
+        call _deployCondition
     }, {
         params ["_projectile"];
         if (isNull _projectile) exitWith { TRACE_1("null at trigger condition %1",_projectile); };

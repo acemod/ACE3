@@ -35,7 +35,7 @@ if (isServer) then {
 // Ammo box damage handling
 ["ReammoBox_F", "init", {
     // Calling this function inside curly brackets allows the usage of "exitWith", which would be broken with "HandleDamage" otherwise
-    (_this select 0) addEventHandler ["HandleDamage", {_this call FUNC(handleDamageBox)}];
+    (_this select 0) addEventHandler ["HandleDamage", {call FUNC(handleDamageBox)}];
 }, true, [], true] call CBA_fnc_addClassEventHandler;
 
 // Vehicle ammo cook-off (secondary explosions)
