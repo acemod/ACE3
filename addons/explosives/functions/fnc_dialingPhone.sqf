@@ -8,22 +8,21 @@
  * 0: Unit to do dialing <OBJECT>
  * 1: Index <NUMBER>
  * 2: Dialing points <ARRAY>
- * 3: IED code <STRING>
- * 4: Explosive data <ARRAY>
- * 5: Path to ringtone sound file <STRING>
- * 6: Duration before the explosive rings <NUMBER>
+ * 3: Explosive data <ARRAY>
+ * 4: Path to ringtone sound file <STRING>
+ * 5: Duration before the explosive rings <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [ace_explosives_fnc_dialingPhone, 0.25, [_unit,4,_arr,_code, _explosive, _ringtonePath, _ringtoneDuration]] call CBA_fnc_addPerFrameHandler;
+ * [ace_explosives_fnc_dialingPhone, 0.25, [_unit,4,_arr, _explosive, _ringtonePath, _ringtoneDuration]] call CBA_fnc_addPerFrameHandler;
  *
  * Public: No
  */
 
 params ["_args", "_pfID"];
-_args params ["_unit", "_dialStep", "_arr", "_code", "_explosive", "_ringtonePath", "_ringtoneDuration"];
+_args params ["_unit", "_dialStep", "_arr", "_explosive", "_ringtonePath", "_ringtoneDuration"];
 
 if ((_dialStep mod 4) == 0) then {
     private _pos = _unit modelToWorldVisualWorld (_unit selectionPosition "RightHand");

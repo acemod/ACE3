@@ -41,7 +41,7 @@ private _ringtoneDuration = round(count _arr - (_ringtoneLenght + (random 1.5)- 
 TRACE_2("ringtone",_ringtone,_ringtoneDuration);
 if (_unit == ace_player) then {
     ctrlSetText [1400,"Calling"];
-    [LINKFUNC(dialingPhone), 0.25, [_unit,4,_arr,_code,_explosive,_ringtonePath,_ringtoneDuration]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
+    [LINKFUNC(dialingPhone), 0.25, [_unit,4,_arr,_explosive,_ringtonePath,_ringtoneDuration]] call CALLSTACK(CBA_fnc_addPerFrameHandler);
 } else {
 	if ((count _explosive) > 0) then {
 		private _waitTime = 0.25 * _ringtoneDuration;
