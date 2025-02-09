@@ -15,7 +15,7 @@ private _pos = _unitPos
 [
     {
         params ["_modelPath", "_pos"];
-        TRACE_2("creating magazine",_modelPath,_pos);
+        TRACE_2("creating litter",_modelPath,_pos);
 
         private _lisPos = (lineIntersectsSurfaces [_pos, _pos vectorAdd [0,0,-1e11], objNull, objNull, true, 1, "ROADWAY", "FIRE"]) #0;
         private _casing = createSimpleObject [_modelPath, (_lisPos #0 vectorAdd [0,0,0.010]), false]; // global
