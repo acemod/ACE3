@@ -137,23 +137,6 @@
             <Turkish>Lider ol</Turkish>
             <Hungarian>Vezetés átvétele</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Interaction_CancelSelection">
-            <English>Cancel</English>
-            <Czech>Zrušit</Czech>
-            <French>Annuler</French>
-            <Spanish>Cancelar</Spanish>
-            <Italian>Annulla</Italian>
-            <Polish>Anuluj</Polish>
-            <Portuguese>Cancelar</Portuguese>
-            <Russian>Отменить</Russian>
-            <German>Abbrechen</German>
-            <Korean>취소</Korean>
-            <Japanese>中止</Japanese>
-            <Chinese>取消</Chinese>
-            <Chinesesimp>取消</Chinesesimp>
-            <Turkish>Iptal</Turkish>
-            <Hungarian>Mégse</Hungarian>
-        </Key>
         <Key ID="STR_ACE_Interaction_Dance">
             <English>DANCE!</English>
             <Czech>TANCUJ!</Czech>
@@ -448,6 +431,7 @@
             <German>Weiss beitreten</German>
             <Korean>백팀 참여</Korean>
             <Japanese>ホワイトに参加</Japanese>
+            <Chinesesimp>加入白组</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_JoinTeamRed">
             <English>Join Red</English>
@@ -851,18 +835,33 @@
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowable">
             <English>Pass grenade</English>
+            <French>Donner une grenade</French>
+            <Italian>Passa granata</Italian>
+            <Russian>Передать гранаты</Russian>
             <German>Granate geben</German>
+            <Korean>수류탄 건네주기</Korean>
             <Japanese>手榴弾を渡す</Japanese>
+            <Chinesesimp>给予投掷物</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableHint">
             <English>%1 passed you %2.</English>
+            <French>%1 vous a donné %2</French>
+            <Italian>%1 ti ha passato una granata %2.</Italian>
+            <Russian>%1 передал вам %2.</Russian>
             <German>%1 hat dir %2 gegeben.</German>
+            <Korean>%1 님이 %2을(를) 건네주었습니다.</Korean>
             <Japanese>%1 は あなたに %2 を渡した。</Japanese>
+            <Chinesesimp>%1给你了%2</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_PassThrowableSetting">
             <English>Show "pass grenade" interaction</English>
+            <French>Afficher l'interaction « Donner une grenade »</French>
+            <Italian>Mostra l'interazione "passa granata"</Italian>
+            <Russian>Показывать действие "передать гранату"</Russian>
             <German>Zeige "Granate geben" Interaktion</German>
+            <Korean>"수류탄 건네주기" 상호작용 표시</Korean>
             <Japanese>"手榴弾を渡す"をインタラクションに表示</Japanese>
+            <Chinesesimp>显示"给予投掷物"选项</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_Passengers">
             <English>Passengers</English>
@@ -993,8 +992,10 @@
             <Spanish>Interacción con animaciones</Spanish>
             <Italian>Interazione con animazioni</Italian>
             <Russian>Взаимодействие с анимациями</Russian>
+            <German>Interaktion mit Animationen</German>
             <Korean>애니메이션 있는 상호작용</Korean>
             <Japanese>車両アニメーションベースのインタラクション</Japanese>
+            <Chinesesimp>互动动作动画</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_SmashWindshield">
             <English>Smash windshield</English>
@@ -1331,8 +1332,10 @@
             <Spanish>Limita algunas interacciones en vehículos tripulador por facciones enemigas.</Spanish>
             <Italian>Limita alcune interazioni su veicoli con nemici a bordo.</Italian>
             <Russian>Ограничьте некоторые взаимодействия на транспортных средствах, управляемых вражеской стороной.</Russian>
+            <German>Beschränkt einige Interaktionen auf Fahrzeuge, die von feindlichen Fraktionen besetzt sind.</German>
             <Korean>적 진영이 탑승한 차량과의 일부 상호작용을 제한합니다.</Korean>
             <Japanese>敵性力の乗員が乗っている車両へのインタラクションを一部制限します。</Japanese>
+            <Chinesesimp>对敌军载具或固定武器乘员使用互动</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_DisplayName">
             <English>Interact With Enemy Crew</English>
@@ -1340,8 +1343,10 @@
             <Spanish>Interactuar Con Tripulación Enemiga</Spanish>
             <Italian>Interazioni con equipaggio nemico</Italian>
             <Russian>Взаимодействие с вражеским экипажем</Russian>
+            <German>Interaktion mit feindlicher Besatzung</German>
             <Korean>적 승무원과의 상호작용</Korean>
             <Japanese>敵乗員がいる状態でのインタラクト</Japanese>
+            <Chinesesimp>敌军乘员互动</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithEnemyCrew_allowCSW">
             <English>Allow for Static Weapons</English>
@@ -1349,8 +1354,10 @@
             <Spanish>Permitir para Armas Estáticas</Spanish>
             <Italian>Permetti con armi statiche</Italian>
             <Russian>Разрешить использование статического оружия</Russian>
+            <German>Erlaube für statische Waffen</German>
             <Korean>고정화기 허용</Korean>
             <Japanese>固定火器での許可</Japanese>
+            <Chinesesimp>允许固定式武器</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_interactWithTerrainObjects_Description">
             <English>Warning: can cause some objects to collide with others.</English>
@@ -1371,8 +1378,10 @@
             <Spanish>Permite abandonar y cambiar el color del equipo de cualquier unidad en la escuadra del jugador</Spanish>
             <Italian>Permetti di cambiare il colore o rimuovere una qualsiasi unità della propria squadra</Italian>
             <Russian>Позволяет сбрасывать и менять командные цвета любого подразделения в отряде игрока</Russian>
+            <German>Erlaubt das Ändern der Teamfarbe einer beliebigen Einheit in der Gruppe des Spielers</German>
             <Korean>플레이어 분대의 모든 유닛을 삭제하고 팀 색상 변경하는 것을 허용합니다.</Korean>
             <Japanese>プレイヤー分隊内の任意のユニットにチームからの脱退と色の変更を許可します</Japanese>
+            <Chinesesimp>允许小队长更改队内玩家的火力组颜色</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_remoteTeamManagement_DisplayName">
             <English>Remote Squad Management</English>
@@ -1380,8 +1389,10 @@
             <Spanish>Gestión Remota de Escuadra</Spanish>
             <Italian>Gestione squadra da remoto</Italian>
             <Russian>Дистанционное управление отрядом</Russian>
+            <German>Fernverwaltung von Gruppen</German>
             <Korean>분대 원격 관리</Korean>
             <Japanese>遠隔分隊管理</Japanese>
+            <Chinesesimp>远程火力组颜色管理</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Interaction_weaponAttachmentsAttach">
             <English>Attach</English>
@@ -1405,7 +1416,7 @@
             <Portuguese>Desfixar</Portuguese>
             <Russian>Снять</Russian>
             <German>Löse</German>
-            <Korean>떼내기</Korean>
+            <Korean>떼어내기</Korean>
             <Japanese>を外す</Japanese>
             <Chinesesimp>拆卸</Chinesesimp>
         </Key>

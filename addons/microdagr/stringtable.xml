@@ -107,7 +107,7 @@
             <Portuguese>Preenchimento de mapa do MicroDAGR</Portuguese>
             <Russian>Заполнение карты MicroDAGR</Russian>
             <German>MicroDAGR-Kartenfüllung</German>
-            <Korean>마이크로DAGR - 지도채우기</Korean>
+            <Korean>마이크로DAGR - 지도 정보량</Korean>
             <Japanese>MicroDAGR での地図情報</Japanese>
             <Chinese>微型軍用GPS接收器地圖資料</Chinese>
             <Chinesesimp>微型军用 GPS 接收器地图资料</Chinesesimp>
@@ -614,7 +614,7 @@
             <Portuguese>Nome do [%1]</Portuguese>
             <Russian>Название [%1]</Russian>
             <German>Name von [%1]</German>
-            <Korean>[%1] 의 이름</Korean>
+            <Korean>[%1]의 이름</Korean>
             <Japanese>[%1] の名称</Japanese>
             <Chinese>名稱 [%1]</Chinese>
             <Chinesesimp>名称 [%1]</Chinesesimp>

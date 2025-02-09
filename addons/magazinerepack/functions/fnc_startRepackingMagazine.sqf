@@ -68,9 +68,9 @@ if (GVAR(repackAnimation)) then {
 [
     _totalTime,
     [_magazineClassname, _startingAmmoCounts, _simEvents],
-    {_this call FUNC(magazineRepackFinish)},
-    {_this call FUNC(magazineRepackFinish)},
+    {call FUNC(magazineRepackFinish)},
+    {call FUNC(magazineRepackFinish)},
     (localize LSTRING(RepackingMagazine)),
-    {_this call FUNC(magazineRepackProgress)},
+    {call FUNC(magazineRepackProgress)},
     ["isNotInside", "isNotSwimming", "isNotSitting"]
 ] call EFUNC(common,progressBar);

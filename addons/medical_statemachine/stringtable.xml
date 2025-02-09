@@ -11,7 +11,7 @@
             <Portuguese>Controla se a IA pode ficar inconsciente ao invés de morrer imediatamente.\nEssa configuração funciona com "Lesões Fatais de IA", pois para uma unidade ter uma parada cardíaca é necessário que a IA possa fica inconsciente.\nContudo, essas configurações são separadas pois unidades podem ficar inconscientes por vitais críticos causados por ferimentos não-fatais.\nEssencialmente, isso significa que para ativar uma parada cardíaca em IA, essa configuração precisa estar ativa.</Portuguese>
             <Russian>Управляет тем, может ли ИИ потерять сознание, вместо того, чтобы немедленно умереть.\nЭтот параметр работает вместе с параметром «Смертельные раны ИИ», поскольку при остановке сердца требуется, чтобы юнит мог потерять сознание.\nОднако эти настройки разделены, потому что юниты могут потерять сознание из-за критических ранений жизненно важных органов, полученных в результате несмертельных травм.\nВ сущности, это означает, что для включения остановки сердца для ИИ этот параметр должен быть включен.</Russian>
             <German>Kontrolliert, ob KI bewusstlos werden kann anstatt sofort zu sterben.\nDiese Einstellung funktioniert zusammen mit der Einstellung "Tödliche KI-Verletzungen". Denn wenn eine Einheit einen Herzstillstand erleiden soll, muss diese auch in der Lage sein, bewusstlos zu werden.\nDennoch sind diese beiden Einstellungen voneinander getrennt, da Einheiten auch durch kritische Vitalwerte bewusstlos werden können, die durch nicht tödliche Verletzungen aufgetreten sind.\nZusammengefasst bedeutet das, dass wenn KI-Einheiten einen Herzstillstand erleiden sollen, diese Einstellung aktiviert sein muss.</German>
-            <Korean>인공지능이 즉사하기보다 기절하는걸 설정합니다.\n이 기능은 "인공지능 중태" 기능과 같이 사용시 심정지를 구현합니다.</Korean>
+            <Korean>AI가 즉시 죽는 대신 의식불명이 되는지 여부를 제어합니다.\n이 설정은 "인공지능 중태" 설정과 함께 작동합니다. 심정지가 발생하려면 유닛이 의식불명이 되어야 하기 때문입니다.\n그러나 이런 설정들은 비치명적인 부상으로 인해 치명적인 상태로 의식불명이 될 수 있기 때문에 분리되어 있습니다.\n기본적으로 이는 AI 유닛에 대한 심정지를 활성화하려면 이 설정을 활성화 해야함을 의미합니다.</Korean>
             <Japanese>AIが即死する代わりに無意識状態化するかどうかを制御します。\nこれは "AIの致命傷" 設定と連動します。何故ならば、ユニットを心停止させるためには無意識状態に陥る必要がある為です。\nしかし、これらの設定は、致命的ではない負傷の経過による重症状態化でユニットが無意識状態に陥ることが出来るようにするため、分割されています。\n要するに、AIユニットの心停止を有効にするには、この設定を有効にする必要があるということです。</Japanese>
             <Chinese>控制AI是否能進入無意識狀態而非立刻原地死亡。\n這個選項會與「AI致命傷」的選項聯動，使單位心搏停止的話必須先讓其無意識。\n然而，兩個設定分開之原因是使單位能因從非致命傷的攻擊情況下進入生命危險的狀態。\n簡單來說，你想要讓AI單位有心搏停止可能的話，該選項必須啟用。</Chinese>
             <Chinesesimp>控制 AI 是否可以进入昏迷状态而不是立即死亡。\n这个设置与"AI 致命伤"设置一起工作，因为进入心脏骤停需要单位能够昏迷。\n然而，这些设置是分开的，因为单位可能会因非致命伤害导致的关键生命体征而昏迷过去。\n从本质上讲，这意味着为了使 AI 单位的心脏骤停，必须启用此设置。</Chinesesimp>
@@ -166,7 +166,7 @@
             <Portuguese>Em Parada Cardíaca</Portuguese>
             <Russian>При остановке сердца</Russian>
             <German>Herzstillstand</German>
-            <Korean>심정지가 옴</Korean>
+            <Korean>심정지 중</Korean>
             <Japanese>心停止中</Japanese>
             <Chinese>心搏停止中</Chinese>
             <Chinesesimp>心脏骤停中</Chinesesimp>

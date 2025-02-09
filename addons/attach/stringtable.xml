@@ -35,23 +35,6 @@
             <Turkish>Eşyayı bağla</Turkish>
             <Hungarian>Tárgy hozzácsatolása</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Attach_CancelAction">
-            <English>Cancel</English>
-            <Czech>Zrušit</Czech>
-            <French>Annuler</French>
-            <Spanish>Cancelar</Spanish>
-            <Italian>Annulla</Italian>
-            <Polish>Anuluj</Polish>
-            <Portuguese>Cancelar</Portuguese>
-            <Russian>Отмена</Russian>
-            <German>Abbrechen</German>
-            <Korean>취소</Korean>
-            <Japanese>やめる</Japanese>
-            <Chinese>取消</Chinese>
-            <Chinesesimp>取消</Chinesesimp>
-            <Turkish>Iptal</Turkish>
-            <Hungarian>Mégse</Hungarian>
-        </Key>
         <Key ID="STR_ACE_Attach_Chemlight_Attached">
             <English>Chemlight Attached</English>
             <Czech>Chemické světlo připnuto</Czech>
@@ -96,7 +79,7 @@
             <Portuguese>Desprender item</Portuguese>
             <Russian>Отсоединить</Russian>
             <German>Gegenstand entfernen</German>
-            <Korean>떼내기</Korean>
+            <Korean>떼어내기</Korean>
             <Japanese>アイテムを外す</Japanese>
             <Chinese>取下裝備</Chinese>
             <Chinesesimp>取下装备</Chinesesimp>

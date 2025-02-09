@@ -19,6 +19,11 @@
         </Key>
         <Key ID="STR_ACE_Goggles_SettingDrawOverlay">
             <English>Show Goggles Overlay</English>
+            <French>Afficher la superposition des lunettes</French>
+            <Italian>Mostra Overlay degli Occhiali</Italian>
+            <Russian>Показать оверлей очков</Russian>
+            <German>Zeige Schutzbrillenoberfläche</German>
+            <Korean>고글 오버레이 표시</Korean>
             <Japanese>ゴーグルのオーバーレイを表示する</Japanese>
         </Key>
         <Key ID="STR_ACE_Goggles_SettingShowClearGlasses">
@@ -26,11 +31,11 @@
             <Czech>Ukaž Vyčistit brýle v menu Interakce (vlastní)</Czech>
             <French>Afficher l'interaction "Essuyer les lunettes"</French>
             <Spanish>Mostrar limpiar gafas en menú de auto-interacción</Spanish>
-            <Italian>Mostra interazione automatica per la pulizia degli occhiali</Italian>
+            <Italian>Mostra autointerazione per la pulizia degli occhiali</Italian>
             <Polish>Pokaż interakcję Wyczyść Gogle</Polish>
             <Portuguese>Mostra a auto-interação de limpar os óculos</Portuguese>
             <Russian>Показывать действие Протереть очки</Russian>
-            <German>Zeige "Brille abwischen" im Selbstinteraktionsmenü</German>
+            <German>Zeige "Brille abwischen" Interaktion</German>
             <Korean>자기상호작용에 고글 닦기 선택 보이기</Korean>
             <Japanese>ゴーグルを拭うセルフ・インタラクションを表示する</Japanese>
             <Chinese>在自我互動中顯示擦拭護目鏡的動作</Chinese>

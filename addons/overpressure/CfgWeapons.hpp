@@ -1,6 +1,8 @@
 
 class CfgWeapons {
 
+    // Man-Portable launchers, rear-facing backblast
+
     class LauncherCore;
     class Launcher: LauncherCore {
         GVAR(priority) = 1;
@@ -61,6 +63,49 @@ class CfgWeapons {
         GVAR(offset) = 0.9;
     };
 
+    // Vehicle recoilless rifles and missile launchers, rear-facing backblast
+
+    class MissileLauncher: LauncherCore {
+        GVAR(priority) = 1;
+        GVAR(angle) = 60;
+        GVAR(range) = 10;
+        GVAR(damage) = 0.7;
+        GVAR(offset) = 0.8;
+        GVAR(backblast) = 1;
+    };
+
+    class missiles_titan;
+    class missiles_titan_static: missiles_titan {
+        GVAR(angle) = 40;
+        GVAR(range) = 8;
+        GVAR(damage) = 0.5;
+    };
+
+    class missiles_Vorona: MissileLauncher {
+        GVAR(angle) = 50;
+        GVAR(offset) = 0.5;
+    };
+
+    class launcher_SPG9: MissileLauncher {
+        GVAR(offset) = 1.25;
+    };
+
+    class RocketPods: LauncherCore {
+        GVAR(priority) = 1;
+        GVAR(angle) = 60;
+        GVAR(range) = 10;
+        GVAR(damage) = 0.7;
+        GVAR(offset) = 0.8;
+        GVAR(backblast) = 1;
+    };
+
+    class rockets_230mm_GAT: RocketPods {
+        GVAR(damage) = 0.85;
+        GVAR(offset) = 0.5;
+    };
+
+    // Vehicle cannons, forward-facing overpressure
+
     class CannonCore;
     class cannon_120mm: CannonCore {
         GVAR(priority) = 1;
@@ -88,5 +133,13 @@ class CfgWeapons {
         GVAR(angle) = 90;
         GVAR(range) = 60;
         GVAR(damage) = 1;
+    };
+
+    class mortar_82mm: CannonCore {
+        GVAR(priority) = 1;
+        GVAR(angle) = 80;
+        GVAR(range) = 5;
+        GVAR(damage) = 0.7;
+        GVAR(offset) = 0.6;
     };
 };

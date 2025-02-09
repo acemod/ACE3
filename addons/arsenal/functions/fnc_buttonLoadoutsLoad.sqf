@@ -37,6 +37,9 @@ private _extendedLoadout = switch (GVAR(currentLoadoutsTab)) do {
 // Apply loadout to unit
 [GVAR(center), _extendedLoadout, true] call CBA_fnc_setLoadout;
 
+// Prevent overloading of inventory containers
+GVAR(center) call FUNC(preventOverfilling);
+
 // Update current item list and unique items
 [true] call FUNC(refresh);
 

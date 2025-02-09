@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Refuel">
-        <Key ID="STR_ACE_Refuel_Cancel">
-            <English>Cancel</English>
-            <Czech>Zrušit</Czech>
-            <French>Annuler</French>
-            <Spanish>Cancelar</Spanish>
-            <Italian>Cancella</Italian>
-            <Polish>Anuluj</Polish>
-            <Portuguese>Cancelar</Portuguese>
-            <Russian>Отменить</Russian>
-            <German>Abbrechen</German>
-            <Korean>취소</Korean>
-            <Japanese>中止</Japanese>
-            <Chinese>取消</Chinese>
-            <Chinesesimp>取消</Chinesesimp>
-            <Turkish>Iptal</Turkish>
-        </Key>
         <Key ID="STR_ACE_Refuel_CheckFuel">
             <English>Check remaining fuel</English>
             <Czech>Zkontrolovat zůstatek paliva</Czech>
@@ -106,6 +90,7 @@
             <German>Treibstoffkanister anschließen</German>
             <Korean>연료통 꽂기</Korean>
             <Japanese>燃料キャニスターを接続する</Japanese>
+            <Chinesesimp>连接燃料罐</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Refuel_ConnectFuelCanisterAction">
             <English>Connecting fuel canister...</English>
@@ -116,6 +101,7 @@
             <German>Schließe Treibstoffkanister an...</German>
             <Korean>연료통 꽂는 중...</Korean>
             <Japanese>燃料キャニスターを接続しています・・・</Japanese>
+            <Chinesesimp>正在连接燃料罐...</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Refuel_Connect_Action">
             <English>Connect</English>
@@ -174,6 +160,7 @@
             <German>Treibstoffkanister lösen</German>
             <Korean>연료통 빼기</Korean>
             <Japanese>燃料キャニスターを外します</Japanese>
+            <Chinesesimp>断开燃料罐</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Refuel_Failed">
             <English>Failed</English>
@@ -393,6 +380,7 @@
             <German>Wie lange Auftank-Interaktionen in Sekunden dauern.</German>
             <Korean>연료 재보급 상호작용에 걸리는 시간(초)입니다.</Korean>
             <Japanese>燃料補給に掛かる時間。 (秒単位)</Japanese>
+            <Chinesesimp>加油动作持续时间(秒)</Chinesesimp>
             <Turkish>Saniye biriminde yakıt ikmali etkileşimlerinin süresi.</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_progressDuration_DisplayName">
@@ -405,6 +393,7 @@
             <German>Interaktionszeit zwischen Pumpe und Schlauch</German>
             <Korean>펌프/호스 상호작용 시간</Korean>
             <Japanese>ポンプ/ホースのインタラクション所要時間</Japanese>
+            <Chinesesimp>加油动作所需时间</Chinesesimp>
             <Turkish>Pompa/Hortum Etkileşim Süresi</Turkish>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_Description">
@@ -417,6 +406,7 @@
             <German>Wie schnell sollte der Tank einer Kraftstoffquelle gefüllt werden?</German>
             <Korean>연료 공급처의 저장 탱크를 얼마나 빨리 채웁니까?</Korean>
             <Japanese>どのくらいの速さで給油源へ給油しますか?</Japanese>
+            <Chinesesimp>燃料罐补充速度</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speedCargo_DisplayName">
             <English>Cargo Flow Rate</English>
@@ -428,6 +418,7 @@
             <German>Frachtflussrate</German>
             <Korean>화물 주유량</Korean>
             <Japanese>貨物流量</Japanese>
+            <Chinesesimp>燃料罐油料流量</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Refuel_RefuelSettings_speed_Description">
             <English>How fast should a vehicle be refueled?</English>
@@ -502,6 +493,7 @@
             <German>Treibstoffkanister aufheben</German>
             <Korean>연료통 집어들기</Korean>
             <Japanese>燃料キャニスターを持つ</Japanese>
+            <Chinesesimp>拿起燃料罐</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeFuelCanisterAction">
             <English>Picking fuel canister up...</English>
@@ -512,6 +504,7 @@
             <German>Hebe Treibstoffkanister auf...</German>
             <Korean>연료통 집어드는 중...</Korean>
             <Japanese>燃料キャニスターを持ち上げています・・・</Japanese>
+            <Chinesesimp>正在拿起燃料罐...</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Refuel_TakeNozzle">
             <English>Take fuel nozzle</English>
@@ -587,6 +580,7 @@
             <German>Betankung beginnen (Container)</German>
             <Korean>연료 재급유 시작 (컨테이너)</Korean>
             <Japanese>給油を始める (コンテナ)</Japanese>
+            <Chinesesimp>开始加油(燃料罐)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Refuel_fuelCargo_edenDesc">
             <English>The fuel volume available for refueling (-1 disable, -10 if infinite)</English>

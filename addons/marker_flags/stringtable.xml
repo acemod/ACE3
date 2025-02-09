@@ -12,23 +12,7 @@
             <German>Höhe anpassen</German>
             <Korean>높이 조정</Korean>
             <Japanese>高さを調整する</Japanese>
-        </Key>
-        <Key ID="STR_ACE_Marker_Flags_ActionCancel">
-            <English>Cancel</English>
-            <Czech>Zrušit</Czech>
-            <French>Annuler</French>
-            <Spanish>Cancelar</Spanish>
-            <Italian>Annulla</Italian>
-            <Polish>Anuluj</Polish>
-            <Portuguese>Cancelar</Portuguese>
-            <Russian>Отмена</Russian>
-            <German>Abbrechen</German>
-            <Korean>취소</Korean>
-            <Japanese>中止</Japanese>
-            <Chinese>取消</Chinese>
-            <Chinesesimp>取消</Chinesesimp>
-            <Turkish>Iptal</Turkish>
-            <Hungarian>Mégsem</Hungarian>
+            <Chinesesimp>调整高度</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_ActionPickUp">
             <English>Pick Up</English>
@@ -57,6 +41,7 @@
             <German>Markierungsfahne platzieren</German>
             <Korean>마킹용 깃발 꽂기</Korean>
             <Japanese>マーカー旗 を置く</Japanese>
+            <Chinesesimp>放置标记旗帜</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Marker_Flags_DisplayName_Settings">
             <English>Marker Flags</English>
@@ -80,7 +65,7 @@
             <Portuguese>Permite colocar as bandeiras de marcação em qualquer lugar, independente do tipo de superfice</Portuguese>
             <Russian>Размещать флажки где угодно вне зависимости от поверхности.</Russian>
             <German>Platzieren Sie die Markierungsfahne überall, unabhängig von der Oberfläche.</German>
-            <Korean>지면에 상관없이 아무곳에서나 마킹용 깃발을 배치합니다.</Korean>
+            <Korean>지면에 상관없이 아무 곳에서나 마킹용 깃발을 배치합니다.</Korean>
             <Japanese>どのような地表でも旗を設置できるようにします</Japanese>
             <Chinesesimp>不管地形表面是什么都可以放标记旗</Chinesesimp>
         </Key>

@@ -629,10 +629,12 @@ class ADDON {
         // volume is in millileters
         volume = 1000;
         ratio[] = {};
+        rateCoef = 1; // multiplier for IV flow rate, for other methods of giving fluids
         type = "Blood";
         class BloodIV {
             volume = 1000;
             ratio[] = {"Plasma", 1};
+            rateCoef = 1;
         };
         class BloodIV_500: BloodIV {
             volume = 500;
