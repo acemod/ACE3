@@ -94,7 +94,7 @@ if (_hasGimbal) then {
             _cameraNamespace setVariable [QGVAR(lastMovedGroundPos), _lastGroundPos];
         };
 
-        if (_trackLockedPosition && { (_seekerTargetPos isNotEqualTo [0, 0, 0]) } && _canStopDesignating) then {
+        if (_trackLockedPosition && _canStopDesignating && { _seekerTargetPos isNotEqualTo [0, 0, 0] }) then {
             _lastGroundPos = _seekerTargetPos;
         };
 

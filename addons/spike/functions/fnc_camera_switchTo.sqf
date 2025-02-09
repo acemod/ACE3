@@ -14,9 +14,9 @@
  *
  * Public: No
  */
-params ["_cameraNamespace"];
-
 if ([] call FUNC(camera_userInCamera)) exitWith {};
+
+params ["_cameraNamespace"];
 private _camera = _cameraNamespace getVariable QGVAR(camera);
 private _projectile = _cameraNamespace getVariable QGVAR(missile);
 _camera cameraEffect ["internal", "BACK"];

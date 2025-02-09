@@ -14,8 +14,8 @@
  *
  * Public: No
  */
-params [["_cameraNamespace", objNull]];
-
 if (isNil QGVAR(activeCamera)) exitWith { false };
+
+params [["_cameraNamespace", objNull]];
 
 (!isNull GVAR(activeCamera)) && { isNull _cameraNamespace || (_cameraNamespace isEqualTo GVAR(activeCamera)) };

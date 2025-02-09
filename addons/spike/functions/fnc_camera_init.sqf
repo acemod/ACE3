@@ -58,7 +58,7 @@ private _logic = "Logic" createVehicleLocal _pos;
 private _initPosX = (tan _initGimbalAngleX) * GIMBAL_LOGIC_OFFSET;
 private _initPosY = (tan _initGimbalAngleY) * GIMBAL_LOGIC_OFFSET;
 
-private _projectileBounds = (1 boundingBoxReal _projectile);
+private _projectileBounds = 1 boundingBoxReal _projectile;
 private _projectileSize = (_projectileBounds#1) vectorDiff (_projectileBounds#0);
 _activeCameraNamespace setVariable [QGVAR(projectileSize), _projectileSize#1];
 

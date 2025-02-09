@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Dani (TCVM)
- * Cycles camera thermal mode (if avaliable)
+ * Cycles camera thermal mode (if available)
  *
  * Arguments:
  * 0: Camera <OBJECT>
