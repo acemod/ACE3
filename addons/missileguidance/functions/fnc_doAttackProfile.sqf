@@ -22,7 +22,7 @@ _args params ["", "_launchParams"];
 _launchParams params ["", "", "", "_attackProfileName"];
 
 private _attackProfileFunction = getText (configFile >> QGVAR(AttackProfiles) >> _attackProfileName >> "functionName");
-private _attackProfilePos = _this call (missionNamespace getVariable _attackProfileFunction);
+private _attackProfilePos = call (missionNamespace getVariable _attackProfileFunction);
 
 if ((isNil "_attackProfilePos") || {_attackProfilePos isEqualTo [0,0,0]}) exitWith {
     // ERROR_2("attack profile [%1] returned bad pos %2",_attackProfileName,_attackProfilePos);

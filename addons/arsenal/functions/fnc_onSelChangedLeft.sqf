@@ -272,7 +272,7 @@ switch (GVAR(currentLeftPanel)) do {
             // If item is a disposable launcher, delay a bit to show new compatible items
             if (_isDisposable) then {
                 [{
-                    _this call FUNC(fillRightPanel);
+                    call FUNC(fillRightPanel);
                 }, [_display, _selectCorrectPanelWeapon]] call CBA_fnc_execNextFrame;
             } else {
                 [_display, _selectCorrectPanelWeapon, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelWeapon}] call FUNC(fillRightPanel);
@@ -286,7 +286,7 @@ switch (GVAR(currentLeftPanel)) do {
                 call FUNC(showItem);
 
                 // Display new items's info on the bottom right
-                _this call FUNC(itemInfo);
+                call FUNC(itemInfo);
             }, [_display, _control, _curSel, configFile >> "CfgWeapons" >> _item]] call CBA_fnc_execNextFrame;
         } else {
             // Make unit switch to new item

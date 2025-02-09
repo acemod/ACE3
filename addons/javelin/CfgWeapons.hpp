@@ -19,6 +19,13 @@ class CfgWeapons {
         magazines[] = {"1Rnd_GAT_missiles"};
         lockingTargetSound[] = {"",0,1};
         lockedTargetSound[] = {"",0,1};
+
+        // Titan is a soft-launch launcher
+        EGVAR(overpressure,priority) = 1;
+        EGVAR(overpressure,angle) = 30;
+        EGVAR(overpressure,range) = 2;
+        EGVAR(overpressure,damage) = 0.5;
+        EGVAR(overpressure,offset) = 0.5;
     };
 
     class Launcher_Base_F;
