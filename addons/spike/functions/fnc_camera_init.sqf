@@ -4,14 +4,16 @@
  * Initializes camera for player to view missile from its nose
  *
  * Arguments:
- * 0: Guidance Arg Array <ARRAY>
- * 1: PFID <NUMBER>
+ * 0: Missile <OBJECT>
+ * 1: Cam Array <ARRAY>
+ * 2: Shooter <OBJECT>
+ * 3: Switch On Fire <BOOL>
  *
  * Return Value:
  * The camera <OBJECT>
  *
  * Example:
- * [[], 0] call ace_missileguidance_fnc_guidancePFH;
+ * [m, [], player, false] call ace_spike_fnc_camera_init
  *
  * Public: No
  */

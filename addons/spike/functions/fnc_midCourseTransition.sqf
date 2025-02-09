@@ -4,16 +4,17 @@
  * Condition to switch to next navigation profile
  *
  * Arguments:
- * Guidance Arg Array <ARRAY>
+ * 0: Guidance Arg Array <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [] call ace_spike_midCourseTransition
+ * [] call ace_spike_fnc_midCourseTransition
  *
  * Public: No
  */
+//IGNORE_PRIVATE_WARNING ["_args"] - from upper scope
 _args params ["", "", "", "", "_stateParams"];
 _stateParams params ["", "", "", "","_navigationParams"];
 

@@ -4,14 +4,14 @@
  * Decreases zoom of current camera
  *
  * Arguments:
- * 0: Guidance Arg Array <ARRAY>
- * 1: PFID <NUMBER>
+ * 0: Camera <OBJECT>
+ * 1: Zoom Index <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[], 0] call ace_missileguidance_fnc_guidancePFH;
+ * [cam, 1] call ace_spike_fnc_camera_setZoom
  *
  * Public: No
  */

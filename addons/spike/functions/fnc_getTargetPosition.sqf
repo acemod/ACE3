@@ -33,7 +33,7 @@ if (_designateInput == 1) then {
             private _testPosASL = AGLToASL (positionCameraToWorld [_xOffset, _yOffset, MAX_RANGE]);
             private _intersectionsToCursorTarget = lineIntersectsSurfaces [_origin, _testPosASL, _ignoreObject, objNull, true, 1, "FIRE", "VIEW", true];
             #ifdef DEBUG_MODE_FULL
-            drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", [0,1,0,1], ASLtoAGL _testPosASL, 0.25, 0.25, 0, "", 0.5, 0.025, "TahomaB"];
+            drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", [0,1,0,1], ASLToAGL _testPosASL, 0.25, 0.25, 0, "", 0.5, 0.025, "TahomaB"];
             #endif
             if (_intersectionsToCursorTarget isNotEqualTo []) then {
                 _intersections append _intersectionsToCursorTarget;

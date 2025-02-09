@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [[], 0] call ace_missileguidance_fnc_guidancePFH;
+ * [5, true] call ace_spike_fnc_camera_handleKeyPress
  *
  * Public: No
  */

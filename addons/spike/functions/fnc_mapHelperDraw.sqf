@@ -76,7 +76,7 @@ if (cameraView isEqualTo "GUNNER") then {
 
             (__SPIKE_DISPLAY displayCtrl 241000) ctrlShow false;
 
-            _seekerPositionScreen = worldToScreen ASLToAGL _targetPosition;
+            private _seekerPositionScreen = worldToScreen ASLToAGL _targetPosition;
             if (_seekerPositionScreen isEqualTo []) then {
                 _seekerPositionScreen = [0, 0];
             };

@@ -4,14 +4,13 @@
  * Initialises SPIKE camera
  *
  * Arguments:
- * 0: Guidance Arg Array <ARRAY>
- * 1: PFID <NUMBER>
+ * 0: Fired EH <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[], 0] call ace_missileguidance_fnc_guidancePFH;
+ * [firedEH] call ace_spike_fnc_onFired
  *
  * Public: No
  */

@@ -109,7 +109,7 @@ if (_met >= ARM_TIME && { _stage >= STAGE_LAUNCH } && { _profileAdjustedTargetPo
 };
 
 #ifdef DEBUG_MODE_FULL
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,0,1], (ASLtoAGL _projectilePos) vectorAdd [0, 0, 5], 0.75, 0.75, 0, _navigationDebugStr, 1, 0.025, "TahomaB"];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1,1,0,1], (ASLToAGL _projectilePos) vectorAdd [0, 0, 5], 0.75, 0.75, 0, _navigationDebugStr, 1, 0.025, "TahomaB"];
 #endif
 
 _projectile vectorModelToWorldVisual _cmdAccel

@@ -4,14 +4,14 @@
  * Cycles camera thermal mode (if avaliable)
  *
  * Arguments:
- * 0: Guidance Arg Array <ARRAY>
- * 1: PFID <NUMBER>
+ * 0: Camera <OBJECT>
+ * 1: View Mode <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[], 0] call ace_missileguidance_fnc_guidancePFH;
+ * [cam, ""] call ace_spike_fnc_camera_setViewMode
  *
  * Public: No
  */

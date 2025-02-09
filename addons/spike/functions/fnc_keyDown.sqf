@@ -11,13 +11,13 @@
  * None
  *
  * Example:
- * [5, true] call ace_spike_keyDown;
+ * [5, true] call ace_spike_fnc_keyDown
  *
  * Public: No
  */
-params ["_key", "_down"];
-
 if ((currentWeapon ACE_player) != QGVAR(launcher)) exitWith {};
+
+params ["_key", "_down"];
 
 if (_key == SPIKE_KEY_DESIGNATE) then {
     if (cameraView == "GUNNER") then {
@@ -32,4 +32,4 @@ if (_key == SPIKE_KEY_DESIGNATE) then {
     (uiNamespace getVariable "ACE_RscOptics_spike") setVariable [QGVAR(designate), _designateInput];
 };
 
-_this call FUNC(camera_handleKeyPress);
+call FUNC(camera_handleKeyPress);

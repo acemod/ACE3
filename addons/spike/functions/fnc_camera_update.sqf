@@ -85,6 +85,7 @@ if (_hasGimbal) then {
     private _lastGroundPos = _cameraNamespace getVariable [QGVAR(lastMovedGroundPos), [0, 0, 0]];
 
     if !((_movingCameraX || _movingCameraY) || true) then {
+        // ToDo: Unreachable code, var known undefined //IGNORE_PRIVATE_WARNING ["_seekerTargetPos"];
         // If we designate a target set the current tracking point to the current ground point to avoid unwanted behavior from static cameras
         if (_designating && !_designatedLastFrame) then {
             _designatedLastFrame = true;
@@ -100,7 +101,7 @@ if (_hasGimbal) then {
         // lock the camera and dont gimbal with missile rotation
         if (_lastGroundPos isNotEqualTo [0, 0, 0]) then {
             #ifdef DEBUG_MODE_FULL
-            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1, 1, 1, 1], ASLtoATL (_lastGroundPos), 0.75, 0.75, 0, "Last Camera Ground Position", 1, 0.025, "TahomaB"];
+            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1, 1, 1, 1], ASLToATL (_lastGroundPos), 0.75, 0.75, 0, "Last Camera Ground Position", 1, 0.025, "TahomaB"];
             #endif
             private _directionToGround = _cameraPosASL vectorFromTo _lastGroundPos;
             (_directionToGround call CBA_fnc_vect2polar) params ["", "_azimuth", "_elevation"];
@@ -224,8 +225,8 @@ _cameraArray set [11, _designating];
 drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1, 0.5, 1, 1], ASLToAGL _cameraPosASL, 0.75, 0.75, 0, "Camera Pos", 1, 0.025, "TahomaB"];
 drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1, 0.5, 1, 1], getPosATL _logic, 0.75, 0.75, 0, "Logic Pos", 1, 0.025, "TahomaB"];
 
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0, 1, 1, 1], ASLtoAGL (_groundPos), 0.75, 0.75, 0, "Camera Ground Position", 1, 0.025, "TahomaB"];
-drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1, 1, 0, 1], ASLtoAGL (_pointPos), 0.75, 0.75, 0, "Camera Point Position", 1, 0.025, "TahomaB"];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0, 1, 1, 1], ASLToAGL (_groundPos), 0.75, 0.75, 0, "Camera Ground Position", 1, 0.025, "TahomaB"];
+drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [1, 1, 0, 1], ASLToAGL (_pointPos), 0.75, 0.75, 0, "Camera Point Position", 1, 0.025, "TahomaB"];
 #endif
 
 _viewData set [0, _lookDir];

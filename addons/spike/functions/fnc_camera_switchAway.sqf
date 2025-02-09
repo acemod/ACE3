@@ -4,14 +4,13 @@
  * Switches away from the currently controlled camera
  *
  * Arguments:
- * 0: Guidance Arg Array <ARRAY>
- * 1: PFID <NUMBER>
+ * 0: Camera <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[], 0] call ace_missileguidance_fnc_guidancePFH;
+ * [cam] call ace_spike_fnc_camera_switchAway
  *
  * Public: No
  */
