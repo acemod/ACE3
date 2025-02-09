@@ -28,20 +28,26 @@ if !(_typeOfDamage in GVAR(damageTypeDetails)) exitWith {};
 
 private _damageData = [_unit, _allDamages, _typeOfDamage, _ammo];
 private _originalCount = count _damageData;
+private _lastHandlerName = _woundHandlers select -1 select 0; // will usually be ace_medical_damage_woundsHandlerBase
 
 {
     _x params ["_handlerName", "_handlerCode"];
     _damageData = _damageData call _handlerCode;
     TRACE_2("Wound handler returned",_damageData,_handlerName);
 
+    // Done
+    if (_handlerName == _lastHandlerName) then {
+        break;
+    };
+
     if ((count _damageData) == (_originalCount - 1)) then {
         ERROR_1("Wound handler '%1' missing latest param in return, readding. This will be deprecated in the future, check Medical Framework wiki.",_handlerName);
         _damageData pushBack _ammo;
     };
 
-    // If invalid return, log an error and exit
+    // If invalid return and not the last handler, log an error and exit
     if (isNil "_damageData" || {!(_damageData isEqualType [])} || {(count _damageData) < _originalCount}) then {
-        ERROR_2("Return for handler '%1' invalid - '%2', skipping wound handling",_damageData,_handlerName);
+        ERROR_2("Return for handler '%1' invalid - '%2', skipping wound handling",_handlerName,_damageData);
         break;
     };
 } forEach _woundHandlers;
