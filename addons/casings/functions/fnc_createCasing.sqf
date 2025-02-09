@@ -38,7 +38,7 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
         _model = _model + ".p3d";
     };
 
-    ["", _model] select (!("a3\weapons_f\empty" in toLowerANSI _model) && fileExists _model)
+    ["", _model] select (!("a3\weapons_f\empty" in toLowerANSI _model) && {fileExists _model})
 }, true];
 
 if (_modelPath isEqualTo "") exitWith {};
