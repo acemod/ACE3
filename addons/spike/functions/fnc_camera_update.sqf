@@ -189,9 +189,9 @@ if (_designateWhenStationary && !(_movingCameraX || _movingCameraY)) then {
 _cameraNamespace setVariable [QGVAR(logicPos), _relativePos];
 _cameraNamespace setVariable [QGVAR(cameraPos), _cameraPosASL];
 
-private _p = _cameraPosASL vectorAdd _relativePos;
+private _posAddedASL = _cameraPosASL vectorAdd _relativePos;
 
-_logic setPosASL _p;
+_logic setPosASL _posAddedASL;
 
 _camera camSetTarget _logic;
 _camera setPosASL _cameraPosASL;
