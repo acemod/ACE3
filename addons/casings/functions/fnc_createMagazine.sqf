@@ -24,17 +24,20 @@ _oldMagazine params ["_mag", "_ammo"];
 if (_ammo != 0) exitWith {};
 
 private _modelPath = GVAR(cachedMagazines) getOrDefaultCall [_mag, {
-    private _model = switch (true) do {
+    private _magConfig = configNull; // private var in switch condition scope isn't available in the result block.
+    private _modelOverride = ""; // very annoying.
+
+    private _model = switch true do {
          // Should cover most 40x36
         case (_mag in compatibleMagazines ["arifle_Mk20_GL_F", "EGLM"]): { "A3\Weapons_F\MagazineProxies\mag_40x36_HE_1rnd.p3d" };
 
-        private _magConfig = configFile >> "CfgMagazines" >> _mag;
-        private _modelOverride = getText (_magConfig >> QGVAR(model));
+        _magConfig = configFile >> "CfgMagazines" >> _mag;
+        _modelOverride = getText (_magConfig >> QGVAR(model));
 
         case (_modelOverride != ""): { _modelOverride }; // Use the override if non-empty
-        case (getNumber (_magConfig >> "modelSpecialIsProxy") == 1): { getText (_magConfig >> "modelSpecial") }; // Use the magazine's proxy
+        case (getNumber (_magConfig >> "modelSpecialIsProxy") == 1): {getText (_magConfig >> "modelSpecial")}; // Use the magazine's proxy
 
-        default { getText (_magConfig >> "model") } // Use the magazine's dropped model
+        default { getText (_magConfig >> "model") }; // Use the magazine's dropped model
     };
 
     // Add file extension if missing (fileExists needs file extension)
@@ -42,33 +45,7 @@ private _modelPath = GVAR(cachedMagazines) getOrDefaultCall [_mag, {
         _model = _model + ".p3d";
     };
 
-    ["", _model] select (!(_model regexMatch "(?:a3\weapons_f\empty|\ca\weapons\mag_univ).p3d") && fileExists _model)
+    ["", _model] select (!(_model regexMatch "(?:\\)?a3\\weapons_f\\(?:empty|ammo\\mag_univ).p3d") && {fileExists _model})
 }, true];
 
-if (_modelPath isEqualTo "") exitWith {};
-
-private _unitPos = getPosASL _unit;
-private _weapDir = _unit weaponDirection currentWeapon _unit;
-private _ejectDir = _weapDir vectorCrossProduct [0, 0, 1];
-private _pos = _unitPos
-    vectorAdd (_weapDir vectorMultiply (-0.5 + random 2))
-    vectorAdd (_ejectDir vectorMultiply (0.2 + random 2));
-
-[
-    {
-        params ["_modelPath", "_pos"];
-        TRACE_2("creating magazine",_modelPath,_pos);
-
-        private _lisPos = (lineIntersectsSurfaces [_pos, _pos vectorAdd [0,0,-1e11], objNull, objNull, true, 1, "ROADWAY", "FIRE"]) #0;
-        private _casing = createSimpleObject [_modelPath, (_lisPos #0 vectorAdd [0,0,0.010]), false]; // global
-        _casing setDir (random 360);
-        _casing setVectorUp _lisPos #1;
-        private _idx = GVAR(casings) pushBack _casing;
-
-        for "_" from 0 to (_idx - GVAR(maxCasings)) do {
-            deleteVehicle (GVAR(casings) deleteAt 0);
-        };
-    },
-    [_modelPath,_pos],
-    0.4
-] call CBA_fnc_waitAndExecute;
+[_unit, _modelPath, true] call FUNC(createLitter);
