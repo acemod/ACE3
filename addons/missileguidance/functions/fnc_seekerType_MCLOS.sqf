@@ -32,7 +32,6 @@ if (_seekerStateParams isNotEqualTo []) then { // Handle AI
     private _distance = _launchPos vectorDistance _projectilePos;
     private _projectedPath = _launchPos vectorAdd (_launchVec vectorMultiply _distance);
 
-    private _source = _projectile getVariable [QGVAR(source), _projectile];
     private _hOffset = (_projectilePos # 2) - (_projectedPath # 2);
     private _vv = (velocity _projectile) # 2;
     _mclosInput = switch (true) do {

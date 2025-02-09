@@ -11,7 +11,6 @@ class CfgVehicles {
     class O_LSV_02_AT_F: LSV_02_AT_base_F {};
     class GVAR(mock_lsv_Malyutka): O_LSV_02_AT_F {
         scope = 1;
-        GVAR(hasMCLOSControl) = 1;
         displayName = "[ACE] Test Malyutka LSV";
         class Turrets: Turrets {
             class MainTurret: MainTurret {
