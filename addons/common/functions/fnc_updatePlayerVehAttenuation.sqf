@@ -10,7 +10,7 @@
  * Amount that unit can hear outside <NUMBER>
  *
  * Example:
- * call ace_hearing_fnc_updatePlayerVehAttenuation
+ * call ace_common_fnc_updatePlayerVehAttenuation
  *
  * Public: No
  */
@@ -24,10 +24,11 @@ private _newAttenuation = 1;
 if (ACE_player != _vehicle) then {
     private _vehicleConfig = configOf _vehicle;
     private _turretPath = _vehicle unitTurret ACE_player;
+    TRACE_2("vehicle change",typeOf _vehicle,_turretPath);
     private _effectType = getText (_vehicleConfig >> "attenuationEffectType");
 
     if (_turretPath isNotEqualTo []) then {
-        private _turretConfig = [_vehicleConfig, _turretPath] call EFUNC(common,getTurretConfigPath);
+        private _turretConfig = [_vehicleConfig, _turretPath] call FUNC(getTurretConfigPath);
 
         if ((getNumber (_turretConfig >> "disableSoundAttenuation")) == 1) then {
             _effectType = "";
