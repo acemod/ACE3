@@ -1,9 +1,28 @@
+#include "..\script_component.hpp"
+/*
+ * Author: esteldunedain / Cyruz / diwako
+ * Handles casing/dropped mag creation.
+ *
+ * Arguments:
+ * 0: Unit - Unit to create litter for <OBJECT>
+ * 1: Model - Path to litter model <STRING>
+ * 2: Force creation - Skip the distance + RNG check <BOOL> (default: false)
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * [player, "\a3\weapons_f\mag_univ.p3d"] call ace_casings_fnc_createLitter
+ *
+ * Public: No
+ */
+
 params ["_unit", "_modelPath", ["_force", false]];
 
 if (_modelPath == "") exitWith {};
 
 // Distant shooters don't produce as many cases
-if (!_force && ((AGLToASL positionCameraToWorld [0,0,0]) vectorDistance _unitPos > 100 && {random 1 < 0.9})) exitWith {};
+if (!_force && {(AGLToASL positionCameraToWorld [0,0,0]) vectorDistance _unitPos > 100 && {random 1 < 0.9}}) exitWith {};
 
 private _unitPos = getPosASL _unit;
 private _weapDir = _unit weaponDirection currentWeapon _unit;
