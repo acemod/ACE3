@@ -5,7 +5,7 @@ Fast Recompiling via function
 // To Use: [] call ACE_PREP_RECOMPILE;
 
 #ifdef DISABLE_COMPILE_CACHE
-    #define LINKFUNC(x) {_this call FUNC(x)}
+    #define LINKFUNC(x) {call FUNC(x)}
     #define PREP_RECOMPILE_START    if (isNil "ACE_PREP_RECOMPILE") then {ACE_RECOMPILES = []; ACE_PREP_RECOMPILE = {{call _x} forEach ACE_RECOMPILES;}}; private _recomp = {
     #define PREP_RECOMPILE_END      }; call _recomp; ACE_RECOMPILES pushBack _recomp;
 #else
