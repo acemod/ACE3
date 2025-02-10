@@ -17,7 +17,7 @@
  */
 params ["_caller", "_target"];
 
-if !(_this call FUNC(canRefuelUAV)) exitWith {};
+if !(call FUNC(canRefuelUAV)) exitWith {};
 
 private _onFinish = {
     (_this select 0) params ["_caller", "_target"];

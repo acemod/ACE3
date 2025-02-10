@@ -24,7 +24,7 @@ _lastKnownPosState params ["_seekLastTargetPos", "_lastKnownPos"];
 
 private _seekerFunction = getText (configFile >> QGVAR(SeekerTypes) >> _seekerTypeName >> "functionName");
 
-private _seekerTargetPos = _this call (missionNamespace getVariable _seekerFunction);
+private _seekerTargetPos = call (missionNamespace getVariable _seekerFunction);
 
 if ((isNil "_seekerTargetPos") || {_seekerTargetPos isEqualTo [0,0,0]}) then { // A return of nil or [0,0,0] indicates the seeker has no target
     if (_seekLastTargetPos && {_lastKnownPos isNotEqualTo [0,0,0]}) then { // if enabled for the ammo, use last known position if we have one stored

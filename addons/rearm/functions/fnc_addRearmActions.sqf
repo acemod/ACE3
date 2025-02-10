@@ -61,7 +61,7 @@ private _vehicleActions = [];
                 _vehicle,
                 _actionName,
                 _icon,
-                {_this call FUNC(rearmEntireVehicle)},
+                {call FUNC(rearmEntireVehicle)},
                 {true},
                 {},
                 _vehicle
@@ -75,7 +75,7 @@ private _vehicleActions = [];
                     _x,
                     _x call FUNC(getMagazineName),
                     getText(configFile >> "CfgMagazines" >> _x >> "picture"),
-                    {_this call FUNC(takeAmmo)},
+                    {call FUNC(takeAmmo)},
                     {true},
                     {},
                     [_x, _vehicle]
@@ -108,7 +108,7 @@ if (_cswCarryMagazines isNotEqualTo []) then {
             _x,
             _x call FUNC(getMagazineName),
             getText(configFile >> "CfgMagazines" >> _x >> "picture"),
-            {_this call FUNC(takeAmmo)},
+            {call FUNC(takeAmmo)},
             {true},
             {},
             [_x, _player]
