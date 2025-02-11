@@ -1119,6 +1119,10 @@
             <Chinesesimp>[班组] SPG-9M 发射器包</Chinesesimp>
             <Turkish>[CSW] SPG-9M Launcher Bag</Turkish>
         </Key>
+        <Key ID="STR_ACE_CSW_statTripods">
+            <English>Mounts on:</English>
+            <Korean>전용 장착:</Korean>
+        </Key>
         <Key ID="STR_ACE_CSW_tow_tube">
             <English>[CSW] BGM-71 TOW Launcher Bag</English>
             <Czech>[CSW] BGM-71 TOW raketomet v pouzdře</Czech>
