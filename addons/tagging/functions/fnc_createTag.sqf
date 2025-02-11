@@ -66,9 +66,7 @@ if (_object getVariable [QGVAR(testVar), false]) then {
     _object addEventHandler ["HandleDamage", {
         params ["_object", "_selection", "_damage"];
         if (_selection == "" && _damage >= 1) then {
-            {
-                deleteVehicle _x;
-            } forEach (_object getVariable [QGVAR(attachedTags), []]);
+            deleteVehicle (_object getVariable [QGVAR(attachedTags), []]);
             _object setVariable [QGVAR(attachedTags), []];
         };
     }];

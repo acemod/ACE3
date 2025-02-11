@@ -54,7 +54,7 @@
             <Portuguese>Oculta a opção de interação para ejetar. Requer que o jogo seja reiniciado.</Portuguese>
             <Russian>Убирает действие 'Выпрыгнуть' из меню. (Требует перезагрузки)</Russian>
             <German>Versteckt den Abspringen-Eintrag aus dem Aktionsmenü. Benötigt Neustart des Spiels.</German>
-            <Korean>휠액션에서 탈출을 숨깁니다. 게임 재시작을 필요로 합니다.</Korean>
+            <Korean>마우스 휠 상호작용에서 비상탈출을 숨깁니다. 게임 재시작을 필요로 합니다.</Korean>
             <Japanese>アクションメニューに"脱出"の項目を表示しないようにします。ゲームの再起動が必要です。</Japanese>
             <Chinese>隱藏在動作選單中逃脫動作的選項。要求遊戲重新啟動。</Chinese>
             <Chinesesimp>隐藏鼠标滚轮菜单中的下车选项。需要重新启动游戏。</Chinesesimp>

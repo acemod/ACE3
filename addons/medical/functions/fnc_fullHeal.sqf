@@ -27,4 +27,4 @@ if (!alive _patient) exitWith {
     ERROR_2("fullHeal [medic %1][patient %2] Patient is dead or null",_medic,_patient);
 };
 
-[_medic, _patient, _logMessage] call EFUNC(medical_treatment,fullHeal);
+[_medic, _patient, "", "", objNull, "", false, _logMessage] call EFUNC(medical_treatment,fullHeal);

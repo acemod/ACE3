@@ -20,7 +20,7 @@ params ["_object"];
 private _configOf = configOf _object;
 if (isNull _configOf) then {
     // Check for offset corresponding to p3d list
-    GVAR(waterSourceOffsets) param [GVAR(waterSourceP3ds) find (getModelInfo _object select 0), [0, 0, 0], [[]]];
+    GVAR(cacheP3Ds) getOrDefault [getModelInfo _object select 0, [0, 0, 0]]
 } else {
     // Check for offset in config since we have valid typeOf
     private _offset = getArray (_configOf >> QXGVAR(offset));

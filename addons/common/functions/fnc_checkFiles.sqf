@@ -116,31 +116,52 @@ if (_oldCompats isNotEqualTo []) then {
 ///////////////
 // Check extensions
 ///////////////
-private _platform = toLowerANSI (productVersion select 6);
+if (hasInterface) then {
+    private _platform = toLowerANSI (productVersion select 6);
 
-if (_platform in ["linux", "osx"]) then {
-    // Linux and OSX client ports do not support extensions at all
-    if (hasInterface) then {
+    // Check for presence
+    if (_platform in ["linux", "osx"]) exitWith {
+        // Linux and OSX client ports do not support extensions at all
         WARNING("Operating system does not support extensions");
-    } else {
-        INFO("Operating system does not support extensions");
     };
-} else {
+
     ("ace" callExtension ["version", []]) params [["_versionEx", "", [""]], ["_returnCode", -1, [-1]]];
 
     if (_returnCode != 0 || {_versionEx == ""}) then {
         private _errorMsg = format ["Extension not found. [Return Code: %1]", _returnCode];
         ERROR(_errorMsg);
-
-        if (hasInterface) then {
-            ["[ACE] ERROR", _errorMsg] call FUNC(errorMessage);
-        };
+        ["[ACE] ERROR", _errorMsg] call FUNC(errorMessage);
     } else {
         _versionEx = _versionEx select [0, 8]; // git hash
         INFO_1("Extension [Version: %1]",_versionEx);
     };
-};
 
+    // Check for correct hash
+    if (GVAR(checkExtensions)) then {
+        private _allExtensions = allExtensions;
+
+        {
+            private _extName = configName _x;
+            private _extensionType = "dll";
+            if (productVersion select 7 == "x64") then { _extensionType = format ["%1_x64", _extensionType]; };
+            private _expectedHash = getText (_x >> _extensionType);
+
+            private _extensionHash = "";
+            {
+                if ((_x getOrDefault ["name", ""]) == _extName) exitWith {
+                    _extensionHash = _x getOrDefault ["hash", ""];
+                };
+            } forEach _allExtensions;
+            TRACE_3("",_extName,_expectedHash,_extensionHash);
+
+            if (_extensionHash != _expectedHash) then {
+                private _errorMsg = format ["Extension %1 wrong version [%2 vs %3].", _extName, _extensionHash, _expectedHash];
+                ERROR(_errorMsg);
+                ["[ACE] ERROR", _errorMsg] call FUNC(errorMessage);
+            };
+        } forEach ("true" configClasses (configFile >> "ACE_ExtensionsHashes"));
+    };
+};
 
 ///////////////
 // Check server version/addons
@@ -209,7 +230,7 @@ if (isMultiplayer) then {
             // No need to show which addons, just show the mod that the compats are for
             if (_additionalCompats isNotEqualTo []) exitWith {
                 // Fix is easy
-                private _fixMsg = format ["Fix: %1", "Make sure your mod list matches or add those mods to the server. Check your server files and '-mod=' parameter if you're the server administrator."];
+                private _fixMsg = format ["Fix: %1", "Make sure your mod list matches or add those mods to the server.<br/><br/>If you're the server administrator, repair the mods below, check your server mod files and '-mod=' parameter."];
 
                 private _additionalMods = [];
                 private _loadedModsInfo = getLoadedModsInfo;
@@ -225,7 +246,7 @@ if (isMultiplayer) then {
                 } forEach _additionalCompats;
 
                 private _reasonMsg = format ["Reason: %1", "Client has extra mods requiring compats loaded (listed below)"];
-                private _infoMsg = format ["Additional compatibility is being loaded for: %1", _additionalMods joinString ", "];
+                private _infoMsg = format ["Additional compatibility is being loaded for:<br/>%1", _additionalMods joinString ", "];
 
                 [_title, _reasonMsg, _fixMsg, _infoMsg, _infoMsg] // return
             };

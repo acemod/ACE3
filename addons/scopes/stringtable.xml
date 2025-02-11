@@ -398,6 +398,7 @@
             <German>Zeige Absehenverstellungs-UI im Zielfernrohr</German>
             <Korean>스코프에 조절 UI 보이기</Korean>
             <Japanese>調整UIをスコープ内に表示</Japanese>
+            <Chinesesimp>开镜时显示调节面板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Scopes_overwriteZeroRange_Description">
             <English>Uses the 'defaultZeroRange' setting to overwrite the zero range of high power scopes</English>

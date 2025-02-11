@@ -25,16 +25,16 @@ params ["_unit", "", "_muzzle", "", "_ammo"];
 TRACE_1("Fired",_this);
 
 {
-    _this call _x;
+    call _x;
 } forEach (_unit getVariable "cba_xeh_fired");
 
 // Call muzzle fired EH
 {
-    _this call compile getText (_x >> "fired");
+    call compile getText (_x >> "fired");
 } forEach (configProperties [configFile >> "CfgWeapons" >> "Throw" >> _muzzle >> "EventHandlers", "isClass _x", true]);
 
 // Call ammo fired EH
-{ _this call _x } forEach (GVAR(ammoEventHandlers) getOrDefaultCall [_ammo, {
+{ call _x } forEach (GVAR(ammoEventHandlers) getOrDefaultCall [_ammo, {
     private _cfg = configFile >> "CfgAmmo" >> _ammo >> "EventHandlers";
     private _eventHandlers = [];
     {

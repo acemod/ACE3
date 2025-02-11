@@ -132,7 +132,7 @@ if (_init) then {
     GVAR(camDummy) = nil;
 
     // Stop tracking everything
-    { deleteVehicle _x; } forEach GVAR(camLights);
+    deleteVehicle GVAR(camLights);
     GVAR(camLights)             = nil;
 
     GVAR(camMode)               = nil;
