@@ -29,6 +29,9 @@ scopeName "Main";
 private _allowSharedEquipment = GVAR(allowSharedEquipment);
 if (_allowSharedEquipment == 3) then { _allowSharedEquipment = [0, 1] select ([_medic] call FUNC(isMedic)) };
 private _useOrder = [[_patient, _medic], [_medic, _patient], [_medic]] select _allowSharedEquipment;
+ if (_medic call FUNC(isMedic)) then {
+     _useOrder = [_medic, _patient];
+ };
 
 {
     private _unit = _x;

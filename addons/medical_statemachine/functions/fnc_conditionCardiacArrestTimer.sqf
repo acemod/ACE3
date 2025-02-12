@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-(_unit getVariable [QGVAR(cardiacArrestTimeLeft), -1]) <= 0
+(_unit getVariable [QGVAR(cardiacArrestTimeLeft), -1]) <= 0 && !(IN_MED_FACILITY(_unit))

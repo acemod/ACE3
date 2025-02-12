@@ -163,11 +163,13 @@ class CfgAmmo {
         EGVAR(frag,skip) = 0;
         EGVAR(frag,force) = 1;
     };
+    /*
     class rhs_ammo_rgn: rhs_ammo_rgd5 {
         EGVAR(frag,enabled) = 0;
         EGVAR(frag,skip) = 1;
         EGVAR(frag,force) = 0;
     };
+    */
     class rhs_ammo_fakel: GrenadeHand {
         EGVAR(frag,enabled) = 0;
         EGVAR(frag,skip) = 1;

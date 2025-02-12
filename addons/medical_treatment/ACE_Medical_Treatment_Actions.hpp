@@ -226,7 +226,7 @@ class GVAR(actions) {
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
         allowedSelections[] = {"Head", "Body"};
         medicRequired = 0;
-        treatmentTime = 2.5;
+        treatmentTime = 2;
         items[] = {};
         condition = QUOTE(GVAR(advancedDiagnose) == 0);
         callbackSuccess = QFUNC(diagnose);
@@ -248,15 +248,22 @@ class GVAR(actions) {
     class CheckBloodPressure: CheckPulse {
         displayName = CSTRING(Actions_CheckBloodPressure);
         displayNameProgress = CSTRING(Check_Bloodpressure_Content);
-        allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
+        allowedSelections[] = {"Head","LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         callbackSuccess = QFUNC(checkBloodPressure);
     };
-    class CheckResponse: CheckPulse {
+    /*class CheckResponse: CheckPulse {
         displayName = CSTRING(Check_Response);
         displayNameProgress = CSTRING(Check_Response_Content);
         allowedSelections[] = {"Head"};
         allowSelfTreatment = 0;
         callbackSuccess = QFUNC(checkResponse);
+    };*/
+    class CheckPain: CheckPulse {
+        displayName = "Check Pain";
+        displayNameProgress = "You check pain of patient";
+        allowedSelections[] = {"Head"};
+        allowSelfTreatment = 0;
+        callbackSuccess = QFUNC(checkPain);
     };
 
     // - Misc -----------------------------------------------------------------

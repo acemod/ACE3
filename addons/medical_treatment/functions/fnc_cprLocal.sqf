@@ -23,7 +23,7 @@ TRACE_2("cprLocal",_medic,_patient);
 
 private _bloodVolume = GET_BLOOD_VOLUME(_patient);
 private _successChance = linearConversion [BLOOD_VOLUME_CLASS_4_HEMORRHAGE, BLOOD_VOLUME_CLASS_2_HEMORRHAGE, _bloodVolume, GVAR(cprSuccessChanceMin), GVAR(cprSuccessChanceMax), true];
-if ((random 1) < _successChance) then {
+if ((random 1) < _successChance || IN_MED_FACILITY(_medic)) then {
     // If SpO2 is too low, it will make HR skyrocket to the point where patient goes back into CA
     // Allow 3rd party mods to disable this mechanic
     if (missionNamespace getVariable [QGVAR(setSpO2UponCPRSuccess), true] && {GET_SPO2(_patient) < DEFAULT_SPO2 / 2}) then {

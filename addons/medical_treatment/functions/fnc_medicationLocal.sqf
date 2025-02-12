@@ -44,6 +44,7 @@ if (!GVAR(advancedMedication)) exitWith {
             _patient setVariable [VAR_PAIN_SUPP, (_painSuppress + PAINKILLERS_PAIN_SUPPRESSION) min 1, true];
         };
     };
+    [_patient,_classname] call FUNC(medicationOverdose);
 };
 TRACE_1("Running treatmentMedicationLocal with Advanced configuration for",_patient);
 
