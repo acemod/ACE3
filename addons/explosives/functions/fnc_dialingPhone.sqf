@@ -1,7 +1,6 @@
 #include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
- * [Description]
  * Performs the dial tones and detonation of explosive.
  *
  * Arguments:
