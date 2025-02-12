@@ -21,7 +21,7 @@
  */
 
 params ["_args", "_pfID"];
-_args params ["_unit", "_dialStep", "_arr", "_explosive", "_ringtonePath", "_ringtoneDuration"];
+_args params ["_unit", "_dialStep", "_arr", "_explosive", "_ringtonePath", "_ringtoneDuration", "_volume", "_soundPitch", "_distance"];
 
 if ((_dialStep mod 4) == 0) then {
     private _pos = _unit modelToWorldVisualWorld (_unit selectionPosition "RightHand");
@@ -45,7 +45,7 @@ if (_dialStep == _ringtoneDuration) then {
         ((count _explosive) > 0) &&
         {[_unit, -1, (_explosive # 0), (_explosive # 2), "ACE_Cellphone"] call FUNC(checkDetonateHandlers)}
     ) then {
-        playSound3D [_ringtonePath, objNull, false, (getPosASL (_explosive # 0)), 3.16228, 1, 75];
+        playSound3D [_ringtonePath, objNull, false, (getPosASL (_explosive # 0)), _volume, _soundPitch, _distance];
     };
 };
 
