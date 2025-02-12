@@ -40,12 +40,10 @@ private _nearPlayers = (_patient nearEntities ["CAManBase", 6]) select {_x call 
 TRACE_1("clearConditionCaches: tourniquetRemove",_nearPlayers);
 [QEGVAR(interact_menu,clearConditionCaches), [], _nearPlayers] call CBA_fnc_targetEvent;
 
-// Add tourniquet item to medic or patient
-if (_medic call EFUNC(common,isPlayer)) then {
-    private _allowSharedEquipment = GVAR(allowSharedEquipment);
-    if (_allowSharedEquipment == 3) then { _allowSharedEquipment = [0, 1] select ([_medic] call FUNC(isMedic)) };
-    private _receiver = [_patient, _medic, _medic] select _allowSharedEquipment;
-    [_receiver, "ACE_tourniquet"] call EFUNC(common,addToInventory);
+// Add tourniquet item to medic's inventory
+// todo: should there be a setting to select who receives the removed tourniquet?
+if ( {_x == "ACE_tourniquet"} count (items _patient) < 2) then {
+    [_patient, "ACE_tourniquet", true] call EFUNC(common,addToInventory);
 } else {
     // If the medic is AI, only return tourniquet if enabled
     if (missionNamespace getVariable [QEGVAR(medical_ai,requireItems), 0] > 0) then {

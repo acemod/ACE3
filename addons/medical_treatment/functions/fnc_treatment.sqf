@@ -46,6 +46,19 @@ private _treatmentTime = if (isText (_config >> _treatmentTimeConfig)) then {
 
 if (_treatmentTime == 0) exitWith {false};
 
+// Adjust treatment time in medical area
+if (IN_MED_VEHICLE(_medic) || {IN_MED_FACILITY(_medic)}) then {
+    private _boostFactor = 0.75;
+    private _min = 2;
+    
+    if([_medic, 2] call  FUNC(isMedic)) then {
+        _boostFactor = 0.50;
+        _min = 1.5;
+    };
+    
+    _treatmentTime = _min max (floor (_treatmentTime * _boostFactor));
+};
+
 // Consume one of the treatment items if needed
 // Store item user so that used item can be returned on failure
 private _userAndItem = if (GET_NUMBER_ENTRY(_config >> "consumeItem") == 1) then {

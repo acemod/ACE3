@@ -34,7 +34,7 @@
     "SLIDER",
     [LSTRING(SpontaneousWakeUpChance_DisplayName), LSTRING(SpontaneousWakeUpChance_Description)],
     LSTRING(Category),
-    [0, 1, 0.1, 2, true],
+    [0, 1, 0.05, 2, true],
     true
 ] call CBA_fnc_addSetting;
 
@@ -43,6 +43,60 @@
     "SLIDER",
     [LSTRING(spontaneousWakeUpEpinephrineBoost_DisplayName), LSTRING(spontaneousWakeUpEpinephrineBoost_Description)],
     LSTRING(Category),
-    [1, 30, 1.5, 1],
+    [1, 30, 1, 1],
     true
-] call CBA_fnc_addSetting;
+] call CBA_settings_fnc_init;
+/*
+[
+    QGVAR(armorMultiplayer),
+    "SLIDER",
+    ["Armor Multiplier", "Custom Armor multiplier"],
+    [ELSTRING(medical,Category), "Modifications"],
+    [0, 100, 0, 0],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(minArmor),
+    "SLIDER",
+    ["Minimal Armor", "Not adjusted by modification"],
+    [ELSTRING(medical,Category), "Modifications"],
+    [0, 50, 5, 0],
+    true
+] call CBA_settings_fnc_init;
+*/
+[
+    QGVAR(armorMultiplier),
+    "SLIDER",
+    ["Armor Damage Multiplier", "Damage = Damage + (Armor x (Multiplier / 10000))"],
+    [ELSTRING(medical,Category), "Modifications"],
+    [0, 10000, 40.00, 2],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(armorMultiplierMax),
+    "SLIDER",
+    ["Armor Damage Multiplier Max", "Adjusted Damage min Armor Damage Multiplier Max"],
+    [ELSTRING(medical,Category), "Modifications"],
+    [0, 100, 2.00, 2],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(armorMultiplierMin),
+    "SLIDER",
+    ["Min Armor for Multiplier", "Min Armor required for adjustment"],
+    [ELSTRING(medical,Category), "Modifications"],
+    [0, 1000, 19.00, 2],
+    true
+] call CBA_settings_fnc_init;
+
+[
+    QGVAR(armorMultiplierCap),
+    "SLIDER",
+    ["Armor Value Cap", "Cap for Armor in Calucalation"],
+    [ELSTRING(medical,Category), "Modifications"],
+    [0, 100, 80, 0],
+    true
+] call CBA_settings_fnc_init;

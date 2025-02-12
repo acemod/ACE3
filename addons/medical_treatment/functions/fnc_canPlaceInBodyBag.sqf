@@ -21,4 +21,5 @@
 
 params ["", "_patient"];
 
-(isNull objectParent _patient) && {!(_patient call EFUNC(common,isAwake))}
+//(isNull objectParent _patient) && {!(_patient call EFUNC(common,isAwake))}
+(isNull objectParent _patient) && {!(alive _patient)}

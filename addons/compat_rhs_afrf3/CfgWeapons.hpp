@@ -128,13 +128,24 @@ class CfgWeapons {
     class rhs_weap_2a28_base: cannon_120mm { // "Low pressure"
         EGVAR(overpressure,range) = 15;
         EGVAR(overpressure,damage) = 0.5;
+
+    class H_HelmetB;
+    class rhs_tsh4: H_HelmetB {
+        HEARING_PROTECTION_VICCREW;
     };
     class mortar_82mm;
     class rhs_weap_2b14: mortar_82mm {
         EGVAR(overpressure,offset) = 0.4;
+
+    class rhs_6b47_bare;
+    class rhs_6b48: rhs_6b47_bare {
+        HEARING_PROTECTION_VICCREW;
     };
 
     class rhs_zsh7a;
+    class rhs_zsh7a: H_HelmetB {
+        HEARING_PROTECTION_VICCREW;
+    };
     class rhs_zsh7a_alt: rhs_zsh7a {
         ACE_Protection = 1;
     };
@@ -145,6 +156,33 @@ class CfgWeapons {
     class rhs_zsh7a_mike_green;
     class rhs_zsh7a_mike_green_alt: rhs_zsh7a_mike_green {
         ACE_Protection = 1;
+    };
+
+    class rhs_gssh18: H_HelmetB {
+        HEARING_PROTECTION_EARMUFF;
+    };
+
+    class rhs_6b47;
+    class rhs_6b47_6m2: rhs_6b47 {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class rhs_6b47_6m2_1: rhs_6b47 {
+        HEARING_PROTECTION_PELTOR;
+    };
+
+    class rhs_6m2: H_HelmetB {
+        HEARING_PROTECTION_PELTOR;
+    };
+
+    class rhs_weap_d81;
+    class rhs_weap_2a70: rhs_weap_d81 { // "Low pressure" 100mm cannon
+        EGVAR(overpressure,range) = 15;
+        EGVAR(overpressure,damage) = 0.5;
+    };
+    class cannon_120mm;
+    class rhs_weap_2a28_base: cannon_120mm { // "Low pressure"
+        EGVAR(overpressure,range) = 15;
+        EGVAR(overpressure,damage) = 0.5;
     };
 
     class rhs_uniform_flora;

@@ -19,6 +19,11 @@
 
 params ["_medic", "_patient", "_bodyPart"];
 
+// Exit on custom diagnosis enabled
+if (GVAR(customDiagnose)) exitWith {
+    [_medic, _patient, _bodyPart] call FUNC(checkBloodPressureLocalModified);
+};
+
 private _bloodPressure = [0, 0];
 
 if (alive _patient && {!([_patient, _bodyPart] call FUNC(hasTourniquetAppliedTo))}) then {

@@ -19,7 +19,6 @@ params ["_unit"];
 
 // If the unit died the loop is finished
 if (!alive _unit || {!local _unit}) exitWith {};
-
 [_unit] call EFUNC(medical_vitals,handleUnitVitals);
 
 // Handle spontaneous wake up from unconsciousness
