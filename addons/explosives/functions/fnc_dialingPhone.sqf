@@ -50,4 +50,3 @@ if (_dialStep == _ringtoneDuration) then {
 };
 
 _args set [1, _dialStep + 1];
-    
