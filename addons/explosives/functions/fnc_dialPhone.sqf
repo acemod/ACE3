@@ -32,7 +32,7 @@ private _ringtone = getArray (configOf (_explosive select 0) >> QGVAR(ringtones)
 if (_ringtone isEqualTo []) then { _ringtone = [[QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75]] };
 //support random ringtones
 _ringtone = selectRandom _ringtone;
-_ringtone params ["_ringtonePath", "_ringtoneLenght"];
+_ringtone params ["_ringtonePath", "_ringtoneLength"];
 
 //Calculate the ringtone duration before detonation with slight randomness
 private _ringtoneDuration = round(count _arr - (_ringtoneLenght + (random 1.5)- 0.75) / 0.25) max 4;
