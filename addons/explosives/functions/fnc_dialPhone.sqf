@@ -1,7 +1,6 @@
 #include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
- * [Description]
  * Dials the number passed and detonates the explosive.
  * Arguments:
  * 0: Unit to do dialing <OBJECT>
