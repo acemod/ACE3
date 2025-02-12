@@ -17,6 +17,4 @@ GVAR(excludedMines) = [];
 
 GVAR(defusalKits) = keys (uiNamespace getVariable QGVAR(defusalKits));
 
-GVAR(iedRingtonesHash) = createHashMap;
-
 ADDON = true;
