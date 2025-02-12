@@ -15,31 +15,26 @@
  * Public: No
  */
 params ["_player"];
-
 private _vehicle = vehicle _player;
-private _turretPath = [-1];
 
 if (_vehicle getVariable [QGVAR(gps_actionsAdded), false]) exitWith {};
 _vehicle setVariable [QGVAR(gps_actionsAdded), true];
+TRACE_2("adding gps action",_player,typeOf _vehicle);
 
 private _condition = {
-    params ["_target", "_player"];
+    params ["_target", "_player"]; // _player may be the UAV AI
     
-    private _turretPath = if (ACE_player == (driver _target)) then {[-1]} else {ACE_player call CBA_fnc_turretPath};
-    private _hasJDAM = false;
-    {
-        private _magazines = getArray (configFile >> "CfgWeapons" >> _x >> "magazines");
-        {
-            private _ammo = getText (configFile >> "CfgMagazines" >> _x >> "ammo");
-            private _ammoAttackProfiles = getArray (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "attackProfiles");
-            _hasJDAM = "JDAM" in _ammoAttackProfiles;
-
-            if (_hasJDAM) exitWith { true };
-        } forEach _magazines;
-
-        if (_hasJDAM) exitWith { true };
-    } forEach (_target weaponsTurret _turretPath);
-
+    private _turretPath = if (_player == (driver _target)) then {[-1]} else {_player call CBA_fnc_turretPath};
+    private _hasJDAM = (_target weaponsTurret _turretPath) findIf {
+        private _weapon = _x;
+        GVAR(gps_weapons) getOrDefaultCall [_weapon, {
+            (getArray (configFile >> "CfgWeapons" >> _weapon >> "magazines")) findIf {
+                private _ammo = getText (configFile >> "CfgMagazines" >> _x >> "ammo");
+                private _ammoAttackProfiles = getArray (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "attackProfiles");
+                "JDAM" in _ammoAttackProfiles
+            } > -1
+        }, true]
+    } > -1;
     _hasJDAM
 };
 

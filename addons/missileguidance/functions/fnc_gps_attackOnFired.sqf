@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [] call ace_missileguidance_fnc_wire_onFired
+ * [] call ace_missileguidance_fnc_gps_attackOnFired
  *
  * Public: No
  */

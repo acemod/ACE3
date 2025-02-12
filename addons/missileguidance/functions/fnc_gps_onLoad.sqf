@@ -16,6 +16,7 @@
  */
 [{
     params ["_display"];
+    TRACE_1("gps_onLoad",_display);
     uiNamespace setVariable [QGVAR(gpsAttackOptionDisplay), _display];
 
     private _mode = [GPS_UI_PB, GPS_UI_TOO] select (GVAR(gps_mode) isEqualTo "too");
