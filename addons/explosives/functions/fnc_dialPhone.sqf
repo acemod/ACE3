@@ -35,7 +35,7 @@ _ringtone = selectRandom _ringtone;
 _ringtone params ["_ringtonePath", "_ringtoneLength", "_volume", "_soundPitch", "_distance"];
 
 //Calculate the ringtone duration before detonation with slight randomness
-private _ringtoneDuration = round(count _arr - (_ringtoneLenght + (random 1.5)- 0.75) / 0.25) max 4;
+private _ringtoneDuration = round(count _arr - (_ringtoneLength + (random 1.5)- 0.75) / 0.25) max 4;
 
 TRACE_2("ringtone",_ringtone,_ringtoneDuration);
 if (_unit == ace_player) then {
