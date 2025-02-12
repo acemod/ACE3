@@ -14,7 +14,7 @@
     #define DEBUG_SETTINGS DEBUG_SETTINGS_MEDICAL_STATEMACHINE
 #endif
 
-#include "\z\ace\addons\medical_engine\script_macros_medical.hpp"
+#include "\z\ace\addons\medical_statemachine\script_macros_medical.hpp"
 #include "\z\ace\addons\main\script_macros.hpp"
 
 #define FATAL_INJURIES_ALWAYS 0
