@@ -50,6 +50,19 @@ if (isNull attachedTo _unit) exitWith {
         playSound QGVAR(Thud);
     };
 
+    // Holster weapon if one is being held, then unholster it again
+    private _currentWeapon = currentWeapon _unit;
+    if (_currentWeapon != "") then {
+        [_unit] call EFUNC(weaponselect,putWeaponAway);
+        [{
+            params ["_unit", "_weapon"];
+            // Abort if the unit already selected a different weapon
+            if (currentWeapon _unit != "") exitWith {};
+            if (!([_unit] call EFUNC(common,isAwake))) exitWith {};
+            _unit selectWeapon _weapon;
+        }, [_unit, _currentWeapon], 2] call CBA_fnc_waitAndExecute;
+    };
+
     [_pfhHandle] call CBA_fnc_removePerFrameHandler;
 };
 

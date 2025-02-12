@@ -1,5 +1,6 @@
 
 // effects
+PREP(applyCrackEffect);
 PREP(applyDirtEffect);
 PREP(applyDustEffect);
 PREP(applyGlassesEffect);

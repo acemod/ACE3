@@ -12,7 +12,7 @@
             <Russian>Используется для зарядки переносных БПЛА</Russian>
             <German>Verwendet zum Aufladen von tragbaren UAVs</German>
             <Korean>무인기를 재충전 할 때 씁니다.</Korean>
-            <Japanese>運んでいる UAV を充電に使う</Japanese>
+            <Japanese>携行中のUAVの充電に使用</Japanese>
             <Chinese>對可攜式無人載具進行充電</Chinese>
             <Chinesesimp>对可携式无人机进行充电</Chinesesimp>
             <Turkish>Used to refuel Carried UAV's</Turkish>
@@ -63,7 +63,7 @@
             <Russian>БПЛА полностью заряжен</Russian>
             <German>Drohne ist voll</German>
             <Korean>무인기 충전 완료</Korean>
-            <Japanese>ドローンは充電完了</Japanese>
+            <Japanese>ドローンの充電完了</Japanese>
             <Chinese>無人載具電池已充滿</Chinese>
             <Chinesesimp>无人机电池已充满</Chinesesimp>
             <Turkish>IHA Dolu</Turkish>

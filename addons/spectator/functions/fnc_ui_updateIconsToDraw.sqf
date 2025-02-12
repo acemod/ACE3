@@ -135,7 +135,7 @@ private _camPos = AGLToASL positionCameraToWorld [0,0,0];
 
         // Add fired EH for drawing and icon highlighting
         if (GETVAR(_vehicle,GVAR(firedEH),-1) == -1) then {
-            SETVAR(_vehicle,GVAR(firedEH),_vehicle addEventHandler [ARR_2("Fired",{_this call FUNC(handleFired)})]);
+            SETVAR(_vehicle,GVAR(firedEH),_vehicle addEventHandler [ARR_2("Fired",{call FUNC(handleFired)})]);
         };
     };
 } forEach ([] call FUNC(getTargetEntities));
