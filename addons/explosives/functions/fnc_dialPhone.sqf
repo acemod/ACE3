@@ -28,8 +28,7 @@ for "_i" from 1 to _ran do {
 
 private _explosive = [_code] call FUNC(getSpeedDialExplosive);
 
-private _explosiveType = typeOf (_explosive select 0);
-private _ringtone = GVAR(iedRingtonesHash) getOrDefault [_explosiveType,getArray (configFile >> "CfgAmmo" >> _explosiveType >> QGVAR(ringtones)),true];
+private _ringtone = getArray (configOf (_explosive select 0) >> QGVAR(ringtones));
 if (_ringtone isEqualTo []) then { _ringtone = [[QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75]] };
 //support random ringtones
 _ringtone = selectRandom _ringtone;
