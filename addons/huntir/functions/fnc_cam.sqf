@@ -20,7 +20,7 @@ if (!hasInterface) exitWith {};
 params ["_huntIR"];
 
 GVAR(huntIR) = _huntIR;
-GVAR(pos) = getPosVisual GVAR(huntIR);
+GVAR(pos) = ASLToAGL getPosASLVisual GVAR(huntIR);
 
 GVAR(ZOOM) = 0;
 GVAR(NV) = 0;

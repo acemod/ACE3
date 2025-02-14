@@ -13,7 +13,7 @@
  */
 params ["_projectile"];
 
-private _camera = "camera" camCreate getPosATL _projectile;
+private _camera = "camera" camCreate ASLToAGL getPosASL _projectile;
 _camera camPrepareFov 0.7;
 _camera cameraEffect ["internal", "back"];
 
