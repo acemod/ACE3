@@ -31,21 +31,29 @@ private _getLoadedModsInfo = getLoadedModsInfo;
 {
     private _cfg = _cfgPatches >> _x;
     private _actualModDir = configSourceMod _cfg;
-    private _expectedModDir = getText (_cfg >> "ACE_expectedModDir");
+    private _expectedModDir = [getText (_cfg >> "ACE_expectedModDir")];
 
-    if (_expectedModDir == "") then {
-        _expectedModDir = "@ace";
+    if (_expectedModDir isEqualTo [""]) then {
+        _expectedModDir = [
+            "@7R_Ace",
+            "@7R_Ace [Dev]",
+            "@ace"
+        ];
     };
 
-    private _expectedSteamID = getText (_cfg >> "ACE_expectedSteamID");
+    private _expectedSteamID = [getText (_cfg >> "ACE_expectedSteamID")];
 
-    if (_expectedSteamID == "") then {
-        _expectedSteamID = "463939057"
+    if (_expectedSteamID isEqualTo [""]) then {
+        _expectedSteamID = [
+            "3336808745",
+            "2886148746",
+            "463939057"
+        ];
     };
 
     (_allMods getOrDefault [_actualModDir, [], true]) pushBackUnique _expectedSteamID;
 
-    if (_actualModDir != _expectedModDir) then {
+    if !(_actualModDir in _expectedModDir) then {
         private _errorMsg = format ["%1 loading from unexpected modDir [%2]", _x, _actualModDir];
         systemChat _errorMsg;
         WARNING_1("%1",_errorMsg);
@@ -64,7 +72,7 @@ private _getLoadedModsInfo = getLoadedModsInfo;
     private _index = _getLoadedModsInfo findIf {_x select 1 == _modDir};
     (_getLoadedModsInfo param [_index, []]) params [["_modName", "$Error$"], "", "", "", "", "", "", ["_actualID", ""]];
 
-    if (_actualID != _expectedSteamID) then {
+    if !(_actualID in _expectedSteamID) then {
         private _errorMsg = format ["%1 [%2] unexpected workshopID [%3]", _modDir, _modName, _actualID];
         systemChat _errorMsg;
         WARNING_1("%1",_errorMsg);

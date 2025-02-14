@@ -4,6 +4,7 @@ PREP(adjustPainLevel);
 PREP(getAllMedicationCount);
 PREP(getBloodLoss);
 PREP(getBloodPressure);
+PREP(getBloodVolumeChange);
 PREP(getCardiacOutput);
 PREP(getMedicationCount);
 PREP(handleKilled);
