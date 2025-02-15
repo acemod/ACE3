@@ -23,7 +23,7 @@ This is absolutely not even slightly feature complete nor organised.
 
 */
 
-private _emptyDisplay = findDisplay 46 createDisplay "RscDisplayEmpty";
+private _emptyDisplay = createDialog ["RscDisplayEmpty", true];
 private _background = _emptyDisplay ctrlCreate ["RscPicture", -1];
 
 private _phoneWidth = PHONE_WIDTH+0.1;
