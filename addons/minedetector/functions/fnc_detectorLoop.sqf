@@ -4,8 +4,8 @@
  * Handle mine detection in a PFH loop
  *
  * Arguments:
- * 0: args <ARRAY>
- * 1: PHD Id <PFH_ID>
+ * 0: Args <ARRAY>
+ * 1: PFH ID <NUMBER>
  *
  * Return Value:
  * None

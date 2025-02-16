@@ -4,7 +4,7 @@
  * Check if the given backpack is an actual backpack that can store items. Parachute, static weapon packs, etc. will return false.
  *
  * Arguments:
- * 0: Backpack <OBJECT, STRING>
+ * 0: Backpack <OBJECT or STRING>
  *
  * Return Value:
  * Boolean <BOOL>

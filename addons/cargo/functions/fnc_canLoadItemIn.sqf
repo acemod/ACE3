@@ -4,7 +4,7 @@
  * Checks if the item can be loaded into another object.
  *
  * Arguments:
- * 0: Item to be loaded <STRING> or <OBJECT>
+ * 0: Item to be loaded <STRING or OBJECT>
  * 1: Holder object (vehicle) <OBJECT>
  * 2: Ignore interaction distance and stability checks <BOOL> (default: false)
  *

@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Animation <STRING>
- * 2: Priority of the animation. (default: 0) <NUMBER>
+ * 2: Priority of the animation. <NUMBER> (default: 0)
  *     0 = PlayMove
  *     1 = PlayMoveNow
  *     2 = SwitchMove (no transitional animation, doesn't overwrite priority 1)
