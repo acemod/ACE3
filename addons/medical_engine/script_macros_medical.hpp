@@ -132,6 +132,12 @@
 
 #define DEFAULT_TOURNIQUET_VALUES [0,0,0,0,0,0]
 
+// Time until a tourniquet starts causing pain
+#define TOURNIQUET_MIN_TIME_FOR_PAIN 120
+
+// How much pain a tourniquet will cause per second after TOURNIQUET_MIN_TIME_FOR_PAIN
+#define TOURNIQUET_PAIN_PER_SECOND 0.001
+
 #define DEFAULT_FRACTURE_VALUES [0,0,0,0,0,0]
 
 #define DEFAULT_BODYPART_DAMAGE_VALUES [0,0,0,0,0,0]

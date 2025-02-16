@@ -36,7 +36,7 @@ private _UTM = [_long, _lat] call BIS_fnc_posDegToUTM;
 private _easting = _UTM select 0;
 private _northing = _UTM select 1;
 //private _zone = _UTM select 2;
-TRACE_4("",_UTM,_easting,_northing,_zone);
+TRACE_3("",_UTM,_easting,_northing);
 
 /*
 private _band = switch (true) do {
