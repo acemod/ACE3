@@ -11,7 +11,7 @@
  * 4: Code to execute by the action <CODE or STRING>
  * 5: Condition for the menu action <CODE or STRING>
  * 6: Code to execute from the menu <CODE or STRING>
- * 7: Priority of the action (default: 0) <NUMBER>
+ * 7: Priority of the action <NUMBER> (default: 0)
  *
  * Return Value:
  * ID of the action (used to remove it later) <NUMBER>

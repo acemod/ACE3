@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Position (2D Position) <ARRAY>
- * 1: Return type; false for array of easting and northing, true for single string (default: false) <BOOL>
+ * 1: Return type; false for array of easting and northing, true for single string <BOOL> (default: false)
  *
  * Return Value:
  * 0: Easting <STRING>

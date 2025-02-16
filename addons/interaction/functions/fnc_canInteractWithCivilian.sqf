@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Target <OBJECT>
- * 2: Target has to be on the civilian side (default: true) <BOOL>
+ * 2: Target has to be on the civilian side <BOOL> (default: true)
  *
  * Return Value:
  * Able to interact with civilian <BOOL>

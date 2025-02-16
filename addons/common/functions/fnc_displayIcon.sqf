@@ -9,7 +9,7 @@
  * 1: show <BOOL>
  * 2: Icon Path <STRING>
  * 3: Icon color <ARRAY>
- * 4: timeAlive. -1 = forever (default: 6) <NUMBER>
+ * 4: timeAlive. -1 = forever <NUMBER> (default: 6)
  *
  * Return Value:
  * None
