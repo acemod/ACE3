@@ -12,7 +12,7 @@
  * 4: Condition <CODE>
  * 5: Insert children code <CODE> (default: {})
  * 6: Action parameters <ANY> (default: [])
- * 7: Position (Position array, Position code or Selection Name) <ARRAY>, <CODE> or <STRING> (default: {[0, 0, 0]})
+ * 7: Position (Position array, Position code or Selection Name) <ARRAY or CODE or STRING> (default: {[0, 0, 0]})
  * 8: Distance <NUMBER> (default: 2)
  * 9: Other parameters [showDisabled,enableInside,canCollapse,runOnHover,doNotCheckLOS] <ARRAY> (default: all false)
  * 10: Modifier function <CODE> (default: {})
