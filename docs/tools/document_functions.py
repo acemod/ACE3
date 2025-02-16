@@ -167,7 +167,7 @@ class FunctionFile:
         expectedMainIndex = 0
         expectedSubIndex = 0
         for argument in lines:
-            valid = re.match(r"^(- ){0,1}(\d+):\s(.+?)\<([\s\w,\|]+?)\>( )?(\s\(default: (.+)\))?$", argument)
+            valid = re.match(r"^(- ){0,1}(\d+):\s(.+?)\<([\s\w,\<\>]+?)\>( )?(\s\(default: (.+)\))?$", argument)
 
             if valid:
                 arg_isSubIndex = valid.group(1) is not None
