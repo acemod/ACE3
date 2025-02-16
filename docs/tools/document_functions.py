@@ -69,7 +69,7 @@ class FunctionFile:
 
         for lineNumber, line in enumerate(self.header.splitlines()):
             if (not (line.startswith(" * ") or line in ["", " *", "/*", "*/", " */"])):
-                self.feedback(f"header formating on line {lineNumber+1}: ({line})", 1)
+                self.feedback(f"header formatting on line {lineNumber+1}: ({line})", 1)
 
         # Preemptively cut away the comment characters (and leading/trailing whitespace)
         self.header_text = "\n".join([x[3:].strip() for x in self.header.splitlines()])
@@ -139,7 +139,7 @@ class FunctionFile:
         # Authors are listed on the first line
         authors_text = raw.splitlines()[0]
 
-        # Seperate authors are divided by commas
+        # Separate authors are divided by commas
         return authors_text.split(", ")
 
     def process_description(self, raw):
@@ -360,7 +360,7 @@ def crawl_dir(addons_dir, directory, debug=False, lint_private=False):
                     errors += function.process_header(debug, lint_private)
 
                     if function.is_public() and not debug:
-                        # Add functions to component key (initalise key if necessary)
+                        # Add functions to component key (initialise key if necessary)
                         component = os.path.basename(os.path.dirname(root))
 
                         # Sort functions alphabetically
