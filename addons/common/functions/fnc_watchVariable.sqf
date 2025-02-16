@@ -40,7 +40,7 @@ if (canSuspend) exitWith { // Ensure atomic - (fix `disableSerialization` error 
 
 if (isNull (findDisplay 46)) exitWith {
     TRACE_1("waiting for main display to be ready",isNull (findDisplay 46));
-    [{!isNull (findDisplay 46)}, {_this call FUNC(watchVariable);}, _this] call CBA_fnc_waitUntilAndExecute;
+    [{!isNull (findDisplay 46)}, {call FUNC(watchVariable);}, _this] call CBA_fnc_waitUntilAndExecute;
 };
 
 if (_code isEqualTo {}) then {TRACE_1("using name as code",_name); _code = compile _name;};

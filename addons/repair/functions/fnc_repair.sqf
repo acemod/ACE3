@@ -190,7 +190,7 @@ if (_loopAnim) then {
                 params ["_caller", "_anim"];
                 if !(isNil {_caller getVariable QGVAR(repairCurrentAnimCaller)}) then {
                     TRACE_2("loop",_caller,_anim);
-                    _this call EFUNC(common,doAnimation)
+                    call EFUNC(common,doAnimation)
                 };
             }, [_caller, _anim], 2.5] call CBA_fnc_waitAndExecute;
         };

@@ -78,7 +78,7 @@ if (_enabledTagsCursor) then {
 if (_enabledTagsNearby) then {
     // Find valid targets and cache them
     private _targets = [[], {
-        private _nearMen = _camPosAGL nearObjects ["CAManBase", _maxDistance + 7];
+        private _nearMen = nearestObjects [_camPosAGL, ["CAManBase"], _maxDistance + 7];
         _nearMen = _nearMen select {
             _x != ACE_player &&
             {(side group _x) == (side group ACE_player)} &&
@@ -138,7 +138,7 @@ if (_enabledTagsNearby) then {
                 [ACE_player, _target, _alpha, _distance * 0.026, _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
             };
         };
-    } forEach _targets;
+    } forEachReversed _targets;
 };
 
 END_COUNTER(GVAR(onDraw3d));

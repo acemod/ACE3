@@ -21,7 +21,7 @@
     // "exitWith", which would be broken with "HandleDamage" otherwise.
     _unit setVariable [
         QEGVAR(medical,HandleDamageEHID),
-        _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
+        _unit addEventHandler ["HandleDamage", {call FUNC(handleDamage)}]
     ];
 
     // Fires where healer is local

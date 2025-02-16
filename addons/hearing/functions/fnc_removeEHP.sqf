@@ -25,7 +25,7 @@ if !([_unit, "ACE_EHP"] call CBA_fnc_canAddItem) exitWith {
     [LELSTRING(common,Inventory_Full)] call EFUNC(common,displayTextStructured);
 };
 
-// Plugs already in and removing them.
+// EHP already in and removing them.
 _unit addItem "ACE_EHP";
 
 _unit setVariable ["ACE_hasEHP", false, true];

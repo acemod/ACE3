@@ -14,5 +14,4 @@ PREP(removeEHP);
 PREP(statBarStatement_hearingProtection);
 PREP(statTextStatement_hearingProtection);
 PREP(updateHearingProtection);
-PREP(updatePlayerVehAttenuation);
 PREP(updateVolume);

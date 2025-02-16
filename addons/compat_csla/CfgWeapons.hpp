@@ -34,7 +34,7 @@ class CfgWeapons {
         EGVAR(overheating,closedBolt) = 0;
     };
 
-    class US85_M60: US85_MachinegunBase_7_62 {
+    class US85_M60_base: US85_MachinegunBase_7_62 {
         EGVAR(overheating,allowSwapBarrel) = 1;
         EGVAR(overheating,closedBolt) = 0;
     };

@@ -18,4 +18,4 @@
  * Public: No
  */
 
-_this call FUNC(attackProfile_LIN);
+call FUNC(attackProfile_LIN);

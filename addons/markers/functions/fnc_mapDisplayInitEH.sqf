@@ -21,17 +21,17 @@ TRACE_1("params",_display);
 private _bisShapeLB = _display displayCtrl 1091;
 private _curSelShape = missionNamespace getVariable [QGVAR(curSelMarkerShape), 0];
 TRACE_2("shape",_bisShapeLB,_curSelShape);
-_bisShapeLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedShape)}];
+_bisShapeLB ctrlAddEventHandler ["LBSelChanged", {call FUNC(onLBSelChangedShape)}];
 _bisShapeLB lbSetCurSel _curSelShape;
 
 
 private _bisColorLB = _display displayCtrl 1090;
 private _curSelColor = missionNamespace getVariable [QGVAR(curSelMarkerColor), 0];
 TRACE_2("color",_bisColorLB,_curSelColor);
-_bisColorLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedColor)}];
+_bisColorLB ctrlAddEventHandler ["LBSelChanged", {call FUNC(onLBSelChangedColor)}];
 _bisColorLB lbSetCurSel _curSelColor;
 
 // movable markers
 private _ctrlMap = _display displayCtrl 51;
-_ctrlMap ctrlAddEventHandler ["MouseButtonDown", {_this call FUNC(onMouseButtonDown)}];
-_ctrlMap ctrlAddEventHandler ["MouseButtonUp", {_this call FUNC(onMouseButtonUp)}];
+_ctrlMap ctrlAddEventHandler ["MouseButtonDown", {call FUNC(onMouseButtonDown)}];
+_ctrlMap ctrlAddEventHandler ["MouseButtonUp", {call FUNC(onMouseButtonUp)}];

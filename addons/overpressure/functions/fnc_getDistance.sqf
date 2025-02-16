@@ -21,7 +21,7 @@
 params ["_posASL", "_direction", "_maxDistance", "_shooter"];
 TRACE_4("params",_posASL,_direction,_maxDistance,_shooter);
 
-private _intersections = lineIntersectsSurfaces [_posASL, _posASL vectorAdd (_direction vectorMultiply _maxDistance), _shooter, objNull, true, 99];
+private _intersections = lineIntersectsSurfaces [_posASL, _posASL vectorAdd (_direction vectorMultiply _maxDistance), _shooter, vehicle _shooter, true, 99];
 
 TRACE_1("lineIntersectsSurfaces",_intersections);
 
@@ -40,11 +40,11 @@ private _distance = 999;
             // Calculate the angle between the terrain and the back blast direction
             private _angle = 90 - acos (- (_surfaceNormal vectorDotProduct _direction));
             TRACE_3("Terrain Intersect",_surfaceNormal,_direction,_angle);
-            // Angles is below 25deg, no backblast at all
+            // Angles below 25° don't cause backblast reflection
             if (_angle < 25) exitWith {_distance = 999};
-            // Angles is below 45deg the distance is increased according to the difference
+            // At angles below 45° the distance is increased according to the difference
             if (_angle < 45) exitWith {_distance = _distance * (5 - 4 * sqrt ((_angle - 25)/20))};
-            // Angles above 45degcreate full backblast
+            // Angles above 45° create full backblast reflection
         };
     };
 } forEach _intersections;
