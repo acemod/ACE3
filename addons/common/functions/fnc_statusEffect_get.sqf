@@ -4,7 +4,7 @@
  * Retrives list of current status effects
  *
  * Arguments:
- * 0: vehicle that it will be attached to (player or vehicle) <OBJECT>
+ * 0: Vehicle that it will be attached to (player or vehicle) <OBJECT>
  * 1: Effect Name <STRING>
  *
  * Return Value:
@@ -49,7 +49,7 @@ if (_effectNumber == 0) exitWith { //empty array - false effect
 
 //if no change: skip sending publicVar and events
 private _effectBoolArray = [_effectNumber, count _statusReasons] call FUNC(binarizeNumber);
-TRACE_2("bitArray",_statusIndex,_effectBoolArray);
+TRACE_1("bitArray",_effectBoolArray);
 
 private _activeEffects = [];
 {

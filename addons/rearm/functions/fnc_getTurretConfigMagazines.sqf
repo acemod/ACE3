@@ -16,4 +16,4 @@
  * Public: No
  */
 
-getArray ((_this call CBA_fnc_getTurret) >> "magazines")
+getArray ((call CBA_fnc_getTurret) >> "magazines")

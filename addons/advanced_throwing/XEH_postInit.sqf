@@ -11,7 +11,7 @@ if (!hasInterface) exitWith {};
 GVAR(tempWindInfo) = false;
 
 // Add keybinds
-["ACE3 Weapons", QGVAR(prepare), localize LSTRING(Prepare), {
+["ACE3 Weapons", QGVAR(prepare), LLSTRING(Prepare), {
     // Condition
     if !([ACE_player] call FUNC(canPrepare)) exitWith {false};
     if (EGVAR(common,isReloading)) exitWith {true};
@@ -22,7 +22,7 @@ GVAR(tempWindInfo) = false;
     true
 }, {false}, [34, [true, false, false]], false] call CBA_fnc_addKeybind; // Shift + G
 
-["ACE3 Weapons", QGVAR(dropModeToggle), localize LSTRING(DropModeToggle), {
+["ACE3 Weapons", QGVAR(dropModeToggle), LLSTRING(DropModeToggle), {
     // Condition
     if (!(ACE_player getVariable [QGVAR(inHand), false]) || {underwater ACE_player}) exitWith {false};
 
@@ -35,7 +35,7 @@ GVAR(tempWindInfo) = false;
     true
 }, {false}, [34, [false, true, false]], false] call CBA_fnc_addKeybind; // Ctrl + G
 
-["ACE3 Weapons", QGVAR(dropModeHold), localize LSTRING(DropModeHold), {
+["ACE3 Weapons", QGVAR(dropModeHold), LLSTRING(DropModeHold), {
     // Condition
     if !(ACE_player getVariable [QGVAR(inHand), false]) exitWith {false};
 
@@ -95,9 +95,9 @@ GVAR(tempWindInfo) = false;
 
 
 // Display handlers
-["KeyDown", {_this call FUNC(onKeyDown)}] call CBA_fnc_addDisplayHandler;
-["MouseButtonDown", {_this call FUNC(onMouseButtonDown)}] call CBA_fnc_addDisplayHandler;
-["MouseZChanged", {_this call FUNC(onMouseScroll)}] call CBA_fnc_addDisplayHandler;
+["KeyDown", {call FUNC(onKeyDown)}] call CBA_fnc_addDisplayHandler;
+["MouseButtonDown", {call FUNC(onMouseButtonDown)}] call CBA_fnc_addDisplayHandler;
+["MouseZChanged", {call FUNC(onMouseScroll)}] call CBA_fnc_addDisplayHandler;
 
 
 #ifdef DRAW_THROW_PATH

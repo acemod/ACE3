@@ -3,20 +3,20 @@
     <Package name="Disarming">
         <Key ID="STR_ACE_Disarming_OpenInventory">
             <English>Open Inventory</English>
-            <German>Öffne Inventar</German>
-            <Polish>Otwórz ekwipunek</Polish>
             <Czech>Otevřít inventář</Czech>
-            <Spanish>Abrir inventario</Spanish>
-            <Russian>Открыть инвентарь</Russian>
-            <Italian>Apri l'inventario</Italian>
             <French>Ouvrir l'inventaire</French>
-            <Hungarian>Felszerelés megtekintése</Hungarian>
+            <Spanish>Abrir inventario</Spanish>
+            <Italian>Apri l'inventario</Italian>
+            <Polish>Otwórz ekwipunek</Polish>
             <Portuguese>Abrir inventário</Portuguese>
-            <Japanese>インベントリを開く</Japanese>
+            <Russian>Открыть инвентарь</Russian>
+            <German>Öffne Inventar</German>
             <Korean>소지품 열기</Korean>
+            <Japanese>インベントリを開く</Japanese>
             <Chinese>開啟裝備</Chinese>
             <Chinesesimp>开启物品栏</Chinesesimp>
             <Turkish>Envanteri Aç</Turkish>
+            <Hungarian>Felszerelés megtekintése</Hungarian>
         </Key>
     </Package>
 </Project>

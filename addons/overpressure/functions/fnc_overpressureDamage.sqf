@@ -37,12 +37,12 @@ TRACE_3("cache",_overpressureAngle,_overpressureRange,_overpressureDamage);
         private _distance = vectorMagnitude _relativePosition;
         private _angle = acos (_axisDistance / _distance);
 
-        private _line = [_posASL, _targetPositionASL, _firer, _x];
+        private _line = [_posASL, _targetPositionASL, vehicle _firer, _x];
         private _line2 = [_posASL, _targetPositionASL];
         TRACE_4("Affected:",_x,_axisDistance,_distance,_angle);
 
         if (_angle < _overpressureAngle && {_distance < _overpressureRange} && {!lineIntersects _line} && {!terrainIntersectASL _line2}) then {
-            TRACE_2("",isDamageAllowed _unit,_unit getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
+            TRACE_2("",isDamageAllowed _x,_x getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
 
             // Skip damage if not allowed
             if (isDamageAllowed _x && {_x getVariable [QEGVAR(medical,allowDamage), true]}) then {

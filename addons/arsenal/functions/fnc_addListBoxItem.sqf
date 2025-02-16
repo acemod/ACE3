@@ -48,14 +48,21 @@ if (_skip) exitWith {};
     private _configPath = ([configFile, campaignConfigFile, missionConfigFile] select _configRoot) >> _configCategory >> _className;
     private _dlcName = _configPath call EFUNC(common,getAddon);
 
+    // Get DLC requirements
+    ([_configPath] call EFUNC(common,getDLC)) params ["_dlcClass", "_dlcSteamID"];
+    private _dlcPicture = "";
+    if (_dlcClass != "") then {
+        _dlcPicture = getText (configFile >> "CfgMods" >> _dlcClass >> "logo");
+    };
+
     // If _pictureEntryName is empty, then this item has no picture (e.g. faces)
-    [configName _configPath, getText (_configPath >> "displayName"), if (_pictureEntryName == "") then {""} else {getText (_configPath >> _pictureEntryName)}, if (_dlcName != "") then {(modParams [_dlcName, ["logo"]]) param [0, ""]} else {""}]
-}, true]) params ["_className", "_displayName", "_itemPicture", "_modPicture"];
+    [configName _configPath, getText (_configPath >> "displayName"), if (_pictureEntryName == "") then {""} else {getText (_configPath >> _pictureEntryName)}, if (_dlcName != "") then {(modParams [_dlcName, ["logo"]]) param [0, ""]} else {""}, _dlcPicture]
+}, true]) params ["_className", "_displayName", "_itemPicture", "_modPicture", "_dlcPicture"];
 
 private _lbAdd = _ctrlPanel lbAdd _displayName;
 _ctrlPanel lbSetData [_lbAdd, _className];
 _ctrlPanel lbSetPicture [_lbAdd, _itemPicture];
-_ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture] select GVAR(enableModIcons)];
+_ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture, _dlcPicture] select GVAR(enableModIcons)];
 _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
 
 if ((toLowerANSI _className) in GVAR(favorites)) then {

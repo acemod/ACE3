@@ -46,6 +46,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QXGVAR(nearDepletedConsequence),
+    "LIST",
+    LSTRING(NearDepletedConsequence_DisplayName),
+    LSTRING(DisplayName),
+    [[0, 1], [LSTRING(NearDepletedConsequence_Pain), LSTRING(NearDepletedConsequence_Unconsciousness)], 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QXGVAR(waterSourceActions),
     "LIST",
     [LSTRING(WaterSourceActions_DisplayName), LSTRING(WaterSourceActions_Description)],
@@ -100,4 +109,13 @@
     LSTRING(DisplayName),
     [[-1, 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8], [LSTRING(Dynamic), "0%", "10%", "20%", "30%", "40%", "50%", "60%", "70%", "80%", 0], 0],
     false
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(zeusUpdates),
+    "CHECKBOX",
+    [LSTRING(ZeusUpdates_DisplayName), LSTRING(ZeusUpdates_Description)],
+    LSTRING(DisplayName),
+    false,
+    1
 ] call CBA_fnc_addSetting;

@@ -42,10 +42,11 @@ if (!_updateVolumeOnly) then {
 
         GVAR(time3) = CBA_missionTime;
 
+        private _effectsVolume = getAudioOptionVolumes#0;
         if (GVAR(deafnessDV) > 19.75) then {
-            playSound (["ACE_Combat_Deafness_Heavy", "ACE_Combat_Deafness_Heavy_NoRing"] select GVAR(disableEarRinging));
+            playSoundUI [["ACE_Combat_Deafness_Heavy", "ACE_Combat_Deafness_Heavy_NoRing"] select GVAR(disableEarRinging), _effectsVolume];
         } else {
-            playSound (["ACE_Combat_Deafness_Medium", "ACE_Combat_Deafness_Medium_NoRing"] select GVAR(disableEarRinging));
+            playSoundUI [["ACE_Combat_Deafness_Medium", "ACE_Combat_Deafness_Medium_NoRing"] select GVAR(disableEarRinging), _effectsVolume];
         };
     };
 

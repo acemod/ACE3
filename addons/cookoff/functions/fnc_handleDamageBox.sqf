@@ -18,12 +18,23 @@
 // If cookoff for boxes is disabled, exit
 if (!GVAR(enableAmmobox) || {GVAR(ammoCookoffDuration) == 0}) exitWith {};
 
-params ["_box", "", "_damage", "_source", "_ammo", "", "_instigator", "_hitPoint"];
+params ["_box", "_selection", "_damage", "_source", "_ammo", "_hitIndex", "_instigator", "_hitPoint", "", "_context"];
 
 if (!local _box) exitWith {};
 
 // If it's already dead, ignore
 if (!alive _box) exitWith {};
+
+private _currentDamage = if (_selection != "") then {
+    _box getHitIndex _hitIndex
+} else {
+    damage _box
+};
+
+// Killing units via End key is an edge case (#10375)
+// This didn't matter pre-Arma 3 2.18 but now this goes through the event handler
+// TODO: Structural fire damage >= 1 in a single damage event could still be caught here and we don't want that, but we haven't found a better way to catch this, fire damage should be small most of the time anyway
+if (_context == 0 && {(abs (_damage - _currentDamage - 1)) < 0.001 && _ammo == "" && isNull _source && isNull _instigator}) exitWith {_damage};
 
 if !(_box getVariable [QGVAR(enableAmmoCookoff), true]) exitWith {};
 
