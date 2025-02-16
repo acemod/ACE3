@@ -192,8 +192,7 @@ class FunctionFile:
                 if arg_default is None:
                     arg_default = ""
 
-                if ("SCALAR" in arg_types or "NUMVER" in arg_types):
-                    self.feedback("Bad Arg Type \"{}\"".format(arg_types), 1)
+                self.validate_argument_type(arg_types)
 
                 arguments.append([arg_index, arg_name, arg_types, arg_default, arg_notes])
             else:
@@ -206,6 +205,45 @@ class FunctionFile:
                     arguments[-1][-1].append(argument)
 
         return arguments
+
+    def validate_argument_type(self, arg_type: str):
+        # Check for bad types
+        bad_types = {
+            # Bad type -> what type to use instead
+            "SCALAR": "NUMBER",
+            "NUMVER": "NUMBER",
+            "BOOLEAN": "BOOL",
+            "POSITION": "ARRAY",
+            "LIST": "ARRAY",
+            "UNIT": "OBJECT",
+        }
+
+        for bad_type, good_type in bad_types.items():
+            if bad_type in arg_type.upper():
+                self.feedback(f"Bad argument type \"{arg_type}\". Use \"{good_type}\" instead of \"{bad_type}\".", 1)
+
+        # Validated brackets < >
+        open_bracket_count = 0
+        close_bracket_count = 0
+        reported_once = False
+        for c in arg_type:
+            if c == "<":
+                open_bracket_count += 1
+
+            if c == ">":
+                close_bracket_count += 1
+
+            if not reported_once and close_bracket_count > open_bracket_count:
+                self.feedback(f"Bad argument type \"{arg_type}\". Type is missing an open angle bracket \"<\".", 1)
+                reported_once = True
+
+        if close_bracket_count != open_bracket_count:
+            self.feedback(f"Bad argument type \"{arg_type}\". Type is missing a close angle bracket \">\".", 1)
+
+        # Validated that types are in upper case
+        filtered_arg_type = arg_type.replace("s", "").replace("or", "").replace("of", "")
+        if not filtered_arg_type.isupper():
+            self.feedback(f"Bad argument type \"{arg_type}\". Type is not in upper case.", 1)
 
     def process_return_value(self, raw):
         return_value = raw.strip()
