@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Weapon <STRING> (default: Units current weapon)
+ * 1: Weapon <STRING> (default: Unit's current weapon)
  *
  * Return Value:
  * 0: Attachments <ARRAY>

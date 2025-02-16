@@ -152,7 +152,7 @@ Important: `ace_common_fnc_canInteractWith` is not automatically checked and nee
  * 4: Condition <CODE>
  * 5: Insert children code <CODE> (Optional)
  * 6: Action parameters <ANY> (Optional)
- * 7: Position (Position array, Position code or Selection Name) <ARRAY>, <CODE> or <STRING> (Optional)
+ * 7: Position (Position array, Position code or Selection Name) <ARRAY>, <CODE or STRING> (Optional)
  * 8: Distance <NUMBER> (Optional)
  * 9: Other parameters [showDisabled,enableInside,canCollapse,runOnHover,doNotCheckLOS] <ARRAY> (Optional)
  * 10: Modifier function <CODE> (Optional)
@@ -170,8 +170,8 @@ Important: `ace_common_fnc_canInteractWith` is not automatically checked and nee
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  * 2: Parent path of the new action <ARRAY>
  * 3: Action <ARRAY>
- * 4: Use Inheritance (Default: False) <BOOL>
- * 5: Classes excluded from inheritance (children included) (Default: []) <ARRAY>
+ * 4: Use Inheritance <BOOL> (default: false)
+ * 5: Classes excluded from inheritance (children included) <ARRAY> (default: [])
  */
 ```
 By default this function will not use inheritance, so actions will only be added to the specific class.
