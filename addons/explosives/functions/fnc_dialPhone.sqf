@@ -20,13 +20,16 @@ if (_unit getVariable [QGVAR(Dialing),false]) exitWith {};
 if !(alive _unit) exitWith {};
 _unit setVariable [QGVAR(Dialing), true, true];
 
-private _ran = (ceil(random 8)) + 1;
+private _explosive = [_code] call FUNC(getSpeedDialExplosive);
+
+private _callConnectTimes = getArray (configOf (_explosive select 0) >> QGVAR(callConnetTime));
+_callConnectTimes params ["_callConnectTimeMin", "_callConnectTimeMax"];
+
+private _ran = ((ceil(random _callConnectTimeMax)) + _callConnectTimeMin) max 2;
 private _arr = [];
 for "_i" from 1 to _ran do {
     _arr = _arr + ['.','..','...',''];
 };
-
-private _explosive = [_code] call FUNC(getSpeedDialExplosive);
 
 private _ringtone = getArray (configOf (_explosive select 0) >> QGVAR(ringtones));
 if (_ringtone isEqualTo []) then { _ringtone = [[QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75, 3.16228, 1, 75]] };
