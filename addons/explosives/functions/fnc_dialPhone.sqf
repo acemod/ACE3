@@ -38,7 +38,8 @@ _ringtone = selectRandom _ringtone;
 _ringtone params ["_ringtonePath", "_ringtoneLength", ["_volume", 3.16228], ["_soundPitch", 1], ["_distance", 75]];
 
 //Calculate the ringtone duration before detonation with slight randomness
-private _ringtoneDuration = round(count _arr - (_ringtoneLength + (random 1.5)- 0.75) / 0.25) max 4;
+private _detonationTimingOffset = getNumber (configOf (_explosive select 0) >> QGVAR(detonationTimingOffset));
+private _ringtoneDuration = round(count _arr - (_ringtoneLength + (random (_detonationTimingOffset * 2)) - _detonationTimingOffset) / 0.25) max 4;
 
 TRACE_2("ringtone",_ringtone,_ringtoneDuration);
 if (_unit == ace_player) then {

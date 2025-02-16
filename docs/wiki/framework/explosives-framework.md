@@ -57,6 +57,7 @@ class CfgAmmo {
         ACE_explosives_size = 0;  // (Optional) Setting to 1 will use a defusal action with a larger radius (useful for large mines or mines with a wide pressure plane trigger area)
         ACE_explosives_ringtones[] = {{"\z\addons\explosives\Data\Audio\Cellphone_Ring.wss", 0.75, 3.16228, 1, 75}};  // (Optional) Defines IED ringtone(s) to be randomly selected upon detonation by cellphone. Each entry includes a sound file path, duration (in seconds), volume (optional: default 3.16228), pitch (optional: default 1), and maximum audible distance (optional: default 75).
         ACE_explosives_callConnetTime[] = {1,8};  // (Optional) Defines the connection delay range (in seconds) for a dialed explosive, where the first value sets the minimum time and the second value sets the maximum time before detonation.
+        ACE_explosives_detonationTimingOffset = 0.75;  // (Optional) Defines the maximum random deviation (in seconds) for detonation timing, allowing the explosive to detonate up to this value earlier or later than the ringtone's end.
     };
 };
 ```
