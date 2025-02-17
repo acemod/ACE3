@@ -35,6 +35,33 @@
             <Turkish>Gelişmiş füze rehberliği veya AMG, füze kilitleme ve ateşleme için çoklu geliştirmeler sağlar.</Turkish>
             <Hungarian>A fejlett rakétairányító (vagy AMG) többféle módosítást tartalmaz a rakéták célkövetéséhez és tüzeléséhez. Ez egy szükséges keresztrendszer a rakéta-alapú fegyverekhez.</Hungarian>
         </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_altitude">
+            <English>Altitude</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_attack_heading">
+            <English>Attack Heading</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_easting">
+            <English>Easting</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_header">
+            <English>GPS Weapon Setup</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_impact_angle">
+            <English>Impact Angle</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_northing">
+            <English>Northing</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp">
+            <English>PRE-PLANNED</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_short">
+            <English>PP</English>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_too">
+            <English>TARGET OF OPPORTUNITY</English>
+        </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
             <Czech>Hellfire II AGM-114K</Czech>
