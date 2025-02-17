@@ -6,22 +6,15 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"ace_laser"};
+        requiredAddons[] = {"ace_common","ace_missileguidance"};
         author = ECSTRING(common,ACETeam);
+        authors[] = {"tcvm"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-#include "ACE_GuidanceConfig.hpp"
-
-#include "CfgMissileTypesNato.hpp"
-#include "CfgMissileTypesWarsaw.hpp"
-#include "CfgEventhandlers.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
-#include "GPSDialog.hpp"
-#ifdef CREATE_MOCK_PLATFORMS
-#include "dev\mock_vehicles.hpp"
-#endif
+
