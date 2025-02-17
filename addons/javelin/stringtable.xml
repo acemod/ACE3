@@ -3,20 +3,20 @@
     <Package name="Javelin">
         <Key ID="STR_ACE_Javelin_LockTarget">
             <English>Lock Target (Hold)</English>
-            <German>Ziel aufschalten (Halten)</German>
-            <Russian>Захватить цель (удерживать)</Russian>
             <Czech>Zamknout cíl (držet)</Czech>
-            <Polish>Namierz cel (przytrzymaj)</Polish>
             <French>Javelin - Verrouiller la cible (maintenir)</French>
-            <Hungarian>Célpontra állás (Lenyomva tartott)</Hungarian>
-            <Italian>Aggangia il bersaglio</Italian>
             <Spanish>Fijar objetivo (Mantener)</Spanish>
+            <Italian>Aggangia il bersaglio</Italian>
+            <Polish>Namierz cel (przytrzymaj)</Polish>
             <Portuguese>Travar Alvo (Segurar)</Portuguese>
-            <Japanese>目標を捕捉 (長押し)</Japanese>
+            <Russian>Захватить цель (удерживать)</Russian>
+            <German>Ziel aufschalten (Halten)</German>
             <Korean>표적 획득 (누르기)</Korean>
-            <Chinesesimp>锁定目标（按住）</Chinesesimp>
+            <Japanese>目標を捕捉 (長押し)</Japanese>
             <Chinese>鎖定目標 (按住)</Chinese>
+            <Chinesesimp>锁定目标（按住）</Chinesesimp>
             <Turkish>Hedefe Kilitlen(Basılı Tut)</Turkish>
+            <Hungarian>Célpontra állás (Lenyomva tartott)</Hungarian>
         </Key>
     </Package>
 </Project>

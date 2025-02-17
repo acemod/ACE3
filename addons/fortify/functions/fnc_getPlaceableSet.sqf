@@ -20,7 +20,7 @@ TRACE_1("getPlaceableSet",_preset);
 
 private _config = missionConfigFile >> "ACEX_Fortify_Presets" >> _preset;
 if (!isClass _config) then {
-    _config = configfile >> "ACEX_Fortify_Presets" >> _preset;
+    _config = configFile >> "ACEX_Fortify_Presets" >> _preset;
 };
 if (!isClass _config) exitWith {
     private _msg = format ["Could not find [%1]", _preset];
@@ -41,7 +41,7 @@ _objects = _objects select {
             false
         };
     } else {
-        ERROR_2("Preset [%1] - Bad data in objects array %2",_preset,_x);
+        ERROR_2("Preset [%1] - Bad data [%2] in objects array %2",_preset,_x);
         false
     };
 };

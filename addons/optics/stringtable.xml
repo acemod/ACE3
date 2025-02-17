@@ -1,175 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Optics">
-        <Key ID="STR_ACE_Optics_hamr">
-            <English>RCO (2D)</English>
-            <Czech>RCO (2D)</Czech>
-            <French>RCO (2D)</French>
-            <German>RCO (2D)</German>
-            <Italian>RCO (2D)</Italian>
-            <Polish>RCO (2D)</Polish>
-            <Portuguese>RCO (2D)</Portuguese>
-            <Russian>RCO (2D)</Russian>
-            <Spanish>RCO (2D)</Spanish>
-            <Hungarian>RCO (2D)</Hungarian>
-            <Japanese>RCO (2D)</Japanese>
-            <Korean>류폴드 마크 4 HAMR (2D)</Korean>
-            <Chinesesimp>RCO（2D）</Chinesesimp>
-            <Chinese>步槍戰鬥光學瞄準鏡(2D)</Chinese>
-            <Turkish>RCO (2D)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Optics_hamr_pip">
-            <English>RCO (PIP)</English>
-            <Czech>RCO (PIP)</Czech>
-            <French>RCO (PIP)</French>
-            <German>RCO (BIB)</German>
-            <Italian>RCO (PIP)</Italian>
-            <Polish>RCO (PIP)</Polish>
-            <Portuguese>RCO (PIP)</Portuguese>
-            <Russian>RCO (PIP)</Russian>
-            <Spanish>RCO (PIP)</Spanish>
-            <Hungarian>RCO (PIP)</Hungarian>
-            <Japanese>RCO (PIP)</Japanese>
-            <Korean>류폴드 마크 4 HAMR (PIP)</Korean>
-            <Chinesesimp>RCO（画中画）</Chinesesimp>
-            <Chinese>步槍戰鬥光學瞄準鏡(擬真版)</Chinese>
-            <Turkish>RCO (PIP)</Turkish>
-        </Key>
         <Key ID="STR_ACE_Optics_arco">
             <English>ARCO (2D)</English>
             <Czech>ARCO (2D)</Czech>
             <French>ARCO (2D)</French>
-            <German>ARCO (2D)</German>
+            <Spanish>ARCO (2D)</Spanish>
             <Italian>ARCO (2D)</Italian>
             <Polish>ARCO (2D)</Polish>
             <Portuguese>ARCO (2D)</Portuguese>
             <Russian>ARCO (2D)</Russian>
-            <Spanish>ARCO (2D)</Spanish>
-            <Hungarian>ARCO (2D)</Hungarian>
-            <Japanese>ARCO (2D)</Japanese>
+            <German>ARCO (2D)</German>
             <Korean>엘칸 스펙터OS (2D)</Korean>
-            <Chinesesimp>ARCO（2D）</Chinesesimp>
+            <Japanese>ARCO (2D)</Japanese>
             <Chinese>先進步槍戰鬥光學瞄準鏡(2D)</Chinese>
+            <Chinesesimp>ARCO（2D）</Chinesesimp>
             <Turkish>ARCO (2D)</Turkish>
+            <Hungarian>ARCO (2D)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Optics_arco_pip">
             <English>ARCO (PIP)</English>
             <Czech>ARCO (PIP)</Czech>
             <French>ARCO (PIP)</French>
-            <German>ARCO (BIB)</German>
+            <Spanish>ARCO (PIP)</Spanish>
             <Italian>ARCO (PIP)</Italian>
             <Polish>ARCO (PIP)</Polish>
             <Portuguese>ARCO (PIP)</Portuguese>
             <Russian>ARCO (PIP)</Russian>
-            <Spanish>ARCO (PIP)</Spanish>
-            <Hungarian>ARCO (PIP)</Hungarian>
-            <Japanese>ARCO (PIP)</Japanese>
+            <German>ARCO (BIB)</German>
             <Korean>엘칸 스펙터OS (PIP)</Korean>
-            <Chinesesimp>ARCO（画中画）</Chinesesimp>
+            <Japanese>ARCO (PIP)</Japanese>
             <Chinese>先進步槍戰鬥光學瞄準鏡(擬真版)</Chinese>
+            <Chinesesimp>ARCO（画中画）</Chinesesimp>
             <Turkish>ARCO (PIP)</Turkish>
+            <Hungarian>ARCO (PIP)</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Optics_valdada">
-            <English>MRCO (2D)</English>
-            <Czech>MRCO (2D)</Czech>
-            <French>MRCO (2D)</French>
-            <German>MRCO (2D)</German>
-            <Italian>MRCO (2D)</Italian>
-            <Polish>MRCO (2D)</Polish>
-            <Portuguese>MRCO (2D)</Portuguese>
-            <Russian>MRCO (2D)</Russian>
-            <Spanish>MRCO (2D)</Spanish>
-            <Hungarian>MRCO (2D)</Hungarian>
-            <Japanese>MRCO (2D)</Japanese>
-            <Korean>IOR-Valdada 핏불 2 (2D)</Korean>
-            <Chinesesimp>MRCO（2D）</Chinesesimp>
-            <Chinese>多距離戰鬥瞄準鏡(2D)</Chinese>
-            <Turkish>MRCO (2D)</Turkish>
+        <Key ID="STR_ACE_Optics_hamr">
+            <English>RCO (2D)</English>
+            <Czech>RCO (2D)</Czech>
+            <French>RCO (2D)</French>
+            <Spanish>RCO (2D)</Spanish>
+            <Italian>RCO (2D)</Italian>
+            <Polish>RCO (2D)</Polish>
+            <Portuguese>RCO (2D)</Portuguese>
+            <Russian>RCO (2D)</Russian>
+            <German>RCO (2D)</German>
+            <Korean>류폴드 마크 4 HAMR (2D)</Korean>
+            <Japanese>RCO (2D)</Japanese>
+            <Chinese>步槍戰鬥光學瞄準鏡(2D)</Chinese>
+            <Chinesesimp>RCO（2D）</Chinesesimp>
+            <Turkish>RCO (2D)</Turkish>
+            <Hungarian>RCO (2D)</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Optics_valdada_pip">
-            <English>MRCO (PIP)</English>
-            <Czech>MRCO (PIP)</Czech>
-            <French>MRCO (PIP)</French>
-            <German>MRCO (BIB)</German>
-            <Italian>MRCO (PIP)</Italian>
-            <Polish>MRCO (PIP)</Polish>
-            <Portuguese>MRCO (PIP)</Portuguese>
-            <Russian>MRCO (PIP)</Russian>
-            <Spanish>MRCO (PIP)</Spanish>
-            <Hungarian>MRCO (PIP)</Hungarian>
-            <Japanese>MRCO (PIP)</Japanese>
-            <Korean>IOR-Valdada 핏불 2 (PIP)</Korean>
-            <Chinesesimp>MRCO（画中画）</Chinesesimp>
-            <Chinese>多距離戰鬥瞄準鏡(擬真版)</Chinese>
-            <Turkish>MRCO (PIP)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Optics_sos">
-            <English>MOS (2D)</English>
-            <Czech>MOS (2D)</Czech>
-            <French>MOS (2D)</French>
-            <German>MOS (2D)</German>
-            <Italian>MOS (2D)</Italian>
-            <Polish>MOS (2D)</Polish>
-            <Portuguese>MOS (2D)</Portuguese>
-            <Russian>MOS (2D)</Russian>
-            <Spanish>MOS (2D)</Spanish>
-            <Hungarian>MOS (2D)</Hungarian>
-            <Japanese>MOS (2D)</Japanese>
-            <Korean>MOS (2D)</Korean>
-            <Chinesesimp>MOS（2D）</Chinesesimp>
-            <Chinese>精準光學瞄準鏡(2D)</Chinese>
-            <Turkish>MOS (2D)</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Optics_sos_pip">
-            <English>MOS (PIP)</English>
-            <Czech>MOS (PIP)</Czech>
-            <French>MOS (PIP)</French>
-            <German>MOS (BIB)</German>
-            <Italian>MOS (PIP)</Italian>
-            <Polish>MOS (PIP)</Polish>
-            <Portuguese>MOS (PIP)</Portuguese>
-            <Russian>MOS (PIP)</Russian>
-            <Spanish>MOS (PIP)</Spanish>
-            <Hungarian>MOS (PIP)</Hungarian>
-            <Japanese>MOS (PIP)</Japanese>
-            <Korean>MOS (PIP)</Korean>
-            <Chinesesimp>MOS（画中画）</Chinesesimp>
-            <Chinese>精準光學瞄準鏡(擬真版)</Chinese>
-            <Turkish>MOS (PIP)</Turkish>
+        <Key ID="STR_ACE_Optics_hamr_pip">
+            <English>RCO (PIP)</English>
+            <Czech>RCO (PIP)</Czech>
+            <French>RCO (PIP)</French>
+            <Spanish>RCO (PIP)</Spanish>
+            <Italian>RCO (PIP)</Italian>
+            <Polish>RCO (PIP)</Polish>
+            <Portuguese>RCO (PIP)</Portuguese>
+            <Russian>RCO (PIP)</Russian>
+            <German>RCO (BIB)</German>
+            <Korean>류폴드 마크 4 HAMR (PIP)</Korean>
+            <Japanese>RCO (PIP)</Japanese>
+            <Chinese>步槍戰鬥光學瞄準鏡(擬真版)</Chinese>
+            <Chinesesimp>RCO（画中画）</Chinesesimp>
+            <Turkish>RCO (PIP)</Turkish>
+            <Hungarian>RCO (PIP)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Optics_lrps">
             <English>LRPS (2D)</English>
             <Czech>LRPS (2D)</Czech>
             <French>LRPS (2D)</French>
-            <German>LRPS (2D)</German>
+            <Spanish>MPLD (2D)</Spanish>
             <Italian>LRPS (2D)</Italian>
             <Polish>LRPS (2D)</Polish>
             <Portuguese>LRPS (2D)</Portuguese>
             <Russian>LRPS (2D)</Russian>
-            <Spanish>MPLD (2D)</Spanish>
-            <Hungarian>LRPS (2D)</Hungarian>
-            <Japanese>LRPS (2D)</Japanese>
+            <German>LRPS (2D)</German>
             <Korean>나이트포스 NXS (2D)</Korean>
-            <Chinesesimp>LRPS（2D）</Chinesesimp>
+            <Japanese>LRPS (2D)</Japanese>
             <Chinese>長距離精確瞄準鏡(2D)</Chinese>
+            <Chinesesimp>LRPS（2D）</Chinesesimp>
             <Turkish>LRPS (2D)</Turkish>
+            <Hungarian>LRPS (2D)</Hungarian>
         </Key>
         <Key ID="STR_ACE_Optics_lrps_pip">
             <English>LRPS (PIP)</English>
             <Czech>LRPS (PIP)</Czech>
             <French>LRPS (PIP)</French>
-            <German>LRPS (BIB)</German>
+            <Spanish>MPLD (PIP)</Spanish>
             <Italian>LRPS (PIP)</Italian>
             <Polish>LRPS (PIP)</Polish>
             <Portuguese>LRPS (PIP)</Portuguese>
             <Russian>LRPS (PIP)</Russian>
-            <Spanish>MPLD (PIP)</Spanish>
-            <Hungarian>LRPS (PIP)</Hungarian>
-            <Japanese>LRPS (PIP)</Japanese>
+            <German>LRPS (BIB)</German>
             <Korean>나이트포스 NXS (PIP)</Korean>
-            <Chinesesimp>LRPS（画中画）</Chinesesimp>
+            <Japanese>LRPS (PIP)</Japanese>
             <Chinese>長距離精確瞄準鏡(擬真版)</Chinese>
+            <Chinesesimp>LRPS（画中画）</Chinesesimp>
             <Turkish>LRPS (PIP)</Turkish>
+            <Hungarian>LRPS (PIP)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Optics_mrco">
+            <English>MRCO (2D)</English>
+            <Czech>MRCO (2D)</Czech>
+            <French>MRCO (2D)</French>
+            <Spanish>MRCO (2D)</Spanish>
+            <Italian>MRCO (2D)</Italian>
+            <Polish>MRCO (2D)</Polish>
+            <Portuguese>MRCO (2D)</Portuguese>
+            <Russian>MRCO (2D)</Russian>
+            <German>MRCO (2D)</German>
+            <Korean>IOR-Valdada 핏불 2 (2D)</Korean>
+            <Japanese>MRCO (2D)</Japanese>
+            <Chinese>多距離戰鬥瞄準鏡(2D)</Chinese>
+            <Chinesesimp>MRCO（2D）</Chinesesimp>
+            <Turkish>MRCO (2D)</Turkish>
+            <Hungarian>MRCO (2D)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Optics_mrco_pip">
+            <English>MRCO (PIP)</English>
+            <Czech>MRCO (PIP)</Czech>
+            <French>MRCO (PIP)</French>
+            <Spanish>MRCO (PIP)</Spanish>
+            <Italian>MRCO (PIP)</Italian>
+            <Polish>MRCO (PIP)</Polish>
+            <Portuguese>MRCO (PIP)</Portuguese>
+            <Russian>MRCO (PIP)</Russian>
+            <German>MRCO (BIB)</German>
+            <Korean>IOR-Valdada 핏불 2 (PIP)</Korean>
+            <Japanese>MRCO (PIP)</Japanese>
+            <Chinese>多距離戰鬥瞄準鏡(擬真版)</Chinese>
+            <Chinesesimp>MRCO（画中画）</Chinesesimp>
+            <Turkish>MRCO (PIP)</Turkish>
+            <Hungarian>MRCO (PIP)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Optics_sos">
+            <English>MOS (2D)</English>
+            <Czech>MOS (2D)</Czech>
+            <French>MOS (2D)</French>
+            <Spanish>MOS (2D)</Spanish>
+            <Italian>MOS (2D)</Italian>
+            <Polish>MOS (2D)</Polish>
+            <Portuguese>MOS (2D)</Portuguese>
+            <Russian>MOS (2D)</Russian>
+            <German>MOS (2D)</German>
+            <Korean>MOS (2D)</Korean>
+            <Japanese>MOS (2D)</Japanese>
+            <Chinese>精準光學瞄準鏡(2D)</Chinese>
+            <Chinesesimp>MOS（2D）</Chinesesimp>
+            <Turkish>MOS (2D)</Turkish>
+            <Hungarian>MOS (2D)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Optics_sos_pip">
+            <English>MOS (PIP)</English>
+            <Czech>MOS (PIP)</Czech>
+            <French>MOS (PIP)</French>
+            <Spanish>MOS (PIP)</Spanish>
+            <Italian>MOS (PIP)</Italian>
+            <Polish>MOS (PIP)</Polish>
+            <Portuguese>MOS (PIP)</Portuguese>
+            <Russian>MOS (PIP)</Russian>
+            <German>MOS (BIB)</German>
+            <Korean>MOS (PIP)</Korean>
+            <Japanese>MOS (PIP)</Japanese>
+            <Chinese>精準光學瞄準鏡(擬真版)</Chinese>
+            <Chinesesimp>MOS（画中画）</Chinesesimp>
+            <Turkish>MOS (PIP)</Turkish>
+            <Hungarian>MOS (PIP)</Hungarian>
         </Key>
     </Package>
 </Project>

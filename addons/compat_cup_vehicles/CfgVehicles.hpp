@@ -1,4 +1,31 @@
 class CfgVehicles {
+    class CUP_nHMMWV_Base;
+    class CUP_nM1025_SOV_Base: CUP_nHMMWV_Base {
+        class EGVAR(interaction,anims) {
+            class hide_backpacks {
+                positions[] = {
+                    "(_target selectionPosition ['vhc_backpacks', 'ViewGeometry', 'AveragePoint']) vectorAdd [-1, 0, 0]",
+                    "(_target selectionPosition ['vhc_backpacks', 'ViewGeometry', 'AveragePoint']) vectorAdd [1.3, 0, 0]"
+                };
+                items[] = {"CUP_B_USPack_Coyote", "CUP_B_USPack_Coyote", "CUP_B_AssaultPack_ACU", "CUP_B_AssaultPack_ACU", "CUP_B_AssaultPack_Coyote"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+            };
+        };
+    };
+
+    class Car_F;
+    class CUP_ECVHMMWV_Base: Car_F {
+        class EGVAR(interaction,anims) {
+            class hide_deploy2 {
+                positions[] = {"(_target selectionPosition ['vhc_rear_trunk_door', 'FireGeometry', 'AveragePoint']) vectorAdd [-0.7, 0, 0]"};
+                items[] = {"CUP_B_USPack_Coyote", "CUP_B_AssaultPack_ACU"};
+                name = "$STR_a3_cfgvehicleclasses_backpacks0";
+                text = "$STR_a3_cfgvehicleclasses_backpacks0";
+            };
+        };
+    };
+
     class CUP_MTVR_Base;
     class CUP_MTVR_Reammo_Base: CUP_MTVR_Base {
         EGVAR(rearm,defaultSupply) = 1200;
@@ -106,6 +133,17 @@ class CfgVehicles {
     class CUP_BTR90_HQ_Base: CUP_BTR90_Base { delete ace_viewports; }; // no cargo seats
 
     class Tank_F;
+    class CUP_AAV_Base: Tank_F {
+        class EGVAR(interaction,anims) {
+            class Hide_Bags_Deployment {
+                positions[] = {{1.7, -0.7, -0.3}, {1.7, -2.55, -0.3}};
+                items[] = {"CUP_B_USPack_Coyote", "CUP_B_USPack_Coyote"};
+                name = "$STR_CUP_dn_USpack_coyote";
+                text = "$STR_CUP_dn_USpack_coyote";
+            };
+        };
+    };
+
     class CUP_M2Bradley_Base: Tank_F {
         ace_hunterkiller = 1;
         class ace_viewports {
@@ -284,5 +322,41 @@ class CfgVehicles {
             "hitera_r11", "hitera_r12", "hitera_r13", "hitera_r14", "hitera_r15",
             "hitera_r16", "hitera_r17", "hitera_r18", "hitera_r19", "hitera_r20"
         };
+    };
+    class CUP_GAZ_Vodnik_Base: Wheeled_APC_F {
+        EGVAR(vehicle_damage,engineDetonationProb) = 0;
+        EGVAR(vehicle_damage,engineFireProb) = 0.1;
+    };
+    class CUP_GAZ_Vodnik_AGS_Base: CUP_GAZ_Vodnik_Base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,hullFireProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretFireProb) = 0;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(vehicle_damage,canHaveFireJet) = 0;
+    };
+    class CUP_GAZ_Vodnik_Unarmed_base: CUP_GAZ_Vodnik_Base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,hullFireProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretFireProb) = 0;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(vehicle_damage,canHaveFireJet) = 0;
+    };
+    class CUP_GAZ_Vodnik_MedEvac_Base: CUP_GAZ_Vodnik_Base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,hullFireProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretFireProb) = 0;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(vehicle_damage,canHaveFireJet) = 0;
+    };
+    class CUP_O_GAZ_Vodnik_PK_RU: CUP_GAZ_Vodnik_Base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0;
+        EGVAR(vehicle_damage,hullFireProb) = 0;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0;
+        EGVAR(vehicle_damage,turretFireProb) = 0;
+        EGVAR(vehicle_damage,canHaveFireRing) = 0;
+        EGVAR(vehicle_damage,canHaveFireJet) = 0;
     };
 };

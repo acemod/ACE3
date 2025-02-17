@@ -36,7 +36,7 @@
         private _hasWeaponHolder = !isNull (ACE_player getVariable [QGVAR(weaponHolder), objNull]);
         private _hasFakeWeapon = secondaryWeapon ACE_player == QGVAR(weapon);
 
-        if !(_hasWeaponHolder isEqualTo _hasFakeWeapon) then {
+        if (_hasWeaponHolder isNotEqualTo _hasFakeWeapon) then {
             [ACE_player] call FUNC(remove);
         };
     }] call CBA_fnc_execNextFrame;

@@ -4,23 +4,24 @@
  * Check if a unit can check the ammo of the target.
  *
  * Arguments:
- * 0: Unit equipped with the weapon <OBJECT>
+ * 0: Unit equipped with the weapon/CSW to check <OBJECT>
+ * 1: Unit checking ammo <OBJECT>
  *
  * Return Value:
  * Can check ammo <BOOL>
  *
  * Example:
- * [cursorObject] call ace_reload_fnc_canCheckAmmo
+ * [cursorObject, player] call ace_reload_fnc_canCheckAmmo
  *
  * Public: No
  */
 
-params ["_target"];
+params ["_target", "_player"];
 
 // Static weapons
 if (_target isKindOf "StaticWeapon") exitWith {
     // No check ammo action on destroyed static weapons
-    if (!alive _target) exitWith {false};
+    if (!alive _target || {!([_player, _target] call EFUNC(interaction,canInteractWithVehicleCrew))}) exitWith {false};
 
     if (currentMagazine _target != "") exitWith {true};
 

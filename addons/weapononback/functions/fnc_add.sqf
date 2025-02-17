@@ -61,7 +61,7 @@ if (local _unit) then {
 
     // Magazines
     {
-        if !(_x isEqualTo []) then {
+        if (_x isNotEqualTo []) then {
             _newMass = _newMass + getNumber (configFile >> "CfgMagazines" >> _x#0 >> "mass");
         };
     } forEach [_magPrimary, _magSecondary];

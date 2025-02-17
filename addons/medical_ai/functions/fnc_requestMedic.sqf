@@ -17,8 +17,11 @@
 
 private _assignedMedic = _this getVariable QGVAR(assignedMedic);
 private _healQueue = _assignedMedic getVariable [QGVAR(healQueue), []];
-_healQueue pushBack _this;
-_assignedMedic setVariable [QGVAR(healQueue), _healQueue];
+
+// Only update if it was actually changed
+if (_healQueue pushBackUnique _this != -1) then {
+    _assignedMedic setVariable [QGVAR(healQueue), _healQueue];
+};
 
 #ifdef DEBUG_MODE_FULL
     systemChat format ["%1 requested %2 for medical treatment", _this, _assignedMedic];

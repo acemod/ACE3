@@ -2,6 +2,7 @@ class vn_grenadehand;
 class vn_molotov_grenade_ammo: vn_grenadehand {
     ACE_damageType = QGVAR(explosive_incendiary);
     EGVAR(frag,enabled) = 0;
+    EGVAR(hearing,hearingDamageFactor) = 0;
 };
 
 class vn_t67_grenade_ammo: vn_grenadehand {

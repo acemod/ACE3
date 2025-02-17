@@ -198,11 +198,11 @@ GVAR(menuRun) = true;
                 GVAR(vectorConnected) = false;
                 GVAR(displaySelection) = "WP";
                 switch (GVAR(selection)) do {
-                    case 0: { DAGR_WP_INFO = GVAR(wp0); };
-                    case 1: { DAGR_WP_INFO = GVAR(wp1); };
-                    case 2: { DAGR_WP_INFO = GVAR(wp2); };
-                    case 3: { DAGR_WP_INFO = GVAR(wp3); };
-                    case 4: { DAGR_WP_INFO = GVAR(wp4); };
+                    case 0: { GVAR(wp_info) = GVAR(wp0); };
+                    case 1: { GVAR(wp_info) = GVAR(wp1); };
+                    case 2: { GVAR(wp_info) = GVAR(wp2); };
+                    case 3: { GVAR(wp_info) = GVAR(wp3); };
+                    case 4: { GVAR(wp_info) = GVAR(wp4); };
                 };
                 if (!GVAR(busy)) then {
                     GVAR(showInfoUpdating) = true;
@@ -382,6 +382,7 @@ GVAR(menuRun) = true;
                             GVAR(digit8) = floor (GVAR(wp3) - GVAR(digit7) * 10 - GVAR(digit6) * 100 - GVAR(digit5) * 1000 - GVAR(digit4) * 10000 - GVAR(digit3) * 100000 - GVAR(digit2) * 1000000 - GVAR(digit1) * 10000000);
                         };
                         case 4: {
+                            //IGNORE_PRIVATE_WARNING ["ace_dagr_wp4"];
                             GVAR(digit1) = floor (GVAR(wp4) / 10000000);
                             GVAR(digit2) = floor (GVAR(wp4) / 1000000 - GVAR(digit1) *10);
                             GVAR(digit3) = floor (GVAR(wp4) / 100000 - GVAR(digit2) * 10 - GVAR(digit1) * 100);
@@ -584,7 +585,7 @@ GVAR(menuRun) = true;
             };
             GVAR(tmpUpdateRate) = 0.1 max GVAR(tmpUpdateRate) min 2.0;
             if (!GVAR(busy)) then {
-                (__dsp displayCtrl __mainText) ctrlSetText (Str(GVAR(tmpUpdateRate) * 1000) + "ms");
+                (__dsp displayCtrl __mainText) ctrlSetText (str(GVAR(tmpUpdateRate) * 1000) + "ms");
                 (__dsp displayCtrl __F1) ctrlSetText "Save";
                 (__dsp displayCtrl __F3) ctrlSetText "Cancel";
             };

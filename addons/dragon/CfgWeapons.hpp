@@ -20,7 +20,7 @@ class CfgWeapons {
         scope = 2;
         shotPos = "muzzlePos2";
         shotEnd = "muzzleEnd2";
-        class ACE_CSW {
+        class ace_csw {
             type = "mount";
             deployTime = 2;
             pickupTime = 2;
@@ -34,9 +34,10 @@ class CfgWeapons {
     };
 
     class GVAR(superStatic): missiles_titan_static {
-        EGVAR(overpressure,angle) = 90;
-        EGVAR(overpressure,range) = 30;
+        EGVAR(overpressure,angle) = 60;
+        EGVAR(overpressure,range) = 10;
         EGVAR(overpressure,damage) = 0.85;
+        EGVAR(overpressure,offset) = 0.4;
 
         initSpeed = 120;
 
@@ -76,7 +77,7 @@ class CfgWeapons {
         opticsZoomMin = 0.0415;
         opticsZoomMax = 0.0415;
         scope = 2;
-        class ACE_CSW {
+        class ace_csw {
             type = "weapon";
             deployTime = 2;
             pickupTime = 1;

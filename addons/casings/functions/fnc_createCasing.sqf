@@ -35,7 +35,7 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
         // use casing's default model
         private _model = getText (_cartridgeConfig >> "model");
         if ("a3\weapons_f\empty" in toLowerANSI _model) exitWith { "" };
-        
+
         // Add file extension if missing (fileExists needs file extension)
         if ((_model select [count _model - 4]) != ".p3d") then {
             _model = _model + ".p3d";
@@ -47,7 +47,7 @@ private _modelPath = GVAR(cachedCasings) getOrDefaultCall [_ammo, {
 
 if (_modelPath isEqualTo "") exitWith {};
 
-private _unitPos = getposASL _unit;
+private _unitPos = getPosASL _unit;
 // Distant shooters don't produce as many cases
 if ((AGLToASL positionCameraToWorld [0,0,0]) vectorDistance _unitPos > 100 && {random 1 < 0.9}) exitWith {};
 

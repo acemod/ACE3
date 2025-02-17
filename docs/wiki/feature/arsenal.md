@@ -53,6 +53,8 @@ Saving loadouts from the default and public tabs will save them in your profile,
 
 All loadouts can be loaded, however items not available or missing, will NOT be added. This limitation applies to all tabs as well as imported loadouts.
 
+In the case of a stored loadout's uniform, vest or backpack not being available or missing, loading it will retain the currently equipped uniform/vest/backpack and attempt to fill it with the stored one's content that is available in the arsenal.
+
 The color coding for loadouts is as follows:
 - White: All items are available and will be loaded.
 - Grey: Some items in that loadout are not available in that box.
@@ -80,11 +82,6 @@ It is also possible to toggle between showing all items or favorites by default 
 Those settings cannot be overwritten by mission makers and are exclusively player preference.
 
 ## 3. Shortcuts
-
-<div class="panel callout">
-    <h5>Note:</h5>
-    <p><kbd>Ctrl</kbd> + <kbd>V</kbd> does NOT work in multiplayer due to a BI safety, however <kbd>Ctrl</kbd> + <kbd>C</kbd> does since it's using the ACE3 clipboard extension.</p>
-</div>
 
 ### 3.1 Outside of search bars
 

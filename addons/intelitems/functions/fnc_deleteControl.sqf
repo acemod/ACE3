@@ -21,7 +21,7 @@ private _index = _controlsGroup getVariable QGVAR(index);
 
 // Save position of controls group
 ctrlPosition _controlsGroup params ["_posX", "_posY"];
-[GVAR(controlsData), _index, [_posX, _posY]] call CBA_fnc_hashSet;
+GVAR(controlsData) set [_index, [_posX, _posY]];
 
 // Update data if modified
 private _ctrlContent = _controlsGroup controlsGroupCtrl IDC_CONTENT;

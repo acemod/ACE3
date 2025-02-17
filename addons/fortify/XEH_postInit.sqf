@@ -47,7 +47,7 @@ GVAR(objectRotationZ) = 0;
     if (_side isEqualTo side group ace_player) then {
         private _budget = [_side] call FUNC(getBudget);
         private _cost = [_side, typeOf _object] call FUNC(getCost);
-        private _text = [format ["%1 +$%2", LLSTRING(Budget), _cost], LLSTRING(Budget)] select (_budget == -1);
+        private _text = [format ["%1 +$%2", LLSTRING(Remove), _cost], LLSTRING(Remove)] select (_budget == -1);
 
         // Remove object action
         private _removeAction = [
@@ -57,11 +57,9 @@ GVAR(objectRotationZ) = 0;
             {
                 params ["_target", "_player", "_params"];
                 _params params ["_side", "_cost"];
-
-                private _totalTime = (_cost * GVAR(timeCostCoefficient) + GVAR(timeMin)) / 2; // [WOG] remove twice faster than build. time = (Ax + b) / 2
-                
+                TRACE_2("deleting placed object",_target,_params);
+                private _totalTime = _cost * GVAR(timeCostCoefficient) / 2 + GVAR(timeMin); // WOG Tweak. Remove action twice as fast as build
                 _target setVariable [QGVAR(removeStarted), true, true];
-
                 [
                     _totalTime,
                     [_player, _target, _side, _cost],
@@ -89,7 +87,7 @@ GVAR(objectRotationZ) = 0;
             {
                 (missionNamespace getVariable [QGVAR(fortifyAllowed), true]) &&
                 {"ACE_Fortify" in (_player call EFUNC(common,uniqueItems))} &&
-                !(_target getVariable [QGVAR(removeStarted), false])
+                {!(_target getVariable [QGVAR(removeStarted), false])}
             },
             {},
             [_side, _cost],

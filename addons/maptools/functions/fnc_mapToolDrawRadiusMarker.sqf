@@ -22,7 +22,7 @@ if (GVAR(mapTool_Shown) isEqualTo 0) exitWith {};
     _textCtrl ctrlSetText "100";
     _display displayAddEventHandler ["Unload", {
         params ["_display", "_exitCode"];
-        if !(_exitCode isEqualTo 1) exitWith {};
+        if (_exitCode isNotEqualTo 1) exitWith {};
         private _textCtrl = _display displayCtrl 451;
         private _radiusStr = ctrlText _textCtrl;
         private _radius = parseNumber _radiusStr;

@@ -2,7 +2,7 @@
 
 if (isServer) then {
     // Cancel deploy on hard disconnection. Function is identical to killed
-    addMissionEventHandler ["HandleDisconnect", {_this call FUNC(handleKilled)}];
+    addMissionEventHandler ["HandleDisconnect", {call FUNC(handleKilled)}];
 };
 
 if (!hasInterface) exitWith {};

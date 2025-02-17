@@ -94,13 +94,58 @@ if (!isNull _loadoutsDisplay) then {
                         };
                     } params ["_className"];
 
-                    "ace_clipboard" callExtension (_className + ";");
-                    "ace_clipboard" callExtension "--COMPLETE--";
+                    "ace" callExtension ["clipboard:append", [_className]];
+                    "ace" callExtension ["clipboard:complete", []];
 
-                    [_display, LLSTRING(exportedClassnameText)] call FUNC(message);
+                    [_display, format ["%1 - %2", LLSTRING(exportedClassnameText), _className]] call FUNC(message);
                 } else {
                     [_display] call FUNC(buttonExport);
                 };
+            };
+            // Export Parent
+            case (_keyPressed == DIK_P && {_ctrlState}): {
+                if !(GVAR(leftTabFocus) || {GVAR(rightTabFocus)} || {GVAR(rightTabLnBFocus)}) exitWith {};
+                switch (true) do {
+                    case (GVAR(leftTabFocus)): {
+                        private _control = (_display displayCtrl IDC_leftTabContent);
+                        _control lbData (lbCurSel _control)
+                    };
+                    case (GVAR(rightTabFocus)): {
+                        private _control = (_display displayCtrl IDC_rightTabContent);
+                        _control lbData (lbCurSel _control)
+                    };
+                    case (GVAR(rightTabLnBFocus)): {
+                        private _control = (_display displayCtrl IDC_rightTabContentListnBox);
+                        _control lnbData [lnbCurSelRow _control, 0]
+                    };
+                } params ["_className"];
+
+                private _cfgConfig = if (GVAR(leftTabFocus)) then {
+                    switch (GVAR(currentLeftPanel)) do {
+                        case IDC_buttonBackpack: {configFile >> "CfgVehicles"};
+                        case IDC_buttonGoggles: {configFile >> "CfgGlasses"};
+                        case IDC_buttonFace: {configFile >> "CfgFaces"};
+                        case IDC_buttonVoice: {configFile >> "CfgVoice"};
+                        case IDC_buttonInsignia: {configFile >> "CfgUnitInsignia"};
+                        default {configFile >> "CfgWeapons"};
+                    }
+                } else {
+                    switch (GVAR(currentRightPanel)) do {
+                        case IDC_buttonCurrentMag;
+                        case IDC_buttonCurrentMag2;
+                        case IDC_buttonThrow;
+                        case IDC_buttonPut;
+                        case IDC_buttonMag;
+                        case IDC_buttonMagALL: {configFile >> "CfgMagazines"};
+                        default {configFile >> "CfgWeapons"};
+                    }
+                };
+
+                private _parent = configName inheritsFrom (_cfgConfig >> _className);
+                "ace" callExtension ["clipboard:append", [_parent]];
+                "ace" callExtension ["clipboard:complete", []];
+
+                [_display, format ["%1 - %2", LLSTRING(exportedClassnameText), _parent]] call FUNC(message);
             };
             // Import button
             case (_keyPressed == DIK_V && {_ctrlState}): {

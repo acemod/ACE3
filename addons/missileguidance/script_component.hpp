@@ -3,9 +3,11 @@
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DRAW_GUIDANCE_INFO
+// #define ENABLE_PROJECTILE_CAMERA
 // #define DEBUG_MODE_FULL
 // #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
+// #define CREATE_MOCK_PLATFORMS
 
 #ifdef DEBUG_ENABLED_MISSILEGUIDANCE
     #define DEBUG_MODE_FULL
@@ -28,4 +30,3 @@
 #define DEFAULT_LEAD_DISTANCE 5
 #define ACTIVE_RADAR_POLL_FREQUENCY (1 / 7)
 #define ACTIVE_RADAR_MINIMUM_SCAN_AREA 30
-

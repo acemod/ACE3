@@ -3,258 +3,258 @@
     <Package name="Finger">
         <Key ID="STR_ACE_Finger_DisplayName">
             <English>Pointing</English>
-            <German>Fingerzeig</German>
+            <Czech>Ukazování</Czech>
+            <French>Pointage du doigt</French>
+            <Spanish>Señalando</Spanish>
             <Italian>Puntamento</Italian>
+            <Polish>Wskazywanie</Polish>
+            <Portuguese>Apontando</Portuguese>
+            <Russian>Указание пальцем</Russian>
+            <German>Fingerzeig</German>
+            <Korean>가리키기</Korean>
+            <Japanese>指差し</Japanese>
             <Chinese>指向指示器</Chinese>
             <Chinesesimp>指向标记</Chinesesimp>
-            <Japanese>指差し</Japanese>
-            <Korean>가리키기</Korean>
-            <French>Pointage du doigt</French>
-            <Polish>Wskazywanie</Polish>
-            <Russian>Указание пальцем</Russian>
-            <Portuguese>Apontando</Portuguese>
-            <Czech>Ukazování </Czech>
-            <Spanish>Señalando</Spanish>
             <Turkish>Işaretleme</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Finger_enabled_displayName">
-            <English>Pointing Enabled</English>
-            <German>Zeigen aktiviert</German>
-            <French>Pointage activé</French>
-            <Polish>Aktywuj wskazywanie</Polish>
-            <Hungarian>Mutatás engedélyezése</Hungarian>
-            <Portuguese>Apontamento ativado</Portuguese>
-            <Russian>Указание пальцем включено</Russian>
-            <Czech>Ukazování povoleno</Czech>
-            <Italian>Puntamento abilitato</Italian>
-            <Japanese>指差しを有効</Japanese>
-            <Korean>가리키기 활성화</Korean>
-            <Chinesesimp>启用指向系统</Chinesesimp>
-            <Chinese>指向系統啟動</Chinese>
-            <Spanish>Señalado permitido</Spanish>
-            <Turkish>Işaretleme Etkin</Turkish>
         </Key>
         <Key ID="STR_ACE_Finger_enabled_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
-            <German>Zeigt in der Nähe befindlichen Spielern die eigene Blickrichtung mit Hilfe eines Kreissymbols an.</German>
+            <Czech>Ukazuje virtuální značku kruhu ve směru, kterým se díváte pro všechny blízké jednotky.</Czech>
             <French>Permet d'effectuer un pointage du doigt, ce qui a pour effet d'afficher sur l'écran des joueurs alliés proches un marqueur virtuel, indiquant la direction dans laquelle vous regardez. Peut être maintenu.</French>
+            <Spanish>Señala y muestra un marcador virtual donde ustás apuntando para las unidades cercanas. Puede ser mantenido.</Spanish>
+            <Italian>Punta e mostra un indicatore virtuale di dove stai guardando alle unità vicine. Può essere tenuto premuto.</Italian>
             <Polish>Wskazuje a także wyświetla wirtualny znacznik - okrąg w miejscu, w które patrzysz, dla wszystkich pobliskich jednostek. Może być przytrzymywany.</Polish>
-            <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
             <Portuguese>Aponta e mostra um marcador virtual para onde você está olhando para unidades próximas. Pode ser utilizado para baixo.</Portuguese>
             <Russian>Показывает пальцем и рисует виртуальный маркер в направлении взгляда ближайшим игрокам. Можно удерживать.</Russian>
-            <Spanish>Señala y muestra un marcador virtual donde ustás apuntando para las unidades cercanas. Puede ser mantenido.</Spanish>
-            <Czech>Ukazuje virtuální značku kruhu ve směru, kterým se díváte pro všechny blízké jednotky.</Czech>
-            <Italian>Punta e mostra un indicatore virtuale di dove stai guardando alle unità vicine. Può essere tenuto premuto.</Italian>
-            <Japanese>近くのユニットに対して、今見ている場所に向けて指を差し、仮想のマーカーを表示して指示することが出来る。 押し続けることも可能。</Japanese>
+            <German>Zeigt in der Nähe befindlichen Spielern die eigene Blickrichtung mit Hilfe eines Kreissymbols an.</German>
             <Korean>당신이 보는 것을 가상의 마커로 표시함으로서 다른 인원이 볼 수 있게 합니다. 누른 채로 유지할 수 있습니다.</Korean>
-            <Chinesesimp>当按下此按键后，你附近的单位即可看见一个虚拟图示，标明你正在指向的位置。此按键可以被按住来持续显示。</Chinesesimp>
+            <Japanese>近くのユニットに対して、今見ている場所に向けて指を差し、仮想のマーカーを表示して指示することが出来る。 押し続けることも可能。</Japanese>
             <Chinese>當按下此按鍵後，你附近的單位即可看見一個虛擬圖示，標明你正在指向的位置。此按鍵可以被按住來持續顯示。</Chinese>
-            <Turkish>Işaretleyince nereye baktığınıza dair sanal bir daire gösterir. Basılı da tutulabilir. </Turkish>
+            <Chinesesimp>当按下此按键后，你附近的单位即可看见一个虚拟图示，标明你正在指向的位置。此按键可以被按住来持续显示。</Chinesesimp>
+            <Turkish>Işaretleyince nereye baktığınıza dair sanal bir daire gösterir. Basılı da tutulabilir.</Turkish>
+            <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Finger_maxRange_displayName">
-            <English>Pointing Max Range</English>
-            <German>Maximale Zeigerreichweite</German>
-            <French>Portée maximale du pointage</French>
-            <Polish>Maks. zasięg wskazywania</Polish>
-            <Hungarian>Ujj maximum hatótávja</Hungarian>
-            <Portuguese>Distância máxima do apontamento</Portuguese>
-            <Russian>Макс. дальность</Russian>
-            <Spanish>Distancia máxima de señalado</Spanish>
-            <Czech>Maximální dosah pro ukazování směru</Czech>
-            <Italian>Raggio massimo puntamento</Italian>
-            <Japanese>指差しの最大範囲</Japanese>
-            <Korean>가리키기 최대 범위</Korean>
-            <Chinesesimp>指向标记最大显示距离</Chinesesimp>
-            <Chinese>指向指示器最大顯示距離</Chinese>
-            <Turkish>Işaretleme maksimum uzaklığı</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Finger_maxRange_description">
-            <English>Max range between players to show the pointing indicator [default: 4 meters]</English>
-            <German>Maximale Reichweite zwischen Spielern, welche das Zeigesymbol des jeweils anderen sehen können. (Standard: 4 Meter).</German>
-            <French>Définit le rayon au-delà duquel les joueurs ne verront plus l'indicateur de pointage de leurs alliés. Valeur par défaut : 4 mètres.</French>
-            <Polish>Określ dystans na jakim można wskazywać coś palcem innym graczom. [domyślnie: 4m] </Polish>
-            <Hungarian>A maximális távolság, amelyben a közeli játékosoknak megjelenik az indikátor. [alapértelmezett: 4 méter]</Hungarian>
-            <Portuguese>Distância máxima entre jogadores para mostrar o apontamento [padrão: 4 metros]</Portuguese>
-            <Russian>Максимальная дальность между игроками для отображения индикатора указания пальцем [по умолчанию: 4 метра]</Russian>
-            <Spanish>Distancia máxima entre los jugadores para mostrar el indicador que señala [por defecto: 4 metros]</Spanish>
-            <Czech>Maximální vzdálenost mezi hráči pro ukázání směru [výchozí: 4 metry]</Czech>
-            <Italian>Distanza massima tra giocatori per mostrare l'indicatore di puntamento [Predefinito: 4 metri]</Italian>
-            <Japanese>指差しのマーカー表示が他のプレイヤーに表示される最大範囲 [デフォルト: 4メートル]</Japanese>
-            <Korean>플레이어 사이에서 가리키기 표시를  보이게 하는 최대거리를 설정합니다[기본설정: 4 미터]</Korean>
-            <Chinesesimp>设定指向标记最大显示距离。[预设：4米]</Chinesesimp>
-            <Chinese>設定指向指示器最大顯示距離。[預設: 4公尺]</Chinese>
-            <Turkish>Hangi uzaklıktakilerin sanal daireyi görmesini seçin. [Varsayılan : 4 metre] </Turkish>
-        </Key>
-        <Key ID="STR_ACE_Finger_sizeCoef_displayName">
-            <English>Visual Marker Size Coefficient</English>
-            <German>Visueller Markergrößenkoeffizient</German>
-            <Italian>Coefficiente di dimensione puntatore</Italian>
-            <Korean>보이는 마커 크기 계수</Korean>
-            <Polish>Współczynnik wielkości wirtualnego znacznika</Polish>
-            <Japanese>指差しマーカーの大きさ係数</Japanese>
-            <Chinesesimp>屏幕标记大小系数</Chinesesimp>
-            <Russian>Коэф. размера маркера</Russian>
-            <Spanish>Coeficiente del tamaño del marcador visual</Spanish>
-            <French>Coefficient taille des marqueurs visuels</French>
-            <Portuguese>Coeficiente de tamanho do marcador visual</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Finger_sizeCoef_description">
-            <English>Adjusts the size of the visual marker.</English>
-            <German>Passt die Größe der visuellen Markierung an.</German>
-            <Italian>Modifica la dimensione del puntatore virtuale.</Italian>
-            <Korean>눈에 보이는 마커의 크기를 조정합니다.</Korean>
-            <Polish>Dostosowuje rozmiar wirtualnego znacznika.</Polish>
-            <Japanese>指差しマーカーの大きさを調整します。</Japanese>
-            <Chinesesimp>调整屏幕上显示的标记大小</Chinesesimp>
-            <Russian>Настраивает размер визуального маркера</Russian>
-            <Spanish>Ajusta el tamaño del marcador visual.</Spanish>
-            <French>Ajuste la taille des marqueurs visuels</French>
-            <Portuguese>Ajusta o tamanho do marcador visual</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Finger_proximityScaling_displayName">
-            <English>Proximity Scaling</English>
-            <German>Näherungsskalierung</German>
-            <Italian>Scalaggio di prossimità</Italian>
-            <Korean>근접 스케일링</Korean>
-            <Polish>Skalowanie odległościowe</Polish>
-            <Japanese>近接性スケーリング</Japanese>
-            <Chinesesimp>根据距离缩放</Chinesesimp>
-            <Russian>Масштабирование от дальности</Russian>
-            <Spanish>Escalado de cercanía</Spanish>
-            <French>Mise à l'échelle</French>
-            <Portuguese>Escala por proximidade</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Finger_proximityScaling_description">
-            <English>Scales the size of the visual marker based on the distance between the player observing and the player pointing.</English>
-            <German>Skaliert die Größe der visuellen Markierung basierend auf der Entfernung zwischen dem beobachtenden Spieler und dem zeigenden Spieler.</German>
-            <Italian>Scala la dimensione del puntatore a seconda della distanza tra il giocatore osservatore e quello che punta.</Italian>
-            <Korean>관찰하는 플레이어와 가리키는 플레이어 사이의 거리에 따라 보이는 마커의 크기를 조정합니다.</Korean>
-            <Polish>Skaluje rozmiar wirtualnego znacznika, na podstawie odległości między graczem obserwującym a graczem wskazującym.</Polish>
-            <Japanese>見ているプレーヤーと指差ししたプレーヤーの距離に基づいて、指差しマーカーの大きさを調整します。</Japanese>
-            <Chinesesimp>根据观察的玩家和在指出方向的的玩家之间的距离调整视觉标记的大小。</Chinesesimp>
-            <Russian>Масштабирует размер визуального маркера в зависимости от дальности от игрока до точки указания.</Russian>
-            <Spanish>Escala el tamaño del marcador visual dependiendo de la distancia entre el jugador observador y el jugador que señala.</Spanish>
-            <French>Modifie la taille du marqueur visuel en fonction de la distance entre le joueur qui observe et le joueur qui pointe.</French>
-            <Portuguese>Redimensiona o tamanho do marcador visual baseado na distância entre o jogador observador e o jogador que aponta.</Portuguese>
-        </Key>
-        <Key ID="STR_ACE_Finger_indicatorForSelf_name">
-            <English>Show pointing indicator to self</English>
-            <German>Zeigersymbol einem selbst anzeigen</German>
-            <Russian>Индикатор пальца для показывающего</Russian>
-            <French>Afficher son propre indicateur de pointage</French>
-            <Polish>Pokaż indykator wskazywania palcem dla siebie</Polish>
-            <Hungarian>Saját mutatási indikátor megjelenítése</Hungarian>
-            <Portuguese>Mostrar indicador para si mesmo</Portuguese>
-            <Spanish>Mostrar el indicador de señalado a uno mismo</Spanish>
-            <Czech>Zobrazit ukázání směru pro sebe</Czech>
-            <Italian>Mostra puntatore per te stesso</Italian>
-            <Japanese>指差しマーカーを自分で見る</Japanese>
-            <Korean>자신이 가리키는곳을 보여줍니다</Korean>
-            <Chinesesimp>在自己身边显示指向标记</Chinesesimp>
-            <Chinese>顯示指向指示器給自己</Chinese>
-            <Turkish>Sanal daireyi işaretleyen kişiye göster</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Finger_indicatorForSelf_description">
-            <English>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</English>
-            <German>Zeigt das eigene Zeigersymbol an. Diese Einstellung beeinflusst jedoch nicht andere Spieler, welche das Zeigersymbol sehen können.</German>
-            <Russian>Отображать индикатор указания пальцем для показывающего игрока. Эта настройка не влияет на то, будут ли другие игроки видеть индикатор</Russian>
-            <French>Le joueur qui pointe du doigt voit son propre indicateur à l'écran. Cette option n'a aucune incidence sur ce que voient les autres joueurs.</French>
-            <Polish> Wyświetl indykator kiedy wskazujesz coś palcem. Ta opcja nie wpływa na to, czy inni gracze zobaczą ten indykator czy też nie.</Polish>
-            <Hungarian>Az indikátor megjelenítése a mutató játékosnak. Ez a beállítás nem változtat azon, hogy más játékosok látják-e az indikátort.</Hungarian>
-            <Portuguese>Renderizar o indicador para o jogador que está apontando. Esta opção não afeta se os outros jogadores verão ou não o indicador</Portuguese>
-            <Spanish>Muestra el indicador para el jugador que apunta. Esta opción no afecta si los otros jugadores verían el indicador</Spanish>
-            <Czech>Zobrazit infikátor, když ukážete prstem. Tato volba nemá vliv, zda ostatní hráči uvidí indikátor nebo ne.</Czech>
-            <Italian>Mostra indicatore per il giocatore che punta. Questa opzione non influisce sulla visibilità del puntatore per gli altri giocatori</Italian>
-            <Japanese>指差ししたプレーヤーが自身の指差しマーカーを描画して確認できるようにします。 このオプションは、他のプレイヤーが指差しマーカーを表示出来るかどうかには影響しません。</Japanese>
-            <Korean>대상이 가리키는곳을 보이게 합니다.</Korean>
-            <Chinesesimp>显示指向标记给玩家自己。此选项设定并不影响其他玩家能否看到指示标记</Chinesesimp>
-            <Chinese>顯示指向指示器給玩家自己。此選項設定並不影響其他玩家能否看到指示器</Chinese>
-            <Turkish>İşaret eden oyuncu için göstergeyi oluşturun. Bu seçenek, diğer oyuncuların göstergeyi görüp görmeyeceğini etkilemez</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Finger_indicatorColor_name">
-            <English>Pointing indicator</English>
-            <German>Zeigersymbol</German>
-            <Russian>Индикатор указания пальцем</Russian>
-            <French>Indicateur de pointage</French>
-            <Polish>Indykator palca</Polish>
-            <Hungarian>Ujj-indikátor</Hungarian>
-            <Portuguese>Indicador de apontamento</Portuguese>
-            <Spanish>Indicador de señalado</Spanish>
-            <Czech>Ukazování směru</Czech>
-            <Italian>Indicatore di puntamento</Italian>
-            <Japanese>指差しマーカー</Japanese>
-            <Korean>가리키기 표시기</Korean>
-            <Chinesesimp>指向标记</Chinesesimp>
-            <Chinese>指向指示器</Chinese>
-            <Turkish>Daire Rengi</Turkish>
+        <Key ID="STR_ACE_Finger_enabled_displayName">
+            <English>Pointing Enabled</English>
+            <Czech>Ukazování povoleno</Czech>
+            <French>Pointage activé</French>
+            <Spanish>Señalado permitido</Spanish>
+            <Italian>Puntamento abilitato</Italian>
+            <Polish>Aktywuj wskazywanie</Polish>
+            <Portuguese>Apontamento ativado</Portuguese>
+            <Russian>Указание пальцем включено</Russian>
+            <German>Zeigen aktiviert</German>
+            <Korean>가리키기 활성화</Korean>
+            <Japanese>指差しを有効</Japanese>
+            <Chinese>指向系統啟動</Chinese>
+            <Chinesesimp>启用指向系统</Chinesesimp>
+            <Turkish>Işaretleme Etkin</Turkish>
+            <Hungarian>Mutatás engedélyezése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Finger_indicatorColor_description">
             <English>Color of the pointing indicator circle</English>
-            <German>Farbe des Zeigersymbols</German>
-            <Russian>Цвет индикатора указания пальцем</Russian>
-            <French>Couleur et transparence du cercle indicateur de pointage.</French>
-            <Polish>Kolor okręgu wyświetlanego przy wskazywaniu palcem</Polish>
-            <Hungarian>Mutatási indikátor körének színe</Hungarian>
-            <Portuguese>Cor do círculo de indicação</Portuguese>
-            <Spanish>Color del círculo indicador que señala</Spanish>
             <Czech>Barva kruhu pro ukázání směru</Czech>
+            <French>Couleur et transparence du cercle indicateur de pointage.</French>
+            <Spanish>Color del círculo indicador que señala</Spanish>
             <Italian>Colore del cerchio dell'indicatore di puntamento</Italian>
-            <Japanese>指差しマーカーの円の色</Japanese>
+            <Polish>Kolor okręgu wyświetlanego przy wskazywaniu palcem</Polish>
+            <Portuguese>Cor do círculo de indicação</Portuguese>
+            <Russian>Цвет индикатора указания пальцем</Russian>
+            <German>Farbe des Zeigersymbols</German>
             <Korean>가리키기의 원형 색상</Korean>
-            <Chinesesimp>指向标记颜色</Chinesesimp>
+            <Japanese>指差しマーカーの円の色</Japanese>
             <Chinese>指向指示器顏色</Chinese>
+            <Chinesesimp>指向标记颜色</Chinesesimp>
             <Turkish>Sanal dairenin rengini belirleyin</Turkish>
+            <Hungarian>Mutatási indikátor körének színe</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Finger_indicatorColor_name">
+            <English>Pointing indicator</English>
+            <Czech>Ukazování směru</Czech>
+            <French>Indicateur de pointage</French>
+            <Spanish>Indicador de señalado</Spanish>
+            <Italian>Indicatore di puntamento</Italian>
+            <Polish>Indykator palca</Polish>
+            <Portuguese>Indicador de apontamento</Portuguese>
+            <Russian>Индикатор указания пальцем</Russian>
+            <German>Zeigersymbol</German>
+            <Korean>가리키기 표시기</Korean>
+            <Japanese>指差しマーカー</Japanese>
+            <Chinese>指向指示器</Chinese>
+            <Chinesesimp>指向标记</Chinesesimp>
+            <Turkish>Daire Rengi</Turkish>
+            <Hungarian>Ujj-indikátor</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Finger_indicatorForSelf_description">
+            <English>Render the indicator for the pointing player. This option doesn't affect whether the other players would see the indicator</English>
+            <Czech>Zobrazit infikátor, když ukážete prstem. Tato volba nemá vliv, zda ostatní hráči uvidí indikátor nebo ne.</Czech>
+            <French>Le joueur qui pointe du doigt voit son propre indicateur à l'écran. Cette option n'a aucune incidence sur ce que voient les autres joueurs.</French>
+            <Spanish>Muestra el indicador para el jugador que apunta. Esta opción no afecta si los otros jugadores verían el indicador</Spanish>
+            <Italian>Mostra indicatore per il giocatore che punta. Questa opzione non influisce sulla visibilità del puntatore per gli altri giocatori</Italian>
+            <Polish>Wyświetl indykator kiedy wskazujesz coś palcem. Ta opcja nie wpływa na to, czy inni gracze zobaczą ten indykator czy też nie.</Polish>
+            <Portuguese>Renderizar o indicador para o jogador que está apontando. Esta opção não afeta se os outros jogadores verão ou não o indicador</Portuguese>
+            <Russian>Отображать индикатор указания пальцем для показывающего игрока. Эта настройка не влияет на то, будут ли другие игроки видеть индикатор</Russian>
+            <German>Zeigt das eigene Zeigersymbol an. Diese Einstellung beeinflusst jedoch nicht andere Spieler, welche das Zeigersymbol sehen können.</German>
+            <Korean>대상이 가리키는곳을 보이게 합니다.</Korean>
+            <Japanese>指差ししたプレーヤーが自身の指差しマーカーを描画して確認できるようにします。 このオプションは、他のプレイヤーが指差しマーカーを表示出来るかどうかには影響しません。</Japanese>
+            <Chinese>顯示指向指示器給玩家自己。此選項設定並不影響其他玩家能否看到指示器</Chinese>
+            <Chinesesimp>显示指向标记给玩家自己。此选项设定并不影响其他玩家能否看到指示标记</Chinesesimp>
+            <Turkish>İşaret eden oyuncu için göstergeyi oluşturun. Bu seçenek, diğer oyuncuların göstergeyi görüp görmeyeceğini etkilemez</Turkish>
+            <Hungarian>Az indikátor megjelenítése a mutató játékosnak. Ez a beállítás nem változtat azon, hogy más játékosok látják-e az indikátort.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Finger_indicatorForSelf_name">
+            <English>Show pointing indicator to self</English>
+            <Czech>Zobrazit ukázání směru pro sebe</Czech>
+            <French>Afficher son propre indicateur de pointage</French>
+            <Spanish>Mostrar el indicador de señalado a uno mismo</Spanish>
+            <Italian>Mostra puntatore per te stesso</Italian>
+            <Polish>Pokaż indykator wskazywania palcem dla siebie</Polish>
+            <Portuguese>Mostrar indicador para si mesmo</Portuguese>
+            <Russian>Индикатор пальца для показывающего</Russian>
+            <German>Zeigersymbol einem selbst anzeigen</German>
+            <Korean>자신이 가리키는곳을 보여줍니다</Korean>
+            <Japanese>指差しマーカーを自分で見る</Japanese>
+            <Chinese>顯示指向指示器給自己</Chinese>
+            <Chinesesimp>在自己身边显示指向标记</Chinesesimp>
+            <Turkish>Sanal daireyi işaretleyen kişiye göster</Turkish>
+            <Hungarian>Saját mutatási indikátor megjelenítése</Hungarian>
         </Key>
         <Key ID="STR_ACE_Finger_keyComb">
             <English>Action "point a finger at"</English>
-            <German>Aktion: "Zeige Finger auf"</German>
-            <Russian>Действие "показать пальцем на"</Russian>
-            <French>Action "Pointer du doigt vers"</French>
-            <Polish>Akcja "wskaż palcem"</Polish>
-            <Hungarian>Cselekvés "ujj rámutatása"</Hungarian>
-            <Portuguese>Ação "Apontar um dedo para"</Portuguese>
-            <Spanish>Acción "apuntar con el dedo a"</Spanish>
             <Czech>Akce "ukázat prstem na"</Czech>
+            <French>Action "Pointer du doigt vers"</French>
+            <Spanish>Acción "apuntar con el dedo a"</Spanish>
             <Italian>Azione "punta il dito a"</Italian>
-            <Japanese>アクション "指を差す"</Japanese>
+            <Polish>Akcja "wskaż palcem"</Polish>
+            <Portuguese>Ação "Apontar um dedo para"</Portuguese>
+            <Russian>Действие "показать пальцем на"</Russian>
+            <German>Aktion: "Zeige Finger auf"</German>
             <Korean>"손가락으로 가리키기" 행동</Korean>
-            <Chinesesimp>使"手指指向在"</Chinesesimp>
+            <Japanese>アクション "指を差す"</Japanese>
             <Chinese>使"手指指向在"</Chinese>
+            <Chinesesimp>使"手指指向在"</Chinesesimp>
             <Turkish>Animasyon "Parmakla Gösterme"</Turkish>
+            <Hungarian>Cselekvés "ujj rámutatása"</Hungarian>
         </Key>
         <Key ID="STR_ACE_Finger_keyComb_description">
             <English>Points, and shows a virtual marker of where you are looking to nearby units. Can be held down.</English>
-            <German>Zeigt in der Nähe befindlichen Spielern die eigene Blickrichtung mit Hilfe eines Kreissymbols an.</German>
+            <Czech>Ukazuje virtuální značku kruhu ve směru, kterým se díváte pro všechny blízké jednotky.</Czech>
             <French>Effectue un pointage du doigt, et affiche sur l'écran des unités alliées proches un marqueur virtuel, indiquant la direction dans laquelle vous regardez. Peut être maintenu.</French>
+            <Spanish>Señala y muestra un marcador virtual donde ustás apuntando para las unidades cercanas. Puede ser mantenido.</Spanish>
+            <Italian>Punta e mostra un indicatore virtuale di dove stai guardando alle unità vicine. Può essere tenuto premuto.</Italian>
             <Polish>Wskazuje a także wyświetla wirtualny marker-okrąg w miejscu, w które patrzysz, dla wszystkich pobliskich jednostek. Może być przytrzymywany.</Polish>
-            <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
             <Portuguese>Aponta e mostra um marcador virtual para onde você está olhando para unidades próximas. Pode ser utilizado para baixo.</Portuguese>
             <Russian>Показывает пальцем и рисует виртуальный маркер в направлении взгляда ближайшим игрокам. Можно удерживать.</Russian>
-            <Spanish>Señala y muestra un marcador virtual donde ustás apuntando para las unidades cercanas. Puede ser mantenido.</Spanish>
-            <Czech>Ukazuje virtuální značku kruhu ve směru, kterým se díváte pro všechny blízké jednotky.</Czech>
-            <Italian>Punta e mostra un indicatore virtuale di dove stai guardando alle unità vicine. Può essere tenuto premuto.</Italian>
-            <Japanese>近くのユニットに対して、今見ている場所に向けて指を差し、仮想のマーカーを表示して指示することが出来る。 押し続けることも可能。</Japanese>
+            <German>Zeigt in der Nähe befindlichen Spielern die eigene Blickrichtung mit Hilfe eines Kreissymbols an.</German>
             <Korean>당신이 보는 것을 가상의 마커로 표시함으로서 다른 인원이 볼 수 있게 합니다. 누른 채로 유지할 수 있습니다.</Korean>
-            <Chinesesimp>当按下此按键后，你附近的单位即可看见一个虚拟图示，标明你正在指向的位置。此按键可以被按住来持续显示。</Chinesesimp>
+            <Japanese>近くのユニットに対して、今見ている場所に向けて指を差し、仮想のマーカーを表示して指示することが出来る。 押し続けることも可能。</Japanese>
             <Chinese>當按下此按鍵後，你附近的單位即可看見一個虛擬圖示，標明你正在指向的位置。此按鍵可以被按住來持續顯示。</Chinese>
-            <Turkish>Işaretleyince nereye baktığınıza dair sanal bir daire gösterir. Basılı da tutulabilir. </Turkish>
+            <Chinesesimp>当按下此按键后，你附近的单位即可看见一个虚拟图示，标明你正在指向的位置。此按键可以被按住来持续显示。</Chinesesimp>
+            <Turkish>Işaretleyince nereye baktığınıza dair sanal bir daire gösterir. Basılı da tutulabilir.</Turkish>
+            <Hungarian>Mutat, és elhelyez egy virtuális jelölőt a nézett területhez közeli egységekhez. Lenyomva tartható.</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Finger_maxRange_description">
+            <English>Max range between players to show the pointing indicator [default: 4 meters]</English>
+            <Czech>Maximální vzdálenost mezi hráči pro ukázání směru [výchozí: 4 metry]</Czech>
+            <French>Définit le rayon au-delà duquel les joueurs ne verront plus l'indicateur de pointage de leurs alliés. Valeur par défaut : 4 mètres.</French>
+            <Spanish>Distancia máxima entre los jugadores para mostrar el indicador que señala [por defecto: 4 metros]</Spanish>
+            <Italian>Distanza massima tra giocatori per mostrare l'indicatore di puntamento [Predefinito: 4 metri]</Italian>
+            <Polish>Określ dystans na jakim można wskazywać coś palcem innym graczom. [domyślnie: 4m]</Polish>
+            <Portuguese>Distância máxima entre jogadores para mostrar o apontamento [padrão: 4 metros]</Portuguese>
+            <Russian>Максимальная дальность между игроками для отображения индикатора указания пальцем [по умолчанию: 4 метра]</Russian>
+            <German>Maximale Reichweite zwischen Spielern, welche das Zeigesymbol des jeweils anderen sehen können. (Standard: 4 Meter).</German>
+            <Korean>플레이어 사이에서 가리키기 표시를  보이게 하는 최대거리를 설정합니다[기본설정: 4 미터]</Korean>
+            <Japanese>指差しのマーカー表示が他のプレイヤーに表示される最大距離 [デフォルト: 4メートル]</Japanese>
+            <Chinese>設定指向指示器最大顯示距離。[預設: 4公尺]</Chinese>
+            <Chinesesimp>设定指向标记最大显示距离。[预设：4米]</Chinesesimp>
+            <Turkish>Hangi uzaklıktakilerin sanal daireyi görmesini seçin. [Varsayılan : 4 metre]</Turkish>
+            <Hungarian>A maximális távolság, amelyben a közeli játékosoknak megjelenik az indikátor. [alapértelmezett: 4 méter]</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Finger_maxRange_displayName">
+            <English>Pointing Max Range</English>
+            <Czech>Maximální dosah pro ukazování směru</Czech>
+            <French>Portée maximale du pointage</French>
+            <Spanish>Distancia máxima de señalado</Spanish>
+            <Italian>Raggio massimo puntamento</Italian>
+            <Polish>Maks. zasięg wskazywania</Polish>
+            <Portuguese>Distância máxima do apontamento</Portuguese>
+            <Russian>Макс. дальность</Russian>
+            <German>Maximale Zeigerreichweite</German>
+            <Korean>가리키기 최대 범위</Korean>
+            <Japanese>指差しの最大距離</Japanese>
+            <Chinese>指向指示器最大顯示距離</Chinese>
+            <Chinesesimp>指向标记最大显示距离</Chinesesimp>
+            <Turkish>Işaretleme maksimum uzaklığı</Turkish>
+            <Hungarian>Ujj maximum hatótávja</Hungarian>
         </Key>
         <Key ID="STR_ACE_Finger_moduleSettings_displayName">
             <English>Pointing Settings</English>
-            <German>Zeigen Einstellungen</German>
+            <Czech>Nastavení ukázování směru</Czech>
             <French>Options de pointage</French>
+            <Spanish>Ajustes de señalado</Spanish>
+            <Italian>Impostazioni Puntamento</Italian>
             <Polish>Ustawienia wskazywania palcem</Polish>
-            <Hungarian>Ujj beállításai</Hungarian>
             <Portuguese>Preferências de apontamento</Portuguese>
             <Russian>Настройки указания пальцем</Russian>
-            <Spanish>Ajustes de señalado</Spanish>
-            <Czech>Nastavení ukázování směru</Czech>
-            <Italian>Impostazioni Puntamento</Italian>
-            <Japanese>指差し設定</Japanese>
+            <German>Zeigen Einstellungen</German>
             <Korean>가리키기 설정</Korean>
-            <Chinesesimp>指向设定</Chinesesimp>
+            <Japanese>指差し設定</Japanese>
             <Chinese>指向設定</Chinese>
+            <Chinesesimp>指向设定</Chinesesimp>
             <Turkish>Işaretleme Ayarları</Turkish>
+            <Hungarian>Ujj beállításai</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Finger_proximityScaling_description">
+            <English>Scales the size of the visual marker based on the distance between the player observing and the player pointing.</English>
+            <French>Modifie la taille du marqueur visuel en fonction de la distance entre le joueur qui observe et le joueur qui pointe.</French>
+            <Spanish>Escala el tamaño del marcador visual dependiendo de la distancia entre el jugador observador y el jugador que señala.</Spanish>
+            <Italian>Scala la dimensione del puntatore a seconda della distanza tra il giocatore osservatore e quello che punta.</Italian>
+            <Polish>Skaluje rozmiar wirtualnego znacznika, na podstawie odległości między graczem obserwującym a graczem wskazującym.</Polish>
+            <Portuguese>Redimensiona o tamanho do marcador visual baseado na distância entre o jogador observador e o jogador que aponta.</Portuguese>
+            <Russian>Масштабирует размер визуального маркера в зависимости от дальности от игрока до точки указания.</Russian>
+            <German>Skaliert die Größe der visuellen Markierung basierend auf der Entfernung zwischen dem beobachtenden Spieler und dem zeigenden Spieler.</German>
+            <Korean>관찰하는 플레이어와 가리키는 플레이어 사이의 거리에 따라 보이는 마커의 크기를 조정합니다.</Korean>
+            <Japanese>見ているプレーヤーと指差ししたプレーヤーの距離に基づいて、指差しマーカーの大きさを調整します。</Japanese>
+            <Chinesesimp>根据观察的玩家和在指出方向的的玩家之间的距离调整视觉标记的大小。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Finger_proximityScaling_displayName">
+            <English>Proximity Scaling</English>
+            <French>Mise à l'échelle</French>
+            <Spanish>Escalado de cercanía</Spanish>
+            <Italian>Scalaggio di prossimità</Italian>
+            <Polish>Skalowanie odległościowe</Polish>
+            <Portuguese>Escala por proximidade</Portuguese>
+            <Russian>Масштабирование от дальности</Russian>
+            <German>Näherungsskalierung</German>
+            <Korean>근접 스케일링</Korean>
+            <Japanese>近接性スケーリング</Japanese>
+            <Chinesesimp>根据距离缩放</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Finger_sizeCoef_description">
+            <English>Adjusts the size of the visual marker.</English>
+            <French>Ajuste la taille des marqueurs visuels</French>
+            <Spanish>Ajusta el tamaño del marcador visual.</Spanish>
+            <Italian>Modifica la dimensione del puntatore virtuale.</Italian>
+            <Polish>Dostosowuje rozmiar wirtualnego znacznika.</Polish>
+            <Portuguese>Ajusta o tamanho do marcador visual</Portuguese>
+            <Russian>Настраивает размер визуального маркера</Russian>
+            <German>Passt die Größe der visuellen Markierung an.</German>
+            <Korean>눈에 보이는 마커의 크기를 조정합니다.</Korean>
+            <Japanese>指差しマーカーの大きさを調整します。</Japanese>
+            <Chinesesimp>调整屏幕上显示的标记大小</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Finger_sizeCoef_displayName">
+            <English>Visual Marker Size Coefficient</English>
+            <French>Coefficient taille des marqueurs visuels</French>
+            <Spanish>Coeficiente del tamaño del marcador visual</Spanish>
+            <Italian>Coefficiente di dimensione puntatore</Italian>
+            <Polish>Współczynnik wielkości wirtualnego znacznika</Polish>
+            <Portuguese>Coeficiente de tamanho do marcador visual</Portuguese>
+            <Russian>Коэф. размера маркера</Russian>
+            <German>Visueller Markergrößenkoeffizient</German>
+            <Korean>보이는 마커 크기 계수</Korean>
+            <Japanese>指差しマーカーの大きさ係数</Japanese>
+            <Chinesesimp>屏幕标记大小系数</Chinesesimp>
         </Key>
     </Package>
 </Project>

@@ -27,10 +27,10 @@ Finally, flight profiles and mechanics for realistic missile simulations are als
 
 ## 2. Components
 
-The framework is broken up into 3 major components: Locking Types, Seeker Types and Attack Profiles. In combination, these components build out the entire process of launching, locking and going terminal flight against targets.
+The framework is broken up into 3 major components: Navigation Types, Seeker Types and Attack Profiles. In combination, these components build out the entire process of launching, locking and going terminal flight against targets.
 
-#### 2.1 Locking Types
-Locking types provide the basic functionality of targeting which will be based to a seeker type, providing target acquisition for seekers. This provides the basic functionality for providing pre-determined targets for a seeker, or allowing the seeker to perform its own target acquisition and locking. Additionally, the seeker may reference back into the locking type in order to re-perform target acquisition.
+#### 2.1 Navigation Types
+Navigation types define how the missile flies to the designated target. ACE 3 implements the most common ones in use, Proportional Navigation, Augmented Proportional Navigation, and Zero-Effort Miss. These navigation types give an acceleration command to the missile who attempts to satisfy the command by adjusting its pitch and yaw to fly to the target.
 
 #### 2.2 Seeker Types
 Each seeker is generally assumed to be the logic for the seeker head unit within any given munition. Seekers within this framework provide the basic targeting functionality for the entire framework. The locking type will provide a generic target to the seeker, or the seeker may aquire a target on its own. The seeker then provides a target, either an object or a ASL position, which is then passed further into the framework. This target (or position) should be the actual current target position for the missiles flight. Seekers are required to perform all limitations and checks within their systems, although various limitations have been provided in this framework such as LOS FOV, laser guidance, etc.
@@ -42,9 +42,9 @@ An attack profile adjusts the current target flight location to create the actua
 
 ## 3. How it all ties together
 
-The system is executed in a linear series of calls to each step of the process, and feeding back the return from that step to the next step. Execution is conducted using Locking -> Seeker -> Profile, iteratively every frame of execution. Flight times are adjusted to `accTime` values and FPS lag, giving consistent flight.
+The system is executed in a linear series of calls to each step of the process, and feeding back the return from that step to the next step. Execution is conducted using Seeker -> Profile -> Navigation, iteratively every frame of execution. Flight times are adjusted to `accTime` values and FPS lag, giving consistent flight.
 
-On each step of execution, a target specification array `[targetObj, targetPos]` is passed to the locking type, which then will return a possible modified target array. Next, this modified data is passed to the seeker type - which then, in turn, returns a position vector to the current "seeked" target position (ASL). Last, this target position is passed to the attack profile, which then returns an "adjusted attack position" (ASL), which is the location the missile should *currently* be homing on for flight.
+On each step of execution, the seeker finds and returns the position of its target (ASL) and, optionally, sets target data specifying the target's direction from the missile, range, velocity and acceleration (if able). Then, this data is passed to the attack profile, which then returns an "adjusted attack position" (ASL), which is the location the missile should *currently* be homing on for flight. Finally, the navigation system processes the seeker's data about the target and returns a "Commanded Acceleration" vector which the missile attempts to satisfy.
 
 In the simplest sense, the entire system provides the flight trajectory of the missile homing directly on the "adjusted attack position"; thus, an attack profile would ajust this position to direct the missile.  For example, top down attacks return the adjusted attack position high above the target, until entering their terminal stages, which then changes the position to be directly on top of the target - thus "walking the missile" along its flight path and to the impact.
 
@@ -60,28 +60,47 @@ class CfgAmmo {
 
         // Begin ACE guidance Configs
         class ace_missileguidance {
-            enabled = 1; // Enable missile guidance (0-disabled, 1-enabled)
+            enabled = 1; // Explicit enabling of the system
 
-            minDeflection = 0.00025;  // Minimum flap deflection for guidance
-            maxDeflection = 0.001;  // Maximum flap deflection for guidance
-            incDeflection = 0.0005;  // The increment in which deflection adjusts
+            pitchRate = 30; // How many degrees/second the missile can pitch
+            yawRate = 30; // How many degrees/second this missile can yaw
 
-            canVanillaLock = 0;  // Enable vanilla lock, only applicable to non-cadet modes, 'recruit' always uses vanilla locking (0-disabled, 1-enabled)
+            canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
-            defaultSeekerType = "SALH";  // Default seeker type
-            seekerTypes[] = {"SALH", "LIDAR", "SARH", "Optic", "Thermal", "GPS", "SACLOS", "MCLOS"};  // Seeker types available
+            // Guidance type for munitions
+            defaultSeekerType = "SALH"; // Default seeker type
+            seekerTypes[] = { "SALH", "LIDAR", "SARH", "Optic", "Thermal", "GPS", "SACLOS", "MCLOS" };
 
-            defaultSeekerLockMode = "LOAL";  // Default seeker lock mode
-            seekerLockModes[] = {"LOAL", "LOBL"};  // Seeker lock modes available
+            defaultSeekerLockMode = "LOAL"; // Default lock mode
+            seekerLockModes[] = { "LOAL", "LOBL" };
 
-            seekerAngle = 90;  // Angle in front of the missile which can be searched
-            seekerAccuracy = 1;  // Seeker accuracy multiplier
+            defaultNavigationType = "Direct"; // Default navigation type
+            navigationTypes[] = { "Direct", "ZeroEffortMiss" }; // Navigation types this missile can use
 
-            seekerMinRange = 1;  // Minimum range from the missile which the seeker can visually search
-            seekerMaxRange = 2500;  // Maximum from the missile which the seeker can visually search
+            seekLastTargetPos = 1;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
+            seekerAngle = 70;           // Angle in front of the missile which can be searched
+            seekerAccuracy = 1;         // seeker accuracy multiplier
 
-            defaultAttackProfile = "LIN";  // Default attack profile
-            attackProfiles[] = {"LIN", "DIR", "MID", "HI"};  // Attack profiles available
+            seekerMinRange = 1;         // Minimum range from the missile which the seeker can visually search
+            seekerMaxRange = 8000;      // Maximum range from the missile which the seeker can visually search
+
+            // Attack profile type selection
+            defaultAttackProfile = "hellfire"; // Default attack profile
+            attackProfiles[] = {"hellfire", "hellfire_hi", "hellfire_lo"}; // Possible attack profiles
+
+            // State machine defining what navigation type to use in this missiles phase
+            class navigationStates {
+                class initial {
+                    transitionCondition = "my_fnc_navigationTransition"; // Condition needed to transition to next state
+                    navigationType = "Direct"; // Navigation type to use in this state
+                };
+                class terminal {
+                    transitionCondition = "";
+                    navigationType = "ZeroEffortMiss";
+                };
+                // transitions from initial -> termimal
+                states[] = {"initial", "terminal"};
+            };
         };
 ```
 
@@ -95,6 +114,7 @@ class ace_missileguidance_seekerTypes {
         description = "";  // Description
 
         functionName = "my_fnc_doSeekerType";  // Function that handles the seeker type
+        onFired = "my_fnc_onFired"; // Function that runs when the missile is fired using this seeker
     };
 };
 ```
@@ -109,13 +129,47 @@ class ace_missileguidance_attackProfiles {
         description = "";  // Description
 
         functionName = "my_fnc_doAttackProfile";  // Function that handles the attack profile
+        onFired = "my_fnc_onFired"; // Function that runs when missile is fired using this attack profile
     };
 };
 ```
 
-## 5. Events
+### 4.4 Custom Navigation Type
+```cpp
+class ace_missileguidance_navigationTypes {
+    class MyNavigationProfile {
+        functionName = "my_fnc_navigation"; // Function to run for navigation
+        onFired = "my_fnc_onFired"; // Function to run when the missile is fired with this navigation type
+    };
+};
+```
 
-### 5.1 Listenable
+## 5. Migrating From Old Missile Guidance
+
+There are a few changes existing missiles need to implement to work with the new framework. Although sensible defaults are used, they may not be sufficient for all users
+
+### 5.1 Turn Rate
+
+`minDeflection`, `maxDeflection`, and `incDeflection` are all deprecated. These values were never used before, and had no meaning. The new system one should use is through `pitchRate` and `yawRate`: these describe the missiles rotation in pitch and yaw in degrees/second
+
+### 5.2 Navigation
+
+Missiles before didn't have any navigation logic. The new framework utilizes a navigation autopilot to guide the missile. You must add `defaultNavigationType`, `navigationTypes` and `navigationGain` to your missiles.
+
+### 5.2.1 Available Navigation Types
+
+| Navigation Name | Description | Use Case | Caveats |
+| ---------- | ----------- | ------------------- | ------- |
+| `Direct` | Adjusts missile direction so it is always pointing at the target | If you have a static target that doesn't need movement prediction | N/A |
+| `Line` | Attempts to drive missile so the direction to the target is zero | Any missile which needs to follow a line | Can only be used with some seekers |
+| `LineOfSight` | Accelerations missile to null-out the line-of-sight rate of change to try and intercept target | Old missiles which have a low-hit rate that predict target motion | N/A |
+| `ProportionalNavigation` | Adjusts missile to enter collision course with target | Missiles which intercept by predicting target motion | N/A |
+| `AugmentedProportionalNavigation` | Adjusts missile to enter collision course with target while taking into account target acceleration to reduce energy loss | Missiles which intercept by predicting target motion | N/A |
+| `ZeroEffortMiss` | Adjusts missile to enter collision course with target with minimal energy loss | Missiles which intercept by predicting target motion | N/A |
+
+## 6. Events
+
+### 6.1 Listenable
 
 | Event Name | Description | Passed Parameter(s) | Locality |
 | ---------- | ----------- | ------------------- | -------- |

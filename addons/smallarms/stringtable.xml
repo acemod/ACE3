@@ -1,105 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="SmallArms">
+        <Key ID="STR_ACE_SmallArms_15Rnd_45_Name">
+            <English>.45 ACP 15Rnd Mag</English>
+            <Czech>.45 ACP, 15ks zásobník</Czech>
+            <French>Mag. 15 balles .45 ACP</French>
+            <Spanish>Cargador de 15 proyectiles de .45 ACP</Spanish>
+            <Italian>Caricatore 15cp .45 ACP</Italian>
+            <Polish>15-nab. mag. .45 ACP</Polish>
+            <Portuguese>Carregador 15Mun. .45 ACP</Portuguese>
+            <Russian>Магазин, 15 патр. .45 ACP</Russian>
+            <German>15-Schuss-.45-ACP-Magazin</German>
+            <Korean>.45구경 ACP 15발 들이 탄창</Korean>
+            <Japanese>.45 ACP 15Rnd マガジン</Japanese>
+            <Chinesesimp>.45 ACP 15发 弹匣</Chinesesimp>
+            <Turkish>.45 ACP 15 Merm. Şarjör</Turkish>
+        </Key>
         <Key ID="STR_ACE_SmallArms_17Rnd_9x19_Name">
             <English>9 mm 17Rnd Mag</English>
-            <Chinese>9 mm 17 發彈匣</Chinese>
+            <Czech>9 mm, 17ks zásobník</Czech>
             <French>Mag. 17 balles 9 mm</French>
             <Spanish>Cargador de 17 proyectiles de 9 mm</Spanish>
             <Italian>Caricatore 17cp 9mm</Italian>
             <Polish>17-nab. mag. 9 mm</Polish>
+            <Portuguese>Carregador 17Mun. 9 mm</Portuguese>
             <Russian>Магазин, 17 патр. 9 мм</Russian>
             <German>17-Schuss-9mm-Magazin</German>
-            <Czech>9 mm, 17ks zásobník</Czech>
-            <Portuguese>Carregador 17Mun. 9 mm</Portuguese>
-            <Korean>9mm 17발 탄창</Korean>
-            <Chinesesimp>9 mm 17发 弹匣</Chinesesimp>
+            <Korean>9mm 17발 들이 탄창</Korean>
             <Japanese>9mm 17Rnd マガジン</Japanese>
+            <Chinese>9 mm 17 發彈匣</Chinese>
+            <Chinesesimp>9 mm 17发 弹匣</Chinesesimp>
             <Turkish>9 mm 17 Merm. Şarjör</Turkish>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Name">
             <English>.45 ACP 25Rnd Mag</English>
-            <Polish>25-nab. mag. .45 ACP </Polish>
-            <Russian>Магазин, 25 патр. .45 ACP</Russian>
+            <Czech>.45 ACP, 25ks zásobník</Czech>
             <French>Mag. 25 balles .45 ACP</French>
             <Spanish>Cargador de 25 proyectiles de .45 ACP</Spanish>
             <Italian>Caricatore 25cp .45 ACP</Italian>
+            <Polish>25-nab. mag. .45 ACP</Polish>
+            <Portuguese>Carregador 25Mun. .45 ACP</Portuguese>
+            <Russian>Магазин, 25 патр. .45 ACP</Russian>
             <German>25-Schuss-.45-ACP-Magazin</German>
-            <Czech>.45 ACP, 25ks zásobník</Czech>
-            <Turkish>.45 ACP 25 Merm. Şarjör</Turkish>
+            <Korean>.45구경 ACP 25발 들이 탄창</Korean>
             <Japanese>.45 ACP 25Rnd マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣</Chinesesimp>
-            <Korean>.45 ACP 25발 탄창</Korean>
+            <Turkish>.45 ACP 25 Merm. Şarjör</Turkish>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Green_Name">
             <English>.45 ACP 25Rnd Tracers (Green) Mag</English>
-            <Polish>25-nab. mag. .45 ACP (Zielony smugacz)</Polish>
-            <Russian>Магазин, 25 патр. .45 ACP (зелёные трассеры)</Russian>
+            <Czech>.45 ACP, 25ks zásobník stopovky (Zelené)</Czech>
             <French>Mag. 25 traçantes (Vertes) .45 ACP</French>
             <Spanish>Cargador de 25 balas trazadoras (Verde) de .45 ACP</Spanish>
             <Italian>Caricatore 25cp .45 ACP Traccianti (Verdi)</Italian>
+            <Polish>25-nab. mag. .45 ACP (Zielony smugacz)</Polish>
+            <Portuguese>Carregador 25Mun. .45 ACP Traçante (Verde)</Portuguese>
+            <Russian>Магазин, 25 патр. .45 ACP (зелёные трассеры)</Russian>
             <German>25-Schuss-.45-ACP-Vermin-Magazin (Leuchtspur Grün)</German>
-            <Czech>.45 ACP, 25ks zásobník stopovky (Zelené)</Czech>
-            <Turkish>.45 ACP 25 Merm. İzli (Yeşil) Şarjör</Turkish>
+            <Korean>.45구경 ACP 25발 들이 탄창 (녹색 예광탄)</Korean>
             <Japanese>.45 ACP 25Rnd トレーサー (緑) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，绿）</Chinesesimp>
-            <Korean>.45 ACP 25발 예광탄 (초록) 탄창</Korean>
+            <Turkish>.45 ACP 25 Merm. İzli (Yeşil) Şarjör</Turkish>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Red_Name">
             <English>.45 ACP 25Rnd Tracers (Red) Mag</English>
-            <Polish>25-nab. mag. .45 ACP (czerwony smugacz)</Polish>
-            <Russian>Магазин, 25 патр. .45 ACP (красные трассеры)</Russian>
+            <Czech>.45 ACP, 25ks zásobník stopovky (červené)</Czech>
             <French>Mag. 25 traçantes (rouges) .45 ACP</French>
             <Spanish>Cargador de 25 balas trazadoras (rojo) de .45 ACP</Spanish>
             <Italian>Caricatore 25cp .45 ACP Traccianti (Rossi)</Italian>
+            <Polish>25-nab. mag. .45 ACP (czerwony smugacz)</Polish>
+            <Portuguese>Carregador 25Mun. .45 ACP Traçante (Vermelha)</Portuguese>
+            <Russian>Магазин, 25 патр. .45 ACP (красные трассеры)</Russian>
             <German>25-Schuss-.45-ACP-Vermin-Magazin (Leuchtspur Rot)</German>
-            <Czech>.45 ACP, 25ks zásobník stopovky (červené)</Czech>
-            <Turkish>.45 ACP 25 Merm. İzli (Kırmızı) Şarjör</Turkish>
+            <Korean>.45구경 ACP 25발 들이 탄창 (적색 예광탄)</Korean>
             <Japanese>.45 ACP 25Rnd トレーサー (赤) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，红）</Chinesesimp>
-            <Korean>.45 ACP 25발 예광탄 (빨강) 탄창</Korean>
+            <Turkish>.45 ACP 25 Merm. İzli (Kırmızı) Şarjör</Turkish>
         </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Tracer_Yellow_Name">
             <English>.45 ACP 25Rnd Tracers (Yellow) Mag</English>
-            <Polish>25-nab. mag. .45 ACP (żółty smugacz)</Polish>
-            <Russian>Магазин, 25 патр. .45 ACP (жёлтые трассеры)</Russian>
+            <Czech>.45 ACP, 25ks zásobník stopovky (žluté)</Czech>
             <French>Mag. 25 traçantes (jaunes) .45 ACP</French>
             <Spanish>Cargador de 25 balas trazadoras (amarillo) de .45 ACP</Spanish>
             <Italian>Caricatore 25cp .45 ACP Traccianti (Gialli)</Italian>
+            <Polish>25-nab. mag. .45 ACP (żółty smugacz)</Polish>
+            <Portuguese>Carregador 25Mun. .45 ACP Traçante (Amarela)</Portuguese>
+            <Russian>Магазин, 25 патр. .45 ACP (жёлтые трассеры)</Russian>
             <German>25-Schuss-.45-ACP-Vermin-Magazin (Nachlade-Leuchtspur Gelb)</German>
-            <Czech>.45 ACP, 25ks zásobník stopovky (žluté)</Czech>
-            <Turkish>.45 ACP 25 Merm. İzli (Sarı) Şarjör</Turkish>
+            <Korean>.45구경 ACP 25발 들이 탄창 (황색 예광탄)</Korean>
             <Japanese>.45 ACP 25Rnd トレーサー (黄) マガジン</Japanese>
             <Chinesesimp>.45 ACP 25发 弹匣（曳光，黄）</Chinesesimp>
-            <Korean>.45 ACP 25발 예광탄 (노랑) 탄창</Korean>
+            <Turkish>.45 ACP 25 Merm. İzli (Sarı) Şarjör</Turkish>
         </Key>
         <Key ID="STR_ACE_SmallArms_8Rnd_45_Name">
             <English>.45 ACP 8Rnd Mag</English>
-            <Polish>8-nab. mag. .45 ACP </Polish>
-            <Russian>Магазин, 8 патр. .45 ACP</Russian>
+            <Czech>.45 ACP, 8ks zásobník</Czech>
             <French>Mag. 8 balles .45 ACP</French>
             <Spanish>Cargador de 8 proyectiles de .45 ACP</Spanish>
             <Italian>Caricatore 8cp .45 ACP</Italian>
+            <Polish>8-nab. mag. .45 ACP</Polish>
+            <Portuguese>Carregador 8Mun. .45 ACP</Portuguese>
+            <Russian>Магазин, 8 патр. .45 ACP</Russian>
             <German>8-Schuss-.45-ACP-Magazin</German>
-            <Czech>.45 ACP, 8ks zásobník</Czech>
-            <Turkish>.45 ACP 8 Merm. Şarjör</Turkish>
+            <Korean>.45구경 ACP 8발 들이 탄창</Korean>
             <Japanese>.45 ACP 8Rnd マガジン</Japanese>
             <Chinesesimp>.45 ACP 8发 弹匣</Chinesesimp>
-            <Korean>.45 ACP 8발 탄창</Korean>
-        </Key>
-        <Key ID="STR_ACE_SmallArms_15Rnd_45_Name">
-            <English>.45 ACP 15Rnd Mag</English>
-            <Polish>15-nab. mag. .45 ACP </Polish>
-            <Russian>Магазин, 15 патр. .45 ACP</Russian>
-            <French>Mag. 15 balles .45 ACP</French>
-            <Spanish>Cargador de 15 proyectiles de .45 ACP</Spanish>
-            <Italian>Caricatore 15cp .45 ACP</Italian>
-            <German>15-Schuss-.45-ACP-Magazin</German>
-            <Czech>.45 ACP, 15ks zásobník</Czech>
-            <Turkish>.45 ACP 15 Merm. Şarjör</Turkish>
-            <Japanese>.45 ACP 15Rnd マガジン</Japanese>
-            <Chinesesimp>.45 ACP 15发 弹匣</Chinesesimp>
-            <Korean>.45 ACP 15발 탄창</Korean>
+            <Turkish>.45 ACP 8 Merm. Şarjör</Turkish>
         </Key>
     </Package>
 </Project>

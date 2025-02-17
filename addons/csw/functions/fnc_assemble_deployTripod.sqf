@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Deploys the tripod
+ * Deploys the tripod.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -10,7 +10,7 @@
  * None
  *
  * Example:
- * [player] call ace_csw_fnc_assemble_deployTripod
+ * player call ace_csw_fnc_assemble_deployTripod
  *
  * Public: No
  */
@@ -34,7 +34,7 @@
         _args params ["_player", "_secondaryWeaponClassname", "_secondaryWeaponInfo"];
         TRACE_3("deployTripod finish",_player,_secondaryWeaponClassname,_secondaryWeaponInfo);
 
-        private _tripodClassname = getText(configFile >> "CfgWeapons" >> _secondaryWeaponClassname >> QUOTE(ADDON) >> "deploy");
+        private _tripodClassname = getText (configFile >> "CfgWeapons" >> _secondaryWeaponClassname >> QUOTE(ADDON) >> "deploy");
 
         // Create a tripod
         private _cswTripod = createVehicle [_tripodClassname, [0, 0, 0], [], 0, "NONE"];
@@ -58,9 +58,8 @@
             _cswTripod setVariable [QGVAR(secondaryWeaponMagazines), _secondaryWeaponMagazines, true];
         };
 
-        if (!GVAR(defaultAssemblyMode)) then {
-            [_cswTripod, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
-        };
+        // Disable vanilla assembly until FUNC(initVehicle) runs and sets the definite value
+        [_cswTripod, "disableWeaponAssembly", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
         private _posATL = _player getRelPos [2, 0];
         _posATL set [2, ((getPosATL _player) select 2) + 0.5];
@@ -97,6 +96,6 @@
         } forEach _secondaryWeaponInfo;
     };
 
-    private _deployTime = getNumber(configFile >> "CfgWeapons" >> _secondaryWeaponClassname >> QUOTE(ADDON) >> "deployTime");
+    private _deployTime = getNumber (configFile >> "CfgWeapons" >> _secondaryWeaponClassname >> QUOTE(ADDON) >> "deployTime");
     [TIME_PROGRESSBAR(_deployTime), [_player, _secondaryWeaponClassname, _secondaryWeaponInfo], _onFinish, _onFailure, LLSTRING(PlaceTripod_progressBar)] call EFUNC(common,progressBar);
 }, _this] call CBA_fnc_execNextFrame;

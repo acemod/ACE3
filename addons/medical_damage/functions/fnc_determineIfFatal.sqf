@@ -6,7 +6,7 @@
  * Arguments:
  * 0: The Unit <OBJECT>
  * 1: Part No <NUMBER>
- * 2: Damage Array - QGVAR(medical,bodyPartDamage) <ARRAY>
+ * 2: Damage Array - QEGVAR(medical,bodyPartDamage) <ARRAY>
  * 3: New Damage <NUMBER>
  *
  * ReturnValue:
@@ -20,8 +20,7 @@
 
 params ["_unit", "_part", "_bodyPartDamage", "_woundDamage"];
 
-//[WOG] Allow to check if legs or arms hit is fatal
-//if (_part > 1) exitWith { false };
+if (_part > 1 && EGVAR(medical,useLimbDamage) == 0) exitWith { false };
 
 scopeName "main";
 
@@ -41,13 +40,21 @@ if (EGVAR(medical,fatalDamageSource) in [0, 2]) then {
 if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
     // Sum of trauma to critical areas can be fatal (e.g. many small hits)
     private _damageThreshold = GET_DAMAGE_THRESHOLD(_unit);
-    private _headThreshhold = _damageThreshold / 4;
-    private _bodyThreshhold = 1.5 * _damageThreshold;
-    private _limbThreshold = 4 * _damageThreshold;
+    private _headThreshold = _damageThreshold / 4;
+    private _bodyThreshold = 1.5 * _damageThreshold;
 
     _bodyPartDamage params ["_headDamage", "_bodyDamage", "_leftArmDamage", "_rightArmDamage", "_leftLegDamage", "_rightLegDamage"];
 
-    private _vitalDamage = ((_headDamage - _headThreshhold) max 0) + ((_bodyDamage - _bodyThreshhold) max 0);
+    private _vitalDamage = ((_headDamage - _headThreshold) max 0) + ((_bodyDamage - _bodyThreshold) max 0);
+
+    // Sum of trauma to the limbs can also be fatal (shock) but this should take much more damage at default (5x as much)
+    if ([false, !isPlayer _unit, true] select EGVAR(medical,useLimbDamage)) then {
+        private _limbThreshold = EGVAR(medical,limbDamageThreshold) * _damageThreshold;
+        {
+            _vitalDamage = _vitalDamage + ((_x - _limbThreshold) max 0);
+        } forEach _bodyPartDamage select [2];
+    };
+
     private _chanceFatal = 1 - exp -((_vitalDamage/FATAL_SUM_DAMAGE_WEIBULL_L)^FATAL_SUM_DAMAGE_WEIBULL_K);
     TRACE_3("",_bodyPartDamage,_vitalDamage,_chanceFatal);
 
@@ -63,4 +70,3 @@ if (EGVAR(medical,fatalDamageSource) in [1, 2]) then {
 };
 
 false
-

@@ -339,6 +339,8 @@ def document_functions(addons_dir, components):
 
     return errors
 
+def getFunctionPath(func):
+    return func.path.casefold()
 
 def crawl_dir(addons_dir, directory, debug=False, lint_private=False):
     components = {}
@@ -360,7 +362,11 @@ def crawl_dir(addons_dir, directory, debug=False, lint_private=False):
                     if function.is_public() and not debug:
                         # Add functions to component key (initalise key if necessary)
                         component = os.path.basename(os.path.dirname(root))
-                        components.setdefault(component, []).append(function)
+
+                        # Sort functions alphabetically
+                        functions = components.setdefault(component, [])
+                        functions.append(function)
+                        functions.sort(key=getFunctionPath)
 
                         function.feedback("Publicly documented")
                 else:

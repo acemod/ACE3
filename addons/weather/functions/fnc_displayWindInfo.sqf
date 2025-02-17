@@ -39,7 +39,7 @@ TRACE_1("Starting Wind Info PFEH",GVAR(WindInfo));
     private _playerInStaticWeapon = objectParent ACE_Player isKindOf "StaticWeapon";
 
     if (
-        (!GVAR(WindInfo)) || 
+        (!GVAR(WindInfo)) ||
         {!([ACE_player, ACE_player, ["notOnMap", "isNotDragging", "isNotCarrying", "isNotSitting"]] call EFUNC(common,canInteractWith)) && !(_playerInStaticWeapon)}
     ) exitWith {
         TRACE_1("Ending Wind Info PFEH",GVAR(WindInfo));
