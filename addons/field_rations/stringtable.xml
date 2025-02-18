@@ -879,6 +879,30 @@
             <Turkish>Hayatta kalma</Turkish>
             <Hungarian>Túlélés</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_DisplayName">
+            <English>Consequence of extreme thirst/hunger (over 85%)</English>
+            <French>Conséquences d'une soif ou d'une faim extrême (plus de 85 %)</French>
+            <Italian>Conseguenze di sete/fame estrema (oltre 85%)</Italian>
+            <German>Folge von extremen Durst/Hunger (über 85%)</German>
+            <Korean>극심한 허기 및 갈증으로 인한 증상 (85% 이상)</Korean>
+            <Russian>Последствия сильной жажды/голода (более 85%)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Pain">
+            <English>Pain</English>
+            <French>Douleur</French>
+            <Italian>Dolore</Italian>
+            <German>Schmerzen</German>
+            <Korean>고통</Korean>
+            <Russian>Боль</Russian>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Unconsciousness">
+            <English>Fainting</English>
+            <French>Évanouissement</French>
+            <Italian>Svenimenti</Italian>
+            <German>Ohnmacht</German>
+            <Korean>기절</Korean>
+            <Russian>Обморок</Russian>
+        </Key>
         <Key ID="STR_ACE_Field_Rations_NoWaterRemaining">
             <English>There is no water left.</English>
             <French>Il n'y a plus d'eau.</French>

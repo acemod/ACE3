@@ -16,4 +16,7 @@ version:
 ## 1. Overview
 
 ### 1.1 Overpressure
-Adds backblast to AT launchers and overpressure zones to tank cannons, don't stay behind a firing RPG or it'll hurt.
+Adds backblast to Man-Portable AT/AA launchers, static/vehicle-mounted Missile launchers and Recoilless Guns.
+Tank and Artillery cannons also have large overpressure zones that can cause injury to dismounted personnel.
+
+Don't stand behind a firing RPG or it'll hurt!

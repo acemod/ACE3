@@ -28,9 +28,9 @@
             <Chinesesimp>&lt;t color='#9cf953'&gt;使用按键 &lt;/t&gt;打开/关闭镭射&lt;br&gt;双击切换模式</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_Green">
-            <English>DBAL-A3 (green)</English>
+            <English>DBAL-A3 (Green)</English>
             <French>DBAL-A3 (Vert)</French>
-            <Spanish>DBAL-A3 (verde)</Spanish>
+            <Spanish>DBAL-A3 (Verde)</Spanish>
             <Italian>DBAL-A3 (Verde)</Italian>
             <Polish>DBAL-A3 (Zielony)</Polish>
             <Portuguese>DBAL-A3 (Verde)</Portuguese>
@@ -41,14 +41,14 @@
             <Chinesesimp>DBAL-A3 (绿色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_IRLight_DBAL_A3_Red">
-            <English>DBAL-A3 (red)</English>
-            <French>DBAL-A3 (rouge)</French>
-            <Spanish>DBAL-A3 (rojo)</Spanish>
+            <English>DBAL-A3 (Red)</English>
+            <French>DBAL-A3 (Rouge)</French>
+            <Spanish>DBAL-A3 (Rojo)</Spanish>
             <Italian>DBAL-A3 (Rosso)</Italian>
-            <Polish>DBAL-A3 (czerwony)</Polish>
-            <Portuguese>DBAL-A3 (vermelho)</Portuguese>
+            <Polish>DBAL-A3 (Czerwony)</Polish>
+            <Portuguese>DBAL-A3 (Vermelho)</Portuguese>
             <Russian>DBAL-A3 (красный)</Russian>
-            <German>DBAL-A3 (rot)</German>
+            <German>DBAL-A3 (Rot)</German>
             <Korean>DBAL-A3 (빨강)</Korean>
             <Japanese>DBAL-A3 (赤)</Japanese>
             <Chinesesimp>DBAL-A3 (红色)</Chinesesimp>

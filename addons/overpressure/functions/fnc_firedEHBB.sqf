@@ -18,6 +18,8 @@
 //IGNORE_PRIVATE_WARNING ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 TRACE_8("firedEH:",_unit,_weapon,_muzzle,_mode,_ammo,_magazine,_projectile,_gunner);
 
+private _shooter = [_gunner, _unit] select (isNil "_gunner");
+
 // Retrieve backblast values
 private _bbValues = [_weapon, _ammo, _magazine] call FUNC(getOverPressureValues);
 
@@ -35,31 +37,35 @@ private _position = (getPosASL _projectile) vectorAdd (_direction vectorMultiply
 private _affected = (ASLToAGL _position) nearEntities ["CAManBase", _backblastRange];
 
 // Let each client handle their own affected units
-["ace_overpressure", [_unit, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;
+["ace_overpressure", [_shooter, _position, _direction, _weapon, _magazine, _ammo], _affected] call CBA_fnc_targetEvent;
 
 // Damage to the firer
-private _distance = 2 * ([_position, _direction, _backblastRange, _unit] call FUNC(getDistance));
+private _distance = 2 * ([_position, _direction, _backblastRange, _shooter] call FUNC(getDistance));
 
 TRACE_1("Distance",_distance);
 
-if (_distance < _backblastRange) then {
-    TRACE_2("",isDamageAllowed _unit,_unit getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
+if (_distance < _backblastRange && {EGVAR(common,playerVehAttenuation) > 0.8}) then {
+    TRACE_2("",isDamageAllowed _shooter,_shooter getVariable [ARR_2(QEGVAR(medical,allowDamage),true)]);
 
     // Skip damage if not allowed
-    if (isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) then {
-        private _alpha = sqrt (1 - _distance / _backblastRange);
-        private _beta = sqrt 0.5;
+    if (!isDamageAllowed _shooter || {!(_shooter getVariable [QEGVAR(medical,allowDamage), true])}) exitWith {};
 
-        private _damage = _alpha * _beta * _backblastDamage;
-        TRACE_1("",_damage);
+    // Skip if vehicle backblast reflection is disabled
+    private _vehicle = vehicle _shooter;
+    if (_vehicle != _shooter && {getNumber (configOf _vehicle >> QGVAR(noReflection)) == 1}) exitWith {};
 
-        [_damage * 100] call BIS_fnc_bloodEffect;
+    private _alpha = sqrt (1 - _distance / _backblastRange);
+    private _beta = sqrt 0.5;
 
-        if (GETEGVAR(medical,enabled,false)) then {
-            [_unit, _damage, "body", "backblast", _unit] call EFUNC(medical,addDamageToUnit);
-        } else {
-            _unit setDamage (damage _unit + _damage);
-        };
+    private _damage = _alpha * _beta * _backblastDamage;
+    TRACE_1("",_damage);
+
+    [_damage * 100] call BIS_fnc_bloodEffect;
+
+    if (GETEGVAR(medical,enabled,false)) then {
+        [_shooter, _damage, "body", "backblast", _shooter] call EFUNC(medical,addDamageToUnit);
+    } else {
+        _shooter setDamage (damage _shooter + _damage);
     };
 };
 

@@ -30,7 +30,7 @@ if (!isNull objectParent ACE_player) exitWith {};
     _args params ["_setPosition", "_addedHelpers", "_housesScanned", "_housesToScanForActions"];
 
     if (!EGVAR(interact_menu,keyDown)) then {
-        {deleteVehicle _x;} forEach _addedHelpers;
+        deleteVehicle _addedHelpers;
         [_pfID] call CBA_fnc_removePerFrameHandler;
     } else {
         // Prevent Rare Error when ending mission with interact key down:

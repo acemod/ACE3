@@ -137,8 +137,8 @@ class CfgWeapons {
 
 `ace_explosives_fnc_scriptedExplosive`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ----- | ------------------------ |
 | 0  | Explosive objects | Array | Required |
 | 1  | Delay before detonation | Number | Optional (default: `0`, randomized up to given number if negative) |
 | **R** | None | None | Return value |
@@ -156,8 +156,8 @@ class CfgWeapons {
 
 `ace_explosives_fnc_connectExplosive`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Unit to connect to | Object | Required |
 | 1  | Explosive object to connect to | Object | Required |
 | 2  | Detonator type class name (must be present on unit) | String | Required |

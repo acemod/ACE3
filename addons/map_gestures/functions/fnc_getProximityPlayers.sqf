@@ -47,7 +47,7 @@ switch (_this) do {
     };
     case (4): {}; // Disabled
     default {
-        _this call _fnc_getProximitsPlayers;
+        call _fnc_getProximitsPlayers;
     };
 };
 
