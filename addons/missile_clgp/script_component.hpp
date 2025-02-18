@@ -1,5 +1,5 @@
 #define COMPONENT missile_clgp
-#define COMPONENT_BEAUTIFIED Cannon Launched Guided Projectiles
+#define COMPONENT_BEAUTIFIED Cannon-Launched Guided Projectiles
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
