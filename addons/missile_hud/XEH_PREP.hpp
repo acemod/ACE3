@@ -1,5 +1,6 @@
 PREP(createCtrlFromElement);
 PREP(getCurrentWeapon);
+PREP(info_gps);
 PREP(info_salh);
 PREP(isElementValid);
 PREP(registerDefaultHud);

@@ -4,11 +4,14 @@
         <Key ID="STR_ACE_MISSILE_SDB_39">
             <English>GBU-39 [ACE]</English>
         </Key>
+        <Key ID="STR_ACE_MISSILE_SDB_pylonDescription">
+            <English>250 pound GPS guided glide bomb</English>
+        </Key>
         <Key ID="STR_ACE_MISSILE_SDB_39_1x">
-            <English>1x GBU-39 [ACE]</English>
+            <English>1x GBU-39 SDB [ACE]</English>
         </Key>
         <Key ID="STR_ACE_MISSILE_SDB_39_4x">
-            <English>4x GBU-39 [ACE]</English>
+            <English>4x GBU-39 SDB [ACE]</English>
         </Key>
     </Package>
 </Project>
