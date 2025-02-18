@@ -29,7 +29,7 @@ TRACE_6("copperhead_onfired",_projectile,_trajectorySetting,_delaySetting,_laser
 // Changing path without active feedback causes problems on current missile guidance 
 // probably due to poor vector change in ace_missileguidance_fnc_guidancePFH, disable for now
 private _trajectoryShaped = false;
-// private _trajectoryShaped = _trajectorySetting >= 3; // 1-2 is ballisitic, 3-8 is shaped
+// private _trajectoryShaped = _trajectorySetting >= 3; // 1-2 is ballistic, 3-8 is shaped
 _attackProfileStateParams set [0, _trajectoryShaped];
 
 // set var for submuntion's deployCondition from second dial

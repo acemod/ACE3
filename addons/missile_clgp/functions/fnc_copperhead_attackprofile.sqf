@@ -57,9 +57,9 @@ if (_aimASL isEqualTo []) then {
         if (_adjustAngle >= 0) exitWith {};
         private _adjustOffset = (sin _adjustAngle) * vectorMagnitude _aimDiff;
         _aimASL = _aimASL vectorAdd [0,0,_adjustOffset];
-#ifdef DEBUG_MODE_FULL
-        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,1,1], ASLtoAGL _aimASL, 0.75, 0.75, 0, "LIMIT", 1, 0.025, "TahomaB"];
-#endif
+        if (EGVAR(missileguidance,debug_drawGuidanceInfo)) then {
+            drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\selectover_ca.paa", [0,1,1,1], ASLtoAGL _aimASL, 0.75, 0.75, 0, "LIMIT", 1, 0.025, "TahomaB"];
+        };
     };
     TRACE_1("dir",_projectilePos getDir _aimASL);
 };

@@ -5,12 +5,13 @@ class CfgAmmo {
         hit = 1200;
         indirectHit = 200;
         indirectHitRange = 4;
+        EGVAR(frag,force) = 1;
         EGVAR(frag,skip) = 0;
         EGVAR(frag,charge) = 9979;
         EGVAR(frag,metal) = 36000;
-        EGVAR(frag,gurney_c) = 2440;
-        EGVAR(frag,gurney_k) = "1/2";
-        EGVAR(frag,classes)[] = {QEGVAR(frag,large), QEGVAR(frag,large), QEGVAR(frag,large_HD), QEGVAR(frag,large), QEGVAR(frag,huge), QEGVAR(frag,huge_HD), QEGVAR(frag,huge)};
+        EGVAR(frag,gurney_c) = 2700;
+        EGVAR(frag,gurney_k) = 0.5;
+        EGVAR(frag,classes)[] = {QEGVAR(frag,small), QEGVAR(frag,small_HD), QEGVAR(frag,medium), QEGVAR(frag,medium_HD), QEGVAR(frag,large_HD)};
 
         GVAR(artilleryDrag) = 1;
         GVAR(deployCondition) = QFUNC(copperhead_deployCondition);
@@ -73,8 +74,8 @@ class CfgAmmo {
 
         class ace_missileguidance {
             enabled = 2;
-            minDeflection = 0.001;       // Minium flap deflection for guidance
-            maxDeflection = 0.001;       // Maximum flap deflection for guidance
+            pitchRate = 15; // replace minDeflection, maxDeflection, incDeflection
+            yawRate = 15;
 
             // Guidance type for munitions
             defaultSeekerType = "SALH";
@@ -82,6 +83,9 @@ class CfgAmmo {
 
             defaultSeekerLockMode = "LOAL";
             seekerLockModes[] = { "LOAL" };
+
+            defaultNavigationType = "Direct";
+            navigationTypes[] = { "Direct" };
 
             seekerAngle = 70;           // Angle in front of the missile which can be searched
             seekerAccuracy = 1;         // seeker accuracy multiplier
