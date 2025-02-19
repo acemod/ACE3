@@ -2,6 +2,7 @@
 /*
  * Author: Garth 'L-H' de Wet
  * Dials the number passed and detonates the explosive.
+ *
  * Arguments:
  * 0: Unit to do dialing <OBJECT>
  * 1: Code to dial <STRING>
@@ -14,7 +15,9 @@
  *
  * Public: Yes
  */
+
 params ["_unit", "_code"];
+TRACE_2("params",_unit,_code);
 
 if (_unit getVariable [QGVAR(Dialing),false]) exitWith {};
 if !(alive _unit) exitWith {};
