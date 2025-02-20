@@ -5,6 +5,10 @@
             <English>GBU-39 [ACE]</English>
             <French>GBU-39 [ACE]</French>
         </Key>
+        <Key ID="STR_ACE_MISSILE_SDB_pylonDescription">
+            <English>250 pound GPS guided glide bomb</English>
+            <French>Bombe planante de 250 livres à guidage GPS</French>
+        </Key>
         <Key ID="STR_ACE_MISSILE_SDB_39_1x">
             <English>1x GBU-39 [ACE]</English>
             <French>1x GBU-39 [ACE]</French>
