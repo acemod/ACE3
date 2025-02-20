@@ -59,6 +59,7 @@ GVAR(dev_watchVariableRunning) = true;
     _return pushBack format [" - [Pain: %1] [Suppress: %2]", _pain toFixed 3, _painSuppress toFixed 3];
 
     // Damage:
+
     private _damage = GET_BODYPART_DAMAGE(_unit);
     private _limping = ["", "[<t color ='#FFCC22'> Limping </t>]"] select (_unit getVariable [QEGVAR(medical,isLimping), false]);
     _return pushBack format ["BodyPartDamage: [H: %1] [B: %2]", (_damage select 0) toFixed 2, (_damage select 1) toFixed 2];

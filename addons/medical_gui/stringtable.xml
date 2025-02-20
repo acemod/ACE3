@@ -503,38 +503,6 @@
             <Chinesesimp>大</Chinesesimp>
             <Turkish>Büyük</Turkish>
         </Key>
-        <Key ID="STR_ACE_Medical_GUI_LeftArm">
-            <English>Left Arm</English>
-            <Czech>Levá Ruka</Czech>
-            <French>Bras gauche</French>
-            <Spanish>Brazo Izquierdo</Spanish>
-            <Italian>Braccio Sinistro</Italian>
-            <Polish>Lewa ręka</Polish>
-            <Portuguese>Braço Esquerdo</Portuguese>
-            <Russian>Левая рука</Russian>
-            <German>Linker Arm</German>
-            <Korean>왼팔</Korean>
-            <Japanese>左腕</Japanese>
-            <Chinese>左手</Chinese>
-            <Chinesesimp>左臂</Chinesesimp>
-            <Turkish>Sol Kol</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Medical_GUI_LeftLeg">
-            <English>Left Leg</English>
-            <Czech>Levá Noha</Czech>
-            <French>Jambe gauche</French>
-            <Spanish>Pierna Izquierda</Spanish>
-            <Italian>Gamba Sinistra</Italian>
-            <Polish>Lewa noga</Polish>
-            <Portuguese>Perna Esquerda</Portuguese>
-            <Russian>Левая нога</Russian>
-            <German>Linkes Bein</German>
-            <Korean>왼다리</Korean>
-            <Japanese>左足</Japanese>
-            <Chinese>左腳</Chinese>
-            <Chinesesimp>左腿</Chinesesimp>
-            <Turkish>Sol Bacak</Turkish>
-        </Key>
         <Key ID="STR_ACE_Medical_GUI_LoadPatient">
             <English>Load Patient</English>
             <Czech>Naložit pacienta</Czech>
@@ -791,6 +759,36 @@
             <Chinesesimp>没有呼吸</Chinesesimp>
             <Turkish>Solunum yok</Turkish>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_Neck">
+            <English>Neck</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_Chest">
+            <English>Chest</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_LeftArm">
+            <English>Lower Left Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_LeftUpperArm">
+            <English>Upper Left Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_RightArm">
+            <English>Lower Right Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_RightUpperArm">
+            <English>Upper Right Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_LeftLeg">
+            <English>Lower Left Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_LeftUpperLeg">
+            <English>Upper Left Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_RightLeg">
+            <English>Lower Right Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_RightUpperLeg">
+            <English>Upper Right Leg</English>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_OVERVIEW">
             <English>OVERVIEW</English>
             <Czech>PŘEHLED</Czech>
@@ -886,6 +884,36 @@
             <Chinese>有部分 %1 開放性傷口</Chinese>
             <Chinesesimp>有未完全处理的 %1 伤口</Chinesesimp>
             <Turkish>% 1 Yarım Açık yara var</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectNeck">
+            <English>Select Neck</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectChest">
+            <English>Select Chest</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectLeftArm">
+            <English>Select Lower Left Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectUpperLeftArm">
+            <English>Select Upper Left Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectRightArm">
+            <English>Select Lower Right Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectRightUpperArm">
+            <English>Select Upper Right Arm</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectLeftLeg">
+            <English>Select Lower Left Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectLeftUpperLeg">
+            <English>Select Upper Left Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectRightLeg">
+            <English>Select Lower Right Leg</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_GUI_SelectRightUpperLeg">
+            <English>Select Upper Right Leg</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PartialX">
             <English>Partial %1</English>
@@ -1026,38 +1054,6 @@
             <Chinesesimp>放射状</Chinesesimp>
             <Turkish>Radyal</Turkish>
             <Hungarian>Kerek</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Medical_GUI_RightArm">
-            <English>Right Arm</English>
-            <Czech>Pravá Ruka</Czech>
-            <French>Bras droit</French>
-            <Spanish>Brazo Derecho</Spanish>
-            <Italian>Braccio Destro</Italian>
-            <Polish>Prawa ręka</Polish>
-            <Portuguese>Braço Direito</Portuguese>
-            <Russian>Правая рука</Russian>
-            <German>Rechter Arm</German>
-            <Korean>오른팔</Korean>
-            <Japanese>右腕</Japanese>
-            <Chinese>右手</Chinese>
-            <Chinesesimp>右臂</Chinesesimp>
-            <Turkish>Sağ Kol</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Medical_GUI_RightLeg">
-            <English>Right Leg</English>
-            <Czech>Pravá Noha</Czech>
-            <French>Jambe droite</French>
-            <Spanish>Pierna Derecha</Spanish>
-            <Italian>Gamba Destra</Italian>
-            <Polish>Prawa noga</Polish>
-            <Portuguese>Perna Direita</Portuguese>
-            <Russian>Правая нога</Russian>
-            <German>Rechtes Bein</German>
-            <Korean>오른다리</Korean>
-            <Japanese>右足</Japanese>
-            <Chinese>右腳</Chinese>
-            <Chinesesimp>右腿</Chinesesimp>
-            <Turkish>Sağ Bacak</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SINGLE_BANDAGED_WOUND">
             <English>There is 1 %1 Bandaged Wound</English>
@@ -1215,70 +1211,6 @@
             <Chinese>選擇頭部</Chinese>
             <Chinesesimp>选择头部</Chinesesimp>
             <Turkish>Kafayı Seç</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Medical_GUI_SelectLeftArm">
-            <English>Select Left Arm</English>
-            <Czech>Vybrat Levou ruku</Czech>
-            <French>Sélectionner le bras gauche</French>
-            <Spanish>Seleccionar Brazo Izquierdo</Spanish>
-            <Italian>Seleziona Braccio Sinistro</Italian>
-            <Polish>Wybierz lewą rękę</Polish>
-            <Portuguese>Selecionar Braço Esquerdo</Portuguese>
-            <Russian>Выбрать левую руку</Russian>
-            <German>Wähle linken Arm</German>
-            <Korean>왼팔 선택</Korean>
-            <Japanese>左腕を選択</Japanese>
-            <Chinese>選擇左手</Chinese>
-            <Chinesesimp>选择左臂</Chinesesimp>
-            <Turkish>Sol Kolu Seç</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Medical_GUI_SelectLeftLeg">
-            <English>Select Left Leg</English>
-            <Czech>Vybrat Levou nohu</Czech>
-            <French>Sélectionner la jambe gauche</French>
-            <Spanish>Seleccionar Pierna Izquierda</Spanish>
-            <Italian>Seleziona Gamba Sinistra</Italian>
-            <Polish>Wybierz lewą nogę</Polish>
-            <Portuguese>Selecionar Perna Esquerda</Portuguese>
-            <Russian>Выбрать левую ногу</Russian>
-            <German>Wähle linkes Bein</German>
-            <Korean>왼다리 선택</Korean>
-            <Japanese>左足を選択</Japanese>
-            <Chinese>選擇左腳</Chinese>
-            <Chinesesimp>选择左腿</Chinesesimp>
-            <Turkish>Sol Bacağı Seç</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Medical_GUI_SelectRightArm">
-            <English>Select Right Arm</English>
-            <Czech>Vybrat Pravou ruku</Czech>
-            <French>Sélectionner le bras droit</French>
-            <Spanish>Seleccionar Brazo Derecho</Spanish>
-            <Italian>Seleziona Braccio Destro</Italian>
-            <Polish>Wybierz prawą rękę</Polish>
-            <Portuguese>Selecionar Braço Direito</Portuguese>
-            <Russian>Выбрать правую руку</Russian>
-            <German>Wähle rechten Arm</German>
-            <Korean>오른팔 선택</Korean>
-            <Japanese>右腕を選択</Japanese>
-            <Chinese>選擇右手</Chinese>
-            <Chinesesimp>选择右臂</Chinesesimp>
-            <Turkish>Sağ Kolu Seç</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Medical_GUI_SelectRightLeg">
-            <English>Select Right Leg</English>
-            <Czech>Vybrat Pravou nohu</Czech>
-            <French>Sélectionner la jambe droite</French>
-            <Spanish>Seleccionar Pierna Derecha</Spanish>
-            <Italian>Seleziona Gamba Destra</Italian>
-            <Polish>Wybierz prawą nogę</Polish>
-            <Portuguese>Selecionar Perna Direita</Portuguese>
-            <Russian>Выбрать правую ногу</Russian>
-            <German>Wähle rechtes Bein</German>
-            <Korean>오른다리 선택</Korean>
-            <Japanese>右足を選択</Japanese>
-            <Chinese>選擇右腳</Chinese>
-            <Chinesesimp>选择右腿</Chinesesimp>
-            <Turkish>Sağ Bacağı Seç</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_SelectTorso">
             <English>Select Torso</English>
