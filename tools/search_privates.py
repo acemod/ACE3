@@ -3,8 +3,6 @@
 import fnmatch
 import os
 import re
-import ntpath
-import sys
 import argparse
 
 def get_private_declare(content):
@@ -44,12 +42,6 @@ def get_private_declare(content):
 
 def check_privates(filepath):
     bad_count_file = 0
-    def pushClosing(t):
-        closingStack.append(closing.expr)
-        closing << Literal( closingFor[t[0]] )
-
-    def popClosing():
-        closing << closingStack.pop()
 
     with open(filepath, 'r') as file:
         content = file.read()
@@ -122,8 +114,8 @@ def main():
     args = parser.parse_args()
 
     for root, dirnames, filenames in os.walk('../addons' + '/' + args.module):
-      for filename in fnmatch.filter(filenames, '*.sqf'):
-        sqf_list.append(os.path.join(root, filename))
+        for filename in fnmatch.filter(filenames, '*.sqf'):
+            sqf_list.append(os.path.join(root, filename))
 
     for filename in sqf_list:
         bad_count = bad_count + check_privates(filename)

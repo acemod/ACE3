@@ -53,8 +53,8 @@ Adding new elements through scripting is currently not possible.
 
 `ace_ui_fnc_setElementVisibility`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Source | String | Required |
 | 1  | Set/Unset | Boolean | Required |
 | 2  | Element Name | String | Required |

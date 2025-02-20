@@ -4,7 +4,7 @@
 #define BAILOUT_CHANCE_SHOOT 0.5
 #define BAILOUT_CHANCE_MOVE 0.8
 
-#define IS_EXPLOSIVE_AMMO(ammo) (getNumber (ammo call CBA_fnc_getObjectConfig >> "explosive") > 0.5)
+#define IS_INEXPLOSIVE_AMMO(ammo) (getNumber (ammo call CBA_fnc_getObjectConfig >> "explosive") <= 0.5)
 
 #define ENGINE_HITPOINTS [["hitengine"], "engine"]
 #define HULL_HITPOINTS [["hithull", "hitbody", "#structural"], "hull"]

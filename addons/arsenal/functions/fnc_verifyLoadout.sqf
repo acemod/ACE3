@@ -6,6 +6,7 @@
  *
  * Arguments:
  * 0: Loadout <ARRAY> (CBA Extended Loadout or getUnitLoadout format)
+ * 1: Whether to attempt to recover invalid containers <BOOL>
  *
  * Return Value:
  * Verified loadout and missing / unavailable items list and count <ARRAY>
@@ -15,7 +16,7 @@
 
 #define NOT_IN_ARSENAL !(_name in GVAR(virtualItemsFlat))
 
-params ["_loadout"];
+params ["_loadout", ["_recoverInvalidContainers", false]];
 
 private _extendedInfo = createHashMap;
 
@@ -37,7 +38,8 @@ private _missingExtendedInfo = [];
 
 // Search for all items and check their availability
 private _fnc_filterLoadout = {
-    _this apply {
+    params ["_loadout", ["_recoverInvalidContainers", false]];
+    _loadout apply {
         if (_x isEqualType "" && {_x != ""}) then {
             _name = _x call EFUNC(common,getConfigName);
 
@@ -70,11 +72,13 @@ private _fnc_filterLoadout = {
         } else {
             // Handle arrays
             if (_x isEqualType []) then {
-                _itemArray = _x call _fnc_filterLoadout;
+                _itemArray = [_x, true] call _fnc_filterLoadout;
+
                 // If "" is given as a container, an error is thrown, therefore, filter out all unavailable/null containers
-                if (count _itemArray == 2 && {(_itemArray select 0) isEqualTo ""} && {(_itemArray select 1) isEqualType []}) then {
+                if (!_recoverInvalidContainers && {count _itemArray == 2} && {(_itemArray select 0) isEqualTo ""} && {(_itemArray select 1) isEqualType []}) then {
                     _itemArray = [];
                 };
+
                 _itemArray
             } else {
                 // All other types and empty strings
@@ -86,7 +90,7 @@ private _fnc_filterLoadout = {
 
 // Convert loadout to config case and replace null/unavailable items
 // Loadout might come from a different modpack, which might have different config naming
-_loadout = _loadout call _fnc_filterLoadout;
+_loadout = [_loadout, _recoverInvalidContainers] call _fnc_filterLoadout;
 
 {
     private _class = _extendedInfo getOrDefault [_x, ""];

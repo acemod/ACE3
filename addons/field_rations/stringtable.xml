@@ -57,7 +57,7 @@
             <Portuguese>Bebida refrescante de sabor laranja, com um sabor frutado e formigante.</Portuguese>
             <Russian>Напиток с апельсиновым вкусом</Russian>
             <German>Ein nach Orange schmeckender Softdrink mit einem prickelndem und fruchtigem Geschmack</German>
-            <Korean>오렌지 향의 톡쏘는 탄산음료</Korean>
+            <Korean>오렌지향의 톡 쏘는 탄산음료</Korean>
             <Japanese>口いっぱいに果物を感じるオレンジ風味のソフトドリンク</Japanese>
             <Chinese>有著微微的橘子水果味的汽水</Chinese>
             <Chinesesimp>橙子味汽水，有刺鼻的水果味</Chinesesimp>
@@ -879,6 +879,30 @@
             <Turkish>Hayatta kalma</Turkish>
             <Hungarian>Túlélés</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_DisplayName">
+            <English>Consequence of extreme thirst/hunger (over 85%)</English>
+            <French>Conséquences d'une soif ou d'une faim extrême (plus de 85 %)</French>
+            <Italian>Conseguenze di sete/fame estrema (oltre 85%)</Italian>
+            <German>Folge von extremen Durst/Hunger (über 85%)</German>
+            <Korean>극심한 허기 및 갈증으로 인한 증상 (85% 이상)</Korean>
+            <Russian>Последствия сильной жажды/голода (более 85%)</Russian>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Pain">
+            <English>Pain</English>
+            <French>Douleur</French>
+            <Italian>Dolore</Italian>
+            <German>Schmerzen</German>
+            <Korean>고통</Korean>
+            <Russian>Боль</Russian>
+        </Key>
+        <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Unconsciousness">
+            <English>Fainting</English>
+            <French>Évanouissement</French>
+            <Italian>Svenimenti</Italian>
+            <German>Ohnmacht</German>
+            <Korean>기절</Korean>
+            <Russian>Обморок</Russian>
+        </Key>
         <Key ID="STR_ACE_Field_Rations_NoWaterRemaining">
             <English>There is no water left.</English>
             <French>Il n'y a plus d'eau.</French>
@@ -1284,13 +1308,21 @@
         </Key>
         <Key ID="STR_ACE_Field_Rations_ZeusUpdates_Description">
             <English>If enabled, hunger and thirst will continue to increase while the Zeus interface is open.</English>
-            <Japanese>有効化すると、空腹と渇きはZeusインタフェイスを開いている間も継続して進行します。</Japanese>
+            <French>Si cette option est activée, la faim et la soif continueront d'augmenter tant que l'interface Zeus sera ouverte.</French>
+            <Italian>Se attivato, fame e sete continueranno ad aumentare mentre l'interfaccia Zeus è aperta.</Italian>
+            <Russian>Если эта функция включена, чувство голода и жажды будет продолжать усиливаться, пока открыт интерфейс Zeus.</Russian>
+            <German>Wenn aktiviert, werden Hunger und Durst bei geöffnetem Zeus-Interface weiter zunehmen.</German>
             <Korean>활성화 시 제우스 인터페이스가 열려 있는 동안 허기와 갈증이 계속 증가합니다.</Korean>
+            <Japanese>有効化すると、空腹と渇きはZeusインタフェイスを開いている間も継続して進行します。</Japanese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_ZeusUpdates_DisplayName">
             <English>Update Hunger and Thirst in Zeus</English>
-            <Japanese>Zeus時に空腹と渇きを進行させる</Japanese>
+            <French>Mise à jour Faim et soif dans Zeus</French>
+            <Italian>Simula fame e sete in Zeus</Italian>
+            <Russian>Обновление голода и жажды в Zeus</Russian>
+            <German>Zunehmender Hunger und Durst im Zeus</German>
             <Korean>제우스의 허기와 갈증 업데이트</Korean>
+            <Japanese>Zeus時に空腹と渇きを進行させる</Japanese>
         </Key>
     </Package>
 </Project>

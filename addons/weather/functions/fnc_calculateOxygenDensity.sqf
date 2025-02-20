@@ -17,4 +17,4 @@
  * Public: No
  */
 
-(_this call FUNC(calculateAirDensity)) * 0.21
+(call FUNC(calculateAirDensity)) * 0.21

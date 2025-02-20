@@ -175,6 +175,9 @@ class CfgAmmo {
         GVAR(defuseObjectPosition)[] = {0.0, -0.05, 0.15};
     };
     class APERSMine_Range_Ammo;
+    class ACE_APERSMine_ToePopper_Ammo: APERSMine_Range_Ammo {
+        ACE_damageType = QGVAR(toePopper);
+    };
     class TrainingMine_Ammo: APERSMine_Range_Ammo {
         GVAR(magazine) = "TrainingMine_Mag";
         GVAR(size) = 0;

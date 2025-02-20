@@ -6,6 +6,7 @@ PREP(findLaserSource);
 PREP(getLaserCode);
 PREP(handleLaserTargetCreation);
 PREP(keyLaserCodeChange);
+PREP(laserModule);
 PREP(laserOff);
 PREP(laserOn);
 PREP(laserPointTrack);

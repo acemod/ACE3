@@ -3,7 +3,7 @@
     "LIST",
     [LSTRING(AdvancedDiagnose_DisplayName), LSTRING(AdvancedDiagnose_Description)],
     LSTRING(Category),
-    [[0, 1, 2, 3], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrest), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrestDirect)], 1],
+    [[0, 1, 2, 3], [ELSTRING(common,Disabled), ELSTRING(common,Enabled), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrest), LSTRING(AdvancedDiagnose_DiagnoseCardiacArrestDirect)], 2],
     true
 ] call CBA_fnc_addSetting;
 
@@ -85,7 +85,7 @@
     "LIST",
     [LSTRING(AllowSharedEquipment_DisplayName), LSTRING(AllowSharedEquipment_Description)],
     LSTRING(Category),
-    [[0, 1, 2], [LSTRING(AllowSharedEquipment_PriorityPatient), LSTRING(AllowSharedEquipment_PriorityMedic), ELSTRING(common,No)], 0],
+    [[0, 1, 3, 2], [LSTRING(AllowSharedEquipment_PriorityPatient), LSTRING(AllowSharedEquipment_PriorityMedic), LSTRING(AllowSharedEquipment_PriorityMedicIfMedic), ELSTRING(common,No)], 0],
     true
 ] call CBA_fnc_addSetting;
 
@@ -110,6 +110,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(treatmentTimeTrainedAutoinjector),
+    "SLIDER",
+    [LSTRING(TreatmentTimeTrainedAutoinjector_DisplayName), LSTRING(TreatmentTimeTrainedAutoinjector_Description)],
+    LSTRING(Category),
+    [0.1, 60, 5, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(treatmentTimeTourniquet),
     "SLIDER",
     [LSTRING(TreatmentTimeTourniquet_DisplayName), LSTRING(TreatmentTimeTourniquet_Description)],
@@ -119,9 +128,27 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(treatmentTimeTrainedTourniquet),
+    "SLIDER",
+    [LSTRING(TreatmentTimeTrainedTourniquet_DisplayName), LSTRING(TreatmentTimeTrainedTourniquet_Description)],
+    LSTRING(Category),
+    [0.1, 60, 7, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(treatmentTimeSplint),
     "SLIDER",
     [LSTRING(TreatmentTimeSplint_DisplayName), LSTRING(TreatmentTimeSplint_Description)],
+    LSTRING(Category),
+    [0.1, 60, 7, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(treatmentTimeTrainedSplint),
+    "SLIDER",
+    [LSTRING(TreatmentTimeTrainedSplint_DisplayName), LSTRING(TreatmentTimeTrainedSplint_Description)],
     LSTRING(Category),
     [0.1, 60, 7, 1],
     true
@@ -339,6 +366,15 @@
     QGVAR(treatmentTimeIV),
     "SLIDER",
     [LSTRING(TreatmentTimeIV_DisplayName), LSTRING(TreatmentTimeIV_Description)],
+    LSTRING(Category),
+    [0.1, 60, 12, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(treatmentTimeTrainedIV),
+    "SLIDER",
+    [LSTRING(TreatmentTimeTrainedIV_DisplayName), LSTRING(TreatmentTimeTrainedIV_Description)],
     LSTRING(Category),
     [0.1, 60, 12, 1],
     true

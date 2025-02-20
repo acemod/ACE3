@@ -49,7 +49,7 @@ private _actions = [];
         private _displayName = getText (configFile >> "CfgMagazines" >> _x >> "displayName");
         private _picture = getText (configFile >> "CfgMagazines" >> _x >> "picture");
 
-        private _action = [_x, _displayName, _picture, {_this call FUNC(startRepackingMagazine)}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
+        private _action = [_x, _displayName, _picture, {call FUNC(startRepackingMagazine)}, {true}, {}, _x] call EFUNC(interact_menu,createAction);
         _actions pushBack [_action, [], _player];
     };
 } forEach _unitMagazines;
