@@ -190,7 +190,6 @@
 #define VAR_IN_PAIN           QEGVAR(medical,inPain)
 #define VAR_TOURNIQUET        QEGVAR(medical,tourniquets)
 #define VAR_FRACTURES         QEGVAR(medical,fractures)
-#define VAR_BODYPART_DAMAGE    QEGVAR(medical,bodyPartDamage)
 
 // - Unit Functions ---------------------------------------------------
 // Retrieval macros for common unit values
