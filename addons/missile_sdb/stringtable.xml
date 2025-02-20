@@ -3,12 +3,15 @@
     <Package name="MISSILE_SDB">
         <Key ID="STR_ACE_MISSILE_SDB_39">
             <English>GBU-39 [ACE]</English>
+            <French>GBU-39 [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_SDB_39_1x">
             <English>1x GBU-39 [ACE]</English>
+            <French>1x GBU-39 [ACE]</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_SDB_39_4x">
             <English>4x GBU-39 [ACE]</English>
+            <French>4x GBU-39 [ACE]</French>
         </Key>
     </Package>
 </Project>
