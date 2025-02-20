@@ -16,7 +16,7 @@
 
 #define INSTAKILL_ALLOWED(unit) (unit isNotEqualTo (unit getVariable [QGVAR(blockInstaKill), objNull]))
 
-params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator", "_hitpoint", "_directHit", "_context"];
+params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator", "_hitPoint", "_directHit", "_context"];
 
 // HD sometimes triggers for remote units - ignore.
 if !(local _unit) exitWith {nil};
@@ -62,14 +62,14 @@ if (_context != 2 && {_context == 4 || _newDamage == 0}) exitWith {
 // Get scaled armor value of hitpoint and calculate damage before armor
 // We scale using passThrough to handle explosive-resistant armor properly (#9063)
 // We need realDamage to determine which limb was hit correctly
-[_unit, _hitpoint] call FUNC(getHitpointArmor) params ["_armor", "_armorScaled"];
+[_unit, _hitPoint] call FUNC(getHitpointArmor) params ["_armor", "_armorScaled"];
 private _realDamage = _newDamage * _armor;
 if (!_structuralDamage) then {
     private _armorCoef = _armor/_armorScaled;
     private _damageCoef = linearConversion [0, 1, GVAR(damagePassThroughEffect), 1, _armorCoef];
     _newDamage = _newDamage * _damageCoef;
 };
-TRACE_6("Received hit",_hitpoint,_ammo,_newDamage,_realDamage,_directHit,_context);
+TRACE_6("Received hit",_hitPoint,_ammo,_newDamage,_realDamage,_directHit,_context);
 
 // Drowning doesn't fire the EH for each hitpoint and never triggers _context=2 (LastHitPoint)
 // Damage occurs in consistent increments
@@ -98,7 +98,7 @@ if (
     // todo: no way to detect if stationary and another vehicle hits you
 ) exitWith {
     TRACE_5("Crash",_unit,_shooter,_instigator,_damage,_newDamage);
-    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitpoint, _newDamage]], _unit, "vehiclecrash"]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPoint, _newDamage]], _unit, "vehiclecrash"]] call CBA_fnc_localEvent;
 
     0
 };
@@ -118,13 +118,13 @@ if (
     _unit setVariable [QEGVAR(medical,lastDamageSource), _shooter];
     _unit setVariable [QEGVAR(medical,lastInstigator), _instigator];
 
-    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitpoint, _newDamage]], _shooter, "vehiclehit"]] call CBA_fnc_localEvent;
+    [QEGVAR(medical,woundReceived), [_unit, [[_newDamage, _hitPoint, _newDamage]], _shooter, "vehiclehit"]] call CBA_fnc_localEvent;
 
     0
 };
 
 // Damages are stored for last iteration of the HandleDamage event (_context == 2)
-_unit setVariable [format [QGVAR($%1), _hitpoint], [_realDamage, _newDamage]];
+_unit setVariable [format [QGVAR($%1), _hitPoint], [_realDamage, _newDamage]];
 
 // Ref https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#HandleDamage
 // Context 2 means this is the last iteration of HandleDamage, so figure out which hitpoint took the most real damage and send wound event
