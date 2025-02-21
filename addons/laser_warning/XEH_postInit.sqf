@@ -8,7 +8,16 @@ if (hasInterface) then {
         // Attaching is mainly meant for vehicles in motion
         private _source = _object say3D _params;
         if (_attach) then {
-            _source attachTo [_object];
+            [{
+                params ["_args", "_pfhId"];
+                _args params ["_source", "_attach"];
+                if (isNull _source || isNull _attach) exitWith {
+                    // idk why, but attachTo makes the sound NOT play. So we have to do a PFH instead :/
+                    deleteVehicle _source;
+                    [_pfhId] call CBA_fnc_removePerFrameHandler;
+                };
+                _source setPosASL getPosASLVisual _attach;
+            }, 0, [_source, _object]] call CBA_fnc_addPerFrameHandler;
         };
     }] call CBA_fnc_addEventHandler;
 };
@@ -26,12 +35,14 @@ if (isServer) then {
         // immediately buzz if this laser is targeted at us
         params ["", "_args"];
         _args params ["_source", "", "_method"];
-        if (_method != QEFUNC(laser,findLaserSource)) exitWith {}; // Normal vanilla laserTarget fnc
+        TRACE_2("laser on",_source,_method);
+        if (_method isEqualType {} && { _method isNotEqualTo EFUNC(laser,findLaserSource) }) exitWith {};
+        if (_method isEqualType "" && { _method != QEFUNC(laser,findLaserSource) }) exitWith {};
         (_args call EFUNC(laser,findLaserSource)) params ["_source", "_direction"];
         [_source, _direction] call FUNC(newLaser);
         if (GVAR(module_laser_pfh) < 0) then {
             GVAR(module_laser_pfh) = [LINKFUNC(pfh_processLases), PROCESS_DELAY] call CBA_fnc_addPerFrameHandler;
-        }
+        };
     }] call CBA_fnc_addEventHandler;
     [QGVAR(ping), LINKFUNC(newLaser)] call CBA_fnc_addEventHandler;
 };

@@ -18,7 +18,8 @@
 
 {
     _y params ["", "", "_laserMethod"];
-    if (_laserMethod != QEFUNC(laser,findLaserSource)) then { continue }; // Normal vanilla laserTarget func
+    if (_method isEqualType {} && { _method isNotEqualTo EFUNC(laser,findLaserSource) }) exitWith {};
+    if (_method isEqualType "" && { _method != QEFUNC(laser,findLaserSource) }) exitWith {};
     (_y call EFUNC(laser,findLaserSource)) params ["_laserPosASL", "_laserDirection"];
     [_laserPosASL, _laserDirection] call FUNC(newLaser);
 } forEach EGVAR(laser,laserEmitters);

@@ -28,7 +28,7 @@ private _sourceObject = createVehicle ["#particlesource", [0, 0, 0], [], 0, "NON
         if (_targets isNotEqualTo []) then {
             [QGVAR(say3D), [_source, _params, true], _targets] call CBA_fnc_targetEvent;
         } else {
-            [QGVAR(say3D), [_source, _params, false]] call CBA_fnc_globalEvent;
+            [QGVAR(say3D), [_source, _params, true]] call CBA_fnc_globalEvent;
         };
     }, [_clip, _sourceObject, _targets], _accumulatedLength] call CBA_fnc_waitAndExecute;
     _accumulatedLength = _accumulatedLength + _length;

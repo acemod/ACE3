@@ -16,6 +16,7 @@
  * Public: No
  */
 params ["_sourcePosition", "_sourceDirection"];
+TRACE_2("new laser",_sourcePosition,_sourceDirection);
 
 GVAR(objects) = GVAR(objects) select {
     _x getVariable [QGVAR(enabled), true]

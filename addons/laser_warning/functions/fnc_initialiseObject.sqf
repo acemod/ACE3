@@ -49,6 +49,7 @@ private _config = configOf _object;
 (GVAR(initialisedObjects) getOrDefaultCall [
     _config,
     {
+        TRACE_1("Initialising",_config);
         private _config = _config >> QUOTE(ADDON);
         private _state = [
             [0, 0, 0],                                  // Detection position offset
@@ -74,6 +75,7 @@ private _config = configOf _object;
                     case "hunter_killer_slew": {
                         private _automatic = 1 == getNumber (_x >> "allowAutomatic");
                         private _hkState = false call FUNC(default_hunterKillerState);
+                        TRACE_1("has hk",_hkState);
                         _hkState set [1, _automatic];
                         _state set [2, _hkState];
                     };
@@ -81,6 +83,7 @@ private _config = configOf _object;
                         private _offset = (_x >> "speakerSelection") call _fnc_getConfigPosition;
                         private _onlyCrew = 1 == getNumber (_x >> "crewOnly");
                         private _soundState = false call FUNC(default_soundState);
+                        TRACE_1("has audio",_soundState);
                         _soundState set [1, _offset];
                         _soundState set [2, _onlyCrew];
                         _state set [3, _soundState];

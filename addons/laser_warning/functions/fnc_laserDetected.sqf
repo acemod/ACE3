@@ -17,6 +17,7 @@
  * Public: No
  */
 params ["_laserSource", "_laserDirection", "_object"];
+TRACE_3("laser intersect?",_laserSource,_laserDirection,_object);
 
 (_object getVariable [QGVAR(detectionParameters), [[0, 0, 0], 0]]) params ["_offset", "_radius"];
 private _position = (getPosASLVisual _object) vectorAdd _offset;
@@ -26,5 +27,6 @@ private _direction = _laserSource vectorDiff _position;
 private _b = _direction vectorDotProduct _laserDirection;
 private _c = (_direction vectorDotProduct _direction) - (_radius * _radius);
 private _h = (_b * _b) - _c;
+TRACE_1("laser intersect?",_h);
 _h >= 0.0
 
