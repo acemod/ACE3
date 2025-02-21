@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [getPosASL player, [0, 1, 0]] call ace_laser_warning_fnc_newLaser;
+ * [getPosASL player, [0.707, 0, 0.707]] call ace_laser_warning_fnc_newLaser;
  *
  * Public: No
  */

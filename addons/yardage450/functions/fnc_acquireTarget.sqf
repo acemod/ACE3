@@ -32,7 +32,10 @@ GVAR(distanceIndex) = -1;
         [_this select 1] call CBA_fnc_removePerFrameHandler;
     };
 
-    ([eyePos ACE_player, ACE_player weaponDirection (currentWeapon ACE_player), ACE_player] call EFUNC(laser,shootRay)) params ["", "_distance"];
+    private _eyePosition = eyePos ACE_player;
+    private _weaponDirection = ACE_player weaponDirection (currentWeapon ACE_player);
+    ([_eyePosition, _weaponDirection, ACE_player] call EFUNC(laser,shootRay)) params ["", "_distance"];
+    [QEGVAR(laser_warning,ping), [_eyePosition, _weaponDirection]] call CBA_fnc_globalEvent;
 
     GVAR(distanceIndex) = (GVAR(distanceIndex) + 1) % METERING_POINT_NUMBER;
     GVAR(distances) set [GVAR(distanceIndex), _distance - 1 + (random 2)];

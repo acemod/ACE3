@@ -1,6 +1,15 @@
 #include "script_component.hpp"
 
 if (hasInterface) then {
+    GVAR(sound_hash) = createHashMap;
+    GVAR(sound_setting) = AUDIO_SETTING_PURE;
+    GVAR(sound_pure) = QGVAR(pure);
+    GVAR(sound_laser) = QGVAR(laser);
+    GVAR(sound_oclock) = SOUND_OCLOCK_0;
+    GVAR(sound_numbers) = SOUND_BEARINGS_0; 
+    GVAR(sound_headings) = SOUND_HEADINGS_0; 
+    GVAR(sound_relative) = SOUND_RELATIVE_0; 
+
     GVAR(module_laser_pfh) = -1;
     ["ace_laserOn", {
         if !(["ace_laser"] call QEFUNC(common,isModLoaded)) exitWith {};
