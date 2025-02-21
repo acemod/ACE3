@@ -83,7 +83,7 @@ switch (_setting) do {
     case AUDIO_SETTING_CLOCK: {
         private _relativeHeading = 360 - ((((_facingHeading - _headingToThreat) % 360) + 360) % 360);
 
-        private _soundLaser = [GVAR(sound_laser)] call _fnc_getSoundFromHash;
+        private _soundLaser = [_laserAudio] call _fnc_getSoundFromHash;
         _clipsToPlay = [_soundLaser];
         if (_relativeHeading >= 345 || _relativeHeading < 15) then {
             _clipsToPlay pushBack ([_clockAudio select 12] call _fnc_getSoundFromHash);
@@ -131,7 +131,7 @@ switch (_setting) do {
         };
         _relativeHeading = abs _relativeHeading;
 
-        private _soundLaser = [GVAR(sound_laser)] call _fnc_getSoundFromHash;
+        private _soundLaser = [_laserAudio] call _fnc_getSoundFromHash;
         private _soundFront = [_relativeAudio select 0] call _fnc_getSoundFromHash;
         private _soundBack = [_relativeAudio select 2] call _fnc_getSoundFromHash;
         private _soundRight = [_relativeAudio select 1] call _fnc_getSoundFromHash;
@@ -149,14 +149,16 @@ switch (_setting) do {
         if (_relativeHeading > 112) then {
             _clipsToPlay pushBack _soundBack;
         };
-        if (_laserRight) then {
-            _clipsToPlay pushBack _soundRight;
-        } else {
-            _clipsToPlay pushBack _soundLeft;
+        if (_relativeHeading > 20 && _relativeHeading <= 160) then {
+            if (_laserRight) then {
+                _clipsToPlay pushBack _soundRight;
+            } else {
+                _clipsToPlay pushBack _soundLeft;
+            };
         };
     };
     case AUDIO_SETTING_HEADING: {
-        private _soundLaser = [GVAR(sound_laser)] call _fnc_getSoundFromHash;
+        private _soundLaser = [_laserAudio] call _fnc_getSoundFromHash;
         _clipsToPlay = [_soundLaser];
         if (_headingToThreat > 300 || _headingToThreat <= 60) then {
             _clipsToPlay pushBack ((_headingAudio select 0) call _fnc_getSoundFromHash);

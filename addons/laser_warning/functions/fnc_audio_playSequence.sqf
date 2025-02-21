@@ -24,11 +24,11 @@ private _sourceObject = createVehicle ["#particlesource", [0, 0, 0], [], 0, "NON
     _x params ["_clip", "_length"];
     [{
         params ["_clip", "_source", "_targets"];
-        private _params = [_clip, 0, 1];
+        private _params = [_clip, 100, 1];
         if (_targets isNotEqualTo []) then {
-            ["CBA_network_say3D", [_source, _params, true], _targets] call CBA_fnc_targetEvent;
+            [QGVAR(say3D), [_source, _params, true], _targets] call CBA_fnc_targetEvent;
         } else {
-            ["CBA_network_say3D", [_source, _params, true]] call CBA_fnc_globalEvent;
+            [QGVAR(say3D), [_source, _params, false]] call CBA_fnc_globalEvent;
         };
     }, [_clip, _sourceObject, _targets], _accumulatedLength] call CBA_fnc_waitAndExecute;
     _accumulatedLength = _accumulatedLength + _length;

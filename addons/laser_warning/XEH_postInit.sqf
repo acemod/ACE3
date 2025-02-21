@@ -1,11 +1,19 @@
 #include "script_component.hpp"
 
-if (isServer) then {
-    GVAR(sound_hash) = createHashMap;
-    GVAR(sound_pure) = QGVAR(pure);
+// Temporary event until CBA is updated
+if (hasInterface) then {
+    [QGVAR(say3D), {
+        params ["_object", "_params", "_attach"];
 
-    GVAR(objects) = [];
-    GVAR(initialisedObjects) = createHashMap;
+        // Attaching is mainly meant for vehicles in motion
+        private _source = _object say3D _params;
+        if (_attach) then {
+            _source attachTo [_object];
+        };
+    }] call CBA_fnc_addEventHandler;
+};
+
+if (isServer) then {
     ["Car", "init", LINKFUNC(initialiseObject), true, [], true] call CBA_fnc_addClassEventHandler;
     ["Tank", "init", LINKFUNC(initialiseObject), true, [], true] call CBA_fnc_addClassEventHandler;
     ["Helicopter", "init", LINKFUNC(initialiseObject), true, [], true] call CBA_fnc_addClassEventHandler;

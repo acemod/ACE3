@@ -17,17 +17,16 @@
  */
 params ["_object", "_laserSource"];
 
-systemChat "warn!";
-
 private _heading = (getPosASLVisual _object) getDirVisual (_laserSource);
 private _soundState = _object getVariable [QGVAR(state_audio), [false]];
 
 if (_soundState select 0) then {
     _soundState params ["", "_offset", "_onlyCrew", "_soundBank"];
-    private _audioSequence = [_heading, getDirVisual _object, AUDIO_SETTING_PURE, _soundBank] call FUNC(constructAudio);
+    private _audioSequence = [_heading, getDirVisual _object, AUDIO_SETTING_HEADING, _soundBank] call FUNC(constructAudio);
     private _targets = [];
     if (_onlyCrew) then {
         _targets = (crew _object) select { alive _x };
     };
-    [_audioSequence, _targets] call FUNC(audio_playSequence);
+    ([_audioSequence, _targets] call FUNC(audio_playSequence)) params ["_startTime", "_length", "_audioSource"];
+    _audioSource setPosASL getPosASL _object;
 };

@@ -25,6 +25,6 @@ private _position = (getPosASLVisual _object) vectorAdd _offset;
 private _direction = _laserSource vectorDiff _position;
 private _b = _direction vectorDotProduct _laserDirection;
 private _c = (_direction vectorDotProduct _direction) - (_radius * _radius);
-private _h = (_b * _b) - c;
+private _h = (_b * _b) - _c;
 _h >= 0.0
 
