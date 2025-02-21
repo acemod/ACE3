@@ -16,5 +16,6 @@
  */
 params [["_powered", false]];
 [
-    _powered   // Power
+    _powered,   // Power
+    []          // Laser log
 ]

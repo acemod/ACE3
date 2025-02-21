@@ -1,3 +1,4 @@
+PREP(audio_loop);
 PREP(default_boxState);
 PREP(default_soundState);
 PREP(default_hunterKillerState);

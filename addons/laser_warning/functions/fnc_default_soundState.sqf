@@ -26,5 +26,7 @@ params ["_defaultEnabled"];
         ["heading", SOUND_HEADINGS_0],
         ["relative", SOUND_RELATIVE_0]
     ],
-    [[], 0] // Circular Queue for to-play warnings
+    -1,     // audio loop PFH id
+    [0, 0], // Currently playing
+    [[], 0, 0] // Circular Queue for to-play warnings
 ]
