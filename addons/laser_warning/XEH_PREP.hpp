@@ -1,3 +1,11 @@
+PREP(default_boxState);
+PREP(default_soundState);
+PREP(default_hunterKillerState);
+PREP(addLaserWarningSystem);
 PREP(constructAudio);
 PREP(pfh_processLases);
 PREP(newLaser);
+PREP(initialiseObject);
+PREP(audio_playSequence);
+PREP(warn);
+PREP(laserDetected);

@@ -2,7 +2,7 @@
 #define COMPONENT_BEAUTIFIED Laser Warning System
 #include "\z\ace\addons\main\script_mod.hpp"
 
-// #define DEBUG_MODE_FULL
+#define DEBUG_MODE_FULL
 #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
 
@@ -18,12 +18,16 @@
 
 #define PROCESS_DELAY (1 / 10)
 
-#define SOUND_BEARINGS_0 [QGVAR(direction_num_0), QGVAR(direction_num_1), QGVAR(direction_num_2), QGVAR(direction_num_3), QGVAR(direction_num_4), QGVAR(direction_num_5), QGVAR(direction_num_6), QGVAR(direction_num_7), QGVAR(direction_num_8), QGVAR(direction_num_9)]
+#define SOUND_BEARINGS_0 [QGVAR(direction_num_0), QGVAR(direction_num_1), QGVAR(direction_num_2), QGVAR(direction_num_3), QGVAR(direction_num_4), QGVAR(direction_num_5), QGVAR(direction_num_6), QGVAR(direction_num_7), QGVAR(direction_num_8), QGVAR(direction_num_9), QGVAR(direction_num_10), QGVAR(direction_num_11), QGVAR(direction_num_12)]
 #define SOUND_HEADINGS_0 [QGVAR(direction_north), QGVAR(direction_east), QGVAR(direction_south), QGVAR(direction_west)]
 #define SOUND_OCLOCK_0   [QGVAR(direction_oclock), QGVAR(direction_num_1), QGVAR(direction_num_2), QGVAR(direction_num_3), QGVAR(direction_num_4), QGVAR(direction_num_5), QGVAR(direction_num_6), QGVAR(direction_num_7), QGVAR(direction_num_8), QGVAR(direction_num_9), QGVAR(direction_num_10), QGVAR(direction_num_11), QGVAR(direction_num_12)]
 #define SOUND_RELATIVE_0 [QGVAR(direction_front), QGVAR(direction_right), QGVAR(direction_back), QGVAR(direction_left)]
 
+#define AUDIO_SETTING_TEST -1
 #define AUDIO_SETTING_PURE 0
 #define AUDIO_SETTING_ABSOLUTE 1
 #define AUDIO_SETTING_CLOCK 2
 #define AUDIO_SETTING_RELATIVE 3
+#define AUDIO_SETTING_HEADING 4
+
+#define AUDIO_MAX_QUEUE_TIME 5

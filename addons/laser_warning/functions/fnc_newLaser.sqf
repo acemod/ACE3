@@ -16,3 +16,22 @@
  * Public: No
  */
 params ["_sourcePosition", "_sourceDirection"];
+
+GVAR(objects) = GVAR(objects) select {
+    _x getVariable [QGVAR(enabled), true]
+};
+
+private _activeObjects = GVAR(objects) select {
+    (_x getVariable [QGVAR(state_box), [false]]) select 0
+};
+
+private _relevantObjects = [];
+{
+    if ([_sourcePosition, _sourceDirection, _x] call FUNC(laserDetected)) then {
+        _relevantObjects pushBack _x;
+    };
+} forEach _activeObjects;
+
+{
+    [_x, _sourcePosition] call FUNC(warn);
+} forEach _relevantObjects;
