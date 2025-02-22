@@ -396,7 +396,7 @@
             <Russian>Изменяет дальность видимости в игре, когда игрок перемещается пешком.</Russian>
             <German>Verändert die Sichtweite, wenn ein Spieler zu Fuß unterwegs ist.</German>
             <Korean>플레이어가 보병일 경우의 시야를 바꿀 수 있습니다.</Korean>
-            <Japanese>プレイヤーが地上にいる時の視程を変更します。</Japanese>
+            <Japanese>プレイヤーが歩兵でいる時の視程を変更します。</Japanese>
             <Chinese>改變玩家步行時的視野距離.</Chinese>
             <Chinesesimp>改变玩家步行时的视距。</Chinesesimp>
             <Turkish>Oyuncular ayakta iken görebileceği uzaklığı değiştir.</Turkish>
@@ -413,7 +413,7 @@
             <Russian>Дальность видимости (Пешком)</Russian>
             <German>Spielersichtweite (zu Fuß)</German>
             <Korean>클라이언트 시야 (보병)</Korean>
-            <Japanese>クライアント側視程 (地上)</Japanese>
+            <Japanese>クライアント側視程 (歩兵)</Japanese>
             <Chinese>客戶端視野距離 (步行)</Chinese>
             <Chinesesimp>客户端视距（步行）</Chinesesimp>
             <Turkish>Kişilerin Görüş Uzaklığı Mesafesi (Yerde)</Turkish>
