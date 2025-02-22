@@ -16,28 +16,11 @@
  */
 params ["_object"];
 
-/*
-class ace_laser_warning {
-    enabled = 1;
-    position = "";
-    detectionRadius = 5;
-    class components {
-        class hunter_killer_slew {
-            allowAutomatic = 0;
-        };
-        class audio {
-            speakerSelection = "";
-            crewOnly = 0;
-        };
-    };
-};
-*/
-
 private _fnc_getConfigPosition = {
-    params ["_config"];
+    params ["_object", "_config"];
     private _offset = [0, 0, 0];
     if (isText _config) then {
-        _offset = selectionPosition getText _config
+        _offset = _object selectionPosition getText _config
     };
     if (isArray _config) then {
         _offset = getArray _config;
@@ -63,36 +46,39 @@ private _config = configOf _object;
             [false, _state]
         };
         private _enabled = 1 == getNumber (_config >> "enabled");
-        private _detectorPosition = (_config >> "position") call _fnc_getConfigPosition;
+        private _detectorPosition = [_object, _config >> "position"] call _fnc_getConfigPosition;
         private _detectorRadius = getNumber (_config >> "detectionRadius");
 
         _state set [0, _detectorPosition];
         _state set [1, _detectorRadius];
 
         if (_enabled) then {
-            {
-                switch (toString _x) do {
-                    case "hunter_killer_slew": {
-                        private _automatic = 1 == getNumber (_x >> "allowAutomatic");
-                        private _hkState = false call FUNC(default_hunterKillerState);
-                        TRACE_1("has hk",_hkState);
-                        _hkState set [1, _automatic];
-                        _state set [2, _hkState];
-                    };
+            for "_i" from 0 to count (_config >> "components") do {
+                private _component = (_config >> "components") select _i;
+                switch (configName _component) do {
                     case "audio": {
-                        private _offset = (_x >> "speakerSelection") call _fnc_getConfigPosition;
-                        private _onlyCrew = 1 == getNumber (_x >> "crewOnly");
+                        private _offset = [_object, _component >> "speakerSelection"] call _fnc_getConfigPosition;
+                        private _onlyCrew = 1 == getNumber (_component >> "crewOnly");
                         private _soundState = false call FUNC(default_soundState);
-                        TRACE_1("has audio",_soundState);
+                        _soundState set [0, true];
                         _soundState set [1, _offset];
                         _soundState set [2, _onlyCrew];
+                        TRACE_1("has audio",_soundState);
                         _state set [3, _soundState];
                     };
+                    case "hunter_killer_slew": {
+                        private _automatic = 1 == getNumber (_component >> "allowAutomatic");
+                        private _hkState = false call FUNC(default_hunterKillerState);
+                        _hkState set [0, ["ace_hunterkiller"] call EFUNC(common,isModLoaded)];
+                        _hkState set [1, _automatic];
+                        TRACE_1("has hk",_hkState);
+                        _state set [4, _hkState];
+                    };
                     default {
-                        TRACE_2("Unknown Component",_config,_x);
+                        TRACE_2("Unknown Component",_config,_component);
                     };
                 }
-            } forEach (_config >> "components");
+            };
         };
         TRACE_3("",_config,_enabled,_state);
         [_enabled, _state]

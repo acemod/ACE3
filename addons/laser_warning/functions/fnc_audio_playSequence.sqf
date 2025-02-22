@@ -24,7 +24,7 @@ private _sourceObject = createVehicle ["#particlesource", [0, 0, 0], [], 0, "NON
     _x params ["_clip", "_length"];
     [{
         params ["_clip", "_source", "_targets"];
-        private _params = [_clip, 100, 1];
+        private _params = [_clip, 100, 1, 2];
         if (_targets isNotEqualTo []) then {
             [QGVAR(say3D), [_source, _params, true], _targets] call CBA_fnc_targetEvent;
         } else {
