@@ -4,18 +4,22 @@
         <Key ID="STR_ACE_MISSILE_SDB_39">
             <English>GBU-39 [ACE]</English>
             <French>GBU-39 [ACE]</French>
+            <Japanese>GBU-39 [ACE]</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_SDB_pylonDescription">
             <English>250 pound GPS guided glide bomb</English>
             <French>Bombe planante de 250 livres à guidage GPS</French>
+            <Japanese>250ポンド GPS誘導滑空爆弾</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_SDB_39_1x">
             <English>1x GBU-39 SDB [ACE]</English>
             <French>1x GBU-39 SDB [ACE]</French>
+            <Japanese>1x GBU-39 SDB [ACE]</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_SDB_39_4x">
             <English>4x GBU-39 SDB [ACE]</English>
             <French>4x GBU-39 SDB [ACE]</French>
+            <Japanese>4x GBU-39 SDB [ACE]</Japanese>
         </Key>
     </Package>
 </Project>
