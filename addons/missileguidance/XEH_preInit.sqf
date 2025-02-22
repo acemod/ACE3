@@ -26,6 +26,8 @@ for "_i" from 0 to MAX_PB_MODES do {
 GVAR(gps_mode) = "pb";
 GVAR(gps_weapons) = createHashMap;
 
+GVAR(mclos_weapons) = createHashMap;
+
 GVAR(debug_enableMissileCamera) = false;
 GVAR(debug_drawGuidanceInfo) = false;
 
