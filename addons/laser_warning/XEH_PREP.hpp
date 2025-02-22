@@ -1,3 +1,5 @@
+PREP(ai_simulateLase);
+PREP(initialiseVehicle);
 PREP(audio_loop);
 PREP(default_boxState);
 PREP(default_soundState);

@@ -28,5 +28,17 @@ private _b = _direction vectorDotProduct _laserDirection;
 private _c = (_direction vectorDotProduct _direction) - (_radius * _radius);
 private _h = (_b * _b) - _c;
 TRACE_1("laser intersect?",_h);
-_h >= 0.0
+if (_h >= 0.0) then {
+    _h = sqrt _h;
+    private _intersectDist0 = -_b - _h;
+    private _intersectDist1 = -_b + _h;
+    private _intersectPos = if (_intersectDist0 < 0) then {
+        _laserSource vectorAdd (_laserDirection vectorMultiply _intersectDist1)
+    } else {
+        _laserSource vectorAdd (_laserDirection vectorMultiply _intersectDist0)
+    };
+    !terrainIntersectASL [_laserSource, _intersectPos]
+} else {
+    false
+}
 

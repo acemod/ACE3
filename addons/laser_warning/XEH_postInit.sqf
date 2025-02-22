@@ -1,5 +1,15 @@
 #include "script_component.hpp"
 
+GVAR(fcs_vehicleCache) = createHashMap;
+["Tank", "init", LINKFUNC(ai_simulateLase), true, [], true] call CBA_fnc_addClassEventHandler;
+["Wheeled_APC_F", "init", LINKFUNC(ai_simulateLase), true, [], true] call CBA_fnc_addClassEventHandler;
+
+["Car", "init", LINKFUNC(initialiseVehicle), true, [], true] call CBA_fnc_addClassEventHandler;
+["Tank", "init", LINKFUNC(initialiseVehicle), true, [], true] call CBA_fnc_addClassEventHandler;
+["Helicopter", "init", LINKFUNC(initialiseVehicle), true, [], true] call CBA_fnc_addClassEventHandler;
+["Plane", "init", LINKFUNC(initialiseVehicle), true, [], true] call CBA_fnc_addClassEventHandler;
+["Ship_F", "init", LINKFUNC(initialiseVehicle), true, [], true] call CBA_fnc_addClassEventHandler;
+
 // Temporary event until CBA is updated
 if (hasInterface) then {
     [QGVAR(say3D), {
