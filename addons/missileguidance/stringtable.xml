@@ -38,38 +38,47 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_altitude">
             <English>Altitude</English>
             <French>Altitude</French>
+            <Korean>고도</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_attack_heading">
             <English>Attack Heading</English>
             <French>Vecteur d'attaque</French>
+            <Korean>공격 방향</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_easting">
             <English>Easting</English>
             <French>Horizontales</French>
+            <Korean>동향</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_header">
             <English>GPS Weapon Setup</English>
             <French>Configuration de l'armement GPS</French>
+            <Korean>GPS 병기 설정</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_impact_angle">
             <English>Impact Angle</English>
             <French>Angle d'impact</French>
+            <Korean>충돌 각도</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_northing">
             <English>Northing</English>
             <French>Verticales</French>
+            <Korean>북향</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp">
             <English>PRE-PLANNED</English>
             <French>PRE-PLANIFICATION</French>
+            <Korean>사전 설정됨</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_short">
             <English>PP</English>
             <French>PP</French>
+            <Korean>PP</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_too">
             <English>TARGET OF OPPORTUNITY</English>
             <French>CIBLE D'OPPORTUNITÉ</French>
+            <Korean>기회 표적</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
@@ -274,18 +283,22 @@
         <Key ID="STR_ACE_MissileGuidance_mclosDown">
             <English>MCLOS Down</English>
             <French>MCLOS Bas</French>
+            <Korean>수동 시선 유도 하강</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_mclosLeft">
             <English>MCLOS Left</English>
             <French>MCLOS Gauche</French>
+            <Korean>수동 시선 유도 좌향</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_mclosRight">
             <English>MCLOS Right</English>
             <French>MCLOS Droit</French>
+            <Korean>수동 시선 유도 우향</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_mclosUp">
             <English>MCLOS Up</English>
             <French>MCLOS Haut</French>
+            <Korean>수동 시선 유도 상승</Korean>
         </Key>
     </Package>
 </Project>
