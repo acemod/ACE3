@@ -52,13 +52,13 @@ if (_unit == ace_player) then {
     if ((count _explosive) > 0) then {
         private _waitTime = 0.25 * _ringtoneDuration;
         [{
-            params ["_unit", "_item", "_ringtonePath"];
+            params ["_unit", "_item", "_ringtonePath", "_volume", "_soundPitch", "_distance"];
             if ([_unit, -1, (_item # 0), (_item # 2), "ACE_Cellphone"] call FUNC(checkDetonateHandlers)) then {
                 playSound3D [_ringtonePath, objNull, false, (getPosASL (_item # 0)), _volume, _soundPitch, _distance];
             };
 
             _unit setVariable [QGVAR(Dialing), false, true];
-        }, [_unit, _explosive, _ringtonePath], _waitTime] call CBA_fnc_waitAndExecute;
+        }, [_unit, _explosive, _ringtonePath, _volume, _soundPitch, _distance], _waitTime] call CBA_fnc_waitAndExecute;
 
         [_explosive select 0,(_waitTime + 2) + (_explosive select 2), "ACE_Cellphone", _unit] call FUNC(startTimer);
     };
