@@ -10,4 +10,13 @@ class CfgVehicles {
             };
         };
     };
+    class ACE_Module;
+    class GVAR(testLaser): ACE_Module {
+        author = ECSTRING(common,ACETeam);
+        category = "ACE";
+        displayName = "[DEV] Laser Source (DOWN)";
+        function = QFUNC(laserModule);
+        scope = 2;
+        isGlobal = 1;
+    };
 };

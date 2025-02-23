@@ -19,7 +19,7 @@
 [QGVAR(place), {
     params ["_explosive", "", "", "_unit"];
 
-    _this call FUNC(setPosition);
+    call FUNC(setPosition);
 
     if (isServer) then {
         private _owner = [objNull, _unit] select (missionNamespace getVariable [QGVAR(setShotParents), false]);
@@ -77,7 +77,7 @@ GVAR(CurrentSpeedDial) = 0;
     };
 
     //Show defuse actions on CfgAmmos (allMines):
-    _this call FUNC(interactEH);
+    call FUNC(interactEH);
 
 }] call CBA_fnc_addEventHandler;
 

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="MISSILE_AIM120">
+        <Key ID="STR_ACE_MISSILE_AIM120_a">
+            <English>AIM-120A [ACE]</English>
+            <French>AIM-120A [ACE]</French>
+            <Italian>AIM-120A [ACE]</Italian>
+            <Russian>AIM-120A [ACE]</Russian>
+            <German>AIM-120A [ACE]</German>
+            <Korean>AIM-120A 암람 [ACE]</Korean>
+            <Japanese>AIM-120A [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_a_1x">
+            <English>1x AIM-120A [ACE]</English>
+            <French>1x AIM-120A [ACE]</French>
+            <Italian>1x AIM-120A [ACE]</Italian>
+            <Russian>1x AIM-120A [ACE]</Russian>
+            <German>1x AIM-120A [ACE]</German>
+            <Korean>1x AIM-120A 암람 [ACE]</Korean>
+            <Japanese>1x AIM-120A [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_aim120">
+            <English>AIM-120 [ACE]</English>
+            <French>AIM-120 [ACE]</French>
+            <Italian>AIM-120 [ACE]</Italian>
+            <Russian>AIM-120 [ACE]</Russian>
+            <German>AIM-120 [ACE]</German>
+            <Korean>AIM-120 암람 [ACE]</Korean>
+            <Japanese>AIM-120 [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_c">
+            <English>AIM-120C [ACE]</English>
+            <French>AIM-120C [ACE]</French>
+            <Italian>AIM-120C [ACE]</Italian>
+            <Russian>AIM-120C [ACE]</Russian>
+            <German>AIM-120C [ACE]</German>
+            <Korean>AIM-120C 암람 [ACE]</Korean>
+            <Japanese>AIM-120C [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_c_1x">
+            <English>1x AIM-120C [ACE]</English>
+            <French>1x AIM-120C [ACE]</French>
+            <Italian>1x AIM-120C [ACE]</Italian>
+            <Russian>1x AIM-120C [ACE]</Russian>
+            <German>1x AIM-120C [ACE]</German>
+            <Korean>1x AIM-120C 암람 [ACE]</Korean>
+            <Japanese>1x AIM-120C [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_c_2x">
+            <English>2x AIM-120C [ACE]</English>
+            <French>2x AIM-120C [ACE]</French>
+            <Italian>2x AIM-120C [ACE]</Italian>
+            <Russian>2x AIM-120C [ACE]</Russian>
+            <German>2x AIM-120C [ACE]</German>
+            <Korean>2x AIM-120C 암람 [ACE]</Korean>
+            <Japanese>2x AIM-120C [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_d">
+            <English>AIM-120D [ACE]</English>
+            <French>AIM-120D [ACE]</French>
+            <Italian>AIM-120D [ACE]</Italian>
+            <Russian>AIM-120D [ACE]</Russian>
+            <German>AIM-120D [ACE]</German>
+            <Korean>AIM-120D 암람 [ACE]</Korean>
+            <Japanese>AIM-120D [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_d_1x">
+            <English>1x AIM-120D [ACE]</English>
+            <French>1x AIM-120D [ACE]</French>
+            <Italian>1x AIM-120D [ACE]</Italian>
+            <Russian>1x AIM-120D [ACE]</Russian>
+            <German>1x AIM-120D [ACE]</German>
+            <Korean>1x AIM-120D 암람 [ACE]</Korean>
+            <Japanese>1x AIM-120D [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_d_2x">
+            <English>2x AIM-120D [ACE]</English>
+            <French>2x AIM-120D [ACE]</French>
+            <Italian>2x AIM-120D [ACE]</Italian>
+            <Russian>2x AIM-120D [ACE]</Russian>
+            <German>2x AIM-120D [ACE]</German>
+            <Korean>2x AIM-120D 암람 [ACE]</Korean>
+            <Japanese>2x AIM-120D [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_direct">
+            <English>Direct</English>
+            <French>Direct</French>
+            <Italian>Diretto</Italian>
+            <Russian>Прямой</Russian>
+            <German>Direct</German>
+            <Korean>다이렉트</Korean>
+            <Japanese>ダイレクト</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_loft">
+            <English>Loft</English>
+            <French>Loft</French>
+            <Italian>Loft</Italian>
+            <Russian>Сверху</Russian>
+            <German>Loft</German>
+            <Korean>로프트</Korean>
+            <Japanese>ロフト</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_r77">
+            <English>R-77 [ACE]</English>
+            <French>R-77 [ACE]</French>
+            <Italian>R-77 [ACE]</Italian>
+            <Russian>R-77 [ACE]</Russian>
+            <German>R-77 [ACE]</German>
+            <Korean>R-77 빔펠 [ACE]</Korean>
+            <Japanese>R-77 [ACE]</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MISSILE_AIM120_r77_1x">
+            <English>1x R-77 [ACE]</English>
+            <French>1x R-77 [ACE]</French>
+            <Italian>1x R-77 [ACE]</Italian>
+            <Russian>1x R-77 [ACE]</Russian>
+            <German>1x R-77 [ACE]</German>
+            <Korean>1x R-77 빔펠 [ACE]</Korean>
+            <Japanese>1x R-77 [ACE]</Japanese>
+        </Key>
+    </Package>
+</Project>

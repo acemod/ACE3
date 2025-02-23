@@ -163,7 +163,7 @@ if (_currentWeapon == secondaryWeapon _caller) then {
 
 private _wpn = ["non", "rfl", "pst"] select (1 + ([primaryWeapon _caller, handgunWeapon _caller] find (currentWeapon _caller)));
 _callerAnim = [_callerAnim, "[wpn]", _wpn] call CBA_fnc_replace;
-if (vehicle _caller == _caller && {_callerAnim != ""}) then {
+if (isNull objectParent _caller && {_callerAnim != ""}) then {
     if (primaryWeapon _caller == "") then {
         _caller addWeapon "ACE_FakePrimaryWeapon";
     };
@@ -190,7 +190,7 @@ if (_loopAnim) then {
                 params ["_caller", "_anim"];
                 if !(isNil {_caller getVariable QGVAR(repairCurrentAnimCaller)}) then {
                     TRACE_2("loop",_caller,_anim);
-                    _this call EFUNC(common,doAnimation)
+                    call EFUNC(common,doAnimation)
                 };
             }, [_caller, _anim], 2.5] call CBA_fnc_waitAndExecute;
         };

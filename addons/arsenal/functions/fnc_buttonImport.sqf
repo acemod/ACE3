@@ -54,6 +54,11 @@ if (GVAR(shiftState) && {is3DEN}) then {
 
     // Check if CBA extended loadout array
     if ((count _extendedLoadout) == 2) then {
+        // Verify the loadout and attempt to recover any invalid containers
+        _extendedLoadout = [_extendedLoadout, true] call FUNC(verifyLoadout);
+        // Since verification nests the extended loadout array, undo that after container recovery
+        _extendedLoadout = ([GVAR(center), _extendedLoadout] call FUNC(recoverInvalidContainers)) select 0;
+
         [GVAR(center), _extendedLoadout] call CBA_fnc_setLoadout;
 
         // Update current item list and unique items

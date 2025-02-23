@@ -38,7 +38,7 @@ _vehicle allowCrewInImmobile true;
     TRACE_1("added eh",_vehicle);
 
     _vehicle setVariable [QGVAR(hitHash), createHashMap];
-    _vehicle setVariable [QGVAR(handleDamage), _vehicle addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]];
+    _vehicle setVariable [QGVAR(handleDamage), _vehicle addEventHandler ["HandleDamage", {call FUNC(handleDamage)}]];
 }, _vehicle] call CBA_fnc_execNextFrame;
 
 private _typeOf = typeOf _vehicle;
@@ -102,7 +102,7 @@ private _fnc_iterateThroughConfig = {
             _hitPointHash set [_configName, ["slat", abs getNumber (_config >> "minimalHit")]];
         };
 
-        TRACE_6("found gun/turret/era/slat/misc",_isGun,_isTurret,_isEra,_isSlat,_isMisc,_hash);
+        TRACE_6("found gun/turret/era/slat/misc",_isGun,_isTurret,_isEra,_isSlat,_isMisc,_hitPointHash);
     } else {
         {
             _x call _fnc_iterateThroughConfig;

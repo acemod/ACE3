@@ -13,7 +13,7 @@
  */
 params ["_projectile"];
 
-private _camera = "camera" camCreate getPosATL _projectile;
+private _camera = "camera" camCreate ASLToAGL getPosASL _projectile;
 _camera camPrepareFov 0.7;
 _camera cameraEffect ["internal", "back"];
 
@@ -50,8 +50,6 @@ private _displayEH = (findDisplay 46) displayAddEventHandler ["KeyDown", {
 
         [_pfh] call CBA_fnc_removePerFrameHandler;
     };
-
-    private _currentProjectilePos = getPosATLVisual _projectile;
 
     _camera camPrepareTarget _projectile;
     _camera camPrepareRelPos [0, -5, 1];

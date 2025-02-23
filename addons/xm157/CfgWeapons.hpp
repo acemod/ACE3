@@ -11,7 +11,7 @@ class CfgWeapons {
         model = "\A3\weapons_f\acc\acco_tws_F";
         inertia = 0.3;
         ACE_ScopeHeightAboveRail = 5.52874;
-        
+
         class CBA_ScriptedOptic {
             bodyTexture = QPATHTOF(data\ace_vector_body_co.paa);
             // bodyTextureNight = ".paa"; // optional
