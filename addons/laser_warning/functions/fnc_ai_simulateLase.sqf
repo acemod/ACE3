@@ -38,7 +38,7 @@ if !(_hasFcs) exitWith {};
         if (_aimed > 0.5 && { CBA_missionTime - _lastPing >= AI_PING_INTERVAL }) then {
             _args set [1, CBA_missionTime];
             private _vPos = eyePos _vehicle;
-            private _tPos = AGLtoASL unitAimPositionVisual _target;
+            private _tPos = AGLToASL unitAimPositionVisual _target;
             [QGVAR(ping), [_vPos, _vPos vectorFromTo _tPos]] call CBA_fnc_globalEvent;
         };
     };

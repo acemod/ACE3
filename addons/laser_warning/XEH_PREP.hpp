@@ -12,3 +12,4 @@ PREP(initialiseObject);
 PREP(audio_playSequence);
 PREP(warn);
 PREP(laserDetected);
+PREP(ui_create);
