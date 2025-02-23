@@ -88,25 +88,10 @@ TRACE_1("Found default wound handlers",count _defaultWoundHandlers);
         TRACE_1("Damage type has no wound handlers, using default",_className);
     };
 
-    /*
-    // extension loading
-    private _minDamageThresholds = (_thresholds apply {str (_x select 0)}) joinString ":";
-    private _amountThresholds = (_thresholds apply {str (_x select 1)}) joinString ":";
-
-    // load in the damage types into the medical extension
-    private _extensionArgs = format [
-        "addDamageType,%1,%2,%3,%4,%5",
-        _className,
-        1, //@todo remove 'minLethalDamage' from extension
-        _minDamageThresholds,
-        _amountThresholds,
-        _selectionSpecific
-    ];
-    TRACE_1("",_extensionArgs);
-
-    // private _extensionRes = "ace_medical" callExtension _extensionArgs;
-    // TRACE_1("",_extensionRes);
-    */
+    if (_woundHandlers isEqualTo []) then {
+        if (_className == "drowning") exitWith {};
+        INFO_1("damage type [%1] has no wound handlers",_className);
+    };
 
     // parse config for each wound this damage type can cause
     private _damageWoundDetails = [];
@@ -128,39 +113,3 @@ TRACE_1("Found default wound handlers",count _defaultWoundHandlers);
 
     GVAR(damageTypeDetails) set [_className, [_thresholds, _selectionSpecific, _woundHandlers, _damageWoundDetails]];
 } forEach configProperties [_damageTypesConfig, "isClass _x"];
-
-/*
-// extension loading
-{
-    _x params ["_classID", "_selections", "_bleedingRate", "_pain", "_damageExtrema", "_causes", "_displayName"];
-    _damageExtrema params ["_minDamage", "_maxDamage"];
-
-    private _className = GVAR(woundClassNames) select _forEachIndex;
-
-    if (_displayName isEqualTo "") then {
-        _displayName = _className;
-    };
-
-    private _selections = _selections joinString ":";
-    private _causes = _causes joinString ":";
-
-    private _extensionArgs = format [
-        "addInjuryType,%1,%2,%3,%4,%5,%6,%7,%8,%9",
-        _classID,
-        _className,
-        _selections,
-        _bleedingRate,
-        _pain,
-        _minDamage,
-        _maxDamage,
-        _causes,
-        _displayName
-    ];
-    TRACE_1("",_extensionArgs);
-
-    // private _extensionRes = "ace_medical" callExtension _extensionArgs;
-    // TRACE_1("",_extensionRes);
-} forEach GVAR(woundsData);
-
-// "ace_medical" callExtension "ConfigComplete";
-*/
