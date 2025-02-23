@@ -1,3 +1,7 @@
+PREP(ui_pfh);
+PREP(ui_togglePower);
+PREP(ui_pushButton);
+PREP(isLwsPowered);
 PREP(ai_simulateLase);
 PREP(initialiseVehicle);
 PREP(audio_loop);

@@ -23,7 +23,7 @@ GVAR(objects) = GVAR(objects) select {
 };
 
 private _activeObjects = GVAR(objects) select {
-    (_x getVariable [QGVAR(state_box), [false]]) select 0
+    [_x] call FUNC(isLwsPowered)
 };
 
 private _relevantObjects = [];

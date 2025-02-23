@@ -20,16 +20,20 @@ params ["_object", "_laserSource"];
 private _heading = (getPosASLVisual _object) getDirVisual (_laserSource);
 TRACE_3("laser hit; warn",_object,_laserSource,_heading);
 
-private _boxState = _object getVariable [QGVAR(state_box), [false]];
-if !(_boxState select 0) exitWith { /* not powered */ };
+if !([_object] call FUNC(isLwsPowered)) exitWith { /* not powered */ };
+private _boxState = _object getVariable [QGVAR(state_box), [POWER_STATE_OFF]];
 _boxState params ["", "_log"];
 if (0 < count _log) then {
     private _lastLog = _log select -1;
     if (CBA_missionTime - (_lastLog select 0) >= LOG_MINIMUM_TIME_DELTA) then {
         _log pushBack [CBA_missionTime, date, _heading];
+        _boxState set [1, _log];
+        _object setVariable [QGVAR(state_box), _boxState, true];
     };
 } else {
     _log pushBack [CBA_missionTime, date, _heading];
+    _boxState set [1, _log];
+    _object setVariable [QGVAR(state_box), _boxState, true];
 };
 
 private _soundState = _object getVariable [QGVAR(state_audio), [false]];
