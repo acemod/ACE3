@@ -53,13 +53,3 @@ private _categoryStr = format ["ACE %1", LLSTRING(Menu)];
     [_categoryStr, LLSTRING(ExplosiveTimer)],
     [0, 5999, TIMER_VALUE_DEFAULT]
 ] call CBA_fnc_addSetting;
-
-// Tripflares
-[
-    QGVAR(tripflareColour),
-    "LIST",
-    [LLSTRING(TripflareColour_DisplayName), LLSTRING(TripflareColour_Description)],
-    [_categoryStr, LLSTRING(Tripflares)],
-    [[0, 1, 2], ["$str_cfg_markercol_white", "$str_cfg_markercol_red", "$str_cfg_markercol_green"], 1],
-    1
-] call CBA_fnc_addSetting;

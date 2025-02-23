@@ -372,9 +372,13 @@ class CfgVehicles {
         ammo = "ACE_FlareTripMine_Wire_Ammo";
         displayName = CSTRING(TripFlare_Name);
     };
-    class ACE_FlareTripMineAir: ACE_FlareTripMine {
-        ammo = "ACE_FlareTripMineAir_Wire_Ammo";
-        displayName = CSTRING(TripFlareAir_Name);
+    class ACE_FlareTripMineRed: ACE_FlareTripMine {
+        ammo = "ACE_FlareTripMine_Wire_Ammo_Red";
+        displayName = CSTRING(TripFlare_Name_Red);
+    };
+    class ACE_FlareTripMineGreen: ACE_FlareTripMine {
+        ammo = "ACE_FlareTripMine_Wire_Ammo_Green";
+        displayName = CSTRING(TripFlare_Name_Green);
     };
 
     class Claymore_F: MineBase {
