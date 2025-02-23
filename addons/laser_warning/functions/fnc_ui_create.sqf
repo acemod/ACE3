@@ -31,6 +31,8 @@
     (_display displayCtrl 100) ctrlSetPosition _base;
     (_display displayCtrl 100) ctrlSetModelScale _scale;
 
+    [_display] call FUNC(ui_initDisplay);
+
     _display displayAddEventHandler ["Unload", {
         params ["_display", "_exitCode"];
         private _pfh = _display getVariable [QGVAR(pfh), -1];
@@ -47,6 +49,36 @@
         [] call FUNC(ui_togglePower);
     };
 
+    private _fnc_pushButton = {
+        params ["_control"];
+        private _display = ctrlParent _control;
+        private _object = _display getVariable [QGVAR(object), objNull];
+        if (isNull _object) exitWith {};
+        private _idc = ctrlIDC _control;
+        private _pbSource = format ["pb%1", _idc % 10];
+        private _box = _display displayCtrl 100;
+        _box ctrlAnimateModel [_pbSource, 1.0];
+
+        if ([] call FUNC(isLwsPowered)) then {
+            [] call FUNC(ui_pushButton);
+        };
+    };
+
+    private _fnc_unpushButton = {
+        params ["_control"];
+        private _display = ctrlParent _control;
+        private _object = _display getVariable [QGVAR(object), objNull];
+        if (isNull _object) exitWith {};
+        private _idc = ctrlIDC _control;
+        private _pbSource = format ["pb%1", _idc % 10];
+        private _box = _display displayCtrl 100;
+        _box ctrlAnimateModel [_pbSource, 0.0];
+    };
+
     (_display displayCtrl 212) ctrlAddEventHandler ["ButtonDown", _fnc_powerToggle];
+    {
+        (_display displayCtrl _x) ctrlAddEventHandler ["ButtonDown", _fnc_pushButton ];
+        (_display displayCtrl _x) ctrlAddEventHandler ["ButtonUp", _fnc_unpushButton];
+    } forEach [111, 112, 113, 114, 115, 116, 117, 118];
 
 }, _this] call CBA_fnc_execNextFrame;

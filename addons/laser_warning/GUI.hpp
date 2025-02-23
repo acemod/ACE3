@@ -1,5 +1,6 @@
 class RscObject;
 class RscButton;
+class RscText;
 class RscControlsGroup;
 
 class GVAR(pushButton): RscButton {
@@ -18,6 +19,19 @@ class GVAR(pushButton): RscButton {
     colorBackgroundActive[] = {0,0,0,0};
     colorFocused[] = {0,0,0,0};
     text = "";
+};
+
+class GVAR(osb): RscText {
+    style = 2;
+    x = 0;
+    y = 0;
+    w = 0.1;
+    h = 0.08;
+    colorBackground[] = {0,0.1,0,1};
+    colorBackgroundDisabled[] = {0,0,0,0};
+    colorBackgroundActive[] = {0,0,0,0};
+    colorFocused[] = {0,0,0,0};
+    text = "foobar";
 };
 
 class GVAR(box_dialog) {
@@ -45,6 +59,7 @@ class GVAR(box_dialog) {
                     selection = "screen";
                     class Controls {
                         class Menu: RscControlsGroup {
+                            idc = 300;
                             x = 0;
                             y = 0;
                             w = 1;
@@ -52,7 +67,63 @@ class GVAR(box_dialog) {
                             shadow = 0;
                             style = 16;
                             class Controls {
-
+                                class Info: RscText {
+                                    style = 2;
+                                    idc = 301;
+                                    x = 0.125;
+                                    y = 0;
+                                    w = 0.75;
+                                    h = 1;
+                                    colorBackground[] = {0,0.2,0,1};
+                                };
+                                class osb1: GVAR(osb) {
+                                    idc = 311;
+                                    x = 0.01;
+                                    y = 0.08;
+                                    text = "osb1";
+                                };
+                                class osb2: GVAR(osb) {
+                                    idc = 312;
+                                    x = 0.01;
+                                    y = 0.278;
+                                    text = "osb2";
+                                };
+                                class osb3: GVAR(osb) {
+                                    idc = 313;
+                                    x = 0.01;
+                                    y = 0.4748;
+                                    text = "osb3";
+                                };
+                                class osb4: GVAR(osb) {
+                                    idc = 314;
+                                    x = 0.01;
+                                    y = 0.71;
+                                    text = "osb4";
+                                };
+                                class osb5: GVAR(osb) {
+                                    idc = 315;
+                                    x = 0.89;
+                                    y = 0.08;
+                                    text = "osb5";
+                                };
+                                class osb6: GVAR(osb) {
+                                    idc = 316;
+                                    x = 0.89;
+                                    y = 0.278;
+                                    text = "osb6";
+                                };
+                                class osb7: GVAR(osb) {
+                                    idc = 317;
+                                    x = 0.89;
+                                    y = 0.4748;
+                                    text = "osb7";
+                                };
+                                class osb8: GVAR(osb) {
+                                    idc = 318;
+                                    x = 0.89;
+                                    y = 0.71;
+                                    text = "osb8";
+                                };
                             };
                         };
                     };

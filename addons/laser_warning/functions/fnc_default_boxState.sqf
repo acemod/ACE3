@@ -16,7 +16,7 @@
  */
 params [["_powered", false]];
 [
-    if (_powered) then { POWER_STATE_ON } else { POWER_STATE_OFF },     // Power
-    [],                                                                 // Laser log
-    MENU_STATE_MAIN                                                     // UI state
+    [POWER_STATE_OFF, POWER_STATE_ON] select _powered,  // Power
+    [],                                                 // Laser log
+    MENU_STATE_MAIN                                     // UI state
 ]

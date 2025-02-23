@@ -1,3 +1,6 @@
+PREP(ui_initScreen);
+PREP(ui_initMenu);
+PREP(ui_initDisplay);
 PREP(ui_pfh);
 PREP(ui_togglePower);
 PREP(ui_pushButton);

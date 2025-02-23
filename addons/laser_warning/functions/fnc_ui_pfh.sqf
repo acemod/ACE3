@@ -16,3 +16,5 @@
  */
 params ["_args", "_pfhId"];
 _args params ["_display"];
+private _screen = _display displayCtrl 300;
+
