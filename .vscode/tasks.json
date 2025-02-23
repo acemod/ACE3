@@ -109,14 +109,13 @@
         },
         {
             "label": "Build: HEMTT --just",
-            "command": "hemtt.exe",
+            "command": "python",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
             "args": [
-                "build",
-                "--just",
-                "${input:addon}"
+                "tools/build_current_addon.py",
+                "${relativeFile}"
             ],
             "group": {
                 "kind": "build"
