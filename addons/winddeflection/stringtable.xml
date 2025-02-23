@@ -97,7 +97,7 @@
             <Russian>Включает отклонение ветром</Russian>
             <German>Aktiviert Windablenkung</German>
             <Korean>풍향 변화를 적용합니다</Korean>
-            <Japanese>風向の変化を有効化</Japanese>
+            <Japanese>風による偏向を有効化</Japanese>
             <Chinese>開啟風偏效果</Chinese>
             <Chinesesimp>开启弹道风偏效果</Chinesesimp>
             <Turkish>Rüzgar sapmasını aktif et</Turkish>
@@ -114,7 +114,7 @@
             <Russian>Отклонение ветром</Russian>
             <German>Windablenkung</German>
             <Korean>풍향 변화</Korean>
-            <Japanese>風向の変化</Japanese>
+            <Japanese>風力偏向</Japanese>
             <Chinese>風偏</Chinese>
             <Chinesesimp>弹道风偏</Chinesesimp>
             <Turkish>Rüzgar Sapması</Turkish>
@@ -163,7 +163,7 @@
             <Russian>Включает отклонение ветром для стрелков стационарных орудий и техники</Russian>
             <German>Aktiviere Windablenkung für statische oder Fahrzeugschützen</German>
             <Korean>차량이나 거치식 무기 사수에게 풍향 변화를 적용합니다</Korean>
-            <Japanese>重火器や車両へ、風向の変化を有効化</Japanese>
+            <Japanese>風による偏向を車載/固定火器に有効化します</Japanese>
             <Chinese>使風偏作用在固定式武器與載具砲手身上</Chinese>
             <Chinesesimp>使弹道风偏作用在固定式武器与载具炮手身上</Chinesesimp>
             <Turkish>Araç nişancıları için rüzgar sapmasını etkinleştirir.</Turkish>
@@ -180,7 +180,7 @@
             <Russian>Для техники</Russian>
             <German>Fahrzeuge aktiviert</German>
             <Korean>차량 적용</Korean>
-            <Japanese>車両へ有効化</Japanese>
+            <Japanese>車両への有効化</Japanese>
             <Chinese>啟用風偏給載具</Chinese>
             <Chinesesimp>给载具启用弹道风偏</Chinesesimp>
             <Turkish>Araçlar da etkin</Turkish>
@@ -197,7 +197,7 @@
             <Russian>Влияние втера на траекторию снарядов</Russian>
             <German>Windeinfluss auf die Geschossbahnen</German>
             <Korean>발사체의 궤도에 풍향 변화를 줍니다.</Korean>
-            <Japanese>風を弾道へ影響させます</Japanese>
+            <Japanese>弾道に対して風力が影響するようになります</Japanese>
             <Chinese>風力的大小會引響到彈道的軌跡</Chinese>
             <Chinesesimp>风力的大小会引响到弹道的轨迹</Chinesesimp>
             <Hungarian>Szél hatása a lövedékek röppályájára</Hungarian>
@@ -213,7 +213,7 @@
             <Russian>Отклонение ветром</Russian>
             <German>Windablenkung</German>
             <Korean>풍향 변화</Korean>
-            <Japanese>風向の変化</Japanese>
+            <Japanese>風力偏向</Japanese>
             <Chinese>風偏</Chinese>
             <Chinesesimp>弹道风偏</Chinesesimp>
             <Turkish>Rüzgar Sapması</Turkish>

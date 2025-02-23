@@ -219,8 +219,8 @@ Custom wound handlers should follow the same spec as the built-in handler:
 
 `ace_medical_damage_fnc_woundsHandlerBase`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Unit that was hit | Object | Required |
 | 1  | Array of damage dealt to each body part | Array | Required |
 | 2  | Type of damage | String | Required |

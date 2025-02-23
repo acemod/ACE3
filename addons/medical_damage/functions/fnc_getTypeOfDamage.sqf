@@ -19,6 +19,7 @@ params ["_typeOfProjectile"];
 
 GVAR(damageTypeCache) getOrDefaultCall [_typeOfProjectile, {
     private _projectileConfig = configFile >> "CfgAmmo" >> _typeOfProjectile >> "ACE_damageType";
+    private _damageType = ""; // needs to be higher scope because switch
 
     switch (false) do {
         case (isText _projectileConfig): { // no property or wrong type
@@ -26,7 +27,7 @@ GVAR(damageTypeCache) getOrDefaultCall [_typeOfProjectile, {
             "unknown" // return
         };
 
-        private _damageType = getText _projectileConfig;
+        _damageType = getText _projectileConfig;
         case (_damageType in GVAR(damageTypeDetails)): { // config may define an invalid damage type
             WARNING_2("Damage type [%1] for ammo [%2] not found",_damageType,_typeOfProjectile);
             "unknown" // return
