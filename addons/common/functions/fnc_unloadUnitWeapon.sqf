@@ -7,8 +7,8 @@
  * 0: Unit <OBJECT>
  * 1: Weapon <STRING>
  * 2: Muzzle <STRING> (default: Weapon)
- * 3: Magazine <STRING> (default: Magazine in weapon)
- * 4: Ammo count <NUMBER> (default: Unit ammo muzzle)
+ * 3: Magazine <STRING> (default: Magazine in Weapon)
+ * 4: Ammo count <NUMBER> (default: Unit ammo Muzzle)
  * 5: Skip animation? <BOOL> (default: false)
  *
  * Return Value:

@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Name <STRING>
  * 1: Arguments <ARRAY>
- * 2: TTL <NUMBER or CODE> [Optional] for this specific event call
+ * 2: TTL <NUMBER or CODE> (default: 0)
  *
  * Return Value:
  * Boolean of success <BOOL>
