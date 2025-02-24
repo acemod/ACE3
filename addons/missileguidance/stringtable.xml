@@ -35,6 +35,60 @@
             <Turkish>Gelişmiş füze rehberliği veya AMG, füze kilitleme ve ateşleme için çoklu geliştirmeler sağlar.</Turkish>
             <Hungarian>A fejlett rakétairányító (vagy AMG) többféle módosítást tartalmaz a rakéták célkövetéséhez és tüzeléséhez. Ez egy szükséges keresztrendszer a rakéta-alapú fegyverekhez.</Hungarian>
         </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_altitude">
+            <English>Altitude</English>
+            <French>Altitude</French>
+            <Japanese>高度</Japanese>
+            <Korean>고도</Korean>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_attack_heading">
+            <English>Attack Heading</English>
+            <French>Vecteur d'attaque</French>
+            <Japanese>攻撃方位</Japanese>
+            <Korean>공격 방향</Korean>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_easting">
+            <English>Easting</English>
+            <French>Horizontales</French>
+            <Japanese>東距</Japanese>
+            <Korean>동향</Korean>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_header">
+            <English>GPS Weapon Setup</English>
+            <French>Configuration de l'armement GPS</French>
+            <Japanese>GPS武装設定</Japanese>
+            <Korean>GPS 병기 설정</Korean>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_impact_angle">
+            <English>Impact Angle</English>
+            <French>Angle d'impact</French>
+            <Japanese>弾着角</Japanese>
+            <Korean>충돌 각도</Korean>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_northing">
+            <English>Northing</English>
+            <French>Verticales</French>
+            <Japanese>北距</Japanese>
+            <Korean>북향</Korean>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp">
+            <English>PRE-PLANNED</English>
+            <French>PRE-PLANIFICATION</French>
+            <Japanese>PRE-PLANNED</Japanese>
+            <Korean>사전 설정됨</Korean>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_short">
+            <English>PP</English>
+            <French>PP</French>
+            <Japanese>PP</Japanese>
+            <Korean>PP</Korean>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_GPS_ui_too">
+            <English>TARGET OF OPPORTUNITY</English>
+            <French>CIBLE D'OPPORTUNITÉ</French>
+            <Japanese>TARGET OF OPPORTUNITY</Japanese>
+            <Korean>기회 표적</Korean>
+        </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
             <Czech>Hellfire II AGM-114K</Czech>
@@ -237,15 +291,27 @@
         </Key>
         <Key ID="STR_ACE_MissileGuidance_mclosDown">
             <English>MCLOS Down</English>
+            <French>MCLOS Bas</French>
+            <Japanese>MCLOS 下</Japanese>
+            <Korean>수동 시선 유도 하강</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_mclosLeft">
             <English>MCLOS Left</English>
+            <French>MCLOS Gauche</French>
+            <Japanese>MCLOS 左</Japanese>
+            <Korean>수동 시선 유도 좌향</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_mclosRight">
             <English>MCLOS Right</English>
+            <French>MCLOS Droit</French>
+            <Japanese>MCLOS 右</Japanese>
+            <Korean>수동 시선 유도 우향</Korean>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_mclosUp">
             <English>MCLOS Up</English>
+            <French>MCLOS Haut</French>
+            <Japanese>MCLOS 上</Japanese>
+            <Korean>수동 시선 유도 상승</Korean>
         </Key>
     </Package>
 </Project>

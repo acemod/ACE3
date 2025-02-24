@@ -32,8 +32,8 @@ Important notes:
 
 `ace_slideshow_fnc_createSlideshow`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Screen Objects | Array | Required |
 | 1  | Controller Objects | Array | Required (screen objects are used if empty `[]`, none are available with automatic transitions) |
 | 2  | Image Paths | Array | Required (paths must use backslash `\`) |
