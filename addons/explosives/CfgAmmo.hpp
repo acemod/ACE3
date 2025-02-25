@@ -36,13 +36,14 @@ class CfgAmmo {
     };
 
     class ACE_FlareTripMine_Wire_Ammo: APERSTripMine_Wire_Ammo {
+        GVAR(flareClass) = "F_40mm_White";
         SoundSetExplosion[] = {};
         defaultMagazine = "ACE_FlareTripMine_Mag"; // Mag that gets dropped after defuse
         hit = 0;
         indirectHit = 0;
         indirectHitRange = 0;
         soundHit[] = {"A3\Sounds_F\weapons\smokeshell\smoke_3",1.25893,1,100};
-        explosionEffects = "ACE_TripflareEffect";
+        explosionEffects = "";
         CraterEffects = "";
         soundTrigger[] = {"",1,1};
         class CamShakeExplode {
@@ -51,6 +52,17 @@ class CfgAmmo {
             frequency = 0;
             distance = 0;
         };
+        class EventHandlers {
+            init = QUOTE(call FUNC(tripflare_init));
+        };
+    };
+    class ACE_FlareTripMine_Wire_Ammo_Red: ACE_FlareTripMine_Wire_Ammo {
+        defaultMagazine = "ACE_FlareTripMine_Mag_Red";
+        GVAR(flareClass) = "F_40mm_Red";
+    };
+    class ACE_FlareTripMine_Wire_Ammo_Green: ACE_FlareTripMine_Wire_Ammo {
+        defaultMagazine = "ACE_FlareTripMine_Mag_Green";
+        GVAR(flareClass) = "F_40mm_Green";
     };
 
     class F_20mm_Red;
