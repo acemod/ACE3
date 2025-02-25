@@ -1044,6 +1044,12 @@
             <Chinese>絆線閃光地雷</Chinese>
             <Chinesesimp>绊线信号弹</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Name_Red">
+            <English>Tripwire Flare (Red)</English>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Name_Green">
+            <English>Tripwire Flare (Green)</English>
+        </Key>
         <Key ID="STR_ACE_Explosives_TripWire">
             <English>Tripwire</English>
             <Czech>Nástražný drát</Czech>
@@ -1060,6 +1066,9 @@
             <Chinesesimp>绊线</Chinesesimp>
             <Turkish>Telli tuzak</Turkish>
             <Hungarian>Botlódrót</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripWire_Airburst">
+            <English>Tripwire - Airburst</English>
         </Key>
         <Key ID="STR_ACE_Explosives_apersToePopper">
             <English>APERS Mine (Toe-Popper)</English>
