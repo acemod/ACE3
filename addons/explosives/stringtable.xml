@@ -1032,7 +1032,7 @@
         <Key ID="STR_ACE_Explosives_TripFlare_Name">
             <English>Tripwire Flare</English>
             <Czech>Světlice na nástražném drátu</Czech>
-            <French>Fusée éclairante avec fil piège</French>
+            <French>Fusée éclairante à fil</French>
             <Spanish>Bengala con cable trampa</Spanish>
             <Italian>Bengala a filo d'inciampo</Italian>
             <Polish>Flara na linkę</Polish>
@@ -1043,6 +1043,14 @@
             <Japanese>仕掛け線信号地雷</Japanese>
             <Chinese>絆線閃光地雷</Chinese>
             <Chinesesimp>绊线信号弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Name_Red">
+            <English>Tripwire Flare (Red)</English>
+            <French>Fusée éclairante à fil (Rouge)</French>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Name_Green">
+            <English>Tripwire Flare (Green)</English>
+            <French>Fusée éclairante à fil (Vert)</French>            
         </Key>
         <Key ID="STR_ACE_Explosives_TripWire">
             <English>Tripwire</English>
