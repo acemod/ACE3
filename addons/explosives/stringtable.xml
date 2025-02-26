@@ -1039,16 +1039,18 @@
             <Portuguese>Tripwire (Sinalizador)</Portuguese>
             <Russian>Сигнальная растяжка</Russian>
             <German>Stolperdraht-Leuchtrakete</German>
-            <Korean>조명지뢰</Korean>
+            <Korean>인계철선 조명지뢰</Korean>
             <Japanese>仕掛け線信号地雷</Japanese>
             <Chinese>絆線閃光地雷</Chinese>
             <Chinesesimp>绊线信号弹</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Name_Red">
             <English>Tripwire Flare (Red)</English>
+            <Korean>인계철선 조명지뢰 (적색)</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Name_Green">
             <English>Tripwire Flare (Green)</English>
+            <Korean>인계철선 조명지뢰 (녹색)</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_TripWire">
             <English>Tripwire</English>
@@ -1069,6 +1071,7 @@
         </Key>
         <Key ID="STR_ACE_Explosives_TripWire_Airburst">
             <English>Tripwire - Airburst</English>
+            <Korean>인계철선 - 공중폭발</Korean>
         </Key>
         <Key ID="STR_ACE_Explosives_apersToePopper">
             <English>APERS Mine (Toe-Popper)</English>
