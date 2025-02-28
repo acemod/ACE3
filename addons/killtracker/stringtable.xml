@@ -58,7 +58,7 @@
             <Turkish>Öldüren: %1 %2</Turkish>
         </Key>
         <Key ID="STR_ACE_KillTracker_wounded">
-            <English>Wounded: %1 with %2</English>
+            <English>Wounded: %1 from %2</English>
         </Key>
         <Key ID="STR_ACE_KillTracker_Title">
             <English>ACE Killed Events</English>
@@ -146,6 +146,9 @@
             <Korean>다른 승무원에게 차량 처치 표시</Korean>
             <Japanese>車両でのキルを乗員全員に表示する</Japanese>
             <Chinesesimp>将载具取得的击杀计入乘员</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_KillTracker_showMedicalWounds_DisplayName">
+            <English>Show medical wounds</English>
         </Key>
     </Package>
 </Project>
