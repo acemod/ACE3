@@ -56,6 +56,31 @@ GVAR(killCount) = 0;
     };
 }] call CBA_fnc_addEventHandler;
 
+if (hasInterface && {setting}) then {
+    GVAR(nextDamage) = -1;
+    [QEGVAR(medical,woundReceived), {
+        params ["_unit", "", "_shooter", "_damageType"];
+        if (_unit != ACE_player) exitWith {};
+        if (CBA_missionTime < GVAR(nextDamage)) exitWith {};
+        GVAR(nextDamage) = CBA_missionTime + 15;
+
+        private _instigatorName = "Self?";
+        if ((!isNull _shooter) && {_unit != _shooter}) then {
+            if (isPlayer _shooter) then {
+                _instigatorName = [_shooter, true, false] call EFUNC(common,getName);
+            } else {
+                _instigatorName = _shooter getVariable [QGVAR(aiName), ""]; // allow setting a custom AI name (e.g. VIP Target)
+                if (_instigatorName == "") then {
+                    _instigatorName = format ["*AI* - %1", getText ((configOf _shooter) >> "displayName")];
+                };
+            };
+        };
+
+        GVAR(eventsArray) pushBack format [LLSTRING(wounded), _instigatorName, _damageType];
+
+    }] call CBA_fnc_addEventHandler;
+};
+
 ["ace_killed", {
     params ["_unit", "_causeOfDeath", "_killer", "_instigator"];
     TRACE_4("ace_killed EH",_unit,_causeOfDeath,_killer,_instigator);

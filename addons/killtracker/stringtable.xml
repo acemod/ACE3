@@ -57,6 +57,9 @@
             <Chinesesimp>击杀者：%1 %2</Chinesesimp>
             <Turkish>Öldüren: %1 %2</Turkish>
         </Key>
+        <Key ID="STR_ACE_KillTracker_wounded">
+            <English>Wounded: %1 with %2</English>
+        </Key>
         <Key ID="STR_ACE_KillTracker_Title">
             <English>ACE Killed Events</English>
             <French>ACE Evénements Morts</French>
