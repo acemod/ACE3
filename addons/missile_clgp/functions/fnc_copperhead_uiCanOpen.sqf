@@ -22,12 +22,8 @@ params ["_vehicle", "_player"];
 && {(_vehicle unitTurret _player) isEqualTo [0]}
 && {alive _vehicle}
 && {
-    private _hasCopperheadAmmo = false;
-    {
+    ((magazinesAllTurrets _vehicle) findIf {
         _x params ["_xMag", "_xTurret", "_xAmmo"];
-        if ((_xTurret isEqualTo [0]) && {_xAmmo > 0} && {_xMag == "ace_1rnd_155mm_m712"}) exitWith {
-            _hasCopperheadAmmo = true;
-        };
-    } forEach (magazinesAllTurrets _vehicle);
-    _hasCopperheadAmmo
+        (_xTurret isEqualTo [0]) && {_xAmmo > 0} && {GVAR(copperheadMagazines) getOrDefault [_xMag, false]}
+    }) != -1
 }

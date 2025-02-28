@@ -54,7 +54,7 @@ DFUNC(dev_trackShell) = {
  ["turret", {
     params ["_player", "_turret"];
     private _veh = vehicle _player;
-    if (currentWeapon _veh == "mortar_155mm_AMOS" && {_veh getVariable [QGVAR(needSetup), true]}) then {
+    if (("ace_1rnd_155mm_m712" in compatibleMagazines ((_veh weaponsTurret [0]) param [0, ""])) && {_veh getVariable [QGVAR(needSetup), true]}) then {
         _veh setVariable [QGVAR(needSetup), false];
         systemChat "Setting up...";
         for "_i" from 0 to 9 do { _veh addMagazineTurret ["ace_1rnd_155mm_m712", [0], 1]; };

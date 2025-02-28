@@ -41,7 +41,7 @@ class CfgAmmo {
 
     class ammo_Bomb_LaserGuidedBase;
     class ace_155mm_m712_guidance: ammo_Bomb_LaserGuidedBase {
-        model = "\A3\Weapons_F_EPC\Ammo\Bomb_04_fly_F.p3d";
+        model = "\A3\Weapons_F_beta\Launchers\titan\titan_missile_at_fly";
         hit = 1200;
         indirectHit = 200;
         indirectHitRange = 4;
@@ -53,8 +53,8 @@ class CfgAmmo {
         EGVAR(frag,classes)[] = {QEGVAR(frag,large), QEGVAR(frag,large), QEGVAR(frag,large_HD), QEGVAR(frag,large), QEGVAR(frag,huge), QEGVAR(frag,huge_HD), QEGVAR(frag,huge)};
 
         maneuvrability = 0;
-        airFriction = 0; // note: works differently from shellsim (v^3...)
-        sideAirFriction = 0; // -----ToDo-----
+        airFriction = 0.01; // note: works differently from shellsim (v^3...)
+        sideAirFriction = 0.1;
 
         artilleryLock = 0; // would keep shell pointed towards velocity, but disables manuverability and airfric
 
@@ -74,8 +74,9 @@ class CfgAmmo {
 
         class ace_missileguidance {
             enabled = 2;
-            pitchRate = 15; // replace minDeflection, maxDeflection, incDeflection
-            yawRate = 15;
+            pitchRate = 10; // replace minDeflection, maxDeflection, incDeflection
+            yawRate = 10;
+            stabilityCoefficient = 0.2; // helps make the shot follow velocity
 
             // Guidance type for munitions
             defaultSeekerType = "SALH";

@@ -10,12 +10,16 @@
  * <BOOL>
  *
  * Example:
- * [any, vehicle player] call ace_missile_clgp_fnc_copperhead_deployCondition
+ * [shell] call ace_missile_clgp_fnc_copperhead_deployCondition
  *
  * Public: No
  */
 
 params ["_projectile"];
 
+// gyro waits for downward movement
+if (((velocity _projectile) select 2) > -2) exitWith { false };
+
+// check deploy time
 private _deployTime = _projectile getVariable [QGVAR(deployTime), -1];
 CBA_missionTime > _deployTime
