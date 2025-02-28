@@ -25,7 +25,7 @@ _unit setVariable [QGVAR(Dialing), true, true];
 
 private _explosive = [_code] call FUNC(getSpeedDialExplosive);
 
-private _callConnectTimes = getArray (configOf (_explosive select 0) >> QGVAR(callConnetTime));
+private _callConnectTimes = getArray (configOf (_explosive select 0) >> QGVAR(callConnectTime));
 _callConnectTimes params ["_callConnectTimeMin", "_callConnectTimeMax"];
 
 private _ran = ((ceil(random _callConnectTimeMax)) + _callConnectTimeMin) max 2;
