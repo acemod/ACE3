@@ -36,11 +36,11 @@ if (isServer) then {
     };
 }] call CBA_fnc_addEventHandler;
 
+GVAR(cacheAmmoLoudness) = createHashMap;
+
 if (!hasInterface) exitWith {};
 
 #include "initKeybinds.inc.sqf"
-
-GVAR(cacheAmmoLoudness) = createHashMap;
 
 GVAR(deafnessDV) = 0;
 GVAR(deafnessPrior) = 0;
