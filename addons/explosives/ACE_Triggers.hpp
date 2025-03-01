@@ -65,4 +65,10 @@ class ACE_Triggers {
         picture = QPATHTOF(Data\UI\Tripwire.paa);
         onPlace = QUOTE(false);
     };
+    class Tripwire_Airburst {
+        isAttachable = 0;
+        displayName = CSTRING(Tripwire_Airburst);
+        picture = QPATHTOF(Data\UI\Tripwire.paa);
+        onPlace = QUOTE((_this # 1) setVariable [ARR_3(QQGVAR(airburst),true,true)]; false);
+    };
 };

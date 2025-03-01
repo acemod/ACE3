@@ -50,7 +50,7 @@ _patient setVariable [VAR_BLOOD_VOL, DEFAULT_BLOOD_VOLUME, true];
     };
 } forEach GET_TOURNIQUETS(_patient);
 _patient setVariable [VAR_TOURNIQUET, DEFAULT_TOURNIQUET_VALUES, true];
-_patient setVariable [QGVAR(occludedMedications), nil, true];
+_patient setVariable [QEGVAR(medical,occludedMedications), nil, true];
 
 // Wounds and Injuries
 _patient setVariable [VAR_OPEN_WOUNDS, createHashMap, true];
@@ -73,7 +73,7 @@ _patient setVariable [VAR_OXYGEN_DEMAND, 0, true];
 _patient setVariable [QEGVAR(medical,ivBags), nil, true];
 
 // Damage storage
-_patient setVariable [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0], true];
+_patient setVariable [VAR_BODYPART_DAMAGE, DEFAULT_BODYPART_DAMAGE_VALUES, true];
 
 // wakeup needs to be done after achieving stable vitals, but before manually reseting unconc var
 if IS_UNCONSCIOUS(_patient) then {

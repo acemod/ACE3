@@ -1,4 +1,14 @@
 // Attachments
+class optic_Aco;
+class optic_ACO_camo_lxWS: optic_Aco {
+    displayName = SUBCSTRING(aco_camo_Name);
+};
+
+class optic_ACO_grn;
+class optic_ACO_grn_camo_lxWS: optic_ACO_grn {
+    displayName = SUBCSTRING(aco_grn_camo_Name);
+};
+
 class optic_Arco;
 class optic_arco_hex_lxWS: optic_Arco {
     displayName = SUBCSTRING(arco_hex_Name);

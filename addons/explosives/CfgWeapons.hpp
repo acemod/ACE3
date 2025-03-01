@@ -4,7 +4,7 @@ class CfgWeapons {
         muzzles[] += {QGVAR(muzzle)};
         class PutMuzzle: Default {};
         class GVAR(muzzle): PutMuzzle {
-            magazines[] = {"ACE_FlareTripMine_Mag"};
+            magazines[] = {"ACE_FlareTripMine_Mag", "ACE_FlareTripMine_Mag_Red", "ACE_FlareTripMine_Mag_Green", "ACE_APERSMine_ToePopper_Mag"};
         };
     };
 

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Compat_EF_RealisticNames">
+        <Key ID="STR_ACE_Compat_EF_RealisticNames_AH99J">
+            <English>RAH-66J Comanche</English>
+            <Czech>RAH-66J Comanche</Czech>
+            <French>RAH-66J Comanche</French>
+            <Spanish>RAH-66J Comanche</Spanish>
+            <Italian>RAH-66J Comanche</Italian>
+            <Polish>RAH-66J Comanche</Polish>
+            <Portuguese>RAH-66J Comanche</Portuguese>
+            <Russian>RAH-66J Comanche</Russian>
+            <German>RAH-66J Comanche</German>
+            <Korean>RAH-66J 코만치</Korean>
+            <Japanese>RAH-66J コマンチ</Japanese>
+            <Chinese>RAH-66J "卡曼契"攻擊直升機</Chinese>
+            <Chinesesimp>RAH-66J "科曼奇"</Chinesesimp>
+            <Turkish>RAH-66J Comanche</Turkish>
+            <Hungarian>RAH-66J Comanche</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_EF_RealisticNames_MRAP_01_AT">
+            <English>M-ATV AT</English>
+            <Czech>M-ATV AT</Czech>
+            <French>M-ATV AC</French>
+            <Spanish>M-ATV AT</Spanish>
+            <Italian>M-ATV AC</Italian>
+            <Polish>M-ATV ppanc</Polish>
+            <Portuguese>M-ATV AT</Portuguese>
+            <Russian>M-ATV ПТ</Russian>
+            <German>M-ATV AT</German>
+            <Korean>M-ATV (대전차)</Korean>
+            <Japanese>M-ATV AT</Japanese>
+            <Chinese>防地雷反伏擊全地形車 AT</Chinese>
+            <Chinesesimp>M-ATV AT</Chinesesimp>
+            <Turkish>M-ATV AT</Turkish>
+            <Hungarian>M-ATV AT</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_EF_RealisticNames_MRAP_01_FSV">
+            <English>M-ATV FSV</English>
+            <Czech>M-ATV FSV</Czech>
+            <French>M-ATV FSV</French>
+            <Spanish>M-ATV FSV</Spanish>
+            <Italian>M-ATV FSV</Italian>
+            <Polish>M-ATV FSV</Polish>
+            <Portuguese>M-ATV FSV</Portuguese>
+            <Russian>M-ATV FSV</Russian>
+            <German>M-ATV FSV</German>
+            <Korean>M-ATV (화력지원)</Korean>
+            <Japanese>M-ATV FSV</Japanese>
+            <Chinese>防地雷反伏擊全地形車 FSV</Chinese>
+            <Chinesesimp>M-ATV FSV</Chinesesimp>
+            <Turkish>M-ATV FSV</Turkish>
+            <Hungarian>M-ATV FSV</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Compat_EF_RealisticNames_MRAP_01_LAAD">
+            <English>M-ATV LAAD</English>
+            <Czech>M-ATV LAAD</Czech>
+            <French>M-ATV LAAD</French>
+            <Spanish>M-ATV LAAD</Spanish>
+            <Italian>M-ATV LAAD</Italian>
+            <Polish>M-ATV LAAD</Polish>
+            <Portuguese>M-ATV LAAD</Portuguese>
+            <Russian>M-ATV LAAD</Russian>
+            <German>M-ATV LAAD</German>
+            <Korean>M-ATV (저고도 대공 방어)</Korean>
+            <Japanese>M-ATV LAAD</Japanese>
+            <Chinese>防地雷反伏擊全地形車 LAAD</Chinese>
+            <Chinesesimp>M-ATV LAAD</Chinesesimp>
+            <Turkish>M-ATV LAAD</Turkish>
+            <Hungarian>M-ATV LAAD</Hungarian>
+        </Key>
+    </Package>
+</Project>

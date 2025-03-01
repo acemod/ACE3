@@ -18,10 +18,9 @@
 
 params ["_interactionType"];
 
-// Ignore when self-interaction, mounted vehicle interaction, or water source actions are disabled
+// Ignore during self-interaction or when water source actions are disabled
 if (
     _interactionType != 0
-    || {!isNull objectParent ACE_player}
     || {XGVAR(waterSourceActions) == 0}
 ) exitWith {};
 
@@ -49,13 +48,30 @@ TRACE_1("Starting interact PFH",_interactionType);
 
                     if (_waterRemaining != REFILL_WATER_DISABLED) then {
                         private _offset = [_x] call FUNC(getActionOffset);
-                        private _helper = QGVAR(helper) createVehicleLocal [0, 0, 0];
-                        _helper setVariable [QGVAR(waterSource), _x];
-                        _helper attachTo [_x, _offset];
+                        if (_offset isEqualTo [0, 0, 0]) then {
+                            if !(_x getVariable [QGVAR(waterSourceActionsAdded), false]) then {
+                                private _vehicle = _x;
+                                _vehicle setVariable [QGVAR(waterSource), _vehicle];
+                                _sourcesHelped pushBack _vehicle;
+                                // Add water source actions to the vehicle itself
+                                private _mainAction = [_vehicle, 0, ["ACE_MainActions"], GVAR(mainAction)] call EFUNC(interact_menu,addActionToObject);
+                                private _selfAction = [_vehicle, 1, ["ACE_SelfActions"], GVAR(mainAction)] call EFUNC(interact_menu,addActionToObject);
+                                {
+                                    [_vehicle, 0, _mainAction, _x] call EFUNC(interact_menu,addActionToObject);
+                                    [_vehicle, 1, _selfAction, _x] call EFUNC(interact_menu,addActionToObject);
+                                } forEach GVAR(subActions);
+                                _vehicle setVariable [QGVAR(waterSourceActionsAdded), true];
+                                TRACE_3("Added interaction to vehicle",_x,typeOf _x,_waterRemaining);
+                            };
+                        } else {
+                            private _helper = QGVAR(helper) createVehicleLocal [0, 0, 0];
+                            _helper setVariable [QGVAR(waterSource), _x];
+                            _helper attachTo [_x, _offset];
 
-                        _addedHelpers pushBack _helper;
-                        _sourcesHelped pushBack _x;
-                        TRACE_3("Added interaction helper",_x,typeOf _x,_waterRemaining);
+                            _addedHelpers pushBack _helper;
+                            _sourcesHelped pushBack _x;
+                            TRACE_3("Added interaction helper",_x,typeOf _x,_waterRemaining);
+                        };
                     };
                 };
             } forEach nearestObjects [ACE_player, [], 15];
