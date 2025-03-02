@@ -19,11 +19,11 @@
 
 params ["_projectile", "_kFactor", "_time"];
 
-private _bulletVelocity = velocity _projectile;
 private _deltaT = CBA_missionTime - _time;
 _this set [2, CBA_missionTime];
 
 if (_kFactor != 0) then {
+    private _bulletVelocity = velocity _projectile;
     private _trueVelocity = _bulletVelocity vectorDiff wind;
     private _trueSpeed = vectorMagnitude _trueVelocity;
 
@@ -34,6 +34,3 @@ if (_kFactor != 0) then {
     _projectile setVelocity _bulletVelocity;
 };
 
-private _dir = vectorNormalized _bulletVelocity;
-_projectile setVectorDirAndUp [_dir, _dir vectorCrossProduct vectorSide _projectile];
-TRACE_2("setVectorDirAndUp",_projectile,_dir);
