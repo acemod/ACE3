@@ -1121,8 +1121,8 @@
         </Key>
         <Key ID="STR_ACE_CSW_statTripods">
             <English>Mounts on:</English>
-            <Korean>전용 장착:</Korean>
             <Russian>Крепится на:</Russian>
+            <Korean>전용 장착:</Korean>
         </Key>
         <Key ID="STR_ACE_CSW_tow_tube">
             <English>[CSW] BGM-71 TOW Launcher Bag</English>

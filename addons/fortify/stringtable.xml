@@ -16,10 +16,6 @@
             <Chinesesimp>预算</Chinesesimp>
             <Turkish>Bütçe</Turkish>
         </Key>
-        <Key ID="STR_ACE_Fortify_Remove">
-            <English>Remove</English>
-            <Russian>Удалить</Russian>
-        </Key>
         <Key ID="STR_ACE_Fortify_Confirm">
             <English>Confirm Deployment</English>
             <Czech>Potvrdit Položení</Czech>
@@ -138,16 +134,6 @@
             <Chinese>要塞: 限制建造區</Chinese>
             <Chinesesimp>设防：限制建造区</Chinesesimp>
             <Turkish>Inşa Etme : Bölgede Inşa Etmeyi Limitle</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Fortify_removeProgressBarTitle">
-            <English>Demolition</English>
-            <Russian>Снос</Russian>
-            <Spanish>Demolición</Spanish>
-        </Key>
-        <Key ID="STR_ACE_Fortify_remove">
-            <English>Remove Object</English>
-            <Russian>Снести объект</Russian>
-            <Spanish>Quitar objeto</Spanish>
         </Key>
         <Key ID="STR_ACE_Fortify_markObjectsOnMap">
             <English>Create map markers</English>
@@ -274,6 +260,16 @@
             <Korean>건설 중</Korean>
             <Japanese>構築中</Japanese>
             <Chinesesimp>建造</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Fortify_remove">
+            <English>Remove Object</English>
+            <Spanish>Quitar objeto</Spanish>
+            <Russian>Снести объект</Russian>
+        </Key>
+        <Key ID="STR_ACE_Fortify_removeProgressBarTitle">
+            <English>Demolition</English>
+            <Spanish>Demolición</Spanish>
+            <Russian>Снос</Russian>
         </Key>
         <Key ID="STR_ACE_Fortify_rotate">
             <English>Rotate</English>
