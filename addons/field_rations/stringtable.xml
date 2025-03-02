@@ -886,7 +886,6 @@
             <Russian>Последствия сильной жажды/голода (более 85%)</Russian>
             <German>Folge von extremen Durst/Hunger (über 85%)</German>
             <Korean>극심한 허기 및 갈증으로 인한 증상 (85% 이상)</Korean>
-            <Russian>Последствия сильной жажды/голода (более 85%)</Russian>
             <Japanese>極度の渇き/空腹の結果(85%以上時)</Japanese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Pain">
@@ -896,7 +895,6 @@
             <Russian>Боль</Russian>
             <German>Schmerzen</German>
             <Korean>고통</Korean>
-            <Russian>Боль</Russian>
             <Japanese>痛み</Japanese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_Unconsciousness">
@@ -906,7 +904,6 @@
             <Russian>Обморок</Russian>
             <German>Ohnmacht</German>
             <Korean>기절</Korean>
-            <Russian>Обморок</Russian>
             <Japanese>気絶</Japanese>
         </Key>
         <Key ID="STR_ACE_Field_Rations_NoWaterRemaining">
