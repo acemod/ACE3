@@ -47,6 +47,19 @@ class CfgMagazines {
         displayName = CSTRING(TripFlare_Name);
         descriptionShort = CSTRING(TripFlare_Description);
         class Library {libTextDesc = CSTRING(TripFlare_Description);};
+        class ACE_Triggers {
+            SupportedTriggers[] = {"Tripwire", "Tripwire_Airburst"};
+            class Tripwire;
+            class Tripwire_Airburst;
+        };
+    };
+    class ACE_FlareTripMine_Mag_Red: ACE_FlareTripMine_Mag {
+        ammo = "ACE_FlareTripMine_Wire_Ammo_Red";
+        displayName = CSTRING(TripFlare_Name_Red);
+    };
+    class ACE_FlareTripMine_Mag_Green: ACE_FlareTripMine_Mag {
+        ammo = "ACE_FlareTripMine_Wire_Ammo_Green";
+        displayName = CSTRING(TripFlare_Name_Green);
     };
 
     class ClaymoreDirectionalMine_Remote_Mag: CA_Magazine {

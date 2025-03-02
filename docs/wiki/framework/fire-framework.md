@@ -21,8 +21,8 @@ Use `CBA_fnc_serverEvent` to use the following features. Events are defined only
 
 `ace_fire_addFireSource`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Source of flame | Object/Position ASL | Required |
 | 1  | Radius of fire | Number | Required |
 | 2  | Intensity of fire (1, 10] | Number | Required |
@@ -34,8 +34,8 @@ Use `CBA_fnc_serverEvent` to use the following features. Events are defined only
 
 `ace_fire_removeFireSource`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Fire source ID | Array/Boolean/Code/Config/Group/Namespace/NaN/Number/Object/Side/String  | Required |
 
 ## 2. Variables

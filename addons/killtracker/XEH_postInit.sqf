@@ -33,26 +33,59 @@ GVAR(eventsArray) = [];
 XGVAR(outputText) = format ["%1 0", LLSTRING(TotalKills)];
 GVAR(killCount) = 0;
 
+DFUNC(updateArray) = {
+    params ["_line"];
+    GVAR(eventsArray) pushBack _line;
+    XGVAR(outputText) = (format ["%1 %2<br/>", LLSTRING(TotalKills), GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
+    if (missionNamespace getVariable [QGVAR(globalSync), false]) then {
+        ACE_player setVariable [QGVAR(output), XGVAR(outputText), true];
+    };
+};
+
 // Add Event Handlers:
 [QGVAR(kill), {
     params ["_name", "_killInfo"];
     TRACE_2("kill eh",_name,_killInfo);
     // Increment kill counter
     GVAR(killCount) = GVAR(killCount) + 1;
-    GVAR(eventsArray) pushBack format [LLSTRING(Kill), _name, _killInfo];
-    XGVAR(outputText) = (format ["%1 %2<br/>", LLSTRING(TotalKills), GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
-    if (missionNamespace getVariable [QGVAR(globalSync), false]) then {
-        ACE_player setVariable [QGVAR(output), XGVAR(outputText), true];
-    };
+    (format [LLSTRING(Kill), _name, _killInfo]) call FUNC(updateArray);
 }] call CBA_fnc_addEventHandler;
 
 [QGVAR(death), {
     params ["_name", "_killInfo"];
     TRACE_2("death eh",_name,_killInfo);
-    GVAR(eventsArray) pushBack format [LLSTRING(Killer), _name, _killInfo];
-    XGVAR(outputText) = (format ["%1 %2<br/>", LLSTRING(TotalKills), GVAR(killCount)]) + (GVAR(eventsArray) joinString "<br/>");
-    if (missionNamespace getVariable [QGVAR(globalSync), false]) then {
-        ACE_player setVariable [QGVAR(output), XGVAR(outputText), true];
+    (format [LLSTRING(Killer), _name, _killInfo]) call FUNC(updateArray);
+}] call CBA_fnc_addEventHandler;
+
+["CBA_settingsInitialized", {
+    if (hasInterface && {GVAR(showMedicalWounds) > 0}) then {
+        GVAR(nextDamage) = -1;
+        [QEGVAR(medical,woundReceived), {
+            params ["_unit", "", "_shooter", "_damageType"];
+            if (_unit != ACE_player) exitWith {};
+            // ignore rapid wound types
+            if ((toLower _damageType) in ["fire", "drowning"]) exitWith {};
+            // cooldown to avoid spam
+            if (CBA_missionTime < GVAR(nextDamage)) exitWith {};
+            GVAR(nextDamage) = CBA_missionTime + 15;
+            // check player setting
+            private _isPlayer = (!isNull _shooter) && {isPlayer _shooter};
+            if ((GVAR(showMedicalWounds) == 1) && {!_isPlayer}) exitWith {};
+
+            private _instigatorName = "Self?";
+            if ((!isNull _shooter) && {_unit != _shooter}) then {
+                if (_isPlayer) then {
+                    _instigatorName = [_shooter, true, false] call EFUNC(common,getName);
+                } else {
+                    _instigatorName = _shooter getVariable [QGVAR(aiName), ""]; // allow setting a custom AI name (e.g. VIP Target)
+                    if (_instigatorName == "") then {
+                        _instigatorName = format ["*AI* - %1", getText ((configOf _shooter) >> "displayName")];
+                    };
+                };
+            };
+
+            (format [LLSTRING(wounded), _damageType, _instigatorName]) call FUNC(updateArray); // "%1 from %2"
+        }] call CBA_fnc_addEventHandler;
     };
 }] call CBA_fnc_addEventHandler;
 

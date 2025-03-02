@@ -1017,7 +1017,7 @@
         <Key ID="STR_ACE_Explosives_TripFlare_Description">
             <English>Type: Tripwire flare - Ignites a non-lethal flare when triggered.&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Ground</English>
             <Czech>Typ: Světlice na nástražném drátu - Zapálí světlici při aktivaci.&lt;br/&gt;Pouze 1 použití&lt;br/&gt;Použít na zem</Czech>
-            <French>Type : Fusée éclairante avec fil piège - Allume une fusée éclairante lorsque déclenchée.&lt;br /&gt;Coups : 1&lt;br /&gt;Utilisé sur : le sol</French>
+            <French>Type : Fusée éclairante à fil - Allume une fusée éclairante lorsque déclenchée.&lt;br /&gt;Coups : 1&lt;br /&gt;Utilisé sur : le sol</French>
             <Spanish>Tipo: Bengala con cable trampa - Enciende una bengala no letal cuando es activado.&lt;br /&gt;Rondas: 1&lt;br /&gt;Usado en: Tierra</Spanish>
             <Italian>Tipo: Bengala a cavo d'innesco - Accende un bengala abbagliante non letale quando innescato. &lt;br /&gt;Rimanenti: 1&lt;br /&gt;Usato: A terra</Italian>
             <Polish>Typ: Flara na linkę - Wystrzeliwuje nieszkodliwą flarę przy nadepnięciu linki.&lt;br/&gt;Pociski: 1&lt;br/&gt;Używane na: ziemia</Polish>
@@ -1032,22 +1032,34 @@
         <Key ID="STR_ACE_Explosives_TripFlare_Name">
             <English>Tripwire Flare</English>
             <Czech>Světlice na nástražném drátu</Czech>
-            <French>Fusée éclairante avec fil piège</French>
+            <French>Fusée éclairante à fil</French>
             <Spanish>Bengala con cable trampa</Spanish>
             <Italian>Bengala a filo d'inciampo</Italian>
             <Polish>Flara na linkę</Polish>
             <Portuguese>Tripwire (Sinalizador)</Portuguese>
             <Russian>Сигнальная растяжка</Russian>
             <German>Stolperdraht-Leuchtrakete</German>
-            <Korean>조명지뢰</Korean>
+            <Korean>인계철선 조명지뢰</Korean>
             <Japanese>仕掛け線信号地雷</Japanese>
             <Chinese>絆線閃光地雷</Chinese>
             <Chinesesimp>绊线信号弹</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Name_Red">
+            <English>Tripwire Flare (Red)</English>
+            <Korean>인계철선 조명지뢰 (적색)</Korean>
+            <French>Fusée éclairante à fil (Rouge)</French>
+            <Japanese>仕掛け線信号地雷 (赤)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Name_Green">
+            <English>Tripwire Flare (Green)</English>
+            <Korean>인계철선 조명지뢰 (녹색)</Korean>
+            <French>Fusée éclairante à fil (Vert)</French>
+            <Japanese>仕掛け線信号地雷 (緑)</Japanese>
+        </Key>
         <Key ID="STR_ACE_Explosives_TripWire">
             <English>Tripwire</English>
             <Czech>Nástražný drát</Czech>
-            <French>Fil piège</French>
+            <French>Fil de déclenchement</French>
             <Spanish>Cable trampa</Spanish>
             <Italian>Filo a inciampo</Italian>
             <Polish>Linka naciągu</Polish>
@@ -1060,6 +1072,12 @@
             <Chinesesimp>绊线</Chinesesimp>
             <Turkish>Telli tuzak</Turkish>
             <Hungarian>Botlódrót</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripWire_Airburst">
+            <English>Tripwire - Airburst</English>
+            <Korean>인계철선 - 공중폭발</Korean>
+            <French>Fil de transmission - Explosion aérienne</French>
+            <Japanese>仕掛け線 - 空中炸裂</Japanese>
         </Key>
         <Key ID="STR_ACE_Explosives_apersToePopper">
             <English>APERS Mine (Toe-Popper)</English>

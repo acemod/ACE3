@@ -14,7 +14,9 @@ class CfgAmmo {
         maneuvrability = 0;
         flightProfiles[] = {"Direct", "Loft"};
         class Direct {}; // dummy to allow for F cycling of missile mode
-        class Loft {};
+        class Loft {
+            textureType = "topDown";
+        };
         class ace_missileguidance: EGVAR(missileguidance,type_AMRAAM) {
             enabled = 1;
         };
