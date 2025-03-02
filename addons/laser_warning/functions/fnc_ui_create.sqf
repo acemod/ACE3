@@ -77,7 +77,7 @@
 
     (_display displayCtrl 212) ctrlAddEventHandler ["ButtonDown", _fnc_powerToggle];
     {
-        (_display displayCtrl _x) ctrlAddEventHandler ["ButtonDown", _fnc_pushButton ];
+        (_display displayCtrl _x) ctrlAddEventHandler ["ButtonDown", _fnc_pushButton];
         (_display displayCtrl _x) ctrlAddEventHandler ["ButtonUp", _fnc_unpushButton];
     } forEach [111, 112, 113, 114, 115, 116, 117, 118];
 
