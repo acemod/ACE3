@@ -146,9 +146,13 @@
         </Key>
         <Key ID="STR_ACE_KillTracker_showMedicalWounds_DisplayName">
             <English>Show medical wounds</English>
+            <French>Montrer les blessures médicales</French>
+            <Korean>의료 부상 표시</Korean>
         </Key>
         <Key ID="STR_ACE_KillTracker_wounded">
             <English>Wounded: %1 from %2</English>
+            <French>Blessé : %1 à partir de %2</French>
+            <Korean>%1이(가) %2에 의해 부상당함</Korean>
         </Key>
     </Package>
 </Project>
