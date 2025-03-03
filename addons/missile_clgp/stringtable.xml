@@ -3,12 +3,15 @@
     <Package name="MISSILE_CLGP">
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_action">
             <English>Configure M712 Shell</English>
+            <French>Configurer l'obus M712</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_FlightProfile">
             <English>Flight Profile</English>
+            <French>Profil de vol</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_GuidanceDelay">
             <English>Guidance Delay</English>
+            <French>Latence d'induction</French>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_descriptionShort">
             <English>Semi-Active Laser Guided 40mm Grenade</English>
