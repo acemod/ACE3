@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: ID <NUMBER>
- * 1: Show? <BOOL, NUMBER>
+ * 1: Show? <BOOL or NUMBER>
  *
  * Return Value:
  * None

@@ -8,7 +8,7 @@
  * 0: CBA extended loadout or getUnitLoadout array <ARRAY>
  *
  * Return Value:
- * Sanitised loadout <ARRAY> (getUnitLoadout array)
+ * Sanitized loadout <ARRAY> (getUnitLoadout array)
  *
  * Example:
  * [getUnitLoadout player] call ace_arsenal_fnc_replaceUniqueItemsLoadout

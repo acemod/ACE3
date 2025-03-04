@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  * 1: Vehicle <OBJECT>
  * 2: Position ("Driver", "Pilot", "Gunner", "Commander", "Copilot", "Turret", "FFV", "Codriver", "Cargo") <STRING>
- * 3: Index (only applies to "Turret", "FFV", "Codriver", "Cargo") (default: next free index) <NUMBER>
+ * 3: Index (only applies to "Turret", "FFV", "Codriver", "Cargo") <NUMBER> (default: next free index)
  *
  * Return Value:
  * None

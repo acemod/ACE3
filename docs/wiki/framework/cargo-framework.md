@@ -154,7 +154,7 @@ Note first argument can be a in-game object or a classname of an object type.
  * Objects loaded via classname remain virtual until unloaded.
  *
  * Arguments:
- * 0: Item to be loaded <STRING> or <OBJECT>
+ * 0: Item to be loaded <STRING or OBJECT>
  * 1: Holder object (vehicle) <OBJECT>
  * 2: Ignore interaction distance and stability checks <BOOL> (default: false)
  *
@@ -171,7 +171,7 @@ Note first argument can be a in-game object or a classname of an object type.
 
 ```sqf
  * Arguments:
- * 0: Item to be unloaded <STRING> or <OBJECT>
+ * 0: Item to be unloaded <STRING or OBJECT>
  * 1: Holder object (vehicle) <OBJECT>
  * 2: Unloader <OBJECT> (default: objNull)
  *
@@ -188,7 +188,7 @@ Note first argument can be a in-game object or a classname of an object type.
 
 ```sqf
  * Arguments:
- * 0: Item to be removed <STRING> or <OBJECT>
+ * 0: Item to be removed <STRING or OBJECT>
  * 1: Holder object (vehicle) <OBJECT>
  * 2: Amount <NUMBER> (default: 1)
  *
