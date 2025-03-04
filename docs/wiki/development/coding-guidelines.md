@@ -661,7 +661,7 @@ Bad:
 
 ```sqf
 _a set [ count _a, _value];
-_a = a + _[value];
+_a = a + [_value];
 ```
 
 When adding an new element to a dynamic location in an array or when the index is pre-calculated, `set` may be used.
