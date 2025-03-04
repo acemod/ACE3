@@ -28,16 +28,26 @@ if (_loaded isNotEqualTo []) then {
     {
         if (_x isEqualType objNull) then {
             private _delete = true;
+            private _flying = false;
 
             if (_killed && {random 1 < GVAR(unloadOnKilled)}) then {
-                _delete = !([_x, _object, objNull, [], false] call FUNC(unloadItem)); // If a safe position to unload cannot be found FUNC(unloadItem) returns false, delete cargo instead
+                private _pos = getPos _object;
+                if (_object isKindOf "Air" && {_pos select 2 > 1}) then { // flying aircraft don't work with FUNC(unloadItem) so work around it.
+                    [QGVAR(serverUnload), [_x, getPosATL _object vectorAdd [random [-3, 0, 3], random [-3, 0, 3], random -3]]] call CBA_fnc_serverEvent;
+                    detach _x;
+                    _x addForce [[0,0,1], [0,0,0]];
+                    _delete = false;
+                    _flying = true;
+                } else {
+                    _delete = !([_x, _object, objNull, [], false] call FUNC(unloadItem)); // If a safe position to unload cannot be found FUNC(unloadItem) returns false, delete cargo instead
+                };
             };
 
             if (_delete) then {
                 detach _x;
                 deleteVehicle _x;
             } else {
-                [QGVAR(unloadedCargoOnKilled), [_x, _object], _x] call CBA_fnc_targetEvent;
+                [QGVAR(unloadedCargoOnKilled), [_x, _object, _flying], _x] call CBA_fnc_targetEvent;
             };
         };
     } forEachReversed _loaded;

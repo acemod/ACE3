@@ -32,7 +32,7 @@ private _category = [ELSTRING(main,Category_Logistics), LSTRING(openMenu)];
     "SLIDER",
     [LSTRING(unloadOnKilled), LSTRING(unloadOnKilled_description)],
     _category,
-    [0, 1, 0, 1, true], // [_min, _max, _default, _trailingDecimals, _isPercentage]
+    [0, 1, 0.5, 1, true], // [_min, _max, _default, _trailingDecimals, _isPercentage]
     1
 ] call CBA_fnc_addSetting;
 
