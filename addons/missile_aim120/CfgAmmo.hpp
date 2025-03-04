@@ -32,7 +32,9 @@ class CfgAmmo {
         maneuvrability = 0;
         flightProfiles[] = {"Direct", "Loft"};
         class Direct {}; // dummy to allow for F cycling of missile mode
-        class Loft {};
+        class Loft {
+            textureType = "topDown";
+        };
         class ace_missileguidance: EGVAR(missileguidance,type_AMRAAM) {
             enabled = 1;
         };
@@ -45,11 +47,16 @@ class CfgAmmo {
         missileLockMaxDistance = 16000;
         missileLockMinDistance = 500;
 
+        model = "\A3\Weapons_F_Jets\Ammo\Missile_AA_10_fly_F.p3d";
+        proxyShape = "\A3\Weapons_F_Jets\Ammo\Missile_AA_10_F.p3d";
+
         author = "Dani (TCVM)";
         maneuvrability = 0;
         flightProfiles[] = {"Direct", "TopDown"};
         class Direct {}; // dummy to allow for F cycling of missile mode
-        class TopDown {};
+        class TopDown {
+            textureType = "topDown";
+        };
         class ace_missileguidance: EGVAR(missileguidance,type_AMRAAM) {
             enabled = 1;
             pitchRate = 45;
@@ -72,7 +79,9 @@ class CfgAmmo {
         maneuvrability = 0;
         flightProfiles[] = {"Direct", "TopDown"};
         class Direct {}; // dummy to allow for F cycling of missile mode
-        class TopDown {};
+        class TopDown {
+            textureType = "topDown";
+        };
         class ace_missileguidance: EGVAR(missileguidance,type_R77) {
             enabled = 1;
         };

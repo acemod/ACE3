@@ -1121,9 +1121,9 @@
         </Key>
         <Key ID="STR_ACE_CSW_statTripods">
             <English>Mounts on:</English>
+            <French>Se monte sur :</French>
             <Russian>Крепится на:</Russian>
             <Korean>전용 장착:</Korean>
-            <French>Se monte sur :</French>
             <Japanese>次に搭載:</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_tow_tube">
