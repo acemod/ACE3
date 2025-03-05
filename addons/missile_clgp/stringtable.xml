@@ -5,16 +5,19 @@
             <English>Configure M712 Shell</English>
             <French>Configurer l'obus M712</French>
             <Korean>M712 포탄 설정</Korean>
+            <Japanese>M712砲弾調整</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_FlightProfile">
             <English>Flight Profile</English>
             <French>Profil de vol</French>
             <Korean>비행 방식</Korean>
+            <Japanese>飛行プロファイル</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_GuidanceDelay">
             <English>Guidance Delay</English>
             <French>Latence d'induction</French>
             <Korean>유도 지연 시간</Korean>
+            <Japanese>誘導遅延</Japanese>
         </Key>
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_descriptionShort">
             <English>Semi-Active Laser Guided 40mm Grenade</English>
