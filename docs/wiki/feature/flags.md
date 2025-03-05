@@ -15,7 +15,7 @@ version:
 
 ## 1. Overview
 
-This module implements flags that can be either placed or carried.
+This module implements flags that can be either placed or carried. Flags can be acquired from an arsenal (under Misc. Items) or added to containers by the mission maker.
 
 ## 2. Usage
 

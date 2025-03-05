@@ -15,7 +15,7 @@ version:
 
 ## 1. Overview
 
-This module implements marker flags that can be placed.
+This module implements marker flags that can be placed. Marker flags can be acquired from an arsenal (under Misc. Items) or added to containers by the mission maker.
 
 ## 2. Usage
 
