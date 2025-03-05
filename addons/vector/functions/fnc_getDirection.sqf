@@ -27,8 +27,8 @@ private _dlgVector = GETUVAR(ACE_dlgVector, displayNull);
 
 #define MAX_ABSINCLINATION 45
 
-private _position = ATLToASL positionCameraToWorld [0,0,0];
-private _direction = ATLToASL positionCameraToWorld [0,0,1];
+private _position = AGLToASL positionCameraToWorld [0,0,0];
+private _direction = AGLToASL positionCameraToWorld [0,0,1];
 
 private _azimuth = ((_direction select 0) - (_position select 0)) atan2 ((_direction select 1) - (_position select 1));
 _azimuth = _azimuth call EFUNC(common,getMagneticBearing);

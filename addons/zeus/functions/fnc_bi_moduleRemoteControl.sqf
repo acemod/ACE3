@@ -71,7 +71,7 @@ if (_activated && local _logic && !isNull curatorCamera) then {
             _blur ppEffectAdjust [0.03,0.03,0.1,0.1];
             _blur ppEffectCommit 1;
 
-            _cam = "camera" camCreate getPosATL curatorCamera;
+            _cam = "camera" camCreate ASLToAGL getPosASL curatorCamera;
             _cam cameraEffect ["internal","back"];
             _cam camPrepareTarget (screenToWorld [0.5,0.5]);
             _cam camCommitPrepared 0;

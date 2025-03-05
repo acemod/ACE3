@@ -18,6 +18,7 @@ params ["_firedEH", "", "", "_seekerParams", "_stateParams"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile", "_gunner"];
 _stateParams params ["", "", "_attackProfileStateParams"];
 _seekerParams params ["", "", "_seekerMaxRange", "_seekerMinRange"];
+if (_seekerMaxRange < 1) then { WARNING_2("Ammo %1 has very short max range %2",typeOf _projectile,_seekerMaxRange) };
 
 private _config = configOf _projectile >> "ace_missileguidance";
 private _maxCorrectableDistance = [_config >> "correctionDistance", "NUMBER", DEFAULT_CORRECTION_DISTANCE] call CBA_fnc_getConfigEntry;
