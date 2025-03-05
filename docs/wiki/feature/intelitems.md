@@ -15,4 +15,4 @@ version:
 
 ## 1. Overview
 
-Adds note pad, document and photo objects which can be used to provide intel.
+Adds notepad, document and photo objects which can be used to provide intel.
