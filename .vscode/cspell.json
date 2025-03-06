@@ -62,7 +62,7 @@
         "Addons",
         "HEMTT"
     ],
-    "allowCompoundWords": false,
+    "allowCompoundWords": true,
     "flagWords": [
         "BOOLEAN->BOOL",
         "SCALAR->NUMBER",
