@@ -3,5 +3,9 @@
 		"**/.hemttout": true,
 		"**/include": true,
 		"**/extras": true
-	}
+	},
+    "files.associations": {
+        "XEH_PREP.hpp": "sqf",
+        "*.rpt": "log",
+    },
 }
