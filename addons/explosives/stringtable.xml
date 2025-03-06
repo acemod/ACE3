@@ -1049,12 +1049,14 @@
             <French>Fusée éclairante à fil (Vert)</French>
             <Korean>인계철선 조명지뢰 (녹색)</Korean>
             <Japanese>仕掛け線信号地雷 (緑)</Japanese>
+            <Russian>Сигнальная растяжка (Зелёная)</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Name_Red">
             <English>Tripwire Flare (Red)</English>
             <French>Fusée éclairante à fil (Rouge)</French>
             <Korean>인계철선 조명지뢰 (적색)</Korean>
             <Japanese>仕掛け線信号地雷 (赤)</Japanese>
+            <Russian>Сигнальная растяжка (Красная)</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_TripWire">
             <English>Tripwire</English>
@@ -1078,6 +1080,7 @@
             <French>Fil de transmission - Explosion aérienne</French>
             <Korean>인계철선 - 공중폭발</Korean>
             <Japanese>仕掛け線 - 空中炸裂</Japanese>
+            <Russian>Растяжка - Воздушный взрыв</Russian>
         </Key>
         <Key ID="STR_ACE_Explosives_apersToePopper">
             <English>APERS Mine (Toe-Popper)</English>
