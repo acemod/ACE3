@@ -1765,6 +1765,7 @@
         <Key ID="STR_ACE_Common_checkExtensions_DisplayName">
             <English>Check Extensions</English>
             <French>Vérifier les extensions</French>
+            <Italian>Verifica le estensioni</Italian>
             <Russian>Проверка расширений (библиотек DLL)</Russian>
             <Korean>확장 프로그램 검사</Korean>
             <Japanese>拡張(DLL)を検査</Japanese>
