@@ -173,7 +173,7 @@ class CfgVehicles {
                 };
                 class GVAR(Gear) {
                     displayName = "$STR_ACTION_GEAR";
-                    condition = QUOTE(!(_target call EFUNC(common,isAwake)) && {isNull objectParent _target});
+                    condition = QUOTE(!(_target call EFUNC(common,isAwake) && {isAwake _target}) && {isNull objectParent _target});
                     statement = QUOTE(_player action [ARR_2(QUOTE(QUOTE(Gear)),_target)]);
                     icon = "\A3\ui_f\data\igui\cfg\actions\gear_ca.paa";
                 };
