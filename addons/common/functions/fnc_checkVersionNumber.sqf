@@ -28,7 +28,7 @@ private _files = [];
 private _versions = [];
 
 {
-    // Skip A3, ACE, and whitelisted addons
+    // Skip A3, ACE, and whitelisted addons, because we have already done the check.
     private _addon = _x;
     if (
         (_x select [0, 3] == "a3_") ||
