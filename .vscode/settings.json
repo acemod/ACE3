@@ -6,6 +6,7 @@
 	},
     "files.associations": {
         "XEH_PREP.hpp": "sqf",
+        "Description.ext": "sqf",
         "*.rpt": "log",
     },
 }
