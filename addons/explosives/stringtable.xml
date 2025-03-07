@@ -1047,6 +1047,7 @@
         <Key ID="STR_ACE_Explosives_TripFlare_Name_Green">
             <English>Tripwire Flare (Green)</English>
             <French>Fusée éclairante à fil (Vert)</French>
+            <Italian>Bengala a filo d'inciampo (Verde)</Italian>
             <Korean>인계철선 조명지뢰 (녹색)</Korean>
             <Japanese>仕掛け線信号地雷 (緑)</Japanese>
             <Russian>Сигнальная растяжка (Зелёная)</Russian>
@@ -1054,6 +1055,7 @@
         <Key ID="STR_ACE_Explosives_TripFlare_Name_Red">
             <English>Tripwire Flare (Red)</English>
             <French>Fusée éclairante à fil (Rouge)</French>
+            <Italian>Bengala a filo d'inciampo (Rosso)</Italian>
             <Korean>인계철선 조명지뢰 (적색)</Korean>
             <Japanese>仕掛け線信号地雷 (赤)</Japanese>
             <Russian>Сигнальная растяжка (Красная)</Russian>
@@ -1078,6 +1080,7 @@
         <Key ID="STR_ACE_Explosives_TripWire_Airburst">
             <English>Tripwire - Airburst</English>
             <French>Fil de transmission - Explosion aérienne</French>
+            <Italian>Bengala (razzo) a filo d'inciampo</Italian>
             <Korean>인계철선 - 공중폭발</Korean>
             <Japanese>仕掛け線 - 空中炸裂</Japanese>
             <Russian>Растяжка - Воздушный взрыв</Russian>
@@ -1085,6 +1088,7 @@
         <Key ID="STR_ACE_Explosives_apersToePopper">
             <English>APERS Mine (Toe-Popper)</English>
             <French>Mine APERS (Toe-Popper)</French>
+            <Italian>Mina APERS (Toe-Popper)</Italian>
             <Russian>APERS мина (Toe-Topper)</Russian>
             <Korean>대인지뢰 (발목지뢰형)</Korean>
             <Japanese>対人地雷 (トウポッパー)</Japanese>

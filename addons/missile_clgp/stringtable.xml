@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_action">
             <English>Configure M712 Shell</English>
             <French>Configurer l'obus M712</French>
+            <Italian>Configura granata M712</Italian>
             <Korean>M712 포탄 설정</Korean>
             <Japanese>M712砲弾調整</Japanese>
             <Russian>Настройка снаряда M712</Russian>
@@ -11,6 +12,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_FlightProfile">
             <English>Flight Profile</English>
             <French>Profil de vol</French>
+            <Italian>Profilo di volo</Italian>
             <Korean>비행 방식</Korean>
             <Japanese>飛行プロファイル</Japanese>
             <Russian>Профиль полета</Russian>
@@ -18,6 +20,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_GuidanceDelay">
             <English>Guidance Delay</English>
             <French>Latence d'induction</French>
+            <Italian>Latenza di guida</Italian>
             <Korean>유도 지연 시간</Korean>
             <Japanese>誘導遅延</Japanese>
             <Russian>Задержка наведения</Russian>
@@ -25,6 +28,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_descriptionShort">
             <English>Semi-Active Laser Guided 40mm Grenade</English>
             <French>Grenade semi-active à guidage laser de 40 mm</French>
+            <Italian>Granata 40mm a guida laser semi-attiva</Italian>
             <Russian>Полуактивная 40-мм граната с лазерным наведением</Russian>
             <Korean>반능동 레이저 유도 40mm 유탄</Korean>
             <Japanese>セミアクティブレーザー誘導40mmグレネード</Japanese>
@@ -33,6 +37,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayName">
             <English>40mm Pike</English>
             <French>40mm Pike</French>
+            <Italian>40mm Pike</Italian>
             <Russian>40мм pike</Russian>
             <Korean>40mm 파이크</Korean>
             <Japanese>40mm パイク</Japanese>
@@ -41,6 +46,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayNameShort">
             <English>Pike SALH</English>
             <French>Pike SALH</French>
+            <Italian>Pike SALH</Italian>
             <Russian>Pike SALH</Russian>
             <Korean>파이크 반능동 레이저 유도 유탄</Korean>
             <Japanese>パイク SALH</Japanese>
