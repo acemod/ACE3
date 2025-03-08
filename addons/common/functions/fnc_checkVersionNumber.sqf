@@ -25,9 +25,11 @@ TRACE_1("",_whitelist);
 
 // Skip A3, ACE, and whitelisted addons, because we have already done the check.
 private _files = CBA_common_addons select {
-    (_x select [0, 3] != "a3_") &&
-    {_x select [0, 4] != "ace_"} &&
-    {_x select [0, 12] != "CuratorOnly_"} &&
+    private _addon = _x;
+
+    (_addon select [0, 3] != "a3_") &&
+    {_addon select [0, 4] != "ace_"} &&
+    {_addon select [0, 12] != "CuratorOnly_"} &&
     {_whitelist findIf {_addon regexMatch _x} == -1}
 };
 
