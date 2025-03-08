@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Current weapon is a mine detector <BOOLEAN>
+ * Current weapon is a mine detector <BOOL>
  *
  * Example:
  * [ace_player] call ace_minedetector_fnc_hasDetector

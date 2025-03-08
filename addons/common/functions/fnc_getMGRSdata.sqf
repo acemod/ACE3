@@ -6,7 +6,7 @@
  * Writes return values to GVAR(MGRS_data) if run on the current map.
  *
  * Arguments:
- * 0: Map name (default: worldName) <STRING>
+ * 0: Map name <STRING> (default: worldName)
  *
  * Return Value:
  * 0: Grid zone designator <STRING>
