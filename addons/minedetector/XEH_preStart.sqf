@@ -2,13 +2,15 @@
 
 #include "XEH_PREP.hpp"
 
-// Cache detectable classes, see XEH_postInit.sqf
+// Cache detectable classes
 private _detectableClasses = [];
+
 {
     if ((getNumber (_x >> QGVAR(detectable))) == 1) then {
         _detectableClasses pushBackUnique configName _x;
     };
 } forEach (configProperties [configFile >> "CfgVehicles", "isClass _x", true]);
+
 {
     if ((getNumber (_x >> QGVAR(detectable))) == 1) then {
         _detectableClasses pushBackUnique configName _x;
