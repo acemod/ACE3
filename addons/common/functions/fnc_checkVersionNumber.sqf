@@ -23,24 +23,21 @@ if (canSuspend) exitWith {
 params [["_whitelist", missionNamespace getVariable ["ACE_Version_Whitelist", []]]];
 TRACE_1("",_whitelist);
 
+// Skip A3, ACE, and whitelisted addons, because we have already done the check.
+private _files = CBA_common_addons select {
+    (_x select [0, 3] != "a3_") &&
+    {_x select [0, 4] != "ace_"} &&
+    {_x select [0, 12] != "CuratorOnly_"} &&
+    {_whitelist findIf {_addon regexMatch _x} == -1}
+};
+
 private _cfgPatches = configFile >> "CfgPatches";
-private _files = [];
 private _versions = [];
 
 {
-    // Skip A3, ACE, and whitelisted addons, because we have already done the check.
-    private _addon = _x;
-    if (
-        (_x select [0, 3] == "a3_") ||
-        {_x select [0, 4] == "ace_"} ||
-        {_x select [0, 12] == "CuratorOnly_"} ||
-        {_whitelist findIf {_addon regexMatch _x} >= 0}
-    ) then {continue};
-    _files pushBack _addon;
-
     // Determine the version of the addon. Parse it into a floating point number for comparison. Only major and minor are used.
     // If no version is found or a parsing error occurs, the version is zero.
-    private _addonCfgPatches = _cfgPatches >> _addon;
+    private _addonCfgPatches = _cfgPatches >> _x;
     private _versionCfg = _addonCfgPatches >> "version";
     private _version = switch (true) do {
         // Normal case. Version is defined as a floating point number -> MAJOR.MINOR
@@ -70,7 +67,7 @@ private _versions = [];
     };
 
     _versions pushBack _version;
-} forEach CBA_common_addons;
+} forEach _files;
 
 TRACE_2("Filtered files and versions",_files,_versions);
 
