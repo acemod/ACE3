@@ -31,7 +31,7 @@ private _unitMagCounts = [];
     private _isRepackDisabled = getNumber (_configMagazine >> "ace_disableRepacking") == 1;
 
     //for every partial magazine, that is either in inventory or can be moved there
-    if ((!_isRepackDisabled) && {_xCount < _xFullMagazineCount} && {_xCount > 0} && {(!_xLoaded) || {GVAR(repackLoadedMagazines) && {[_player, _xClassname] call CBA_fnc_canAddItem}}}) then {
+    if ((!_isRepackDisabled) && {_xCount < _xFullMagazineCount} && {_xCount > 0} && {(!_xLoaded) || {GVAR(repackLoadedMagazines) && {_player canAdd [_xClassname, 1, true]}}}) then {
         private _index = _unitMagazines find _xClassname;
         if (_index == -1) then {
             _unitMagazines pushBack _xClassname;
