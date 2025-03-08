@@ -45,6 +45,7 @@ class CfgMagazines {
 
 ### 1.2 Setting the ammo
 
+{% raw %}
 ```cpp
 class CfgAmmo {
     class PipeBombBase;
@@ -61,6 +62,7 @@ class CfgAmmo {
     };
 };
 ```
+{% endraw %}
 
 ### 1.3 Adding the place item
 
