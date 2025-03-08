@@ -1,20 +1,21 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Check if unit has a mine detector in hands
+ * Checks if the unit has a mine detector.
  *
  * Arguments:
  * 0: Unit <OBJECT>
+ * 1: Detector type <STRING> (default: currentWeapon Unit)
  *
  * Return Value:
- * Current weapon is a mine detector <BOOLEAN>
+ * Current weapon is a mine detector <BOOL>
  *
  * Example:
- * [ace_player] call ace_minedetector_fnc_hasDetector
+ * player call ace_minedetector_fnc_hasDetector
  *
- * Public: No
+ * Public: Yes
  */
 
-params ["_unit"];
+params [["_unit", objNull, [objNull]]];
 
-([currentWeapon _unit] call FUNC(getDetectorConfig)) isNotEqualTo [];
+((param [1, currentWeapon _unit, [""]]) call FUNC(getDetectorConfig)) isNotEqualTo [] // return

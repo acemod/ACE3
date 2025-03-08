@@ -4,7 +4,7 @@ class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
         units[] = {};
-        weapons[] = {"ACE_VMH3","ACE_VMM3"};
+        weapons[] = {"ACE_VMH3", "ACE_VMM3"};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"ace_explosives"};
         author = ECSTRING(common,ACETeam);
