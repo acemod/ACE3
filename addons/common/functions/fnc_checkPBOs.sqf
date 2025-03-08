@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: commy2, johnb43
+ * Author: commy2, johnb43, Timi007
  * Used to execute the checkPBOs module without placing the module. Don't use this together with the module.
  * Checks PBO versions and compares to the one running on server.
  *
@@ -10,13 +10,13 @@
  *   1 = Warn permanently
  *   2 = Kick
  * 1: Check all PBOs? <BOOL> (default: false)
- * 2: Whitelist <STRING> (default: "")
+ * 2: Whitelist as list of addons. Regex patterns can be used to match addons. Addon name will be matched case-insensitive by default. <STRING> (default: "")
  *
  * Return Value:
  * None
  *
  * Example:
- * [0, false, ""] call ace_common_fnc_checkPBOs
+ * [0, true, "acex_headless,cba_.*"] call ace_common_fnc_checkPBOs
  *
  * Public: Yes
  */
@@ -24,10 +24,9 @@
 params ["_mode", ["_checkAll", false], ["_whitelist", "", [""]]];
 TRACE_3("params",_mode,_checkAll,_whitelist);
 
-// Lowercase and convert whiteList string into array of strings
-_whitelist = toLowerANSI _whitelist;
+// Convert whitelist string into array of strings
 _whitelist = _whitelist splitString "[,""']";
-TRACE_1("Array",_whitelist);
+TRACE_1("whitelist",_whitelist);
 
 ACE_Version_CheckAll = _checkAll;
 ACE_Version_Whitelist = _whitelist;
