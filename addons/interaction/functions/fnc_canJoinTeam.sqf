@@ -11,7 +11,7 @@
  * Able to join a team <BOOL>
  *
  * Example:
- * [player, target] call ace_interaction_fnc_canJoinTeam
+ * [player, cursorObject] call ace_interaction_fnc_canJoinTeam
  *
  * Public: No
  */
@@ -19,5 +19,5 @@
 params ["_unit", "_target"];
 
 _target call EFUNC(common,isAwake)
-&& {!([_target] call EFUNC(common,isPlayer))}
-&& {_target in units group _unit}
+&& {!(_target call EFUNC(common,isPlayer))}
+&& {_target in units _unit}

@@ -12,19 +12,21 @@
  * Unit can pass magazine <BOOL>
  *
  * Example:
- * [_player, _target, "arifle_MX_F"] call ace_interaction_fnc_canPassMagazine
+ * [player, cursorObject, "arifle_MX_F"] call ace_interaction_fnc_canPassMagazine
  *
  * Public: No
  */
+
 params ["_player", "_target", "_weapon"];
 
-if (!GVAR(enableMagazinePassing)) exitWith {false};
-if (_weapon isEqualTo "" || {!(_target call EFUNC(common,isAwake))}) exitWith {false};
-if ((!isNull objectParent _target) && {(vehicle _target) != (vehicle _player)}) exitWith {false};
+GVAR(enableMagazinePassing) &&
+{_weapon != ""} &&
+{_target call EFUNC(common,isAwake)} &&
+{(objectParent _target) isEqualTo (objectParent _player)} &&
+{
+    private _compatibleMags = compatibleMagazines _weapon;
 
-private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
-
-(magazinesAmmoFull _player) findIf {
-    _x params ["_className", "", "_loaded"];
-    (_className in _compatibleMags) && {!_loaded} && {[_target, _className] call CBA_fnc_canAddItem}
-} > -1
+    ([_player, 2] call EFUNC(common,uniqueItems)) findIf {
+        _x in _compatibleMags && {_target canAdd [_x, 1, true]}
+    } != -1
+}

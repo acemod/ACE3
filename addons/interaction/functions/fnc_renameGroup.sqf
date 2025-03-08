@@ -8,7 +8,7 @@
  * 1: The new name of the group <STRING>
  *
  * Return Value:
- * Whether the group was succesfully renamed <BOOL>
+ * Whether the group was successfully renamed <BOOL>
  *
  * Example:
  * [group player, "leet squad"] call ace_interaction_fnc_renameGroup
@@ -16,19 +16,15 @@
  * Public: No
  */
 
-params [
-    ["_group", grpNull, [grpNull]],
-    ["_newName", "", [""]]
-];
+params ["_group", "_newName"];
+
 if (_newName isEqualTo (groupId _group)) exitWith {true};
 
-private _lowerName = toLower _newName; // Case insensitive name search
 private _nameAlreadyTaken = allGroups findIf {
     side _x isEqualTo side _group
-    && {_lowerName isEqualTo toLower (groupId _x)}
+    && {_newName == groupId _x}
     && {_group != _x}
 } != -1;
-
 
 if (_nameAlreadyTaken) then {
     [LLSTRING(RenameGroupAlreadyExists)] call EFUNC(common,displayTextStructured);

@@ -18,9 +18,9 @@
 
 params ["_body", "_unit"];
 
-private _vehicle = objectParent _body; // vehicle command doesn't work for dead
+private _vehicle = objectParent _body; // Vehicle command doesn't work for dead
 
-// get target crew properties
+// Get target crew properties
 private ["_cargoIndex", "_turretPath"];
 private _cargoNumber = -1;
 {
@@ -36,7 +36,7 @@ TRACE_3("",_cargoIndex,_cargoNumber,_turretPath);
 
 private _preserveEngineOn = false;
 
-// first get in to target seat
+// First get in to target seat
 if (_turretPath isNotEqualTo []) then {
     _unit action ["GetInTurret", _vehicle, _turretPath];
 } else {
@@ -48,7 +48,7 @@ if (_turretPath isNotEqualTo []) then {
     };
 };
 
-// then get out
+// Then get out
 [
     {(_this select 0) in (_this select 1)},
     {

@@ -20,9 +20,8 @@
 
 params ["_player", "_target", "_throwable"];
 
-if (!GVAR(enableThrowablePassing)) exitWith {false};
-if (_throwable isEqualTo "") exitWith {false};
-if !(_target call EFUNC(common,isAwake)) exitWith {false};
-if ((!isNull objectParent _target) && {(vehicle _target) isNotEqualTo (vehicle _player)}) exitWith {false};
-
-[_target, _throwable] call CBA_fnc_canAddItem
+GVAR(enableThrowablePassing) &&
+{_throwable != ""} &&
+{(objectParent _target) isEqualTo (objectParent _player)} &&
+{_target call EFUNC(common,isAwake)} &&
+{_target canAdd [_throwable, 1, true]}

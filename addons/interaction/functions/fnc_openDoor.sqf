@@ -46,7 +46,7 @@ if ((_house animationPhase (_animations select 0) <= 0) &&
     TRACE_3("locked",_house,_lockedAnimation,isClass (configOf _house >> "AnimationSources" >> _lockedAnimation));
     if (isClass (configOf _house >> "AnimationSources" >> _lockedAnimation)) then {
         // from: a3\structures_f\scripts\fn_door.sqf: - wiggles the door handle (A3 buildings)
-        _house animateSource [_lockedAnimation, (1 - (_house animationSourcePhase _lockedAnimation))];
+        _house animateSource [_lockedAnimation, 1 - (_house animationSourcePhase _lockedAnimation)];
     };
 };
 
@@ -69,29 +69,34 @@ GVAR(usedScrollWheel) = false;
 [{
     (_this select 0) params ["_house", "_animations", "_position", "_time", "_frame", "_door"];
 
-    if !(GVAR(isOpeningDoor)) exitWith {
+    if (!GVAR(isOpeningDoor)) exitWith {
         [_this select 1] call CBA_fnc_removePerFrameHandler;
 
-        // didn't use incremental opening. Just do animation normally.
-        if !(GVAR(usedScrollWheel)) then {
+        // Didn't use incremental opening. Just do animation normally.
+        if (!GVAR(usedScrollWheel)) then {
             private _phase = parseNumber (_house animationPhase (_animations select 0) < 0.5);
 
-            {_house animate [_x, _phase]} forEach _animations;
+            {
+                _house animate [_x, _phase];
+            } forEach _animations;
         };
 
         // Raise local stopped opening event
         [QGVAR(doorOpeningStopped), [_house, _door, _animations]] call CBA_fnc_localEvent;
     };
 
-    // check if player moved too far away
+    // Check if player moved too far away
     if (getPosASL ACE_player distance _position > 1) exitWith {
         GVAR(isOpeningDoor) = false;
     };
 
-    // this allows for holding the door in it's current state.
+    // This allows for holding the door in it's current state
     if (CBA_missionTime > _time && {diag_frameNo > _frame}) then {
         GVAR(usedScrollWheel) = true;
     };
-    // do incremental door opening
-    {_house animate [_x, GVAR(doorTargetPhase)]} forEach _animations;
+
+    // Do incremental door opening
+    {
+        _house animate [_x, GVAR(doorTargetPhase)];
+    } forEach _animations;
 }, 0.1, [_house, _animations, getPosASL ACE_player, CBA_missionTime + 0.2, diag_frameNo + 2, _door]] call CBA_fnc_addPerFrameHandler;

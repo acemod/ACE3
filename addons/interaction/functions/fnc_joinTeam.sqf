@@ -17,11 +17,11 @@
  * Public: No
  */
 
-params ["_unit", "_team", ["_displayHint", false, [false]]];
+params ["_unit", "_team", ["_displayHint", false]];
 
 _unit assignTeam _team;
 
-// display message
+// Display message
 if (_displayHint && {_unit == ACE_player}) then {
     private _team = localize format ["str_team_%1", _team];
     private _message = format [LLSTRING(JoinedTeam), _team];

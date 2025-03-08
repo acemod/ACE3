@@ -12,7 +12,7 @@
  * 1: Door Name <STRING>
  *
  * Example:
- * [player, target] call ace_interaction_fnc_getDoor
+ * 2 call ace_interaction_fnc_getDoor
  *
  * Public: No
  */
@@ -37,7 +37,7 @@ private _door = toLowerANSI (_intersections select 0 select 0);
 
 if (isNil "_door") exitWith {[_house, ""]};
 
-//Check if door is glass because then we need to find the proper location of the door so we can use it
+// Check if door is glass because then we need to find the proper location of the door so we can use it
 if ((_door find "glass") != -1) then {
     _door = [_distance, _house, _door] call FUNC(getGlassDoor);
 };
