@@ -4607,7 +4607,7 @@
             <Polish>Czas w sekundach potrzebny na aplikację transfuzji IV.</Polish>
             <Portuguese>Tempo, em segundos, necessário para administrar uma bolsa de IV.</Portuguese>
             <Russian>Время, необходимое для применения пакета внутривенного переливания (в секундах).</Russian>
-            <German>Zeit in Sekunden, die benötigt wird, um ein Infusionsbeutel zu verabreichen.</German>
+            <German>Zeit in Sekunden, die benötigt wird, um einen Infusionsbeutel zu verabreichen.</German>
             <Korean>초 단위로 수액용기를 사용하는 데 걸리는 시간을 정합니다.</Korean>
             <Japanese>点滴の投与に掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>使用静脉输液所需的时间（秒）</Chinesesimp>
