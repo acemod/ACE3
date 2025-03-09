@@ -48,7 +48,7 @@
             <English>Attack Heading</English>
             <French>Vecteur d'attaque</French>
             <Italian>Prua d'attacco</Italian>
-            <German>Anriffsrichtung</German>
+            <German>Angriffsrichtung</German>
             <Korean>공격 방향</Korean>
             <Japanese>攻撃方位</Japanese>
             <Russian>Направление атаки</Russian>
@@ -75,7 +75,7 @@
             <English>Impact Angle</English>
             <French>Angle d'impact</French>
             <Italian>Angolo d'impatto</Italian>
-            <German>Aufschlagswinkel</German>
+            <German>Einschlagswinkel</German>
             <Korean>충돌 각도</Korean>
             <Japanese>弾着角</Japanese>
             <Russian>Угол удара</Russian>

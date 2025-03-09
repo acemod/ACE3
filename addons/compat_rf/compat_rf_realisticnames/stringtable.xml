@@ -707,7 +707,7 @@
             <Polish>HEMTT (wersja pożarnicza)</Polish>
             <Portuguese>HEMTT contra incêndio</Portuguese>
             <Russian>Пожарная машина HEMTT</Russian>
-            <German>HEMTT (Löschfahrzeug)</German>
+            <German>HEMTT-Löschfahrzeug</German>
             <Korean>HEMTT 소방트럭</Korean>
             <Japanese>HEMTT (消防車)</Japanese>
             <Chinesesimp>HEMTT 消防卡车</Chinesesimp>
@@ -716,7 +716,7 @@
             <English>Typhoon Cargo</English>
             <French>Typhoon Cargo</French>
             <Italian>Typhoon Carico</Italian>
-            <German>Typhoon (Fracht)</German>
+            <German>Typhoon Fracht</German>
             <Korean>타이푼 화물</Korean>
             <Japanese>タイフーン (貨物)</Japanese>
         </Key>
@@ -725,7 +725,7 @@
             <French>Typhoon Water</French>
             <Spanish>Typhoon Water</Spanish>
             <Italian>Typhoon Acqua</Italian>
-            <German>Typhoon (Wasser)</German>
+            <German>Typhoon Wasser</German>
             <Korean>타이푼 급수</Korean>
             <Japanese>タイフーン (給水車)</Japanese>
         </Key>
