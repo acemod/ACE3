@@ -148,6 +148,7 @@
             <English>Show medical wounds</English>
             <French>Montrer les blessures médicales</French>
             <Italian>Mostra ferite del sistema medico</Italian>
+            <German>Zeige Verwundungen</German>
             <Korean>의료 부상 표시</Korean>
             <Japanese>医療の負傷を表示</Japanese>
             <Russian>Показать медицинские раны</Russian>
@@ -156,6 +157,7 @@
             <English>Wounded: %1 from %2</English>
             <French>Blessé : %1 à partir de %2</French>
             <Italian>Ferito: %1 da %2</Italian>
+            <German>Verwundet: %1 von %2</German>
             <Korean>%1이(가) %2에 의해 부상당함</Korean>
             <Japanese>負傷した: %1 を %2 によって</Japanese>
             <Russian>Ранен: %1 от % 2</Russian>

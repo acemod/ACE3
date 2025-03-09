@@ -1051,6 +1051,7 @@
             <Korean>인계철선 조명지뢰 (녹색)</Korean>
             <Japanese>仕掛け線信号地雷 (緑)</Japanese>
             <Russian>Сигнальная растяжка (Зелёная)</Russian>
+            <German>Stolperdraht-Leuchtrakete (Grün)</German>
         </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Name_Red">
             <English>Tripwire Flare (Red)</English>
@@ -1059,6 +1060,7 @@
             <Korean>인계철선 조명지뢰 (적색)</Korean>
             <Japanese>仕掛け線信号地雷 (赤)</Japanese>
             <Russian>Сигнальная растяжка (Красная)</Russian>
+            <German>Stolperdraht-Leuchtrakete (Rot)</German>
         </Key>
         <Key ID="STR_ACE_Explosives_TripWire">
             <English>Tripwire</English>
@@ -1084,6 +1086,7 @@
             <Korean>인계철선 - 공중폭발</Korean>
             <Japanese>仕掛け線 - 空中炸裂</Japanese>
             <Russian>Растяжка - Воздушный взрыв</Russian>
+            <German>Stolperdraht - Luftdetonation</German>
         </Key>
         <Key ID="STR_ACE_Explosives_apersToePopper">
             <English>APERS Mine (Toe-Popper)</English>
@@ -1093,6 +1096,7 @@
             <Korean>대인지뢰 (발목지뢰형)</Korean>
             <Japanese>対人地雷 (トウポッパー)</Japanese>
             <Chinesesimp>反人员地雷 (脚尖毁灭者)</Chinesesimp>
+            <German>APERS Mine (Toe-Popper)</German>
         </Key>
         <Key ID="STR_ACE_Explosives_cellphone_description">
             <English>Used to remotely trigger explosives</English>
