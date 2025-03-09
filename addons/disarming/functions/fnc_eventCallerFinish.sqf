@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [player, cursorTarget, "Someting fucked up"] call ace_disarming_fnc_eventCallerFinish
+ * [player, cursorTarget, "Something fucked up"] call ace_disarming_fnc_eventCallerFinish
  *
  * Public: No
  */
