@@ -333,6 +333,7 @@
             <English>XMS (Stripes)</English>
             <French>XMS (Rayé)</French>
             <Italian>XMS (Strisce)</Italian>
+            <German>XMS (Gestreift)</German>
             <Korean>XMS (줄무늬 위장)</Korean>
             <Japanese>XMS (縞模様迷彩)</Japanese>
         </Key>
@@ -340,6 +341,7 @@
             <English>XMS GL (Stripes)</English>
             <French>XMS GL (Rayé)</French>
             <Italian>XMS GL (Strisce)</Italian>
+            <German>XMS GL (Gestreift)</German>
             <Korean>XMS GL (줄무늬 위장)</Korean>
             <Japanese>XMS GL (縞模様迷彩)</Japanese>
         </Key>
@@ -347,6 +349,7 @@
             <English>XMS GL (Gray)</English>
             <French>XMS GL (Gris)</French>
             <Italian>XMS GL (Grigio)</Italian>
+            <German>XMS GL (Grau)</German>
             <Korean>XMS GL (회색)</Korean>
             <Japanese>XMS GL (グレー)</Japanese>
         </Key>
@@ -357,7 +360,7 @@
             <Italian>XMS GL (Cachi)</Italian>
             <Portuguese>XMS GL (Cáqui)</Portuguese>
             <Russian>XMS GL (хаки)</Russian>
-            <German>XMS GL (khaki)</German>
+            <German>XMS GL (Khaki)</German>
             <Korean>XMS GL (카키)</Korean>
             <Japanese>XMS GL (カーキ)</Japanese>
             <Chinesesimp>XMS GL（卡其色）</Chinesesimp>
@@ -390,6 +393,7 @@
             <English>XMS (Gray)</English>
             <French>XMS (Gris)</French>
             <Italian>XMS (Grigio)</Italian>
+            <German>XMS (Grau)</German>
             <Korean>XMS (회색)</Korean>
             <Japanese>XMS (グレー)</Japanese>
         </Key>
@@ -400,7 +404,7 @@
             <Italian>XMS (Cachi)</Italian>
             <Portuguese>XMS (Cáqui)</Portuguese>
             <Russian>XMS (хаки)</Russian>
-            <German>XMS (khaki)</German>
+            <German>XMS (Khaki)</German>
             <Korean>XMS (카키)</Korean>
             <Japanese>XMS (カーキ)</Japanese>
             <Chinesesimp>XMS（卡其色）</Chinesesimp>
@@ -421,6 +425,7 @@
             <English>XMS SG (Stripes)</English>
             <French>XMS SG (Rayé)</French>
             <Italian>XMS SG (Strisce)</Italian>
+            <German>XMS SG (Gestreift)</German>
             <Korean>XMS SG (줄무늬 위장)</Korean>
             <Japanese>XMS SG (縞模様迷彩)</Japanese>
         </Key>
@@ -428,6 +433,7 @@
             <English>XMS SG (Gray)</English>
             <French>XMS SG (Gris)</French>
             <Italian>XMS SG (Grigio)</Italian>
+            <German>XMS SG (Grau)</German>
             <Korean>XMS SG (회색)</Korean>
             <Japanese>XMS SG (グレー)</Japanese>
         </Key>
@@ -438,7 +444,7 @@
             <Italian>XMS SG (Cachi)</Italian>
             <Portuguese>XMS SG (Cáqui)</Portuguese>
             <Russian>XMS SG (хаки)</Russian>
-            <German>XMS SG (khaki)</German>
+            <German>XMS SG (Khaki)</German>
             <Korean>XMS SG (카키)</Korean>
             <Japanese>XMS SG (カーキ)</Japanese>
             <Chinesesimp>XMS SG（卡其色）</Chinesesimp>
@@ -471,6 +477,7 @@
             <English>XMS SW (Stripes)</English>
             <French>XMS SW (Rayé)</French>
             <Italian>XMS SW (Strisce)</Italian>
+            <German>XMS SW (Gestreift)</German>
             <Korean>XMS SW (줄무늬 위장)</Korean>
             <Japanese>XMS SW (縞模様迷彩)</Japanese>
         </Key>
@@ -478,6 +485,7 @@
             <English>XMS SW (Gray)</English>
             <French>XMS SW (Gris)</French>
             <Italian>XMS SW (Grigio)</Italian>
+            <German>XMS SW (Grau)</German>
             <Korean>XMS SW (회색)</Korean>
             <Japanese>XMS SW (グレー)</Japanese>
         </Key>
@@ -488,7 +496,7 @@
             <Italian>XMS SW (Cachi)</Italian>
             <Portuguese>XMS SW (Cáqui)</Portuguese>
             <Russian>XMS SW (хаки)</Russian>
-            <German>XMS SW (khaki)</German>
+            <German>XMS SW (Khaki)</German>
             <Korean>XMS SW (카키)</Korean>
             <Japanese>XMS SW (カーキ)</Japanese>
             <Chinesesimp>XMS SW（卡其色）</Chinesesimp>
@@ -533,6 +541,7 @@
             <English>C-More Railway (Red, Stripes)</English>
             <French>C-More Railway (Rouge, Rayé)</French>
             <Italian>C-More Railway (Rosso, Strisce)</Italian>
+            <German>C-More Railway (Rot, Gestreift)</German>
             <Korean>씨모어 레일웨이 (빨강/줄무늬 위장)</Korean>
             <Japanese>C-More レイルウェイ (レッド、縞模様迷彩)</Japanese>
         </Key>
@@ -540,6 +549,7 @@
             <English>C-More Railway (Green, Stripes)</English>
             <French>C-More Railway (Vert, Rayé)</French>
             <Italian>C-More Railway (Verde, Strisce)</Italian>
+            <German>C-More Railway (Grün, Gestreift)</German>
             <Korean>씨모어 레일웨이 (초록/줄무늬 위장)</Korean>
             <Japanese>C-More レイルウェイ (グリーン、縞模様迷彩)</Japanese>
         </Key>
