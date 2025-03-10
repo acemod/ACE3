@@ -1,12 +1,11 @@
-//The disarming dialog
-//Meant to mimic the real BIS inventory (so people understand how to use it)
-
+// The disarming dialog
+// Meant to mimic the real BIS inventory (so people understand how to use it)
 class RscText;
 class RscPicture;
 class RscActiveText;
 class RscListBox;
 
-//Use the definese from
+// Use the definitions from
 #define X_BIS(num) (num * (((safeZoneW / safeZoneH) min 1.2) / 40) + (safeZoneX + (safeZoneW - ((safeZoneW / safeZoneH) min 1.2))/2))
 #define Y_BIS(num) (num * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (safeZoneY + (safeZoneH - (((safeZoneW / safeZoneH) min 1.2) / 1.2))/2))
 #define W_BIS(num) (num * (((safeZoneW / safeZoneH) min 1.2) / 40))
@@ -17,10 +16,10 @@ class RscListBox;
 #define W_MAKEITBIGGA(num) (num * (safeZoneH / 40))
 #define H_MAKEITBIGGA(num) (num * (safeZoneH / 30))
 
-#define X_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QEGVAR(inventory,inventoryDisplaySize)),0)]),X_BIS(num),X_MAKEITBIGGA(num))])
-#define Y_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QEGVAR(inventory,inventoryDisplaySize)),0)]),Y_BIS(num),Y_MAKEITBIGGA(num))])
-#define W_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QEGVAR(inventory,inventoryDisplaySize)),0)]),W_BIS(num),W_MAKEITBIGGA(num))])
-#define H_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QUOTE(QEGVAR(inventory,inventoryDisplaySize)),0)]),H_BIS(num),H_MAKEITBIGGA(num))])
+#define X_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QQEGVAR(inventory,inventoryDisplaySize),0)]),X_BIS(num),X_MAKEITBIGGA(num))])
+#define Y_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QQEGVAR(inventory,inventoryDisplaySize),0)]),Y_BIS(num),Y_MAKEITBIGGA(num))])
+#define W_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QQEGVAR(inventory,inventoryDisplaySize),0)]),W_BIS(num),W_MAKEITBIGGA(num))])
+#define H_PART(num) QUOTE(linearConversion [ARR_5(0,2,(missionNamespace getVariable [ARR_2(QQEGVAR(inventory,inventoryDisplaySize),0)]),H_BIS(num),H_MAKEITBIGGA(num))])
 
 class GVAR(remoteInventory) {
     idd = -1;

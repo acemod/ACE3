@@ -1,10 +1,9 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- *
  * Verifies magazines moved with exact ammo counts preserved.
  * Arrays will be in format from magazinesAmmo/magazinesAmmoCargo
- * e.g.: [["30Rnd_65x39_caseless_mag",15], ["30Rnd_65x39_caseless_mag",30]]
+ * e.g.: [["30Rnd_65x39_caseless_mag", 15], ["30Rnd_65x39_caseless_mag", 30]]
  *
  * Arguments:
  * 0: Start on container A <ARRAY>
@@ -23,18 +22,18 @@
 
 params ["_startA", "_endA", "_startB", "_endB"];
 
-//Quick Lazy Count Check
+// Quick Lazy Count Check
 if (((count _startA) + (count _startB)) != ((count _endA) + (count _endB))) exitWith {
-    false
+    false // return
 };
 
-private _beginingArray = (_startA + _startB);
+private _beginningArray = _startA + _startB;
 
 private _problem = false;
 {
-    private _index = _beginingArray find _x;
+    private _index = _beginningArray find _x;
     if (_index == -1) exitWith {_problem = true;};
-    _beginingArray deleteAt _index;
+    _beginningArray deleteAt _index;
 } forEach (_endA + _endB);
 
-(!_problem) && {_beginingArray isEqualTo []}
+!_problem && {_beginningArray isEqualTo []} // return

@@ -1,15 +1,14 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- *
- * Checks the conditions for being able to disarm a unit
+ * Checks the conditions for being able to disarm a unit.
  *
  * Arguments:
- * 0: Player <OBJECT>
+ * 0: Caller <OBJECT>
  * 1: Target <OBJECT>
  *
  * Return Value:
- * Can Be Disarm Target <BOOL>
+ * Can target be disarmed? <BOOL>
  *
  * Example:
  * [player, cursorTarget] call ace_disarming_fnc_canPlayerDisarmUnit
@@ -17,7 +16,8 @@
  * Public: No
  */
 
-params ["_player", "_target"];
+params ["_caller", "_target"];
 
-([_target] call FUNC(canBeDisarmed)) &&
-{([_player, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith))}
+(objectParent _caller) isEqualTo (objectParent _target) &&
+{_target call FUNC(canBeDisarmed)} &&
+{[_caller, _target, ["isNotSwimming"]] call EFUNC(common,canInteractWith)}
