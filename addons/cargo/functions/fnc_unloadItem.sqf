@@ -4,7 +4,7 @@
  * Unloads an object from a vehicle.
  *
  * Arguments:
- * 0: Item to be unloaded <STRING> or <OBJECT> (default: "")
+ * 0: Item to be unloaded <STRING or OBJECT> (default: "")
  * 1: Holder object (vehicle) <OBJECT> (default: objNull)
  * 2: Unloader <OBJECT> (default: objNull)
  * 3: Deploy parameters <ARRAY> (default: [])

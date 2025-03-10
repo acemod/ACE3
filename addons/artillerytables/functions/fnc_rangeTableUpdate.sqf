@@ -1,10 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Called when listbox selection changes.  Updates the rangetable with new values.
+ * Called when listbox selection changes.  Updates the range table with new values.
  *
  * Arguments:
- * 0: Elevation Mode (true = high,false=low) <BOOL><OPTIONAL>
+ * 0: Elevation Mode (true = high, false=low) <BOOL> (default: Last elevation mode)
  *
  * Return Value:
  * None

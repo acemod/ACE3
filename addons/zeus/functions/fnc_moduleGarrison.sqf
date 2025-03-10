@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Module logic <OBJECT>
- * 1: Position of the module <POSITION>
+ * 1: Position of the module <ARRAY>
  * 2: Radius of the task <NUMBER>
  * 3: Filling mode of the garrison function <NUMBER>
  * 4: Enable or not top down filling <BOOL>
