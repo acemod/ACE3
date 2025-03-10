@@ -10,8 +10,8 @@ class CfgWeapons {
         author = ECSTRING(common,ACETeam);
         displayName = "VMM3";
         descriptionShort = CSTRING(VMM3_Description);
-        model = QUOTE(PATHTOF(ace_wallon_vmm3.p3d));
-        picture = QUOTE(PATHTOF(data\equip\w_vmm3_ca.paa));
+        model = QPATHTOF(ace_wallon_vmm3.p3d);
+        picture = QPATHTOF(data\equip\w_vmm3_ca.paa);
         magazines[] = { };
         modes[] = { "Single" };
         cursor = "EmptyCursor";
@@ -43,8 +43,8 @@ class CfgWeapons {
         scope = 2;
         displayName = "VMH3";
         author = ECSTRING(common,ACETeam);
-        model = QUOTE(PATHTOF(ace_wallon_vmh3.p3d));
-        picture = QUOTE(PATHTOF(data\equip\w_vmh3_ca.paa));
+        model = QPATHTOF(ace_wallon_vmh3.p3d);
+        picture = QPATHTOF(data\equip\w_vmh3_ca.paa);
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 55;
         };
