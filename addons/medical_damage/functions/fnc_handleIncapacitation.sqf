@@ -20,7 +20,7 @@ params ["_unit"];
 private _painLevel = GET_PAIN_PERCEIVED(_unit);
 private _bodyPartDamage = GET_BODYPART_DAMAGE(_unit);
 
-_bodyPartDamage params ["_headDamage", "_bodyDamage"];
+_bodyPartDamage params ["_headDamage", "_neckDamage", "_chestDamage","_bodyDamage"];
 
 // Exclude non penetrating body damage
 {
