@@ -147,14 +147,18 @@
         <Key ID="STR_ACE_KillTracker_showMedicalWounds_DisplayName">
             <English>Show medical wounds</English>
             <French>Montrer les blessures médicales</French>
+            <Italian>Mostra ferite del sistema medico</Italian>
             <Korean>의료 부상 표시</Korean>
             <Japanese>医療の負傷を表示</Japanese>
+            <Russian>Показать медицинские раны</Russian>
         </Key>
         <Key ID="STR_ACE_KillTracker_wounded">
             <English>Wounded: %1 from %2</English>
             <French>Blessé : %1 à partir de %2</French>
+            <Italian>Ferito: %1 da %2</Italian>
             <Korean>%1이(가) %2에 의해 부상당함</Korean>
             <Japanese>負傷した: %1 を %2 によって</Japanese>
+            <Russian>Ранен: %1 от % 2</Russian>
         </Key>
     </Package>
 </Project>
