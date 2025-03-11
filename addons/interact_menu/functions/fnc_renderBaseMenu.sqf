@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Object <OBJECT>
  * 1: Action node <ARRAY>
- * 2: 3D position or 2D position <ARRAY> (Optional)
+ * 2: 3D position or 2D position <ARRAY> (default: Get position from action data)
  *
  * Return Value:
  * Was the menu rendered <BOOL>

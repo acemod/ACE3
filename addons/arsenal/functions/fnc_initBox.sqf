@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Target <OBJECT>
- * 1: Items <BOOL> <ARRAY>
+ * 1: Items <BOOL or ARRAY of STRINGs>
  * 2: Initialize globally <BOOL> (default: true)
  *
  * Return Value:
