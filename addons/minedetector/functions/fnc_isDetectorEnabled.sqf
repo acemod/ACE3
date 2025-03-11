@@ -24,4 +24,4 @@ if (!alive _unit) exitWith {
 
 private _detectorType = param [1, currentWeapon _unit, [""]];
 
-_detectorType != "" && {_unit getVariable [format [QGVAR(enable_%1), _detectorType], false]} // return
+_detectorType != "" && {(_unit getVariable [format [QGVAR(enable_%1), _detectorType], false]) isEqualTo [_unit, true]} // return

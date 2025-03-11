@@ -33,7 +33,7 @@ if (_currentWeapon != _detectorType) then {
 };
 
 // This prevents multiple PFH for the same weapon
-_unit setVariable [format [QGVAR(enable_%1), _detectorType], true, true];
+_unit setVariable [format [QGVAR(enable_%1), _detectorType], [_unit, true], true];
 
 if (_unit == ACE_player) then {
     playSoundUI ["ACE_Sound_Click"];

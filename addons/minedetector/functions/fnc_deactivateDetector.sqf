@@ -26,7 +26,7 @@ private _detectorType = param [1, currentWeapon _unit, [""]];
 
 if (_detectorType == "" || {!([_unit, _detectorType] call FUNC(canDeactivateDetector))}) exitWith {false};
 
-_unit setVariable [format [QGVAR(enable_%1), _detectorType], false, true];
+_unit setVariable [format [QGVAR(enable_%1), _detectorType], nil, true];
 
 if (alive _unit && {_unit == ACE_player}) then {
     playSoundUI ["ACE_Sound_Click"];

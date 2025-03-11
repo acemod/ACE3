@@ -17,7 +17,7 @@ addMissionEventHandler ["Draw3D", {
     {
         private _name = format ["%1@%2", typeOf _x, (floor ((_x distance _detectorPointAGL) * 10)) / 10];
 
-        drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", [[1, 1, 0, 1], [1, 0, 0, 1]] select (getNumber (configOf _x >> QGVAR(detectable)) == 1), ASLtoAGL (getPosASL _x), 1, 1, 0, _name, 1, 0.02, "PuristaMedium"];
+        drawIcon3D ["\A3\ui_f\data\map\markers\military\dot_CA.paa", [[1, 1, 0, 1], [1, 0, 0, 1]] select (getNumber (configOf _x >> QGVAR(detectable)) == 1), ASLToAGL (getPosASL _x), 1, 1, 0, _name, 1, 0.02, "PuristaMedium"];
     } forEach _mines;
 }];
 #endif
