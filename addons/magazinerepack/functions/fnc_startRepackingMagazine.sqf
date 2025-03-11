@@ -39,7 +39,7 @@ private _startingAmmoCounts = [];
     if (_xClassname == _magazineClassname && {_xCount != _fullMagazineCount && {_xCount > 0}}) then {
         if (_xLoaded) then {
             //Try to Remove from weapon and add to inventory, otherwise ignore
-            if (GVAR(repackLoadedMagazines) && {[_player, _magazineClassname] call CBA_fnc_canAddItem}) then {
+            if (GVAR(repackLoadedMagazines) && {_player canAdd [_magazineClassname, 1, true]}) then {
                 switch (_xType) do {
                     case (1): {_player removePrimaryWeaponItem _magazineClassname};
                     case (2): {_player removeHandgunItem _magazineClassname};
@@ -59,7 +59,7 @@ private _startingAmmoCounts = [];
 if (count _startingAmmoCounts < 2) exitWith {ERROR("Not Enough Mags to Repack");};
 
 private _simEvents = [_fullMagazineCount, _startingAmmoCounts, _isBelt] call FUNC(simulateRepackEvents);
-private _totalTime = _simEvents select (count _simEvents - 1) select 0;
+private _totalTime = _simEvents select -1 select 0;
 
 if (GVAR(repackAnimation)) then {
     [_player, "Gear"] call EFUNC(common,doGesture);
