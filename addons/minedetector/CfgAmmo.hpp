@@ -1,5 +1,4 @@
 class CfgAmmo {
-    // these below do get inherited
     class DirectionalBombCore;
     class DirectionalBombBase: DirectionalBombCore {
         GVAR(detectable) = 1;
