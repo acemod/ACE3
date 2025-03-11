@@ -435,12 +435,12 @@ class CfgVehicles {
             class ACE_MainActions: ACE_MainActions {
                 class GVAR(flip) {
                     displayName = CSTRING(Flip);
-                    condition = QUOTE(_target call DFUNC(canFlip));
+                    condition = QUOTE(call DFUNC(canFlip));
                     statement = QUOTE([ARR_3(QQGVAR(flip),_target,_target)] call CBA_fnc_targetEvent);
                 };
                 class GVAR(push) {
                     displayName = CSTRING(Push);
-                    condition = QUOTE(_target call FUNC(canPush));
+                    condition = QUOTE(call FUNC(canPush));
                     statement = QUOTE(call FUNC(push));
                 };
             };
@@ -456,7 +456,7 @@ class CfgVehicles {
                 };
                 class GVAR(push) {
                     displayName = CSTRING(Push);
-                    condition = QUOTE(_target call FUNC(canPush));
+                    condition = QUOTE(call FUNC(canPush));
                     statement = QUOTE(call FUNC(push));
                 };
             };
@@ -715,7 +715,7 @@ class CfgVehicles {
                 class ACE_Push {
                     displayName = CSTRING(Push);
                     distance = 6;
-                    condition = QUOTE(_target call FUNC(canPush));
+                    condition = QUOTE(call FUNC(canPush));
                     statement = QUOTE(_this call FUNC(push));
                     exceptions[] = {"isNotSwimming"};
                     showDisabled = 0;

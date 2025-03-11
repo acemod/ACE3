@@ -4,7 +4,7 @@
  * Checks if vehicle can be flipped.
  *
  * Arguments:
- * 0: Vehicle <OBJECT>
+ * 0: Target <OBJECT>
  *
  * Return Value:
  * Can Flip <BOOL>
