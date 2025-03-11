@@ -16,6 +16,23 @@
             <Chinesesimp>对齐到</Chinesesimp>
             <Hungarian>Állítása</Hungarian>
         </Key>
+        <Key ID="STR_ACE_MapTools_Cancel">
+            <English>Cancel</English>
+            <Czech>Zrušit</Czech>
+            <French>Annuler</French>
+            <Spanish>Cancelar</Spanish>
+            <Italian>Annulla</Italian>
+            <Polish>Anuluj</Polish>
+            <Portuguese>Cancelar</Portuguese>
+            <Russian>Отменить</Russian>
+            <German>Abbrechen</German>
+            <Korean>취소</Korean>
+            <Japanese>中止</Japanese>
+            <Chinese>取消</Chinese>
+            <Chinesesimp>取消</Chinesesimp>
+            <Turkish>Iptal</Turkish>
+            <Hungarian>Mégse</Hungarian>
+        </Key>
         <Key ID="STR_ACE_MapTools_Description">
             <English>The Map Tools allow you to measure distances and angles on the map.</English>
             <Czech>Pomůcky k mapě slouží k měření vzdáleností a úhlů na mapě.</Czech>
@@ -33,6 +50,10 @@
             <Turkish>Harita Araçları, haritadaki mesafeleri ve açıları ölçmenize olanak tanır.</Turkish>
             <Hungarian>A térképészeti eszközökkel távolságokat és szögeket tudsz mérni a térképen.</Hungarian>
         </Key>
+        <Key ID="STR_ACE_MapTools_DrawRadius">
+            <English>Draw radius</English>
+            <Russian>Отрисовать по радиусу</Russian>
+        </Key>
         <Key ID="STR_ACE_MapTools_HidePlottingBoard">
             <English>Hide Plotting Board</English>
             <French>Masquer la planche traçante</French>
@@ -43,6 +64,10 @@
             <Korean>플로팅 보드 숨기기</Korean>
             <Japanese>標定盤を 隠す</Japanese>
             <Chinesesimp>隐藏绘图板</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_MapTools_InvalidRadius">
+            <English>Invalid radius</English>
+            <Russian>Некорректный радиус</Russian>
         </Key>
         <Key ID="STR_ACE_MapTools_MapGpsHide">
             <English>Hide GPS on Map</English>
@@ -494,31 +519,6 @@
             <Chinese>選轉地圖工具的按鍵</Chinese>
             <Chinesesimp>选转地图工具的按键</Chinesesimp>
             <Turkish>Harita Aracının Yönünü Değiştirme Tuşu</Turkish>
-        </Key>
-        <Key ID="STR_ACE_MapTools_DrawRadius">
-            <English>Draw radius</English>
-            <Russian>Отрисовать по радиусу</Russian>
-        </Key>
-        <Key ID="STR_ACE_MapTools_InvalidRadius">
-            <English>Invalid radius</English>
-            <Russian>Некорректный радиус</Russian>
-        </Key>
-        <Key ID="STR_ACE_MapTools_Cancel">
-            <English>Cancel</English>
-            <German>Abbrechen</German>
-            <Spanish>Cancelar</Spanish>
-            <Polish>Anuluj</Polish>
-            <French>Annuler</French>
-            <Czech>Zrušit</Czech>
-            <Italian>Annulla</Italian>
-            <Russian>Отменить</Russian>
-            <Portuguese>Cancelar</Portuguese>
-            <Hungarian>Mégse</Hungarian>
-            <Japanese>中止</Japanese>
-            <Korean>취소</Korean>
-            <Chinesesimp>取消</Chinesesimp>
-            <Chinese>取消</Chinese>
-            <Turkish>Iptal</Turkish>
         </Key>
     </Package>
 </Project>

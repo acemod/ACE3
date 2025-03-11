@@ -35,7 +35,7 @@ if (_addNew) then {
     _unit removeItem _newAttachment;
 };
 
-if (_removeOld && {!([_unit, _oldAttachment] call CBA_fnc_canAddItem)}) exitWith {
+if (_removeOld && {!(_unit canAdd [_oldAttachment, 1, true])}) exitWith {
     LOG("no space");
     [LELSTRING(common,Inventory_Full)] call EFUNC(common,displayTextStructured);
     if (_addNew) then {
