@@ -1,4 +1,4 @@
-#define BASE_DRAG -0.01
+#define BASE_DRAG (-0.01)
 #define HD_MULT 5
 #define BASE_DRAG_HD (BASE_DRAG * HD_MULT)
 
