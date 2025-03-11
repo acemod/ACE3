@@ -26,7 +26,7 @@ params ["_caller", "_target", "_listOfItemsToRemove", ["_doNotDropAmmo", false]]
 if !(_target call FUNC(canBeDisarmed)) exitWith {
     [_caller, _target, "Debug: Cannot disarm target"] call FUNC(eventTargetFinish);
 };
-if (_doNotDropAmmo && {(magazines _target) findIf {_x in _listOfItemsToRemove} != -1}) exitWith {
+if (_doNotDropAmmo && {_listOfItemsToRemove findAny (magazines _target) != -1}) exitWith {
     [_caller, _target, "Debug: Trying to drop magazine with _doNotDropAmmo flag"] call FUNC(eventTargetFinish);
 };
 
@@ -169,8 +169,8 @@ if (_holderIsEmpty) then {
     params ["_args", "_pfhID"];
     _args params ["_caller", "_target", "_listOfItemsToRemove", "_holder", "_holderIsEmpty", "_maxWaitTime", "_doNotDropAmmo", "_startingMagazines"];
 
-    private _needToRemoveWeapon = (weapons _target) findIf {_x in _listOfItemsToRemove} != -1;
-    private _needToRemoveMagazines = (magazines _target) findIf {_x in _listOfItemsToRemove} != -1;
+    private _needToRemoveWeapon = _listOfItemsToRemove findAny (weapons _target) != -1;
+    private _needToRemoveMagazines = _listOfItemsToRemove findAny (magazines _target) != -1;
     private _needToRemoveBackpack = ((backpack _target) != "") && {(backpack _target) in _listOfItemsToRemove};
     private _needToRemoveVest = ((vest _target) != "") && {(vest _target) in _listOfItemsToRemove};
     private _needToRemoveUniform = ((uniform _target) != "") && {(uniform _target) in _listOfItemsToRemove};
