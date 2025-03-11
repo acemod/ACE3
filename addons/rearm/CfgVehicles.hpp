@@ -4,8 +4,8 @@
             class GVAR(Rearm) { \
                 displayName = CSTRING(Rearm); \
                 distance = REARM_ACTION_DISTANCE; \
-                condition = QUOTE(_this call FUNC(canRearm)); \
-                statement = QUOTE(_this call FUNC(rearm)); \
+                condition = QUOTE(call FUNC(canRearm)); \
+                statement = QUOTE(call FUNC(rearm)); \
                 exceptions[] = {"isNotInside"}; \
                 icon = QPATHTOF(ui\icon_rearm_interact.paa); \
             }; \
@@ -164,8 +164,8 @@ class CfgVehicles {
             class ACE_MainActions {
                 displayName = CSTRING(PickUpAmmo);
                 distance = REARM_ACTION_DISTANCE;
-                condition = QUOTE(_this call FUNC(canTakeAmmo));
-                statement = QUOTE(_this call FUNC(grabAmmo));
+                condition = QUOTE(call FUNC(canTakeAmmo));
+                statement = QUOTE(call FUNC(grabAmmo));
                 exceptions[] = {"isNotInside"};
                 showDisabled = 0;
                 icon = QPATHTOF(ui\icon_rearm_interact.paa);

@@ -19,12 +19,12 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_FiredBIS_EventHandlers {
     class All {
-        ADDON = QUOTE(_this call FUNC(onFired));
+        ADDON = QUOTE(call FUNC(onFired));
     };
 };
 
 class Extended_IncomingMissile_EventHandlers {
     class All {
-        ADDON = QUOTE(_this call FUNC(onIncomingMissile));
+        ADDON = QUOTE(call FUNC(onIncomingMissile));
     };
 };

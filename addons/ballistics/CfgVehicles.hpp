@@ -5,7 +5,7 @@ class CfgVehicles {
         author = ECSTRING(common,ACETeam);
         scope = 0;
         class Eventhandlers {
-            init = QUOTE(_this call COMPILE_FILE(scripts\initTargetWall));
+            init = QUOTE(call COMPILE_FILE(scripts\initTargetWall));
             //hitPart = "systemChat str _this";
         };
     };
