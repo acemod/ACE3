@@ -19,7 +19,7 @@ params [
     ["_unit", objNull, [objNull]]
 ];
 
-private _uniqueItems = _unit call EFUNC(common,uniqueItems);
+private _uniqueItems = +(_unit call EFUNC(common,uniqueItems));
 _uniqueItems append weapons _unit;
 _uniqueItems pushBack backpack _unit;
 
