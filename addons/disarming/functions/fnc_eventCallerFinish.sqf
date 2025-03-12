@@ -1,19 +1,18 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- *
- * Recieves a possible error code from FUNC(eventTargetFinish)
+ * Receives a possible error code from FUNC(eventTargetFinish).
  *
  * Arguments:
- * 0: caller (player) <OBJECT>
- * 1: target <OBJECT>
- * 2: error message <STRING>
+ * 0: Caller <OBJECT>
+ * 1: Target <OBJECT>
+ * 2: Error message <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player1, player2, "Someting fucked up"] call ace_disarming_fnc_eventCallerFinish
+ * [player, cursorTarget, "Something fucked up"] call ace_disarming_fnc_eventCallerFinish
  *
  * Public: No
  */

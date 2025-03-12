@@ -20,7 +20,7 @@ params ["_unit", "_target"];
 TRACE_3("getInteractionDistance",_unit,_target,typeOf _target);
 
 // Handle Man, Crate
-if (!((_target isKindOf "Car") || {_target isKindOf "Tank"} || {_target isKindOf "Helicopter"} || {_target isKindOf "Plane"} || {_target isKindOf "Ship_F"})) exitWith {
+if !((_target isKindOf "Car") || {_target isKindOf "Tank"} || {_target isKindOf "Helicopter"} || {_target isKindOf "Plane"} || {_target isKindOf "Ship_F"}) exitWith {
     _unit distance _target
 };
 
