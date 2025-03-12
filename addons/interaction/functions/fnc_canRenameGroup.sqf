@@ -15,6 +15,6 @@
  * Public: No
  */
 
-params [["_unit", objNull, [objNull]]];
+params ["_unit"];
 
-GVAR(enableGroupRenaming) && {_unit == leader _unit}
+GVAR(enableGroupRenaming) && {leader _unit == _unit}
