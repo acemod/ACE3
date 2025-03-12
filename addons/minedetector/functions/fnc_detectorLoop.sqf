@@ -1,74 +1,54 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Handle mine detection in a PFH loop
+ * Handles mine detection in a PFH loop.
  *
  * Arguments:
- * 0: args <ARRAY>
- * 1: PHD Id <PFH_ID>
+ * 0: Args <ARRAY>
+ * 1: PFH Id <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [[args], 2] call ACE_minedetector_fnc_detectorLoop
+ * [[args], 2] call ace_minedetector_fnc_detectorLoop
  *
  * Public: No
  */
 
-params ["_args", "_idPFH"];
-_args params ["_unit", "_type", "_detectorConfig", "_lastPlayed"];
+params ["_args", "_pfhID"];
+_args params ["_unit", "_detectorType", "_detectorConfig", "_lastPlayed"];
 
-// If locality switched just turn off the detector
-if !(local _unit)  exitWith {
-    [QGVAR(disableDetector), [_unit, _type], _unit] call CBA_fnc_targetEvent;
-    [_idPFH] call CBA_fnc_removePerFrameHandler;
+// Check that the unis is in a valid state and if the unit hasn't switched weapons
+if (!alive _unit || {_unit != ACE_player} || {currentWeapon _unit != _detectorType}) exitWith {
+    [_unit, _detectorType] call FUNC(deactivateDetector);
+
+    _pfhID call CBA_fnc_removePerFrameHandler;
 };
 
-if !([_unit, _type] call FUNC(hasDetector)) exitWith {
-    // disable detector type
-    [_unit, _type] call FUNC(disableDetector);
-    [_idPFH] call CBA_fnc_removePerFrameHandler;
+if !([_unit, _detectorType] call FUNC(isDetectorEnabled)) exitWith {
+    _pfhID call CBA_fnc_removePerFrameHandler;
 };
 
-if (!alive _unit) exitWith {
-    [_unit, _type] call FUNC(disableDetector);
-    [_idPFH] call CBA_fnc_removePerFrameHandler;
-};
-
-if !([_unit, _type] call FUNC(isDetectorEnabled)) exitWith {
-    [_idPFH] call CBA_fnc_removePerFrameHandler;
-};
-
-if (currentWeapon _unit != _type) exitWith {
-    [_unit, _type] call FUNC(disableDetector);
-    [_idPFH] call CBA_fnc_removePerFrameHandler;
-};
-
-private _detected = [[_unit, _detectorConfig], FUNC(getDetectedObject), _unit, QGVAR(detectedObjects), 0.15] call EFUNC(common,cachedCall);
+private _detected = [[_unit, _detectorType, _detectorConfig], FUNC(getDetectedObject), _unit, QGVAR(detectedObjects), 0.15] call EFUNC(common,cachedCall);
 _detected params ["_hasDetected", "_mine", "_distance"];
 
 if (!_hasDetected) exitWith {};
 
-// Launch a local event stating which mine was detected for mission purposes
-[QGVAR(mineDetected), [_unit, _mine, _distance]] call CBA_fnc_localEvent;
+// API
+[QGVAR(mineDetected), [_unit, _mine, _distance, _detectorType]] call CBA_fnc_localEvent;
 
-private _distanceTiming = switch (true) do {
-    case (_distance >= 2): {1};
-    case (_distance >= 1.25): {0.85};
-    case (_distance >= 0.75): {0.7};
-    default {0.5};
-};
+_detectorConfig params ["", "", "_sounds", "_soundDistances", "_soundIntervals", "_soundIntervalDistances"];
 
-if (CBA_missionTime - _lastPlayed < _distanceTiming) exitWith {};
+private _index = _soundIntervalDistances findIf {_distance >= _x};
+
+if (_index == -1 || {CBA_missionTime - _lastPlayed < _soundIntervals select _index}) exitWith {};
 
 _args set [3, CBA_missionTime];
-_detectorConfig params ["", "", "_soundClasses"];
-private _soundClass = switch (true) do {
-    case (_distance >= 2): {_soundClasses select 3};
-    case (_distance >= 1.25): {_soundClasses select 2};
-    case (_distance >= 0.5): {_soundClasses select 1};
-    default {_soundClasses select 0};
-};
 
-[_unit, _soundClass] call FUNC(playDetectorSound);
+// Find the sound class to play that matches with distance
+_index = _soundDistances findIf {_distance >= _x};
+
+if (_index == -1) exitWith {};
+
+[_unit, _sounds select _index] call FUNC(playDetectorSound);
