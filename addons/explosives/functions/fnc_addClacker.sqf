@@ -18,11 +18,11 @@
  * Public: Yes
  */
 
-params ["_unit", "_explosive", "_magazineClass"];
-TRACE_3("params",_unit,_explosive,_magazineClass);
+params ["_unit", "_explosive", "_magazineClass", "_extra"];
+TRACE_4("params",_unit,_explosive,_magazineClass,_extra);
 
 // Config is the last item in the list of passed in items.
-private _config = (_this select 3) select (count (_this select 3) - 1);
+private _config = _extra select -1;
 
 private _requiredItems = getArray(_config >> "requires");
 private _hasRequired = true;
@@ -34,13 +34,13 @@ private _detonators = [_unit] call FUNC(getDetonators);
 } forEach _requiredItems;
 
 if !(_hasRequired) exitWith {};
-private _config = configFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> configName _config;
+private _triggerConfig = configFile >> "CfgMagazines" >> _magazineClass >> "ACE_Triggers" >> configName _config;
 
 private _clacker = _unit getVariable [QGVAR(Clackers), []];
 GVAR(PlacedCount) = GVAR(PlacedCount) + 1;
 
-_clacker pushBack [_explosive, getNumber(_config >> "FuseTime"), format [localize LSTRING(DetonateCode),
-    GVAR(PlacedCount)], _magazineClass, configName ((_this select 3) select (count (_this select 3) - 1))];
+_clacker pushBack [_explosive, getNumber(_triggerConfig >> "FuseTime"), format [localize LSTRING(DetonateCode),
+    GVAR(PlacedCount)], _magazineClass, configName _config];
 
 _unit setVariable [QGVAR(Clackers), _clacker, true];
 
