@@ -86,7 +86,7 @@ class CfgVehicles {
             dayLight = 0;
             onlyInNvg = 1;
             useFlare = 0;
-            maxLifetime = "8 * 60 * 60";
+            maxLifetime = 8 * 60 * 60;
             blinkingPattern[] = {0.1, 1.1}; // 0.1 s on, 1.1 s off
             blinkingStartsOn = 1;
             blinkingPatternGuarantee = 1;
@@ -108,7 +108,7 @@ class CfgVehicles {
 
     class NVG_TargetBase: All {
         class NVGMarker {
-            maxLifetime = "8 * 60 * 60";
+            maxLifetime = 8 * 60 * 60;
         };
     };
 

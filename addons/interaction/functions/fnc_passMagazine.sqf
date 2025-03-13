@@ -13,36 +13,34 @@
  * None
  *
  * Example:
- * [_player, _target, "arifle_MX_F"] call ace_interaction_fnc_passMagazine
+ * [player, cursorObject, "arifle_MX_F"] call ace_interaction_fnc_passMagazine
  *
  * Public: No
  */
-params ["_player", "_target", "_weapon", ["_animate", true, [true]]];
 
-private _compatibleMags = [_weapon] call CBA_fnc_compatibleMagazines;
-private _filteredMags = magazinesAmmoFull _player select {
+params ["_player", "_target", "_weapon", ["_animate", true]];
+
+private _compatibleMags = compatibleMagazines _weapon;
+private _filteredMagazines = (magazinesAmmoFull _player) select {
     _x params ["_className", "", "_loaded"];
-    (_className in _compatibleMags) && {!_loaded} && {[_target, _className] call CBA_fnc_canAddItem}
+
+    !_loaded && {_className in _compatibleMags} && {_target canAdd [_className, 1, true]}
 };
 
-//select magazine with most ammo
-private _magToPass = _filteredMags select 0;
-{
-    _x params ["_className", "_ammoCount"];
-    if (_ammoCount > (_magToPass select 1)) then {
-        _magToPass = _x;
-    };
-} forEach _filteredMags;
+// If no magazines are available, quit
+if (_filteredMagazines isEqualTo []) exitWith {};
 
-//remove the magazine from _player and add it to _target
-_magToPass params ["_magToPassClassName", "_magToPassAmmoCount"];
-// Exit if failed to remove specific magazine
+// Select magazine with most ammo
+private _magToPassClassName = _filteredMagazines select 0 select 0;
+private _magToPassAmmoCount = selectMax (_filteredMagazines apply {_x select 1});
+
+// Remove magazine from player; If failure, quit
 if !([_player, _magToPassClassName, _magToPassAmmoCount] call EFUNC(common,removeSpecificMagazine)) exitWith {};
 
 if (_animate) then {[_player, "PutDown"] call EFUNC(common,doGesture)};
 
 _target addMagazine [_magToPassClassName, _magToPassAmmoCount];
 
-private _playerName = [_player] call EFUNC(common,getName);
-private _magToPassDisplayName = getText (configFile >> "CfgMagazines" >> _magToPassClassName >> "displayName");
-[QEGVAR(common,displayTextStructured), [[LSTRING(PassMagazineHint), _playerName, _magToPassDisplayName], 1.5, _target], [_target]] call CBA_fnc_targetEvent;
+private _playerName = _player call EFUNC(common,getName);
+private _displayName = getText (configFile >> "CfgMagazines" >> _magToPassClassName >> "displayName");
+[QEGVAR(common,displayTextStructured), [[LSTRING(PassMagazineHint), _playerName, _displayName], 1.5, _target], _target] call CBA_fnc_targetEvent;

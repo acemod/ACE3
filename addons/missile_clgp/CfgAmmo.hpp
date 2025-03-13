@@ -49,7 +49,7 @@ class CfgAmmo {
         EGVAR(frag,charge) = 9979;
         EGVAR(frag,metal) = 36000;
         EGVAR(frag,gurney_c) = 2440;
-        EGVAR(frag,gurney_k) = "1/2";
+        EGVAR(frag,gurney_k) = 1/2;
         EGVAR(frag,classes)[] = {QEGVAR(frag,large), QEGVAR(frag,large), QEGVAR(frag,large_HD), QEGVAR(frag,large), QEGVAR(frag,huge), QEGVAR(frag,huge_HD), QEGVAR(frag,huge)};
 
         maneuvrability = 0;
@@ -103,7 +103,7 @@ class CfgAmmo {
             canVanillaLock = 0;
         };
     };
-    
+
     class GVAR(pike_launch): SubmunitionBase {
         model = QPATHTOF(data\ace_pike_ammo.p3d);
         submunitionAmmo = QGVAR(pike_guidance);
@@ -142,7 +142,7 @@ class CfgAmmo {
         EGVAR(frag,metal) = 200;
         EGVAR(frag,charge) = 270; // ~8x a normal 40mm
         EGVAR(frag,gurney_c) = 2700;
-        EGVAR(frag,gurney_k) = "1/2";
+        EGVAR(frag,gurney_k) = 1/2;
 
         CraterEffects="ExploAmmoCrater";
         explosionEffects="ExploAmmoExplosion";
