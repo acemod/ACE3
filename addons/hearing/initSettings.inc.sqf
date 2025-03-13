@@ -43,7 +43,8 @@ private _category = format ["ACE %1", LLSTRING(Module_DisplayName)];
     "CHECKBOX",
     [LSTRING(DisableEarRinging_DisplayName), LSTRING(DisableEarRinging_Description)],
     _category,
-    false
+    false,
+    2
 ] call CBA_fnc_addSetting;
 
 [
