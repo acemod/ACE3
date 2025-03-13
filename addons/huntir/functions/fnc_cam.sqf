@@ -34,7 +34,7 @@ HUNTIR_BACKGROUND_LAYER_ID cutText["","PLAIN"];
 closeDialog 0;
 createDialog QGVAR(cam_dialog);
 uiNamespace setVariable [QGVAR(monitor), findDisplay 18880];
-(uiNamespace getVariable QGVAR(monitor)) displaySetEventHandler ["Keydown", QUOTE(_this call FUNC(keyPressed))];
+(uiNamespace getVariable QGVAR(monitor)) displaySetEventHandler ["Keydown", QUOTE(call FUNC(keyPressed))];
 
 ctrlSetText [4, "0X"];
 

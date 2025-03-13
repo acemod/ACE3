@@ -101,7 +101,7 @@ class Cfg3DEN {
                     idc = IDC_ATTRIBUTE_LIST;
                     idcLeft = IDC_ATTRIBUTE_LIST_LEFT;
                     idcRight = IDC_ATTRIBUTE_LIST_RIGHT;
-                    onLBDblClick = QUOTE(_this call FUNC(attributeDblClick));
+                    onLBDblClick = QUOTE(call FUNC(attributeDblClick));
                     onSetFocus = QUOTE(SETUVAR(QGVAR(attributeFocus),ctrlParentControlsGroup (_this select 0)));
                     onKillFocus = QUOTE(SETUVAR(QGVAR(attributeFocus),nil));
                     x = QUOTE(5 * ATTRIBUTE_W);
