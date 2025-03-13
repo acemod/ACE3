@@ -39,8 +39,8 @@ class CfgVehicles {
                 displayName = CSTRING(Pickup);
                 icon = "\a3\ui_f\data\igui\cfg\actions\take_ca.paa";
                 distance = 2;
-                condition = QUOTE(_this call FUNC(canPickup));
-                statement = QUOTE(_this call FUNC(pickup));
+                condition = QUOTE(call FUNC(canPickup));
+                statement = QUOTE(call FUNC(pickup));
             };
         };
     };

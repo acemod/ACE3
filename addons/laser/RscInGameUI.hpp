@@ -15,7 +15,7 @@ class RscInGameUI {
                 };
                 class ACE_LaserCode_Helper: RscMapControl {
                     idc = -1;
-                    onDraw = QUOTE(_this call FUNC(onLaserDesignatorDraw));
+                    onDraw = QUOTE(call FUNC(onLaserDesignatorDraw));
                     w = 0;
                     h = 0;
                 };
