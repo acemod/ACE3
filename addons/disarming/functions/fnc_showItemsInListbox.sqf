@@ -1,18 +1,17 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- *
  * Shows a list of inventory items in a listBox control.
  *
  * Arguments:
  * 0: RscListBox <CONTROL>
- * 1: ItemArray [["itemClassnames"],[counts]] <ARRAY>
+ * 1: Items array [["itemClassnames"], [counts]] <ARRAY>
  *
  * Return Value:
  * None
  *
  * Example:
- * [theListBox, [["ace_bandage"],[2]]] call ace_disarming_fnc_showItemsInListbox
+ * [theListBox, [["ace_bandage"], [2]]] call ace_disarming_fnc_showItemsInListbox
  *
  * Public: No
  */
@@ -21,32 +20,38 @@ disableSerialization;
 
 params ["_listBoxCtrl", "_itemsCountArray"];
 
+private _cfgWeapons = configFile >> "CfgWeapons";
+private _cfgMagazines = configFile >> "CfgMagazines";
+private _cfgVehicles = configFile >> "CfgVehicles";
+private _cfgGlasses = configFile >> "CfgGlasses";
+
 {
     private _classname = _x;
     private _count = (_itemsCountArray select 1) select _forEachIndex;
 
-    if ((_classname != DUMMY_ITEM) && {_classname != "ACE_FakePrimaryWeapon"}) then { //Don't show the dummy potato or fake weapon
+    if ((_classname != DUMMY_ITEM) && {_classname != "ACE_FakePrimaryWeapon"}) then { // Don't show the dummy potato or fake weapon
         private _configPath = configNull;
         private _displayName = "";
         private _picture = "";
+
         switch (true) do {
-            case (isClass (configFile >> "CfgWeapons" >> _classname)): {
-                _configPath = (configFile >> "CfgWeapons");
+            case (isClass (_cfgWeapons >> _classname)): {
+                _configPath = _cfgWeapons;
                 _displayName = getText (_configPath >> _classname >> "displayName");
                 _picture = getText (_configPath >> _classname >> "picture");
             };
-            case (isClass (configFile >> "CfgMagazines" >> _classname)): {
-                _configPath = (configFile >> "CfgMagazines");
+            case (isClass (_cfgMagazines >> _classname)): {
+                _configPath = _cfgMagazines;
                 _displayName = getText (_configPath >> _classname >> "displayName");
                 _picture = getText (_configPath >> _classname >> "picture");
             };
-            case (isClass (configFile >> "CfgVehicles" >> _classname)): {
-                _configPath = (configFile >> "CfgVehicles");
+            case (isClass (_cfgVehicles >> _classname)): {
+                _configPath = _cfgVehicles;
                 _displayName = getText (_configPath >> _classname >> "displayName");
                 _picture = getText (_configPath >> _classname >> "picture");
             };
-            case (isClass (configFile >> "CfgGlasses" >> _classname)): {
-                _configPath = (configFile >> "CfgGlasses");
+            case (isClass (_cfgGlasses >> _classname)): {
+                _configPath = _cfgGlasses;
                 _displayName = getText (_configPath >> _classname >> "displayName");
                 _picture = getText (_configPath >> _classname >> "picture");
             };
@@ -55,9 +60,9 @@ params ["_listBoxCtrl", "_itemsCountArray"];
             };
         };
 
-        _listBoxCtrl lbAdd _displayName;
-        _listBoxCtrl lbSetData [((lbSize _listBoxCtrl) - 1), _classname];
-        _listBoxCtrl lbSetPicture [((lbSize _listBoxCtrl) - 1), _picture];
-        _listBoxCtrl lbSetTextRight [((lbSize _listBoxCtrl) - 1), str _count];
+        private _index = _listBoxCtrl lbAdd _displayName;
+        _listBoxCtrl lbSetData [_index, _classname];
+        _listBoxCtrl lbSetPicture [_index, _picture];
+        _listBoxCtrl lbSetTextRight [_index, str _count];
     };
 } forEach (_itemsCountArray select 0);
