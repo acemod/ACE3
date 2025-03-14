@@ -144,7 +144,7 @@ class CfgMagazines {
         class Library {
             libTextDesc = CSTRING(SatchelCharge_LibText);
         };
-        type = "2*      256";
+        type = 2*256;
         allowedSlots[] = {901};
         value = 5;
         mass = 80;

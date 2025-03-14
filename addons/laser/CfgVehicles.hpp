@@ -6,7 +6,7 @@ class CfgVehicles {
 
         class EventHandlers {
             class ADDON {
-                init = QUOTE(_this call FUNC(handleLaserTargetCreation));
+                init = QUOTE(call FUNC(handleLaserTargetCreation));
             };
         };
     };

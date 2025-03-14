@@ -565,8 +565,8 @@ class GVAR(display) {
             colorSelect2[] = {1,1,1,1};
             colorPictureRightSelected[] = {1,1,1,1};
             colorTextRight[] = {0.5, 0.5, 0.5, 0};
-            onLBSelChanged = QUOTE(_this call FUNC(onSelChangedLeft));
-            onLBDblClick = QUOTE(_this call FUNC(onPanelDblClick));
+            onLBSelChanged = QUOTE(call FUNC(onSelChangedLeft));
+            onLBDblClick = QUOTE(call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(leftTabFocus) = true);
             onKillFocus = QUOTE(GVAR(leftTabFocus) = false);
             x = QUOTE(safeZoneX + 13 * GRID_W);
@@ -579,8 +579,8 @@ class GVAR(display) {
             idc = IDC_rightTabContent;
             drawSideArrows = 1;
             disableOverflow = 1;
-            onLBSelChanged = QUOTE(_this call FUNC(onSelChangedRight));
-            onLBDblClick = QUOTE(_this call FUNC(onPanelDblClick));
+            onLBSelChanged = QUOTE(call FUNC(onSelChangedRight));
+            onLBDblClick = QUOTE(call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(rightTabFocus) = true);
             onKillFocus = QUOTE(GVAR(rightTabFocus) = false);
             x = QUOTE(safeZoneX + safeZoneW - 93 * GRID_W);
@@ -601,8 +601,8 @@ class GVAR(display) {
             idcRIght = IDC_arrowPlus;
             drawSideArrows = 1;
             disableOverflow = 1;
-            onLBSelChanged = QUOTE(_this call FUNC(onSelChangedRightListnBox));
-            onLBDblClick = QUOTE(_this call FUNC(onPanelDblClick));
+            onLBSelChanged = QUOTE(call FUNC(onSelChangedRightListnBox));
+            onLBDblClick = QUOTE(call FUNC(onPanelDblClick));
             onSetFocus = QUOTE(GVAR(rightTabLnBFocus) = true);
             onKillFocus = QUOTE(GVAR(rightTabLnBFocus) = false);
             x = QUOTE(safeZoneX + safeZoneW - 93 * GRID_W);
@@ -617,7 +617,7 @@ class GVAR(display) {
             y = QUOTE(safeZoneY + 8 * GRID_H);
             w = QUOTE(40 * GRID_W);
             h = QUOTE(6 * GRID_H);
-            onLBSelChanged = QUOTE(_this call FUNC(sortPanel));
+            onLBSelChanged = QUOTE(call FUNC(sortPanel));
             sizeEx = QUOTE(5 * GRID_H);
         };
         class sortLeftTabDirection: sortLeftTab {

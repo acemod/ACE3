@@ -82,7 +82,7 @@ class CfgAmmo {
         timeToLive = 60;
         grenadeFireSound[] = {};
         grenadeBurningSound[] = {};
-        aiAmmoUsageFlags = "1 + 2"; // illumination + marking
+        aiAmmoUsageFlags = 1+2; // illumination + marking
         smokeColor[] = {0,0,0,0};
         effectsSmoke = "ACE_HandFlareEffect";
         whistleDist = 0;
@@ -165,7 +165,7 @@ class CfgAmmo {
         SmokeShellSoundHit2[] = {QPATHTOF(sounds\incen_exp2.ogg),3.1622777,1,500};
         grenadeFireSound[] = {"SmokeShellSoundHit1",0.5,"SmokeShellSoundHit2",0.5};
         grenadeBurningSound[] = {};
-        aiAmmoUsageFlags = "64 + 1"; // infantry + illumination
+        aiAmmoUsageFlags = 64+1; // infantry + illumination
         effectsSmoke = "ACE_Incendiary";
         whistleDist = 0;    // no BIS explosion effects
         whistleOnFire = 0;  // no BIS firing effects

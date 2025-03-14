@@ -18,21 +18,21 @@ class GVAR(sorts) {
         scope = 2;
         displayName = "$STR_a3_rscdisplayarsenal_sort_mod";
         tabs[] = {{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17}, {0,1,2,3,4,5,6,7}};
-        statement = QUOTE(_this call FUNC(sortStatement_mod));
+        statement = QUOTE(call FUNC(sortStatement_mod));
     };
 
     class ACE_mass: sortBase {
         scope = 2;
         displayName = CSTRING(sortByWeightText);
         tabs[] = {{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14}, {0,1,2,3,4,5,6,7}};
-        statement = QUOTE(_this call FUNC(sortStatement_mass));
+        statement = QUOTE(call FUNC(sortStatement_mass));
     };
 
     class ACE_amount: sortBase {
         scope = 2;
         displayName = CSTRING(sortByAmountText);
         tabs[] = {{}, {0,1,2,3,4,5,6,7}};
-        statement = QUOTE(_this call FUNC(sortStatement_amount));
+        statement = QUOTE(call FUNC(sortStatement_amount));
         condition = QUOTE(_this select 0); // Only show for containers
     };
 
@@ -47,28 +47,28 @@ class GVAR(sorts) {
         scope = 2;
         displayName = CSTRING(sortByAccuracyText);
         tabs[] = {{0,1}, {}};
-        statement = QUOTE(_this call FUNC(sortStatement_accuracy));
+        statement = QUOTE(call FUNC(sortStatement_accuracy));
     };
 
     class ACE_rateOfFire: sortBase {
         scope = 2;
         displayName = CSTRING(sortByRateOfFireText);
         tabs[] = {{0,1}, {}};
-        statement = QUOTE(_this call FUNC(sortStatement_rateOfFire));
+        statement = QUOTE(call FUNC(sortStatement_rateOfFire));
     };
 
     class ACE_scopeMag: sortBase {
         scope = 2;
         displayName = CSTRING(sortByMagnificationText);
         tabs[] = {{}, {0}};
-        statement = QUOTE(_this call FUNC(sortStatement_scopeMag));
+        statement = QUOTE(call FUNC(sortStatement_scopeMag));
     };
 
     class ACE_magCount: sortBase {
         scope = 2;
         displayName = CSTRING(sortByMagCountText);
         tabs[] = {{}, {4}};
-        statement = QUOTE(_this call FUNC(sortStatement_magCount));
+        statement = QUOTE(call FUNC(sortStatement_magCount));
     };
 
     class ACE_protectionBallistic: sortBase {
