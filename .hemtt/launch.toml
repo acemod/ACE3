@@ -41,3 +41,18 @@ workshop = [
     "843593391", # RHS GREF Workshop ID
     "843632231", # RHS SAF  Workshop ID
 ]
+
+[Wardrobe]
+extends = "rhs"
+workshop = [
+    "2369477168", # Advanced Developer Tools
+    "1779063631", # ZEN
+#    "623475643",  # eden enhanced
+]
+mission = "Wardrobe.VR"
+dlc = [
+#    "Western Sahara",    
+#    "Reaction Forces", 
+    "S.O.G. Prairie Fire",
+#    "gm"
+]
