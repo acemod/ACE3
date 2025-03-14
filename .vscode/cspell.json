@@ -1,0 +1,87 @@
+{
+    "language": "en",
+    "ignorePaths": [
+        "AUTHORS.txt",
+        ".hemtt",
+        "hemtt.*",
+        ".gitignore",
+        "Cargo.*",
+        "LICENSE"
+    ],
+    "useGitignore": true,
+    "dictionaryDefinitions": [
+        {
+            "name": "Arma",
+            "description": "List of Arma words",
+            "path": "./dictionaries/arma.txt",
+            "addWords": true,
+        },
+        {
+            "name": "ArmaCzechNames",
+            "description": "List of Czech named selections",
+            "path": "./dictionaries/czech_names.txt",
+            "addWords": false,
+        },
+        {
+            "name": "General",
+            "description": "List of general words",
+            "path": "./dictionaries/general.txt",
+            "addWords": true,
+        },
+        {
+            "name": "CBAMacros",
+            "description": "List of CBA macros",
+            "path": "./dictionaries/cba_macros.txt",
+            "addWords": false,
+        },
+        {
+            "name": "ACEMacros",
+            "description": "List of ACE macros",
+            "path": "./dictionaries/ace_macros.txt",
+            "addWords": false,
+        },
+        {
+            "name": "Addons",
+            "description": "List of addons",
+            "path": "./dictionaries/addons.txt",
+            "addWords": false,
+        },
+        {
+            "name": "HEMTT",
+            "description": "List of HEMTT words",
+            "path": "./dictionaries/hemtt.txt",
+            "addWords": false,
+        },
+    ],
+    "dictionaries": [
+        "Arma",
+        "ArmaCzechNames",
+        "General",
+        "CBAMacros",
+        "ACEMacros",
+        "Addons",
+        "HEMTT"
+    ],
+    "allowCompoundWords": true,
+    "flagWords": [
+        "BOOLEAN->BOOL",
+        "SCALAR->NUMBER",
+    ],
+    "ignoreRegExpList": [
+        "/\\s*(\\* Author:).*/", // Ignore author names in header
+        "/\\s*authors\\[\\]\\s*=\\s*{(.*)};.*/", // Ignore author names in CfgPatches
+        "/\\s*author\\s*=.*/", // Ignore author in config
+        "/.*((Amov)|(Ainj)|(Acin)|(Ainv)).+/", // Ignore animation names
+        "/.*DIK_.+/", // Ignore key codes
+        "/.*((IDD)|(IDC))_RSC.+/", // Ignore A3 displays and controls
+    ],
+    "overrides": [
+        {
+            "filename": "**/stringtable.xml",
+            "includeRegExpList": [
+                "/<English>(.*)<\\/English>.*/",
+            ],
+            "language": "en"
+        },
+    ],
+}
