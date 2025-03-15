@@ -18,7 +18,7 @@ class ACE_Triggers {
         isAttachable = 1;
         displayName = CSTRING(clacker_displayName);
         picture = QPATHTOF(Data\UI\Clacker.paa);
-        onPlace = QUOTE(_this call FUNC(addClacker); false);
+        onPlace = QUOTE(call FUNC(addClacker); false);
         requires[] = {"ACE_Clacker"};
     };
     class MK16_Transmitter: Command {
@@ -37,7 +37,7 @@ class ACE_Triggers {
         isAttachable = 1;
         displayName = CSTRING(cellphone_displayName);
         picture = QPATHTOF(Data\UI\Cellphone_UI.paa);
-        onPlace = QUOTE(_this call FUNC(addCellphoneIED); false);
+        onPlace = QUOTE(call FUNC(addCellphoneIED); false);
         requires[] = {"ACE_Cellphone"};
     };
     class PressurePlate {
@@ -57,7 +57,7 @@ class ACE_Triggers {
         displayName = CSTRING(timerName);
         picture = QPATHTOF(data\UI\Timer.paa);
         onPlace = QUOTE([ARR_4(_this select 1,_this select 3 select 0,nil,_this select 0)] call FUNC(startTimer); false);
-        onSetup = QUOTE(_this call FUNC(openTimerUI));
+        onSetup = QUOTE(call FUNC(openTimerUI));
     };
     class Tripwire {
         isAttachable = 0;

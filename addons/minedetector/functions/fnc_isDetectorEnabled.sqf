@@ -1,20 +1,27 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Check if the mine detector is enabled
+ * Checks if the mine detector is enabled.
  *
  * Arguments:
- * 0: detecter type <STRING>
+ * 0: Unit <OBJECT>
+ * 1: Detector type <STRING> (default: currentWeapon Unit)
  *
  * Return Value:
  * None
  *
  * Example:
- * ["example"] call ace_minedetector_fnc_isDetectorEnabled
+ * [player, currentWeapon player] call ace_minedetector_fnc_isDetectorEnabled
  *
- * Public: No
+ * Public: Yes
  */
 
-params ["_unit", "_detectorType"];
+params [["_unit", objNull, [objNull]]];
 
-alive _unit && {(_unit getVariable [format[QGVAR(enable_%1), _detectorType], false])};
+if (!alive _unit) exitWith {
+    false // return
+};
+
+private _detectorType = param [1, currentWeapon _unit, [""]];
+
+_detectorType != "" && {(_unit getVariable [format [QGVAR(enable_%1), _detectorType], false]) isEqualTo [_unit, true]} // return

@@ -1122,6 +1122,8 @@
         <Key ID="STR_ACE_CSW_statTripods">
             <English>Mounts on:</English>
             <French>Se monte sur :</French>
+            <Italian>Montato su:</Italian>
+            <German>Montiert auf:</German>
             <Russian>Крепится на:</Russian>
             <Korean>전용 장착:</Korean>
             <Japanese>次に搭載:</Japanese>

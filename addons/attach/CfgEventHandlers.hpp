@@ -18,21 +18,21 @@ class Extended_PostInit_EventHandlers {
 class Extended_GetIn_EventHandlers {
     class All {
         class ADDON {
-            getIn = QUOTE(_this call FUNC(handleGetIn));
+            getIn = QUOTE(call FUNC(handleGetIn));
         };
     };
 };
 class Extended_GetOut_EventHandlers {
     class All {
         class ADDON {
-            getOut = QUOTE(_this call FUNC(handleGetOut));
+            getOut = QUOTE(call FUNC(handleGetOut));
         };
     };
 };
 class Extended_Killed_EventHandlers {
     class All {
         class ADDON {
-            killed = QUOTE(_this call FUNC(handleKilled));
+            killed = QUOTE(call FUNC(handleKilled));
         };
     };
 };

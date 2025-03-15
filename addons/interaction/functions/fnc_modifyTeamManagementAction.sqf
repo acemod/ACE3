@@ -26,5 +26,3 @@ private _color = switch (toUpper _teamColor) do {
 };
 
 _actionData set [2, [_icon, _color call BIS_fnc_colorRGBtoHTML]];
-
-nil

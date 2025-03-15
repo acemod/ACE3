@@ -145,7 +145,7 @@ class ATragMX_Display {
     name="ATragMX_Display";
     idd=-1;
     onLoad="uiNamespace setVariable ['ATragMX_Display', (_this select 0)]";
-    onUnload=QUOTE(_this call FUNC(on_close_dialog));
+    onUnload=QUOTE(call FUNC(on_close_dialog));
     movingEnable=1;
     controlsBackground[]={};
     objects[]={};
@@ -159,8 +159,8 @@ class ATragMX_Display {
             style=48;
             x="0.55*safeZoneW+safeZoneX-0.256";
             y="0.265*safeZoneH+safeZoneY-0.1";
-            w="1.024";
-            h="1.024*4/3";
+            w=1.024;
+            h=1.024*4/3;
             colorBackground[]={1,1,1,1};
             colorText[]={1,1,1,1};
             text=QPATHTOF(UI\atrag_d.paa);
@@ -169,8 +169,8 @@ class ATragMX_Display {
             idc=-1;
             x="0.55*safeZoneW+safeZoneX+0.145";
             y="0.265*safeZoneH+safeZoneY+0.94";
-            w="0.045";
-            h="0.045*4/3";
+            w=0.045;
+            h=0.045*4/3;
             colorBackground[]={0,0,0,0.0};
             action="closeDialog 0";
         };
@@ -184,8 +184,8 @@ class ATragMX_Display {
             idc=-1;
             x="0.55*safeZoneW+safeZoneX+0.130";
             y="0.265*safeZoneH+safeZoneY+0.88";
-            w="0.035";
-            h="0.035*4/3";
+            w=0.035;
+            h=0.035*4/3;
             colorBackground[]={0,0,0,0.0};
         };
         class OK: WINDOWS {
@@ -225,8 +225,8 @@ class ATragMX_Display {
             idc=-1;
             x="0.55*safeZoneW+safeZoneX+0.162";
             y="0.265*safeZoneH+safeZoneY+0.82";
-            w="0.031";
-            h="0.031*4/3";
+            w=0.031;
+            h=0.031*4/3;
             colorBackground[]={0,0,0,0.0};
         };
         class TOP_RIGHT: TOP_LEFT {
@@ -530,7 +530,7 @@ class ATragMX_Display {
         };
         class TEXT_ELEVATION_OUTPUT_ABSOLUTE: ATragMX_RscText {
             idc=400;
-            style=QUOTE(ST_WITH_RECT+ST_RIGHT);
+            style=ST_WITH_RECT+ST_RIGHT;
             sizeEx="0.025";
             w="0.065";
             h="0.032";
@@ -1748,7 +1748,7 @@ class ATragMX_Display {
         };
         class TEXT_TRUING_DROP_DROP_OUTPUT: ATragMX_RscEdit {
             idc=18006;
-            style=QUOTE(ST_WITH_RECT+ST_RIGHT);
+            style=ST_WITH_RECT+ST_RIGHT;
             colorBackground[]={0.15,0.21,0.23,0.3};
             colorDisabled[]={0,0,0,1};
             w="0.06";
@@ -1782,7 +1782,7 @@ class ATragMX_Display {
         };
         class TEXT_TRUING_DROP_TARGET_RANGE_SUPER_INPUT: ATragMX_RscEdit {
             idc=18011;
-            style=QUOTE(ST_WITH_RECT+ST_RIGHT);
+            style=ST_WITH_RECT+ST_RIGHT;
             colorDisabled[]={0,0,0,0.6};
             w="0.06";
             x="0.550*safeZoneW+safeZoneX+0.25";
