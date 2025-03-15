@@ -17,6 +17,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QEGVAR(medical,partDamageCap),
+    "SLIDER",
+    [LSTRING(partDamageCap_DisplayName), LSTRING(partDamageCap_Description)],
+    ELSTRING(medical,Category),
+    [30, 150, 60, 0],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QEGVAR(medical,AIDamageThreshold),
     "SLIDER",
     [LSTRING(AIDamageThreshold_DisplayName), LSTRING(AIDamageThreshold_Description)],
