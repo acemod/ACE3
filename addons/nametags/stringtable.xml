@@ -27,7 +27,7 @@
             <Russian>Определяет как сильно окружающее освещение влияет на дальность отображения меток игроков.</Russian>
             <German>Stellt ein, wie stark sich die Umgebungshelligkeit auf die Sichtweite der Spielernamen auswirkt.</German>
             <Korean>배경 밝기가 이름표를 보는 거리에 얼마나 영향을 끼치는 지를 조절합니다.</Korean>
-            <Japanese>周囲の明るさが名札の表示距離にどの程度強く影響するかを調整します。</Japanese>
+            <Japanese>周囲の明るさがネーム タグの表示距離にどの程度強く影響するかを調整します。</Japanese>
             <Chinesesimp>调整环境亮度对铭牌查看距离的影响程度。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_NameTags_AmbientBrightnessAffectsViewDist_DisplayName">
@@ -39,7 +39,7 @@
             <Russian>Коэф. освещения для меток игроков</Russian>
             <German>Spielernamen Umgebungshelligkeitskoeffizient</German>
             <Korean>이름표 배경 밝기 계수</Korean>
-            <Japanese>名札への環境輝度の影響係数</Japanese>
+            <Japanese>ネーム タグへの環境輝度の影響係数</Japanese>
             <Chinesesimp>铭牌的环境亮度系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_NameTags_DefaultNametagColor">
@@ -53,7 +53,7 @@
             <Russian>Цвет меток игроков (не членов групп)</Russian>
             <German>Voreingestellte Namenfarbe (Spieler außerhalb der Gruppe)</German>
             <Korean>기본 이름표 색상 (비그룹 멤버)</Korean>
-            <Japanese>名札の標準色 (グループメンバー以外)</Japanese>
+            <Japanese>ネーム タグの標準色 (グループメンバー以外)</Japanese>
             <Chinese>預設名稱顏色 (非同小隊隊友)</Chinese>
             <Chinesesimp>预设名字颜色（非同小队队友）</Chinesesimp>
             <Turkish>Varsayılan İsim Etiketi Rengi (Grup Üyeleri Olmayanlar)</Turkish>
@@ -171,7 +171,7 @@
             <Russian>Этот модуль позволяет настроить опции и дистанцию отображения имен игроков.</Russian>
             <German>Dieses Modul erlaubt die Einstellungen der Anzeigenamen zu verändern.</German>
             <Korean>이 모듈은 당신이 이름표의 범위를 임의로 수정할 수 있게 해줍니다.</Korean>
-            <Japanese>このモジュールを使用すると、名札の表示される距離や設定を調整できます。</Japanese>
+            <Japanese>このモジュールを使用すると、ネーム タグの表示される距離や設定を調整できます。</Japanese>
             <Chinese>這個模塊允許您設定名稱和顯示範圍等設定</Chinese>
             <Chinesesimp>这个模块允许您设定名字和显示范围等设定</Chinesesimp>
             <Turkish>Bu modül, Isim Etiketleri ayarlarını ve aralığını özelleştirmenizi sağlar.</Turkish>
@@ -188,7 +188,7 @@
             <Russian>Имена игроков</Russian>
             <German>Zeige Spielernamen</German>
             <Korean>이름표</Korean>
-            <Japanese>名札</Japanese>
+            <Japanese>ネーム タグ</Japanese>
             <Chinese>玩家名稱</Chinese>
             <Chinesesimp>玩家名称</Chinesesimp>
             <Turkish>Isım Etiketleri</Turkish>
@@ -205,7 +205,7 @@
             <Russian>Так же, как имена</Russian>
             <German>Verwende Spielernamen</German>
             <Korean>이름표 설정 사용</Korean>
-            <Japanese>名札の設定を使う</Japanese>
+            <Japanese>ネーム タグの設定を使う</Japanese>
             <Chinese>玩家名稱設定</Chinese>
             <Chinesesimp>玩家名称设定</Chinesesimp>
             <Turkish>İsim etiketi ayarlarını kullan</Turkish>
@@ -273,7 +273,7 @@
             <Russian>Прозрачность меток игроков</Russian>
             <German>Spielernamen Transparenz</German>
             <Korean>플레이어 이름 투명도</Korean>
-            <Japanese>プレイヤーの名札の透明度</Japanese>
+            <Japanese>プレイヤーのネーム タグの透明度</Japanese>
             <Chinese>玩家名稱透明度</Chinese>
             <Chinesesimp>玩家名称标签透明度</Chinesesimp>
             <Turkish>Oyuncu etiketlerinde şeffaflık</Turkish>
@@ -340,7 +340,7 @@
             <Russian>Показывать имена ботов</Russian>
             <German>Namen für KI Einheiten anzeigen</German>
             <Korean>인공지능 인원 이름 표시</Korean>
-            <Japanese>AIユニットの名札を表示</Japanese>
+            <Japanese>AIユニットのネーム タグを表示</Japanese>
             <Chinese>顯示AI單位名稱</Chinese>
             <Chinesesimp>显示 AI 单位名字</Chinesesimp>
             <Turkish>AI birimleri için ad etiketlerini göster</Turkish>
@@ -510,7 +510,7 @@
             <Russian>Размер имен игроков</Russian>
             <German>Größe der Spielernamen</German>
             <Korean>이름표 크기</Korean>
-            <Japanese>名札の大きさ</Japanese>
+            <Japanese>ネーム タグの大きさ</Japanese>
             <Chinese>玩家名稱標記大小</Chinese>
             <Chinesesimp>玩家名称标记大小</Chinesesimp>
             <Turkish>Isim Etiketi Büyüklüğü</Turkish>
@@ -527,7 +527,7 @@
             <Russian>Показывать имя командира техники (только если клиент включил отображение имен). По умолчанию: Нет</Russian>
             <German>Zeige Maus-Spielernamen für Fahrzeugkommandanten (nur wenn der Client Namensanzeigen aktiviert hat). Standard: Nein</German>
             <Korean>차장의 이름표를 표시합니다 (오직 클라이언트가 이름표를 활성화할 시에만 보입니다) 기본설정: 아니요</Korean>
-            <Japanese>カーソルを当てた時に車長の名札を表示します (クライアント側で名札を有効化する必要があります) デフォルト: 無効</Japanese>
+            <Japanese>カーソルを当てた時に車長のネーム タグを表示します (クライアント側でネーム タグを有効化する必要があります) デフォルト: 無効</Japanese>
             <Chinese>使載具指揮官能透過準心指到別的單位來顯示其名稱 (僅當客戶端的名稱功能已啟用)。預設: 關閉</Chinese>
             <Chinesesimp>使载具指挥官能透过准心指到别的单位来显示其名字（仅当客户端的名字功能已启用）。预设：关闭</Chinesesimp>
             <Turkish>Araç komutanı için Gösterge İsim Etiketini göster (yalnızca istemcide ad etiketleri etkinse) Varsayılan: Hayır</Turkish>

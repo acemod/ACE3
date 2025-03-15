@@ -95,7 +95,7 @@
             <Italian>PRE-PLANNED</Italian>
             <German>PRE-PLANNED</German>
             <Korean>사전 설정됨</Korean>
-            <Japanese>PRE-PLANNED</Japanese>
+            <Japanese>計画目標 (PP)</Japanese>
             <Russian>ЗАРАНЕЕ СПЛАНИРОВАННЫЙ</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_short">
@@ -113,7 +113,7 @@
             <Italian>TARGET OF OPPORTUNITY</Italian>
             <German>TARGET OF OPPORTUNITY</German>
             <Korean>기회 표적</Korean>
-            <Japanese>TARGET OF OPPORTUNITY</Japanese>
+            <Japanese>臨機目標 (TOO)</Japanese>
             <Russian>ЦЕЛЬ ОТКРЫВАЮЩЕЙСЯ ВОЗМОЖНОСТИ</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
