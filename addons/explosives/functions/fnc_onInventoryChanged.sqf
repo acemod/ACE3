@@ -1,8 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Garth 'L-H' de Wet
- * When a take/put event handler fires and a detonator is changed hands.
- * Then take "attached" explosives.
+ * When a take/put event handler fires and a detonator changes hands, take/give "attached" explosives.
  *
  * Arguments:
  * 0: Receiver <OBJECT>
@@ -13,7 +12,7 @@
  * None
  *
  * Example:
- * Handled by CBA
+ * [player, cursorObject, "ACE_M26_Clacker"] call ace_explosives_fnc_onInventoryChanged
  *
  * Public: No
  */
@@ -21,15 +20,18 @@
 params ["_receiver", "_giver", "_item"];
 TRACE_3("params",_receiver,_giver,_item);
 
-if ((_receiver != ace_player) && {_giver != ace_player}) exitWith {};
+if !(ACE_player in [_receiver, _giver]) exitWith {};
+if !(_item in GVAR(detonators)) exitWith {};
 
-private _config = configFile >> "CfgWeapons" >> _item;
-if (isClass _config && {getNumber(_config >> QGVAR(Detonator)) == 1}) then {
-    private _clackerItems = _giver getVariable [QGVAR(Clackers), []];
-    _receiver setVariable [QGVAR(Clackers), (_receiver getVariable [QGVAR(Clackers), []]) + _clackerItems, true];
+// Update giver's valid explosives and get valid explosives for detonator
+private _explosivesList = [_giver, _item] call FUNC(getPlacedExplosives);
 
-    private _detonators = [_giver] call FUNC(getDetonators);
-    if (count _detonators == 0) then {
-        _giver setVariable [QGVAR(Clackers), nil, true];
-    };
-};
+TRACE_1("explosives changing hands",_explosivesList);
+
+if (_explosivesList isEqualTo []) exitWith {};
+
+// Remove explosives from giver
+_giver setVariable [QGVAR(clackers), (_giver getVariable [QGVAR(clackers), []]) - _explosivesList, true];
+
+// Update receiver's list and add explosives to receiver
+_receiver setVariable [QGVAR(clackers), (_receiver call FUNC(getPlacedExplosives)) + _explosivesList, true];

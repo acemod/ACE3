@@ -52,7 +52,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.0309375 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = "1";
-            action = "ctrlSetText [1400,((ctrlText 1400) + '1')];";
+            action = "ctrlSetText [1400, (ctrlText 1400) + '1'];";
         };
         class numkey_2: Rsc_ACE_NumKeyButton {
             idc = 1601;
@@ -61,7 +61,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.0309375 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = "2";
-            action = "ctrlSetText [1400,((ctrlText 1400) + '2')];";
+            action = "ctrlSetText [1400, (ctrlText 1400) + '2'];";
         };
         class numkey_3: Rsc_ACE_NumKeyButton {
             idc = 1602;
@@ -70,7 +70,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.0309375 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = "3";
-            action = "ctrlSetText [1400,((ctrlText 1400) + '3')];";
+            action = "ctrlSetText [1400, (ctrlText 1400) + '3'];";
         };
         class numkey_4: Rsc_ACE_NumKeyButton {
             idc = 1603;
@@ -79,7 +79,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.0309375 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = "4";
-            action = "ctrlSetText [1400,((ctrlText 1400) + '4')];";
+            action = "ctrlSetText [1400, (ctrlText 1400) + '4'];";
         };
         class numkey_5: Rsc_ACE_NumKeyButton {
             idc = 1604;
@@ -88,7 +88,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.0309375 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = "5";
-            action = "ctrlSetText [1400,((ctrlText 1400) + '5')];";
+            action = "ctrlSetText [1400, (ctrlText 1400) + '5'];";
         };
         class numkey_6: Rsc_ACE_NumKeyButton {
             idc = 1605;
@@ -97,7 +97,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.0309375 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = "6";
-            action = "ctrlSetText [1400,((ctrlText 1400) + '6')];";
+            action = "ctrlSetText [1400, (ctrlText 1400) + '6'];";
         };
         class numkey_7: Rsc_ACE_NumKeyButton {
             idc = 1606;
@@ -106,7 +106,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.0309375 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = "7";
-            action = "ctrlSetText [1400,((ctrlText 1400) + '7')];";
+            action = "ctrlSetText [1400, (ctrlText 1400) + '7'];";
         };
         class numkey_8: Rsc_ACE_NumKeyButton {
             idc = 1607;
@@ -115,7 +115,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.0309375 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = "8";
-            action = "ctrlSetText [1400,((ctrlText 1400) + '8')];";
+            action = "ctrlSetText [1400, (ctrlText 1400) + '8'];";
         };
         class numkey_9: Rsc_ACE_NumKeyButton {
             idc = 1608;
@@ -124,7 +124,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.0309375 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = "9";
-            action = "ctrlSetText [1400,((ctrlText 1400) + '9')];";
+            action = "ctrlSetText [1400, (ctrlText 1400) + '9'];";
         };
         class numkey_0: Rsc_ACE_NumKeyButton {
             idc = 1609;
@@ -133,7 +133,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.0309375 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = "0";
-            action = "ctrlSetText [1400,((ctrlText 1400) + '0')];";
+            action = "ctrlSetText [1400, (ctrlText 1400) + '0'];";
         };
         class speedDialAdd: Rsc_ACE_NumKeyButton {
             idc = 1610;
@@ -151,7 +151,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.020625 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = CSTRING(Clear);
-            action = QUOTE(ctrlSetText [ARR_2(1400,'')];[ctrlText 1401] call FUNC(removeFromSpeedDial);ctrlSetText [ARR_2(1401,'')];);
+            action = QUOTE(ctrlSetText [ARR_2(1400,'')]; (ctrlText 1401) call FUNC(removeFromSpeedDial); ctrlSetText [ARR_2(1401,'')];);
         };
         class dial: Rsc_ACE_HiddenButton {
             idc = 1611;
@@ -160,7 +160,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.04125 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = CSTRING(Phone_Dial);
-            action = QUOTE([ARR_2(ace_player,ctrlText 1400)] call FUNC(dialPhone));
+            action = QUOTE([ARR_2(ACE_player,ctrlText 1400)] call FUNC(dialPhone));
         };
         class up: Rsc_ACE_HiddenButton {
             idc = 1612;
@@ -169,7 +169,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.020625 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = CSTRING(Phone_Up);
-            action = QUOTE([true] call FUNC(setSpeedDial));
+            action = QUOTE(true call FUNC(setSpeedDial));
         };
         class down: Rsc_ACE_HiddenButton {
             idc = 1613;
@@ -178,7 +178,7 @@ class Rsc_ACE_PhoneInterface {
             w = "0.020625 * safeZoneW";
             h = "0.033 * safeZoneH";
             tooltip = CSTRING(Phone_Down);
-            action = QUOTE([false] call FUNC(setSpeedDial));
+            action = QUOTE(false call FUNC(setSpeedDial));
         };
         class speedDial_Text: RscText {
             idc = 1405;
