@@ -310,7 +310,7 @@ class CfgVehicles {
         };
         class ACE_Actions {
             class ACE_MainActions {
-                modifierFunction = QUOTE(_this call FUNC(modifyInteraction));
+                modifierFunction = QUOTE(call FUNC(modifyInteraction));
             };
         };
 

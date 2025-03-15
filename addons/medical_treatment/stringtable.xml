@@ -4581,7 +4581,7 @@
             <Polish>Czas, w sekundach wymagany do wykopania grobu.</Polish>
             <Portuguese>Tempo, em segundos, necessário para cavar uma cova para um corpo.</Portuguese>
             <Russian>Время в секундах, необходимое для того, чтобы выкопать могилу для тела.</Russian>
-            <German>Zeit (in Sekunden), die benötigt wird, um ein Grab für einen Leichnam auszuheben.</German>
+            <German>Zeit in Sekunden, die benötigt wird, um ein Grab für einen Leichnam auszuheben.</German>
             <Korean>시신의 무덤을 파는 데 필요한 시간(초 단위).</Korean>
             <Japanese>遺体の墓を掘るのに掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>挖掘坟墓所需时间(秒)</Chinesesimp>
@@ -4607,7 +4607,7 @@
             <Polish>Czas w sekundach potrzebny na aplikację transfuzji IV.</Polish>
             <Portuguese>Tempo, em segundos, necessário para administrar uma bolsa de IV.</Portuguese>
             <Russian>Время, необходимое для применения пакета внутривенного переливания (в секундах).</Russian>
-            <German>Zeit in Sekunden, die benötigt wird, um einen Infusionsbeutel aufzutragen.</German>
+            <German>Zeit in Sekunden, die benötigt wird, um einen Infusionsbeutel zu verabreichen.</German>
             <Korean>초 단위로 수액용기를 사용하는 데 걸리는 시간을 정합니다.</Korean>
             <Japanese>点滴の投与に掛かる時間。 (秒単位)</Japanese>
             <Chinesesimp>使用静脉输液所需的时间（秒）</Chinesesimp>
@@ -4620,7 +4620,7 @@
             <Polish>Czas aplikacji IV</Polish>
             <Portuguese>Tempo de tratamento de bolsas de IV</Portuguese>
             <Russian>Время внутривенного переливания</Russian>
-            <German>IV Beutelbehandlungszeit</German>
+            <German>Infusion-Behandlungszeit</German>
             <Korean>수액용기 사용 시간</Korean>
             <Japanese>点滴の所要時間</Japanese>
             <Chinesesimp>静脉输液袋治疗时间</Chinesesimp>
@@ -4680,57 +4680,73 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to administer medication using an autoinjector.</English>
             <French>Temps, en secondes, nécessaire à une unité dépassant le niveau de formation requis pour administrer un médicament à l'aide d'un auto-injecteur.</French>
-            <Korean>필요한 의료 레벨 이상인 유닛이 자동주사기로 약물을 투여하는 데 걸리는 시간(초)입니다.</Korean>
+            <Italian>Tempo in secondi richiesto per l'utilizzo di autoiniettori, da parte di unità che hanno almeno la minima abilità medica necessaria.</Italian>
+            <German>Zeit in Sekunden, die eine Einheit, mit einem höheren 'Fähigkeiten-Level' als benötigt, braucht, um Medikamente mit einem Autoinjektor zu verabreichen.</German>
             <Russian>Время в секундах, необходимое специалисту, превышающему необходимый уровень подготовки, для использования автоинъекторов.</Russian>
+            <Korean>필요한 의료 레벨 이상인 유닛이 자동주사기로 약물을 투여하는 데 걸리는 시간(초)입니다.</Korean>
             <Japanese>使用に必要な医療スキルのレベルを超えたユニットが自動注射器の使用に掛かる時間。 (秒単位)</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_DisplayName">
             <English>Skilled Autoinjector Treatment Time</English>
             <French>Temps d'administration de l'auto-injecteur en fonction du niveau de compétence</French>
-            <Korean>숙련도에 따른 자동주사기 투여 시간</Korean>
+            <Italian>Tempo di utilizzo dell'autoiniettore con abilitazione</Italian>
+            <German>Autoinjektor-Behandlungszeit für Überqualifizierte</German>
             <Russian>Квалифицированное время обработки автоинъектора</Russian>
+            <Korean>숙련도에 따른 자동주사기 투여 시간</Korean>
             <Japanese>熟練者の自動注射器の所要時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to administer an IV bag.</English>
             <French>Temps, en secondes, nécessaire à une unité dépassant le niveau de formation requis pour administrer une poche de perfusion.</French>
-            <Korean>필요한 의료 레벨 이상인 유닛이 수액용기로 수액을 투여하는 데 걸리는 시간(초)입니다.</Korean>
+            <Italian>Tempo in secondi richiesto per applicare una Flebo Endovenosa, da parte di unità che hanno almeno la minima abilità medica necessaria.</Italian>
+            <German>Zeit in Sekunden, die eine Einheit, mit einem höheren 'Fähigkeiten-Level' als benötigt, braucht, um einen Infusionsbeutel zu verabreichen.</German>
             <Russian>Время в секундах, необходимое специалисту, превышающему необходимый уровень подготовки, для внутривенного вливания.</Russian>
+            <Korean>필요한 의료 레벨 이상인 유닛이 수액용기로 수액을 투여하는 데 걸리는 시간(초)입니다.</Korean>
             <Japanese>使用に必要な医療スキルのレベルを超えたユニットが点滴の投与に掛かる時間。 (秒単位)</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_DisplayName">
             <English>Skilled IV Bag Treatment Time</English>
             <French>Temps de traitement des poches IV par un personnel qualifié</French>
-            <Korean>숙련도에 따른 수액용기 투여 시간</Korean>
+            <Italian>Tempo di inserimento EV con abilitazione</Italian>
+            <German>Infusion-Behandlungszeit für Überqualifizierte</German>
             <Russian>Квалифицированное время обработки пакета для внутривенного вливания</Russian>
+            <Korean>숙련도에 따른 수액용기 투여 시간</Korean>
             <Japanese>熟練者の点滴の所要時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to apply a splint.</English>
             <French>Temps, en secondes, nécessaire à une unité dépassant le niveau de formation requis pour poser une attelle.</French>
-            <Korean>필요한 의료 레벨 이상인 유닛이 부목을 적용하는 데 걸리는 시간(초)입니다.</Korean>
+            <Italian>Tempo in secondi richiesto per l'applicazione di una gessatura, da parte di unità che hanno almeno la minima abilità medica necessaria.</Italian>
+            <German>Zeit in Sekunden, die eine Einheit, mit einem höheren 'Fähigkeiten-Level' als benötigt, braucht, um eine Schiene anzulegen.</German>
             <Russian>Время в секундах, необходимое специалисту, превышающему необходимый уровень подготовки, для наложения шины.</Russian>
+            <Korean>필요한 의료 레벨 이상인 유닛이 부목을 적용하는 데 걸리는 시간(초)입니다.</Korean>
             <Japanese>使用に必要な医療スキルのレベルを超えたユニットが添え木の使用に掛かる時間。 (秒単位)</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_DisplayName">
             <English>Skilled Splint Treatment Time</English>
             <French>Temps de pose de l'attelle en fonction du niveau de compétence</French>
-            <Korean>숙련도에 따른 부목 적용 시간</Korean>
+            <Italian>Tempo di Gessatura con abilitazione</Italian>
+            <German>Schienenbehandlungszeit für Überqualifizierte</German>
             <Russian>Квалифицированное время наложения шины</Russian>
+            <Korean>숙련도에 따른 부목 적용 시간</Korean>
             <Japanese>熟練者の添え木の所要時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to apply or remove a tourniquet.</English>
             <French>Temps, en secondes, nécessaire à une unité dépassant le niveau de formation requis pour poser ou retirer un garrot.</French>
-            <Korean>필요한 의료 레벨 이상인 유닛이 지혈대를 묶거나 제거하는 데 걸리는 시간(초)입니다.</Korean>
+            <Italian>Tempo in secondi richiesto per l'applicazione di un laccio emostatico, da parte di unità che hanno almeno la minima abilità medica necessaria.</Italian>
+            <German>Zeit in Sekunden, die eine Einheit, mit einem höheren 'Fähigkeiten-Level' als benötigt, braucht, um ein Tourniquet anzulegen.</German>
             <Russian>Время в секундах, необходимое специалисту, превышающему необходимый уровень подготовки, для наложения или снятия жгута.</Russian>
+            <Korean>필요한 의료 레벨 이상인 유닛이 지혈대를 묶거나 제거하는 데 걸리는 시간(초)입니다.</Korean>
             <Japanese>使用に必要な医療スキルのレベルを超えたユニットが止血帯の使用/取り外しに掛かる時間。 (秒単位)</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_DisplayName">
             <English>Skilled Tourniquet Treatment Time</English>
             <French>Temps d'application du garrot en fonction de la compétence</French>
-            <Korean>숙련도에 따른 지혈대 적용 시간</Korean>
+            <Italian>Tempo d'uso del Laccio Emostatico con abilitazione</Italian>
+            <German>Tourniquet-Behandlungszeit für Überqualifizierte</German>
             <Russian>Квалифицированное время наложения жгута</Russian>
+            <Korean>숙련도에 따른 지혈대 적용 시간</Korean>
             <Japanese>熟練者の止血帯の所要時間</Japanese>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_TriageCard_NoEntry">

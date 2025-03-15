@@ -33,7 +33,7 @@ private _actionID = _player addAction [
     false,
     true,
     "GetOut",
-    QUOTE(_this call FUNC(canStand))
+    QUOTE(call FUNC(canStand))
 ];
 
 // Read config

@@ -1,11 +1,7 @@
 class CfgAmmo {
     // All explosive based Ammo classes. These are all listed in case they become required.
-    class Default;
 
-    class TimeBombCore: Default {
-        GVAR(defuseTime) = 5;
-    };
-
+    // GVAR(defuseTime) is the defuse time (default of 5 in ACE_Explosives_fnc_StartDefuse)
     // GVAR(size) = 0; is small size
     // GVAR(size) = 1; is large size
     class ClaymoreDirectionalMine_Remote_Ammo;
