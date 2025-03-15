@@ -67,7 +67,7 @@
             <Russian>ACE Счётчик убийств</Russian>
             <German>ACE Abschusszähler</German>
             <Korean>ACE 사살 이벤트</Korean>
-            <Japanese>ACE キル イベント (殺傷履歴)</Japanese>
+            <Japanese>ACE キル イベント (殺傷記録)</Japanese>
             <Chinesesimp>ACE 击杀事件</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_KillTracker_TotalKills">
