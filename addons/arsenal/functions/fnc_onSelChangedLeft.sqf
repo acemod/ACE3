@@ -269,6 +269,12 @@ switch (GVAR(currentLeftPanel)) do {
 
             TOGGLE_RIGHT_PANEL_WEAPON
 
+            // execNextFrame won't work in 3den so just swap it now
+            if (is3DEN && _isDisposable) then {
+                GVAR(center) call cba_disposable_fnc_changeDisposableLauncherClass;
+                _isDisposable = false;
+            };
+
             // If item is a disposable launcher, delay a bit to show new compatible items
             if (_isDisposable) then {
                 [{
