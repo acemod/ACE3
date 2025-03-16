@@ -83,7 +83,7 @@ if (isServer) then {
             if (isNull _explosive) exitWith {};
 
             [QEGVAR(common,triggerAmmo), _explosive, _explosive] call CBA_fnc_targetEvent;
-        }, _explosive, _fuseTime] call CBA_fnc_waitAndExecute;
+        }, _explosive, _delay] call CBA_fnc_waitAndExecute;
     }] call CBA_fnc_addEventHandler;
 
     // When getting knocked out in medical, trigger deadman explosives:
