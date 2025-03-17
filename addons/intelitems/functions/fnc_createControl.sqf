@@ -41,7 +41,11 @@ _ctrlClose ctrlAddEventHandler ["ButtonClick", {
 
 // Set data in content control
 private _ctrlContent = _controlsGroup controlsGroupCtrl IDC_CONTENT;
-_ctrlContent ctrlSetText GET_DATA(_index);
+_ctrlContent ctrlSetText (GET_DATA(_index) select 0);
+
+// Set data in header control
+private _header = GET_DATA(_index) select 1;
+_ctrlHeader ctrlSetText _header;
 
 // Restore position of controls group (center if not saved)
 private _position = GVAR(controlsData) get _index;

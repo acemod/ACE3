@@ -3,9 +3,10 @@
 #include "\z\ace\addons\main\script_mod.hpp"
 
 // #define DEBUG_MODE_FULL
-// #define DISABLE_COMPILE_CACHE
+ #define DISABLE_COMPILE_CACHE
 // #define ENABLE_PERFORMANCE_COUNTERS
-
+#define DEBUG_ENABLED_INTELITEMS
+#define DEBUG_SETTINGS_INTELITEMS
 #ifdef DEBUG_ENABLED_INTELITEMS
     #define DEBUG_MODE_FULL
 #endif
@@ -29,11 +30,12 @@
 #define IDC_HEADER     30
 #define IDC_CLOSE      40
 #define IDC_CONTENT    50
+#define IDC_HTEXT      60
 
 #define IDC_ATTRIBUTE_GROUP 4800
 #define IDC_ATTRIBUTE_LABEL 4801
 #define IDC_ATTRIBUTE_EDIT  4802
 
-#define SYS_DATA(index)      (format [QGVAR(%1), index])
-#define SET_DATA(index,data) (GVAR(intelData) setVariable [SYS_DATA(index), data, true])
-#define GET_DATA(index)      (GVAR(intelData) getVariable [SYS_DATA(index), ""])
+#define SYS_DATA(index)             (format [QGVAR(%1), index])
+#define SET_DATA(index,data,header) (GVAR(intelData) setVariable [SYS_DATA(index), [data,header], true])
+#define GET_DATA(index)             (GVAR(intelData) getVariable [SYS_DATA(index), ["",""]])

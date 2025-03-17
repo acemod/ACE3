@@ -13,7 +13,7 @@
  * Successful <BOOL>
  *
  * Example:
- * [_unit, "acex_intelitems_notepad", "Notes!"] call ace_intelitems_fnc_addIntel
+ * [_unit, "acex_intelitems_notepad", "Notes!", "New Header"] call ace_intelitems_fnc_addIntel
  *
  * Public: Yes
  */
@@ -22,7 +22,7 @@ if (canSuspend) exitWith {
     [FUNC(addIntel), _this] call CBA_fnc_directCall;
 };
 
-params [["_unit", objNull, [objNull]], ["_item", "", [""]], ["_data", "", [""]]];
+params [["_unit", objNull, [objNull]], ["_item", "", [""]], ["_data", "", [""]],["_header", "", [""]]];
 
 if (
     !isServer
@@ -41,6 +41,6 @@ if (_magazineId isEqualTo []) exitWith {false};
 
 // Assign an intel index to the added magazine id and set its data
 private _index = [_magazineId select 0] call FUNC(handleMagIndex);
-SET_DATA(_index,_data);
+SET_DATA(_index,_data,_header);
 
 true
