@@ -87,6 +87,7 @@ class CfgVehicles {
             class GVAR(header): GVAR(header) {};
             class GVAR(data): GVAR(data) {
                 displayName = CSTRING(Photo_Filename);
+                control = "edit";
             };
         };
     };
