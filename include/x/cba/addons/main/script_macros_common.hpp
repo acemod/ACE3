@@ -464,8 +464,7 @@ Example:
 Author:
     Spooner
 ------------------------------------------- */
-#define PFORMAT_1(MESSAGE,A) \
-    format ['%1: A=%2', MESSAGE, RETNIL(A)]
+#define PFORMAT_1(MESSAGE,A) format ['%1: A=%2', MESSAGE, RETNIL(A)]
 
 #define PFORMAT_2(MESSAGE,A,B) \
     format ['%1: A=%2, B=%3', MESSAGE, RETNIL(A), RETNIL(B)]
