@@ -28,14 +28,14 @@
 }, {
     [[1, 0, 0], ACE_player] call FUNC(MCLOS_buttonPressed)
 },
-[DIK_NUMPAD6, [false, false, false]], false, 0] call CBA_fnc_addKeybind;  // Numpad 6
+[DIK_NUMPAD4, [false, false, false]], false, 0] call CBA_fnc_addKeybind;  // Numpad 4
 
 ["ACE3 Weapons", QGVAR(mclosRight), LLSTRING(mclosRight), {
     [[1, 0, 0], ACE_player] call FUNC(MCLOS_buttonPressed)
 }, {
     [[-1, 0, 0], ACE_player] call FUNC(MCLOS_buttonPressed)
 },
-[DIK_NUMPAD4, [false, false, false]], false, 0] call CBA_fnc_addKeybind;  // Numpad 4
+[DIK_NUMPAD6, [false, false, false]], false, 0] call CBA_fnc_addKeybind;  // Numpad 6
 
 if (!hasInterface) exitWith {};
 
