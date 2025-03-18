@@ -231,7 +231,7 @@
             <Russian>При ношении электронных средств защиты органов слуха снижается громкость импульсных шумов, таких как выстрелы и взрывы</Russian>
             <German>Blendet Impulsgeräusche wie Schüsse oder Explosionen beim Tragen von elektronischem Gehörschutz aus</German>
             <Korean>전자 청력 보호구를 착용하면 총성이나 폭발음과 같은 충격음의 볼륨이 감소합니다.</Korean>
-            <Japanese>電子聴覚保護具を装着しているときに、銃声や爆発音などの衝撃音の音量を低減します</Japanese>
+            <Japanese>電子聴覚保護具を装着しているときに、銃声や爆発などの衝撃音の音量を低減します</Japanese>
         </Key>
         <Key ID="STR_ACE_Hearing_EnableNoiseDucking_DisplayName">
             <English>Enable Noise Ducking Effect</English>
