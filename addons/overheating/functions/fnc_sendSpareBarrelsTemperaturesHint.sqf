@@ -6,19 +6,19 @@
  *
  * Arguments:
  * 0: Target unit of the hint <OBJECT>
- * 1: Unit that has the spare barrels <STRING>
+ * 1: Unit that has the spare barrels <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [bob, "bob"] call ace_overheating_fnc_sendSpareBarrelsTemperaturesHint
+ * [player, player] call ace_overheating_fnc_sendSpareBarrelsTemperaturesHint
  *
  *
  * Public: No
  */
 
-params ["_player","_unit"];
+params ["_player", "_unit"];
 
 // Find all spare barrel the player has
 TRACE_2("sendSpareBarrelsTemperatureHunt",_player,_unit);
@@ -49,36 +49,15 @@ private _countHot = {(_x >= 100) && (_x < 200)} count _temps;
 private _countVeryHot = {(_x >= 200) && (_x < 600)} count _temps;
 private _countExtremelyHot = {_x >= 600} count _temps;
 private _output = ["%1 %2%3%4 %5%6%7 %8%9%10 %11%12%13 %14"];
-private _size = 1.0;
-if (_countCool > 0) then {
-    _output pushBack _countCool;
-    _output pushBack LSTRING(BarrelCool);
-    _output pushBack "<br/>";
-    _size = _size + 0.5;
-};
-if (_countWarm > 0) then {
-    _output pushBack _countWarm;
-    _output pushBack LSTRING(BarrelWarm);
-    _output pushBack "<br/>";
-    _size = _size + 0.5;
-};
-if (_countHot > 0) then {
-    _output pushBack _countHot;
-    _output pushBack LSTRING(BarrelHot);
-    _output pushBack "<br/>";
-    _size = _size + 0.5;
-};
-if (_countVeryHot > 0) then {
-    _output pushBack _countVeryHot;
-    _output pushBack LSTRING(BarrelVeryHot);
-    _output pushBack "<br/>";
-    _size = _size + 0.5;
-};
-if (_countExtremelyHot > 0) then {
-    _output pushBack _countExtremelyHot;
-    _output pushBack LSTRING(BarrelExtremelyHot);
-    _size = _size + 0.5;
-};
+private _emptyLine = ["", "", ""];
+
+_output append ([_emptyLine, [_countCool, LSTRING(BarrelCool), "<br/>"]] select (_countCool > 0));
+_output append ([_emptyLine, [_countWarm, LSTRING(BarrelWarm), "<br/>"]] select (_countWarm > 0));
+_output append ([_emptyLine, [_countHot, LSTRING(BarrelHot), "<br/>"]] select (_countHot > 0));
+_output append ([_emptyLine, [_countVeryHot, LSTRING(BarrelVeryHot), "<br/>"]] select (_countVeryHot > 0));
+_output append ([_emptyLine, [_countExtremelyHot, LSTRING(BarrelExtremelyHot), "<br/>"]] select (_countExtremelyHot > 0));
+
+private _size = 1 + 0.5 * ({_x isEqualTo "<br/>"} count _output);
 
 TRACE_1("_output",_output);
 [QEGVAR(common,displayTextStructured), [_output, _size, _player], [_player]] call CBA_fnc_targetEvent;

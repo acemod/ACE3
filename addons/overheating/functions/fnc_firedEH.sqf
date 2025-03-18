@@ -93,7 +93,7 @@ private _ammoCount = _unit ammo _weapon;
 
 // Compute new temperature once every 3 bullets
 if (_ammoCount % 3 == 0) then {
-    _this call FUNC(overheat);
+    call FUNC(overheat);
 };
 
 // reset cookoff heat

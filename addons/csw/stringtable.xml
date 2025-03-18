@@ -186,7 +186,7 @@
             <Russian>Войти</Russian>
             <German>Einsteigen</German>
             <Korean>탑승하기</Korean>
-            <Japanese>乗り込む</Japanese>
+            <Japanese>搭乗</Japanese>
             <Chinese>進入</Chinese>
             <Chinesesimp>进入</Chinesesimp>
             <Turkish>Bin</Turkish>
@@ -202,7 +202,7 @@
             <Russian>Установить оружие</Russian>
             <German>Waffe montieren</German>
             <Korean>무기 거치하기</Korean>
-            <Japanese>火器を乗せる</Japanese>
+            <Japanese>火器を載せる</Japanese>
             <Chinese>裝載武器</Chinese>
             <Chinesesimp>装载武器</Chinesesimp>
         </Key>
@@ -1118,6 +1118,15 @@
             <Chinese>[CSW] SPG-9M 發射器袋</Chinese>
             <Chinesesimp>[班组] SPG-9M 发射器包</Chinesesimp>
             <Turkish>[CSW] SPG-9M Launcher Bag</Turkish>
+        </Key>
+        <Key ID="STR_ACE_CSW_statTripods">
+            <English>Mounts on:</English>
+            <French>Se monte sur :</French>
+            <Italian>Montato su:</Italian>
+            <German>Montiert auf:</German>
+            <Russian>Крепится на:</Russian>
+            <Korean>전용 장착:</Korean>
+            <Japanese>載せる対象:</Japanese>
         </Key>
         <Key ID="STR_ACE_CSW_tow_tube">
             <English>[CSW] BGM-71 TOW Launcher Bag</English>

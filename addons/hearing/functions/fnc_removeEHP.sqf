@@ -21,11 +21,11 @@ if (!GVAR(enableCombatDeafness)) exitWith {};
 params ["_unit", ["_displayHint", false]];
 
 // Inventory full
-if !([_unit, "ACE_EHP"] call CBA_fnc_canAddItem) exitWith {
+if !(_unit canAdd ["ACE_EHP", 1, true]) exitWith {
     [LELSTRING(common,Inventory_Full)] call EFUNC(common,displayTextStructured);
 };
 
-// Plugs already in and removing them.
+// EHP already in and removing them.
 _unit addItem "ACE_EHP";
 
 _unit setVariable ["ACE_hasEHP", false, true];

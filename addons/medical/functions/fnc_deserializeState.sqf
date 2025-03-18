@@ -29,7 +29,6 @@ if (!local _unit) exitWith { ERROR_1("unit [%1] is not local",_unit) };
 if !(_unit getVariable [QGVAR(initialized), false]) exitWith {
     [QEGVAR(medical_status,initialized), {
         params ["_unit"];
-        //IGNORE_PRIVATE_WARNING ["_thisArgs", "_thisId", "_thisType"];
         _thisArgs params ["_target"];
 
         if (_unit == _target) then {
@@ -97,7 +96,7 @@ private _state = [_json] call CBA_fnc_parseJSON;
     [QEGVAR(medical,ivBags), nil],
     [QEGVAR(medical,triageLevel), 0],
     [QEGVAR(medical,triageCard), []],
-    [QEGVAR(medical,bodyPartDamage), [0,0,0,0,0,0]]
+    [VAR_BODYPART_DAMAGE, DEFAULT_BODYPART_DAMAGE_VALUES]
     // Offset needs to be converted
     // [VAR_MEDICATIONS, []]
 ];

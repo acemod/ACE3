@@ -163,7 +163,7 @@
             <Polish>Mina przeciwpiechotna M26</Polish>
             <Portuguese>M26 Mina saltadora antipessoal</Portuguese>
             <Russian>M26 противопехотная мина</Russian>
-            <German>M26 Antipersonensprungmine</German>
+            <German>M26 Antipersonenspringmine</German>
             <Korean>M26 대인도약지뢰</Korean>
             <Japanese>M26 対人跳躍地雷</Japanese>
             <Chinese>M26反人員彈跳雷</Chinese>
@@ -187,6 +187,16 @@
             <Chinesesimp>VS-50 反人员地雷</Chinesesimp>
             <Turkish>VS-50 Anti-Personel Mayını</Turkish>
             <Hungarian>VS-50 gyalogsági taposóakna</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RealisticNames_APERSMine_ToePopper_Name">
+            <English>VS-50 Anti-Personnel Mine (Toe-Popper)</English>
+            <French>VS-50 Mine antipersonnel (Toe-Popper)</French>
+            <Italian>VS-50 Mina antiuomo (Toe-Popper)</Italian>
+            <German>VS-50 Antipersonenmine (Toe-Popper)</German>
+            <Russian>VS-50 противопехотная мина (Toe-Popper)</Russian>
+            <Korean>VS-50 대인지뢰 (발목지뢰형)</Korean>
+            <Japanese>VS-50 対人地雷 (トウポッパー)</Japanese>
+            <Chinesesimp>VS-50 反人员地雷 (脚尖毁灭者)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_APERSTripwireMine_Name">
             <English>PMR-3 Anti-Personnel Tripwire Mine</English>
@@ -1984,7 +1994,7 @@
             <Russian>HEMTT (ремонтный)</Russian>
             <German>HEMTT Instandsetzung</German>
             <Korean>HEMTT 수리</Korean>
-            <Japanese>HEMTT 修理</Japanese>
+            <Japanese>HEMTT (修理)</Japanese>
             <Chinese>重型增程機動戰術卡車 (維修)</Chinese>
             <Chinesesimp>HEMTT（维修）</Chinesesimp>
             <Turkish>HEMTT Tamir</Turkish>
@@ -2001,7 +2011,7 @@
             <Russian>HEMTT (боеприпасы)</Russian>
             <German>HEMTT Munition</German>
             <Korean>HEMTT 탄약</Korean>
-            <Japanese>HEMTT 弾薬</Japanese>
+            <Japanese>HEMTT (弾薬)</Japanese>
             <Chinese>重型增程機動戰術卡車 (彈藥)</Chinese>
             <Chinesesimp>HEMTT（弹药）</Chinesesimp>
             <Turkish>HEMTT Cephane</Turkish>
@@ -2018,7 +2028,7 @@
             <Russian>HEMTT (контейнер)</Russian>
             <German>HEMTT Container</German>
             <Korean>HEMTT 컨테이너</Korean>
-            <Japanese>HEMTT コンテナ</Japanese>
+            <Japanese>HEMTT (コンテナ)</Japanese>
             <Chinese>重型增程機動戰術卡車 (貨櫃)</Chinese>
             <Chinesesimp>HEMTT（货柜）</Chinesesimp>
             <Turkish>HEMTT Konteynır</Turkish>
@@ -2035,7 +2045,7 @@
             <Russian>HEMTT (транспортный, крытый)</Russian>
             <German>HEMTT Transport (bedeckt)</German>
             <Korean>HEMTT 수송 (덮개)</Korean>
-            <Japanese>HEMTT 輸送 (幌)</Japanese>
+            <Japanese>HEMTT (輸送、幌付き)</Japanese>
             <Chinese>重型增程機動戰術卡車 (運輸, 棚布)</Chinese>
             <Chinesesimp>HEMTT（运输，棚布）</Chinesesimp>
             <Turkish>HEMTT Nakil (Kapalı)</Turkish>
@@ -2052,7 +2062,7 @@
             <Russian>HEMTT (топливозаправщик)</Russian>
             <German>HEMTT Treibstoff</German>
             <Korean>HEMTT 연료</Korean>
-            <Japanese>HEMTT 燃料</Japanese>
+            <Japanese>HEMTT (燃料)</Japanese>
             <Chinese>重型增程機動戰術卡車 (燃油)</Chinese>
             <Chinesesimp>HEMTT（燃油）</Chinesesimp>
             <Turkish>HEMTT Yakıt</Turkish>
@@ -2069,7 +2079,7 @@
             <Russian>HEMTT (медицинский)</Russian>
             <German>HEMTT Sanitäter</German>
             <Korean>HEMTT 의료</Korean>
-            <Japanese>HEMTT 衛生</Japanese>
+            <Japanese>HEMTT (衛生)</Japanese>
             <Chinese>重型增程機動戰術卡車 (醫療)</Chinese>
             <Chinesesimp>HEMTT（医疗）</Chinesesimp>
             <Turkish>HEMTT  Medikal</Turkish>
@@ -2103,7 +2113,7 @@
             <Russian>HEMTT (транспортный)</Russian>
             <German>HEMTT Transport</German>
             <Korean>HEMTT 수송</Korean>
-            <Japanese>HEMTT 輸送</Japanese>
+            <Japanese>HEMTT (輸送)</Japanese>
             <Chinese>重型增程機動戰術卡車 (運輸)</Chinese>
             <Chinesesimp>HEMTT（运输）</Chinesesimp>
             <Turkish>HEMTT Nakil</Turkish>
@@ -2120,7 +2130,7 @@
             <Russian>КамАЗ РСЗО</Russian>
             <German>KamAS MRL</German>
             <Korean>카마즈 다연장로켓</Korean>
-            <Japanese>KamAZ MRL</Japanese>
+            <Japanese>KamAZ (MRL)</Japanese>
             <Chinese>"卡瑪斯"卡車 (多管火箭)</Chinese>
             <Chinesesimp>"卡玛兹"（多管火箭）</Chinesesimp>
             <Turkish>KamAZ</Turkish>
@@ -2136,7 +2146,7 @@
             <Russian>КамАЗ (боеприпасы)</Russian>
             <German>KamAS Munition</German>
             <Korean>카마즈 탄약</Korean>
-            <Japanese>KamAZ 弾薬</Japanese>
+            <Japanese>KamAZ (弾薬)</Japanese>
             <Chinese>"卡瑪斯"卡車 (彈藥)</Chinese>
             <Chinesesimp>"卡玛兹"（弹药）</Chinesesimp>
             <Turkish>KamAZ Cephane</Turkish>
@@ -2153,7 +2163,7 @@
             <Russian>КамАЗ (ремонтный)</Russian>
             <German>KamAS Instandsetzung</German>
             <Korean>카마즈 수리</Korean>
-            <Japanese>KamAZ 修理</Japanese>
+            <Japanese>KamAZ (修理)</Japanese>
             <Chinese>"卡瑪斯"卡車 (維修)</Chinese>
             <Chinesesimp>"卡玛兹"（维修）</Chinesesimp>
             <Turkish>KamAZ Tamir</Turkish>
@@ -2170,7 +2180,7 @@
             <Russian>КамАЗ (транспортный, крытый)</Russian>
             <German>KamAS Transport (bedeckt)</German>
             <Korean>카마즈 수송 (덮개)</Korean>
-            <Japanese>KamAZ 輸送 (幌)</Japanese>
+            <Japanese>KamAZ (輸送、幌付き)</Japanese>
             <Chinese>"卡瑪斯"卡車 (運輸, 棚布)</Chinese>
             <Chinesesimp>"卡玛兹"（运输，棚布）</Chinesesimp>
             <Turkish>KamAZ Nakil (Kapalı)</Turkish>
@@ -2187,7 +2197,7 @@
             <Russian>КамАЗ (топливозаправщик)</Russian>
             <German>KamAS Treibstoff</German>
             <Korean>카마즈 연료</Korean>
-            <Japanese>KamAZ 燃料</Japanese>
+            <Japanese>KamAZ (燃料)</Japanese>
             <Chinese>"卡瑪斯"卡車 (燃油)</Chinese>
             <Chinesesimp>"卡玛兹"（燃油）</Chinesesimp>
             <Turkish>KamAZ Yakıt</Turkish>
@@ -2204,7 +2214,7 @@
             <Russian>КамАЗ (медицинский)</Russian>
             <German>KamAS Sanitäter</German>
             <Korean>카마즈 의료</Korean>
-            <Japanese>KamAZ 衛生</Japanese>
+            <Japanese>KamAZ (衛生)</Japanese>
             <Chinese>"卡瑪斯"卡車 (醫療)</Chinese>
             <Chinesesimp>"卡玛兹"（医疗）</Chinesesimp>
             <Turkish>KamAZ Medikal</Turkish>
@@ -2221,7 +2231,7 @@
             <Russian>КамАЗ (транспортный)</Russian>
             <German>KamAS Transport</German>
             <Korean>카마즈 수송</Korean>
-            <Japanese>KamAZ 輸送</Japanese>
+            <Japanese>KamAZ (輸送)</Japanese>
             <Chinese>"卡瑪斯"卡車 (運輸)</Chinese>
             <Chinesesimp>"卡玛兹"（运输）</Chinesesimp>
             <Turkish>KamAZ Nakil</Turkish>
@@ -2236,7 +2246,8 @@
             <Russian>КамАЗ (водоноситель)</Russian>
             <German>KamAS Wasser</German>
             <Korean>카마즈 급수</Korean>
-            <Japanese>KamAZ 給水</Japanese>
+            <Japanese>KamAZ (給水車)</Japanese>
+            <Chinesesimp>"卡玛兹"（水箱）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_Truck_03_ammo_Name">
             <English>Typhoon Ammo</English>
@@ -2249,7 +2260,7 @@
             <Russian>Тайфун (боеприпасы)</Russian>
             <German>Typhoon Munition</German>
             <Korean>타이푼 탄약</Korean>
-            <Japanese>タイフーン 弾薬</Japanese>
+            <Japanese>タイフーン (弾薬)</Japanese>
             <Chinese>"颱風"卡車 (彈藥)</Chinese>
             <Chinesesimp>"台风"（弹药）</Chinesesimp>
             <Turkish>Typhoon Cephane</Turkish>
@@ -2266,7 +2277,7 @@
             <Russian>Тайфун (крытый)</Russian>
             <German>Typhoon Transport (bedeckt)</German>
             <Korean>타이푼 수송 (덮개)</Korean>
-            <Japanese>タイフーン 輸送 (幌)</Japanese>
+            <Japanese>タイフーン (輸送、幌付き)</Japanese>
             <Chinese>"颱風"卡車 (運輸, 棚布)</Chinese>
             <Chinesesimp>"台风"（运输，棚布）</Chinesesimp>
             <Turkish>Typhoon Nakil (Kapalı)</Turkish>
@@ -2283,7 +2294,7 @@
             <Russian>Тайфун (устройство)</Russian>
             <German>Typhoon Gerät</German>
             <Korean>타이푼 장치</Korean>
-            <Japanese>タイフーン デバイス</Japanese>
+            <Japanese>タイフーン (デバイス)</Japanese>
             <Chinese>"颱風"卡車 (精密設備)</Chinese>
             <Chinesesimp>"台风"（装置）</Chinesesimp>
             <Turkish>Typhoon Cihaz</Turkish>
@@ -2300,7 +2311,7 @@
             <Russian>Тайфун (топливозаправщик)</Russian>
             <German>Typhoon Treibstoff</German>
             <Korean>타이푼 연료</Korean>
-            <Japanese>タイフーン 燃料</Japanese>
+            <Japanese>タイフーン (燃料)</Japanese>
             <Chinese>"颱風"卡車 (燃油)</Chinese>
             <Chinesesimp>"台风"（燃油）</Chinesesimp>
             <Turkish>Typhoon Yakıt</Turkish>
@@ -2317,7 +2328,7 @@
             <Russian>Тайфун (медицинский)</Russian>
             <German>Typhoon Sanitäter</German>
             <Korean>타이푼 의료</Korean>
-            <Japanese>タイフーン 衛生</Japanese>
+            <Japanese>タイフーン (衛生)</Japanese>
             <Chinese>"颱風"卡車 (醫療)</Chinese>
             <Chinesesimp>"台风"（医疗）</Chinesesimp>
             <Turkish>Typhoon Medikal</Turkish>
@@ -2334,7 +2345,7 @@
             <Russian>Тайфун (ремонтный)</Russian>
             <German>Typhoon Instandsetzung</German>
             <Korean>타이푼 수리</Korean>
-            <Japanese>タイフーン 修理</Japanese>
+            <Japanese>タイフーン (修理)</Japanese>
             <Chinese>"颱風"卡車 (維修)</Chinese>
             <Chinesesimp>"台风"（维修）</Chinesesimp>
             <Turkish>Typhoon Tamir</Turkish>
@@ -2351,7 +2362,7 @@
             <Russian>Тайфун (транспортный)</Russian>
             <German>Typhoon Transport</German>
             <Korean>타이푼 수송</Korean>
-            <Japanese>タイフーン 輸送</Japanese>
+            <Japanese>タイフーン (輸送)</Japanese>
             <Chinese>"颱風"卡車 (運輸)</Chinese>
             <Chinesesimp>"台风"（运输）</Chinesesimp>
             <Turkish>Typhoon Nakil</Turkish>
@@ -3771,6 +3782,7 @@
             <German>Type 115 (Schwarz)</German>
             <Korean>115식 보총 (검정)</Korean>
             <Japanese>Type 115 (ブラック)</Japanese>
+            <Chinesesimp>Type 115 (黑色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_ghex_Name">
             <English>Type 115 (Green Hex)</English>
@@ -3782,6 +3794,7 @@
             <German>Type 115 (Hex Grün)</German>
             <Korean>115식 보총 (초록육각)</Korean>
             <Japanese>Type 115 (緑六角形迷彩)</Japanese>
+            <Chinesesimp>Type 115 (绿色蜂巢迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_arifle_arx_hex_Name">
             <English>Type 115 (Hex)</English>
@@ -3793,6 +3806,7 @@
             <German>Type 115 (Hex)</German>
             <Korean>115식 보총 (육각)</Korean>
             <Japanese>Type 115 (六角形迷彩)</Japanese>
+            <Chinesesimp>Type 115 (蜂巢迷彩)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_flashlight_Name">
             <English>UTG Defender 126</English>
@@ -3804,6 +3818,7 @@
             <German>UTG Defender 126</German>
             <Korean>UTG 디펜더 126</Korean>
             <Japanese>UTG ディフェンダー 126</Japanese>
+            <Chinesesimp>UTG防御者126</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_hgun_ACPC2_Name">
             <English>Custom Covert II</English>
@@ -5021,6 +5036,7 @@
             <German>EOTech MRDS</German>
             <Korean>이오텍 MRDS</Korean>
             <Japanese>EOTech MRDS</Japanese>
+            <Chinesesimp>EOTech MRDS</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_optic_mrd_black_Name">
             <English>EOTech MRDS (Black)</English>
@@ -5032,6 +5048,7 @@
             <German>EOTech MRDS (Schwarz)</German>
             <Korean>이오텍 MRDS (검정)</Korean>
             <Japanese>EOTech MRDS (ブラック)</Japanese>
+            <Chinesesimp>EOTech MRDS (黑色)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_01_Name">
             <English>CZ 581</English>
@@ -5043,6 +5060,7 @@
             <German>CZ 581</German>
             <Korean>CZ 581</Korean>
             <Japanese>CZ 581</Japanese>
+            <Chinesesimp>CZ 581</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_sgun_huntershotgun_sawedoff_01_Name">
             <English>CZ 581 (Sawed-Off)</English>
@@ -5054,6 +5072,7 @@
             <German>CZ 581 (Abgesägt)</German>
             <Korean>CZ 581 (소드오프)</Korean>
             <Japanese>CZ 581 (ソードオフ)</Japanese>
+            <Chinesesimp>CZ 581 (截短)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_RealisticNames_srifle_DMR_01_Name">
             <English>VS-121</English>

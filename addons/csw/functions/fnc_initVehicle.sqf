@@ -18,7 +18,7 @@
 params ["_vehicle"];
 if (!alive _vehicle) exitWith { WARNING_1("%1 not alive",_vehicle); };
 if (!simulationEnabled _vehicle) exitWith {
-    [{simulationEnabled _this}, FUNC(initVehicle), _vehicle] call CBA_fnc_waitUntilAndExecute;
+    [{simulationEnabled _this}, LINKFUNC(initVehicle), _vehicle] call CBA_fnc_waitUntilAndExecute;
 };
 
 private _typeOf = typeOf _vehicle;
@@ -102,7 +102,7 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
         // Replace existing check ammo interaction with one that takes into account if the magazine actions are available
         private _checkAmmoAction = [QEGVAR(reload,CheckAmmo), LELSTRING(reload,checkAmmo), "", EFUNC(reload,checkAmmo), {
             if !((GVAR(ammoHandling) == 0) && {!([false, true, true, GVAR(defaultAssemblyMode)] select (_target getVariable [QGVAR(assemblyMode), 3]))}) exitWith { false };
-            _this call EFUNC(reload,canCheckAmmo)
+            call EFUNC(reload,canCheckAmmo)
         }] call EFUNC(interact_menu,createAction);
         [_typeOf, 0, ["ACE_MainActions"], _checkAmmoAction] call EFUNC(interact_menu,addActionToClass);
 

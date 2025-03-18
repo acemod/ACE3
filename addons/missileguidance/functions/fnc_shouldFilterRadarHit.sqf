@@ -77,7 +77,6 @@ if !(_maskedByGround) exitWith {
     private _nearby = _target nearObjects 50;
     _nearby = _nearby select {
         // 8 = radar blocking
-        private _blocking = configOf _x >> "weaponLockSystem";
         (([getNumber (configOf _x >> "weaponLockSystem"), 4] call EFUNC(common,binarizeNumber)) select 3) && // Check if chaff can break radar lock
         {[_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle)} && // Check if within view
         {[_projectile, _x, false] call FUNC(checkLos)} // Check if can be seen

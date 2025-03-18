@@ -109,6 +109,7 @@
             <German>Langsame Blutung</German>
             <Korean>느린 출혈</Korean>
             <Japanese>出血は穏やか</Japanese>
+            <Chinesesimp>低速流血中</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate2">
             <English>Moderate bleeding</English>
@@ -121,6 +122,7 @@
             <German>Mäßige Blutung</German>
             <Korean>중간 출혈</Korean>
             <Japanese>出血はそこそこ速い</Japanese>
+            <Chinesesimp>中速流血中</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate3">
             <English>Severe bleeding</English>
@@ -133,6 +135,7 @@
             <German>Schwere Blutung</German>
             <Korean>심한 출혈</Korean>
             <Japanese>出血は激しい</Japanese>
+            <Chinesesimp>快速流血中</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Bleed_Rate4">
             <English>Massive bleeding</English>
@@ -145,6 +148,7 @@
             <German>Massive Blutung</German>
             <Korean>과다 출혈</Korean>
             <Japanese>出血は酷く多い</Japanese>
+            <Chinesesimp>极速流血中</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_BloodLossColorX_DisplayName">
             <English>Blood Loss Color %1</English>
@@ -559,6 +563,7 @@
             <German>Kein Blutverlust</German>
             <Korean>피를 잃지 않음</Korean>
             <Japanese>失血なし</Japanese>
+            <Chinesesimp>没有失血</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Lost_Blood1">
             <English>Lost some blood</English>
@@ -909,6 +914,7 @@
             <German>Medizinische Info anzeigen</German>
             <Korean>의료 정보 보기</Korean>
             <Japanese>医療情報一時表示</Japanese>
+            <Chinesesimp>快速查看医疗信息</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_Description">
             <English>How long the medical info peek remains open after releasing the key.</English>
@@ -921,6 +927,7 @@
             <German>Wie lange die medizinische Info-Anzeige nach dem Loslassen der Taste geöffnet bleibt.</German>
             <Korean>키를 놓은 후 의료 정보가 열린 상태로 유지되는 시간입니다.</Korean>
             <Japanese>医療情報一時表示キーを放してからどれだけ長く情報表示するか。</Japanese>
+            <Chinesesimp>松开按键后医疗信息保留多长时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalInfoReleaseDelay_DisplayName">
             <English>Medical Peek Duration</English>
@@ -933,6 +940,7 @@
             <German>Dauer zum Anzeigen der medizinischen Info</German>
             <Korean>의료 정보 보기 지속 시간</Korean>
             <Japanese>医療情報一時表示の表示時間</Japanese>
+            <Chinesesimp>医疗信息持续时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_Description">
             <English>How long the medical info peek remains open after being injured.</English>
@@ -1142,6 +1150,7 @@
             <German>Keine Blutung</German>
             <Korean>출혈 없음</Korean>
             <Japanese>出血はしていない</Japanese>
+            <Chinesesimp>没在流血</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_STATUS_NPA_APPLIED">
             <English>Nasopharyngeal Tube [NPA]</English>
@@ -1314,6 +1323,7 @@
             <German>Blutungsrate anzeigen</German>
             <Korean>출혈 속도 표시</Korean>
             <Japanese>出血速度の表示</Japanese>
+            <Chinesesimp>显示流血速度</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ShowBloodlossEntry_Description">
             <English>Show qualitative blood loss in the injury list.</English>
@@ -1416,6 +1426,7 @@
             <German>Wechseln zu Ziel</German>
             <Korean>대상으로 전환</Korean>
             <Japanese>相手に切り替え</Japanese>
+            <Chinesesimp>切换到目标</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_ToggleToSelf">
             <English>Switch to self</English>
@@ -1428,6 +1439,7 @@
             <German>Wechseln zu selbst</German>
             <Korean>자신으로 전환</Korean>
             <Japanese>自分に切り替え</Japanese>
+            <Chinesesimp>切换到自己</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_Torso">
             <English>Torso</English>
@@ -1579,6 +1591,16 @@
             <Japanese>身体部位の輪郭表示の色</Japanese>
             <Chinesesimp>身体部位轮廓颜色</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Medical_GUI_needToHolster">
+            <English>You must holster your weapon first!</English>
+            <French>Vous devez d'abord rengainer votre arme !</French>
+            <Italian>Devi prima mettere l'arma nella fondina!</Italian>
+            <German>Du musst zuerst deine Waffe holstern!</German>
+            <Russian>Сначала ты должен убрать свое оружие!</Russian>
+            <Korean>무기를 먼저 집어넣어야 합니다!</Korean>
+            <Japanese>先に武器をしまう必要があります!</Japanese>
+            <Chinesesimp>你必须先收起武器!</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Medical_GUI_showBleeding_Description">
             <English>Display if the patient is bleeding, optionally with rate</English>
             <French>Indique si le patient saigne, éventuellement avec le taux de saignement</French>
@@ -1589,6 +1611,7 @@
             <German>Zeigt an, dass der Patient blutet, optional mit Rate</German>
             <Korean>환자가 출혈 중인지 여부를 표시합니다(선택적으로 출혈 속도 포함)</Korean>
             <Japanese>患者が出血しているかどうかを表示します。オプションで出血速度も表示します</Japanese>
+            <Chinesesimp>显示是否正在流血, 还可以显示流血速度</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showBleeding_DisplayName">
             <English>Show Bleeding State</English>
@@ -1600,6 +1623,7 @@
             <German>Blutungsstatus anzeigen</German>
             <Korean>출혈 상태 표시</Korean>
             <Japanese>出血状態の表示</Japanese>
+            <Chinesesimp>显示流血速度</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_showDamageEntry_Description">
             <English>Show trauma sustained in the injury list.</English>

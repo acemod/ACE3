@@ -32,7 +32,7 @@ class CfgVehicles {
                 class GVAR(buryBodyBag) {
                     displayName = CSTRING(DigGrave);
                     condition = QUOTE([ARR_2(_this#1,_this#0)] call FUNC(canDigGrave));
-                    statement = QUOTE(_this call FUNC(placeBodyBagInGrave));
+                    statement = QUOTE(call FUNC(placeBodyBagInGrave));
                     icon = QPATHTOEF(medical_gui,ui\grave.paa);
                 };
             };

@@ -14,7 +14,7 @@ class Extended_PreInit_EventHandlers {
 class Extended_Init_EventHandlers {
     class GVAR(defaultCarriedObject) { // TODO check if we need to add all subclasses
         class ADDON {
-            init = QUOTE(_this call DEFUNC(cargo,initObject));
+            init = QUOTE(call DEFUNC(cargo,initObject));
         };
     };
 };
@@ -36,7 +36,7 @@ class Extended_Respawn_EventHandlers {
 class Extended_Killed_EventHandlers {
     class CAManBase {
         class ADDON {
-            killed = QUOTE(_this call FUNC(handleKilled));
+            killed = QUOTE(call FUNC(handleKilled));
         };
     };
 };

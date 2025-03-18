@@ -4,30 +4,41 @@
         <Key ID="STR_ACE_Compat_SPE_CSW_100Rnd_762x63_Tracer">
             <English>.30-06 100Rnd Belt (M2/Tracer)</English>
             <Spanish>Cinta de .30-06 100Rnd (M2/Trazadora)</Spanish>
+            <Italian>Nastro .30-06 100cp (M2/Tracciante)</Italian>
+            <German>.30-06 100 Patronen Gurt (M2/Leuchtspur)</German>
             <Korean>.30-06구경 스프링필드 100발 들이 벨트 (M2 훈련용/예광탄)</Korean>
             <Japanese>.30-06 100Rnd Belt (M2/Tracer)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_100Rnd_792x57_Tracer">
             <English>7.92x57 100Rnd Belt (L.S./Tracer)</English>
             <Spanish>Cinta de 7.92x57 100Rnd (L.S./Trazadora)</Spanish>
+            <Italian>Nastro 7.92x57 100cp (L.S./Tracciante)</Italian>
+            <German>7.92x57 mm 100 Patronen Gurt (L.S./Leuchtspur)</German>
             <Korean>7.92x57mm 100발 들이 벨트 (L.S. 훈련용/예광탄)</Korean>
             <Japanese>7.92x57 100Rnd Belt (L.S./Tracer)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_50Rnd_762x63_Tracer">
             <English>.30-06 50Rnd Belt (M2/Tracer)</English>
             <Spanish>Cinta de .30-06 50Rnd (M2/Trazadora)</Spanish>
+            <Italian>Nastro .30-06 50cp (M2/Tracciante)</Italian>
+            <German>.30-06 50 Patronen Gurt (M2/Leuchtspur)</German>
             <Korean>.30-06구경 스프링필드 50발 들이 벨트 (M2 훈련용/예광탄)</Korean>
             <Japanese>.30-06 50Rnd Belt (M2/Tracer)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_50Rnd_792x57_Tracer">
             <English>7.92x57 50Rnd Gurttrommel (L.S./Tracer)</English>
             <Spanish>Tambor de 7.92x57 50Rnd (L.S./Trazadora)</Spanish>
+            <Italian>Nastro 7.92x57 50cp (L.S./Tracciante)</Italian>
+            <German>7.92x57 mm 50 Patronen Gurt (L.S./Leuchtspur)</German>
             <Korean>7.92x57mm 50발 들이 벨트 (L.S. 훈련용/예광탄)</Korean>
             <Japanese>7.92x57 50Rnd Gurttrommel (L.S./Tracer)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_alteringHeight">
             <English>Altering Height...</English>
+            <French>Modification de la hauteur...</French>
             <Spanish>Cambiando Altura...</Spanish>
+            <Italian>Cambiando alzo...</Italian>
+            <German>Verstelle Höhe...</German>
             <Korean>높이 변경 중...</Korean>
             <Japanese>高さを変更・・・</Japanese>
         </Key>

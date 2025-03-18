@@ -43,7 +43,8 @@ private _category = format ["ACE %1", LLSTRING(Module_DisplayName)];
     "CHECKBOX",
     [LSTRING(DisableEarRinging_DisplayName), LSTRING(DisableEarRinging_Description)],
     _category,
-    false
+    false,
+    2
 ] call CBA_fnc_addSetting;
 
 [
@@ -62,4 +63,12 @@ private _category = format ["ACE %1", LLSTRING(Module_DisplayName)];
     _category,
     [[0, 1, 2], [ELSTRING(common,Disabled), LSTRING(heavyWeaponUnits), ELSTRING(common,Enabled)], 1],
     1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(enableNoiseDucking),
+    "CHECKBOX",
+    [LSTRING(EnableNoiseDucking_DisplayName), LSTRING(EnableNoiseDucking_Description)],
+    _category,
+    true
 ] call CBA_fnc_addSetting;

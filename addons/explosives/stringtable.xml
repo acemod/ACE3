@@ -10,6 +10,7 @@
             <German>Standardzünder</German>
             <Korean>격발기 활성</Korean>
             <Japanese>選択中の点火装置</Japanese>
+            <Chinesesimp>当前引爆装置</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_AttachAction">
             <English>Attach</English>
@@ -44,40 +45,6 @@
             <Chinesesimp>断开</Chinesesimp>
             <Turkish>Bloke Edilmiş</Turkish>
         </Key>
-        <Key ID="STR_ACE_Explosives_Cancel">
-            <English>Cancel</English>
-            <Czech>Zrušit</Czech>
-            <French>Annuler</French>
-            <Spanish>Cancelar</Spanish>
-            <Italian>Annulla</Italian>
-            <Polish>Anuluj</Polish>
-            <Portuguese>Cancelar</Portuguese>
-            <Russian>Отмена</Russian>
-            <German>Abbrechen</German>
-            <Korean>취소</Korean>
-            <Japanese>中止</Japanese>
-            <Chinese>取消</Chinese>
-            <Chinesesimp>取消</Chinesesimp>
-            <Turkish>Iptal</Turkish>
-            <Hungarian>Mégsem</Hungarian>
-        </Key>
-        <Key ID="STR_ACE_Explosives_CancelAction">
-            <English>Cancel</English>
-            <Czech>Zrušit</Czech>
-            <French>Annuler</French>
-            <Spanish>Cancelar</Spanish>
-            <Italian>Annulla</Italian>
-            <Polish>Anuluj</Polish>
-            <Portuguese>Cancelar</Portuguese>
-            <Russian>Отмена</Russian>
-            <German>Abbrechen</German>
-            <Korean>취소</Korean>
-            <Japanese>中止</Japanese>
-            <Chinese>取消</Chinese>
-            <Chinesesimp>取消</Chinesesimp>
-            <Turkish>Iptal</Turkish>
-            <Hungarian>Mégsem</Hungarian>
-        </Key>
         <Key ID="STR_ACE_Explosives_Clear">
             <English>Clear</English>
             <Czech>Čistý</Czech>
@@ -104,6 +71,7 @@
             <German>Standardzünder wechseln</German>
             <Korean>격발기 활성 전환</Korean>
             <Japanese>点火装置を切り替え</Japanese>
+            <Chinesesimp>切换引爆装置</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_DeadManSwitch_description">
             <English>Used to remotely trigger explosives when released.</English>
@@ -116,7 +84,7 @@
             <Russian>Используется для дистанционного подрыва, после смерти оператора.</Russian>
             <German>Zündet Sprengladungen wenn losgelassen.</German>
             <Korean>압력이 해제될때 원격으로 폭발시킵니다.</Korean>
-            <Japanese>放した時に爆発物を遠隔で起爆させるためのデッドマンスイッチ。</Japanese>
+            <Japanese>手を放した時に遠隔で爆発物を起爆させるためのデッドマン・スイッチ。</Japanese>
             <Chinese>當放開按鈕時, 將會引爆炸彈.</Chinese>
             <Chinesesimp>当放开按钮时，将会引爆炸弹。</Chinesesimp>
             <Turkish>Patlayıcıları serbest bırakıldığında uzaktan tetiklemek için kullanılır.</Turkish>
@@ -248,6 +216,7 @@
             <German>Alle auf Standardzünder zünden</German>
             <Korean>활성화된 격발기의 모든 것을 폭파</Korean>
             <Japanese>選択した点火装置を全て起爆</Japanese>
+            <Chinesesimp>引爆当前引爆装置的全部</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_DetonateCode">
             <English>Explosive code: %1</English>
@@ -294,7 +263,7 @@
             <Russian>Разрешить определенным взрывным устройствам взрываться при разминировании? По умолчанию: Да</Russian>
             <German>Sollen bestimmte Sprengladungen beim Entschärfen explodieren? Standard: Ja</German>
             <Korean>특정 폭발물이 해체 시 폭발하게 합니까? 기본설정: 예</Korean>
-            <Japanese>特定の爆発物を解除中に爆発可能にしますか? デフォルト: 有効</Japanese>
+            <Japanese>特定の爆発物が無力化作業中に爆発するようにしますか? デフォルト: 有効</Japanese>
             <Chinese>啟用後, 某些炸彈會在拆除時引爆? 預設: 是</Chinese>
             <Chinesesimp>启用后，某些爆炸物会在拆除时引爆？ 预设：是</Chinesesimp>
             <Hungarian>Meghatározott robbanóanyagok felrobbanjanak-e hatástalanításkor? Alapértelmezett: Igen</Hungarian>
@@ -310,7 +279,7 @@
             <Russian>Взрыв при разминировании?</Russian>
             <German>Explodieren beim Entschärfen?</German>
             <Korean>해체 시 폭발합니까?</Korean>
-            <Japanese>解除中に爆発するか?</Japanese>
+            <Japanese>無力化作業に起爆させる?</Japanese>
             <Chinese>拆除時引爆?</Chinese>
             <Chinesesimp>拆除时引爆？</Chinesesimp>
             <Hungarian>Robbanás hatástalanításkor?</Hungarian>
@@ -326,7 +295,7 @@
             <Russian>Таймер взрывчатки</Russian>
             <German>Detonationszeit</German>
             <Korean>폭발 타이머</Korean>
-            <Japanese>爆発タイマー</Japanese>
+            <Japanese>時限信管</Japanese>
             <Chinese>引爆倒數</Chinese>
             <Chinesesimp>定时爆炸</Chinesesimp>
             <Turkish>Patlayıcı Zamanlayıcı</Turkish>
@@ -389,7 +358,7 @@
             <Russian>Деактивировать Thor III</Russian>
             <German>Thor III deaktivieren</German>
             <Korean>토르 III 끄기</Korean>
-            <Japanese>Thor III を止める</Japanese>
+            <Japanese>Thor III を停止</Japanese>
             <Chinese>關閉索爾三型</Chinese>
             <Chinesesimp>关闭索尔三型</Chinesesimp>
             <Turkish>Thor III ü kapat</Turkish>
@@ -406,7 +375,7 @@
             <Russian>Активировать Thor III</Russian>
             <German>Thor III aktivieren</German>
             <Korean>토르 III 켜기</Korean>
-            <Japanese>Thor III を使う</Japanese>
+            <Japanese>Thor III を起動</Japanese>
             <Chinese>開啟索爾三型</Chinese>
             <Chinesesimp>开启索尔三型</Chinesesimp>
             <Turkish>Thor III ü aç</Turkish>
@@ -507,7 +476,7 @@
             <Russian>Большое СВУ (закопанное, нажимного действия)</Russian>
             <German>Große USBV (Eingegraben, Druckplatte)</German>
             <Korean>급조폭발물 (대형, 묻힘, 압력식)</Korean>
-            <Japanese>大きな IED (埋め込み型、圧力感知)</Japanese>
+            <Japanese>大型 IED (埋設、圧力感知)</Japanese>
             <Chinese>大型簡易爆炸裝置 (地表下, 壓力盤)</Chinese>
             <Chinesesimp>大型 IED（地表下，压力盘）</Chinesesimp>
         </Key>
@@ -522,7 +491,7 @@
             <Russian>Малое СВУ (закопанное, нажимного действия)</Russian>
             <German>Kleine USBV (Eingegraben, Druckplatte)</German>
             <Korean>급조폭발물 (소형, 묻힘, 압력식)</Korean>
-            <Japanese>小さな IED (埋め込み型、圧力感知)</Japanese>
+            <Japanese>小型 IED (埋設、圧力感知)</Japanese>
             <Chinese>小型簡易爆炸裝置 (地表下, 壓力盤)</Chinese>
             <Chinesesimp>小型 IED（地表下，压力盘）</Chinesesimp>
         </Key>
@@ -537,7 +506,7 @@
             <Russian>Большое СВУ (городское, нажимного действия)</Russian>
             <German>Große USBV (Stadt, Druckplatte)</German>
             <Korean>급조폭발물 (대형, 시가지, 압력식)</Korean>
-            <Japanese>大きな IED (市街地用、圧力感知)</Japanese>
+            <Japanese>大型 IED (市街偽装、圧力感知)</Japanese>
             <Chinese>大型簡易爆炸裝置 (地表上, 壓力盤)</Chinese>
             <Chinesesimp>大型 IED（地表上，压力盘）</Chinesesimp>
         </Key>
@@ -552,7 +521,7 @@
             <Russian>Малое СВУ (городское, нажимного действия)</Russian>
             <German>Kleine USBV (Stadt, Druckplatte)</German>
             <Korean>급조폭발물 (소형, 시가지, 압력식)</Korean>
-            <Japanese>小さな IED (市街地用、圧力感知)</Japanese>
+            <Japanese>小型 IED (市街偽装、圧力感知)</Japanese>
             <Chinese>小型簡易爆炸裝置 (地表上, 壓力盤)</Chinese>
             <Chinesesimp>小型 IED（地表上，压力盘）</Chinesesimp>
         </Key>
@@ -784,7 +753,7 @@
             <Russian>Увеличивать время завершения действий для не-специалистов? По умолчанию: Нет</Russian>
             <German>Entschärfungszeit für Nicht-Sprengstoffexperten erhöhen? Standard: Ja</German>
             <Korean>비전문가가 폭발물을 해체 시 더욱 많은 시간을 소요합니까? 기본설정: 예</Korean>
-            <Japanese>専門兵以外がアクションを完了するのに必要な時間を増加しますか? デフォルト: 有効</Japanese>
+            <Japanese>非専門兵がアクションを完了するまでの所要時間を増加しますか? デフォルト: 有効</Japanese>
             <Chinese>增加非專業人員相關操作的時間? 預設: 是</Chinese>
             <Chinesesimp>增加非专业人员相关操作的时间？ 预设：是</Chinesesimp>
             <Hungarian>Nem-specialisták esetén több ideig tartson a cselekvés befejezése? Alapértelmezett: Igen</Hungarian>
@@ -800,7 +769,7 @@
             <Russian>Штраф не-специалистам?</Russian>
             <German>Bestrafe Nicht-Sprengstoffexperten?</German>
             <Korean>비전문가에게 불이익을 줍니까?</Korean>
-            <Japanese>非専門兵にペナルティを与える?</Japanese>
+            <Japanese>非専門兵にペナルティを与えますか?</Japanese>
             <Chinese>折磨非專業人員?</Chinese>
             <Chinesesimp>惩罚非专业人士？</Chinesesimp>
             <Hungarian>Nem-specialisták büntetése?</Hungarian>
@@ -816,7 +785,7 @@
             <Russian>Требуется ли специалист по минному делу для обезвреживания взрывчатки? По умолчанию: Нет</Russian>
             <German>Benötige Sprengstoffexperte um Sprengladungen zu entschärfen? Standard: Nein</German>
             <Korean>폭발물을 해체하기 위해서는 전문가가 필요합니까? 기본설정: 아니요</Korean>
-            <Japanese>爆発物を無効にするために爆発物専門兵の特性を必要としますか? デフォルト: 不要</Japanese>
+            <Japanese>爆発物の無力化に爆発物専門兵特性を必要としますか? デフォルト: 不要</Japanese>
             <Chinese>需要炸彈專家才能拆除炸彈? 預設: 否</Chinese>
             <Chinesesimp>需要爆破专业兵才能拆除爆炸物？ 预设：否</Chinesesimp>
             <Turkish>Patlayıcı uzmanlarının patlayıcıları etkisiz hale getirmesini ister misiniz? Varsayılan: Hayır</Turkish>
@@ -833,7 +802,7 @@
             <Russian>Требуется специалист?</Russian>
             <German>Benötigt Sprengstoffexperten?</German>
             <Korean>전문가가 필요합니까?</Korean>
-            <Japanese>専門兵特性を必須にするか?</Japanese>
+            <Japanese>専門兵特性を必須としますか?</Japanese>
             <Chinese>需要專家?</Chinese>
             <Chinesesimp>需要专家？</Chinesesimp>
             <Turkish>Uzmanlara ihtiyaç var mı?</Turkish>
@@ -914,6 +883,7 @@
             <German>Als Standardzünder wählen</German>
             <Korean>격발기 활성 설정</Korean>
             <Japanese>この点火装置を選択</Japanese>
+            <Chinesesimp>设置为当前引爆装置</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_SetTime">
             <English>Set Time</English>
@@ -926,7 +896,7 @@
             <Russian>Установить время</Russian>
             <German>Zeit einstellen</German>
             <Korean>시간 설정</Korean>
-            <Japanese>タイマーを設定</Japanese>
+            <Japanese>時限信管を設定</Japanese>
             <Chinese>設定時間</Chinese>
             <Chinesesimp>设定时间</Chinesesimp>
             <Turkish>Süreyi Ayarla</Turkish>
@@ -942,7 +912,7 @@
             <Russian>Стандартное время до взрыва в секундах</Russian>
             <German>Standardmäßige Zeit (in Sekunden) für den Zeitzünder.</German>
             <Korean>초 단위로, 기본 폭발 타이머 시간을 정합니다</Korean>
-            <Japanese>起爆タイマーの標準時間 (秒単位) を設定します。</Japanese>
+            <Japanese>時限信管の標準時間 (秒単位) を設定します。</Japanese>
             <Chinesesimp>定时爆炸的默认时间（单位：秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerDefault_DisplayName">
@@ -955,7 +925,7 @@
             <Russian>Стандартное время</Russian>
             <German>Standardmäßige Zeit</German>
             <Korean>기본 시간</Korean>
-            <Japanese>タイマーの標準時間</Japanese>
+            <Japanese>時限信管の標準時間</Japanese>
             <Chinesesimp>默认时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_Description">
@@ -968,7 +938,7 @@
             <Russian>Макисмальное время до взрыва в секундах</Russian>
             <German>Maximale Zeit (in Sekunden) für den Zeitzünder.</German>
             <Korean>초 단위로, 폭발 타이머의 최대 시간을 정합니다</Korean>
-            <Japanese>起爆タイマーの最長時間 (秒単位) を設定します。</Japanese>
+            <Japanese>時限信管の最長時間 (秒単位) を設定します。</Japanese>
             <Chinesesimp>定时爆炸的最长时间（单位：秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMax_DisplayName">
@@ -981,7 +951,7 @@
             <Russian>Макс. время</Russian>
             <German>Maximale Zeit</German>
             <Korean>최대 시간</Korean>
-            <Japanese>タイマーの最長時間</Japanese>
+            <Japanese>時限信管の最長時間</Japanese>
             <Chinesesimp>最长时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMenu">
@@ -995,7 +965,7 @@
             <Russian>Время: %1m %2c</Russian>
             <German>Zeit: %1m %2s</German>
             <Korean>시간: %1분 %2초</Korean>
-            <Japanese>タイマー: %1分 %2秒</Japanese>
+            <Japanese>時限信管: %1分 %2秒</Japanese>
             <Chinese>時間: %1分%2秒</Chinese>
             <Chinesesimp>时间：%1分%2秒</Chinesesimp>
             <Turkish>Süre: %1m %2s</Turkish>
@@ -1011,7 +981,7 @@
             <Russian>Минимальное время до взрыва в секундах</Russian>
             <German>Minimale Zeit (in Sekunden) für den Zeitzünder.</German>
             <Korean>초 단위로, 폭발 타이머의 최소 시간을 정합니다</Korean>
-            <Japanese>起爆タイマーの最短時間 (秒単位) を設定します。</Japanese>
+            <Japanese>時限信管の最短時間 (秒単位) を設定します。</Japanese>
             <Chinesesimp>定时爆炸的最短时间（单位：秒）</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_TimerMin_DisplayName">
@@ -1024,7 +994,7 @@
             <Russian>Мин. время</Russian>
             <German>Minimale Zeit</German>
             <Korean>최소 시간</Korean>
-            <Japanese>タイマーの最短時間</Japanese>
+            <Japanese>時限信管の最短時間</Japanese>
             <Chinesesimp>最短时间</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_TriggerMenu">
@@ -1047,37 +1017,55 @@
         <Key ID="STR_ACE_Explosives_TripFlare_Description">
             <English>Type: Tripwire flare - Ignites a non-lethal flare when triggered.&lt;br /&gt;Rounds: 1&lt;br /&gt;Used on: Ground</English>
             <Czech>Typ: Světlice na nástražném drátu - Zapálí světlici při aktivaci.&lt;br/&gt;Pouze 1 použití&lt;br/&gt;Použít na zem</Czech>
-            <French>Type : Fusée éclairante avec fil piège - Allume une fusée éclairante lorsque déclenchée.&lt;br /&gt;Coups : 1&lt;br /&gt;Utilisé sur : le sol</French>
+            <French>Type : Fusée éclairante à fil - Allume une fusée éclairante lorsque déclenchée.&lt;br /&gt;Coups : 1&lt;br /&gt;Utilisé sur : le sol</French>
             <Spanish>Tipo: Bengala con cable trampa - Enciende una bengala no letal cuando es activado.&lt;br /&gt;Rondas: 1&lt;br /&gt;Usado en: Tierra</Spanish>
             <Italian>Tipo: Bengala a cavo d'innesco - Accende un bengala abbagliante non letale quando innescato. &lt;br /&gt;Rimanenti: 1&lt;br /&gt;Usato: A terra</Italian>
             <Polish>Typ: Flara na linkę - Wystrzeliwuje nieszkodliwą flarę przy nadepnięciu linki.&lt;br/&gt;Pociski: 1&lt;br/&gt;Używane na: ziemia</Polish>
             <Portuguese>Tipo: Flare de Tripwire - Acende um sinalizador não letal quando acionado.&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Chão</Portuguese>
             <Russian>Тип: Сигнальная растяжка - При срабатывании выпускает несмертельную сигнальную вспышку.&lt;br /&gt;Зарядов: 1&lt;br /&gt;Используется на: Земле</Russian>
-            <German>Typ: Stolperdraht-Leuchtrakete - Schießt bei Auslösung eine nicht-tödliche Leuchtrakete ab.&lt;br /&gt;Ladungen: 1&lt;br /&gt;Benutzt auf: Boden</German>
+            <German>Typ: Stolperdraht-Leuchtfackel - Zündet bei Auslösung eine nicht-tödliche Leuchtfackel.&lt;br /&gt;Ladungen: 1&lt;br /&gt;Benutzt auf: Boden</German>
             <Korean>종류: 조명지뢰 - 작동시 무해한 조명을 사출합니다.&lt;br /&gt;장탄수: 1&lt;br /&gt;사용처: 지면</Korean>
-            <Japanese>種類: 仕掛け線照明地雷 - 発動したとき、非致死性の照明を発炎します。&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 地表</Japanese>
+            <Japanese>種類: 仕掛け線信号地雷 - 作動時、非致死性の信号照明弾を発炎します。&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 地表</Japanese>
             <Chinese>類型: 絆線閃光地雷 - 觸發後產生非致命性的強光.&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 地面</Chinese>
             <Chinesesimp>类型：绊线信号弹—触发后产生非致命性的强光。&lt;br /&gt;发数：1&lt;br /&gt;使用于：地面</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Name">
             <English>Tripwire Flare</English>
             <Czech>Světlice na nástražném drátu</Czech>
-            <French>Fusée éclairante avec fil piège</French>
+            <French>Fusée éclairante à fil</French>
             <Spanish>Bengala con cable trampa</Spanish>
             <Italian>Bengala a filo d'inciampo</Italian>
             <Polish>Flara na linkę</Polish>
             <Portuguese>Tripwire (Sinalizador)</Portuguese>
             <Russian>Сигнальная растяжка</Russian>
-            <German>Stolperdraht-Leuchtrakete</German>
-            <Korean>조명지뢰</Korean>
-            <Japanese>仕掛け線照明地雷</Japanese>
+            <German>Stolperdraht-Leuchtfackel</German>
+            <Korean>인계철선 조명지뢰</Korean>
+            <Japanese>仕掛け線信号地雷</Japanese>
             <Chinese>絆線閃光地雷</Chinese>
             <Chinesesimp>绊线信号弹</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Name_Green">
+            <English>Tripwire Flare (Green)</English>
+            <French>Fusée éclairante à fil (Vert)</French>
+            <Italian>Bengala a filo d'inciampo (Verde)</Italian>
+            <Korean>인계철선 조명지뢰 (녹색)</Korean>
+            <Japanese>仕掛け線信号地雷 (緑)</Japanese>
+            <Russian>Сигнальная растяжка (Зелёная)</Russian>
+            <German>Stolperdraht-Leuchtfackel (Grün)</German>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripFlare_Name_Red">
+            <English>Tripwire Flare (Red)</English>
+            <French>Fusée éclairante à fil (Rouge)</French>
+            <Italian>Bengala a filo d'inciampo (Rosso)</Italian>
+            <Korean>인계철선 조명지뢰 (적색)</Korean>
+            <Japanese>仕掛け線信号地雷 (赤)</Japanese>
+            <Russian>Сигнальная растяжка (Красная)</Russian>
+            <German>Stolperdraht-Leuchtfackel (Rot)</German>
         </Key>
         <Key ID="STR_ACE_Explosives_TripWire">
             <English>Tripwire</English>
             <Czech>Nástražný drát</Czech>
-            <French>Fil piège</French>
+            <French>Fil de déclenchement</French>
             <Spanish>Cable trampa</Spanish>
             <Italian>Filo a inciampo</Italian>
             <Polish>Linka naciągu</Polish>
@@ -1090,6 +1078,25 @@
             <Chinesesimp>绊线</Chinesesimp>
             <Turkish>Telli tuzak</Turkish>
             <Hungarian>Botlódrót</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Explosives_TripWire_Airburst">
+            <English>Tripwire - Airburst</English>
+            <French>Fil de transmission - Explosion aérienne</French>
+            <Italian>Bengala (razzo) a filo d'inciampo</Italian>
+            <Korean>인계철선 - 공중폭발</Korean>
+            <Japanese>仕掛け線 - 空中発火</Japanese>
+            <Russian>Растяжка - Воздушный взрыв</Russian>
+            <German>Stolperdraht - Luftdetonation</German>
+        </Key>
+        <Key ID="STR_ACE_Explosives_apersToePopper">
+            <English>APERS Mine (Toe-Popper)</English>
+            <French>Mine APERS (Toe-Popper)</French>
+            <Italian>Mina APERS (Toe-Popper)</Italian>
+            <Russian>APERS мина (Toe-Topper)</Russian>
+            <Korean>대인지뢰 (발목지뢰형)</Korean>
+            <Japanese>対人地雷 (トウポッパー)</Japanese>
+            <Chinesesimp>反人员地雷 (脚尖毁灭者)</Chinesesimp>
+            <German>APERS Mine (Toe-Popper)</German>
         </Key>
         <Key ID="STR_ACE_Explosives_cellphone_description">
             <English>Used to remotely trigger explosives</English>
@@ -1203,7 +1210,7 @@
             <Russian>Таймер</Russian>
             <German>Zeitzünder</German>
             <Korean>타이머</Korean>
-            <Japanese>タイマー</Japanese>
+            <Japanese>時限信管</Japanese>
             <Chinese>計時器</Chinese>
             <Chinesesimp>计时器</Chinesesimp>
             <Turkish>Zamanlayıcı</Turkish>

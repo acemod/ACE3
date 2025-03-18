@@ -361,7 +361,7 @@
             <Russian>Прячет иконку, которая показывается автоматически когда что-то находиться перед курсором. Требует рестарта игры.\nВнимание: не убирает само действие! Рекомендуется убрать комбинацию клавиш с настройки "Выполнить действие по умолчанию" чтобы предостеречься от нежеланных действий.</Russian>
             <German>Blendet das Symbol aus, das automatisch angezeigt wird, wenn sich etwas vor dem Cursor befindet. Erfordert einen Neustart des Spiels.\nWarnung: Die Aktion selbst wird nicht entfernt! Es empfiehlt sich, die Belegung der Taste 'Standardaktion verwenden' aufzuheben, um unerwünschte Interaktionen zu verhindern.</German>
             <Korean>커서 앞에 무언가가 있을 때 자동으로 표시되는 아이콘을 숨깁니다. 게임을 재시작해야 합니다\n경고: 작업 자체를 제거하지 않습니다! 원하지 않는 상호작용을 방지하려면 '기본 행동' 키를 삭제하는 것이 좋습니다.</Korean>
-            <Japanese>カーソルの前に何かがあるときに自動的に表示されるアイコンを非表示にします。 ゲームを再起動する必要があります。\n警告:アクション自体は削除されません! 誤って実行することを防ぐために、'標準アクション'キーのバインドを解除することをお勧めします。</Japanese>
+            <Japanese>カーソル先に何かがあるときに自動的に表示されるアイコンを非表示にします。 ゲームを再起動する必要があります。\n警告:アクション自体は削除されません! 誤って実行することを防ぐために、'標準アクション'キーのバインドを解除することをお勧めします。</Japanese>
             <Chinesesimp>隐藏屏幕面前有物体时自动显示的动作标识。需要重新启动游戏。\n警告：不会删除动作本身！建议同时取消对“使用默认动作”键的绑定，以防止不必要的互动。</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_UI_MagCount">
@@ -374,7 +374,7 @@
             <Portuguese>Quantidade de Carregadores</Portuguese>
             <Russian>Количество магазинов</Russian>
             <German>Magazinanzahl</German>
-            <Korean>탄창수</Korean>
+            <Korean>탄창 수</Korean>
             <Japanese>弾倉数</Japanese>
             <Chinese>彈匣數量</Chinese>
             <Chinesesimp>弹匣数量</Chinesesimp>
@@ -728,8 +728,10 @@
             <Spanish>Ocultar toda la IU</Spanish>
             <Italian>Nascondi tutta l'IU</Italian>
             <Russian>Скрыть весь интерфейс</Russian>
+            <German>Gesamte Benutzeroberfläche ausblenden</German>
             <Korean>모든 UI 숨기기</Korean>
             <Japanese>全てのUIを隠す</Japanese>
+            <Chinesesimp>隐藏所有UI</Chinesesimp>
         </Key>
     </Package>
 </Project>

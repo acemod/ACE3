@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Jonpas, vabene1111
- * Sits down the player.
+ * Makes the player sit down.
  *
  * Arguments:
  * 0: Seat <OBJECT>
@@ -33,7 +33,7 @@ private _actionID = _player addAction [
     false,
     true,
     "GetOut",
-    QUOTE(_this call FUNC(canStand))
+    QUOTE(call FUNC(canStand))
 ];
 
 // Read config
@@ -65,16 +65,9 @@ _player setVariable [QGVAR(sittingStatus), [_seat, _actionID, _seatPos]];
 private _seatsClaimed = _seat getVariable [QGVAR(seatsClaimed), []];
 // Initialize claimed seats if first time sitting on it
 if (_seatsClaimed isEqualTo []) then {
-    if (_multiSitting) then {
-        for "_i" from 0 to ((count _sitPositionAll) - 1) do {
-            _seatsClaimed pushBack (_i == _seatPos);
-        };
-    } else {
-        _seatsClaimed = [true];
-    };
-} else {
-    _seatsClaimed set [_seatPos, true];
+    _seatsClaimed resize [count _sitPositionAll, objNull];
 };
+_seatsClaimed set [_seatPos, _player];
 _seat setVariable [QGVAR(seatsClaimed), _seatsClaimed, true];
 
 // Also prevent dragging/carrying
@@ -82,27 +75,44 @@ if !([_seat] call EFUNC(common,owned)) then {
     [_player, _seat] call EFUNC(common,claim);
 };
 
-// Add automatical stand PFH in case of interruptions
+// Automatically stand up if interrupted
 private _seatPosOrig = getPosASL _seat;
 private _seatDistOrig = (getPosASL _player) distance _seat;
 [{
     params ["_args", "_pfhId"];
-    _args params ["_player", "_seat", "_seatPosOrig", "_seatDistOrig"];
+    _args params ["_player", "_seat", "_seatPos", "_seatPosOrig", "_seatDistOrig"];
 
     // Remove PFH if not sitting any more
     if (isNil {_player getVariable QGVAR(sittingStatus)}) exitWith {
         [_pfhId] call CBA_fnc_removePerFrameHandler;
         TRACE_1("Remove PFH",_player getVariable [ARR_2(QGVAR(sittingStatus),false)]);
+
+        if (!alive _seat) exitWith {};
+
+        // Allow sitting on this seat again
+        private _seatsClaimed = _seat getVariable [QGVAR(seatsClaimed), []];
+        _seatsClaimed set [_seatPos, objNull];
+        _seat setVariable [QGVAR(seatsClaimed), _seatsClaimed, true];
+
+        // Unclaim...
+        [objNull, _seat] call EFUNC(common,claim);
+
+        // ...but have a remaining unit reclaim ownership immediately
+        private _index = _seatsClaimed findIf {!isNull _x};
+
+        if (_index == -1) exitWith {};
+
+        [_seatsClaimed select _index, _seat] call EFUNC(common,claim);
     };
 
-    //  Stand up if chair gets deleted or moved
-    if (isNull _seat ||
+    // Stand up if chair gets deleted or moved
+    if (!alive _seat ||
         {getPosASL _player distance _seatPosOrig > _seatDistOrig + 0.5} ||
         {((getPosASL _seat) vectorDistance _seatPosOrig) > 0.01}
     ) exitWith {
         _player call FUNC(stand);
         TRACE_2("Chair moved",getPosASL _seat,_seatPosOrig);
     };
-}, 0, [_player, _seat, _seatPosOrig, _seatDistOrig]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_player, _seat, _seatPos, _seatPosOrig, _seatDistOrig]] call CBA_fnc_addPerFrameHandler;
 
 ["ace_satDown", [_player, _seat, _seatPos]] call CBA_fnc_localEvent;

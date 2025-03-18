@@ -20,7 +20,7 @@ class Extended_PostInit_EventHandlers {
 class Extended_Killed_EventHandlers {
     class CAManBase {
         class ADDON {
-            clientKilled = QUOTE(_this call FUNC(handleKilled));
+            clientKilled = QUOTE(call FUNC(handleKilled));
         };
     };
 };
