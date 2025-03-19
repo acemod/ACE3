@@ -27,8 +27,7 @@ if (_target isKindOf "ACE_DefuseObject") then {
 
 if (isNull _target) exitWith {};
 
-// If the unit is a player, call the function on the player
-if (ACE_player != _unit && {_unit call EFUNC(common,isPlayer)}) exitWith {
+if (!local _unit) exitWith {
     [QGVAR(startDefuse), [_unit, _target], _unit] call CBA_fnc_targetEvent;
 };
 
@@ -38,12 +37,12 @@ if (ACE_player != _unit && {_unit call EFUNC(common,isPlayer)}) exitWith {
 private _isEOD = _unit call EFUNC(common,isEOD);
 private _defuseTime = [configOf _target >> QGVAR(defuseTime), "NUMBER", 5] call CBA_fnc_getConfigEntry;
 
-if (!_isEOD && {GVAR(punishNonSpecialists)}) then {
+if (!_isEOD && GVAR(punishNonSpecialists)) then {
     _defuseTime = _defuseTime * 1.5;
 };
 
 if (ACE_player == _unit) then {
-    if (_isEOD || {!GVAR(requireSpecialist)}) then {
+    if (_isEOD || !GVAR(requireSpecialist)) then {
         // API
         [QGVAR(defuseStart), [_target, _unit]] call CBA_fnc_globalEvent;
 
