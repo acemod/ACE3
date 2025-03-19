@@ -19,9 +19,9 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayInterrupt {
-        ADDON = QUOTE(_this call FUNC(handleEscapeMenu));
+        ADDON = QUOTE(call FUNC(handleEscapeMenu));
     };
     class RscDisplayMPInterrupt {
-        ADDON = QUOTE(_this call FUNC(handleEscapeMenu));
+        ADDON = QUOTE(call FUNC(handleEscapeMenu));
     };
 };

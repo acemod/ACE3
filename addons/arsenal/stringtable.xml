@@ -1096,6 +1096,8 @@
         <Key ID="STR_ACE_Arsenal_missingItems">
             <English>Missing items:\n%1</English>
             <French>Éléments manquants:\n%1</French>
+            <Italian>Oggetti mancanti:\n%1</Italian>
+            <German>Fehlende Gegenstände:\n%1</German>
             <Russian>Недостающие предметы:\n%1</Russian>
             <Korean>누락 아이템:\n%1</Korean>
             <Japanese>存在しないアイテム:\n%1</Japanese>
@@ -1778,7 +1780,9 @@
         <Key ID="STR_ACE_Arsenal_unavailableItems">
             <English>Unavailable items:\n%1</English>
             <French>Articles indisponibles:\n%1</French>
+            <Italian>Oggetti indisponibili:\n%1</Italian>
             <Russian>Недоступные предметы:\n%1</Russian>
+            <German>Nicht verfügbare Gegenstände:\n%1</German>
             <Korean>사용 불가 아이템:\n%1</Korean>
             <Japanese>利用できないアイテム:\n%1</Japanese>
             <Chinesesimp>不可用物品:\n%1</Chinesesimp>
@@ -1786,7 +1790,9 @@
         <Key ID="STR_ACE_Arsenal_unavailableItemsSetting">
             <English>Show missing / unavailable items</English>
             <French>Afficher les éléments manquants ou indisponibles</French>
+            <Italian>Mostra oggetti mancanti / indisponibili</Italian>
             <Russian>Показать отсутствующие / недоступные предметы</Russian>
+            <German>Zeige fehlende oder nicht verfügbare Gegenstände</German>
             <Korean>누락/사용 불가 아이템 표시</Korean>
             <Japanese>存在しない/利用できないアイテムを表示</Japanese>
             <Chinesesimp>显示缺失/不可用物品</Chinesesimp>
@@ -1794,7 +1800,9 @@
         <Key ID="STR_ACE_Arsenal_unavailableItemsTooltip">
             <English>Show missing / unavailable items when hovering over a loadout</English>
             <French>Afficher les éléments manquants / indisponibles au survol d'un chargement</French>
+            <Italian>Mostra oggetti mancanti / indisponibili quando tieni il mouse su un equipaggiamento</Italian>
             <Russian>Показать отсутствующие / недоступные предметы при наведении курсора мыши на комплект</Russian>
+            <German>Zeige fehlende oder nicht verfügbare Gegenstände, wenn der Mauszeiger über die Ausrüstung gehalten wird</German>
             <Korean>로드아웃 위에 마우스 커서를 올리면 누락되거나 사용할 수 없는 아이템을 표시합니다.</Korean>
             <Japanese>装備にカーソルを重ねた時に存在しない/利用できないアイテムを表示します</Japanese>
             <Chinesesimp>鼠标悬停在负载上时显示缺失/不可用物品</Chinesesimp>

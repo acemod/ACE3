@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: esteldunedain
- * Connect/disconnect headphones to the mine detector
+ * Connects/disconnects headphones to the mine detector.
  *
  * Arguments:
  * 0: Unit <OBJECT>
@@ -11,16 +11,19 @@
  * None
  *
  * Example:
- * [_unit, true] call ace_minedetector_fnc_connectHeadphones
+ * [player, true] call ace_minedetector_fnc_connectHeadphones
  *
  * Public: No
  */
 
 params ["_unit", "_state"];
-_unit setVariable [QGVAR(isUsingHeadphones), _state];
+
+_unit setVariable [QGVAR(isUsingHeadphones), _state, true];
+
+if (_unit != ACE_player) exitWith {};
 
 if (_state) then {
-    [localize LSTRING(HeadphonesConnected)] call EFUNC(common,displayTextStructured);
+    [LLSTRING(HeadphonesConnected)] call EFUNC(common,displayTextStructured);
 } else {
-    [localize LSTRING(HeadphonesDisconnected)] call EFUNC(common,displayTextStructured);
+    [LLSTRING(HeadphonesDisconnected)] call EFUNC(common,displayTextStructured);
 };

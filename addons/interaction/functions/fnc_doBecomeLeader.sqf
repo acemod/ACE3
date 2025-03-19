@@ -17,4 +17,4 @@
 
 params ["_unit"];
 
-[QEGVAR(common,selectLeader), [group _unit, _unit], units group _unit] call CBA_fnc_targetEvent;
+[QEGVAR(common,selectLeader), [group _unit, _unit], units _unit] call CBA_fnc_targetEvent;

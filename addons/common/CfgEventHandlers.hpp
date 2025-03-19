@@ -19,7 +19,7 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscDisplayMission {
-        ADDON = QUOTE(_this call COMPILE_SCRIPT(XEH_missionDisplayLoad));
+        ADDON = QUOTE(call COMPILE_SCRIPT(XEH_missionDisplayLoad));
     };
     class RscUnitInfo {
         ADDON = QUOTE([ARR_2('ace_infoDisplayChanged',[ARR_2(_this select 0,'Any')])] call CBA_fnc_localEvent;);
@@ -32,7 +32,7 @@ class Extended_InitPost_EventHandlers {
             init = QUOTE(if (local (_this select 0)) then {[ARR_2(FUNC(setName),_this)] call CBA_fnc_execNextFrame};);
         };
         class GVAR(muteUnit) {
-            init = QUOTE(_this call FUNC(muteUnitHandleInitPost));
+            init = QUOTE(call FUNC(muteUnitHandleInitPost));
         };
     };
 };
@@ -40,21 +40,21 @@ class Extended_InitPost_EventHandlers {
 class Extended_Respawn_EventHandlers {
     class All {
         class GVAR(restoreVariablesJIP) {
-            respawn = QUOTE(_this call FUNC(restoreVariablesJIP));
+            respawn = QUOTE(call FUNC(restoreVariablesJIP));
         };
         class GVAR(setName) {
-            respawn = QUOTE(_this call FUNC(setName));
+            respawn = QUOTE(call FUNC(setName));
         };
         class GVAR(RESETDefaults) {
-            respawn = QUOTE(_this call FUNC(resetAllDefaults));
+            respawn = QUOTE(call FUNC(resetAllDefaults));
         };
         class GVAR(statusEffect) {
-            respawn = QUOTE(_this call FUNC(statusEffect_respawnEH));
+            respawn = QUOTE(call FUNC(statusEffect_respawnEH));
         };
     };
     class CAManBase {
         class GVAR(muteUnit) {
-            respawn = QUOTE(_this call FUNC(muteUnitHandleRespawn));
+            respawn = QUOTE(call FUNC(muteUnitHandleRespawn));
         };
     };
 };
@@ -62,19 +62,19 @@ class Extended_Respawn_EventHandlers {
 class Extended_Local_EventHandlers {
     class All {
         class GVAR(statusEffect) {
-            local = QUOTE(_this call FUNC(statusEffect_localEH));
+            local = QUOTE(call FUNC(statusEffect_localEH));
         };
     };
 };
 
 class Extended_FiredBIS_EventHandlers {
     class All {
-        ADDON = QUOTE(_this call FUNC(firedEH));
+        ADDON = QUOTE(call FUNC(firedEH));
     };
 };
 
 class Extended_Engine_EventHandlers {
     class All {
-        ADDON = QUOTE(_this call FUNC(handleEngine));
+        ADDON = QUOTE(call FUNC(handleEngine));
     };
 };

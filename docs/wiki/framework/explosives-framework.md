@@ -45,6 +45,7 @@ class CfgMagazines {
 
 ### 1.2 Setting the ammo
 
+{% raw %}
 ```cpp
 class CfgAmmo {
     class PipeBombBase;
@@ -55,9 +56,13 @@ class CfgAmmo {
         ACE_explodeOnDefuse = 0.02;  // (Optional) Add a chance for the explosive to detonate after being disarmed (in percent)
         ACE_explosives_defuseObjectPosition[] = {-1.415, 0, 0.12};  // (Optional) The position relative to the model where the defuse helper object will be attached and thus the interaction point will be rendered
         ACE_explosives_size = 0;  // (Optional) Setting to 1 will use a defusal action with a larger radius (useful for large mines or mines with a wide pressure plane trigger area)
+        ACE_explosives_ringtones[] = {{"\z\addons\explosives\Data\Audio\Cellphone_Ring.wss", 0.75, 3.16228, 1, 75}};  // (Optional) Defines IED ringtone(s) to be randomly selected upon detonation by cellphone. Each entry includes a sound file path, duration (in seconds), volume (optional: default 3.16228), pitch (optional: default 1), and maximum audible distance (optional: default 75).
+        ACE_explosives_callConnectTime[] = {1,8};  // (Optional) Defines the connection delay range (in seconds) for a dialed explosive, where the first value sets the minimum time and the second value sets the maximum time before detonation.
+        ACE_explosives_detonationTimingOffset = 0.75;  // (Optional) Defines the maximum random deviation (in seconds) for detonation timing, allowing the explosive to detonate up to this value earlier or later than the ringtone's end.
     };
 };
 ```
+{% endraw %}
 
 ### 1.3 Adding the place item
 

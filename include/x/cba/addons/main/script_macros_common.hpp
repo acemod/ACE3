@@ -464,8 +464,7 @@ Example:
 Author:
     Spooner
 ------------------------------------------- */
-#define PFORMAT_1(MESSAGE,A) \
-    format ['%1: A=%2', MESSAGE, RETNIL(A)]
+#define PFORMAT_1(MESSAGE,A) format ['%1: A=%2', MESSAGE, RETNIL(A)]
 
 #define PFORMAT_2(MESSAGE,A,B) \
     format ['%1: A=%2, B=%3', MESSAGE, RETNIL(A), RETNIL(B)]
@@ -1335,7 +1334,7 @@ Author:
 
 /* -------------------------------------------
 Macro: DEFAULT_PARAM()
-    DEPRECATED - Use param/params commands added in Arma 3 1.48
+    DEPRECATED - Use param/params commands added in Arma 3 1.48 - Will not work with HEMTT 1.13.2+
 
     Getting a default function parameter. This may be used together with <PARAMS_n()> to have a mix of required and
     optional parameters.

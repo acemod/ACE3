@@ -156,7 +156,7 @@ class GVAR(RscSetData): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class setData: RscControlsGroupNoScrollbars {
-                    onSetFocus = QUOTE(_this call FUNC(attributeFocus));
+                    onSetFocus = QUOTE(call FUNC(attributeFocus));
                     idc = IDC_ATTRIBUTE_GROUP;
                     x = 0;
                     y = 0;
