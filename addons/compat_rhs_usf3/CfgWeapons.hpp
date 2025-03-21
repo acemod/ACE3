@@ -175,15 +175,6 @@ class CfgWeapons {
     };
 
     // RHS launchers
-    class launch_O_Titan_F;
-
-    class rhs_weap_fim92: launch_O_Titan_F {
-        EGVAR(overpressure,range) = 6;
-        EGVAR(overpressure,angle) = 40;
-        EGVAR(overpressure,damage) = 0.6;
-        EGVAR(overpressure,offset) = 1.45;
-    };
-
     class Launcher_Base_F;
 
     class rhs_weap_smaw: Launcher_Base_F {
@@ -206,170 +197,41 @@ class CfgWeapons {
         EGVAR(overpressure,offset) = 0.9;
     };
 
-    // Fast Helmets
-    class rhsusf_opscore_01;
-    class rhsusf_opscore_ut_pelt_nsw: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_aor1_pelt: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_aor1_pelt_nsw: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_bk_pelt: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_fg_pelt: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_fg_pelt_nsw: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_fg_pelt_cam: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_paint_pelt: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_paint_pelt_nsw: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_paint_pelt_nsw_cam: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_aor2_pelt: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_aor2_pelt_nsw: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_ut_pelt: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_ut_pelt_cam: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_ut_pelt_nsw_cam: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_mc_pelt: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_mc_pelt_nsw: rhsusf_opscore_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_cover;
-    class rhsusf_opscore_mc_cover_pelt_nsw: rhsusf_opscore_cover {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_mc_cover_pelt: rhsusf_opscore_cover {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_mc_cover_pelt_cam: rhsusf_opscore_cover {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_rg_cover_pelt: rhsusf_opscore_cover {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_coy_cover_pelt: rhsusf_opscore_cover {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_mar_01;
-    class rhsusf_opscore_mar_ut_pelt: rhsusf_opscore_mar_01 {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_opscore_mar_fg_pelt: rhsusf_opscore_mar_01 {
-        HEARING_PROTECTION_PELTOR;
+    class launch_O_Titan_F;
+    class rhs_weap_fim92: launch_O_Titan_F {
+        EGVAR(overpressure,range) = 6;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,damage) = 0.6;
+        EGVAR(overpressure,offset) = 1.45;
     };
 
-    // ACH Helmets
-    class rhsusf_ach_helmet_ocp;
-    class rhsusf_ach_bare_des_headset: rhsusf_ach_helmet_ocp {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_ach_bare_des_headset_ess: rhsusf_ach_helmet_ocp {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_ach_bare_headset: rhsusf_ach_helmet_ocp {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_ach_bare_headset_ess: rhsusf_ach_helmet_ocp {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_ach_bare_semi_headset: rhsusf_ach_helmet_ocp {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_ach_bare_semi_headset_ess: rhsusf_ach_helmet_ocp {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_ach_bare_tan_headset: rhsusf_ach_helmet_ocp {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_ach_bare_tan_headset_ess: rhsusf_ach_helmet_ocp {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_ach_bare_wood_headset: rhsusf_ach_helmet_ocp {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_ach_bare_wood_headset_ess: rhsusf_ach_helmet_ocp {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_ach_helmet_headset_ocp: rhsusf_ach_helmet_ocp {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_ach_helmet_headset_ess_ocp: rhsusf_ach_helmet_ocp {
-        HEARING_PROTECTION_PELTOR;
+    class rhs_weap_stinger_Launcher;
+    class rhs_weap_stinger_Launcher_static: rhs_weap_stinger_Launcher {
+        EGVAR(overpressure,range) = 6;
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,damage) = 0.6;
+        EGVAR(overpressure,offset) = 1.2;
     };
 
-    // ACVC Helmets
-    class rhsusf_cvc_helmet: rhsusf_opscore_01 {
-        HEARING_PROTECTION_VICCREW;
+    class missiles_titan;
+    class Rhs_weap_TOW_Launcher_static: missiles_titan {
+        EGVAR(overpressure,angle) = 40;
+        EGVAR(overpressure,range) = 4;
+        EGVAR(overpressure,damage) = 0.7;
+        EGVAR(overpressure,offset) = 0.8;
     };
 
-    // MICH Helmets
-    class rhsusf_mich_bare;
-    class rhsusf_mich_bare_alt: rhsusf_mich_bare {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_mich_bare_norotos;
-    class rhsusf_mich_bare_norotos_alt: rhsusf_mich_bare_norotos {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_mich_bare_norotos_arc;
-    class rhsusf_mich_bare_norotos_arc_alt: rhsusf_mich_bare_norotos_arc {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_mich_bare_semi;
-    class rhsusf_mich_bare_alt_semi: rhsusf_mich_bare_semi {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_mich_bare_norotos_semi;
-    class rhsusf_mich_bare_norotos_alt_semi: rhsusf_mich_bare_norotos_semi {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_mich_bare_norotos_arc_semi: rhsusf_mich_bare_norotos_alt_semi {
-        HEARING_PROTECTION_OPEN;
-    };
-    class rhsusf_mich_bare_norotos_arc_alt_semi: rhsusf_mich_bare_norotos_arc_semi {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_mich_bare_tan;
-    class rhsusf_mich_bare_alt_tan: rhsusf_mich_bare_tan {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_mich_bare_norotos_tan;
-    class rhsusf_mich_bare_norotos_alt_tan: rhsusf_mich_bare_norotos_tan {
-        HEARING_PROTECTION_PELTOR;
-    };
-    class rhsusf_mich_bare_norotos_arc_tan;
-    class rhsusf_mich_bare_norotos_arc_alt_tan: rhsusf_mich_bare_norotos_arc_tan {
-        HEARING_PROTECTION_PELTOR;
+    class rockets_230mm_GAT;
+    class rhs_weap_mlrs: rockets_230mm_GAT {
+        EGVAR(overpressure,offset) = 3.8;
     };
 
-    class rhsusf_hgu56p: rhsusf_opscore_01 {
-        HEARING_PROTECTION_VICCREW;
+    class mortar_82mm;
+    class rhs_mortar_81mm: mortar_82mm {
+        EGVAR(overpressure,offset) = 0.2;
     };
+
+    class rhsusf_hgu56p;
     class rhsusf_hgu56p_visor: rhsusf_hgu56p {
         ACE_Protection = 1;
     };
@@ -420,13 +282,9 @@ class CfgWeapons {
     class rhsusf_hgu56p_mask_black_skull: rhsusf_hgu56p_visor_mask_black_skull {
         ACE_Protection = 0;
     };
-    class rhsusf_ihadss: rhsusf_opscore_01 {
-        HEARING_PROTECTION_VICCREW;
-    };
 
     class H_HelmetB;
     class RHS_jetpilot_usaf: H_HelmetB {
         ACE_Protection = 1;
-        HEARING_PROTECTION_VICCREW;
     };
 };

@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Concertina_Wire">
-        <Key ID="STR_ACE_Concertina_Wire_DisplayName">
-            <English>Concertina Wire</English>
-            <German>NATO-Draht</German>
-            <Russian>Колючая проволока</Russian>
-            <Polish>Koncentrina</Polish>
-            <Spanish>Alambre de espino</Spanish>
-            <French>Fil barbelé</French>
-            <Czech>Ostnatý drát</Czech>
-            <Italian>Filo spinato NATO</Italian>
-            <Hungarian>Concertina wire</Hungarian>
-            <Portuguese>Arame farpado</Portuguese>
-            <Japanese>鉄条網</Japanese>
-            <Korean>철조망</Korean>
-            <Chinese>鐵絲網</Chinese>
-            <Chinesesimp>铁丝网</Chinesesimp>
-            <Turkish>Bıçaklı Tel</Turkish>
-        </Key>
         <Key ID="STR_ACE_Concertina_Wire_Coil_DisplayName">
             <English>Concertina Wire Coil</English>
-            <German>NATO-Draht Rolle</German>
-            <Russian>Колючая проволока (моток)</Russian>
-            <Polish>Zwój koncentriny</Polish>
-            <Spanish>Bobina de alambre de espino</Spanish>
-            <French>Bobine de fil barbelé</French>
             <Czech>Svitek ostnatého drátu</Czech>
+            <French>Bobine de fil barbelé</French>
+            <Spanish>Bobina de alambre de espino</Spanish>
             <Italian>Bobina di filo spinato NATO</Italian>
-            <Hungarian>Concertina wire coil</Hungarian>
+            <Polish>Zwój koncentriny</Polish>
             <Portuguese>Bobina de arame farpado</Portuguese>
+            <Russian>Колючая проволока (моток)</Russian>
+            <German>NATO-Draht Rolle</German>
+            <Korean>윤형철조망</Korean>
             <Japanese>鉄条網コイル</Japanese>
-            <Korean>코일형 철조망</Korean>
             <Chinese>鐵絲網捲</Chinese>
             <Chinesesimp>铁丝网卷</Chinesesimp>
             <Turkish>Bıçaklı Tel Rulo</Turkish>
+            <Hungarian>Concertina wire coil</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Concertina_Wire_UnrollWire">
-            <English>Dismount Concertina Wire</English>
-            <German>NATO-Draht abbauen</German>
-            <Russian>Демонтировать колючую проволоку</Russian>
-            <Polish>Zwiń koncentrinę</Polish>
-            <Spanish>Desmontar alambre de espino</Spanish>
-            <French>Démontage du fil barbelé...</French>
-            <Czech>Svinout ostnatý drát</Czech>
-            <Italian>Smonta il filo spinato NATO</Italian>
-            <Hungarian>Dismount Concertina wire</Hungarian>
-            <Portuguese>Desmontar arame farpado</Portuguese>
-            <Japanese>鉄条網をほどく</Japanese>
-            <Korean>철조망 해체</Korean>
-            <Chinese>卸下鐵絲網</Chinese>
-            <Chinesesimp>卸下铁丝网</Chinesesimp>
-            <Turkish>Bıçaklı Telleri Sök</Turkish>
+        <Key ID="STR_ACE_Concertina_Wire_DisplayName">
+            <English>Concertina Wire</English>
+            <Czech>Ostnatý drát</Czech>
+            <French>Fil barbelé</French>
+            <Spanish>Alambre de espino</Spanish>
+            <Italian>Filo spinato NATO</Italian>
+            <Polish>Koncentrina</Polish>
+            <Portuguese>Arame farpado</Portuguese>
+            <Russian>Колючая проволока</Russian>
+            <German>NATO-Draht</German>
+            <Korean>철조망</Korean>
+            <Japanese>鉄条網</Japanese>
+            <Chinese>鐵絲網</Chinese>
+            <Chinesesimp>铁丝网</Chinesesimp>
+            <Turkish>Bıçaklı Tel</Turkish>
+            <Hungarian>Concertina wire</Hungarian>
         </Key>
         <Key ID="STR_ACE_Concertina_Wire_RollWire">
             <English>Deploy Concertina Wire</English>
-            <German>NATO-Draht verlegen</German>
-            <Russian>Монтировать колючую проволоку</Russian>
-            <Polish>Rozwiń koncentrinę</Polish>
-            <Spanish>Desplegar alambre de espino</Spanish>
-            <French>Mettre en place le fil barbelé</French>
             <Czech>Rozvinout ostnatý drát</Czech>
+            <French>Mettre en place le fil barbelé</French>
+            <Spanish>Desplegar alambre de espino</Spanish>
             <Italian>Piazza il filo spinato NATO</Italian>
-            <Hungarian>Deploy Concertina wire</Hungarian>
+            <Polish>Rozwiń koncentrinę</Polish>
             <Portuguese>Colocar arame farpado</Portuguese>
-            <Japanese>鉄条網を置く</Japanese>
+            <Russian>Монтировать колючую проволоку</Russian>
+            <German>NATO-Draht verlegen</German>
             <Korean>철조망 배치</Korean>
+            <Japanese>鉄条網を置く</Japanese>
             <Chinese>佈署鐵絲網</Chinese>
             <Chinesesimp>部署铁丝网</Chinesesimp>
             <Turkish>Bıçaklı Telleri Yerleştir</Turkish>
+            <Hungarian>Deploy Concertina wire</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Concertina_Wire_UnrollWire">
+            <English>Dismount Concertina Wire</English>
+            <Czech>Svinout ostnatý drát</Czech>
+            <French>Démontage du fil barbelé...</French>
+            <Spanish>Desmontar alambre de espino</Spanish>
+            <Italian>Smonta il filo spinato NATO</Italian>
+            <Polish>Zwiń koncentrinę</Polish>
+            <Portuguese>Desmontar arame farpado</Portuguese>
+            <Russian>Демонтировать колючую проволоку</Russian>
+            <German>NATO-Draht abbauen</German>
+            <Korean>철조망 해체</Korean>
+            <Japanese>鉄条網をほどく</Japanese>
+            <Chinese>卸下鐵絲網</Chinese>
+            <Chinesesimp>卸下铁丝网</Chinesesimp>
+            <Turkish>Bıçaklı Telleri Sök</Turkish>
+            <Hungarian>Dismount Concertina wire</Hungarian>
         </Key>
     </Package>
 </Project>

@@ -85,8 +85,8 @@ class CfgVehicles {
                 source="user";
                 animPeriod=0.00001;
                 initPhase=-0.35;
-                maxValue="3.60";
-                minValue="-3.60";
+                maxValue=3.60;
+                minValue=-3.60;
             };
             class optic_hide {
                 source="user";
@@ -107,7 +107,7 @@ class CfgVehicles {
         soundGetIn[] = {"A3\sounds_f\dummysound",0.00031622776,1,5};
         armorStructural = 10.0;
 
-        class ACE_CSW {
+        class ace_csw {
             disassembleTo = QGVAR(super);
         };
 

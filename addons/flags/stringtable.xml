@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Flags">
+        <Container name="actions">
+            <Key ID="STR_ACE_Flags_ActionCategory">
+                <English>Flags</English>
+                <French>Drapeaux</French>
+                <Italian>Bandiere</Italian>
+                <Russian>Флаги</Russian>
+                <German>Flaggen</German>
+                <Korean>깃발</Korean>
+                <Japanese>旗</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_AdjustHeight">
+                <English>Adjust height</English>
+                <French>Ajuster la hauteur</French>
+                <Italian>Aggiusta altezza</Italian>
+                <Russian>Отрегулировать высоту</Russian>
+                <German>Höhe anpassen</German>
+                <Korean>높이 조절</Korean>
+                <Japanese>高さを調整</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_Carry">
+                <English>Carry %1</English>
+                <French>Portage %1</French>
+                <Italian>Porta %1</Italian>
+                <Russian>Носить %1</Russian>
+                <German>%1 tragen</German>
+                <Korean>%1 옮기기</Korean>
+                <Japanese>%1 を背負う</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_Furl">
+                <English>Furl Flag</English>
+                <French>Enrouler le drapeau</French>
+                <Italian>Arrotola bandiera</Italian>
+                <Russian>Свернуть флаг</Russian>
+                <German>Flagge einrollen</German>
+                <Korean>깃발 거두기</Korean>
+                <Japanese>旗 を巻く</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_Pickup">
+                <English>Pickup %1</English>
+                <French>Ramasseur %1</French>
+                <Italian>Raccogli %1</Italian>
+                <Russian>Поднять %1</Russian>
+                <German>%1 aufnehmen</German>
+                <Korean>%1 줍기</Korean>
+                <Japanese>%1 を拾う</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_Place">
+                <English>Place %1</English>
+                <French>Placer %1</French>
+                <Italian>Piazza %1</Italian>
+                <Russian>Разместить %1</Russian>
+                <German>%1 platzieren</German>
+                <Korean>%1 꽂기</Korean>
+                <Japanese>%1 を置く</Japanese>
+            </Key>
+        </Container>
+        <Container name="displayNames">
+            <Key ID="STR_ACE_Flags_Black">
+                <English>Flag (Black)</English>
+                <French>Drapeau (Noir)</French>
+                <Italian>Bandiera (Nera)</Italian>
+                <Russian>Флаг (черный)</Russian>
+                <German>Flagge (Schwarz)</German>
+                <Korean>깃발 (흑색)</Korean>
+                <Japanese>旗 (黒)</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_Blue">
+                <English>Flag (Blue)</English>
+                <French>Drapeau (Bleu)</French>
+                <Italian>Bandiera (Blu)</Italian>
+                <Russian>Флаг (синий)</Russian>
+                <German>Flagge (Blau)</German>
+                <Korean>깃발 (청색)</Korean>
+                <Japanese>旗 (青)</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_Description">
+                <English>Can be carried or placed. Flags are used to mark a specific point in terrain or units.</English>
+                <French>Ils peuvent être transportés ou placés. Les drapeaux sont utilisés pour marquer un point spécifique du terrain ou des unités.</French>
+                <Italian>Possono essere trasportate o piazzate. Le bandiere vengono utilizzate per marcare unità o punti specifici del terreno.</Italian>
+                <Russian>Можно переносить или размещать. Флажки используются для обозначения определенной точки на местности или юнитов.</Russian>
+                <German>Kann getragen oder platziert werden. Flaggen werden zur Kennzeichnung von bestimmten Geländepunkte oder Einheiten eingesetzt.</German>
+                <Korean>옮기거나 꽂을 수 있습니다. 깃발은 지형이나 유닛의 특정 지점을 표시하는 데 쓰입니다.</Korean>
+                <Japanese>背負ったり設置することが可能。旗は特定のユニットや地点を示すのに使用されます。</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_Green">
+                <English>Flag (Green)</English>
+                <French>Drapeau (Vert)</French>
+                <Italian>Bandiera (Verde)</Italian>
+                <Russian>Флаг (зелёный)</Russian>
+                <German>Flagge (Grün)</German>
+                <Korean>깃발 (녹색)</Korean>
+                <Japanese>旗 (緑)</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_Orange">
+                <English>Flag (Orange)</English>
+                <French>Drapeau (Orange)</French>
+                <Italian>Bandiera (Arancione)</Italian>
+                <Russian>Флаг (оранжевый)</Russian>
+                <German>Flagge (Orange)</German>
+                <Korean>깃발 (주황색)</Korean>
+                <Japanese>旗 (橙)</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_Purple">
+                <English>Flag (Purple)</English>
+                <French>Drapeau (Violet)</French>
+                <Italian>Bandiera (Viola)</Italian>
+                <Russian>Флаг (фиолетовый)</Russian>
+                <German>Flagge (Violett)</German>
+                <Korean>깃발 (보라색)</Korean>
+                <Japanese>旗 (紫)</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_Red">
+                <English>Flag (Red)</English>
+                <French>Drapeau (Rouge)</French>
+                <Italian>Bandiera (Rossa)</Italian>
+                <Russian>Флаг (красный)</Russian>
+                <German>Flagge (Rot)</German>
+                <Korean>깃발 (적색)</Korean>
+                <Japanese>旗 (赤)</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_White">
+                <English>Flag (White)</English>
+                <French>Drapeau (Blanc)</French>
+                <Italian>Bandiera (Bianca)</Italian>
+                <Russian>Флаг (белый)</Russian>
+                <German>Flagge (Weiß)</German>
+                <Korean>깃발 (백색)</Korean>
+                <Japanese>旗 (白)</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_Yellow">
+                <English>Flag (Yellow)</English>
+                <French>Drapeau (Jaune)</French>
+                <Italian>Bandiera (Gialla)</Italian>
+                <Russian>Флаг(желтый)</Russian>
+                <German>Flagge (Gelb)</German>
+                <Korean>깃발 (황색)</Korean>
+                <Japanese>旗 (黄)</Japanese>
+            </Key>
+        </Container>
+        <Container name="settings">
+            <Key ID="STR_ACE_Flags_AllowCarryingFlags">
+                <English>Allow carrying flags</English>
+                <French>Autoriser le port de drapeaux</French>
+                <Italian>Abilita indossare bandiere</Italian>
+                <Russian>Разрешить ношение флагов</Russian>
+                <German>Erlaube das Tragen von Flaggen</German>
+                <Korean>깃발 옮기기 허용</Korean>
+                <Japanese>旗を背負うことを許可</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_AllowCarryingFlagsTooltip">
+                <English>Adds the actions to carry flags if the corresponding item is in the inventory.</English>
+                <French>Ajoute des actions pour porter des drapeaux lorsque l'objet en question est dans l'inventaire.</French>
+                <Italian>Aggiunge l'interazione di indossare una bandiera se si ha l'oggetto corrispondente nell'inventario.</Italian>
+                <Russian>Добавляет действия для ношения флагов, если соответствующий предмет есть в инвентаре.</Russian>
+                <German>Fügt Aktionen für das Tragen von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
+                <Korean>해당하는 깃발 아이템이 소지품에 있을 경우 깃발을 옮기는 행동을 추가합니다.</Korean>
+                <Japanese>対応するアイテムがインベントリにある場合、旗を背負うアクションを追加します。</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_AllowPlacingFlags">
+                <English>Allow placing flags</English>
+                <French>Permettre de placer des drapeaux</French>
+                <Italian>Abilita piazzamento bandiere</Italian>
+                <Russian>Разрешить размещение флагов</Russian>
+                <German>Erlaube das Platzieren von Flaggen</German>
+                <Korean>깃발 배치 허용</Korean>
+                <Japanese>旗の設置を許可</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_AllowPlacingFlagsTooltip">
+                <English>Adds the actions to place flags if the corresponding item is in the inventory.</English>
+                <French>Ajoute des actions pour placer des drapeaux lorsque l'objet en question est dans l'inventaire.</French>
+                <Italian>Aggiunge l'interazione di piazzare una bandiera se si ha l'oggetto corrispondente nell'inventario.</Italian>
+                <Russian>Добавляет действия для установки флагов, если соответствующий предмет есть в инвентаре.</Russian>
+                <German>Fügt Aktionen für das Platzieren von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
+                <Korean>해당하는 깃발 아이템이 소지품에 있을 경우 깃발을 꽂는 행동을 추가합니다.</Korean>
+                <Japanese>対応するアイテムがインベントリにある場合、旗を設置するアクションを追加します。</Japanese>
+            </Key>
+            <Key ID="STR_ACE_Flags_SettingCategory">
+                <English>Flags</English>
+                <French>Drapeaux</French>
+                <Italian>Bandiere</Italian>
+                <Russian>Флаги</Russian>
+                <German>Flaggen</German>
+                <Korean>깃발</Korean>
+                <Japanese>旗</Japanese>
+            </Key>
+        </Container>
+    </Package>
+</Project>

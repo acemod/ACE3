@@ -1,124 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="RangeCard">
-        <Key ID="STR_ACE_RangeCard_Name">
-            <English>Range Card</English>
-            <Polish>Tabela balistyczna</Polish>
-            <Spanish>Tarjeta de distancias</Spanish>
-            <Czech>Vzdálenostní tabulka</Czech>
-            <German>Entfernungsspinne</German>
-            <Portuguese>Tabela de distâncias</Portuguese>
-            <French>Table de tir</French>
-            <Hungarian>Távolsági kártya</Hungarian>
-            <Russian>Таблица поправок</Russian>
-            <Italian>Tavola Balistica</Italian>
-            <Japanese>レンジカード (射表)</Japanese>
-            <Korean>사거리표</Korean>
-            <Chinesesimp>射表</Chinesesimp>
-            <Chinese>彈道射表</Chinese>
-            <Turkish>Menzil Kartı</Turkish>
+        <Key ID="STR_ACE_RangeCard_CopyRangeCard">
+            <English>Copy Range Card</English>
+            <Czech>Kopírovat vzdálenostní tabulku</Czech>
+            <French>Recopier la table de tir</French>
+            <Spanish>Copiar tarjeta de distancias</Spanish>
+            <Italian>Copia Tavola Balistica</Italian>
+            <Polish>Skopiuj tabelę balistyczną</Polish>
+            <Portuguese>Copiar tabela de distâncias</Portuguese>
+            <Russian>Скопировать таблицу поправок</Russian>
+            <German>Kopiere Entfernungsspinne</German>
+            <Korean>사거리표 복제</Korean>
+            <Japanese>レンジカードを複製</Japanese>
+            <Chinese>複製彈道射表</Chinese>
+            <Chinesesimp>复制射表</Chinesesimp>
+            <Turkish>Menzil Kartını Kopyala</Turkish>
+            <Hungarian>Távolsági kártya másolása</Hungarian>
         </Key>
         <Key ID="STR_ACE_RangeCard_Description">
             <English>50 METER increments -- MRAD/MRAD (reticle/turrets)</English>
-            <Polish>Co 50 metrów - MRAD/MRAD (siatka/pokrętło)</Polish>
-            <Spanish>Incrementos de 50 METROS -- MRAD/MRAD (retícula/torretas)</Spanish>
             <Czech>Přidat 50 METRŮ -- MRAD/MRAD (síťka/věže)</Czech>
-            <German>50-Meter-Schritte MRAD/MRAD (Fadenkreuz/Geschützturm)</German>
-            <Portuguese>Incrementos de 50 METROS - MRAD/MRAD (retícula/torres)</Portuguese>
             <French>Incréments de 50 MÈTRES -- MRAD/MRAD (réticule/tourelles)</French>
-            <Hungarian>50 MÉTERES lépések - MRAD/MRAD (célzó/lövegek)</Hungarian>
-            <Russian>Шаг 50 МЕТРОВ - MRAD/MRAD (сетка/маховички)</Russian>
+            <Spanish>Incrementos de 50 METROS -- MRAD/MRAD (retícula/torretas)</Spanish>
             <Italian>Incrementi per 50 METRI - MRAD/MRAD (reticolo/torrette)</Italian>
-            <Japanese>50 メートル単位 -- MRAD/MRAD (レチクル/タレット)</Japanese>
+            <Polish>Co 50 metrów - MRAD/MRAD (siatka/pokrętło)</Polish>
+            <Portuguese>Incrementos de 50 METROS - MRAD/MRAD (retícula/torres)</Portuguese>
+            <Russian>Шаг 50 МЕТРОВ - MRAD/MRAD (сетка/маховички)</Russian>
+            <German>50-Meter-Schritte MRAD/MRAD (Fadenkreuz/Geschützturm)</German>
             <Korean>50 미터 늘리기 -- MRAD/MRAD (조준선/포탑)</Korean>
-            <Chinesesimp>50米增量 -- 毫弧度/毫弧度（瞄镜分划线/调整纽）</Chinesesimp>
+            <Japanese>50 メートル単位 -- MRAD/MRAD (レチクル/タレット)</Japanese>
             <Chinese>50公尺增量 -- 毫弧度/毫弧度 (瞄鏡分劃線/調整紐)</Chinese>
+            <Chinesesimp>50米增量 -- 毫弧度/毫弧度（瞄镜分划线/调整纽）</Chinesesimp>
             <Turkish>50 METER increments -- MRAD/MRAD (reticle/turrets)</Turkish>
+            <Hungarian>50 MÉTERES lépések - MRAD/MRAD (célzó/lövegek)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_RangeCard_Name">
+            <English>Range Card</English>
+            <Czech>Vzdálenostní tabulka</Czech>
+            <French>Table de tir</French>
+            <Spanish>Tarjeta de distancias</Spanish>
+            <Italian>Tavola Balistica</Italian>
+            <Polish>Tabela balistyczna</Polish>
+            <Portuguese>Tabela de distâncias</Portuguese>
+            <Russian>Таблица поправок</Russian>
+            <German>Entfernungsspinne</German>
+            <Korean>사거리표</Korean>
+            <Japanese>レンジカード (弾道射表)</Japanese>
+            <Chinese>彈道射表</Chinese>
+            <Chinesesimp>射表</Chinesesimp>
+            <Turkish>Menzil Kartı</Turkish>
+            <Hungarian>Távolsági kártya</Hungarian>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCard">
             <English>Open Range Card</English>
-            <Polish>Otwórz tabelę balistyczną</Polish>
-            <Spanish>Abrir tarjeta de distancias</Spanish>
             <Czech>Otevřít vzdálenostní tabulku</Czech>
-            <German>Öffne Entfernungsspinne</German>
-            <Portuguese>Abrir tabela de distâncias</Portuguese>
             <French>Ouvrir la table de tir</French>
-            <Hungarian>Távolsági kártya kinyitása</Hungarian>
-            <Russian>Открыть таблицу поправок</Russian>
+            <Spanish>Abrir tarjeta de distancias</Spanish>
             <Italian>Apri Tavola Balistica</Italian>
-            <Japanese>レンジカードを開く</Japanese>
+            <Polish>Otwórz tabelę balistyczną</Polish>
+            <Portuguese>Abrir tabela de distâncias</Portuguese>
+            <Russian>Открыть таблицу поправок</Russian>
+            <German>Öffne Entfernungsspinne</German>
             <Korean>사거리표 열기</Korean>
-            <Chinesesimp>开启射表</Chinesesimp>
+            <Japanese>レンジカードを開く</Japanese>
             <Chinese>開啟彈道射表</Chinese>
+            <Chinesesimp>开启射表</Chinesesimp>
             <Turkish>Menzil Kartını Aç</Turkish>
+            <Hungarian>Távolsági kártya kinyitása</Hungarian>
         </Key>
         <Key ID="STR_ACE_RangeCard_OpenRangeCardCopy">
             <English>Open Range Card Copy</English>
-            <Polish>Otwórz kopię tabeli balistycznej</Polish>
-            <Spanish>Abrir copia de tarjeta de distancias</Spanish>
             <Czech>Otevřít kopii vzdálenostní tabulky</Czech>
-            <German>Öffne Kopie der Entfernungsspinne</German>
-            <Portuguese>Abrir cópia da tabela de distâncias</Portuguese>
             <French>Ouvrir une copie de la table de tir</French>
-            <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
-            <Russian>Открыть копию таблицы поправок</Russian>
+            <Spanish>Abrir copia de tarjeta de distancias</Spanish>
             <Italian>Apri Copia Tavola Balistica</Italian>
-            <Japanese>レンジカードの複製を開く</Japanese>
+            <Polish>Otwórz kopię tabeli balistycznej</Polish>
+            <Portuguese>Abrir cópia da tabela de distâncias</Portuguese>
+            <Russian>Открыть копию таблицы поправок</Russian>
+            <German>Öffne Kopie der Entfernungsspinne</German>
             <Korean>복제 사거리표 열기</Korean>
-            <Chinesesimp>开启射表副本</Chinesesimp>
+            <Japanese>レンジカードの複製を開く</Japanese>
             <Chinese>開啟彈道射表副本</Chinese>
+            <Chinesesimp>开启射表副本</Chinesesimp>
             <Turkish>Menzil Kartının Kopyasını Aç</Turkish>
-        </Key>
-        <Key ID="STR_ACE_RangeCard_RangeCardDialogKey">
-            <English>Open Range Card</English>
-            <Polish>Otwórz tabelę balistyczną</Polish>
-            <Spanish>Abrir tarjeta de distancias</Spanish>
-            <Czech>Otevřít vzdálenostní tabulku</Czech>
-            <German>Öffne Entfernungsspinne</German>
-            <Portuguese>Abrir tabela de distâncias</Portuguese>
-            <French>Ouvrir la table de tir</French>
-            <Hungarian>Távolsági kártya kinyitása</Hungarian>
-            <Russian>Открыть таблицу поправок</Russian>
-            <Italian>Apri Tavola Balistica</Italian>
-            <Japanese>レンジカードを開く</Japanese>
-            <Korean>사거리표 열기</Korean>
-            <Chinesesimp>开启射表</Chinesesimp>
-            <Chinese>開啟彈道射表</Chinese>
-            <Turkish>Menzil Kartını Aç</Turkish>
+            <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
         </Key>
         <Key ID="STR_ACE_RangeCard_RangeCardCopyDialogKey">
             <English>Open Range Card Copy</English>
-            <Polish>Otwórz kopię tabeli balistycznej</Polish>
-            <Spanish>Abrir copia de tarjeta de distancias</Spanish>
             <Czech>Otevřít kopii vzdálenostní tabulky</Czech>
-            <German>Öffne Kopie der Entfernungsspinne</German>
-            <Portuguese>Abrir cópia da tabela de distâncias</Portuguese>
             <French>Ouvrir une copie de la table de tir</French>
-            <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
-            <Russian>Открыть копию таблицы поправок</Russian>
+            <Spanish>Abrir copia de tarjeta de distancias</Spanish>
             <Italian>Apri Copia Tavola Balistica</Italian>
-            <Japanese>レンジカードの複製を開く</Japanese>
+            <Polish>Otwórz kopię tabeli balistycznej</Polish>
+            <Portuguese>Abrir cópia da tabela de distâncias</Portuguese>
+            <Russian>Открыть копию таблицы поправок</Russian>
+            <German>Öffne Kopie der Entfernungsspinne</German>
             <Korean>복제 사거리표 열기</Korean>
-            <Chinesesimp>开启射表副本</Chinesesimp>
+            <Japanese>レンジカードの複製を開く</Japanese>
             <Chinese>開啟彈道射表副本</Chinese>
+            <Chinesesimp>开启射表副本</Chinesesimp>
             <Turkish>Menzil Kartının Kopyasını Aç</Turkish>
+            <Hungarian>Távolsági kártya-másolat kinyitása</Hungarian>
         </Key>
-        <Key ID="STR_ACE_RangeCard_CopyRangeCard">
-            <English>Copy Range Card</English>
-            <Polish>Skopiuj tabelę balistyczną</Polish>
-            <Spanish>Copiar tarjeta de distancias</Spanish>
-            <Czech>Kopírovat vzdálenostní tabulku</Czech>
-            <German>Kopiere Entfernungsspinne</German>
-            <Portuguese>Copiar tabela de distâncias</Portuguese>
-            <French>Recopier la table de tir</French>
-            <Hungarian>Távolsági kártya másolása</Hungarian>
-            <Russian>Скопировать таблицу поправок</Russian>
-            <Italian>Copia Tavola Balistica</Italian>
-            <Japanese>レンジカードを複製</Japanese>
-            <Korean>사거리표 복제</Korean>
-            <Chinesesimp>复制射表</Chinesesimp>
-            <Chinese>複製彈道射表</Chinese>
-            <Turkish>Menzil Kartını Kopyala</Turkish>
+        <Key ID="STR_ACE_RangeCard_RangeCardDialogKey">
+            <English>Open Range Card</English>
+            <Czech>Otevřít vzdálenostní tabulku</Czech>
+            <French>Ouvrir la table de tir</French>
+            <Spanish>Abrir tarjeta de distancias</Spanish>
+            <Italian>Apri Tavola Balistica</Italian>
+            <Polish>Otwórz tabelę balistyczną</Polish>
+            <Portuguese>Abrir tabela de distâncias</Portuguese>
+            <Russian>Открыть таблицу поправок</Russian>
+            <German>Öffne Entfernungsspinne</German>
+            <Korean>사거리표 열기</Korean>
+            <Japanese>レンジカードを開く</Japanese>
+            <Chinese>開啟彈道射表</Chinese>
+            <Chinesesimp>开启射表</Chinesesimp>
+            <Turkish>Menzil Kartını Aç</Turkish>
+            <Hungarian>Távolsági kártya kinyitása</Hungarian>
         </Key>
     </Package>
 </Project>

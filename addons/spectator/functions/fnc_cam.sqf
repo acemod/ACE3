@@ -83,7 +83,7 @@ if (_init) then {
     GVAR(camAgentFree) enableSimulation false; // Prevent falling into water
 
     // Create dummy target used for follow camera
-    GVAR(camDummy) = "Logic" createVehicleLocal getPosASLVisual GVAR(camFocus);
+    GVAR(camDummy) = "Logic" createVehicleLocal ASLToAGL getPosASLVisual GVAR(camFocus);
 
     // Handle initial camera mode limitation
     if !(GVAR(camMode) in GVAR(availableModes)) then {
@@ -132,6 +132,9 @@ if (_init) then {
     GVAR(camDummy) = nil;
 
     // Stop tracking everything
+    deleteVehicle GVAR(camLights);
+    GVAR(camLights)             = nil;
+
     GVAR(camMode)               = nil;
     GVAR(camVision)             = nil;
     GVAR(camFocus)              = nil;
@@ -144,6 +147,5 @@ if (_init) then {
     GVAR(camYaw)                = nil;
     GVAR(camPitch)              = nil;
     GVAR(camSlow)               = nil;
-    GVAR(camLights)             = nil;
     GVAR(camLight)              = nil;
 };

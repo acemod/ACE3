@@ -1,423 +1,423 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Respawn">
-        <Key ID="STR_ACE_Respawn_DisplayName">
-            <English>Respawn</English>
-            <German>Wiedereinstieg</German>
-            <Italian>Riapparizione</Italian>
-            <Chinese>重生</Chinese>
-            <Chinesesimp>重生</Chinesesimp>
-            <Japanese>リスポーン</Japanese>
-            <Polish>Odrodzenie</Polish>
-            <Russian>Возрождение</Russian>
-            <Portuguese>Ressurgimento</Portuguese>
-            <French>Réapparition</French>
-            <Czech>Znovuzrození</Czech>
-            <Turkish>Yeniden Doğma</Turkish>
-            <Spanish>Reaparición</Spanish>
-            <Korean>재투입</Korean>
+        <Key ID="STR_ACE_Respawn_DeadBodyRemoveTimer">
+            <English>Body remove timer</English>
+            <Czech>Časovač odstranění mrtvol</Czech>
+            <French>Minuterie enlèvement corps</French>
+            <Spanish>Temporizador para eliminar cuerpos</Spanish>
+            <Italian>Timer rimozione corpo</Italian>
+            <Polish>Czas usunięcia ciała</Polish>
+            <Portuguese>Tempo para remover corpo</Portuguese>
+            <Russian>Время удаления трупов</Russian>
+            <German>Zeit bis Körper entfernt werden</German>
+            <Korean>시체 제거 타이머</Korean>
+            <Japanese>死体削除タイマー</Japanese>
+            <Chinese>屍體移除計時器</Chinese>
+            <Chinesesimp>尸体移除计时器</Chinesesimp>
+            <Turkish>Bedenin Silinme Süresi</Turkish>
         </Key>
         <Key ID="STR_ACE_Respawn_Deploy">
             <English>Deploy in 5 seconds...</English>
-            <French>Déploiement dans 5 secondes...</French>
-            <German>Wird in 5 Sekunden errichtet...</German>
-            <Spanish>Despliegue en 5 segundos...</Spanish>
-            <Russian>Возрождение через 5 секунд...</Russian>
-            <Polish>Rozmieszczenie za 5 sekund...</Polish>
             <Czech>Znovuzrození za 5 sekund...</Czech>
-            <Hungarian>Kihelyezés 5 másodperc múlva...</Hungarian>
+            <French>Déploiement dans 5 secondes...</French>
+            <Spanish>Despliegue en 5 segundos...</Spanish>
             <Italian>Dispiegamento in 5 secondi...</Italian>
+            <Polish>Rozmieszczenie za 5 sekund...</Polish>
             <Portuguese>Será posicionado em 5 segundos...</Portuguese>
-            <Japanese>5秒後に設置します・・・</Japanese>
+            <Russian>Возрождение через 5 секунд...</Russian>
+            <German>Wird in 5 Sekunden errichtet...</German>
             <Korean>5초 후 재투입...</Korean>
-            <Chinesesimp>5秒后完成部署...</Chinesesimp>
+            <Japanese>5秒後に設置が完了します・・・</Japanese>
             <Chinese>5秒後完成佈署...</Chinese>
+            <Chinesesimp>5秒后完成部署...</Chinesesimp>
+            <Hungarian>Kihelyezés 5 másodperc múlva...</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_Deployed">
             <English>Rallypoint deployed</English>
-            <French>Point de ralliement déployé</French>
-            <German>Sammelpunkt errichtet</German>
-            <Spanish>Punto de reunión desplegado</Spanish>
-            <Russian>Точка сбора установлена</Russian>
-            <Polish>Punkt zbiórki rozmieszczony</Polish>
             <Czech>Rallypoint umístěn</Czech>
-            <Hungarian>Gyülekezőpont elhelyezve</Hungarian>
+            <French>Point de ralliement déployé</French>
+            <Spanish>Punto de reunión desplegado</Spanish>
             <Italian>Rallypoint dispiegato</Italian>
+            <Polish>Punkt zbiórki rozmieszczony</Polish>
             <Portuguese>Rallypoints posicionado</Portuguese>
-            <Japanese>ラリーポイントを設置しました</Japanese>
+            <Russian>Точка сбора установлена</Russian>
+            <German>Sammelpunkt errichtet</German>
             <Korean>집결지 배치됨</Korean>
-            <Chinesesimp>集合点部署完成</Chinesesimp>
+            <Japanese>ラリーポイントを設置しました</Japanese>
             <Chinese>集合點佈署完成</Chinese>
+            <Chinesesimp>集合点部署完成</Chinesesimp>
+            <Hungarian>Gyülekezőpont elhelyezve</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_DisplayName">
+            <English>Respawn</English>
+            <Czech>Znovuzrození</Czech>
+            <French>Réapparition</French>
+            <Spanish>Reaparición</Spanish>
+            <Italian>Riapparizione</Italian>
+            <Polish>Odrodzenie</Polish>
+            <Portuguese>Ressurgimento</Portuguese>
+            <Russian>Возрождение</Russian>
+            <German>Wiedereinstieg</German>
+            <Korean>재투입</Korean>
+            <Japanese>リスポーン</Japanese>
+            <Chinese>重生</Chinese>
+            <Chinesesimp>重生</Chinesesimp>
+            <Turkish>Yeniden Doğma</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Respawn_EditorCategory">
+            <English>ACE Respawn</English>
+            <Czech>ACE Znovuzrození</Czech>
+            <French>ACE Réapparition</French>
+            <Spanish>Reaparición ACE</Spanish>
+            <Italian>ACE Riapparizione</Italian>
+            <Polish>ACE Odrodzenie</Polish>
+            <Portuguese>ACE Respawn</Portuguese>
+            <Russian>ACE Возрождение</Russian>
+            <German>ACE-Wiedereinstieg</German>
+            <Korean>ACE 재투입</Korean>
+            <Japanese>ACE リスポーン</Japanese>
+            <Chinese>ACE 重生</Chinese>
+            <Chinesesimp>ACE 重生</Chinesesimp>
+            <Turkish>ACE Yeniden Doğma</Turkish>
+            <Hungarian>ACE Respawn</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_FriendlyFire_Module_Description">
+            <English>Using this module in your mission will make it so any friendly fire kills will be displayed in form of a message in chat.</English>
+            <Czech>Zobrazí zprávu v chatu v případě, když budete střílet na vlastní jednotky. Ve zprávě se zobrazí kdo na koho střílel, popř. kdo koho zabil.</Czech>
+            <French>L'utilisation de ce module fait en sorte qu'à chaque joueur mort par un tir ami, un rapport sera affiché dans le chat, indiquant qui a tué qui.</French>
+            <Spanish>El usar este módulo, todas las muertes por fuego amigo serán indicadas en el chat.</Spanish>
+            <Italian>Usando questo modulo nella tua missione farà in modo che ogni uccisione per fuoco amico venga mostrata in forma di messaggio in chat.</Italian>
+            <Polish>Użycie tego modułu na misji spowoduje wyświetlenie wiadomości na czacie w przypadku, kiedy zostanie popełniony friendly fire - wyświetlona zostanie wtedy wiadomość kto kogo zabił.</Polish>
+            <Portuguese>Usando este módulo em uma missão para exibir mensagens chat, no caso de quando você faz um fogo amigo - então a mensagem será exibida mostrando quem matou quem.</Portuguese>
+            <Russian>Отображает сообщение в чате, в случае, когда убивают союзных игроков. В докладе указывается, кто стрелял, в кого. Кто кого убил.</Russian>
+            <German>Dieses Modul zeigt jeden Gefallenen durch Freundbeschuss, in Form einer Textnachricht, im Chat an.</German>
+            <Korean>이 모듈은 미션 중 아군 오인사격으로 인한 사망자 발생 시 채팅창에 메시지를 표시해줍니다.</Korean>
+            <Japanese>ミッションでこのモジュールを使用すると、誤射による友軍キルがチャット上のメッセージとして表示されるようになります。</Japanese>
+            <Chinese>擺放此模塊後，當有發生友軍誤擊致死的事件，會顯示提示訊息在聊天視窗中</Chinese>
+            <Chinesesimp>摆放此模块后，当有发生友军误击致死的事件，会显示提示信息在聊天视窗中。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Respawn_FriendlyFire_Module_DisplayName">
+            <English>Friendly Fire Messages</English>
+            <Czech>Upozornění na přátelskou střelbu</Czech>
+            <French>Messages de tir ami</French>
+            <Spanish>Mensajes de fuego amigo</Spanish>
+            <Italian>Messaggi Fuoco Amico</Italian>
+            <Polish>Wiadomości Friendly Fire</Polish>
+            <Portuguese>Mensagens de fogo amigo</Portuguese>
+            <Russian>Сообщения об огне по своим</Russian>
+            <German>Nachricht bei Freundbeschuss</German>
+            <Korean>아군 오인사격 메시지</Korean>
+            <Japanese>フレンドリーファイア通知</Japanese>
+            <Chinese>友軍誤擊訊息</Chinese>
+            <Chinesesimp>友军误击信息</Chinesesimp>
+            <Hungarian>Baráti tűz üzenetek</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Module_Description">
+            <English>This module enables you to configure ACE functionality specific to respawns.</English>
+            <Czech>Tento modul umožňuje nastavení znovuzrození (respawn).</Czech>
+            <French>Ce module vous permet de configurer les fonctionnalités ACE spécifiques à la réapparition des joueurs.</French>
+            <Spanish>Este módulo permite configurar parámetros relacionados con la reaparición</Spanish>
+            <Italian>Questo modulo ti permette di configurare le funzionalità ACE specifiche dei respawn.</Italian>
+            <Polish>Moduł ten pozwala dostosować ustawienia odrodzenia (respawnu).</Polish>
+            <Portuguese>Este módulo permite que você personalize as configurações do renascimento (Spawn).</Portuguese>
+            <Russian>Этот модуль позволяет настроить систему возрождения.</Russian>
+            <German>Dieses Modul erlaubt es, die Wiedereinstiegs-Einstellungen anzupassen.</German>
+            <Korean>이 모듈은 ACE 재투입의 자세한 설정을 변경할 수 있게 해줍니다.</Korean>
+            <Japanese>このモジュールを使用すると、リスポーンに ACE 固有の機能を設定できます。</Japanese>
+            <Chinese>該模塊使您可以設定ACE的重生功能</Chinese>
+            <Chinesesimp>该模块使您可以设定 ACE 的重生功能</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Module_DisplayName">
+            <English>Respawn System</English>
+            <Czech>Systém znovuzrození</Czech>
+            <French>Système de réapparition</French>
+            <Spanish>Sistema de reaparición</Spanish>
+            <Italian>Sistema Respawn</Italian>
+            <Polish>System odrodzenia</Polish>
+            <Portuguese>Sistema de Renascimento</Portuguese>
+            <Russian>Возрождение</Russian>
+            <German>Wiedereinstiegs-System</German>
+            <Korean>재투입 시스템</Korean>
+            <Japanese>リスポーン システム</Japanese>
+            <Chinese>重生系統</Chinese>
+            <Chinesesimp>重生系统</Chinesesimp>
+            <Hungarian>Respawn-rendszer</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RallypointEast">
+            <English>Rallypoint East</English>
+            <Czech>Bod shromáždění Východ</Czech>
+            <French>Point de ralliement EST</French>
+            <Spanish>Punto de reunión Este</Spanish>
+            <Italian>Rallypoint Est</Italian>
+            <Polish>Punkt zbiórki Wschodu</Polish>
+            <Portuguese>Ponto de encontro Leste</Portuguese>
+            <Russian>Точка сбора Красных</Russian>
+            <German>Sammelpunkt Ost</German>
+            <Korean>대항군 집결지</Korean>
+            <Japanese>ラリーポイント OPFOR軍</Japanese>
+            <Chinese>紅方集合點</Chinese>
+            <Chinesesimp>红方集合点</Chinesesimp>
+            <Hungarian>Gyülekezőpont, Kelet</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RallypointEastBase">
+            <English>Rallypoint East (Base)</English>
+            <Czech>Bod shromáždění Východ (Základna)</Czech>
+            <French>Point de ralliement EST (Base)</French>
+            <Spanish>Punto de reunión Este (Base)</Spanish>
+            <Italian>Rallypoint Est (Base)</Italian>
+            <Polish>Punkt zbiórki Wschodu (Baza)</Polish>
+            <Portuguese>Ponto de encontro Leste (Base)</Portuguese>
+            <Russian>Точка сбора Красных (База)</Russian>
+            <German>Sammelpunkt Ost (Basis)</German>
+            <Korean>대항군 집결지 (기지)</Korean>
+            <Japanese>ラリーポイント OPFOR軍 (ベース)</Japanese>
+            <Chinese>紅方集合點 (基地)</Chinese>
+            <Chinesesimp>红方集合点（基地）</Chinesesimp>
+            <Hungarian>Gyülekezőpont, Kelet (Bázis)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RallypointIndependent">
+            <English>Rallypoint Independent</English>
+            <Czech>Bod shromáždění Nezávislý</Czech>
+            <French>Point de ralliement Indépendant</French>
+            <Spanish>Punto de reunión Independiente</Spanish>
+            <Italian>Rallypoint Indipendenti</Italian>
+            <Polish>Punkt zbiórki Ruchu oporu</Polish>
+            <Portuguese>Ponto de encontro Independente</Portuguese>
+            <Russian>Точка сбора Независимых</Russian>
+            <German>Sammelpunkt Widerstand</German>
+            <Korean>무소속군 집결지</Korean>
+            <Japanese>ラリーポイント INDEPENDENT軍</Japanese>
+            <Chinese>獨立方集合點</Chinese>
+            <Chinesesimp>独立方集合点</Chinesesimp>
+            <Hungarian>Gyülekezőpont, Független</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
+            <English>Rallypoint Independent (Base)</English>
+            <Czech>Bod shromáždění Nezávislý (Základna)</Czech>
+            <French>Point de ralliement Indépendant (Base)</French>
+            <Spanish>Punto de reunión Independiente (Base)</Spanish>
+            <Italian>Rallypoint Indipendenti (Base)</Italian>
+            <Polish>Punkt zbiórki Ruchu oporu (Baza)</Polish>
+            <Portuguese>Ponto de encontro Independente (Base)</Portuguese>
+            <Russian>Точка сбора Независимых (База)</Russian>
+            <German>Sammelpunkt Widerstand (Basis)</German>
+            <Korean>무소속군 집결지 (기지)</Korean>
+            <Japanese>ラリーポイント INDEPENDENT軍 (ベース)</Japanese>
+            <Chinese>獨立方集合點 (基地)</Chinese>
+            <Chinesesimp>独立方集合点（基地）</Chinesesimp>
+            <Hungarian>Gyülekezőpont, Független (Bázis)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RallypointWest">
+            <English>Rallypoint West</English>
+            <Czech>Bod shromáždění Západ</Czech>
+            <French>Point de ralliement OUEST</French>
+            <Spanish>Punto de reunión Oeste</Spanish>
+            <Italian>Rallypoint Ovest</Italian>
+            <Polish>Punkt zbiórki Zachodu</Polish>
+            <Portuguese>Ponto de encontro Oeste</Portuguese>
+            <Russian>Точка сбора Синих</Russian>
+            <German>Sammelpunkt West</German>
+            <Korean>청군 집결지</Korean>
+            <Japanese>ラリーポイント BLUFOR軍</Japanese>
+            <Chinese>藍方集合點</Chinese>
+            <Chinesesimp>蓝方集合点</Chinesesimp>
+            <Hungarian>Gyülekezőpont, Nyugat</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RallypointWestBase">
+            <English>Rallypoint West (Base)</English>
+            <Czech>Bod shromáždění Západ (Základna)</Czech>
+            <French>Point de ralliement OUEST (Base)</French>
+            <Spanish>Punto de reunión Oeste (Base)</Spanish>
+            <Italian>Rallypoint Ovest (Base)</Italian>
+            <Polish>Punkt zbiórki Zachodu (Baza)</Polish>
+            <Portuguese>Ponto de encontro Oeste (Base)</Portuguese>
+            <Russian>Точка сбора Синих (База)</Russian>
+            <German>Sammelpunkt West (Basis)</German>
+            <Korean>청군 집결지 (기지)</Korean>
+            <Japanese>ラリーポイント BLUFOR軍 (ベース)</Japanese>
+            <Chinese>藍方集合點 (基地)</Chinese>
+            <Chinesesimp>蓝方集合点（基地）</Chinesesimp>
+            <Hungarian>Gyülekezőpont, Nyugat (Bázis)</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Rallypoint_Module_Description">
+            <English>This module allows you to use rally points in missions, to which you can quickly teleport from base flag. Requires placing special objects on map - base and flag. Both available in category Empty -&gt; ACE Respawn.</English>
+            <Czech>Tento modul umožňuje určit místo shromaždiště, kam se mohou jednokty rychle teleportovat ze "základny". Toto vyžaduje vhodné objekty v mapě - základna a vlajka. Oba dva můžete najít v kategorii Prázdné -&gt; ACE Oživení.</Czech>
+            <French>Ce module vous permet d'utiliser des points de ralliement dans les missions, vers lesquels vous pouvez vous téléporter rapidement depuis le drapeau de la base.\nNécessite de placer des objets spéciaux sur la carte - base et drapeau, tous deux disponibles dans la catégorie "Vide -&gt; ACE Réapparition".</French>
+            <Spanish>Este módulo permite usar puntos de reunión en la misión, a los que pueden teletransportarse las unidades desde la bandera de base. Requiere colocar objetos especiales en el mapa: las banderas de base y de reunión, ambas disponibles en la categoría Vacio-&gt; Reaparición ACE</Spanish>
+            <Italian>Questo modulo ti consente di usare Rallypoint in missione, a cui ti puoi teleportare rapidamente dalla bandiera in base. Richiede il piazzamento di oggetti speciali in mappa - base e bandiera. Entrambi disponibili nella categoria Vuoto -&gt; ACE Riapparizione</Italian>
+            <Polish>Moduł ten pozwala zastosować na misji "punkt zbiórki", do którego można szybko przeteleportować się z "bazy". Wymaga postawienia odpowiednich obiektów na mapie - bazy oraz flagi. Obydwa dostępne są w kategorii Puste -&gt; ACE Odrodzenie.</Polish>
+            <Portuguese>Este módulo permite que você aplique em uma missão "pontos de encontro", que pode rapidamente se teletransportar para a "base". Ele requer colocar objetos apropriados no mapa - base e bandeiras. Ambos estão disponíveis na categoria em branco -&gt; ACE Revival.</Portuguese>
+            <Russian>Этот модуль позволяет вам указать место сбора, куда вы можете быстро телепортироваться с "базы". Требуется наличие соответствующих объектов на карте - базы и флага. Они могут быть найдены в категории Пусто -&gt; ACE Возрождения.</Russian>
+            <German>Dieses Modul erlaubt die Verwendung eines Sammelpunktes, über welchen man sich schnell von der Basis zur Fahne teleportieren kann. Benötigt das Aufstellen von speziellen Objekten: Basis und Flagge. Beides ist unter "Leer" -  &gt; ACE Wiedereinstieg zu finden</German>
+            <Korean>이 모듈은 미션 중에 기지 깃발에서 집결지로 빠르게 텔레포트 시켜주는 역할을 합니다. 지도 상에 기지 및 깃발이 필요합니다. 두 가지 모두 비어 있음-&gt;ACE 재투입 카테고리에서 찾을 수 있습니다.</Korean>
+            <Japanese>このモジュールを使用すると、ミッションでラリーポイントを使用できるようになります。ラリーポイントには、ベース旗からすばやくテレポートできます。マップ上に特別なラリー/ベース旗オブジェクトを配置する必要があります。両オブジェクトは道具カテゴリ下の看板サブカテゴリ内、旗から設置できます。</Japanese>
+            <Chinese>擺放此模塊後，你將能在任務中佈署集合點，使你可以快速往返基地與前線。要使用本功能，請記得放上空物件-&gt;ACE 重生裡面的基地與旗幟</Chinese>
+            <Chinesesimp>摆放此模块后，你将能在任务中部署集合点，使你可以快速往返基地与前线。要使用本功能，请记得放上空物体-&gt;ACE 重生里面的基地与旗帜。</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Rallypoint_Module_DisplayName">
+            <English>Rallypoint System</English>
+            <Czech>Systém shromáždění</Czech>
+            <French>Système de points de ralliement</French>
+            <Spanish>Sistema de punto de reunión</Spanish>
+            <Italian>Sistema Rallypoint</Italian>
+            <Polish>System punktu zbiórki</Polish>
+            <Portuguese>Sistema de ponto de encontro</Portuguese>
+            <Russian>Система точек сбора</Russian>
+            <German>Sammelpunktssystem</German>
+            <Korean>집결지 시스템</Korean>
+            <Japanese>ラリーポイント システム</Japanese>
+            <Chinese>集合點系統</Chinese>
+            <Chinesesimp>集合点系统</Chinesesimp>
+            <Hungarian>Gyülekezőpont-rendszer</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_Rallypoint_MoveRallypoint">
+            <English>Move Rallypoint</English>
+            <Czech>Přesun na shromaždiště</Czech>
+            <French>Déplacer le point de ralliement</French>
+            <Spanish>Mover punto de reunión</Spanish>
+            <Italian>Sposta Rallypoint</Italian>
+            <Polish>Przenieś punkt zbiórki</Polish>
+            <Portuguese>Mover para ponto de encontro</Portuguese>
+            <Russian>Двигать точку сбора</Russian>
+            <German>Bewege Sammelpunkt</German>
+            <Korean>집결지 이동</Korean>
+            <Japanese>ラリーポイントを移動</Japanese>
+            <Chinese>移動集合點</Chinese>
+            <Chinesesimp>移动集合点</Chinesesimp>
+            <Hungarian>Gyülekezőpont mozgatása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description">
+            <English>Remove player bodies after disconnect?</English>
+            <Czech>Odstranit hráčova těla po odpojení?</Czech>
+            <French>Enlève le cadavre des joueurs quand ils se déconnectent.</French>
+            <Spanish>Elimina los cuerpos de los jugadores cuando se desconecten</Spanish>
+            <Italian>Rimuovi i corpi dei giocatori quando si disconnettono?</Italian>
+            <Polish>Usuwaj ciała graczy po rozłączeniu z serwera?</Polish>
+            <Portuguese>Remover corpos dos jogadores depois de desconectar?</Portuguese>
+            <Russian>Удалять трупы игроков после дисконнекта?</Russian>
+            <German>Entferne Spielerkörper nach dem Trennen einer Verbindung?</German>
+            <Korean>접속이 끊긴 플레이어의 시체를 제거합니까?</Korean>
+            <Japanese>切断したプレイヤーの死体を削除するかどうかを設定できます。</Japanese>
+            <Chinese>要刪除已離線的玩家屍體嗎?</Chinese>
+            <Chinesesimp>要删除已离线的玩家尸体吗？</Chinesesimp>
+            <Hungarian>Játékosi testek eltávolítása távozás után?</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName">
+            <English>Remove bodies?</English>
+            <Czech>Odstranit těla?</Czech>
+            <French>Enlever les corps</French>
+            <Spanish>¿Eliminar cuerpos?</Spanish>
+            <Italian>Rimuovi corpi?</Italian>
+            <Polish>Usuwać ciała?</Polish>
+            <Portuguese>Remover corpos?</Portuguese>
+            <Russian>Удалять трупы?</Russian>
+            <German>Sollen Leichen automatisch verschwinden?</German>
+            <Korean>시체를 제거합니까?</Korean>
+            <Japanese>死体を削除</Japanese>
+            <Chinese>刪除屍體?</Chinese>
+            <Chinesesimp>删除尸体？</Chinesesimp>
+            <Turkish>Bedeni Sil ?</Turkish>
+            <Hungarian>Holttestek eltávolítása?</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_SavePreDeathGear_Description">
+            <English>Respawn with the gear a soldier had just before his death?</English>
+            <Czech>Znovuubjevit s výbavou kterou měl voják před smrtí?</Czech>
+            <French>Le soldat réapparaît avec l'équipement qu'il avait juste avant sa mort.</French>
+            <Spanish>Reaparece con el equipo que el soldado tenía justo antes de morir</Spanish>
+            <Italian>Respawna con l'equipaggiamento che il soldato aveva appena prima di morire?</Italian>
+            <Polish>Odradzaj z ekwipunkiem jaki żołnierz miał tuż przed swoją śmiercią?</Polish>
+            <Portuguese>Renascer com o equipamento que um soldado tinha antes de sua morte?</Portuguese>
+            <Russian>Возрождать солдата с тем же снаряжением, которое было на нем при смерти?</Russian>
+            <German>Mit der Ausrüstung, die ein Soldat vor seinem Tod hatte, wiedereinsteigen?</German>
+            <Korean>죽기 전에 가지고 있던 장비로 재투입합니까?</Korean>
+            <Japanese>ユニットが死ぬ前に持っていた装備でリスポーンできるように設定できます。</Japanese>
+            <Chinese>是否在重生時載入死亡前的裝備?</Chinese>
+            <Chinesesimp>是否在重生时载入死亡前的装备？</Chinesesimp>
+            <Hungarian>Az egység halála előtti felszerelésével való respawnolása?</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Respawn_SavePreDeathGear_DisplayName">
+            <English>Save Gear?</English>
+            <Czech>Uložit výbavu?</Czech>
+            <French>Sauver l'équipement</French>
+            <Spanish>¿Guardar equipo?</Spanish>
+            <Italian>Salva Equipaggiamento?</Italian>
+            <Polish>Zapisać ekwipunek?</Polish>
+            <Portuguese>Salvar equipamento?</Portuguese>
+            <Russian>Сохранять снаряжение?</Russian>
+            <German>Ausrüstung speichern?</German>
+            <Korean>장비를 저장합니까?</Korean>
+            <Japanese>装備保存を有効化</Japanese>
+            <Chinese>儲存裝備?</Chinese>
+            <Chinesesimp>储存装备？</Chinesesimp>
+            <Turkish>Kıyafetleri Kaydet?</Turkish>
+            <Hungarian>Felszerelés elmentése?</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToBase">
             <English>Teleport to Base</English>
             <Czech>Teleportovat na Základnu</Czech>
-            <German>Zur Basis teleportieren</German>
-            <Spanish>Treletransportar a Base</Spanish>
-            <Polish>Teleport do bazy</Polish>
-            <Russian>Телепортироваться на базу</Russian>
             <French>Téléportation à la base</French>
-            <Portuguese>Teletransportar para a Base</Portuguese>
-            <Hungarian>Bázisra teleportálás</Hungarian>
+            <Spanish>Treletransportar a Base</Spanish>
             <Italian>Teleporta in base</Italian>
-            <Japanese>ベースへ移動</Japanese>
+            <Polish>Teleport do bazy</Polish>
+            <Portuguese>Teletransportar para a Base</Portuguese>
+            <Russian>Телепортироваться на базу</Russian>
+            <German>Zur Basis teleportieren</German>
             <Korean>기지로 순간이동</Korean>
-            <Chinesesimp>传送至基地</Chinesesimp>
+            <Japanese>ベースへ移動</Japanese>
             <Chinese>傳送至基地</Chinese>
+            <Chinesesimp>传送至基地</Chinesesimp>
             <Turkish>Üsse Işınlan</Turkish>
+            <Hungarian>Bázisra teleportálás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportToRallypoint">
             <English>Teleport to Rallypoint</English>
             <Czech>Teleport na Bod shromáždění</Czech>
-            <Spanish>Teletransportar a Punto de reunión</Spanish>
-            <German>Zum Sammelpunkt teleportieren</German>
-            <Polish>Teleport do punktu zbiórki</Polish>
-            <Russian>Телепортироваться на точку сбора</Russian>
             <French>Téléporation au point de ralliement</French>
-            <Portuguese>Teletransportar para o ponto de encontro</Portuguese>
-            <Hungarian>Gyülekezőpontra teleportálás</Hungarian>
+            <Spanish>Teletransportar a Punto de reunión</Spanish>
             <Italian>Teleporta al rallypoint</Italian>
-            <Japanese>ラリーポイントへ移動</Japanese>
+            <Polish>Teleport do punktu zbiórki</Polish>
+            <Portuguese>Teletransportar para o ponto de encontro</Portuguese>
+            <Russian>Телепортироваться на точку сбора</Russian>
+            <German>Zum Sammelpunkt teleportieren</German>
             <Korean>집결지로 순간이동</Korean>
-            <Chinesesimp>传送至集合点</Chinesesimp>
+            <Japanese>ラリーポイントへ移動</Japanese>
             <Chinese>傳送至集合點</Chinese>
+            <Chinesesimp>传送至集合点</Chinesesimp>
+            <Hungarian>Gyülekezőpontra teleportálás</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToBase">
             <English>Teleported to Base</English>
-            <French>Téléporté à la base</French>
-            <German>Zur Basis teleportiert</German>
-            <Spanish>Teletransportado a base</Spanish>
-            <Russian>Вы были телепортированы на базу</Russian>
-            <Polish>Przeteleportowano do bazy</Polish>
             <Czech>Teleportován na základnu</Czech>
-            <Hungarian>Bázisra teleportálva</Hungarian>
+            <French>Téléporté à la base</French>
+            <Spanish>Teletransportado a base</Spanish>
             <Italian>Teleportato alla base</Italian>
+            <Polish>Przeteleportowano do bazy</Polish>
             <Portuguese>Teletransportado para a Base</Portuguese>
-            <Japanese>ベースへ移動しました</Japanese>
+            <Russian>Вы были телепортированы на базу</Russian>
+            <German>Zur Basis teleportiert</German>
             <Korean>기지로 순간이동함</Korean>
-            <Chinesesimp>已传送至基地</Chinesesimp>
+            <Japanese>ベースへ移動しました</Japanese>
             <Chinese>已傳送至基地</Chinese>
+            <Chinesesimp>已传送至基地</Chinesesimp>
             <Turkish>Üsse Işınlan</Turkish>
+            <Hungarian>Bázisra teleportálva</Hungarian>
         </Key>
         <Key ID="STR_ACE_Respawn_TeleportedToRallypoint">
             <English>Teleported to Rallypoint</English>
-            <French>Téléporté au point de déploiement</French>
-            <German>Zum Sammelpunkt teleportiert</German>
-            <Spanish>Teletransportado al punto de reunión</Spanish>
-            <Russian>Вы были телепортированы на точку сбора</Russian>
-            <Polish>Przeteleportowano do punktu zbiórki</Polish>
             <Czech>Teleportován na bod shromáždění</Czech>
-            <Hungarian>Gyülekezőpontra teleportálva</Hungarian>
+            <French>Téléporté au point de déploiement</French>
+            <Spanish>Teletransportado al punto de reunión</Spanish>
             <Italian>Teleportato al rallypoint</Italian>
+            <Polish>Przeteleportowano do punktu zbiórki</Polish>
             <Portuguese>Teletransportado para o Rallypoints</Portuguese>
-            <Japanese>ラリーポイントへ移動しました</Japanese>
+            <Russian>Вы были телепортированы на точку сбора</Russian>
+            <German>Zum Sammelpunkt teleportiert</German>
             <Korean>집결지로 순간이동함</Korean>
-            <Chinesesimp>已传送至集合点</Chinesesimp>
+            <Japanese>ラリーポイントへ移動しました</Japanese>
             <Chinese>已傳送至集合點</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Respawn_RallypointWestBase">
-            <English>Rallypoint West (Base)</English>
-            <German>Sammelpunkt West (Basis)</German>
-            <Spanish>Punto de reunión Oeste (Base)</Spanish>
-            <Russian>Точка сбора Синих (База)</Russian>
-            <Polish>Punkt zbiórki Zachodu (Baza)</Polish>
-            <French>Point de ralliement OUEST (Base)</French>
-            <Italian>Rallypoint Ovest (Base)</Italian>
-            <Hungarian>Gyülekezőpont, Nyugat (Bázis)</Hungarian>
-            <Czech>Bod shromáždění Západ (Základna)</Czech>
-            <Portuguese>Ponto de encontro Oeste (Base)</Portuguese>
-            <Japanese>ラリーポイント 同盟軍 (ベース)</Japanese>
-            <Chinesesimp>蓝方集合点（基地）</Chinesesimp>
-            <Chinese>藍方集合點 (基地)</Chinese>
-            <Korean>청군 집결지 (기지)</Korean>
-        </Key>
-        <Key ID="STR_ACE_Respawn_RallypointEastBase">
-            <English>Rallypoint East (Base)</English>
-            <German>Sammelpunkt Ost (Basis)</German>
-            <Spanish>Punto de reunión Este (Base)</Spanish>
-            <Russian>Точка сбора Красных (База)</Russian>
-            <Polish>Punkt zbiórki Wschodu (Baza)</Polish>
-            <French>Point de ralliement EST (Base)</French>
-            <Italian>Rallypoint Est (Base)</Italian>
-            <Hungarian>Gyülekezőpont, Kelet (Bázis)</Hungarian>
-            <Czech>Bod shromáždění Východ (Základna)</Czech>
-            <Portuguese>Ponto de encontro Leste (Base)</Portuguese>
-            <Japanese>ラリーポイント OPFOR軍 (ベース)</Japanese>
-            <Chinesesimp>红方集合点（基地）</Chinesesimp>
-            <Chinese>紅方集合點 (基地)</Chinese>
-            <Korean>대항군 집결지 (기지)</Korean>
-        </Key>
-        <Key ID="STR_ACE_Respawn_RallypointIndependentBase">
-            <English>Rallypoint Independent (Base)</English>
-            <German>Sammelpunkt Widerstand (Basis)</German>
-            <Spanish>Punto de reunión Independiente (Base)</Spanish>
-            <Russian>Точка сбора Независимых (База)</Russian>
-            <Polish>Punkt zbiórki Ruchu oporu (Baza)</Polish>
-            <French>Point de ralliement Indépendant (Base)</French>
-            <Italian>Rallypoint Indipendenti (Base)</Italian>
-            <Hungarian>Gyülekezőpont, Független (Bázis)</Hungarian>
-            <Czech>Bod shromáždění Nezávislý (Základna)</Czech>
-            <Portuguese>Ponto de encontro Independente (Base)</Portuguese>
-            <Japanese>ラリーポイント 独立軍 (ベース)</Japanese>
-            <Chinesesimp>独立方集合点（基地）</Chinesesimp>
-            <Chinese>獨立方集合點 (基地)</Chinese>
-            <Korean>무소속군 집결지 (기지)</Korean>
-        </Key>
-        <Key ID="STR_ACE_Respawn_RallypointWest">
-            <English>Rallypoint West</English>
-            <German>Sammelpunkt West</German>
-            <Spanish>Punto de reunión Oeste</Spanish>
-            <Russian>Точка сбора Синих</Russian>
-            <Polish>Punkt zbiórki Zachodu</Polish>
-            <French>Point de ralliement OUEST</French>
-            <Italian>Rallypoint Ovest</Italian>
-            <Hungarian>Gyülekezőpont, Nyugat</Hungarian>
-            <Czech>Bod shromáždění Západ</Czech>
-            <Portuguese>Ponto de encontro Oeste</Portuguese>
-            <Japanese>ラリーポイント 同盟軍</Japanese>
-            <Chinesesimp>蓝方集合点</Chinesesimp>
-            <Chinese>藍方集合點</Chinese>
-            <Korean>청군 집결지</Korean>
-        </Key>
-        <Key ID="STR_ACE_Respawn_RallypointEast">
-            <English>Rallypoint East</English>
-            <German>Sammelpunkt Ost</German>
-            <Spanish>Punto de reunión Este</Spanish>
-            <Russian>Точка сбора Красных</Russian>
-            <Polish>Punkt zbiórki Wschodu</Polish>
-            <French>Point de ralliement EST</French>
-            <Italian>Rallypoint Est</Italian>
-            <Hungarian>Gyülekezőpont, Kelet</Hungarian>
-            <Czech>Bod shromáždění Východ</Czech>
-            <Portuguese>Ponto de encontro Leste</Portuguese>
-            <Japanese>ラリーポイント OPFOR軍</Japanese>
-            <Chinesesimp>红方集合点</Chinesesimp>
-            <Chinese>紅方集合點</Chinese>
-            <Korean>대항군 집결지</Korean>
-        </Key>
-        <Key ID="STR_ACE_Respawn_RallypointIndependent">
-            <English>Rallypoint Independent</English>
-            <German>Sammelpunkt Widerstand</German>
-            <Spanish>Punto de reunión Independiente</Spanish>
-            <Russian>Точка сбора Независимых</Russian>
-            <Polish>Punkt zbiórki Ruchu oporu</Polish>
-            <French>Point de ralliement Indépendant</French>
-            <Italian>Rallypoint Indipendenti</Italian>
-            <Hungarian>Gyülekezőpont, Független</Hungarian>
-            <Czech>Bod shromáždění Nezávislý</Czech>
-            <Portuguese>Ponto de encontro Independente</Portuguese>
-            <Japanese>ラリーポイント 独立軍</Japanese>
-            <Chinesesimp>独立方集合点</Chinesesimp>
-            <Chinese>獨立方集合點</Chinese>
-            <Korean>무소속군 집결지</Korean>
-        </Key>
-        <Key ID="STR_ACE_Respawn_Module_DisplayName">
-            <English>Respawn System</English>
-            <Polish>System odrodzenia</Polish>
-            <Spanish>Sistema de reaparición</Spanish>
-            <German>Wiedereinstiegs-System</German>
-            <Czech>Systém znovuzrození</Czech>
-            <Portuguese>Sistema de Renascimento</Portuguese>
-            <French>Système de réapparition</French>
-            <Hungarian>Respawn-rendszer</Hungarian>
-            <Russian>Возрождение</Russian>
-            <Italian>Sistema Respawn</Italian>
-            <Japanese>リスポーン システム</Japanese>
-            <Korean>재투입 시스템</Korean>
-            <Chinesesimp>重生系统</Chinesesimp>
-            <Chinese>重生系統</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Respawn_SavePreDeathGear_DisplayName">
-            <English>Save Gear?</English>
-            <Polish>Zapisać ekwipunek?</Polish>
-            <Spanish>¿Guardar equipo?</Spanish>
-            <German>Ausrüstung speichern?</German>
-            <Czech>Uložit výbavu?</Czech>
-            <Portuguese>Salvar equipamento?</Portuguese>
-            <French>Sauver l'équipement</French>
-            <Hungarian>Felszerelés elmentése?</Hungarian>
-            <Russian>Сохранять снаряжение?</Russian>
-            <Italian>Salva Equipaggiamento?</Italian>
-            <Japanese>装備保存を有効化</Japanese>
-            <Korean>장비를 저장합니까?</Korean>
-            <Chinesesimp>储存装备？</Chinesesimp>
-            <Chinese>儲存裝備?</Chinese>
-            <Turkish>Kıyafetleri Kaydet?</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Respawn_SavePreDeathGear_Description">
-            <English>Respawn with the gear a soldier had just before his death?</English>
-            <Polish>Odradzaj z ekwipunkiem jaki żołnierz miał tuż przed swoją śmiercią?</Polish>
-            <Spanish>Reaparece con el equipo que el soldado tenía justo antes de morir</Spanish>
-            <German>Mit der Ausrüstung, die ein Soldat vor seinem Tod hatte, wiedereinsteigen?</German>
-            <Czech>Znovuubjevit s výbavou kterou měl voják před smrtí?</Czech>
-            <Portuguese>Renascer com o equipamento que um soldado tinha antes de sua morte?</Portuguese>
-            <French>Le soldat réapparaît avec l'équipement qu'il avait juste avant sa mort.</French>
-            <Hungarian>Az egység halála előtti felszerelésével való respawnolása?</Hungarian>
-            <Russian>Возрождать солдата с тем же снаряжением, которое было на нем при смерти?</Russian>
-            <Italian>Respawna con l'equipaggiamento che il soldato aveva appena prima di morire?</Italian>
-            <Japanese>ユニットが死ぬ前に持っていた装備でリスポーンできるように設定できます。</Japanese>
-            <Korean>죽기 전에 가지고 있던 장비로 재투입합니까?</Korean>
-            <Chinesesimp>是否在重生时载入死亡前的装备？</Chinesesimp>
-            <Chinese>是否在重生時載入死亡前的裝備?</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_DisplayName">
-            <English>Remove bodies?</English>
-            <Polish>Usuwać ciała?</Polish>
-            <Spanish>¿Eliminar cuerpos?</Spanish>
-            <German>Sollen Leichen automatisch verschwinden?</German>
-            <Czech>Odstranit těla?</Czech>
-            <Portuguese>Remover corpos?</Portuguese>
-            <French>Enlever les corps</French>
-            <Hungarian>Holttestek eltávolítása?</Hungarian>
-            <Russian>Удалять трупы?</Russian>
-            <Italian>Rimuovi corpi?</Italian>
-            <Japanese>死体を削除</Japanese>
-            <Korean>시체를 제거합니까?</Korean>
-            <Chinesesimp>删除尸体？</Chinesesimp>
-            <Chinese>刪除屍體?</Chinese>
-            <Turkish>Bedeni Sil ?</Turkish>
-        </Key>
-        <Key ID="STR_ACE_Respawn_RemoveDeadBodiesDisconnected_Description">
-            <English>Remove player bodies after disconnect?</English>
-            <Polish>Usuwaj ciała graczy po rozłączeniu z serwera?</Polish>
-            <Spanish>Elimina los cuerpos de los jugadores cuando se desconecten</Spanish>
-            <German>Entferne Spielerkörper nach dem Trennen einer Verbindung?</German>
-            <Czech>Odstranit hráčova těla po odpojení?</Czech>
-            <Portuguese>Remover corpos dos jogadores depois de desconectar?</Portuguese>
-            <French>Enlève le cadavre des joueurs quand ils se déconnectent.</French>
-            <Hungarian>Játékosi testek eltávolítása távozás után?</Hungarian>
-            <Russian>Удалять трупы игроков после дисконнекта?</Russian>
-            <Italian>Rimuovi i corpi dei giocatori quando si disconnettono?</Italian>
-            <Japanese>切断したプレイヤーの死体を削除するかどうかを設定できます。</Japanese>
-            <Korean>접속이 끊긴 플레이어의 시체를 제거합니까?</Korean>
-            <Chinesesimp>要删除已离线的玩家尸体吗？</Chinesesimp>
-            <Chinese>要刪除已離線的玩家屍體嗎?</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Respawn_DeadBodyRemoveTimer">
-            <English>Body remove timer</English>
-            <German>Zeit bis Körper entfernt werden</German>
-            <Italian>Timer rimozione corpo</Italian>
-            <Chinese>屍體移除計時器</Chinese>
-            <Chinesesimp>尸体移除计时器</Chinesesimp>
-            <Japanese>死体削除タイマー</Japanese>
-            <Polish>Czas usunięcia ciała</Polish>
-            <Russian>Время удаления трупов</Russian>
-            <Portuguese>Tempo para remover corpo</Portuguese>
-            <French>Minuterie enlèvement corps</French>
-            <Czech>Časovač odstranění mrtvol</Czech>
-            <Turkish>Bedenin Silinme Süresi</Turkish>
-            <Spanish>Temporizador para eliminar cuerpos</Spanish>
-            <Korean>시체 제거 타이머</Korean>
-        </Key>
-        <Key ID="STR_ACE_Respawn_Module_Description">
-            <English>This module enables you to configure ACE functionality specific to respawns.</English>
-            <Polish>Moduł ten pozwala dostosować ustawienia odrodzenia (respawnu).</Polish>
-            <German>Dieses Modul erlaubt es, die Wiedereinstiegs-Einstellungen anzupassen.</German>
-            <Czech>Tento modul umožňuje nastavení znovuzrození (respawn).</Czech>
-            <Portuguese>Este módulo permite que você personalize as configurações do renascimento (Spawn).</Portuguese>
-            <Russian>Этот модуль позволяет настроить систему возрождения.</Russian>
-            <French>Ce module vous permet de configurer les fonctionnalités ACE spécifiques à la réapparition des joueurs.</French>
-            <Italian>Questo modulo ti permette di configurare le funzionalità ACE specifiche dei respawn.</Italian>
-            <Spanish>Este módulo permite configurar parámetros relacionados con la reaparición</Spanish>
-            <Japanese>有効化するとリスポーンへ ACE 機能を設定できます。</Japanese>
-            <Korean>이 모듈은 ACE 재투입의 자세한 설정을 변경할 수 있게 해줍니다.</Korean>
-            <Chinesesimp>该模块使您可以设定 ACE 的重生功能</Chinesesimp>
-            <Chinese>該模塊使您可以設定ACE的重生功能</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Respawn_FriendlyFire_Module_DisplayName">
-            <English>Friendly Fire Messages</English>
-            <Polish>Wiadomości Friendly Fire</Polish>
-            <Spanish>Mensajes de fuego amigo</Spanish>
-            <German>Nachricht bei Freundbeschuss</German>
-            <Czech>Upozornění na přátelskou střelbu</Czech>
-            <Portuguese>Mensagens de fogo amigo</Portuguese>
-            <French>Messages de tir ami</French>
-            <Hungarian>Baráti tűz üzenetek</Hungarian>
-            <Russian>Сообщения об огне по своим</Russian>
-            <Italian>Messaggi Fuoco Amico</Italian>
-            <Japanese>友軍誤射の布告</Japanese>
-            <Korean>아군 오인사격 메시지</Korean>
-            <Chinesesimp>友军误击信息</Chinesesimp>
-            <Chinese>友軍誤擊訊息</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Respawn_FriendlyFire_Module_Description">
-            <English>Using this module in your mission will make it so any friendly fire kills will be displayed in form of a message in chat.</English>
-            <German>Dieses Modul zeigt jeden Gefallenen durch Freundbeschuss, in Form einer Textnachricht, im Chat an.</German>
-            <Polish>Użycie tego modułu na misji spowoduje wyświetlenie wiadomości na czacie w przypadku, kiedy zostanie popełniony friendly fire - wyświetlona zostanie wtedy wiadomość kto kogo zabił.</Polish>
-            <Czech>Zobrazí zprávu v chatu v případě, když budete střílet na vlastní jednotky. Ve zprávě se zobrazí kdo na koho střílel, popř. kdo koho zabil.</Czech>
-            <Portuguese>Usando este módulo em uma missão para exibir mensagens chat, no caso de quando você faz um fogo amigo - então a mensagem será exibida mostrando quem matou quem.</Portuguese>
-            <Russian>Отображает сообщение в чате, в случае, когда убивают союзных игроков. В докладе указывается, кто стрелял, в кого. Кто кого убил.</Russian>
-            <French>L'utilisation de ce module fait en sorte qu'à chaque joueur mort par un tir ami, un rapport sera affiché dans le chat, indiquant qui a tué qui.</French>
-            <Italian>Usando questo modulo nella tua missione farà in modo che ogni uccisione per fuoco amico venga mostrata in forma di messaggio in chat.</Italian>
-            <Spanish>El usar este módulo, todas las muertes por fuego amigo serán indicadas en el chat.</Spanish>
-            <Japanese>もし友軍誤射による死者が出た場合は、チャットにてその旨を表示します。</Japanese>
-            <Korean>이 모듈은 미션 중 아군 오인사격으로 인한 사망자 발생 시 채팅창에 메시지를 표시해줍니다.</Korean>
-            <Chinesesimp>摆放此模块后，当有发生友军误击致死的事件，会显示提示信息在聊天视窗中。</Chinesesimp>
-            <Chinese>擺放此模塊後，當有發生友軍誤擊致死的事件，會顯示提示訊息在聊天視窗中</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Respawn_Rallypoint_Module_DisplayName">
-            <English>Rallypoint System</English>
-            <Polish>System punktu zbiórki</Polish>
-            <Spanish>Sistema de punto de reunión</Spanish>
-            <German>Sammelpunktssystem</German>
-            <Czech>Systém shromáždění</Czech>
-            <Portuguese>Sistema de ponto de encontro</Portuguese>
-            <French>Système de points de ralliement</French>
-            <Hungarian>Gyülekezőpont-rendszer</Hungarian>
-            <Russian>Система точек сбора</Russian>
-            <Italian>Sistema Rallypoint</Italian>
-            <Japanese>ラリーポイント システム</Japanese>
-            <Korean>집결지 시스템</Korean>
-            <Chinesesimp>集合点系统</Chinesesimp>
-            <Chinese>集合點系統</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Respawn_Rallypoint_Module_Description">
-            <English>This module allows you to use rally points in missions, to which you can quickly teleport from base flag. Requires placing special objects on map - base and flag. Both available in category Empty -&gt; ACE Respawn.</English>
-            <German>Dieses Modul erlaubt die Verwendung eines Sammelpunktes, über welchen man sich schnell von der Basis zur Fahne teleportieren kann. Benötigt das Aufstellen von speziellen Objekten: Basis und Flagge. Beides ist unter "Leer" -  &gt; ACE Wiedereinstieg zu finden</German>
-            <Polish>Moduł ten pozwala zastosować na misji "punkt zbiórki", do którego można szybko przeteleportować się z "bazy". Wymaga postawienia odpowiednich obiektów na mapie - bazy oraz flagi. Obydwa dostępne są w kategorii Puste -&gt; ACE Odrodzenie.</Polish>
-            <Czech>Tento modul umožňuje určit místo shromaždiště, kam se mohou jednokty rychle teleportovat ze "základny". Toto vyžaduje vhodné objekty v mapě - základna a vlajka. Oba dva můžete najít v kategorii Prázdné -&gt; ACE Oživení.</Czech>
-            <Portuguese>Este módulo permite que você aplique em uma missão "pontos de encontro", que pode rapidamente se teletransportar para a "base". Ele requer colocar objetos apropriados no mapa - base e bandeiras. Ambos estão disponíveis na categoria em branco -&gt; ACE Revival.</Portuguese>
-            <Russian>Этот модуль позволяет вам указать место сбора, куда вы можете быстро телепортироваться с "базы". Требуется наличие соответствующих объектов на карте - базы и флага. Они могут быть найдены в категории Пусто -&gt; ACE Возрождения.</Russian>
-            <Italian>Questo modulo ti consente di usare Rallypoint in missione, a cui ti puoi teleportare rapidamente dalla bandiera in base. Richiede il piazzamento di oggetti speciali in mappa - base e bandiera. Entrambi disponibili nella categoria Vuoto -&gt; ACE Riapparizione</Italian>
-            <Spanish>Este módulo permite usar puntos de reunión en la misión, a los que pueden teletransportarse las unidades desde la bandera de base. Requiere colocar objetos especiales en el mapa: las banderas de base y de reunión, ambas disponibles en la categoría Vacio-&gt; Reaparición ACE</Spanish>
-            <French>Ce module vous permet d'utiliser des points de ralliement dans les missions, vers lesquels vous pouvez vous téléporter rapidement depuis le drapeau de la base.\nNécessite de placer des objets spéciaux sur la carte - base et drapeau, tous deux disponibles dans la catégorie "Vide -&gt; ACE Réapparition".</French>
-            <Japanese>ミッションでベースから素早く移動できるラリーポイントを使えるようにします。ゲーム内に専用オブジェクトとなるベースとフラッグを設置している必要があります。両オブジェクトは Empty 下の ACE リスポーンから設置できます。</Japanese>
-            <Korean>이 모듈은 미션 중에 기지 깃발에서 집결지로 빠르게 텔레포트 시켜주는 역할을 합니다. 지도 상에 기지 및 깃발이 필요합니다. 두 가지 모두 비어 있음-&gt;ACE 재투입 카테고리에서 찾을 수 있습니다.</Korean>
-            <Chinesesimp>摆放此模块后，你将能在任务中部署集合点，使你可以快速往返基地与前线。要使用本功能，请记得放上空物体-&gt;ACE 重生里面的基地与旗帜。</Chinesesimp>
-            <Chinese>擺放此模塊後，你將能在任務中佈署集合點，使你可以快速往返基地與前線。要使用本功能，請記得放上空物件-&gt;ACE 重生裡面的基地與旗幟</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Respawn_Rallypoint_MoveRallypoint">
-            <English>Move Rallypoint</English>
-            <Polish>Przenieś punkt zbiórki</Polish>
-            <Spanish>Mover punto de reunión</Spanish>
-            <German>Bewege Sammelpunkt</German>
-            <Czech>Přesun na shromaždiště</Czech>
-            <Portuguese>Mover para ponto de encontro</Portuguese>
-            <French>Déplacer le point de ralliement</French>
-            <Hungarian>Gyülekezőpont mozgatása</Hungarian>
-            <Russian>Двигать точку сбора</Russian>
-            <Italian>Sposta Rallypoint</Italian>
-            <Japanese>ラリーポイントを移動</Japanese>
-            <Korean>집결지 이동</Korean>
-            <Chinesesimp>移动集合点</Chinesesimp>
-            <Chinese>移動集合點</Chinese>
-        </Key>
-        <Key ID="STR_ACE_Respawn_EditorCategory">
-            <English>ACE Respawn</English>
-            <Polish>ACE Odrodzenie</Polish>
-            <Spanish>Reaparición ACE</Spanish>
-            <German>ACE-Wiedereinstieg</German>
-            <Czech>ACE Znovuzrození</Czech>
-            <Portuguese>ACE Respawn</Portuguese>
-            <French>ACE Réapparition</French>
-            <Hungarian>ACE Respawn</Hungarian>
-            <Russian>ACE Возрождение</Russian>
-            <Italian>ACE Riapparizione</Italian>
-            <Japanese>ACE リスポーン</Japanese>
-            <Korean>ACE 재투입</Korean>
-            <Chinesesimp>ACE 重生</Chinesesimp>
-            <Chinese>ACE 重生</Chinese>
-            <Turkish>ACE Yeniden Doğma</Turkish>
+            <Chinesesimp>已传送至集合点</Chinesesimp>
+            <Hungarian>Gyülekezőpontra teleportálva</Hungarian>
         </Key>
     </Package>
 </Project>

@@ -3,105 +3,105 @@
     <Package name="OptionsMenu">
         <Key ID="STR_ACE_OptionsMenu_DumpDebug">
             <English>Debug To Clipboard</English>
-            <Polish>Debug do schowka</Polish>
-            <Spanish>Depurar al portapapeles</Spanish>
             <Czech>Debug do schránky</Czech>
-            <German>Debug in die Zwischenablage</German>
-            <Portuguese>Depuração para área de transferência</Portuguese>
             <French>Debug vers le presse-papier</French>
-            <Hungarian>Debug a vágólapra</Hungarian>
-            <Russian>Отладка в буфер обмена</Russian>
+            <Spanish>Depurar al portapapeles</Spanish>
             <Italian>Debug negli Appunti</Italian>
-            <Japanese>ｸﾘｯﾌﾟﾎﾞｰﾄﾞにﾃﾞﾊﾞｯｸﾞ</Japanese>
+            <Polish>Debug do schowka</Polish>
+            <Portuguese>Depuração para área de transferência</Portuguese>
+            <Russian>Отладка в буфер обмена</Russian>
+            <German>Debug in die Zwischenablage</German>
             <Korean>클립보드를 디버그하기</Korean>
-            <Chinesesimp>复制调试信息至剪贴板</Chinesesimp>
+            <Japanese>デバッグ情報をコピー</Japanese>
             <Chinese>複製除錯訊息至剪貼簿</Chinese>
+            <Chinesesimp>复制调试信息至剪贴板</Chinesesimp>
             <Turkish>Panoya Hata Ayıkla</Turkish>
+            <Hungarian>Debug a vágólapra</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_DumpDebugTooltip">
             <English>Sends debug information to RPT and clipboard.</English>
-            <Polish>Wysyła informacje o debugowaniu do RPT oraz schowka.</Polish>
-            <Spanish>Envía información de depuración al RPT y el portapapeles.</Spanish>
             <Czech>Pošle debug informace do RPT a schránky.</Czech>
-            <German>Protokolliert Debug-Informationen im RPT und speichert sie in der Zwischenablage.</German>
-            <Portuguese>Envia informação de depuração para RPT e área de transferência.</Portuguese>
             <French>Envoie les informations de debug vers le RPT et le presse-papier.</French>
-            <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
-            <Russian>Отправляет отладочную информацию в RPT и буфер обмена.</Russian>
+            <Spanish>Envía información de depuración al RPT y el portapapeles.</Spanish>
             <Italian>Invia informazioni di debug all'RPT e gli appunti di Windows.</Italian>
-            <Japanese>デバッグ情報を RPT とクリップボードに送ります。</Japanese>
+            <Polish>Wysyła informacje o debugowaniu do RPT oraz schowka.</Polish>
+            <Portuguese>Envia informação de depuração para RPT e área de transferência.</Portuguese>
+            <Russian>Отправляет отладочную информацию в RPT и буфер обмена.</Russian>
+            <German>Protokolliert Debug-Informationen im RPT und speichert sie in der Zwischenablage.</German>
             <Korean>디버그 정보를 보고하기 및 클립보드에 복사하기 위해 보냅니다.</Korean>
-            <Chinesesimp>复制调试信息至剪贴板与 RPT 报告档中。</Chinesesimp>
+            <Japanese>デバッグ情報を RPT とクリップボードに送ります。</Japanese>
             <Chinese>複製除錯訊息至剪貼簿與RPT報告檔中</Chinese>
+            <Chinesesimp>复制调试信息至剪贴板与 RPT 报告档中。</Chinesesimp>
             <Turkish>Hata ayıklama bilgilerini RPT ve panoya gönderir.</Turkish>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_headBugFix">
-            <English>Headbug Fix</English>
-            <German>Behebe Headbug</German>
-            <Polish>Fix Headbug</Polish>
-            <French>HeadBug</French>
-            <Hungarian>"Fejhiba" fix</Hungarian>
-            <Portuguese>Corrigir Headbug</Portuguese>
-            <Russian>Fix Headbug</Russian>
-            <Czech>Fix Headbug</Czech>
-            <Spanish>Corregir error de cabeza (headbug)</Spanish>
-            <Italian>Sistema Bug della Testa</Italian>
-            <Japanese>ヘッドバグ修正</Japanese>
-            <Korean>헤드버그 수정</Korean>
-            <Chinesesimp>修复动作 BUG</Chinesesimp>
-            <Chinese>修復動作BUG</Chinese>
-            <Turkish>Animasyon Düzeltme</Turkish>
-        </Key>
-        <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
-            <English>Resets your animation state.</English>
-            <German>Setzt die derzeitige Animation zurück.</German>
-            <Polish>Resetuje aktualną animację.</Polish>
-            <French>Réinitialise l'état de votre animation.</French>
-            <Hungarian>Visszaállítja az animációs állapotodat.</Hungarian>
-            <Portuguese>Redefine seu estado de animação.</Portuguese>
-            <Russian>Исправляет баг с зациклившейся анимацией.</Russian>
-            <Czech>Resetovat aktuální animaci.</Czech>
-            <Spanish>Restablece tu estado de animación.</Spanish>
-            <Italian>Resetta il tuo stato animazione</Italian>
-            <Japanese>現在のアニメーション状態を初期化します。</Japanese>
-            <Korean>자신의 동작 상태 초기화</Korean>
-            <Chinesesimp>当 ACE 发生动作 BUG 时，点此修复。</Chinesesimp>
-            <Chinese>當ACE發生動作BUG時，點此修復</Chinese>
-            <Turkish>Animasyon durumunuzu sıfırlar.</Turkish>
+            <Hungarian>Debug információt küld az RPT-be és a vágólapra.</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_aceNews">
             <English>ACE News</English>
-            <Spanish>Noticias ACE</Spanish>
-            <German>ACE-Neuigkeiten</German>
-            <Portuguese>Notícias do ACE</Portuguese>
-            <Polish>Wiadomości ACE</Polish>
             <Czech>ACE Zprávy</Czech>
             <French>Nouveautés ACE</French>
-            <Hungarian>ACE hírek</Hungarian>
-            <Russian>Новости ACE</Russian>
+            <Spanish>Noticias ACE</Spanish>
             <Italian>ACE Novità</Italian>
-            <Japanese>ACE ニュース</Japanese>
+            <Polish>Wiadomości ACE</Polish>
+            <Portuguese>Notícias do ACE</Portuguese>
+            <Russian>Новости ACE</Russian>
+            <German>ACE-Neuigkeiten</German>
             <Korean>ACE 새 소식</Korean>
-            <Chinesesimp>ACE 新闻</Chinesesimp>
+            <Japanese>ACE ニュース</Japanese>
             <Chinese>ACE新聞</Chinese>
+            <Chinesesimp>ACE 新闻</Chinesesimp>
             <Turkish>ACE Haberler</Turkish>
+            <Hungarian>ACE hírek</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_headBugFix">
+            <English>Headbug Fix</English>
+            <Czech>Fix Headbug</Czech>
+            <French>HeadBug</French>
+            <Spanish>Corregir error de cabeza (headbug)</Spanish>
+            <Italian>Sistema Bug della Testa</Italian>
+            <Polish>Fix Headbug</Polish>
+            <Portuguese>Corrigir Headbug</Portuguese>
+            <Russian>Fix Headbug</Russian>
+            <German>Behebe Headbug</German>
+            <Korean>헤드버그 수정</Korean>
+            <Japanese>ヘッドバグ修正</Japanese>
+            <Chinese>修復動作BUG</Chinese>
+            <Chinesesimp>修复动作 BUG</Chinesesimp>
+            <Turkish>Animasyon Düzeltme</Turkish>
+            <Hungarian>"Fejhiba" fix</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_OptionsMenu_headBugFixTooltip">
+            <English>Resets your animation state.</English>
+            <Czech>Resetovat aktuální animaci.</Czech>
+            <French>Réinitialise l'état de votre animation.</French>
+            <Spanish>Restablece tu estado de animación.</Spanish>
+            <Italian>Resetta il tuo stato animazione</Italian>
+            <Polish>Resetuje aktualną animację.</Polish>
+            <Portuguese>Redefine seu estado de animação.</Portuguese>
+            <Russian>Исправляет баг с зациклившейся анимацией.</Russian>
+            <German>Setzt die derzeitige Animation zurück.</German>
+            <Korean>자신의 동작 상태 초기화</Korean>
+            <Japanese>現在のアニメーション状態を初期化します。</Japanese>
+            <Chinese>當ACE發生動作BUG時，點此修復</Chinese>
+            <Chinesesimp>当 ACE 发生动作 BUG 时，点此修复。</Chinesesimp>
+            <Turkish>Animasyon durumunuzu sıfırlar.</Turkish>
+            <Hungarian>Visszaállítja az animációs állapotodat.</Hungarian>
         </Key>
         <Key ID="STR_ACE_OptionsMenu_showNewsOnMainMenu_name">
             <English>Show News on Main Menu</English>
-            <Spanish>Mostrar noticias en el menú principal</Spanish>
-            <German>Zeige Neuigkeiten im Hauptmenü</German>
-            <Portuguese>Mostrar notícias no menu principal</Portuguese>
-            <Polish>Pokazuj wiadomości ACE w menu głównym</Polish>
-            <French>Afficher les nouveautés dans le menu principal</French>
-            <Hungarian>Hírek mutatása a főmenüben</Hungarian>
-            <Russian>Показывать новости в главном меню</Russian>
             <Czech>Zobrazit zprávy v hlavním menu</Czech>
+            <French>Afficher les nouveautés dans le menu principal</French>
+            <Spanish>Mostrar noticias en el menú principal</Spanish>
             <Italian>Mostra novità nel Menù Principale</Italian>
+            <Polish>Pokazuj wiadomości ACE w menu głównym</Polish>
+            <Portuguese>Mostrar notícias no menu principal</Portuguese>
+            <Russian>Показывать новости в главном меню</Russian>
+            <German>Zeige Neuigkeiten im Hauptmenü</German>
+            <Korean>메인 메뉴에 새 소식을 표시합니다</Korean>
             <Japanese>メイン画面にニュースを表示します</Japanese>
-            <Korean>메인메뉴에 새 소식을 표시합니다</Korean>
-            <Chinesesimp>显示新闻消息于主菜单</Chinesesimp>
             <Chinese>顯示新聞消息於主選單</Chinese>
+            <Chinesesimp>显示新闻消息于主菜单</Chinesesimp>
             <Turkish>Ana Menü de Haberleri Göster</Turkish>
+            <Hungarian>Hírek mutatása a főmenüben</Hungarian>
         </Key>
     </Package>
 </Project>

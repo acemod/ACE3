@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"data_f_lxWS_Loadorder"};
+        requiredAddons[] = {"data_f_lxWS_Loadorder", "ace_common"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"Mike"};
@@ -15,4 +15,6 @@ class CfgPatches {
     };
 };
 
+#include "CfgEventHandlers.hpp"
+#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"

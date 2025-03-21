@@ -4,6 +4,7 @@ PREP(burnIndicator);
 PREP(burnReaction);
 PREP(burnSimulation);
 PREP(fireManagerPFH);
+PREP(initUnit);
 PREP(isBurning);
 PREP(medical_canPatDown);
 PREP(medical_progress);

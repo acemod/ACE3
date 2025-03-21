@@ -21,12 +21,10 @@
  * Action <ARRAY>
  *
  * Example:
- * ["VulcanPinch","Vulcan Pinch","",{_target setDamage 1;},{true},{},[parameters], [0,0,0], 100] call ace_interact_menu_fnc_createAction;
+ * ["VulcanPinch", "Vulcan Pinch", "", {_target setDamage 1;}, {true}, {}, [parameters], [0, 0, 0], 100] call ace_interact_menu_fnc_createAction;
  *
  * Public: Yes
  */
-
-// IGNORE_PRIVATE_WARNING(_actionName,_displayName,_icon,_statement,_condition,_insertChildren,_customParams,_position,_distance,_params,_modifierFunction);
 
 if (!hasInterface) exitWith { [] };
 params [

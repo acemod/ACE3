@@ -28,7 +28,6 @@ class CfgMagazines {
         ACE_Explosives_Placeable = 1;  // Can be placed
         useAction = 0;  // Disable the vanilla interaction
         ACE_Explosives_SetupObject = "banana_satchel_place";  // The object placed before the explosive is armed
-        ACE_Explosives_DelayTime = 1.5;  // Seconds between trigger activation and explosion
         class ACE_Triggers {  // Trigger configurations
             SupportedTriggers[] = {"Timer", "Command", "MK16_Transmitter", "DeadmanSwitch"};  // Triggers that can be used
             class Timer {
@@ -46,19 +45,24 @@ class CfgMagazines {
 
 ### 1.2 Setting the ammo
 
+{% raw %}
 ```cpp
 class CfgAmmo {
     class PipeBombBase;
     class SatchelCharge_Remote_Ammo: PipeBombBase {
         soundActivation[] = {"", 0, 0, 0};  // No sound on activation
         soundDeactivation[] = {"", 0, 0, 0};  // No sound on deactivation
-        triggerWhenDestroyed = 1;  // (Optional) Explode when the object is shot and destroyed (after being placed) (0-disabled, 1-enabled).
+        triggerWhenDestroyed = 1;  // (Optional) Explode when the object is shot and destroyed (after being placed) (0-disabled, 1-enabled). Required to be enabled prior to ACE 3.18.0.
         ACE_explodeOnDefuse = 0.02;  // (Optional) Add a chance for the explosive to detonate after being disarmed (in percent)
         ACE_explosives_defuseObjectPosition[] = {-1.415, 0, 0.12};  // (Optional) The position relative to the model where the defuse helper object will be attached and thus the interaction point will be rendered
         ACE_explosives_size = 0;  // (Optional) Setting to 1 will use a defusal action with a larger radius (useful for large mines or mines with a wide pressure plane trigger area)
+        ACE_explosives_ringtones[] = {{"\z\addons\explosives\Data\Audio\Cellphone_Ring.wss", 0.75, 3.16228, 1, 75}};  // (Optional) Defines IED ringtone(s) to be randomly selected upon detonation by cellphone. Each entry includes a sound file path, duration (in seconds), volume (optional: default 3.16228), pitch (optional: default 1), and maximum audible distance (optional: default 75).
+        ACE_explosives_callConnectTime[] = {1,8};  // (Optional) Defines the connection delay range (in seconds) for a dialed explosive, where the first value sets the minimum time and the second value sets the maximum time before detonation.
+        ACE_explosives_detonationTimingOffset = 0.75;  // (Optional) Defines the maximum random deviation (in seconds) for detonation timing, allowing the explosive to detonate up to this value earlier or later than the ringtone's end.
     };
 };
 ```
+{% endraw %}
 
 ### 1.3 Adding the place item
 
@@ -138,8 +142,8 @@ class CfgWeapons {
 
 `ace_explosives_fnc_scriptedExplosive`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ----- | ------------------------ |
 | 0  | Explosive objects | Array | Required |
 | 1  | Delay before detonation | Number | Optional (default: `0`, randomized up to given number if negative) |
 | **R** | None | None | Return value |
@@ -157,8 +161,8 @@ class CfgWeapons {
 
 `ace_explosives_fnc_connectExplosive`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Unit to connect to | Object | Required |
 | 1  | Explosive object to connect to | Object | Required |
 | 2  | Detonator type class name (must be present on unit) | String | Required |
@@ -205,11 +209,12 @@ Jammer that blocks RF triggers:
 }] call ace_explosives_fnc_addDetonateHandler;
 ```
 
-#### 5.4 Disabling `setShotParents`.
+#### 5.4 Enabling `setShotParents`.
 
-ACE will set the owner/instigator of the explosive to the unit placing/detonating it.
-This can be disabled by executing
+ACE can set the owner/instigator of the explosive to the unit placing/detonating it.
+By default, it will only set the instigator to prevent unrealistic AI behavior where it immediately knows the placer's exact location upon detonation.
+Enabling this will also set the explosive owner, if required by custom Event Handlers or other scripts.
 
 ```sqf
-ace_explosives_setShotParents = false;
+ace_explosives_setShotParents = true;
 ```

@@ -53,5 +53,6 @@ GVAR(settingShowAllWaypointsOnMap) = true;
 GVAR(newWaypointPosition) = [];
 GVAR(currentWaypoint) = -1;
 GVAR(rangeFinderPositionASL) = [];
+GVAR(prevWaypointsCount) = 0;
 
 GVAR(mgrsGridZoneDesignator) = format ["%1 %2",EGVAR(common,MGRS_data) select 0, EGVAR(common,MGRS_data) select 1];

@@ -19,7 +19,7 @@
 #define BORDER 0.005
 
 [{
-    disableserialization;
+    disableSerialization;
     params ["_display"];
     TRACE_1("params",_display);
 
@@ -29,24 +29,24 @@
     };
 
     //BIS Controls:
-    private _text = _display displayctrl IDC_INSERT_MARKER;
-    private _picture = _display displayctrl IDC_INSERT_MARKER_PICTURE;
-    private _channel = _display displayctrl IDC_INSERT_MARKER_CHANNELS;
-    private _buttonOK = _display displayctrl IDC_OK;
-    private _buttonCancel = _display displayctrl IDC_CANCEL;
-    private _description = _display displayctrl 1100;
-    private _title = _display displayctrl 1001;
-    private _descriptionChannel = _display displayctrl 1101;
+    private _text = _display displayCtrl IDC_INSERT_MARKER;
+    private _picture = _display displayCtrl IDC_INSERT_MARKER_PICTURE;
+    private _channel = _display displayCtrl IDC_INSERT_MARKER_CHANNELS;
+    private _buttonOK = _display displayCtrl IDC_OK;
+    private _buttonCancel = _display displayCtrl IDC_CANCEL;
+    private _description = _display displayCtrl 1100;
+    private _title = _display displayCtrl 1001;
+    private _descriptionChannel = _display displayCtrl 1101;
 
     //ACE Controls:
     private _ctrlTimestamp = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP;
     private _ctrlTimestampText = _display displayCtrl IDC_ACE_INSERT_MARKER_TIMESTAMP_TEXT;
-    private _aceShapeLB = _display displayctrl IDC_ACE_INSERT_MARKER_SHAPE;
-    private _aceColorLB = _display displayctrl IDC_ACE_INSERT_MARKER_COLOR;
-    private _aceAngleSlider = _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE;
-    private _aceAngleSliderText = _display displayctrl IDC_ACE_INSERT_MARKER_ANGLE_TEXT;
-    private _aceScaleSlider = _display displayctrl IDC_ACE_INSERT_MARKER_SCALE;
-    private _aceScaleSliderText = _display displayctrl IDC_ACE_INSERT_MARKER_SCALE_TEXT;
+    private _aceShapeLB = _display displayCtrl IDC_ACE_INSERT_MARKER_SHAPE;
+    private _aceColorLB = _display displayCtrl IDC_ACE_INSERT_MARKER_COLOR;
+    private _aceAngleSlider = _display displayCtrl IDC_ACE_INSERT_MARKER_ANGLE;
+    private _aceAngleSliderText = _display displayCtrl IDC_ACE_INSERT_MARKER_ANGLE_TEXT;
+    private _aceScaleSlider = _display displayCtrl IDC_ACE_INSERT_MARKER_SCALE;
+    private _aceScaleSliderText = _display displayCtrl IDC_ACE_INSERT_MARKER_SCALE_TEXT;
 
     private _mapDisplay = displayParent _display;
     if (isNull _mapDisplay) exitWith {ERROR("No Map");};
@@ -68,7 +68,7 @@
     // Install MapDrawEH on current map
     if !((ctrlIDD _mapDisplay) in GVAR(mapDisplaysWithDrawEHs)) then {
         GVAR(mapDisplaysWithDrawEHs) pushBack (ctrlIDD _mapDisplay);
-        _mapCtrl ctrlAddEventHandler ["Draw", {_this call FUNC(mapDrawEH)}]; // @todo check if persistent
+        _mapCtrl ctrlAddEventHandler ["Draw", {call FUNC(mapDrawEH)}]; // @todo check if persistent
     };
 
     ////////////////////
@@ -102,7 +102,7 @@
     ctrlSetFocus _text;
 
     //--- Background
-    private _pos = ctrlposition _text;
+    private _pos = ctrlPosition _text;
     _pos params ["_posX", "_posY", "_posW", "_posH"];
     _posX = _posX + 0.01;
     _posY = _posY min ((safeZoneH + safeZoneY) - (11 * _posH + 11 * BORDER));  //prevent buttons being placed below bottom edge of screen
@@ -248,7 +248,7 @@
             };
         };
 
-        _channel ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedChannel)}];
+        _channel ctrlAddEventHandler ["LBSelChanged", {call FUNC(onLBSelChangedChannel)}];
 
         _offsetButtons = 9 * _posH + 10 * BORDER;
     } else {
@@ -297,7 +297,7 @@
 
     //Update now and add eventHandler:
     [_aceShapeLB, _curSelShape] call FUNC(onLBSelChangedShape);
-    _aceShapeLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedShape)}];
+    _aceShapeLB ctrlAddEventHandler ["LBSelChanged", {call FUNC(onLBSelChangedShape)}];
 
     ////////////////////
     // init marker color lb
@@ -319,7 +319,7 @@
 
     //Update now and add eventHandler:
     [_aceColorLB, _curSelColor] call FUNC(onLBSelChangedColor);
-    _aceColorLB ctrlAddEventHandler ["LBSelChanged", {_this call FUNC(onLBSelChangedColor)}];
+    _aceColorLB ctrlAddEventHandler ["LBSelChanged", {call FUNC(onLBSelChangedColor)}];
 
     ////////////////////
     // init marker angle slider
@@ -336,8 +336,8 @@
 
     //Update now and add eventHandler:
     [_aceAngleSlider, _curSelAngle] call FUNC(onSliderPosChangedAngle);
-    _aceAngleSlider ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedAngle)}];
-    _aceAngleSlider ctrlAddEventHandler ["MouseButtonUp", {_this call FUNC(onSliderMouseButtonUpAngle)}];
+    _aceAngleSlider ctrlAddEventHandler ["SliderPosChanged", {call FUNC(onSliderPosChangedAngle)}];
+    _aceAngleSlider ctrlAddEventHandler ["MouseButtonUp", {call FUNC(onSliderMouseButtonUpAngle)}];
 
     ////////////////////
     // init marker scale slider
@@ -354,6 +354,6 @@
 
     //Update now and add eventHandler:
     [_aceScaleSlider, _curSelScale] call FUNC(onSliderPosChangedScale);
-    _aceScaleSlider ctrlAddEventHandler ["SliderPosChanged", {_this call FUNC(onSliderPosChangedScale)}];
-    _aceScaleSlider ctrlAddEventHandler ["MouseButtonUp", {_this call FUNC(onSliderMouseButtonUpScale)}];
+    _aceScaleSlider ctrlAddEventHandler ["SliderPosChanged", {call FUNC(onSliderPosChangedScale)}];
+    _aceScaleSlider ctrlAddEventHandler ["MouseButtonUp", {call FUNC(onSliderMouseButtonUpScale)}];
 }, _this] call CBA_fnc_execNextFrame;

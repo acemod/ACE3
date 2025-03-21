@@ -19,7 +19,7 @@ class CfgVehicles {
         icon = "iconObject_2x3";
         mapSize = 0.3;
         simulation = "House"; // Needed because the objects don't have good collision physx
-        destrType = "DesturctNo";
+        destrType = "DestructNo";
         curatorInfoTypeEmpty = QGVAR(RscSetData);
         editorSubcategory = QUOTE(XADDON);
         GVAR(magazine) = "";
@@ -39,8 +39,8 @@ class CfgVehicles {
                 displayName = CSTRING(Pickup);
                 icon = "\a3\ui_f\data\igui\cfg\actions\take_ca.paa";
                 distance = 2;
-                condition = QUOTE(_this call FUNC(canPickup));
-                statement = QUOTE(_this call FUNC(pickup));
+                condition = QUOTE(call FUNC(canPickup));
+                statement = QUOTE(call FUNC(pickup));
             };
         };
     };

@@ -15,13 +15,13 @@
  * Public: No
  */
 
-// delay a frame so we don't overlap with interaction-menu as it closes
+// Delay a frame so we don't overlap with interaction-menu as it closes
 [{
     params [["_unit", objNull, [objNull]]];
 
     private _display = findDisplay 46 createDisplay QGVAR(groupNameDisplay);
     private _textCtrl = _display displayCtrl 451;
-    _textCtrl ctrlSetText (groupID group _unit);
+    _textCtrl ctrlSetText (groupId group _unit);
     _display setVariable [QGVAR(renamedGroup), group _unit];
     _display displayAddEventHandler ["Unload", {
         params ["_display", "_exitCode"];

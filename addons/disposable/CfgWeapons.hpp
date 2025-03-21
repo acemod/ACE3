@@ -29,7 +29,7 @@ class CfgWeapons {
         magazineWell[] = {"NLAW"}; // restore magwell
 
         class EventHandlers {
-            fired = "_this call CBA_fnc_firedDisposable"; // this weapon eventhandler is required!
+            fired = "call CBA_fnc_firedDisposable"; // this weapon eventhandler is required!
         };
 
         class WeaponSlotsInfo: WeaponSlotsInfo {
