@@ -27,7 +27,7 @@ private _testPass = true;
     private _typeOf = configName _x;
     if (_typeOf == "") then { continue };
     private _hitpoints = (configProperties [_x >> "HitPoints", "isClass _x", true]) apply {toLowerANSI configName _x};
-    private _expectedHitPoints = ["hitleftarm","hitrightarm","hitleftleg","hitrightleg","hithead","hitbody"];
+    private _expectedHitPoints = ["hitleftarm","hitrightarm","hitleftleg","hitrightleg","hitbody","hithead","hitneck","hitabdomen"];
     private _missingHitPoints = _expectedHitPoints select {!(_x in _hitpoints)};
     if (_missingHitPoints isNotEqualTo []) then {
         WARNING_3("%1 missing ace hitpoints: %2 - class hitpoints: %3",_typeOf,_missingHitPoints,_hitpoints);
