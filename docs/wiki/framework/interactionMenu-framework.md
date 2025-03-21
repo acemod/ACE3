@@ -144,18 +144,18 @@ Important: `ace_common_fnc_canInteractWith` is not automatically checked and nee
 
 ```sqf
 /*
- * Argument:
+ * Arguments:
  * 0: Action name <STRING>
  * 1: Name of the action shown in the menu <STRING>
- * 2: Icon <STRING>
+ * 2: Icon file path or Array of icon file path and hex color ("" for default icon) <STRING or ARRAY>
  * 3: Statement <CODE>
  * 4: Condition <CODE>
- * 5: Insert children code <CODE> (Optional)
- * 6: Action parameters <ANY> (Optional)
- * 7: Position (Position array, Position code or Selection Name) <ARRAY>, <CODE> or <STRING> (Optional)
- * 8: Distance <NUMBER> (Optional)
- * 9: Other parameters [showDisabled,enableInside,canCollapse,runOnHover,doNotCheckLOS] <ARRAY> (Optional)
- * 10: Modifier function <CODE> (Optional)
+ * 5: Insert children code <CODE> (default: {})
+ * 6: Action parameters <ANY> (default: [])
+ * 7: Position (Position array, Position code or Selection Name) <ARRAY or CODE or STRING> (default: {[0, 0, 0]})
+ * 8: Distance <NUMBER> (default: 2)
+ * 9: Other parameters [showDisabled,enableInside,canCollapse,runOnHover,doNotCheckLOS] <ARRAY> (default: all false)
+ * 10: Modifier function <CODE> (default: {})
  */
 ```
 
@@ -165,13 +165,13 @@ Important: `ace_common_fnc_canInteractWith` is not automatically checked and nee
 
 ```sqf
 /*
- * Argument:
+ * Arguments:
  * 0: TypeOf of the class <STRING>
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  * 2: Parent path of the new action <ARRAY>
  * 3: Action <ARRAY>
- * 4: Use Inheritance (Default: False) <BOOL><OPTIONAL>
- * 5: Classes excluded from inheritance (children included) (Default: []) <ARRAY><OPTIONAL>
+ * 4: Use Inheritance <BOOL> (default: false)
+ * 5: Classes excluded from inheritance (children included) <ARRAY> (default: [])
  */
 ```
 By default this function will not use inheritance, so actions will only be added to the specific class.
@@ -182,7 +182,7 @@ By default this function will not use inheritance, so actions will only be added
 
 ```sqf
 /*
- * Argument:
+ * Arguments:
  * 0: Object the action should be assigned to <OBJECT>
  * 1: Type of action, 0 for actions, 1 for self-actions <NUMBER>
  * 2: Parent path of the new action <ARRAY> (Example: `["ACE_SelfActions", "ACE_Equipment"]`)
@@ -196,7 +196,7 @@ By default this function will not use inheritance, so actions will only be added
 
 ```sqf
 /*
- * Argument:
+ * Arguments:
  * 0: Parent path of the new action <ARRAY> (Example: `["ACE_ZeusActions"]`)
  * 1: Action <ARRAY>
  */
@@ -207,7 +207,7 @@ By default this function will not use inheritance, so actions will only be added
 External:
 
 ```sqf
-_action = ["VulcanPinch","Vulcan Pinch","",{_target setDamage 1;},{true},{},[parameters], [0,0,0], 100] call ace_interact_menu_fnc_createAction;
+_action = ["VulcanPinch", "Vulcan Pinch", "", {_target setDamage 1;}, {true}, {}, [parameters], [0, 0, 0], 100] call ace_interact_menu_fnc_createAction;
 [cursorTarget, 0, ["ACE_TapShoulderRight"], _action] call ace_interact_menu_fnc_addActionToObject;
 ```
 
@@ -220,8 +220,8 @@ _condition = {
 _statement = {
     [true] call pabst_fnc_radioFinder_action;
 };
-_action = ["Open RDF","Radio Direction Finder","pabst\RDF.jpg",_statement,_condition] call ace_interact_menu_fnc_createAction;
-[(typeOf _unit), 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
+_action = ["Open RDF", "Radio Direction Finder", "pabst\RDF.jpg", _statement, _condition] call ace_interact_menu_fnc_createAction;
+[typeOf _unit, 1, ["ACE_SelfActions"], _action] call ace_interact_menu_fnc_addActionToClass;
 ```
 
 Using `addActionToClass` inheritance:
@@ -236,7 +236,7 @@ _action = ["CheckFuel", "Check Fuel", "", {hint format ["Fuel: %1", fuel _target
 ["LandVehicle", 0, ["ACE_MainActions"], _action, true, ["MRAP_01_Base"]] call ace_interact_menu_fnc_addActionToClass;
 
 // Adds action to check external fuel levels on tanks.  Will be a sub action of the previous action.
-_action = ["CheckExtTank","Check External Tank","",{hint format ["Ext Tank: %1", 5]},{true}] call ace_interact_menu_fnc_createAction;
+_action = ["CheckExtTank", "Check External Tank", "", {hint format ["Ext Tank: %1", 5]}, {true}] call ace_interact_menu_fnc_createAction;
 ["Tank_F", 0, ["ACE_MainActions", "CheckFuel"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 ```
 
@@ -246,7 +246,7 @@ Zeus:
 _statement = {
     playSound3D ["alarm.ogg", theBase]
 };
-_action = ["myMissionEvent1","Mission Event: Play Base Alarm","",_statement,{true}] call ace_interact_menu_fnc_createAction;
+_action = ["myMissionEvent1", "Mission Event: Play Base Alarm", "", _statement, {true}] call ace_interact_menu_fnc_createAction;
 [["ACE_ZeusActions"], _action] call ace_interact_menu_fnc_addActionToZeus;
 ```
 
@@ -291,7 +291,7 @@ _modifierFunc = {
     _actionData set [1, format ["Give Items: %1", count (items player)]];
 };
 
-_action = ["GiveItems", "?","",_statement,_condition,_insertChildren,[123],"",4,[false, false, false, true, false], _modifierFunc] call ace_interact_menu_fnc_createAction;
+_action = ["GiveItems", "?", "", _statement, _condition, _insertChildren, [123], "", 4, [false, false, false, true, false], _modifierFunc] call ace_interact_menu_fnc_createAction;
 [q3, 0, ["ACE_MainActions"], _action] call ace_interact_menu_fnc_addActionToObject;
 ```
 
@@ -304,10 +304,10 @@ This is the ideal way to add self interaction actions, as adding them via `addAc
 // Example: Add radio self-action to all civilian cars
 ["ace_interact_menu_newControllableObject", {
     params ["_type"]; // string of the object's classname
-    if (!(_type isKindOf "Car")) exitWith {};
+    if !(_type isKindOf "Car") exitWith {};
     if ((getNumber (configFile >> "CfgVehicles" >> _type >> "side")) != 3) exitWith {};
 
-    private _action = ["playRadio","Play Radio","",{playMusic "NeverGonnaGiveYouUp"},{true}] call ace_interact_menu_fnc_createAction;
+    private _action = ["playRadio", "Play Radio", "", {playMusic "NeverGonnaGiveYouUp"}, {true}] call ace_interact_menu_fnc_createAction;
     [_type, 1, ["ACE_SelfActions"], _action, true] call ace_interact_menu_fnc_addActionToClass;
 }] call CBA_fnc_addEventHandler;
 ```

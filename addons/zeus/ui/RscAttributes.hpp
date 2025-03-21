@@ -25,7 +25,7 @@ class RscDisplayAttributes {
 };
 
 class GVAR(AttributeRadius): RscControlsGroupNoScrollbars {
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeRadius));
+    onSetFocus = QUOTE(call FUNC(ui_attributeRadius));
     idc = 26466;
     x = 0;
     y = 0;
@@ -65,7 +65,7 @@ class GVAR(RscDefendArea): RscDisplayAttributes {
             };
         };
         class ButtonOK: ButtonOK {
-            onSetFocus = QUOTE(_this call FUNC(ui_defendArea));
+            onSetFocus = QUOTE(call FUNC(ui_defendArea));
         };
         class ButtonCancel: ButtonCancel {};
     };
@@ -81,7 +81,7 @@ class GVAR(RscEditableObjects): RscDisplayAttributes {
             class Controls {
                 class radius: GVAR(AttributeRadius) {};
                 class editableObjects: RscControlsGroupNoScrollbars {
-                    onSetFocus = QUOTE(_this call FUNC(ui_editableObjects));
+                    onSetFocus = QUOTE(call FUNC(ui_editableObjects));
                     idc = 19180;
                     x = 0;
                     y = 0;
@@ -147,7 +147,7 @@ class GVAR(RscGlobalSetSkill): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class globalSetSkill: RscControlsGroupNoScrollbars {
-                    onSetFocus = QUOTE(_this call FUNC(ui_globalSetSkill));
+                    onSetFocus = QUOTE(call FUNC(ui_globalSetSkill));
                     idc = 26422;
                     x = 0;
                     y = 0;
@@ -242,7 +242,7 @@ class GVAR(RscGroupSide): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class groupSide: RscControlsGroupNoScrollbars {
-                    onSetFocus = QUOTE(_this call FUNC(ui_groupSide));
+                    onSetFocus = QUOTE(call FUNC(ui_groupSide));
                     idc = 26422;
                     x = 0;
                     y = 0;
@@ -323,7 +323,7 @@ class GVAR(RscPatrolArea): RscDisplayAttributes {
             };
         };
         class ButtonOK: ButtonOK {
-            onSetFocus = QUOTE(_this call FUNC(ui_patrolArea));
+            onSetFocus = QUOTE(call FUNC(ui_patrolArea));
         };
         class ButtonCancel: ButtonCancel {};
     };
@@ -341,7 +341,7 @@ class GVAR(RscSearchArea): RscDisplayAttributes {
             };
         };
         class ButtonOK: ButtonOK {
-            onSetFocus = QUOTE(_this call FUNC(ui_searchArea));
+            onSetFocus = QUOTE(call FUNC(ui_searchArea));
         };
         class ButtonCancel: ButtonCancel {};
     };
@@ -356,7 +356,7 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class teleportPlayers: RscControlsGroupNoScrollbars {
-                    onSetFocus = QUOTE(_this call FUNC(ui_teleportPlayers));
+                    onSetFocus = QUOTE(call FUNC(ui_teleportPlayers));
                     idc = 26422;
                     x = 0;
                     y = 0;
@@ -429,7 +429,7 @@ class GVAR(RscTeleportPlayers): RscDisplayAttributes {
 };
 
 class GVAR(AttributeCargo): RscControlsGroupNoScrollbars {
-    onSetFocus = QUOTE(_this call FUNC(ui_attributeCargo));
+    onSetFocus = QUOTE(call FUNC(ui_attributeCargo));
     idc = -1;
     x = QUOTE(X_PART(7));
     y = QUOTE(Y_PART(10));
@@ -502,7 +502,7 @@ class GVAR(RscGarrison): RscDisplayAttributes {
             class Controls {
                 class radius: GVAR(AttributeRadius) {};
                 class Garrison: RscControlsGroupNoScrollbars {
-                    onSetFocus = QUOTE(_this call FUNC(ui_garrison));
+                    onSetFocus = QUOTE(call FUNC(ui_garrison));
                     idc = 73060;
                     x = 0;
                     y = 0;
@@ -579,7 +579,7 @@ class GVAR(RscToggleNvg): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class toggleNvg: RscControlsGroupNoScrollbars {
-                    onSetFocus = QUOTE(_this call FUNC(ui_toggleNvg));
+                    onSetFocus = QUOTE(call FUNC(ui_toggleNvg));
                     idc = 92854;
                     x = 0;
                     y = 0;
@@ -660,7 +660,7 @@ class GVAR(RscToggleFlashlight): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class toggleFlashlight: RscControlsGroupNoScrollbars {
-                    onSetFocus = QUOTE(_this call FUNC(ui_toggleFlashlight));
+                    onSetFocus = QUOTE(call FUNC(ui_toggleFlashlight));
                     idc = 56217;
                     x = 0;
                     y = 0;
@@ -749,7 +749,7 @@ class GVAR(RscSetEngineer): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class setEngineer: RscControlsGroupNoScrollbars {
-                    onSetFocus = QUOTE(_this call FUNC(ui_setEngineer));
+                    onSetFocus = QUOTE(call FUNC(ui_setEngineer));
                     idc = 86946;
                     x = 0;
                     y = 0;
@@ -794,7 +794,7 @@ class GVAR(RscSuicideBomber): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class suicideBomber: RscControlsGroupNoScrollbars {
-                    onSetFocus = QUOTE(_this call FUNC(ui_suicideBomber));
+                    onSetFocus = QUOTE(call FUNC(ui_suicideBomber));
                     idc = 83470;
                     x = 0;
                     y = 0;
@@ -925,7 +925,7 @@ class GVAR(RscSpectator): RscDisplayAttributes {
         class Content: Content {
             class Controls {
                 class spectator: RscControlsGroupNoScrollbars {
-                    onSetFocus = QUOTE(_this call FUNC(ui_spectator));
+                    onSetFocus = QUOTE(call FUNC(ui_spectator));
                     idc = 92530;
                     x = 0;
                     y = 0;

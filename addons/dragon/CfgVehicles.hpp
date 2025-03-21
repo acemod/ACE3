@@ -85,8 +85,8 @@ class CfgVehicles {
                 source="user";
                 animPeriod=0.00001;
                 initPhase=-0.35;
-                maxValue="3.60";
-                minValue="-3.60";
+                maxValue=3.60;
+                minValue=-3.60;
             };
             class optic_hide {
                 source="user";

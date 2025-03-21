@@ -193,6 +193,14 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 | `ace_huntir_monitorConnected` | [_unit, _huntir] | Local | Listen | Called when the monitor is connected
 | `ace_huntir_monitorNoGDS` | [_unit] | Local | Listen | Called when the monitor found no GDS
 
+### 2.20 Mine detector (`ace_minedetector`)
+
+| Event Key | Parameters | Locality | Type | Description |
+|---------- |------------|----------|------|-------------|
+| `ace_minedetector_detectorEnabled` | [_unit, _detectorType] | Local | Listen | Called when local unit turned on their mine detector
+| `ace_minedetector_detectorDisabled` | [_unit, _detectorType] | Local | Listen | Called when local unit turned off their mine detector
+| `ace_minedetector_mineDetected` | [_unit, _mine, _distance, _detectorType] | Local | Listen | Called when local unit has detected a mine
+
 ## 3. Usage
 Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom-Events-System){:target="_blank"} documentation.
 
@@ -202,8 +210,8 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_addEventHandler` - Adds an event handler with the event name and returns the event handler ID.
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Code block | Code | Required |
 | **R** | Event ID | Number | Return value |
@@ -212,8 +220,8 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_removeEventHandler` - Removes a specific event handler of the given event name, using the ID returned from `CBA_fnc_addEventHandler`.
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Event ID | Number | Required |
 | **R** | None | None | Return value |
@@ -224,8 +232,8 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_localEvent` - Calls an event only on the local machine, useful for inter-module events.
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Arguments | Any | Required |
 | **R** | None | None | Return value |
@@ -234,8 +242,8 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_targetEvent` - Calls an event only on the target machine or list of target machines.
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Arguments | Any | Required |
 | 2  | Target(s) | Object OR Number OR Array | Required |
@@ -245,8 +253,8 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_serverEvent` - Calls an event only on the server machine (dedicated or self-hosted).
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Arguments | Any | Required |
 | **R** | None | None | Return value |
@@ -255,8 +263,8 @@ Also Reference [CBA Events System](https://github.com/CBATeam/CBA_A3/wiki/Custom
 
 `CBA_fnc_globalEvent` - Calls an event on all machines - the local machine, and the server machine.
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Arguments | Any | Required |
 | **R** | None | None | Return value |
@@ -270,8 +278,8 @@ Adds a globally synchronized event handler which will expire events after the pr
 
 `ace_common_fnc_addSyncedEventHandler`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Code block | Code | Required |
 | 2  | Time to live | Number OR Code | Optional (default: `0`) |
@@ -283,8 +291,8 @@ Removes a specific event handler of the given event name, using the ID returned 
 
 `ace_common_fnc_removeSyncedEventHandler`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | **R** | None | None | Return value |
 
@@ -294,8 +302,8 @@ Calls a globally synchronized event, which will also be run on JIP players unles
 
 `ace_common_fnc_syncedEvent`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Event name | String | Required |
 | 1  | Arguments | Any | Required |
 | 2  | Time to live for this call | Number OR Code | Optional (default: `0`) |

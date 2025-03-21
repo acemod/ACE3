@@ -1,40 +1,35 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- *
  * Disarm Event Handler, Starting func, called on the target.
  * If target has to remove uniform/vest, this will add all uniform/vest items to the drop list.
  *
  * Arguments:
- * 0: caller (player) <OBJECT>
- * 1: target <OBJECT>
- * 2: type of disarm <STRING>
+ * 0: Caller <OBJECT>
+ * 1: Target <OBJECT>
+ * 2: Item to remove (even if it's 1 item, array is kept for BWC) <ARRAY of STRING>
+ * 3: Amount of item to remove (not used) <NUMBER>
  *
  * Return Value:
  * None
  *
  * Example:
- * [bob, kevin, "disarm"] call ace_disarming_fnc_eventTargetStart
+ * [player, cursorTarget, [vest cursorTarget], 1] call ace_disarming_fnc_eventTargetStart
  *
  * Public: No
  */
 
-params ["_caller", "_target", "_listOfObjectsToRemove"];
-
-private _itemsToAdd = [];
-{
-    if (_x == (uniform _target)) then {
-        _itemsToAdd = _itemsToAdd + (uniformItems _target);
-    };
-    if (_x == (vest _target)) then {
-        _itemsToAdd = _itemsToAdd + (vestItems _target);
-    };
-} forEach _listOfObjectsToRemove;
+params ["_caller", "_target", "_itemToRemove"];
 
 {
-    if !(_x in _listOfObjectsToRemove) then {
-        _listOfObjectsToRemove pushBack _x;
+    switch (true) do {
+        case (_x == (uniform _target)): {
+            _itemToRemove append (uniformItems _target);
+        };
+        case (_x == (vest _target)): {
+            _itemToRemove append (vestItems _target);
+        };
     };
-} forEach _itemsToAdd;
+} forEach _itemToRemove;
 
-[_caller, _target, _listOfObjectsToRemove] call FUNC(disarmDropItems);
+[_caller, _target, _itemToRemove arrayIntersect _itemToRemove] call FUNC(disarmDropItems);

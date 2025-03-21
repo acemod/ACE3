@@ -19,12 +19,12 @@ class Extended_PostInit_EventHandlers {
 
 class Extended_DisplayLoad_EventHandlers {
     class RscRespawnCounter {
-        ADDON = QUOTE(_this call FUNC(compat_counter));
+        ADDON = QUOTE(call FUNC(compat_counter));
     };
     class RscDisplayEGSpectator {
-        ADDON = QUOTE(_this call FUNC(compat_spectatorBI));
+        ADDON = QUOTE(call FUNC(compat_spectatorBI));
     };
     class RscDisplayCurator {
-        ADDON = QUOTE(_this call FUNC(compat_zeus));
+        ADDON = QUOTE(call FUNC(compat_zeus));
     };
 };
