@@ -9,7 +9,7 @@
  * 2: activated <BOOL>
  *
  * Return Value:
- * None <NIL>
+ * None
  *
  * Example:
  * [module, [], true] call ace_weather_fnc_initModuleSettings

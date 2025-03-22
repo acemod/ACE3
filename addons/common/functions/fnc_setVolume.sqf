@@ -4,7 +4,7 @@
  * Sets the volume of the game, including third party radio modifications such as TFAR and ACRE.
  *
  * Arguments:
- * 0: setVolume (default: false) <BOOL>
+ * 0: setVolume <BOOL> (default: false)
  *
  * Return Value:
  * None

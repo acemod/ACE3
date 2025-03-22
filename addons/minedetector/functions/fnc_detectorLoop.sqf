@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Args <ARRAY>
- * 1: PFH Id <NUMBER>
+ * 1: PFH ID <NUMBER>
  *
  * Return Value:
  * None

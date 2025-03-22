@@ -4,7 +4,7 @@
  * Takes a string/number and returns the number.
  *
  * Arguments:
- * 0: Value to attempt to convert to number or if number simply return number. <STRING, NUMBER>
+ * 0: Value to attempt to convert to number or if number simply return number. <STRING or NUMBER>
  *
  * Return Value:
  * Number <NUMBER>

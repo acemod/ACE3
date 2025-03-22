@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit that claims another object. ObjNull to remove claim. <OBJECT>
  * 1: The object that gets claimed. <OBJECT>
- * 2: Lock the claimed object aswell? (optional: false) <BOOL>
+ * 2: Lock the claimed object as well? <BOOL> (default: false)
  *
  * Return Value:
  * None

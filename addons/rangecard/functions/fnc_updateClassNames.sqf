@@ -7,7 +7,7 @@
  * unit <OBJECT>
  *
  * Return Value:
- * Update successful? <BOOLEAN>
+ * Update successful? <BOOL>
  *
  * Example:
  * unit call ace_rangecard_fnc_updateClassNames
