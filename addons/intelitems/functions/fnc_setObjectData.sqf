@@ -21,7 +21,6 @@ TRACE_1("setObjectData",_this);
 
 private _index = _object getVariable [QGVAR(index), -1];
 private _header = _object getVariable [QGVAR(header), ""];
-diag_log format ["setObjectData: %1 %2 %3",_object,_data,_header];
 if (_index == -1) then {
     _index = GVAR(intelCount);
     GVAR(intelCount) = GVAR(intelCount) + 1;
