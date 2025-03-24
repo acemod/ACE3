@@ -4680,6 +4680,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to administer medication using an autoinjector.</English>
             <French>Temps, en secondes, nécessaire à une unité dépassant le niveau de formation requis pour administrer un médicament à l'aide d'un auto-injecteur.</French>
+            <Spanish>Tiempo, en segundos, necesario para que una unidad que supera el nivel de formación requerido administre medicación utilizando un autoinyector.</Spanish>
             <Italian>Tempo in secondi richiesto per l'utilizzo di autoiniettori, da parte di unità che hanno almeno la minima abilità medica necessaria.</Italian>
             <German>Zeit in Sekunden, die eine Einheit, mit einem höheren 'Fähigkeiten-Level' als benötigt, braucht, um Medikamente mit einem Autoinjektor zu verabreichen.</German>
             <Russian>Время в секундах, необходимое специалисту, превышающему необходимый уровень подготовки, для использования автоинъекторов.</Russian>
@@ -4689,6 +4690,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedAutoinjector_DisplayName">
             <English>Skilled Autoinjector Treatment Time</English>
             <French>Temps d'administration de l'auto-injecteur en fonction du niveau de compétence</French>
+            <Spanish>Tiempo de tratamiento con autoinyector</Spanish>
             <Italian>Tempo di utilizzo dell'autoiniettore con abilitazione</Italian>
             <German>Autoinjektor-Behandlungszeit für Überqualifizierte</German>
             <Russian>Квалифицированное время обработки автоинъектора</Russian>
@@ -4698,6 +4700,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to administer an IV bag.</English>
             <French>Temps, en secondes, nécessaire à une unité dépassant le niveau de formation requis pour administrer une poche de perfusion.</French>
+            <Spanish>Tiempo, en segundos, necesario para que una unidad que supera el nivel de formación requerido administre una bolsa intravenosa</Spanish>
             <Italian>Tempo in secondi richiesto per applicare una Flebo Endovenosa, da parte di unità che hanno almeno la minima abilità medica necessaria.</Italian>
             <German>Zeit in Sekunden, die eine Einheit, mit einem höheren 'Fähigkeiten-Level' als benötigt, braucht, um einen Infusionsbeutel zu verabreichen.</German>
             <Russian>Время в секундах, необходимое специалисту, превышающему необходимый уровень подготовки, для внутривенного вливания.</Russian>
@@ -4707,6 +4710,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedIV_DisplayName">
             <English>Skilled IV Bag Treatment Time</English>
             <French>Temps de traitement des poches IV par un personnel qualifié</French>
+            <Spanish>Tiempo de tratamiento con bolsa intravenosa</Spanish>
             <Italian>Tempo di inserimento EV con abilitazione</Italian>
             <German>Infusion-Behandlungszeit für Überqualifizierte</German>
             <Russian>Квалифицированное время обработки пакета для внутривенного вливания</Russian>
@@ -4716,6 +4720,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to apply a splint.</English>
             <French>Temps, en secondes, nécessaire à une unité dépassant le niveau de formation requis pour poser une attelle.</French>
+            <Spanish>Tiempo, en segundos, necesario para que una unidad que supera el nivel de formación requerido aplique una férula</Spanish>
             <Italian>Tempo in secondi richiesto per l'applicazione di una gessatura, da parte di unità che hanno almeno la minima abilità medica necessaria.</Italian>
             <German>Zeit in Sekunden, die eine Einheit, mit einem höheren 'Fähigkeiten-Level' als benötigt, braucht, um eine Schiene anzulegen.</German>
             <Russian>Время в секундах, необходимое специалисту, превышающему необходимый уровень подготовки, для наложения шины.</Russian>
@@ -4725,6 +4730,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_DisplayName">
             <English>Skilled Splint Treatment Time</English>
             <French>Temps de pose de l'attelle en fonction du niveau de compétence</French>
+            <Spanish>Tiempo de tratamiento con férula</spanish>
             <Italian>Tempo di Gessatura con abilitazione</Italian>
             <German>Schienenbehandlungszeit für Überqualifizierte</German>
             <Russian>Квалифицированное время наложения шины</Russian>
@@ -4734,6 +4740,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_Description">
             <English>Time, in seconds, required for a unit exceeding required training level to apply or remove a tourniquet.</English>
             <French>Temps, en secondes, nécessaire à une unité dépassant le niveau de formation requis pour poser ou retirer un garrot.</French>
+            <Spanish>Tiempo, en segundos, necesario para que una unidad que supera el nivel de formación requerido aplique o retire un torniquete</Spanish>
             <Italian>Tempo in secondi richiesto per l'applicazione di un laccio emostatico, da parte di unità che hanno almeno la minima abilità medica necessaria.</Italian>
             <German>Zeit in Sekunden, die eine Einheit, mit einem höheren 'Fähigkeiten-Level' als benötigt, braucht, um ein Tourniquet anzulegen.</German>
             <Russian>Время в секундах, необходимое специалисту, превышающему необходимый уровень подготовки, для наложения или снятия жгута.</Russian>
@@ -4743,6 +4750,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_DisplayName">
             <English>Skilled Tourniquet Treatment Time</English>
             <French>Temps d'application du garrot en fonction de la compétence</French>
+            <Spanish>Tiempo de tratamiento con torniquete</spanish>
             <Italian>Tempo d'uso del Laccio Emostatico con abilitazione</Italian>
             <German>Tourniquet-Behandlungszeit für Überqualifizierte</German>
             <Russian>Квалифицированное время наложения жгута</Russian>
