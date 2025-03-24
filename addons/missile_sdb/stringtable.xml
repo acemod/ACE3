@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_MISSILE_SDB_39">
             <English>GBU-39 [ACE]</English>
             <French>GBU-39 [ACE]</French>
+            <Spanish>GBU-39 [ACE]</spanish>
             <Italian>GBU-39 [ACE]</Italian>
             <German>GBU-39 [ACE]</German>
             <Korean>GBU-39 SDB [ACE]</Korean>
@@ -13,6 +14,7 @@
         <Key ID="STR_ACE_MISSILE_SDB_39_1x">
             <English>1x GBU-39 SDB [ACE]</English>
             <French>1x GBU-39 SDB [ACE]</French>
+            <Spanish>1x GBU-39 SDB [ACE]</spanish>
             <Italian>1x GBU-39 SDB [ACE]</Italian>
             <German>1x GBU-39 SDB [ACE]</German>
             <Korean>1x GBU-39 SDB [ACE]</Korean>
@@ -22,6 +24,7 @@
         <Key ID="STR_ACE_MISSILE_SDB_39_4x">
             <English>4x GBU-39 SDB [ACE]</English>
             <French>4x GBU-39 SDB [ACE]</French>
+            <Spanish>4x GBU-39 SDB [ACE]</spanish>
             <Italian>4x GBU-39 SDB [ACE]</Italian>
             <German>4x GBU-39 SDB [ACE]</German>
             <Korean>4x GBU-39 SDB [ACE]</Korean>
@@ -31,6 +34,7 @@
         <Key ID="STR_ACE_MISSILE_SDB_pylonDescription">
             <English>250 pound GPS guided glide bomb</English>
             <French>Bombe planante de 250 livres à guidage GPS</French>
+            <Spanish>Bomba planeadora de 250 libras guiada por GPS</spanish>
             <Italian>Bomba planante da 250 libbre a guida GPS</Italian>
             <German>GPS-gelenkte 250-Pfund-Gleitbombe</German>
             <Korean>250 파운드급 GPS 유도 활강 항공 폭탄</Korean>
