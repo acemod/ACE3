@@ -1,6 +1,6 @@
 class M_Titan_AA_static;
 class GVAR(mock_a_Malyutka): M_Titan_AA_static {
-    aiAmmoUsageFlags="64 + 128 + 256 + 512";
+    aiAmmoUsageFlags = 64 + 128 + 256 + 512;
     weaponLockSystem = 0;
     airLock = 0;
     lockType = 0;
