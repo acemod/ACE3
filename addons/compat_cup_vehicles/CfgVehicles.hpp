@@ -269,10 +269,6 @@ class CfgVehicles {
         ace_hunterkiller = 1;
     };
 
-    class CUP_M60A3_TTS_Base: Tank_F {
-        ace_hunterkiller = 1;
-    };
-
     class CUP_T55_Base: Tank_F {
         ace_hunterkiller = 1;
     };
@@ -311,9 +307,7 @@ class CfgVehicles {
         };
     };
 
-    class CUP_T72_ACR_Base: Tank_F {
-        ace_hunterkiller = 1;
-    };
+    class CUP_T72_ACR_Base: CUP_T72_Base {};
     class CUP_B_T72_CZ: CUP_T72_ACR_Base {
         EGVAR(vehicle_damage,eraHitpoints)[] = {
             "hitera_top_l1", "hitera_top_l2", "hitera_top_l3", "hitera_top_l4",
