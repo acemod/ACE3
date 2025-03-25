@@ -323,7 +323,7 @@ class CfgAmmo {
         ace_frag_metal = 330;
         ace_frag_charge = 280;
         ace_frag_gurney_c = 2800;
-        ace_frag_gurney_k = "3/5";
+        ace_frag_gurney_k = 3/5;
         ace_frag_classes[] = {"ACE_frag_medium_HD"};
         ace_frag_skip = 0;
         ace_frag_force = 1;
@@ -337,7 +337,7 @@ class CfgAmmo {
         ace_frag_metal = 2300;
         ace_frag_charge = 590;
         ace_frag_gurney_c = 2800;
-        ace_frag_gurney_k = "1/2";
+        ace_frag_gurney_k = 1/2;
         ace_frag_classes[] = {"ACE_frag_medium_HD"};
         ace_frag_skip = 0;
         ace_frag_force = 1;
@@ -410,7 +410,7 @@ class CfgAmmo {
         ace_frag_metal = 330;
         ace_frag_charge = 280;
         ace_frag_gurney_c = 2800;
-        ace_frag_gurney_k = "3/5";
+        ace_frag_gurney_k = 3/5;
         ace_frag_classes[] = {"ACE_frag_medium_HD"};
         ace_frag_skip = 0;
         ace_frag_force = 1;
