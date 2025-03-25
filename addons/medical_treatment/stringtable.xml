@@ -4730,7 +4730,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedSplint_DisplayName">
             <English>Skilled Splint Treatment Time</English>
             <French>Temps de pose de l'attelle en fonction du niveau de compétence</French>
-            <Spanish>Tiempo de tratamiento con férula</spanish>
+            <Spanish>Tiempo de tratamiento con férula</Spanish>
             <Italian>Tempo di Gessatura con abilitazione</Italian>
             <German>Schienenbehandlungszeit für Überqualifizierte</German>
             <Russian>Квалифицированное время наложения шины</Russian>
@@ -4750,7 +4750,7 @@
         <Key ID="STR_ACE_Medical_Treatment_TreatmentTimeTrainedTourniquet_DisplayName">
             <English>Skilled Tourniquet Treatment Time</English>
             <French>Temps d'application du garrot en fonction de la compétence</French>
-            <Spanish>Tiempo de tratamiento con torniquete</spanish>
+            <Spanish>Tiempo de tratamiento con torniquete</Spanish>
             <Italian>Tempo d'uso del Laccio Emostatico con abilitazione</Italian>
             <German>Tourniquet-Behandlungszeit für Überqualifizierte</German>
             <Russian>Квалифицированное время наложения жгута</Russian>

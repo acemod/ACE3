@@ -38,7 +38,7 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_altitude">
             <English>Altitude</English>
             <French>Altitude</French>
-            <Spanish>Altitud</spanish>
+            <Spanish>Altitud</Spanish>
             <Italian>Altitudine</Italian>
             <German>Höhe</German>
             <Korean>고도</Korean>
@@ -68,7 +68,7 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_header">
             <English>GPS Weapon Setup</English>
             <French>Configuration de l'armement GPS</French>
-            <Spanish>Configuración del Arma GPS</spanish>
+            <Spanish>Configuración del Arma GPS</Spanish>
             <Italian>Configurazione armamento GPS</Italian>
             <German>GPS-Waffeneinstellung</German>
             <Korean>GPS 병기 설정</Korean>
@@ -78,7 +78,7 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_impact_angle">
             <English>Impact Angle</English>
             <French>Angle d'impact</French>
-            <Spanish>Ángulo de impacto</spanish>
+            <Spanish>Ángulo de impacto</Spanish>
             <Italian>Angolo d'impatto</Italian>
             <German>Einschlagswinkel</German>
             <Korean>충돌 각도</Korean>

@@ -4,7 +4,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_action">
             <English>Configure M712 Shell</English>
             <French>Configurer l'obus M712</French>
-            <Spanish>Configurar M712</spanish>
+            <Spanish>Configurar M712</Spanish>
             <Italian>Configura granata M712</Italian>
             <German>M712 Geschoss konfigurieren</German>
             <Korean>M712 포탄 설정</Korean>
@@ -14,7 +14,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_FlightProfile">
             <English>Flight Profile</English>
             <French>Profil de vol</French>
-            <Spanish>Perfil de vuelo</spanish>
+            <Spanish>Perfil de vuelo</Spanish>
             <Italian>Profilo di volo</Italian>
             <German>Flugprofil</German>
             <Korean>비행 방식</Korean>
@@ -24,7 +24,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_GuidanceDelay">
             <English>Guidance Delay</English>
             <French>Latence d'induction</French>
-            <Spanish>Retraso en la orientación</spanish>
+            <Spanish>Retraso en la orientación</Spanish>
             <Italian>Latenza di guida</Italian>
             <German>Lenkverzögerung</German>
             <Korean>유도 지연 시간</Korean>
@@ -45,7 +45,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayName">
             <English>40mm Pike</English>
             <French>40mm Pike</French>
-            <Spanish>40mm Pike</spanish>
+            <Spanish>40mm Pike</Spanish>
             <Italian>40mm Pike</Italian>
             <German>40mm Pike</German>
             <Russian>40мм pike</Russian>

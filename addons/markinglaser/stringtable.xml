@@ -37,7 +37,7 @@
         <Key ID="STR_ACE_Markinglaser_Name">
             <English>IR marking laser</English>
             <French>Laser de marquage IR</French>
-            <Spanish>Láser de marcado IR</spanish>
+            <Spanish>Láser de marcado IR</Spanish>
             <Italian>Marcatore laser IR</Italian>
             <Russian>ИК-лазер для маркировки</Russian>
             <German>IR Markierungslaser</German>
@@ -48,7 +48,7 @@
         <Key ID="STR_ACE_Markinglaser_Setting_Enabled_Description">
             <English>Enables the usage of IR marking lasers for aircraft.</English>
             <French>Permet d'utiliser les lasers de marquage IR des aéronefs.</French>
-            <Spanish>Permite el uso de láseres de marcado IR para aeronaves.</spanish>
+            <Spanish>Permite el uso de láseres de marcado IR para aeronaves.</Spanish>
             <Italian>Abilita l'utilizzo di marcatori laser IR dalle torrette/telecamere di velivoli.</Italian>
             <Russian>Позволяет использовать инфракрасные маркировочные лазеры для самолетов.</Russian>
             <German>Ermöglicht die Nutzung von IR Markierungslasern für Luftfahrzeuge.</German>
@@ -59,7 +59,7 @@
         <Key ID="STR_ACE_Markinglaser_Setting_Enabled_DisplayName">
             <English>Enable IR marking lasers for aircraft</English>
             <French>Permettre l'utilisation de lasers de marquage IR pour les aéronefs</French>
-            <Spanish>Habilitación de láseres de marcado por infrarrojos para aeronaves</spanish>
+            <Spanish>Habilitación de láseres de marcado por infrarrojos para aeronaves</Spanish>
             <Italian>Abilita marcatori laser IR da velivoli</Italian>
             <Russian>Включить ИК-лазеров для маркировки воздушных судов</Russian>
             <German>IR Markierungslaser für Luftfahrzeuge aktivieren</German>
@@ -70,7 +70,7 @@
         <Key ID="STR_ACE_Markinglaser_ToggleLaser">
             <English>Toggle IR marking laser</English>
             <French>Marquage IR Commutation du laser</French>
-            <Spanish>Láser de marcado IR conmutable</spanish>
+            <Spanish>Láser de marcado IR conmutable</Spanish>
             <Italian>Attiva/Disattiva marcatore IR</Italian>
             <Russian>Переключение ИК-маркировочного лазера</Russian>
             <German>IR Markierungslaser umschalten</German>

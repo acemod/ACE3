@@ -25,7 +25,7 @@
             <Key ID="STR_ACE_Flags_Carry">
                 <English>Carry %1</English>
                 <French>Portage %1</French>
-                <Spanish>Llevar%1</spanish>
+                <Spanish>Llevar%1</Spanish>
                 <Italian>Porta %1</Italian>
                 <Russian>Носить %1</Russian>
                 <German>%1 tragen</German>
@@ -159,7 +159,7 @@
             <Key ID="STR_ACE_Flags_AllowCarryingFlags">
                 <English>Allow carrying flags</English>
                 <French>Autoriser le port de drapeaux</French>
-                <Spanish>Permitir llevar banderas</spanish>
+                <Spanish>Permitir llevar banderas</Spanish>
                 <Italian>Abilita indossare bandiere</Italian>
                 <Russian>Разрешить ношение флагов</Russian>
                 <German>Erlaube das Tragen von Flaggen</German>
@@ -179,7 +179,7 @@
             <Key ID="STR_ACE_Flags_AllowPlacingFlags">
                 <English>Allow placing flags</English>
                 <French>Permettre de placer des drapeaux</French>
-                <Spanish>Permitir la colocación de banderas</spanish>
+                <Spanish>Permitir la colocación de banderas</Spanish>
                 <Italian>Abilita piazzamento bandiere</Italian>
                 <Russian>Разрешить размещение флагов</Russian>
                 <German>Erlaube das Platzieren von Flaggen</German>
