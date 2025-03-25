@@ -12,7 +12,7 @@
  * Child arrays:
  *   0: Magazine class <STRING>
  *   1: Turret path <ARRAY>
- *   2: Is pylon magazine <BOOLEAN>
+ *   2: Is pylon magazine <BOOL>
  *   3: Pylon index (-1 if not pylon) <NUMBER>
  *   4: Max magazines <NUMBER>
  *   5: Current magazines <NUMBER>

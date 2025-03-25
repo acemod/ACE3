@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: CSW <OBJECT>
- * 1: Specific Turret or pass bool to check all turrets <ARRAY|BOOL> (default: true)
+ * 1: Specific Turret or pass bool to check all turrets <ARRAY or BOOL> (default: true)
  *
  * Return Value:
  * [0: compatible veh mags, 1: carry mags] <ARRAY>

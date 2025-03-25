@@ -8,7 +8,7 @@
  * 1: Include type replacements for items <BOOL> (default: true)
  *
  * Return Value:
- * Item replacements <ARRAY of STRING> if replacements exist, nil if not
+ * Item replacements <ARRAY of STRINGs> if replacements exist, nil if not
  *
  * Example:
  * ["FirstAidKit", false] call ace_common_fnc_getItemReplacements

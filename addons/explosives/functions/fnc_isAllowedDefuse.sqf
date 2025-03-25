@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
  * Author: Walthzer
- * Check if a mine is allowed to recieve a dynamic defuse action.
+ * Check if a mine is allowed to receive a dynamic defuse action.
  *
  * Arguments:
  * 0: Mine <OBJECT>
  *
  * Return Value:
- * Allowed <BOOLEAN>
+ * Allowed <BOOL>
  *
  * Example:
  * [_mine] call ace_explosives_fnc_isAllowedDefuse

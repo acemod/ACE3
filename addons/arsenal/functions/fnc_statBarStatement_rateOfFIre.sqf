@@ -7,8 +7,8 @@
  * 0: Not used
  * 1: Item config path <CONFIG>
  * 2: Args <ARRAY>
- * - 0: Stat limits <ARRAY of BOOLS>
- * - 1: Bar limits <ARRAY of NUMBERS>
+ * - 0: Stat limits <ARRAY of BOOLs>
+ * - 1: Bar limits <ARRAY of NUMBERs>
  *
  * Return Value:
  * Number
