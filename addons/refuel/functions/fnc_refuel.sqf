@@ -129,7 +129,8 @@ if (_maxFuelTank == 0) then {
         [QGVAR(stopped), [_source, _sink, _nozzle]] call CBA_fnc_localEvent;
         _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
         _nozzle setVariable [QGVAR(isRefueling), false, true];
-    };
+        [_nozzle, QGVAR(nozzle_stop), nil, true, true] call CBA_fnc_globalSay3D;
+    }; 
 }, 1, [
     _nozzle getVariable QGVAR(source),
     _sink,
