@@ -204,8 +204,8 @@ class ACE_Medical_Menu {
     idd = IDD_MEDICAL_MENU;
     movingEnable = 1;
     enableSimulation = 1;
-    onLoad = QUOTE(_this call FUNC(onMenuOpen));
-    onUnload = QUOTE(_this call FUNC(onMenuClose));
+    onLoad = QUOTE(call FUNC(onMenuOpen));
+    onUnload = QUOTE(call FUNC(onMenuClose));
     onKeyDown = QUOTE([ARR_3('onKeyDown',_this,QQGVAR(display))] call FUNC(onKeyDown));
     class controlsBackground {
         class Title: RscText {

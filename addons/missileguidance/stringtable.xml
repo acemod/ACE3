@@ -39,6 +39,7 @@
             <English>Altitude</English>
             <French>Altitude</French>
             <Italian>Altitudine</Italian>
+            <German>Höhe</German>
             <Korean>고도</Korean>
             <Japanese>高度</Japanese>
             <Russian>Высота</Russian>
@@ -47,6 +48,7 @@
             <English>Attack Heading</English>
             <French>Vecteur d'attaque</French>
             <Italian>Prua d'attacco</Italian>
+            <German>Angriffsrichtung</German>
             <Korean>공격 방향</Korean>
             <Japanese>攻撃方位</Japanese>
             <Russian>Направление атаки</Russian>
@@ -55,6 +57,7 @@
             <English>Easting</English>
             <French>Horizontales</French>
             <Italian>Easting</Italian>
+            <German>Ostwert</German>
             <Korean>동향</Korean>
             <Japanese>東距</Japanese>
             <Russian>Горизонтали</Russian>
@@ -63,6 +66,7 @@
             <English>GPS Weapon Setup</English>
             <French>Configuration de l'armement GPS</French>
             <Italian>Configurazione armamento GPS</Italian>
+            <German>GPS-Waffeneinstellung</German>
             <Korean>GPS 병기 설정</Korean>
             <Japanese>GPS武装設定</Japanese>
             <Russian>Настройка оружия с помощью GPS</Russian>
@@ -71,6 +75,7 @@
             <English>Impact Angle</English>
             <French>Angle d'impact</French>
             <Italian>Angolo d'impatto</Italian>
+            <German>Einschlagswinkel</German>
             <Korean>충돌 각도</Korean>
             <Japanese>弾着角</Japanese>
             <Russian>Угол удара</Russian>
@@ -79,6 +84,7 @@
             <English>Northing</English>
             <French>Verticales</French>
             <Italian>Northing</Italian>
+            <German>Nordwert</German>
             <Korean>북향</Korean>
             <Japanese>北距</Japanese>
             <Russian>Вертикали</Russian>
@@ -87,14 +93,16 @@
             <English>PRE-PLANNED</English>
             <French>PRE-PLANIFICATION</French>
             <Italian>PRE-PLANNED</Italian>
+            <German>PRE-PLANNED</German>
             <Korean>사전 설정됨</Korean>
-            <Japanese>PRE-PLANNED</Japanese>
+            <Japanese>計画目標 (PP)</Japanese>
             <Russian>ЗАРАНЕЕ СПЛАНИРОВАННЫЙ</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_short">
             <English>PP</English>
             <French>PP</French>
             <Italian>PP</Italian>
+            <German>PP</German>
             <Korean>PP</Korean>
             <Japanese>PP</Japanese>
             <Russian>PP</Russian>
@@ -103,8 +111,9 @@
             <English>TARGET OF OPPORTUNITY</English>
             <French>CIBLE D'OPPORTUNITÉ</French>
             <Italian>TARGET OF OPPORTUNITY</Italian>
+            <German>TARGET OF OPPORTUNITY</German>
             <Korean>기회 표적</Korean>
-            <Japanese>TARGET OF OPPORTUNITY</Japanese>
+            <Japanese>臨機目標 (TOO)</Japanese>
             <Russian>ЦЕЛЬ ОТКРЫВАЮЩЕЙСЯ ВОЗМОЖНОСТИ</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
@@ -311,6 +320,7 @@
             <English>MCLOS Down</English>
             <French>MCLOS Bas</French>
             <Italian></Italian>
+            <German>MCLOS Runter</German>
             <Korean>수동 시선 유도 하강</Korean>
             <Japanese>MCLOS 下</Japanese>
             <Russian>MCLOS Вниз</Russian>
@@ -319,6 +329,7 @@
             <English>MCLOS Left</English>
             <French>MCLOS Gauche</French>
             <Italian></Italian>
+            <German>MCLOS Links</German>
             <Korean>수동 시선 유도 좌향</Korean>
             <Japanese>MCLOS 左</Japanese>
             <Russian>MCLOS Влево</Russian>
@@ -327,6 +338,7 @@
             <English>MCLOS Right</English>
             <French>MCLOS Droit</French>
             <Italian></Italian>
+            <German>MCLOS Rechts</German>
             <Korean>수동 시선 유도 우향</Korean>
             <Japanese>MCLOS 右</Japanese>
             <Russian>MCLOS Вправо</Russian>
@@ -335,6 +347,7 @@
             <English>MCLOS Up</English>
             <French>MCLOS Haut</French>
             <Italian></Italian>
+            <German>MCLOS Hoch</German>
             <Korean>수동 시선 유도 상승</Korean>
             <Japanese>MCLOS 上</Japanese>
             <Russian>MCLOS Вверх</Russian>

@@ -13,7 +13,7 @@ class CfgAmmo {
     class GVAR(dragonBase): Rocket_03_AP_F {
         EGVAR(frag,skip) = 1;
         scope = 1;
-        aiAmmoUsageFlags = "128+512";
+        aiAmmoUsageFlags = 128+512;
         model = QPATHTOF(models\dragon.p3d);
         maxSpeed = 120;
         thrust = 0;

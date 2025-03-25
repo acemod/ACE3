@@ -31,10 +31,12 @@ if (_currWeaponType == -1) exitWith {};
 private _addNew = _newAttachment isNotEqualTo "";
 private _removeOld = _oldAttachment isNotEqualTo "";
 
+// Remove new attachment from inventory, so that we can try fit the old one in inventory
 if (_addNew) then {
     _unit removeItem _newAttachment;
 };
 
+// If old attachment does not fit in inventory, quit
 if (_removeOld && {!(_unit canAdd [_oldAttachment, 1, true])}) exitWith {
     LOG("no space");
     [LELSTRING(common,Inventory_Full)] call EFUNC(common,displayTextStructured);

@@ -11,7 +11,7 @@
  * Unit can pardon target <BOOL>
  *
  * Example:
- * [bob, kevin] call ACE_interaction_fnc_canPardon
+ * [player, cursorObject] call ace_interaction_fnc_canPardon
  *
  * Public: No
  */

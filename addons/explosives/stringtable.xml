@@ -1023,7 +1023,7 @@
             <Polish>Typ: Flara na linkę - Wystrzeliwuje nieszkodliwą flarę przy nadepnięciu linki.&lt;br/&gt;Pociski: 1&lt;br/&gt;Używane na: ziemia</Polish>
             <Portuguese>Tipo: Flare de Tripwire - Acende um sinalizador não letal quando acionado.&lt;br/&gt;Usos: 1&lt;br/&gt;Usado em: Chão</Portuguese>
             <Russian>Тип: Сигнальная растяжка - При срабатывании выпускает несмертельную сигнальную вспышку.&lt;br /&gt;Зарядов: 1&lt;br /&gt;Используется на: Земле</Russian>
-            <German>Typ: Stolperdraht-Leuchtrakete - Schießt bei Auslösung eine nicht-tödliche Leuchtrakete ab.&lt;br /&gt;Ladungen: 1&lt;br /&gt;Benutzt auf: Boden</German>
+            <German>Typ: Stolperdraht-Leuchtfackel - Zündet bei Auslösung eine nicht-tödliche Leuchtfackel.&lt;br /&gt;Ladungen: 1&lt;br /&gt;Benutzt auf: Boden</German>
             <Korean>종류: 조명지뢰 - 작동시 무해한 조명을 사출합니다.&lt;br /&gt;장탄수: 1&lt;br /&gt;사용처: 지면</Korean>
             <Japanese>種類: 仕掛け線信号地雷 - 作動時、非致死性の信号照明弾を発炎します。&lt;br /&gt;装填数: 1&lt;br /&gt;次で使用: 地表</Japanese>
             <Chinese>類型: 絆線閃光地雷 - 觸發後產生非致命性的強光.&lt;br /&gt;發數: 1&lt;br /&gt;使用於: 地面</Chinese>
@@ -1038,7 +1038,7 @@
             <Polish>Flara na linkę</Polish>
             <Portuguese>Tripwire (Sinalizador)</Portuguese>
             <Russian>Сигнальная растяжка</Russian>
-            <German>Stolperdraht-Leuchtrakete</German>
+            <German>Stolperdraht-Leuchtfackel</German>
             <Korean>인계철선 조명지뢰</Korean>
             <Japanese>仕掛け線信号地雷</Japanese>
             <Chinese>絆線閃光地雷</Chinese>
@@ -1051,6 +1051,7 @@
             <Korean>인계철선 조명지뢰 (녹색)</Korean>
             <Japanese>仕掛け線信号地雷 (緑)</Japanese>
             <Russian>Сигнальная растяжка (Зелёная)</Russian>
+            <German>Stolperdraht-Leuchtfackel (Grün)</German>
         </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Name_Red">
             <English>Tripwire Flare (Red)</English>
@@ -1059,6 +1060,7 @@
             <Korean>인계철선 조명지뢰 (적색)</Korean>
             <Japanese>仕掛け線信号地雷 (赤)</Japanese>
             <Russian>Сигнальная растяжка (Красная)</Russian>
+            <German>Stolperdraht-Leuchtfackel (Rot)</German>
         </Key>
         <Key ID="STR_ACE_Explosives_TripWire">
             <English>Tripwire</English>
@@ -1082,8 +1084,9 @@
             <French>Fil de transmission - Explosion aérienne</French>
             <Italian>Bengala (razzo) a filo d'inciampo</Italian>
             <Korean>인계철선 - 공중폭발</Korean>
-            <Japanese>仕掛け線 - 空中炸裂</Japanese>
+            <Japanese>仕掛け線 - 空中発火</Japanese>
             <Russian>Растяжка - Воздушный взрыв</Russian>
+            <German>Stolperdraht - Luftdetonation</German>
         </Key>
         <Key ID="STR_ACE_Explosives_apersToePopper">
             <English>APERS Mine (Toe-Popper)</English>
@@ -1093,6 +1096,7 @@
             <Korean>대인지뢰 (발목지뢰형)</Korean>
             <Japanese>対人地雷 (トウポッパー)</Japanese>
             <Chinesesimp>反人员地雷 (脚尖毁灭者)</Chinesesimp>
+            <German>APERS Mine (Toe-Popper)</German>
         </Key>
         <Key ID="STR_ACE_Explosives_cellphone_description">
             <English>Used to remotely trigger explosives</English>
