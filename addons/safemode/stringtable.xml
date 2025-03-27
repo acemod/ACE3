@@ -18,6 +18,10 @@
             <Turkish>Emniyete alındı</Turkish>
             <Hungarian>Biztonsági kapcsoló helyretolása</Hungarian>
         </Key>
+        <Key ID="STR_ACE_SafeMode_SafeModeUnlock">
+            <English>Safe Mode Unlock</English>
+            <Polish>Wyłącz Bezpiecznik</Polish>
+        </Key>
         <Key ID="STR_ACE_SafeMode_SafeMode">
             <English>Safe Mode</English>
             <Czech>Pojistka</Czech>

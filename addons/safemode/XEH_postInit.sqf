@@ -19,6 +19,29 @@ if (!hasInterface) exitWith {};
     true
 }, {false}, [DIK_GRAVE, [false, true, false]], false] call CBA_fnc_addKeybind;
 
+["ACE3 Weapons", QGVAR(safeModeUnlock), LLSTRING(SafeModeUnlock), {
+    [{
+        if !([ace_player, objNull, ["isNotEscorting", "isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {};
+
+        (weaponState ace_player) params ["_currentWeapon", "_currentMuzzle"];
+
+        if !(ace_player call CBA_fnc_canUseWeapon && {_currentWeapon != ""} && {_currentWeapon != binocular ace_player}) exitWith {};
+
+        private _safedWeapons = ace_player getVariable QGVAR(safedWeapons);
+
+        if (isNil "_safedWeapons") then {
+            _safedWeapons = createHashMap;
+            ace_player setVariable [QGVAR(safedWeapons), _safedWeapons];
+        };
+
+        private _safedWeaponMuzzles = _safedWeapons getOrDefault [_currentWeapon, createHashMap, true];
+
+        if (_currentMuzzle in _safedWeaponMuzzles) exitWith {
+            [ace_player, _currentWeapon, _currentMuzzle, true] call ace_safemode_fnc_unlockSafety;
+        };
+    }] call CBA_fnc_execNextFrame;
+}, ""] call CBA_fnc_addKeybind;
+
 ["unit", {
     (weaponState ACE_player) params ["_currentWeapon", "_currentMuzzle"];
 
