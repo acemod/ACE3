@@ -459,4 +459,26 @@ class CfgVehicles {
         displayName = CSTRING(Module_IEDLandSmall_Range_DisplayName);
         explosive = "ACE_IEDLandSmall_Range_Ammo";
     };
+    class ModuleMine_APERSMine_F;
+    class ACE_ModuleMine_APERSMine_ToePopper: ModuleMine_APERSMine_F {
+        author = ECSTRING(common,aceteam);
+        displayName = CSTRING(apersToePopper);
+        explosive = "ACE_APERSMine_ToePopper_Ammo";
+    };
+    class ModuleMine_APERSTripMine_F;
+    class ACE_ModuleMine_FlareTripMine: ModuleMine_APERSTripMine_F {
+        author = ECSTRING(common,aceteam);
+        displayName = CSTRING(TripFlare_Name);
+        explosive = "ACE_FlareTripMine_Wire_Ammo";
+    };
+    class ACE_ModuleMine_FlareTripMineRed: ModuleMine_APERSTripMine_F {
+        author = ECSTRING(common,aceteam);
+        displayName = CSTRING(TripFlare_Name_Red);
+        explosive = "ACE_FlareTripMine_Wire_Ammo_Red";
+    };
+    class ACE_ModuleMine_FlareTripMineGreen: ModuleMine_APERSTripMine_F {
+        author = ECSTRING(common,aceteam);
+        displayName = CSTRING(TripFlare_Name_Green);
+        explosive = "ACE_FlareTripMine_Wire_Ammo_Green";
+    };
 };
