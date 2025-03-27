@@ -38,6 +38,7 @@ call {
             private _range = 0;
             if (_holdTime < 0.5) then {
                 private _distance = round parseNumber ctrlText (_display displayCtrl 151);
+                [QEGVAR(laser_warning,ping), [AGLToASL positionCameraToWorld [0, 0, 0], ACE_PLAYER weaponDirection currentWeapon ACE_PLAYER]] call CBA_fnc_globalEvent;
                 if (_distance > 10 && {_distance < RANGEFINDER_MAX}) then {
                     _range = _distance;
                 } else {
