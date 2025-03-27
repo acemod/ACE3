@@ -1996,5 +1996,29 @@
             <Japanese>武器からマガジンを抜く</Japanese>
             <Chinesesimp>卸掉武器弹匣</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Common_versionMismatch">
+            <English>[ACE] Version mismatch:&lt;br/&gt;&lt;br/&gt;</English>
+            <Chinesesimp>[ACE] 版本不匹配:&lt;br/&gt;&lt;br/&gt;</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_missingAddonClient">
+            <English>Detected missing addon on client&lt;br/&gt;</English>
+            <Chinesesimp>检测到客户端缺少模组&lt;br/&gt;</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_additionalAddonClient">
+            <English>Detected additional addon on client&lt;br/&gt;</English>
+            <Chinesesimp>检测到客户端多余模组&lt;br/&gt;</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_olderVersionClient">
+            <English>Detected older client version&lt;br/&gt;</English>
+            <Chinesesimp>检测到客户端过旧模组&lt;br/&gt;</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_newerVersionClient">
+            <English>Detected newer client version&lt;br/&gt;</English>
+            <Chinesesimp>检测到客户端过新模组&lt;br/&gt;</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_error">
+            <English>[ACE] ERROR</English>
+            <Chinesesimp>[ACE] 错误</Chinesesimp>
+        </Key>
     </Package>
 </Project>
