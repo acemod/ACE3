@@ -2020,5 +2020,29 @@
             <English>[ACE] ERROR</English>
             <Chinesesimp>[ACE] 错误</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Common_isMissingItems">
+            <English>[ACE] %1: ERROR %2 addon(s):&#032;</English>
+            <Chinesesimp>[ACE] %1: 错误 %2模组:&#032;</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_andMore">
+            <English>, and %1 more.</English>
+            <Chinesesimp>, 以及另外%1个</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_clientMissing">
+            <English>client missing</English>
+            <Chinesesimp>客户端缺少</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_clientAdditional">
+            <English>client additional</English>
+            <Chinesesimp>客户端多余</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_olderClient">
+            <English>older client</English>
+            <Chinesesimp>客户端过旧</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_newerClient">
+            <English>newer client</English>
+            <Chinesesimp>客户端过新</Chinesesimp>
+        </Key>
     </Package>
 </Project>
