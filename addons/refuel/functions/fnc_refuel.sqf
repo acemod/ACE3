@@ -117,7 +117,7 @@ if (_maxFuelTank == 0) then {
         // Increment fuel counter
         _source setVariable [QGVAR(fuelCounter), (_source getVariable [QGVAR(fuelCounter), 0]) + _addedFuel, true];
 
-        [QGVAR(tick), [_source, _sink, _addedFuel, _refuelContainer]] call CBA_fnc_localEvent;
+        [QGVAR(tick), [_source, _sink, _addedFuel, _refuelContainer, _nozzle]] call CBA_fnc_localEvent;
 
         [_source, _fuelInSource] call FUNC(setFuel);
     } else {
@@ -126,7 +126,7 @@ if (_maxFuelTank == 0) then {
 
     // Reset variables when done
     if (_finished) then {
-        [QGVAR(stopped), [_source, _sink]] call CBA_fnc_localEvent;
+        [QGVAR(stopped), [_source, _sink, _nozzle]] call CBA_fnc_localEvent;
         _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
         _nozzle setVariable [QGVAR(isRefueling), false, true];
     };
