@@ -38,6 +38,7 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_altitude">
             <English>Altitude</English>
             <French>Altitude</French>
+            <Spanish>Altitud</Spanish>
             <Italian>Altitudine</Italian>
             <German>Höhe</German>
             <Korean>고도</Korean>
@@ -47,6 +48,7 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_attack_heading">
             <English>Attack Heading</English>
             <French>Vecteur d'attaque</French>
+            <Spanish>Rumbo de ataque</Spanish>
             <Italian>Prua d'attacco</Italian>
             <German>Angriffsrichtung</German>
             <Korean>공격 방향</Korean>
@@ -56,6 +58,7 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_easting">
             <English>Easting</English>
             <French>Horizontales</French>
+            <Spanish>Orientación</Spanish>
             <Italian>Easting</Italian>
             <German>Ostwert</German>
             <Korean>동향</Korean>
@@ -65,6 +68,7 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_header">
             <English>GPS Weapon Setup</English>
             <French>Configuration de l'armement GPS</French>
+            <Spanish>Configuración del Arma GPS</Spanish>
             <Italian>Configurazione armamento GPS</Italian>
             <German>GPS-Waffeneinstellung</German>
             <Korean>GPS 병기 설정</Korean>
@@ -74,6 +78,7 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_impact_angle">
             <English>Impact Angle</English>
             <French>Angle d'impact</French>
+            <Spanish>Ángulo de impacto</Spanish>
             <Italian>Angolo d'impatto</Italian>
             <German>Einschlagswinkel</German>
             <Korean>충돌 각도</Korean>
@@ -83,6 +88,7 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_northing">
             <English>Northing</English>
             <French>Verticales</French>
+            <Spanish>Northing</Spanish>
             <Italian>Northing</Italian>
             <German>Nordwert</German>
             <Korean>북향</Korean>
@@ -92,6 +98,7 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp">
             <English>PRE-PLANNED</English>
             <French>PRE-PLANIFICATION</French>
+            <Spanish>PRE-PLANIFICADO</Spanish>
             <Italian>PRE-PLANNED</Italian>
             <German>PRE-PLANNED</German>
             <Korean>사전 설정됨</Korean>
@@ -101,6 +108,7 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_short">
             <English>PP</English>
             <French>PP</French>
+            <Spanish>PP</Spanish>
             <Italian>PP</Italian>
             <German>PP</German>
             <Korean>PP</Korean>
@@ -110,6 +118,7 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_too">
             <English>TARGET OF OPPORTUNITY</English>
             <French>CIBLE D'OPPORTUNITÉ</French>
+            <Spanish>OBJETIVO DE OPORTUNIDAD</Spanish>
             <Italian>TARGET OF OPPORTUNITY</Italian>
             <German>TARGET OF OPPORTUNITY</German>
             <Korean>기회 표적</Korean>
