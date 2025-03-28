@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACE">
+    <Package name="Wardrobe">
+        <Container name="CBA_Settings_Categories">
+            <Key ID="STR_ACE_Wardrobe_set_cat_main">
+                <English>ACE Wardrobe</English>
+                <German>ACE Gaderobe</German>
+            </Key>
+        </Container>
+        <Container name="CBA_Settings">
+            <Key ID="STR_ACE_Wardrobe_set_enable_action">
+                <English>ACE Interaction</English>
+                <German>Aktivieren ACE Interaction</German>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_set_enable_contexMenu">
+                <English>CBA Context Menu</English>
+                <German>Aktiviere CBA Context Menu</German>
+            </Key>
+        </Container>
+        <Container name="Action">
+            <Key ID="STR_ACE_Wardrobe_actionTitle">
+                <English>Wardrobe</English>
+                <German>Gaderobe</German>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_glovesOff">
+                <English>Take gloves off</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_glovesOn">
+                <English>Wear gloves</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_gogglesOff">
+                <English>Take goggles off</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_gogglesOn">
+                <English>Put goggles on</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_jacketClose">
+                <English>Close Jacket</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_jacketOpen">
+                <English>Open Jacket</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_maskOff">
+                <English>Take mask off</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_maskOn">
+                <English>Put mask on</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_sleevesDown">
+                <English>Roll sleeves down</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_sleevesUp">
+                <English>Roll sleeves up</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_visorDown">
+                <English>Visor down</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_visorUp">
+                <English>Visor up</English>
+            </Key>
+        </Container>
+        <Container name="CBA Context Menu">
+            <Key ID="STR_ACE_Wardrobe_cannotSwitchTo">
+                <English>Cannot switch to</English>
+            </Key>
+            <Key ID="STR_ACE_Wardrobe_missingComponents">
+                <English>due to missing components</English>
+            </Key>
+        </Container>
+    </Package>
+</Project>
