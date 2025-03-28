@@ -29,11 +29,10 @@ class CfgVehicles {
                 tooltip = CSTRING(Header_Tooltip);
                 property = QGVAR(header);
                 control = "Edit";
-                expression = QUOTE(_this setVariable [ARR_2('%s',_value)]);
+                expression = QUOTE([ARR_3(_this,'',_value)] call FUNC(setObjectData));
                 defaultValue = "''";
                 validate = "STRING";
                 typeName = "STRING";
-                maxChars = 20;
             };
             class GVAR(data) {
                 displayName = CSTRING(Text);
