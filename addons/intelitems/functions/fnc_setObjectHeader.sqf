@@ -11,25 +11,23 @@
  * None
  *
  * Example:
- * [cursorObject, "123"] call ace_intelitems_fnc_setObjectData
+ * [cursorObject,"New Header"] call ace_intelitems_fnc_setObjectHeader
  *
  * Public: No
  */
 
-params ["_object", "_data", "_header"];
+params ["_object", "_header"];
 TRACE_1("setObjectData",_this);
+private _data = "";
 private _index = _object getVariable [QGVAR(index), -1];
 if (_index == -1) then {
     _index = GVAR(intelCount);
     GVAR(intelCount) = GVAR(intelCount) + 1;
     _object setVariable [QGVAR(index), _index, true];
-    if (isNil "_header") then {
-        _header = getText(configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
-    };
 } else {
-    if (isNil "_header") then {
-        _header = GET_DATA(_index) select 1;
-    };
+    _data = GET_DATA(_index) select 0;
 };
-
+if (_header == "") then {
+    _header = getText(configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
+};
 SET_DATA(_index,_data,_header);

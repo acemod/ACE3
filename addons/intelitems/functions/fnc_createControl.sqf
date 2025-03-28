@@ -45,6 +45,9 @@ _ctrlContent ctrlSetText (GET_DATA(_index) select 0);
 
 // Set data in header control
 private _header = GET_DATA(_index) select 1;
+if (_header == "") then {
+   _header = ctrlText _ctrlHeader;
+};
 _ctrlHeader ctrlSetText _header;
 
 // Restore position of controls group (center if not saved)

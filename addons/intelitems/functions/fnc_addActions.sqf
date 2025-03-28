@@ -30,7 +30,6 @@ private _openIndices = GVAR(controlsGroups) apply {_x getVariable QGVAR(index)};
         private _displayName = getText (_config >> "displayName");
         private _picture     = getText (_config >> "picture");
         private _controlType = getText (_config >> QGVAR(control));
-
         private _magazineIds = [_player, _x] call CBA_fnc_getMagazineIndex;
 
         {

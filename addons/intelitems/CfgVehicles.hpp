@@ -29,7 +29,7 @@ class CfgVehicles {
                 tooltip = CSTRING(Header_Tooltip);
                 property = QGVAR(header);
                 control = "Edit";
-                expression = QUOTE([ARR_3(_this,'',_value)] call FUNC(setObjectData));
+                expression = QUOTE([ARR_2(FUNC(setObjectHeader),[ARR_2(_this,_value)])] call CBA_fnc_execNextFrame;);
                 defaultValue = "''";
                 validate = "STRING";
                 typeName = "STRING";
@@ -38,7 +38,7 @@ class CfgVehicles {
                 displayName = CSTRING(Text);
                 property = QGVAR(data);
                 control = "EditMulti5";
-                expression = QUOTE([ARR_2(FUNC(setObjectData),[ARR_2(_this,_value)])] call CBA_fnc_execNextFrame;);
+                expression = QUOTE([ARR_2(_this,_value)] call FUNC(setObjectData));
                 defaultValue = "''";
                 validate = "STRING";
                 typeName = "STRING";
