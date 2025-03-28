@@ -22,27 +22,25 @@ private _ctrlButtonOK = _display displayCtrl 1; // IDC_OK
 private _object = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
 
 _control ctrlRemoveAllEventHandlers "SetFocus";
-
-private _ctrlLabel = _display displayCtrl IDC_ATTRIBUTE_LABEL;
-private _labelText = GET_DATA(_index) select 1;
-_ctrlLabel ctrlSetText _labelText;
-
 private _index = _object getVariable [QGVAR(index), -1];
 
 if (_index != -1) then {
+    private _data = GET_DATA(_index);
     private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTE_EDIT;
-    _ctrlEdit ctrlSetText GET_DATA(_index) select 0;
+    private _ctrlEditText = _data select 0;
+    _ctrlEdit ctrlSetText _ctrlEditText;
+    private _ctrlLabel = _display displayCtrl IDC_ATTRIBUTE_LABEL;
+    private _labelText = _data select 1;
+    _ctrlLabel ctrlSetText _labelText;
 };
 
 private _fnc_onConfirm = {
     params ["_ctrlButtonOK"];
-
     private _display = ctrlParent _ctrlButtonOK;
     private _object = GETMVAR(BIS_fnc_initCuratorAttributes_target,objNull);
     private _data = ctrlText (_display displayCtrl IDC_ATTRIBUTE_EDIT);
     private _header = ctrlText (_display displayCtrl IDC_ATTRIBUTE_LABEL);
-
-    [QGVAR(setObjectData), [_object, [_data,_header]]] call CBA_fnc_serverEvent;
+    [QGVAR(setObjectData), [_object, _data, _header]] call CBA_fnc_serverEvent;
 };
 
 _ctrlButtonOK ctrlAddEventHandler ["ButtonClick", _fnc_onConfirm];

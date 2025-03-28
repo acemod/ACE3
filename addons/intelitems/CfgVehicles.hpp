@@ -33,6 +33,7 @@ class CfgVehicles {
                 defaultValue = "''";
                 validate = "STRING";
                 typeName = "STRING";
+                maxChars = 20;
             };
             class GVAR(data) {
                 displayName = CSTRING(Text);

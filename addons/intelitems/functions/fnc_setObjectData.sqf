@@ -11,16 +11,16 @@
  * None
  *
  * Example:
- * [cursorObject, "123"] call ace_intelitems_fnc_setObjectData
+ * [cursorObject, "123", "New Header"] call ace_intelitems_fnc_setObjectData
  *
  * Public: No
  */
 
-params ["_object", "_data"];
+params ["_object", "_data", "_headerData"];
 TRACE_1("setObjectData",_this);
 
 private _index = _object getVariable [QGVAR(index), -1];
-private _header = _object getVariable [QGVAR(header), ""];
+private _header = [_object getVariable [QGVAR(header), ""], _header] select (!isNil "_headerData");
 if (_index == -1) then {
     _index = GVAR(intelCount);
     GVAR(intelCount) = GVAR(intelCount) + 1;
