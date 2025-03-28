@@ -16,7 +16,7 @@
 
 #define INSTAKILL_ALLOWED(unit) (unit isNotEqualTo (unit getVariable [QGVAR(blockInstaKill), objNull]))
 
-params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator", "_hitpoint", "_directHit", "_context"];
+params ["_unit", "_selection", "_damage", "_shooter", "_ammo", "_hitPointIndex", "_instigator", "_hitPoint", "_directHit", "_context"];
 
 // HD sometimes triggers for remote units - ignore.
 if !(local _unit) exitWith {nil};
@@ -31,7 +31,6 @@ if (_structuralDamage) then {
 } else {
     _oldDamage = _unit getHitIndex _hitPointIndex;
 };
-
 // Damage can be disabled with old variable or via sqf command allowDamage
 if !(isDamageAllowed _unit && {_unit getVariable [QEGVAR(medical,allowDamage), true]}) exitWith {_oldDamage};
 
@@ -63,14 +62,14 @@ if (_context != 2 && {_context == 4 || _newDamage == 0}) exitWith {
 // Get scaled armor value of hitpoint and calculate damage before armor
 // We scale using passThrough to handle explosive-resistant armor properly (#9063)
 // We need realDamage to determine which limb was hit correctly
-[_unit, _hitpoint] call FUNC(getHitpointArmor) params ["_armor", "_armorScaled"];
+[_unit, _hitPoint] call FUNC(getHitpointArmor) params ["_armor", "_armorScaled"];
 private _realDamage = _newDamage * _armor;
 if (!_structuralDamage) then {
     private _armorCoef = _armor/_armorScaled;
     private _damageCoef = linearConversion [0, 1, GVAR(damagePassThroughEffect), 1, _armorCoef];
     _newDamage = _newDamage * _damageCoef;
 };
-TRACE_6("Received hit",_hitpoint,_ammo,_newDamage,_realDamage,_directHit,_context);
+TRACE_6("Received hit",_hitPoint,_ammo,_newDamage,_realDamage,_directHit,_context);
 
 // Drowning doesn't fire the EH for each hitpoint and never triggers _context=2 (LastHitPoint)
 // Damage occurs in consistent increments
@@ -139,22 +138,28 @@ if (_context == 2) then {
     // --- Head
     private _damageHead = [
         _unit getVariable [QGVAR($HitFace), [0,0]],
-        _unit getVariable [QGVAR($HitNeck), [0,0]],
         _unit getVariable [QGVAR($HitHead), [0,0]]
     ];
     _damageHead sort false;
     _damageHead = _damageHead select 0;
 
+    // --- Neck
+    private _damageNeck = _unit getVariable [QGVAR($HitNeck), [0,0]];
+
     // --- Body
     private _damageBody = [
         _unit getVariable [QGVAR($HitPelvis), [0,0]],
-        _unit getVariable [QGVAR($HitAbdomen), [0,0]],
-        _unit getVariable [QGVAR($HitDiaphragm), [0,0]],
-        _unit getVariable [QGVAR($HitChest), [0,0]]
-        // HitBody removed as it's a placeholder hitpoint and the high armor value (1000) throws the calculations off
+        _unit getVariable [QGVAR($HitAbdomen), [0,0]]
     ];
     _damageBody sort false;
     _damageBody = _damageBody select 0;
+
+    private _damageChest = [
+        _unit getVariable [QGVAR($HitDiaphragm), [0,0]],
+        _unit getVariable [QGVAR($HitChest), [0,0]]
+    ];
+    _damageChest sort false;
+    _damageChest = _damageChest select 0;
 
     // --- Arms and Legs
     private _damageLeftArm = _unit getVariable [QGVAR($HitLeftArm), [0,0]];
@@ -167,6 +172,8 @@ if (_context == 2) then {
     // _realDamage, priority, _newDamage, body part name
     private _allDamages = [
         [_damageHead select 0,       PRIORITY_HEAD,       _damageHead select 1,       "Head"],
+        [_damageNeck select 0,       PRIORITY_NECK,       _damageNeck select 1,       "Neck"],
+        [_damageChest select 0,      PRIORITY_CHEST,      _damageChest select 1,      "Chest"],
         [_damageBody select 0,       PRIORITY_BODY,       _damageBody select 1,       "Body"],
         [_damageLeftArm select 0,    PRIORITY_LEFT_ARM,   _damageLeftArm select 1,    "LeftArm"],
         [_damageRightArm select 0,   PRIORITY_RIGHT_ARM,  _damageRightArm select 1,   "RightArm"],

@@ -42,7 +42,21 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
 {   // forEach _allDamages
     _x params ["_damage", "_bodyPart"];
     _bodyPart = toLowerANSI _bodyPart;
-
+    if (_typeOfDamage != "explosive") then {
+        if (_bodyPart == "head") then {
+        private _isNeck = (random 1) < 0.1; // 10% chance for neck damage
+            _bodyPart = ["head", "neck"] select (_isNeck);
+        };
+        if (_bodyPart in ["leftarm", "rightarm", "leftleg", "rightleg"]) then {
+        private _isUpper = (random 1) < 0.5;
+        switch (_bodyPart) do {
+            case "leftarm":  { _bodyPart = ["leftarm", "upperleftarm"] select (_isUpper); };
+            case "rightarm": { _bodyPart = ["rightarm", "upperrightarm"] select (_isUpper); };
+            case "leftleg":  { _bodyPart = ["leftleg", "upperleftleg"] select (_isUpper); };
+            case "rightleg": { _bodyPart = ["rightleg", "upperrightleg"] select (_isUpper); };
+            };
+        };
+    };
     // silently ignore structural damage
     if (_bodyPart == "#structural") then {continue};
 
@@ -90,7 +104,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         private _woundDamage = _dmgPerWound * _dmgMultiplier * random [0.9, 1, 1.1];
 
         _bodyPartDamage set [_bodyPartNToAdd, (_bodyPartDamage select _bodyPartNToAdd) + _woundDamage];
-        _bodyPartVisParams set [[1,2,3,3,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
+        _bodyPartVisParams set [[1,1,1,2,2,2,3,3,3,4,4,4] select _bodyPartNToAdd, true]; // Mark the body part index needs updating
 
         // Anything above this value is guaranteed worst wound possible
         private _worstDamage = 2;
@@ -116,7 +130,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
         // Create a new injury. Format [0:classComplex, 1:amountOf, 2:bleedingRate, 3:woundDamage]
         private _injury = [_classComplex, 1, _bleeding, _woundDamage];
 
-        if (_bodyPart isEqualTo "head" || {_bodyPart isEqualTo "body" && {_woundDamage > PENETRATION_THRESHOLD}}) then {
+       if (_bodyPart in ["head", "body", "neck", "chest"] && {_woundDamage > PENETRATION_THRESHOLD}) then {
             _criticalDamage = true;
         };
         if ([_unit, _bodyPartNToAdd, _bodyPartDamage, _woundDamage] call FUNC(determineIfFatal)) then {
@@ -134,7 +148,7 @@ private _bodyPartVisParams = [_unit, false, false, false, false]; // params arra
             case (
                 _causeFracture
                 && {EGVAR(medical,fractures) > 0}
-                && {_bodyPartNToAdd > 1}
+                && {_bodyPartNToAdd > 3}
                 && {_woundDamage > FRACTURE_DAMAGE_THRESHOLD}
                 && {random 1 < (_fractureMultiplier * EGVAR(medical,fractureChance))}
             ): {
