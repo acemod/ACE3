@@ -1594,6 +1594,7 @@
         <Key ID="STR_ACE_Medical_GUI_needToHolster">
             <English>You must holster your weapon first!</English>
             <French>Vous devez d'abord rengainer votre arme !</French>
+            <Spanish>Debes enfundar tu arma primero</Spanish>
             <Italian>Devi prima mettere l'arma nella fondina!</Italian>
             <German>Du musst zuerst deine Waffe holstern!</German>
             <Russian>Сначала ты должен убрать свое оружие!</Russian>
