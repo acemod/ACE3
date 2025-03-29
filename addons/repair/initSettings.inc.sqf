@@ -166,7 +166,7 @@ private _catFullRepair = [_category, LLSTRING(fullRepair)];
     QGVAR(miscRepairTime), "SLIDER",
     [LSTRING(miscRepairTime_name), LSTRING(miscRepairTime_description)],
     _category,
-    [0,60,15,-1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    [0,3600,15,-1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true
 ] call CBA_fnc_addSetting;
 
@@ -174,7 +174,7 @@ private _catFullRepair = [_category, LLSTRING(fullRepair)];
     QGVAR(wheelChangeTime), "SLIDER",
     [LSTRING(wheelChangeTime_name), LSTRING(wheelChangeTime_description)],
     _category,
-    [0,60,10,-1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
+    [0,3600,10,-1], // [min, max, default value, trailing decimals (-1 for whole numbers only)]
     true
 ] call CBA_fnc_addSetting;
 
