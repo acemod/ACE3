@@ -4,7 +4,7 @@
 
 if (!hasInterface) exitWith {};
 
-["ACE3 Weapons", QGVAR(safeMode), LLSTRING(SafeMode), {
+["ACE3 Weapons", QGVAR(safeMode), LLSTRING(SafeModeToggle), {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
@@ -19,7 +19,7 @@ if (!hasInterface) exitWith {};
     true
 }, {false}, [DIK_GRAVE, [false, true, false]], false] call CBA_fnc_addKeybind;
 
-["ACE3 Weapons", QGVAR(safeModeUnlock), LLSTRING(SafeModeUnlock), {
+["ACE3 Weapons", QGVAR(safeModeUnlock), LLSTRING(TakeOffSafety), {
     [{
         if !([ace_player, objNull, ["isNotEscorting", "isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {};
 
