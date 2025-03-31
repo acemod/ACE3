@@ -28,7 +28,7 @@ if (!hasInterface) exitWith {};
     // Conditions: specific
     if !(ACE_player call CBA_fnc_canUseWeapon && {_currentWeapon != ""} && {_currentWeapon != binocular ACE_player}) exitWith {false};
 
-    // Statement: Toggle weapon safety
+    // Statement: Unlock weapon safety
     [ACE_player, _currentWeapon, _currentMuzzle, true, true] call FUNC(lockSafety);
 }, {}] call CBA_fnc_addKeybind;
 
