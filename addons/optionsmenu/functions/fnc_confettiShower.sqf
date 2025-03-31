@@ -52,7 +52,7 @@ addMissionEventHandler ["EachFrame", {
     };
 
     {
-        private _params = _x getVariable QGVAR(params);
+        private _params = _x getVariable [QGVAR(params), [0, [0, 0, 0]]];
         _params params ["_rotation", "_speed"];
         _speed = vectorLinearConversion [0, 1, _duration, _speed, [0, 0.5 * safeZoneH, 0]];
 
