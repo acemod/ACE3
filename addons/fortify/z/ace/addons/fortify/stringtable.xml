@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="ACEX">
+    <Package name="Fortify">
+        <Key ID="STR_ace_fortify_Fortify">
+            <English>Fortify</English>
+            <Japanese>要塞</Japanese>
+            <Korean>요새화</Korean>
+            <Chinese>要塞</Chinese>
+            <Chinesesimp>要塞</Chinesesimp>
+            <Polish>Fortyfikowanie</Polish>
+        </Key>
+        <Key ID="STR_ace_fortify_FortifyItem_name">
+            <English>Fortify Tool</English>
+            <Japanese>要塞ツール</Japanese>
+            <Korean>요새화 도구</Korean>
+            <Chinese>要塞工具</Chinese>
+            <Chinesesimp>要塞工具</Chinesesimp>
+            <Polish>Narzędzie do fortyfikowania</Polish>
+        </Key>
+        <Key ID="STR_ace_fortify_Budget">
+            <English>Budget</English>
+            <Japanese>予算</Japanese>
+            <Korean>예산</Korean>
+            <Chinese>預算</Chinese>
+            <Chinesesimp>预算</Chinesesimp>
+            <Polish>Budżet</Polish>
+        </Key>
+        <Key ID="STR_ace_fortify_addToolItem">
+            <English>Auto add fortify item</English>
+            <Japanese>自動的に要塞ツールを追加</Japanese>
+            <Korean>자동 추가 요새 항목</Korean>
+            <Chinese>自動增加要塞物品</Chinese>
+            <Chinesesimp>自动增加要塞物品</Chinesesimp>
+            <Polish>Automatycznie dodaj narzędzie do fortyfikowania</Polish>
+        </Key>
+        <Key ID="STR_ace_fortify_rotate">
+            <English>Rotate</English>
+            <German>Drehen</German>
+            <Spanish>Girar</Spanish>
+            <French>Tourner</French>
+            <Italian>Rotazione</Italian>
+            <Czech>Otočit</Czech>
+            <Hungarian>Forgatás</Hungarian>
+            <Polish>Obrót</Polish>
+            <Portuguese>Rotaciona</Portuguese>
+            <Russian>Bращать</Russian>
+            <Japanese>回転</Japanese>
+            <Korean>회전</Korean>
+            <Chinesesimp>旋转</Chinesesimp>
+            <Chinese>旋轉</Chinese>
+        </Key>
+        <Key ID="STR_ace_fortify_Confirm">
+            <English>Confirm Deployment</English>
+            <German>Aufbauen</German>
+            <Russian>Подтвердить установку</Russian>
+            <Polish>Potwierdź rozłożenie</Polish>
+            <Spanish>Confirmar despliegue</Spanish>
+            <French>Confirmer Déploiement</French>
+            <Czech>Potvrdit Položení</Czech>
+            <Italian>Conferma Posizionamento</Italian>
+            <Hungarian>Lerak</Hungarian>
+            <Portuguese>Confirmar implantação</Portuguese>
+            <Japanese>ここで作る</Japanese>
+            <Korean>설치 확인</Korean>
+            <Chinesesimp>确认布署</Chinesesimp>
+            <Chinese>確認佈署</Chinese>
+        </Key>
+        <Key ID="STR_ace_fortify_buildLocationModule">
+            <English>Fortify: Limit Build Area</English>
+            <Japanese>要塞: 構築制限エリア</Japanese>
+            <Chinese>要塞: 限制建造區</Chinese>
+            <Chinesesimp>要塞: 限制建造区</Chinesesimp>
+            <Polish>Fortyfikowanie: Limituj strefe budowania</Polish>
+        </Key>
+        <Key ID="STR_ace_fortify_settingsCategory">
+            <English>ACEX Fortify</English>
+            <Chinese>ACEX 要塞</Chinese>
+            <Chinesesimp>ACEX 要塞</Chinesesimp>
+            <Japanese>ACEX 要塞</Japanese>
+            <Polish>ACEX Fortyfikowanie</Polish>
+        </Key>
+        <Key ID="STR_ace_fortify_settingHint">
+            <English>Show budget updates</English>
+            <Chinese>顯示預算更新</Chinese>
+            <Chinesesimp>显示预算更新</Chinesesimp>
+            <Japanese>予算の更新を表示</Japanese>
+            <Polish>Pokaż aktualizacje budżetu</Polish>
+        </Key>
+        <Key ID="STR_ace_fortify_settingHintDesc">
+            <English>Controls when budget update hints are shown</English>
+            <Chinese>決定預算變更時是否會顯示提示</Chinese>
+            <Chinesesimp>决定预算变更时是否会显示提示</Chinesesimp>
+            <Japanese>予算が更新されヒント表示時の操作を決定します</Japanese>
+            <Polish>Kontroluje kiedy aktualizacje budżetu są wyświetlane</Polish>
+        </Key>
+        <Key ID="STR_ace_fortify_settingHintNone">
+            <English>Never show</English>
+            <Chinese>永不顯示</Chinese>
+            <Chinesesimp>永不显示</Chinesesimp>
+            <Japanese>非表示</Japanese>
+            <Polish>Nigdy</Polish>
+        </Key>
+        <Key ID="STR_ace_fortify_settingHintHasTool">
+            <English>Has fortify tool</English>
+            <Chinese>有要塞工具</Chinese>
+            <Chinesesimp>有要塞工具</Chinesesimp>
+            <Japanese>要塞ツール所持の時</Japanese>
+            <Polish>Posiada narzędzie do fortyfikowania</Polish>
+        </Key>
+        <Key ID="STR_ace_fortify_settingHintEveryone">
+            <English>Always show</English>
+            <Chinese>總是顯示</Chinese>
+            <Chinesesimp>总是显示</Chinesesimp>
+            <Japanese>常に表示</Japanese>
+            <Polish>Zawsze</Polish>
+        </Key>
+    </Package>
+</Project>

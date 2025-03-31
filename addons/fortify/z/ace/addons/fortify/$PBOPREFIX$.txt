@@ -1,0 +1,6 @@
+//<'fortify.pbo' properties via Mikero's dos tools, dll version 9.99>
+prefix=z\ace\addons\fortify;
+Mikero=DePbo.dll.9.99;
+version=25033120;
+//PboType=Arma Addon;
+//</properties>
