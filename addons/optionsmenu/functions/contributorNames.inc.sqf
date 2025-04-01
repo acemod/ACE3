@@ -185,4 +185,6 @@
 "xrufix",
 "Zakant",
 "zGuba",
-"Zman6258"
+"Zman6258",
+"DartRuffian",
+"KJW"
