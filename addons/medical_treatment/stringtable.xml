@@ -2755,7 +2755,7 @@
             <Portuguese>Permite desejar melhoras a pessoas que não se estão a sentir muito bem.</Portuguese>
             <Russian>Позволяет пожелать выздоровления людям, которые чувствуют себя не очень хорошо.</Russian>
             <German>Ermöglicht Genesungswünsche für Menschen, denen es nicht so gut geht.</German>
-            <Korean>컨디션이 좋지 않은 사람들을 위해 건강을 기원할 수 있습니다.</Korean>
+            <Korean>몸 상태가 좋지 않은 사람들에게 쾌유를 바라는 인사를 활성화합니다.</Korean>
             <Japanese>体調があまり良くない人のために、快気祝いをすることができる。</Japanese>
             <Chinesesimp>为身体不适的人提供康复祝福</Chinesesimp>
         </Key>
@@ -2768,7 +2768,7 @@
             <Portuguese>Desativar os desejos de melhoras</Portuguese>
             <Russian>Отключить пожелания выздоровления</Russian>
             <German>Genesungswünsche deaktivieren</German>
-            <Korean>건강 인사말 끄기</Korean>
+            <Korean>쾌유 인사말 비활성화</Korean>
             <Japanese>健康挨拶をオフにする</Japanese>
             <Chinesesimp>关闭健康问候语</Chinesesimp>
         </Key>
