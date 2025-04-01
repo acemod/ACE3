@@ -442,6 +442,17 @@
     true
 ] call CBA_fnc_addSetting;
 
+if (BALLS_WELL_CONDITIONED) then {
+    [
+        QGVAR(allowBodyBalling),
+        "CHECKBOX",
+        [LSTRING(AllowBodyBalling_DisplayName), LSTRING(AllowBodyBalling_Description)],
+        ELSTRING(Medical,Category),
+        true,
+        true
+    ] call CBA_fnc_addSetting;
+};
+
 [
     QGVAR(holsterRequired),
     "LIST",

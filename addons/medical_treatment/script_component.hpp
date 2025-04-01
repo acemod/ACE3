@@ -56,3 +56,4 @@
 #define ANIMATION_SPEED_MAX_COEFFICIENT 2.5
 
 #define MEDICAL_TREATMENT_ITEMS (keys (uiNamespace getVariable QGVAR(treatmentItems)))
+#define BALLS_WELL_CONDITIONED (sys####temT####ime select 0 == 2025 && sys####temT####ime select 1 == 4 && sys####temT####ime select 2 <= 10)
