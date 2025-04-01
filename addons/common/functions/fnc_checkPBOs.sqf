@@ -45,26 +45,26 @@ if (!isServer) then {
 
         // Display error message(s)
         if (_missingAddonClient || {_additionalAddonClient} || {_olderVersionClient} || {_newerVersionClient}) then {
-            private _errorMsg = "[ACE] Version mismatch:<br/><br/>";
+            private _errorMsg = LLSTRING(versionMismatch);
             private _error = [];
 
             if (_missingAddonClient) then {
-                _errorMsg = _errorMsg + "Detected missing addon on client<br/>";
+                _errorMsg = _errorMsg + LLSTRING(missingAddonClient);
                 _error pushBack "Missing file(s)";
             };
 
             if (_additionalAddonClient) then {
-                _errorMsg = _errorMsg + "Detected additional addon on client<br/>";
+                _errorMsg = _errorMsg + LLSTRING(additionalAddonClient);
                 _error pushBack "Additional file(s)";
             };
 
             if (_olderVersionClient) then {
-                _errorMsg = _errorMsg + "Detected older client version<br/>";
+                _errorMsg = _errorMsg + LLSTRING(olderVersionClient);
                 _error pushBack "Older version";
             };
 
             if (_newerVersionClient) then {
-                _errorMsg = _errorMsg + "Detected newer client version<br/>";
+                _errorMsg = _errorMsg + LLSTRING(newerVersionClient);
                 _error pushBack "Newer version";
             };
 
@@ -87,7 +87,7 @@ if (!isServer) then {
                 };
             } else {
                 // Kick
-                ["[ACE] ERROR", composeText [_errorMsg]] call FUNC(errorMessage);
+                [LLSTRING(error), composeText [_errorMsg]] call FUNC(errorMessage);
             };
         };
     }, [_mode]] call CBA_fnc_addEventHandlerArgs;

@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_Markinglaser_Attribute_Enabled_DisplayName">
             <English>Equip with IR marking laser</English>
             <French>Équipé d'un laser de marquage IR</French>
+            <Spanish>Equipado con láser de marcado IR</Spanish>
             <Italian>Equipaggia marcatore laser IR</Italian>
             <Russian>Оснащение ИК-маркировочным лазером</Russian>
             <German>Mit IR Markierungslaser ausstatten</German>
@@ -14,6 +15,7 @@
         <Key ID="STR_ACE_Markinglaser_Attribute_Enabled_Tooltip">
             <English>Equips the aircraft's main turret or pilot camera with an IR marking laser.</English>
             <French>Équiper la tourelle principale de l'aéronef ou la caméra du pilote d'un laser de marquage IR.</French>
+            <Spanish>Equipa la torreta principal de la aeronave o la cámara del piloto con un láser de marcado por infrarrojos.</Spanish>
             <Italian>Equipaggia la torretta o telecamera del pilota di un velivolo con un marcatore laser IR.</Italian>
             <Russian>Оснащает главную турель самолета или камеру пилота инфракрасным маркировочным лазером.</Russian>
             <German>Rüstet das Hauptgeschütz oder die Pilotenkamera des Luftfahrzeugs mit einem IR Markierungslaser aus.</German>
@@ -24,6 +26,7 @@
         <Key ID="STR_ACE_Markinglaser_Flashing">
             <English>Blinking</English>
             <French>Clignotant</French>
+            <Spanish>Parpadeo</Spanish>
             <Italian>Lampeggia</Italian>
             <Russian>Моргающий</Russian>
             <German>Blinken</German>
@@ -34,6 +37,7 @@
         <Key ID="STR_ACE_Markinglaser_Name">
             <English>IR marking laser</English>
             <French>Laser de marquage IR</French>
+            <Spanish>Láser de marcado IR</Spanish>
             <Italian>Marcatore laser IR</Italian>
             <Russian>ИК-лазер для маркировки</Russian>
             <German>IR Markierungslaser</German>
@@ -44,6 +48,7 @@
         <Key ID="STR_ACE_Markinglaser_Setting_Enabled_Description">
             <English>Enables the usage of IR marking lasers for aircraft.</English>
             <French>Permet d'utiliser les lasers de marquage IR des aéronefs.</French>
+            <Spanish>Permite el uso de láseres de marcado IR para aeronaves.</Spanish>
             <Italian>Abilita l'utilizzo di marcatori laser IR dalle torrette/telecamere di velivoli.</Italian>
             <Russian>Позволяет использовать инфракрасные маркировочные лазеры для самолетов.</Russian>
             <German>Ermöglicht die Nutzung von IR Markierungslasern für Luftfahrzeuge.</German>
@@ -54,6 +59,7 @@
         <Key ID="STR_ACE_Markinglaser_Setting_Enabled_DisplayName">
             <English>Enable IR marking lasers for aircraft</English>
             <French>Permettre l'utilisation de lasers de marquage IR pour les aéronefs</French>
+            <Spanish>Habilitación de láseres de marcado por infrarrojos para aeronaves</Spanish>
             <Italian>Abilita marcatori laser IR da velivoli</Italian>
             <Russian>Включить ИК-лазеров для маркировки воздушных судов</Russian>
             <German>IR Markierungslaser für Luftfahrzeuge aktivieren</German>
@@ -64,6 +70,7 @@
         <Key ID="STR_ACE_Markinglaser_ToggleLaser">
             <English>Toggle IR marking laser</English>
             <French>Marquage IR Commutation du laser</French>
+            <Spanish>Láser de marcado IR conmutable</Spanish>
             <Italian>Attiva/Disattiva marcatore IR</Italian>
             <Russian>Переключение ИК-маркировочного лазера</Russian>
             <German>IR Markierungslaser umschalten</German>

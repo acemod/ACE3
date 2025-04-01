@@ -39,6 +39,11 @@ if (isServer) then {
 // replace medical items with their ACE equivalents
 ["CBA_settingsInitialized", {
     TRACE_1("CBA_settingsInitialized EH",GVAR(convertItems)); // 0: Enabled 1: RemoveOnly 2:Disabled
+
+    if (GVAR(allowBodyBalling)) then {
+        [] call FUNC(canTreatWellness);
+    };
+
     if (GVAR(convertItems) == 2) exitWith {};
     {
         // turn [["stuff", 2], ...] into ["stuff", "stuff", ...]

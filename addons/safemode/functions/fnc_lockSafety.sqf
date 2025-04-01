@@ -8,6 +8,7 @@
  * 1: Weapon <STRING>
  * 2: Muzzle <STRING>
  * 3: Show hint <BOOL> (default: true)
+ * 3: Only unlock <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -18,7 +19,7 @@
  * Public: No
  */
 
-params ["_unit", "_weapon", "_muzzle", ["_hint", true]];
+params ["_unit", "_weapon", "_muzzle", ["_hint", true], ["_onlyUnlock", false]];
 
 private _safedWeapons = _unit getVariable QGVAR(safedWeapons);
 
@@ -35,6 +36,7 @@ private _safedWeaponMuzzles = _safedWeapons getOrDefault [_weapon, createHashMap
 if (_muzzle in _safedWeaponMuzzles) exitWith {
     [_unit, _weapon, _muzzle, _hint] call FUNC(unlockSafety);
 };
+if (_onlyUnlock) exitWith {};
 
 private _weaponSelected = currentWeapon _unit == _weapon;
 private _firemode = (_unit weaponState _muzzle) select 2;
