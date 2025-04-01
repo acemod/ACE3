@@ -26,5 +26,4 @@ Hide the (non-primed) preview grenade object by
 ```sqf
 ace_advanced_throwing_hiddenThrowables pushBack "grenadeHand"; // disable specific grenade types (CfgAmmo classname)
 ace_advanced_throwing_hiddenThrowables pushBack true; // disable all
-
 ```
