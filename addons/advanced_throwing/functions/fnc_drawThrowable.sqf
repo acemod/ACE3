@@ -86,6 +86,7 @@ if (isNull _activeThrowable || {!_primed && {_throwableType != typeOf _activeThr
     _activeThrowable = _throwableType createVehicleLocal [0, 0, 0];
     _activeThrowable enableSimulation false;
     ACE_player setVariable [QGVAR(activeThrowable), _activeThrowable];
+
     if ((GVAR(hiddenThrowables) findIf {(_x isEqualTo true) || {_x == _throwableType}}) != -1) then {
         //if show disabled, hide active but retain vehicle for path calculation.
         hideObject _activeThrowable;
