@@ -10,9 +10,6 @@ if (!hasInterface) exitWith {};
 // Temporary Wind Info indication
 GVAR(tempWindInfo) = false;
 
-//Enable/Disable grenade preview when preparing
-GVAR(showThrowable) = true;
-
 // Add keybinds
 ["ACE3 Weapons", QGVAR(prepare), LLSTRING(Prepare), {
     // Condition
