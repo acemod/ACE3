@@ -35,7 +35,8 @@ if (_elevationMode == 0) then {
     // For turrets not using an elevation mode (i.e. mouse controls elevation instead of pageUp/Down)
     // Show the info 1 step below, so it doesn't block vanilla ranging (discreteDistance)
     // vanilla zeroing will have a negative effect, so it's best to range as low as possible
-    private _y = 3.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25) + (profileNamespace getVariable ['IGUI_GRID_WEAPON_Y', (safeZoneY + 0.5 * ((((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25))]);
+    private _safeZoneGrid = (((safeZoneW / safeZoneH) min 1.2) / 1.2) / 25;
+    private _y = 3.5 * _safeZoneGrid + (profileNamespace getVariable ['IGUI_GRID_WEAPON_Y', safeZoneY + 0.5 * _safeZoneGrid]);
     _ctrlGroup ctrlSetPositionY _y;
     _ctrlGroup ctrlCommit 0;
 };
