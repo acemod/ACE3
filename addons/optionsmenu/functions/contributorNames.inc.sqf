@@ -186,4 +186,3 @@
 "Zakant",
 "zGuba",
 "Zman6258"
-"Alfred Neuman"
