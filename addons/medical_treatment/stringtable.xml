@@ -2756,7 +2756,7 @@
             <Russian>Позволяет пожелать выздоровления людям, которые чувствуют себя не очень хорошо.</Russian>
             <German>Ermöglicht Genesungswünsche für Menschen, denen es nicht so gut geht.</German>
             <Korean>컨디션이 좋지 않은 사람들을 위해 건강을 기원할 수 있습니다.</Korean>
-            <Japanese>体調があまり良くない人のために、快気祝いをすることができる。</Japanese>
+            <Japanese>体調があまり良くない人に対して、回復を祈ることができます。</Japanese>
             <Chinesesimp>为身体不适的人提供康复祝福</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_AllowBodyBalling_DisplayName">
@@ -2769,7 +2769,7 @@
             <Russian>Отключить пожелания выздоровления</Russian>
             <German>Genesungswünsche deaktivieren</German>
             <Korean>건강 인사말 끄기</Korean>
-            <Japanese>健康挨拶をオフにする</Japanese>
+            <Japanese>快気の祈りを無効化</Japanese>
             <Chinesesimp>关闭健康问候语</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Medical_Treatment_HeavilyWounded">
