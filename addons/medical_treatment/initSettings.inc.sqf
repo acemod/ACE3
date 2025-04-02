@@ -447,7 +447,7 @@ if (BALLS_WELL_CONDITIONED) then {
         QGVAR(allowBodyBalling),
         "CHECKBOX",
         [LSTRING(AllowBodyBalling_DisplayName), LSTRING(AllowBodyBalling_Description)],
-        ELSTRING(Medical,Category),
+        ELSTRING(medical,Category),
         true,
         true
     ] call CBA_fnc_addSetting;
