@@ -1694,6 +1694,7 @@
             <English>Detected additional addon on client&lt;br/&gt;</English>
             <Chinesesimp>检测到客户端多余模组&lt;br/&gt;</Chinesesimp>
             <French>Détection d'un addon supplémentaire sur le client&lt;br/&gt;.</French>
+            <Japanese>クライアントに追加のアドオンを検出しました&lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_aiOnly">
             <English>AI only</English>
@@ -1712,6 +1713,7 @@
             <English>, and %1 more.</English>
             <Chinesesimp>, 以及另外%1个</Chinesesimp>
             <French>et %1 de plus.</French>
+            <Japanese>、その他 %1 件。</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_bananaDescr">
             <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
@@ -1787,11 +1789,13 @@
             <English>client additional</English>
             <Chinesesimp>客户端多余</Chinesesimp>
             <French>client additionnel</French>
+            <Japanese>クライアント追加</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_clientMissing">
             <English>client missing</English>
             <Chinesesimp>客户端缺少</Chinesesimp>
             <French>client absent</French>
+            <Japanese>クライアント不足</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
@@ -1829,11 +1833,13 @@
             <English>[ACE] ERROR</English>
             <Chinesesimp>[ACE] 错误</Chinesesimp>
             <French>[ACE] Erreur</French>
+            <Japanese>[ACE] エラー</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_isMissingItems">
             <English>[ACE] %1: ERROR %2 addon(s): </English>
             <Chinesesimp>[ACE] %1: 错误 %2模组: </Chinesesimp>
             <French>[ACE] %1: ERROR %2 addon(s): </French>
+            <Japanese>[ACE] %1: エラー %2 アドオン:</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_loadObject">
             <English>Load</English>
@@ -1875,26 +1881,31 @@
             <English>Detected missing addon on client&lt;br/&gt;</English>
             <Chinesesimp>检测到客户端缺少模组&lt;br/&gt;</Chinesesimp>
             <French>Détection d'un addon manquant sur le client&lt;br/&gt;.</French>
+            <Japanese>クライアントにアドオンの不足を検出しました&lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_newerClient">
             <English>newer client</English>
             <Chinesesimp>客户端过新</Chinesesimp>
             <French>client plus récent</French>
+            <Japanese>新しいクライアント</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_newerVersionClient">
             <English>Detected newer client version&lt;br/&gt;</English>
             <Chinesesimp>检测到客户端过新模组&lt;br/&gt;</Chinesesimp>
             <French>Détection d'une version plus récente du client&lt;br/&gt;.</French>
+            <Japanese>新しいクライアント バージョンを検出しました&lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_olderClient">
             <English>older client</English>
             <Chinesesimp>客户端过旧</Chinesesimp>
             <French>ancien client</French>
+            <Japanese>古いクライアント</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_olderVersionClient">
             <English>Detected older client version&lt;br/&gt;</English>
             <Chinesesimp>检测到客户端过旧模组&lt;br/&gt;</Chinesesimp>
             <French>Détection d'une version plus ancienne du client&lt;br/&gt;.</French>
+            <Japanese>古いクライアント バージョンを検出しました&lt;br/&gt;</Japanese>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
@@ -2057,6 +2068,7 @@
             <Chinesesimp>[ACE] 版本不匹配:&lt;br/&gt;&lt;br/&gt;</Chinesesimp>
             <German>[ACE] Erreur de version : &lt;br/&gt;&lt;br/&gt;</German>
             <French>[ACE] Erreur de version : &lt;br/&gt;&lt;br/&gt;</French>
+            <Japanese>[ACE] バージョン不一致:&lt;br/&gt;&lt;br/&gt;</Japanese>
         </Key>
     </Package>
 </Project>
