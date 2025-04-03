@@ -90,7 +90,7 @@ if (isNull _lockCanidate) then {
         _args set [6, false]; // _haveLock = false;
     };
 } else {
-    private _angle = [_lockAngle, _uncageAngle] select GVAR(isUncageKeyDown);
+    private _angle = [_lockAngle, _uncageAngle] select CBA_events_control;
     private _strength = [_lockCanidate, _angle, _seekerMaxRange] call _fnc_searchTarget;
     if (_strength == 0) exitWith {
         _haveLock = false;
