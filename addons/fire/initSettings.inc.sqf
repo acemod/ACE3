@@ -36,5 +36,6 @@
     "CHECKBOX",
     [LSTRING(Setting_EnableScreams), LSTRING(Setting_EnableScreams_Description)],
     LSTRING(Category_DisplayName),
-    true
+    true,
+    2
 ] call CBA_fnc_addSetting;
