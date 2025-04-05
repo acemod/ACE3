@@ -4,7 +4,7 @@
  * Adds a group id color mapping.
  *
  * Arguments:
- * 0: Group ID or group <STRING><GROUP>
+ * 0: Group ID or group <STRING or GROUP>
  * 1: Leader color array (4 numbers including alpha) <ARRAY>
  * 2: Unit (non-leader) color array (4 numbers including alpha) <ARRAY>
  *

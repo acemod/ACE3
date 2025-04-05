@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Unit is carrying a flag <BOOLEAN>
+ * Unit is carrying a flag <BOOL>
  *
  * Example:
  * [player] call ace_flags_fnc_isCarryingFlag

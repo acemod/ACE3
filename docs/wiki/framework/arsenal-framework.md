@@ -222,7 +222,7 @@ class ace_arsenal_stats {
 ```
 
 The arguments passed to the bar, text and condition statements are:
-- The stats array `<ARRAY of STRINGS>`
+- The stats array `<ARRAY of STRINGs>`
 - The config entry of the item `<CONFIG>`
 
 ### 5.2 Adding stats via a function

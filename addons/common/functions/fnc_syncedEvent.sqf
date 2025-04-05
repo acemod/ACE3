@@ -1,12 +1,12 @@
 #include "..\script_component.hpp"
 /*
  * Author: jaynus
- * Call and propegate a synced event
+ * Call and propagate a synced event
  *
  * Arguments:
  * 0: Name <STRING>
  * 1: Arguments <ARRAY>
- * 2: TTL <NUMBER, CODE> [Optional] for this specific event call
+ * 2: TTL <NUMBER or CODE> (default: 0)
  *
  * Return Value:
  * Boolean of success <BOOL>

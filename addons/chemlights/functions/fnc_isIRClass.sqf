@@ -4,7 +4,7 @@
  * Check if an ammo classname is an IR chemlight.
  *
  * Arguments:
- * 0: Projectile or ammo classname <OBJECT> or <STRING>
+ * 0: Projectile or ammo classname <OBJECT or STRING>
  *
  * Return Value:
  * Is IR chemlight? <BOOL>

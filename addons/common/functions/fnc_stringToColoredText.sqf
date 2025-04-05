@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Text <ANY>
- * 1: Color <ARRAY, STRING>
+ * 1: Color <ARRAY or STRING>
  *
  * Return Value:
  * Text <STRING>

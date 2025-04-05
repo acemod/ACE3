@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- * Retrives list of current status effects
+ * Retrieves list of current status effects
  *
  * Arguments:
  * 0: Vehicle that it will be attached to (player or vehicle) <OBJECT>
@@ -9,7 +9,7 @@
  *
  * Return Value:
  * Effect status <ARRAY>
- *  0: is activly set (if false, the effect is ignored and never modified) <BOOL>
+ *  0: is actively set (if false, the effect is ignored and never modified) <BOOL>
  *  1: reasons why it is set true (list of strings, count of 0 = false, 1+ = true) <ARRAY>
  *
  * Example:

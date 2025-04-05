@@ -6,8 +6,8 @@
  * Arguments:
  * 0: Vehicle <OBJECT>
  * 1: Display Text <STRING>
- * 2: Text Size <NUMBER> (Optional)
- * 3: Text Color <STRING> (Optional)
+ * 2: Text Size <NUMBER> (default: 0.3)
+ * 3: Text Color <STRING> (default: f7e9e1f8)
  *
  * Return Value:
  * None
