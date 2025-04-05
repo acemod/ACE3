@@ -4,6 +4,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_action">
             <English>Configure M712 Shell</English>
             <French>Configurer l'obus M712</French>
+            <Spanish>Configurar M712</Spanish>
             <Italian>Configura granata M712</Italian>
             <German>M712 Geschoss konfigurieren</German>
             <Korean>M712 포탄 설정</Korean>
@@ -13,6 +14,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_FlightProfile">
             <English>Flight Profile</English>
             <French>Profil de vol</French>
+            <Spanish>Perfil de vuelo</Spanish>
             <Italian>Profilo di volo</Italian>
             <German>Flugprofil</German>
             <Korean>비행 방식</Korean>
@@ -22,6 +24,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_copperhead_dial_GuidanceDelay">
             <English>Guidance Delay</English>
             <French>Latence d'induction</French>
+            <Spanish>Retraso en la orientación</Spanish>
             <Italian>Latenza di guida</Italian>
             <German>Lenkverzögerung</German>
             <Korean>유도 지연 시간</Korean>
@@ -31,6 +34,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_descriptionShort">
             <English>Semi-Active Laser Guided 40mm Grenade</English>
             <French>Grenade semi-active à guidage laser de 40 mm</French>
+            <Spanish>Granada semiactiva de 40 mm guiada por láser</Spanish>
             <Italian>Granata 40mm a guida laser semi-attiva</Italian>
             <German>Halbaktive lasergelenkte 40 mm Granate</German>
             <Russian>Полуактивная 40-мм граната с лазерным наведением</Russian>
@@ -41,6 +45,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayName">
             <English>40mm Pike</English>
             <French>40mm Pike</French>
+            <Spanish>40mm Pike</Spanish>
             <Italian>40mm Pike</Italian>
             <German>40mm Pike</German>
             <Russian>40мм pike</Russian>
@@ -51,6 +56,7 @@
         <Key ID="STR_ACE_MISSILE_CLGP_pike_magazine_displayNameShort">
             <English>Pike SALH</English>
             <French>Pike SALH</French>
+            <Spanish>Pike SALH</Spanish>
             <Italian>Pike SALH</Italian>
             <German>Pike SALH</German>
             <Russian>Pike SALH</Russian>

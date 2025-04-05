@@ -2,6 +2,15 @@ class RscControlsGroupNoHScrollbars;
 class RscHTML;
 class RscText;
 
+class ctrlStaticPicture;
+class ACE_CtrlConfetti: ctrlStaticPicture {
+    text = QPATHTOF(gui\confetti_ca.paa);
+    w = "32 * pixelW";
+    h = "32 * pixelH";
+    x = "safeZoneX - 32 * pixelW";
+    y = "safeZoneY - 32 * pixelH";
+};
+
 class RscStandardDisplay;
 class RscDisplayMain: RscStandardDisplay {
     class controls {
@@ -73,5 +82,41 @@ class RscDisplayMain: RscStandardDisplay {
                 };
             };
         };
+
+        class ACE_ContributorThanks: RscText {
+            idc = 13501;
+            text = "";
+            style = 2;
+            shadow = 2;
+            sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+            w = "1";
+            x = "0";
+            h = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+            y = "safezoneY + (3 + 0.5 * 6) * (pixelH * pixelGrid * 2)";
+        };
+
+        class ACE_ContributorName: ACE_ContributorThanks {
+            idc = 13502;
+            text = "";
+            font = "RobotoCondensedBold";
+            sizeEx = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 2)";
+            h = "(((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 2)";
+            y = "safezoneY + (3 + 0.5 * 6) * (pixelH * pixelGrid * 2) + (((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) * 1)";
+        };
+
+        class Logo;
+        class ACE_AnniversaryLogo: Logo {
+            onLoad = QUOTE(call (uiNamespace getVariable QQFUNC(onLoadAnniversaryLogo)));
+            text = QPATHTOF(gui\ace10years_ca.paa);
+            onButtonClick = QUOTE(call (uiNamespace getVariable QQFUNC(confettiShower)));
+            tooltip = "Party Time!";
+
+            w = "2 * 6 * (pixelW * pixelGrid * 2)";
+            x = "0.5 - 6 * (pixelW * pixelGrid * 2)";
+            h = "1 * 6 * (pixelH * pixelGrid * 2)";
+            y = "safezoneY + (3 - 0.5 * 6) * (pixelH * pixelGrid * 2)";
+        };
+
+        class ACE_CtrlConfettiPreload: ACE_CtrlConfetti {};
     };
 };
