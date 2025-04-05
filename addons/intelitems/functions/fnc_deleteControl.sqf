@@ -26,9 +26,12 @@ GVAR(controlsData) set [_index, [_posX, _posY]];
 // Update data if modified
 private _ctrlContent = _controlsGroup controlsGroupCtrl IDC_CONTENT;
 private _data = ctrlText _ctrlContent;
+private _savedData = GET_DATA(_index) select 0;
 
-if (_data isNotEqualTo GET_DATA(_index)) then {
-    SET_DATA(_index,_data);
+if (_data isNotEqualTo _savedData) then {
+    private _ctrlHeader = _controlsGroup controlsGroupCtrl IDC_HEADER;
+    private _header = ctrlText _ctrlHeader;
+    SET_DATA(_index,_data,_header);
 };
 
 // Delete the controls group

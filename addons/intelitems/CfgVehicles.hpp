@@ -24,6 +24,16 @@ class CfgVehicles {
         editorSubcategory = QUOTE(XADDON);
         GVAR(magazine) = "";
         class Attributes {
+            class GVAR(header) {
+                displayName = CSTRING(Header);
+                tooltip = CSTRING(Header_Tooltip);
+                property = QGVAR(header);
+                control = "Edit";
+                expression = QUOTE([ARR_2(FUNC(setObjectHeader),[ARR_2(_this,_value)])] call CBA_fnc_execNextFrame;);
+                defaultValue = "''";
+                validate = "STRING";
+                typeName = "STRING";
+            };
             class GVAR(data) {
                 displayName = CSTRING(Text);
                 property = QGVAR(data);
@@ -74,9 +84,10 @@ class CfgVehicles {
         scopeCurator = 2;
         GVAR(magazine) = QXGVAR(photo);
         class Attributes: Attributes {
+            class GVAR(header): GVAR(header) {};
             class GVAR(data): GVAR(data) {
                 displayName = CSTRING(Photo_Filename);
-                control = "Edit";
+                control = "edit";
             };
         };
     };
