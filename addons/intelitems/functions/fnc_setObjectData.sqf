@@ -24,7 +24,7 @@ if (_index == -1) then {
     GVAR(intelCount) = GVAR(intelCount) + 1;
     _object setVariable [QGVAR(index), _index, true];
     if (isNil "_header") then {
-        _header = getText(configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
+        _header = getText (configOf _object >> "displayName");
     };
 } else {
     if (isNil "_header") then {
