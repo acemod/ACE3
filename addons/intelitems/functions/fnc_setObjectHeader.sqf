@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Object <OBJECT>
- * 1: Data <STRING>
+ * 1: Header <STRING>
  *
  * Return Value:
  * None
