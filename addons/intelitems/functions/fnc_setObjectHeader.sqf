@@ -17,7 +17,7 @@
  */
 
 params ["_object", "_header"];
-TRACE_1("setObjectData",_this);
+TRACE_1("setObjectHeader",_this);
 private _data = "";
 private _index = _object getVariable [QGVAR(index), -1];
 if (_index == -1) then {
