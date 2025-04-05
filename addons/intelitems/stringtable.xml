@@ -185,7 +185,6 @@
             <Turkish>Üstbilgi</Turkish>
         </Key>
         <Key ID="STR_ACE_IntelItems_Header_Tooltip">
-            <Original>Defines the header for the intel item. If the value is empty (""), the object's display name is used.</Original>
             <English>Defines the header for the intel item. If the value is empty (""), the object's display name is used.</English>
         </Key>
     </Package>
