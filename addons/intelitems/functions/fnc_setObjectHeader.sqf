@@ -27,7 +27,4 @@ if (_index == -1) then {
 } else {
     _data = GET_DATA(_index) select 0;
 };
-if (_header == "") then {
-    _header = getText(configFile >> "CfgVehicles" >> typeOf _object >> "displayName");
-};
 SET_DATA(_index,_data,_header);
