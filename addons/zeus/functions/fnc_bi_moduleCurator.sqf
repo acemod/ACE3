@@ -318,7 +318,7 @@ if (_activated) then {
             waitUntil {alive player};
 
             // Show warning when Zeus key is not assigned
-            if (count (actionKeys "curatorInterface") == 0) then {
+            if ((actionKeys "curatorInterface") isEqualTo []) then {
                 [
                     format [
                         localize "str_a3_cfgvehicles_modulecurator_f_keyNotAssigned",
