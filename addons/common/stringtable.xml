@@ -1696,6 +1696,7 @@
             <Korean>클라이언트에게서 추가 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <French>Détection d'un addon supplémentaire sur le client&lt;br/&gt;.</French>
             <Japanese>クライアントに追加のアドオンを検出しました&lt;br/&gt;</Japanese>
+            <Russian>Обнаружен дополнительный аддон на клиенте&lt;br/&gt;</Russian>
         </Key>
         <Key ID="STR_ACE_Common_aiOnly">
             <English>AI only</English>
@@ -1716,6 +1717,7 @@
             <Korean>, 그리고 %1개의 애드온.</Korean>
             <French>et %1 de plus.</French>
             <Japanese>、その他 %1 件。</Japanese>
+            <Russian>, и ещё %1.</Russian>
         </Key>
         <Key ID="STR_ACE_Common_bananaDescr">
             <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
@@ -1793,6 +1795,7 @@
             <Korean>클라이언트의 추가</Korean>
             <French>client additionnel</French>
             <Japanese>クライアント追加</Japanese>
+            <Russian>дополнительный клиент</Russian>
         </Key>
         <Key ID="STR_ACE_Common_clientMissing">
             <English>client missing</English>
@@ -1800,6 +1803,7 @@
             <Korean>클라이언트의 누락</Korean>
             <French>client absent</French>
             <Japanese>クライアント不足</Japanese>
+            <Russian>потерян клиент</Russian>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
@@ -1839,6 +1843,7 @@
             <Korean>[ACE] 오류</Korean>
             <French>[ACE] Erreur</French>
             <Japanese>[ACE] エラー</Japanese>
+            <Russian>[ACE] ОШИБКА</Russian>
         </Key>
         <Key ID="STR_ACE_Common_isMissingItems">
             <English>[ACE] %1: ERROR %2 addon(s): </English>
@@ -1846,6 +1851,7 @@
             <Korean>[ACE] %1: %2 애드온(들)에 오류:</Korean>
             <French>[ACE] %1: ERROR %2 addon(s): </French>
             <Japanese>[ACE] %1: エラー %2 アドオン:</Japanese>
+            <Russian>[ACE] %1: ОШИБКА %2 аддон(ов): </Russian>
         </Key>
         <Key ID="STR_ACE_Common_loadObject">
             <English>Load</English>
@@ -1889,6 +1895,7 @@
             <Korean>클라이언트에게서 누락된 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <French>Détection d'un addon manquant sur le client&lt;br/&gt;.</French>
             <Japanese>クライアントにアドオンの不足を検出しました&lt;br/&gt;</Japanese>
+            <Russian>Обнаружен отсутствующий аддон на клиенте &lt;br/&gt;</Russian>
         </Key>
         <Key ID="STR_ACE_Common_newerClient">
             <English>newer client</English>
@@ -1896,6 +1903,7 @@
             <Korean>새 버전의 클라이언트</Korean>
             <French>client plus récent</French>
             <Japanese>新しいクライアント</Japanese>
+            <Russian>новый клиент</Russian>
         </Key>
         <Key ID="STR_ACE_Common_newerVersionClient">
             <English>Detected newer client version&lt;br/&gt;</English>
@@ -1903,6 +1911,7 @@
             <Korean>클라이언트에게서 새 버전의 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <French>Détection d'une version plus récente du client&lt;br/&gt;.</French>
             <Japanese>クライアントに新しいバージョンを検出しました&lt;br/&gt;</Japanese>
+            <Russian>Обнаружена более новая версия клиента &lt;br/&gt;</Russian>
         </Key>
         <Key ID="STR_ACE_Common_olderClient">
             <English>older client</English>
@@ -1910,6 +1919,7 @@
             <Korean>구버전의 클라이언트</Korean>
             <French>ancien client</French>
             <Japanese>古いクライアント</Japanese>
+            <Russian>старый клиент</Russian>
         </Key>
         <Key ID="STR_ACE_Common_olderVersionClient">
             <English>Detected older client version&lt;br/&gt;</English>
@@ -1917,6 +1927,7 @@
             <Korean>클라이언트에게서 구버전의 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
             <French>Détection d'une version plus ancienne du client&lt;br/&gt;.</French>
             <Japanese>クライアントに古いバージョンを検出しました&lt;br/&gt;</Japanese>
+            <Russian>Обнаружена более старая версия клиента &lt;br/&gt;</Russian>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
@@ -2081,6 +2092,7 @@
             <German>[ACE] Erreur de version : &lt;br/&gt;&lt;br/&gt;</German>
             <French>[ACE] Erreur de version : &lt;br/&gt;&lt;br/&gt;</French>
             <Japanese>[ACE] バージョン不一致:&lt;br/&gt;&lt;br/&gt;</Japanese>
+            <Russian>[ACE] Несоответствие версии:&lt;br/&gt;&lt;br/&gt;</Russian>
         </Key>
     </Package>
 </Project>
