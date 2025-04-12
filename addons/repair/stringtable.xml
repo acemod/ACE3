@@ -2045,7 +2045,7 @@
             <Russian>Максимальный уровень, до которого колесо может быть починено.</Russian>
             <German>Maximales Level, bis zu dem ein Rad geflickt werden kann.\n0% bedeutet, dass das Rad vollständig repariert werden kann.</German>
             <Korean>바퀴를 수리할 수 있는 최대 레벨입니다.</Korean>
-            <Japanese>タイヤをのダメージ補修できる最大の度合い。/n 0%は、すべてのダメージが修復可能であることを意味します。</Japanese>
+            <Japanese>タイヤのダメージを補修できる最大の度合い。\n 0%は、すべてのダメージが修復可能であることを意味します。</Japanese>
             <Chinesesimp>允许补胎时轮胎所能承受的最大损伤\n0%意味着所有损伤都能补</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_DisplayName">
