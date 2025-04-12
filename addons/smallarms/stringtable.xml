@@ -32,6 +32,74 @@
             <Chinesesimp>9 mm 17发 弹匣</Chinesesimp>
             <Turkish>9 mm 17 Merm. Şarjör</Turkish>
         </Key>
+        <Key ID="STR_ACE_SmallArms_17Rnd_9x19_yellow_Name">
+            <Original>9 mm 17Rnd Reload Tracer (Yellow) Mag</Original>
+            <Chinese>9 mm 17 發重新裝填曳光彈（黃）彈匣</Chinese>
+            <French>Mag. 17 traçantes recharge jaunes 9 mm</French>
+            <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (amarillo) de 9 mm</Spanish>
+            <Italian>Caricatore 17 colpi 9 mm con traccianti intervallati (gialli)</Italian>
+            <Polish>17-nab. mag. przeł. 9 mm (żółty smugacz)</Polish>
+            <Russian>Магазин, 17 патр. с послед. трас. 9 мм (желтые)</Russian>
+            <German>17-Schuss-9mm-Magazin (Nachlade-Leuchtspur Gelb)</German>
+            <Czech>9 mm, 17ks zásobník nabíjecí stopovky (žluté)</Czech>
+            <English>9 mm 17Rnd Reload Tracer (Yellow) Mag</English>
+            <Portuguese>Carregador 17Mun. Traçante Recarga (Amarelo) 9 mm</Portuguese>
+            <Korean>9mm 17발 재장전 예광탄 (황색) 탄창</Korean>
+            <Chinesesimp>9 毫米 17 发装弹指示（黄色）弹匣</Chinesesimp>
+            <Japanese>9mm 17Rnd 装填トレーサー（黄）マガジン</Japanese>
+            <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Sarı) Şarjör</Turkish>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_17Rnd_9x19_red_Name">
+            <Original>9 mm 17Rnd Reload Tracer (Red) Mag</Original>
+            <Chinese>9 mm 17 發重新裝填曳光彈（紅）彈匣</Chinese>
+            <French>Mag. 17 traçantes recharge rouges 9 mm</French>
+            <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (rojo) de 9 mm</Spanish>
+            <Italian>Caricatore 17 colpi 9 mm con traccianti intervallati (rossi)</Italian>
+            <Polish>17-nab. mag. przeł. 9 mm (czerwony smugacz)</Polish>
+            <Russian>Магазин, 17 патр. с послед. трас. 9 мм (красные)</Russian>
+            <German>17-Schuss-9mm-Magazin (Nachlade-Leuchtspur Rot)</German>
+            <Czech>9 mm, 17ks zásobník nabíjecí stopovky (červené)</Czech>
+            <English>9 mm 17Rnd Reload Tracer (Red) Mag</English>
+            <Portuguese>Carregador 17Mun. Traçante Recarga (Vermelho) 9 mm</Portuguese>
+            <Korean>9mm 17발 재장전 예광탄 (적색) 탄창</Korean>
+            <Chinesesimp>9 毫米 17 发装弹指示（红色）弹匣</Chinesesimp>
+            <Japanese>9mm 17Rnd 装填トレーサー（赤）マガジン</Japanese>
+            <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Kırmızı) Şarjör</Turkish>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_17Rnd_9x19_green_Name">
+            <Original>9 mm 17Rnd Reload Tracer (Green) Mag</Original>
+            <Chinese>9 mm 17 發重新裝填曳光彈（綠）彈匣</Chinese>
+            <French>Mag. 17 traçantes recharge vertes 9 mm</French>
+            <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (verde) de 9 mm</Spanish>
+            <Italian>Caricatore 17 colpi 9 mm con traccianti intervallati (verdi)</Italian>
+            <Polish>17-nab. mag. przeł. 9 mm (zielony smugacz)</Polish>
+            <Russian>Магазин, 17 патр. с послед. трас. 9 мм (зеленые)</Russian>
+            <German>17-Schuss-9mm-Magazin (Nachlade-Leuchtspur Grün)</German>
+            <Czech>9 mm, 17ks zásobník nabíjecí stopovky (zelené)</Czech>
+            <English>9 mm 17Rnd Reload Tracer (Green) Mag</English>
+            <Portuguese>Carregador 17Mun. Traçante Recarga (Verde) 9 mm</Portuguese>
+            <Korean>9mm 17발 재장전 예광탄 (녹색) 탄창</Korean>
+            <Chinesesimp>9 毫米 17 发装弹指示（绿色）弹匣</Chinesesimp>
+            <Japanese>9mm 17Rnd 装填トレーサー（緑）マガジン</Japanese>
+            <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Yeşil) Şarjör</Turkish>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_17Rnd_9x19_Description">
+            <Original>Caliber: 9x21 mm&lt;br /&gt;Rounds: 17&lt;br /&gt;Used in: ROOK-40</Original>
+            <Chinese>口徑：9x21 mm&lt;br /&gt;個數：17&lt;br /&gt;用於：ROOK-40</Chinese>
+            <French>Calibre : 9x21 mm&lt;br /&gt;Munitions : 17&lt;br /&gt;Application : ROOK-40</French>
+            <Spanish>Calibre: 9x21 mm&lt;br /&gt;Cargas: 17&lt;br /&gt;Se usa en: ROOK-40</Spanish>
+            <Italian>Calibro: 9x21 mm&lt;br /&gt;Munizioni: 17&lt;br /&gt;Si usa in: ROOK-40</Italian>
+            <Polish>Kaliber: 9x21 mm&lt;br /&gt;Magazynki: 17&lt;br /&gt;Używane w: ROOK-40</Polish>
+            <Russian>Калибр: 9x21 мм&lt;br /&gt;Кол-во: 17&lt;br /&gt;Применение: Rook-40</Russian>
+            <German>Kaliber: 9x21 mm&lt;br /&gt;Patronen: 17 &lt;br /&gt;Eingesetzt von: ROOK-40</German>
+            <Czech>Ráže: 9x21 mm&lt;br /&gt;Munice: 17&lt;br /&gt;Použití: ROOK-40</Czech>
+            <English>Caliber: 9x21 mm&lt;br /&gt;Rounds: 17&lt;br /&gt;Used in: ROOK-40</English>
+            <Portuguese>Calibre: 9x21 mm&lt;br /&gt;Balas: 17&lt;br /&gt;Usada em: ROOK-40</Portuguese>
+            <Korean>구경: 9x21mm&lt;br /&gt;탄 수: 17&lt;br /&gt;사용 가능: 루크-40</Korean>
+            <Chinesesimp>类型：9x21 毫米&lt;br /&gt;容弹量：17&lt;br /&gt;用于：ROOK-40</Chinesesimp>
+            <Japanese>口径：9x21 mm&lt;br /&gt;弾薬：17&lt;br /&gt;使用：ROOK-40</Japanese>
+            <Turkish>Kalibre: 9x21 mm&lt;br /&gt;Mermi: 17&lt;br /&gt;Kullanıldığı Yer: ROOK-40</Turkish>
+        </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Name">
             <English>.45 ACP 25Rnd Mag</English>
             <Czech>.45 ACP, 25ks zásobník</Czech>
