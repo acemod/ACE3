@@ -33,7 +33,7 @@
             <Turkish>9 mm 17 Merm. Şarjör</Turkish>
         </Key>
         <Key ID="STR_ACE_SmallArms_17Rnd_9x19_yellow_Name">
-            <Original>9 mm 17Rnd Reload Tracer (Yellow) Mag</Original>
+            <English>9 mm 17Rnd Reload Tracer (Yellow) Mag</English>
             <Chinese>9 mm 17 發重新裝填曳光彈（黃）彈匣</Chinese>
             <French>Mag. 17 traçantes recharge jaunes 9 mm</French>
             <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (amarillo) de 9 mm</Spanish>
@@ -50,7 +50,7 @@
             <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Sarı) Şarjör</Turkish>
         </Key>
         <Key ID="STR_ACE_SmallArms_17Rnd_9x19_red_Name">
-            <Original>9 mm 17Rnd Reload Tracer (Red) Mag</Original>
+            <English>9 mm 17Rnd Reload Tracer (Red) Mag</English>
             <Chinese>9 mm 17 發重新裝填曳光彈（紅）彈匣</Chinese>
             <French>Mag. 17 traçantes recharge rouges 9 mm</French>
             <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (rojo) de 9 mm</Spanish>
@@ -67,7 +67,7 @@
             <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Kırmızı) Şarjör</Turkish>
         </Key>
         <Key ID="STR_ACE_SmallArms_17Rnd_9x19_green_Name">
-            <Original>9 mm 17Rnd Reload Tracer (Green) Mag</Original>
+            <English>9 mm 17Rnd Reload Tracer (Green) Mag</English>
             <Chinese>9 mm 17 發重新裝填曳光彈（綠）彈匣</Chinese>
             <French>Mag. 17 traçantes recharge vertes 9 mm</French>
             <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (verde) de 9 mm</Spanish>
@@ -84,7 +84,7 @@
             <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Yeşil) Şarjör</Turkish>
         </Key>
         <Key ID="STR_ACE_SmallArms_17Rnd_9x19_Description">
-            <Original>Caliber: 9x21 mm&lt;br /&gt;Rounds: 17&lt;br /&gt;Used in: ROOK-40</Original>
+            <English>Caliber: 9x21 mm&lt;br /&gt;Rounds: 17&lt;br /&gt;Used in: ROOK-40</English>
             <Chinese>口徑：9x21 mm&lt;br /&gt;個數：17&lt;br /&gt;用於：ROOK-40</Chinese>
             <French>Calibre : 9x21 mm&lt;br /&gt;Munitions : 17&lt;br /&gt;Application : ROOK-40</French>
             <Spanish>Calibre: 9x21 mm&lt;br /&gt;Cargas: 17&lt;br /&gt;Se usa en: ROOK-40</Spanish>
