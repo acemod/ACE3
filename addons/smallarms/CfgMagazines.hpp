@@ -92,6 +92,7 @@ class CfgMagazines {
 
     class 11Rnd_45ACP_Mag: CA_Magazine {
         displayname = CSTRING(15Rnd_45_Name);
+        displaynameshort = ".45";
         count = 15;
     };
 };
