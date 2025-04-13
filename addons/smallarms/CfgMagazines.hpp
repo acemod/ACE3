@@ -42,6 +42,7 @@ class CfgMagazines {
 
     class 16Rnd_9x21_Mag: 30Rnd_9x21_Mag {
         displayname = CSTRING(17Rnd_9x19_Name);
+        count = 17;
     };
 
     class 16Rnd_9x21_red_Mag: 16Rnd_9x21_Mag {
