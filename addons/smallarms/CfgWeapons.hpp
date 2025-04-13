@@ -148,17 +148,11 @@ class CfgWeapons {
 
     // Pistols //////////////////////////////////////////////
 
-    class hgun_P07_F: Pistol_Base_F {
-        magazines[] = {"16Rnd_9x21_Mag","16Rnd_9x21_red_Mag","16Rnd_9x21_green_Mag","16Rnd_9x21_yellow_Mag"};
-        magazineWell[] = {};
-    };
-    class hgun_Rook40_F: Pistol_Base_F {
-        magazines[] = {"ACE_17Rnd_9x21_Mag","ACE_17Rnd_9x21_red_Mag","ACE_17Rnd_9x21_green_Mag","ACE_17Rnd_9x21_yellow_Mag"};
-        magazineWell[] = {};
-    };
-    //class hgun_ACPC2_F: Pistol_Base_F {};
-    //class hgun_Pistol_heavy_01_F: Pistol_Base_F {};
-    //class hgun_Pistol_heavy_02_F: Pistol_Base_F {};
+    /*class hgun_P07_F: Pistol_Base_F {};
+    class hgun_Rook40_F: Pistol_Base_F {};
+    class hgun_ACPC2_F: Pistol_Base_F {};
+    class hgun_Pistol_heavy_01_F: Pistol_Base_F {};
+    class hgun_Pistol_heavy_02_F: Pistol_Base_F {};*/
 
     // LMGs //////////////////////////////////////////////
 
