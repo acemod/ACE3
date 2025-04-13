@@ -80,22 +80,6 @@
             <Japanese>9mm 17Rnd 装填トレーサー（緑）マガジン</Japanese>
             <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Yeşil) Şarjör</Turkish>
         </Key>
-        <Key ID="STR_ACE_SmallArms_17Rnd_9x19_Description">
-            <English>Caliber: 9x21 mm&lt;br /&gt;Rounds: 17&lt;br /&gt;Used in: ROOK-40</English>
-            <Chinese>口徑：9x21 mm&lt;br /&gt;個數：17&lt;br /&gt;用於：ROOK-40</Chinese>
-            <French>Calibre : 9x21 mm&lt;br /&gt;Munitions : 17&lt;br /&gt;Application : ROOK-40</French>
-            <Spanish>Calibre: 9x21 mm&lt;br /&gt;Cargas: 17&lt;br /&gt;Se usa en: ROOK-40</Spanish>
-            <Italian>Calibro: 9x21 mm&lt;br /&gt;Munizioni: 17&lt;br /&gt;Si usa in: ROOK-40</Italian>
-            <Polish>Kaliber: 9x21 mm&lt;br /&gt;Magazynki: 17&lt;br /&gt;Używane w: ROOK-40</Polish>
-            <Russian>Калибр: 9x21 мм&lt;br /&gt;Кол-во: 17&lt;br /&gt;Применение: Rook-40</Russian>
-            <German>Kaliber: 9x21 mm&lt;br /&gt;Patronen: 17 &lt;br /&gt;Eingesetzt von: ROOK-40</German>
-            <Czech>Ráže: 9x21 mm&lt;br /&gt;Munice: 17&lt;br /&gt;Použití: ROOK-40</Czech>
-            <Portuguese>Calibre: 9x21 mm&lt;br /&gt;Balas: 17&lt;br /&gt;Usada em: ROOK-40</Portuguese>
-            <Korean>구경: 9x21mm&lt;br /&gt;탄 수: 17&lt;br /&gt;사용 가능: 루크-40</Korean>
-            <Chinesesimp>类型：9x21 毫米&lt;br /&gt;容弹量：17&lt;br /&gt;用于：ROOK-40</Chinesesimp>
-            <Japanese>口径：9x21 mm&lt;br /&gt;弾薬：17&lt;br /&gt;使用：ROOK-40</Japanese>
-            <Turkish>Kalibre: 9x21 mm&lt;br /&gt;Mermi: 17&lt;br /&gt;Kullanıldığı Yer: ROOK-40</Turkish>
-        </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Name">
             <English>.45 ACP 25Rnd Mag</English>
             <Czech>.45 ACP, 25ks zásobník</Czech>
