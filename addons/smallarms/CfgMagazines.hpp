@@ -40,27 +40,20 @@ class CfgMagazines {
         lastRoundsTracer = 0;
     };
 
-    class 16Rnd_9x21_Mag: 30Rnd_9x21_Mag {};
-
-    class ACE_17Rnd_9x21_Mag: 16Rnd_9x21_Mag {
-        author = ECSTRING(common,ACETeam);
+    class 16Rnd_9x21_Mag: 30Rnd_9x21_Mag {
         displayname = CSTRING(17Rnd_9x19_Name);
-        count = 17;
     };
 
-    class ACE_17Rnd_9x21_red_Mag: ACE_17Rnd_9x21_Mag {
+    class 16Rnd_9x21_red_Mag: 16Rnd_9x21_Mag {
         displayname = CSTRING(17Rnd_9x19_red_Name);
-        ammo = "B_9x21_Ball_Tracer_Red";
     };
 
-    class ACE_17Rnd_9x21_green_Mag: ACE_17Rnd_9x21_Mag {
+    class 16Rnd_9x21_green_Mag: 16Rnd_9x21_Mag {
         displayname = CSTRING(17Rnd_9x19_green_Name);
-        ammo = "B_9x21_Ball_Tracer_Green";
     };
 
-    class ACE_17Rnd_9x21_yellow_Mag: ACE_17Rnd_9x21_Mag {
+    class 16Rnd_9x21_yellow_Mag: 16Rnd_9x21_Mag {
         displayname = CSTRING(17Rnd_9x19_yellow_Name);
-        ammo = "B_9x21_Ball_Tracer_Yellow";
     };
 
     class 30Rnd_45ACP_Mag_SMG_01: 30Rnd_9x21_Mag {
