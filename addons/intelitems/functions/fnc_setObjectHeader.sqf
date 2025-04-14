@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [cursorObject,"New Header"] call ace_intelitems_fnc_setObjectHeader
+ * [cursorObject, "New Header"] call ace_intelitems_fnc_setObjectHeader
  *
  * Public: No
  */
