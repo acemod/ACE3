@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror, mharis001
- * Sets the intel data for an object. Used by 3DEN and Zeus attributes.
+ * Sets the intel header for an object. Used by 3DEN and Zeus attributes.
  *
  * Arguments:
  * 0: Object <OBJECT>
