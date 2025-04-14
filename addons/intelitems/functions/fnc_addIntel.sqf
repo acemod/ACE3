@@ -23,7 +23,7 @@ if (canSuspend) exitWith {
     [FUNC(addIntel), _this] call CBA_fnc_directCall;
 };
 
-params [["_unit", objNull, [objNull]], ["_item", "", [""]], ["_data", "", [""]],["_header", "", [""]]];
+params [["_unit", objNull, [objNull]], ["_item", "", [""]], ["_data", "", [""]], ["_header", "", [""]]];
 
 if (
     !isServer
