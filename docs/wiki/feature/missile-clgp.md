@@ -26,6 +26,6 @@ version:
 ### 2.1 Shell configuration
 
 Use vehicle-interaction <kbd>⊞&nbsp;Win</kbd> (while seated) to open the shell interface
-- First digit sets trajectory: 1-2 is ballistic 3-8 is shaped (glide)
+- First digit sets trajectory: 1-2 is ballistic, 3-8 is shaped (glide)
 - Second digit programs time delay: 1-8 will go up to 45 seconds in ballistic mode and 48 seconds in shaped
 - Final 3 digits set the laser pulse code (currently it will take the form of 1XXX)
