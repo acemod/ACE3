@@ -21,7 +21,7 @@ version:
 
 ## 2. Copperhead M712
 
-155mm laser guided artillery
+155mm laser-guided artillery
 
 ### 2.1 Shell configuration
 
