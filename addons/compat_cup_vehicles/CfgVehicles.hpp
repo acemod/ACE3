@@ -25,6 +25,10 @@ class CfgVehicles {
             };
         };
     };
+    class CUP_Ural_BaseTurret;
+    class CUP_BM21_Base: CUP_Ural_BaseTurret {
+        EGVAR(overpressure,noReflection) = 1;
+    };
 
     class CUP_MTVR_Base;
     class CUP_MTVR_Reammo_Base: CUP_MTVR_Base {
@@ -179,6 +183,9 @@ class CfgVehicles {
     };
 
     class Tank_F;
+    class CUP_M270_HE_Base: Tank_F {
+        EGVAR(overpressure,noReflection) = 1;
+    };
     class CUP_AAV_Base: Tank_F {
         class EGVAR(interaction,anims) {
             class Hide_Bags_Deployment {
