@@ -4,9 +4,9 @@
  * Someone opened your backpack. Play sound and camshake. Execute locally.
  *
  * Arguments:
- * 0: Who accessed your inventory? <Object>
- * 1: Unit that wields the backpack <Object>
- * 2: The backpack object <Object>
+ * 0: Who accessed your inventory? <OBJECT>
+ * 1: Unit that wields the backpack <OBJECT>
+ * 2: The backpack object <OBJECT>
  *
  * Return Value:
  * None

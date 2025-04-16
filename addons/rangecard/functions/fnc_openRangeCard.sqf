@@ -4,7 +4,7 @@
  * Opens the range card dialog
  *
  * Arguments:
- * Open copy? <BOOLEAN>
+ * Open copy? <BOOL>
  *
  * Return Value:
  * None

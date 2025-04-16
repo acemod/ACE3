@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Grenade type [0: all, 1: frags, 2: non-frags] (default: 0) <NUMBER>
+ * 1: Grenade type [0: all, 1: frags, 2: non-frags] <NUMBER> (default: 0)
  *
  * Return Value:
  * Selecting successful? <BOOL>
