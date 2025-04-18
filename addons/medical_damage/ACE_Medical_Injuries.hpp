@@ -133,6 +133,9 @@ class ACE_Medical_Injuries {
             // explosives create more and smaller wounds than grenades
             thresholds[] = {{20, 15}, {8, 7}, {2, 3}, {1.2, 2}, {0.4, 1}, {0,0}};
             selectionSpecific = 0;
+            class woundHandlers: woundHandlers {
+                GVAR(woundsHandlerExplosion) = QFUNC(woundsHandlerExplosion);
+            };
             class Avulsion {
                 weighting[] = {{1, 1}, {0.8, 0}};
             };
