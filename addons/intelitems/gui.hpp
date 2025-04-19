@@ -130,6 +130,7 @@ class GVAR(RscPhoto): GVAR(RscBase) {
 };
 
 // Zeus Attributes Display
+class RscEdit;
 class RscText;
 class RscEditMulti;
 class RscControlsGroup;
@@ -163,7 +164,7 @@ class GVAR(RscSetData): RscDisplayAttributes {
                     w = QUOTE(POS_W(26));
                     h = QUOTE(POS_H(6));
                     class controls {
-                        class Label: RscText {
+                        class Label: RscEdit {
                             idc = IDC_ATTRIBUTE_LABEL;
                             x = 0;
                             y = 0;
