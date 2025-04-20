@@ -8,8 +8,7 @@ class CfgPatches {
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
             "ace_missileguidance",
-            "CUP_AirVehicles_Ka50",
-            "CUP_AirVehicles_412"
+            "CUP_AirVehicles_Ka50"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
