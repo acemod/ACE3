@@ -39,7 +39,7 @@ if (_jamTypesAllowed isEqualTo []) then {
     _jamTypesAllowed = ["eject", 1, "extract", 1, "feed", 1, "fire", 1, "dud", (5 / (_temp / 5))];
 } else {
     for "_i" from count _jamTypesAllowed -2 to 0 step -2 do {
-        private _jamCurretType = toLower (_jamTypesAllowed select _i);
+        private _jamCurretType = toLowerANSI (_jamTypesAllowed select _i);
         if !(_jamCurretType in ["eject", "extract", "feed", "fire", "dud"]) exitWith { // check config values and switch to default values if unusual value found
             ERROR_2("Weapon '%1' has unexpected value %2 in QQGVAR(jamTypesAllowed). Expected values are 'Eject', 'Extract', 'Feed', 'Fire', 'Dud'.",_weapon,_jamCurretType);
             _jamTypesAllowed = ["eject", 1, "extract", 1, "feed", 1, "fire", 1, "dud", (5 / (_temp / 5))];
@@ -53,7 +53,7 @@ if (_jamTypesAllowed isEqualTo []) then {
 };
 
 // if _jamType was given as a param when the function called check validity and select randomly if not valid.
-_jamType = toLower _jamType;
+_jamType = toLowerANSI _jamType;
 if !(_jamType in _jamTypesAllowed) then {
     if (_jamType != "") then {
         ERROR_2("Weapon '%1' has attempted to jam with unexpected value %2. Expected values are 'Eject', 'Extract', 'Feed', 'Fire', 'Dud'.",_weapon,_jamType);
