@@ -47,9 +47,19 @@ GVAR(currentTemperature) = 15;
 GVAR(currentHumidity) = 0;
 GVAR(currentOvercast) = 0;
 
-// Get all non inherited arrays to filter maps that inherit from Stratis/Altis/Tanoa
 private _cfgPath = configFile >> "CfgWorlds" >> _worldName;
+
+//Check if values are set in mission since CfgWorlds is valid in description.ext
+if !(isNull (missionConfigFile >> "CfgWorlds" >> _worldName >> "ACE_TempDay")) then {
+    _cfgPath = missionConfigFile >> "CfgWorlds" >> _worldName;
+};
+if !(isNull (missionConfigFile >> "CfgWorlds" >> "Any" >> "ACE_TempDay")) then {
+    _cfgPath = missionConfigFile >> "CfgWorlds" >> "Any";
+};
+
+// Get all non inherited arrays to filter maps that inherit from Stratis/Altis/Tanoa
 private _nonInheritedArrays = configProperties [_cfgPath, "isArray _x", false];
+
 // And check if any custom non-inherited weather is defined through config and use that if so
 if ((_cfgPath >> "ACE_TempDay") in _nonInheritedArrays) exitWith {
     if (isArray (_cfgPath >> "ACE_TempDay")) then {
