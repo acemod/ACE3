@@ -49,11 +49,11 @@ GVAR(currentOvercast) = 0;
 
 private _cfgPath = configFile >> "CfgWorlds" >> _worldName;
 
-//Check if values are set in mission since CfgWorlds is valid in description.ext
+// Check if values are set in mission since CfgWorlds is valid in description.ext
 if !(isNull (missionConfigFile >> "CfgWorlds" >> _worldName >> "ACE_TempDay")) then {
     _cfgPath = missionConfigFile >> "CfgWorlds" >> _worldName;
 };
-if !(isNull (missionConfigFile >> "CfgWorlds" >> "Any" >> "ACE_TempDay")) then {
+if !(isNull (missionConfigFile >> "CfgWorlds" >> "Any" >> "ACE_TempDay")) then { // In description.ext CfgWorlds "Any" can be used rather than a world name to apply the values to any map.
     _cfgPath = missionConfigFile >> "CfgWorlds" >> "Any";
 };
 
