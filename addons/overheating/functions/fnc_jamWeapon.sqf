@@ -103,10 +103,10 @@ if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
         if (!(missionNamespace getVariable [QGVAR(knowAboutJam), false]) && {_one ammo currentWeapon _one > 0} && {GVAR(DisplayTextOnJam)}) then {
             private _jamType = _one getVariable [format [QGVAR(%1_jamType), currentWeapon _one], "None"];
             private _jamMessage = localize LSTRING(FailureToFire);
-            switch true do {
-                case (_jamType isEqualTo "eject"): {_jamMessage = localize LSTRING(FailureToEject)};
-                case (_jamType isEqualTo "extract"): {_jamMessage = localize LSTRING(FailureToExtract)};
-                case (_jamType isEqualTo "feed"): {_jamMessage = localize LSTRING(FailureToFeed)};
+            switch _jamType do {
+                case ("eject"): {_jamMessage = localize LSTRING(FailureToEject)};
+                case ("extract"): {_jamMessage = localize LSTRING(FailureToExtract)};
+                case ("feed"): {_jamMessage = localize LSTRING(FailureToFeed)};
             };
             [
                 [localize LSTRING(WeaponJammed)],
