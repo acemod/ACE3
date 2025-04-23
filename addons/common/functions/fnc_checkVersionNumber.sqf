@@ -29,6 +29,7 @@ private _files = CBA_common_addons select {
 
     (_addon select [0, 3] != "a3_") &&
     {_addon select [0, 4] != "ace_"} &&
+    {_addon select [0, 5] != "acex_"} &&
     {_addon select [0, 12] != "CuratorOnly_"} &&
     {_whitelist findIf {_addon regexMatch _x} == -1}
 };
@@ -133,7 +134,7 @@ private _fnc_check = {
         if (_isMissingItems) then {
             // Generate error message
             private _errorLog = +_items;
-            private _header = format ["[ACE] %1: ERROR %2 addon(s): ", _client, _string];
+            private _header = format [LLSTRING(isMissingItems), _client, _string];
 
             // Don't display all missing items, as they are logged
             private _errorMsg = _header + ((_errorLog select [0, DISPLAY_NUMBER_ADDONS]) joinString ", ");
@@ -142,7 +143,7 @@ private _fnc_check = {
             private _count = count _items;
 
             if (_count > DISPLAY_NUMBER_ADDONS) then {
-                _errorMsg = _errorMsg + format [", and %1 more.", _count - DISPLAY_NUMBER_ADDONS];
+                _errorMsg = _errorMsg + format [LLSTRING(andMore), _count - DISPLAY_NUMBER_ADDONS];
             };
 
             // Wait until in briefing screen
@@ -175,10 +176,10 @@ private _fnc_check = {
 
         _clientErrors pushBack _isMissingItems;
     } forEach [
-        [_missingAddonsClient, "client missing"],
-        [_additionalAddonsClient, "client additional"],
-        [_olderVersionsClient, "older client"],
-        [_newerVersionsClient, "newer client"]
+        [_missingAddonsClient, LLSTRING(clientMissing)],
+        [_additionalAddonsClient, LLSTRING(clientAdditional)],
+        [_olderVersionsClient, LLSTRING(olderClient)],
+        [_newerVersionsClient, LLSTRING(newerClient)]
     ];
 
     TRACE_4("",_missingAddonsClient,_additionalAddonsClient,_olderVersionsClient,_newerVersionsClient);
