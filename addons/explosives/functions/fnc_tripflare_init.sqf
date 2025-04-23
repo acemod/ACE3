@@ -38,3 +38,5 @@ _mine addEventHandler ["Explode", {
     TRACE_1("",_flare);
     ["ace_tripflareTriggered", [_flare, ASLToAGL _posASL]] call CBA_fnc_globalEvent;
 }];
+
+nil

@@ -33,3 +33,5 @@ if (isText (_config >> "onSetup") && {[_explosive, _magazine] call compile getTe
 };
 
 [ACE_player, getPosATL _explosive, _explosive getVariable [QGVAR(direction), 0], _magazine, _trigger, [], _explosive] call FUNC(placeExplosive);
+
+nil

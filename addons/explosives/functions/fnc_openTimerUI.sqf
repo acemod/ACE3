@@ -92,4 +92,4 @@ _display displayAddEventHandler ["MouseZChanged", {
     } forEach TIMER_DIGIT_IDCs;
 }, 0.1, _display] call CBA_fnc_addPerFrameHandler;
 
-true
+true // return

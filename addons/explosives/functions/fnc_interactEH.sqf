@@ -76,3 +76,5 @@ if (
 
     END_COUNTER(interactEH);
 }, 0.5, [[0, 0, -100], [], []]] call CBA_fnc_addPerFrameHandler;
+
+nil

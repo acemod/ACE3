@@ -42,4 +42,4 @@ private _detonationAllowed = true;
     };
 } forEach GVAR(detonationHandlers);
 
-_detonationAllowed
+_detonationAllowed // return

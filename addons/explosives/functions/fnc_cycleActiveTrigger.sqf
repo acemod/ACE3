@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: mrschick
- * Cycles the "Active Trigger" of a unit and shows a CBA Hint that displays the new active trigger.
+ * Cycles the "Active Trigger" of a unit and shows a hint that displays the new active trigger.
  *
  * Arguments:
  * 0: Unit <OBJECT>

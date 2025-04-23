@@ -23,19 +23,22 @@ if (!alive _unit || {!alive _target}) exitWith {
     false // return
 };
 
-private _explosive = _target;
+scopeName "main";
 
 if (_target isKindOf "ACE_DefuseObject") then {
-    _explosive = attachedTo _target;
-};
+    private _explosive = attachedTo _target;
 
-if (isNull _explosive) exitWith {
-    detach _target;
-    deleteVehicle _target;
+    // Delete helper object attached to nothing
+    if (isNull _explosive) exitWith {
+        detach _target;
+        deleteVehicle _target;
 
-    false // return
+        false breakOut "main" // return
+    } else {
+        _target = _explosive;
+    };
 };
 
 (!GVAR(requireSpecialist) || {_unit call EFUNC(common,isEOD)}) &&
-{isNull objectParent _unit && {GVAR(defusalKits) findAny (_unit call EFUNC(common,uniqueItems)) != -1}} &&
-{mineActive _explosive || {!(_explosive isKindOf "UnderwaterMine_Range_Ammo")}} // Handle naval mines (which don't get turned into items when defused)
+{mineActive _target || {!(_target isKindOf "UnderwaterMine_Range_Ammo")}} && // Handle naval mines (which don't get turned into items when defused)
+{isNull objectParent _unit && {GVAR(defusalKits) findAny (_unit call EFUNC(common,uniqueItems)) != -1}} // return

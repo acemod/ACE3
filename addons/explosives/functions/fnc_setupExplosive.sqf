@@ -232,12 +232,14 @@ GVAR(TweakedAngle) = 0;
         if (_badPosition || {_screenPos isEqualTo []}) then {
             ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow false;
         } else {
+            private _display = uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull];
+
             // Show the model on the hud in aprox the same size/location as it will be placed
-            ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlShow true;
+            (_display displayCtrl 800851) ctrlShow true;
 
             private _realDistance = ((_virtualPosASL call EFUNC(common,ASLToPosition)) distance (positionCameraToWorld [0, 0, 0])) / ((call CBA_fnc_getFov) select 1);
             _screenPos = [_screenPos select 0, _realDistance, _screenPos select 1];
-            ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetPosition _screenPos;
+            (_display displayCtrl 800851) ctrlSetPosition _screenPos;
 
             private _modelDir = [0, 0, -1];
             private _modelUp = [0, -1, 0];
@@ -248,9 +250,11 @@ GVAR(TweakedAngle) = 0;
                 _modelDir = [cos GVAR(tweakedAngle), sin GVAR(tweakedAngle), 0] vectorCrossProduct _modelUp;
             };
 
-            ((uiNamespace getVariable [QGVAR(virtualAmmoDisplay), displayNull]) displayCtrl 800851) ctrlSetModelDirAndUp [_modelDir, _modelUp];
+            (_display displayCtrl 800851) ctrlSetModelDirAndUp [_modelDir, _modelUp];
         };
     };
 
     END_COUNTER(pfeh);
 }, 0, [_unit, _magClassname, _setupObjectClass, _isAttachable]] call CBA_fnc_addPerFrameHandler;
+
+nil

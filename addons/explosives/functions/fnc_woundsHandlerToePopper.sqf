@@ -26,4 +26,4 @@ _array = _array select {
 
 _this set [1, _array];
 
-_this
+_this // return

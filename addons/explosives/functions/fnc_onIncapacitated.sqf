@@ -44,10 +44,11 @@ if !([_unit, _connectedInventoryExplosive] call EFUNC(common,hasMagazine)) exitW
 [_unit, _connectedInventoryExplosive] call EFUNC(common,adjustMagazineAmmo);
 _unit setVariable [QGVAR(deadmanInvExplosive), nil, true];
 
-private _ammo = getText (configFile >> "CfgMagazines" >> _connectedInventoryExplosive >> "ammo");
+private _magazineConfig = configFile >> "CfgMagazines" >> _connectedInventoryExplosive;
+private _ammo = getText (_magazineConfig >> "ammo");
 TRACE_2("deadman inventory",_connectedInventoryExplosive,_ammo);
 
-private _magazineTrigger = configFile >> "CfgMagazines" >> _connectedInventoryExplosive >> "ACE_Triggers" >> "DeadmanSwitch";
+private _magazineTrigger = _magazineConfig >> "ACE_Triggers" >> "DeadmanSwitch";
 
 if (isText (_magazineTrigger >> "ammo")) then {
     _ammo = getText (_magazineTrigger >> "ammo");
@@ -58,3 +59,5 @@ _explosive setPosASL (getPosASL _unit);
 
 // Explode, ignoring range, with a 0.5 second delay
 [_unit, -1, [_explosive, 0.5], "ACE_DeadManSwitch"] call FUNC(detonateExplosive);
+
+nil
