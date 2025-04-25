@@ -16,6 +16,7 @@ PREP(onKeyDown);
 PREP(onMenuClose);
 PREP(onMenuOpen);
 PREP(openMenu);
+PREP(showMedicalHint);
 PREP(toggleTriageSelect);
 PREP(updateActions);
 PREP(updateBodyImage);
