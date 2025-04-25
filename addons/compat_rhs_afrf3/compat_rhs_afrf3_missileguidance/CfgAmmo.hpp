@@ -308,18 +308,6 @@ class CfgAmmo {
             seekerMaxRange = 2500;
         };
     };
-    class rhs_ammo_9m113: rhs_ammo_atgmBase_base {
-        maneuvrability = 0;
-        ACE_MISSILE(Konkurs);
-        class EventHandlers: EventHandlers {
-            class RHS_Guidance {};
-        };
-    };
-    class rhs_ammo_9m113m: rhs_ammo_9m113 {
-        class ace_missileguidance: ace_missileguidance {
-            enabled = 1;
-        };
-    };
     class rhs_ammo_9m117: rhs_ammo_atgmCore_base {
         maneuvrability = 0;
         ACE_MISSILE(Bastion);
