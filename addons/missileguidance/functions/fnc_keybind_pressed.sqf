@@ -12,6 +12,8 @@
  *
  * Example:
  * ["left", "down"] call ace_missileguidance_fnc_keybind_pressed
+ *
+ * Public: No
  */
 params ["_type", "_action"];
 
