@@ -74,17 +74,8 @@ if ((_projPos distance _launchPos) >= 20) then {
                 TRACE_2("",_target worldToModel (ASLToAGL _virtualPos),boundingBoxReal _target);
                 _virtualPos = _virtualPos vectorAdd (_vectorDir vectorMultiply 1.25);
 
-                deleteVehicle _projectile;
-
-                // Damage and effects of missile exploding (timeToLive is 0 so should happen next frame)
-                private _explosion = "ACE_NLAW_Explosion" createVehicle _virtualPos;
-                _explosion setPosASL _virtualPos;
-
-                // Just damage from shaped charge
-                private _shapedCharage = "ACE_NLAW_ShapedCharge" createVehicle _virtualPos;
-                _shapedCharage setPosASL _virtualPos;
-                _shapedCharage setVectorDirAndUp [[0,0,-1], [1,0,0]];
-                _shapedCharage setVelocity [0,0,-300];
+                _projectile setMissileTarget [_target, true];
+                triggerAmmo _projectile;
 
                 _seekerStateParams set [1, true];
 
