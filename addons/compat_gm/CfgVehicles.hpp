@@ -216,6 +216,7 @@ class CfgVehicles {
         };
     };
     class gm_ural375d_mlrs_base: gm_ural375d_base {
+        EGVAR(overpressure,noReflection) = 1;
         class EGVAR(interaction,anims): EGVAR(interaction,anims) {
             class AmmoBox_01_unhide: AmmoBox_01_unhide {
                 positions[] = {{-0.55, 2, 0.5}};

@@ -8,6 +8,6 @@ class EGVAR(arsenal,stats) {
         showText = 1;
         textStatement = QUOTE(localize QUOTE(ELSTRING(common,yes)));
         condition = QUOTE(getNumber (_this select 1 >> (_this select 0) select 0) > 0);
-        tabs[] = {{0,1,5}, {7}};
+        tabs[] = {{0,1,4,5}, {7}};
     };
 };

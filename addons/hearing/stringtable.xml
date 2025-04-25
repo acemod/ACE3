@@ -227,6 +227,7 @@
         <Key ID="STR_ACE_Hearing_EnableNoiseDucking_Description">
             <English>Reduces volume of impulse noises like shots and explosions when wearing electronic hearing protection</English>
             <French>Réduit le volume des bruits d'impulsion tels que les coups de feu et les explosions lorsque l'on porte une protection auditive électronique.</French>
+            <Spanish>Reduce el volumen de los ruidos de impulsos, como disparos y explosiones, cuando se llevan protectores auditivos electrónicos</Spanish>
             <Italian>Riduce il volume di suoni impulsivi, come spari o esplosioni, mentre si indossa una protezione uditiva elettronica</Italian>
             <Russian>При ношении электронных средств защиты органов слуха снижается громкость импульсных шумов, таких как выстрелы и взрывы</Russian>
             <German>Blendet Impulsgeräusche wie Schüsse oder Explosionen beim Tragen von elektronischem Gehörschutz aus</German>
@@ -236,6 +237,7 @@
         <Key ID="STR_ACE_Hearing_EnableNoiseDucking_DisplayName">
             <English>Enable Noise Ducking Effect</English>
             <French>Activer l'effet de réduction du bruit</French>
+            <Spanish>Activar el efecto de reducción de ruido</Spanish>
             <Italian>Abilita attenuazione sonora elettronica</Italian>
             <Russian>Включить эффект подавления шума</Russian>
             <German>Aktiviere Geräuschunterdrückungseffekt</German>

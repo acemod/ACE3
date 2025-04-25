@@ -1,21 +1,24 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class SUBADDON {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"CUP_Weapons_LoadOrder"};
+        requiredAddons[] = {
+            "ace_javelin",
+            "A3_Aegis_Weapons_F_Aegis"
+        };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Community Upgrade Project", "Mike"};
+        authors[] = {"ThomasAngel"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
+
+        // this prevents any patched class from requiring this addon
+        addonRootClass = "A3_Characters_F";
     };
 };
 
-#include "CfgEventHandlers.hpp"
-#include "CfgMagazines.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"

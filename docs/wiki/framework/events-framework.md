@@ -106,9 +106,9 @@ MenuType: 0 = Interaction, 1 = Self Interaction
 
 | Event Key | Parameters | Locality | Type | Description |
 |----------|---------|---------|---------|---------|
-|`ace_refuel_started` | [_source, _target] | Local | Listen | Refuelling has started |
-|`ace_refuel_tick` | [_source, _target, _amount] | Local | Listen | Amount of fuel transferred in a tick |
-|`ace_refuel_stopped` | [_source, _target] | Local | Listen | Refuelling has stopped |
+|`ace_refuel_started` | [_source, _target, _nozzle, _unit] | Local | Listen | Refuelling has started |
+|`ace_refuel_tick` | [_source, _target, _amount, _refuelContainer, _nozzle] | Local | Listen | Amount of fuel transferred in a tick |
+|`ace_refuel_stopped` | [_source, _target, _nozzle] | Local | Listen | Refuelling has stopped |
 
 ### 2.10 Cook Off (`ace_cookoff`)
 

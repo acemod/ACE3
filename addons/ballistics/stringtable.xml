@@ -1568,21 +1568,21 @@
             <Turkish>12 kalibre 15 mermi #00 İrisaçma</Turkish>
         </Key>
         <Key ID="STR_ACE_Ballistics_16Rnd_9x19_mag_Description">
-            <English>9x19 mm 30Rnd Mag</English>
-            <Czech>9x19 mm 30náb. Zásobník</Czech>
-            <French>Ch. 9x19 mm 30Cps</French>
-            <Spanish>Cargador de 16 balas de 9x19 mm</Spanish>
-            <Italian>9x19 mm 30cp Car</Italian>
-            <Polish>Magazynek 9x19 mm 16rd</Polish>
-            <Portuguese>Carregador de 16 cartuchos 9x19 mm</Portuguese>
-            <Russian>Магазин из 16-ти 9х19 мм</Russian>
-            <German>9x19 mm 30-Patronen-Magazin</German>
-            <Korean>9x19mm 30발 들이 탄창</Korean>
-            <Japanese>9x19 mm 30Rnd マガジン</Japanese>
-            <Chinese>9x19毫米 30發 彈匣</Chinese>
-            <Chinesesimp>9x19 mm 30发 弹匣</Chinesesimp>
-            <Turkish>9x19 mm 30Rnd Mag</Turkish>
-            <Hungarian>9x19 mm 16-lövedékes tár</Hungarian>
+            <English>Caliber: 9x19 mm&lt;br /&gt;Rounds: 16</English>
+            <Czech>Ráže: 9x19 mm&lt;br /&gt;Nábojů: 16</Czech>
+            <French>Calibre: 9x19 mm&lt;br /&gt;Cartouches: 16</French>
+            <Spanish>Calibre: 9x19 mm&lt;br /&gt;Balas: 16</Spanish>
+            <Italian>Calibro: 9x19 mm&lt;br /&gt;Munizioni: 16</Italian>
+            <Polish>Kaliber: 9x19 mm&lt;br /&gt;Pociski: 16</Polish>
+            <Portuguese>Calibre: 9x19 mm&lt;br/&gt;Cartuchos: 16</Portuguese>
+            <Russian>Калибр: 9x19 мм&lt;br /&gt;Патронов: 16</Russian>
+            <German>Kaliber:9x19 mm&lt;br /&gt;Patronen: 16</German>
+            <Korean>구경: 9x19mm&lt;br/&gt;장탄수: 16</Korean>
+            <Japanese>口径: 9x19 mm&lt;br /&gt;装填数: 16</Japanese>
+            <Chinese>口徑: 9x19毫米&lt;br /&gt;發數: 16</Chinese>
+            <Chinesesimp>口径：9x19 mm&lt;br /&gt;发数：16</Chinesesimp>
+            <Turkish>Kalibre: 9x19 mm&lt;br /&gt;Mermi: 16</Turkish>
+            <Hungarian>Kaliber: 9x19 mm&lt;br /&gt;Lövedékek: 16</Hungarian>
         </Key>
         <Key ID="STR_ACE_Ballistics_16Rnd_9x19_mag_Name">
             <English>9x19 mm 16Rnd Mag</English>

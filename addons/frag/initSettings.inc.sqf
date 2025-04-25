@@ -21,7 +21,9 @@ private _category = format ["ACE %1", localize LSTRING(Module_DisplayName)];
     [LSTRING(EnableSpall), LSTRING(EnableSpall_Desc)],
     _category,
     false,
-    1
+    1,
+    {},
+    true
 ] call CBA_fnc_addSetting;
 
 [
