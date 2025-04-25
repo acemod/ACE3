@@ -15,7 +15,7 @@ GVAR(running) = [];
 ["weapon", LINKFUNC(weaponChanged)] call CBA_fnc_addPlayerEventHandler;
 ["unit", LINKFUNC(weaponChanged), true] call CBA_fnc_addPlayerEventHandler;
 
-// todo move to CBA on it's next release https://github.com/CBATeam/CBA_A3/pull/1751
+// todo move to CBA on its next release https://github.com/CBATeam/CBA_A3/pull/1751
 [QGVAR(soundEffect), {
     params ["_unit", "_sound"];
     TRACE_2("soundEffect",_unit,_sound);
