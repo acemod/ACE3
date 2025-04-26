@@ -66,7 +66,7 @@ if ((_projPos distance _launchPos) >= 20) then {
         #endif
 
         // Limit scan to 5 meters directly down (shaped charge jet has a very limited range)
-        private _res = lineIntersectsSurfaces [_virtualPos, (_virtualPos vectorAdd [0,0,-5]), _projectile];
+        private _res = lineIntersectsSurfaces [_virtualPos, (_virtualPos vectorAdd [0,0,-5]), _projectile, objNull, true, 1, "FIRE", "VIEW"];
         if (_res isNotEqualTo []) then {
             (_res select 0) params ["_targetPos", "", "_target"];
             if ((_target isKindOf "Tank") || {_target isKindOf "Car"} || {_target isKindOf "Air"}) exitWith {
@@ -74,6 +74,7 @@ if ((_projPos distance _launchPos) >= 20) then {
                 TRACE_2("",_target worldToModel (ASLToAGL _virtualPos),boundingBoxReal _target);
                 _virtualPos = _virtualPos vectorAdd (_vectorDir vectorMultiply 1.25);
 
+                _projectile setPosASL _virtualPos;
                 _projectile setMissileTarget [_target, true];
                 triggerAmmo _projectile;
 
