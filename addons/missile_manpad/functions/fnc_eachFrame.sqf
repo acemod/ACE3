@@ -51,7 +51,8 @@ private _fnc_searchTarget = {
         * linearConversion [100, 3000, getMass _target, 0.25, 1, true];
 
     if (EGVAR(missileguidance,debug_drawGuidanceInfo)) then {
-        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", [0,1,0,1],
+        private _color = [[0,1,0,1], [0,0,1,1]] select isNull (ACE_player getVariable [QEGVAR(missileguidance,target), objNull]);
+        drawIcon3D ["\a3\ui_f\data\IGUI\Cfg\Cursors\select_target_ca.paa", _color,
             ASLToAGL _aimASL, 1.5, 1.5, 45, format ["a%1 - v%2 - d%3 = %4", _angle, _visibility, _dist, _ret], 0.5, 0.025, "TahomaB"];
     };
     _ret

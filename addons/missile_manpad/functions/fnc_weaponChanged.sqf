@@ -28,6 +28,9 @@ if (GVAR(running) isNotEqualTo []) then {
 if (alive _unit && {_weapon != ""}) then {
     private _weapCfg = configFile >> "CfgWeapons" >> _weapon;
     if ((getNumber (_weapCfg >> QGVAR(enabled))) != 1) exitWith { TRACE_1("-not enabled",_weapCfg); };
+    private _configs = configProperties [_weapCfg, QUOTE(configName _x == QUOTE(QGVAR(enabled))), false];
+    if (_configs isEqualTo []) exitWith { TRACE_1("-not enabled explicitly",_weapCfg); };
+
     private _mag = (compatibleMagazines _weapon) param [0, ""];
     private _ammo = getText (configFile >> "CfgMagazines" >> _mag >> "ammo");
     private _ammoCfg = configFile >> "CfgAmmo" >> _ammo;

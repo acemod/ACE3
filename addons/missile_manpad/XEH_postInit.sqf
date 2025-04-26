@@ -2,7 +2,7 @@
 
 if (!hasInterface) exitWith {};
 
-// Add keybind - todo: move to missile_guidance-common-binds?
+// Add keybind - todo: move to missile_guidance-common-binds:  ["lock", ... }] call EFUNC(missileguidance,keybind_add);
 GVAR(isLockKeyDown) = false;
 ["ACE3 Weapons", QGVAR(trackTarget), "Lock Target (Hold) [stinger]", {
     GVAR(isLockKeyDown) = true;
@@ -31,6 +31,7 @@ GVAR(running) = [];
 
 
 #ifdef ENABLE_QUICK_TESTING
+// ace_missileguidance_debug_drawGuidanceInfo = true;
 ["recompile", "recompile", "recompile", {
     private _start = diag_tickTime;
     [] call ACE_PREP_RECOMPILE;
