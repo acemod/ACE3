@@ -631,5 +631,11 @@
             <Chinesesimp>卸载</Chinesesimp>
             <Turkish>Boşalt</Turkish>
         </Key>
+        <Key ID="STR_ACE_Cargo_unloadOnKilled">
+            <English>Unload Cargo On Killed</English>
+        </Key>
+        <Key ID="STR_ACE_Cargo_unloadOnKilled_description">
+            <English>The chance for each cargo loaded into a vehicle to be unloaded if the vehicle is killed.\nApplies to objects only.</English>
+        </Key>
     </Package>
 </Project>
