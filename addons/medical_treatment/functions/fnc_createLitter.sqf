@@ -62,10 +62,10 @@ private _fnc_createLitter = {
         _position = [_position, (_raycast # 0) # 0] select (_raycast isNotEqualTo []);
         private _surfaceNormal = [[0, 0, 1], (_raycast # 0) # 1] select (_raycast isNotEqualTo []);
 
-        if (ASLToATL _position select 2 < -0.01) then {continue};
-
-        // Create litter on server which will also handle cleanup
-        [QGVAR(createLitterServer), [_x, _position, random 360, _surfaceNormal]] call CBA_fnc_serverEvent;
+        if (ASLToATL _position select 2 > -0.01) then {
+            // Create litter on server which will also handle cleanup
+            [QGVAR(createLitterServer), [_x, _position, random 360, _surfaceNormal]] call CBA_fnc_serverEvent;
+        };
     } forEach _litterOptions;
 };
 
