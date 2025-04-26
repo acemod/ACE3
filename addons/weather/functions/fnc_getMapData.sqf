@@ -54,8 +54,9 @@ private _missionCfgPath = missionConfigFile >> "CfgWorlds" >> _worldName;
 if !(isNull (_missionCfgPath  >> "ACE_TempDay")) then {
     _cfgPath = _missionCfgPath;
 };
+// In description.ext CfgWorlds "Any" can be used rather than a world name to apply the values to any map.
 private _missionCfgPathAny = missionConfigFile >> "CfgWorlds" >> "Any";
-if !(isNull (_missionCfgPathAny >> "ACE_TempDay")) then { // In description.ext CfgWorlds "Any" can be used rather than a world name to apply the values to any map.
+if !(isNull (_missionCfgPathAny >> "ACE_TempDay")) then {
     _cfgPath = _missionCfgPathAny;
 };
 
