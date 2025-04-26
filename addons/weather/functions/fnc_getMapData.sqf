@@ -50,11 +50,13 @@ GVAR(currentOvercast) = 0;
 private _cfgPath = configFile >> "CfgWorlds" >> _worldName;
 
 // Check if values are set in mission since CfgWorlds is valid in description.ext
-if !(isNull (missionConfigFile >> "CfgWorlds" >> _worldName >> "ACE_TempDay")) then {
-    _cfgPath = missionConfigFile >> "CfgWorlds" >> _worldName;
+private _missionCfgPath = missionConfigFile >> "CfgWorlds" >> _worldName;
+if !(isNull (_missionCfgPath  >> "ACE_TempDay")) then {
+    _cfgPath = _missionCfgPath;
 };
-if !(isNull (missionConfigFile >> "CfgWorlds" >> "Any" >> "ACE_TempDay")) then { // In description.ext CfgWorlds "Any" can be used rather than a world name to apply the values to any map.
-    _cfgPath = missionConfigFile >> "CfgWorlds" >> "Any";
+private _missionCfgPathAny = missionConfigFile >> "CfgWorlds" >> "Any";
+if !(isNull (_missionCfgPathAny >> "ACE_TempDay")) then { // In description.ext CfgWorlds "Any" can be used rather than a world name to apply the values to any map.
+    _cfgPath = _missionCfgPathAny;
 };
 
 // Get all non inherited arrays to filter maps that inherit from Stratis/Altis/Tanoa
