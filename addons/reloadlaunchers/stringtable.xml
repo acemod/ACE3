@@ -110,7 +110,7 @@
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextDesc">
             <English>Displays notifications when an assistant loads a gunner's launcher.</English>
-            <French>Affiche une notofication lorsqu'un assistant recharge l'arme du tireur.</French>
+            <French>Affiche une notification lorsqu'un assistant recharge l'arme du tireur.</French>
             <Spanish>Mostrar notificaciones cuando un asistente recarga el lanzador del tirador.</Spanish>
             <Italian>Mostra un avviso quando un assistente sta ricaricando il proprio lanciatore.</Italian>
             <Polish>Wyświetla powiadomienie, gdy asystent ładuje wyrzutnię.</Polish>
@@ -123,7 +123,7 @@
         </Key>
         <Key ID="STR_ACE_ReloadLaunchers_SettingDisplayStatusTextName">
             <English>Display notifications for buddy loading</English>
-            <French>Affichage de notifications lors d'une rechargement par un ami</French>
+            <French>Notifications lors d'un rechargement par un ami</French>
             <Spanish>Mostrar notificaciones para recarga de compañero</Spanish>
             <Italian>Mostra avviso di ricarica da parte del coppio</Italian>
             <Polish>Wyświetlanie powiadomień o ładowaniu przez asystenta</Polish>

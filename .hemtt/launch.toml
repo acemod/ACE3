@@ -42,6 +42,14 @@ workshop = [
     "843632231", # RHS SAF  Workshop ID
 ]
 
+[cup]
+extends = "default"
+workshop = [
+    "497660133", # CUP Weapons
+    "541888371", # CUP Vehicles
+    "497661914", # CUP Units
+]
+
 [Wardrobe]
 extends = "rhs"
 workshop = [

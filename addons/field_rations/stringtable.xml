@@ -881,7 +881,7 @@
         </Key>
         <Key ID="STR_ACE_Field_Rations_NearDepletedConsequence_DisplayName">
             <English>Consequence of extreme thirst/hunger (over 85%)</English>
-            <French>Conséquences d'une soif ou d'une faim extrême (plus de 85 %)</French>
+            <French>Conséquences d'une soif/faim extrême (plus de 85 %)</French>
             <Italian>Conseguenze di sete/fame estrema (oltre 85%)</Italian>
             <Russian>Последствия сильной жажды/голода (более 85%)</Russian>
             <German>Folge von extremen Durst/Hunger (über 85%)</German>

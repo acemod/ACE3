@@ -37,6 +37,7 @@
                 <Korean>구경: 5.8x42mm 예광탄 - 적색&lt;br /&gt;장탄수: 100발&lt;br /&gt;사용처: CAR-95-1</Korean>
                 <Japanese>口径: 5.8x42 mm トレーサー - 赤&lt;br /&gt;弾数: 100&lt;br /&gt;使用武器: CAR-95-1</Japanese>
                 <Chinesesimp>口径：5.8x42 mm 曳光—红色&lt;br/&gt;发数：100&lt;br/&gt;使用于：CAR-95-1</Chinesesimp>
+                <French>Calibre: 5.8x42 mm Tracant - Rouge&lt;br /&gt;Munitions: 100&lt;br /&gt;Utilisé dans: CAR-95-1</French>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_yellow">
                 <English>5.8 mm 100Rnd Tracer (Yellow) Mag</English>
@@ -49,6 +50,7 @@
                 <Korean>5.8mm 100발 들이 탄창 (예광탄/황색)</Korean>
                 <Japanese>5.8mm 100Rnd トレーサー (黄) マガジン</Japanese>
                 <Chinesesimp>5.8 mm 100发 弹鼓（曳光，黄）</Chinesesimp>
+                <French>Chargeur 100 coups 5,8 mm traçant (Jaune)</French>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_yellow_description">
                 <English>Caliber: 5.8x42 mm Tracer - Yellow&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
@@ -61,6 +63,7 @@
                 <Korean>구경: 5.8x42mm 예광탄 - 황색&lt;br /&gt;장탄수: 100발&lt;br /&gt;사용처: CAR-95-1</Korean>
                 <Japanese>口径: 5.8x42 mm トレーサー - 黄&lt;br /&gt;弾数: 100&lt;br /&gt;使用武器: CAR-95-1</Japanese>
                 <Chinesesimp>口径：5.8x42 mm 曳光—黄色&lt;br/&gt;发数：100&lt;br/&gt;使用于：CAR-95-1</Chinesesimp>
+                <French>Calibre: 5,8x42 mm traçante - jaune&lt;br /&gt;Balles: 100&lt;br /&gt;Utilisé dans : CAR-95-1</French>
             </Key>
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_yellow">
                 <English>5.8 mm 100Rnd Reload Tracer (Yellow) Mag</English>
@@ -774,6 +777,7 @@
                 <Korean>구경: 6.5x39mm 예광탄 - 황색&lt;br /&gt;장탄수: 30발&lt;br /&gt;사용처: MX/C/M/SW/3GL</Korean>
                 <Japanese>口径: 6.5x39 mm トレーサー - 黄&lt;br /&gt;弾数: 30&lt;br /&gt;使用武器: MX/C/M/SW/3GL</Japanese>
                 <Chinesesimp>口径：6.5x39 mm 曳光—黄色&lt;br/&gt;发数：30&lt;br/&gt;使用于：MX/C/M/SW/3GL</Chinesesimp>
+                <French>Calibre: 6.5x39 mm trace lumineuse de rechargement - jaune&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé avec: MX/C/M/SW/3GL</French>
             </Key>
         </Container>
     </Package>

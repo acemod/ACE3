@@ -26,10 +26,16 @@
         };
     }] call EFUNC(common,addExplosionEventHandler);
 
-    ["ace_firedPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
-    ["ace_firedNonPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
-    ["ace_firedPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
-    ["ace_firedNonPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+    #ifndef DEBUG_MODE_DRAW
+    if (GVAR(spallEnabled)) then {
+    #else
+    if true then {
+    #endif
+        ["ace_firedPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+        ["ace_firedNonPlayer", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+        ["ace_firedPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+        ["ace_firedNonPlayerVehicle", LINKFUNC(fired)] call CBA_fnc_addEventHandler;
+    };
 #ifdef DEBUG_MODE_DRAW
     [QGVAR(dev_clearTraces), LINKFUNC(dev_clearTraces)] call CBA_fnc_addEventHandler;
 
@@ -52,5 +58,5 @@
 }] call CBA_fnc_addEventHandler;
 
 #ifdef LOG_FRAG_INFO
-[true, true, 30] call FUNC(dev_debugAmmo);
+[true, true] call FUNC(dev_debugAmmo);
 #endif
