@@ -17,8 +17,10 @@
  * Public: No
  */
 
-params ["_unit", ["_weapon", primaryWeapon ace_player, ""], ["_jamType", "", ""]];
+params ["_unit", "_weapon", ["_jamType", "", ""]];
 TRACE_3("params",_unit,_weapon,_jamType);
+
+_weapon = param [1, primaryWeapon _unit, [""]];
 
 // don't jam a weapon with no rounds left
 private _ammo = _unit ammo _weapon;
