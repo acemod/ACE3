@@ -81,8 +81,8 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 private _sound = [_cfg_tgt >> QADDON >> "sound"] call FUNC(getCfgDataRandom);
 if (_sound != "") then {
     [
-        CBA_fnc_globalEvent,
-        [QGVAR(EH_say3d), [_unit,_sound]],
+        CBA_fnc_globalSay3D,
+        [_unit, "_sound", nil, true, true],
         (getNumber (_cfg_tgt>> QADDON >> "sound_timing") max 0 min 1) * _duration
     ] call CBA_fnc_waitAndExecute;
 };
