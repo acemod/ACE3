@@ -35,7 +35,7 @@ _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
 // Cookoffs only happen on Fire and Dud, dud rounds are lost on jam clear.
 // Reduce chance of duds as temp increases (functionally increasing the chance of the others but with fewer commands)
 private _temp = 1 max (_unit getVariable [format [QGVAR(%1_temp), _weapon], 0]);
-private _jamTypesAllowed = getArray (configFile >> 'CfgWeapons' >> currentWeapon _unit >> QGVAR(jamTypesAllowed));
+private _jamTypesAllowed = getArray (configFile >> 'CfgWeapons' >> _weapon >> QGVAR(jamTypesAllowed));
 
 if (_jamTypesAllowed isEqualTo []) then {
     _jamTypesAllowed = ["eject", 1, "extract", 1, "feed", 1, "fire", 1, "dud", (5 / (_temp / 5))];
