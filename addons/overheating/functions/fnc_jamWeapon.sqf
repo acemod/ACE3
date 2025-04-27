@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Weapon <STRING>, (default: primaryWeapon ace_player)
+ * 1: Weapon <STRING> (default: primaryWeapon _unit)
  * 2: Jam Type <STRING> (default: ""), must be an allowed jam type for the weapon, if default or invalid selects randomly from allowed types
  *
  * Return Value:
@@ -17,10 +17,10 @@
  * Public: No
  */
 
-params ["_unit", "_weapon", ["_jamType", "", ""]];
+params ["_unit", "", ["_jamType", "", ""]];
 TRACE_3("params",_unit,_weapon,_jamType);
 
-_weapon = param [1, primaryWeapon _unit, [""]];
+private _weapon = param [1, primaryWeapon _unit, [""]];
 
 // don't jam a weapon with no rounds left
 private _ammo = _unit ammo _weapon;
