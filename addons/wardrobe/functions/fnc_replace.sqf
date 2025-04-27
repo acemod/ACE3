@@ -82,7 +82,7 @@ private _sound = [_cfg_tgt >> QUOTE(ADDON) >> "sound"] call FUNC(getCfgDataRando
 if (_sound != "") then {
     [
         CBA_fnc_globalSay3D,
-        [_unit, "_sound", nil, true, true],
+        [_unit, _sound, nil, true, true],
         (getNumber (_cfg_tgt>> QUOTE(ADDON) >> "sound_timing") max 0 min 1) * _duration
     ] call CBA_fnc_waitAndExecute;
 };
