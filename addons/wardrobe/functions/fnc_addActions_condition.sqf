@@ -18,7 +18,7 @@
 
 params ["_player"];
 
-missionNamespace getVariable [QSET(enable_action), false]
+missionNamespace getVariable [QGVAR(set_enable_action), false]
 &&
 { 
     count ([_player] call FUNC(getItems_modifiable_current)) > 0

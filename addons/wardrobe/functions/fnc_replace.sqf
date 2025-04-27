@@ -25,7 +25,7 @@ params ["_target", "_unit", "_actionParams", ["_replaceNow", false, [true]]];
 _actionParams params ["_cfg_origin", "_cfg_tgt"];
 
 // Duration of the "animation"
-private _duration = getNumber (_cfg_tgt>> QADDON >> "duration");
+private _duration = getNumber (_cfg_tgt>> QUOTE(ADDON) >> "duration");
 if (_replaceNow) then { _duration = 0; };
 
 // Replace the Main Item.
@@ -75,15 +75,15 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 
 //// Handle Effects
 // Animation/Gestures
-[ _unit, getText (_cfg_tgt >> QADDON >> "gesture") ] call ace_common_fnc_doGesture;
+[ _unit, getText (_cfg_tgt >> QUOTE(ADDON) >> "gesture") ] call ace_common_fnc_doGesture;
 
 // Plays Random Sound At the Beginning
-private _sound = [_cfg_tgt >> QADDON >> "sound"] call FUNC(getCfgDataRandom);
+private _sound = [_cfg_tgt >> QUOTE(ADDON) >> "sound"] call FUNC(getCfgDataRandom);
 if (_sound != "") then {
     [
         CBA_fnc_globalSay3D,
         [_unit, "_sound", nil, true, true],
-        (getNumber (_cfg_tgt>> QADDON >> "sound_timing") max 0 min 1) * _duration
+        (getNumber (_cfg_tgt>> QUOTE(ADDON) >> "sound_timing") max 0 min 1) * _duration
     ] call CBA_fnc_waitAndExecute;
 };
 

@@ -18,5 +18,5 @@
 
 params [ ["_cfg", configNull, [configNull] ] ];
 
-private _altDispName = getText (_cfg >> QADDON >> "alternativeDisplayName");
+private _altDispName = getText (_cfg >> QUOTE(ADDON) >> "alternativeDisplayName");
 if (_altDispName isEqualTo "") then { getText (_cfg >> "displayName") } else { _altDispName };

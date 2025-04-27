@@ -24,4 +24,4 @@ params [
 
 if (isNull _cfg) exitWith {false};
 // Checks if the config has the property without it being inherited(!)
-count ( QUOTE(configName _x  isEqualTo QQ(ace_wardrobe)) configClasses _cfg ) > 0
+count ( QUOTE(configName _x  isEqualTo QUOTE(QUOTE(ace_wardrobe))) configClasses _cfg ) > 0

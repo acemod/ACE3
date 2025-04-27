@@ -18,4 +18,4 @@
 
 params ["_cfg_current"];
 
-[_cfg_current >> QADDON >> "modifiableTo"] call BIS_fnc_getCfgDataArray apply { [_x] call CBA_fnc_getItemConfig } select { !isNull _x }
+[_cfg_current >> QUOTE(ADDON) >> "modifiableTo"] call BIS_fnc_getCfgDataArray apply { [_x] call CBA_fnc_getItemConfig } select { !isNull _x }
