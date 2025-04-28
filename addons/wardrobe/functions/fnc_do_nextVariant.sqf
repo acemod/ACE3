@@ -32,11 +32,12 @@ private _canModifyTo = [_unit, _current_cfg, _cfg_tgt, false] call FUNC(canModif
 
 if !(_canModifyTo) exitWith {
     [
-        [LLSTRING(cannotSwitchTo)],
-        [getText (_cfg_tgt >> "displayName")],
-        [LLSTRING(missingComponents)],
-        true
-    ] call CBA_fnc_notify;
+        [
+            LLSTRING(missingComponents),
+            getText (_cfg_tgt >> "displayName")
+        ],
+        2.5
+    ] call EFUNC(common,displayTextStructured);
 }; 
 
 [_unit, _unit, [_current_cfg, _cfg_tgt], true] call FUNC(replace); 
