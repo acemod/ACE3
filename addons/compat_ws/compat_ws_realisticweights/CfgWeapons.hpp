@@ -6,9 +6,6 @@ class CfgWeapons {
     class Rifle_Long_Base_F: Rifle_Base_F {
         class WeaponSlotsInfo;
     };
-    class Rifle_Short_Base_F: Rifle_Base_F {
-        class WeaponSlotsInfo;
-    };
 
     // FN FAL 50
     class DMR_06_base_F: Rifle_Long_Base_F {
