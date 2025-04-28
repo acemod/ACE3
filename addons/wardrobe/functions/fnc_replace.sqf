@@ -89,7 +89,7 @@ if (_sound != "") then {
 
 // Notification
 private _notify_img = getText (_cfg_tgt >> "picture");
-if !(".paa" in _notify_img) then { _notify_img = [_notify_img,"paa"] joinString "." };
+if !(".paa" in _notify_img) then { _notify_img = [_notify_img,"paa"] joinString "." }; // Some vanilla items dont have the .paa and cba notify will display the path as a string without the .paa
 [ CBA_fnc_notify, [[ _notify_img, 4], [getText (_cfg_tgt >> "displayName")], true ], _duration * 1.2 ] call CBA_fnc_waitAndExecute;
 
 nil
