@@ -749,6 +749,6 @@ class GVAR(type_Blowpipe) {
     offsetFromCrosshair[] = { 0, 0, 0 }; // where the missile wants to stay in relation to the center of the crosshair.
 
     // Attack profile type selection
-    defaultAttackProfile = "WIRE";
-    attackProfiles[] = {"WIRE"};
+    defaultAttackProfile = "BEAM";
+    attackProfiles[] = {"BEAM"};
 };
