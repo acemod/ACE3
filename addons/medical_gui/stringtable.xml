@@ -1712,7 +1712,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintMessage_defaultMessage">
             <!-- %1 = medic's name -->
-            <English>%1 began treating you.</English>
+            <English>%1 is treating you</English>
         </Key>
         <Key ID="STR_ACE_Medical_GUI_medicalHintMessage_DisplayName">
             <English>Medical Menu Message</English>
