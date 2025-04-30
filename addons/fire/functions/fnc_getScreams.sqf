@@ -21,6 +21,7 @@ TRACE_1("fnc_getScreams",_unitClass);
 if (_unitClass isEqualType objNull) then {
     _unitClass = typeOf _unitClass;
 };
+if (_unitClass == "") exitWith {[]};
 
 // If unit is defined in hash, grab sounds and return
 // If not, check each parent of the class until a value is defined
