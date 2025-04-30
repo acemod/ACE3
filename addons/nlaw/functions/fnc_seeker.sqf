@@ -74,9 +74,12 @@ if ((_projPos distance _launchPos) >= 20) then {
                 TRACE_2("",_target worldToModel (ASLToAGL _virtualPos),boundingBoxReal _target);
                 _virtualPos = _virtualPos vectorAdd (_vectorDir vectorMultiply 1.25);
 
-                _projectile setPosASL _virtualPos;
-                _projectile setMissileTarget [_target, true];
-                triggerAmmo _projectile;
+                deleteVehicle _projectile;
+
+                private _charge = "ACE_NLAW_ShapedCharge" createVehicle _virtualPos;
+                _charge setPosASL _virtualPos;
+                _charge setMissileTarget [_target, true];
+                triggerAmmo _charge;
 
                 _seekerStateParams set [1, true];
 
