@@ -7,7 +7,7 @@
  * 0: Unit <OBJECT|STRING>
  *
  * Return Value:
- * Scream sounds <ARRAY<STRING>>
+ * Scream sounds <ARRAY of STRING>
  *
  * Example:
  * player call ace_fire_fnc_getScreams

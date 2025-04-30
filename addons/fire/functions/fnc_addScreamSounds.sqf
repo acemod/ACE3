@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit class <STRING>
- * 1: Array of CfgSounds classes <ARRAY<STRING>>
+ * 1: Array of CfgSounds classes <ARRAY of STRING>
  * 2: Overwrite existing (optional, default: false) <BOOL>
  *
  * Return Value:
