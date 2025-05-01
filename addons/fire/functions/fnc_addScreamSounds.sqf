@@ -6,7 +6,9 @@
  * Arguments:
  * 0: Unit class <STRING>
  * 1: Array of CfgSounds classes <ARRAY of STRING>
- * 2: Overwrite existing <BOOL> (default: false)
+ * 2: Append to existing sounds array <BOOL> (default: true)
+ *    - true : Passed sounds will be added to unit's existing sounds
+ *    - false: Passed sounds will replace unit's existing sounds
  *
  * Return Value:
  * Succeeded <BOOL>
@@ -17,12 +19,17 @@
  * Public: Yes
  */
 
-params [["_unitClass", "", [""]], ["_screams", [], [[]]], ["_overwrite", false, [false]]];
+params [["_unitClass", "", [""]], ["_screams", [], [[]]], ["_append", true, [false]]];
 TRACE_3("fnc_addScreamSounds",_unitClass,_screams,_overwrite);
 
-if (_unitClass == "" || _screams isEqualTo [] ||
-    !(_unitClass isKindOf "CAManBase") || (!_overwrite && _unitClass in GVAR(screams))
-) exitWith { false };
+if (_unitClass == "" || _screams isEqualTo [] || !(_unitClass isKindOf "CAManBase")) exitWith { false };
 
-GVAR(screams) set [_unitClass, _screams];
+if (_append) then {
+    private _existingScreams = _unitClass call FUNC(getScreams);
+    _existingScreams append _screams;
+    GVAR(screams) set [_unitClass, _existingScreams];
+} else {
+    GVAR(screams) set [_unitClass, _screams];
+};
+
 true;
