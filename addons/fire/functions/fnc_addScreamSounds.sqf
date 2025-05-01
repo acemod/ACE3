@@ -20,7 +20,9 @@
 params [["_unitClass", "", [""]], ["_screams", [], [[]]], ["_overwrite", false, [false]]];
 TRACE_3("fnc_addScreamSounds",_unitClass,_screams,_overwrite);
 
-if (_unitClass == "" || _screams isEqualTo [] || (!_overwrite && _unitClass in GVAR(screams))) exitWith { false };
+if (_unitClass == "" || _screams isEqualTo [] ||
+    !(_unitClass isKindOf "CAManBase") || (!_overwrite && _unitClass in GVAR(screams))
+) exitWith { false };
 
 GVAR(screams) set [_unitClass, _screams];
 true;
