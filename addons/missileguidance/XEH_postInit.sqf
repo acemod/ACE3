@@ -52,3 +52,13 @@ if (!hasInterface) exitWith {};
         };
     }] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
+
+
+
+// Add keybind - todo: move to missile_guidance-common-binds:  ["lock", ... }] call EFUNC(missileguidance,keybind_add);
+["ACE3 Weapons", QGVAR(mclosMouseTemp), QGVAR(mclosMouseTemp), {
+    GVAR(MCLOS_mouseInput) = true;
+    call FUNC(MCLOS_mouseInput);
+}, {
+    GVAR(MCLOS_mouseInput) = false;
+}, [15, [false, false, false]], false] call CBA_fnc_addKeybind;  //Tab Key

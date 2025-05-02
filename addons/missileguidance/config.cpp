@@ -22,6 +22,7 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgWeapons.hpp"
 #include "GPSDialog.hpp"
+#include "MCLOSDialog.hpp"
 #ifdef CREATE_MOCK_PLATFORMS
 #include "dev\mock_vehicles.hpp"
 #endif

@@ -22,6 +22,7 @@ PREP(handleHandoff);
 PREP(shouldFilterRadarHit);
 
 PREP(MCLOS_buttonPressed);
+PREP(MCLOS_mouseInput);
 
 // Attack Profiles
 PREP(attackProfile_AIR);
