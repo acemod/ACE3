@@ -61,6 +61,6 @@ mission = "Wardrobe.VR"
 dlc = [
 #    "Western Sahara",    
 #    "Reaction Forces", 
-    "S.O.G. Prairie Fire",
+#    "S.O.G. Prairie Fire",
 #    "gm"
 ]

@@ -25,7 +25,7 @@ params ["_target", "_unit", "_actionParams", ["_replaceNow", false, [true]]];
 _actionParams params ["_cfg_origin", "_cfg_tgt"];
 
 // Duration of the "animation"
-private _duration = getNumber (_cfg_tgt>> QUOTE(ADDON) >> "duration");
+private _duration = getNumber (configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "duration");
 if (_replaceNow) then { _duration = 0; };
 
 // Replace the Main Item.
@@ -75,21 +75,21 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 
 //// Handle Effects
 // Animation/Gestures
-[ _unit, getText (_cfg_tgt >> QUOTE(ADDON) >> "gesture") ] call ace_common_fnc_doGesture;
+[ _unit, getText (configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "gesture") ] call ace_common_fnc_doGesture;
 
 // Plays Random Sound At the Beginning
-private _sound = [_cfg_tgt >> QUOTE(ADDON) >> "sound"] call FUNC(getCfgDataRandom);
+private _sound = [configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "sound"] call FUNC(getCfgDataRandom);
 if (_sound != "") then {
     [
         CBA_fnc_globalSay3D,
         [_unit, _sound, nil, true, true],
-        (getNumber (_cfg_tgt>> QUOTE(ADDON) >> "sound_timing") max 0 min 1) * _duration
+        (getNumber (configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "sound_timing") max 0 min 1) * _duration
     ] call CBA_fnc_waitAndExecute;
 };
 
 // Notification
 private _notify_img = getText (_cfg_tgt >> "picture");
 if !(".paa" in _notify_img) then { _notify_img = [_notify_img,"paa"] joinString "." }; // Some vanilla items dont have the .paa and cba notify will display the path as a string without the .paa
-[ CBA_fnc_notify, [[ _notify_img, 4], [getText (_cfg_tgt >> "displayName")], true ], _duration * 1.2 ] call CBA_fnc_waitAndExecute;
+[ ace_common_fnc_displayTextStructured, [["<img image='%1' size=5></img><br/>%2",_notify_img, getText (_cfg_tgt >> "displayName")], 4], _duration * 1.2 ] call CBA_fnc_waitAndExecute;
 
 nil

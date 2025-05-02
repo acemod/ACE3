@@ -30,8 +30,8 @@ private _actions = [];
     private _cfg_target = _x;
     private _aceAction = [
         configName _cfg_target,
-        [_cfg_target] call FUNC(getAction_Name),
-        [_cfg_target] call FUNC(getAction_Icon),
+        [_cfg_target] call FUNC(addActions_name),
+        [_cfg_target] call FUNC(addActions_icon),
         FUNC(replace),
         {true},
         {},

@@ -26,6 +26,4 @@ class CfgPatches {
 #include "CfgVehicles.hpp"
 #include "CfgSounds.hpp"
 
-#include "Baseclass.hpp"
-
 #include "CfgWardrobe.hpp"

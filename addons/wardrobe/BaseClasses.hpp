@@ -2,7 +2,10 @@
 
 class GVAR(base) {
 
-    modifiableTo[] = {""};
+    // modifiableTo[] = {""}; // Old version
+
+    class modifiableTo {        
+    };
 
     // describes the components of the current item.
     // When the current wearable is being changed into something, that does not have these 

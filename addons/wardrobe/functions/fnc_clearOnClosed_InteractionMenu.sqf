@@ -2,7 +2,7 @@
 
 /*
  * Author: OverlordZorn
- * Function to request the clearing of the cache on closing of the menu
+ * Function to request the clearing of the cache upon closing of the menu
  *
  * Arguments:
  * 0: The first argument <STRING>

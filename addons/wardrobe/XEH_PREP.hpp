@@ -19,8 +19,8 @@ PREP(spareBarrel_updateMagIDs);
 PREP(addActions);
 PREP(addActions_condition);
 PREP(addActions_children);
-PREP(getAction_Name);
-PREP(getAction_Icon);
+PREP(addActions_name);
+PREP(addActions_icon);
 // Cache
 PREP(cache_get);
 PREP(cache_set);
@@ -32,5 +32,5 @@ PREP(getAllWardrobeItems);
 PREP(compare_container_maxLoad);
 // CBA Context Menu
 PREP(enable_contextMenu);
-PREP(do_nextVariant);
-PREP(getNextVariant);
+PREP(nextVariant_do);
+PREP(nextVariant_get);

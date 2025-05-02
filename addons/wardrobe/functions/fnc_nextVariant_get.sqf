@@ -14,7 +14,7 @@
  * Desired Variant <CONFIG>
  *
  * Example:
- * [_cfg_current] call ace_wardrobe_fnc_getNextVariant
+ * [_cfg_current] call ace_wardrobe_fnc_nextVariant_get
  *
  * Public: No
  */

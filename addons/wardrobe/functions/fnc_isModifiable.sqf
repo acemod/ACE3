@@ -2,8 +2,7 @@
 
 /*
  * Author: OverlordZorn
- * Function to check if the provided wearable Item (Config) item is defined as a modifiable Wardrobe Item.
- * Will not return true on fully inherited "ace_wardrobe" subclass
+ * Function to check if the provided wearable Item (Config) can be modified through ace_wardrobe.
  *
  * Arguments:
  * 0: Wearable Item <Config>
@@ -23,5 +22,10 @@ params [
 
 
 if (isNull _cfg) exitWith {false};
+
+/* old 
 // Checks if the config has the property without it being inherited(!)
 count ( QUOTE(configName _x  isEqualTo QUOTE(QUOTE(ace_wardrobe))) configClasses _cfg ) > 0
+*/
+
+isClass (configFile >> QUOTE(ADDON) >> configName _cfg)

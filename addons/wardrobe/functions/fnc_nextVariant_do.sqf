@@ -15,7 +15,7 @@
  * nothing
  *
  * Example:
- * [_unit, _container, _item, _slot, _params] call ace_wardrobe_fnc_do_nextVariant
+ * [_unit, _container, _item, _slot, _params] call ace_wardrobe_fnc_nextVariant_do;
  *
  * Public: No
  */
@@ -24,7 +24,7 @@ params ["_unit", "_container", "_item", "_slot", "_params"];
 
 private _current_cfg = [_item] call cba_fnc_getItemConfig;
 
-private _cfg_tgt = [ _current_cfg ] call FUNC(getNextVariant);
+private _cfg_tgt = [ _current_cfg ] call FUNC(nextVariant_get);
 
 if (_cfg_tgt isEqualTo false) exitWith {};
 

@@ -2,7 +2,7 @@
 #define ENTRY(base,dur)\
 class GVAR(DOUBLES(base,dur)) {\
     name = QUOTE(base dur);\
-    sound[] = { QPATHTOF(data\sounds\DOUBLES(base,dur)##.ogg), 1, 1, 100 };\
+    sound[] = { QPATHTOF(data\sounds\##DOUBLES(base,dur)##.ogg), 1, 1, 100 };\
     titles[] = { 0, "" };\
     forceTitles = 0;\
     titlesStructured = 0;\

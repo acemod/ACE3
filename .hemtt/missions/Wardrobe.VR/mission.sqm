@@ -89,9 +89,6 @@ class ScenarioData
 {
 	author="Overlord Zorn";
 };
-class CustomAttributes
-{
-};
 class Mission
 {
 	class Intel

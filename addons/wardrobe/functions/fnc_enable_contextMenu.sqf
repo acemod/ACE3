@@ -32,7 +32,7 @@ if (_enable && {!(missionNamespace getVariable [QGVAR(contextmenu_enabled), fals
             {true},
             {true}
         ],
-        FUNC(do_nextVariant),
+        FUNC(nextVariant_do),
         false,
         []
     ] call CBA_fnc_addItemContextMenuOption;

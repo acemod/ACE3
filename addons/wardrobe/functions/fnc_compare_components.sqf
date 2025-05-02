@@ -21,8 +21,8 @@
 
 params ["_cfg_origin", "_cfg_tgt"];
 
-private _current = getArray (_cfg_origin >> "ace_wardrobe" >> "components");
-private _needed  = getArray (_cfg_tgt    >> "ace_wardrobe" >> "components");
+private _current = getArray (configFile >> QUOTE(ADDON) >> configName _cfg_origin >> "components");
+private _needed  = getArray (configFile >> QUOTE(ADDON) >> configName _cfg_tgt    >> "components");
 
 private _missing = []; 
 
