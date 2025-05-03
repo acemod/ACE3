@@ -492,6 +492,40 @@
             <Chinesesimp>弹药</Chinesesimp>
             <Turkish>Cephane</Turkish>
         </Key>
+        <Key ID="STR_ACE_Repair_HitLAileron">
+            <English>Left Aileron</English>
+            <Czech>Levý křidélko</Czech>
+            <French>Aileron gauche</French>
+            <Spanish>Alerón izquierdo</Spanish>
+            <Italian>Alettoni sinistro</Italian>
+            <Polish>Lewe lotki</Polish>
+            <Portuguese>Aileron esquerdo</Portuguese>
+            <Russian>Левый элерон</Russian>
+            <German>Linkes Querruder</German>
+            <Korean>왼쪽 보조익</Korean>
+            <Japanese>左補助翼</Japanese>
+            <Chinese>左副翼</Chinese>
+            <Chinesesimp>左副翼</Chinesesimp>
+            <Turkish>Sol Kanatçık</Turkish>
+            <Hungarian>Bal csűrőlap</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitRAileron">
+            <English>Right Aileron</English>
+            <Czech>Pravý křidélko</Czech>
+            <French>Aileron droit</French>
+            <Spanish>Alerón derecho</Spanish>
+            <Italian>Alettoni destro</Italian>
+            <Polish>Prawe lotki</Polish>
+            <Portuguese>Aileron direito</Portuguese>
+            <Russian>Правый элерон</Russian>
+            <German>Rechtes Querruder</German>
+            <Korean>오른쪽 보조익</Korean>
+            <Japanese>右補助翼</Japanese>
+            <Chinese>右副翼</Chinese>
+            <Chinesesimp>右副翼</Chinesesimp>
+            <Turkish>Sağ Kanatçık</Turkish>
+            <Hungarian>Jobb csűrőlap</Hungarian>
+        </Key>
         <Key ID="STR_ACE_Repair_HitAvionics">
             <English>Avionics</English>
             <Czech>Elektronika</Czech>
