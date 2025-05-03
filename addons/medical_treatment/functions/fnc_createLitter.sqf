@@ -57,7 +57,7 @@ private _fnc_createLitter = {
             0
         ];
 
-        private _raycast = lineIntersectsSurfaces [_position vectorAdd [0,0,1], _position vectorAdd [0,0,-1e11], _patient, _medic, true, 1, "ROADWAY", "FIRE"];
+        private _raycast = lineIntersectsSurfaces [_position vectorAdd [0, 0, 1], _position vectorAdd [0, 0, -1e11], _patient, _medic, true, 1, "ROADWAY", "FIRE"];
 
         _position = [_position, (_raycast # 0) # 0] select (_raycast isNotEqualTo []);
         private _surfaceNormal = [[0, 0, 1], (_raycast # 0) # 1] select (_raycast isNotEqualTo []);
