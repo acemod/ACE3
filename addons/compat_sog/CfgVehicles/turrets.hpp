@@ -423,6 +423,7 @@ class vn_static_h12_base: Mortar_01_base_F {
     EGVAR(dragging,canCarry) = 0;
     EGVAR(dragging,canDrag) = 1;
     EGVAR(dragging,dragPosition)[] = {0.4, 2.1, 0};
+    EGVAR(overpressure,noReflection) = 1;
 
     class ACE_Actions: ACE_Actions {
         class ACE_MainActions: ACE_MainActions {
