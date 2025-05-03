@@ -470,6 +470,12 @@
             <Chinese>完整修復條件</Chinese>
             <Chinesesimp>全面维修条件</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Repair_HitAASight">
+            <English>AA Sight</English>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitATGMSight">
+            <English>ATGM Sight</English>
+        </Key>
         <Key ID="STR_ACE_Repair_HitAmmo">
             <English>Ammo</English>
             <Czech>Munice</Czech>
@@ -816,6 +822,9 @@
             <Chinesesimp>轻型</Chinesesimp>
             <Turkish>Işık</Turkish>
         </Key>
+        <Key ID="STR_ACE_Repair_HitMainSight">
+            <English>Main Sight</English>
+        </Key>
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>
             <Czech>Rakety</Czech>
@@ -831,6 +840,9 @@
             <Chinese>導彈</Chinese>
             <Chinesesimp>导弹</Chinesesimp>
             <Turkish>Füzeler</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitPeriscope">
+            <English>Periscope</English>
         </Key>
         <Key ID="STR_ACE_Repair_HitPitotTube">
             <English>Pitot Tube</English>
