@@ -75,7 +75,7 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 
 //// Handle Effects
 // Animation/Gestures
-[ _unit, getText (configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "gesture") ] call ace_common_fnc_doGesture;
+[ _unit, getText (configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "gesture") ] call EFUNC(common,doGesture);
 
 // Plays Random Sound At the Beginning
 private _sound = [configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "sound"] call cba_fnc_getCfgDataRandom;
