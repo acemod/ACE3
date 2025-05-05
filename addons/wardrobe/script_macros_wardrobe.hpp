@@ -42,6 +42,28 @@ class variantWithout: baseWithout {\
     };\
 }
 
+#define BASIC_COMBO(Combo,ComboBase,Variant1,Variant1Base,Variant2,Variant2Base)\
+class Combo: ComboBase {\
+    class modifiableTo {\
+        class Variant1;\
+        class Variant2;\
+    };\
+    components[] = { QUOTE(Variant1), QUOTE(Variant2) };\
+};\
+class Variant1: Variant1Base {\
+    class modifiableTo {\
+        class Combo;\
+    };\
+    components[] = { QUOTE(Variant1) };\
+};\
+class Variant2: Variant2Base {\
+    class modifiableTo {\
+        class Combo;\
+    };\
+    components[] = { QUOTE(Variant2) };\
+}
+
+
 // Basic
 #define UNIFORM_SLEEVES(variantSleevesDown,variantSleevesUp)\
 BASIC(variantSleevesDown,variantSleevesUp,EGVAR(wardrobe,base_U_sleeves_down),EGVAR(wardrobe,base_U_sleeves_up))
@@ -59,3 +81,6 @@ BASIC(variantVisorUp,variantVisorDown,EGVAR(wardrobe,base_H_visor_up),EGVAR(ward
 #define HELMET_GOGGLES(variantGogglesOn,variantGogglesOff,component)\
 BASIC_COMPONENT(variantGogglesOn,variantGogglesOff,EGVAR(wardrobe,base_H_goggles_on),EGVAR(wardrobe,base_H_goggles_off),component)
 
+// Basic Combo
+#define HELMET_CAP_COMBO(Combo,Helmet,Cap)\
+BASIC_COMBO(Combo,EGVAR(wardrobe,base),Helmet,EGVAR(wardrobe,base),Cap,EGVAR(wardrobe,base))
