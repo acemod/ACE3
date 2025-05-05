@@ -79,7 +79,7 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 
 // Plays Random Sound At the Beginning
 private _sound = [configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "sound"] call cba_fnc_getCfgDataRandom;
-if (_sound != "") then {
+if (_sound isNotEqualTo "") then {
     [
         CBA_fnc_globalSay3D,
         [_unit, _sound, nil, true, true],
