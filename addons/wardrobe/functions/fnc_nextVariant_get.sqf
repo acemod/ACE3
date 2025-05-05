@@ -24,7 +24,7 @@ params ["_cfg_current"];
 
 private _modifiableTo_cfg = [_cfg_current, false] call FUNC(getItems_modifiableTo);
 
-if (count _modifiableTo_cfg == 0) exitWith {false};
+if (_modifiableTo_cfg isEqualTo []) exitWith {false};
 
 private _history_cfg = missionNamespace getVariable [QGVAR(variant_history_cfg), "404"];
 
