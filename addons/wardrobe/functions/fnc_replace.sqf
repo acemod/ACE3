@@ -52,7 +52,7 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 // Add Surplus
 [_cfg_origin, _cfg_tgt] call FUNC(compare_components) params ["_missing", "_surplus"];
 {
-    if (configName _cfg_tgt != _x) then {
+    if (configName _cfg_tgt isNotEqualTo toLowerANSI _x) then {
         if ( isClass (configFile >> "CfgGlasses" >> _x) && { goggles _unit == "" } ) then {
             _unit addGoggles _x;
         } else {
