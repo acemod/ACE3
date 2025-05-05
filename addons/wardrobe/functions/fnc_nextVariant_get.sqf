@@ -46,7 +46,7 @@ private _remaining = _modifiableTo_cfg - _history_cfg;
 
 
 // Returns ether a random remaining item or alternatively, a random one from the complete array.
-private _return = if (count _remaining > 0) then {
+private _return = if (_remaining isNotEqualTo []) then {
     selectRandom _remaining
 } else {
     // _history_cfg select { !(_x in _modifiableTo_cfg) };
