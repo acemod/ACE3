@@ -66,7 +66,7 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
     if (configName _cfg_origin isNotEqualTo toLowerANSI _x) then {
 
         switch (true) do {
-            case (goggles _unit == _x): { removeGoggles _unit; };
+            case (goggles _unit isEqualTo toLowerANSI _x): { removeGoggles _unit; };
             default { [_unit, _x] call CBA_fnc_removeItem; };
         };
     };
