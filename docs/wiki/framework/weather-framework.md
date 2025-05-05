@@ -57,19 +57,20 @@ class CfgWorlds {
         // ACE_WindDirectionProbabilities: Monthly wind direction probabilities, 1 entry per month starting with January
         // the format of each entry is: {probability from N, prob. from NE, prob. from E, prob. from SE, prob. from S, prob. from SW, prob. from W, prob. from NW}
         // using the "Fraction of Time Spent with Various Wind Directions in (month)" graph
-        ACE_WindDirectionProbabilities[]  = {{0.06, 0.32, 0.05, 0.04, 0.15, 0.06, 0.02, 0.02}, // January
-                                             {0.08, 0.32, 0.04, 0.04, 0.18, 0.06, 0.02, 0.02}, // February
-                                             {0.09, 0.30, 0.04, 0.04, 0.20, 0.06, 0.02, 0.03}, // March
-                                             {0.10, 0.25, 0.03, 0.04, 0.22, 0.06, 0.02, 0.04}, // April
-                                             {0.18, 0.25, 0.03, 0.04, 0.18, 0.04, 0.01, 0.05}, // May
-                                             {0.25, 0.25, 0.03, 0.03, 0.15, 0.03, 0.00, 0.08}, // June
-                                             {0.32, 0.30, 0.02, 0.02, 0.10, 0.01, 0.00, 0.09}, // July
-                                             {0.28, 0.35, 0.02, 0.01, 0.08, 0.01, 0.00, 0.08}, // August
-                                             {0.20, 0.37, 0.03, 0.01, 0.11, 0.01, 0.01, 0.05}, // September
-                                             {0.10, 0.39, 0.04, 0.02, 0.15, 0.02, 0.01, 0.03}, // October
-                                             {0.08, 0.38, 0.06, 0.04, 0.19, 0.03, 0.02, 0.02}, // November
-                                             {0.06, 0.37, 0.05, 0.03, 0.18, 0.04, 0.02, 0.02}};// December
-                                             // N , NE  , E   , SE  , S   , SW  , W   , NW
+        ACE_WindDirectionProbabilities[]  = {
+            {0.06, 0.32, 0.05, 0.04, 0.15, 0.06, 0.02, 0.02}, // January
+            {0.08, 0.32, 0.04, 0.04, 0.18, 0.06, 0.02, 0.02}, // February
+            {0.09, 0.30, 0.04, 0.04, 0.20, 0.06, 0.02, 0.03}, // March
+            {0.10, 0.25, 0.03, 0.04, 0.22, 0.06, 0.02, 0.04}, // April
+            {0.18, 0.25, 0.03, 0.04, 0.18, 0.04, 0.01, 0.05}, // May
+            {0.25, 0.25, 0.03, 0.03, 0.15, 0.03, 0.00, 0.08}, // June
+            {0.32, 0.30, 0.02, 0.02, 0.10, 0.01, 0.00, 0.09}, // July
+            {0.28, 0.35, 0.02, 0.01, 0.08, 0.01, 0.00, 0.08}, // August
+            {0.20, 0.37, 0.03, 0.01, 0.11, 0.01, 0.01, 0.05}, // September
+            {0.10, 0.39, 0.04, 0.02, 0.15, 0.02, 0.01, 0.03}, // October
+            {0.08, 0.38, 0.06, 0.04, 0.19, 0.03, 0.02, 0.02}, // November
+            {0.06, 0.37, 0.05, 0.03, 0.18, 0.04, 0.02, 0.02}  // December
+        };  // N , NE  , E   , SE  , S   , SW  , W   , NW
     };
 };
 ```
