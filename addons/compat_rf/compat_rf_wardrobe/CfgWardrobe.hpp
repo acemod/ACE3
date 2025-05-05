@@ -1,5 +1,4 @@
-#include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
-
+/*
 class CfgWeapons
 {
     //// Helmets
@@ -107,4 +106,8 @@ class CfgWeapons
             modifiableTo[] = { "lxWS_H_CapB_rvs_blk_ION" };
         };
     };    
+};
+*/
+class ace_wardrobe {
+    #include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
 };

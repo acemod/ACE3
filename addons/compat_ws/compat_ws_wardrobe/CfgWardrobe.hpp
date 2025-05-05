@@ -1,6 +1,4 @@
-#include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
-
-
+/*
 class CfgGlasses {
     class G_Combat;
     class G_Combat_lxWS: G_Combat {
@@ -87,4 +85,9 @@ class CfgWeapons {
             modifiableTo[] = { "lxWS_H_PASGT_goggles_white_F" };
         };
     };
+};
+*/
+class ace_wardrobe {
+    #include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
+
 };
