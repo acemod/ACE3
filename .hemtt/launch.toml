@@ -83,3 +83,12 @@ workshop = [
     "843593391", # RHS GREF Workshop ID
     "843632231", # RHS SAF  Workshop ID
 ]
+
+[Wardrobe_cdlc]
+extends = "Wardrobe"
+dlc = [
+    "vn",
+    "gm",
+    "rf",
+    "ws",
+]
