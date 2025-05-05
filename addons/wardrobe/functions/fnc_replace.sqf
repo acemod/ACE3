@@ -53,7 +53,7 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 [_cfg_origin, _cfg_tgt] call FUNC(compare_components) params ["_missing", "_surplus"];
 {
     if (configName _cfg_tgt isNotEqualTo toLowerANSI _x) then {
-        if ( isClass (configFile >> "CfgGlasses" >> _x) && { goggles _unit == "" } ) then {
+        if ( isClass (configFile >> "CfgGlasses" >> _x) && { goggles _unit isEqualTo "" } ) then {
             _unit addGoggles _x;
         } else {
             [_unit, _x, true] call CBA_fnc_addItem;
