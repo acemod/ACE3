@@ -36,7 +36,7 @@ private _actions = [];
         {true},
         {},
         [_cfg_origin, _cfg_target]
-    ] call ace_interact_menu_fnc_createAction;
+    ] call EFUNC(interact_menu,createAction);
     _actions pushBack [_aceAction, [], _target];
 
 } forEach _newItems;
