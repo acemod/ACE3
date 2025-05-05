@@ -63,7 +63,7 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 
 // Remove Missing
 {
-    if (configName _cfg_origin != _x) then {
+    if (configName _cfg_origin isNotEqualTo toLowerANSI _x) then {
 
         switch (true) do {
             case (goggles _unit == _x): { removeGoggles _unit; };
