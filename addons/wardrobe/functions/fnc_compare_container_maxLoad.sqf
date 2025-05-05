@@ -68,7 +68,7 @@ LOG_SYS("CompareMaxLoad","======================================================
 _str = format ["%1 mismatches detected!", count _mismatches];
 LOG_SYS("CompareMaxLoad",_str);
 
-if (count _mismatches > 0) then {
+if (_mismatches isNotEqualTo []) then {
     LOG_SYS("CompareMaxLoad","========================================================================================================");
     { LOG_SYS("CompareMaxLoad",str _x); } forEach _mismatches;
 };

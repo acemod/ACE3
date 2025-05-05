@@ -24,7 +24,7 @@ params ["_cfg_current"];
 
 private _modifiableTo_cfg = [_cfg_current, false] call FUNC(getItems_modifiableTo);
 
-if (count _modifiableTo_cfg == 0) exitWith {false};
+if (_modifiableTo_cfg isEqualTo []) exitWith {false};
 
 private _history_cfg = missionNamespace getVariable [QGVAR(variant_history_cfg), "404"];
 
@@ -46,7 +46,7 @@ private _remaining = _modifiableTo_cfg - _history_cfg;
 
 
 // Returns ether a random remaining item or alternatively, a random one from the complete array.
-private _return = if (count _remaining > 0) then {
+private _return = if (_remaining isNotEqualTo []) then {
     selectRandom _remaining
 } else {
     // _history_cfg select { !(_x in _modifiableTo_cfg) };
