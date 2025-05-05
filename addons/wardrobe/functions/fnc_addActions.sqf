@@ -33,7 +33,7 @@ private _actions = [];
         FUNC(addActions_children),
         [_cfg, _x#1]
     ] call ace_interact_menu_fnc_createAction;
-    _actions pushBack [_aceAction, [], _target];
+    _actions pushBack [_aceAction, [], _unit];
 
 } forEach _modifiableItems;
 
