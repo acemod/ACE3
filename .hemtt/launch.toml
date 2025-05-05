@@ -51,16 +51,35 @@ workshop = [
 ]
 
 [Wardrobe]
-extends = "rhs"
+extends = "default"
+mission = "Wardrobe.VR"
 workshop = [
     "2369477168", # Advanced Developer Tools
     "1779063631", # ZEN
 #    "623475643",  # eden enhanced
 ]
-mission = "Wardrobe.VR"
-dlc = [
-#    "Western Sahara",    
-#    "Reaction Forces", 
-#    "S.O.G. Prairie Fire",
-#    "gm"
+
+[Wardrobe_gm]
+extends = "Wardrobe"
+dlc = ["gm"]
+
+[Wardrobe_ws]
+extends = "Wardrobe"
+dlc = ["Western Sahara"]
+
+[Wardrobe_rf]
+extends = "Wardrobe"
+dlc = ["Reaction Forces"]
+
+[Wardrobe_sog]
+extends = "Wardrobe"
+dlc = ["S.O.G. Prairie Fire"]
+
+[Wardrobe_rhs]
+extends = "Wardrobe"
+workshop = [
+    "843425103", # RHS AFRF Workshop ID
+    "843577117", # RHS USAF Workshop ID
+    "843593391", # RHS GREF Workshop ID
+    "843632231", # RHS SAF  Workshop ID
 ]
