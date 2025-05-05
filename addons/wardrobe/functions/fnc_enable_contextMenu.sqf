@@ -2,7 +2,7 @@
 
 /*
  * Author: OverlordZorn
- * CBA Setting - On Setting Changed - Function to activate the Wardrobe related CBA Context Menu Options
+ * CBA Setting - On Setting Changed - Function to activate the Wardrobe-related CBA Context Menu Options
  *
  * Arguments:
  * 0: CBA Setting Value <BOOL>
