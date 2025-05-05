@@ -1,10 +1,4 @@
-class EGVAR(wardrobe,base);
-class EGVAR(wardrobe,base_U_sleeves_up);
-class EGVAR(wardrobe,base_U_sleeves_down);
-class EGVAR(wardrobe,base_U_jacket_open);
-class EGVAR(wardrobe,base_U_jacket_closed);
-class EGVAR(wardrobe,base_H_visor_up);
-class EGVAR(wardrobe,base_H_visor_down);
+#include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
 
 class CfgWeapons
 {

@@ -1,6 +1,4 @@
-class EGVAR(wardrobe,base);
-class EGVAR(wardrobe,base_H_goggles_on);
-class EGVAR(wardrobe,base_H_goggles_off);
+#include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
 
 
 class CfgGlasses {

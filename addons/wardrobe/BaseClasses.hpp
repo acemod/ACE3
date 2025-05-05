@@ -80,3 +80,15 @@ class GVAR(base_H_goggles_off): GVAR(base) {
     gesture ="GestureWipeFace";
     alternativeDisplayName = CSTRING(gogglesOff);
 };
+
+
+// Common Base Class for Headgear with a Mask on and Mask Off variant
+class GVAR(base_H_mask_on): GVAR(base) {
+    gesture ="GestureWipeFace";
+    alternativeDisplayName = CSTRING(maskOn);
+};
+
+class GVAR(base_H_mask_off): GVAR(base) {
+    gesture ="GestureWipeFace";
+    alternativeDisplayName = CSTRING(maskOff);
+};

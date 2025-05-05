@@ -64,7 +64,10 @@ class Variant2: Variant2Base {\
 }
 
 
-// Basic
+// Basic Setups without the use of Components
+#define BASE_PAIR(variant1,variant2)\
+BASIC(variant1,variant2,EGVAR(wardrobe,base),EGVAR(wardrobe,base))
+
 #define UNIFORM_SLEEVES(variantSleevesDown,variantSleevesUp)\
 BASIC(variantSleevesDown,variantSleevesUp,EGVAR(wardrobe,base_U_sleeves_down),EGVAR(wardrobe,base_U_sleeves_up))
 
@@ -77,7 +80,10 @@ BASIC(variantJacketOpen,variantJacketClosed,EGVAR(wardrobe,base_U_jacket_open),E
 #define HELMET_VISOR(variantVisorUp,variantVisorDown)\
 BASIC(variantVisorUp,variantVisorDown,EGVAR(wardrobe,base_H_visor_up),EGVAR(wardrobe,base_H_visor_down))
 
-// Basic Component
+#define HELMET_MASK(variantMaskOn,variantMaskOff)\
+BASIC(variantMaskOn,variantMaskOff,EGVAR(wardrobe,base_H_mask_on),EGVAR(wardrobe,base_H_mask_off))
+
+// Basic Setups with the use of Component
 #define HELMET_GOGGLES(variantGogglesOn,variantGogglesOff,component)\
 BASIC_COMPONENT(variantGogglesOn,variantGogglesOff,EGVAR(wardrobe,base_H_goggles_on),EGVAR(wardrobe,base_H_goggles_off),component)
 
