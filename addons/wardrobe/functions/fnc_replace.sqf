@@ -78,7 +78,7 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 [ _unit, getText (configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "gesture") ] call ace_common_fnc_doGesture;
 
 // Plays Random Sound At the Beginning
-private _sound = [configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "sound"] call FUNC(getCfgDataRandom);
+private _sound = [configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "sound"] call cba_fnc_getCfgDataRandom ;
 if (_sound != "") then {
     [
         CBA_fnc_globalSay3D,

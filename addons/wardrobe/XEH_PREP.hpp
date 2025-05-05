@@ -25,8 +25,6 @@ PREP(addActions_icon);
 PREP(cache_get);
 PREP(cache_set);
 PREP(clearOnClosed_InteractionMenu);
-// Config
-PREP(getCfgDataRandom);
 // Debug
 PREP(getAllWardrobeItems);
 PREP(compare_container_maxLoad);
