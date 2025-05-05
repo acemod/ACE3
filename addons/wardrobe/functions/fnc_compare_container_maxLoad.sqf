@@ -29,7 +29,7 @@ private _allWardrobeItems = [true] call FUNC(getAllWardrobeItems) select {
 
 private _established = [];
 private _index = 0;
-private _missmatches = [];
+private _mismatches = [];
 
 LOG_SYS("CompareMaxLoad","========================================================================================================");
 LOG_SYS("CompareMaxLoad",QUOTE(Comparing PREFIX COMPONENT containers maximumLoad));
@@ -53,10 +53,10 @@ LOG_SYS("CompareMaxLoad","======================================================
         if (_target_className in _established) then { continue };
         _established pushBack _target_className;
 
-        private _missmatch = _target_maxLoad isNotEqualTo _origin_maxLoad;
-        private _string = format ["%6 - [%5] [%2|%4] %1 vs %3", _origin_className,_origin_maxLoad,_target_className,_target_maxLoad,["Nominal", "Missmatch Detected!"] select _missmatch, _index];
+        private _mismatch = _target_maxLoad isNotEqualTo _origin_maxLoad;
+        private _string = format ["%6 - [%5] [%2|%4] %1 vs %3", _origin_className,_origin_maxLoad,_target_className,_target_maxLoad,["Nominal", "Mismatch Detected!"] select _mismatch, _index];
 
-        if (_missmatch) then { _missmatches pushBack [_origin_className,_origin_maxLoad,_target_className,_target_maxLoad]; };
+        if (_mismatch) then { _mismatches pushBack [_origin_className,_origin_maxLoad,_target_className,_target_maxLoad]; };
 
         LOG_SYS("CompareMaxLoad",_string);
         ADD(_index,1);
@@ -65,12 +65,12 @@ LOG_SYS("CompareMaxLoad","======================================================
 
 LOG_SYS("CompareMaxLoad","DONE");
 LOG_SYS("CompareMaxLoad","========================================================================================================");
-_str = format ["%1 missmatches detected!", count _missmatches];
+_str = format ["%1 mismatches detected!", count _mismatches];
 LOG_SYS("CompareMaxLoad",_str);
 
-if (count _missmatches > 0) then {
+if (count _mismatches > 0) then {
     LOG_SYS("CompareMaxLoad","========================================================================================================");
-    { LOG_SYS("CompareMaxLoad",str _x); } forEach _missmatches;
+    { LOG_SYS("CompareMaxLoad",str _x); } forEach _mismatches;
 };
 LOG_SYS("CompareMaxLoad","========================================================================================================");
 LOG_SYS("CompareMaxLoad","END");
