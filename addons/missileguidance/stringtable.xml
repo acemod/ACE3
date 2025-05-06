@@ -330,50 +330,50 @@
             <French>Missile - Bas</French>
             <Spanish>Misil - Abajo</Spanish>
             <Italian>Missile - Giù</Italian>
+            <Russian>Ракета - Вниз</Russian>
             <German>Rakete - Runter</German>
             <Korean>미사일 - 아래</Korean>
             <Japanese>ミサイル - 下</Japanese>
-            <Russian>Ракета - Вниз</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_keybind_left">
             <English>Missile - Left</English>
             <French>Missile - Gauche</French>
             <Spanish>Misil - Izquierda</Spanish>
             <Italian>Missile - Sinistra</Italian>
+            <Russian>Ракета - Влево</Russian>
             <German>Rakete - Links</German>
             <Korean>미사일 - 왼쪽</Korean>
             <Japanese>ミサイル - 左</Japanese>
-            <Russian>Ракета - Влево</Russian>
-        </Key>
-        <Key ID="STR_ACE_MissileGuidance_keybind_right">
-            <English>Missile - Right</English>
-            <French>Missile - Droite</French>
-            <Spanish>Misil - Derecha</Spanish>
-            <Italian>Missile - Destra</Italian>
-            <German>Rakete - Rechts</German>
-            <Korean>미사일 - 오른쪽</Korean>
-            <Japanese>ミサイル - 右</Japanese>
-            <Russian>Ракета - Вправо</Russian>
-        </Key>
-        <Key ID="STR_ACE_MissileGuidance_keybind_up">
-            <English>Missile - Up</English>
-            <French>Missile - Haut</French>
-            <Spanish>Misil - Arriba</Spanish>
-            <Italian>Missile - Su</Italian>
-            <German>Rakete - Hoch</German>
-            <Korean>미사일 - 위</Korean>
-            <Japanese>ミサイル - 上</Japanese>
-            <Russian>Ракета - Вверх</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_keybind_lock">
             <English>Missile - Lock (Hold)</English>
             <French>Missile - Verrouiller (Maintenir)</French>
             <Spanish>Misil - Bloquear (Mantener)</Spanish>
             <Italian>Missile - Blocco (Tieni premuto)</Italian>
+            <Russian>Ракета - Захват цели (Удерживать)</Russian>
             <German>Rakete - Sperren (Halten)</German>
             <Korean>미사일 - 잠금 (누르고 있기)</Korean>
             <Japanese>ミサイル - ロック (長押し)</Japanese>
-            <Russian>Ракета - Захват цели (Удерживать)</Russian>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_keybind_right">
+            <English>Missile - Right</English>
+            <French>Missile - Droite</French>
+            <Spanish>Misil - Derecha</Spanish>
+            <Italian>Missile - Destra</Italian>
+            <Russian>Ракета - Вправо</Russian>
+            <German>Rakete - Rechts</German>
+            <Korean>미사일 - 오른쪽</Korean>
+            <Japanese>ミサイル - 右</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_keybind_up">
+            <English>Missile - Up</English>
+            <French>Missile - Haut</French>
+            <Spanish>Misil - Arriba</Spanish>
+            <Italian>Missile - Su</Italian>
+            <Russian>Ракета - Вверх</Russian>
+            <German>Rakete - Hoch</German>
+            <Korean>미사일 - 위</Korean>
+            <Japanese>ミサイル - 上</Japanese>
         </Key>
     </Package>
 </Project>
