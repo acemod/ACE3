@@ -1,0 +1,19 @@
+// Gloves
+rhs_uniform_6sh122_v1
+rhs_uniform_6sh122_gloves_v1
+
+rhs_uniform_6sh122_v2
+rhs_uniform_6sh122_gloves_v2
+
+rhs_uniform_gorka_r_g
+rhs_uniform_gorka_r_g_gloves
+
+rhs_uniform_gorka_r_y
+rhs_uniform_gorka_r_y_gloves
+
+rhs_uniform_vkpo
+rhs_uniform_vkpo_gloves
+
+rhs_uniform_vkpo_alt
+rhs_uniform_vkpo_gloves_alt
+

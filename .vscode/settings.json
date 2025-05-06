@@ -40,6 +40,10 @@
         {
             "filePath": "addons\\compat_rhs_usf3\\compat_rhs_usf3_wardrobe",
             "group": "Default"
+        },
+        {
+            "filePath": ".hemtt\\launch.toml",
+            "group": "Default"
         }
     ]
 }
