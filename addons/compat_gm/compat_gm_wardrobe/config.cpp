@@ -19,4 +19,10 @@ class CfgPatches {
     };
 };
 
+// Adjust Mass of Objects for consistency's sake
+class CfgWeapons {
+    #include "CfgWeapons.hpp"
+};
+
+
 #include "CfgWardrobe.hpp"

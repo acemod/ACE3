@@ -1,7 +1,8 @@
 // CfgWeapons
 
-#define GM_Helmet_Glasses(classWith,baseWith)\
-class classWith: baseWith {\
+// Increase mass of helmets with glasses by mass of glasses
+#define GM_Helmet_Glasses(Classname,BaseClass)\
+class Classname: BaseClass {\
     MASS(11);\
 }
 
@@ -43,6 +44,7 @@ class gm_ge_headgear_sidecap_80_base: gm_ge_headgear_sidecap_base {
     class ItemInfo;
 };
 
+// Increase mass of helmets with hat by mass of hat
 // Hats + Helmets
 class gm_ge_headgear_hat_80_m62_oli: gm_ge_headgear_hat_80_base {
     MASS(20);
