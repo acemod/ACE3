@@ -19,4 +19,5 @@ class CfgPatches {
     };
 };
 
+#include "CfgWeapons.hpp"
 #include "CfgWardrobe.hpp"

@@ -50,7 +50,23 @@ class CN(03,COLOR): EGVAR(wardrobe,turban) {\
 }
 
 
-// BASECLASS
+// VARIATIONS
+COLORGROUP(blue);
+COLORGROUP(blue_una);
+COLORGROUP(green);
+COLORGROUP(red);
+COLORGROUP(gray);
+COLORGROUP(yellow);
+
+
+// Special Variations
+COLORGROUP_SPECIAL(green_pattern);
+
+
+
+// Turbans with face protection mask
+
+// Black with black mask
 class H_turban_02_mask_black_lxws: EGVAR(wardrobe,turban) {
     class modifiableTo {
         class CN(01,black); 
@@ -95,22 +111,7 @@ class lxWS_H_turban_04_black: EGVAR(wardrobe,turban) {
     };
 };
 
-
-// VARIATIONS
-COLORGROUP(blue);
-COLORGROUP(blue_una);
-COLORGROUP(green);
-COLORGROUP(red);
-COLORGROUP(gray);
-COLORGROUP(yellow);
-
-
-// Special Variations
-COLORGROUP_SPECIAL(green_pattern);
-
-
-
-// Super Special Manual blabla
+// Sand with 2 different Masks
 class H_turban_02_mask_snake_lxws: EGVAR(wardrobe,turban) {
     class modifiableTo {
         class CN(01,sand);
