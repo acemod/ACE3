@@ -19,8 +19,8 @@ class CfgPatches {
     };
 };
 
-// Adjust Mass of Objects and/or containerSize for consistency's sake
+// For Consistency: Adjust Mass/containerSize
 #include "CfgWeapons.hpp"
 #include "CfgGlasses.hpp"
-// ace wardrobe compatibility
+// ACE Wardrobe
 #include "CfgWardrobe.hpp"
