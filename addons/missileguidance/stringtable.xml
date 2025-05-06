@@ -40,90 +40,90 @@
             <French>Altitude</French>
             <Spanish>Altitud</Spanish>
             <Italian>Altitudine</Italian>
+            <Russian>Высота</Russian>
             <German>Höhe</German>
             <Korean>고도</Korean>
             <Japanese>高度</Japanese>
-            <Russian>Высота</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_attack_heading">
             <English>Attack Heading</English>
             <French>Vecteur d'attaque</French>
             <Spanish>Rumbo de ataque</Spanish>
             <Italian>Prua d'attacco</Italian>
+            <Russian>Направление атаки</Russian>
             <German>Angriffsrichtung</German>
             <Korean>공격 방향</Korean>
             <Japanese>攻撃方位</Japanese>
-            <Russian>Направление атаки</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_easting">
             <English>Easting</English>
             <French>Horizontales</French>
             <Spanish>Orientación</Spanish>
             <Italian>Easting</Italian>
+            <Russian>Горизонтали</Russian>
             <German>Ostwert</German>
             <Korean>동향</Korean>
             <Japanese>東距</Japanese>
-            <Russian>Горизонтали</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_header">
             <English>GPS Weapon Setup</English>
             <French>Configuration de l'armement GPS</French>
             <Spanish>Configuración del Arma GPS</Spanish>
             <Italian>Configurazione armamento GPS</Italian>
+            <Russian>Настройка оружия с помощью GPS</Russian>
             <German>GPS-Waffeneinstellung</German>
             <Korean>GPS 병기 설정</Korean>
             <Japanese>GPS武装設定</Japanese>
-            <Russian>Настройка оружия с помощью GPS</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_impact_angle">
             <English>Impact Angle</English>
             <French>Angle d'impact</French>
             <Spanish>Ángulo de impacto</Spanish>
             <Italian>Angolo d'impatto</Italian>
+            <Russian>Угол удара</Russian>
             <German>Einschlagswinkel</German>
             <Korean>충돌 각도</Korean>
             <Japanese>弾着角</Japanese>
-            <Russian>Угол удара</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_northing">
             <English>Northing</English>
             <French>Verticales</French>
             <Spanish>Northing</Spanish>
             <Italian>Northing</Italian>
+            <Russian>Вертикали</Russian>
             <German>Nordwert</German>
             <Korean>북향</Korean>
             <Japanese>北距</Japanese>
-            <Russian>Вертикали</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp">
             <English>PRE-PLANNED</English>
             <French>PRE-PLANIFICATION</French>
             <Spanish>PRE-PLANIFICADO</Spanish>
             <Italian>PRE-PLANNED</Italian>
+            <Russian>ЗАРАНЕЕ СПЛАНИРОВАННЫЙ</Russian>
             <German>PRE-PLANNED</German>
             <Korean>사전 설정됨</Korean>
             <Japanese>計画目標 (PP)</Japanese>
-            <Russian>ЗАРАНЕЕ СПЛАНИРОВАННЫЙ</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_short">
             <English>PP</English>
             <French>PP</French>
             <Spanish>PP</Spanish>
             <Italian>PP</Italian>
+            <Russian>PP</Russian>
             <German>PP</German>
             <Korean>PP</Korean>
             <Japanese>PP</Japanese>
-            <Russian>PP</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_too">
             <English>TARGET OF OPPORTUNITY</English>
             <French>CIBLE D'OPPORTUNITÉ</French>
             <Spanish>OBJETIVO DE OPORTUNIDAD</Spanish>
             <Italian>TARGET OF OPPORTUNITY</Italian>
+            <Russian>ЦЕЛЬ ОТКРЫВАЮЩЕЙСЯ ВОЗМОЖНОСТИ</Russian>
             <German>TARGET OF OPPORTUNITY</German>
             <Korean>기회 표적</Korean>
             <Japanese>臨機目標 (TOO)</Japanese>
-            <Russian>ЦЕЛЬ ОТКРЫВАЮЩЕЙСЯ ВОЗМОЖНОСТИ</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>

@@ -175,7 +175,7 @@ class CfgWeapons {
     class arifle_XMS_Shot_Sand_lxWS: arifle_XMS_Shot_lxWS {
         displayName = SUBCSTRING(XMS_SG_Sand_Name);
     };
-    class arifle_XMS_M_lxWS: arifle_XMS_Base_lxWS {
+    class arifle_XMS_M_lxWS: arifle_XMS_lxWS {
         displayName = SUBCSTRING(XMS_SW_Name);
     };
     class arifle_XMS_M_Camo_lxWS: arifle_XMS_M_lxWS {
