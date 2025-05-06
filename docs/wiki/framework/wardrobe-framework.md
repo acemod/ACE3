@@ -33,8 +33,11 @@ More examples can be found below.
 ### 1.2 Config Guidelines
 
 - A Container (Uniform, Vest, Backpack) should never change its `maxLoad`, unless there is a really good reason for it. This will result in the loss of items.
-- Variants should never "magically" add/remove parts of themselves, unless its handled through a component.
-- There should not be a difference in weight between the different variants unless compoents get added/removed.
+- Variants should not "magically" add/remove parts to/from themselves, unless its handled through a component, especially when they add protection or functionality.
+  - Do: Uniforms with and without Gloves should be fine in most cases, as they are cosmetical and dont break continuity/logic.
+  - Do: Helmets with integral flip-down visors.
+  - Don't: Helmet with additional armor or face protector without the requirement of some component that will be removed from the inventory.
+- There should not be a difference in weight or container capacity between the different variants unless compoents get added/removed.
   - For Example: `Mass of Helmet with Goggles = Mass of Helmet + Mass of Goggles.`
 
 ## 2. Config
