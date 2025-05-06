@@ -19,4 +19,7 @@ class CfgPatches {
     };
 };
 
+// Adjust Mass of Objects and/or containerSize for consistency's sake
+
+// ace wardrobe compatibility
 #include "CfgWardrobe.hpp"
