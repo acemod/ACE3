@@ -19,5 +19,5 @@ params ["_type", "_action"];
 
 // ["_downArray", "_upArray"]
 private _codeArray = (GVAR(keybinds) get _type) select (_action == "up");
-private _results = _codeArray apply { call _x; };
+private _results = _codeArray apply { call _x };
 _results find true != -1 // if any of the keybind handlers returned true
