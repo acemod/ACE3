@@ -19,7 +19,7 @@ The Wardrobe Addon gives the player the opportunity to change/modify their curre
 
 For example, if a uniform has a normal variant and a "Rolled-Up Sleeves" variant, the player will be able to use ether an ACE Self Interaction or the CBA Context Menu in the Inventory.
 
-Since there is no reliable, common pattern in terms of class inheritance, not even within the same DLC, each possible variant has to be defined individually within the classes' config properties.
+Since there is no reliable, common patterns in terms of class inheritance, not even within the same DLC, each possible variant has to be defined individually within `configFile >> "ace_wardrobe"`.
 
 ### 1.1 Components
 
@@ -46,7 +46,7 @@ Only directly defined Subclasses will be taken into account. A fully inherited s
 
 | Class Property |  Data Type | Description |
 | -------------- |  ----------- | ----------- |
-| `modifiableTo[]` | Array of Classnames | possible Variants this item can be turned into. |
+| `modifiableTo` | Subclasses | possible Variants this item can be turned into. |
 | `components[]` | Array of Classnames  | Components the current variant contains within itself | 
 | `sound[]` | Array of CfgSound Entries | to be chosen by random when the action is performed |
 | `sound_timing` | Number 0..1 | defines the point time relative to the duration when the sound is played |
@@ -57,28 +57,31 @@ Only directly defined Subclasses will be taken into account. A fully inherited s
 
 ### 2.2 Base Classes
 
-#### 2.2.1 Base
+All base classes can be found in `addons\wardrobe\BaseClasses.hpp`
 
+#### 2.2.1 Base
 ```cpp
 // root of configFile
-class ace_wardrobe_base {
+class ace_wardrobe {
+    class ace_wardrobe_base {
 
-    modifiableTo[] = {""};
+        class modifiableTo {};
 
-    components[] = {};
+        components[] = {};
 
-    // Supports Multiple Sounds, will pick one by random.
-    sound[] = { "ace_wardrobe_fabric_06", "ace_wardrobe_fabric_07", "ace_wardrobe_fabric_16", "ace_wardrobe_fabric_20", "ace_wardrobe_fabric_25"};
-    sound_timing = 0;    // [0..1] 0 at the start of the action, 0.5 half way during the duration of the action - always, if completed or not. 1 at the end, only when completed.
+        // Supports Multiple Sounds, will pick one by random.
+        sound[] = { "ace_wardrobe_fabric_06", "ace_wardrobe_fabric_07", "ace_wardrobe_fabric_16", "ace_wardrobe_fabric_20", "ace_wardrobe_fabric_25"};
+        sound_timing = 0;    // [0..1] 0 at the start of the action, 0.5 half way during the duration of the action - always, if completed or not. 1 at the end, only when completed.
 
-    // Gesture
-    gesture = "Gear";
+        // Gesture
+        gesture = "Gear";
 
-    // These will be read from the Target Class, so for example, the uniformclass with the rolled up sleaves, it should say "Roll Up Sleeves"
-    alternativePicture = "";
-    alternativeDisplayName = "";
+        // These will be read from the Target Class, so for example, the uniformclass with the rolled up sleaves, it should say "Roll Up Sleeves"
+        alternativePicture = "";
+        alternativeDisplayName = "";
 
-    duration = 1; // Minimum Value: 1 - Anything above will produce a progressbar.
+        duration = 1; // Minimum Value: 1 - Anything above will produce a progressbar.
+    };
 };
 
 ```
@@ -153,137 +156,102 @@ class ace_wardrobe_base_H_goggles_off: ace_wardrobe_base {
 };
 ```
 
+## 3. Porting - Ease of Use
+### 3.1 Macros
+To streamline the configuration of compatible items a set of macro's can be found here `addons\wardrobe\script_macros_wardrobe.hpp`
 
-## 3. Examples
-
-### 3.1 Linear Example
-
-- First, we import the wardrobe base classes `ace_wardrobe_base_U_sleeves_down` and `ace_wardrobe_base_U_sleeves_up` at the root of `configFile`.
-- The uniform we would like to configure is part of `CfgWeapons` and inherits from `Uniform_Base`.
-- Then we edit the desired classes and create the `ace_wardrobe` subclass by inheriting from the parent base classes.
-- Afterwards, we define which variants this class can be modified to.
-- This example does not require the use of components since we're not adding or removing anything.
+### 3.2 BaseClasses
+All pre-configured base classes can be imported by simply including the following file `"\z\ace\addons\wardrobe\BaseClasses_Import.hpp"`
+### 3.3 Example
 ```cpp
-// config.cpp
-class ace_wardrobe_base_U_sleeves_down;
-class ace_wardrobe_base_U_sleeves_up;
+#include "\z\ace\addons\wardrobe\script_macros_wardrobe.hpp
+class ace_wardrobe {
+    #include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
 
-class CfgWeapons {
-    class Uniform_Base;
-
-    // Sleeves Down Variant
-    class U_B_CTRG_1: Uniform_Base {
-        class ace_wardrobe: ace_wardrobe_base_U_sleeves_down {
-            modifiableTo[] = { "U_B_CTRG_3" };
-            components[] = {};
-        };
-    };
-
-    // Sleeves Up Variant
-    class U_B_CTRG_3: Uniform_Base {
-        class ace_wardrobe: ace_wardrobe_base_U_sleeves_up {
-            modifiableTo[] = { "U_B_CTRG_1" };
-            components[] = {};
-        };
-    };
+    // Begin to define your configs ...
 };
 ```
-### 3.2 Complex example with partial use of components
-
-
+## 4. Configuration Examples
+### 4.1 Simple Example - Uniform Sleeves - No requirement for Components
 ```cpp
-// config.cpp
-class ace_wardrobe_base;
+class ace_wardrobe {
+    #include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
 
-class CfgWeapons {
-    // BASECLASS
-    class H_Shemag_khk;
-    
-    // WS Turban with Ballistic Mask
-    class H_turban_02_mask_black_lxws: H_Shemag_khk {
-        class ace_wardrobe: ace_wardrobe_base {
-            modifiableTo[] = { "lxWS_H_turban_01_black", "lxWS_H_turban_02_black", "lxWS_H_turban_03_black", "lxWS_H_turban_04_black" };
-            components[] = { "lxWS_H_bmask_base" };
+    class U_B_CTRG_1: ace_wardrobe_base_U_sleeves_down {
+        components[] = {};
+        class modifiableTo {
+            class U_B_CTRG_3;
         };
     };
-    // WS Turban Variant 1
-    class lxWS_H_turban_01_black: H_Shemag_khk {
-        class ace_wardrobe: ace_wardrobe_base {
-            modifiableTo[] = { "lxWS_H_turban_02_black", "lxWS_H_turban_03_black", "lxWS_H_turban_04_black", "H_turban_02_mask_black_lxws" };
-            components[] = { }; // not needed when empty - only shown as an example for how/when to use components
-        };
-    };
-    // WS Turban Variant 2
-    class lxWS_H_turban_02_black: lxWS_H_turban_01_black {
-        class ace_wardrobe: ace_wardrobe_base {
-            modifiableTo[] = { "lxWS_H_turban_01_black", "lxWS_H_turban_03_black", "lxWS_H_turban_04_black", "H_turban_02_mask_black_lxws" };
-            components[] = { }; // not needed when empty - only shown as an example for how/when to use components
-        };
-    };
-    // WS Turban Variant 3
-    class lxWS_H_turban_03_black: lxWS_H_turban_01_black {
-        class ace_wardrobe: ace_wardrobe_base {
-            modifiableTo[] = { "lxWS_H_turban_01_black", "lxWS_H_turban_02_black", "lxWS_H_turban_04_black", "H_turban_02_mask_black_lxws" };
-            components[] = { }; // not needed when empty - only shown as an example for how/when to use components
-        };
-    };
-    // WS Turban Variant 4
-    class lxWS_H_turban_04_black: lxWS_H_turban_01_black {
-        class ace_wardrobe: ace_wardrobe_base {
-            modifiableTo[] = { "lxWS_H_turban_01_black", "lxWS_H_turban_02_black", "lxWS_H_turban_03_black", "H_turban_02_mask_black_lxws" };
-            components[] = { }; // not needed when empty - only shown as an example for how/when to use components
+
+    class U_B_CTRG_3: ace_wardrobe_base_U_sleeves_up {
+        components[] = {};
+        class modifiableTo {
+            class U_B_CTRG_1;
         };
     };
 };
 
 ```
-
-
-### 3.3 Complex Example with thorough use of components
-
+### 4.2 Advanced Example - Balaclava with Combat Glasses - Partial use of Components
 ```cpp
-// config.cpp
-class ace_wardrobe_base;
+class ace_wardrobe {
+    #include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
 
-class CfgGlasses {
-    class None;
-    class G_Balaclava_blk;
-    class G_Bandanna_shades;
+    class G_Balaclava: ace_wardrobe_base {
+        class modifiableTo {
+            class G_Balaclava_lowprofile;
+        };
+        components[] = {};
+    };
 
-    // Aviator Sunglasses
-    class G_Aviator: None {
-        class ace_wardrobe: ace_wardrobe_base {
-            modifiableTo[] = { "G_Bandanna_aviator" };
-            components[] = {"G_Aviator"};
-        };
+    class G_Lowprofile: ace_wardrobe_base {
+        components[] = { "G_Lowprofile" };
     };
-    // Bandana, Black with Aviator Sunglasses
-    class G_Bandanna_aviator: G_Bandanna_shades {
-        class ace_wardrobe: ace_wardrobe_base {
-            modifiableTo[] = { "G_Bandanna_blk", "G_Aviator" };       
-            components[] = { "G_Bandanna_blk", "G_Aviator" };
+
+    class G_Balaclava_lowprofile: ace_wardrobe_base {
+        class modifiableTo {
+            class G_Balaclava;
         };
-    };
-    // Bandana, Black
-    class G_Bandanna_blk: G_Balaclava_blk {
-        class ace_wardrobe: ace_wardrobe_base {
-            modifiableTo[] = { "G_Bandanna_aviator" };
-            components[] = { "G_Bandanna_blk" };
-        };
+        components[] = { "G_Lowprofile" };
     };
 };
 ```
+### 4.3 Complex Example - Bandana with Aviators - Complex use of Multiple Components
+```cpp
+class ace_wardrobe {
+    #include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
 
-## 4. Addon Settings
+    class G_Bandanna_blk: ace_wardrobe_base {
+        class modifiableTo {
+            class G_Bandanna_aviator;
+            class G_Aviator;
+        };
+        components[] = {"G_Bandanna_blk"};
+    };
 
+    class G_Aviator: ace_wardrobe_base {
+        class modifiableTo {
+            class G_Bandanna_aviator;
+        };
 
+        components[] = { "G_Aviator" };
+    };
+
+    class G_Bandanna_aviator: ace_wardrobe_base {
+        class modifiableTo {
+            class G_Bandanna_blk;
+            class G_Aviator;
+        };
+        components[] = { "G_Aviator", "G_Bandanna_blk" };
+    };
+};
+```
 
 ## 5. Sounds
-
 The following `CfgSounds` classes are integrated in `ace_wardrobe` and are the default sounds for the `ace_wardrobe_base` and `ace_wardrobe_base_H_visor_up`/`ace_wardrobe_base_H_visor_down` base classes.
 
 ### 5.1 Integrated Sounds
-
 The number at the end of the classnames indicates the length of the file in 1/10th seconds.
 10 -> 1 sec, 15 -> 1.5sec, ...
 
@@ -295,6 +263,15 @@ The number at the end of the classnames indicates the length of the file in 1/10
 - `ace_wardrobe_helmet_visor_05`
 
 ## 6. Compatibility
+
+## 6.1 MagzineID
 Currently, `ace_IntelItems` and `ace_overheating` (spare barrels) are being directly supported.
 
-If an addon or mod utilizes a magazine's `magazineID` to handle additional data about items carried by the player, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new `magazineID`s for all magazines on the player.
+If an addon or mod utilizes a magazine's `magazineID` to handle additional data about items carried by the player, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new `magazineID`s for all magazines on the player and therefore, require special handling within ace_wardrobe functions.
+
+There *might* be some changes coming to how arma handles the `setUnitLoadout` which could resolve the need for this.
+
+## 6.2 Container Size - Uniform, Vest, Backpack
+When the player changes from one container item to another through the wardrobe action and the container's `maximumLoad` is smaller then previously, the player risks the loss of items carried inside said container.
+
+Therefore, the function `[] call ace_wardrobe_fnc_compare_container_maxLoad` can be used to compare the item's maximumLoad. The result will be dumped into the .rpt.
