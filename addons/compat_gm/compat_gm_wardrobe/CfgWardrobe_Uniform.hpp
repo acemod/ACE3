@@ -1,4 +1,3 @@
-// CfgWeapons
 // Sleeves
 // UNIFORM_SLEEVES(variantSleevesDown,variantSleevesUp);
 
@@ -27,8 +26,8 @@ UNIFORM_GLOVES(gm_gc_army_uniform_soldier_gloves_80_str,gm_gc_army_uniform_soldi
 UNIFORM_GLOVES(gm_ge_army_uniform_soldier_gloves_80_ols,gm_ge_army_uniform_soldier_80_ols);
 
 
-// Gloves, Sleeves Up and Base Variant
-// Manual configuration
+// Gloves, Sleeves Up and Base Variant -> Manual configuration
+// Woodland Variant
 class gm_xx_uniform_soldier_bdu_80_wdl: EGVAR(wardrobe,base_U_gloves_on) {
     class modifiableTo {
         class gm_xx_uniform_soldier_bdu_rolled_80_wdl;
@@ -48,7 +47,7 @@ class gm_xx_uniform_soldier_bdu_nogloves_80_wdl: EGVAR(wardrobe,base) {
     };
 };
 
-
+// Olive variant
 class gm_xx_uniform_soldier_bdu_80_oli: EGVAR(wardrobe,base_U_gloves_on) {
     class modifiableTo {
         class gm_xx_uniform_soldier_bdu_rolled_80_oli;

@@ -19,10 +19,8 @@ class CfgPatches {
     };
 };
 
-// Adjust Mass of Objects for consistency's sake
-class CfgWeapons {
-    #include "CfgWeapons.hpp"
-};
+// Adjust Mass of Objects and/or containerSize for consistency's sake
+#include "CfgWeapons.hpp"
 
-
+// ace wardrobe compatibility
 #include "CfgWardrobe.hpp"
