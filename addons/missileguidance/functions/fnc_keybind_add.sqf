@@ -14,7 +14,7 @@
  * Example:
  * ["left", {hint "Down"}, {hint "Up"}] call ace_missileguidance_fnc_keybind_add
  *
- * Public: No (maybe)
+ * Public: No
  */
 params ["_type", "_down", "_up"];
 
