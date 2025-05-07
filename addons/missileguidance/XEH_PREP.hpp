@@ -1,5 +1,7 @@
 LOG("prep");
 PREP(cycleAttackProfileKeyDown);
+PREP(keybind_add);
+PREP(keybind_pressed);
 
 PREP(changeMissileDirection);
 

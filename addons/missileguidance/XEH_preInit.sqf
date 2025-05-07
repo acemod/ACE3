@@ -1,4 +1,5 @@
 #include "script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 ADDON = false;
 
@@ -10,6 +11,14 @@ PREP_RECOMPILE_END;
 // [0 - Off , 1 - PlayerOnly, 2 - PlayerAndAi]
 // As weapons take config changes, there is little point in being able to disable guidance
 if (isNil QGVAR(enabled)) then { GVAR(enabled) = 2; };
+
+GVAR(keybinds) = createHashMapFromArray [
+    ["lock", [[], [], [DIK_TAB, [false, false, false]], LSTRING(keybind_lock)]],
+    ["left", [[], [], [DIK_NUMPAD4, [false, false, false]], LSTRING(keybind_left)]],
+    ["right", [[], [], [DIK_NUMPAD6, [false, false, false]], LSTRING(keybind_right)]],
+    ["up", [[], [], [DIK_NUMPAD8, [false, false, false]], LSTRING(keybind_up)]],
+    ["down", [[], [], [DIK_NUMPAD2, [false, false, false]], LSTRING(keybind_down)]]
+];
 
 GVAR(gps_currentSettings) = [
     [0, 0, 0],         // attack position
