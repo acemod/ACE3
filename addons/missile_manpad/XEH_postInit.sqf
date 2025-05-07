@@ -2,13 +2,13 @@
 
 if (!hasInterface) exitWith {};
 
-// Add keybind - todo: move to missile_guidance-common-binds:  ["lock", ... }] call EFUNC(missileguidance,keybind_add);
+// Add keybind
 GVAR(isLockKeyDown) = false;
-["ACE3 Weapons", QGVAR(trackTarget), "Lock Target (Hold) [stinger]", {
+["lock", {
     GVAR(isLockKeyDown) = true;
 }, {
     GVAR(isLockKeyDown) = false;
-}, [15, [false, false, false]], false] call CBA_fnc_addKeybind;  //Tab Key
+}] call EFUNC(missileguidance,keybind_add);
 
 
 GVAR(running) = [];
