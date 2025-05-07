@@ -15,7 +15,7 @@
  * Public: No
  */
 params ["_args"];
-_args params ["_unit", "_pfid", "_actionId", "_config", "_lockCanidate", "_lockStartTime", "_haveLock", "_lastSound", "_lastSoundTimeout"];
+_args params ["_unit", "_pfid", "_actionId", "_config", "_lockCandidate", "_lockStartTime", "_haveLock", "_lastSound", "_lastSoundTimeout"];
 _config params ["_seekerMaxRange", "_lockAngle", "_uncageAngle", "_lockingTimeMin", "_lockingTimeMax", "_lockingSound", "_lockedSound"];
 
 private _fnc_playSound = {
@@ -62,7 +62,7 @@ private _fnc_searchTarget = {
 if (!GVAR(isLockKeyDown) || {(currentMagazine _unit) == ""}) exitWith {
     "" call _fnc_playSound;
     _unit setVariable [QEGVAR(missileguidance,target), nil];
-    _args set [4, objNull]; // _lockCanidate = objNull
+    _args set [4, objNull]; // _lockCandidate = objNull
 };
 
 private _source = _unit;
@@ -70,7 +70,7 @@ private _seekerASL = eyePos _source;
 private _seekerDir = _source weaponDirection currentWeapon _source;
 
 private _lockFeedback = 0;
-if (isNull _lockCanidate) then {
+if (isNull _lockCandidate) then {
     // find any target within seeker range
     private _potentialTargets = _source nearEntities ["Air", _seekerMaxRange];
     private _bestValue = 0;
@@ -86,16 +86,16 @@ if (isNull _lockCanidate) then {
     } forEach _potentialTargets;
     if (!isNull _bestTarget) then {
         TRACE_1("new target",_bestTarget);
-        _args set [4, _bestTarget]; // _lockCanidate = _bestTarget;
+        _args set [4, _bestTarget]; // _lockCandidate = _bestTarget;
         _args set [5, CBA_missionTime]; // _lockStartTime = CBA_missionTime;
         _args set [6, false]; // _haveLock = false;
     };
 } else {
     private _angle = [_lockAngle, _uncageAngle] select CBA_events_control;
-    private _strength = [_lockCanidate, _angle, _seekerMaxRange] call _fnc_searchTarget;
+    private _strength = [_lockCandidate, _angle, _seekerMaxRange] call _fnc_searchTarget;
     if (_strength == 0) exitWith {
         _haveLock = false;
-        _args set [4, objNull]; // _lockCanidate = objNull;
+        _args set [4, objNull]; // _lockCandidate = objNull;
     };
 
     if (_haveLock) then {
@@ -121,8 +121,8 @@ switch (true) do {
 };
 
 
-if ((isNull _lockCanidate) || {!_haveLock}) then {
+if ((isNull _lockCandidate) || {!_haveLock}) then {
     _unit setVariable [QEGVAR(missileguidance,target), nil];
 } else {
-    _unit setVariable [QEGVAR(missileguidance,target), _lockCanidate];
+    _unit setVariable [QEGVAR(missileguidance,target), _lockCandidate];
 };
