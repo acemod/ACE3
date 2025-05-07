@@ -19,7 +19,7 @@ TRACE_3("lockUnconsciousSeat",_unit,_vehicle,lifeState _unit);
 if (isNull _vehicle) exitWith {};
 if (alive _unit && {lifeState _unit != "INCAPACITATED"}) exitWith {};
 
-private _disable = missionNamespace getVariable [QGVAR(disableSeatLocking), false];
+private _disable = missionNamespace getVariable [QGVAR(disableSeatLocking), true];
 if (_disable isEqualTo true || {
     _disable isEqualType [] && {
         (_disable findIf {_vehicle isKindOf _x}) != -1
