@@ -20,7 +20,7 @@ class CfgWeapons {
     // FN FAL 50 bipod
     class arifle_SLR_V_lxWS: arifle_SLR_lxWS {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 104; // +1lbs due to bipod
+            mass = 104; // + 1lbs due to bipod
         };
     };
 
@@ -39,21 +39,28 @@ class CfgWeapons {
         };
     };
 
-    // Velko R4
+    // GLX-160
+    class glaunch_GLX_base_lxWS: Rifle_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 48.5;
+        };
+    };
+
+    // Vektor R4
     class arifle_Velko_base_lxWS: arifle_Galat_base_lxWS {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 94.8;
         };
     };
 
-    // Velko R5
+    // Vektor R5
     class arifle_VelkoR5_lxWS: arifle_Velko_base_lxWS {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 82;
         };
     };
 
-    // Velko R5 GL
+    // Vektor R5 GL
     class arifle_VelkoR5_GL_lxWS: arifle_VelkoR5_lxWS {
         class WeaponSlotsInfo: WeaponSlotsInfo {
             mass = 112; // +3lbs (M203 weight)
