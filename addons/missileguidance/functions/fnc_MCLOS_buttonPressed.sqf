@@ -18,11 +18,19 @@
 
 params ["_accelerationDirection", "_player"];
 
-private _shooter = vehicle _player;
-if (_player == _shooter) exitWith {};
-private _turret = _shooter unitTurret _player;
+private _shooter = objNull;
+private _weapons = [];
+if ((isNull objectParent _player) || {_player call CBA_fnc_canUseWeapon}) then {
+    _shooter = _player;
+    private _currentWeapon = currentWeapon _shooter;
+    if (_currentWeapon != "") then { _weapons pushBack _currentWeapon };
+} else {
+    _shooter = vehicle _player;
+    private _turretPath = if (_player == (driver _shooter)) then {[-1]} else {_player call CBA_fnc_turretPath};
+    _weapons = _shooter weaponsTurret _turretPath;
+};
 
-if (((_shooter weaponsTurret _turret) findIf {
+if ((_weapons findIf {
     private _weapon = _x;
     GVAR(mclos_weapons) getOrDefaultCall [_weapon, {
         ((compatibleMagazines _weapon) findIf {
