@@ -58,7 +58,7 @@ _background ctrlCommit 0;
 
 // Set initial mouse position to the center
 setMousePosition [CENTER_X, CENTER_Y];
-systemChat "start";
+TRACE_1("start mouse input",typeOf _shooter);
 [{
     params ["_args", "_pfID"];
     _args params ["_shooter"];
@@ -69,7 +69,7 @@ systemChat "start";
         {!GVAR(MCLOS_mouseInput)} ||
         {isNull _display}
     ) exitWith { 
-        systemChat "end";
+        TRACE_1("stop mouse input",typeOf _shooter);
         if (!isNull _display) then {
             closeDialog 1;
         };
@@ -90,7 +90,6 @@ systemChat "start";
     private _clampY = (_mouseY min _maxY) max _minY;
     private _realX = linearConversion [_minX, _maxX, _clampX, -1, 1, true];
     private _realY = linearConversion [_minY, _maxY, _clampY, 1, -1, true]; // Inverted Y axis for the mouse
-    systemChat format ["Mouse Position: %1, %2", _realX, _realY];
     setMousePosition [_clampX, _clampY];
 
     
@@ -99,6 +98,10 @@ systemChat "start";
     private _iconHeight = _halfY * 0.2;
     _joystickIcon ctrlSetPosition [_clampX - _iconWidth * 0.5, _clampY - _iconHeight * 0.5, _iconWidth, _iconHeight];
     _joystickIcon ctrlCommit 0;
+
+    #ifdef DEBUG_MODE_FULL
+    systemChat format ["Mouse Position: %1, %2", _realX, _realY];
+    #endif
 
     _shooter setVariable [QGVAR(MCLOS_direction), [_realX, 0, _realY]];
 }, 0, [_shooter]] call CBA_fnc_addPerFrameHandler;
