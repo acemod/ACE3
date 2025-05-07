@@ -22,7 +22,7 @@ params ["_unit", "_explosive", "_magazineClass"];
 TRACE_3("params",_unit,_explosive,_magazineClass);
 
 // Config is the last item in the list of passed in items.
-private _config = (_this select 3) select (count (_this select 3) - 1);
+private _config = (_this select 3) select -1;
 
 private _requiredItems = getArray(_config >> "requires");
 private _hasRequired = true;
@@ -40,7 +40,7 @@ private _clacker = _unit getVariable [QGVAR(Clackers), []];
 GVAR(PlacedCount) = GVAR(PlacedCount) + 1;
 
 _clacker pushBack [_explosive, getNumber(_config >> "FuseTime"), format [localize LSTRING(DetonateCode),
-    GVAR(PlacedCount)], _magazineClass, configName ((_this select 3) select (count (_this select 3) - 1))];
+    GVAR(PlacedCount)], _magazineClass, configName ((_this select 3) select -1)];
 
 _unit setVariable [QGVAR(Clackers), _clacker, true];
 

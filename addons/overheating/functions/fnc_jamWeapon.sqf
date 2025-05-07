@@ -43,7 +43,7 @@ if (_jamTypesAllowed isEqualTo []) then {
     for "_i" from count _jamTypesAllowed -2 to 0 step -2 do {
         private _jamCurretType = toLowerANSI (_jamTypesAllowed select _i);
         if !(_jamCurretType in ["eject", "extract", "feed", "fire", "dud"]) exitWith { // check config values and switch to default values if unusual value found
-            ERROR_2("Weapon '%1' has unexpected value %2 in QQGVAR(jamTypesAllowed). Expected values are 'Eject', 'Extract', 'Feed', 'Fire', 'Dud'.",_weapon,_jamCurretType);
+            ERROR_3("Weapon '%1' has unexpected value %2 in '%3'. Expected values are 'Eject', 'Extract', 'Feed', 'Fire', 'Dud'.",_weapon,_jamCurretType,QGVAR(jamTypesAllowed));
             _jamTypesAllowed = ["eject", 1, "extract", 1, "feed", 1, "fire", 1, "dud", (5 / (_temp / 5))];
         };
         if (_jamCurretType == "dud") then {
@@ -98,20 +98,20 @@ if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
     };
 
     private _statement = {
-        params ["_zero","_one"];
+        params ["", "_unit"];
 
-        playSound3D ["a3\sounds_f\weapons\Other\dry9.wss", _zero, false, eyePos _zero, 1, 1, 15];
+        playSound3D ["a3\sounds_f\weapons\Other\dry9.wss", objNull, insideBuilding _unit >= 0.5, eyePos _unit, 1, 1, 15];
 
-        if (!(missionNamespace getVariable [QGVAR(knowAboutJam), false]) && {_one ammo currentWeapon _one > 0} && {GVAR(DisplayTextOnJam)}) then {
-            private _jamType = _one getVariable [format [QGVAR(%1_jamType), currentWeapon _one], "None"];
-            private _jamMessage = localize LSTRING(FailureToFire);
-            switch _jamType do {
-                case ("eject"): {_jamMessage = localize LSTRING(FailureToEject)};
-                case ("extract"): {_jamMessage = localize LSTRING(FailureToExtract)};
-                case ("feed"): {_jamMessage = localize LSTRING(FailureToFeed)};
+        if (!(missionNamespace getVariable [QGVAR(knowAboutJam), false]) && {GVAR(DisplayTextOnJam)} && {_unit ammo currentWeapon _unit > 0}) then {
+            private _jamType = _unit getVariable [format [QGVAR(%1_jamType), currentWeapon _unit], "None"];
+            private _jamMessage = switch (_jamType) do {
+                case "eject": {LLSTRING(FailureToEject)};
+                case "extract": {LLSTRING(FailureToExtract)};
+                case "feed": {LLSTRING(FailureToFeed)};
+                default {LLSTRING(FailureToFire)};
             };
             [
-                [localize LSTRING(WeaponJammed)],
+                [LLSTRING(WeaponJammed)],
                 [_jamMessage]
             ] call CBA_fnc_notify;
             GVAR(knowAboutJam) = true;
