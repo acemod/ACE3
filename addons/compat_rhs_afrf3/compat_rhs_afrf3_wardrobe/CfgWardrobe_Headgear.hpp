@@ -233,9 +233,3 @@ class rhs_tsh4_ess_bala: EGVAR(wardrobe,base_H_goggles_on) {
 // rhs_zsh7a_alt
 
 
-// // Tanker Hat
-
-// rhs_tsh4
-// rhs_tsh4_bala   // 2 small
-// rhs_tsh4_ess
-// rhs_tsh4_ess_bala // 2 small

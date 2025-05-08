@@ -1,6 +1,4 @@
-CfgWardrobe_Headgear.hpp
-//SAF requires RHS USAF, so we can use their Googles
-// ToDo Use Macros
+// SAF requires RHS USAF, so we can use their Googles
 class rhssaf_helmet_m97_black_nocamo: EGVAR(wardrobe,base_H_goggles_off) {
     class modifiableTo { class rhssaf_helmet_m97_black_nocamo_black_ess_bare; };
     components[] = {};
@@ -56,17 +54,20 @@ class rhssaf_helmet_m97_olive_nocamo_black_ess_bare: EGVAR(wardrobe,base_H_goggl
 };
 
 //This might be wierd, because we start with goggles_off, and also add mask_on
-// ToDo use EGVAR(wardrobe,base)
-class rhssaf_helmet_m97_woodland: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhssaf_helmet_m97_woodland_black_ess_bare; class rhssaf_helmet_m97_veil_woodland};
+class rhssaf_helmet_m97_woodland: EGVAR(wardrobe,base) {
+    class modifiableTo { class rhssaf_helmet_m97_woodland_black_ess_bare; class rhssaf_helmet_m97_veil_woodland; };
     components[] = {};
+    //alternativeDisplayName = ECSTRING(wardrobe,gogglesOn);
+    //alternativeDisplayName = ECSTRING(wardrobe,maskOn);
 };
-class rhssaf_helmet_m97_woodland_black_ess_bare: EGVAR(wardrobe,base_H_goggles_on) {
+class rhssaf_helmet_m97_woodland_black_ess_bare: EGVAR(wardrobe,base) {
     class modifiableTo { class rhssaf_helmet_m97_woodland; };
     components[] = {"rhs_ess_black"};
+    alternativeDisplayName = ECSTRING(wardrobe,gogglesOff);
 };
 
-class rhssaf_helmet_m97_veil_woodland: EGVAR(wardrobe,base_H_mask_on) {
+class rhssaf_helmet_m97_veil_woodland: EGVAR(wardrobe,base) {
     class modifiableTo { class rhssaf_helmet_m97_woodland; };
     components[] = {"rhssaf_veil_Green"};
+    alternativeDisplayName = ECSTRING(wardrobe,maskOff);
 };
