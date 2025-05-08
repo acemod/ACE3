@@ -1,3 +1,4 @@
+//Vanilla Goggles are used because RHS ARF doesn't have any
 //Pilot Helmets with Visors
 // ToDo use MACROs
 class rhs_zsh7a_mike: EGVAR(wardrobe,base_H_visor_up) {
@@ -28,20 +29,21 @@ class rhs_zsh7a_alt: EGVAR(wardrobe,base_H_visor_down) {
 };
 
 // Tanker Hat
-// Todo user EGVAR(wardrobe,base)
-class rhs_tsh4: EGVAR(wardrobe,base_H_goggles_off) {
+class rhs_tsh4: EGVAR(wardrobe,base) {
     class modifiableTo { class rhs_tsh4_bala; class rhs_tsh4_ess;};
     components[] = {};
 };
-class rhs_tsh4_bala: EGVAR(wardrobe,base_H_mask_on) {
+class rhs_tsh4_bala: EGVAR(wardrobe,base) {
     class modifiableTo { class rhs_tsh4; class rhs_tsh4_ess_bala;};
     components[] = {"rhs_balaclava1_olive"};
+    alternativeDisplayName = ECSTRING(wardrobe,maskOff);
 };
-class rhs_tsh4_ess: EGVAR(wardrobe,base_H_goggles_on) {
+class rhs_tsh4_ess: EGVAR(wardrobe,base) {
     class modifiableTo { class rhs_tsh4_ess_bala; class rhs_tsh4;};
-    components[] = {"G_Combat"}; //Vanilla Goggles because RHS ARF doesn't have any
+    components[] = {"G_Combat"};
+    alternativeDisplayName = ECSTRING(wardrobe,gogglesOff);
 };
-class rhs_tsh4_ess_bala: EGVAR(wardrobe,base_H_goggles_on) {
+class rhs_tsh4_ess_bala: EGVAR(wardrobe,base) {
     class modifiableTo { class rhs_tsh4_bala; class rhs_tsh4_ess;};
     components[] = {"rhs_balaclava1_olive", "G_Combat"};
 };
