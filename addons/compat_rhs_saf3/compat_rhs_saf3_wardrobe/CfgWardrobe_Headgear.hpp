@@ -1,5 +1,6 @@
 CfgWardrobe_Headgear.hpp
 //SAF requires RHS USAF, so we can use their Googles
+// ToDo Use Macros
 class rhssaf_helmet_m97_black_nocamo: EGVAR(wardrobe,base_H_goggles_off) {
     class modifiableTo { class rhssaf_helmet_m97_black_nocamo_black_ess_bare; };
     components[] = {};

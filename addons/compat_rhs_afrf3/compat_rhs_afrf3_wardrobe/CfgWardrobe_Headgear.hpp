@@ -1,4 +1,5 @@
 //Pilot Helmets with Visors
+// ToDo use MACROs
 class rhs_zsh7a_mike: EGVAR(wardrobe,base_H_visor_up) {
     class modifiableTo { class rhs_zsh7a_mike_alt; };
     components[] = {};

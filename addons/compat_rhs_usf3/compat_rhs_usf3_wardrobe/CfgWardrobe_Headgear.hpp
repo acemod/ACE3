@@ -1,5 +1,6 @@
 
 //Pilot Helmets with Visors
+// ToDo user MACRO
 class rhsusf_hgu56p_black: EGVAR(wardrobe,base_H_visor_up) {
     class modifiableTo { class rhsusf_hgu56p_visor_black; };
     components[] = {};

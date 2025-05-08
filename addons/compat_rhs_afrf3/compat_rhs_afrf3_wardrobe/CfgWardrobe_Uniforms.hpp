@@ -1,4 +1,5 @@
 // Uniforms with Gloves
+// ToDo User Macros
 class rhs_uniform_6sh122_v1: EGVAR(wardrobe,base_U_gloves_off) {
   class modifiableTo { class rhs_uniform_6sh122_gloves_v1; };
   components[] = {};
