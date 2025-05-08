@@ -6,11 +6,12 @@
  * Arguments:
  * 0: Position ASL <ARRAY>
  * 1: Vector dir and up <ARRAY>
- * 2: Colour of the tag (valid colours are black, red, green and blue or full path to custom texture) <STRING>
+ * 2: Color of the tag (valid colors are black, red, green and blue or full path to custom texture) <STRING>
  * 3: Object it should be tied to <OBJECT>
  * 4: Unit that created the tag <OBJECT>
- * 5: Material of the tag <STRING> (Optional)
- * 6: Vehicle Tag <BOOL> (Optional)
+ * 5: Material of the tag <STRING> (default: "")
+ * 6: Model of the tag <STRING> (default: "UserTexture1m_F")
+ * 7: Vehicle Tag <BOOL> (default: false)
  *
  * Return Value:
  * Tag created <BOOL>

@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Position to place explosive <POSITION>
+ * 1: Position to place explosive <ARRAY>
  * 2: Rotation <NUMBER>
  * 3: Magazine class <STRING>
  * 4: Config of trigger <STRING>

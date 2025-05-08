@@ -8,7 +8,7 @@
  * 1: Hitpoint <STRING>
  *
  * Return Value:
- * Total armor and scaled armor for the given hitpoint <ARRAY of NUMBER>
+ * Total armor and scaled armor for the given hitpoint <ARRAY of NUMBERs>
  *
  * Example:
  * [player, "HitChest"] call ace_medical_engine_fnc_getHitpointArmor

@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Limiting Category (default: "") <STRING>
+ * 1: Limiting Category <STRING> (default: "")
  *
  * Return Value:
  * Variable Data <ARRAY>

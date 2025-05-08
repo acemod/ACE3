@@ -7,7 +7,7 @@
  * 0: Element array <ARRAY>
  *
  * Return Value:
- * If array is valid format <BOOLEAN>
+ * If array is valid format <BOOL>
  *
  * Example:
  * [["TEXT", "My Test", [1, 0.4, 5]]] call ace_missile_hud_fnc_isElementValid

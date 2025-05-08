@@ -4,9 +4,9 @@
  * Get the distance to the next object the player is looking at. Used for laser distance measurements.
  *
  * Arguments:
- * 0: Measurement Accuracy (default: 1) <NUMBER>
- * 1: Maximum measure distance (default: 5000) <NUMBER>
- * 2: Minimum measure distance (default: 0) <NUMBER>
+ * 0: Measurement Accuracy <NUMBER> (default: 1)
+ * 1: Maximum measure distance <NUMBER> (default: 5000)
+ * 2: Minimum measure distance <NUMBER> (default: 0)
  *
  * Return Value:
  * Distance in meters <NUMBER>
