@@ -6,6 +6,7 @@
  * Arguments:
  * 0: Object <OBJECT>
  * 1: Data <STRING>
+ * 2: Header <STRING>
  *
  * Return Value:
  * None
@@ -18,11 +19,15 @@
 
 params ["_object", "_data", "_header"];
 TRACE_1("setObjectData",_this);
+
 private _index = _object getVariable [QGVAR(index), -1];
+
 if (_index == -1) then {
     _index = GVAR(intelCount);
     GVAR(intelCount) = GVAR(intelCount) + 1;
+
     _object setVariable [QGVAR(index), _index, true];
+
     if (isNil "_header") then {
         _header = getText (configOf _object >> "displayName");
     };
