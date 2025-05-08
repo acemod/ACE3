@@ -472,9 +472,11 @@
         </Key>
         <Key ID="STR_ACE_Repair_HitAASight">
             <English>AA Sight</English>
+            <Japanese>対空照準器</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_HitATGMSight">
             <English>ATGM Sight</English>
+            <Japanese>ATGM照準器</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_HitAmmo">
             <English>Ammo</English>
@@ -841,6 +843,7 @@
         </Key>
         <Key ID="STR_ACE_Repair_HitMainSight">
             <English>Main Sight</English>
+            <Japanese>主照準器</Japanese>
         </Key>
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>
@@ -869,7 +872,7 @@
             <Russian>Перископ</Russian>
             <German>Periskop</German>
             <Korean>잠망경</Korean>
-            <Japanese>潜望鏡</Japanese>
+            <Japanese>ペリスコープ</Japanese>
             <Chinese>潛望鏡</Chinese>
             <Chinesesimp>潜望镜</Chinesesimp>
             <Turkish>Periskop</Turkish>
