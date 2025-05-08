@@ -1,6 +1,6 @@
 [default]
 workshop = [
-    "450814997", # CBA_A3
+#    "450814997", # CBA_A3
 ]
 
 [spe]
@@ -51,6 +51,7 @@ workshop = [
 ]
 
 [Wardrobe]
+parameters = ["-mod=x\\cba;"]
 extends = "default"
 mission = "Wardrobe.VR"
 workshop = [
