@@ -78,6 +78,11 @@ class CfgVehicles {
         EGVAR(refuel,hooks)[] = {{-0.44,-4.87,0}, {0.5,-4.87,0}};
         EGVAR(refuel,fuelCargo) = 10000;
     };
+
+    class rhsusf_himars_base: Truck_01_base_F {
+        EGVAR(overpressure,noReflection) = 1;
+    };
+
     class Tank_F;
     class APC_Tracked_02_base_F: Tank_F {};
     class rhsusf_m113tank_base: APC_Tracked_02_base_F {
