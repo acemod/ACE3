@@ -30,15 +30,20 @@ private _openIndices = GVAR(controlsGroups) apply {_x getVariable QGVAR(index)};
         private _displayName = getText (_config >> "displayName");
         private _picture     = getText (_config >> "picture");
         private _controlType = getText (_config >> QGVAR(control));
+
         private _magazineIds = [_player, _x] call CBA_fnc_getMagazineIndex;
 
         {
             private _index = GVAR(intelMap) getVariable _x;
-            private _header = GET_DATA(_index) select 1;
-            if (_header == "") then {
-                _header = _displayName;
-            };
+
+            // Only add actions for intel indices that are not open
             if !(_index in _openIndices) then {
+                private _header = GET_DATA(_index) select 1;
+
+                if (_header == "") then {
+                    _header = _displayName;
+                };
+
                 private _action = [
                     format [QGVAR(%1), _index],
                     _header,
