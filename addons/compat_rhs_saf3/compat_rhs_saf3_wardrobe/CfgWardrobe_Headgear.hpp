@@ -53,7 +53,6 @@ class rhssaf_helmet_m97_olive_nocamo_black_ess_bare: EGVAR(wardrobe,base_H_goggl
     components[] = {"rhs_ess_black"};
 };
 
-//This might be wierd, because we start with goggles_off, and also add mask_on
 class rhssaf_helmet_m97_woodland: EGVAR(wardrobe,base) {
     class modifiableTo { class rhssaf_helmet_m97_woodland_black_ess_bare; class rhssaf_helmet_m97_veil_woodland; };
     components[] = {};
