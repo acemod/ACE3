@@ -15,7 +15,7 @@ class HelmetOnly : EGVAR(wardrobe,base) {\
         class HelmetEss;\
         class HelmetCombo;\
     };\
-    component[] = { QUOTE(HelmetOnly) };\
+    components[] = { QUOTE(HelmetOnly) };\
 };\
 class HelmetBala : EGVAR(wardrobe,base) {\
     class modifiableTo {\
@@ -23,7 +23,7 @@ class HelmetBala : EGVAR(wardrobe,base) {\
         class HelmetEss;\
         class HelmetCombo;\
     };\
-    component[] = { QUOTE(HelmetOnly), QUOTE(Bala) };\
+    components[] = { QUOTE(HelmetOnly), QUOTE(Bala) };\
 };\
 class HelmetEss : EGVAR(wardrobe,base) {\
     class modifiableTo {\
@@ -31,7 +31,7 @@ class HelmetEss : EGVAR(wardrobe,base) {\
         class HelmetBala;\
         class HelmetCombo;\
     };\
-    component[] = { QUOTE(HelmetOnly), QUOTE(ESS) };\
+    components[] = { QUOTE(HelmetOnly), QUOTE(ESS) };\
 };\
 class HelmetCombo : EGVAR(wardrobe,base) {\
     class modifiableTo {\
@@ -39,7 +39,7 @@ class HelmetCombo : EGVAR(wardrobe,base) {\
         class HelmetBala;\
         class HelmetEss;\
     };\
-    component[] = { QUOTE(HelmetOnly), QUOTE(ESS), QUOTE(Bala) };\
+    components[] = { QUOTE(HelmetOnly), QUOTE(ESS), QUOTE(Bala) };\
 }
 
 #define RHS_HELMET_FIELDCAP_BALA_ESS(HelmetOnly,FieldCapOnly,CapWithHelmet,HelmetBala,HelmetEss,HelmetCombo,Bala,ESS)\
@@ -51,7 +51,7 @@ class HelmetOnly : EGVAR(wardrobe,base) {\
         class FieldCapOnly;\
         class CapWithHelmet;\
     };\
-    component[] = { QUOTE(HelmetOnly) };\
+    components[] = { QUOTE(HelmetOnly) };\
 };\
 class FieldCapOnly : EGVAR(wardrobe,base) {\
     class modifiableTo {\
@@ -61,7 +61,7 @@ class FieldCapOnly : EGVAR(wardrobe,base) {\
         class HelmetOnly;\
         class CapWithHelmet;\
     };\
-    component[] = { QUOTE(FieldCapOnly) };\
+    components[] = { QUOTE(FieldCapOnly) };\
 };\
 class CapWithHelmet : EGVAR(wardrobe,base) {\
     class modifiableTo {\
@@ -71,7 +71,7 @@ class CapWithHelmet : EGVAR(wardrobe,base) {\
         class HelmetOnly;\
         class FieldCapOnly;\
     };\
-    component[] = { QUOTE(HelmetOnly), QUOTE(FieldCapOnly) };\
+    components[] = { QUOTE(HelmetOnly), QUOTE(FieldCapOnly) };\
 };\
 class HelmetBala : EGVAR(wardrobe,base) {\
     class modifiableTo {\
@@ -81,7 +81,7 @@ class HelmetBala : EGVAR(wardrobe,base) {\
         class FieldCapOnly;\
         class CapWithHelmet;\
     };\
-    component[] = { QUOTE(HelmetOnly), QUOTE(Bala) };\
+    components[] = { QUOTE(HelmetOnly), QUOTE(Bala) };\
 };\
 class HelmetEss : EGVAR(wardrobe,base) {\
     class modifiableTo {\
@@ -91,7 +91,7 @@ class HelmetEss : EGVAR(wardrobe,base) {\
         class FieldCapOnly;\
         class CapWithHelmet;\
     };\
-    component[] = { QUOTE(HelmetOnly), QUOTE(ESS) };\
+    components[] = { QUOTE(HelmetOnly), QUOTE(ESS) };\
 };\
 class HelmetCombo : EGVAR(wardrobe,base) {\
     class modifiableTo {\
@@ -101,7 +101,7 @@ class HelmetCombo : EGVAR(wardrobe,base) {\
         class FieldCapOnly;\
         class CapWithHelmet;\
     };\
-    component[] = { QUOTE(HelmetOnly), QUOTE(ESS), QUOTE(Bala) };\
+    components[] = { QUOTE(HelmetOnly), QUOTE(ESS), QUOTE(Bala) };\
 }
 
 
@@ -136,7 +136,7 @@ class rhs_6b47 : EGVAR(wardrobe,base) {
         class rhs_6b47_ess;
         class rhs_6b47_ess_bala;
     };
-    component[] = { QUOTE(rhs_6b47) };
+    components[] = { QUOTE(rhs_6b47) };
 };
 class rhs_6b47_6m2 : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -146,7 +146,7 @@ class rhs_6b47_6m2 : EGVAR(wardrobe,base) {
         class rhs_6b47_ess;
         class rhs_6b47_ess_bala;
     };
-    component[] = { QUOTE(rhs_6b47), QUOTE(HEADSET) };
+    components[] = { QUOTE(rhs_6b47), QUOTE(HEADSET) };
 };
 class rhs_6b47_6m2_1 : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -156,7 +156,7 @@ class rhs_6b47_6m2_1 : EGVAR(wardrobe,base) {
         class rhs_6b47_ess;
         class rhs_6b47_ess_bala;
     };
-    component[] = { QUOTE(rhs_6b47), QUOTE(HEADSET_MIC) };
+    components[] = { QUOTE(rhs_6b47), QUOTE(HEADSET_MIC) };
 };
 class rhs_6b47_bala : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -166,7 +166,7 @@ class rhs_6b47_bala : EGVAR(wardrobe,base) {
         class rhs_6b47_ess;
         class rhs_6b47_ess_bala;
     };
-    component[] = { QUOTE(rhs_6b47), QUOTE(BALA_HOLE_2) };
+    components[] = { QUOTE(rhs_6b47), QUOTE(BALA_HOLE_2) };
 };
 class rhs_6b47_ess : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -176,7 +176,7 @@ class rhs_6b47_ess : EGVAR(wardrobe,base) {
         class rhs_6b47_ess;
         class rhs_6b47_ess_bala;
     };
-    component[] = { QUOTE(rhs_6b47), QUOTE(ESS_GOGGLES) };
+    components[] = { QUOTE(rhs_6b47), QUOTE(ESS_GOGGLES) };
 };
 class rhs_6b47_ess_bala : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -185,7 +185,7 @@ class rhs_6b47_ess_bala : EGVAR(wardrobe,base) {
         class rhs_6b47_6m2_1;
         class rhs_6b47_ess;
     };
-    component[] = { QUOTE(rhs_6b47), QUOTE(ESS_GOGGLES), QUOTE(BALA_HOLE_2) };
+    components[] = { QUOTE(rhs_6b47), QUOTE(ESS_GOGGLES), QUOTE(BALA_HOLE_2) };
 };
 
 
@@ -196,7 +196,7 @@ class rhs_6b7_1m_emr : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_emr_ess;
         class rhs_6b7_1m_emr_ess_bala;
     };
-    component[] = { QUOTE(rhs_6b7_1m_emr) };
+    components[] = { QUOTE(rhs_6b7_1m_emr) };
 };
 class rhs_6b7_1m_bala1_emr : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -205,7 +205,7 @@ class rhs_6b7_1m_bala1_emr : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_emr_ess;
         class rhs_6b7_1m_emr_ess_bala;
     };
-    component[] = { QUOTE(rhs_6b7_1m_emr), QUOTE(BALA_HOLE_2) };
+    components[] = { QUOTE(rhs_6b7_1m_emr), QUOTE(BALA_HOLE_2) };
 };
 class rhs_6b7_1m_bala2_emr : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -214,7 +214,7 @@ class rhs_6b7_1m_bala2_emr : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_emr_ess;
         class rhs_6b7_1m_emr_ess_bala;
     };
-    component[] = { QUOTE(rhs_6b7_1m_emr), QUOTE(BALA_HOLE_1) };
+    components[] = { QUOTE(rhs_6b7_1m_emr), QUOTE(BALA_HOLE_1) };
 };
 class rhs_6b7_1m_emr_ess : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -223,7 +223,7 @@ class rhs_6b7_1m_emr_ess : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_bala2_emr;
         class rhs_6b7_1m_emr_ess_bala;
     };
-    component[] = { QUOTE(rhs_6b7_1m_emr), QUOTE(ESS_GOGGLES) };
+    components[] = { QUOTE(rhs_6b7_1m_emr), QUOTE(ESS_GOGGLES) };
 };
 class rhs_6b7_1m_emr_ess_bala : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -232,7 +232,7 @@ class rhs_6b7_1m_emr_ess_bala : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_bala2_emr;
         class rhs_6b7_1m_emr_ess;
     };
-    component[] = { QUOTE(rhs_6b7_1m_emr), QUOTE(ESS_GOGGLES), QUOTE(BALA_HOLE_2) };
+    components[] = { QUOTE(rhs_6b7_1m_emr), QUOTE(ESS_GOGGLES), QUOTE(BALA_HOLE_2) };
 };
 
 
@@ -243,7 +243,7 @@ class rhs_6b7_1m : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_ess;
         class rhs_6b7_1m_ess_bala;
     };
-    component[] = { QUOTE(rhs_6b7_1m) };
+    components[] = { QUOTE(rhs_6b7_1m) };
 };
 class rhs_6b7_1m_bala1 : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -252,7 +252,7 @@ class rhs_6b7_1m_bala1 : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_ess;
         class rhs_6b7_1m_ess_bala;
     };
-    component[] = { QUOTE(rhs_6b7_1m), QUOTE(BALA_HOLE_2) };
+    components[] = { QUOTE(rhs_6b7_1m), QUOTE(BALA_HOLE_2) };
 };
 class rhs_6b7_1m_bala2 : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -261,7 +261,7 @@ class rhs_6b7_1m_bala2 : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_ess;
         class rhs_6b7_1m_ess_bala;
     };
-    component[] = { QUOTE(rhs_6b7_1m), QUOTE(BALA_HOLE_1) };
+    components[] = { QUOTE(rhs_6b7_1m), QUOTE(BALA_HOLE_1) };
 };
 class rhs_6b7_1m_ess : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -270,7 +270,7 @@ class rhs_6b7_1m_ess : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_bala2;
         class rhs_6b7_1m_ess_bala;
     };
-    component[] = { QUOTE(rhs_6b7_1m), QUOTE(ESS_GOGGLES) };
+    components[] = { QUOTE(rhs_6b7_1m), QUOTE(ESS_GOGGLES) };
 };
 class rhs_6b7_1m_ess_bala : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -279,7 +279,7 @@ class rhs_6b7_1m_ess_bala : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_bala2;
         class rhs_6b7_1m_ess;
     };
-    component[] = { QUOTE(rhs_6b7_1m), QUOTE(ESS_GOGGLES), QUOTE(BALA_HOLE_2) };
+    components[] = { QUOTE(rhs_6b7_1m), QUOTE(ESS_GOGGLES), QUOTE(BALA_HOLE_2) };
 };
 
 
@@ -293,7 +293,7 @@ class rhs_6b7_1m_flora : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_bala2_flora;
         class rhs_6b7_1m_flora_ns3;
     };
-    component[] = { QUOTE(rhs_6b7_1m_flora) };
+    components[] = { QUOTE(rhs_6b7_1m_flora) };
 };
 class rhs_6b7_1m_bala1_flora : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -301,7 +301,7 @@ class rhs_6b7_1m_bala1_flora : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_bala2_flora;
         class rhs_6b7_1m_flora_ns3;
     };
-    component[] = { QUOTE(rhs_6b7_1m_flora), QUOTE(BALA_HOLE_2) };
+    components[] = { QUOTE(rhs_6b7_1m_flora), QUOTE(BALA_HOLE_2) };
 };
 class rhs_6b7_1m_bala2_flora : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -309,7 +309,7 @@ class rhs_6b7_1m_bala2_flora : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_bala1_flora;
         class rhs_6b7_1m_flora_ns3;
     };
-    component[] = { QUOTE(rhs_6b7_1m_flora), QUOTE(BALA_HOLE_1) };
+    components[] = { QUOTE(rhs_6b7_1m_flora), QUOTE(BALA_HOLE_1) };
 };
 class rhs_6b7_1m_flora_ns3 : EGVAR(wardrobe,base) {
     class modifiableTo {
@@ -317,36 +317,31 @@ class rhs_6b7_1m_flora_ns3 : EGVAR(wardrobe,base) {
         class rhs_6b7_1m_bala1_flora;
         class rhs_6b7_1m_bala2_flora;
     };
-    component[] = { QUOTE(rhs_6b7_1m_flora), QUOTE(ESS_GOGGLES) };
+    components[] = { QUOTE(rhs_6b7_1m_flora), QUOTE(ESS_GOGGLES) };
 };
 
 
-// rhs_6b7_1m_olive
-// rhs_6b7_1m_bala1_olive  // 2 small
-// rhs_6b7_1m_bala2_olive  // 1 big
 class rhs_6b7_1m_olive : EGVAR(wardrobe,base) {
     class modifiableTo {
         class rhs_6b7_1m_bala1_olive;
         class rhs_6b7_1m_bala2_olive;
     };
-    component[] = { QUOTE(rhs_6b7_1m_olive) };
+    components[] = { QUOTE(rhs_6b7_1m_olive) };
 };
 class rhs_6b7_1m_bala1_olive : EGVAR(wardrobe,base) {
     class modifiableTo {
         class rhs_6b7_1m_olive;
         class rhs_6b7_1m_bala2_olive;
     };
-    component[] = { QUOTE(rhs_6b7_1m_olive), QUOTE(BALA_HOLE_2) };
+    components[] = { QUOTE(rhs_6b7_1m_olive), QUOTE(BALA_HOLE_2) };
 };
 class rhs_6b7_1m_bala2_olive : EGVAR(wardrobe,base) {
     class modifiableTo {
         class rhs_6b7_1m_olive;
         class rhs_6b7_1m_bala1_olive;
     };
-    component[] = { QUOTE(rhs_6b7_1m_olive), QUOTE(BALA_HOLE_1) };
+    components[] = { QUOTE(rhs_6b7_1m_olive), QUOTE(BALA_HOLE_1) };
 };
-
-
 
 
 // Berets: Same Beret just slightly differently arranged

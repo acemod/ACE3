@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10.750697,7.5298214,-16.120056};
-		dir[]={0.78896397,-0.42873386,-0.44013983};
-		up[]={0.37441224,0.90343088,-0.20887361};
-		aside[]={-0.48718709,-1.4901161e-08,-0.87329757};
+		pos[]={15.406122,30,-43.717182};
+		dir[]={0,-0.70710683,0.70710683};
+		up[]={0,0.70710677,0.70710677};
+		aside[]={0.99999994,0,-0};
 	};
 };
 binarizationWanted=0;
@@ -88,9 +88,6 @@ randomSeed=4540948;
 class ScenarioData
 {
 	author="Overlord Zorn";
-};
-class CustomAttributes
-{
 };
 class Mission
 {
