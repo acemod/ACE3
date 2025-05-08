@@ -25,12 +25,10 @@ _control ctrlRemoveAllEventHandlers "SetFocus";
 private _index = _object getVariable [QGVAR(index), -1];
 
 if (_index != -1) then {
-    private _data = GET_DATA(_index);
+    (GET_DATA(_index)) params ["_ctrlEditText", "_labelText"];
     private _ctrlEdit = _display displayCtrl IDC_ATTRIBUTE_EDIT;
-    private _ctrlEditText = _data select 0;
     _ctrlEdit ctrlSetText _ctrlEditText;
     private _ctrlLabel = _display displayCtrl IDC_ATTRIBUTE_LABEL;
-    private _labelText = _data select 1;
     _ctrlLabel ctrlSetText _labelText;
 };
 
