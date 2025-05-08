@@ -42,7 +42,7 @@ GVAR(selfInteractionActions) = [];
     QGVAR(RscPatientInfo) cutFadeOut 0.3;
 }] call CBA_fnc_addEventHandler;
 
-["ace_medicalMenuOpened", FUNC(showMedicalHint)] call CBA_fnc_addEventHandler;
+["ace_medicalMenuOpened", LINKFUNC(showMedicalHint)] call CBA_fnc_addEventHandler;
 
 [QEGVAR(medical,woundReceived), {
     params ["_unit", "_allDamages", ""];
