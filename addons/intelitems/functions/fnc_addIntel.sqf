@@ -8,7 +8,7 @@
  * 0: Unit <OBJECT>
  * 1: Item <STRING>
  * 2: Data <STRING>
- * 3: Header <STRING>
+ * 3: Header <STRING> (default: "")
  *
  * Return Value:
  * Successful <BOOL>
