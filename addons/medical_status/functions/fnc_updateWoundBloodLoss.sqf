@@ -19,7 +19,7 @@
 params ["_unit"];
 
 private _tourniquets = GET_TOURNIQUETS(_unit);
-private _bodyPartBleeding = [0,0,0,0,0,0];
+private _bodyPartBleeding = [0,0,0,0,0,0,0,0,0,0,0,0];
 {
     private _partIndex = ALL_BODY_PARTS find _x;
     if (_tourniquets select _partIndex == 0) then {
@@ -37,9 +37,10 @@ if (selectMax _bodyPartBleeding == 0) exitWith {
     _unit setVariable [VAR_WOUND_BLEEDING, 0, true];
 };
 
-_bodyPartBleeding params ["_headBleeding", "_bodyBleeding", "_leftArmBleeding", "_rightArmBleeding", "_leftLegBleeding", "_rightLegBleeding"];
-private _bodyBleedingRate = ((_headBleeding min 0.9) + (_bodyBleeding min 1.0)) min 1.0;
-private _limbBleedingRate = ((_leftArmBleeding min 0.3) + (_rightArmBleeding min 0.3) + (_leftLegBleeding min 0.5) + (_rightLegBleeding min 0.5)) min 1.0;
+_bodyPartBleeding params ["_headBleeding","_neckBleeding", "_chestBleeding", "_bodyBleeding", "_leftArmBleeding","_leftUpperArmBleeding", "_rightArmBleeding","_rightUpperArmBleeding", "_leftLegBleeding","_leftUpperLegBleeding", "_rightLegBleeding", "_rightUpperLegBleeding"];
+private _bodyBleedingRate = ((_headBleeding min 0.9) + (_neckBleeding min 0.9) + (_chestBleeding min 1.0) + (_bodyBleeding min 1.0)) min 1.0;
+private _limbBleedingRate = ((_leftArmBleeding min 0.3) + (_leftUpperArmBleeding min 0.3) + (_rightArmBleeding min 0.3) + (_rightUpperArmBleeding min 0.3) + (_leftLegBleeding min 0.5) + (_leftUpperLegBleeding min 0.5) + (_rightLegBleeding min 0.5) + (_rightUpperLegBleeding min 0.5)) min 1.0;
+
 
 // limb bleeding is scaled down based on the amount of body bleeding
 _limbBleedingRate = _limbBleedingRate * (1 - _bodyBleedingRate);
