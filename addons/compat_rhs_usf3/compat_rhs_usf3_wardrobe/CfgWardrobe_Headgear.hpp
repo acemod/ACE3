@@ -30,35 +30,51 @@ HELMET_VISOR(rhsusf_hgu56p_white,rhsusf_hgu56p_visor_white);
 HELMET_VISOR(rhsusf_hgu56p_usa,rhsusf_hgu56p_visor_usa);
 
 //Combat Helmets with Goggles
-HELMET_GOGGLES(rhsusf_ach_helmet_ocp,rhsusf_ach_helmet_ESS_ocp,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_helmet_headset_ocp,rhsusf_ach_helmet_headset_ess_ocp,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_helmet_headset_ocp_alt,rhsusf_ach_helmet_headset_ess_ocp_alt,rhs_ess_black);
+// The Base Helmet can be Modified into two different Variants
+class rhsusf_ach_helmet_ocp: EGVAR(wardrobe,base) {
+  class modifiableTo { class rhsusf_ach_helmet_ESS_ocp; class rhsusf_ach_helmet_camo_ocp; };
+  components[] = {};
+};
+class rhsusf_ach_helmet_ESS_ocp: EGVAR(wardrobe,base_H_goggles_on) {
+  class modifiableTo { class rhsusf_ach_helmet_ocp; };
+  components[] = {"rhs_ess_black"};
+};
+class rhsusf_ach_helmet_camo_ocp: EGVAR(wardrobe,base) {
+  class modifiableTo { class rhsusf_ach_helmet_ocp; };
+  components[] = {};
+};
 
-HELMET_GOGGLES(rhsusf_ach_bare_tan,rhsusf_ach_bare_tan_ess,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_bare_tan_headset,rhsusf_ach_bare_tan_headset_ess,rhs_ess_black);
 
-HELMET_GOGGLES(rhsusf_ach_bare_des,rhsusf_ach_bare_des_ess,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_bare_des_headset,rhsusf_ach_bare_des_headset_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_helmet_headset_ess_ocp,rhsusf_ach_helmet_headset_ocp,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_helmet_headset_ess_ocp_alt,rhsusf_ach_helmet_headset_ocp_alt,rhs_ess_black);
 
-HELMET_GOGGLES(rhsusf_ach_helmet_ucp,rhsusf_ach_helmet_ESS_ucp,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_helmet_ucp_alt,rhsusf_ach_helmet_ESS_ucp_alt,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_helmet_headset_ucp,rhsusf_ach_helmet_headset_ess_ucp,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_helmet_headset_ucp_alt,rhsusf_ach_helmet_headset_ess_ucp_alt,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_tan_ess,rhsusf_ach_bare_tan,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_tan_headset_ess,rhsusf_ach_bare_tan_headset,rhs_ess_black);
 
-HELMET_GOGGLES(rhsusf_ach_bare,rhsusf_ach_bare_ess,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_bare_headset,rhsusf_ach_bare_headset_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_des_ess,rhsusf_ach_bare_des,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_des_headset_ess,rhsusf_ach_bare_des_headset,rhs_ess_black);
 
-HELMET_GOGGLES(rhsusf_ach_bare_semi,rhsusf_ach_bare_semi_ess,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_bare_semi_headset,rhsusf_ach_bare_semi_headset_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_helmet_ESS_ucp,rhsusf_ach_helmet_ucp,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_helmet_ESS_ucp_alt,rhsusf_ach_helmet_ucp_alt,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_helmet_headset_ess_ucp,rhsusf_ach_helmet_headset_ucp,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_helmet_headset_ess_ucp_alt,rhsusf_ach_helmet_headset_ucp_alt,rhs_ess_black);
 
-HELMET_GOGGLES(rhsusf_ach_bare_wood,rhsusf_ach_bare_wood_ess,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_bare_wood_headset,rhsusf_ach_bare_wood_headset_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_ess,rhsusf_ach_bare,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_headset_ess,rhsusf_ach_bare_headset,rhs_ess_black);
 
-HELMET_GOGGLES(rhsusf_cvc_alt_helmet,rhsusf_cvc_ess,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_cvc_green_alt_helmet,rhsusf_cvc_green_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_semi_ess,rhsusf_ach_bare_semi,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_semi_headset_ess,rhsusf_ach_bare_semi_headset,rhs_ess_black);
 
-HELMET_GOGGLES(rhsusf_lwh_helmet_marpatwd,rhsusf_lwh_helmet_marpatwd_blk_ess,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_lwh_helmet_marpatwd_headset_blk2,rhsusf_lwh_helmet_marpatwd_headset_blk,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_wood_ess,rhsusf_ach_bare_wood,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_wood_headset_ess,rhsusf_ach_bare_wood_headset,rhs_ess_black);
 
-HELMET_GOGGLES(rhsusf_protech_helmet,rhsusf_protech_helmet_ess,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_protech_helmet_rhino,rhsusf_protech_helmet_rhino_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_cvc_ess,rhsusf_cvc_alt_helmet,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_cvc_green_ess,rhsusf_cvc_green_alt_helmet,rhs_ess_black);
+
+HELMET_GOGGLES(rhsusf_lwh_helmet_marpatd_ess,rhsusf_lwh_helmet_marpatd,rhs_ess_black);
+
+HELMET_GOGGLES(rhsusf_lwh_helmet_marpatwd_blk_ess,rhsusf_lwh_helmet_marpatwd,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_lwh_helmet_marpatwd_headset_blk,rhsusf_lwh_helmet_marpatwd_headset_blk2,rhs_ess_black);
+
+HELMET_GOGGLES(rhsusf_protech_helmet_ess,rhsusf_protech_helmet,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_protech_helmet_rhino_ess,rhsusf_protech_helmet_rhino,rhs_ess_black);
