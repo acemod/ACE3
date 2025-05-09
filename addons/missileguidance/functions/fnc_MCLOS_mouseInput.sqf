@@ -45,23 +45,23 @@ if ((_weapons findIf {
 playSound "ACE_Sound_Click";
 createDialog QGVAR(mouseInputDialog);
 
-#define CENTER_X 0.5
-#define CENTER_Y 0.75
 private _halfX = safeZoneW / 16;
 private _halfY = (4/3) * _halfX; // Maintain aspect ratio;
+private _centerX = 0.5;
+private _centerY = 1 min (safeZoneH - 2 * _halfY);
 
 private _display = uiNamespace getVariable [QGVAR(mouseInputDialog), displayNull];
 private _background = _display displayCtrl 1000;
 _background ctrlSetBackgroundColor [0, 0, 0, 0.25]; // Semi-transparent background
-_background ctrlSetPosition [CENTER_X - _halfX, CENTER_Y - _halfY, _halfX * 2, _halfY * 2];
+_background ctrlSetPosition [_centerX - _halfX, _centerY - _halfY, _halfX * 2, _halfY * 2];
 _background ctrlCommit 0;
 
 // Set initial mouse position to the center
-setMousePosition [CENTER_X, CENTER_Y];
+setMousePosition [_centerX, _centerY];
 TRACE_1("start mouse input",typeOf _shooter);
 [{
     params ["_args", "_pfID"];
-    _args params ["_shooter"];
+    _args params ["_shooter", "_halfX", "_halfY", "_centerX", "_centerY"];
     private _display = uiNamespace getVariable [QGVAR(mouseInputDialog), displayNull];
     if ((!alive ACE_player) ||
         {!alive _shooter} ||
@@ -80,12 +80,10 @@ TRACE_1("start mouse input",typeOf _shooter);
     };
 
     getMousePosition params ["_mouseX", "_mouseY"];
-    private _halfX = safeZoneW / 16;
-    private _halfY = (4/3) * _halfX;
-    private _minX = CENTER_X - _halfX;
-    private _maxX = CENTER_X + _halfX;
-    private _minY = CENTER_Y - _halfY;
-    private _maxY = CENTER_Y + _halfY;
+    private _minX = _centerX - _halfX;
+    private _maxX = _centerX + _halfX;
+    private _minY = _centerY - _halfY;
+    private _maxY = _centerY + _halfY;
     private _clampX = (_mouseX min _maxX) max _minX;
     private _clampY = (_mouseY min _maxY) max _minY;
     private _realX = linearConversion [_minX, _maxX, _clampX, -1, 1, true];
@@ -104,6 +102,6 @@ TRACE_1("start mouse input",typeOf _shooter);
     #endif
 
     _shooter setVariable [QGVAR(MCLOS_direction), [_realX, 0, _realY]];
-}, 0, [_shooter]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_shooter, _halfX, _halfY, _centerX, _centerY]] call CBA_fnc_addPerFrameHandler;
 
 true
