@@ -1,4 +1,3 @@
-
 //Pilot Helmets with Visors
 HELMET_VISOR(rhsusf_hgu56p,rhsusf_hgu56p_visor);
 HELMET_VISOR(rhsusf_hgu56p_mask,rhsusf_hgu56p_visor_mask);
@@ -29,35 +28,22 @@ HELMET_VISOR(rhsusf_hgu56p_white,rhsusf_hgu56p_visor_white);
 
 HELMET_VISOR(rhsusf_hgu56p_usa,rhsusf_hgu56p_visor_usa);
 
-//Combat Helmets with Goggles
-// The Base Helmet can be Modified into two different Variants
+// Helmet with Netting
 class rhsusf_ach_helmet_ocp: EGVAR(wardrobe,base) {
   class modifiableTo { class rhsusf_ach_helmet_ESS_ocp; class rhsusf_ach_helmet_camo_ocp; };
   components[] = {};
-};
-class rhsusf_ach_helmet_ESS_ocp: EGVAR(wardrobe,base_H_goggles_on) {
-  class modifiableTo { class rhsusf_ach_helmet_ocp; };
-  components[] = {"rhs_ess_black"};
 };
 class rhsusf_ach_helmet_camo_ocp: EGVAR(wardrobe,base) {
   class modifiableTo { class rhsusf_ach_helmet_ocp; };
   components[] = {};
 };
 
-
-HELMET_GOGGLES(rhsusf_ach_helmet_headset_ess_ocp,rhsusf_ach_helmet_headset_ocp,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_helmet_headset_ess_ocp_alt,rhsusf_ach_helmet_headset_ocp_alt,rhs_ess_black);
-
+//Combat Helmets with Goggles
 HELMET_GOGGLES(rhsusf_ach_bare_tan_ess,rhsusf_ach_bare_tan,rhs_ess_black);
 HELMET_GOGGLES(rhsusf_ach_bare_tan_headset_ess,rhsusf_ach_bare_tan_headset,rhs_ess_black);
 
 HELMET_GOGGLES(rhsusf_ach_bare_des_ess,rhsusf_ach_bare_des,rhs_ess_black);
 HELMET_GOGGLES(rhsusf_ach_bare_des_headset_ess,rhsusf_ach_bare_des_headset,rhs_ess_black);
-
-HELMET_GOGGLES(rhsusf_ach_helmet_ESS_ucp,rhsusf_ach_helmet_ucp,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_helmet_ESS_ucp_alt,rhsusf_ach_helmet_ucp_alt,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_helmet_headset_ess_ucp,rhsusf_ach_helmet_headset_ucp,rhs_ess_black);
-HELMET_GOGGLES(rhsusf_ach_helmet_headset_ess_ucp_alt,rhsusf_ach_helmet_headset_ucp_alt,rhs_ess_black);
 
 HELMET_GOGGLES(rhsusf_ach_bare_ess,rhsusf_ach_bare,rhs_ess_black);
 HELMET_GOGGLES(rhsusf_ach_bare_headset_ess,rhsusf_ach_bare_headset,rhs_ess_black);
