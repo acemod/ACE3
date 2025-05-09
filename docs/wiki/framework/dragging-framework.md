@@ -41,8 +41,8 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 
 `ace_dragging_fnc_setDraggable`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Any object | Object | Required |
 | 1  | Enable dragging, true to enable, false to disable | Boolean | Required |
 | 2  | Position to offset the object from player | Array | Optional (default: `[0, 1.5, 0]`) |
@@ -78,8 +78,8 @@ You will **not** be able to carry / drag objects that are too heavy, the mass is
 
 `ace_dragging_fnc_setCarryable`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Any object | Object | Required |
 | 1  | Enable carrying, true to enable, false to disable | Boolean | Required |
 | 2  | Position to offset the object from player | Array | Optional (default: `[0, 1, 1]`) |

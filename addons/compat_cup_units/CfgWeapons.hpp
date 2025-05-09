@@ -67,6 +67,7 @@ class CfgWeapons {
     HEARING(CUP_H_PMC_Cap_EP_Grey);
     HEARING(CUP_H_PMC_Cap_EP_Tan);
     HEARING(CUP_H_PMC_EP_Headset);
+    HEARING(CUP_H_RUS_K6_3);
     HEARING(CUP_H_USArmy_HelmetMICH_earpro);
     HEARING(CUP_H_USArmy_HelmetMICH_earpro_DCU);
     HEARING(CUP_H_USArmy_HelmetMICH_earpro_ess);

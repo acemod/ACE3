@@ -87,7 +87,7 @@
             <Russian>Оставшийся боекомплект: %1</Russian>
             <German>Folgende Munition ist übrig:%1</German>
             <Korean>다음의 탄약이 남음 : %1</Korean>
-            <Japanese>この弾薬は残り: %1</Japanese>
+            <Japanese>この弾薬の残量は: %1</Japanese>
             <Chinese>以下剩餘的彈藥:%1</Chinese>
             <Chinesesimp>以下剩余的弹药：%1</Chinesesimp>
         </Key>
@@ -418,7 +418,7 @@
             <Russian>Этот модуль позволяет изменить настройки системы перевооружения.</Russian>
             <German>Mittels diesem Modul kann das Aufmunitioniersystem angepasst werden.</German>
             <Korean>이 모듈은 재보급시의 설정을 바꿀수 있게 해줍니다.</Korean>
-            <Japanese>再武装システムの設定を微調整します。</Japanese>
+            <Japanese>再武装システムの設定を調整します。</Japanese>
             <Chinese>此模塊允許你調整整裝系統設定</Chinese>
             <Chinesesimp>此模块允许你调整整装系统设定</Chinesesimp>
         </Key>
@@ -448,7 +448,7 @@
             <Russian>В зависимости от калибра</Russian>
             <German>Kaliberbasierte Anzahl</German>
             <Korean>구경에 따라 수량 설정</Korean>
-            <Japanese>口径に基づいて</Japanese>
+            <Japanese>口径に基づいた弾数</Japanese>
             <Chinese>基於口徑決定所耗時間</Chinese>
             <Chinesesimp>基于口径决定所耗时间</Chinesesimp>
         </Key>
@@ -493,7 +493,7 @@
             <Russian>Насколько быстро должна перевооружаться техника?</Russian>
             <German>Wie schnell soll ein Fahrzeug aufmunitioniert werden?</German>
             <Korean>차량을 얼마나 빨리 재보급 시킵니까?</Korean>
-            <Japanese>車両がどれくらいの早さで再武装されるか?</Japanese>
+            <Japanese>車両はどのくらい素早く再武装されるべきですか?</Japanese>
             <Chinese>載具多快會整裝完畢?</Chinese>
             <Chinesesimp>载具多快会整装完毕？</Chinesesimp>
         </Key>
@@ -508,7 +508,7 @@
             <Russian>Степень перевооружения</Russian>
             <German>Aufmunitioniermenge</German>
             <Korean>재보급 양</Korean>
-            <Japanese>再武装の所要時間</Japanese>
+            <Japanese>再武装される弾薬量</Japanese>
             <Chinese>整裝所需時間</Chinese>
             <Chinesesimp>整装所需时间</Chinesesimp>
         </Key>
@@ -523,7 +523,7 @@
             <Russian>Ограниченный боезапас в зависимости от калибра</Russian>
             <German>Begrenzter, kaliberabhängiger Munitionsvorrat</German>
             <Korean>구경에 따라 제한된 탄약 보급</Korean>
-            <Japanese>口径に基づいた限定的供給</Japanese>
+            <Japanese>口径に基づく限りある供給</Japanese>
             <Chinese>基於口徑限制彈藥數量</Chinese>
             <Chinesesimp>基于口径限制弹药数量</Chinesesimp>
         </Key>
@@ -538,7 +538,7 @@
             <Russian>Магазин полностью</Russian>
             <German>Gesamtes Magazin</German>
             <Korean>모든 탄창</Korean>
-            <Japanese>マガジン全体</Japanese>
+            <Japanese>一弾倉のすべての弾数</Japanese>
             <Chinese>整個彈匣</Chinese>
             <Chinesesimp>整个弹匣</Chinesesimp>
         </Key>
@@ -568,7 +568,7 @@
             <Russian>Какой боезапас перевозит грузовик с боеприпасами?</Russian>
             <German>Wie viel Munition transportiert ein Munitionslaster?</German>
             <Korean>탄약 차량은 얼마나 많은 양의 탄약을 가질 수 있습니까?</Korean>
-            <Japanese>弾薬トラックの運搬量を設定します。</Japanese>
+            <Japanese>弾薬トラックはどれだけの数の弾薬を保持するべきですか?</Japanese>
             <Chinese>彈藥卡車會攜帶多少的彈藥?</Chinese>
             <Chinesesimp>弹药卡车会携带多少的弹药？</Chinesesimp>
         </Key>
@@ -583,7 +583,7 @@
             <Russian>Запас боеприпасов</Russian>
             <German>Munitionsvorrat</German>
             <Korean>탄약 보급</Korean>
-            <Japanese>弾薬の供給</Japanese>
+            <Japanese>供給される弾薬</Japanese>
             <Chinese>彈藥補給</Chinese>
             <Chinesesimp>弹药补给</Chinesesimp>
         </Key>
@@ -598,7 +598,7 @@
             <Russian>Неограниченный боезапас</Russian>
             <German>Unbegrenzter Munitionsvorrat</German>
             <Korean>무한 탄약 보급</Korean>
-            <Japanese>無制限供給</Japanese>
+            <Japanese>無制限に供給</Japanese>
             <Chinese>無限彈藥</Chinese>
             <Chinesesimp>无限弹药</Chinesesimp>
         </Key>
@@ -628,7 +628,7 @@
             <Russian>Сохранить боекомплект</Russian>
             <German>Munition verstauen</German>
             <Korean>탄약 보관하기</Korean>
-            <Japanese>弾薬を格納する</Japanese>
+            <Japanese>弾薬をしまう</Japanese>
             <Chinese>儲存彈藥</Chinese>
             <Chinesesimp>储存弹药</Chinesesimp>
         </Key>
@@ -643,7 +643,7 @@
             <Russian>Сохраняется %1 в %2...</Russian>
             <German>Verstaue %1 in %2...</German>
             <Korean>%2에 %1 보관 중...</Korean>
-            <Japanese>%1 を %2 へ格納中・・・</Japanese>
+            <Japanese>%1 を %2 へ収納中・・・</Japanese>
             <Chinese>儲存%1到%2中...</Chinese>
             <Chinesesimp>正在储存%1到%2...</Chinesesimp>
         </Key>

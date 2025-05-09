@@ -1,19 +1,27 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Check if the mine detector can be activated
+ * Checks if the mine detector can be activated.
  *
  * Arguments:
- * None
+ * 0: Unit <OBJECT>
+ * 1: Detector type <STRING> (default: currentWeapon Unit)
  *
  * Return Value:
  * Can be activated <BOOL>
  *
  * Example:
- * [] call ace_minedetector_fnc_canActivateDetector
+ * [player, currentWeapon player] call ace_minedetector_fnc_canActivateDetector
  *
  * Public: No
  */
 
-([ACE_player] call FUNC(hasDetector)) &&
-!([ACE_player, currentWeapon ACE_player] call FUNC(isDetectorEnabled));
+params ["_unit"];
+
+if (!local _unit || {!alive _unit}) exitWith {
+    false // return
+};
+
+private _detectorType = param [1, currentWeapon _unit, [""]];
+
+[_unit, _detectorType] call FUNC(hasDetector) && {!([_unit, _detectorType] call FUNC(isDetectorEnabled))} // return

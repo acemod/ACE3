@@ -29,6 +29,12 @@ GVAR(mousePos) = [0.5, 0.5];
 GVAR(rightMouseButtonLastPos) = [];
 
 _control ctrlAddEventHandler ["Draw", {call FUNC(updateMapEffects)}];
+_control ctrlAddEventHandler ["MouseButtonDown", {
+    params ["", "_button", "_x", "_y"];
+    if (_button == 1) then {
+        GVAR(rightMouseButtonLastPos) = [_x, _y];
+    };
+}];
 _control ctrlAddEventHandler ["MouseMoving", {
     params ["_control", "_x", "_y"];
     if (GVAR(isShaking) && {count GVAR(rightMouseButtonLastPos) == 2}) then {
@@ -41,12 +47,6 @@ _control ctrlAddEventHandler ["MouseMoving", {
     };
 }];
 
-_control ctrlAddEventHandler ["MouseButtonDown", {
-    params ["", "_button", "_x", "_y"];
-    if (_button == 1) then {
-        GVAR(rightMouseButtonLastPos) = [_x, _y];
-    };
-}];
 
 _control ctrlAddEventHandler ["MouseButtonUp", {
     params ["", "_button"];

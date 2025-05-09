@@ -52,7 +52,7 @@ class CfgWeapons {
         };
         class Loft: Direct {
             displayName = CSTRING(loft);
-            textureType = "topdown";
+            textureType = "topDown";
 
             minRange = 4000;
             minRangeProbab = 0.5;
@@ -102,7 +102,7 @@ class CfgWeapons {
         };
         class Loft: Direct {
             displayName = CSTRING(loft);
-            textureType = "topdown";
+            textureType = "topDown";
 
             minRange = 4000;
             minRangeProbab = 0.5;
