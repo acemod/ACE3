@@ -25,5 +25,5 @@ _nozzle setVariable [QGVAR(isRefueling), true, true];
 [LSTRING(Hint_Started), 1.5, _unit] call EFUNC(common,displayTextStructured);
 [QGVAR(started), [_nozzle getVariable QGVAR(source), _nozzle getVariable QGVAR(sink), _nozzle, _unit]] call CBA_fnc_localEvent;
 
-if (isNil "CBA_fnc_getPerFrameHandlerDelay") exitWith {}; // Remove after next release and increase required cba
+if (isNil "CBA_fnc_getPerFrameHandlerDelay") exitWith {}; // TODO: Remove after next release and increase required cba
 [_nozzle, QGVAR(nozzle_start), nil, true, false, true] call CBA_fnc_globalSay3D;
