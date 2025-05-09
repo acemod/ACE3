@@ -1,387 +1,64 @@
 
 //Pilot Helmets with Visors
-// ToDo user MACRO
-class rhsusf_hgu56p_black: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_black; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_black: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_black; };
-    components[] = {};
-};
+HELMET_VISOR(rhsusf_hgu56p,rhsusf_hgu56p_visor);
+HELMET_VISOR(rhsusf_hgu56p_mask,rhsusf_hgu56p_visor_mask);
+HELMET_VISOR(rhsusf_hgu56p_mask_mo,rhsusf_hgu56p_visor_mask_mo);
+HELMET_VISOR(rhsusf_hgu56p_mask_skull,rhsusf_hgu56p_visor_mask_skull);
 
-class rhsusf_hgu56p_mask_black: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_mask_black; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_mask_black: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_mask_black; };
-    components[] = {};
-};
+HELMET_VISOR(rhsusf_hgu56p_black,rhsusf_hgu56p_visor_black);
+HELMET_VISOR(rhsusf_hgu56p_mask_black,rhsusf_hgu56p_visor_mask_black);
+HELMET_VISOR(rhsusf_hgu56p_mask_Empire_black,rhsusf_hgu56p_visor_mask_Empire_black);
+HELMET_VISOR(rhsusf_hgu56p_mask_black_skull,rhsusf_hgu56p_visor_mask_black_skull);
 
-class rhsusf_hgu56p_mask_Empire_black: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_mask_Empire_black; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_mask_Empire_black: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_mask_Empire_black; };
-    components[] = {};
-};
+HELMET_VISOR(rhsusf_hgu56p_green,rhsusf_hgu56p_visor_green);
+HELMET_VISOR(rhsusf_hgu56p_mask_green,rhsusf_hgu56p_visor_mask_green);
+HELMET_VISOR(rhsusf_hgu56p_mask_green_mo,rhsusf_hgu56p_visor_mask_green_mo);
 
-class rhsusf_hgu56p_mask_black_skull: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_mask_black_skull; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_mask_black_skull: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_mask_black_skull; };
-    components[] = {};
-};
+HELMET_VISOR(rhsusf_hgu56p_mask_smiley,rhsusf_hgu56p_visor_mask_smiley);
 
-class rhsusf_hgu56p_green: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_green; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_green: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_green; };
-    components[] = {};
-};
+HELMET_VISOR(rhsusf_hgu56p_tan,rhsusf_hgu56p_visor_tan);
+HELMET_VISOR(rhsusf_hgu56p_mask_tan,rhsusf_hgu56p_visor_mask_tan);
 
-class rhsusf_hgu56p_mask_green: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_mask_green; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_mask_green: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_mask_green; };
-    components[] = {};
-};
+HELMET_VISOR(rhsusf_hgu56p_pink,rhsusf_hgu56p_visor_pink);
+HELMET_VISOR(rhsusf_hgu56p_mask_pink,rhsusf_hgu56p_visor_mask_pink);
 
-class rhsusf_hgu56p_mask_green_mo: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_mask_green_mo; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_mask_green_mo: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_mask_green_mo; };
-    components[] = {};
-};
+HELMET_VISOR(rhsusf_hgu56p_saf,rhsusf_hgu56p_visor_saf);
+HELMET_VISOR(rhsusf_hgu56p_mask_saf,rhsusf_hgu56p_visor_mask_saf);
 
-class rhsusf_hgu56p_mask_smiley: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_mask_smiley; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_mask_smiley: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_mask_smiley; };
-    components[] = {};
-};
+HELMET_VISOR(rhsusf_hgu56p_white,rhsusf_hgu56p_visor_white);
 
-class rhsusf_hgu56p: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p; };
-    components[] = {};
-};
+HELMET_VISOR(rhsusf_hgu56p_usa,rhsusf_hgu56p_visor_usa);
 
-class rhsusf_hgu56p_mask: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_mask; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_mask: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_mask; };
-    components[] = {};
-};
+//Combat Helmets with Goggles
+HELMET_GOGGLES(rhsusf_ach_helmet_ocp,rhsusf_ach_helmet_ESS_ocp,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_helmet_headset_ocp,rhsusf_ach_helmet_headset_ess_ocp,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_helmet_headset_ocp_alt,rhsusf_ach_helmet_headset_ess_ocp_alt,rhs_ess_black);
 
-class rhsusf_hgu56p_mask_mo: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_mask_mo; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_mask_mo: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_mask_mo; };
-    components[] = {};
-};
+HELMET_GOGGLES(rhsusf_ach_bare_tan,rhsusf_ach_bare_tan_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_tan_headset,rhsusf_ach_bare_tan_headset_ess,rhs_ess_black);
 
-class rhsusf_hgu56p_mask_skull: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_mask_skull; };
-};
-class rhsusf_hgu56p_visor_mask_skull: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_mask_skull; };
-    components[] = {};
-};
+HELMET_GOGGLES(rhsusf_ach_bare_des,rhsusf_ach_bare_des_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_des_headset,rhsusf_ach_bare_des_headset_ess,rhs_ess_black);
 
-class rhsusf_hgu56p_tan: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_tan; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_tan: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_tan; };
-    components[] = {};
-};
+HELMET_GOGGLES(rhsusf_ach_helmet_ucp,rhsusf_ach_helmet_ESS_ucp,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_helmet_ucp_alt,rhsusf_ach_helmet_ESS_ucp_alt,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_helmet_headset_ucp,rhsusf_ach_helmet_headset_ess_ucp,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_helmet_headset_ucp_alt,rhsusf_ach_helmet_headset_ess_ucp_alt,rhs_ess_black);
 
-class rhsusf_hgu56p_mask_tan: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_mask_tan; };
-};
-class rhsusf_hgu56p_visor_mask_tan: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_mask_tan; };
-    components[] = {};
-};
+HELMET_GOGGLES(rhsusf_ach_bare,rhsusf_ach_bare_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_headset,rhsusf_ach_bare_headset_ess,rhs_ess_black);
 
-class rhsusf_hgu56p_pink: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_pink; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_pink: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_pink; };
-    components[] = {};
-};
+HELMET_GOGGLES(rhsusf_ach_bare_semi,rhsusf_ach_bare_semi_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_semi_headset,rhsusf_ach_bare_semi_headset_ess,rhs_ess_black);
 
-class rhsusf_hgu56p_mask_pink: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_mask_pink; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_mask_pink: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_mask_pink; };
-    components[] = {};
-};
+HELMET_GOGGLES(rhsusf_ach_bare_wood,rhsusf_ach_bare_wood_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_ach_bare_wood_headset,rhsusf_ach_bare_wood_headset_ess,rhs_ess_black);
 
-class rhsusf_hgu56p_saf: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_saf; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_saf: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_saf; };
-    components[] = {};
-};
+HELMET_GOGGLES(rhsusf_cvc_alt_helmet,rhsusf_cvc_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_cvc_green_alt_helmet,rhsusf_cvc_green_ess,rhs_ess_black);
 
-class rhsusf_hgu56p_mask_saf: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_mask_saf; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_mask_saf: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_mask_saf; };
-    components[] = {};
-};
+HELMET_GOGGLES(rhsusf_lwh_helmet_marpatwd,rhsusf_lwh_helmet_marpatwd_blk_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_lwh_helmet_marpatwd_headset_blk2,rhsusf_lwh_helmet_marpatwd_headset_blk,rhs_ess_black);
 
-class rhsusf_hgu56p_white: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_white; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_white: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_white; };
-    components[] = {};
-};
-
-class rhsusf_hgu56p_usa: EGVAR(wardrobe,base_H_visor_up) {
-    class modifiableTo { class rhsusf_hgu56p_visor_usa; };
-    components[] = {};
-};
-class rhsusf_hgu56p_visor_usa: EGVAR(wardrobe,base_H_visor_down) {
-    class modifiableTo { class rhsusf_hgu56p_usa; };
-    components[] = {};
-};
-
-//Combat Helmets
-class rhsusf_ach_helmet_ocp: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_helmet_ESS_ocp; };
-    components[] = {};
-};
-class rhsusf_ach_helmet_ESS_ocp: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_helmet_ocp; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_helmet_headset_ocp: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_helmet_headset_ess_ocp; };
-    components[] = {};
-};
-class rhsusf_ach_helmet_headset_ess_ocp: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_helmet_headset_ocp; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_helmet_headset_ocp_alt: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_helmet_headset_ess_ocp_alt; };
-    components[] = {};
-};
-class rhsusf_ach_helmet_headset_ess_ocp_alt: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_helmet_headset_ocp_alt; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_bare_tan: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_bare_tan_ess; };
-    components[] = {};
-};
-class rhsusf_ach_bare_tan_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_bare_tan; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_bare_tan_headset: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_bare_tan_headset_ess; };
-    components[] = {};
-};
-class rhsusf_ach_bare_tan_headset_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_bare_tan_headset; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_bare_des: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_bare_des_ess; };
-    components[] = {};
-};
-class rhsusf_ach_bare_des_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_bare_des; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_bare_des_headset: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_bare_des_headset_ess; };
-    components[] = {};
-};
-class rhsusf_ach_bare_des_headset_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_bare_des_headset; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_helmet_ucp_alt: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_helmet_ESS_ucp_alt; };
-    components[] = {};
-};
-class rhsusf_ach_helmet_ESS_ucp_alt: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_helmet_ucp_alt; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_helmet_ucp: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_helmet_ESS_ucp; };
-    components[] = {};
-};
-class rhsusf_ach_helmet_ESS_ucp: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_helmet_ucp; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_helmet_headset_ucp: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_helmet_headset_ess_ucp; };
-    components[] = {};
-};
-class rhsusf_ach_helmet_headset_ess_ucp: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_helmet_headset_ucp; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_helmet_headset_ucp_alt: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_helmet_headset_ess_ucp_alt; };
-    components[] = {};
-};
-class rhsusf_ach_helmet_headset_ess_ucp_alt: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_helmet_headset_ucp_alt; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_bare: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_bare_ess; };
-    components[] = {};
-};
-class rhsusf_ach_bare_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_bare; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_bare_headset: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_bare_headset_ess; };
-    components[] = {};
-};
-class rhsusf_ach_bare_headset_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_bare_headset; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_bare_semi: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_bare_semi_ess; };
-    components[] = {};
-};
-class rhsusf_ach_bare_semi_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_bare_semi; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_bare_semi_headset: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_bare_semi_headset_ess; };
-    components[] = {};
-};
-class rhsusf_ach_bare_semi_headset_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_bare_semi_headset; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_bare_wood: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_bare_wood_ess; };
-    components[] = {};
-};
-class rhsusf_ach_bare_wood_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_bare_wood; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_ach_bare_wood_headset: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_ach_bare_wood_headset_ess; };
-    components[] = {};
-};
-class rhsusf_ach_bare_wood_headset_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_ach_bare_wood_headset; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_cvc_green_alt_helmet: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_cvc_green_ess; };
-    components[] = {};
-};
-class rhsusf_cvc_green_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_cvc_green_alt_helmet; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_cvc_alt_helmet: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_cvc_ess; };
-    components[] = {};
-};
-class rhsusf_cvc_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_cvc_alt_helmet; };
-    components[] = {"rhs_ess_black"};
-};
-class rhsusf_lwh_helmet_marpatwd: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_lwh_helmet_marpatwd_blk_ess; };
-    components[] = {};
-};
-class rhsusf_lwh_helmet_marpatwd_blk_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_lwh_helmet_marpatwd; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_lwh_helmet_marpatwd_headset_blk2: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_lwh_helmet_marpatwd_headset_blk; };
-    components[] = {};
-};
-class rhsusf_lwh_helmet_marpatwd_headset_blk: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_lwh_helmet_marpatwd_headset_blk2; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_protech_helmet: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_protech_helmet_ess; };
-    components[] = {};
-};
-class rhsusf_protech_helmet_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_protech_helmet; };
-    components[] = {"rhs_ess_black"};
-};
-
-class rhsusf_protech_helmet_rhino: EGVAR(wardrobe,base_H_goggles_off) {
-    class modifiableTo { class rhsusf_protech_helmet_rhino_ess; };
-    components[] = {};
-};
-class rhsusf_protech_helmet_rhino_ess: EGVAR(wardrobe,base_H_goggles_on) {
-    class modifiableTo { class rhsusf_protech_helmet_rhino; };
-    components[] = {"rhs_ess_black"};
-};
+HELMET_GOGGLES(rhsusf_protech_helmet,rhsusf_protech_helmet_ess,rhs_ess_black);
+HELMET_GOGGLES(rhsusf_protech_helmet_rhino,rhsusf_protech_helmet_rhino_ess,rhs_ess_black);
