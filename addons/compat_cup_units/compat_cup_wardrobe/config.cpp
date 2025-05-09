@@ -7,8 +7,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "CUP_Creatures_People_LoadOrder"
             "ace_wardrobe",
+            "CUP_Creatures_People_LoadOrder"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
