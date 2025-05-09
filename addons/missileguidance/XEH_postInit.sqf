@@ -54,3 +54,12 @@ if (!hasInterface) exitWith {};
         };
     }] call CBA_fnc_addEventHandler;
 }] call CBA_fnc_addEventHandler;
+
+// MCLOS - Mouse Input
+["lock", {
+    if (GVAR(MCLOS_mouseInput)) exitWith { GVAR(MCLOS_mouseInput) = false; };
+    GVAR(MCLOS_mouseInput) = true;
+    call FUNC(MCLOS_mouseInput);
+}, {
+    GVAR(MCLOS_mouseInput) = false;
+}] call EFUNC(missileguidance,keybind_add);
