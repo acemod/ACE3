@@ -16,41 +16,33 @@
 },
 [15, [false, true, false]], false] call CBA_fnc_addKeybind;  // Ctrl+Tab
 
-["ACE3 Weapons", QGVAR(PanUp), LLSTRING(PanUp),
-{
+["up", {
     [CAMERA_KEY_UP, true] call FUNC(keyDown);
 },
 {
     [CAMERA_KEY_UP, false] call FUNC(keyDown);
-},
-[200, [false, false, false]], false] call CBA_fnc_addKeybind;  //Up Arrow
+}] call EFUNC(missileguidance,keybind_add);
 
-["ACE3 Weapons", QGVAR(PanLeft), LLSTRING(PanLeft),
-{
+["left", {
     [CAMERA_KEY_LEFT, true] call FUNC(keyDown);
 },
 {
     [CAMERA_KEY_LEFT, false] call FUNC(keyDown);
-},
-[203, [false, false, false]], false] call CBA_fnc_addKeybind;  //Left
+}] call EFUNC(missileguidance,keybind_add);
 
-["ACE3 Weapons", QGVAR(PanRight), LLSTRING(PanRight),
-{
+["right", {
     [CAMERA_KEY_RIGHT, true] call FUNC(keyDown);
 },
 {
     [CAMERA_KEY_RIGHT, false] call FUNC(keyDown);
-},
-[205, [false, false, false]], false] call CBA_fnc_addKeybind;  //Right
+}] call EFUNC(missileguidance,keybind_add);
 
-["ACE3 Weapons", QGVAR(PanDown), LLSTRING(PanDown),
-{
+["down", {
     [CAMERA_KEY_DOWN, true] call FUNC(keyDown);
 },
 {
     [CAMERA_KEY_DOWN, false] call FUNC(keyDown);
-},
-[208, [false, false, false]], false] call CBA_fnc_addKeybind;  //Down
+}] call EFUNC(missileguidance,keybind_add);
 
 ["ACE3 Weapons", QGVAR(CycleVisionMode), LLSTRING(Camera_ViewModeCycle),
 {

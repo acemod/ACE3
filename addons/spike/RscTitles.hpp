@@ -15,7 +15,7 @@ class RscTitles {
             y = "safeZoneY + safeZoneH * 0.2";
             w = "safeZoneW * 0.15";
             h = "safeZoneH * 0.05";
-            style = "0 + 2";
+            style = 0 + 2;
             text = CSTRING(Manual);
             colorBackground[] = {0,0,0,0};
             colorText[] = COLOR_WHITE;
