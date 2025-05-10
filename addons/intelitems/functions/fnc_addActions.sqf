@@ -38,9 +38,15 @@ private _openIndices = GVAR(controlsGroups) apply {_x getVariable QGVAR(index)};
 
             // Only add actions for intel indices that are not open
             if !(_index in _openIndices) then {
+                private _header = GET_DATA(_index) select 1;
+
+                if (_header == "") then {
+                    _header = _displayName;
+                };
+
                 private _action = [
                     format [QGVAR(%1), _index],
-                    _displayName,
+                    _header,
                     _picture,
                     {(_this select 2) call FUNC(createControl)},
                     {true},

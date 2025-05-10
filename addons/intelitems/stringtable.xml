@@ -61,6 +61,25 @@
             <Chinesesimp>文件</Chinesesimp>
             <Turkish>Döküman</Turkish>
         </Key>
+        <Key ID="STR_ACE_IntelItems_Header">
+            <English>Header</English>
+            <Czech>Záhlaví</Czech>
+            <French>En-tête</French>
+            <Spanish>Encabezamiento</Spanish>
+            <Italian>Intestazione</Italian>
+            <Polish>Nagłówek</Polish>
+            <Portuguese>Cabeçalho</Portuguese>
+            <Russian>Заголовок</Russian>
+            <German>Überschrift</German>
+            <Korean>헤더</Korean>
+            <Japanese>ヘッダー</Japanese>
+            <Chinese>標題</Chinese>
+            <Chinesesimp>标题</Chinesesimp>
+            <Turkish>Üstbilgi</Turkish>
+        </Key>
+        <Key ID="STR_ACE_IntelItems_Header_Tooltip">
+            <English>Defines the header for the intel item. If the value is empty (""), the object's display name is used.</English>
+        </Key>
         <Key ID="STR_ACE_IntelItems_Notepad_Description">
             <English>Notepad - Can access from the map screen</English>
             <French>Bloc-note - Consultable depuis la carte</French>
