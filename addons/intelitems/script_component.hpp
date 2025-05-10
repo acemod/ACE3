@@ -29,7 +29,6 @@
 #define IDC_HEADER     30
 #define IDC_CLOSE      40
 #define IDC_CONTENT    50
-#define IDC_HTEXT      60
 
 #define IDC_ATTRIBUTE_GROUP 4800
 #define IDC_ATTRIBUTE_LABEL 4801
