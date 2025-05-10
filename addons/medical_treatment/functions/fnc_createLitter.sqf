@@ -57,8 +57,15 @@ private _fnc_createLitter = {
             0
         ];
 
-        // Create litter on server which will also handle cleanup
-        [QGVAR(createLitterServer), [_x, _position, random 360]] call CBA_fnc_serverEvent;
+        private _raycast = lineIntersectsSurfaces [_position vectorAdd [0, 0, 1], _position vectorAdd [0, 0, -1e11], _patient, _medic, true, 1, "ROADWAY", "FIRE"];
+
+        _position = [_position, (_raycast # 0) # 0] select (_raycast isNotEqualTo []);
+        private _surfaceNormal = [[0, 0, 1], (_raycast # 0) # 1] select (_raycast isNotEqualTo []);
+
+        if (ASLToATL _position select 2 > -0.01) then {
+            // Create litter on server which will also handle cleanup
+            [QGVAR(createLitterServer), [_x, _position, random 360, _surfaceNormal]] call CBA_fnc_serverEvent;
+        };
     } forEach _litterOptions;
 };
 
