@@ -25,11 +25,11 @@ private _checkfallbackComponent = {
     // Check if item is present within current modpack.
     // If not, will look-up if item is defined within ace_Wardrobe and has an fallbackComponent defined.
     // If not, the component will be fully ignored.
-    private _return = _x;
-    if ([_return] call CBA_fnc_getItemConfig isEqualTo configNull) then {
-        _return = getText (configFile >> QUOTE(ADDON) >> _return >> "fallbackComponent");
+    if (isNull ([_x] call CBA_fnc_getItemConfig)) then {
+        getText (configFile >> QUOTE(ADDON) >> _x >> "fallbackComponent");
+    } else {
+        _x
     };
-    _return
 };
 
 
