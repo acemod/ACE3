@@ -7,20 +7,21 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "CUP_Weapons_LoadOrder",
-            "ace_csw"
+            "ace_wardrobe",
+            "rhs_main_loadorder",
+            "rhsusf_main_loadorder"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {};
+        authors[] = {"OverlordZorn [CVO]", "Andx [TTT]"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
-
         addonRootClass = QUOTE(ADDON);
     };
 };
 
-#include "CfgMagazines.hpp"
-#include "CfgMagazineGroups.hpp"
-#include "CfgVehicles.hpp"
+// For Consistency: Adjust Mass/containerSize
 #include "CfgWeapons.hpp"
+
+// ACE Wardrobe
+#include "CfgWardrobe.hpp"
