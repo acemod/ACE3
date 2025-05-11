@@ -25,6 +25,15 @@ class CfgVehicles {
             };
         };
     };
+
+    class CUP_Hilux_Base;
+    class CUP_Hilux_MLRS_Base: CUP_Hilux_Base {
+        EGVAR(overpressure,noReflection) = 1;
+    };
+    class CUP_Hilux_UB32_Base: CUP_Hilux_Base {
+        EGVAR(overpressure,noReflection) = 1;
+    };
+
     class CUP_Ural_BaseTurret;
     class CUP_BM21_Base: CUP_Ural_BaseTurret {
         EGVAR(overpressure,noReflection) = 1;
