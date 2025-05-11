@@ -34,6 +34,6 @@
 #define IDC_ATTRIBUTE_LABEL 4801
 #define IDC_ATTRIBUTE_EDIT  4802
 
-#define SYS_DATA(index)      (format [QGVAR(%1), index])
-#define SET_DATA(index,data) (GVAR(intelData) setVariable [SYS_DATA(index), data, true])
-#define GET_DATA(index)      (GVAR(intelData) getVariable [SYS_DATA(index), ""])
+#define SYS_DATA(index)             (format [QGVAR(%1), index])
+#define SET_DATA(index,data,header) (GVAR(intelData) setVariable [SYS_DATA(index), [data,header], true])
+#define GET_DATA(index)             (GVAR(intelData) getVariable [SYS_DATA(index), ["",""]])
