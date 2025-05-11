@@ -21,7 +21,7 @@ if (!isServer) exitWith {};
 
 params ["_old_magIDs", "_new_magIDs"];
 
-if (count _old_magIDs != count _new_magIDs) exitWith { ERROR_2("Not Equal Number of magID's provided: %1 - %2",_old_magIDs,_new_magIDs); systemChat "Errorrrrrrrrrrr"; };
+if (count _old_magIDs != count _new_magIDs) exitWith { ERROR_2("Not Equal Number of magID's provided: %1 - %2",_old_magIDs,_new_magIDs); };
 
 private _map = EGVAR(overheating,storedSpareBarrels);
 
