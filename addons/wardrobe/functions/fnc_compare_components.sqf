@@ -21,20 +21,20 @@
 
 params ["_cfg_origin", "_cfg_tgt"];
 
-private _checkAlternativeComponent = {
+private _checkfallbackComponent = {
     // Check if item is present within current modpack.
-    // If not, will look-up if item is defined within ace_Wardrobe and has an alternativeComponent defined.
+    // If not, will look-up if item is defined within ace_Wardrobe and has an fallbackComponent defined.
     // If not, the component will be fully ignored.
     if ([_x] call CBA_fnc_getItemConfig isEqualTo configNull) then {
-        getText (configFile >> QUOTE(ADDON) >> _return >> "alternativeComponent");
+        getText (configFile >> QUOTE(ADDON) >> _return >> "fallbackComponent");
     } else {
         _x
     };
 };
 
 
-private _current = getArray (configFile >> QUOTE(ADDON) >> configName _cfg_origin >> "components") apply _checkAlternativeComponent select {_x isNotEqualTo ""};
-private _needed  = getArray (configFile >> QUOTE(ADDON) >> configName _cfg_tgt    >> "components") apply _checkAlternativeComponent select {_x isNotEqualTo ""};
+private _current = getArray (configFile >> QUOTE(ADDON) >> configName _cfg_origin >> "components") apply _checkfallbackComponent select {_x isNotEqualTo ""};
+private _needed  = getArray (configFile >> QUOTE(ADDON) >> configName _cfg_tgt    >> "components") apply _checkfallbackComponent select {_x isNotEqualTo ""};
 
 private _missing = []; 
 
