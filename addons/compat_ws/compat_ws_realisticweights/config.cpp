@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "data_f_lxWS_Loadorder"
+            "data_f_lxWS_Loadorder", "ace_realisticweights"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
