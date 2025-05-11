@@ -63,7 +63,7 @@ class CfgWeapons {
     // Vektor R5 GL
     class arifle_VelkoR5_GL_lxWS: arifle_VelkoR5_lxWS {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 112; // +3lbs (M203 weight)
+            mass = 112; // + 3lbs (M203 weight)
         };
     };
 
