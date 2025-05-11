@@ -52,7 +52,7 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 // Add Surplus
 [_cfg_origin, _cfg_tgt] call FUNC(compare_components) params ["_missing", "_surplus"];
 {
-    if (configName _cfg_tgt isNotEqualTo toLowerANSI _x) then {
+    if (configName _cfg_tgt isNotEqualTo _x) then {
         if ( isClass (configFile >> "CfgGlasses" >> _x) && { goggles _unit isEqualTo "" } ) then {
             _unit addGoggles _x;
         } else {
@@ -63,10 +63,10 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 
 // Remove Missing
 {
-    if (configName _cfg_origin isNotEqualTo toLowerANSI _x) then {
+    if (configName _cfg_origin isNotEqualTo _x) then {
 
         switch (true) do {
-            case (goggles _unit isEqualTo toLowerANSI _x): { removeGoggles _unit; };
+            case (goggles _unit isEqualTo _x): { removeGoggles _unit; };
             default { [_unit, _x] call CBA_fnc_removeItem; };
         };
     };
