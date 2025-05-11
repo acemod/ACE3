@@ -44,6 +44,7 @@ if (_history_cfg isEqualTo "404") then {
 
 private _remaining = _modifiableTo_cfg - _history_cfg;
 
+_remaining = _remaining select { [ace_player, _cfg_current, _x] call ace_wardrobe_fnc_canModifyTo };
 
 // Returns ether a random remaining item or alternatively, a random one from the complete array.
 private _return = if (_remaining isNotEqualTo []) then {
