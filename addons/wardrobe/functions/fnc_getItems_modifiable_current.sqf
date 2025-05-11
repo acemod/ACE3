@@ -2,7 +2,7 @@
 
 /*
  * Author: OverlordZorn
- * Function to retrieve currently worn, modifiable items. Return can be cached for the duration of the interaction menu.
+ * Function to retrieve currently worn, modifiable items. Return can be cached - for the duration of the interaction menu.
  *
  * Arguments:
  * 0: Unit <OBJECT>
