@@ -95,7 +95,7 @@ class CfgWeapons {
     // XMS-GL
     class arifle_XMS_GL_lxWS: arifle_XMS_Base_lxWS {
         class WeaponSlotsInfo: WeaponSlotsInfo {
-            mass = 108; // +3.3 (AG36 weight)
+            mass = 108; // + 3.3lbs (AG36 weight)
         };
     };
 
