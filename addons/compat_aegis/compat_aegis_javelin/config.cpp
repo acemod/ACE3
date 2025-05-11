@@ -7,20 +7,18 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "CUP_Weapons_LoadOrder",
-            "ace_csw"
+            "ace_javelin",
+            "A3_Aegis_Weapons_F_Aegis"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {};
+        authors[] = {"ThomasAngel"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
 
-        addonRootClass = QUOTE(ADDON);
+        // this prevents any patched class from requiring this addon
+        addonRootClass = "A3_Characters_F";
     };
 };
 
-#include "CfgMagazines.hpp"
-#include "CfgMagazineGroups.hpp"
-#include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"

@@ -32,6 +32,54 @@
             <Chinesesimp>9 mm 17发 弹匣</Chinesesimp>
             <Turkish>9 mm 17 Merm. Şarjör</Turkish>
         </Key>
+        <Key ID="STR_ACE_SmallArms_17Rnd_9x19_green_Name">
+            <English>9 mm 17Rnd Reload Tracer (Green) Mag</English>
+            <Czech>9 mm, 17ks zásobník nabíjecí stopovky (zelené)</Czech>
+            <French>Mag. 17 traçantes recharge vertes 9 mm</French>
+            <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (verde) de 9 mm</Spanish>
+            <Italian>Caricatore 17 colpi 9 mm con traccianti intervallati (verdi)</Italian>
+            <Polish>17-nab. mag. przeł. 9 mm (zielony smugacz)</Polish>
+            <Portuguese>Carregador 17Mun. Traçante Recarga (Verde) 9 mm</Portuguese>
+            <Russian>Магазин, 17 патр. с послед. трас. 9 мм (зеленые)</Russian>
+            <German>17-Schuss-9mm-Magazin (Nachlade-Leuchtspur Grün)</German>
+            <Korean>9mm 17발 재장전 예광탄 (녹색) 탄창</Korean>
+            <Japanese>9mm 17Rnd 装填トレーサー（緑）マガジン</Japanese>
+            <Chinese>9 mm 17 發重新裝填曳光彈（綠）彈匣</Chinese>
+            <Chinesesimp>9 毫米 17 发装弹指示（绿色）弹匣</Chinesesimp>
+            <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Yeşil) Şarjör</Turkish>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_17Rnd_9x19_red_Name">
+            <English>9 mm 17Rnd Reload Tracer (Red) Mag</English>
+            <Czech>9 mm, 17ks zásobník nabíjecí stopovky (červené)</Czech>
+            <French>Mag. 17 traçantes recharge rouges 9 mm</French>
+            <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (rojo) de 9 mm</Spanish>
+            <Italian>Caricatore 17 colpi 9 mm con traccianti intervallati (rossi)</Italian>
+            <Polish>17-nab. mag. przeł. 9 mm (czerwony smugacz)</Polish>
+            <Portuguese>Carregador 17Mun. Traçante Recarga (Vermelho) 9 mm</Portuguese>
+            <Russian>Магазин, 17 патр. с послед. трас. 9 мм (красные)</Russian>
+            <German>17-Schuss-9mm-Magazin (Nachlade-Leuchtspur Rot)</German>
+            <Korean>9mm 17발 재장전 예광탄 (적색) 탄창</Korean>
+            <Japanese>9mm 17Rnd 装填トレーサー（赤）マガジン</Japanese>
+            <Chinese>9 mm 17 發重新裝填曳光彈（紅）彈匣</Chinese>
+            <Chinesesimp>9 毫米 17 发装弹指示（红色）弹匣</Chinesesimp>
+            <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Kırmızı) Şarjör</Turkish>
+        </Key>
+        <Key ID="STR_ACE_SmallArms_17Rnd_9x19_yellow_Name">
+            <English>9 mm 17Rnd Reload Tracer (Yellow) Mag</English>
+            <Czech>9 mm, 17ks zásobník nabíjecí stopovky (žluté)</Czech>
+            <French>Mag. 17 traçantes recharge jaunes 9 mm</French>
+            <Spanish>Cargador de 17 balas con trazadoras prerrecarga  (amarillo) de 9 mm</Spanish>
+            <Italian>Caricatore 17 colpi 9 mm con traccianti intervallati (gialli)</Italian>
+            <Polish>17-nab. mag. przeł. 9 mm (żółty smugacz)</Polish>
+            <Portuguese>Carregador 17Mun. Traçante Recarga (Amarelo) 9 mm</Portuguese>
+            <Russian>Магазин, 17 патр. с послед. трас. 9 мм (желтые)</Russian>
+            <German>17-Schuss-9mm-Magazin (Nachlade-Leuchtspur Gelb)</German>
+            <Korean>9mm 17발 재장전 예광탄 (황색) 탄창</Korean>
+            <Japanese>9mm 17Rnd 装填トレーサー（黄）マガジン</Japanese>
+            <Chinese>9 mm 17 發重新裝填曳光彈（黃）彈匣</Chinese>
+            <Chinesesimp>9 毫米 17 发装弹指示（黄色）弹匣</Chinesesimp>
+            <Turkish>9 mm 17 Merm. Tekrar Doldurulabilir İzli (Sarı) Şarjör</Turkish>
+        </Key>
         <Key ID="STR_ACE_SmallArms_25Rnd_45_Name">
             <English>.45 ACP 25Rnd Mag</English>
             <Czech>.45 ACP, 25ks zásobník</Czech>

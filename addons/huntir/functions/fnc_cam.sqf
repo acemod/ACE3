@@ -89,13 +89,13 @@ GVAR(no_cams) sort true;
     } forEach GVAR(no_cams);
 
     GVAR(cur_cam) = 0 max GVAR(cur_cam) min ((count GVAR(no_cams)) - 1);
-    if (count GVAR(no_cams) > 0) then {
+    if (GVAR(no_cams) isNotEqualTo []) then {
         GVAR(huntIR) = GVAR(no_cams) select GVAR(cur_cam);
     };
 
     GVAR(pos) = getPosVisual GVAR(huntIR);
 
-    if ((!dialog) || (count GVAR(no_cams) == 0) || ((GVAR(pos) select 2) <= 20)) exitWith {
+    if ((!dialog) || (GVAR(no_cams) isEqualTo []) || ((GVAR(pos) select 2) <= 20)) exitWith {
         [_this select 1] call CBA_fnc_removePerFrameHandler;
 
         GVAR(stop) = true;
