@@ -23,6 +23,8 @@ class GVAR(base) {
     alternativeDisplayName = "";
 
     duration = 1; // Minimum Value: 1 - Anything above will produce a progressbar.
+
+    fallbackComponent = ""; // To be used as an alternative for components where the intended component is from another addon/mod in case the source addon is not loaded.
 };
 
 // Common Base Class for Uniforms with Sleeves Up/Down Variants

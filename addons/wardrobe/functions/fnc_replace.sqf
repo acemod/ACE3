@@ -26,7 +26,7 @@ _actionParams params ["_cfg_origin", "_cfg_tgt"];
 
 // Duration of the "animation"
 private _duration = getNumber (configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "duration");
-if (_replaceNow) then { _duration = 0; };
+if (_replaceNow) then { _duration = 0; }; // needed for cba context menu - avoid potential duplications and such
 
 // Replace the Main Item.
 private _additionalParams = "";
