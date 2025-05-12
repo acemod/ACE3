@@ -12,7 +12,7 @@ class CfgPatches {
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Andx [TTT]", "OverlordZorn [CVO]"};
+        authors[] = {"OverlordZorn [CVO]", "Andx [TTT]"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
         addonRootClass = QUOTE(ADDON);
@@ -20,7 +20,7 @@ class CfgPatches {
 };
 
 // For Consistency: Adjust Mass/containerSize
-// #include "CfgWeapons.hpp"
+//#include "CfgWeapons.hpp"
 
 // ACE Wardrobe
 #include "CfgWardrobe.hpp"
