@@ -1,4 +1,9 @@
-// SAF requires USF so we can use USF Goggles
+// SAF uses USAF glasses on their helmets
+// Components
+class rhs_ess_black: EGVAR(wardrobe,base) {
+    fallbackComponent = "G_Combat";
+};
+
 // Macro Dfinition
 #define RHS_HELMET_VEIL_ESS_BARE(HelmetOnly,HelmetVeil,HelmetEss,HelmetEssBare,Veil,Ess)\
 class HelmetOnly : EGVAR(wardrobe,base) {\
@@ -58,6 +63,7 @@ class HelmetEssBare : EGVAR(wardrobe,base_H_goggles_on) {\
         QUOTE(Ess)\
     };\
 }
+
 
 RHS_HELMET_VEIL_ESS_BARE(rhssaf_helmet_m97_digital,rhssaf_helmet_m97_veil_digital,rhssaf_helmet_m97_digital_black_ess,rhssaf_helmet_m97_digital_black_ess_bare,rhssaf_veil_Green,rhs_ess_black);
 RHS_HELMET_VEIL_ESS_BARE(rhssaf_helmet_m97_md2camo,rhssaf_helmet_m97_veil_md2camo,rhssaf_helmet_m97_md2camo_black_ess,rhssaf_helmet_m97_md2camo_black_ess_bare,rhssaf_veil_Green,rhs_ess_black);

@@ -1,3 +1,9 @@
+// Components
+class rhs_ess_black: EGVAR(wardrobe,base) {
+    fallbackComponent = "G_Combat";
+};
+
+
 //Pilot Helmets with Visors
 HELMET_VISOR(rhsusf_hgu56p,rhsusf_hgu56p_visor);
 HELMET_VISOR(rhsusf_hgu56p_mask,rhsusf_hgu56p_visor_mask);
@@ -28,6 +34,7 @@ HELMET_VISOR(rhsusf_hgu56p_white,rhsusf_hgu56p_visor_white);
 
 HELMET_VISOR(rhsusf_hgu56p_usa,rhsusf_hgu56p_visor_usa);
 
+
 // Helmet with Netting
 class rhsusf_ach_helmet_ocp: EGVAR(wardrobe,base) {
   class modifiableTo { class rhsusf_ach_helmet_ESS_ocp; class rhsusf_ach_helmet_camo_ocp; };
@@ -37,6 +44,7 @@ class rhsusf_ach_helmet_camo_ocp: EGVAR(wardrobe,base) {
   class modifiableTo { class rhsusf_ach_helmet_ocp; };
   components[] = {};
 };
+
 
 //Combat Helmets with Goggles
 HELMET_GOGGLES(rhsusf_ach_bare_tan_ess,rhsusf_ach_bare_tan,rhs_ess_black);
