@@ -3,14 +3,17 @@
 class CfgPatches {
     class ADDON {
         name = COMPONENT_NAME;
-        author = ECSTRING(main,TacticalTrainingTeam);
-        authors[] = {"Andx"};
-        url = ECSTRING(main,URL);
-        requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"cfp_main"};
         units[] = {};
         weapons[] = {};
+        requiredVersion = REQUIRED_VERSION;
+        requiredAddons[] = {"ace_common", "cfp_main"};
         skipWhenMissingDependencies = 1;
+        author = ECSTRING(common,ACETeam);
+        authors[] = {"Andx"};
+        url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
+
+#include "CfgMagazines.hpp"
+#include "CfgWeapons.hpp"
