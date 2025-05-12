@@ -45,7 +45,7 @@ More examples can be found below.
 Only directly defined Subclasses will be taken into account. A fully inherited subclass will be ignored and will not provide any interaction. The `ace_wardrobe` properties are to be found as a subclass of the item itself. Multiple base configs are designed at root of `configFile`.
 
 ## 2.1 Properties
-
+All supported Properties can be found within the `ace_wardrobe_base` baseclass.
 
 | Class Property |  Data Type | Description |
 | -------------- |  ----------- | ----------- |
@@ -57,6 +57,7 @@ Only directly defined Subclasses will be taken into account. A fully inherited s
 | `alternativePicture` | String of path to icon | to be used instead of target variant picture |
 | `alternativeDisplayName` | String | Will be used instead of the target variants displayname |
 | `duration` | Number in seconds | Duration of action. Items are being replaced at the end. |
+| `fallbackComponent` | String of Classname | Fallback for Components that are not present within the same mod/addon. Example: RHS AFRF helmets use `rhs_ess_black` goggles, which are only part of USAF. fallbackComponent can be used to default to a vanilla alternative. |
 
 ### 2.2 Base Classes
 
@@ -84,6 +85,9 @@ class ace_wardrobe {
         alternativeDisplayName = "";
 
         duration = 1; // Minimum Value: 1 - Anything above will produce a progressbar.
+
+        fallbackComponent = ""; // To be used as an alternative for components where the intended component is from another addon/mod in case the source addon is not loaded.
+
     };
 };
 
