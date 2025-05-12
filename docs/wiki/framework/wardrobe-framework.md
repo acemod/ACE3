@@ -33,11 +33,11 @@ More examples can be found below.
 ### 1.2 Config Guidelines
 
 - A Container (Uniform, Vest, Backpack) should never change its `maxLoad`, unless there is a really good reason for it. This will result in the loss of items.
-- Variants should not "magically" add/remove parts to/from themselves, unless its handled through a component, especially when they add protection or functionality.
-  - Do: Uniforms with and without Gloves should be fine in most cases, as they are cosmetical and dont break continuity/logic.
+- Variants should not "magically" add/remove parts to/from themselves, unless it's handled through a component, especially when they add protection or functionality.
+  - Do: Uniforms with and without Gloves should be fine in most cases, as they are cosmetical and don't break continuity/logic.
   - Do: Helmets with integral flip-down visors.
   - Don't: Helmet with additional armor or face protector without the requirement of some component that will be removed from the inventory.
-- There should not be a difference in weight or container capacity between the different variants unless compoents get added/removed.
+- There should not be a difference in weight or container capacity between the different variants unless components get added/removed.
   - For Example: `Mass of Helmet with Goggles = Mass of Helmet + Mass of Goggles.`
 
 ## 2. Config
@@ -268,13 +268,13 @@ The number at the end of the classnames indicates the length of the file in 1/10
 ## 6. Compatibility
 
 ## 6.1 MagzineID
-Currently, `ace_IntelItems` and `ace_overheating` (spare barrels) are being directly supported.
+Currently, `ace_intelitems` and `ace_overheating` (spare barrels) are being directly supported.
 
-If an addon or mod utilizes a magazine's `magazineID` to handle additional data about items carried by the player, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new `magazineID`s for all magazines on the player and therefore, require special handling within ace_wardrobe functions.
+If an addon or mod utilizes a magazine's `magazineID` to handle additional data about items carried by the player, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new `magazineID`s for all magazines on the player and therefore, require special handling within `ace_wardrobe` functions.
 
-There *might* be some changes coming to how arma handles the `setUnitLoadout` which could resolve the need for this.
+There *might* be some changes coming from Bi regarding how arma handles the `setUnitLoadout` which could resolve the need for this.
 
 ## 6.2 Container Size - Uniform, Vest, Backpack
 When the player changes from one container item to another through the wardrobe action and the container's `maximumLoad` is smaller then previously, the player risks the loss of items carried inside said container.
 
-Therefore, the function `[] call ace_wardrobe_fnc_compare_container_maxLoad` can be used to compare the item's maximumLoad. The result will be dumped into the .rpt.
+Therefore, the function `[] call ace_wardrobe_fnc_compare_container_maxLoad` can be used to compare the item's `maximumLoad`. The result will be dumped into the .rpt.

@@ -3,7 +3,7 @@
 /*
  * Author: OverlordZorn
  * Context Menu - Return config the "next" variant - if multiple Variants are defined, it will choose randomly.
- * Maintains a Histroy of the current and chosen variants as long as the Inventory is open.
+ * Maintains a History of the current and chosen variants as long as the Inventory is open.
  * Already used variants from the History will be removed from the availabe options.
  * Once all options have been exhausted, the history will be purged and start over.
  *
