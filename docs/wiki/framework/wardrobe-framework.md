@@ -282,3 +282,18 @@ There *might* be some changes coming from Bi regarding how arma handles the `set
 When the player changes from one container item to another through the wardrobe action and the container's `maximumLoad` is smaller then previously, the player risks the loss of items carried inside said container.
 
 Therefore, the function `[] call ace_wardrobe_fnc_compare_container_maxLoad` can be used to compare the item's `maximumLoad`. The result will be dumped into the .rpt.
+
+## 7. API
+Missionmakers can choose to force disable the the wardrobe system individually or globally by defining the global variable `ace_wardrobe_api_disable`.
+It will be checked if `ace_wardrobe_api_disable` defined or not. The value does not matter.
+
+```sqf
+// Disables Ace Wardrobe on the current mashine.
+missionNamespace setVariable ["ace_wardrobe_api_disable", true];
+
+// Disables Ace Wardobe globally, JIP-compatible.
+missionNamespace setVariable ["ace_wardrobe_api_disable", true, true];
+
+// Re-Enable Ace Wardrobe globally, JIP-compatible.
+missionNamespace setVariable ["ace_wardrobe_api_disable", nil, true];
+```
