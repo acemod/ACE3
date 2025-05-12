@@ -38,6 +38,11 @@ private _selectionsToIgnore = _vehicle call FUNC(getSelectionsToIgnore);
 
 // get hitpoints of wheels with their selections
 ([_vehicle] call EFUNC(common,getWheelHitPointsWithSelections)) params ["_wheelHitPoints", "_wheelHitSelections"];
+private _isGM = 1 == getNumber (configOf _vehicle >> "isgmContent");
+if (_isGM) then { // the hitpoint selection does not properly overlap
+    _hitPoints append _wheelHitPoints;
+    _hitSelections append _wheelHitSelections;
+};
 
 private _hitPointsAddedNames = [];
 private _hitPointsAddedStrings = [];
@@ -61,7 +66,11 @@ private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehi
     };
 
     if (_selection in _wheelHitSelections) then {
-        private _position = compile format ["_target selectionPosition ['%1', 'HitPoints', 'AveragePoint'];", _selection];
+        private _position = if (_isGM) then {
+            compile format ["_target selectionPosition ['%1', 'Memory', 'AveragePoint'];", _selection];
+        } else {
+            compile format ["_target selectionPosition ['%1', 'HitPoints', 'AveragePoint'];", _selection];
+        };
 
         TRACE_3("Adding Wheel Actions",_hitpoint,_forEachIndex,_selection);
 
