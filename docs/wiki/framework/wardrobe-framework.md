@@ -33,11 +33,11 @@ More examples can be found below.
 ### 1.2 Config Guidelines
 
 - A Container (Uniform, Vest, Backpack) should never change its `maxLoad`, unless there is a really good reason for it. This will result in the loss of items.
-- Variants should not "magically" add/remove parts to/from themselves, unless its handled through a component, especially when they add protection or functionality.
-  - Do: Uniforms with and without Gloves should be fine in most cases, as they are cosmetical and dont break continuity/logic.
+- Variants should not "magically" add/remove parts to/from themselves, unless it's handled through a component, especially when they add protection or functionality.
+  - Do: Uniforms with and without Gloves should be fine in most cases, as they are cosmetical and don't break continuity/logic.
   - Do: Helmets with integral flip-down visors.
   - Don't: Helmet with additional armor or face protector without the requirement of some component that will be removed from the inventory.
-- There should not be a difference in weight or container capacity between the different variants unless compoents get added/removed.
+- There should not be a difference in weight or container capacity between the different variants unless components get added/removed.
   - For Example: `Mass of Helmet with Goggles = Mass of Helmet + Mass of Goggles.`
 
 ## 2. Config
@@ -45,7 +45,7 @@ More examples can be found below.
 Only directly defined Subclasses will be taken into account. A fully inherited subclass will be ignored and will not provide any interaction. The `ace_wardrobe` properties are to be found as a subclass of the item itself. Multiple base configs are designed at root of `configFile`.
 
 ## 2.1 Properties
-
+All supported Properties can be found within the `ace_wardrobe_base` baseclass.
 
 | Class Property |  Data Type | Description |
 | -------------- |  ----------- | ----------- |
@@ -57,6 +57,7 @@ Only directly defined Subclasses will be taken into account. A fully inherited s
 | `alternativePicture` | String of path to icon | to be used instead of target variant picture |
 | `alternativeDisplayName` | String | Will be used instead of the target variants displayname |
 | `duration` | Number in seconds | Duration of action. Items are being replaced at the end. |
+| `fallbackComponent` | String of Classname | Fallback for Components that are not present within the same mod/addon. Example: RHS AFRF helmets use `rhs_ess_black` goggles, which are only part of USAF. fallbackComponent can be used to default to a vanilla alternative. |
 
 ### 2.2 Base Classes
 
@@ -84,6 +85,9 @@ class ace_wardrobe {
         alternativeDisplayName = "";
 
         duration = 1; // Minimum Value: 1 - Anything above will produce a progressbar.
+
+        fallbackComponent = ""; // To be used as an alternative for components where the intended component is from another addon/mod in case the source addon is not loaded.
+
     };
 };
 
@@ -268,13 +272,28 @@ The number at the end of the classnames indicates the length of the file in 1/10
 ## 6. Compatibility
 
 ## 6.1 MagzineID
-Currently, `ace_IntelItems` and `ace_overheating` (spare barrels) are being directly supported.
+Currently, `ace_intelitems` and `ace_overheating` (spare barrels) are being directly supported.
 
-If an addon or mod utilizes a magazine's `magazineID` to handle additional data about items carried by the player, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new `magazineID`s for all magazines on the player and therefore, require special handling within ace_wardrobe functions.
+If an addon or mod utilizes a magazine's `magazineID` to handle additional data about items carried by the player, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new `magazineID`s for all magazines on the player and therefore, require special handling within `ace_wardrobe` functions.
 
-There *might* be some changes coming to how arma handles the `setUnitLoadout` which could resolve the need for this.
+There *might* be some changes coming from Bi regarding how arma handles the `setUnitLoadout` which could resolve the need for this.
 
 ## 6.2 Container Size - Uniform, Vest, Backpack
 When the player changes from one container item to another through the wardrobe action and the container's `maximumLoad` is smaller then previously, the player risks the loss of items carried inside said container.
 
-Therefore, the function `[] call ace_wardrobe_fnc_compare_container_maxLoad` can be used to compare the item's maximumLoad. The result will be dumped into the .rpt.
+Therefore, the function `[] call ace_wardrobe_fnc_compare_container_maxLoad` can be used to compare the item's `maximumLoad`. The result will be dumped into the .rpt.
+
+## 7. API
+Missionmakers can choose to force disable the the wardrobe system individually or globally by defining the global variable `ace_wardrobe_api_disable`.
+It will be checked if `ace_wardrobe_api_disable` defined or not. The value does not matter.
+
+```sqf
+// Disables Ace Wardrobe on the current mashine.
+missionNamespace setVariable ["ace_wardrobe_api_disable", true];
+
+// Disables Ace Wardobe globally, JIP-compatible.
+missionNamespace setVariable ["ace_wardrobe_api_disable", true, true];
+
+// Re-Enable Ace Wardrobe globally, JIP-compatible.
+missionNamespace setVariable ["ace_wardrobe_api_disable", nil, true];
+```

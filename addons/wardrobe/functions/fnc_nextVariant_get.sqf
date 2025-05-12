@@ -3,7 +3,7 @@
 /*
  * Author: OverlordZorn
  * Context Menu - Return config the "next" variant - if multiple Variants are defined, it will choose randomly.
- * Maintains a Histroy of the current and chosen variants as long as the Inventory is open.
+ * Maintains a History of the current and chosen variants as long as the Inventory is open.
  * Already used variants from the History will be removed from the availabe options.
  * Once all options have been exhausted, the history will be purged and start over.
  *
@@ -44,6 +44,7 @@ if (_history_cfg isEqualTo "404") then {
 
 private _remaining = _modifiableTo_cfg - _history_cfg;
 
+_remaining = _remaining select { [ace_player, _cfg_current, _x] call ace_wardrobe_fnc_canModifyTo };
 
 // Returns ether a random remaining item or alternatively, a random one from the complete array.
 private _return = if (_remaining isNotEqualTo []) then {

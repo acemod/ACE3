@@ -29,8 +29,8 @@ if (_enable && {!(missionNamespace getVariable [QGVAR(contextmenu_enabled), fals
         [],
         QPATHTOF(data\wardrobe_logo.paa),
         [
-            {true},
-            {true}
+            { isNil QGVAR(api_disable) },
+            { isNil QGVAR(api_disable) }
         ],
         FUNC(nextVariant_do),
         false,
