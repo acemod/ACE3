@@ -168,12 +168,12 @@ class ace_wardrobe_base_H_goggles_off: ace_wardrobe_base {
 To streamline the configuration of compatible items a set of macro's can be found here `addons\wardrobe\script_macros_wardrobe.hpp`
 
 ### 3.2 BaseClasses
-All pre-configured base classes can be imported by simply including the following file `"\z\ace\addons\wardrobe\BaseClasses_Import.hpp"`
+All pre-configured base classes can be imported by simply using the `IMPORT_BASE_CLASSES;` macro.
 ### 3.3 Example
 ```cpp
-#include "\z\ace\addons\wardrobe\script_macros_wardrobe.hpp
+#include "\z\ace\addons\wardrobe\script_macros_wardrobe.hpp"
 class ace_wardrobe {
-    #include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
+    IMPORT_BASE_CLASSES;
 
     // Begin to define your configs ...
 };
@@ -182,7 +182,7 @@ class ace_wardrobe {
 ### 4.1 Simple Example - Uniform Sleeves - No requirement for Components
 ```cpp
 class ace_wardrobe {
-    #include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
+    IMPORT_BASE_CLASSES;
 
     class U_B_CTRG_1: ace_wardrobe_base_U_sleeves_down {
         components[] = {};
@@ -203,7 +203,7 @@ class ace_wardrobe {
 ### 4.2 Advanced Example - Balaclava with Combat Glasses - Partial use of Components
 ```cpp
 class ace_wardrobe {
-    #include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
+    IMPORT_BASE_CLASSES;
 
     class G_Balaclava: ace_wardrobe_base {
         class modifiableTo {
@@ -227,7 +227,7 @@ class ace_wardrobe {
 ### 4.3 Complex Example - Bandana with Aviators - Complex use of Multiple Components
 ```cpp
 class ace_wardrobe {
-    #include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
+    IMPORT_BASE_CLASSES;
 
     class G_Bandanna_blk: ace_wardrobe_base {
         class modifiableTo {
@@ -281,7 +281,7 @@ There *might* be some changes coming from Bi regarding how arma handles the `set
 ## 6.2 Container Size - Uniform, Vest, Backpack
 When the player changes from one container item to another through the wardrobe action and the container's `maximumLoad` is smaller then previously, the player risks the loss of items carried inside said container.
 
-Therefore, the function `[] call ace_wardrobe_fnc_compare_container_maxLoad` can be used to compare the item's `maximumLoad`. The result will be dumped into the .rpt.
+Therefore, the function `[] call ace_wardrobe_fnc_compareContainerMaxLoad` can be used to compare the item's `maximumLoad`. The result will be dumped into the .rpt.
 
 ## 7. API
 Missionmakers can choose to force disable the the wardrobe system individually or globally by defining the global variable `ace_wardrobe_api_disable`.
