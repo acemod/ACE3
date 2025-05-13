@@ -6,7 +6,7 @@
 // 09 rebel - not compatible
 //Colors
 // 01 green 02 tiger 03 black 04 spray 05 tiger green 06 erdl brown 07 leopard 08 erdl
-// 09 gray <- Fuck this - inheritance is fucking horrible as fuck.
+// 09 gray <- inheritance is horrible.
 
 
 // Macros
