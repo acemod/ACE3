@@ -2,7 +2,7 @@
 
 /*
  * Author: OverlordZorn
- * This debug function will compare the maxLoad of all modifiable Items with its modifiableTo Variants and will provide an RPT output.
+ * This debug script will compare the maxLoad of all modifiable Items with its modifiableTo Variants and will provide an RPT output.
  * WIP!
  *
  * Arguments:
@@ -11,8 +11,8 @@
  * Return Value:
  * None
  *
- * Example:
- * [] call ace_wardrobe_fnc_compareContainerMaxLoad
+ * Example: execVM "\z\ace\addons\wardrobe\dev\compareContainerMaxLoad.sqf";
+ * 
  *
  * Public: no
  */
