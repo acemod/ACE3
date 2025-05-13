@@ -22,7 +22,7 @@
 
 params ["_unit", "_container", "_item", "_slot", "_params"];
 
-private _current_cfg = [_item] call cba_fnc_getItemConfig;
+private _current_cfg = _item call CBA_fnc_getItemConfig;
 
 private _cfg_tgt = [ _current_cfg ] call FUNC(nextVariant_get);
 
