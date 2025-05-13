@@ -27,4 +27,3 @@ isNil QGVAR(api_disable)
         count ([_player] call FUNC(getItemsModifiableCurrent)) > 0
     }
 }
-

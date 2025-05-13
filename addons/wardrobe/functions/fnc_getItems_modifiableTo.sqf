@@ -23,4 +23,3 @@ params ["_cfgCurrent"];
 */
 
 "true" configClasses (configFile >> QUOTE(ADDON) >> configName _cfgCurrent >> "modifiableTo") apply { [configName _x] call CBA_fnc_getItemConfig } select { !isNull _x }
-
