@@ -3,7 +3,6 @@
 /*
  * Author: OverlordZorn
  * This debug script will compare the maxLoad of all modifiable Items with its modifiableTo Variants and will provide an RPT output.
- * WIP!
  *
  * Arguments:
  * None
@@ -16,8 +15,6 @@
  *
  * Public: no
  */
-
-// TODO
 
 private _allWardrobeItems = [true] call FUNC(getAllWardrobeItems) select {
     switch ( getNumber (_x >> "ItemInfo" >> "type") ) do {
