@@ -2,14 +2,14 @@
 
 /*
  * Author: OverlordZorn
- * To retrieve a value from the database. returns "404" if not stored or, when provided, will execute the alternative code and return and store said result
+ * To retrieve a value from the database. returns nil if not stored or, when provided, will execute the alternative code and return and store said result
  *
  * Arguments:
  * 0: Key <STRING>
  * 1: Code to run when there is no value stored (optional) <CODE>
  *
  * Return Value:
- * Return <ANY> or "404" if no entry found and no code provided
+ * Return <ANY> or nil if no entry found and no code provided
  * 
  *
  * Example:
@@ -19,10 +19,10 @@
  */
 
 
-params [ [ "_key", "", [""] ], [ "_else", "404", [{}] ] ];
+params [ [ "_key", "", [""] ], [ "_else", nil, [{}] ] ];
 
-if (_else isEqualTo "404") then {
-    GVAR(cache) getOrDefault [_key, "404"];
+if (isNil "_else") then {
+    GVAR(cache) getOrDefault [_key, nil];
 } else {
     GVAR(cache) getOrDefaultCall [_key, _else, true];
 };

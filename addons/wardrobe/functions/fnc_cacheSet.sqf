@@ -19,9 +19,9 @@
 
 
 
-params [ ["_key", "", [""] ], ["_value", "404"] ];
+params [ ["_key", "", [""] ], ["_value", nil] ];
 
-if (_value isEqualTo "404") exitWith { false };
+if (isNil "_value") exitWith { false };
 
 GVAR(cache) set [_key, _value];
 

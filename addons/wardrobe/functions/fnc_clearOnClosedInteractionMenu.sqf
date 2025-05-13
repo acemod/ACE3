@@ -18,9 +18,9 @@
 
 params [ ["_key", "", [""]] ];
 
-private _queue = missionNamespace getVariable [QGVAR((menuClearQueue)), "404"];
+private _queue = missionNamespace getVariable [QGVAR((menuClearQueue)), ""];
 
-if (_queue isEqualTo "404") then {
+if (_queue isEqualTo "") then {
     _queue = [];
     [
         "ace_interactMenuClosed",
