@@ -35,7 +35,7 @@ if (_history_cfg isEqualTo "404") then {
 
     missionNamespace setVariable [QGVAR(variant_history_cfg), _history_cfg];
 
-    player addEventHandler ["InventoryClosed", {
+    ACE_player addEventHandler ["InventoryClosed", {
         missionNamespace setVariable [QGVAR(variant_history_cfg), nil ];
         player removeEventHandler [_thisEvent, _thisEventhandler];
     }];
