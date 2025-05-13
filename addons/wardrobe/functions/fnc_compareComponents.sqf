@@ -14,12 +14,12 @@
  * - configs of surplus components <ARRAY>
  *
  * Example:
- * [_cfg_origin, _cfg_tgt] call ace_wardrobe_fnc_compare_components
+ * [_cfgOrigin, _cfgTarget] call ace_wardrobe_fnc_compareComponents
  *
  * Public: No
  */
 
-params ["_cfg_origin", "_cfg_tgt"];
+params ["_cfgOrigin", "_cfgTarget"];
 
 private _checkfallbackComponent = {
     // Check if item is present within current modpack.
@@ -33,8 +33,8 @@ private _checkfallbackComponent = {
 };
 
 
-private _current = getArray (configFile >> QUOTE(ADDON) >> configName _cfg_origin >> "components") apply _checkfallbackComponent select {_x isNotEqualTo ""};
-private _needed  = getArray (configFile >> QUOTE(ADDON) >> configName _cfg_tgt    >> "components") apply _checkfallbackComponent select {_x isNotEqualTo ""};
+private _current = getArray (configFile >> QUOTE(ADDON) >> configName _cfgOrigin >> "components") apply _checkfallbackComponent select {_x isNotEqualTo ""};
+private _needed  = getArray (configFile >> QUOTE(ADDON) >> configName _cfgTarget >> "components") apply _checkfallbackComponent select {_x isNotEqualTo ""};
 
 private _missing = []; 
 

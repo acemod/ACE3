@@ -15,27 +15,27 @@
  * Array of ACE Child Actions <ARRAY>
  *
  * Example:
- * _this call ace_wardrobe_fnc_addActions_children
+ * _this call ace_wardrobe_fnc_addActionsChildren
  *
  * Public: No
  */
 
 params ["_target", "_player", "_actionParams"];
-_actionParams params ["_cfg_origin", "_newItems"];
+_actionParams params ["_cfgOrigin", "_newItems"];
 
 
 private _actions = [];
 
 {
-    private _cfg_target = _x;
+    private _cfgTarget = _x;
     private _aceAction = [
-        configName _cfg_target,
-        [_cfg_target] call FUNC(addActions_name),
-        [_cfg_target] call FUNC(addActions_icon),
+        configName _cfgTarget,
+        [_cfgTarget] call FUNC(addActionsName),
+        [_cfgTarget] call FUNC(addActionsIcon),
         FUNC(replace),
         {true},
         {},
-        [_cfg_origin, _cfg_target]
+        [_cfgOrigin, _cfgTarget]
     ] call EFUNC(interact_menu,createAction);
     _actions pushBack [_aceAction, [], _target];
 

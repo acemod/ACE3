@@ -15,31 +15,31 @@
  * nothing
  *
  * Example:
- * [_unit, _container, _item, _slot, _params] call ace_wardrobe_fnc_nextVariant_do;
+ * [_unit, _container, _item, _slot, _params] call ace_wardrobe_fnc_nextVariantDo;
  *
  * Public: No
  */
 
 params ["_unit", "_container", "_item", "_slot", "_params"];
 
-private _current_cfg = _item call CBA_fnc_getItemConfig;
+private _cfgCurrent = _item call CBA_fnc_getItemConfig;
 
-private _cfg_tgt = [ _current_cfg ] call FUNC(nextVariant_get);
+private _cfgTarget = [ _cfgCurrent ] call FUNC(nextVariantGet);
 
-if (_cfg_tgt isEqualTo false) exitWith {};
+if (_cfgTarget isEqualTo false) exitWith {};
 
-private _canModifyTo = [_unit, _current_cfg, _cfg_tgt, false] call FUNC(canModifyTo);
+private _canModifyTo = [_unit, _cfgCurrent, _cfgTarget, false] call FUNC(canModifyTo);
 
 if !(_canModifyTo) exitWith {
     [
         [
             LLSTRING(missingComponents),
-            getText (_cfg_tgt >> "displayName")
+            getText (_cfgTarget >> "displayName")
         ],
         2.5
     ] call EFUNC(common,displayTextStructured);
 }; 
 
-[_unit, _unit, [_current_cfg, _cfg_tgt], true] call FUNC(replace); 
+[_unit, _unit, [_cfgCurrent, _cfgTarget], true] call FUNC(replace); 
 
 nil

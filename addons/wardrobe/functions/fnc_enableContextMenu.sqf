@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [true] call ace_wardrobe_fnc_enable_contextMenu
+ * [true] call ace_wardrobe_fnc_enableContextMenu
  *
  * Public: No
  */
@@ -19,8 +19,8 @@
 
 params [["_enable", true, [true]]];
 
-if (_enable && {!(missionNamespace getVariable [QGVAR(contextmenu_enabled), false])}) then {
-    missionNamespace setVariable [QGVAR(contextmenu_enabled), true];
+if (_enable && {!(missionNamespace getVariable [QGVAR(contextmenuEnabled), false])}) then {
+    missionNamespace setVariable [QGVAR(contextmenuEnabled), true];
 
     [
         "#ALL",
@@ -32,7 +32,7 @@ if (_enable && {!(missionNamespace getVariable [QGVAR(contextmenu_enabled), fals
             { isNil QGVAR(api_disable) },
             { isNil QGVAR(api_disable) }
         ],
-        FUNC(nextVariant_do),
+        FUNC(nextVariantDo),
         false,
         []
     ] call CBA_fnc_addItemContextMenuOption;

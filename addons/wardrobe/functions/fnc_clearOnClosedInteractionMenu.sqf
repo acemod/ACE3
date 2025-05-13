@@ -11,14 +11,14 @@
  * None
  *
  * Example:
- * ["tag_myDataEntry"] call ace_wardrobe_fnc_clearOnClosed_InteractionMenu
+ * ["tag_myDataEntry"] call ace_wardrobe_fnc_clearOnClosedInteractionMenu
  *
  * Public: yes
  */
 
 params [ ["_key", "", [""]] ];
 
-private _queue = missionNamespace getVariable [QGVAR(menu_clear_queue), "404"];
+private _queue = missionNamespace getVariable [QGVAR((menuClearQueue)), "404"];
 
 if (_queue isEqualTo "404") then {
     _queue = [];
@@ -27,13 +27,13 @@ if (_queue isEqualTo "404") then {
         {
             if (_this isNotEqualTo [1]) exitWith {};
 
-            { GVAR(cache) deleteAt _x } forEach ( missionNamespace getVariable [QGVAR(menu_clear_queue), [] ] );
+            { GVAR(cache) deleteAt _x } forEach ( missionNamespace getVariable [QGVAR((menuClearQueue)), [] ] );
 
-            missionNamespace setVariable [QGVAR(menu_clear_queue), nil ];
+            missionNamespace setVariable [QGVAR((menuClearQueue)), nil ];
             [_thisType, _thisId] call CBA_fnc_removeEventHandler;
         }
     ] call CBA_fnc_addEventHandlerArgs;
-    missionNamespace setVariable [QGVAR(menu_clear_queue), _queue];
+    missionNamespace setVariable [QGVAR((menuClearQueue)), _queue];
 };
 
 _queue pushBackUnique _key;

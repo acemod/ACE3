@@ -13,20 +13,20 @@
  * None
  *
  * Example:
- * [_player, _cfg_origin, _cfg_tgt] call ace_wardrobe_fnc_replace_facewear
+ * [_player, _cfgOrigin, _cfgTarget] call ace_wardrobe_fnc_replaceOther
  *
  * Public: No
  */
 
-params ["_player", "_cfg_origin", "_cfg_tgt", "_additionalParams"];
+params ["_player", "_cfgOrigin", "_cfgTarget", "_additionalParams"];
 
 switch (_additionalParams) do {
     case "HEADGEAR": {
         removeHeadgear _player;
-        _player addHeadgear configName _cfg_tgt;
+        _player addHeadgear configName _cfgTarget;
     };
     case "FACEWEAR": {
         removeGoggles _player;
-        _player addGoggles configName _cfg_tgt;
+        _player addGoggles configName _cfgTarget;
     };
 };

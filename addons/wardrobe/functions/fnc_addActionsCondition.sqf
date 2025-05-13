@@ -11,7 +11,7 @@
  * condition <BOOL>
  *
  * Example:
- * [_player] call ace_wardrobe_fnc_addActions_condition
+ * [_player] call ace_wardrobe_fnc_addActionsCondition
  *
  * Public: No
  */
@@ -21,10 +21,10 @@ params ["_player"];
 isNil QGVAR(api_disable)
 &&
 {
-    missionNamespace getVariable [QGVAR(set_enable_action), false]
+    missionNamespace getVariable [QGVAR(set_enableAction), false]
     &&
     { 
-        count ([_player] call FUNC(getItems_modifiable_current)) > 0
+        count ([_player] call FUNC(getItemsModifiableCurrent)) > 0
     }
 }
 

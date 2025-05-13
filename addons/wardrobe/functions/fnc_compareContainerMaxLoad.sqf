@@ -12,7 +12,7 @@
  * None
  *
  * Example:
- * [] call ace_wardrobe_fnc_compare_container_maxLoad
+ * [] call ace_wardrobe_fnc_compareContainerMaxLoad
  *
  * Public: no
  */
@@ -36,27 +36,27 @@ LOG_SYS("CompareMaxLoad",QUOTE(Comparing PREFIX COMPONENT containers maximumLoad
 LOG_SYS("CompareMaxLoad","========================================================================================================");
 
 {
-    private _origin_cfg = _x;
-    private _origin_className = configName _origin_cfg;
-    private _origin_maxLoad = getNumber (configFile >> "CfgVehicles" >> getText (_origin_cfg >> "ItemInfo" >> "containerClass") >> "maximumLoad");
+    private _cfgOrigin = _x;
+    private _originClassName = configName _cfgOrigin;
+    private _originMaxLoad = getNumber (configFile >> "CfgVehicles" >> getText (_cfgOrigin >> "ItemInfo" >> "containerClass") >> "maximumLoad");
     
-    if (_origin_className in _established) then { continue };
-    _established pushBack _origin_className;
+    if (_originClassName in _established) then { continue };
+    _established pushBack _originClassName;
 
-    private _targets = [_origin_cfg] call FUNC(getItems_modifiableTo);
+    private _targets = [_cfgOrigin] call FUNC(getItemsModifiableTo);
 
     {
-        private _target_cfg = _x;
-        private _target_className = configName _target_cfg;
-        private _target_maxLoad = getNumber (configFile >> "CfgVehicles" >> getText (_target_cfg >> "ItemInfo" >> "containerClass") >> "maximumLoad");
+        private _targetCfg = _x;
+        private _targetClassName = configName _targetCfg;
+        private _targetMaxLoad = getNumber (configFile >> "CfgVehicles" >> getText (_targetCfg >> "ItemInfo" >> "containerClass") >> "maximumLoad");
 
-        if (_target_className in _established) then { continue };
-        _established pushBack _target_className;
+        if (_targetClassName in _established) then { continue };
+        _established pushBack _targetClassName;
 
-        private _mismatch = _target_maxLoad isNotEqualTo _origin_maxLoad;
-        private _string = format ["%6 - [%5] [%2|%4] %1 vs %3", _origin_className,_origin_maxLoad,_target_className,_target_maxLoad,["Nominal", "Mismatch Detected!"] select _mismatch, _index];
+        private _mismatch = _targetMaxLoad isNotEqualTo _originMaxLoad;
+        private _string = format ["%6 - [%5] [%2|%4] %1 vs %3", _originClassName,_originMaxLoad,_targetClassName,_targetMaxLoad,["Nominal", "Mismatch Detected!"] select _mismatch, _index];
 
-        if (_mismatch) then { _mismatches pushBack [_origin_className,_origin_maxLoad,_target_className,_target_maxLoad]; };
+        if (_mismatch) then { _mismatches pushBack [_originClassName,_originMaxLoad,_targetClassName,_targetMaxLoad]; };
 
         LOG_SYS("CompareMaxLoad",_string);
         ADD(_index,1);

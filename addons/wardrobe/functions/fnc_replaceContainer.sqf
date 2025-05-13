@@ -14,12 +14,12 @@
  * None
  *
  * Example:
- * [_player, _cfg_origin, _cfg_tgt, _case] call ace_wardrobe_fnc_replace_uniform
+ * [_player, _cfgOrigin, _cfgTarget, _case] call ace_wardrobe_fnc_replaceContainer
  *
  * Public: No
  */
 
-params ["_player", "_cfg_origin", "_cfg_tgt", "_case"];
+params ["_player", "_cfgOrigin", "_cfgTarget", "_case"];
 
 toFixed 0;
 private _magazineDetails = (magazinesAmmoFull _player) apply { [_x#0, _x#-2, _x#-1] };
@@ -40,9 +40,9 @@ if (_hasSpareBarrel) then { _hasSpareBarrel = [_player, "ACE_SpareBarrel" ] call
 //// Replace Wearable
 // Change Wearable
 switch (_case) do {
-    case "UNIFORM":  { _loadout # 0 # 3 set [0, configName _cfg_tgt]; };
-    case "VEST":     { _loadout # 0 # 4 set [0, configName _cfg_tgt]; };
-    case "BACKPACK": { _loadout # 0 # 5 set [0, configName _cfg_tgt]; };
+    case "UNIFORM":  { _loadout # 0 # 3 set [0, configName _cfgTarget]; };
+    case "VEST":     { _loadout # 0 # 4 set [0, configName _cfgTarget]; };
+    case "BACKPACK": { _loadout # 0 # 5 set [0, configName _cfgTarget]; };
     default { ERROR_1("Case undefined: %1",_case); };
 };
 
@@ -58,6 +58,6 @@ INTEL_POST(_hasPhoto,acex_intelitems_photo);
 
 // ACE Overheating
 if (_hasSpareBarrel isEqualType [] ) then {
-    private _SpareBarrel_new_MagIDs = [_player, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
-    [QGVAR(EH_updateMagIDs), [_hasSpareBarrel, _SpareBarrel_new_MagIDs]] call CBA_fnc_serverEvent;
+    private _newMagIDsSpareBarrel = [_player, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
+    [QGVAR(EH_updateMagIDs), [_hasSpareBarrel, _newMagIDsSpareBarrel]] call CBA_fnc_serverEvent;
 };

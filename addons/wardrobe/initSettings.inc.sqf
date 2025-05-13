@@ -1,5 +1,5 @@
 [
-    QGVAR(set_enable_action),
+    QGVAR(set_enableAction),
     "CHECKBOX",
     LSTRING(enable_action),
     [LSTRING(set_cat_main)],
@@ -10,12 +10,12 @@
 ] call CBA_fnc_addSetting;
 
 [
-    QGVAR(set_enable_contextMenu),
+    QGVAR(set_enableContextMenu),
     "CHECKBOX",
     LSTRING(enable_contextMenu),
     [LSTRING(set_cat_main)],
     true,
     1,
-    FUNC(enable_contextMenu),
+    FUNC(enableContextMenu),
     true
 ] call CBA_fnc_addSetting;

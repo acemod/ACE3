@@ -13,7 +13,7 @@
  * 
  *
  * Example:
- * ["tag_loadout", { getUnitLoadout player }] call ace_wardrobe_fnc_cache_get
+ * ["tag_loadout", { getUnitLoadout player }] call ace_wardrobe_fnc_cacheGet
  *
  * Public: Yes
  */
