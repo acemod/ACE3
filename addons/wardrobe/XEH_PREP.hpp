@@ -6,8 +6,8 @@ PREP(getIndexFromMagID);
 PREP(setIndexForMagID);
 // getItems
 PREP(getItemsAll);
-PREP(getItemsModifiable_all);
-PREP(getItemsModifiable_current);
+PREP(getItemsModifiableAll);
+PREP(getItemsModifiableCurrent);
 PREP(getItemsModifiableTo);
 // Replace
 PREP(replace);
@@ -27,7 +27,6 @@ PREP(cacheSet);
 PREP(clearOnClosedInteractionMenu);
 // Debug
 PREP(getAllWardrobeItems);
-PREP(compareContainerMaxLoad);
 // CBA Context Menu
 PREP(enableContextMenu);
 PREP(nextVariantDo);
