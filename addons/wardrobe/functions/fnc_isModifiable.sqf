@@ -21,5 +21,4 @@ params [
 ];
 
 
-if (isNull _cfg) exitWith {false};
-isClass (configFile >> QUOTE(ADDON) >> configName _cfg)
+!isNull _cfg && { isClass (configFile >> QUOTE(ADDON) >> configName _cfg) }
