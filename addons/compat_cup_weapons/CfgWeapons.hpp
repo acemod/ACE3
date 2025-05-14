@@ -33,4 +33,28 @@ class CfgWeapons {
         ace_nlaw_enabled = 1;
         canLock = 1;
     };
+
+    // Vehicle weapons are still from @CUP Weapons
+    class rockets_230mm_GAT;
+    class CUP_Vmlauncher_GRAD_veh: rockets_230mm_GAT {
+        EGVAR(overpressure,offset) = 2.8;
+    };
+    class CUP_Vmlauncher_MLRS_veh: rockets_230mm_GAT {
+        EGVAR(overpressure,offset) = 1.9;
+    };
+    class mortar_155mm_AMOS;
+    class CUP_Vcannon_D30_veh: mortar_155mm_AMOS {
+        EGVAR(overpressure,offset) = 2;
+    };
+    class CUP_Vcannon_M119_veh: CUP_Vcannon_D30_veh {
+        EGVAR(overpressure,offset) = 3;
+    };
+    class cannon_120mm;
+    class CUP_Vcannon_D30AT_veh: cannon_120mm {
+        EGVAR(overpressure,offset) = 2;
+    };
+    class weapon_ShipCannon_120mm;
+    class CUP_Vmortar_M121: weapon_ShipCannon_120mm {
+        EGVAR(overpressure,offset) = 0.6;
+    };
 };

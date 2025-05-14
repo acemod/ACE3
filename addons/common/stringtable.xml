@@ -1690,6 +1690,14 @@
             <Turkish>Evet</Turkish>
             <Hungarian>Igen</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Common_additionalAddonClient">
+            <English>Detected additional addon on client&lt;br/&gt;</English>
+            <French>Détection d'un addon supplémentaire sur le client&lt;br/&gt;.</French>
+            <Russian>Обнаружен дополнительный аддон на клиенте&lt;br/&gt;</Russian>
+            <Korean>클라이언트에게서 추가 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
+            <Japanese>クライアントに追加のアドオンを検出しました&lt;br/&gt;</Japanese>
+            <Chinesesimp>检测到客户端多余模组&lt;br/&gt;</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Common_aiOnly">
             <English>AI only</English>
             <French>IA uniquement</French>
@@ -1702,6 +1710,14 @@
             <Korean>인공지능만</Korean>
             <Japanese>AIのみ</Japanese>
             <Chinesesimp>仅 AI</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_andMore">
+            <English>, and %1 more.</English>
+            <French>et %1 de plus.</French>
+            <Russian>, и ещё %1.</Russian>
+            <Korean>, 그리고 %1개의 애드온.</Korean>
+            <Japanese>、その他 %1 件。</Japanese>
+            <Chinesesimp>, 以及另外%1个</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_bananaDescr">
             <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
@@ -1765,12 +1781,29 @@
         <Key ID="STR_ACE_Common_checkExtensions_DisplayName">
             <English>Check Extensions</English>
             <French>Vérifier les extensions</French>
+            <Spanish>Comprobar extensiones</Spanish>
             <Italian>Verifica le estensioni</Italian>
             <Russian>Проверка расширений (библиотек DLL)</Russian>
             <German>Erweiterungen (DLLs) überprüfen</German>
             <Korean>확장 프로그램 검사</Korean>
             <Japanese>拡張(DLL)を検査</Japanese>
             <Chinesesimp>检查DLL扩展文件</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_clientAdditional">
+            <English>client additional</English>
+            <French>client additionnel</French>
+            <Russian>дополнительный клиент</Russian>
+            <Korean>클라이언트의 추가</Korean>
+            <Japanese>クライアント追加</Japanese>
+            <Chinesesimp>客户端多余</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_clientMissing">
+            <English>client missing</English>
+            <French>client absent</French>
+            <Russian>потерян клиент</Russian>
+            <Korean>클라이언트의 누락</Korean>
+            <Japanese>クライアント不足</Japanese>
+            <Chinesesimp>客户端缺少</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
@@ -1803,6 +1836,22 @@
             <Chinese>循環切換手持裝備</Chinese>
             <Chinesesimp>循环切换手持装备</Chinesesimp>
             <Hungarian>Kézi eszköz váltása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Common_error">
+            <English>[ACE] ERROR</English>
+            <French>[ACE] Erreur</French>
+            <Russian>[ACE] ОШИБКА</Russian>
+            <Korean>[ACE] 오류</Korean>
+            <Japanese>[ACE] エラー</Japanese>
+            <Chinesesimp>[ACE] 错误</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_isMissingItems">
+            <English>[ACE] %1: ERROR %2 addon(s):</English>
+            <French>[ACE] %1: ERROR %2 addon(s):</French>
+            <Russian>[ACE] %1: ОШИБКА %2 аддон(ов):</Russian>
+            <Korean>[ACE] %1: %2 애드온(들)에 오류:</Korean>
+            <Japanese>[ACE] %1: エラー %2 アドオン:</Japanese>
+            <Chinesesimp>[ACE] %1: 错误 %2模组:</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_loadObject">
             <English>Load</English>
@@ -1839,6 +1888,46 @@
             <Korean>나침반이 자북을 가리키게 됩니다.</Korean>
             <Japanese>コンパスが磁北を指すようになります</Japanese>
             <Chinesesimp>指南针指向磁北极</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_missingAddonClient">
+            <English>Detected missing addon on client&lt;br/&gt;</English>
+            <French>Détection d'un addon manquant sur le client&lt;br/&gt;.</French>
+            <Russian>Обнаружен отсутствующий аддон на клиенте &lt;br/&gt;</Russian>
+            <Korean>클라이언트에게서 누락된 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
+            <Japanese>クライアントにアドオンの不足を検出しました&lt;br/&gt;</Japanese>
+            <Chinesesimp>检测到客户端缺少模组&lt;br/&gt;</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_newerClient">
+            <English>newer client</English>
+            <French>client plus récent</French>
+            <Russian>новый клиент</Russian>
+            <Korean>새 버전의 클라이언트</Korean>
+            <Japanese>新しいクライアント</Japanese>
+            <Chinesesimp>客户端过新</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_newerVersionClient">
+            <English>Detected newer client version&lt;br/&gt;</English>
+            <French>Détection d'une version plus récente du client&lt;br/&gt;.</French>
+            <Russian>Обнаружена более новая версия клиента &lt;br/&gt;</Russian>
+            <Korean>클라이언트에게서 새 버전의 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
+            <Japanese>クライアントに新しいバージョンを検出しました&lt;br/&gt;</Japanese>
+            <Chinesesimp>检测到客户端过新模组&lt;br/&gt;</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_olderClient">
+            <English>older client</English>
+            <French>ancien client</French>
+            <Russian>старый клиент</Russian>
+            <Korean>구버전의 클라이언트</Korean>
+            <Japanese>古いクライアント</Japanese>
+            <Chinesesimp>客户端过旧</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_olderVersionClient">
+            <English>Detected older client version&lt;br/&gt;</English>
+            <French>Détection d'une version plus ancienne du client&lt;br/&gt;.</French>
+            <Russian>Обнаружена более старая версия клиента &lt;br/&gt;</Russian>
+            <Korean>클라이언트에게서 구버전의 애드온이 감지되었습니다:&lt;br/&gt;</Korean>
+            <Japanese>クライアントに古いバージョンを検出しました&lt;br/&gt;</Japanese>
+            <Chinesesimp>检测到客户端过旧模组&lt;br/&gt;</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
@@ -1995,6 +2084,15 @@
             <Korean>탄창 빼기</Korean>
             <Japanese>武器からマガジンを抜く</Japanese>
             <Chinesesimp>卸掉武器弹匣</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_versionMismatch">
+            <English>[ACE] Version mismatch:&lt;br/&gt;&lt;br/&gt;</English>
+            <French>[ACE] Erreur de version : &lt;br/&gt;&lt;br/&gt;</French>
+            <Russian>[ACE] Несоответствие версии:&lt;br/&gt;&lt;br/&gt;</Russian>
+            <German>[ACE] Erreur de version : &lt;br/&gt;&lt;br/&gt;</German>
+            <Korean>[ACE] 버전 불일치:&lt;br/&gt;&lt;br/&gt;</Korean>
+            <Japanese>[ACE] バージョン不一致:&lt;br/&gt;&lt;br/&gt;</Japanese>
+            <Chinesesimp>[ACE] 版本不匹配:&lt;br/&gt;&lt;br/&gt;</Chinesesimp>
         </Key>
     </Package>
 </Project>

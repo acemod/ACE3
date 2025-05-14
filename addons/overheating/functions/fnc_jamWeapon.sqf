@@ -5,19 +5,22 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Weapon <STRING>
+ * 1: Weapon <STRING> (default: primaryWeapon _unit)
+ * 2: Jam Type <STRING> (default: ""), must be an allowed jam type for the weapon, if default or invalid selects randomly from allowed types
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, currentWeapon player] call ace_overheating_fnc_jamWeapon
+ * [player, primaryWeapon player, "Feed"] call ace_overheating_fnc_jamWeapon
  *
  * Public: No
  */
 
-params ["_unit", "_weapon"];
-TRACE_2("params",_unit,_weapon);
+params ["_unit", "", ["_jamType", "", ""]];
+TRACE_3("params",_unit,_weapon,_jamType);
+
+private _weapon = param [1, primaryWeapon _unit, [""]];
 
 // don't jam a weapon with no rounds left
 private _ammo = _unit ammo _weapon;
@@ -32,18 +35,18 @@ _unit setVariable [QGVAR(jammedWeapons), _jammedWeapons];
 // Cookoffs only happen on Fire and Dud, dud rounds are lost on jam clear.
 // Reduce chance of duds as temp increases (functionally increasing the chance of the others but with fewer commands)
 private _temp = 1 max (_unit getVariable [format [QGVAR(%1_temp), _weapon], 0]);
-private _jamTypesAllowed = getArray (configFile >> 'CfgWeapons' >> currentWeapon _unit >> QGVAR(jamTypesAllowed));
+private _jamTypesAllowed = getArray (configFile >> 'CfgWeapons' >> _weapon >> QGVAR(jamTypesAllowed));
 
 if (_jamTypesAllowed isEqualTo []) then {
-    _jamTypesAllowed = ["Eject", 1, "Extract", 1, "Feed", 1, "Fire", 1, "Dud", (5 / (_temp / 5))];
+    _jamTypesAllowed = ["eject", 1, "extract", 1, "feed", 1, "fire", 1, "dud", (5 / (_temp / 5))];
 } else {
-    for "_i" from count _jamTypesAllowed to 1 step -1 do {
-        private _jamCurretType = _jamTypesAllowed select _i;
-        if !(_jamCurretType in ["Eject", "Extract", "Feed", "Fire", "Dud"]) exitWith { // check config values and switch to default values if unusual value found
-            ERROR_2("Weapon '%1' has unexpected value %2 in QQGVAR(jamTypesAllowed). Expected values are 'Eject', 'Extract', 'Feed', 'Fire', 'Dud'.",_weapon,_jamCurretType);
-            _jamTypesAllowed = ["Eject", 1, "Extract", 1, "Feed", 1, "Fire", 1, "Dud", (5 / (_temp / 5))];
+    for "_i" from count _jamTypesAllowed -2 to 0 step -2 do {
+        private _jamCurretType = toLowerANSI (_jamTypesAllowed select _i);
+        if !(_jamCurretType in ["eject", "extract", "feed", "fire", "dud"]) exitWith { // check config values and switch to default values if unusual value found
+            ERROR_3("Weapon '%1' has unexpected value %2 in '%3'. Expected values are 'Eject', 'Extract', 'Feed', 'Fire', 'Dud'.",_weapon,_jamCurretType,QGVAR(jamTypesAllowed));
+            _jamTypesAllowed = ["eject", 1, "extract", 1, "feed", 1, "fire", 1, "dud", (5 / (_temp / 5))];
         };
-        if (_jamCurretType == "Dud") then {
+        if (_jamCurretType == "dud") then {
             _jamTypesAllowed insert [_i, [5 / (_temp / 5)]];
         } else {
             _jamTypesAllowed insert [_i, [1]];
@@ -51,9 +54,16 @@ if (_jamTypesAllowed isEqualTo []) then {
     };
 };
 
-private _jamType = selectRandomWeighted _jamTypesAllowed;
-_unit setVariable [format [QGVAR(%1_jamType), _weapon], _jamType];
+// if _jamType was given as a param when the function called check validity and select randomly if not valid.
+_jamType = toLowerANSI _jamType;
+if !(_jamType in _jamTypesAllowed) then {
+    if (_jamType != "") then {
+        ERROR_2("Weapon '%1' has attempted to jam with unexpected value %2. Expected values are 'Eject', 'Extract', 'Feed', 'Fire', 'Dud'.",_weapon,_jamType);
+    };
+    _jamType = selectRandomWeighted _jamTypesAllowed;
+};
 
+_unit setVariable [format [QGVAR(%1_jamType), _weapon], _jamType];
 
 // Stop current burst
 _unit setAmmo [_weapon, 0];
@@ -88,20 +98,20 @@ if (_unit getVariable [QGVAR(JammingActionID), -1] == -1) then {
     };
 
     private _statement = {
-        params ["_zero","_one"];
+        params ["", "_unit"];
 
-        playSound3D ["a3\sounds_f\weapons\Other\dry9.wss", _zero, false, eyePos _zero, 1, 1, 15];
+        playSound3D ["a3\sounds_f\weapons\Other\dry9.wss", objNull, insideBuilding _unit >= 0.5, eyePos _unit, 1, 1, 15];
 
-        if (!(missionNamespace getVariable [QGVAR(knowAboutJam), false]) && {_one ammo currentWeapon _one > 0} && {GVAR(DisplayTextOnJam)}) then {
-            private _jamType = _one getVariable [format [QGVAR(%1_jamType), currentWeapon _one], "None"];
-            private _jamMessage = localize LSTRING(FailureToFire);
-            switch true do {
-                case (_jamType isEqualTo "Eject"): {_jamMessage = localize LSTRING(FailureToEject)};
-                case (_jamType isEqualTo "Extract"): {_jamMessage = localize LSTRING(FailureToExtract)};
-                case (_jamType isEqualTo "Feed"): {_jamMessage = localize LSTRING(FailureToFeed)};
+        if (!(missionNamespace getVariable [QGVAR(knowAboutJam), false]) && {GVAR(DisplayTextOnJam)} && {_unit ammo currentWeapon _unit > 0}) then {
+            private _jamType = _unit getVariable [format [QGVAR(%1_jamType), currentWeapon _unit], "None"];
+            private _jamMessage = switch (_jamType) do {
+                case "eject": {LLSTRING(FailureToEject)};
+                case "extract": {LLSTRING(FailureToExtract)};
+                case "feed": {LLSTRING(FailureToFeed)};
+                default {LLSTRING(FailureToFire)};
             };
             [
-                [localize LSTRING(WeaponJammed)],
+                [LLSTRING(WeaponJammed)],
                 [_jamMessage]
             ] call CBA_fnc_notify;
             GVAR(knowAboutJam) = true;

@@ -5,6 +5,7 @@
             <Key ID="STR_ACE_Flags_ActionCategory">
                 <English>Flags</English>
                 <French>Drapeaux</French>
+                <Spanish>Banderas</Spanish>
                 <Italian>Bandiere</Italian>
                 <Russian>Флаги</Russian>
                 <German>Flaggen</German>
@@ -14,6 +15,7 @@
             <Key ID="STR_ACE_Flags_AdjustHeight">
                 <English>Adjust height</English>
                 <French>Ajuster la hauteur</French>
+                <Spanish>Ajustar la altura</Spanish>
                 <Italian>Aggiusta altezza</Italian>
                 <Russian>Отрегулировать высоту</Russian>
                 <German>Höhe anpassen</German>
@@ -23,6 +25,7 @@
             <Key ID="STR_ACE_Flags_Carry">
                 <English>Carry %1</English>
                 <French>Portage %1</French>
+                <Spanish>Llevar%1</Spanish>
                 <Italian>Porta %1</Italian>
                 <Russian>Носить %1</Russian>
                 <German>%1 tragen</German>
@@ -32,6 +35,7 @@
             <Key ID="STR_ACE_Flags_Furl">
                 <English>Furl Flag</English>
                 <French>Enrouler le drapeau</French>
+                <Spanish>Bandera Furl</Spanish>
                 <Italian>Arrotola bandiera</Italian>
                 <Russian>Свернуть флаг</Russian>
                 <German>Flagge einrollen</German>
@@ -41,6 +45,7 @@
             <Key ID="STR_ACE_Flags_Pickup">
                 <English>Pickup %1</English>
                 <French>Ramasseur %1</French>
+                <Spanish>Recogida %1</Spanish>
                 <Italian>Raccogli %1</Italian>
                 <Russian>Поднять %1</Russian>
                 <German>%1 aufnehmen</German>
@@ -50,6 +55,7 @@
             <Key ID="STR_ACE_Flags_Place">
                 <English>Place %1</English>
                 <French>Placer %1</French>
+                <Spanish>Lugar</Spanish>
                 <Italian>Piazza %1</Italian>
                 <Russian>Разместить %1</Russian>
                 <German>%1 platzieren</German>
@@ -61,6 +67,7 @@
             <Key ID="STR_ACE_Flags_Black">
                 <English>Flag (Black)</English>
                 <French>Drapeau (Noir)</French>
+                <Spanish>Bandera (negra)</Spanish>
                 <Italian>Bandiera (Nera)</Italian>
                 <Russian>Флаг (черный)</Russian>
                 <German>Flagge (Schwarz)</German>
@@ -70,6 +77,7 @@
             <Key ID="STR_ACE_Flags_Blue">
                 <English>Flag (Blue)</English>
                 <French>Drapeau (Bleu)</French>
+                <Spanish>Bandera (Azul)</Spanish>
                 <Italian>Bandiera (Blu)</Italian>
                 <Russian>Флаг (синий)</Russian>
                 <German>Flagge (Blau)</German>
@@ -79,6 +87,7 @@
             <Key ID="STR_ACE_Flags_Description">
                 <English>Can be carried or placed. Flags are used to mark a specific point in terrain or units.</English>
                 <French>Ils peuvent être transportés ou placés. Les drapeaux sont utilisés pour marquer un point spécifique du terrain ou des unités.</French>
+                <Spanish>Se pueden llevar o colocar. Las banderas se utilizan para marcar un punto específico del terreno o de las unidades.</Spanish>
                 <Italian>Possono essere trasportate o piazzate. Le bandiere vengono utilizzate per marcare unità o punti specifici del terreno.</Italian>
                 <Russian>Можно переносить или размещать. Флажки используются для обозначения определенной точки на местности или юнитов.</Russian>
                 <German>Kann getragen oder platziert werden. Flaggen werden zur Kennzeichnung von bestimmten Geländepunkte oder Einheiten eingesetzt.</German>
@@ -88,6 +97,7 @@
             <Key ID="STR_ACE_Flags_Green">
                 <English>Flag (Green)</English>
                 <French>Drapeau (Vert)</French>
+                <Spanish>Bandera (Verde)</Spanish>
                 <Italian>Bandiera (Verde)</Italian>
                 <Russian>Флаг (зелёный)</Russian>
                 <German>Flagge (Grün)</German>
@@ -97,6 +107,7 @@
             <Key ID="STR_ACE_Flags_Orange">
                 <English>Flag (Orange)</English>
                 <French>Drapeau (Orange)</French>
+                <Spanish>Bandera (Naranja)</Spanish>
                 <Italian>Bandiera (Arancione)</Italian>
                 <Russian>Флаг (оранжевый)</Russian>
                 <German>Flagge (Orange)</German>
@@ -106,6 +117,7 @@
             <Key ID="STR_ACE_Flags_Purple">
                 <English>Flag (Purple)</English>
                 <French>Drapeau (Violet)</French>
+                <Spanish>Bandera (Violeta)</Spanish>
                 <Italian>Bandiera (Viola)</Italian>
                 <Russian>Флаг (фиолетовый)</Russian>
                 <German>Flagge (Violett)</German>
@@ -115,6 +127,7 @@
             <Key ID="STR_ACE_Flags_Red">
                 <English>Flag (Red)</English>
                 <French>Drapeau (Rouge)</French>
+                <Spanish>Bandera (Roja)</Spanish>
                 <Italian>Bandiera (Rossa)</Italian>
                 <Russian>Флаг (красный)</Russian>
                 <German>Flagge (Rot)</German>
@@ -124,6 +137,7 @@
             <Key ID="STR_ACE_Flags_White">
                 <English>Flag (White)</English>
                 <French>Drapeau (Blanc)</French>
+                <Spanish>Bandera (Blanca)</Spanish>
                 <Italian>Bandiera (Bianca)</Italian>
                 <Russian>Флаг (белый)</Russian>
                 <German>Flagge (Weiß)</German>
@@ -133,6 +147,7 @@
             <Key ID="STR_ACE_Flags_Yellow">
                 <English>Flag (Yellow)</English>
                 <French>Drapeau (Jaune)</French>
+                <Spanish>Bandera (Amarilla)</Spanish>
                 <Italian>Bandiera (Gialla)</Italian>
                 <Russian>Флаг(желтый)</Russian>
                 <German>Flagge (Gelb)</German>
@@ -144,6 +159,7 @@
             <Key ID="STR_ACE_Flags_AllowCarryingFlags">
                 <English>Allow carrying flags</English>
                 <French>Autoriser le port de drapeaux</French>
+                <Spanish>Permitir llevar banderas</Spanish>
                 <Italian>Abilita indossare bandiere</Italian>
                 <Russian>Разрешить ношение флагов</Russian>
                 <German>Erlaube das Tragen von Flaggen</German>
@@ -153,6 +169,7 @@
             <Key ID="STR_ACE_Flags_AllowCarryingFlagsTooltip">
                 <English>Adds the actions to carry flags if the corresponding item is in the inventory.</English>
                 <French>Ajoute des actions pour porter des drapeaux lorsque l'objet en question est dans l'inventaire.</French>
+                <Spanish>Añade las acciones para llevar banderas si el artículo correspondiente está en el inventario.</Spanish>
                 <Italian>Aggiunge l'interazione di indossare una bandiera se si ha l'oggetto corrispondente nell'inventario.</Italian>
                 <Russian>Добавляет действия для ношения флагов, если соответствующий предмет есть в инвентаре.</Russian>
                 <German>Fügt Aktionen für das Tragen von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
@@ -162,6 +179,7 @@
             <Key ID="STR_ACE_Flags_AllowPlacingFlags">
                 <English>Allow placing flags</English>
                 <French>Permettre de placer des drapeaux</French>
+                <Spanish>Permitir la colocación de banderas</Spanish>
                 <Italian>Abilita piazzamento bandiere</Italian>
                 <Russian>Разрешить размещение флагов</Russian>
                 <German>Erlaube das Platzieren von Flaggen</German>
@@ -171,6 +189,7 @@
             <Key ID="STR_ACE_Flags_AllowPlacingFlagsTooltip">
                 <English>Adds the actions to place flags if the corresponding item is in the inventory.</English>
                 <French>Ajoute des actions pour placer des drapeaux lorsque l'objet en question est dans l'inventaire.</French>
+                <Spanish>Añade las acciones para colocar banderas si el artículo correspondiente está en el inventario</Spanish>
                 <Italian>Aggiunge l'interazione di piazzare una bandiera se si ha l'oggetto corrispondente nell'inventario.</Italian>
                 <Russian>Добавляет действия для установки флагов, если соответствующий предмет есть в инвентаре.</Russian>
                 <German>Fügt Aktionen für das Platzieren von Flaggen hinzu, wenn das jeweilige Item im Inventar ist.</German>
@@ -180,6 +199,7 @@
             <Key ID="STR_ACE_Flags_SettingCategory">
                 <English>Flags</English>
                 <French>Drapeaux</French>
+                <Spanish>Banderas</Spanish>
                 <Italian>Bandiere</Italian>
                 <Russian>Флаги</Russian>
                 <German>Flaggen</German>

@@ -1047,20 +1047,22 @@
         <Key ID="STR_ACE_Explosives_TripFlare_Name_Green">
             <English>Tripwire Flare (Green)</English>
             <French>Fusée éclairante à fil (Vert)</French>
+            <Spanish>Bengala de cable (Verde)</Spanish>
             <Italian>Bengala a filo d'inciampo (Verde)</Italian>
-            <Korean>인계철선 조명지뢰 (녹색)</Korean>
-            <Japanese>仕掛け線信号地雷 (緑)</Japanese>
             <Russian>Сигнальная растяжка (Зелёная)</Russian>
             <German>Stolperdraht-Leuchtfackel (Grün)</German>
+            <Korean>인계철선 조명지뢰 (녹색)</Korean>
+            <Japanese>仕掛け線信号地雷 (緑)</Japanese>
         </Key>
         <Key ID="STR_ACE_Explosives_TripFlare_Name_Red">
             <English>Tripwire Flare (Red)</English>
             <French>Fusée éclairante à fil (Rouge)</French>
+            <Spanish>Bengala de cable (Rojo)</Spanish>
             <Italian>Bengala a filo d'inciampo (Rosso)</Italian>
-            <Korean>인계철선 조명지뢰 (적색)</Korean>
-            <Japanese>仕掛け線信号地雷 (赤)</Japanese>
             <Russian>Сигнальная растяжка (Красная)</Russian>
             <German>Stolperdraht-Leuchtfackel (Rot)</German>
+            <Korean>인계철선 조명지뢰 (적색)</Korean>
+            <Japanese>仕掛け線信号地雷 (赤)</Japanese>
         </Key>
         <Key ID="STR_ACE_Explosives_TripWire">
             <English>Tripwire</English>
@@ -1082,21 +1084,23 @@
         <Key ID="STR_ACE_Explosives_TripWire_Airburst">
             <English>Tripwire - Airburst</English>
             <French>Fil de transmission - Explosion aérienne</French>
+            <Spanish>Transmisión - Explosión aérea</Spanish>
             <Italian>Bengala (razzo) a filo d'inciampo</Italian>
-            <Korean>인계철선 - 공중폭발</Korean>
-            <Japanese>仕掛け線 - 空中発火</Japanese>
             <Russian>Растяжка - Воздушный взрыв</Russian>
             <German>Stolperdraht - Luftdetonation</German>
+            <Korean>인계철선 - 공중폭발</Korean>
+            <Japanese>仕掛け線 - 空中発火</Japanese>
         </Key>
         <Key ID="STR_ACE_Explosives_apersToePopper">
             <English>APERS Mine (Toe-Popper)</English>
             <French>Mine APERS (Toe-Popper)</French>
+            <Spanish>Mina APERS (Toe-Popper)</Spanish>
             <Italian>Mina APERS (Toe-Popper)</Italian>
             <Russian>APERS мина (Toe-Topper)</Russian>
+            <German>APERS Mine (Toe-Popper)</German>
             <Korean>대인지뢰 (발목지뢰형)</Korean>
             <Japanese>対人地雷 (トウポッパー)</Japanese>
             <Chinesesimp>反人员地雷 (脚尖毁灭者)</Chinesesimp>
-            <German>APERS Mine (Toe-Popper)</German>
         </Key>
         <Key ID="STR_ACE_Explosives_cellphone_description">
             <English>Used to remotely trigger explosives</English>

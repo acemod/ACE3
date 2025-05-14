@@ -3,6 +3,7 @@
     <Package name="Compat_SPE_CSW">
         <Key ID="STR_ACE_Compat_SPE_CSW_100Rnd_762x63_Tracer">
             <English>.30-06 100Rnd Belt (M2/Tracer)</English>
+            <French>Bande .30-06 100cp (M2/Tracer)</French>
             <Spanish>Cinta de .30-06 100Rnd (M2/Trazadora)</Spanish>
             <Italian>Nastro .30-06 100cp (M2/Tracciante)</Italian>
             <German>.30-06 100 Patronen Gurt (M2/Leuchtspur)</German>
@@ -11,6 +12,7 @@
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_100Rnd_792x57_Tracer">
             <English>7.92x57 100Rnd Belt (L.S./Tracer)</English>
+            <French>Bande 7.92x57 100cp (L.S./Tracer)</French>
             <Spanish>Cinta de 7.92x57 100Rnd (L.S./Trazadora)</Spanish>
             <Italian>Nastro 7.92x57 100cp (L.S./Tracciante)</Italian>
             <German>7.92x57 mm 100 Patronen Gurt (L.S./Leuchtspur)</German>
@@ -19,6 +21,7 @@
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_50Rnd_762x63_Tracer">
             <English>.30-06 50Rnd Belt (M2/Tracer)</English>
+            <French>Bande .30-06 50cp (M2/Tracer)</French>
             <Spanish>Cinta de .30-06 50Rnd (M2/Trazadora)</Spanish>
             <Italian>Nastro .30-06 50cp (M2/Tracciante)</Italian>
             <German>.30-06 50 Patronen Gurt (M2/Leuchtspur)</German>
@@ -27,6 +30,7 @@
         </Key>
         <Key ID="STR_ACE_Compat_SPE_CSW_50Rnd_792x57_Tracer">
             <English>7.92x57 50Rnd Gurttrommel (L.S./Tracer)</English>
+            <French>Bande 7.92x57 50cp (L.S./Tracer)</French>
             <Spanish>Tambor de 7.92x57 50Rnd (L.S./Trazadora)</Spanish>
             <Italian>Nastro 7.92x57 50cp (L.S./Tracciante)</Italian>
             <German>7.92x57 mm 50 Patronen Gurt (L.S./Leuchtspur)</German>

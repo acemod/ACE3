@@ -38,6 +38,12 @@ if (isServer) then {
 
 // replace medical items with their ACE equivalents
 ["CBA_settingsInitialized", {
+    {
+        private _normal = missionNamespace getVariable format [QGVAR(treatmentTime%1), _x];
+        private _trained = missionNamespace getVariable format [QGVAR(treatmentTimeTrained%1), _x];
+        if (_trained > _normal) then { WARNING_3("Trained treatment time is longer than normal time for %1 [%2 vs %3]",_x,_trained,_normal); };
+    } forEach ["Autoinjector", "Tourniquet", "Splint", "IV"];
+
     TRACE_1("CBA_settingsInitialized EH",GVAR(convertItems)); // 0: Enabled 1: RemoveOnly 2:Disabled
     if (GVAR(convertItems) == 2) exitWith {};
     {

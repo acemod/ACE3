@@ -25,6 +25,7 @@ if (_type in _initializedClasses) exitWith {_initializedClasses get _type};
 private _vehCfg = configOf _vehicle;
 private _hitpointGroups = getArray (_vehCfg >> QGVAR(hitpointGroups));
 private _turretPaths = ((fullCrew [_vehicle, "gunner", true]) + (fullCrew [_vehicle, "commander", true])) apply {_x # 3};
+private _isGM = 1 == getNumber (configOf _vehicle >> "isgmContent");
 
 (getAllHitPointsDamage _vehicle) params [["_hitPoints", []], ["_hitSelections", []]];
 // get hitpoints of wheels with their selections
@@ -40,6 +41,16 @@ private _processedSelections = [];
 
     if (_hitpoint isEqualTo "") then { // skip empty hitpoint
         _indexesToIgnore pushBack _forEachIndex;
+        continue
+    };
+
+    if (_isGM && {"wheel" in _selection}) then {
+        TRACE_3("Skipping GM wheels",_hitpoint,_forEachIndex,_selection);
+        /*#ifdef DEBUG_MODE_FULL
+        systemChat format ["Skipping duplicate wheel, hitpoint %1, index %2, selection %3", _hitpoint, _forEachIndex, _selection];
+        #endif*/
+        _indexesToIgnore pushBack _forEachIndex;
+        _processedSelections pushBack _selection;
         continue
     };
 

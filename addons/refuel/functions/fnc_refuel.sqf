@@ -36,6 +36,9 @@ if (_maxFuelTank == 0) then {
     _maxFuelTank = getNumber (_config >> "fuelCapacity");
 };
 
+// Wipe refuel amount, so that nozzle doesn't carry over information from previous refuelling
+_nozzle setVariable [QGVAR(tempFuel), nil];
+
 [{
     params ["_args", "_pfID"];
     _args params [["_source", objNull, [objNull]], ["_sink", objNull, [objNull]], ["_unit", objNull, [objNull]], ["_nozzle", objNull, [objNull]], ["_rate", 1, [0]], ["_maxFuelTank", 1, [0]], ["_connectFromPoint", [0,0,0], [[]], 3], ["_connectToPoint", [0,0,0], [[]], 3]];
@@ -117,7 +120,7 @@ if (_maxFuelTank == 0) then {
         // Increment fuel counter
         _source setVariable [QGVAR(fuelCounter), (_source getVariable [QGVAR(fuelCounter), 0]) + _addedFuel, true];
 
-        [QGVAR(tick), [_source, _sink, _addedFuel, _refuelContainer]] call CBA_fnc_localEvent;
+        [QGVAR(tick), [_source, _sink, _addedFuel, _refuelContainer, _nozzle]] call CBA_fnc_localEvent;
 
         [_source, _fuelInSource] call FUNC(setFuel);
     } else {
@@ -126,10 +129,12 @@ if (_maxFuelTank == 0) then {
 
     // Reset variables when done
     if (_finished) then {
-        [QGVAR(stopped), [_source, _sink]] call CBA_fnc_localEvent;
+        [QGVAR(stopped), [_source, _sink, _nozzle]] call CBA_fnc_localEvent;
         _nozzle setVariable [QGVAR(lastTickMissionTime), nil];
         _nozzle setVariable [QGVAR(isRefueling), false, true];
-    };
+        if (isNil "CBA_fnc_getPerFrameHandlerDelay") exitWith {}; // TODO: Remove after next release and increase required cba
+        [_nozzle, QGVAR(nozzle_stop), nil, true, true, true] call CBA_fnc_globalSay3D;
+    }; 
 }, 1, [
     _nozzle getVariable QGVAR(source),
     _sink,

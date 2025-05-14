@@ -2,21 +2,21 @@
 <Project name="ACE">
     <Package name="MissileGuidance">
         <Key ID="STR_ACE_MissileGuidance_CycleFireMode">
-            <English>Cycle Fire Mode</English>
-            <Czech>Přepínání režimů palby</Czech>
-            <French>Guidage missiles - Changer le mode de tir</French>
-            <Spanish>Cambiar modo de disparo</Spanish>
-            <Italian>Cambia modalità di fuoco</Italian>
-            <Polish>Przełącz tryb ognia</Polish>
-            <Portuguese>Alterar Modo de Disparo</Portuguese>
-            <Russian>Переключение режимов огня</Russian>
-            <German>Wechsle Feuermodus</German>
-            <Korean>발사 방식 순환</Korean>
-            <Japanese>発射モードサイクル</Japanese>
-            <Chinese>循環切換開火模式</Chinese>
-            <Chinesesimp>循环切换开火模式</Chinesesimp>
-            <Turkish>Ateşleme Modunu Değiştir</Turkish>
-            <Hungarian>Tüzelési mód váltása</Hungarian>
+            <English>Missile - Cycle Fire Mode</English>
+            <Czech>Střela - Přepínání režimů palby</Czech>
+            <French>Missile - Changer le mode de tir</French>
+            <Spanish>Misil - Cambiar modo de disparo</Spanish>
+            <Italian>Missile - Cambia modalità di fuoco</Italian>
+            <Polish>Pocisk - Przełącz tryb ognia</Polish>
+            <Portuguese>Míssil - Alterar Modo de Disparo</Portuguese>
+            <Russian>Ракета - Переключение режимов огня</Russian>
+            <German>Rakete - Wechsle Feuermodus</German>
+            <Korean>미사일 - 발사 방식 순환</Korean>
+            <Japanese>ミサイル - 発射モードサイクル</Japanese>
+            <Chinese>飛彈 - 循環切換開火模式</Chinese>
+            <Chinesesimp>导弹 - 循环切换开火模式</Chinesesimp>
+            <Turkish>Füze - Ateşleme Modunu Değiştir</Turkish>
+            <Hungarian>Rakéta - Tüzelési mód váltása</Hungarian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Desc">
             <English>Advanced missile guidance, or AMG, provides multiple enhancements to missile locking and firing. It is also a framework required for missile weapon types.</English>
@@ -38,83 +38,92 @@
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_altitude">
             <English>Altitude</English>
             <French>Altitude</French>
+            <Spanish>Altitud</Spanish>
             <Italian>Altitudine</Italian>
+            <Russian>Высота</Russian>
             <German>Höhe</German>
             <Korean>고도</Korean>
             <Japanese>高度</Japanese>
-            <Russian>Высота</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_attack_heading">
             <English>Attack Heading</English>
             <French>Vecteur d'attaque</French>
+            <Spanish>Rumbo de ataque</Spanish>
             <Italian>Prua d'attacco</Italian>
+            <Russian>Направление атаки</Russian>
             <German>Angriffsrichtung</German>
             <Korean>공격 방향</Korean>
             <Japanese>攻撃方位</Japanese>
-            <Russian>Направление атаки</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_easting">
             <English>Easting</English>
             <French>Horizontales</French>
+            <Spanish>Orientación</Spanish>
             <Italian>Easting</Italian>
+            <Russian>Горизонтали</Russian>
             <German>Ostwert</German>
             <Korean>동향</Korean>
             <Japanese>東距</Japanese>
-            <Russian>Горизонтали</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_header">
             <English>GPS Weapon Setup</English>
             <French>Configuration de l'armement GPS</French>
+            <Spanish>Configuración del Arma GPS</Spanish>
             <Italian>Configurazione armamento GPS</Italian>
+            <Russian>Настройка оружия с помощью GPS</Russian>
             <German>GPS-Waffeneinstellung</German>
             <Korean>GPS 병기 설정</Korean>
             <Japanese>GPS武装設定</Japanese>
-            <Russian>Настройка оружия с помощью GPS</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_impact_angle">
             <English>Impact Angle</English>
             <French>Angle d'impact</French>
+            <Spanish>Ángulo de impacto</Spanish>
             <Italian>Angolo d'impatto</Italian>
+            <Russian>Угол удара</Russian>
             <German>Einschlagswinkel</German>
             <Korean>충돌 각도</Korean>
             <Japanese>弾着角</Japanese>
-            <Russian>Угол удара</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_northing">
             <English>Northing</English>
             <French>Verticales</French>
+            <Spanish>Northing</Spanish>
             <Italian>Northing</Italian>
+            <Russian>Вертикали</Russian>
             <German>Nordwert</German>
             <Korean>북향</Korean>
             <Japanese>北距</Japanese>
-            <Russian>Вертикали</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp">
             <English>PRE-PLANNED</English>
             <French>PRE-PLANIFICATION</French>
+            <Spanish>PRE-PLANIFICADO</Spanish>
             <Italian>PRE-PLANNED</Italian>
+            <Russian>ЗАРАНЕЕ СПЛАНИРОВАННЫЙ</Russian>
             <German>PRE-PLANNED</German>
             <Korean>사전 설정됨</Korean>
             <Japanese>計画目標 (PP)</Japanese>
-            <Russian>ЗАРАНЕЕ СПЛАНИРОВАННЫЙ</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_pp_short">
             <English>PP</English>
             <French>PP</French>
+            <Spanish>PP</Spanish>
             <Italian>PP</Italian>
+            <Russian>PP</Russian>
             <German>PP</German>
             <Korean>PP</Korean>
             <Japanese>PP</Japanese>
-            <Russian>PP</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_GPS_ui_too">
             <English>TARGET OF OPPORTUNITY</English>
             <French>CIBLE D'OPPORTUNITÉ</French>
+            <Spanish>OBJETIVO DE OPORTUNIDAD</Spanish>
             <Italian>TARGET OF OPPORTUNITY</Italian>
+            <Russian>ЦЕЛЬ ОТКРЫВАЮЩЕЙСЯ ВОЗМОЖНОСТИ</Russian>
             <German>TARGET OF OPPORTUNITY</German>
             <Korean>기회 표적</Korean>
             <Japanese>臨機目標 (TOO)</Japanese>
-            <Russian>ЦЕЛЬ ОТКРЫВАЮЩЕЙСЯ ВОЗМОЖНОСТИ</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_Hellfire_AGM114K">
             <English>Hellfire II AGM-114K Missile</English>
@@ -316,41 +325,55 @@
             <Turkish>Gelişmiş Füze Güdüm Sistemi</Turkish>
             <Hungarian>Fejlett rakétairányító</Hungarian>
         </Key>
-        <Key ID="STR_ACE_MissileGuidance_mclosDown">
-            <English>MCLOS Down</English>
-            <French>MCLOS Bas</French>
-            <Italian></Italian>
-            <German>MCLOS Runter</German>
-            <Korean>수동 시선 유도 하강</Korean>
-            <Japanese>MCLOS 下</Japanese>
-            <Russian>MCLOS Вниз</Russian>
+        <Key ID="STR_ACE_MissileGuidance_keybind_down">
+            <English>Missile - Down</English>
+            <French>Missile - Bas</French>
+            <Spanish>Misil - Abajo</Spanish>
+            <Italian>Missile - Giù</Italian>
+            <Russian>Ракета - Вниз</Russian>
+            <German>Rakete - Runter</German>
+            <Korean>미사일 - 아래</Korean>
+            <Japanese>ミサイル - 下</Japanese>
         </Key>
-        <Key ID="STR_ACE_MissileGuidance_mclosLeft">
-            <English>MCLOS Left</English>
-            <French>MCLOS Gauche</French>
-            <Italian></Italian>
-            <German>MCLOS Links</German>
-            <Korean>수동 시선 유도 좌향</Korean>
-            <Japanese>MCLOS 左</Japanese>
-            <Russian>MCLOS Влево</Russian>
+        <Key ID="STR_ACE_MissileGuidance_keybind_left">
+            <English>Missile - Left</English>
+            <French>Missile - Gauche</French>
+            <Spanish>Misil - Izquierda</Spanish>
+            <Italian>Missile - Sinistra</Italian>
+            <Russian>Ракета - Влево</Russian>
+            <German>Rakete - Links</German>
+            <Korean>미사일 - 왼쪽</Korean>
+            <Japanese>ミサイル - 左</Japanese>
         </Key>
-        <Key ID="STR_ACE_MissileGuidance_mclosRight">
-            <English>MCLOS Right</English>
-            <French>MCLOS Droit</French>
-            <Italian></Italian>
-            <German>MCLOS Rechts</German>
-            <Korean>수동 시선 유도 우향</Korean>
-            <Japanese>MCLOS 右</Japanese>
-            <Russian>MCLOS Вправо</Russian>
+        <Key ID="STR_ACE_MissileGuidance_keybind_lock">
+            <English>Missile - Lock (Hold)</English>
+            <French>Missile - Verrouiller (Maintenir)</French>
+            <Spanish>Misil - Bloquear (Mantener)</Spanish>
+            <Italian>Missile - Blocco (Tieni premuto)</Italian>
+            <Russian>Ракета - Захват цели (Удерживать)</Russian>
+            <German>Rakete - Sperren (Halten)</German>
+            <Korean>미사일 - 잠금 (누르고 있기)</Korean>
+            <Japanese>ミサイル - ロック (長押し)</Japanese>
         </Key>
-        <Key ID="STR_ACE_MissileGuidance_mclosUp">
-            <English>MCLOS Up</English>
-            <French>MCLOS Haut</French>
-            <Italian></Italian>
-            <German>MCLOS Hoch</German>
-            <Korean>수동 시선 유도 상승</Korean>
-            <Japanese>MCLOS 上</Japanese>
-            <Russian>MCLOS Вверх</Russian>
+        <Key ID="STR_ACE_MissileGuidance_keybind_right">
+            <English>Missile - Right</English>
+            <French>Missile - Droite</French>
+            <Spanish>Misil - Derecha</Spanish>
+            <Italian>Missile - Destra</Italian>
+            <Russian>Ракета - Вправо</Russian>
+            <German>Rakete - Rechts</German>
+            <Korean>미사일 - 오른쪽</Korean>
+            <Japanese>ミサイル - 右</Japanese>
+        </Key>
+        <Key ID="STR_ACE_MissileGuidance_keybind_up">
+            <English>Missile - Up</English>
+            <French>Missile - Haut</French>
+            <Spanish>Misil - Arriba</Spanish>
+            <Italian>Missile - Su</Italian>
+            <Russian>Ракета - Вверх</Russian>
+            <German>Rakete - Hoch</German>
+            <Korean>미사일 - 위</Korean>
+            <Japanese>ミサイル - 上</Japanese>
         </Key>
     </Package>
 </Project>

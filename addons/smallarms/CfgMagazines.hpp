@@ -45,6 +45,18 @@ class CfgMagazines {
         count = 17;
     };
 
+    class 16Rnd_9x21_red_Mag: 16Rnd_9x21_Mag {
+        displayname = CSTRING(17Rnd_9x19_red_Name);
+    };
+
+    class 16Rnd_9x21_green_Mag: 16Rnd_9x21_Mag {
+        displayname = CSTRING(17Rnd_9x19_green_Name);
+    };
+
+    class 16Rnd_9x21_yellow_Mag: 16Rnd_9x21_Mag {
+        displayname = CSTRING(17Rnd_9x19_yellow_Name);
+    };
+
     class 30Rnd_45ACP_Mag_SMG_01: 30Rnd_9x21_Mag {
         displayname = CSTRING(25Rnd_45_Name);
         displaynameshort = ".45";
@@ -74,6 +86,7 @@ class CfgMagazines {
 
     class 11Rnd_45ACP_Mag: CA_Magazine {
         displayname = CSTRING(15Rnd_45_Name);
+        displaynameshort = ".45";
         count = 15;
     };
 };
