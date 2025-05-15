@@ -59,5 +59,5 @@ INTEL_POST(_hasPhoto,acex_intelitems_photo);
 // ACE Overheating
 if (_hasSpareBarrel isEqualType [] ) then {
     private _newMagIDsSpareBarrel = [_player, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
-    [QGVAR(EH_updateMagIDs), [_hasSpareBarrel, _newMagIDsSpareBarrel]] call CBA_fnc_serverEvent;
+    [QGVAR(updateMagIDs), [_hasSpareBarrel, _newMagIDsSpareBarrel]] call CBA_fnc_serverEvent;
 };

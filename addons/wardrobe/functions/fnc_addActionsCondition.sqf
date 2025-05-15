@@ -18,12 +18,8 @@
 
 params ["_player"];
 
-isNil QGVAR(api_disable)
+missionNamespace getVariable [QGVAR(enableAction), false]
 &&
-{
-    missionNamespace getVariable [QGVAR(set_enableAction), false]
-    &&
-    { 
-        count ([_player] call FUNC(getItemsModifiableCurrent)) > 0
-    }
+{ 
+    count ([_player] call FUNC(getItemsModifiableCurrent)) > 0
 }
