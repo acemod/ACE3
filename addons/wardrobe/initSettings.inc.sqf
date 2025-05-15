@@ -17,5 +17,5 @@
     true,
     1,
     FUNC(enableContextMenu),
-    true
+    false
 ] call CBA_fnc_addSetting;
