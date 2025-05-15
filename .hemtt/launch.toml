@@ -50,6 +50,12 @@ workshop = [
     "497661914", # CUP Units
 ]
 
+[cfp]
+extends = "cup"
+workshop = [
+    "1369691841", # Community Factions Project
+]
+
 [Wardrobe]
 extends = "default"
 mission = "Wardrobe.VR"
@@ -92,3 +98,4 @@ dlc = [
     "rf",
     "ws",
 ]
+
