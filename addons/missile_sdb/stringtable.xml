@@ -4,38 +4,42 @@
         <Key ID="STR_ACE_MISSILE_SDB_39">
             <English>GBU-39 [ACE]</English>
             <French>GBU-39 [ACE]</French>
+            <Spanish>GBU-39 [ACE]</Spanish>
             <Italian>GBU-39 [ACE]</Italian>
+            <Russian>GBU-39 [ACE]</Russian>
             <German>GBU-39 [ACE]</German>
             <Korean>GBU-39 SDB [ACE]</Korean>
             <Japanese>GBU-39 [ACE]</Japanese>
-            <Russian>GBU-39 [ACE]</Russian>
         </Key>
         <Key ID="STR_ACE_MISSILE_SDB_39_1x">
             <English>1x GBU-39 SDB [ACE]</English>
             <French>1x GBU-39 SDB [ACE]</French>
+            <Spanish>1x GBU-39 SDB [ACE]</Spanish>
             <Italian>1x GBU-39 SDB [ACE]</Italian>
+            <Russian>1x GBU-39 SDB [ACE]</Russian>
             <German>1x GBU-39 SDB [ACE]</German>
             <Korean>1x GBU-39 SDB [ACE]</Korean>
             <Japanese>1x GBU-39 SDB [ACE]</Japanese>
-            <Russian>1x GBU-39 SDB [ACE]</Russian>
         </Key>
         <Key ID="STR_ACE_MISSILE_SDB_39_4x">
             <English>4x GBU-39 SDB [ACE]</English>
             <French>4x GBU-39 SDB [ACE]</French>
+            <Spanish>4x GBU-39 SDB [ACE]</Spanish>
             <Italian>4x GBU-39 SDB [ACE]</Italian>
+            <Russian>4x GBU-39 SDB [ACE]</Russian>
             <German>4x GBU-39 SDB [ACE]</German>
             <Korean>4x GBU-39 SDB [ACE]</Korean>
             <Japanese>4x GBU-39 SDB [ACE]</Japanese>
-            <Russian>4x GBU-39 SDB [ACE]</Russian>
         </Key>
         <Key ID="STR_ACE_MISSILE_SDB_pylonDescription">
             <English>250 pound GPS guided glide bomb</English>
             <French>Bombe planante de 250 livres à guidage GPS</French>
+            <Spanish>Bomba planeadora de 250 libras guiada por GPS</Spanish>
             <Italian>Bomba planante da 250 libbre a guida GPS</Italian>
+            <Russian>250-фунтовая планирующая бомба с GPS-наведением</Russian>
             <German>GPS-gelenkte 250-Pfund-Gleitbombe</German>
             <Korean>250 파운드급 GPS 유도 활강 항공 폭탄</Korean>
             <Japanese>250ポンド GPS誘導滑空爆弾</Japanese>
-            <Russian>250-фунтовая планирующая бомба с GPS-наведением</Russian>
         </Key>
     </Package>
 </Project>

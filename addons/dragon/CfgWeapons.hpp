@@ -12,6 +12,7 @@ class CfgWeapons {
     };
 
     class ACE_M47_Dragon: launch_Titan_F {
+        author = ECSTRING(common,ACETeam);
         model = QPATHTOF(models\ace_m47_magazine.p3d);
         picture = QPATHTOF(data\m47_dragon_item_ca.paa);
         magazines[] = {};

@@ -7,7 +7,7 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "CUP_Weapons_loadOrder",
+            "CUP_Weapons_LoadOrder",
             "ace_csw"
         };
         skipWhenMissingDependencies = 1;
