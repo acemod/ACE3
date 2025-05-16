@@ -6,7 +6,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"UK3CB_Factions_Weapons","UK3CB_Factions_Equipment_CW_Backpack_US"};
+        requiredAddons[] = {"UK3CB_Factions_Equipment_CW_Backpack_Soviet","UK3CB_Factions_Equipment_CW_Backpack_US"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
         authors[] = {"Andx"};
