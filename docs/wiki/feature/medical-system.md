@@ -60,7 +60,7 @@ Medic AI means any AI set as a Medic will actually perform medical actions on gr
 
 ##### 1.1.2.2 Require Items
 
-Medics normally don't actually need medical items in order to perform medical actions. This setting can be used to require them to use those items. This will also cause AI's First Aid Kits and Medkits to be replaced with appropriate ACE items.
+Medics normally don't actually need medical items in order to perform medical actions. This setting can be used to require them to use those items. If the setting is not set to "Enabled" and not "Auto Convert Items for AI", unmodded AI will not have the required items to perform treatment.
 
 #### 1.1.3 Blood
 
