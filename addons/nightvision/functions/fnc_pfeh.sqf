@@ -18,7 +18,7 @@
 
 private _unit = ACE_player;
 
-if (currentVisionMode _unit < 1) exitWith {
+if (currentVisionMode _unit <= 0) exitWith {
     GVAR(running) = false;
     [false] call FUNC(setupDisplayEffects);
     [GVAR(PFID)] call CBA_fnc_removePerFrameHandler;
