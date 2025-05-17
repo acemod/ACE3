@@ -34,9 +34,9 @@ if (_target isKindOf "ACE_DefuseObject") then {
         deleteVehicle _target;
 
         false breakOut "main" // return
-    } else {
-        _target = _explosive;
     };
+
+    _target = _explosive;
 };
 
 (!GVAR(requireSpecialist) || {_unit call EFUNC(common,isEOD)}) &&

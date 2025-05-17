@@ -33,6 +33,8 @@ private _detonators = _unit call FUNC(getDetonators);
 
 if ((getArray (_triggerConfig >> "requires")) findIf {!((_x call EFUNC(common,getConfigName)) in _detonators)} != -1) exitWith {};
 
+GVAR(placedCount) = GVAR(placedCount) + 1;
+
 private _triggerConfigName = configName _triggerConfig;
 private _clackerList = _unit getVariable [QGVAR(clackers), []];
 
@@ -48,8 +50,6 @@ _clackerList pushBack [
 ];
 
 _unit setVariable [QGVAR(clackers), _clackerList, true];
-
-GVAR(placedCount) = GVAR(placedCount) + 1;
 
 // Display clacker code message
 [format [LLSTRING(DetonateCode), GVAR(placedCount)]] call EFUNC(common,displayTextStructured);
