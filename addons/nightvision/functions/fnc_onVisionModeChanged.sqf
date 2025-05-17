@@ -38,7 +38,7 @@ if (GVAR(effectScaling) == 0) exitWith {
 };
 
 // Start PFEH when entering night vision mode:
-if (_visionMode == 1) then {
+if (_visionMode > 0) then {
     if (GVAR(PFID) == -1) then {
         GVAR(running) = true;
         [true] call FUNC(setupDisplayEffects);
