@@ -49,3 +49,9 @@ workshop = [
     "541888371", # CUP Vehicles
     "497661914", # CUP Units
 ]
+
+[cfp]
+extends = "cup"
+workshop = [
+    "1369691841", # Community Factions Project
+]
