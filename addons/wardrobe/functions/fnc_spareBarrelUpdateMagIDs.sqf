@@ -1,14 +1,14 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Function to update ACE Overheating's Serverside SpareBarrel DataBase with new MagIDs.
+ * Function to update ACE Overheating's serverside spareBarrel database with new magIDs.
  *
  * Arguments:
- * 0: old magIDs <ARRAY>
- * 1: new magIDs <ARRAY>
+ * 0: Old magIDs <ARRAY>
+ * 1: New magIDs <ARRAY>
  *
  * Return Value:
- * The return value <BOOL>
+ * None
  *
  * Example:
  * [_old, _new] call ace_wardrobe_fnc_spareBarrelUpdateMagIDs
@@ -30,3 +30,5 @@ private _map = EGVAR(overheating,storedSpareBarrels);
     _map set [ _newMagIDs # _forEachIndex , _map deleteAt _oldID ];
 
 } forEach _oldMagIDs;
+
+nil

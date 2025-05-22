@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * This debug script will compare the maxLoad of all modifiable Items with its modifiableTo Variants and will provide an RPT output.
+ * This debug script will compare the maxLoad of all modifiable Items with its modifiableTo variants and will provide an RPT output.
  *
  * Arguments:
  * None

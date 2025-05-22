@@ -4,10 +4,10 @@
  * Debug - Function to retrieve all existing Wardrobe items.
  *
  * Arguments:
- * 0: Return as Config? <BOOL> (default: false)
+ * 0: Return as config? <BOOL> (default: false)
  *
  * Return Value:
- * Array Wardobe Items, either as Classname or as Config <ARRAY>
+ * Wardobe items, either as classname or config <ARRAY>
  *
  * Example:
  * true call ace_wardrobe_fnc_getAllWardrobeItems;

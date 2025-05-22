@@ -5,12 +5,12 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Current Variant <Config>
- * 2: Desired Variant <Config>
+ * 1: Current variant <Config>
+ * 2: Desired variant <Config>
  * 3: Cache Result of fnc_getitemsAll <BOOL> (default: true)
  *
  * Return Value:
- * The return value <BOOL>
+ * Result <BOOL>
  *
  * Example:
  * [_unit, _cfgOrigin, _cfgTarget] call ace_wardrobe_fnc_canModifyTo

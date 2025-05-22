@@ -4,11 +4,11 @@
  * Ace Action Statement - Removes the modifiableItem and replaces it with the target item
  *
  * Arguments:
- * 0: Action Target <OBJECT>
- * 1: Action Player <OBJECT>
- * 2: Action Params <ARRAY>
- * - 0: Current Variant <CONFIG>
- * - 0: Desired Variant <CONFIG>
+ * 0: Action target <OBJECT>
+ * 1: Action player <OBJECT>
+ * 2: Action params <ARRAY>
+ * - 0: Current variant <CONFIG>
+ * - 0: Desired variant <CONFIG>
  * 3: Replace Now? <BOOL> (default: false)
  *
  * Return Value:
@@ -47,9 +47,10 @@ private _replaceCode = switch ( _typeNumber ) do {
 if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,configName _cfgOrigin); };
 [ _replaceCode, [_unit, _cfgOrigin, _cfgTarget, _additionalParams ], _duration] call CBA_fnc_waitAndExecute;
 
-//// Handle Components
-// Add Surplus
+//// Handle components
 [_cfgOrigin, _cfgTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
+
+// Add Surplus
 {
     if (configName _cfgTarget isNotEqualTo _x) then {
         if ( isClass (configFile >> "CfgGlasses" >> _x) && { goggles _unit isEqualTo "" } ) then {

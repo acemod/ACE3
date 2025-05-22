@@ -4,7 +4,7 @@
  * Condition check: Is wardrobe enabled & if the player has an item that can be modified
  *
  * Arguments:
- * 0: _player from the Ace Action <STRING>
+ * 0: Player <OBJECT>
  *
  * Return Value:
  * condition <BOOL>

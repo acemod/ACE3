@@ -8,7 +8,7 @@
  * 1: Value <ANY>
  *
  * Return Value:
- * success <BOOL>
+ * Success <BOOL>
  *
  * Example:
  * ['tag_myKey', ["some","data"]] call ace_wardrobe_fnc_cacheSet

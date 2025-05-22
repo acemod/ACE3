@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Unit <Object>
- * 1: Current Variant <CONFIG>
- * 2: Desired Variant <CONFIG>
+ * 1: Current variant <CONFIG>
+ * 2: Desired variant <CONFIG>
  * 2: Type of Wearable Container <STRING>
  *
  * Return Value:
@@ -56,7 +56,7 @@ INTEL_POST(_hasNotepad,acex_intelitems_notepad);
 INTEL_POST(_hasPhoto,acex_intelitems_photo);
 
 // ACE Overheating
-if (_hasSpareBarrel isEqualType [] ) then {
+if (_hasSpareBarrel isEqualType []) then {
     private _newMagIDsSpareBarrel = [_player, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
     [QGVAR(updateMagIDs), [_hasSpareBarrel, _newMagIDsSpareBarrel]] call CBA_fnc_serverEvent;
 };

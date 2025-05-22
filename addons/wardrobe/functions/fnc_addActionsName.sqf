@@ -4,7 +4,7 @@
  * This Function checks if the Target Item has an Alternative String for the Action, if not, it returns the displayName property
  *
  * Arguments:
- * 0: Desired Variant <CONFIG>
+ * 0: Desired variant <CONFIG>
  *
  * Return Value:
  * The return value <BOOL>

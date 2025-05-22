@@ -4,10 +4,10 @@
  * This Function checks if the Target Item has an alternative Picture for the Action, if not, it returns the picture property
  *
  * Arguments:
- * 0: Config of desired Variant <CONFIG>
+ * 0: Config of desired variant <CONFIG>
  *
  * Return Value:
- * Path to Icon or "" <STRING>
+ * Path to icon or "" <STRING>
  *
  * Example:
  * _cfg call ace_wardrobe_fnc_getActionIcon

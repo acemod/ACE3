@@ -4,10 +4,10 @@
  * Function to check if the provided wearable Item (Config) can be modified through ace_wardrobe.
  *
  * Arguments:
- * 0: Wearable Item <Config>
+ * 0: Wearable item <Config>
  *
  * Return Value:
- * The return value <BOOL>
+ * Result <BOOL>
  *
  * Example:
  * _cfg call ace_wardrobe_fnc_isModifiable

@@ -4,7 +4,7 @@
  * Function to request the clearing of the cache upon closing of the menu
  *
  * Arguments:
- * 0: The first argument <STRING>
+ * 0: Key <STRING>
  *
  * Return Value:
  * None

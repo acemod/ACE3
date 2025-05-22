@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Statement of CBA Context Menu Entry - Request the Next Variant.
+ * Statement of CBA Context Menu Entry - Request the next variant.
  *
  * Arguments:
  * 0: Player <OBJECT>
@@ -11,7 +11,7 @@
  * 4: Arguments <ARRAY>
  *
  * Return Value:
- * nothing
+ * None
  *
  * Example:
  * [_unit, _container, _item, _slot, _params] call ace_wardrobe_fnc_nextVariantDo;

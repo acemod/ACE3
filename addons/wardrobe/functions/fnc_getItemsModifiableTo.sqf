@@ -4,7 +4,7 @@
  * Function to return an array the config of desired target items. Also checks if those items exist: CBA_fnc_getItemConfig returns configNull when item not found.
  *
  * Arguments:
- * 0: Current Variant <Config>
+ * 0: Current variant <Config>
  *
  * Return Value:
  * Array of all possible variants as config <ARRAY>

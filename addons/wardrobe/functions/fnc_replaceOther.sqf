@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Current Variant <CONFIG>
- * 2: Desired Variant <CONFIG>
+ * 1: Current variant <CONFIG>
+ * 2: Desired variant <CONFIG>
  *
  * Return Value:
  * None

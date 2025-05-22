@@ -8,7 +8,7 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * Array of ACE Child Actions <ARRAY>
+ * ACE actions <ARRAY>
  *
  * Example:
  * _player call ace_wardrobe_fnc_addActions

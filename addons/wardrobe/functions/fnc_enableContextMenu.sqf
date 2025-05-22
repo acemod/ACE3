@@ -24,7 +24,7 @@ if (_enable && {!(missionNamespace getVariable [QGVAR(contextmenuEnabled), false
     [
         "#ALL",
         "CLOTHES",
-        "Switch to next Variant",
+        "Switch to next variant",
         [],
         QPATHTOF(data\wardrobe_logo.paa),
         [
