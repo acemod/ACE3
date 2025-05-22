@@ -2744,33 +2744,6 @@
             <Korean>무덤 마커 생성</Korean>
             <Japanese>墓標を作成</Japanese>
             <Chinesesimp>创建坟墓地图标记</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AllowBodyBalling_Description">
-            <English>Enables get-well wishes for people that aren't feeling too well.</English>
-            <French>Permet de souhaiter un bon rétablissement aux personnes qui ne se sentent pas très bien.</French>
-            <Spanish>Permite felicitar a las personas que no se encuentran bien.</Spanish>
-            <Italian>Permette di fare gli auguri di pronta guarigione alle persone che non si sentono troppo bene.</Italian>
-            <Polish>Umożliwia składanie życzeń powrotu do zdrowia osobom, które nie czują się zbyt dobrze.</Polish>
-            <Portuguese>Permite desejar melhoras a pessoas que não se estão a sentir muito bem.</Portuguese>
-            <Russian>Позволяет пожелать выздоровления людям, которые чувствуют себя не очень хорошо.</Russian>
-            <German>Ermöglicht Genesungswünsche für Menschen, denen es nicht so gut geht.</German>
-            <Korean>몸 상태가 좋지 않은 사람들에게 쾌유를 바라는 인사를 활성화합니다.</Korean>
-            <Japanese>体調があまり良くない人のために、快気祝いをすることができる。</Japanese>
-            <Chinesesimp>为身体不适的人提供康复祝福</Chinesesimp>
-        </Key>
-        <Key ID="STR_ACE_Medical_Treatment_AllowBodyBalling_DisplayName">
-            <English>Disable Get-Well Wishes</English>
-            <French>Désactiver les vœux de bonne santé</French>
-            <Spanish>Desactivar los deseos de curación</Spanish>
-            <Italian>Disattivare gli auguri di pronta guarigione</Italian>
-            <Polish>Wyłączanie życzeń powrotu do zdrowia</Polish>
-            <Portuguese>Desativar os desejos de melhoras</Portuguese>
-            <Russian>Отключить пожелания выздоровления</Russian>
-            <German>Genesungswünsche deaktivieren</German>
-            <Korean>쾌유 인사말 비활성화</Korean>
-            <Japanese>健康挨拶をオフにする</Japanese>
-            <Chinesesimp>关闭健康问候语</Chinesesimp>
-        </Key>
         <Key ID="STR_ACE_Medical_Treatment_HeavilyWounded">
             <English>Heavily wounded</English>
             <Czech>Těžce raněn</Czech>
