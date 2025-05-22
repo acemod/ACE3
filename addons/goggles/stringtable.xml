@@ -17,6 +17,18 @@
             <Chinesesimp>护目镜</Chinesesimp>
             <Turkish>Gözlük</Turkish>
         </Key>
+        <Key ID="STR_ACE_Goggles_Respirator_Connect">
+            <English>Connect Respirator</English>
+            <German>Atemschutzgerät Verbinden</German>
+        </Key>
+        <Key ID="STR_ACE_Goggles_Respirator_Disconnect">
+            <English>Disconnect Respirator</English>
+            <German>Atemschutzgerät Trennen</German>
+        </Key>
+        <Key ID="STR_ACE_Goggles_Respirator_Filters">
+            <English>Toggle Filters</English>
+            <German>Atemschutzfilter Montieren/Demontieren</German>
+        </Key>
         <Key ID="STR_ACE_Goggles_SettingDrawOverlay">
             <English>Show Goggles Overlay</English>
             <French>Afficher la superposition des lunettes</French>
