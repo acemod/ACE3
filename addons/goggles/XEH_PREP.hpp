@@ -23,10 +23,10 @@ PREP(clearGlasses);
 PREP(getExplosionIndex);
 
 // respirator
-PREP(checkRespiratorConditions);
-PREP(connectRespirator);
-PREP(toggleMask);
-PREP(hideHose);
+PREP(respiratorCondition);
+PREP(respiratorConnect);
+PREP(respiratorDisconnect);
+PREP(respiratorFilter);
 
 // eventhandlers
 PREP(handleExplosion);
