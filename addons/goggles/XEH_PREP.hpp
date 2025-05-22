@@ -23,7 +23,7 @@ PREP(clearGlasses);
 PREP(getExplosionIndex);
 
 // respirator
-PREP(respiratorCondition);
+PREP(respiratorConditions);
 PREP(respiratorConnect);
 PREP(respiratorDisconnect);
 PREP(respiratorFilter);
