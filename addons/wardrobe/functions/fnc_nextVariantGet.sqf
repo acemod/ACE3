@@ -35,15 +35,15 @@ if (_cfgHistory isEqualTo "") then {
     missionNamespace setVariable [QGVAR(variantHistory), _cfgHistory];
 
     ACE_player addEventHandler ["InventoryClosed", {
-        missionNamespace setVariable [QGVAR(variantHistory), nil ];
-        player removeEventHandler [_thisEvent, _thisEventhandler];
+        GVAR(variantHistory) = nil;
+        ACE_player removeEventHandler [_thisEvent, _thisEventhandler];
     }];
 };
 
 
 private _remaining = _cfgModifiableTo - _cfgHistory;
 
-_remaining = _remaining select { [ace_player, _cfgCurrent, _x] call FUNC(canModifyTo) };
+_remaining = _remaining select { [ACE_player, _cfgCurrent, _x] call FUNC(canModifyTo) };
 
 // Returns ether a random remaining item or alternatively, a random one from the complete array.
 private _return = if (_remaining isNotEqualTo []) then {

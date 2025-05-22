@@ -17,7 +17,7 @@
 
 params [ ["_key", "", [""]] ];
 
-private _queue = missionNamespace getVariable [QGVAR((menuClearQueue)), ""];
+private _queue = missionNamespace getVariable [QGVAR(menuClearQueue), ""];
 
 if (_queue isEqualTo "") then {
     _queue = [];
@@ -26,13 +26,13 @@ if (_queue isEqualTo "") then {
         {
             if (_this isNotEqualTo [1]) exitWith {};
 
-            { GVAR(cache) deleteAt _x } forEach ( missionNamespace getVariable [QGVAR((menuClearQueue)), [] ] );
+            { GVAR(cache) deleteAt _x } forEach ( missionNamespace getVariable [QGVAR(menuClearQueue), [] ] );
 
-            missionNamespace setVariable [QGVAR((menuClearQueue)), nil ];
+            GVAR(menuClearQueue) = nil;
             [_thisType, _thisId] call CBA_fnc_removeEventHandler;
         }
     ] call CBA_fnc_addEventHandlerArgs;
-    missionNamespace setVariable [QGVAR((menuClearQueue)), _queue];
+    missionNamespace setVariable [QGVAR(menuClearQueue), _queue];
 };
 
 _queue pushBackUnique _key;
