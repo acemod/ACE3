@@ -16,16 +16,16 @@ class GVAR(base) {
     // Gesture
     gesture = "Gear";
 
-    // These will be read from the Target Class, so for example, the uniformclass with the rolled up sleaves, it should say "Roll Up Sleeves"
+    // These will be read from the target class, so for example, the uniformclass with the rolled up sleaves, it should say "Roll Up Sleeves"
     alternativePicture = "";
     alternativeDisplayName = "";
 
-    duration = 1; // Minimum Value: 1 - Anything above will produce a progressbar.
+    duration = 1; // Minimum value: 1 - Anything above will produce a progressbar.
 
     fallbackComponent = ""; // To be used as an alternative for components where the intended component is from another addon/mod in case the source addon is not loaded.
 };
 
-// Common Base Class for Uniforms with Sleeves Up/Down Variants
+// Common base class for uniforms with sleeves up/down variants
 class GVAR(base_U_sleeves_up): GVAR(base) {
     alternativeDisplayName = CSTRING(sleevesUp);  
 };
@@ -33,7 +33,7 @@ class GVAR(base_U_sleeves_down): GVAR(base) {
     alternativeDisplayName = CSTRING(sleevesDown);
 };
 
-// Common Base Class for Uniforms with Gloves On/Off Variants
+// Common base class for uniforms with gloves on/off variants
 class GVAR(base_U_gloves_on): GVAR(base) {
     alternativeDisplayName = CSTRING(glovesOn); 
 };
@@ -41,7 +41,7 @@ class GVAR(base_U_gloves_off): GVAR(base) {
     alternativeDisplayName = CSTRING(glovesOff);
 };
 
-// Common Base Class for Uniforms who are open/closed in the front
+// Common base class for uniforms who are open/closed in the front
 class GVAR(base_U_jacket_open): GVAR(base) {
     alternativeDisplayName = CSTRING(jacketOpen); 
 };
@@ -49,7 +49,7 @@ class GVAR(base_U_jacket_closed): GVAR(base) {
     alternativeDisplayName = CSTRING(jacketClose);
 };
 
-// Common Base Class for Helmets with a Visor that can be flipped up or down
+// Common base class for helmets with a visor that can be flipped up or down
 class GVAR(base_H_visor_up): GVAR(base) {
     duration = 0.25;
     gesture ="gestureNod";
@@ -70,7 +70,7 @@ class GVAR(base_H_visor_down): GVAR(base) {
     alternativeDisplayName = CSTRING(visorDown);
 };
 
-// Common Base Class for Headgear with goggles that can be used as a facewear item.
+// Common base class for headgear with goggles that can be used as a facewear item.
 class GVAR(base_H_goggles_on): GVAR(base) {
     gesture ="GestureWipeFace";
     alternativeDisplayName = CSTRING(gogglesOn);
@@ -82,7 +82,7 @@ class GVAR(base_H_goggles_off): GVAR(base) {
 };
 
 
-// Common Base Class for Headgear with a Mask on and Mask Off variant
+// Common base class for headgear with a mask on/off variant
 class GVAR(base_H_mask_on): GVAR(base) {
     gesture ="GestureWipeFace";
     alternativeDisplayName = CSTRING(maskOn);

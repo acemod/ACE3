@@ -77,7 +77,7 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 [ _unit, getText (configFile >> QUOTE(ADDON) >> configName _cfgTarget >> "gesture") ] call EFUNC(common,doGesture);
 
 // Plays Random Sound At the Beginning
-private _sound = [configFile >> QUOTE(ADDON) >> configName _cfgTarget >> "sound"] call cba_fnc_getCfgDataRandom;
+private _sound = [configFile >> QUOTE(ADDON) >> configName _cfgTarget >> "sound"] call CBA_fnc_getCfgDataRandom;
 if (_sound isNotEqualTo "") then {
     [
         CBA_fnc_globalSay3D,
@@ -88,7 +88,7 @@ if (_sound isNotEqualTo "") then {
 
 // Notification
 private _imgNotify = getText (_cfgTarget >> "picture");
-if !(".paa" in _imgNotify) then { _imgNotify = [_imgNotify,"paa"] joinString "." }; // Some vanilla items dont have the .paa and cba notify will display the path as a string without the .paa
-[ ace_common_fnc_displayTextStructured, [["<img image='%1' size=5></img><br/>%2",_imgNotify, getText (_cfgTarget >> "displayName")], 4], _duration * 1.2 ] call CBA_fnc_waitAndExecute;
+if !(".paa" in _imgNotify) then { _imgNotify = [_imgNotify, "paa"] joinString "." }; // Some vanilla items dont have the .paa and cba notify will display the path as a string without the .paa
+[EFUNC(common,displayTextStructured), [["<img image='%1' size=5></img><br/>%2", _imgNotify, getText (_cfgTarget >> "displayName")], 4], _duration * 1.2] call CBA_fnc_waitAndExecute;
 
 nil

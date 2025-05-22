@@ -7,7 +7,7 @@
  * 0: Return as Config? <BOOL> (default: false)
  *
  * Return Value:
- * Array Wardobe Items, ether as Classname or as Config <ARRAY>
+ * Array Wardobe Items, either as Classname or as Config <ARRAY>
  *
  * Example:
  * true call ace_wardrobe_fnc_getAllWardrobeItems;
