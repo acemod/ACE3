@@ -9,22 +9,22 @@ class CfgVehicles {
                     statement = QUOTE(call FUNC(clearGlasses));
                     exceptions[] = {"isNotInside", "isNotSitting", "isNotSwimming", "isNotEscorting"};
                 };
-				class GVAR(ConnectRespirator) {
-					displayName = CSTRING(connectRespirator);
-					condition = QUOTE('combo' call FUNC(checkRespiratorConditions));
-					statement = QUOTE(call FUNC(connectRespirator));
+				class GVAR(respiratorConnect) {
+					displayName = CSTRING(Respirator_Connect);
+					condition = QUOTE('combo' call FUNC(respiratorCondition));
+					statement = QUOTE(call FUNC(respiratorConnect));
                     exceptions[] = {"isNotInside", "isNotSitting", "isNotSwimming", "isNotEscorting"};
 				};
-				class GVAR(toggleMask) {
-					displayName = CSTRING(ToggleMask);
-					condition = QUOTE('mask' call FUNC(checkRespiratorConditions));
-					statement = QUOTE(call FUNC(toggleMask));
+				class GVAR(respiratorDisconnect) {
+					displayName = CSTRING(Respirator_Disconnect);
+					condition = QUOTE('hose' call FUNC(respiratorCondition));
+					statement = QUOTE(call FUNC(respiratorDisconnect));
                     exceptions[] = {"isNotInside", "isNotSitting", "isNotSwimming", "isNotEscorting"};
 				};
-				class GVAR(hideHose) {
-					displayName = CSTRING(HideHose);
-					condition = QUOTE('hose' call FUNC(checkRespiratorConditions));
-					statement = QUOTE(call FUNC(hideHose));
+				class GVAR(respiratorFilter) {
+					displayName = CSTRING(Respirator_Filters);
+					condition = QUOTE('mask' call FUNC(respiratorCondition));
+					statement = QUOTE(call FUNC(respiratorFilter));
                     exceptions[] = {"isNotInside", "isNotSitting", "isNotSwimming", "isNotEscorting"};
 				};
             };
