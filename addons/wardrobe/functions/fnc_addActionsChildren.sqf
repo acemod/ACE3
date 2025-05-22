@@ -1,5 +1,4 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
  * Function to create the ace action children, one for each possible variant of the current item.

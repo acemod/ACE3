@@ -1,5 +1,4 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
  * This function creates children for the main wardrobe action - one for every modifiable Item.

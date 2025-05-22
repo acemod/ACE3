@@ -1,5 +1,4 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
  * CBA Setting - On Setting Changed - Function to activate the Wardrobe-related CBA Context Menu Options

@@ -1,5 +1,4 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
  * This Function checks if the Target Item has an alternative Picture for the Action, if not, it returns the picture property

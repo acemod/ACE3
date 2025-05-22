@@ -1,5 +1,4 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
  * Condition check: Is wardrobe enabled & if the player has an item that can be modified

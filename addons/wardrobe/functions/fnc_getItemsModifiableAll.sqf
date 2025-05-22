@@ -1,5 +1,4 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
  * Function to retrieve modifiable items of a unit. Can be cached for the duration of the interaction menu.

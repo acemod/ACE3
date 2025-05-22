@@ -1,5 +1,4 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
  * Statement of CBA Context Menu Entry - Request the Next Variant.

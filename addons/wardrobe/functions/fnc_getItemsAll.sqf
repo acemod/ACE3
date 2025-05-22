@@ -1,5 +1,4 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
  * Retrieves a list of all items of unit - can be cached for the duration of the ace interaction.

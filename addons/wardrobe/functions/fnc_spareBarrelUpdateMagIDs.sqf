@@ -1,5 +1,4 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
  * Function to update ACE Overheating's Serverside SpareBarrel DataBase with new MagIDs.

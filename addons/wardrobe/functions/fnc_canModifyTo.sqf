@@ -1,5 +1,4 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
  * Condition Check if the unit can modify from current variant to target variant. Checks and compares components.

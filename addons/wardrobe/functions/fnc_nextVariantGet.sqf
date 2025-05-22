@@ -1,5 +1,4 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
  * Context Menu - Return config the "next" variant - if multiple Variants are defined, it will choose randomly.

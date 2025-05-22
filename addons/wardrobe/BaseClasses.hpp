@@ -2,8 +2,6 @@
 
 class GVAR(base) {
 
-    // modifiableTo[] = {""}; // Old version
-
     class modifiableTo {        
     };
 
