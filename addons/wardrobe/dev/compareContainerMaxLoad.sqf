@@ -16,7 +16,7 @@
  * Public: no
  */
 
-private _allWardrobeItems = [true] call FUNC(getAllWardrobeItems) select {
+private _allWardrobeItems = true call FUNC(getAllWardrobeItems) select {
     switch ( getNumber (_x >> "ItemInfo" >> "type") ) do {
         case TYPE_GOGGLE: { false; };
         case TYPE_HEADGEAR: { false; };
@@ -40,7 +40,7 @@ LOG_SYS("CompareMaxLoad","======================================================
     if (_originClassName in _established) then { continue };
     _established pushBack _originClassName;
 
-    private _targets = [_cfgOrigin] call FUNC(getItemsModifiableTo);
+    private _targets = _cfgOrigin call FUNC(getItemsModifiableTo);
 
     {
         private _targetCfg = _x;

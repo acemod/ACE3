@@ -11,7 +11,7 @@
  * Array of all possible variants as config <ARRAY>
  *
  * Example:
- * [_cfgCurrent] call ace_wardrobe_fnc_getItemsModifiableTo
+ * _cfgCurrent call ace_wardrobe_fnc_getItemsModifiableTo
  *
  * Public: No
  */

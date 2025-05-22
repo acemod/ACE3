@@ -11,7 +11,7 @@
  * The return value <BOOL>
  *
  * Example:
- * [_cfg] call ace_wardrobe_fnc_isModifiable
+ * _cfg call ace_wardrobe_fnc_isModifiable
  *
  * Public: No
  */

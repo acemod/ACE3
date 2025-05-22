@@ -11,7 +11,7 @@
  * The return value <BOOL>
  *
  * Example:
- * ['something', player] call ace_wardrobe_fnc_getActionName
+ * _cfg call ace_wardrobe_fnc_getActionsName
  *
  * Public: No
  */

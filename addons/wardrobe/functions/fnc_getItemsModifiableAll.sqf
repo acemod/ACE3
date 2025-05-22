@@ -25,15 +25,14 @@ params [
 
 private _code = {
 
-    [_unit] call FUNC(getItemsAll)
+    _unit call FUNC(getItemsAll)
     apply
-    { [_x] call CBA_fnc_getItemConfig }
+    { _x call CBA_fnc_getItemConfig }
     select
-    { [_x] call FUNC(isModifiable) }
+    { _x call FUNC(isModifiable) }
     apply
-    { [_x, [_x] call FUNC(getItemsModifiableTo) ] }
+    { [_x, _x call FUNC(getItemsModifiableTo) ] }
     select
-    { count (_x#1) > 0 }
     apply
     {
         private _cfgOrigin = _x#0;

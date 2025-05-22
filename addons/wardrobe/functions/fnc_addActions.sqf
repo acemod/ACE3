@@ -12,7 +12,7 @@
  * Array of ACE Child Actions <ARRAY>
  *
  * Example:
- * [_player] call ace_wardrobe_fnc_addActions
+ * _player call ace_wardrobe_fnc_addActions
  *
  * Public: No
  */
@@ -20,7 +20,7 @@
 params ["_unit"];
 
 
-private _modifiableItems = [_unit] call FUNC(getItemsModifiableCurrent);
+private _modifiableItems = _unit call FUNC(getItemsModifiableCurrent);
 private _actions = [];
 {
     private _cfg = _x#0;

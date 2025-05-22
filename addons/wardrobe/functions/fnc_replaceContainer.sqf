@@ -23,7 +23,7 @@ params ["_player", "_cfgOrigin", "_cfgTarget", "_case"];
 
 toFixed 0;
 private _magazineDetails = (magazinesAmmoFull _player) apply { [_x#0, _x#-2, _x#-1] };
-private _loadout = [_player] call CBA_fnc_getLoadout;
+private _loadout = _player call CBA_fnc_getLoadout;
 
 
 //// Handle Special Cases - Pre Replace

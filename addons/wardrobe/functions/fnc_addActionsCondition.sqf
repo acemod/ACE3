@@ -11,7 +11,7 @@
  * condition <BOOL>
  *
  * Example:
- * [_player] call ace_wardrobe_fnc_addActionsCondition
+ * _player call ace_wardrobe_fnc_addActionsCondition
  *
  * Public: No
  */

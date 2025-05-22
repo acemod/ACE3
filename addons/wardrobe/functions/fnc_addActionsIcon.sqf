@@ -11,7 +11,7 @@
  * Path to Icon or "" <STRING>
  *
  * Example:
- * [_cfg] call ace_wardrobe_fnc_getActionIcon
+ * _cfg call ace_wardrobe_fnc_getActionIcon
  *
  * Public: No
  */

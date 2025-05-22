@@ -11,7 +11,7 @@
  * None
  *
  * Example:
- * [true] call ace_wardrobe_fnc_enableContextMenu
+ * true call ace_wardrobe_fnc_enableContextMenu
  *
  * Public: No
  */

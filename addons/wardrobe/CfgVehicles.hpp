@@ -6,9 +6,9 @@ class CfgVehicles {
                 class ADDON {
                     displayName = CSTRING(actionTitle); // Text shown to user
                     icon = QPATHTOF(data\wardrobe_logo.paa);
-                    condition = QUOTE([_player] call FUNC(addActionsCondition));
+                    condition = QUOTE(_player call FUNC(addActionsCondition));
                     statement = "";
-                    insertChildren = QUOTE([_player] call FUNC(addActions));
+                    insertChildren = QUOTE(_player call FUNC(addActions));
                     exceptions[] = {"isNotSwimming","isNotSitting"};
                 };
             };
