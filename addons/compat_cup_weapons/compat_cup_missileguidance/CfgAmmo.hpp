@@ -104,7 +104,7 @@ class CfgAmmo {
         ACE_MISSILE(Sidewinder);
     };
 
-    class CUP_M_AIM_9L_Sidewinder_AA_INTERNAL:CUP_M_AIM_9L_Sidewinder_AA {
+    class CUP_M_AIM_9L_Sidewinder_AA_INTERNAL: CUP_M_AIM_9L_Sidewinder_AA {
         class ace_missileguidance: ace_missileguidance { enabled = 1; };
     };
 
