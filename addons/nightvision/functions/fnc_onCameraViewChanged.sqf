@@ -28,7 +28,7 @@ if (GVAR(disableNVGsWithSights) && {(hmd _unit) != ""}) then {
         || {!([_unit] call EFUNC(common,hasHatch))
             && {[_unit] call EFUNC(common,getTurretIndex) in ([vehicle _unit] call EFUNC(common,getTurretsFFV))}
            }) then {
-        if ((_cameraView == "GUNNER") && {currentVisionMode _unit == 1}) then {
+        if ((_cameraView isEqualTo "GUNNER") && {currentVisionMode _unit > 0}) then {
             _unit action ["NVGogglesOff", _unit];
             _unit setVariable [QGVAR(reenableNVGs), true];
         } else {
