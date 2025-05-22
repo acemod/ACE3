@@ -24,4 +24,4 @@ params ["_unit", "_cfgOrigin", "_cfgTarget", ["_cache", true, [true]]];
 
 private _currentItems = [_unit, _cache] call FUNC(getItemsAll);
 
-count ( _missing select { ! (_x in _currentItems) } ) == 0
+_missing select { ! (_x in _currentItems) } isEqualTo []

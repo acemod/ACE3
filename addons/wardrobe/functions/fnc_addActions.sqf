@@ -5,7 +5,7 @@
  * Each Modifiable Item will have its own children in regard of the items it can be changed towards.
  *
  * Arguments:
- * 0: The Unit whose wearable shall be changed - usually the player themselves <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * Array of ACE Child Actions <ARRAY>

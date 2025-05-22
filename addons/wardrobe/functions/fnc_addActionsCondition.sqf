@@ -20,5 +20,5 @@ params ["_player"];
 missionNamespace getVariable [QGVAR(enableAction), false]
 &&
 { 
-    count ([_player] call FUNC(getItemsModifiableCurrent)) > 0
+    _player call FUNC(getItemsModifiableCurrent) isEqualTo []
 }

@@ -32,6 +32,7 @@ private _code = {
     apply
     { [_x, _x call FUNC(getItemsModifiableTo) ] }
     select
+    { (_x#1) isNotEqualTo [] }
     apply
     {
         private _cfgOrigin = _x#0;
@@ -41,7 +42,7 @@ private _code = {
         ]
     }
     select
-    { count (_x#1) > 0 }
+    { (_x#1) isNotEqualTo [] }
 };
 
 private _caching = {
