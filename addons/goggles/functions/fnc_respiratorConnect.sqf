@@ -1,3 +1,20 @@
+#include "..\script_component.hpp"
+/*
+ * Author: Bohemia Interactive, adapted to ACE by JetfireBlack
+ * Removes respirator filter if it has one and connects appropriate backpack hose
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * None
+ *
+ * Example:
+ * call ace_goggles_fnc_respiratorConnect
+ *
+ * Public: yes
+ */
+ 
 private _unit = ACE_player;
 
 if (!local _unit) exitWith {};
@@ -7,6 +24,7 @@ private _backpack		= backpackContainer _unit;
 private _backpackType	= backpack _unit;
 private _objectTextures = getObjectTextures _backpack;
 
+// shows correct hoses and removes filters for each respirator+backpack combination
 if (_objectTextures#1 isEqualTo "" && _objectTextures#2 isEqualTo "") then {
 	switch true do {
 		case (_goggles in ["G_AirPurifyingRespirator_01_F", "G_AirPurifyingRespirator_01_nofilter_F"]): {
