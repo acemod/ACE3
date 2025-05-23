@@ -4,25 +4,22 @@
  * Checks if respirator interactions should be shown based on equipment combinations
  *
  * Arguments:
- * 0: Mode <STRING>
-
+ * 0: mode <STRING>
  *
  * Return Value:
  * Should interaction be shown? <BOOL>
  *
  * Example:
- * "combo" call ace_goggles_fnc_respiratorConditions
-
+ * ["combo"] call ace_goggles_fnc_respiratorConditions
  *
- * Public: No
-
+ * Public: yes
  */
  
 private _unit = ACE_player;
 
 if (!local _unit) exitWith {false};
 
-private _mode = _this;
+params ["_mode"];
 
 private _goggles		= goggles _unit;
 private _backpack		= backpackContainer _unit;
@@ -70,6 +67,6 @@ switch _mode do {
 		if !(_objectTextures#1 isNotEqualTo "" || _objectTextures#2 isNotEqualTo "") exitWith {};
 		_showAction = true;
 	};
-	default {_showAction = false};
+	default {};
 };
 _showAction;
