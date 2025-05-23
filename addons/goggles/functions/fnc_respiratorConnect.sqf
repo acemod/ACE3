@@ -4,18 +4,19 @@
  * Removes respirator filter if it has one and connects appropriate backpack hose
  *
  * Arguments:
- * None
+ * 0: Optional unit <OBJECT> (default: ACE_player)
  *
  * Return Value:
  * None
  *
- * Example:
+ * Examples:
+ * [player] call ace_goggles_fnc_respiratorConnect
  * call ace_goggles_fnc_respiratorConnect
  *
- * Public: Yes
+ * Public: No
  */
  
-private _unit = ACE_player;
+params [["_unit", ACE_player, [objNull]]];
 
 if (!local _unit) exitWith {};
 
