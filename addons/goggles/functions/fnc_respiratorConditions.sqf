@@ -14,7 +14,7 @@
  * "combo" call ace_goggles_fnc_respiratorConditions
 
  *
- * Public: Yes
+ * Public: No
 
  */
  
@@ -22,7 +22,7 @@ private _unit = ACE_player;
 
 if (!local _unit) exitWith {false};
 
-params ["_mode"];
+private _mode = _this;
 
 private _goggles		= goggles _unit;
 private _backpack		= backpackContainer _unit;
