@@ -28,22 +28,22 @@ private _objectTextures = getObjectTextures _backpack;
 private _showAction     = false;
 
 // Contact DLC respirators
-private _allowedGoggles =   [    
-                                "G_AirPurifyingRespirator_01_F",
-                                "G_AirPurifyingRespirator_01_nofilter_F",
-                                "G_AirPurifyingRespirator_02_black_F",
-                                "G_AirPurifyingRespirator_02_black_nofilter_F",
-                                "G_AirPurifyingRespirator_02_olive_F",
-                                "G_AirPurifyingRespirator_02_olive_nofilter_F",
-                                "G_AirPurifyingRespirator_02_sand_F",
-                                "G_AirPurifyingRespirator_02_sand_nofilter_F",
-                                "G_RegulatorMask_F"
-                            ];
+private _allowedGoggles = [    
+   "G_AirPurifyingRespirator_01_F",
+   "G_AirPurifyingRespirator_01_nofilter_F",
+   "G_AirPurifyingRespirator_02_black_F",
+   "G_AirPurifyingRespirator_02_black_nofilter_F",
+   "G_AirPurifyingRespirator_02_olive_F",
+   "G_AirPurifyingRespirator_02_olive_nofilter_F",
+   "G_AirPurifyingRespirator_02_sand_F",
+   "G_AirPurifyingRespirator_02_sand_nofilter_F",
+   "G_RegulatorMask_F"
+];
 // Contact DLC respirator backpacks
 private _allowedBackpacks = [
-                                "B_CombinationUnitRespirator_01_F",
-                                "B_SCBA_01_F"
-                            ];
+   "B_CombinationUnitRespirator_01_F",
+   "B_SCBA_01_F"
+];
 
 if (isNull _backpack || {!(_backpackType in _allowedBackpacks)}) then {_objectTextures = ["","","","",""]};
 
