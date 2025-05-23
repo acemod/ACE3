@@ -17,7 +17,7 @@ class CfgVehicles {
 				};
 				class GVAR(respiratorDisconnect) {
 					displayName = CSTRING(Respirator_Disconnect);
-					condition = QUOTE(['hose'] call FUNC(respiratorConditions));
+					condition = QUOTE('hose' call FUNC(respiratorConditions));
 					statement = QUOTE(call FUNC(respiratorDisconnect));
                     exceptions[] = {"isNotInside", "isNotSitting", "isNotSwimming", "isNotEscorting"};
 				};
