@@ -12,7 +12,7 @@
  * Example:
  * call ace_goggles_fnc_respiratorConnect
  *
- * Public: yes
+ * Public: Yes
  */
  
 private _unit = ACE_player;
