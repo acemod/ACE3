@@ -23,7 +23,7 @@ class CfgVehicles {
 				};
 				class GVAR(respiratorFilter) {
 					displayName = CSTRING(Respirator_Filters);
-					condition = QUOTE(['mask'] call FUNC(respiratorConditions));
+					condition = QUOTE('mask' call FUNC(respiratorConditions));
 					statement = QUOTE(call FUNC(respiratorFilter));
                     exceptions[] = {"isNotInside", "isNotSitting", "isNotSwimming", "isNotEscorting"};
 				};
