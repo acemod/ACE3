@@ -13,7 +13,7 @@
  * [player] call ace_goggles_fnc_respiratorConnect
  * call ace_goggles_fnc_respiratorConnect
  *
- * Public: No
+ * Public: Yes
  */
  
 params [["_unit", ACE_player, [objNull]]];
