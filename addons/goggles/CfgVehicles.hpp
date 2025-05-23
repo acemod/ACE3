@@ -11,7 +11,7 @@ class CfgVehicles {
                 };
 				class GVAR(respiratorConnect) {
 					displayName = CSTRING(Respirator_Connect);
-					condition = QUOTE(['combo'] call FUNC(respiratorConditions));
+					condition = QUOTE('combo' call FUNC(respiratorConditions));
 					statement = QUOTE(call FUNC(respiratorConnect));
                     exceptions[] = {"isNotInside", "isNotSitting", "isNotSwimming", "isNotEscorting"};
 				};
