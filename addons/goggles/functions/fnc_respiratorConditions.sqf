@@ -14,7 +14,8 @@
  * "combo" call ace_goggles_fnc_respiratorConditions
 
  *
- * Public: yes
+ * Public: Yes
+
  */
  
 private _unit = ACE_player;
