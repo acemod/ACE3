@@ -4,7 +4,8 @@
  * Checks if respirator interactions should be shown based on equipment combinations
  *
  * Arguments:
- * 0: mode <STRING>
+ * 0: Mode <STRING>
+
  *
  * Return Value:
  * Should interaction be shown? <BOOL>
