@@ -11,7 +11,8 @@
  * Should interaction be shown? <BOOL>
  *
  * Example:
- * ["combo"] call ace_goggles_fnc_respiratorConditions
+ * "combo" call ace_goggles_fnc_respiratorConditions
+
  *
  * Public: yes
  */
