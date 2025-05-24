@@ -85,5 +85,6 @@
     [LSTRING(CookOff_disableSound_name), LSTRING(CookOff_disableSound_tooltip)],
     LSTRING(category_displayName),
     false,
-    1
+    1,
+    true
 ] call CBA_fnc_addSetting;
