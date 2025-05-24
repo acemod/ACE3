@@ -191,38 +191,28 @@
         <Key ID="STR_ACE_CookOff_disableProjectiles_tooltip">
             <English>Disables projectiles firing from the vehicle</English>
             <French>Désactive le tir de projectiles depuis le véhicule</French>
-            <Spanish>Desactiva el disparo de proyectiles desde el vehículo</Spanish>
-            <Italian>Disattiva il fuoco dei proiettili dal veicolo</Italian>
-            <Russian>Отключает стрельбу снарядами из машины</Russian>
-            <German>Deaktiviert das Abfeuern von Projektilen aus dem Fahrzeug</German>
-            <Japanese>車両からの発射物の発射を無効にします</Japanese>
+            <Spanish>Desactiva la detonación de proyectiles desde el interior del vehículo</Spanish>
+            <Czech>Vypnout projektily samovznícející se munice ze zničeného vozidla</Czech>
         </Key>
         <Key ID="STR_ACE_CookOff_disableSound_tooltip">
             <English>Disables the sound of projectiles cooking off from inside the vehicle</English>
             <French>Désactive le son des projectiles se déclenchant à l'intérieur du véhicule</French>
-            <Spanish>Desactiva el sonido de los proyectiles que explotan desde el interior del vehículo</Spanish>
-            <Italian>Disattiva il suono dei proiettili che esplodono dall'interno del veicolo</Italian>
-            <Russian>Отключает звук снарядов, взрывающихся изнутри машины</Russian>
-            <German>Deaktiviert das Geräusch von Projektilen, die von innen am Fahrzeug explodieren</German>
-            <Japanese>車両内から弾薬が爆発する音を無効にします</Japanese>
+            <Spanish>Desactiva el sonido de los proyectiles que se detonan dentro del interior del vehículo</Spanish>
+            <Czech>Vypnout zvuky samovznícející se munice ze zničeného vozidla</Czech>
+
         </Key>
         <Key ID="STR_ACE_CookOff_disableProjectiles_name">
-            <Original>Disable Projectile Fire</Original>
+            <English>Disable Projectile Fire</English>
             <French>Désactiver le tir de projectiles</French>
-            <Spanish>Desactivar el disparo de proyectiles</Spanish>
-            <Italian>Disattiva il fuoco dei proiettili</Italian>
-            <Russian>Отключить стрельбу снарядами</Russian>
-            <German>Projektilbeschuss deaktivieren</German>
-            <Japanese>発射物の発射を無効化</Japanese>
+            <Spanish>Desactivar la detonación de proyectiles</Spanish>
+            <Czech>Vypnout zvuky při samovznícení munice</Czech>
+
         </Key>
         <Key ID="STR_ACE_CookOff_disableSound_name">
-            <Original>Disable Cook-Off Sound</Original>
+            <English>Disable Cook-Off Sound</English>
             <French>Désactiver le son d’explosion</French>
             <Spanish>Desactivar sonido de detonación</Spanish>
-            <Italian>Disattiva il suono dell'esplosione</Italian>
-            <Russian>Отключить звук детонации</Russian>
-            <German>Explosionsgeräusch deaktivieren</German>
-            <Japanese>誘爆音を無効化</Japanese>
+            <Czech>Vypnout projektily při samovznícení munice</Czech>
         </Key>
     </Package>
 </Project>
