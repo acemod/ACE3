@@ -199,7 +199,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_disableSound_tooltip">
             <English>Disables the 'popcorn' sound of projectiles cooking off inside the vehicle</English>
-            <French>Désactive le son de « pop-corn » des projectiles explosant dans le véhicule</French>
+            <French>Désactive le son de « pop-corn » des projectiles explosant à l'intérieur du véhicule</French>
             <Spanish>Desactiva el sonido de "palomitas" de los proyectiles dentro del vehículo</Spanish>
             <Italian>Disattiva il suono "popcorn" dei proiettili che esplodono nel veicolo</Italian>
             <Russian>Отключает «попкорновый» звук снарядов, взрывающихся внутри машины</Russian>
