@@ -198,13 +198,13 @@
             <Japanese>車両からの発射物の発射を無効にします</Japanese>
         </Key>
         <Key ID="STR_ACE_CookOff_disableSound_tooltip">
-            <English>Disables the 'popcorn' sound of projectiles cooking off inside the vehicle</English>
-            <French>Désactive le son de « pop-corn » des projectiles explosant à l'intérieur du véhicule</French>
-            <Spanish>Desactiva el sonido de "palomitas" de los proyectiles dentro del vehículo</Spanish>
-            <Italian>Disattiva il suono "popcorn" dei proiettili che esplodono nel veicolo</Italian>
-            <Russian>Отключает «попкорновый» звук снарядов, взрывающихся внутри машины</Russian>
-            <German>Deaktiviert das „Popcorn“-Geräusch von Projektilen im Fahrzeug</German>
-            <Japanese>車両内で弾薬が爆発する「ポップコーン音」を無効にします</Japanese>
+            <English>Disables the sound of projectiles cooking off from inside the vehicle</English>
+            <French>Désactive le son des projectiles se déclenchant à l'intérieur du véhicule</French>
+            <Spanish>Desactiva el sonido de los proyectiles que explotan desde el interior del vehículo</Spanish>
+            <Italian>Disattiva il suono dei proiettili che esplodono dall'interno del veicolo</Italian>
+            <Russian>Отключает звук снарядов, взрывающихся изнутри машины</Russian>
+            <German>Deaktiviert das Geräusch von Projektilen, die von innen am Fahrzeug explodieren</German>
+            <Japanese>車両内から弾薬が爆発する音を無効にします</Japanese>
         </Key>
         <Key ID="STR_ACE_CookOff_disableProjectiles_name">
             <Original>Disable Projectile Fire</Original>
