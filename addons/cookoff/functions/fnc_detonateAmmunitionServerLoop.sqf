@@ -76,6 +76,9 @@ if (
 private _magazineIndex = floor random (count _magazines);
 private _magazine = _magazines select _magazineIndex;
 _magazine params ["_magazineClassname", "_ammoCount", "_spawnProjectile", "_magazineInfo"];
+if(!GVAR(cookoffDisableProjectiles)) then {
+    _spawnProjectile = false;
+};
 
 // Make sure ammo is at least 0
 _ammoCount = _ammoCount max 0;
@@ -159,7 +162,7 @@ private _effect2pos = _object selectionPosition "destructionEffect2";
 private _fnc_spawnProjectile = {
     // If the magazines are inside of the cargo (inventory), don't let their projectiles escape the interior of the vehicle
     if (!_spawnProjectile) exitWith {};
-
+    
     params ["_flyAway"];
 
     private _spawnPos = _object modelToWorld [-0.2 + random 0.4, -0.2 + random 0.4, random 3];
@@ -184,23 +187,19 @@ private _fnc_spawnProjectile = {
 switch (_simType) do {
     case "shotbullet": {
         [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
-        if(!GVAR(cookoffDisableProjectiles)) exitWith {};
-
+        
         if (random 1 < 0.6) then {
             true call _fnc_spawnProjectile;
         };
     };
     case "shotshell": {
         [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
-        if(!GVAR(cookoffDisableProjectiles)) exitWith {};
 
         if (random 1 < 0.15) then {
             true call _fnc_spawnProjectile;
         };
     };
     case "shotgrenade": {
-        if(!GVAR(cookoffDisableProjectiles)) exitWith {};
-
         if (random 1 < 0.9) then {
             _speed = 0;
         };
@@ -210,8 +209,6 @@ switch (_simType) do {
     case "shotrocket";
     case "shotmissile";
     case "shotsubmunitions": {
-        if(!GVAR(cookoffDisableProjectiles)) exitWith {};
-
         if (random 1 < 0.1) then {
             [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
 
@@ -222,16 +219,12 @@ switch (_simType) do {
     };
     case "shotdirectionalbomb";
     case "shotmine": {
-        if(!GVAR(cookoffDisableProjectiles)) exitWith {};
-
         if (random 1 < 0.5) then {
             // _speed should be 0, but as it doesn't fly away, no need to set _speed
             false call _fnc_spawnProjectile;
         };
     };
     case "shotilluminating": {
-        if(!GVAR(cookoffDisableProjectiles)) exitWith {};
-
         if (random 1 < 0.15) then {
             (random 1 < 0.3) call _fnc_spawnProjectile;
         };
