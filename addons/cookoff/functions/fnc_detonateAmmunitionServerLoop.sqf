@@ -209,11 +209,14 @@ switch (_simType) do {
     case "shotrocket";
     case "shotmissile";
     case "shotsubmunitions": {
+        if(GVAR(
         if (random 1 < 0.1) then {
             [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
-
+            
             (random 1 < 0.3) call _fnc_spawnProjectile;
         } else {
+            // We use the gvar instead of _spawnProjectile since this piece is not dependant on that variable.
+            if (!GVAR(cookoffDisableProjectiles)) exitWith {};
             createVehicle ["ACE_ammoExplosionLarge", _object modelToWorld _effect2pos, [], 0 , "CAN_COLLIDE"];
         };
     };
