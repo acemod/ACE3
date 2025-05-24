@@ -184,6 +184,7 @@ private _fnc_spawnProjectile = {
 switch (_simType) do {
     case "shotbullet": {
         [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
+        if(!GVAR(cookoffDisableProjectiles)) exitWith {};
 
         if (random 1 < 0.6) then {
             true call _fnc_spawnProjectile;
@@ -191,12 +192,15 @@ switch (_simType) do {
     };
     case "shotshell": {
         [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
+        if(!GVAR(cookoffDisableProjectiles)) exitWith {};
 
         if (random 1 < 0.15) then {
             true call _fnc_spawnProjectile;
         };
     };
     case "shotgrenade": {
+        if(!GVAR(cookoffDisableProjectiles)) exitWith {};
+
         if (random 1 < 0.9) then {
             _speed = 0;
         };
@@ -206,6 +210,8 @@ switch (_simType) do {
     case "shotrocket";
     case "shotmissile";
     case "shotsubmunitions": {
+        if(!GVAR(cookoffDisableProjectiles)) exitWith {};
+
         if (random 1 < 0.1) then {
             [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
 
@@ -216,12 +222,16 @@ switch (_simType) do {
     };
     case "shotdirectionalbomb";
     case "shotmine": {
+        if(!GVAR(cookoffDisableProjectiles)) exitWith {};
+
         if (random 1 < 0.5) then {
             // _speed should be 0, but as it doesn't fly away, no need to set _speed
             false call _fnc_spawnProjectile;
         };
     };
     case "shotilluminating": {
+        if(!GVAR(cookoffDisableProjectiles)) exitWith {};
+
         if (random 1 < 0.15) then {
             (random 1 < 0.3) call _fnc_spawnProjectile;
         };
