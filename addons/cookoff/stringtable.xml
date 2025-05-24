@@ -188,5 +188,23 @@
             <Korean>유폭 중 모든 탄약을 제거합니다.</Korean>
             <Japanese>誘爆によって全ての弾薬を除去します。</Japanese>
         </Key>
+        <Key ID="STR_ACE_CookOff_disableProjectiles">
+            <English>Disables projectiles firing from the vehicle</English>
+            <French>Désactive le tir de projectiles depuis le véhicule</French>
+            <Spanish>Desactiva el disparo de proyectiles desde el vehículo</Spanish>
+            <Italian>Disattiva il fuoco dei proiettili dal veicolo</Italian>
+            <Russian>Отключает стрельбу снарядами из машины</Russian>
+            <German>Deaktiviert das Abfeuern von Projektilen aus dem Fahrzeug</German>
+            <Japanese>車両からの発射物の発射を無効にします</Japanese>
+        </Key>
+        <Key ID="STR_ACE_CookOff_disableSound">
+            <English>Disables the 'popcorn' sound of projectiles cooking off inside the vehicle</English>
+            <French>Désactive le son de « pop-corn » des projectiles explosant dans le véhicule</French>
+            <Spanish>Desactiva el sonido de "palomitas" de los proyectiles dentro del vehículo</Spanish>
+            <Italian>Disattiva il suono "popcorn" dei proiettili che esplodono nel veicolo</Italian>
+            <Russian>Отключает «попкорновый» звук снарядов, взрывающихся внутри машины</Russian>
+            <German>Deaktiviert das „Popcorn“-Geräusch von Projektilen im Fahrzeug</German>
+            <Japanese>車両内で弾薬が爆発する「ポップコーン音」を無効にします</Japanese>
+        </Key>
     </Package>
 </Project>
