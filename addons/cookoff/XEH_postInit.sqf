@@ -57,6 +57,9 @@ if (isServer) then {
 }, true, ["Man", "StaticWeapon"], true] call CBA_fnc_addClassEventHandler; // Use "Man" to exclude animals as well
 
 if (hasInterface) then {
+    // If the sound is disabled, we exit.
+    if(!GVAR(cookoffDisableSound)) exitWith {};
+    
     // Plays a sound locally, so that different sounds can be used for various distances
     [QGVAR(playCookoffSound), {
         params ["_object", "_sound"];
