@@ -69,3 +69,21 @@
     true,
     1
 ] call CBA_fnc_addSetting;
+
+[
+    QGVAR(cookoffDisableProjectiles),
+    "CHECKBOX",
+    [LSTRING(CookOff_disableProjectiles_name), LSTRING(CookOff_disableProjectiles_tooltip)],
+    LSTRING(category_displayName),
+    true,
+    1
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(cookoffDisableSound),
+    "CHECKBOX",
+    [LSTRING(CookOff_disableSound_name), LSTRING(CookOff_disableSound_tooltip)],
+    LSTRING(category_displayName),
+    true,
+    1
+] call CBA_fnc_addSetting;
