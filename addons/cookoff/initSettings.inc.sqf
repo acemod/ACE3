@@ -75,7 +75,7 @@
     "CHECKBOX",
     [LSTRING(CookOff_disableProjectiles_name), LSTRING(CookOff_disableProjectiles_tooltip)],
     LSTRING(category_displayName),
-    true,
+    false,
     1
 ] call CBA_fnc_addSetting;
 
@@ -84,6 +84,6 @@
     "CHECKBOX",
     [LSTRING(CookOff_disableSound_name), LSTRING(CookOff_disableSound_tooltip)],
     LSTRING(category_displayName),
-    true,
+    false,
     1
 ] call CBA_fnc_addSetting;
