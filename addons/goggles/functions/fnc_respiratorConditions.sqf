@@ -27,44 +27,40 @@ private _backpackType   = backpack _unit;
 private _objectTextures = getObjectTextures _backpack;
 private _showAction     = false;
 
-// Contact DLC respirators
-private _allowedGoggles = [    
-   "G_AirPurifyingRespirator_01_F",
-   "G_AirPurifyingRespirator_01_nofilter_F",
-   "G_AirPurifyingRespirator_02_black_F",
-   "G_AirPurifyingRespirator_02_black_nofilter_F",
-   "G_AirPurifyingRespirator_02_olive_F",
-   "G_AirPurifyingRespirator_02_olive_nofilter_F",
-   "G_AirPurifyingRespirator_02_sand_F",
-   "G_AirPurifyingRespirator_02_sand_nofilter_F",
-   "G_RegulatorMask_F"
-];
-// Contact DLC respirator backpacks
-private _allowedBackpacks = [
-   "B_CombinationUnitRespirator_01_F",
-   "B_SCBA_01_F"
-];
+// retrieve paired respirator and add to cache if not present.
+private _respiratorPair = GVAR(respiratorPairs) getOrDefault [_goggles, getText (configFile >> "CfgGlasses" >> _goggles >> "ACE_RespiratorFilterPair"), true];
 
-if (isNull _backpack || {!(_backpackType in _allowedBackpacks)}) then {_objectTextures = ["","","","",""]};
+// retrieve paired backpacks with textures and add to cache if not present.
+private _respiratorHoseList = GVAR(respiratorHoseList) getOrDefault [_goggles, createHashMapFromArray getArray (configFile >> "CfgGlasses" >> _goggles >> "ACE_RespiratorHoseList"), true];
+
+// fallback for backpacks with hoses without valid mask (like when switching goggles)
+private _respiratorHoseTextures = GVAR(respiratorHoseTextures) getOrDefault [_backpackType, getArray (configFile >> "CfgVehicles" >> _backpackType >> "ACE_RespiratorHoseTextures"), true];
+
+_fnc_checkHose = {
+    private _hoseConnected = false;
+    {
+        if (_x isEqualType 0) then {continue};
+        if (_objectTextures#_forEachIndex isNotEqualTo "") exitWith {_hoseConnected = true};
+    } forEach (GVAR(respiratorHoseList) get _goggles getOrDefault [_backpackType, GVAR(respiratorHoseTextures) get _backpackType]);
+    _hoseConnected;
+};
 
 switch _mode do {
     // only show when appropriate respirator and backpack are worn
     case "combo": {
-        if !(_goggles in _allowedGoggles) exitWith {};
-        if !(_backpackType in _allowedBackpacks) exitWith {};
-        if (_objectTextures#1 isNotEqualTo "" || _objectTextures#2 isNotEqualTo "") exitWith {};
+        if !(_backpackType in _respiratorHoseList) exitWith {};
+        if (call _fnc_checkHose) exitWith {};
         _showAction = true;
     };
     // always show when wearing mask with filters
     case "mask": {
-        if !(_goggles in (_allowedGoggles - ["G_RegulatorMask_F"])) exitWith {};
-        if (_objectTextures#1 isNotEqualTo "" || _objectTextures#2 isNotEqualTo "") exitWith {};
+        if (_respiratorPair isEqualTo "") exitWith {};
+        if (call _fnc_checkHose) exitWith {};
         _showAction = true;
     };
     // shown only when hose is present regardless of respirator (Arma does not dynamically remove the hose)
     case "hose": {
-        if !(_backpackType in _allowedBackpacks) exitWith {};
-        if !(_objectTextures#1 isNotEqualTo "" || _objectTextures#2 isNotEqualTo "") exitWith {};
+        if !(call _fnc_checkHose) exitWith {};
         _showAction = true;
     };
     default {};
