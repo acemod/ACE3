@@ -84,7 +84,7 @@ if (_hasGimbal) then {
 
     private _lastGroundPos = _cameraNamespace getVariable [QGVAR(lastMovedGroundPos), [0, 0, 0]];
 
-    if !((_movingCameraX || _movingCameraY) || true) then {
+    if !(_movingCameraX || _movingCameraY) then {
         // ToDo: Unreachable code, var known undefined //IGNORE_PRIVATE_WARNING ["_seekerTargetPos"];
         // If we designate a target set the current tracking point to the current ground point to avoid unwanted behavior from static cameras
         if (_designating && !_designatedLastFrame) then {
