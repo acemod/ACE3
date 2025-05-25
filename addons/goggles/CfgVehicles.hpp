@@ -30,4 +30,12 @@ class CfgVehicles {
             };
         };
     };
+    class Bag_Base;
+    class B_SCBA_01_base_F: Bag_Base {
+        ACE_RespiratorHoseTextures[] = {0,"",""};
+    };
+    
+    class B_CombinationUnitRespirator_01_Base_F: Bag_Base {
+        ACE_RespiratorHoseTextures[] = {0,"","",""};
+    };
 };
