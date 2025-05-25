@@ -73,7 +73,7 @@
 [
     QGVAR(cookoffDisableProjectiles),
     "CHECKBOX",
-    [LSTRING(CookOff_disableProjectiles_name), LSTRING(CookOff_disableProjectiles_tooltip)],
+    [LSTRING(disableProjectiles_name), LSTRING(disableProjectiles_tooltip)],
     LSTRING(category_displayName),
     false,
     1
