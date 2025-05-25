@@ -15,7 +15,7 @@
  * Public: no
  */
 
-private _allWardrobeItems = true call FUNC(getAllWardrobeItems) select {
+private _allWardrobeItems = flatten ( ["CfgWeapons", "CfgGlasses"] apply { ( QUOTE(_x call FUNC(isModifiable)) configClasses (configFile >> _x) ) } ) select {
     switch ( getNumber (_x >> "ItemInfo" >> "type") ) do {
         case TYPE_GOGGLE: { false; };
         case TYPE_HEADGEAR: { false; };

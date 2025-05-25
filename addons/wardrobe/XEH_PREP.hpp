@@ -25,8 +25,6 @@ PREP(addActionsIcon);
 PREP(cacheGet);
 PREP(cacheSet);
 PREP(clearOnClosedInteractionMenu);
-// Debug
-PREP(getAllWardrobeItems);
 // CBA Context Menu
 PREP(enableContextMenu);
 PREP(nextVariantDo);
