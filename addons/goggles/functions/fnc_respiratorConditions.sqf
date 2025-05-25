@@ -36,7 +36,7 @@ private _respiratorHoseList = GVAR(respiratorHoseList) getOrDefault [_goggles, c
 // fallback for backpacks with hoses without valid mask (like when switching goggles)
 private _respiratorHoseTextures = GVAR(respiratorHoseTextures) getOrDefault [_backpackType, getArray (configFile >> "CfgVehicles" >> _backpackType >> "ACE_RespiratorHoseTextures"), true];
 
-_fnc_checkHose = {
+private _fnc_checkHose = {
     private _hoseConnected = false;
     {
         if (_x isEqualType 0) then {continue};
