@@ -30,16 +30,6 @@ If the player switches from a variant with more components to a variant with les
 
 More examples can be found below.
 
-### 1.2 Config Guidelines
-
-- A Container (uniform, vest, backpack) should never change its `maximumLoad`, unless there is a really good reason for it. This will result in the loss of items.
-- Variants should not "magically" add/remove parts to/from themselves, unless it's handled through a component, especially when they add protection or functionality.
-  - Do: Uniforms with and without gloves should be fine in most cases, as they are cosmetical and don't break continuity/logic.
-  - Do: Helmets with integral flip-down visors.
-  - Don't: Helmet with additional armor or face protector without the requirement of some component that will be removed from the inventory.
-- There should not be a difference in weight or container capacity between the different variants unless components get added/removed.
-  - For Example: `Mass of helmet with goggles = mass of helmet + mass of goggles.`
-
 ## 2. Config
 
 Only directly defined subclasses will be taken into account. A fully inherited subclass will be ignored and will not provide any interaction. The `ace_wardrobe` properties are to be found as a subclass of the item itself. Multiple base configs are designed at root of `configFile`.
