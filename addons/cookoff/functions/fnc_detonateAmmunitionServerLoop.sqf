@@ -209,7 +209,6 @@ switch (_simType) do {
     case "shotrocket";
     case "shotmissile";
     case "shotsubmunitions": {
-        if(GVAR(
         if (random 1 < 0.1) then {
             [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
             
