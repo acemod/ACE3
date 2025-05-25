@@ -11,7 +11,7 @@
  * Missile Aim PosASL <ARRAY>
  *
  * Example:
- * [[], [], []] call ace_spike_fnc_seeker;
+ * [[], [], []] call ace_spike_fnc_seeker
  *
  * Public: No
  */

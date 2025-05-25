@@ -12,7 +12,7 @@
  * Missile Aim PosASL <ARRAY>
  *
  * Example:
- * [[], [], []] call ace_spike_fnc_getTargetPosition;
+ * [[], [], []] call ace_spike_fnc_getTargetPosition
  *
  * Public: No
  */
