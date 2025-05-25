@@ -17,10 +17,9 @@
 
 params [ ["_key", "", [""]] ];
 
-private _queue = missionNamespace getVariable [QGVAR(menuClearQueue), ""];
 
-if (_queue isEqualTo "") then {
-    _queue = [];
+if (isNil QGVAR(menuClearQueue)) then {
+
     [
         "ace_interactMenuClosed",
         {
@@ -32,9 +31,13 @@ if (_queue isEqualTo "") then {
             [_thisType, _thisId] call CBA_fnc_removeEventHandler;
         }
     ] call CBA_fnc_addEventHandlerArgs;
-    missionNamespace setVariable [QGVAR(menuClearQueue), _queue];
-};
 
-_queue pushBackUnique _key;
+    GVAR(menuClearQueue) = [_key];
+
+} else {
+
+    GVAR(menuClearQueue) pushBackUnique _key;
+
+};
 
 nil
