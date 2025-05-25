@@ -188,5 +188,31 @@
             <Korean>유폭 중 모든 탄약을 제거합니다.</Korean>
             <Japanese>誘爆によって全ての弾薬を除去します。</Japanese>
         </Key>
+        <Key ID="STR_ACE_CookOff_disableProjectiles_tooltip">
+            <English>Disables projectiles firing from the vehicle</English>
+            <French>Désactive le tir de projectiles depuis le véhicule</French>
+            <Spanish>Desactiva la detonación de proyectiles desde el interior del vehículo</Spanish>
+            <Czech>Vypnout projektily samovznícející se munice ze zničeného vozidla</Czech>
+        </Key>
+        <Key ID="STR_ACE_CookOff_disableSound_tooltip">
+            <English>Disables the sound of projectiles cooking off from inside the vehicle</English>
+            <French>Désactive le son des projectiles se déclenchant à l'intérieur du véhicule</French>
+            <Spanish>Desactiva el sonido de los proyectiles que se detonan dentro del interior del vehículo</Spanish>
+            <Czech>Vypnout zvuky samovznícející se munice ze zničeného vozidla</Czech>
+
+        </Key>
+        <Key ID="STR_ACE_CookOff_disableProjectiles_name">
+            <English>Disable Projectile Fire</English>
+            <French>Désactiver le tir de projectiles</French>
+            <Spanish>Desactivar la detonación de proyectiles</Spanish>
+            <Czech>Vypnout zvuky při samovznícení munice</Czech>
+
+        </Key>
+        <Key ID="STR_ACE_CookOff_disableSound_name">
+            <English>Disable Cook-Off Sound</English>
+            <French>Désactiver le son d’explosion</French>
+            <Spanish>Desactivar sonido de detonación</Spanish>
+            <Czech>Vypnout projektily při samovznícení munice</Czech>
+        </Key>
     </Package>
 </Project>

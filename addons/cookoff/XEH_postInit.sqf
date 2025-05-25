@@ -62,6 +62,9 @@ if (hasInterface) then {
         params ["_object", "_sound"];
 
         if (isNull _object) exitWith {};
+        
+        // If the sound is disabled, we exit.
+        if(!GVAR(cookoffDisableSound)) exitWith {};
 
         private _distance = _object distance (positionCameraToWorld [0, 0, 0]);
 

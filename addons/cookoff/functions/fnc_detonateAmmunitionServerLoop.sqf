@@ -76,6 +76,9 @@ if (
 private _magazineIndex = floor random (count _magazines);
 private _magazine = _magazines select _magazineIndex;
 _magazine params ["_magazineClassname", "_ammoCount", "_spawnProjectile", "_magazineInfo"];
+if(!GVAR(cookoffDisableProjectiles)) then {
+    _spawnProjectile = false;
+};
 
 // Make sure ammo is at least 0
 _ammoCount = _ammoCount max 0;
@@ -159,7 +162,7 @@ private _effect2pos = _object selectionPosition "destructionEffect2";
 private _fnc_spawnProjectile = {
     // If the magazines are inside of the cargo (inventory), don't let their projectiles escape the interior of the vehicle
     if (!_spawnProjectile) exitWith {};
-
+    
     params ["_flyAway"];
 
     private _spawnPos = _object modelToWorld [-0.2 + random 0.4, -0.2 + random 0.4, random 3];
@@ -184,7 +187,7 @@ private _fnc_spawnProjectile = {
 switch (_simType) do {
     case "shotbullet": {
         [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
-
+        
         if (random 1 < 0.6) then {
             true call _fnc_spawnProjectile;
         };
@@ -208,9 +211,11 @@ switch (_simType) do {
     case "shotsubmunitions": {
         if (random 1 < 0.1) then {
             [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
-
+            
             (random 1 < 0.3) call _fnc_spawnProjectile;
         } else {
+            // We use the gvar instead of _spawnProjectile since this piece is not dependant on that variable.
+            if (!GVAR(cookoffDisableProjectiles)) exitWith {};
             createVehicle ["ACE_ammoExplosionLarge", _object modelToWorld _effect2pos, [], 0 , "CAN_COLLIDE"];
         };
     };
