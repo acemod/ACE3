@@ -77,7 +77,8 @@ private _magazineIndex = floor random (count _magazines);
 private _magazine = _magazines select _magazineIndex;
 _magazine params ["_magazineClassname", "_ammoCount", "_spawnProjectile", "_magazineInfo"];
 
-if (!GVAR(cookoffDisableProjectiles)) then {
+// If we disabled projectiles in settings, we exit the current scope.
+if (!GVAR(cookoffEnableProjectiles)) then {
     _spawnProjectile = false;
 };
 
@@ -214,8 +215,8 @@ switch (_simType) do {
             
             (random 1 < 0.3) call _fnc_spawnProjectile;
         } else {
-            // We use the gvar instead of _spawnProjectile since this piece is not dependant on that variable.
-            if (!GVAR(cookoffDisableProjectiles)) exitWith {};
+            // We re-check the cookoffEnableProjectiles because this case is not running the _spawnProjectile function
+            if (!GVAR(cookoffEnableProjectiles)) exitWith {};
             createVehicle ["ACE_ammoExplosionLarge", _object modelToWorld _effect2pos, [], 0 , "CAN_COLLIDE"];
         };
     };
