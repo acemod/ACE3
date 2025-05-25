@@ -4,7 +4,7 @@
  * Returns magnetic heading (0..360)
  *
  * Arguments:
- * 0: Object or Bearing <OBJECT><NUMBER> (default: ACE_player)
+ * 0: Object or Bearing <OBJECT or NUMBER> (default: ACE_player)
  *
  * Return Value:
  * Compass Bearing <NUMBER>

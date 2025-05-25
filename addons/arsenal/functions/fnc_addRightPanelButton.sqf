@@ -5,7 +5,7 @@
  * Adds a right panel button for uniforms, vests and backpacks with defined misc. items.
  *
  * Arguments:
- * 0: Items, must be misc items <ARRAY of STRINGS>
+ * 0: Items, must be misc items <ARRAY of STRINGs>
  * 1: Tooltip <STRING> (default: "")
  * 2: Picture path <STRING> (default: QPATHTOF(data\iconCustom.paa))
  * 3: Override a specific button (0-9) <NUMBER> (default: -1)

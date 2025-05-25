@@ -4,7 +4,7 @@
  * Called on unit initialization. Adds earplugs if the unit is equipped with either a really loud primary weapon or a rocket launcher.
  *
  * Arguments:
- * 0: Unit <Object>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
  * None

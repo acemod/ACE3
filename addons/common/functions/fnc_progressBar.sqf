@@ -2,14 +2,14 @@
 #include "\a3\ui_f\hpp\defineDIKCodes.inc"
 /*
  * Author: commy2, Glowbal, PabstMirror
- * Draw progress bar and execute given function if succesful.
+ * Draw progress bar and execute given function if successful.
  * Finish/Failure/Conditional are all passed [_args, _elapsedTime, _totalTime, _errorCode]
  *
  * Arguments:
  * 0: Total Time (in game "time" seconds) <NUMBER>
  * 1: Arguments, passed to condition, fail and finish <ARRAY>
- * 2: On Finish: Code called or STRING raised as event. <CODE, STRING>
- * 3: On Failure: Code called or STRING raised as event. <CODE, STRING>
+ * 2: On Finish: Code called or STRING raised as event. <CODE or STRING>
+ * 3: On Failure: Code called or STRING raised as event. <CODE or STRING>
  * 4: Localized Title <STRING> (default: "")
  * 5: Code to check each frame <CODE> (default: {true})
  * 6: Exceptions for checking ace_common_fnc_canInteractWith <ARRAY> (default: [])
