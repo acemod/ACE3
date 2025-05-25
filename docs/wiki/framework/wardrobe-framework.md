@@ -24,7 +24,7 @@ Since there is no reliable, common patterns in terms of class inheritance, not e
 ### 1.1 Components
 
 Components are an optional assistance to define a group of variants where a variant is made of one or more components.
-For example, a bandanna with sunglasses would have the the bandanna and the sunglasses as components, while the bandanna and sunglasses themself only have themselves as a component.
+For example, a bandana with sunglasses would have the the bandana and the sunglasses as components, while the bandana and sunglasses only have themselves as a component.
 
 If the player switches from a variant with more components to a variant with less components, the surplus components will be deposited in their inventory. Vice Versa, if the player wants to change from a variant with less components to a variant with more components, they are required to have the missing components in their inventory, which will be removed on conversion.
 
