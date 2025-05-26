@@ -6,15 +6,14 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"CUP_Creatures_People_LoadOrder"};
+        requiredAddons[] = {"ace_common", "cfp_main"};
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
-        authors[] = {"Mike", "Jonpas"};
+        authors[] = {"Andx"};
         url = ECSTRING(main,URL);
         VERSION_CONFIG;
     };
 };
 
-#include "CfgGlasses.hpp"
 #include "CfgWeapons.hpp"
 #include "CfgVehicles.hpp"
