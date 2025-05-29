@@ -104,7 +104,7 @@ class CfgAmmo {
             initialPitch = 0.4;
         };
     };*/
-    //
+    // SS.11 Missile
     class gm_missile_ss11_base: gm_missile_saclos_base {
         maneuvrability = 0;
         ACE_MISSILE(SS11);
