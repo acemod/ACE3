@@ -40,7 +40,7 @@ if !((_camPosAGL select 0) isEqualType 0) exitWith {}; // handle RHS / bugged ve
 private _camPosASL = AGLToASL _camPosAGL;
 
 // Show nametag for the unit behind the cursor or its commander
-if (_enabledTagsCursor) then {
+if (_enabledTagsCursor || GVAR(showCursorTagForVehicles)) then {
     private _target = cursorTarget;
     if !(_target isKindOf "CAManBase") then {
         // When cursorTarget is on a vehicle show the nametag for the commander.
@@ -55,7 +55,7 @@ if (_enabledTagsCursor) then {
     if (_target != ACE_player &&
         {(side group _target) == (side group ACE_player)} &&
         {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
-        {lineIntersectsSurfaces [_camPosASL, eyePos _target, ACE_player, _target] isEqualTo []} &&
+        {lineIntersectsSurfaces [_camPosASL, eyePos _target, ACE_player, _target, true, 1, "GEOM", "NONE"] isEqualTo []} &&
         {!isObjectHidden _target}) then {
 
         private _distance = ACE_player distance _target;
@@ -83,7 +83,7 @@ if (_enabledTagsNearby) then {
             _x != ACE_player &&
             {(side group _x) == (side group ACE_player)} &&
             {GVAR(showNamesForAI) || {[_x] call EFUNC(common,isPlayer)}} &&
-            {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x] isEqualTo []} &&
+            {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x, true, 1, "GEOM", "NONE"] isEqualTo []} &&
             {!isObjectHidden _x}
         };
         private _crewMen = [];
