@@ -62,7 +62,7 @@ if (hasInterface) then {
         params ["_object", "_sound"];
 
         if (isNull _object) exitWith {};
-        
+
         // If the cookoff sound setting is disabled, we exit the function.
         if (!GVAR(cookoffEnableSound)) exitWith {};
 

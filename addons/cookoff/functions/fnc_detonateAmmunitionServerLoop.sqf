@@ -188,7 +188,7 @@ private _fnc_spawnProjectile = {
 switch (_simType) do {
     case "shotbullet": {
         [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
-        
+
         if (random 1 < 0.6) then {
             true call _fnc_spawnProjectile;
         };
@@ -212,7 +212,7 @@ switch (_simType) do {
     case "shotsubmunitions": {
         if (random 1 < 0.1) then {
             [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
-            
+
             (random 1 < 0.3) call _fnc_spawnProjectile;
         } else {
             // We re-check the cookoffEnableProjectiles because this case is not running the _spawnProjectile function
