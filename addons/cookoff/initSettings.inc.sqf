@@ -75,7 +75,7 @@
     "CHECKBOX",
     [LSTRING(enableProjectiles_name), LSTRING(enableProjectiles_tooltip)],
     LSTRING(category_displayName),
-    false,
+    true,
     1
 ] call CBA_fnc_addSetting;
 
