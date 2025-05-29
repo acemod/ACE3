@@ -18,7 +18,7 @@
 params ["_activated"];
 TRACE_1("setupDisplayEffects",_activated);
 
-private _unit = ace_player;
+private _unit = ACE_player;
 
 if (currentVisionMode _unit > 1) then {
     QGVAR(display) cutText ["", "PLAIN"]; // Cleanup Old Display
