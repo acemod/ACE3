@@ -62,7 +62,6 @@
 ] call CBA_fnc_addSetting;
 
 [
-	[LSTRING(removeAmmoDuringCookoff_name), LSTRING(removeAmmoDuringCookoff_tooltip)],
     QGVAR(removeAmmoDuringCookoff),
     "CHECKBOX",
     [LSTRING(removeAmmoDuringCookoff_name), LSTRING(removeAmmoDuringCookoff_tooltip)],
