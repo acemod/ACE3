@@ -146,6 +146,26 @@
             <Korean>차량 유폭 효과를 활성화합니다.\n여기엔 탄약 유폭이 포함되지 않습니다.</Korean>
             <Japanese>車両の誘爆火災エフェクトを有効化します。\nこれには弾薬の爆発は含まれません。</Japanese>
         </Key>
+        <Key ID="STR_ACE_CookOff_enableProjectiles_name">
+            <English>Enable Projectile Fire</English>
+            <French>Activer le tir de projectiles</French>
+            <Spanish>Habilitar la detonación de proyectiles</Spanish>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableProjectiles_tooltip">
+            <English>Enables projectiles firing from the vehicle</English>
+            <French>Active le tir de projectiles depuis le véhicule</French>
+            <Spanish>Habilita la detonación de proyectiles desde el interior del vehículo</Spanish>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableSound_name">
+            <English>Disable Cook-Off Sound</English>
+            <French>Désactiver le son d’explosion</French>
+            <Spanish>Habilitar sonido de detonación</Spanish>
+        </Key>
+        <Key ID="STR_ACE_CookOff_enableSound_tooltip">
+            <English>Enables the sound of projectiles cooking off from inside the vehicle</English>
+            <French>Active le son des projectiles se déclenchant à l'intérieur du véhicule</French>
+            <Spanish>Habilita el sonido de los proyectiles que se detonan dentro del interior del vehículo</Spanish>
+        </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_name">
             <English>Vehicle cook-off fire probability multiplier</English>
             <French>Probabilité d'incendies de véhicules</French>
@@ -187,26 +207,6 @@
             <German>Entfernt Munition während dem Durchzünden der Munition eines Fahrzeuges.</German>
             <Korean>유폭 중 모든 탄약을 제거합니다.</Korean>
             <Japanese>誘爆によって全ての弾薬を除去します。</Japanese>
-        </Key>
-        <Key ID="STR_ACE_CookOff_enableProjectiles_tooltip">
-            <English>Enables projectiles firing from the vehicle</English>
-            <French>Active le tir de projectiles depuis le véhicule</French>
-            <Spanish>Habilita la detonación de proyectiles desde el interior del vehículo</Spanish>
-        </Key>
-        <Key ID="STR_ACE_CookOff_enableSound_tooltip">
-            <English>Enables the sound of projectiles cooking off from inside the vehicle</English>
-            <French>Active le son des projectiles se déclenchant à l'intérieur du véhicule</French>
-            <Spanish>Habilita el sonido de los proyectiles que se detonan dentro del interior del vehículo</Spanish>
-        </Key>
-        <Key ID="STR_ACE_CookOff_enableProjectiles_name">
-            <English>Enable Projectile Fire</English>
-            <French>Activer le tir de projectiles</French>
-            <Spanish>Habilitar la detonación de proyectiles</Spanish>
-        </Key>
-        <Key ID="STR_ACE_CookOff_enableSound_name">
-            <English>Disable Cook-Off Sound</English>
-            <French>Désactiver le son d’explosion</French>
-            <Spanish>Habilitar sonido de detonación</Spanish>
         </Key>
     </Package>
 </Project>
