@@ -137,6 +137,10 @@ class CfgVehicles {
             };
         };
     };
+    class gm_brdm2_9p133_base: gm_brdm2_base {
+        EGVAR(vehicle_damage,hullDetonationProb) = 0.2;
+        EGVAR(vehicle_damage,turretDetonationProb) = 0.5;
+    };
 
     class gm_btr60_base: gm_wheeled_APC_base {
         EGVAR(refuel,fuelCapacity) = 290;
