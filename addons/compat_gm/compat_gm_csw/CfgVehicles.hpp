@@ -54,13 +54,13 @@ class CfgVehicles {
         };
         class ace_csw {
             enabled = 1; // Enables ACE CSW for this weaponmmo handling interaction point location (custom pos)
-            ammoLoadTime = 10 ;   // How long it takes in
+            ammoLoadTime = 4 ;   // How long it takes to load rounds
             proxyWeapon = ""; // The proxy weapon created above. This can also be a function name that returns a proxy weapon - passed [_vehicle, _turret, _currentWeapon, _needed, _emptyWeapon]
             disassembleWeapon = "";  // Carryable weapon created above
             disassembleTurret = ""; // Which static tripod will appear when weapon is disassembled
             disassembleTo = QGVAR(milan_backpack); // Abuse the tripods
-            magazineLocation = "[0.204429,0.696469,-0.680236]"; // Aseconds to load ammo into the weapon
-            ammoUnloadTime = 5; // How long it takes in seconds to unload ammo from the weapon
+            magazineLocation = "[0.204429,0.696469,-0.680236]"; // Location to load magazines
+            ammoUnloadTime = 6; // How long it takes in seconds to unload ammo from the weapon
             desiredAmmo = 1;  // When the weapon is reloaded it will try and reload to this ammo capacity
         };
         class AnimationSources: AnimationSources {
