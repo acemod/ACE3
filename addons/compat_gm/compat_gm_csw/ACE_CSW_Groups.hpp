@@ -9,7 +9,7 @@ class ACE_CSW_Groups {
 
     // Fagot
     class GVAR(gm_1Rnd_fagot_heat_9m111) {
-      gm_1Rnd_fagot_heat_9m111 = 1;
+        gm_1Rnd_fagot_heat_9m111 = 1;
     };
 
     // MG3
