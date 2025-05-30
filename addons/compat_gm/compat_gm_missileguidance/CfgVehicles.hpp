@@ -13,19 +13,6 @@ class CfgVehicles {
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 magazines[] = {QGVAR(6Rnd_maljutka_heat_9m14p),QGVAR(6Rnd_maljutka_heat_9m14p),QGVAR(6Rnd_maljutka_heat_9m14p)};
-                class Components;
-                class GunClouds;
-                class GunFire;
-                class Hitpoints;
-                class MGunClouds;
-                class OpticsIn;
-                class Reflectors;
-                class TurnIn;
-                class TurnOut;
-                class Turrets;
-                class TurretSpec;
-                class ViewGunner;
-                class ViewOptics;
             };
         };
     };
