@@ -104,6 +104,17 @@ class CfgAmmo {
             initialPitch = 0.4;
         };
     };*/
+    // SS.11 Missile
+    class gm_missile_ss11_base: gm_missile_saclos_base {
+        maneuvrability = 0;
+        ACE_MISSILE(SS11);
+    };
+    class gm_missile_ss11_heat_dm52: gm_missile_ss11_base {
+        class ace_missileguidance: ace_missileguidance {
+            enabled = 1;
+            showTrail = 0;
+        };
+    };
     // AA Missiles
     class gm_rocket_72mm_HE_9m32m_base;
     class gm_rocket_72mm_HE_9m32m: gm_rocket_72mm_HE_9m32m_base {
