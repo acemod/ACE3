@@ -48,11 +48,19 @@ Fatal damage is now controlled by either "Large hits to vital organs", "Sum of t
 
 Two sliders that dictate how much damage players and ai can take before going unconscious or dying if Sum of Trauma is enabled. Set to higher values to make units stronger, lower to make them weaker.
 
+##### 1.1.1.6 Use Limb Damage
+
+By default, limb injuries are not counted toward "Sum of Trauma" (See "Fatal Damage Source"). This setting has three options: "Never", "AI Only", and "Players and AI". 
+
 #### 1.1.2 AI
 
 ##### 1.1.2.1 Medic AI
 
 Medic AI means any AI set as a Medic will actually perform medical actions on group members if they are unsuppressed or safe.
+
+##### 1.1.2.2 Require Items
+
+Medics normally don't actually need medical items in order to perform medical actions. This setting can be used to require them to use those items. If the setting is not set to "Enabled" and not "Auto Convert Items for AI", unmodded AI will not have the required items to perform treatment.
 
 #### 1.1.3 Blood
 
