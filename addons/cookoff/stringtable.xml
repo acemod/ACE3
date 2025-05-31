@@ -157,7 +157,7 @@
             <Spanish>Habilita la detonación de proyectiles desde el interior del vehículo</Spanish>
         </Key>
         <Key ID="STR_ACE_CookOff_enableSound_name">
-            <English>Disable Cook-Off Sound</English>
+            <English>Disable cook-off sounds</English>
             <French>Désactiver les sons d'explosion</French>
             <Spanish>Habilitar sonido de detonación</Spanish>
         </Key>
