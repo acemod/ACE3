@@ -158,7 +158,7 @@
         </Key>
         <Key ID="STR_ACE_CookOff_enableSound_name">
             <English>Disable Cook-Off Sound</English>
-            <French>Désactiver le son d’explosion</French>
+            <French>Désactiver les sons d'explosion</French>
             <Spanish>Habilitar sonido de detonación</Spanish>
         </Key>
         <Key ID="STR_ACE_CookOff_enableSound_tooltip">
