@@ -5,19 +5,21 @@
  *
  * Arguments:
  * 0: unit - Object the event handler is assigned to <OBJECT>
- * 1: ammo - Ammo used <STRING>
+ * 4: ammo - Ammo used <STRING>
+ * 7: vehicle - vehicle, if weapon is vehicle weapon, otherwise objNull <OBJECT>
  *
  * Return Value:
  * None
  *
  * Example:
- * [player, "", "","", "B_556x45_Ball"] call ace_casings_fnc_createCasing
+ * [player, "", "","", "B_556x45_Ball", "", "", objNull] call ace_casings_fnc_createCasing
  *
  * Public: No
  */
 
-params ["_unit", "", "", "", "_ammo"];
+params ["_unit", "", "", "", "_ammo", "", "", "_vehicle"];
 
+if (!isNull _vehicle) exitWith {};
 if (!isNull objectParent _unit) exitWith {};
 
 
