@@ -1,3 +1,4 @@
+PREP(checkWeaponZeroing);
 PREP(compileConfigUI);
 PREP(handleSpeedIndicator);
 PREP(moduleInit);
