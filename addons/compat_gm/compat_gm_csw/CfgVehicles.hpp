@@ -27,18 +27,6 @@ class CfgVehicles {
         class assembleInfo;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                class Components;
-                class GunClouds;
-                class GunFire;
-                class HitPoints;
-                class MGunClouds;
-                class Reflectors;
-                class TurnIn;
-                class TurnOut;
-                class Turrets;
-                class TurretSpec;
-                class ViewGunner;
-                class ViewOptics;
             };
         };
     };
@@ -78,18 +66,6 @@ class CfgVehicles {
         };
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                class Components: Components {};
-                class GunClouds: GunClouds {};
-                class GunFire: GunFire {};
-                class HitPoints: HitPoints {};
-                class MGunClouds: MGunClouds {};
-                class Reflectors: Reflectors {};
-                class TurnIn: TurnIn {};
-                class TurnOut: TurnOut {};
-                class Turrets: Turrets {};
-                class TurretSpec: TurretSpec {};
-                class ViewGunner: ViewGunner {};
-                class ViewOptics: ViewOptics {};
                 weapons[] = {QGVAR(milan_launcher_proxy)};
                 magazines[] = {};
             };
@@ -125,18 +101,6 @@ class CfgVehicles {
         class assembleInfo;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                class Components;
-                class GunClouds;
-                class GunFire;
-                class HitPoints;
-                class MGunClouds;
-                class Reflectors;
-                class TurnIn;
-                class TurnOut;
-                class Turrets;
-                class TurretSpec;
-                class ViewGunner;
-                class ViewOptics;
             };
         };
     };
@@ -176,18 +140,6 @@ class CfgVehicles {
         };
         class Turrets: Turrets {
             class MainTurret: MainTurret {
-                class Components: Components {};
-                class GunClouds: GunClouds {};
-                class GunFire: GunFire {};
-                class HitPoints: HitPoints {};
-                class MGunClouds: MGunClouds {};
-                class Reflectors: Reflectors {};
-                class TurnIn: TurnIn {};
-                class TurnOut: TurnOut {};
-                class Turrets: Turrets {};
-                class TurretSpec: TurretSpec {};
-                class ViewGunner: ViewGunner {};
-                class ViewOptics: ViewOptics {};
                 weapons[] = {QGVAR(9k111_launcher_proxy)};
                 magazines[] = {};
             };
