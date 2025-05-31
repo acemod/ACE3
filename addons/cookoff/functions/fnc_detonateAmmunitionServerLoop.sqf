@@ -164,6 +164,7 @@ private _effect2pos = _object selectionPosition "destructionEffect2";
 private _fnc_spawnProjectile = {
     // If the magazines are inside of the cargo (inventory), don't let their projectiles escape the interior of the vehicle
     if (!_spawnProjectile) exitWith {};
+
     params ["_flyAway"];
 
     private _spawnPos = _object modelToWorld [-0.2 + random 0.4, -0.2 + random 0.4, random 3];
