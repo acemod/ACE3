@@ -121,7 +121,7 @@ class CfgVehicles {
             disassembleWeapon = "";  // Carryable weapon created above
             disassembleTurret = ""; // Which static tripod will appear when weapon is disassembled
             disassembleTo = QGVAR(9k111_backpack); // Abuse the tripods
-            magazineLocation = "[0,0.4,-0.7]"; // Aseconds to load ammo into the weapon
+            magazineLocation = "[0,0.4,-0.7]"; // Location to load magazines
             ammoUnloadTime = 10; // How long it takes in seconds to unload ammo from the weapon
             desiredAmmo = 1;  // When the weapon is reloaded it will try and reload to this ammo capacity
         };
@@ -179,7 +179,7 @@ class CfgVehicles {
             proxyWeapon = ""; // The proxy weapon created above. This can also be a function name that returns a proxy weapon - passed [_vehicle, _turret, _currentWeapon, _needed, _emptyWeapon]
             disassembleWeapon = "gm_mg3_blk";  // Carryable weapon created above
             disassembleTurret = QGVAR(MG3Tripod); // Which static tripod will appear when weapon is disassembled
-            magazineLocation = "_target selectionPosition 'machinegunturret_01_magazine'"; // Aseconds to load ammo into the weapon
+            magazineLocation = "_target selectionPosition 'machinegunturret_01_magazine'"; // Location to load magazines
             ammoUnloadTime = 5; // How long it takes in seconds to unload ammo from the weapon
             desiredAmmo = 120;  // When the weapon is reloaded it will try and reload to this ammo capacity
         };
