@@ -31,6 +31,7 @@ When Wind Simulation is enabled at mission start, it can be temporarily disabled
 
 ### 3.1 Adding ACE weather to maps via config
 
+{% raw %}
 ```cpp
 class CfgWorlds {
     class MyWorld {
@@ -74,6 +75,7 @@ class CfgWorlds {
     };
 };
 ```
+{% endraw %}
 
 ### 3.2 Adding ACE weather to maps via mission config
 
