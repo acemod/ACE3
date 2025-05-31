@@ -77,7 +77,7 @@ private _magazineIndex = floor random (count _magazines);
 private _magazine = _magazines select _magazineIndex;
 _magazine params ["_magazineClassname", "_ammoCount", "_spawnProjectile", "_magazineInfo"];
 
-// If we disabled projectiles in settings, we exit the current scope.
+// If we disabled projectiles in settings, we exit the current scope
 if (!GVAR(cookoffEnableProjectiles)) then {
     _spawnProjectile = false;
 };
