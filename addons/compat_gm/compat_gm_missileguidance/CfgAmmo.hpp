@@ -87,6 +87,21 @@ class CfgAmmo {
             showTrail = 1;
         };
     };
+    class GVAR(missile_maljutka_heat_9m14p): gm_missile_maljutka_heat_9m14m {
+        class ace_missileguidance: ace_missileguidance {
+            enabled = 1;
+
+            pitchRate = 45;
+            yawRate = 45;
+            lineGainP = 12;
+            lineGainD = 4;
+            defaultSeekerType = "SACLOS";
+            seekerTypes[] = { "SACLOS" };
+
+            defaultSeekerLockMode = "LOAL";
+            seekerLockModes[] = { "LOAL", "LOBL" };
+        };
+    };
     // Milan - problem with SCALOS aiming
     /* class gm_missile_milan_base: gm_missile_saclos_base {
         maneuvrability = 0;
