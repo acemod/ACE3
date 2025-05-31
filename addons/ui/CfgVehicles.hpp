@@ -230,7 +230,7 @@ class CfgVehicles {
     };
 
 // neither syntax of currentZeroing works with FFV seats, always returns 0 or [0, -1] depending on the syntax used
-// also currentZeroing for laser rangefinder is borked, just shows the last manually selected range, despire the biki saying it works with the alt syntax
+// also currentZeroing for laser rangefinder is borked, just shows the last manually selected range, biki says it will work with the alt syntax in v2.20
 #define CHECKZERO_ACTIONS \
 class ACE_SelfActions { \
     class GVAR(checkWeaponZeroing) { \
