@@ -67,7 +67,7 @@ DFUNC(updateArray) = {
             if ((toLower _damageType) in ["fire", "drowning"]) exitWith {};
             // cooldown to avoid spam
             if (CBA_missionTime < GVAR(nextDamage)) exitWith {};
-            GVAR(nextDamage) = CBA_missionTime + 15;
+            GVAR(nextDamage) = CBA_missionTime + 3;
             // check player setting
             private _isPlayer = (!isNull _shooter) && {isPlayer _shooter};
             if ((GVAR(showMedicalWounds) == 1) && {!_isPlayer}) exitWith {};
@@ -81,6 +81,11 @@ DFUNC(updateArray) = {
                     if (_instigatorName == "") then {
                         _instigatorName = format ["*AI* - %1", getText ((configOf _shooter) >> "displayName")];
                     };
+                };
+            } else {
+                // ACE_Frag does not set shot parent so it will always look like self
+                if ((_damageType select [0,8]) == "ace_frag") then {
+                    _instigatorName = format ["[%1]", localize "str_a3_cfgmagazines_40rnd_20mm_g_belt_dns"]; // "[HE]"
                 };
             };
 
