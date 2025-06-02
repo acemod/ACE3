@@ -188,14 +188,14 @@ private _fnc_spawnProjectile = {
 
 switch (_simType) do {
     case "shotbullet": {
-        [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
+        if (GVAR(cookoffEnableSound)) then { [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent; };
 
         if (random 1 < 0.6) then {
             true call _fnc_spawnProjectile;
         };
     };
     case "shotshell": {
-        [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
+        if (GVAR(cookoffEnableSound)) then { [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent; };
 
         if (random 1 < 0.15) then {
             true call _fnc_spawnProjectile;
@@ -212,7 +212,7 @@ switch (_simType) do {
     case "shotmissile";
     case "shotsubmunitions": {
         if (random 1 < 0.1) then {
-            [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
+            if (GVAR(cookoffEnableSound)) then { [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent; };
 
             (random 1 < 0.3) call _fnc_spawnProjectile;
         } else {
