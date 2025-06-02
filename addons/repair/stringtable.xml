@@ -470,6 +470,14 @@
             <Chinese>完整修復條件</Chinese>
             <Chinesesimp>全面维修条件</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Repair_HitAASight">
+            <English>AA Sight</English>
+            <Japanese>対空照準器</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitATGMSight">
+            <English>ATGM Sight</English>
+            <Japanese>ATGM照準器</Japanese>
+        </Key>
         <Key ID="STR_ACE_Repair_HitAmmo">
             <English>Ammo</English>
             <Czech>Munice</Czech>
@@ -530,7 +538,7 @@
             <Russian>Пушка командира</Russian>
             <German>Kommandant Kanone</German>
             <Korean>지휘관 포</Korean>
-            <Japanese>車長砲</Japanese>
+            <Japanese>車長 砲</Japanese>
             <Chinese>指揮官 槍</Chinese>
             <Chinesesimp>指挥官 枪</Chinesesimp>
             <Turkish>Komutan Silahı</Turkish>
@@ -547,7 +555,7 @@
             <Russian>Башня командира</Russian>
             <German>Kommandant Turm</German>
             <Korean>지휘관 포탑</Korean>
-            <Japanese>車長砲塔</Japanese>
+            <Japanese>車長 砲塔</Japanese>
             <Chinese>指揮官 砲塔</Chinese>
             <Chinesesimp>指挥官 炮塔</Chinesesimp>
             <Turkish>Komutan Tareti</Turkish>
@@ -665,7 +673,7 @@
             <Russian>Левый горизонтальный стабилизатор</Russian>
             <German>Linkes Höhenleitwerk</German>
             <Korean>왼쪽 수평안정기</Korean>
-            <Japanese>左側水平安定装置</Japanese>
+            <Japanese>左 水平安定装置</Japanese>
             <Chinese>左側懸掛穩定</Chinese>
             <Chinesesimp>左侧悬挂稳定</Chinesesimp>
             <Turkish>Sol Yatay Sabitleyici</Turkish>
@@ -681,7 +689,7 @@
             <Russian>Правый горизонтальный стабилизатор</Russian>
             <German>Rechtes Höhenleitwerk</German>
             <Korean>오른쪽 수평안정기</Korean>
-            <Japanese>右側水平安定装置</Japanese>
+            <Japanese>右 水平安定装置</Japanese>
             <Chinese>右側懸掛穩定</Chinese>
             <Chinesesimp>右侧悬挂稳定</Chinesesimp>
             <Turkish>Sağ Yatay Sabitleyici</Turkish>
@@ -703,6 +711,23 @@
             <Turkish>Gövde</Turkish>
             <Hungarian>Test</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Repair_HitLAileron">
+            <English>Left Aileron</English>
+            <Czech>Levý křidélko</Czech>
+            <French>Aileron gauche</French>
+            <Spanish>Alerón izquierdo</Spanish>
+            <Italian>Alettoni sinistro</Italian>
+            <Polish>Lewe lotki</Polish>
+            <Portuguese>Aileron esquerdo</Portuguese>
+            <Russian>Левый элерон</Russian>
+            <German>Linkes Querruder</German>
+            <Korean>왼쪽 보조익</Korean>
+            <Japanese>左補助翼</Japanese>
+            <Chinese>左副翼</Chinese>
+            <Chinesesimp>左副翼</Chinesesimp>
+            <Turkish>Sol Kanatçık</Turkish>
+            <Hungarian>Bal csűrőlap</Hungarian>
+        </Key>
         <Key ID="STR_ACE_Repair_HitLBWheel">
             <English>Left Rear Wheel</English>
             <Czech>Levé zadní Kolo</Czech>
@@ -714,7 +739,7 @@
             <Russian>Левое заднее колесо</Russian>
             <German>Linkes Hinterrad</German>
             <Korean>왼쪽 뒷바퀴</Korean>
-            <Japanese>左後輪</Japanese>
+            <Japanese>左 後輪</Japanese>
             <Chinese>左後輪</Chinese>
             <Chinesesimp>左后轮</Chinesesimp>
             <Hungarian>Bal hátsó kerék</Hungarian>
@@ -730,7 +755,7 @@
             <Russian>Второе переднее левое колесо</Russian>
             <German>Zweites linkes Vorderrad</German>
             <Korean>왼쪽 두 번째 앞바퀴</Korean>
-            <Japanese>左第二前輪</Japanese>
+            <Japanese>左 第二前輪</Japanese>
             <Chinese>第二左前輪</Chinese>
             <Chinesesimp>第二左前轮</Chinesesimp>
             <Hungarian>Második bal első kerék</Hungarian>
@@ -779,7 +804,7 @@
             <Russian>Левое среднее колесо</Russian>
             <German>Linkes mittleres Rad</German>
             <Korean>왼쪽 가운데 바퀴</Korean>
-            <Japanese>左中央輪</Japanese>
+            <Japanese>左 中央輪</Japanese>
             <Chinese>左中輪</Chinese>
             <Chinesesimp>左中轮</Chinesesimp>
             <Hungarian>Bal középső kerék</Hungarian>
@@ -795,7 +820,7 @@
             <Russian>Левую гусеницу</Russian>
             <German>Linke Kette</German>
             <Korean>왼쪽 궤도</Korean>
-            <Japanese>左履帯</Japanese>
+            <Japanese>左 履帯</Japanese>
             <Chinese>左履帶</Chinese>
             <Chinesesimp>左履带</Chinesesimp>
             <Hungarian>Bal lánctalp</Hungarian>
@@ -816,6 +841,10 @@
             <Chinesesimp>轻型</Chinesesimp>
             <Turkish>Işık</Turkish>
         </Key>
+        <Key ID="STR_ACE_Repair_HitMainSight">
+            <English>Main Sight</English>
+            <Japanese>主照準器</Japanese>
+        </Key>
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>
             <Czech>Rakety</Czech>
@@ -831,6 +860,23 @@
             <Chinese>導彈</Chinese>
             <Chinesesimp>导弹</Chinesesimp>
             <Turkish>Füzeler</Turkish>
+        </Key>
+        <Key ID="STR_ACE_Repair_HitPeriscope">
+            <English>Periscope</English>
+            <Czech>Periskop</Czech>
+            <French>Périscope</French>
+            <Spanish>Periscopio</Spanish>
+            <Italian>Periscopio</Italian>
+            <Polish>Periskop</Polish>
+            <Portuguese>Periscópio</Portuguese>
+            <Russian>Перископ</Russian>
+            <German>Periskop</German>
+            <Korean>잠망경</Korean>
+            <Japanese>ペリスコープ</Japanese>
+            <Chinese>潛望鏡</Chinese>
+            <Chinesesimp>潜望镜</Chinesesimp>
+            <Turkish>Periskop</Turkish>
+            <Hungarian>Periszkóp</Hungarian>
         </Key>
         <Key ID="STR_ACE_Repair_HitPitotTube">
             <English>Pitot Tube</English>
@@ -848,6 +894,23 @@
             <Chinesesimp>空速管</Chinesesimp>
             <Turkish>Pilot Tüpü</Turkish>
         </Key>
+        <Key ID="STR_ACE_Repair_HitRAileron">
+            <English>Right Aileron</English>
+            <Czech>Pravý křidélko</Czech>
+            <French>Aileron droit</French>
+            <Spanish>Alerón derecho</Spanish>
+            <Italian>Alettoni destro</Italian>
+            <Polish>Prawe lotki</Polish>
+            <Portuguese>Aileron direito</Portuguese>
+            <Russian>Правый элерон</Russian>
+            <German>Rechtes Querruder</German>
+            <Korean>오른쪽 보조익</Korean>
+            <Japanese>右補助翼</Japanese>
+            <Chinese>右副翼</Chinese>
+            <Chinesesimp>右副翼</Chinesesimp>
+            <Turkish>Sağ Kanatçık</Turkish>
+            <Hungarian>Jobb csűrőlap</Hungarian>
+        </Key>
         <Key ID="STR_ACE_Repair_HitRBWheel">
             <English>Right Rear Wheel</English>
             <Czech>Pravé zadní Kolo</Czech>
@@ -859,7 +922,7 @@
             <Russian>Правое заднее колесо</Russian>
             <German>Rechtes Hinterrad</German>
             <Korean>오른쪽 뒷바퀴</Korean>
-            <Japanese>右後輪</Japanese>
+            <Japanese>右 後輪</Japanese>
             <Chinese>右後輪</Chinese>
             <Chinesesimp>右后轮</Chinesesimp>
             <Hungarian>Jobb hátsó kerék</Hungarian>
@@ -875,7 +938,7 @@
             <Russian>Второе правое переднее колесо</Russian>
             <German>Zweites rechtes Vorderrad</German>
             <Korean>오른쪽 두 번째 앞바퀴</Korean>
-            <Japanese>右第二前輪</Japanese>
+            <Japanese>右 第二前輪</Japanese>
             <Chinese>第二右前輪</Chinese>
             <Chinesesimp>第二右前轮</Chinesesimp>
             <Hungarian>Második jobb hátsó kerék</Hungarian>
@@ -891,7 +954,7 @@
             <Russian>Правое переднее колесо</Russian>
             <German>Rechtes Vorderrad</German>
             <Korean>오른쪽 앞바퀴</Korean>
-            <Japanese>右前輪</Japanese>
+            <Japanese>右 前輪</Japanese>
             <Chinese>右前輪</Chinese>
             <Chinesesimp>右前轮</Chinesesimp>
             <Hungarian>Jobb első kerék</Hungarian>
@@ -924,7 +987,7 @@
             <Russian>Правое среднее колесо</Russian>
             <German>Rechtes mittleres Rad</German>
             <Korean>오른쪽 가운데 바퀴</Korean>
-            <Japanese>右中央輪</Japanese>
+            <Japanese>右 中央輪</Japanese>
             <Chinese>右中輪</Chinese>
             <Chinesesimp>右中轮</Chinesesimp>
             <Hungarian>Jobb középső kerék</Hungarian>
@@ -940,7 +1003,7 @@
             <Russian>Правую гусеницу</Russian>
             <German>Rechte Kette</German>
             <Korean>오른쪽 궤도</Korean>
-            <Japanese>右履帯</Japanese>
+            <Japanese>右 履帯</Japanese>
             <Chinese>右履帶</Chinese>
             <Chinesesimp>右履带</Chinesesimp>
             <Hungarian>Jobb lánctalp</Hungarian>
@@ -1391,7 +1454,7 @@
             <Russian>Заменить гусеницу</Russian>
             <German>Kette wechseln</German>
             <Korean>궤도 교체</Korean>
-            <Japanese>履帯を変える</Japanese>
+            <Japanese>履帯を交換する</Japanese>
             <Chinese>更換履帶</Chinese>
             <Chinesesimp>更换履带</Chinesesimp>
             <Turkish>Parçayı Değiştir</Turkish>
@@ -1407,7 +1470,7 @@
             <Russian>Поменять колесо</Russian>
             <German>Reifen wechseln</German>
             <Korean>바퀴 교체</Korean>
-            <Japanese>タイヤを変える</Japanese>
+            <Japanese>タイヤを交換する</Japanese>
             <Chinese>更換輪胎</Chinese>
             <Chinesesimp>更换轮胎</Chinesesimp>
             <Turkish>Tekerleği Değiştir</Turkish>
@@ -2045,7 +2108,7 @@
             <Russian>Максимальный уровень, до которого колесо может быть починено.</Russian>
             <German>Maximales Level, bis zu dem ein Rad geflickt werden kann.\n0% bedeutet, dass das Rad vollständig repariert werden kann.</German>
             <Korean>바퀴를 수리할 수 있는 최대 레벨입니다.</Korean>
-            <Japanese>タイヤをのダメージ補修できる最大の度合い。/n 0%は、すべてのダメージが修復可能であることを意味します。</Japanese>
+            <Japanese>タイヤのダメージを補修できる最大の度合い。\n 0%は、すべてのダメージが修復可能であることを意味します。</Japanese>
             <Chinesesimp>允许补胎时轮胎所能承受的最大损伤\n0%意味着所有损伤都能补</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Repair_patchWheelMaximumRepair_DisplayName">

@@ -20,7 +20,7 @@ if (!hasInterface) exitWith {};
 params ["_huntIR"];
 
 GVAR(huntIR) = _huntIR;
-GVAR(pos) = getPosVisual GVAR(huntIR);
+GVAR(pos) = ASLToAGL getPosASLVisual GVAR(huntIR);
 
 GVAR(ZOOM) = 0;
 GVAR(NV) = 0;
@@ -34,7 +34,7 @@ HUNTIR_BACKGROUND_LAYER_ID cutText["","PLAIN"];
 closeDialog 0;
 createDialog QGVAR(cam_dialog);
 uiNamespace setVariable [QGVAR(monitor), findDisplay 18880];
-(uiNamespace getVariable QGVAR(monitor)) displaySetEventHandler ["Keydown", QUOTE(_this call FUNC(keyPressed))];
+(uiNamespace getVariable QGVAR(monitor)) displaySetEventHandler ["Keydown", QUOTE(call FUNC(keyPressed))];
 
 ctrlSetText [4, "0X"];
 
@@ -89,13 +89,13 @@ GVAR(no_cams) sort true;
     } forEach GVAR(no_cams);
 
     GVAR(cur_cam) = 0 max GVAR(cur_cam) min ((count GVAR(no_cams)) - 1);
-    if (count GVAR(no_cams) > 0) then {
+    if (GVAR(no_cams) isNotEqualTo []) then {
         GVAR(huntIR) = GVAR(no_cams) select GVAR(cur_cam);
     };
 
     GVAR(pos) = getPosVisual GVAR(huntIR);
 
-    if ((!dialog) || (count GVAR(no_cams) == 0) || ((GVAR(pos) select 2) <= 20)) exitWith {
+    if ((!dialog) || (GVAR(no_cams) isEqualTo []) || ((GVAR(pos) select 2) <= 20)) exitWith {
         [_this select 1] call CBA_fnc_removePerFrameHandler;
 
         GVAR(stop) = true;

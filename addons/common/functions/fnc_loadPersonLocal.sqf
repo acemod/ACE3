@@ -30,7 +30,7 @@ if ((_vehicle emptyPositions "cargo" > 0) && {!(_unit getVariable ['ACE_isUncons
             _taken pushBackUnique (_vehicle getCargoIndex _x);
         } forEach crew _vehicle;
         private _preferredSeats = _preferredSeats - _taken;
-        if (count _preferredSeats > 0) then {
+        if (_preferredSeats isNotEqualTo []) then {
             _unit moveInCargo [_vehicle, _preferredSeats select 0];
             TRACE_2("moveInCargo",_vehicle,_preferredSeats select 0);
             _slotsOpen = true;

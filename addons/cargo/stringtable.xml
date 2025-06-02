@@ -281,7 +281,7 @@
         </Key>
         <Key ID="STR_ACE_Cargo_checkSizeInteraction">
             <English>Show Check Cargo Size Interaction</English>
-            <French>Afficher l'interaction de confirmation de la taille de la cargaison</French>
+            <French>Afficher la confirmation de la taille de la cargaison</French>
             <Italian>Mostra interazione di controllo dello spazio del carico</Italian>
             <Russian>Вкл. проверку размера груза</Russian>
             <German>Zeige Interaktion zum Prüfen der Frachtgröße</German>

@@ -2,6 +2,7 @@
 // use "J" key to replace terrain cursorObject and add dragging actions to it
 
 #include "..\script_component.hpp"
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
 
 DFUNC(replaceTerrainModelsAdd) = {
     params ["_model", ["_class", ""]];
@@ -39,8 +40,7 @@ DFUNC(replaceTerrainModelsAdd) = {
     true
 };
 
-// DIK_J
-[0x24, [false, false, false], {
+[DIK_J, [false, false, false], {
     if (
         cursorObject call FUNC(replaceTerrainModelsAdd)
         && {["ace_dragging"] call EFUNC(common,isModLoaded)}

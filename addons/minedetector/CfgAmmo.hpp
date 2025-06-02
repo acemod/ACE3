@@ -1,12 +1,4 @@
 class CfgAmmo {
-
-    // seems to not get inherited
-    class Default;
-    class TimeBombCore: Default {
-        GVAR(detectable) = 1;
-    };
-
-    // these below do get inherited
     class DirectionalBombCore;
     class DirectionalBombBase: DirectionalBombCore {
         GVAR(detectable) = 1;

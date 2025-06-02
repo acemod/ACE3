@@ -15,7 +15,7 @@
  * Public: No
  */
 
-// delay a frame so we don't overlap with interaction-menu as it closes
+// Delay a frame so we don't overlap with interaction-menu as it closes
 [{
     params [["_unit", objNull, [objNull]]];
 
