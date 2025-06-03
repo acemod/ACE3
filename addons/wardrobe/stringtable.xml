@@ -61,7 +61,7 @@
         <Container name="CBA_Settings_Categories">
             <Key ID="STR_ACE_Wardrobe_set_cat_main">
                 <English>ACE Wardrobe</English>
-                <German>ACE Gaderobe</German>
+                <German>ACE Garderobe</German>
             </Key>
         </Container>
     </Package>
