@@ -23,11 +23,11 @@
 params ["_target", "_unit", "_actionParams", ["_replaceNow", false, [true]]];
 _actionParams params ["_cfgOrigin", "_cfgTarget"];
 
-// Duration of the "animation"
+// duration of the "animation"
 private _duration = getNumber (configFile >> QUOTE(ADDON) >> configName _cfgTarget >> "duration");
 if (_replaceNow) then { _duration = 0; }; // needed for cba context menu - avoid potential duplications and such
 
-// Replace the Main Item.
+// replace the Main Item.
 private _additionalParams = "";
 private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
 private _replaceCode = switch ( _typeNumber ) do {
@@ -36,7 +36,7 @@ private _replaceCode = switch ( _typeNumber ) do {
     case TYPE_VEST:     { _additionalParams = "VEST";     FUNC(replaceContainer)  };
     case TYPE_BACKPACK: { _additionalParams = "BACKPACK"; FUNC(replaceContainer)  };
     default {
-        // CfgGlasses items do not have a ItemInfo Subclass and therefore, not TypeNumber.
+        // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber.
         switch (true) do {
             case (isClass (configFile >> "CfgGlasses" >> configName _cfgOrigin)): { _additionalParams = "FACEWEAR"; FUNC(replaceOther) };
             default { false };
@@ -47,10 +47,10 @@ private _replaceCode = switch ( _typeNumber ) do {
 if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,configName _cfgOrigin); };
 [ _replaceCode, [_unit, _cfgOrigin, _cfgTarget, _additionalParams ], _duration] call CBA_fnc_waitAndExecute;
 
-//// Handle components
+//// handle components
 [_cfgOrigin, _cfgTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
 
-// Add Surplus
+// add surplus
 {
     if (configName _cfgTarget isNotEqualTo _x) then {
         if ( isClass (configFile >> "CfgGlasses" >> _x) && { goggles _unit isEqualTo "" } ) then {
@@ -61,7 +61,7 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
     };
 } forEach _surplus;   
 
-// Remove Missing
+// remove missing
 {
     if (configName _cfgOrigin isNotEqualTo _x) then {
 
@@ -73,11 +73,11 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 } forEach _missing;
 
 
-//// Handle Effects
-// Animation/Gestures
+//// handle effects
+// animation/gestures
 [ _unit, getText (configFile >> QUOTE(ADDON) >> configName _cfgTarget >> "gesture") ] call EFUNC(common,doGesture);
 
-// Plays Random Sound At the Beginning
+// plays random sound at the beginning
 private _sound = [configFile >> QUOTE(ADDON) >> configName _cfgTarget >> "sound"] call CBA_fnc_getCfgDataRandom;
 if (_sound isNotEqualTo "") then {
     [
@@ -87,7 +87,7 @@ if (_sound isNotEqualTo "") then {
     ] call CBA_fnc_waitAndExecute;
 };
 
-// Notification
+// notification
 private _imgNotify = getText (_cfgTarget >> "picture");
 if !(".paa" in _imgNotify) then { _imgNotify = [_imgNotify, "paa"] joinString "." }; // Some vanilla items dont have the .paa and cba notify will display the path as a string without the .paa
 [EFUNC(common,displayTextStructured), [["<img image='%1' size=5></img><br/>%2", _imgNotify, getText (_cfgTarget >> "displayName")], 4], _duration * 1.2] call CBA_fnc_waitAndExecute;

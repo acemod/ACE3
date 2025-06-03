@@ -25,19 +25,19 @@ private _magazineDetails = (magazinesAmmoFull _player) apply { [_x#0, _x#-2, _x#
 private _loadout = _player call CBA_fnc_getLoadout;
 
 
-//// Handle Special Cases - Pre Replace
-// ACE Intel Items
+//// handle special cases - pre replace
+// ace intel items
 INTEL_PRE(_hasDocument,acex_intelitems_document);
 INTEL_PRE(_hasNotepad,acex_intelitems_notepad);
 INTEL_PRE(_hasPhoto,acex_intelitems_photo);
 
-// ACE Overheating
+// ace overheating
 private _hasSpareBarrel = _magazineDetails findIf { _x#0 isEqualTo "ACE_SpareBarrel" } > -1;
 if (_hasSpareBarrel) then { _hasSpareBarrel = [_player, "ACE_SpareBarrel" ] call CBA_fnc_getMagazineIndex };
 
 
-//// Replace Wearable
-// Change Wearable
+//// replace wearable
+// change wearable
 switch (_case) do {
     case "UNIFORM":  { _loadout # 0 # 3 set [0, configName _cfgTarget]; };
     case "VEST":     { _loadout # 0 # 4 set [0, configName _cfgTarget]; };
@@ -45,17 +45,17 @@ switch (_case) do {
     default { ERROR_1("Case undefined: %1",_case); };
 };
 
-// Apply new Loadout
+// apply new loadout
 [_player, _loadout] call CBA_fnc_setLoadout;
 
 
-//// Handle Special Cases - Post Replace
-// ACE Intel Items
+//// handle special cases - post replace
+// ace intel items
 INTEL_POST(_hasDocument,acex_intelitems_document);
 INTEL_POST(_hasNotepad,acex_intelitems_notepad);
 INTEL_POST(_hasPhoto,acex_intelitems_photo);
 
-// ACE Overheating
+// ace overheating
 if (_hasSpareBarrel isEqualType []) then {
     private _newMagIDsSpareBarrel = [_player, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
     [QGVAR(updateMagIDs), [_hasSpareBarrel, _newMagIDsSpareBarrel]] call CBA_fnc_serverEvent;
