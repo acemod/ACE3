@@ -25,13 +25,13 @@ private _loadout = _unit call CBA_fnc_getLoadout;
 
 // handle special cases - pre replace
 // ace intel items
-INTEL_PRE(_hasDocument,acex_intelitems_document);
-INTEL_PRE(_hasNotepad,acex_intelitems_notepad);
-INTEL_PRE(_hasPhoto,acex_intelitems_photo);
+INTEL_PRE(_document,acex_intelitems_document);
+INTEL_PRE(_notepad,acex_intelitems_notepad);
+INTEL_PRE(_photo,acex_intelitems_photo);
 
 // ace overheating
-private _hasSpareBarrel = _magazineDetails findIf { _x#0 == "ACE_SpareBarrel" } > -1;
-if (_hasSpareBarrel) then { _hasSpareBarrel = [_unit, "ACE_SpareBarrel" ] call CBA_fnc_getMagazineIndex };
+private _spareBarrel = _magazineDetails findIf { _x#0 == "ACE_SpareBarrel" } > -1;
+if (_spareBarrel) then { _spareBarrel = [_unit, "ACE_SpareBarrel" ] call CBA_fnc_getMagazineIndex };
 
 // replace wearable
 switch (_equipmentType) do {
@@ -45,12 +45,12 @@ switch (_equipmentType) do {
 
 // handle special cases - post replace
 // ace intel items
-INTEL_POST(_hasDocument,acex_intelitems_document);
-INTEL_POST(_hasNotepad,acex_intelitems_notepad);
-INTEL_POST(_hasPhoto,acex_intelitems_photo);
+INTEL_POST(_document,acex_intelitems_document);
+INTEL_POST(_notepad,acex_intelitems_notepad);
+INTEL_POST(_photo,acex_intelitems_photo);
 
 // ace overheating
-if (_hasSpareBarrel isEqualType []) then {
+if (_spareBarrel isEqualType []) then {
     private _newMagIDsSpareBarrel = [_unit, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
-    [QGVAR(updateMagIDs), [_hasSpareBarrel, _newMagIDsSpareBarrel]] call CBA_fnc_serverEvent;
+    [QGVAR(updateMagIDs), [_spareBarrel, _newMagIDsSpareBarrel]] call CBA_fnc_serverEvent;
 };
