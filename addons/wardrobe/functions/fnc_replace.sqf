@@ -20,7 +20,7 @@
  * Public: No
  */
 
-params ["_target", "_unit", "_actionParams", ["_replaceNow", false, [true]]];
+params ["", "_unit", "_actionParams", ["_replaceNow", false, [true]]];
 _actionParams params ["_cfgOrigin", "_cfgTarget"];
 
 private _classTarget = configName _cfgTarget;

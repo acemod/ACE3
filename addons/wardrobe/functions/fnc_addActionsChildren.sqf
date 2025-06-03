@@ -19,7 +19,7 @@
  * Public: No
  */
 
-params ["_target", "_player", "_actionParams"];
+params ["_target", "", "_actionParams"];
 _actionParams params ["_cfgOrigin", "_newItems"];
 
 

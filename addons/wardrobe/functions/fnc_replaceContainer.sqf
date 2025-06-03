@@ -12,16 +12,16 @@
  * None
  *
  * Example:
- * [_player, _cfgTarget, _equipmentType] call ace_wardrobe_fnc_replaceContainer
+ * [_unit, _cfgTarget, _equipmentType] call ace_wardrobe_fnc_replaceContainer
  *
  * Public: No
  */
 
-params ["_player", "_cfgTarget", "_equipmentType"];
+params ["_unit", "_cfgTarget", "_equipmentType"];
 
 toFixed 0;
-private _magazineDetails = (magazinesAmmoFull _player) apply { [_x#0, _x#-2, _x#-1] };
-private _loadout = _player call CBA_fnc_getLoadout;
+private _magazineDetails = (magazinesAmmoFull _unit) apply { [_x#0, _x#-2, _x#-1] };
+private _loadout = _unit call CBA_fnc_getLoadout;
 
 
 // handle special cases - pre replace
@@ -32,7 +32,7 @@ INTEL_PRE(_hasPhoto,acex_intelitems_photo);
 
 // ace overheating
 private _hasSpareBarrel = _magazineDetails findIf { _x#0 == "ACE_SpareBarrel" } > -1;
-if (_hasSpareBarrel) then { _hasSpareBarrel = [_player, "ACE_SpareBarrel" ] call CBA_fnc_getMagazineIndex };
+if (_hasSpareBarrel) then { _hasSpareBarrel = [_unit, "ACE_SpareBarrel" ] call CBA_fnc_getMagazineIndex };
 
 
 // replace wearable
@@ -43,7 +43,7 @@ switch (_equipmentType) do {
 };
 
 // apply new loadout
-[_player, _loadout] call CBA_fnc_setLoadout;
+[_unit, _loadout] call CBA_fnc_setLoadout;
 
 
 // handle special cases - post replace
@@ -54,6 +54,6 @@ INTEL_POST(_hasPhoto,acex_intelitems_photo);
 
 // ace overheating
 if (_hasSpareBarrel isEqualType []) then {
-    private _newMagIDsSpareBarrel = [_player, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
+    private _newMagIDsSpareBarrel = [_unit, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
     [QGVAR(updateMagIDs), [_hasSpareBarrel, _newMagIDsSpareBarrel]] call CBA_fnc_serverEvent;
 };

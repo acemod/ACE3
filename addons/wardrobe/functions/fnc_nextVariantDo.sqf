@@ -19,7 +19,7 @@
  * Public: No
  */
 
-params ["_unit", "_container", "_item", "_slot", "_params"];
+params ["_unit", "", "_item", "", ""];
 
 private _cfgCurrent = _item call CBA_fnc_getItemConfig;
 

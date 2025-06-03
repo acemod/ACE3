@@ -20,7 +20,7 @@
 
 params ["_unit", "_cfgOrigin", "_cfgTarget", ["_cache", true, [true]]];
 
-[_cfgOrigin, _cfgTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
+[_cfgOrigin, _cfgTarget] call FUNC(compareComponents) params ["_missing", ""];
 
 private _currentItems = [_unit, _cache] call FUNC(getItemsAll);
 
