@@ -24,4 +24,4 @@ params ["_unit", "_cfgOrigin", "_cfgTarget", ["_cache", true, [true]]];
 
 private _currentItems = [_unit, _cache] call FUNC(getItemsAll);
 
-_missing select { ! (_x in _currentItems) } isEqualTo []
+_missing select { ! (_x in _currentItems) } isEqualTo [] // return
