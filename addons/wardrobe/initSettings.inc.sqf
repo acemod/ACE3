@@ -16,6 +16,5 @@
     [LSTRING(set_cat_main)],
     true,
     1,
-    FUNC(enableContextMenu),
-    false
+    LINKFUNC(enableContextMenu)
 ] call CBA_fnc_addSetting;
