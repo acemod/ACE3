@@ -55,7 +55,7 @@ if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2
 // add surplus
 {
     if (_classTarget isNotEqualTo _x) then {
-        if ( isClass (configFile >> "CfgGlasses" >> _x) && { goggles _unit isEqualTo "" } ) then {
+        if ( goggles _unit isEqualTo "" && { isClass (configFile >> "CfgGlasses" >> _x) } ) then {
             _unit addGoggles _x;
         } else {
             [_unit, _x, true] call CBA_fnc_addItem;
