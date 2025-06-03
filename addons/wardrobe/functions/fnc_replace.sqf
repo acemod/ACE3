@@ -30,7 +30,7 @@ private _classOrigin = configName _cfgOrigin;
 private _duration = getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "duration");
 if (_replaceNow) then { _duration = 0; }; // needed for cba context menu - avoid potential duplications and such
 
-// replace the Main Item
+// replace the main Item
 private _equipmentType = "";
 private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
 private _replaceCode = switch ( _typeNumber ) do {
