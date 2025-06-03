@@ -89,7 +89,7 @@ if (_sound isNotEqualTo "") then {
 
 // Notification
 private _imgNotify = getText (_cfgTarget >> "picture");
-if !(".paa" in _imgNotify) then { _imgNotify = [_imgNotify, "paa"] joinString "." }; // Some vanilla items dont have the .paa and cba notify will display the path as a string without the .paa
+if !(".paa" in _imgNotify) then { _imgNotify = _imgNotify + ".paa }; // some vanilla items dont have the .paa and cba notify will display the path as a string without the .paa
 [EFUNC(common,displayTextStructured), [["<img image='%1' size=5></img><br/>%2", _imgNotify, getText (_cfgTarget >> "displayName")], 4], _duration * 1.2] call CBA_fnc_waitAndExecute;
 
 nil
