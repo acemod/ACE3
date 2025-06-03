@@ -15,9 +15,7 @@
  * Public: Yes
  */
 
-params [
-    ["_magazineID", "", [""] ]
-];
+params [ ["_magazineID", "", [""] ] ];
 
 if !(_magazineID in allVariables EGVAR(intelItems,intelMap)) exitWith { -1 };
 

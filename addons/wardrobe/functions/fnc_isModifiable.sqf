@@ -15,9 +15,7 @@
  * Public: No
  */
 
-params [
-    ["_cfg", configNull, [configNull]]
-];
+params [ ["_cfg", configNull, [configNull]] ];
 
 
 !isNull _cfg && { isClass (configFile >> QUOTE(ADDON) >> configName _cfg) }

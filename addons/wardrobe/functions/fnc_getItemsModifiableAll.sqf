@@ -16,10 +16,7 @@
  * Public: Yes
  */
 
-params [
-    ["_unit", objNull, [objNull]],
-    ["_cache", true, [true]]
-];
+params [ ["_unit", objNull, [objNull]], ["_cache", true, [true]] ];
 
 
 private _code = {
