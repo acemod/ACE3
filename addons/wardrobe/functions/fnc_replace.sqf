@@ -23,8 +23,11 @@
 params ["_target", "_unit", "_actionParams", ["_replaceNow", false, [true]]];
 _actionParams params ["_cfgOrigin", "_cfgTarget"];
 
+private _classTarget = configName _cfgTarget;
+private _classOrigin = configName _cfgOrigin;
+
 // duration of the "animation"
-private _duration = getNumber (configFile >> QUOTE(ADDON) >> configName _cfgTarget >> "duration");
+private _duration = getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "duration");
 if (_replaceNow) then { _duration = 0; }; // needed for cba context menu - avoid potential duplications and such
 
 // replace the Main Item.
@@ -38,13 +41,13 @@ private _replaceCode = switch ( _typeNumber ) do {
     default {
         // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber.
         switch (true) do {
-            case (isClass (configFile >> "CfgGlasses" >> configName _cfgOrigin)): { _additionalParams = "FACEWEAR"; FUNC(replaceOther) };
+            case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { _additionalParams = "FACEWEAR"; FUNC(replaceOther) };
             default { false };
         };
     };
 };
 
-if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,configName _cfgOrigin); };
+if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
 [ _replaceCode, [_unit, _cfgOrigin, _cfgTarget, _additionalParams ], _duration] call CBA_fnc_waitAndExecute;
 
 //// handle components
@@ -52,7 +55,7 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 
 // add surplus
 {
-    if (configName _cfgTarget isNotEqualTo _x) then {
+    if (_classTarget isNotEqualTo _x) then {
         if ( isClass (configFile >> "CfgGlasses" >> _x) && { goggles _unit isEqualTo "" } ) then {
             _unit addGoggles _x;
         } else {
@@ -63,7 +66,7 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 
 // remove missing
 {
-    if (configName _cfgOrigin isNotEqualTo _x) then {
+    if (_classOrigin isNotEqualTo _x) then {
 
         switch (true) do {
             case (goggles _unit isEqualTo _x): { removeGoggles _unit; };
@@ -75,15 +78,15 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 
 //// handle effects
 // animation/gestures
-[ _unit, getText (configFile >> QUOTE(ADDON) >> configName _cfgTarget >> "gesture") ] call EFUNC(common,doGesture);
+[ _unit, getText (configFile >> QUOTE(ADDON) >> _classTarget >> "gesture") ] call EFUNC(common,doGesture);
 
 // plays random sound at the beginning
-private _sound = [configFile >> QUOTE(ADDON) >> configName _cfgTarget >> "sound"] call CBA_fnc_getCfgDataRandom;
+private _sound = [configFile >> QUOTE(ADDON) >> _classTarget >> "sound"] call CBA_fnc_getCfgDataRandom;
 if (_sound isNotEqualTo "") then {
     [
         CBA_fnc_globalSay3D,
         [_unit, _sound, nil, true, true],
-        (getNumber (configFile >> QUOTE(ADDON) >> configName _cfgTarget >> "sound_timing") max 0 min 1) * _duration
+        (getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "sound_timing") max 0 min 1) * _duration
     ] call CBA_fnc_waitAndExecute;
 };
 
