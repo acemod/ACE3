@@ -4,7 +4,7 @@
         <Container name="Action">
             <Key ID="STR_ACE_Wardrobe_actionTitle">
                 <English>Wardrobe</English>
-                <German>Gaderobe</German>
+                <German>Garderobe</German>
             </Key>
             <Key ID="STR_ACE_Wardrobe_glovesOff">
                 <English>Take gloves off</English>
