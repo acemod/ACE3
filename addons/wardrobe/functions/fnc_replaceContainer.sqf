@@ -5,20 +5,19 @@
  *
  * Arguments:
  * 0: Unit <Object>
- * 1: Current variant <CONFIG>
- * 2: Desired variant <CONFIG>
- * 2: Type of Wearable Container <STRING>
+ * 1: Desired variant <CONFIG>
+ * 2: Type of wearable container <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_player, _cfgOrigin, _cfgTarget, _case] call ace_wardrobe_fnc_replaceContainer
+ * [_player, _cfgTarget, _equipmentType] call ace_wardrobe_fnc_replaceContainer
  *
  * Public: No
  */
 
-params ["_player", "_cfgOrigin", "_cfgTarget", "_case"];
+params ["_player", "_cfgTarget", "_equipmentType"];
 
 toFixed 0;
 private _magazineDetails = (magazinesAmmoFull _player) apply { [_x#0, _x#-2, _x#-1] };
@@ -38,11 +37,10 @@ if (_hasSpareBarrel) then { _hasSpareBarrel = [_player, "ACE_SpareBarrel" ] call
 
 //// replace wearable
 // change wearable
-switch (_case) do {
+switch (_equipmentType) do {
     case "UNIFORM":  { _loadout # 0 # 3 set [0, configName _cfgTarget]; };
     case "VEST":     { _loadout # 0 # 4 set [0, configName _cfgTarget]; };
     case "BACKPACK": { _loadout # 0 # 5 set [0, configName _cfgTarget]; };
-    default { ERROR_1("Case undefined: %1",_case); };
 };
 
 // apply new loadout

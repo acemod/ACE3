@@ -31,24 +31,24 @@ private _duration = getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "du
 if (_replaceNow) then { _duration = 0; }; // needed for cba context menu - avoid potential duplications and such
 
 // replace the Main Item.
-private _additionalParams = "";
+private _equipmentType = "";
 private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
 private _replaceCode = switch ( _typeNumber ) do {
-    case TYPE_HEADGEAR: { _additionalParams = "HEADGEAR"; FUNC(replaceOther) };
-    case TYPE_UNIFORM:  { _additionalParams = "UNIFORM";  FUNC(replaceContainer)  };
-    case TYPE_VEST:     { _additionalParams = "VEST";     FUNC(replaceContainer)  };
-    case TYPE_BACKPACK: { _additionalParams = "BACKPACK"; FUNC(replaceContainer)  };
+    case TYPE_HEADGEAR: { _equipmentType = "HEADGEAR"; FUNC(replaceOther) };
+    case TYPE_UNIFORM:  { _equipmentType = "UNIFORM";  FUNC(replaceContainer)  };
+    case TYPE_VEST:     { _equipmentType = "VEST";     FUNC(replaceContainer)  };
+    case TYPE_BACKPACK: { _equipmentType = "BACKPACK"; FUNC(replaceContainer)  };
     default {
         // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber.
         switch (true) do {
-            case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { _additionalParams = "FACEWEAR"; FUNC(replaceOther) };
+            case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { _equipmentType = "FACEWEAR"; FUNC(replaceOther) };
             default { false };
         };
     };
 };
 
 if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
-[ _replaceCode, [_unit, _cfgOrigin, _cfgTarget, _additionalParams ], _duration] call CBA_fnc_waitAndExecute;
+[ _replaceCode, [_unit, _cfgTarget, _equipmentType ], _duration] call CBA_fnc_waitAndExecute;
 
 //// handle components
 [_cfgOrigin, _cfgTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
