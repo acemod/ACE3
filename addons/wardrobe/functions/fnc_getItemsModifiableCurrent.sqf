@@ -30,7 +30,7 @@ private _code = {
     select
     { _x call FUNC(isModifiable) }
     apply
-    { [_x, _x call FUNC(getItemsModifiableTo) ] }    // will return an array, even if the target variants are not available.
+    { [_x, _x call FUNC(getItemsModifiableTo) ] }    // will return an array, even if the target variants are not available
     select
     { (_x#1) isNotEqualTo [] }
     apply

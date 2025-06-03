@@ -30,7 +30,7 @@ private _classOrigin = configName _cfgOrigin;
 private _duration = getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "duration");
 if (_replaceNow) then { _duration = 0; }; // needed for cba context menu - avoid potential duplications and such
 
-// replace the Main Item.
+// replace the Main Item
 private _equipmentType = "";
 private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
 private _replaceCode = switch ( _typeNumber ) do {
@@ -39,7 +39,7 @@ private _replaceCode = switch ( _typeNumber ) do {
     case TYPE_VEST:     { _equipmentType = "VEST";     FUNC(replaceContainer)  };
     case TYPE_BACKPACK: { _equipmentType = "BACKPACK"; FUNC(replaceContainer)  };
     default {
-        // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber.
+        // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber
         switch (true) do {
             case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { _equipmentType = "FACEWEAR"; FUNC(replaceOther) };
             default { false };
