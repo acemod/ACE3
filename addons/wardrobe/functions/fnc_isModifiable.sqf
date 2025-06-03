@@ -4,7 +4,7 @@
  * Function to check if the provided wearable item (Config) can be modified through ace_wardrobe.
  *
  * Arguments:
- * 0: Wearable item <Config>
+ * 0: Wearable item <CONFIG>
  *
  * Return Value:
  * Result <BOOL>

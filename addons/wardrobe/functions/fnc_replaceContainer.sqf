@@ -4,7 +4,7 @@
  * Function to replace a units wearable container while maintaining the content of the container.
  *
  * Arguments:
- * 0: Unit <Object>
+ * 0: Unit <OBJECT>
  * 1: Desired variant <CONFIG>
  * 2: Type of wearable container <STRING>
  *

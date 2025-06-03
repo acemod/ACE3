@@ -4,7 +4,7 @@
  * Function to replace a person's goggles/facewear.
  *
  * Arguments:
- * 0: Unit <Object>
+ * 0: Unit <OBJECT>
  * 1: Desired variant <CONFIG>
  * 2: Type of wearable container <STRING>
  *

@@ -5,8 +5,8 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Current variant <Config>
- * 2: Desired variant <Config>
+ * 1: Current variant <CONFIG>
+ * 2: Desired variant <CONFIG>
  * 3: Cache the result of fnc_getitemsAll <BOOL> (default: true)
  *
  * Return Value:

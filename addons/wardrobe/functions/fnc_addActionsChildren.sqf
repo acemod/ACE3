@@ -7,7 +7,7 @@
  * 0: Target <OBJECT>
  * 1: Player <OBJECT>
  * 2: Multiple input types <STRING|ARRAY|CODE>
- * - 0: Current variant <Config>
+ * - 0: Current variant <CONFIG>
  * - 1: Array of configs possible variants <ARRAY>
  *
  * Return Value:
