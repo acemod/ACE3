@@ -42,12 +42,12 @@ private _replaceCode = switch ( _typeNumber ) do {
         // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber
         switch (true) do {
             case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { _equipmentType = "FACEWEAR"; FUNC(replaceOther) };
-            default { false };
+            default { {} };
         };
     };
 };
 
-if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
+if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
 [ _replaceCode, [_unit, _cfgTarget, _equipmentType ], _duration] call CBA_fnc_waitAndExecute;
 
 // handle components
