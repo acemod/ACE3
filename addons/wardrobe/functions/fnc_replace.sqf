@@ -50,7 +50,7 @@ private _replaceCode = switch ( _typeNumber ) do {
 if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
 [ _replaceCode, [_unit, _cfgTarget, _equipmentType ], _duration] call CBA_fnc_waitAndExecute;
 
-//// handle components
+// handle components
 [_cfgOrigin, _cfgTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
 
 // add surplus
@@ -76,7 +76,7 @@ if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1
 } forEach _missing;
 
 
-//// handle effects
+// handle effects
 // animation/gestures
 [ _unit, getText (configFile >> QUOTE(ADDON) >> _classTarget >> "gesture") ] call EFUNC(common,doGesture);
 

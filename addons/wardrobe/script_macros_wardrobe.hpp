@@ -25,7 +25,7 @@ if (varName isEqualType []) then { { [_x, varName select _forEachIndex] call FUN
 
 
 // Config
-//// Adjust Weight of CfgWeapons Wearables.
+// Adjust Weight of CfgWeapons Wearables.
 #define MASS(var)\
 class ItemInfo: ItemInfo {\
     mass = var;\
