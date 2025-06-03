@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Function to store a value behind a key into the addons cache
+ * Function to store a value behind a key into the addons cache.
  *
  * Arguments:
  * 0: Key <STRING>

@@ -8,7 +8,7 @@
  * 1: Cache Return? <BOOL>
  *
  * Return Value:
- * modifiable Items of the Unit <ARRAY>
+ * Modifiable items of the unit <ARRAY>
  *
  * Example:
  * [player, false] call ace_wardrobe_fnc_getItemsModifiableAll

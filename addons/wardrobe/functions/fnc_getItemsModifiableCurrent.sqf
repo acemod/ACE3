@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Cache Return? <BOOL>
+ * 1: Cache return? <BOOL>
  *
  * Return Value:
  * modifiable Items of the Unit <ARRAY>

@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * This Function checks if the Target Item has an Alternative String for the Action, if not, it returns the displayName property
+ * This function checks if the target item has an alternative String for the action, if not, it returns the displayName property.
  *
  * Arguments:
  * 0: Desired variant <CONFIG>

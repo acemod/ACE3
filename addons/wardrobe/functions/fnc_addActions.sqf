@@ -1,8 +1,8 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * This function creates children for the main wardrobe action - one for every modifiable Item.
- * Each Modifiable Item will have its own children in regard of the items it can be changed towards.
+ * This function creates children for the main wardrobe action - one for every modifiable item.
+ * Each modifiable item will have its own children in regard of the items it can be changed towards.
  *
  * Arguments:
  * 0: Unit <OBJECT>

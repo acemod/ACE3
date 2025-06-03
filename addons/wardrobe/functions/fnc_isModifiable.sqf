@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Function to check if the provided wearable Item (Config) can be modified through ace_wardrobe.
+ * Function to check if the provided wearable item (Config) can be modified through ace_wardrobe.
  *
  * Arguments:
  * 0: Wearable item <Config>

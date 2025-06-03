@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * function to return the data index based of the magazine ID
+ * Function to return the data index based of the magazine ID.
  *
  * Arguments:
  * 0: Magazine ID <STRING>

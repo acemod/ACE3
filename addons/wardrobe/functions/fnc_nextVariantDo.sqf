@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Statement of CBA Context Menu Entry - Request the next variant.
+ * Statement of cba context menu entry. Requests the next variant.
  *
  * Arguments:
  * 0: Player <OBJECT>

@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * To retrieve a value from the database. returns nil if not stored or, when provided, will execute the alternative code. Result will be stored and returned.
+ * To retrieve a value from the database. Returns nil if not stored or, when provided, will execute the alternative code. Result will be stored and returned.
  *
  * Arguments:
  * 0: Key <STRING>

@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Ace Action Statement - Removes the modifiableItem and replaces it with the target item
+ * Ace action statement. Removes the modifiableItem and replaces it with the target item.
  *
  * Arguments:
  * 0: Action target <OBJECT>

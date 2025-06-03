@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * This Function checks if the Target Item has an alternative Picture for the Action, if not, it returns the picture property
+ * This function checks if the target item has an alternative picture for the action, if not, it returns the picture property.
  *
  * Arguments:
  * 0: Config of desired variant <CONFIG>

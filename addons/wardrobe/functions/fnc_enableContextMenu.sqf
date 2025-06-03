@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * CBA Setting - On Setting Changed - Function to activate the Wardrobe-related CBA Context Menu Options
+ * CBA Setting - on setting changed - function to activate the wardrobe-related cba context menu options.
  *
  * Arguments:
  * 0: CBA Setting Value <BOOL>

@@ -1,10 +1,10 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Context Menu - Return config the "next" variant - if multiple variants are defined, it will choose randomly.
+ * Context Menu. Return config of the "next" variant - if multiple variants are defined, it will choose randomly.
  * Maintains a history of the current and chosen variants as long as the inventory is open.
  * Already used variants from the hstory will be removed from the availabe options.
- * Once all options have been exhausted, the history will be purged and start over.
+ * Once all options have been exhausted, the history will be reset.
  *
  * Arguments:
  * 0: Current variant <CONFIG>

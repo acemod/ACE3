@@ -1,7 +1,7 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Function to replace a persons Uniform while maintaining the content of the uniform.
+ * Function to replace a units wearable container while maintaining the content of the container.
  *
  * Arguments:
  * 0: Unit <Object>

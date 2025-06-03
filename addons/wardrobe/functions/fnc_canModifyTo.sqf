@@ -1,13 +1,13 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * Condition Check if the unit can modify from current variant to target variant. Checks and compares components.
+ * Condition check if the unit can modify from current variant to target variant. Checks and compares components.
  *
  * Arguments:
  * 0: Unit <OBJECT>
  * 1: Current variant <Config>
  * 2: Desired variant <Config>
- * 3: Cache Result of fnc_getitemsAll <BOOL> (default: true)
+ * 3: Cache the result of fnc_getitemsAll <BOOL> (default: true)
  *
  * Return Value:
  * Result <BOOL>
