@@ -31,7 +31,6 @@ private _checkfallbackComponent = {
     };
 };
 
-
 private _current = getArray (configFile >> QUOTE(ADDON) >> configName _cfgOrigin >> "components") apply _checkfallbackComponent select {_x isNotEqualTo ""};
 private _needed  = getArray (configFile >> QUOTE(ADDON) >> configName _cfgTarget >> "components") apply _checkfallbackComponent select {_x isNotEqualTo ""};
 

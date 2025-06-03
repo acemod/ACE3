@@ -23,7 +23,6 @@ toFixed 0;
 private _magazineDetails = (magazinesAmmoFull _unit) apply { [_x#0, _x#-2, _x#-1] };
 private _loadout = _unit call CBA_fnc_getLoadout;
 
-
 // handle special cases - pre replace
 // ace intel items
 INTEL_PRE(_hasDocument,acex_intelitems_document);
@@ -34,7 +33,6 @@ INTEL_PRE(_hasPhoto,acex_intelitems_photo);
 private _hasSpareBarrel = _magazineDetails findIf { _x#0 == "ACE_SpareBarrel" } > -1;
 if (_hasSpareBarrel) then { _hasSpareBarrel = [_unit, "ACE_SpareBarrel" ] call CBA_fnc_getMagazineIndex };
 
-
 // replace wearable
 switch (_equipmentType) do {
     case "UNIFORM":  { _loadout # 0 # 3 set [0, configName _cfgTarget]; };
@@ -44,7 +42,6 @@ switch (_equipmentType) do {
 
 // apply new loadout
 [_unit, _loadout] call CBA_fnc_setLoadout;
-
 
 // handle special cases - post replace
 // ace intel items

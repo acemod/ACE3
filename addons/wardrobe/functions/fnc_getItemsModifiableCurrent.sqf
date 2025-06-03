@@ -18,9 +18,7 @@
 
 params [ ["_unit", objNull, [objNull]], ["_cache", true, [true]] ];
 
-
 private _code = {
-
     ( [headgear _unit, goggles _unit, uniform _unit, vest _unit, backpack _unit] - [""] )
     apply
     { _x call CBA_fnc_getItemConfig }

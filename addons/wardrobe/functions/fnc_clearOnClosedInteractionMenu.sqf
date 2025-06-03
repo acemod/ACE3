@@ -17,9 +17,7 @@
 
 params [ ["_key", "", [""]] ];
 
-
 if (isNil QGVAR(menuClearQueue)) then {
-
     [
         "ace_interactMenuClosed",
         {
@@ -31,13 +29,9 @@ if (isNil QGVAR(menuClearQueue)) then {
             [_thisType, _thisId] call CBA_fnc_removeEventHandler;
         }
     ] call CBA_fnc_addEventHandlerArgs;
-
     GVAR(menuClearQueue) = [_key];
-
 } else {
-
     GVAR(menuClearQueue) pushBackUnique _key;
-
 };
 
 nil

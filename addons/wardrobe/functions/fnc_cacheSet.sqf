@@ -16,8 +16,6 @@
  * Public: Yes
  */
 
-
-
 params [ ["_key", "", [""] ], ["_value", nil] ];
 
 if (isNil "_value") exitWith { false };

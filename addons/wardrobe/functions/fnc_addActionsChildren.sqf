@@ -22,7 +22,6 @@
 params ["_target", "", "_actionParams"];
 _actionParams params ["_cfgOrigin", "_newItems"];
 
-
 private _actions = [];
 
 {
@@ -37,7 +36,6 @@ private _actions = [];
         [_cfgOrigin, _cfgTarget]
     ] call EFUNC(interact_menu,createAction);
     _actions pushBack [_aceAction, [], _target];
-
 } forEach _newItems;
 
 _actions

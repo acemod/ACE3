@@ -16,5 +16,4 @@
  * Public: Yes
  */
 
-
 flatten ( ["CfgWeapons", "CfgGlasses"] apply { ( QUOTE(_x call FUNC(isModifiable)) configClasses (configFile >> _x) ) } ) apply { configName _x }

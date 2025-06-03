@@ -18,7 +18,6 @@
 
 params ["_unit"];
 
-
 private _modifiableItems = _unit call FUNC(getItemsModifiableCurrent);
 private _actions = [];
 {
@@ -33,7 +32,6 @@ private _actions = [];
         [_cfg, _x#1]
     ] call EFUNC(interact_menu,createAction);
     _actions pushBack [_aceAction, [], _unit];
-
 } forEach _modifiableItems;
 
 _actions

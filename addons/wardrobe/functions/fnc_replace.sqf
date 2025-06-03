@@ -67,14 +67,12 @@ if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2
 // remove missing
 {
     if (_classOrigin isNotEqualTo _x) then {
-
         switch (true) do {
             case (goggles _unit isEqualTo _x): { removeGoggles _unit; };
             default { [_unit, _x] call CBA_fnc_removeItem; };
         };
     };
 } forEach _missing;
-
 
 // handle effects
 // animation/gestures

@@ -18,7 +18,6 @@
  * Public: No
  */
 
-
 params ["_cfgCurrent"];
 
 private _cfgModifiableTo = [_cfgCurrent, false] call FUNC(getItemsModifiableTo);
@@ -39,7 +38,6 @@ if (_cfgHistory isEqualTo "") then {
         ACE_player removeEventHandler [_thisEvent, _thisEventhandler];
     }];
 };
-
 
 private _remaining = _cfgModifiableTo - _cfgHistory;
 

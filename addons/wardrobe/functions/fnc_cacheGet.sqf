@@ -17,7 +17,6 @@
  * Public: Yes
  */
 
-
 params [ [ "_key", "", [""] ], [ "_else", nil, [{}] ] ];
 
 if (isNil "_else") then {

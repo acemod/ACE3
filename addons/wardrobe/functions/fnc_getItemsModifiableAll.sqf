@@ -18,9 +18,7 @@
 
 params [ ["_unit", objNull, [objNull]], ["_cache", true, [true]] ];
 
-
 private _code = {
-
     _unit call FUNC(getItemsAll)
     apply
     { _x call CBA_fnc_getItemConfig }
