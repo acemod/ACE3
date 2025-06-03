@@ -66,9 +66,10 @@ if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2
 // remove missing
 {
     if (_classOrigin isNotEqualTo _x) then {
-        switch (true) do {
-            case (goggles _unit isEqualTo _x): { removeGoggles _unit; };
-            default { [_unit, _x] call CBA_fnc_removeItem; };
+        if (goggles _unit isEqualTo _x) then {
+            removeGoggles _unit;
+        } else {
+            [_unit, _x] call CBA_fnc_removeItem;
         };
     };
 } forEach _missing;
