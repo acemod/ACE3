@@ -48,7 +48,5 @@ private _cargoTypes = ["Weapon", "Magazine", "Item", "Backpack"];
                 case "Backpack": {_currentContainer addBackpackCargoGlobal [_x, -1]};
             };
         } forEachReversed _cargoList;
-
     } forEach _cargoTypes;
-
 } forEach (_container select {load _x > 1});
