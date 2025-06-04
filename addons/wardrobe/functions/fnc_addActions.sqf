@@ -20,6 +20,7 @@ params ["_unit"];
 
 private _modifiableItems = _unit call FUNC(getItemsModifiableCurrent);
 private _actions = [];
+
 {
     private _cfg = _x#0;
     private _aceAction = [
