@@ -43,8 +43,8 @@ private _cargoTypes = ["Weapon", "Magazine", "Item", "Backpack"];
             
             switch (_cargoType) do {
                 case "Weapon": {_currentContainer addWeaponCargoGlobal [_x, -1]};
-                case "Magazine": {_currentContainer addMagazineCargoGlobal [_x, -1];};
-                case "Item": {_currentContainer addItemCargoGlobal [_x, -1];};
+                case "Magazine": {_currentContainer addMagazineCargoGlobal [_x, -1]};
+                case "Item": {_currentContainer addItemCargoGlobal [_x, -1]};
                 case "Backpack": {_currentContainer addBackpackCargoGlobal [_x, -1]};
             };
         } forEachReversed _cargoList;
