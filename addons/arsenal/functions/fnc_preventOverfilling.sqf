@@ -29,9 +29,9 @@ if (isNull _container || _container isEqualTo _unit) then {
 	{
 		private _cargoType = _x;
 		private _cargoList = switch (_cargoType) do {
-			case "Weapon": { weaponCargo _currentContainer };
-			case "Magazine": { magazineCargo _currentContainer };
-			case "Item": { itemCargo _currentContainer };
+			case "Weapon":		{ weaponCargo _currentContainer };
+			case "Magazine":	{ magazineCargo _currentContainer };
+			case "Item":		{ itemCargo _currentContainer };
 		};
 
 		{
@@ -40,9 +40,9 @@ if (isNull _container || _container isEqualTo _unit) then {
 			};
 			
 			switch (_cargoType) do {
-				case "Weapon":   { _currentContainer addWeaponCargoGlobal [_x, -1]; };
-				case "Magazine": { _currentContainer addMagazineCargoGlobal [_x, -1]; };
-				case "Item":     { _currentContainer addItemCargoGlobal [_x, -1]; };
+				case "Weapon":		{ _currentContainer addWeaponCargoGlobal [_x, -1]; };
+				case "Magazine":	{ _currentContainer addMagazineCargoGlobal [_x, -1]; };
+				case "Item":		{ _currentContainer addItemCargoGlobal [_x, -1]; };
 			};
 		} forEachReversed _cargoList;
 
