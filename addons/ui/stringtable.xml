@@ -733,5 +733,14 @@
             <Japanese>全てのUIを隠す</Japanese>
             <Chinesesimp>隐藏所有UI</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_UI_checkWeaponZeroing">
+            <English>Check Weapon Zeroing</English>
+        </Key>
+        <Key ID="STR_ACE_UI_weaponZeroSetTo">
+            <English>Zero is set to:</English>
+        </Key>
+        <Key ID="STR_ACE_UI_meters">
+            <English>Meters</English>
+        </Key>
     </Package>
 </Project>
