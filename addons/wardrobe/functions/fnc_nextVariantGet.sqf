@@ -47,7 +47,6 @@ _remaining = _remaining select { [ACE_player, _cfgCurrent, _x] call FUNC(canModi
 private _return = if (_remaining isNotEqualTo []) then {
     selectRandom _remaining
 } else {
-    // _cfgHistory select { !(_x in _cfgModifiableTo) };
     _cfgHistory = [];
     missionNamespace setVariable [QGVAR(variantHistory), [] ];
     _cfgHistory pushBackUnique _cfgCurrent;
