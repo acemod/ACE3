@@ -22,9 +22,10 @@ if (isNull _container || _container isEqualTo _unit) then {
     _container = [_container];
 };
 
+private _cargoTypes = ["Weapon", "Magazine", "Item", "Backpack"];
+
 {
     private _currentContainer = _x;
-    private _cargoTypes = ["Weapon", "Magazine", "Item", "Backpack"];
 
     {
         private _cargoType = _x;
