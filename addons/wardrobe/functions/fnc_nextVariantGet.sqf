@@ -24,9 +24,9 @@ private _cfgModifiableTo = [_cfgCurrent, false] call FUNC(getItemsModifiableTo);
 
 if (_cfgModifiableTo isEqualTo []) exitWith {false};
 
-private _cfgHistory = missionNamespace getVariable [QGVAR(variantHistory), ""];
+private _cfgHistory = missionNamespace getVariable [QGVAR(variantHistory), nil];
 
-if (_cfgHistory isEqualTo "") then {
+if (isNil "_cfgHistory") then {
     
     _cfgHistory = [];
     _cfgHistory pushBackUnique _cfgCurrent;
