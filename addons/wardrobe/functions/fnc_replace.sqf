@@ -40,7 +40,7 @@ private _replaceCode = switch (_typeNumber) do {
     default {
         // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber
         switch (true) do {
-            case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { _equipmentType = "FACEWEAR"; FUNC(replaceOther) };
+            case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { _equipmentType = "FACEWEAR"; LINKFUNC(replaceOther) };
             default { {} };
         };
     };
