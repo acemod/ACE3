@@ -52,7 +52,7 @@ class GVAR(base_U_jacket_closed): GVAR(base) {
 // Common base class for helmets with a visor that can be flipped up or down
 class GVAR(base_H_visor_up): GVAR(base) {
     duration = 0.25;
-    gesture ="gestureNod";
+    gesture = "gestureNod";
 
     sound[] = {CN_SOUND(helmet_visor,05)};
     sound_timing = 0;
@@ -62,7 +62,7 @@ class GVAR(base_H_visor_up): GVAR(base) {
 
 class GVAR(base_H_visor_down): GVAR(base) {
     duration = 0.25;
-    gesture ="gestureNod";
+    gesture = "gestureNod";
 
     sound[] = {CN_SOUND(helmet_visor,05)};
     sound_timing = 0;
@@ -72,23 +72,23 @@ class GVAR(base_H_visor_down): GVAR(base) {
 
 // Common base class for headgear with goggles that can be used as a facewear item
 class GVAR(base_H_goggles_on): GVAR(base) {
-    gesture ="GestureWipeFace";
+    gesture = "GestureWipeFace";
     alternativeDisplayName = CSTRING(gogglesOn);
 };
 
 class GVAR(base_H_goggles_off): GVAR(base) {
-    gesture ="GestureWipeFace";
+    gesture = "GestureWipeFace";
     alternativeDisplayName = CSTRING(gogglesOff);
 };
 
 
 // Common base class for headgear with a mask on/off variant
 class GVAR(base_H_mask_on): GVAR(base) {
-    gesture ="GestureWipeFace";
+    gesture = "GestureWipeFace";
     alternativeDisplayName = CSTRING(maskOn);
 };
 
 class GVAR(base_H_mask_off): GVAR(base) {
-    gesture ="GestureWipeFace";
+    gesture = "GestureWipeFace";
     alternativeDisplayName = CSTRING(maskOff);
 };
