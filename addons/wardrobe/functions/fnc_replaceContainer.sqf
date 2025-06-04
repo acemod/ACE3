@@ -31,7 +31,7 @@ INTEL_PRE(_photo,acex_intelitems_photo);
 
 // ace overheating
 private _spareBarrel = _magazineDetails findIf { _x#0 == "ACE_SpareBarrel" } > -1;
-if (_spareBarrel) then { _spareBarrel = [_unit, "ACE_SpareBarrel" ] call CBA_fnc_getMagazineIndex };
+if (_spareBarrel) then { _spareBarrel = [_unit, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex };
 
 // replace wearable
 switch (_equipmentType) do {

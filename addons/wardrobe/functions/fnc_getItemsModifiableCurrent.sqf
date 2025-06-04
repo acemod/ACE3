@@ -16,16 +16,16 @@
  * Public: Yes
  */
 
-params [ ["_unit", objNull, [objNull]], ["_cache", true, [true]] ];
+params [["_unit", objNull, [objNull]], ["_cache", true, [true]]];
 
 private _code = {
-    ( [headgear _unit, goggles _unit, uniform _unit, vest _unit, backpack _unit] - [""] )
+    ([headgear _unit, goggles _unit, uniform _unit, vest _unit, backpack _unit] - [""])
     apply
     { _x call CBA_fnc_getItemConfig }
     select
     { _x call FUNC(isModifiable) }
     apply
-    { [_x, _x call FUNC(getItemsModifiableTo) ] }    // will return an array, even if the target variants are not available
+    { [_x, _x call FUNC(getItemsModifiableTo)] }    // will return an array, even if the target variants are not available
     select
     { (_x#1) isNotEqualTo [] }
     apply

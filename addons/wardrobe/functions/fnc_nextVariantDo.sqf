@@ -23,7 +23,7 @@ params ["_unit", "", "_item", "", ""];
 
 private _cfgCurrent = _item call CBA_fnc_getItemConfig;
 
-private _cfgTarget = [ _cfgCurrent ] call FUNC(nextVariantGet);
+private _cfgTarget = [_cfgCurrent, _unit] call FUNC(nextVariantGet);
 
 if (_cfgTarget isEqualTo false) exitWith {};
 

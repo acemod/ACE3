@@ -32,7 +32,7 @@ private _duration = if (_replaceNow) then { 0 } else { getNumber (configFile >> 
 // replace the main Item
 private _equipmentType = "";
 private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
-private _replaceCode = switch ( _typeNumber ) do {
+private _replaceCode = switch (_typeNumber) do {
     case TYPE_HEADGEAR: { _equipmentType = "HEADGEAR"; FUNC(replaceOther) };
     case TYPE_UNIFORM:  { _equipmentType = "UNIFORM";  FUNC(replaceContainer)  };
     case TYPE_VEST:     { _equipmentType = "VEST";     FUNC(replaceContainer)  };
@@ -47,7 +47,7 @@ private _replaceCode = switch ( _typeNumber ) do {
 };
 
 if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
-[ _replaceCode, [_unit, _cfgTarget, _equipmentType ], _duration] call CBA_fnc_waitAndExecute;
+[_replaceCode, [_unit, _cfgTarget, _equipmentType], _duration] call CBA_fnc_waitAndExecute;
 
 // handle components
 [_cfgOrigin, _cfgTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
@@ -55,7 +55,7 @@ if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2
 // add surplus
 {
     if (_classTarget isNotEqualTo _x) then {
-        if ( goggles _unit isEqualTo "" && { isClass (configFile >> "CfgGlasses" >> _x) } ) then {
+        if (goggles _unit isEqualTo "" && { isClass (configFile >> "CfgGlasses" >> _x) }) then {
             _unit addGoggles _x;
         } else {
             [_unit, _x, true] call CBA_fnc_addItem;
@@ -76,7 +76,7 @@ if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2
 
 // handle effects
 // animation/gestures
-[ _unit, getText (configFile >> QUOTE(ADDON) >> _classTarget >> "gesture") ] call EFUNC(common,doGesture);
+[_unit, getText (configFile >> QUOTE(ADDON) >> _classTarget >> "gesture")] call EFUNC(common,doGesture);
 
 // plays random sound at the beginning
 private _sound = [configFile >> QUOTE(ADDON) >> _classTarget >> "sound"] call CBA_fnc_getCfgDataRandom;

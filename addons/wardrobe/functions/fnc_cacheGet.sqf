@@ -17,7 +17,7 @@
  * Public: Yes
  */
 
-params [ [ "_key", "", [""] ], [ "_else", nil, [{}] ] ];
+params [["_key", "", [""]], ["_else", nil, [{}]]];
 
 if (isNil "_else") then {
     GVAR(cache) getOrDefault [_key, nil];

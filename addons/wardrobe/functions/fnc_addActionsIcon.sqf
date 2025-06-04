@@ -15,7 +15,7 @@
  * Public: No
  */
 
-params [ ["_cfg", configNull, [configNull] ] ];
+params [["_cfg", configNull, [configNull]]];
 
 if (isNull _cfg) exitWith {};
 

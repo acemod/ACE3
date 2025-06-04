@@ -15,7 +15,7 @@
  * Public: yes
  */
 
-params [ ["_key", "", [""]] ];
+params [["_key", "", [""]]];
 
 if (isNil QGVAR(menuClearQueue)) then {
     [
@@ -23,7 +23,7 @@ if (isNil QGVAR(menuClearQueue)) then {
         {
             if (_this isNotEqualTo [1]) exitWith {};
 
-            { GVAR(cache) deleteAt _x } forEach ( missionNamespace getVariable [QGVAR(menuClearQueue), [] ] );
+            { GVAR(cache) deleteAt _x } forEach (missionNamespace getVariable [QGVAR(menuClearQueue), []]);
 
             GVAR(menuClearQueue) = nil;
             [_thisType, _thisId] call CBA_fnc_removeEventHandler;

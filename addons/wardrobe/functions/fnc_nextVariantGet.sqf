@@ -18,7 +18,7 @@
  * Public: No
  */
 
-params ["_cfgCurrent"];
+params ["_cfgCurrent", "_unit"];
 
 private _cfgModifiableTo = [_cfgCurrent, false] call FUNC(getItemsModifiableTo);
 
@@ -33,7 +33,7 @@ if (_cfgHistory isEqualTo "") then {
 
     missionNamespace setVariable [QGVAR(variantHistory), _cfgHistory];
 
-    ACE_player addEventHandler ["InventoryClosed", {
+    _unit addEventHandler ["InventoryClosed", {
         GVAR(variantHistory) = nil;
         ACE_player removeEventHandler [_thisEvent, _thisEventhandler];
     }];
@@ -41,14 +41,14 @@ if (_cfgHistory isEqualTo "") then {
 
 private _remaining = _cfgModifiableTo - _cfgHistory;
 
-_remaining = _remaining select { [ACE_player, _cfgCurrent, _x] call FUNC(canModifyTo) };
+_remaining = _remaining select { [_unit, _cfgCurrent, _x] call FUNC(canModifyTo) };
 
 // returns either a random remaining item or alternatively, a random one from the complete array
 private _return = if (_remaining isNotEqualTo []) then {
     selectRandom _remaining
 } else {
     _cfgHistory = [];
-    missionNamespace setVariable [QGVAR(variantHistory), [] ];
+    missionNamespace setVariable [QGVAR(variantHistory), []];
     _cfgHistory pushBackUnique _cfgCurrent;
     selectRandom _cfgModifiableTo;
 };

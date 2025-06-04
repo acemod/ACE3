@@ -15,7 +15,7 @@
  * Public: No
  */
 
-params [ ["_cfg", configNull, [configNull] ] ];
+params [["_cfg", configNull, [configNull]]];
 
 private _altDispName = getText (configFile >> QUOTE(ADDON) >> configName _cfg >> "alternativeDisplayName");
 if (_altDispName isEqualTo "") then { getText (_cfg >> "displayName") } else { _altDispName };

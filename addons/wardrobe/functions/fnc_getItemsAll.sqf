@@ -16,7 +16,7 @@
  * Public: No
  */
 
-params [ ["_unit", objNull, [objNull]], ["_cache", true, [true]] ];
+params [["_unit", objNull, [objNull]], ["_cache", true, [true]]];
 
 private _code = { flatten getUnitLoadout _unit select { _x isEqualType "" && { _x != ""}}; };
 

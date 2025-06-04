@@ -16,7 +16,7 @@
  * Public: Yes
  */
 
-params [ ["_unit", objNull, [objNull]], ["_cache", true, [true]] ];
+params [["_unit", objNull, [objNull]], ["_cache", true, [true]]];
 
 private _code = {
     _unit call FUNC(getItemsAll)
@@ -25,7 +25,7 @@ private _code = {
     select
     { _x call FUNC(isModifiable) }
     apply
-    { [_x, _x call FUNC(getItemsModifiableTo) ] }
+    { [_x, _x call FUNC(getItemsModifiableTo)] }
     select
     { (_x#1) isNotEqualTo [] }
     apply
