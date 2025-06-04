@@ -34,9 +34,9 @@ private _equipmentType = "";
 private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
 private _replaceCode = switch (_typeNumber) do {
     case TYPE_HEADGEAR: { _equipmentType = "HEADGEAR"; LINKFUNC(replaceOther) };
-    case TYPE_UNIFORM:  { _equipmentType = "UNIFORM";  LINKFUNC(replaceContainer)  };
-    case TYPE_VEST:     { _equipmentType = "VEST";     LINKFUNC(replaceContainer)  };
-    case TYPE_BACKPACK: { _equipmentType = "BACKPACK"; LINKFUNC(replaceContainer)  };
+    case TYPE_UNIFORM:  { _equipmentType = "UNIFORM";  LINKFUNC(replaceContainer) };
+    case TYPE_VEST:     { _equipmentType = "VEST";     LINKFUNC(replaceContainer) };
+    case TYPE_BACKPACK: { _equipmentType = "BACKPACK"; LINKFUNC(replaceContainer) };
     default {
         // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber
         switch (true) do {

@@ -20,4 +20,5 @@ params [["_cfg", configNull, [configNull]]];
 if (isNull _cfg) exitWith {};
 
 private _altDispIcon = getText (configFile >> QUOTE(ADDON) >> configName _cfg >> "alternativePicture");
-if (_altDispIcon isEqualTo "") then { getText (_cfg >> "picture") } else { _altDispIcon }
+
+if (_altDispIcon isEqualTo "") then { getText (_cfg >> "picture") } else { _altDispIcon } // return

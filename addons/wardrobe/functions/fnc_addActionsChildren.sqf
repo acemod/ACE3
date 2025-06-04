@@ -31,7 +31,7 @@ private _actions = [];
         _cfgTarget call FUNC(addActionsName),
         _cfgTarget call FUNC(addActionsIcon),
         FUNC(replace),
-        {true},
+        { true },
         {},
         [_cfgOrigin, _cfgTarget]
     ] call EFUNC(interact_menu,createAction);

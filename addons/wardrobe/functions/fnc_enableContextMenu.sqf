@@ -17,7 +17,7 @@
 
 params [["_enable", true, [true]]];
 
-if (_enable && {!(missionNamespace getVariable [QGVAR(contextmenuEnabled), false])}) then {
+if (_enable && { !(missionNamespace getVariable [QGVAR(contextmenuEnabled), false]) }) then {
     missionNamespace setVariable [QGVAR(contextmenuEnabled), true];
 
     [

@@ -28,7 +28,7 @@ private _actions = [];
         getText (_cfg >> "displayName"),
         getText (_cfg >> "picture"),
         {},
-        {true},
+        { true },
         FUNC(addActionsChildren),
         [_cfg, _x#1]
     ] call EFUNC(interact_menu,createAction);
