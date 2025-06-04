@@ -16,4 +16,10 @@
  * Public: Yes
  */
 
-flatten ( ["CfgWeapons", "CfgGlasses"] apply { ( QUOTE(_x call FUNC(isModifiable)) configClasses (configFile >> _x) ) } ) apply { configName _x }
+private _return = [];
+
+{
+    _return append (QUOTE(_x call FUNC(isModifiable)) configClasses (configFile >> _x));
+} forEach ["CfgWeapons", "CfgGlasses"];
+
+_return apply { configName _x } // return
