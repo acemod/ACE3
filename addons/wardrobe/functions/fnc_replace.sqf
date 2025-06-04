@@ -27,7 +27,7 @@ private _classTarget = configName _cfgTarget;
 private _classOrigin = configName _cfgOrigin;
 
 // duration of the "animation"
-private _duration = if (_replaceNow) then { 0 } else { getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "duration"); }; // _replaceNow needed for cba context menu to avoid potential duplications and such
+private _duration = if (_replaceNow) then { 0 } else { getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "duration") }; // _replaceNow needed for cba context menu to avoid potential duplications and such
 
 // replace the main Item
 private _equipmentType = "";
