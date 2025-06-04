@@ -22,7 +22,7 @@ params ["_cfgCurrent", "_unit"];
 
 private _cfgModifiableTo = [_cfgCurrent, false] call FUNC(getItemsModifiableTo);
 
-if (_cfgModifiableTo isEqualTo []) exitWith {false};
+if (_cfgModifiableTo isEqualTo []) exitWith { configNull };
 
 private _cfgHistory = missionNamespace getVariable [QGVAR(variantHistory), nil];
 
