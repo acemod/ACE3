@@ -23,29 +23,29 @@ if (isNull _container || _container isEqualTo _unit) then {
 };
 
 {
-	private _currentContainer = _x;
-	private _cargoTypes = ["Weapon", "Magazine", "Item"];
+    private _currentContainer = _x;
+    private _cargoTypes = ["Weapon", "Magazine", "Item"];
 
-	{
-		private _cargoType = _x;
-		private _cargoList = switch (_cargoType) do {
-			case "Weapon":		{ weaponCargo _currentContainer };
-			case "Magazine":	{ magazineCargo _currentContainer };
-			case "Item":		{ itemCargo _currentContainer };
-		};
+    {
+        private _cargoType = _x;
+        private _cargoList = switch (_cargoType) do {
+            case "Weapon": {weaponCargo _currentContainer};
+            case "Magazine": {magazineCargo _currentContainer};
+            case "Item": {itemCargo _currentContainer};
+        };
 
-		{
-			if (load _currentContainer <= 1) then {
-				break;
-			};
-			
-			switch (_cargoType) do {
-				case "Weapon":		{_currentContainer addWeaponCargoGlobal [_x, -1]};
-				case "Magazine":	{ _currentContainer addMagazineCargoGlobal [_x, -1]; };
-				case "Item":		{ _currentContainer addItemCargoGlobal [_x, -1]; };
-			};
-		} forEachReversed _cargoList;
+        {
+            if (load _currentContainer <= 1) then {
+                break;
+            };
+            
+            switch (_cargoType) do {
+                case "Weapon": {_currentContainer addWeaponCargoGlobal [_x, -1]};
+                case "Magazine": {_currentContainer addMagazineCargoGlobal [_x, -1];};
+                case "Item": {_currentContainer addItemCargoGlobal [_x, -1];};
+            };
+        } forEachReversed _cargoList;
 
-	} forEach _cargoTypes;
+    } forEach _cargoTypes;
 
 } forEach (_container select {load _x > 1});
