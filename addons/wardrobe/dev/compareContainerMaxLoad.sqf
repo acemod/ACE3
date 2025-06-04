@@ -15,8 +15,8 @@
  * Public: no
  */
 
-private _allWardrobeItems = flatten ( ["CfgWeapons", "CfgGlasses"] apply { ( QUOTE(_x call FUNC(isModifiable)) configClasses (configFile >> _x) ) } ) select {
-    switch ( getNumber (_x >> "ItemInfo" >> "type") ) do {
+private _allWardrobeItems = call compile preprocessFileLineNumbers "z\ace\addons\wardrobe\dev\getAllWardrobeItems.sqf" select {
+    switch (getNumber (_x >> "ItemInfo" >> "type")) do {
         case TYPE_GOGGLE: { false; };
         case TYPE_HEADGEAR: { false; };
         case default { true };
