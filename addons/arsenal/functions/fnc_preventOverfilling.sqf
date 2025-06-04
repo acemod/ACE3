@@ -24,11 +24,17 @@ if (isNull _container || _container isEqualTo _unit) then {
 
 {
     private _currentContainer = _x;
-    {
-        _currentContainer addItemCargoGlobal [_x, -1];
+	private _cargoTypes = ["Weapon", "Magazine", "Item"];
 
-        if (load _currentContainer <= 1) then {
-            break;
-        };
-    } forEachReversed (itemCargo _currentContainer);
+	{
+		private _cargoType = _x;
+		{
+			if (load _currentContainer <= 1) then {
+				break;
+			};
+
+			(call compile format ["_currentContainer add%1CargoGlobal [_x, -1];", _cargoType]);
+		} forEachReversed (call compile format ["%1Cargo _currentContainer", toLower(_cargoType)]);
+	} forEach _cargoTypes;
+
 } forEach (_container select {load _x > 1});
