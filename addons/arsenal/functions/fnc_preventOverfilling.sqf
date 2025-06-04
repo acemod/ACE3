@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 #include "..\defines.hpp"
 /*
- * Author: Alganthe, johnb43, mrschick
+ * Author: Alganthe, johnb43, mrschick, Redwan S. / Nomas, Sky / Esmeray6
  * Checks the current loadout of the given unit for inventory containers (uniform/vest/backpack) filled beyond their max load, removing excess items if present.
  *
  * Arguments:
