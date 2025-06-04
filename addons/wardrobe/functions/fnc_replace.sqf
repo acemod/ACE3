@@ -47,10 +47,10 @@ private _replaceCode = switch (_typeNumber) do {
 };
 
 if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
-[_replaceCode, [_unit, _cfgTarget, _equipmentType], _duration] call CBA_fnc_waitAndExecute;
+[_replaceCode, [_unit, _classTarget, _equipmentType], _duration] call CBA_fnc_waitAndExecute;
 
 // handle components
-[_cfgOrigin, _cfgTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
+[_classOrigin, _classTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
 
 // add surplus
 {

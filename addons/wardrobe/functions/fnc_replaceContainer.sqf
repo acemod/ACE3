@@ -5,19 +5,20 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Desired variant <CONFIG>
+ * 1: Desired variant as classname <STRING>
  * 2: Type of wearable container <STRING>
  *
  * Return Value:
  * None
  *
  * Example:
- * [_unit, _cfgTarget, _equipmentType] call ace_wardrobe_fnc_replaceContainer
+ * [player, "U_B_CTRG_3", UNIFORM] call ace_wardrobe_fnc_replaceContainer
+ * [player, "U_B_CTRG_1", UNIFORM] call ace_wardrobe_fnc_replaceContainer
  *
  * Public: No
  */
 
-params ["_unit", "_cfgTarget", "_equipmentType"];
+params ["_unit", "_classTarget", "_equipmentType"];
 
 toFixed 0;
 private _magazineDetails = (magazinesAmmoFull _unit) apply { [_x#0, _x#-2, _x#-1] };
@@ -35,9 +36,9 @@ if (_spareBarrel) then { _spareBarrel = [_unit, "ACE_SpareBarrel"] call CBA_fnc_
 
 // replace wearable
 switch (_equipmentType) do {
-    case "UNIFORM":  { _loadout # 0 # 3 set [0, configName _cfgTarget]; };
-    case "VEST":     { _loadout # 0 # 4 set [0, configName _cfgTarget]; };
-    case "BACKPACK": { _loadout # 0 # 5 set [0, configName _cfgTarget]; };
+    case "UNIFORM":  { _loadout # 0 # 3 set [0, _classTarget]; };
+    case "VEST":     { _loadout # 0 # 4 set [0, _classTarget]; };
+    case "BACKPACK": { _loadout # 0 # 5 set [0, _classTarget]; };
 };
 
 // apply new loadout
