@@ -24,7 +24,7 @@ if (isNull _container || _container isEqualTo _unit) then {
 
 {
     private _currentContainer = _x;
-    private _cargoTypes = ["Weapon", "Magazine", "Item"];
+    private _cargoTypes = ["Weapon", "Magazine", "Item", "Backpack"];
 
     {
         private _cargoType = _x;
@@ -32,6 +32,7 @@ if (isNull _container || _container isEqualTo _unit) then {
             case "Weapon": {weaponCargo _currentContainer};
             case "Magazine": {magazineCargo _currentContainer};
             case "Item": {itemCargo _currentContainer};
+            case "Backpack": {backpackCargo _currentContainer};
         };
 
         {
@@ -43,6 +44,7 @@ if (isNull _container || _container isEqualTo _unit) then {
                 case "Weapon": {_currentContainer addWeaponCargoGlobal [_x, -1]};
                 case "Magazine": {_currentContainer addMagazineCargoGlobal [_x, -1];};
                 case "Item": {_currentContainer addItemCargoGlobal [_x, -1];};
+                case "Backpack": {_currentContainer addBackpackCargoGlobal [_x, -1]};
             };
         } forEachReversed _cargoList;
 
