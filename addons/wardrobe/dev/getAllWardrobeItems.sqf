@@ -10,7 +10,6 @@
  * Wardobe items, either as classname or config <ARRAY>
  *
  * Example:
- * true call ace_wardrobe_fnc_getAllWardrobeItems;
  * call compile preprocessFileLineNumbers "z\ace\addons\wardrobe\dev\getAllWardrobeItems.sqf";
  *
  * Public: Yes
