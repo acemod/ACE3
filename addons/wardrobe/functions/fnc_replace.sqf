@@ -33,10 +33,10 @@ private _duration = if (_replaceNow) then { 0 } else { getNumber (configFile >> 
 private _equipmentType = "";
 private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
 private _replaceCode = switch (_typeNumber) do {
-    case TYPE_HEADGEAR: { _equipmentType = "HEADGEAR"; FUNC(replaceOther) };
-    case TYPE_UNIFORM:  { _equipmentType = "UNIFORM";  FUNC(replaceContainer)  };
-    case TYPE_VEST:     { _equipmentType = "VEST";     FUNC(replaceContainer)  };
-    case TYPE_BACKPACK: { _equipmentType = "BACKPACK"; FUNC(replaceContainer)  };
+    case TYPE_HEADGEAR: { _equipmentType = "HEADGEAR"; LINKFUNC(replaceOther) };
+    case TYPE_UNIFORM:  { _equipmentType = "UNIFORM";  LINKFUNC(replaceContainer)  };
+    case TYPE_VEST:     { _equipmentType = "VEST";     LINKFUNC(replaceContainer)  };
+    case TYPE_BACKPACK: { _equipmentType = "BACKPACK"; LINKFUNC(replaceContainer)  };
     default {
         // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber
         switch (true) do {
