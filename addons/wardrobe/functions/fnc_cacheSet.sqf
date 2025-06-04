@@ -11,7 +11,7 @@
  * Success <BOOL>
  *
  * Example:
- * ['tag_myKey', ["some","data"]] call ace_wardrobe_fnc_cacheSet
+ * ['tag_myKey', ["some", "data"]] call ace_wardrobe_fnc_cacheSet
  *
  * Public: Yes
  */
