@@ -14,7 +14,7 @@
  * Array of ace child actions <ARRAY>
  *
  * Example:
- * _this call ace_wardrobe_fnc_addActionsChildren
+ * [player, nil, [configFile >> "CfgWeapons" >> "U_B_CTRG_1", [configFile >> "CfgWeapons" >> "U_B_CTRG_3"]]] call ace_wardrobe_fnc_addActionsChildren
  *
  * Public: No
  */

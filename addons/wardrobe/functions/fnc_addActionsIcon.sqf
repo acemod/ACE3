@@ -10,7 +10,7 @@
  * Path to icon or "" <STRING>
  *
  * Example:
- * _cfg call ace_wardrobe_fnc_getActionIcon
+ * (configFile >> "CfgWeapons" >> "U_B_CTRG_1") call ace_wardrobe_fnc_getActionIcon
  *
  * Public: No
  */

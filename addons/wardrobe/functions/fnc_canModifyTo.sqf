@@ -13,14 +13,14 @@
  * Result <BOOL>
  *
  * Example:
- * [_unit, _cfgOrigin, _cfgTarget] call ace_wardrobe_fnc_canModifyTo
+ * [player, configFile >> "CfgWeapons" >> "U_B_CTRG_1", configFile >> "CfgWeapons" >> "U_B_CTRG_3"] call ace_wardrobe_fnc_canModifyTo
  *
  * Public: No
  */
 
 params ["_unit", "_cfgOrigin", "_cfgTarget", ["_cache", true, [true]]];
 
-[_cfgOrigin, _cfgTarget] call FUNC(compareComponents) params ["_missing", ""];
+[configName _cfgOrigin, configName _cfgTarget] call FUNC(compareComponents) params ["_missing", ""];
 
 private _currentItems = [_unit, _cache] call FUNC(getItemsAll);
 

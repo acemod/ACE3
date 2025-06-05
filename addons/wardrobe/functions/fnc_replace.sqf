@@ -15,7 +15,7 @@
  * None
  *
  * Example:
- * _this call ace_wardrobe_fnc_replace
+ * [nil, player, [configFile >> "CfgWeapons" >> "U_B_CTRG_1", configFile >> "CfgWeapons" >> "U_B_CTRG_1"]] call ace_wardrobe_fnc_replace
  *
  * Public: No
  */

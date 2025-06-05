@@ -11,7 +11,7 @@
  * ACE actions <ARRAY>
  *
  * Example:
- * _player call ace_wardrobe_fnc_addActions
+ * player call ace_wardrobe_fnc_addActions
  *
  * Public: No
  */

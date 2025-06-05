@@ -11,7 +11,9 @@
  * None
  *
  * Example:
- * [_magID, _index] call ace_wardrobe_fnc_setIndexForMagID
+ * toFixed 0;
+ * private _magazineDetails = (magazinesAmmoFull player) apply { [_x#0, _x#-2, _x#-1] } select { _x#0 == "acex_intelitems_document" };
+ * { [_x#1, 69] call ace_wardrobe_fnc_setIndexForMagID } forEach _magazineDetails;
  *
  * Public: No
  */

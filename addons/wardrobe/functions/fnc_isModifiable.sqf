@@ -10,7 +10,7 @@
  * Result <BOOL>
  *
  * Example:
- * _cfg call ace_wardrobe_fnc_isModifiable
+ * (configFile >> "CfgWeapons" >> "U_B_CTRG_1") call ace_wardrobe_fnc_isModifiable
  *
  * Public: No
  */

@@ -14,7 +14,7 @@
  * None
  *
  * Example:
- * [_unit, _container, _item, _slot, _params] call ace_wardrobe_fnc_nextVariantDo;
+ * [player, nil, G_Balaclava_combat] call ace_wardrobe_fnc_nextVariantDo;
  *
  * Public: No
  */

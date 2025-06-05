@@ -10,7 +10,10 @@
  * Index <NUMBER>
  *
  * Example:
- * _magID call ace_wardrobe_fnc_getIndexFromMagID
+ * toFixed 0;
+ * private _magazineDetails = (magazinesAmmoFull player) apply { [_x#0, _x#-2, _x#-1] };
+ * private _documents = _magazineDetails findIf { _x select 0 == "acex_intelitems_document" } > -1;
+ * if (_documents) then { _documents = [player, "acex_intelitems_document"] call CBA_fnc_getMagazineIndex apply { _x call ace_wardrobe_fnc_getIndexFromMagID } };
  *
  * Public: Yes
  */

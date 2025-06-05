@@ -10,7 +10,7 @@
  * The return value <BOOL>
  *
  * Example:
- * _cfg call ace_wardrobe_fnc_getActionsName
+ * (configFile >> "CfgWeapons" >> "U_B_CTRG_1") call ace_wardrobe_fnc_getActionsName
  *
  * Public: No
  */

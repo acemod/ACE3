@@ -13,12 +13,12 @@
  * - Configs of surplus components <ARRAY>
  *
  * Example:
- * [_cfgOrigin, _cfgTarget] call ace_wardrobe_fnc_compareComponents
+ * [G_Balaclava_blk, G_Balaclava_combat] call ace_wardrobe_fnc_compareComponents
  *
  * Public: No
  */
 
-params ["_classOrigin", "_cfgTarget"];
+params ["_classOrigin", "_classTarget"];
 
 private _checkfallbackComponent = {
     // check if item is present within current modpack

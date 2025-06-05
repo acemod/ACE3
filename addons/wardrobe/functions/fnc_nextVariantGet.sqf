@@ -13,7 +13,7 @@
  * Desired variant <CONFIG>
  *
  * Example:
- * _cfgCurrent call ace_wardrobe_fnc_nextVariantGet
+ * [configFile >> "CfgWeapons" >> "U_B_CTRG_1", player] call ace_wardrobe_fnc_nextVariantGet
  *
  * Public: No
  */

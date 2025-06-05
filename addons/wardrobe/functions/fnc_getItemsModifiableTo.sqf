@@ -10,7 +10,7 @@
  * Array of all possible variants as config <ARRAY>
  *
  * Example:
- * _cfgCurrent call ace_wardrobe_fnc_getItemsModifiableTo
+ * (configFile >> "CfgWeapons" >> "U_B_CTRG_1") call ace_wardrobe_fnc_getItemsModifiableTo
  *
  * Public: No
  */
