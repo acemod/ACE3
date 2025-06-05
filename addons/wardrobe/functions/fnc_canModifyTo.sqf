@@ -1,28 +1,27 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
- * Condition Check if the unit can modify from current variant to target variant. Checks and compares components.
+ * Condition check if the unit can modify from current variant to target variant. Checks and compares components.
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Current Variant <Config>
- * 2: Desired Variant <Config>
- * 3: Cache Result of fnc_getitems_all <BOOL> (default: true)
+ * 1: Current variant <CONFIG>
+ * 2: Desired variant <CONFIG>
+ * 3: Cache the result of fnc_getitemsAll <BOOL> (default: true)
  *
  * Return Value:
- * The return value <BOOL>
+ * Result <BOOL>
  *
  * Example:
- * [_unit, _cfg_origin, _cfg_target] call ace_wardrobe_fnc_canModifyTo
+ * [player, configFile >> "CfgWeapons" >> "U_B_CTRG_1", configFile >> "CfgWeapons" >> "U_B_CTRG_3"] call ace_wardrobe_fnc_canModifyTo
  *
  * Public: No
  */
 
-params ["_unit", "_cfg_origin", "_cfg_target", ["_cache", true, [true]]];
+params ["_player", "_cfgOrigin", "_cfgTarget", ["_cache", true, [true]]];
 
-[_cfg_origin, _cfg_target] call FUNC(compare_components) params ["_missing", "_surplus"];
+[configName _cfgOrigin, configName _cfgTarget] call FUNC(compareComponents) params ["_missing", ""];
 
-private _currentItems = [_unit, _cache] call FUNC(getItems_all);
+private _currentItems = [_player, _cache] call FUNC(getItemsAll);
 
-count ( _missing select { ! (_x in _currentItems) } ) == 0
+_missing select { ! (_x in _currentItems) } isEqualTo [] // return

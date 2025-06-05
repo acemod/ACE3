@@ -1,95 +1,96 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
- * Ace Action Statement - Removes the modifiableItem and replaces it with the target item
+ * Ace action statement. Removes the modifiableItem and replaces it with the target item.
  *
  * Arguments:
- * 0: Action Target <OBJECT>
- * 1: Action Player <OBJECT>
- * 2: Action Params <ARRAY>
- * - 0: Current Variant <CONFIG>
- * - 0: Desired Variant <CONFIG>
+ * 0: Action target <OBJECT>
+ * 1: Action player <OBJECT>
+ * 2: Action params <ARRAY>
+ * - 0: Current variant <CONFIG>
+ * - 0: Desired variant <CONFIG>
  * 3: Replace Now? <BOOL> (default: false)
  *
  * Return Value:
  * None
  *
  * Example:
- * _this call ace_wardrobe_fnc_replace
+ * [nil, player, [configFile >> "CfgWeapons" >> "U_B_CTRG_1", configFile >> "CfgWeapons" >> "U_B_CTRG_1"]] call ace_wardrobe_fnc_replace
  *
  * Public: No
  */
 
-params ["_target", "_unit", "_actionParams", ["_replaceNow", false, [true]]];
-_actionParams params ["_cfg_origin", "_cfg_tgt"];
+params ["", "_player", "_actionParams", ["_replaceNow", false, [true]]];
+_actionParams params ["_cfgOrigin", "_cfgTarget"];
 
-// Duration of the "animation"
-private _duration = getNumber (configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "duration");
-if (_replaceNow) then { _duration = 0; }; // needed for cba context menu - avoid potential duplications and such
+private _classTarget = configName _cfgTarget;
+private _classOrigin = configName _cfgOrigin;
 
-// Replace the Main Item.
-private _additionalParams = "";
-private _typeNumber = getNumber (_cfg_origin >> "ItemInfo" >> "type");
-private _replaceCode = switch ( _typeNumber ) do {
-    case TYPE_HEADGEAR: { _additionalParams = "HEADGEAR"; FUNC(replace_other) };
-    case TYPE_UNIFORM:  { _additionalParams = "UNIFORM";  FUNC(replace_container)  };
-    case TYPE_VEST:     { _additionalParams = "VEST";     FUNC(replace_container)  };
-    case TYPE_BACKPACK: { _additionalParams = "BACKPACK"; FUNC(replace_container)  };
+// duration of the "animation"
+private _duration = if (_replaceNow) then { 0 } else { getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "duration") }; // _replaceNow needed for cba context menu to avoid potential duplications and such
+
+// replace the main Item
+private _equipmentType = "";
+private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
+private _replaceCode = switch (_typeNumber) do {
+    case TYPE_HEADGEAR: { _equipmentType = "HEADGEAR"; LINKFUNC(replaceOther) };
+    case TYPE_UNIFORM:  { _equipmentType = "UNIFORM";  LINKFUNC(replaceContainer) };
+    case TYPE_VEST:     { _equipmentType = "VEST";     LINKFUNC(replaceContainer) };
+    case TYPE_BACKPACK: { _equipmentType = "BACKPACK"; LINKFUNC(replaceContainer) };
     default {
-        // CfgGlasses items do not have a ItemInfo Subclass and therefore, not TypeNumber.
+        // CfgGlasses items do not have a ItemInfo subclass and therefore, not typeNumber
         switch (true) do {
-            case (isClass (configFile >> "CfgGlasses" >> configName _cfg_origin)): { _additionalParams = "FACEWEAR"; FUNC(replace_other) };
-            default { false };
+            case (isClass (configFile >> "CfgGlasses" >> _classOrigin)): { _equipmentType = "FACEWEAR"; LINKFUNC(replaceOther) };
+            default { {} };
         };
     };
 };
 
-if (_replaceCode isEqualType false) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,configName _cfg_origin); };
-[ _replaceCode, [_unit, _cfg_origin, _cfg_tgt, _additionalParams ], _duration] call CBA_fnc_waitAndExecute;
+if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
+[_replaceCode, [_player, _classTarget, _equipmentType], _duration] call CBA_fnc_waitAndExecute;
 
-//// Handle Components
-// Add Surplus
-[_cfg_origin, _cfg_tgt] call FUNC(compare_components) params ["_missing", "_surplus"];
+// handle components
+[_classOrigin, _classTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
+
+// add surplus
 {
-    if (configName _cfg_tgt isNotEqualTo _x) then {
-        if ( isClass (configFile >> "CfgGlasses" >> _x) && { goggles _unit isEqualTo "" } ) then {
-            _unit addGoggles _x;
+    if (_classTarget isNotEqualTo _x) then {
+        if (goggles _player isEqualTo "" && { isClass (configFile >> "CfgGlasses" >> _x) }) then {
+            _player addGoggles _x;
         } else {
-            [_unit, _x, true] call CBA_fnc_addItem;
+            [_player, _x, true] call CBA_fnc_addItem;
         };
     };
 } forEach _surplus;   
 
-// Remove Missing
+// remove missing
 {
-    if (configName _cfg_origin isNotEqualTo _x) then {
-
-        switch (true) do {
-            case (goggles _unit isEqualTo _x): { removeGoggles _unit; };
-            default { [_unit, _x] call CBA_fnc_removeItem; };
+    if (_classOrigin isNotEqualTo _x) then {
+        if (goggles _player isEqualTo _x) then {
+            removeGoggles _player;
+        } else {
+            [_player, _x] call CBA_fnc_removeItem;
         };
     };
 } forEach _missing;
 
+// handle effects
+// animation/gestures
+[_player, getText (configFile >> QUOTE(ADDON) >> _classTarget >> "gesture")] call EFUNC(common,doGesture);
 
-//// Handle Effects
-// Animation/Gestures
-[ _unit, getText (configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "gesture") ] call EFUNC(common,doGesture);
-
-// Plays Random Sound At the Beginning
-private _sound = [configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "sound"] call cba_fnc_getCfgDataRandom;
+// plays random sound at the beginning
+private _sound = [configFile >> QUOTE(ADDON) >> _classTarget >> "sound"] call CBA_fnc_getCfgDataRandom;
 if (_sound isNotEqualTo "") then {
     [
         CBA_fnc_globalSay3D,
-        [_unit, _sound, nil, true, true],
-        (getNumber (configFile >> QUOTE(ADDON) >> configName _cfg_tgt >> "sound_timing") max 0 min 1) * _duration
+        [_player, _sound, nil, true, true],
+        (getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "sound_timing") max 0 min 1) * _duration
     ] call CBA_fnc_waitAndExecute;
 };
 
-// Notification
-private _notify_img = getText (_cfg_tgt >> "picture");
-if !(".paa" in _notify_img) then { _notify_img = [_notify_img,"paa"] joinString "." }; // Some vanilla items dont have the .paa and cba notify will display the path as a string without the .paa
-[ ace_common_fnc_displayTextStructured, [["<img image='%1' size=5></img><br/>%2",_notify_img, getText (_cfg_tgt >> "displayName")], 4], _duration * 1.2 ] call CBA_fnc_waitAndExecute;
+// notification
+private _imgNotify = getText (_cfgTarget >> "picture");
+if !(".paa" in _imgNotify) then { _imgNotify = _imgNotify + ".paa" }; // some vanilla items dont have the .paa and cba notify will display the path as a string without the .paa
+[EFUNC(common,displayTextStructured), [["<img image='%1' size=5></img><br/>%2", _imgNotify, getText (_cfgTarget >> "displayName")], 4], _duration * 1.2] call CBA_fnc_waitAndExecute;
 
 nil
