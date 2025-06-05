@@ -16,6 +16,7 @@ class EGVAR(missileguidance,type_RAM);
 class EGVAR(missileguidance,type_RBS70);
 class EGVAR(missileguidance,type_Redeye);
 class EGVAR(missileguidance,type_Sidewinder);
+class EGVAR(missileguidance,type_SS11);
 class EGVAR(missileguidance,type_Stinger);
 class EGVAR(missileguidance,type_TOW);
 

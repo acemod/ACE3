@@ -93,3 +93,9 @@ dlc = [
     "rf",
     "ws",
 ]
+
+[cfp]
+extends = "cup"
+workshop = [
+    "1369691841", # Community Factions Project
+]

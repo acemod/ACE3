@@ -18,6 +18,16 @@
 params ["_activated"];
 TRACE_1("setupDisplayEffects",_activated);
 
+private _unit = ACE_player;
+
+if (currentVisionMode _unit > 1) then {
+    QGVAR(display) cutText ["", "PLAIN"]; // Cleanup Old Display
+    if (_activated) then { // Create New Display
+        QGVAR(display) cutRsc [QGVAR(title), "PLAIN", 0, false, false]; // draw under HUD
+    };
+    _activated = false;
+};
+
 // Backup and restore changes to fog:
 if (GVAR(fogScaling) > 0) then {
     if (_activated) then {

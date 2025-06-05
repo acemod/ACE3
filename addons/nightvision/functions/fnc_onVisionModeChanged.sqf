@@ -34,11 +34,11 @@ if (GVAR(disableNVGsWithSights) && {(hmd _unit) != ""}) then {
 
 // Handle only brightness if effects are disabled
 if (GVAR(effectScaling) == 0) exitWith {
-    GVAR(ppEffectNVGBrightness) ppEffectEnable (_visionMode == 1);
+    GVAR(ppEffectNVGBrightness) ppEffectEnable (_visionMode > 0);
 };
 
 // Start PFEH when entering night vision mode:
-if (_visionMode == 1) then {
+if (_visionMode > 0) then {
     if (GVAR(PFID) == -1) then {
         GVAR(running) = true;
         [true] call FUNC(setupDisplayEffects);
