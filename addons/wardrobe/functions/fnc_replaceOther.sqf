@@ -18,15 +18,15 @@
  * Public: No
  */
 
-params ["_unit", "_classTarget", "_equipmentType"];
+params ["_player", "_classTarget", "_equipmentType"];
 
 switch (_equipmentType) do {
     case "HEADGEAR": {
-        removeHeadgear _unit;
-        _unit addHeadgear _classTarget;
+        removeHeadgear _player;
+        _player addHeadgear _classTarget;
     };
     case "FACEWEAR": {
-        removeGoggles _unit;
-        _unit addGoggles _classTarget;
+        removeGoggles _player;
+        _player addGoggles _classTarget;
     };
 };

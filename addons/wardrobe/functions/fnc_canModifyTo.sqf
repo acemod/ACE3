@@ -18,10 +18,10 @@
  * Public: No
  */
 
-params ["_unit", "_cfgOrigin", "_cfgTarget", ["_cache", true, [true]]];
+params ["_player", "_cfgOrigin", "_cfgTarget", ["_cache", true, [true]]];
 
 [configName _cfgOrigin, configName _cfgTarget] call FUNC(compareComponents) params ["_missing", ""];
 
-private _currentItems = [_unit, _cache] call FUNC(getItemsAll);
+private _currentItems = [_player, _cache] call FUNC(getItemsAll);
 
 _missing select { ! (_x in _currentItems) } isEqualTo [] // return

@@ -16,10 +16,10 @@
  * Public: Yes
  */
 
-params [["_unit", objNull, [objNull]], ["_cache", true, [true]]];
+params [["_player", objNull, [objNull]], ["_cache", true, [true]]];
 
 private _code = {
-    ([headgear _unit, goggles _unit, uniform _unit, vest _unit, backpack _unit] - [""])
+    ([headgear _player, goggles _player, uniform _player, vest _player, backpack _player] - [""])
     apply
     { _x call CBA_fnc_getItemConfig }
     select
@@ -33,7 +33,7 @@ private _code = {
         private _cfgOrigin = _x#0;
         [
             _cfgOrigin,
-            _x#1 select { [_unit, _cfgOrigin, _x] call FUNC(canModifyTo) }
+            _x#1 select { [_player, _cfgOrigin, _x] call FUNC(canModifyTo) }
         ]
     }
     select

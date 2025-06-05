@@ -18,11 +18,11 @@
  * Public: No
  */
 
-params ["_unit", "_classTarget", "_equipmentType"];
+params ["_player", "_classTarget", "_equipmentType"];
 
 toFixed 0;
-private _magazineDetails = (magazinesAmmoFull _unit) apply { [_x#0, _x#-2, _x#-1] };
-private _loadout = _unit call CBA_fnc_getLoadout;
+private _magazineDetails = (magazinesAmmoFull _player) apply { [_x#0, _x#-2, _x#-1] };
+private _loadout = _player call CBA_fnc_getLoadout;
 
 // handle special cases - pre replace
 // ace intel items
@@ -32,7 +32,7 @@ INTEL_PRE(_photo,acex_intelitems_photo);
 
 // ace overheating
 private _spareBarrel = _magazineDetails findIf { _x#0 == "ACE_SpareBarrel" } > -1;
-if (_spareBarrel) then { _spareBarrel = [_unit, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex };
+if (_spareBarrel) then { _spareBarrel = [_player, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex };
 
 // replace wearable
 switch (_equipmentType) do {
@@ -42,7 +42,7 @@ switch (_equipmentType) do {
 };
 
 // apply new loadout
-[_unit, _loadout] call CBA_fnc_setLoadout;
+[_player, _loadout] call CBA_fnc_setLoadout;
 
 // handle special cases - post replace
 // ace intel items
@@ -52,6 +52,6 @@ INTEL_POST(_photo,acex_intelitems_photo);
 
 // ace overheating
 if (_spareBarrel isEqualType []) then {
-    private _newMagIDsSpareBarrel = [_unit, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
+    private _newMagIDsSpareBarrel = [_player, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
     [QGVAR(updateMagIDs), [_spareBarrel, _newMagIDsSpareBarrel]] call CBA_fnc_serverEvent;
 };

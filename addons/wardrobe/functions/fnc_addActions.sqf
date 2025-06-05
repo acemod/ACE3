@@ -16,9 +16,9 @@
  * Public: No
  */
 
-params ["_unit"];
+params ["_player"];
 
-private _modifiableItems = _unit call FUNC(getItemsModifiableCurrent);
+private _modifiableItems = _player call FUNC(getItemsModifiableCurrent);
 private _actions = [];
 
 {
@@ -32,7 +32,7 @@ private _actions = [];
         FUNC(addActionsChildren),
         [_cfg, _x#1]
     ] call EFUNC(interact_menu,createAction);
-    _actions pushBack [_aceAction, [], _unit];
+    _actions pushBack [_aceAction, [], _player];
 } forEach _modifiableItems;
 
 _actions

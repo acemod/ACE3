@@ -20,7 +20,7 @@
  * Public: No
  */
 
-params ["", "_unit", "_actionParams", ["_replaceNow", false, [true]]];
+params ["", "_player", "_actionParams", ["_replaceNow", false, [true]]];
 _actionParams params ["_cfgOrigin", "_cfgTarget"];
 
 private _classTarget = configName _cfgTarget;
@@ -47,7 +47,7 @@ private _replaceCode = switch (_typeNumber) do {
 };
 
 if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
-[_replaceCode, [_unit, _classTarget, _equipmentType], _duration] call CBA_fnc_waitAndExecute;
+[_replaceCode, [_player, _classTarget, _equipmentType], _duration] call CBA_fnc_waitAndExecute;
 
 // handle components
 [_classOrigin, _classTarget] call FUNC(compareComponents) params ["_missing", "_surplus"];
@@ -55,10 +55,10 @@ if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2
 // add surplus
 {
     if (_classTarget isNotEqualTo _x) then {
-        if (goggles _unit isEqualTo "" && { isClass (configFile >> "CfgGlasses" >> _x) }) then {
-            _unit addGoggles _x;
+        if (goggles _player isEqualTo "" && { isClass (configFile >> "CfgGlasses" >> _x) }) then {
+            _player addGoggles _x;
         } else {
-            [_unit, _x, true] call CBA_fnc_addItem;
+            [_player, _x, true] call CBA_fnc_addItem;
         };
     };
 } forEach _surplus;   
@@ -66,24 +66,24 @@ if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2
 // remove missing
 {
     if (_classOrigin isNotEqualTo _x) then {
-        if (goggles _unit isEqualTo _x) then {
-            removeGoggles _unit;
+        if (goggles _player isEqualTo _x) then {
+            removeGoggles _player;
         } else {
-            [_unit, _x] call CBA_fnc_removeItem;
+            [_player, _x] call CBA_fnc_removeItem;
         };
     };
 } forEach _missing;
 
 // handle effects
 // animation/gestures
-[_unit, getText (configFile >> QUOTE(ADDON) >> _classTarget >> "gesture")] call EFUNC(common,doGesture);
+[_player, getText (configFile >> QUOTE(ADDON) >> _classTarget >> "gesture")] call EFUNC(common,doGesture);
 
 // plays random sound at the beginning
 private _sound = [configFile >> QUOTE(ADDON) >> _classTarget >> "sound"] call CBA_fnc_getCfgDataRandom;
 if (_sound isNotEqualTo "") then {
     [
         CBA_fnc_globalSay3D,
-        [_unit, _sound, nil, true, true],
+        [_player, _sound, nil, true, true],
         (getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "sound_timing") max 0 min 1) * _duration
     ] call CBA_fnc_waitAndExecute;
 };

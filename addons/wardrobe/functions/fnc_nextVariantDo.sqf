@@ -19,15 +19,15 @@
  * Public: No
  */
 
-params ["_unit", "", "_item", "", ""];
+params ["_player", "", "_item", "", ""];
 
 private _cfgCurrent = _item call CBA_fnc_getItemConfig;
 
-private _cfgTarget = [_cfgCurrent, _unit] call FUNC(nextVariantGet);
+private _cfgTarget = [_cfgCurrent, _player] call FUNC(nextVariantGet);
 
 if (_cfgTarget isEqualTo false) exitWith {};
 
-private _canModifyTo = [_unit, _cfgCurrent, _cfgTarget, false] call FUNC(canModifyTo);
+private _canModifyTo = [_player, _cfgCurrent, _cfgTarget, false] call FUNC(canModifyTo);
 
 if !(_canModifyTo) exitWith {
     [
@@ -39,6 +39,6 @@ if !(_canModifyTo) exitWith {
     ] call EFUNC(common,displayTextStructured);
 }; 
 
-[_unit, _unit, [_cfgCurrent, _cfgTarget], true] call FUNC(replace); 
+[_player, _player, [_cfgCurrent, _cfgTarget], true] call FUNC(replace); 
 
 nil
