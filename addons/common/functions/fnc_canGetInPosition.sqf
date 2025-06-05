@@ -7,8 +7,8 @@
  * 0: Unit to enter the vehicle <OBJECT>
  * 1: The vehicle to be entered <OBJECT>
  * 2: Position. Can be "Driver", "Pilot", "Gunner", "Commander", "Copilot", "Turret", "FFV", "Codriver" or "Cargo" <STRING>
- * 3: Check current distance to vehicles memory point? (default: false) <BOOL>
- * 4: Index. "Turret", "FFV", "Codriver" and "Cargo" support this optional parameter. Which position should be taken. Note: This index is different from Armas "cargoIndex". (default: next free index) <NUMBER>
+ * 3: Check current distance to vehicles memory point? <BOOL> (default: false)
+ * 4: Index. "Turret", "FFV", "Codriver" and "Cargo" support this optional parameter. Which position should be taken. Note: This index is different from Armas "cargoIndex". <NUMBER> (default: next free index)
  *
  * Return Value:
  * None

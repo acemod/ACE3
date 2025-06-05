@@ -5,11 +5,11 @@
  *
  * Arguments:
  * 0: Name <STRING>
- * 1: defaultValue <ANY>
- * 2: publicFlag <BOOL>
- * 3: category <STRING>
- * 4: type (default: 0) <NUMBER>
- * 5: persistentFlag (default: false) <BOOL>
+ * 1: Default value <ANY>
+ * 2: Public flag <BOOL>
+ * 3: Category <STRING>
+ * 4: Type <NUMBER> (default: 0)
+ * 5: Persistent flag <BOOL> (default: false)
  *
  * Return Value:
  * None

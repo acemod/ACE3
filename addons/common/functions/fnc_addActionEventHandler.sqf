@@ -6,8 +6,8 @@
  * Arguments:
  * 0: Unit the action should be assigned to <OBJECT>
  * 1: Name of the action, e.g. "DefaultAction" <STRING>
- * 2: Condition <CODE, STRING>
- * 3: Code to execute <CODE, STRING>
+ * 2: Condition <CODE or STRING>
+ * 3: Code to execute <CODE or STRING>
  *
  * Return Value:
  * ID of the action (used to remove it later) <NUMBER>
