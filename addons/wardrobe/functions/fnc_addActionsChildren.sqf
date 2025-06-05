@@ -28,7 +28,7 @@ private _actions = [];
     private _cfgTarget = _x;
     private _aceAction = [
         configName _cfgTarget,
-        _cfgTarget call FUNC(addActionsName),
+        [_cfgOrigin, _cfgTarget] call FUNC(addActionsName),
         _cfgTarget call FUNC(addActionsIcon),
         FUNC(replace),
         { true },

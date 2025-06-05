@@ -1,21 +1,33 @@
 #include "../script_component.hpp"
 /*
  * Author: OverlordZorn
- * This function checks if the target item has an alternative String for the action, if not, it returns the displayName property.
+ * This function checks if the target item has an directional or alternative display name for the action, if not, it returns the displayName property.
  *
  * Arguments:
+ * 0: Current variant <CONFIG>
  * 0: Desired variant <CONFIG>
  *
  * Return Value:
  * The return value <BOOL>
  *
  * Example:
- * (configFile >> "CfgWeapons" >> "U_B_CTRG_1") call ace_wardrobe_fnc_getActionsName
+ * [(configFile >> "CfgWeapons" >> "U_B_CTRG_3"), (configFile >> "CfgWeapons" >> "U_B_CTRG_1")] call ace_wardrobe_fnc_getActionsName
  *
  * Public: No
  */
 
-params [["_cfg", configNull, [configNull]]];
+params ["_cfgOrigin", "_cfgTarget"];
 
-private _altDispName = getText (configFile >> QUOTE(ADDON) >> configName _cfg >> "alternativeDisplayName");
-if (_altDispName isEqualTo "") then { getText (_cfg >> "displayName") } else { _altDispName };
+private _classOrigin = configName _cfgOrigin;
+private _classTarget = configName _cfgTarget;
+
+// Check if there is a "directional Display Name", meaning if there is a specific string when changing from a certain class to a certain class
+private _directional = getText (configFile >> QUOTE(ADDON) >> _classOrigin >> "modifiableTo" >> _classTarget >> "directionalDisplayName");
+if (_directional isNotEqualTo "") exitWith { _directional };
+
+// Check if there is an "alternative Display Name", defined by the ace_wardrobe base class
+private _alternative = getText (configFile >> QUOTE(ADDON) >> _classTarget >> "alternativeDisplayName");
+if (_alternative isNotEqualTo "") exitWith { _alternative };
+
+// return
+getText (_cfgTarget >> "displayName")
