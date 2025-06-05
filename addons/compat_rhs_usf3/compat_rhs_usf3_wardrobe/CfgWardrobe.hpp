@@ -4,4 +4,3 @@ class ace_wardrobe {
     #include "CfgWardrobe_Goggles.hpp"
     #include "CfgWardrobe_Headgear.hpp"
 };
- 
