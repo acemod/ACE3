@@ -55,7 +55,7 @@ All supported Properties can be found within the `ace_wardrobe_base` baseclass.
 | `sound_timing` | Number 0..1 | defines the point time relative to the duration when the sound is played |
 | `gesture` | String of Classname | Gesture to be played when the action is performed |
 | `alternativePicture` | String of path to icon | to be used instead of target variant picture |
-| `alternativeDisplayName` | String | Will be used instead of the target variants displayname |
+| `alternativeActionName` | String | Will be used instead of the target variants displayname |
 | `duration` | Number in seconds | Duration of action. Items are being replaced at the end. |
 | `fallbackComponent` | String of Classname | Fallback for Components that are not present within the same mod/addon. Example: RHS AFRF helmets use `rhs_ess_black` goggles, which are only part of USAF. fallbackComponent can be used to default to a vanilla alternative. |
 
@@ -82,7 +82,7 @@ class ace_wardrobe {
 
         // These will be read from the Target Class, so for example, the uniformclass with the rolled up sleaves, it should say "Roll Up Sleeves"
         alternativePicture = "";
-        alternativeDisplayName = "";
+        alternativeActionName = "";
 
         duration = 1; // Minimum Value: 1 - Anything above will produce a progressbar.
 
@@ -97,30 +97,30 @@ class ace_wardrobe {
 Common Base Class for Uniforms with Sleeves Up/Down Variants
 ```cpp
 class ace_wardrobe_base_U_sleeves_up: ace_wardrobe_base {
-    alternativeDisplayName = CSTRING(sleevesUp);  
+    alternativeActionName = CSTRING(sleevesUp);  
 };
 class ace_wardrobe_base_U_sleeves_down: ace_wardrobe_base {
-    alternativeDisplayName = CSTRING(sleevesDown);
+    alternativeActionName = CSTRING(sleevesDown);
 };
 ```
 #### 2.2.3 Base Uniform Gloves On / Off
 Common Base Class for Uniforms with Gloves On/Off Variants
 ```cpp
 class ace_wardrobe_base_U_gloves_on: ace_wardrobe_base {
-    alternativeDisplayName = CSTRING(glovesOn); 
+    alternativeActionName = CSTRING(glovesOn); 
 };
 class ace_wardrobe_base_U_gloves_off: ace_wardrobe_base {
-    alternativeDisplayName = CSTRING(glovesOff);
+    alternativeActionName = CSTRING(glovesOff);
 };
 ```
 #### 2.2.4  Base Uniform Jacket Open / Closed
 Common Base Class for Uniforms who are open/closed in the front
 ```cpp
 class ace_wardrobe_base_U_jacket_open: ace_wardrobe_base {
-    alternativeDisplayName = CSTRING(jacketOpen); 
+    alternativeActionName = CSTRING(jacketOpen); 
 };
 class ace_wardrobe_base_U_jacket_closed: ace_wardrobe_base {
-    alternativeDisplayName = CSTRING(jacketClose);
+    alternativeActionName = CSTRING(jacketClose);
 };
 ```
 
@@ -136,7 +136,7 @@ class ace_wardrobe_base_H_visor_up: ace_wardrobe_base {
     sound[] = {CN_SOUND(helmet_visor,05)};
     sound_timing = 0;
 
-    alternativeDisplayName = CSTRING(visorUp);
+    alternativeActionName = CSTRING(visorUp);
 };
 
 class ace_wardrobe_base_H_visor_down: ace_wardrobe_base {
@@ -146,7 +146,7 @@ class ace_wardrobe_base_H_visor_down: ace_wardrobe_base {
     sound[] = {"ace_wardrobe_05"};
     sound_timing = 0;
 
-    alternativeDisplayName = CSTRING(visorDown);
+    alternativeActionName = CSTRING(visorDown);
 };
 ```
 #### 2.2.6 Base Headgear with Goggles on / off
@@ -154,12 +154,12 @@ Common Base Class for Headgear with goggles that can be used as a facewear item.
 ```cpp
 class ace_wardrobe_base_H_goggles_on: ace_wardrobe_base {
     gesture ="GestureWipeFace";
-    alternativeDisplayName = CSTRING(gogglesOn);
+    alternativeActionName = CSTRING(gogglesOn);
 };
 
 class ace_wardrobe_base_H_goggles_off: ace_wardrobe_base {
     gesture ="GestureWipeFace";
-    alternativeDisplayName = CSTRING(gogglesOff);
+    alternativeActionName = CSTRING(gogglesOff);
 };
 ```
 
