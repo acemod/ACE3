@@ -585,6 +585,23 @@
             <Turkish>RAH-66 Comanche</Turkish>
             <Hungarian>RAH-66 Comanche</Hungarian>
         </Key>
+        <Key ID="STR_ACE_RealisticNames_Heli_Attack_01_pylons_Name">
+            <English>RAH-66 Comanche (Stub Wings)</English>
+            <Czech>RAH-66 Comanche (křídla nízké štíhlosti)</Czech>
+            <French>RAH-66 Comanche (ailettes)</French>
+            <Spanish>RAH-66 Comanche (semialas)</Spanish>
+            <Italian>RAH-66 Comanche (semiali)</Italian>
+            <Polish>RAH-66 Comanche(skrzydełka)</Polish>
+            <Portuguese>RAH-66 Comanche (Asas auxiliares)</Portuguese>
+            <Russian>RAH-66 Comanche (короткие крылья)</Russian>
+            <German>RAH-66 Comanche (Stummelflügel)</German>
+            <Korean>RAH-66 코만치 (스터브 윙)</Korean>
+            <Japanese>RAH-66 コマンチ (スタブウイング)</Japanese>
+            <Chinese>RAH-66 "卡曼契"攻擊直升機（短翼）</Chinese>
+            <Chinesesimp>RAH-66 "科曼奇"（短翼）</Chinesesimp>
+            <Turkish>RAH-66 Comanche (Yarım Kanatlar)</Turkish>
+            <Hungarian>RAH-66 Comanche (csonk szárny)</Hungarian>
+        </Key>
         <Key ID="STR_ACE_RealisticNames_Heli_Light_01_Name">
             <English>MH-6 Little Bird</English>
             <Czech>MH-6 Little Bird</Czech>
