@@ -18,5 +18,5 @@
 
 params [ ["_cfg", configNull, [configNull] ] ];
 
-private _altDispName = getText (configFile >> QUOTE(ADDON) >> configName _cfg >> "alternativeDisplayName");
+private _altDispName = getText (configFile >> QUOTE(ADDON) >> configName _cfg >> "alternativeActionName");
 if (_altDispName isEqualTo "") then { getText (_cfg >> "displayName") } else { _altDispName };
