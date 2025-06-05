@@ -1,0 +1,2 @@
+PREP(eachFrame);
+PREP(weaponChanged);
