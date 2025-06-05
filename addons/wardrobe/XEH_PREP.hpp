@@ -1,34 +1,24 @@
-PREP(isModifiable);
-PREP(compare_components);
-PREP(canModifyTo);
-// ace_intel
-PREP(getIndexFromMagID);
-PREP(setIndexForMagID);
-// getItems
-PREP(getItems_all);
-PREP(getItems_modifiable_all);
-PREP(getItems_modifiable_current);
-PREP(getItems_modifiableTo);
-// Replace
-PREP(replace);
-PREP(replace_other);
-PREP(replace_container);
-// Compat
-PREP(spareBarrel_updateMagIDs);
-// Ace Actions
 PREP(addActions);
-PREP(addActions_condition);
-PREP(addActions_children);
-PREP(addActions_name);
-PREP(addActions_icon);
-// Cache
-PREP(cache_get);
-PREP(cache_set);
-PREP(clearOnClosed_InteractionMenu);
-// Debug
-PREP(getAllWardrobeItems);
-PREP(compare_container_maxLoad);
-// CBA Context Menu
-PREP(enable_contextMenu);
-PREP(nextVariant_do);
-PREP(nextVariant_get);
+PREP(addActionsCondition);
+PREP(addActionsChildren);
+PREP(addActionsIcon);
+PREP(addActionsName);
+PREP(cacheGet);
+PREP(cacheSet);
+PREP(canModifyTo);
+PREP(clearOnClosedInteractionMenu);
+PREP(compareComponents);
+PREP(enableContextMenu);
+PREP(getIndexFromMagID);
+PREP(getItemsAll);
+PREP(getItemsModifiableAll);
+PREP(getItemsModifiableCurrent);
+PREP(getItemsModifiableTo);
+PREP(isModifiable);
+PREP(nextVariantDo);
+PREP(nextVariantGet);
+PREP(replace);
+PREP(replaceContainer);
+PREP(replaceOther);
+PREP(setIndexForMagID);
+PREP(spareBarrelUpdateMagIDs);

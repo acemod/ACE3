@@ -409,6 +409,7 @@ class CfgVehicles {
     };
 
     class OTR21_Base: Truck_F {
+        EGVAR(overpressure,noReflection) = 1;
         EGVAR(refuel,fuelCapacity) = 500;
     };
 

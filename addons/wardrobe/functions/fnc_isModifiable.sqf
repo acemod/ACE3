@@ -1,25 +1,20 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
- * Function to check if the provided wearable Item (Config) can be modified through ace_wardrobe.
+ * Function to check if the provided wearable item (Config) can be modified through ace_wardrobe.
  *
  * Arguments:
- * 0: Wearable Item <Config>
+ * 0: Wearable item <CONFIG>
  *
  * Return Value:
- * The return value <BOOL>
+ * Result <BOOL>
  *
  * Example:
- * [_cfg] call ace_wardrobe_fnc_isModifiable
+ * (configFile >> "CfgWeapons" >> "U_B_CTRG_1") call ace_wardrobe_fnc_isModifiable
  *
  * Public: No
  */
 
-params [
-    ["_cfg", configNull, [configNull]]
-];
+params [["_cfg", configNull, [configNull]]];
 
-
-if (isNull _cfg) exitWith {false};
-isClass (configFile >> QUOTE(ADDON) >> configName _cfg)
+!isNull _cfg && { isClass (configFile >> QUOTE(ADDON) >> configName _cfg) }
