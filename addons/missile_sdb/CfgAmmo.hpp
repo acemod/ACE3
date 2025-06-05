@@ -5,6 +5,7 @@ class CfgAmmo {
         author = "Dani (TCVM)";
         maneuvrability = 0; // no maneuvrability so that default guidance doesnt work
         irLock = 0; // technically deprecated but useful for quick reference
+        timeToLive = 600;
         class Components {}; // no components required
         class ace_missileguidance: EGVAR(missileguidance,type_Jdam) {
             enabled = 1;
