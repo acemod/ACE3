@@ -1,5 +1,4 @@
 class ace_wardrobe {
-    #include "\z\ace\addons\wardrobe\BaseClasses_Import.hpp"
-
+    IMPORT_BASE_CLASSES();
     #include "CfgWardrobe_Headgear.hpp"
 };
