@@ -12,10 +12,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={15.406122,30,-43.717182};
-		dir[]={0,-0.70710683,0.70710683};
-		up[]={0,0.70710677,0.70710677};
-		aside[]={0.99999994,0,-0};
+		pos[]={27.77986,9.3148928,-11.992753};
+		dir[]={-0.82791728,-0.44389084,-0.34282935};
+		up[]={-0.41012207,0.89607823,-0.16982619};
+		aside[]={-0.38258561,-4.6566129e-09,0.92392808};
 	};
 };
 binarizationWanted=0;
@@ -118,7 +118,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={16,5,-12};
+				position[]={20,5,-16};
 			};
 			side="Empty";
 			flags=4;
@@ -133,13 +133,14 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17.833,5.2840548,-13.012};
+				position[]={16,5.2840548,-14};
+				angles[]={0,4.7497735,-0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				init="[this, flatten ([] call ACE_WARDROBE_fnc_getAllWardrobeItems)] call ace_arsenal_fnc_initBox;";
+				init="[this, call compile preprocessFileLineNumbers 'z\ace\addons\wardrobe\dev\getAllWardrobeItems.sqf'] call ace_arsenal_fnc_initBox;";
 			};
 			id=197;
 			type="ACE_Box_Ammo";
@@ -269,8 +270,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={18.822828,5,-13.759856};
-				angles[]={0,1.0776811,0};
+				position[]={18,5,-14};
+				angles[]={-0,1.0776811,0};
 			};
 			side="Empty";
 			flags=4;
@@ -285,7 +286,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={17.528999,5.0073819,-17.298};
+				position[]={20,5.0073819,-18};
 			};
 			side="Empty";
 			flags=4;

@@ -1,6 +1,6 @@
 // Custom Base Class
 class EGVAR(wardrobe,turban): EGVAR(wardrobe,base) {
-    gesture ="GestureWipeFace";
+    gesture = "GestureWipeFace";
 };
 
 // MACROS

@@ -50,7 +50,13 @@ workshop = [
     "497661914", # CUP Units
 ]
 
-[Wardrobe]
+[cfp]
+extends = "cup"
+workshop = [
+    "1369691841", # Community Factions Project
+]
+
+[wardrobe]
 parameters = ["-mod=x\\cba;"]
 extends = "default"
 mission = "Wardrobe.VR"
@@ -60,24 +66,24 @@ workshop = [
 #    "623475643",  # eden enhanced
 ]
 
-[Wardrobe_gm]
-extends = "Wardrobe"
+[wardrobe_gm]
+extends = "wardrobe"
 dlc = ["gm"]
 
-[Wardrobe_ws]
-extends = "Wardrobe"
+[wardrobe_ws]
+extends = "wardrobe"
 dlc = ["Western Sahara"]
 
-[Wardrobe_rf]
-extends = "Wardrobe"
+[wardrobe_rf]
+extends = "wardrobe"
 dlc = ["Reaction Forces"]
 
-[Wardrobe_sog]
-extends = "Wardrobe"
+[wardrobe_sog]
+extends = "wardrobe"
 dlc = ["S.O.G. Prairie Fire"]
 
-[Wardrobe_rhs]
-extends = "Wardrobe"
+[wardrobe_rhs]
+extends = "wardrobe"
 workshop = [
     "843425103", # RHS AFRF Workshop ID
 #    "843577117", # RHS USAF Workshop ID
@@ -85,17 +91,11 @@ workshop = [
 #    "843632231", # RHS SAF  Workshop ID
 ]
 
-[Wardrobe_cdlc]
-extends = "Wardrobe"
+[wardrobe_cdlc]
+extends = "wardrobe"
 dlc = [
     "vn",
     "gm",
     "rf",
     "ws",
-]
-
-[cfp]
-extends = "cup"
-workshop = [
-    "1369691841", # Community Factions Project
 ]

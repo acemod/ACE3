@@ -1,27 +1,26 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
- * This function creates children for the main wardrobe action - one for every modifiable Item.
- * Each Modifiable Item will have its own children in regard of the items it can be changed towards.
+ * This function creates children for the main wardrobe action - one for every modifiable item.
+ * Each modifiable item will have its own children in regard of the items it can be changed towards.
  *
  * Arguments:
- * 0: The Unit who's wearable shall be changed - usually the player themselves <OBJECT>
+ * 0: Unit <OBJECT>
  *
  * Return Value:
- * Array of ACE Child Actions <ARRAY>
+ * ACE actions <ARRAY>
  *
  * Example:
- * [_player] call ace_wardrobe_fnc_addActions
+ * player call ace_wardrobe_fnc_addActions
  *
  * Public: No
  */
 
-params ["_unit"];
+params ["_player"];
 
-
-private _modifiableItems = [_unit] call FUNC(getItems_modifiable_current);
+private _modifiableItems = _player call FUNC(getItemsModifiableCurrent);
 private _actions = [];
+
 {
     private _cfg = _x#0;
     private _aceAction = [
@@ -29,12 +28,11 @@ private _actions = [];
         getText (_cfg >> "displayName"),
         getText (_cfg >> "picture"),
         {},
-        {true},
-        FUNC(addActions_children),
+        { true },
+        FUNC(addActionsChildren),
         [_cfg, _x#1]
     ] call EFUNC(interact_menu,createAction);
-    _actions pushBack [_aceAction, [], _unit];
-
+    _actions pushBack [_aceAction, [], _player];
 } forEach _modifiableItems;
 
 _actions
