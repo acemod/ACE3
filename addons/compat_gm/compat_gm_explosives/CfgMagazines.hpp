@@ -36,8 +36,9 @@ class CfgMagazines {
         };
     };
 
+    class gm_mine_base;
     class gm_mine_at_base;
-    class gm_mine_at_tm46: gm_mine_at_base {
+    class gm_mine_at_tm46: gm_mine_base {
         EGVAR(explosives,placeable) = 1;
         EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_gm_mine_tm46);
         useAction = 0;
@@ -48,7 +49,7 @@ class CfgMagazines {
             };
         };
     };
-    class gm_mine_at_dm21: gm_mine_at_base {
+    class gm_mine_at_dm21: gm_mine_base {
         EGVAR(explosives,placeable) = 1;
         EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_gm_explosive_dm21);
         useAction = 0;
@@ -71,7 +72,7 @@ class CfgMagazines {
         };
     };
 
-    class gm_mine_ap_dm31: gm_mine_at_base {
+    class gm_mine_ap_dm31: gm_mine_base {
         EGVAR(explosives,placeable) = 1;
         EGVAR(explosives,setupObject) = QEGVAR(explosives,Place_gm_explosive_dm31);
         useAction = 0;

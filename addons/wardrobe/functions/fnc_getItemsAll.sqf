@@ -1,5 +1,4 @@
 #include "../script_component.hpp"
-
 /*
  * Author: OverlordZorn
  * Retrieves a list of all items of unit - can be cached for the duration of the ace interaction.
@@ -12,22 +11,18 @@
  * All Items of the Unit <ARRAY>
  *
  * Example:
- * [player, false] call ace_wardrobe_fnc_getItems_all
+ * [player, false] call ace_wardrobe_fnc_getItemsAll
  *
  * Public: No
  */
 
-params [
-    ["_unit", objNull, [objNull]],
-    ["_cache", true, [true]]
-];
+params [["_player", objNull, [objNull]], ["_cache", true, [true]]];
 
-
-private _code = { flatten getUnitLoadout _unit select { _x isEqualType "" && { _x != ""}}; };
+private _code = { flatten getUnitLoadout _player select { _x isEqualType "" && { _x != "" } }; };
 
 private _caching = {
-    ["items_all"] call FUNC(clearOnClosed_InteractionMenu);
-    ["items_all", _code] call FUNC(cache_get);   // returns the result
+    ["items_all"] call FUNC(clearOnClosedInteractionMenu);
+    ["items_all", _code] call FUNC(cacheGet);   // returns the result
 };
 
 if (_cache) then _caching else _code;
