@@ -55,3 +55,7 @@ if (_spareBarrel isEqualType []) then {
     private _newMagIDsSpareBarrel = [_player, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
     [QGVAR(updateMagIDs), [_spareBarrel, _newMagIDsSpareBarrel]] call CBA_fnc_serverEvent;
 };
+
+GVAR(inProgress) = false; // re-enable action
+
+nil

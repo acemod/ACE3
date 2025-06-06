@@ -18,9 +18,20 @@
 
 params ["_player"];
 
-private _modifiableItems = _player call FUNC(getItemsModifiableCurrent);
 private _actions = [];
 
+// create "a in Progress" placeholder while an previous wardrobe action is not done
+private _aceAction = [
+    QGVAR(inProgress),
+    LLSTRING(action_inProgress),
+    QPATHTOF(data\hourglass_logo_ca.paa),
+    { "" },
+    { GVAR(inProgress) },
+    { }
+] call EFUNC(interact_menu,createAction);
+_actions pushBack [_aceAction, [], _player];
+
+private _modifiableItems = _player call FUNC(getItemsModifiableCurrent);
 {
     private _cfg = _x#0;
     private _aceAction = [
@@ -28,7 +39,7 @@ private _actions = [];
         getText (_cfg >> "displayName"),
         getText (_cfg >> "picture"),
         {},
-        { true },
+        { ! GVAR(inProgress) },
         FUNC(addActionsChildren),
         [_cfg, _x#1]
     ] call EFUNC(interact_menu,createAction);

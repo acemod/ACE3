@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Wardrobe">
-        <Key ID="STR_ACE_Wardrobe_actionTitle">
+        <Key ID="STR_ACE_Wardrobe_action_inProgress">
+            <English>busy...</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_action_title">
             <English>Wardrobe</English>
             <German>Garderobe</German>
         </Key>

@@ -23,11 +23,15 @@
 params ["", "_player", "_actionParams", ["_replaceNow", false, [true]]];
 _actionParams params ["_cfgOrigin", "_cfgTarget"];
 
+
 private _classTarget = configName _cfgTarget;
 private _classOrigin = configName _cfgOrigin;
 
 // duration of the "animation"
-private _duration = if (_replaceNow) then { 0 } else { getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "duration") }; // _replaceNow needed for cba context menu to avoid potential duplications and such
+private _duration = if (_replaceNow) then { 0 } else {
+    GVAR(inProgress) = true; // temp action disabled
+    getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "duration")
+}; // _replaceNow needed for cba context menu to avoid potential duplications and such
 
 // replace the main Item
 private _equipmentType = "";
@@ -45,7 +49,6 @@ private _replaceCode = switch (_typeNumber) do {
         };
     };
 };
-
 if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
 [_replaceCode, [_player, _classTarget, _equipmentType], _duration] call CBA_fnc_waitAndExecute;
 

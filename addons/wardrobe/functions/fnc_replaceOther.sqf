@@ -30,3 +30,7 @@ switch (_equipmentType) do {
         _player addGoggles _classTarget;
     };
 };
+
+GVAR(inProgress) = false; // re-enable action
+
+nil
