@@ -24,7 +24,7 @@ private _actions = [];
 private _aceAction = [
     QGVAR(inProgress),
     LLSTRING(action_inProgress),
-    QPATHTOF(data\hourglass_logo_ca.paa),
+    "\A3\ui_f\data\igui\cfg\simpleTasks\types\wait_ca.paa",
     { "" },
     { GVAR(inProgress) },
     { }
