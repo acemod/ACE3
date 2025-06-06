@@ -21,7 +21,7 @@
 params ["_player", "_classTarget", "_equipmentType"];
 
 toFixed 0;
-private _magazineDetails = (magazinesAmmoFull _player) apply { [_x#0, _x#-2, _x#-1] };
+private _magazineDetails = (magazinesAmmoFull _player) apply { [_x#0, _x#-2, _x#6] };
 private _loadout = _player call CBA_fnc_getLoadout;
 
 // handle special cases - pre replace
