@@ -12,8 +12,8 @@
  * None
  *
  * Example:
- * [player, "G_Bandanna_blk", FACEWEAR] call ace_wardrobe_fnc_replaceOther
- * [player, "G_Bandanna_aviator", FACEWEAR] call ace_wardrobe_fnc_replaceOther
+ * [player, "G_Bandanna_blk", "FACEWEAR"] call ace_wardrobe_fnc_replaceOther
+ * [player, "G_Bandanna_aviator", "FACEWEAR"] call ace_wardrobe_fnc_replaceOther
  *
  * Public: No
  */

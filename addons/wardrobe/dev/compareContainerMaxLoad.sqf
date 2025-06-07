@@ -9,10 +9,10 @@
  * Return Value:
  * None
  *
- * Example: execVM "\z\ace\addons\wardrobe\dev\compareContainerMaxLoad.sqf";
- * 
+ * Example:
+ * call compile preprocessFileLineNumbers "\z\ace\addons\wardrobe\dev\compareContainerMaxLoad.sqf";
  *
- * Public: no
+ * Public: No
  */
 
 private _allWardrobeItems = call compile preprocessFileLineNumbers "z\ace\addons\wardrobe\dev\getAllWardrobeItems.sqf" select {
@@ -55,7 +55,7 @@ LOG_SYS("CompareMaxLoad","======================================================
         if (_mismatch) then { _mismatches pushBack [_originClassName,_originMaxLoad,_targetClassName,_targetMaxLoad]; };
 
         LOG_SYS("CompareMaxLoad",_string);
-        ADD(_index,1);
+        INC(_index);
     } forEach _targets;
 } forEach _allWardrobeItems;
 

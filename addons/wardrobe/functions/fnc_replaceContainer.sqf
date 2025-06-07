@@ -12,8 +12,8 @@
  * None
  *
  * Example:
- * [player, "U_B_CTRG_3", UNIFORM] call ace_wardrobe_fnc_replaceContainer
- * [player, "U_B_CTRG_1", UNIFORM] call ace_wardrobe_fnc_replaceContainer
+ * [player, "U_B_CTRG_3", "UNIFORM"] call ace_wardrobe_fnc_replaceContainer
+ * [player, "U_B_CTRG_1", "UNIFORM"] call ace_wardrobe_fnc_replaceContainer
  *
  * Public: No
  */
