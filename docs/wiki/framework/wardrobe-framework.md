@@ -266,8 +266,6 @@ Currently, `ace_intelitems` and `ace_overheating` (spare barrels) are being dire
 
 If an addon or mod utilizes a magazine's `magazineID` to handle additional data about items carried by the player, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new `magazineID`s for all magazines on the player and therefore, require special handling within `ace_wardrobe` functions.
 
-There *might* be some changes coming from BI regarding how arma handles the `setUnitLoadout` which could resolve the need for this.
-
 ## 6.2 Container Size - Uniform, Vest, Backpack
 When the player changes from one container item to another through the wardrobe action and the container's `maximumLoad` is smaller then previously, the player risks the loss of items carried inside said container.
 
