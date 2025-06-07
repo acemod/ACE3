@@ -9,7 +9,6 @@
  * 2: Action params <ARRAY>
  * - 0: Current variant <CONFIG>
  * - 0: Desired variant <CONFIG>
- * 3: Replace Now? <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -20,7 +19,7 @@
  * Public: No
  */
 
-params ["", "_player", "_actionParams", ["_replaceNow", false, [true]]];
+params ["", "_player", "_actionParams"];
 _actionParams params ["_cfgOrigin", "_cfgTarget"];
 
 
@@ -28,12 +27,12 @@ private _classTarget = configName _cfgTarget;
 private _classOrigin = configName _cfgOrigin;
 private _cfgWardobeTarget = configFile >> QUOTE(ADDON) >> _classTarget;
 
-// duration of the "animation"
-private _duration = if (_replaceNow) then { 0 } else {
-    GVAR(inProgress) = true; // temp action disabled
-    getNumber (_cfgWardobeTarget >> "duration")
-}; // _replaceNow needed for cba context menu to avoid potential duplications and such
+// temp action disabled
+GVAR(inProgress) = true;
 
+// duration of the "animation"
+private _duration = getNumber (_cfgWardobeTarget >> "duration");
+    
 // replace the main Item
 private _equipmentType = "";
 private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
