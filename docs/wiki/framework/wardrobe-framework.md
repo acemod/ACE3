@@ -17,7 +17,7 @@ version:
 
 The Wardrobe addon gives the player the opportunity to change/modify their current wearables into different variants.
 
-For example, if a uniform has a normal variant and a "rolled-Up sleeves" variant, the player will be able to use ether an ACE Self Interaction or the CBA Context Menu in the inventory.
+For example, if a uniform has a normal variant and a "rolled-Up sleeves" variant, the player will be able to use ether an ACE Self Interaction.
 
 Since there is no reliable, common patterns in terms of class inheritance, not even within the same DLC, each possible variant has to be defined individually within `configFile >> "ace_wardrobe"`.
 
@@ -26,7 +26,7 @@ Since there is no reliable, common patterns in terms of class inheritance, not e
 Components are an optional assistance to define a group of variants where a variant is made of one or more components.
 For example, a bandana with sunglasses would have the the bandana and the sunglasses as components, while the bandana and sunglasses only have themselves as a component.
 
-If the player switches from a variant with more components to a variant with less components, the surplus components will be deposited in their inventory. Vice Versa, if the player wants to change from a variant with less components to a variant with more components, they are required to have the missing components in their inventory, which will be removed on conversion.
+If the player switches from a variant with more components to a variant with less components, the surplus components will be deposited in their inventory. On the other hand, if the player wants to change from a variant with less components to a variant with more components, they are required to have the missing components in their inventory, which will be removed on conversion.
 
 More examples can be found below.
 
