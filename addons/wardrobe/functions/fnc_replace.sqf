@@ -26,11 +26,12 @@ _actionParams params ["_cfgOrigin", "_cfgTarget"];
 
 private _classTarget = configName _cfgTarget;
 private _classOrigin = configName _cfgOrigin;
+private _cfgWardobeTarget = configFile >> QUOTE(ADDON) >> _classTarget;
 
 // duration of the "animation"
 private _duration = if (_replaceNow) then { 0 } else {
     GVAR(inProgress) = true; // temp action disabled
-    getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "duration")
+    getNumber (_cfgWardobeTarget >> "duration")
 }; // _replaceNow needed for cba context menu to avoid potential duplications and such
 
 // replace the main Item
@@ -79,15 +80,15 @@ if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2
 
 // handle effects
 // animation/gestures
-[_player, getText (configFile >> QUOTE(ADDON) >> _classTarget >> "gesture")] call EFUNC(common,doGesture);
+[_player, getText (_cfgWardobeTargett >> "gesture")] call EFUNC(common,doGesture);
 
 // plays random sound at the beginning
-private _sound = [configFile >> QUOTE(ADDON) >> _classTarget >> "sound"] call CBA_fnc_getCfgDataRandom;
+private _sound = [_cfgWardobeTarget >> "sound"] call CBA_fnc_getCfgDataRandom;
 if (_sound isNotEqualTo "") then {
     [
         CBA_fnc_globalSay3D,
         [_player, _sound, nil, true, true],
-        (getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "sound_timing") max 0 min 1) * _duration
+        (getNumber (_cfgWardobeTarget >> "sound_timing") max 0 min 1) * _duration
     ] call CBA_fnc_waitAndExecute;
 };
 
