@@ -4,7 +4,7 @@
  * Debug - Script to retrieve all existing Wardrobe items.
  *
  * Arguments:
- * None
+ * _asConfig <BOOL> (Default: false)
  *
  * Return Value:
  * Wardobe items, either as classname or config <ARRAY>
