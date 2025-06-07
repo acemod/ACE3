@@ -15,7 +15,7 @@
  * Public: No
  */
 
-private _allWardrobeItems = call compile preprocessFileLineNumbers "z\ace\addons\wardrobe\dev\getAllWardrobeItems.sqf" select {
+private _allWardrobeItems = [true] call compile preprocessFileLineNumbers "z\ace\addons\wardrobe\dev\getAllWardrobeItems.sqf" select {
     switch (getNumber (_x >> "ItemInfo" >> "type")) do {
         case TYPE_GOGGLE: { false; };
         case TYPE_HEADGEAR: { false; };

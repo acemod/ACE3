@@ -12,8 +12,10 @@
  * Example:
  * call compile preprocessFileLineNumbers "z\ace\addons\wardrobe\dev\getAllWardrobeItems.sqf";
  *
- * Public: Yes
+ * Public: No
  */
+
+params ["_asConfig", false, [false]];
 
 private _return = [];
 
@@ -21,4 +23,8 @@ private _return = [];
     _return append (QUOTE(_x call FUNC(isModifiable)) configClasses (configFile >> _x));
 } forEach ["CfgWeapons", "CfgGlasses"];
 
-_return apply { configName _x } // return
+if (_asConfig) then {
+    _return apply { configName _x } // return
+} else {
+    _return
+}
