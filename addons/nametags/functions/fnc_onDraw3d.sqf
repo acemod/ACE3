@@ -78,20 +78,23 @@ if (_enabledTagsCursor) then {
 if (_enabledTagsNearby) then {
     // Find valid targets and cache them
     private _targets = [[], {
+        private _fnc_basicChecks = {
+            params ["_unit"];
+            private _treatAsPlayer = _unit getVariable [QGVAR(treatAsPlayer), false];
+            _unit != ACE_player && {_treatAsPlayer || (side group _unit) == (side group ACE_player)} &&
+            {GVAR(showNamesForAI) || _treatAsPlayer || {_unit call EFUNC(common,isPlayer)}}
+        };
+
         private _nearMen = nearestObjects [_camPosAGL, ["CAManBase"], _maxDistance + 7];
         _nearMen = _nearMen select {
-            _x != ACE_player &&
-            {(side group _x) == (side group ACE_player)} &&
-            {GVAR(showNamesForAI) || {[_x] call EFUNC(common,isPlayer)}} &&
+            _x call _fnc_basicChecks &&
             {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x] isEqualTo []} &&
             {!isObjectHidden _x}
         };
         private _crewMen = [];
         if (!isNull objectParent ACE_player) then {
             _crewMen = (crew vehicle ACE_player) select {
-                _x != ACE_player &&
-                {(side group _x) == (side group ACE_player)} &&
-                {GVAR(showNamesForAI) || {[_x] call EFUNC(common,isPlayer)}} &&
+                _x call _fnc_basicChecks &&
                 {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x, true, 1, "GEOM", "NONE"] isEqualTo []} &&
                 {!isObjectHidden _x}
             };
