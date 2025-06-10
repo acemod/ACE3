@@ -50,17 +50,18 @@ if (!isNull _cameraConfig && { (getNumber (_cameraConfig >> "enabled")) == 1 }) 
         getNumber (_cameraConfig >> "gimbal" >> "trackLockedPosition") == 1
     ]];
 
+    private _cameraConfigReticle = _cameraConfig >> "reticle";
     _cameraArray set [10, [
-        getText (_cameraConfig >> "reticle" >> "titleRsc"),
-        getNumber (_cameraConfig >> "reticle" >> "centerReticle"),
-        getArray (_cameraConfig >> "reticle" >> "controlsToDisappearOnLock"),
-        getArray (_cameraConfig >> "reticle" >> "controlsToAppearOnLock"),
-        getNumber (_cameraConfig >> "reticle" >> "leftGate"),
-        getNumber (_cameraConfig >> "reticle" >> "rightGate"),
-        getNumber (_cameraConfig >> "reticle" >> "topGate"),
-        getNumber (_cameraConfig >> "reticle" >> "bottomGate"),
-        getText (_cameraConfig >> "reticle" >> "uiNamespaceDialogVariable"),
-        getNumber (_cameraConfig >> "reticle" >> "reticleMovesWithTrack") == 1
+        getText (_cameraConfigReticle >> "titleRsc"),
+        getNumber (_cameraConfigReticle >> "centerReticle"),
+        getArray (_cameraConfigReticle >> "controlsToDisappearOnLock"),
+        getArray (_cameraConfigReticle >> "controlsToAppearOnLock"),
+        getNumber (_cameraConfigReticle >> "leftGate"),
+        getNumber (_cameraConfigReticle >> "rightGate"),
+        getNumber (_cameraConfigReticle >> "topGate"),
+        getNumber (_cameraConfigReticle >> "bottomGate"),
+        getText (_cameraConfigReticle >> "uiNamespaceDialogVariable"),
+        getNumber (_cameraConfigReticle >> "reticleMovesWithTrack") == 1
     ]];
 
     _cameraArray set [11, (getNumber (_cameraConfig >> "alwaysDesignate")) == 1];
