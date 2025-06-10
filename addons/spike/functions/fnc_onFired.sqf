@@ -36,18 +36,19 @@ if (!isNull _cameraConfig && { (getNumber (_cameraConfig >> "enabled")) == 1 }) 
 
     _cameraArray set [8, [[0, 0, 0], [0, 0, 0], [0, 0, 0], false, false]]; // camera view data. [look direction, ground pos, point pos, moving camera x, moving camera y]
 
+    private _cameraConfigGimbal = _cameraConfig >> "gimbal";
     _cameraArray set [9, [
-        getNumber (_cameraConfig >> "gimbal" >> "enabled") == 1,
-        getNumber (_cameraConfig >> "gimbal" >> "gimbalAngleX"),
-        getNumber (_cameraConfig >> "gimbal" >> "gimbalAngleY"),
-        getNumber (_cameraConfig >> "gimbal" >> "gimbalSpeedX"),
-        getNumber (_cameraConfig >> "gimbal" >> "gimbalSpeedY"),
-        getNumber (_cameraConfig >> "gimbal" >> "gimbalInitOffsetX"),
-        getNumber (_cameraConfig >> "gimbal" >> "gimbalInitOffsetY"),
-        getArray (_cameraConfig >> "gimbal" >> "fovGimbalSpeedModifiers"),
-        getNumber (_cameraConfig >> "gimbal" >> "stabilizeWhenMoving") == 1,
-        getNumber (_cameraConfig >> "gimbal" >> "designateWhenStationary") == 1,
-        getNumber (_cameraConfig >> "gimbal" >> "trackLockedPosition") == 1
+        getNumber (_cameraConfigGimbal >> "enabled") == 1,
+        getNumber (_cameraConfigGimbal >> "gimbalAngleX"),
+        getNumber (_cameraConfigGimbal >> "gimbalAngleY"),
+        getNumber (_cameraConfigGimbal >> "gimbalSpeedX"),
+        getNumber (_cameraConfigGimbal >> "gimbalSpeedY"),
+        getNumber (_cameraConfigGimbal >> "gimbalInitOffsetX"),
+        getNumber (_cameraConfigGimbal >> "gimbalInitOffsetY"),
+        getArray (_cameraConfigGimbal >> "fovGimbalSpeedModifiers"),
+        getNumber (_cameraConfigGimbal >> "stabilizeWhenMoving") == 1,
+        getNumber (_cameraConfigGimbal >> "designateWhenStationary") == 1,
+        getNumber (_cameraConfigGimbal >> "trackLockedPosition") == 1
     ]];
 
     private _cameraConfigReticle = _cameraConfig >> "reticle";
