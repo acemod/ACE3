@@ -37,4 +37,3 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "ACE_Settings.hpp"
 #include "RscTitles.hpp"
-#include "ACE_Arsenal_Stats.hpp"
