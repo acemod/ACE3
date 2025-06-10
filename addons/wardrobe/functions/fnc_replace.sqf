@@ -9,7 +9,6 @@
  * 2: Action params <ARRAY>
  * - 0: Current variant <CONFIG>
  * - 0: Desired variant <CONFIG>
- * 3: Replace Now? <BOOL> (default: false)
  *
  * Return Value:
  * None
@@ -20,15 +19,20 @@
  * Public: No
  */
 
-params ["", "_player", "_actionParams", ["_replaceNow", false, [true]]];
+params ["", "_player", "_actionParams"];
 _actionParams params ["_cfgOrigin", "_cfgTarget"];
+
 
 private _classTarget = configName _cfgTarget;
 private _classOrigin = configName _cfgOrigin;
+private _cfgWardobeTarget = configFile >> QUOTE(ADDON) >> _classTarget;
+
+// temp action disabled
+GVAR(inProgress) = true;
 
 // duration of the "animation"
-private _duration = if (_replaceNow) then { 0 } else { getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "duration") }; // _replaceNow needed for cba context menu to avoid potential duplications and such
-
+private _duration = getNumber (_cfgWardobeTarget >> "duration");
+    
 // replace the main Item
 private _equipmentType = "";
 private _typeNumber = getNumber (_cfgOrigin >> "ItemInfo" >> "type");
@@ -45,7 +49,6 @@ private _replaceCode = switch (_typeNumber) do {
         };
     };
 };
-
 if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2",_typeNumber,_classOrigin); };
 [_replaceCode, [_player, _classTarget, _equipmentType], _duration] call CBA_fnc_waitAndExecute;
 
@@ -76,15 +79,15 @@ if (_replaceCode isEqualTo {}) exitWith { ERROR_2("typeNumber undefined: %1 - %2
 
 // handle effects
 // animation/gestures
-[_player, getText (configFile >> QUOTE(ADDON) >> _classTarget >> "gesture")] call EFUNC(common,doGesture);
+[_player, getText (_cfgWardobeTargett >> "gesture")] call EFUNC(common,doGesture);
 
 // plays random sound at the beginning
-private _sound = [configFile >> QUOTE(ADDON) >> _classTarget >> "sound"] call CBA_fnc_getCfgDataRandom;
+private _sound = [_cfgWardobeTarget >> "sound"] call CBA_fnc_getCfgDataRandom;
 if (_sound isNotEqualTo "") then {
     [
         CBA_fnc_globalSay3D,
         [_player, _sound, nil, true, true],
-        (getNumber (configFile >> QUOTE(ADDON) >> _classTarget >> "sound_timing") max 0 min 1) * _duration
+        (getNumber (_cfgWardobeTarget >> "sound_timing") max 0 min 1) * _duration
     ] call CBA_fnc_waitAndExecute;
 };
 
