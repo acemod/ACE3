@@ -177,14 +177,14 @@ class ace_wardrobe {
     class U_B_CTRG_1: ace_wardrobe_base_U_sleeves_down {
         components[] = {};
         class modifiableTo {
-            class U_B_CTRG_3;
+            class U_B_CTRG_3 {};
         };
     };
 
     class U_B_CTRG_3: ace_wardrobe_base_U_sleeves_up {
         components[] = {};
         class modifiableTo {
-            class U_B_CTRG_1;
+            class U_B_CTRG_1 {};
         };
     };
 };
@@ -197,7 +197,7 @@ class ace_wardrobe {
 
     class G_Balaclava: ace_wardrobe_base {
         class modifiableTo {
-            class G_Balaclava_lowprofile;
+            class G_Balaclava_lowprofile {};
         };
         components[] = {};
     };
@@ -208,7 +208,7 @@ class ace_wardrobe {
 
     class G_Balaclava_lowprofile: ace_wardrobe_base {
         class modifiableTo {
-            class G_Balaclava;
+            class G_Balaclava {};
         };
         components[] = { "G_Lowprofile" };
     };
@@ -221,15 +221,15 @@ class ace_wardrobe {
 
     class G_Bandanna_blk: ace_wardrobe_base {
         class modifiableTo {
-            class G_Bandanna_aviator;
-            class G_Aviator;
+            class G_Bandanna_aviator {};
+            class G_Aviator {};
         };
         components[] = {"G_Bandanna_blk"};
     };
 
     class G_Aviator: ace_wardrobe_base {
         class modifiableTo {
-            class G_Bandanna_aviator;
+            class G_Bandanna_aviator {};
         };
 
         components[] = { "G_Aviator" };
@@ -237,8 +237,8 @@ class ace_wardrobe {
 
     class G_Bandanna_aviator: ace_wardrobe_base {
         class modifiableTo {
-            class G_Bandanna_blk;
-            class G_Aviator;
+            class G_Bandanna_blk {};
+            class G_Aviator {};
         };
         components[] = { "G_Aviator", "G_Bandanna_blk" };
     };
