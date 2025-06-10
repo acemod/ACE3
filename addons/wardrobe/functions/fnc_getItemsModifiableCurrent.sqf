@@ -16,34 +16,24 @@
  * Public: Yes
  */
 
-params [["_player", objNull, [objNull]], ["_cache", true, [true]]];
+params [["_player", objNull, [objNull]]];
 
-private _code = {
-    ([headgear _player, goggles _player, uniform _player, vest _player, backpack _player] - [""])
-    apply
-    { _x call CBA_fnc_getItemConfig }
-    select
-    { _x call FUNC(isModifiable) }
-    apply
-    { [_x, _x call FUNC(getItemsModifiableTo)] }    // will return an array, even if the target variants are not available
-    select
-    { (_x#1) isNotEqualTo [] }
-    apply
-    {
-        private _cfgOrigin = _x#0;
-        [
-            _cfgOrigin,
-            _x#1 select { [_player, _cfgOrigin, _x] call FUNC(canModifyTo) }
-        ]
-    }
-    select
-    { (_x#1) isNotEqualTo [] }
-};
-    
-
-private _caching = {
-    ["items_modifiable_current"] call FUNC(clearOnClosedInteractionMenu);
-    ["items_modifiable_current", _code] call FUNC(cacheGet);   // returns the result
-};
-
-if (_cache) then _caching else _code;
+([headgear _player, goggles _player, uniform _player, vest _player, backpack _player] - [""])
+apply
+{ _x call CBA_fnc_getItemConfig }
+select
+{ _x call FUNC(isModifiable) }
+apply
+{ [_x, _x call FUNC(getItemsModifiableTo)] }    // will return an array, even if the target variants are not available
+select
+{ (_x#1) isNotEqualTo [] }
+apply
+{
+    private _cfgOrigin = _x#0;
+    [
+        _cfgOrigin,
+        _x#1 select { [_player, _cfgOrigin, _x] call FUNC(canModifyTo) }
+    ]
+}
+select
+{ (_x#1) isNotEqualTo [] }

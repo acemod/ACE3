@@ -37,45 +37,45 @@ class ItemInfo: ItemInfo {\
 #define BASIC(variant1,variant2,base1,base2)\
 class variant1: base1 {\
     class modifiableTo {\
-        class variant2;\
+        class variant2 {};\
     };\
 };\
 class variant2: base2 {\
     class modifiableTo {\
-        class variant1;\
+        class variant1 {};\
     };\
 }
 
 #define BASIC_COMPONENT(variantWith,variantWithout,baseWith,baseWithout,component)\
 class variantWith: baseWith {\
     class modifiableTo {\
-        class variantWithout;\
+        class variantWithout {};\
     };\
     components[] = {QUOTE(component)};\
 };\
 class variantWithout: baseWithout {\
     class modifiableTo {\
-        class variantWith;\
+        class variantWith {};\
     };\
 }
 
 #define BASIC_COMBO(Combo,ComboBase,Variant1,Variant1Base,Variant2,Variant2Base)\
 class Combo: ComboBase {\
     class modifiableTo {\
-        class Variant1;\
-        class Variant2;\
+        class Variant1 {};\
+        class Variant2 {};\
     };\
     components[] = { QUOTE(Variant1), QUOTE(Variant2) };\
 };\
 class Variant1: Variant1Base {\
     class modifiableTo {\
-        class Combo;\
+        class Combo {};\
     };\
     components[] = { QUOTE(Variant1) };\
 };\
 class Variant2: Variant2Base {\
     class modifiableTo {\
-        class Combo;\
+        class Combo {};\
     };\
     components[] = { QUOTE(Variant2) };\
 }

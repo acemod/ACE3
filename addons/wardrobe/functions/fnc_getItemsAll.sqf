@@ -16,13 +16,6 @@
  * Public: No
  */
 
-params [["_player", objNull, [objNull]], ["_cache", true, [true]]];
+params [["_player", objNull, [objNull]]];
 
-private _code = { flatten getUnitLoadout _player select { _x isEqualType "" && { _x != "" } }; };
-
-private _caching = {
-    ["items_all"] call FUNC(clearOnClosedInteractionMenu);
-    ["items_all", _code] call FUNC(cacheGet);   // returns the result
-};
-
-if (_cache) then _caching else _code;
+flatten getUnitLoadout _player select { _x isEqualType "" && { _x != "" } }

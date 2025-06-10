@@ -26,8 +26,8 @@ HELMET_GOGGLES(gm_ge_bgs_headgear_m38_72_goggles_bgr,gm_ge_bgs_headgear_m38_72_b
 // Helmet Only
 class gm_ge_headgear_m62_net: EGVAR(wardrobe,base) {
     class modifiableTo {
-        class gm_ge_headgear_sidecap_80_m62_oli;
-        class gm_ge_headgear_hat_80_m62_oli;
+        class gm_ge_headgear_sidecap_80_m62_oli {};
+        class gm_ge_headgear_hat_80_m62_oli {};
     };
     components[] = {"gm_ge_headgear_m62_net"};
 };
@@ -36,14 +36,14 @@ class gm_ge_headgear_m62_net: EGVAR(wardrobe,base) {
 // Hats only
 class gm_ge_headgear_hat_80_oli: EGVAR(wardrobe,base) {
     class modifiableTo {
-        class gm_ge_headgear_hat_80_m62_oli;
+        class gm_ge_headgear_hat_80_m62_oli {};
     };
     components[] = {"gm_ge_headgear_hat_80_oli"};
 };
 
 class gm_ge_headgear_sidecap_80_oli: EGVAR(wardrobe,base) {
     class modifiableTo {
-        class gm_ge_headgear_sidecap_80_m62_oli;
+        class gm_ge_headgear_sidecap_80_m62_oli {};
     };
     components[] = {"gm_ge_headgear_sidecap_80_oli"};
 };
@@ -52,8 +52,8 @@ class gm_ge_headgear_sidecap_80_oli: EGVAR(wardrobe,base) {
 
 class gm_ge_headgear_hat_80_m62_oli: EGVAR(wardrobe,base) {
     class modifiableTo {
-        class gm_ge_headgear_hat_80_oli;
-        class gm_ge_headgear_m62_net;
+        class gm_ge_headgear_hat_80_oli {};
+        class gm_ge_headgear_m62_net {};
     };
     components[] = {"gm_ge_headgear_hat_80_oli","gm_ge_headgear_m62_net"};
 };
@@ -62,8 +62,8 @@ class gm_ge_headgear_hat_80_m62_oli: EGVAR(wardrobe,base) {
 
 class gm_ge_headgear_sidecap_80_m62_oli: EGVAR(wardrobe,base) {
     class modifiableTo {
-        class gm_ge_headgear_sidecap_80_oli;
-        class gm_ge_headgear_m62_net;
+        class gm_ge_headgear_sidecap_80_oli {};
+        class gm_ge_headgear_m62_net {};
     };
     components[] = {"gm_ge_headgear_sidecap_80_oli","gm_ge_headgear_m62_net"};
 };

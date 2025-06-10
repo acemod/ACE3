@@ -17,7 +17,7 @@ version:
 
 The Wardrobe addon gives the player the opportunity to change/modify their current wearables into different variants.
 
-For example, if a uniform has a normal variant and a "rolled-Up sleeves" variant, the player will be able to use ether an ACE Self Interaction or the CBA Context Menu in the inventory.
+For example, if a uniform has a normal variant and a "rolled-Up sleeves" variant, the player will be able to use ether an ACE Self Interaction.
 
 Since there is no reliable, common patterns in terms of class inheritance, not even within the same DLC, each possible variant has to be defined individually within `configFile >> "ace_wardrobe"`.
 
@@ -26,7 +26,7 @@ Since there is no reliable, common patterns in terms of class inheritance, not e
 Components are an optional assistance to define a group of variants where a variant is made of one or more components.
 For example, a bandana with sunglasses would have the the bandana and the sunglasses as components, while the bandana and sunglasses only have themselves as a component.
 
-If the player switches from a variant with more components to a variant with less components, the surplus components will be deposited in their inventory. Vice Versa, if the player wants to change from a variant with less components to a variant with more components, they are required to have the missing components in their inventory, which will be removed on conversion.
+If the player switches from a variant with more components to a variant with less components, the surplus components will be deposited in their inventory. On the other hand, if the player wants to change from a variant with less components to a variant with more components, they are required to have the missing components in their inventory, which will be removed on conversion.
 
 More examples can be found below.
 
@@ -177,14 +177,14 @@ class ace_wardrobe {
     class U_B_CTRG_1: ace_wardrobe_base_U_sleeves_down {
         components[] = {};
         class modifiableTo {
-            class U_B_CTRG_3;
+            class U_B_CTRG_3 {};
         };
     };
 
     class U_B_CTRG_3: ace_wardrobe_base_U_sleeves_up {
         components[] = {};
         class modifiableTo {
-            class U_B_CTRG_1;
+            class U_B_CTRG_1 {};
         };
     };
 };
@@ -197,7 +197,7 @@ class ace_wardrobe {
 
     class G_Balaclava: ace_wardrobe_base {
         class modifiableTo {
-            class G_Balaclava_lowprofile;
+            class G_Balaclava_lowprofile {};
         };
         components[] = {};
     };
@@ -208,7 +208,7 @@ class ace_wardrobe {
 
     class G_Balaclava_lowprofile: ace_wardrobe_base {
         class modifiableTo {
-            class G_Balaclava;
+            class G_Balaclava {};
         };
         components[] = { "G_Lowprofile" };
     };
@@ -221,15 +221,15 @@ class ace_wardrobe {
 
     class G_Bandanna_blk: ace_wardrobe_base {
         class modifiableTo {
-            class G_Bandanna_aviator;
-            class G_Aviator;
+            class G_Bandanna_aviator {};
+            class G_Aviator {};
         };
         components[] = {"G_Bandanna_blk"};
     };
 
     class G_Aviator: ace_wardrobe_base {
         class modifiableTo {
-            class G_Bandanna_aviator;
+            class G_Bandanna_aviator {};
         };
 
         components[] = { "G_Aviator" };
@@ -237,8 +237,8 @@ class ace_wardrobe {
 
     class G_Bandanna_aviator: ace_wardrobe_base {
         class modifiableTo {
-            class G_Bandanna_blk;
-            class G_Aviator;
+            class G_Bandanna_blk {};
+            class G_Aviator {};
         };
         components[] = { "G_Aviator", "G_Bandanna_blk" };
     };
@@ -265,8 +265,6 @@ The number at the end of the classnames indicates the length of the file in 1/10
 Currently, `ace_intelitems` and `ace_overheating` (spare barrels) are being directly supported.
 
 If an addon or mod utilizes a magazine's `magazineID` to handle additional data about items carried by the player, then the process of modifying a wearable container (uniform, vest, backpack) to another variant will result in new `magazineID`s for all magazines on the player and therefore, require special handling within `ace_wardrobe` functions.
-
-There *might* be some changes coming from BI regarding how arma handles the `setUnitLoadout` which could resolve the need for this.
 
 ## 6.2 Container Size - Uniform, Vest, Backpack
 When the player changes from one container item to another through the wardrobe action and the container's `maximumLoad` is smaller then previously, the player risks the loss of items carried inside said container.
