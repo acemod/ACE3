@@ -30,39 +30,39 @@ UNIFORM_GLOVES(gm_ge_army_uniform_soldier_gloves_80_ols,gm_ge_army_uniform_soldi
 // Woodland Variant
 class gm_xx_uniform_soldier_bdu_80_wdl: EGVAR(wardrobe,base_U_gloves_on) {
     class modifiableTo {
-        class gm_xx_uniform_soldier_bdu_rolled_80_wdl;
-        class gm_xx_uniform_soldier_bdu_nogloves_80_wdl;
+        class gm_xx_uniform_soldier_bdu_rolled_80_wdl {};
+        class gm_xx_uniform_soldier_bdu_nogloves_80_wdl {};
     };
 };
 class gm_xx_uniform_soldier_bdu_rolled_80_wdl: EGVAR(wardrobe,base_U_sleeves_up) {
     class modifiableTo {
-        class gm_xx_uniform_soldier_bdu_80_wdl;
-        class gm_xx_uniform_soldier_bdu_nogloves_80_wdl;
+        class gm_xx_uniform_soldier_bdu_80_wdl {};
+        class gm_xx_uniform_soldier_bdu_nogloves_80_wdl {};
     };
 };
 class gm_xx_uniform_soldier_bdu_nogloves_80_wdl: EGVAR(wardrobe,base) {
     class modifiableTo {
-        class gm_xx_uniform_soldier_bdu_80_wdl;
-        class gm_xx_uniform_soldier_bdu_rolled_80_wdl;
+        class gm_xx_uniform_soldier_bdu_80_wdl {};
+        class gm_xx_uniform_soldier_bdu_rolled_80_wdl {};
     };
 };
 
 // Olive variant
 class gm_xx_uniform_soldier_bdu_80_oli: EGVAR(wardrobe,base_U_gloves_on) {
     class modifiableTo {
-        class gm_xx_uniform_soldier_bdu_rolled_80_oli;
-        class gm_xx_uniform_soldier_bdu_nogloves_80_oli;
+        class gm_xx_uniform_soldier_bdu_rolled_80_oli {};
+        class gm_xx_uniform_soldier_bdu_nogloves_80_oli {};
     };
 };
 class gm_xx_uniform_soldier_bdu_rolled_80_oli: EGVAR(wardrobe,base_U_sleeves_up) {
     class modifiableTo {
-        class gm_xx_uniform_soldier_bdu_80_oli;
-        class gm_xx_uniform_soldier_bdu_nogloves_80_oli;
+        class gm_xx_uniform_soldier_bdu_80_oli {};
+        class gm_xx_uniform_soldier_bdu_nogloves_80_oli {};
     };
 };
 class gm_xx_uniform_soldier_bdu_nogloves_80_oli: EGVAR(wardrobe,base) {
     class modifiableTo {
-        class gm_xx_uniform_soldier_bdu_80_oli;
-        class gm_xx_uniform_soldier_bdu_rolled_80_oli;
+        class gm_xx_uniform_soldier_bdu_80_oli {};
+        class gm_xx_uniform_soldier_bdu_rolled_80_oli {};
     };
 };

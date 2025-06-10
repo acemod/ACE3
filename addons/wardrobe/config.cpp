@@ -7,8 +7,8 @@ class CfgPatches {
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {
-            "ace_interact_menu",
-            "ace_goggles"
+            "ace_goggles",
+            "ace_interact_menu"
         };
         skipWhenMissingDependencies = 1;
         author = ECSTRING(common,ACETeam);
