@@ -2,19 +2,19 @@
 #define CUP_HELMET_2_ESS(HelmetBase,HelmetGoggles1,HelmetGoggles2,Goggles)\
 class HelmetBase : EGVAR(wardrobe,base) {\
     class modifiableTo {\
-            class HelmetGoggles1;\
-            class HelmetGoggles2;\
+            class HelmetGoggles1 {};\
+            class HelmetGoggles2 {};\
         };\
 };\
 class HelmetGoggles1 : EGVAR(wardrobe,base) {\
     class modifiableTo {\
-            class HelmetBase;\
+            class HelmetBase {};\
         };\
     components[] = {QUOTE(Goggles)};\
 };\
 class HelmetGoggles2 : EGVAR(wardrobe,base) {\
     class modifiableTo {\
-            class HelmetBase;\
+            class HelmetBase {};\
         };\
     components[] = {QUOTE(Goggles)};\
 }
@@ -23,7 +23,7 @@ class HelmetGoggles2 : EGVAR(wardrobe,base) {\
 CUP_HELMET_2_ESS(HelmetBase,HelmetGoggles1,HelmetGoggles2,Goggles);\
 class HelmetGoggles3 : EGVAR(wardrobe,base) {\
     class modifiableTo {\
-            class HelmetBase;\
+            class HelmetBase {};\
         };\
     components[] = {QUOTE(Goggles)};\
 }
@@ -31,26 +31,26 @@ class HelmetGoggles3 : EGVAR(wardrobe,base) {\
 #define CUP_BAF_MK6(HelmetBase,HelmetGlasses,HelmetGoggles,HelmetNetting,Glasses,Goggles)\
 class HelmetBase : EGVAR(wardrobe,base_H_goggles_off) {\
     class modifiableTo {\
-        class HelmetGlasses;\
-        class HelmetGoggles;\
+        class HelmetGlasses {};\
+        class HelmetGoggles {};\
     };\
 };\
 class HelmetGlasses : EGVAR(wardrobe,base) {\
     class modifiableTo {\
-        class HelmetBase;\
-        class HelmetNetting;\
+        class HelmetBase {};\
+        class HelmetNetting {};\
     };\
     components[] = {QUOTE(Glasses)};\
 };\
 class HelmetGoggles : EGVAR(wardrobe,base_H_goggles_on) {\
     class modifiableTo {\
-        class HelmetBase;\
+        class HelmetBase {};\
     };\
     components[] = {QUOTE(Goggles)};\
 };\
 class HelmetNetting : EGVAR(wardrobe,base) {\
     class modifiableTo {\
-        class HelmetGlasses;\
+        class HelmetGlasses {};\
     };\
     components[] = {};\
 }
@@ -130,18 +130,18 @@ CUP_BAF_MK6(CUP_H_BAF_DPM_Mk6_EMPTY_PRR,CUP_H_BAF_DPM_Mk6_GLASS_PRR,CUP_H_BAF_DP
 // MK7 MTP
 class CUP_H_BAF_MTP_Mk7 : EGVAR(wardrobe,base) {
     class modifiableTo {
-        class CUP_H_BAF_MTP_Mk7_PRR_SCRIM_B;
-        class CUP_H_BAF_MTP_Mk7_PRR_SCRIM_A;
+        class CUP_H_BAF_MTP_Mk7_PRR_SCRIM_B {};
+        class CUP_H_BAF_MTP_Mk7_PRR_SCRIM_A {};
     };
 };
 class CUP_H_BAF_MTP_Mk7_PRR_SCRIM_A : EGVAR(wardrobe,base) {
     class modifiableTo {
-        class CUP_H_BAF_MTP_Mk7;
+        class CUP_H_BAF_MTP_Mk7 {};
     };
 };
 class CUP_H_BAF_MTP_Mk7_PRR_SCRIM_B : EGVAR(wardrobe,base) {
     class modifiableTo {
-        class CUP_H_BAF_MTP_Mk7;
+        class CUP_H_BAF_MTP_Mk7 {};
     };
 };
 
