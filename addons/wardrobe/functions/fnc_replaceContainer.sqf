@@ -12,8 +12,8 @@
  * None
  *
  * Example:
- * [player, "U_B_CTRG_3", UNIFORM] call ace_wardrobe_fnc_replaceContainer
- * [player, "U_B_CTRG_1", UNIFORM] call ace_wardrobe_fnc_replaceContainer
+ * [player, "U_B_CTRG_3", "UNIFORM"] call ace_wardrobe_fnc_replaceContainer
+ * [player, "U_B_CTRG_1", "UNIFORM"] call ace_wardrobe_fnc_replaceContainer
  *
  * Public: No
  */
@@ -21,7 +21,7 @@
 params ["_player", "_classTarget", "_equipmentType"];
 
 toFixed 0;
-private _magazineDetails = (magazinesAmmoFull _player) apply { [_x#0, _x#-2, _x#-1] };
+private _magazineDetails = (magazinesAmmoFull _player) apply { [_x#0, _x#-2, _x#6] };
 private _loadout = _player call CBA_fnc_getLoadout;
 
 // handle special cases - pre replace
@@ -55,3 +55,7 @@ if (_spareBarrel isEqualType []) then {
     private _newMagIDsSpareBarrel = [_player, "ACE_SpareBarrel"] call CBA_fnc_getMagazineIndex;
     [QGVAR(updateMagIDs), [_spareBarrel, _newMagIDsSpareBarrel]] call CBA_fnc_serverEvent;
 };
+
+GVAR(inProgress) = false; // re-enable action
+
+nil

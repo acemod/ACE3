@@ -29,5 +29,4 @@ if (_directional isNotEqualTo "") exitWith { _directional };
 private _alternative = getText (configFile >> QUOTE(ADDON) >> _classTarget >> "alternativeActionName");
 if (_alternative isNotEqualTo "") exitWith { _alternative };
 
-// return
-getText (_cfgTarget >> "displayName")
+getText (_cfgTarget >> "displayName") // return
