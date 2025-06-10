@@ -1,5 +1,5 @@
 class ADDON {
-    #include "BaseClasses.hpp"
-    #include "Uniforms.hpp"
-    #include "Facewear.hpp"
+    #include "CfgWardrobe_BaseClasses.hpp"
+    #include "CfgWardrobe_Uniforms.hpp"
+    #include "CfgWardrobe_Facewear.hpp"
 };
