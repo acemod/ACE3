@@ -8,14 +8,14 @@ class rhs_ess_black: EGVAR(wardrobe,base) {
 #define RHS_HELMET_VEIL_ESS_BARE(HelmetOnly,HelmetVeil,HelmetEss,HelmetEssBare,Veil,Ess)\
 class HelmetOnly : EGVAR(wardrobe,base) {\
     class modifiableTo {\
-        class HelmetEss;\
-        class HelmetVeil;\
+        class HelmetEss {};\
+        class HelmetVeil {};\
     };\
     components[] = {};\
 };\
 class HelmetVeil : EGVAR(wardrobe,base_H_mask_on) {\
     class modifiableTo {\
-        class HelmetOnly;\
+        class HelmetOnly {};\
     };\
     components[] = {\
         QUOTE(Veil)\
@@ -24,7 +24,7 @@ class HelmetVeil : EGVAR(wardrobe,base_H_mask_on) {\
 };\
 class HelmetEss : EGVAR(wardrobe,base_H_goggles_on) {\
     class modifiableTo {\
-        class HelmetOnly;\
+        class HelmetOnly {};\
     };\
     components[] = {\
         QUOTE(Ess)\
@@ -32,7 +32,7 @@ class HelmetEss : EGVAR(wardrobe,base_H_goggles_on) {\
 };\
 class HelmetEssBare : EGVAR(wardrobe,base_H_goggles_on) {\
     class modifiableTo {\
-        class HelmetOnly;\
+        class HelmetOnly {};\
     };\
     components[] = {\
         QUOTE(Ess)\
@@ -42,14 +42,14 @@ class HelmetEssBare : EGVAR(wardrobe,base_H_goggles_on) {\
 #define RHS_HELMET_ESS_BARE(HelmetOnly,HelmetEss,HelmetEssBare,Ess)\
 class HelmetOnly : EGVAR(wardrobe,base) {\
     class modifiableTo {\
-        class HelmetEss;\
-        class HelmetVeil;\
+        class HelmetEss {};\
+        class HelmetVeil {};\
     };\
     components[] = {};\
 };\
 class HelmetEss : EGVAR(wardrobe,base_H_goggles_on) {\
     class modifiableTo {\
-        class HelmetOnly;\
+        class HelmetOnly {};\
     };\
     components[] = {\
         QUOTE(Ess)\
@@ -57,7 +57,7 @@ class HelmetEss : EGVAR(wardrobe,base_H_goggles_on) {\
 };\
 class HelmetEssBare : EGVAR(wardrobe,base_H_goggles_on) {\
     class modifiableTo {\
-        class HelmetOnly;\
+        class HelmetOnly {};\
     };\
     components[] = {\
         QUOTE(Ess)\
