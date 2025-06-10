@@ -2,29 +2,29 @@
 #define RHS_SHEMAGH_GOGGLES(ShemaghLow,ShemaghHigh,ShemaghLowGoggles,ShemaghHighGoggles,Ess)\
 class ShemaghLow: EGVAR(wardrobe,base) {\
   class modifiableTo {\
-    class ShemaghHigh;\
-    class ShemaghLowGoggles;\
+    class ShemaghHigh {};\
+    class ShemaghLowGoggles {};\
   };\
   components[] = {};\
 };\
 class ShemaghHigh: EGVAR(wardrobe,base) {\
   class modifiableTo {\
-    class ShemaghLow;\
-    class ShemaghHighGoggles;\
+    class ShemaghLow {};\
+    class ShemaghHighGoggles {};\
   };\
   components[] = {};\
 };\
 class ShemaghLowGoggles: EGVAR(wardrobe,base) {\
   class modifiableTo {\
-    class ShemaghLow;\
-    class ShemaghHighGoggles;\
+    class ShemaghLow {};\
+    class ShemaghHighGoggles {};\
   };\
   components[] = {QUOTE(Ess)};\
 };\
 class ShemaghHighGoggles: EGVAR(wardrobe,base) {\
   class modifiableTo {\
-    class ShemaghHigh;\
-    class ShemaghLowGoggles;\
+    class ShemaghHigh {};\
+    class ShemaghLowGoggles {};\
   };\
   components[] = {QUOTE(Ess)};\
 }

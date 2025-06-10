@@ -37,11 +37,11 @@ HELMET_VISOR(rhsusf_hgu56p_usa,rhsusf_hgu56p_visor_usa);
 
 // Helmet with Netting
 class rhsusf_ach_helmet_ocp: EGVAR(wardrobe,base) {
-  class modifiableTo { class rhsusf_ach_helmet_ESS_ocp; class rhsusf_ach_helmet_camo_ocp; };
+  class modifiableTo { class rhsusf_ach_helmet_ESS_ocp {}; class rhsusf_ach_helmet_camo_ocp {}; };
   components[] = {};
 };
 class rhsusf_ach_helmet_camo_ocp: EGVAR(wardrobe,base) {
-  class modifiableTo { class rhsusf_ach_helmet_ocp; };
+  class modifiableTo { class rhsusf_ach_helmet_ocp {}; };
   components[] = {};
 };
 

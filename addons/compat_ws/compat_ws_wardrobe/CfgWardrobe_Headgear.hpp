@@ -1,12 +1,12 @@
 // Cap (Ion) Forward and Reversed
 class lxWS_H_CapB_rvs_blk_ION: EGVAR(wardrobe,base) {
     class modifiableTo {
-        class H_Cap_headphones_ion_lxws;
+        class H_Cap_headphones_ion_lxws {};
     };
 };
 class H_Cap_headphones_ion_lxws: EGVAR(wardrobe,base) {
     class modifiableTo {
-        class lxWS_H_CapB_rvs_blk_ION;
+        class lxWS_H_CapB_rvs_blk_ION {};
     };
 };
 
