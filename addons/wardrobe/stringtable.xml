@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Wardrobe">
-        <Key ID="STR_ACE_Wardrobe_actionTitle">
+        <Key ID="STR_ACE_Wardrobe_action_inProgress">
+            <English>Busy...</English>
+        </Key>
+        <Key ID="STR_ACE_Wardrobe_action_title">
             <English>Wardrobe</English>
             <German>Garderobe</German>
         </Key>
         <Key ID="STR_ACE_Wardrobe_enable_action">
             <English>ACE Interaction</English>
             <German>Aktivieren ACE Interaction</German>
-        </Key>
-        <Key ID="STR_ACE_Wardrobe_enable_contextmenu">
-            <English>CBA Context Menu</English>
-            <German>Aktiviere CBA Context Menu</German>
         </Key>
         <Key ID="STR_ACE_Wardrobe_glovesOff">
             <English>Take gloves off</English>
