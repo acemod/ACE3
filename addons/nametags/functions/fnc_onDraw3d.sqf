@@ -80,9 +80,9 @@ if (_enabledTagsNearby) then {
     private _targets = [[], {
         private _fnc_basicChecks = {
             params ["_unit"];
-            private _treatAsPlayer = _unit getVariable [QGVAR(treatAsPlayer), false];
-            _unit != ACE_player && {_treatAsPlayer || (side group _unit) == (side group ACE_player)} &&
-            {GVAR(showNamesForAI) || _treatAsPlayer || {_unit call EFUNC(common,isPlayer)}}
+            private _forceShowTags = _unit getVariable [QGVAR(forceShowTags), false];
+            _unit != ACE_player && {_forceShowTags || (side group _unit) == (side group ACE_player)} &&
+            {GVAR(showNamesForAI) || _forceShowTags || {_unit call EFUNC(common,isPlayer)}}
         };
 
         private _nearMen = nearestObjects [_camPosAGL, ["CAManBase"], _maxDistance + 7];
