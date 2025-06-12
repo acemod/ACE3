@@ -54,7 +54,7 @@ if (_enabledTagsCursor) then {
 
     if (_target != ACE_player &&
         {(side group _target) == (side group ACE_player)} &&
-        {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
+        {(_target getVariable [QGVAR(forceShowTags), GVAR(showNamesForAI)]) || {_target call EFUNC(common,isPlayer)}} &&
         {lineIntersectsSurfaces [_camPosASL, eyePos _target, ACE_player, _target] isEqualTo []} &&
         {!isObjectHidden _target}) then {
 
