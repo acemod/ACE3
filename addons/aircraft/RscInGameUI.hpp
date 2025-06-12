@@ -16,8 +16,6 @@ class RscInGameUI {
         idd = 300;
         controls[] = {"CA_IGUI_elements_group", "CA_VehicleToggles"};
 
-        class VScrollbar;
-        class HScrollbar;
         class CA_IGUI_elements_group: RscControlsGroup {
             idc = 170;
 
