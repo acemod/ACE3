@@ -20,4 +20,3 @@ class CfgPatches {
 #include "CfgWeapons.hpp"
 #include "RscTitles.hpp"
 #include "ACE_Settings.hpp"
-#include "ACE_Arsenal_Stats.hpp"

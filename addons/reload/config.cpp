@@ -19,6 +19,5 @@ class CfgPatches {
 #include "CfgMagazines.hpp"
 #include "CfgVehicles.hpp"
 #include "CfgWeapons.hpp"
-#include "ACE_Arsenal_Stats.hpp"
 #include "ACE_Settings.hpp"
 #include "ACE_UI.hpp"

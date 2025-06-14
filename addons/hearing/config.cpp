@@ -19,4 +19,3 @@ class CfgPatches {
 #include "CfgSounds.hpp"
 #include "CfgWeapons.hpp"
 #include "ACE_Settings.hpp"
-#include "ACE_Arsenal_Stats.hpp"
