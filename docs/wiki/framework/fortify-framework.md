@@ -37,13 +37,12 @@ To add a preset via code you use the function `call ace_fortify_fnc_registerObje
 ```sqf
 * Registers the given objects in the given side's player interaction menu.
 * Players on that side must have the `Fortify Tool` item in their inventory to access the menu.
-* Classnames must be in the format [<classname>, <cost>, <category(optional)>]
 * MUST BE CALLED ON SERVER!
 *
 * Arguments:
 * 0: Side <SIDE>
 * 1: Budget <NUMBER>
-* 2: Object Classnames <ARRAY>
+* 2: Object classnames in format [classname, cost, category (optional)] <ARRAY<STRING, NUMBER, STRING>>
 *
 * Return Value:
 * None

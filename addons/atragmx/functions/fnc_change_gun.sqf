@@ -4,9 +4,9 @@
  * Selects a new gun profile and updates the gun column and the result input/output fields
  *
  * Arguments:
- * gunID <number>
- * restore workingMemory from gunList <BOOL>
- * update display <BOOL>
+ * 0: GunID <NUMBER>
+ * 1: Restore workingMemory from gunList <BOOL>
+ * 2: Update display <BOOL>
  *
  * Return Value:
  * None

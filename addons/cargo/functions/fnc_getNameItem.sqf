@@ -4,7 +4,7 @@
  * Gets the name of the item, and alternatively the custom name if requested and available.
  *
  * Arguments:
- * 0: Item <STRING> or <OBJECT> (default: "")
+ * 0: Item <STRING or OBJECT> (default: "")
  * 1: Add custom name <BOOL> (default: false)
  *
  * Return Value:

@@ -6,7 +6,7 @@
  *
  * Arguments:
  * 0: Unit <OBJECT>
- * 1: Weapon (String or CBA-Weapon-Index (not ace's getWeaponIndex)) <STRING|NUMBER>
+ * 1: Weapon (String or CBA-Weapon-Index (not ace's getWeaponIndex)) <STRING or NUMBER>
  * 2: From <STRING>
  * 3: To <STRING>
  *

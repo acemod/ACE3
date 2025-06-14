@@ -4,7 +4,7 @@
  * Modifies which units are blacklisted from being transferred to HCs.
  *
  * Arguments:
- * 0: Units <OBJECT, GROUP, ARRAY>
+ * 0: Units <OBJECT or GROUP or ARRAY>
  * 1: Add (true) or remove (false) from blacklist <BOOL> (default: true)
  * 2: Owner to transfer units to <NUMBER> (default: -1)
  * 3: Rebalance <NUMBER> (default: 0)
