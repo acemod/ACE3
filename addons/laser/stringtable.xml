@@ -2,27 +2,27 @@
 <Project name="ACE">
     <Package name="Laser">
         <Key ID="STR_ACE_Laser_LSTOff">
-            <English>Laser Spot Tracker: Off</English>
+            <English>Laser Spot Tracker: Disable</English>
             <French>Traqueur laser : désactivé</French>
-            <Spanish>Rastreador del Puntero Láser: Off</Spanish>
+            <Spanish>Rastreador del Puntero Láser: Desactivar</Spanish>
             <Italian>Tracciamento Designazioni Laser: Disattivato</Italian>
-            <Polish>Laserowe Śledzenie Punktu: Wył.</Polish>
+            <Polish>Laserowe Śledzenie Punktu: Wyłącz.</Polish>
             <Portuguese>Rastreador a Laser: Desligado</Portuguese>
             <Russian>Лазерный точечный трекер: выключен</Russian>
-            <German>Laserziel Verfolgung: Aus</German>
+            <German>Laserziel Verfolgung: Deaktivieren</German>
             <Korean>레이저 스팟 추적기: 끔</Korean>
             <Japanese>レーザー スポット トラッカー: オフ</Japanese>
             <Chinesesimp>激光点跟踪器: 关</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Laser_LSTOn">
-            <English>Laser Spot Tracker: On</English>
+            <English>Laser Spot Tracker: Enable</English>
             <French>Traqueur laser : activé</French>
-            <Spanish>Rastreador del Puntero Láser: On</Spanish>
+            <Spanish>Rastreador del Puntero Láser: Activar</Spanish>
             <Italian>Tracciamento Designazioni Laser: Attivato</Italian>
-            <Polish>Laserowe Śledzenie Punktu: Wł.</Polish>
+            <Polish>Laserowe Śledzenie Punktu: Włącz</Polish>
             <Portuguese>Rastreador a Laser: Ligado</Portuguese>
             <Russian>Лазерный точечный трекер: Включен</Russian>
-            <German>Laserziel Verfolgung: An</German>
+            <German>Laserziel Verfolgung: Aktivieren</German>
             <Korean>레이저 스팟 추적기: 켬</Korean>
             <Japanese>レーザー スポット トラッカー: オン</Japanese>
             <Chinesesimp>激光点跟踪器: 开</Chinesesimp>

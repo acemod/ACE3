@@ -51,8 +51,13 @@
 
     ["Tank", "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
 
-    // Wheeled_APC_F inherits from Car
-    [["Wheeled_Apc_F", "Car"] select GVAR(enableCarDamage), "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
+    // Wheeled_APC_F and gm_wheeled_APC_base inherits from Car
+    if (GVAR(enableCarDamage)) then {
+        ["Car", "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
+    } else {
+        ["Wheeled_Apc_F", "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
+        ["gm_wheeled_APC_base", "Init", LINKFUNC(addEventHandler), true, [], true] call CBA_fnc_addClassEventHandler;
+    };
 
     // Blow off turret effect
     // TODO: Add blowing-off-turret effect to vehicles that cook-off but aren't destroyed (no catastrophic explosion)

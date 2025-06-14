@@ -1096,9 +1096,10 @@
         <Key ID="STR_ACE_Arsenal_missingItems">
             <English>Missing items:\n%1</English>
             <French>Éléments manquants:\n%1</French>
+            <Spanish>Elementos que faltan:\n%1</Spanish>
             <Italian>Oggetti mancanti:\n%1</Italian>
-            <German>Fehlende Gegenstände:\n%1</German>
             <Russian>Недостающие предметы:\n%1</Russian>
+            <German>Fehlende Gegenstände:\n%1</German>
             <Korean>누락 아이템:\n%1</Korean>
             <Japanese>存在しないアイテム:\n%1</Japanese>
             <Chinesesimp>缺失物品:\n%1</Chinesesimp>
@@ -1780,6 +1781,7 @@
         <Key ID="STR_ACE_Arsenal_unavailableItems">
             <English>Unavailable items:\n%1</English>
             <French>Articles indisponibles:\n%1</French>
+            <Spanish>Artículos no disponibles:\n%1</Spanish>
             <Italian>Oggetti indisponibili:\n%1</Italian>
             <Russian>Недоступные предметы:\n%1</Russian>
             <German>Nicht verfügbare Gegenstände:\n%1</German>
@@ -1790,6 +1792,7 @@
         <Key ID="STR_ACE_Arsenal_unavailableItemsSetting">
             <English>Show missing / unavailable items</English>
             <French>Afficher les éléments manquants ou indisponibles</French>
+            <Spanish>Mostrar artículos que faltan / no disponibles</Spanish>
             <Italian>Mostra oggetti mancanti / indisponibili</Italian>
             <Russian>Показать отсутствующие / недоступные предметы</Russian>
             <German>Zeige fehlende oder nicht verfügbare Gegenstände</German>
@@ -1800,6 +1803,7 @@
         <Key ID="STR_ACE_Arsenal_unavailableItemsTooltip">
             <English>Show missing / unavailable items when hovering over a loadout</English>
             <French>Afficher les éléments manquants / indisponibles au survol d'un chargement</French>
+            <Spanish>Mostrar los elementos que faltan o no están disponibles al pasar el ratón por encima de un equipo</Spanish>
             <Italian>Mostra oggetti mancanti / indisponibili quando tieni il mouse su un equipaggiamento</Italian>
             <Russian>Показать отсутствующие / недоступные предметы при наведении курсора мыши на комплект</Russian>
             <German>Zeige fehlende oder nicht verfügbare Gegenstände, wenn der Mauszeiger über die Ausrüstung gehalten wird</German>

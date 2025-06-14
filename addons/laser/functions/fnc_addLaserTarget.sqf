@@ -43,6 +43,10 @@ if (_vehicle isKindOf "CAManBase") then {
             };
         } forEach (_vehicle weaponsTurret _turretPath);
     } forEach (allTurrets [_vehicle, true]);
+    if ((_vehicleSourceSelection == "") && hasPilotCamera _vehicle) then {
+        // must not be a turret, assume it is from the aircraft's PilotCamera
+        _vehicleSourceSelection = getText (configOf _vehicle >> "memoryPointDriverOptics");
+    };
 };
 
 private _methodArgs = [_vehicleSourceSelection];

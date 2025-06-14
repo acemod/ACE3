@@ -957,7 +957,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHitDuration_DisplayName">
             <English>Medical Peek Duration on Hit</English>
-            <French>Durée de l'aperçu des informations médicales lors d'une blessure</French>
+            <French>Durée de l'informations lors d'une blessure</French>
             <Spanish>Duración de Ojear la Información Médica cuando hay Impacto</Spanish>
             <Italian>Durata di info mediche quando colpito</Italian>
             <Polish>Czas trwania podglądu informacji medycznych po zranieniu</Polish>
@@ -983,7 +983,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_GUI_PeekMedicalOnHit_DisplayName">
             <English>Peek Medical Info on Hit</English>
-            <French>Aperçu des informations médicales lors d'une blessure</French>
+            <French>Aperçu de l'information lors d'une blessure</French>
             <Spanish>Ojear Información Médica en Impacto</Spanish>
             <Italian>Mostra info mediche se colpito</Italian>
             <Polish>Podgląd Informacji Medycznych po Zranieniu</Polish>
@@ -1594,9 +1594,10 @@
         <Key ID="STR_ACE_Medical_GUI_needToHolster">
             <English>You must holster your weapon first!</English>
             <French>Vous devez d'abord rengainer votre arme !</French>
+            <Spanish>Debes enfundar tu arma primero</Spanish>
             <Italian>Devi prima mettere l'arma nella fondina!</Italian>
-            <German>Du musst zuerst deine Waffe holstern!</German>
             <Russian>Сначала ты должен убрать свое оружие!</Russian>
+            <German>Du musst zuerst deine Waffe holstern!</German>
             <Korean>무기를 먼저 집어넣어야 합니다!</Korean>
             <Japanese>先に武器をしまう必要があります!</Japanese>
             <Chinesesimp>你必须先收起武器!</Chinesesimp>

@@ -26,6 +26,19 @@ class CfgVehicles {
         };
     };
 
+    class CUP_Hilux_Base;
+    class CUP_Hilux_MLRS_Base: CUP_Hilux_Base {
+        EGVAR(overpressure,noReflection) = 1;
+    };
+    class CUP_Hilux_UB32_Base: CUP_Hilux_Base {
+        EGVAR(overpressure,noReflection) = 1;
+    };
+
+    class CUP_Ural_BaseTurret;
+    class CUP_BM21_Base: CUP_Ural_BaseTurret {
+        EGVAR(overpressure,noReflection) = 1;
+    };
+
     class CUP_MTVR_Base;
     class CUP_MTVR_Reammo_Base: CUP_MTVR_Base {
         EGVAR(rearm,defaultSupply) = 1200;
@@ -179,6 +192,9 @@ class CfgVehicles {
     };
 
     class Tank_F;
+    class CUP_M270_HE_Base: Tank_F {
+        EGVAR(overpressure,noReflection) = 1;
+    };
     class CUP_AAV_Base: Tank_F {
         class EGVAR(interaction,anims) {
             class Hide_Bags_Deployment {
@@ -269,10 +285,6 @@ class CfgVehicles {
         ace_hunterkiller = 1;
     };
 
-    class CUP_M60A3_TTS_Base: Tank_F {
-        ace_hunterkiller = 1;
-    };
-
     class CUP_T55_Base: Tank_F {
         ace_hunterkiller = 1;
     };
@@ -311,9 +323,7 @@ class CfgVehicles {
         };
     };
 
-    class CUP_T72_ACR_Base: Tank_F {
-        ace_hunterkiller = 1;
-    };
+    class CUP_T72_ACR_Base: CUP_T72_Base {};
     class CUP_B_T72_CZ: CUP_T72_ACR_Base {
         EGVAR(vehicle_damage,eraHitpoints)[] = {
             "hitera_top_l1", "hitera_top_l2", "hitera_top_l3", "hitera_top_l4",
@@ -416,6 +426,15 @@ class CfgVehicles {
             "hitera_r06", "hitera_r07", "hitera_r08", "hitera_r09", "hitera_r10",
             "hitera_r11", "hitera_r12", "hitera_r13", "hitera_r14", "hitera_r15",
             "hitera_r16", "hitera_r17", "hitera_r18", "hitera_r19", "hitera_r20"
+        };
+    };
+    class Helicopter_Base_H;
+    class CUP_KA50_Base: Helicopter_Base_H {
+        class pilotCamera;
+    };
+    class CUP_KA50_Dynamic_Base: CUP_KA50_Base {
+        class pilotCamera: pilotCamera {
+            EGVAR(missileguidance,usePilotCameraForTargeting) = 1;
         };
     };
 };

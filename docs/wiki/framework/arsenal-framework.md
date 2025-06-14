@@ -573,7 +573,19 @@ The code will only have effect on clients where it is executed. It can placed in
 TAG_my_arsenal_blacklist = ["arifle_AK12_F", "LMG_03_F"]; // modify this
 
 ["ace_arsenal_displayOpened", {
-    [ace_arsenal_currentBox, TAG_my_arsenal_blacklist] call ace_arsenal_fnc_removeVirtualItems
+    // Use execNextFrame to ensure it applies to current opened arsenal
+    [{ call ace_arsenal_fnc_removeVirtualItems }, [ace_arsenal_currentBox, TAG_my_arsenal_blacklist]] call CBA_fnc_execNextFrame;
+}] call CBA_fnc_addEventHandler;
+```
+
+Alternatively you can use the following code to blacklist items for all arsenals at the creation of the arsenal, instead of when a player opens it. 
+
+```sqf
+TAG_my_arsenal_blacklist = ["arifle_AK12_F", "LMG_03_F"]; // modify this
+
+["ace_arsenal_boxInitialized", {
+	params ["_box"];
+	[_box, TAG_my_arsenal_blacklist] call ace_arsenal_fnc_removeVirtualItems;
 }] call CBA_fnc_addEventHandler;
 ```
 
