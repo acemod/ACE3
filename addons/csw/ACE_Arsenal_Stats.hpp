@@ -1,5 +1,5 @@
 class EGVAR(arsenal,stats) {
-    class statBase;
+    class statBase {};
     class GVAR(tripods): statBase {
         scope = 2;
         priority = -1.5;
