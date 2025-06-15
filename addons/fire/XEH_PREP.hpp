@@ -1,9 +1,11 @@
+PREP(addScreamSounds);
 PREP(burn);
 PREP(burnEffects);
 PREP(burnIndicator);
 PREP(burnReaction);
 PREP(burnSimulation);
 PREP(fireManagerPFH);
+PREP(getScreams);
 PREP(initUnit);
 PREP(isBurning);
 PREP(medical_canPatDown);
