@@ -71,6 +71,20 @@ GVAR(collectedActionPoints) = [];
 GVAR(foundActions) = [];
 GVAR(lastTimeSearchedActions) = -1000;
 
+// Selector positioning
+GVAR(SELECTOR_LIST_X) = 0.014;
+GVAR(SELECTOR_LIST_Y) = 0.014;
+GVAR(SELECTOR_LIST_W) = 0.05;
+GVAR(SELECTOR_LIST_H) = 0.035;
+GVAR(SELECTOR_RADIAL_X) = 0.0505;
+GVAR(SELECTOR_RADIAL_Y) = 0.0125;
+GVAR(SELECTOR_RADIAL_W) = 0.1;
+GVAR(SELECTOR_RADIAL_H) = 0.035;
+if (str (getResolution select 4) == "3.55556") then { // 32:9
+    GVAR(SELECTOR_LIST_X) = 0.012;
+    GVAR(SELECTOR_LIST_Y) = 0.0125;
+};
+
 // Init zeus menu
 [] call FUNC(compileMenuZeus);
 
