@@ -79,4 +79,4 @@ GVAR(home_background_apps) = [];
 
 } forEach (_apps select [_page, 15]);
 
-localNamespace setVariable [QGVAR(appSection),_appSection];
+uiNamespace setVariable [QGVAR(appSection),_appSection];

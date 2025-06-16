@@ -19,4 +19,4 @@ params ["_display"];
 
 systemChat "Group Management closed";
 // We simply clear out the app section
-ctrlDelete (localNamespace getVariable [QGVAR(appSection),controlNull]);
+ctrlDelete (uiNamespace getVariable [QGVAR(appSection),controlNull]);

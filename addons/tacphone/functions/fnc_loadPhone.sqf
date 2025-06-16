@@ -43,7 +43,7 @@ _background ctrlAddEventHandler ["Destroy",{
 
 // This will be the container, in which all apps content will be created. The phone itself has no control over its contents (besides deleting all of it)
 //#TODO Make this compatible with multiple phone displays
-private _existingDisplay = localNamespace getVariable [QGVAR(appSection),displayNull];
+private _existingDisplay = uiNamespace getVariable [QGVAR(appSection),displayNull];
 if !(isNull _existingDisplay) then { // Phone is already open, so close it
     _existingDisplay closeDisplay 1;
 };
@@ -52,7 +52,7 @@ private _appSection = _emptyDisplay ctrlCreate ["RscControlsGroupNoScrollbars", 
 _appSection ctrlSetPosition [(1-PHONE_WIDTH-0.0675)/2, (1-PHONE_HEIGHT)/2, PHONE_WIDTH+0.0675, PHONE_HEIGHT];
 _appSection ctrlCommit 0;
 
-localNamespace setVariable [QGVAR(appSection),_appSection];
+uiNamespace setVariable [QGVAR(appSection),_appSection];
 
 //GVAR(app_selected) = "";
 private _app = "";
@@ -61,6 +61,8 @@ if (isNil QGVAR(app_selected) || {GVAR(app_selected) isEqualTo ""}) then {
 } else {
     _app = GVAR(app_selected)
 };
+
+uiNamespace setVariable [QGVAR(display),_emptyDisplay];
 
 // Switch to Homescreen, which is the default app
 [_emptyDisplay, _app] call FUNC(switchToApp);
