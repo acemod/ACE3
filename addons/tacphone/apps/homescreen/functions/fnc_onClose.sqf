@@ -22,4 +22,4 @@ systemChat "Homescreen closed";
 //#TODO when "Back to previous app" functionality is implemented, we want to just ctrlShow hide the appsection, then in createApp we can re-show the existing control
 
 // We simply clear out the app section
-ctrlDelete GVAR(appsection);
+ctrlDelete (localNamespace getVariable [QGVAR(appSection),controlNull]);

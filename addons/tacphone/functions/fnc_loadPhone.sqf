@@ -15,14 +15,6 @@
  * Public: No
  */
 
-/*
-
-
-This is absolutely not even slightly feature complete nor organised.
-
-
-*/
-
 private _emptyDisplay = createDialog ["RscDisplayEmpty", true];
 private _background = _emptyDisplay ctrlCreate ["RscPicture", -1];
 
@@ -46,14 +38,19 @@ _background ctrlAddEventHandler ["Destroy",{
     private _function = getText (_appCfg >> QGVAR(onClose));
     private _code = missionNamespace getVariable [_function, ""];
     if (_code isEqualTo "") exitWith {};
-    [ctrlParent GVAR(appsection), GVAR(appsection)] call _code;
+    [ctrlParent _appsection, _appsection] call _code;
 }];
 
 // This will be the container, in which all apps content will be created. The phone itself has no control over its contents (besides deleting all of it)
-//#TODO this should not be a global variable, for one it doesn't serialize in missionNamespace, second it prevents us from having multiple phone displays open at the same time
-GVAR(appsection) = _emptyDisplay ctrlCreate ["RscControlsGroupNoScrollbars", -1];
-GVAR(appsection) ctrlSetPosition [(1-PHONE_WIDTH-0.0675)/2, (1-PHONE_HEIGHT)/2, PHONE_WIDTH+0.0675, PHONE_HEIGHT];
-GVAR(appsection) ctrlCommit 0;
+//#TODO Make this compatible with multiple phone displays
+private _existingDisplay = localNamespace getVariable [QGVAR(appSection),displayNull];
+if !(isNull _existingDisplay) then { // Phone is already open, so close it
+    _existingDisplay closeDisplay 1;
+};
+
+private _appSection = _emptyDisplay ctrlCreate ["RscControlsGroupNoScrollbars", -1];
+_appSection ctrlSetPosition [(1-PHONE_WIDTH-0.0675)/2, (1-PHONE_HEIGHT)/2, PHONE_WIDTH+0.0675, PHONE_HEIGHT];
+_appSection ctrlCommit 0;
 
 //#TODO remember app that was last opened when phone was closed
 
