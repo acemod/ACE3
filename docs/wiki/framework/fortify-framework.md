@@ -28,7 +28,7 @@ If the Fortify module is present in the mission, server admins can use chat comm
 - `#ace-fortify west medium` registers the "medium" preset for the west side with no budget
 - `#ace-fortify o big` registers the "big" preset for the east side with no budget
 
-## 1.2 Adding custom presets
+### 1.2 Adding custom presets
 
 There are three ways of adding custom presets to your mission, either via code, through desciption.ext or through config.
 
@@ -75,7 +75,7 @@ class ACEX_Fortify_Presets {
 
 Then you will have to set the mission preset to `TAG_MyPreset` by either using the Fortify editor module or the chat command: `#ace-fortify blufor TAG_MyPreset`.
 
-## 1.3 Adding custom deploy handlers
+### 1.3 Adding custom deploy handlers
 
 A custom deploy handler allows missions makers to decide if an object can be placed or not.
 
@@ -89,7 +89,7 @@ To verify that an object isn't above a certain terrain height we can check the h
 }] call ace_fortify_fnc_addDeployHandler;
 ```
 
-## 1.4 Updating budget
+### 1.4 Updating budget
 
 The Fortify budget can be updated for any side using the function.
 
@@ -107,6 +107,17 @@ The Fortify budget can be updated for any side using the function.
 * Example:
 * [west, -250, false] call ace_fortify_fnc_updateBudget
 ```
+
+### 1.5 Limiting build locations
+
+Fortify can be limited to on specific areas.
+Push locations to `ace_fortify_locations`.
+Can be any of the area types supported by [inArea](hhttps://community.bistudio.com/wiki/inArea) (either syntax)
+```sqf
+ace_fortify_locations pushBack "myMarker"; // a marker string name
+ace_fortify_locations pushBack [myVehicle, 50, 50, 0, false]; // 50m radius around a moveable vehicle
+```
+
 
 ## 2. Config Values
 
