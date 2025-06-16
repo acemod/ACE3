@@ -29,4 +29,4 @@ _appsection ctrlCommit 0;
 
 */
 
-localNamespace setVariable [QGVAR(appSection),_appSection];
+uiNamespace setVariable [QGVAR(appSection),_appSection];

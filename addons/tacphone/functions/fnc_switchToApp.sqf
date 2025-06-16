@@ -29,7 +29,7 @@ private _getAppConfig = {
 
 private _newAppCfg = _classname call _getAppConfig;
 
-private _appSection = localNamespace getVariable [QGVAR(appSection),displayNull];
+private _appSection = uiNamespace getVariable [QGVAR(appSection),displayNull];
 
 // First close the currently open app
 if (GVAR(app_selected) != "") then {

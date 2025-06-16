@@ -45,4 +45,4 @@ _map ctrlAddEventHandler ["MouseButtonDblClick", {
     */
 }];
 
-localNamespace setVariable [QGVAR(appSection),_appSection];
+uiNamespace setVariable [QGVAR(appSection),_appSection];
