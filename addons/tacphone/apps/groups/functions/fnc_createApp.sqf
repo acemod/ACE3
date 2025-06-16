@@ -19,12 +19,14 @@ params ["_display", "_appSection"];
 
 private _fullSize = [0, 0, (ctrlPosition _appSection)#2, (ctrlPosition _appSection)#3];
 
-GVAR(appsection) = _display ctrlCreate ["RscControlsGroupNoScrollbars", -1, _appSection];
-GVAR(appsection) ctrlSetPosition _fullSize;
-GVAR(appsection) ctrlCommit 0;
+_appsection = _display ctrlCreate ["RscControlsGroupNoScrollbars", -1, _appSection];
+_appsection ctrlSetPosition _fullSize;
+_appsection ctrlCommit 0;
 
 /*
 
     Do some stuff here
 
 */
+
+localNamespace setVariable [QGVAR(appSection),_appSection];

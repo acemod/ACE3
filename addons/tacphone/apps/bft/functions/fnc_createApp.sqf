@@ -18,13 +18,13 @@
 params ["_display", "_appSection"];
 
 private _fullSize = [0, 0, (ctrlPosition _appSection)#2, (ctrlPosition _appSection)#3];
+systemChat Q_appsection;
+_appsection = _display ctrlCreate ["RscControlsGroupNoScrollbars", -1, _appSection];
+_appsection ctrlSetPosition _fullSize;
+_appsection ctrlCommit 0;
 
-GVAR(appsection) = _display ctrlCreate ["RscControlsGroupNoScrollbars", -1, _appSection];
-GVAR(appsection) ctrlSetPosition _fullSize;
-GVAR(appsection) ctrlCommit 0;
-
-_map = _display ctrlCreate [QEGVAR(tacphone,mapControl), -1, GVAR(appsection)];
-_map ctrlMapSetPosition [0, 0, (ctrlPosition GVAR(appsection))#2, (ctrlPosition GVAR(appsection))#3]; 
+_map = _display ctrlCreate [QEGVAR(tacphone,mapControl), -1, _appsection];
+_map ctrlMapSetPosition [0, 0, (ctrlPosition _appsection)#2, (ctrlPosition _appsection)#3]; 
 _map ctrlCommit 0;
 private _plrPos = _map ctrlMapWorldToScreen position player;
 
@@ -44,3 +44,5 @@ _map ctrlAddEventHandler ["MouseButtonDblClick", {
         Create map marker menu. Should be separate function.
     */
 }];
+
+localNamespace setVariable [QGVAR(appSection),_appSection];

@@ -19,4 +19,4 @@ params ["_display"];
 
 systemChat "BFT closed";
 // We simply clear out the app section
-ctrlDelete GVAR(appsection);
+ctrlDelete (localNamespace getVariable [QGVAR(appSection),controlNull]);

@@ -19,11 +19,11 @@ params ["_display", "_appSection"];
 
 private _fullSize = [0, 0, (ctrlPosition _appSection)#2, (ctrlPosition _appSection)#3];
 
-GVAR(appsection) = _display ctrlCreate ["RscControlsGroupNoScrollbars", -1, _appSection];
-GVAR(appsection) ctrlSetPosition _fullSize;
-GVAR(appsection) ctrlCommit 0;
+private _appsection = _display ctrlCreate ["RscControlsGroupNoScrollbars", -1, _appSection];
+_appsection ctrlSetPosition _fullSize;
+_appsection ctrlCommit 0;
 
-private _background = _display ctrlCreate ["RscPicture", -1, GVAR(appsection)];
+private _background = _display ctrlCreate ["RscPicture", -1, _appsection];
 _background ctrlSetPosition _fullSize;
 _background ctrlSetText /*"#(rgb,1,1,1)color(0.1,0.1,0.1,1)"*/ QPATHTOF(data\background_banana.paa);
 _background ctrlCommit 0;
@@ -47,8 +47,8 @@ GVAR(home_background_apps) = [];
     private _column = _forEachIndex mod _columns;
     private _row = floor (_forEachIndex/_columns);    
         
-    private _app = _display ctrlCreate ["RscActivePicture", -1, GVAR(appsection)];
-    private _appLabel = _display ctrlCreate ["RscText", -1, GVAR(appsection)];
+    private _app = _display ctrlCreate ["RscActivePicture", -1, _appsection];
+    private _appLabel = _display ctrlCreate ["RscText", -1, _appsection];
     
     GVAR(home_background_apps) pushBack [_app,_appLabel];
     
@@ -78,3 +78,5 @@ GVAR(home_background_apps) = [];
     _appLabel ctrlCommit 0;
 
 } forEach (_apps select [_page, 15]);
+
+localNamespace setVariable [QGVAR(appSection),_appSection];

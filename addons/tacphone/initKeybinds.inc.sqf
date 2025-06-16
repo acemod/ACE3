@@ -1,6 +1,7 @@
 [["ACE3 Equipment",LLSTRING(tacphoneCategory)], QGVAR(openPhoneKey), LLSTRING(openPhoneKey),
 {
-    if ("ACE_Tacphone" in items ace_player) then {
+    //#TODO Migrate this to canopen fnc
+    if (("ACE_Tacphone" in items ace_player) && (isNull (localNamespace getVariable [QGVAR(appSection),displayNull]))) then {
         call FUNC(loadphone)
     };
 },
