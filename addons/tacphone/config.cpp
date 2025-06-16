@@ -17,3 +17,4 @@ class CfgPatches {
 #include "ace_tacphone_apps.hpp"
 #include "CfgEventHandlers.hpp"
 #include "gui.hpp"
+#include "CfgWeapons.hpp"
