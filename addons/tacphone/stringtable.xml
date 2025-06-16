@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project name="ACE">
     <Package name="Tacphone"></Package>
+        <Key ID="STR_ACE_Tacphone_tacphoneDisplayName">
+            <English>Tacphone</English>
+        </Key>
+        <Key ID="STR_ACE_Tacphone_tacphoneDescr">
+            <English>An End-User Device created by Banana Industries</English>
+        </Key>
 </Project>
