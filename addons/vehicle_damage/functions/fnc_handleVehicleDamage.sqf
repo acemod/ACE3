@@ -7,7 +7,7 @@
  * 0: Vehicle <OBJECT>
  * 1: Hit point <STRING>
  * 2: Hit index <NUMBER>
- * 3: Selection <STIRNG>
+ * 3: Selection <STRING>
  * 4: Added damage to part <NUMBER>
  * 5: Projectile <OBJECT>
  * 6: Source of damage <OBJECT>

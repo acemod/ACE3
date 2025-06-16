@@ -15,10 +15,10 @@
  *   2: Z <NUMBER>
  *
  * Return Value:
- * 0: Minimal X <NUMMBER>
- * 1: Minimal Y <NUMMBER>
- * 2: Maximal X <NUMMBER>
- * 3: Maximal Y <NUMMBER>
+ * 0: Minimal X <NUMBER>
+ * 1: Minimal Y <NUMBER>
+ * 2: Maximal X <NUMBER>
+ * 3: Maximal Y <NUMBER>
  *
  * Example:
  * [bob, [5, 5, 5], [6, 6, 6]] call ace_common_fnc_worldToScreenBounds

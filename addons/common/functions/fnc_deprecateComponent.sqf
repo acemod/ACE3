@@ -4,12 +4,12 @@
  * Mark a component as deprecated and switches it to a new component if that is available
  *
  * Arguments:
- * 0: Component <Array>
- * 1: New component <Array>
- * 2: Version when the compent will be removed <String>
+ * 0: Component <ARRAY>
+ * 1: New component <ARRAY>
+ * 2: Version when the component will be removed <STRING>
  *
  * Return Value:
- * Replaced by new component <Boolean>
+ * Replaced by new component <BOOL>
  *
  * Public: No
  *

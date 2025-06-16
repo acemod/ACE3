@@ -20,7 +20,7 @@ private _cfgWeapons = configFile >> "CfgWeapons";
 private _cfgMagazines = configFile >> "CfgMagazines";
 
 private _fnc_isFieldRationItem = toString {
-    (getNumber (_x >> "ACE_isFieldRationItem") isEqualTo 1) || {(getNumber (_x >> QXGVAR(thirstQuenched))) > 0} || {(getNumber (_x >> QXGVAR(hungerSatiated))) > 0} || {(getText (_x >> QXGVAR(refillItem))) isNotEqualTo ""}
+    (getNumber (_x >> "ACE_isFieldRationItem") isEqualTo 1) || {(getNumber (_x >> QXGVAR(thirstQuenched))) != 0} || {(getNumber (_x >> QXGVAR(hungerSatiated))) != 0} || {(getText (_x >> QXGVAR(refillItem))) isNotEqualTo ""}
 };
 
 {
