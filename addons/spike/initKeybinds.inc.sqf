@@ -1,3 +1,5 @@
+#include "\a3\ui_f\hpp\defineDIKCodes.inc"
+
 ["ACE3 Weapons", QGVAR(Designate), LLSTRING(Designate),
 {
     [SPIKE_KEY_DESIGNATE, true] call FUNC(keyDown);
@@ -5,7 +7,7 @@
 {
     [SPIKE_KEY_DESIGNATE, false] call FUNC(keyDown);
 },
-[15, [false, false, false]], false] call CBA_fnc_addKeybind;  // Tab
+[DIK_TAB, [false, false, false]], false] call CBA_fnc_addKeybind;  // Tab
 
 ["ACE3 Weapons", QGVAR(LeaveCamera), LLSTRING(LeaveCamera),
 {
@@ -14,7 +16,7 @@
 {
     [SPIKE_KEY_LEAVE, false] call FUNC(keyDown);
 },
-[15, [false, true, false]], false] call CBA_fnc_addKeybind;  // Ctrl+Tab
+[DIK_TAB, [false, true, false]], false] call CBA_fnc_addKeybind;  // Ctrl+Tab
 
 ["up", {
     [CAMERA_KEY_UP, true] call FUNC(keyDown);
@@ -51,7 +53,7 @@
 {
     [CAMERA_KEY_CHANGE_VISION_MODE, false] call FUNC(keyDown);
 },
-[49, [false, false, false]], false] call CBA_fnc_addKeybind;  //N
+[DIK_N, [false, false, false]], false] call CBA_fnc_addKeybind;  //N
 
 ["ACE3 Weapons", QGVAR(ZoomIn), LLSTRING(ZoomIn),
 {
@@ -60,7 +62,7 @@
 {
     [CAMERA_KEY_ZOOM_IN, false] call FUNC(keyDown);
 },
-[78, [false, false, false]], false] call CBA_fnc_addKeybind;  //Keypad+
+[DIK_ADD, [false, false, false]], false] call CBA_fnc_addKeybind;  //Keypad+
 
 ["ACE3 Weapons", QGVAR(ZoomOut), LLSTRING(ZoomOut),
 {
@@ -69,4 +71,4 @@
 {
     [CAMERA_KEY_ZOOM_OUT, false] call FUNC(keyDown);
 },
-[74, [false, false, false]], false] call CBA_fnc_addKeybind;  //Keypad-
+[DIK_SUBTRACT, [false, false, false]], false] call CBA_fnc_addKeybind;  //Keypad-

@@ -14,6 +14,7 @@
  *
  * Public: No
  */
+
 params ["_firedEH"];
 _firedEH params ["_shooter","_weapon","","_mode","_ammo","","_projectile"];
 

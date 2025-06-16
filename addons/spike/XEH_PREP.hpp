@@ -10,11 +10,11 @@ PREP(camera_switchTo);
 PREP(camera_update);
 PREP(camera_updateTargetingGate);
 PREP(camera_userInCamera);
+PREP(getTargetPosition);
 PREP(keyDown);
+PREP(mapHelperDraw);
+PREP(midCourseTransition);
+PREP(navigation);
 PREP(onFired);
 PREP(seeker);
-PREP(navigation);
-PREP(midCourseTransition);
-PREP(mapHelperDraw);
-PREP(getTargetPosition);
 

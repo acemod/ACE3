@@ -1,9 +1,9 @@
-class ace_missileguidance_SeekerTypes {
+class EGVAR(missileguidance,SeekerTypes) {
     class SPIKE {
         functionName = QFUNC(seeker);
     };
 };
-class ace_missileguidance_NavigationTypes {
+class EGVAR(missileguidance,NavigationTypes) {
     class SPIKE {
         functionName = QFUNC(navigation);
         onFired = "";
