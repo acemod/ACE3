@@ -52,9 +52,15 @@ private _appSection = _emptyDisplay ctrlCreate ["RscControlsGroupNoScrollbars", 
 _appSection ctrlSetPosition [(1-PHONE_WIDTH-0.0675)/2, (1-PHONE_HEIGHT)/2, PHONE_WIDTH+0.0675, PHONE_HEIGHT];
 _appSection ctrlCommit 0;
 
-//#TODO remember app that was last opened when phone was closed
+localNamespace setVariable [QGVAR(appSection),_appSection];
 
-GVAR(app_selected) = "";
+//GVAR(app_selected) = "";
+private _app = "";
+if (isNil QGVAR(app_selected) || {GVAR(app_selected) isEqualTo ""}) then {
+    _app = "Homescreen";
+} else {
+    _app = GVAR(app_selected)
+};
 
 // Switch to Homescreen, which is the default app
-[_emptyDisplay, "Homescreen"] call FUNC(switchToApp);
+[_emptyDisplay, _app] call FUNC(switchToApp);
