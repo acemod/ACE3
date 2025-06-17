@@ -29,7 +29,7 @@ if (isNull _vehicle) then {
 
 [
     [LLSTRING(weaponZeroSetTo)],
-    [format ["%1 %2", str _currentZero, LLSTRING(meters)]],
+    [format ["%1 %2", _currentZero toFixed 0, LLSTRING(meters)]],
     true
 ] call CBA_fnc_notify;
 
