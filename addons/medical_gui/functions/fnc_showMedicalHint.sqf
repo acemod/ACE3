@@ -35,4 +35,4 @@ if (GVAR(medicalHintMedicIcon) != "" && {_medic call EFUNC(medical_treatment,isM
     };
 };
 
-[QEGVAR(common,displayTextPicture), [_message, _image], _patient] call CBA_fnc_targetEvent;
+[QEGVAR(common,displayTextPicture), [_message, _image, [1, 1, 1], _patient], _patient] call CBA_fnc_targetEvent;
