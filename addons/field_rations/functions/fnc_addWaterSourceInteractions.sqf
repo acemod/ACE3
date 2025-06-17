@@ -81,4 +81,4 @@ TRACE_1("Starting interact PFH",_interactionType);
         };
     };
     END_COUNTER(interactEH);
-}, 0.5, [getPosASL ACE_player vectorAdd [-100, 0, 0], [], []]] call CBA_fnc_addPerFrameHandler;
+}, 0.5, [[0, 0, -100], [], []]] call CBA_fnc_addPerFrameHandler;

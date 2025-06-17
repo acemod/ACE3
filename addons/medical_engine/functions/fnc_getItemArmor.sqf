@@ -8,7 +8,7 @@
  * 1: Hitpoint <STRING>
  *
  * Return Value:
- * Regular and scaled item armor for the given hitpoint <ARRAY of NUMBER>
+ * Regular and scaled item armor for the given hitpoint <ARRAY of NUMBERs>
  *
  * Example:
  * ["V_PlateCarrier_rgr", "HitChest"] call ace_medical_engine_fnc_getItemArmor

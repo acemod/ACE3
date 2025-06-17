@@ -9,8 +9,8 @@
  * 1: Get raw count (true) or effect ratio (false) <BOOL> (default: true)
  *
  * Return Value:
- * Array of medication counts <ARRAY of ARRAY>:
- *   0: Medication Name <String>
+ * Array of medication counts <ARRAY of ARRAYs>:
+ *   0: Medication Name <STRING>
  *   1: Dose Count <NUMBER>
  *   2: Medication effectiveness (0-1) <NUMBER>
  *
