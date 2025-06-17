@@ -23,7 +23,7 @@
         if (isNull _projectile) then {
             _interceptors deleteAt _forEachIndex;
             if !(isNull _target) then {
-                (_system getOrDefault ["targets_tracking", []]) pushBack _target;
+                (_y getOrDefault ["targets_tracking", []]) pushBack _target;
                 TRACE_2("Interceptor no longer exists",_projectile,_target);
             };
             continue;
@@ -58,7 +58,7 @@
                 private _explosion = createVehicle ["SmallSecondary", _target, [], 0, "CAN_COLLIDE"];
                 [QGVAR(destroyProjectile), [_target]] call CBA_fnc_globalEvent;
             } else {
-                (_system getOrDefault ["targets_tracking", []]) pushBack _target;
+                (_y getOrDefault ["targets_tracking", []]) pushBack _target;
                 TRACE_2("Interceptor failed to intercept target",_projectile,_target);
             };
         };

@@ -6,16 +6,18 @@ ADDON = false;
 
 GVAR(projectilesToIntercept) = [];
 
+#define SIM_TYPES ["shotMissile", "shotShell", "shotRocket"]
+
 {
     private _simulation = getText (_x >> "simulation");
-    if (_simulation isEqualTo "shotMissile" || _simulation isEqualTo "shotShell") then {
+    if (_simulation in SIM_TYPES) then {
         GVAR(projectilesToIntercept) pushBack configName _x;
     };
     private _submunition = getText (_x >> "submunitionAmmo");
     if (_submunition != "") then {
         private _submunitionConfig = configFile >> "CfgAmmo" >> _submunition;
         private _simulation = getText (_submunitionConfig >> "simulation");
-        if (_simulation isEqualTo "shotMissile" || _simulation isEqualTo "shotShell") then {
+        if (_simulation in SIM_TYPES) then {
             GVAR(projectilesToIntercept) pushBack configName _x;
         };
     };
