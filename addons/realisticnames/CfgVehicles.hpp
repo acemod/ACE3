@@ -357,7 +357,8 @@ class CfgVehicles {
     class B_Heli_Attack_01_dynamicLoadout_F: Heli_Attack_01_dynamicLoadout_base_F {
         displayName = CSTRING(Heli_Attack_01_Name);
     };
-    class B_Heli_Attack_01_pylons_dynamicLoadout_F: B_Heli_Attack_01_dynamicLoadout_F {
+    class Heli_Attack_01_pylons_dynamicLoadout_base_F: Heli_Attack_01_dynamicLoadout_base_F {};
+    class B_Heli_Attack_01_pylons_dynamicLoadout_F: Heli_Attack_01_pylons_dynamicLoadout_base_F {
         displayName = CSTRING(Heli_Attack_01_pylons_Name);
     };
 
