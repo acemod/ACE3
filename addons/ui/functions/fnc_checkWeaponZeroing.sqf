@@ -23,8 +23,8 @@ private _currentZero = -1;
 if (isNull _vehicle) then {
     _currentZero = currentZeroing _unit;
 } else {
-    // In Arma3 v2.20 this will return the zero set by vehicle laser rangefinders
-    _currentZero = (_vehicle currentZeroing [_vehicle currentWeaponTurret (_vehicle unitTurret _unit), currentMuzzle _unit]) select 0;
+    // This will return the zero set by vehicle laser rangefinders
+    _currentZero = (_unit currentZeroing [_vehicle currentWeaponTurret (_vehicle unitTurret _unit), currentMuzzle _unit]) param [0, 0];
 };
 
 [
