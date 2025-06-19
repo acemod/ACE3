@@ -735,12 +735,15 @@
         </Key>
         <Key ID="STR_ACE_UI_checkWeaponZeroing">
             <English>Check Weapon Zeroing</English>
+            <Japanese>武器のゼロインを確認</Japanese>
         </Key>
         <Key ID="STR_ACE_UI_weaponZeroSetTo">
             <English>Zero is set to:</English>
+            <Japanese>ゼロインの設定値:</Japanese>
         </Key>
         <Key ID="STR_ACE_UI_meters">
             <English>Meters</English>
+            <Japanese>メートル</Japanese>
         </Key>
     </Package>
 </Project>
