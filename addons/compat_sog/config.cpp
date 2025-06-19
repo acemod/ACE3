@@ -47,6 +47,7 @@ class CfgPatches {
 class CBA_Extended_EventHandlers;
 
 #include "ACE_CSW_Groups.hpp"
+#include "ACE_Medical_Injuries.hpp"
 #include "ACE_Triggers.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgEventHandlers.hpp"

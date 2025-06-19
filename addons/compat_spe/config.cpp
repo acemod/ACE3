@@ -27,6 +27,7 @@ class CfgPatches {
     };
 };
 
+#include "ACE_Medical_Injuries.hpp"
 #include "CfgAmmo.hpp"
 #include "CfgEventHandlers.hpp"
 #include "CfgGlasses.hpp"
