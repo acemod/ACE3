@@ -3,39 +3,51 @@
     <Package name="SPIKE">
         <Key ID="STR_ACE_SPIKE_Camera_ViewModeCycle">
             <English>Cycle Camera Vision Mode</English>
+            <Japanese>カメラの映像モードを切り替え</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_LR">
             <English>Spike LR</English>
+            <Japanese>スパイク LR</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_LR_Short">
             <English>LR</English>
+            <Japanese>LR</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_LeaveCamera">
             <English>Leave Camera</English>
+            <Japanese>カメラから離れる</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_Manual">
             <English>MANUAL</English>
+            <Japanese>マニュアル</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanDown">
             <English>Pan Camera Down</English>
+            <Japanese>カメラを下に向ける</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanLeft">
             <English>Pan Camera Left</English>
+            <Japanese>カメラを左に向ける</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanRight">
             <English>Pan Camera Right</English>
+            <Japanese>カメラを右に向ける</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanUp">
             <English>Pan Camera Up</English>
+            <Japanese>カメラを上に向ける</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_ZoomIn">
             <English>Zoom Camera In</English>
+            <Japanese>カメラをズームイン</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_ZoomOut">
             <English>Zoom Camera Out</English>
+            <Japanese>カメラをズームアウト</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_designate">
             <English>Designate</English>
+            <Japanese>目標を指定</Japanese>
         </Key>
     </Package>
 </Project>
