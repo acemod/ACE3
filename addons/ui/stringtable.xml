@@ -709,6 +709,10 @@
             <Chinesesimp>归零距离</Chinesesimp>
             <Turkish>Sıfırlama</Turkish>
         </Key>
+        <Key ID="STR_ACE_UI_checkWeaponZeroing">
+            <English>Check Weapon Zeroing</English>
+            <Japanese>武器のゼロインを確認</Japanese>
+        </Key>
         <Key ID="STR_ACE_UI_devWatermark">
             <English>Development Build Watermark</English>
             <French>Filigrane version de développement</French>
@@ -733,17 +737,13 @@
             <Japanese>全てのUIを隠す</Japanese>
             <Chinesesimp>隐藏所有UI</Chinesesimp>
         </Key>
-        <Key ID="STR_ACE_UI_checkWeaponZeroing">
-            <English>Check Weapon Zeroing</English>
-            <Japanese>武器のゼロインを確認</Japanese>
+        <Key ID="STR_ACE_UI_meters">
+            <English>Meters</English>
+            <Japanese>メートル</Japanese>
         </Key>
         <Key ID="STR_ACE_UI_weaponZeroSetTo">
             <English>Zero is set to:</English>
             <Japanese>ゼロインの設定値:</Japanese>
-        </Key>
-        <Key ID="STR_ACE_UI_meters">
-            <English>Meters</English>
-            <Japanese>メートル</Japanese>
         </Key>
     </Package>
 </Project>
