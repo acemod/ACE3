@@ -13,6 +13,7 @@
 
 class RscText;
 class RscControlsGroup;
+class RscControlsGroupNoScrollbars;
 class RscMapControl;
 
 class RscInGameUI {
@@ -27,7 +28,7 @@ class RscInGameUI {
     };
     class Rsc_ACE_Helo_UI_Turret: RscUnitInfo { // RscOptics_Heli_Attack_01_gunner
         onLoad = "[""onLoad"",_this,""RscUnitInfo"",'IGUI'] call    (uiNamespace getvariable 'BIS_fnc_initDisplay'); uiNamespace setVariable ['ACE_dlgRangefinder', _this select 0]; ((_this select 0) displayCtrl 151) ctrlSetTextColor [0, 0, 0, 0];";
-        class CA_IGUI_elements_group: RscControlsGroup {
+        class CA_IGUI_elements_group: RscControlsGroupNoScrollbars {
             class controls {
                 MACRO_RANGEFINDER
             };
