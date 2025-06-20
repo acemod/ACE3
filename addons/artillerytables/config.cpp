@@ -25,11 +25,9 @@ class RscText;
 class RscListBox;
 class RscListNBox;
 class RscPicture;
-class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
 class ScrollBar;
 class RscActiveText;
-class RscStructuredText;
 class ctrlButton;
 
 #include "RscTitles.hpp"
