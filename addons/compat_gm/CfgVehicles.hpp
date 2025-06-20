@@ -676,9 +676,7 @@ class CfgVehicles {
     // H E L I C O P T E R S
 
     class Helicopter_Base_F;
-    class Helicopter_Base_H: Helicopter_Base_F {
-        class EventHandlers;
-    };
+    class Helicopter_Base_H: Helicopter_Base_F {};
     class gm_helicopter_base: Helicopter_Base_H {};
 
     // WEST
