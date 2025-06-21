@@ -15,21 +15,32 @@
  *
  * Public: No
  */
+#define SCALOS_DIR_WEAPON 0
+#define SCALOS_DIR_ANIM 1
+#define SCALOS_DIR_PILOTCAM 2
+#define SCALOS_DIR_TURRETDIR 3
+
 params ["", "_args"];
 _args params ["_firedEH", "", "", "_seekerParams", "_stateParams", "_targetData"];
 _firedEH params ["_shooter","_weapon","","","","","_projectile"];
 _seekerParams params ["_seekerAngle"];
 _stateParams params ["", "_seekerStateParams"];
-_seekerStateParams params ["_memoryPointGunnerOptics", "_animationSourceBody", "_animationSourceGun", "_usePilotCamera"];
+_seekerStateParams params ["_memoryPointGunnerOptics", "_animationSourceBody", "_animationSourceGun", "_dirMode", "_turretPath"];
 
 private _shooterPos = AGLToASL (_shooter modelToWorldVisual (_shooter selectionPosition _memoryPointGunnerOptics));
 private _projPos = getPosASL _projectile;
 
-private _lookDirection = if (_shooter isKindOf "CAManBase" || {_shooter isKindOf "StaticWeapon"}) then {
-    _shooterPos = eyePos _shooter;
-    _shooter weaponDirection _weapon
-} else {
-    private _finalLookDirection = if (_usePilotCamera) then {
+private _lookDirection = switch (_dirMode) do {
+    case SCALOS_DIR_WEAPON: { // Player/StaticWeapon
+        _shooterPos = eyePos _shooter;
+        _shooter weaponDirection _weapon
+    };
+    case SCALOS_DIR_ANIM: { // use animationSourcePhase
+        private _gBody = -deg(_shooter animationSourcePhase _animationSourceBody);
+        private _gGun = deg(_shooter animationSourcePhase _animationSourceGun);
+        _shooter vectorModelToWorldVisual ([1, _gBody, _gGun] call CBA_fnc_polar2vect);
+    };
+    case SCALOS_DIR_PILOTCAM: { // pilotCamera
         _shooterPos = _shooter modelToWorldVisualWorld getPilotCameraPosition _shooter;
         private _trackingTarget = getPilotCameraTarget _shooter;
         _trackingTarget params ["_isTracking", "_trackingPos"];
@@ -39,13 +50,11 @@ private _lookDirection = if (_shooter isKindOf "CAManBase" || {_shooter isKindOf
         } else {
             _shooter vectorModelToWorldVisual getPilotCameraDirection _shooter;
         };
-    } else {
-        // use animationSourcePhase
-        private _gBody = -deg(_shooter animationSourcePhase _animationSourceBody);
-        private _gGun = deg(_shooter animationSourcePhase _animationSourceGun);
-        _shooter vectorModelToWorldVisual ([1, _gBody, _gGun] call CBA_fnc_polar2vect);
     };
-    _finalLookDirection
+    case SCALOS_DIR_TURRETDIR: { // Sub turret
+        ([_shooter, _turretPath] call CBA_fnc_turretDir) params ["_az", "_el"];
+        [1, _az, _el] call CBA_fnc_polar2vect;
+    }
 };
 
 private _distanceToProj = _shooterPos vectorDistance _projPos;
