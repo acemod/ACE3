@@ -96,13 +96,13 @@ if (accTime > 0 && !isGamePaused) then {
             // further away targets are filtered out by assumption that target cant move instantenously
             private _chanceToDecoy = 1 - (_trackingTarget distance _x) / (_flareDistanceFilter * _frontAspectMultiplier);
             if !(_foundDecoy) then {
-                if (_angleBetweenVelocities <= _flareAngleFilter) then {
-                        _considering = true;
-                        if (_seekerAccuracy <= random _chanceToDecoy) then {
-                            _trackingTarget = _x;
-                            _foundDecoy = true;
-                        };
+                if (_angleBetweenVelocities <= (_flareAngleFilter * GVAR(flareAngleCoef))) then {
+                    _considering = true;
+                    if (_seekerAccuracy <= (random _chanceToDecoy * GVAR(flareEffectivenessCoef))) then {
+                        _trackingTarget = _x;
+                        _foundDecoy = true;
                     };
+                };
             };
 
             if (GVAR(debug_drawGuidanceInfo)) then {
@@ -120,7 +120,6 @@ if (accTime > 0 && !isGamePaused) then {
     } forEach _nearby;
 
     _seekerStateParams set [2, _trackingTarget];
-    
 };
 
 private _targetPosition = _trackingTarget modelToWorldVisualWorld getCenterOfMass _trackingTarget;

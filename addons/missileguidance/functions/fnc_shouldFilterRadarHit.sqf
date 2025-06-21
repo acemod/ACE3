@@ -87,7 +87,7 @@ if !(_maskedByGround) exitWith {
         private _considering = false;
         if !(_foundDecoy) then {
             _considering = true;
-            if (0.95 <= random 1) then {
+            if (0.95 <= (random 1 * GVAR(chaffEffectivenessCoef))) then {
                 _foundDecoy = true;
             };
         };
