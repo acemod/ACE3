@@ -22,8 +22,11 @@ TRACE_3("params",_explosive,_magazine,_trigger);
 
 private _config = configFile >> "ACE_Triggers" >> _trigger;
 
-// Make selected trigger the active one (for keybind) if it's the first to be connected
-if (GVAR(activeTrigger) == "" && {(["Command", "MK16_Transmitter", "DeadManSwitch"] findIf {_x == _trigger}) != -1}) then {
+// Make selected trigger the active one (for keybind) if it's the first to be connected, or the current active trigger has no connected explosives
+if (
+    (GVAR(activeTrigger) == "" || {([ACE_Player, getArray (configFile >> "ACE_Triggers" >> GVAR(activeTrigger) >> "requires") select 0] call FUNC(getPlacedExplosives)) isEqualTo []}) 
+    && {(["Command", "MK16_Transmitter", "DeadManSwitch"] findIf {_x == _trigger}) != -1}
+) then {
     GVAR(activeTrigger) = getArray (_config >> "requires") select 0;
 };
 

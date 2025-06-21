@@ -8,7 +8,7 @@
  * 1: Allow defusal <BOOL> (default: true)
  *
  * Return Value:
- * Success <BOOLEAN>
+ * Success <BOOL>
  *
  * Example:
  * [cursorObject, false] call ace_explosives_fnc_allowDefuse

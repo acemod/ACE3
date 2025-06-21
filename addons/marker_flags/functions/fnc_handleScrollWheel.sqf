@@ -7,7 +7,7 @@
  * 0: Scroll amount <NUMBER>
  *
  * Return Value:
- * Handled <BOOLEAN>
+ * Handled <BOOL>
  *
  * Example:
  * [5] call ace_marker_flags_fnc_handleScrollWheel

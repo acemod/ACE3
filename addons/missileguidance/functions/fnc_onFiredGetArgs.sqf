@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Shooter (Man/Vehicle) <OBJECT>
- * 1: Weapon <STIRNG>
+ * 1: Weapon <STRING>
  * 3: Mode <STRING>
  * 4: Ammo (in the future) <STRING>
  * 6: Projectile <OBJECT>
