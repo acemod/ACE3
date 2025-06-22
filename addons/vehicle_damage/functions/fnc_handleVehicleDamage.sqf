@@ -67,7 +67,6 @@ private _multHit = _vehicle getVariable [QGVAR(hitTime), createHashMap];
 
 private _key = format ["%1:%2", _projectile, _source];
 
-systemChat str ["should banng?", _projectile, _multHit];
 if !(_key in _multHit) then {
     _multHit set [_key, [CBA_missionTime, [_hitPoint]]];
 } else {
@@ -75,8 +74,6 @@ if !(_key in _multHit) then {
     _stateArray params ["_lastHitTime", "_hitArray"];
     private _hitPointInOldArray = _hitPoint in _hitArray;
     private _withinTime = CBA_missionTime <= _lastHitTime + CONST_TIME;
-
-    systemChat str ["bang!", _hitpointInOldArray, _withinTime, _projectile];
 
     if (_hitPointInOldArray && _withinTime) then {
         _ignoreHit = true;
