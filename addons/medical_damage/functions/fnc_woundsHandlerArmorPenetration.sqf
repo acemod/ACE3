@@ -23,6 +23,7 @@
 
 // This gets close to vanilla values on FMJ ammo
 #define DAMAGE_SCALING_FACTOR 10
+#define UNSCALED_BASE_ARMOR 2
 
 params ["_unit", "_allDamages", "_typeOfDamage", "_ammo"];
 TRACE_4("woundsHandlerArmorPenetration",_unit,_allDamages,_typeOfDamage,_ammo);
@@ -40,7 +41,7 @@ private _damageData = _allDamages select 0; // selection specific
 _damageData params ["_engineDamage", "_bodyPart", "_realDamage"];
 
 private _armorLevelStep = [2, 4] select (_bodyPart == "body");
-private _armor = (_realDamage/_engineDamage) - 2; // remove base armor
+private _armor = (_realDamage/_engineDamage) - UNSCALED_BASE_ARMOR; // remove base armor
 
 // There's no need to calculate penetration if there is no armor to begin with, base damage handling is good enough in this case
 if (_armor <= _armorLevelStep) exitWith {
