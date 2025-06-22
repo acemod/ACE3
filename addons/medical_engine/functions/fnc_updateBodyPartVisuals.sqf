@@ -25,14 +25,14 @@ TRACE_5("updateBodyPartVisuals",_unit,_updateHead,_updateBody,_updateArms,_updat
 private _bodyPartDamage = GET_BODYPART_DAMAGE(_unit);
 
 if (_updateHead) then {
-    [_unit, "head", (_bodyPartDamage select 0) > VISUAL_BODY_DAMAGE_THRESHOLD] call FUNC(damageBodyPart);
+    [_unit, "head", ((_bodyPartDamage select 0) max (_bodyPartDamage select 1)) > VISUAL_BODY_DAMAGE_THRESHOLD] call FUNC(damageBodyPart);
 };
 if (_updateBody) then {
-    [_unit, "body", (_bodyPartDamage select 1) > VISUAL_BODY_DAMAGE_THRESHOLD] call FUNC(damageBodyPart);
+    [_unit, "body", ((_bodyPartDamage select 2) max (_bodyPartDamage select 3)) > VISUAL_BODY_DAMAGE_THRESHOLD] call FUNC(damageBodyPart);
 };
 if (_updateArms) then {
-    [_unit, "arms", ((_bodyPartDamage select 2) max (_bodyPartDamage select 3)) > VISUAL_BODY_DAMAGE_THRESHOLD] call FUNC(damageBodyPart);
+    [_unit, "arms", (((_bodyPartDamage select 4) max (_bodyPartDamage select 5)) max ((_bodyPartDamage select 6) max (_bodyPartDamage select 7))) > VISUAL_BODY_DAMAGE_THRESHOLD] call FUNC(damageBodyPart);
 };
 if (_updateLegs) then {
-    [_unit, "legs", ((_bodyPartDamage select 4) max (_bodyPartDamage select 5)) > VISUAL_BODY_DAMAGE_THRESHOLD] call FUNC(damageBodyPart);
+    [_unit, "legs", (((_bodyPartDamage select 8) max (_bodyPartDamage select 9)) max ((_bodyPartDamage select 10) max (_bodyPartDamage select 11))) > VISUAL_BODY_DAMAGE_THRESHOLD] call FUNC(damageBodyPart);
 };
