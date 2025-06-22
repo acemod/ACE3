@@ -106,7 +106,7 @@
             <Japanese>AIが致命傷を受けた時の挙動を管理できます。頭部や胸部に受ける大きなダメージは致命傷になります。\n"常に"に設定されていると、いかなる致命傷でも"AIの即死"効果が生まれます。\n注: "常に"以外のモードでは"AIの無意識状態化"を有効化させる必要があります。</Japanese>
             <Chinese>控制當AI受致命傷時是否能救起。致命傷是指對頭部或身體造成可觀傷害所造成的。\n當設置為"總是"時，這會使其與"AI 瞬間死亡"同一個效果，在AI受到致命傷時瞬間死亡。\n備註：選了"總是"以外的選項的話必須開啟「AI無意識」的選項。</Chinese>
             <Chinesesimp>控制当 AI 受致命伤时是否能救起。致命伤是指对头部或躯干遭受重大伤害。\n当设置为"总是"时，这将有效地产生"AI 即时死亡"行为，因为 AI 将立即死于任何致命伤。\n注意："总是"以外的任何模式都需要启用 AI 无意识。</Chinesesimp>
-            <Turkish>AI'nın ölümcül yaralanmaları ne zaman alabileceğini kontrol eder. Ölümcül bir yaralanma, kafa veya vücudun önemli hasar görmesinden kaynaklanır. \"Her zaman" olarak ayarlandığında, AI herhangi bir ölümcül yaralanmadan hemen öleceği için bu etkili bir şekilde "AI Anında Ölüm" davranışı üretir.\ NOT: "Her zaman" "Yapay Zeka Bilinci'nin etkinleştirilmesini gerektirir.</Turkish>
+            <Turkish>AI'nın ölümcül yaralanmaları ne zaman alabileceğini kontrol eder. Ölümcül bir yaralanma, kafa veya vücudun önemli hasar görmesinden kaynaklanır. \n"Her zaman" olarak ayarlandığında, AI herhangi bir ölümcül yaralanmadan hemen öleceği için bu etkili bir şekilde "AI Anında Ölüm" davranışı üretir.\n NOT: "Her zaman" "Yapay Zeka Bilinci'nin etkinleştirilmesini gerektirir.</Turkish>
         </Key>
         <Key ID="STR_ACE_Medical_Statemachine_FatalInjuriesAI_DisplayName">
             <English>AI Fatal Injuries</English>

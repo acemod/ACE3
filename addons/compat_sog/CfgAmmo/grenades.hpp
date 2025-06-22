@@ -16,3 +16,9 @@ class SmokeShell;
 class vn_m14_grenade_ammo: SmokeShell {
     EGVAR(grenades,incendiary) = 1;
 };
+
+// 40 mm
+class GrenadeBase;
+class vn_40mm_he_v_ammo: GrenadeBase {
+    EGVAR(rearm,caliber) = 40;
+};

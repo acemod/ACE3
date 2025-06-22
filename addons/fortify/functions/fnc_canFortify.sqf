@@ -20,7 +20,7 @@ params ["_player", ["_cost", 0]];
 
 (missionNamespace getVariable [QGVAR(fortifyAllowed), true]) &&
 {
-    private _items = _player call EFUNC(common,uniqueItems);
+    private _items = +(_player call EFUNC(common,uniqueItems));
     _items append weapons _player;
     _items pushBack backpack _player;
     GVAR(fortifyTools) findAny _items != -1

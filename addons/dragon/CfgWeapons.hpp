@@ -4,14 +4,13 @@ class CfgWeapons {
     class missiles_titan;
     class Binocular;
     class Default;
-    class missiles_titan_static: missiles_titan {
-        class WeaponSlotsInfo;
-    };
+    class missiles_titan_static: missiles_titan {};
     class launch_Titan_F: launch_Titan_base {
         class WeaponSlotsInfo;
     };
 
     class GVAR(super): launch_Titan_F {
+        author = ECSTRING(common,ACETeam);
         model = QPATHTOF(models\ace_m47_magazine.p3d);
         picture = QPATHTOF(data\m47_dragon_item_ca.paa);
         magazines[] = {};

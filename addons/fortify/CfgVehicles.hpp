@@ -6,7 +6,7 @@ class CfgVehicles {
                 displayName = CSTRING(Fortify);
                 condition = QUOTE([_player] call FUNC(canFortify));
                 modifierFunction = QUOTE(call FUNC(modifyAction));
-                insertChildren = QUOTE(_this call FUNC(addActions));
+                insertChildren = QUOTE(call FUNC(addActions));
                 statement = "";
                 exceptions[] = {};
                 showDisabled = 0;

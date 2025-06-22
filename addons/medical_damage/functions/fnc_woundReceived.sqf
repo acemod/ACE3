@@ -25,6 +25,7 @@ private _typeOfDamage = _ammo call FUNC(getTypeOfDamage);
 if !(_typeOfDamage in GVAR(damageTypeDetails)) exitWith {};
 
 (GVAR(damageTypeDetails) get _typeOfDamage) params ["", "", "_woundHandlers"];
+if (_woundHandlers isEqualTo []) exitWith {};
 
 private _damageData = [_unit, _allDamages, _typeOfDamage, _ammo];
 private _originalCount = count _damageData;

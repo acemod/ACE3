@@ -1,4 +1,4 @@
-#define BASE_DRAG -0.01
+#define BASE_DRAG (-0.01)
 #define HD_MULT 5
 #define BASE_DRAG_HD (BASE_DRAG * HD_MULT)
 
@@ -24,29 +24,29 @@ class CfgAmmo {
 
     class GVAR(tiny_HD): GVAR(base) {
         hit = 6;
-        airFriction = QUOTE(BASE_DRAG_HD);
+        airFriction = BASE_DRAG_HD;
         caliber = 0.75;
     };
 
     class GVAR(small): GVAR(base) {
         hit = 12;
-        airFriction = QUOTE(BASE_DRAG*0.9);
+        airFriction = BASE_DRAG*0.9;
     };
 
     class GVAR(small_HD): GVAR(base) {
         hit = 12;
-        airFriction = QUOTE(BASE_DRAG_HD*0.9);
+        airFriction = BASE_DRAG_HD*0.9;
     };
 
     class GVAR(medium): GVAR(base) {
         hit = 14;
-        airFriction = QUOTE(BASE_DRAG*0.75);
+        airFriction = BASE_DRAG*0.75;
         caliber = 1.2;
     };
 
     class GVAR(medium_HD): GVAR(base) {
         hit = 14;
-        airFriction = QUOTE(BASE_DRAG_HD*0.75);
+        airFriction = BASE_DRAG_HD*0.75;
         caliber = 1.2;
     };
 
@@ -54,7 +54,7 @@ class CfgAmmo {
         hit = 28;
         indirectHit = 2;
         indirectHitRange = 0.25;
-        airFriction = QUOTE(BASE_DRAG*0.65);
+        airFriction = BASE_DRAG*0.65;
         caliber = 2;
         explosive = 0;
 
@@ -64,7 +64,7 @@ class CfgAmmo {
         hit = 28;
         indirectHit = 2;
         indirectHitRange = 0.25;
-        airFriction = QUOTE(BASE_DRAG_HD*0.65);
+        airFriction = BASE_DRAG_HD*0.65;
         caliber = 2;
     };
 
@@ -72,7 +72,7 @@ class CfgAmmo {
         hit = 40;
         indirectHit = 4;
         indirectHitRange = 0.5;
-        airFriction = QUOTE(BASE_DRAG*0.5);
+        airFriction = BASE_DRAG*0.5;
         caliber = 2.8;
     };
 
@@ -80,7 +80,7 @@ class CfgAmmo {
         hit = 40;
         indirectHit = 4;
         indirectHitRange = 0.5;
-        airFriction = QUOTE(BASE_DRAG_HD*0.5);
+        airFriction = BASE_DRAG_HD*0.5;
         caliber = 2.8;
     };
 

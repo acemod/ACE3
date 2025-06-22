@@ -1,7 +1,7 @@
 #include "..\script_component.hpp"
 /*
  * Author: Glowbal
- * Draw progress bar and execute given function if succesful.
+ * Draw progress bar and execute given function if successful.
  * Finish/Failure/Conditional are all passed [args, elapsedTime, totalTime, errorCode]
  *
  * Arguments:
@@ -9,7 +9,7 @@
  * 1: show <BOOL>
  * 2: Icon Path <STRING>
  * 3: Icon color <ARRAY>
- * 4: timeAlive. -1 = forever (default: 6) <NUMBER>
+ * 4: timeAlive. -1 = forever <NUMBER> (default: 6)
  *
  * Return Value:
  * None

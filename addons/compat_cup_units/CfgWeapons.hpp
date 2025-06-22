@@ -67,6 +67,7 @@ class CfgWeapons {
     HEARING(CUP_H_PMC_Cap_EP_Grey);
     HEARING(CUP_H_PMC_Cap_EP_Tan);
     HEARING(CUP_H_PMC_EP_Headset);
+    HEARING(CUP_H_RUS_K6_3);
     HEARING(CUP_H_USArmy_HelmetMICH_earpro);
     HEARING(CUP_H_USArmy_HelmetMICH_earpro_DCU);
     HEARING(CUP_H_USArmy_HelmetMICH_earpro_ess);
@@ -84,4 +85,12 @@ class CfgWeapons {
     HEARING(CUP_H_USMC_MICH2000_DEF_ESS_DES);
     HEARING(CUP_H_USMC_MICH2000_DEF_ESS_WDL);
     HEARING(CUP_H_USMC_MICH2000_DEF_WDL);
+
+    class CUP_Vest_Camo_Base;
+    class CUP_V_O_SLA_Flak_Vest01: CUP_Vest_Camo_Base {
+         EGVAR(trenches,entrenchingTool) = 1;
+    };
+    class CUP_V_O_SLA_Carrier_Belt: CUP_Vest_Camo_Base {
+         EGVAR(trenches,entrenchingTool) = 1;
+    };
 };

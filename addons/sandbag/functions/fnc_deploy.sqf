@@ -49,7 +49,7 @@ GVAR(deployPFH) = [{
 _unit setVariable [QGVAR(Deploy), [
     _unit, "DefaultAction",
     {GVAR(deployPFH) != -1},
-    {[_this select 0] call FUNC(deployConfirm)}
+    {[_this select 1] call FUNC(deployConfirm)}
 ] call EFUNC(common,addActionEventHandler)];
 
 _unit setVariable [QGVAR(isDeploying), true, true];

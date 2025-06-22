@@ -3,38 +3,54 @@
 
 [QGVAR(handoff), LINKFUNC(handleHandoff)] call CBA_fnc_addEventHandler;
 
+if (!hasInterface) exitWith {};
+
 ["ACE3 Weapons", QGVAR(cycleFireMode), LLSTRING(CycleFireMode), {
     [] call FUNC(cycleAttackProfileKeyDown)
 }, {
-},
-[DIK_TAB, [false, true, false]], false] call CBA_fnc_addKeybind;  //Ctrl+Tab Key
+}, [DIK_TAB, [false, true, false]], false] call CBA_fnc_addKeybind;  //Ctrl+Tab Key
 
-
-// Each MCLOS argument is the vector which acceleration will be applied
-["ACE3 Weapons", QGVAR(mclosUp), LLSTRING(mclosUp), {
+["up", {
     [[0, 0, 1], ACE_player] call FUNC(MCLOS_buttonPressed)
 }, {
     [[0, 0, -1], ACE_player] call FUNC(MCLOS_buttonPressed)
-},
-[DIK_NUMPAD8, [false, false, false]], false, 0] call CBA_fnc_addKeybind;  // Numpad 8
-
-["ACE3 Weapons", QGVAR(mclosDown), LLSTRING(mclosDown), {
+}] call FUNC(keybind_add);
+["down", {
     [[0, 0, -1], ACE_player] call FUNC(MCLOS_buttonPressed)
 }, {
     [[0, 0, 1], ACE_player] call FUNC(MCLOS_buttonPressed)
-},
-[DIK_NUMPAD2, [false, false, false]], false, 0] call CBA_fnc_addKeybind;  // Numpad 2
-
-["ACE3 Weapons", QGVAR(mclosLeft), LLSTRING(mclosLeft), {
-    [[1, 0, 0], ACE_player] call FUNC(MCLOS_buttonPressed)
-}, {
-    [[-1, 0, 0], ACE_player] call FUNC(MCLOS_buttonPressed)
-},
-[DIK_NUMPAD6, [false, false, false]], false, 0] call CBA_fnc_addKeybind;  // Numpad 6
-
-["ACE3 Weapons", QGVAR(mclosRight), LLSTRING(mclosRight), {
+}] call FUNC(keybind_add);
+["left", {
     [[-1, 0, 0], ACE_player] call FUNC(MCLOS_buttonPressed)
 }, {
     [[1, 0, 0], ACE_player] call FUNC(MCLOS_buttonPressed)
-},
-[DIK_NUMPAD4, [false, false, false]], false, 0] call CBA_fnc_addKeybind;  // Numpad 4
+}] call FUNC(keybind_add);
+["right", {
+    [[1, 0, 0], ACE_player] call FUNC(MCLOS_buttonPressed)
+}, {
+    [[-1, 0, 0], ACE_player] call FUNC(MCLOS_buttonPressed)
+}] call FUNC(keybind_add);
+
+{
+    _y params ["", "", "_defaultBind", "_displayName"];
+    private _name = format [QGVAR(%1), _x];
+    ["ACE3 Weapons", _name, _displayName,
+        compile format ['["%1", "down"] call FUNC(keybind_pressed)', _x],
+        compile format ['["%1", "up"] call FUNC(keybind_pressed)', _x],
+        _defaultBind
+    ] call CBA_fnc_addKeybind;
+} forEach GVAR(keybinds);
+
+["ace_settingsInitialized", {
+    ["turret", LINKFUNC(gps_setupVehicle), false] call CBA_fnc_addPlayerEventHandler;
+    ["vehicle", LINKFUNC(gps_setupVehicle), true] call CBA_fnc_addPlayerEventHandler; // only one of these needs the retro flag
+
+    // Add UAV Control Compatibility
+    ["ACE_controlledUAV", {
+        params ["_UAV", "_seatAI", "_turret", "_position"];
+        TRACE_4("ACE_controlledUAV EH",_UAV,_seatAI,_turret,_position);
+        if (!isNull _seatAI) then {
+            [_seatAI] call FUNC(gps_setupVehicle);
+        };
+    }] call CBA_fnc_addEventHandler;
+}] call CBA_fnc_addEventHandler;

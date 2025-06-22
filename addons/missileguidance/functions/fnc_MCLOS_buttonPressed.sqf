@@ -18,16 +18,30 @@
 
 params ["_accelerationDirection", "_player"];
 
-private _shooter = vehicle _player;
-if (_player == _shooter) exitWith {};
-private _turret = _shooter unitTurret _player;
+private _shooter = objNull;
+private _weapons = [];
+if ((isNull objectParent _player) || {_player call CBA_fnc_canUseWeapon}) then {
+    _shooter = _player;
+    private _currentWeapon = currentWeapon _shooter;
+    if (_currentWeapon != "") then { _weapons pushBack _currentWeapon };
+} else {
+    _shooter = vehicle _player;
+    private _turretPath = if (_player == (driver _shooter)) then {[-1]} else {_player call CBA_fnc_turretPath};
+    _weapons = _shooter weaponsTurret _turretPath;
+};
 
-if (((_shooter weaponsTurret _turret) findIf {
-    (getNumber (configFile >> "CfgWeapons" >> _x >> QGVAR(hasMCLOSControl))) == 1
+if ((_weapons findIf {
+    private _weapon = _x;
+    GVAR(mclos_weapons) getOrDefaultCall [_weapon, {
+        ((compatibleMagazines _weapon) findIf {
+            private _mag = _x;
+            private _ammo = getText (configFile >> "CfgMagazines" >> _mag >> "ammo");
+            ("MCLOS" in getArray (configFile >> "CfgAmmo" >> _ammo >> QUOTE(ADDON) >> "seekerTypes"))
+    }) != -1}, true]
 }) == -1) exitWith { false };
 
 
-playSound "ACE_Sound_Click_20db";
+playSound "ACE_Sound_Click_10db";
 
 private _currentDirection = _shooter getVariable [QGVAR(MCLOS_direction), [0, 0, 0]];
 // Send data across network for handling non-local projectiles

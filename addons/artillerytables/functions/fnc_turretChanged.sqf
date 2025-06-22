@@ -57,13 +57,13 @@ if ((alive _player) && {_showGunLaying > 0} && {_player == gunner _vehicle}) the
     _fireModes = _fireModes apply {[getNumber (_x >> "artilleryCharge"), configName _x]};
     _fireModes sort true;
     _fireModes = _fireModes apply {_x select 1};
+    private _elevationMode = getNumber (_turretCfg >> "elevationMode");
 
-    GVAR(pfID) = [LINKFUNC(turretPFEH), 0, [_vehicle, _turret, _fireModes, _useAltElevation, _turretAnimBody, _invalidGunnerMem]] call CBA_fnc_addPerFrameHandler;
+    GVAR(pfID) = [LINKFUNC(turretPFEH), 0, [_vehicle, _turret, _fireModes, _useAltElevation, _turretAnimBody, _invalidGunnerMem, _elevationMode]] call CBA_fnc_addPerFrameHandler;
     TRACE_4("added pfEH",GVAR(pfID),_useAltElevation,_turretAnimBody,_invalidGunnerMem);
 
     #ifdef DEBUG_MODE_FULL
     private _ballisticsComputer = getNumber (configFile >> "CfgWeapons" >> _weapon >> "ballisticsComputer");
-    private _elevationMode = getNumber (_turretCfg >> "elevationMode");
     private _discreteDistance = getArray (_turretCfg >> "discreteDistance");
     TRACE_4("",_weapon,_ballisticsComputer,_elevationMode,_discreteDistance);
     #endif

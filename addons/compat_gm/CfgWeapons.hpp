@@ -54,4 +54,9 @@ class CfgWeapons {
     class gm_p2a1_base: gm_pistol_base {
         EGVAR(overheating,jamTypesAllowed)[] = {"Fire", "Dud"};
     };
+
+    class gm_RocketLauncher_base;
+    class gm_mlrs_122mm_launcher_base: gm_RocketLauncher_base {
+        EGVAR(overpressure,offset) = 3;
+    };
 };

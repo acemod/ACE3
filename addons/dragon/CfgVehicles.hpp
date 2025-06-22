@@ -1,8 +1,9 @@
 class CfgVehicles {
     class LandVehicle;
-    class StaticWeapon: LandVehicle    {
-        class Turrets;
-        class MainTurret;
+    class StaticWeapon: LandVehicle {
+        class Turrets {
+            class MainTurret;
+        };
         class ACE_Actions {
             class ACE_MainActions {};
         };
@@ -85,8 +86,8 @@ class CfgVehicles {
                 source="user";
                 animPeriod=0.00001;
                 initPhase=-0.35;
-                maxValue="3.60";
-                minValue="-3.60";
+                maxValue=3.60;
+                minValue=-3.60;
             };
             class optic_hide {
                 source="user";
