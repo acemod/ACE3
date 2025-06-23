@@ -28,7 +28,7 @@ GVAR(ammoCache) getOrDefaultCall [toLowerANSI _ammo, {
         [0, 0, 0] // return
     } else {
         private _hit = getNumber (_ammoConfig >> "hit");
-        private _caliber = (getNumber (_ammoConfig >> "caliber"));
+        private _caliber = getNumber (_ammoConfig >> "caliber");
         private _typicalSpeed = getNumber (_ammoConfig >> "typicalSpeed");
         private _penFactor = _caliber * ARMOR_PENETRABILITY;
         [_hit, _penFactor, _typicalSpeed] // return
