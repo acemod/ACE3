@@ -25,10 +25,10 @@
 #define DAMAGE_SCALING_FACTOR 10
 #define UNSCALED_BASE_ARMOR 2
 
+if (!EGVAR(medical,alternateArmorPenetration)) exitWith {_this};
+
 params ["_unit", "_allDamages", "_typeOfDamage", "_ammo"];
 TRACE_4("woundsHandlerArmorPenetration",_unit,_allDamages,_typeOfDamage,_ammo);
-
-if (!EGVAR(medical,alternateArmorPenetration)) exitWith {_this};
 
 // See (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber),
 // _penFactor is ammo "caliber" * RHA penetrability, armor plates according to BI are just made of RHAe material
