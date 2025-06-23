@@ -885,5 +885,11 @@
             <Japanese>手足のダメージを使用</Japanese>
             <Chinesesimp>四肢伤害计入创伤总和</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_DisplayName">
+            <English>Use Custom Armor Penetration</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_Description">
+            <English>Controls whether ammo material penetration is taken into account for damage handling.</English>
+        </Key>
     </Package>
 </Project>
