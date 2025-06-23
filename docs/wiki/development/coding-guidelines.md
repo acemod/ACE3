@@ -189,18 +189,18 @@ Every function should have a header of the following format appear before any co
  * Arguments:
  * 0: The first argument <STRING>
  * 1: The second argument which contains sub values <ARRAY>
- * - 0: Number of bannanas <NUMBER>
- * - 1: Bannana Color <STRING>
- * 2: Multiple input types <STRING|ARRAY|CODE>
+ *     0: Number of bananas <NUMBER>
+ *     1: Banana color RGBA <ARRAY of NUMBERs>
+ * 2: Multiple input types <STRING or ARRAY or CODE>
  * 3: Optional input <BOOL> (default: true)
- * 4: Optional input with multiple types <CODE|STRING> (default: {true})
- * 5: Not mandatory input <STRING> (default: nil)
+ * 4: Optional input with multiple types <CODE or STRING> (default: {true})
+ * 5: Not mandatory input <STRING> (default: "")
  *
  * Return Value:
  * The return value <BOOL>
  *
  * Example:
- * ["something", player] call ace_common_fnc_imanexample
+ * ["something", [2, [1, 1, 0, 1]], {}, false, {false}] call ace_common_fnc_imanexample
  *
  * Public: [Yes/No]
  */
@@ -208,6 +208,13 @@ Every function should have a header of the following format appear before any co
 
 This is not the case for inline functions or functions not contained in their own file.
 
+To keep the syntax in the header consistent, we set some rules:
+1. Each argument must have a type that is enclosed in brackets `<TYPE>`. The type must be in UPPERCASE.
+2. Use one of the following types only: `OBJECT`, `NUMBER`, `STRING`, `BOOL`, `ARRAY`, `CONTROL`, `DISPLAY`, `CONFIG`, `CODE`, `ANY`, `LOGIC`, `SIDE`, `GROUP`, `HASHMAP`, `NAMESPACE`, `LOCATION`, `TEXT`.
+3. If an argument can have multiple types, concatenate types using `or`. Example: `<STRING or CODE>`.
+4. Arrays with the same value types are written in the format `<ARRAY of TYPEs>`. The nested type has a small `s` appended at the end.
+5. If an argument is optional, the default value must be written after the type in the format `(default: value)`.
+6. If there are no arguments or return value, write `None` with no type.
 
 ## 4. Global Variables
 All Global Variables are defined in the `XEH_preInit.sqf` file of the component they will be used in with an initial default value.

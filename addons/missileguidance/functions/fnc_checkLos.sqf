@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Seeker <OBJECT>
  * 1: Target <OBJECT>
- * 2: Whether or not to use checkVisibility to test for LOS <BOOLEAN>
+ * 2: Whether or not to use checkVisibility to test for LOS <BOOL>
  *
  * Return Value:
  * Has LOS <BOOL>

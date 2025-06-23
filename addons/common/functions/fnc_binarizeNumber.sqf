@@ -5,7 +5,7 @@
  *
  * Arguments:
  * 0: Decimal Number <NUMBER>
- * 1: Minimum length of the returned Array, note: returned array can be larger (default: 8) <NUMBER>
+ * 1: Minimum length of the returned Array, note: returned array can be larger <NUMBER> (default: 8)
  *
  * Return Value:
  * Booleans <ARRAY>

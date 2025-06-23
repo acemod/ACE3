@@ -7,7 +7,7 @@
  *
  * Arguments:
  * 0: Header <STRING>
- * 1: Text <STRING|TEXT>
+ * 1: Text <STRING or TEXT>
  *
  * Return Value:
  * None
