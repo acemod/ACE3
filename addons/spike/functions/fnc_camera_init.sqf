@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Initializes camera for player to view missile from its nose
  *
  * Arguments:

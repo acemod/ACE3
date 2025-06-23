@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Return the position of a potential EO target via a "edge detection" algorithm. Compares object bounding boxes to see what we are most likely hitting
  *
  * Arguments:

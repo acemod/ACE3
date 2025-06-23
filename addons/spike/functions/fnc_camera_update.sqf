@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: Dani (TCVM)
+ * Author: tcvm
  * Updates camera to be on a fixed point
  *
  * Arguments:
