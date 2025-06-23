@@ -167,6 +167,7 @@ DFUNC(updateArray) = {
     // If shooter was player then send event to them (and optionally the whole crew)
     if (_instigatorIsPlayer && {_unitIsPlayer || GVAR(trackAI)}) then {
         private _unitName = "";
+        private _distance = _unit distance _instigator;
         if (_unitIsPlayer) then {
             _unitName = [_unit, true, false] call EFUNC(common,getName); // should be same as profileName
         } else {
@@ -175,8 +176,8 @@ DFUNC(updateArray) = {
                 _unitName = format ["*AI* - %1", getText ((configOf _unit) >> "displayName")];
             };
         };
-        TRACE_3("send kill event",_instigator,_unitName,_killInfo);
-        [QGVAR(kill), [_unitName, _killInfo], _instigator] call CBA_fnc_targetEvent;
+        TRACE_4("send kill event",_instigator,_unitName,_killInfo,_distance);
+        [QGVAR(kill), [_unitName, _killInfo, _distance], _instigator] call CBA_fnc_targetEvent;
 
         if (GVAR(showCrewKills) && {!(_killer isKindOf "CAManBase")}) then {
             private _crew = [driver _killer, gunner _killer, commander _killer] - [_instigator];
@@ -185,7 +186,7 @@ DFUNC(updateArray) = {
             TRACE_1("showCrewKills",_crew);
             _killInfo = format [" - [<t color='#99ff99'>%1</t>, %2", localize "str_a3_rscdisplaygarage_tab_crew", _killInfo select [4]];
             {
-                [QGVAR(kill), [_unitName, _killInfo], _x] call CBA_fnc_targetEvent;
+                [QGVAR(kill), [_unitName, _killInfo, _distance], _x] call CBA_fnc_targetEvent;
             } forEach _crew;
         };
     };
