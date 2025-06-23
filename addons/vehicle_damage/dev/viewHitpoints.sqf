@@ -5,6 +5,7 @@
 
     (getAllHitPointsDamage _target) params ["_hitpointNames", "_selectionNames", "_damages"];
     {
+        if (_x isEqualTo "") then { continue };
         private _relativePosition = _target selectionPosition _x;
         if (_relativePosition isEqualTo [0, 0, 0]) then { continue };
         private _position = _target modelToWorldVisualWorld _relativePosition;
