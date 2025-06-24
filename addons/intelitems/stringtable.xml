@@ -80,6 +80,7 @@
         <Key ID="STR_ACE_IntelItems_Header_Tooltip">
             <English>Defines the header for the intel item. If the value is empty (""), the object's display name is used.</English>
             <Japanese>インテルアイテムのヘッダーを定義します。値が空 ("")の場合、オブジェクトの表示名が使用されます。</Japanese>
+            <Russian>Определяет заголовок для элемента данныхl. Если значение пустое (""), используется отображаемое имя объекта.</Russian>
         </Key>
         <Key ID="STR_ACE_IntelItems_Notepad_Description">
             <English>Notepad - Can access from the map screen</English>
