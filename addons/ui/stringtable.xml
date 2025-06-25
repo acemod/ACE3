@@ -712,6 +712,7 @@
         <Key ID="STR_ACE_UI_checkWeaponZeroing">
             <English>Check Weapon Zeroing</English>
             <Japanese>武器のゼロインを確認</Japanese>
+            <Korean>무기 영점 확인</Korean>
         </Key>
         <Key ID="STR_ACE_UI_devWatermark">
             <English>Development Build Watermark</English>
@@ -740,10 +741,12 @@
         <Key ID="STR_ACE_UI_meters">
             <English>Meters</English>
             <Japanese>メートル</Japanese>
+            <Korean>미터</Korean>
         </Key>
         <Key ID="STR_ACE_UI_weaponZeroSetTo">
             <English>Zero is set to:</English>
             <Japanese>ゼロインの設定値:</Japanese>
+            <Korean>영점 설정값:</Korean>
         </Key>
     </Package>
 </Project>

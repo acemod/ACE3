@@ -4,50 +4,62 @@
         <Key ID="STR_ACE_SPIKE_Camera_ViewModeCycle">
             <English>Cycle Camera Vision Mode</English>
             <Japanese>カメラの映像モードを切り替え</Japanese>
+            <Korean>카메라 시야 모드 순환</Korean>
         </Key>
         <Key ID="STR_ACE_SPIKE_LR">
             <English>Spike LR</English>
             <Japanese>スパイク LR</Japanese>
+            <Korean>스파이크 LR</Korean>
         </Key>
         <Key ID="STR_ACE_SPIKE_LR_Short">
             <English>LR</English>
             <Japanese>LR</Japanese>
+            <Korean>LR</Korean>
         </Key>
         <Key ID="STR_ACE_SPIKE_LeaveCamera">
             <English>Leave Camera</English>
             <Japanese>カメラから離れる</Japanese>
+            <Korean>카메라 보는 걸 그만두기</Korean>
         </Key>
         <Key ID="STR_ACE_SPIKE_Manual">
             <English>MANUAL</English>
             <Japanese>マニュアル</Japanese>
+            <Korean>메뉴얼</Korean>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanDown">
             <English>Pan Camera Down</English>
             <Japanese>カメラを下に向ける</Japanese>
+            <Korean>카메라를 아래로 향하기</Korean>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanLeft">
             <English>Pan Camera Left</English>
             <Japanese>カメラを左に向ける</Japanese>
+            <Korean>카메라를 왼쪽으로 향하기</Korean>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanRight">
             <English>Pan Camera Right</English>
             <Japanese>カメラを右に向ける</Japanese>
+            <Korean>카메라를 오른쪽으로 향하기</Korean>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanUp">
             <English>Pan Camera Up</English>
             <Japanese>カメラを上に向ける</Japanese>
+            <Korean>카메라를 위로 향하기</Korean>
         </Key>
         <Key ID="STR_ACE_SPIKE_ZoomIn">
             <English>Zoom Camera In</English>
             <Japanese>カメラをズームイン</Japanese>
+            <Korean>카메라 줌 인</Korean>
         </Key>
         <Key ID="STR_ACE_SPIKE_ZoomOut">
             <English>Zoom Camera Out</English>
             <Japanese>カメラをズームアウト</Japanese>
+            <Korean>카메라 줌 아웃</Korean>
         </Key>
         <Key ID="STR_ACE_SPIKE_designate">
             <English>Designate</English>
             <Japanese>目標を指定</Japanese>
+            <Korean>목표 지정</Korean>
         </Key>
     </Package>
 </Project>
