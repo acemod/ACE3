@@ -57,6 +57,9 @@ if (GVAR(defaultPositionBorder) isNotEqualTo []) then {
 };
 END_COUNTER(borderScaling);
 
+// Skip all other effects if just in thermal
+if (currentVisionMode _unit > 1) exitWith {};
+
 if (IS_MAGNIFIED isNotEqualTo GVAR(isUsingMagnification)) then {
     GVAR(isUsingMagnification) = IS_MAGNIFIED;
     GVAR(nextEffectsUpdate) = -1;

@@ -1,7 +1,8 @@
 {
-	"files.exclude": {
-		"**/.hemttout": true,
-		"**/include": true,
-		"**/extras": true
-	}
+    "files.exclude": {
+        "**/.hemttout": true,
+        "**/include": true,
+        "**/extras": true
+    },
+    "files.insertFinalNewline": true
 }
