@@ -3,6 +3,7 @@
     <Package name="MissileGuidance">
         <Key ID="STR_ACE_MissileGuidance_Category">
             <English>ACE Advanced Missile Guidance</English>
+            <French>ACE Guidage avancé des missiles</French>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_CycleFireMode">
             <English>Missile - Cycle Fire Mode</English>
@@ -330,21 +331,27 @@
         </Key>
         <Key ID="STR_ACE_MissileGuidance_chaffEffectivenessCoef_Description">
             <English>Adjusts the chance that chaff defeats a radar guided missile. Higher gives more effective chaff.</English>
+            <French>Ajuste la probabilité que les paillettes éliminent un missile guidé par radar. Plus la valeur est élevée, plus les paillettes sont efficaces.</French>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_chaffEffectivenessCoef_DisplayName">
             <English>Chaff Effectiveness Coefficient</English>
+            <French>Coefficient d'efficacité des paillettes</French>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareAngleCoef_Description">
             <English>Adjusts the relative angle filtering between IR missile and flare. Higher gives more effective flares.</English>
+            <French>Règle l'angle relatif de filtrage entre le missile IR et la fusée éclairante. Plus l'angle est élevé, plus les fusées sont efficaces.</French>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareAngleCoef_DisplayName">
             <English>Flare Angle Coefficient</English>
+            <French>Coefficient d'angle de la fusée</French>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareEffectivenessCoef_Description">
             <English>Adjute the chance that a flare defeats an IR missile. Higher gives more effective flares.</English>
+            <French>Ajuste la probabilité qu'une fusée éclairante neutralise un missile IR. Plus la valeur est élevée, plus les fusées sont efficaces.</French>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareEffectivenessCoef_DisplayName">
             <English>Flare Effectiveness Coefficient</English>
+            <French>Coefficient d'efficacité de la fusée</French>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_keybind_down">
             <English>Missile - Down</English>
