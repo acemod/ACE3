@@ -57,4 +57,8 @@ class CfgAmmo {
             enabled = 1;
         };
     };
+
+#ifdef CREATE_MOCK_PLATFORMS
+#include "dev\mock_ammo.hpp"
+#endif
 };

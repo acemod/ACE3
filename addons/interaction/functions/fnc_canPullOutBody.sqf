@@ -29,7 +29,7 @@ if (
     || {isNull _vehicle}
     || {1 < locked _vehicle}
     || {
-        0 < {alive _x} count crew _vehicle // alive is in vehicle
+        crew _vehicle findIf {alive _x} != -1 // alive is in vehicle
         // group is used here for situations when side player == ENEMY
         && {0.6 > side group _unit getFriend side group _vehicle} // player is enemy
     }

@@ -12,8 +12,6 @@ jobs:
     steps:
     - name: Checkout the source code
       uses: actions/checkout@v4
-    - name: Validate SQF
-      run: python3 tools/sqf_validator.py
     - name: Validate Config
       run: python3 tools/config_style_checker.py
     - name: Validate Stringtables
@@ -34,6 +32,8 @@ jobs:
       uses: actions/checkout@v4
     - name: Setup HEMTT
       uses: arma-actions/hemtt@v1
+      with:
+        annotate: false
     - name: Run HEMTT build
       run: hemtt build
     - name: Rename build folder

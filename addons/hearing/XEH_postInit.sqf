@@ -36,20 +36,20 @@ if (isServer) then {
     };
 }] call CBA_fnc_addEventHandler;
 
+GVAR(cacheAmmoLoudness) = createHashMap;
+
 if (!hasInterface) exitWith {};
 
 #include "initKeybinds.inc.sqf"
 
-GVAR(cacheAmmoLoudness) = createHashMap;
-
 GVAR(deafnessDV) = 0;
 GVAR(deafnessPrior) = 0;
 GVAR(volume) = 1;
-GVAR(playerVehAttenuation) = 1;
 GVAR(time3) = 0;
 GVAR(damageCoefficent) = 1;
 GVAR(volumeAttenuation) = 1;
 GVAR(lastPlayerVehicle) = objNull;
+GVAR(ehpTimeout) = -1;
 
 ["CBA_settingsInitialized", {
     TRACE_1("settingInit - client",GVAR(enableCombatDeafness));
@@ -68,7 +68,6 @@ GVAR(lastPlayerVehicle) = objNull;
         params ["_player", "_vehicle"];
 
         TRACE_2("vehicle change",_player,_vehicle);
-        _this call FUNC(updatePlayerVehAttenuation);
 
         if (!isNull GVAR(lastPlayerVehicle)) then {
             private _firedEH = GVAR(lastPlayerVehicle) getVariable [QGVAR(firedEH), -1];
@@ -86,8 +85,6 @@ GVAR(lastPlayerVehicle) = objNull;
         };
     }, true] call CBA_fnc_addPlayerEventHandler;
 
-    ["turret", LINKFUNC(updatePlayerVehAttenuation), false] call CBA_fnc_addPlayerEventHandler;
-
     [QGVAR(firedNear), "FiredNear", LINKFUNC(firedNear), true] call CBA_fnc_addBISPlayerEventHandler;
     [QGVAR(slotItemChanged), "SlotItemChanged", {(_this select 2) call FUNC(updateHearingProtection)}, true] call CBA_fnc_addBISPlayerEventHandler;
 
@@ -97,6 +94,6 @@ GVAR(lastPlayerVehicle) = objNull;
         GVAR(deafnessPrior) = 0;
         GVAR(time3) = 0;
 
-        UPDATE_HEARING_EARPLUGS call FUNC(updateHearingProtection);
+        UPDATE_HEARING call FUNC(updateHearingProtection);
     }, true] call CBA_fnc_addPlayerEventHandler;
 }] call CBA_fnc_addEventHandler;

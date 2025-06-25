@@ -62,7 +62,7 @@ class ACE_RangeCard_Dialog {
     idd = -1;
     movingEnable = 1;
     onLoad = "uiNamespace setVariable ['RangleCard_Display', (_this select 0)]";
-    onUnload = QUOTE(_this call FUNC(onCloseDialog));
+    onUnload = QUOTE(call FUNC(onCloseDialog));
     objects[] = {};
 
     class controls {
@@ -75,8 +75,8 @@ class ACE_RangeCard_Dialog {
             style=48;
             x="safeZoneX";
             y="safeZoneY+0.181889";
-            w="1.62727*3/4";
-            h="1.62727";
+            w=1.62727*3/4;
+            h=1.62727;
             colorBackground[]={1,1,1,1};
             colorText[]={1,1,1,1};
             text=QPATHTOF(UI\RangeCard.paa);
@@ -86,7 +86,7 @@ class ACE_RangeCard_Dialog {
             style=ST_LEFT;
             x="safeZoneX+0.18";
             y="safeZoneY+0.181889+0.0";
-            w="0.56*1.62727*3/4";
+            w=0.56*1.62727*3/4;
             text=".408 CheyTac - 410 gr Predator Projectiles";
         };
         class CAPTION_TEXT_2: CAPTION_TEXT_1 {
@@ -106,7 +106,7 @@ class ACE_RangeCard_Dialog {
             SizeEx=0.028;
             x="safeZoneX+0.885";
             y="safeZoneY+0.181889+0.01";
-            w="0.125*1.62727*3/4";
+            w=0.125*1.62727*3/4;
             text="100m ZERO";
         };
         class BAROMETRIC_PRESSURE_TEXT: ZERO_RANGE_TEXT {
@@ -137,7 +137,7 @@ class ACE_RangeCard_Dialog {
             idc=770013;
             x="safeZoneX+0.25";
             y="safeZoneY+0.181889+0.095";
-            w="0.405*1.62727*3/4";
+            w=0.405*1.62727*3/4;
             text="Bullet Drop (MRADs)";
         };
         class WIND_LEAD_CAPTION_LIST: RangeCard_RscListNBox {
@@ -145,9 +145,9 @@ class ACE_RangeCard_Dialog {
             sizeEx=0.021;
             x="safeZoneX+0.728";
             y="safeZoneY+0.181889+0.091";
-            w="0.25*1.62727*3/4";
-            h="0.0909445";
-            columns[]={"0.03/2", "0.985/2"};
+            w=0.25*1.62727*3/4;
+            h=0.0909445;
+            columns[]={0.03/2, 0.985/2};
             idcLeft=770101;
             idcRight=770102;
         };
@@ -155,9 +155,9 @@ class ACE_RangeCard_Dialog {
             idc=770200;
             x="safeZoneX+0.24";
             y="safeZoneY+0.181889+0.125";
-            w="0.405*1.62727*3/4";
-            h="0.0909445";
-            columns[]={"0/9", "1/9", "2/9", "3/9", "4/9", "5/9", "5.9/9", "6.9/9", "7.8/9"};
+            w=0.405*1.62727*3/4;
+            h=0.0909445;
+            columns[]={0/9, 1/9, 2/9, 3/9, 4/9, 5/9, 5.9/9, 6.9/9, 7.8/9};
             idcLeft=770201;
             idcRight=770202;
         };
@@ -165,9 +165,9 @@ class ACE_RangeCard_Dialog {
             idc=770300;
             x="safeZoneX+0.728";
             y="safeZoneY+0.181889+0.15";
-            w="0.25*1.62727*3/4";
-            h="0.0909445";
-            columns[]={"0/6", "0.9/6", "1.8/6", "2.9/6", "3.8/6", "4.8/6"};
+            w=0.25*1.62727*3/4;
+            h=0.0909445;
+            columns[]={0/6, 0.9/6, 1.8/6, 2.9/6, 3.8/6, 4.8/6};
             idcLeft=770301;
             idcRight=770302;
         };
@@ -175,10 +175,10 @@ class ACE_RangeCard_Dialog {
             idc=770400;
             x="safeZoneX+0.182";
             y="safeZoneY+0.181889+0.194";
-            w="0.72*1.62727*3/4";
-            h="1.62727";
-            columns[]={"0/16", "1.2/16", "2.2/16", "3.2/16", "4.2/16", "5.1/16", "6.1/16", "7.1/16", "8.1/16",
-                      "9/16", "10.2/16", "11/16", "11.9/16", "12.8/16", "13.7/16", "14.6/16"};
+            w=0.72*1.62727*3/4;
+            h=1.62727;
+            columns[]={0/16, 1.2/16, 2.2/16, 3.2/16, 4.2/16, 5.1/16, 6.1/16, 7.1/16, 8.1/16,
+                        9/16, 10.2/16, 11/16, 11.9/16, 12.8/16, 13.7/16, 14.6/16};
             idcLeft=770401;
             idcRight=770402;
         };
@@ -186,7 +186,7 @@ class ACE_RangeCard_Dialog {
             idc=770020;
             SizeEx=0.022;
             y="safeZoneY+1.72431";
-            w="0.705*1.62727*3/4";
+            w=0.705*1.62727*3/4;
             text="For best results keep ammunition at ambient air temperature. Tables calculated for the above listed barrel";
         };
         class FOOTNOTE_TEXT_2: FOOTNOTE_TEXT_1 {

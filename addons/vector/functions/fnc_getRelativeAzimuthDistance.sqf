@@ -25,7 +25,7 @@ _directionP2 params ["_azimuthP2", "_inclinationP2"];
 private _relDirection = sqrt ((_azimuthP1 - _azimuthP2) ^ 2 + (_inclinationP1 - _inclinationP2) ^ 2);
 private _relDistance = sqrt (_distanceP1 ^ 2 + _distanceP2 ^ 2 - 2 * _distanceP1 * _distanceP2 * cos _relDirection);
 private _relHeight = (sin _inclinationP1 * _distanceP1) - (sin _inclinationP2 * _distanceP2);
-private _relLength = sqrt (_relDistance ^ 2 - _relHeight ^ 2); if (str(_relLength) == "-1.#IND") then {_relLength = 0};
+private _relLength = sqrt (_relDistance ^ 2 - _relHeight ^ 2); if (!finite _relLength) then {_relLength = 0};
 
 private _lenghtP1 = cos _inclinationP1 * _distanceP1;
 private _lenghtP2 = cos _inclinationP2 * _distanceP2;

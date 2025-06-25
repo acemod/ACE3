@@ -58,11 +58,6 @@ if (_isActive || { CBA_missionTime >= _timeWhenActive }) then {
             private _a2 = 180 - ((_seekerAngle / 2) + _a1);
             private _seekerBaseRadiusAtGround = ACTIVE_RADAR_MINIMUM_SCAN_AREA max (_distanceToExpectedTarget / sin(_a2) * sin(_seekerAngle / 2));
 
-            private _lastKnownSpeed = if (_lastKnownVelocity isEqualTo [0, 0, 0]) then {
-                0
-            } else {
-                vectorMagnitude _lastKnownVelocity
-            };
             private _seekerBaseRadiusAdjusted = linearConversion [0, _seekerBaseRadiusAtGround, (CBA_missionTime - _lastTimeSeen) * vectorMagnitude _lastKnownVelocity, ACTIVE_RADAR_MINIMUM_SCAN_AREA, _seekerBaseRadiusAtGround, false];
             if (_doesntHaveTarget) then {
                 _seekerBaseRadiusAdjusted = _seekerBaseRadiusAtGround;

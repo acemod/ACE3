@@ -1,11 +1,7 @@
 class CfgAmmo {
     // All explosive based Ammo classes. These are all listed in case they become required.
-    class Default;
 
-    class TimeBombCore: Default {
-        GVAR(defuseTime) = 5;
-    };
-
+    // GVAR(defuseTime) is the defuse time (default of 5 in ACE_Explosives_fnc_StartDefuse)
     // GVAR(size) = 0; is small size
     // GVAR(size) = 1; is large size
     class ClaymoreDirectionalMine_Remote_Ammo;
@@ -36,13 +32,14 @@ class CfgAmmo {
     };
 
     class ACE_FlareTripMine_Wire_Ammo: APERSTripMine_Wire_Ammo {
+        GVAR(flareClass) = "F_40mm_White";
         SoundSetExplosion[] = {};
         defaultMagazine = "ACE_FlareTripMine_Mag"; // Mag that gets dropped after defuse
         hit = 0;
         indirectHit = 0;
         indirectHitRange = 0;
         soundHit[] = {"A3\Sounds_F\weapons\smokeshell\smoke_3",1.25893,1,100};
-        explosionEffects = "ACE_TripflareEffect";
+        explosionEffects = "";
         CraterEffects = "";
         soundTrigger[] = {"",1,1};
         class CamShakeExplode {
@@ -51,6 +48,17 @@ class CfgAmmo {
             frequency = 0;
             distance = 0;
         };
+        class EventHandlers {
+            init = QUOTE(call FUNC(tripflare_init));
+        };
+    };
+    class ACE_FlareTripMine_Wire_Ammo_Red: ACE_FlareTripMine_Wire_Ammo {
+        defaultMagazine = "ACE_FlareTripMine_Mag_Red";
+        GVAR(flareClass) = "F_40mm_Red";
+    };
+    class ACE_FlareTripMine_Wire_Ammo_Green: ACE_FlareTripMine_Wire_Ammo {
+        defaultMagazine = "ACE_FlareTripMine_Mag_Green";
+        GVAR(flareClass) = "F_40mm_Green";
     };
 
     class F_20mm_Red;
@@ -103,6 +111,7 @@ class CfgAmmo {
         indirectHit = 500;
         indirectHitRange = 7;
     };
+
     class PipeBombBase;
     class SatchelCharge_Remote_Ammo: PipeBombBase {
         GVAR(magazine) = "SatchelCharge_Remote_Mag";
@@ -118,6 +127,9 @@ class CfgAmmo {
         GVAR(magazine) = "IEDUrbanBig_Remote_Mag";
         GVAR(size) = 1;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
+        GVAR(ringtones)[] = {{QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75, 3.16228, 1, 75}};
+        GVAR(callConnectTime)[] = {1,8};
+        GVAR(detonationTimingOffset) = 0.75;
     };
     class ACE_IEDUrbanBig_Command_Ammo: IEDUrbanBig_Remote_Ammo {
         mineTrigger = "RemoteTrigger";
@@ -132,6 +144,9 @@ class CfgAmmo {
         GVAR(magazine) = "IEDUrbanSmall_Remote_Mag";
         GVAR(size) = 0;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
+        GVAR(ringtones)[] = {{QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75, 3.16228, 1, 75}};
+        GVAR(callConnectTime)[] = {1,8};
+        GVAR(detonationTimingOffset) = 0.75;
     };
     class ACE_IEDUrbanSmall_Command_Ammo: IEDUrbanSmall_Remote_Ammo {
         mineTrigger = "RemoteTrigger";
@@ -146,6 +161,9 @@ class CfgAmmo {
         GVAR(magazine) = "IEDLandBig_Remote_Mag";
         GVAR(size) = 1;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
+        GVAR(ringtones)[] = {{QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75, 3.16228, 1, 75}};
+        GVAR(callConnectTime)[] = {1,8};
+        GVAR(detonationTimingOffset) = 0.75;
     };
     class ACE_IEDLandBig_Command_Ammo: IEDLandBig_Remote_Ammo {
         mineTrigger = "RemoteTrigger";
@@ -160,6 +178,9 @@ class CfgAmmo {
         GVAR(magazine) = "IEDLandSmall_Remote_Mag";
         GVAR(size) = 0;
         soundTrigger[] = {"A3\Sounds_F\weapons\mines\mech_trigger_1", 0.8, 1, 40};
+        GVAR(ringtones)[] = {{QPATHTOF(Data\Audio\Cellphone_Ring.wss), 0.75, 3.16228, 1, 75}};
+        GVAR(callConnectTime)[] = {1,8};
+        GVAR(detonationTimingOffset) = 0.75;
     };
     class ACE_IEDLandSmall_Command_Ammo: IEDLandSmall_Remote_Ammo {
         mineTrigger = "RemoteTrigger";
@@ -175,6 +196,9 @@ class CfgAmmo {
         GVAR(defuseObjectPosition)[] = {0.0, -0.05, 0.15};
     };
     class APERSMine_Range_Ammo;
+    class ACE_APERSMine_ToePopper_Ammo: APERSMine_Range_Ammo {
+        ACE_damageType = QGVAR(toePopper);
+    };
     class TrainingMine_Ammo: APERSMine_Range_Ammo {
         GVAR(magazine) = "TrainingMine_Mag";
         GVAR(size) = 0;

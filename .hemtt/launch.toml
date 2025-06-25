@@ -27,6 +27,12 @@ dlc = [
     "Reaction Forces"
 ]
 
+[gm]
+extends = "default"
+dlc = [
+    "Global Mobilization - Cold War Germany"
+]
+
 [rhs]
 extends = "default"
 workshop = [
@@ -34,4 +40,18 @@ workshop = [
     "843577117", # RHS USAF Workshop ID
     "843593391", # RHS GREF Workshop ID
     "843632231", # RHS SAF  Workshop ID
+]
+
+[cup]
+extends = "default"
+workshop = [
+    "497660133", # CUP Weapons
+    "541888371", # CUP Vehicles
+    "497661914", # CUP Units
+]
+
+[cfp]
+extends = "cup"
+workshop = [
+    "1369691841", # Community Factions Project
 ]

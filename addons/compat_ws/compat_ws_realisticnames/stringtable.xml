@@ -13,7 +13,7 @@
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_AA40_Snake_Name">
             <English>AA12 (Snake)</English>
-            <French>AA12 (Sable)</French>
+            <French>AA12 (Serpent)</French>
             <Spanish>AA12 (Serpiente)</Spanish>
             <Italian>AA12 (Serpe)</Italian>
             <Russian>AA12 (Змея)</Russian>
@@ -93,7 +93,7 @@
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_GLX_Snake_Name">
             <English>GLX 160 (Snake)</English>
-            <French>GLX 160</French>
+            <French>GLX 160 (Serpent)</French>
             <Spanish>GLX 160 (Serpiente)</Spanish>
             <Italian>GLX-160 (Serpe)</Italian>
             <Russian>GLX 160 (Змея)</Russian>
@@ -195,6 +195,7 @@
             <English>Vektor SS-77</English>
             <French>Vektor SS-77</French>
             <Spanish>Vektor SS-77</Spanish>
+            <Italian>Vektor SS-77</Italian>
             <Russian>Vektor SS-77</Russian>
             <German>Vektor SS-77</German>
             <Korean>벡터 SS-77</Korean>
@@ -328,14 +329,38 @@
             <Korean>벡터 R5 카빈 (뱀 위장)</Korean>
             <Japanese>ヴェクター R5 カービン (ヘビ柄迷彩)</Japanese>
         </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Camo_Name">
+            <English>XMS (Stripes)</English>
+            <French>XMS (Rayé)</French>
+            <Italian>XMS (Strisce)</Italian>
+            <German>XMS (Gestreift)</German>
+            <Korean>XMS (줄무늬 위장)</Korean>
+            <Japanese>XMS (縞模様迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Camo_Name">
+            <English>XMS GL (Stripes)</English>
+            <French>XMS GL (Rayé)</French>
+            <Italian>XMS GL (Strisce)</Italian>
+            <German>XMS GL (Gestreift)</German>
+            <Korean>XMS GL (줄무늬 위장)</Korean>
+            <Japanese>XMS GL (縞模様迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Gray_Name">
+            <English>XMS GL (Gray)</English>
+            <French>XMS GL (Gris)</French>
+            <Italian>XMS GL (Grigio)</Italian>
+            <German>XMS GL (Grau)</German>
+            <Korean>XMS GL (회색)</Korean>
+            <Japanese>XMS GL (グレー)</Japanese>
+        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Khaki_Name">
             <English>XMS GL (Khaki)</English>
-            <French>XMS GL (kaki)</French>
+            <French>XMS GL (Kaki)</French>
             <Spanish>XMS GL (caqui)</Spanish>
             <Italian>XMS GL (Cachi)</Italian>
             <Portuguese>XMS GL (Cáqui)</Portuguese>
             <Russian>XMS GL (хаки)</Russian>
-            <German>XMS GL (khaki)</German>
+            <German>XMS GL (Khaki)</German>
             <Korean>XMS GL (카키)</Korean>
             <Japanese>XMS GL (カーキ)</Japanese>
             <Chinesesimp>XMS GL（卡其色）</Chinesesimp>
@@ -354,7 +379,7 @@
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_GL_Sand_Name">
             <English>XMS GL (Sand)</English>
-            <French>XMS GL (sable)</French>
+            <French>XMS GL (Sable)</French>
             <Spanish>XMS GL (arena)</Spanish>
             <Italian>XMS GL (Sabbia)</Italian>
             <Portuguese>XMS GL (Areia)</Portuguese>
@@ -364,14 +389,22 @@
             <Japanese>XMS GL (サンド)</Japanese>
             <Chinesesimp>XMS GL（沙色）</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Gray_Name">
+            <English>XMS (Gray)</English>
+            <French>XMS (Gris)</French>
+            <Italian>XMS (Grigio)</Italian>
+            <German>XMS (Grau)</German>
+            <Korean>XMS (회색)</Korean>
+            <Japanese>XMS (グレー)</Japanese>
+        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Khaki_Name">
             <English>XMS (Khaki)</English>
-            <French>XMS (kaki)</French>
+            <French>XMS (Kaki)</French>
             <Spanish>XMS (caqui)</Spanish>
             <Italian>XMS (Cachi)</Italian>
             <Portuguese>XMS (Cáqui)</Portuguese>
             <Russian>XMS (хаки)</Russian>
-            <German>XMS (khaki)</German>
+            <German>XMS (Khaki)</German>
             <Korean>XMS (카키)</Korean>
             <Japanese>XMS (カーキ)</Japanese>
             <Chinesesimp>XMS（卡其色）</Chinesesimp>
@@ -388,14 +421,30 @@
             <Japanese>XMS</Japanese>
             <Chinesesimp>XMS</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Camo_Name">
+            <English>XMS SG (Stripes)</English>
+            <French>XMS SG (Rayé)</French>
+            <Italian>XMS SG (Strisce)</Italian>
+            <German>XMS SG (Gestreift)</German>
+            <Korean>XMS SG (줄무늬 위장)</Korean>
+            <Japanese>XMS SG (縞模様迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Gray_Name">
+            <English>XMS SG (Gray)</English>
+            <French>XMS SG (Gris)</French>
+            <Italian>XMS SG (Grigio)</Italian>
+            <German>XMS SG (Grau)</German>
+            <Korean>XMS SG (회색)</Korean>
+            <Japanese>XMS SG (グレー)</Japanese>
+        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Khaki_Name">
             <English>XMS SG (Khaki)</English>
-            <French>XMS SG (kaki)</French>
+            <French>XMS SG (Kaki)</French>
             <Spanish>XMS SG (caqui)</Spanish>
             <Italian>XMS SG (Cachi)</Italian>
             <Portuguese>XMS SG (Cáqui)</Portuguese>
             <Russian>XMS SG (хаки)</Russian>
-            <German>XMS SG (khaki)</German>
+            <German>XMS SG (Khaki)</German>
             <Korean>XMS SG (카키)</Korean>
             <Japanese>XMS SG (カーキ)</Japanese>
             <Chinesesimp>XMS SG（卡其色）</Chinesesimp>
@@ -414,7 +463,7 @@
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SG_Sand_Name">
             <English>XMS SG (Sand)</English>
-            <French>XMS SG (sable)</French>
+            <French>XMS SG (Sable)</French>
             <Spanish>XMS SG (arena)</Spanish>
             <Italian>XMS SG (Sabbia)</Italian>
             <Portuguese>XMS SG (Areia)</Portuguese>
@@ -424,14 +473,30 @@
             <Japanese>XMS SG (サンド)</Japanese>
             <Chinesesimp>XMS SG（沙色）</Chinesesimp>
         </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Camo_Name">
+            <English>XMS SW (Stripes)</English>
+            <French>XMS SW (Rayé)</French>
+            <Italian>XMS SW (Strisce)</Italian>
+            <German>XMS SW (Gestreift)</German>
+            <Korean>XMS SW (줄무늬 위장)</Korean>
+            <Japanese>XMS SW (縞模様迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Gray_Name">
+            <English>XMS SW (Gray)</English>
+            <French>XMS SW (Gris)</French>
+            <Italian>XMS SW (Grigio)</Italian>
+            <German>XMS SW (Grau)</German>
+            <Korean>XMS SW (회색)</Korean>
+            <Japanese>XMS SW (グレー)</Japanese>
+        </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Khaki_Name">
             <English>XMS SW (Khaki)</English>
-            <French>XMS SW (kaki)</French>
+            <French>XMS SW (Kaki)</French>
             <Spanish>XMS SW (caqui)</Spanish>
             <Italian>XMS SW (Cachi)</Italian>
             <Portuguese>XMS SW (Cáqui)</Portuguese>
             <Russian>XMS SW (хаки)</Russian>
-            <German>XMS SW (khaki)</German>
+            <German>XMS SW (Khaki)</German>
             <Korean>XMS SW (카키)</Korean>
             <Japanese>XMS SW (カーキ)</Japanese>
             <Chinesesimp>XMS SW（卡其色）</Chinesesimp>
@@ -450,7 +515,7 @@
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_SW_Sand_Name">
             <English>XMS SW (Sand)</English>
-            <French>XMS SW (sable)</French>
+            <French>XMS SW (Sable)</French>
             <Spanish>XMS SW (arena)</Spanish>
             <Italian>XMS SW (Sabbia)</Italian>
             <Portuguese>XMS SW (Areia)</Portuguese>
@@ -462,7 +527,7 @@
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_XMS_Sand_Name">
             <English>XMS (Sand)</English>
-            <French>XMS (sable)</French>
+            <French>XMS (Sable)</French>
             <Spanish>XMS (arena)</Spanish>
             <Italian>XMS (Sabbia)</Italian>
             <Portuguese>XMS (Areia)</Portuguese>
@@ -471,6 +536,22 @@
             <Korean>XMS (모래)</Korean>
             <Japanese>XMS (サンド)</Japanese>
             <Chinesesimp>XMS（沙色）</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_camo_Name">
+            <English>C-More Railway (Red, Stripes)</English>
+            <French>C-More Railway (Rouge, Rayé)</French>
+            <Italian>C-More Railway (Rosso, Strisce)</Italian>
+            <German>C-More Railway (Rot, Gestreift)</German>
+            <Korean>씨모어 레일웨이 (빨강/줄무늬 위장)</Korean>
+            <Japanese>C-More レイルウェイ (レッド、縞模様迷彩)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_WS_RealisticNames_aco_grn_camo_Name">
+            <English>C-More Railway (Green, Stripes)</English>
+            <French>C-More Railway (Vert, Rayé)</French>
+            <Italian>C-More Railway (Verde, Strisce)</Italian>
+            <German>C-More Railway (Grün, Gestreift)</German>
+            <Korean>씨모어 레일웨이 (초록/줄무늬 위장)</Korean>
+            <Japanese>C-More レイルウェイ (グリーン、縞模様迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_apc_tracked_02_Name">
             <English>BM-2T Stalker (Bumerang-BM)</English>
@@ -776,7 +857,7 @@
             <Italian>KamAZ Munizioni</Italian>
             <German>KamAZ Munition</German>
             <Korean>카마즈 탄약</Korean>
-            <Japanese>KamAZ 弾薬</Japanese>
+            <Japanese>KamAZ (弾薬)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_cargo_Name">
             <English>KamAZ Cargo</English>
@@ -785,7 +866,7 @@
             <Italian>KamAZ Carico</Italian>
             <German>KamAZ Fracht</German>
             <Korean>카마즈 화물</Korean>
-            <Japanese>KamAZ 貨物</Japanese>
+            <Japanese>KamAZ (貨物)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_flatbed_Name">
             <English>KamAZ Flatbed</English>
@@ -794,7 +875,7 @@
             <Italian>KamAZ Pianale</Italian>
             <German>KamAZ Flachbett</German>
             <Korean>카마즈 플랫베드</Korean>
-            <Japanese>KamAZ フラットベッド</Japanese>
+            <Japanese>KamAZ (平台)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_racing_Name">
             <English>KamAZ Racing</English>
@@ -803,7 +884,7 @@
             <Italian>KamAZ da corsa</Italian>
             <German>KamAZ Rennlaster</German>
             <Korean>카마즈 경주용</Korean>
-            <Japanese>KamAZ レース仕様</Japanese>
+            <Japanese>KamAZ (レース仕様)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_WS_RealisticNames_truck_02_repair_Name">
             <English>KamAZ Repair</English>
@@ -812,7 +893,7 @@
             <Italian>KamAZ Riparazione</Italian>
             <German>KamAZ Instandsetzung</German>
             <Korean>카마즈 정비</Korean>
-            <Japanese>KamAZ 修理</Japanese>
+            <Japanese>KamAZ (修理)</Japanese>
         </Key>
     </Package>
 </Project>

@@ -579,8 +579,8 @@ class GVAR(type_RBS70) {
 class GVAR(type_Redeye) {
     enabled = 0;
 
-    pitchRate = 27;          // Minium flap deflection for guidance
-    yawRate = 27;            // Maximum flap deflection for guidance
+    pitchRate = 40;          // Minium flap deflection for guidance
+    yawRate = 40;            // Maximum flap deflection for guidance
 
     canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -594,8 +594,9 @@ class GVAR(type_Redeye) {
     defaultSeekerLockMode = "LOBL";
     seekerLockModes[] = { "LOBL" };
 
-    defaultNavigationType = "ProportionalNavigation";
-    navigationTypes[] = { "ProportionalNavigation" };
+    defaultNavigationType = "LineOfSight";
+    navigationTypes[] = { "LineOfSight" };
+    navigationGain = 3;
 
     seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
     seekerAngle = 45;           // Angle from the shooter's view that can track the missile
@@ -612,8 +613,8 @@ class GVAR(type_Redeye) {
 class GVAR(type_Sidewinder) {
     enabled = 0;
 
-    pitchRate = 25;          // Minium flap deflection for guidance
-    yawRate = 25;            // Maximum flap deflection for guidance
+    pitchRate = 35;          // Minium flap deflection for guidance
+    yawRate = 35;            // Maximum flap deflection for guidance
 
     canVanillaLock = 1;          // Can this default vanilla lock? Only applicable to non-cadet mode
 
@@ -640,6 +641,44 @@ class GVAR(type_Sidewinder) {
     // Attack profile type selection
     defaultAttackProfile = "DIR";
     attackProfiles[] = {"DIR"};
+};
+
+class GVAR(type_SS11) {
+    enabled = 0;
+
+    pitchRate = 15;          // Minium flap deflection for guidance
+    yawRate = 15;            // Maximum flap deflection for guidance
+
+    canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
+
+    showTrail = 1;
+
+    // Guidance type for munitions
+    defaultSeekerType = "MCLOS";
+    seekerTypes[] = { "MCLOS" };
+
+    defaultSeekerLockMode = "LOAL";
+    seekerLockModes[] = { "LOAL" };
+
+    defaultNavigationType = "Line";
+    navigationTypes[] = { "Line" };
+
+    lineGainP = 5;
+    lineGainD = 0;
+
+    seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
+    seekerAngle = 30;           // Angle from the shooter's view that can track the missile
+    seekerAccuracy = 1;         // seeker accuracy multiplier
+
+    seekerMinRange = 0;
+    seekerMaxRange = 3000;      // Range from the missile which the seeker can visually search
+
+    correctionDistance = 0; // distance from center of crosshair where missile slows down
+    offsetFromCrosshair[] = { 0, 0, 0 }; // where the missile wants to stay in relation to the center of the crosshair.
+
+    // Attack profile type selection
+    defaultAttackProfile = "WIRE";
+    attackProfiles[] = {"WIRE"};
 };
 
 class GVAR(type_Stinger) {
@@ -713,4 +752,41 @@ class GVAR(type_TOW) {
     // Attack profile type selection
     defaultAttackProfile = "WIRE";
     attackProfiles[] = {"WIRE"};
+};
+class GVAR(type_Blowpipe) {
+    enabled = 0;
+
+    pitchRate = 15;          // Minium flap deflection for guidance
+    yawRate = 15;            // Maximum flap deflection for guidance
+
+    canVanillaLock = 0;          // Can this default vanilla lock? Only applicable to non-cadet mode
+
+    showTrail = 1;
+
+    // Guidance type for munitions
+    defaultSeekerType = "MCLOS";
+    seekerTypes[] = { "MCLOS" };
+
+    defaultSeekerLockMode = "LOAL";
+    seekerLockModes[] = { "LOAL" };
+
+    defaultNavigationType = "Line";
+    navigationTypes[] = { "Line" };
+
+    lineGainP = 5;
+    lineGainD = 0;
+
+    seekLastTargetPos = 0;      // seek last target position [if seeker loses LOS of target, continue to last known pos]
+    seekerAngle = 30;           // Angle from the shooter's view that can track the missile
+    seekerAccuracy = 1;         // seeker accuracy multiplier
+
+    seekerMinRange = 0;
+    seekerMaxRange = 3500;      // Range from the missile which the seeker can visually search
+
+    correctionDistance = 0; // distance from center of crosshair where missile slows down
+    offsetFromCrosshair[] = { 0, 0, 0 }; // where the missile wants to stay in relation to the center of the crosshair.
+
+    // Attack profile type selection
+    defaultAttackProfile = "BEAM";
+    attackProfiles[] = {"BEAM"};
 };

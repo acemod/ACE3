@@ -1,6 +1,6 @@
 #include "..\script_component.hpp"
 /*
- * Author: <N/A>
+ * Author: N/A
  * Draws names and icons.
  *
  * Arguments:
@@ -54,7 +54,7 @@ if (_enabledTagsCursor) then {
 
     if (_target != ACE_player &&
         {(side group _target) == (side group ACE_player)} &&
-        {GVAR(showNamesForAI) || {[_target] call EFUNC(common,isPlayer)}} &&
+        {(_target getVariable [QGVAR(forceShowTags), GVAR(showNamesForAI)]) || {_target call EFUNC(common,isPlayer)}} &&
         {lineIntersectsSurfaces [_camPosASL, eyePos _target, ACE_player, _target] isEqualTo []} &&
         {!isObjectHidden _target}) then {
 
@@ -78,20 +78,23 @@ if (_enabledTagsCursor) then {
 if (_enabledTagsNearby) then {
     // Find valid targets and cache them
     private _targets = [[], {
-        private _nearMen = _camPosAGL nearObjects ["CAManBase", _maxDistance + 7];
+        private _fnc_basicChecks = {
+            params ["_unit"];
+            private _forceShowTags = _unit getVariable [QGVAR(forceShowTags), false];
+            _unit != ACE_player && {_forceShowTags || (side group _unit) == (side group ACE_player)} &&
+            {GVAR(showNamesForAI) || _forceShowTags || {_unit call EFUNC(common,isPlayer)}}
+        };
+
+        private _nearMen = nearestObjects [_camPosAGL, ["CAManBase"], _maxDistance + 7];
         _nearMen = _nearMen select {
-            _x != ACE_player &&
-            {(side group _x) == (side group ACE_player)} &&
-            {GVAR(showNamesForAI) || {[_x] call EFUNC(common,isPlayer)}} &&
+            _x call _fnc_basicChecks &&
             {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x] isEqualTo []} &&
             {!isObjectHidden _x}
         };
         private _crewMen = [];
         if (!isNull objectParent ACE_player) then {
             _crewMen = (crew vehicle ACE_player) select {
-                _x != ACE_player &&
-                {(side group _x) == (side group ACE_player)} &&
-                {GVAR(showNamesForAI) || {[_x] call EFUNC(common,isPlayer)}} &&
+                _x call _fnc_basicChecks &&
                 {lineIntersectsSurfaces [_camPosASL, eyePos _x, ACE_player, _x, true, 1, "GEOM", "NONE"] isEqualTo []} &&
                 {!isObjectHidden _x}
             };
@@ -138,7 +141,7 @@ if (_enabledTagsNearby) then {
                 [ACE_player, _target, _alpha, _distance * 0.026, _drawName, _drawRank, _drawSoundwave] call FUNC(drawNameTagIcon);
             };
         };
-    } forEach _targets;
+    } forEachReversed _targets;
 };
 
 END_COUNTER(GVAR(onDraw3d));

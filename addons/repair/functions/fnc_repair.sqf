@@ -6,7 +6,7 @@
  * Arguments:
  * 0: Unit that does the repairing <OBJECT>
  * 1: Vehicle to repair <OBJECT>
- * 2: Selected hitpoint or hitpointIndex <STRING>or<NUMBER>
+ * 2: Selected hitpoint or hitpointIndex <STRING or NUMBER>
  * 3: Repair Action Classname <STRING>
  *
  * Return Value:
@@ -190,7 +190,7 @@ if (_loopAnim) then {
                 params ["_caller", "_anim"];
                 if !(isNil {_caller getVariable QGVAR(repairCurrentAnimCaller)}) then {
                     TRACE_2("loop",_caller,_anim);
-                    _this call EFUNC(common,doAnimation)
+                    call EFUNC(common,doAnimation)
                 };
             }, [_caller, _anim], 2.5] call CBA_fnc_waitAndExecute;
         };

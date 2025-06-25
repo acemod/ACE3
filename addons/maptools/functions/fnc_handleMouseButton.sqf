@@ -38,7 +38,7 @@ if ((_button == 0) && {GVAR(freedrawing) || _ctrlKey}) exitWith {
 
             if (_allMarkers isEqualTo []) exitWith {};
 
-            private _markerName = _allMarkers select -1;
+            private _markerName = GVAR(lastDrawnLine);
             private _markerPos = getMarkerPos _markerName;
             private _distanceCheck = _markerPos distance2D GVAR(drawPosStart);
 

@@ -13,6 +13,7 @@
             <German>Ausrichten</German>
             <Korean>맞춤 기준:</Korean>
             <Japanese>向きを合わせる</Japanese>
+            <Chinesesimp>对齐到</Chinesesimp>
             <Hungarian>Állítása</Hungarian>
         </Key>
         <Key ID="STR_ACE_MapTools_Description">
@@ -41,6 +42,7 @@
             <German>Verstecke Wurfparabel Kartenwerkzeug</German>
             <Korean>플로팅 보드 숨기기</Korean>
             <Japanese>標定盤を 隠す</Japanese>
+            <Chinesesimp>隐藏绘图板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_MapGpsHide">
             <English>Hide GPS on Map</English>
@@ -221,6 +223,7 @@
             <German>Wurfparabel Kartenwerkzeug Acryl</German>
             <Korean>플로팅 보드 (아크릴)</Korean>
             <Japanese>標定盤の アクリル板</Japanese>
+            <Chinesesimp>亚克力绘图板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardLabel">
             <English>Plotting Board</English>
@@ -231,6 +234,7 @@
             <German>Wurfparabel Kartenwerkzeug</German>
             <Korean>플로팅 보드</Korean>
             <Japanese>標定盤</Japanese>
+            <Chinesesimp>绘图板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoardRulerLabel">
             <English>Plotting Board Ruler</English>
@@ -241,6 +245,7 @@
             <German>Wurfparabel Kartenwerkzeug Lineal</German>
             <Korean>플로팅 보드 (자)</Korean>
             <Japanese>標定盤の 定規</Japanese>
+            <Chinesesimp>绘图板尺</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoard_Description">
             <English>The Plotting Board is a map tool designed for use in the directing of short range indirect fires.</English>
@@ -251,6 +256,7 @@
             <German>Das Wurfparabel-Kartenwerkzeug ist ein Werkzeug, das für die Steuerung indirekten Feuers auf kurze Distanz entwickelt wurde.</German>
             <Korean>플로팅 보드는 단거리 간접 사격을 지시하는 데 사용하도록 설계된 독도용 도구입니다.</Korean>
             <Japanese>標定盤(プロッティング・ボード)は、短距離の間接射撃の指示に使用するために設計されたマップツールです。</Japanese>
+            <Chinesesimp>绘图板是一种用于指引短程间瞄火力的地图工具</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_PlottingBoard_Name">
             <English>Plotting Board</English>
@@ -261,6 +267,7 @@
             <German>Wurfparabel Kartenwerkzeug</German>
             <Korean>플로팅 보드</Korean>
             <Japanese>標定盤</Japanese>
+            <Chinesesimp>绘图板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_ShowPlottingBoard">
             <English>Show Plotting Board</English>
@@ -271,6 +278,7 @@
             <German>Zeige Wurfparabel Kartenwerkzeug</German>
             <Korean>플로팅 보드 보이기</Korean>
             <Japanese>標定盤を 表示</Japanese>
+            <Chinesesimp>显示绘图板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_ToCompassLabel">
             <English>To Compass</English>
@@ -284,6 +292,7 @@
             <German>Am Kompass</German>
             <Korean>나침반으로</Korean>
             <Japanese>方位磁石に</Japanese>
+            <Chinesesimp>指南针</Chinesesimp>
             <Hungarian>Iránytűhöz</Hungarian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToMapToolLabel">
@@ -295,6 +304,7 @@
             <German>Zum Kartenwerkzeug</German>
             <Korean>독도용 도구로</Korean>
             <Japanese>マップツールに</Japanese>
+            <Chinesesimp>地图工具</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_ToNorthLabel">
             <English>To North</English>
@@ -308,6 +318,7 @@
             <German>Nach Norden</German>
             <Korean>북쪽으로</Korean>
             <Japanese>北に</Japanese>
+            <Chinesesimp>正北</Chinesesimp>
             <Hungarian>Északhoz</Hungarian>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardAcrylicLabel">
@@ -319,6 +330,7 @@
             <German>Zum Wurfparabel Kartenwerkzeug Acryl</German>
             <Korean>플로팅 보드 (아크릴)에</Korean>
             <Japanese>標定盤の アクリル板に</Japanese>
+            <Chinesesimp>亚克力绘图板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardLabel">
             <English>To Plotting Board</English>
@@ -329,6 +341,7 @@
             <German>Zum Wurfparabel Kartenwerkzeug</German>
             <Korean>플로팅 보드에</Korean>
             <Japanese>標定盤に</Japanese>
+            <Chinesesimp>绘图板</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_ToPlottingBoardRulerLabel">
             <English>To Plotting Board Ruler</English>
@@ -339,6 +352,7 @@
             <German>Zum Wurfparabel Kartenwerkzeug Lineal</German>
             <Korean>플로팅 보드 (자)에</Korean>
             <Japanese>標定盤の 定規に</Japanese>
+            <Chinesesimp>绘图板尺</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_ToUpLabel">
             <English>Up</English>
@@ -349,6 +363,7 @@
             <German>Nach oben</German>
             <Korean>위로</Korean>
             <Japanese>上に</Japanese>
+            <Chinesesimp>上</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_TogglePlottingBoardRuler">
             <English>Toggle Plotting Board Ruler</English>
@@ -359,6 +374,7 @@
             <German>Schalte das Lineal des Wurfparabel-Kartenwerkzeuges um</German>
             <Korean>플로팅 보드 (자) 토글</Korean>
             <Japanese>標定盤の 定規を 表示切替</Japanese>
+            <Chinesesimp>切换显示绘图板尺</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_WipeBoard">
             <English>Wipe all markers off Plotting Board</English>
@@ -369,6 +385,7 @@
             <German>Alle Markierungen vom Wurfparabel Kartenwerkzeug entfernen</German>
             <Korean>플로팅 보드에 있는 모든 마커 지우기</Korean>
             <Japanese>標定盤の 全マーカーを 拭き消す</Japanese>
+            <Chinesesimp>移除所有绘图板标记</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_allowChannelDrawing_description">
             <English>Channels in which plotting board drawing is enabled.</English>
@@ -379,6 +396,7 @@
             <German>Kanäle, in denen das Zeichnen mit dem Wurfparabel-Kartenwerkzeug auf der Karte erlaubt ist.</German>
             <Korean>플로팅 보드 그리기가 활성화된 채널입니다.</Korean>
             <Japanese>どのチャンネルで標定盤の書き込みを有効化するか。</Japanese>
+            <Chinesesimp>允许使用绘图板绘制的频道</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_allowChannelDrawing_displayName">
             <English>Allow Plotting Board Drawing channels</English>
@@ -389,6 +407,7 @@
             <German>Wurfparabel Kartenwerkzeug erlaubte Kanäle</German>
             <Korean>플로팅 보드 그리기 채널 허용</Korean>
             <Japanese>標定盤への書き込みを許可するチャンネル</Japanese>
+            <Chinesesimp>允许使用绘图板绘制的频道</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectCommsOnly">
             <English>Allow Direct Comms Only (Polylines Only)</English>
@@ -399,6 +418,7 @@
             <German>Nur direkte Kommunikation zulassen (nur Polylinien)</German>
             <Korean>직접교신만 허용 (선 긋기만)</Korean>
             <Japanese>直接チャンネルのみ許可 (線のみ)</Japanese>
+            <Chinesesimp>仅允许直接通话频道(仅允许划线)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_allowDirectGroupComms">
             <English>Allow Direct/Group Comms (Polylines and Group Markers)</English>
@@ -409,6 +429,7 @@
             <German>Direkte/Gruppenkommunikation zulassen (Polylinien und Gruppenmarkierungen)</German>
             <Korean>직접교신/그룹무전망 허용 (선 긋기와 그룹 마커)</Korean>
             <Japanese>直接/グループチャンネルを許可 (線とグループマーカー)</Japanese>
+            <Chinesesimp>允许在直接和小队频道(允许划线和小队标记)</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_MapTools_drawStraightLines_description">
             <English>Draw on the edge of maptools to draw straight lines. Note: Must hover at midpoint to delete.</English>

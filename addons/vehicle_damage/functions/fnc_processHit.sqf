@@ -109,7 +109,7 @@ TRACE_4("ammo effectiveness",_ammoEffectiveness,_addedDamage,_minDamage,_warhead
 
 _incendiary = _incendiary * _ammoEffectiveness;
 
-private _isCar = _vehicle isKindOf "Car" && {!(_vehicle isKindOf "Wheeled_APC_F")};
+private _isCar = _vehicle isKindOf "Car" && {!(_vehicle isKindOf "Wheeled_APC_F" || _vehicle isKindOf "gm_wheeled_APC_base")};
 
 if (_isCar) then {
     _ammoEffectiveness = (_ammoEffectiveness * 1.5) min 1;

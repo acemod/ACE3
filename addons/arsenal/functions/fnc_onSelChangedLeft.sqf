@@ -269,10 +269,16 @@ switch (GVAR(currentLeftPanel)) do {
 
             TOGGLE_RIGHT_PANEL_WEAPON
 
+            // execNextFrame won't work in 3den so just swap it now
+            if (is3DEN && _isDisposable) then {
+                GVAR(center) call cba_disposable_fnc_changeDisposableLauncherClass;
+                _isDisposable = false;
+            };
+
             // If item is a disposable launcher, delay a bit to show new compatible items
             if (_isDisposable) then {
                 [{
-                    _this call FUNC(fillRightPanel);
+                    call FUNC(fillRightPanel);
                 }, [_display, _selectCorrectPanelWeapon]] call CBA_fnc_execNextFrame;
             } else {
                 [_display, _selectCorrectPanelWeapon, !GVAR(refreshing) && {_currentRightPanel isNotEqualTo _selectCorrectPanelWeapon}] call FUNC(fillRightPanel);
@@ -286,7 +292,7 @@ switch (GVAR(currentLeftPanel)) do {
                 call FUNC(showItem);
 
                 // Display new items's info on the bottom right
-                _this call FUNC(itemInfo);
+                call FUNC(itemInfo);
             }, [_display, _control, _curSel, configFile >> "CfgWeapons" >> _item]] call CBA_fnc_execNextFrame;
         } else {
             // Make unit switch to new item
@@ -332,14 +338,8 @@ switch (GVAR(currentLeftPanel)) do {
                 _loadout set [IDX_LOADOUT_UNIFORM, [_item, GVAR(currentItems) select IDX_CURR_UNIFORM_ITEMS]];
                 GVAR(center) setUnitLoadout _loadout;
 
-                private _uniformItems = uniformItems GVAR(center);
-                private _index = count _uniformItems - 1;
-
                 // Remove any items that can't fit in the container (this prevents overloading)
-                while {loadUniform GVAR(center) > 1 && {_index >= 0}} do {
-                    GVAR(center) removeItemFromUniform (_uniformItems select _index);
-                    DEC(_index);
-                };
+                [GVAR(center), uniformContainer GVAR(center)] call FUNC(preventOverfilling);
 
                 GVAR(currentItems) set [IDX_CURR_UNIFORM, _item];
 
@@ -373,14 +373,8 @@ switch (GVAR(currentLeftPanel)) do {
                 _loadout set [IDX_LOADOUT_VEST, [_item, GVAR(currentItems) select IDX_CURR_VEST_ITEMS]];
                 GVAR(center) setUnitLoadout _loadout;
 
-                private _vestItems = vestItems GVAR(center);
-                private _index = count _vestItems - 1;
-
                 // Remove any items that can't fit in the container (this prevents overloading)
-                while {loadVest GVAR(center) > 1 && {_index >= 0}} do {
-                    GVAR(center) removeItemFromVest (_vestItems select _index);
-                    DEC(_index);
-                };
+                [GVAR(center), vestContainer GVAR(center)] call FUNC(preventOverfilling);
 
                 GVAR(currentItems) set [IDX_CURR_VEST, _item];
 
@@ -414,14 +408,8 @@ switch (GVAR(currentLeftPanel)) do {
                 _loadout set [IDX_LOADOUT_BACKPACK, [_item, GVAR(currentItems) select IDX_CURR_BACKPACK_ITEMS]];
                 GVAR(center) setUnitLoadout _loadout;
 
-                private _backpackItems = backpackItems GVAR(center);
-                private _index = count _backpackItems - 1;
-
                 // Remove any items that can't fit in the container (this prevents overloading)
-                while {loadBackpack GVAR(center) > 1 && {_index >= 0}} do {
-                    GVAR(center) removeItemFromBackpack (_backpackItems select _index);
-                    DEC(_index);
-                };
+                [GVAR(center), backpackContainer GVAR(center)] call FUNC(preventOverfilling);
 
                 GVAR(currentItems) set [IDX_CURR_BACKPACK, _item];
 

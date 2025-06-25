@@ -1,13 +1,13 @@
 #include "..\script_component.hpp"
 /*
  * Author: tcvm
- * Whether or not we should filter out this target due to masking. Useful for only doppler radar types
+ * Whether or not we should filter out this target due to masking. Useful for only Doppler radar types
  *
  * Arguments:
  * 0: Target <OBJECT>
  * 1: Projectile <OBJECT>
- * 2: Minimum speed for doppler return to filter out <NUMBER>
- * 3: Minimum time for doppler return to filter out <NUMBER>
+ * 2: Minimum speed for Doppler return to filter out <NUMBER>
+ * 3: Minimum time for Doppler return to filter out <NUMBER>
  * 4: Maximum distance to check for terrain <NUMBER>
  * 5: Radar seeker angle <NUMBER>
  *
@@ -77,7 +77,6 @@ if !(_maskedByGround) exitWith {
     private _nearby = _target nearObjects 50;
     _nearby = _nearby select {
         // 8 = radar blocking
-        private _blocking = configOf _x >> "weaponLockSystem";
         (([getNumber (configOf _x >> "weaponLockSystem"), 4] call EFUNC(common,binarizeNumber)) select 3) && // Check if chaff can break radar lock
         {[_projectile, getPosASLVisual _x, _seekerAngle] call FUNC(checkSeekerAngle)} && // Check if within view
         {[_projectile, _x, false] call FUNC(checkLos)} // Check if can be seen
@@ -88,7 +87,7 @@ if !(_maskedByGround) exitWith {
         private _considering = false;
         if !(_foundDecoy) then {
             _considering = true;
-            if (0.95 <= random 1) then {
+            if (0.95 <= (random 1 * GVAR(chaffEffectivenessCoef))) then {
                 _foundDecoy = true;
             };
         };

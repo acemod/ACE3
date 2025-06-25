@@ -35,6 +35,23 @@
             <Turkish>Emniyet Modu</Turkish>
             <Hungarian>Biztonságos mód</Hungarian>
         </Key>
+        <Key ID="STR_ACE_SafeMode_SafeModeToggle">
+            <English>Safe Mode (Toggle)</English>
+            <Czech>Pojistka (Přepnout)</Czech>
+            <French>Sécurité (Basculer)</French>
+            <Spanish>Poner seguro (interruptor)</Spanish>
+            <Italian>Modalità Sicura (Cambia)</Italian>
+            <Polish>Bezpiecznik (Przełącz)</Polish>
+            <Portuguese>Modo de segurança (Alternar)</Portuguese>
+            <Russian>Предохранитель (переключить)</Russian>
+            <German>Waffe sichern (umschalten)</German>
+            <Korean>안전 모드(토글)</Korean>
+            <Japanese>安全装置 (切り替え)</Japanese>
+            <Chinese>保險模式 (切換)</Chinese>
+            <Chinesesimp>保险（切换）</Chinesesimp>
+            <Turkish>Emniyet Modu (Değiştir)</Turkish>
+            <Hungarian>Biztonságos mód (pecek)</Hungarian>
+        </Key>
         <Key ID="STR_ACE_SafeMode_TakeOffSafety">
             <English>Take off Safety</English>
             <Czech>Uvolnit pojistku</Czech>

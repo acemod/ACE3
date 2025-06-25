@@ -136,6 +136,14 @@
             <Korean>데저트 이글 마크 XIX L5 (브론즈)</Korean>
             <Japanese>デザートイーグル Mark XIX L5 (ブロンズ)</Japanese>
         </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_camo_Name">
+            <English>Desert Eagle Mark XIX L5 (Camo)</English>
+            <French>Desert Eagle Mark XIX L5 (Camo)</French>
+            <Italian>Desert Eagle Mark XIX L5 (Mimetica)</Italian>
+            <German>Desert Eagle Mark XIX L5 (Tarn)</German>
+            <Korean>데저트 이글 마크 XIX L5 (위장)</Korean>
+            <Japanese>デザートイーグル Mark XIX L5 (迷彩)</Japanese>
+        </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_deagle_classic_Name">
             <English>Desert Eagle Mark XIX L5 (Classic)</English>
             <French>Desert Eagle Mark XIX L5 (Classique)</French>
@@ -187,7 +195,7 @@
             <Spanish>H225 Super Puma (Transporte)</Spanish>
             <Italian>H225 Super Puma (Trasporto)</Italian>
             <German>H225 Super Puma (Transport)</German>
-            <Korean>H225 슈퍼 퓨마 (비무장)</Korean>
+            <Korean>H225 슈퍼 퓨마 (수송)</Korean>
             <Japanese>H225 シュペル ピューマ (輸送型)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01_civ_base_Name">
@@ -196,7 +204,7 @@
             <Spanish>H225 Super Puma (Civil)</Spanish>
             <Italian>H225 Super Puma (Civile)</Italian>
             <German>H225 Super Puma (Zivil)</German>
-            <Korean>H225 슈퍼 퓨마 (비무장)</Korean>
+            <Korean>H225 슈퍼 퓨마 (민간)</Korean>
             <Japanese>H225 シュペル ピューマ (民生型)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_base_Name">
@@ -205,7 +213,7 @@
             <Spanish>H215 Super Puma (Transporte)</Spanish>
             <Italian>H215 Super Puma (Trasporto)</Italian>
             <German>H215 Super Puma (Transport)</German>
-            <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
+            <Korean>H215 슈퍼 퓨마 (수송)</Korean>
             <Japanese>H215 シュペル ピューマ (輸送型)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_civ_base_Name">
@@ -214,7 +222,7 @@
             <Spanish>H215 Super Puma (Civil)</Spanish>
             <Italian>H215 Super Puma (Civile)</Italian>
             <German>H215 Super Puma (Zivil)</German>
-            <Korean>H215 슈퍼 퓨마 (비무장)</Korean>
+            <Korean>H215 슈퍼 퓨마 (민간)</Korean>
             <Japanese>H215 シュペル ピューマ (民生型)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_ec_01a_military_base_Name">
@@ -394,8 +402,8 @@
             <Spanish>C-More Railway (Rojo, Desierto)</Spanish>
             <Italian>C-More Railway (Rosso, Desert)</Italian>
             <German>C-More Railway (Rot, Wüste)</German>
-            <Korean>씨모어 레일웨이 (빨강, 사막)</Korean>
-            <Japanese>C-More レイルウェイ (グリーン、砂漠迷彩)</Japanese>
+            <Korean>씨모어 레일웨이 (빨강, 사막 위장)</Korean>
+            <Japanese>C-More レイルウェイ (レッド、砂漠迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_desert_Name">
             <English>C-More Railway (Green, Desert)</English>
@@ -403,7 +411,7 @@
             <Spanish>C-More Railway (Verde, Desierto)</Spanish>
             <Italian>C-More Railway (Verde, Deserto)</Italian>
             <German>C-More Railway (Grün, Wüste)</German>
-            <Korean>씨모어 레일웨이 (녹색, 사막)</Korean>
+            <Korean>씨모어 레일웨이 (녹색, 사막 위장)</Korean>
             <Japanese>C-More レイルウェイ (グリーン、砂漠迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_aco_grn_wood_Name">
@@ -421,8 +429,8 @@
             <Spanish>C-More Railway (Rojo, Boscoso)</Spanish>
             <Italian>C-More Railway (Rosso, Boschivo)</Italian>
             <German>C-More Railway (Rot, Grünes Tarnmuster)</German>
-            <Korean>씨모어 레일웨이 (빨강, 수풀)</Korean>
-            <Japanese>C-More レイルウェイ (グリーン、森林迷彩)</Japanese>
+            <Korean>씨모어 레일웨이 (빨강, 수풀 위장)</Korean>
+            <Japanese>C-More レイルウェイ (レッド、森林迷彩)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_optic_mrd_khk_Name">
             <English>EOTech MRDS (Khaki)</English>
@@ -541,6 +549,14 @@
             <Korean>램 1500 (중기관총)</Korean>
             <Japanese>ラム 1500 (HMG)</Japanese>
         </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_minigun_Name">
+            <English>Ram 1500 (Minigun)</English>
+            <French>Ram 1500 (Minigun)</French>
+            <Italian>Ram 1500 (Minigun)</Italian>
+            <German>Ram 1500 (Minigun)</German>
+            <Korean>램 1500 (미니건)</Korean>
+            <Japanese>ラム 1500 (ミニガン)</Japanese>
+        </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_mmg_Name">
             <English>Ram 1500 (MMG)</English>
             <French>Ram 1500 (MMG)</French>
@@ -559,6 +575,14 @@
             <Korean>램 1500 (다연장로켓)</Korean>
             <Japanese>ラム 1500 (MRL)</Japanese>
         </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_rcws_Name">
+            <English>Ram 1500 (RCWS)</English>
+            <French>Ram 1500 (RCWS)</French>
+            <Italian>Ram 1500 (RCWS)</Italian>
+            <German>Ram 1500 (RCWS)</German>
+            <Korean>램 1500 (무인포탑)</Korean>
+            <Japanese>ラム 1500 (RCWS)</Japanese>
+        </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_repair_Name">
             <English>Ram 1500 (Repair)</English>
             <French>Ram 1500 (Réparation)</French>
@@ -567,6 +591,14 @@
             <German>Ram 1500 (Instandsetzung)</German>
             <Korean>램 1500 (정비)</Korean>
             <Japanese>ラム 1500 (修理)</Japanese>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_rocket_Name">
+            <English>Ram 1500 (Rocket)</English>
+            <French>Ram 1500 (Rocket)</French>
+            <Italian>Ram 1500 (Razzi)</Italian>
+            <German>Ram 1500 (Rakete)</German>
+            <Korean>램 1500 (로켓)</Korean>
+            <Japanese>ラム 1500 (ロケット)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_pickup_01_service_Name">
             <English>Ram 1500 (Services)</English>
@@ -609,7 +641,7 @@
             <French>Drone40 Fumée (Bleu)</French>
             <Spanish>Drone40 Humo (Azul)</Spanish>
             <Italian>Drone40 Smoke (Blu)</Italian>
-            <German>Drone40 Smoke (Blau)</German>
+            <German>Drone40 Rauch (Blau)</German>
             <Korean>드론40 연막 (청색)</Korean>
             <Japanese>ドローン40 発煙弾 (青)</Japanese>
         </Key>
@@ -618,7 +650,7 @@
             <French>Drone40 Fumée (Vert)</French>
             <Spanish>Drone40 Humo (Verde)</Spanish>
             <Italian>Drone40 Smoke (Verde)</Italian>
-            <German>Drone40 Smoke (Grün)</German>
+            <German>Drone40 Rauch (Grün)</German>
             <Korean>드론40 연막 (녹색)</Korean>
             <Japanese>ドローン40 発煙弾 (緑)</Japanese>
         </Key>
@@ -636,7 +668,7 @@
             <French>Drone40 Fumée (Orange)</French>
             <Spanish>Drone40 Humo (Naranja)</Spanish>
             <Italian>Drone40 Smoke (Arancione)</Italian>
-            <German>Drone40 Smoke (Orange)</German>
+            <German>Drone40 Rauch (Orange)</German>
             <Korean>드론40 연막 (주황색)</Korean>
             <Japanese>ドローン40 発煙弾 (橙)</Japanese>
         </Key>
@@ -645,7 +677,7 @@
             <French>Drone40 Fumée (Rouge)</French>
             <Spanish>Drone40 Humo (Rojo)</Spanish>
             <Italian>Drone40 Smoke (Rosso)</Italian>
-            <German>Drone40 Smoke (Rot)</German>
+            <German>Drone40 Rauch (Rot)</German>
             <Korean>드론40 연막 (적색)</Korean>
             <Japanese>ドローン40 発煙弾 (赤)</Japanese>
         </Key>
@@ -654,7 +686,7 @@
             <French>Drone40 Fumée (Blanc)</French>
             <Spanish>Drone40 Humo (Blanco)</Spanish>
             <Italian>Drone40 Smoke (Bianco)</Italian>
-            <German>Drone40 Smoke (Weiß)</German>
+            <German>Drone40 Rauch (Weiß)</German>
             <Korean>드론40 연막 (백색)</Korean>
             <Japanese>ドローン40 発煙弾 (白)</Japanese>
         </Key>
@@ -677,17 +709,25 @@
             <Russian>Пожарная машина HEMTT</Russian>
             <German>HEMTT-Löschfahrzeug</German>
             <Korean>HEMTT 소방트럭</Korean>
-            <Japanese>HEMTT 消防車</Japanese>
+            <Japanese>HEMTT (消防車)</Japanese>
             <Chinesesimp>HEMTT 消防卡车</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_cargo_Name">
+            <English>Typhoon Cargo</English>
+            <French>Typhoon Cargo</French>
+            <Italian>Typhoon Carico</Italian>
+            <German>Typhoon Fracht</German>
+            <Korean>타이푼 화물</Korean>
+            <Japanese>タイフーン (貨物)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_truck_03_water_Name">
             <English>Typhoon Water</English>
             <French>Typhoon Water</French>
             <Spanish>Typhoon Water</Spanish>
             <Italian>Typhoon Acqua</Italian>
-            <German>Typhoon Water</German>
+            <German>Typhoon Wasser</German>
             <Korean>타이푼 급수</Korean>
-            <Japanese>タイフーン 給水</Japanese>
+            <Japanese>タイフーン (給水車)</Japanese>
         </Key>
         <Key ID="STR_ACE_Compat_RF_RealisticNames_twinmortar_Name">
             <English>AMOS Container</English>

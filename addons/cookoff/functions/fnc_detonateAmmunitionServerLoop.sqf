@@ -41,7 +41,8 @@ if (
     {private _posASL = getPosWorld _object; surfaceIsWater _posASL && {(_posASL select 2) < 0}} || // Underwater is not very reliable, so use model center instead
     {GVAR(ammoCookoffDuration) == 0} ||
     {!([GVAR(enableAmmoCookoff), GVAR(enableAmmobox)] select (_object isKindOf "ReammoBox_F"))} ||
-    {!(_object getVariable [QGVAR(enableAmmoCookoff), true])}
+    {!(_object getVariable [QGVAR(enableAmmoCookoff), true])} ||
+    {_object getVariable [QGVAR(interruptAmmoCookoff), false]} // QGVAR(interruptAmmoCookoff) stops the current cook-off (allowing future ones), whereas QGVAR(enableAmmoCookoff) disables it entirely
 ) exitWith {
     // Box cook-off fire ends after the ammo has detonated (vehicle cook-off fire does not depend on the ammo detonation)
     if (_object isKindOf "ReammoBox_F") then {
@@ -63,6 +64,7 @@ if (
     // Reset variables, so the object can detonate its ammo again
     _object setVariable [QGVAR(cookoffMagazines), nil];
     _object setVariable [QGVAR(virtualMagazines), nil];
+    _object setVariable [QGVAR(interruptAmmoCookoff), nil, true];
     _object setVariable [QGVAR(isAmmoDetonating), nil, true];
 
     // If done, destroy the object if necessary
@@ -74,6 +76,11 @@ if (
 private _magazineIndex = floor random (count _magazines);
 private _magazine = _magazines select _magazineIndex;
 _magazine params ["_magazineClassname", "_ammoCount", "_spawnProjectile", "_magazineInfo"];
+
+// If we disabled projectiles in settings, we exit the current scope
+if (!GVAR(cookoffEnableProjectiles)) then {
+    _spawnProjectile = false;
+};
 
 // Make sure ammo is at least 0
 _ammoCount = _ammoCount max 0;
@@ -118,7 +125,7 @@ if (_removeAmmoDuringCookoff) then {
             _magazineIndex = _virtualAmmo findIf {(_x select 0) == _magazineClassname};
 
             if (_magazineIndex == -1) exitWith {
-                TRACE_1("no virtual magazine",_magazineClass);
+                TRACE_1("no virtual magazine",_magazineClassname);
             };
 
             if (_newAmmoCount <= 0) then {
@@ -181,14 +188,14 @@ private _fnc_spawnProjectile = {
 
 switch (_simType) do {
     case "shotbullet": {
-        [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
+        if (GVAR(cookoffEnableSound)) then { [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent; };
 
         if (random 1 < 0.6) then {
             true call _fnc_spawnProjectile;
         };
     };
     case "shotshell": {
-        [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
+        if (GVAR(cookoffEnableSound)) then { [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent; };
 
         if (random 1 < 0.15) then {
             true call _fnc_spawnProjectile;
@@ -205,10 +212,12 @@ switch (_simType) do {
     case "shotmissile";
     case "shotsubmunitions": {
         if (random 1 < 0.1) then {
-            [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
+            if (GVAR(cookoffEnableSound)) then { [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent; };
 
             (random 1 < 0.3) call _fnc_spawnProjectile;
         } else {
+            // We re-check the cookoffEnableProjectiles because this case is not running the _spawnProjectile function
+            if (!GVAR(cookoffEnableProjectiles)) exitWith {};
             createVehicle ["ACE_ammoExplosionLarge", _object modelToWorld _effect2pos, [], 0 , "CAN_COLLIDE"];
         };
     };

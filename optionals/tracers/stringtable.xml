@@ -29,6 +29,7 @@
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_red_description">
                 <English>Caliber: 5.8x42 mm Tracer - Red&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
                 <Czech>Kalibr: 5.8×42 mm Stopovka - Červená&lt;br /&gt;Nábojů: 100&lt;br /&gt;Použito v: CAR-95-1</Czech>
+                <French>Calibre: 5.8x42 mm Tracant - Rouge&lt;br /&gt;Munitions: 100&lt;br /&gt;Utilisé dans: CAR-95-1</French>
                 <Spanish>Calibre: 5.8x42 mm Trazadora - Roja&lt;br /&gt;Cartuchos: 100&lt;br /&gt;Usada en: CAR-95-1</Spanish>
                 <Italian>Calibro: 5.8x42 mm Tracciante - Rosso&lt;br /&gt;Colpi: 100&lt;br /&gt;Usati in: CAR-95-1</Italian>
                 <Portuguese>Calibre: 5.8x42 mm Tracejante - Vermelho&lt;br/&gt;Balas:100&lt;br/&gt;Usado em CAR-95-1</Portuguese>
@@ -41,6 +42,7 @@
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_yellow">
                 <English>5.8 mm 100Rnd Tracer (Yellow) Mag</English>
                 <Czech>5.8 mm 100 ranný zásobník, stopovka (Žlutá)</Czech>
+                <French>Chargeur 100 coups 5,8 mm traçant (Jaune)</French>
                 <Spanish>Cargador de 100 Cartuchos 5.8 mm Trazadora (Amarilla)</Spanish>
                 <Italian>5.8mm 100Colpi Traccianti (gialli) Caricatore</Italian>
                 <Portuguese>Magazine 5.8 mm 100 balas tracejantes (amarelo)</Portuguese>
@@ -53,6 +55,7 @@
             <Key ID="STR_ACE_Tracers_100Rnd_580x42_Drum_tracer_yellow_description">
                 <English>Caliber: 5.8x42 mm Tracer - Yellow&lt;br /&gt;Rounds: 100&lt;br /&gt;Used in: CAR-95-1</English>
                 <Czech>Kalibr: 5.8×42 mm Stopovka - Žlutá&lt;br /&gt;Nábojů: 100&lt;br /&gt;Použito v: CAR-95-1</Czech>
+                <French>Calibre: 5,8x42 mm traçante - jaune&lt;br /&gt;Balles: 100&lt;br /&gt;Utilisé dans : CAR-95-1</French>
                 <Spanish>Calibre: 5.8x42 mm Trazadora - Amarilla&lt;br /&gt;Cartuchos: 100&lt;br /&gt;Usada en: CAR-95-1</Spanish>
                 <Italian>Calibro: 5.8x42 mm Traccianti - Gialli&lt;br /&gt;Colpi: 100&lt;br /&gt;Usati in: CAR-95-1</Italian>
                 <Portuguese>Calibre: 5.8x42 mm Tracejante - Amarelo&lt;br/&gt;Balas:100&lt;br/&gt;Usado em CAR-95-1</Portuguese>
@@ -766,6 +769,7 @@
             <Key ID="STR_ACE_Tracers_30Rnd_65x39_mx_yellow_description">
                 <English>Caliber: 6.5x39 mm Tracer - Yellow&lt;br /&gt;Rounds: 30&lt;br /&gt;Used in: MX/C/M/SW/3GL</English>
                 <Czech>Kalibr: 6.5×39 mm Stopovka - Žlutá&lt;br /&gt;Nábojů: 30&lt;br /&gt;Použito v: MX/C/M/SW/3GL</Czech>
+                <French>Calibre: 6.5x39 mm trace lumineuse de rechargement - jaune&lt;br /&gt;Cartouches: 30&lt;br /&gt;Utilisé avec: MX/C/M/SW/3GL</French>
                 <Spanish>Calibre: 6.5x39 mm Trazadora - Amarilla&lt;br /&gt;Cartuchos: 30&lt;br /&gt;Usada en: MX/C/M/SW/3GL</Spanish>
                 <Italian>Calibro: 6.5x39 mm Tracciante - Giallo&lt;br /&gt;Colpi: 30&lt;br /&gt;Usati in: MX/C/M/SW/3GL</Italian>
                 <Portuguese>Calibre: 6.5x39 mm Tracejante - Amarelo&lt;br/&gt;Balas:30&lt;br/&gt;Usado em: MX/C/M/SW/3GL</Portuguese>

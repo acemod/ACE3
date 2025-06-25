@@ -77,7 +77,7 @@ if (GVAR(currentApplicationPage) == APP_MODE_MARK) then {
     //not backed up for displayMode swap, not a big deal
 
 
-    if ((count GVAR(newWaypointPosition)) == 0) then {
+    if (GVAR(newWaypointPosition) isEqualTo []) then {
         (_display displayCtrl IDC_MODEMARK_HEADER) ctrlSetText (localize LSTRING(wpEnterCords));
         (_display displayCtrl IDC_MODEMARK_CORDSEDIT) ctrlSetText "";
     } else {

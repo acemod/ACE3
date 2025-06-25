@@ -15,4 +15,4 @@
  * Public: Yes
  */
 
-(count (_this call FUNC(getPlacedExplosives)) > 0)
+(count (call FUNC(getPlacedExplosives)) > 0)

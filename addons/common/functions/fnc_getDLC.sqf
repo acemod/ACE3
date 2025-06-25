@@ -4,7 +4,7 @@
  * Get the DLC information of a class.
  *
  * Arguments:
- * 0: Classname <STRING> or Config <CONFIG>
+ * 0: Classname or Config <STRING or CONFIG>
  * 1: Config root, searches if unspecified or null <CONFIG> (default: configNull)
  *
  * Return Value:
@@ -63,6 +63,10 @@ private _name = switch (_id) do {
     case "2647760": { "RF" };
     case "2647830": { "EF" };
     default { "" };
+};
+
+if !(_id isEqualType 0) then {
+    _id = parseNumber _id;
 };
 
 [_name, _id]

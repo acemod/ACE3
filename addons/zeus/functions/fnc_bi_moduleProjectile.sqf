@@ -110,7 +110,7 @@ if (_activated) then {
                 } forEach allPlayers;
             };
         };
-        if (count _hint > 0 && {count objectCurators _logic > 0}) then {
+        if (count _hint > 0 && {objectCurators _logic isNotEqualTo []}) then {
             [[_hint,nil,nil,nil,nil,nil,nil,true],"bis_fnc_advHint",objectCurators _logic] call bis_fnc_mp;
         };
         if (count _velocity == 3) then {
@@ -164,7 +164,7 @@ if (_activated) then {
             };
             deleteVehicle _projectile;
             deleteVehicle _soundSource;
-            if (count objectCurators _logic > 0) then {
+            if (objectCurators _logic isNotEqualTo []) then {
 
                 //--- Delete curator spawned logic
                 if (_shakeStrength > 0) then {

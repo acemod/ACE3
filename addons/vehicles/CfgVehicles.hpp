@@ -69,15 +69,15 @@ class CfgVehicles {
     };
 
     class APC_Tracked_01_base_F: Tank_F {
-        fuelCapacity = QUOTE(500 * FUEL_FACTOR);
+        fuelCapacity = 500 * FUEL_FACTOR;
     };
 
     class APC_Tracked_02_base_F: Tank_F {
-        fuelCapacity = QUOTE(600 * FUEL_FACTOR); // NO FUCKING DATA
+        fuelCapacity = 600 * FUEL_FACTOR; // NO FUCKING DATA
     };
 
     class APC_Tracked_03_base_F: Tank_F {
-        fuelCapacity = QUOTE(660 * FUEL_FACTOR);
+        fuelCapacity = 660 * FUEL_FACTOR;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 weapons[] = {"autocannon_30mm","ACE_LMG_coax_L94A1_mem3"}; // Base 1.82: "autocannon_30mm","LMG_coax"
@@ -86,7 +86,7 @@ class CfgVehicles {
     };
 
     class MBT_03_base_F: Tank_F {
-        fuelCapacity = QUOTE(550 * FUEL_FACTOR);
+        fuelCapacity = 550 * FUEL_FACTOR;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 weapons[] = {"cannon_120mm_long","ACE_LMG_coax_MAG58_mem3"}; // Base 1.82: "cannon_120mm_long","LMG_coax"
@@ -95,7 +95,7 @@ class CfgVehicles {
     };
 
     class MBT_01_base_F: Tank_F {
-        fuelCapacity = QUOTE(500 * FUEL_FACTOR);
+        fuelCapacity = 500 * FUEL_FACTOR;
         class Turrets: Turrets {
             class MainTurret: MainTurret {
                 weapons[] = {"cannon_120mm", "ACE_LMG_coax_MAG58_mem3"}; // Base 1.82: "cannon_120mm","LMG_coax"
@@ -116,7 +116,7 @@ class CfgVehicles {
 
 
     class MBT_02_base_F: Tank_F {
-        fuelCapacity = QUOTE(600 * FUEL_FACTOR); // again, couldn't find proper data
+        fuelCapacity = 600 * FUEL_FACTOR; // again, couldn't find proper data
     };
 
 
@@ -148,15 +148,15 @@ class CfgVehicles {
     class Truck_F: Car_F {};
 
     class MRAP_01_base_F: Car_F {
-        fuelCapacity = QUOTE(510 * FUEL_FACTOR);
+        fuelCapacity = 510 * FUEL_FACTOR;
     };
 
     class MRAP_02_base_F: Car_F {
-        fuelCapacity = QUOTE(500 * FUEL_FACTOR); // couldn't find any data for the punisher
+        fuelCapacity = 500 * FUEL_FACTOR; // couldn't find any data for the punisher
     };
 
     class MRAP_03_base_F: Car_F {
-        fuelCapacity = QUOTE(860 * FUEL_FACTOR);
+        fuelCapacity = 860 * FUEL_FACTOR;
         smokeLauncherGrenadeCount = 3;
         smokeLauncherAngle = 80;
         class Turrets: Turrets {
@@ -187,19 +187,19 @@ class CfgVehicles {
     };
 
     class Truck_01_base_F: Truck_F {
-        fuelCapacity = QUOTE(644 * FUEL_FACTOR);
+        fuelCapacity = 644 * FUEL_FACTOR;
     };
 
     class Truck_02_base_F: Truck_F {
-        fuelCapacity = QUOTE(1100 * FUEL_FACTOR);
+        fuelCapacity = 1100 * FUEL_FACTOR;
     };
 
     class Truck_03_base_F: Truck_F {
-        fuelCapacity = QUOTE(900 * FUEL_FACTOR); // NO. FUCKING. DATA.
+        fuelCapacity = 900 * FUEL_FACTOR; // NO. FUCKING. DATA.
     };
 
     class APC_Wheeled_01_base_F: Wheeled_APC_F {
-        fuelCapacity = QUOTE(800 * FUEL_FACTOR);
+        fuelCapacity = 800 * FUEL_FACTOR;
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };
@@ -214,11 +214,11 @@ class CfgVehicles {
     };
 
     class APC_Wheeled_02_base_F: Wheeled_APC_F {
-        fuelCapacity = QUOTE(700 * FUEL_FACTOR);
+        fuelCapacity = 700 * FUEL_FACTOR;
     };
 
     class APC_Wheeled_03_base_F: Wheeled_APC_F {
-        fuelCapacity = QUOTE(700 * FUEL_FACTOR);
+        fuelCapacity = 700 * FUEL_FACTOR;
         class Turrets: Turrets {
             class MainTurret: MainTurret {};
         };

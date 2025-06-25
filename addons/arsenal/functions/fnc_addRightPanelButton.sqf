@@ -5,7 +5,7 @@
  * Adds a right panel button for uniforms, vests and backpacks with defined misc. items.
  *
  * Arguments:
- * 0: Items, must be misc items <ARRAY of STRINGS>
+ * 0: Items, must be misc items <ARRAY of STRINGs>
  * 1: Tooltip <STRING> (default: "")
  * 2: Picture path <STRING> (default: QPATHTOF(data\iconCustom.paa))
  * 3: Override a specific button (0-9) <NUMBER> (default: -1)
@@ -51,7 +51,7 @@ private _currentButtonInPosition = GVAR(customRightPanelButtons) select _positio
 if (!isNil "_currentButtonInPosition") then {
     _currentButtonInPosition params ["_cbItems", "_cbPicture", "_cbTooltip", "_cbMove"];
     if (_cbMove) then {
-        [{_this call FUNC(addRightPanelButton)}, [_cbItems, _cbTooltip, _cbPicture, -1, _cbMove]] call CBA_fnc_execNextFrame;
+        [{call FUNC(addRightPanelButton)}, [_cbItems, _cbTooltip, _cbPicture, -1, _cbMove]] call CBA_fnc_execNextFrame;
     };
 };
 

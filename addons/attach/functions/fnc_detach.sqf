@@ -46,7 +46,7 @@ if (isNull _attachedObject || {_itemName == ""}) exitWith {ERROR("Could not find
 private _isChemlight = _attachedObject isKindOf "Chemlight_base";
 
 // Exit if can't add the item
-if (!([_unit, _itemName] call CBA_fnc_canAddItem) && {!_isChemlight}) exitWith {
+if (!_isChemlight && {!(_unit canAdd [_itemName, 1, true])}) exitWith {
     [LELSTRING(common,Inventory_Full)] call EFUNC(common,displayTextStructured);
 };
 

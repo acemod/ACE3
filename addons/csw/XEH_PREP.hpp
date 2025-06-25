@@ -34,3 +34,6 @@ PREP(reload_loadMagazine);
 
 PREP(initVehicle);
 PREP(staticWeaponInit_unloadExtraMags);
+
+PREP(statTextCondition_tripods);
+PREP(statTextStatement_tripods);

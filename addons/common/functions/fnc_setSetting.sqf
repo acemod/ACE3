@@ -1,4 +1,3 @@
-#define DEBUG_MODE_FULL
 #include "..\script_component.hpp"
 /*
  * Author: esteldunedain
@@ -9,8 +8,8 @@
  * Arguments:
  * 0: Setting name <STRING>
  * 1: Value <ANY>
- * 2: Force it? (default: false) <BOOL>
- * 3: Broadcast the change to all clients (default: false) <BOOL>
+ * 2: Force it? <BOOL> (default: false)
+ * 3: Broadcast the change to all clients <BOOL> (default: false)
  *
  * Return Value:
  * None

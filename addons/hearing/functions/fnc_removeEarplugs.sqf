@@ -21,7 +21,7 @@ if (!GVAR(enableCombatDeafness)) exitWith {};
 params ["_unit", ["_displayHint", false]];
 
 // Inventory full
-if !([_unit, "ACE_EarPlugs"] call CBA_fnc_canAddItem) exitWith {
+if !(_unit canAdd ["ACE_EarPlugs", 1, true]) exitWith {
     [LELSTRING(common,Inventory_Full)] call EFUNC(common,displayTextStructured);
 };
 
@@ -36,5 +36,4 @@ if (_displayHint) then {
 
 // Force an immediate volume update
 true call FUNC(updateVolume);
-
-UPDATE_HEARING_EARPLUGS call FUNC(updateHearingProtection);
+UPDATE_HEARING call FUNC(updateHearingProtection);

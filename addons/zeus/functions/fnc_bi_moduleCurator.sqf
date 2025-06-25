@@ -318,7 +318,7 @@ if (_activated) then {
             waitUntil {alive player};
 
             // Show warning when Zeus key is not assigned
-            if (count (actionKeys "curatorInterface") == 0) then {
+            if ((actionKeys "curatorInterface") isEqualTo []) then {
                 [
                     format [
                         localize "str_a3_cfgvehicles_modulecurator_f_keyNotAssigned",
@@ -343,11 +343,11 @@ if (_activated) then {
         };
 
         // Add local event handlers
-        _logic addEventHandler ["CuratorFeedbackMessage",{_this call bis_fnc_showCuratorFeedbackMessage;}];
-        _logic addEventHandler ["CuratorPinged",{_this call bis_fnc_curatorPinged;}];
-        _logic addEventHandler ["CuratorObjectPlaced",{_this call bis_fnc_curatorObjectPlaced;}];
-        _logic addEventHandler ["CuratorObjectEdited",{_this call bis_fnc_curatorObjectEdited;}];
-        _logic addEventHandler ["CuratorWaypointPlaced",{_this call bis_fnc_curatorWaypointPlaced;}];
+        _logic addEventHandler ["CuratorFeedbackMessage",{call bis_fnc_showCuratorFeedbackMessage;}];
+        _logic addEventHandler ["CuratorPinged",{call bis_fnc_curatorPinged;}];
+        _logic addEventHandler ["CuratorObjectPlaced",{call bis_fnc_curatorObjectPlaced;}];
+        _logic addEventHandler ["CuratorObjectEdited",{call bis_fnc_curatorObjectEdited;}];
+        _logic addEventHandler ["CuratorWaypointPlaced",{call bis_fnc_curatorWaypointPlaced;}];
 
         _logic addEventHandler ["CuratorObjectDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];
         _logic addEventHandler ["CuratorGroupDoubleClicked",{(_this select 1) call bis_fnc_showCuratorAttributes;}];

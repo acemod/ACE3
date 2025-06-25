@@ -51,8 +51,8 @@ if (_target isKindOf "CAManBase") then {
 // Add drop action
 _unit setVariable [QGVAR(releaseActionID), [
     _unit, "DefaultAction",
-    {!isNull ((_this select 0) getVariable [QGVAR(carriedObject), objNull])},
-    {[_this select 0, (_this select 0) getVariable [QGVAR(carriedObject), objNull], true] call FUNC(dropObject_carry)}
+    {!isNull ((_this select 1) getVariable [QGVAR(carriedObject), objNull])},
+    {[_this select 1, (_this select 1) getVariable [QGVAR(carriedObject), objNull], true] call FUNC(dropObject_carry)}
 ] call EFUNC(common,addActionEventHandler)];
 
 // Add anim changed EH

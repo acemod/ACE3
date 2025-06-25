@@ -7,12 +7,13 @@
  * 0: Unit <OBJECT>
  *
  * Return Value:
- * IVs <ARRAY of ARRAY>:
+ * IVs <ARRAY of ARRAYs>:
  *    0: IV volume remaining, in liters <STRING>
  *    1: IV type (blood, saline, plasma, etc) <STRING>
- *    2: Body part IV is attached to <STRING>
- *    3: IV classname <STRING>
+ *    2: IV body part <STRING>
+ *    3: IV treatment classname <STRING>
  *    4: IV flow rate coef <NUMBER>
+ *    5: IV item classname <STRING>
  *
  * Example:
  * player call ace_medical_fnc_getIVs
@@ -37,7 +38,16 @@ if !(_unit isKindOf "CAManBase") exitWith {
 private _ivBags = [];
 
 {
-    _ivBags pushBack +_x; // manual deep copy so modification doesn't affect unit state
+    _x params ["_bagVolume", "_bagType", "_bodyPartIndex", "_treatment", "_rateCoef", "_bagItem"]; // gotta convert body part index back to the part
+
+    _ivBags pushBack [
+        _bagVolume,
+        _bagType,
+        ALL_BODY_PARTS select _bodyPartIndex,
+        _treatment,
+        _rateCoef,
+        _bagItem
+    ];
 } forEach (_unit getVariable [QGVAR(ivBags), []]);
 
 _ivBags

@@ -1,11 +1,10 @@
 #include "..\script_component.hpp"
 /*
  * Author: PabstMirror
- *
- * Makes a unit drop items
+ * Makes a unit drop items.
  *
  * Arguments:
- * 0: Caller (player) <OBJECT>
+ * 0: Caller <OBJECT>
  * 1: Target <OBJECT>
  * 2: Classnames <ARRAY>
  * 3: Do Not Drop Ammo <BOOL> (default: false)
@@ -21,30 +20,24 @@
 
 #define TIME_MAX_WAIT 5
 
-params ["_caller", "_target", "_listOfItemsToRemove", ["_doNotDropAmmo", false, [false]]]; //By default units drop all weapon mags when dropping a weapon
+params ["_caller", "_target", "_listOfItemsToRemove", ["_doNotDropAmmo", false]]; // By default units drop all weapon mags when dropping a weapon
 
-private _fncSumArray = {
-    private _return = 0;
-    {_return = _return + _x;} count (_this select 0);
-    _return
-};
-
-//Sanity Checks
-if !([_target] call FUNC(canBeDisarmed)) exitWith {
+// Sanity Checks
+if !(_target call FUNC(canBeDisarmed)) exitWith {
     [_caller, _target, "Debug: Cannot disarm target"] call FUNC(eventTargetFinish);
 };
-if (_doNotDropAmmo && {({_x in _listOfItemsToRemove} count (magazines _target)) > 0}) exitWith {
+if (_doNotDropAmmo && {_listOfItemsToRemove findAny (magazines _target) != -1}) exitWith {
     [_caller, _target, "Debug: Trying to drop magazine with _doNotDropAmmo flag"] call FUNC(eventTargetFinish);
 };
 
 private _holder = objNull;
 
-// if _target is in a vehicle, use vehicle inventory as container
+// If _target is in a vehicle, use vehicle inventory as container
 if (!isNull objectParent _target) then {
     _holder = objectParent _target;
 };
 
-//If not dropping ammo, don't use an existing container
+// If not dropping ammo, don't use an existing container
 if (!_doNotDropAmmo) then {
     {
         if ((_x getVariable [QGVAR(disarmUnit), objNull]) == _target) exitWith {
@@ -53,34 +46,33 @@ if (!_doNotDropAmmo) then {
     } forEach ((getPos _target) nearObjects [DISARM_CONTAINER, 3]);
 };
 
-//Create a new weapon holder
+// Create a new weapon holder
 if (isNull _holder) then {
-    private _dropPos = _target modelToWorld [0.4, 0.75, 0]; //offset someone unconscious isn't lying over it
-    _dropPos set [2, ((getPosASL _target) select 2)];
+    private _dropPos = _target modelToWorld [0.4, 0.75, 0]; // Offset someone unconscious isn't lying over it
+    _dropPos set [2, (getPosASL _target) select 2];
     _holder = createVehicle [DISARM_CONTAINER, _dropPos, [], 0, "CAN_COLLIDE"];
     _holder setPosASL _dropPos;
     _holder setVariable [QGVAR(disarmUnit), _target, true];
 };
 
-//Verify holder created
+// Verify holder created
 if (isNull _holder) exitWith {
     [_caller, _target, "Debug: Null Holder"] call FUNC(eventTargetFinish);
 };
-//Make sure only one drop operation at a time (using PFEH system as a queue)
+// Make sure only one drop operation at a time (using PFH system as a queue)
 if (_holder getVariable [QGVAR(holderInUse), false]) exitWith {
-    [{
-        _this call FUNC(disarmDropItems);
-    }, _this] call CBA_fnc_execNextFrame;
+    [FUNC(disarmDropItems), _this] call CBA_fnc_execNextFrame;
 };
 _holder setVariable [QGVAR(holderInUse), true];
 
-//Remove Magazines
+// Remove Magazines
+private _cfgMagazines = configFile >> "CfgMagazines";
 private _targetMagazinesStart = magazinesAmmo _target;
 private _holderMagazinesStart = magazinesAmmoCargo _holder;
 
 {
     _x params ["_xClassname", "_xAmmo"];
-    if ((_xClassname in _listOfItemsToRemove) && {(getNumber (configFile >> "CfgMagazines" >> _xClassname >> "ACE_isUnique")) == 0}) then {
+    if ((_xClassname in _listOfItemsToRemove) && {(getNumber (_cfgMagazines >> _xClassname >> "ACE_isUnique")) == 0}) then {
         _holder addMagazineAmmoCargo [_xClassname, 1, _xAmmo];
         _target removeMagazine _xClassname;
     };
@@ -89,26 +81,25 @@ private _holderMagazinesStart = magazinesAmmoCargo _holder;
 private _targetMagazinesEnd = magazinesAmmo _target;
 private _holderMagazinesEnd = magazinesAmmoCargo _holder;
 
-//Verify Mags dropped from unit:
-if (({((_x select 0) in _listOfItemsToRemove) && {(getNumber (configFile >> "CfgMagazines" >> (_x select 0) >> "ACE_isUnique")) == 0}} count _targetMagazinesEnd) != 0) exitWith {
+// Verify Mags dropped from unit
+if (_targetMagazinesEnd findIf {((_x select 0) in _listOfItemsToRemove) && {(getNumber (_cfgMagazines >> _x select 0 >> "ACE_isUnique")) == 0}} != -1) exitWith {
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Didn't Remove Magazines"] call FUNC(eventTargetFinish);
 };
-//Verify holder has mags unit had
+// Verify holder has mags unit had
 if !([_targetMagazinesStart, _targetMagazinesEnd, _holderMagazinesStart, _holderMagazinesEnd] call FUNC(verifyMagazinesMoved)) then {
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Crate Magazines not in holder"] call FUNC(eventTargetFinish);
 };
 
-//Remove Items, Assigned Items and NVG
+// Remove Items, Assigned Items and NVG
 private _holderItemsStart = getItemCargo _holder;
 private _targetItemsStart = (assignedItems _target) + (items _target) - (weapons _target);
 if ((headgear _target) != "") then {_targetItemsStart pushBack (headgear _target);};
 if ((goggles _target) != "") then {_targetItemsStart pushBack (goggles _target);};
 
+private _addToCrate = createHashMap;
 
-private _addToCrateClassnames = [];
-private _addToCrateCount = [];
 {
     if (_x in _listOfItemsToRemove) then {
         if (_x in (items _target)) then {
@@ -116,85 +107,95 @@ private _addToCrateCount = [];
         } else {
             _target unlinkItem _x;
         };
-        private _index = _addToCrateClassnames find _x;
-        if (_index != -1) then {
-            _addToCrateCount set [_index, ((_addToCrateCount select _index) + 1)];
-        } else {
-            _addToCrateClassnames pushBack _x;
-            _addToCrateCount pushBack 1;
-        };
+
+        _addToCrate set [_x, (_addToCrate getOrDefault [_x, 0]) + 1];
     };
 } forEach _targetItemsStart;
 
-//Add the items to the holder (combined to reduce addItemCargoGlobal calls)
+private _addToCrateTotal = 0;
+
+// Add the items to the holder (combined to reduce addItemCargoGlobal calls)
 {
-    _holder addItemCargoGlobal [(_addToCrateClassnames select _forEachIndex), (_addToCrateCount select _forEachIndex)];
-} forEach _addToCrateClassnames;
+    _holder addItemCargoGlobal [_x, _y];
+    _addToCrateTotal = _addToCrateTotal + _y;
+} forEach _addToCrate;
 
 private _holderItemsEnd = getItemCargo _holder;
 private _targetItemsEnd = (assignedItems _target) + (items _target) - (weapons _target);
 if ((headgear _target) != "") then {_targetItemsEnd pushBack (headgear _target);};
 if ((goggles _target) != "") then {_targetItemsEnd pushBack (goggles _target);};
 
-//Verify Items Added
-if (((count _targetItemsStart) - (count _targetItemsEnd)) != ([_addToCrateCount] call _fncSumArray)) exitWith {
+// Verify Items Added
+if (((count _targetItemsStart) - (count _targetItemsEnd)) != _addToCrateTotal) exitWith {
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Items Not Removed From Player"] call FUNC(eventTargetFinish);
 };
-if ((([_holderItemsEnd select 1] call _fncSumArray) - ([_holderItemsStart select 1] call _fncSumArray)) != ([_addToCrateCount] call _fncSumArray)) exitWith {
+
+private _fncSumArray = {
+    private _return = 0;
+
+    {
+        _return = _return + _x;
+    } forEach _this;
+
+    _return
+};
+
+if ((((_holderItemsEnd select 1) call _fncSumArray) - ((_holderItemsStart select 1) call _fncSumArray)) != _addToCrateTotal) exitWith {
     _holder setVariable [QGVAR(holderInUse), false];
     [_caller, _target, "Debug: Items Not Added to Holder"] call FUNC(eventTargetFinish);
 };
 
-//Script drop uniforms/vest if empty
+// Script drop uniforms/vest if empty
 if (((uniform _target) != "") && {(uniform _target) in _listOfItemsToRemove} && {(uniformItems _target) isEqualTo []}) then {
-    _holder addItemCargoGlobal [(uniform _target), 1];
+    _holder addItemCargoGlobal [uniform _target, 1];
     removeUniform _target;
 };
 if (((vest _target) != "") && {(vest _target) in _listOfItemsToRemove} && {(vestItems _target) isEqualTo []}) then {
-    _holder addItemCargoGlobal [(vest _target), 1];
+    _holder addItemCargoGlobal [vest _target, 1];
     removeVest _target;
 };
 
-
-//If holder is still empty, it will be 'garbage collected' while we wait for the drop 'action' to take place
-//So add a dummy item and just remove at the end
-private _holderIsEmpty = ([_holder] call FUNC(getAllGearContainer)) isEqualTo [[],[]];
+// If holder is still empty, it will be 'garbage collected' while we wait for the drop 'action' to take place
+// So add a dummy item and just remove at the end
+private _holderIsEmpty = (_holder call FUNC(getAllGearContainer)) isEqualTo [[], []];
 if (_holderIsEmpty) then {
     TRACE_1("Debug: adding dummy item to holder",_holder);
     _holder addItemCargoGlobal [DUMMY_ITEM, 1];
 };
 
-//Start the PFEH to do the actions (which could take >1 frame)
+// Start the PFH to do the actions (which could take >1 frame)
 [{
-    params ["_args", "_pfID"];
+    params ["_args", "_pfhID"];
     _args params ["_caller", "_target", "_listOfItemsToRemove", "_holder", "_holderIsEmpty", "_maxWaitTime", "_doNotDropAmmo", "_startingMagazines"];
 
-    private _needToRemoveWeapon = ({_x in _listOfItemsToRemove} count (weapons _target)) > 0;
-    private _needToRemoveMagazines = ({_x in _listOfItemsToRemove} count (magazines _target)) > 0;
+    private _needToRemoveWeapon = _listOfItemsToRemove findAny (weapons _target) != -1;
+    private _needToRemoveMagazines = _listOfItemsToRemove findAny (magazines _target) != -1;
     private _needToRemoveBackpack = ((backpack _target) != "") && {(backpack _target) in _listOfItemsToRemove};
     private _needToRemoveVest = ((vest _target) != "") && {(vest _target) in _listOfItemsToRemove};
     private _needToRemoveUniform = ((uniform _target) != "") && {(uniform _target) in _listOfItemsToRemove};
 
-    if ((CBA_missionTime < _maxWaitTime) && {[_target] call FUNC(canBeDisarmed)} && {_needToRemoveWeapon || _needToRemoveMagazines || _needToRemoveBackpack}) then {
-        //action drop weapons (keeps loaded magazine and attachements)
+    if ((CBA_missionTime < _maxWaitTime) && {_target call FUNC(canBeDisarmed)} && {_needToRemoveWeapon || _needToRemoveMagazines || _needToRemoveBackpack}) then {
+        // Action drop weapons (keeps loaded magazine and attachements)
         {
             if (_x in _listOfItemsToRemove) then {
                 _target action ["DropWeapon", _holder, _x];
             };
         } forEach (weapons _target);
 
-        //Drop magazine (keeps unique ID)
+        // Drop magazine (keeps unique ID)
         {
             if (_x in _listOfItemsToRemove) then {
                 _target action ["DropMagazine", _holder, _x];
             };
         } forEach (magazines _target);
 
-        //Drop backpack (Keeps variables for ACRE/TFR)
-        if (_needToRemoveBackpack) then {_target action ["DropBag", _holder, (backpack _target)];};
+        // Drop backpack (Keeps variables for ACRE/TFR)
+        if (_needToRemoveBackpack) then {
+            _target action ["DropBag", _holder, backpack _target];
+        };
     } else {
-        [_pfID] call CBA_fnc_removePerFrameHandler;
+        _pfhID call CBA_fnc_removePerFrameHandler;
 
         if (_doNotDropAmmo) then {
             private _error = false;
@@ -213,8 +214,8 @@ if (_holderIsEmpty) then {
                 _magazinesInHolder deleteAt _index;
             } forEach _magsToPickup;
 
-            //No Error (all the ammo in the container is ammo we should have);
-            if ((!_error) && {_magazinesInHolder isEqualTo []}) then {
+            // No Error (all the ammo in the container is ammo we should have);
+            if (!_error && {_magazinesInHolder isEqualTo []}) then {
                 {
                     _target addMagazine _x;
                 } forEach (magazinesAmmoCargo _holder);
@@ -222,8 +223,8 @@ if (_holderIsEmpty) then {
             };
         };
 
-        //If we added a dummy item, remove it now
-        if (_holderIsEmpty && {(getItemCargo _holder) isNotEqualTo [[DUMMY_ITEM],[1]]}) exitWith {
+        // If we added a dummy item, remove it now
+        if (_holderIsEmpty && {(getItemCargo _holder) isNotEqualTo [[DUMMY_ITEM], [1]]}) exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Holder should only have dummy item"] call FUNC(eventTargetFinish);
         };
@@ -231,13 +232,13 @@ if (_holderIsEmpty) then {
             TRACE_1("Debug: removing dummy item from holder",_holder);
             clearItemCargoGlobal _holder;
         };
-        //Verify we didn't timeout waiting on drop action
+        // Verify we didn't timeout waiting on drop action
         if (CBA_missionTime >= _maxWaitTime)  exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Drop Actions Timeout"] call FUNC(eventTargetFinish);
         };
-        //If target lost disarm status:
-        if !([_target] call FUNC(canBeDisarmed)) exitWith {
+        // If target lost disarm status:
+        if !(_target call FUNC(canBeDisarmed)) exitWith {
             _holder setVariable [QGVAR(holderInUse), false];
             [_caller, _target, "Debug: Target cannot be disarmed"] call FUNC(eventTargetFinish);
         };
@@ -246,7 +247,7 @@ if (_holderIsEmpty) then {
             [_caller, _target, "Debug: Vest Not Empty"] call FUNC(eventTargetFinish);
         };
         if (_needToRemoveVest) then {
-            _holder addItemCargoGlobal [(vest _target), 1];
+            _holder addItemCargoGlobal [vest _target, 1];
             removeVest _target;
         };
         if (_needToRemoveUniform && {(uniformItems _target) isNotEqualTo []}) exitWith {
@@ -254,12 +255,11 @@ if (_holderIsEmpty) then {
             [_caller, _target, "Debug: Uniform Not Empty"] call FUNC(eventTargetFinish);
         };
         if (_needToRemoveUniform) then {
-            _holder addItemCargoGlobal [(uniform _target), 1];
+            _holder addItemCargoGlobal [uniform _target, 1];
             removeUniform _target;
         };
 
         _holder setVariable [QGVAR(holderInUse), false];
         [_caller, _target, ""] call FUNC(eventTargetFinish);
     };
-
-}, 0.0, [_caller,_target, _listOfItemsToRemove, _holder, _holderIsEmpty, (CBA_missionTime + TIME_MAX_WAIT), _doNotDropAmmo, _targetMagazinesEnd]] call CBA_fnc_addPerFrameHandler;
+}, 0, [_caller,_target, _listOfItemsToRemove, _holder, _holderIsEmpty, CBA_missionTime + TIME_MAX_WAIT, _doNotDropAmmo, _targetMagazinesEnd]] call CBA_fnc_addPerFrameHandler;
