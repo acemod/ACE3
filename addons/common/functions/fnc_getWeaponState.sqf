@@ -4,11 +4,11 @@
  * Return current state of the weapon. Attachments and magazines with ammo.
  *
  * Arguments:
- * 0: unit <OBJECT>
- * 1: weapon (optional, default: units current weapon) <STRING>
+ * 0: Unit <OBJECT>
+ * 1: Weapon <STRING> (default: Unit's current weapon)
  *
  * Return Value:
- * 0: Attachements <ARRAY>
+ * 0: Attachments <ARRAY>
  * 1: Muzzles <ARRAY>
  * 2: Magazines <ARRAY>
  * 3: Ammo <ARRAY>

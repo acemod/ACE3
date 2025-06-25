@@ -1,11 +1,11 @@
 #include "..\script_component.hpp"
 /*
  * Author: esteldunedain, based on Killzone-Kid code
- * Removes quotation marks to avoid exploits and optionally html tags from text to avoid conflicts with structured text.
+ * Removes quotation marks to avoid exploits and optionally HTML tags from text to avoid conflicts with structured text.
  *
  * Arguments:
  * 0: Source string <STRING>
- * 1: Remove html tags (default: false) <BOOL>
+ * 1: Remove HTML tags <BOOL> (default: false)
  *
  * Return Value:
  * Sanitized string <STRING>

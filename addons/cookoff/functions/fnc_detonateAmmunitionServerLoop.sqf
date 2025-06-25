@@ -77,6 +77,11 @@ private _magazineIndex = floor random (count _magazines);
 private _magazine = _magazines select _magazineIndex;
 _magazine params ["_magazineClassname", "_ammoCount", "_spawnProjectile", "_magazineInfo"];
 
+// If we disabled projectiles in settings, we exit the current scope
+if (!GVAR(cookoffEnableProjectiles)) then {
+    _spawnProjectile = false;
+};
+
 // Make sure ammo is at least 0
 _ammoCount = _ammoCount max 0;
 
@@ -183,14 +188,14 @@ private _fnc_spawnProjectile = {
 
 switch (_simType) do {
     case "shotbullet": {
-        [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
+        if (GVAR(cookoffEnableSound)) then { [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent; };
 
         if (random 1 < 0.6) then {
             true call _fnc_spawnProjectile;
         };
     };
     case "shotshell": {
-        [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
+        if (GVAR(cookoffEnableSound)) then { [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent; };
 
         if (random 1 < 0.15) then {
             true call _fnc_spawnProjectile;
@@ -207,10 +212,12 @@ switch (_simType) do {
     case "shotmissile";
     case "shotsubmunitions": {
         if (random 1 < 0.1) then {
-            [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent;
+            if (GVAR(cookoffEnableSound)) then { [QGVAR(playCookoffSound), [_object, _simType]] call CBA_fnc_globalEvent; };
 
             (random 1 < 0.3) call _fnc_spawnProjectile;
         } else {
+            // We re-check the cookoffEnableProjectiles because this case is not running the _spawnProjectile function
+            if (!GVAR(cookoffEnableProjectiles)) exitWith {};
             createVehicle ["ACE_ammoExplosionLarge", _object modelToWorld _effect2pos, [], 0 , "CAN_COLLIDE"];
         };
     };

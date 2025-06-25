@@ -1,5 +1,5 @@
 class EGVAR(arsenal,stats) {
-    class statBase;
+    class statBase {};
     class ACE_allowSwapBarrel: statBase {
         scope = 2;
         priority = -1;

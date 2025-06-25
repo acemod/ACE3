@@ -4,10 +4,13 @@
  * Custom wounds handler for armor penetration. Calculates damage based on round material penetration and unit armor
  *
  * Arguments:
- * 0: Unit That Was Hit <OBJECT>
+ * 0: Unit that was hit <OBJECT>
  * 1: Damage done to each body part <ARRAY>
+ *    0: Engine damage <NUMBER>
+ *    1: Body part <STRING>
+ *    2: Real damage <NUMBER>
  * 2: Type of the damage done <STRING>
- * 3: Projectile classname <STRING> (default: "")
+ * 3: Ammo <STRING>
  *
  * Return Value:
  * None
@@ -18,66 +21,60 @@
  * Public: No
  */
 
-// armor 2 with passthrough 0.8
-#define SCALED_UNPROTECTED_VALUE 4
-#define ENGINE_DAMAGE_INDEX 0
-
 // This gets close to vanilla values on FMJ ammo
 #define DAMAGE_SCALING_FACTOR 10
+#define UNSCALED_BASE_ARMOR 2
 
-// Based off #9216 armor values for vanilla vests
-#define ARMOR_LEVEL_1_CAP 12
-#define ARMOR_LEVEL_2_CAP 14
-#define ARMOR_LEVEL_3_CAP 16
-#define ARMOR_LEVEL_4_CAP 20
+if (!EGVAR(medical,alternateArmorPenetration)) exitWith {_this};
 
-params ["_unit", "_allDamages", "_typeOfDamage", ["_ammo", ""]];
-TRACE_3("woundsHandlerArmorPenetration",_unit,_allDamages,_typeOfDamage);
+params ["_unit", "_allDamages", "_typeOfDamage", "_ammo"];
+TRACE_4("woundsHandlerArmorPenetration",_unit,_allDamages,_typeOfDamage,_ammo);
 
-if !(EGVAR(medical,alternateArmorPenetration) && {_ammo isNotEqualTo ""}) exitWith {_this};
+// See (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber),
+// _penFactor is ammo "caliber" * RHA penetrability, armor plates according to BI are just made of RHAe material
+(_ammo call FUNC(getAmmoData)) params ["_hit", "_penFactor", "_typicalSpeed"];
 
-private _damageData = (_allDamages select 0); // selection specific
-_damageData params ["_engineDamage", "", "_realDamage"];
+// Skip bad ammo
+if (_hit <= 0) exitWith {_this};
 
-private _armor = (_realDamage/_engineDamage) - SCALED_UNPROTECTED_VALUE;
-// There's no need to calculate penetration if there is no armor to begin with, vanilla damage handling is good enough in this case
-if (_armor <= 0) exitWith {
+private _damageData = _allDamages select 0; // selection specific
+_damageData params ["_engineDamage", "_bodyPart", "_realDamage"];
+
+private _armorLevelStep = [2, 4] select (_bodyPart == "body");
+private _armor = (_realDamage/_engineDamage) - UNSCALED_BASE_ARMOR; // remove base armor
+
+// There's no need to calculate penetration if there is no armor to begin with, base damage handling is good enough in this case
+if (_armor <= _armorLevelStep) exitWith {
+    TRACE_3("skipping no armor",_armor,_bodyPart,_armorLevelStep);
     _this // return
 };
 
+// Cap at Armor Level V
+// Jumping from no armor to armor level 1 is 2 steps
+private _armorLevel = 0 max (round ((_armor - (_armorLevelStep * 2)) / _armorLevelStep)) min 4;
+TRACE_3("gotArmorLevel",_armorLevel,_armor,_armorLevelStep);
+
 // Armor RHA equivalent, non-linear, ref \a3\Data_F\Penetration\armour_plate/thin/medium/heavy.bisurf
 // Divided by 2 to keep inline with vanilla caliber values
-// Excedent armor over the cap gets added as a small bonus to thickness
-private _armorThickness = _armor/2;
-switch (true) do {
-    case (_armor >= ARMOR_LEVEL_4_CAP): {
-        _armorThickness = 55 - (ARMOR_LEVEL_4_CAP - _armor);
-    };
-    case (_armor >= ARMOR_LEVEL_3_CAP): {
-        _armorThickness = 40 - (ARMOR_LEVEL_3_CAP - _armor);
-    };
-    case (_armor >= ARMOR_LEVEL_2_CAP): {
-        _armorThickness = 15 - (ARMOR_LEVEL_2_CAP - _armor);
-    };
-    case (_armor >= ARMOR_LEVEL_1_CAP): {
-        _armorThickness = 6 - (ARMOR_LEVEL_1_CAP - _armor);
-    };
-};
-
-// See (https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#caliber),
-// _penFactor is ammo "caliber" * RHA penetrability, armor plates according to BI are just made of RHA with different thickness
-([_ammo] call FUNC(getAmmoData)) params ["_hit", "_penFactor", "_typicalSpeed"];
+private _armorThickness = [
+    6,
+    15,
+    21,
+    40,
+    55
+] select _armorLevel;
+TRACE_1("gotArmorThickness",_armorThickness);
 
 // Impact damage is hit * (impactSpeed / typicalSpeed): https://community.bistudio.com/wiki/CfgAmmo_Config_Reference#typicalSpeed
 // Impact damage is already lowered by engine based on hit angle, so speed and therefore penetration are also naturally lowered
-private _impactSpeed = (_realDamage/_hit) * _typicalSpeed;
+// Assume typicalSpeed < 1 means no damage dropoff
+private _impactSpeed = (_realDamage/_hit) * (_typicalSpeed max 1);
 
 private _penDepth = _penFactor * _impactSpeed;
 
-// We want to base damage on the round's energy and armor penetration exclusively, so we'll use the config value to get damage
-// There's only so much damage a round can do, limited by its energy
+// Max damage is the config value, go down from there based on armor penetration
 private _finalDamage = (_hit * ((_penDepth/_armorThickness) min 1)) / DAMAGE_SCALING_FACTOR;
-_damageData set [ENGINE_DAMAGE_INDEX, _finalDamage];
+_damageData set [0, _finalDamage];
 
 TRACE_3("Armor penetration handled, passing damage",_finalDamage,_damageData,_allDamages);
 

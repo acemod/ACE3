@@ -4,7 +4,7 @@
  * Return enabled channels.
  *
  * Arguments:
- * 0: false - use channel id, true - use localized channel names <BOOl> (default: false)
+ * 0: false - use channel id, true - use localized channel names <BOOL> (default: false)
  *
  * Return Value:
  * Enabled Channels <ARRAY>
