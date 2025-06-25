@@ -159,8 +159,8 @@
             <Japanese>車両からの弾薬の発射を可能にします</Japanese>
         </Key>
         <Key ID="STR_ACE_CookOff_enableSound_name">
-            <English>Disable cook-off sounds</English>
-            <French>Désactiver les sons d'explosion</French>
+            <English>Enable cook-off sounds</English>
+            <French>Activer les sons d'explosion</French>
             <Spanish>Habilitar sonido de detonación</Spanish>
             <Japanese>誘爆音を無効化</Japanese>
         </Key>
