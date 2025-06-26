@@ -165,7 +165,7 @@
             <French>Désactiver les sons d'explosion</French>
             <Spanish>Habilitar sonido de detonación</Spanish>
             <Japanese>誘爆音を無効化</Japanese>
-            <Russian>Вкл. звук детонации</Russian>
+            <Russian>Выкл. звук детонации</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableSound_tooltip">
             <English>Enables the sound of projectiles cooking off from inside the vehicle</English>
