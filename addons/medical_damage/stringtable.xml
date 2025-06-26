@@ -105,7 +105,7 @@
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_DisplayName">
             <English>Use Custom Armor Penetration</English>
-            <Russian>Используйте специальную бронепробиваемость</Russian>
+            <Russian>Использовать спец. бронепробиваемость</Russian>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Avulsion">
             <English>Avulsion</English>

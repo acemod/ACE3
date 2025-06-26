@@ -3,7 +3,7 @@
     <Package name="MissileGuidance">
         <Key ID="STR_ACE_MissileGuidance_Category">
             <English>ACE Advanced Missile Guidance</English>
-            <Russian>Усовершенствованное наведение ракет ACE</Russian>
+            <Russian>ACE Продвинутое наведение ракет</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_CycleFireMode">
             <English>Missile - Cycle Fire Mode</English>
@@ -335,7 +335,7 @@
         </Key>
         <Key ID="STR_ACE_MissileGuidance_chaffEffectivenessCoef_DisplayName">
             <English>Chaff Effectiveness Coefficient</English>
-            <Russian>Коэффициент эффективности дипольных отражателей</Russian>
+            <Russian>Коэф. эффективности ДО</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareAngleCoef_Description">
             <English>Adjusts the relative angle filtering between IR missile and flare. Higher gives more effective flares.</English>
@@ -343,7 +343,7 @@
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareAngleCoef_DisplayName">
             <English>Flare Angle Coefficient</English>
-            <Russian>Коэффициент угловой селекции (тепловых ловушек)</Russian>
+            <Russian>Коэф. угловой селекции ЛТЦ</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareEffectivenessCoef_Description">
             <English>Adjute the chance that a flare defeats an IR missile. Higher gives more effective flares.</English>
@@ -351,7 +351,7 @@
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareEffectivenessCoef_DisplayName">
             <English>Flare Effectiveness Coefficient</English>
-            <Russian>Коэффициент эффективности тепловых ловушек</Russian>
+            <Russian>Коэф. эффективности ЛТЦ</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_keybind_down">
             <English>Missile - Down</English>
