@@ -3,6 +3,7 @@
     <Package name="MissileGuidance">
         <Key ID="STR_ACE_MissileGuidance_Category">
             <English>ACE Advanced Missile Guidance</English>
+            <Japanese>ACE 高度なミサイル誘導</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_CycleFireMode">
             <English>Missile - Cycle Fire Mode</English>
@@ -330,21 +331,27 @@
         </Key>
         <Key ID="STR_ACE_MissileGuidance_chaffEffectivenessCoef_Description">
             <English>Adjusts the chance that chaff defeats a radar guided missile. Higher gives more effective chaff.</English>
+            <Japanese>チャフがレーダー誘導ミサイルを欺瞞する確率を調整します。値が高いほど、チャフの効果が高まります。</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_chaffEffectivenessCoef_DisplayName">
             <English>Chaff Effectiveness Coefficient</English>
+            <Japanese>チャフの効果係数</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareAngleCoef_Description">
             <English>Adjusts the relative angle filtering between IR missile and flare. Higher gives more effective flares.</English>
+            <Japanese>赤外線ミサイルとフレアの相対角度フィルタリングを調整します。値が高いほどフレアの効果が高まります。</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareAngleCoef_DisplayName">
             <English>Flare Angle Coefficient</English>
+            <Japanese>フレアの角度係数</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareEffectivenessCoef_Description">
             <English>Adjute the chance that a flare defeats an IR missile. Higher gives more effective flares.</English>
+            <Japanese>フレアが赤外線ミサイルを欺瞞する確率を調整します。値が高いほど、フレアの効果が高まります。</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareEffectivenessCoef_DisplayName">
             <English>Flare Effectiveness Coefficient</English>
+            <Japanese>フレアの効果係数</Japanese>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_keybind_down">
             <English>Missile - Down</English>
