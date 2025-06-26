@@ -99,6 +99,12 @@
             <Turkish>Küçük Sıyrık</Turkish>
             <Hungarian>Kis horzsolás</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_Description">
+            <English>Controls whether ammo material penetration is taken into account for damage handling.</English>
+        </Key>
+        <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_DisplayName">
+            <English>Use Custom Armor Penetration</English>
+        </Key>
         <Key ID="STR_ACE_Medical_Damage_Avulsion">
             <English>Avulsion</English>
             <Czech>Avulze</Czech>
