@@ -167,7 +167,7 @@
             <French>Activer les sons d'explosion</French>
             <Spanish>Habilitar sonido de detonación</Spanish>
             <Russian>Выкл. звук детонации</Russian>
-            <Korean>요리 대회 사운드 활성화</Korean>
+            <Korean>쿡오프 소리 활성화</Korean>
             <Japanese>誘爆音を有効化</Japanese>
         </Key>
         <Key ID="STR_ACE_CookOff_enableSound_tooltip">
@@ -175,7 +175,7 @@
             <French>Active le son des projectiles se déclenchant à l'intérieur du véhicule</French>
             <Spanish>Habilita el sonido de los proyectiles que se detonan dentro del interior del vehículo</Spanish>
             <Russian>Вкл. звуки взрывающихся снарядов изнутри техники</Russian>
-            <Korean>차량 내에서 쿡오프 되는 발사체의 소리를 비활성화합니다.</Korean>
+            <Korean>차량 내에서 쿡오프 되는 발사체의 소리를 활성화합니다.</Korean>
             <Japanese>車内で弾薬が発火する音を有効化します</Japanese>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_name">
@@ -206,7 +206,7 @@
             <Polish>Włącz/Wyłącz usuwanie amunicji podczas samozapłonu</Polish>
             <Russian>Вкл. удаление боеприпасов из-за детонации</Russian>
             <German>Aktiviert/Deaktiviert Entfernung der Munition beim Durchzünden</German>
-            <Korean>유폭 시 탄약 제거 활성화/비활성화</Korean>
+            <Korean>유폭 시 탄약 제거 활성화</Korean>
             <Japanese>誘爆による弾薬の除去を有効化</Japanese>
             <Chinesesimp>启用/禁用殉爆过程中的弹药移除功能</Chinesesimp>
         </Key>
