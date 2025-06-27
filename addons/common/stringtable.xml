@@ -409,14 +409,6 @@
             <Chinesesimp>检查 PBO</Chinesesimp>
             <Hungarian>PBO-k ellenőrzése</Hungarian>
         </Key>
-        <Key ID="STR_ACE_Common_checkExtensions_DisplayName">
-            <English>Check Extensions</English>
-            <Japanese>拡張(DLL)を検査</Japanese>
-            <Chinesesimp>检查DLL扩展文件</Chinesesimp>
-            <Korean>확장 프로그램 검사</Korean>
-            <French>Vérifier les extensions</French>
-            <Russian>Проверка расширений (библиотек DLL)</Russian>
-        </Key>
         <Key ID="STR_ACE_Common_CheckPBO_Whitelist_Description">
             <English>What addons are allowed regardless?</English>
             <Czech>Jaké addony jsou povoleny?</Czech>
@@ -1770,6 +1762,14 @@
             <Korean>ACE 무분류</Korean>
             <Japanese>ACE 未分類</Japanese>
             <Chinesesimp>ACE 未分类</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_checkExtensions_DisplayName">
+            <English>Check Extensions</English>
+            <French>Vérifier les extensions</French>
+            <Russian>Проверка расширений (библиотек DLL)</Russian>
+            <Korean>확장 프로그램 검사</Korean>
+            <Japanese>拡張(DLL)を検査</Japanese>
+            <Chinesesimp>检查DLL扩展文件</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
