@@ -3,75 +3,87 @@
     <Package name="SPIKE">
         <Key ID="STR_ACE_SPIKE_Camera_ViewModeCycle">
             <English>Cycle Camera Vision Mode</English>
-            <Japanese>カメラの映像モードを切り替え</Japanese>
-            <Korean>카메라 시야 모드 순환</Korean>
+            <French>Mode de vision de la caméra</French>
             <Russian>Циклический режим обзора камеры</Russian>
+            <Korean>카메라 시야 모드 순환</Korean>
+            <Japanese>カメラの映像モードを切り替え</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_LR">
             <English>Spike LR</English>
-            <Japanese>スパイク LR</Japanese>
-            <Korean>스파이크 LR</Korean>
+            <French>Spike LR</French>
             <Russian>Spike LR</Russian>
+            <Korean>스파이크 LR</Korean>
+            <Japanese>スパイク LR</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_LR_Short">
             <English>LR</English>
-            <Japanese>LR</Japanese>
-            <Korean>LR</Korean>
+            <French>LR</French>
             <Russian>LR</Russian>
+            <Korean>LR</Korean>
+            <Japanese>LR</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_LeaveCamera">
             <English>Leave Camera</English>
-            <Japanese>カメラから離れる</Japanese>
-            <Korean>카메라 보는 걸 그만두기</Korean>
+            <French>Quitter l'appareil</French>
             <Russian>Оставить камеру</Russian>
+            <Korean>카메라 보는 걸 그만두기</Korean>
+            <Japanese>カメラから離れる</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_Manual">
             <English>MANUAL</English>
-            <Japanese>マニュアル</Japanese>
-            <Korean>메뉴얼</Korean>
+            <French>MANUEL</French>
             <Russian>ИНСТРУКЦИЯ</Russian>
+            <Korean>메뉴얼</Korean>
+            <Japanese>マニュアル</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanDown">
             <English>Pan Camera Down</English>
-            <Japanese>カメラを下に向ける</Japanese>
-            <Korean>카메라를 아래로 향하기</Korean>
+            <French>Caméra panoramique vers le bas</French>
             <Russian>Панорамирование камеры Вниз</Russian>
+            <Korean>카메라를 아래로 향하기</Korean>
+            <Japanese>カメラを下に向ける</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanLeft">
             <English>Pan Camera Left</English>
-            <Japanese>カメラを左に向ける</Japanese>
-            <Korean>카메라를 왼쪽으로 향하기</Korean>
+            <French>Caméra panoramique à gauche</French>
             <Russian>Панорамирование камеры Влево</Russian>
+            <Korean>카메라를 왼쪽으로 향하기</Korean>
+            <Japanese>カメラを左に向ける</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanRight">
             <English>Pan Camera Right</English>
-            <Japanese>カメラを右に向ける</Japanese>
-            <Korean>카메라를 오른쪽으로 향하기</Korean>
+            <French>Caméra panoramique à droite</French>
             <Russian>Панорамирование камеры Вправо</Russian>
+            <Korean>카메라를 오른쪽으로 향하기</Korean>
+            <Japanese>カメラを右に向ける</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_PanUp">
             <English>Pan Camera Up</English>
-            <Japanese>カメラを上に向ける</Japanese>
-            <Korean>카메라를 위로 향하기</Korean>
+            <French>Caméra panoramique vers le haut</French>
             <Russian>Панорамирование камеры Вверх</Russian>
+            <Korean>카메라를 위로 향하기</Korean>
+            <Japanese>カメラを上に向ける</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_ZoomIn">
             <English>Zoom Camera In</English>
-            <Japanese>カメラをズームイン</Japanese>
-            <Korean>카메라 줌 인</Korean>
+            <French>Zoom avant</French>
             <Russian>Увеличить масштаб камеры</Russian>
+            <Korean>카메라 줌 인</Korean>
+            <Japanese>カメラをズームイン</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_ZoomOut">
             <English>Zoom Camera Out</English>
-            <Japanese>カメラをズームアウト</Japanese>
-            <Korean>카메라 줌 아웃</Korean>
+            <French>Zoom arrière</French>
             <Russian>Уменьшить масштаб камеры</Russian>
+            <Korean>카메라 줌 아웃</Korean>
+            <Japanese>カメラをズームアウト</Japanese>
         </Key>
         <Key ID="STR_ACE_SPIKE_designate">
             <English>Designate</English>
-            <Japanese>目標を指定</Japanese>
-            <Korean>목표 지정</Korean>
+            <French>Désignation</French>
             <Russian>Назначить</Russian>
+            <Korean>목표 지정</Korean>
+            <Japanese>目標を指定</Japanese>
         </Key>
     </Package>
 </Project>

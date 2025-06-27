@@ -711,9 +711,10 @@
         </Key>
         <Key ID="STR_ACE_UI_checkWeaponZeroing">
             <English>Check Weapon Zeroing</English>
-            <Japanese>武器のゼロインを確認</Japanese>
-            <Korean>무기 영점 확인</Korean>
+            <French>Vérifier le zérotage de l'arme</French>
             <Russian>Проверить пристрелку оружия</Russian>
+            <Korean>무기 영점 확인</Korean>
+            <Japanese>武器のゼロインを確認</Japanese>
         </Key>
         <Key ID="STR_ACE_UI_devWatermark">
             <English>Development Build Watermark</English>
@@ -741,15 +742,17 @@
         </Key>
         <Key ID="STR_ACE_UI_meters">
             <English>Meters</English>
-            <Japanese>メートル</Japanese>
-            <Korean>미터</Korean>
+            <French>Mètres</French>
             <Russian>Метры</Russian>
+            <Korean>미터</Korean>
+            <Japanese>メートル</Japanese>
         </Key>
         <Key ID="STR_ACE_UI_weaponZeroSetTo">
             <English>Zero is set to:</English>
-            <Japanese>ゼロインの設定値:</Japanese>
-            <Korean>영점 설정값:</Korean>
+            <French>Le zérotage est fixé à :</French>
             <Russian>Значение нуля равно:</Russian>
+            <Korean>영점 설정값:</Korean>
+            <Japanese>ゼロインの設定値:</Japanese>
         </Key>
     </Package>
 </Project>
