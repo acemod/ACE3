@@ -474,11 +474,13 @@
             <English>AA Sight</English>
             <Japanese>対空照準器</Japanese>
             <French>Viseur AA</French>
+            <Russian>Прицел ПВО</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitATGMSight">
             <English>ATGM Sight</English>
             <Japanese>ATGM照準器</Japanese>
             <French>Viseur ATGM</French>
+            <Russian>Прицел ПТУРа</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitAmmo">
             <English>Ammo</English>
@@ -847,6 +849,7 @@
             <English>Main Sight</English>
             <Japanese>主照準器</Japanese>
             <French>Visée principal</French>
+            <Russian>Основной прицел</Russian>
         </Key>
         <Key ID="STR_ACE_Repair_HitMissiles">
             <English>Missiles</English>
