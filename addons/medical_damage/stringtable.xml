@@ -103,11 +103,13 @@
             <English>Controls whether ammo material penetration is taken into account for damage handling.</English>
             <Russian>Контролирует, учитывается ли проникновение боеприпасов в материал при обработке повреждений.</Russian>
             <Korean>대미지 계산 시 탄약 재질의 관통력을 고려할 지 여부를 제어합니다.</Korean>
+            <French>Contrôle si la pénétration du matériau des munitions est prise en compte pour le traitement des dommages.</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_AlternateArmorPenetration_DisplayName">
             <English>Use Custom Armor Penetration</English>
             <Korean>커스텀 철갑 사용</Korean>
             <Russian>Использовать спец. бронепробиваемость</Russian>
+            <French>Utiliser la pénétration d'armure personnalisée</French>
         </Key>
         <Key ID="STR_ACE_Medical_Damage_Avulsion">
             <English>Avulsion</English>
