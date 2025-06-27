@@ -51,7 +51,7 @@ private _currentButtonInPosition = GVAR(customRightPanelButtons) select _positio
 if (!isNil "_currentButtonInPosition") then {
     _currentButtonInPosition params ["_cbItems", "_cbPicture", "_cbTooltip", "_cbMove"];
     if (_cbMove) then {
-        [{_this call FUNC(addRightPanelButton)}, [_cbItems, _cbTooltip, _cbPicture, -1, _cbMove]] call CBA_fnc_execNextFrame;
+        [{call FUNC(addRightPanelButton)}, [_cbItems, _cbTooltip, _cbPicture, -1, _cbMove]] call CBA_fnc_execNextFrame;
     };
 };
 

@@ -21,7 +21,7 @@
     // "exitWith", which would be broken with "HandleDamage" otherwise.
     _unit setVariable [
         QEGVAR(medical,HandleDamageEHID),
-        _unit addEventHandler ["HandleDamage", {_this call FUNC(handleDamage)}]
+        _unit addEventHandler ["HandleDamage", {call FUNC(handleDamage)}]
     ];
 }, nil, [IGNORE_BASE_UAVPILOTS], true] call CBA_fnc_addClassEventHandler;
 

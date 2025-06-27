@@ -28,6 +28,7 @@ GVAR(objectHeight) = MIN_HEIGHT;
 GVAR(isPlacing) = PLACE_WAITING;
 
 private _flag = _carrierClass createVehicle [0, 0, 0];
+_flag setPhysicsCollisionFlag false; // Issue #10693
 
 // Add info dialog for the player which show the controls
 private _placeFlagText = format [LLSTRING(Place), _flagName];
@@ -60,6 +61,7 @@ private _mouseClickID = [_player, "DefaultAction", {
             [_player, "PutDown"] call EFUNC(common,doGesture);
 
             _player removeItem _item;
+            _flag setPhysicsCollisionFlag true;
 
             // Provide hook
             [QGVAR(placed), [_player, _flag, _item]] call CBA_fnc_localEvent;

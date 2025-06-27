@@ -25,4 +25,5 @@ private _newDamages = _allDamages apply {
 };
 
 TRACE_1("Vehicle crash handled, passing damage",_newDamages);
-[_unit, _newDamages, _typeOfDamage] //return
+_this set [1, _newDamages];
+_this

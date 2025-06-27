@@ -8,7 +8,7 @@ class CfgVehicles {
                 distance = 4;
                 condition = "";
                 exceptions[] = {"isNotInside", "isNotSwimming"};
-                insertChildren = QUOTE(_this call FUNC(addMissileReloadActions));
+                insertChildren = QUOTE(call FUNC(addMissileReloadActions));
             };
         };
     };

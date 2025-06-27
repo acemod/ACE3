@@ -110,6 +110,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(treatmentTimeTrainedAutoinjector),
+    "SLIDER",
+    [LSTRING(TreatmentTimeTrainedAutoinjector_DisplayName), LSTRING(TreatmentTimeTrainedAutoinjector_Description)],
+    LSTRING(Category),
+    [0.1, 60, 5, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(treatmentTimeTourniquet),
     "SLIDER",
     [LSTRING(TreatmentTimeTourniquet_DisplayName), LSTRING(TreatmentTimeTourniquet_Description)],
@@ -119,9 +128,27 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(treatmentTimeTrainedTourniquet),
+    "SLIDER",
+    [LSTRING(TreatmentTimeTrainedTourniquet_DisplayName), LSTRING(TreatmentTimeTrainedTourniquet_Description)],
+    LSTRING(Category),
+    [0.1, 60, 7, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(treatmentTimeSplint),
     "SLIDER",
     [LSTRING(TreatmentTimeSplint_DisplayName), LSTRING(TreatmentTimeSplint_Description)],
+    LSTRING(Category),
+    [0.1, 60, 7, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
+    QGVAR(treatmentTimeTrainedSplint),
+    "SLIDER",
+    [LSTRING(TreatmentTimeTrainedSplint_DisplayName), LSTRING(TreatmentTimeTrainedSplint_Description)],
     LSTRING(Category),
     [0.1, 60, 7, 1],
     true
@@ -345,6 +372,15 @@
 ] call CBA_fnc_addSetting;
 
 [
+    QGVAR(treatmentTimeTrainedIV),
+    "SLIDER",
+    [LSTRING(TreatmentTimeTrainedIV_DisplayName), LSTRING(TreatmentTimeTrainedIV_Description)],
+    LSTRING(Category),
+    [0.1, 60, 12, 1],
+    true
+] call CBA_fnc_addSetting;
+
+[
     QGVAR(cprSuccessChanceMin),
     "SLIDER",
     [LSTRING(CPRSuccessChanceMin_DisplayName), LSTRING(CPRSuccessChanceMin_Description)],
@@ -405,6 +441,17 @@
     true,
     true
 ] call CBA_fnc_addSetting;
+
+if (BALLS_WELL_CONDITIONED) then {
+    [
+        QGVAR(allowBodyBalling),
+        "CHECKBOX",
+        [LSTRING(AllowBodyBalling_DisplayName), LSTRING(AllowBodyBalling_Description)],
+        ELSTRING(Medical,Category),
+        true,
+        true
+    ] call CBA_fnc_addSetting;
+};
 
 [
     QGVAR(holsterRequired),

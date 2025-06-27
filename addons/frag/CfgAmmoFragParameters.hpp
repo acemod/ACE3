@@ -777,7 +777,8 @@ class ProbingBeam_01_F: BulletBase {
 class IRStrobeBase: GrenadeCore {
     GVAR(skip) = 1;
 };
-class FlareCore: GrenadeCore { // flares shouldn't have EH, but in case
+class FlareCore: GrenadeCore {}; // flares shouldn't have EH, but in case
+class FlareBase: FlareCore {
     GVAR(skip) = 1;
 };
 

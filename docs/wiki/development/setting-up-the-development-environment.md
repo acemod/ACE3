@@ -88,66 +88,6 @@ To start the game using this build, you can use the following modline:
 
 To create a complete build that you can use without the source files, with full binarization and all optimizations, run `$ hemtt release` in the root folder. This will populate the `.hemttout/release` folder with binarized PBOs  and an archive in `releases` that you can redistribute. These handle like those of any other mod.
 
-
-## 4. Setup and Building (Mikero Tools)
-
-### 4.1 Initial Setup
-
-Navigate to `tools` folder in command line.
-
-```
-cd "[location of the ACE3 project]\tools"
-```
-
-Execute `setup.py` to create symbolic links to P-drive and Arma 3 directory required for building.
-
-
-Should the script fail, you can create the required links manually. First, create `z` folders both in your Arma 3 directory and on your P-drive. Then run the following commands as admin, replacing the text in brackets with the appropriate paths:
-
-```bat
-mklink /J "[Arma 3 installation folder]\z\ace" "[location of the ACE3 project]"
-mklink /J "P:\z\ace" "[location of the ACE3 project]"
-```
-
-Then, copy the `cba` folder from the `include\x` folder to `P:\x\cba`. Create the `x` folder if needed. That folder contains the parts of the CBA source code that are required for the macros to work.
-
-
-## 4.2 Creating a Test Build
-
-To create a development build of ACE3 to test changes or to debug something, run the `build.py` file in the `tools` folder. This will populate the `addons` folder with binarized PBOs. These PBOs still point to the source files in their respective folders however, which allows you to use [file patching](#file-patching). This also means that you cannot distribute this build to others.
-
-To start the game using this build, you can use the following modline:
-
-```sh
--mod=@CBA_A3;z\ace
-```
-
-## 4.3 Creating a Release Build
-
-To create a complete build of ACE3 that you can use without the source files you will need to:
-
-- Ensure `.hpp` is **NOT** in pboProject's "Exclude From Pbo" list
-
-When the requirements are met:
-
-- Execute `make.py version increment_build <other-increment-args> force checkexternal release` in the `tools` folder, replacing `<other-increment-args>` with the part of version you want to increment (options described below)
-
-This will populate the `release` folder with binarized PBOs, compiled extensions, copied extras, bisigns and a bikey. Additionally, an archive file will also be created in the folder. The folder and archive handle like those of any other mod.
-
-Different `make.py` command line options include:
-
-- `version` - update version number in all files and leave them in working directory (leaving this out will still update the version in all files present in the `release` folder, but they will be reverted to not disturb the working directory)
-- `increment_build` - increments _build_ version number
-- `increment_patch` - increments _patch_ version number (ignored with `increment_minor` or `increment_major`)
-- `increment_minor` - increments _minor_ version number and resets _patch_ version number to `0` (ignored with `increment_major`)
-- `increment_major` - increments _major_ version number and resets _minor_ and _patch_ version numbers to `0`
-- `force` - force rebuild all PBOs, even those already present in the `release` directory
-- `checkexternal` - check external references (incompatible only with `<component1> <component2>` and `force <component1> <component2>`)
-- `release` - create release packages/archives
-- `<component1> <component2>` - build only specified component(s) (incompatible with `release`)
-- `force <component1> <component2>` - force rebuild specified component(s) (incompatible with `release`)
-
-
 ## 7. File Patching
 
 File Patching allows you to change the files in an addon while the game is running, requiring only a restart of the mission. This makes it great for debugging, as it cuts down the time required between tests.
@@ -187,4 +127,4 @@ Files must exist in the built PBOs for file patching to work. If you create a ne
 
 Configs are not patched during run time, only at load time. You do not have to rebuild a PBO to make config changes, just restart Arma. You can get around this though if you are on the dev branch of Arma 3 and running the [diagnostic exe](https://community.bistudio.com/wiki/Arma_3_Diagnostics_Exe). That includes `diag_mergeConfigFile` which takes a full system path (as in `diag_mergeConfigFile  ["p:\z\ace\addons\my_module\config.cpp"]`) and allows you selectively reload config files.
 
-If you need to add/remove files, then you'll need to run HEMTT/`build.py` again without the game running, and restart. That is all that is required to add new files for further use in testing.
+If you need to add/remove files, then you'll need to run HEMTT again without the game running, and restart. That is all that is required to add new files for further use in testing.

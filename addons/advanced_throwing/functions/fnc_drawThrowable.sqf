@@ -88,8 +88,12 @@ if (isNull _activeThrowable || {(_throwableType != typeOf _activeThrowable) && {
     _activeThrowable enableSimulation false;
     ACE_player setVariable [QGVAR(activeThrowable), _activeThrowable];
 
-    // Set muzzle ammo to 0 to block vanilla throwing (can only be 0 or 1)
-    private _muzzle = _throwableMag call FUNC(getMuzzle);
+    if ((GVAR(hiddenThrowables) findIf {(_x isEqualTo true) || {_x == _throwableType}}) != -1) then {
+        //if show disabled, hide active but retain vehicle for path calculation.
+        hideObject _activeThrowable;
+    };
+    // Set muzzle ammo to 0 to block vanilla throwing
+    ACE_player setVariable [QGVAR(activeMuzzle), [_muzzle, ACE_player ammo _muzzle]];
     ACE_player setAmmo [_muzzle, 0];
     ACE_player setVariable [QGVAR(activeMuzzle), _muzzle];
 };

@@ -39,7 +39,7 @@
             <Russian>Коэф. освещения для меток игроков</Russian>
             <German>Spielernamen Umgebungshelligkeitskoeffizient</German>
             <Korean>이름표 배경 밝기 계수</Korean>
-            <Japanese>ネーム タグ 環境明るさ係数</Japanese>
+            <Japanese>ネーム タグへの環境輝度の影響係数</Japanese>
             <Chinesesimp>铭牌的环境亮度系数</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_NameTags_DefaultNametagColor">
@@ -86,7 +86,7 @@
             <Russian>Обязательно: Скрывать</Russian>
             <German>Verstecken erzwingen</German>
             <Korean>강제로 숨기기</Korean>
-            <Japanese>非表示を強制</Japanese>
+            <Japanese>非表示 を強制する</Japanese>
             <Chinese>強迫隱藏</Chinese>
             <Chinesesimp>强制隐藏</Chinesesimp>
             <Turkish>Gizlemeye Zorla</Turkish>
@@ -103,7 +103,7 @@
             <Russian>Обязательно: Показывать</Russian>
             <German>Anzeige erzwingen</German>
             <Korean>강제로 표시</Korean>
-            <Japanese>表示を強制</Japanese>
+            <Japanese>表示 を強制する</Japanese>
             <Chinese>強迫顯示</Chinese>
             <Chinesesimp>强制显示</Chinesesimp>
             <Turkish>Göstermeye Zorla</Turkish>
@@ -120,7 +120,7 @@
             <Russian>Обязательно: Только под курсором</Russian>
             <German>Erzwinge nur mit Mauszeiger anzuzeigen</German>
             <Korean>커서만 강제로 해당</Korean>
-            <Japanese>カーソルを合わせた時のみ に強制する</Japanese>
+            <Japanese>カーソルを当てた時のみ に強制する</Japanese>
             <Chinese>強制僅顯示在準心指到時</Chinese>
             <Chinesesimp>强制仅显示在准心指到时</Chinesesimp>
             <Turkish>Göstermeyi Yalnızca İmleç Üzerinde Zorla</Turkish>
@@ -137,7 +137,7 @@
             <Russian>Обязательно: Под курсором или по нажатию клавиши</Russian>
             <German>Erzwinge nur mit Mauszeiger und Tastendruck anzuzeigen</German>
             <Korean>커서와 키를 누를 경우만 강제로 해당</Korean>
-            <Japanese>カーソルを合わせてキーを押した時のみ に強制</Japanese>
+            <Japanese>カーソルを当てキーを押した時のみ に強制する</Japanese>
             <Chinese>強制顯示在準心指到和按按鍵時</Chinese>
             <Chinesesimp>强制显示在准心指到和按按键时</Chinesesimp>
             <Turkish>Göstermeyi Yalnızca İmleç ve Tuşa Basmaya Zorla</Turkish>
@@ -154,7 +154,7 @@
             <Russian>Обязательно: Только по нажатию клавиши</Russian>
             <German>Erzwinge nur mit Tastendruck anzuzeigen</German>
             <Korean>키를 누를 경우만 강제로 해당</Korean>
-            <Japanese>キーを押した時のみ に強制</Japanese>
+            <Japanese>キーを押した時のみ に強制する</Japanese>
             <Chinese>強制僅顯示在按按鍵時</Chinese>
             <Chinesesimp>强制仅显示在按按键时</Chinesesimp>
             <Turkish>Gösteriyi Yalnızca Tuşa Basıldığında Zorla</Turkish>
@@ -171,7 +171,7 @@
             <Russian>Этот модуль позволяет настроить опции и дистанцию отображения имен игроков.</Russian>
             <German>Dieses Modul erlaubt die Einstellungen der Anzeigenamen zu verändern.</German>
             <Korean>이 모듈은 당신이 이름표의 범위를 임의로 수정할 수 있게 해줍니다.</Korean>
-            <Japanese>このモジュールを使用すると、ネーム タグの範囲と設定を調整できます。</Japanese>
+            <Japanese>このモジュールを使用すると、ネーム タグの表示される距離や設定を調整できます。</Japanese>
             <Chinese>這個模塊允許您設定名稱和顯示範圍等設定</Chinese>
             <Chinesesimp>这个模块允许您设定名字和显示范围等设定</Chinesesimp>
             <Turkish>Bu modül, Isim Etiketleri ayarlarını ve aralığını özelleştirmenizi sağlar.</Turkish>
@@ -205,7 +205,7 @@
             <Russian>Так же, как имена</Russian>
             <German>Verwende Spielernamen</German>
             <Korean>이름표 설정 사용</Korean>
-            <Japanese>ネーム タグの設定</Japanese>
+            <Japanese>ネーム タグの設定を使う</Japanese>
             <Chinese>玩家名稱設定</Chinese>
             <Chinesesimp>玩家名称设定</Chinesesimp>
             <Turkish>İsim etiketi ayarlarını kullan</Turkish>
@@ -222,7 +222,7 @@
             <Russian>Только под курсором</Russian>
             <German>Nur bei Maus</German>
             <Korean>커서만 해당</Korean>
-            <Japanese>カーソルを合わせた時</Japanese>
+            <Japanese>カーソルを当てた時のみ</Japanese>
             <Chinese>只有準心指到時</Chinese>
             <Chinesesimp>只有准心指到时</Chinesesimp>
             <Turkish>Yalnızca İmleçte</Turkish>
@@ -239,7 +239,7 @@
             <Russian>Под курсором или по нажатию клавиши</Russian>
             <German>Nur Maus und Tastendruck</German>
             <Korean>커서와 키를 누를 경우만</Korean>
-            <Japanese>カーソルを合わせてキーを押した時のみ</Japanese>
+            <Japanese>カーソルを当てキーを押した時のみ</Japanese>
             <Chinese>只有在準心指到和按按鍵時</Chinese>
             <Chinesesimp>只有在准心指到和按按键时</Chinesesimp>
             <Turkish>Yalnızca İmleç ve Tuşa Basıldığında</Turkish>
@@ -527,7 +527,7 @@
             <Russian>Показывать имя командира техники (только если клиент включил отображение имен). По умолчанию: Нет</Russian>
             <German>Zeige Maus-Spielernamen für Fahrzeugkommandanten (nur wenn der Client Namensanzeigen aktiviert hat). Standard: Nein</German>
             <Korean>차장의 이름표를 표시합니다 (오직 클라이언트가 이름표를 활성화할 시에만 보입니다) 기본설정: 아니요</Korean>
-            <Japanese>カーソルを当てた時、車長のネーム タグを表示します (クライアント側でネーム タグを有効化する必要があります) デフォルト: 無効</Japanese>
+            <Japanese>カーソルを当てた時に車長のネーム タグを表示します (クライアント側でネーム タグを有効化する必要があります) デフォルト: 無効</Japanese>
             <Chinese>使載具指揮官能透過準心指到別的單位來顯示其名稱 (僅當客戶端的名稱功能已啟用)。預設: 關閉</Chinese>
             <Chinesesimp>使载具指挥官能透过准心指到别的单位来显示其名字（仅当客户端的名字功能已启用）。预设：关闭</Chinesesimp>
             <Turkish>Araç komutanı için Gösterge İsim Etiketini göster (yalnızca istemcide ad etiketleri etkinse) Varsayılan: Hayır</Turkish>

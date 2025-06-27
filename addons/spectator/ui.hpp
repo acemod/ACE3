@@ -19,22 +19,22 @@ class GVAR(display) {
     movingEnable = 0;
     closeOnMissionEnd = 1;
 
-    onLoad = QUOTE(_this call FUNC(ui_handleLoad));
-    onUnload = QUOTE(_this call FUNC(ui_handleUnload));
+    onLoad = QUOTE(call FUNC(ui_handleLoad));
+    onUnload = QUOTE(call FUNC(ui_handleUnload));
 
-    onKeyDown = QUOTE(_this call FUNC(ui_handleKeyDown));
-    onKeyUp = QUOTE(_this call FUNC(ui_handleKeyUp));
-    onMouseMoving = QUOTE(_this call FUNC(ui_handleMouseMoving));
-    onChildDestroyed = QUOTE(_this call FUNC(ui_handleChildDestroyed));
+    onKeyDown = QUOTE(call FUNC(ui_handleKeyDown));
+    onKeyUp = QUOTE(call FUNC(ui_handleKeyUp));
+    onMouseMoving = QUOTE(call FUNC(ui_handleMouseMoving));
+    onChildDestroyed = QUOTE(call FUNC(ui_handleChildDestroyed));
 
     class ControlsBackground {
         class MouseHandler: RscText {
             idc = IDC_MOUSE;
 
-            onMouseButtonDown = QUOTE(_this call FUNC(ui_handleMouseButtonDown));
+            onMouseButtonDown = QUOTE(call FUNC(ui_handleMouseButtonDown));
             onMouseButtonUp = QUOTE(if ((_this select 1) == 1) then { GVAR(holdingRMB) = false; };);
-            onMouseButtonDblClick = QUOTE(_this call FUNC(ui_handleMouseButtonDblClick));
-            onMouseZChanged = QUOTE(_this call FUNC(ui_handleMouseZChanged));
+            onMouseButtonDblClick = QUOTE(call FUNC(ui_handleMouseButtonDblClick));
+            onMouseZChanged = QUOTE(call FUNC(ui_handleMouseZChanged));
 
             text = "";
             x = "safeZoneXAbs";
@@ -77,7 +77,7 @@ class GVAR(display) {
         class Tabs: RscToolbox {
             idc = IDC_TABS;
 
-            //onToolBoxSelChanged = QUOTE(_this call FUNC(ui_handleTabSelected));
+            //onToolBoxSelChanged = QUOTE(call FUNC(ui_handleTabSelected));
             onMouseEnter = QUOTE([false] call FUNC(ui_fadeList));
             onMouseExit = QUOTE([true] call FUNC(ui_fadeList));
 
@@ -232,8 +232,8 @@ class GVAR(display) {
         class Map: RscMapControl {
             idc = IDC_MAP;
 
-            onDraw = QUOTE(_this call FUNC(ui_handleMapDraw));
-            onMouseButtonClick = QUOTE(_this call FUNC(ui_handleMapClick));
+            onDraw = QUOTE(call FUNC(ui_handleMapDraw));
+            onMouseButtonClick = QUOTE(call FUNC(ui_handleMapClick));
 
             x = 0;
             y = 0.15;

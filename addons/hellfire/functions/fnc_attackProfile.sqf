@@ -27,7 +27,7 @@ _firedEH params ["","","","","","","_projectile"];
 
 // Get state params:
 if (_attackProfileStateParams isEqualTo []) then {
-    _this call FUNC(getAttackProfileSettings);
+    call FUNC(getAttackProfileSettings);
 };
 _attackProfileStateParams params ["_attackStage", "_configLaunchHeightClear", "_missileStateData"];
 

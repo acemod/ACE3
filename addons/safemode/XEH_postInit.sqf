@@ -4,7 +4,7 @@
 
 if (!hasInterface) exitWith {};
 
-["ACE3 Weapons", QGVAR(safeMode), LLSTRING(SafeMode), {
+["ACE3 Weapons", QGVAR(safeMode), LLSTRING(SafeModeToggle), {
     // Conditions: canInteract
     if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
 
@@ -18,6 +18,19 @@ if (!hasInterface) exitWith {};
 
     true
 }, {false}, [DIK_GRAVE, [false, true, false]], false] call CBA_fnc_addKeybind;
+
+["ACE3 Weapons", QGVAR(safeModeUnlock), LLSTRING(TakeOffSafety), {
+    // Conditions: canInteract
+    if !([ACE_player, objNull, ["isNotEscorting", "isNotInside", "isNotSwimming"]] call EFUNC(common,canInteractWith)) exitWith {false};
+
+    (weaponState ACE_player) params ["_currentWeapon", "_currentMuzzle"];
+
+    // Conditions: specific
+    if !(ACE_player call CBA_fnc_canUseWeapon && {_currentWeapon != ""} && {_currentWeapon != binocular ACE_player}) exitWith {false};
+
+    // Statement: Unlock weapon safety
+    [ACE_player, _currentWeapon, _currentMuzzle, true, true] call FUNC(lockSafety);
+}, {}] call CBA_fnc_addKeybind;
 
 ["unit", {
     (weaponState ACE_player) params ["_currentWeapon", "_currentMuzzle"];

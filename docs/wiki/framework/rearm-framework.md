@@ -71,8 +71,8 @@ Meant to run on server only.
 
 `ace_rearm_fnc_makeSource`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Ammo Truck | Object | Required |
 | 1  | Supply Count | Number | Optional (default: `0`) |
 | 1  | Add (`true`) or set (`false`) supply | Bool | Optional (default: `false`) |
@@ -91,8 +91,8 @@ Meant to run on server only.
 
 `ace_rearm_fnc_disable`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Ammo Truck | Object | Required |
 | 1  | Disable rearming, true to disable, false to enable | Boolean | Optional (default: `true`) |
 | **R** | None | None | Return value |
@@ -124,8 +124,8 @@ Enables rearming on the object `tank`.
 
 `ace_rearm_fnc_getSupplyCount`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Ammo Truck | Object | Required |
 | **R** | Supply count | Number | Return value |
 
@@ -145,8 +145,8 @@ The remaining supply count of `ammo_truck` will be returned.
 
 `ace_rearm_fnc_setSupplyCount`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Ammo Truck | Object | Required |
 | 1  | Supply Count | Boolean | Required |
 | **R** | None | None | Return value |
@@ -166,8 +166,8 @@ This function sets the current supply count of the ammo truck. It can be used to
 
 `ace_rearm_fnc_addMagazineToSupply`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Ammo Truck | Object | Required |
 | 1  | Magazine Classname | String | Required |
 | 2  | Only add content of one ammo box | Boolean | Optional (default: `false`) |
@@ -192,8 +192,8 @@ The 32 artillery shells are added to the supply count or the magazine storage of
 
 `ace_rearm_fnc_addVehicleMagazinesToSupply`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Ammo Truck | Object | Required |
 | 1  | Any vehicle object or class name | Object or String | Required |
 | **R** | None | None | Return value |
@@ -227,8 +227,8 @@ All magazines found in the config of the vehicle class `B_MBT_01_arty_F` are mad
 
 `ace_rearm_fnc_removeMagazineFromSupply`
 
-|    | Arguments | Type | Optional (default value) |
-|----| --------- | ---- | ------------------------ |
+|    | Arguments | Type(s) | Optional (default value) |
+|----| --------- | ------- | ------------------------ |
 | 0  | Ammo Truck | Object | Required |
 | 1  | Magazine Classname | String | Required |
 | 2  | Number of Rounds to withdraw | Number | Optional (default: `-1`) |

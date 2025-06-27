@@ -16,7 +16,6 @@ class GVAR(actions) {
         treatmentLocations = TREATMENT_LOCATIONS_ALL;
 
         treatmentTime = QFUNC(getBandageTime);
-        treatmentTimeSelfCoef = 1; // todo: this isn't used anywhere, remove?
 
         callbackStart = "";
         callbackProgress = "";
@@ -80,6 +79,7 @@ class GVAR(actions) {
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         items[] = {"ACE_tourniquet"};
         treatmentTime = QGVAR(treatmentTimeTourniquet);
+        treatmentTimeTrained = QGVAR(treatmentTimeTrainedTourniquet);
         condition = QUOTE(!([ARR_2(_patient,_bodyPart)] call FUNC(hasTourniquetAppliedTo)));
         callbackSuccess = QFUNC(tourniquet);
         litter[] = {};
@@ -103,6 +103,7 @@ class GVAR(actions) {
         allowedSelections[] = {"LeftArm", "RightArm", "LeftLeg", "RightLeg"};
         items[] = {"ACE_splint"};
         treatmentTime = QGVAR(treatmentTimeSplint);
+        treatmentTimeTrained = QGVAR(treatmentTimeTrainedSplint);
         callbackSuccess = QFUNC(splint);
         condition = QFUNC(canSplint);
         litter[] = {
@@ -120,6 +121,7 @@ class GVAR(actions) {
         items[] = {"ACE_morphine"};
         condition = "";
         treatmentTime = QGVAR(treatmentTimeAutoinjector);
+        treatmentTimeTrained = QGVAR(treatmentTimeTrainedAutoinjector);
         callbackSuccess = QFUNC(medication);
         animationMedic = "AinvPknlMstpSnonWnonDnon_medic1";
         sounds[] = {{QPATHTO_R(sounds\Inject.ogg),1,1,50}};
@@ -164,6 +166,7 @@ class GVAR(actions) {
         category = "advanced";
         medicRequired = QGVAR(medicIV);
         treatmentTime = QGVAR(treatmentTimeIV);
+        treatmentTimeTrained = QGVAR(treatmentTimeTrainedIV);
         items[] = {"ACE_bloodIV"};
         treatmentLocations = QGVAR(locationIV);
         condition = "";

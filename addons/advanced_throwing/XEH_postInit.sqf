@@ -95,9 +95,9 @@ GVAR(tempWindInfo) = false;
 
 
 // Display handlers
-["KeyDown", {_this call FUNC(onKeyDown)}] call CBA_fnc_addDisplayHandler;
-["MouseButtonDown", {_this call FUNC(onMouseButtonDown)}] call CBA_fnc_addDisplayHandler;
-["MouseZChanged", {_this call FUNC(onMouseScroll)}] call CBA_fnc_addDisplayHandler;
+["KeyDown", {call FUNC(onKeyDown)}] call CBA_fnc_addDisplayHandler;
+["MouseButtonDown", {call FUNC(onMouseButtonDown)}] call CBA_fnc_addDisplayHandler;
+["MouseZChanged", {call FUNC(onMouseScroll)}] call CBA_fnc_addDisplayHandler;
 
 
 #ifdef DRAW_THROW_PATH

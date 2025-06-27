@@ -927,7 +927,6 @@
             <Turkish>[ACE] Çeşitli Nesneler</Turkish>
             <Hungarian>[ACE] Egyéb tárgyak</Hungarian>
         </Key>
-        <!-- These are cardinal directions, in case you didn't guess. -->
         <Key ID="STR_ACE_Common_N">
             <English>N</English>
             <Czech>S</Czech>
@@ -1691,6 +1690,10 @@
             <Turkish>Evet</Turkish>
             <Hungarian>Igen</Hungarian>
         </Key>
+        <Key ID="STR_ACE_Common_additionalAddonClient">
+            <English>Detected additional addon on client&lt;br/&gt;</English>
+            <Chinesesimp>检测到客户端多余模组&lt;br/&gt;</Chinesesimp>
+        </Key>
         <Key ID="STR_ACE_Common_aiOnly">
             <English>AI only</English>
             <French>IA uniquement</French>
@@ -1703,6 +1706,10 @@
             <Korean>인공지능만</Korean>
             <Japanese>AIのみ</Japanese>
             <Chinesesimp>仅 AI</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_andMore">
+            <English>, and %1 more.</English>
+            <Chinesesimp>, 以及另外%1个</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_bananaDescr">
             <English>A banana is an edible fruit, botanically a berry, produced by several kinds of large herbaceous flowering plants in the genus Musa.</English>
@@ -1766,10 +1773,21 @@
         <Key ID="STR_ACE_Common_checkExtensions_DisplayName">
             <English>Check Extensions</English>
             <French>Vérifier les extensions</French>
+            <Spanish>Comprobar extensiones</Spanish>
+            <Italian>Verifica le estensioni</Italian>
             <Russian>Проверка расширений (библиотек DLL)</Russian>
+            <German>Erweiterungen (DLLs) überprüfen</German>
             <Korean>확장 프로그램 검사</Korean>
             <Japanese>拡張(DLL)を検査</Japanese>
             <Chinesesimp>检查DLL扩展文件</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_clientAdditional">
+            <English>client additional</English>
+            <Chinesesimp>客户端多余</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_clientMissing">
+            <English>client missing</English>
+            <Chinesesimp>客户端缺少</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_closeHandheldDevice">
             <English>Close Handheld Device</English>
@@ -1802,6 +1820,14 @@
             <Chinese>循環切換手持裝備</Chinese>
             <Chinesesimp>循环切换手持装备</Chinesesimp>
             <Hungarian>Kézi eszköz váltása</Hungarian>
+        </Key>
+        <Key ID="STR_ACE_Common_error">
+            <English>[ACE] ERROR</English>
+            <Chinesesimp>[ACE] 错误</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_isMissingItems">
+            <English>[ACE] %1: ERROR %2 addon(s):&#032;</English>
+            <Chinesesimp>[ACE] %1: 错误 %2模组:&#032;</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_loadObject">
             <English>Load</English>
@@ -1838,6 +1864,26 @@
             <Korean>나침반이 자북을 가리키게 됩니다.</Korean>
             <Japanese>コンパスが磁北を指すようになります</Japanese>
             <Chinesesimp>指南针指向磁北极</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_missingAddonClient">
+            <English>Detected missing addon on client&lt;br/&gt;</English>
+            <Chinesesimp>检测到客户端缺少模组&lt;br/&gt;</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_newerClient">
+            <English>newer client</English>
+            <Chinesesimp>客户端过新</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_newerVersionClient">
+            <English>Detected newer client version&lt;br/&gt;</English>
+            <Chinesesimp>检测到客户端过新模组&lt;br/&gt;</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_olderClient">
+            <English>older client</English>
+            <Chinesesimp>客户端过旧</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_olderVersionClient">
+            <English>Detected older client version&lt;br/&gt;</English>
+            <Chinesesimp>检测到客户端过旧模组&lt;br/&gt;</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Common_playerOnly">
             <English>Players only</English>
@@ -1994,6 +2040,10 @@
             <Korean>탄창 빼기</Korean>
             <Japanese>武器からマガジンを抜く</Japanese>
             <Chinesesimp>卸掉武器弹匣</Chinesesimp>
+        </Key>
+        <Key ID="STR_ACE_Common_versionMismatch">
+            <English>[ACE] Version mismatch:&lt;br/&gt;&lt;br/&gt;</English>
+            <Chinesesimp>[ACE] 版本不匹配:&lt;br/&gt;&lt;br/&gt;</Chinesesimp>
         </Key>
     </Package>
 </Project>
