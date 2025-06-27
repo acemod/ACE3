@@ -19,6 +19,7 @@ class EGVAR(missileguidance,type_Sidewinder) {};
 class EGVAR(missileguidance,type_SS11) {};
 class EGVAR(missileguidance,type_Stinger) {};
 class EGVAR(missileguidance,type_TOW) {};
+class EGVAR(missileguidance,type_Blowpipe) {};
 
 
 class EGVAR(missileguidance,type_Ataka) {};
