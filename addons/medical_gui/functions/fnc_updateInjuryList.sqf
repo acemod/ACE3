@@ -163,7 +163,7 @@ _entries pushBack [localize _bodyPartName, [1, 1, 1, 1]];
 
 // Damage taken tooltip
 if (GVAR(showDamageEntry)) then {
-    private _bodyPartDamage = (_target getVariable [QEGVAR(medical,bodyPartDamage), [0, 0, 0, 0, 0, 0]]) select _selectionN;
+    private _bodyPartDamage = GET_BODYPART_DAMAGE(_target) select _selectionN;
     if (_bodyPartDamage > 0) then {
         private _damageThreshold = GET_DAMAGE_THRESHOLD(_target);
         switch (true) do {

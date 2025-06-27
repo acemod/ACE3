@@ -62,6 +62,9 @@ if (_newMuzzleVelocityCoefficent != 1) then {
 
 if (_airFriction > 0) exitWith {}; // positive value indicates it has vanilla airFriction, so we can just exit
 
+// For compatiblity with other addons
+_projectile setVariable [QGVAR(kFactor), _kFactor];
+
 [{
     params ["_projectile", "_kFactor", "_time"];
 

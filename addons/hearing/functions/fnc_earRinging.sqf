@@ -23,4 +23,24 @@ if (!GVAR(enabledForZeusUnits) && {player != ACE_player}) exitWith {};
 
 TRACE_2("adding",_strength * GVAR(damageCoefficent),GVAR(deafnessDV));
 
+// Handle volume reduction by electronic hearing protection
+if (
+    _strength >= EHP_MIN_STRENGTH
+    && GVAR(enableNoiseDucking)
+    && {ACE_player getVariable ["ACE_hasEHP", false] || {ACE_player getVariable ["ACE_hasBuiltInEHP", false]}}
+) then {
+    if (GVAR(ehpTimeout) == -1) then {
+        [QGVAR(ehp), EHP_REDUCTION * GVAR(volumeAttenuation), true] call EFUNC(common,setHearingCapability);
+
+        [{
+            CBA_missionTime >= GVAR(ehpTimeout)
+        }, {
+            [QGVAR(ehp), 1, true, EHP_FADE_IN] call EFUNC(common,setHearingCapability);
+            GVAR(ehpTimeout) = -1;
+        }] call CBA_fnc_waitUntilAndExecute;
+    };
+
+    GVAR(ehpTimeout) = CBA_missionTime + EHP_TIMEOUT;
+};
+
 GVAR(deafnessDV) = GVAR(deafnessDV) + (_strength * GVAR(damageCoefficent));

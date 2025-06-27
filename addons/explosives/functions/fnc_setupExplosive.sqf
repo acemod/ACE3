@@ -33,7 +33,7 @@ if (_p3dModel == "") exitWith {ERROR("No Model");}; //"" - will crash game!
 [_unit, "blockThrow", QUOTE(ADDON), true] call EFUNC(common,statusEffect_set);
 
 //Show mouse buttons:
-[localize LSTRING(PlaceAction), localize LSTRING(CancelAction), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
+[localize LSTRING(PlaceAction), LELSTRING(common,Cancel), localize LSTRING(ScrollAction)] call EFUNC(interaction,showMouseHint);
 _unit setVariable [QGVAR(placeActionEH), [_unit, "DefaultAction", {true}, {GVAR(placeAction) = PLACE_APPROVE;}] call EFUNC(common,AddActionEventHandler)];
 _unit setVariable [QGVAR(cancelActionEH), [_unit, "zoomtemp", {true}, {GVAR(placeAction) = PLACE_CANCEL;}] call EFUNC(common,AddActionEventHandler)];
 

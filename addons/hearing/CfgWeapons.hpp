@@ -14,6 +14,18 @@ class CfgWeapons {
         };
     };
 
+    class ACE_EHP: ACE_ItemCore {
+        author = ECSTRING(common,ACETeam);
+        displayName = CSTRING(ElectronicHearingProtection_Name);
+        descriptionShort = CSTRING(ElectronicHearingProtection_Description);
+        model = "\A3\Characters_F_Orange\Headgear\H_EarProtectors_F.p3d";
+        picture = "\A3\Characters_F_Orange\Headgear\Data\UI\icon_H_EarProtectors_black_F_CA.paa";
+        scope = 2;
+        class ItemInfo: CBA_MiscItem_ItemInfo {
+            mass = 8.4; // 380g, based on 3M Peltor
+        };
+    };
+
 
     class H_HelmetB;
     class H_HelmetCrew_B: H_HelmetB {
@@ -34,7 +46,7 @@ class CfgWeapons {
 
     class HelmetBase;
     class H_Cap_headphones: HelmetBase {
-        HEARING_PROTECTION_EARMUFF;
+        HEARING_PROTECTION_PELTOR;
     };
 
     class H_Construction_earprot_base_F: HelmetBase {
@@ -98,6 +110,30 @@ class CfgWeapons {
         HEARING_PROTECTION_PELTOR;
     };
     class H_HelmetHBK_headset_base_F: H_HelmetHBK_base_F {
+        HEARING_PROTECTION_PELTOR;
+    };
+
+    // Military headgear with a both-ear headset (similar to the modern INVISIO X7) should have active earpro.
+    class H_Watchcap_blk: HelmetBase {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class H_Bandanna_khk;
+    class H_Bandanna_khk_hs: H_Bandanna_khk {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class H_Booniehat_khk;
+    class H_Booniehat_khk_hs: H_Booniehat_khk {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class H_Cap_oli;
+    class H_Cap_oli_hs: H_Cap_oli {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class H_MilCap_ocamo: HelmetBase {
+        HEARING_PROTECTION_PELTOR;
+    };
+    class H_Shemag_olive;
+    class H_Shemag_olive_hs: H_Shemag_olive {
         HEARING_PROTECTION_PELTOR;
     };
 };

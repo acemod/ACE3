@@ -29,6 +29,7 @@
             <German>Gurt wurde angehängt</German>
             <Korean>탄띠가 연결되었습니다</Korean>
             <Japanese>ベルトがリンクされた</Japanese>
+            <Chinesesimp>弹链已连接</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Reload_BeltNotLinked">
             <English>Belt could not be linked</English>
@@ -41,6 +42,7 @@
             <German>Gurt konnte nicht angehängt werden</German>
             <Korean>탄띠를 연결할 수 없습니다</Korean>
             <Japanese>ベルトはリンクされなかった</Japanese>
+            <Chinesesimp>弹链无法连接</Chinesesimp>
         </Key>
         <Key ID="STR_ACE_Reload_LinkBelt">
             <English>Link belt</English>
@@ -115,7 +117,7 @@
             <Polish>Zawsze pokazuj interakcję od sprawdzania amunicji</Polish>
             <Portuguese>Sempre mostrar a opção de checar a própria munição</Portuguese>
             <Russian>Всегда показывать проверку боеприпасов</Russian>
-            <German>Zeige immer die Selbstinteraktion zur Prüfung der Munition an.</German>
+            <German>Selbstinteraktion zur Munitionsprüfung immer anzeigen</German>
             <Korean>상호작용에 탄약 확인을 항상 띄우기</Korean>
             <Japanese>弾薬確認アクションを常に表示</Japanese>
             <Chinese>總是在自我互動中顯示檢查彈藥動作</Chinese>
