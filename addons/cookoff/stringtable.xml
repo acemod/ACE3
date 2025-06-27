@@ -151,24 +151,32 @@
             <French>Activer le tir de projectiles</French>
             <Spanish>Habilitar la detonación de proyectiles</Spanish>
             <Japanese>弾薬の発射の有効化</Japanese>
+            <Korean>발사체 발사 활성화</Korean>
+            <Russian>Вкл. траекторного отображения снарядов</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableProjectiles_tooltip">
             <English>Enables projectiles firing from the vehicle</English>
             <French>Active le tir de projectiles depuis le véhicule</French>
             <Spanish>Habilita la detonación de proyectiles desde el interior del vehículo</Spanish>
             <Japanese>車両からの弾薬の発射を可能にします</Japanese>
+            <Korean>차량에서 발사체가 발사되는 것을 활성화합니다.</Korean>
+            <Russian>Вкл. траекторного отображения снарядов изнутри техники</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_enableSound_name">
             <English>Enable cook-off sounds</English>
             <French>Activer les sons d'explosion</French>
             <Spanish>Habilitar sonido de detonación</Spanish>
             <Japanese>誘爆音を有効化</Japanese>
+            <Russian>Выкл. звук детонации</Russian>
+            <Korean>요리 대회 사운드 활성화</Korean>
         </Key>
         <Key ID="STR_ACE_CookOff_enableSound_tooltip">
             <English>Enables the sound of projectiles cooking off from inside the vehicle</English>
             <French>Active le son des projectiles se déclenchant à l'intérieur du véhicule</French>
             <Spanish>Habilita el sonido de los proyectiles que se detonan dentro del interior del vehículo</Spanish>
             <Japanese>車内で弾薬が発火する音を有効化します</Japanese>
+            <Korean>차량 내에서 쿡오프 되는 발사체의 소리를 비활성화합니다.</Korean>
+            <Russian>Вкл. звуки взрывающихся снарядов изнутри техники</Russian>
         </Key>
         <Key ID="STR_ACE_CookOff_probabilityCoef_name">
             <English>Vehicle cook-off fire probability multiplier</English>
