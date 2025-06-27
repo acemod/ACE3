@@ -3,6 +3,7 @@
     <Package name="MissileGuidance">
         <Key ID="STR_ACE_MissileGuidance_Category">
             <English>ACE Advanced Missile Guidance</English>
+            <Russian>ACE Продвинутое наведение ракет</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_CycleFireMode">
             <English>Missile - Cycle Fire Mode</English>
@@ -330,21 +331,27 @@
         </Key>
         <Key ID="STR_ACE_MissileGuidance_chaffEffectivenessCoef_Description">
             <English>Adjusts the chance that chaff defeats a radar guided missile. Higher gives more effective chaff.</English>
+            <Russian>Регулирует вероятность преодоления радиолокационной ракеты пассивной помехой. Чем выше значение — тем эффективнее дипольные отражатели.</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_chaffEffectivenessCoef_DisplayName">
             <English>Chaff Effectiveness Coefficient</English>
+            <Russian>Коэф. эффективности ДО</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareAngleCoef_Description">
             <English>Adjusts the relative angle filtering between IR missile and flare. Higher gives more effective flares.</English>
+            <Russian>Регулирует угловую селекцию цели (тепловой ловушки) ГСН ИК-ракеты. Чем выше значение — тем эффективнее тепловые помехи.</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareAngleCoef_DisplayName">
             <English>Flare Angle Coefficient</English>
+            <Russian>Коэф. угловой селекции ЛТЦ</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareEffectivenessCoef_Description">
             <English>Adjute the chance that a flare defeats an IR missile. Higher gives more effective flares.</English>
+            <Russian>Регулирует вероятность преодоления ИК-ракеты средствами тепловых помех. Чем выше значение — тем выше эффективность ложных тепловых целей (ловушек).</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_flareEffectivenessCoef_DisplayName">
             <English>Flare Effectiveness Coefficient</English>
+            <Russian>Коэф. эффективности ЛТЦ</Russian>
         </Key>
         <Key ID="STR_ACE_MissileGuidance_keybind_down">
             <English>Missile - Down</English>
