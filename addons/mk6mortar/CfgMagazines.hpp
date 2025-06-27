@@ -29,8 +29,8 @@ class CfgMagazines {
         picture = QPATHTOF(UI\w_l16_ammo_smk_white_ca.paa);
         mass = 50;
     };
-    class 8Rnd_82mm_Mo_Flare_white;
-    class ACE_1Rnd_82mm_Mo_Illum: 8Rnd_82mm_Mo_Flare_white {
+    class 8Rnd_82mm_Mo_Flare_white_illumination;
+    class ACE_1Rnd_82mm_Mo_Illum: 8Rnd_82mm_Mo_Flare_white_illumination {
         count = 1;
         scope = 2;
         scopeCurator = 2;
