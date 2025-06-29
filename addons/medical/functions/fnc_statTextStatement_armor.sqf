@@ -19,12 +19,7 @@ private _itemType = getNumber (_config >> "ItemInfo" >> "type");
 private _hitpoint = ["HitChest", "HitHead"] select (_itemType == TYPE_HEADGEAR);
 private _levelStep = [4, 2] select (_itemType == TYPE_HEADGEAR);
 
-([configName _config, _hitpoint] call EFUNC(medical_engine,getItemArmor)) params ["_armor", "_armorScaled"];
-
-if (_armor > (_armorScaled * 2)) then { // Probably explosive-resistant armor
-    _armor = _armorScaled;
-};
-
+private _armor = [configName _config, _hitpoint] call EFUNC(medical_engine,getItemArmor);
 private _armorLevel = 0 max (round ((_armor - _levelStep) / _levelStep)) min 5;
 
 localize ([
