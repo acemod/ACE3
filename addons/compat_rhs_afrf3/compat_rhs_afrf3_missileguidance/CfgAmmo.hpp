@@ -6,7 +6,6 @@ class CfgAmmo {
     class Missile_AA_04_F;
     class rhs_ammo_r27_base;
     class M_Titan_AA;
-    class MissileBase;
     class M_Titan_AT;
     class rhs_ammo_atgmCore_base: M_Titan_AT {
         class EventHandlers;

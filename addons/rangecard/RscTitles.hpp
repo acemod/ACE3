@@ -3,7 +3,6 @@
 #define ST_CENTER 2
 
 class RscListNBox;
-class ScrollBar;
 
 class RangeCard_RscText {
     idc=-1;

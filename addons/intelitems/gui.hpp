@@ -131,7 +131,6 @@ class GVAR(RscPhoto): GVAR(RscBase) {
 
 // Zeus Attributes Display
 class RscEdit;
-class RscText;
 class RscEditMulti;
 class RscControlsGroup;
 class RscControlsGroupNoScrollbars;
@@ -140,9 +139,7 @@ class RscDisplayAttributes {
     class Controls {
         class Background;
         class Title;
-        class Content: RscControlsGroup {
-            class controls;
-        };
+        class Content: RscControlsGroup {};
         class ButtonOK;
         class ButtonCancel;
     };
