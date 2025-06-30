@@ -20,7 +20,8 @@
  *
  * Public: No
  */
-
+#define COARSE_SIM_STEP 0.1
+#define COARSE_SIM_STEP_INV 10
 params ["_vehicle", "_hitPoint", "_hitIndex", "_addedDamage", "_projectile", "_source", "_instigator"];
 TRACE_7("processHit",_vehicle,_hitPoint,_hitIndex,_addedDamage,_projectile,_source,_instigator);
 
@@ -60,10 +61,14 @@ private _indirectHit = getNumber (_projectileConfig >> "indirectHit");
 if (_warheadType == WARHEAD_TYPE_AP) then {
     // Change damage based on projectile speed (doesn't do this in vanilla Arma believe it or not)
     if (!isNull _source) then {
-        private _airFriction = getNumber (_projectileConfig >> "airFriction");
         private _typicalSpeed = getNumber (_projectileConfig >> "typicalSpeed");
+        private _dragSimCoef = COARSE_SIM_STEP * getNumber (_projectileConfig >> "airFriction");
         private _distance = _source distance _vehicle;
-        _addedDamage = (1 - _projectileExplosive) * _addedDamage * exp (_airFriction * _distance / _typicalSpeed );
+        private _speed = _typicalSpeed;
+        for "_i" from 0 to (COARSE_SIM_STEP_INV * _distance / _typicalSpeed) do {
+            _speed = _speed + _dragSimCoef * _speed ^ 2;
+        };
+        _addedDamage = (1 - _projectileExplosive) * _addedDamage * _speed / _typicalSpeed;
     };
 };
 
