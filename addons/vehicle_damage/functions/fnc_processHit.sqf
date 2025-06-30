@@ -63,6 +63,7 @@ if (_warheadType == WARHEAD_TYPE_AP) then {
         private _airFriction = getNumber (_projectileConfig >> "airFriction");
         private _distance = _source distance _vehicle;
         private _tofCoef = _airFriction * _distance / _typicalSpeed;
+        // Modified logistics map upper bound, using estimated velocity / initial for damage mod
         private _damageMod = 1 / ((-_airFriction) ^ _tofCoef - _typicalSpeed * _tofCoef);
         _addedDamage = (1 - _projectileExplosive) * _addedDamage * _damageMod;
     };
