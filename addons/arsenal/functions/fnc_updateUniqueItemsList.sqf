@@ -103,7 +103,7 @@ private _fnc_uniqueEquipment = {
 
             // Handle preset (loaded/AI) backpacks
             if (_containerClass != "" && _forEachIndex == IDX_LOADOUT_BACKPACK) then {
-                _containerClass = [_containerClass, "CfgVehicles"] call CBA_fnc_getNonPresetClass;
+                _containerClass = _containerClass call FUNC(baseBackpack);
             };
 
             // Remove all unique equipment in tab; Add container as a unique equipment
