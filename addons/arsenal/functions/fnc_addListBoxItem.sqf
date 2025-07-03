@@ -42,27 +42,56 @@ if (_skip) then {
 
 if (_skip) exitWith {};
 
+private _key = _configCategory + _className + str _configRoot;
+
 // If not in cache, find info and cache it for later use
-((uiNamespace getVariable QGVAR(addListBoxItemCache)) getOrDefaultCall [_configCategory + _className + str _configRoot, {
+((uiNamespace getVariable QGVAR(addListBoxItemCache)) getOrDefaultCall [_key, {
     // Get classname (config case), display name, picture and DLC
     private _configPath = ([configFile, campaignConfigFile, missionConfigFile] select _configRoot) >> _configCategory >> _className;
-    private _dlcName = _configPath call EFUNC(common,getAddon);
-
-    // Get DLC requirements
-    ([_configPath] call EFUNC(common,getDLC)) params ["_dlcClass", "_dlcSteamID"];
-    private _dlcPicture = "";
-    if (_dlcClass != "") then {
-        _dlcPicture = getText (configFile >> "CfgMods" >> _dlcClass >> "logo");
-    };
 
     // If _pictureEntryName is empty, then this item has no picture (e.g. faces)
-    [configName _configPath, getText (_configPath >> "displayName"), if (_pictureEntryName == "") then {""} else {getText (_configPath >> _pictureEntryName)}, if (_dlcName != "") then {(modParams [_dlcName, ["logo"]]) param [0, ""]} else {""}, _dlcPicture]
-}, true]) params ["_className", "_displayName", "_itemPicture", "_modPicture", "_dlcPicture"];
+    [configName _configPath, getText (_configPath >> "displayName"), if (_pictureEntryName == "") then {""} else {getText (_configPath >> _pictureEntryName)}]
+}, true]) params ["_className", "_displayName", "_itemPicture"];
+
+private _picture = switch (GVAR(enableModIcons)) do {
+    case 0: {
+        ""
+    };
+    case 1: {
+        (uiNamespace getVariable QGVAR(modPictureCache)) getOrDefaultCall [_key, {
+            // Get classname (config case), display name, picture and DLC
+            private _configPath = ([configFile, campaignConfigFile, missionConfigFile] select _configRoot) >> _configCategory >> _className;
+            private _dlcName = _configPath call EFUNC(common,getAddon);
+
+            // If _pictureEntryName is empty, then this item has no picture (e.g. faces)
+            if (_dlcName != "") then {
+                (modParams [_dlcName, ["logo"]]) param [0, ""]
+            } else {
+                ""
+            };
+        }, true]
+    };
+    case 2: {
+        (uiNamespace getVariable QGVAR(dlcPictureCache)) getOrDefaultCall [_key, {
+            // Get classname (config case), display name, picture and DLC
+            private _configPath = ([configFile, campaignConfigFile, missionConfigFile] select _configRoot) >> _configCategory >> _className;
+
+            // Get DLC requirements
+            private _dlcClass = (_configPath call EFUNC(common,getDLC)) select 0;
+
+            if (_dlcClass != "") then {
+                getText (configFile >> "CfgMods" >> _dlcClass >> "logo")
+            } else {
+                ""
+            };
+        }, true]
+    };
+};
 
 private _lbAdd = _ctrlPanel lbAdd _displayName;
 _ctrlPanel lbSetData [_lbAdd, _className];
 _ctrlPanel lbSetPicture [_lbAdd, _itemPicture];
-_ctrlPanel lbSetPictureRight [_lbAdd, ["", _modPicture, _dlcPicture] select GVAR(enableModIcons)];
+_ctrlPanel lbSetPictureRight [_lbAdd, _picture];
 _ctrlPanel lbSetTooltip [_lbAdd, format ["%1\n%2", _displayName, _className]];
 
 if ((toLowerANSI _className) in GVAR(favorites)) then {
