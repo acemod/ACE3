@@ -69,7 +69,7 @@ private _picture = switch (GVAR(enableModIcons)) do {
             } else {
                 ""
             };
-        }, true];
+        }, true]
     };
     case 2: {
         (uiNamespace getVariable QGVAR(dlcPictureCache)) getOrDefaultCall [_key, {
