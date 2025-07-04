@@ -27,6 +27,6 @@ if (hasInterface) then {
         if (_currStabilized != 0 || {_nextStabilized != 1}) exitWith {};
 
         _vehicle lockCameraTo [positionCameraToWorld [0, 0, 1000], _turret, true];
-        [{ _vehicle lockCameraTo [objNull, _turret, true]; }] call cba_fnc_execNextFrame;
+        [{ params ["_vehicle", "_turret"]; _vehicle lockCameraTo [objNull, _turret, true]; }, [_vehicle, _turret]] call CBA_fnc_execNextFrame;
     }];
 };
