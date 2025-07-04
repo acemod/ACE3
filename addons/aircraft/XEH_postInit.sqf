@@ -15,7 +15,7 @@ if (hasInterface) then {
         if (isNull _vehicle) exitWith {};
 
         private _turret = _vehicle unitTurret ACE_player;
-        if (_turret isEqualTo [] || {_turret isEqualTo [-1]}) exitWith {};
+        if (_turret in [[], [-1]]) exitWith {};
 
         private _opticsCfg = "true" configClasses (([typeOf _vehicle, _turret] call CBA_fnc_getTurret) >> "OpticsIn");
         private _count = count _opticsCfg;
