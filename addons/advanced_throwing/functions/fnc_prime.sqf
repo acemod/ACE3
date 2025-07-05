@@ -58,7 +58,7 @@ _unit setVariable [QGVAR(activeThrowable), _activeThrowable];
 deleteVehicle _activeThrowableOld;
 
 // Set _gunner for Throw Fired XEH
-_gunner = _unit;
+private _gunner = _unit;
 
 // Throw Fired XEH
 [QGVAR(throwFiredXEH), [
