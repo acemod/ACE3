@@ -105,12 +105,12 @@ class ACE_CSW_Groups {
     class prefix_100rnd_hmg_csw_mag { // Same name as the carryable magazine
         prefix_100rnd_hmg_mag = 1;    // Vehicle magazine that will be loaded when loading this magazine
     };
-    
+
     // Using an existing CSW magazine
     class ace_csw_100Rnd_127x99_mag {
         banana_dummy_ammo = 1;
     };
-    
+
     /*
         Carryable magazines already defined by ACE:
         - ace_csw_100Rnd_127x99_mag
@@ -142,7 +142,7 @@ class CfgVehicles {
             magazineLocation = "_target selectionPosition 'magazine'"; // Ammo handling interaction point location
             disassembleWeapon = "prefix_hmg_carry";  // Carryable weapon created above
             disassembleTurret = "ace_csw_m3Tripod";  // Which static tripod will appear when weapon is disassembled
-            ammoLoadTime = 7;   // How long it takes in seconds to load ammo into the weapon           
+            ammoLoadTime = 7;   // How long it takes in seconds to load ammo into the weapon
             ammoUnloadTime = 5; // How long it takes in seconds to unload ammo from the weapon
             desiredAmmo = 100;  // When the weapon is reloaded it will try and reload to this ammo capacity
             // Optional callback function for when the CSW gets disassembled, called with [tripod, staticWeapon]
@@ -150,6 +150,15 @@ class CfgVehicles {
         };
     };
 };
+```
+
+### 1.5 Disabling CSW for a single weapon
+
+The entirety of CSW's systems can be disabled by setting the `ace_csw_assemblyMode` variable to `0` on init.
+
+```sqf
+myCustomStaticWeapon = createVehicle ["B_Mortar_01_F", [0, 0, 0]];
+myCustomStaticWeapon setVariable ["ace_csw_assemblyMode", 0, true]; // disable CSW
 ```
 
 ## 2. Making a new Tripod

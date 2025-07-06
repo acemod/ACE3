@@ -50,7 +50,7 @@ if (_vehicle turretLocal [0]) then {
 
         [_vehicle, [0], _assemblyMode, _emptyWeapon] call FUNC(proxyWeapon);
 
-        if (!_assemblyMode) exitWith {};
+        if !(_assemblyMode && {GVAR(ammoHandling) > 0}) exitWith {};
 
         [_vehicle, _emptyWeapon] call FUNC(staticWeaponInit_unloadExtraMags);
     };
@@ -96,7 +96,11 @@ if (hasInterface && {!(_typeOf in GVAR(initializedStaticTypes))}) then {
         _ammoActionPath = [_typeOf, 0, ["ACE_MainActions"], _ammoAction] call EFUNC(interact_menu,addActionToClass);
     };
 
-    if (["ace_reload"] call EFUNC(common,isModLoaded)) then {
+    if (
+        ["ace_reload"] call EFUNC(common,isModLoaded) &&
+        {GVAR(ammoHandling) isNotEqualTo 0} &&
+        {([false, true, true, GVAR(defaultAssemblyMode)] select (_vehicle getVariable [QGVAR(assemblyMode), 3]))}
+    ) then {
         [_typeOf, 0, ["ACE_MainActions", QEGVAR(reload,CheckAmmo)]] call EFUNC(interact_menu,removeActionFromClass);
 
         // Replace existing check ammo interaction with one that takes into account if the magazine actions are available

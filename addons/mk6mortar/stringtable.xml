@@ -521,7 +521,7 @@
             <Turkish>Mermi Boşaltılıyor</Turkish>
         </Key>
         <Key ID="STR_ACE_Mk6Mortar_useAmmoHandling_Description">
-            <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader.</English>
+            <English>Removes mortar magazines, requiring individual rounds to be loaded by the gunner or loader. Requires CSW Ammo Handling.</English>
             <Czech>Odstraní z minometu zásobník a vynucuje nabíjení po každém výstřelu buď mířičem nebo nabíječem.</Czech>
             <French>Enlève les chargeurs de mortier, ce qui oblige le tireur ou le servant à charger les obus manuellement.</French>
             <Spanish>Elimina los cargadores del mortero, requiriendo al artillero o cargador la carga manual de cada rondas.</Spanish>
